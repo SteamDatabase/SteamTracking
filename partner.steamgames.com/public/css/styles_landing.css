@@ -748,25 +748,23 @@ p {
 		color: #ab9c73;
 	}
 
-
-
-	.landingTable tr.released td, .landingTable .tr.released .td, .td.released, td.released {
+	.landingTable tr.released td, .landingTable .tr.released .td, .td.released, td.released, option.released {
 		color: #A4D007;
 	}
 
-	.landingTable tr.prepurchase td, .landingTable .tr.prepurchase .td, .td.prepurchase, td.prepurchase {
+	.landingTable tr.prepurchase td, .landingTable .tr.prepurchase .td, .td.prepurchase, td.prepurchase, option.prepurchase {
 		color: #FFFFAA;
 	}
 
-	.landingTable tr.prerelease td, .landingTable .tr.prerelease .td, .landingTable .td.prerelease, .landingTable td.prerelease, .td.prerelease,a td.prerelease {
+	.landingTable tr.prerelease td, .landingTable .tr.prerelease .td, .landingTable .td.prerelease, .landingTable td.prerelease, .td.prerelease,a td.prerelease, option.prerelease {
 		color: #A4D007;
 	}
 
-	.landingTable tr.hidden td, .landingTable .tr.hidden .td, .landingTable .td.hidden, .landingTable td.hidden, .td.hidden,a td.hidden {
+	.landingTable tr.hidden td, .landingTable .tr.hidden .td, .landingTable .td.hidden, .landingTable td.hidden, .td.hidden,a td.hidden, option.hidden {
 		color: #808285;
 	}
 
-	.landingTable tr.beta td, .landingTable .tr.beta .td, td.beta, .td.beta {
+	.landingTable tr.beta td, .landingTable .tr.beta .td, td.beta, .td.beta, option.beta {
 		color: #82a6d7;
 	}
 	.landingTable tr.app_DLC td, .landingTable .tr.app_DLC .td {

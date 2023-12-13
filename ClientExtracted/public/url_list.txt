@@ -790,6 +790,12 @@ BlockedPlayers
 	method		"internal"
 	filter		"friends"
 }
+PendingFriends
+{
+	url		"%community%/%mystuff%/friends/pending"
+	method		"internal"
+	filter		"friends"
+}
 RecommendGame
 {
 	url		"%store%/recommended/recommendgame/%p1%"
@@ -1318,5 +1324,15 @@ Mobile
 ClaimEntitlements
 {
 	url			"%store%/account/claimentitlements"
+	method		"internal"
+}
+AllNotifications
+{
+	url			"%community%/profiles/%p1%/notifications"
+	method		"internal"
+}
+FamilyManagement
+{
+	url			"%store%/account/familymanagement"
 	method		"internal"
 }

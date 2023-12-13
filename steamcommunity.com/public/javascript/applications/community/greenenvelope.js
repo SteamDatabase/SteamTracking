@@ -33,9 +33,9 @@
       "use strict";
       n.r(t),
         n.d(t, {
-          GreenEnvelope: () => M,
-          default: () => O,
-          useSteamNotifications: () => T,
+          GreenEnvelope: () => b,
+          default: () => R,
+          useSteamNotifications: () => M,
         });
       var i = n(33940),
         o = n(89526),
@@ -47,24 +47,23 @@
         m = n(15937),
         u = n.n(m),
         d = n(44973),
-        f = n(77427),
-        _ = n(16826),
-        p = n(83315),
-        v = n(15757),
-        N = n(40442),
-        h = n(27070),
-        g = n(41576),
-        y = n(47742),
-        E = n(19934);
-      const b = new s.tL();
-      function M(e) {
+        f = n(16826),
+        _ = n(83315),
+        p = n(88778),
+        v = n(40442),
+        N = n(27070),
+        h = n(41576),
+        g = n(47742),
+        y = n(19934);
+      const E = new s.tL();
+      function b(e) {
         const { bResponsiveHeader: t, notifications: n } = e;
         o.useEffect(() => {
-          n && !b.m_bLoaded && b.ProcessNewNotificationPayload(n);
+          n && !E.m_bLoaded && E.ProcessNewNotificationPayload(n);
         }, [n]);
-        const r = (0, h.bY)();
+        const r = (0, N.bY)();
         (0, o.useEffect)(() => {
-          b.setTransport(r),
+          E.setTransport(r),
             (window.RefreshSteamNotifications = () =>
               (function (e) {
                 return (0, i.mG)(this, void 0, void 0, function* () {
@@ -73,51 +72,51 @@
                     t = yield (0, s.gQ)(
                       e,
                       d.L7.steamid,
-                      (0, N.jM)(d.De.LANGUAGE),
+                      (0, v.jM)(d.De.LANGUAGE),
                       !1,
                     );
                   } catch (e) {}
-                  t && b.ProcessNewNotificationPayload(t);
+                  t && E.ProcessNewNotificationPayload(t);
                 });
               })(r));
         }, [r]);
-        const l = T();
+        const l = M();
         return t
           ? o.createElement(
               o.Fragment,
               null,
               o.createElement(k, null),
-              o.createElement(I, null),
+              o.createElement(w, null),
             )
-          : o.createElement(U, { nTotalUnviewed: l.nUnviewed });
+          : o.createElement(B, { nTotalUnviewed: l.nUnviewed });
       }
-      function T() {
-        return (0, p.SZ)(() => ({
-          notifications: b.m_rgNotificationRollups,
-          summary: b.m_summary,
-          loaded: b.m_bLoaded,
-          nUnviewed: b.m_nUnviewed,
+      function M() {
+        return (0, _.SZ)(() => ({
+          notifications: E.m_rgNotificationRollups,
+          summary: E.m_summary,
+          loaded: E.m_bLoaded,
+          nUnviewed: E.m_nUnviewed,
         }));
       }
-      function B() {
-        const e = T(),
-          t = (0, y.M)(),
-          n = (0, E.X1)(t),
-          i = (0, E.T8)();
+      function T() {
+        const e = M(),
+          t = (0, g.M)(),
+          { settings: n } = (0, y.X1)(t).data,
+          i = (0, y.T8)();
         return e.notifications.filter((e) => {
           const t = (0, s.nM)(e.type);
-          return !(0, E.Bu)(n.data, t.eFeature, i) && !(0, s.sA)(e.item);
+          return !(0, y.Bu)(n, t.eFeature, i) && !(0, s.sA)(e.item);
         });
       }
-      function U(e) {
+      function B(e) {
         const { nTotalUnviewed: t } = e,
           n = o.useRef(),
-          i = B(),
+          i = T(),
           [r, s] = o.useState(u().AnimateBell);
         o.useEffect(() => {
           n.current ||
             ((n.current = (0, c.yV)(
-              o.createElement(L, { popupRef: n }),
+              o.createElement(U, { popupRef: n }),
               document.getElementById("green_envelope_menu_root"),
               {
                 bPreferPopLeft: !0,
@@ -140,7 +139,7 @@
           [n],
         );
         return o.createElement(
-          g.U,
+          h.U,
           { trigger: "repeated", onVisibilityChange: a },
           o.createElement(
             "div",
@@ -149,7 +148,7 @@
                 if (!n.current.visible) {
                   n.current.Show();
                   -1 != i.findIndex((e) => !e.item.viewed) &&
-                    b.MarkAllItemsViewed();
+                    E.MarkAllItemsViewed();
                 }
               },
               id: "green_envelope_menu_root",
@@ -160,11 +159,11 @@
                 r,
               ),
             },
-            o.createElement(_.Tx5, { className: u().SVGNotifications }),
+            o.createElement(f.Tx5, { className: u().SVGNotifications }),
           ),
         );
       }
-      const L = (e) => {
+      const U = (e) => {
           var t;
           const { popupRef: n } = e,
             i = o.useRef(),
@@ -196,7 +195,7 @@
                   : e.Hide();
               },
             },
-            o.createElement(w, null),
+            o.createElement(L, null),
             o.createElement(
               "div",
               {
@@ -204,12 +203,12 @@
                 ref: i,
               },
               o.createElement(k, null),
-              o.createElement(C, null),
-              o.createElement(R, null),
+              o.createElement(A, null),
+              o.createElement(S, null),
             ),
           );
         },
-        w = () => {
+        L = () => {
           const e = `${d.De.COMMUNITY_BASE_URL}profiles/${d.L7.steamid}/notifications`;
           return o.createElement(
             "div",
@@ -230,7 +229,7 @@
             ),
           );
         },
-        I = () => {
+        w = () => {
           const e = `${d.De.COMMUNITY_BASE_URL}profiles/${d.L7.steamid}/notifications`;
           return o.createElement(
             "div",
@@ -251,31 +250,31 @@
             ),
           );
         };
-      function A(e, t, n) {
+      function I(e, t, n) {
         t.read ||
           (n && 0 != n.button && 1 != n.button) ||
-          b.MarkItemRead(t.notification_id),
+          E.MarkItemRead(t.notification_id),
           e();
       }
-      function C() {
-        const e = B();
+      function A() {
+        const e = T();
         return 0 == e.length
           ? null
           : o.createElement(
               "div",
               { className: u().NotificationsMenuEntriesContainer },
               e.map((e, t) =>
-                o.createElement(v.RW, {
+                o.createElement(p.RW, {
                   key: t,
                   rollup: e,
-                  onNotificationClick: A,
+                  onNotificationClick: I,
                   uimode: 3,
-                  location: f.IS.Tray,
+                  location: 3,
                 }),
               ),
             );
       }
-      const S = [
+      const C = [
         {
           fnUrl: () =>
             `${d.De.COMMUNITY_BASE_URL}profiles/${d.L7.steamid}/inventory/#pending_gifts`,
@@ -326,7 +325,7 @@
         {
           fnUrl: () => `${d.De.COMMUNITY_BASE_URL}my/moderatormessages`,
           countItem: "moderator_messages",
-          icon: _.dqu,
+          icon: f.dqu,
           strLocToken: "#Notification_NewModeratorMessagePinned_Body",
           feature: 2,
         },
@@ -337,19 +336,20 @@
           strLocToken: "#Notification_NewHelpRequestRepliesPinned_Body",
         },
         {
-          fnUrl: () => `${d.De.STORE_BASE_URL}account/familymanagement`,
+          fnUrl: () =>
+            `${d.De.STORE_BASE_URL}account/familymanagement/join?ft=${d.L7.steamid}`,
           countItem: "family_invites",
           icon: r.ui7,
           strLocToken: "#Notification_FamilyInvitePinned_Body",
         },
       ];
       function k() {
-        const e = T();
+        const e = M();
         return o.createElement(
           o.Fragment,
           null,
-          S.map((t) =>
-            o.createElement(v.sz, {
+          C.map((t) =>
+            o.createElement(p.sz, {
               key: t.countItem,
               url: t.fnUrl(),
               count: e.summary[t.countItem],
@@ -360,7 +360,7 @@
           ),
         );
       }
-      function R() {
+      function S() {
         return o.createElement(
           "div",
           { className: u().EmptyNotificationsCtn },
@@ -376,7 +376,7 @@
           ),
         );
       }
-      const O = M;
+      const R = b;
     },
     41576: (e, t, n) => {
       "use strict";

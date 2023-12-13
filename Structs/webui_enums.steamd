@@ -1532,9 +1532,18 @@ enum EFeature
 	k_EFeatureLibrary = 11;
 	k_EFeatureTest = 12;
 	k_EFeatureSiteLicense = 13;
-	k_EFeatureKioskMode = 14;
+	k_EFeatureKioskMode_Deprecated = 14;
 	k_EFeatureBlockAlways = 15;
 	k_EFeatureMax = 16;
+}
+
+enum EFeatureBlockReason
+{
+	k_EFeatureBlockReason_NotBlocked = 0;
+	k_EFeatureBlockReason_PIN = 1;
+	k_EFeatureBlockReason_ChildAccount = 2;
+	k_EFeatureBlockReason_RemotePlay = 3;
+	k_EFeatureBlockReason_KioskMode = 4;
 }
 
 enum EFeaturedAppBonusRoundGrantReason
@@ -2829,6 +2838,7 @@ enum EMarketingMessageVisible
 {
 	k_EMarketingMessageVisibleBeta = 1;
 	k_EMarketingMessageVisiblePublic = 2;
+	k_EMarketingMessageVisibleApprovedForPublish = 3;
 }
 
 enum EMenu
@@ -3467,6 +3477,14 @@ enum ESDCardFormatStage
 	k_ESDCardFormatStage_Rescuing = 3;
 	k_ESDCardFormatStage_Formatting = 4;
 	k_ESDCardFormatStage_Finalizing = 5;
+}
+
+enum ESection
+{
+	k_ESectionInvalid = 0;
+	k_ESectionDefault = 1;
+	k_ESectionFamily = 2;
+	k_ESectionMax = 3;
 }
 
 enum EServerType
@@ -4355,6 +4373,7 @@ enum ESupport
 	k_ESupportPermissions_PartnerDeckCompatReadOnly = 26;
 	k_ESupportPermissions_CSGOTools = 27;
 	k_ESupportPermissions_LocalizationAdvanceAccess = 28;
+	k_ESupportPermissions_BulkRefundTool = 29;
 }
 
 enum ESuspendResumeProgressState
@@ -4734,6 +4753,14 @@ enum EVRError
 	k_EVRError_CrashProtection = 4;
 	k_EVRError_HmdError = 5;
 	k_EVRError_PathChanged = 6;
+}
+
+enum EVRLinkCaps
+{
+	k_EVRLinkCapsUnknown = 0;
+	k_EVRLinkCapsAvailable = 1;
+	k_EVRLinkCapsUnimplemented = 2;
+	k_EVRLinkCapsMissingHardwareEncoding = 3;
 }
 
 enum EVRMsg
@@ -5786,6 +5813,19 @@ enum UnnamedEnum2dfea80db4b6d761
 	TimerExpired = 27;
 }
 
+enum UnnamedEnum2e964de28043db37
+{
+	White = 0;
+	Red = 1;
+	Orange = 2;
+	Yellow = 3;
+	Green = 4;
+	Blue = 5;
+	Purple = 6;
+	Brown = 7;
+	Gray = 8;
+}
+
 enum UnnamedEnum304f4bcd9d879629
 {
 	Idle = 0;
@@ -6141,12 +6181,6 @@ enum UnnamedEnum3fcaac8de59d5e7c
 	IN_QUOTED_VALUE = 4;
 }
 
-enum UnnamedEnum40e8d944a2ddb9d1
-{
-	Screenshots = 1;
-	Clips = 2;
-}
-
 enum UnnamedEnum444e26d5fd11557e
 {
 	None = 0;
@@ -6356,6 +6390,14 @@ enum UnnamedEnum55381d04bbcefb85
 	VERYLONG = 2;
 }
 
+enum UnnamedEnum556007094fa67eaf
+{
+	Invalid = 0;
+	Playing = 1;
+	Staging = 2;
+	Menus = 3;
+}
+
 enum UnnamedEnum55a9e12958fe69d4
 {
 	Millis = 1;
@@ -6437,6 +6479,16 @@ enum UnnamedEnum5f9e5112c68eb7f0
 	k_ModRemovedFromSteamChina = 5;
 	k_ModFlagAdultOnlyContent = 6;
 	k_ModRemoveAdultOnlyContent = 7;
+}
+
+enum UnnamedEnum618726a5cc07bf68
+{
+	Invalid = 0;
+	GamepadToast = 1;
+	DesktopToast = 2;
+	Tray = 3;
+	AllNotificationsTray = 4;
+	MobilePush = 5;
 }
 
 enum UnnamedEnum64e7e2fbc4d9ff40
@@ -7078,12 +7130,6 @@ enum UnnamedEnum940ff890eb1bf26e
 	ALL = 3;
 }
 
-enum UnnamedEnum944055b7ecac77bb
-{
-	NEWEST_FIRST = 0;
-	OLDEST_FIRST = 1;
-}
-
 enum UnnamedEnum9454ede744687573
 {
 	None = 0;
@@ -7464,6 +7510,13 @@ enum UnnamedEnumc118f0b997e61c94
 	Complete = 4;
 	None = 0;
 	InvalidCode = 1;
+}
+
+enum UnnamedEnumc1b25a47910a078f
+{
+	None = 0;
+	DownloadFailed = 1;
+	PlaybackError = 2;
 }
 
 enum UnnamedEnumc1dc9e791df4e044

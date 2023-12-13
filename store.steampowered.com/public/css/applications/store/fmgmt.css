@@ -51,406 +51,85 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
 .tabbar_StatusCaution_31Lxu {
   color: #e76e34;
 }
-.throbber_LoadingWrapper_3Z36h {
-  display: flex;
-  flex-direction: column;
-  margin: 0;
+.familyincominginvites_IncomingInviteRow_1GICw {
+  background-color: #0e141b;
+  margin: 10px;
+  padding: 5px;
 }
-.throbber_LoadingWrapper_3Z36h.throbber_Static_kwzRJ {
-  animation-name: throbber_none_2iT5l;
+.familyincominginvites_IncomingInviteRow_1GICw
+  .familyincominginvites_InviteRowHeader_AYHhN {
+  color: #fff;
+  text-align: left;
 }
-.throbber_LoadingWrapper_3Z36h.throbber_Static_kwzRJ * {
-  animation-name: throbber_none_2iT5l !important;
-  stroke-dasharray: initial !important;
-  stroke-dashoffset: initial !important;
-  stroke-width: 5px !important;
-  opacity: 1 !important;
+.familyincominginvites_IncomingInviteRow_1GICw
+  .familyincominginvites_InviteRowHeader_AYHhN
+  .familyincominginvites_Avatar_3LPMS {
+  display: inline-block;
+  vertical-align: middle;
 }
-.throbber_LoadingWrapper_3Z36h.throbber_Static_kwzRJ
-  .throbber_bottomCircle_3-sjx
-  path {
-  stroke-width: 0 !important;
+.familyincominginvites_IncomingInviteRow_1GICw
+  .familyincominginvites_InviteRowHeader_AYHhN
+  .familyincominginvites_PersonaName_3x3dD {
+  margin-right: 5px;
+  margin-left: 5px;
 }
-.throbber_LoadingWrapper_3Z36h.throbber_noString_M4pF_ {
-  flex-direction: row;
+.familyincominginvites_IncomingInviteRow_1GICw
+  .familyincominginvites_InviteRowHeader_AYHhN
+  .familyincominginvites_FamilyName_boWA4 {
+  margin-right: 5px;
+  margin-left: 5px;
+  font-weight: bold;
+  color: #1a9fff;
 }
-.throbber_LoadingWrapper_3Z36h .throbber_Throbber_7MdwT,
-.throbber_LoadingWrapper_3Z36h .SVGIcon_Throbber,
-.throbber_LoadingWrapper_3Z36h .SVGIcon_Throbber path {
-  width: 100%;
-  height: 100%;
-  position: relative;
+.familyincominginvites_IncomingInviteRow_1GICw
+  .familyincominginvites_InviteRowHeader_AYHhN
+  .familyincominginvites_RoleIcon_3BhC4 {
+  margin-left: 10px;
+  display: inline-block;
 }
-.throbber_LoadingWrapper_3Z36h .throbber_Throbber_7MdwT {
-  align-self: center;
-  margin: 0px;
-  width: 100%;
-  height: 100%;
-}
-.throbber_LoadingWrapper_3Z36h.throbber_throbber_small_29-XT
-  .throbber_Throbber_7MdwT {
-  width: 32px;
-  height: 32px;
-}
-.throbber_LoadingWrapper_3Z36h.throbber_throbber_medium_1yqSo
-  .throbber_Throbber_7MdwT {
-  width: 64px;
-  height: 64px;
-}
-.throbber_LoadingWrapper_3Z36h.throbber_throbber_large_1u2tL
-  .throbber_Throbber_7MdwT {
-  width: 92px;
-  height: 92px;
-}
-.throbber_throbber_center_wrapper_Yi4EM {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.throbber_ThrobberText_1Zlvf,
-.throbber_LoadingWrapper_3Z36h .throbber_ThrobberText_1Zlvf {
-  color: #3d85c8;
-  font-size: 12px;
+.familyincominginvites_IncomingInviteRow_1GICw
+  .familyincominginvites_InviteRowHeader_AYHhN
+  .familyincominginvites_RoleName_EVV-a {
+  padding-left: 3px;
   text-transform: uppercase;
-  text-align: center;
-  flex: 1;
-  user-select: none;
-  margin-top: 8px;
-  font-weight: 500;
+  color: #fff;
+  font-weight: bold;
 }
-.throbber_LoadingWrapper_3Z36h.throbber_throbber_medium_1yqSo
-  .throbber_ThrobberText_1Zlvf {
-  margin-top: 4px;
+.familyincominginvites_IncomingInviteRow_1GICw
+  .familyincominginvites_LearnMoreLink_32K94 {
+  cursor: pointer;
+  color: #1a9fff;
 }
-.throbber_LoadingWrapper_3Z36h.throbber_throbber_small_29-XT
-  .throbber_ThrobberText_1Zlvf {
-  margin-top: 2px;
+.familyincominginvites_IncomingInviteRow_1GICw
+  .familyincominginvites_Buttons_iZCbd {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  margin-left: 5px;
+  margin-top: 10px;
+  margin-right: 5px;
 }
-.throbber_LoadingWrapper_3Z36h .SVGIcon_Throbber.throbber_blur_3ebLc {
-  filter: blur(3px);
-  position: absolute;
-  left: 0;
-  top: 0px;
+.familyincominginvites_IncomingInviteRow_1GICw
+  .familyincominginvites_Buttons_iZCbd
+  .familyincominginvites_AcceptInviteButton_34In_ {
+  flex-basis: 120px;
+  background-color: #1a9fff;
 }
-.throbber_LoadingWrapper_3Z36h .SVGIcon_Throbber.throbber_blur_3ebLc path {
-  stroke: #4375fd;
+.familyincominginvites_IncomingInviteRow_1GICw
+  .familyincominginvites_Buttons_iZCbd
+  .familyincominginvites_DeclineInviteButton_3CEsy {
+  flex-basis: 120px;
+  background-color: #de3618;
 }
-.throbber_LoadingWrapper_3Z36h .SVGIcon_Throbber path {
-  stroke: #67c1f5;
-  animation-name: throbber_ThrobberRoundLoop_3SEk8;
-  animation-duration: 0.7s;
-  stroke-linecap: butt;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  opacity: 0;
+.familyincominginvites_IncomingInviteRow_1GICw
+  .familyincominginvites_WallOfText_20gCk {
+  font-size: 16px;
+  line-height: 18px;
 }
-.throbber_LoadingWrapper_3Z36h
-  .SVGIcon_Throbber
-  .throbber_roundOuterOutline_3M8Ar,
-.throbber_LoadingWrapper_3Z36h .SVGIcon_Throbber .throbber_roundOuter_3H7At {
-  stroke-dashoffset: 0;
-  stroke-dasharray: 116;
-  stroke-width: 6px;
-}
-.throbber_LoadingWrapper_3Z36h .SVGIcon_Throbber .throbber_roundOuter_3H7At {
-  opacity: 1;
-  stroke: #3b8bb9;
-  stroke-width: 6px;
-  transform-origin: 50% 50%;
-  stroke-linecap: round;
-}
-.throbber_LoadingWrapper_3Z36h
-  .SVGIcon_Throbber
-  .throbber_roundOuterOutline_3M8Ar {
-  display: none;
-}
-@keyframes throbber_ThrobberRoundLoop_3SEk8 {
-  to {
-    stroke-dashoffset: -232;
-  }
-}
-.throbber_LoadingWrapper_3Z36h .SVGIcon_Throbber .throbber_roundFill_2FWWt {
-  animation-name: throbber_ThrobberFillLoop_1-rlb;
-  animation-duration: 3s;
-  animation-delay: -1.2s;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out;
-  opacity: 1;
-  stroke-width: 0;
-}
-@keyframes throbber_ThrobberFillLoop_1-rlb {
-  0% {
-    fill: rgba(103, 193, 245, 0);
-  }
-  50% {
-    fill: rgba(103, 193, 245, 0.05);
-  }
-  100% {
-    fill: rgba(103, 193, 245, 0);
-  }
-}
-.throbber_LoadingWrapper_3Z36h
-  .SVGIcon_Throbber
-  .throbber_topCircle_3znUF
-  .throbber_circlePulse_1oQUO,
-.throbber_LoadingWrapper_3Z36h
-  .SVGIcon_Throbber
-  .throbber_topCircle_3znUF
-  circle {
-  stroke: #67c1f5;
-  animation-name: throbber_ThrobberTopCircleLoop_3oqZE;
-  animation-duration: 3s;
-  animation-delay: -1.2s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  transform-origin: 67% 36%;
-}
-.throbber_LoadingWrapper_3Z36h
-  .SVGIcon_Throbber
-  .throbber_topCircle_3znUF
-  circle {
-  animation-name: throbber_ThrobberBottomCircleLoop_3veQr;
-}
-.throbber_LoadingWrapper_3Z36h
-  .SVGIcon_Throbber
-  .throbber_bottomCircle_3-sjx
-  path {
-  fill: #67c1f5;
-  stroke-width: 0;
-  animation-name: throbber_ThrobberBottomCircleLoop_3veQr;
-  animation-duration: 3s;
-  animation-delay: -0.6s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-}
-@keyframes throbber_ThrobberTopCircleLoop_3oqZE {
-  0% {
-    opacity: 0;
-    transform: scale(0.75);
-    stroke-width: 4px;
-  }
-  20% {
-    opacity: 0.3;
-  }
-  40% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 0;
-    transform: scale(5);
-    stroke-width: 0px;
-  }
-  100% {
-    opacity: 0;
-    transform: scale(5);
-    stroke-width: 0px;
-  }
-}
-@keyframes throbber_ThrobberBottomCircleLoop_3veQr {
-  0% {
-    opacity: 0;
-  }
-  40% {
-    opacity: 1;
-  }
-  80% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-.throbber_LoadingWrapper_3Z36h
-  .SVGIcon_Throbber
-  .throbber_roundThrobber15_1gQte,
-.throbber_LoadingWrapper_3Z36h
-  .SVGIcon_Throbber
-  .throbber_roundThrobber14_3DXeR,
-.throbber_LoadingWrapper_3Z36h
-  .SVGIcon_Throbber
-  .throbber_roundThrobber13_5VEyI,
-.throbber_LoadingWrapper_3Z36h
-  .SVGIcon_Throbber
-  .throbber_roundThrobber12_wOdFm,
-.throbber_LoadingWrapper_3Z36h
-  .SVGIcon_Throbber
-  .throbber_roundThrobber11_3Jmyz,
-.throbber_LoadingWrapper_3Z36h
-  .SVGIcon_Throbber
-  .throbber_roundThrobber10_3QwXn,
-.throbber_LoadingWrapper_3Z36h
-  .SVGIcon_Throbber
-  .throbber_roundThrobber09_2Yhvq,
-.throbber_LoadingWrapper_3Z36h
-  .SVGIcon_Throbber
-  .throbber_roundThrobber08_3HcIU,
-.throbber_LoadingWrapper_3Z36h
-  .SVGIcon_Throbber
-  .throbber_roundThrobber07__2fn3,
-.throbber_LoadingWrapper_3Z36h
-  .SVGIcon_Throbber
-  .throbber_roundThrobber06_2gCCI,
-.throbber_LoadingWrapper_3Z36h
-  .SVGIcon_Throbber
-  .throbber_roundThrobber05_1SrtW,
-.throbber_LoadingWrapper_3Z36h
-  .SVGIcon_Throbber
-  .throbber_roundThrobber04_2P5xs,
-.throbber_LoadingWrapper_3Z36h
-  .SVGIcon_Throbber
-  .throbber_roundThrobber03_3zYDa,
-.throbber_LoadingWrapper_3Z36h
-  .SVGIcon_Throbber
-  .throbber_roundThrobber02_2_KYJ,
-.throbber_LoadingWrapper_3Z36h
-  .SVGIcon_Throbber
-  .throbber_roundThrobber01_3N41H {
-  animation-name: throbber_ThrobberRoundLoopThickness_1wAwc;
-  animation-duration: 3s;
-  stroke-dasharray: 150 950;
-}
-.throbber_LoadingWrapper_3Z36h
-  .SVGIcon_Throbber
-  .throbber_roundThrobber01_3N41H {
-  animation-delay: 0s;
-  opacity: 0.06;
-  stroke-width: 0.5px;
-}
-.throbber_LoadingWrapper_3Z36h
-  .SVGIcon_Throbber
-  .throbber_roundThrobber02_2_KYJ {
-  animation-delay: -0.1s;
-  opacity: 0.13;
-  stroke-width: 1px;
-}
-.throbber_LoadingWrapper_3Z36h
-  .SVGIcon_Throbber
-  .throbber_roundThrobber03_3zYDa {
-  animation-delay: -0.2s;
-  opacity: 0.2;
-  stroke-width: 1.5px;
-}
-.throbber_LoadingWrapper_3Z36h
-  .SVGIcon_Throbber
-  .throbber_roundThrobber04_2P5xs {
-  animation-delay: -0.3s;
-  opacity: 0.26;
-  stroke-width: 2px;
-}
-.throbber_LoadingWrapper_3Z36h
-  .SVGIcon_Throbber
-  .throbber_roundThrobber05_1SrtW {
-  animation-delay: -0.4s;
-  opacity: 0.33;
-  stroke-width: 2.5px;
-}
-.throbber_LoadingWrapper_3Z36h
-  .SVGIcon_Throbber
-  .throbber_roundThrobber06_2gCCI {
-  animation-delay: -0.5s;
-  opacity: 0.4;
-  stroke-width: 3px;
-}
-.throbber_LoadingWrapper_3Z36h
-  .SVGIcon_Throbber
-  .throbber_roundThrobber07__2fn3 {
-  animation-delay: -0.6s;
-  opacity: 0.46;
-  stroke-width: 3.5px;
-}
-.throbber_LoadingWrapper_3Z36h
-  .SVGIcon_Throbber
-  .throbber_roundThrobber08_3HcIU {
-  animation-delay: -0.7s;
-  opacity: 0.53;
-  stroke-width: 4px;
-}
-.throbber_LoadingWrapper_3Z36h
-  .SVGIcon_Throbber
-  .throbber_roundThrobber09_2Yhvq {
-  animation-delay: -0.8s;
-  opacity: 0.6;
-  stroke-width: 4.5px;
-}
-.throbber_LoadingWrapper_3Z36h
-  .SVGIcon_Throbber
-  .throbber_roundThrobber10_3QwXn {
-  animation-delay: -0.9s;
-  opacity: 0.66;
-  stroke-width: 5px;
-}
-.throbber_LoadingWrapper_3Z36h
-  .SVGIcon_Throbber
-  .throbber_roundThrobber11_3Jmyz {
-  animation-delay: -1s;
-  opacity: 0.73;
-  stroke-width: 5.5px;
-}
-.throbber_LoadingWrapper_3Z36h
-  .SVGIcon_Throbber
-  .throbber_roundThrobber12_wOdFm {
-  animation-delay: -1.1s;
-  opacity: 0.8;
-  stroke-width: 6px;
-}
-.throbber_LoadingWrapper_3Z36h
-  .SVGIcon_Throbber
-  .throbber_roundThrobber13_5VEyI {
-  animation-delay: -1.2s;
-  opacity: 0.86;
-  stroke-width: 6.5px;
-}
-.throbber_LoadingWrapper_3Z36h
-  .SVGIcon_Throbber
-  .throbber_roundThrobber14_3DXeR {
-  animation-delay: -1.3s;
-  opacity: 0.93;
-  stroke-width: 7px;
-}
-.throbber_LoadingWrapper_3Z36h
-  .SVGIcon_Throbber
-  .throbber_roundThrobber15_1gQte {
-  animation-delay: -1.4s;
-  opacity: 1;
-  stroke-width: 7.5px;
-}
-@keyframes throbber_ThrobberRoundLoopThickness_1wAwc {
-  100% {
-    stroke-dashoffset: -1100;
-  }
-}
-.throbber_throbber_small_29-XT {
-  width: 36px;
-  height: 36px;
-}
-.throbber_throbber_medium_1yqSo {
-  width: 64px;
-  height: 64px;
-}
-.throbber_throbber_large_1u2tL {
-  width: 92px;
-  height: 92px;
-}
-.throbber_throbber_xlarge_2jzZM {
-  width: 120px;
-  height: 120px;
-}
-.throbber_throbber_xxlarge_1DFOT {
-  width: 240px;
-  height: 240px;
-}
-.throbber_ThrobberDelayAppear_34XSs {
-  opacity: 0;
-  transition: opacity 1s;
-}
-.throbber_ThrobberDelayAppear_34XSs.throbber_Visible_1ziaT {
-  opacity: 1;
-}
-.throbber_NewThrobber_tAKvs img {
-  width: 100%;
+.familyincominginvites_IncomingInviteRow_1GICw
+  .familyincominginvites_WallOfText_20gCk
+  p {
+  margin-bottom: 6px;
 }
 .familyincominginvites_FamilyIncomingInvites_3-_pK {
   background-color: #1f2a39;
@@ -472,81 +151,16 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   padding: 10px 10px;
 }
 .familyincominginvites_FamilyIncomingInvites_3-_pK
-  .familyincominginvites_IncomingInviteRow_1GICw {
+  .familyincominginvites_DimChildren_27iWd {
+  filter: brightness(40%);
+}
+.familyincominginvites_FamilyIncomingInvites_3-_pK
+  .familyincominginvites_IncomingInviteGone_2spwH {
   background-color: #0e141b;
   margin: 10px;
-  padding: 5px;
-}
-.familyincominginvites_FamilyIncomingInvites_3-_pK
-  .familyincominginvites_IncomingInviteRow_1GICw
-  .familyincominginvites_InviteRowHeader_AYHhN {
-  display: flex;
-  align-items: center;
-}
-.familyincominginvites_FamilyIncomingInvites_3-_pK
-  .familyincominginvites_IncomingInviteRow_1GICw
-  .familyincominginvites_FamilyName_boWA4 {
-  margin-right: 5px;
-  margin-left: 5px;
-  color: #1a9fff;
-}
-.familyincominginvites_FamilyIncomingInvites_3-_pK
-  .familyincominginvites_IncomingInviteRow_1GICw
-  .familyincominginvites_PersonaName_3x3dD {
-  margin-right: 5px;
-  margin-left: 5px;
-}
-.familyincominginvites_FamilyIncomingInvites_3-_pK
-  .familyincominginvites_IncomingInviteRow_1GICw
-  .familyincominginvites_RoleIcon_3BhC4 {
-  margin-left: 10px;
-}
-.familyincominginvites_FamilyIncomingInvites_3-_pK
-  .familyincominginvites_IncomingInviteRow_1GICw
-  .familyincominginvites_RoleName_EVV-a {
-  padding-left: 3px;
-  text-transform: uppercase;
+  padding: 16px;
   color: #fff;
-  font-weight: bold;
-}
-.familyincominginvites_FamilyIncomingInvites_3-_pK
-  .familyincominginvites_IncomingInviteRow_1GICw
-  .familyincominginvites_FamilyOverview_f8yHF {
-  background-color: #1f2a39;
-  padding: 10px 10px;
-  margin: 5px 5px;
-}
-.familyincominginvites_FamilyIncomingInvites_3-_pK
-  .familyincominginvites_IncomingInviteRow_1GICw
-  .familyincominginvites_ExpandRow_z39kD {
-  margin-left: auto;
-}
-.familyincominginvites_FamilyIncomingInvites_3-_pK
-  .familyincominginvites_IncomingInviteRow_1GICw
-  .familyincominginvites_ExpandRow_z39kD
-  svg {
-  fill: #fff;
-}
-.familyincominginvites_FamilyIncomingInvites_3-_pK
-  .familyincominginvites_IncomingInviteRow_1GICw
-  .familyincominginvites_FamilyOverviewHeader_1u0zN {
-  display: flex;
-  align-items: center;
-}
-.familyincominginvites_FamilyIncomingInvites_3-_pK
-  .familyincominginvites_IncomingInviteRow_1GICw
-  .familyincominginvites_FamilyOverviewMemberRow_3pjmB {
-  display: flex;
-  align-items: center;
-}
-.familyincominginvites_FamilyIncomingInvites_3-_pK
-  .familyincominginvites_IncomingInviteRow_1GICw
-  .familyincominginvites_Buttons_iZCbd {
-  display: flex;
-  justify-content: end;
-  margin-bottom: 10px;
-  margin-top: 10px;
-  margin-right: 5px;
+  font-size: 16px;
 }
 .familyincominginvites_FamilyIncomingInvites_3-_pK
   .familyincominginvites_AcceptInviteButton_34In_ {
@@ -567,32 +181,226 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   justify-content: center;
   padding-top: 20px;
 }
-.familysharedcomponents_RoleIcon_3bonx {
+.familysharedcomponents_RoleIcon_2OqP3 {
   width: 20px;
   height: 20px;
 }
-.familysharedcomponents_ProfileLink_2EK4M {
+.familysharedcomponents_ProfileLink_iKwt8 {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
-.familysharedcomponents_PlayerName_2aMDA {
-  padding-left: 10px;
+.familysharedcomponents_MyProfile_2nixW .familysharedcomponents_Avatar_3h6_a {
+  border-right: 4px solid #59bf40;
 }
-.familysharedcomponents_ProfileRoleIcon_NW8Zt {
+.familysharedcomponents_MyProfile_2nixW
+  .familysharedcomponents_PlayerName_3YHL9 {
+  color: #59bf40;
+}
+.familysharedcomponents_MeBadge_qeLJ_ {
+  content: "Me";
+  color: #0e141b;
+  background-color: #59bf40;
+  font-size: 12px;
+  font-weight: 500;
+  height: 21px;
+  width: 50px;
+  text-align: center;
+  margin-left: 30px;
+}
+.familysharedcomponents_PlayerName_3YHL9 {
+  padding-left: 10px;
+  font-size: 20px;
+}
+.familysharedcomponents_ProfileRoleIcon_1SlHw {
   margin-left: 10px;
 }
-.familysharedcomponents_RoleName_2KKmg {
+.familysharedcomponents_RoleName_3rvHm {
   padding-left: 3px;
   text-transform: uppercase;
   color: #fff;
   font-weight: bold;
 }
-.familysharedcomponents_FamilyErrorDisplay_2q8rI {
+.familysharedcomponents_FamilyErrorDisplay_3EgCv {
   background-color: #de3618;
   padding: 15px 10px;
   font-size: 14px;
   font-weight: bold;
+}
+.familysharedcomponents_FamilyMemberRow_3QkkY {
+  display: flex;
+  flex-direction: column;
+  background-color: #0e141b;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 5px;
+  transition: height 0.5s;
+}
+.familysharedcomponents_FamilyMemberRow_3QkkY
+  .familysharedcomponents_FamilyMemberRowTop_3kaLZ {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.familysharedcomponents_FamilyMemberRow_3QkkY
+  .familysharedcomponents_ExpandRow_168MV {
+  margin-left: auto;
+  cursor: pointer;
+  fill: #fff;
+  padding: 10px;
+}
+.familysharedcomponents_FamilyMemberRow_3QkkY
+  .familysharedcomponents_ExpandRow_168MV
+  svg {
+  transition: transform linear 0.1s;
+}
+.familyinvite_InviteSplash_2SFzY {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #0e141b;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 5px;
+  height: 84px;
+  text-transform: uppercase;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+}
+.familyinvite_InviteSplash_2SFzY svg {
+  height: 74px;
+  width: 74px;
+}
+.familyinvite_SelectAccountContainer_3VYLj,
+.familyinvite_SelectRoleContainer_1JFlD {
+  background-color: #0e141b;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+.familyinvite_SelectAccountContainer_3VYLj .familyinvite_CloseButton_3GXpD,
+.familyinvite_SelectRoleContainer_1JFlD .familyinvite_CloseButton_3GXpD {
+  float: right;
+  cursor: pointer;
+}
+.familyinvite_SelectAccountContainer_3VYLj .familyinvite_CloseButton_3GXpD svg,
+.familyinvite_SelectRoleContainer_1JFlD .familyinvite_CloseButton_3GXpD svg {
+  height: 24px;
+  width: 24px;
+}
+.familyinvite_SelectAccountContainer_3VYLj .familyinvite_Text_2HfX7,
+.familyinvite_SelectRoleContainer_1JFlD .familyinvite_Text_2HfX7 {
+  text-align: center;
+  color: #fff;
+  margin: 18px;
+}
+.familyinvite_SelectAccountContainer_3VYLj .familyinvite_Header_1Yrjr {
+  font-size: 24px;
+  color: #fff;
+  text-align: center;
+  margin-top: 24px;
+  text-transform: uppercase;
+}
+.familyinvite_SelectAccountContainer_3VYLj .familyinvite_MethodButtons_2MucX {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 40px;
+}
+.familyinvite_SelectAccountContainer_3VYLj
+  .familyinvite_MethodButtons_2MucX
+  button {
+  flex-basis: 180px;
+  color: #fff;
+  background-color: #1a9fff;
+}
+.familyinvite_SelectRoleContainer_1JFlD .familyinvite_Header_1Yrjr {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  align-items: center;
+}
+.familyinvite_SelectRoleContainer_1JFlD
+  .familyinvite_Header_1Yrjr
+  .familyinvite_Invite_Be14t {
+  font-size: 24px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.familyinvite_SelectRoleContainer_1JFlD
+  .familyinvite_Header_1Yrjr
+  .familyinvite_PlayerName_5DVuU {
+  font-size: 20px;
+  color: #1a9fff;
+}
+.familyinvite_SelectRoleContainer_1JFlD .familyinvite_InviteRoles_1jIMh {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+.familyinvite_SelectRoleContainer_1JFlD .familyinvite_InviteRole_14G2M {
+  display: flex;
+  align-items: center;
+  padding: 4px 14px;
+  border-style: none;
+  border-width: thin;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+}
+.familyinvite_SelectRoleContainer_1JFlD .familyinvite_InviteRole_14G2M input {
+  margin-left: 5px;
+}
+.familyinvite_SelectRoleContainer_1JFlD .familyinvite_RoleIcon_MzHev {
+  margin-right: 8px;
+}
+.familyinvite_ProfilePlusRole_IZ-EC {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.familyinvite_ProfilePlusRole_IZ-EC .familyinvite_PlayerName_5DVuU {
+  font-size: 20px;
+  color: #1a9fff;
+}
+.familyinvite_ProfilePlusRole_IZ-EC .familyinvite_RoleIcon_MzHev {
+  margin-right: 8px;
+  margin-left: 20px;
+}
+.familyinvite_ProfilePlusRole_IZ-EC .familyinvite_RoleName_1Ja4d {
+  font-size: 20px;
+  color: #fff;
+  text-transform: uppercase;
+}
+.familyinvite_ProfileSelector_2ABK2 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: start;
+  justify-content: left;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 500px;
+  gap: 10px;
+}
+.familyinvite_ProfileSelector_2ABK2 .familyinvite_ProfileChoice_2yH7U {
+  flex-basis: 0;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  cursor: pointer;
+}
+.familyinvite_ProfileSelector_2ABK2
+  .familyinvite_ProfileChoice_2yH7U
+  .familyinvite_PlayerName_5DVuU {
+  color: #59bf40;
 }
 .familyinvite_InviteFamilyMember_1X3V1
   .familyinvite_InviteMemberExpandButton_1G0Kk {
@@ -656,29 +464,6 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   .familyinvite_InviteRoles_1jIMh {
   display: flex;
   align-items: center;
-}
-.familyinvite_InviteFamilyMember_1X3V1
-  .familyinvite_InviteSection_10bmo
-  .familyinvite_InviteRole_14G2M {
-  display: flex;
-  align-items: center;
-  padding: 4px 14px;
-  border-style: none;
-  border-width: thin;
-  text-transform: uppercase;
-  font-weight: bold;
-  cursor: pointer;
-}
-.familyinvite_InviteFamilyMember_1X3V1
-  .familyinvite_InviteSection_10bmo
-  .familyinvite_InviteRole_14G2M
-  input {
-  margin-left: 5px;
-}
-.familyinvite_InviteFamilyMember_1X3V1
-  .familyinvite_InviteSection_10bmo
-  .familyinvite_RoleIcon_MzHev {
-  margin-right: 8px;
 }
 .familyinvite_InviteFamilyMember_1X3V1
   .familyinvite_InviteSection_10bmo
@@ -773,6 +558,7 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   .familyinvite_FriendSelectorRow_2qyKw {
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 .familyinvite_InviteCodeSelector_38YBc {
   margin-top: 10px;
@@ -808,115 +594,105 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
 .familymanagement_SectionDescription_1z6ZW {
   padding: 0px 0px 10px 0px;
 }
-.familymanagement_CreateOrManageFamily_3L9Xi
-  .familymanagement_CreateFamilyHeader_1527D {
+.familymanagement_AccountHeader_2kInm {
   display: flex;
-  justify-content: center;
-  font-size: 16px;
-  font-weight: bold;
+  padding: 5px;
+  gap: 8px;
+}
+.familymanagement_PreferencesHeader_17sdi svg {
+  height: 31px;
+  width: auto;
+}
+.familymanagement_FamilyContainer_2Fq1a
+  .familymanagement_FamilySubsection_2SKgw {
+  font-size: 24px;
+  line-height: 30px;
   text-transform: uppercase;
-}
-.familymanagement_CreateOrManageFamily_3L9Xi
-  .familymanagement_CreateFamilyButton_3YXuC {
-  display: flex;
-  justify-content: center;
-  color: #dfe3e6;
-  transition-property: background, color, box-shadow;
-  transition-duration: 0.2s;
-  transition-timing-function: ease-in-out;
-  background: #3d4450;
-  padding: 12px 25px 12px 25px;
-  margin: 12px 0px;
-  border-radius: 2px;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-  position: relative;
-  text-decoration: none;
-}
-.familymanagement_CreateOrManageFamily_3L9Xi
-  .familymanagement_CreateFamilyButton_3YXuC:hover {
-  background: #464d58;
+  font-weight: 500;
+  text-align: left;
   color: #fff;
-  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
-  cursor: pointer;
 }
-.familymanagement_CreateOrManageFamily_3L9Xi
-  .familymanagement_CreateFamilyButton_3YXuC
-  .familymanagement_ShareText_1XjjH {
-  line-height: 22px;
+.familymanagement_ManageFamily_3ayYO
+  .familymanagement_FamilyNameAndSlots_rG9v6 {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.familymanagement_ManageFamily_3ayYO
+  .familymanagement_FamilyNameAndSlots_rG9v6
+  .familymanagement_FamilyNameEditor_3OIDl {
+  padding: 4px;
+  margin-bottom: 16px;
+}
+.familymanagement_ManageFamily_3ayYO
+  .familymanagement_FamilyNameAndSlots_rG9v6
+  .familymanagement_FamilyNameEditor_3OIDl
+  > * {
+  display: inline;
+}
+.familymanagement_ManageFamily_3ayYO
+  .familymanagement_FamilyNameAndSlots_rG9v6
+  .familymanagement_FamilyNameEditor_3OIDl
+  .familymanagement_YourFamily_2odf9 {
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 18px;
+  display: inline;
+  margin-right: 8px;
+}
+.familymanagement_ManageFamily_3ayYO
+  .familymanagement_FamilyNameAndSlots_rG9v6
+  .familymanagement_FamilyNameEditor_3OIDl
+  .familymanagement_FamilyName_1X4ch {
+  color: #1a9fff;
+  font-weight: bold;
   font-size: 18px;
 }
-.familymanagement_CreateOrManageFamily_3L9Xi
-  .familymanagement_CreateFamilyButton_3YXuC
-  .familymanagement_CreateFamilyIcon_1K9EI {
-  width: 25px;
-  height: 25px;
-  fill: rgba(255, 255, 255, 0.66);
-}
-.familymanagement_CreateOrManageFamily_3L9Xi
-  .familymanagement_CreateFamilyNameInput_pc-Vv {
-  padding: 10px;
-}
-.familymanagement_CreateOrManageFamily_3L9Xi
-  .familymanagement_ManageFamilyHeader_3d7Jt {
-  display: flex;
-  align-items: center;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  height: 30px;
-}
-.familymanagement_CreateOrManageFamily_3L9Xi
-  .familymanagement_ManageFamilyHeader_3d7Jt
-  .familymanagement_ManageFamilyHeaderLabel_1CjEt {
+.familymanagement_ManageFamily_3ayYO
+  .familymanagement_FamilyNameAndSlots_rG9v6
+  .familymanagement_FamilyNameEditor_3OIDl
+  .familymanagement_EditNameInput_2cXhA {
+  color: #fff;
+  background-color: #3d4450;
   font-size: 16px;
-  font-weight: bold;
-  text-transform: uppercase;
-  margin-right: 10px;
+  padding: 4px;
 }
-.familymanagement_CreateOrManageFamily_3L9Xi
-  .familymanagement_ManageFamilyHeader_3d7Jt
-  .familymanagement_ManageFamilyHeaderName_2mRQC {
-  font-size: 16px;
-  font-weight: bold;
-  color: #1a9fff;
-}
-.familymanagement_CreateOrManageFamily_3L9Xi
-  .familymanagement_ManageFamilyHeader_3d7Jt
-  .familymanagement_ManageFamilyHeaderEdit_12wIk {
+.familymanagement_ManageFamily_3ayYO
+  .familymanagement_FamilyNameAndSlots_rG9v6
+  .familymanagement_FamilyNameEditor_3OIDl
+  .familymanagement_EditButton_o6KnE
+  > svg {
   padding-left: 10px;
   width: 16px;
   height: 16px;
   cursor: pointer;
 }
-.familymanagement_CreateOrManageFamily_3L9Xi
-  .familymanagement_ManageFamilyHeader_3d7Jt
-  .familymanagement_ManageFamilyHeaderSlotsLeft_u_3L9 {
-  margin-left: auto;
-  text-transform: uppercase;
-  font-size: 10px;
-}
-.familymanagement_CreateOrManageFamily_3L9Xi
-  .familymanagement_EditFamilyNameSaveButton_2suGn {
+.familymanagement_ManageFamily_3ayYO
+  .familymanagement_FamilyNameAndSlots_rG9v6
+  .familymanagement_FamilyNameEditor_3OIDl
+  .familymanagement_SaveButton_39Ldn {
   margin-left: 10px;
   background-color: #1a9fff;
   padding: 2px 10px;
   width: unset;
   line-height: unset;
 }
-.familymanagement_CreateOrManageFamily_3L9Xi
-  .familymanagement_EditFamilyNameCancelButton_3VN9c {
+.familymanagement_ManageFamily_3ayYO
+  .familymanagement_FamilyNameAndSlots_rG9v6
+  .familymanagement_FamilyNameEditor_3OIDl
+  .familymanagement_CancelButton_15P7o {
   margin-left: 10px;
   padding: 2px 10px;
   width: unset;
   line-height: unset;
 }
-.familymanagement_CreateOrManageFamily_3L9Xi
-  .familymanagement_ThrobberContainer_2guJi {
+.familymanagement_ManageFamily_3ayYO .familymanagement_ThrobberContainer_2guJi {
   display: flex;
   justify-content: center;
   padding-top: 20px;
 }
-.familymanagement_CreateOrManageFamily_3L9Xi
-  .familymanagement_InvitePending_23Q7c {
+.familymanagement_ManageFamily_3ayYO .familymanagement_InvitePending_23Q7c {
   margin-left: 10px;
   padding: 2px 10px;
   text-transform: uppercase;
@@ -926,42 +702,7 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   border-color: #ff0;
   border-width: thin;
 }
-.familymanagement_CreateOrManageFamily_3L9Xi
-  .familymanagement_FamilyMemberRow_2-Y4R {
-  display: flex;
-  flex-direction: column;
-  background-color: #1f2a39;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  padding: 5px;
-  transition: height 0.5s;
-}
-.familymanagement_CreateOrManageFamily_3L9Xi
-  .familymanagement_FamilyMemberRow_2-Y4R
-  .familymanagement_FamilyMemberRowTop_1yQtk {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.familymanagement_CreateOrManageFamily_3L9Xi
-  .familymanagement_FamilyMemberRow_2-Y4R
-  .familymanagement_ExpandRow_2wqag {
-  margin-left: auto;
-  cursor: pointer;
-  fill: #fff;
-  padding: 10px;
-}
-.familymanagement_CreateOrManageFamily_3L9Xi
-  .familymanagement_FamilyMemberRow_2-Y4R
-  .familymanagement_ExpandRow_2wqag
-  svg {
-  transition: transform linear 0.1s;
-}
-.familymanagement_CreateOrManageFamily_3L9Xi
-  .familymanagement_ActiveFamilyMemberRow_3oAx- {
-  border: 2px solid rgba(244, 244, 23, 0.712);
-}
-.familymanagement_CreateOrManageFamily_3L9Xi
+.familymanagement_ManageFamily_3ayYO
   .familymanagement_ExpandedPendingInvite_2t7pN {
   display: flex;
   flex-direction: column;
@@ -971,13 +712,13 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   margin-bottom: 10px;
   padding: 5px;
 }
-.familymanagement_CreateOrManageFamily_3L9Xi
+.familymanagement_ManageFamily_3ayYO
   .familymanagement_ExpandedPendingInvite_2t7pN
   .familymanagement_InviteDescription_3hEFW {
   text-align: center;
   width: 70%;
 }
-.familymanagement_CreateOrManageFamily_3L9Xi
+.familymanagement_ManageFamily_3ayYO
   .familymanagement_ExpandedPendingInvite_2t7pN
   .familymanagement_Buttons_27d1E {
   display: flex;
@@ -985,72 +726,203 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   justify-content: center;
   margin-top: 20px;
 }
-.familymanagement_CreateOrManageFamily_3L9Xi
+.familymanagement_ManageFamily_3ayYO
   .familymanagement_ExpandedPendingInvite_2t7pN
   .familymanagement_Buttons_27d1E
   .familymanagement_ButtonIcon_1sn7W {
   margin-right: 10px;
 }
-.familymanagement_CreateOrManageFamily_3L9Xi
+.familymanagement_ManageFamily_3ayYO
   .familymanagement_ExpandedPendingInvite_2t7pN
   .familymanagement_Buttons_27d1E
   .familymanagement_ManagementButton_7HLtN {
   width: auto;
   padding: 2px 20px;
 }
-.familymanagement_CreateOrManageFamily_3L9Xi
+.familymanagement_ManageFamily_3ayYO
   .familymanagement_CancelInviteButton_1nyw3 {
   background-color: #de3618;
   margin-right: 10px;
 }
-.familymanagement_CreateOrManageFamily_3L9Xi
+.familymanagement_ManageFamily_3ayYO
   .familymanagement_ResendInviteButton_2WPzA {
   background-color: #1a9fff;
 }
-.familymanagement_CreateOrManageFamily_3L9Xi
-  .familymanagement_DeleteFamily_uXPF5 {
-  margin-top: 40px;
-  background-color: #de3618;
+.familymanagement_OnboardSplashContainer_3HBvb
+  .familymanagement_WallOfText_xdQkS {
+  max-width: 45em;
+  margin: 8px auto;
 }
-.familymanagement_CreateOrManageFamily_3L9Xi
-  .familymanagement_FamilyHistory_1t_5I {
+.familymanagement_OnboardSplashContainer_3HBvb
+  .familymanagement_OnboardSplashButtons_12md3 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 16px;
+  margin: 32px 48px 16px 48px;
+}
+.familymanagement_OnboardSplashContainer_3HBvb
+  .familymanagement_OnboardSplashButtons_12md3
+  .familymanagement_OnboardSplashButton_2R8KF {
+  width: 200px;
+}
+.familymanagement_OnboardSplashContainer_3HBvb
+  .familymanagement_OnboardSplashButtons_12md3
+  .familymanagement_OnboardSplashButton_2R8KF
+  .familymanagement_OnboardSplashButtonLabel_1hqqU {
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 500;
+  font-size: 16px;
+}
+.familymanagement_OnboardSplashContainer_3HBvb
+  .familymanagement_OnboardSplashButtons_12md3
+  .familymanagement_OnboardSplashButton_2R8KF
+  .familymanagement_OnboardSplashButtonGraphic_2UPkK {
+  text-align: center;
+  background-color: #1a9fff;
+  padding: 16px 8px;
+  margin: 8px;
+  border-radius: 3px;
+  transition:
+    scale 100ms ease-in-out,
+    filter 100ms ease-in-out;
+  filter: drop-shadow(0px 1px 2px #0e141b);
+}
+.familymanagement_OnboardSplashContainer_3HBvb
+  .familymanagement_OnboardSplashButtons_12md3
+  .familymanagement_OnboardSplashButton_2R8KF
+  .familymanagement_OnboardSplashButtonGraphic_2UPkK
+  svg {
+  height: 32px;
+  width: auto;
+}
+.familymanagement_OnboardSplashContainer_3HBvb
+  .familymanagement_OnboardSplashButtons_12md3
+  .familymanagement_OnboardSplashButton_2R8KF
+  .familymanagement_OnboardSplashButtonGraphic_2UPkK:hover {
+  color: #fff;
+  scale: 1.03;
+  filter: drop-shadow(0px 3px 3px #0e141b) brightness(1.05);
+}
+.familymanagement_OnboardSplashContainer_3HBvb
+  .familymanagement_OnboardSplashButtons_12md3
+  .familymanagement_OnboardSplashButton_2R8KF
+  .familymanagement_OnboardSplashButtonBadge_1JrBU {
+  height: 16px;
+  position: relative;
+  top: -16px;
+  background: #1a9fff;
+  color: #fff;
+  border-radius: 10px;
+  text-transform: uppercase;
+  text-align: center;
+  width: 80%;
+  margin-left: auto;
+  padding: 2px;
+  margin-right: auto;
+}
+.familymanagement_FamilyHistory_1t_5I {
   overflow-y: scroll;
   height: 50vh;
 }
-.familymanagement_CreateOrManageFamily_3L9Xi
-  .familymanagement_FamilyHistory_1t_5I
-  .familymanagement_Entry_2xRpe {
+.familymanagement_FamilyHistory_1t_5I .familymanagement_Entry_2xRpe {
   display: flex;
   flex-direction: row;
-  padding-top: 10px;
-  padding-bottom: 10px;
   border-bottom: 1px solid #464d58;
+  padding: 10px 0;
 }
-.familymanagement_CreateOrManageFamily_3L9Xi
-  .familymanagement_FamilyHistory_1t_5I
+.familymanagement_FamilyHistory_1t_5I
   .familymanagement_Entry_2xRpe
   .familymanagement_Timestamp_3s0E2 {
   align-self: flex-start;
   width: 170px;
   flex: none;
 }
-.familymanagement_CreateOrManageFamily_3L9Xi
-  .familymanagement_FamilyHistory_1t_5I
+.familymanagement_FamilyHistory_1t_5I
   .familymanagement_Entry_2xRpe
   .familymanagement_EntryText_3G8Ee {
   align-self: flex-start;
   flex-grow: 1;
+}
+.familymanagement_IncomingInviteGone_2sKy8 {
+  background-color: #0e141b;
+  padding: 16px;
+  margin-bottom: 24px;
+  color: #fff;
+  font-size: 16px;
+}
+.familymanagement_CreateFamilyContainer_3uS4a
+  > .familymanagement_CreateFamilyForm_10fN6 {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: center;
+  margin: 16px 8px;
+  padding: 16px 8px;
+  background-color: #23262e;
+}
+.familymanagement_CreateFamilyContainer_3uS4a
+  > .familymanagement_CreateFamilyForm_10fN6
+  > input {
+  padding: 10px;
+  flex-grow: 1;
+}
+.familymanagement_CreateFamilyContainer_3uS4a
+  > .familymanagement_CreateFamilyForm_10fN6
+  > button {
+  flex-grow: 0;
+  flex-basis: 80px;
+}
+.familymanagement_JoinFamilyContainer_JtCI1
+  .familymanagement_FriendCodeContainer_2gJ6m {
+  padding: 16px 0px;
+  display: flex;
+  justify-content: left;
+  gap: 16px;
+  align-items: center;
+}
+.familymanagement_JoinFamilyContainer_JtCI1
+  .familymanagement_FriendCodeContainer_2gJ6m
+  .familymanagement_FriendCodeDisplay_1jANp {
+  font-size: 16px;
+  background-color: #0e141b;
+  color: #99d4ff;
+  font-weight: 500;
+  flex-grow: 1;
+  padding: 8px;
+  text-align: center;
+  max-width: 200px;
+}
+.familymanagement_JoinFamilyContainer_JtCI1
+  .familymanagement_FriendCodeContainer_2gJ6m
+  .familymanagement_FriendCodeCopyButton_38Z3n {
+  flex-basis: 80px;
+}
+.familymanagement_JoinFamilyContainer_JtCI1
+  .familymanagement_FriendCodeContainer_2gJ6m
+  .familymanagement_YourFriendCode_24iUj {
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 500;
+}
+.familymanagement_JoinFamilyContainer_JtCI1
+  .familymanagement_JoinWarningContainer_Ea1HR
+  b {
+  color: #ffc82c;
 }
 .familymember_FamilyMemberManagementButtons_-kADz {
   display: flex;
   flex-direction: row;
   justify-content: end;
   gap: 6px;
+  margin-bottom: 8px;
 }
 .familymember_FamilyMemberManagementButtons_-kADz
   .familymember_ManagementButton_vDtJq {
   width: fit-content;
   padding: 0px 8px;
+  flex-grow: 0;
 }
 .familymember_FamilyMemberManagementButtons_-kADz
   .familymember_ManagementButton_vDtJq
@@ -1059,7 +931,19 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   width: 20px;
   height: 20px;
 }
+.familymember_FamilyMemberManagementButtons_-kADz
+  .familymember_ManagementLable_2COo8 {
+  font-size: 16px;
+  color: #dcdedf;
+  flex-grow: 1;
+  margin-left: 8px;
+  align-self: center;
+}
 .familymember_FamilyMemberManagementButtons_-kADz .familymember_Remove_UzQPb {
+  background-color: #de3618;
+}
+.familymember_FamilyMemberManagementButtons_-kADz
+  .familymember_DeleteFamily_2zCYL {
   background-color: #de3618;
 }
 .familyparentalsettings_FamilyMemberParentalSettingsInner_2WflO {
@@ -1079,7 +963,7 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
 .familyparentalsettings_ParentalGameListHeader_2oJ9B
   .familyparentalsettings_TitleCount_2LQav {
   font-size: 14px;
-  height: 14px;
+  line-height: normal;
   text-transform: uppercase;
   flex-grow: 1;
 }
@@ -1089,11 +973,22 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   height: 24px;
   box-sizing: border-box;
 }
-.familyparentalsettings_ParentalGameList_2aIw2 {
-  height: 50vh;
-  overflow-y: scroll;
+.familyparentalsettings_ParentalGameListOuter_3RbIc {
+  display: flex;
+  flex-direction: column;
+}
+.familyparentalsettings_ParentalGameListOuter_3RbIc
+  .familyparentalsettings_Content_3FkfJ {
+  max-height: 50vh;
+  display: flex;
+  flex-direction: column;
   padding: 20px 10px 10px 10px;
-  display: none;
+  overflow: auto;
+}
+.familyparentalsettings_ParentalGameListScrollable_1MiE1 {
+  height: 100%;
+  width: 100%;
+  overflow-y: scroll;
 }
 .familyparentalsettings_ParentalGameRow_e8fXQ {
   display: flex;
@@ -1301,6 +1196,145 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   text-decoration: underline;
   font-size: 14px;
 }
+.familyparentalsettings_ParentalCopySelector_2RfjJ {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  align-items: center;
+}
+.familyparentalsettings_ParentalCopySelector_2RfjJ
+  .familyparentalsettings_ButtonWrapper_1QZ73 {
+  flex-grow: 0;
+}
+.familyparentalsettings_ParentalCopySelector_2RfjJ
+  .familyparentalsettings_Button_1snFf {
+  padding: 0px 10px;
+  box-sizing: border-box;
+}
+.familyparentalsettings_ParentalCopySelector_2RfjJ
+  .familyparentalsettings_DropDown_2MCeh {
+  flex-grow: 1;
+}
+.familyparentalsettings_ParentalApp_wpR_G {
+  opacity: 0.5;
+  position: relative;
+}
+.familyparentalsettings_ParentalApp_wpR_G.familyparentalsettings_Allowed_2JNwI {
+  opacity: 1;
+}
+.familyparentalsettings_ParentalApp_wpR_G
+  .familyparentalsettings_Children_30Msm {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.familyparentalsettings_ViewSelector_2YLQ1 {
+  cursor: pointer;
+  color: #67707b;
+  height: 18px;
+  width: 18px;
+}
+.familyparentalsettings_ViewSelector_2YLQ1.familyparentalsettings_Selected_24Vpj {
+  color: #fff;
+}
+.familyparentalsettings_ViewSelector_2YLQ1:hover {
+  color: #fff;
+}
+.familygames_FamilyGames_3Pnf9 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.familygames_FamilyGames_3Pnf9 > .familygames_Header_LP9H7 {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  font-size: 24px;
+  color: #fff;
+  text-transform: uppercase;
+}
+.familygames_FamilyGames_3Pnf9 .familygames_ButtonWrapper_1ve5n {
+  display: flex;
+  justify-content: center;
+}
+.familygames_FamilyGames_3Pnf9 .familygames_Button_2UOyb {
+  width: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.familygames_FamilyGamesSection_1o7lK {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.familygames_FamilyGamesSection_1o7lK .familygames_Header_LP9H7 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  line-height: normal;
+}
+.familygames_FamilyGamesSection_1o7lK .familygames_Label_1M5eD {
+  font-size: 18px;
+  color: #fff;
+}
+.familygames_FamilyGamesSection_1o7lK .familygames_Count_3x604 {
+  font-size: 14px;
+}
+.familygames_FamilyGameItem_gDwBc .familygames_HoverSource_2BUeg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.familygames_FamilyGameItem_gDwBc .familygames_LicenseCount_OchtG {
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #fff;
+}
+.appgrid_AppGridItem_3Ti0O {
+  position: relative;
+  height: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.appgrid_AppGridItem_3Ti0O.appgrid_NoImage_ccEyP {
+  border: 1px solid #fff;
+}
+.appgrid_AppGridItem_3Ti0O .appgrid_Capsule_1FHOJ {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.appgrid_AppGridItem_3Ti0O.appgrid_Selectable_1coM2 {
+  cursor: pointer;
+}
+.appgrid_Label_1vlhD {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0);
+  padding: 6px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.virtualizedgrid_VirtualizedGridWrapper_1FuQ7 {
+  box-sizing: border-box;
+  height: 100%;
+}
+.virtualizedgrid_VirtualizedGridRow_1aH3s {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  box-sizing: border-box;
+}
 .familyrequests_FamilyRequests_1VbIw {
   display: flex;
   flex-direction: column;
@@ -1309,8 +1343,23 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
 .familyrequests_FamilyRequestItem_2g9Tr {
   padding: 4px;
   background-color: #1f2a39;
+  min-height: 72px;
 }
 .familyrequests_FamilyRequestItem_2g9Tr .familyrequests_RequestInfo_1gqAh {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+.familyrequests_FamilyRequestItem_2g9Tr
+  .familyrequests_RequestInfo_1gqAh
+  .familyrequests_FeatureList_ccxwV {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+.familyrequests_FamilyRequestItem_2g9Tr
+  .familyrequests_RequestInfo_1gqAh
+  .familyrequests_SelfRequested_jxmvX {
   flex-grow: 1;
 }
 .familyrequests_FamilyRequestItem_2g9Tr .familyrequests_AvatarAndPersona_i8dlh {
@@ -1324,16 +1373,24 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   flex-grow: 0;
   flex-basis: 25%;
 }
+.familyrequests_FamilyRequestItem_2g9Tr
+  .familyrequests_Buttons_2T2ci.familyrequests_Pending_38w9g,
+.familyrequests_FamilyRequestItem_2g9Tr
+  .familyrequests_RequestResponse_1M_WB.familyrequests_Pending_38w9g {
+  display: flex;
+  align-items: center;
+}
 .familyrequests_ParentalFeatureRequestItem_3aZNX,
 .familyrequests_ParentalPlaytimeRequestItem_1FS_d {
   display: flex;
   flex-direction: row;
+  gap: 10px;
 }
 .familyrequests_ParentalFeatureRequestItem_3aZNX
   .familyrequests_FeatureList_ccxwV,
 .familyrequests_ParentalPlaytimeRequestItem_1FS_d
   .familyrequests_FeatureList_ccxwV {
-  padding-left: 80px;
+  padding-left: 40px;
 }
 .familyrequests_PurchaseRequestItem_wm_Nt {
   display: flex;

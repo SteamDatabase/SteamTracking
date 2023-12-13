@@ -405,6 +405,18 @@ function AchievementsCompletionistGameShowcaseOnGameChange( elSlot, eShowcase, p
 	});
 }
 
+function OnReplayShowcaseYearChange( elForm, eShowcase, purchaseid, level, iSlot )
+{
+	const nYear = $J( elForm ).val();
+	SetShowcaseConfig(
+		eShowcase, purchaseid, iSlot, { replay_year: nYear }
+	).done( function() {
+		PreviewShowcaseConfigWithSlotChange( eShowcase, purchaseid, level, iSlot, { replay_year: nYear } );
+	}).fail( function() {
+		ShowAlertDialog( 'Replay Year', 'There was an error choosing your Replay year. Please try again later.' );
+	});
+}
+
 function ShowcaseRecommendationPicker( elSlot, eShowcase, purchaseid, level, iSlot )
 {
 	var Modal = ShowDialog( 'Select a Game You\'ve Publicly Reviewed', '<div class="group_invite_throbber"><img src="https://community.cloudflare.steamstatic.com/public/images/login/throbber.gif"></div>' );

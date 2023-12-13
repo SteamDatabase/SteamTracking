@@ -71,6 +71,11 @@
                     br: n.FE.readUint32,
                     bw: n.Xc.writeUint32,
                   },
+                  item_type: {
+                    n: 15,
+                    br: n.FE.readUint32,
+                    bw: n.Xc.writeUint32,
+                  },
                 },
               }),
             o.sm_m
@@ -533,6 +538,11 @@
                 fields: {
                   voteid: { n: 1, br: n.FE.readUint32, bw: n.Xc.writeUint32 },
                   appid: { n: 2, br: n.FE.readUint32, bw: n.Xc.writeUint32 },
+                  communityitemid: {
+                    n: 3,
+                    br: n.FE.readUint64String,
+                    bw: n.Xc.writeUint64String,
+                  },
                 },
               }),
             y.sm_m
@@ -643,14 +653,7 @@
             w.sm_m ||
               (w.sm_m = {
                 proto: w,
-                fields: {
-                  user_votes: { n: 1, c: y, r: !0, q: !0 },
-                  total_votes_cast: {
-                    n: 2,
-                    br: n.FE.readUint32,
-                    bw: n.Xc.writeUint32,
-                  },
-                },
+                fields: { user_votes: { n: 1, c: y, r: !0, q: !0 } },
               }),
             w.sm_m
           );
@@ -710,11 +713,6 @@
                     br: n.FE.readUint32,
                     bw: n.Xc.writeUint32,
                   },
-                  developerid: {
-                    n: 4,
-                    br: n.FE.readUint32,
-                    bw: n.Xc.writeUint32,
-                  },
                 },
               }),
             z.sm_m
@@ -759,24 +757,15 @@
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            f.prototype.voteid || n.aR(f.M()),
-            s.initialize(this, e, 0, -1, [4], null);
+            f.prototype.user_votes || n.aR(f.M()),
+            s.initialize(this, e, 0, -1, [1], null);
         }
         static M() {
           return (
             f.sm_m ||
               (f.sm_m = {
                 proto: f,
-                fields: {
-                  voteid: { n: 1, br: n.FE.readInt32, bw: n.Xc.writeInt32 },
-                  appid: { n: 2, br: n.FE.readUint32, bw: n.Xc.writeUint32 },
-                  developerid: {
-                    n: 3,
-                    br: n.FE.readUint32,
-                    bw: n.Xc.writeUint32,
-                  },
-                  user_votes: { n: 4, c: y, r: !0, q: !0 },
-                },
+                fields: { user_votes: { n: 1, c: y, r: !0, q: !0 } },
               }),
             f.sm_m
           );

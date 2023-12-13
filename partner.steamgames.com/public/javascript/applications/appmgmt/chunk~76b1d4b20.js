@@ -2401,7 +2401,7 @@
         i = a(207),
         s = a(32765);
       const r = JSON.parse(
-        '{"store.steampowered.com":1,"default":4,"message":41,"steamtv":2200,"steamclient":5000,"library":5100,"friendsui":5200,"friendcontextmenu":5201,"topsellers":7000,"steamcharts":7001,"weeklytopsellers":7002,"topchartlist":7003,"overview":7004,"mostplayed":7005,"salecreatorhome":100700,"saleitembrowse":100701,"salefacetbrowse":100702,"salesection":100703,"saletabsection":100704,"salebroadcast":100705,"salecuratorrec":100706,"saleeventsched":100707,"salesubscription":100708,"saleitemsearch":100709,"salesmartwishlist":100710,"salesmartir":100711,"salesmartdlc":100712,"salesmarttagrec":100713,"salebrowsetopwishlisted":100714,"salebrowsetrendingwishlisted":100715,"salebrowsepopularcomingsoon":100716,"salebrowsemostplayeddemo":100717,"salebrowsedailyactiveuserdemo":100718,"salebrowseplayednowdemo":100719,"salebrowserecentlyreleased":100720,"salebrowsepopularpurchased":100721,"salebrowsepopularpurchaseddiscounted":100722,"salebrowsediscounted":100723,"salebrowseprice":100724,"salebrowsenewandtrending":100725,"salebrowsetopsellers":100726,"salebrowsetoprated":100727,"discoveryqueue2022":100728,"saleeventsection":100729,"salesectionlinks":100730,"salesectionrewards":100731,"salesectiontext":100732,"salesectioneventschedule":100733,"spotlight":40,"daily-deal":43,"promo-takeover":118,"live-broadcast":143,"large-cluster":201,"yearinreview":662}',
+        '{"store.steampowered.com":1,"steamcommunity.com":2,"default":4,"message":41,"notification":48,"mobileapp":700,"steamtv":2200,"steamclient":5000,"library":5100,"friendsui":5200,"friendcontextmenu":5201,"topsellers":7000,"steamcharts":7001,"weeklytopsellers":7002,"topchartlist":7003,"overview":7004,"mostplayed":7005,"help.steampowered.com":100601,"salecreatorhome":100700,"saleitembrowse":100701,"salefacetbrowse":100702,"salesection":100703,"saletabsection":100704,"salebroadcast":100705,"salecuratorrec":100706,"saleeventsched":100707,"salesubscription":100708,"saleitemsearch":100709,"salesmartwishlist":100710,"salesmartir":100711,"salesmartdlc":100712,"salesmarttagrec":100713,"salebrowsetopwishlisted":100714,"salebrowsetrendingwishlisted":100715,"salebrowsepopularcomingsoon":100716,"salebrowsemostplayeddemo":100717,"salebrowsedailyactiveuserdemo":100718,"salebrowseplayednowdemo":100719,"salebrowserecentlyreleased":100720,"salebrowsepopularpurchased":100721,"salebrowsepopularpurchaseddiscounted":100722,"salebrowsediscounted":100723,"salebrowseprice":100724,"salebrowsenewandtrending":100725,"salebrowsetopsellers":100726,"salebrowsetoprated":100727,"discoveryqueue2022":100728,"saleeventsection":100729,"salesectionlinks":100730,"salesectionrewards":100731,"salesectiontext":100732,"salesectioneventschedule":100733,"spotlight":40,"daily-deal":43,"promo-takeover":118,"live-broadcast":143,"large-cluster":201,"yearinreview":662}',
       );
       function o(e, t = "", a = null) {
         return c.InstrumentLink(e, t, a);
@@ -14332,14 +14332,14 @@
           });
         };
     },
-    51441: (e, t, a) => {
+    43840: (e, t, a) => {
       "use strict";
       a.d(t, {
-        Hu: () => Z,
-        RJ: () => K,
-        Yb: () => Y,
-        ll: () => ae,
-        tl: () => se,
+        Hu: () => X,
+        Yb: () => J,
+        RJ: () => Q,
+        tl: () => oe,
+        ll: () => ie,
       });
       var n = a(33940),
         i = a(52868),
@@ -14383,45 +14383,49 @@
         H = a(23715),
         j = a.n(H),
         W = a(98389);
-      const z = "DEBUG_UseNewGameHover";
-      function Z() {
-        return "none" !== X();
-      }
+      const z =
+          a.p +
+          "images/applications/appmgmt/defaultappheader.png?v=valveisgoodatcaching",
+        Z = "DEBUG_UseNewGameHover";
       function X() {
+        return "none" !== q();
+      }
+      function q() {
         var e;
         return (
           (null === (e = window.sessionStorage) || void 0 === e
             ? void 0
-            : e.getItem(z)) || "default"
+            : e.getItem(Z)) || "default"
         );
       }
       window.SetHoverPresentation = function (e) {
-        window.sessionStorage.setItem(z, e);
+        window.sessionStorage.setItem(Z, e);
       };
-      function q(e) {
+      const $ = 2e3;
+      function Y(e) {
         const { info: t } = e,
           a = (0, l.useRef)({
             include_assets: !0,
             include_trailers: !0,
             include_screenshots: !0,
           }),
-          [n] = (0, f.jk)(t.id, (0, v.TM)(t.type), a.current),
-          i = (0, l.useRef)(n),
-          [s, o] = (0, l.useState)([]),
-          d = (0, l.useRef)(0),
-          m = (0, F.NW)(),
-          [c] = l.useState(new k.Ar()),
-          u = (0, l.useCallback)(() => {
-            if ((null == s ? void 0 : s.length) > 0) {
-              const e = s[d.current].nDurationMs;
-              c.Schedule(e, () => {
-                const e = d.current;
-                (d.current = (d.current + 1) % s.length),
-                  e != d.current && (u(), m());
+          [n, i] = (0, f.jk)(t.id, (0, v.TM)(t.type), a.current),
+          s = (0, l.useRef)(n),
+          [o, d] = (0, l.useState)([]),
+          m = (0, l.useRef)(0),
+          c = (0, F.NW)(),
+          [u] = l.useState(new k.Ar()),
+          h = (0, l.useCallback)(() => {
+            if ((null == o ? void 0 : o.length) > 0) {
+              const e = o[m.current].nDurationMs;
+              u.Schedule(e, () => {
+                const e = m.current;
+                (m.current = (m.current + 1) % o.length),
+                  e != m.current && (h(), c());
               });
             }
-          }, [s, c, m]),
-          h = (0, l.useCallback)(
+          }, [o, u, c]),
+          p = (0, l.useCallback)(
             (e) => {
               var a;
               const n = [];
@@ -14446,7 +14450,7 @@
                           src: e,
                           alt: "screenshot " + (t + 1),
                         }),
-                        nDurationMs: 2e3,
+                        nDurationMs: $,
                       });
                     });
               }
@@ -14467,11 +14471,11 @@
                         src: i,
                         alt: e.GetName(),
                       }),
-                      nDurationMs: 2e3,
+                      nDurationMs: $,
                     });
                 }
               n.length > 0
-                ? (o(n), (d.current = 0), u())
+                ? (d(n), (m.current = 0), h())
                 : ("dev" != O.De.WEB_UNIVERSE && "beta" != O.De.WEB_UNIVERSE) ||
                   console.error(
                     "DEV ONLY OUTPUT: GameHoverImages for id/type no images: (might be not age safe screenshots)",
@@ -14479,14 +14483,27 @@
                     (0, r.ZN)(t),
                   );
             },
-            [u],
+            [h],
           );
         return (
           (0, l.useEffect)(
             () => (
-              !n || (s && 0 != s.length && i.current === n)
-                ? (null == s ? void 0 : s.length) && u()
-                : ((i.current = n),
+              !n || (o && 0 != o.length && s.current === n)
+                ? 2 == i && 0 == o.length
+                  ? d([
+                      {
+                        rctImage: l.createElement("img", {
+                          key: "default",
+                          className: N().FullDivImage,
+                          loading: "lazy",
+                          src: z,
+                          alt: "default",
+                        }),
+                        nDurationMs: $,
+                      },
+                    ])
+                  : (null == o ? void 0 : o.length) && h()
+                : ((s.current = n),
                   2 == n.GetStoreItemType() || 1 == n.GetStoreItemType()
                     ? ((0, L.X)(
                         n.GetIncludedAppIDs().length > 0,
@@ -14499,25 +14516,25 @@
                         .QueueMultipleAppRequests(n.GetIncludedAppIDs(), {
                           include_assets: !0,
                         })
-                        .then(() => h(n.GetIncludedAppIDs())))
-                    : h([n.GetID()])),
-              () => c.Cancel()
+                        .then(() => p(n.GetIncludedAppIDs())))
+                    : p([n.GetID()])),
+              () => u.Cancel()
             ),
-            [h, s, n, c, u, i],
+            [p, o, n, i, u, h, s],
           ),
           l.createElement(
             "div",
             { className: N().TrailerCtn },
-            null == s
+            null == o
               ? void 0
-              : s.map((e, a) =>
+              : o.map((e, a) =>
                   l.createElement(
                     "div",
                     {
                       key: "e-" + a + "-" + t.id + "_" + t.type,
                       className: (0, R.Z)(
                         N().FullDivImage,
-                        a != d.current && N().Transparent,
+                        a != m.current && N().Transparent,
                       ),
                     },
                     e.rctImage,
@@ -14526,7 +14543,7 @@
           )
         );
       }
-      function $(e) {
+      function K(e) {
         const { rgTagIDs: t } = e;
         return l.createElement(
           "div",
@@ -14544,7 +14561,7 @@
           ),
         );
       }
-      function Y(e) {
+      function J(e) {
         const { appInfo: t, bTruncateTotalReviews: a, bShowTooltip: n } = e,
           [i] = (0, f.jk)(
             null == t ? void 0 : t.id,
@@ -14628,7 +14645,7 @@
             : d,
         );
       }
-      const K = (0, o.Pi)((e) => {
+      const Q = (0, o.Pi)((e) => {
           const { appID: t, snr: a, classOverride: i } = e,
             r = t && g.jg.Get().BIsGameWishlisted(t),
             o = t && g.jg.Get().BOwnsApp(t),
@@ -14675,7 +14692,7 @@
             ),
           );
         }),
-        J = (e) => {
+        ee = (e) => {
           const { nCreatorAccountID: t } = e,
             [a, n] = (0, p.KU)(t),
             i = (0, _.iG)(t);
@@ -14692,65 +14709,67 @@
             l.createElement(C.C4, { clanAccountID: t }),
           );
         },
-        Q = (0, o.Pi)((e) => {
+        te = (0, o.Pi)((e) => {
           const {
               info: t,
-              strStoreUrl: a,
-              elElementToAppend: n,
-              bShowDemoButton: i,
-              bHideBottomHalf: s,
-              bHidePrice: r,
-              bShowDeckCompatibilityDialog: o,
-              bUseSubscriptionLayout: d,
-              nCreatorAccountID: m,
-              bPreventNavigation: c,
+              name: a,
+              strStoreUrl: n,
+              elElementToAppend: i,
+              bShowDemoButton: s,
+              bHideBottomHalf: r,
+              bHidePrice: o,
+              bShowDeckCompatibilityDialog: d,
+              bUseSubscriptionLayout: m,
+              nCreatorAccountID: c,
+              bPreventNavigation: u,
             } = e,
-            [u, h] = (0, l.useState)(!1),
-            [p, _] = (0, l.useState)(""),
-            [g] = (0, f.jk)(t.id, (0, v.TM)(t.type), {
+            [h, p] = (0, l.useState)(!1),
+            [_, g] = (0, l.useState)(""),
+            [S] = (0, f.jk)(t.id, (0, v.TM)(t.type), {
               include_assets: !0,
               include_release: !0,
               include_platforms: !0,
               include_tag_count: 20,
             }),
-            S = !d && !i && !n,
-            I = 0 == (null == g ? void 0 : g.GetStoreItemType());
+            I = !m && !s && !i,
+            C = 0 == (null == S ? void 0 : S.GetStoreItemType());
           return l.createElement(
             "div",
             {
               className: N().BottomShelf,
-              style: { transform: s && u ? p : "" },
-              onMouseEnter: () => h(!0),
-              onFocus: () => h(!0),
-              onMouseLeave: () => h(!1),
-              onBlur: () => h(!1),
+              style: { transform: r && h ? _ : "" },
+              onMouseEnter: () => p(!0),
+              onFocus: () => p(!0),
+              onMouseLeave: () => p(!1),
+              onBlur: () => p(!1),
             },
             l.createElement(
               "a",
               {
-                href: c ? null : a,
+                href: u ? null : n,
                 target: O.De.IN_CLIENT ? void 0 : "_blank",
                 className: N().Midline,
               },
-              l.createElement(
-                "div",
-                { className: N().CapsuleImageAnchorPoint },
+              Boolean(S) &&
                 l.createElement(
                   "div",
-                  {
-                    className: (0, R.Z)(
-                      N().CapsuleImageCtn,
-                      N().WithCornerShine,
-                    ),
-                  },
-                  l.createElement("img", {
-                    loading: "lazy",
-                    src: null == g ? void 0 : g.GetAssets().GetHeaderURL(),
-                    alt: null == g ? void 0 : g.GetName(),
-                  }),
+                  { className: N().CapsuleImageAnchorPoint },
+                  l.createElement(
+                    "div",
+                    {
+                      className: (0, R.Z)(
+                        N().CapsuleImageCtn,
+                        N().WithCornerShine,
+                      ),
+                    },
+                    l.createElement("img", {
+                      loading: "lazy",
+                      src: null == S ? void 0 : S.GetAssets().GetHeaderURL(),
+                      alt: null == S ? void 0 : S.GetName(),
+                    }),
+                  ),
                 ),
-              ),
-              Boolean(!r && !d) &&
+              Boolean(!o && !m) &&
                 l.createElement(
                   "div",
                   { className: N().Price },
@@ -14762,7 +14781,7 @@
               {
                 className: N().BottomShelfOffScreen,
                 ref: (e) =>
-                  _(
+                  g(
                     `translateY( -${
                       (null == e ? void 0 : e.clientHeight) || 0
                     }px )`,
@@ -14774,18 +14793,18 @@
                 l.createElement(
                   "a",
                   {
-                    href: c ? null : a,
+                    href: u ? null : n,
                     target: O.De.IN_CLIENT ? void 0 : "_blank",
                   },
                   l.createElement(
                     "div",
                     { className: N().GameTitle },
-                    null == g ? void 0 : g.GetName(),
+                    (null == S ? void 0 : S.GetName()) || a,
                   ),
                 ),
-                Boolean(g) && l.createElement($, { rgTagIDs: g.GetTagIDs() }),
-                Boolean(!o && g) && l.createElement(Y, { appInfo: t }),
-                Boolean(!o && S) &&
+                Boolean(S) && l.createElement(K, { rgTagIDs: S.GetTagIDs() }),
+                Boolean(!d && S) && l.createElement(J, { appInfo: t }),
+                Boolean(!d && I) &&
                   l.createElement(
                     "div",
                     { className: N().ReviewsAndRelease },
@@ -14794,26 +14813,26 @@
                       strClassName: N().PlatformDisplay,
                     }),
                     Boolean(
-                      null == g ? void 0 : g.GetFormattedSteamReleaseDate(),
+                      null == S ? void 0 : S.GetFormattedSteamReleaseDate(),
                     ) &&
                       l.createElement(
                         "div",
                         { className: N().ReleaseDate },
-                        null == g ? void 0 : g.GetFormattedSteamReleaseDate(),
+                        null == S ? void 0 : S.GetFormattedSteamReleaseDate(),
                       ),
                   ),
-                i &&
+                s &&
                   l.createElement(V.f, { info: t, className: N().DemoButton }),
-                Boolean(o && I) && l.createElement(y.Ws, { storeItem: g }),
-                Boolean(n) && n,
-                Boolean(d && I) &&
+                Boolean(d && C) && l.createElement(y.Ws, { storeItem: S }),
+                Boolean(i) && i,
+                Boolean(m && C) &&
                   l.createElement(G.r, { appid: t.id, bIsMuted: !1 }),
-                m && l.createElement(J, { nCreatorAccountID: m }),
+                c && l.createElement(ee, { nCreatorAccountID: c }),
               ),
             ),
           );
         }),
-        ee = (0, o.Pi)((e) => {
+        ae = (0, o.Pi)((e) => {
           l.useEffect(() => {
             g.jg.Get().HintLoad();
           }, []);
@@ -14825,7 +14844,7 @@
           } = e;
           let s;
           return (
-            "overrideNavigation" in t && (s = (e) => t.overrideNavigation()),
+            t.overrideNavigation && (s = (e) => t.overrideNavigation()),
             l.createElement(
               "div",
               {
@@ -14844,41 +14863,48 @@
                   className: N().TrailerAnchorStoreLink,
                 },
                 Boolean(!i && !s) &&
-                  l.createElement(K, { appID: t.id, snr: e.strSNR }),
-                l.createElement(q, { info: t }),
+                  l.createElement(Q, { appID: t.id, snr: e.strSNR }),
+                l.createElement(Y, { info: t }),
               ),
               l.createElement(
-                Q,
+                te,
                 Object.assign({}, e, { bPreventNavigation: Boolean(s) }),
               ),
             )
           );
         }),
-        te = 150;
-      function ae(e) {
-        const { item: t } = e,
-          [a] = (0, f.jk)(t.id, (0, v.TM)(t.type), {});
-        if (!a) return null;
-        if (1 == a.GetStoreItemType() && 1 == a.GetIncludedAppIDs().length) {
-          const t = { id: a.GetIncludedAppIDs()[0], type: "game" };
-          return l.createElement(ne, Object.assign({}, e, { item: t }));
+        ne = 150;
+      function ie(e) {
+        const { item: t, name: a } = e,
+          [n] = (0, f.jk)(t.id, (0, v.TM)(t.type), {});
+        if (!n && !a) return null;
+        if (
+          1 == (null == n ? void 0 : n.GetStoreItemType()) &&
+          1 == (null == n ? void 0 : n.GetIncludedAppIDs().length)
+        ) {
+          const t = { id: n.GetIncludedAppIDs()[0], type: "game" };
+          return l.createElement(se, Object.assign({}, e, { item: t }));
         }
-        return l.createElement(ne, Object.assign({}, e));
+        return l.createElement(se, Object.assign({}, e));
       }
-      function ne(e) {
+      function se(e) {
         const {
             item: t,
-            elElementToAppend: a,
-            bShowDemoButton: i,
-            bHidePrice: s,
-            bUseSubscriptionLayout: r,
-            strExtraParams: o,
-            fnOnHoverStateChange: d,
-            nCreatorAccountID: m,
-            bShowDeckCompatibilityDialog: c,
+            name: a,
+            bPreventNavigation: i,
+            elElementToAppend: s,
+            bShowDemoButton: r,
+            bHidePrice: o,
+            bUseSubscriptionLayout: d,
+            strExtraParams: m,
+            fnOnHoverStateChange: c,
+            nCreatorAccountID: u,
+            bShowDeckCompatibilityDialog: p,
           } = e,
-          u = (0, n._T)(e, [
+          _ = (0, n._T)(e, [
             "item",
+            "name",
+            "bPreventNavigation",
             "elElementToAppend",
             "bShowDemoButton",
             "bHidePrice",
@@ -14888,45 +14914,54 @@
             "nCreatorAccountID",
             "bShowDeckCompatibilityDialog",
           ]),
-          [p] = (0, f.jk)(t.id, (0, v.TM)(t.type), {}),
-          _ = (0, M.bJ)(),
-          g = (0, h.mY)(_),
-          S = (0, O.id)();
-        if (!p) return null;
-        if (S) return l.createElement(l.Fragment, null, e.children);
-        if (!Z())
+          [g] = (0, f.jk)(t.id, (0, v.TM)(t.type), {}),
+          S = (0, M.bJ)(),
+          y = (0, h.mY)(S),
+          I = (0, O.id)();
+        if (!g && !a) return null;
+        if (I) return l.createElement(l.Fragment, null, e.children);
+        if (!X())
           return l.createElement(
             W._,
             {
-              type: (0, v.Hy)(p.GetStoreItemType()),
+              type: (0, v.Hy)(g.GetStoreItemType()),
               id: t.id,
-              fnHoverState: d,
+              fnHoverState: c,
               hoverClassName: e.className,
-              strExtraParams: o,
+              strExtraParams: m,
             },
             e.children,
           );
-        const y = "hiding" == X(),
-          I = (0, h.Hf)(`${p.GetStorePageURL()}${o ? `?${o}` : ""}`, _),
-          C = l.createElement(ee, {
+        const C = "hiding" == q(),
+          D = i
+            ? null
+            : (0, h.Hf)(
+                `${null == g ? void 0 : g.GetStorePageURL()}${
+                  m ? `?${m}` : ""
+                }`,
+                S,
+              ),
+          b = l.createElement(ae, {
             info: t,
-            strStoreUrl: I,
-            elElementToAppend: a,
-            bShowDemoButton: i,
-            bShowDeckCompatibilityDialog: c,
-            bHideBottomHalf: y,
-            bHidePrice: s,
-            bUseSubscriptionLayout: r,
-            strSNR: g,
-            nCreatorAccountID: m,
+            name: a,
+            bPreventNavigation: i,
+            strStoreUrl: D,
+            elElementToAppend: s,
+            bShowDemoButton: r,
+            bShowDeckCompatibilityDialog: p,
+            bHideBottomHalf: C,
+            bHidePrice: o,
+            bUseSubscriptionLayout: d,
+            strSNR: y,
+            nCreatorAccountID: u,
           });
         return l.createElement(
-          se,
-          Object.assign({ hoverContent: C, strClickUrl: I }, u),
+          oe,
+          Object.assign({ hoverContent: b, strClickUrl: D }, _),
           e.children,
         );
       }
-      const ie = l.forwardRef(function (e, t) {
+      const re = l.forwardRef(function (e, t) {
         const { hoverProps: a, children: n } = e,
           i = l.useCallback((e) => (null == e ? void 0 : e.focus()), []);
         return l.createElement(
@@ -14948,7 +14983,7 @@
           ),
         );
       });
-      function se(e) {
+      function oe(e) {
         const {
             hoverContent: t,
             hoverProps: a,
@@ -14993,17 +15028,17 @@
           }),
           m &&
             l.createElement(
-              re,
+              le,
               { visible: u, target: p, nDelayShowMs: i, hoverProps: a },
               t,
             ),
           l.createElement(I.SV, null, r),
         );
       }
-      function re(e) {
+      function le(e) {
         const {
             hoverProps: t,
-            nDelayShowMs: a = te,
+            nDelayShowMs: a = ne,
             target: n,
             visible: i,
             children: s,
@@ -15046,9 +15081,9 @@
                   zIndex: 98,
                   width: 1.15 * n.clientWidth,
                   fontSize: m,
-                  minHeight: "hiding" == X() ? void 0 : 300,
+                  minHeight: "hiding" == q() ? void 0 : 300,
                   height:
-                    "hiding" == X()
+                    "hiding" == q()
                       ? 1.15 * n.clientWidth * (125 / 184)
                       : void 0,
                 },
@@ -15059,7 +15094,7 @@
           );
         return d.createPortal(
           l.createElement(
-            ie,
+            re,
             { hoverProps: c },
             l.createElement(I.SV, null, s),
           ),
@@ -15585,7 +15620,7 @@
         });
       }
       var ee = a(69338),
-        te = a(51441),
+        te = a(43840),
         ae = a(98389);
       const ne = (0, n.Pi)((e) => {
           var t;
@@ -16489,10 +16524,7 @@
             ),
           );
         if (i.BIsFree())
-          return 0 == i.GetStoreItemType() &&
-            4 != i.GetAppType() &&
-            11 != i.GetAppType() &&
-            i.GetParentAppID()
+          return 0 == i.GetStoreItemType() && 1 == i.GetAppType()
             ? r.createElement(
                 "div",
                 { className: s },
@@ -19047,7 +19079,7 @@
         o = a(89526),
         l = a(25871),
         d = a(22444),
-        m = a(51441),
+        m = a(43840),
         c = a(46294),
         u = a(69338),
         h = a(19304),

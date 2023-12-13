@@ -2,38 +2,74 @@
 (self.webpackChunksteamui = self.webpackChunksteamui || []).push([
   [5742],
   {
-    22350: (e, t, n) => {
-      n.r(t), n.d(t, { default: () => r });
-      var o = n(70655),
-        a = n(45532),
-        i = n(67294),
-        l = n(16519),
-        u = n(28476),
-        c = n(71388);
-      !(function () {
-        (0, o.mG)(this, void 0, void 0, function* () {
-          !(function () {
-            let e = window;
-            (e.ClearBackgroundInterval = window.clearInterval),
-              (e.ClearBackgroundTimeout = window.clearTimeout),
-              (e.SetBackgroundInterval = window.setInterval),
-              (e.SetBackgroundTimeout = window.setTimeout);
-          })();
-          let e = (0, a.xz)();
-          yield e.Init(window.cm);
-        });
-      })();
-      const r = function (e) {
-        const t = (0, a.gl)();
+    52781: (e, n, t) => {
+      t.r(n), t.d(n, { default: () => p });
+      var r = t(97582),
+        o = t(69557),
+        a = t(16519),
+        i = t(74290),
+        u = t(67294),
+        c = t(71388),
+        l = t(74784),
+        s = t(88767),
+        d = t(78884);
+      var m = t(8838);
+      const f = u.memo(function () {
+        const e = (0, s.useQueryClient)();
         return (
-          (0, l.pJ)(1920, 1080),
-          i.createElement(
-            i.Fragment,
+          (function (e, n) {
+            const t = (0, d.useActiveCMInterface)();
+            (0, u.useEffect)(() => {
+              if (t)
+                return t.messageHandlers.RegisterServiceNotificationHandler(
+                  e,
+                  n,
+                ).unregister;
+            }, [t, e, n]);
+          })(
+            l.oD.NotifyPrivateAppListChangedHandler,
+            u.useCallback(
+              (n) => ((0, m.z3)(e, n.Body().private_apps().appids()), 1),
+              [e],
+            ),
+          ),
+          null
+        );
+      });
+      var v = t(66694);
+      const w = u.memo(function (e) {
+        return u.createElement(
+          v.MultiErrorBoundary,
+          null,
+          u.createElement(f, null),
+        );
+      });
+      (0, t(68949).configure)({ enforceActions: "never" }),
+        (function () {
+          (0, r.mG)(this, void 0, void 0, function* () {
+            !(function () {
+              let e = window;
+              (e.ClearBackgroundInterval = window.clearInterval),
+                (e.ClearBackgroundTimeout = window.clearTimeout),
+                (e.SetBackgroundInterval = window.setInterval),
+                (e.SetBackgroundTimeout = window.setTimeout);
+            })();
+            let e = (0, o.xz)();
+            yield e.Init(window.cm);
+          });
+        })();
+      const p = function (e) {
+        const n = (0, o.gl)();
+        return (
+          (0, a.pJ)(1920, 1080),
+          u.createElement(
+            u.Fragment,
             null,
-            i.createElement(
+            u.createElement(
               c.ModalRoot,
               { bOnlyPopups: !0 },
-              t && i.createElement(u.g1, { cm: e.cm }),
+              u.createElement(w, null),
+              n && u.createElement(i.g1, { cm: e.cm }),
             ),
           )
         );

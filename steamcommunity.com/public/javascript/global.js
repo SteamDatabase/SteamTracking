@@ -1621,7 +1621,7 @@ var CCommentThread = Class.create( {
 
 		var thread = this;
 
-		var dialog = ShowConfirmDialog( 'Mark Spam', 'This will give a community ban to the author, add this comment as training data so we can flag these kinds of comments automatically, and clear out all the author\'s comments.  Are you sure this is what you want to do?', 'Mark Spam' );
+		var dialog = ShowConfirmDialog( 'Mark Suspicious', 'This will give a community ban to the author, add this comment as training data so we can flag these kinds of comments automatically, and clear out all the author\'s comments.  Are you sure this is what you want to do?', 'Mark Suspicious' );
 		dialog.done( function() {
 			thread.m_bLoading = true;
 			new Ajax.Request( thread.GetActionURL( 'markspam' ), {

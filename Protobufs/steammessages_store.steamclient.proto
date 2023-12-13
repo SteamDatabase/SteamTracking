@@ -304,6 +304,16 @@ message CStore_MigratePartnerLinkTracking_Notification {
 	optional .EPartnerLinkTrackingBackfillSource backfill_source = 3 [default = k_EPartnerLinkTrackingBackfillSource_None];
 }
 
+message CStore_UpdatePackageReservations_Request {
+	repeated uint32 packages_to_reserve = 1;
+	repeated uint32 packages_to_unreserve = 2;
+	optional string country_code = 3;
+}
+
+message CStore_UpdatePackageReservations_Response {
+	repeated .CPackageReservationStatus reservation_status = 1;
+}
+
 message CReservationPositionMessage {
 	optional uint32 edistributor = 1;
 	optional string product_identifier = 2;
@@ -417,6 +427,10 @@ service Store {
 
 	rpc MigratePartnerLinkTracking (.CStore_MigratePartnerLinkTracking_Notification) returns (.NoResponse) {
 		option (method_description) = "Move UTM data from the PartnerLinkTrackingLogNoUser table to the PartnerLinkTrackingLogWithUser table";
+	}
+
+	rpc UpdatePackageReservations (.CStore_UpdatePackageReservations_Request) returns (.CStore_UpdatePackageReservations_Response) {
+		option (method_description) = "Updates the reservations for a user";
 	}
 
 	rpc SetReservationPositionMessage (.CStore_SetReservationPositionMessage_Request) returns (.CStore_SetReservationPositionMessage_Response) {

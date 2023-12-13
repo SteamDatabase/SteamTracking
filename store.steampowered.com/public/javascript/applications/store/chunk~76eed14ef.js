@@ -51,19 +51,21 @@
     42977: (e, t, a) => {
       "use strict";
       a.d(t, {
-        $: () => h,
-        A7: () => E,
-        Cn: () => B,
+        $: () => E,
+        A7: () => C,
+        Cn: () => L,
         Df: () => S,
-        GC: () => k,
-        NL: () => C,
-        TW: () => N,
-        WR: () => f,
-        hp: () => G,
-        rO: () => _,
-        tM: () => D,
-        w6: () => y,
-        yN: () => L,
+        GC: () => I,
+        NL: () => y,
+        TW: () => D,
+        WR: () => N,
+        fM: () => b,
+        hp: () => B,
+        rO: () => A,
+        sF: () => k,
+        tM: () => T,
+        w6: () => f,
+        yN: () => V,
       });
       var n = a(33940),
         o = a(2232),
@@ -77,16 +79,17 @@
         u = a(54671),
         v = a(52868),
         g = a.n(v),
-        p = a(89526);
+        p = a(89526),
+        _ = a(75306);
       const S = 2640290,
-        _ = 2215130;
-      let A;
-      function w() {
+        A = 2215130;
+      let w;
+      function h() {
         return (
-          A || (A = (0, c.ip)("steam_awards_config", "application_config")), A
+          w || (w = (0, c.ip)("steam_awards_config", "application_config")), w
         );
       }
-      function h(e) {
+      function E(e) {
         const t = (0, l.bY)();
         return (0, d.useQuery)(
           `SteamAwardDefs_${e}`,
@@ -99,7 +102,7 @@
           {
             initialData: () => {
               var e;
-              return null === (e = w()) || void 0 === e
+              return null === (e = h()) || void 0 === e
                 ? void 0
                 : e.definitions;
             },
@@ -107,7 +110,7 @@
           },
         );
       }
-      function E() {
+      function C() {
         const e = (0, l.bY)();
         return (0, d.useQuery)(
           `SteamAwardNominations_${m.L7.accountid}`,
@@ -126,7 +129,7 @@
               var e, t;
               return null ===
                 (t =
-                  null === (e = w()) || void 0 === e
+                  null === (e = h()) || void 0 === e
                     ? void 0
                     : e.user_nominations) || void 0 === t
                 ? void 0
@@ -136,9 +139,9 @@
           },
         );
       }
-      function C(e) {
+      function y(e) {
         var t;
-        const a = E();
+        const a = C();
         return a.isLoading
           ? { bLoadingNominationForCategory: !0 }
           : {
@@ -149,7 +152,7 @@
               bLoadingNominationForCategory: !1,
             };
       }
-      function y(e) {
+      function f(e) {
         const t = (0, l.bY)();
         return (0, d.useQuery)(
           `SteamAwardBadgeProgress_${e}`,
@@ -164,7 +167,7 @@
           {
             initialData: () => {
               var e;
-              return null === (e = w()) || void 0 === e
+              return null === (e = h()) || void 0 === e
                 ? void 0
                 : e.badge_progress;
             },
@@ -172,7 +175,7 @@
           },
         );
       }
-      function f(e) {
+      function N(e) {
         const t = (0, l.bY)();
         return (0, d.useQuery)(
           `SteamAwardSuggestions_${e}`,
@@ -187,7 +190,7 @@
           { staleTime: 1 / 0 },
         );
       }
-      function N(e, t, a, o) {
+      function D(e, t, a, o) {
         const r = (0, l.bY)(),
           c = (0, d.useQueryClient)();
         return (0, d.useMutation)(
@@ -225,7 +228,7 @@
           },
         );
       }
-      function D(e, t) {
+      function T(e, t) {
         return (0, d.useQuery)(
           [e, t.voteid],
           () =>
@@ -266,7 +269,7 @@
           { staleTime: 1 / 0 },
         );
       }
-      function T(e, t) {
+      function G(e, t) {
         return (0, n.mG)(this, void 0, void 0, function* () {
           const a = i.gA.Init(s.m3);
           a.Body().set_generate_new(t);
@@ -280,20 +283,20 @@
           );
         });
       }
-      function G() {
+      function B() {
         const e = (0, l.bY)();
         return (0, d.useQuery)(
           `GetNominationShareLink_${m.L7.accountid}`,
           () =>
             (0, n.mG)(this, void 0, void 0, function* () {
-              return T(e, !1);
+              return G(e, !1);
             }),
           {
             initialData: () => {
               var e;
               return [
                 1,
-                null === (e = w()) || void 0 === e ? void 0 : e.share_link,
+                null === (e = h()) || void 0 === e ? void 0 : e.share_link,
               ];
             },
             staleTime: 1 / 0,
@@ -301,13 +304,13 @@
           },
         );
       }
-      function B() {
+      function L() {
         const e = (0, l.bY)(),
           t = (0, d.useQueryClient)();
         return (0, d.useMutation)(
           () =>
             (0, n.mG)(this, void 0, void 0, function* () {
-              return yield T(e, !0);
+              return yield G(e, !0);
             }),
           {
             onSuccess([e, a]) {
@@ -320,7 +323,7 @@
           },
         );
       }
-      function L(e, t, a) {
+      function V(e, t, a) {
         const o = (0, l.bY)(),
           r = (0, d.useQueryClient)();
         return (0, d.useMutation)(
@@ -354,7 +357,7 @@
           },
         );
       }
-      function V(e) {
+      function b(e) {
         const t = (0, l.bY)();
         return (0, d.useQuery)(
           `SteamAwardUserVotes_${m.L7.accountid}`,
@@ -381,14 +384,14 @@
           {
             initialData: () => {
               var e;
-              return null === (e = w()) || void 0 === e ? void 0 : e.user_votes;
+              return null === (e = h()) || void 0 === e ? void 0 : e.user_votes;
             },
             enabled: m.L7.logged_in,
           },
         );
       }
-      function k(e, t) {
-        const a = V(e);
+      function I(e, t) {
+        const a = b(e);
         return (0, p.useMemo)(() => {
           var e, n;
           return null ===
@@ -400,13 +403,48 @@
             : n.appid;
         }, [t, a.data]);
       }
+      function k(e, t) {
+        var a;
+        const o = (function (e) {
+            const t = (0, l.bY)();
+            return (0, d.useQuery)(
+              `SteamAwardItemDefs_${e}`,
+              () =>
+                (0, n.mG)(this, void 0, void 0, function* () {
+                  const a = i.gA.Init(_.ft);
+                  return (
+                    a.Body().set_appid(e),
+                    a.Body().set_language(m.De.LANGUAGE),
+                    (yield _.Ts.GetCommunityItemDefinitions(t, a))
+                      .Body()
+                      .toObject()
+                  );
+                }),
+              {
+                staleTime: 1 / 0,
+                initialData: () => {
+                  var e;
+                  return null === (e = h()) || void 0 === e
+                    ? void 0
+                    : e.item_definitions;
+                },
+              },
+            );
+          })(e),
+          r = E(e);
+        if (!o.data || !r.data) return null;
+        const s = r.data.votes.find((e) => e.voteid == t);
+        return null === (a = o.data.item_definitions) || void 0 === a
+          ? void 0
+          : a.find((e) => e.item_type == s.item_type);
+      }
     },
     4795: (e, t, a) => {
       "use strict";
       a.r(t),
         a.d(t, {
           ConfirmOverwriteVoteOrNominationDialog: () => M,
-          EventDisplaySteamAwardNomination: () => I,
+          EventDisplaySteamAwardNomination: () => k,
           EventDisplaySteamAwardVote: () => O,
           UserEligibleToNominateOrVote: () => V,
           WinterSaleSteamAwardVoteWrapper: () => F,
@@ -425,8 +463,8 @@
         v = a(25871),
         g = a(57605),
         p = a(17318),
-        S = a.n(p),
-        _ = a(58218),
+        _ = a.n(p),
+        S = a(58218),
         A = a(23217),
         w = a(19304),
         h = a(14826),
@@ -465,7 +503,7 @@
             ),
             !1);
       }
-      function k(e, t) {
+      function b(e, t) {
         var a, o;
         return (0, n.mG)(this, void 0, void 0, function* () {
           const n =
@@ -504,18 +542,18 @@
           return null;
         });
       }
-      const b = { include_assets: !0 };
-      function I(e) {
+      const I = { include_assets: !0 };
+      function k(e) {
         var t, a;
         const { event: n, lang: o, previewMode: i } = e,
           [r] = (0, s.SZ)(() => [n.GetSteamAwardCategory()]),
-          d = (0, _.T)("EventDisplaySteamAwardNomination"),
+          d = (0, S.T)("EventDisplaySteamAwardNomination"),
           [u, v] = (0, l.useState)(null),
           { currentNomination: g, bLoadingNominationForCategory: p } = (0,
           c.NL)(r);
         if (
           ((0, l.useEffect)(() => {
-            k([r], d).then((e) => {
+            b([r], d).then((e) => {
               v(e);
             });
           }, [d, r]),
@@ -555,7 +593,7 @@
           "div",
           {
             style: E,
-            className: (0, w.Z)(B().SteamAwardContainer, S().PartnerEventFont),
+            className: (0, w.Z)(B().SteamAwardContainer, _().PartnerEventFont),
           },
           l.createElement(
             "div",
@@ -635,7 +673,7 @@
             (null == i ? void 0 : i.appid) == d &&
               (null == i ? void 0 : i.category_id) == r,
           ),
-          S = (0, l.useCallback)(
+          _ = (0, l.useCallback)(
             (e) =>
               (0, n.mG)(this, void 0, void 0, function* () {
                 if (!e)
@@ -660,14 +698,14 @@
               }),
             [u, d, v],
           ),
-          _ = m.JW.GetTimeNowWithOverride(),
+          S = m.JW.GetTimeNowWithOverride(),
           A =
             1 ==
             (null === (t = o.rgAwardCategoryDetails) || void 0 === t
               ? void 0
               : t.length),
           E =
-            a.BIsEventActionEnabled() || _ < a.GetStartTimeAndDateUnixSeconds();
+            a.BIsEventActionEnabled() || S < a.GetStartTimeAndDateUnixSeconds();
         return A && (E || p)
           ? l.createElement(
               "div",
@@ -694,7 +732,7 @@
                       p && B().Nominated,
                     ),
                     checked: p,
-                    onChange: S,
+                    onChange: _,
                     disabled: p,
                     color: "#FFFFFF",
                     highlightColor: "white",
@@ -753,8 +791,8 @@
             fnOnCancel: i,
             closeModal: r,
           } = e,
-          [s] = (0, v.vs)(t, b),
-          [d] = (0, v.vs)(a, b);
+          [s] = (0, v.vs)(t, I),
+          [d] = (0, v.vs)(a, I);
         return l.createElement(
           f.uH,
           {
@@ -1010,7 +1048,7 @@
               u.Z.Get().BHasApp(this.props.appID) &&
                 this.setState({ bAppInfoLoaded: !0 });
             }),
-            k(this.props.voteCategories, this.m_cancelSignal).then((e) => {
+            b(this.props.voteCategories, this.m_cancelSignal).then((e) => {
               this.m_awardEventDetails = e;
             });
         }
@@ -1061,7 +1099,7 @@
                 style: t,
                 className: (0, w.Z)(
                   B().SteamAwardContainer,
-                  S().PartnerEventFont,
+                  _().PartnerEventFont,
                 ),
               },
               l.createElement(

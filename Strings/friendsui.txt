@@ -13,18 +13,16 @@ __TEXT
 __cstring
 __TEXT
 __gcc_except_tab__TEXT
-|-!
-|-!
+l-!
+l-!
 __const
 __TEXT
-Pm"
-Pm"
+@m"
+@m"
 __objc_methname
 __TEXT
 __unwind_info
 __TEXT
-l $
-l $
 __DATA
 %
 %
@@ -66,7 +64,6 @@ __bss
 __DATA
 __common
 __DATA
-@@
 H
 __LINKEDIT
 @.
@@ -5460,10 +5457,8 @@ B
 B
 @
 @
-~
 d
 A+M
-#
 j
 j
 j
@@ -5472,6 +5467,7 @@ j
 j
 =
 0
+
 
 j
 j
@@ -5700,11 +5696,14 @@ d
 @
 @
 0
+n
 0
 0
 0
 0
 &
 Hc
+9
 E
+3
 p

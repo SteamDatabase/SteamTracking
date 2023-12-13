@@ -332,6 +332,7 @@
  T BGRAToYRow_Any_SSSE3
  T BGRAToYRow_C
  T BGRAToYRow_SSSE3
+ T BParseISO8601Duration
  T BScaleImageNV12
  T BScaleImageYUV
  T BlendPlane

@@ -3994,8 +3994,8 @@ Fatti un nuovo amico su Steam inviando un dono via e-mail a qualcuno che conosci
 "steam_AppSupport_Title" "Problema Supporto Applicazione"
 "steam_AppSupport_Info" "Questa applicazione ha requisiti speciali rispetto all'ambiente di installazione, clicca sull'URL sottostante per i dettagli."
 
-"steam_menu_minimode"		"Modalità piccola"
-"steam_menu_largemode"	"Modalità grande"
+"steam_menu_minimode"		"Modalità compatta"
+"steam_menu_largemode"	"Modalità estesa"
 "steam_menu_bigpicturemode"	"Modalità Big Picture"
 "steam_menu_close_bigpicturemode"	"Esci dalla modalità Big Picture"
 "steam_menu_startvr"		"Avvia SteamVR (BETA)"

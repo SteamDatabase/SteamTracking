@@ -40,6 +40,7 @@ message CMsgClientGetClientDetailsResponse {
 	optional uint64 bytes_available = 7;
 	optional uint32 protocol_version = 8;
 	optional uint32 clientcomm_version = 9;
+	repeated uint32 local_users = 10;
 }
 
 message CMsgClientGetClientAppList {

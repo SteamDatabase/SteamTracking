@@ -5305,23 +5305,40 @@ ul li {
   display: flex;
   flex-direction: row;
 }
+.invitesdashboard_InviteItemAdminList_eCacw {
+  padding: 5px 0px;
+}
+.invitesdashboard_InvitePageHeader_1rKT2 .invitesdashboard_InviteTitle_2k3HT {
+  color: #fff;
+  font-size: 22px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+.invitesdashboard_InvitePageHeader_1rKT2
+  .invitesdashboard_InviteTitle_2k3HT
+  .invitesdashboard_InviteTitle_AppName_GZ2Kk {
+  padding-left: 5px;
+  color: gray;
+}
 .invitesdashboard_InvitedAppCtn_14klK {
   display: grid;
-  grid-template-columns: 150px auto;
+  grid-template-columns: 200px auto;
   grid-template-rows: auto;
   grid-template-areas: "image info" "button button";
-  margin-right: 24px;
   box-sizing: border-box;
   border-radius: 3px;
-  width: 450px;
+  padding: 10px;
+  background: #2c2e35;
+  font-size: 14;
+  font-weight: 400;
+  color: #fff;
 }
 .invitesdashboard_InvitedAppCtn_14klK .invitesdashboard_AppName_1FeTr {
   color: #fff;
   font-size: 17px;
 }
 .invitesdashboard_InvitedAppCtn_14klK img {
-  width: 150px;
-  height: 70px;
+  width: 180px;
   grid-area: image;
 }
 .invitesdashboard_InvitedAppCtn_14klK
@@ -5349,6 +5366,7 @@ ul li {
   flex-direction: column;
   grid-area: info;
   padding-left: 8px;
+  justify-content: center;
 }
 .invitesdashboard_InviteResult_677sG {
   padding-top: 10px;
@@ -6136,6 +6154,53 @@ button.rbc-input::-moz-focus-inner {
 .dailydealsdashboard_InfoCtn_3t-3P {
   display: flex;
   flex-direction: row;
+}
+.dailydealsdashboard_UpcomingDeal_Container_jv6sg {
+  display: grid;
+  grid-template-columns: 200px auto;
+  grid-template-rows: auto;
+  grid-template-areas: "image info" "button button";
+  margin: 5px 0px;
+  box-sizing: border-box;
+  border-radius: 3px;
+  padding: 10px;
+  background: #2c2e35;
+  font-size: 14;
+  font-weight: 400;
+  color: #fff;
+}
+.dailydealsdashboard_UpcomingDeal_Container_jv6sg
+  .dailydealsdashboard_AppName_YQi_M {
+  color: #fff;
+  font-size: 17px;
+}
+.dailydealsdashboard_UpcomingDeal_Container_jv6sg img {
+  width: 180px;
+  grid-area: image;
+}
+.dailydealsdashboard_UpcomingDeal_Container_jv6sg
+  .dailydealsdashboard_UpcomingDeal_Info_3GXZs {
+  display: flex;
+  flex-direction: column;
+  grid-area: info;
+  padding-left: 8px;
+  justify-content: center;
+}
+.dailydealsdashboard_PartnerDashboard_Upcoming_YXzF7 {
+  padding-top: 20px;
+  color: #fff;
+  text-transform: uppercase;
+}
+.dailydealsdashboard_PartnerDashboard_Incomplete_2K4uu {
+  padding: 10px 0px;
+  color: #fff;
+  text-transform: uppercase;
+}
+.dailydealsdashboard_PartnerDashboard_Incomplete_2K4uu
+  .dailydealsdashboard_PartnerDashboard_Incomplete_Description_39yxF {
+  padding-left: 5px;
+  color: orange;
+  text-transform: none;
 }
 .marketingmessagecreatedialog_DateCtn_1mrqJ {
   min-height: 200px;

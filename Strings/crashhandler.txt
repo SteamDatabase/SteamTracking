@@ -46,7 +46,6 @@ __image_info
 __OBJC
 __LINKEDIT
 @loader_path/crashhandler.dylib
-"ax<
 /usr/lib/libiconv.2.dylib
 /System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices
 /System/Library/Frameworks/IOKit.framework/Versions/A/IOKit
@@ -308,6 +307,7 @@ xbub
 ^_[]
 ^_[]
 ^_[]
+^_[]
 SWV1
 ^_[]
 ^_[]
@@ -543,8 +543,8 @@ CreateInterface
 steamwebhelper
 Steam Helper
 cefwebhelper
-Dec  7 2023
-16:32:09
+Dec 12 2023
+11:27:18
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 MainThrd
@@ -552,7 +552,9 @@ pthread_setname_np
 exec 
 /bin/sh
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/threadtools.cpp
-Out of thread local storage!
+tid(%u) pthread_key_create failed: %s
+tid(%u) burning pthread_key_t == 0 so we never use it
+Bad thread local
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/validator.cpp
 CValidator : too many memory nodes to store, try again with a higher threshold value
 NULL != m_pValObjectCur
@@ -755,6 +757,7 @@ RIQ"
 @_strchr
 @_strcmp
 @_strcpy
+@_strerror$UNIX2003
 @_strlen
 @_strncasecmp
 @_strncat
@@ -779,7 +782,6 @@ c5u6
 ){c$V
 8/m(w
 !	'J+
-Z."&
 feS<>O
 _Breakpad_SetSteamID
 _CreateInterface
@@ -924,6 +926,7 @@ _strcasecmp
 _strchr
 _strcmp
 _strcpy
+_strerror$UNIX2003
 _strlen
 _strncasecmp
 _strncat
@@ -942,32 +945,25 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-PQ` 
-bXVh
-	<6m
-x-h$
-1H)w
-[}BBm
-5XS\-
-,c$dna
-)#s3#f
-/Ei.
+DfPw\
+RJ~7H
+Z_!MA
+.NQ9
+,xf]}
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-:-g}
-,Wc+#
-@<hsV
-Q4Du
-(o\K
-KOW\
-zmpL
-do(U
-*aVoYg_
-(1P8
-d-Nc
-v9{	G
+Ko9*
+&1f9xD
+\y_,
+s_r4
+3[	5
+Z^Y H'-=HR7^
+3rc~QZJ
+O8>hG@
+IhM=x
+<@*1V
 Apple Inc.1&0$
 Apple Certification Authority1
 Apple Root CA0
@@ -1023,11 +1019,9 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231208003231Z0/
-R,VoV
-rWx2'
-GM0[
-&Vc(
+231212192740Z0/
+XC0[
+!(C*
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -1035,36 +1029,32 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		EI82/ulGEkU36FXYaBoV6jUgHlU=
+		PYMCBdHQIShDKu7zMfluI+AOA3A=
 		</data>
 		<data>
-		cBDGEh08kMgrourGTJAFrDqyDiY=
+		qJQzL3YPiuvh1nCKD+YW6I+Ak5M=
 		</data>
 	</array>
 </dict>
 </plist>
-b|N!
-5>f|
-J'=H
-~ZcI
-Ckcp
-20231208003245Z0
+ .wR_:
+20231212192740Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231116210533Z
-231228210532Z0B1
-Timestamp Signer NWK21
+231116212004Z
+231228212003Z0B1
+Timestamp Signer NWK11
 Apple Inc.1
-o:	q
-"O!w
+ {s:9
+=}3]	j
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-pM,5Ee
-.	AU
+.9sDq
+jv-Gc{
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -1103,10 +1093,11 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231208003245Z0#
-X<HM
-'<W8
-pOp*
+231212192740Z0#
+1v)1
+IX:;0+
+o4|fG
+m?jQ2
 __TEXT
 __text
 __TEXT
@@ -1152,7 +1143,6 @@ __common
 __DATA
 __LINKEDIT
 @loader_path/crashhandler.dylib
-+Ng$
 /usr/lib/libiconv.2.dylib
 /System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices
 /System/Library/Frameworks/IOKit.framework/Versions/A/IOKit
@@ -1611,6 +1601,9 @@ xPuP
 8[A^A_]
 AWAVSP
 [A^A_]
+AWAVSPI
+[A^A_]
+[A^A_]
 AVSI
 [A^]
 AWAVSPA
@@ -1624,7 +1617,6 @@ H;7u
 [A^]
 HcS,L
 AWAVSH
-Lc5Sh
 x(Hc
 VUUUH
 X[A^A_]
@@ -1844,8 +1836,8 @@ CreateInterface
 steamwebhelper
 Steam Helper
 cefwebhelper
-Dec  7 2023
-16:32:09
+Dec 12 2023
+11:27:18
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 MainThrd
@@ -1853,7 +1845,9 @@ pthread_setname_np
 exec 
 /bin/sh
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/threadtools.cpp
-Out of thread local storage!
+tid(%u) pthread_key_create failed: %s
+tid(%u) burning pthread_key_t == 0 so we never use it
+Bad thread local
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/validator.cpp
 CValidator : too many memory nodes to store, try again with a higher threshold value
 NULL != m_pValObjectCur
@@ -1940,6 +1934,7 @@ N(knN
 _12CStdMemAlloc
 9IMemAlloc
 Mb@?
+D`yA`
 A\Ap
 UA\Ap
 RAVAp
@@ -2096,6 +2091,7 @@ A_mach_continuous_time
 @_strchr
 @_strcmp
 @_strcpy
+@_strerror
 @_strlen
 @_strncasecmp
 @_strncat
@@ -2263,6 +2259,7 @@ _strcasecmp
 _strchr
 _strcmp
 _strcpy
+_strerror
 _strlen
 _strncasecmp
 _strncat
@@ -2281,29 +2278,30 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-zk\K
-vG@W
-;%\J
-peS3
-mEUn
-N!2#
-\5\k
-aO<|2
-{.,g
+%qm.
+,,M0
+U@y&M
+x -v
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-n,*p
-b@tN(A
-\GX#1
-wb9'
-4fu[^
-PIc8F
-rx2~w_
-Ci7I/{
->D2c
-G7pg
+.I|\
+jd`?l
+r%C7$
+X]H]2
+k[zh
+}HMQ
+dW'}
+&m0m
+5-#i60
+93,j
+.VWl
+	xwY
+4~J&
+WM^+ts
+}B1V[N
+ayV,
 Apple Inc.1&0$
 Apple Certification Authority1
 Apple Root CA0
@@ -2359,8 +2357,8 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231208003231Z0/
-L>By?T
+231212192740Z0/
+%U$0
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -2368,19 +2366,20 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		CTHQ2/FeX8PVYxTPT49TA5MRpeo=
+		UJubuipYXYtYWT3lDhz8hmgGkBQ=
 		</data>
 		<data>
-		B5Knjn3cugbrtAluN8srd4sFfxo=
+		BnLr6U3IBlFJi8F0HLsBbz6bJJ0=
 		</data>
 	</array>
 </dict>
 </plist>
-)3/u>
-NZn6
-_x3p
-^]NP
-20231208003245Z0
+~LGy
+5\;L|!
+X_c]Q
+Emp@
+geA/
+20231212192740Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
@@ -2435,12 +2434,9 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231208003245Z0#
-+=g_
- MnV5
-HQD~
-k/;*
-IEb\
+231212192740Z0#
+	q6Q
+q&5E
 __TEXT
 __text
 __TEXT
@@ -2506,8 +2502,9 @@ Q)Ij8?
 h&B)
 Lii8k	
 +ih8J	
+(	.9
 ii8J	
-T@KE
+T@SE
 jv8(
 h(8*
 ij`8
@@ -2529,7 +2526,6 @@ h^@9
 j98w
 Rh^@9
 j48u
-bq9(
 T		@9?
 5'qHs
 (a@9
@@ -2552,11 +2548,9 @@ ii8J
 <l9@
 +ih8J	
 T+	@
-<9 u
+<9`|
 @9_q
 jt8 
- @9h
- @9h
 (hh8!
 i"D)
 5`JH
@@ -2740,8 +2734,8 @@ CreateInterface
 steamwebhelper
 Steam Helper
 cefwebhelper
-Dec  7 2023
-16:32:10
+Dec 12 2023
+11:27:18
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 MainThrd
@@ -2749,7 +2743,9 @@ pthread_setname_np
 exec 
 /bin/sh
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/threadtools.cpp
-Out of thread local storage!
+tid(%u) pthread_key_create failed: %s
+tid(%u) burning pthread_key_t == 0 so we never use it
+Bad thread local
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/validator.cpp
 CValidator : too many memory nodes to store, try again with a higher threshold value
 NULL != m_pValObjectCur
@@ -2988,6 +2984,7 @@ RARARA`?Ap
 @_strchr
 @_strcmp
 @_strcpy
+@_strerror
 @_strlen
 @_strncasecmp
 @_strncat
@@ -3152,6 +3149,7 @@ _strcasecmp
 _strchr
 _strcmp
 _strcpy
+_strerror
 _strlen
 _strncasecmp
 _strncat
@@ -3170,28 +3168,23 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-Y>;@,
-(,o^ 
-E:Rf
-6@'h
-Q_*p
-+!k)
->E==
+gjs{
+<'[b
+`r[>
+u*"V
+`z.W
+Q;Ua
+jG.L
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-<Te'
-O$+d
-"Qvh
-&w{t
-B&s%
-Zku\"=a
-u0%n
-KoxK!
-(1	W/t
-4pkI
-3Ts2
+9:7c8
+DA#q
+J6rg
+Lg:\
+.,W5
+=oOu3
 Apple Inc.1&0$
 Apple Certification Authority1
 Apple Root CA0
@@ -3247,10 +3240,7 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231208003231Z0/
-)pso
-]IWl
-	[bI
+231212192740Z0/
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -3258,17 +3248,20 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		JqWffaxdSVdso+Nasi+I9nslhNY=
+		LHLorFdIwTVlMPxDtk861RY/Ewg=
 		</data>
 		<data>
-		WnipCl+okxO97/c0ZLthlEAbCE8=
+		/bHE1LYWcPcfuAzN7DFnyWCKXW0=
 		</data>
 	</array>
 </dict>
 </plist>
--ai9
-MHR{j
-20231208003245Z0
+Sw7(j
+PWYs
+-.cX
+_T}Hp
+n~2*R,
+20231212192740Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
@@ -3323,6 +3316,8 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231208003245Z0#
-,'vK
-NETE\c
+231212192740Z0#
+@efr
+<.IM
+FdVf
+<#zE

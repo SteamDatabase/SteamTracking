@@ -2,6 +2,8 @@ __TEXT
 
 __text
 __TEXT
+`~
+`~
 __stubs
 __TEXT
 __stub_helper
@@ -1089,8 +1091,6 @@ disables GPU and renderer hang timeouts
 enables Chromium remote debugging, defaulting to localhost:8080
 -cef-disable-occlusion
 disables Chromium window occlusion testing on Windows
--cef-ignore-certificate-errors
-allow self-signed certificates
 -cef-no-linux-angle
 Don't use ANGLE for rendering backend on Linux
 -cef-enable-gpu-debugging
@@ -1121,8 +1121,6 @@ Force the usage of opaque backgrounds for CEF
 Don't restart the renderer on UI mode changes
 -cef-force-accessibility
 Force enable CEF accessibility features
--store
--community
 -clientui
 -gamepadui
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/html/chrome_ipc_client.cpp
@@ -1170,7 +1168,6 @@ GetClientActualLauncherType
 --force-renderer-accessibility
 -disablejslogging
 -verbosejslogging
---ignore-certificate-errors
 "
 --proxy-server="%s"
 --proxy-bypass-list="localhost;127.0.0.1"
@@ -2420,11 +2417,15 @@ id
 
 @
 @
+)
+
+
+
 
 @
 Ic
-}
-;
+v
+n
 1
 
 
@@ -2435,6 +2436,7 @@ Ic
 
 0
 0
+C
 Hi
 `
 0
@@ -2447,6 +2449,8 @@ AT=
 D
 @
 @
+
+
 @
 Hc
 Hc

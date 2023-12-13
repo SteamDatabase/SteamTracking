@@ -173,9 +173,10 @@ message CMsgClientSettings {
 	optional bool cef_remote_debugging_enabled = 20003 [(setting_store) = k_EClientSettingStore_CustomFunc];
 	optional bool force_deck_perf_tab = 20004 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "Developer/ForceDeckPerfTab"];
 	optional bool force_fake_mandatory_update = 20005 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "Developer/FakeMandatoryUpdate"];
-	optional .EHDRVisualization gamescope_hdr_visualization = 21001 [default = k_EHDRVisualization_None, (setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Gamescope/HDRVisualization"];
+	optional .EHDRVisualization gamescope_hdr_visualization = 21001 [default = k_EHDRVisualization_None, (setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Gamescope/HDRVisualization2"];
 	optional int32 gamescope_app_target_framerate = 21002 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Gamescope/AppTargetFrameRate", (setting_default_int) = 0, (setting_profile_mode) = k_ESettingProfileMode_PerGamePerDisplay];
 	optional bool gamescope_enable_app_target_framerate = 21003 [(setting_store) = k_EClientSettingStore_Registry, (setting_name) = "HKEY_CURRENT_USER\\Software\\Valve\\Steam\\GamescopeEnableAppTargetRefreshRate2", (setting_default_bool) = true];
 	optional bool gamescope_disable_framelimit = 21004 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Gamescope/DisableFrameLimit", (setting_default_bool) = false, (setting_profile_mode) = k_ESettingProfileMode_PerGamePerDisplay];
 	optional int32 gamescope_display_refresh_rate = 21005 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Gamescope/RefreshRate", (setting_default_int) = 0, (setting_profile_mode) = k_ESettingProfileMode_PerGamePerDisplay];
+	optional bool gamescope_use_game_refresh_rate_in_steam = 21006 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Developer/DynamicRefreshRateInSteam", (setting_default_bool) = true];
 }

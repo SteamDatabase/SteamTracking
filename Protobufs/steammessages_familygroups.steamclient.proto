@@ -1,0 +1,377 @@
+import "steammessages_base.proto";
+import "steammessages_unified_base.steamclient.proto";
+
+option cc_generic_services = true;
+
+enum EFamilyGroupRole {
+	k_EFamilyGroupRole_None = 0;
+	k_EFamilyGroupRole_Adult = 1;
+	k_EFamilyGroupRole_Child = 2;
+	k_EFamilyGroupRole_MAX = 3;
+}
+
+enum EPurchaseRequestAction {
+	k_EPurchaseRequestAction_None = 0;
+	k_EPurchaseRequestAction_Decline = 1;
+	k_EPurchaseRequestAction_Purchased = 2;
+	k_EPurchaseRequestAction_Abandoned = 3;
+	k_EPurchaseRequestAction_Cancel = 4;
+	k_EPurchaseRequestAction_MAX = 5;
+}
+
+enum EFamilyGroupChangeLogType {
+	k_InvalidChangeType = 0;
+	k_FamilyGroupCreated = 1;
+	k_FamilyGroupModified = 2;
+	k_FamilyGroupDeleted = 3;
+	k_AccountInvited = 4;
+	k_InviteDeniedByGroupSize = 5;
+	k_JoinedFamilyGroup = 6;
+	k_JoinDeniedByRegionMismatch = 7;
+	k_JoinDeniedByMissingIpAddress = 8;
+	k_JoinDeniedByFamilyCooldown = 9;
+	k_JoinDeniedByUserCooldown = 10;
+	k_JoinDeniedByOtherGroup = 11;
+	k_AccountRemoved = 12;
+	k_InviteCanceled = 13;
+	k_PurchaseRequested = 14;
+	k_ParentalSettingsEnabled = 15;
+	k_ParentalSettingsDisabled = 16;
+	k_ParentalSettingsChanged = 17;
+	k_FamilyCooldownOverridesChanged = 18;
+	k_PurchaseRequestCanceled = 19;
+	k_PurchaseRequestApproved = 20;
+	k_PurchaseRequestDeclined = 21;
+}
+
+enum ESharedLibraryExcludeReason {
+	k_ESharedLibrary_Included = 0;
+	k_ESharedLibrary_AppExcluded = 1;
+	k_ESharedLibrary_LicenseExcluded = 2;
+	k_ESharedLibrary_FreeGame = 3;
+}
+
+message CFamilyGroups_CreateFamilyGroup_Request {
+	optional string name = 1;
+	optional fixed64 steamid = 2 [(description) = "(Support only) User to create this family group for and add to the group."];
+}
+
+message CFamilyGroups_CreateFamilyGroup_Response {
+	optional uint64 family_groupid = 1;
+}
+
+message CFamilyGroups_GetFamilyGroup_Request {
+	optional uint64 family_groupid = 1;
+}
+
+message FamilyGroupMember {
+	optional fixed64 steamid = 1;
+	optional .EFamilyGroupRole role = 2 [default = k_EFamilyGroupRole_None];
+	optional uint32 time_joined = 3;
+}
+
+message FamilyGroupPendingInvite {
+	optional fixed64 steamid = 1;
+	optional .EFamilyGroupRole role = 2 [default = k_EFamilyGroupRole_None];
+}
+
+message FamilyGroupFormerMember {
+	optional fixed64 steamid = 1;
+}
+
+message CFamilyGroups_GetFamilyGroup_Response {
+	optional string name = 1;
+	repeated .FamilyGroupMember members = 2 [(description) = "All active members of this group"];
+	repeated .FamilyGroupPendingInvite pending_invites = 3 [(description) = "All pending invites for the group"];
+	optional uint32 free_spots = 4 [(description) = "Remaining open spots in the group (a pending invite consumes a spot just like a group member does)"];
+	optional string country = 5;
+	optional uint32 slot_cooldown_remaining_seconds = 6 [(description) = "Remaining cooldown seconds on the earliest available slot, 0 if no slots/cooldowns"];
+	repeated .FamilyGroupFormerMember former_members = 7 [(description) = "Former members of the this group, can skip slot cooldown"];
+	optional uint32 slot_cooldown_overrides = 8 [(description) = "Number of times to ignore slot cooldown for joins (only accessible by support)"];
+}
+
+message CFamilyGroups_GetFamilyGroupForUser_Request {
+	optional uint64 steamid = 1 [(description) = "Actually optional. This should only be set when support or admin accounts needs to fetch the family group for another user. Outside of the support tool it should be omitted."];
+}
+
+message FamilyGroupPendingInviteForUser {
+	optional uint64 family_groupid = 1;
+	optional .EFamilyGroupRole role = 2 [default = k_EFamilyGroupRole_None];
+	optional fixed64 inviter_steamid = 3;
+}
+
+message CFamilyGroups_GetFamilyGroupForUser_Response {
+	optional uint64 family_groupid = 1;
+	optional bool is_not_member_of_any_group = 2;
+	optional uint32 latest_time_joined = 3 [(description) = "The latest time the user joined any group. Doesn't imply the group is active as they may have left since."];
+	optional uint64 latest_joined_family_groupid = 4 [(description) = "The last group the user joined, should be equal to family_groupid if still a member of it."];
+	repeated .FamilyGroupPendingInviteForUser pending_group_invites = 5 [(description) = "Pending family group invites for the user"];
+	optional uint32 role = 6 [(description) = "Current role within the family"];
+	optional uint32 cooldown_seconds_remaining = 7 [(description) = "Remaining time until this user can create or join another family group."];
+}
+
+message CFamilyGroups_ModifyFamilyGroupDetails_Request {
+	optional uint64 family_groupid = 1;
+	optional string name = 2 [(description) = "If present, set the family name to the current value"];
+}
+
+message CFamilyGroups_ModifyFamilyGroupDetails_Response {
+}
+
+message CFamilyGroups_InviteToFamilyGroup_Request {
+	optional uint64 family_groupid = 1;
+	optional fixed64 receiver_steamid = 2;
+	optional .EFamilyGroupRole receiver_role = 3 [default = k_EFamilyGroupRole_None];
+}
+
+message CFamilyGroups_InviteToFamilyGroup_Response {
+}
+
+message CFamilyGroups_JoinFamilyGroup_Request {
+	optional uint64 family_groupid = 1;
+}
+
+message CFamilyGroups_JoinFamilyGroup_Response {
+}
+
+message CFamilyGroups_RemoveFromFamilyGroup_Request {
+	optional uint64 family_groupid = 1;
+	optional fixed64 steamid_to_remove = 2;
+}
+
+message CFamilyGroups_RemoveFromFamilyGroup_Response {
+}
+
+message CFamilyGroups_CancelFamilyGroupInvite_Request {
+	optional uint64 family_groupid = 1;
+	optional fixed64 steamid_to_cancel = 2;
+}
+
+message CFamilyGroups_CancelFamilyGroupInvite_Response {
+}
+
+message CFamilyGroups_GetUsersSharingDevice_Request {
+	optional uint64 family_groupid = 1;
+	optional uint64 client_instance_id = 2;
+}
+
+message CFamilyGroups_GetUsersSharingDevice_Response {
+	repeated fixed64 users = 1;
+}
+
+message CFamilyGroups_DeleteFamilyGroup_Request {
+	optional uint64 family_groupid = 1;
+}
+
+message CFamilyGroups_DeleteFamilyGroup_Response {
+}
+
+message CFamilyGroups_GetPlaytimeSummary_Request {
+	optional fixed64 family_groupid = 1;
+}
+
+message CFamilyGroups_PlaytimeEntry {
+	optional fixed64 steamid = 1;
+	optional uint32 appid = 2;
+	optional uint32 first_played = 3;
+	optional uint32 latest_played = 4;
+	optional uint32 seconds_played = 5;
+}
+
+message CFamilyGroups_GetPlaytimeSummary_Response {
+	repeated .CFamilyGroups_PlaytimeEntry entries = 1;
+}
+
+message CFamilyGroups_RequestPurchase_Request {
+	optional uint64 family_groupid = 1 [(description) = "Requester's family group id'"];
+	optional uint64 gidshoppingcart = 2 [(description) = "The shopping cart with items to purchase."];
+	optional string store_country_code = 3 [(description) = "The store country code of the requestor."];
+	optional bool use_account_cart = 4 [(description) = "Request the contents of the account cart instead of gidshoppingcart?"];
+}
+
+message CFamilyGroups_RequestPurchase_Response {
+	optional uint64 gidshoppingcart = 1 [(description) = "The new shopping cart created for an adult to purchase."];
+	optional uint64 request_id = 2 [(description) = "Unique request ID"];
+}
+
+message CFamilyGroups_GetPurchaseRequests_Request {
+	optional uint64 family_groupid = 1;
+	optional bool include_completed = 2;
+}
+
+message PurchaseRequest {
+	optional fixed64 requester_steamid = 1 [(description) = "Steam ID of the original purchase requester"];
+	optional uint64 gidshoppingcart = 2 [(description) = "Temporary shopping cart attached to the request"];
+	optional uint32 time_requested = 3 [(description) = "rtime the request was made"];
+	optional uint32 time_responded = 4 [(description) = "rtime the request was responded to"];
+	optional fixed64 responder_steamid = 5 [(description) = "Steam ID of the responder"];
+	optional .EPurchaseRequestAction response_action = 6 [default = k_EPurchaseRequestAction_None, (description) = "Action taken by the responder"];
+	optional bool is_completed = 7 [(description) = "Is this request completed (could be declined/purchased/etc if completed)"];
+	optional uint64 request_id = 8 [(description) = "Unique purchase request ID"];
+}
+
+message CFamilyGroups_GetPurchaseRequests_Response {
+	repeated .PurchaseRequest requests = 1 [(description) = "Purchase requests for the family"];
+}
+
+message CFamilyGroups_RespondToRequestedPurchase_Request {
+	optional uint64 family_groupid = 1 [(description) = "Purchase requester's family group id'"];
+	optional fixed64 purchase_requester_steamid = 2 [(description) = "Purchase requester's steam id'"];
+	optional .EPurchaseRequestAction action = 3 [default = k_EPurchaseRequestAction_None, (description) = "Action being taken"];
+	optional uint64 request_id = 4 [(description) = "Unique purchase request ID"];
+}
+
+message CFamilyGroups_RespondToRequestedPurchase_Response {
+}
+
+message CFamilyGroups_GetChangeLog_Request {
+	optional uint64 family_groupid = 1;
+}
+
+message CFamilyGroups_GetChangeLog_Response {
+	message Change {
+		optional fixed64 timestamp = 1;
+		optional fixed64 actor_steamid = 2;
+		optional .EFamilyGroupChangeLogType type = 3 [default = k_InvalidChangeType];
+		optional string body = 4;
+		optional bool by_support = 5 [(description) = "Was this change made by a support account?"];
+	}
+
+	repeated .CFamilyGroups_GetChangeLog_Response.Change changes = 1;
+}
+
+message CFamilyGroups_SetFamilyCooldownOverrides_Request {
+	optional uint64 family_groupid = 1 [(description) = "The family group to set the cooldown overrides on"];
+	optional uint32 cooldown_count = 2 [(description) = "How many cooldown overrides this family group should have"];
+}
+
+message CFamilyGroups_SetFamilyCooldownOverrides_Response {
+}
+
+message CFamilyGroups_GetSharedLibraryApps_Request {
+	optional fixed64 family_groupid = 1;
+	optional bool include_own = 2;
+	optional bool include_excluded = 3;
+	optional bool include_free = 4;
+	optional string language = 5;
+	optional uint32 max_apps = 6;
+}
+
+message CFamilyGroups_GetSharedLibraryApps_Response {
+	message SharedApp {
+		optional uint32 appid = 1;
+		repeated fixed64 owner_steamids = 2;
+		optional bool free_app = 5;
+		optional string name = 6;
+		optional string sort_as = 7;
+		optional string capsule_filename = 8;
+		optional string img_icon_url = 9;
+		optional .ESharedLibraryExcludeReason exclude_reason = 10 [default = k_ESharedLibrary_Included];
+	}
+
+	repeated .CFamilyGroups_GetSharedLibraryApps_Response.SharedApp apps = 1;
+}
+
+message CFamilyGroupsClient_GroupStatus_Notification {
+	message PlayingMember {
+		optional fixed64 member_steamid = 1;
+		optional fixed64 owner_steamid = 2;
+	}
+
+	message RunningApp {
+		optional uint32 appid = 1;
+		optional bool is_locked = 2;
+		repeated .CFamilyGroupsClient_GroupStatus_Notification.PlayingMember playing_members = 3;
+	}
+
+	optional uint64 family_groupid = 1;
+	repeated .CFamilyGroupsClient_GroupStatus_Notification.RunningApp running_apps = 2;
+}
+
+message CFamilyGroupsClient_InviteStatus_Notification {
+}
+
+service FamilyGroups {
+	option (service_description) = "Family group and sharing management";
+
+	rpc CreateFamilyGroup (.CFamilyGroups_CreateFamilyGroup_Request) returns (.CFamilyGroups_CreateFamilyGroup_Response) {
+		option (method_description) = "Creates a new family group";
+	}
+
+	rpc GetFamilyGroup (.CFamilyGroups_GetFamilyGroup_Request) returns (.CFamilyGroups_GetFamilyGroup_Response) {
+		option (method_description) = "Retrieves family group info";
+	}
+
+	rpc GetFamilyGroupForUser (.CFamilyGroups_GetFamilyGroupForUser_Request) returns (.CFamilyGroups_GetFamilyGroupForUser_Response) {
+		option (method_description) = "Gets the family group id for the authenticated user or a user specified by a support account";
+	}
+
+	rpc ModifyFamilyGroupDetails (.CFamilyGroups_ModifyFamilyGroupDetails_Request) returns (.CFamilyGroups_ModifyFamilyGroupDetails_Response) {
+		option (method_description) = "Modify the details of the specified family group";
+	}
+
+	rpc InviteToFamilyGroup (.CFamilyGroups_InviteToFamilyGroup_Request) returns (.CFamilyGroups_InviteToFamilyGroup_Response) {
+		option (method_description) = "Invites an account to a family group";
+	}
+
+	rpc JoinFamilyGroup (.CFamilyGroups_JoinFamilyGroup_Request) returns (.CFamilyGroups_JoinFamilyGroup_Response) {
+		option (method_description) = "Join the specified family group";
+	}
+
+	rpc RemoveFromFamilyGroup (.CFamilyGroups_RemoveFromFamilyGroup_Request) returns (.CFamilyGroups_RemoveFromFamilyGroup_Response) {
+		option (method_description) = "Remove the specified account from the specified family group";
+	}
+
+	rpc CancelFamilyGroupInvite (.CFamilyGroups_CancelFamilyGroupInvite_Request) returns (.CFamilyGroups_CancelFamilyGroupInvite_Response) {
+		option (method_description) = "Cancel a pending invite to the specified family group";
+	}
+
+	rpc GetUsersSharingDevice (.CFamilyGroups_GetUsersSharingDevice_Request) returns (.CFamilyGroups_GetUsersSharingDevice_Response) {
+		option (method_description) = "Get lenders or borrowers sharing device with";
+	}
+
+	rpc DeleteFamilyGroup (.CFamilyGroups_DeleteFamilyGroup_Request) returns (.CFamilyGroups_DeleteFamilyGroup_Response) {
+		option (method_description) = "Delete the specified family group";
+	}
+
+	rpc GetPlaytimeSummary (.CFamilyGroups_GetPlaytimeSummary_Request) returns (.CFamilyGroups_GetPlaytimeSummary_Response) {
+		option (method_description) = "Get the playtimes in all apps from the shared library for the whole family group.";
+	}
+
+	rpc RequestPurchase (.CFamilyGroups_RequestPurchase_Request) returns (.CFamilyGroups_RequestPurchase_Response) {
+		option (method_description) = "Request purchase of the specified cart";
+	}
+
+	rpc GetPurchaseRequests (.CFamilyGroups_GetPurchaseRequests_Request) returns (.CFamilyGroups_GetPurchaseRequests_Response) {
+		option (method_description) = "Get pending purchase requests for the family";
+	}
+
+	rpc RespondToRequestedPurchase (.CFamilyGroups_RespondToRequestedPurchase_Request) returns (.CFamilyGroups_RespondToRequestedPurchase_Response) {
+		option (method_description) = "Act on a purchase request";
+	}
+
+	rpc GetChangeLog (.CFamilyGroups_GetChangeLog_Request) returns (.CFamilyGroups_GetChangeLog_Response) {
+		option (method_description) = "Return a log of changes made to this family group";
+	}
+
+	rpc SetFamilyCooldownOverrides (.CFamilyGroups_SetFamilyCooldownOverrides_Request) returns (.CFamilyGroups_SetFamilyCooldownOverrides_Response) {
+		option (method_description) = "Set the number of times a family group's cooldown time should be ignored for joins.";
+	}
+
+	rpc GetSharedLibraryApps (.CFamilyGroups_GetSharedLibraryApps_Request) returns (.CFamilyGroups_GetSharedLibraryApps_Response) {
+		option (method_description) = "Return a list of apps available from other members";
+	}
+}
+
+service FamilyGroupsClient {
+	option (service_description) = "Family Groups client service";
+	option (service_execution_site) = k_EProtoExecutionSiteSteamClient;
+
+	rpc NotifyGroupStatus (.CFamilyGroupsClient_GroupStatus_Notification) returns (.NoResponse) {
+		option (method_description) = "Notification for family members from server to client about current group status";
+	}
+
+	rpc NotifyInviteStatus (.CFamilyGroupsClient_InviteStatus_Notification) returns (.NoResponse) {
+		option (method_description) = "Notification for family invitees from server to client about group status.";
+	}
+}

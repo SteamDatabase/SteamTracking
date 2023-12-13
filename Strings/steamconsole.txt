@@ -1,8 +1,6 @@
 __TEXT
 __text
 __TEXT
-[
-[
 __stubs
 __TEXT
 __stub_helper
@@ -44,6 +42,7 @@ __bss
 __DATA
 __common
 __DATA
+XE
 H
 __LINKEDIT
 
@@ -1140,6 +1139,8 @@ Insufficient battery charge
 Charger required
 Cached credential is invalid
 Phone number is Voice Over IP
+The data being accessed is not supported by this API
+Maximum family size exceeded
 Invalid
 Public
 Beta

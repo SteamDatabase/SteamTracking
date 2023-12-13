@@ -426,6 +426,9 @@ td.rdtYear:hover {
 }
 .giftform_GiftPickerFriendBlock_3qPIR {
   background: rgba(21, 21, 21, 0.15);
+  border-color: rgba(21, 21, 21, 0.15);
+  border-width: 1px;
+  border-style: solid;
   display: flex;
   align-items: center;
   padding: 10px 15px 10px 10px;
@@ -437,9 +440,10 @@ td.rdtYear:hover {
 }
 .giftform_GiftPickerFriendBlock_3qPIR.giftform_Disabled_3jwhG {
   background: #3d4450;
+  border-color: #3d4450;
 }
 .giftform_GiftPickerFriendBlock_3qPIR.giftform_Selected_1Wx7O {
-  border: 1px solid red;
+  border-color: #717988;
 }
 .giftform_GiftPickerFriendBlock_3qPIR .giftform_FavoriteFriendIcon_3Kd8P {
   margin-left: 5px;
@@ -617,6 +621,8 @@ td.rdtYear:hover {
   align-items: center;
   margin-top: 8px;
   flex-wrap: wrap;
+  white-space: pre;
+  text-wrap: wrap;
 }
 .lineitem_InnerLineItemCtn_yW_j0 .lineitem_LineItemDetailsRowTop_1SauQ {
   margin-top: 0px;

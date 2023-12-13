@@ -14,372 +14,303 @@
         Y: "discoveryqueueappwidget_Y_1FD7r",
       };
     },
-    66294: (e, t, r) => {
+    66294: (e, t, n) => {
       "use strict";
-      r.d(t, { p: () => u });
-      var n = r(33940),
-        s = r(89526),
-        i = r(44026),
-        o = r(17589),
-        c = r(4306),
-        a = r(32765),
-        l = r(94952);
+      n.d(t, { p: () => u });
+      var r = n(33940),
+        i = n(89526),
+        c = n(44026),
+        o = n(17589),
+        l = n(4306),
+        s = n(32765),
+        a = n(94952);
       function u(e) {
-        const { children: t, navTreeRef: r } = e,
-          u = (0, n._T)(e, ["children", "navTreeRef"]),
-          g = s.useRef(),
-          d = (0, c.BE)(g, r),
-          p = (0, a.id)(),
-          m = window.__virtual_keyboard_client;
+        const { children: t, navTreeRef: n } = e,
+          u = (0, r._T)(e, ["children", "navTreeRef"]),
+          d = i.useRef(),
+          g = (0, l.BE)(d, n),
+          p = (0, s.id)(),
+          A = window.__virtual_keyboard_client;
         if (p) {
           const e = window.__nav_tree_root;
-          return s.createElement(
-            i.Fe,
+          return i.createElement(
+            c.Fe,
             Object.assign({}, u, {
-              navTreeRef: d,
+              navTreeRef: g,
               secondary: !0,
               parentEmbeddedNavTree: e,
             }),
-            s.createElement(
-              l.o5,
-              { factory: m },
-              s.createElement(o.O, null, t),
+            i.createElement(
+              a.o5,
+              { factory: A },
+              i.createElement(o.O, null, t),
             ),
           );
         }
-        return s.createElement(s.Fragment, null, t);
+        return i.createElement(i.Fragment, null, t);
       }
     },
-    5029: (e, t, r) => {
+    5029: (e, t, n) => {
       "use strict";
-      r.d(t, {
-        Ar: () => l,
+      n.d(t, {
+        Ar: () => a,
         Wo: () => u,
-        i9: () => c,
-        ks: () => i,
-        nQ: () => a,
-        ni: () => g,
+        i9: () => l,
+        ks: () => c,
+        nQ: () => s,
+        ni: () => d,
       });
-      var n = r(89526),
-        s = r(59934);
-      function i(e, t) {
-        let r;
+      var r = n(89526),
+        i = n(59934);
+      function c(e, t) {
+        let n;
         "string" == typeof e
-          ? (r = e)
+          ? (n = e)
           : "location" in e
-          ? (r = e.location.search)
-          : "search" in e && (r = e.search);
-        const n = new URLSearchParams(r.substring(1));
-        if (n.has(t)) {
-          const e = n.getAll(t);
+          ? (n = e.location.search)
+          : "search" in e && (n = e.search);
+        const r = new URLSearchParams(n.substring(1));
+        if (r.has(t)) {
+          const e = r.getAll(t);
           return e[e.length - 1];
         }
       }
       const o = (e) => null != e;
-      function c(e, t, r, n = !1) {
-        const s = new URLSearchParams(e.location.search.substring(1));
-        s.delete(t),
-          o(r) && s.append(t, r),
-          n
-            ? e.replace(`?${s.toString()}`, Object.assign({}, e.location.state))
-            : e.push(`?${s.toString()}`);
+      function l(e, t, n, r = !1) {
+        const i = new URLSearchParams(e.location.search.substring(1));
+        i.delete(t),
+          o(n) && i.append(t, n),
+          r
+            ? e.replace(`?${i.toString()}`, Object.assign({}, e.location.state))
+            : e.push(`?${i.toString()}`);
       }
-      function a(e, t, r) {
-        c(e, t, r, !0);
+      function s(e, t, n) {
+        l(e, t, n, !0);
       }
-      function l(e, t) {
-        const r = (0, s.k6)(),
-          a = (0, s.TH)(),
-          l = (0, n.useMemo)(() => {
-            const r = i(a.search, e);
-            return o(r)
+      function a(e, t) {
+        const n = (0, i.k6)(),
+          s = (0, i.TH)(),
+          a = (0, r.useMemo)(() => {
+            const n = c(s.search, e);
+            return o(n)
               ? o(t)
                 ? "boolean" == typeof t
-                  ? t.constructor("false" !== r)
-                  : t.constructor(r)
-                : r
+                  ? t.constructor("false" !== n)
+                  : t.constructor(n)
+                : n
               : t;
-          }, [a.search, e, t]),
-          u = (0, n.useCallback)(
+          }, [s.search, e, t]),
+          u = (0, r.useCallback)(
             (t) => {
-              c(r, e, o(t) ? String(t) : null);
+              l(n, e, o(t) ? String(t) : null);
             },
-            [r, e],
+            [n, e],
           );
-        return [l, u];
+        return [a, u];
       }
-      function u(e, t, r = !1) {
-        const n = new URLSearchParams(e.location.search.substring(1));
+      function u(e, t, n = !1) {
+        const r = new URLSearchParams(e.location.search.substring(1));
         for (const e in t)
           if (t.hasOwnProperty(e)) {
-            const r = t[e];
-            n.delete(e), o(r) && n.append(e, r);
+            const n = t[e];
+            r.delete(e), o(n) && r.append(e, n);
           }
-        r
-          ? e.replace(`?${n.toString()}`, Object.assign({}, e.location.state))
-          : e.push(`?${n.toString()}`);
+        n
+          ? e.replace(`?${r.toString()}`, Object.assign({}, e.location.state))
+          : e.push(`?${r.toString()}`);
       }
-      function g(e, t) {
+      function d(e, t) {
         u(e, t, !0);
       }
     },
-    93908: (e, t, r) => {
+    93908: (e, t, n) => {
       "use strict";
-      r.d(t, { Jr: () => c, Mr: () => a, tk: () => l });
-      var n = r(89526),
-        s = r(701),
-        i = r(16826),
-        o = r(32765);
-      function c() {
-        return (0, o.id)()
-          ? n.createElement(i.MCw, null)
-          : n.createElement(s.JrY, null);
-      }
-      function a() {
-        return n.createElement(s.MrB, null);
-      }
+      n.d(t, { Jr: () => l, Mr: () => s, tk: () => a });
+      var r = n(89526),
+        i = n(701),
+        c = n(16826),
+        o = n(32765);
       function l() {
         return (0, o.id)()
-          ? n.createElement(i.tkI, null)
-          : n.createElement(s.j5H, null);
+          ? r.createElement(c.MCw, null)
+          : r.createElement(i.JrY, null);
+      }
+      function s() {
+        return r.createElement(i.MrB, null);
+      }
+      function a() {
+        return (0, o.id)()
+          ? r.createElement(c.tkI, null)
+          : r.createElement(i.j5H, null);
       }
     },
-    87178: (e, t, r) => {
+    89350: (e, t, n) => {
       "use strict";
-      r.d(t, { j: () => o });
-      var n = r(33940),
-        s = r(89526),
-        i = r(4306);
-      class o extends s.Component {
-        constructor(e) {
-          super(e),
-            (this.m_refImage = s.createRef()),
-            (this.state = { nImage: 0 });
-        }
-        componentDidUpdate(e) {
-          JSON.stringify(this.props.rgSources) != JSON.stringify(e.rgSources) &&
-            this.setState({ nImage: 0 });
-        }
-        get src() {
-          let e = "";
-          return (
-            this.props.rgSources &&
-              this.props.rgSources.length > this.state.nImage &&
-              (e = this.props.rgSources[this.state.nImage]),
-            e ||
-              (console.warn(
-                "MultiSourceImage created with no image src",
-                this.props,
-                this.state.nImage,
-              ),
-              (e =
-                "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=")),
-            e
-          );
-        }
-        get imgRef() {
-          return this.m_refImage;
-        }
-        OnImageError(e) {
-          this.props.onIncrementalError &&
-            this.props.onIncrementalError(
-              e,
-              this.props.rgSources[this.state.nImage],
-              this.state.nImage,
-            );
-          let t = this.state.nImage + 1;
-          t >= this.props.rgSources.length &&
-            this.props.onError &&
-            this.props.onError(e),
-            t < this.props.rgSources.length && this.setState({ nImage: t });
-        }
-        render() {
-          const e = this.props,
-            { src: t, rgSources: r, onIncrementalError: i, onError: o } = e,
-            c = (0, n._T)(e, [
-              "src",
-              "rgSources",
-              "onIncrementalError",
-              "onError",
-            ]),
-            a = this.src;
-          return s.createElement(
-            "img",
-            Object.assign({ src: a, ref: this.m_refImage }, c, {
-              onError: this.OnImageError,
-            }),
-          );
-        }
-      }
-      (0, n.gn)([i.ak], o.prototype, "OnImageError", null);
-    },
-    89350: (e, t, r) => {
-      "use strict";
-      r.r(t), r.d(t, { default: () => E });
-      var n = r(89526),
-        s = r(66294),
-        i = r(51438),
-        o = r(83145),
-        c = r(82588),
-        a = r(25871),
-        l = r(5029),
-        u = r(701),
-        g = r(49330),
-        d = r(35388),
-        p = r(14826),
-        m = r(47573),
-        A = r.n(m),
-        h = r(32765);
-      function E(e) {
+      n.r(t), n.d(t, { default: () => m });
+      var r = n(89526),
+        i = n(66294),
+        c = n(51438),
+        o = n(83145),
+        l = n(82588),
+        s = n(25871),
+        a = n(5029),
+        u = n(701),
+        d = n(49330),
+        g = n(35388),
+        p = n(14826),
+        A = n(47573),
+        v = n.n(A),
+        E = n(32765);
+      function m(e) {
         const { appID: t } = e,
-          r = (0, d.g)(),
-          [m] = (0, l.Ar)("inqueue", "0"),
-          [E, v] = (0, n.useState)(!1),
-          [S, D] = (0, n.useState)(!1),
-          [I] = (0, a.vs)(t, { include_assets: !0 }),
-          y = (0, o.L)(),
-          b = n.useRef();
-        n.useEffect(() => {
+          n = (0, g.g)(),
+          [A] = (0, a.Ar)("inqueue", "0"),
+          [m, D] = (0, r.useState)(!1),
+          [y, b] = (0, r.useState)(!1),
+          [R] = (0, s.vs)(t, { include_assets: !0 }),
+          h = (0, o.L)(),
+          N = r.useRef();
+        r.useEffect(() => {
           var e;
-          return null === (e = b.current) || void 0 === e
+          return null === (e = N.current) || void 0 === e
             ? void 0
             : e.Activate(!0);
         }, []);
-        const R = (0, h.id)(),
-          { eStoreDiscoveryQueueType: f, storePageFilter: N } =
-            n.useMemo(() => {
-              if ((null == m ? void 0 : m.length) > 0) {
-                const e = m.split("_"),
+        const M = (0, E.id)(),
+          { eStoreDiscoveryQueueType: S, storePageFilter: w } =
+            r.useMemo(() => {
+              if ((null == A ? void 0 : A.length) > 0) {
+                const e = A.split("_"),
                   t = Number(e[0]);
-                let r;
+                let n;
                 return (
-                  e.length > 1 && (r = (0, c.M_)(e[1])),
-                  { eStoreDiscoveryQueueType: t, storePageFilter: r }
+                  e.length > 1 && (n = (0, l.M_)(e[1])),
+                  { eStoreDiscoveryQueueType: t, storePageFilter: n }
                 );
               }
               return { eStoreDiscoveryQueueType: 0, storePageFilter: void 0 };
-            }, [m]),
-          w = n.useCallback(() => {
+            }, [A]),
+          f = r.useCallback(() => {
+            b(!0);
+          }, []),
+          C = r.useCallback(() => {
             D(!0);
           }, []),
-          M = n.useCallback(() => {
-            v(!0);
-          }, []),
-          C = (0, c.ZP)(f, N);
-        return r && I
-          ? S
+          Q = (0, l.ZP)(S, w);
+        return n && R
+          ? y
             ? null
-            : n.createElement(
-                s.p,
+            : r.createElement(
+                i.p,
                 {
-                  NavigationManager: y,
-                  navTreeRef: b,
+                  NavigationManager: h,
+                  navTreeRef: N,
                   navID: "DiscoveryQueueAppWidget",
                 },
-                n.createElement(
-                  i.s,
+                r.createElement(
+                  c.s,
                   {
                     focusable: !0,
-                    className: A().DiscoveryQueueWidgetCtn,
-                    onSecondaryButton: w,
-                    onOKButton: M,
+                    className: v().DiscoveryQueueWidgetCtn,
+                    onSecondaryButton: f,
+                    onOKButton: C,
                     onOKActionDescription: (0, p.Xx)(
                       "#DiscoveryQueue_ResumeWizard",
                     ),
                     onSecondaryActionDescription: (0, p.Xx)("#Button_Close"),
                   },
-                  n.createElement("img", {
-                    className: A().WidgetCapsule,
+                  r.createElement("img", {
+                    className: v().WidgetCapsule,
                     src:
-                      null == I ? void 0 : I.GetAssets().GetSmallCapsuleURL(),
+                      null == R ? void 0 : R.GetAssets().GetSmallCapsuleURL(),
                   }),
-                  n.createElement(
+                  r.createElement(
                     "div",
-                    { onClick: M, className: A().WidgetText },
+                    { onClick: C, className: v().WidgetText },
                     (0, p.Xx)("#DiscoveryQueue_ResumeWizard"),
-                    (null == C ? void 0 : C.length) > 0 && ": " + C,
+                    (null == Q ? void 0 : Q.length) > 0 && ": " + Q,
                   ),
-                  !R &&
-                    n.createElement(
+                  !M &&
+                    r.createElement(
                       "div",
-                      { className: A().CloseButton, onClick: w },
-                      n.createElement(u.X, null),
+                      { className: v().CloseButton, onClick: f },
+                      r.createElement(u.X, null),
                     ),
-                  E &&
-                    n.createElement(g.MS, {
+                  m &&
+                    r.createElement(d.MS, {
                       includeAppID: t,
-                      bWizardVisible: E,
-                      fnCloseModal: () => v(!1),
-                      eStoreDiscoveryQueueType: f,
-                      storePageFilter: N,
+                      bWizardVisible: m,
+                      fnCloseModal: () => D(!1),
+                      eStoreDiscoveryQueueType: S,
+                      storePageFilter: w,
                     }),
                 ),
               )
           : null;
       }
     },
-    77091: (e, t, r) => {
+    77091: (e, t, n) => {
       "use strict";
-      r.r(t), r.d(t, { default: () => g });
-      var n = r(89526),
-        s = r(14826),
-        i = r(49330),
-        o = r(35388),
-        c = r(51438),
-        a = r(32765),
-        l = r(99307),
-        u = r(57742);
-      function g(e) {
+      n.r(t), n.d(t, { default: () => d });
+      var r = n(89526),
+        i = n(14826),
+        c = n(49330),
+        o = n(35388),
+        l = n(51438),
+        s = n(32765),
+        a = n(99307),
+        u = n(57742);
+      function d(e) {
         const t = (0, o.g)(),
-          [r, g] = (0, n.useState)(!1),
-          d = n.useCallback(() => {
-            a.L7.logged_in
-              ? g(!0)
+          [n, d] = (0, r.useState)(!1),
+          g = r.useCallback(() => {
+            s.L7.logged_in
+              ? d(!0)
               : (0, u.AM)(
-                  n.createElement(l.JX, {
+                  r.createElement(a.JX, {
                     onOK: () => {
                       window.location.href = `${
-                        a.De.STORE_BASE_URL
+                        s.De.STORE_BASE_URL
                       }login?redir=${encodeURIComponent(
                         document.location.href,
                       )}`;
                     },
-                    strOKButtonText: (0, s.Xx)(
+                    strOKButtonText: (0, i.Xx)(
                       "#DiscoveryQueue_Error_Login_Title",
                     ),
-                    strDescription: (0, s.Xx)("#DiscoveryQueue_Error_Login"),
-                    strTitle: (0, s.Xx)("#DiscoveryQueue_Error_Login_Title"),
+                    strDescription: (0, i.Xx)("#DiscoveryQueue_Error_Login"),
+                    strTitle: (0, i.Xx)("#DiscoveryQueue_Error_Login_Title"),
                   }),
                   window,
                 );
           }, []);
         return t
-          ? n.createElement(
-              c.s,
+          ? r.createElement(
+              l.s,
               null,
-              n.createElement(
+              r.createElement(
                 "a",
-                { onClick: d, className: "experiment-button" },
-                (0, s.Xx)("#DiscoveryQueue_OpenWizard"),
+                { onClick: g, className: "experiment-button" },
+                (0, i.Xx)("#DiscoveryQueue_OpenWizard"),
               ),
-              r &&
-                n.createElement(i.MS, {
-                  bWizardVisible: r,
-                  fnCloseModal: () => g(!1),
+              n &&
+                r.createElement(c.MS, {
+                  bWizardVisible: n,
+                  fnCloseModal: () => d(!1),
                   eStoreDiscoveryQueueType: 0,
                 }),
             )
-          : n.createElement(
+          : r.createElement(
               "div",
               { className: "experiment-button-placeholder" },
               " ",
             );
       }
     },
-    26121: (e, t, r) => {
+    26121: (e, t, n) => {
       "use strict";
-      r.d(t, { Z: () => n });
-      const n =
+      n.d(t, { Z: () => r });
+      const r =
         "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QUQ5NEMwOTYzRDc4MTFFQUExREZEODRBMDBCNjdENTEiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QUQ5NEMwOTczRDc4MTFFQUExREZEODRBMDBCNjdENTEiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpBRDk0QzA5NDNENzgxMUVBQTFERkQ4NEEwMEI2N0Q1MSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpBRDk0QzA5NTNENzgxMUVBQTFERkQ4NEEwMEI2N0Q1MSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Po/TXacAAABMSURBVHjaYvz//z8DNQHjyDMQDICGJgDx3f/kA5DeBJhh8f+pB+JBXr4DNFeZSp69CzLwP7UjZdTAkWAgVdMh1XMK1fPyCCwPAQIMAKf/Y+3dveJlAAAAAElFTkSuQmCC";
     },
   },

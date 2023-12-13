@@ -40,6 +40,7 @@ enum EDisplayStatus {
 	k_EDisplayStatusCloudError = 34;
 	k_EDisplayStatusCloudOutOfDate = 35;
 	k_EDisplayStatusTerminating = 36;
+	k_EDisplayStatusOwnerLocked = 37;
 }
 
 enum EAppCloudStatus {
@@ -97,6 +98,14 @@ enum EAppGamepadGyroTrackpadSupportLevel {
 	k_EAppGamepadGyroTrackpadSupportLevelNoGamepad = 0;
 	k_EAppGamepadGyroTrackpadSupportLevelGamepad = 1;
 	k_EAppGamepadGyroTrackpadSupportLevelSimultaneous = 2;
+}
+
+enum EAppHDRSupport {
+	k_EHDRSupport_Unknown = 0;
+	k_EHDRSupport_SDR = 1;
+	k_EHDRSupport_HDR = 2;
+	k_EHDRSupport_HDR_Broken = 3;
+	k_EHDRSupport_HDR_RequiresUserAction = 4;
 }
 
 message CAppOverview_AppAssociation {

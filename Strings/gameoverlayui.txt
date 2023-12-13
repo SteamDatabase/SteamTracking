@@ -19,9 +19,7 @@ __TEXT
 __gcc_except_tab__TEXT
 __unwind_info
 __TEXT
-t
 !
-t
 !
 __eh_frame
 __TEXT
@@ -66,7 +64,7 @@ __bss
 __DATA
 __common
 __DATA
-XA
+A
 H
 __LINKEDIT
 ,
@@ -7764,8 +7762,8 @@ Steam pid that launched us
 VGUI_Application_001
 OK
 Cancel
-Dec  7 2023
-16:34:27
+Dec 12 2023
+11:29:38
 crashhandler004
 gameoverlayui
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/overlay/gameoverlayui/main.cpp
@@ -10673,6 +10671,8 @@ Insufficient battery charge
 Charger required
 Cached credential is invalid
 Phone number is Voice Over IP
+The data being accessed is not supported by this API
+Maximum family size exceeded
 Invalid
 Public
 Beta
@@ -10776,8 +10776,7 @@ Dec
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 0
-M+
-J+
+D+
 0
 
 
@@ -10849,14 +10848,12 @@ IcE
 IcE
 @
 @
-r)
 V
 =
 =
 !
 @
 &
-~"
 @
 M9e
 @
@@ -11010,13 +11007,13 @@ d
 A+M
 
 
+/
 j
 j
 j
 j
 j
 j
-A
 =
 0
 j
@@ -11268,6 +11265,7 @@ d
 @
 @
 0
+s
 @
 @
 @

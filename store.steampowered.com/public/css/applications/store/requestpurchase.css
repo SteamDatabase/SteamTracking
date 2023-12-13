@@ -433,32 +433,78 @@
 .throbber_NewThrobber_tAKvs img {
   width: 100%;
 }
-.familysharedcomponents_RoleIcon_3bonx {
+.familysharedcomponents_RoleIcon_2OqP3 {
   width: 20px;
   height: 20px;
 }
-.familysharedcomponents_ProfileLink_2EK4M {
+.familysharedcomponents_ProfileLink_iKwt8 {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
-.familysharedcomponents_PlayerName_2aMDA {
-  padding-left: 10px;
+.familysharedcomponents_MyProfile_2nixW .familysharedcomponents_Avatar_3h6_a {
+  border-right: 4px solid #59bf40;
 }
-.familysharedcomponents_ProfileRoleIcon_NW8Zt {
+.familysharedcomponents_MyProfile_2nixW
+  .familysharedcomponents_PlayerName_3YHL9 {
+  color: #59bf40;
+}
+.familysharedcomponents_MeBadge_qeLJ_ {
+  content: "Me";
+  color: #0e141b;
+  background-color: #59bf40;
+  font-size: 12px;
+  font-weight: 500;
+  height: 21px;
+  width: 50px;
+  text-align: center;
+  margin-left: 30px;
+}
+.familysharedcomponents_PlayerName_3YHL9 {
+  padding-left: 10px;
+  font-size: 20px;
+}
+.familysharedcomponents_ProfileRoleIcon_1SlHw {
   margin-left: 10px;
 }
-.familysharedcomponents_RoleName_2KKmg {
+.familysharedcomponents_RoleName_3rvHm {
   padding-left: 3px;
   text-transform: uppercase;
   color: #fff;
   font-weight: bold;
 }
-.familysharedcomponents_FamilyErrorDisplay_2q8rI {
+.familysharedcomponents_FamilyErrorDisplay_3EgCv {
   background-color: #de3618;
   padding: 15px 10px;
   font-size: 14px;
   font-weight: bold;
+}
+.familysharedcomponents_FamilyMemberRow_3QkkY {
+  display: flex;
+  flex-direction: column;
+  background-color: #0e141b;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 5px;
+  transition: height 0.5s;
+}
+.familysharedcomponents_FamilyMemberRow_3QkkY
+  .familysharedcomponents_FamilyMemberRowTop_3kaLZ {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.familysharedcomponents_FamilyMemberRow_3QkkY
+  .familysharedcomponents_ExpandRow_168MV {
+  margin-left: auto;
+  cursor: pointer;
+  fill: #fff;
+  padding: 10px;
+}
+.familysharedcomponents_FamilyMemberRow_3QkkY
+  .familysharedcomponents_ExpandRow_168MV
+  svg {
+  transition: transform linear 0.1s;
 }
 .steamavatar_avatarHolder_1YGAH {
   height: 36px;

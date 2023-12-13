@@ -107,6 +107,7 @@
         ReplayHighlight: "yir2022_ReplayHighlight_OoOok",
         ViewPageButton: "yir2022_ViewPageButton_36_yh",
         Description: "yir2022_Description_2SJb0",
+        OtherYearLink: "yir2022_OtherYearLink_3itf8",
       };
     },
     49686: (e) => {
@@ -192,6 +193,7 @@
         ReplayHighlight: "yir2023_ReplayHighlight_X5blf",
         ViewPageButton: "yir2023_ViewPageButton_3YUlc",
         Description: "yir2023_Description_1qc70",
+        OtherYearLink: "yir2023_OtherYearLink_1AcAx",
       };
     },
     20285: (e, a, r) => {

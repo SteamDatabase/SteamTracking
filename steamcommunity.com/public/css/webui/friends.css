@@ -19728,7 +19728,7 @@ a.bbcodes_LinkButton_jPpgc:hover {
   background: transparent;
 }
 .chattabs_ChatTab_2Vrcp:hover:not(.chattabs_Active_Lrqoj) {
-  background-color: #23282f;
+  background-color: rgba(67, 73, 83, 0.3);
 }
 .chattabs_ChatTab_2Vrcp.chattabs_Active_Lrqoj {
   background-color: #3a3e46;
@@ -19740,6 +19740,17 @@ a.bbcodes_LinkButton_jPpgc:hover {
 .chattabs_ChatTab_2Vrcp.chattabs_Active_Lrqoj.GamepadMode.gpfocus,
 .GamepadMode .chattabs_ChatTab_2Vrcp.chattabs_Active_Lrqoj.gpfocus {
   background-color: #3d4450;
+}
+.ChatTabsContextMenu
+  .ChatTabContextMenuItem
+  .chattabs_ChatTab_2Vrcp.chattabs_Active_Lrqoj {
+  border-radius: 3px;
+}
+.ChatTabsContextMenu
+  .ChatTabContextMenuItem
+  .chattabs_ChatTab_2Vrcp.chattabs_Active_Lrqoj:hover {
+  background-color: #464a52;
+  border-radius: 3px;
 }
 .chattabs_ChatTab_2Vrcp.chattabs_ChatTabTransition_Enter_2GwaB {
   transition-property: transform, opacity;
@@ -43423,6 +43434,10 @@ body.in_global_drag .friendlist_titlebar {
 .ChatTabsContextMenu .ChatTabContextMenuItem {
   padding: 0;
   min-height: 32px;
+  border-radius: 3px;
+}
+.ChatTabsContextMenu .ChatTabContextMenuItem:hover {
+  background-color: initial;
 }
 .ChatTabsContextMenu.compactView .chatTabGroupName {
   margin-top: -2px;
@@ -47840,22 +47855,28 @@ html.web_chat_frame .perf_timing_area {
   display: block;
 }
 .addFriendButton .SVGIcon_AddFriend .plusCircle {
-  fill: #b7ccd5;
+  color: #b7ccd5;
   transition:
-    fill 0.21s ease-in-out,
+    color 0.21s ease-in-out,
     transform 0.21s ease-in-out;
 }
 .friendRequestButton .SVGIcon_FriendRequest .friendBodyFull,
 .friendRequestButton .SVGIcon_FriendRequest .friendHead,
 .friendRequestButton .SVGIcon_FriendRequest .friendArm,
-.friendRequestButton .SVGIcon_FriendRequest .friendBody,
-.addFriendButton .SVGIcon_AddFriend .friendHead,
-.addFriendButton .SVGIcon_AddFriend .friendBody {
+.friendRequestButton .SVGIcon_FriendRequest .friendBody {
   fill: #788a92;
   transition: fill 0.21s ease-in-out;
 }
-.friendRequestButton:hover .SVGIcon_FriendRequest .redCircle,
+.addFriendButton .SVGIcon_AddFriend .friendHead,
+.addFriendButton .SVGIcon_AddFriend .friendBody {
+  color: #788a92;
+  transition: color 0.21s ease-in-out;
+}
 .addFriendButton:hover .SVGIcon_AddFriend .plusCircle {
+  color: #fff;
+  transform: translateX(12px);
+}
+.friendRequestButton:hover .SVGIcon_FriendRequest .redCircle {
   fill: #fff;
   transform: translateX(12px);
 }
@@ -47890,10 +47911,12 @@ html.web_chat_frame .perf_timing_area {
 .friendRequestButton:hover .SVGIcon_FriendRequest .friendHead,
 .friendRequestButton:hover .SVGIcon_FriendRequest .friendArm,
 .friendRequestButton:hover .SVGIcon_FriendRequest .friendBody,
-.friendRequestButton:hover .SVGIcon_FriendRequest .friendBodyFull,
+.friendRequestButton:hover .SVGIcon_FriendRequest .friendBodyFull {
+  fill: #aac2cc;
+}
 .addFriendButton:hover .SVGIcon_AddFriend .friendHead,
 .addFriendButton:hover .SVGIcon_AddFriend .friendBody {
-  fill: #aac2cc;
+  color: #aac2cc;
 }
 .friendRequestButton:hover:not(.friendRequestViewActive)
   .SVGIcon_FriendRequest
@@ -48233,7 +48256,13 @@ html.web_chat_frame .perf_timing_area {
 }
 .ChatRoomGroupAvatar.Smaller .ChatRoomGroupAvatar_initials {
   font-size: 14px;
-  padding-top: 0px;
+  padding-top: 1px;
+}
+.ChatTabContextMenuItem
+  .ChatRoomGroupAvatar.Smaller
+  .ChatRoomGroupAvatar_initials {
+  font-size: 14px;
+  padding-top: 3px;
 }
 .ChatRoomGroupAvatar.Smaller {
   width: 24px;
@@ -51092,7 +51121,6 @@ button.chatRoomHeaderButton:hover {
 .ChatRoomGroupAvatar_initials {
   font-size: 32px;
   text-align: center;
-  padding-top: 5px;
   color: #616c7a;
   user-select: none;
   background: -webkit-linear-gradient(white, #92a2b8);

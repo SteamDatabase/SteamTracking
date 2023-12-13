@@ -2403,7 +2403,7 @@ Vous devrez vous déconnecter de OSX pour que le changement prenne effet."
 
 "Steam_MediaAdded_Title"					"%media% - Steam"
 "Steam_MediaAdded_Info"					"%media% a été ajouté à l'onglet média de la bibliothèque Steam."
-"Steam_OpenMyMedia"						"Ouvrir Mes médias"
+"Steam_OpenMyMedia"						"Ouvrir mes médias"
 "Steam_ContinueBrowsingMedia"				"Poursuivre l'exploration"
 
 "Steam_Uninstall_Title"			"Steam - Désinstaller le jeu ?"
@@ -4712,7 +4712,7 @@ Ajoutez un nouveau contact Steam en envoyant un cadeau à une de vos connaissanc
 "SteamUI_UpdateControllerFirmware_Fallback"	"Steam doit utiliser le mode de récupération pour installer le microprogramme sur votre Steam Controller :\n\n 1) Débranchez le câble USB connectant le Steam Controller\n 2) Maintenez la GÂCHETTE DROITE et reconnectez le Steam Controller\n 3) Patientez un instant (jusqu'à 30-60 secondes) pour que le système d'exploitation détecte et monte le volume de mise à jour du microprogramme du Steam Controller.\n\nUne fois ces étapes terminées le Steam Controller se reconnectera en mode mise à jour de microprogramme et nous passerons à l'étape suivante."
 "SteamUI_UpdateControllerFirmware_Fallback_Finished" "Le microprogramme a été mis à jour, veuillez effectuer les opérations suivantes :\n\n 1) Débranchez le câble USB connectant le Steam Controller\n 2) Rebranchez le câble USB en appuyant sur aucun bouton\n 3) Choisissez OK ci-dessous pour quitter ce processus"
 "SteamUI_UpdateControllerFirmware_Disconnect"	"Le Steam Controller a été déconnecté pendant la procédure de mise à jour du microprogramme. Vous aurez à nouveau la possibilité de mettre à jour le microprogramme quand celui-ci sera reconnecté."
-"SteamUI_UpdateControllerFirmware_WiredUpdate"	"Une mise à jour du microprogramme est disponible pour votre Steam Controller. Votre controller doit utiliser un câble USB pour effectuer cette mise à jour.\nLorsque vous êtes prêt, connectez-le par USB et le processus de mise à jour se lancera automatiquement."
+"SteamUI_UpdateControllerFirmware_WiredUpdate"	"Une mise à jour du microprogramme est disponible pour votre Steam Controller. Votre controller doit utiliser un câble USB pour effectuer cette mise à jour.\nLorsque vous êtes prêt(e), connectez-le par USB et le processus de mise à jour se lancera automatiquement."
 "SteamUI_UpdateControllerFirmware_WiredUpdate_Title" "Mise à jour microprogramme du Steam Controller"
 "SteamUI_UpdateControllerFirmware_HardFailure" "Attention : un de vos Steam Controllers a été désactivé et ne sera pas reconfiguré ou programmé pour les jeux. Son microprogramme est obsolète et Steam n'a pas été en mesure de récupérer les informations de mise à jour du microprogramme."
 "SteamUI_UpdateControllerFirmware_Required_Title" "Nouveau microprogramme du Steam Controller disponible"

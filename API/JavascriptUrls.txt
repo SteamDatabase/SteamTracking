@@ -265,6 +265,7 @@ ${COMMUNITY_BASE_URL}profiles/${steamid64}/tradeoffers/sent/#tradeofferid_${}
 ${COMMUNITY_BASE_URL}profiles/${steamid}
 ${COMMUNITY_BASE_URL}profiles/${steamid}/
 ${COMMUNITY_BASE_URL}profiles/${steamid}/edit/goldenprofile
+${COMMUNITY_BASE_URL}profiles/${steamid}/edit/showcases
 ${COMMUNITY_BASE_URL}profiles/${steamid}/friendscommon
 ${COMMUNITY_BASE_URL}profiles/${steamid}/gamenotifications
 ${COMMUNITY_BASE_URL}profiles/${steamid}/home/invites
@@ -279,7 +280,6 @@ ${COMMUNITY_BASE_URL}profiles/${}/friends/pending
 ${COMMUNITY_BASE_URL}profiles/${}/home
 ${COMMUNITY_BASE_URL}profiles/${}/inventory
 ${COMMUNITY_BASE_URL}profiles/${}/inventory/#pending_gifts
-${COMMUNITY_BASE_URL}profiles/${}/notifications
 ${COMMUNITY_BASE_URL}profiles/${}/notifications#comments
 ${COMMUNITY_BASE_URL}profiles/${}/previewsingleshowcase/?customization_type=${}&level=${}
 ${COMMUNITY_BASE_URL}profiles/${}/stats/${}
@@ -884,6 +884,7 @@ ${MEDIA_CDN_URL}store/promo/summer2021/Steam_Summer_Sale_2021_Wallpapers.zip
 ${MEDIA_CDN_URL}store/promo/summer2022/card_stack.png?v-1
 ${PARTNER_BASE_URL}
 ${PARTNER_BASE_URL}${_ ? "optin/ajaxadmincloneinvites" : "optin/ajaxadmincloneoptinpage"}
+${PARTNER_BASE_URL}${}
 ${PARTNER_BASE_URL}${}${}
 ${PARTNER_BASE_URL}/admin/store/pagecreate
 ${PARTNER_BASE_URL}/packages/ajaxgetmultipackageprices
@@ -1132,8 +1133,8 @@ ${STORE_BASE_URL}account/ajaxgetcontrollersused
 ${STORE_BASE_URL}account/ajaxsetcookiepreferences
 ${STORE_BASE_URL}account/ajaxsetnotificationsettings
 ${STORE_BASE_URL}account/emailoptout/app
-${STORE_BASE_URL}account/familymanagement
-${STORE_BASE_URL}account/familymanagement/join
+${STORE_BASE_URL}account/familymanagement/join?ft=${steamid}
+${STORE_BASE_URL}account/familymanagement/join?invitation=${familyid}&ft=${steamid}
 ${STORE_BASE_URL}account/familymanagement?tab=requests
 ${STORE_BASE_URL}account/languagepreferences/
 ${STORE_BASE_URL}account/notificationsettings
@@ -1269,6 +1270,7 @@ ${STORE_BASE_URL}itemstore/${nAppID}/detail/${nItemDefID}
 ${STORE_BASE_URL}itemstore/${}
 ${STORE_BASE_URL}itemstore/${}/ajaxgetitemdefs
 ${STORE_BASE_URL}join/
+${STORE_BASE_URL}join/${}
 ${STORE_BASE_URL}labs
 ${STORE_BASE_URL}labs/${}?optout=1
 ${STORE_BASE_URL}labs/ajaxgetappsimilarities?appidtarget=${}&${}
@@ -1319,11 +1321,13 @@ ${STORE_BASE_URL}prizes/nextdraw/${}
 ${STORE_BASE_URL}prizes/view/${giveaway_id}${SNR ? _ : ""}
 ${STORE_BASE_URL}promotion/ajaxclaimstickerforgenre
 ${STORE_BASE_URL}promotion/ajaxhasclaimedgenresticker
+${STORE_BASE_URL}public/images/checkout/Cart_generic_header_logo.png
 ${STORE_BASE_URL}publisher/${m_strVanity}/
 ${STORE_BASE_URL}recommended/ignorerecommendation
 ${STORE_BASE_URL}remoteplay#anywhere_how
 ${STORE_BASE_URL}replay/${steamid}/${}?src=9
 ${STORE_BASE_URL}replay/${}/${}
+${STORE_BASE_URL}replay/${}/${}?src=8
 ${STORE_BASE_URL}reservation/ajaxpreviewoptions
 ${STORE_BASE_URL}reservation/cancelreservation
 ${STORE_BASE_URL}sale/${sale_vanity_id}
@@ -1865,6 +1869,7 @@ http://www.w3.org/1999/xhtml
 http://www.w3.org/1999/xhtml${}
 http://www.w3.org/1999/xlink
 http://www.w3.org/2000/svg
+http://www.w3.org/2000/svg${namespaceURI}
 http://www.w3.org/2000/svg${}
 http://www.w3.org/2000/xmlns/
 http://www.w3.org/XML/1998/namespace

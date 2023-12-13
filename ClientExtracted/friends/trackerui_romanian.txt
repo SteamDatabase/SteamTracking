@@ -748,7 +748,7 @@ Nu poți face schimburi cu %friend% pentru că ți-ai anulat recent toate oferte
 "Steam_Settings_Broadcast_PermissionsHeader" "Setări de confidențialitate:"
 "Steam_Settings_Broadcast_BitrateHeader" "Rată de biți maximă:"
 "Steam_Settings_Broadcast_DimensionsHeader" "Dimensiuni video:"
-"Steam_Settings_Broadcast_EncoderHeader" "Optimizează codarea pentru:"
+"Steam_Settings_Broadcast_EncoderHeader" "Optimizează codificarea pentru:"
 "Steam_Settings_Broadcast_EncoderQuality" "Calitatea cea mai bună"
 "Steam_Settings_Broadcast_EncoderPerformance" "Performanța cea mai bună"
 "Steam_Settings_Broadcast_StatusNotBroadcast" "Nu difuzează"

@@ -197,6 +197,13 @@ message StoreItem {
 			optional uint32 discount_end_date = 3;
 		}
 
+		message RecurrenceInfo {
+			optional int32 packageid = 1 [(description) = "The package ID of the recurring billing package"];
+			optional int32 billing_agreement_type = 2 [(description) = "The billing agreement type of the recurring billing package"];
+			optional int32 renewal_time_unit = 3 [(description) = "The time unit the renewal time period is using (e.g. days/months/years)"];
+			optional int32 renewal_time_period = 4 [(description) = "The number of time units the renewal is valid for"];
+		}
+
 		optional int32 packageid = 1;
 		optional int32 bundleid = 2;
 		optional string purchase_option_name = 3 [(description) = "The name of the package or bundle"];
@@ -218,6 +225,8 @@ message StoreItem {
 		optional bool hide_discount_pct_for_compliance = 42 [default = false, (description) = "Don't show the discount percent because there was a discount in the last 30 days."];
 		optional int32 included_game_count = 43 [(description) = "How many games are included in this purchase option."];
 		optional int64 lowest_recent_price_in_cents = 44 [(description) = "Lowest recent price in cents.  If not set, then there is no data so we ignore."];
+		optional bool requires_shipping = 45 [(description) = "Is this hardware that requires shipping"];
+		optional .StoreItem.PurchaseOption.RecurrenceInfo recurrence_info = 46;
 	}
 
 	message Screenshots {
@@ -401,6 +410,9 @@ message CHardwarePackageDetails {
 	optional uint32 time_reserved = 12;
 	optional bool allow_quantity_purchase = 13;
 	optional int32 max_quantity_per_purchase = 14;
+	optional bool allow_purchase_in_country = 15 [(description) = "Whether it is available to purchase in the callers country"];
+	optional uint32 estimated_delivery_soonest_business_days = 17;
+	optional uint32 estimated_delivery_latest_business_days = 18;
 }
 
 message CStoreBrowse_GetHardwareItems_Response {

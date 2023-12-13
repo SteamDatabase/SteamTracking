@@ -1319,15 +1319,6 @@ enum EMsg {
 	k_EMsgClientUGSGetGlobalStatsResponse = 7902;
 	k_EMsgStoreBase = 8000;
 	k_EMsgUMQBase = 8100;
-	k_EMsgUMQLogonRequest = 8100;
-	k_EMsgUMQLogonResponse = 8101;
-	k_EMsgUMQLogoffRequest = 8102;
-	k_EMsgUMQLogoffResponse = 8103;
-	k_EMsgUMQSendChatMessage = 8104;
-	k_EMsgUMQIncomingChatMessage = 8105;
-	k_EMsgUMQPoll = 8106;
-	k_EMsgUMQPollResults = 8107;
-	k_EMsgUMQ2AM_ClientMsgBatch = 8108;
 	k_EMsgWorkshopBase = 8200;
 	k_EMsgWebAPIBase = 8300;
 	k_EMsgWebAPIValidateOAuth2Token = 8300;
@@ -1476,6 +1467,8 @@ enum EMsg {
 	k_EMsgWGConnectionValidateUserTokenResponse = 12202;
 	k_EMsgWGConnectionLegacyWGRequest = 12203;
 	k_EMsgWGConnectionLegacyWGResponse = 12204;
+	k_EMsgClientPendingGameLaunch = 12300;
+	k_EMsgClientPendingGameLaunchResponse = 12301;
 }
 
 enum EClientPersonaStateFlag {

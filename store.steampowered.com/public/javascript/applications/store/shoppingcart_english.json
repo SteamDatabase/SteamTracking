@@ -1,6 +1,7 @@
 {
     "language": "english",
     "Cart_Remove": "Remove",
+    "Cart_RemoveAll": "Remove all items",
     "Cart_Edit": "Edit",
     "Cart_Quantity": "Qty: %1$s",
     "Cart_YourShoppingCart": "Your Shopping Cart",
@@ -41,6 +42,8 @@
     "Cart_ContinueShopping": "Continue Shopping",
     "Cart_ComingSoon": "Available %1$s",
     "Cart_ViewMyCart": "View My Cart (%1$s)",
+    "Cart_RequestPurchase": "Request purchase",
+    "Cart_RequestPurchaseExplanation": "The adults in your Steam Family will be notified of your purchase request",
     "Cart_CouponModify_Change": "Change / Remove Coupon",
     "Cart_CouponModify_Add": "Add Coupon",
     "Cart_CouponAvailability": "You have a coupon available for this item",
@@ -48,6 +51,8 @@
     "Cart_Coupons_Applied": "Currently applied",
     "Cart_Coupons_InUse": "Currently applied to another product",
     "Cart_SelectCouponToApply": "Select a coupon to apply to %1$s",
+    "Cart_ShippingEstimate_DeliveryDate": "Estimated Delivery: %1$s",
+    "Cart_ShippingEstimate_Range": "%1$s-%2$s Business Days",
     "Cart_ShippingEstimate_Delayed": "Estimated Delivery: 6-10 Business Days",
     "Cart_ShippingEstimate_Standard": "Estimated Delivery: 3-5 Business Days",
     "Cart_Error_AlreadyOwned_FootNote": "Your account already owns some of the above items, so you can’t purchase them again. You can purchase these items as a gift or adjust the contents of your cart to continue.",
@@ -137,5 +142,7 @@
     "MultiLicenseWithDiscountCostIncludesSubscriptionByWeek": "%1$s at checkout is %4$s%% off for first time purchases, auto-renewed every %3$s week(s) at %2$s per license.",
     "MultiLicenseWithDiscountCostIncludesSubscriptionByMonth": "%1$s at checkout is %4$s%% off for first time purchases, auto-renewed every %3$s month(s) at %2$s per license.",
     "MultiLicenseWithDiscountCostIncludesSubscriptionByYear": "%1$s at checkout is %4$s%% off for first time purchases, auto-renewed every %3$s year(s) at %2$s per license.",
-    "Cart_Empty": "Your cart is empty."
+    "Cart_Empty": "Your cart is empty.",
+    "Cart_Notice_SomeAppsPrivate": "Some of these items are already marked as private. They will remain private if you continue:",
+    "Cart_LineItemOptions_PrivateTooltip": "Marking a game as private will hide it everywhere outside of your Library. Your ownership, in-game status, playtime, and activity will not be visible to other people."
 }

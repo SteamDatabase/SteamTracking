@@ -23,6 +23,7 @@ enum EMarketingMessageType {
 enum EMarketingMessageVisibility {
 	k_EMarketingMessageVisibleBeta = 1;
 	k_EMarketingMessageVisiblePublic = 2;
+	k_EMarketingMessageVisibleApprovedForPublish = 3;
 }
 
 enum EMarketingMessageAssociationType {
@@ -217,6 +218,31 @@ message CMarketingMessages_GetMarketingMessagesViewerRangeStats_Response {
 	repeated .CMarketingMessageHourlyStats stats = 1 [(description) = "Flatterns results for the range of time"];
 }
 
+message CMarketingMessages_GetPartnerReadyToPublishMessages_Request {
+	optional uint32 partnerid = 1;
+}
+
+message CMarketingMessages_GetPartnerReadyToPublishMessages_Response {
+	repeated .CDisplayMarketingMessage messages = 1;
+}
+
+message CMarketingMessages_PartnerPublishMessage_Request {
+	optional fixed64 gid = 1;
+	optional uint32 partnerid = 2;
+}
+
+message CMarketingMessages_PartnerPublishMessage_Response {
+}
+
+message CMarketingMessages_GetPartnerMessagePreview_Request {
+	optional fixed64 gid = 1;
+	optional uint32 partnerid = 2;
+}
+
+message CMarketingMessages_GetPartnerMessagePreview_Response {
+	optional .CMarketingMessageProto message = 1;
+}
+
 service MarketingMessages {
 	option (service_description) = "Marketing message data (\"Steam News\" updates at client startup).";
 
@@ -274,5 +300,17 @@ service MarketingMessages {
 
 	rpc GetMarketingMessagesViewerRangeStats (.CMarketingMessages_GetMarketingMessagesViewerRangeStats_Request) returns (.CMarketingMessages_GetMarketingMessagesViewerRangeStats_Response) {
 		option (method_description) = "For a time range, return the seen stats across all of the marketing messages";
+	}
+
+	rpc GetPartnerReadyToPublishMessages (.CMarketingMessages_GetPartnerReadyToPublishMessages_Request) returns (.CMarketingMessages_GetPartnerReadyToPublishMessages_Response) {
+		option (method_description) = "Are there any marketing messages that are staged for this partner to control publishing and visibility upon?";
+	}
+
+	rpc PublishPartnerMessage (.CMarketingMessages_PartnerPublishMessage_Request) returns (.CMarketingMessages_PartnerPublishMessage_Response) {
+		option (method_description) = "partner endpoint to publish a marketing message";
+	}
+
+	rpc GetPartnerMessagePreview (.CMarketingMessages_GetPartnerMessagePreview_Request) returns (.CMarketingMessages_GetPartnerMessagePreview_Response) {
+		option (method_description) = "partner endpoint to get a marketing message preview that is approved for publishing";
 	}
 }

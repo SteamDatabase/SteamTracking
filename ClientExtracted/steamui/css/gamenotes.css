@@ -1,0 +1,364 @@
+.prosemirror_Container_3lEt5 {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+.prosemirror_Container_3lEt5 > .ProseMirror {
+  padding: 12px;
+  user-select: auto;
+}
+.prosemirror_ToolbarRow_2H40R {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+.prosemirror_ToolbarRow_2H40R .prosemirror_CommandButton_1-R1U {
+  margin-right: 4px;
+  width: 30px;
+  height: 30px;
+}
+.BasicUI .prosemirror_ToolbarRow_2H40R .prosemirror_CommandButton_1-R1U {
+  padding: unset;
+  margin-right: 4px;
+  min-width: unset;
+}
+.BasicUI
+  .prosemirror_ToolbarRow_2H40R
+  .prosemirror_CommandButton_1-R1U.gpfocus {
+  color: #0e141b;
+}
+.BasicUI
+  .prosemirror_ToolbarRow_2H40R
+  .prosemirror_CommandButton_1-R1U.gpfocus
+  svg {
+  fill: currentColor;
+  stroke: currentColor;
+  color: inherit;
+}
+.BasicUI
+  .prosemirror_ToolbarRow_2H40R
+  .prosemirror_CommandButton_1-R1U.gpfocus
+  svg
+  path {
+  stroke: currentColor;
+}
+.BasicUI
+  .prosemirror_ToolbarRow_2H40R
+  .prosemirror_CommandButton_1-R1U.gpfocus
+  svg
+  line,
+.BasicUI
+  .prosemirror_ToolbarRow_2H40R
+  .prosemirror_CommandButton_1-R1U.gpfocus
+  svg
+  polygon {
+  stroke: currentColor;
+  fill: currentColor;
+}
+.prosemirror_ToolbarRow_2H40R
+  .prosemirror_CommandButton_1-R1U.DialogButton
+  .SVGIcon_Button {
+  width: 20px;
+  height: 20px;
+  padding-bottom: 4px;
+  padding-left: 1px;
+}
+.prosemirror_ToolbarRow_2H40R
+  .prosemirror_CommandButton_1-R1U.DialogButton
+  .SVGIcon_Button.SVGIcon_TextBold,
+.prosemirror_ToolbarRow_2H40R
+  .prosemirror_CommandButton_1-R1U.DialogButton
+  .SVGIcon_Button.SVGIcon_TextItalic,
+.prosemirror_ToolbarRow_2H40R
+  .prosemirror_CommandButton_1-R1U.DialogButton
+  .SVGIcon_Button.SVGIcon_TextUnderline,
+.prosemirror_ToolbarRow_2H40R
+  .prosemirror_CommandButton_1-R1U.DialogButton
+  .SVGIcon_Button.SVGIcon_TextStrikethrough {
+  width: 18px;
+  height: 18px;
+}
+.prosemirror_ToolbarRow_2H40R
+  .prosemirror_CommandButton_1-R1U.DialogButton
+  .SVGIcon_Button.SVGIcon_SpellCheck {
+  width: 20px;
+  height: 20px;
+  margin-left: 1px;
+  margin-top: 1px;
+}
+.prosemirror_ToolbarRow_2H40R
+  .prosemirror_CommandButton_1-R1U.DialogButton
+  .SVGIcon_Button.SVGIcon_TextUnderline {
+  padding-bottom: 5px;
+}
+.prosemirror_ToolbarRow_2H40R
+  .prosemirror_CommandButton_1-R1U.prosemirror_Toggled_41y1p {
+  background: #626c7f;
+  color: #fff;
+}
+.prosemirror_ToolbarRow_2H40R .prosemirror_Gap_2BPaP {
+  width: 12px;
+}
+.prosemirror_ToolbarRow_2H40R .prosemirror_Spacer_2Zt31 {
+  flex: 1;
+}
+.prosemirror_ExpandButton_3454x svg {
+  width: 21px;
+  height: 21px;
+  padding-top: 6px;
+}
+.prosemirror_ExpandButton_3454x.prosemirror_Toggled_41y1p svg {
+  transform: rotate(180deg);
+  margin-top: 3px;
+  margin-right: 1px;
+}
+.pmhover_Hover_3tNcT {
+  position: absolute;
+  background: #ccc;
+  color: #000;
+  padding: 4px;
+}
+.pmhover_Link_ovQsF {
+  font-size: 12px;
+}
+.pmhover_LinkHelp_2Az4l {
+  font-size: 10px;
+  font-weight: italic;
+}
+.gamenotes_Page_ZUB8z {
+  display: flex;
+  flex-direction: row;
+  margin: 12px 2%;
+  min-height: 50vh;
+  max-height: 90vh;
+}
+.gamenotes_Page_ZUB8z .gamenotes_Content_1aZdz {
+  flex: 1;
+  display: flex;
+  min-width: 0;
+}
+.gamenotes_NotesPagedSettings_1dBCP {
+  flex: 1;
+  height: auto;
+}
+.gamenotes_NotesPagedSettings_1dBCP .DialogContentTransition {
+  width: auto;
+  max-width: none;
+}
+.gamenotes_NotesPagedSettings_1dBCP
+  .gamenotes_NotePage_2r0iB
+  > .DialogContent_InnerWidth {
+  max-width: none;
+  min-height: 0;
+}
+.gamenotes_NotesPagedSettings_1dBCP.gamenotes_PinnedView_3mIft
+  .DialogContentTransition {
+  background: none;
+}
+.gamenotes_NotesPagedSettings_1dBCP.gamenotes_PinnedView_3mIft .PageListColumn {
+  visibility: hidden;
+}
+.gamenotes_NotesPagedSettings_1dBCP.gamenotes_PinnedView_3mIft
+  .gamenotes_NotePage_2r0iB {
+  background: none;
+}
+.gamenotes_NotesPagedSettings_1dBCP.gamenotes_PinnedView_3mIft
+  .gamenotes_Toolbar_A6mhR,
+.gamenotes_NotesPagedSettings_1dBCP.gamenotes_PinnedView_3mIft
+  .gamenotes_NoteActions_3uGOy {
+  visibility: hidden;
+}
+.gamenotes_NotesPagedSettings_1dBCP.gamenotes_PinnedView_3mIft
+  .gamenotes_NoteEditorArea_3WOF4
+  .gamenotes_EditorInput_3zWun {
+  overflow: hidden;
+}
+.gamenotes_NotesPagedSettings_1dBCP .gamenotes_NewNoteButton_2J6kv {
+  width: 36px;
+  height: 36px;
+  margin: 0px 0px 10px 10px;
+  padding: 0px;
+}
+.BasicUI .gamenotes_NotesPagedSettings_1dBCP .gamenotes_NewNoteButton_2J6kv {
+  padding: 0px;
+  min-width: unset;
+  box-sizing: unset;
+  position: absolute !important;
+}
+.BasicUI
+  .gamenotes_NotesPagedSettings_1dBCP
+  .gamenotes_NewNoteButton_2J6kv.gpfocus {
+  color: #0e141b;
+}
+.BasicUI
+  .gamenotes_NotesPagedSettings_1dBCP
+  .gamenotes_NewNoteButton_2J6kv.gpfocus
+  svg {
+  fill: currentColor;
+  stroke: currentColor;
+  color: inherit;
+}
+.BasicUI
+  .gamenotes_NotesPagedSettings_1dBCP
+  .gamenotes_NewNoteButton_2J6kv.gpfocus
+  svg
+  path {
+  stroke: currentColor;
+}
+.BasicUI
+  .gamenotes_NotesPagedSettings_1dBCP
+  .gamenotes_NewNoteButton_2J6kv.gpfocus
+  svg
+  line,
+.BasicUI
+  .gamenotes_NotesPagedSettings_1dBCP
+  .gamenotes_NewNoteButton_2J6kv.gpfocus
+  svg
+  polygon {
+  stroke: currentColor;
+  fill: currentColor;
+}
+.gamenotes_NotesPagedSettings_1dBCP .gamenotes_NewNoteButton_2J6kv svg {
+  margin-bottom: 4px;
+}
+.gamenotes_NoteEditorArea_3WOF4 {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-height: 0;
+  min-width: 0;
+  margin: 0px 10px 25px 0px;
+  position: relative;
+  color: #c1c6cf;
+}
+.BasicUI .gamenotes_NoteEditorArea_3WOF4 {
+  min-height: 75vh;
+  max-height: 75vh;
+}
+.gamenotes_NoteEditorArea_3WOF4 .gamenotes_EditorInput_3zWun {
+  flex: 1;
+  overflow: auto;
+  min-height: 0;
+}
+.gamenotes_NoteEditorArea_3WOF4 .gamenotes_NoteActions_3uGOy {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  display: flex;
+  flex-direction: row;
+}
+.gamenotes_NoteEditorArea_3WOF4 .gamenotes_NoteActions_3uGOy .DialogButton {
+  width: 22px;
+  height: 30px;
+  padding: 8px 8px 0px 8px;
+  opacity: 0.5;
+}
+.gamenotes_NoteEditorArea_3WOF4
+  .gamenotes_NoteActions_3uGOy
+  .DialogButton:hover {
+  opacity: 0.8;
+}
+.BasicUI
+  .gamenotes_NoteEditorArea_3WOF4
+  .gamenotes_NoteActions_3uGOy
+  .DialogButton {
+  padding: 8px 8px 0px 8px;
+  min-width: unset;
+  box-sizing: unset;
+}
+.BasicUI
+  .gamenotes_NoteEditorArea_3WOF4
+  .gamenotes_NoteActions_3uGOy
+  .DialogButton.gpfocus {
+  color: #0e141b;
+}
+.BasicUI
+  .gamenotes_NoteEditorArea_3WOF4
+  .gamenotes_NoteActions_3uGOy
+  .DialogButton.gpfocus
+  svg {
+  fill: currentColor;
+  stroke: currentColor;
+  color: inherit;
+}
+.BasicUI
+  .gamenotes_NoteEditorArea_3WOF4
+  .gamenotes_NoteActions_3uGOy
+  .DialogButton.gpfocus
+  svg
+  path {
+  stroke: currentColor;
+}
+.BasicUI
+  .gamenotes_NoteEditorArea_3WOF4
+  .gamenotes_NoteActions_3uGOy
+  .DialogButton.gpfocus
+  svg
+  line,
+.BasicUI
+  .gamenotes_NoteEditorArea_3WOF4
+  .gamenotes_NoteActions_3uGOy
+  .DialogButton.gpfocus
+  svg
+  polygon {
+  stroke: currentColor;
+  fill: currentColor;
+}
+.gamenotes_NoteEditorArea_3WOF4
+  .gamenotes_NoteActions_3uGOy
+  .gamenotes_CloseWindowButton_G0Fgh {
+  margin-left: 8px;
+  width: fit-content;
+  padding: 0px 8px;
+  height: 38px;
+}
+.gamenotes_Toolbar_A6mhR {
+  padding: 12px 0;
+  -webkit-app-region: no-drag;
+  position: relative;
+  z-index: 3;
+}
+.gamenotes_EditorInput_3zWun {
+  background: #111;
+  box-shadow: inset 0 8px 6px -6px #000;
+  display: flex;
+  flex-direction: column;
+}
+.gamenotes_EditorInput_3zWun > .ProseMirror {
+  flex: 1;
+  min-height: 0;
+}
+.gamenotes_EditorInput_3zWun > .ProseMirror:focus-visible {
+  outline: none;
+}
+.gamenotes_EditorInput_3zWun a {
+  color: #aad8ec;
+  text-decoration: none;
+  border-bottom: 1px dotted rgba(109, 207, 246, 0.6);
+}
+.gamenotes_EditorInput_3zWun a:hover {
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 1px dotted rgba(176, 233, 255, 0.5);
+}
+.gamenotes_EditorInput_3zWun h1,
+.gamenotes_EditorInput_3zWun h2,
+.gamenotes_EditorInput_3zWun h3,
+.gamenotes_EditorInput_3zWun h4,
+.gamenotes_EditorInput_3zWun h5 {
+  margin: 0.5em 0;
+}
+.gamenotes_EditorInput_3zWun ul,
+.gamenotes_EditorInput_3zWun ol {
+  margin: 0.5em 0;
+}
+.gamenotes_EditorInput_3zWun li > p:first-of-type {
+  margin: 0;
+}
+.ModalDialogPopup
+  .gamenotespopups_GameNotesPopup_3hIt9.ModalDialogBody
+  .title-area {
+  height: 58px;
+}
+
+/*# sourceMappingURL=sourcemaps\css\gamenotes.css.map*/

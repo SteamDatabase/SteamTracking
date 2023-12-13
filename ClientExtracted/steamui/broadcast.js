@@ -87,11 +87,11 @@
           BroadcastEmbeddablePopoutHeader: () => ue,
           default: () => de,
         });
-      var r = a(70655),
+      var r = a(97582),
         n = a(9669),
         s = a.n(n),
         o = a(29323),
-        i = a(13271),
+        i = a(50242),
         l = a(67294),
         c = a(91148),
         d = a(52649),
@@ -122,7 +122,6 @@
             "div",
             { className: o },
             l.createElement(g.Throbber, { size: "medium" }),
-            ";",
           );
         if (2 == s || !n.GetName())
           return l.createElement("div", {
@@ -1306,11 +1305,11 @@
     79927: (e, t, a) => {
       "use strict";
       a.r(t), a.d(t, { default: () => S });
-      var r = a(70655),
+      var r = a(97582),
         n = a(67294),
         s = a(90437),
         o = a(29323),
-        i = a(22188),
+        i = a(68949),
         l = a(81761),
         c = a(92312),
         d = a(41353),
@@ -1325,6 +1324,7 @@
           super(e),
             (this.m_playerRef = n.createRef()),
             (this.m_hRegisterForGameActionStart = null),
+            (this.m_dispose = void 0),
             (this.m_hRegisterForGameActionStart =
               SteamClient.Apps.RegisterForGameActionStart(
                 this.onGameActionStart,
@@ -1339,16 +1339,15 @@
           this.RefreshAndSelectBroadcast();
         }
         RefreshAndSelectBroadcast() {
-          this.m_dispose ||
-            (this.m_dispose = (0, i.autorun)(() => {
-              let e =
-                  l.m.GetBroadcastList(this.props.overview.appid).broadcasts ||
-                  [],
-                t = this.state.broadcast;
-              t && (t = e.find((e) => e.unAccountId == t.unAccountId)),
-                !t && e.length > 0 && (t = e[0]),
-                this.state.broadcast != t && this.setState({ broadcast: t });
-            }));
+          if (this.m_dispose) return;
+          const e = this.props.overview.appid;
+          this.m_dispose = (0, i.autorun)(() => {
+            let t = l.m.GetBroadcastList(e).broadcasts || [],
+              a = this.state.broadcast;
+            a && (a = t.find((e) => e.unAccountId == a.unAccountId)),
+              !a && t.length > 0 && (a = t[0]),
+              this.state.broadcast != a && this.setState({ broadcast: a });
+          });
         }
         componentDidUpdate(e) {
           e.overview.appid != this.props.overview.appid &&

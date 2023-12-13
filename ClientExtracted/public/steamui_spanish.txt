@@ -3319,9 +3319,9 @@ Haz nuevos amigos en Steam enviando un regalo por correo electrónico a alguien 
 
 "Steam_SendGuestPass_RecipientQuestion$type=guestpass" "¿A quién te gustaría regalar un pase de invitado de '%package%'?"
 "SteamUI_Gift_RecipientName"		"Nombre del destinatario"
-"SteamUI_Gift_Message"				"Mensaje del regalo (máximo 160 caracteres)"
+"SteamUI_Gift_Message"				"Mensaje del regalo (máximo 160 caracteres)"
 "Steam_SendGuestPass_GiftRecipientName" 	"Nombre del destinatario"
-"Steam_SendGuestPass_GiftMessage" 	"Mensaje del regalo (máximo 160 caracteres)"
+"Steam_SendGuestPass_GiftMessage" 	"Mensaje del regalo (máximo 160 caracteres)"
 "Steam_SendGuestPass_GiftSentiment" 	"Saludo"
 "Steam_SendGuestPass_GiftSignature" 	"Firma"
 

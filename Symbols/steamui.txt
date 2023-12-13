@@ -193,7 +193,6 @@
  Coroutine_IsAddressInOurStack
  Coroutine_YieldToMain
  CreateAudioResampler
- CreateVideoPlayer
  D ASWAVCaptureCodecFactory::defaultCodecType
  D pcre_free
  D pcre_malloc
@@ -249,7 +248,6 @@
  DebugStatsSystem
  DeclareCurrentThreadIsMainThread
  DeleteAudioResampler
- DeleteVideoPlayer
  Error
  FSCreateFileUnicode
  FSEventStreamCreate
@@ -1375,7 +1373,6 @@
  VProfInternalGetProfileForCurrentThread
  V_AppendParamToURL
  V_AppendSlash
- V_BasicHtmlEntityEncode
  V_ComposeFileName
  V_CopyAndFixSlashes
  V_EscapeShellArgumentAndAppend(CUtlStringBuilder*, char const*, bool)
@@ -1386,7 +1383,6 @@
  V_FixDoubleSlashes
  V_FixSlashes
  V_GetFileExtension
- V_HtmlEntityDecodeToUTF8
  V_IsAbsolutePath
  V_IsSteamCloseProtocol
  V_IsValidURLCharacter
@@ -1408,7 +1404,6 @@
  V_StrSubst
  V_StrSubstInPlace
  V_StrTrim
- V_StripAndPreserveHTMLCore
  V_StripExtension
  V_StripFilename
  V_StripLastDir
@@ -1429,11 +1424,7 @@
  V_UTF8ToUChar32
  V_UTF8ToUTF16
  V_UTF8ToUTF32
- V_UnicodeAdvance(char*, int)
  V_UnicodeCaseConvert(CUtlString&, int, EStringConvertErrorPolicy)
- V_UnicodeCaseConvert(wchar_t const*, wchar_t*, int, int, EStringConvertErrorPolicy)
- V_UnicodeLength(char const*)
- V_UnicodeLength(wchar_t const*)
  V_UnicodeValidate(char const*)
  V_UnqualifiedFileName
  V_WcsSkipArticles
@@ -1443,13 +1434,9 @@
  V_binarytohex
  V_hextobinary
  V_isbreakablewspace
- V_isbreakablewspace32
  V_isnumeric
- V_isvalidhex
- V_iswalpha32
  V_memcpy_nocache
  V_pretifymem
- V_pretifynum
  V_snprintf
  V_strcat
  V_strcmp_prefix
@@ -1512,7 +1499,6 @@
  __memcpy_chk
  __memmove_chk
  __memset_chk
- __sincosf_stret
  __sprintf_chk
  __stack_chk_fail
  __stack_chk_guard
@@ -1535,7 +1521,6 @@
  _tlv_bootstrap
  abort
  accept
- acosf
  aesni_cbc_encrypt
  aesni_cbc_sha1_enc
  aesni_cbc_sha256_enc
@@ -1556,8 +1541,6 @@
  aesni_xts_encrypt
  alphasort$INODE64
  atan2
- atan2f
- atanf
  atexit
  atof
  atoi
@@ -1873,7 +1856,6 @@
  popen
  posix_memalign
  pow
- powf
  pread
  printf
  pthread_atfork
@@ -1971,8 +1953,6 @@
  shutdown
  sigaction
  signal
- sin
- sinf
  snprintf
  socket
  sprintf
@@ -2084,7 +2064,6 @@
  truncf
  typeinfo for SteamThreadTools::CThread
  typeinfo for bool
- typeinfo for bool*
  typeinfo for char
  typeinfo for double
  typeinfo for float
@@ -2100,52 +2079,11 @@
  typeinfo for unsigned char
  typeinfo for unsigned int
  typeinfo for unsigned long long
- typeinfo for void*
  umask
  unlink
  unsetenv
  usleep
  utime
- v8::Array::Length() const
- v8::Array::New(v8::Isolate*, int)
- v8::Boolean::Value() const
- v8::External::New(v8::Isolate*, void*)
- v8::External::Value() const
- v8::Function::GetName() const
- v8::FunctionTemplate::New(v8::Isolate*, void (*)(v8::FunctionCallbackInfo<v8::Value> const&), v8::Handle<v8::Value>, v8::Handle<v8::Signature>, int)
- v8::HandleScope::CreateHandle(v8::internal::HeapObject*, v8::internal::Object*)
- v8::HandleScope::CreateHandle(v8::internal::Isolate*, v8::internal::Object*)
- v8::HandleScope::HandleScope(v8::Isolate*)
- v8::HandleScope::~HandleScope()
- v8::Isolate::Enter()
- v8::Isolate::Exit()
- v8::Isolate::GetCurrentContext()
- v8::Isolate::ThrowException(v8::Local<v8::Value>)
- v8::Number::New(v8::Isolate*, double)
- v8::Number::Value() const
- v8::Object::Get(unsigned int)
- v8::Object::InternalFieldCount()
- v8::Object::New(v8::Isolate*)
- v8::Object::Set(unsigned int, v8::Handle<v8::Value>)
- v8::Object::Set(v8::Handle<v8::Value>, v8::Handle<v8::Value>)
- v8::Object::SlowGetInternalField(int)
- v8::ObjectTemplate::SetAccessor(v8::Handle<v8::String>, void (*)(v8::Local<v8::String>, v8::PropertyCallbackInfo<v8::Value> const&), void (*)(v8::Local<v8::String>, v8::Local<v8::Value>, v8::PropertyCallbackInfo<void> const&), v8::Handle<v8::Value>, v8::AccessControl, v8::PropertyAttribute, v8::Handle<v8::AccessorSignature>)
- v8::String::NewFromUtf8(v8::Isolate*, char const*, v8::String::NewStringType, int)
- v8::String::Utf8Value::Utf8Value(v8::Handle<v8::Value>)
- v8::String::Utf8Value::~Utf8Value()
- v8::Template::Set(v8::Handle<v8::Name>, v8::Handle<v8::Data>, v8::PropertyAttribute)
- v8::TryCatch::HasCaught() const
- v8::TryCatch::TryCatch()
- v8::TryCatch::~TryCatch()
- v8::Value::BooleanValue() const
- v8::Value::IsBoolean() const
- v8::Value::IsNumber() const
- v8::Value::IsObject() const
- v8::Value::NumberValue() const
- v8::Value::ToBoolean() const
- v8::Value::ToNumber() const
- v8::Value::ToObject() const
- v8::Value::ToString() const
  vDSP_vadd
  vDSP_vclip
  vDSP_vsadd

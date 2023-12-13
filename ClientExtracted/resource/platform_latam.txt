@@ -10,7 +10,7 @@
 "App_Browser"	"Navegador web"
 "Admin_Servers" 	"Mis servidores"
 "App_Account"	"Cuenta"
-"App_Settings"	"Parámetros"
+"App_Settings"	"Configuraciones"
 "App_Monitor"	"Monitor"
 "App_News"		"Noticias"
 

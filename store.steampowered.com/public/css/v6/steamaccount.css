@@ -216,7 +216,7 @@
 }
 .currency_change_option .notes {
 	font-size: 13px;
-	line-height: 18px;
+	/* line-height: 18px; */
 }
 
 .currency_change_option_ctn > p {
@@ -317,11 +317,35 @@ p.currency_change_confirm_dialog_footer {
 	font-size: 14px;
 	display: block;
 }
+
 .two_column .nav_item.active {
-	background-color: rgba( 255, 255, 255, 0.12 );
+	background: linear-gradient(to right, #223D5A, transparent);
+	position: relative;
+
+	&::after { 
+		content: '';
+		position: absolute;
+		background: #1a9fff;
+		width: 2px;
+		height: 100%;
+		left: 0;
+		top: 0;
+		}
 }
+
 .two_column .nav_item:hover {
-	background-color: rgba( 255, 255, 255, 0.3 );
+	background: linear-gradient(to right, #315780, transparent);
+	position: relative;
+
+	&::after { 
+		content: '';
+		position: absolute;
+		background: #1a9fff;
+		width: 2px;
+		height: 100%;
+		left: 0;
+		top: 0;
+		}
 }
 
 @media screen and (max-width: 910px)
@@ -386,7 +410,7 @@ p.currency_change_confirm_dialog_footer {
 	margin-bottom: 15px;
 	padding: 8px 25px 25px 25px;
 	font-size: 14px;
-	line-height: 18px;
+	/* line-height: 18px; */
 }
 
 body.v6 .account_settings_container h2 {
@@ -897,7 +921,7 @@ body.v6 h2.pageheader.youraccount_pageheader {
 
 .orderdetails_shippingaddress {
 	font-size: 14px;
-	line-height: 18px;
+	/* line-height: 18px; */
 	color: rgb( 198, 201, 205 );
 }
 

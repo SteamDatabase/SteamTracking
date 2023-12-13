@@ -699,7 +699,7 @@
     "Friend_Invites_FailedToDecline_Plural": "%1$s invitații nu au putut fi ignorate.",
     "Friend_Invites_ViewMutual": "Vezi prietenii comuni",
     "Friend_Invites_MutualFriends": "Prieteni comuni",
-    "Friend_InviteSent": "Invitația de prietenie a fost trimisă. Persoana va apărea ca prieten de îndată ce îți acceptă invitația.",
+    "Friend_InviteSent": "Cererea de prietenie a fost trimisă. Persoana va apărea ca prieten de îndată ce îți acceptă cererea.",
     "Friend_MutualInviteSent": "%1$s a fost adăugat în lista ta de prieteni.",
     "Friend_InviteError": "A apărut o eroare la adăugarea utilizatorului %1$s în lista ta de prieteni.",
     "Friend_Block_Confirm": "Sigur vrei să blochezi orice fel de comunicație cu %1$s? Nu vei mai putea să trimiți sau să primești mesaje directe, nu vei primi notificări despre mesajele sau apelurile primite și nici nu vei vedea mesajele postate în camerele de chat de la acea persoană.",

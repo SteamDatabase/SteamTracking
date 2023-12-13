@@ -762,7 +762,7 @@
 "Steam_Settings_Broadcast_Disabled_User" "Ο λογαριασμός σας δεν έχει επαρκή δικαιώματα για να μεταδίδει ζωντανά."
 "Steam_Settings_Broadcast_Disabled_System_Windows_Compat_Enabled" "Το Steam αδυνατεί να εκκινήσει τη Μετάδοση σε αυτό το μηχάνημα.\n\nΤα Windows εκτελούν αυτήν τη στιγμή το Steam σε λειτουργία συμβατότητας των Windows, η οποία μπορεί να αποτρέψει τη Μετάδοση Steam από το να λειτουργεί σωστά. Αν αυτό το μηχάνημα είναι Windows 7 ή νεότερης έκδοσης, ακολουθήστε τη σελίδα υποστήριξης παρακάτω για να καταργήσετε τη λειτουργία συμβατότητας."
 "Steam_Settings_Broadcast_WindowsCompatSupportURL" "https://support.steampowered.com/kb_article.php?ref=7153-AHJV-4256"
-"Steam_Settings_Broadcast_WindowsCompatSupportText" "Πώς απενεργοποιώ τη λειτουργία συμβατότητας;"
+"Steam_Settings_Broadcast_WindowsCompatSupportText" "Πώς μπορώ να απενεργοποιήσω τη λειτουργία συμβατότητας;"
 "Steam_Settings_Broadcast_RequiresRestart" "* Απαιτείται επανεκκίνηση του παιχνιδιού πριν την εφαρμογή"
 
 "Broadcast_RecordingError_NoAudio" "Το Steam δεν ήταν δυνατό να καταγράψει ήχο για αυτή τη μετάδοση"

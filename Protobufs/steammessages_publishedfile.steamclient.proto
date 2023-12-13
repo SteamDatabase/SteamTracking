@@ -243,6 +243,7 @@ message PublishedFileDetails {
 	repeated .PublishedFileDetails.Reaction reactions = 70 [(description) = "Reactions to this item"];
 	optional .EBanContentCheckResult ban_text_check_result = 71 [default = k_EBanContentCheckResult_NotScanned];
 	optional float search_score = 73 [(description) = "Search score, admin only"];
+	optional uint64 external_asset_id = 74 [(description) = "Used to store the clip ID for SteamShare recordings (and maybe other things)"];
 }
 
 message CPublishedFile_GetDetails_Response {

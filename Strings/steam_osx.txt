@@ -7,6 +7,7 @@ __TEXT
 __text
 __TEXT
 P
+rp4
 P
 __stubs
 __TEXT
@@ -17,17 +18,17 @@ __const
 __TEXT
 __objc_methname
 __TEXT
-D:
+E:
 :
-D:
+E:
 __objc_classname__TEXT
-:N:
-:N:
+:O:
+:O:
 __objc_methtype
 __TEXT
-YN:
+YO:
 0
-YN:
+YO:
 __cstring
 __TEXT
 __unwind_info
@@ -68,15 +69,11 @@ __DATA
 0
 __thread_data
 __DATA
-IC
 @
-IC
 __thread_bss
 __DATA
-@IC
 __bss
 __DATA
-@MC
 __common
 __DATA
 H
@@ -122,23 +119,28 @@ h
 /usr/lib/libobjc.A.dylib
 &
 )
+v4
+RB
 )
-[4
 0
+-4
+EG
 9
+cG
 0
 @
 @
 4
-4
-}9
-m9
+~9
+x*
+n9
 @
 @
 @
 @
-j9
-g9
+VB
+k9
+h9
 $
 Hi
 Hi
@@ -146,38 +148,29 @@ Hi
 Q(
 r)
 >
-z3
 (
 (
 (
 (
 (
 (
-9
 B
 B
-9
 9
 )
 
 %
-3
 )
 )
 )
 )
 n'
-()
 4
 (
 ;
 
 0
 5
-8
-(
-(
-c<
 
 0
 '
@@ -196,9 +189,7 @@ D
 7
 7
 7
-7
-7
-7
+1
 1
 @
 Hc
@@ -232,7 +223,8 @@ IcE
 @
 @
 ;
-V0
+W0
+C6
 NSt3__117bad_function_callE
 15CBaseFileSystem
 11IFileSystem
@@ -2398,7 +2390,7 @@ ReLaunchCmdLine
 ClientLauncherType
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlqueue.h
 IsValidIndex( idx )
-Startup - updater built Dec  7 2023 16:34:19
+Startup - updater built Dec 12 2023 11:29:29
 Startup - Steam Client launched with: %s
 Shutdown
 no hosts found
@@ -2689,8 +2681,8 @@ m_iRefs >= 0 && m_iRefs < 0x0ffffff
 #SteamBootstrapper_UpdatingSteam
 Updating Steam...
 Tahoma
-Dec  7 2023
-16:34:19
+Dec 12 2023
+11:29:30
 crashhandler004
 steam
 Steam Executable Crash
@@ -2787,7 +2779,7 @@ China
 %s/%s%s
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamexe/updateui.h
 ThreadInMainThread()
-16:34:18
+11:29:28
 [%3d%%] %s
 [----] %s
 [%3d%%] !!! Fatal Error: %s
@@ -10910,7 +10902,7 @@ steamwebhelper
 Steam Helper
 cefwebhelper
 1.0
-16:32:09
+11:27:18
 Jan
 Feb
 Mar
@@ -10951,7 +10943,9 @@ USER
 pszName == NULL || *pszName == '/' || (isalpha((unsigned char) *pszName) && pszName[1] == ':' && pszName[2] == '/')
 POSIX does not support inheriting full mutexes
 Anonymous mutex cannot have bAllAccess == true
-Out of thread local storage!
+tid(%u) pthread_key_create failed: %s
+tid(%u) burning pthread_key_t == 0 so we never use it
+Bad thread local
 Illegal termination of worker thread '%s'
 Deleting thread object from the thread, this is bad
 Thread(0x%p/0x%p/0x%x)
@@ -11336,6 +11330,8 @@ Insufficient battery charge
 Charger required
 Cached credential is invalid
 Phone number is Voice Over IP
+The data being accessed is not supported by this API
+Maximum family size exceeded
 linux32
 Invalid
 Public
@@ -11700,6 +11696,7 @@ sending
 sending request
 Reusing HTTP connection (%p) for %s
 Queueing request for http%s://%s%s, %d already in queue
+HTTPClient has too many reqs already queued waiting for connection to address %s! DispatchRequest - %p as failure early.
 m_MapHostsToPersistentConnections has NULL entry!
 Queueing request for http%s://%s%s, %d already in queue, we are still discovering HTTP/2 support
 Need new HTTP connection (%p) for %s (%s)
@@ -12278,6 +12275,8 @@ k_EMsgClientStartPeerContentServer
 k_EMsgClientStartPeerContentServerResponse
 k_EMsgClientGetPeerContentInfo
 k_EMsgClientGetPeerContentInfoResponse
+k_EMsgClientPendingGameLaunch
+k_EMsgClientPendingGameLaunchResponse
 k_EMsgChannelEncryptRequest
 k_EMsgChannelEncryptResponse
 k_EMsgFileXferRequest
@@ -13356,29 +13355,34 @@ out of memory
 n <= (size_t)INT_MAX
 file_ofs == pFile->GetBytesWritten()
 
-3v:
-Ev:
+3w:
+Ew:
 
-VA=
+VB=
 0
-P=
+Q=
+v4
+RB
 )
-[4
 0
+-4
+EG
 9
+cG
 0
 @
 @
 4
-4
-}9
-m9
+~9
+x*
+n9
 @
 @
 @
 @
-j9
-g9
+VB
+k9
+h9
 $
 Hi
 Hi
@@ -13386,38 +13390,29 @@ Hi
 Q(
 r)
 >
-z3
 (
 (
 (
 (
 (
 (
-9
 B
 B
-9
 9
 )
 
 %
-3
 )
 )
 )
 )
 n'
-()
 4
 (
 ;
 
 0
 5
-8
-(
-(
-c<
 
 0
 '
@@ -13436,9 +13431,7 @@ D
 7
 7
 7
-7
-7
-7
+1
 1
 @
 Hc
@@ -13472,15 +13465,16 @@ IcE
 @
 @
 ;
-V0
-0
+W0
+C6
 6
 6
 6
 V
-:
 =
-I/
+J/
+/
+/
 /
 /
 /
@@ -13489,36 +13483,47 @@ I/
 5
 5
 =
-n.
-6.
+o.
+p4
+4
+7.
+G4
 .
 .
 .
-.
-.
-.
-/
+e3
 !
 -
 -
 -
--
--
+*
+7
+':
 @
 &
+G1
++
++
 +
 1
 1
 1
 1
-1
-7*
+,
+8*
+*
+*
+*
 2
 4
 4
-K)
-7)
-2
+L)
+8)
+)
+)
+)
+)
+)
 )
 @
 M9e
@@ -13537,7 +13542,6 @@ M9e
 ?
 :
 ?
-(
 ?
 ?
 
@@ -13547,13 +13551,10 @@ AESNI-CBC+SHA256 stitch for x86_64, CRYPTOGAMS by <appro@openssl.org>
 @
 AES for Intel AES-NI, CRYPTOGAMS by <appro@openssl.org>
 @
-j1
 %
-6-
 `
 `
 @
--
 -
 -
 j
@@ -13562,6 +13563,7 @@ Pj
 ARj
 j
 0
+&
 0
 IcU
 E;e
@@ -13572,7 +13574,8 @@ M)u
 =
 
 
->+
+a+
+u&
 =
 %
 =
@@ -13866,6 +13869,7 @@ OO
 expand 32-byte k
 ChaCha20 for x86_64, CRYPTOGAMS by <appro@openssl.org>
 @
+4
 =
 @
 
@@ -13873,29 +13877,32 @@ ChaCha20 for x86_64, CRYPTOGAMS by <appro@openssl.org>
 @
 @
 0
+
+
+
+#
+)-
+'-
 H=
 Ic]
 j
 j
 j
 j
-)
-)
-)
 j
 j
 
-%'
+d'
 t$I;M
-'
+X"
 )
 e
 W
 ,7~5d
-#]j/
+#}q/
+#=j/
 H
 0
-"
 "
 
 
@@ -13914,6 +13921,8 @@ AES-NI GCM module for x86_64, CRYPTOGAMS by <appro@openssl.org>
 @8
 `$
 '
+'
+'
 @
 ,
 *
@@ -13927,6 +13936,7 @@ $
 N
 N
 N
+'+
 rc4(8x,int)
 rc4(8x,char)
 rc4(16x,int)
@@ -14092,7 +14102,6 @@ H=LA
 |q=
 | =
 
-
 |O=
 | =
 |"=
@@ -14173,6 +14182,7 @@ H=
 @
 @
 S
+w
 @
 @
 @
@@ -14188,6 +14198,7 @@ S
 8
 @
 @
+
 0
 0
 0
@@ -14198,14 +14209,14 @@ S
 H=
 0
 &
-4
+5
 E
-
 0
 Hi
 E
 0
 0
+m
 
 
 0
@@ -14225,6 +14236,7 @@ j
 @
 @
 @
+6
 0
 0
 Hc
@@ -14234,8 +14246,6 @@ J
 @
 &
 %
-E
-8
 @
 =h2
 P
@@ -14255,7 +14265,7 @@ P
 =a
 0
 Hi
-J
+P
 $
 $
 $

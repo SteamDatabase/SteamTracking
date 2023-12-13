@@ -110,7 +110,7 @@ h
 8
 /usr/lib/libobjc.A.dylib
 &
-(
+0
 )
 NSt3__117bad_function_callE
 10CUtlVectorIN12CFontAmalgam10TFontRangeE10CUtlMemoryIS1_EE
@@ -1473,7 +1473,7 @@ steamlink
 open
 steam://exit
 WindowsEndSession
-defaultdialog
+com.valvesoftware.steam.ActivateWebhelperDefaultDialog
 com.valvesoftware.steam.HideWebhelper
 steam://open/about
 steam://settings
@@ -1498,6 +1498,8 @@ IsPointInCaptureRegion
 !"Implement me"
 DeviceChange
 com.valvesoftware.steam.ActivateSteam
+com.valvesoftware.steam.ActivateSteamDefaultDialog
+defaultdialog
 com.valvesoftware.steam.HideSteam
 template <class T> CBaseOSXSurface<T>::RunFrame - nextEvent
 template <class T> CBaseOSXSurface<T> - Viewability Check
@@ -2259,8 +2261,10 @@ Seconds
 %sTomorrow
 )
 
+6
 %
 %
+2
 !
 
 
@@ -2276,6 +2280,7 @@ A;E
 0
 
 
+;
 PPj
 `
 `

@@ -155,6 +155,8 @@
  strchr
  strcmp
  strcpy
+ strerror
+ strerror$UNIX2003
  strlen
  strncasecmp
  strncat

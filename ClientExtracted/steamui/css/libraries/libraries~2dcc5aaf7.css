@@ -31155,22 +31155,28 @@ html.web_chat_frame .perf_timing_area {
   display: block;
 }
 .addFriendButton .SVGIcon_AddFriend .plusCircle {
-  fill: #b7ccd5;
+  color: #b7ccd5;
   transition:
-    fill 0.21s ease-in-out,
+    color 0.21s ease-in-out,
     transform 0.21s ease-in-out;
 }
 .friendRequestButton .SVGIcon_FriendRequest .friendBodyFull,
 .friendRequestButton .SVGIcon_FriendRequest .friendHead,
 .friendRequestButton .SVGIcon_FriendRequest .friendArm,
-.friendRequestButton .SVGIcon_FriendRequest .friendBody,
-.addFriendButton .SVGIcon_AddFriend .friendHead,
-.addFriendButton .SVGIcon_AddFriend .friendBody {
+.friendRequestButton .SVGIcon_FriendRequest .friendBody {
   fill: #788a92;
   transition: fill 0.21s ease-in-out;
 }
-.friendRequestButton:hover .SVGIcon_FriendRequest .redCircle,
+.addFriendButton .SVGIcon_AddFriend .friendHead,
+.addFriendButton .SVGIcon_AddFriend .friendBody {
+  color: #788a92;
+  transition: color 0.21s ease-in-out;
+}
 .addFriendButton:hover .SVGIcon_AddFriend .plusCircle {
+  color: #fff;
+  transform: translateX(12px);
+}
+.friendRequestButton:hover .SVGIcon_FriendRequest .redCircle {
   fill: #fff;
   transform: translateX(12px);
 }
@@ -31205,10 +31211,12 @@ html.web_chat_frame .perf_timing_area {
 .friendRequestButton:hover .SVGIcon_FriendRequest .friendHead,
 .friendRequestButton:hover .SVGIcon_FriendRequest .friendArm,
 .friendRequestButton:hover .SVGIcon_FriendRequest .friendBody,
-.friendRequestButton:hover .SVGIcon_FriendRequest .friendBodyFull,
+.friendRequestButton:hover .SVGIcon_FriendRequest .friendBodyFull {
+  fill: #aac2cc;
+}
 .addFriendButton:hover .SVGIcon_AddFriend .friendHead,
 .addFriendButton:hover .SVGIcon_AddFriend .friendBody {
-  fill: #aac2cc;
+  color: #aac2cc;
 }
 .friendRequestButton:hover:not(.friendRequestViewActive)
   .SVGIcon_FriendRequest

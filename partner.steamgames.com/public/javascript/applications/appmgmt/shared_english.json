@@ -2821,6 +2821,8 @@
     "FamilyManagement_Role_0": "Unknown",
     "FamilyManagement_Role_1": "Adult",
     "FamilyManagement_Role_2": "Child",
+    "FamilyManagement_Me": "Me",
+    "FamilyManagement_YourFamily": "Your family",
     "FamilyManagement_ErrorInternalServerError": "Internal server error.",
     "FamilyManagement_ErrorNoMatch": "This family does not exist.",
     "FamilyManagement_AccessDenied": "You do not have permission to perform this action.",
@@ -2857,5 +2859,12 @@
     "FamilyManagement_ErrorCancelPurchaseRequest": "Failed to cancel the request. %1$s",
     "FamilyManagement_ErrorLoadShoppingCart": "Failed to load the shopping cart. %1$s",
     "RequestPurchase_GenericError": "Error requesting purchase. %1$s",
+    "KioskMode_Dialog_Title": "Kiosk Mode",
+    "KioskMode_UnlockDialog_Description": "Enter your PIN below to exit Kiosk Mode.",
+    "KioskMode_LockDialog_Description": "Please confirm you'd like to return to Kiosk Mode.",
+    "KioskMode_Unlock_Tooltip": "Exit Kiosk Mode",
+    "KioskMode_Lock_Tooltip": "Enter Kiosk Mode",
+    "RemotePlay_StoreFunctionalityBlocked_Title": "Store Not Available",
+    "RemotePlay_StoreFunctionalityBlocked_Description": "Access to the store is unavailable while running through this Steam Link client.",
     "shared_dummy": "dont translate"
 }

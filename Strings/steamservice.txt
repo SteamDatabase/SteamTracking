@@ -7,11 +7,13 @@ __TEXT
 @
 __stubs
 __TEXT
+r)%
+r)%
 __stub_helper
 __TEXT
+\/%
+\/%
 __gcc_except_tab__TEXT
-t8%
-t8%
 __const
 __TEXT
 __cstring
@@ -96,24 +98,20 @@ x*
 )
 0
 0
-!
-n)
 Hi
+2#
 H=
-N%
-I%
-H%
-6%
+#
+A%
+f
 )
 )
 )
 ,
-2$
+d
 Hc
 Hc
-$
 Hc
-$
 $
 0
 0
@@ -125,9 +123,7 @@ AT=
 D
 @
 @
-H(
-(
-(
+)(
 (
 (
 (
@@ -165,11 +161,12 @@ IcE
 @
 ]
 V
-"
+*
 "
 =
-n!
-)
+k!
+%)
+6&
 &
 &
 =
@@ -8784,8 +8781,8 @@ steamwebhelper
 Steam Helper
 cefwebhelper
 1.0
-Dec  7 2023
-16:32:09
+Dec 12 2023
+11:27:18
 Jan
 Feb
 Mar
@@ -8819,7 +8816,9 @@ USER
 pszName == NULL || *pszName == '/' || (isalpha((unsigned char) *pszName) && pszName[1] == ':' && pszName[2] == '/')
 POSIX does not support inheriting full mutexes
 Anonymous mutex cannot have bAllAccess == true
-Out of thread local storage!
+tid(%u) pthread_key_create failed: %s
+tid(%u) burning pthread_key_t == 0 so we never use it
+Bad thread local
 Illegal termination of worker thread '%s'
 Deleting thread object from the thread, this is bad
 Thread(0x%p/0x%p/0x%x)
@@ -9394,24 +9393,20 @@ m_cCurrentDepth > 0
 %s%s%s
 0
 0
-!
-n)
 Hi
+2#
 H=
-N%
-I%
-H%
-6%
+#
+A%
+f
 )
 )
 )
 ,
-2$
+d
 Hc
 Hc
-$
 Hc
-$
 $
 0
 0
@@ -9423,9 +9418,7 @@ AT=
 D
 @
 @
-H(
-(
-(
+)(
 (
 (
 (
@@ -9463,44 +9456,47 @@ IcE
 @
 ]
 V
-"
+*
 "
 =
-n!
-)
+k!
+%)
+6&
 &
 &
 =
 +
-,
-(
-'
+:%
+%%
 !
-3$
 '
 '
-)$
+'
 $
 $
 '
 @
+P&
+#
+#
 #
 &
 #
 #
+_"
 "
 "
 "
 "
-"
-a!
-x#
-#
+'$
+6!
+!
 #
 @
 M9e
 @
 @
+I"
 ?
 ?
 ?
@@ -9522,6 +9518,7 @@ AESNI-CBC+SHA256 stitch for x86_64, CRYPTOGAMS by <appro@openssl.org>
 @
 @
 AES for Intel AES-NI, CRYPTOGAMS by <appro@openssl.org>
+!
 !
 !
 
@@ -9828,7 +9825,6 @@ OO
 expand 32-byte k
 ChaCha20 for x86_64, CRYPTOGAMS by <appro@openssl.org>
 @
-i
 =
 @
 
@@ -9836,6 +9832,7 @@ i
 @
 @
 0
+!
 H=
 Ic]
 j
@@ -9895,7 +9892,6 @@ SHA1 block transform for x86_64, CRYPTOGAMS by <appro@openssl.org>
 0
 @
 @
-t
 @
 d
 
@@ -9937,6 +9933,7 @@ Ic
 =*.*
 @
 @
+0
 Q
 @
 @
@@ -9958,8 +9955,6 @@ Q
 0
 0
 H=
-b
-a
 0
 &
 @
@@ -9967,15 +9962,13 @@ a
 @
 @
 0
+
 Hi
 E
 0
-0
 Hc
 Hc
 Hc
-_
-
 0
 0
 @
@@ -9989,6 +9982,6 @@ _
 @
 @
 @
+b
 +
 Hi
-#

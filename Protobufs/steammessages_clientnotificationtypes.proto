@@ -51,6 +51,7 @@ enum EClientNotificationType {
 	k_EClientNotificationType_FamilyPurchaseRequest = 46;
 	k_EClientNotificationType_FamilyPurchaseRequestResponse = 47;
 	k_EClientNotificationType_ParentalFeatureRequest = 48;
+	k_EClientNotificationType_ParentalPlaytimeRequest = 49;
 }
 
 enum ESystemUpdateNotificationType {

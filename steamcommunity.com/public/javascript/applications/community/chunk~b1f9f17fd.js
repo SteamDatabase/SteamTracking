@@ -4719,7 +4719,7 @@
         i = a(89526),
         r = a(74802),
         o = a(59983),
-        l = a(45475),
+        l = a(46486),
         s = a(98889),
         c = a(17547),
         d = a(71161),
@@ -4839,7 +4839,7 @@
     },
     87345: (e, t, a) => {
       "use strict";
-      a.d(t, { CZ: () => Vr, oS: () => Hr, WE: () => Wr });
+      a.d(t, { CZ: () => Ur, oS: () => Vr, WE: () => qr });
       var n = a(89526),
         i = a(59934),
         r = a(40442),
@@ -7310,7 +7310,7 @@
         return "unknown";
       }
       var we = a(81245);
-      var Te = a(51441),
+      var Te = a(43840),
         Ie = a(42317),
         Ae = a(39073);
       const ke = 4,
@@ -13083,7 +13083,7 @@
       var Vn = a(16182),
         Un = a(75687),
         zn = a(52002),
-        Zn = a(45475),
+        Zn = a(46486),
         Wn = a(1063);
       class qn {
         constructor() {
@@ -17169,7 +17169,8 @@
           { enabled: !!w.L7.accountid },
         );
       }
-      function Xr(e) {
+      var Xr = a(25817);
+      function jr(e) {
         var t, a;
         const { section: i, language: r, event: o, bIsPreview: s } = e,
           c = (0, n.useMemo)(() => {
@@ -17231,7 +17232,7 @@
                     ? void 0
                     : a.map((t) =>
                         n.createElement(
-                          jr,
+                          Hr,
                           Object.assign({ key: "supply" + t.unique_id }, e, {
                             supplyInfo: t,
                           }),
@@ -17258,7 +17259,7 @@
           ),
         );
       }
-      function jr(e) {
+      function Hr(e) {
         const { supplyInfo: t, language: a, event: i, bIsPreview: r } = e,
           o = (0, dt.Jv)(t.supply_package),
           l = N.LJ.GetELanguageFallback(a),
@@ -17322,9 +17323,7 @@
                     },
                     (0, N.Xx)("#Sale_Reservation_ExpectedDeliveryDate"),
                   ),
-                  Boolean(o.high_pending_orders)
-                    ? (0, N.Xx)("#delayed_shipping_description3_short")
-                    : (0, N.Xx)("#standard_shipping_estimate3_short"),
+                  (0, Xr.B)(o),
                 ),
             )
           : n.createElement(D.V, {
@@ -17333,7 +17332,7 @@
               size: "medium",
             });
       }
-      function Hr(e) {
+      function Vr(e) {
         var t;
         const {
             promotionName: a,
@@ -17446,14 +17445,14 @@
                     style: { marginTop: `${p || 0}px` },
                   },
                   n.createElement(ca, { eventModel: i, language: o }),
-                  n.createElement(Wr, {
+                  n.createElement(qr, {
                     rgPresenters: i.jsondata.sale_presenters,
                   }),
                   n.createElement(et.vC, {
                     event: i,
                     broadcastEmbedContext: e,
                   }),
-                  n.createElement(Ur, {
+                  n.createElement(zr, {
                     bIsPreview: r,
                     event: i,
                     language: o,
@@ -17483,7 +17482,7 @@
           }),
         );
       }
-      function Vr(e) {
+      function Ur(e) {
         var t, a;
         const { event: i, section: r, activeTab: o, language: l } = e,
           s = (0, w.id)();
@@ -17590,7 +17589,7 @@
                 case "reservation_widget":
                   return n.createElement(yt, Object.assign({}, e));
                 case "while_supplies_last":
-                  return n.createElement(Xr, Object.assign({}, e));
+                  return n.createElement(jr, Object.assign({}, e));
                 case "cyoa_story":
                   return n.createElement(rr, Object.assign({}, e));
                 case "greatondeck_librarygrid":
@@ -17736,7 +17735,7 @@
         }
         return null;
       }
-      const Ur = (0, i.EN)(function (e) {
+      const zr = (0, i.EN)(function (e) {
         const { event: t, language: a, nSaleDayIndex: r } = e,
           [d, m] = n.useState((0, l._)()),
           u = n.useMemo(() => new sr(), []),
@@ -17850,7 +17849,7 @@
               f.push({ activeTab: e, elements: [] });
             }
             T = n.createElement(
-              Vr,
+              Ur,
               Object.assign({}, e, {
                 section: i,
                 activeTab: t,
@@ -17869,7 +17868,7 @@
               qe.SV,
               { key: "SaleSectionIndex_" + i.unique_id + "_" + r },
               n.createElement(
-                zr,
+                Zr,
                 {
                   visibility_by_door_index_state:
                     i.visibility_by_door_index_state,
@@ -17918,7 +17917,7 @@
           D,
         );
       });
-      function zr(e) {
+      function Zr(e) {
         const {
           visibility_by_door_index_state: t,
           door_index_visibility: a,
@@ -17926,13 +17925,13 @@
         } = e;
         return t
           ? n.createElement(
-              Zr,
+              Wr,
               { visibility_by_door_index_state: t, door_index_visibility: a },
               i,
             )
           : n.createElement(n.Fragment, null, i);
       }
-      function Zr(e) {
+      function Wr(e) {
         const {
             visibility_by_door_index_state: t,
             door_index_visibility: a,
@@ -17944,7 +17943,7 @@
           ? null
           : n.createElement(n.Fragment, null, i);
       }
-      function Wr(e) {
+      function qr(e) {
         const { rgPresenters: t } = e;
         if (!t || 0 == t.length) return null;
         const a = (0, r.jM)(w.De.LANGUAGE);
@@ -17959,7 +17958,7 @@
               },
               (0, N.kQ)(
                 "#SalePresented_By",
-                n.createElement(qr, { presentor: t[0], lang: a }),
+                n.createElement(Jr, { presentor: t[0], lang: a }),
               ),
             )
           : n.createElement(
@@ -17978,15 +17977,15 @@
                     n.createElement(
                       n.Fragment,
                       { key: e.url },
-                      n.createElement(qr, { presentor: e, lang: a }),
+                      n.createElement(Jr, { presentor: e, lang: a }),
                       Boolean(t.length > 2) && ", ",
                     ),
                   ),
-                n.createElement(qr, { presentor: t[t.length - 1], lang: a }),
+                n.createElement(Jr, { presentor: t[t.length - 1], lang: a }),
               ),
             );
       }
-      function qr(e) {
+      function Jr(e) {
         const { presentor: t, lang: a } = e;
         return n.createElement(
           ve.ns,
@@ -18230,7 +18229,7 @@
     },
     42764: (e, t, a) => {
       "use strict";
-      a.d(t, { tZ: () => B, EU: () => A, TN: () => I });
+      a.d(t, { tZ: () => N, EU: () => k, TN: () => A });
       var n = a(89526),
         i = a(84646),
         r = a(98009),
@@ -18240,23 +18239,24 @@
         c = a(57605),
         d = a(34976),
         m = a(21904),
-        u = a(69338),
-        _ = a(58218),
-        p = a(19304),
-        g = a(60161),
-        v = a(14826),
-        E = a(32765),
-        h = a(99307),
-        S = a(57742),
-        b = a(71161),
-        y = a(32905),
-        C = a(5698),
-        f = a(33150),
-        D = a.n(f);
-      function G(e, t) {
+        u = a(25817),
+        _ = a(69338),
+        p = a(58218),
+        g = a(19304),
+        v = a(60161),
+        E = a(14826),
+        h = a(32765),
+        S = a(99307),
+        b = a(57742),
+        y = a(71161),
+        C = a(32905),
+        f = a(5698),
+        D = a(33150),
+        G = a.n(D);
+      function w(e, t) {
         return e > t + 1 ? e - t : e + 12 - t;
       }
-      function w(e) {
+      function T(e) {
         const { strToken: t, rtEstimatedNotifcationDate: a } = e,
           i = new Date(1e3 * a),
           r = i.getMonth() + 1;
@@ -18271,22 +18271,22 @@
             break;
           case "#Sale_Reservation_MonthYear":
           case "#Sale_Reservation_AfterMonthYear":
-            (o = (0, v.Xx)("#Sale_Reservation_MonthNoun_" + r)),
+            (o = (0, E.Xx)("#Sale_Reservation_MonthNoun_" + r)),
               (l = "" + i.getFullYear());
             break;
           case "#Sale_Reservation_TwoMonthRangeYear":
-            (o = (0, v.Xx)("#Sale_Reservation_MonthNoun_" + G(r, 1))),
-              (l = (0, v.Xx)("#Sale_Reservation_MonthNoun_" + r)),
+            (o = (0, E.Xx)("#Sale_Reservation_MonthNoun_" + w(r, 1))),
+              (l = (0, E.Xx)("#Sale_Reservation_MonthNoun_" + r)),
               (c = "" + i.getFullYear());
             break;
           case "#Sale_Reservation_ThreeMonthRangeYear":
-            (o = (0, v.Xx)("#Sale_Reservation_MonthNoun_" + G(r, 2))),
-              (l = (0, v.Xx)("#Sale_Reservation_MonthNoun_" + r)),
+            (o = (0, E.Xx)("#Sale_Reservation_MonthNoun_" + w(r, 2))),
+              (l = (0, E.Xx)("#Sale_Reservation_MonthNoun_" + r)),
               (c = "" + i.getFullYear());
             break;
           case "#Sale_Reservation_FourMonthRangeYear":
-            (o = (0, v.Xx)("#Sale_Reservation_MonthNoun_" + G(r, 3))),
-              (l = (0, v.Xx)("#Sale_Reservation_MonthNoun_" + r)),
+            (o = (0, E.Xx)("#Sale_Reservation_MonthNoun_" + w(r, 3))),
+              (l = (0, E.Xx)("#Sale_Reservation_MonthNoun_" + r)),
               (c = "" + i.getFullYear());
             break;
           case "#Sale_Reservation_Quarter_ThreeMonths":
@@ -18296,7 +18296,7 @@
           case "#Sale_Reservation_AfterQuarter_ThreeMonths":
             (d =
               "#Sale_Reservation_AfterQuarter" + (Math.floor((r - 1) / 3) + 1)),
-              (o = (0, v.Xx)("#Sale_Reservation_MonthNoun_" + r)),
+              (o = (0, E.Xx)("#Sale_Reservation_MonthNoun_" + r)),
               (l = "" + i.getFullYear());
             break;
           case "#Sale_Reservation_RelativeWeekly":
@@ -18316,11 +18316,11 @@
         }
         return n.createElement(
           "div",
-          { className: D().Ctn },
-          (0, v.Xx)(d, o, l, c, ""),
+          { className: G().Ctn },
+          (0, E.Xx)(d, o, l, c, ""),
         );
       }
-      function T(e) {
+      function I(e) {
         return (
           !e.requires_reservation &&
           e.allow_purchase_in_country &&
@@ -18330,30 +18330,30 @@
           e.reservation_state != i.F.k_EPurchaseReservationState_Reserved
         );
       }
-      function I(e) {
+      function A(e) {
         const { reservationDef: t, hardwareDetail: a } = e;
-        return E.L7.logged_in ||
+        return h.L7.logged_in ||
           (!a.requires_reservation && !a.account_restricted_from_purchasing)
-          ? T(a)
-            ? n.createElement(L, { hardwareDetail: a })
+          ? I(a)
+            ? n.createElement(M, { hardwareDetail: a })
             : a.requires_reservation || a.inventory_available
-            ? n.createElement(O, { reservationDef: t, hardwareDetail: a })
+            ? n.createElement(P, { reservationDef: t, hardwareDetail: a })
             : n.createElement(
                 "div",
-                { className: (0, p.Z)(C.reserverow, "ReservationUnavailable") },
+                { className: (0, g.Z)(f.reserverow, "ReservationUnavailable") },
                 n.createElement(
                   c.zx,
-                  { className: C.reservebutton, disabled: !0 },
-                  (0, v.Xx)("#Sale_ReserveExhausted"),
+                  { className: f.reservebutton, disabled: !0 },
+                  (0, E.Xx)("#Sale_ReserveExhausted"),
                 ),
               )
           : n.createElement(
               "div",
-              { className: (0, p.Z)(C.reserverow, "ReservationLogin") },
+              { className: (0, g.Z)(f.reserverow, "ReservationLogin") },
               n.createElement(
                 c.zx,
-                { onClick: y.X },
-                (0, v.Xx)(
+                { onClick: C.X },
+                (0, E.Xx)(
                   a.requires_reservation
                     ? "#SalePage_LoginReservationPrompt"
                     : "#SalePage_LoginPurchasePrompt",
@@ -18361,7 +18361,7 @@
               ),
             );
       }
-      function A(e) {
+      function k(e) {
         const { hardwareDetail: t } = e,
           a = !(
             t.inventory_available ||
@@ -18370,63 +18370,61 @@
                 i.F.k_EPurchaseReservationState_NotReserved) ||
             t.requires_reservation
           ),
-          r = t.account_restricted_from_purchasing && !E.L7.logged_in;
+          r = t.account_restricted_from_purchasing && !h.L7.logged_in;
         if (a || r) return null;
         if (
-          T(t) ||
+          I(t) ||
           t.reservation_state == i.F.k_EPurchaseReservationState_Allocated
         )
           return n.createElement(
             "div",
-            { className: (0, p.Z)(C.expecteddate, "ReservationBuyNow") },
+            { className: (0, g.Z)(f.expecteddate, "ReservationBuyNow") },
             n.createElement(
               "div",
               {
-                className: (0, p.Z)(C.expecteddate_str, "ReservationShipDate"),
+                className: (0, g.Z)(f.expecteddate_str, "ReservationShipDate"),
               },
-              (0, v.Xx)("#Sale_Reservation_ExpectedDeliveryDate"),
+              (0, E.Xx)("#Sale_Reservation_ExpectedDeliveryDate"),
             ),
-            Boolean(t.high_pending_orders)
-              ? (0, v.Xx)("#delayed_shipping_description3_short")
-              : (0, v.Xx)("#standard_shipping_estimate3_short"),
+            (0, u.B)(t),
           );
         return n.createElement(
           "div",
-          { className: (0, p.Z)(C.expecteddate, "ReservationExpectedDateCtn") },
+          { className: (0, g.Z)(f.expecteddate, "ReservationExpectedDateCtn") },
           n.createElement(
             "div",
             {
-              className: (0, p.Z)(
-                C.expecteddate_str,
+              className: (0, g.Z)(
+                f.expecteddate_str,
                 "ReservationExpectedDate",
               ),
             },
-            (0, v.Xx)(
+            (0, E.Xx)(
               t.reservation_state == i.F.k_EPurchaseReservationState_Reserved
                 ? "#Sale_Reservation_YourExpectedDate"
                 : "#Sale_Reservation_ExpectedDate",
             ),
-            n.createElement(w, {
+            n.createElement(T, {
               rtEstimatedNotifcationDate: t.rtime_estimated_notification,
               strToken: t.notificaton_token,
             }),
           ),
         );
       }
-      function k(e) {
+      function x(e) {
         var t;
         const { hardwareDetail: a } = e,
           { fnUpdateReservation: i } = (0, l.cR)(),
           [r, o] = (0, n.useState)(!1),
           [s, m] = (0, n.useState)(!1),
-          [p, E] = (0, n.useState)(null),
-          b = (0, _.T)("DisplayCancelReservationButton"),
+          [u, g] = (0, n.useState)(null),
+          h = (0, p.T)("DisplayCancelReservationButton"),
           y = (0, n.useCallback)(
             (e) => {
-              (0, S.AM)(
-                n.createElement(h.uH, {
-                  strTitle: (0, v.Xx)("#Sale_CancelReservation"),
-                  strDescription: (0, v.Xx)(
+              (0, b.AM)(
+                n.createElement(S.uH, {
+                  strTitle: (0, E.Xx)("#Sale_CancelReservation"),
+                  strDescription: (0, E.Xx)(
                     "#Sale_Reservation_CancelAreYouSure_NoDeposit",
                   ),
                   onOK: () => {
@@ -18434,30 +18432,30 @@
                       i(a.packageid, !1)
                         .then((e) => {
                           var t;
-                          (null === (t = null == b ? void 0 : b.token) ||
+                          (null === (t = null == h ? void 0 : h.token) ||
                           void 0 === t
                             ? void 0
                             : t.reason) ||
                             (e ||
-                              E((0, v.Xx)("#GrantAwardError_PersistFailed")),
+                              g((0, E.Xx)("#GrantAwardError_PersistFailed")),
                             m(!0));
                         })
                         .catch(() => {
                           var e;
-                          (null === (e = null == b ? void 0 : b.token) ||
+                          (null === (e = null == h ? void 0 : h.token) ||
                           void 0 === e
                             ? void 0
                             : e.reason) ||
-                            (E((0, v.Xx)("#GrantAwardError_PersistFailed")),
+                            (g((0, E.Xx)("#GrantAwardError_PersistFailed")),
                             m(!0));
                         });
                   },
                 }),
-                (0, g.RA)(e),
+                (0, v.RA)(e),
               );
             },
             [
-              null === (t = null == b ? void 0 : b.token) || void 0 === t
+              null === (t = null == h ? void 0 : h.token) || void 0 === t
                 ? void 0
                 : t.reason,
               i,
@@ -18471,25 +18469,25 @@
             c.zx,
             { onClick: y, disabled: r },
             Boolean(r && !s) &&
-              n.createElement(u.V, {
-                string: (0, v.Xx)("#Saving"),
+              n.createElement(_.V, {
+                string: (0, E.Xx)("#Saving"),
                 size: "small",
               }),
-            (0, v.Xx)("#Sale_CancelReservation"),
+            (0, E.Xx)("#Sale_CancelReservation"),
           ),
-          Boolean(p) &&
-            n.createElement("div", { className: d.ErrorStylesWithIcon }, p),
+          Boolean(u) &&
+            n.createElement("div", { className: d.ErrorStylesWithIcon }, u),
         );
       }
-      function x(e) {
+      function B(e) {
         const { hardwareDetail: t } = e;
         return n.createElement(
           "div",
-          { className: (0, p.Z)(C.reserverowReserved, "ReservationReserved") },
+          { className: (0, g.Z)(f.reserverowReserved, "ReservationReserved") },
           n.createElement(
             "div",
-            { className: C.alreadyreserved },
-            (0, v.kQ)(
+            { className: f.alreadyreserved },
+            (0, E.kQ)(
               "#Sale_AlreadyReserved",
               n.createElement(m.H6, {
                 bSingleLine: !0,
@@ -18498,34 +18496,34 @@
               }),
             ),
           ),
-          n.createElement(k, Object.assign({}, e)),
+          n.createElement(x, Object.assign({}, e)),
         );
       }
-      function B(e, t, a) {
-        const n = `${E.De.STORE_BASE_URL}cart`,
-          i = `${E.De.STORE_BASE_URL}cart/addtocart`,
+      function N(e, t, a) {
+        const n = `${h.De.STORE_BASE_URL}cart`,
+          i = `${h.De.STORE_BASE_URL}cart/addtocart`,
           l = (0, r.mY)(a);
         o.jg.Get().AddToCart(e, t, i, n, l);
       }
-      function N(e) {
+      function L(e) {
         const { hardwareDetail: t } = e,
-          a = (0, b.bJ)();
+          a = (0, y.bJ)();
         return s.JW.GetTimeNowWithOverride() < t.time_expires
           ? n.createElement(
               "div",
               {
-                className: (0, p.Z)(
-                  C.reserverowReserved,
+                className: (0, g.Z)(
+                  f.reserverowReserved,
                   "ReservationAllocated",
                 ),
               },
               n.createElement(
                 "div",
-                { className: C.alreadyreserved },
+                { className: f.alreadyreserved },
                 n.createElement(
                   "div",
                   null,
-                  (0, v.Xx)("#Sale_Reservation_CompleteBy"),
+                  (0, E.Xx)("#Sale_Reservation_CompleteBy"),
                 ),
                 n.createElement(m.H6, {
                   dateAndTime: t.time_expires,
@@ -18534,56 +18532,56 @@
                 n.createElement(
                   "div",
                   null,
-                  (0, v.Xx)("#Sale_Reservation_CancelAuto"),
+                  (0, E.Xx)("#Sale_Reservation_CancelAuto"),
                 ),
               ),
               n.createElement(
                 c.zx,
-                { onClick: (e) => B(e, t.packageid, a) },
-                (0, v.Xx)("#Sale_Reservation_CompletePurchase"),
+                { onClick: (e) => N(e, t.packageid, a) },
+                (0, E.Xx)("#Sale_Reservation_CompletePurchase"),
               ),
-              n.createElement(k, Object.assign({}, e)),
+              n.createElement(x, Object.assign({}, e)),
             )
           : n.createElement(
               "div",
-              { className: C.reserverowReserved },
+              { className: f.reserverowReserved },
               n.createElement(
                 "div",
                 {
-                  className: (0, p.Z)(C.alreadyreserved, "ReservationExpired"),
+                  className: (0, g.Z)(f.alreadyreserved, "ReservationExpired"),
                 },
                 n.createElement(
                   "div",
                   null,
-                  (0, v.Xx)("#Sale_Reservation_Expired"),
+                  (0, E.Xx)("#Sale_Reservation_Expired"),
                 ),
               ),
-              n.createElement(k, Object.assign({}, e)),
+              n.createElement(x, Object.assign({}, e)),
             );
       }
-      function L(e) {
+      function M(e) {
         const { hardwareDetail: t } = e,
-          a = (0, b.bJ)();
+          a = (0, y.bJ)();
         return n.createElement(
           "div",
-          { className: (0, p.Z)(C.reserverowReserved, "ReservationAddToCart") },
+          { className: (0, g.Z)(f.reserverowReserved, "ReservationAddToCart") },
           n.createElement(
             c.zx,
-            { onClick: (e) => B(e, t.packageid, a) },
-            (0, v.Xx)("#EventEmail_Button_BuyNow"),
+            { onClick: (e) => N(e, t.packageid, a) },
+            (0, E.Xx)("#EventEmail_Button_BuyNow"),
           ),
         );
       }
-      function M(e) {
-        return n.createElement(R, Object.assign({}, e));
-      }
       function R(e) {
+        return n.createElement(O, Object.assign({}, e));
+      }
+      function O(e) {
         var t;
         const { hardwareDetail: a } = e,
           [i, r] = (0, n.useState)(!1),
           [o, s] = (0, n.useState)(!1),
-          [m, g] = (0, n.useState)(null),
-          E = (0, _.T)("DisplyDirectReservation"),
+          [m, u] = (0, n.useState)(null),
+          v = (0, p.T)("DisplyDirectReservation"),
           { fnUpdateReservation: h } = (0, l.cR)(),
           S = (0, n.useCallback)(
             (e) => {
@@ -18591,22 +18589,22 @@
                 h(a.packageid, !0)
                   .then((e) => {
                     var t;
-                    (null === (t = null == E ? void 0 : E.token) || void 0 === t
+                    (null === (t = null == v ? void 0 : v.token) || void 0 === t
                       ? void 0
                       : t.reason) ||
-                      (e || g((0, v.Xx)("#GrantAwardError_PersistFailed")),
+                      (e || u((0, E.Xx)("#GrantAwardError_PersistFailed")),
                       s(!0));
                   })
                   .catch(() => {
                     var e;
-                    (null === (e = null == E ? void 0 : E.token) || void 0 === e
+                    (null === (e = null == v ? void 0 : v.token) || void 0 === e
                       ? void 0
                       : e.reason) ||
-                      (s(!0), g((0, v.Xx)("#GrantAwardError_PersistFailed")));
+                      (s(!0), u((0, E.Xx)("#GrantAwardError_PersistFailed")));
                   });
             },
             [
-              null === (t = null == E ? void 0 : E.token) || void 0 === t
+              null === (t = null == v ? void 0 : v.token) || void 0 === t
                 ? void 0
                 : t.reason,
               h,
@@ -18615,36 +18613,36 @@
           );
         return n.createElement(
           "div",
-          { className: (0, p.Z)(C.reserverow, "ReservationDirectAction") },
+          { className: (0, g.Z)(f.reserverow, "ReservationDirectAction") },
           n.createElement(
             c.zx,
-            { onClick: S, className: C.reservebutton, disabled: i },
+            { onClick: S, className: f.reservebutton, disabled: i },
             Boolean(i && !o) &&
-              n.createElement(u.V, {
-                string: (0, v.Xx)("#Saving"),
+              n.createElement(_.V, {
+                string: (0, E.Xx)("#Saving"),
                 size: "small",
               }),
-            (0, v.Xx)("#Sale_ReserveNow_NoDeposit"),
+            (0, E.Xx)("#Sale_ReserveNow_NoDeposit"),
           ),
           Boolean(m) &&
             n.createElement("div", { className: d.ErrorStylesWithIcon }, m),
         );
       }
-      function O(e) {
+      function P(e) {
         const { hardwareDetail: t } = e;
         switch (t.reservation_state) {
           case i.F.k_EPurchaseReservationState_Reserved:
-            return n.createElement(x, Object.assign({}, e));
+            return n.createElement(B, Object.assign({}, e));
           case i.F.k_EPurchaseReservationState_Allocated:
-            return n.createElement(N, Object.assign({}, e));
+            return n.createElement(L, Object.assign({}, e));
           case i.F.k_EPurchaseReservationState_UnavailableRegion:
             return n.createElement(
               "div",
-              { className: (0, p.Z)(C.reserverow, "ReservationUnavailable") },
+              { className: (0, g.Z)(f.reserverow, "ReservationUnavailable") },
               n.createElement(
                 c.zx,
-                { className: C.reservebutton, disabled: !0 },
-                (0, v.Xx)("#Sale_ReserveUnavailable"),
+                { className: f.reservebutton, disabled: !0 },
+                (0, E.Xx)("#Sale_ReserveUnavailable"),
               ),
             );
           case i.F.k_EPurchaseReservationState_CancelPendingRefund:
@@ -18652,7 +18650,7 @@
           case i.F.k_EPurchaseReservationState_Consumed:
           case i.F.k_EPurchaseReservationState_Cancelled:
           default:
-            return n.createElement(M, Object.assign({}, e));
+            return n.createElement(R, Object.assign({}, e));
         }
       }
     },
@@ -19778,6 +19776,18 @@
             )
           : null;
       };
+    },
+    25817: (e, t, a) => {
+      "use strict";
+      a.d(t, { B: () => i });
+      var n = a(14826);
+      function i(e) {
+        return (0, n.Xx)(
+          "#Cart_ShippingEstimate_Range",
+          e.estimated_delivery_soonest_business_days,
+          e.estimated_delivery_latest_business_days,
+        );
+      }
     },
     43068: (e, t, a) => {
       "use strict";
