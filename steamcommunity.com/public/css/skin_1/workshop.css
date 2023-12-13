@@ -3205,9 +3205,38 @@ input.searchText
 	background-color:#000000;
 }
 
-#enlarged_image_carousel {
-    max-width:100%;
+.enlarged_image_viewer {
+	display: flex;
+	flex-direction: column;
+	max-width: 100%;
+	max-height: 90vh;
+	align-items: center;
 }
+.enlarged_image_container {
+	flex-grow: 1;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.enlarged_image_container .enlarged_image {
+	object-fit: contain;
+	overflow: hidden;
+	min-width: 100px;
+}
+.enlarged_image_viewer .popup_modal_footer {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	height: 28px;
+	line-height: 28px;
+	margin-top: 10px;
+	width: 100%;
+	max-width: 800px;
+}
+.enlarged_image_viewer .popup_modal_footer .btnv6_blue_hoverfade span {
+	line-height: 26px;
+}
+
 
 #reportsModal .modal_top_band {
 	width: 848px;

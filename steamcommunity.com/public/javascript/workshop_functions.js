@@ -930,23 +930,96 @@ function toggleAutoPlay()
 	document.cookie="bGameHighlightAutoplayDisabled=" + c_value;
 }
 
-function ShowEnlargedImagePreview( imageURL, HighlightPlayer )
+function ShowEnlargedImagePreview( imageURL )
 {
 	var enlargedImage = $J( '<img/>', {id: 'enlarged_image_carousel', src:imageURL } );
+	var Dialog = ShowDialog( '', enlargedImage.show() );
 
-	if ( HighlightPlayer !== undefined )
+			Event.observe( 'enlarged_image_carousel', 'load', function() { Dialog.AdjustSizing(); } );
+
+	return false;
+}
+
+function ShowEnlargedImagePreviewFromHighlightPlayer( id, HighlightPlayer )
+{
+	var rgScreenshots = HighlightPlayer.GetFullScreenshotURLs();
+	var rgScreenshotURLs = [];
+	var iCurIndex = 0;
+	for ( var i = 0; i < rgScreenshots.length; ++i )
 	{
-		HighlightPlayer.PauseCycle();
+		var item = rgScreenshots[i];
+		rgScreenshotURLs.push( item.url );
+		if ( item.previewid == id )
+			iCurIndex = i;
 	}
 
-	var Dialog = ShowDialog( '', enlargedImage.show() ).done( () => {
-		if ( HighlightPlayer !== undefined )
-		{
-		    HighlightPlayer.ResumeCycle();
-		}
+	var content = $J( '<div/>', { class: 'enlarged_image_viewer' } );
+	var container = $J( '<div/>', { class: 'enlarged_image_container' } );
+	var enlargedImage = $J( '<img/>', { class: 'enlarged_image', src: rgScreenshotURLs[id] } );
+	container.append( enlargedImage );
+	content.append( container );
+
+	var $Footer =  $J('<div/>', {'class': 'popup_modal_footer' } );
+	var $ScreenshotCount = $J('<div/>');
+
+	var $BtnPrev = $J('<div/>', {'class': 'btnv6_blue_hoverfade btn_medium previous'}).append( $J('<span/>').text( 'Previous' ) );
+	var $BtnNext = $J('<div/>', {'class': 'btnv6_blue_hoverfade btn_medium next'}).append( $J('<span/>').text( 'Next' ) );
+
+	enlargedImage.load( function() {
+		enlargedImage.stop();
+		enlargedImage.fadeTo( 'fast', 1.0 );
 	} );
 
-	        Event.observe( 'enlarged_image_carousel', 'load', function() { Dialog.AdjustSizing(); } );
+	var fnShowScreenshot = function( index )
+	{
+		enlargedImage.stop();
+		enlargedImage.fadeTo( 'fast', 0.1 );
+		enlargedImage.attr( 'src', rgScreenshotURLs[index] );
+	};
+	var fnNextScreenshot = function() {
+		iCurIndex = ( iCurIndex + 1 ) % rgScreenshotURLs.length;
+		fnShowScreenshot( iCurIndex );
+		fnUpdateFooter();
+	};
+	var fnPrevScreenshot = function() {
+		iCurIndex = ( iCurIndex - 1 + rgScreenshotURLs.length ) % rgScreenshotURLs.length;
+		fnShowScreenshot( iCurIndex );
+		fnUpdateFooter();
+	};
+	var fnUpdateFooter = function()
+	{
+		$ScreenshotCount.text( '%1$s of %2$s Images'.replace( /%1\$s/, iCurIndex + 1 ).replace( /%2\$s/, rgScreenshotURLs.length ) );
+	};
+	$BtnNext.click( fnNextScreenshot );
+	$BtnPrev.click( fnPrevScreenshot );
+
+	$Footer.append( $BtnPrev, $ScreenshotCount, $BtnNext );
+	content.append( $Footer );
+
+	fnShowScreenshot( iCurIndex );
+	fnUpdateFooter();
+
+	HighlightPlayer.PauseCycle();
+
+	$J(document).on('keydown.WorkshopImages', function( event ) {
+		if ( event.which == 37 /* left */ || event.which == 38 /* up */ )
+		{
+			fnPrevScreenshot();
+			event.preventDefault();
+		}
+		else if ( event.which == 39 /* right */ || event.which == 40 /* down */ || event.which == 32 /* spacebar */ )
+		{
+			fnNextScreenshot();
+			event.preventDefault();
+		}
+	});
+
+	var Dialog = ShowDialog( '', content ).done( () => {
+	    HighlightPlayer.ResumeCycle();
+		$J(document).off('keydown.WorkshopImages');
+	} );
+
+
 
 	return false;
 }

@@ -87,6 +87,7 @@ var HighlightPlayer = Class.create( {
 	m_rgMovieFlashvars: null,
 	m_rgDefaultMovieFlashvars: null,
 	m_rgScreenshotURLs: null,
+	m_rgFullScreenshotURLs: null,
 	m_rgSketchfabModels: null,
 	m_bVideoOnlyMode: false,
     m_bPaused: false,
@@ -101,6 +102,7 @@ var HighlightPlayer = Class.create( {
 		this.m_elemStripScroll = $(args.elemStripScroll);
 		this.m_rgMovieFlashvars = args.rgMovieFlashvars || new Array();
 		this.m_rgScreenshotURLs = args.rgScreenshotURLs || new Array();
+		this.m_rgFullScreenshotURLs = args.rgFullScreenshotURLs || new Array();
 		this.m_rgSketchfabModels = args.rgSketchfabModels || new Array();
 		this.m_rgDefaultMovieFlashvars = $H( args.rgDefaultMovieFlashvars || {} );
 		this.m_bVideoOnlyMode = args.bVideoOnlyMode;
@@ -439,6 +441,11 @@ var HighlightPlayer = Class.create( {
 	{
 		this.m_bPaused = false;
 		this.StartCycle();
+	},
+
+	GetFullScreenshotURLs: function()
+	{
+		return this.m_rgFullScreenshotURLs;
 	},
 
 	OnMovieComplete: function( movieItem )
