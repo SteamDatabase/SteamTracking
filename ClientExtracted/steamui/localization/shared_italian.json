@@ -2818,6 +2818,7 @@
     "FamilyManagement_Role_1": "Adulto",
     "FamilyManagement_Role_2": "Bambino",
     "FamilyManagement_Me": "Io",
+    "FamilyManagement_YourFamily": "La tua condivisione familiare",
     "FamilyManagement_ErrorInternalServerError": "Errore interno del server.",
     "FamilyManagement_ErrorNoMatch": "Questa Condivisione familiare non esiste.",
     "FamilyManagement_AccessDenied": "Non hai i permessi necessari per poter eseguire questa azione.",
@@ -2854,6 +2855,11 @@
     "FamilyManagement_ErrorCancelPurchaseRequest": "Impossibile annullare la richiesta. %1$s",
     "FamilyManagement_ErrorLoadShoppingCart": "Impossibile caricare il carrello. %1$s",
     "RequestPurchase_GenericError": "Errore nella richiesta dell'acquisto. %1$s",
+    "KioskMode_Dialog_Title": "Modalità chiosco",
+    "KioskMode_UnlockDialog_Description": "Inserisci il PIN nello spazio sottostante per uscire dalla modalità chiosco.",
+    "KioskMode_LockDialog_Description": "Conferma di voler ritornare alla modalità chiosco.",
+    "KioskMode_Unlock_Tooltip": "Esci dalla modalità chiosco",
+    "KioskMode_Lock_Tooltip": "Entra nella modalità chiosco",
     "RemotePlay_StoreFunctionalityBlocked_Title": "Negozio non disponibile",
     "RemotePlay_StoreFunctionalityBlocked_Description": "L'accesso al Negozio non è disponibile durante l'esecuzione di questo client Steam Link."
 }

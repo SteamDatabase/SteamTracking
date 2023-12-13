@@ -2817,6 +2817,8 @@
     "FamilyManagement_Role_0": "Không rõ",
     "FamilyManagement_Role_1": "Người lớn",
     "FamilyManagement_Role_2": "Trẻ em",
+    "FamilyManagement_Me": "Tôi",
+    "FamilyManagement_YourFamily": "Nhóm gia đình của bạn",
     "FamilyManagement_ErrorInternalServerError": "Lỗi máy chủ nội bộ.",
     "FamilyManagement_ErrorNoMatch": "Nhóm gia đình này không tồn tại.",
     "FamilyManagement_AccessDenied": "Bạn không có quyền thực thi hành động này.",
@@ -2853,6 +2855,11 @@
     "FamilyManagement_ErrorCancelPurchaseRequest": "Hủy yêu cầu không thành công. %1$s",
     "FamilyManagement_ErrorLoadShoppingCart": "Không thể tải thông tin giỏ hàng. %1$s",
     "RequestPurchase_GenericError": "Lỗi yêu cầu mua hàng. %1$s",
+    "KioskMode_Dialog_Title": "Chế độ Kiosk",
+    "KioskMode_UnlockDialog_Description": "Nhập mã PIN bên dưới để thoát chế độ kiosk.",
+    "KioskMode_LockDialog_Description": "Vui lòng xác nhận bạn muốn trở về chế độ kiosk.",
+    "KioskMode_Unlock_Tooltip": "Thoát chế độ kiosk",
+    "KioskMode_Lock_Tooltip": "Vào chế độ kiosk",
     "RemotePlay_StoreFunctionalityBlocked_Title": "Không thể truy cập cửa hàng",
     "RemotePlay_StoreFunctionalityBlocked_Description": "Không thể truy cập vào cửa hàng trong khi chạy qua ứng dụng Steam Link này."
 }

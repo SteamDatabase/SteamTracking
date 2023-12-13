@@ -2817,6 +2817,7 @@
     "FamilyManagement_Role_0": "Неизвестно",
     "FamilyManagement_Role_1": "Взрослый",
     "FamilyManagement_Role_2": "Ребёнок",
+    "FamilyManagement_Me": "Я",
     "FamilyManagement_ErrorInternalServerError": "Внутренняя ошибка сервера.",
     "FamilyManagement_ErrorNoMatch": "Такой семейной группы не существует.",
     "FamilyManagement_AccessDenied": "У вас нет прав на это действие.",
@@ -2853,6 +2854,11 @@
     "FamilyManagement_ErrorCancelPurchaseRequest": "Не удалось отменить запрос. %1$s",
     "FamilyManagement_ErrorLoadShoppingCart": "Не удалось загрузить корзину. %1$s",
     "RequestPurchase_GenericError": "Ошибка при отправке запроса покупки. %1$s",
+    "KioskMode_Dialog_Title": "Режим киоска",
+    "KioskMode_UnlockDialog_Description": "Введите свой ПИН-код ниже, чтобы выйти из режима киоска.",
+    "KioskMode_LockDialog_Description": "Подтвердите, что хотите вернуться в режим киоска.",
+    "KioskMode_Unlock_Tooltip": "Выйти из режима киоска",
+    "KioskMode_Lock_Tooltip": "Перейти в режим киоска",
     "RemotePlay_StoreFunctionalityBlocked_Title": "Магазин недоступен",
     "RemotePlay_StoreFunctionalityBlocked_Description": "Магазин недоступен при использовании этого клиента Steam Link."
 }

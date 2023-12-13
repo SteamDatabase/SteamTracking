@@ -2817,6 +2817,8 @@
     "FamilyManagement_Role_0": "Bilinmeyen",
     "FamilyManagement_Role_1": "Yetişkin",
     "FamilyManagement_Role_2": "Çocuk",
+    "FamilyManagement_Me": "Ben",
+    "FamilyManagement_YourFamily": "Aileniz",
     "FamilyManagement_ErrorInternalServerError": "Dahili sunucu hatası.",
     "FamilyManagement_ErrorNoMatch": "Böyle bir aile grubu yok.",
     "FamilyManagement_AccessDenied": "Bu eylemi gerçekleştirme izniniz yok.",
@@ -2853,6 +2855,11 @@
     "FamilyManagement_ErrorCancelPurchaseRequest": "Talep iptal edilemedi. %1$s",
     "FamilyManagement_ErrorLoadShoppingCart": "Alışveriş sepeti yüklenemedi. %1$s",
     "RequestPurchase_GenericError": "Satın alma talep edilirken bir hata oldu. %1$s",
+    "KioskMode_Dialog_Title": "Kiosk Modu",
+    "KioskMode_UnlockDialog_Description": "Kiosk Modu'ndan çıkmak için PIN'inizi aşağıya girin.",
+    "KioskMode_LockDialog_Description": "Lütfen Kiosk Modu'na dönmek istediğinizi onaylayın.",
+    "KioskMode_Unlock_Tooltip": "Kiosk Modu'ndan Çık",
+    "KioskMode_Lock_Tooltip": "Kiosk Modu'na Gir",
     "RemotePlay_StoreFunctionalityBlocked_Title": "Mağaza Kullanılamıyor",
     "RemotePlay_StoreFunctionalityBlocked_Description": "Bu Steam Link istemcisi üzerinden çalıştırılırken mağaza kullanılamaz."
 }

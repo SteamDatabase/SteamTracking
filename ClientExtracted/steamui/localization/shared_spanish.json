@@ -2816,6 +2816,8 @@
     "FamilyManagement_Role_0": "Desconocido",
     "FamilyManagement_Role_1": "Adulto",
     "FamilyManagement_Role_2": "Niño",
+    "FamilyManagement_Me": "Yo",
+    "FamilyManagement_YourFamily": "Tu grupo familiar",
     "FamilyManagement_ErrorInternalServerError": "Error interno del servidor.",
     "FamilyManagement_ErrorNoMatch": "El grupo familiar no existe.",
     "FamilyManagement_AccessDenied": "No tienes permiso para realizar esta acción.",
@@ -2852,6 +2854,11 @@
     "FamilyManagement_ErrorCancelPurchaseRequest": "No se pudo cancelar la solicitud. %1$s",
     "FamilyManagement_ErrorLoadShoppingCart": "No se pudo cargar el carro de la compra. %1$s",
     "RequestPurchase_GenericError": "Se ha producido un error al solicitar la compra. %1$s",
+    "KioskMode_Dialog_Title": "Modo Quiosco",
+    "KioskMode_UnlockDialog_Description": "Introduce tu PIN abajo para salir del modo Quiosco.",
+    "KioskMode_LockDialog_Description": "Por favor, confirma que deseas volver al modo Quiosco.",
+    "KioskMode_Unlock_Tooltip": "Salir del modo Quiosco",
+    "KioskMode_Lock_Tooltip": "Ir al modo Quiosco",
     "RemotePlay_StoreFunctionalityBlocked_Title": "Tienda no disponible",
     "RemotePlay_StoreFunctionalityBlocked_Description": "El acceso a la tienda no está disponible cuando se ejecuta a través de este cliente de Steam Link."
 }

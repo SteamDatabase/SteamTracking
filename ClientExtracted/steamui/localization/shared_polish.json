@@ -2817,6 +2817,7 @@
     "FamilyManagement_Role_0": "nie określono",
     "FamilyManagement_Role_1": "dorosły",
     "FamilyManagement_Role_2": "dziecko",
+    "FamilyManagement_Me": "Ja",
     "FamilyManagement_ErrorInternalServerError": "Wewnętrzny błąd serwera.",
     "FamilyManagement_ErrorNoMatch": "Ta rodzina nie istnieje.",
     "FamilyManagement_AccessDenied": "Nie masz uprawnienia do wykonania tej czynności.",
@@ -2853,6 +2854,11 @@
     "FamilyManagement_ErrorCancelPurchaseRequest": "Nie udało się anulować prośby. %1$s",
     "FamilyManagement_ErrorLoadShoppingCart": "Nie udało się wczytać koszyka. %1$s",
     "RequestPurchase_GenericError": "Błąd przy wysyłaniu prośby o zakup. %1$s",
+    "KioskMode_Dialog_Title": "Tryb kiosku",
+    "KioskMode_UnlockDialog_Description": "Wprowadź swój PIN poniżej, by wyjść z trybu kiosku.",
+    "KioskMode_LockDialog_Description": "Potwierdź, że chcesz powrócić do trybu kiosku.",
+    "KioskMode_Unlock_Tooltip": "Wyjdż z trybu kiosku",
+    "KioskMode_Lock_Tooltip": "Wejdź do trybu kiosku",
     "RemotePlay_StoreFunctionalityBlocked_Title": "Sklep niedostępny",
     "RemotePlay_StoreFunctionalityBlocked_Description": "Sklep jest niedostępny podczas korzystania z tego klienta Steam Linka."
 }

@@ -2817,6 +2817,7 @@
     "FamilyManagement_Role_0": "Unbekannt",
     "FamilyManagement_Role_1": "Erwachsener",
     "FamilyManagement_Role_2": "Kind",
+    "FamilyManagement_Me": "Ich",
     "FamilyManagement_ErrorInternalServerError": "Interner Serverfehler.",
     "FamilyManagement_ErrorNoMatch": "Diese Familie existiert nicht.",
     "FamilyManagement_AccessDenied": "Sie sind nicht berechtigt, diese Aktion auszuführen.",
@@ -2853,6 +2854,11 @@
     "FamilyManagement_ErrorCancelPurchaseRequest": "Die Anfrage konnte nicht zurückgezogen werden. %1$s",
     "FamilyManagement_ErrorLoadShoppingCart": "Warenkorb konnte nicht geladen werden. %1$s",
     "RequestPurchase_GenericError": "Fehler bei der Übermittlung des Kaufwunsches. %1$s",
+    "KioskMode_Dialog_Title": "Kioskmodus",
+    "KioskMode_UnlockDialog_Description": "Geben Sie Ihre PIN unten ein, um den Kioskmodus zu verlassen.",
+    "KioskMode_LockDialog_Description": "Bitte bestätigen Sie, dass Sie zum Kioskmodus zurückkehren möchten.",
+    "KioskMode_Unlock_Tooltip": "Kioskmodus verlassen",
+    "KioskMode_Lock_Tooltip": "Kioskmodus starten",
     "RemotePlay_StoreFunctionalityBlocked_Title": "Shop nicht verfügbar",
     "RemotePlay_StoreFunctionalityBlocked_Description": "Der Zugriff auf den Shop ist über diesen Steam-Link-Client nicht verfügbar."
 }

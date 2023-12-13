@@ -2817,6 +2817,7 @@
     "FamilyManagement_Role_0": "Tidak Diketahui",
     "FamilyManagement_Role_1": "Dewasa",
     "FamilyManagement_Role_2": "Anak-anak",
+    "FamilyManagement_Me": "Saya",
     "FamilyManagement_ErrorInternalServerError": "Server internal eror.",
     "FamilyManagement_ErrorNoMatch": "Keluarga ini tidak ada.",
     "FamilyManagement_AccessDenied": "Kamu tidak memiliki izin untuk melakukan tindakan ini.",
@@ -2853,6 +2854,11 @@
     "FamilyManagement_ErrorCancelPurchaseRequest": "Gagal membatalkan permintaan. %1$s",
     "FamilyManagement_ErrorLoadShoppingCart": "Gagal memuat keranjang belanja. %1$s",
     "RequestPurchase_GenericError": "Eror meminta pembelian. %1$s",
+    "KioskMode_Dialog_Title": "Mode Kiosk",
+    "KioskMode_UnlockDialog_Description": "Masukkan PIN di bawah ini untuk keluar dari Mode Kiosk.",
+    "KioskMode_LockDialog_Description": "Mohon konfirmasi bahwa kamu ingin kembali ke Mode Kiosk.",
+    "KioskMode_Unlock_Tooltip": "Keluar dari Mode Kiosk",
+    "KioskMode_Lock_Tooltip": "Masuk Mode Kiosk",
     "RemotePlay_StoreFunctionalityBlocked_Title": "Toko Tidak Tersedia",
     "RemotePlay_StoreFunctionalityBlocked_Description": "Akses ke toko ini tidak tersedia saat dijalankan via Steam Link Client ini."
 }

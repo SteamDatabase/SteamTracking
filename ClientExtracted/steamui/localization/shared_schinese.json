@@ -2818,6 +2818,7 @@
     "FamilyManagement_Role_0": "未知",
     "FamilyManagement_Role_1": "成人",
     "FamilyManagement_Role_2": "儿童",
+    "FamilyManagement_Me": "我",
     "FamilyManagement_ErrorInternalServerError": "内部服务器错误。",
     "FamilyManagement_ErrorNoMatch": "此家庭不存在。",
     "FamilyManagement_AccessDenied": "您没有执行此操作的权限。",
@@ -2854,6 +2855,11 @@
     "FamilyManagement_ErrorCancelPurchaseRequest": "取消请求失败。%1$s",
     "FamilyManagement_ErrorLoadShoppingCart": "载入购物车失败。%1$s",
     "RequestPurchase_GenericError": "请求购买时出错。%1$s",
+    "KioskMode_Dialog_Title": "展台模式",
+    "KioskMode_UnlockDialog_Description": "在下方输入 PIN 码，退出展台模式。",
+    "KioskMode_LockDialog_Description": "请确认您希望回到展台模式。",
+    "KioskMode_Unlock_Tooltip": "退出展台模式",
+    "KioskMode_Lock_Tooltip": "进入展台模式",
     "RemotePlay_StoreFunctionalityBlocked_Title": "商店不可用",
     "RemotePlay_StoreFunctionalityBlocked_Description": "通过此 Steam 流式应用客户端运行时无法访问商店。"
 }

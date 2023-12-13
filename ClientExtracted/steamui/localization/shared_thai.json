@@ -2817,6 +2817,7 @@
     "FamilyManagement_Role_0": "ไม่รู้จัก",
     "FamilyManagement_Role_1": "ผู้ใหญ่",
     "FamilyManagement_Role_2": "ผู้เยาว์",
+    "FamilyManagement_Me": "ฉัน",
     "FamilyManagement_ErrorInternalServerError": "ข้อผิดพลาดภายในของเซิร์ฟเวอร์",
     "FamilyManagement_ErrorNoMatch": "ไม่มีครอบครัวนี้",
     "FamilyManagement_AccessDenied": "คุณไม่มีสิทธิ์ที่จะดำเนินการนี้",
@@ -2853,6 +2854,11 @@
     "FamilyManagement_ErrorCancelPurchaseRequest": "ยกเลิกคำขอไม่สำเร็จ %1$s",
     "FamilyManagement_ErrorLoadShoppingCart": "โหลดรถเข็นไม่สำเร็จ %1$s",
     "RequestPurchase_GenericError": "ข้อผิดพลาดขณะที่ขอสั่งซื้อ %1$s",
+    "KioskMode_Dialog_Title": "โหมดคีออสก์",
+    "KioskMode_UnlockDialog_Description": "กรอกพินของคุณด้านล่างเพื่อออกจากโหมดคีออสก์",
+    "KioskMode_LockDialog_Description": "โปรดยืนยันว่าคุณต้องการจะกลับไปยังโหมดคีออสก์",
+    "KioskMode_Unlock_Tooltip": "ออกจากโหมดคีออสก์",
+    "KioskMode_Lock_Tooltip": "เข้าสู่โหมดคีออสก์",
     "RemotePlay_StoreFunctionalityBlocked_Title": "ร้านค้าไม่พร้อมใช้งาน",
     "RemotePlay_StoreFunctionalityBlocked_Description": "ไม่สามารถเข้าถึงร้านค้าได้ในขณะที่เรียกผ่านไคลเอนต์ Steam Link นี้"
 }

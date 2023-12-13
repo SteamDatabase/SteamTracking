@@ -2817,6 +2817,7 @@
     "FamilyManagement_Role_1": "Felnőtt",
     "FamilyManagement_Role_2": "Gyermek",
     "FamilyManagement_Me": "Én",
+    "FamilyManagement_YourFamily": "A családod",
     "FamilyManagement_ErrorInternalServerError": "Belső szerverhiba.",
     "FamilyManagement_ErrorNoMatch": "Ez a család nem létezik.",
     "FamilyManagement_AccessDenied": "Nincs jogosultságod e művelet végrehajtásához.",
@@ -2853,6 +2854,11 @@
     "FamilyManagement_ErrorCancelPurchaseRequest": "Nem sikerült törölni a kérést. %1$s",
     "FamilyManagement_ErrorLoadShoppingCart": "Kosár betöltése sikertelen. %1$s",
     "RequestPurchase_GenericError": "Hiba vásárlás kérésekor. %1$s",
+    "KioskMode_Dialog_Title": "Bemutató mód",
+    "KioskMode_UnlockDialog_Description": "A Bemutató mód elhagyásához írd be alább a PIN-kódod.",
+    "KioskMode_LockDialog_Description": "Erősítsd meg, hogy vissza szeretnél térni Bemutató módba.",
+    "KioskMode_Unlock_Tooltip": "Kilépés Bemutató módból",
+    "KioskMode_Lock_Tooltip": "Bemutató módba lépés",
     "RemotePlay_StoreFunctionalityBlocked_Title": "Az Áruház nem érhető el",
     "RemotePlay_StoreFunctionalityBlocked_Description": "Az Áruház ezen a Steam Link kliensen keresztül futtatva nem érhető el."
 }

@@ -2817,6 +2817,7 @@
     "FamilyManagement_Role_0": "Neznámý",
     "FamilyManagement_Role_1": "Dospělý",
     "FamilyManagement_Role_2": "Dítě",
+    "FamilyManagement_Me": "Vy",
     "FamilyManagement_ErrorInternalServerError": "Interní chyba serveru.",
     "FamilyManagement_ErrorNoMatch": "Tato rodina neexistuje.",
     "FamilyManagement_AccessDenied": "Pro tuto akci nemáte dostatečná oprávnění.",
@@ -2853,6 +2854,7 @@
     "FamilyManagement_ErrorCancelPurchaseRequest": "Nepodařilo se zrušit žádost. %1$s",
     "FamilyManagement_ErrorLoadShoppingCart": "Nepodařilo se načíst nákupní košík. %1$s",
     "RequestPurchase_GenericError": "Chyba při žádání o nákup. %1$s",
+    "KioskMode_Dialog_Title": "Režim prodejny",
     "RemotePlay_StoreFunctionalityBlocked_Title": "Obchod není dostupný",
     "RemotePlay_StoreFunctionalityBlocked_Description": "Obchod není dostupný, zatímco používáte tuto aplikaci Steam Link."
 }

@@ -2817,6 +2817,7 @@
     "FamilyManagement_Role_0": "Inconnu",
     "FamilyManagement_Role_1": "Adulte",
     "FamilyManagement_Role_2": "Enfant",
+    "FamilyManagement_Me": "Moi",
     "FamilyManagement_ErrorInternalServerError": "Erreur interne du serveur.",
     "FamilyManagement_ErrorNoMatch": "Cette famille n'existe pas.",
     "FamilyManagement_AccessDenied": "Vous n'avez pas la permission d'effectuer cette action.",
@@ -2853,6 +2854,11 @@
     "FamilyManagement_ErrorCancelPurchaseRequest": "Impossible d'annuler la demande. %1$s",
     "FamilyManagement_ErrorLoadShoppingCart": "Impossible de charger le panier. %1$s",
     "RequestPurchase_GenericError": "Erreur lors la demande d'achat. %1$s",
+    "KioskMode_Dialog_Title": "Mode kiosque",
+    "KioskMode_UnlockDialog_Description": "Saisissez votre code PIN ci-dessous pour quitter le mode kiosque.",
+    "KioskMode_LockDialog_Description": "Veuillez confirmer que vous souhaitez revenir au mode kiosque.",
+    "KioskMode_Unlock_Tooltip": "Quitter le mode kiosque",
+    "KioskMode_Lock_Tooltip": "Ouvrir le mode kiosque",
     "RemotePlay_StoreFunctionalityBlocked_Title": "Magasin non disponible",
     "RemotePlay_StoreFunctionalityBlocked_Description": "Le magasin n'est pas accessible au sein du client Steam Link."
 }

@@ -2817,6 +2817,7 @@
     "FamilyManagement_Role_0": "Onbekend",
     "FamilyManagement_Role_1": "Volwassene",
     "FamilyManagement_Role_2": "Kind",
+    "FamilyManagement_Me": "Ik",
     "FamilyManagement_ErrorInternalServerError": "Interne serverfout.",
     "FamilyManagement_ErrorNoMatch": "Dit gezin bestaat niet.",
     "FamilyManagement_AccessDenied": "Je hebt geen toestemming om deze actie uit te voeren.",
@@ -2853,6 +2854,11 @@
     "FamilyManagement_ErrorCancelPurchaseRequest": "Het annuleren van de aanvraag is mislukt. %1$s",
     "FamilyManagement_ErrorLoadShoppingCart": "Het laden van de winkelwagen is mislukt. %1$s",
     "RequestPurchase_GenericError": "Fout bij aankoop aanvragen. %1$s",
+    "KioskMode_Dialog_Title": "Kioskmodus",
+    "KioskMode_UnlockDialog_Description": "Voer hieronder je pincode in om de Kioskmodus af te sluiten.",
+    "KioskMode_LockDialog_Description": "Wil je terugkeren naar de Kioskmodus?",
+    "KioskMode_Unlock_Tooltip": "Kioskmodus afsluiten",
+    "KioskMode_Lock_Tooltip": "Kioskmodus starten",
     "RemotePlay_StoreFunctionalityBlocked_Title": "Winkel niet beschikbaar",
     "RemotePlay_StoreFunctionalityBlocked_Description": "Toegang tot de winkel is niet beschikbaar via deze Steam Link-client."
 }

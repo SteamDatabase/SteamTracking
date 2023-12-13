@@ -1502,12 +1502,12 @@
         VL: () => ie,
         ax: () => _e,
         xb: () => Z,
-        bN: () => L,
+        bN: () => T,
         GB: () => de,
         AT: () => ce,
         wP: () => le,
         dn: () => B,
-        QK: () => T,
+        QK: () => L,
         $Y: () => V,
         sq: () => R,
         RQ: () => O,
@@ -1572,8 +1572,8 @@
       }
       new Set([9, 11, 20, 21, 22, 23, 24, 25, 26, 27, 31, 35]);
       const B = 593110,
-        T = 1675200,
-        L = [B, 766, 221410],
+        L = 1675200,
+        T = [B, 766, 221410],
         R = 39049601,
         O = 41316928,
         H = 4,
@@ -4242,7 +4242,7 @@
               );
         }
       }
-      class T {
+      class L {
         constructor() {
           (this.m_steamIDBroadcast = ""),
             (this.m_ulBroadcastID = ""),
@@ -4262,11 +4262,11 @@
             e == G.Error && console.log(this.m_strStateDescription);
         }
       }
-      (0, n.gn)([s.LO], T.prototype, "m_ulBroadcastID", void 0),
-        (0, n.gn)([s.LO], T.prototype, "m_eWatchState", void 0),
-        (0, n.gn)([s.LO], T.prototype, "m_strStateDescription", void 0),
-        (0, n.gn)([s.aD], T.prototype, "SetState", null);
-      class L {
+      (0, n.gn)([s.LO], L.prototype, "m_ulBroadcastID", void 0),
+        (0, n.gn)([s.LO], L.prototype, "m_eWatchState", void 0),
+        (0, n.gn)([s.LO], L.prototype, "m_strStateDescription", void 0),
+        (0, n.gn)([s.aD], L.prototype, "SetState", null);
+      class T {
         constructor(e) {
           (this.m_steamIDBroadcast = ""),
             (this.m_bInitialized = !1),
@@ -4283,14 +4283,14 @@
             (this.m_steamIDBroadcast = e);
         }
       }
-      (0, n.gn)([s.LO], L.prototype, "m_bInitialized", void 0),
-        (0, n.gn)([s.LO], L.prototype, "m_strTitle", void 0),
-        (0, n.gn)([s.LO], L.prototype, "m_strAppId", void 0),
-        (0, n.gn)([s.LO], L.prototype, "m_nAppID", void 0),
-        (0, n.gn)([s.LO], L.prototype, "m_strAppTitle", void 0),
-        (0, n.gn)([s.LO], L.prototype, "m_strThumbnailUrl", void 0),
-        (0, n.gn)([s.LO], L.prototype, "m_nViewerCount", void 0),
-        (0, n.gn)([s.LO], L.prototype, "m_bIsOnline", void 0);
+      (0, n.gn)([s.LO], T.prototype, "m_bInitialized", void 0),
+        (0, n.gn)([s.LO], T.prototype, "m_strTitle", void 0),
+        (0, n.gn)([s.LO], T.prototype, "m_strAppId", void 0),
+        (0, n.gn)([s.LO], T.prototype, "m_nAppID", void 0),
+        (0, n.gn)([s.LO], T.prototype, "m_strAppTitle", void 0),
+        (0, n.gn)([s.LO], T.prototype, "m_strThumbnailUrl", void 0),
+        (0, n.gn)([s.LO], T.prototype, "m_nViewerCount", void 0),
+        (0, n.gn)([s.LO], T.prototype, "m_bIsOnline", void 0);
       class R {
         constructor() {
           (this.m_eWatchState = G.None),
@@ -4478,10 +4478,10 @@
         }
         GetOrCreateBroadcastInfo(e) {
           if (!e) {
-            return new L("");
+            return new T("");
           }
           if (!this.m_broadcastInfos[e]) {
-            const t = (0, s.LO)(new L(e));
+            const t = (0, s.LO)(new T(e));
             this.m_broadcastInfos[e] = t;
           }
           return this.m_broadcastInfos[e];
@@ -4490,7 +4490,7 @@
           let t = this.m_mapBroadcasts.get(e);
           return (
             t ||
-            ((t = new T()),
+            ((t = new L()),
             (t.m_steamIDBroadcast = e),
             (t.m_eWatchState = G.None),
             this.m_mapBroadcasts.set(e, t),
@@ -5753,34 +5753,36 @@
     1063: (e, t, a) => {
       "use strict";
       a.d(t, {
-        aN: () => I,
-        S6: () => E,
-        FN: () => f,
-        U8: () => y,
-        C3: () => w,
+        aN: () => y,
+        S6: () => I,
+        FN: () => E,
+        U8: () => w,
+        C3: () => b,
+        Fm: () => D,
       });
       var n = a(33940),
-        r = a(52868),
-        i = a.n(r),
-        s = a(59621),
-        o = a(40442),
-        l = a(69678),
-        d = a(47165),
-        c = a(11837),
-        m = a(23801),
-        u = a(85246),
-        p = a(23217),
-        _ = a(25508),
-        h = a(32765),
-        g = a(89526),
+        r = a(40442),
+        i = a(52868),
+        s = a.n(i),
+        o = a(59621),
+        l = a(89526),
+        d = a(69678),
+        c = a(47165),
+        m = a(93414),
+        u = a(58218),
+        p = a(11837),
+        _ = a(23801),
+        h = a(23217),
+        g = a(85246),
         v = a(4306),
-        C = a(93414);
-      var S = a(13345);
-      var f;
-      function E(e, t, a, n = !1) {
+        C = a(25508),
+        S = a(32765),
+        f = a(13345);
+      var E;
+      function I(e, t, a, n = !1) {
         if (a)
           for (let r of a) {
-            if (n ? (0, l.$N)(e, t, r) : (0, l.FR)(e, t, r)) return r;
+            if (n ? (0, d.$N)(e, t, r) : (0, d.FR)(e, t, r)) return r;
           }
       }
       !(function (e) {
@@ -5789,17 +5791,18 @@
           (e.background_mini = "_480x156"),
           (e.capsule_main = "_400x225"),
           (e.spotlight_main = "_1054x230");
-      })(f || (f = {}));
-      class I {
+      })(E || (E = {}));
+      class y {
         constructor() {
           (this.m_mapClanToImages = new Map()),
+            (this.m_mapClanImageLoadPromises = new Map()),
             (this.m_imageListChangeCallback = new Map()),
             (this.m_mapClanImageLoadState = new Map()),
             (this.m_mapImageIDToResolution = new Map()),
             (this.m_curLocImageGroup = null),
             (this.m_curLocImageGroupType = null),
             (this.m_vecClanImageDragListener = new Array()),
-            (0, s.rC)(this);
+            (0, o.rC)(this);
         }
         BHasImageResolution(e) {
           return this.m_mapImageIDToResolution.has(e.imageid);
@@ -5813,7 +5816,7 @@
         GetImageListCallbackForClanAccountID(e) {
           return (
             this.m_imageListChangeCallback.has(e) ||
-              this.m_imageListChangeCallback.set(e, new u.pB()),
+              this.m_imageListChangeCallback.set(e, new g.pB()),
             this.m_imageListChangeCallback.get(e)
           );
         }
@@ -5836,7 +5839,7 @@
           }
         }
         static GetExtensionString(e) {
-          return I.GetExtensionStringForFileType(e.file_type) || ".jpg";
+          return y.GetExtensionStringForFileType(e.file_type) || ".jpg";
         }
         static GetExtensionTypeFromURL(e) {
           return (function (e) {
@@ -5861,10 +5864,10 @@
           })(e);
         }
         static GetHashAndExt(e) {
-          return e.image_hash + I.GetExtensionString(e);
+          return e.image_hash + y.GetExtensionString(e);
         }
         static GetThumbHashAndExt(e) {
-          return e.thumbnail_hash + I.GetExtensionString(e);
+          return e.thumbnail_hash + y.GetExtensionString(e);
         }
         AddClanImageDragListener(e) {
           -1 == this.m_vecClanImageDragListener.indexOf(e) &&
@@ -5882,25 +5885,38 @@
         }
         LoadClanImages(e, t, a) {
           return (0, n.mG)(this, void 0, void 0, function* () {
+            const n = e.GetAccountID();
+            return (
+              (!t && this.m_mapClanImageLoadPromises.has(n)) ||
+                this.m_mapClanImageLoadPromises.set(
+                  n,
+                  this.InternalLoadClanImages(e, t, a),
+                ),
+              this.m_mapClanImageLoadPromises.get(n)
+            );
+          });
+        }
+        InternalLoadClanImages(e, t, a) {
+          return (0, n.mG)(this, void 0, void 0, function* () {
             let n = e.GetAccountID();
             if (
-              ((0, m.X)(e && 0 != n, "ClanSteamID missing:" + e),
+              ((0, _.X)(e && 0 != n, "ClanSteamID missing:" + e),
               e && (!this.m_mapClanToImages.has(n) || t))
             ) {
               let t = {},
                 r = null;
-              const o =
-                h.De.COMMUNITY_BASE_URL +
+              const i =
+                S.De.COMMUNITY_BASE_URL +
                 "/gid/" +
                 e.ConvertTo64BitString() +
                 "/getimages/";
-              r = yield i().get(o, {
+              r = yield s().get(i, {
                 params: t,
                 withCredentials: !0,
                 cancelToken: a ? a.token : null,
               });
               for (let e of r.data.images) e.clanAccountID = n;
-              (0, s.z)(() => {
+              (0, o.z)(() => {
                 this.m_mapClanImageLoadState.set(n, { loaded: !0 }),
                   this.m_mapClanToImages.set(n, r.data.images),
                   this.GetImageListCallbackForClanAccountID(n).Dispatch(
@@ -5922,7 +5938,7 @@
           return t || new Array();
         }
         GetFilteredClanImages(e, t) {
-          let a = y.GetClanImages(e);
+          let a = w.GetClanImages(e);
           return this.GetFilteredClanImagesList(a, t);
         }
         GetFilteredClanImagesList(e, t) {
@@ -5959,22 +5975,22 @@
         }
         DeleteClanImageByID(e, t) {
           return (0, n.mG)(this, void 0, void 0, function* () {
-            let a = { sessionid: h.De.SESSIONID, imageid: t },
+            let a = { sessionid: S.De.SESSIONID, imageid: t },
               n = e.GetAccountID(),
-              r = yield i().get(
-                h.De.COMMUNITY_BASE_URL +
+              r = yield s().get(
+                S.De.COMMUNITY_BASE_URL +
                   "/gid/" +
                   e.ConvertTo64BitString() +
                   "/deleteimage/",
                 { params: a },
               );
             if (!r || 200 != r.status || 1 != r.data.success) return r.data;
-            let s = this.m_mapClanToImages.get(n),
-              o = s.findIndex((e, a, n) => e.imageid == t);
+            let i = this.m_mapClanToImages.get(n),
+              o = i.findIndex((e, a, n) => e.imageid == t);
             return (
               o >= 0 &&
-                (s.splice(o, 1),
-                this.GetImageListCallbackForClanAccountID(n).Dispatch([...s])),
+                (i.splice(o, 1),
+                this.GetImageListCallbackForClanAccountID(n).Dispatch([...i])),
               r.data
             );
           });
@@ -5991,25 +6007,25 @@
         static GetExtensionStringFromHashAndExt(e) {
           return e.substring(e.lastIndexOf("."));
         }
-        static GenerateArtworkURLFromHashAndExtensions(e, t, a = f.full, n, r) {
-          if (a != f.full || n) {
-            let i = t.substring(t.lastIndexOf(".")),
-              s = t.substring(0, t.length - i.length);
-            return n && "localized_image_group" == r
-              ? (0, S.OL)() +
+        static GenerateArtworkURLFromHashAndExtensions(e, t, a = E.full, n, i) {
+          if (a != E.full || n) {
+            let s = t.substring(t.lastIndexOf(".")),
+              o = t.substring(0, t.length - s.length);
+            return n && "localized_image_group" == i
+              ? (0, f.OL)() +
                   e.GetAccountID() +
                   "/" +
-                  s +
+                  o +
                   "/" +
-                  (0, o.eV)((0, o.j_)(n)) +
-                  i
-              : (0, S.OL)() + e.GetAccountID() + "/" + s + a + i;
+                  (0, r.eV)((0, r.j_)(n)) +
+                  s
+              : (0, f.OL)() + e.GetAccountID() + "/" + o + a + s;
           }
-          return (0, S.OL)() + e.GetAccountID() + "/" + t;
+          return (0, f.OL)() + e.GetAccountID() + "/" + t;
         }
         static GenerateEditableArtworkURLFromHashAndExtension(e, t, a) {
           let n =
-            h.De.COMMUNITY_BASE_URL +
+            S.De.COMMUNITY_BASE_URL +
             "gid/" +
             e.ConvertTo64BitString() +
             "/showclanimage/?image_hash_and_ext=" +
@@ -6030,8 +6046,8 @@
         }
         AsyncGetImageResolution(e, t, a, r, i) {
           return (0, n.mG)(this, void 0, void 0, function* () {
-            const n = t + I.GetExtensionString({ file_type: a }),
-              s = I.GenerateEditableArtworkURLFromHashAndExtension(e, n);
+            const n = t + y.GetExtensionString({ file_type: a }),
+              s = y.GenerateEditableArtworkURLFromHashAndExtension(e, n);
             return yield this.AsyncGetImageResolutionInternal(s, r, i);
           });
         }
@@ -6046,14 +6062,14 @@
                     "Load fail on url " +
                     e +
                     " with error: " +
-                    (0, p.l)(t).strErrorMsg),
+                    (0, h.l)(t).strErrorMsg),
                   console.error(n.err_msg)),
                   (n.success = 2);
               }),
               (r.onload = () => {
                 (n.width = r.width),
                   (n.height = r.height),
-                  (0, m.X)(
+                  (0, _.X)(
                     n.width > 0 && n.height > 0,
                     "unexpected image resolution discovered for strURL: " + e,
                   ),
@@ -6065,7 +6081,7 @@
               });
             let i = 0;
             for (; void 0 === n.success && i < 100; )
-              yield (0, _._R)(100), (i += 1);
+              yield (0, C._R)(100), (i += 1);
             return (
               i >= 100 &&
                 ((n.success = 16),
@@ -6085,7 +6101,7 @@
                   "Load fail on url " +
                   a +
                   " with error: " +
-                  (0, p.l)(e).strErrorMsg),
+                  (0, h.l)(e).strErrorMsg),
                   console.error(n);
               }),
               (l.onload = () => {
@@ -6096,7 +6112,7 @@
                       "Load fail on url " +
                       t +
                       " with error: " +
-                      (0, p.l)(e).strErrorMsg),
+                      (0, h.l)(e).strErrorMsg),
                       console.error(n);
                   }),
                   (e.onload = () => {
@@ -6120,7 +6136,7 @@
               }),
               (l.src = a);
             let d = 0;
-            for (; void 0 === o && d < 100; ) yield (0, _._R)(100), (d += 1);
+            for (; void 0 === o && d < 100; ) yield (0, C._R)(100), (d += 1);
             if (
               (d >= 100 &&
                 void 0 === o &&
@@ -6128,22 +6144,22 @@
               n)
             )
               throw (console.log(n), { success: 2, err_msg: n });
-            let c = new C.S(e),
-              m = yield c.UploadFile(o, r);
-            return m.image_hash + I.GetExtensionString(m);
+            let c = new m.S(e),
+              u = yield c.UploadFile(o, r);
+            return u.image_hash + y.GetExtensionString(u);
           });
         }
         BDoesClanImageFileExistsOnCDNOrOrigin(e, t, a, r) {
           return (0, n.mG)(this, void 0, void 0, function* () {
             let n =
-                h.De.COMMUNITY_BASE_URL +
+                S.De.COMMUNITY_BASE_URL +
                 "gid/" +
                 t.ConvertTo64BitString() +
                 "/hasclanimagefile",
-              s = { image_hash_and_ext: a, lang: "" + r };
+              i = { image_hash_and_ext: a, lang: "" + r };
             return (
               1 ==
-              (yield i().get(n, { params: s, cancelToken: e && e.token })).data
+              (yield s().get(n, { params: i, cancelToken: e && e.token })).data
                 .success
             );
           });
@@ -6157,7 +6173,7 @@
               localized_images: [],
             }),
             (this.m_curLocImageGroupType = t),
-            (this.m_curLocImageGroup.localized_images = (0, c.LG)(
+            (this.m_curLocImageGroup.localized_images = (0, p.LG)(
               this.m_curLocImageGroup.localized_images,
               31,
               null,
@@ -6174,7 +6190,7 @@
           let a = this.m_curLocImageGroup.primaryImage;
           return this.m_curLocImageGroup.localized_images[t]
             ? this.m_curLocImageGroup.localized_images[t]
-            : I.GenerateArtworkURLFromHashAndExtensions(e, I.GetHashAndExt(a));
+            : y.GenerateArtworkURLFromHashAndExtensions(e, y.GetHashAndExt(a));
         }
         GetLocalizedImageGroupForEditAsImgArray(e) {
           return this.GetAllLocalizedGroupImages();
@@ -6182,20 +6198,20 @@
         DetermineAvailableLocalizationForGroup(e) {
           return (0, n.mG)(this, void 0, void 0, function* () {
             let t = this.m_curLocImageGroup.primaryImage,
-              a = d.K.InitFromClanID(t.clanAccountID),
-              n = I.GetHashAndExt(t),
+              a = c.K.InitFromClanID(t.clanAccountID),
+              n = y.GetHashAndExt(t),
               r = [];
             for (let t = 0; t < 31; ++t)
               r.push(this.BDoesClanImageFileExistsOnCDNOrOrigin(e, a, n, t));
             let i = yield Promise.all(r);
-            (0, s.z)(() => {
+            (0, o.z)(() => {
               for (let e = 0; e < 31; ++e)
                 i[e] &&
                   (this.m_curLocImageGroup.localized_images[e] =
-                    I.GenerateArtworkURLFromHashAndExtensions(
+                    y.GenerateArtworkURLFromHashAndExtensions(
                       a,
                       n,
-                      f.full,
+                      E.full,
                       e,
                       this.m_curLocImageGroupType,
                     ));
@@ -6205,10 +6221,10 @@
         SetLocalizedImageGroupAtLang(e, t, a) {
           this.m_curLocImageGroup &&
             (this.m_curLocImageGroup.localized_images[e] = a
-              ? I.GenerateArtworkURLFromHashAndExtensions(
+              ? y.GenerateArtworkURLFromHashAndExtensions(
                   t,
                   a,
-                  f.full,
+                  E.full,
                   e,
                   this.m_curLocImageGroupType,
                 )
@@ -6217,13 +6233,13 @@
         AddLocalizeImageUploaded(e, t) {
           let a = this.m_curLocImageGroup.primaryImage;
           if (a.image_hash == e) {
-            let e = d.K.InitFromClanID(a.clanAccountID),
-              n = I.GetHashAndExt(a);
+            let e = c.K.InitFromClanID(a.clanAccountID),
+              n = y.GetHashAndExt(a);
             this.m_curLocImageGroup.localized_images[t] =
-              I.GenerateArtworkURLFromHashAndExtensions(
+              y.GenerateArtworkURLFromHashAndExtensions(
                 e,
                 n,
-                f.full,
+                E.full,
                 t,
                 this.m_curLocImageGroupType,
               );
@@ -6237,13 +6253,26 @@
           );
         }
       }
-      (0, n.gn)([s.LO], I.prototype, "m_mapClanToImages", void 0),
-        (0, n.gn)([s.LO], I.prototype, "m_mapClanImageLoadState", void 0),
-        (0, n.gn)([s.LO], I.prototype, "m_curLocImageGroup", void 0);
-      const y = new I();
-      function w(e) {
-        const [t, a] = (0, g.useState)(y.GetClanImagesByAccount(e));
-        return (0, v.Qg)(y.GetImageListCallbackForClanAccountID(e), a), t;
+      (0, n.gn)([o.LO], y.prototype, "m_mapClanToImages", void 0),
+        (0, n.gn)([o.LO], y.prototype, "m_mapClanImageLoadState", void 0),
+        (0, n.gn)([o.LO], y.prototype, "m_curLocImageGroup", void 0);
+      const w = new y();
+      function b(e) {
+        const [t, a] = (0, l.useState)(w.GetClanImagesByAccount(e));
+        return (0, v.Qg)(w.GetImageListCallbackForClanAccountID(e), a), t;
+      }
+      function D(e) {
+        const t = c.K.InitFromClanID(e),
+          a = (0, u.T)("useLoadClanImages"),
+          [n, r] = (0, l.useState)(() => w.BHasLoadedClanImages(t));
+        return (
+          (0, l.useEffect)(() => {
+            const t = c.K.InitFromClanID(e);
+            w.BHasLoadedClanImages(t) ||
+              w.LoadClanImages(t, !1, a).then(() => r(!0));
+          }, [e, a]),
+          n
+        );
       }
     },
     83373: (e, t, a) => {
@@ -7242,7 +7271,7 @@
     },
     62505: (e, t, a) => {
       "use strict";
-      a.d(t, { EV: () => R, vY: () => L, PC: () => T });
+      a.d(t, { EV: () => R, vY: () => T, PC: () => L });
       var n,
         r = a(33940),
         i = a(52868),
@@ -8022,7 +8051,7 @@
         (0, r.gn)([o.Fl.struct], G.prototype, "filteredAndCheckedEvents", null);
       const k = o.LO.box(null),
         B = new Map();
-      function T(e, t) {
+      function L(e, t) {
         let a = "";
         return (
           e.appids &&
@@ -8050,8 +8079,8 @@
           a
         );
       }
-      function L() {
-        return null == k.get() && T({}), B.get(k.get());
+      function T() {
+        return null == k.get() && L({}), B.get(k.get());
       }
       function R() {
         return null !== k;
@@ -10944,7 +10973,7 @@
     },
     53913: (e, t, a) => {
       "use strict";
-      a.d(t, { Rd: () => O, _R: () => H, Ws: () => L });
+      a.d(t, { Rd: () => O, _R: () => H, Ws: () => T });
       var n = a(89526),
         r = a(44026),
         i = (a(17589), a(51438)),
@@ -11306,8 +11335,8 @@
         G = a(19304),
         k = a(60161),
         B = a(81349),
-        T = a(57742);
-      function L(e) {
+        L = a(57742);
+      function T(e) {
         var t;
         const { storeItem: a } = e;
         if (0 !== a.GetStoreItemType()) return null;
@@ -11328,7 +11357,7 @@
                   e.stopPropagation(),
                   (t = (0, k.RA)(e)),
                   (r = a.GetAppID()),
-                  (0, T.AM)(n.createElement(R, { nAppID: r }), t);
+                  (0, L.AM)(n.createElement(R, { nAppID: r }), t);
               },
             },
             n.createElement(
@@ -11961,7 +11990,7 @@
     },
     79586: (e, t, a) => {
       "use strict";
-      a.d(t, { C4: () => T, SE: () => L, Sm: () => k });
+      a.d(t, { C4: () => L, SE: () => T, Sm: () => k });
       var n = a(33940),
         r = a(88464),
         i = a(89526),
@@ -12102,7 +12131,7 @@
               )
             : null;
         },
-        T = (e) => {
+        L = (e) => {
           const [t, a] = i.useState(!1),
             { clanAccountID: n, className: r } = e,
             d = s.K.InitFromClanID(n),
@@ -12148,7 +12177,7 @@
             },
           });
         },
-        L = (e) => {
+        T = (e) => {
           const [t, a] = i.useState(!1),
             { appid: n, className: r } = e,
             s = l.jg.Get().BFollowsApp(n),
@@ -12221,8 +12250,8 @@
         G = a(33406),
         k = a(701),
         B = a(84343),
-        T = a(23801),
-        L = a(85246),
+        L = a(23801),
+        T = a(85246),
         R = a(19304),
         O = a(14826),
         H = a(4306),
@@ -12266,7 +12295,7 @@
           [o, d] = (0, l.useState)([]),
           c = (0, l.useRef)(0),
           m = (0, H.NW)(),
-          [u] = l.useState(new L.Ar()),
+          [u] = l.useState(new T.Ar()),
           p = (0, l.useCallback)(() => {
             if ((null == o ? void 0 : o.length) > 0) {
               const e = o[c.current].nDurationMs;
@@ -12357,7 +12386,7 @@
                   : (null == o ? void 0 : o.length) && p()
                 : ((i.current = n),
                   2 == n.GetStoreItemType() || 1 == n.GetStoreItemType()
-                    ? ((0, T.X)(
+                    ? ((0, L.X)(
                         n.GetIncludedAppIDs().length > 0,
                         "expected included apps " +
                           n.GetID() +
@@ -13269,8 +13298,8 @@
         G = a(33406),
         k = a(20983),
         B = a(42317),
-        T = a(54297),
-        L = a(19304),
+        L = a(54297),
+        T = a(19304),
         R = a(14826),
         O = a(32765),
         H = a(71161),
@@ -13295,7 +13324,7 @@
               artworkStoreItem: k,
             } = (0, I.Q)(e),
             {
-              bShowDemoButton: T,
+              bShowDemoButton: L,
               bHidePrice: V,
               bUseSubscriptionLayout: F,
               bHidePlatforms: P,
@@ -13337,7 +13366,7 @@
             r.createElement(
               o.s,
               {
-                className: (0, L.Z)({
+                className: (0, T.Z)({
                   [M().StoreSaleWidgetOuterContainer]: !0,
                   [M().AllowTwoLineHeader]: U,
                 }),
@@ -13352,7 +13381,7 @@
                 s.Ks,
                 Object.assign(
                   {
-                    className: (0, L.Z)(
+                    className: (0, T.Z)(
                       M().StoreSaleWidgetContainer,
                       M().SaleItemDefaultCapsuleDisplay,
                     ),
@@ -13362,7 +13391,7 @@
                 ),
                 r.createElement(
                   "div",
-                  { className: (0, L.Z)(M().StoreSaleWidgetHalfLeft) },
+                  { className: (0, T.Z)(M().StoreSaleWidgetHalfLeft) },
                   r.createElement(
                     "a",
                     {
@@ -13388,7 +13417,7 @@
                 r.createElement(
                   "div",
                   {
-                    className: (0, L.Z)(
+                    className: (0, T.Z)(
                       M().StoreSaleWidgetRight,
                       ne ? M().Bundle : "",
                     ),
@@ -13396,7 +13425,7 @@
                   Boolean(ie && !X) &&
                     r.createElement(N.RJ, {
                       appID: _.id,
-                      classOverride: (0, L.Z)(
+                      classOverride: (0, T.Z)(
                         C().WishlistButtonNotTop,
                         "WishlistButton",
                       ),
@@ -13415,7 +13444,7 @@
                       r.createElement(
                         "div",
                         {
-                          className: (0, L.Z)(
+                          className: (0, T.Z)(
                             M().StoreSaleWidgetTitle,
                             "StoreSaleWidgetTitle",
                           ),
@@ -13473,7 +13502,7 @@
                     r.createElement(
                       "div",
                       {
-                        className: (0, L.Z)(
+                        className: (0, T.Z)(
                           M().StoreSaleWidgetShortDesc,
                           "StoreSaleWidgetShortDesc",
                         ),
@@ -13500,7 +13529,7 @@
                           ? r.createElement(G.r, { appid: _.id, bIsMuted: n })
                           : r.createElement(y.x1, {
                               info: h,
-                              bShowDemoButton: T,
+                              bShowDemoButton: L,
                               bHidePrice: V,
                               bHideWishlistButton: oe,
                               bShowDeckCompatibilityDialog: Z,
@@ -13619,7 +13648,7 @@
             r.createElement(
               "div",
               {
-                className: (0, L.Z)(
+                className: (0, T.Z)(
                   M().CapsuleBottomBar,
                   "CapsuleBottomBar",
                   a && M().Muted,
@@ -13643,9 +13672,9 @@
             [i, s] = (0, p.KU)(t);
           return r.createElement(
             "div",
-            { className: (0, L.Z)(M().BottomCreatorRow, a && M().Muted, n) },
+            { className: (0, T.Z)(M().BottomCreatorRow, a && M().Muted, n) },
             r.createElement("img", {
-              className: (0, L.Z)(M().CreatorLogo),
+              className: (0, T.Z)(M().CreatorLogo),
               src: i ? (0, d.U)(null, "medium") : s.avatar_medium_url,
             }),
             r.createElement(
@@ -13681,11 +13710,11 @@
             (l = M().HeaderCapsuleImageContainer);
         return r.createElement(
           "div",
-          { className: (0, L.Z)(l, "CapsuleImageCtn") },
-          r.createElement(T.J, {
+          { className: (0, T.Z)(l, "CapsuleImageCtn") },
+          r.createElement(L.J, {
             lazyLoad: !0,
             srcs: i,
-            className: (0, L.Z)(M().CapsuleImage),
+            className: (0, T.Z)(M().CapsuleImage),
             width: s,
             height: o,
             alt: n.GetName(),
@@ -15056,11 +15085,11 @@
           case o.FX.LeftStick:
             return s.createElement(R, { bIsKnockout: a, className: t });
           case o.FX.RightStick:
-            return s.createElement(L, { bIsKnockout: a, className: t });
+            return s.createElement(T, { bIsKnockout: a, className: t });
           case o.FX.LeftStickClick:
             return s.createElement(B, { bIsKnockout: a, className: t });
           case o.FX.RightStickClick:
-            return s.createElement(T, { bIsKnockout: a, className: t });
+            return s.createElement(L, { bIsKnockout: a, className: t });
           case o.FX.LeftTrackpad:
             return s.createElement(F, { bIsKnockout: a, className: t });
           case o.FX.RightTrackpad:
@@ -15938,7 +15967,7 @@
               }),
             );
       }
-      function T(e) {
+      function L(e) {
         var { bIsKnockout: t } = e,
           a = (0, i._T)(e, ["bIsKnockout"]);
         return t
@@ -16007,7 +16036,7 @@
               }),
             );
       }
-      function L(e) {
+      function T(e) {
         var { bIsKnockout: t } = e,
           a = (0, i._T)(e, ["bIsKnockout"]);
         return t

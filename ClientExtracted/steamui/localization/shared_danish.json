@@ -2817,6 +2817,7 @@
     "FamilyManagement_Role_0": "Ukendt",
     "FamilyManagement_Role_1": "Voksen",
     "FamilyManagement_Role_2": "Barn",
+    "FamilyManagement_Me": "Mig",
     "FamilyManagement_ErrorInternalServerError": "Intern serverfejl.",
     "FamilyManagement_ErrorNoMatch": "Denne familie findes ikke.",
     "FamilyManagement_AccessDenied": "Du har ikke tilladelse til at udføre denne handling.",
@@ -2853,6 +2854,11 @@
     "FamilyManagement_ErrorCancelPurchaseRequest": "Kunne ikke annullere anmodningen. %1$s",
     "FamilyManagement_ErrorLoadShoppingCart": "Kunne ikke indlæse indkøbskurven. %1$s",
     "RequestPurchase_GenericError": "Fejl ved anmodning om køb. %1$s",
+    "KioskMode_Dialog_Title": "Kiosktilstand",
+    "KioskMode_UnlockDialog_Description": "Indtast din pinkode nedenfor for at afslutte kiosktilstand.",
+    "KioskMode_LockDialog_Description": "Bekræft, at du ønsker at vende tilbage til kiosktilstand.",
+    "KioskMode_Unlock_Tooltip": "Afslut kiosktilstand",
+    "KioskMode_Lock_Tooltip": "Start kiosktilstand",
     "RemotePlay_StoreFunctionalityBlocked_Title": "Butik ikke tilgængelig",
     "RemotePlay_StoreFunctionalityBlocked_Description": "Butikken er ikke tilgængelig, mens der køres via denne Steam Link-klient."
 }

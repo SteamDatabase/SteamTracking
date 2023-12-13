@@ -2817,6 +2817,7 @@
     "FamilyManagement_Role_0": "necunoscut",
     "FamilyManagement_Role_1": "adult",
     "FamilyManagement_Role_2": "copil",
+    "FamilyManagement_Me": "Eu",
     "FamilyManagement_ErrorInternalServerError": "Eroare internă de server.",
     "FamilyManagement_ErrorNoMatch": "Acest grup familial nu există.",
     "FamilyManagement_AccessDenied": "Nu ai permisiunea de a efectua acestă acțiune.",
@@ -2853,6 +2854,11 @@
     "FamilyManagement_ErrorCancelPurchaseRequest": "Solicitarea nu a putut fi anulată. %1$s",
     "FamilyManagement_ErrorLoadShoppingCart": "Coșul de cumpărături nu a putut fi încărcat. %1$s",
     "RequestPurchase_GenericError": "A apărut o eroare la solicitarea achiziției. %1$s",
+    "KioskMode_Dialog_Title": "Modul chioșc",
+    "KioskMode_UnlockDialog_Description": "Introdu-ți PIN-ul mai jos pentru a ieși din modul chioșc.",
+    "KioskMode_LockDialog_Description": "Te rugăm să confirmi că dorești să revii în modul chioșc.",
+    "KioskMode_Unlock_Tooltip": "Închide modul chioșc",
+    "KioskMode_Lock_Tooltip": "Intră în modul chioșc",
     "RemotePlay_StoreFunctionalityBlocked_Title": "Magazinul nu este disponibil",
     "RemotePlay_StoreFunctionalityBlocked_Description": "Accesul la magazin nu este disponibil cât timp rulezi o transmisiune prin acest client Steam Link."
 }

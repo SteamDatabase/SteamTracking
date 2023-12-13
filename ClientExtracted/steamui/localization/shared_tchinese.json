@@ -2817,6 +2817,7 @@
     "FamilyManagement_Role_0": "未知",
     "FamilyManagement_Role_1": "成人",
     "FamilyManagement_Role_2": "孩童",
+    "FamilyManagement_Me": "我",
     "FamilyManagement_ErrorInternalServerError": "內部伺服器錯誤。",
     "FamilyManagement_ErrorNoMatch": "此親友群組不存在。",
     "FamilyManagement_AccessDenied": "您並無執行此動作的權限。",
@@ -2853,6 +2854,11 @@
     "FamilyManagement_ErrorCancelPurchaseRequest": "取消請求失敗。%1$s",
     "FamilyManagement_ErrorLoadShoppingCart": "無法載入購物車。%1$s",
     "RequestPurchase_GenericError": "購買請求出現錯誤。%1$s",
+    "KioskMode_Dialog_Title": "Kiosk 模式",
+    "KioskMode_UnlockDialog_Description": "請於下方輸入 PIN 碼以退出 Kiosk 模式。",
+    "KioskMode_LockDialog_Description": "請確認您是否要返回 Kiosk 模式。",
+    "KioskMode_Unlock_Tooltip": "退出 Kiosk 模式",
+    "KioskMode_Lock_Tooltip": "進入 Kiosk 模式",
     "RemotePlay_StoreFunctionalityBlocked_Title": "商店不可用",
     "RemotePlay_StoreFunctionalityBlocked_Description": "透過此 Steam 串流用戶端執行時無法使用商店。"
 }

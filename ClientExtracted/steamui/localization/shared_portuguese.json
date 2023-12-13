@@ -2818,6 +2818,7 @@
     "FamilyManagement_Role_1": "Adulto",
     "FamilyManagement_Role_2": "Criança",
     "FamilyManagement_Me": "Eu",
+    "FamilyManagement_YourFamily": "A tua família",
     "FamilyManagement_ErrorInternalServerError": "Erro interno do servidor.",
     "FamilyManagement_ErrorNoMatch": "Esta família não existe.",
     "FamilyManagement_AccessDenied": "Não tens permissão para realizar esta ação.",
@@ -2854,6 +2855,11 @@
     "FamilyManagement_ErrorCancelPurchaseRequest": "Falha ao cancelar o pedido. %1$s",
     "FamilyManagement_ErrorLoadShoppingCart": "Falha ao carregar o carrinho de compras. %1$s",
     "RequestPurchase_GenericError": "Erro ao pedir compra. %1$s",
+    "KioskMode_Dialog_Title": "Modo quiosque",
+    "KioskMode_UnlockDialog_Description": "Introduz o teu PIN abaixo para saíres do modo quiosque.",
+    "KioskMode_LockDialog_Description": "Confirma que gostarias de voltar ao modo quiosque.",
+    "KioskMode_Unlock_Tooltip": "Sair do modo quiosque",
+    "KioskMode_Lock_Tooltip": "Entrar no modo quiosque",
     "RemotePlay_StoreFunctionalityBlocked_Title": "Loja indisponível",
     "RemotePlay_StoreFunctionalityBlocked_Description": "O acesso à loja está indisponível neste cliente do Steam Link."
 }

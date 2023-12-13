@@ -735,7 +735,7 @@
     "Friend_Kick_Day": "Un giorno (24 ore)",
     "Friend_Kick_Week": "Una settimana",
     "Friend_Kick_Confirm": "Sei sicuro di voler espellere %1$s?",
-    "Friend_Chat_Typing": "%1$s sta scrivendo un messaggio...",
+    "Friend_Chat_Typing": "%1$s sta scrivendo...",
     "Friend_Chat_Blocked": "Hai bloccato questo utente.",
     "Friend_Chat_CommunityBanned": "Questo utente è stato bannato da un amministratore della Comunità.",
     "Friend_Chat_OpenError_Blocked": "Comunicazione bloccata",

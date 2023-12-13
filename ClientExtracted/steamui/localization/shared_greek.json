@@ -2817,6 +2817,7 @@
     "FamilyManagement_Role_0": "Άγνωστο",
     "FamilyManagement_Role_1": "Ενήλικας",
     "FamilyManagement_Role_2": "Παιδί",
+    "FamilyManagement_Me": "Εγώ",
     "FamilyManagement_ErrorInternalServerError": "Εσωτερικό σφάλμα διακομιστή.",
     "FamilyManagement_ErrorNoMatch": "Αυτή η οικογένεια δεν υπάρχει.",
     "FamilyManagement_AccessDenied": "Δεν έχετε άδεια να εκτελέσετε αυτή την ενέργεια.",
@@ -2853,6 +2854,11 @@
     "FamilyManagement_ErrorCancelPurchaseRequest": "Αποτυχία ακύρωσης του αιτήματος. %1$s",
     "FamilyManagement_ErrorLoadShoppingCart": "Αποτυχία φόρτωσης του καλαθιού αγοράς. %1$s",
     "RequestPurchase_GenericError": "Σφάλμα αιτήματος αγοράς. %1$s",
+    "KioskMode_Dialog_Title": "Λειτουργία έκθεσης",
+    "KioskMode_UnlockDialog_Description": "Εισαγάγετε το PIN σας παρακάτω για τερματισμό της λειτουργίας έκθεσης.",
+    "KioskMode_LockDialog_Description": "Επιβεβαιώστε ότι θέλετε να επιστρέψετε στη λειτουργία έκθεσης.",
+    "KioskMode_Unlock_Tooltip": "Έξοδος από λειτουργία έκθεσης",
+    "KioskMode_Lock_Tooltip": "Είσοδος σε λειτουργία έκθεσης",
     "RemotePlay_StoreFunctionalityBlocked_Title": "Το Κατάστημα δεν είναι διαθέσιμο",
     "RemotePlay_StoreFunctionalityBlocked_Description": "Δεν είναι δυνατή η πρόσβαση στο Κατάστημα μέσω αυτής της εφαρμογής Steam Link."
 }

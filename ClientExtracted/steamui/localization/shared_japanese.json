@@ -2817,6 +2817,8 @@
     "FamilyManagement_Role_0": "不明",
     "FamilyManagement_Role_1": "大人",
     "FamilyManagement_Role_2": "子ども",
+    "FamilyManagement_Me": "自分",
+    "FamilyManagement_YourFamily": "ファミリー",
     "FamilyManagement_ErrorInternalServerError": "内部サーバーエラー。",
     "FamilyManagement_ErrorNoMatch": "このファミリーは存在しません。",
     "FamilyManagement_AccessDenied": "このアクションを行う権限がありません。",
@@ -2853,6 +2855,11 @@
     "FamilyManagement_ErrorCancelPurchaseRequest": "リクエストの取り消しに失敗しました。%1$s",
     "FamilyManagement_ErrorLoadShoppingCart": "ショッピングカートの読み込みに失敗しました。%1$s",
     "RequestPurchase_GenericError": "購入リクエストエラー。%1$s",
+    "KioskMode_Dialog_Title": "キオスクモード",
+    "KioskMode_UnlockDialog_Description": "キオスクモードを終了するには以下にPINを入力してください。",
+    "KioskMode_LockDialog_Description": "キオスクモードに戻ってよろしいですか？",
+    "KioskMode_Unlock_Tooltip": "キオスクモードを終了",
+    "KioskMode_Lock_Tooltip": "キオスクモードを開始",
     "RemotePlay_StoreFunctionalityBlocked_Title": "ストアはご利用いただけません",
     "RemotePlay_StoreFunctionalityBlocked_Description": "Steamリンククライアント経由で実行中は、ストアにアクセスできません。"
 }
