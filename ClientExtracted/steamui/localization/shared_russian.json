@@ -2818,6 +2818,7 @@
     "FamilyManagement_Role_1": "Взрослый",
     "FamilyManagement_Role_2": "Ребёнок",
     "FamilyManagement_Me": "Я",
+    "FamilyManagement_YourFamily": "Ваша семейная группа",
     "FamilyManagement_ErrorInternalServerError": "Внутренняя ошибка сервера.",
     "FamilyManagement_ErrorNoMatch": "Такой семейной группы не существует.",
     "FamilyManagement_AccessDenied": "У вас нет прав на это действие.",

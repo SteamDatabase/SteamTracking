@@ -1076,6 +1076,27 @@
         return n ? null : r;
       }
     },
+    93908: (e, t, a) => {
+      "use strict";
+      a.d(t, { Jr: () => l, Mr: () => o, tk: () => m });
+      var n = a(89526),
+        r = a(701),
+        i = a(16826),
+        s = a(32765);
+      function l() {
+        return (0, s.id)()
+          ? n.createElement(i.MCw, null)
+          : n.createElement(r.JrY, null);
+      }
+      function o() {
+        return n.createElement(r.MrB, null);
+      }
+      function m() {
+        return (0, s.id)()
+          ? n.createElement(i.tkI, null)
+          : n.createElement(r.j5H, null);
+      }
+    },
     87178: (e, t, a) => {
       "use strict";
       a.d(t, { j: () => s });
@@ -1748,7 +1769,7 @@
         A = a(47165),
         G = a(25508);
       const B = 5;
-      class N {
+      class f {
         GetRawStats() {
           return this.m_allStats;
         }
@@ -2028,8 +2049,8 @@
           return r;
         }
       }
-      (0, l.gn)([I.LO], N.prototype, "m_privacyState", void 0);
-      const f = "0px 0px 100% 0px";
+      (0, l.gn)([I.LO], f.prototype, "m_privacyState", void 0);
+      const N = "0px 0px 100% 0px";
       var w = a(92616),
         k = a(85251),
         b = a(11195),
@@ -2061,7 +2082,7 @@
                         ? void 0
                         : a.length),
                   ),
-                new N(
+                new f(
                   n,
                   this.LoadFromPageConfigGlobalPercentile(t),
                   this.LoadFromPageConfigGlobalDistribution(t),
@@ -2075,7 +2096,7 @@
               this.m_SteamInterface.GetServiceTransport(),
               r,
             );
-            return new N(
+            return new f(
               i.Body().stats().toObject(),
               i.Body().percentiles().toObject(),
               i.Body().distribution().toObject(),
@@ -2662,8 +2683,8 @@
         );
       }
       var Be = a(98009),
-        Ne = a(85886),
-        fe = a(3991),
+        fe = a(85886),
+        Ne = a(3991),
         we = a(43068),
         ke = a(72120),
         be = a(79190),
@@ -2835,7 +2856,7 @@
           ),
           _ =
             ((null == l ? void 0 : l.GetAppID()) || null == l || l.GetID(),
-            (0, Ne.Ds)(
+            (0, fe.Ds)(
               null == l ? void 0 : l.GetStoreItemType(),
               null == l ? void 0 : l.GetAppType(),
             ),
@@ -2853,7 +2874,7 @@
             },
           },
           n.createElement(
-            fe.zw,
+            Ne.zw,
             { appid: l.GetAppID() },
             n.createElement(
               "div",
@@ -3248,11 +3269,11 @@
           C = h > 0 && E > 0 && "cn" !== o.L7.country_code.toLowerCase();
         const [I, A] = n.useState(!1),
           [G, B] = n.useState(!1),
-          [N, f] = n.useState(!1),
+          [f, N] = n.useState(!1),
           w = n.useCallback(
             (e) =>
               (0, l.mG)(this, void 0, void 0, function* () {
-                e && (A(!0), B(!0), f(!0));
+                e && (A(!0), B(!0), N(!0));
               }),
             [],
           ),
@@ -3274,7 +3295,7 @@
             endValue: h,
             maxValue: (100 * h) / E,
             duration: 2e3,
-            startAnimation: N,
+            startAnimation: f,
             delay: 3e3,
           });
         return n.createElement(
@@ -3860,7 +3881,7 @@
           ? n.createElement(
               It.Y,
               { rootMargin: "0px 0px 100% 0px" },
-              n.createElement(Nt, {
+              n.createElement(ft, {
                 accountID: t.GetAccountID(),
                 year: t.GetYear(),
               }),
@@ -3868,7 +3889,7 @@
           : null;
       }
       const Bt = 50;
-      function Nt(e) {
+      function ft(e) {
         const { accountID: t, year: a } = e,
           { isLoading: r, rgFriendAccounts: i } = (function (e, t) {
             const { data: a, isLoading: n } = (0, u.useQuery)(
@@ -3910,7 +3931,7 @@
               s
                 .slice(0, Bt)
                 .map((e) =>
-                  n.createElement(ft, {
+                  n.createElement(Nt, {
                     key: "friendshare_" + e.steamid + "_" + a,
                     friend: e,
                     year: a,
@@ -3926,7 +3947,7 @@
           )
         );
       }
-      function ft(e) {
+      function Nt(e) {
         const { friend: t, year: a } = e,
           r = new A.K(t.steamid),
           i = Q();
@@ -5372,7 +5393,7 @@
       }
       function Ea(e, t) {
         return e > 0
-          ? n.createElement(Na, {
+          ? n.createElement(fa, {
               key: "totalAchievements",
               userYearInReview: t,
             })
@@ -5382,7 +5403,7 @@
         return t &&
           t.longest_consecutive_days > 0 &&
           "cn" !== o.L7.country_code.toLowerCase()
-          ? n.createElement(fa, {
+          ? n.createElement(Na, {
               key: "longestStreak",
               oLongestStreak: t,
               nYear: e,
@@ -5572,7 +5593,7 @@
           ),
         );
       }
-      function Na(e) {
+      function fa(e) {
         const { userYearInReview: t } = e,
           a = t.GetPlayTimeStats().summary_stats,
           r = (t.GetFilteredGameSummary(), t.GetYear(), Q()),
@@ -5643,7 +5664,7 @@
           ),
         );
       }
-      function fa(e) {
+      function Na(e) {
         const { oLongestStreak: t, nYear: a } = e,
           r = (0, Z.$1)(t.rtime_start, true),
           i = (0, Z.$1)(
@@ -6653,7 +6674,7 @@
             It.Y,
             {
               placeholderHeight: "100vh",
-              rootMargin: f,
+              rootMargin: N,
               className: ue.FullWidth,
             },
             Boolean(l) &&
@@ -6828,14 +6849,14 @@
         const A = (0, Be.Hf)(_.GetStorePageURL(), p),
           G = null == C ? void 0 : C.find((e) => e.percent > 0),
           B = G ? G.date.getMonth() : null,
-          N = B ? (0, Z.Xx)(`#YIR_MonthlyCharts_MonthNoun_${B + 1}`) : "";
-        let f = "";
+          f = B ? (0, Z.Xx)(`#YIR_MonthlyCharts_MonthNoun_${B + 1}`) : "";
+        let N = "";
         return (
           v && h
-            ? (f = `steam://open/games/details/${a}`)
+            ? (N = `steam://open/games/details/${a}`)
             : v &&
               !o.De.IN_MOBILE_WEBVIEW &&
-              (f = `steam://open/library/details/${a}`),
+              (N = `steam://open/library/details/${a}`),
           n.createElement(
             Te,
             {
@@ -6876,10 +6897,10 @@
                         { href: A, target: "_blank", className: ue.GameLink },
                         (0, Z.Xx)("#YIR_TopGames_VisitInStore"),
                       ),
-                    !!f &&
+                    !!N &&
                       n.createElement(
                         "a",
-                        { href: f, className: ue.GameLink },
+                        { href: N, className: ue.GameLink },
                         (0, Z.Xx)("#YIR_TopGames_VisitInLibrary"),
                       ),
                     !v && n.createElement(Bn, { appID: a }),
@@ -6997,12 +7018,12 @@
                     n.createElement(
                       "div",
                       { className: ue.GameChartFirstPlayed },
-                      N
+                      f
                         ? g(
                             Boolean(null == c ? void 0 : c.new_this_year)
                               ? "#YIR_TopGames_firstplayedNew"
                               : "#YIR_TopGames_firstplayed",
-                            N,
+                            f,
                           )
                         : null,
                     ),
@@ -7095,8 +7116,8 @@
           (0, Z.Xx)(a ? "#Sale_RemoveFromWishlist" : "#Sale_AddToWishlist"),
         );
       }
-      var Nn = a(14057),
-        fn = a(68603);
+      var fn = a(14057),
+        Nn = a(68603);
       function wn(e) {
         const { steamId: t, year: a } = e,
           r = Q(),
@@ -7112,17 +7133,17 @@
         return i && 0 !== i.length
           ? n.createElement(
               "div",
-              { className: fn.OtherYearsCtn },
+              { className: Nn.OtherYearsCtn },
               n.createElement(
                 "div",
                 {
-                  className: (0, ce.Z)(fn.OtherYearsHeader, r.OtherYearsHeader),
+                  className: (0, ce.Z)(Nn.OtherYearsHeader, r.OtherYearsHeader),
                 },
                 m("#YearInReview_OtherYearLinks_Header"),
               ),
               n.createElement(
                 "div",
-                { className: (0, ce.Z)(fn.OtherYearLinks, r.OtherYearLinks) },
+                { className: (0, ce.Z)(Nn.OtherYearLinks, r.OtherYearLinks) },
                 i.map((e) =>
                   n.createElement(
                     "a",
@@ -7131,7 +7152,7 @@
                       href: `${
                         o.De.STORE_BASE_URL
                       }replay/${t.ConvertTo64BitString()}/${e}?src=8`,
-                      className: (0, ce.Z)(fn.OtherYearLink, r.OtherYearLink),
+                      className: (0, ce.Z)(Nn.OtherYearLink, r.OtherYearLink),
                     },
                     e,
                   ),
@@ -7223,7 +7244,7 @@
           } = e,
           l = r.GetSteamID(),
           o = r.GetYear(),
-          m = (0, Nn.N)(i),
+          m = (0, fn.N)(i),
           c = n.useRef();
         (c.current &&
           c.current.steamid.GetAccountID() == l.GetAccountID() &&
@@ -7438,13 +7459,13 @@
             },
             [i],
           );
-        return (o.L7.is_support &&
-          Boolean(
-            (0, o.ip)("localization_advanced_access", "application_config"),
-          )) ||
-          ("dev" !== o.De.WEB_UNIVERSE && "beta" !== o.De.WEB_UNIVERSE)
-          ? null
-          : n.createElement(
+        return "dev" === o.De.WEB_UNIVERSE ||
+          "beta" === o.De.WEB_UNIVERSE ||
+          (o.L7.is_support &&
+            Boolean(
+              (0, o.ip)("localization_advanced_access", "application_config"),
+            ))
+          ? n.createElement(
               "div",
               { className: (0, ce.Z)(O().DevToggle, oe.ValveOnlyBackground) },
               n.createElement(
@@ -7462,7 +7483,8 @@
                 selectedOption: r,
                 onChange: s,
               }),
-            );
+            )
+          : null;
       }
       function xn(e) {
         let { message: t } = e;

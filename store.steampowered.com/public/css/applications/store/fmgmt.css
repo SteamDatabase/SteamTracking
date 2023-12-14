@@ -60,6 +60,8 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   .familyincominginvites_InviteRowHeader_AYHhN {
   color: #fff;
   text-align: left;
+  display: flex;
+  align-items: center;
 }
 .familyincominginvites_IncomingInviteRow_1GICw
   .familyincominginvites_InviteRowHeader_AYHhN
@@ -253,6 +255,17 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   .familysharedcomponents_ExpandRow_168MV
   svg {
   transition: transform linear 0.1s;
+}
+.familysharedcomponents_FamilyMemberRow_3QkkY
+  .familysharedcomponents_InvitePending_2xtN_ {
+  margin-left: 10px;
+  padding: 2px 10px;
+  text-transform: uppercase;
+  color: #ff0;
+  font-size: 12px;
+  border-style: solid;
+  border-color: #ff0;
+  border-width: thin;
 }
 .familyinvite_InviteSplash_2SFzY {
   display: flex;
@@ -691,16 +704,6 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   display: flex;
   justify-content: center;
   padding-top: 20px;
-}
-.familymanagement_ManageFamily_3ayYO .familymanagement_InvitePending_23Q7c {
-  margin-left: 10px;
-  padding: 2px 10px;
-  text-transform: uppercase;
-  color: #ff0;
-  font-size: 12px;
-  border-style: solid;
-  border-color: #ff0;
-  border-width: thin;
 }
 .familymanagement_ManageFamily_3ayYO
   .familymanagement_ExpandedPendingInvite_2t7pN {
@@ -1252,6 +1255,12 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   font-size: 24px;
   color: #fff;
   text-transform: uppercase;
+}
+.familygames_FamilyGames_3Pnf9 .familygames_Buttons_35Bln {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: center;
 }
 .familygames_FamilyGames_3Pnf9 .familygames_ButtonWrapper_1ve5n {
   display: flex;

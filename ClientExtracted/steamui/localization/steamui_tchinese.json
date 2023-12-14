@@ -7965,6 +7965,8 @@
     "FamilyGroup_GameExcluded": "此遊戲不支援 Steam 親友同享",
     "FamilyGroup_GameBorrowerLocked": "來自您的 Steam 親友收藏庫且正被使用中，目前使用者：",
     "FamilyGroup_GameOwnerLocked": "目前正在使用者為您的 Steam 親友群組成員：",
+    "FamilyGroup_ManageFamily": "管理您的 Steam 親友群組",
+    "FamilyGroup_Offline": "離線時無法管理您的 Steam 親友群組「%1$s」",
     "AppLaunchError_PlaytimeLimitExceeded_Minutes": "您已用完所有今天可用的分鐘數。",
     "AppLaunchError_PlaytimeLimitExceeded_Window": "您在此時段被禁止遊玩遊戲。",
     "FamilyView_RequestPlaytime_Title": "超出遊戲時間",

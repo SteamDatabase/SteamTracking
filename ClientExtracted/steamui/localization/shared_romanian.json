@@ -2818,6 +2818,7 @@
     "FamilyManagement_Role_1": "adult",
     "FamilyManagement_Role_2": "copil",
     "FamilyManagement_Me": "Eu",
+    "FamilyManagement_YourFamily": "Grupul tău familial",
     "FamilyManagement_ErrorInternalServerError": "Eroare internă de server.",
     "FamilyManagement_ErrorNoMatch": "Acest grup familial nu există.",
     "FamilyManagement_AccessDenied": "Nu ai permisiunea de a efectua acestă acțiune.",

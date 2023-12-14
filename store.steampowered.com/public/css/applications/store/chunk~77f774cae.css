@@ -488,6 +488,9 @@
 .gamehover_HoverContentTransition_bHRhS.gamehover_Open_3mLjE {
   transform: scale(1);
 }
+.gamehover_ItemHoverSource_2yyhU.gamehover_Selectable_2URZf {
+  cursor: pointer;
+}
 .gamehover_GameHoverCapsuleCtn_2li11 {
   height: 100%;
   box-sizing: border-box;

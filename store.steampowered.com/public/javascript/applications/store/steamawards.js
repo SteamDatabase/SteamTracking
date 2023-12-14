@@ -166,6 +166,27 @@
         Inactive: "steamawards2023_Inactive_2jfyC",
       };
     },
+    93908: (e, a, t) => {
+      "use strict";
+      t.d(a, { Jr: () => o, Mr: () => l, tk: () => m });
+      var n = t(89526),
+        r = t(701),
+        s = t(16826),
+        i = t(32765);
+      function o() {
+        return (0, i.id)()
+          ? n.createElement(s.MCw, null)
+          : n.createElement(r.JrY, null);
+      }
+      function l() {
+        return n.createElement(r.MrB, null);
+      }
+      function m() {
+        return (0, i.id)()
+          ? n.createElement(s.tkI, null)
+          : n.createElement(r.j5H, null);
+      }
+    },
     87178: (e, a, t) => {
       "use strict";
       t.d(a, { j: () => i });
@@ -312,7 +333,7 @@
               ),
             ),
             n.trim().length > 0
-              ? r.createElement(M, { strSearch: n, category: a })
+              ? r.createElement(H, { strSearch: n, category: a })
               : r.createElement(P, { category: a }),
             r.createElement(
               "div",
@@ -374,7 +395,7 @@
                   rgGameCarouselItems: _,
                 }),
               )
-            : r.createElement(H, { eSteamAwardCategoryID: i.voteid }),
+            : r.createElement(M, { eSteamAwardCategoryID: i.voteid }),
           Boolean(!c) &&
             r.createElement(
               "div",
@@ -410,7 +431,7 @@
           ),
         );
       }
-      function H(e) {
+      function M(e) {
         const { eSteamAwardCategoryID: a } = e;
         return r.createElement(
           "div",
@@ -434,7 +455,7 @@
           }),
         );
       }
-      function M(e) {
+      function H(e) {
         var a;
         const { strSearch: t, category: n } = e,
           s = (0, d.tM)(t, n),
@@ -750,9 +771,9 @@
         });
       }
       var j = t(5029),
-        K = t(49437),
-        J = t(36105),
-        $ = t.n(J),
+        J = t(49437),
+        K = t(36105),
+        $ = t.n(K),
         ee = t(85651);
       function ae(e) {
         const { steamID: a } = e,
@@ -839,7 +860,7 @@
       function ne(e) {
         var a, t;
         const { steamid: n, bEnableNominating: s } = e,
-          i = (0, K.IE)(n);
+          i = (0, J.IE)(n);
         return r.createElement(
           "div",
           { className: o().NominationsHeaderCtn },

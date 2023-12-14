@@ -2818,7 +2818,7 @@
     "FamilyManagement_Role_1": "Adulto",
     "FamilyManagement_Role_2": "Niño",
     "FamilyManagement_Me": "Yo",
-    "FamilyManagement_YourFamily": "Tu Grupo familiar",
+    "FamilyManagement_YourFamily": "Tu grupo familiar",
     "FamilyManagement_ErrorInternalServerError": "Error interno del servidor.",
     "FamilyManagement_ErrorNoMatch": "Este grupo familiar no existe.",
     "FamilyManagement_AccessDenied": "No tienes permiso para realizar esa acción.",

@@ -7966,6 +7966,8 @@
     "FamilyGroup_GameExcluded": "เกมนี้ไม่รองรับการแบ่งปันคลังครอบครัวบน Steam",
     "FamilyGroup_GameBorrowerLocked": "จากคลังครอบครัวบน Steam ของคุณ และกำลังใช้โดย",
     "FamilyGroup_GameOwnerLocked": "กำลังใช้โดยสมาชิกครอบครัวบน Steam ของคุณ ",
+    "FamilyGroup_ManageFamily": "จัดการครอบครัวบน Steam ของคุณ",
+    "FamilyGroup_Offline": "คุณไม่สามารถจัดการครอบครัว \"%1$s\" บน Steam ของคุณในขณะออฟไลน์ได้",
     "AppLaunchError_PlaytimeLimitExceeded_Minutes": "คุณใช้เวลาเล่นครบจำนวนนาทีที่มีอยู่ในวันนี้แล้ว",
     "AppLaunchError_PlaytimeLimitExceeded_Window": "คุณถูกบล็อคไม่ให้เล่นในเวลาปัจจุบัน",
     "FamilyView_RequestPlaytime_Title": "หมดเวลาเล่น",

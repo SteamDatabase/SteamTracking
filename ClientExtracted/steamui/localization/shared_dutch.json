@@ -2818,6 +2818,7 @@
     "FamilyManagement_Role_1": "Volwassene",
     "FamilyManagement_Role_2": "Kind",
     "FamilyManagement_Me": "Ik",
+    "FamilyManagement_YourFamily": "Jouw gezin",
     "FamilyManagement_ErrorInternalServerError": "Interne serverfout.",
     "FamilyManagement_ErrorNoMatch": "Dit gezin bestaat niet.",
     "FamilyManagement_AccessDenied": "Je hebt geen toestemming om deze actie uit te voeren.",

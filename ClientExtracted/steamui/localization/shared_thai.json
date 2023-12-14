@@ -2818,6 +2818,7 @@
     "FamilyManagement_Role_1": "ผู้ใหญ่",
     "FamilyManagement_Role_2": "ผู้เยาว์",
     "FamilyManagement_Me": "ฉัน",
+    "FamilyManagement_YourFamily": "ครอบครัวของคุณ",
     "FamilyManagement_ErrorInternalServerError": "ข้อผิดพลาดภายในของเซิร์ฟเวอร์",
     "FamilyManagement_ErrorNoMatch": "ไม่มีครอบครัวนี้",
     "FamilyManagement_AccessDenied": "คุณไม่มีสิทธิ์ที่จะดำเนินการนี้",

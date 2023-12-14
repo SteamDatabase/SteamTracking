@@ -2818,6 +2818,7 @@
     "FamilyManagement_Role_1": "Възрастен",
     "FamilyManagement_Role_2": "Дете",
     "FamilyManagement_Me": "Аз",
+    "FamilyManagement_YourFamily": "Семейството Ви",
     "FamilyManagement_ErrorInternalServerError": "Вътрешна грешка на сървъра.",
     "FamilyManagement_ErrorNoMatch": "Това семейство не съществува.",
     "FamilyManagement_AccessDenied": "Нямате правомощия, за да изпълните това действие.",

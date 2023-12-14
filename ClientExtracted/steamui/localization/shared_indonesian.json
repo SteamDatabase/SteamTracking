@@ -2818,6 +2818,7 @@
     "FamilyManagement_Role_1": "Dewasa",
     "FamilyManagement_Role_2": "Anak-anak",
     "FamilyManagement_Me": "Saya",
+    "FamilyManagement_YourFamily": "Keluargamu",
     "FamilyManagement_ErrorInternalServerError": "Server internal eror.",
     "FamilyManagement_ErrorNoMatch": "Keluarga ini tidak ada.",
     "FamilyManagement_AccessDenied": "Kamu tidak memiliki izin untuk melakukan tindakan ini.",

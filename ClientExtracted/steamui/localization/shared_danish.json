@@ -2818,6 +2818,7 @@
     "FamilyManagement_Role_1": "Voksen",
     "FamilyManagement_Role_2": "Barn",
     "FamilyManagement_Me": "Mig",
+    "FamilyManagement_YourFamily": "Din familie",
     "FamilyManagement_ErrorInternalServerError": "Intern serverfejl.",
     "FamilyManagement_ErrorNoMatch": "Denne familie findes ikke.",
     "FamilyManagement_AccessDenied": "Du har ikke tilladelse til at udføre denne handling.",

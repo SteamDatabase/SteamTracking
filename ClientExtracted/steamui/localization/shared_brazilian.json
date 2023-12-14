@@ -2818,6 +2818,7 @@
     "FamilyManagement_Role_1": "Adulto",
     "FamilyManagement_Role_2": "Criança",
     "FamilyManagement_Me": "Eu",
+    "FamilyManagement_YourFamily": "Sua família",
     "FamilyManagement_ErrorInternalServerError": "Erro interno do servidor.",
     "FamilyManagement_ErrorNoMatch": "A família não existe.",
     "FamilyManagement_AccessDenied": "Você não tem permissão para realizar esta ação.",

@@ -63,6 +63,8 @@
         HoverContentTransition: "gamehover_HoverContentTransition_bHRhS",
         Opening: "gamehover_Opening_2PI0b",
         Open: "gamehover_Open_3mLjE",
+        ItemHoverSource: "gamehover_ItemHoverSource_2yyhU",
+        Selectable: "gamehover_Selectable_2URZf",
         GameHoverCapsuleCtn: "gamehover_GameHoverCapsuleCtn_2li11",
         UseHidingBottomHalf: "gamehover_UseHidingBottomHalf_1rrny",
         TrailerAnchorStoreLink: "gamehover_TrailerAnchorStoreLink_3g5H8",
@@ -11403,10 +11405,11 @@
             strStoreUrl: a,
             bHideBottomHalf: n,
             bShowDeckCompatibilityDialog: i,
+            bShowWishlistButton: r = !0,
           } = e;
-          let r;
+          let s;
           return (
-            t.overrideNavigation && (r = (e) => t.overrideNavigation()),
+            t.overrideNavigation && (s = (e) => t.overrideNavigation()),
             l.createElement(
               "div",
               {
@@ -11415,22 +11418,22 @@
                   H().InGameHover,
                   n && M().UseHidingBottomHalf,
                 ),
-                onClick: r,
+                onClick: s,
               },
               l.createElement(
                 "a",
                 {
-                  href: r ? null : a,
+                  href: s ? null : a,
                   target: N.De.IN_CLIENT ? void 0 : "_blank",
                   className: M().TrailerAnchorStoreLink,
                 },
-                Boolean(!i && !r) &&
+                Boolean(r && !i && !s) &&
                   l.createElement(Q, { appID: t.id, snr: e.strSNR }),
                 l.createElement(J, { info: t }),
               ),
               l.createElement(
                 te,
-                Object.assign({}, e, { bPreventNavigation: Boolean(r) }),
+                Object.assign({}, e, { bPreventNavigation: Boolean(s) }),
               ),
             )
           );
@@ -11462,8 +11465,9 @@
             fnOnHoverStateChange: m,
             nCreatorAccountID: u,
             bShowDeckCompatibilityDialog: _,
+            bShowWishlistButton: h = !0,
           } = e,
-          h = (0, n._T)(e, [
+          g = (0, n._T)(e, [
             "item",
             "name",
             "bPreventNavigation",
@@ -11475,18 +11479,19 @@
             "fnOnHoverStateChange",
             "nCreatorAccountID",
             "bShowDeckCompatibilityDialog",
+            "bShowWishlistButton",
           ]),
-          [g] = (0, f.jk)(t.id, (0, S.TM)(t.type), {}),
-          v = (0, F.bJ)(),
-          E = (0, p.mY)(v),
-          y = (0, N.id)();
-        if (!g && !a) return null;
-        if (y) return l.createElement(l.Fragment, null, e.children);
+          [v] = (0, f.jk)(t.id, (0, S.TM)(t.type), {}),
+          E = (0, F.bJ)(),
+          y = (0, p.mY)(E),
+          I = (0, N.id)();
+        if (!v && !a) return null;
+        if (I) return l.createElement(l.Fragment, null, e.children);
         if (!X())
           return l.createElement(
             W._,
             {
-              type: (0, S.Hy)(g.GetStoreItemType()),
+              type: (0, S.Hy)(v.GetStoreItemType()),
               id: t.id,
               fnHoverState: m,
               hoverClassName: e.className,
@@ -11494,32 +11499,34 @@
             },
             e.children,
           );
-        const I = "hiding" == q(),
-          b = i
-            ? null
-            : (0, p.Hf)(
-                `${null == g ? void 0 : g.GetStorePageURL()}${
-                  c ? `?${c}` : ""
-                }`,
-                v,
-              ),
-          w = l.createElement(ae, {
+        const b = "hiding" == q(),
+          w =
+            i || !v
+              ? null
+              : (0, p.Hf)(
+                  `${null == v ? void 0 : v.GetStorePageURL()}${
+                    c ? `?${c}` : ""
+                  }`,
+                  E,
+                ),
+          C = l.createElement(ae, {
             info: t,
             name: a,
             bPreventNavigation: i,
-            strStoreUrl: b,
+            strStoreUrl: w,
             elElementToAppend: r,
             bShowDemoButton: s,
             bShowDeckCompatibilityDialog: _,
-            bHideBottomHalf: I,
+            bHideBottomHalf: b,
             bHidePrice: o,
             bUseSubscriptionLayout: d,
-            strSNR: E,
+            strSNR: y,
             nCreatorAccountID: u,
+            bShowWishlistButton: h,
           });
         return l.createElement(
           oe,
-          Object.assign({ hoverContent: w, strClickUrl: b }, h),
+          Object.assign({ hoverContent: C, strClickUrl: w }, g),
           e.children,
         );
       }
@@ -11552,46 +11559,55 @@
             nDelayShowMs: i,
             strClickUrl: r,
             children: s,
+            className: o,
           } = e,
-          o = (0, n._T)(e, [
+          d = (0, n._T)(e, [
             "hoverContent",
             "hoverProps",
             "nDelayShowMs",
             "strClickUrl",
             "children",
+            "className",
           ]),
-          d = (0, N.id)(),
-          [c, m] = l.useState(!d),
-          [u, p] = l.useState(!1),
-          [_, h] = l.useState(void 0),
-          g = l.useCallback((e) => {
-            p(!0), h(e.currentTarget);
+          c = (0, N.id)(),
+          [m, u] = l.useState(!c),
+          [p, _] = l.useState(!1),
+          [h, g] = l.useState(void 0),
+          v = l.useCallback((e) => {
+            _(!0), g(e.currentTarget);
           }, []),
-          v = l.useCallback(() => p(!1), []),
-          S = l.useCallback((e) => {
-            27 == e.keyCode && (p(!1), e.preventDefault(), e.stopPropagation());
+          S = l.useCallback(() => _(!1), []),
+          f = l.useCallback((e) => {
+            27 == e.keyCode && (_(!1), e.preventDefault(), e.stopPropagation());
           }, []),
-          f = l.useCallback(
+          E = l.useCallback(
             (e) => {
-              m(!1), (window.location.href = r);
+              u(!1), (window.location.href = r);
             },
             [r],
           ),
-          E = l.useCallback(() => m(!1), []);
+          I = l.useCallback(() => u(!1), []);
         return l.createElement(
           "div",
-          Object.assign({ "data-key": "hover div" }, o, {
-            onMouseEnter: g,
-            onMouseLeave: v,
-            onFocus: g,
-            onClick: r ? f : void 0,
-            onTouchStart: E,
-            onKeyDown: S,
-          }),
-          c &&
+          Object.assign(
+            {
+              "data-key": "hover div",
+              className: (0, R.Z)(M().ItemHoverSource, r && M().Selectable, o),
+            },
+            d,
+            {
+              onMouseEnter: v,
+              onMouseLeave: S,
+              onFocus: v,
+              onClick: r ? E : void 0,
+              onTouchStart: I,
+              onKeyDown: f,
+            },
+          ),
+          m &&
             l.createElement(
               le,
-              { visible: u, target: _, nDelayShowMs: i, hoverProps: a },
+              { visible: p, target: h, nDelayShowMs: i, hoverProps: a },
               t,
             ),
           l.createElement(y.SV, null, s),

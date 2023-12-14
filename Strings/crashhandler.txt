@@ -544,7 +544,7 @@ steamwebhelper
 Steam Helper
 cefwebhelper
 Dec 13 2023
-10:19:26
+16:35:23
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 MainThrd
@@ -953,14 +953,13 @@ subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
+0O0	
 &1f9xD
 \y_,
 s_r4
 3[	5
 Z^Y H'-=HR7^
 3rc~QZJ
-}wkx_
-|+C2
 O8>hG@
 IhM=x
 <@*1V
@@ -1019,8 +1018,9 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231213181948Z0/
-u8)H
+231214003546Z0/
+Pf,P
+*6Ht
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -1028,20 +1028,22 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		bRzsKYhcwQpa6WicnIgpWrtadfU=
+		KjZIdIjD9WEiEDaXwWvNF1dDFrY=
 		</data>
 		<data>
-		36wmjTtTvfUMwP7dAkb/t/jrRuU=
+		RItOplgY5sKGQ8R1bMphGIkVTGU=
 		</data>
 	</array>
 </dict>
 </plist>
-j>I:l
-KlLf
-s#9T
-4.'_
-eiA@;5
-20231213181954Z0
+YM,CU"b> 
+)eN	1
+	@D>
+Hn@'
+Vykx
+4[1}
+zgHh5
+20231214003554Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
@@ -1096,10 +1098,9 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231213181954Z0#
-cAl:
-A>_u
-ac.+
+231214003554Z0#
+,s*oi
+e^:2 
 __TEXT
 __text
 __TEXT
@@ -1839,7 +1840,7 @@ steamwebhelper
 Steam Helper
 cefwebhelper
 Dec 13 2023
-10:19:26
+16:35:25
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 MainThrd
@@ -2282,13 +2283,14 @@ com.valvesoftware.steam
 MXGJJ98X76
 %qm.
 ,,M0
-%x2^E
 U@y&M
 x -v
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
+]+@Q
+s0B%*O
 .I|\
 jd`?l
 r%C7$
@@ -2359,9 +2361,9 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231213181948Z0/
-{)S*ek}
-WWz4
+231214003546Z0/
+9A]!n
+b50-
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -2369,17 +2371,16 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		+TqhvDZoWvC0wHspUypla33j3e4=
+		wVzOoWVxo6UryENPnqEHYJ0XYjU=
 		</data>
 		<data>
-		UmcQOJEnTpnj/BQDuCThV1d6NKU=
+		5xdtU5fWEzrihHCNjKnLI5uQu3I=
 		</data>
 	</array>
 </dict>
 </plist>
-SMjt[^U
-\k4"S
-20231213181954Z0
+15_j
+20231214003554Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
@@ -2434,9 +2435,11 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231213181954Z0#
-H.R8j_
-g+{C
+231214003554Z0#
+/[^M
+C`$a
+FG,&
+o~p;
 __TEXT
 __text
 __TEXT
@@ -2735,7 +2738,7 @@ steamwebhelper
 Steam Helper
 cefwebhelper
 Dec 13 2023
-10:19:27
+16:35:28
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 MainThrd
@@ -3174,12 +3177,12 @@ gjs{
 u*"V
 `z.W
 Q;Ua
-b	^%)
 jG.L
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
+VjPO
 9:7c8
 DA#q
 J6rg
@@ -3241,8 +3244,7 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231213181948Z0/
-~Nd5t[
+231214003546Z0/
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -3250,21 +3252,21 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		ByTXi4XzvNthpeo5cB+W+URfUvM=
+		YtUMxrP/pYzFp1JysM6t/A8YyRE=
 		</data>
 		<data>
-		ddcxaHF/If7Bo7ODd7HOwnDBAH4=
+		sVF8FKu3WIbEFr0KDca23ggKRdY=
 		</data>
 	</array>
 </dict>
 </plist>
-/0o7
-I=sI{
-bQi!
-9j(mKH
-F*\K
-*^4B
-20231213181954Z0
+NCA/
+~"}K
+Ym~w
+U?^N
+4i@s
+m/HQ3x"
+20231214003554Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
@@ -3319,5 +3321,10 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231213181954Z0#
-r/7/C
+231214003554Z0#
+/n0+
+;Yx-
+<Sm3e
+$y/V
+Pk7S
+$fhr

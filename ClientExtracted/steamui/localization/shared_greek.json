@@ -2818,6 +2818,7 @@
     "FamilyManagement_Role_1": "Ενήλικας",
     "FamilyManagement_Role_2": "Παιδί",
     "FamilyManagement_Me": "Εγώ",
+    "FamilyManagement_YourFamily": "Η οικογένειά σας",
     "FamilyManagement_ErrorInternalServerError": "Εσωτερικό σφάλμα διακομιστή.",
     "FamilyManagement_ErrorNoMatch": "Αυτή η οικογένεια δεν υπάρχει.",
     "FamilyManagement_AccessDenied": "Δεν έχετε άδεια να εκτελέσετε αυτή την ενέργεια.",

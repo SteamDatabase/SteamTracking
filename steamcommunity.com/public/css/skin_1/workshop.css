@@ -3208,15 +3208,20 @@ input.searchText
 .enlarged_image_viewer {
 	display: flex;
 	flex-direction: column;
-	max-width: 100%;
-	max-height: 90vh;
+	width: 75vw;
+	height: 75vh;
 	align-items: center;
 }
 .enlarged_image_container {
+	background: black;
+	align-items: center;
+	justify-content: center;
+	display: flex;
 	flex-grow: 1;
 	width: 100%;
 	height: 100%;
 	overflow: hidden;
+	background: #000000;
 }
 .enlarged_image_container .enlarged_image {
 	object-fit: contain;

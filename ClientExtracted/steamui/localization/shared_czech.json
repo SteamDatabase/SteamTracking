@@ -2818,6 +2818,7 @@
     "FamilyManagement_Role_1": "Dospělý",
     "FamilyManagement_Role_2": "Dítě",
     "FamilyManagement_Me": "Vy",
+    "FamilyManagement_YourFamily": "Vaše rodina",
     "FamilyManagement_ErrorInternalServerError": "Interní chyba serveru.",
     "FamilyManagement_ErrorNoMatch": "Tato rodina neexistuje.",
     "FamilyManagement_AccessDenied": "Pro tuto akci nemáte dostatečná oprávnění.",

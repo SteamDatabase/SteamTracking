@@ -279,8 +279,8 @@
         g = n(71161),
         E = n(19304),
         v = n(14826),
-        f = n(207),
-        b = n(32765),
+        b = n(207),
+        f = n(32765),
         S = n(24174),
         k = n(48348),
         C = n.n(k),
@@ -666,7 +666,7 @@
               if (o)
                 return i.createElement(p.C, { eventGID: o, bPreviewMode: n });
               if (t) {
-                const e = (0, r.jM)(b.De.LANGUAGE);
+                const e = (0, r.jM)(f.De.LANGUAGE);
                 return i.createElement(p.m, { eventModel: t, lang: e });
               }
               return null;
@@ -682,7 +682,7 @@
                 n = "button" == D(e.args, "style") ? C().LinkButton : null;
               return i.createElement(
                 T,
-                { className: n, href: `${b.De.PARTNER_BASE_URL}doc/${t}` },
+                { className: n, href: `${f.De.PARTNER_BASE_URL}doc/${t}` },
                 e.children,
               );
             },
@@ -772,16 +772,16 @@
           c = (0, l.B1)(t, r);
         (0, y.A)(c)
           ? ((c =
-              (b.De.IN_CLIENT ? "steam://openurl_external/" : "") +
+              (f.De.IN_CLIENT ? "steam://openurl_external/" : "") +
               (0, y.d)(c)),
             (a = "noopener nofollow"))
-          : (c = (0, f.bk)(c));
+          : (c = (0, b.bk)(c));
         const d =
           "string" == typeof e.children &&
           e.children.length > 0 &&
           t &&
           !t.startsWith("steam://")
-            ? (0, f.XW)(t)
+            ? (0, b.XW)(t)
             : void 0;
         return i.createElement(
           s.IS,
@@ -831,7 +831,7 @@
         );
       }
       function H(e) {
-        if ((0, b.h4)()) return null;
+        if ((0, f.h4)()) return null;
         let t = D(e.args);
         if (t) {
           let e = t.split(";");
@@ -857,22 +857,22 @@
       }
       function G(e) {
         let t = D(e.args, "poster");
-        t && (t = (0, f.et)(t));
+        t && (t = (0, b.et)(t));
         const n = new Array();
         {
           const t = D(e.args, "mp4");
-          t && n.push({ sURL: (0, f.et)(t), sFormat: "video/mp4" });
+          t && n.push({ sURL: (0, b.et)(t), sFormat: "video/mp4" });
           const o = D(e.args, "webm");
-          o && n.push({ sURL: (0, f.et)(o), sFormat: "video/webm" });
+          o && n.push({ sURL: (0, b.et)(o), sFormat: "video/webm" });
         }
-        const o = (0, r.jM)(b.De.LANGUAGE),
+        const o = (0, r.jM)(f.De.LANGUAGE),
           i = 0 != o,
           s = new Array();
         for (let t = 0; t < 31; t++) {
           const n = D(e.args, "sub_" + (0, r.dt)(t));
           n &&
             s.push({
-              sURL: (0, f.et)(n),
+              sURL: (0, b.et)(n),
               eLanguage: t,
               sKind: "subtitles",
               bDefault: i && t == o,
@@ -880,7 +880,7 @@
           const a = D(e.args, "cap_" + (0, r.dt)(t));
           a &&
             s.push({
-              sURL: (0, f.et)(a),
+              sURL: (0, b.et)(a),
               eLanguage: t,
               sKind: "captions",
               bDefault: i && t == o,
@@ -902,7 +902,7 @@
           n = e.children ? e.children.toString() : void 0;
         n &&
           n.startsWith("http") &&
-          t.rgVideoSources.push({ sURL: (0, f.et)(n), sFormat: "video/webm" });
+          t.rgVideoSources.push({ sURL: (0, b.et)(n), sFormat: "video/webm" });
         const o = D(e.args, "autoplay"),
           r = "0" !== o && "off" !== o && "false" !== o,
           s = D(e.args, "controls"),
@@ -915,7 +915,7 @@
         });
       }
       function V(e) {
-        if ((0, b.h4)() || "CN" == b.De.COUNTRY.toLocaleUpperCase())
+        if ((0, f.h4)() || "CN" == f.De.COUNTRY.toLocaleUpperCase())
           return U(e);
         const t = D(e.args, "youtubeid"),
           n = D(e.args, "size"),
@@ -1349,8 +1349,8 @@
             classNameSize: g,
             classNameAlign: E,
           } = e,
-          [v, f] = (0, o.useState)(!n),
-          [b, S] = (0, o.useState)(!1),
+          [v, b] = (0, o.useState)(!n),
+          [f, S] = (0, o.useState)(!1),
           k = (0, s.T)("YouTubeInlineSnippet"),
           [C, y] = (0, o.useState)({
             title: (0, c.Xx)("#Loading"),
@@ -1382,7 +1382,7 @@
             i = C.description;
           return o.createElement(
             "div",
-            { className: h().DynamicLinkBox, onClick: () => f(!1) },
+            { className: h().DynamicLinkBox, onClick: () => b(!1) },
             o.createElement("img", {
               className: h().DynamicLink_Preview,
               src: "https://img.youtube.com/vi/" + t + "/0.jpg",
@@ -1406,8 +1406,8 @@
               o.createElement(
                 "div",
                 { className: h().Dynamiclink_Content },
-                b && i,
-                !b && o.createElement(r.V, { size: "medium" }),
+                f && i,
+                !f && o.createElement(r.V, { size: "medium" }),
               ),
             ),
           );
@@ -1491,8 +1491,8 @@
       }
       var E = n(32765),
         v = n(57605),
-        f = n(51438),
-        b = n(8179),
+        b = n(51438),
+        f = n(8179),
         S = n(57800);
       class k extends s.Component {
         constructor(e) {
@@ -1505,11 +1505,11 @@
             o = e.length > 1,
             i = o
               ? ({ detail: { button: t } }) => {
-                  t === b.eV.BUMPER_LEFT
+                  t === f.eV.BUMPER_LEFT
                     ? this.setState({
                         activeIndex: Math.max(0, this.state.activeIndex - 1),
                       })
-                    : t === b.eV.BUMPER_RIGHT &&
+                    : t === f.eV.BUMPER_RIGHT &&
                       this.setState({
                         activeIndex: Math.min(
                           e.length - 1,
@@ -1519,7 +1519,7 @@
                 }
               : void 0;
           return s.createElement(
-            f.s,
+            b.s,
             { className: S.Picker, onButtonDown: i },
             o && s.createElement(C, null, this.RenderTabs()),
             n,
@@ -1542,7 +1542,7 @@
       }
       function C(e) {
         return s.createElement(
-          f.s,
+          b.s,
           { className: S.Tabs, "flow-children": "row" },
           e.children,
         );
@@ -1553,7 +1553,7 @@
       function P(e) {
         const { active: t, children: n, onClick: o } = e;
         return s.createElement(
-          f.s,
+          b.s,
           {
             className: (0, p.Z)(S.Tab, t && S.Active),
             focusClassName: S.Focus,
@@ -1576,7 +1576,7 @@
         } = e;
         let a = t.map((e, r) =>
           s.createElement(
-            f.s,
+            b.s,
             {
               key: i(e),
               className: S.Item,
@@ -1590,7 +1590,7 @@
         return (
           0 === t.length && r && (a = r()),
           s.createElement(
-            f.s,
+            b.s,
             { "flow-children": "grid", className: S.ItemList },
             a,
           )
@@ -2814,7 +2814,7 @@
         g = n(32765),
         E = n(52868),
         v = n.n(E);
-      class f {
+      class b {
         constructor() {
           (this.m_bValidatedEmail = !1),
             (this.m_nMobileDeviceCount = 0),
@@ -2879,9 +2879,9 @@
           });
         }
       }
-      (0, o.gn)([_.LO], f.prototype, "m_bValidatedEmail", void 0),
-        (0, o.gn)([_.LO], f.prototype, "m_nMobileDeviceCount", void 0);
-      let b = new f();
+      (0, o.gn)([_.LO], b.prototype, "m_bValidatedEmail", void 0),
+        (0, o.gn)([_.LO], b.prototype, "m_nMobileDeviceCount", void 0);
+      let f = new b();
       var S = n(93765),
         k = n(57605),
         C = n(21904),
@@ -2910,12 +2910,12 @@
             (this.m_bLoadWasCancelled = !1),
             (this.state = {
               bIsOpen: !1,
-              bIsLoadingNotificationSettings: !b.BIsLoaded(),
+              bIsLoadingNotificationSettings: !f.BIsLoaded(),
             });
         }
         componentDidMount() {
           this.state.bIsLoadingNotificationSettings &&
-            b
+            f
               .HintLoad()
               .catch(
                 (e) => (
@@ -3004,7 +3004,7 @@
           const { eventModel: e } = this.props,
             t = e.GID;
           return (
-            (b.BHasValidatedEmail() &&
+            (f.BHasValidatedEmail() &&
               h.cb
                 .Get()
                 .BFollowsEventAndNotifiedBy(
@@ -3012,7 +3012,7 @@
                   t,
                   h.rE.k_ENotifyFlagByEmail,
                 )) ||
-            (b.BHasPushNotification() &&
+            (f.BHasPushNotification() &&
               h.cb
                 .Get()
                 .BFollowsEventAndNotifiedBy(
@@ -3191,8 +3191,8 @@
               fnHasReminderSet: i,
               fnHidePanel: r,
             } = this.props,
-            a = b.BHasValidatedEmail(),
-            l = b.BHasPushNotification(),
+            a = f.BHasValidatedEmail(),
+            l = f.BHasPushNotification(),
             c = t && e.GetStartTimeAndDateUnixSeconds();
           return s.createElement(
             "div",
@@ -3675,7 +3675,7 @@
                 });
               })
             : null,
-          f = (function (e) {
+          b = (function (e) {
             return !(
               !(0, l.dK)(e.sPoster) ||
               (e.rgVideoSources &&
@@ -3684,8 +3684,8 @@
                 e.rgVideoTracks.some((e) => !(0, l.dK)(e.sURL)))
             );
           })(t);
-        let b;
-        (!f || (p && "public" == c.De.WEB_UNIVERSE)) && (b = "anonymous");
+        let f;
+        (!b || (p && "public" == c.De.WEB_UNIVERSE)) && (f = "anonymous");
         const S = u || (n && m.Get().BVolumePreferenceMuted()),
           k = t.sPoster ? g(t.sPoster) : "";
         return i.createElement(
@@ -3699,7 +3699,7 @@
             controls: o,
             poster: k,
             loop: d,
-            crossOrigin: b,
+            crossOrigin: f,
             onVolumeChange: (e) => {
               const t = e.target,
                 n = t.muted ? 0 : t.volume;
@@ -3724,27 +3724,6 @@
           v,
         );
       };
-    },
-    93908: (e, t, n) => {
-      "use strict";
-      n.d(t, { Jr: () => a, Mr: () => l, tk: () => c });
-      var o = n(89526),
-        i = n(701),
-        r = n(16826),
-        s = n(32765);
-      function a() {
-        return (0, s.id)()
-          ? o.createElement(r.MCw, null)
-          : o.createElement(i.JrY, null);
-      }
-      function l() {
-        return o.createElement(i.MrB, null);
-      }
-      function c() {
-        return (0, s.id)()
-          ? o.createElement(r.tkI, null)
-          : o.createElement(i.j5H, null);
-      }
     },
     46294: (e, t, n) => {
       "use strict";
@@ -4310,7 +4289,7 @@
         H6: () => g,
         Kj: () => h,
         Zg: () => E,
-        uv: () => f,
+        uv: () => b,
         w$: () => _,
       });
       var o = n(33940),
@@ -4512,7 +4491,7 @@
         }
       };
       v = (0, o.gn)([a.Pi], v);
-      let f = class extends i.Component {
+      let b = class extends i.Component {
         render() {
           const {
               startDateAndTime: e,
@@ -4637,11 +4616,11 @@
               ),
             );
           }
-          const f = i.createElement(E, { rtFullDate: t, stylesmodule: o }, g);
-          return i.createElement("div", { className: o.ShortDateRange }, p, f);
+          const b = i.createElement(E, { rtFullDate: t, stylesmodule: o }, g);
+          return i.createElement("div", { className: o.ShortDateRange }, p, b);
         }
       };
-      f = (0, o.gn)([a.Pi], f);
+      b = (0, o.gn)([a.Pi], b);
     },
     41576: (e, t, n) => {
       "use strict";

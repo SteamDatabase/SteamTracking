@@ -2818,6 +2818,7 @@
     "FamilyManagement_Role_1": "Aikuinen",
     "FamilyManagement_Role_2": "Lapsi",
     "FamilyManagement_Me": "Minä",
+    "FamilyManagement_YourFamily": "Oma perhe",
     "FamilyManagement_ErrorInternalServerError": "Sisäinen palvelinvirhe.",
     "FamilyManagement_ErrorNoMatch": "Perhettä ei ole olemassa.",
     "FamilyManagement_AccessDenied": "Sinulla ei ole oikeuksia toiminnon suorittamiseen.",

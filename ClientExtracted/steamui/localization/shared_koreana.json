@@ -2818,6 +2818,7 @@
     "FamilyManagement_Role_1": "성인",
     "FamilyManagement_Role_2": "자녀",
     "FamilyManagement_Me": "나",
+    "FamilyManagement_YourFamily": "내 가족",
     "FamilyManagement_ErrorInternalServerError": "인터넷 서버 오류가 발생했습니다.",
     "FamilyManagement_ErrorNoMatch": "이 가족은 존재하지 않습니다.",
     "FamilyManagement_AccessDenied": "이 작업을 수행할 권한이 없습니다.",

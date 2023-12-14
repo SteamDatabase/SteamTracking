@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
-  [2371],
+  [6440],
   {
     51964: (e) => {
       e.exports = {
@@ -124,9 +124,9 @@
         }
       };
       p = (0, n.gn)([r.Pi], p);
-      var g = t(701),
-        u = t(61204),
-        d = t.n(u),
+      var u = t(701),
+        g = t(61204),
+        d = t.n(g),
         h = t(93908);
       const B = (0, r.Pi)((e) => {
         const { persona: a, className: t } = e,
@@ -171,7 +171,7 @@
                 },
                 r,
               ),
-              s.createElement(g.VR, null),
+              s.createElement(u.VR, null),
             ),
           A &&
             s.createElement(
@@ -188,7 +188,7 @@
                 },
                 r,
               ),
-              s.createElement(g.Ucz, null),
+              s.createElement(u.Ucz, null),
             ),
         );
       });
@@ -217,7 +217,7 @@
               persona: r,
               eFriendRelationship: c,
               bIsSelf: A,
-              bParenthesizeNicknames: u,
+              bParenthesizeNicknames: g,
               strNickname: d,
               bCompactView: h,
               bHideGameName: E,
@@ -254,8 +254,8 @@
               "bNoMask",
             ]);
           let Z = null,
-            U = null,
             M = null,
+            U = null,
             R = [
               a,
               _().personaNameAndStatusLabel,
@@ -264,21 +264,21 @@
               H && _().NoMask,
             ];
           f || r.has_public_party_beacon
-            ? (U = s.createElement(S, { persona: r }))
+            ? (M = s.createElement(S, { persona: r }))
             : (0, i.fk)(c)
-            ? ((U = (0, o.Xx)("#PersonaStateBlocked")), R.push(_().blocked))
+            ? ((M = (0, o.Xx)("#PersonaStateBlocked")), R.push(_().blocked))
             : r.is_ingame
-            ? ((U =
+            ? ((M =
                 !r.is_in_nonsteam_game || A || (0, i.my)(c)
                   ? r.GetCurrentGameName()
                   : (0, o.Xx)("#PersonaStateInNonSteamGame")),
               A || I
-                ? A && r.is_awayOrSnooze && (M = (0, o.Xx)("#PersonaStateAway"))
-                : (M = r.GetCurrentGameRichPresence()))
+                ? A && r.is_awayOrSnooze && (U = (0, o.Xx)("#PersonaStateAway"))
+                : (U = r.GetCurrentGameRichPresence()))
             : r.m_broadcastAccountId &&
-              (U = (0, o.Xx)("#PersonaStateWatchingBroadcast")),
-            U || (U = r.GetLocalizedOnlineStatus()),
-            Q && (U = Q());
+              (M = (0, o.Xx)("#PersonaStateWatchingBroadcast")),
+            M || (M = r.GetLocalizedOnlineStatus()),
+            Q && (M = Q());
           let y = !I && !C;
           !1 === C && (y = !0),
             r.is_awayOrSnooze && y && (Z = s.createElement(p, { persona: r }));
@@ -287,17 +287,17 @@
             ? (F = s.createElement(
                 "div",
                 { className: "ContextMenuButton", onClick: t },
-                s.createElement(g.$gZ, null),
+                s.createElement(u.$gZ, null),
               ))
             : R.push(_().noContextMenu),
             I && R.push(_().hidePersona),
-            b && (M = b()),
-            (!E && M) || R.push(_().twoLine);
+            b && (U = b()),
+            (!E && U) || R.push(_().twoLine);
           const L = !r.is_ingame && !v,
-            z = !P && M,
-            w = U && (!E || !z),
+            z = !P && U,
+            w = M && (!E || !z),
             K = (0, i.hz)(N.De.LAUNCHER_TYPE);
-          let x = d && !u,
+          let x = d && !g,
             J = x ? d : r.m_strPlayerName,
             j = !I && (w || L) && z;
           return s.createElement(
@@ -313,7 +313,7 @@
                 "div",
                 { className: _().playerName },
                 J || " ",
-                u &&
+                g &&
                   d &&
                   s.createElement(
                     "span",
@@ -330,7 +330,7 @@
                     className: _().DNDContainer,
                     title: (0, o.Xx)("#User_ToggleDoNotDisturb"),
                   },
-                  s.createElement(g.YVR, null),
+                  s.createElement(u.YVR, null),
                 ),
               x &&
                 s.createElement(
@@ -351,7 +351,7 @@
                     className: _().PendingPersona,
                     title: (0, o.Xx)("#SteamChina_PendingPersonaName"),
                   },
-                  s.createElement(g.SUY, null),
+                  s.createElement(u.SUY, null),
                 ),
               F,
             ),
@@ -377,15 +377,15 @@
                           className: _().gameIsPrivateIcon,
                           title: (0, o.Xx)("#User_GameInfoHidden"),
                         },
-                        s.createElement(g._GE, null),
+                        s.createElement(u._GE, null),
                       ),
-                    U,
+                    M,
                   ),
                 z &&
                   s.createElement(
                     "div",
                     { className: (0, l.Z)(_().richPresenceLabel, "no-drag") },
-                    M,
+                    U,
                     " ",
                   ),
               ),
@@ -429,7 +429,7 @@
     },
     50355: (e, a, t) => {
       "use strict";
-      t.d(a, { o: () => g, _1: () => h, DY: () => d, vV: () => u });
+      t.d(a, { o: () => u, _1: () => h, DY: () => d, vV: () => g });
       var n = t(33940),
         s = t(89526),
         r = t(88464),
@@ -442,7 +442,7 @@
         "images/applications/store/avatar_default_full.jpg?v=valveisgoodatcaching";
       var A = t(30120),
         p = t.n(A);
-      class g extends s.Component {
+      class u extends s.Component {
         render() {
           const e = this.props,
             {
@@ -453,7 +453,7 @@
               statusPosition: m,
               children: A,
             } = e,
-            g = (0, n._T)(e, [
+            u = (0, n._T)(e, [
               "strAvatarURL",
               "size",
               "className",
@@ -461,10 +461,10 @@
               "statusPosition",
               "children",
             ]),
-            u = [];
+            g = [];
           return (
-            a && u.push(a),
-            u.push(
+            a && g.push(a),
+            g.push(
               (function (e) {
                 switch (e) {
                   case "X-Small":
@@ -492,7 +492,7 @@
                     r,
                   ),
                 },
-                g,
+                u,
               ),
               s.createElement("div", {
                 className: (0, i.Z)(p().avatarStatus, "avatarStatus", m),
@@ -500,7 +500,7 @@
               }),
               s.createElement(l.j, {
                 className: (0, i.Z)(p().avatar, "avatar"),
-                rgSources: u,
+                rgSources: g,
                 draggable: !1,
               }),
               A,
@@ -508,7 +508,7 @@
           );
         }
       }
-      let u = class extends s.Component {
+      let g = class extends s.Component {
         render() {
           const e = this.props,
             { persona: a, size: t, animatedAvatar: r, className: l } = e,
@@ -529,7 +529,7 @@
                   : ("Large" != t && "X-Large" != t && "FillArea" != t) ||
                     (A = a.avatar_url_full)),
             s.createElement(
-              g,
+              u,
               Object.assign(
                 {
                   strAvatarURL: A,
@@ -542,7 +542,7 @@
           );
         }
       };
-      u = (0, n.gn)([r.Pi], u);
+      g = (0, n.gn)([r.Pi], g);
       const d = (0, r.Pi)((e) => {
         const { profileItem: a, className: t, bDisableAnimation: r } = e,
           o = (0, n._T)(e, ["profileItem", "className", "bDisableAnimation"]);
@@ -648,7 +648,7 @@
                 onMouseLeave: () => this.SetupAnimationTimer(),
               },
               s.createElement(
-                u,
+                g,
                 Object.assign({ animatedAvatar: t }, c),
                 o,
                 s.createElement(d, {
@@ -661,6 +661,27 @@
         }
       };
       h = (0, n.gn)([r.Pi], h);
+    },
+    93908: (e, a, t) => {
+      "use strict";
+      t.d(a, { Jr: () => i, Mr: () => m, tk: () => l });
+      var n = t(89526),
+        s = t(701),
+        r = t(16826),
+        o = t(32765);
+      function i() {
+        return (0, o.id)()
+          ? n.createElement(r.MCw, null)
+          : n.createElement(s.JrY, null);
+      }
+      function m() {
+        return n.createElement(s.MrB, null);
+      }
+      function l() {
+        return (0, o.id)()
+          ? n.createElement(r.tkI, null)
+          : n.createElement(s.j5H, null);
+      }
     },
     87178: (e, a, t) => {
       "use strict";

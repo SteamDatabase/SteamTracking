@@ -2819,6 +2819,7 @@
     "FamilyManagement_Role_1": "成人",
     "FamilyManagement_Role_2": "儿童",
     "FamilyManagement_Me": "我",
+    "FamilyManagement_YourFamily": "您的家庭",
     "FamilyManagement_ErrorInternalServerError": "内部服务器错误。",
     "FamilyManagement_ErrorNoMatch": "此家庭不存在。",
     "FamilyManagement_AccessDenied": "您没有执行此操作的权限。",
