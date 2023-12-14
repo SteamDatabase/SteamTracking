@@ -1325,9 +1325,6 @@ ${STORE_BASE_URL}public/images/checkout/Cart_generic_header_logo.png
 ${STORE_BASE_URL}publisher/${m_strVanity}/
 ${STORE_BASE_URL}recommended/ignorerecommendation
 ${STORE_BASE_URL}remoteplay#anywhere_how
-${STORE_BASE_URL}replay/${steamid}/${}?src=9
-${STORE_BASE_URL}replay/${}/${}
-${STORE_BASE_URL}replay/${}/${}?src=8
 ${STORE_BASE_URL}reservation/ajaxpreviewoptions
 ${STORE_BASE_URL}reservation/cancelreservation
 ${STORE_BASE_URL}sale/${sale_vanity_id}
@@ -1365,7 +1362,7 @@ ${STORE_BASE_URL}saleaction/ajaxupdateusergiveawayregistration
 ${STORE_BASE_URL}search/?controllersupport=${strCategory}
 ${STORE_BASE_URL}search/?filter=${_ ? "topsellers" : "globaltopsellers"}
 ${STORE_BASE_URL}search/suggest
-${STORE_BASE_URL}share/${}/replay/${}/${}
+${STORE_BASE_URL}share/${}/yearinreview/${}/${}
 ${STORE_BASE_URL}stats/content/
 ${STORE_BASE_URL}stats/support/
 ${STORE_BASE_URL}stats/support?json=1
@@ -1397,6 +1394,9 @@ ${STORE_BASE_URL}vtt/video/${}
 ${STORE_BASE_URL}wishlist
 ${STORE_BASE_URL}wishlist/profiles/${}/${}#sort=discount
 ${STORE_BASE_URL}wishlist/profiles/${}/?wng=${}#sort=discount
+${STORE_BASE_URL}yearinreview/${steamid}/${}?src=9
+${STORE_BASE_URL}yearinreview/${}/${}
+${STORE_BASE_URL}yearinreview/${}/${}?src=8
 ${STORE_CDN_URL}/categories/headerimage/category/${}?cc=${COUNTRY}&l=${LANGUAGE}
 ${STORE_CDN_URL}/categories/headerimage/tags/${}?cc=${COUNTRY}&l=${LANGUAGE}
 ${STORE_CDN_URL}public/cdn/email/general/logo_med.png

@@ -432,17 +432,17 @@
 .yir2023_SingleGame_10YwG {
   background: radial-gradient(
     108.31% 162.89% at 18.99% -21.75%,
-    #693f00 0%,
+    #925801 0%,
     #2c0050 52.6%
   );
 }
 .yir2023_SingleGame_10YwG .yir2023_ImageTint_2GknM {
-  background: linear-gradient(135deg, #693f00 0%, #2c0050 100%);
+  background: linear-gradient(135deg, #925801 0%, #2c0050 100%);
 }
 .yir2023_Section_1z6_O {
   background: radial-gradient(
     94.31% 143.89% at 2.99% -1.75%,
-    #693f00 0%,
+    #925801 0%,
     #2c0050 52.6%,
     #022216
   );
@@ -453,7 +453,7 @@
 .yir2023_LongestStreakBgImage_3rUSv {
   background-image: radial-gradient(
       94.31% 143.89% at 2.99% -1.75%,
-      #693f00 0%,
+      #925801 0%,
       #2c0050 52.6%,
       #022216
     ),
@@ -469,30 +469,30 @@
   color: #c48100;
 }
 .yir2023_GridItem_2u4ym.yir2023_Game0_3B1V7 {
-  background: linear-gradient(90deg, #693f00 10%, #2c0050 164%, #022216 289%);
+  background: linear-gradient(90deg, #925801 10%, #2c0050 164%, #022216 289%);
 }
 .yir2023_GridItem_2u4ym.yir2023_Game1_TyaIa {
-  background: linear-gradient(90deg, #693f00 -55%, #2c0050 68%, #022216 194%);
+  background: linear-gradient(90deg, #925801 -55%, #2c0050 68%, #022216 194%);
 }
 .yir2023_GridItem_2u4ym.yir2023_Game2_2MJi2 {
-  background: linear-gradient(90deg, #693f00 -155%, #2c0050 2%, #022216 73%);
+  background: linear-gradient(90deg, #925801 -155%, #2c0050 2%, #022216 73%);
 }
 .yir2023_GridItem_2u4ym.yir2023_AchievementBlock_SK6TH {
-  background: linear-gradient(147.86deg, #693f00 25.78%, #2c0050 101.81%);
+  background: linear-gradient(147.86deg, #c48100 25.78%, #2c0050 101.81%);
 }
 .yir2023_GridItem_2u4ym.yir2023_StreakBlock_1HWMU {
   background: radial-gradient(100% 50% at 50% -10%, #c48100 0%, #2c0050 100%);
 }
 .yir2023_GridItem_2u4ym.yir2023_HardwareBlock_3u55A {
-  background: linear-gradient(147.86deg, #693f00 25.78%, #2c0050 79.81%);
+  background: linear-gradient(147.86deg, #925801 25.78%, #2c0050 79.81%);
 }
 .yir2023_GridItem_2u4ym.yir2023_DeviceBlock_30Nlt {
-  background: linear-gradient(147.86deg, #693f00 25.78%, #2c0050 79.81%);
+  background: linear-gradient(147.86deg, #925801 25.78%, #2c0050 79.81%);
 }
 .yir2023_SummaryCtn_3B7MS {
   background: conic-gradient(
     from 160deg at 113% -17%,
-    #693f00 30deg,
+    #925801 30deg,
     #0a6040 71deg,
     #2c0050 125deg
   );
@@ -500,46 +500,49 @@
 .yir2023_TimeRelatedCtn_1NReD {
   background: radial-gradient(
     120.31% 100.89% at 74.99% -9.75%,
-    #693f00 0%,
+    #925801 0%,
     #2c0050,
     #022216
   );
 }
 .yir2023_TopHonorsSection_3_b2U {
-  background: radial-gradient(
-    101.49% 84.96% at 18% -1.96%,
-    #693f00 0%,
-    #2c0050 100%
+  background: conic-gradient(
+    from 360deg at -8% 50%,
+    rgba(146, 88, 1, 0.3) 33deg,
+    #2c0050 66deg,
+    #022216 145deg
   );
 }
 .yir2023_FriendCtn_3vzUI {
-  background: linear-gradient(37deg, #693f00, #2c0050);
+  background: #48067f;
 }
 .yir2023_TopGameBlockContainer_3F7PU.yir2023_OddGradient_w_Lxb {
-  background: radial-gradient(
-    120.31% 100.89% at 74.99% -9.75%,
-    #693f00 10%,
-    #2c0050 52.6%,
-    #022216
-  );
+  background: conic-gradient(
+      from 87deg at -8.32% 0%,
+      rgba(105, 63, 0, 0.3019607843) 7.2531156242deg,
+      rgba(0, 71, 44, 0.56) 42.3303329945deg,
+      #33005c 96.4028513432deg
+    ),
+    #000;
 }
 .yir2023_TopGameBlockContainer_3F7PU.yir2023_EvenGradient_94te0 {
-  background: radial-gradient(
-    94.31% 143.89% at 49.99% -21.75%,
-    #022216 10%,
-    #693f00 52.6%,
-    #2c0050
-  );
+  background: conic-gradient(
+      from -90deg at 108.32% 100%,
+      rgba(105, 63, 0, 0.29) 7.2531156242deg,
+      rgba(0, 71, 44, 0.56) 24.2867588997deg,
+      #33005c 62.7407902479deg
+    ),
+    #000;
 }
 .yir2023_TopMostGame_1rn7C .yir2023_TopGameBlockContainer_3F7PU {
   background: radial-gradient(
     51.31% 143.89% at 49.99% -21.75%,
-    #693f00 10%,
+    #925801 10%,
     #2c0050 52.6%
   );
 }
 .yir2023_GamePlayDetails_2qarm {
-  background: linear-gradient(45deg, #693f00 15%, #2c0050 55%, #0a6040);
+  background: #2c0050;
 }
 @keyframes yir2023_gradient_3zLeB {
   0% {
@@ -553,23 +556,23 @@
   }
 }
 .yir2023_PlatformChartsCtn_3cVLk {
-  background: radial-gradient(#693f00, #2c0050);
+  background: radial-gradient(#925801 0%, #150025 40%);
   background-size: 200% 200%;
   background-position: 0% 0%;
   animation: yir2023_gradient_3zLeB 15s ease infinite;
 }
 .yir2023_IconAchievement_3meex path {
-  fill: #0a6040;
+  fill: #008352;
 }
 .yir2023_IconGamesPlayed_1_Cfx path {
-  fill: #0a6040;
+  fill: #008352;
 }
 .yir2023_IconStreak_3A0kF path {
-  fill: #0a6040;
+  fill: #008352;
 }
 .yir2023_PlayBehaviorContainer_9YqCa
   .yir2023_ProgressBarFilled_3wtv1.yir2023_ProgressBarFilledGradient_1bVTX {
-  background: linear-gradient(to right, #0a6040 0%, #2c0050 50%, #693f00 90%);
+  background: linear-gradient(to right, #008352 0%, #6a00df 50%, #925801 90%);
 }
 .yir2023_PlayBehaviorContainer_9YqCa
   .yir2023_NewActive_18-Ta
@@ -650,7 +653,7 @@
     url("/public/images/yearinreview/steam_logo_offset.png");
 }
 .yir2023_SeeRewindButton_2rDtQ {
-  background: #693f00;
+  background: #925801;
   padding: 8px;
   font-size: 14px;
   border-radius: 2px;
@@ -662,7 +665,7 @@
 .yir2023_MMFrame_28xhD.yir2023_MMOverride_3kq0h {
   background: radial-gradient(
     98.31% 133.89% at 12.99% 12.25%,
-    #693f00 10%,
+    #925801 10%,
     #2c0050 62.6%,
     #022216 90%
   );
@@ -701,7 +704,7 @@
   color: #f1f1f1;
 }
 .yir2023_MMFrame_28xhD.yir2023_MMOverride_3kq0h .yir2023_ViewPageButton_3YUlc {
-  background: linear-gradient(135deg, #c48100 0%, #693f00 100%);
+  background: linear-gradient(135deg, #c48100 0%, #925801 100%);
   color: #f1f1f1;
   font-weight: 600;
   letter-spacing: 1px;
@@ -709,14 +712,14 @@
 .yir2023_MMFrame_28xhD.yir2023_MMOverride_3kq0h
   .yir2023_ViewPageButton_3YUlc:hover {
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
-  background: linear-gradient(135deg, #c48100 0%, #693f00 100%);
+  background: linear-gradient(135deg, #c48100 0%, #925801 100%);
 }
 .yir2023_MMFrame_28xhD.yir2023_MMOverride_3kq0h .yir2023_Description_1qc70 {
   color: #f1f1f1;
   opacity: 0.7;
 }
 .yir2023_OtherYearLink_1AcAx {
-  background: #693f00;
+  background: #925801;
   padding: 8px;
   font-size: 14px;
   border-radius: 2px;
