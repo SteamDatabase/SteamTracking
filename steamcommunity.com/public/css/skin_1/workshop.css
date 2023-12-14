@@ -3239,6 +3239,7 @@ input.searchText
 	max-width: 800px;
 }
 .enlarged_image_viewer .popup_modal_footer .btnv6_blue_hoverfade span {
+	user-select: none;
 	line-height: 26px;
 }
 
