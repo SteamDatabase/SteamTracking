@@ -8,7 +8,6 @@
         RoleIcon: "familysharedcomponents_RoleIcon_2OqP3",
         ProfileLink: "familysharedcomponents_ProfileLink_iKwt8",
         MeBadge: "familysharedcomponents_MeBadge_qeLJ_",
-        ExpandRow: "familysharedcomponents_ExpandRow_168MV",
         PlayerName: "familysharedcomponents_PlayerName_3YHL9",
         RoleAndIcon: "familysharedcomponents_RoleAndIcon_1VP1W",
         RoleName: "familysharedcomponents_RoleName_3rvHm",
@@ -17,6 +16,8 @@
         FamilyMemberRowTop: "familysharedcomponents_FamilyMemberRowTop_3kaLZ",
         Left: "familysharedcomponents_Left_3KlqU",
         InvitePending: "familysharedcomponents_InvitePending_2xtN_",
+        ExpandRowButton: "familysharedcomponents_ExpandRowButton_2a0Yy",
+        Selected: "familysharedcomponents_Selected_2DsLI",
       };
     },
     57473: (e) => {
@@ -32,47 +33,48 @@
     },
     53765: (e, t, a) => {
       "use strict";
-      a.d(t, { In: () => R, L4: () => v, Mm: () => g });
+      a.d(t, { In: () => B, L4: () => R, Mm: () => y });
       var r = a(89526),
         n = a(28536),
         s = a(701),
-        o = a(14826),
-        l = a(19304),
-        i = a(24448),
+        o = a(57605),
+        l = a(14826),
+        i = a(19304),
+        c = a(24448),
         m = a(50355),
-        c = a(47165),
-        u = a(23384),
-        d = a(49437),
-        f = a(47742),
-        _ = a(39323),
-        h = a(45761),
-        P = a(67406);
-      function p(e) {
+        u = a(47165),
+        d = a(23384),
+        f = a(49437),
+        _ = a(47742),
+        h = a(39323),
+        P = a(45761),
+        p = a(67406);
+      function E(e) {
         return r.createElement(s.LpF, null);
       }
-      function E(e) {
+      function g(e) {
         return r.createElement(s.soM, null);
       }
-      function g(e) {
+      function y(e) {
         return r.createElement(
           "div",
-          { className: (0, l.Z)(n.RoleIcon, e.className) },
-          2 == e.role ? r.createElement(E, null) : r.createElement(p, null),
+          { className: (0, i.Z)(n.RoleIcon, e.className) },
+          2 == e.role ? r.createElement(g, null) : r.createElement(E, null),
         );
       }
-      function y(e) {
+      function v(e) {
         var t, a;
-        const { strSteamID: s, role: l, persona: u, isSelf: d } = e,
-          f = new c.K(s);
-        let p = e.size || "Large";
-        const E = (0, _.N5)(),
-          y = (0, P.h)(),
+        const { strSteamID: s, role: o, persona: i, isSelf: d } = e,
+          f = new u.K(s);
+        let _ = e.size || "Large";
+        const E = (0, h.N5)(),
+          g = (0, p.h)(),
           v =
             null === (t = E.data) || void 0 === t
               ? void 0
               : t.get(f.GetAccountID()),
           R =
-            null === (a = y.data) || void 0 === a
+            null === (a = g.data) || void 0 === a
               ? void 0
               : a.preferences().parenthesize_nicknames();
         return r.createElement(
@@ -82,22 +84,22 @@
             "a",
             {
               className: n.ProfileLink,
-              href: i.y$.GetProfileURLBySteamID(new c.K(s)),
+              href: c.y$.GetProfileURLBySteamID(new u.K(s)),
             },
             r.createElement(m.vV, {
               className: n.Avatar,
-              persona: u,
-              size: p,
+              persona: i,
+              size: _,
               statusPosition: "right",
             }),
-            r.createElement(h.o, {
+            r.createElement(P.o, {
               className: n.PlayerName,
               bIsSelf: d,
               bHideStatus: !1,
               bHidePersona: !1,
               bParenthesizeNicknames: R,
               bCompactView: !1,
-              persona: u,
+              persona: i,
               strNickname: v,
               eFriendRelationship: 3,
             }),
@@ -105,17 +107,17 @@
           r.createElement(
             "div",
             { className: n.RoleAndIcon },
-            r.createElement(g, { className: n.ProfileRoleIcon, role: l }),
+            r.createElement(y, { className: n.ProfileRoleIcon, role: o }),
             r.createElement(
               "div",
               { className: n.RoleName },
-              (0, o.Xx)(`#FamilyManagement_Role_${l}`),
+              (0, l.Xx)(`#FamilyManagement_Role_${o}`),
             ),
           ),
         );
       }
-      function v(e) {
-        const t = (0, r.useContext)(u.Xe);
+      function R(e) {
+        const t = (0, r.useContext)(d.Xe);
         return t.errorMessage
           ? r.createElement(
               "div",
@@ -124,25 +126,25 @@
             )
           : null;
       }
-      function R(e) {
-        const { strSteamID: t, role: a, bInvitePending: i, children: m } = e,
-          c = (0, f.M)(),
-          [_, h] = (0, r.useState)(!1),
-          P = c == t,
-          p = (0, d.IE)(t);
+      function B(e) {
+        const { strSteamID: t, role: a, bInvitePending: c, children: m } = e,
+          u = (0, _.M)(),
+          [h, P] = (0, r.useState)(!1),
+          p = u == t,
+          E = (0, f.IE)(t);
         if (
-          ((0, u.sT)(p, "#FamilyManagement_ErrorLoadFamilyGeneric"),
-          !p.isSuccess)
+          ((0, d.sT)(E, "#FamilyManagement_ErrorLoadFamilyGeneric"),
+          !E.isSuccess)
         )
           return null;
-        const E = p.data,
-          g = null != m;
+        const g = E.data,
+          y = null != m;
         return r.createElement(
           "div",
           {
-            className: (0, l.Z)(
+            className: (0, i.Z)(
               n.FamilyMemberRow,
-              P && n.ActiveFamilyMemberRow,
+              p && n.ActiveFamilyMemberRow,
             ),
           },
           r.createElement(
@@ -151,33 +153,33 @@
             r.createElement(
               "div",
               { className: n.Left },
-              r.createElement(y, {
+              r.createElement(v, {
                 strSteamID: t,
                 role: a,
-                persona: E,
-                isSelf: P,
+                persona: g,
+                isSelf: p,
               }),
-              i &&
+              c &&
                 r.createElement(
                   "div",
                   { className: n.InvitePending },
-                  (0, o.Xx)("#FamilyManagement_InvitePending"),
+                  (0, l.Xx)("#FamilyManagement_InvitePending"),
                 ),
-              P &&
+              p &&
                 r.createElement(
                   "span",
                   { className: n.MeBadge },
-                  (0, o.Xx)("#FamilyManagement_Me"),
+                  (0, l.Xx)("#FamilyManagement_Me"),
                 ),
             ),
-            g &&
+            y &&
               r.createElement(
-                "div",
-                { className: n.ExpandRow, onClick: () => h(!_) },
-                r.createElement(s.ret, { angle: _ ? 180 : 0 }),
+                o.Yz,
+                { className: n.ExpandRowButton, onClick: () => P(!h) },
+                r.createElement(s.vVQ, { direction: "down" }),
               ),
           ),
-          g && _ && m,
+          y && h && m,
         );
       }
     },
@@ -190,8 +192,8 @@
         o = a(59621),
         l = a(89526),
         i = a(4556),
-        m = a(47165),
-        c = a(23801),
+        c = a(47165),
+        m = a(23801),
         u = a(23217),
         d = a(32765);
       class f {
@@ -202,7 +204,7 @@
         }
         LoadProfiles(e, t) {
           return (0, r.mG)(this, void 0, void 0, function* () {
-            (0, c.X)(
+            (0, m.X)(
               e.length <= 500,
               "Check LoadProfiles, requesting too many steam IDs",
             );
@@ -236,7 +238,7 @@
         }
         GetProfileByAccountID(e) {
           return this.m_mapProfiles.get(
-            m.K.InitFromAccountID(e).ConvertTo64BitString(),
+            c.K.InitFromAccountID(e).ConvertTo64BitString(),
           );
         }
         GetProfileBySteamID(e) {
@@ -247,7 +249,7 @@
         }
         BHasProfileByAccountID(e) {
           return this.m_mapProfiles.has(
-            m.K.InitFromAccountID(e).ConvertTo64BitString(),
+            c.K.InitFromAccountID(e).ConvertTo64BitString(),
           );
         }
         BHasProfileBySteamID(e) {
@@ -271,7 +273,7 @@
       const _ = new f();
       function h(e) {
         const t = l.useMemo(
-            () => (e ? ("string" == typeof e ? new m.K(e) : e) : null),
+            () => (e ? ("string" == typeof e ? new c.K(e) : e) : null),
             [e],
           ),
           [a, r] = (0, l.useState)(!!t && !_.BHasProfileBySteamID(t));
@@ -300,7 +302,7 @@
         return [a, !!t && _.GetProfileBySteamID(t)];
       }
       function P(e) {
-        return h(l.useMemo(() => (e ? m.K.InitFromAccountID(e) : null), [e]));
+        return h(l.useMemo(() => (e ? c.K.InitFromAccountID(e) : null), [e]));
       }
       window.g_ProfileStore = _;
     },
@@ -336,8 +338,8 @@
         o = a(14826),
         l = a(23384),
         i = a(53765),
-        m = a(44973),
-        c = a(57605);
+        c = a(44973),
+        m = a(57605);
       function u(e) {
         const [t, a] = r.useState(null);
         return r.createElement(
@@ -361,22 +363,22 @@
               "div",
               { className: s().ButtonContainer },
               r.createElement(
-                c.KM,
+                m.KM,
                 {
                   className: s().PrimaryButton,
                   onClick: () => {
-                    window.location.assign(m.De.STORE_BASE_URL);
+                    window.location.assign(c.De.STORE_BASE_URL);
                   },
                 },
                 (0, o.Xx)("#PurchaseRequested_ReturnToStore"),
               ),
               r.createElement(
-                c.zx,
+                m.zx,
                 {
                   className: s().Button,
                   onClick: () => {
                     window.location.assign(
-                      m.De.STORE_BASE_URL +
+                      c.De.STORE_BASE_URL +
                         "account/familymanagement?tab=requests",
                     );
                   },
@@ -397,14 +399,14 @@
         o = a(14826),
         l = a(23384),
         i = a(69338),
-        m = a(53765),
-        c = a(44973),
+        c = a(53765),
+        m = a(44973),
         u = a(57605),
         d = a(19304);
       function f(e) {
         const { shoppingCartGID: t } = e,
           a = (0, l.Rs)(),
-          [n, c] = r.useState(null),
+          [n, m] = r.useState(null),
           u = r.useMemo(() => (0, o.Xx)("#RequestPurchase_PageTitle"), []);
         return a.isLoading
           ? r.createElement(
@@ -423,9 +425,9 @@
               { className: s().RequestPurchasePage },
               r.createElement(
                 l.Xe.Provider,
-                { value: { errorMessage: n, setErrorMessage: c } },
+                { value: { errorMessage: n, setErrorMessage: m } },
                 r.createElement("div", { className: s().Header }, u),
-                r.createElement(m.L4, null),
+                r.createElement(c.L4, null),
                 r.createElement(_, {
                   familyGroupID: a.data.family_groupid(),
                   shoppingCartGID: t,
@@ -435,14 +437,14 @@
       }
       function _(e) {
         const { familyGroupID: t, shoppingCartGID: a } = e,
-          n = (0, l.BU)(t, a, c.L7.country_code),
-          { setErrorMessage: m } = (0, l.cL)();
+          n = (0, l.BU)(t, a, m.L7.country_code),
+          { setErrorMessage: c } = (0, l.cL)();
         (0, l.zj)(
           n,
           "#RequestPurchase_GenericError",
           l.zs.k_EFamilyQueryPurchaseRequest,
         );
-        const f = `${c.De.STORE_BASE_URL}cart`;
+        const f = `${m.De.STORE_BASE_URL}cart`;
         return n.isLoading
           ? r.createElement(
               "div",
@@ -475,7 +477,7 @@
                         s().RequestButton,
                       ),
                       onClick: () => {
-                        m(null), n.mutate();
+                        c(null), n.mutate();
                       },
                     },
                     (0, o.Xx)("#RequestPurchase_RequestPurchase"),

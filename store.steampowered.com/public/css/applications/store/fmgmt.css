@@ -105,22 +105,29 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
 .familyincominginvites_IncomingInviteRow_1GICw
   .familyincominginvites_Buttons_iZCbd {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 8px;
   margin-bottom: 10px;
-  margin-left: 5px;
   margin-top: 10px;
-  margin-right: 5px;
 }
 .familyincominginvites_IncomingInviteRow_1GICw
   .familyincominginvites_Buttons_iZCbd
   .familyincominginvites_AcceptInviteButton_34In_ {
   flex-basis: 120px;
+}
+.familyincominginvites_IncomingInviteRow_1GICw
+  .familyincominginvites_Buttons_iZCbd
+  .familyincominginvites_AcceptInviteButton_34In_:hover {
   background-color: #1a9fff;
 }
 .familyincominginvites_IncomingInviteRow_1GICw
   .familyincominginvites_Buttons_iZCbd
   .familyincominginvites_DeclineInviteButton_3CEsy {
   flex-basis: 120px;
+}
+.familyincominginvites_IncomingInviteRow_1GICw
+  .familyincominginvites_Buttons_iZCbd
+  .familyincominginvites_DeclineInviteButton_3CEsy:hover {
   background-color: #de3618;
 }
 .familyincominginvites_IncomingInviteRow_1GICw
@@ -195,23 +202,16 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   overflow: hidden;
 }
 .familysharedcomponents_MeBadge_qeLJ_ {
-  content: "Me";
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: #0e141b;
   background-color: #59bf40;
   font-size: 12px;
-  font-weight: 500;
+  font-weight: 600;
   height: 21px;
   width: 50px;
   text-align: center;
-  margin-left: 30px;
-}
-.familysharedcomponents_ExpandRow_168MV {
-  cursor: pointer;
-  fill: #fff;
-  padding: 10px;
-}
-.familysharedcomponents_ExpandRow_168MV svg {
-  transition: transform linear 0.1s;
 }
 .familysharedcomponents_PlayerName_3YHL9 {
   font-size: 20px;
@@ -238,7 +238,7 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   background-color: #0e141b;
   margin-top: 10px;
   margin-bottom: 10px;
-  padding: 5px;
+  padding: 12px;
   transition: height 0.5s;
 }
 .familysharedcomponents_FamilyMemberRow_3QkkY
@@ -255,7 +255,9 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
 }
 .familysharedcomponents_FamilyMemberRow_3QkkY
   .familysharedcomponents_InvitePending_2xtN_ {
-  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 2px 10px;
   text-transform: uppercase;
   color: #ff0;
@@ -264,41 +266,92 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   border-color: #ff0;
   border-width: thin;
 }
-.familyinvite_InviteSplash_2SFzY {
+.familysharedcomponents_FamilyMemberRow_3QkkY
+  .familysharedcomponents_ExpandRowButton_2a0Yy {
+  cursor: pointer;
+  fill: #fff;
+  padding: 10px;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0);
+  color: #fff;
+  height: 24px;
+  width: 24px;
+}
+.familysharedcomponents_FamilyMemberRow_3QkkY
+  .familysharedcomponents_ExpandRowButton_2a0Yy:hover {
+  background-color: #1a9fff;
+}
+.familysharedcomponents_FamilyMemberRow_3QkkY
+  .familysharedcomponents_ExpandRowButton_2a0Yy
+  svg {
+  transition: transform 0.2s ease-in-out;
+  height: 18px;
+  margin-top: 4px;
+}
+.familysharedcomponents_FamilyMemberRow_3QkkY
+  .familysharedcomponents_ExpandRowButton_2a0Yy.familysharedcomponents_Selected_2DsLI
+  svg {
+  transform: rotateZ(180deg);
+  transition: transform 0.2s ease-in-out;
+}
+.familyinvite_InviteSplashCtn_WkSxi {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
+  margin-bottom: 12px;
   background-color: #0e141b;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  padding: 5px;
+  padding: 8px 24px;
   height: 84px;
-  text-transform: uppercase;
-  font-size: 16px;
-  color: #fff;
-  cursor: pointer;
 }
-.familyinvite_InviteSplash_2SFzY svg {
-  height: 74px;
-  width: 74px;
+.familyinvite_InviteSplashCtn_WkSxi .familyinvite_InviteSplash_2SFzY {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 8px;
+  padding: 8px 24px;
+  margin: 8px;
+  max-width: 200px;
+}
+.familyinvite_InviteSplashCtn_WkSxi .familyinvite_InviteSplash_2SFzY svg {
+  height: 32px;
+  width: auto;
+}
+a:hover {
+  color: #fff;
 }
 .familyinvite_SelectAccountContainer_3VYLj,
 .familyinvite_SelectRoleContainer_1JFlD {
   background-color: #0e141b;
   margin-top: 10px;
-  margin-bottom: 10px;
-  padding: 5px;
+  margin-bottom: 18px;
+  padding: 12px 12px 18px 12px;
+  display: flex;
+  flex-direction: column;
 }
 .familyinvite_SelectAccountContainer_3VYLj .familyinvite_CloseButton_3GXpD,
 .familyinvite_SelectRoleContainer_1JFlD .familyinvite_CloseButton_3GXpD {
-  float: right;
+  display: flex;
+  align-self: flex-end;
   cursor: pointer;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 3px;
+  background-color: rgba(0, 0, 0, 0);
+  transition: background-color 80ms ease-in;
+  width: 24px;
 }
 .familyinvite_SelectAccountContainer_3VYLj .familyinvite_CloseButton_3GXpD svg,
 .familyinvite_SelectRoleContainer_1JFlD .familyinvite_CloseButton_3GXpD svg {
-  height: 24px;
-  width: 24px;
+  height: 18px;
+  width: 18px;
+  margin-right: 0px;
+}
+.familyinvite_SelectAccountContainer_3VYLj
+  .familyinvite_CloseButton_3GXpD:hover,
+.familyinvite_SelectRoleContainer_1JFlD .familyinvite_CloseButton_3GXpD:hover {
+  background-color: #de3618;
 }
 .familyinvite_SelectAccountContainer_3VYLj .familyinvite_Text_2HfX7,
 .familyinvite_SelectRoleContainer_1JFlD .familyinvite_Text_2HfX7 {
@@ -310,20 +363,25 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   font-size: 24px;
   color: #fff;
   text-align: center;
-  margin-top: 24px;
   text-transform: uppercase;
 }
 .familyinvite_SelectAccountContainer_3VYLj .familyinvite_MethodButtons_2MucX {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 40px;
+  gap: 8px;
 }
 .familyinvite_SelectAccountContainer_3VYLj
   .familyinvite_MethodButtons_2MucX
   button {
-  flex-basis: 180px;
+  flex: 1 1 5em;
+  padding-top: 5px;
+  padding-bottom: 5px;
   color: #fff;
+}
+.familyinvite_SelectAccountContainer_3VYLj
+  .familyinvite_MethodButtons_2MucX
+  button:hover {
   background-color: #1a9fff;
 }
 .familyinvite_SelectRoleContainer_1JFlD .familyinvite_Header_1Yrjr {
@@ -707,7 +765,6 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #1f2a39;
   margin-top: 10px;
   margin-bottom: 10px;
   padding: 5px;
@@ -724,28 +781,36 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  width: 100%;
   margin-top: 20px;
-}
-.familymanagement_ManageFamily_3ayYO
-  .familymanagement_ExpandedPendingInvite_2t7pN
-  .familymanagement_Buttons_27d1E
-  .familymanagement_ButtonIcon_1sn7W {
-  margin-right: 10px;
+  gap: 8px;
 }
 .familymanagement_ManageFamily_3ayYO
   .familymanagement_ExpandedPendingInvite_2t7pN
   .familymanagement_Buttons_27d1E
   .familymanagement_ManagementButton_7HLtN {
-  width: auto;
-  padding: 2px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  flex: 1 1 5em;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 .familymanagement_ManageFamily_3ayYO
-  .familymanagement_CancelInviteButton_1nyw3 {
+  .familymanagement_ExpandedPendingInvite_2t7pN
+  .familymanagement_Buttons_27d1E
+  .familymanagement_ManagementButton_7HLtN
+  svg {
+  width: 20px;
+  height: 20px;
+}
+.familymanagement_ManageFamily_3ayYO
+  .familymanagement_CancelInviteButton_1nyw3:hover {
   background-color: #de3618;
-  margin-right: 10px;
 }
 .familymanagement_ManageFamily_3ayYO
-  .familymanagement_ResendInviteButton_2WPzA {
+  .familymanagement_ResendInviteButton_2WPzA:hover {
   background-color: #1a9fff;
 }
 .familymanagement_OnboardSplashContainer_3HBvb
@@ -764,7 +829,10 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
 .familymanagement_OnboardSplashContainer_3HBvb
   .familymanagement_OnboardSplashButtons_12md3
   .familymanagement_OnboardSplashButton_2R8KF {
-  width: 200px;
+  text-align: center;
+  padding: 16px 8px;
+  margin: 8px;
+  border-radius: 3px;
 }
 .familymanagement_OnboardSplashContainer_3HBvb
   .familymanagement_OnboardSplashButtons_12md3
@@ -778,32 +846,9 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
 .familymanagement_OnboardSplashContainer_3HBvb
   .familymanagement_OnboardSplashButtons_12md3
   .familymanagement_OnboardSplashButton_2R8KF
-  .familymanagement_OnboardSplashButtonGraphic_2UPkK {
-  text-align: center;
-  background-color: #1a9fff;
-  padding: 16px 8px;
-  margin: 8px;
-  border-radius: 3px;
-  transition:
-    scale 100ms ease-in-out,
-    filter 100ms ease-in-out;
-  filter: drop-shadow(0px 1px 2px #0e141b);
-}
-.familymanagement_OnboardSplashContainer_3HBvb
-  .familymanagement_OnboardSplashButtons_12md3
-  .familymanagement_OnboardSplashButton_2R8KF
-  .familymanagement_OnboardSplashButtonGraphic_2UPkK
   svg {
   height: 32px;
   width: auto;
-}
-.familymanagement_OnboardSplashContainer_3HBvb
-  .familymanagement_OnboardSplashButtons_12md3
-  .familymanagement_OnboardSplashButton_2R8KF
-  .familymanagement_OnboardSplashButtonGraphic_2UPkK:hover {
-  color: #fff;
-  scale: 1.03;
-  filter: drop-shadow(0px 3px 3px #0e141b) brightness(1.05);
 }
 .familymanagement_OnboardSplashContainer_3HBvb
   .familymanagement_OnboardSplashButtons_12md3
@@ -853,24 +898,27 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   font-size: 16px;
 }
 .familymanagement_CreateFamilyContainer_3uS4a
-  > .familymanagement_CreateFamilyForm_10fN6 {
+  .familymanagement_CreateFamilyForm_10fN6 {
   display: flex;
   justify-content: space-between;
   gap: 16px;
   align-items: center;
   margin: 16px 8px;
   padding: 16px 8px;
-  background-color: #23262e;
 }
 .familymanagement_CreateFamilyContainer_3uS4a
-  > .familymanagement_CreateFamilyForm_10fN6
-  > input {
+  .familymanagement_CreateFamilyForm_10fN6
+  input {
   padding: 10px;
   flex-grow: 1;
+  background-color: #0e141b;
+  color: #99d4ff;
+  font-weight: 500;
+  border: none;
 }
 .familymanagement_CreateFamilyContainer_3uS4a
-  > .familymanagement_CreateFamilyForm_10fN6
-  > button {
+  .familymanagement_CreateFamilyForm_10fN6
+  button {
   flex-grow: 0;
   flex-basis: 80px;
 }
@@ -920,30 +968,34 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
 }
 .familymember_FamilyMemberManagementButtons_-kADz
   .familymember_ManagementButton_vDtJq {
-  width: fit-content;
-  padding: 0px 8px;
-  flex-grow: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  flex: 2 2 5em;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 .familymember_FamilyMemberManagementButtons_-kADz
   .familymember_ManagementButton_vDtJq
   svg {
-  margin-right: 4px;
   width: 20px;
   height: 20px;
 }
 .familymember_FamilyMemberManagementButtons_-kADz
-  .familymember_ManagementLable_2COo8 {
+  .familymember_ManagementLabel_3oofp {
   font-size: 16px;
   color: #dcdedf;
-  flex-grow: 1;
+  flex: 1 1 20em;
   margin-left: 8px;
   align-self: center;
 }
-.familymember_FamilyMemberManagementButtons_-kADz .familymember_Remove_UzQPb {
+.familymember_FamilyMemberManagementButtons_-kADz
+  .familymember_Remove_UzQPb:hover {
   background-color: #de3618;
 }
 .familymember_FamilyMemberManagementButtons_-kADz
-  .familymember_DeleteFamily_2zCYL {
+  .familymember_DeleteFamily_2zCYL:hover {
   background-color: #de3618;
 }
 .familyparentalsettings_FamilyMemberParentalSettingsInner_2WflO {
@@ -966,12 +1018,6 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   line-height: normal;
   text-transform: uppercase;
   flex-grow: 1;
-}
-.familyparentalsettings_ParentalGameListHeader_2oJ9B
-  .familyparentalsettings_FilterBox_3Bny2
-  .familyparentalsettings_Input_y-FOn {
-  height: 24px;
-  box-sizing: border-box;
 }
 .familyparentalsettings_ParentalGameListHeader_2oJ9B
   .familyparentalsettings_Selector_2Qb3- {
@@ -1312,6 +1358,40 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   border-radius: 50%;
   background-color: rgba(0, 0, 0, 0.3);
   color: #fff;
+}
+.familygames_FamilyGamesSearchBox_2wXQT .familygames_Input_29VTx {
+  height: 24px;
+  box-sizing: border-box;
+}
+.familygames_FamilyGamesControls_1uN1c {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: flex-end;
+}
+.familygames_FamilyGamesControls_1uN1c .familygames_FamilyGamesSearchBox_2wXQT {
+  max-width: 50%;
+}
+.familygames_FamilyGamesSort_24xN9 {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.familygames_FamilyGamesSortSelector_259TK {
+  display: flex;
+  flex-direction: row;
+  gap: 3px;
+  align-items: center;
+  color: #8b929a;
+  cursor: pointer;
+}
+.familygames_FamilyGamesSortSelector_259TK.familygames_Selected_1dj3r {
+  color: #fff;
+}
+.familygames_FamilyGamesSortSelector_259TK
+  .familygames_DirectionIndicator_3HYMk {
+  height: 16px;
+  width: 16px;
 }
 .appgrid_AppGridItem_3Ti0O {
   position: relative;

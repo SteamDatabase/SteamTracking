@@ -358,6 +358,21 @@ p.currency_change_confirm_dialog_footer {
 
 	.two_column .nav_item {
 		display: inline-block;
+
+		&::after {
+			content: none;
+		}
+	}
+	.two_column .nav_item.active {
+		&::after {
+			content: none;
+		}
+	}
+
+	.two_column .nav_item:hover {
+		&::after {
+			content: none;
+		}
 	}
 
 	.two_column.right {

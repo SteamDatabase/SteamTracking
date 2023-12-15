@@ -445,23 +445,16 @@
   overflow: hidden;
 }
 .familysharedcomponents_MeBadge_qeLJ_ {
-  content: "Me";
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: #0e141b;
   background-color: #59bf40;
   font-size: 12px;
-  font-weight: 500;
+  font-weight: 600;
   height: 21px;
   width: 50px;
   text-align: center;
-  margin-left: 30px;
-}
-.familysharedcomponents_ExpandRow_168MV {
-  cursor: pointer;
-  fill: #fff;
-  padding: 10px;
-}
-.familysharedcomponents_ExpandRow_168MV svg {
-  transition: transform linear 0.1s;
 }
 .familysharedcomponents_PlayerName_3YHL9 {
   font-size: 20px;
@@ -488,7 +481,7 @@
   background-color: #0e141b;
   margin-top: 10px;
   margin-bottom: 10px;
-  padding: 5px;
+  padding: 12px;
   transition: height 0.5s;
 }
 .familysharedcomponents_FamilyMemberRow_3QkkY
@@ -505,7 +498,9 @@
 }
 .familysharedcomponents_FamilyMemberRow_3QkkY
   .familysharedcomponents_InvitePending_2xtN_ {
-  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 2px 10px;
   text-transform: uppercase;
   color: #ff0;
@@ -513,4 +508,32 @@
   border-style: solid;
   border-color: #ff0;
   border-width: thin;
+}
+.familysharedcomponents_FamilyMemberRow_3QkkY
+  .familysharedcomponents_ExpandRowButton_2a0Yy {
+  cursor: pointer;
+  fill: #fff;
+  padding: 10px;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0);
+  color: #fff;
+  height: 24px;
+  width: 24px;
+}
+.familysharedcomponents_FamilyMemberRow_3QkkY
+  .familysharedcomponents_ExpandRowButton_2a0Yy:hover {
+  background-color: #1a9fff;
+}
+.familysharedcomponents_FamilyMemberRow_3QkkY
+  .familysharedcomponents_ExpandRowButton_2a0Yy
+  svg {
+  transition: transform 0.2s ease-in-out;
+  height: 18px;
+  margin-top: 4px;
+}
+.familysharedcomponents_FamilyMemberRow_3QkkY
+  .familysharedcomponents_ExpandRowButton_2a0Yy.familysharedcomponents_Selected_2DsLI
+  svg {
+  transform: rotateZ(180deg);
+  transition: transform 0.2s ease-in-out;
 }
