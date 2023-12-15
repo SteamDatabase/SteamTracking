@@ -941,6 +941,11 @@ body.SteamAwardsVoting .responsive_page_frame {
   background-size: contain;
   background-color: #21081f;
 }
+@media screen and (max-width: 700px) {
+  .steamawards2023_HeaderCtn_1oXTW {
+    background-position: 0px 47px;
+  }
+}
 .steamawards2023_HeaderCtn_1oXTW .steamawards2023_HeaderContent_33AeQ {
   padding: 30px 3% 30px 3%;
   min-height: 457px;
@@ -978,6 +983,13 @@ body.SteamAwardsVoting .responsive_page_frame {
     padding-left: 0;
   }
 }
+@media screen and (max-width: 700px) {
+  .steamawards2023_HeaderCtn_1oXTW
+    .steamawards2023_HeaderContent_33AeQ
+    .steamawards2023_TextColumn_3VOVT {
+    max-width: 100%;
+  }
+}
 .steamawards2023_HeaderCtn_1oXTW
   .steamawards2023_HeaderContent_33AeQ.steamawards2023_FriendsHeader_1770H {
   min-height: 300px;
@@ -993,13 +1005,13 @@ body.SteamAwardsVoting .responsive_page_frame {
 }
 @media screen and (max-width: 910px) {
   .steamawards2023_HeaderCtn_1oXTW .steamawards2023_EventTitle_3xLoB {
-    font-size: 8vw;
-    line-height: 8vw;
+    font-size: clamp(36px, 8vw, 80px);
+    line-height: 1em;
   }
 }
 .steamawards2023_HeaderCtn_1oXTW .steamawards2023_InfoText_2ajjx {
-  font-size: 18px;
-  line-height: 23px;
+  font-size: clamp(14px, 1.3vw, 18px);
+  line-height: clamp(17px, 1em, 21px);
   font-weight: 200;
   color: #e5c6df;
   margin: 5px 0;
@@ -1007,7 +1019,9 @@ body.SteamAwardsVoting .responsive_page_frame {
 }
 .steamawards2023_HeaderCtn_1oXTW
   .steamawards2023_InfoText_2ajjx.steamawards2023_Large_TDUFD {
-  font-size: 28px;
+  max-width: 70%;
+  font-size: clamp(14px, 2vw, 28px);
+  line-height: 1em;
   font-weight: 500;
   margin-bottom: 16px;
   margin-top: 8px;
@@ -1027,35 +1041,17 @@ body.v6 h3.steamawards2023_FaqSectionTitle_3iDsX {
   margin-top: 50px;
 }
 .steamawards2023_FAQCtn_21i-Q {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
 }
-@media screen and (max-width: 910px) {
+@media screen and (max-width: 650px) {
   .steamawards2023_FAQCtn_21i-Q {
-    flex-direction: column;
-  }
-}
-.steamawards2023_FAQCtn_21i-Q .steamawards2023_LeftCol_17fyk {
-  width: 50%;
-  box-sizing: border-box;
-  padding-right: 40px;
-}
-@media screen and (max-width: 910px) {
-  .steamawards2023_FAQCtn_21i-Q .steamawards2023_LeftCol_17fyk {
-    width: 100%;
-  }
-}
-.steamawards2023_FAQCtn_21i-Q .steamawards2023_RightCol_1rTWT {
-  width: 50%;
-}
-@media screen and (max-width: 910px) {
-  .steamawards2023_FAQCtn_21i-Q .steamawards2023_RightCol_1rTWT {
-    width: 100%;
+    grid-template-columns: 1fr;
   }
 }
 .steamawards2023_FAQCtn_21i-Q .steamawards2023_FaqEntry_DiU8w {
   margin-bottom: 25px;
-  width: 50%;
   flex-shrink: 0;
   padding-right: 20px;
   box-sizing: border-box;
@@ -1098,6 +1094,12 @@ body.v6 h3.steamawards2023_FaqSectionTitle_3iDsX {
     filter 0.3s ease-in-out,
     opacity 0.3s ease-in-out;
 }
+@media screen and (max-width: 500px) {
+  .steamawards2023_SteamAwardCategory_3AoAT {
+    margin-top: 0;
+    padding-bottom: 20px;
+  }
+}
 .steamawards2023_SteamAwardCategory_3AoAT.steamawards2023_Active_tH2TN {
   filter: saturate(1);
   opacity: 1;
@@ -1128,7 +1130,7 @@ body.v6 h3.steamawards2023_FaqSectionTitle_3iDsX {
 }
 .steamawards2023_SteamAwardCategory_3AoAT.steamawards2023_CategoryVoted_29XoN
   .steamawards2023_FinalistGameCtn_1GFLe:not(.steamawards2023_MyVote_37XtG) {
-  filter: saturate(0);
+  filter: sepia(1) hue-rotate(236deg) contrast(0.7) opacity(1) brightness(0.5);
 }
 .steamawards2023_SteamAwardCategory_3AoAT.steamawards2023_CategoryVoted_29XoN
   .steamawards2023_FinalistsRow_3vJww
@@ -1180,6 +1182,7 @@ body.v6 h3.steamawards2023_FaqSectionTitle_3iDsX {
 @media screen and (max-width: 850px) {
   .steamawards2023_SteamAwardCategory_3AoAT .steamawards2023_CategoryRow_mE1xm {
     flex-direction: column;
+    padding: 20px;
   }
 }
 .steamawards2023_SteamAwardCategory_3AoAT
@@ -1205,15 +1208,15 @@ body.v6 h3.steamawards2023_FaqSectionTitle_3iDsX {
   letter-spacing: 1px;
   text-transform: uppercase;
   font-weight: 300;
-  color: #dec0d8;
+  color: #d5c8d3;
   text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.4);
 }
 .steamawards2023_SteamAwardCategory_3AoAT
   .steamawards2023_CategoryRow_mE1xm
   .steamawards2023_LeftColumn_o8owV
   .steamawards2023_CategoryTitle_RsNkE {
-  font-size: 42px;
-  line-height: 44px;
+  font-size: clamp(30px, 8.3vw, 42px);
+  line-height: clamp(33px, 1em, 44px);
   font-weight: 900;
   text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.4);
 }
@@ -1225,6 +1228,14 @@ body.v6 h3.steamawards2023_FaqSectionTitle_3iDsX {
   font-size: 16px;
   text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.4);
   flex-grow: 1;
+}
+@media screen and (max-width: 850px) {
+  .steamawards2023_SteamAwardCategory_3AoAT
+    .steamawards2023_CategoryRow_mE1xm
+    .steamawards2023_LeftColumn_o8owV
+    .steamawards2023_CategoryDescription_1JqmR {
+    font-weight: 200;
+  }
 }
 @media screen and (max-width: 910px) {
   .steamawards2023_SteamAwardCategory_3AoAT
@@ -1241,15 +1252,6 @@ body.v6 h3.steamawards2023_FaqSectionTitle_3iDsX {
   position: relative;
   flex-shrink: 0;
   max-width: 50%;
-}
-@media screen and (max-width: 850px) {
-  .steamawards2023_SteamAwardCategory_3AoAT
-    .steamawards2023_CategoryRow_mE1xm
-    .steamawards2023_RightColumn_2IvHD {
-    margin-left: 0;
-    margin-top: 2%;
-    max-width: 616px;
-  }
 }
 @media screen and (max-width: 850px) {
   .steamawards2023_SteamAwardCategory_3AoAT
@@ -1314,30 +1316,42 @@ body.v6 h3.steamawards2023_FaqSectionTitle_3iDsX {
   font-size: 20px;
   font-weight: 900;
   text-transform: uppercase;
+  box-shadow: 0 0 10px #000;
 }
 .steamawards2023_SteamAwardCategory_3AoAT .steamawards2023_FinalistsCtn_2nXgr {
   position: relative;
   display: flex;
   flex-direction: column;
   z-index: 2;
-  transition: filter 0.3s ease-out;
-  filter: blur(5px) opacity(0.2);
+  transition:
+    filter 0.3s ease-out,
+    height 0.3s ease-out;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 .steamawards2023_SteamAwardCategory_3AoAT
-  .steamawards2023_FinalistsCtn_2nXgr.steamawards2023_Opening_3qffh,
+  .steamawards2023_FinalistsCtn_2nXgr.steamawards2023_Enter_15nA0 {
+  filter: blur(5px) opacity(0.2);
+  height: 0px;
+}
 .steamawards2023_SteamAwardCategory_3AoAT
-  .steamawards2023_FinalistsCtn_2nXgr.steamawards2023_Open_3h8zX {
+  .steamawards2023_FinalistsCtn_2nXgr.steamawards2023_EnterActive_2mI8X {
   filter: blur(0px) opacity(1);
+  height: 355px;
   -webkit-animation: steamawards2023_open-finalists_2jzg7 0.4s
     cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
   animation: steamawards2023_open-finalists_2jzg7 0.4s
     cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
 }
 .steamawards2023_SteamAwardCategory_3AoAT
-  .steamawards2023_FinalistsCtn_2nXgr.steamawards2023_Closing_1E9bZ {
+  .steamawards2023_FinalistsCtn_2nXgr.steamawards2023_Exit_3oZ-n {
+  filter: blur(0px) opacity(1);
+  height: 355px;
+}
+.steamawards2023_SteamAwardCategory_3AoAT
+  .steamawards2023_FinalistsCtn_2nXgr.steamawards2023_ExitActive_VYQWS {
   filter: blur(5px) opacity(0.2);
+  height: 0px;
   -webkit-animation: steamawards2023_close-finalists_1I-MK 0.4s
     cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
   animation: steamawards2023_close-finalists_1I-MK 0.4s
@@ -1353,6 +1367,12 @@ body.v6 h3.steamawards2023_FaqSectionTitle_3iDsX {
   text-transform: uppercase;
   letter-spacing: 0.5px;
   z-index: 2;
+}
+@media screen and (max-width: 700px) {
+  .steamawards2023_SteamAwardCategory_3AoAT
+    .steamawards2023_FinalistsIntro_6n0C7 {
+    margin: 0 10px 10px 10px;
+  }
 }
 .steamawards2023_SteamAwardCategory_3AoAT
   .steamawards2023_FinalistsIntro_6n0C7
@@ -1371,8 +1391,21 @@ body.v6 h3.steamawards2023_FaqSectionTitle_3iDsX {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
+  gap: 6px;
   align-items: start;
   z-index: 1;
+}
+@media screen and (max-width: 910px) {
+  .steamawards2023_SteamAwardCategory_3AoAT
+    .steamawards2023_FinalistsRow_3vJww {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 500px) {
+  .steamawards2023_SteamAwardCategory_3AoAT
+    .steamawards2023_FinalistsRow_3vJww {
+    padding: 10px;
+  }
 }
 .steamawards2023_SteamAwardCategory_3AoAT
   .steamawards2023_FinalistsRow_3vJww
@@ -1384,24 +1417,35 @@ body.v6 h3.steamawards2023_FaqSectionTitle_3iDsX {
   max-width: calc(20% - 12px);
   min-width: 130px;
 }
-.steamawards2023_SteamAwardCategory_3AoAT
-  .steamawards2023_FinalistsRow_3vJww
-  .steamawards2023_FinalistGameCtn_1GFLe.steamawards2023_CurrentlyFeatured_3FpIk
-  a.steamawards2023_CapsuleLink_2fEFo {
-  position: relative;
-  transform: translateY(-10px);
+@media screen and (max-width: 500px) {
+  .steamawards2023_SteamAwardCategory_3AoAT
+    .steamawards2023_FinalistsRow_3vJww
+    .steamawards2023_FinalistGameCtn_1GFLe {
+    min-width: 120px;
+    max-width: 150px;
+    flex: 1 1 120px;
+  }
 }
-.steamawards2023_SteamAwardCategory_3AoAT
-  .steamawards2023_FinalistsRow_3vJww
-  .steamawards2023_FinalistGameCtn_1GFLe.steamawards2023_CurrentlyFeatured_3FpIk
-  .steamawards2023_Capsule_UpvFQ {
-  position: relative;
-}
-.steamawards2023_SteamAwardCategory_3AoAT
-  .steamawards2023_FinalistsRow_3vJww
-  .steamawards2023_FinalistGameCtn_1GFLe.steamawards2023_CurrentlyFeatured_3FpIk
-  .steamawards2023_Highlight_3KQg_ {
-  opacity: 1;
+@media screen and (min-width: 710px) {
+  .steamawards2023_SteamAwardCategory_3AoAT
+    .steamawards2023_FinalistsRow_3vJww
+    .steamawards2023_FinalistGameCtn_1GFLe.steamawards2023_CurrentlyFeatured_3FpIk
+    a.steamawards2023_CapsuleLink_2fEFo {
+    position: relative;
+    transform: translateY(-10px);
+  }
+  .steamawards2023_SteamAwardCategory_3AoAT
+    .steamawards2023_FinalistsRow_3vJww
+    .steamawards2023_FinalistGameCtn_1GFLe.steamawards2023_CurrentlyFeatured_3FpIk
+    .steamawards2023_Capsule_UpvFQ {
+    position: relative;
+  }
+  .steamawards2023_SteamAwardCategory_3AoAT
+    .steamawards2023_FinalistsRow_3vJww
+    .steamawards2023_FinalistGameCtn_1GFLe.steamawards2023_CurrentlyFeatured_3FpIk
+    .steamawards2023_Highlight_3KQg_ {
+    opacity: 1;
+  }
 }
 .steamawards2023_SteamAwardCategory_3AoAT
   .steamawards2023_FinalistsRow_3vJww
@@ -1480,6 +1524,7 @@ body.v6 h3.steamawards2023_FaqSectionTitle_3iDsX {
 }
 .steamawards2023_VotingArea_3chYY {
   position: relative;
+  box-sizing: border-box;
 }
 .steamawards2023_ProgressCtn_10nGa {
   position: sticky;
@@ -1490,19 +1535,34 @@ body.v6 h3.steamawards2023_FaqSectionTitle_3iDsX {
   padding-top: 10px;
   padding-bottom: 16px;
   background-color: #773c6c;
+  border-radius: 0px 0px 5px 5px;
   box-shadow: 0 0 9px #000;
   z-index: 3;
   color: #fff;
 }
+@media screen and (max-width: 910px) {
+  .steamawards2023_ProgressCtn_10nGa {
+    position: relative;
+    max-width: 100vw;
+    width: 100vw;
+    box-sizing: border-box;
+  }
+}
 .steamawards2023_ProgressCtn_10nGa .steamawards2023_Title_1KCvb {
   position: relative;
-  font-size: 17px;
+  font-weight: 200;
+  font-size: clamp(13px, 1.3vw, 17px);
+  line-height: clamp(16px, 1em, 20px);
   margin-bottom: 6px;
+  text-align: center;
 }
 .steamawards2023_ProgressCtn_10nGa .steamawards2023_StickerRow_2K4DT {
   position: relative;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
 }
 .steamawards2023_ProgressCtn_10nGa .steamawards2023_CategoryStickerCtn_bI10T {
   position: relative;
@@ -1511,43 +1571,71 @@ body.v6 h3.steamawards2023_FaqSectionTitle_3iDsX {
   background-color: rgba(0, 0, 0, 0.1);
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.4196078431) inset;
   border-radius: 3px;
-  margin-right: 4px;
   background-size: contain;
+}
+@media screen and (max-width: 630px) {
+  .steamawards2023_ProgressCtn_10nGa .steamawards2023_CategoryStickerCtn_bI10T {
+    width: 7vw;
+    height: 7vw;
+  }
 }
 .steamawards2023_ProgressCtn_10nGa
   .steamawards2023_CategoryStickerCtn_bI10T.steamawards2023_Inactive_2jfyC {
-  filter: grayscale(100%);
+  filter: sepia(1) hue-rotate(249deg);
   opacity: 0.2;
+  background-size: 75%;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 @-webkit-keyframes steamawards2023_open-finalists_2jzg7 {
   0% {
+    height: 0px;
+    filter: blur(5px) opacity(0);
+  }
+  30% {
     filter: blur(5px) opacity(0.2);
   }
   100% {
+    height: 355px;
     filter: blur(0) opacity(1);
   }
 }
 @keyframes steamawards2023_open-finalists_2jzg7 {
   0% {
+    height: 0px;
+    filter: blur(5px) opacity(0);
+  }
+  30% {
     filter: blur(5px) opacity(0.2);
   }
   100% {
+    height: 355px;
     filter: blur(0) opacity(1);
   }
 }
 @-webkit-keyframes steamawards2023_close-finalists_1I-MK {
   0% {
+    height: 355px;
     filter: blur(0) opacity(1);
   }
-  100% {
+  70% {
     filter: blur(5px) opacity(0.2);
+  }
+  100% {
+    height: 0px;
+    filter: blur(5px) opacity(0);
   }
 }
 @keyframes steamawards2023_close-finalists_1I-MK {
   0% {
+    height: 355px;
     filter: blur(0) opacity(1);
   }
-  100% {
+  70% {
     filter: blur(5px) opacity(0.2);
+  }
+  100% {
+    height: 0px;
+    filter: blur(5px) opacity(0);
   }
 }
