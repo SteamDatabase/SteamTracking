@@ -510,6 +510,8 @@
     "Parental_GameList_Header": "Allowed Games",
     "Parental_GameList_TitleCount": "%1$s of %2$s titles",
     "Parental_GameList_Search": "Search",
+    "Parental_GameList_AllowAll": "Allow all of these games",
+    "Parental_GameList_DenyAll": "Deny all of these games",
     "Parental_EnablePlaytimeRestrictions": "Set playtime limits",
     "Parental_Playtime_AnyTime": "All day",
     "Parental_Playtime_Never": "None",

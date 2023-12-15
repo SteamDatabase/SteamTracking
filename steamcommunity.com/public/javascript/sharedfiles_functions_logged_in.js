@@ -606,9 +606,9 @@ function SubscribeItem( id, appID )
 {
 	if ( !$('SubscribeItemBtn').hasClassName( "toggled" ) )
 	{
-		if ( $J( "[name=requiredItems]").length != 0 )
+		var requiredItems = $J( "#RequiredItems" ).clone();
+		if ( requiredItems.length != 0 )
 		{
-			var requiredItems = $J( "#RequiredItems").clone();
 			requiredItems.prepend( 'This item requires all of the following other items in order to function properly.<br><br>You can click on each one here to learn more about and subscribe to the item before proceeding.<br><br>You can also choose to subscribe to all these required items (and all the items they in turn require), but be warned that could include many more items.<br><br>' );
 			var dialog = ShowConfirmDialog( 'Additional Required Items', requiredItems, 'Subscribe to Just This Item', undefined, 'Subscribe to All' );
 			dialog.done( function( action ) {
@@ -622,9 +622,16 @@ function SubscribeItem( id, appID )
 	}
 	else
 	{
+		var params = {
+			id: id,
+			appid: appID,
+			sessionid: g_sessionID
+		};
 		$('action_wait').show();
-		$('PublishedFileUnsubscribe').request( {
-			onSuccess: function( response )
+		$J.post( "https://steamcommunity.com/sharedfiles/unsubscribe", params )
+		.done( function( data )
+		{
+			if ( data.success == 1 )
 			{
 				if ($('JustSubscribed') !== null )
 				{
@@ -745,6 +752,48 @@ function FollowItem(item_id, app_id)
 	);
 }
 
+function SubscribeCollection( id, appID )
+{
+	ShowConfirmDialog(
+		'Subscribe to all',
+		'Do you want to add the items in this collection to your subscriptions, or overwrite your subscriptions to contain only items from this collection?',
+		'Add Only',
+		undefined,
+		'Overwrite My Subscriptions'
+	).done( function( action )
+	{
+		var bAddOnly = action == 'OK';
+		var params = {
+			id: id,
+			appid: appID,
+			sessionid: g_sessionID,
+			add_only: bAddOnly,
+		};
+
+		var dialog = ShowBlockingWaitDialog( 'Please Wait', bAddOnly ? 'Adding all items in this collection to your subscriptions...' : 'Overwriting your subscriptions to contain only the contents of this collection...' );
+		$J.post( "https://steamcommunity.com/sharedfiles/subscribecollection", params )
+			.done( function ( data )
+			{
+				top.location.reload();
+			} );
+	} );
+}
+
+function UnsubscribeCollection( id )
+{
+	var dialog = ShowBlockingWaitDialog( 'Please Wait', 'Removing all items in this collection from your subscriptions...' );
+	$J.post(
+		'https://steamcommunity.com/sharedfiles/unsubscribecollection',
+		{
+			publishedfileid: id,
+			sessionid: g_sessionID,
+		}
+	).done( function( json ) {
+			top.location.reload();
+		}
+	);
+}
+
 function CloseNotification( notification )
 {
 	$( notification ).hide();
@@ -752,31 +801,133 @@ function CloseNotification( notification )
 
 function SubscribeCollectionItem( id, appID )
 {
-	$('action_wait_' + id).show();
-	if ( !$('SubscribeItemBtn' + id ).hasClassName( "toggled" ) )
+	var button = $J( "#SubscribeItemBtn" + id );
+	var waitThrobber = $J( '#action_wait_' + id );
+
+	button.hide();
+	waitThrobber.show();
+
+	var params = {
+		id: id,
+		appid: appID,
+		include_dependencies: false,
+		sessionid: g_sessionID
+	};
+
+	if ( !button.hasClass( "toggled" ) )
 	{
-		$('PublishedFileSubscribe').id.value = id;
-		$('PublishedFileSubscribe').appid.value = appID;
-		$('PublishedFileSubscribe').request( {
-			onSuccess: function( response )
+		$J.post( "https://steamcommunity.com/sharedfiles/subscribe", params )
+		.done( function( data )
+		{
+			if ( data.success == '1' )
 			{
-				$('SubscribeItemBtn' + id).className = "general_btn subscribe toggled";
-				$('action_wait_' + id).hide();
+				button.addClass( "toggled" );
+				waitThrobber.hide();
+				button.show();
 			}
 		} );
 	}
 	else
 	{
-		$('PublishedFileUnsubscribe').id.value = id;
-		$('PublishedFileUnsubscribe').appid.value = appID;
-		$('PublishedFileUnsubscribe').request( {
-			onSuccess: function( response )
+		$J.post( "https://steamcommunity.com/sharedfiles/unsubscribe", params )
+		.done( function( data )
+		{
+			if ( data.success == '1' )
 			{
-				$('SubscribeItemBtn' + id).className = "general_btn subscribe";
-				$('action_wait_' + id).hide();
+				button.removeClass( "toggled" );
+				waitThrobber.hide();
+				button.show();
 			}
 		} );
 	}
+}
+
+function SaveSubscriptionToCollection( appID )
+{
+	var params = {
+		appid: appID,
+		sessionid: g_sessionID
+	};
+
+	var funcNewCollection = function() {
+		var prompt = ShowPromptDialog( 'Save Subscriptions to Collection', 'Enter a name for this collection:' );
+		prompt.done( function( title ) {
+			title = v_trim( title );
+			if ( title.length == 0 )
+				return;
+
+			params['title'] = title;
+			$J.post( "https://steamcommunity.com/sharedfiles/savesubscriptionstocollection", params )
+				.done( function( data )
+				{
+					if ( data.success == 1 )
+					{
+						top.location.href = "https://steamcommunity.com/sharedfiles/filedetails?id=" + data.publishedfileid;
+					}
+				} );
+		} );
+	};
+
+	var dialog = ShowConfirmDialog(
+		'Save Subscriptions to Collection',
+		'Would you like to save your subscriptions to a new collection or to an existing collection?',
+		'New Collection',
+		undefined,
+		'Existing Collection',
+	);
+	dialog.done( function( action ) {
+		if ( action == 'OK' )
+		{
+			funcNewCollection();
+		}
+		else
+		{
+			// ajax request to get the user's collections
+			$J.post( 'https://steamcommunity.com/sharedfiles/ajaxgetmycollections',
+			{
+				'appid' : appID,
+				'sessionid' : g_sessionID
+			} )
+			.done( function( json )
+			{
+				// build dialog
+				var all_collections = json['all_collections'];
+				if ( !all_collections || all_collections.length == 0 || !all_collections['publishedfiledetails'] || all_collections['publishedfiledetails'].length == 0 )
+				{
+					ShowConfirmDialog( 'Save Subscriptions to Collection', 'You don\'t have any existing collections. Create a new one?' )
+					.done( funcNewCollection );
+					return;
+				}
+
+				var content = $J( '<div/>', { text: 'Select a collection to overwrite: ' } );
+				content.append( $J( '<br/>' ) );
+				content.append( $J( '<br/>' ) );
+				var select = $J( '<select/>' );
+				var publishedFileDetails = all_collections['publishedfiledetails'];
+				for ( var i = 0; i < publishedFileDetails.length; ++i )
+				{
+					var details = publishedFileDetails[i];
+					var option = $J( '<option/>', { value: details['publishedfileid'], text: details['title'] } );
+					select.append( option );
+				}
+				content.append( select );
+
+				var dialog = ShowConfirmDialog( 'Save Subscriptions to Collection', content );
+				dialog.done( function ()
+				{
+					params['id'] = select.val();
+					$J.post( "https://steamcommunity.com/sharedfiles/savesubscriptionstocollection", params )
+						.done( function ( data )
+						{
+							if ( data.success == 1 )
+							{
+								top.location.href = "https://steamcommunity.com/sharedfiles/details?id=" + data.publishedfileid;
+							}
+						} );
+				} );
+			} );
+		}
+	} );
 }
 
 function SetImageDimensionsForFile( fileID, elemIDImageWidth, elemIDImageHeight, elemIDImage )

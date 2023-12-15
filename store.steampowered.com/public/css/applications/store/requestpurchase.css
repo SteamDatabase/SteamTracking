@@ -441,13 +441,8 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-}
-.familysharedcomponents_MyProfile_2nixW .familysharedcomponents_Avatar_3h6_a {
-  border-right: 4px solid #59bf40;
-}
-.familysharedcomponents_MyProfile_2nixW
-  .familysharedcomponents_PlayerName_3YHL9 {
-  color: #59bf40;
+  gap: 10px;
+  overflow: hidden;
 }
 .familysharedcomponents_MeBadge_qeLJ_ {
   content: "Me";
@@ -460,15 +455,23 @@
   text-align: center;
   margin-left: 30px;
 }
+.familysharedcomponents_ExpandRow_168MV {
+  cursor: pointer;
+  fill: #fff;
+  padding: 10px;
+}
+.familysharedcomponents_ExpandRow_168MV svg {
+  transition: transform linear 0.1s;
+}
 .familysharedcomponents_PlayerName_3YHL9 {
-  padding-left: 10px;
   font-size: 20px;
 }
-.familysharedcomponents_ProfileRoleIcon_1SlHw {
-  margin-left: 10px;
+.familysharedcomponents_RoleAndIcon_1VP1W {
+  display: flex;
+  flex-direction: row;
+  gap: 3px;
 }
 .familysharedcomponents_RoleName_3rvHm {
-  padding-left: 3px;
   text-transform: uppercase;
   color: #fff;
   font-weight: bold;
@@ -489,22 +492,16 @@
   transition: height 0.5s;
 }
 .familysharedcomponents_FamilyMemberRow_3QkkY
-  .familysharedcomponents_FamilyMemberRowTop_3kaLZ {
+  .familysharedcomponents_FamilyMemberRowTop_3kaLZ,
+.familysharedcomponents_FamilyMemberRow_3QkkY
+  .familysharedcomponents_FamilyMemberRowTop_3kaLZ
+  .familysharedcomponents_Left_3KlqU {
   display: flex;
   flex-direction: row;
+  gap: 10px;
   align-items: center;
-}
-.familysharedcomponents_FamilyMemberRow_3QkkY
-  .familysharedcomponents_ExpandRow_168MV {
-  margin-left: auto;
-  cursor: pointer;
-  fill: #fff;
-  padding: 10px;
-}
-.familysharedcomponents_FamilyMemberRow_3QkkY
-  .familysharedcomponents_ExpandRow_168MV
-  svg {
-  transition: transform linear 0.1s;
+  overflow: hidden;
+  flex-grow: 1;
 }
 .familysharedcomponents_FamilyMemberRow_3QkkY
   .familysharedcomponents_InvitePending_2xtN_ {

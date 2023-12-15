@@ -39,6 +39,11 @@ function FollowItem(item_id, app_id)
 	showModal( 'NotLoggedInWarning', true );
 }
 
+function SubscribeCollection( id, appID )
+{
+	showModal( 'NotLoggedInWarning', true );
+}
+
 function SubscribeCollectionItem( id, appID )
 {
 	showModal( 'NotLoggedInWarning', true );

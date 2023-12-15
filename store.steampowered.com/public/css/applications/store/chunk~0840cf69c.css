@@ -453,7 +453,6 @@
 .personanameandstatus_richPresenceContainer_2nrSd {
   display: flex;
   flex-direction: column;
-  width: calc(100% - 30px);
 }
 .personanameandstatus_richPresenceContainer_2nrSd.GamepadMode
   .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N.personanameandstatus_threeLines_3ms2P,
@@ -484,7 +483,7 @@
     rgb(0, 0, 0) calc(100% - 8px),
     rgba(0, 0, 0, 0.15) 100%
   );
-  margin-right: -24px;
+  padding-right: 24px;
 }
 .BasicUI .personanameandstatus_richPresenceLabel_1k82N {
   display: block;

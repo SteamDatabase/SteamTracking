@@ -8,6 +8,7 @@
         AppGridItem: "appgrid_AppGridItem_3Ti0O",
         NoImage: "appgrid_NoImage_ccEyP",
         Capsule: "appgrid_Capsule_1FHOJ",
+        Loaded: "appgrid_Loaded_3_iQe",
         Selectable: "appgrid_Selectable_1coM2",
         Label: "appgrid_Label_1vlhD",
       };
@@ -87,7 +88,7 @@
           "div",
           { className: d.VirtualizedGridOuter, ref: S },
           h &&
-            r.createElement(p, {
+            r.createElement(g, {
               renderItem: t,
               nItems: n,
               nColumns: i,
@@ -100,7 +101,7 @@
             }),
           a.current &&
             !h &&
-            r.createElement(g, {
+            r.createElement(p, {
               renderItem: t,
               nItems: n,
               nColumns: i,
@@ -113,7 +114,7 @@
             }),
         );
       }
-      function g(e) {
+      function p(e) {
         var n;
         const { containerRef: t, nRows: i, nRowHeight: s } = e,
           l = (0, o._T)(e, ["containerRef", "nRows", "nRowHeight"]),
@@ -131,7 +132,7 @@
           r.createElement(v, Object.assign({}, l, { virtualizer: a }))
         );
       }
-      function p(e) {
+      function g(e) {
         const { nRows: n, elScrollable: t, nRowHeight: i } = e,
           s = (0, o._T)(e, ["nRows", "elScrollable", "nRowHeight"]),
           l = (0, u.MG)({
@@ -206,38 +207,43 @@
             getClassName: d,
           } = e,
           [f, m] = r.useState(0),
-          h = i.De.STORE_ICON_BASE_URL;
-        let g = [
-          `${h}${n.appid}/library_600x900.jpg`,
-          `${h}${n.appid}/portrait.png`,
+          [h, p] = r.useState(!1),
+          g = i.De.STORE_ICON_BASE_URL;
+        let v = [
+          `${g}${n.appid}/library_600x900.jpg`,
+          `${g}${n.appid}/portrait.png`,
           l,
         ];
         e.app.localized_capsule_filename &&
-          (g = [`${h}${n.appid}/${e.app.localized_capsule_filename}`, ...g]);
-        const p = u && u(n, o);
+          (v = [`${g}${n.appid}/${e.app.localized_capsule_filename}`, ...v]);
+        const b = u && u(n, o);
         return r.createElement(
           "div",
           {
             className: (0, s.Z)(
               a.AppGridItem,
-              f == g.length && a.NoImage,
-              !!p && a.Selectable,
+              f == v.length && a.NoImage,
+              h && a.Loaded,
+              !!b && a.Selectable,
               d && d(n, o),
             ),
             style: { width: t },
-            onClick: p,
+            onClick: b,
           },
-          f < g.length &&
+          f < v.length &&
             r.createElement("img", {
               className: a.Capsule,
-              onError: () => {
-                f < g.length && m((e) => e + 1);
+              onLoad: () => {
+                p(!0);
               },
-              src: g[f],
+              onError: () => {
+                f < v.length && m((e) => e + 1);
+              },
+              src: v[f],
               alt: n.name,
               loading: "lazy",
             }),
-          f == g.length - 1 &&
+          f == v.length - 1 &&
             r.createElement("div", { className: a.Label }, n.name),
           c && c(n, o),
         );
@@ -477,7 +483,7 @@
             );
           }
         },
-        g = function (e, n, t) {
+        p = function (e, n, t) {
           if (null != n && n.borderBoxSize) {
             var o = n.borderBoxSize[0];
             if (o)
@@ -491,7 +497,7 @@
             ],
           );
         },
-        p = function (e, n, t) {
+        g = function (e, n, t) {
           var o,
             r,
             i = n.adjustments,
@@ -585,7 +591,7 @@
                     getItemKey: u,
                     rangeExtractor: c,
                     onChange: function () {},
-                    measureElement: g,
+                    measureElement: p,
                     initialRect: { width: 0, height: 0 },
                     scrollMargin: 0,
                     scrollingDelay: 150,
@@ -742,15 +748,15 @@
                     f = d ? d.end : r + i,
                     m = n.get(c),
                     h = "number" == typeof m ? m : o.options.estimateSize(u),
-                    g = f + h,
-                    p = d ? d.lane : u % o.options.lanes;
+                    p = f + h,
+                    g = d ? d.lane : u % o.options.lanes;
                   a[u] = {
                     index: u,
                     start: f,
                     size: h,
-                    end: g,
+                    end: p,
                     key: c,
-                    lane: p,
+                    lane: g,
                   };
                 }
                 return (o.measurementsCache = a), a;
@@ -1090,7 +1096,7 @@
               },
               observeElementRect: f,
               observeElementOffset: h,
-              scrollToFn: p,
+              scrollToFn: g,
               initialOffset:
                 "undefined" != typeof document ? window.scrollY : void 0,
             },

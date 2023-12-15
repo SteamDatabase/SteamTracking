@@ -7,16 +7,15 @@
       e.exports = {
         RoleIcon: "familysharedcomponents_RoleIcon_2OqP3",
         ProfileLink: "familysharedcomponents_ProfileLink_iKwt8",
-        MyProfile: "familysharedcomponents_MyProfile_2nixW",
-        Avatar: "familysharedcomponents_Avatar_3h6_a",
-        PlayerName: "familysharedcomponents_PlayerName_3YHL9",
         MeBadge: "familysharedcomponents_MeBadge_qeLJ_",
-        ProfileRoleIcon: "familysharedcomponents_ProfileRoleIcon_1SlHw",
+        ExpandRow: "familysharedcomponents_ExpandRow_168MV",
+        PlayerName: "familysharedcomponents_PlayerName_3YHL9",
+        RoleAndIcon: "familysharedcomponents_RoleAndIcon_1VP1W",
         RoleName: "familysharedcomponents_RoleName_3rvHm",
         FamilyErrorDisplay: "familysharedcomponents_FamilyErrorDisplay_3EgCv",
         FamilyMemberRow: "familysharedcomponents_FamilyMemberRow_3QkkY",
         FamilyMemberRowTop: "familysharedcomponents_FamilyMemberRowTop_3kaLZ",
-        ExpandRow: "familysharedcomponents_ExpandRow_168MV",
+        Left: "familysharedcomponents_Left_3KlqU",
         InvitePending: "familysharedcomponents_InvitePending_2xtN_",
       };
     },
@@ -31,96 +30,94 @@
           "requestpurchasepage_RequestPurchaseButton_18U0s",
       };
     },
-    53765: (e, t, r) => {
+    53765: (e, t, a) => {
       "use strict";
-      r.d(t, { In: () => R, L4: () => v, Mm: () => y });
-      var a = r(89526),
-        n = r(28536),
-        s = r(701),
-        o = r(14826),
-        l = r(19304),
-        i = r(24448),
-        m = r(50355),
-        c = r(47165),
-        u = r(23384),
-        d = r(49437),
-        f = r(47742),
-        _ = r(39323),
-        h = r(45761),
-        P = r(67406);
+      a.d(t, { In: () => R, L4: () => v, Mm: () => g });
+      var r = a(89526),
+        n = a(28536),
+        s = a(701),
+        o = a(14826),
+        l = a(19304),
+        i = a(24448),
+        m = a(50355),
+        c = a(47165),
+        u = a(23384),
+        d = a(49437),
+        f = a(47742),
+        _ = a(39323),
+        h = a(45761),
+        P = a(67406);
       function p(e) {
-        return a.createElement(s.LpF, null);
+        return r.createElement(s.LpF, null);
       }
       function E(e) {
-        return a.createElement(s.soM, null);
-      }
-      function y(e) {
-        return a.createElement(
-          "div",
-          { className: (0, l.Z)(n.RoleIcon, e.className) },
-          2 == e.role ? a.createElement(E, null) : a.createElement(p, null),
-        );
+        return r.createElement(s.soM, null);
       }
       function g(e) {
-        var t, r;
-        const { strSteamID: s, role: u, persona: d, isSelf: f } = e,
-          p = new c.K(s);
-        let E = e.size || "Large";
-        const g = (0, _.N5)(),
-          v = (0, P.h)(),
+        return r.createElement(
+          "div",
+          { className: (0, l.Z)(n.RoleIcon, e.className) },
+          2 == e.role ? r.createElement(E, null) : r.createElement(p, null),
+        );
+      }
+      function y(e) {
+        var t, a;
+        const { strSteamID: s, role: l, persona: u, isSelf: d } = e,
+          f = new c.K(s);
+        let p = e.size || "Large";
+        const E = (0, _.N5)(),
+          y = (0, P.h)(),
+          v =
+            null === (t = E.data) || void 0 === t
+              ? void 0
+              : t.get(f.GetAccountID()),
           R =
-            null === (t = g.data) || void 0 === t
+            null === (a = y.data) || void 0 === a
               ? void 0
-              : t.get(p.GetAccountID()),
-          B =
-            null === (r = v.data) || void 0 === r
-              ? void 0
-              : r.preferences().parenthesize_nicknames();
-        return a.createElement(
-          a.Fragment,
+              : a.preferences().parenthesize_nicknames();
+        return r.createElement(
+          r.Fragment,
           null,
-          a.createElement(
+          r.createElement(
             "a",
             {
-              className: (0, l.Z)(n.ProfileLink, f ? n.MyProfile : ""),
+              className: n.ProfileLink,
               href: i.y$.GetProfileURLBySteamID(new c.K(s)),
             },
-            a.createElement(m.vV, {
+            r.createElement(m.vV, {
               className: n.Avatar,
-              persona: d,
-              size: E,
+              persona: u,
+              size: p,
               statusPosition: "right",
             }),
-            a.createElement(h.o, {
+            r.createElement(h.o, {
               className: n.PlayerName,
-              bIsSelf: f,
+              bIsSelf: d,
               bHideStatus: !1,
               bHidePersona: !1,
-              bParenthesizeNicknames: B,
+              bParenthesizeNicknames: R,
               bCompactView: !1,
-              persona: d,
-              strNickname: R,
+              persona: u,
+              strNickname: v,
               eFriendRelationship: 3,
             }),
           ),
-          a.createElement(y, { className: n.ProfileRoleIcon, role: u }),
-          a.createElement(
+          r.createElement(
             "div",
-            { className: n.RoleName },
-            (0, o.Xx)(`#FamilyManagement_Role_${u}`),
-          ),
-          f &&
-            a.createElement(
-              "span",
-              { className: n.MeBadge },
-              (0, o.Xx)("#FamilyManagement_Me"),
+            { className: n.RoleAndIcon },
+            r.createElement(g, { className: n.ProfileRoleIcon, role: l }),
+            r.createElement(
+              "div",
+              { className: n.RoleName },
+              (0, o.Xx)(`#FamilyManagement_Role_${l}`),
             ),
+          ),
         );
       }
       function v(e) {
-        const t = (0, a.useContext)(u.Xe);
+        const t = (0, r.useContext)(u.Xe);
         return t.errorMessage
-          ? a.createElement(
+          ? r.createElement(
               "div",
               { className: n.FamilyErrorDisplay },
               t.errorMessage,
@@ -128,9 +125,9 @@
           : null;
       }
       function R(e) {
-        const { strSteamID: t, role: r, bInvitePending: i, children: m } = e,
+        const { strSteamID: t, role: a, bInvitePending: i, children: m } = e,
           c = (0, f.M)(),
-          [_, h] = (0, a.useState)(!1),
+          [_, h] = (0, r.useState)(!1),
           P = c == t,
           p = (0, d.IE)(t);
         if (
@@ -139,54 +136,64 @@
         )
           return null;
         const E = p.data,
-          y = null != m;
-        return a.createElement(
+          g = null != m;
+        return r.createElement(
           "div",
           {
             className: (0, l.Z)(
               n.FamilyMemberRow,
-              P ? n.ActiveFamilyMemberRow : "",
+              P && n.ActiveFamilyMemberRow,
             ),
           },
-          a.createElement(
+          r.createElement(
             "div",
             { className: n.FamilyMemberRowTop },
-            a.createElement(g, {
-              strSteamID: t,
-              role: r,
-              persona: E,
-              isSelf: P,
-            }),
-            i &&
-              a.createElement(
-                "div",
-                { className: n.InvitePending },
-                (0, o.Xx)("#FamilyManagement_InvitePending"),
-              ),
-            y &&
-              a.createElement(
+            r.createElement(
+              "div",
+              { className: n.Left },
+              r.createElement(y, {
+                strSteamID: t,
+                role: a,
+                persona: E,
+                isSelf: P,
+              }),
+              i &&
+                r.createElement(
+                  "div",
+                  { className: n.InvitePending },
+                  (0, o.Xx)("#FamilyManagement_InvitePending"),
+                ),
+              P &&
+                r.createElement(
+                  "span",
+                  { className: n.MeBadge },
+                  (0, o.Xx)("#FamilyManagement_Me"),
+                ),
+            ),
+            g &&
+              r.createElement(
                 "div",
                 { className: n.ExpandRow, onClick: () => h(!_) },
-                a.createElement(s.ret, { angle: _ ? 180 : 0 }),
+                r.createElement(s.ret, { angle: _ ? 180 : 0 }),
               ),
           ),
-          y && _ && m,
+          g && _ && m,
         );
       }
     },
-    24448: (e, t, r) => {
+    24448: (e, t, a) => {
       "use strict";
-      r.d(t, { Gr: () => h, Jq: () => P, y$: () => _ });
-      var a = r(33940),
-        n = r(52868),
-        s = r.n(n),
-        o = r(59621),
-        l = r(89526),
-        i = r(4556),
-        m = r(47165),
-        c = r(23801),
-        u = r(23217),
-        d = r(32765);
+      a.d(t, { Gr: () => h, Jq: () => P, y$: () => _ });
+      var r = a(33940),
+        n = a(52868),
+        s = a.n(n),
+        o = a(59621),
+        l = a(89526),
+        i = a(4556),
+        m = a(47165),
+        c = a(23801),
+        u = a(23217),
+        d = a(32765);
       class f {
         constructor() {
           (this.m_mapProfiles = new Map()),
@@ -194,23 +201,23 @@
             (0, o.rC)(this);
         }
         LoadProfiles(e, t) {
-          return (0, a.mG)(this, void 0, void 0, function* () {
+          return (0, r.mG)(this, void 0, void 0, function* () {
             (0, c.X)(
               e.length <= 500,
               "Check LoadProfiles, requesting too many steam IDs",
             );
-            let r = e.filter(
+            let a = e.filter(
               (e) =>
                 !this.m_mapProfiles.has(e) && !this.m_mapProfilesLoading.has(e),
             );
-            if (0 == r.length) return this.m_mapProfilesLoading.get(e[0]);
-            let a = d.De.COMMUNITY_BASE_URL + "actions/ajaxresolveusers",
-              n = s().get(a, {
-                params: { steamids: r.join(",") },
+            if (0 == a.length) return this.m_mapProfilesLoading.get(e[0]);
+            let r = d.De.COMMUNITY_BASE_URL + "actions/ajaxresolveusers",
+              n = s().get(r, {
+                params: { steamids: a.join(",") },
                 withCredentials: !0,
                 cancelToken: null == t ? void 0 : t.token,
               });
-            r.forEach((e) => this.m_mapProfilesLoading.set(e, n));
+            a.forEach((e) => this.m_mapProfilesLoading.set(e, n));
             let o = yield n;
             o.data &&
               200 == o.status &&
@@ -260,14 +267,14 @@
           return t && t.persona_name ? t.persona_name : "";
         }
       }
-      (0, a.gn)([o.LO], f.prototype, "m_mapProfiles", void 0);
+      (0, r.gn)([o.LO], f.prototype, "m_mapProfiles", void 0);
       const _ = new f();
       function h(e) {
         const t = l.useMemo(
             () => (e ? ("string" == typeof e ? new m.K(e) : e) : null),
             [e],
           ),
-          [r, a] = (0, l.useState)(!!t && !_.BHasProfileBySteamID(t));
+          [a, r] = (0, l.useState)(!!t && !_.BHasProfileBySteamID(t));
         (0, l.useEffect)(() => {
           const e = s().CancelToken.source();
           return (
@@ -275,85 +282,85 @@
               !_.BHasProfileBySteamID(t) &&
               _.LoadProfiles([t.ConvertTo64BitString()])
                 .catch((e) => {
-                  const r = (0, u.l)(e);
+                  const a = (0, u.l)(e);
                   console.error(
                     "useUserProfile failed to load profile for " +
                       t.ConvertTo64BitString() +
                       ": " +
-                      r.strErrorMsg,
-                    r,
+                      a.strErrorMsg,
+                    a,
                   );
                 })
                 .finally(() => {
-                  e.token.reason || a(!1);
+                  e.token.reason || r(!1);
                 }),
             () => e.cancel("unmounting useUserProfile")
           );
         }, [e]);
-        return [r, !!t && _.GetProfileBySteamID(t)];
+        return [a, !!t && _.GetProfileBySteamID(t)];
       }
       function P(e) {
         return h(l.useMemo(() => (e ? m.K.InitFromAccountID(e) : null), [e]));
       }
       window.g_ProfileStore = _;
     },
-    67406: (e, t, r) => {
+    67406: (e, t, a) => {
       "use strict";
-      r.d(t, { h: () => i });
-      var a = r(33940),
-        n = r(68333),
-        s = r(97940),
-        o = r(5615),
-        l = r(27070);
+      a.d(t, { h: () => i });
+      var r = a(33940),
+        n = a(68333),
+        s = a(97940),
+        o = a(5615),
+        l = a(27070);
       function i() {
         const e = (0, l.bY)();
         return (0, o.useQuery)(["communitypreferences"], () =>
-          (0, a.mG)(this, void 0, void 0, function* () {
+          (0, r.mG)(this, void 0, void 0, function* () {
             const t = n.gA.Init(s.AP),
-              r = yield s.lk.GetCommunityPreferences(e, t);
-            if (1 != r.GetEResult())
+              a = yield s.lk.GetCommunityPreferences(e, t);
+            if (1 != a.GetEResult())
               throw new Error(
-                `Error from GetCommunityPreferences: ${r.GetEResult()} ${r.GetErrorMessage()}`,
+                `Error from GetCommunityPreferences: ${a.GetEResult()} ${a.GetErrorMessage()}`,
               );
-            return r.Body();
+            return a.Body();
           }),
         );
       }
     },
-    37046: (e, t, r) => {
+    37046: (e, t, a) => {
       "use strict";
-      r.r(t), r.d(t, { default: () => u });
-      var a = r(89526),
-        n = r(57473),
-        s = r.n(n),
-        o = r(14826),
-        l = r(23384),
-        i = r(53765),
-        m = r(44973),
-        c = r(57605);
+      a.r(t), a.d(t, { default: () => u });
+      var r = a(89526),
+        n = a(57473),
+        s = a.n(n),
+        o = a(14826),
+        l = a(23384),
+        i = a(53765),
+        m = a(44973),
+        c = a(57605);
       function u(e) {
-        const [t, r] = a.useState(null);
-        return a.createElement(
+        const [t, a] = r.useState(null);
+        return r.createElement(
           "div",
           { className: s().RequestPurchasePage },
-          a.createElement(
+          r.createElement(
             l.Xe.Provider,
-            { value: { errorMessage: t, setErrorMessage: r } },
-            a.createElement(
+            { value: { errorMessage: t, setErrorMessage: a } },
+            r.createElement(
               "div",
               { className: s().Header },
               (0, o.Xx)("#PurchaseRequested_Header"),
             ),
-            a.createElement(i.L4, null),
-            a.createElement(
+            r.createElement(i.L4, null),
+            r.createElement(
               "div",
               { className: s().Info },
               (0, o.Xx)("#PurchaseRequested_Info"),
             ),
-            a.createElement(
+            r.createElement(
               "div",
               { className: s().ButtonContainer },
-              a.createElement(
+              r.createElement(
                 c.KM,
                 {
                   className: s().PrimaryButton,
@@ -363,7 +370,7 @@
                 },
                 (0, o.Xx)("#PurchaseRequested_ReturnToStore"),
               ),
-              a.createElement(
+              r.createElement(
                 c.zx,
                 {
                   className: s().Button,
@@ -381,54 +388,54 @@
         );
       }
     },
-    40151: (e, t, r) => {
+    40151: (e, t, a) => {
       "use strict";
-      r.r(t), r.d(t, { default: () => f });
-      var a = r(89526),
-        n = r(57473),
-        s = r.n(n),
-        o = r(14826),
-        l = r(23384),
-        i = r(69338),
-        m = r(53765),
-        c = r(44973),
-        u = r(57605),
-        d = r(19304);
+      a.r(t), a.d(t, { default: () => f });
+      var r = a(89526),
+        n = a(57473),
+        s = a.n(n),
+        o = a(14826),
+        l = a(23384),
+        i = a(69338),
+        m = a(53765),
+        c = a(44973),
+        u = a(57605),
+        d = a(19304);
       function f(e) {
         const { shoppingCartGID: t } = e,
-          r = (0, l.Rs)(),
-          [n, c] = a.useState(null),
-          u = a.useMemo(() => (0, o.Xx)("#RequestPurchase_PageTitle"), []);
-        return r.isLoading
-          ? a.createElement(
+          a = (0, l.Rs)(),
+          [n, c] = r.useState(null),
+          u = r.useMemo(() => (0, o.Xx)("#RequestPurchase_PageTitle"), []);
+        return a.isLoading
+          ? r.createElement(
               "div",
               { className: s().RequestPurchasePage },
-              a.createElement(
+              r.createElement(
                 "div",
                 { className: s().ThrobberContainer },
-                a.createElement(i.V, null),
+                r.createElement(i.V, null),
               ),
             )
-          : r.isError
+          : a.isError
           ? null
-          : a.createElement(
+          : r.createElement(
               "div",
               { className: s().RequestPurchasePage },
-              a.createElement(
+              r.createElement(
                 l.Xe.Provider,
                 { value: { errorMessage: n, setErrorMessage: c } },
-                a.createElement("div", { className: s().Header }, u),
-                a.createElement(m.L4, null),
-                a.createElement(_, {
-                  familyGroupID: r.data.family_groupid(),
+                r.createElement("div", { className: s().Header }, u),
+                r.createElement(m.L4, null),
+                r.createElement(_, {
+                  familyGroupID: a.data.family_groupid(),
                   shoppingCartGID: t,
                 }),
               ),
             );
       }
       function _(e) {
-        const { familyGroupID: t, shoppingCartGID: r } = e,
-          n = (0, l.BU)(t, r, c.L7.country_code),
+        const { familyGroupID: t, shoppingCartGID: a } = e,
+          n = (0, l.BU)(t, a, c.L7.country_code),
           { setErrorMessage: m } = (0, l.cL)();
         (0, l.zj)(
           n,
@@ -437,17 +444,17 @@
         );
         const f = `${c.De.STORE_BASE_URL}cart`;
         return n.isLoading
-          ? a.createElement(
+          ? r.createElement(
               "div",
               { className: s().ThrobberContainer },
-              a.createElement(i.V, null),
+              r.createElement(i.V, null),
             )
           : n.isError
           ? null
-          : a.createElement(
+          : r.createElement(
               "div",
               null,
-              a.createElement(
+              r.createElement(
                 "div",
                 null,
                 (0, o.Xx)(
@@ -457,10 +464,10 @@
                 ),
               ),
               !n.isSuccess &&
-                a.createElement(
+                r.createElement(
                   "div",
                   { className: s().ButtonContainer },
-                  a.createElement(
+                  r.createElement(
                     u.zx,
                     {
                       className: (0, d.Z)(
@@ -473,10 +480,10 @@
                     },
                     (0, o.Xx)("#RequestPurchase_RequestPurchase"),
                   ),
-                  a.createElement(
+                  r.createElement(
                     "a",
                     { href: f },
-                    a.createElement(
+                    r.createElement(
                       u.zx,
                       {
                         className: (0, d.Z)(

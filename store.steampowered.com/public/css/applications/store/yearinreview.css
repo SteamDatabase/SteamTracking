@@ -421,6 +421,13 @@ body.v6 {
   .yirlanding_Subtitle_3Xegh {
   margin-bottom: 10%;
 }
+@media screen and (max-width: 910px) {
+  .yirlanding_SummaryCtn_9eVnU.yirlanding_GridItem_2VmQC.yirlanding_HardwareSummary_RrFxs
+    .yirlanding_ControllerPortion_3-LlH
+    .yirlanding_Subtitle_3Xegh.yirlanding_Small_8N3vK {
+    transform: translateX(40px);
+  }
+}
 .yirlanding_SummaryCtn_9eVnU.yirlanding_GridItem_2VmQC.yirlanding_HardwareSummary_RrFxs
   .yirlanding_ControllerPortion_3-LlH
   .yirlanding_BackgroundImage_2UVYU {
@@ -428,6 +435,19 @@ body.v6 {
   mask: linear-gradient(180deg, black 58%, rgba(0, 0, 0, 0) 95%);
   -webkit-mask-composite: source-in;
   mask-composite: source-in;
+}
+.yirlanding_SummaryCtn_9eVnU.yirlanding_GridItem_2VmQC.yirlanding_HardwareSummary_RrFxs
+  .yirlanding_ControllerPortion_3-LlH
+  .yirlanding_Stat_vX0bj.yirlanding_Small_8N3vK {
+  font-size: clamp(18px, 3vw, 45px);
+  line-height: clamp(21px, 3vw, 49px);
+}
+@media screen and (max-width: 910px) {
+  .yirlanding_SummaryCtn_9eVnU.yirlanding_GridItem_2VmQC.yirlanding_HardwareSummary_RrFxs
+    .yirlanding_ControllerPortion_3-LlH
+    .yirlanding_Stat_vX0bj.yirlanding_Small_8N3vK {
+    transform: translateX(30px);
+  }
 }
 .yirlanding_SummaryCtn_9eVnU.yirlanding_GridItem_2VmQC.yirlanding_HardwareSummary_RrFxs
   .yirlanding_BackgroundImage_2UVYU {
@@ -450,8 +470,15 @@ body.v6 {
 }
 .yirlanding_SummaryCtn_9eVnU.yirlanding_GridItem_2VmQC.yirlanding_HardwareSummary_RrFxs
   .yirlanding_Stat_vX0bj.yirlanding_Small_8N3vK {
-  font-size: clamp(18px, 2vw, 21px);
-  line-height: clamp(21px, 2vw, 24px);
+  font-size: clamp(18px, 3vw, 45px);
+  line-height: clamp(21px, 3vw, 49px);
+}
+@media screen and (max-width: 910px) {
+  .yirlanding_SummaryCtn_9eVnU.yirlanding_GridItem_2VmQC.yirlanding_HardwareSummary_RrFxs
+    .yirlanding_Stat_vX0bj.yirlanding_Small_8N3vK {
+    transform: translateX(-70px);
+    margin-top: 15%;
+  }
 }
 .yirlanding_SummaryCtn_9eVnU.yirlanding_GridItem_2VmQC.yirlanding_HardwareSummary_RrFxs
   .yirlanding_Stat_vX0bj.yirlanding_Large_2I5qZ {
@@ -469,6 +496,14 @@ body.v6 {
 .yirlanding_SummaryCtn_9eVnU.yirlanding_GridItem_2VmQC.yirlanding_HardwareSummary_RrFxs
   .yirlanding_Subtitle_3Xegh.yirlanding_Small_8N3vK {
   font-size: clamp(12px, 1vw, 18px);
+}
+@media screen and (max-width: 910px) {
+  .yirlanding_SummaryCtn_9eVnU.yirlanding_GridItem_2VmQC.yirlanding_HardwareSummary_RrFxs
+    .yirlanding_Subtitle_3Xegh.yirlanding_Small_8N3vK {
+    transform: translateX(-30px);
+    width: 30%;
+    padding-bottom: 0;
+  }
 }
 .yirlanding_SummaryCtn_9eVnU .yirlanding_SummaryBlockGameName_8viNZ {
   height: 50%;
@@ -501,6 +536,11 @@ body.v6 {
   padding-bottom: 40px;
 }
 @media screen and (max-width: 620px) {
+  .yirlanding_SummaryCtn_9eVnU .yirlanding_SummaryBlockExtrasCtn_1fY-T {
+    padding-bottom: 0px;
+  }
+}
+@media screen and (max-width: 910px) {
   .yirlanding_SummaryCtn_9eVnU .yirlanding_SummaryBlockExtrasCtn_1fY-T {
     padding-bottom: 0px;
   }
@@ -1040,264 +1080,6 @@ body.v6 {
 }
 .steamavatar_avatarHolder_1YGAH .steamavatar_avatarFrame_3atbN {
   transform: scale(1.2);
-}
-@keyframes yirstatsbesidegametiles_ElementFadeIn_1u6VR {
-  0% {
-    opacity: 0;
-  }
-  40% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-    transform: translateZ(0px);
-  }
-}
-@keyframes yirstatsbesidegametiles_BadgeBoxIntro_JFDJA {
-  0% {
-    transform: translateY(100px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
-@keyframes yirstatsbesidegametiles_BadgeBarFiller_1TdxY {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: 90%;
-  }
-}
-@keyframes yirstatsbesidegametiles_Appear_7F-Qm {
-  to {
-    transform: translateY(0) translateX(0);
-    opacity: 1;
-  }
-}
-.yirstatsbesidegametiles_Section_3Q6xY {
-  width: 100%;
-  height: 62vh;
-  min-height: 50vw;
-  background: #000;
-}
-.yirstatsbesidegametiles_Section_3Q6xY.yirstatsbesidegametiles_Windows_1vF9u {
-  background: linear-gradient(135deg, #28aee1 0%, #2644b3 100%);
-}
-.yirstatsbesidegametiles_Section_3Q6xY.yirstatsbesidegametiles_Linux_2sto6 {
-  background: linear-gradient(
-    135deg,
-    #84579f 0%,
-    #280f20 40%,
-    #280f20 60%,
-    #600d44 100%
-  );
-}
-.yirstatsbesidegametiles_Section_3Q6xY.yirstatsbesidegametiles_Controller_3-3rS {
-  background: linear-gradient(135deg, #0d215e 0%, #0b4648 100%);
-  overflow: hidden;
-}
-@media screen and (max-width: 620px) {
-  .yirstatsbesidegametiles_Section_3Q6xY.yirstatsbesidegametiles_Controller_3-3rS {
-    height: 46vh;
-    max-height: unset;
-    overflow: hidden;
-  }
-}
-.yirstatsbesidegametiles_Section_3Q6xY.yirstatsbesidegametiles_Mac_38lJl {
-  background: linear-gradient(135deg, #0d215e 0%, #0b4648 100%);
-  overflow: hidden;
-}
-.yirstatsbesidegametiles_Section_3Q6xY.yirstatsbesidegametiles_Deck_18y68 {
-  height: 56vw;
-}
-@media screen and (max-width: 940px) {
-  .yirstatsbesidegametiles_Section_3Q6xY.yirstatsbesidegametiles_Deck_18y68 {
-    height: 100vw;
-    max-height: unset;
-    overflow: hidden;
-  }
-}
-.yirstatsbesidegametiles_Section_3Q6xY.yirstatsbesidegametiles_Deck_18y68
-  .yirstatsbesidegametiles_PlatformContentsCtn_e-ft_ {
-  justify-content: start;
-}
-.yirstatsbesidegametiles_Section_3Q6xY.yirstatsbesidegametiles_VR__CEQf {
-  background-color: #000;
-  overflow: hidden;
-  height: 70vw;
-}
-.yirstatsbesidegametiles_Section_3Q6xY.yirstatsbesidegametiles_VR__CEQf
-  .yirstatsbesidegametiles_StatsRow_2kV_S {
-  margin-top: 10vw;
-}
-.yirstatsbesidegametiles_Section_3Q6xY.yirstatsbesidegametiles_VR__CEQf
-  .yirstatsbesidegametiles_CapRow_tTYFT {
-  width: 39vw;
-  margin-bottom: 16vw;
-}
-@media screen and (max-width: 940px) {
-  .yirstatsbesidegametiles_Section_3Q6xY.yirstatsbesidegametiles_VR__CEQf {
-    height: 70vw;
-  }
-  .yirstatsbesidegametiles_Section_3Q6xY.yirstatsbesidegametiles_VR__CEQf
-    .yirstatsbesidegametiles_StatsRow_2kV_S {
-    margin-top: 7vw;
-    width: 65vw;
-  }
-  .yirstatsbesidegametiles_Section_3Q6xY.yirstatsbesidegametiles_VR__CEQf
-    .yirstatsbesidegametiles_CapRow_tTYFT {
-    width: 39vw;
-    margin-bottom: 19vw;
-  }
-}
-@media screen and (max-width: 620px) {
-  .yirstatsbesidegametiles_Section_3Q6xY.yirstatsbesidegametiles_VR__CEQf
-    .yirstatsbesidegametiles_CapRow_tTYFT {
-    margin-bottom: 21vw;
-  }
-}
-@media screen and (max-width: 500px) {
-  .yirstatsbesidegametiles_Section_3Q6xY.yirstatsbesidegametiles_VR__CEQf {
-    height: 100vw;
-  }
-  .yirstatsbesidegametiles_Section_3Q6xY.yirstatsbesidegametiles_VR__CEQf
-    .yirstatsbesidegametiles_StatsRow_2kV_S {
-    width: 80vw;
-  }
-}
-.yirstatsbesidegametiles_Section_3Q6xY
-  .yirstatsbesidegametiles_BackgroundImage_1WIHn {
-  width: 100%;
-  position: absolute;
-  top: 0;
-  z-index: -1;
-  -webkit-mask-image: -webkit-gradient(
-    linear,
-    left 90%,
-    left bottom,
-    from(rgb(14, 16, 20)),
-    to(rgba(0, 0, 0, 0))
-  );
-}
-@media screen and (max-width: 940px) {
-  .yirstatsbesidegametiles_Section_3Q6xY
-    .yirstatsbesidegametiles_BackgroundImage_1WIHn {
-    transform: scale(1.1);
-  }
-}
-@media screen and (max-width: 800px) {
-  .yirstatsbesidegametiles_Section_3Q6xY
-    .yirstatsbesidegametiles_BackgroundImage_1WIHn {
-    transform: scale(1.3) translateY(6%);
-  }
-}
-@media screen and (max-width: 620px) {
-  .yirstatsbesidegametiles_Section_3Q6xY
-    .yirstatsbesidegametiles_BackgroundImage_1WIHn {
-    transform: scale(1.4) translateY(10%);
-  }
-}
-@media screen and (max-width: 500px) {
-  .yirstatsbesidegametiles_Section_3Q6xY
-    .yirstatsbesidegametiles_BackgroundImage_1WIHn {
-    transform: scale(1.4) translateY(14%);
-  }
-}
-.yirstatsbesidegametiles_Section_3Q6xY
-  .yirstatsbesidegametiles_GameImage_3itig {
-  position: absolute;
-  z-index: -2;
-  width: 100%;
-  max-height: 100%;
-  filter: saturate(0.2) brightness(0.75);
-  opacity: 0.6;
-}
-.yirstatsbesidegametiles_Section_3Q6xY
-  .yirstatsbesidegametiles_SectionTitle_CzWCp {
-  width: 100%;
-  text-align: center;
-  font-size: clamp(18px, 3vw, 44px);
-  color: #fff;
-  font-weight: 600;
-  padding-bottom: 20px;
-}
-@media screen and (max-width: 500px) {
-  .yirstatsbesidegametiles_Section_3Q6xY
-    .yirstatsbesidegametiles_SectionTitle_CzWCp {
-    width: 95%;
-    padding-bottom: 0px;
-  }
-}
-.yirstatsbesidegametiles_Section_3Q6xY
-  .yirstatsbesidegametiles_SectionSubTitle_1bbOk {
-  font-size: clamp(18px, 2vw, 27px);
-  color: #fff;
-  margin-top: 20px;
-  margin-bottom: 8px;
-  text-align: center;
-  max-width: 100%;
-}
-@media screen and (max-width: 500px) {
-  .yirstatsbesidegametiles_Section_3Q6xY
-    .yirstatsbesidegametiles_SectionSubTitle_1bbOk {
-    font-size: 1em;
-  }
-}
-.yirstatsbesidegametiles_PlatformContentsCtn_e-ft_ {
-  position: relative;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transform: perspective(200px) translateZ(-102px);
-}
-.NowVisible .yirstatsbesidegametiles_PlatformContentsCtn_e-ft_ {
-  animation-name: yirstatsbesidegametiles_ElementFadeIn_1u6VR;
-  animation-duration: 1s;
-  animation-timing-function: ease-out;
-  animation-delay: 0s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-}
-.yirstatsbesidegametiles_StatsRow_2kV_S {
-  height: fit-content;
-  display: flex;
-  flex-direction: row;
-  padding-bottom: 1.5vw;
-  width: 80vw;
-  justify-content: center;
-}
-.yirstatsbesidegametiles_StatBlock_e603W {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0 20px;
-}
-.yirstatsbesidegametiles_StatBlock_e603W .yirstatsbesidegametiles_BigNum_lJ1mE {
-  display: flex;
-  font-size: clamp(23px, 3.5vw, 60px);
-  line-height: clamp(26px, 3.7vw, 65px);
-  font-weight: 600;
-  font-variant-numeric: tabular-nums;
-  color: #fff;
-}
-.yirstatsbesidegametiles_StatBlock_e603W
-  .yirstatsbesidegametiles_StatDescription_1eD7U {
-  color: #fff;
-  font-size: clamp(12px, 1.3vw, 21px);
-  font-weight: 500;
-}
-.yirstatsbesidegametiles_Deck_18y68 {
-  position: relative;
-}
-.yirstatsbesidegametiles_Deck_18y68 .yirstatsbesidegametiles_CapRow_tTYFT {
-  width: 39vw;
-}
-.yirstatsbesidegametiles_VR__CEQf {
-  position: relative;
 }
 @keyframes yircomponents_ElementFadeIn_3KpTV {
   0% {
@@ -2665,6 +2447,274 @@ html.responsive.touch .yircomponents_TopGameBlockContainer_1o-Oa {
   .yircomponents_GameWrapper_2u3_D {
   height: 100vh;
 }
+@keyframes yirstatsbesidegametiles_ElementFadeIn_1u6VR {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateZ(0px);
+  }
+}
+@keyframes yirstatsbesidegametiles_BadgeBoxIntro_JFDJA {
+  0% {
+    transform: translateY(100px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@keyframes yirstatsbesidegametiles_BadgeBarFiller_1TdxY {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 90%;
+  }
+}
+@keyframes yirstatsbesidegametiles_Appear_7F-Qm {
+  to {
+    transform: translateY(0) translateX(0);
+    opacity: 1;
+  }
+}
+.yirstatsbesidegametiles_Section_3Q6xY {
+  width: 100%;
+  height: 62vh;
+  min-height: 50vw;
+  background: #000;
+}
+.yirstatsbesidegametiles_Section_3Q6xY.yirstatsbesidegametiles_Windows_1vF9u {
+  background: linear-gradient(135deg, #28aee1 0%, #2644b3 100%);
+}
+.yirstatsbesidegametiles_Section_3Q6xY.yirstatsbesidegametiles_Linux_2sto6 {
+  background: linear-gradient(
+    135deg,
+    #84579f 0%,
+    #280f20 40%,
+    #280f20 60%,
+    #600d44 100%
+  );
+}
+.yirstatsbesidegametiles_Section_3Q6xY.yirstatsbesidegametiles_Controller_3-3rS {
+  background: linear-gradient(135deg, #0d215e 0%, #0b4648 100%);
+  overflow: hidden;
+}
+@media screen and (max-width: 620px) {
+  .yirstatsbesidegametiles_Section_3Q6xY.yirstatsbesidegametiles_Controller_3-3rS {
+    height: 46vh;
+    max-height: unset;
+    overflow: hidden;
+  }
+}
+.yirstatsbesidegametiles_Section_3Q6xY.yirstatsbesidegametiles_Mac_38lJl {
+  background: linear-gradient(135deg, #0d215e 0%, #0b4648 100%);
+  overflow: hidden;
+}
+.yirstatsbesidegametiles_Section_3Q6xY.yirstatsbesidegametiles_Deck_18y68 {
+  height: 56vw;
+}
+@media screen and (max-width: 940px) {
+  .yirstatsbesidegametiles_Section_3Q6xY.yirstatsbesidegametiles_Deck_18y68 {
+    height: 100vw;
+    max-height: unset;
+    overflow: hidden;
+  }
+}
+.yirstatsbesidegametiles_Section_3Q6xY.yirstatsbesidegametiles_Deck_18y68
+  .yirstatsbesidegametiles_PlatformContentsCtn_e-ft_ {
+  justify-content: start;
+}
+.yirstatsbesidegametiles_Section_3Q6xY.yirstatsbesidegametiles_VR__CEQf {
+  background-color: #000;
+  overflow: hidden;
+  height: 70vw;
+}
+.yirstatsbesidegametiles_Section_3Q6xY.yirstatsbesidegametiles_VR__CEQf
+  .yirstatsbesidegametiles_StatsRow_2kV_S {
+  margin-top: 10vw;
+}
+.yirstatsbesidegametiles_Section_3Q6xY.yirstatsbesidegametiles_VR__CEQf
+  .yirstatsbesidegametiles_CapRow_tTYFT {
+  width: 39vw;
+  margin-bottom: 16vw;
+}
+@media screen and (max-width: 940px) {
+  .yirstatsbesidegametiles_Section_3Q6xY.yirstatsbesidegametiles_VR__CEQf {
+    height: 70vw;
+  }
+  .yirstatsbesidegametiles_Section_3Q6xY.yirstatsbesidegametiles_VR__CEQf
+    .yirstatsbesidegametiles_StatsRow_2kV_S {
+    margin-top: 7vw;
+    width: 65vw;
+  }
+  .yirstatsbesidegametiles_Section_3Q6xY.yirstatsbesidegametiles_VR__CEQf
+    .yirstatsbesidegametiles_CapRow_tTYFT {
+    width: 39vw;
+    margin-bottom: 19vw;
+  }
+}
+@media screen and (max-width: 620px) {
+  .yirstatsbesidegametiles_Section_3Q6xY.yirstatsbesidegametiles_VR__CEQf
+    .yirstatsbesidegametiles_CapRow_tTYFT {
+    margin-bottom: 21vw;
+  }
+}
+@media screen and (max-width: 500px) {
+  .yirstatsbesidegametiles_Section_3Q6xY.yirstatsbesidegametiles_VR__CEQf {
+    height: 100vw;
+  }
+  .yirstatsbesidegametiles_Section_3Q6xY.yirstatsbesidegametiles_VR__CEQf
+    .yirstatsbesidegametiles_StatsRow_2kV_S {
+    width: 80vw;
+  }
+}
+.yirstatsbesidegametiles_Section_3Q6xY
+  .yirstatsbesidegametiles_BackgroundImage_1WIHn {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  -webkit-mask-image: -webkit-gradient(
+    linear,
+    left 90%,
+    left bottom,
+    from(rgb(14, 16, 20)),
+    to(rgba(0, 0, 0, 0))
+  );
+}
+@media screen and (max-width: 940px) {
+  .yirstatsbesidegametiles_Section_3Q6xY
+    .yirstatsbesidegametiles_BackgroundImage_1WIHn {
+    transform: scale(1.1);
+  }
+}
+@media screen and (max-width: 800px) {
+  .yirstatsbesidegametiles_Section_3Q6xY
+    .yirstatsbesidegametiles_BackgroundImage_1WIHn {
+    transform: scale(1.3) translateY(6%);
+  }
+}
+@media screen and (max-width: 620px) {
+  .yirstatsbesidegametiles_Section_3Q6xY
+    .yirstatsbesidegametiles_BackgroundImage_1WIHn {
+    transform: scale(1.4) translateY(10%);
+  }
+}
+@media screen and (max-width: 500px) {
+  .yirstatsbesidegametiles_Section_3Q6xY
+    .yirstatsbesidegametiles_BackgroundImage_1WIHn {
+    transform: scale(1.4) translateY(14%);
+  }
+}
+.yirstatsbesidegametiles_Section_3Q6xY
+  .yirstatsbesidegametiles_GameImage_3itig {
+  position: absolute;
+  z-index: -2;
+  width: 100%;
+  max-height: 100%;
+  filter: saturate(0.2) brightness(0.75);
+  opacity: 0.6;
+}
+.yirstatsbesidegametiles_Section_3Q6xY
+  .yirstatsbesidegametiles_SectionTitle_CzWCp {
+  width: 100%;
+  text-align: center;
+  font-size: clamp(18px, 3vw, 44px);
+  color: #fff;
+  font-weight: 600;
+  padding-bottom: 20px;
+}
+@media screen and (max-width: 500px) {
+  .yirstatsbesidegametiles_Section_3Q6xY
+    .yirstatsbesidegametiles_SectionTitle_CzWCp {
+    width: 95%;
+    padding-bottom: 0px;
+  }
+}
+.yirstatsbesidegametiles_Section_3Q6xY
+  .yirstatsbesidegametiles_SectionSubTitle_1bbOk {
+  font-size: clamp(18px, 2vw, 27px);
+  color: #fff;
+  margin-top: 20px;
+  margin-bottom: 8px;
+  text-align: center;
+  max-width: 100%;
+}
+@media screen and (max-width: 500px) {
+  .yirstatsbesidegametiles_Section_3Q6xY
+    .yirstatsbesidegametiles_SectionSubTitle_1bbOk {
+    font-size: 1em;
+  }
+}
+.yirstatsbesidegametiles_PlatformContentsCtn_e-ft_ {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: perspective(200px) translateZ(-102px);
+}
+.NowVisible .yirstatsbesidegametiles_PlatformContentsCtn_e-ft_ {
+  animation-name: yirstatsbesidegametiles_ElementFadeIn_1u6VR;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+.yirstatsbesidegametiles_StatsRow_2kV_S {
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 1.5vw;
+  width: 80vw;
+  justify-content: center;
+}
+.yirstatsbesidegametiles_StatBlock_e603W {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px;
+}
+.yirstatsbesidegametiles_StatBlock_e603W .yirstatsbesidegametiles_BigNum_lJ1mE {
+  display: flex;
+  font-size: clamp(23px, 3.5vw, 60px);
+  line-height: clamp(26px, 3.7vw, 65px);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  color: #fff;
+}
+.yirstatsbesidegametiles_StatBlock_e603W
+  .yirstatsbesidegametiles_StatDescription_1eD7U {
+  color: #fff;
+  font-size: clamp(12px, 1.3vw, 21px);
+  font-weight: 500;
+}
+.yirstatsbesidegametiles_Deck_18y68 {
+  position: relative;
+}
+.yirstatsbesidegametiles_Deck_18y68 .yirstatsbesidegametiles_CapRow_tTYFT {
+  width: 39vw;
+}
+.yirstatsbesidegametiles_VR__CEQf {
+  position: relative;
+}
+.yirstatsbesidegametiles_DemoSash__sTGZ {
+  background-color: hotpink;
+  position: absolute;
+  font-size: 14px;
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
+  top: 25px;
+  left: 20px;
+  padding: 3px;
+}
 .tabbar_GraphicalAssetsTabs_36r8g {
   display: flex;
   margin-bottom: 16px;
@@ -3764,6 +3814,7 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   background-color: rgba(0, 0, 0, 0.5333333333);
   flex-shrink: 0;
   display: flex;
+  padding: 20px;
 }
 @media screen and (max-width: 620px) {
   .yirbadges_PlayBehaviorContainer_1NBM7
@@ -3788,7 +3839,7 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   flex-direction: column;
   background-color: rgba(0, 0, 0, 0.2);
   flex: 1;
-  padding: 0 clamp(16px, 2vw, 32px);
+  padding: 20px clamp(16px, 2vw, 32px);
   justify-content: center;
 }
 @media screen and (max-width: 620px) {
@@ -4259,17 +4310,42 @@ div.yirhowyouplayed_DeckContainer_3G2ne .yirhowyouplayed_Disclaimer_1h_am {
   color: #fff;
   text-align: center;
   text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-  margin-bottom: 8px;
+  margin-bottom: 16px;
 }
 .yirshare_ShareOptions_1GTNK .yirshare_ShareColumns_17-su {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 24px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.yirshare_ShareOptions_1GTNK
+  .yirshare_ShareColumns_17-su
+  .yirshare_ShowcaseInfo_35BgP {
+  justify-content: center;
+  margin-left: 0;
+}
+@media screen and (max-width: 620px) {
+  .yirshare_ShareOptions_1GTNK
+    .yirshare_ShareColumns_17-su
+    .yirshare_ShowcaseInfo_35BgP {
+    width: 100%;
+  }
+  .yirshare_ShareOptions_1GTNK
+    .yirshare_ShareColumns_17-su
+    .yirshare_ShareCtn_3wBwg {
+    width: 100%;
+  }
 }
 .yirshare_ShareTypeTitle_3X3w6 {
   font-size: clamp(14px, 1.3vw, 17px);
   line-height: clamp(17px, 1em, 24px);
   font-weight: 400;
   color: #fff;
+  text-align: center;
 }
 .yirshare_ShowcaseInfo_35BgP {
   display: flex;

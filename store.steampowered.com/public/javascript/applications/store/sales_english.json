@@ -359,7 +359,7 @@
     "dummy_for_end_of_file_convenience": "dummy",
     "YearInReview_LoginPrompt": "Please sign in to view Steam Year In Review",
     "YearInReview_LoginBtn": "Sign in now",
-    "YearInReview_SteamRewindHeader": "%1$s STEAM%3$s YEAR IN REVIEW %2$s",
+    "YearInReview_SteamRewindHeader": "%1$s STEAM YEAR IN REVIEW %2$s",
     "YearInReview_SteamRewindHeader_Generic": "STEAM YEAR IN REVIEW %1$s",
     "YearInReview_PossessiveUserName": "%1$s's",
     "YIR_Error_NoData": "Steam Year In Review is not available for this year",
