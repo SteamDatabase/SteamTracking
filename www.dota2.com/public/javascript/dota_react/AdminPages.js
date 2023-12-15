@@ -3,7 +3,7 @@
 (self.webpackChunkdota_react = self.webpackChunkdota_react || []).push([
   [1510],
   {
-    14080: (e) => {
+    33916: (e) => {
       e.exports = {
         Tooltip: "personadetails_Tooltip_3OELh",
         CarouselFade: "personadetails_CarouselFade_31I4l",
@@ -80,7 +80,7 @@
         TextUppercase: "personadetails_TextUppercase_1zyxl",
       };
     },
-    41847: (e) => {
+    37233: (e) => {
       e.exports = {
         Tooltip: "teamdetails_Tooltip_31hC1",
         CarouselFade: "teamdetails_CarouselFade_2UcOF",
@@ -117,13 +117,13 @@
     },
     21600: (e, t, a) => {
       "use strict";
-      a.r(t), a.d(t, { default: () => fe });
+      a.r(t), a.d(t, { default: () => ge });
       var n = a(33940),
         l = a(52868),
         r = a.n(l),
-        o = a(65092),
+        o = a(59934),
         i = a(89526),
-        c = a(53672),
+        c = a(61011),
         s = a(36105),
         m = a.n(s),
         d = a(30310),
@@ -134,201 +134,199 @@
         y = a(57317),
         g = a(54650),
         v = a(52339),
-        f = a(13169),
-        A = a(93115),
-        h = a(28772),
-        k = a(54013),
-        T = a(22396),
-        N = a(29706),
-        R = a(70894),
-        I = a(36250),
-        O = a(17697),
-        D = a(79585),
-        C = a(39375);
-      function S(e) {
+        f = a(5605),
+        A = a(54013),
+        h = a(22396),
+        k = a(29706),
+        T = a(70894),
+        N = a(36250),
+        R = a(17697),
+        I = a(79585),
+        O = a(39375);
+      function D(e) {
         return 570 === e ? "public" : "beta";
       }
-      function F(e) {
+      function C(e) {
         switch (e) {
-          case D.rK.DOTA_GAMEMODE_NONE:
+          case I.rK.DOTA_GAMEMODE_NONE:
             return "-";
-          case D.rK.DOTA_GAMEMODE_AP:
+          case I.rK.DOTA_GAMEMODE_AP:
             return "AP";
-          case D.rK.DOTA_GAMEMODE_CM:
+          case I.rK.DOTA_GAMEMODE_CM:
             return "CM";
-          case D.rK.DOTA_GAMEMODE_RD:
+          case I.rK.DOTA_GAMEMODE_RD:
             return "RD";
-          case D.rK.DOTA_GAMEMODE_SD:
+          case I.rK.DOTA_GAMEMODE_SD:
             return "SD";
-          case D.rK.DOTA_GAMEMODE_AR:
+          case I.rK.DOTA_GAMEMODE_AR:
             return "AR";
-          case D.rK.DOTA_GAMEMODE_INTRO:
+          case I.rK.DOTA_GAMEMODE_INTRO:
             return "INTRO";
-          case D.rK.DOTA_GAMEMODE_HW:
+          case I.rK.DOTA_GAMEMODE_HW:
             return "OCT31";
-          case D.rK.DOTA_GAMEMODE_REVERSE_CM:
+          case I.rK.DOTA_GAMEMODE_REVERSE_CM:
             return "Rev CM";
-          case D.rK.DOTA_GAMEMODE_XMAS:
+          case I.rK.DOTA_GAMEMODE_XMAS:
             return "XMAS";
-          case D.rK.DOTA_GAMEMODE_TUTORIAL:
+          case I.rK.DOTA_GAMEMODE_TUTORIAL:
             return "Tutorial";
-          case D.rK.DOTA_GAMEMODE_MO:
+          case I.rK.DOTA_GAMEMODE_MO:
             return "MID";
-          case D.rK.DOTA_GAMEMODE_LP:
+          case I.rK.DOTA_GAMEMODE_LP:
             return "LP";
-          case D.rK.DOTA_GAMEMODE_POOL1:
+          case I.rK.DOTA_GAMEMODE_POOL1:
             return "Pool1";
-          case D.rK.DOTA_GAMEMODE_FH:
+          case I.rK.DOTA_GAMEMODE_FH:
             return "FH";
-          case D.rK.DOTA_GAMEMODE_CUSTOM:
+          case I.rK.DOTA_GAMEMODE_CUSTOM:
             return "CUSTOM";
-          case D.rK.DOTA_GAMEMODE_CD:
+          case I.rK.DOTA_GAMEMODE_CD:
             return "CD";
-          case D.rK.DOTA_GAMEMODE_BD:
+          case I.rK.DOTA_GAMEMODE_BD:
             return "BD";
-          case D.rK.DOTA_GAMEMODE_ABILITY_DRAFT:
+          case I.rK.DOTA_GAMEMODE_ABILITY_DRAFT:
             return "AD";
-          case D.rK.DOTA_GAMEMODE_EVENT:
+          case I.rK.DOTA_GAMEMODE_EVENT:
             return "EVENT";
-          case D.rK.DOTA_GAMEMODE_ARDM:
+          case I.rK.DOTA_GAMEMODE_ARDM:
             return "ARDM";
-          case D.rK.DOTA_GAMEMODE_1V1MID:
+          case I.rK.DOTA_GAMEMODE_1V1MID:
             return "1v1";
-          case D.rK.DOTA_GAMEMODE_ALL_DRAFT:
+          case I.rK.DOTA_GAMEMODE_ALL_DRAFT:
             return "AP";
-          case D.rK.DOTA_GAMEMODE_TURBO:
+          case I.rK.DOTA_GAMEMODE_TURBO:
             return "TURBO";
-          case D.rK.DOTA_GAMEMODE_MUTATION:
+          case I.rK.DOTA_GAMEMODE_MUTATION:
             return "MUT";
-          case D.rK.DOTA_GAMEMODE_COACHES_CHALLENGE:
+          case I.rK.DOTA_GAMEMODE_COACHES_CHALLENGE:
             return "COACH";
           default:
             return "Unknown";
         }
       }
-      function b(e) {
+      function S(e) {
         switch (e) {
-          case D.Eq.CASUAL_MATCH:
+          case I.Eq.CASUAL_MATCH:
             return "Unranked";
-          case D.Eq.PRACTICE:
+          case I.Eq.PRACTICE:
             return "Practice";
-          case D.Eq.COOP_BOT_MATCH:
+          case I.Eq.COOP_BOT_MATCH:
             return "Co-op Bot";
-          case D.Eq.COMPETITIVE_MATCH:
+          case I.Eq.COMPETITIVE_MATCH:
             return "Ranked";
-          case D.Eq.WEEKEND_TOURNEY:
+          case I.Eq.WEEKEND_TOURNEY:
             return "Battle Cup";
-          case D.Eq.LOCAL_BOT_MATCH:
+          case I.Eq.LOCAL_BOT_MATCH:
             return "Local Bot";
-          case D.Eq.SPECTATOR:
+          case I.Eq.SPECTATOR:
             return "Spectator";
-          case D.Eq.EVENT_MATCH:
+          case I.Eq.EVENT_MATCH:
             return "Event";
-          case D.Eq.NEW_PLAYER_POOL:
+          case I.Eq.NEW_PLAYER_POOL:
             return "New Player Pool";
-          case D.Eq.FEATURED_GAMEMODE:
+          case I.Eq.FEATURED_GAMEMODE:
             return "Featured Gamemode";
           default:
             return "";
         }
       }
-      function M(e) {
+      function F(e) {
         switch (e) {
-          case D.cu.RADIANT_VICTORY:
+          case I.cu.RADIANT_VICTORY:
             return "Radiant Victory";
-          case D.cu.DIRE_VICTORY:
+          case I.cu.DIRE_VICTORY:
             return "Dire Victory";
-          case D.cu.NOTSCORED_POOR_NETWORK:
+          case I.cu.NOTSCORED_POOR_NETWORK:
             return "Net";
-          case D.cu.NOTSCORED_LEAVER:
+          case I.cu.NOTSCORED_LEAVER:
             return "Lvr";
-          case D.cu.NOTSCORED_SERVER_CRASH:
+          case I.cu.NOTSCORED_SERVER_CRASH:
             return "Crsh";
-          case D.cu.NOTSCORED_NEVER_STARTED:
+          case I.cu.NOTSCORED_NEVER_STARTED:
             return "No start";
-          case D.cu.NOTSCORED_CANCELED:
+          case I.cu.NOTSCORED_CANCELED:
             return "Cancel";
-          case D.cu.NOTSCORED_SUSPICIOUS:
+          case I.cu.NOTSCORED_SUSPICIOUS:
             return "Suspicious";
           default:
             return "-";
         }
       }
+      function b(e) {
+        switch (e) {
+          case I.PW.RANK_ELIGIBLE:
+            return "Rank Eligible";
+          case I.PW.BATTLECUP:
+            return "Battlecup";
+          case I.PW.BAN_WARNING:
+            return "Ban Warning";
+          case I.PW.RETURNING_PLAYER:
+            return "Returning Player";
+          case I.PW.COMMS_DISRUPTIVE:
+            return "Comms Disruptive";
+          default:
+            return "Unknown";
+        }
+      }
+      function M(e) {
+        switch (e) {
+          case I.n4.VERY_LIKELY:
+            return "Very Likely";
+          case I.n4.SOMEWHAT_LIKELY:
+            return "Somewhat Likely";
+          case I.n4.UNCLEAR:
+            return "Unclear";
+          case I.n4.SOMEWHAT_UNLIKELY:
+            return "Somewhat Unlikely";
+          case I.n4.VERY_UNLIKELY:
+            return "Very Unlikely";
+          default:
+            return "Unknown";
+        }
+      }
       function L(e) {
         switch (e) {
-          case D.PW.RANK_ELIGIBLE:
-            return "Rank Eligible";
-          case D.PW.BATTLECUP:
-            return "Battlecup";
-          case D.PW.BAN_WARNING:
-            return "Ban Warning";
-          case D.PW.RETURNING_PLAYER:
-            return "Returning Player";
-          case D.PW.COMMS_DISRUPTIVE:
-            return "Comms Disruptive";
+          case I._W.DOTA_ACCESS_TOURNAMENT_ADMIN:
+            return "Tournament Admin";
+          case I._W.DOTA_ACCESS_TOURNAMENT_BROADCASTER:
+            return "Tournament Broadcaster";
           default:
             return "Unknown";
         }
       }
       function G(e) {
         switch (e) {
-          case D.n4.VERY_LIKELY:
-            return "Very Likely";
-          case D.n4.SOMEWHAT_LIKELY:
-            return "Somewhat Likely";
-          case D.n4.UNCLEAR:
-            return "Unclear";
-          case D.n4.SOMEWHAT_UNLIKELY:
-            return "Somewhat Unlikely";
-          case D.n4.VERY_UNLIKELY:
-            return "Very Unlikely";
-          default:
-            return "Unknown";
-        }
-      }
-      function $(e) {
-        switch (e) {
-          case D._W.DOTA_ACCESS_TOURNAMENT_ADMIN:
-            return "Tournament Admin";
-          case D._W.DOTA_ACCESS_TOURNAMENT_BROADCASTER:
-            return "Tournament Broadcaster";
-          default:
-            return "Unknown";
-        }
-      }
-      function w(e) {
-        switch (e) {
-          case D.xd.CORE:
+          case I.xd.CORE:
             return "Core";
-          case D.xd.SUPPORT:
+          case I.xd.SUPPORT:
             return "Support";
-          case D.xd.OFFLANE:
+          case I.xd.OFFLANE:
             return "Offlane";
-          case D.xd.MID:
+          case I.xd.MID:
             return "Mid";
           default:
             return "Unknown";
         }
       }
-      var P = a(49213),
-        U = a(14080),
-        Y = a.n(U);
-      const x = "red",
-        K = "orange",
-        H = "goldenrod",
-        B = "#adff2f",
-        W = "darkgray",
-        V = "forestgreen",
-        j = "crimson",
-        q = "#fa002e",
-        J = "#82ca9d",
-        Z = "#888fd8",
-        z = "#3389ae",
-        X = "#FFBB28",
-        Q = "#FF8042",
-        ee = (e) => {
+      var $ = a(49213),
+        w = a(33916),
+        P = a.n(w);
+      const U = "red",
+        Y = "orange",
+        x = "goldenrod",
+        K = "#adff2f",
+        H = "darkgray",
+        B = "forestgreen",
+        W = "crimson",
+        V = "#fa002e",
+        j = "#82ca9d",
+        q = "#888fd8",
+        J = "#3389ae",
+        Z = "#FFBB28",
+        z = "#FF8042",
+        X = (e) => {
           let t = "";
-          const a = `${k.Y.CDN_URL}/apps/dota2/images/`;
+          const a = `${A.Y.CDN_URL}/apps/dota2/images/`;
           return (
             2 == e && (t = `${a}player_reports/button_report_text_on.png`),
             3 == e && (t = `${a}player_reports/button_report_voice_on.png`),
@@ -340,7 +338,7 @@
             t
           );
         },
-        te = (e) => {
+        Q = (e) => {
           let t = "";
           return (
             2 == e && (t = "Text abuse"),
@@ -352,7 +350,7 @@
             t
           );
         },
-        ae = [
+        ee = [
           { key: "accountid", displayName: "Account ID" },
           {
             key: "guilds",
@@ -379,11 +377,11 @@
                       r,
                     ),
                   )
-                : i.createElement("span", { style: { color: W } }, "No Guild");
+                : i.createElement("span", { style: { color: H } }, "No Guild");
             },
           },
         ],
-        ne = [
+        te = [
           {
             key: "comprank",
             secondaryKey: "comprankuncertainty",
@@ -393,15 +391,15 @@
               i.createElement(
                 i.Fragment,
                 null,
-                i.createElement("span", { className: Y().RankNumber }, `${e}`),
+                i.createElement("span", { className: P().RankNumber }, `${e}`),
                 i.createElement(
                   "span",
-                  { className: Y().RankedUncertainty },
+                  { className: P().RankedUncertainty },
                   `+/- ${t}`,
                   i.createElement("img", {
-                    className: Y().RankedBadgeIcon,
+                    className: P().RankedBadgeIcon,
                     src: `${
-                      k.Y.CDN_URL
+                      A.Y.CDN_URL
                     }/apps/dota2/images/small_ranks/ranked_icons_emoticon_${Math.floor(
                       a / 10,
                     )}.png`,
@@ -417,12 +415,12 @@
               i.createElement(
                 i.Fragment,
                 null,
-                i.createElement("span", { className: Y().RankNumber }, `${e}`),
+                i.createElement("span", { className: P().RankNumber }, `${e}`),
                 i.createElement("span", null, `+/- ${t}`),
               ),
           },
         ],
-        le = [
+        ae = [
           {
             key: "accountflags",
             displayName: "Account Flags",
@@ -431,31 +429,31 @@
               let a = [];
               return (
                 0 == e && a.push("None"),
-                (e & D.PW.RANK_ELIGIBLE) > 0 &&
-                  a.push(`${L(D.PW.RANK_ELIGIBLE)}${t}`),
-                (e & D.PW.BATTLECUP) > 0 && a.push(`${L(D.PW.BATTLECUP)}${t}`),
-                (e & D.PW.BAN_WARNING) > 0 &&
+                (e & I.PW.RANK_ELIGIBLE) > 0 &&
+                  a.push(`${b(I.PW.RANK_ELIGIBLE)}${t}`),
+                (e & I.PW.BATTLECUP) > 0 && a.push(`${b(I.PW.BATTLECUP)}${t}`),
+                (e & I.PW.BAN_WARNING) > 0 &&
+                  a.push(
+                    i.createElement(
+                      "span",
+                      { style: { color: U } },
+                      `${b(I.PW.BAN_WARNING)}${t}`,
+                    ),
+                  ),
+                (e & I.PW.RETURNING_PLAYER) > 0 &&
                   a.push(
                     i.createElement(
                       "span",
                       { style: { color: x } },
-                      `${L(D.PW.BAN_WARNING)}${t}`,
+                      `${b(I.PW.RETURNING_PLAYER)}${t}`,
                     ),
                   ),
-                (e & D.PW.RETURNING_PLAYER) > 0 &&
+                (e & I.PW.COMMS_DISRUPTIVE) > 0 &&
                   a.push(
                     i.createElement(
                       "span",
-                      { style: { color: H } },
-                      `${L(D.PW.RETURNING_PLAYER)}${t}`,
-                    ),
-                  ),
-                (e & D.PW.COMMS_DISRUPTIVE) > 0 &&
-                  a.push(
-                    i.createElement(
-                      "span",
-                      { style: { color: x } },
-                      `${L(D.PW.COMMS_DISRUPTIVE)}${t}`,
+                      { style: { color: U } },
+                      `${b(I.PW.COMMS_DISRUPTIVE)}${t}`,
                     ),
                   ),
                 i.createElement("div", null, a)
@@ -468,29 +466,29 @@
             tertiaryKey: "trustscore",
             displayName: "Behav, Comms, Trust",
             formatFunction: (e = 8e3, t = -1, a = -1) => {
-              let n = B;
+              let n = K;
               e < 0
-                ? (n = B)
-                : e <= 2e3
-                ? (n = x)
-                : e <= 4e3
                 ? (n = K)
-                : e <= 6e3 && (n = H);
-              let l = B;
+                : e <= 2e3
+                ? (n = U)
+                : e <= 4e3
+                ? (n = Y)
+                : e <= 6e3 && (n = x);
+              let l = K;
               return (
                 t < 0
-                  ? (l = B)
-                  : t <= 2e3
-                  ? (l = x)
-                  : t <= 4e3
                   ? (l = K)
-                  : t <= 6e3 && (l = H),
+                  : t <= 2e3
+                  ? (l = U)
+                  : t <= 4e3
+                  ? (l = Y)
+                  : t <= 6e3 && (l = x),
                 i.createElement(
                   "div",
                   null,
                   i.createElement("span", { style: { color: n } }, `${e}, `),
                   i.createElement("span", { style: { color: l } }, `${t}, `),
-                  i.createElement("span", { style: { color: B } }, `${a}`),
+                  i.createElement("span", { style: { color: K } }, `${a}`),
                 )
               );
             },
@@ -570,44 +568,44 @@
                 : "",
           },
         ],
-        re = [
+        ne = [
           {
             key: "smurfcategory",
             displayName: "Smurf Category",
             formatFunction: (e) => {
               switch (e) {
-                case D.n4.VERY_LIKELY:
+                case I.n4.VERY_LIKELY:
+                  return i.createElement(
+                    "span",
+                    { style: { color: U } },
+                    M(I.n4.VERY_LIKELY),
+                  );
+                case I.n4.SOMEWHAT_LIKELY:
+                  return i.createElement(
+                    "span",
+                    { style: { color: Y } },
+                    M(I.n4.SOMEWHAT_LIKELY),
+                  );
+                case I.n4.UNCLEAR:
                   return i.createElement(
                     "span",
                     { style: { color: x } },
-                    G(D.n4.VERY_LIKELY),
+                    M(I.n4.UNCLEAR),
                   );
-                case D.n4.SOMEWHAT_LIKELY:
-                  return i.createElement(
-                    "span",
-                    { style: { color: K } },
-                    G(D.n4.SOMEWHAT_LIKELY),
-                  );
-                case D.n4.UNCLEAR:
-                  return i.createElement(
-                    "span",
-                    { style: { color: H } },
-                    G(D.n4.UNCLEAR),
-                  );
-                case D.n4.SOMEWHAT_UNLIKELY:
+                case I.n4.SOMEWHAT_UNLIKELY:
                   return i.createElement(
                     "span",
                     { style: {} },
-                    G(D.n4.SOMEWHAT_UNLIKELY),
+                    M(I.n4.SOMEWHAT_UNLIKELY),
                   );
-                case D.n4.VERY_UNLIKELY:
+                case I.n4.VERY_UNLIKELY:
                   return i.createElement(
                     "span",
                     { style: {} },
-                    G(D.n4.VERY_UNLIKELY),
+                    M(I.n4.VERY_UNLIKELY),
                   );
                 default:
-                  return i.createElement("span", null, G(D.n4.INVALID));
+                  return i.createElement("span", null, M(I.n4.INVALID));
               }
             },
           },
@@ -615,7 +613,7 @@
             key: "plussubscriber",
             displayName: "Plus Subscriber",
             formatFunction: (e = 0) =>
-              e ? i.createElement("div", { style: { color: B } }, "YES") : "NO",
+              e ? i.createElement("div", { style: { color: K } }, "YES") : "NO",
           },
           {
             key: "wins",
@@ -633,16 +631,16 @@
               const n = Math.round((e / a) * 1e4) / 100;
               let l = "none";
               return (
-                n >= 70 || n <= 30 ? (l = K) : (n >= 60 || n <= 40) && (l = H),
+                n >= 70 || n <= 30 ? (l = Y) : (n >= 60 || n <= 40) && (l = x),
                 i.createElement(
                   i.Fragment,
                   null,
                   i.createElement(
                     "span",
-                    { className: Y().MarginRightSmall },
-                    i.createElement("span", { style: { color: V } }, `${e}`),
+                    { className: P().MarginRightSmall },
+                    i.createElement("span", { style: { color: B } }, `${e}`),
                     i.createElement("span", null, " - "),
-                    i.createElement("span", { style: { color: j } }, `${t}`),
+                    i.createElement("span", { style: { color: W } }, `${t}`),
                   ),
                   i.createElement("span", { style: { color: l } }, `(${n}%)`),
                 )
@@ -659,16 +657,16 @@
               const n = Math.round((e / a) * 1e4) / 100;
               let l = "none";
               return (
-                n >= 70 || n <= 30 ? (l = K) : (n >= 60 || n <= 40) && (l = H),
+                n >= 70 || n <= 30 ? (l = Y) : (n >= 60 || n <= 40) && (l = x),
                 i.createElement(
                   i.Fragment,
                   null,
                   i.createElement(
                     "span",
-                    { className: Y().MarginRightSmall },
-                    i.createElement("span", { style: { color: V } }, `${e}`),
+                    { className: P().MarginRightSmall },
+                    i.createElement("span", { style: { color: B } }, `${e}`),
                     i.createElement("span", null, " - "),
-                    i.createElement("span", { style: { color: j } }, `${t}`),
+                    i.createElement("span", { style: { color: W } }, `${t}`),
                   ),
                   i.createElement("span", { style: { color: l } }, `(${n}%)`),
                 )
@@ -685,9 +683,9 @@
                 (t = ((t >> 4) + t) & 252645135),
                 (t = ((t >> 8) + t) & 16711935),
                 (t = ((t >> 16) + t) & 65535);
-              let a = B;
+              let a = K;
               return (
-                t > 20 ? (a = x) : t > 10 ? (a = K) : t > 5 && (a = H),
+                t > 20 ? (a = U) : t > 10 ? (a = Y) : t > 5 && (a = x),
                 i.createElement(
                   "span",
                   { style: { color: a } },
@@ -697,7 +695,7 @@
             },
           },
         ],
-        oe = [
+        le = [
           {
             key: "details",
             displayName: " ",
@@ -720,7 +718,7 @@
                         { key: `${a}-${e}` },
                         i.createElement(
                           "div",
-                          { className: Y().TextCapitalize },
+                          { className: P().TextCapitalize },
                           `${0 == e ? a.replace(/_/g, " ") : ""}`,
                         ),
                         r &&
@@ -730,7 +728,7 @@
                         !r && i.createElement("div", null, `${n[e][0]}`),
                         i.createElement(
                           "div",
-                          { style: { color: W } },
+                          { style: { color: H } },
                           `(${n[e][1]} / ${l})`,
                         ),
                       ),
@@ -743,7 +741,7 @@
                       { key: a },
                       i.createElement(
                         "div",
-                        { className: Y().TextCapitalize },
+                        { className: P().TextCapitalize },
                         a.replace(/_/g, " "),
                       ),
                       i.createElement("div", null),
@@ -755,7 +753,7 @@
             },
           },
         ],
-        ie = [
+        re = [
           {
             key: "reportslink",
             displayName: "Reports",
@@ -789,25 +787,25 @@
                 : "",
           },
         ],
-        ce = [
+        oe = [
           {
             key: "beta_access_flags",
-            displayName: $(D._W.DOTA_ACCESS_TOURNAMENT_ADMIN),
+            displayName: L(I._W.DOTA_ACCESS_TOURNAMENT_ADMIN),
             formatFunction: (e = 0) =>
-              e & D._W.DOTA_ACCESS_TOURNAMENT_ADMIN
-                ? i.createElement("div", { style: { color: B } }, "YES")
+              e & I._W.DOTA_ACCESS_TOURNAMENT_ADMIN
+                ? i.createElement("div", { style: { color: K } }, "YES")
                 : "NO",
           },
           {
             key: "beta_access_flags",
-            displayName: $(D._W.DOTA_ACCESS_TOURNAMENT_BROADCASTER),
+            displayName: L(I._W.DOTA_ACCESS_TOURNAMENT_BROADCASTER),
             formatFunction: (e = 0) =>
-              e & D._W.DOTA_ACCESS_TOURNAMENT_BROADCASTER
-                ? i.createElement("div", { style: { color: B } }, "YES")
+              e & I._W.DOTA_ACCESS_TOURNAMENT_BROADCASTER
+                ? i.createElement("div", { style: { color: K } }, "YES")
                 : "NO",
           },
         ],
-        se = [
+        ie = [
           {
             key: "vac",
             displayName: " ",
@@ -821,7 +819,7 @@
                     { key: a },
                     i.createElement(
                       "div",
-                      { className: Y().TextCapitalize },
+                      { className: P().TextCapitalize },
                       `VAC ${a.replace(/_/g, " ")}`,
                     ),
                     i.createElement("div", null, n),
@@ -832,7 +830,7 @@
             },
           },
         ],
-        me = [
+        ce = [
           { key: "name", displayName: "Name" },
           { key: "real_name", displayName: "Real Name" },
           {
@@ -840,14 +838,14 @@
             displayName: "Role",
             formatFunction: (e = 0) => {
               switch (e) {
-                case D.xd.CORE:
-                  return w(D.xd.CORE);
-                case D.xd.SUPPORT:
-                  return w(D.xd.SUPPORT);
-                case D.xd.OFFLANE:
-                  return w(D.xd.OFFLANE);
-                case D.xd.MID:
-                  return w(D.xd.MID);
+                case I.xd.CORE:
+                  return G(I.xd.CORE);
+                case I.xd.SUPPORT:
+                  return G(I.xd.SUPPORT);
+                case I.xd.OFFLANE:
+                  return G(I.xd.OFFLANE);
+                case I.xd.MID:
+                  return G(I.xd.MID);
                 default:
                   return "Unknown";
               }
@@ -875,7 +873,7 @@
             key: "country",
             displayName: "Country",
             formatFunction: (e) =>
-              i.createElement("span", { className: Y().TextUppercase }, e),
+              i.createElement("span", { className: P().TextUppercase }, e),
           },
           { key: "sponsor", displayName: "Sponsor" },
           {
@@ -889,7 +887,7 @@
             formatFunction: (e) => (e ? "YES" : "NO"),
           },
         ],
-        de = [
+        se = [
           {
             key: "teams",
             secondaryKey: "dotateamurl",
@@ -912,7 +910,7 @@
                       `${c} `,
                       i.createElement(
                         "span",
-                        { style: { color: W } },
+                        { style: { color: H } },
                         `[${s}]`,
                       ),
                     ),
@@ -928,7 +926,7 @@
             },
           },
         ],
-        ue = [
+        me = [
           {
             key: "eventpoints",
             displayName: " ",
@@ -959,78 +957,78 @@
             },
           },
         ],
-        pe = () =>
+        de = () =>
           i.createElement(
             i.Fragment,
             null,
-            i.createElement("span", { style: { color: K } }, "YES"),
+            i.createElement("span", { style: { color: Y } }, "YES"),
             i.createElement("span", null, " (check V1 Link for details)"),
           ),
-        Ee = [
+        ue = [
           {
             key: "exploiter_data",
             displayName: "Exploiter Warnings?",
-            formatFunction: pe,
+            formatFunction: de,
           },
           {
             key: "smurf_data",
             displayName: "Smurf Warnings?",
-            formatFunction: pe,
+            formatFunction: de,
           },
           {
             key: "cheater_data",
             displayName: "Cheater Warnings?",
-            formatFunction: pe,
+            formatFunction: de,
           },
           {
             key: "booster_data",
             displayName: "Booster Warnings?",
-            formatFunction: pe,
+            formatFunction: de,
           },
           {
             key: "known_mmr_exploiter",
             displayName: "Known Hacker / Exploiter?",
-            formatFunction: pe,
+            formatFunction: de,
           },
           {
             key: "delayedbans",
             displayName: "Delayed Bans?",
-            formatFunction: pe,
+            formatFunction: de,
           },
         ],
-        _e = (e) =>
+        pe = (e) =>
           i.createElement(
             i.Fragment,
             null,
             i.createElement(
               "span",
-              { style: { color: x } },
+              { style: { color: U } },
               m()(1e3 * e).format("MMMM Do YYYY, h:mm:ss a"),
             ),
           ),
-        ye = [
+        Ee = [
           {
             key: "matchdisableduntil",
             displayName: "MM Disabled Until",
-            formatFunction: _e,
+            formatFunction: pe,
           },
           {
             key: "rankeddisableduntil",
             displayName: "Ranked Disabled Until",
-            formatFunction: _e,
+            formatFunction: pe,
           },
           {
             key: "preventvoiceuntil",
             displayName: "Voice Disabled Until",
-            formatFunction: _e,
+            formatFunction: pe,
           },
           {
             key: "preventpublictextchatuntil",
             displayName: "Public Text Chat Disabled Until",
-            formatFunction: _e,
+            formatFunction: pe,
           },
         ],
-        ge = (e) => {
+        _e = (e) => {
           if (!e || !e.length) return "(No Bans)";
           e = e.slice(0, 5);
           return e.map((e) => {
@@ -1039,7 +1037,7 @@
               "tr",
               {
                 key: `${e.bantype} - ${e.starttime}`,
-                style: { color: t ? x : "" },
+                style: { color: t ? U : "" },
               },
               i.createElement("td", null, e.bantype),
               i.createElement(
@@ -1075,41 +1073,41 @@
             var a;
           });
         },
-        ve = (e) => {
-          var t, a, l, s, L, G, $;
-          const w = (0, o.UO)(),
-            U = null == w ? void 0 : w.id,
-            [B, pe] = (0, i.useState)(null),
-            [_e, ve] = (0, i.useState)(null),
+        ye = (e) => {
+          var t, a, l, s, b, M, L;
+          const G = (0, o.UO)(),
+            w = null == G ? void 0 : G.id,
+            [K, de] = (0, i.useState)(null),
+            [pe, ye] = (0, i.useState)(null),
+            [ge, ve] = (0, i.useState)(null),
             [fe, Ae] = (0, i.useState)(null),
-            [he, ke] = (0, i.useState)(null),
+            [he, ke] = (0, i.useState)(!1),
             [Te, Ne] = (0, i.useState)(!1),
             [Re, Ie] = (0, i.useState)(!1),
             [Oe, De] = (0, i.useState)(!1),
-            [Ce, Se] = (0, i.useState)(!1),
+            [Ce, Se] = (0, i.useState)(!0),
             [Fe, be] = (0, i.useState)(!0),
-            [Me, Le] = (0, i.useState)(!0),
-            [Ge, $e] = (0, i.useState)(!1),
+            [Me, Le] = (0, i.useState)(!1),
+            [Ge, $e] = (0, i.useState)(!0),
             [we, Pe] = (0, i.useState)(!0),
-            [Ue, Ye] = (0, i.useState)(!0),
-            [xe, Ke] = (0, i.useState)(!1),
-            He = O.L.Get().getHeroList(),
-            Be = O.L.Get().getItemList();
+            [Ue, Ye] = (0, i.useState)(!1),
+            xe = R.L.Get().getHeroList(),
+            Ke = R.L.Get().getItemList();
           (0, i.useEffect)(() => {
             try {
               !(function () {
                 var e;
                 (0, n.mG)(this, void 0, void 0, function* () {
-                  if (!k.Y.DOTA_APP_ID || !U) return;
-                  Se(!1), De(!1), Ne(!1), Ie(!1);
+                  if (!A.Y.DOTA_APP_ID || !w) return;
+                  De(!1), Ie(!1), ke(!1), Ne(!1);
                   const t = {
-                    appid: k.Y.DOTA_APP_ID,
-                    u: S(k.Y.DOTA_APP_ID),
-                    account_id: U,
+                    appid: A.Y.DOTA_APP_ID,
+                    u: D(A.Y.DOTA_APP_ID),
+                    account_id: w,
                   };
                   try {
                     const a = yield r().get(
-                        k.Y.BASE_URL + "persona/showplayerreact/",
+                        A.Y.BASE_URL + "persona/showplayerreact/",
                         { params: t },
                       ),
                       n = null == a ? void 0 : a.data;
@@ -1127,7 +1125,7 @@
                       n &&
                         n.persona &&
                         n.persona.elodatajson &&
-                        ve(JSON.parse(n.persona.elodatajson).aggregate);
+                        ye(JSON.parse(n.persona.elodatajson).aggregate);
                     } catch (e) {}
                     try {
                       if (
@@ -1140,74 +1138,74 @@
                         const e = Object.values(
                           n.persona.history.matches,
                         ).reverse();
-                        Ae(e), ke(e);
+                        ve(e), Ae(e);
                       }
                     } catch (e) {
-                      Ie(!0);
+                      Ne(!0);
                     }
-                    a && a.data && pe(n);
+                    a && a.data && de(n);
                   } catch (e) {
                     console.log("Error fetching individual persona info."),
-                      Se(!0);
+                      De(!0);
                   }
-                  De(!0), Ne(!0);
+                  Ie(!0), ke(!0);
                 });
               })();
             } catch (e) {
               console.log("Could not fetch persona info.");
             }
-          }, [U]),
+          }, [w]),
             (0, i.useEffect)(() => {
-              if (!fe) return;
-              let e = fe.slice();
+              if (!ge) return;
+              let e = ge.slice();
               (e = e.filter(
                 (e) =>
-                  !(!Me && e.lobby_type == D.Eq.CASUAL_MATCH) &&
-                  !(!Fe && e.lobby_type == D.Eq.COMPETITIVE_MATCH) &&
+                  !(!Fe && e.lobby_type == I.Eq.CASUAL_MATCH) &&
+                  !(!Ce && e.lobby_type == I.Eq.COMPETITIVE_MATCH) &&
                   !(
-                    !Ge &&
+                    !Me &&
                     ![
-                      D.Eq.CASUAL_MATCH,
-                      D.Eq.COMPETITIVE_MATCH,
-                      D.Eq.WEEKEND_TOURNEY,
+                      I.Eq.CASUAL_MATCH,
+                      I.Eq.COMPETITIVE_MATCH,
+                      I.Eq.WEEKEND_TOURNEY,
                     ].includes(e.lobby_type)
                   ) &&
-                  !(!we && e.rankwassolo) &&
-                  !(!Ue && !e.rankwassolo),
+                  !(!Ge && e.rankwassolo) &&
+                  !(!we && !e.rankwassolo),
               )),
-                ke(e);
-            }, [fe, Fe, Me, Ge, we, Ue]);
-          let We = null;
+                Ae(e);
+            }, [ge, Ce, Fe, Me, Ge, we]);
+          let He = null;
           if (
-            (U
-              ? Oe && Te
-                ? Oe && Ce
-                  ? (We = `Error loading persona information for account ID ${U}. Double check universe & account ID (or try refreshing).`)
-                  : Te &&
-                    Re &&
-                    (We = `Error loading match history for account ID ${U}.`)
-                : (We = `Loading account ID ${U}...`)
-              : (We = "Must pass in an account ID."),
-            We)
+            (w
+              ? Re && he
+                ? Re && Oe
+                  ? (He = `Error loading persona information for account ID ${w}. Double check universe & account ID (or try refreshing).`)
+                  : he &&
+                    Te &&
+                    (He = `Error loading match history for account ID ${w}.`)
+                : (He = `Loading account ID ${w}...`)
+              : (He = "Must pass in an account ID."),
+            He)
           )
             return i.createElement(
               "div",
-              { className: Y().PersonaDetails },
-              i.createElement(N.j, { bOverlapping: !1 }),
+              { className: P().PersonaDetails },
+              i.createElement(k.j, { bOverlapping: !1 }),
               i.createElement(
-                c.q,
+                c.ql,
                 null,
                 i.createElement("title", null, "Dota 2 - Persona Details"),
               ),
-              i.createElement(C.Z, null),
+              i.createElement(O.Z, null),
               i.createElement(
                 "div",
-                { className: Y().ContentFrame },
-                i.createElement("h2", { className: Y().Header }, We),
+                { className: P().ContentFrame },
+                i.createElement("h2", { className: P().Header }, He),
               ),
-              i.createElement(R.U, null),
+              i.createElement(T.U, null),
             );
-          const Ve = [
+          const Be = [
             {
               dataKey: "date",
               label: "Match Date",
@@ -1225,9 +1223,9 @@
                     "a",
                     {
                       key: e,
-                      href: `${k.Y.BASE_URL}matches/match/${e}?u=${S(
-                        k.Y.DOTA_APP_ID,
-                      )}&appid=${k.Y.DOTA_APP_ID}&highlight=${t}`,
+                      href: `${A.Y.BASE_URL}matches/match/${e}?u=${D(
+                        A.Y.DOTA_APP_ID,
+                      )}&appid=${A.Y.DOTA_APP_ID}&highlight=${t}`,
                     },
                     a || e,
                   ))(e.cellData, e.columnData.strAccountId),
@@ -1239,22 +1237,22 @@
               cellRenderer: (e) => {
                 var t;
                 const a =
-                    null == He
+                    null == xe
                       ? void 0
-                      : He.heroes.find((t) => t.id == e.cellData),
+                      : xe.heroes.find((t) => t.id == e.cellData),
                   n =
                     null === (t = null == a ? void 0 : a.name) || void 0 === t
                       ? void 0
                       : t.replace("npc_dota_hero_", "");
                 return n
                   ? i.createElement("img", {
-                      className: Y().HeroImage,
-                      src: `${k.Y.IMG_URL}heroes/wide/${n}.png`,
+                      className: P().HeroImage,
+                      src: `${A.Y.IMG_URL}heroes/wide/${n}.png`,
                       alt: e.cellData,
                     })
                   : i.createElement("img", {
-                      className: Y().HeroImage,
-                      src: `${k.Y.IMG_URL}heroes/wide/unknown.png`,
+                      className: P().HeroImage,
+                      src: `${A.Y.IMG_URL}heroes/wide/unknown.png`,
                     });
               },
             },
@@ -1267,25 +1265,25 @@
                 if (
                   (null === (t = e.rowData) || void 0 === t
                     ? void 0
-                    : t.lobbytype) == D.Eq.PRACTICE
+                    : t.lobbytype) == I.Eq.PRACTICE
                 )
                   return i.createElement(
                     "span",
-                    { style: { color: z } },
-                    b(D.Eq.PRACTICE),
+                    { style: { color: J } },
+                    S(I.Eq.PRACTICE),
                   );
                 let l = e.cellData;
-                if ((l in D.cu || (l = 0), l <= 0)) return M(D.cu.UNKNOWN);
+                if ((l in I.cu || (l = 0), l <= 0)) return F(I.cu.UNKNOWN);
                 const r =
                   (null === (a = null == e ? void 0 : e.rowData) || void 0 === a
                     ? void 0
                     : a.teamnumber) + 2;
-                if (r < 2 || r > 3) return M(D.cu.UNKNOWN);
+                if (r < 2 || r > 3) return F(I.cu.UNKNOWN);
                 if (l < 2 || l > 3) {
                   const t = e.cellData;
-                  return t in D.cu
-                    ? i.createElement("span", { style: { color: K } }, M(t))
-                    : M(D.cu.UNKNOWN);
+                  return t in I.cu
+                    ? i.createElement("span", { style: { color: Y } }, F(t))
+                    : F(I.cu.UNKNOWN);
                 }
                 {
                   const t = r == l,
@@ -1295,7 +1293,7 @@
                       void 0 === n
                         ? void 0
                         : n.rankchange;
-                  let c = t ? (o >= 35 ? "#68c529" : V) : o <= -35 ? q : j;
+                  let c = t ? (o >= 35 ? "#68c529" : B) : o <= -35 ? V : W;
                   return (
                     a.push(
                       i.createElement(
@@ -1346,7 +1344,7 @@
                 const t = e.cellData || 0;
                 let a = "";
                 return (
-                  t >= 300 ? (a = x) : t >= 175 ? (a = K) : t >= 100 && (a = H),
+                  t >= 300 ? (a = U) : t >= 175 ? (a = Y) : t >= 100 && (a = x),
                   i.createElement(
                     "span",
                     { key: "op", style: { color: a } },
@@ -1379,13 +1377,13 @@
               widthRelative: 8,
               cellRenderer: (e) => {
                 let t = isNaN(e.cellData) ? e.rowData.lobby_type : e.cellData;
-                t in D.Eq || (t = -1);
-                let a = z;
+                t in I.Eq || (t = -1);
+                let a = J;
                 return (
-                  t == D.Eq.CASUAL_MATCH
-                    ? (a = J)
-                    : t == D.Eq.COMPETITIVE_MATCH && (a = Z),
-                  i.createElement("span", { style: { color: a } }, b(t))
+                  t == I.Eq.CASUAL_MATCH
+                    ? (a = j)
+                    : t == I.Eq.COMPETITIVE_MATCH && (a = q),
+                  i.createElement("span", { style: { color: a } }, S(t))
                 );
               },
               headerRenderer: (e) =>
@@ -1394,40 +1392,40 @@
                   null,
                   i.createElement(
                     "div",
-                    { className: Y().CheckBox },
+                    { className: P().CheckBox },
                     i.createElement("input", {
                       type: "checkbox",
                       name: "ranked",
                       id: "ranked",
-                      onChange: () => be(!Fe),
-                      checked: Fe,
+                      onChange: () => Se(!Ce),
+                      checked: Ce,
                     }),
                     i.createElement(
                       "label",
                       { htmlFor: "ranked" },
                       i.createElement(
                         "span",
-                        { style: { color: Z } },
+                        { style: { color: q } },
                         "Ranked",
                       ),
                     ),
                   ),
                   i.createElement(
                     "div",
-                    { className: Y().CheckBox },
+                    { className: P().CheckBox },
                     i.createElement("input", {
                       type: "checkbox",
                       name: "unranked",
                       id: "unranked",
-                      onChange: () => Le(!Me),
-                      checked: Me,
+                      onChange: () => be(!Fe),
+                      checked: Fe,
                     }),
                     i.createElement(
                       "label",
                       { htmlFor: "unranked" },
                       i.createElement(
                         "span",
-                        { style: { color: J } },
+                        { style: { color: j } },
                         "Unranked",
                       ),
                     ),
@@ -1443,9 +1441,9 @@
                 return e.cellData &&
                   (null === (t = null == e ? void 0 : e.rowData) || void 0 === t
                     ? void 0
-                    : t.lobbytype) != D.Eq.WEEKEND_TOURNEY
-                  ? i.createElement("span", { style: { color: Q } }, "Solo")
-                  : i.createElement("span", { style: { color: X } }, "Party");
+                    : t.lobbytype) != I.Eq.WEEKEND_TOURNEY
+                  ? i.createElement("span", { style: { color: z } }, "Solo")
+                  : i.createElement("span", { style: { color: Z } }, "Party");
               },
               headerRenderer: (e) =>
                 i.createElement(
@@ -1453,34 +1451,34 @@
                   null,
                   i.createElement(
                     "div",
-                    { className: Y().CheckBox },
+                    { className: P().CheckBox },
                     i.createElement("input", {
                       type: "checkbox",
                       name: "solo",
                       id: "solo",
+                      onChange: () => $e(!Ge),
+                      checked: Ge,
+                    }),
+                    i.createElement(
+                      "label",
+                      { htmlFor: "solo" },
+                      i.createElement("span", { style: { color: z } }, "Solo"),
+                    ),
+                  ),
+                  i.createElement(
+                    "div",
+                    { className: P().CheckBox },
+                    i.createElement("input", {
+                      type: "checkbox",
+                      name: "party",
+                      id: "party",
                       onChange: () => Pe(!we),
                       checked: we,
                     }),
                     i.createElement(
                       "label",
-                      { htmlFor: "solo" },
-                      i.createElement("span", { style: { color: Q } }, "Solo"),
-                    ),
-                  ),
-                  i.createElement(
-                    "div",
-                    { className: Y().CheckBox },
-                    i.createElement("input", {
-                      type: "checkbox",
-                      name: "party",
-                      id: "party",
-                      onChange: () => Ye(!Ue),
-                      checked: Ue,
-                    }),
-                    i.createElement(
-                      "label",
                       { htmlFor: "party" },
-                      i.createElement("span", { style: { color: X } }, "Party"),
+                      i.createElement("span", { style: { color: Z } }, "Party"),
                     ),
                   ),
                 ),
@@ -1503,11 +1501,11 @@
                 )
                   return i.createElement(
                     "span",
-                    { style: { color: q } },
+                    { style: { color: V } },
                     "SD (LP)",
                   );
                 const n = `DOTA_GAMEMODE_${e.cellData}`;
-                return n in D.rK ? F(D.rK[n]) : F(D.rK.DOTA_GAMEMODE_NONE);
+                return n in I.rK ? C(I.rK[n]) : C(I.rK.DOTA_GAMEMODE_NONE);
               },
             },
             {
@@ -1572,9 +1570,9 @@
                 const t = [];
                 for (let a = 0; a < 6; a++) {
                   const n =
-                    null == Be
+                    null == Ke
                       ? void 0
-                      : Be.itemabilities.find(
+                      : Ke.itemabilities.find(
                           (t) =>
                             t.id ==
                             (null == e ? void 0 : e.rowData[`item${a}`]),
@@ -1584,15 +1582,15 @@
                     t.push(
                       i.createElement("img", {
                         key: `${e.rowIndex}_item${a}`,
-                        className: Y().ItemIcon,
-                        src: `${k.Y.IMG_URL}items/${l}.png`,
+                        className: P().ItemIcon,
+                        src: `${A.Y.IMG_URL}items/${l}.png`,
                         alt: e.cellData,
                       }),
                     );
                 }
                 return i.createElement(
                   "div",
-                  { className: Y().ItemContainer },
+                  { className: P().ItemContainer },
                   t,
                   " ",
                 );
@@ -1672,7 +1670,7 @@
                   (d.length &&
                     A.push(
                       i.createElement(
-                        P.HP,
+                        $.HP,
                         {
                           key: "leaverTooltip",
                           toolTipContent: i.createElement(
@@ -1762,11 +1760,11 @@
                           direction: "left",
                           nBodyAlignment: 1,
                           nAllowOffscreenPx: 1200,
-                          strTooltipClassname: Y().PlayerReportTooltip,
+                          strTooltipClassname: P().PlayerReportTooltip,
                         },
                         i.createElement(
                           "span",
-                          { style: { color: q } },
+                          { style: { color: V } },
                           "[Lvr] ",
                         ),
                       ),
@@ -1774,7 +1772,7 @@
                   v.length &&
                     A.push(
                       i.createElement(
-                        P.HP,
+                        $.HP,
                         {
                           key: "commendTooltip",
                           toolTipContent: i.createElement(
@@ -1808,8 +1806,8 @@
                               "tbody",
                               null,
                               v.map((e) => {
-                                const t = ee(e.reportreason),
-                                  a = te(e.reportreason);
+                                const t = X(e.reportreason),
+                                  a = Q(e.reportreason);
                                 return i.createElement(
                                   "tr",
                                   { key: `${e.reporteraccountid}` },
@@ -1832,11 +1830,11 @@
                           direction: "left",
                           nBodyAlignment: 1,
                           nAllowOffscreenPx: 1200,
-                          strTooltipClassname: Y().PlayerReportTooltip,
+                          strTooltipClassname: P().PlayerReportTooltip,
                         },
                         i.createElement(
                           "span",
-                          { key: "playerCommends", style: { color: V } },
+                          { key: "playerCommends", style: { color: B } },
                           `[${v.length}] `,
                         ),
                       ),
@@ -1854,8 +1852,8 @@
                     t = [];
                   let a = 0;
                   for (let e of f) {
-                    const n = ee(e.reportreason),
-                      l = te(e.reportreason);
+                    const n = X(e.reportreason),
+                      l = Q(e.reportreason);
                     a &&
                       a != e.reporteraccountid &&
                       t.push(
@@ -1886,7 +1884,7 @@
                   }
                   A.push(
                     i.createElement(
-                      P.HP,
+                      $.HP,
                       {
                         key: "reportTooltip",
                         toolTipContent: i.createElement(
@@ -1916,11 +1914,11 @@
                         direction: "left",
                         nBodyAlignment: 1,
                         nAllowOffscreenPx: 1200,
-                        strTooltipClassname: Y().PlayerReportTooltip,
+                        strTooltipClassname: P().PlayerReportTooltip,
                       },
                       i.createElement(
                         "span",
-                        { key: "playerReports", style: { color: x } },
+                        { key: "playerReports", style: { color: U } },
                         `[${e.length}]`,
                       ),
                     ),
@@ -1930,7 +1928,7 @@
                   u.length &&
                     A.push(
                       i.createElement(
-                        P.HP,
+                        $.HP,
                         {
                           key: "detectionsTooltip",
                           toolTipContent: i.createElement(
@@ -1996,11 +1994,11 @@
                           direction: "left",
                           nBodyAlignment: 1,
                           nAllowOffscreenPx: 1200,
-                          strTooltipClassname: Y().PlayerReportTooltip,
+                          strTooltipClassname: P().PlayerReportTooltip,
                         },
                         i.createElement(
                           "span",
-                          { key: "playerReports", style: { color: x } },
+                          { key: "playerReports", style: { color: U } },
                           "[SUS]",
                         ),
                       ),
@@ -2008,7 +2006,7 @@
                   p.length &&
                     A.push(
                       i.createElement(
-                        P.HP,
+                        $.HP,
                         {
                           key: "lowPriTooltip",
                           toolTipContent: i.createElement(
@@ -2056,11 +2054,11 @@
                           direction: "left",
                           nBodyAlignment: 1,
                           nAllowOffscreenPx: 1200,
-                          strTooltipClassname: Y().PlayerReportTooltip,
+                          strTooltipClassname: P().PlayerReportTooltip,
                         },
                         i.createElement(
                           "span",
-                          { key: "playerReports", style: { color: x } },
+                          { key: "playerReports", style: { color: U } },
                           "[LP]",
                         ),
                       ),
@@ -2068,18 +2066,18 @@
                   g &&
                     A.push(
                       i.createElement(
-                        P.HP,
+                        $.HP,
                         {
                           key: "langchange",
                           toolTipContent: g,
                           direction: "left",
                           nBodyAlignment: 1,
                           nAllowOffscreenPx: 1200,
-                          strTooltipClassname: Y().PlayerReportTooltip,
+                          strTooltipClassname: P().PlayerReportTooltip,
                         },
                         i.createElement(
                           "span",
-                          { key: "langChange", style: { color: K } },
+                          { key: "langChange", style: { color: Y } },
                           `[${g.slice(-2)}]`,
                         ),
                       ),
@@ -2087,18 +2085,18 @@
                   y &&
                     A.push(
                       i.createElement(
-                        P.HP,
+                        $.HP,
                         {
                           key: "geochange",
                           toolTipContent: y,
                           direction: "left",
                           nBodyAlignment: 1,
                           nAllowOffscreenPx: 1200,
-                          strTooltipClassname: Y().PlayerReportTooltip,
+                          strTooltipClassname: P().PlayerReportTooltip,
                         },
                         i.createElement(
                           "span",
-                          { key: "geoChange", style: { color: K } },
+                          { key: "geoChange", style: { color: Y } },
                           "[GEO]",
                         ),
                       ),
@@ -2106,18 +2104,18 @@
                   E &&
                     A.push(
                       i.createElement(
-                        P.HP,
+                        $.HP,
                         {
                           key: "hwchange",
                           toolTipContent: E,
                           direction: "left",
                           nBodyAlignment: 1,
                           nAllowOffscreenPx: 1200,
-                          strTooltipClassname: Y().PlayerReportTooltip,
+                          strTooltipClassname: P().PlayerReportTooltip,
                         },
                         i.createElement(
                           "span",
-                          { key: "hwidChange", style: { color: K } },
+                          { key: "hwidChange", style: { color: Y } },
                           "[HW]",
                         ),
                       ),
@@ -2133,39 +2131,39 @@
                     ? ""
                     : i.createElement(
                         "div",
-                        { className: Y().ReportRowElement },
+                        { className: P().ReportRowElement },
                         A,
                       )
                 );
               },
             },
           ];
-          let je = !0;
+          let We = !0;
+          for (let e of ue)
+            if (
+              (null == K ? void 0 : K.persona) &&
+              (null == K ? void 0 : K.persona[e.key])
+            ) {
+              We = !1;
+              break;
+            }
+          let Ve = !1;
           for (let e of Ee)
             if (
-              (null == B ? void 0 : B.persona) &&
-              (null == B ? void 0 : B.persona[e.key])
+              (null == K ? void 0 : K.persona) &&
+              (null == K ? void 0 : K.persona[e.key]) &&
+              m()(1e3 * (null == K ? void 0 : K.persona[e.key])).isAfter()
             ) {
-              je = !1;
+              Ve = !0;
               break;
             }
-          let qe = !1;
-          for (let e of ye)
-            if (
-              (null == B ? void 0 : B.persona) &&
-              (null == B ? void 0 : B.persona[e.key]) &&
-              m()(1e3 * (null == B ? void 0 : B.persona[e.key])).isAfter()
-            ) {
-              qe = !0;
-              break;
-            }
-          let Je = 0;
+          let je = 0;
           if (
-            null === (t = null == B ? void 0 : B.persona) || void 0 === t
+            null === (t = null == K ? void 0 : K.persona) || void 0 === t
               ? void 0
               : t.banhistory
           )
-            for (let e of B.persona.banhistory) {
+            for (let e of K.persona.banhistory) {
               const t = e.comment || "";
               if (
                 /Smurf/.test(t) &&
@@ -2174,46 +2172,46 @@
                 t.match(/.*(?:\D|^)(\d+)/)
               ) {
                 const e = t.match(/.*(?:\D|^)(\d+)/);
-                e && e.length && (Je = e[1]);
+                e && e.length && (je = e[1]);
               }
             }
-          const Ze =
-            (null === (a = null == B ? void 0 : B.persona) || void 0 === a
+          const qe =
+            (null === (a = null == K ? void 0 : K.persona) || void 0 === a
               ? void 0
               : a.personaname) || "";
           return i.createElement(
             "div",
-            { className: Y().PersonaDetails },
-            i.createElement(N.j, { bOverlapping: !1 }),
+            { className: P().PersonaDetails },
+            i.createElement(k.j, { bOverlapping: !1 }),
             i.createElement(
-              c.q,
+              c.ql,
               null,
               i.createElement(
                 "title",
                 null,
-                "Dota 2 Player" + (Ze ? " - " + Ze : ""),
+                "Dota 2 Player" + (qe ? " - " + qe : ""),
               ),
             ),
-            i.createElement(C.Z, null),
+            i.createElement(O.Z, null),
             i.createElement("br", null),
             i.createElement(
               "div",
-              { className: Y().ContentFrame },
+              { className: P().ContentFrame },
               i.createElement(
                 "div",
-                { className: Y().TopContent },
+                { className: P().TopContent },
                 i.createElement(
                   "div",
-                  { className: Y().TopContentLeft },
+                  { className: P().TopContentLeft },
                   i.createElement(
                     "h1",
-                    { className: (0, T.Z)(Y().Header, Y().HeaderFixedHeight) },
-                    `${Ze}`,
+                    { className: (0, h.Z)(P().Header, P().HeaderFixedHeight) },
+                    `${qe}`,
                   ),
                   i.createElement(
                     "div",
-                    { className: Y().GeneralInfoGrid },
-                    ae.map((e) =>
+                    { className: P().GeneralInfoGrid },
+                    ee.map((e) =>
                       i.createElement(
                         i.Fragment,
                         { key: `${e.key}-${e.displayName}-generalInfo-row` },
@@ -2224,11 +2222,11 @@
                           e.formatFunction
                             ? e.formatFunction.call(
                                 null,
-                                null == B ? void 0 : B.persona[e.key],
-                                null == B ? void 0 : B.persona[e.secondaryKey],
+                                null == K ? void 0 : K.persona[e.key],
+                                null == K ? void 0 : K.persona[e.secondaryKey],
                               )
                             : JSON.stringify(
-                                (null == B ? void 0 : B.persona[e.key]) || "",
+                                (null == K ? void 0 : K.persona[e.key]) || "",
                                 null,
                                 2,
                               ).replace(/['"]+/g, ""),
@@ -2238,8 +2236,8 @@
                   ),
                   i.createElement(
                     "div",
-                    { className: Y().RankInfoGrid },
-                    ne.map((e) =>
+                    { className: P().RankInfoGrid },
+                    te.map((e) =>
                       i.createElement(
                         i.Fragment,
                         { key: `${e.key}-${e.displayName}-rankInfo-row` },
@@ -2250,12 +2248,12 @@
                           e.formatFunction
                             ? e.formatFunction.call(
                                 null,
-                                null == B ? void 0 : B.persona[e.key],
-                                null == B ? void 0 : B.persona[e.secondaryKey],
-                                null == B ? void 0 : B.persona[e.tertiaryKey],
+                                null == K ? void 0 : K.persona[e.key],
+                                null == K ? void 0 : K.persona[e.secondaryKey],
+                                null == K ? void 0 : K.persona[e.tertiaryKey],
                               )
                             : JSON.stringify(
-                                (null == B ? void 0 : B.persona[e.key]) || "",
+                                (null == K ? void 0 : K.persona[e.key]) || "",
                                 null,
                                 2,
                               ).replace(/['"]+/g, ""),
@@ -2265,8 +2263,8 @@
                   ),
                   i.createElement(
                     "div",
-                    { className: Y().SupportInfoTopGrid },
-                    le.map((e) =>
+                    { className: P().SupportInfoTopGrid },
+                    ae.map((e) =>
                       i.createElement(
                         i.Fragment,
                         { key: `${e.key}-${e.displayName}-supportInfo-row` },
@@ -2277,12 +2275,12 @@
                           e.formatFunction
                             ? e.formatFunction.call(
                                 null,
-                                null == B ? void 0 : B.persona[e.key],
-                                null == B ? void 0 : B.persona[e.secondaryKey],
-                                null == B ? void 0 : B.persona[e.tertiaryKey],
+                                null == K ? void 0 : K.persona[e.key],
+                                null == K ? void 0 : K.persona[e.secondaryKey],
+                                null == K ? void 0 : K.persona[e.tertiaryKey],
                               )
                             : JSON.stringify(
-                                (null == B ? void 0 : B.persona[e.key]) || "",
+                                (null == K ? void 0 : K.persona[e.key]) || "",
                                 null,
                                 2,
                               ).replace(/['"]+/g, ""),
@@ -2292,8 +2290,8 @@
                   ),
                   i.createElement(
                     "div",
-                    { className: Y().SmurfInfoGrid },
-                    re.map((e) =>
+                    { className: P().SmurfInfoGrid },
+                    ne.map((e) =>
                       i.createElement(
                         i.Fragment,
                         { key: `${e.key}-${e.displayName}-smurfInfo-row` },
@@ -2304,11 +2302,11 @@
                           e.formatFunction
                             ? e.formatFunction.call(
                                 null,
-                                null == B ? void 0 : B.persona[e.key],
-                                null == B ? void 0 : B.persona[e.secondaryKey],
+                                null == K ? void 0 : K.persona[e.key],
+                                null == K ? void 0 : K.persona[e.secondaryKey],
                               )
                             : JSON.stringify(
-                                (null == B ? void 0 : B.persona[e.key]) || "",
+                                (null == K ? void 0 : K.persona[e.key]) || "",
                                 null,
                                 2,
                               ).replace(/['"]+/g, ""),
@@ -2316,30 +2314,30 @@
                       ),
                     ),
                   ),
-                  i.createElement("div", { className: Y().SmoothLine }),
+                  i.createElement("div", { className: P().SmoothLine }),
                   i.createElement(
                     "h2",
-                    { className: Y().Header },
+                    { className: P().Header },
                     "Recent (Last 32 games)",
                   ),
                   i.createElement(
                     "div",
-                    { className: Y().DetailedInfoOuterGrid },
-                    oe.map((e) =>
+                    { className: P().DetailedInfoOuterGrid },
+                    le.map((e) =>
                       i.createElement(
                         i.Fragment,
                         { key: `${e.key}-${e.displayName}-vacInfo-row` },
                         i.createElement(
                           "div",
-                          { className: Y().DetailedInfoInnerGrid },
+                          { className: P().DetailedInfoInnerGrid },
                           e.formatFunction
                             ? e.formatFunction.call(
                                 null,
-                                null == B ? void 0 : B.persona[e.key],
-                                null == B ? void 0 : B.persona[e.secondaryKey],
+                                null == K ? void 0 : K.persona[e.key],
+                                null == K ? void 0 : K.persona[e.secondaryKey],
                               )
                             : JSON.stringify(
-                                (null == B ? void 0 : B.persona[e.key]) || "",
+                                (null == K ? void 0 : K.persona[e.key]) || "",
                                 null,
                                 2,
                               ).replace(/['"]+/g, ""),
@@ -2350,15 +2348,15 @@
                 ),
                 i.createElement(
                   "div",
-                  { className: Y().TopContentRight },
+                  { className: P().TopContentRight },
                   i.createElement(
                     "div",
-                    { className: Y().ChartContainer },
-                    _e &&
+                    { className: P().ChartContainer },
+                    pe &&
                       i.createElement(
                         "div",
-                        { className: Y().ChartTitle },
-                        `Last ${_e.length} games`,
+                        { className: P().ChartTitle },
+                        `Last ${pe.length} games`,
                       ),
                     i.createElement(
                       d.h,
@@ -2366,7 +2364,7 @@
                       i.createElement(
                         u.w,
                         {
-                          data: _e,
+                          data: pe,
                           margin: { top: 5, right: 30, left: 20, bottom: 5 },
                         },
                         i.createElement(p.q, {
@@ -2401,7 +2399,7 @@
                           type: "monotone",
                           dataKey: "ranked",
                           name: "Ranked",
-                          dot: { fill: Z, strokeWidth: 1, r: 3 },
+                          dot: { fill: q, strokeWidth: 1, r: 3 },
                           stroke: "#888fd8",
                           strokeWidth: 2,
                           connectNulls: !0,
@@ -2410,7 +2408,7 @@
                           type: "monotone",
                           dataKey: "casual",
                           name: "Unranked",
-                          dot: { fill: J, strokeWidth: 1, r: 3 },
+                          dot: { fill: j, strokeWidth: 1, r: 3 },
                           stroke: "#82ca9d",
                           strokeWidth: 2,
                           connectNulls: !0,
@@ -2421,30 +2419,30 @@
                 ),
               ),
               i.createElement("br", null),
-              i.createElement("div", { className: Y().SmoothLine }),
+              i.createElement("div", { className: P().SmoothLine }),
               i.createElement(
                 "div",
                 {
-                  className: (0, T.Z)(
-                    Y().SupportGrid,
-                    xe && Y().SupportGridHidden,
+                  className: (0, h.Z)(
+                    P().SupportGrid,
+                    Ue && P().SupportGridHidden,
                   ),
                 },
                 i.createElement(
                   "div",
-                  { className: Y().SupportColumn, onClick: () => Ke(!0) },
+                  { className: P().SupportColumn, onClick: () => Ye(!0) },
                   i.createElement(
                     "h2",
                     {
-                      className: (0, T.Z)(
-                        Y().HeaderNoMargin,
-                        Y().HeaderClickable,
+                      className: (0, h.Z)(
+                        P().HeaderNoMargin,
+                        P().HeaderClickable,
                       ),
                     },
                     "Support, Bans, & Other Info",
                     i.createElement("img", {
-                      className: (0, T.Z)(Y().ArrowIcon, Y().ArrowIconRight),
-                      src: `${k.Y.IMG_URL}arrow_solid_right.png`,
+                      className: (0, h.Z)(P().ArrowIcon, P().ArrowIconRight),
+                      src: `${A.Y.IMG_URL}arrow_solid_right.png`,
                     }),
                   ),
                 ),
@@ -2452,30 +2450,30 @@
               i.createElement(
                 "div",
                 {
-                  className: (0, T.Z)(
-                    Y().SupportGrid,
-                    !xe && Y().SupportGridHidden,
+                  className: (0, h.Z)(
+                    P().SupportGrid,
+                    !Ue && P().SupportGridHidden,
                   ),
                 },
                 i.createElement(
                   "div",
-                  { className: Y().SupportColumn },
+                  { className: P().SupportColumn },
                   i.createElement(
                     "h2",
                     {
-                      className: (0, T.Z)(Y().Header, Y().HeaderClickable),
-                      onClick: () => Ke(!1),
+                      className: (0, h.Z)(P().Header, P().HeaderClickable),
+                      onClick: () => Ye(!1),
                     },
                     "Support, Bans, & Other Info",
                     i.createElement("img", {
-                      className: (0, T.Z)(Y().ArrowIcon, Y().ArrowIconDown),
-                      src: `${k.Y.IMG_URL}arrow_over.png`,
+                      className: (0, h.Z)(P().ArrowIcon, P().ArrowIconDown),
+                      src: `${A.Y.IMG_URL}arrow_over.png`,
                     }),
                   ),
                   i.createElement(
                     "div",
-                    { className: Y().SupportInfoGrid },
-                    ie.map((e) =>
+                    { className: P().SupportInfoGrid },
+                    re.map((e) =>
                       i.createElement(
                         i.Fragment,
                         { key: `${e.key}-${e.displayName}-supportInfo-row` },
@@ -2486,11 +2484,11 @@
                           e.formatFunction
                             ? e.formatFunction.call(
                                 null,
-                                null == B ? void 0 : B.persona[e.key],
-                                null == B ? void 0 : B.persona[e.secondaryKey],
+                                null == K ? void 0 : K.persona[e.key],
+                                null == K ? void 0 : K.persona[e.secondaryKey],
                               )
                             : JSON.stringify(
-                                (null == B ? void 0 : B.persona[e.key]) || "",
+                                (null == K ? void 0 : K.persona[e.key]) || "",
                                 null,
                                 2,
                               ).replace(/['"]+/g, ""),
@@ -2501,8 +2499,8 @@
                   i.createElement("br", null),
                   i.createElement(
                     "div",
-                    { className: Y().AccessFlagsGrid },
-                    ce.map((e) =>
+                    { className: P().AccessFlagsGrid },
+                    oe.map((e) =>
                       i.createElement(
                         i.Fragment,
                         {
@@ -2515,11 +2513,11 @@
                           e.formatFunction
                             ? e.formatFunction.call(
                                 null,
-                                null == B ? void 0 : B.persona[e.key],
-                                null == B ? void 0 : B.persona[e.secondaryKey],
+                                null == K ? void 0 : K.persona[e.key],
+                                null == K ? void 0 : K.persona[e.secondaryKey],
                               )
                             : JSON.stringify(
-                                (null == B ? void 0 : B.persona[e.key]) || "",
+                                (null == K ? void 0 : K.persona[e.key]) || "",
                                 null,
                                 2,
                               ).replace(/['"]+/g, ""),
@@ -2527,30 +2525,30 @@
                       ),
                     ),
                   ),
-                  !je && i.createElement("br", null),
+                  !We && i.createElement("br", null),
                   i.createElement(
                     "div",
-                    { className: Y().WarningsGrid },
-                    Ee.map((e) =>
+                    { className: P().WarningsGrid },
+                    ue.map((e) =>
                       i.createElement(
                         i.Fragment,
                         { key: `${e.key}-${e.displayName}-warningsInfo-row` },
-                        !!(null == B ? void 0 : B.persona[e.key]) &&
+                        !!(null == K ? void 0 : K.persona[e.key]) &&
                           i.createElement("div", null, e.displayName || e.key),
-                        !!(null == B ? void 0 : B.persona[e.key]) &&
+                        !!(null == K ? void 0 : K.persona[e.key]) &&
                           i.createElement(
                             "div",
                             null,
                             e.formatFunction
                               ? e.formatFunction.call(
                                   null,
-                                  null == B ? void 0 : B.persona[e.key],
-                                  null == B
+                                  null == K ? void 0 : K.persona[e.key],
+                                  null == K
                                     ? void 0
-                                    : B.persona[e.secondaryKey],
+                                    : K.persona[e.secondaryKey],
                                 )
                               : JSON.stringify(
-                                  (null == B ? void 0 : B.persona[e.key]) || "",
+                                  (null == K ? void 0 : K.persona[e.key]) || "",
                                   null,
                                   2,
                                 ).replace(/['"]+/g, ""),
@@ -2561,19 +2559,19 @@
                   i.createElement("br", null),
                   i.createElement(
                     "div",
-                    { className: Y().BansGrid },
-                    ye.map((e) =>
+                    { className: P().BansGrid },
+                    Ee.map((e) =>
                       i.createElement(
                         i.Fragment,
                         { key: `${e.key}-${e.displayName}-bansInfo-row` },
-                        !!(null == B ? void 0 : B.persona[e.key]) &&
+                        !!(null == K ? void 0 : K.persona[e.key]) &&
                           m()(
-                            1e3 * (null == B ? void 0 : B.persona[e.key]),
+                            1e3 * (null == K ? void 0 : K.persona[e.key]),
                           ).isAfter() &&
                           i.createElement("div", null, e.displayName || e.key),
-                        !!(null == B ? void 0 : B.persona[e.key]) &&
+                        !!(null == K ? void 0 : K.persona[e.key]) &&
                           m()(
-                            1e3 * (null == B ? void 0 : B.persona[e.key]),
+                            1e3 * (null == K ? void 0 : K.persona[e.key]),
                           ).isAfter() &&
                           i.createElement(
                             "div",
@@ -2581,20 +2579,20 @@
                             e.formatFunction
                               ? e.formatFunction.call(
                                   null,
-                                  null == B ? void 0 : B.persona[e.key],
-                                  null == B
+                                  null == K ? void 0 : K.persona[e.key],
+                                  null == K
                                     ? void 0
-                                    : B.persona[e.secondaryKey],
+                                    : K.persona[e.secondaryKey],
                                 )
                               : JSON.stringify(
-                                  (null == B ? void 0 : B.persona[e.key]) || "",
+                                  (null == K ? void 0 : K.persona[e.key]) || "",
                                   null,
                                   2,
                                 ).replace(/['"]+/g, ""),
                           ),
                       ),
                     ),
-                    Je > 0 &&
+                    je > 0 &&
                       i.createElement(
                         i.Fragment,
                         null,
@@ -2607,11 +2605,11 @@
                             {
                               target: "_blank",
                               rel: "noopener noreferrer",
-                              href: `${k.Y.BASE_URL}${I._.personadetails(
-                                Je,
+                              href: `${A.Y.BASE_URL}${N._.personadetails(
+                                je,
                               ).substr(1)}`,
                             },
-                            Je,
+                            je,
                           ),
                         ),
                       ),
@@ -2619,22 +2617,22 @@
                   i.createElement("br", null),
                   i.createElement(
                     "div",
-                    { className: Y().VacInfoOuterGrid },
-                    se.map((e) =>
+                    { className: P().VacInfoOuterGrid },
+                    ie.map((e) =>
                       i.createElement(
                         i.Fragment,
                         { key: `${e.key}-${e.displayName}-vacInfo-row` },
                         i.createElement(
                           "div",
-                          { className: Y().VacInfoOuterGrid },
+                          { className: P().VacInfoOuterGrid },
                           e.formatFunction
                             ? e.formatFunction.call(
                                 null,
-                                null == B ? void 0 : B.persona[e.key],
-                                null == B ? void 0 : B.persona[e.secondaryKey],
+                                null == K ? void 0 : K.persona[e.key],
+                                null == K ? void 0 : K.persona[e.secondaryKey],
                               )
                             : JSON.stringify(
-                                (null == B ? void 0 : B.persona[e.key]) || "",
+                                (null == K ? void 0 : K.persona[e.key]) || "",
                                 null,
                                 2,
                               ).replace(/['"]+/g, ""),
@@ -2645,20 +2643,20 @@
                 ),
                 i.createElement(
                   "div",
-                  { className: Y().OfficialInfoColumn },
+                  { className: P().OfficialInfoColumn },
                   i.createElement(
                     "h2",
-                    { className: Y().Header },
+                    { className: P().Header },
                     "Official Profile",
                   ),
                   i.createElement(
                     "div",
-                    { className: Y().OfficialProfileOuterGrid },
-                    (null === (l = null == B ? void 0 : B.persona) ||
+                    { className: P().OfficialProfileOuterGrid },
+                    (null === (l = null == K ? void 0 : K.persona) ||
                     void 0 === l
                       ? void 0
                       : l.official_profile) &&
-                      me.map((e) => {
+                      ce.map((e) => {
                         var t, a;
                         return i.createElement(
                           i.Fragment,
@@ -2668,22 +2666,22 @@
                           i.createElement("div", null, e.displayName || e.key),
                           i.createElement(
                             "div",
-                            { className: Y().OfficialProfileInnerGrid },
+                            { className: P().OfficialProfileInnerGrid },
                             e.formatFunction
                               ? e.formatFunction.call(
                                   null,
                                   null ===
-                                    (t = null == B ? void 0 : B.persona) ||
+                                    (t = null == K ? void 0 : K.persona) ||
                                     void 0 === t
                                     ? void 0
                                     : t.official_profile[e.key],
-                                  null == B
+                                  null == K
                                     ? void 0
-                                    : B.persona[e.secondaryKey],
+                                    : K.persona[e.secondaryKey],
                                 )
                               : JSON.stringify(
                                   (null ===
-                                    (a = null == B ? void 0 : B.persona) ||
+                                    (a = null == K ? void 0 : K.persona) ||
                                   void 0 === a
                                     ? void 0
                                     : a.official_profile[e.key]) || "",
@@ -2693,7 +2691,7 @@
                           ),
                         );
                       }),
-                    !(null === (s = null == B ? void 0 : B.persona) ||
+                    !(null === (s = null == K ? void 0 : K.persona) ||
                     void 0 === s
                       ? void 0
                       : s.official_profile) &&
@@ -2702,53 +2700,53 @@
                         null,
                         i.createElement(
                           "span",
-                          { style: { color: W } },
+                          { style: { color: H } },
                           "(None)",
                         ),
                       ),
                   ),
                   i.createElement(
                     "div",
-                    { className: Y().TeamsInfoInfoOuterGrid },
+                    { className: P().TeamsInfoInfoOuterGrid },
                     i.createElement("br", null),
-                    i.createElement("h2", { className: Y().Header }, "Teams"),
-                    (null === (L = null == B ? void 0 : B.persona) ||
-                    void 0 === L
+                    i.createElement("h2", { className: P().Header }, "Teams"),
+                    (null === (b = null == K ? void 0 : K.persona) ||
+                    void 0 === b
                       ? void 0
-                      : L.teams) &&
-                      de.map((e) =>
+                      : b.teams) &&
+                      se.map((e) =>
                         i.createElement(
                           i.Fragment,
                           { key: `${e.key}-${e.displayName}-teamsInfo-row` },
                           i.createElement(
                             "div",
-                            { className: Y().TeamsInfoInnerGrid },
+                            { className: P().TeamsInfoInnerGrid },
                             e.formatFunction
                               ? e.formatFunction.call(
                                   null,
-                                  null == B ? void 0 : B.persona[e.key],
-                                  null == B
+                                  null == K ? void 0 : K.persona[e.key],
+                                  null == K
                                     ? void 0
-                                    : B.persona[e.secondaryKey],
+                                    : K.persona[e.secondaryKey],
                                 )
                               : JSON.stringify(
-                                  (null == B ? void 0 : B.persona[e.key]) || "",
+                                  (null == K ? void 0 : K.persona[e.key]) || "",
                                   null,
                                   2,
                                 ).replace(/['"]+/g, ""),
                           ),
                         ),
                       ),
-                    !(null === (G = null == B ? void 0 : B.persona) ||
-                    void 0 === G
+                    !(null === (M = null == K ? void 0 : K.persona) ||
+                    void 0 === M
                       ? void 0
-                      : G.teams) &&
+                      : M.teams) &&
                       i.createElement(
                         i.Fragment,
                         null,
                         i.createElement(
                           "span",
-                          { style: { color: W } },
+                          { style: { color: H } },
                           "(None)",
                         ),
                       ),
@@ -2756,29 +2754,29 @@
                 ),
                 i.createElement(
                   "div",
-                  { className: Y().EventColumn },
+                  { className: P().EventColumn },
                   i.createElement(
                     "h2",
-                    { className: Y().Header },
+                    { className: P().Header },
                     "Event Information",
                   ),
                   i.createElement(
                     "div",
-                    { className: Y().EventInfoOuterGrid },
-                    ue.map((e) =>
+                    { className: P().EventInfoOuterGrid },
+                    me.map((e) =>
                       i.createElement(
                         i.Fragment,
                         { key: `${e.key}-${e.displayName}-eventInfo-row` },
                         i.createElement(
                           "div",
-                          { className: Y().EventInfoInnerGrid },
+                          { className: P().EventInfoInnerGrid },
                           e.formatFunction
                             ? e.formatFunction.call(
                                 null,
-                                null == B ? void 0 : B.persona[e.key],
+                                null == K ? void 0 : K.persona[e.key],
                               )
                             : JSON.stringify(
-                                (null == B ? void 0 : B.persona[e.key]) || "",
+                                (null == K ? void 0 : K.persona[e.key]) || "",
                                 null,
                                 2,
                               ).replace(/['"]+/g, ""),
@@ -2790,11 +2788,11 @@
               ),
               i.createElement(
                 "div",
-                { className: (0, T.Z)(!xe && Y().SupportGridHidden) },
-                i.createElement("div", { className: Y().SmoothLine }),
+                { className: (0, h.Z)(!Ue && P().SupportGridHidden) },
+                i.createElement("div", { className: P().SmoothLine }),
                 i.createElement(
                   "table",
-                  { className: Y().BanHistoryTable },
+                  { className: P().BanHistoryTable },
                   i.createElement(
                     "thead",
                     null,
@@ -2806,7 +2804,7 @@
                         { align: "left" },
                         i.createElement(
                           "h3",
-                          { className: Y().HeaderNoMargin },
+                          { className: P().HeaderNoMargin },
                           "Ban Type",
                         ),
                       ),
@@ -2815,7 +2813,7 @@
                         { align: "left" },
                         i.createElement(
                           "h3",
-                          { className: Y().HeaderNoMargin },
+                          { className: P().HeaderNoMargin },
                           "Ban Start",
                         ),
                       ),
@@ -2824,7 +2822,7 @@
                         { align: "left" },
                         i.createElement(
                           "h3",
-                          { className: Y().HeaderNoMargin },
+                          { className: P().HeaderNoMargin },
                           "Ban End",
                         ),
                       ),
@@ -2833,7 +2831,7 @@
                         { align: "left" },
                         i.createElement(
                           "h3",
-                          { className: Y().HeaderNoMargin },
+                          { className: P().HeaderNoMargin },
                           "Duration",
                         ),
                       ),
@@ -2842,7 +2840,7 @@
                         { align: "left" },
                         i.createElement(
                           "h3",
-                          { className: Y().HeaderNoMargin },
+                          { className: P().HeaderNoMargin },
                           "Admin",
                         ),
                       ),
@@ -2851,7 +2849,7 @@
                         { align: "left" },
                         i.createElement(
                           "h3",
-                          { className: Y().HeaderNoMargin },
+                          { className: P().HeaderNoMargin },
                           "Comment",
                         ),
                       ),
@@ -2861,39 +2859,39 @@
                     "tbody",
                     null,
                     i.createElement("tr", null, i.createElement("td", null)),
-                    ge(
-                      null === ($ = null == B ? void 0 : B.persona) ||
-                        void 0 === $
+                    _e(
+                      null === (L = null == K ? void 0 : K.persona) ||
+                        void 0 === L
                         ? void 0
-                        : $.banhistory,
+                        : L.banhistory,
                     ),
                   ),
                 ),
               ),
-              i.createElement("div", { className: Y().SmoothLine }),
+              i.createElement("div", { className: P().SmoothLine }),
               i.createElement(
                 "div",
-                { className: Y().MatchHistoryOuterContainer },
+                { className: P().MatchHistoryOuterContainer },
                 i.createElement(
                   "div",
-                  { className: Y().MatchHistoryInnerContainer },
-                  fe &&
-                    fe.length &&
-                    i.createElement(f.Z, null, ({ width: e, height: t }) =>
+                  { className: P().MatchHistoryInnerContainer },
+                  ge &&
+                    ge.length &&
+                    i.createElement(f.qj, null, ({ width: e, height: t }) =>
                       i.createElement(
-                        A.Z,
+                        f.iA,
                         {
                           headerHeight: 70,
                           height: t,
                           width: e,
                           rowHeight: 33.33,
-                          rowCount: he.length,
-                          rowGetter: ({ index: e }) => he[e],
+                          rowCount: fe.length,
+                          rowGetter: ({ index: e }) => fe[e],
                           rowClassName: ({ index: e }) =>
                             -1 != e
                               ? e % 2
-                                ? Y().MatchRowEven
-                                : Y().MatchRowOdd
+                                ? P().MatchRowEven
+                                : P().MatchRowOdd
                               : "",
                           overscanRowCount: 50,
                           noRowsRenderer: () =>
@@ -2903,34 +2901,34 @@
                               "No Matches Found. Toggle the checkbox at the bottom of the page for custom games and other modes.",
                             ),
                         },
-                        Ve.map((t) =>
-                          i.createElement(h.Z, {
+                        Be.map((t) =>
+                          i.createElement(f.sg, {
                             key: t.dataKey,
                             label: t.label,
                             dataKey: t.dataKey,
                             width: e * t.widthRelative,
                             cellRenderer: t.cellRenderer,
-                            columnData: { strAccountId: U },
+                            columnData: { strAccountId: w },
                             headerRenderer: t.headerRenderer,
                           }),
                         ),
                       ),
                     ),
-                  (!fe || !fe.length) &&
+                  (!ge || !ge.length) &&
                     i.createElement("div", null, "No matches"),
                 ),
               ),
-              fe &&
-                fe.length &&
+              ge &&
+                ge.length &&
                 i.createElement(
                   "div",
-                  { className: Y().OtherModesCheckBox },
+                  { className: P().OtherModesCheckBox },
                   i.createElement("input", {
                     type: "checkbox",
                     name: "othermode",
                     id: "othermode",
-                    onChange: () => $e(!Ge),
-                    checked: Ge,
+                    onChange: () => Le(!Me),
+                    checked: Me,
                   }),
                   i.createElement(
                     "label",
@@ -2943,12 +2941,12 @@
                   ),
                 ),
             ),
-            i.createElement(R.U, null),
+            i.createElement(T.U, null),
           );
         };
-      class fe extends i.Component {
+      class ge extends i.Component {
         render() {
-          return i.createElement(ve, null);
+          return i.createElement(ye, null);
         }
       }
     },
@@ -2959,15 +2957,15 @@
         l = a(52868),
         r = a.n(l),
         o = a(54013),
-        i = a(65092),
+        i = a(59934),
         c = a(89526),
-        s = a(53672),
+        s = a(61011),
         m = a(22396),
         d = a(29706),
         u = a(70894),
         p = a(36250),
         E = a(39375),
-        _ = a(41847),
+        _ = a(37233),
         y = a.n(_);
       const g = "public",
         v = 5e3,
@@ -3836,7 +3834,7 @@
               { className: y().TeamDetails },
               c.createElement(d.j, { bOverlapping: !1 }),
               c.createElement(
-                s.q,
+                s.ql,
                 null,
                 c.createElement("title", null, "Dota 2 - Team Details"),
               ),
@@ -3860,7 +3858,7 @@
             { className: y().TeamDetails },
             c.createElement(d.j, { bOverlapping: !1 }),
             c.createElement(
-              s.q,
+              s.ql,
               null,
               c.createElement("title", null, "Dota 2 - Team Details"),
             ),

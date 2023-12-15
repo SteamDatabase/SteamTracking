@@ -1337,7 +1337,7 @@
     "ControllerSupportModal_PgTwo_Instructions_pt5": "If your game supports local multiplayer, that mode must work with multiple controllers.",
     "ControllerSupportModal_PgTwo_Question": "Does your game meet the above criteria for full Xbox Controller support?",
     "ControllerSupportModal_PgThree_Header": "PlayStation Controller Support",
-    "ControllerSupportModal_PgThree_Instructions": "If your game has full support for one or more PlayStation Controller models listed below, it should be possible for a player using that controller to launch, configure, play, and exit your game without access to a keyboard. At a minimum, your game must do the following:",
+    "ControllerSupportModal_PgThree_Instructions": "If your game has support for one or more PlayStation Controller models listed below, it should generally be possible to use those devices to do everything in game that can be done with Xbox controllers. In addition, your game must do the following in order to be considered as supporting PlayStation controllers:",
     "ControllerSupportModal_PgThree_Instructions_pt1": "Display the correct glyphs (icons) on screen when prompting the user to press a specific button on the controller.",
     "ControllerSupportModal_PgThree_Instructions_pt2": "Play the game, interact with menus, change settings, exit.",
     "ControllerSupportModal_PgThree_Instructions_note": "<1>USB/Bluetooth Note:</1> For PlayStation controllers on PC, it can be quite common for USB connection to work well but not have the same level of support when connected via Bluetooth. Please confirm with your tech team that the game does in fact work with Bluetooth before selecting those below.",

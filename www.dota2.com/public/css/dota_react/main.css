@@ -1,7 +1,3 @@
-@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap);
-@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap);
-@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap);
-@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap);
 .throbber_LoadingWrapper_chtlD {
   display: flex;
   flex-direction: column;
@@ -828,7 +824,8 @@ html.contextmenu_ContextMenuPopup_152-v body {
 }
 .shared_svg_library_SteamDeckCompatInfo_1t9l5 {
   display: flex;
-  background-color: #0e141b;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(100px);
   padding: 2px;
   border-radius: 20px;
 }
@@ -999,7 +996,7 @@ html.contextmenu_ContextMenuPopup_152-v body {
   left: 0;
   top: 0;
   pointer-events: none;
-  z-index: 100;
+  z-index: 2000;
 }
 .tooltip_TextToolTip_1y-4v {
   box-sizing: border-box;
@@ -1192,6 +1189,7 @@ html.contextmenu_ContextMenuPopup_152-v body {
 .DesktopUI .pagedsettings_PagedSettingsDialog_PageListColumn_2Cma8 {
   padding-left: 0px;
   min-width: 160px;
+  min-height: 95vh;
 }
 .pagedsettings_NewNoteButton_1HPFk {
   margin: 0px 4px 4px 4px;
@@ -1211,12 +1209,17 @@ html.contextmenu_ContextMenuPopup_152-v body {
 }
 .pagedsettings_PagedSettingsDialog_PageList_2f7v2 {
   line-height: 16px;
+  height: 100vh;
   white-space: nowrap;
-  overflow-y: overlay;
+  overflow: scroll;
   flex-shrink: 1;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
+  padding-bottom: 40px;
+}
+.pagedsettings_PagedSettingsDialog_PageList_2f7v2::-webkit-scrollbar-corner {
+  background: rgba(0, 0, 0, 0);
 }
 .pagedsettings_PagedSettingsDialog_PageList_2f7v2.pagedsettings_PagedSettingsDialog_PageList_DisableScrolling_e76ZQ {
   overflow-y: hidden;
@@ -1447,6 +1450,14 @@ html.contextmenu_ContextMenuPopup_152-v body {
 .gamepadui_svg_library_GenericGamepadHighlight_1iSNJ {
   fill: #4897d2;
 }
+@keyframes gamepaddialog_BackgroundAnimation_2D3fA {
+  from {
+    background-position: 0 100%;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
 @keyframes gamepaddialog_ItemFocusAnim-darkerGrey-nocolor_IT9mg {
   from {
     background: #3d4450;
@@ -1467,11 +1478,11 @@ html.contextmenu_ContextMenuPopup_152-v body {
 }
 @keyframes gamepaddialog_ItemFocusAnim-darkGrey_3liXd {
   from {
-    background: #67707b;
+    background: rgba(255, 255, 255, 0.25);
     color: #8b929a;
   }
   to {
-    background: #3d4450;
+    background: rgba(255, 255, 255, 0.15);
     color: #fff;
   }
 }
@@ -1482,6 +1493,26 @@ html.contextmenu_ContextMenuPopup_152-v body {
   }
   to {
     background: #67707b;
+    color: #fff;
+  }
+}
+@keyframes gamepaddialog_ItemFocusAnim-translucent-white-10_2jODc {
+  from {
+    background: rgba(255, 255, 255, 0.3);
+    color: #fff;
+  }
+  to {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+  }
+}
+@keyframes gamepaddialog_ItemFocusAnim-translucent-white-20_1LhhX {
+  from {
+    background: rgba(255, 255, 255, 0.5);
+    color: #fff;
+  }
+  to {
+    background: rgba(255, 255, 255, 0.2);
     color: #fff;
   }
 }
@@ -1521,6 +1552,14 @@ html.contextmenu_ContextMenuPopup_152-v body {
     background-position: 50% 0%;
   }
 }
+@keyframes gamepaddialog_BackgroundAnimation_2D3fA {
+  from {
+    background-position: 0 100%;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
 @keyframes gamepaddialog_ItemFocusAnim-darkerGrey-nocolor_IT9mg {
   from {
     background: #3d4450;
@@ -1541,11 +1580,11 @@ html.contextmenu_ContextMenuPopup_152-v body {
 }
 @keyframes gamepaddialog_ItemFocusAnim-darkGrey_3liXd {
   from {
-    background: #67707b;
+    background: rgba(255, 255, 255, 0.25);
     color: #8b929a;
   }
   to {
-    background: #3d4450;
+    background: rgba(255, 255, 255, 0.15);
     color: #fff;
   }
 }
@@ -1556,6 +1595,26 @@ html.contextmenu_ContextMenuPopup_152-v body {
   }
   to {
     background: #67707b;
+    color: #fff;
+  }
+}
+@keyframes gamepaddialog_ItemFocusAnim-translucent-white-10_2jODc {
+  from {
+    background: rgba(255, 255, 255, 0.3);
+    color: #fff;
+  }
+  to {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+  }
+}
+@keyframes gamepaddialog_ItemFocusAnim-translucent-white-20_1LhhX {
+  from {
+    background: rgba(255, 255, 255, 0.5);
+    color: #fff;
+  }
+  to {
+    background: rgba(255, 255, 255, 0.2);
     color: #fff;
   }
 }
@@ -1626,9 +1685,24 @@ html.contextmenu_ContextMenuPopup_152-v body {
   line-height: 22px;
 }
 .BasicUI .gamepaddialog_GamepadDialogContent_Gn6rC .DialogSubHeader {
-  letter-spacing: 0.5px;
-  color: #8b929a;
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
   text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: rgba(255, 255, 255, 0.5);
   font-size: 16px;
   font-weight: 600;
 }
@@ -1672,7 +1746,7 @@ html.contextmenu_ContextMenuPopup_152-v body {
   .gamepaddialog_GamepadDialogContent_Gn6rC
   .DialogControlsSectionHeader {
   letter-spacing: 0.5px;
-  color: #8b929a;
+  color: rgba(255, 255, 255, 0.5);
   text-transform: uppercase;
   font-size: 16px;
   font-weight: 600;
@@ -1753,7 +1827,14 @@ button.gamepaddialog_Button_32WBl.DialogButton:active,
 button.gamepaddialog_Button_32WBl.DialogButton:active.Primary,
 button.gamepaddialog_Button_32WBl.DialogButton:enabled:active:hover,
 button.gamepaddialog_Button_32WBl.DialogButton:enabled:active:hover.Primary {
-  background: #23262e;
+  background: rgba(255, 255, 255, 0.15);
+}
+button.gamepaddialog_Button_32WBl.DialogButton.EmptyButton,
+button.gamepaddialog_Button_32WBl.DialogButton:enabled.EmptyButton,
+button.gamepaddialog_Button_32WBl.DialogButton:active.EmptyButton,
+button.gamepaddialog_Button_32WBl.DialogButton:enabled:active:hover.EmptyButton {
+  padding: 0px;
+  overflow: hidden;
 }
 button.gamepaddialog_Button_32WBl.DialogButton.BarButton,
 button.gamepaddialog_Button_32WBl.DialogButton:enabled.BarButton,
@@ -1772,14 +1853,14 @@ button.gamepaddialog_Button_32WBl.DialogButton:hover,
 button.gamepaddialog_Button_32WBl.DialogButton:enabled:hover,
 button.gamepaddialog_Button_32WBl.DialogButton:active:hover,
 button.gamepaddialog_Button_32WBl.DialogButton:enabled:active:hover:hover {
-  background: #3d4450;
+  background: rgba(255, 255, 255, 0.2);
   transition: background-color 150ms ease-in;
 }
 button.gamepaddialog_Button_32WBl.DialogButton.Primary:hover,
 button.gamepaddialog_Button_32WBl.DialogButton:enabled.Primary:hover,
 button.gamepaddialog_Button_32WBl.DialogButton:active.Primary:hover,
 button.gamepaddialog_Button_32WBl.DialogButton:enabled:active:hover.Primary:hover {
-  background: rgba(26, 160, 255, 0.3254901961);
+  background: rgba(26, 160, 255, 0.4862745098);
 }
 button.gamepaddialog_Button_32WBl.DialogButton.gpfocus,
 button.gamepaddialog_Button_32WBl.DialogButton:active,
@@ -1857,7 +1938,7 @@ button.gamepaddialog_Button_32WBl.DialogButton:enabled:active:hover:before {
 }
 .gamepaddialog_StandaloneFieldSeparator_cuCR0 {
   height: 1px;
-  background: #23262e;
+  background: rgba(255, 255, 255, 0.1);
   margin-left: calc(-1 * var(--field-negative-horizontal-margin));
   margin-right: calc(-1 * var(--field-negative-horizontal-margin));
 }
@@ -1895,39 +1976,34 @@ button.gamepaddialog_Button_32WBl.DialogButton:enabled:active:hover:before {
 .gamepaddialog_Field_BBGW4.gamepaddialog_WithDescription_3IwtA {
   padding-bottom: 10px;
 }
-.gamepaddialog_Field_BBGW4.gamepaddialog_WithBottomSeparatorStandard_7Y04w::after {
-  content: "";
-  position: absolute;
-  bottom: -0.5px;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: #23262e;
-}
+.gamepaddialog_Field_BBGW4.gamepaddialog_WithBottomSeparatorStandard_7Y04w::after,
 .gamepaddialog_Field_BBGW4.gamepaddialog_WithBottomSeparatorThick_3B93D::after {
   content: "";
   position: absolute;
+  left: var(--field-negative-horizontal-margin);
+  right: var(--field-negative-horizontal-margin);
+}
+.gamepaddialog_Field_BBGW4.gamepaddialog_WithBottomSeparatorStandard_7Y04w::after {
+  bottom: -0.5px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+}
+.gamepaddialog_Field_BBGW4.gamepaddialog_WithBottomSeparatorThick_3B93D::after {
   bottom: -0.75px;
-  left: 0;
-  right: 0;
   height: 1.5px;
-  background: #23262e;
+  background: rgba(255, 255, 255, 0.1);
 }
 .gamepaddialog_GamepadDialogContent_Gn6rC .gamepaddialog_Field_BBGW4 {
   --field-negative-horizontal-margin: 2.8vw;
 }
-.gamepaddialog_GamepadDialogContent_Gn6rC .gamepaddialog_Field_BBGW4::after {
-  left: 2.8vw;
-  right: 2.8vw;
-}
 .gamepaddialog_Field_BBGW4.gamepaddialog_HighlightOnFocus_vOOfL.gpfocus,
-.gamepaddialog_Field_BBGW4.gamepaddialog_HighlightOnFocus_vOOfL.gpfocuswithin {
+.gamepaddialog_Field_BBGW4.gamepaddialog_HighlightOnFocus_vOOfL.gpfocuswithin,
+.gamepaddialog_Field_BBGW4.gamepaddialog_Clickable_2fjtl:not(
+    .gamepaddialog_Disabled_kT2gh
+  ):hover {
   outline: none;
   background: #3d4450;
   color: #fff;
-  animation-name: gamepaddialog_ItemFocusAnim-darkerGrey_1SQEV;
-  z-index: 1;
-  animation-name: gamepaddialog_ItemFocusAnim-darkGrey_3liXd;
 }
 .gamepaddialog_Field_BBGW4.gamepaddialog_WithBottomSeparator_1K_Du
   + .gamepaddialog_Field_BBGW4.gamepaddialog_HighlightOnFocus_vOOfL.gpfocus,
@@ -1942,20 +2018,46 @@ button.gamepaddialog_Button_32WBl.DialogButton:enabled:active:hover:before {
   + .gamepaddialog_Field_BBGW4.gamepaddialog_HighlightOnFocus_vOOfL.gpfocuswithin,
 .gamepaddialog_GamepadDialogContent_Gn6rC
   .DialogControlsSectionHeader
-  + .gamepaddialog_Field_BBGW4.gamepaddialog_HighlightOnFocus_vOOfL.gpfocuswithin {
+  + .gamepaddialog_Field_BBGW4.gamepaddialog_HighlightOnFocus_vOOfL.gpfocuswithin,
+.gamepaddialog_Field_BBGW4.gamepaddialog_WithBottomSeparator_1K_Du
+  + .gamepaddialog_Field_BBGW4.gamepaddialog_Clickable_2fjtl:not(
+    .gamepaddialog_Disabled_kT2gh
+  ):hover,
+.gamepaddialog_StandaloneFieldSeparator_cuCR0
+  + .gamepaddialog_Field_BBGW4.gamepaddialog_Clickable_2fjtl:not(
+    .gamepaddialog_Disabled_kT2gh
+  ):hover,
+.gamepaddialog_GamepadDialogContent_Gn6rC
+  .DialogControlsSectionHeader
+  + .gamepaddialog_Field_BBGW4.gamepaddialog_Clickable_2fjtl:not(
+    .gamepaddialog_Disabled_kT2gh
+  ):hover {
   margin-top: -1px;
   border-top: solid 1px rgba(0, 0, 0, 0);
 }
 .gamepaddialog_Field_BBGW4.gamepaddialog_Field_BBGW4.gamepaddialog_WithBottomSeparatorThick_3B93D
   + .gamepaddialog_Field_BBGW4.gamepaddialog_HighlightOnFocus_vOOfL.gpfocus,
 .gamepaddialog_Field_BBGW4.gamepaddialog_Field_BBGW4.gamepaddialog_WithBottomSeparatorThick_3B93D
-  + .gamepaddialog_Field_BBGW4.gamepaddialog_HighlightOnFocus_vOOfL.gpfocuswithin {
+  + .gamepaddialog_Field_BBGW4.gamepaddialog_HighlightOnFocus_vOOfL.gpfocuswithin,
+.gamepaddialog_Field_BBGW4.gamepaddialog_Field_BBGW4.gamepaddialog_WithBottomSeparatorThick_3B93D
+  + .gamepaddialog_Field_BBGW4.gamepaddialog_Clickable_2fjtl:not(
+    .gamepaddialog_Disabled_kT2gh
+  ):hover {
   margin-top: -1.5px;
   border-top: solid 1.5px rgba(0, 0, 0, 0);
 }
 .gamepaddialog_Field_BBGW4.gamepaddialog_HighlightOnFocus_vOOfL.gpfocus::after,
-.gamepaddialog_Field_BBGW4.gamepaddialog_HighlightOnFocus_vOOfL.gpfocuswithin::after {
+.gamepaddialog_Field_BBGW4.gamepaddialog_HighlightOnFocus_vOOfL.gpfocuswithin::after,
+.gamepaddialog_Field_BBGW4.gamepaddialog_Clickable_2fjtl:not(
+    .gamepaddialog_Disabled_kT2gh
+  ):hover::after {
   display: none;
+}
+.gamepaddialog_Field_BBGW4.gamepaddialog_HighlightOnFocus_vOOfL.gpfocus,
+.gamepaddialog_Field_BBGW4.gamepaddialog_HighlightOnFocus_vOOfL.gpfocuswithin {
+  animation-name: gamepaddialog_ItemFocusAnim-darkerGrey_1SQEV;
+  z-index: 1;
+  animation-name: gamepaddialog_ItemFocusAnim-darkGrey_3liXd;
 }
 .gamepaddialog_Field_BBGW4.gamepaddialog_Disabled_kT2gh {
   cursor: default;
@@ -2146,11 +2248,14 @@ button.gamepaddialog_Button_32WBl.DialogButton:enabled:active:hover:before {
   left: 0;
   right: 0;
   top: var(--basicui-header-height, 0px);
-  bottom: 0;
+  bottom: var(--gamepadui-current-footer-height, 0px);
   overflow-y: auto;
   overflow-x: hidden;
   scroll-padding: 80px 0px;
   flex-direction: column;
+}
+.gamepaddialog_ModalPosition_1A0Q4.gamepaddialog_VR_3_qSD {
+  bottom: 0;
 }
 .gamepaddialog_ModalPosition_1A0Q4.gamepaddialog_WithStandardPadding_3KUsh {
   padding: 24px;
@@ -2161,6 +2266,13 @@ button.gamepaddialog_Button_32WBl.DialogButton:enabled:active:hover:before {
 .gamepaddialog_ModalPosition_1A0Q4.gamepaddialog_NoHeaderPadding_HEGHg {
   top: 0;
   padding: 0;
+}
+.gamepaddialog_ModalPosition_1A0Q4 .gamepaddialog_ModalClickToDismiss_39ylk {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
 }
 .gamepaddialog_ModalPosition_1A0Q4 > .gamepaddialog_GamepadDialogContent_Gn6rC {
   margin: auto;
@@ -2211,6 +2323,11 @@ button.gamepaddialog_Button_32WBl.DialogButton:enabled:active:hover:before {
 .gamepaddialog_BasicTextInput_3jspG,
 .gamepaddialog_BasicTextInput_3jspG:not(.disabled):not(.gpfocus):hover {
   background: #23262e;
+}
+.BasicUI .gamepaddialog_BasicTextInput_3jspG,
+.BasicUI
+  .gamepaddialog_BasicTextInput_3jspG:not(.disabled):not(.gpfocus):hover {
+  background: rgba(255, 255, 255, 0.1);
 }
 .gamepaddialog_BasicTextInput_3jspG,
 .gamepaddialog_BasicTextInput_3jspG.gpfocus {
@@ -2266,7 +2383,7 @@ button.gamepaddialog_Button_32WBl.DialogButton:enabled:active:hover:before {
   right: 0;
   top: 0;
   bottom: 0;
-  background: #3d4450;
+  background: rgba(255, 255, 255, 0.15);
   border-radius: 9001px;
   overflow: hidden;
 }
@@ -2447,6 +2564,14 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Ozw- svg {
 .gamepadinput_PinDigit_1OYU3 {
   text-align: center;
 }
+@keyframes gamepadslider_BackgroundAnimation_3DiX_ {
+  from {
+    background-position: 0 100%;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
 @keyframes gamepadslider_ItemFocusAnim-darkerGrey-nocolor_EAg0h {
   from {
     background: #3d4450;
@@ -2467,11 +2592,11 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Ozw- svg {
 }
 @keyframes gamepadslider_ItemFocusAnim-darkGrey_1FSOC {
   from {
-    background: #67707b;
+    background: rgba(255, 255, 255, 0.25);
     color: #8b929a;
   }
   to {
-    background: #3d4450;
+    background: rgba(255, 255, 255, 0.15);
     color: #fff;
   }
 }
@@ -2482,6 +2607,26 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Ozw- svg {
   }
   to {
     background: #67707b;
+    color: #fff;
+  }
+}
+@keyframes gamepadslider_ItemFocusAnim-translucent-white-10_1F6jO {
+  from {
+    background: rgba(255, 255, 255, 0.3);
+    color: #fff;
+  }
+  to {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+  }
+}
+@keyframes gamepadslider_ItemFocusAnim-translucent-white-20_-G6NU {
+  from {
+    background: rgba(255, 255, 255, 0.5);
+    color: #fff;
+  }
+  to {
+    background: rgba(255, 255, 255, 0.2);
     color: #fff;
   }
 }
@@ -2528,11 +2673,11 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Ozw- svg {
   cursor: pointer;
 }
 .gamepadslider_SliderControl_3RYrN:hover .gamepadslider_SliderTrack_2htJF {
-  background: #3d4450;
+  background: rgba(255, 255, 255, 0.3);
   --left-track-color: #00bbff;
 }
 .gamepadslider_SliderTrack_2htJF {
-  background: #23262e;
+  background: rgba(255, 255, 255, 0.15);
   margin: auto;
   width: 100%;
   height: 6px;
@@ -2626,7 +2771,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Ozw- svg {
     .gamepadslider_Disabled_DE-u8
   ).gpfocus
   .gamepadslider_SliderHandle_55Klw {
-  border: solid 3px #0e141b;
+  border: solid 3px rgba(255, 255, 255, 0.15);
   margin: -3px;
   animation: gamepadslider_SliderHandleFocusPop_u42Ju 200ms ease-out;
 }
@@ -2711,7 +2856,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Ozw- svg {
   height: 12px;
   flex-shrink: 0;
   flex-grow: 0;
-  background-color: #23262e;
+  background-color: rgba(255, 255, 255, 0.15);
 }
 .gamepadslider_SliderNotchTick_1j-G1.gamepadslider_TickActive_11vJ- {
   background-color: #1a9fff;
@@ -3033,6 +3178,14 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Ozw- svg {
   bottom: 0;
   left: 0;
 }
+@keyframes gamepadpagedsettings_BackgroundAnimation_3L7b9 {
+  from {
+    background-position: 0 100%;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
 @keyframes gamepadpagedsettings_ItemFocusAnim-darkerGrey-nocolor_2fKE6 {
   from {
     background: #3d4450;
@@ -3053,11 +3206,11 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Ozw- svg {
 }
 @keyframes gamepadpagedsettings_ItemFocusAnim-darkGrey_2bogt {
   from {
-    background: #67707b;
+    background: rgba(255, 255, 255, 0.25);
     color: #8b929a;
   }
   to {
-    background: #3d4450;
+    background: rgba(255, 255, 255, 0.15);
     color: #fff;
   }
 }
@@ -3068,6 +3221,26 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Ozw- svg {
   }
   to {
     background: #67707b;
+    color: #fff;
+  }
+}
+@keyframes gamepadpagedsettings_ItemFocusAnim-translucent-white-10_23vdh {
+  from {
+    background: rgba(255, 255, 255, 0.3);
+    color: #fff;
+  }
+  to {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+  }
+}
+@keyframes gamepadpagedsettings_ItemFocusAnim-translucent-white-20_lhVxC {
+  from {
+    background: rgba(255, 255, 255, 0.5);
+    color: #fff;
+  }
+  to {
+    background: rgba(255, 255, 255, 0.2);
     color: #fff;
   }
 }
@@ -3089,6 +3262,14 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Ozw- svg {
     color: #fff;
   }
 }
+@keyframes gamepadpagedsettings_BackgroundAnimation_3L7b9 {
+  from {
+    background-position: 0 100%;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
 @keyframes gamepadpagedsettings_ItemFocusAnim-darkerGrey-nocolor_2fKE6 {
   from {
     background: #3d4450;
@@ -3109,11 +3290,11 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Ozw- svg {
 }
 @keyframes gamepadpagedsettings_ItemFocusAnim-darkGrey_2bogt {
   from {
-    background: #67707b;
+    background: rgba(255, 255, 255, 0.25);
     color: #8b929a;
   }
   to {
-    background: #3d4450;
+    background: rgba(255, 255, 255, 0.15);
     color: #fff;
   }
 }
@@ -3124,6 +3305,26 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Ozw- svg {
   }
   to {
     background: #67707b;
+    color: #fff;
+  }
+}
+@keyframes gamepadpagedsettings_ItemFocusAnim-translucent-white-10_23vdh {
+  from {
+    background: rgba(255, 255, 255, 0.3);
+    color: #fff;
+  }
+  to {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+  }
+}
+@keyframes gamepadpagedsettings_ItemFocusAnim-translucent-white-20_lhVxC {
+  from {
+    background: rgba(255, 255, 255, 0.5);
+    color: #fff;
+  }
+  to {
+    background: rgba(255, 255, 255, 0.2);
     color: #fff;
   }
 }
@@ -3175,9 +3376,10 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Ozw- svg {
   right: 0;
   bottom: 0;
   left: 0;
+  padding-bottom: calc(var(--gamepadui-current-footer-height, 0px) + 20px);
   overflow-x: hidden;
   overflow-y: auto;
-  scroll-padding: 56px 0px;
+  scroll-padding: 56px 0px 60px 0px;
   flex-direction: column;
   padding-top: calc(24px + var(--basicui-header-height, 0px));
 }
@@ -3192,26 +3394,36 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Ozw- svg {
   margin-top: 5px;
 }
 .gamepadpagedsettings_PagedSettingsDialog_PageListColumn_3Xe9v {
-  background: #23262e;
+  background: rgba(255, 255, 255, 0.1);
   flex: 1;
   min-width: 240px;
   max-width: 40%;
   display: flex;
   flex-direction: column;
   position: relative;
-  border-right: 1px solid #0e141b;
-  padding-top: calc(0px + var(--basicui-header-height, 0px));
+  padding-bottom: var(--gamepadui-current-footer-height, 0px);
 }
 .gamepadpagedsettings_PagedSettingsDialog_Title_1wHaQ {
-  color: #67707b;
-  text-transform: uppercase;
-  padding-top: calc(12px + 1.4vw);
+  color: #fff;
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 28px;
+  padding-top: calc(8px + var(--basicui-header-height, 0px));
   padding-left: calc(12px + 1.4vw);
-  padding-right: calc(12px + 1.4vw);
-  font-weight: 500;
-  letter-spacing: 0.2px;
+  padding-right: 16px;
   overflow: hidden;
-  white-space: nowrap;
   text-overflow: ellipsis;
 }
 .gamepadpagedsettings_PagedSettingsDialog_PageList_1zky_ {
@@ -3226,9 +3438,16 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Ozw- svg {
   flex-direction: column;
   scroll-snap-type: y mandatory;
   scroll-padding: 36px 0px;
+  padding-top: calc(0px + var(--basicui-header-height, 0px));
 }
 .gamepadpagedsettings_PagedSettingsDialog_PageList_1zky_.gamepadpagedsettings_PagedSettingsDialog_PageList_DisableScrolling_1BVcL {
   overflow-y: hidden;
+}
+.gamepadpagedsettings_PagedSettingsDialog_PageList_1zky_.gamepadpagedsettings_PagedSettingsDialog_PageList_ShowTitle_3fmuC {
+  padding-top: 16px;
+}
+.gamepadpagedsettings_PagedSettingsDialog_PageList_1zky_.gamepadpagedsettings_PageSettingsDialog_PageList_NoHeaderPadding_3UW1l {
+  padding-top: 0px;
 }
 .gamepadpagedsettings_PagedSettingsDialog_PageListItem_2syih {
   font-family: "Motiva Sans", Helvetica, sans-serif;
@@ -3271,8 +3490,9 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Ozw- svg {
 .gamepadpagedsettings_PagedSettingsDialog_PageListItem_2syih.gamepadpagedsettings_Active_3Qg3h {
   color: #fff;
   cursor: default;
-  background: #3d4450;
+  background: rgba(255, 255, 255, 0.15);
   transform: scale(1.1) rotateX(1deg);
+  clip-path: inset(5% 0% 5% 0%);
 }
 .gamepadpagedsettings_PagedSettingsDialog_PageListItem_2syih:focus {
   outline: none;
@@ -3284,7 +3504,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Ozw- svg {
   animation-name: gamepadpagedsettings_ItemFocusAnim-darkGrey_2bogt;
 }
 .gamepadpagedsettings_PagedSettingsDialog_PageListItem_2syih:hover {
-  background-color: #3d4450;
+  background-color: rgba(255, 255, 255, 0.05);
 }
 .gamepadpagedsettings_PageListItem_Icon_1d7b6 {
   height: 20px;
@@ -3302,12 +3522,12 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Ozw- svg {
 }
 .gamepadpagedsettings_Separator_1JhNo {
   height: 1px;
-  background: #3d4450;
+  background: rgba(255, 255, 255, 0.1);
   margin: 8px calc(12px + 1.4vw);
   flex-shrink: 0;
 }
 .gamepadpagedsettings_PagedSettingDialog_ContentColumn_3nGJH {
-  background: #0e141b;
+  background: rgba(0, 0, 0, 0);
 }
 .gamepadpagedsettings_Up_2QzBg
   > .gamepadpagedsettings_ContentTransition_6AYoY.gamepadpagedsettings_Enter_2jEMo {
@@ -4513,6 +4733,15 @@ b {
   min-width: 100px;
   overflow: hidden scroll;
 }
+.partnereventshared_DropDownScroll_1U_du
+  .partnereventshared_DropDownScrollItem_3RZTV {
+  padding: 0;
+}
+.partnereventshared_DropDownScroll_1U_du
+  .partnereventshared_DropDownScrollItem_3RZTV
+  > div {
+  padding: 10px 15px;
+}
 .partnereventshared_CloseButton_3NcQW {
   position: absolute;
   top: 4px;
@@ -5575,7 +5804,7 @@ button.Primary.partnereventshared_AddSectionButton_24jC1 {
   background-color: #212328;
 }
 .qrcode_Bit_1cen5:not(.qrcode_Active_17-Ag) {
-  background-color: #1999ff;
+  background-color: #fff;
 }
 .qrlogin_LoginQR_2HBjO {
   position: relative;
@@ -5585,6 +5814,9 @@ button.Primary.partnereventshared_AddSectionButton_24jC1 {
   border-color: #fff;
   border-width: 1.25em;
   border-radius: 0.625em;
+}
+.qrlogin_LoginQR_2HBjO.qrlogin_NonPublic_3fvLA {
+  border-color: #f0f;
 }
 .qrlogin_LoginQR_2HBjO.qrlogin_QRLoginDeck_AZCmv {
   width: 8em;
@@ -13460,6 +13692,7 @@ a {
 .horizontalSlider___281Ls {
   position: relative;
   overflow: hidden;
+  touch-action: pan-y pinch-zoom;
 }
 [dir="rtl"] .horizontalSlider___281Ls {
   direction: ltr;
@@ -29261,6 +29494,7 @@ a {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 .dpcmenubar_DPCMenuBar_1SBIP
   .dpcmenubar_DPCHeaderContents_XzLjB
@@ -29340,6 +29574,10 @@ a {
   align-items: center;
   justify-content: flex-end;
   gap: 14px;
+  position: absolute;
+  right: 20px;
+  top: 0;
+  bottom: 0;
   cursor: pointer;
   user-select: none;
 }
@@ -29419,407 +29657,6 @@ a {
   padding: 3px;
   background-color: #3f464f;
   color: #6b7785;
-}
-.dpcselectors_CycleSelector_1HHv4 {
-  width: 200px;
-  height: 30px;
-  display: flex;
-  flex-direction: row;
-  margin: 4px;
-}
-.dpcselectors_CycleSelector_1HHv4 .dpcselectors_Arrow_3zzpy {
-  width: 30px;
-  height: 30px;
-  border: 2px solid #5e6976;
-  border-radius: 3px;
-  background-color: #5e6976;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  clip-path: polygon(0px 0px, 30px 0px, 20px 30px, 0px 30px);
-  transition-property: filter;
-  transition-timing-function: ease-in-out;
-  transition-duration: 0.1s;
-}
-.dpcselectors_CycleSelector_1HHv4
-  .dpcselectors_Arrow_3zzpy.dpcselectors_Enabled_y3pFP {
-  cursor: pointer;
-  user-select: none;
-}
-.dpcselectors_CycleSelector_1HHv4
-  .dpcselectors_Arrow_3zzpy.dpcselectors_Enabled_y3pFP
-  .dpcselectors_ArrowIcon_232VF {
-  opacity: 1;
-}
-.dpcselectors_CycleSelector_1HHv4
-  .dpcselectors_Arrow_3zzpy.dpcselectors_Right_1I4ov {
-  transform: rotateZ(180deg);
-}
-.dpcselectors_CycleSelector_1HHv4
-  .dpcselectors_Arrow_3zzpy.dpcselectors_Enabled_y3pFP:hover {
-  filter: brightness(1.3);
-}
-.dpcselectors_CycleSelector_1HHv4
-  .dpcselectors_Arrow_3zzpy
-  .dpcselectors_ArrowIcon_232VF {
-  width: 7.5px;
-  height: 12.5px;
-  transition-property: opacity;
-  transition-timing-function: ease-in-out;
-  transition-duration: 0.1s;
-  margin-right: 8px;
-  opacity: 0;
-}
-.dpcselectors_CycleSelector_1HHv4 .dpcselectors_CurrentOption_3zzAB {
-  width: 150px;
-  height: 100%;
-  margin: 0px -5px;
-  background-color: #5e6976;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  user-select: none;
-  pointer-events: none;
-  clip-path: polygon(10px 0px, 150px 0px, 140px 30px, 0px 30px);
-  text-transform: uppercase;
-  font-weight: 400;
-  letter-spacing: 1px;
-  font-size: 13px;
-  color: #fff;
-}
-.dpcselectors_DropdownSelector_3jmb0 {
-  width: 180px;
-  height: 30px;
-  position: relative;
-}
-.dpcselectors_DropdownSelector_3jmb0.dpcselectors_StyleHighlighted_qjss3
-  .dpcselectors_DropdownBody_1u6rb {
-  background: linear-gradient(
-    108deg,
-    #41474e 0%,
-    #41474e calc(100% - 33px),
-    #ff6046 calc(100% - 33px),
-    #ff6046 100%
-  );
-}
-.dpcselectors_DropdownSelector_3jmb0.dpcselectors_StyleNormal_2AM-s
-  .dpcselectors_DropdownBody_1u6rb {
-  background-color: #5e6976;
-  padding-right: 10px;
-  color: #fff;
-}
-.dpcselectors_DropdownSelector_3jmb0.dpcselectors_StyleNormal_2AM-s
-  .dpcselectors_DropdownBody_1u6rb
-  .dpcselectors_LeftSegment_2BgYM {
-  color: #fff;
-  max-width: 90%;
-}
-.dpcselectors_DropdownSelector_3jmb0.dpcselectors_StyleNormal_2AM-s
-  .dpcselectors_DropdownBody_1u6rb
-  .dpcselectors_RightArrow_3XoYb {
-  filter: brightness(1);
-}
-.dpcselectors_DropdownSelector_3jmb0.dpcselectors_StyleDim_15AJD
-  .dpcselectors_DropdownBody_1u6rb {
-  background-color: #2e3339;
-  padding-right: 10px;
-  color: #9099a3;
-}
-.dpcselectors_DropdownSelector_3jmb0.dpcselectors_StyleDim_15AJD
-  .dpcselectors_DropdownBody_1u6rb
-  .dpcselectors_LeftSegment_2BgYM {
-  color: #9099a3;
-}
-.dpcselectors_DropdownSelector_3jmb0.dpcselectors_StyleDim_15AJD
-  .dpcselectors_DropdownBody_1u6rb
-  .dpcselectors_RightArrow_3XoYb {
-  filter: brightness(0.5);
-}
-.dpcselectors_DropdownSelector_3jmb0 .dpcselectors_DropdownBody_1u6rb {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  padding-left: 12px;
-  padding-right: 11px;
-  cursor: pointer;
-  user-select: none;
-  border-radius: 3px;
-  text-transform: uppercase;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 1px;
-  color: #fff;
-  clip-path: polygon(
-    0px 0px,
-    calc(100% - 30px) 0px,
-    calc(100% - 40px) 100%,
-    calc(100% - 35px) 100%,
-    calc(100% - 25px) 0px,
-    calc(100% + 2px) 0px,
-    calc(100% + 2px) 100%,
-    0px 100%
-  );
-  appearance: none;
-  outline: none;
-  border: none;
-  position: relative;
-}
-.dpcselectors_DropdownSelector_3jmb0 .dpcselectors_DropdownBody_1u6rb option {
-  background-color: #1e2024;
-}
-.dpcselectors_DropdownSelector_3jmb0
-  .dpcselectors_DropdownBody_1u6rb
-  .dpcselectors_LeftSegment_2BgYM {
-  color: #fff;
-  text-transform: uppercase;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 1px;
-}
-.dpcselectors_DropdownSelector_3jmb0 .dpcselectors_RightArrow_3XoYb {
-  width: 7.5px;
-  height: 12.5px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  transform: rotate(270deg);
-  transition-property: transform;
-  transition-timing-function: ease-in-out;
-  transition-duration: 0.1s;
-}
-.dpcselectors_DropdownSelector_3jmb0
-  .dpcselectors_RightArrow_3XoYb.dpcselectors_IsOpen_1LwZv {
-  transform: rotate(90deg);
-}
-.dpcselectors_DropdownSelector_3jmb0
-  .dpcselectors_RightArrow_3XoYb.dpcselectors_AbsolutePos_32jIV {
-  position: absolute;
-  right: 11px;
-  top: 10px;
-  bottom: 0;
-}
-.dpcselectors_DropdownSelector_3jmb0 .dpcselectors_DropdownOptions_3heSt {
-  width: 100%;
-  position: absolute;
-  top: 34px;
-  z-index: 10;
-  background-color: #2e3339;
-  border-radius: 3px;
-  opacity: 0;
-  pointer-events: none;
-  transition-property: opacity;
-  transition-timing-function: ease-in-out;
-  transition-duration: 0.1s;
-  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.dpcselectors_DropdownSelector_3jmb0
-  .dpcselectors_DropdownOptions_3heSt.dpcselectors_IsOpen_1LwZv {
-  opacity: 1;
-  pointer-events: initial;
-}
-.dpcselectors_DropdownSelector_3jmb0
-  .dpcselectors_DropdownOptions_3heSt
-  .dpcselectors_Separator_2wK3P {
-  width: calc(100% - 20px);
-  height: 24px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  color: #606875;
-  font-size: 12px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-.dpcselectors_DropdownSelector_3jmb0
-  .dpcselectors_DropdownOptions_3heSt
-  .dpcselectors_Separator_2wK3P
-  .dpcselectors_Line_3rnxf {
-  flex-grow: 1;
-  height: 1px;
-  background-color: #515863;
-}
-.dpcselectors_DropdownSelector_3jmb0
-  .dpcselectors_DropdownOptions_3heSt
-  .dpcselectors_Option_1qN-o {
-  width: 100%;
-  height: 38px;
-  padding: 0px 12px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  cursor: pointer;
-  user-select: none;
-  transition-property: background-color;
-  transition-timing-function: ease-in-out;
-  transition-duration: 0.1s;
-}
-.dpcselectors_DropdownSelector_3jmb0
-  .dpcselectors_DropdownOptions_3heSt
-  .dpcselectors_Option_1qN-o
-  .dpcselectors_OptionLabel_SGKBi {
-  color: #a3a3a3;
-  text-transform: uppercase;
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 1px;
-  transition-property: color;
-  transition-timing-function: ease-in-out;
-  transition-duration: 0.1s;
-}
-.dpcselectors_DropdownSelector_3jmb0
-  .dpcselectors_DropdownOptions_3heSt
-  .dpcselectors_Option_1qN-o
-  .dpcselectors_OptionSubLabel_2UU2O {
-  color: #a3a3a3;
-  font-size: 10px;
-  letter-spacing: 1px;
-}
-.dpcselectors_DropdownSelector_3jmb0
-  .dpcselectors_DropdownOptions_3heSt
-  .dpcselectors_Option_1qN-o:hover {
-  background-color: #41474e;
-}
-.dpcselectors_DropdownSelector_3jmb0
-  .dpcselectors_DropdownOptions_3heSt
-  .dpcselectors_Option_1qN-o:hover
-  .dpcselectors_OptionLabel_SGKBi {
-  color: #fff;
-}
-.dpcselectors_TextInput_33HiC {
-  width: 200px;
-  height: 30px;
-  display: flex;
-  flex-direction: row;
-  position: relative;
-}
-.dpcselectors_TextInput_33HiC input {
-  appearance: none;
-  outline: none;
-  width: 200px;
-  height: 100%;
-  color: #5e6976;
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 1px;
-  border: 2px solid;
-  border-color: #5e6976;
-  border-radius: 3px;
-  padding: 0px 31px;
-  background-color: rgba(0, 0, 0, 0);
-  transition-property: color, border-color, background-color;
-  transition-timing-function: ease-in-out;
-  transition-duration: 0.1s;
-}
-.dpcselectors_TextInput_33HiC input:hover {
-  color: #fff;
-  border-color: #5e6976;
-  background-color: rgba(94, 105, 118, 0.2509803922);
-}
-.dpcselectors_TextInput_33HiC input:focus {
-  color: #fff;
-  border-color: #5e6976;
-  background-color: rgba(94, 105, 118, 0.2509803922);
-}
-.dpcselectors_TextInput_33HiC .dpcselectors_MagnifyingGlass_3N27p {
-  width: 13px;
-  height: 13px;
-  position: absolute;
-  left: 12px;
-  top: 8px;
-  bottom: 0;
-  color: #5e6976;
-  pointer-events: none;
-  transition-property: color;
-  transition-timing-function: ease-in-out;
-  transition-duration: 0.05s;
-}
-.dpcselectors_Switch_26we- {
-  position: relative;
-  margin-right: 0px;
-  cursor: pointer;
-  height: 40px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.dpcselectors_Switch_26we-.dpcselectors_On_IFTP8
-  .dpcselectors_Background_3oinv {
-  background-color: #3f464f;
-}
-.dpcselectors_Switch_26we-.dpcselectors_On_IFTP8 .dpcselectors_Selector_17u1z {
-  background-color: #ff6046;
-  box-shadow: -0.2em 0 0.3em rgba(0, 0, 0, 0.2509803922);
-  margin-left: 30px;
-}
-.dpcselectors_Switch_26we- .dpcselectors_Background_3oinv {
-  background-color: #3f464f;
-  width: 60px;
-  height: 20px;
-  border-radius: 4px;
-  transition: background-color 0.2s ease-in-out;
-}
-.dpcselectors_Switch_26we- .dpcselectors_Selector_17u1z {
-  position: absolute;
-  left: 0;
-  margin-left: 0px;
-  background-color: #6b7785;
-  box-shadow: 2px 0 0.3em rgba(0, 0, 0, 0.3019607843);
-  width: 30px;
-  height: 20px;
-  border-radius: 4px;
-  transition:
-    margin-left 0.2s ease-in-out,
-    background-color 0.2s ease-in-out;
-}
-.dpcselectors_SwitchSmall_1KHEx {
-  position: relative;
-  margin-right: 0px;
-  cursor: pointer;
-  height: 40px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.dpcselectors_SwitchSmall_1KHEx.dpcselectors_On_IFTP8
-  .dpcselectors_Background_3oinv {
-  background-color: #3f464f;
-}
-.dpcselectors_SwitchSmall_1KHEx.dpcselectors_On_IFTP8
-  .dpcselectors_Selector_17u1z {
-  background-color: #fff;
-  box-shadow: -0.2em 0 0.3em rgba(0, 0, 0, 0.2509803922);
-  margin-left: 14px;
-}
-.dpcselectors_SwitchSmall_1KHEx .dpcselectors_Background_3oinv {
-  background-color: #3f464f;
-  width: 30px;
-  height: 7px;
-  border-radius: 4px;
-  transition: background-color 0.2s ease-in-out;
-}
-.dpcselectors_SwitchSmall_1KHEx .dpcselectors_Selector_17u1z {
-  position: absolute;
-  left: 0;
-  margin-left: 0px;
-  background-color: #6b7785;
-  box-shadow: 2px 0 0.3em rgba(0, 0, 0, 0.3019607843);
-  width: 14px;
-  height: 14px;
-  border-radius: 7px;
-  transition:
-    margin-left 0.2s ease-in-out,
-    background-color 0.2s ease-in-out;
 }
 * {
   box-sizing: border-box;
@@ -30971,6 +30808,407 @@ a {
 }
 .matchesheader_TeamLogo_YDA-c.matchesheader_Invalid_241ng {
   opacity: 0;
+}
+.dpcselectors_CycleSelector_1HHv4 {
+  width: 200px;
+  height: 30px;
+  display: flex;
+  flex-direction: row;
+  margin: 4px;
+}
+.dpcselectors_CycleSelector_1HHv4 .dpcselectors_Arrow_3zzpy {
+  width: 30px;
+  height: 30px;
+  border: 2px solid #5e6976;
+  border-radius: 3px;
+  background-color: #5e6976;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  clip-path: polygon(0px 0px, 30px 0px, 20px 30px, 0px 30px);
+  transition-property: filter;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.1s;
+}
+.dpcselectors_CycleSelector_1HHv4
+  .dpcselectors_Arrow_3zzpy.dpcselectors_Enabled_y3pFP {
+  cursor: pointer;
+  user-select: none;
+}
+.dpcselectors_CycleSelector_1HHv4
+  .dpcselectors_Arrow_3zzpy.dpcselectors_Enabled_y3pFP
+  .dpcselectors_ArrowIcon_232VF {
+  opacity: 1;
+}
+.dpcselectors_CycleSelector_1HHv4
+  .dpcselectors_Arrow_3zzpy.dpcselectors_Right_1I4ov {
+  transform: rotateZ(180deg);
+}
+.dpcselectors_CycleSelector_1HHv4
+  .dpcselectors_Arrow_3zzpy.dpcselectors_Enabled_y3pFP:hover {
+  filter: brightness(1.3);
+}
+.dpcselectors_CycleSelector_1HHv4
+  .dpcselectors_Arrow_3zzpy
+  .dpcselectors_ArrowIcon_232VF {
+  width: 7.5px;
+  height: 12.5px;
+  transition-property: opacity;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.1s;
+  margin-right: 8px;
+  opacity: 0;
+}
+.dpcselectors_CycleSelector_1HHv4 .dpcselectors_CurrentOption_3zzAB {
+  width: 150px;
+  height: 100%;
+  margin: 0px -5px;
+  background-color: #5e6976;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  pointer-events: none;
+  clip-path: polygon(10px 0px, 150px 0px, 140px 30px, 0px 30px);
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 1px;
+  font-size: 13px;
+  color: #fff;
+}
+.dpcselectors_DropdownSelector_3jmb0 {
+  width: 180px;
+  height: 30px;
+  position: relative;
+}
+.dpcselectors_DropdownSelector_3jmb0.dpcselectors_StyleHighlighted_qjss3
+  .dpcselectors_DropdownBody_1u6rb {
+  background: linear-gradient(
+    108deg,
+    #41474e 0%,
+    #41474e calc(100% - 33px),
+    #ff6046 calc(100% - 33px),
+    #ff6046 100%
+  );
+}
+.dpcselectors_DropdownSelector_3jmb0.dpcselectors_StyleNormal_2AM-s
+  .dpcselectors_DropdownBody_1u6rb {
+  background-color: #5e6976;
+  padding-right: 10px;
+  color: #fff;
+}
+.dpcselectors_DropdownSelector_3jmb0.dpcselectors_StyleNormal_2AM-s
+  .dpcselectors_DropdownBody_1u6rb
+  .dpcselectors_LeftSegment_2BgYM {
+  color: #fff;
+  max-width: 90%;
+}
+.dpcselectors_DropdownSelector_3jmb0.dpcselectors_StyleNormal_2AM-s
+  .dpcselectors_DropdownBody_1u6rb
+  .dpcselectors_RightArrow_3XoYb {
+  filter: brightness(1);
+}
+.dpcselectors_DropdownSelector_3jmb0.dpcselectors_StyleDim_15AJD
+  .dpcselectors_DropdownBody_1u6rb {
+  background-color: #2e3339;
+  padding-right: 10px;
+  color: #9099a3;
+}
+.dpcselectors_DropdownSelector_3jmb0.dpcselectors_StyleDim_15AJD
+  .dpcselectors_DropdownBody_1u6rb
+  .dpcselectors_LeftSegment_2BgYM {
+  color: #9099a3;
+}
+.dpcselectors_DropdownSelector_3jmb0.dpcselectors_StyleDim_15AJD
+  .dpcselectors_DropdownBody_1u6rb
+  .dpcselectors_RightArrow_3XoYb {
+  filter: brightness(0.5);
+}
+.dpcselectors_DropdownSelector_3jmb0 .dpcselectors_DropdownBody_1u6rb {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 12px;
+  padding-right: 11px;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 3px;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #fff;
+  clip-path: polygon(
+    0px 0px,
+    calc(100% - 30px) 0px,
+    calc(100% - 40px) 100%,
+    calc(100% - 35px) 100%,
+    calc(100% - 25px) 0px,
+    calc(100% + 2px) 0px,
+    calc(100% + 2px) 100%,
+    0px 100%
+  );
+  appearance: none;
+  outline: none;
+  border: none;
+  position: relative;
+}
+.dpcselectors_DropdownSelector_3jmb0 .dpcselectors_DropdownBody_1u6rb option {
+  background-color: #1e2024;
+}
+.dpcselectors_DropdownSelector_3jmb0
+  .dpcselectors_DropdownBody_1u6rb
+  .dpcselectors_LeftSegment_2BgYM {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.dpcselectors_DropdownSelector_3jmb0 .dpcselectors_RightArrow_3XoYb {
+  width: 7.5px;
+  height: 12.5px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transform: rotate(270deg);
+  transition-property: transform;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.1s;
+}
+.dpcselectors_DropdownSelector_3jmb0
+  .dpcselectors_RightArrow_3XoYb.dpcselectors_IsOpen_1LwZv {
+  transform: rotate(90deg);
+}
+.dpcselectors_DropdownSelector_3jmb0
+  .dpcselectors_RightArrow_3XoYb.dpcselectors_AbsolutePos_32jIV {
+  position: absolute;
+  right: 11px;
+  top: 10px;
+  bottom: 0;
+}
+.dpcselectors_DropdownSelector_3jmb0 .dpcselectors_DropdownOptions_3heSt {
+  width: 100%;
+  position: absolute;
+  top: 34px;
+  z-index: 10;
+  background-color: #2e3339;
+  border-radius: 3px;
+  opacity: 0;
+  pointer-events: none;
+  transition-property: opacity;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.1s;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.dpcselectors_DropdownSelector_3jmb0
+  .dpcselectors_DropdownOptions_3heSt.dpcselectors_IsOpen_1LwZv {
+  opacity: 1;
+  pointer-events: initial;
+}
+.dpcselectors_DropdownSelector_3jmb0
+  .dpcselectors_DropdownOptions_3heSt
+  .dpcselectors_Separator_2wK3P {
+  width: calc(100% - 20px);
+  height: 24px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #606875;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.dpcselectors_DropdownSelector_3jmb0
+  .dpcselectors_DropdownOptions_3heSt
+  .dpcselectors_Separator_2wK3P
+  .dpcselectors_Line_3rnxf {
+  flex-grow: 1;
+  height: 1px;
+  background-color: #515863;
+}
+.dpcselectors_DropdownSelector_3jmb0
+  .dpcselectors_DropdownOptions_3heSt
+  .dpcselectors_Option_1qN-o {
+  width: 100%;
+  height: 38px;
+  padding: 0px 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  cursor: pointer;
+  user-select: none;
+  transition-property: background-color;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.1s;
+}
+.dpcselectors_DropdownSelector_3jmb0
+  .dpcselectors_DropdownOptions_3heSt
+  .dpcselectors_Option_1qN-o
+  .dpcselectors_OptionLabel_SGKBi {
+  color: #a3a3a3;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  transition-property: color;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.1s;
+}
+.dpcselectors_DropdownSelector_3jmb0
+  .dpcselectors_DropdownOptions_3heSt
+  .dpcselectors_Option_1qN-o
+  .dpcselectors_OptionSubLabel_2UU2O {
+  color: #a3a3a3;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+.dpcselectors_DropdownSelector_3jmb0
+  .dpcselectors_DropdownOptions_3heSt
+  .dpcselectors_Option_1qN-o:hover {
+  background-color: #41474e;
+}
+.dpcselectors_DropdownSelector_3jmb0
+  .dpcselectors_DropdownOptions_3heSt
+  .dpcselectors_Option_1qN-o:hover
+  .dpcselectors_OptionLabel_SGKBi {
+  color: #fff;
+}
+.dpcselectors_TextInput_33HiC {
+  width: 200px;
+  height: 30px;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+.dpcselectors_TextInput_33HiC input {
+  appearance: none;
+  outline: none;
+  width: 200px;
+  height: 100%;
+  color: #5e6976;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border: 2px solid;
+  border-color: #5e6976;
+  border-radius: 3px;
+  padding: 0px 31px;
+  background-color: rgba(0, 0, 0, 0);
+  transition-property: color, border-color, background-color;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.1s;
+}
+.dpcselectors_TextInput_33HiC input:hover {
+  color: #fff;
+  border-color: #5e6976;
+  background-color: rgba(94, 105, 118, 0.2509803922);
+}
+.dpcselectors_TextInput_33HiC input:focus {
+  color: #fff;
+  border-color: #5e6976;
+  background-color: rgba(94, 105, 118, 0.2509803922);
+}
+.dpcselectors_TextInput_33HiC .dpcselectors_MagnifyingGlass_3N27p {
+  width: 13px;
+  height: 13px;
+  position: absolute;
+  left: 12px;
+  top: 8px;
+  bottom: 0;
+  color: #5e6976;
+  pointer-events: none;
+  transition-property: color;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.05s;
+}
+.dpcselectors_Switch_26we- {
+  position: relative;
+  margin-right: 0px;
+  cursor: pointer;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.dpcselectors_Switch_26we-.dpcselectors_On_IFTP8
+  .dpcselectors_Background_3oinv {
+  background-color: #3f464f;
+}
+.dpcselectors_Switch_26we-.dpcselectors_On_IFTP8 .dpcselectors_Selector_17u1z {
+  background-color: #ff6046;
+  box-shadow: -0.2em 0 0.3em rgba(0, 0, 0, 0.2509803922);
+  margin-left: 30px;
+}
+.dpcselectors_Switch_26we- .dpcselectors_Background_3oinv {
+  background-color: #3f464f;
+  width: 60px;
+  height: 20px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease-in-out;
+}
+.dpcselectors_Switch_26we- .dpcselectors_Selector_17u1z {
+  position: absolute;
+  left: 0;
+  margin-left: 0px;
+  background-color: #6b7785;
+  box-shadow: 2px 0 0.3em rgba(0, 0, 0, 0.3019607843);
+  width: 30px;
+  height: 20px;
+  border-radius: 4px;
+  transition:
+    margin-left 0.2s ease-in-out,
+    background-color 0.2s ease-in-out;
+}
+.dpcselectors_SwitchSmall_1KHEx {
+  position: relative;
+  margin-right: 0px;
+  cursor: pointer;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.dpcselectors_SwitchSmall_1KHEx.dpcselectors_On_IFTP8
+  .dpcselectors_Background_3oinv {
+  background-color: #3f464f;
+}
+.dpcselectors_SwitchSmall_1KHEx.dpcselectors_On_IFTP8
+  .dpcselectors_Selector_17u1z {
+  background-color: #fff;
+  box-shadow: -0.2em 0 0.3em rgba(0, 0, 0, 0.2509803922);
+  margin-left: 14px;
+}
+.dpcselectors_SwitchSmall_1KHEx .dpcselectors_Background_3oinv {
+  background-color: #3f464f;
+  width: 30px;
+  height: 7px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease-in-out;
+}
+.dpcselectors_SwitchSmall_1KHEx .dpcselectors_Selector_17u1z {
+  position: absolute;
+  left: 0;
+  margin-left: 0px;
+  background-color: #6b7785;
+  box-shadow: 2px 0 0.3em rgba(0, 0, 0, 0.3019607843);
+  width: 14px;
+  height: 14px;
+  border-radius: 7px;
+  transition:
+    margin-left 0.2s ease-in-out,
+    background-color 0.2s ease-in-out;
 }
 .teamlogo_TeamLogo_1wG_v {
   width: 64px;

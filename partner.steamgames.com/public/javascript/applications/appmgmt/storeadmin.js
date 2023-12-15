@@ -1150,8 +1150,8 @@
               a.createElement(
                 x,
                 { label: (0, s.Xx)("#App_Landing_IntendedReleaseDateTitle") },
-                a.createElement(M, { rtSelectedDate: c, setSelectedDate: u }),
-                a.createElement(G, null),
+                a.createElement(G, { rtSelectedDate: c, setSelectedDate: u }),
+                a.createElement(M, null),
               ),
               a.createElement(
                 x,
@@ -1264,7 +1264,7 @@
           a.createElement("div", { className: R.ColumnContent }, t),
         );
       }
-      function M(e) {
+      function G(e) {
         const { rtSelectedDate: r, setSelectedDate: t } = e,
           { bCanUpdateComingSoonDate: n, rtEarliestDate: o } = T();
         return a.createElement(
@@ -1283,7 +1283,7 @@
           }),
         );
       }
-      function G(e) {
+      function M(e) {
         const { bCanUpdateComingSoonDate: r, rtReleaseDate: t } = T();
         return r
           ? a.createElement(
@@ -2044,22 +2044,7 @@
               a.createElement(
                 "li",
                 null,
-                (0, s.Xx)("#ControllerSupportModal_PgTwo_Instructions_pt1"),
-              ),
-              a.createElement(
-                "li",
-                null,
                 (0, s.Xx)("#ControllerSupportModal_PgThree_Instructions_pt1"),
-              ),
-              a.createElement(
-                "li",
-                null,
-                (0, s.Xx)("#ControllerSupportModal_PgTwo_Instructions_pt4"),
-              ),
-              a.createElement(
-                "li",
-                null,
-                (0, s.Xx)("#ControllerSupportModal_PgTwo_Instructions_pt5"),
               ),
             ),
             a.createElement(
@@ -3094,7 +3079,7 @@
               : "usd";
         }
       }
-      function Me(e) {
+      function Ge(e) {
         return `${Be(
           (function (e) {
             switch (e) {
@@ -3252,7 +3237,7 @@
             (e[(e.k_ECurrencyCodeRON = 47)] = "k_ECurrencyCodeRON"),
             (e[(e.k_ECurrencyCodeMax = 48)] = "k_ECurrencyCodeMax");
         })(Re || (Re = {}));
-      const Ge = [Re.k_ECurrencyCodeTRY, Re.k_ECurrencyCodeARS],
+      const Me = [Re.k_ECurrencyCodeTRY, Re.k_ECurrencyCodeARS],
         Le = [
           Re.k_ECurrencyCodeUSD,
           Re.k_ECurrencyCodeGBP,
@@ -4257,8 +4242,8 @@
         );
       }
       var xr = t(17547),
-        Mr = t(43068),
-        Gr = t(5029);
+        Gr = t(43068),
+        Mr = t(5029);
       function Lr(e) {
         const {
             rgProposals: r,
@@ -4451,7 +4436,7 @@
                 t.length,
                 " currencies: ",
               ),
-              t.map(Me).join(", "),
+              t.map(Ge).join(", "),
             )
           : null;
       }
@@ -4495,7 +4480,7 @@
                 t.length,
                 " currencies: ",
               ),
-              t.map(Me).join(", "),
+              t.map(Ge).join(", "),
             )
           : null;
       }
@@ -4680,7 +4665,7 @@
               null,
               "Package has Country price overrides for Countries:",
               t.proposed_prices.country_amounts
-                .map((e) => Me(e.name))
+                .map((e) => Ge(e.name))
                 .join(","),
             )
           : null;
@@ -4750,7 +4735,7 @@
           })(),
           o = ve(),
           l = Qr(),
-          [i, c] = (0, Gr.Ar)("tab", "delta"),
+          [i, c] = (0, Mr.Ar)("tab", "delta"),
           s = (e) => c(e.key),
           u = [
             {
@@ -4793,7 +4778,7 @@
             a.createElement("h1", null, "Package Prices Submissions Reviews"),
             a.createElement("p", null, r),
             a.createElement("hr", null),
-            a.createElement(Mr.n, { tabs: u, startingTab: i }),
+            a.createElement(Gr.n, { tabs: u, startingTab: i }),
           ),
         );
       }
