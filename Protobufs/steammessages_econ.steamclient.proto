@@ -28,7 +28,7 @@ message CEcon_Asset {
 	optional uint64 assetid = 3;
 	optional uint64 classid = 4;
 	optional uint64 instanceid = 5;
-	optional uint32 currencyid = 6 [(description) = "Set currencyid if it's a currency, assetid for an item"];
+	optional uint32 currencyid = 6;
 	optional int64 amount = 7;
 	optional bool missing = 8;
 	optional int64 est_usd = 9;
@@ -80,18 +80,18 @@ message CEconItem_Description {
 }
 
 message CEconItem_Tag {
-	optional uint32 appid = 1 [(description) = "The app that contains the item"];
-	optional string category = 2 [(description) = "The internal name of the category the tag belongs to"];
-	optional string internal_name = 3 [(description) = "The internal name of the tag"];
-	optional string localized_category_name = 4 [(description) = "The localized name of the category"];
-	optional string localized_tag_name = 5 [(description) = "The localized name of the tag"];
-	optional string color = 6 [(description) = "The color to use when displaying the tag to the user"];
+	optional uint32 appid = 1;
+	optional string category = 2;
+	optional string internal_name = 3;
+	optional string localized_category_name = 4;
+	optional string localized_tag_name = 5;
+	optional string color = 6;
 }
 
 message CEcon_GetInventoryItemsWithDescriptions_Response {
 	repeated .CEcon_Asset assets = 1;
 	repeated .CEconItem_Description descriptions = 2;
-	repeated .CEcon_Asset missing_assets = 3 [(description) = "This list of assets in the original list we could not find in the users inventory"];
+	repeated .CEcon_Asset missing_assets = 3;
 	optional bool more_items = 4;
 	optional uint64 last_assetid = 5;
 	optional uint32 total_inventory_count = 6;
@@ -130,21 +130,8 @@ message CEcon_GetAssetClassInfo_Response {
 }
 
 service Econ {
-	option (service_description) = "A service that provides communication with the econ servers";
-
-	rpc GetInventoryItemsWithDescriptions (.CEcon_GetInventoryItemsWithDescriptions_Request) returns (.CEcon_GetInventoryItemsWithDescriptions_Response) {
-		option (method_description) = "Gets a set of items from a users inventory, along with descriptions";
-	}
-
-	rpc GetTradeOfferAccessToken (.CEcon_GetTradeOfferAccessToken_Request) returns (.CEcon_GetTradeOfferAccessToken_Response) {
-		option (method_description) = "Get the user's trade offer access token";
-	}
-
-	rpc ClientGetItemShopOverlayAuthURL (.CEcon_ClientGetItemShopOverlayAuthURL_Request) returns (.CEcon_ClientGetItemShopOverlayAuthURL_Response) {
-		option (method_description) = "Generates a URL which sets a secure cookie for in-game-browser itemshop purchases";
-	}
-
-	rpc GetAssetClassInfo (.CEcon_GetAssetClassInfo_Request) returns (.CEcon_GetAssetClassInfo_Response) {
-		option (method_description) = "Returns description information about the passed in asset classes";
-	}
+	rpc GetInventoryItemsWithDescriptions (.CEcon_GetInventoryItemsWithDescriptions_Request) returns (.CEcon_GetInventoryItemsWithDescriptions_Response);
+	rpc GetTradeOfferAccessToken (.CEcon_GetTradeOfferAccessToken_Request) returns (.CEcon_GetTradeOfferAccessToken_Response);
+	rpc ClientGetItemShopOverlayAuthURL (.CEcon_ClientGetItemShopOverlayAuthURL_Request) returns (.CEcon_ClientGetItemShopOverlayAuthURL_Response);
+	rpc GetAssetClassInfo (.CEcon_GetAssetClassInfo_Request) returns (.CEcon_GetAssetClassInfo_Response);
 }

@@ -6974,6 +6974,7 @@
     "Notification_FriendInviteRollup_Title": "Permintaan Pertemanan",
     "Notification_FriendInviteRollup_Body": "Kamu memiliki %1$s permintaan pertemanan baru",
     "Notification_FamilySharing_Title": "Berbagi dengan Keluarga",
+    "Notification_FamilySharing_StopPlaying": "Game yang dibagikan ini sudah digunakan dan akan ditutup dalam %1$s menit.",
     "Notification_FamilySharingAuthorization_Authorized": "Game milik %1$s sudah dapat kamu mainkan di komputer ini.",
     "Notification_FamilySharingAuthorization_Deuthorized": "%1$s telah menghapus otorisasi komputer ini. Beberapa game mungkin tidak dapat dimainkan.",
     "Notification_FamilySharingAuthorization_StopPlaying": "Hei, %1$s mau memainkan game ini! Kamu punya waktu %2$s menit lagi untuk bermain...",

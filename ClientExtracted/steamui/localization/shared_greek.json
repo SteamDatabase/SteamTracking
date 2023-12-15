@@ -2823,7 +2823,6 @@
     "FamilyManagement_ErrorNoMatch": "Αυτή η οικογένεια δεν υπάρχει.",
     "FamilyManagement_AccessDenied": "Δεν έχετε άδεια να εκτελέσετε αυτή την ενέργεια.",
     "FamilyManagement_ErrorGetUserCountry": "Αδυναμία καθορισμού της χώρας σας.",
-    "FamilyManagement_ErrorCountryCheck": "Ο λογαριασμός σας πρέπει να είναι στην ίδια χώρα με τον δημιουργό της ομάδας.",
     "FamilyManagement_ErrorLimitExceeded": "Αυτή η οικογένεια είναι σε περίοδο αδράνειας και μπορεί να αποδεχθεί ή να προσκαλέσει μόνο πρώην μέλη.",
     "FamilyManagement_ErrorFamilySizeLimitExceeded": "Αυτή η οικογένεια είναι πλήρης και δεν μπορεί να δεχτεί ή να προσκαλέσει νέα μέλη.",
     "FamilyManagement_ErrorAccountActivityLimitExceeded": "Αυτός ο λογαριασμός είναι σε περίοδο αδράνειας και μπορεί να επανενταχθεί μόνο στην προηγούμενη οικογένειά σας.",

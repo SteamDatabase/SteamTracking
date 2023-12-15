@@ -6979,6 +6979,7 @@
     "Notification_FriendInviteRollup_Title": "Venneforespørsler",
     "Notification_FriendInviteRollup_Body": "Du har %1$s nye venneforespørsler",
     "Notification_FamilySharing_Title": "Familiedeling",
+    "Notification_FamilySharing_StopPlaying": "Dette delte spillet er allerede i bruk og lukkes om %1$s minutter.",
     "Notification_FamilySharingAuthorization_Authorized": "Spillene til %1$s er nå tilgjengelige for deg å spille på denne datamaskinen.",
     "Notification_FamilySharingAuthorization_Deuthorized": "%1$s har fjernet godkjenning av denne datamaskinen. Noen spill kan være utilgjengelige.",
     "Notification_FamilySharingAuthorization_StopPlaying": "Hei! %1$s trenger dette delte spillet tilbake! Du har %2$s min med spilletid igjen …",

@@ -2823,7 +2823,6 @@
     "FamilyManagement_ErrorNoMatch": "Dit gezin bestaat niet.",
     "FamilyManagement_AccessDenied": "Je hebt geen toestemming om deze actie uit te voeren.",
     "FamilyManagement_ErrorGetUserCountry": "Je land kon niet bepaald worden.",
-    "FamilyManagement_ErrorCountryCheck": "Je account moet in hetzelfde land gevestigd zijn als de maker van de groep.",
     "FamilyManagement_ErrorLimitExceeded": "Dit gezin zit momenteel in een afkoelperiode en kan alleen vorige leden accepteren of uitnodigen.",
     "FamilyManagement_ErrorFamilySizeLimitExceeded": "Dit gezin is vol en kan geen nieuwe leden accepteren of uitnodigen.",
     "FamilyManagement_ErrorAccountActivityLimitExceeded": "Je account zit momenteel in een afkoelperiode. Je kunt alleen opnieuw lid worden van je vorige gezin.",

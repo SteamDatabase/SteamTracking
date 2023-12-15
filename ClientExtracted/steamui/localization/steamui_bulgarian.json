@@ -6974,6 +6974,7 @@
     "Notification_FriendInviteRollup_Title": "Покани за приятелство",
     "Notification_FriendInviteRollup_Body": "Имате %1$s нови покани за приятелство",
     "Notification_FamilySharing_Title": "Семейно споделяне",
+    "Notification_FamilySharing_StopPlaying": "Тази споделена игра вече се използва и ще се затвори след %1$s минути.",
     "Notification_FamilySharingAuthorization_Authorized": "Споделените игри на %1$s игри вече са достъпни за пускане на този компютър.",
     "Notification_FamilySharingAuthorization_Deuthorized": "%1$s е отменил пълномощното за този компютър. Някои игри може да са недостъпни.",
     "Notification_FamilySharingAuthorization_StopPlaying": "Здрасти, %1$s се нуждае тази споделена игра обратно! Остават Ви %2$s минути игрално време…",

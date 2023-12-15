@@ -4,8 +4,8 @@ __TEXT
 %
 __text
 __TEXT
-@h
-@h
+h
+h
 __stubs
 __TEXT
 __stub_helper
@@ -13,12 +13,12 @@ __TEXT
 __cstring
 __TEXT
 __gcc_except_tab__TEXT
-l-!
-l-!
+L-!
+L-!
 __const
 __TEXT
-@m"
-@m"
+m"
+m"
 __objc_methname
 __TEXT
 __unwind_info
@@ -105,7 +105,7 @@ h
 /usr/lib/libobjc.A.dylib
 &
 )
-0S.
+8S.
 22CJSCallbackFunc_HTMLJS
 15CJSCallbackFunc
 11CRefCountedI20CRefCountServiceBaseILb1E6CRefMTEE
@@ -170,6 +170,7 @@ s
 P
 z
 `
+(
 (
 (
 0
@@ -2594,7 +2595,6 @@ icon
 state
 ingame
 Unhandled notification type coming from Friends UI?
-Should not get here! VGUI friendsui no longer supported.
 m_unPID
 m_nBrowserID
 data
@@ -5302,7 +5302,7 @@ steamIDChat.GetEAccountType() == k_EAccountTypeChat
 k_EChatInstanceFlagClan & steamIDChat.GetUnAccountInstance()
 0
 0
-$
+U
 
 @
 @
@@ -5313,18 +5313,10 @@ x
 
 #
 @
+B!
 x
 0
-;!
-p
-0
-p
-0
-p
-0
-!
-!
-!
+))
 p
 0
 p
@@ -5335,6 +5327,13 @@ p
 0
 p
 0
+p
+0
+p
+0
+p
+0
+k
 H=
 p
 0
@@ -5467,7 +5466,6 @@ j
 j
 =
 0
-
 
 j
 j

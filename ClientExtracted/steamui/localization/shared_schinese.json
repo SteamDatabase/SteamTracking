@@ -2824,7 +2824,6 @@
     "FamilyManagement_ErrorNoMatch": "此家庭不存在。",
     "FamilyManagement_AccessDenied": "您没有执行此操作的权限。",
     "FamilyManagement_ErrorGetUserCountry": "无法确定您的国家/地区。",
-    "FamilyManagement_ErrorCountryCheck": "您的帐户必须与组创建者处于同一国家/地区。",
     "FamilyManagement_ErrorLimitExceeded": "此家庭目前处于冷却状态，只能接受或邀请以前的成员。",
     "FamilyManagement_ErrorFamilySizeLimitExceeded": "此家庭已满员，无法接受或邀请新成员。",
     "FamilyManagement_ErrorAccountActivityLimitExceeded": "您的帐户目前处于冷却状态，只能重新加入此前的家庭。",

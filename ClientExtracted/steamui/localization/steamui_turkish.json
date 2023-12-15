@@ -6974,6 +6974,7 @@
     "Notification_FriendInviteRollup_Title": "Arkadaşlık İstekleri",
     "Notification_FriendInviteRollup_Body": "%1$s yeni arkadaşlık davetiniz var",
     "Notification_FamilySharing_Title": "Aile Paylaşımı",
+    "Notification_FamilySharing_StopPlaying": "Bu paylaşılan oyun kullanımda ve %1$s dakika sonra kapanacak.",
     "Notification_FamilySharingAuthorization_Authorized": "%1$s kullanıcısının oyunlarını artık bu bilgisayarda oynayabilirsiniz.",
     "Notification_FamilySharingAuthorization_Deuthorized": "%1$s bu bilgisayarın yetkisini kaldırdı, bazı oyunlar erişime açık olmayabilir.",
     "Notification_FamilySharingAuthorization_StopPlaying": "Hey, %1$s bu paylaşılan oyunu geri istiyor! %2$s dakika oyun süreniz kaldı...",

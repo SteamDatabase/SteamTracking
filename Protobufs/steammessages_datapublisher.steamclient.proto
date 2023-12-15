@@ -6,14 +6,14 @@ option cc_generic_services = true;
 message CDataPublisher_ClientContentCorruptionReport_Notification {
 	optional uint32 appid = 1;
 	optional uint32 depotid = 2;
-	optional string download_source = 3 [(description) = "host name of download source"];
-	optional string objectid = 4 [(description) = "Chunk SHA or Manifest ID"];
-	optional uint32 cellid = 5 [(description) = "Client Cell ID"];
-	optional bool is_manifest = 6 [(description) = "The object is a manifest, not a chunk"];
-	optional uint64 object_size = 7 [(description) = "object size in bytes"];
-	optional uint32 corruption_type = 8 [(description) = "See EContentCorruptionType"];
-	optional bool used_https = 9 [(description) = "the request was HTTPS"];
-	optional bool oc_proxy_detected = 10 [(description) = "detected an OpenCache proxy"];
+	optional string download_source = 3;
+	optional string objectid = 4;
+	optional uint32 cellid = 5;
+	optional bool is_manifest = 6;
+	optional uint64 object_size = 7;
+	optional uint32 corruption_type = 8;
+	optional bool used_https = 9;
+	optional bool oc_proxy_detected = 10;
 }
 
 message CDataPublisher_ClientUpdateAppJob_Notification {
@@ -41,42 +41,42 @@ message CDataPublisher_ClientUpdateAppJob_Notification {
 }
 
 message CDataPublisher_GetVRDeviceInfo_Request {
-	optional uint32 month_count = 1 [(description) = "Number of months for which to generate a report"];
+	optional uint32 month_count = 1;
 }
 
 message CDataPublisher_GetVRDeviceInfo_Response {
 	message Device {
-		optional string name = 1 [(description) = "Name to show for this device"];
-		optional uint32 ref = 2 [(description) = "Reference number for this device"];
-		optional uint32 aggregation_ref = 3 [(description) = "Reference number to aggregate this device under"];
-		optional uint32 total = 4 [(description) = "Sum of all the counts"];
-		optional string driver = 5 [(description) = "driver name reported by the user"];
-		optional int32 device_class = 6 [(description) = "Class of the device. HMD=1, controller=2, tracker=3, base=4"];
+		optional string name = 1;
+		optional uint32 ref = 2;
+		optional uint32 aggregation_ref = 3;
+		optional uint32 total = 4;
+		optional string driver = 5;
+		optional int32 device_class = 6;
 	}
 
-	repeated .CDataPublisher_GetVRDeviceInfo_Response.Device device = 1 [(description) = "Result devices"];
+	repeated .CDataPublisher_GetVRDeviceInfo_Response.Device device = 1;
 }
 
 message CDataPublisher_SetVRDeviceInfoAggregationReference_Request {
-	optional uint32 ref = 1 [(description) = "Reference number in the VRDeviceInfo table for the entry to set"];
-	optional uint32 aggregation_ref = 2 [(description) = "Aggregation to set the entry to"];
+	optional uint32 ref = 1;
+	optional uint32 aggregation_ref = 2;
 }
 
 message CDataPublisher_SetVRDeviceInfoAggregationReference_Response {
-	optional uint32 result = 1 [(description) = "k_EResultOK, etc."];
+	optional uint32 result = 1;
 }
 
 message CDataPublisher_AddVRDeviceInfo_Request {
-	optional string manufacturer = 1 [(description) = "Manufacturer for the new device"];
-	optional string model = 2 [(description) = "Model for the new device"];
-	optional string driver = 3 [(description) = "driver name (not including driver_). e.g. lighthouse, oculus, holographic"];
-	optional string controller_type = 4 [(description) = "controller type for the device. Can be an empty string for devices with no inputs"];
-	optional int32 device_class = 5 [(description) = "Class of the device. HMD=1, controller=2, tracker=3, base=4"];
+	optional string manufacturer = 1;
+	optional string model = 2;
+	optional string driver = 3;
+	optional string controller_type = 4;
+	optional int32 device_class = 5;
 }
 
 message CDataPublisher_AddVRDeviceInfo_Response {
-	optional uint32 result = 1 [(description) = "k_EResultOK, etc."];
-	optional uint32 ref = 2 [(description) = "The reference number of the inserted device"];
+	optional uint32 result = 1;
+	optional uint32 ref = 2;
 }
 
 message CValveHWSurvey_GetSurveySchedule_Request {
@@ -90,27 +90,13 @@ message CValveHWSurvey_GetSurveySchedule_Response {
 }
 
 service DataPublisher {
-	option (service_description) = "Data Publisher (DP) server services";
-
 	rpc ClientContentCorruptionReport (.CDataPublisher_ClientContentCorruptionReport_Notification) returns (.NoResponse);
 	rpc ClientUpdateAppJobReport (.CDataPublisher_ClientUpdateAppJob_Notification) returns (.NoResponse);
-	rpc GetVRDeviceInfo (.CDataPublisher_GetVRDeviceInfo_Request) returns (.CDataPublisher_GetVRDeviceInfo_Response) {
-		option (method_description) = "Generate a debug report of what devices are in the survey";
-	}
-
-	rpc SetVRDeviceInfoAggregationReference (.CDataPublisher_SetVRDeviceInfoAggregationReference_Request) returns (.CDataPublisher_SetVRDeviceInfoAggregationReference_Response) {
-		option (method_description) = "Set the rollup reference of a single VR device";
-	}
-
-	rpc AddVRDeviceInfo (.CDataPublisher_AddVRDeviceInfo_Request) returns (.CDataPublisher_AddVRDeviceInfo_Response) {
-		option (method_description) = "Adds a device to the VRDeviceInfo table for the hardware survey";
-	}
+	rpc GetVRDeviceInfo (.CDataPublisher_GetVRDeviceInfo_Request) returns (.CDataPublisher_GetVRDeviceInfo_Response);
+	rpc SetVRDeviceInfoAggregationReference (.CDataPublisher_SetVRDeviceInfoAggregationReference_Request) returns (.CDataPublisher_SetVRDeviceInfoAggregationReference_Response);
+	rpc AddVRDeviceInfo (.CDataPublisher_AddVRDeviceInfo_Request) returns (.CDataPublisher_AddVRDeviceInfo_Response);
 }
 
 service ValveHWSurvey {
-	option (service_description) = "ValveHWSurvey";
-
-	rpc GetSurveySchedule (.CValveHWSurvey_GetSurveySchedule_Request) returns (.CValveHWSurvey_GetSurveySchedule_Response) {
-		option (method_description) = "Should I run the survey";
-	}
+	rpc GetSurveySchedule (.CValveHWSurvey_GetSurveySchedule_Request) returns (.CValveHWSurvey_GetSurveySchedule_Response);
 }

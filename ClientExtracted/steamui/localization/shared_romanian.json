@@ -2823,7 +2823,6 @@
     "FamilyManagement_ErrorNoMatch": "Acest grup familial nu există.",
     "FamilyManagement_AccessDenied": "Nu ai permisiunea de a efectua acestă acțiune.",
     "FamilyManagement_ErrorGetUserCountry": "Țara ta nu a putut fi determinată.",
-    "FamilyManagement_ErrorCountryCheck": "Contul tău trebuie să se afle în aceeași țară cu cea a creatorului grupului.",
     "FamilyManagement_ErrorLimitExceeded": "Acest grup familial este în prezent supus unei perioade de așteptare și poate accepta sau invita doar foști membri.",
     "FamilyManagement_ErrorFamilySizeLimitExceeded": "Acest grup familial este plin și nu poate accepta sau invita noi membri.",
     "FamilyManagement_ErrorAccountActivityLimitExceeded": "Contul tău este momentan supus unei perioade de așteptare și se poate alătura doar grupului tău familial anterior.",

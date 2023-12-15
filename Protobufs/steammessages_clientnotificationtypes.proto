@@ -147,6 +147,7 @@ message CClientNotificationFamilySharingDeviceAuthorizationChanged {
 message CClientNotificationFamilySharingStopPlaying {
 	optional uint32 accountid_owner = 1;
 	optional uint32 seconds_remaining = 2;
+	optional uint32 appid = 3;
 }
 
 message CClientNotificationFamilySharingLibraryAvailable {

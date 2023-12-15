@@ -2823,7 +2823,6 @@
     "FamilyManagement_ErrorNoMatch": "Denne familie findes ikke.",
     "FamilyManagement_AccessDenied": "Du har ikke tilladelse til at udføre denne handling.",
     "FamilyManagement_ErrorGetUserCountry": "Kunne ikke afgøre dit land.",
-    "FamilyManagement_ErrorCountryCheck": "Din konto skal være i samme land som opretteren af gruppen.",
     "FamilyManagement_ErrorLimitExceeded": "Denne familie er i øjeblikket på nedkøling og kan kun acceptere eller invitere tidligere medlemmer.",
     "FamilyManagement_ErrorFamilySizeLimitExceeded": "Familien er fuld og kan ikke acceptere eller invitere nye medlemmer.",
     "FamilyManagement_ErrorAccountActivityLimitExceeded": "Din konto er i øjeblikket på nedkøling og kan kun tilslutte sig den tidligere familie.",

@@ -2823,7 +2823,6 @@
     "FamilyManagement_ErrorNoMatch": "Perhettä ei ole olemassa.",
     "FamilyManagement_AccessDenied": "Sinulla ei ole oikeuksia toiminnon suorittamiseen.",
     "FamilyManagement_ErrorGetUserCountry": "Maatasi ei voitu määrittää.",
-    "FamilyManagement_ErrorCountryCheck": "Tilin on oltava samassa maassa kuin ryhmän luojan tili.",
     "FamilyManagement_ErrorLimitExceeded": "Valittu perhe on tällä hetkellä jäähyllä ja voi hyväksyä ainoastaan ryhmään aiemmin kuuluneita jäseniä tai lähettää heille kutsuja.",
     "FamilyManagement_ErrorFamilySizeLimitExceeded": "Perheessä ei ole tilaa, eikä siihen voida hyväksyä tai kutsua uusia jäseniä.",
     "FamilyManagement_ErrorAccountActivityLimitExceeded": "Tili on tällä hetkellä jäähyllä ja sillä voi liittyä ainoastaan perheeseen, jonka jäsenenä olet ollut aikaisemmin.",

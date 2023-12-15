@@ -2823,7 +2823,6 @@
     "FamilyManagement_ErrorNoMatch": "ไม่มีครอบครัวนี้",
     "FamilyManagement_AccessDenied": "คุณไม่มีสิทธิ์ที่จะดำเนินการนี้",
     "FamilyManagement_ErrorGetUserCountry": "ไม่สามารถระบุประเทศของคุณได้",
-    "FamilyManagement_ErrorCountryCheck": "บัญชีของคุณจะต้องอยู่ในประเทศเดียวกันกับผู้ที่สร้างกลุ่มนี้ขึ้นมา",
     "FamilyManagement_ErrorLimitExceeded": "ขณะนี้ครอบครัวนี้อยู่ในช่วงคูลดาวน์และทำได้เพียงแค่รับหรือเชิญสมาชิกเก่าเท่านั้น",
     "FamilyManagement_ErrorFamilySizeLimitExceeded": "ครอบครัวนี้มีสมาชิกครบจำนวนสูงสุดแล้วไม่สามารถรับหรือเชิญสมาชิกใหม่ได้",
     "FamilyManagement_ErrorAccountActivityLimitExceeded": "ขณะนี้บัญชีของคุณอยู่ในช่วงคูลดาวน์และทำได้เพียงแค่กลับเข้าร่วมเป็นสมาชิกในครอบครัวก่อนหน้านี้เท่านั้น",

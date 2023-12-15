@@ -62,9 +62,9 @@ enum EPartnerLinkTrackingBackfillSource {
 }
 
 message CStore_RegisterCDKey_Request {
-	optional string activation_code = 1 [(description) = "Key string to register on the logged in user's account"];
-	optional int32 purchase_platform = 2 [(description) = "EPurchasePlatform for platform of request"];
-	optional bool is_request_from_client = 3 [(description) = "True if the request was initiated from inside the Steam client"];
+	optional string activation_code = 1;
+	optional int32 purchase_platform = 2;
+	optional bool is_request_from_client = 3;
 }
 
 message CStore_PurchaseReceiptInfo {
@@ -95,8 +95,8 @@ message CStore_PurchaseReceiptInfo {
 }
 
 message CStore_RegisterCDKey_Response {
-	optional int32 purchase_result_details = 1 [(description) = "EPurchaseResultDetails from key activation"];
-	optional .CStore_PurchaseReceiptInfo purchase_receipt_info = 2 [(description) = "Purchase receipt info"];
+	optional int32 purchase_result_details = 1;
+	optional .CStore_PurchaseReceiptInfo purchase_receipt_info = 2;
 }
 
 message CStore_GetMostPopularTags_Request {
@@ -122,7 +122,7 @@ message CStore_GetLocalizedNameForTags_Response {
 		optional uint32 tagid = 1;
 		optional string english_name = 2;
 		optional string name = 3;
-		optional string normalized_name = 4 [(description) = "english_name, lowercase, with homoglyphs replaced and spaces and some punctuation removed."];
+		optional string normalized_name = 4;
 	}
 
 	repeated .CStore_GetLocalizedNameForTags_Response.Tag tags = 1;
@@ -130,7 +130,7 @@ message CStore_GetLocalizedNameForTags_Response {
 
 message CStore_GetTagList_Request {
 	optional string language = 1;
-	optional string have_version_hash = 2 [(description) = "The hash returned in the last call.  Will return no results if the list hasn't changed."];
+	optional string have_version_hash = 2;
 }
 
 message CStore_GetTagList_Response {
@@ -139,7 +139,7 @@ message CStore_GetTagList_Response {
 		optional string name = 2;
 	}
 
-	optional string version_hash = 1 [(description) = "Pass in future calls, server will only return data if it has changed (hash is per-language)."];
+	optional string version_hash = 1;
 	repeated .CStore_GetTagList_Response.Tag tags = 2;
 }
 
@@ -150,13 +150,13 @@ message CStoreDiscoveryQueueSettings {
 	optional bool full_controller_support = 7;
 	optional bool native_steam_controller = 8;
 	optional bool include_coming_soon = 9;
-	repeated uint32 excluded_tagids = 10 [(description) = "Don't return any games with these tags."];
+	repeated uint32 excluded_tagids = 10;
 	optional bool exclude_early_access = 11;
 	optional bool exclude_videos = 12;
 	optional bool exclude_software = 13;
 	optional bool exclude_dlc = 14;
 	optional bool exclude_soundtracks = 15;
-	repeated uint32 featured_tagids = 16 [(description) = "Must be marked with one of these featured tagids (for sale pages and events)"];
+	repeated uint32 featured_tagids = 16;
 }
 
 message CStore_GetDiscoveryQueue_Request {
@@ -222,13 +222,13 @@ message CStore_GetUserGameInterestState_Response {
 	optional bool ignored = 3;
 	optional bool following = 4;
 	repeated .EStoreDiscoveryQueueType in_queues = 5;
-	repeated .EStoreDiscoveryQueueType queues_with_skip = 6 [(description) = "Discovery queue types where the user has skipped this game."];
-	repeated int32 queue_items_remaining = 7 [(description) = "# of items remaining in the discovery queue - matches the same order as in_queues"];
-	repeated uint32 queue_items_next_appid = 8 [(description) = "the next appid in the queue - matches the same order as in_queues"];
-	optional bool temporarily_owned = 9 [(description) = "The user owns the game temporarily, eg a rental or free weekend"];
+	repeated .EStoreDiscoveryQueueType queues_with_skip = 6;
+	repeated int32 queue_items_remaining = 7;
+	repeated uint32 queue_items_next_appid = 8;
+	optional bool temporarily_owned = 9;
 	repeated .CStore_GetUserGameInterestState_Response.InQueue queues = 10;
-	optional int32 ignored_reason = 11 [(description) = "The ERecommendationIgnoreReason why the user ignored the app"];
-	optional .EPlaytestStatus beta_status = 12 [default = k_ETesterStatusNone, (description) = "User interest or membership in the playtest for this app if any"];
+	optional int32 ignored_reason = 11;
+	optional .EPlaytestStatus beta_status = 12 [default = k_ETesterStatusNone];
 }
 
 message CStore_GetDiscoveryQueueSkippedApps_Request {
@@ -318,10 +318,10 @@ message CReservationPositionMessage {
 	optional uint32 edistributor = 1;
 	optional string product_identifier = 2;
 	optional uint32 start_queue_position = 3;
-	optional uint32 rtime_estimated_notification = 4 [(description) = "When we estimate the users will receive a message by"];
-	optional string localization_token = 5 [(description) = "Localization token that we want to use to format the above number"];
-	optional uint32 accountid = 6 [(description) = "User who created this entry"];
-	optional uint32 rtime_created = 7 [(description) = "When this entry was created"];
+	optional uint32 rtime_estimated_notification = 4;
+	optional string localization_token = 5;
+	optional uint32 accountid = 6;
+	optional uint32 rtime_created = 7;
 }
 
 message CStore_SetReservationPositionMessage_Request {
@@ -375,94 +375,30 @@ message CStore_StorePreferencesChanged_Notification {
 }
 
 service Store {
-	option (service_description) = "A service to access store data.";
-
-	rpc RegisterCDKey (.CStore_RegisterCDKey_Request) returns (.CStore_RegisterCDKey_Response) {
-		option (method_description) = "Registers a CD key with Steam on the logged in user's account";
-	}
-
-	rpc GetMostPopularTags (.CStore_GetMostPopularTags_Request) returns (.CStore_GetMostPopularTags_Response) {
-		option (method_description) = "Get all whitelisted tags, with localized names.";
-	}
-
-	rpc GetLocalizedNameForTags (.CStore_GetLocalizedNameForTags_Request) returns (.CStore_GetLocalizedNameForTags_Response) {
-		option (method_description) = "Gets tag names in a different language";
-	}
-
-	rpc GetTagList (.CStore_GetTagList_Request) returns (.CStore_GetTagList_Response) {
-		option (method_description) = "Get the list of tags, localized";
-	}
-
-	rpc GetDiscoveryQueue (.CStore_GetDiscoveryQueue_Request) returns (.CStore_GetDiscoveryQueue_Response) {
-		option (method_description) = "Get a list of games for the user to explore on the store.";
-	}
-
-	rpc GetDiscoveryQueueSettings (.CStore_GetDiscoveryQueueSettings_Request) returns (.CStore_GetDiscoveryQueueSettings_Response) {
-		option (method_description) = "Get the settings that were used to generate a user's discovery queue.";
-	}
-
-	rpc SkipDiscoveryQueueItem (.CStore_SkipDiscoveryQueueItem_Request) returns (.CStore_SkipDiscoveryQueueItem_Response) {
-		option (method_description) = "Skip an item in the user's queue.";
-	}
-
-	rpc GetUserGameInterestState (.CStore_GetUserGameInterestState_Request) returns (.CStore_GetUserGameInterestState_Response) {
-		option (method_description) = "Get information about a user's relationship to a game - ownership, wishlist, discovery queue state, etc.";
-	}
-
-	rpc GetDiscoveryQueueSkippedApps (.CStore_GetDiscoveryQueueSkippedApps_Request) returns (.CStore_GetDiscoveryQueueSkippedApps_Response) {
-		option (method_description) = "Returns all the apps skipped so far in the given discovery queue for the given user.";
-	}
-
-	rpc ReportApp (.CStore_ReportApp_Request) returns (.CStore_ReportApp_Response) {
-		option (method_description) = "User is reporting the app";
-	}
-
-	rpc GetStorePreferences (.CStore_GetStorePreferences_Request) returns (.CStore_GetStorePreferences_Response) {
-		option (method_description) = "Returns the desired ratings board and maximum rating to show on the store";
-	}
-
-	rpc GetTrendingAppsAmongFriends (.CStore_GetTrendingAppsAmongFriends_Request) returns (.CStore_GetTrendingAppsAmongFriends_Response) {
-		option (method_description) = "Get trending apps among friends";
-	}
-
-	rpc MigratePartnerLinkTracking (.CStore_MigratePartnerLinkTracking_Notification) returns (.NoResponse) {
-		option (method_description) = "Move UTM data from the PartnerLinkTrackingLogNoUser table to the PartnerLinkTrackingLogWithUser table";
-	}
-
-	rpc UpdatePackageReservations (.CStore_UpdatePackageReservations_Request) returns (.CStore_UpdatePackageReservations_Response) {
-		option (method_description) = "Updates the reservations for a user";
-	}
-
-	rpc SetReservationPositionMessage (.CStore_SetReservationPositionMessage_Request) returns (.CStore_SetReservationPositionMessage_Response) {
-		option (method_description) = "Creates/Update a reservation position message for people in the queue or next queue position for people deciding to join";
-	}
-
-	rpc DeleteReservationPositionMessage (.CStore_DeleteReservationPositionMessage_Request) returns (.CStore_DeleteReservationPositionMessage_Response) {
-		option (method_description) = "Marks a position is deleted and will no longer be surfaced";
-	}
-
-	rpc GetAllReservationPositionMessages (.CStore_GetAllReservationPositionMessages_Request) returns (.CStore_GetAllReservationPositionMessages_Response) {
-		option (method_description) = "Marks a position is deleted and will no longer be surfaced";
-	}
-
-	rpc ReloadAllReservationPositionMessages (.CStore_ReloadAllReservationPositionMessages_Notification) returns (.NoResponse) {
-		option (method_description) = "Refreshes all of the caches through the store features servers";
-	}
-
-	rpc SetCompatibilityFeedback (.CSteamDeckCompatibility_SetFeedback_Request) returns (.CSteamDeckCompatibility_SetFeedback_Response) {
-		option (method_description) = "Upserts user feedback regarding the published Steam Deck Compatibility rating for a game";
-	}
-
-	rpc ShouldPromptForCompatibilityFeedback (.CSteamDeckCompatibility_ShouldPrompt_Request) returns (.CSteamDeckCompatibility_ShouldPrompt_Response) {
-		option (method_description) = "Returns whether we should ask the user if the compatibility rating is correct";
-	}
+	rpc RegisterCDKey (.CStore_RegisterCDKey_Request) returns (.CStore_RegisterCDKey_Response);
+	rpc GetMostPopularTags (.CStore_GetMostPopularTags_Request) returns (.CStore_GetMostPopularTags_Response);
+	rpc GetLocalizedNameForTags (.CStore_GetLocalizedNameForTags_Request) returns (.CStore_GetLocalizedNameForTags_Response);
+	rpc GetTagList (.CStore_GetTagList_Request) returns (.CStore_GetTagList_Response);
+	rpc GetDiscoveryQueue (.CStore_GetDiscoveryQueue_Request) returns (.CStore_GetDiscoveryQueue_Response);
+	rpc GetDiscoveryQueueSettings (.CStore_GetDiscoveryQueueSettings_Request) returns (.CStore_GetDiscoveryQueueSettings_Response);
+	rpc SkipDiscoveryQueueItem (.CStore_SkipDiscoveryQueueItem_Request) returns (.CStore_SkipDiscoveryQueueItem_Response);
+	rpc GetUserGameInterestState (.CStore_GetUserGameInterestState_Request) returns (.CStore_GetUserGameInterestState_Response);
+	rpc GetDiscoveryQueueSkippedApps (.CStore_GetDiscoveryQueueSkippedApps_Request) returns (.CStore_GetDiscoveryQueueSkippedApps_Response);
+	rpc ReportApp (.CStore_ReportApp_Request) returns (.CStore_ReportApp_Response);
+	rpc GetStorePreferences (.CStore_GetStorePreferences_Request) returns (.CStore_GetStorePreferences_Response);
+	rpc GetTrendingAppsAmongFriends (.CStore_GetTrendingAppsAmongFriends_Request) returns (.CStore_GetTrendingAppsAmongFriends_Response);
+	rpc MigratePartnerLinkTracking (.CStore_MigratePartnerLinkTracking_Notification) returns (.NoResponse);
+	rpc UpdatePackageReservations (.CStore_UpdatePackageReservations_Request) returns (.CStore_UpdatePackageReservations_Response);
+	rpc SetReservationPositionMessage (.CStore_SetReservationPositionMessage_Request) returns (.CStore_SetReservationPositionMessage_Response);
+	rpc DeleteReservationPositionMessage (.CStore_DeleteReservationPositionMessage_Request) returns (.CStore_DeleteReservationPositionMessage_Response);
+	rpc GetAllReservationPositionMessages (.CStore_GetAllReservationPositionMessages_Request) returns (.CStore_GetAllReservationPositionMessages_Response);
+	rpc ReloadAllReservationPositionMessages (.CStore_ReloadAllReservationPositionMessages_Notification) returns (.NoResponse);
+	rpc SetCompatibilityFeedback (.CSteamDeckCompatibility_SetFeedback_Request) returns (.CSteamDeckCompatibility_SetFeedback_Response);
+	rpc ShouldPromptForCompatibilityFeedback (.CSteamDeckCompatibility_ShouldPrompt_Request) returns (.CSteamDeckCompatibility_ShouldPrompt_Response);
 }
 
 service StoreClient {
-	option (service_description) = "Steam store to client notifications";
 	option (service_execution_site) = k_EProtoExecutionSiteSteamClient;
 
-	rpc NotifyStorePreferencesChanged (.CStore_StorePreferencesChanged_Notification) returns (.NoResponse) {
-		option (method_description) = "Notification from server to client that the user's store preferences have changed";
-	}
+	rpc NotifyStorePreferencesChanged (.CStore_StorePreferencesChanged_Notification) returns (.NoResponse);
 }

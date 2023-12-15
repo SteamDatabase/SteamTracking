@@ -15,9 +15,5 @@ message CWorkshop_GetEULAStatus_Response {
 }
 
 service Workshop {
-	option (service_description) = "A service to access published file data";
-
-	rpc GetEULAStatus (.CWorkshop_GetEULAStatus_Request) returns (.CWorkshop_GetEULAStatus_Response) {
-		option (method_description) = "Retrieve the status of the user's EULA acceptance.";
-	}
+	rpc GetEULAStatus (.CWorkshop_GetEULAStatus_Request) returns (.CWorkshop_GetEULAStatus_Response);
 }

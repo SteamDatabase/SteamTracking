@@ -20,13 +20,6 @@ message CGameNetworking_ReleaseFakeIP_Notification {
 }
 
 service GameNetworking {
-	option (service_description) = "Services that support P2P networking";
-
-	rpc AllocateFakeIP (.CGameNetworking_AllocateFakeIP_Request) returns (.CGameNetworking_AllocateFakeIP_Response) {
-		option (method_description) = "Client is asking to lease a FakeIP.";
-	}
-
-	rpc NotifyReleaseFakeIP (.CGameNetworking_ReleaseFakeIP_Notification) returns (.NoResponse) {
-		option (method_description) = "Client informs server it is done with the FakeIP.";
-	}
+	rpc AllocateFakeIP (.CGameNetworking_AllocateFakeIP_Request) returns (.CGameNetworking_AllocateFakeIP_Response);
+	rpc NotifyReleaseFakeIP (.CGameNetworking_ReleaseFakeIP_Notification) returns (.NoResponse);
 }

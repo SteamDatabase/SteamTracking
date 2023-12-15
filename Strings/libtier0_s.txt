@@ -431,8 +431,8 @@ Steam
 steamwebhelper
 Steam Helper
 cefwebhelper
-Dec 13 2023
-16:35:48
+Dec 15 2023
+06:55:55
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 CatchAndWriteContext_t::Invoke with bogus argc/argv
@@ -448,6 +448,7 @@ IVALIDATE001
 -steamdeck
 -tesla
 GAMESCOPE_WAYLAND_DISPLAY
+WSL_DISTRO_NAME
 /System/Library/CoreServices/SystemVersion.plist
 ProductBuildVersion
 com.valvesoftware.steam
@@ -990,7 +991,7 @@ Assign
 Increment
 +Decrement
 +Exchange
-+CompareExchange
+,CompareExchange
 PointerIf
 Current
 Handle
@@ -1011,7 +1012,7 @@ Handle
 IdActive
 "Active
 NoWindow
-%4WaitEj
+&4WaitEj
 #1Ev
 #1Ev
 2CloseSemaphoreInternalEibPKc
@@ -1033,7 +1034,7 @@ Event
 '3SetEv
 'PKcbb
 3CreateAnonymousSyncObjectInternalEbb
-'PKcbb
+(PKcbb
 SignalThreadSyncObjectInternalEv
 (EnsureSemaphoreClearedInternalEi
 ResetEv
@@ -1056,7 +1057,7 @@ FullMutex9IsCreatorEv
 +8BIsValidEv
 ,Pointer
 Pointer
-,1Ev
+-1Ev
 -1Ev
 -2LockForWriteEv
 WaitForReadEv
@@ -1077,7 +1078,7 @@ GetNameEv
 20ThreadProcEPv
 JoinEj
 0StopEi
-1InitEv
+2InitEv
 etNameEPKc
 0uspendEv
 1YieldEv
@@ -1088,23 +1089,23 @@ tartEm
 ResumeEv
 2OnExitEv
 ListBase_
-2Queue
+3Queue
 Init
 3SwapList
 3UnsafePeek
 Base_
 Init
-3Unsafe
+4Unsafe
 PopIntoFreeList
 4UnsafeDebugCheck
 Peek
 4Dummy
 CValidator
-4SteamVProf
+5SteamVProf
 64PushEPKcPvS1_
 2EibP20IMemBlockClaimedList
 51EibP20IMemBlockClaimedList
-51Ev
+61Ev
 1UnlockValidationLocksEv
 60ClaimUntrackedMemoryEm
 8SetAllocSizeFilterEi
@@ -1117,7 +1118,7 @@ CValidator
 PopEv
 80BExcludeAllocationFromTrackingEPKci
 CValidator9IsClaimedEPKv
-8SteamVProf9CVProfile
+9SteamVProf9CVProfile
 Claim
 9RenderLeaksEm
 :DiffAgainstEPS_
@@ -1146,9 +1147,9 @@ GetProfileForCurrentThread
 >EnterScopeCurrentThread
 G6ResumeEv
 I30DestructAndFreeNodesExceptRootEv
->2Ev
+?2Ev
 9AddProfileForThreadEPNS_9CVProfileEjP17_opaque_pthread_t
-?8BIsProfilePtrValidEPNS_9CVProfileE
+@8BIsProfilePtrValidEPNS_9CVProfileE
 O6EnableDumpSpikesEi
 D2OutputReportEiPKci
 L1GetThreadIDEv
@@ -1162,7 +1163,7 @@ IDumpNodesEPNS_10CVProfNodeES2_ib
 B1Ev
 D6ResumeEv
 E9ResetPeakEv
-E8ValidateER10CValidatorPKc
+F8ValidateER10CValidatorPKc
 2EPNS_9CVProfileEPKcPS0_17EVProfBugdetGroup
 C1EPNS_9CVProfileEPKcPS0_17EVProfBugdetGroup
 ResetEv
@@ -1198,7 +1199,7 @@ LValidateER10CValidatorPKc
 CreateBudgetGroupsEv
 MAddBudgetGroupNameE17EVProfBugdetGroupiPKc
 M1Ev
-N4StartProfilingAllThreadsEfi
+O4StartProfilingAllThreadsEfi
 O3StopProfilingAllThreadsEv
 O0GetAllThreadProfilesEPNS_14CVProfileArrayE
 CleanupUnusedProfilesEv
@@ -1218,8 +1219,8 @@ S16CAdHocValidation
 S31CAdHocValidation_SimpleCallback
 ClockSpeed
 TpMemAllocSteam
-TbInException
-TVProf
+UbInException
+UVProf
 TSecondsMultiplier
 crosecondsMultiplier
 TllisecondsMultiplier
@@ -1236,7 +1237,7 @@ pI#WnI
 789>>8$@'
 RO""@HF
 			BA
-Y@@@E88
+Y@@@EE88
 iF=+
 E5'$
 	   rt
@@ -1324,6 +1325,7 @@ _Plat_IsSteamDeck
 _Plat_IsSteamOS
 _Plat_IsSteamOS3
 _Plat_IsTesla
+_Plat_IsWSL
 _Plat_MSTime
 _Plat_MSTime64
 _Plat_OutputDebugString
@@ -1817,38 +1819,36 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-CxZeh
-LooJ
->^IE
-GK%R
-nY?Q
-$kvMP
-pUS@a
-d$8 
+P@/~
+U)IJ
+6hURl
+ot+1
+kpm5b ~:xA}
+ fRp
+b:zY&<
 JB8CRKh
-_55c
-%R>^
+j42bN$
+]iok
+2EDu/
+-X%a
+SV,JD
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-2@	0V4
-DN"[bw
-v"S:t
-	vqk
-!W+kjL
-$b;~B
-W'Zg
-tSZi
-?Rg_
-Y69f
-x@\a
-C([ddf
-adNr
-C-#_
-!,x&
-LT2~
-PRS5
+3XFP
+5oX@I
+7lEaE
+GV.(
+u6Fk
+rrjQ
+bC([ddf
+K+7|
+'%/`6
+ d$24
+w	3X.
+?XT5)R
+:7X!pSq
 Apple Inc.1&0$
 Apple Certification Authority1
 Apple Root CA0
@@ -1904,8 +1904,8 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231214003549Z0/
-hVbY0-
+231215145556Z0/
+ytc4_
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -1913,37 +1913,38 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		aTcBotX+qwQdZ7Cu3UMJumhWYlk=
+		0w16HLY04shiate+h7/9lGhzPvU=
 		</data>
 		<data>
-		oSrI9WlajxCdH49BU+wAguGbtjE=
+		uW5bd9KfieAzDaGsL/PEPsDC2Xo=
 		</data>
 	</array>
 </dict>
 </plist>
-H;A>
-H#9w
-Zyw~
-]h!h
-/e|:
-B$b!
-20231214003557Z0
+({.3
+u+9@
+9h|;
+20231215145613Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231116212004Z
-231228212003Z0B1
-Timestamp Signer NWK11
+231214210037Z
+240125210036Z0B1
+Timestamp Signer NWK21
 Apple Inc.1
- {s:9
-=}3]	j
+`\ju
+zDi	N
+Ip/?y
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-.9sDq
-jv-Gc{
+D(*T
+|%bC
+6vO:
+`;X)
+R{F0
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -1982,11 +1983,10 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231214003557Z0#
-S)X{
-/1E?
-39rM
-FLNZ]
+231215145613Z0#
+$@7f
+Dm@I
+SKZo
 __TEXT
 __text
 __TEXT
@@ -2065,7 +2065,6 @@ AWAVAUATSPE
 [A\A]A^A_]
 AVSH
 [A^]
-9=jR
 AVSH
 [A^]
 AVSH
@@ -2470,7 +2469,7 @@ D$@H
 d$ M
 X[A\A]A^A_]
 AWAVSH
-Lc5k
+Lc5{
 x(Hc
 VUUUH
 X[A^A_]
@@ -2731,8 +2730,8 @@ Steam
 steamwebhelper
 Steam Helper
 cefwebhelper
-Dec 13 2023
-16:35:48
+Dec 15 2023
+06:55:55
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 CatchAndWriteContext_t::Invoke with bogus argc/argv
@@ -2748,6 +2747,7 @@ IVALIDATE001
 -steamdeck
 -tesla
 GAMESCOPE_WAYLAND_DISPLAY
+WSL_DISTRO_NAME
 /System/Library/CoreServices/SystemVersion.plist
 ProductBuildVersion
 com.valvesoftware.steam
@@ -3318,7 +3318,7 @@ NoWindow
 )7IsSemaphoreOrphanedInternalEii
 %31CAdHocValidation_SimpleCallback10DoValidateER10CValidator
 6SteamThreadTools
-%7CThread
+&7CThread
 7CThreadSyncObjectntEv
 &6CThread
 3AssertUseableEv
@@ -3336,7 +3336,7 @@ SignalThreadSyncObjectInternalEv
 ResetEv
 )CheckEv
 Semaphore
-)FullMutex
+*FullMutex
 *LocalBase
 *7ReleaseEl
 2Ell
@@ -3350,18 +3350,18 @@ FullMutex9IsCreatorEv
 +1Ev
 +1Ev
 3GetEv
-+8BIsValidEv
+,8BIsValidEv
 ,Pointer
 Pointer
 -1Ev
 -1Ev
--2LockForWriteEv
+.2LockForWriteEv
 WaitForReadEv
 .UnlockWriteEv
 	C2Ev
 29TerminateEi
-.1Ev
-00Ev
+/1Ev
+10Ev
 /9GetResultEv
 /7IsAliveEv
 7BHasValidThreadIDEv
@@ -3395,10 +3395,10 @@ Init
 PopIntoFreeList
 4UnsafeDebugCheck
 Peek
-4Dummy
+5Dummy
 CValidator
 5SteamVProf
-64PushEPKcPvS1_
+74PushEPKcPvS1_
 2EibP20IMemBlockClaimedList
 61EibP20IMemBlockClaimedList
 61Ev
@@ -3426,7 +3426,7 @@ TrackedKeyEP11CTrackItemsPvPm
 FinalizeEv
 ;ValidateERS_PKc
 C2Ev
-;17StaticValidateAllER10CValidator
+<17StaticValidateAllER10CValidator
 <8s_pFirstE
 <1Ev
 2EPFvR10CValidatorE
@@ -3476,19 +3476,19 @@ StartEv
 GPauseEv
 IResetEv
 StopEv
-HDumpEPKcz
-L4BProfileHasNodesOutsideBudgetGroup_RecursiveEPNS_10CVProfNodeEi
+IDumpEPKcz
+M4BProfileHasNodesOutsideBudgetGroup_RecursiveEPNS_10CVProfNodeEi
 M0GetFrameTimeOutsideBudgetGroup_RecursiveEPNS_10CVProfNodeE17EVProfBugdetGroup
 MTermEv
 18GetBudgetGroupNameE17EVProfBugdetGroup
 I30BudgetGroupNameToBudgetGroupIDEPKc
 J22SetDumpSpikesThresholdEi
 6OnFrameCompletedEv
-J7OnNewFrameEnteredEv
+K7OnNewFrameEnteredEv
 O4StartProfilingEfi
 P1DumpProfileEi
 3RegisterCallbackHandlerEPNS_24IVProfileCallbackHandlerE
-K5UnregisterCallbackHandlerEPNS_24IVProfileCallbackHandlerE
+L5UnregisterCallbackHandlerEPNS_24IVProfileCallbackHandlerE
 FindNodeEPNS_10CVProfNodeEPKc
 LSumTimesEPNS_10CVProfNodeEi
 LValidateER10CValidatorPKc
@@ -3511,7 +3511,7 @@ R0SteamVProf13CVProfManagerE
 N16SteamThreadTools7CThreadE
 S31CAdHocValidation_SimpleCallback
 N16SteamThreadTools7CThreadE
-S16CAdHocValidation
+T16CAdHocValidation
 T31CAdHocValidation_SimpleCallback
 ClockSpeed
 TpMemAllocSteam
@@ -3528,7 +3528,7 @@ Dvvh
 LAA~{
 23.5/+
 GG>.1i1
-qJ33398:
+qJ333998:
 UHD!
 **t8
 ,*,3D	EP
@@ -3616,6 +3616,7 @@ _Plat_IsSteamDeck
 _Plat_IsSteamOS
 _Plat_IsSteamOS3
 _Plat_IsTesla
+_Plat_IsWSL
 _Plat_MSTime
 _Plat_MSTime64
 _Plat_OutputDebugString
@@ -4107,43 +4108,36 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-Atx"`
-vP<	
-3J5Kh
-KPO*
-`@xL
-,s(c
- /~P
-c18_
-R(}T
-"I!P
-c@,>
+*XY{
+W&S	
+j;DO
+SwYR
+3:J5n
+\xmTlF
+ w	I
+C 2pL
+'[ M
+xb25
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-qUtj7
-J?xwqJ
-5oEO
-R<'F
-0*jJ
-@P):4
-Wi\]!9
-['12%()
-osh?
-v,K2
-z4_w
-r{?T
-Zdt[K}
-Q`r~
-c_2f0
-L[	.
-?B;K
-%b~21
-<#/1
-IBvF
->/3D
-eFYd
+s:s`
+0~9=
+	~)e
+#0|/
+G@EV
+h"KW
+~D'?
+n2MK&
+g)El
+*z8 
+hTso
+qG,Gu
+EB@U
+."-'
+H}ni
+R@	?
 Apple Inc.1&0$
 Apple Certification Authority1
 Apple Root CA0
@@ -4199,7 +4193,7 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231214003549Z0/
+231215145556Z0/
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -4207,35 +4201,39 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		wE3r2VDfjn6lJHYResILiI/0q48=
+		w5Bg97oJNSQcxhob/NfSzU/amLo=
 		</data>
 		<data>
-		CH8B1meK6huaKc6COdkHpQbXbhw=
+		rzZ7V/oeg/4xyfj2EKXjqUMP7as=
 		</data>
 	</array>
 </dict>
 </plist>
-hYNk
-nZHU
-u@7|
-3Uy7
-20231214003557Z0
+vE)SB
+(D$}
+4wgrmX
+lh*Y
+20231215145613Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231116210533Z
-231228210532Z0B1
+231214210037Z
+240125210036Z0B1
 Timestamp Signer NWK21
 Apple Inc.1
-o:	q
-"O!w
+`\ju
+zDi	N
+Ip/?y
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-pM,5Ee
-.	AU
+D(*T
+|%bC
+6vO:
+`;X)
+R{F0
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -4274,12 +4272,11 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231214003557Z0#
-=y1S
-:,pt
-TqeE
-Uz!>
-.W(x
+231215145613Z0#
+ yaQ0+
+|<Y'
+$,)v
+:ETmhdi
 __TEXT
 __text
 __TEXT
@@ -4321,7 +4318,8 @@ __LINKEDIT
 /usr/lib/libc++.1.dylib
 /usr/lib/libSystem.B.dylib
 /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
-7@e	p
+ h	0
+#8) W	0
 bU9(
 bU9(
 T		@9?
@@ -4333,8 +4331,8 @@ kjh8k
 i+8,
 (a@9
 5(	@
-X	\!
-aX	\!
+[	\!
+[	\!
 ThZ@
 ThZ@
 TiZ@
@@ -4353,11 +4351,12 @@ ii8J
 <l9@
 +ih8J	
 T+	@
-09`K
+09`I
 @9?q
 @9_q
 jt8 
 "J9h
+4aQ	
 h"R9(
 RHk88Z
 b2@9
@@ -4485,8 +4484,8 @@ Steam
 steamwebhelper
 Steam Helper
 cefwebhelper
-Dec 13 2023
-16:35:48
+Dec 15 2023
+06:55:55
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 CatchAndWriteContext_t::Invoke with bogus argc/argv
@@ -4502,6 +4501,7 @@ IVALIDATE001
 -steamdeck
 -tesla
 GAMESCOPE_WAYLAND_DISPLAY
+WSL_DISTRO_NAME
 /System/Library/CoreServices/SystemVersion.plist
 ProductBuildVersion
 com.valvesoftware.steam
@@ -5061,11 +5061,11 @@ IdActive
 "Active
 NoWindow
 %4WaitEj
-"1Ev
+#1Ev
 #1Ev
 2CloseSemaphoreInternalEibPKc
 &3CreateSemaphoreInternalEPKclbPb
-'1OpenSemaphoreInternalEPKcb
+(1OpenSemaphoreInternalEPKcb
 (9EnsureSemaphorePostedInternalEi
 (7IsSemaphoreOrphanedInternalEii
 %31CAdHocValidation_SimpleCallback10DoValidateER10CValidator
@@ -5078,7 +5078,7 @@ NoWindow
 AcquireSemaphoreInternalEj
 &ReleaseSemaphoreInternalEil
 Event
-&Mutex
+'Mutex
 '3SetEv
 'PKcbb
 3CreateAnonymousSyncObjectInternalEbb
@@ -5089,7 +5089,7 @@ ResetEv
 )CheckEv
 Semaphore
 )FullMutex
-)LocalBase
+*LocalBase
 )7ReleaseEl
 2Ell
 )1Ell
@@ -5105,7 +5105,7 @@ FullMutex9IsCreatorEv
 +8BIsValidEv
 ,Pointer
 Pointer
-,1Ev
+-1Ev
 -1Ev
 -2LockForWriteEv
 WaitForReadEv
@@ -5126,7 +5126,7 @@ GetNameEv
 20ThreadProcEPv
 JoinEj
 0StopEi
-1InitEv
+2InitEv
 etNameEPKc
 0uspendEv
 1YieldEv
@@ -5137,23 +5137,23 @@ tartEm
 ResumeEv
 2OnExitEv
 ListBase_
-2Queue
+3Queue
 Init
 3SwapList
 3UnsafePeek
 Base_
 Init
-3Unsafe
+4Unsafe
 PopIntoFreeList
 4UnsafeDebugCheck
 Peek
 4Dummy
 CValidator
-4SteamVProf
+5SteamVProf
 64PushEPKcPvS1_
 2EibP20IMemBlockClaimedList
 51EibP20IMemBlockClaimedList
-51Ev
+61Ev
 1UnlockValidationLocksEv
 60ClaimUntrackedMemoryEm
 8SetAllocSizeFilterEi
@@ -5166,7 +5166,7 @@ CValidator
 PopEv
 80BExcludeAllocationFromTrackingEPKci
 CValidator9IsClaimedEPKv
-8SteamVProf9CVProfile
+9SteamVProf9CVProfile
 Claim
 9RenderLeaksEm
 :DiffAgainstEPS_
@@ -5195,9 +5195,9 @@ GetProfileForCurrentThread
 >EnterScopeCurrentThread
 G6ResumeEv
 I30DestructAndFreeNodesExceptRootEv
->2Ev
+?2Ev
 9AddProfileForThreadEPNS_9CVProfileEjP17_opaque_pthread_t
-?8BIsProfilePtrValidEPNS_9CVProfileE
+@8BIsProfilePtrValidEPNS_9CVProfileE
 O6EnableDumpSpikesEi
 D2OutputReportEiPKci
 L1GetThreadIDEv
@@ -5211,7 +5211,7 @@ IDumpNodesEPNS_10CVProfNodeES2_ib
 B1Ev
 D6ResumeEv
 E9ResetPeakEv
-E8ValidateER10CValidatorPKc
+F8ValidateER10CValidatorPKc
 2EPNS_9CVProfileEPKcPS0_17EVProfBugdetGroup
 C1EPNS_9CVProfileEPKcPS0_17EVProfBugdetGroup
 ResetEv
@@ -5247,7 +5247,7 @@ LValidateER10CValidatorPKc
 CreateBudgetGroupsEv
 MAddBudgetGroupNameE17EVProfBugdetGroupiPKc
 M1Ev
-N4StartProfilingAllThreadsEfi
+O4StartProfilingAllThreadsEfi
 O3StopProfilingAllThreadsEv
 O0GetAllThreadProfilesEPNS_14CVProfileArrayE
 CleanupUnusedProfilesEv
@@ -5276,7 +5276,7 @@ Tile
 (DD@D@4
 ,TDX
  (LPTDHHH
-dLLLTLL
+dLLLTTLL
 `T\8
 8H( 
    t
@@ -5364,6 +5364,7 @@ _Plat_IsSteamDeck
 _Plat_IsSteamOS
 _Plat_IsSteamOS3
 _Plat_IsTesla
+_Plat_IsWSL
 _Plat_MSTime
 _Plat_MSTime64
 _Plat_OutputDebugString
@@ -5851,35 +5852,37 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-J14a!I
-k4/ey
-ud/s/
-68yq
-GWrj
-u$r-nE
-_fi.
- ?]1
-jB"d
+E[l	
+}86?
+ZJwBH9"
+e@V=
+\/t_j
+zYO:
+Nb_y
+!oo/b
+]n4-
+Ka$}
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-6	UG
-&)BT
-*Uc(
-F(do.
-fOu6:_
-F0r4
-yvmS
-Kpu?{
-G~,{Xc:8J
-KAk=
-{xPW+
-DuA1
-'VNa
-*q^r
-]*[/
-`8B"K	
+|);A+
+;s+!
+,,@Y
+8D1Q
+o,Iq
+r?>r
+O?G0
+/p({
+y4Uu'
+sTf+
+C:"$
+\'N%
+1Jfw
+WgRd
+y8~C
+!n8a
+U.%+3
 Apple Inc.1&0$
 Apple Certification Authority1
 Apple Root CA0
@@ -5935,8 +5938,10 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231214003549Z0/
-9Y~"
+231215145556Z0/
+D1OG
+(K0[
+f8m(
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -5944,34 +5949,40 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		PYtV490n5LEq8/iebImFtzqUkcc=
+		iOe+XBrRwDbSJR0DMxzaWr/DHXA=
 		</data>
 		<data>
-		CV8Svl8pB3UJkxD15qW9ltPzkuE=
+		Uw+0ctxiHu/3Y1X4ZTweiaz7/Y8=
 		</data>
 	</array>
 </dict>
 </plist>
-FBG`
-{TcT
-Rzc3
-20231214003557Z0
+MYa|
+-CGe3m
+KA^(@
+D%`0
+W>ey
+20231215145613Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231116210533Z
-231228210532Z0B1
+231214210037Z
+240125210036Z0B1
 Timestamp Signer NWK21
 Apple Inc.1
-o:	q
-"O!w
+`\ju
+zDi	N
+Ip/?y
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-pM,5Ee
-.	AU
+D(*T
+|%bC
+6vO:
+`;X)
+R{F0
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -6010,7 +6021,5 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231214003557Z0#
-Ac0+
-.A$7
-eR_U
+231215145613Z0#
+#RxUZ

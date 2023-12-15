@@ -2823,7 +2823,6 @@
     "FamilyManagement_ErrorNoMatch": "Questa Condivisione familiare non esiste.",
     "FamilyManagement_AccessDenied": "Non hai i permessi necessari per poter eseguire questa azione.",
     "FamilyManagement_ErrorGetUserCountry": "Impossibile stabilire il tuo Paese.",
-    "FamilyManagement_ErrorCountryCheck": "Il tuo account deve trovarsi nello stesso Paese del creatore del gruppo.",
     "FamilyManagement_ErrorLimitExceeded": "Questa Condivisione familiare è attualmente in stato di sospensione e può accettare o invitare solo ex membri.",
     "FamilyManagement_ErrorFamilySizeLimitExceeded": "Questa Condivisione familiare è al completo e non può accettare o invitare nuovi membri.",
     "FamilyManagement_ErrorAccountActivityLimitExceeded": "Il tuo account è attualmente in stato di sospensione e può solo ricongiungersi alla Condivisione familiare precedente.",

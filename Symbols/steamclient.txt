@@ -210,6 +210,7 @@
  Plat_IsSteamDeck
  Plat_IsSteamOS
  Plat_IsSteamOS3
+ Plat_IsWSL
  Plat_MSTime
  Plat_MSTime64
  Plat_OutputDebugString

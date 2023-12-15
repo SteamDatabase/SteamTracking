@@ -178,8 +178,6 @@ message CClientMetrics_ReportClientArgs_Notification {
 }
 
 service ClientMetrics {
-	option (service_description) = "A service for client-reported metrics";
-
 	rpc ClientAppInterfaceStatsReport (.CClientMetrics_AppInterfaceStats_Notification) returns (.NoResponse);
 	rpc ClientIPv6ConnectivityReport (.CClientMetrics_IPv6Connectivity_Notification) returns (.NoResponse);
 	rpc SteamPipeWorkStatsReport (.CClientMetrics_SteamPipeWorkStats_Notification) returns (.NoResponse);

@@ -2823,7 +2823,6 @@
     "FamilyManagement_ErrorNoMatch": "Keluarga ini tidak ada.",
     "FamilyManagement_AccessDenied": "Kamu tidak memiliki izin untuk melakukan tindakan ini.",
     "FamilyManagement_ErrorGetUserCountry": "Tidak dapat menentukan negaramu.",
-    "FamilyManagement_ErrorCountryCheck": "Akunmu harus berada di negara yang sama dengan pembuat grup.",
     "FamilyManagement_ErrorLimitExceeded": "Keluarga ini sedang dalam masa jeda dan hanya dapat menerima atau mengundang mantan anggotanya.",
     "FamilyManagement_ErrorFamilySizeLimitExceeded": "Keluarga ini penuh dan tidak dapat menerima atau mengundang anggota baru.",
     "FamilyManagement_ErrorAccountActivityLimitExceeded": "Akunmu saat ini sedang dalam masa jeda dan hanya dapat bergabung kembali dengan keluargamu sebelumnya.",

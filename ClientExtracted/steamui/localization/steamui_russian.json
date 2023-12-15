@@ -6974,6 +6974,7 @@
     "Notification_FriendInviteRollup_Title": "Приглашения в друзья",
     "Notification_FriendInviteRollup_Body": "Новые приглашения в друзья (%1$s)",
     "Notification_FamilySharing_Title": "Family Library Sharing",
+    "Notification_FamilySharing_StopPlaying": "Эта общая игра уже используется, она закроется через %1$s мин.",
     "Notification_FamilySharingAuthorization_Authorized": "Теперь вы можете играть на этом компьютере в игры, принадлежащие пользователю %1$s.",
     "Notification_FamilySharingAuthorization_Deuthorized": "Пользователь %1$s закрыл доступ для этого компьютера. Некоторые игры могут быть недоступны.",
     "Notification_FamilySharingAuthorization_StopPlaying": "%1$s просит закругляться! У вас осталось %2$s мин.",

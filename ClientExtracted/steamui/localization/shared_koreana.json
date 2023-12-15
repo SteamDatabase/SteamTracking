@@ -2823,7 +2823,6 @@
     "FamilyManagement_ErrorNoMatch": "이 가족은 존재하지 않습니다.",
     "FamilyManagement_AccessDenied": "이 작업을 수행할 권한이 없습니다.",
     "FamilyManagement_ErrorGetUserCountry": "국가를 확인할 수 없습니다.",
-    "FamilyManagement_ErrorCountryCheck": "계정의 국가는 가족을 생성한 사용자의 국가와 같아야 합니다.",
     "FamilyManagement_ErrorLimitExceeded": "이 가족에는 현재 쿨다운이 적용되어 이전 구성원만 수락하거나 초대할 수 있습니다.",
     "FamilyManagement_ErrorFamilySizeLimitExceeded": "이 가족은 정원이 충족되어 새 구성원을 수락하거나 초대할 수 없습니다.",
     "FamilyManagement_ErrorAccountActivityLimitExceeded": "계정에 현재 쿨다운이 적용되어 이전 가족에만 다시 가입할 수 있습니다.",

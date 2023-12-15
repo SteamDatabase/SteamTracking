@@ -27,6 +27,13 @@ enum ERemoteClientService {
 	k_ERemoteClientServiceContentServer = 16;
 }
 
+enum EVRLinkCaps {
+	k_EVRLinkCapsUnknown = 0;
+	k_EVRLinkCapsAvailable = 1;
+	k_EVRLinkCapsUnimplemented = 2;
+	k_EVRLinkCapsMissingHardwareEncoding = 3;
+}
+
 enum ERemoteDeviceAuthorizationResult {
 	k_ERemoteDeviceAuthorizationSuccess = 0;
 	k_ERemoteDeviceAuthorizationDenied = 1;
@@ -122,6 +129,7 @@ message CMsgRemoteClientBroadcastStatus {
 	optional uint32 supported_services = 23;
 	optional bool steam_deck = 24;
 	optional uint64 steam_version = 25;
+	optional .EVRLinkCaps vr_link_caps = 26 [default = k_EVRLinkCapsUnknown];
 }
 
 message CMsgRemoteClientBroadcastDiscovery {

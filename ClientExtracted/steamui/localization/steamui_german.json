@@ -6974,6 +6974,7 @@
     "Notification_FriendInviteRollup_Title": "Freundschaftsanfragen",
     "Notification_FriendInviteRollup_Body": "Sie haben %1$s neue Freundschaftsanfragen",
     "Notification_FamilySharing_Title": "Familienbibliothek",
+    "Notification_FamilySharing_StopPlaying": "Dieses Spiel aus der Familienbibliothek wird bereits gespielt und in %1$s Minute(n) geschlossen.",
     "Notification_FamilySharingAuthorization_Authorized": "Die Spiele von %1$s stehen Ihnen jetzt zum Spielen auf diesem Computer zur Verfügung.",
     "Notification_FamilySharingAuthorization_Deuthorized": "%1$s hat die Autorisierung dieses Computers widerrufen. Es kann sein, dass Ihnen einige Spiele nicht mehr zur Verfügung stehen.",
     "Notification_FamilySharingAuthorization_StopPlaying": "%1$s benötigt dieses geteilte Spiel wieder! Sie haben noch %2$s Minuten Spielzeit übrig …",

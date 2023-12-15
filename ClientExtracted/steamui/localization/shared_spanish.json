@@ -2822,7 +2822,6 @@
     "FamilyManagement_ErrorNoMatch": "El grupo familiar no existe.",
     "FamilyManagement_AccessDenied": "No tienes permiso para realizar esta acción.",
     "FamilyManagement_ErrorGetUserCountry": "No se pudo establecer en qué país resides.",
-    "FamilyManagement_ErrorCountryCheck": "Tu cuenta debe estar en el mismo país que la de quien haya creado el grupo.",
     "FamilyManagement_ErrorLimitExceeded": "Este grupo familiar se encuentra actualmente en un plazo de espera y solo puede aceptar o invitar a antiguos integrantes.",
     "FamilyManagement_ErrorFamilySizeLimitExceeded": "Este grupo familiar está lleno y no puede aceptar ni invitar a nuevos integrantes.",
     "FamilyManagement_ErrorAccountActivityLimitExceeded": "Tu cuenta se encuentra actualmente en un plazo de espera y solo puedes volver a unirte al grupo familiar anterior.",

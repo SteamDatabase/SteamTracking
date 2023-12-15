@@ -9,18 +9,18 @@ message ParentalApp {
 }
 
 message ParentalPlaytimeDay {
-	optional uint64 allowed_time_windows = 1 [(description) = "A bitfield where each bit represents a thirty minute window into the day, with bit 0 being midnight-12:30AM"];
-	optional uint32 allowed_daily_minutes = 2 [(description) = "Total number of minutes of playtime for the day"];
+	optional uint64 allowed_time_windows = 1;
+	optional uint32 allowed_daily_minutes = 2;
 }
 
 message ParentalPlaytimeRestrictions {
-	optional bool apply_playtime_restrictions = 2 [(description) = "If true, apply the playtime restrictions described here"];
-	repeated .ParentalPlaytimeDay playtime_days = 15 [(description) = "Playtime restrictions for each day of the week. This will either be empty or will be 7 items long"];
+	optional bool apply_playtime_restrictions = 2;
+	repeated .ParentalPlaytimeDay playtime_days = 15;
 }
 
 message ParentalTemporaryPlaytimeRestrictions {
-	optional .ParentalPlaytimeDay restrictions = 1 [(description) = "Playtime restrictions to be temporarily applied"];
-	optional uint32 rtime_expires = 2 [(description) = "Time at which playtime restrictions no longer apply"];
+	optional .ParentalPlaytimeDay restrictions = 1;
+	optional uint32 rtime_expires = 2;
 }
 
 message ParentalSettings {
@@ -128,7 +128,7 @@ message CParental_DisableWithRecoveryCode_Response {
 }
 
 message CParental_RequestFeatureAccess_Request {
-	optional uint32 features = 1 [(description) = "Bitfield of features being requested"];
+	optional uint32 features = 1;
 	optional fixed64 steamid = 10;
 }
 
@@ -137,10 +137,10 @@ message CParental_RequestFeatureAccess_Response {
 }
 
 message CParental_ApproveFeatureAccess_Request {
-	optional bool approve = 1 [(description) = "True to approve, false to reject"];
+	optional bool approve = 1;
 	optional fixed64 requestid = 2;
-	optional uint32 features = 3 [(description) = "Bitfield of features being approved. Must match the features in requestid"];
-	optional uint32 duration = 4 [(description) = "Length of approval in seconds. If zero, approval is permanent"];
+	optional uint32 features = 3;
+	optional uint32 duration = 4;
 	optional fixed64 steamid = 10;
 }
 
@@ -148,8 +148,8 @@ message CParental_ApproveFeatureAccess_Response {
 }
 
 message CParental_RequestPlaytime_Request {
-	optional uint32 time_expires = 1 [(description) = "rtime at which the request expires. This is typically midnight of the next local day."];
-	optional .ParentalPlaytimeDay current_playtime_restrictions = 2 [(description) = "Current restrictions for the day at the time the request was made, including previously granted temporary playtime"];
+	optional uint32 time_expires = 1;
+	optional .ParentalPlaytimeDay current_playtime_restrictions = 2;
 	optional fixed64 steamid = 10;
 }
 
@@ -168,32 +168,32 @@ message CParental_ApprovePlaytime_Response {
 }
 
 message CParental_GetRequests_Request {
-	optional uint32 rt_include_completed_since = 1 [(description) = "Also return completed requests that were responded to after this rtime"];
-	optional fixed64 steamid = 10 [(description) = "SteamID of the requester. This must be an adult account in a family group."];
+	optional uint32 rt_include_completed_since = 1;
+	optional fixed64 steamid = 10;
 }
 
 message ParentalFeatureRequest {
 	optional fixed64 requestid = 1;
 	optional fixed64 family_groupid = 2;
-	optional fixed64 steamid = 3 [(description) = "Steamid of the requester"];
-	optional uint32 features = 4 [(description) = "Bitfield of features requested"];
-	optional uint32 time_requested = 5 [(description) = "rtime the request was made"];
-	optional bool approved = 6 [(description) = "True if the request was approved, false if rejected"];
-	optional fixed64 steamid_responder = 7 [(description) = "Steamid of the approver/rejecter"];
-	optional uint32 time_responded = 8 [(description) = "rtime the request was approved/rejected"];
+	optional fixed64 steamid = 3;
+	optional uint32 features = 4;
+	optional uint32 time_requested = 5;
+	optional bool approved = 6;
+	optional fixed64 steamid_responder = 7;
+	optional uint32 time_responded = 8;
 }
 
 message ParentalPlaytimeRequest {
 	optional fixed64 requestid = 1;
 	optional fixed64 family_groupid = 2;
-	optional fixed64 steamid = 3 [(description) = "Steamid of the requester"];
-	optional .ParentalPlaytimeDay current_playtime_restrictions = 4 [(description) = "Current restrictions for the day at the time the request was made, including previously granted temporary playtime"];
-	optional uint32 time_expires = 5 [(description) = "rtime at which the request expires. This is typically midnight of the next local day."];
-	optional uint32 time_requested = 6 [(description) = "rtime the request was made"];
-	optional bool approved = 7 [(description) = "True if the request was approved, false if rejected"];
-	optional fixed64 steamid_responder = 8 [(description) = "Steamid of the approver/rejecter"];
-	optional uint32 time_responded = 9 [(description) = "rtime the request was approved/rejected"];
-	optional .ParentalTemporaryPlaytimeRestrictions restrictions_approved = 10 [(description) = "For approved requests, the new playtime restrictions after approval"];
+	optional fixed64 steamid = 3;
+	optional .ParentalPlaytimeDay current_playtime_restrictions = 4;
+	optional uint32 time_expires = 5;
+	optional uint32 time_requested = 6;
+	optional bool approved = 7;
+	optional fixed64 steamid_responder = 8;
+	optional uint32 time_responded = 9;
+	optional .ParentalTemporaryPlaytimeRestrictions restrictions_approved = 10;
 }
 
 message CParental_GetRequests_Response {
@@ -232,90 +232,29 @@ message CParental_PlaytimeUsed_Notification {
 }
 
 service Parental {
-	option (service_description) = "Parental settings service";
-
-	rpc EnableParentalSettings (.CParental_EnableParentalSettings_Request) returns (.CParental_EnableParentalSettings_Response) {
-		option (method_description) = "Enable parental settings for the logged in account, optionally setting the current settings";
-	}
-
-	rpc DisableParentalSettings (.CParental_DisableParentalSettings_Request) returns (.CParental_DisableParentalSettings_Response) {
-		option (method_description) = "Disable parental settings for the logged in account";
-	}
-
-	rpc GetParentalSettings (.CParental_GetParentalSettings_Request) returns (.CParental_GetParentalSettings_Response) {
-		option (method_description) = "Get the current parental settings for the logged in account";
-	}
-
-	rpc GetSignedParentalSettings (.CParental_GetSignedParentalSettings_Request) returns (.CParental_GetSignedParentalSettings_Response) {
-		option (method_description) = "Get the current parental settings for the logged in account in a form that can by verified by the receiver";
-	}
-
-	rpc SetParentalSettings (.CParental_SetParentalSettings_Request) returns (.CParental_SetParentalSettings_Response) {
-		option (method_description) = "Set the current parental settings for the logged in account";
-	}
-
-	rpc ValidateToken (.CParental_ValidateToken_Request) returns (.CParental_ValidateToken_Response) {
-		option (method_description) = "Check if the given parental unlock token is correct for the logged in account";
-	}
-
-	rpc ValidatePassword (.CParental_ValidatePassword_Request) returns (.CParental_ValidatePassword_Response) {
-		option (method_description) = "Validate the plaintext password for the logged in account and return an unlock token";
-	}
-
-	rpc LockClient (.CParental_LockClient_Request) returns (.CParental_LockClient_Response) {
-		option (method_description) = "Notify connected clients that a lock has occurred in a browser";
-	}
-
-	rpc RequestRecoveryCode (.CParental_RequestRecoveryCode_Request) returns (.CParental_RequestRecoveryCode_Response) {
-		option (method_description) = "Request a recovery code be sent to the recovery email address for the specified account";
-	}
-
-	rpc DisableWithRecoveryCode (.CParental_DisableWithRecoveryCode_Request) returns (.CParental_DisableWithRecoveryCode_Response) {
-		option (method_description) = "Attempt a recovery unlock on the specified account";
-	}
-
-	rpc RequestFeatureAccess (.CParental_RequestFeatureAccess_Request) returns (.CParental_RequestFeatureAccess_Response) {
-		option (method_description) = "Request temporary access to a feature from a parent account";
-	}
-
-	rpc ApproveFeatureAccess (.CParental_ApproveFeatureAccess_Request) returns (.CParental_ApproveFeatureAccess_Response) {
-		option (method_description) = "Approve or deny temporary access to a feature from a child account";
-	}
-
-	rpc RequestPlaytime (.CParental_RequestPlaytime_Request) returns (.CParental_RequestPlaytime_Response) {
-		option (method_description) = "Request temporary additional playtime from a parent account";
-	}
-
-	rpc ApprovePlaytime (.CParental_ApprovePlaytime_Request) returns (.CParental_ApprovePlaytime_Response) {
-		option (method_description) = "Approve or deny a temporary playtime request from a child account";
-	}
-
-	rpc GetRequests (.CParental_GetRequests_Request) returns (.CParental_GetRequests_Response) {
-		option (method_description) = "Return a list of pending (or pending and completed) feature and playtime requests for the given steamid";
-	}
-
-	rpc ReportPlaytimeAndNotify (.CParental_ReportPlaytimeAndNotify_Request) returns (.CParental_ReportPlaytimeAndNotify_Response) {
-		option (method_description) = "Report playtime for the given account and notify all connected clients of the new result";
-	}
+	rpc EnableParentalSettings (.CParental_EnableParentalSettings_Request) returns (.CParental_EnableParentalSettings_Response);
+	rpc DisableParentalSettings (.CParental_DisableParentalSettings_Request) returns (.CParental_DisableParentalSettings_Response);
+	rpc GetParentalSettings (.CParental_GetParentalSettings_Request) returns (.CParental_GetParentalSettings_Response);
+	rpc GetSignedParentalSettings (.CParental_GetSignedParentalSettings_Request) returns (.CParental_GetSignedParentalSettings_Response);
+	rpc SetParentalSettings (.CParental_SetParentalSettings_Request) returns (.CParental_SetParentalSettings_Response);
+	rpc ValidateToken (.CParental_ValidateToken_Request) returns (.CParental_ValidateToken_Response);
+	rpc ValidatePassword (.CParental_ValidatePassword_Request) returns (.CParental_ValidatePassword_Response);
+	rpc LockClient (.CParental_LockClient_Request) returns (.CParental_LockClient_Response);
+	rpc RequestRecoveryCode (.CParental_RequestRecoveryCode_Request) returns (.CParental_RequestRecoveryCode_Response);
+	rpc DisableWithRecoveryCode (.CParental_DisableWithRecoveryCode_Request) returns (.CParental_DisableWithRecoveryCode_Response);
+	rpc RequestFeatureAccess (.CParental_RequestFeatureAccess_Request) returns (.CParental_RequestFeatureAccess_Response);
+	rpc ApproveFeatureAccess (.CParental_ApproveFeatureAccess_Request) returns (.CParental_ApproveFeatureAccess_Response);
+	rpc RequestPlaytime (.CParental_RequestPlaytime_Request) returns (.CParental_RequestPlaytime_Response);
+	rpc ApprovePlaytime (.CParental_ApprovePlaytime_Request) returns (.CParental_ApprovePlaytime_Response);
+	rpc GetRequests (.CParental_GetRequests_Request) returns (.CParental_GetRequests_Response);
+	rpc ReportPlaytimeAndNotify (.CParental_ReportPlaytimeAndNotify_Request) returns (.CParental_ReportPlaytimeAndNotify_Response);
 }
 
 service ParentalClient {
-	option (service_description) = "Parental settings client notifications";
 	option (service_execution_site) = k_EProtoExecutionSiteSteamClient;
 
-	rpc NotifySettingsChange (.CParental_ParentalSettingsChange_Notification) returns (.NoResponse) {
-		option (method_description) = "Notification from server to client of a change in parental settings";
-	}
-
-	rpc NotifyUnlock (.CParental_ParentalUnlock_Notification) returns (.NoResponse) {
-		option (method_description) = "Notification from server to client that an unlock has occurred in a browser";
-	}
-
-	rpc NotifyLock (.CParental_ParentalLock_Notification) returns (.NoResponse) {
-		option (method_description) = "Notification from server to client that a lock has occurred in a browser";
-	}
-
-	rpc NotifyPlaytimeUsed (.CParental_PlaytimeUsed_Notification) returns (.NoResponse) {
-		option (method_description) = "Notification from server to client that playtime has been consumed by the user";
-	}
+	rpc NotifySettingsChange (.CParental_ParentalSettingsChange_Notification) returns (.NoResponse);
+	rpc NotifyUnlock (.CParental_ParentalUnlock_Notification) returns (.NoResponse);
+	rpc NotifyLock (.CParental_ParentalLock_Notification) returns (.NoResponse);
+	rpc NotifyPlaytimeUsed (.CParental_PlaytimeUsed_Notification) returns (.NoResponse);
 }

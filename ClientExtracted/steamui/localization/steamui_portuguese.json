@@ -6980,6 +6980,7 @@
     "Notification_FriendInviteRollup_Title": "Pedidos de amizade",
     "Notification_FriendInviteRollup_Body": "Tens %1$s novos pedidos de amizade",
     "Notification_FamilySharing_Title": "Partilha de Biblioteca",
+    "Notification_FamilySharing_StopPlaying": "Este jogo partilhado já está a ser usado e será encerrado daqui a %1$s minutos.",
     "Notification_FamilySharingAuthorization_Authorized": "Os jogos de %1$s podem agora ser jogados neste computador.",
     "Notification_FamilySharingAuthorization_Deuthorized": "%1$s desautorizou este computador. Alguns jogos podem não estar disponíveis.",
     "Notification_FamilySharingAuthorization_StopPlaying": "%1$s precisa deste jogo! Tens mais %2$s min de jogo.",

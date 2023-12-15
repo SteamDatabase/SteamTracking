@@ -6975,6 +6975,7 @@
     "Notification_FriendInviteRollup_Title": "Demandes de contact",
     "Notification_FriendInviteRollup_Body": "%1$s nouvelle(s) demande(s) de contact",
     "Notification_FamilySharing_Title": "Partage familial",
+    "Notification_FamilySharing_StopPlaying": "Ce jeu partagé est déjà en cours d'utilisation. Il se fermera dans %1$s minutes.",
     "Notification_FamilySharingAuthorization_Authorized": "Les jeux partagés de %1$s sont maintenant disponibles sur cet ordinateur.",
     "Notification_FamilySharingAuthorization_Deuthorized": "%1$s a révoqué l'autorisation de cet ordinateur. Certains jeux peuvent ne pas être disponibles.",
     "Notification_FamilySharingAuthorization_StopPlaying": "%1$s veut jouer à son jeu partagé. Vous pouvez encore jouer pendant %2$s minute(s)…",

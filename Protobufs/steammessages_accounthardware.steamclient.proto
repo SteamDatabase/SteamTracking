@@ -112,8 +112,8 @@ message CAccountHardware_VRCompatibilityCheck_Request {
 		optional string value = 2;
 	}
 
-	optional string product_name = 1 [(description) = "Name of product we're checking"];
-	repeated .CAccountHardware_VRCompatibilityCheck_Request.Pair values = 2 [(description) = "Values from client system probe"];
+	optional string product_name = 1;
+	repeated .CAccountHardware_VRCompatibilityCheck_Request.Pair values = 2;
 }
 
 message CAccountHardware_VRCompatibilityCheck_Response {
@@ -123,13 +123,13 @@ message CAccountHardware_VRCompatibilityCheck_Response {
 	}
 
 	message ComponentDisplay {
-		optional string name = 1 [(description) = "Name of component (OS, RAM, GPU, etc.)"];
-		optional string image = 2 [(description) = "Name of icon to use"];
-		optional string value = 3 [(description) = "String value to report"];
+		optional string name = 1;
+		optional string image = 2;
+		optional string value = 3;
 	}
 
-	repeated .CAccountHardware_VRCompatibilityCheck_Response.Pair values = 1 [(description) = "Top-level values reported to client"];
-	repeated .CAccountHardware_VRCompatibilityCheck_Response.ComponentDisplay components = 2 [(description) = "Specific values to display"];
+	repeated .CAccountHardware_VRCompatibilityCheck_Response.Pair values = 1;
+	repeated .CAccountHardware_VRCompatibilityCheck_Response.ComponentDisplay components = 2;
 }
 
 message CAccountHardware_RegisterValveIndexComponent_Request {
@@ -153,49 +153,15 @@ message CAccountHardware_GetSteamDeckComponents_Response {
 }
 
 service AccountHardware {
-	option (service_description) = "A service to use account hardware related methods";
-
-	rpc RegisterSteamController (.CAccountHardware_RegisterSteamController_Request) returns (.CAccountHardware_RegisterSteamController_Response) {
-		option (method_description) = "Records a serial number and the calling user's account info for warranty purposes.";
-	}
-
-	rpc CompleteSteamControllerRegistration (.CAccountHardware_CompleteSteamControllerRegistration_Request) returns (.CAccountHardware_CompleteSteamControllerRegistration_Response) {
-		option (method_description) = "Marks a controller's registration as complete";
-	}
-
-	rpc QueryAccountsRegisteredToController (.CAccountHardware_QueryAccountsRegisteredToSerial_Request) returns (.CAccountHardware_QueryAccountsRegisteredToSerial_Response) {
-		option (method_description) = "Sends back a list of accounts registered to a controller.";
-	}
-
-	rpc SetDesiredControllerConfigForApp (.CAccountHardware_SteamControllerSetConfig_Request) returns (.CAccountHardware_SteamControllerSetConfig_Response) {
-		option (method_description) = "Sets a desired controller config for an app";
-	}
-
-	rpc GetDesiredControllerConfigForApp (.CAccountHardware_SteamControllerGetConfig_Request) returns (.CAccountHardware_SteamControllerGetConfig_Response) {
-		option (method_description) = "Gets a desired controller config for an app";
-	}
-
-	rpc DeRegisterSteamController (.CAccountHardware_DeRegisterSteamController_Request) returns (.CAccountHardware_DeRegisterSteamController_Response) {
-		option (method_description) = "De registers a controller";
-	}
-
-	rpc SetControllerPersonalizationFile (.CAccountHardware_SetPersonalizationFile_Request) returns (.CAccountHardware_SetPersonalizationFile_Response) {
-		option (method_description) = "Stores the file ID of the personalization file";
-	}
-
-	rpc GetControllerPersonalizationFile (.CAccountHardware_GetPersonalizationFile_Request) returns (.CAccountHardware_GetPersonalizationFile_Response) {
-		option (method_description) = "Gets the file ID of the personalization file";
-	}
-
-	rpc VRCompatibilityCheck (.CAccountHardware_VRCompatibilityCheck_Request) returns (.CAccountHardware_VRCompatibilityCheck_Response) {
-		option (method_description) = "Check system info for compatibility with VR";
-	}
-
-	rpc RegisterValveIndexComponent (.CAccountHardware_RegisterValveIndexComponent_Request) returns (.CAccountHardware_RegisterValveIndexComponent_Response) {
-		option (method_description) = "Registers a valve index component to a customer";
-	}
-
-	rpc GetSteamDeckComponents (.CAccountHardware_GetSteamDeckComponents_Request) returns (.CAccountHardware_GetSteamDeckComponents_Response) {
-		option (method_description) = "Returns the components that went into the given Steam Deck";
-	}
+	rpc RegisterSteamController (.CAccountHardware_RegisterSteamController_Request) returns (.CAccountHardware_RegisterSteamController_Response);
+	rpc CompleteSteamControllerRegistration (.CAccountHardware_CompleteSteamControllerRegistration_Request) returns (.CAccountHardware_CompleteSteamControllerRegistration_Response);
+	rpc QueryAccountsRegisteredToController (.CAccountHardware_QueryAccountsRegisteredToSerial_Request) returns (.CAccountHardware_QueryAccountsRegisteredToSerial_Response);
+	rpc SetDesiredControllerConfigForApp (.CAccountHardware_SteamControllerSetConfig_Request) returns (.CAccountHardware_SteamControllerSetConfig_Response);
+	rpc GetDesiredControllerConfigForApp (.CAccountHardware_SteamControllerGetConfig_Request) returns (.CAccountHardware_SteamControllerGetConfig_Response);
+	rpc DeRegisterSteamController (.CAccountHardware_DeRegisterSteamController_Request) returns (.CAccountHardware_DeRegisterSteamController_Response);
+	rpc SetControllerPersonalizationFile (.CAccountHardware_SetPersonalizationFile_Request) returns (.CAccountHardware_SetPersonalizationFile_Response);
+	rpc GetControllerPersonalizationFile (.CAccountHardware_GetPersonalizationFile_Request) returns (.CAccountHardware_GetPersonalizationFile_Response);
+	rpc VRCompatibilityCheck (.CAccountHardware_VRCompatibilityCheck_Request) returns (.CAccountHardware_VRCompatibilityCheck_Response);
+	rpc RegisterValveIndexComponent (.CAccountHardware_RegisterValveIndexComponent_Request) returns (.CAccountHardware_RegisterValveIndexComponent_Response);
+	rpc GetSteamDeckComponents (.CAccountHardware_GetSteamDeckComponents_Request) returns (.CAccountHardware_GetSteamDeckComponents_Response);
 }

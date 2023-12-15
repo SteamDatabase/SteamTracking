@@ -2823,7 +2823,6 @@
     "FamilyManagement_ErrorNoMatch": "A família não existe.",
     "FamilyManagement_AccessDenied": "Você não tem permissão para realizar esta ação.",
     "FamilyManagement_ErrorGetUserCountry": "Não foi possível determinar o seu país.",
-    "FamilyManagement_ErrorCountryCheck": "A sua conta precisa estar no mesmo país do criador do grupo.",
     "FamilyManagement_ErrorLimitExceeded": "No momento, a família está sob restrição e pode apenas aceitar ou convidar ex-membros.",
     "FamilyManagement_ErrorFamilySizeLimitExceeded": "A família está cheia e não pode aceitar nem convidar novos membros.",
     "FamilyManagement_ErrorAccountActivityLimitExceeded": "No momento, a sua conta está sob restrição e pode apenas reentrar na sua família anterior.",

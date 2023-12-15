@@ -2823,7 +2823,6 @@
     "FamilyManagement_ErrorNoMatch": "Ta rodzina nie istnieje.",
     "FamilyManagement_AccessDenied": "Nie masz uprawnienia do wykonania tej czynności.",
     "FamilyManagement_ErrorGetUserCountry": "Nie udało się ustalić twojego kraju.",
-    "FamilyManagement_ErrorCountryCheck": "Twoje konto musi być z tego samego kraju co twórca grupy.",
     "FamilyManagement_ErrorLimitExceeded": "Tę rodzinę obowiązuje obecnie okres oczekiwania na dodawanie nowych członków i można do niej przyjmować lub zapraszać wyłącznie byłych członków.",
     "FamilyManagement_ErrorFamilySizeLimitExceeded": "Wszystkie miejsca w tej rodzinie są zajęte i nie można do niej przyjąć ani zaprosić nowych członków.",
     "FamilyManagement_ErrorAccountActivityLimitExceeded": "Twoje konto obowiązuje obecnie okres oczekiwania na dodanie do rodziny i możesz jedynie ponownie dołączyć do swojej poprzedniej rodziny.",

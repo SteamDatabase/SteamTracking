@@ -2823,7 +2823,6 @@
     "FamilyManagement_ErrorNoMatch": "Ця сімейна група не існує.",
     "FamilyManagement_AccessDenied": "Ви не маєте дозволу виконувати цю дію.",
     "FamilyManagement_ErrorGetUserCountry": "Не вдалося визначити вашу країну.",
-    "FamilyManagement_ErrorCountryCheck": "Ваш акаунт повинен бути в тій самій країні, що й акаунт особи, яка створила групу.",
     "FamilyManagement_ErrorLimitExceeded": "Наразі триває період очікування на приєднання до цієї сімейної групи, тому приєднатися до неї можуть лише її колишні учасники.",
     "FamilyManagement_ErrorFamilySizeLimitExceeded": "Неможливо приєднатися до цієї сімейної групи, тому що кількість її учасників уже максимальна.",
     "FamilyManagement_ErrorAccountActivityLimitExceeded": "Наразі для вашого акаунта триває період очікування на приєднання до сімейних груп, тому ви можете приєднатися лише до колишньої сімейної групи.",

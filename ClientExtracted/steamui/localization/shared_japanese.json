@@ -2823,7 +2823,6 @@
     "FamilyManagement_ErrorNoMatch": "このファミリーは存在しません。",
     "FamilyManagement_AccessDenied": "このアクションを行う権限がありません。",
     "FamilyManagement_ErrorGetUserCountry": "あなたの国を特定できませんでした。",
-    "FamilyManagement_ErrorCountryCheck": "アカウントの国はグループの作成者と同じである必要があります。",
     "FamilyManagement_ErrorLimitExceeded": "このファミリーは現在クールダウン中のため、以前のメンバーのみを承諾または招待することができます。",
     "FamilyManagement_ErrorFamilySizeLimitExceeded": "このファミリーは定員に達したため、新しいメンバーを承諾または招待できません。",
     "FamilyManagement_ErrorAccountActivityLimitExceeded": "アカウントは現在クールダウン中のため、再度参加できるのは以前参加していたファミリーのみです。",

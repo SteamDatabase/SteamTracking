@@ -6182,6 +6182,13 @@ enum UnnamedEnum5208bd0306021116
 	PLACEMENT = 11;
 }
 
+enum UnnamedEnum5341f659b7352c78
+{
+	EveryTime = 0;
+	Once = 1;
+	OncePerGame = 2;
+}
+
 enum UnnamedEnum5492f48161b9f221
 {
 	Off = 0;
@@ -6288,6 +6295,26 @@ enum UnnamedEnum5f9e5112c68eb7f0
 	k_ModRemovedFromSteamChina = 5;
 	k_ModFlagAdultOnlyContent = 6;
 	k_ModRemoveAdultOnlyContent = 7;
+}
+
+enum UnnamedEnum5fafd99067d7a555
+{
+	k_eIntro = 0;
+	k_eNonVerifiedGame = 1;
+	k_eGyro = 2;
+	k_eAppTextInputDoesNotAutomaticallyInvokesKeyboard = 3;
+	k_eRemotePlayConfirm = 4;
+	k_eAppLauncherInteractionIssues = 5;
+	k_eAppHasSmallText = 6;
+	k_eExternalControllersAndSIAPI = 7;
+	k_eIntroToActionSets = 8;
+	k_eIntroToSteamInputGames = 9;
+	k_eGamepadRequired = 10;
+	k_eGamepadRecommended = 11;
+	k_eCurrentGamepadUnsupported = 12;
+	k_eCurrentGamepadSteamInputOptIn = 13;
+	k_eVRRequired = 14;
+	k_eIntroToVRTheater = 15;
 }
 
 enum UnnamedEnum618726a5cc07bf68
@@ -7632,25 +7659,6 @@ enum UnnamedEnumdb303c21506dd3e7
 	TouchDragging = 3;
 }
 
-enum UnnamedEnumdb8daaf8894ebc13
-{
-	k_eIntro = 0;
-	k_eNonVerifiedGame = 1;
-	k_eGyro = 2;
-	k_eAppTextInputDoesNotAutomaticallyInvokesKeyboard = 3;
-	k_eRemotePlayConfirm = 4;
-	k_eAppLauncherInteractionIssues = 5;
-	k_eAppHasSmallText = 6;
-	k_eExternalControllersAndSIAPI = 7;
-	k_eIntroToActionSets = 8;
-	k_eIntroToSteamInputGames = 9;
-	k_eGamepadRequired = 10;
-	k_eGamepadRecommended = 11;
-	k_eCurrentGamepadUnsupported = 12;
-	k_eCurrentGamepadSteamInputOptIn = 13;
-	k_eVRRequired = 14;
-}
-
 enum UnnamedEnumdc9256109fda0b46
 {
 	Notifications = 0;
@@ -7781,15 +7789,6 @@ enum UnnamedEnumee13fc02f2c6851d
 	SlidingEdge = 5;
 }
 
-enum UnnamedEnumeeeeb64d8da89d55
-{
-	Invalid = 0;
-	GamepadToast = 1;
-	DesktopToast = 2;
-	Tray = 3;
-	AllNotificationsTray = 4;
-}
-
 enum UnnamedEnumf126cd872c06e76e
 {
 	None = 0;
@@ -7835,6 +7834,14 @@ enum UnnamedEnumf60d704b0b63ab30
 	Loading = 2;
 	Ready = 3;
 	Error = 4;
+}
+
+enum UnnamedEnumf6e55e66e7eca716
+{
+	kInitial = 0;
+	kNewCollection = 1;
+	kExistingCollection = 2;
+	kError = 3;
 }
 
 enum UnnamedEnumf711bb3dceab35ce

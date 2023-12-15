@@ -4,13 +4,13 @@ import "steammessages_unified_base.steamclient.proto";
 option cc_generic_services = true;
 
 message CGameServers_GetServerList_Request {
-	optional string filter = 1 [(description) = "Query filter string."];
-	optional uint32 limit = 2 [default = 100, (description) = "The maximum number of servers to return in the response"];
+	optional string filter = 1;
+	optional uint32 limit = 2 [default = 100];
 }
 
 message CGameServers_GetServerList_Response {
 	message Server {
-		optional string addr = 1 [(description) = "The server's IP and query port"];
+		optional string addr = 1;
 		optional uint32 gameport = 2;
 		optional uint32 specport = 3;
 		optional fixed64 steamid = 4;
@@ -30,7 +30,7 @@ message CGameServers_GetServerList_Response {
 		optional string gametype = 18;
 	}
 
-	repeated .CGameServers_GetServerList_Response.Server servers = 1 [(description) = "List of servers matching the filter"];
+	repeated .CGameServers_GetServerList_Response.Server servers = 1;
 }
 
 message CGameServers_GetServerSteamIDsByIP_Request {
@@ -58,10 +58,10 @@ message CGameServers_QueryByFakeIP_Request {
 		Query_Rules = 3;
 	}
 
-	optional uint32 fake_ip = 1 [(description) = "FakeIP of server to query."];
-	optional uint32 fake_port = 2 [(description) = "Fake port of server to query."];
-	optional uint32 app_id = 3 [(description) = "AppID to use.  Each AppID has its own FakeIP address."];
-	optional .CGameServers_QueryByFakeIP_Request.EQueryType query_type = 4 [default = Query_Invalid, (description) = "What type of query?"];
+	optional uint32 fake_ip = 1;
+	optional uint32 fake_port = 2;
+	optional uint32 app_id = 3;
+	optional .CGameServers_QueryByFakeIP_Request.EQueryType query_type = 4 [default = Query_Invalid];
 }
 
 message CMsgGameServerPingQueryData {
@@ -123,30 +123,14 @@ message GameServerClient_QueryServerData_Response {
 }
 
 service GameServers {
-	option (service_description) = "A service for searching and managing game servers.";
-
-	rpc GetServerList (.CGameServers_GetServerList_Request) returns (.CGameServers_GetServerList_Response) {
-		option (method_description) = "Gets a list of servers given a filter string";
-	}
-
-	rpc GetServerSteamIDsByIP (.CGameServers_GetServerSteamIDsByIP_Request) returns (.CGameServers_IPsWithSteamIDs_Response) {
-		option (method_description) = "Gets a list of server SteamIDs given a list of IPs";
-	}
-
-	rpc GetServerIPsBySteamID (.CGameServers_GetServerIPsBySteamID_Request) returns (.CGameServers_IPsWithSteamIDs_Response) {
-		option (method_description) = "Gets a list of server IP addresses given a list of SteamIDs";
-	}
-
-	rpc QueryByFakeIP (.CGameServers_QueryByFakeIP_Request) returns (.CGameServers_GameServerQuery_Response) {
-		option (method_description) = "Perform a query on a specific server by FakeIP";
-	}
+	rpc GetServerList (.CGameServers_GetServerList_Request) returns (.CGameServers_GetServerList_Response);
+	rpc GetServerSteamIDsByIP (.CGameServers_GetServerSteamIDsByIP_Request) returns (.CGameServers_IPsWithSteamIDs_Response);
+	rpc GetServerIPsBySteamID (.CGameServers_GetServerIPsBySteamID_Request) returns (.CGameServers_IPsWithSteamIDs_Response);
+	rpc QueryByFakeIP (.CGameServers_QueryByFakeIP_Request) returns (.CGameServers_GameServerQuery_Response);
 }
 
 service GameServerClient {
-	option (service_description) = "Service methods exposed by GameServer Steam clients";
 	option (service_execution_site) = k_EProtoExecutionSiteSteamClient;
 
-	rpc QueryServerData (.GameServerClient_QueryServerData_Request) returns (.GameServerClient_QueryServerData_Response) {
-		option (method_description) = "Steam is asking a gameserver for its data";
-	}
+	rpc QueryServerData (.GameServerClient_QueryServerData_Request) returns (.GameServerClient_QueryServerData_Response);
 }

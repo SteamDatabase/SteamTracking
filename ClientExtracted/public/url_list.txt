@@ -1336,3 +1336,9 @@ FamilyManagement
 	url			"%store%/account/familymanagement"
 	method		"internal"
 }
+YearInReview
+{
+	url			"%store%/yearinreview"
+	method		"internal"
+	filter		"store"
+}

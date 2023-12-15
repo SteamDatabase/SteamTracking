@@ -4,27 +4,27 @@ import "steammessages_unified_base.steamclient.proto";
 option cc_generic_services = true;
 
 message CMsgTest_MessageToClient_Request {
-	optional string some_text = 1 [(description) = "Some string."];
+	optional string some_text = 1;
 }
 
 message CMsgTest_MessageToClient_Response {
-	optional string some_text = 1 [(description) = "Some string."];
+	optional string some_text = 1;
 }
 
 message CMsgTest_NotifyClient_Notification {
-	optional string some_text = 1 [(description) = "Some string."];
+	optional string some_text = 1;
 }
 
 message CMsgTest_MessageToServer_Request {
-	optional string some_text = 1 [(description) = "Some string."];
+	optional string some_text = 1;
 }
 
 message CMsgTest_MessageToServer_Response {
-	optional string some_text = 1 [(description) = "Some string."];
+	optional string some_text = 1;
 }
 
 message CMsgTest_NotifyServer_Notification {
-	optional string some_text = 1 [(description) = "Some string."];
+	optional string some_text = 1;
 }
 
 message CMsgTest_NoBody_Request {
@@ -37,23 +37,13 @@ message CMsgTest_CallClient_Response {
 service TestSteamClient {
 	option (service_execution_site) = k_EProtoExecutionSiteSteamClient;
 
-	rpc MessageToClient (.CMsgTest_MessageToClient_Request) returns (.CMsgTest_MessageToClient_Response) {
-		option (method_description) = "Some description - MessageToClient.";
-	}
-
-	rpc NotifyClient (.CMsgTest_NotifyClient_Notification) returns (.NoResponse) {
-		option (method_description) = "Some description - NotifyClient.";
-	}
+	rpc MessageToClient (.CMsgTest_MessageToClient_Request) returns (.CMsgTest_MessageToClient_Response);
+	rpc NotifyClient (.CMsgTest_NotifyClient_Notification) returns (.NoResponse);
 }
 
 service TestServerFromClient {
-	rpc MessageToServer (.CMsgTest_MessageToServer_Request) returns (.CMsgTest_MessageToServer_Response) {
-		option (method_description) = "Some description - MessageToServer.";
-	}
-
-	rpc NotifyServer (.CMsgTest_NotifyServer_Notification) returns (.NoResponse) {
-		option (method_description) = "Some description - NotifyServer.";
-	}
+	rpc MessageToServer (.CMsgTest_MessageToServer_Request) returns (.CMsgTest_MessageToServer_Response);
+	rpc NotifyServer (.CMsgTest_NotifyServer_Notification) returns (.NoResponse);
 }
 
 service TestExternalPrivilege {

@@ -55,7 +55,7 @@ enum EMarketingMessageLookupType {
 
 message CMarketingMessages_GetActiveMarketingMessages_Request {
 	optional string country = 1;
-	optional bool anonymous_user = 2 [(description) = "Will not return any marketing message that requires ownership/playtime/wishlist"];
+	optional bool anonymous_user = 2;
 }
 
 message CMarketingMessageProto {
@@ -95,10 +95,10 @@ message CMarketingMessages_GetMarketingMessagesForUser_Request {
 	optional bool include_seen_messages = 1;
 	optional string country_code = 2;
 	optional int32 elanguage = 3;
-	optional int32 operating_system = 4 [(description) = "EOSType from client"];
+	optional int32 operating_system = 4;
 	optional int32 client_package_version = 5;
-	optional .StoreBrowseContext context = 6 [(description) = "Optional, server can fill in from country code/language if not set"];
-	optional .StoreBrowseItemDataRequest data_request = 7 [(description) = "If passed, item data will be returned"];
+	optional .StoreBrowseContext context = 6;
+	optional .StoreBrowseItemDataRequest data_request = 7;
 }
 
 message CDisplayMarketingMessage {
@@ -124,7 +124,7 @@ message CMarketingMessages_GetMarketingMessagesForUser_Response {
 message CMarketingMessages_DoesUserHavePendingMarketingMessages_Request {
 	optional string country_code = 2;
 	optional int32 elanguage = 3;
-	optional int32 operating_system = 4 [(description) = "EOSType from client"];
+	optional int32 operating_system = 4;
 	optional int32 client_package_version = 5;
 }
 
@@ -136,7 +136,7 @@ message CMarketingMessages_DoesUserHavePendingMarketingMessages_Response {
 message CMarketingMessages_GetDisplayMarketingMessage_Request {
 	optional fixed64 gid = 1;
 	optional .StoreBrowseContext context = 2;
-	optional .StoreBrowseItemDataRequest data_request = 3 [(description) = "If passed, item data will be returned"];
+	optional .StoreBrowseItemDataRequest data_request = 3;
 }
 
 message CMarketingMessages_GetDisplayMarketingMessage_Response {
@@ -145,8 +145,8 @@ message CMarketingMessages_GetDisplayMarketingMessage_Response {
 
 message CMarketingMessages_MarkMessageSeen_Notification {
 	optional fixed64 gid = 1;
-	optional uint32 display_index = 2 [default = 0, (description) = "Where in the stack was the marketing message, 1-based, zero means we don't know"];
-	optional .EMarketingMessageTemplateType template_type = 3 [default = k_EMarketingMessageTemplate_Unknown, (description) = "Which type of template did they see"];
+	optional uint32 display_index = 2 [default = 0];
+	optional .EMarketingMessageTemplateType template_type = 3 [default = k_EMarketingMessageTemplate_Unknown];
 }
 
 message CMarketingMessages_GetMarketingMessage_Request {
@@ -159,7 +159,7 @@ message CMarketingMessages_GetMarketingMessage_Response {
 
 message CMarketingMessages_CreateMarketingMessage_Request {
 	optional .CMarketingMessageProto message = 1;
-	optional bool from_json = 2 [(description) = "If set, then overwrite the template_vars and additional_restrictions keyvalues from json"];
+	optional bool from_json = 2;
 }
 
 message CMarketingMessages_CreateMarketingMessage_Response {
@@ -169,7 +169,7 @@ message CMarketingMessages_CreateMarketingMessage_Response {
 message CMarketingMessages_UpdateMarketingMessage_Request {
 	optional fixed64 gid = 1;
 	optional .CMarketingMessageProto message = 2;
-	optional bool from_json = 3 [(description) = "If set, then overwrite the template_vars and additional_restrictions keyvalues from json"];
+	optional bool from_json = 3;
 }
 
 message CMarketingMessages_UpdateMarketingMessage_Response {
@@ -200,9 +200,9 @@ message CMarketingMessages_GetMarketingMessageViewerStats_Request {
 
 message CMarketingMessageHourlyStats {
 	optional uint32 rt_time_hour = 1;
-	optional uint32 seen_count = 2 [(description) = "within the hour period"];
-	optional .EMarketingMessageTemplateType template_type = 3 [default = k_EMarketingMessageTemplate_Unknown, (description) = "Which template type was shown, usually just IMAGE"];
-	optional uint32 display_index = 4 [(description) = "Zero is invalid/we don't have information; 1 based index"];
+	optional uint32 seen_count = 2;
+	optional .EMarketingMessageTemplateType template_type = 3 [default = k_EMarketingMessageTemplate_Unknown];
+	optional uint32 display_index = 4;
 }
 
 message CMarketingMessages_GetMarketingMessageViewerStats_Response {
@@ -215,7 +215,7 @@ message CMarketingMessages_GetMarketingMessagesViewerRangeStats_Request {
 }
 
 message CMarketingMessages_GetMarketingMessagesViewerRangeStats_Response {
-	repeated .CMarketingMessageHourlyStats stats = 1 [(description) = "Flatterns results for the range of time"];
+	repeated .CMarketingMessageHourlyStats stats = 1;
 }
 
 message CMarketingMessages_GetPartnerReadyToPublishMessages_Request {
@@ -244,73 +244,21 @@ message CMarketingMessages_GetPartnerMessagePreview_Response {
 }
 
 service MarketingMessages {
-	option (service_description) = "Marketing message data (\"Steam News\" updates at client startup).";
-
-	rpc GetActiveMarketingMessages (.CMarketingMessages_GetActiveMarketingMessages_Request) returns (.CMarketingMessages_GetActiveMarketingMessages_Response) {
-		option (method_description) = "Get a list of active marketing messages.";
-	}
-
-	rpc GetMarketingMessagesForUser (.CMarketingMessages_GetMarketingMessagesForUser_Request) returns (.CMarketingMessages_GetMarketingMessagesForUser_Response) {
-		option (method_description) = "Get a list of active marketing messages filtered for a specific user.";
-	}
-
-	rpc DoesUserHavePendingMarketingMessages (.CMarketingMessages_DoesUserHavePendingMarketingMessages_Request) returns (.CMarketingMessages_DoesUserHavePendingMarketingMessages_Response) {
-		option (method_description) = "Returns a boolean if the user has pending marketing messages.  Intended to be fast.";
-	}
-
-	rpc GetDisplayMarketingMessage (.CMarketingMessages_GetDisplayMarketingMessage_Request) returns (.CMarketingMessages_GetDisplayMarketingMessage_Response) {
-		option (method_description) = "Get a single marketing message, cacheable.";
-	}
-
-	rpc GetDisplayMarketingMessageForUser (.CMarketingMessages_GetDisplayMarketingMessage_Request) returns (.CMarketingMessages_GetDisplayMarketingMessage_Response) {
-		option (method_description) = "Get a single marketing message, which can be customized per user.";
-	}
-
-	rpc GetDisplayMarketingMessageAdmin (.CMarketingMessages_GetDisplayMarketingMessage_Request) returns (.CMarketingMessages_GetDisplayMarketingMessage_Response) {
-		option (method_description) = "Get a single marketing message for Admin, not cacheable.";
-	}
-
-	rpc MarkMessageSeen (.CMarketingMessages_MarkMessageSeen_Notification) returns (.NoResponse) {
-		option (method_description) = "Mark that a user has viewed a message (so we won't show it again)'.";
-	}
-
-	rpc GetMarketingMessage (.CMarketingMessages_GetMarketingMessage_Request) returns (.CMarketingMessages_GetMarketingMessage_Response) {
-		option (method_description) = "Get a single marketing message.  Admin account needed for non-active messages";
-	}
-
-	rpc CreateMarketingMessage (.CMarketingMessages_CreateMarketingMessage_Request) returns (.CMarketingMessages_CreateMarketingMessage_Response) {
-		option (method_description) = "Create a new marketing message.";
-	}
-
-	rpc UpdateMarketingMessage (.CMarketingMessages_UpdateMarketingMessage_Request) returns (.CMarketingMessages_UpdateMarketingMessage_Response) {
-		option (method_description) = "Modify a marketing message.";
-	}
-
-	rpc DeleteMarketingMessage (.CMarketingMessages_DeleteMarketingMessage_Request) returns (.CMarketingMessages_DeleteMarketingMessage_Response) {
-		option (method_description) = "Delete a marketing message.";
-	}
-
-	rpc FindMarketingMessages (.CMarketingMessages_FindMarketingMessages_Request) returns (.CMarketingMessages_FindMarketingMessages_Response) {
-		option (method_description) = "Search for marketing messages by name, type, etc.";
-	}
-
-	rpc GetMarketingMessageViewerStats (.CMarketingMessages_GetMarketingMessageViewerStats_Request) returns (.CMarketingMessages_GetMarketingMessageViewerStats_Response) {
-		option (method_description) = "For a specific marketing message, then all of the viewership stats for the date range it was intended to be visible to customers";
-	}
-
-	rpc GetMarketingMessagesViewerRangeStats (.CMarketingMessages_GetMarketingMessagesViewerRangeStats_Request) returns (.CMarketingMessages_GetMarketingMessagesViewerRangeStats_Response) {
-		option (method_description) = "For a time range, return the seen stats across all of the marketing messages";
-	}
-
-	rpc GetPartnerReadyToPublishMessages (.CMarketingMessages_GetPartnerReadyToPublishMessages_Request) returns (.CMarketingMessages_GetPartnerReadyToPublishMessages_Response) {
-		option (method_description) = "Are there any marketing messages that are staged for this partner to control publishing and visibility upon?";
-	}
-
-	rpc PublishPartnerMessage (.CMarketingMessages_PartnerPublishMessage_Request) returns (.CMarketingMessages_PartnerPublishMessage_Response) {
-		option (method_description) = "partner endpoint to publish a marketing message";
-	}
-
-	rpc GetPartnerMessagePreview (.CMarketingMessages_GetPartnerMessagePreview_Request) returns (.CMarketingMessages_GetPartnerMessagePreview_Response) {
-		option (method_description) = "partner endpoint to get a marketing message preview that is approved for publishing";
-	}
+	rpc GetActiveMarketingMessages (.CMarketingMessages_GetActiveMarketingMessages_Request) returns (.CMarketingMessages_GetActiveMarketingMessages_Response);
+	rpc GetMarketingMessagesForUser (.CMarketingMessages_GetMarketingMessagesForUser_Request) returns (.CMarketingMessages_GetMarketingMessagesForUser_Response);
+	rpc DoesUserHavePendingMarketingMessages (.CMarketingMessages_DoesUserHavePendingMarketingMessages_Request) returns (.CMarketingMessages_DoesUserHavePendingMarketingMessages_Response);
+	rpc GetDisplayMarketingMessage (.CMarketingMessages_GetDisplayMarketingMessage_Request) returns (.CMarketingMessages_GetDisplayMarketingMessage_Response);
+	rpc GetDisplayMarketingMessageForUser (.CMarketingMessages_GetDisplayMarketingMessage_Request) returns (.CMarketingMessages_GetDisplayMarketingMessage_Response);
+	rpc GetDisplayMarketingMessageAdmin (.CMarketingMessages_GetDisplayMarketingMessage_Request) returns (.CMarketingMessages_GetDisplayMarketingMessage_Response);
+	rpc MarkMessageSeen (.CMarketingMessages_MarkMessageSeen_Notification) returns (.NoResponse);
+	rpc GetMarketingMessage (.CMarketingMessages_GetMarketingMessage_Request) returns (.CMarketingMessages_GetMarketingMessage_Response);
+	rpc CreateMarketingMessage (.CMarketingMessages_CreateMarketingMessage_Request) returns (.CMarketingMessages_CreateMarketingMessage_Response);
+	rpc UpdateMarketingMessage (.CMarketingMessages_UpdateMarketingMessage_Request) returns (.CMarketingMessages_UpdateMarketingMessage_Response);
+	rpc DeleteMarketingMessage (.CMarketingMessages_DeleteMarketingMessage_Request) returns (.CMarketingMessages_DeleteMarketingMessage_Response);
+	rpc FindMarketingMessages (.CMarketingMessages_FindMarketingMessages_Request) returns (.CMarketingMessages_FindMarketingMessages_Response);
+	rpc GetMarketingMessageViewerStats (.CMarketingMessages_GetMarketingMessageViewerStats_Request) returns (.CMarketingMessages_GetMarketingMessageViewerStats_Response);
+	rpc GetMarketingMessagesViewerRangeStats (.CMarketingMessages_GetMarketingMessagesViewerRangeStats_Request) returns (.CMarketingMessages_GetMarketingMessagesViewerRangeStats_Response);
+	rpc GetPartnerReadyToPublishMessages (.CMarketingMessages_GetPartnerReadyToPublishMessages_Request) returns (.CMarketingMessages_GetPartnerReadyToPublishMessages_Response);
+	rpc PublishPartnerMessage (.CMarketingMessages_PartnerPublishMessage_Request) returns (.CMarketingMessages_PartnerPublishMessage_Response);
+	rpc GetPartnerMessagePreview (.CMarketingMessages_GetPartnerMessagePreview_Request) returns (.CMarketingMessages_GetPartnerMessagePreview_Response);
 }

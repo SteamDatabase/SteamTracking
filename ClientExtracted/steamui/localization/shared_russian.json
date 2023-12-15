@@ -2823,7 +2823,6 @@
     "FamilyManagement_ErrorNoMatch": "Такой семейной группы не существует.",
     "FamilyManagement_AccessDenied": "У вас нет прав на это действие.",
     "FamilyManagement_ErrorGetUserCountry": "Не удалось определить вашу страну.",
-    "FamilyManagement_ErrorCountryCheck": "Страна вашего аккаунта должна совпадать со страной создателя группы.",
     "FamilyManagement_ErrorLimitExceeded": "В настоящее время в эту семейную группу можно приглашать и добавлять только бывших её участников.",
     "FamilyManagement_ErrorFamilySizeLimitExceeded": "Эта семейная группа заполнена, приглашение и добавление новых участников невозможно.",
     "FamilyManagement_ErrorAccountActivityLimitExceeded": "В настоящее время вы можете только вернуться в семейную группу, в которой уже состояли.",

@@ -2823,7 +2823,6 @@
     "FamilyManagement_ErrorNoMatch": "Tato rodina neexistuje.",
     "FamilyManagement_AccessDenied": "Pro tuto akci nemáte dostatečná oprávnění.",
     "FamilyManagement_ErrorGetUserCountry": "Nepodařilo se určit Vaši zemi.",
-    "FamilyManagement_ErrorCountryCheck": "Váš účet se musí nacházet ve stejné zemi jako účet, který rodinu vytvořil.",
     "FamilyManagement_ErrorLimitExceeded": "Na tuto rodinu se momentálně vztahuje omezení a může přijímat nebo zvát pouze své bývalé členy.",
     "FamilyManagement_ErrorFamilySizeLimitExceeded": "Tato rodina je plná a nemůže přijmout ani zvát další uživatele.",
     "FamilyManagement_ErrorAccountActivityLimitExceeded": "Váš účet je momentálně omezen a může se pouze opětovně připojit do své bývalé rodiny.",
@@ -2856,6 +2855,10 @@
     "FamilyManagement_ErrorLoadShoppingCart": "Nepodařilo se načíst nákupní košík. %1$s",
     "RequestPurchase_GenericError": "Chyba při žádání o nákup. %1$s",
     "KioskMode_Dialog_Title": "Režim prodejny",
+    "KioskMode_UnlockDialog_Description": "Pro ukončení režimu prodejny zadejte níže svůj PIN.",
+    "KioskMode_LockDialog_Description": "Potvrďte, že se chcete vrátit do režimu prodejny.",
+    "KioskMode_Unlock_Tooltip": "Ukončit režim prodejny",
+    "KioskMode_Lock_Tooltip": "Přejít do režimu prodejny",
     "RemotePlay_StoreFunctionalityBlocked_Title": "Obchod není dostupný",
     "RemotePlay_StoreFunctionalityBlocked_Description": "Obchod není dostupný, zatímco používáte tuto aplikaci Steam Link."
 }

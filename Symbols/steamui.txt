@@ -373,6 +373,7 @@
  Plat_IsSteamOS
  Plat_IsSteamOS3
  Plat_IsTesla
+ Plat_IsWSL
  Plat_MSTime
  Plat_MSTime64
  Plat_OutputDebugString
@@ -1373,6 +1374,7 @@
  VProfInternalGetProfileForCurrentThread
  V_AppendParamToURL
  V_AppendSlash
+ V_BuildSortTitle
  V_ComposeFileName
  V_CopyAndFixSlashes
  V_EscapeShellArgumentAndAppend(CUtlStringBuilder*, char const*, bool)

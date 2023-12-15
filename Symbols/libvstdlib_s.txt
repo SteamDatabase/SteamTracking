@@ -104,6 +104,7 @@
  T V_AppendSlash
  T V_BasicHtmlEntityEncode
  T V_BasicHtmlEntityEncodeBuffer
+ T V_BuildSortTitle
  T V_CP437CharsToUTF8
  T V_ComposeFileName
  T V_ConvertStringToUUID(char const*, EUUIDStringFlags, V_UUID*)

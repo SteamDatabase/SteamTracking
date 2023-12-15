@@ -6974,6 +6974,7 @@
     "Notification_FriendInviteRollup_Title": "Solicitudes de amistad",
     "Notification_FriendInviteRollup_Body": "Tienes %1$s nuevas solicitudes de amistad",
     "Notification_FamilySharing_Title": "Préstamo familiar",
+    "Notification_FamilySharing_StopPlaying": "Este juego compartido ya está en uso y se cerrará en %1$s minutos.",
     "Notification_FamilySharingAuthorization_Authorized": "Los juegos de %1$s están ahora disponibles para que puedas jugarlos en este equipo.",
     "Notification_FamilySharingAuthorization_Deuthorized": "%1$s ha desautorizado este equipo, algunos juegos pueden no estar disponibles.",
     "Notification_FamilySharingAuthorization_StopPlaying": "Oye, ¡%1$s necesita que le devuelvas este juego compartido! Te quedan %2$s minutos de tiempo de juego...",
