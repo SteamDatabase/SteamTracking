@@ -237,8 +237,14 @@
 	overflow-y: auto;
 }
 
+.collectionChoiceSectionControls {
+	margin-top: 15px;
+}
+
 .itemChoice
 {
+	display: flex;
+	flex-direction: row;
 	font-size: 14px;
 	height: 30px;
 	line-height: 30px;
@@ -247,11 +253,6 @@
 	background-color: #4d4d4d;
 	margin-bottom: 1px;
 	cursor: pointer;
-}
-
-.itemChoice:hover
-{
-	background-color: #888888;
 }
 
 .itemChoiceEmpty
@@ -271,8 +272,20 @@
 	background-color: rgba( 84, 133, 183, 0.2);
 }
 
+.itemChoice:hover
+{
+	background-color: #888888;
+}
+.itemChoice.inCollection:hover
+{
+	background-color: rgba( 84, 133, 183, 0.5);
+}
+
+
 .itemChoiceNotVisible
 {
+	display: flex;
+	flex-direction: row;
 	font-size: 14px;
 	height: 30px;
 	line-height: 30px;
@@ -282,44 +295,42 @@
 	margin-bottom: 1px;
 }
 
-.itemChoiceStatus
+.itemChoice .itemChoiceStatus
 {
-	float: left;
 	height: 30px;
 	width: 16px;
 	padding-left: 5px;
 }
-
 .itemChoice:hover .itemChoiceStatus
 {
 	background-image:url('https://community.cloudflare.steamstatic.com/public/images/sharedfiles/ico_subscribe_tiled.png');
 	background-position: 0px 0px;
 	background-repeat: no-repeat;
 }
-
 .itemChoice.inCollection .itemChoiceStatus
 {
-	float: left;
-	height: 30px;
-	width: 16px;
-	padding-left: 5px;
 	background-image:url('https://community.cloudflare.steamstatic.com/public/images/sharedfiles/ico_subscribe_tiled.png');
 	background-position: 0px -60px;
+	background-repeat: no-repeat;
+}
+.itemChoice.inCollection:hover .itemChoiceStatus
+{
+	background-image:url('https://community.cloudflare.steamstatic.com/public/images/sharedfiles/ico_subscribe_tiled.png');
+	background-position: 0px -90px;
 	background-repeat: no-repeat;
 }
 
 .itemChoiceTitle
 {
-	float: left;
+	flex: 1 0 300px;
 	overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;
-	width: 300px;
 }
 
 .itemChoiceNotVisibleText
 {
-	float: left;
+	flex: 1;
 	overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;
@@ -328,7 +339,6 @@
 
 .itemChoiceCreator
 {
-	float: left;
 	overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;
@@ -337,13 +347,12 @@
 
 .itemChoiceType
 {
-	float: left;
 	width: 100px;
 }
 
 .itemChoiceControls
 {
-	float: right;
+	width: 160px;
 	visibility: hidden;
 	text-transform: uppercase;
 }
@@ -361,21 +370,6 @@
 .itemChoice:hover .itemChoiceControls
 {
 	visibility: visible;
-}
-
-.itemChoice.inCollection .itemChoiceViewDetails
-{
-	display: none;
-}
-
-.itemChoice .itemChoiceRemoveItem
-{
-	display: none;
-}
-
-.itemChoice.inCollection .itemChoiceRemoveItem
-{
-	display: block;
 }
 
 .managedCollectionItemControls
