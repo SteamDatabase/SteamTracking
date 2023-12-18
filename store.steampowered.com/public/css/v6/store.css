@@ -5166,6 +5166,16 @@ body.v6 .store_nav .popup_block_new .popup_body {
     white-space: normal;
 }
 
+.store_nav #noteworthy_flyout .popup_menu .popup_menu_item span.new {
+    color: white;
+    background: #c37f00 ;
+    padding: 1px 3px;
+    font-size: 10px;
+    border-radius: 2px;
+    text-shadow: none;
+    text-transform: uppercase;
+}
+
 html:not(.responsive.touch) .store_nav #genre_flyout .popup_menu .popup_genre_expand_content .popup_menu_item,
 html:not(.responsive.touch) .store_nav #noteworthy_flyout .popup_menu .popup_genre_expand_content .popup_menu_item {
     margin-left: 2px;
