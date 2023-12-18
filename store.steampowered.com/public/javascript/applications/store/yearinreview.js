@@ -1295,7 +1295,7 @@
       }
       const u = (0, r.EN)(d);
     },
-    75139: (e, t, a) => {
+    39097: (e, t, a) => {
       "use strict";
       a.r(t), a.d(t, { YearInReviewRoutes: () => Zn, default: () => Hn });
       var n = a(89526),
@@ -4500,7 +4500,7 @@
           }, []);
         if ("cn" === o.L7.country_code.toLowerCase()) return null;
         const d = t.GetPlayTimeStats().playtime_streak;
-        if (d && (d.longest_consecutive_days < 7 || d.streak_games.length < 2))
+        if (d && (d.longest_consecutive_days < 5 || d.streak_games.length < 2))
           return null;
         const u = d.streak_games.sort((e, t) => e.appid - t.appid),
           p = u.map((e) => e.appid);
@@ -6823,10 +6823,19 @@
           i = (0, n.useContext)(Tn),
           s = W();
         if (i.bIsUser) {
-          const e = `#steamrewind${r.GetYear()}_gametext_appid_${t.appid}`,
-            a = (0, Z.Xx)(e);
-          if (e != a)
-            return n.createElement("div", { className: ge.IntroLine }, a, " ");
+          const e = t.appid,
+            a = r.GetYear();
+          for (let t = a; t >= 2022; --t) {
+            const r = `#steamrewind${t}_gametext_appid_${e}`,
+              i = (0, Z.Xx)(r);
+            if (r != i && (t == a || !i.includes("" + t)))
+              return n.createElement(
+                "div",
+                { className: ge.IntroLine },
+                i,
+                " ",
+              );
+          }
         }
         let l;
         return (
