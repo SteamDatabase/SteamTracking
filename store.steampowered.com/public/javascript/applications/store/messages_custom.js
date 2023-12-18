@@ -6,6 +6,7 @@
     28241: (e) => {
       e.exports = {
         MMFrame: "replay_MMFrame_kmeCX",
+        HeaderCtn: "replay_HeaderCtn_1x7ZL",
         Header: "replay_Header_3zmnJ",
         YearSubtitle: "replay_YearSubtitle_GD-gM",
         SteamLogo: "replay_SteamLogo_3kQfW",
@@ -349,11 +350,15 @@
             className: (0, m.Z)(s.MMFrame, a.MMFrame, a.MMOverride),
             onClick: r,
           },
-          n.createElement(u, {
-            baseClass: (0, m.Z)(s.ReplayLogo, a.ReplayLogo),
-            accentClass: (0, m.Z)(s.ReplayLogoAccent, a.ReplayLogoAccent),
-          }),
-          n.createElement(v, { year: e.year, theme: a }),
+          n.createElement(
+            "div",
+            { className: s.HeaderCtn },
+            n.createElement(u, {
+              baseClass: (0, m.Z)(s.ReplayLogo, a.ReplayLogo),
+              accentClass: (0, m.Z)(s.ReplayLogoAccent, a.ReplayLogoAccent),
+            }),
+            n.createElement(v, { year: e.year, theme: a }),
+          ),
           n.createElement(p, { className: (0, m.Z)(s.SteamLogo, a.SteamLogo) }),
           n.createElement(B, { theme: a }),
           n.createElement(
@@ -453,7 +458,7 @@
           "svg",
           {
             xmlns: "http://www.w3.org/2000/svg",
-            viewBox: "0 0 181 73",
+            viewBox: "0 0 80 50",
             fill: "none",
             className: a,
           },

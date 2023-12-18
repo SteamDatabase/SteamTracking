@@ -1397,6 +1397,7 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 {
 	padding: 10px;
 	background-color: rgba( 0, 0, 0, 0.2 );
+	display: flex;
 }
 
 .collectionItemAuthor
@@ -1502,9 +1503,11 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 
 .collectionItem .subscriptionControls
 {
-	margin-top: 33px;
 	margin-right: 10px;
-	margin-left: auto;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	flex: 1;
 }
 
 .collectionItem .votingControls
@@ -1529,16 +1532,8 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 
 .collectionItem .general_btn.subscribe
 {
-	position: relative;
-	float: right;
-	height: 30px;
-	padding: 0px;
-	padding-left: 28px;
 	padding-right: 4px;
 	background-image: url( https://community.cloudflare.steamstatic.com/public/images/sharedfiles/btn_green.png);
-	background-repeat: no-repeat;
-	display: inline-block;
-	line-height: 30px;
 	color: #ffffff
 }
 
