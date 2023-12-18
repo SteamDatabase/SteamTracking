@@ -871,7 +871,7 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 	background-position: 0px -30px;
 }
 
-.subscribeIcon
+.subscribeIcon, .unsubscribeIcon, .duplicateCollectionIcon
 {
 	position: absolute;
 	top: 0px;
@@ -882,17 +882,16 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 	background-position: 0px 0px;
 	background-repeat: no-repeat;
 }
-
 .unsubscribeIcon
 {
-	position: absolute;
-	top: 0px;
-	left: 8px;
-	height: 30px;
-	width: 16px;
-	background-image:url('https://community.cloudflare.steamstatic.com/public/images/sharedfiles/ico_subscribe_tiled.png');
 	background-position: 0px -90px;
-	background-repeat: no-repeat;
+}
+.duplicateCollectionIcon {
+	background: url( 'https://community.cloudflare.steamstatic.com/public/shared/images/buttons/icons_16.png?v=5' );
+	background-position: 1392px 0px;
+	height: 16px;
+	width: 16px;
+	top: 7px;
 }
 
 #SubscribeItemBtn.toggled .subscribeIcon

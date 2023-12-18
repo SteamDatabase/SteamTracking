@@ -281,20 +281,6 @@
 	background-color: rgba( 84, 133, 183, 0.5);
 }
 
-
-.itemChoiceNotVisible
-{
-	display: flex;
-	flex-direction: row;
-	font-size: 14px;
-	height: 30px;
-	line-height: 30px;
-	padding-left: 10px;
-	color: #ffffff;
-	background-color: #323233;
-	margin-bottom: 1px;
-}
-
 .itemChoice .itemChoiceStatus
 {
 	height: 30px;
@@ -326,15 +312,6 @@
 	overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;
-}
-
-.itemChoiceNotVisibleText
-{
-	flex: 1;
-	overflow: hidden;
-	white-space: nowrap;
-	text-overflow: ellipsis;
-	width: 100px;
 }
 
 .itemChoiceCreator
@@ -443,6 +420,15 @@
 .manageItemsSort
 {
 	padding-top: 10px;
+}
+.manageItemsSort .sort_button i {
+	visibility: hidden;
+}
+.manageItemsSort .sort_button:hover i {
+	visibility: visible;
+}
+.manageItemsSort .sort_button.active_sort i {
+	visibility: visible;
 }
 
 .workshopItem

@@ -994,6 +994,13 @@ button::-moz-focus-inner
 			.btn_active .ico16.thumb_upv6, .active .ico16.thumb_upv6 {
 			background-position: -128px -16px;		}
 		
+	.ico16.arrow_up {
+		background-position: 0px -16px;	}
+
+			.ico_hover:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover .ico16.arrow_up {
+			background-position: -16px -16px;		}
+	
+		
 	.ico16.arrow_down {
 		background-position: -48px -16px;	}
 

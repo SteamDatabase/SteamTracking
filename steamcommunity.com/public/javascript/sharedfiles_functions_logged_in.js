@@ -917,13 +917,102 @@ function SaveSubscriptionToCollection( appID )
 				{
 					params['id'] = select.val();
 					$J.post( "https://steamcommunity.com/sharedfiles/savesubscriptionstocollection", params )
-						.done( function ( data )
+					.done( function ( data )
+					{
+						if ( data.success == 1 )
 						{
-							if ( data.success == 1 )
-							{
-								top.location.href = "https://steamcommunity.com/sharedfiles/details?id=" + data.publishedfileid;
-							}
-						} );
+							top.location.href = "https://steamcommunity.com/sharedfiles/filedetails?id=" + data.publishedfileid;
+						}
+					} );
+				} );
+			} );
+		}
+	} );
+}
+
+function SaveCollectionToCollection( appID, srcCollectionID )
+{
+	var params = {
+		appid: appID,
+		srcCollectionID: srcCollectionID,
+		sessionid: g_sessionID
+	};
+
+	var funcNewCollection = function() {
+		var prompt = ShowPromptDialog( 'Overwrite Collection', 'Enter a name for this collection:' );
+		prompt.done( function( title ) {
+			title = v_trim( title );
+			if ( title.length == 0 )
+				return;
+
+			params['title'] = title;
+			$J.post( "https://steamcommunity.com/sharedfiles/savecollectiontocollection", params )
+			.done( function( data )
+			{
+				if ( data.success == 1 )
+				{
+					top.location.href = "https://steamcommunity.com/sharedfiles/filedetails?id=" + data.publishedfileid;
+				}
+			} );
+		} );
+	};
+
+	var dialog = ShowConfirmDialog(
+		'Overwrite Collection',
+		'Would you like to save this collection to a new collection or overwrite an existing collection?',
+		'New Collection',
+		undefined,
+		'Existing Collection',
+	);
+	dialog.done( function( action ) {
+		if ( action == 'OK' )
+		{
+			funcNewCollection();
+		}
+		else
+		{
+			// ajax request to get the user's collections
+			$J.post( 'https://steamcommunity.com/sharedfiles/ajaxgetmycollections',
+			{
+				'appid' : appID,
+				'sessionid' : g_sessionID
+			} )
+			.done( function( json )
+			{
+				// build dialog
+				var all_collections = json['all_collections'];
+				if ( !all_collections || all_collections.length == 0 || !all_collections['publishedfiledetails'] || all_collections['publishedfiledetails'].length == 0 )
+				{
+					ShowConfirmDialog( 'Overwrite Collection', 'You don\'t have any existing collections. Create a new one?' )
+						.done( funcNewCollection );
+					return;
+				}
+
+				var content = $J( '<div/>', { text: 'Select a collection to overwrite: ' } );
+				content.append( $J( '<br/>' ) );
+				content.append( $J( '<br/>' ) );
+				var select = $J( '<select/>' );
+				var publishedFileDetails = all_collections['publishedfiledetails'];
+				for ( var i = 0; i < publishedFileDetails.length; ++i )
+				{
+					var details = publishedFileDetails[i];
+					var option = $J( '<option/>', { value: details['publishedfileid'], text: details['title'] } );
+					select.append( option );
+				}
+				content.append( select );
+
+				var dialog = ShowConfirmDialog( 'Overwrite Collection', content );
+				dialog.done( function ()
+				{
+					params['id'] = select.val();
+					$J.post( "https://steamcommunity.com/sharedfiles/savecollectiontocollection", params )
+					.done( function ( data )
+					{
+						if ( data.success == 1 )
+						{
+							top.location.href = "https://steamcommunity.com/sharedfiles/filedetails?id=" + data.publishedfileid;
+						}
+					} );
 				} );
 			} );
 		}

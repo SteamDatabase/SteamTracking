@@ -2674,7 +2674,6 @@ https://steamcommunity.com/sharedfiles/ajaxupdatecontentdescriptors/
 https://steamcommunity.com/sharedfiles/ban
 https://steamcommunity.com/sharedfiles/banupvoters
 https://steamcommunity.com/sharedfiles/contributorpicker/${publishedfileid}
-https://steamcommunity.com/sharedfiles/details?id=${publishedfileid}
 https://steamcommunity.com/sharedfiles/downloadfile/?id=${publishFileID}&revision=${revision}
 https://steamcommunity.com/sharedfiles/filedetails/?id=${publishedFileID}
 https://steamcommunity.com/sharedfiles/filedetails?id=${publishedfileid}
@@ -2689,6 +2688,7 @@ https://steamcommunity.com/sharedfiles/removepreview
 https://steamcommunity.com/sharedfiles/removetaggeduser
 https://steamcommunity.com/sharedfiles/reportitem
 https://steamcommunity.com/sharedfiles/resetreportedcount
+https://steamcommunity.com/sharedfiles/savecollectiontocollection
 https://steamcommunity.com/sharedfiles/savesubscriptionstocollection
 https://steamcommunity.com/sharedfiles/setaccepted
 https://steamcommunity.com/sharedfiles/setpending
