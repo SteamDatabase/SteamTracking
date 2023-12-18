@@ -2157,7 +2157,8 @@
               Ve = !0;
               break;
             }
-          let je = 0;
+          let je = 0,
+            qe = !1;
           if (
             null === (t = null == K ? void 0 : K.persona) || void 0 === t
               ? void 0
@@ -2173,9 +2174,17 @@
               ) {
                 const e = t.match(/.*(?:\D|^)(\d+)/);
                 e && e.length && (je = e[1]);
+              } else if (
+                /Streamer/i.test(t) &&
+                /Main/.test(t) &&
+                t.match(/.*(?:\D|^)(\d+)/) &&
+                t.match(/.*(?:\D|^)(\d+)/)
+              ) {
+                const e = t.match(/.*(?:\D|^)(\d+)/);
+                e && e.length && ((je = e[1]), (qe = !0));
               }
             }
-          const qe =
+          const Je =
             (null === (a = null == K ? void 0 : K.persona) || void 0 === a
               ? void 0
               : a.personaname) || "";
@@ -2189,7 +2198,7 @@
               i.createElement(
                 "title",
                 null,
-                "Dota 2 Player" + (qe ? " - " + qe : ""),
+                "Dota 2 Player" + (Je ? " - " + Je : ""),
               ),
             ),
             i.createElement(O.Z, null),
@@ -2206,7 +2215,7 @@
                   i.createElement(
                     "h1",
                     { className: (0, h.Z)(P().Header, P().HeaderFixedHeight) },
-                    `${qe}`,
+                    `${Je}`,
                   ),
                   i.createElement(
                     "div",
@@ -2596,7 +2605,8 @@
                       i.createElement(
                         i.Fragment,
                         null,
-                        i.createElement("div", null, "Main Account"),
+                        !qe && i.createElement("div", null, "Main Account"),
+                        qe && i.createElement("div", null, "Streamer"),
                         i.createElement(
                           "div",
                           null,

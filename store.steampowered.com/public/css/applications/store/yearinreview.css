@@ -4421,7 +4421,6 @@ div.yirhowyouplayed_DeckContainer_3G2ne .yirhowyouplayed_Disclaimer_1h_am {
 }
 @media screen and (max-width: 500px) {
   .yirshare_ShareCtn_3wBwg .yirshare_PrivacyWarning_1mHX7 {
-    position: absolute;
     top: 91px;
     z-index: 1;
     text-align: center;
@@ -4504,6 +4503,9 @@ div.yirhowyouplayed_DeckContainer_3G2ne .yirhowyouplayed_Disclaimer_1h_am {
     line-height: 20px;
     padding-left: 12px;
   }
+}
+.yirshare_ShareModalDialogCtn_1C2t5 .DialogBodyText {
+  margin-bottom: 0px;
 }
 .yirshare_ShareModal_2Eeev .yirshare_ShareLanguagePicker_klz2d {
   display: flex;
@@ -4977,12 +4979,6 @@ div.yirhowyouplayed_DeckContainer_3G2ne .yirhowyouplayed_Disclaimer_1h_am {
     width: 100%;
     box-sizing: border-box;
   }
-}
-.yirshare_ShareModal_2Eeev
-  .yirshare_FooterCtn_fZplN
-  .yirshare_ShareURLCtn_1IOAh
-  .yirshare_ShareLinkButton_35yo9 {
-  width: fit-content;
 }
 .yirshare_ShareModal_2Eeev
   .yirshare_FooterCtn_fZplN

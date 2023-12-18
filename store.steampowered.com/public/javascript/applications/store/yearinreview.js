@@ -7502,7 +7502,7 @@
                   userYearInReview: a,
                 }),
               ),
-              c &&
+              _ &&
                 n.createElement(
                   "div",
                   { className: Ht().ShareOptions },
