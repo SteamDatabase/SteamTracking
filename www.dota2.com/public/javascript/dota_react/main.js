@@ -38819,7 +38819,7 @@
         return "";
       }
       function d(e) {
-        switch (e) {
+        switch (e && 0 != e.length ? e : "ti12") {
           case "spring21":
             return n._A.SPRING_2021_LEAGUE;
           case "springmajor21":

@@ -5801,9 +5801,13 @@
           r = j(
             t.total_playtime_percentagex100 -
               t.controller_playtime_percentagex100 -
-              t.vr_playtime_percentagex100,
+              t.vr_playtime_percentagex100 -
+              t.deck_playtime_percentagex100,
           ),
-          i = j(t.controller_playtime_percentagex100),
+          i = j(
+            t.controller_playtime_percentagex100 +
+              t.deck_playtime_percentagex100,
+          ),
           s = `${o.De.IMG_URL}yearinreview/keyboard.png`,
           l = `${o.De.IMG_URL}yearinreview/controllers.png`,
           m = Q();
