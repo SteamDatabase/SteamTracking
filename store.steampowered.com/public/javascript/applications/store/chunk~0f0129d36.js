@@ -4927,35 +4927,19 @@
         se = n(36320);
       const le = (e) => {
           const { clanSteamID: t, fnImageSelectCallBack: n } = e,
-            i = (0, s.useRef)(null),
-            [o, l] = (0, s.useState)(!E.U8.BHasLoadedClanImages(t)),
-            [c, m] = (0, s.useState)("");
-          (0, s.useEffect)(() => {
-            if (!E.U8.BHasLoadedClanImages(t)) {
-              i.current && i.current(), l(!0);
-              (() =>
-                (0, a.mG)(void 0, void 0, void 0, function* () {
-                  const e = r().CancelToken.source();
-                  (i.current = e.cancel),
-                    yield E.U8.LoadClanImages(t, !1, e),
-                    e.token.reason || l(!1);
-                }))();
-            }
-            return () => {
-              i.current && i.current("ClanImageChooseDialog: unmounting");
-            };
-          }, [t]);
-          const d = () => e.closeModal && e.closeModal(),
-            p = E.U8.GetFilteredClanImages(t, c),
-            u = (e) => {
-              n(e), d();
+            [a, i] = (0, s.useState)(""),
+            r = (0, E.Fm)(e.clanSteamID.GetAccountID()),
+            o = () => e.closeModal && e.closeModal(),
+            l = E.U8.GetFilteredClanImages(t, a),
+            c = (e) => {
+              n(e), o();
             };
           return s.createElement(
             oe.SV,
             null,
             s.createElement(
               W.e1,
-              { onEscKeypress: d },
+              { onEscKeypress: o },
               s.createElement(
                 P.VY,
                 null,
@@ -4977,27 +4961,27 @@
                     ),
                     s.createElement(P.II, {
                       placeholder: (0, R.Xx)("#ClanImageChooser_Search"),
-                      value: c,
-                      onChange: (e) => m(e.currentTarget.value),
+                      value: a,
+                      onChange: (e) => i(e.currentTarget.value),
                     }),
                     s.createElement(
                       "div",
                       { className: se.ImagesOuterContainer },
-                      o
+                      r
                         ? s.createElement(Q.V, {
                             size: "medium",
                             string: (0, R.Xx)("#Loading"),
                           })
-                        : Boolean(p.length > 0)
-                        ? p.map((e) =>
+                        : Boolean(l.length > 0)
+                        ? l.map((e) =>
                             s.createElement(ce, {
                               key: "ci" + e.image_hash,
                               clanImage: e,
-                              searchStringHilight: c,
-                              fnImageClick: u,
+                              searchStringHilight: a,
+                              fnImageClick: c,
                             }),
                           )
-                        : Boolean(0 == c.trim().length)
+                        : Boolean(0 == a.trim().length)
                         ? s.createElement(
                             "div",
                             null,
@@ -5016,7 +5000,7 @@
                   null,
                   s.createElement(
                     P.zx,
-                    { onClick: d },
+                    { onClick: o },
                     (0, R.Xx)("#Button_Cancel"),
                   ),
                 ),

@@ -15137,6 +15137,13 @@
         r.p +
         "images/applications/store/icon_showcase_23.svg?v=valveisgoodatcaching";
     },
+    94595: (e, t, r) => {
+      "use strict";
+      r.r(t), r.d(t, { default: () => n });
+      const n =
+        r.p +
+        "images/applications/store/icon_showcase_24.svg?v=valveisgoodatcaching";
+    },
     69431: (e, t, r) => {
       "use strict";
       r.r(t), r.d(t, { default: () => n });
@@ -15198,6 +15205,7 @@
         "./icon_showcase_21.svg": 51704,
         "./icon_showcase_22.svg": 50998,
         "./icon_showcase_23.svg": 22452,
+        "./icon_showcase_24.svg": 94595,
         "./icon_showcase_3.svg": 69431,
         "./icon_showcase_4.svg": 35069,
         "./icon_showcase_5.svg": 44244,

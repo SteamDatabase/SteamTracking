@@ -110,7 +110,7 @@
     "Choose a badge to feature at the top of your profile and miniprofile hover.",
   Profile_Edit_Group_Instructions: "Choose a group to feature.",
   Profile_Edit_Showcase_Instructions:
-    "Choose and customize what showcases appear on your profile page.",
+    "Choose and customize which showcases appear on your profile page. Many showcases can be upgraded in the <1>Steam Points Shop</1>.",
   Profile_Edit_Preview: "PREVIEW",
   Profile_Edit_DefaultBlankBackground: "Default",
   Profile_Edit_BackgroundEquipFlag_FullScreen: "Full Screen",

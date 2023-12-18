@@ -85,6 +85,12 @@ body.v6 {
     align-items: center;
   }
 }
+@media screen and (max-width: 910px) {
+  .yirlanding_HeaderCtn_39_9J {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .yirlanding_HeaderCtn_39_9J .yirlanding_RewindHeader_1wMXR {
   font-size: clamp(30px, 7vw, 8em);
   line-height: clamp(36px, 7.3vw, 0.9em);
@@ -95,6 +101,12 @@ body.v6 {
   margin-bottom: 50px;
 }
 @media screen and (max-width: 620px) {
+  .yirlanding_HeaderCtn_39_9J .yirlanding_RewindHeader_1wMXR {
+    align-items: center;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 910px) {
   .yirlanding_HeaderCtn_39_9J .yirlanding_RewindHeader_1wMXR {
     align-items: center;
     text-align: center;
@@ -214,10 +226,34 @@ body.v6 {
   height: fit-content;
   top: 0;
 }
+.yirlanding_SummaryCtnShadow_2AXFQ {
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.8);
+  transform: translateY(-30px);
+  opacity: 0;
+  animation: yirlanding_Appear_1sCZq 500ms ease forwards;
+  animation-delay: 2s;
+  border-radius: 12px;
+}
+.yirlanding_SummaryCtnShadow_2AXFQ:nth-child(1) {
+  animation-delay: 2.2s;
+}
+.yirlanding_SummaryCtnShadow_2AXFQ:nth-child(2) {
+  animation-delay: 2.4s;
+}
+.yirlanding_SummaryCtnShadow_2AXFQ:nth-child(3) {
+  animation-delay: 2.6s;
+}
+.yirlanding_SummaryCtnShadow_2AXFQ:nth-child(4) {
+  animation-delay: 2.8s;
+}
+.yirlanding_SummaryCtnShadow_2AXFQ:nth-child(5) {
+  animation-delay: 3s;
+}
+.yirlanding_SummaryCtnShadow_2AXFQ:nth-child(6) {
+  animation-delay: 3.2s;
+}
 .yirlanding_SummaryGridStandard_3JG0S {
-  height: 85vh;
-  min-height: clamp(500px, 55vw, 55vw);
-  max-height: clamp(70vw, 70vw, 1380px);
+  min-height: clamp(630px, 55vw, 55vw);
   margin-bottom: 50px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -225,6 +261,12 @@ body.v6 {
   gap: 10px;
 }
 @media screen and (max-width: 620px) {
+  .yirlanding_SummaryGridStandard_3JG0S {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+}
+@media screen and (max-width: 910px) {
   .yirlanding_SummaryGridStandard_3JG0S {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
@@ -308,9 +350,8 @@ body.v6 {
   .yirlanding_BackgroundImage_2UVYU,
 .yirlanding_GridItem_2VmQC.yirlanding_Game2_2lQfz:hover
   .yirlanding_BackgroundImage_2UVYU {
-  background-size: 380%;
-  filter: saturate(1) opacity(1) brightness(1.2);
-  mix-blend-mode: soft-light;
+  opacity: 1;
+  transform: scale(1.1);
 }
 .yirlanding_SummaryCtn_9eVnU {
   position: relative;
@@ -321,28 +362,7 @@ body.v6 {
   border-radius: 12px;
   box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.8);
   align-items: center;
-  transform: translateY(-30px);
-  opacity: 0;
-  animation: yirlanding_Appear_1sCZq 500ms ease forwards;
-  animation-delay: 2s;
-}
-.yirlanding_SummaryCtn_9eVnU:nth-child(1) {
-  animation-delay: 2.2s;
-}
-.yirlanding_SummaryCtn_9eVnU:nth-child(2) {
-  animation-delay: 2.4s;
-}
-.yirlanding_SummaryCtn_9eVnU:nth-child(3) {
-  animation-delay: 2.6s;
-}
-.yirlanding_SummaryCtn_9eVnU:nth-child(4) {
-  animation-delay: 2.8s;
-}
-.yirlanding_SummaryCtn_9eVnU:nth-child(5) {
-  animation-delay: 3s;
-}
-.yirlanding_SummaryCtn_9eVnU:nth-child(6) {
-  animation-delay: 3.2s;
+  clip-path: inset(0 0 0 0 round 12px);
 }
 .yirlanding_SummaryCtn_9eVnU .yirlanding_SubtleBorder_3AqWG {
   position: absolute;
@@ -374,14 +394,20 @@ body.v6 {
 }
 .yirlanding_SummaryCtn_9eVnU.yirlanding_GridItem_2VmQC.yirlanding_HardwareSummary_RrFxs
   .yirlanding_ContentCtn_2Kh-F {
-  height: 135%;
-  margin: -96px;
+  height: 100%;
+  margin: 0;
   width: 150%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   transform: rotate(-22.5deg);
   overflow: hidden;
+}
+@media screen and (max-width: 500px) {
+  .yirlanding_SummaryCtn_9eVnU.yirlanding_GridItem_2VmQC.yirlanding_HardwareSummary_RrFxs
+    .yirlanding_ContentCtn_2Kh-F {
+    transform: rotate(0deg);
+  }
 }
 .yirlanding_SummaryCtn_9eVnU.yirlanding_GridItem_2VmQC.yirlanding_HardwareSummary_RrFxs
   .yirlanding_KeyboardPortion_1eyX7 {
@@ -414,19 +440,7 @@ body.v6 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 2px;
-}
-.yirlanding_SummaryCtn_9eVnU.yirlanding_GridItem_2VmQC.yirlanding_HardwareSummary_RrFxs
-  .yirlanding_ControllerPortion_3-LlH
-  .yirlanding_Subtitle_3Xegh {
-  margin-bottom: 10%;
-}
-@media screen and (max-width: 910px) {
-  .yirlanding_SummaryCtn_9eVnU.yirlanding_GridItem_2VmQC.yirlanding_HardwareSummary_RrFxs
-    .yirlanding_ControllerPortion_3-LlH
-    .yirlanding_Subtitle_3Xegh.yirlanding_Small_8N3vK {
-    transform: translateX(40px);
-  }
+  margin-top: 20px;
 }
 .yirlanding_SummaryCtn_9eVnU.yirlanding_GridItem_2VmQC.yirlanding_HardwareSummary_RrFxs
   .yirlanding_ControllerPortion_3-LlH
@@ -441,13 +455,6 @@ body.v6 {
   .yirlanding_Stat_vX0bj.yirlanding_Small_8N3vK {
   font-size: clamp(18px, 3vw, 45px);
   line-height: clamp(21px, 3vw, 49px);
-}
-@media screen and (max-width: 910px) {
-  .yirlanding_SummaryCtn_9eVnU.yirlanding_GridItem_2VmQC.yirlanding_HardwareSummary_RrFxs
-    .yirlanding_ControllerPortion_3-LlH
-    .yirlanding_Stat_vX0bj.yirlanding_Small_8N3vK {
-    transform: translateX(30px);
-  }
 }
 .yirlanding_SummaryCtn_9eVnU.yirlanding_GridItem_2VmQC.yirlanding_HardwareSummary_RrFxs
   .yirlanding_BackgroundImage_2UVYU {
@@ -473,13 +480,6 @@ body.v6 {
   font-size: clamp(18px, 3vw, 45px);
   line-height: clamp(21px, 3vw, 49px);
 }
-@media screen and (max-width: 910px) {
-  .yirlanding_SummaryCtn_9eVnU.yirlanding_GridItem_2VmQC.yirlanding_HardwareSummary_RrFxs
-    .yirlanding_Stat_vX0bj.yirlanding_Small_8N3vK {
-    transform: translateX(-70px);
-    margin-top: 15%;
-  }
-}
 .yirlanding_SummaryCtn_9eVnU.yirlanding_GridItem_2VmQC.yirlanding_HardwareSummary_RrFxs
   .yirlanding_Stat_vX0bj.yirlanding_Large_2I5qZ {
   font-size: clamp(30px, 4vw, 60px);
@@ -496,14 +496,6 @@ body.v6 {
 .yirlanding_SummaryCtn_9eVnU.yirlanding_GridItem_2VmQC.yirlanding_HardwareSummary_RrFxs
   .yirlanding_Subtitle_3Xegh.yirlanding_Small_8N3vK {
   font-size: clamp(12px, 1vw, 18px);
-}
-@media screen and (max-width: 910px) {
-  .yirlanding_SummaryCtn_9eVnU.yirlanding_GridItem_2VmQC.yirlanding_HardwareSummary_RrFxs
-    .yirlanding_Subtitle_3Xegh.yirlanding_Small_8N3vK {
-    transform: translateX(-30px);
-    width: 30%;
-    padding-bottom: 0;
-  }
 }
 .yirlanding_SummaryCtn_9eVnU .yirlanding_SummaryBlockGameName_8viNZ {
   height: 50%;
@@ -547,17 +539,18 @@ body.v6 {
 }
 .yirlanding_SummaryCtn_9eVnU .yirlanding_BackgroundImage_2UVYU {
   position: absolute;
-  background-size: 350%;
+  background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   z-index: 0;
-  filter: saturate(0.6) opacity(0.6);
+  filter: saturate(0.6);
   mix-blend-mode: soft-light;
-  border-radius: 12px;
-  transition-property: transform, filter, background-size;
+  opacity: 0.6;
+  transition-property: transform, opacity;
   transition-duration: 0.32s;
   transition-timing-function: ease-in-out;
 }
@@ -2315,6 +2308,7 @@ html.responsive.touch .yircomponents_TopGameBlockContainer_1o-Oa {
   width: 20%;
   min-width: 100px;
   margin-right: 4px;
+  overflow: hidden;
   filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.15));
   transition-property: filter, transform, color;
   transition-duration: 0.2s;
@@ -2706,14 +2700,32 @@ html.responsive.touch .yircomponents_TopGameBlockContainer_1o-Oa {
   position: relative;
 }
 .yirstatsbesidegametiles_DemoSash__sTGZ {
-  background-color: hotpink;
   position: absolute;
-  font-size: 14px;
-  transform: rotate(-45deg);
-  transform-origin: 0 100%;
-  top: 25px;
-  left: 20px;
+  background-color: #85a805;
+  clip-path: polygon(14% 0, 36% 0, 0 23%, 0 9%);
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
   padding: 3px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.yirstatsbesidegametiles_DemoSash__sTGZ::before {
+  content: "DEMO";
+  position: absolute;
+  top: 14px;
+  left: 0px;
+  font-size: clamp(7px, 1.3vw, 16px);
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #000;
+  transform: rotate(-45deg);
+}
+@media screen and (max-width: 500px) {
+  .yirstatsbesidegametiles_DemoSash__sTGZ::before {
+    top: 5;
+  }
 }
 .tabbar_GraphicalAssetsTabs_36r8g {
   display: flex;

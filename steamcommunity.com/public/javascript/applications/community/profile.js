@@ -753,14 +753,14 @@
             : (w += " " + E().notInOrWatchingGame);
           let D = !0,
             O = !1,
-            x = !1;
+            R = !1;
           s || ((w += " " + E().notFriends), (D = !1)),
-            l && ((w += " " + E().communicationBlocked), (x = !0));
-          let R,
+            l && ((w += " " + E().communicationBlocked), (R = !0));
+          let x,
             T = void 0 !== n,
             M = r.is_awayOrSnooze;
           return (
-            (R = T
+            (x = T
               ? c.createElement(
                   "div",
                   null,
@@ -862,7 +862,7 @@
                           c.createElement(
                             "div",
                             { className: E().persona },
-                            R,
+                            x,
                             M &&
                               c.createElement(
                                 "div",
@@ -892,7 +892,7 @@
                                     )
                                   : (0, h.Xx)("#Friend_Menu_NotAFriendLabel"),
                               ),
-                            x &&
+                            R &&
                               c.createElement(
                                 "div",
                                 { className: E().miniProfileBlocked },
@@ -1003,7 +1003,7 @@
         w = r(52316),
         D = r(68333),
         O = r(16744);
-      class x {
+      class R {
         constructor(e) {
           (this.m_rgPreviousAvatars = []),
             (0, s.rC)(this),
@@ -1078,8 +1078,8 @@
           });
         }
       }
-      (0, i.gn)([s.LO], x.prototype, "m_rgPreviousAvatars", void 0);
-      class R {
+      (0, i.gn)([s.LO], R.prototype, "m_rgPreviousAvatars", void 0);
+      class x {
         constructor() {
           (this.m_AvatarData = void 0), (0, s.rC)(this);
         }
@@ -1167,7 +1167,7 @@
       function M(e, t) {
         return e < t ? e : t;
       }
-      (0, i.gn)([s.LO.shallow], R.prototype, "m_AvatarData", void 0);
+      (0, i.gn)([s.LO.shallow], x.prototype, "m_AvatarData", void 0);
       class F {
         constructor(e, t) {
           (this.m_PrivacySettings = void 0),
@@ -2377,7 +2377,7 @@
       }
       class ne {
         constructor(e, t, r) {
-          (this.m_OGGAvatars = new R()),
+          (this.m_OGGAvatars = new x()),
             (this.m_EmoticonStore = new w.M()),
             (this.m_EmoticonHoverStore = new k.Q()),
             (this.m_Profile = new se(e)),
@@ -2404,7 +2404,7 @@
               e.Privacy.PrivacySettings,
               e.Privacy.eCommentPermission,
             )),
-            (this.m_AvatarHistory = new x(this.m_WebAPI)),
+            (this.m_AvatarHistory = new R(this.m_WebAPI)),
             this.m_ProfileItems.AddOnAvatarEquipmentChangedCallback(() => {
               this.m_Profile.MiniProfileData.Reload(),
                 this.m_AvatarHistory.RefreshAvatarHistory();
@@ -3195,10 +3195,10 @@
             ),
             c.createElement(ue.zx, { onClick: t }, (0, h.Xx)("#Button_Cancel")),
           );
-      function xe(e) {
+      function Re(e) {
         return (0, h.Xx)(e).replace(/%s/g, "");
       }
-      class Re extends c.Component {
+      class xe extends c.Component {
         constructor() {
           super(...arguments),
             (this.state = { activeItem: void 0, bSaving: !1 });
@@ -3282,9 +3282,9 @@
       function Te(e) {
         return e ? e.toLocaleLowerCase().replace(/\W/g, "") : "";
       }
-      (0, i.gn)([he.ak], Re.prototype, "CommitChanges", null),
-        (0, i.gn)([he.ak], Re.prototype, "RevertChanges", null),
-        (0, i.gn)([he.ak], Re.prototype, "OnItemSelected", null);
+      (0, i.gn)([he.ak], xe.prototype, "CommitChanges", null),
+        (0, i.gn)([he.ak], xe.prototype, "RevertChanges", null),
+        (0, i.gn)([he.ak], xe.prototype, "OnItemSelected", null);
       class Me extends c.Component {
         constructor() {
           super(...arguments),
@@ -3919,7 +3919,7 @@
                 initialValue: t,
                 strInitialDisplay: e,
                 strDefaultLabel: (0, h.Xx)("#Profile_LocationDoNotDisplay"),
-                tooltip: xe("#Profile_DescriptionLocation"),
+                tooltip: Re("#Profile_DescriptionLocation"),
               }),
             ),
           );
@@ -4256,7 +4256,7 @@
                 c.createElement(ue.II, {
                   label: (0, h.Xx)("#Profile_FieldRealName"),
                   disabled: e.BIsProfileSummaryChangeOnCooldown(),
-                  tooltip: xe("#Profile_DescriptionRealName"),
+                  tooltip: Re("#Profile_DescriptionRealName"),
                   name: "real_name",
                   value: e.GetRealName(),
                   onChange: this.OnRealNameChange,
@@ -4309,7 +4309,7 @@
             null,
             c.createElement(ue.II, {
               label: (0, h.Xx)("#Profile_FieldCustomURL"),
-              tooltip: xe("#Profile_DescriptionCustomURL"),
+              tooltip: Re("#Profile_DescriptionCustomURL"),
               name: "customURL",
               value: e.GetCustomURL(),
               onChange: this.OnProfileURLChange,
@@ -4641,10 +4641,10 @@
       function Ot(e) {
         return [e.item_title, e.app_name];
       }
-      function xt(e, t) {
+      function Rt(e, t) {
         return e ? !!t && e.communityitemid === t.communityitemid : !t;
       }
-      let Rt = class extends c.Component {
+      let xt = class extends c.Component {
         RevertChanges() {
           this.props.ProfileEdit.ProfileItems.RevertMiniProfileBackgroundChanges();
         }
@@ -4674,9 +4674,9 @@
           );
         }
       };
-      (0, i.gn)([he.ak], Rt.prototype, "RevertChanges", null),
-        (Rt = (0, i.gn)([d.Pi], Rt));
-      const Tt = Rt,
+      (0, i.gn)([he.ak], xt.prototype, "RevertChanges", null),
+        (xt = (0, i.gn)([d.Pi], xt));
+      const Tt = xt,
         Mt = (0, d.Pi)(
           ({
             Profile: e,
@@ -4687,7 +4687,7 @@
             let o = t.GetEquippedProfileModifier();
             return (
               o && !t.BIsLegacyGoldenProfile(o.appid) && (o = null),
-              c.createElement(Re, {
+              c.createElement(xe, {
                 fnRevertChanges: a,
                 getSearchFields: Ot,
                 getItems: () => t.GetOwnedMiniProfileBackgrounds(),
@@ -4706,7 +4706,7 @@
                     Modifier: o,
                   }),
                 ActiveItem: t.GetEquippedMiniProfileBackground(),
-                fnIsSameItem: xt,
+                fnIsSameItem: Rt,
                 fnRenderPreview: (i) =>
                   c.createElement(Ft, {
                     MiniProfileBackground: i,
@@ -5687,7 +5687,7 @@
                 null,
                 (0, h.Xx)("#Profile_Edit_Background_Instructions"),
               ),
-              c.createElement(Re, {
+              c.createElement(xe, {
                 className: rr.BackgroundPickerPage,
                 getSearchFields: Ot,
                 getItems: () => e.GetOwnedBackgrounds(),
@@ -5701,7 +5701,7 @@
                     active: t,
                   }),
                 ActiveItem: e.GetEquippedBackground(),
-                fnIsSameItem: xt,
+                fnIsSameItem: Rt,
                 fnRenderPreview: (r) =>
                   c.createElement(pr, {
                     Background: r,
@@ -6074,7 +6074,7 @@
               null,
               (0, h.Xx)("#Profile_Edit_ProfileModifier_Instructions"),
             ),
-            c.createElement(Re, {
+            c.createElement(xe, {
               fnRevertChanges: this.OnDismiss,
               getSearchFields: Ot,
               getItems: () => e.GetOwnedProfileModifiers(),
@@ -6089,7 +6089,7 @@
               RenderDefaultComponent: ({ onSelected: e, active: t }) =>
                 c.createElement(Nr, { onSelected: e, active: t }),
               ActiveItem: e.GetEquippedProfileModifier(),
-              fnIsSameItem: xt,
+              fnIsSameItem: Rt,
               fnRenderPreview: (e) =>
                 c.createElement(Gr, { ProfileModifier: e }),
             }),
@@ -6191,8 +6191,8 @@
               (0, h.Xx)("#Profile_Edit_Theme_Instructions"),
             ),
             c.createElement(Fe, { strHTMLError: this.state.strHTMLError }),
-            r && c.createElement(Rr, null),
-            c.createElement(Re, {
+            r && c.createElement(xr, null),
+            c.createElement(xe, {
               getSearchFields: null,
               ActiveItem: e.ActiveTheme,
               getItems: () =>
@@ -6204,7 +6204,7 @@
               fnRenderPreview: (e) =>
                 c.createElement(Dr, { Theme: e, ProfileItems: t }),
               fnIsSameItem: Or,
-              ItemComponent: xr,
+              ItemComponent: Rr,
               classNameItemPicker: Lr.ProfileThemePicker,
               className: (0, g.Z)(r && Lr.ThemePickerDisabled),
             }),
@@ -6233,7 +6233,7 @@
           ),
         ),
         Or = (e, t) => (e && e.theme_id) === (t && t.theme_id),
-        xr = ({ Item: e, onSelected: t, active: r, children: i }) => {
+        Rr = ({ Item: e, onSelected: t, active: r, children: i }) => {
           const a = e.theme_id + "Theme",
             o = `ThemeOption${a}`;
           return c.createElement(
@@ -6338,7 +6338,7 @@
             ),
           );
         },
-        Rr = ({ children: e }) =>
+        xr = ({ children: e }) =>
           c.createElement(
             "div",
             { className: Lr.ThemesDisabledNotice },
@@ -6392,7 +6392,12 @@
               c.createElement(
                 ue.Ac,
                 null,
-                (0, h.Xx)("#Profile_Edit_Showcase_Instructions"),
+                (0, h.yu)(
+                  "#Profile_Edit_Showcase_Instructions",
+                  c.createElement("a", {
+                    href: p.De.STORE_BASE_URL + "points/",
+                  }),
+                ),
               ),
               c.createElement(Fe, { strHTMLError: t }),
               c.createElement("div", { ref: this.m_refDiv }),

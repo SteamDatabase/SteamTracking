@@ -270,7 +270,7 @@
     },
     53765: (e, t, a) => {
       "use strict";
-      a.d(t, { In: () => S, L4: () => I, Mm: () => F });
+      a.d(t, { In: () => S, L4: () => h, Mm: () => F });
       var n = a(89526),
         l = a(28536),
         i = a(701),
@@ -299,18 +299,18 @@
           2 == e.role ? n.createElement(E, null) : n.createElement(v, null),
         );
       }
-      function h(e) {
+      function I(e) {
         var t, a;
         const { strSteamID: i, role: r, persona: m, isSelf: d } = e,
           _ = new u.K(i);
         let y = e.size || "Large";
         const v = (0, p.N5)(),
           E = (0, f.h)(),
-          h =
+          I =
             null === (t = v.data) || void 0 === t
               ? void 0
               : t.get(_.GetAccountID()),
-          I =
+          h =
             null === (a = E.data) || void 0 === a
               ? void 0
               : a.preferences().parenthesize_nicknames();
@@ -334,10 +334,10 @@
               bIsSelf: d,
               bHideStatus: !1,
               bHidePersona: !1,
-              bParenthesizeNicknames: I,
+              bParenthesizeNicknames: h,
               bCompactView: !1,
               persona: m,
-              strNickname: h,
+              strNickname: I,
               eFriendRelationship: 3,
             }),
           ),
@@ -353,7 +353,7 @@
           ),
         );
       }
-      function I(e) {
+      function h(e) {
         const t = (0, n.useContext)(d.Xe);
         return t.errorMessage
           ? n.createElement(
@@ -390,7 +390,7 @@
             n.createElement(
               "div",
               { className: l.Left },
-              n.createElement(h, {
+              n.createElement(I, {
                 strSteamID: t,
                 role: a,
                 persona: E,
@@ -546,7 +546,7 @@
     },
     20285: (e, t, a) => {
       "use strict";
-      a.d(t, { Fz: () => F, TQ: () => f, tE: () => h });
+      a.d(t, { Fz: () => F, TQ: () => f, tE: () => I });
       var n = a(33940),
         l = a(52868),
         i = a.n(l),
@@ -649,7 +649,7 @@
         );
         return [t, a];
       }
-      function h(e) {
+      function I(e) {
         const t = (0, o.useQueryClient)(),
           { data: a, isLoading: n } = (0, o.useQuery)({
             queryKey: [E, e],
@@ -893,7 +893,7 @@
     },
     25389: (e, t, a) => {
       "use strict";
-      a.r(t), a.d(t, { FamilyTabContainer: () => xt, default: () => vt });
+      a.r(t), a.d(t, { FamilyTabContainer: () => kt, default: () => Et });
       var n = a(89526),
         l = a(47742),
         i = a(44026),
@@ -912,8 +912,8 @@
         v = a(49437),
         E = a(24448),
         F = a(47165),
-        h = a(59934),
-        I = a(99307);
+        I = a(59934),
+        h = a(99307);
       function S(e) {
         return new URLSearchParams(e.search).get("invitation");
       }
@@ -932,8 +932,8 @@
           p.zs.k_EFamilyQueryLoadFamily,
         ),
           (0, p.sT)(d, "#FamilyManagement_ErrorLoadFamilyInviteGeneric");
-        const x = (0, h.k6)(),
-          k = !!S((0, h.TH)());
+        const x = (0, I.k6)(),
+          k = !!S((0, I.TH)());
         if (
           ((0, p.zj)(
             o,
@@ -960,11 +960,11 @@
           "div",
           { className: y.IncomingInviteRow },
           n.createElement(
-            I.Yy,
+            h.Yy,
             { active: !!b },
             "explanation" === b &&
               n.createElement(
-                I.RG,
+                h.RG,
                 { closeModal: R },
                 n.createElement(
                   m.h4,
@@ -980,7 +980,7 @@
               ),
             "confirm" === b &&
               n.createElement(
-                I.uH,
+                h.uH,
                 {
                   closeModal: R,
                   onCancel: R,
@@ -1165,14 +1165,14 @@
           ? n.createElement(w, { onClick: () => l("selectMethod") })
           : "selectMethod" !== a || m
           ? "selectMethod" === a && m
-            ? n.createElement(G, {
+            ? n.createElement(A, {
                 slotCooldownSeconds: 0,
                 familyGroupID: t,
                 onCancel: () => l("splash"),
                 onSelect: o,
               })
             : "selectRole" === a
-            ? n.createElement(A, {
+            ? n.createElement(G, {
                 familyGroupID: t,
                 steamid: i,
                 onCancel: () => l("splash"),
@@ -1267,7 +1267,7 @@
           n.createElement(B, { familyGroupID: t, onSelect: a }),
         );
       }
-      function G(e) {
+      function A(e) {
         const {
           familyGroupID: t,
           onSelect: a,
@@ -1301,7 +1301,7 @@
           n.createElement(H, { steamids: s, onSelect: a }),
         );
       }
-      function A(e) {
+      function G(e) {
         const { familyGroupID: t, steamid: a, onCancel: l } = e,
           i = (0, v.IE)(a);
         (0, p.sT)(i, "#FamilyManagement_ErrorLoadFamilyGeneric");
@@ -1317,7 +1317,7 @@
           "div",
           { className: P.SelectRoleContainer },
           n.createElement(
-            I.Yy,
+            h.Yy,
             { active: 0 !== r },
             n.createElement(L, {
               familyGroupID: t,
@@ -1381,7 +1381,7 @@
         );
         const o = (0, v.IE)(i).data;
         return n.createElement(
-          I.uH,
+          h.uH,
           {
             onCancel: t,
             strTitle: (0, _.Xx)("#FamilyManagement_ConfirmInvite"),
@@ -1432,10 +1432,10 @@
           n.Fragment,
           null,
           n.createElement(
-            I.Yy,
+            h.Yy,
             { active: l },
             n.createElement(
-              I.RG,
+              h.RG,
               { onCancel: () => i(!1) },
               n.createElement(
                 m.h4,
@@ -1462,10 +1462,10 @@
           n.Fragment,
           null,
           n.createElement(
-            I.Yy,
+            h.Yy,
             { active: a },
             n.createElement(
-              I.RG,
+              h.RG,
               { onCancel: () => l(!1) },
               n.createElement(
                 m.h4,
@@ -2140,7 +2140,22 @@
           : null;
       }
       var Ee = a(84343);
-      function Fe(e) {
+      function Fe(e, t, a) {
+        if (t)
+          for (let t of a) {
+            const a = e.applist_custom().find((e) => e.appid() == t);
+            if (a) a.set_is_allowed(!0);
+            else {
+              let a = e.add_applist_custom();
+              a.set_appid(t), a.set_is_allowed(!0);
+            }
+          }
+        else {
+          const t = e.applist_custom().filter((e) => !a.includes(e.appid()));
+          e.set_applist_custom(t);
+        }
+      }
+      function Ie(e) {
         const t = (0, p.Rs)();
         return !t.isSuccess || t.data.is_not_member_of_any_group()
           ? null
@@ -2159,9 +2174,9 @@
           .map((e) => e.steamid());
         return 0 == i.length
           ? null
-          : n.createElement(Ie, { steamid: t, rgOtherChildren: i });
+          : n.createElement(Se, { steamid: t, rgOtherChildren: i });
       }
-      function Ie(e) {
+      function Se(e) {
         const { steamid: t, rgOtherChildren: a } = e,
           l = (0, v.IE)(t),
           i = (0, v.vP)(a),
@@ -2207,9 +2222,9 @@
                 ),
               ),
               n.createElement(
-                I.Yy,
+                h.Yy,
                 { active: r },
-                n.createElement(I.uH, {
+                n.createElement(h.uH, {
                   closeModal: () => s(!1),
                   onOK: d,
                   strTitle: (0, _.Xx)(
@@ -2223,7 +2238,7 @@
               ),
             );
       }
-      function Se(e) {
+      function be(e) {
         const { steamid: t, settings: a } = e,
           l = (0, ae.lz)(t, a),
           i = (0, ae.BZ)(t),
@@ -2243,7 +2258,7 @@
           onChange: s,
         });
       }
-      function be(e) {
+      function Ce(e) {
         const { steamid: t, settings: a } = e,
           l = (0, ae.w7)(t),
           { setErrorMessage: i } = (0, p.cL)();
@@ -2269,7 +2284,7 @@
           onChange: s,
         });
       }
-      function Ce(e) {
+      function Me(e) {
         const { steamid: t, settings: a, game: l } = e,
           i = (0, Z._T)(e, ["steamid", "settings", "game"]),
           r = (0, ae.w7)(t),
@@ -2286,21 +2301,16 @@
               "/" +
               l.img_icon_url() +
               ".jpg",
-          y = n.useCallback(
-            (e) => {
-              if ((c(null), o)) o.set_is_allowed(e);
-              else {
-                let t = a.add_applist_custom();
-                t.set_appid(s), t.set_is_allowed(e);
-              }
-              r.mutate(a);
-            },
-            [s, a, r, o, c],
-          );
+          y = n.useCallback(() => {
+            c(null), Fe(a, !u, [s]), r.mutate(a);
+          }, [s, a, r, c, u]);
         return n.createElement(
           "div",
           Object.assign(
-            { className: (0, d.Z)(te.ParentalGameRow, u && te.Allowed) },
+            {
+              className: (0, d.Z)(te.ParentalGameRow, u && te.Allowed),
+              onClick: y,
+            },
             i,
           ),
           _ && n.createElement("img", { className: te.Icon, src: _ }),
@@ -2313,7 +2323,7 @@
           }),
         );
       }
-      function Me(e) {
+      function Pe(e) {
         const {
           nItems: t,
           nTotalItems: a,
@@ -2373,74 +2383,67 @@
           ),
         );
       }
-      function Pe(e) {
+      function Ne(e) {
         var t;
-        const { steamid: a, settings: l } = e,
-          i = (0, ae.w7)(a),
-          r =
+        const { steamid: a, settings: l, mapAppsAllowed: i } = e,
+          r = (0, ae.w7)(a),
+          s =
             null === (t = (0, p.Rs)()) || void 0 === t
               ? void 0
               : t.data.family_groupid(),
-          [s, m] = n.useState(""),
-          o = (0, p.Vt)(r, "alpha-asc", s, {
+          [m, o] = n.useState(""),
+          c = (0, p.Vt)(s, "alpha-asc", m, {
             bIncludeOwn: !0,
             bIncludeExcluded: !0,
             bIncludeFreeSub: !0,
           }),
-          [c, u] = n.useState("grid"),
-          d = n.useCallback(
+          [u, d] = n.useState("grid"),
+          _ = n.useCallback(
             (e) => {
-              for (let t of o) {
-                const a = l
-                  .applist_custom()
-                  .find((e) => e.appid() == t.appid());
-                if (a) a.set_is_allowed(e);
-                else {
-                  let a = l.add_applist_custom();
-                  a.set_appid(t.appid()), a.set_is_allowed(e);
-                }
-              }
-              i.mutate(l);
+              Fe(
+                l,
+                e,
+                c.map((e) => e.appid()),
+              ),
+                r.mutate(l);
             },
-            [l, o, i],
+            [l, c, r],
           ),
-          _ =
-            l.applist_base().filter((e) => e.is_allowed()).length +
-            l.applist_custom().filter((e) => e.is_allowed()).length,
-          y = null == o ? void 0 : o.length;
-        return (null == o ? void 0 : o.length)
+          y = c.filter((e) => !(0, ae.IL)(e.appid(), !0, l, i)).length,
+          g = null == c ? void 0 : c.length;
+        return (null == c ? void 0 : c.length) || m
           ? n.createElement(
               "div",
               { className: te.ParentalGameListOuter },
-              n.createElement(Me, {
-                nItems: _,
-                nTotalItems: y,
-                strFilter: s,
-                setFilter: m,
-                strView: c,
-                setView: u,
-                setAllowAllApps: d,
+              n.createElement(Pe, {
+                nItems: y,
+                nTotalItems: g,
+                strFilter: m,
+                setFilter: o,
+                strView: u,
+                setView: d,
+                setAllowAllApps: _,
               }),
               n.createElement(
                 "div",
                 { className: te.Content },
-                "list" == c &&
-                  n.createElement(Ne, {
-                    steamid: a,
-                    settings: l,
-                    rgSortedGames: o,
-                  }),
-                "grid" == c &&
+                "list" == u &&
                   n.createElement(xe, {
                     steamid: a,
                     settings: l,
-                    rgSortedGames: o,
+                    rgSortedGames: c,
+                  }),
+                "grid" == u &&
+                  n.createElement(ke, {
+                    steamid: a,
+                    settings: l,
+                    rgSortedGames: c,
                   }),
               ),
             )
           : null;
       }
-      function Ne(e) {
+      function xe(e) {
         const { steamid: t, settings: a, rgSortedGames: l } = e,
           i = n.useRef(),
           r = parseInt(te.nParentalListRowHeight),
@@ -2466,7 +2469,7 @@
             s
               .getVirtualItems()
               .map((e) =>
-                n.createElement(Ce, {
+                n.createElement(Me, {
                   key: e.key,
                   steamid: t,
                   settings: a,
@@ -2484,7 +2487,7 @@
           ),
         );
       }
-      function xe(e) {
+      function ke(e) {
         const { steamid: t, settings: a, rgSortedGames: l } = e,
           i = (0, ae.w7)(t),
           r = n.useMemo(
@@ -2502,12 +2505,7 @@
             (e) => () => {
               const t = a.applist_custom().find((t) => t.appid() == e.appid),
                 n = (null == t ? void 0 : t.is_allowed()) || !1;
-              if (t) t.set_is_allowed(!n);
-              else {
-                let t = a.add_applist_custom();
-                t.set_appid(e.appid), t.set_is_allowed(!n);
-              }
-              i.mutate(a);
+              Fe(a, !n, [e.appid]), i.mutate(a);
             },
             [a, i],
           ),
@@ -2525,17 +2523,17 @@
           getClassName: m,
         });
       }
-      function ke(e) {
-        const { steamid: t, settings: a } = e;
+      function De(e) {
+        const { steamid: t, settings: a, mapAppsAllowed: l } = e;
         return n.createElement(
           "div",
           null,
-          n.createElement(be, { steamid: t, settings: a }),
+          n.createElement(Ce, { steamid: t, settings: a }),
           0 != a.applist_base_id() &&
-            n.createElement(Pe, { steamid: t, settings: a }),
+            n.createElement(Ne, { steamid: t, settings: a, mapAppsAllowed: l }),
         );
       }
-      function De(e) {
+      function Re(e) {
         const { steamid: t, settings: a, feature: l, label: i } = e,
           r = !!(a.enabled_features() & (1 << l)),
           s = (0, ae.w7)(t),
@@ -2553,34 +2551,34 @@
           onChange: o,
         });
       }
-      function Re(e) {
+      function we(e) {
         const { steamid: t, settings: a } = e;
         return n.createElement(
           "div",
           { className: te.ParentalFeatures },
           n.createElement("hr", null),
-          n.createElement(De, {
+          n.createElement(Re, {
             steamid: t,
             settings: a,
             feature: 1,
             label: "#Parental_Feature_Store",
           }),
           n.createElement("hr", null),
-          n.createElement(De, {
+          n.createElement(Re, {
             steamid: t,
             settings: a,
             feature: 2,
             label: "#Parental_Feature_Community",
           }),
           n.createElement("hr", null),
-          n.createElement(De, {
+          n.createElement(Re, {
             steamid: t,
             settings: a,
             feature: 4,
             label: "#Parental_Feature_Friends",
           }),
           n.createElement("hr", null),
-          n.createElement(De, {
+          n.createElement(Re, {
             steamid: t,
             settings: a,
             feature: 3,
@@ -2589,7 +2587,7 @@
           n.createElement("hr", null),
         );
       }
-      function we(e, t) {
+      function Be(e, t) {
         const a = ee()()
             .startOf("day")
             .add(30 * e, "minutes"),
@@ -2602,7 +2600,7 @@
           });
         return l.format(a.toDate()) + "-" + l.format(n.toDate());
       }
-      function Be(e) {
+      function Te(e) {
         if (e == BigInt(0)) return (0, _.Xx)("#Parental_Playtime_Never");
         if (e == BigInt(0xffffffffffff))
           return (0, _.Xx)("#Parental_Playtime_AnyTime");
@@ -2611,10 +2609,10 @@
         for (let n = 0; n < 48; n++)
           e & (BigInt(1) << BigInt(n))
             ? -1 == a && (a = n)
-            : -1 != a && (t.push(we(a, n)), (a = -1));
-        return -1 != a && (t.push(we(a, 48)), (a = -1)), t.join(", ");
+            : -1 != a && (t.push(Be(a, n)), (a = -1));
+        return -1 != a && (t.push(Be(a, 48)), (a = -1)), t.join(", ");
       }
-      function Te(e) {
+      function Ae(e) {
         const {
             className: t,
             enabled: a,
@@ -2653,7 +2651,7 @@
           const t = a & (BigInt(1) << BigInt(e)),
             s = l && l & (BigInt(1) << BigInt(e));
           r.push(
-            n.createElement(Te, {
+            n.createElement(Ae, {
               key: e,
               enabled: !!t,
               locked: !!s,
@@ -2700,13 +2698,13 @@
           r,
         );
       }
-      function Ae(e) {
+      function Le(e) {
         const { steamid: t, settings: a, dayIndexStart: l, closeModal: i } = e,
           [r, s] = n.useState(l),
           o = n.useRef(a.clone()),
           c = (0, ae.w7)(t);
         return n.createElement(
-          I.uH,
+          h.uH,
           {
             className: te.ParentalPlaytimeWindowsDialog,
             closeModal: i,
@@ -2719,14 +2717,14 @@
               (0, _.Xx)("#Parental_PlaytimeWindows_Title"),
             ),
           },
-          n.createElement(Xe, {
+          n.createElement(qe, {
             restrictions: o.current.playtime_restrictions().playtime_days()[r],
             dayIndex: r,
             setDayIndex: s,
           }),
         );
       }
-      function Le(e) {
+      function Xe(e) {
         const { dayIndex: t, onChange: a } = e,
           l = n.useCallback(
             (e) => {
@@ -2734,7 +2732,7 @@
             },
             [a],
           ),
-          i = ze();
+          i = We();
         return n.createElement(m.TW, {
           rgOptions: i,
           selectedOption: t,
@@ -2748,7 +2746,7 @@
           },
         });
       }
-      function Xe(e) {
+      function qe(e) {
         const { restrictions: t, dayIndex: a, setDayIndex: l } = e,
           [i, r] = n.useState(BigInt(parseInt(t.allowed_time_windows())));
         n.useEffect(() => {
@@ -2779,14 +2777,14 @@
           n.createElement(
             "div",
             { className: te.TopRow },
-            n.createElement(Le, { dayIndex: a, onChange: l }),
+            n.createElement(Xe, { dayIndex: a, onChange: l }),
             n.createElement(
               "div",
               { className: te.Right },
               n.createElement(
                 "div",
                 { className: te.PlaytimeDescription },
-                Be(i),
+                Te(i),
               ),
               n.createElement(
                 "div",
@@ -2811,14 +2809,14 @@
             { className: te.ParentalPlaytimeWindows },
             n.createElement(Ge, { nWindows: i, onToggle: s }),
           ),
-          n.createElement(He, {
+          n.createElement(Oe, {
             strLabel: "#Parental_Playtime_Limit",
             nMinutes: t.allowed_daily_minutes(),
             onSelected: o,
           }),
         );
       }
-      function qe(e) {
+      function He(e) {
         let t = (0, _.kb)("#Parental_Playtime_Hours", e);
         return (
           0 == e
@@ -2828,7 +2826,7 @@
           t
         );
       }
-      function He(e) {
+      function Oe(e) {
         const {
             strLabel: t,
             nMinutes: a,
@@ -2843,7 +2841,7 @@
             [l],
           ),
           o = [];
-        for (let e = i; e < r; e++) o.push({ data: e, label: qe(e) });
+        for (let e = i; e < r; e++) o.push({ data: e, label: He(e) });
         return n.createElement(m.gB, {
           label: (0, _.Xx)(t),
           bottomSeparator: "none",
@@ -2859,7 +2857,7 @@
           },
         });
       }
-      function Oe(e) {
+      function ze(e) {
         var t, a;
         const { steamid: l, settings: i, dayIndex: r, strDay: s } = e,
           [m, o] = n.useState(!1),
@@ -2885,7 +2883,7 @@
             "a",
             { className: te.ParentalPlaytimeRow, onClick: () => o(!0) },
             n.createElement("div", { className: te.Day }, s),
-            n.createElement("div", { className: te.Windows }, Be(c)),
+            n.createElement("div", { className: te.Windows }, Te(c)),
             n.createElement(
               "div",
               { className: te.Minutes },
@@ -2899,15 +2897,15 @@
                 "div",
                 null,
                 (function (e) {
-                  return qe(Math.floor(e / 60));
+                  return He(Math.floor(e / 60));
                 })(u),
               ),
             ),
           ),
           n.createElement(
-            I.Yy,
+            h.Yy,
             { active: m },
-            n.createElement(Ae, {
+            n.createElement(Le, {
               steamid: l,
               settings: i,
               dayIndexStart: r,
@@ -2916,7 +2914,7 @@
           ),
         );
       }
-      function ze() {
+      function We() {
         const e = ee()
             .localeData(_.Yt.GetPreferredLocales()[0])
             .firstDayOfWeek(),
@@ -2928,10 +2926,10 @@
           return { data: l, label: t.format(ee()().day(l).toDate()) };
         });
       }
-      function We(e) {
+      function Qe(e) {
         const { steamid: t, settings: a } = e,
-          l = ze().map((e) =>
-            n.createElement(Oe, {
+          l = We().map((e) =>
+            n.createElement(ze, {
               steamid: t,
               settings: a,
               dayIndex: e.data,
@@ -2945,7 +2943,7 @@
           l,
         );
       }
-      function Qe(e) {
+      function je(e) {
         var t;
         const { steamid: a, settings: l } = e,
           i = (0, ae.w7)(a),
@@ -2974,30 +2972,34 @@
             checked: s,
             onChange: r,
           }),
-          s && n.createElement(We, { steamid: a, settings: l }),
+          s && n.createElement(Qe, { steamid: a, settings: l }),
         );
       }
-      function je(e) {
+      function Ve(e) {
         const { steamid: t } = e,
-          { settings: a } = (0, ae.X1)(e.steamid).data;
+          { settings: a, mapAppsAllowed: l } = (0, ae.X1)(e.steamid).data;
         return a
           ? n.createElement(
               "div",
               { className: te.FamilyMemberParentalSettingsInner },
-              n.createElement(Fe, { steamid: t }),
-              n.createElement(Se, { steamid: t, settings: a }),
+              n.createElement(Ie, { steamid: t }),
+              n.createElement(be, { steamid: t, settings: a }),
               a.is_enabled() &&
                 n.createElement(
                   n.Fragment,
                   null,
-                  n.createElement(ke, { steamid: t, settings: a }),
-                  n.createElement(Re, { steamid: t, settings: a }),
-                  n.createElement(Qe, { steamid: t, settings: a }),
+                  n.createElement(De, {
+                    steamid: t,
+                    settings: a,
+                    mapAppsAllowed: l,
+                  }),
+                  n.createElement(we, { steamid: t, settings: a }),
+                  n.createElement(je, { steamid: t, settings: a }),
                 ),
             )
           : null;
       }
-      function Ve(e) {
+      function Ue(e) {
         var t;
         const { role: a, steamid: l } = e,
           i =
@@ -3006,9 +3008,9 @@
               : t.data.family_groupid();
         return 1 != (0, p.Xn)(i) || 2 != a
           ? null
-          : n.createElement(je, { steamid: l });
+          : n.createElement(Ve, { steamid: l });
       }
-      function Ue(e) {
+      function Ye(e) {
         var t;
         const { familyGroupID: a, member: i } = e,
           [r, s, c] = (0, J.X9)(!1),
@@ -3024,8 +3026,8 @@
           E =
             null === (t = (0, p.Rs)().data) || void 0 === t ? void 0 : t.role(),
           S = 1 === (0, p.JM)(a).data.members().length,
-          b = (0, h.k6)(),
-          C = (0, h.TH)(),
+          b = (0, I.k6)(),
+          C = (0, I.TH)(),
           M = new Date(1e3 * i.time_joined()),
           P = (new Date().getTime() - M.getTime()) / 864e5 < 30,
           N = (0, v.IE)(i.steamid());
@@ -3045,9 +3047,9 @@
           "div",
           { className: K.FamilyMemberManagementButtons },
           n.createElement(
-            I.Yy,
+            h.Yy,
             { active: r },
-            n.createElement(I.uH, {
+            n.createElement(h.uH, {
               strTitle: (0, _.Xx)(
                 "#FamilyManagement_RemoveMemberConfirmationTitle",
               ),
@@ -3108,10 +3110,10 @@
                   : "#FamilyManagement_RemoveMember",
               ),
             ),
-          S && n.createElement(Ye, { familyGroupID: a }),
+          S && n.createElement(Ke, { familyGroupID: a }),
         );
       }
-      function Ye(e) {
+      function Ke(e) {
         const { familyGroupID: t } = e,
           [a, l, i] = (0, J.X9)(!1),
           r = (0, p.Rj)(t),
@@ -3124,7 +3126,7 @@
         const c = (0, p.Rs)().data.cooldown_seconds_remaining(),
           y = Date.now() / 1e3 + c,
           g = (0, _.$1)(y),
-          f = (0, h.k6)();
+          f = (0, I.k6)();
         if (r.isLoading)
           return n.createElement(
             "div",
@@ -3135,10 +3137,10 @@
           n.Fragment,
           null,
           n.createElement(
-            I.Yy,
+            h.Yy,
             { active: a },
             n.createElement(
-              I.uH,
+              h.uH,
               {
                 strTitle: (0, _.Xx)(
                   "#FamilyManagement_DeleteFamilyConfirmationTitle",
@@ -3193,17 +3195,17 @@
           ),
         );
       }
-      function Ke(e) {
+      function Je(e) {
         const { familyGroupID: t, member: a } = e;
         return n.createElement(
           "div",
           { className: K.FamilyMember },
-          n.createElement(Ue, { familyGroupID: t, member: a }),
-          n.createElement(Ve, { role: a.role(), steamid: a.steamid() }),
+          n.createElement(Ye, { familyGroupID: t, member: a }),
+          n.createElement(Ue, { role: a.role(), steamid: a.steamid() }),
         );
       }
-      var Je = a(72120);
-      function Ze(e) {
+      var Ze = a(72120);
+      function $e(e) {
         var t, a;
         const { familyGroupID: l } = e,
           i = (0, Z._T)(e, ["familyGroupID"]),
@@ -3263,7 +3265,7 @@
                 },
               },
               d.map((e, t) =>
-                n.createElement($e, {
+                n.createElement(et, {
                   key: e.key,
                   entry: s[e.index],
                   styleProps: i,
@@ -3273,7 +3275,7 @@
           ),
         );
       }
-      function $e(e) {
+      function et(e) {
         var t, a, l;
         let { entry: i, styleProps: r } = e,
           s = (0, Z._T)(e, ["entry", "styleProps"]);
@@ -3326,98 +3328,98 @@
                 : l.m_strPlayerName,
             ),
           ),
-          F = g.seconds && (0, Je.jA)(g.seconds);
-        let h;
+          F = g.seconds && (0, Ze.jA)(g.seconds);
+        let I;
         switch (i.type()) {
           case 1:
-            h = (0, _.kQ)("#FamilyHistory_FamilyCreated", p, g.name);
+            I = (0, _.kQ)("#FamilyHistory_FamilyCreated", p, g.name);
             break;
           case 2:
-            h = (0, _.kQ)("#FamilyHistory_FamilyModified", p, g.name);
+            I = (0, _.kQ)("#FamilyHistory_FamilyModified", p, g.name);
             break;
           case 3:
-            h = (0, _.kQ)("#FamilyHistory_FamilyDeleted", p);
+            I = (0, _.kQ)("#FamilyHistory_FamilyDeleted", p);
             break;
           case 4:
             const e = (0, _.Xx)(
               `#FamilyManagement_Role_${g.role}`,
             ).toLocaleLowerCase();
-            h = (0, _.kQ)("#FamilyHistory_AccountInvited", p, e, E);
+            I = (0, _.kQ)("#FamilyHistory_AccountInvited", p, e, E);
             break;
           case 5:
-            h = (0, _.kQ)("#FamilyHistory_InviteDeniedByFamilySize", p, E);
+            I = (0, _.kQ)("#FamilyHistory_InviteDeniedByFamilySize", p, E);
             break;
           case 6:
-            h = (0, _.kQ)("#FamilyHistory_JoinedFamily", p);
+            I = (0, _.kQ)("#FamilyHistory_JoinedFamily", p);
             break;
           case 7:
-            h = (0, _.kQ)("#FamilyHistory_JoinDeniedByRegionMismatch", p);
+            I = (0, _.kQ)("#FamilyHistory_JoinDeniedByRegionMismatch", p);
             break;
           case 8:
-            h = (0, _.kQ)("#FamilyHistory_JoinDeniedByMissingIpAddress", p);
+            I = (0, _.kQ)("#FamilyHistory_JoinDeniedByMissingIpAddress", p);
             break;
           case 9:
-            h = (0, _.kQ)("#FamilyHistory_JoinDeniedByFamilyCooldown", p, F);
+            I = (0, _.kQ)("#FamilyHistory_JoinDeniedByFamilyCooldown", p, F);
             break;
           case 10:
-            h = (0, _.kQ)("#FamilyHistory_JoinDeniedByUserCooldown", p, F);
+            I = (0, _.kQ)("#FamilyHistory_JoinDeniedByUserCooldown", p, F);
             break;
           case 11:
-            h = (0, _.kQ)("#FamilyHistory_JoinDeniedByOtherFamily", p);
+            I = (0, _.kQ)("#FamilyHistory_JoinDeniedByOtherFamily", p);
             break;
           case 12:
-            h = (0, _.kQ)("#FamilyHistory_AccountRemoved", p, E);
+            I = (0, _.kQ)("#FamilyHistory_AccountRemoved", p, E);
             break;
           case 13:
-            h =
+            I =
               i.actor_steamid() === g.account
                 ? (0, _.kQ)("#FamilyHistory_InviteRejected", p)
                 : (0, _.kQ)("#FamilyHistory_InviteCancelled", p, E);
             break;
           case 14:
-            h = (0, _.kQ)("#FamilyHistory_PurchaseRequested", p);
+            I = (0, _.kQ)("#FamilyHistory_PurchaseRequested", p);
             break;
           case 16:
-            h = (0, _.kQ)("#FamilyHistory_ParentalSettingsDisabled", p, E);
+            I = (0, _.kQ)("#FamilyHistory_ParentalSettingsDisabled", p, E);
             break;
           case 15:
-            h = (0, _.kQ)("#FamilyHistory_ParentalSettingsEnabled", p, E);
+            I = (0, _.kQ)("#FamilyHistory_ParentalSettingsEnabled", p, E);
             break;
           case 17:
-            h = (0, _.kQ)("#FamilyHistory_ParentalSettingsChanged", p, E);
+            I = (0, _.kQ)("#FamilyHistory_ParentalSettingsChanged", p, E);
             break;
           case 18:
-            h = (0, _.kQ)(
+            I = (0, _.kQ)(
               "#FamilyHistory_FamilyCooldownOverridesChanged",
               p,
               g.count,
             );
             break;
           case 19:
-            h = (0, _.kQ)("#FamilyHistory_PurchaseRequestCanceled", p);
+            I = (0, _.kQ)("#FamilyHistory_PurchaseRequestCanceled", p);
             break;
           case 20:
-            h = (0, _.kQ)("#FamilyHistory_PurchaseRequestApproved", p, E);
+            I = (0, _.kQ)("#FamilyHistory_PurchaseRequestApproved", p, E);
             break;
           case 21:
-            h = (0, _.kQ)("#FamilyHistory_PurchaseRequestDeclined", p, E);
+            I = (0, _.kQ)("#FamilyHistory_PurchaseRequestDeclined", p, E);
             break;
           default:
-            h = (0, _.kQ)("#FamilyHistory_UnknownChange");
+            I = (0, _.kQ)("#FamilyHistory_UnknownChange");
         }
         return n.createElement(
           "div",
           Object.assign({ className: (0, d.Z)(r.Entry) }, s),
           n.createElement("div", { className: (0, d.Z)(r.Timestamp) }, c),
-          n.createElement("div", { className: (0, d.Z)(r.EntryText) }, h),
+          n.createElement("div", { className: (0, d.Z)(r.EntryText) }, I),
         );
       }
-      var et,
-        tt = a(28374),
-        at = a.n(tt),
-        nt = a(20285),
-        lt = a(25871);
-      function it(e) {
+      var tt,
+        at = a(28374),
+        nt = a.n(at),
+        lt = a(20285),
+        it = a(25871);
+      function rt(e) {
         const { item: t, closeModal: a } = e,
           l = (0, ae.WY)(t),
           [i, r] = n.useState(3600),
@@ -3446,14 +3448,14 @@
             },
           ];
         return n.createElement(
-          I.uH,
+          h.uH,
           {
-            className: at().ApproveRequestDialog,
+            className: nt().ApproveRequestDialog,
             closeModal: a,
             onOK: s,
             strTitle: n.createElement(
               m.h4,
-              { className: at().Title },
+              { className: nt().Title },
               (0, _.Xx)("#FeatureRequest_AcceptDialog_Title"),
             ),
           },
@@ -3471,7 +3473,7 @@
           }),
         );
       }
-      function rt(e) {
+      function st(e) {
         const {
             currentMinutes: t,
             currentWindows: a,
@@ -3501,13 +3503,13 @@
           c && (y = "#PlaytimeRequest_AcceptDialog_BodyText_UnlimitedHours"),
           n.createElement(
             "div",
-            { className: at().ApprovePlaytimeDialog },
+            { className: nt().ApprovePlaytimeDialog },
             n.createElement(m.Ac, null, (0, _.Xx)(y)),
             !o &&
               n.createElement(
                 "div",
-                { className: at().ParentalPlaytimeWindows },
-                n.createElement("div", { className: at().Text }, Be(r)),
+                { className: nt().ParentalPlaytimeWindows },
+                n.createElement("div", { className: nt().Text }, Te(r)),
                 n.createElement(Ge, {
                   nWindows: r,
                   nLockedWindows: a,
@@ -3517,7 +3519,7 @@
             !c &&
               n.createElement(
                 "div",
-                { className: at().CurrentHours },
+                { className: nt().CurrentHours },
                 (0, _.kb)(
                   "#PlaytimeRequest_AcceptDialog_CurrentHours",
                   Math.floor(t / 60),
@@ -3527,11 +3529,11 @@
             c &&
               n.createElement(
                 "div",
-                { className: at().CurrentHours },
+                { className: nt().CurrentHours },
                 (0, _.Xx)("#PlaytimeRequest_AcceptDialog_UnlimitedHours"),
               ),
             !c &&
-              n.createElement(He, {
+              n.createElement(Oe, {
                 strLabel: "#PlaytimeRequest_AcceptDialog_AdditionalTime",
                 nMinutes: l,
                 onSelected: d,
@@ -3540,7 +3542,7 @@
           )
         );
       }
-      function st(e) {
+      function mt(e) {
         const { item: t, closeModal: a } = e,
           l = (0, ae.Bk)(t),
           [i, r] = n.useState(!1),
@@ -3561,19 +3563,19 @@
             l.mutateAsync({ bApprove: !0, restrictions: e });
         }, [l, s, c, d, t]);
         return n.createElement(
-          I.uH,
+          h.uH,
           {
-            className: at().ApproveRequestDialog,
+            className: nt().ApproveRequestDialog,
             closeModal: a,
             onOK: p,
             bOKDisabled: i,
             strTitle: n.createElement(
               m.h4,
-              { className: at().Title },
+              { className: nt().Title },
               (0, _.Xx)("#FeatureRequest_AcceptDialog_Title"),
             ),
           },
-          n.createElement(rt, {
+          n.createElement(st, {
             currentMinutes: s,
             currentWindows: o,
             additionalMinutes: c,
@@ -3583,23 +3585,23 @@
           }),
         );
       }
-      function mt(e) {
+      function ot(e) {
         var t;
         const { steamIDResponder: a, resultMessage: l, timeResponded: i } = e,
           r = (0, v.IE)(a.ConvertTo64BitString()),
           s = null == r ? void 0 : r.data,
-          m = (0, nt.TQ)(a.GetAccountID()),
+          m = (0, lt.TQ)(a.GetAccountID()),
           o = (0, D.h)();
         return s
           ? n.createElement(
               "div",
-              { className: at().RequestResponse },
-              n.createElement("div", { className: at().Result }, l),
+              { className: nt().RequestResponse },
+              n.createElement("div", { className: nt().Result }, l),
               n.createElement(
                 "div",
-                { className: at().AvatarAndPersona },
+                { className: nt().AvatarAndPersona },
                 n.createElement(f.vV, {
-                  className: at().Avatar,
+                  className: nt().Avatar,
                   persona: s,
                   size: "Medium",
                   statusPosition: "right",
@@ -3615,25 +3617,25 @@
               ),
               n.createElement(
                 "div",
-                { className: at().TimeResponded },
+                { className: nt().TimeResponded },
                 (0, _.oL)(i),
               ),
             )
           : null;
       }
-      function ot(e) {
+      function ct(e) {
         var t;
         const { steamID: a, locToken: l } = e,
           i = (0, v.IE)(a.ConvertTo64BitString()),
           r = null == i ? void 0 : i.data,
-          s = (0, nt.TQ)(a.GetAccountID()),
+          s = (0, lt.TQ)(a.GetAccountID()),
           m = (0, D.h)();
         return i.isSuccess
           ? n.createElement(
               "div",
-              { className: at().AvatarAndPersona },
+              { className: nt().AvatarAndPersona },
               n.createElement(f.vV, {
-                className: at().Avatar,
+                className: nt().Avatar,
                 persona: r,
                 size: "Medium",
                 statusPosition: "right",
@@ -3652,7 +3654,7 @@
             )
           : null;
       }
-      function ct(e) {
+      function ut(e) {
         const { item: t } = e,
           a = (0, l.M)(),
           i = t.steamid() == a,
@@ -3673,31 +3675,31 @@
           "div",
           {
             className: (0, d.Z)(
-              at().FamilyRequestItem,
-              at().ParentalFeatureRequestItem,
+              nt().FamilyRequestItem,
+              nt().ParentalFeatureRequestItem,
             ),
           },
           n.createElement(
             "div",
-            { className: at().RequestInfo },
+            { className: nt().RequestInfo },
             i &&
               n.createElement(
                 "div",
-                { className: at().SelfRequested },
+                { className: nt().SelfRequested },
                 (0, _.Xx)("#FeatureRequest_UserRequested_Self"),
               ),
             !i &&
-              n.createElement(ot, {
+              n.createElement(ct, {
                 steamID: new F.K(t.steamid()),
                 locToken: "#FeatureRequest_UserRequested",
               }),
             n.createElement(
               "ul",
-              { className: at().FeatureList },
+              { className: nt().FeatureList },
               y.map((e) =>
                 n.createElement(
                   "li",
-                  { key: e, className: at().Feature },
+                  { key: e, className: nt().Feature },
                   (0, _.Xx)(e),
                 ),
               ),
@@ -3708,7 +3710,7 @@
             !t.time_responded() &&
             n.createElement(
               "div",
-              { className: at().Buttons },
+              { className: nt().Buttons },
               n.createElement(
                 m.KM,
                 { onClick: u },
@@ -3724,11 +3726,11 @@
             !t.time_responded() &&
             n.createElement(
               "div",
-              { className: (0, d.Z)(at().Buttons, at().Pending) },
+              { className: (0, d.Z)(nt().Buttons, nt().Pending) },
               (0, _.Xx)("#FeatureRequest_Pending"),
             ),
           t.time_responded() &&
-            n.createElement(mt, {
+            n.createElement(ot, {
               steamIDResponder: new F.K(t.steamid_responder()),
               resultMessage: (0, _.Xx)(
                 t.approved()
@@ -3739,9 +3741,9 @@
             }),
           !t.time_responded() &&
             n.createElement(
-              I.Yy,
+              h.Yy,
               { active: r },
-              n.createElement(it, {
+              n.createElement(rt, {
                 item: t,
                 closeModal: () => {
                   s(!1);
@@ -3750,7 +3752,7 @@
             ),
         );
       }
-      function ut(e) {
+      function dt(e) {
         const { item: t } = e,
           a = (0, l.M)(),
           i = t.steamid() == a,
@@ -3766,21 +3768,21 @@
           "div",
           {
             className: (0, d.Z)(
-              at().FamilyRequestItem,
-              at().ParentalPlaytimeRequestItem,
+              nt().FamilyRequestItem,
+              nt().ParentalPlaytimeRequestItem,
             ),
           },
           n.createElement(
             "div",
-            { className: at().RequestInfo },
+            { className: nt().RequestInfo },
             i &&
               n.createElement(
                 "div",
-                { className: at().SelfRequested },
+                { className: nt().SelfRequested },
                 (0, _.Xx)("#PlaytimeRequest_UserRequested_Self"),
               ),
             !i &&
-              n.createElement(ot, {
+              n.createElement(ct, {
                 steamID: new F.K(t.steamid()),
                 locToken: "#PlaytimeRequest_UserRequested",
               }),
@@ -3790,7 +3792,7 @@
             !t.time_responded() &&
             n.createElement(
               "div",
-              { className: at().Buttons },
+              { className: nt().Buttons },
               n.createElement(
                 m.KM,
                 { onClick: u },
@@ -3806,11 +3808,11 @@
             !t.time_responded() &&
             n.createElement(
               "div",
-              { className: (0, d.Z)(at().Buttons, at().Pending) },
+              { className: (0, d.Z)(nt().Buttons, nt().Pending) },
               (0, _.Xx)("#FeatureRequest_Pending"),
             ),
           t.time_responded() &&
-            n.createElement(mt, {
+            n.createElement(ot, {
               steamIDResponder: new F.K(t.steamid_responder()),
               resultMessage: (0, _.Xx)(
                 t.approved()
@@ -3821,9 +3823,9 @@
             }),
           !t.time_responded() &&
             n.createElement(
-              I.Yy,
+              h.Yy,
               { active: r },
-              n.createElement(st, {
+              n.createElement(mt, {
                 item: t,
                 closeModal: () => {
                   s(!1);
@@ -3832,19 +3834,19 @@
             ),
         );
       }
-      function dt(e) {
-        const { packageID: t, totalItems: a } = e,
-          [l] = (0, lt.Vm)(t, 1, {});
-        return n.createElement(yt, { storeItem: l, totalItems: a });
-      }
       function _t(e) {
-        const { bundleID: t, totalItems: a } = e,
-          [l] = (0, lt.jk)(t, 2, {
-            included_item_data_request: { include_basic_info: !0 },
-          });
-        return n.createElement(yt, { storeItem: l, totalItems: a });
+        const { packageID: t, totalItems: a } = e,
+          [l] = (0, it.Vm)(t, 1, {});
+        return n.createElement(pt, { storeItem: l, totalItems: a });
       }
       function yt(e) {
+        const { bundleID: t, totalItems: a } = e,
+          [l] = (0, it.jk)(t, 2, {
+            included_item_data_request: { include_basic_info: !0 },
+          });
+        return n.createElement(pt, { storeItem: l, totalItems: a });
+      }
+      function pt(e) {
         const { storeItem: t, totalItems: a } = e;
         let l = "";
         return (
@@ -3865,10 +3867,10 @@
                   t.GetName(),
                   a - 1,
                 ))),
-          n.createElement("div", { className: at().CartSummary }, l)
+          n.createElement("div", { className: nt().CartSummary }, l)
         );
       }
-      function pt(e) {
+      function gt(e) {
         const { item: t, familyGroupID: a } = e,
           i = (0, l.M)(),
           r = t.requester_steamid() === i,
@@ -3942,31 +3944,31 @@
           "div",
           {
             className: (0, d.Z)(
-              at().FamilyRequestItem,
-              at().PurchaseRequestItem,
+              nt().FamilyRequestItem,
+              nt().PurchaseRequestItem,
             ),
           },
           n.createElement(
             "div",
-            { className: at().RequestInfo },
+            { className: nt().RequestInfo },
             r &&
               n.createElement(
                 "div",
-                { className: at().SelfRequested },
+                { className: nt().SelfRequested },
                 (0, _.Xx)("#PurchaseRequest_UserRequested_Self"),
               ),
             !r &&
-              n.createElement(ot, {
+              n.createElement(ct, {
                 steamID: new F.K(t.requester_steamid()),
                 locToken: "#PurchaseRequest_UserRequested",
               }),
-            u && n.createElement(dt, { packageID: u, totalItems: g }),
-            y && n.createElement(_t, { bundleID: y, totalItems: g }),
+            u && n.createElement(_t, { packageID: u, totalItems: g }),
+            y && n.createElement(yt, { bundleID: y, totalItems: g }),
           ),
           !t.time_responded() &&
             n.createElement(
               "div",
-              { className: at().Buttons },
+              { className: nt().Buttons },
               !r &&
                 !t.time_responded() &&
                 n.createElement(
@@ -3991,32 +3993,32 @@
               ),
             ),
           t.time_responded() &&
-            n.createElement(mt, {
+            n.createElement(ot, {
               steamIDResponder: new F.K(t.responder_steamid()),
               resultMessage: v,
               timeResponded: t.time_responded(),
             }),
         );
       }
-      function gt(e) {
+      function ft(e) {
         const { item: t, familyGroupID: a } = e;
         let l;
         switch (t.type) {
-          case et.k_ParentalFeature:
-            l = n.createElement(ct, { item: t.data });
-            break;
-          case et.k_ParentalPlaytime:
+          case tt.k_ParentalFeature:
             l = n.createElement(ut, { item: t.data });
             break;
-          case et.k_PurchaseRequest:
-            l = n.createElement(pt, { item: t.data, familyGroupID: a });
+          case tt.k_ParentalPlaytime:
+            l = n.createElement(dt, { item: t.data });
+            break;
+          case tt.k_PurchaseRequest:
+            l = n.createElement(gt, { item: t.data, familyGroupID: a });
             break;
           default:
             l = null;
         }
         return l;
       }
-      function ft(e) {
+      function vt(e) {
         const { rgRequests: t, familyGroupID: a } = e,
           l = t.length > 0;
         return n.createElement(
@@ -4025,15 +4027,15 @@
           !l &&
             n.createElement(
               "div",
-              { className: at().NoFamilyRequests },
+              { className: nt().NoFamilyRequests },
               (0, _.Xx)("#FamilyManagement_NoCurrentRequests"),
             ),
           l &&
             n.createElement(
               "div",
-              { className: at().FamilyRequests },
+              { className: nt().FamilyRequests },
               t.map((e) =>
-                n.createElement(gt, { key: e.key, item: e, familyGroupID: a }),
+                n.createElement(ft, { key: e.key, item: e, familyGroupID: a }),
               ),
             ),
         );
@@ -4042,11 +4044,11 @@
         (e[(e.k_ParentalFeature = 0)] = "k_ParentalFeature"),
           (e[(e.k_ParentalPlaytime = 1)] = "k_ParentalPlaytime"),
           (e[(e.k_PurchaseRequest = 2)] = "k_PurchaseRequest");
-      })(et || (et = {}));
-      const vt = function () {
+      })(tt || (tt = {}));
+      const Et = function () {
         const e = (0, s.L)(),
           [t, a] = (0, n.useState)(null),
-          l = (0, h.$B)(),
+          l = (0, I.$B)(),
           i = (0, p.Rs)();
         if (i.isLoading)
           return n.createElement(
@@ -4064,7 +4066,7 @@
             { value: { errorMessage: t, setErrorMessage: a } },
             n.createElement(g.L4, null),
             n.createElement(
-              Mt,
+              Pt,
               null,
               o.Wnw({}),
               " ",
@@ -4077,18 +4079,18 @@
                 "div",
                 { className: Y.FamilyContainer },
                 n.createElement(
-                  h.rs,
+                  I.rs,
                   null,
-                  n.createElement(h.AW, {
+                  n.createElement(I.AW, {
                     path: `${l.path}/create`,
-                    component: It,
-                  }),
-                  n.createElement(h.AW, {
-                    path: `${l.path}/join`,
                     component: St,
                   }),
+                  n.createElement(I.AW, {
+                    path: `${l.path}/join`,
+                    component: bt,
+                  }),
                   m
-                    ? n.createElement(xt, {
+                    ? n.createElement(kt, {
                         familyGroupID: i.data.family_groupid(),
                       })
                     : n.createElement(ht, null),
@@ -4098,7 +4100,7 @@
           ),
         );
       };
-      function Et(e) {
+      function Ft(e) {
         const t = [
           {
             name: (0, _.Xx)("#FamilyManagement_SetupTab"),
@@ -4108,12 +4110,12 @@
           {
             name: (0, _.Xx)("#FamilyManagement_FAQTab"),
             key: "faq",
-            contents: n.createElement(wt, null),
+            contents: n.createElement(Bt, null),
           },
         ];
         return n.createElement(c.n, { tabs: t });
       }
-      function Ft(e) {
+      function It(e) {
         const t = [
           {
             name: (0, _.Xx)("#FamilyManagement_JoinAFamily"),
@@ -4123,7 +4125,7 @@
           {
             name: (0, _.Xx)("#FamilyManagement_FAQTab"),
             key: "faq",
-            contents: n.createElement(wt, null),
+            contents: n.createElement(Bt, null),
           },
         ];
         return n.createElement(c.n, { tabs: t });
@@ -4134,7 +4136,7 @@
             null === (t = (0, p.Rs)().data) || void 0 === t
               ? void 0
               : t.pending_group_invites().length,
-          l = (0, h.k6)();
+          l = (0, I.k6)();
         let i;
         return (
           (i =
@@ -4147,7 +4149,7 @@
                   a,
                 )),
           n.createElement(
-            Et,
+            Ft,
             null,
             n.createElement(
               "div",
@@ -4218,11 +4220,11 @@
           )
         );
       }
-      function It(e) {
+      function St(e) {
         var t;
         const [a, l] = (0, n.useState)(""),
           r = (0, p.Nu)(),
-          s = (0, h.k6)(),
+          s = (0, I.k6)(),
           o = (0, p.Rs)(),
           { setErrorMessage: c } = (0, p.cL)();
         if (
@@ -4236,7 +4238,7 @@
               ? void 0
               : t.is_not_member_of_any_group()))
         )
-          return n.createElement(h.l_, { to: "/account/familymanagement" });
+          return n.createElement(I.l_, { to: "/account/familymanagement" });
         return r.isLoading
           ? n.createElement(
               "div",
@@ -4244,13 +4246,13 @@
               n.createElement(u.V, null),
             )
           : n.createElement(
-              Et,
+              Ft,
               null,
               n.createElement(
                 "div",
                 { className: Y.CreateFamilyContainer },
                 n.createElement(
-                  Ct,
+                  Mt,
                   null,
                   (0, _.Xx)("#FamilyManagement_CreateAFamilyHeader"),
                 ),
@@ -4290,7 +4292,7 @@
               ),
             );
       }
-      function St(e) {
+      function bt(e) {
         var t, a, i;
         const r = (0, p.Rs)(),
           s =
@@ -4300,7 +4302,7 @@
           o = new F.K((0, l.M)()).GetAccountID(),
           [c, u] = (0, n.useState)(!1),
           [d, y] = (0, n.useState)(!1),
-          g = S((0, h.TH)());
+          g = S((0, I.TH)());
         if (
           r.data &&
           !(null === (a = r.data) || void 0 === a
@@ -4308,10 +4310,10 @@
             : a.is_not_member_of_any_group())
         )
           return g
-            ? n.createElement(h.l_, {
+            ? n.createElement(I.l_, {
                 to: `/account/familymanagement?invitation=${g}`,
               })
-            : n.createElement(h.l_, { to: "/account/familymanagement" });
+            : n.createElement(I.l_, { to: "/account/familymanagement" });
         let f = null,
           v = r.data.pending_group_invites();
         if (g) {
@@ -4320,7 +4322,7 @@
         }
         return f
           ? n.createElement(
-              Et,
+              Ft,
               null,
               n.createElement(
                 "div",
@@ -4390,7 +4392,7 @@
               ),
             )
           : n.createElement(
-              Ft,
+              It,
               null,
               n.createElement(
                 "div",
@@ -4402,7 +4404,7 @@
                     (0, _.Xx)("#FamilyManagement_IncomingInviteGone"),
                   ),
                 n.createElement(
-                  Ct,
+                  Mt,
                   null,
                   (0, _.Xx)("#FamilyManagement_JoinAFamily"),
                 ),
@@ -4416,7 +4418,7 @@
                     n.Fragment,
                     null,
                     n.createElement(
-                      Ct,
+                      Mt,
                       null,
                       (0, _.Xx)("#FamilyManagement_PendingInvitesHeader"),
                     ),
@@ -4482,7 +4484,7 @@
               ),
             );
       }
-      function bt(e) {
+      function Ct(e) {
         const t = (0, p.Rs)(),
           a = t.data.family_groupid(),
           l = 1 === t.data.role(),
@@ -4508,21 +4510,21 @@
             : n.createElement(
                 "div",
                 { className: Y.ManageFamily },
-                n.createElement(Pt, null),
-                n.createElement(Nt, { familyGroupID: a, isAdult: l }),
-                n.createElement(kt, { familyGroupID: a }),
+                n.createElement(Nt, null),
+                n.createElement(xt, { familyGroupID: a, isAdult: l }),
+                n.createElement(Dt, { familyGroupID: a }),
                 n.createElement(ve, { familyGroupID: a }),
               )
         );
       }
-      function Ct(e) {
+      function Mt(e) {
         return n.createElement(
           "div",
           { className: Y.FamilySubsection },
           e.children,
         );
       }
-      function Mt(e) {
+      function Pt(e) {
         return n.createElement(
           "div",
           { className: Y.PreferencesHeader },
@@ -4538,8 +4540,8 @@
           ),
         );
       }
-      function Pt() {
-        const e = S((0, h.TH)()),
+      function Nt() {
+        const e = S((0, I.TH)()),
           t = (0, p.Rs)(),
           a = !t.data.is_not_member_of_any_group();
         return e && a
@@ -4556,7 +4558,7 @@
               )
           : null;
       }
-      function Nt(e) {
+      function xt(e) {
         const { familyGroupID: t, isAdult: a } = e,
           l = (0, p.JM)(t);
         (0, p.zj)(
@@ -4570,7 +4572,7 @@
         return n.createElement(
           "div",
           { className: Y.FamilyNameAndSlots },
-          n.createElement(Dt, { familyGroupID: t, isAdult: a }),
+          n.createElement(Rt, { familyGroupID: t, isAdult: a }),
           a &&
             n.createElement(
               "div",
@@ -4579,7 +4581,7 @@
             ),
         );
       }
-      function xt(e) {
+      function kt(e) {
         const { familyGroupID: t } = e,
           a = (function (e) {
             const t = (0, l.M)(),
@@ -4590,7 +4592,7 @@
             let s = i.data
               .feature_requests()
               .map((e) => ({
-                type: et.k_ParentalFeature,
+                type: tt.k_ParentalFeature,
                 key: "parentalfeature_" + e.requestid(),
                 data: e,
                 requestTimestamp: e.time_requested(),
@@ -4600,7 +4602,7 @@
                 i.data
                   .playtime_requests()
                   .map((e) => ({
-                    type: et.k_ParentalPlaytime,
+                    type: tt.k_ParentalPlaytime,
                     key: "parentalplaytime_" + e.requestid(),
                     data: e,
                     requestTimestamp: e.time_requested(),
@@ -4610,7 +4612,7 @@
                 r.data
                   .requests()
                   .map((e) => ({
-                    type: et.k_PurchaseRequest,
+                    type: tt.k_PurchaseRequest,
                     key: "purchaserequest_" + e.request_id(),
                     data: e,
                     requestTimestamp: e.time_requested(),
@@ -4625,20 +4627,20 @@
             {
               name: (0, _.Xx)("#FamilyManagement_ManageTab"),
               key: "manage",
-              contents: n.createElement(bt, null),
+              contents: n.createElement(Ct, null),
             },
           ];
         return (
           r.push({
             name: (0, _.Xx)("#FamilyManagement_RequestsTab"),
             key: "requests",
-            contents: n.createElement(ft, { rgRequests: a, familyGroupID: t }),
+            contents: n.createElement(vt, { rgRequests: a, familyGroupID: t }),
           }),
           1 === i &&
             r.push({
               name: (0, _.Xx)("#FamilyManagement_HistoryTab"),
               key: "history",
-              contents: n.createElement(Ze, {
+              contents: n.createElement($e, {
                 familyGroupID: t,
                 nFamilyHistoryRowHeight: Y.nFamilyHistoryRowHeight,
                 nFamilyHistoryScrollPastPadding:
@@ -4652,12 +4654,12 @@
           r.push({
             name: (0, _.Xx)("#FamilyManagement_FAQTab"),
             key: "faq",
-            contents: n.createElement(wt, null),
+            contents: n.createElement(Bt, null),
           }),
           n.createElement(c.n, { tabs: r })
         );
       }
-      function kt(e) {
+      function Dt(e) {
         var t;
         const { familyGroupID: a } = e,
           i = (0, p.Xn)(a),
@@ -4688,13 +4690,13 @@
               n.createElement(
                 g.In,
                 { strSteamID: c.steamid(), role: c.role() },
-                m && n.createElement(Ke, { familyGroupID: a, member: c }),
+                m && n.createElement(Je, { familyGroupID: a, member: c }),
               ),
             d.map((e) =>
               n.createElement(
                 g.In,
                 { strSteamID: e.steamid(), role: e.role(), key: e.steamid() },
-                m && n.createElement(Ke, { familyGroupID: a, member: e }),
+                m && n.createElement(Je, { familyGroupID: a, member: e }),
               ),
             ),
             m &&
@@ -4711,7 +4713,7 @@
                           key: e.steamid(),
                           bInvitePending: !0,
                         },
-                        n.createElement(Rt, {
+                        n.createElement(wt, {
                           familyGroupID: a,
                           steamID: e.steamid(),
                         }),
@@ -4723,7 +4725,7 @@
           )
         );
       }
-      function Dt(e) {
+      function Rt(e) {
         var t;
         const { familyGroupID: a, isAdult: l } = e,
           [r, s] = (0, n.useState)(!1),
@@ -4806,7 +4808,7 @@
                 ),
             );
       }
-      function Rt(e) {
+      function wt(e) {
         const { familyGroupID: t, steamID: a } = e,
           l = (0, p.MP)(t, a),
           { setErrorMessage: i } = (0, p.cL)();
@@ -4854,7 +4856,7 @@
           ),
         );
       }
-      function wt(e) {
+      function Bt(e) {
         return n.createElement("p", null, "FAQ here");
       }
     },

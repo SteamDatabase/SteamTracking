@@ -1383,8 +1383,6 @@ body.profile_edit_page .DialogHeader {
   margin: 0px 5px 0px 5px;
 }
 body.profile_edit_page .DialogBodyText {
-  display: flex;
-  justify-content: flex-start;
   margin-left: 5px;
   margin-bottom: 15px;
   padding-bottom: 5px;

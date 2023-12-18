@@ -3346,6 +3346,7 @@ div.early_access_header .devnotes > .devs_say {
 	text-transform: uppercase;
 	font-style: normal;
 }
+
 div.early_access_header .devnotes > div {
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: normal; /* normal */
@@ -3356,6 +3357,16 @@ div.early_access_header .devnotes > div {
 	line-height: 21px;
 	max-height: 113px;
 	overflow: hidden;
+}
+
+/* Skipping italics for certain languages since it is either unnecessary or degrades legibility */
+:lang(zh-cn) div.early_access_header .devnotes > div,
+:lang(zh-tw) div.early_access_header .devnotes > div,
+:lang(ko) div.early_access_header .devnotes > div,
+:lang(pt-br) div.early_access_header .devnotes > div,
+:lang(sv) div.early_access_header .devnotes > div,
+:lang(ro) div.early_access_header .devnotes > div {
+    font-style: normal;
 }
 
 div.early_access_header .devnotes > div i, div.early_access_header .devnotes > div p i {

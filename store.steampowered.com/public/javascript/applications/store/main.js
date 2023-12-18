@@ -4054,7 +4054,7 @@
               return yield D(t, e, n);
             }),
           onSuccess: (t, i) => {
-            n.setQueryData(h(e), { settings: i, mapApps: p(i) });
+            n.setQueryData(h(e), { settings: i, mapAppsAllowed: p(i) });
           },
         });
       }

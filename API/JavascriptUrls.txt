@@ -1689,6 +1689,7 @@ ${g_szStoreGfxUrl}apps/${appid}/${}
 ${g_szStoreGfxUrl}apps/${legacy_appid}/${filename}
 ${getEventURL}&action=eventFeed&month=${newMonth}&year=${newYear}
 ${icon_drag_url}
+${image_url}${}
 ${image_url}_${}
 ${imgURL}${value}
 ${imgUrl}
@@ -3295,5 +3296,4 @@ url( ${IMG_URL}units/${name}.png )
 url( '${thumb_url}' )
 url(${avatar_full_url})
 url(${dataUrl})
-url(${preview_url})
 url(${url})

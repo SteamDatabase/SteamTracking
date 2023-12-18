@@ -4670,6 +4670,7 @@ enum EUserBadge
 	k_EUserBadgeSteamAwards2022Nominations = 63;
 	k_EUserBadgeReplay2022 = 64;
 	k_EUserBadgeSteamAwards2023Nominations = 65;
+	k_EUserBadgeYearInReview2023 = 66;
 }
 
 enum EUserConfigStoreNamespace

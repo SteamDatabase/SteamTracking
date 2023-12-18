@@ -1146,6 +1146,24 @@ background-color: transparent;
 	overflow: hidden;
 }
 
+.profile_customization_block.customize_replay {
+    display: flex;
+    align-items: center;
+    line-height: 17px;
+}
+
+.profile_customization_block label {
+    margin-right: 8px;
+    flex-shrink: 0;
+}
+
+.profile_customization_block .helper_text {
+    margin-left: 8px;
+    flex-grow: 1;
+    text-align: right;
+    line-height: 15px;
+}
+
 .profile_customization_block.replay_showcase_block {
 	padding: 0;
 	border-radius: 0;
@@ -1212,10 +1230,13 @@ background-color: transparent;
     display: none;
 }
 
+.customization_edit_instructions {
+    padding: 8px;
+}
 
 .customization_edit_instructions_text
 {
-    padding: 5px 10px;
+    padding: 0px 10px 5px 10px;
     line-height: 20px;
 }
 

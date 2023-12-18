@@ -1049,6 +1049,7 @@ a:hover {
   flex-direction: row;
   gap: 10px;
   align-items: center;
+  cursor: pointer;
   height: 40px;
   padding: 4px 0px;
   box-sizing: border-box;
