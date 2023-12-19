@@ -907,6 +907,7 @@ ${PARTNER_BASE_URL}admin/store/contenthub/ajaxgetstoretagsandcategories
 ${PARTNER_BASE_URL}admin/store/contenthub/ajaxpublishcontenthubcategorieskv
 ${PARTNER_BASE_URL}admin/store/contenthub/ajaxsavecontenthubcategorieskv
 ${PARTNER_BASE_URL}admin/store/contenthub/categories
+${PARTNER_BASE_URL}admin/store/dailydeal/${gid}
 ${PARTNER_BASE_URL}admin/store/dailydeal/${id}
 ${PARTNER_BASE_URL}admin/store/page/${}
 ${PARTNER_BASE_URL}admin/store/page/${}?activetab=tab_publish
@@ -1023,6 +1024,7 @@ ${PARTNER_BASE_URL}promotion/dailydeals/ajaxgetpartner
 ${PARTNER_BASE_URL}promotion/dailydeals/ajaxsearcharchives
 ${PARTNER_BASE_URL}promotion/dailydeals/ajaxsetblackout
 ${PARTNER_BASE_URL}promotion/dailydeals/dashboard
+${PARTNER_BASE_URL}promotion/discounts${}
 ${PARTNER_BASE_URL}promotion/discounts/ajaxgetalldiscountevents/${}
 ${PARTNER_BASE_URL}promotion/discounts/ajaxgetdiscounteventapplist
 ${PARTNER_BASE_URL}promotion/discounts/ajaxgetdiscounteventbyid

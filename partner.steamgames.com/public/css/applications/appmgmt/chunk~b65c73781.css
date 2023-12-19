@@ -5208,7 +5208,7 @@ html.responsive.touch
   text-align: center;
 }
 .dailydealcalendar_DealSection_jxKWo {
-  height: 187px;
+  height: 303px;
   background: #3a4254;
   margin-bottom: 4px;
   padding: 6px;
@@ -5228,10 +5228,10 @@ html.responsive.touch
   border: none;
 }
 .Partner .dailydealcalendar_DealSection_jxKWo {
-  height: 148px;
+  height: 264px;
 }
 .dailydealcalendar_DealSection_jxKWo .dailydealcalendar_Blocked_E1Gps {
-  height: 112px;
+  height: 228px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -5341,26 +5341,6 @@ ul li {
   width: 180px;
   grid-area: image;
 }
-.invitesdashboard_InvitedAppCtn_14klK
-  .invitesdashboard_InviteAdminButtons_L4pIQ {
-  grid-area: button;
-  display: flex;
-  flex-direction: row;
-}
-.invitesdashboard_InvitedAppCtn_14klK
-  .invitesdashboard_InviteAdminButtons_L4pIQ
-  button {
-  font-size: 12px;
-  line-height: 24px;
-  width: fit-content;
-  white-space: nowrap;
-  padding: 0 12px;
-}
-.invitesdashboard_InvitedAppCtn_14klK
-  .invitesdashboard_InviteAdminButtons_L4pIQ
-  button:first-child {
-  margin-right: 4px;
-}
 .invitesdashboard_InvitedAppCtn_14klK .invitesdashboard_InvitedAppInfo_2h8se {
   display: flex;
   flex-direction: column;
@@ -5368,8 +5348,31 @@ ul li {
   padding-left: 8px;
   justify-content: center;
 }
+.invitesdashboard_InviteAdminButtons_L4pIQ button {
+  font-size: 12px;
+  line-height: 24px;
+  width: fit-content;
+  white-space: nowrap;
+  padding: 5px 12px !important;
+}
 .invitesdashboard_InviteResult_677sG {
   padding-top: 10px;
+}
+.invitesdashboard_InviteNotAvailableContainer_3-W-u {
+  width: 100%;
+  text-align: center;
+  padding-top: 100px;
+  color: #ccc;
+}
+.invitesdashboard_InviteNotAvailableContainer_3-W-u
+  .invitesdashboard_ReturnToDashboard_DB8o7 {
+  padding-top: 10px;
+  font-size: 14px;
+}
+.invitesdashboard_InviteNotAvailableContainer_3-W-u
+  .invitesdashboard_WhyUnavailable_34Ock {
+  color: #67c1f5;
+  font-size: 22px;
 }
 .rbc-btn {
   color: inherit;
@@ -6155,7 +6158,7 @@ button.rbc-input::-moz-focus-inner {
   display: flex;
   flex-direction: row;
 }
-.dailydealsdashboard_UpcomingDeal_Container_jv6sg {
+.dailydealsdashboard_DailyDeal_Container_2CWQT {
   display: grid;
   grid-template-columns: 200px auto;
   grid-template-rows: auto;
@@ -6169,38 +6172,101 @@ button.rbc-input::-moz-focus-inner {
   font-weight: 400;
   color: #fff;
 }
-.dailydealsdashboard_UpcomingDeal_Container_jv6sg
+.dailydealsdashboard_DailyDeal_Container_2CWQT
   .dailydealsdashboard_AppName_YQi_M {
   color: #fff;
   font-size: 17px;
 }
-.dailydealsdashboard_UpcomingDeal_Container_jv6sg img {
+.dailydealsdashboard_DailyDeal_Container_2CWQT img {
   width: 180px;
   grid-area: image;
 }
-.dailydealsdashboard_UpcomingDeal_Container_jv6sg
-  .dailydealsdashboard_UpcomingDeal_Info_3GXZs {
-  display: flex;
-  flex-direction: column;
-  grid-area: info;
-  padding-left: 8px;
-  justify-content: center;
-}
-.dailydealsdashboard_PartnerDashboard_Upcoming_YXzF7 {
+.dailydealsdashboard_PartnerDashboard_ScheduledHeader_UmxF5 {
   padding-top: 20px;
   color: #fff;
   text-transform: uppercase;
 }
-.dailydealsdashboard_PartnerDashboard_Incomplete_2K4uu {
-  padding: 10px 0px;
+.dailydealsdashboard_PartnerDashboard_InvitationHeader_Cqoj5 {
   color: #fff;
   text-transform: uppercase;
 }
-.dailydealsdashboard_PartnerDashboard_Incomplete_2K4uu
+.dailydealsdashboard_PartnerDashboard_InvitationHeader_Cqoj5
   .dailydealsdashboard_PartnerDashboard_Incomplete_Description_39yxF {
   padding-left: 5px;
   color: orange;
   text-transform: none;
+}
+.dailydealsdashboard_PartnerDashboard_Invite_147XK {
+  margin: 5px 0px;
+}
+.dailydealsdashboard_PartnerDashboard_NoInvites_W2HsX {
+  font-size: 15px;
+}
+.dailydealsdashboard_Orange_235Vr {
+  color: orange;
+}
+.dailydealsdashboard_NoScheduledDealsContainer_2gv7s {
+  padding-top: 20px;
+}
+.dailydealsdashboard_PartnerDashboard_DailyDealStatusContainer_3VTwN {
+  display: flex;
+  flex-direction: row;
+}
+.dailydealsdashboard_PartnerDashboard_DailyDealStatusContainer_3VTwN
+  .dailydealsdashboard_Column_3GuhU {
+  display: flex;
+  flex-direction: column;
+  min-width: 40%;
+}
+.dailydealsdashboard_PartnerDashboard_DailyDealStatusContainer_3VTwN
+  .dailydealsdashboard_DailyDealCheckbox_1WzIi {
+  cursor: unset;
+}
+.dailydealsdashboard_PartnerDashboard_DailyDealStatusContainer_3VTwN
+  .dailydealsdashboard_DailyDealTitle_yYzcp {
+  margin-bottom: 8px;
+  padding: 4px;
+}
+.dailydealsdashboard_PartnerDashboard_DailyDealStatusContainer_3VTwN
+  .dailydealsdashboard_DailyDealButton_1MMGd {
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  justify-content: center;
+  padding: 0px 20px;
+  margin-left: 40px;
+  color: #fff;
+  background: linear-gradient(90deg, #3a9bed 0%, #235ecf 100%);
+  text-decoration: none;
+}
+.dailydealsdashboard_PartnerDashboard_DailyDealStatusContainer_3VTwN
+  .dailydealsdashboard_DailyDealButton_1MMGd:hover {
+  background: linear-gradient(90deg, #3a9bed 0%, #235ecf 100%);
+}
+.dailydealsdashboard_PartnerDashboard_DailyDealStatusContainer_3VTwN
+  .dailydealsdashboard_DiscountButtonRow_2Qkeo {
+  display: inline-block;
+}
+.dailydealsdashboard_PartnerDashboard_DailyDealStatusContainer_3VTwN
+  .dailydealsdashboard_DiscountButtonRow_2Qkeo
+  .dailydealsdashboard_DiscountPercentage_3yMTP {
+  background-color: green;
+  display: inline-block;
+}
+.dailydealsdashboard_PartnerDashboard_DailyDealStatusContainer_3VTwN
+  .dailydealsdashboard_DiscountButtonRow_2Qkeo
+  .dailydealsdashboard_EditDiscounts_1uVhk {
+  background: gray;
+  display: inline-block;
+  margin-left: 10px;
+}
+.dailydealsdashboard_PartnerDashboard_DailyDealStatusContainer_3VTwN
+  .dailydealsdashboard_Completed_3h1p3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 19px;
+  color: #b8bcbf;
 }
 .marketingmessagecreatedialog_DateCtn_1mrqJ {
   min-height: 200px;

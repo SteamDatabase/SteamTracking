@@ -33584,7 +33584,7 @@
             )
           : o.createElement(p.V, { string: "Loading User Info" });
       }
-      var E = n(3494);
+      var E = n(6733);
       const v = {
         SaleDashboardView: () => "/(dashboard)?/",
         SaleMigrationTool: () => "/migration/",

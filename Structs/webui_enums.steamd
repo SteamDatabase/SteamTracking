@@ -7853,6 +7853,18 @@ enum UnnamedEnumf711bb3dceab35ce
 	Error = 3;
 }
 
+enum UnnamedEnumf8b1e6b24c299dc7
+{
+	Unknown = 0;
+	InviteActive = 1;
+	InviteExpired = 2;
+	InviteAccepted = 3;
+	DealReady = 4;
+	DealLive = 5;
+	DealCompleted = 6;
+	DealFailed = 7;
+}
+
 enum UnnamedEnumf8c8b38ac1dd39c3
 {
 	Default = 0;
