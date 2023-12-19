@@ -3111,6 +3111,7 @@ steam://url/StoreAccount
 steam://url/StoreAddFundsPage
 steam://url/StoreCart
 url( ${CDN_URL}apps/dota2/images/leagues/${league_id}/images/image_8.png
+url( ${CDN_URL}apps/dota2/images/leagues/${}/images/image_8.png )
 url( ${CDN_URL}apps/dota2/images/leagues/${}/images/image_8.png ), linear-gradient( to right, ${} 49%, ${} 51% )
 url( ${CDN_URL}apps/dota2/players/${}.png )
 url( ${CDN_URL}apps/dota2/teamlogos/${}.png )
@@ -3199,6 +3200,7 @@ url( ${IMG_URL}dpc/dpc_about_seasons.jpg )
 url( ${IMG_URL}dpc/dpc_about_tournaments.jpg )
 url( ${IMG_URL}dpc/dpc_about_tours.jpg )
 url( ${IMG_URL}dpc/dpc_flowchart.png )
+url( ${IMG_URL}dpc/headers/dpc_header_event_${}.jpg )
 url( ${IMG_URL}dpc/headers/dpc_header_event_${}.jpg ), linear-gradient( to right, ${} 49%, ${} 51% )
 url( ${IMG_URL}dpc/light_gray_bg.jpg )
 url( ${IMG_URL}dpc/top_block.jpg )

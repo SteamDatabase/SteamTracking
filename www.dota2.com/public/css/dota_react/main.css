@@ -29519,6 +29519,38 @@ a {
 .dpcmenubar_DPCMenuBar_1SBIP
   .dpcmenubar_DPCHeaderContents_XzLjB
   .dpcmenubar_DPCOptions_1jMa2
+  .dpcmenubar_SelectButton_3dQt6 {
+  padding: 6px 10px;
+  background-color: #292f47;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: #ccc;
+  letter-spacing: 1px;
+  margin-right: 80px;
+  margin-left: -80px;
+  cursor: pointer;
+  user-select: none;
+  transition-property: background-color, color;
+  transition-duration: 0.1s;
+  transition-timing-function: ease-in-out;
+}
+.dpcmenubar_DPCMenuBar_1SBIP
+  .dpcmenubar_DPCHeaderContents_XzLjB
+  .dpcmenubar_DPCOptions_1jMa2
+  .dpcmenubar_SelectButton_3dQt6:hover {
+  background-color: #373f5f;
+  color: #fff;
+}
+.dpcmenubar_DPCMenuBar_1SBIP
+  .dpcmenubar_DPCHeaderContents_XzLjB
+  .dpcmenubar_DPCOptions_1jMa2
   .dpcmenubar_DPCLink_2GNzc {
   height: 100%;
   display: flex;
@@ -29657,6 +29689,74 @@ a {
   padding: 3px;
   background-color: #3f464f;
   color: #6b7785;
+}
+.dpcmenubar_SelectLeagueModalPopup_14PR0 {
+  width: 80vw;
+  height: 80vh;
+}
+.dpcmenubar_SelectLeagueModalPopup_14PR0 .DialogContent_InnerWidth {
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+.dpcmenubar_SelectLeagueModalPopup_14PR0
+  .DialogContent_InnerWidth
+  .dpcmenubar_EventEntry_1oQoo {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  padding: 8px 8px 10px 8px;
+  border: 1px solid #000;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5333333333);
+  background: linear-gradient(225deg, #1d1d1d, #222);
+  cursor: pointer;
+  user-select: none;
+}
+.dpcmenubar_SelectLeagueModalPopup_14PR0
+  .DialogContent_InnerWidth
+  .dpcmenubar_EventEntry_1oQoo:hover {
+  background: linear-gradient(225deg, #222, #2d2d2d);
+}
+.dpcmenubar_SelectLeagueModalPopup_14PR0
+  .DialogContent_InnerWidth
+  .dpcmenubar_EventEntry_1oQoo:hover
+  .dpcmenubar_Name_36A9F {
+  color: #fff;
+}
+.dpcmenubar_SelectLeagueModalPopup_14PR0
+  .DialogContent_InnerWidth
+  .dpcmenubar_EventEntry_1oQoo
+  .dpcmenubar_Logo_1JGuW {
+  width: 100%;
+  height: 40px;
+  margin-bottom: 6px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.dpcmenubar_SelectLeagueModalPopup_14PR0
+  .DialogContent_InnerWidth
+  .dpcmenubar_EventEntry_1oQoo
+  .dpcmenubar_Name_36A9F {
+  font-size: 17px;
+  letter-spacing: 1px;
+  color: #ccc;
+  text-shadow: 0px 0px 2px #000;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.dpcmenubar_SelectLeagueModalPopup_14PR0
+  .DialogContent_InnerWidth
+  .dpcmenubar_EventEntry_1oQoo
+  .dpcmenubar_Dates_2HyIs {
+  font-size: 13px;
+  color: #aaa;
 }
 * {
   box-sizing: border-box;
@@ -66684,4 +66784,1733 @@ a {
   .shortfilmcontest_CloseButton_3kkJq:hover {
   filter: brightness(1);
   transform: scale(1.04);
+}
+button.DialogButton {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  border: 0;
+  font: inherit;
+  overflow: visible;
+  padding: 0;
+  margin: 2px 0;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  display: block;
+  line-height: 32px;
+  color: #dfe3e6;
+  font-size: 14px;
+  text-align: center;
+  border-radius: 2px;
+  cursor: pointer;
+  width: 100%;
+  transition-property: opacity, background, color, box-shadow;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-out;
+  background: #3d4450;
+  background-position: 99% 1%;
+  background-size: 300% 300%;
+  position: relative;
+}
+input.DialogInput::-moz-focus-inner,
+button.DialogButton::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+.DialogInputPlaceholder::placeholder,
+.DialogInputPlaceholder::-webkit-input-placeholder {
+  color: #969696;
+  font-style: italic;
+}
+.DialogInputPlaceholder::-ms-input-placeholder,
+.DialogInputPlaceholder:-ms-input-placeholder {
+  color: #969696;
+  font-style: italic;
+}
+.PopupFullWindow {
+  height: 100%;
+}
+.FullModalOverlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1500;
+}
+.FullModalOverlay.NotReadyToRender {
+  background: #000;
+}
+.FullModalOverlay .ModalPosition_Content {
+  height: initial;
+  width: initial;
+  max-width: 88vw;
+  max-height: 90vh;
+}
+@media screen and (max-height: 640px) {
+  .FullModalOverlay .ModalPosition_Content {
+    max-height: 95vh;
+  }
+}
+.ModalOverlayContent {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.ModalOverlayContent.inactive {
+  z-index: 5;
+}
+.ModalOverlayContent.active {
+  z-index: 10;
+}
+.ModalOverlayBackground {
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 7;
+}
+.ModalOverlayBackground.NotificationBrowserWarning {
+  background: rgba(0, 0, 0, 0.9);
+}
+.DialogBody {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow: auto;
+  -webkit-app-region: no-drag;
+}
+.DialogBody a {
+  color: #6dcff6;
+  text-decoration: none;
+}
+.DialogBody a:hover {
+  color: #b0e9ff;
+}
+.ModalDialogPopup .DialogContentTransition .DialogBody {
+  overflow-y: scroll;
+}
+.DialogInnerBody {
+  flex: 1;
+  overflow: auto;
+  padding-right: 2px;
+  padding-bottom: 16px;
+}
+.ModalDialogPopup .ModalDialogBody {
+  margin: 0px;
+}
+.ModalDialogPopup .ModalDialogBody .title-area {
+  height: 80px;
+}
+.ModalDialogPopup .DialogInnerBody {
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.ModalPosition {
+  display: flex;
+  align-content: center;
+  height: 100%;
+  flex-direction: column;
+}
+.ModalPosition:focus {
+  outline: none;
+}
+.ModalPosition.Hidden .ModalPosition_Content {
+  visibility: hidden;
+}
+.ModalDialogPopup .ModalPosition_Dismiss {
+  display: none;
+}
+.ModalDialogPopup .FullModalOverlay .ModalPosition_Dismiss {
+  display: block;
+}
+.DeckVerifiedModalDialogClient .ModalPosition_Content {
+  width: 640px;
+  font-weight: 400;
+}
+.DeckVerifiedModalDialogClient .DialogContent,
+.DeckVerifiedModalDialog .DialogContent {
+  padding: calc(1.4vw + 12px) 2.8vw;
+  background: #0e141b !important;
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  border: 2px solid #23262e;
+}
+.DeckVerifiedModalDialog .DialogContent {
+  max-height: 85vh;
+}
+.DeckVerifiedModalDialogClient .ModalPosition_TopBar,
+.DeckVerifiedModalDialog .ModalPosition_TopBar {
+  display: none;
+}
+.DeckVerifiedModalDialogClient .ModalPosition_Dismiss .closeButton,
+.DeckVerifiedModalDialog .ModalPosition_Dismiss .closeButton {
+  width: 20px;
+  height: 20px;
+}
+.ModalPosition_Dismiss .closeButton {
+  width: 14px;
+  height: 14px;
+  padding: 4px;
+  background-size: cover;
+  cursor: pointer;
+  background-image: none;
+  border-radius: 4px;
+}
+.ModalPosition_Dismiss .closeButton .SVGIcon_X_Line line {
+  stroke: #788a92;
+  stroke-width: 24px;
+}
+.ModalPosition_Dismiss .closeButton:hover .SVGIcon_X_Line line {
+  stroke: #fff;
+}
+.ModalPosition_Dismiss .closeButton:hover {
+  opacity: 1;
+}
+.ModalPosition_Content {
+  box-shadow: 0px 8px 38px 5px rgba(0, 0, 0, 0.75);
+  margin: auto;
+  font-weight: 300;
+  color: #969696;
+  font-size: 16px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.ModalPosition_Content > * {
+  min-height: 0;
+  min-width: 0;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+div.ModalPosition_Dismiss {
+  min-width: initial;
+  min-height: initial;
+  flex-grow: initial;
+  flex-shrink: initial;
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  z-index: 1;
+}
+div.ModalPosition_TopBar {
+  min-height: 1px;
+  min-width: initial;
+  flex-grow: initial;
+  flex-shrink: initial;
+  background: linear-gradient(to right, #00ccff, #3366ff);
+}
+.Destructive .ModalPosition_TopBar {
+  background: linear-gradient(to right, #c44848, #c44848);
+}
+.ModalDialogPopup .DesktopUI .ModalPosition_TopBar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+.ModalDialogPopup .DesktopUI:not(.WindowFocus) .ModalPosition_TopBar {
+  opacity: 0;
+}
+.DialogContent,
+.DialogContentTransition {
+  background: radial-gradient(
+      circle at top left,
+      rgba(74, 81, 92, 0.4) 0%,
+      rgba(75, 81, 92, 0) 60%
+    ),
+    #25282e;
+  user-select: none;
+}
+.DialogContent .DialogControlsSection:not(:first-child),
+.DialogContent .DialogControlsSectionHeader:not(:first-child),
+.DialogContent .DialogHeader:not(:first-child),
+.DialogContent .DialogSubHeader:not(:first-child) {
+  margin-top: 24px;
+}
+.DialogContentTransition {
+  display: flex;
+  width: 664px;
+  max-width: calc(100% - 64px);
+  flex: 3.3;
+  position: relative;
+}
+.ModalDialogPopup .DialogContentTransition {
+  display: block;
+}
+.ModalDialogPopup .DialogContentTransition > .DialogContent {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.DialogContent {
+  padding: 24px;
+  display: flex;
+  overflow: visible;
+  position: relative;
+}
+.DialogContent.NoContentPadding {
+  padding: 0;
+}
+.DialogToggle_Label {
+  user-select: none;
+  display: flex;
+  flex-direction: row;
+}
+.DialogToggle_Label span {
+  display: flex;
+}
+.contextMenuItem .DialogToggle_Label {
+  white-space: nowrap;
+}
+._DialogNote {
+  font-size: 12px;
+  text-transform: uppercase;
+}
+._DialogCenterVertically {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.DialogContent_InnerWidth {
+  max-width: 600px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+.DialogContent.DialogContentFullSize {
+  width: max-content;
+}
+.DialogContentFullSize .DialogContent_InnerWidth {
+  max-width: none;
+}
+.ModalDialogPopup .DialogContent {
+  overflow: visible;
+}
+.ModalDialogPopup .DialogContent_InnerWidth {
+  max-width: none;
+}
+.DialogContent_InnerWidth > form {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  flex: 1;
+}
+.ModalDialogPopup .PopupFullWindow > .ModalPosition,
+.ModalDialogPopup .PopupFullWindow > .ModalPosition > .ModalPosition_Content {
+  max-width: none;
+  max-height: none;
+  width: 100%;
+  height: 100%;
+}
+.DialogHeader {
+  font-weight: 300;
+  font-size: 32px;
+  line-height: 36px;
+  letter-spacing: 2px;
+  color: #fff;
+  text-transform: uppercase;
+  flex-shrink: 0;
+  user-select: none;
+  margin-right: 26px;
+  margin-bottom: 12px;
+}
+.DesktopUI .DialogHeader,
+.friendsui-container .DialogHeader {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: unset;
+  text-transform: unset;
+  margin-bottom: 4px;
+  line-height: 28px;
+}
+.DialogSubHeader {
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: 2px;
+  color: #fff;
+  text-transform: uppercase;
+  flex-shrink: 0;
+  user-select: none;
+  margin-right: 26px;
+}
+.DialogContent_InnerWidth .DialogBody .DialogHeader {
+  margin-right: 0px;
+}
+.DialogHeaderSubtitle {
+  color: #6e7985;
+  font-size: 22px;
+  letter-spacing: 1px;
+  text-transform: none;
+}
+.DialogHighlight {
+  color: #4297f8;
+}
+.DialogFooter {
+  margin-top: auto;
+  padding-top: 16px;
+  flex-shrink: 0;
+}
+.DesktopUI .DialogFooter {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.DesktopUI .DialogFooter button.DialogButton {
+  padding: 0 12px;
+  width: auto;
+}
+.DialogBodyText {
+  color: #969696;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 300;
+  margin-bottom: 32px;
+  user-select: none;
+}
+.DialogBodyText p {
+  user-select: text;
+}
+.DialogBodyText p a {
+  color: #969696;
+  text-decoration: underline;
+}
+.DialogBodyText p a:hover {
+  color: #fff;
+}
+.DesktopUI .DialogBodyText {
+  line-height: 22px;
+}
+.DialogLabel {
+  cursor: default;
+}
+.DialogLabel,
+.DialogLabelStrong {
+  font-weight: 300;
+  color: #969696;
+  text-transform: uppercase;
+  line-height: 19px;
+  font-size: 13px;
+  margin-bottom: 4px;
+  user-select: none;
+  letter-spacing: initial;
+}
+.DialogLabelStrong .DialogLabel,
+.DialogLabel.DialogLabelStrong {
+  text-transform: none;
+  color: #dedede;
+}
+.disabled .DialogLabelStrong .DialogLabel,
+.disabled .DialogLabel.DialogLabelStrong {
+  color: #424853;
+}
+.DialogHBar {
+  flex: 1;
+  min-height: 1px;
+  max-height: 1px;
+  background: linear-gradient(
+    to right,
+    rgb(57, 62, 71) 0%,
+    rgb(64, 70, 79) 20%,
+    rgb(57, 62, 71) 100%
+  );
+  margin-bottom: 16px;
+}
+.OrSeparator .DialogHBar {
+  margin: 0;
+}
+._DialogRow {
+  display: flex;
+  flex-direction: row;
+  padding: 4px;
+  padding-left: 12px;
+  margin-bottom: 6px;
+  justify-content: space-between;
+  flex-shrink: 0;
+}
+._DialogRow._DialogRowBackground {
+  background: linear-gradient(to right, #383d45, #383d45);
+}
+._DialogRow ._DialogRowAction {
+  flex: 1;
+}
+._DialogRow ._DialogRowSecondaryLabel,
+._DialogRow ._DialogRowLabel {
+  flex: 1.5;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 14px;
+  align-self: center;
+  display: flex;
+  flex-direction: row;
+}
+._DialogRow ._DialogRowSecondaryLabel {
+  display: block;
+  flex: 1;
+  line-height: 32px;
+  text-align: center;
+  margin: 2px 0;
+}
+._DialogRow ._DialogRowLabel .SVGIcon_Button {
+  width: 24px;
+  height: 24px;
+}
+.disabledNotice {
+  color: rgba(184, 156, 80, 0.75);
+  margin-left: 4px;
+}
+.DialogLabelExplainer {
+  text-transform: none;
+  text-align: center;
+  font-weight: 300;
+  color: #7e7e7e;
+  font-size: 13px;
+  margin-top: 4px;
+}
+.DialogInput {
+  border: 1px solid #fff;
+  display: block;
+  line-height: 22px;
+  padding: 10px;
+}
+.DialogLabelExplainer.Left {
+  text-align: left;
+}
+.DialogInputRequirementLabel {
+  color: #c15755;
+  margin-left: 15px;
+}
+.DialogRequirementLabel {
+  color: #c15755;
+  font-weight: 500;
+  font-size: 14px;
+}
+.DialogInputLabelGroup {
+  margin-bottom: 22px;
+}
+._DialogSection {
+  margin-bottom: 26px;
+}
+.DialogTextInputBase,
+._DialogInputContainer {
+  background: rgba(59, 63, 72, 0.5);
+  color: #dfe3e6;
+  font-size: 14px;
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  margin: 0;
+  border: none;
+  border-radius: 3px;
+  box-shadow: inset 0px 0px 0px rgba(0, 0, 0, 0);
+}
+.DialogTextInputBase:focus,
+.DialogTextInputBase:focus-within {
+  background: rgba(67, 73, 83, 0.6);
+  box-shadow: inset 1px 1px 8px rgba(0, 0, 0, 0.6666666667);
+  padding-left: 11px;
+}
+.DialogTextInputBase:not(:disabled):hover {
+  background: rgba(67, 73, 83, 0.6);
+}
+.DesktopUI .DialogTextInputBase:focus,
+.DialogTextInputBase:focus-within {
+  background: #23262e;
+  box-shadow: inset 1px 1px 4px rgba(0, 0, 0, 0.6666666667);
+  padding-left: 11px;
+}
+.DialogTextInputBase:disabled:hover {
+  background: rgba(67, 73, 83, 0.3);
+}
+._DialogInputContainer {
+  padding: 12px;
+  line-height: 18px;
+  margin-bottom: 22px;
+}
+._DialogInputContainer:focus {
+  outline: none;
+}
+.DialogToggleField._DialogInputContainer {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px;
+  padding-left: 12px;
+}
+.DialogToggleField.Disabled .DialogToggle_Label {
+  color: #555;
+}
+.DialogDropDown._DialogInputContainer.Active {
+  outline: none;
+}
+.DialogTextInputBase.inviteURLLink {
+  padding: 0 12px;
+  background: #30353b;
+  margin-right: 4px;
+  flex-grow: 4;
+  box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.4);
+  border: 0.5px solid rgba(139, 153, 170, 0.4);
+  border-style: inset;
+}
+.DialogTextInputBase:disabled,
+.DialogTextInputBase:read-only {
+  color: rgba(136, 136, 136, 0.7);
+}
+.InviteLinksTable .DialogInput {
+  padding: 5px;
+  margin: 5px;
+  margin-right: 30px;
+}
+.DialogInput_Wrapper {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: center;
+}
+.DialogInput_Wrapper > input.DialogInput {
+  flex: 1;
+}
+.DialogInput_Wrapper > input.DialogInput:focus {
+  outline: none;
+}
+button.DialogButton:focus {
+  outline: none;
+}
+button.DialogButton.DialogInput_CopyAction {
+  width: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.DialogInput_ClearAction {
+  position: absolute;
+  right: 12px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.DialogInput_ClearAction svg {
+  width: 18px;
+  height: 18px;
+}
+.DialogInput_ClearAction .SVGIcon_X_Line line {
+  stroke-width: 22px;
+  stroke: #aaa;
+}
+.DialogInput_ClearAction:hover .SVGIcon_X_Line line {
+  stroke: #fff;
+}
+button.DialogButton::before {
+  pointer-events: none;
+  user-select: none;
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transition: opacity 200ms ease-in-out;
+}
+button.DialogButton:disabled:hover::before,
+button.DialogButton:disabled::before,
+button.DialogButton.Disabled:hover::before,
+button.DialogButton.Disabled::before {
+  opacity: 0;
+}
+button.DialogButton:hover::before {
+  opacity: 1;
+}
+button.DialogButton:active::before {
+  opacity: 0;
+}
+button.DialogButton.DialogButtonTall {
+  height: 44px;
+}
+.VoiceSettings .advancedSettingsButton {
+  margin-bottom: 0px;
+  margin-top: 16px;
+}
+.VoiceSettings .advancedSettings {
+  margin-bottom: 16px;
+}
+.DialogBody.VoiceSettings ._FixedHeight {
+  padding-bottom: 16px;
+}
+button.DialogButton.Primary {
+  background: rgba(0, 0, 0, 0);
+  background: linear-gradient(to right, #47bfff 0%, #1a44c2 60%);
+  background-position: 25%;
+  background-size: 330% 100%;
+}
+button.DialogButton.GreenPlay {
+  background: linear-gradient(
+    to right,
+    rgb(138, 195, 41) 0%,
+    rgb(74, 122, 22) 60%
+  );
+  background-position: 25%;
+  background-size: 330% 100%;
+}
+button.DialogButton.GreenPlay:hover,
+button.DialogButton.GreenPlay.gpfocus {
+  background: linear-gradient(
+    to right,
+    rgb(138, 195, 41) 0%,
+    rgb(74, 122, 22) 60%
+  );
+  background-position: 0%;
+  background-size: 330% 100%;
+  color: #fff;
+}
+button.DialogButton.GreenPlay:active,
+button.DialogButton.GreenPlay:active:hover,
+button.DialogButton.GreenPlay:active.gpfocus {
+  background: linear-gradient(
+    to right,
+    rgb(138, 195, 41) 0%,
+    rgb(74, 122, 22) 60%
+  );
+  background-position: 40%;
+  transition-duration: 0.04s;
+}
+button.DialogButton.Secondary.Off {
+  box-shadow: inset 1px 1px 4px rgba(0, 0, 0, 0.2);
+}
+button.DialogButton:enabled:active,
+button.DialogButton:enabled:active:hover,
+button.DialogButton:enabled:active.gpfocus {
+  background: #393f49;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.6);
+  transition-duration: 0.04s;
+}
+button.DialogButton.Primary:hover,
+button.DialogButton.Primary.gpfocus {
+  background: linear-gradient(to right, #47bfff 0%, #1a44c2 60%);
+  background-position: 0%;
+  background-size: 330% 100%;
+  color: #fff;
+}
+button.DialogButton.Primary:enabled:active,
+button.DialogButton.Primary:enabled:hover:active,
+button.DialogButton.Primary:enabled:active.gpfocus {
+  background: linear-gradient(to right, #47bfff 0%, #1a44c2 60%);
+  background-position: 40%;
+  transition-duration: 0.04s;
+}
+button.DialogButton:hover,
+button.DialogButton.gpfocus {
+  background: #464d58;
+  color: #fff;
+}
+button.DialogButton:disabled,
+button.DialogButton:disabled:hover,
+button.DialogButton.Disabled,
+button.DialogButton.Disabled:hover {
+  background: rgba(61, 67, 77, 0.35);
+  color: #464d58;
+  box-shadow: none;
+  cursor: default;
+  pointer-events: none;
+}
+button.DialogButton.Small {
+  line-height: 22px;
+}
+button.TextButton {
+  background-color: rgba(0, 0, 0, 0);
+  border: 0px hidden rgba(0, 0, 0, 0);
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  padding: 0;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 100;
+  border-bottom: 1px dotted rgba(0, 0, 0, 0);
+}
+button.TextButton .SVGIcon_Button {
+  transition: opacity 0.2s ease-in-out;
+  margin-right: 2px;
+}
+button.TextButton:hover,
+button.TextButton.gpfocus {
+  color: #fff;
+}
+button.TextButton:focus,
+button.TextButton.gpfocus {
+  outline: none;
+}
+.DialogButton .SVGIcon_Button {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  margin-right: 2px;
+}
+.DialogButton:disabled .SVGIcon_Button,
+.DialogButton.Disabled .SVGIcon_Button {
+  opacity: 0.1;
+}
+.DialogToggleField_NewUIContainer {
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.DialogToggleField_Control {
+  float: right;
+  position: relative;
+  line-height: 30px;
+  overflow: hidden;
+  border-radius: 3px;
+  background: #3a3f48;
+  color: rgba(223, 227, 230, 0.5);
+  font-size: 14px;
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+  user-select: none;
+  align-self: flex-start;
+  flex-shrink: 0;
+  margin-left: 6px;
+}
+.DialogToggleField_OptionPanel {
+  display: flex;
+}
+.DialogToggleField_Option {
+  text-transform: uppercase;
+  width: 66px;
+  text-align: center;
+  cursor: pointer;
+  transition-property: color, background;
+  transition-duration: 250ms;
+}
+.DialogToggleField_Option:hover:not(.Active) {
+  background: #464d58;
+}
+.Disabled .DialogToggleField_Option:hover:not(.Active),
+.Disabled .DialogToggleField_Option.Active,
+.Disabled .DialogToggleField_Option {
+  background-color: rgba(0, 0, 0, 0);
+  color: #555;
+  cursor: default;
+}
+.Disabled .DialogToggleField_Option.Active {
+  color: #666;
+  background-color: #434953;
+}
+.DialogToggle_Description {
+  color: #999c9f;
+  line-height: 19px;
+  font-size: 13px;
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  padding-top: 8px;
+}
+.DialogToggleField_Option.Active {
+  color: #dfe3e6;
+  background: #2d73ff;
+}
+.DialogToggleField_Option.Off.Active {
+  color: #dfe3e6;
+  background: #5f6875;
+}
+.DialogToggleField_Option:hover {
+  color: #fff;
+}
+.DialogMenuPosition {
+  position: absolute;
+  z-index: 1600;
+  overflow: auto;
+  -webkit-app-region: none;
+}
+.DialogMenuPosition:not(.visible) {
+  opacity: 0;
+  pointer-events: none;
+}
+.DialogDropDown {
+  cursor: pointer;
+  position: relative;
+}
+.DialogDropDown.Disabled {
+  cursor: initial;
+  opacity: 0.5;
+}
+.DialogDropDown:hover {
+  box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.16);
+}
+.DialogDropDown.Disabled:hover {
+  box-shadow: unset;
+}
+.DialogDropDown_CurrentDisplay:empty::before {
+  content: " ";
+}
+.DialogDropDown._DialogInputContainer {
+  margin-bottom: 0;
+  user-select: none;
+}
+.DialogDropDown_Arrow {
+  position: absolute;
+  width: 18px;
+  top: 14px;
+  right: 10px;
+}
+.DialogDropDown_Arrow .SVGIcon_DownArrowContextMenu {
+  fill: #189cff;
+}
+._DialogColLayout {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.DesktopUI ._DialogColLayout {
+  justify-content: flex-end;
+}
+._DialogColLayout > ._DialogLayout {
+  flex: 1;
+  box-sizing: border-box;
+}
+.DialogTwoColLayout > ._DialogLayout {
+  max-width: calc(50% - 14px);
+  min-width: 200px;
+}
+.DesktopUI .DialogTwoColLayout._DialogColLayout {
+  gap: 14px;
+}
+.DesktopUI .DialogTwoColLayout > ._DialogLayout {
+  max-width: unset;
+  flex: 1 0 auto;
+}
+.DialogThreeColLayout > ._DialogLayout,
+.DialogTwoThirdColLayout > ._DialogLayout:nth-child(2n + 1) {
+  max-width: calc(33.33% - 9px);
+  min-width: 133px;
+}
+.DesktopUI .DialogThreeColLayout._DialogColLayout {
+  gap: 9px;
+}
+.DialogTwoThirdColLayout > ._DialogLayout {
+  max-width: calc(66.66% - 18px);
+  min-width: 266px;
+}
+.DesktopUI .DialogTwoThirdColLayout._DialogColLayout {
+  gap: 18px;
+}
+.DialogLayout_NoMinWidth > ._DialogLayout,
+.DialogTwoThirdColLayout.DialogLayout_NoMinWidth > ._DialogLayout {
+  min-width: 0;
+}
+.DialogDraggable {
+  cursor: -webkit-grab;
+  cursor: grab;
+  user-select: none;
+}
+.DialogDraggable.DraggedOut {
+  display: none;
+}
+.DialogDraggable_DropGhost {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+  opacity: 0.75;
+}
+.DialogDraggable_DragGhost {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+  position: fixed;
+  opacity: 0.75;
+  z-index: 5000;
+}
+.DialogSlider_Container:focus {
+  outline: none;
+}
+.DialogSlider_Slider {
+  border: 4px solid #2a2d33;
+  border-radius: 10px;
+  position: relative;
+  height: 10px;
+  background: #202226;
+  cursor: pointer;
+  box-shadow: inset 0px 11px 8px -10px #131313;
+  user-select: none;
+}
+.DialogSlider_Value {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, #00ccff 0%, #2d73ff 80%);
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.DialogSlider_Grabber {
+  position: absolute;
+  top: -1px;
+  bottom: -3px;
+  margin-left: -6px;
+  width: 12px;
+  height: 12px;
+  background: linear-gradient(to bottom, #89e7ff 0%, #80aaff 80%);
+  border-radius: 50%;
+  box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+}
+.DialogProgressBar_ProgressBarContainer {
+  border: 4px solid #2a2d33;
+  border-radius: 10px;
+  position: relative;
+  height: 10px;
+  background: #202226;
+  cursor: pointer;
+  box-shadow: inset 0px 11px 8px -10px #131313;
+  user-select: none;
+  overflow: hidden;
+}
+.DialogProgressBar_Value {
+  height: 100%;
+  background: linear-gradient(to bottom, #00ccff 0%, #2d73ff 80%);
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  width: 0px;
+  transition: width 0.2s linear;
+}
+.DialogListBuilderInput_List {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+  line-height: 26px;
+}
+.DialogListBuilderInput_Input {
+  border: none;
+  background: rgba(0, 0, 0, 0);
+  color: #fff;
+  outline: none;
+}
+.DialogListBuilderInput_Input:focus {
+  outline: none;
+}
+.DialogSpanningTable {
+  width: 100%;
+  border-spacing: 0px 6px;
+  table-layout: fixed;
+}
+.DialogSpanningTable th {
+  font-weight: normal;
+  text-align: left;
+  font-size: 12px;
+  height: 20px;
+  text-transform: uppercase;
+}
+.DialogSpanningTable.BannedUsersTable tr.hoverRow,
+.DialogSpanningTable.InvitedUsersTable tr.hoverRow,
+.DialogSpanningTable.InviteLinksTable tbody tr {
+  background: linear-gradient(to right, #383d45, #383d45);
+}
+.DialogSpanningTable tr.hoverRow:hover {
+  background-color: #393d46;
+}
+.DialogSpanningTable td.friendCell {
+  padding-left: 4px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+.DialogSpanningTable td.dateCell {
+  text-align: left;
+  font-size: 14px;
+}
+.DialogSpanningTable td.buttonCell {
+  padding-left: 5px;
+  padding-right: 10px;
+}
+.BannedUsersTable th.friendColumn,
+.InvitedUsersTable th.friendColumn {
+  width: auto;
+}
+.BannedUsersTable th.dateColumn,
+.InvitedUsersTable th.dateColumn {
+  width: 175px;
+}
+.BannedUsersTable th.buttonColumn,
+.InvitedUsersTable th.buttonColumn {
+  width: 130px;
+}
+.InviteLinksTable .inviteCodeColumn {
+  width: auto;
+}
+.InviteLinksTable .dateColumn {
+  width: 175px;
+}
+.InviteLinksTable .buttonColumn {
+  width: 130px;
+}
+.DialogSpanningTable th.tableAlignRight,
+.DialogSpanningTable td.tableAlignRight {
+  text-align: right;
+}
+.DialogCheckbox_Container {
+  cursor: pointer;
+  padding: 4px;
+  margin-bottom: 8px;
+}
+.DialogCheckbox_Container .DialogCheckbox {
+  float: left;
+  margin-right: 8px;
+}
+.DialogCheckbox {
+  width: 22px;
+  height: 22px;
+  background-color: rgba(0, 0, 0, 0.2666666667);
+  padding: 0;
+  box-shadow: inset 1px 0.5px 3px rgba(1, 1, 1, 0.4);
+  cursor: pointer;
+  border-radius: 2px;
+}
+.DialogCheckbox .SVGIcon_DialogCheck {
+  opacity: 0;
+  transition: opacity 0.1s ease-in-out;
+  width: 18px;
+  height: 18px;
+  margin-top: 9%;
+  margin-left: 12%;
+}
+.DialogCheckbox .SVGIcon_DialogCheck path {
+  stroke-width: 40px;
+  stroke-dashoffset: -270;
+  transition-property: stroke-dashoffset;
+  transition-duration: 0.18s;
+  transition-timing-function: cubic-bezier(1, 0, 1, 0.65);
+  transition-delay: 0.3s;
+}
+.DialogCheckbox.Active .SVGIcon_DialogCheck path {
+  stroke-dashoffset: 90;
+  transition-timing-function: cubic-bezier(1, 0, 1, 0.65);
+  transition-delay: 0s;
+}
+.DialogCheckbox.Active .SVGIcon_DialogCheck {
+  opacity: 1;
+}
+.DialogCheckbox.Active .SVGIcon_DialogCheck #stop0 {
+  opacity: 1;
+}
+.DialogCheckbox.Disabled {
+  cursor: default;
+  opacity: 0.5;
+  filter: saturate(0.35);
+  box-shadow: none;
+}
+.DialogCheckbox_Container:hover .DialogCheckbox:not(.Disabled),
+.DialogCheckbox:hover:not(.Disabled),
+.DialogCheckbox_Container:focus .DialogCheckbox:not(.Disabled),
+.DialogCheckbox:focus:not(.Disabled) {
+  background-color: #1e1f23;
+}
+.DialogCheckbox_Container:focus,
+.DialogCheckbox:focus {
+  outline: none;
+}
+.DialogCheckbox .DialogCheck {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.DialogRoundCheckboxField {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+.DialogRoundCheckboxField_Control {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  margin: 0;
+  padding: 0;
+  background-color: #24262b;
+}
+.DialogRoundCheckboxField_OuterCircle {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  margin: 0;
+  padding: 0;
+  box-shadow: inset 0.5px 1px 3px rgba(1, 1, 1, 0.4);
+  display: flex;
+  justify-content: center;
+  transition: background-color 0.08s ease-in-out;
+}
+.DialogRoundCheckboxField_Container {
+  cursor: pointer;
+}
+.DialogRoundCheckboxField_Container:focus {
+  outline: none;
+}
+.DialogRoundCheckboxField_Container:hover
+  .DialogRoundCheckboxField_OuterCircle {
+  background-color: #1e1f23;
+}
+.DialogRoundCheckboxField_Container.WithLabel .DialogRoundCheckboxField {
+  float: left;
+  margin-right: 6px;
+}
+.DialogRoundCheckboxField_Container .DialogToggle_Label {
+  overflow: hidden;
+}
+.DialogRoundCheckboxField_Control .DialogRoundCheckboxField_InnerCircle {
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+  align-self: center;
+  box-shadow: 0px 0px 8px rgba(31, 141, 254, 0.5);
+  background: linear-gradient(to bottom, #00ccff 0%, #2d73ff 80%);
+  transform: scale(0);
+  opacity: 0;
+  transition-property: opacity, scale, box-shadow;
+  transition-duration: 0.1s;
+  transition-timing-function: ease-in-out;
+}
+.DialogRoundCheckboxField_Control.Active .DialogRoundCheckboxField_InnerCircle {
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+  transform: scale(1);
+  opacity: 1;
+}
+.copiedAnimation {
+  position: absolute;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  color: #1b98ff;
+  transition-property: transform, opacity;
+  transition-duration: 0s;
+  transition-timing-function: ease-out;
+  z-index: 0;
+  pointer-events: none;
+  user-select: none;
+}
+.copiedAnimation.animationComplete {
+  opacity: 0;
+  transition-duration: 1s;
+  transition-delay: 0.5s;
+}
+.copiedAnimation.animationPlaying {
+  opacity: 1;
+  transition-property: transform, opacity;
+  transition-duration: 0s, 0.6s;
+}
+._FixedHeight {
+  flex-shrink: 0;
+}
+._FillAvailableHeightAndScroll {
+  flex: 1;
+  min-height: 0;
+  overflow-y: scroll;
+}
+ul {
+  list-style-type: disc;
+  list-style-position: inside;
+}
+.title-area {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  min-height: 18px;
+  -webkit-app-region: drag;
+  z-index: 2;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+body.in_global_drag .title-area {
+  -webkit-app-region: no-drag;
+}
+.titleBarContainer {
+  position: relative;
+}
+.titleBarContainer .no-drag {
+  -webkit-app-region: no-drag;
+  z-index: 3;
+}
+.title-area .title-bar-actions {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  margin-right: 2px;
+  max-height: 24px;
+  -webkit-app-region: no-drag;
+  pointer-events: auto;
+}
+.singleWindowFocusBar {
+  width: 100%;
+  height: 24px;
+  background: linear-gradient(to right, #007896, #1f3d96);
+  -webkit-mask: linear-gradient(
+    to bottom,
+    rgb(0, 0, 0) 0px,
+    rgb(0, 0, 0) 1px,
+    rgba(0, 0, 0, 0.4) 1px,
+    rgba(0, 0, 0, 0.2) 8px,
+    rgba(0, 0, 0, 0) 100%
+  );
+  mask: linear-gradient(
+    to bottom,
+    rgb(0, 0, 0) 0px,
+    rgb(0, 0, 0) 1px,
+    rgba(0, 0, 0, 0.4) 1px,
+    rgba(0, 0, 0, 0.2) 8px,
+    rgba(0, 0, 0, 0) 100%
+  );
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  transition: opacity 0.18s ease-in-out;
+  pointer-events: none;
+  user-select: none;
+}
+.focused .singleWindowFocusBar {
+  opacity: 1;
+  z-index: 15;
+}
+.title-area-highlight {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 24px;
+  background: linear-gradient(to right, #007896, #1f3d96);
+  -webkit-mask: linear-gradient(
+    to bottom,
+    rgb(0, 0, 0) 0px,
+    rgb(0, 0, 0) 1px,
+    rgba(0, 0, 0, 0.4) 1px,
+    rgba(0, 0, 0, 0.2) 8px,
+    rgba(0, 0, 0, 0) 100%
+  );
+  mask: linear-gradient(
+    to bottom,
+    rgb(0, 0, 0) 0px,
+    rgb(0, 0, 0) 1px,
+    rgba(0, 0, 0, 0.4) 1px,
+    rgba(0, 0, 0, 0.2) 8px,
+    rgba(0, 0, 0, 0) 100%
+  );
+  opacity: 0;
+  transition: opacity 0.18s ease-in-out;
+  pointer-events: none;
+  user-select: none;
+}
+.focused:not(.singlewindow) .title-area-highlight {
+  opacity: 1;
+}
+.title-area-icon {
+  width: 24px;
+  height: 18px;
+  margin: auto 0px auto 0px;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-app-region: no-drag;
+}
+.title-area-icon .title-area-icon-inner {
+  width: 100%;
+  height: 100%;
+}
+.title-area-children {
+  text-align: right;
+  flex-grow: 1;
+}
+.title-area-icon .SVGIcon_Minimize {
+  width: 14px;
+  height: 14px;
+  margin-top: -2px;
+  margin-left: 4px;
+}
+.title-area-icon .SVGIcon_Maximize {
+  width: 14px;
+  height: 14px;
+  margin-top: -2px;
+  margin-left: 4px;
+}
+.title-area-icon .SVGIcon_X_Line {
+  width: 14px;
+  height: 14px;
+  margin-top: -2px;
+  margin-left: 4px;
+}
+.title-area-icon .SVGIcon_X_Line line {
+  stroke: #788a92;
+  stroke-width: 24px;
+}
+.title-area-icon:hover .SVGIcon_Button rect,
+.title-area-icon:hover .SVGIcon_Button line,
+.title-area-icon:hover .SVGIcon_Button polyline {
+  stroke: #fff;
+  transition: stroke 0.15s ease-out;
+}
+.ModalDialogPopup .maximizeRestoreButton {
+  display: none;
+}
+.window_resize_grip {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAQAAADZc7J/AAAACXBIWXMAAAsSAAALEgHS3X78AAAAR0lEQVRIx2P8z0AZYKJQPwMLyTqQncxIBReMGsDAwDjg6WAYGIAvKaMlWuyiA++FYWDAaFKmWlImKtFiFx14LwwDAwY+KQMAmkcKPwxTSEoAAAAASUVORK5CYII=);
+  background-size: 16px 16px;
+  background-position: 4px 4px;
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 24px;
+  opacity: 0.3;
+  position: fixed;
+  right: 0px;
+  bottom: 0px;
+  z-index: 1000;
+}
+.DialogBodyNotificationBar {
+  font-size: 12px;
+  letter-spacing: 0px;
+  color: #52b8e0;
+  line-height: 18px;
+  height: 18px;
+  display: flex;
+  margin-top: -2px;
+}
+.DialogBodyNotificationBar svg {
+  height: 13px;
+  width: 13px;
+  margin-left: 0px;
+  margin-right: 2px;
+  margin-top: 2px;
+}
+.DialogBodyNotificationBar .SVGIcon_Lock .topLock {
+  fill: #52b8e0;
+}
+.DialogBodyNotificationBar .SVGIcon_Lock .baseLock {
+  stroke: #52b8e0;
+}
+.GenericConfirmDialog .friend {
+  margin-top: 10px;
+}
+.GenericConfirmDialog .DialogButton {
+  min-width: 120px;
+}
+.displayColumn {
+  display: flex;
+  flex-direction: column;
+}
+.displayRow {
+  display: flex;
+  flex-direction: row;
+}
+.fullheight {
+  height: 100%;
+  top: 0px;
+  bottom: 0px;
+}
+.fullWidth {
+  width: 100%;
+}
+.alignItemsCenter {
+  align-items: center;
+}
+.alignSelfCenter {
+  align-self: center;
+}
+.tempText {
+  font-size: 10px;
+  color: #f50;
+  width: 400px;
+  align-self: center;
+}
+.allCaps {
+  text-transform: uppercase;
+}
+.flexShrinkNone {
+  flex-shrink: 0;
+}
+.throbber {
+  width: 60px;
+  height: 90px;
+  display: inline-block;
+}
+.throbber_small {
+  width: 36px;
+  height: 36px;
+}
+.throbber_medium {
+  width: 60px;
+  height: 60px;
+}
+.throbber_large {
+  width: 92px;
+  height: 92px;
+}
+.throbber_xlarge {
+  width: 120px;
+  height: 120px;
+}
+.throbber_fixed {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.throbber_absolute {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.throbber > div {
+  float: left;
+  width: 25%;
+  height: 100%;
+  background-color: #67c1f5;
+  animation: loading_throbber_bar 1s ease-in-out infinite;
+}
+.throbber > div:nth-child(1) {
+  transform: scaleX(1) scaleY(0.6);
+}
+.throbber > div:nth-child(2) {
+  margin-left: 12%;
+  transform: scaleX(1) scaleY(0.6);
+  animation-delay: 0.16s;
+}
+.throbber > div:nth-child(3) {
+  margin-left: 12%;
+  transform: scaleX(1) scaleY(0.6);
+  animation-delay: 0.32s;
+}
+.WaitingForInterFaceReadyContainer {
+  width: 100%;
+  height: 100%;
+  background-color: #1f2126;
+  display: flex;
+}
+.WaitingForInterFaceReadyThrobber {
+  margin: auto;
+  align-self: center;
+  width: fit-content;
+}
+.Throbber_Blur {
+  position: absolute;
+  filter: blur(12px);
+  transform: scale(1.25);
+}
+@keyframes loading_throbber_bar {
+  0% {
+    transform: scaleX(1) scaleY(0.6);
+  }
+  30% {
+    transform: scaleX(1) scaleY(1);
+  }
+  55% {
+    transform: scaleX(1) scaleY(0.6);
+  }
+  100% {
+    transform: scaleX(1) scaleY(0.6);
+  }
+}
+.innerwidth {
+  border: 3px dashed #f80;
+  flex: 1;
+  color: #fff;
+}
+.form {
+  border: 1px dotted aqua;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.A {
+  background-color: rgba(255, 0, 0, 0.4);
+  height: 40px;
+}
+.B {
+  background-color: rgba(0, 255, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+}
+.ScrollList {
+  border: 2px solid pink;
+  background-color: rgba(0, 0, 0, 0.6666666667);
+  margin: 16px 32px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 200px;
+  min-height: 40px;
+}
+.FixedHeight {
+  border: 2px outset red;
+  height: 60px;
+  margin: 4px 32px;
+  background-color: rgba(0, 0, 0, 0.6666666667);
+  margin-bottom: 16px;
+}
+.VariableHeight {
+  border: 2px inset blue;
+  height: 60px;
+  margin: 4px 32px;
+  background-color: rgba(0, 0, 0, 0.6666666667);
+}
+.C {
+  background-color: rgba(0, 0, 255, 0.4);
+  height: 40px;
+}
+.largeThrobber {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 18px;
+}
+.mediumThrobber {
+  width: 32px;
+  height: 32px;
+  margin-bottom: 24px;
+}
+.smallThrobber {
+  width: 16px;
+  height: 24px;
+}
+.whiteText {
+  color: #fff;
+}
+.textLink {
+  color: #fff;
+  text-decoration: underline;
+}
+.DesktopUI .title-area-icon,
+.friendsui-container .title-area-icon {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+.DesktopUI .title-area-icon-inner,
+.friendsui-container .title-area-icon-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: stroke 0.15s ease-out;
+}
+.DesktopUI .title-bar-actions,
+.friendsui-container .title-bar-actions {
+  max-height: 32px;
+  right: 0;
+  cursor: default;
+}
+.DesktopUI .title-area-icon .SVGIcon_Minimize,
+.DesktopUI .title-area-icon .SVGIcon_Maximize,
+.DesktopUI .title-area-icon .SVGIcon_X_Line,
+.DesktopUI .title-area-icon .SVGIcon_Restore,
+.friendsui-container .title-area-icon .SVGIcon_Minimize,
+.friendsui-container .title-area-icon .SVGIcon_Maximize,
+.friendsui-container .title-area-icon .SVGIcon_X_Line,
+.friendsui-container .title-area-icon .SVGIcon_Restore {
+  margin: 0px;
+  width: 16px;
+  height: 16px;
+}
+.DesktopUI .title-area-icon:hover,
+.friendsui-container .title-area-icon:hover {
+  background: #3d4450;
+  transition: background 0.15s ease-out;
+}
+.DesktopUI .title-area-icon.closeButton:hover,
+.friendsui-container .title-area-icon.closeButton:hover {
+  background: #e22a27;
+  transition: background 0.15s ease-out;
+}
+.DesktopUI .title-area-icon.minimizeButton svg,
+.friendsui-container .title-area-icon.minimizeButton svg {
+  transform: translateY(-4px);
+}
+.OSX .title-area-icon {
+  width: 20px;
+  height: 20px;
+}
+.OSX .title-bar-actions .title-area-icon-inner {
+  width: 16px;
+  height: 16px;
+  background-size: contain;
+}
+.OSX .title-bar-actions .minimizeButton {
+  order: 2;
+}
+.OSX .title-bar-actions .maximizeButton,
+.OSX .title-bar-actions .restoreButton {
+  order: 1;
+}
+.OSX .title-bar-actions .closeButton {
+  order: 3;
+}
+.OSX .title-bar-actions .minimizeButton .title-area-icon-inner {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAFBlWElmTU0AKgAAAAgAAgESAAMAAAABAAEAAIdpAAQAAAABAAAAJgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAAC+W0ztAAABWWlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iWE1QIENvcmUgNi4wLjAiPgogICA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPgogICAgICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIgogICAgICAgICAgICB4bWxuczp0aWZmPSJodHRwOi8vbnMuYWRvYmUuY29tL3RpZmYvMS4wLyI+CiAgICAgICAgIDx0aWZmOk9yaWVudGF0aW9uPjE8L3RpZmY6T3JpZW50YXRpb24+CiAgICAgIDwvcmRmOkRlc2NyaXB0aW9uPgogICA8L3JkZjpSREY+CjwveDp4bXBtZXRhPgoZXuEHAAADGUlEQVRYCe2WXW7TQBDHZ+MEQYvaEEIpRVAKbwjEARAXQDwgbsBHRE8AVDyjAicoSoEbIB4QF0AcAIF4g1IQpZQQ0oqWj8Q28x970u2unZYH6EM7knfXszO/+Xvj7Jpo27b6Cpi/WYC3U3QqKBbPcs7pODbHDMVV5MdkGsbEb3j4POx0nh4dpxfwb8Q2JOD9NJ2I49J1LnV+b3Xf7v6+fqJSiSgIkhphSNRu0/LKMn1tfPlOZB4b075z+Aq9Wk/EugLe1YPLDLw1cuDg/tLgIFGhgEfONtCiiNqLizT36eNnDrx5pBbezw5OvD0FzNaLN8rlPZMDlQrRzl2rhXsJABfUnz9oqdmkVuvbxGitczsp57e5AmbqwcVKufJgYGiIl5qXG4bCcVrdFaEkwwMdh21aWligZqt5aawWPhSG0/B6+jY7RccLZO7Kk7vFRYSfk4hjPwSqOM4FAywwM7J4LsuC0sTw8EhVlh3zUtQC4z5yLi3qxvJPJyxmAuWaJ+DDPTrJFS/sKJfTwpxiP5UUgC/nQgVbBI+FxcyEjYBV8wREQfEc/9X65G1HXF7x7hyqsdmCuvfpHP9zwARbYq3GE8Dvzxn5nytQg/Veem70ZZRi6b0d4+SBCba6tfcERLEZk01GIwCFKTy5y2/tOM1FNG9cwnYyPQGyveoO5wTLrf3k7nyvOWbq1m2neQLsyf8x9gTgYCHs7XmGjSbPes0xU9hOriegYOIZHCxd03roddydzBjYcXY8M4XtpHgC+L15hlNNitkABUvPjf20sv3Cl4pEr5b6wARb3dp7Agph5wkfqSs41cQEnoa7BbQwpr05+FIlzAIT7JTU7TwBh67SS8589LvVsqAMSllrCtlFdQy0jLlJfcJiZsLu1paBJ0C8YXtyfn6ugSNVzAbCgXtk2hd8MDeWGcJiZhKwts0UMDpOryOKr+E8Jz5SxWywFrNZMs8O+yfDccwMsMC0w3WcKQCTOL/xMYHznH7xSmiBAg9QBL19qU/jOAe5YOR9C6AOwnvapn6SqbJN/ShVEej/xWe5zd8eb80V+ANWT1ySLtqWLQAAAABJRU5ErkJggg==);
+}
+.OSX .title-bar-actions .maximizeButton .title-area-icon-inner,
+.OSX .title-bar-actions .restoreButton .title-area-icon-inner {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAFBlWElmTU0AKgAAAAgAAgESAAMAAAABAAEAAIdpAAQAAAABAAAAJgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAAC+W0ztAAABWWlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iWE1QIENvcmUgNi4wLjAiPgogICA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPgogICAgICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIgogICAgICAgICAgICB4bWxuczp0aWZmPSJodHRwOi8vbnMuYWRvYmUuY29tL3RpZmYvMS4wLyI+CiAgICAgICAgIDx0aWZmOk9yaWVudGF0aW9uPjE8L3RpZmY6T3JpZW50YXRpb24+CiAgICAgIDwvcmRmOkRlc2NyaXB0aW9uPgogICA8L3JkZjpSREY+CjwveDp4bXBtZXRhPgoZXuEHAAADZUlEQVRYCe1WTU9TQRS90/JogNZSKLTCyrgzGpcuDDtX2hjDguDS+AdcqcS1MboUt65tCCEuiH8A3Ws07oyRoFJ90JIApal9z3vuvFen06nVxI8F3DCdmTtzzzlz5zEzREd22DOgfisB5cmzpNRFjjlPgTrJdT6K9ykRvuP2CwrDZzT/5VXk71v9moBy4TQpukUhXRnPT6RHhkfI8zxKJpNC0Gq1qNls0t7+Hm35X3d57lOee5/mK2/6Kegv4EnhOoPcLU5NF0azWUokEsTg2uI6RuE6CAKq7ezQ5qePFZ50h65WHkeznZVegnOIneXC7Wwu93Bqajp9LJPhhTEDk4YhfowgtLlgXClFQ0NDlM5k0uy63CglG7S899yY3dHsLaBcvJYdzS1OTkxSajDlJu6A0iLgghBsEYS0guBCozSwTsu7L+3p6HM+HbZUPMUrejCWGyNvwOsmj1YsWTDbgOJ+nCHEAgNYBEyHuQWE4ULheDGPFZiAEi+E/BNYxdwWQwQwgMWqFhz8jgwsFc5QqGZzo7ne5EKAlf4oOhtwRDQypvsaS80SsC3rzkBIpfF8frj9tRuAmlGTWjgy5BIBH7CAye2SHecQoGbwf45A2UtEQESUYlS9TMaMuZgXfw8aU83YsQO2g8lO4AvuMhFkeG0l/O8Hg1tautsOEEzGbjuiRncG+HiVE+4nK7VB+vYZKzo146O7HeIS0B78Fw2XAB9nu87jH5LA2yGYRL6N2C1A0XtcLF3GINE26yF0zBIFyBwesk0wGdv2OwSEa7jVkAGc62KohExXNkjcb5NHc+EXDI7XmOFaPDeuHQJodcv393GryTZEGnSbO/iLfTGKEOEnasTj0tc3JDB5fNUIkWa3gLnKa1LhSrVWjcgYpQNQ92WRaEbFRR6vXmOFKwRsy7oFYIJS9yqfN/16vd5bRIKZzWKkHWJicmAAC5gWt3TdAuY23zLIze3qNjW/8QdpAEoU9/WKrRqDxlzEAgNYBEyH9X4P8P2NxwTuc5xi3qAnq+r8MDVhLEZxRlBwxdUP6uRv+bRTqy7w0+yRg1tcvQVgmF8yjUvJjVq1ei7peelUKiUEECGFmaUGMbaAiYMwoGqtRhvrHyqNg4Mb/CRb7EUOP5LZ3/7ro9SU9xee5Sb8UftwZuA7dH9yjtYGuqwAAAAASUVORK5CYII=);
+}
+.OSX .title-bar-actions .closeButton .title-area-icon-inner {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAFBlWElmTU0AKgAAAAgAAgESAAMAAAABAAEAAIdpAAQAAAABAAAAJgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAAC+W0ztAAABWWlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iWE1QIENvcmUgNi4wLjAiPgogICA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPgogICAgICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIgogICAgICAgICAgICB4bWxuczp0aWZmPSJodHRwOi8vbnMuYWRvYmUuY29tL3RpZmYvMS4wLyI+CiAgICAgICAgIDx0aWZmOk9yaWVudGF0aW9uPjE8L3RpZmY6T3JpZW50YXRpb24+CiAgICAgIDwvcmRmOkRlc2NyaXB0aW9uPgogICA8L3JkZjpSREY+CjwveDp4bXBtZXRhPgoZXuEHAAADPElEQVRYCe2Wz04UQRDGq2fZGFDisiyKRDDGmxEJFwkab56MB+MbqBefQCWeDerFi1f1DYwH4wsYJXgBxHgzRlAEWZY1KGiWnba+mq7ZmWlXMP7hIB26u7qr+lff9i7dTbRd/vcdML+yAe+ODQ7Uc/Z0QHQiJHPIWCphvTVUDsi+Dome5urm8f7nE1Ob5W5KwMzxo0dMGFzhRGdLpdKu1radRPk8US4X5anXiWo1Wlv9QuVy+TMLe2iD8GbfsxcvNxKyoYDZ4cGLobXXe3p69rYUdhMF/PltEyxoYUjr1U80Nze3EBhzrXds4m6TaJn+qYC3Q4NXO4qF0fZiB1FrayOxbaLAOBy6tTVaqSzTcqU6cmB84kYzEU0FzAwNnC8Ui/fa93QRtfB2o6QSZ0UkUCpkvUYrHxepWqlc6Bufuh9B0i3vp1/4kx8mE9yST+4l58QQgvypqgPMw+bCa4XBLGFGs6n2hwICY0e693WXZNsRrkBkdOxM9ggqPhega/irAwvMVGY38ATMDvf3WzLn8h0Fl0Mzcq+mCsFYqzolxgW6nQILTLCzIjwBIeXOlLo62+TXHkcz0DHFiO04wPk1MeYTQfyfAybYiRViegICSyfl/xzrdRtjFhuxnUUhHnMuQOPcLoAJdnZVS3YiNOagHDKxIybFbHGpOI3TXz7C+STihqv2bPLBJWw2k8XbATle9YRLRv6uzUw9upMoT0DS+S9sTwAuFsLZ/qcLM4Wd4XoCAmvf4GJpFD3huFcTTnznyaoLJEYDtWcnM4Wtca73BISGnuBWk2T6w4o5bMR2hoSh+FyAxolIvhqYCXZ2lScgoPqj8uLSKm61RmGaAmHEdiPCT54IYhaYYCdWiOkJ6B2bnjZkH9SWq1Ei3YVUYicCObSqKskrDfu45z+wwAR7QwEICK0Znf8wX8aVKqWZiDi7JkS02q5nBlhgRrB06+0A3Hx/vyIbXsZ9TnylSkmJYDj4qaoDzMPmgusYDGYJM5pNte5NlZqTwe33C5OXOju+BWF4akeeD0w8wZBR4ensEQA+qTz8yg+S8pJ7kEzeiQL81kn1HTqzpU8yFbGlj1IVgf5vPMuT/G37/9yB76xDW61IwmPKAAAAAElFTkSuQmCC);
+}
+.OSX .title-bar-actions:hover .minimizeButton .title-area-icon-inner {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAFBlWElmTU0AKgAAAAgAAgESAAMAAAABAAEAAIdpAAQAAAABAAAAJgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAAC+W0ztAAABWWlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iWE1QIENvcmUgNi4wLjAiPgogICA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPgogICAgICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIgogICAgICAgICAgICB4bWxuczp0aWZmPSJodHRwOi8vbnMuYWRvYmUuY29tL3RpZmYvMS4wLyI+CiAgICAgICAgIDx0aWZmOk9yaWVudGF0aW9uPjE8L3RpZmY6T3JpZW50YXRpb24+CiAgICAgIDwvcmRmOkRlc2NyaXB0aW9uPgogICA8L3JkZjpSREY+CjwveDp4bXBtZXRhPgoZXuEHAAADUUlEQVRYCe2W604TURDH53Rbo0Cg1opYo4iXL0bjAxhfwBBDfAMvRJ5AJX42qE8AwcsbGBOML2B8AKPxGyIaKSLWQgQv7Xad/5yd9rBnC2hi+ACT7LnNzG9mZ3fPWaId2e4VMH9TgHfjdDbIZi+wz7koMscNRUX4R2QWjYmmefgyrNefHxuhV1jfjGwqgQ8P6HQU5W5yqKF9xf1dnR2dRLkcURDYGGFIVKvRyuoKfV388p3IPDWmdu/INXqzURIbJvB+MrjKwDulg4cO5Hp6iDIZ3HK6gNZoUG1piebKnz6z4e2jw+HDdGO7um4Cs5PZW/n83rHuQoFo955W4PUSABfUnz9ouVKhavXbaP9w/a4N57dtE5iZDC4X8oVH3b29XGouNwSBozh6MgklGR7oOKzR8sICVaqVKwPD4WNhJBqupy+z43QqQ+a+3HkyuCTh+9jkeB0JanLsCwZYYKZ4sS5NgtxoX1+pKGWHXoI6YMwbiUuDJm350QmLmUAlxUvg4wSd4YiXduXzcWB2ce9KAmCtzYUIbhI8FhYzLRsGLfESaATZQf7UOuRth1274E0dorG4CTXnsY6/HDDBFlun8RLg9+e8fOcKVGOdS8+NvowSLJ67Ngk/MMHWZe29BBqRGZBNRi0AhSjcztq3rp36wpo3LmEnPLOJOWfJ26vucKycmpqmcpk3N7x0LjzpqHN8grj41kqlLhq8eMJqmKlbt5qi9yrgKjEOQ0T+NwlDtwTpDK8COFg4KlfBqoaGTlpPrQBm7vN3udiEIHEF7CRu+bwQ9prFlApkTDSDg6UpMVOgOm4qUwawUTvtYcZMYSdcvEfARXuBU80LqGDpudG7BVC2X6xhHF9Yh8RzMMG2i63WSyAT1p/xkbqKU03E3dsVjh6igWWMeXw157Ehs8AEGypXvAQOX6fXTHryu1ptAdsloQHdHnSZcxOvC4uZlu2GT3kHRB3Wxubn5xZxpIq4QCxgjtTdC2uQpC0zhMVMa7C29SoAdf8IvW1QdAPnOfGRKuKCNZjVOHoeutXCccwMsMB0zXWcmgCUOL/xM4HznH5xJSQBVmR4gCDo3UvX1I594AtGu38BxIH5urKlv2Sa2Zb+lGoS6P/Hb7nL3xlvzwr8ATOEbGowob/yAAAAAElFTkSuQmCC);
+}
+.OSX .title-bar-actions:hover .maximizeButton .title-area-icon-inner,
+.OSX .title-bar-actions:hover .restoreButton .title-area-icon-inner {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAFBlWElmTU0AKgAAAAgAAgESAAMAAAABAAEAAIdpAAQAAAABAAAAJgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAAC+W0ztAAABWWlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iWE1QIENvcmUgNi4wLjAiPgogICA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPgogICAgICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIgogICAgICAgICAgICB4bWxuczp0aWZmPSJodHRwOi8vbnMuYWRvYmUuY29tL3RpZmYvMS4wLyI+CiAgICAgICAgIDx0aWZmOk9yaWVudGF0aW9uPjE8L3RpZmY6T3JpZW50YXRpb24+CiAgICAgIDwvcmRmOkRlc2NyaXB0aW9uPgogICA8L3JkZjpSREY+CjwveDp4bXBtZXRhPgoZXuEHAAADwUlEQVRYCe1WTWgTQRR+kzTG1rRpNDaxPWjRg4giguBBBA+etIr0IHoUwbMntXiWqkd7EzxbpBTB4llQr/6giBcRiz9NTU0q/THE7Pi+NzObzWZqVRAP+sjum3k/3/fm7WZ2iP7Lv94B9UsNGO/bTUod5pz9FKitrPM2v0wJ/ZrHj0jre3Ry9pm1r6p+roDxwk5SdIE0Hd+Q35hZ17WOUqkUJZNJIWg0GlSv12lxaZHmyp8WOPYOx16lk6UXq1WwegG3CmcY5HKxf6DQm81SIpEgBjfitENhHQQBVefnaebD+xIHXaJTpZs22qvMErwuNo4XLmZzuev9/QOZnu5uXhgzMKnWuEWSMOYLfqUUdXZ2Uqa7O8OmY7WhZI0mFh9GoluGKxcwXjyd7c2N9W3so/SatJd4euoJfXk9S9ltRQNqi0IheEQopBEEh2pDHdM0sfC0hdlOuJ8euV3cwSu6tj63nlIdqXZyu+LF9xVamJ4z3bDk0Q4hFxjAImB6xF+A1iOFTcU8VhAFlHwh51uAiy1y8Tj6WGSKG0kXgMX+EQ8/tRdwu7CLtBrO9eZWJrd8IDAFGr1SEQZLDROwY9JegKahDfl8V/i2gwQiZGDmn7MZj3GLH3EmxhgxJ/nnAJPHQ2KP3DwFqAP4nxsiyyTgBthH7vDEF4mF3f1jDKY64GKd9hRAg3iD2wT8AHfiVuoIrT0swsVZLZiaBmNm6ogbeJ6XHc6Svb37mJY+VM3L1lJAM/PVjfvYBJqCMS+tayBHm4/ukW7aXdNt3WFsewdClxnoBl7z35OfyfV1oMx7e74jyS5e8Zbje0Xjbxd/BLJyrm372YPcgWYLZJjguTOxxveCpYxbVNo7oOgNPixtAjwHCCcmmMvVdEhMcxrCCCZjhwY78BSgH+CrBmDs6yJQltCZbH6LCsltLJyCwfkGUz9oSeCJpwCamiuXl/BVC1coSIImNl8RPnKXDyxg8nxq9QJOlJ6T0pOVasWSoRU2Ld4JmbPbatcliWabW73B0pME7Ji0dwABSo2WPs6Ul5eXhdwBSa4rAi8ZsuUSNol1MS4HGMACpvhiN38BJ2Ze8qrPf658pvo3fiEjq3EEsK3NZ6izr8cQ89z5HDlygQEsAqZHXJrHxSYcSHpzo/ikui9jyxYdy3LEKA4rB/l8tTLCR7MrsdBwuvKBBCF8kqkdSb6rVir7kqlUJp1Ok+LWg0guZhJtbXgcgQ6oUq3Su+m3pdrXr+f4SDYWsnkGP+6AS/irh1JXBPQfOJZH4f+P/80OfAd9i5jKfa/HvgAAAABJRU5ErkJggg==);
+}
+.OSX .title-bar-actions:hover .closeButton .title-area-icon-inner {
+  background-image: url(data:image/png;base64,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);
+}
+.OSX .title-bar-actions .minimizeButton:active .title-area-icon-inner {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAFBlWElmTU0AKgAAAAgAAgESAAMAAAABAAEAAIdpAAQAAAABAAAAJgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAAC+W0ztAAABWWlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iWE1QIENvcmUgNi4wLjAiPgogICA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPgogICAgICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIgogICAgICAgICAgICB4bWxuczp0aWZmPSJodHRwOi8vbnMuYWRvYmUuY29tL3RpZmYvMS4wLyI+CiAgICAgICAgIDx0aWZmOk9yaWVudGF0aW9uPjE8L3RpZmY6T3JpZW50YXRpb24+CiAgICAgIDwvcmRmOkRlc2NyaXB0aW9uPgogICA8L3JkZjpSREY+CjwveDp4bXBtZXRhPgoZXuEHAAADg0lEQVRYCe1WS2sUQRCuntlN1slkTLILQjyJN1G8RDxIbp4kWYKHkBzFP+AjPoJnEWVVMF49uwQRIeIf8HFWFG8iiBhCNiHZZGN2k5m2qqdrMjsznawH8ZAUzHR3Pb76uqYfA3Ag+70C4m8KUL0Gp4VlXQAQ5ySI4wCyFMaLmgD5DcfvZRC8mXgEnzrF7YhAdQpOCrBvIeiYd7jPLRQKAHYOHyvM4wcA/jZsbm5CfXVlHZWvJPj3JyrwZS8iexJ4PmVfFgLuFgdKR3I9PQAWJpUGWEILAthuNGBpubYgJdyZrPjPDN5Kbe9mrN6wbnuu96S/VHItx0FXzddEgMCQrdXdDa7juJaEcvlMq/nig3xnymMkUJ2yL/W63ozT3weQ6wrjKTFOyyjKpEniJ8oXusDy5fny0NYPJPExK05/xHbT7HU4gZoHjteLJcdvTbJX8tArJMgcMVZhIJbGZK+ozSQghT1dHCiWoKs7dEwmpzGuu7aHk1IEVYnHiEFYhEmmpKQIzF6FU/ipL+ZcV88aQ+JlJ+DdHs7AJNBXYSGmwma7blMEpG2NeF6fo1Y7OZmSKwBmQn6xR9loTEoU3DmESdihYuedJgBiWO1zBmRfHitMHiSMrFY+2qZ1hImH1zBHcJsigPvomDpk2INbBuexqTX50cFF2AnRSzyuxeOVTzhUz839gvn53+GCi88sHpLs007EqQ0OHoKR0aOhVWHy0b0TkFGBHSP1fL/TrO1xncZmVEDUwA9KYIVn1NiYngFtu4hL1Elk1YeQrkCbke4LQOyEZFRAfqeLJSUEqvFTtrjC5KcwETshKQJ4rb6lW00liydkYKXjAaPpMauVj7ZpHWESNkdwmybgB6/r9ZUNutWU4OUSSSoBK9CDuzF3upiUIBZhCsSOsHQnRWD8MXzGb/1yex2v9Qg0hhrpECGrzxkoubYrLMRU2Gw3ESC9kP69peWlGrSaoZsCopcW6hL1+BMzq5nzGDEIizA5PN6mKkDG8YfwFZubG/U13P96QRIgl5ScTMIzJzvGKgzE0pipKOP/AN3f9DNB93k+j245vWMVCWSjEiVai8aYg56tJmys1mGtUZ+eqARPU5m1wkiA7PQnMzq09bOxvna2YOdcK5/HshM6CidKthJ/yXD9LC4uLDRbrSuTlWAmDMh+a7RsI2v/608pk6D2X/yWx/EP+vuzAn8AElJMQaTD/GUAAAAASUVORK5CYII=);
+}
+.OSX .title-bar-actions .maximizeButton:active .title-area-icon-inner,
+.OSX .title-bar-actions .restoreButton:active .title-area-icon-inner {
+  background-image: url(data:image/png;base64,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);
+}
+.OSX .title-bar-actions .closeButton:active .title-area-icon-inner {
+  background-image: url(data:image/png;base64,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);
+}
+.friendsui-container
+  .TitleBar.OSX:not(.WindowFocus)
+  .title-bar-actions:not(:hover)
+  .windowControlButton
+  .title-area-icon-inner,
+.DesktopUI
+  .TitleBar.OSX:not(.WindowFocus)
+  .title-bar-actions:not(:hover)
+  .windowControlButton
+  .title-area-icon-inner {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAFBlWElmTU0AKgAAAAgAAgESAAMAAAABAAEAAIdpAAQAAAABAAAAJgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAAC+W0ztAAABWWlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iWE1QIENvcmUgNi4wLjAiPgogICA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPgogICAgICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIgogICAgICAgICAgICB4bWxuczp0aWZmPSJodHRwOi8vbnMuYWRvYmUuY29tL3RpZmYvMS4wLyI+CiAgICAgICAgIDx0aWZmOk9yaWVudGF0aW9uPjE8L3RpZmY6T3JpZW50YXRpb24+CiAgICAgIDwvcmRmOkRlc2NyaXB0aW9uPgogICA8L3JkZjpSREY+CjwveDp4bXBtZXRhPgoZXuEHAAACtElEQVRYCe2Wy4oTQRSGK/cLWQZcD+5EcZGEBMQXkFnIvIH6DmpwLaPzDuobDC7EFxAhIclCFHcy64EsQy6Tm/8f+w+nu6sncaGzmCnonFPn1PnO31WQauduxnXfgdTfbEC3272fyWQepVKpB6i7jaca1A9hf63X66/L5fJzs9n8FsR3mr0E9Hq9u+l0+gUaPy6VSpVsNusgxGG+aYDGDo3dYrFwk8lkhPnH1Wr1ttFo/NilYKcANH+GZq8rlcqtfD4famrhVszFxYUbjUbnEPUKIt7ZdVH/UgH9fv9luVw+LhQKjm/NN91nUAx3YzabufF43K7X62+S6hIFDAaDJ8Vi8T0EOGy/t7kE6e1tE8ZwDBTgptPp01qt9sHm5aflWNvpdO5gfgIBseZsqkc1mksQ4/QpnAyMk4BJPzS8AnK5XBtnXo1uuxrYhtYnWWvkk0EWmaHOwSQmAOd+D7kjnnsUJqgPZHPROrIwjgJ2qDwmANlDnHvZnquAsiTQt4+oWiPLOFlkwj3UOtmYAJzbQ25bdFig9bXOxqyvPJlkay4bE4DiA/7J+CAsSopflmNNwDxQY9mYACSqvu1XgbUE7ysoYOqve4vxCdgm/4fjEzC0b2V3IyqIuV151QRMXlqhERMA4BkvliRwUpzUpBzjAfMs1B2TmAD8fX7h/3h0WLj1tc7GrK88mWRrLhsTgMQn/H+PfcdgwfTtI6DWyDJOFplka51sTABuru9InvImsxD5sgJYq5wsc/TJwjgN2PS3IyaAmfl8foz7fMhti8KYZ8z3KEfLwTVkkEXmn2j41yug1Wr9xLLnuEY3V2pUhJoLpXl0Ha9jMsgKmCrZWq8AZnl/4/OqjWfzFhauajXWXJZxvjlryUj6FuD6xA8Swa70k8yIuLqPUomg/Ref5ZZ/41/PHfgNF2emIio7BFgAAAAASUVORK5CYII=);
+}
+.DesktopUI .OSX .title-area-icon:hover,
+.friendsui-container .OSX .title-area-icon:hover {
+  background: initial;
+}
+.friendsui-container .OSX .title-bar-actions,
+.DesktopUI .OSX .title-bar-actions.window-controls {
+  margin-left: 8px;
+  order: 1;
+  justify-content: flex-end;
+}
+.friendsui-container .OSX .title-area-children,
+.DesktopUI .OSX .title-area-children {
+  order: 2;
+}
+.friendsui-container .OSX .title-bar-actions.extra-actions,
+.DesktopUI .OSX .title-bar-actions.extra-actions {
+  order: 3;
+  margin-right: 8px;
+}
+.DesktopUI .PopupFullWindow .OSX .title-bar-actions {
+  padding: 0;
+  margin-left: 8px;
+}
+.friendsui-container .title-area .title-bar-actions,
+.DesktopUI .title-area .title-bar-actions {
+  margin-right: 0px;
 }
