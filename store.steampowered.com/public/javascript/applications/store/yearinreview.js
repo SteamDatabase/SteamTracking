@@ -1778,7 +1778,7 @@
         A = a(47165),
         G = a(25508);
       const B = 5;
-      class f {
+      class N {
         GetRawStats() {
           return this.m_allStats;
         }
@@ -2058,8 +2058,8 @@
           return r;
         }
       }
-      (0, l.gn)([I.LO], f.prototype, "m_privacyState", void 0);
-      const N = "0px 0px 100% 0px";
+      (0, l.gn)([I.LO], N.prototype, "m_privacyState", void 0);
+      const f = "0px 0px 100% 0px";
       var w = a(92616),
         k = a(85251),
         b = a(11195),
@@ -2091,7 +2091,7 @@
                         ? void 0
                         : a.length),
                   ),
-                new f(
+                new N(
                   n,
                   this.LoadFromPageConfigGlobalPercentile(t),
                   this.LoadFromPageConfigGlobalDistribution(t),
@@ -2105,7 +2105,7 @@
               this.m_SteamInterface.GetServiceTransport(),
               r,
             );
-            return new f(
+            return new N(
               i.Body().stats().toObject(),
               i.Body().percentiles().toObject(),
               i.Body().distribution().toObject(),
@@ -2712,8 +2712,8 @@
           ),
         );
       }
-      var fe = a(98009),
-        Ne = a(3991),
+      var Ne = a(98009),
+        fe = a(3991),
         we = a(43068),
         ke = a(72120),
         be = a(79190),
@@ -2887,7 +2887,7 @@
           o = (0, s.bJ)(),
           m = Q();
         if (!l || !l.BIsVisible()) return null;
-        const c = (0, fe.Hf)(
+        const c = (0, Ne.Hf)(
             (null == l ? void 0 : l.GetStorePageURL()) || "",
             o,
           ),
@@ -2905,7 +2905,7 @@
             },
           },
           n.createElement(
-            Ne.zw,
+            fe.zw,
             { appid: l.GetAppID() },
             n.createElement(
               "div",
@@ -3083,7 +3083,7 @@
                     : 1 - Math.pow(-2 * o + 2, 3) / 2;
               var o;
               const m = Math.round((null != a ? a : t) * l);
-              m <= t && (d(m), (u.current = requestAnimationFrame(n)));
+              m <= t ? (d(m), (u.current = requestAnimationFrame(n))) : d(t);
             };
             return (
               i &&
@@ -3099,8 +3099,14 @@
             );
           }, [t, r, i, s, l, o, m, a]),
           e
-            ? n.createElement("div", { className: (0, _e.Z)(c) }, " ", _, " ")
-            : n.createElement("div", { className: (0, _e.Z)(c) }, _)
+            ? n.createElement(
+                "div",
+                { className: (0, _e.Z)(c) },
+                " ",
+                (0, pe.AV)(_),
+                " ",
+              )
+            : n.createElement("div", { className: (0, _e.Z)(c) }, (0, pe.AV)(_))
         );
       };
       rt.defaultProps = { duration: 1e3, spaceAroundCount: !1 };
@@ -3305,12 +3311,12 @@
               : m.game_streak_pct) || 0,
           I = v > 0 && C > 0 && "cn" !== o.L7.country_code.toLowerCase();
         const [A, G] = n.useState(!1),
-          [B, f] = n.useState(!1),
-          [N, w] = n.useState(!1),
+          [B, N] = n.useState(!1),
+          [f, w] = n.useState(!1),
           k = n.useCallback(
             (e) =>
               (0, l.mG)(this, void 0, void 0, function* () {
-                e && (G(!0), f(!0), w(!0));
+                e && (G(!0), N(!0), w(!0));
               }),
             [],
           ),
@@ -3335,7 +3341,7 @@
             endValue: v,
             maxValue: (100 * v) / C,
             duration: 2e3,
-            startAnimation: N,
+            startAnimation: f,
             delay: 3e3,
           });
         return n.createElement(
@@ -3979,7 +3985,7 @@
               s
                 .slice(0, Gt)
                 .map((e) =>
-                  n.createElement(ft, {
+                  n.createElement(Nt, {
                     key: "friendshare_" + e.steamid + "_" + a,
                     friend: e,
                     year: a,
@@ -3995,7 +4001,7 @@
           )
         );
       }
-      function ft(e) {
+      function Nt(e) {
         const { friend: t, year: a } = e,
           r = new A.K(t.steamid),
           i = Q();
@@ -4017,8 +4023,8 @@
           }),
         );
       }
-      var Nt = a(77456),
-        wt = a.n(Nt),
+      var ft = a(77456),
+        wt = a.n(ft),
         kt = a(68537),
         bt = a(98241),
         Rt = a(84343);
@@ -5448,7 +5454,7 @@
         return t &&
           t.longest_consecutive_days > 0 &&
           "cn" !== o.L7.country_code.toLowerCase()
-          ? n.createElement(fa, {
+          ? n.createElement(Na, {
               key: "longestStreak",
               oLongestStreak: t,
               nYear: e,
@@ -5464,7 +5470,7 @@
             t.vr_playtime_percentagex100;
         return a < Ca || r < Ca
           ? null
-          : n.createElement(Na, {
+          : n.createElement(fa, {
               key: "hardwareTime",
               oTotalStats: t,
               nYear: e,
@@ -5720,7 +5726,7 @@
           ),
         );
       }
-      function fa(e) {
+      function Na(e) {
         const { oLongestStreak: t, nYear: a } = e,
           r = (0, Z.$1)(t.rtime_start, true),
           i = (0, Z.$1)(
@@ -5796,7 +5802,7 @@
           ),
         );
       }
-      function Na(e) {
+      function fa(e) {
         const { oTotalStats: t, nYear: a } = e,
           r = j(
             t.total_playtime_percentagex100 -
@@ -6794,7 +6800,7 @@
             Ct.Y,
             {
               placeholderHeight: "100vh",
-              rootMargin: N,
+              rootMargin: f,
               className: ge.FullWidth,
             },
             Boolean(l) &&
@@ -6975,11 +6981,11 @@
             n.createElement(ce.V, { position: "center" }),
           );
         if (!_ || !c) return null;
-        const A = (0, fe.Hf)(_.GetStorePageURL(), p),
+        const A = (0, Ne.Hf)(_.GetStorePageURL(), p),
           G = null == C ? void 0 : C.find((e) => e.percent > 0),
           B = G ? G.date.getMonth() : null,
-          f = B ? (0, Z.Xx)(`#YIR_MonthlyCharts_MonthNoun_${B + 1}`) : "",
-          N = Math.trunc(c.total_sessions);
+          N = B ? (0, Z.Xx)(`#YIR_MonthlyCharts_MonthNoun_${B + 1}`) : "",
+          f = Math.trunc(c.total_sessions);
         let w = "";
         return (
           v && y
@@ -7033,7 +7039,7 @@
                         { href: w, className: ge.GameLink },
                         (0, Z.Xx)("#YIR_TopGames_VisitInLibrary"),
                       ),
-                    !v && n.createElement(fn, { appID: a }),
+                    !v && n.createElement(Nn, { appID: a }),
                   ),
                   n.createElement("div", { className: ge.Title }, _.GetName()),
                   n.createElement(Cn, {
@@ -7066,13 +7072,13 @@
                         n.createElement(
                           "div",
                           { className: ge.BigNum },
-                          (0, pe.AV)(N),
+                          (0, pe.AV)(f),
                         ),
                         n.createElement(
                           "div",
                           { className: ge.NumSubtitle },
                           (0, Z.Xx)(
-                            1 == N
+                            1 == f
                               ? "#YIR_Game_PlaySession_Singular"
                               : "#YIR_Game_PlaySessions",
                           ),
@@ -7152,12 +7158,12 @@
                     n.createElement(
                       "div",
                       { className: ge.GameChartFirstPlayed },
-                      f
+                      N
                         ? g(
                             Boolean(null == c ? void 0 : c.new_this_year)
                               ? "#YIR_TopGames_firstplayedNew"
                               : "#YIR_TopGames_firstplayed",
-                            f,
+                            N,
                           )
                         : null,
                     ),
@@ -7212,14 +7218,14 @@
           }),
         );
       }
-      function fn(e) {
+      function Nn(e) {
         const { appID: t } = e,
           a = (0, R.SZ)(() => T.jg.Get().BIsGameWishlisted(t)),
           r = (0, R.SZ)(() => T.jg.Get().BOwnsApp(t)),
           [i, m] = (0, n.useState)(!1),
           c = n.useRef(Sn().CancelToken.source()),
           _ = (0, s.bJ)(),
-          d = (0, fe.mY)(_);
+          d = (0, Ne.mY)(_);
         if (
           (n.useEffect(() => {
             const e = c;
@@ -7250,7 +7256,7 @@
           (0, Z.Xx)(a ? "#Sale_RemoveFromWishlist" : "#Sale_AddToWishlist"),
         );
       }
-      var Nn = a(14057),
+      var fn = a(14057),
         wn = a(68603);
       function kn(e) {
         const { steamId: t, year: a } = e,
@@ -7380,7 +7386,7 @@
           } = e,
           l = r.GetSteamID(),
           o = r.GetYear(),
-          m = (0, Nn.N)(i),
+          m = (0, fn.N)(i),
           c = n.useRef();
         (c.current &&
           c.current.steamid.GetAccountID() == l.GetAccountID() &&
@@ -7787,6 +7793,26 @@
                   n.createElement("li", null, (0, Z.Xx)("#YIR_FAQ_Share_A_b2")),
                   n.createElement("li", null, (0, Z.Xx)("#YIR_FAQ_Share_A_b3")),
                 ),
+              ),
+            ),
+            n.createElement(
+              "div",
+              { className: O().QuestionCtn },
+              n.createElement(
+                "div",
+                { className: O().Question },
+                (0, Z.Xx)("#YIR_FAQ_Controller_Q"),
+              ),
+              n.createElement(
+                "div",
+                { className: O().Answer },
+                (0, Z.Xx)("#YIR_FAQ_Controller_A1"),
+              ),
+              n.createElement("br", null),
+              n.createElement(
+                "div",
+                { className: O().Answer },
+                (0, Z.Xx)("#YIR_FAQ_Controller_A2"),
               ),
             ),
           ),

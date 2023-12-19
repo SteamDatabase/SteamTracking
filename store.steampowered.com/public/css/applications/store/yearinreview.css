@@ -262,8 +262,9 @@ body.v6 {
 }
 @media screen and (max-width: 620px) {
   .yirlanding_SummaryGridStandard_3JG0S {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 }
 @media screen and (max-width: 910px) {
@@ -869,9 +870,9 @@ body.v6 {
 }
 .yirlanding_Questions_2NoUb {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   margin-top: 3vh;
-  max-width: 80vw;
+  max-width: 600px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -886,8 +887,8 @@ body.v6 {
 .yirlanding_QuestionCtn_1_WCk {
   display: flex;
   flex-direction: column;
-  max-width: 30%;
   margin-right: 3%;
+  margin-bottom: 20px;
 }
 @media screen and (max-width: 1200px) {
   .yirlanding_QuestionCtn_1_WCk {
@@ -1230,7 +1231,7 @@ html.responsive.touch .yircomponents_TopGameBlockContainer_1o-Oa {
 }
 .yircomponents_TopGameBlockContainer_1o-Oa.yircomponents_OddGradient_FZUw6
   .yircomponents_StatsGroup_3nXdD {
-  justify-content: start !important;
+  justify-content: start;
 }
 .yircomponents_TopGameBlockContainer_1o-Oa.yircomponents_EvenGradient_3pmx1
   .yircomponents_BigNum_1cZBW,
@@ -1241,6 +1242,23 @@ html.responsive.touch .yircomponents_TopGameBlockContainer_1o-Oa {
 .yircomponents_TopGameBlockContainer_1o-Oa.yircomponents_EvenGradient_3pmx1
   .yircomponents_Title_2geom {
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.65);
+}
+@media screen and (max-width: 620px) {
+  .yircomponents_TopGameBlockContainer_1o-Oa.yircomponents_EvenGradient_3pmx1
+    .yircomponents_BigNum_1cZBW,
+  .yircomponents_TopGameBlockContainer_1o-Oa.yircomponents_EvenGradient_3pmx1
+    .yircomponents_NumSubtitle_3vVnX,
+  .yircomponents_TopGameBlockContainer_1o-Oa.yircomponents_EvenGradient_3pmx1
+    .yircomponents_IntroLine_3uV4W,
+  .yircomponents_TopGameBlockContainer_1o-Oa.yircomponents_EvenGradient_3pmx1
+    .yircomponents_Title_2geom {
+    text-align: center !important;
+    align-self: center !important;
+  }
+}
+.yircomponents_TopGameBlockContainer_1o-Oa.yircomponents_EvenGradient_3pmx1
+  .yircomponents_StatsGroup_3nXdD {
+  justify-content: end;
 }
 .yircomponents_SelectedInfoCtn_3lVSa
   .yircomponents_TopGameBlockContainer_1o-Oa {
@@ -1633,11 +1651,6 @@ html.responsive.touch .yircomponents_TopGameBlockContainer_1o-Oa {
     .yircomponents_StandardInfoCtn_qUC7C
     .yircomponents_InfoContainer_30H7n {
     left: 0;
-  }
-  .yircomponents_TopGameBlockContainer_1o-Oa:nth-child(odd)
-    .yircomponents_StandardInfoCtn_qUC7C
-    .yircomponents_StatsGroup_3nXdD {
-    justify-content: end;
   }
   .yircomponents_TopGameBlockContainer_1o-Oa:nth-child(odd)
     .yircomponents_StandardInfoCtn_qUC7C
@@ -5051,6 +5064,7 @@ div.yirhowyouplayed_DeckContainer_3G2ne .yirhowyouplayed_Disclaimer_1h_am {
   .yirshare_SocialButtons_3KNxc
   .yirshare_ShareLinkButton_35yo9 {
   width: fit-content;
+  color: #dfe3e6;
 }
 @media screen and (max-width: 500px) {
   .yirshare_ShareModal_2Eeev
@@ -5759,6 +5773,7 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   height: fit-content;
   opacity: 0;
   transform: translateX(100px);
+  overflow-x: hidden;
   margin: 4vh auto;
 }
 @media screen and (max-width: 500px) {
