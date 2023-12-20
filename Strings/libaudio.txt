@@ -637,7 +637,7 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231215145604Z0/
+231220190454Z0/
 NjN"
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
@@ -654,35 +654,29 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	</array>
 </dict>
 </plist>
-i&k*
-.Kkbf
-9\v3
-Ko9[
-sfXT
-/Y%Yq
-<~Mc
-20231215145620Z0
-|l)@jgy
+TORg
+E2CQ>
+20231220190521Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231214211511Z
-240125211510Z0B1
-Timestamp Signer NWK11
+231214210037Z
+240125210036Z0B1
+Timestamp Signer NWK21
 Apple Inc.1
-7_haJ
-r}z0
-*ss?
-,$.Y
+`\ju
+zDi	N
+Ip/?y
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-Ygl=#
-ywSr$
-i+3t'e
-\W$"
+D(*T
+|%bC
+6vO:
+`;X)
+R{F0
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -721,9 +715,8 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231215145620Z0#
-L2\0+
-vr'<
+231220190521Z0#
+IZ2H
 __TEXT
 __text
 __TEXT
@@ -1483,7 +1476,7 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231215145604Z0/
+231220190454Z0/
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -1499,10 +1492,12 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	</array>
 </dict>
 </plist>
-SP|DE
-^+DW
-yA &Q
-20231215145621Z0
+>n]L
+j;Vd
+Y\K!#
+DlaZO
+Ykr8}
+20231220190521Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
@@ -1561,13 +1556,12 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231215145621Z0#
-16\)$
-3@0+
-E"9t
-W)X/'t
-NWuH)HR
-b)1Hdb2
+231220190521Z0#
+g<pj
+N"L)(6
+=?@y
+:M>7
+*wNo
 __TEXT
 __text
 __TEXT
@@ -2118,7 +2112,7 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231215145604Z0/
+231220190454Z0/
 "g0[
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
@@ -2135,11 +2129,8 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	</array>
 </dict>
 </plist>
-:cLZ_
-\]7?&
-4NqP
-Pc?V>.:I
-20231215145621Z0
+9zy	
+20231220190521Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
@@ -2198,6 +2189,6 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231215145621Z0#
-yw5c
-dsL%D5MQ;
+231220190521Z0#
+iLmj
+ITQt

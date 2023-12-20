@@ -119327,7 +119327,6 @@ div.UltraRightPanel
 .appproperties_SubscribeCollectionDialog_1bXER
   .appproperties_WorkshopCollections_3KmXj
   .appproperties_WorkshopCollection_t-5I7 {
-  cursor: pointer;
   display: flex;
   flex-direction: row;
   flex-grow: 1;
@@ -119346,7 +119345,6 @@ div.UltraRightPanel
   .appproperties_TextDetails_1N6t5 {
   flex-grow: 1;
   z-index: 1;
-  background-color: #23262e;
   padding-right: 4px;
 }
 .appproperties_SaveToWorkshopCollection_vx3kn
@@ -119374,6 +119372,18 @@ div.UltraRightPanel
   display: flex;
   flex-direction: row;
   gap: 4px;
+}
+.appproperties_SaveToWorkshopCollection_vx3kn
+  .appproperties_WorkshopCollections_3KmXj
+  .appproperties_WorkshopCollection_t-5I7
+  .appproperties_Controls_2g0BS
+  > div,
+.appproperties_SubscribeCollectionDialog_1bXER
+  .appproperties_WorkshopCollections_3KmXj
+  .appproperties_WorkshopCollection_t-5I7
+  .appproperties_Controls_2g0BS
+  > div {
+  display: flex;
 }
 .appproperties_SaveToWorkshopCollection_vx3kn
   .appproperties_WorkshopCollections_3KmXj
@@ -119407,6 +119417,17 @@ div.UltraRightPanel
   > svg {
   width: 24px;
   height: 24px;
+}
+.appproperties_SaveToWorkshopCollection_vx3kn
+  .appproperties_WorkshopCollections_3KmXj
+  .appproperties_WorkshopCollection_t-5I7 {
+  cursor: pointer;
+}
+.appproperties_SaveToWorkshopCollection_vx3kn
+  .appproperties_WorkshopCollections_3KmXj
+  .appproperties_WorkshopCollection_t-5I7:hover {
+  background: #464d58;
+  color: #fff;
 }
 .actionbuttonlegenditem_ActionButtonLegend_Mbyhb {
   display: flex;

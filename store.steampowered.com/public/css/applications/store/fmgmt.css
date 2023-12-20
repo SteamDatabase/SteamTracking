@@ -1061,16 +1061,10 @@ a:hover {
   flex-direction: column;
   padding: 0px 6px;
 }
-.familyparentalsettings_FamilyMemberParentalSettingsInner_2WflO
-  .familyparentalsettings_ParentalGames_1itpR {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
 @media screen and (max-width: 500px) {
   .familyparentalsettings_FamilyMemberParentalSettingsInner_2WflO
-    .familyparentalsettings_ParentalGames_1itpR
-    div:nth-child(1) {
+    .familyparentalsettings_DropDownCtn_1TwO8
+    > div {
     flex-direction: column;
   }
 }
@@ -1078,7 +1072,20 @@ a:hover {
   display: flex;
   flex-direction: row;
   gap: 12px;
+  padding: 8px;
   align-items: center;
+  justify-content: space-between;
+}
+@media screen and (max-width: 500px) {
+  .familyparentalsettings_ParentalGameListHeader_2oJ9B {
+    flex-direction: column;
+  }
+}
+.familyparentalsettings_ParentalGameListHeader_2oJ9B
+  .familyparentalsettings_TitleCtn_T1lHN {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 .familyparentalsettings_ParentalGameListHeader_2oJ9B
   .familyparentalsettings_Title_-8pd6 {
@@ -1091,6 +1098,12 @@ a:hover {
   line-height: normal;
   text-transform: uppercase;
   flex-grow: 1;
+}
+.familyparentalsettings_ParentalGameListHeader_2oJ9B
+  .familyparentalsettings_SearchCtn_4O472 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 .familyparentalsettings_ParentalGameListHeader_2oJ9B
   .familyparentalsettings_SelectorCtn_257si {

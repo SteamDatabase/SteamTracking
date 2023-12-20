@@ -1506,6 +1506,33 @@ body.v6 h3.steamawards2023_FaqSectionTitle_3iDsX {
   width: fit-content;
   padding: 0px 12px;
 }
+.steamawards2023_SteamAwardCategory_3AoAT
+  .steamawards2023_FinalistsRow_3vJww
+  .steamawards2023_FinalistGameCtn_1GFLe
+  .steamawards2023_YourNomination_2JxCj {
+  position: relative;
+  background: #fff;
+  color: #000;
+  padding: 3px 6px;
+  margin-top: 8px;
+}
+.steamawards2023_SteamAwardCategory_3AoAT
+  .steamawards2023_FinalistsRow_3vJww
+  .steamawards2023_FinalistGameCtn_1GFLe
+  .steamawards2023_YourNomination_2JxCj:after {
+  bottom: 100%;
+  left: 50%;
+  border: solid rgba(0, 0, 0, 0);
+  content: "";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(136, 183, 213, 0);
+  border-bottom-color: #fff;
+  border-width: 10px;
+  margin-left: -10px;
+}
 .steamawards2023_WinnerInfoCtn_1CYXt {
   background: #321b2c;
   display: flex;

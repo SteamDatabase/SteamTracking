@@ -510,6 +510,9 @@ td.rdtYear:hover {
 .giftform_GiftSignatureInput_3tP7D {
   max-width: 60%;
 }
+.giftform_ScheduleError_3y4Bq {
+  color: #de3618;
+}
 .coupons_CouponPickerRowGlow_2ETXQ {
   background: linear-gradient(-45deg, #0056d6 8%, #1a9fff 90%);
   border-radius: 2px;

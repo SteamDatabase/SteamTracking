@@ -16860,6 +16860,12 @@
           a = (a) => {
             (0, m.mY)(t);
             !(function (e, t, a) {
+              if (
+                void 0 !== window.g_bUseNewCartAPI &&
+                window.g_bUseNewCartAPI &&
+                "function" == typeof window.AddItemToCart
+              )
+                return void window.AddItemToCart(t);
               let n = (0, ta.RA)(e),
                 i = n.document.createElement("form");
               (i.action = I.De.STORE_BASE_URL + "cart/"),

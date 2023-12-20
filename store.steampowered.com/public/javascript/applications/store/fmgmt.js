@@ -195,11 +195,13 @@
         nAppGridRowHeight: "80px",
         FamilyMemberParentalSettingsInner:
           "familyparentalsettings_FamilyMemberParentalSettingsInner_2WflO",
-        ParentalGames: "familyparentalsettings_ParentalGames_1itpR",
+        DropDownCtn: "familyparentalsettings_DropDownCtn_1TwO8",
         ParentalGameListHeader:
           "familyparentalsettings_ParentalGameListHeader_2oJ9B",
+        TitleCtn: "familyparentalsettings_TitleCtn_T1lHN",
         Title: "familyparentalsettings_Title_-8pd6",
         TitleCount: "familyparentalsettings_TitleCount_2LQav",
+        SearchCtn: "familyparentalsettings_SearchCtn_4O472",
         SelectorCtn: "familyparentalsettings_SelectorCtn_257si",
         Selector: "familyparentalsettings_Selector_2Qb3-",
         ParentalGameListOuter:
@@ -925,14 +927,14 @@
       function S(e) {
         return new URLSearchParams(e.search).get("invitation");
       }
-      function b(e) {
+      function C(e) {
         const { inviterSteamID: t, familyGroupID: a, role: i } = e,
           r = (0, l.M)(),
           s = (0, p.JM)(a),
           o = (0, p.bF)(a),
           c = (0, p.MP)(a, r),
           d = (0, v.IE)(t),
-          [b, P] = (0, n.useState)(!1),
+          [C, P] = (0, n.useState)(!1),
           { setErrorMessage: N } = (0, p.cL)();
         (0, p.zj)(
           s,
@@ -969,8 +971,8 @@
           { className: y.IncomingInviteRow },
           n.createElement(
             I.Yy,
-            { active: !!b },
-            "explanation" === b &&
+            { active: !!C },
+            "explanation" === C &&
               n.createElement(
                 I.RG,
                 { closeModal: R },
@@ -979,14 +981,14 @@
                   null,
                   (0, _.Xx)(`#FamilyManagement_RoleDescriptionLongHeader_${i}`),
                 ),
-                1 === i ? n.createElement(C, null) : n.createElement(M, null),
+                1 === i ? n.createElement(b, null) : n.createElement(M, null),
                 n.createElement(
                   m.zx,
                   { onClick: R },
                   (0, _.Xx)("#FamilyManagement_Close"),
                 ),
               ),
-            "confirm" === b &&
+            "confirm" === C &&
               n.createElement(
                 I.uH,
                 {
@@ -1086,7 +1088,7 @@
           ),
         );
       }
-      function C() {
+      function b() {
         return n.createElement(
           "div",
           { className: (0, d.Z)("account_settings_container") },
@@ -2253,7 +2255,7 @@
               ),
             );
       }
-      function be(e) {
+      function Ce(e) {
         const { steamid: t, settings: a } = e,
           l = (0, ae.lz)(t, a),
           i = (0, ae.BZ)(t),
@@ -2273,7 +2275,7 @@
           onChange: s,
         });
       }
-      function Ce(e) {
+      function be(e) {
         const { steamid: t, settings: a } = e,
           l = (0, ae.w7)(t),
           { setErrorMessage: i } = (0, p.cL)();
@@ -2292,6 +2294,7 @@
             [a, l, i],
           );
         return n.createElement(m.gB, {
+          strClassName: te.DropDownCtn,
           bottomSeparator: "none",
           label: (0, _.Xx)("#Parental_Baselist_Label"),
           rgOptions: r,
@@ -2353,39 +2356,6 @@
           { className: te.ParentalGameListHeader },
           n.createElement(
             "div",
-            { className: te.Title },
-            (0, _.Xx)("#Parental_GameList_Header"),
-          ),
-          n.createElement(
-            "div",
-            { className: te.TitleCount },
-            (0, _.Xx)("#Parental_GameList_TitleCount", t, a),
-          ),
-          n.createElement(
-            "div",
-            { className: te.SelectorCtn },
-            n.createElement(
-              m.Yz,
-              { className: te.Selector, onClick: () => o(!0) },
-              n.createElement(
-                Ee.HP,
-                { toolTipContent: (0, _.Xx)("#Parental_GameList_AllowAll") },
-                n.createElement(re.mm_, null),
-              ),
-            ),
-            n.createElement(
-              m.Yz,
-              { className: te.Selector, onClick: () => o(!1) },
-              n.createElement(
-                Ee.HP,
-                { toolTipContent: (0, _.Xx)("#Parental_GameList_DenyAll") },
-                n.createElement(re.WF_, null),
-              ),
-            ),
-          ),
-          n.createElement(ge, { strFilter: l, setFilter: i }),
-          n.createElement(
-            "div",
             { className: te.SelectorCtn },
             n.createElement(
               "div",
@@ -2396,7 +2366,11 @@
                 ),
                 onClick: () => s("list"),
               },
-              n.createElement(re.aVo, null),
+              n.createElement(
+                Ee.HP,
+                { toolTipContent: (0, _.Xx)("#Parental_GameList_List") },
+                n.createElement(re.aVo, null),
+              ),
             ),
             n.createElement(
               "div",
@@ -2407,8 +2381,53 @@
                 ),
                 onClick: () => s("grid"),
               },
-              n.createElement(re.qTB, null),
+              n.createElement(
+                Ee.HP,
+                { toolTipContent: (0, _.Xx)("#Parental_GameList_Grid") },
+                n.createElement(re.qTB, null),
+              ),
             ),
+          ),
+          n.createElement(
+            "div",
+            { className: te.TitleCtn },
+            n.createElement(
+              "div",
+              { className: te.Title },
+              (0, _.Xx)("#Parental_GameList_Header"),
+            ),
+            n.createElement(
+              "div",
+              { className: te.TitleCount },
+              (0, _.Xx)("#Parental_GameList_TitleCount", t, a),
+            ),
+          ),
+          n.createElement(
+            "div",
+            { className: te.SearchCtn },
+            n.createElement(
+              "div",
+              { className: te.SelectorCtn },
+              n.createElement(
+                m.Yz,
+                { className: te.Selector, onClick: () => o(!0) },
+                n.createElement(
+                  Ee.HP,
+                  { toolTipContent: (0, _.Xx)("#Parental_GameList_AllowAll") },
+                  n.createElement(re.mm_, null),
+                ),
+              ),
+              n.createElement(
+                m.Yz,
+                { className: te.Selector, onClick: () => o(!1) },
+                n.createElement(
+                  Ee.HP,
+                  { toolTipContent: (0, _.Xx)("#Parental_GameList_DenyAll") },
+                  n.createElement(re.WF_, null),
+                ),
+              ),
+            ),
+            n.createElement(ge, { strFilter: l, setFilter: i }),
           ),
         );
       }
@@ -2557,7 +2576,7 @@
         return n.createElement(
           "div",
           null,
-          n.createElement(Ce, { steamid: t, settings: a }),
+          n.createElement(be, { steamid: t, settings: a }),
           0 != a.applist_base_id() &&
             n.createElement(Ne, { steamid: t, settings: a, mapAppsAllowed: l }),
         );
@@ -3012,20 +3031,16 @@
               "div",
               { className: te.FamilyMemberParentalSettingsInner },
               n.createElement(he, { steamid: t }),
-              n.createElement(be, { steamid: t, settings: a }),
+              n.createElement(Ce, { steamid: t, settings: a }),
               a.is_enabled() &&
                 n.createElement(
                   n.Fragment,
                   null,
-                  n.createElement(
-                    "div",
-                    { className: te.ParentalGames },
-                    n.createElement(De, {
-                      steamid: t,
-                      settings: a,
-                      mapAppsAllowed: l,
-                    }),
-                  ),
+                  n.createElement(De, {
+                    steamid: t,
+                    settings: a,
+                    mapAppsAllowed: l,
+                  }),
                   n.createElement(we, { steamid: t, settings: a }),
                   n.createElement(je, { steamid: t, settings: a }),
                 ),
@@ -3059,8 +3074,8 @@
           E =
             null === (t = (0, p.Rs)().data) || void 0 === t ? void 0 : t.role(),
           S = 1 === (0, p.JM)(a).data.members().length,
-          b = (0, h.k6)(),
-          C = (0, h.TH)(),
+          C = (0, h.k6)(),
+          b = (0, h.TH)(),
           M = new Date(1e3 * i.time_joined()),
           P = (new Date().getTime() - M.getTime()) / 864e5 < 30,
           N = (0, v.IE)(i.steamid());
@@ -3107,7 +3122,7 @@
                     ),
                 onOK: () => {
                   y(null),
-                    u.mutate(null, { onSuccess: () => b.push(C.pathname) });
+                    u.mutate(null, { onSuccess: () => C.push(b.pathname) });
                 },
                 closeModal: c,
               }),
@@ -4124,7 +4139,7 @@
                   }),
                   n.createElement(h.AW, {
                     path: `${l.path}/join`,
-                    component: bt,
+                    component: Ct,
                   }),
                   m
                     ? n.createElement(kt, {
@@ -4329,7 +4344,7 @@
               ),
             );
       }
-      function bt(e) {
+      function Ct(e) {
         var t, a, i;
         const r = (0, p.Rs)(),
           s =
@@ -4364,7 +4379,7 @@
               n.createElement(
                 "div",
                 { className: K.JoinFamilyContainer },
-                n.createElement(b, {
+                n.createElement(C, {
                   key: g,
                   inviterSteamID: f.inviter_steamid(),
                   familyGroupID: f.family_groupid(),
@@ -4417,7 +4432,7 @@
                       "div",
                       null,
                       v.map((e) =>
-                        n.createElement(b, {
+                        n.createElement(C, {
                           inviterSteamID: e.inviter_steamid(),
                           familyGroupID: e.family_groupid(),
                           role: e.role(),
@@ -4469,7 +4484,7 @@
                       : i
                           .pending_group_invites()
                           .map((e) =>
-                            n.createElement(b, {
+                            n.createElement(C, {
                               key: e.family_groupid(),
                               inviterSteamID: e.inviter_steamid(),
                               familyGroupID: e.family_groupid(),
@@ -4521,7 +4536,7 @@
               ),
             );
       }
-      function Ct(e) {
+      function bt(e) {
         const t = (0, p.Rs)(),
           a = t.data.family_groupid(),
           l = 1 === t.data.role(),
@@ -4668,7 +4683,7 @@
             {
               name: (0, _.Xx)("#FamilyManagement_ManageTab"),
               key: "manage",
-              contents: n.createElement(Ct, null),
+              contents: n.createElement(bt, null),
             },
           ];
         return (

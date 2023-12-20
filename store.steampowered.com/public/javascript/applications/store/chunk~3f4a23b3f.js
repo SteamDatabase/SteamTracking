@@ -7,8 +7,8 @@
     54671: (e, t, s) => {
       s.d(t, { LA: () => c, jg: () => u });
       var r = s(33940),
-        a = s(52868),
-        n = s.n(a),
+        n = s(52868),
+        a = s.n(n),
         o = s(59621),
         i = s(23217),
         d = s(32765),
@@ -165,7 +165,7 @@
               },
               s = d.De.STORE_BASE_URL + "dynamicstore/userdata/";
             try {
-              let e = yield n().get(s, { params: t, withCredentials: !0 });
+              let e = yield a().get(s, { params: t, withCredentials: !0 });
               e &&
                 200 == e.status &&
                 (0, o.z)(() => {
@@ -278,18 +278,18 @@
               d.De.STORE_BASE_URL +
               "curators/" +
               (t ? "ajaxfollow/" : "ajaxignore/");
-            const a = e.GetAccountID(),
+            const n = e.GetAccountID(),
               o = new FormData();
-            o.append("clanid", "" + a),
+            o.append("clanid", "" + n),
               o.append("sessionid", d.De.SESSIONID),
               o.append(t ? "follow" : "ignore", s ? "1" : "0");
-            let i = yield n().post(r, o, { withCredentials: !0 });
+            let i = yield a().post(r, o, { withCredentials: !0 });
             if (i && 200 == i.status) {
               this.InvalidateCache();
               const e = t
                 ? this.m_setCuratorsFollowed
                 : this.m_setCuratorsIgnored;
-              s ? e.add(a) : e.delete(a);
+              s ? e.add(n) : e.delete(n);
             }
             return i.data;
           });
@@ -297,15 +297,15 @@
         UpdateAppIgnore(e, t, s = 0) {
           return (0, r.mG)(this, void 0, void 0, function* () {
             let r = d.De.STORE_BASE_URL + "recommended/ignorerecommendation";
-            const a = new FormData();
-            a.append("sessionid", d.De.SESSIONID),
-              a.append("appid", "" + e),
-              a.append("remove", t ? "0" : "1"),
-              a.append("snr", d.De.SNR),
-              a.append("ignore_reason", "" + s);
+            const n = new FormData();
+            n.append("sessionid", d.De.SESSIONID),
+              n.append("appid", "" + e),
+              n.append("remove", t ? "0" : "1"),
+              n.append("snr", d.De.SNR),
+              n.append("ignore_reason", "" + s);
             try {
               this.m_bAjaxInFlight = !0;
-              let i = yield n().post(r, a, { withCredentials: !0 });
+              let i = yield a().post(r, n, { withCredentials: !0 });
               return (
                 i &&
                   200 == i.status &&
@@ -325,7 +325,7 @@
             return (this.m_bAjaxInFlight = !1), { success: 2 };
           });
         }
-        UpdateGameWishlist(e, t, s, a) {
+        UpdateGameWishlist(e, t, s, n) {
           return (0, r.mG)(this, void 0, void 0, function* () {
             let r =
               d.De.STORE_BASE_URL +
@@ -336,11 +336,11 @@
               o.append("sessionid", d.De.SESSIONID),
               s && o.append("snr", s),
               (this.m_bAjaxInFlight = !0);
-            let i = yield n().post(r, o, {
+            let i = yield a().post(r, o, {
               withCredentials: !0,
-              cancelToken: a ? a.token : void 0,
+              cancelToken: n ? n.token : void 0,
             });
-            if (((this.m_bAjaxInFlight = !1), a && a.token.reason))
+            if (((this.m_bAjaxInFlight = !1), n && n.token.reason))
               return { success: 52 };
             if (
               ((i.data.success = 1 == i.data.success ? 1 : 2),
@@ -359,8 +359,14 @@
             return i.data;
           });
         }
-        AddToCart(e, t, s, a, o, i, m) {
+        AddToCart(e, t, s, n, o, i, m) {
           return (0, r.mG)(this, void 0, void 0, function* () {
+            if (
+              void 0 !== window.g_bUseNewCartAPI &&
+              window.g_bUseNewCartAPI &&
+              "function" == typeof window.AddItemToCart
+            )
+              return window.AddItemToCart(t, i), !0;
             const r = new FormData();
             r.append("action", "add_to_cart"),
               i
@@ -372,11 +378,11 @@
             const l = (0, p.RA)(e);
             e.preventDefault();
             try {
-              yield n().post(s, r, { withCredentials: !0 }),
+              yield a().post(s, r, { withCredentials: !0 }),
                 this.InvalidateCache(l),
                 (null == m ? void 0 : m.fnSetURL)
-                  ? m.fnSetURL(a)
-                  : (l.location.href = a);
+                  ? m.fnSetURL(n)
+                  : (l.location.href = n);
             } catch (e) {
               return console.log("HandleOnAddToCart", e), !1;
             }
@@ -393,7 +399,7 @@
                 t.append("cc", d.De.COUNTRY);
               let s =
                   d.De.STORE_BASE_URL + "actions/addappformastersubscription",
-                r = yield n().post(s, t, { withCredentials: !0 });
+                r = yield a().post(s, t, { withCredentials: !0 });
               if (
                 (this.InvalidateCache(),
                 !r.data.success || 1 !== r.data.success)
@@ -417,8 +423,8 @@
               r.append("appid", "" + e),
                 r.append("sessionid", d.De.SESSIONID),
                 t || r.append("unfollow", "1");
-              const a = yield n().post(s, r, { withCredentials: !0 });
-              if (!a.data) return 2;
+              const n = yield a().post(s, r, { withCredentials: !0 });
+              if (!n.data) return 2;
               this.InvalidateCache(),
                 t
                   ? this.m_setFollowedApps.add(Number(e))
@@ -537,34 +543,34 @@
     32905: (e, t, s) => {
       s.d(t, { X: () => l, _: () => u });
       var r = s(89526),
-        a = s(57742),
-        n = s(14826),
+        n = s(57742),
+        a = s(14826),
         o = s(32765),
         i = s(90580),
         d = s(19094),
         m = s(79925);
       function p(e) {
         return r.createElement(
-          a.e1,
+          n.e1,
           { onEscKeypress: e.closeModal, bDisableBackgroundDismiss: !0 },
           r.createElement(c, { redirectURL: e.redirectURL }),
         );
       }
       function l() {
-        (0, a.AM)(
+        (0, n.AM)(
           r.createElement(p, {
             ownerWin: window,
             redirectURL: window.location.href,
           }),
           window,
-          { strTitle: (0, n.Xx)("#Login_SignIn") },
+          { strTitle: (0, a.Xx)("#Login_SignIn") },
         );
       }
       function u(e) {
-        (0, a.AM)(
+        (0, n.AM)(
           r.createElement(p, { ownerWin: window, redirectURL: e }),
           window,
-          { strTitle: (0, n.Xx)("#Login_SignIn") },
+          { strTitle: (0, a.Xx)("#Login_SignIn") },
         );
       }
       function c(e) {
@@ -572,11 +578,11 @@
           [s] = (0, r.useState)(
             new d.J(o.De.WEBAPI_BASE_URL).GetAnonymousServiceTransport(),
           ),
-          [a, n] = (0, r.useState)(!1);
+          [n, a] = (0, r.useState)(!1);
         return r.createElement(
           "div",
           null,
-          a
+          n
             ? r.createElement(i.pT, null)
             : r.createElement(i.wK, {
                 autoFocus: !0,
@@ -584,7 +590,7 @@
                 platform: 2,
                 onComplete: (e) => {
                   e == m.TG.k_PrimaryDomainFail
-                    ? n(!0)
+                    ? a(!0)
                     : window.location.assign(t);
                 },
                 redirectUrl: t,

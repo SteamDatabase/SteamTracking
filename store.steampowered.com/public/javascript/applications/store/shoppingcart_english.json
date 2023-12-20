@@ -145,5 +145,6 @@
     "Cart_Empty": "Your cart is empty.",
     "Cart_Notice_SomeAppsPrivate": "Some of these items are already marked as private. They will remain private if you continue:",
     "Cart_LineItemOptions_PrivateTooltip": "Marking a game as private will hide it everywhere outside of your Library. Your ownership, in-game status, playtime, and activity will not be visible to other people.",
-    "Cart_BetaNotice": "You're seeing a new version of the shopping cart because you're participating in the Steam Client Beta. <1>Leave feedback or report bugs</1>"
+    "Cart_BetaNotice": "You're seeing a new version of the shopping cart because you're participating in the Steam Client Beta. <1>Leave feedback or report bugs</1>",
+    "Cart_GiftScheduleError_TooFar": "You cannot schedule a gift for this far in the future."
 }

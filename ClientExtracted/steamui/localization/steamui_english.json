@@ -1740,6 +1740,7 @@
     "Workshop_Subscriptions_ApplyCollection_AddBtn": "Add",
     "Workshop_Subscriptions_ApplyCollection_OverwriteBtn": "Overwrite",
     "Workshop_Subscriptions_ApplyCollection_ViewBtn": "View",
+    "Workshop_Subscriptions_ApplyCollection_CopyLink": "Copy link to collection",
     "AppProperties_Shortcut_TargetExecutable": "Target",
     "AppProperties_Shortcut_StartInFolder": "Start In",
     "AppProperties_Shortcut_BrowseFiles": "Browse...",
@@ -7995,7 +7996,6 @@
     "AppControllerConfiguration_NoControllers": "No controller connected",
     "AppDetailsControllerSection_Title_Unknown": "Unknown Controller Support",
     "AppDetailsControllerSection_Unknown": "This game has not yet provided new controller support information and support for your device is unknown",
-    "steamui_dummy": "DO NOT USE ME",
     "GameList_View_FamilyGroup": "Steam Family",
     "Notification_FamilyGroup_PlaytimeWarning_Title": "Families",
     "Notification_FamilyGroup_PlaytimeWarning_Body": "Your playtime limit is approaching. You have %1$s minute remaining.",
@@ -8017,5 +8017,6 @@
     "FamilyView_RequestFeatureAccess_AlwaysBlocked": "Access to this functionality has been restricted by an adult in your family and cannot be requested.",
     "FamilyView_RequestFeatureAccess_Offline": "You are currently disconnected from Steam. Go online to request access to this functionality from an adult in your family.",
     "FamilyView_RequestFeatureAccess_Request": "Request Access",
-    "FamilyView_RequestFeatureAccess_GenericError": "An error occurred. Please try again later. (%1$s)"
+    "FamilyView_RequestFeatureAccess_GenericError": "An error occurred. Please try again later. (%1$s)",
+    "steamui_dummy": "DO NOT USE ME"
 }

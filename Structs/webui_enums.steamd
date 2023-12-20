@@ -6240,14 +6240,6 @@ enum UnnamedEnum55a9e12958fe69d4
 	Days = 86400000;
 }
 
-enum UnnamedEnum56fdca98a5fc5dc5
-{
-	NOT_TRACKING_ = undefined;
-	UP_TO_DATE_ = 0;
-	POSSIBLY_STALE_ = 1;
-	STALE_ = 2;
-}
-
 enum UnnamedEnum57a3dfe446c1fa85
 {
 	Low = 0;
