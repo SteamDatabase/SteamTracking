@@ -195,7 +195,7 @@
         v = n(49234),
         h = n(52316),
         E = n(17547),
-        S = n(87345),
+        S = n(1358),
         I = n(74314);
       let _ = class extends o.Component {
         constructor() {

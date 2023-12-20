@@ -620,11 +620,11 @@
             r.IS,
             {
               href: N ? null : B,
-              style: { display: "block" },
+              style: { display: "block", cursor: "pointer" },
               preferredFocus: p,
               onClick: N,
             },
-            s.createElement(f.vs, { appids: I, hide_status_banners: i }),
+            s.createElement(f.v, { appids: I, hide_status_banners: i }),
             s.createElement(_.a4, { imageType: d, info: a }),
             s.createElement(S.y, {
               eDeckCompatibilityCategory:
@@ -1263,9 +1263,13 @@
             "div",
             { className: A.DescCtn },
             s.createElement(
-              m.IS,
-              { className: A.GameNameCtn, href: l },
-              s.createElement("div", { className: A.GameName }, t.GetName()),
+              "div",
+              { className: A.GameNameCtn },
+              s.createElement(
+                m.IS,
+                { className: A.GameName, href: l },
+                t.GetName(),
+              ),
             ),
             s.createElement(
               "div",
@@ -1430,7 +1434,12 @@
       function ie(e) {
         const { id: t, type: a } = e,
           n = ne(t, a);
-        return s.createElement(M.ju, { id: t, type: a, fnOnClickOverride: n });
+        return s.createElement(M.ju, {
+          id: t,
+          type: a,
+          fnOnClickOverride: n,
+          bIsMarketingMessage: !0,
+        });
       }
       const le = s.createContext(null);
       function oe() {

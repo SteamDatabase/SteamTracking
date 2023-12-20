@@ -477,7 +477,9 @@
             JSON.stringify((0, c.kQ)("partner_info", "application_config")),
           );
           this.ValidateStoreDefault(e) &&
-            e.forEach((e) => this.m_mapOptInToPartners.set(e.partnerid, e));
+            (e.forEach((e) => this.m_mapOptInToPartners.set(e.partnerid, e)),
+            "dev" == c.De.WEB_UNIVERSE &&
+              console.log("DEV_DEUBG: CPartnerInfoStore::constructor", e));
         }
         ValidateStoreDefault(e) {
           const r = e;
@@ -494,7 +496,7 @@
         }
       }
       function d(e) {
-        const [r, t] = l.useState(u.Get().GetPartnerInfo(e));
+        const [r, t] = l.useState(() => u.Get().GetPartnerInfo(e));
         return (
           l.useEffect(() => {
             !u.Get().BHasPartnerInfoLoad(e) &&
@@ -1456,23 +1458,23 @@
         );
       }
       var W = t(19238),
-        z = t(6429),
-        Z = t(16826),
-        V = t(84343);
+        V = t(6429),
+        z = t(16826),
+        Z = t(84343);
       function $(e) {
         return a.createElement(
           "a",
           {
             href: `${f.De.STORE_BASE_URL}search/?controllersupport=${e.strCategory}`,
-            className: z.InfoRow,
+            className: V.InfoRow,
           },
           a.createElement(
             "div",
             {
               className: (0, H.Z)(
-                z.ImgSection,
-                e.bHightlightRow && z.HighlightRow,
-                e.bHighlightGPRequired && z.GamepadRequired,
+                V.ImgSection,
+                e.bHightlightRow && V.HighlightRow,
+                e.bHighlightGPRequired && V.GamepadRequired,
               ),
             },
             e.tagImage,
@@ -1481,33 +1483,33 @@
             "div",
             {
               className: (0, H.Z)(
-                z.LocSection,
-                e.bHighlightText && z.HighlightText,
-                e.bHightlightRow && z.HighlightRow,
-                e.bHighlightGPRequired && z.GamepadRequired,
+                V.LocSection,
+                e.bHighlightText && V.HighlightText,
+                e.bHightlightRow && V.HighlightRow,
+                e.bHighlightGPRequired && V.GamepadRequired,
               ),
             },
             a.createElement(
               "div",
               {
                 className: (0, H.Z)(
-                  z.LocString,
-                  e.bHighlightText && z.HighlightText,
-                  e.bHightlightRow && z.HighlightRow,
-                  e.bHighlightGPRequired && z.GamepadRequired,
-                  e.bPersonalized && z.Personalized,
+                  V.LocString,
+                  e.bHighlightText && V.HighlightText,
+                  e.bHightlightRow && V.HighlightRow,
+                  e.bHighlightGPRequired && V.GamepadRequired,
+                  e.bPersonalized && V.Personalized,
                 ),
               },
               (0, s.Xx)(e.strLocalizationToken),
             ),
             e.strTooltipString &&
               a.createElement(
-                V.HP,
+                Z.HP,
                 {
                   toolTipContent: (0, s.Xx)(e.strTooltipString),
-                  className: z.ToolTipContainer,
+                  className: V.ToolTipContainer,
                 },
-                a.createElement("span", { className: z.ToolTipControl }, "?"),
+                a.createElement("span", { className: V.ToolTipControl }, "?"),
               ),
           ),
         );
@@ -1515,14 +1517,14 @@
       function j(e) {
         return a.createElement(
           "div",
-          { className: z.PreviewContainer },
+          { className: V.PreviewContainer },
           a.createElement(J, Object.assign({ bPreview: !0 }, e)),
         );
       }
       function q() {
         return a.createElement($, {
-          tagImage: a.createElement(Z.by3, {
-            className: (0, H.Z)(z.Tilt, z.SmallerSVG),
+          tagImage: a.createElement(z.by3, {
+            className: (0, H.Z)(V.Tilt, V.SmallerSVG),
           }),
           strLocalizationToken: "#Store_ControllerSupport_GamepadRequired",
           bHighlightGPRequired: !0,
@@ -1533,13 +1535,13 @@
       function Y() {
         return a.createElement(
           "div",
-          { className: (0, H.Z)(z.PurchaseNoticeContainer) },
-          a.createElement(Z.atL, {
-            className: (0, H.Z)(z.PurchaseNoticeImage),
+          { className: (0, H.Z)(V.PurchaseNoticeContainer) },
+          a.createElement(z.atL, {
+            className: (0, H.Z)(V.PurchaseNoticeImage),
           }),
           a.createElement(
             "div",
-            { className: (0, H.Z)(z.PurchaseNoticeLabel) },
+            { className: (0, H.Z)(V.PurchaseNoticeLabel) },
             (0, s.Xx)("#Store_ControllerSupport_GamepadPreferred"),
           ),
         );
@@ -1548,7 +1550,7 @@
         const { bNoKeyboardSupport: r, bGamepadPreferred: t } = e;
         return a.createElement(
           "div",
-          { className: (0, H.Z)(z.NoticeContainer) },
+          { className: (0, H.Z)(V.NoticeContainer) },
           r && a.createElement(q, null),
           t && !r && a.createElement(Y, null),
         );
@@ -1571,8 +1573,8 @@
         } = e;
         let E = [];
         if (t && n && o && l) {
-          const e = a.createElement(Z.CtA, {
-              className: z.SmallerSVG,
+          const e = a.createElement(z.CtA, {
+              className: V.SmallerSVG,
               controllerType: 34,
               partial: !i,
             }),
@@ -1589,8 +1591,8 @@
           );
         } else {
           if (t) {
-            const e = a.createElement(Z.CtA, {
-              className: z.SmallerSVG,
+            const e = a.createElement(z.CtA, {
+              className: V.SmallerSVG,
               controllerType: 34,
               partial: !i,
             });
@@ -1619,8 +1621,8 @@
                 );
           }
           if (n) {
-            const e = a.createElement(Z.CtA, {
-              className: z.SmallerSVG,
+            const e = a.createElement(z.CtA, {
+              className: V.SmallerSVG,
               controllerType: 45,
               partial: !i,
             });
@@ -1658,7 +1660,7 @@
               null,
               a.createElement(
                 "div",
-                { className: z.ControllerSupportLevelString },
+                { className: V.ControllerSupportLevelString },
                 (0, s.Xx)(
                   i
                     ? "#Store_ControllerSupport_FullController"
@@ -1666,8 +1668,8 @@
                 ),
               ),
               a.createElement($, {
-                tagImage: a.createElement(Z.CtA, {
-                  className: z.SmallerSVG,
+                tagImage: a.createElement(z.CtA, {
+                  className: V.SmallerSVG,
                   controllerType: 32,
                   partial: !i,
                 }),
@@ -1680,8 +1682,8 @@
               E,
               u &&
                 a.createElement($, {
-                  tagImage: a.createElement(Z.IRk, {
-                    className: z.BiggerSVG,
+                  tagImage: a.createElement(z.IRk, {
+                    className: V.BiggerSVG,
                     bGreyOutRightSide: !i,
                   }),
                   strLocalizationToken: "#Store_ControllerSupport_SIAPI",
@@ -1690,7 +1692,7 @@
                 }),
               ((!m && !r) || (!u && d && !_)) &&
                 a.createElement($, {
-                  tagImage: a.createElement(Z.uWd, { className: z.BiggerSVG }),
+                  tagImage: a.createElement(z.uWd, { className: V.BiggerSVG }),
                   strLocalizationToken:
                     d || p || C
                       ? "#Store_ControllerSupport_Unknown_Personalized"
@@ -1943,7 +1945,7 @@
             ),
           );
         return a.createElement(Ce, {
-          stepIMG: a.createElement(Z.Qrh, { type: "xbox" }),
+          stepIMG: a.createElement(z.Qrh, { type: "xbox" }),
           strStepName: (0, s.Xx)("#ControllerSupportModal_StepString", r + 1),
           strStepSubHeaderToken: "#ControllerSupportModal_PgTwo_Header",
           strInstructionsToken: p,
@@ -2057,7 +2059,7 @@
             ),
           );
         return a.createElement(Ce, {
-          stepIMG: a.createElement(Z.Qrh, { type: "ps4" }),
+          stepIMG: a.createElement(z.Qrh, { type: "ps4" }),
           strStepName: (0, s.Xx)("#ControllerSupportModal_StepString", r + 1),
           strStepSubHeaderToken: "#ControllerSupportModal_PgThree_Header",
           strInstructionsToken: i,
@@ -3343,7 +3345,7 @@
             return He.k_ERegionCodeInvalid;
         }
       }
-      function ze(e) {
+      function Ve(e) {
         switch (e) {
           case He.k_ERegionCodeCIS:
             return "The Commonwealth of Independent Stats";
@@ -3357,7 +3359,7 @@
             return "Invalid Region";
         }
       }
-      class Ze {
+      class ze {
         GetKey(e, r, t) {
           return `${e}_${r}_${t || He.k_ERegionCodeInvalid}`;
         }
@@ -3406,7 +3408,7 @@
             });
         }
       }
-      var Ve = t(24166),
+      var Ze = t(24166),
         $e = t(78941),
         je = t(38944),
         qe = t(25871),
@@ -4000,14 +4002,14 @@
               a.createElement(
                 "td",
                 { key: "header" + e },
-                a.createElement(V.HP, { toolTipContent: Be(e) }, we(e)),
+                a.createElement(Z.HP, { toolTipContent: Be(e) }, we(e)),
               ),
             ),
             Oe.map((e) =>
               a.createElement(
                 "td",
                 { key: "header_region" + e },
-                a.createElement(V.HP, { toolTipContent: ze(e) }, Fe(e)),
+                a.createElement(Z.HP, { toolTipContent: Ve(e) }, Fe(e)),
               ),
             ),
           ),
@@ -4109,7 +4111,7 @@
           "td",
           { className: $e.FullCurrencyColumn },
           a.createElement(
-            V.HP,
+            Z.HP,
             { toolTipContent: l },
             a.createElement(br, {
               className: o,
@@ -4204,7 +4206,7 @@
       }
       function Br(e) {
         return a.createElement(
-          Ve.ug,
+          Ze.ug,
           {
             title: "Legend",
             tooltip: "Explains the color scheme per proposed pricing color",
@@ -4256,7 +4258,7 @@
           "div",
           { className: (0, H.Z)(pr.PriceDeltaCtn) },
           a.createElement(
-            Ve.ug,
+            Ze.ug,
             { title: "Reasons Auto-Publish is blocked" },
             a.createElement(
               "p",
@@ -4356,7 +4358,7 @@
             { className: pr.RowCtn },
             a.createElement(Pr, Object.assign({}, e)),
             a.createElement(Hr, Object.assign({}, e)),
-            a.createElement(Vr, Object.assign({}, e)),
+            a.createElement(Zr, Object.assign({}, e)),
           ),
           a.createElement(jr, Object.assign({}, e)),
         );
@@ -4506,7 +4508,7 @@
               hr(o),
               " USD Price doesn't align with any matrix price point. Will compare proposal to scaled guideline.",
             ),
-          a.createElement(Zr, Object.assign({}, e, { USDPriceCents: o })),
+          a.createElement(zr, Object.assign({}, e, { USDPriceCents: o })),
         );
       }
       function Wr(e) {
@@ -4545,7 +4547,7 @@
           )
         );
       }
-      function zr(e) {
+      function Vr(e) {
         const { strGuidanceMessage: r, strDirection: t } = e;
         return a.createElement(
           "thead",
@@ -4582,7 +4584,7 @@
           ),
         );
       }
-      function Zr(e) {
+      function zr(e) {
         const {
             proposal: r,
             oGuideline: t,
@@ -4613,7 +4615,7 @@
                 a.createElement(
                   "table",
                   { className: pr.ThresholdMiniTable },
-                  a.createElement(zr, {
+                  a.createElement(Vr, {
                     strGuidanceMessage: `${l.length} currencies above guidance threshold for USD $ ${e}`,
                     strDirection: "above",
                   }),
@@ -4633,7 +4635,7 @@
                 a.createElement(
                   "table",
                   { className: pr.ThresholdMiniTable },
-                  a.createElement(zr, {
+                  a.createElement(Vr, {
                     strGuidanceMessage: `${i.length} currencies below guidance threshold for USD $ ${e}`,
                     strDirection: "below",
                   }),
@@ -4654,7 +4656,7 @@
         }
         return null;
       }
-      function Vr(e) {
+      function Zr(e) {
         var r;
         const { proposal: t } = e;
         return (null === (r = t.proposed_prices.country_amounts) || void 0 === r
@@ -4729,7 +4731,7 @@
           n = (function () {
             const [e, r] = (0, a.useState)(
               () =>
-                new Ze((0, fe.kQ)("pricing_guideline", "application_config")),
+                new ze((0, fe.kQ)("pricing_guideline", "application_config")),
             );
             return e;
           })(),

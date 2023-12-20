@@ -496,6 +496,15 @@
   overflow: hidden;
   flex-grow: 1;
 }
+@media screen and (max-width: 500px) {
+  .familysharedcomponents_FamilyMemberRow_3QkkY
+    .familysharedcomponents_FamilyMemberRowTop_3kaLZ,
+  .familysharedcomponents_FamilyMemberRow_3QkkY
+    .familysharedcomponents_FamilyMemberRowTop_3kaLZ
+    .familysharedcomponents_Left_3KlqU {
+    flex-direction: column;
+  }
+}
 .familysharedcomponents_FamilyMemberRow_3QkkY
   .familysharedcomponents_InvitePending_2xtN_ {
   display: flex;
@@ -519,6 +528,13 @@
   color: #fff;
   height: 24px;
   width: 24px;
+}
+@media screen and (max-width: 500px) {
+  .familysharedcomponents_FamilyMemberRow_3QkkY
+    .familysharedcomponents_ExpandRowButton_2a0Yy {
+    width: 100%;
+    background-color: #23262e;
+  }
 }
 .familysharedcomponents_FamilyMemberRow_3QkkY
   .familysharedcomponents_ExpandRowButton_2a0Yy:hover {

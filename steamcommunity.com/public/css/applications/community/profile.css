@@ -1372,9 +1372,6 @@ body.profile_edit_page .MiniProfilePreview {
 body.profile_edit_page .ProfileShowcaseSelectorHeader {
   display: none;
 }
-body.profile_edit_page .customization_controls_nextprev {
-  display: block;
-}
 body.profile_edit_page .DialogHeader {
   display: flex;
   justify-content: flex-start;

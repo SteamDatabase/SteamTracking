@@ -244,7 +244,7 @@
 .horizontalscrollbar_ScrollGradientCtn_3fqpl
   .horizontalscrollbar_FrontGradient_1hkgv {
   float: left;
-  background-color: #171d25;
+  background-color: #282a31;
   height: 100%;
   width: 28px;
   -webkit-mask-image: linear-gradient(to left, transparent 8px, black 20px);
@@ -258,7 +258,7 @@
 .horizontalscrollbar_ScrollGradientCtn_3fqpl
   .horizontalscrollbar_EndGradient_2JQjg {
   float: right;
-  background-color: #171d25;
+  background-color: #25282e;
   height: 100%;
   width: 28px;
   -webkit-mask-image: linear-gradient(to right, transparent 8px, black 20px);
@@ -283,7 +283,7 @@
   .horizontalscrollbar_ScrollBarCtn_13PY_ {
   position: relative;
   flex: 1;
-  height: 12px;
+  height: 8px;
 }
 .horizontalscrollbar_ScrollbarAndSiblings_3W7zz
   .horizontalscrollbar_ScrollBarCtn_13PY_.horizontalscrollbar_HideScrollBar_1twVP {
@@ -293,9 +293,9 @@
 .horizontalscrollbar_ScrollbarAndSiblings_3W7zz
   .horizontalscrollbar_ScrollBarCtn_13PY_
   .horizontalscrollbar_ScrollTrack_1Vd-p {
-  background-color: rgba(103, 112, 123, 0.1333333333);
-  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.6666666667);
-  height: 8px;
+  background-color: rgba(0, 0, 0, 0.0196078431);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.4);
+  height: 6px;
   margin-top: 2px;
   margin-bottom: auto;
   border-radius: 3px;
@@ -308,7 +308,7 @@
   width: 0;
   height: 0;
   left: -6px;
-  top: 2px;
+  top: 0px;
   border-left: 5px solid rgba(0, 0, 0, 0);
   border-right: 5px solid rgba(0, 0, 0, 0);
   border-top: 5px solid #b8bcbf;
@@ -342,16 +342,16 @@
   position: absolute;
   background-color: rgba(226, 231, 235, 0.2);
   background-color: linear-gradient(-45deg, red 8%, blue 90%);
-  height: 12px;
+  height: 8px;
   top: 0;
   left: 0;
-  min-width: 8px;
+  min-width: 6px;
   border-radius: 3px;
   cursor: grab;
   z-index: 11;
   transition-duration: 0.1s;
   transition-property: filter;
-  box-shadow: 0 0 12px rgba(6, 8, 11, 0.5333333333);
+  box-shadow: 0 0 8px rgba(6, 8, 11, 0.2666666667);
   backdrop-filter: blur(0.3px);
   border-top: 1px solid rgba(255, 255, 255, 0.0666666667);
   border-bottom: 1px solid rgba(0, 0, 0, 0.0666666667);
@@ -408,15 +408,28 @@
   align-items: center;
 }
 .userselectioncontrols_UserSelectionButton_3irz5.DialogButton > svg {
-  width: 24px;
-  height: 24px;
+  width: 22px;
+  height: 22px;
 }
 .userselectioncontrols_UserSelectionButton_3irz5.DialogButton.userselectioncontrols_AddUserMarker_3Rc_v {
   color: #1a9fff;
   padding: 8px;
+  height: 20px;
+  border-radius: 3px;
+  backdrop-filter: blur(12px);
+}
+.userselectioncontrols_UserSelectionButton_3irz5.DialogButton.userselectioncontrols_AddUserMarker_3Rc_v
+  .userselectioncontrols_AddMarkerLabel_3Pkoj {
+  line-height: 16px;
+  width: max-content;
+  font-weight: 500;
+  text-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2666666667);
+  text-align: left;
+  padding: 0px 4px;
 }
 .userselectioncontrols_UserSelectionButton_3irz5.DialogButton.userselectioncontrols_AddUserMarker_3Rc_v:hover {
   color: #0bf;
+  background-color: rgba(255, 255, 255, 0.3);
 }
 .userselectioncontrols_UserSelectionButton_3irz5.DialogButton.userselectioncontrols_StartClipRange_lZppc {
   visibility: collapse;
@@ -440,6 +453,9 @@
   width: 24px;
   padding: 10px;
   background-color: #3d4450;
+  transition-property: transform;
+  transition-duration: 0.1s;
+  transition-timing-function: ease-in-out;
 }
 .userselectioncontrols_UserSelectionButton_3irz5.DialogButton.userselectioncontrols_InlineClipControl_2wm_V
   > svg {
@@ -448,7 +464,11 @@
 }
 .userselectioncontrols_UserSelectionButton_3irz5.DialogButton.userselectioncontrols_InlineClipControl_2wm_V:hover {
   color: #ffe088;
+  transform: scale(1.06);
   background-color: #454d5b;
+}
+.userselectioncontrols_UserSelectionButton_3irz5.DialogButton.userselectioncontrols_InlineClipControl_2wm_V:hover:active {
+  transform: scale(0.96);
 }
 .zoomcontrol_ZoomControls_f2gx_ {
   display: flex;
@@ -1029,12 +1049,14 @@
   position: absolute;
   color: #3d4450;
   height: fit-content;
-  background-color: #171d25;
   padding: 0px 2px 2px 0px;
   margin-left: 0px;
   margin-top: 8px;
 }
 .datedecorator_TimelineRelativeDate_1D9m_.datedecorator_Overlay_RZAFF {
+  color: #67707b;
+}
+.datedecorator_TimelineRelativeDate_1D9m_.datedecorator_ManagerView_1-j3U {
   color: #67707b;
 }
 @keyframes backgroundticks_timelineFadeIn_28Avs {
@@ -1889,9 +1911,9 @@
   position: absolute;
   color: #67707b;
   background: linear-gradient(
-    rgba(23, 29, 37, 0) 40%,
-    #171d25 41%,
-    #171d25 100%
+    rgba(38, 41, 47, 0) 40%,
+    #26292f 41%,
+    #26292f 100%
   );
   padding: 6px 6px 0px 2px;
   margin-left: -1px;
@@ -2839,8 +2861,6 @@
   transition-timing-function: ease-out;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
   filter: brightness(1);
-  font-size: 11px;
-  line-height: 22px;
   text-align: center;
 }
 .playbackcontrols_PlaybackButton_2W5Kg:active,
@@ -2858,7 +2878,7 @@
 }
 .playbackcontrols_PlaybackButton_2W5Kg:active,
 .playbackcontrols_PlaybackButton_2W5Kg:hover {
-  transform: scale(1.03);
+  transform: scale(1.08);
 }
 .playbackcontrols_PlaybackButton_2W5Kg:hover:active {
   transform: scale(0.96);
@@ -2873,15 +2893,32 @@
   display: none;
 }
 .playbackcontrols_JumpButton_2dKFb {
-  font-size: 10px;
+  font-size: 12px;
+  line-height: 22px;
   font-weight: 500;
   font-family: "Roboto Mono", monospace;
   flex: 1;
-  text-align: center;
+  text-align: left;
 }
 .playbackcontrols_JumpButton_2dKFb:not(:hover)
   .playbackcontrols_JumpLegend_pqvN- {
   display: none;
+}
+.playbackcontrols_JumpLegend_pqvN- {
+  position: absolute;
+  left: 4px;
+}
+.playbackcontrols_NudgeBackButton_UaITj:hover:active {
+  transform: translateX(-1px);
+}
+.playbackcontrols_NudgeForwardButton_2y_f0:hover:active {
+  transform: translateX(1px);
+}
+.playbackcontrols_JumpBackButton_39u7G:hover:active {
+  transform: translateX(-3px);
+}
+.playbackcontrols_JumpForwardButton_2H7GM:hover:active {
+  transform: translateX(3px);
 }
 .playbackcontrols_CircleButtonLarge_2RnUQ {
   height: 48px;
@@ -2961,7 +2998,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background-color: #0e141b;
+  background-color: #0b1016;
   box-shadow: inset 0 0 80px rgba(0, 0, 0, 0.7333333333);
 }
 .gamerecordingplayer_GameRecordingPlayer_3jI6y.gamerecordingplayer_NoVideo_23VPl {
@@ -2972,7 +3009,7 @@
   height: 100%;
   object-fit: contain;
   object-position: 50% 50%;
-  background-color: #0e141b;
+  background-color: #0b1016;
 }
 .gamerecordingplayer_GameRecordingPlayer_3jI6y video:focus {
   outline: none;

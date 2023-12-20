@@ -6947,7 +6947,6 @@ body.modals_BodyNoScrollDialog_3jhMI {
 .personanameandstatus_richPresenceContainer_3sxE7 {
   display: flex;
   flex-direction: column;
-  width: calc(100% - 30px);
 }
 .personanameandstatus_richPresenceContainer_3sxE7.GamepadMode
   .personanameandstatus_gameName_1cB0q.personanameandstatus_richPresenceLabel_2Ri00.personanameandstatus_threeLines_1oYSX,
@@ -6978,7 +6977,7 @@ body.modals_BodyNoScrollDialog_3jhMI {
     black calc(100% - 8px),
     rgba(0, 0, 0, 0.15) 100%
   );
-  margin-right: -24px;
+  padding-right: 24px;
 }
 .BasicUI .personanameandstatus_richPresenceLabel_2Ri00 {
   display: block;
@@ -37728,16 +37727,14 @@ div.ModalPosition_TopBar {
   height: 100%;
 }
 .DialogHeader {
-  font-weight: 300;
-  font-size: 32px;
-  line-height: 36px;
-  letter-spacing: 2px;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 30px;
   color: #fff;
-  text-transform: uppercase;
   flex-shrink: 0;
   user-select: none;
   margin-right: 26px;
-  margin-bottom: 12px;
+  margin-bottom: 4px;
 }
 .DesktopUI .DialogHeader,
 .friendsui-container .DialogHeader {

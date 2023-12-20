@@ -3544,10 +3544,32 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   font-size: 16px;
   word-break: break-word;
   hyphens: auto;
+  width: 100%;
 }
 @media screen and (max-width: 500px) {
   .yirbadges_SpiderResponsiveContainer_3-KEF {
     height: 65% !important;
+  }
+}
+.yirbadges_RadarChartLegend_z0GkT {
+  columns: 2;
+  align-self: center;
+  width: 66vw;
+  color: #fff;
+  text-align: left;
+  font-size: 16px;
+  word-break: break-word;
+  hyphens: auto;
+  list-style-position: inside;
+  padding-bottom: 16px;
+}
+.yirbadges_RadarChartLegend_z0GkT li {
+  padding-bottom: 8px;
+  padding-right: 16px;
+}
+@media screen and (max-width: 620px) {
+  .yirbadges_RadarChartLegend_z0GkT {
+    margin-top: -15vw;
   }
 }
 .yirbadges_NumbersRowsCnt_1s-wI {

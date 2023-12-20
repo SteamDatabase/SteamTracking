@@ -2210,6 +2210,11 @@
                     br: n.FE.readBool,
                     bw: n.Xc.writeBool,
                   },
+                  include_dependencies: {
+                    n: 5,
+                    br: n.FE.readBool,
+                    bw: n.Xc.writeBool,
+                  },
                 },
               }),
             o.sm_m

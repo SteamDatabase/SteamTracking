@@ -3208,8 +3208,13 @@ body.ShoppingCart {
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
   font-weight: normal;
 }
+.shoppingcart_CartCard_2w0ZE {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 15px;
+}
 .shoppingcart_ShoppingCartPage_22xts {
   max-width: 940px;
+  min-height: 50vh;
   margin: 0 auto;
 }
 .shoppingcart_ShoppingCartPage_22xts .shoppingcart_CartCheckboxNoMargin_1S9a0 {
@@ -3220,7 +3225,7 @@ body.ShoppingCart {
   font-weight: 800;
   font-size: 22px;
   color: #fff;
-  margin-bottom: 10px;
+  margin-bottom: 25px;
 }
 .shoppingcart_ShoppingCartCtn_1jqUY {
   display: flex;
@@ -3230,6 +3235,9 @@ body.ShoppingCart {
 .shoppingcart_ShoppingCartCtn_1jqUY .shoppingcart_ShoppingCartLeftCol_17GFd {
   max-width: 615px;
   flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 .shoppingcart_LoadingThrobber_eDdFp {
   position: absolute;
@@ -3274,6 +3282,7 @@ body.ShoppingCart {
 }
 .shoppingcart_ShoppingCartBreadcrumbs_2FKdJ {
   color: #8f98a0;
+  margin-top: 25px;
 }
 .shoppingcart_ShoppingCartBreadcrumbs_2FKdJ
   .shoppingcart_CurrentBreadcrumb_3TtUD {
@@ -3289,11 +3298,11 @@ body.ShoppingCart {
   color: #fff;
   display: block;
   background: #5c7e10;
-  font-weight: 700;
   text-transform: none;
   line-height: 20px;
   cursor: pointer;
   padding: 0px 20px;
+  border-radius: 1px;
 }
 .shoppingcart_CartCountButton_aB8cK:hover {
   color: #fff;
@@ -3312,14 +3321,13 @@ body.ShoppingCart {
 }
 .shoppingcart_ShoppingCartModalBtns_1qRag {
   display: flex;
+  margin-top: 20px;
 }
 .shoppingcart_ShoppingCartModalBtns_1qRag .shoppingcart_OpenCartBtn_5w5S6 {
   margin-left: 20px;
-  font-weight: 700;
 }
 .shoppingcart_FooterNotice_LXZhw {
   display: flex;
-  margin-bottom: 15px;
   font-size: 13px;
 }
 .shoppingcart_FooterNotice_LXZhw .shoppingcart_NoticeIndex_3GJop {
@@ -3329,7 +3337,13 @@ body.ShoppingCart {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  margin-bottom: 20px;
+}
+.shoppingcart_LineItemsCtn_3SgHV .shoppingcart_StoreSalePriceBox_2kwAc {
+  padding-right: 0px;
+}
+.shoppingcart_LineItemsCtn_3SgHV
+  .shoppingcart_StoreSaleDiscountedPriceCtn_1qzcv {
+  padding-right: 0px;
 }
 .shoppingcart_CartFooter_1Sdz1 {
   display: flex;
@@ -3340,6 +3354,49 @@ body.ShoppingCart {
 .shoppingcart_CartFooter_1Sdz1 .shoppingcart_Button_1rk1x {
   padding-left: 12px;
   padding-right: 12px;
+}
+.shoppingcart_BetaNotice_1DTyD {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+}
+.shoppingcart_BetaNotice_1DTyD .shoppingcart_Text_I4Bz9,
+.shoppingcart_BetaNotice_1DTyD a {
+  flex: 1;
+  color: #8b9db0;
+}
+.shoppingcart_BetaNotice_1DTyD a {
+  text-decoration: underline;
+}
+.shoppingcart_BetaNotice_1DTyD a:hover {
+  color: #fff;
+}
+.shoppingcart_BackgroundImage_FaiD8 {
+  background-position: center top;
+  background-repeat: no-repeat;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.page_root {
+  position: relative;
+}
+.shoppingcart_HeaderNotices_3SXN1 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+.shoppingcart_HeaderNotice_2zWY- {
+  padding: 15px;
+  color: #0e141b;
+  background-color: #ffc82c;
+  font-size: 12px;
+  font-weight: 500;
 }
 .purchasenotices_PurchaseNoticeContainer_3MM2B {
   display: flex;
@@ -3937,16 +3994,14 @@ div.ModalPosition_TopBar {
   height: 100%;
 }
 .DialogHeader {
-  font-weight: 300;
-  font-size: 32px;
-  line-height: 36px;
-  letter-spacing: 2px;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 30px;
   color: #fff;
-  text-transform: uppercase;
   flex-shrink: 0;
   user-select: none;
   margin-right: 26px;
-  margin-bottom: 12px;
+  margin-bottom: 4px;
 }
 .DesktopUI .DialogHeader,
 .friendsui-container .DialogHeader {

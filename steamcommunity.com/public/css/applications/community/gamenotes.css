@@ -396,11 +396,642 @@
 .throbber_ThrobberDelayAppear_34XSs.throbber_Visible_1ziaT {
   opacity: 1;
 }
+.throbber_NewThrobber_tAKvs img {
+  width: 100%;
+}
+.bbcodes_Bold_1opdq {
+  display: inline;
+  font-weight: bold;
+}
+.bbcodes_Italic_3PSCE {
+  display: inline;
+  font-style: italic;
+}
+p.bbcodes_Paragraph_3zjkn {
+  margin: 0.5em 0;
+}
+.bbcodes_Header1_38GFQ {
+  display: block;
+  color: #fff;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 31px;
+  margin-bottom: 4px;
+}
+.bbcodes_Header2_2ZqUv {
+  color: #fff;
+  font-size: 22px;
+  line-height: 28px;
+  font-weight: 400;
+}
+.bbcodes_Header3_KePJs {
+  color: #fff;
+  font-size: 19px;
+  line-height: 25px;
+  font-weight: 400;
+}
+.bbcodes_Header4_12a97 {
+  color: #fff;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+}
+.bbcodes_Header5_4GmIV {
+  color: #fff;
+  font-size: 16px;
+  line-height: 22px;
+}
+.bbcodes_CenterSpan_3RAiC {
+  align-items: center;
+}
+.bbcodes_SmallText_UvZC_ {
+  color: #fff;
+  font-size: 11px;
+  line-height: 13px;
+}
+.bbcodes_Underline_3vpZi {
+  display: inline;
+  text-decoration: underline;
+}
+.bbcodes_Strike_3dQvq {
+  display: inline;
+  text-decoration: line-through;
+}
+.bbcodes_Spoiler_3Caxn {
+  display: inline;
+  box-sizing: border-box;
+  color: #000;
+  background-color: #000;
+  padding: 0px 8px;
+}
+.bbcodes_Spoiler_3Caxn:hover,
+.bbcodes_Spoiler_3Caxn.bbcodes_Revealed_35II0 {
+  color: #fff;
+}
+.bbcodes_Spoiler_3Caxn:hover .bbcodes_SpoilerText_1owPz,
+.bbcodes_Spoiler_3Caxn.bbcodes_Revealed_35II0 .bbcodes_SpoilerText_1owPz {
+  visibility: visible;
+  transition-delay: 80ms;
+  transition-duration: 120ms;
+}
+.bbcodes_Spoiler_3Caxn .bbcodes_SpoilerText_1owPz {
+  visibility: hidden;
+  transition-delay: 80ms;
+  transition-duration: 120ms;
+}
+.bbcodes_DisabledMouseEvents_3QOEi {
+  pointer-events: none;
+}
+.bbcodes_BlockQuote_2sfht {
+  display: table;
+  box-sizing: border-box;
+  border: 1px solid #56707f;
+  border-radius: 3px;
+  padding: 12px;
+  margin: 8px;
+  font-size: 92%;
+}
+.bbcodes_QuoteAuthor_2CMyS {
+  display: block;
+  font-style: italic;
+}
+.bbcodes_PullQuote_3DRIe {
+  width: 33%;
+  min-width: 200px;
+  float: right;
+  border-radius: 3px;
+  font-size: 22px;
+  font-weight: 500;
+  color: #fff;
+  display: table;
+  word-break: break-word;
+  line-height: 28px;
+  padding: 0px 0px 10px 20px;
+}
+.bbcodes_Code_1Aels,
+.bbcodes_CodeBlock_1paKw {
+  font-size: 11px;
+  font-family: Consolas, monospace;
+  white-space: pre;
+  white-space: pre-wrap;
+}
+.bbcodes_CodeBlock_1paKw {
+  display: block;
+  border: 1px solid #535354;
+  border-radius: 3px;
+  padding: 12px;
+  margin: 8px;
+  overflow-x: auto;
+}
+.bbcodes_List_tfM5V {
+  display: block;
+  padding-inline-start: 40px;
+}
+.bbcodes_OrderedList_3Ve1E {
+  display: block;
+  padding-inline-start: 40px;
+}
+.bbcodes_OrderedList_3Ve1E .bbcodes_OrderedList_3Ve1E {
+  margin-top: 4px;
+}
+.bbcodes_ListItem_3DlO0 {
+  list-style-position: outside;
+  margin-bottom: 5px;
+}
+.bbcodes_HR_26oRB {
+  border: none;
+  height: 1px;
+  color: #6e7577;
+  background-color: #6e7577;
+  margin: 12px 0px;
+}
+.bbcodes_Table_2Z51g {
+  display: table;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+.bbcodes_Table_2Z51g.bbcodes_NoBorder_3aoME {
+  position: relative;
+}
+.bbcodes_Table_2Z51g.bbcodes_NoBorder_3aoME .bbcodes_TableRow_Ms77J,
+.bbcodes_Table_2Z51g.bbcodes_NoBorder_3aoME
+  .bbcodes_TableRow_Ms77J:first-of-type,
+.bbcodes_Table_2Z51g.bbcodes_NoBorder_3aoME .bbcodes_TableData_2t3YC,
+.bbcodes_Table_2Z51g.bbcodes_NoBorder_3aoME
+  .bbcodes_TableData_2t3YC:first-of-type,
+.bbcodes_Table_2Z51g.bbcodes_NoBorder_3aoME .bbcodes_TableHeader_1vvfx,
+.bbcodes_Table_2Z51g.bbcodes_NoBorder_3aoME
+  .bbcodes_TableHeader_1vvfx:first-of-type {
+  border: none;
+}
+.bbcodes_Table_2Z51g.bbcodes_EqualCells_5b-QB {
+  width: 100%;
+  table-layout: fixed;
+}
+.bbcodes_Table_2Z51g .bbcodes_TableRow_Ms77J {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.bbcodes_Table_2Z51g .bbcodes_TableRow_Ms77J:first-of-type {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+.bbcodes_Table_2Z51g .bbcodes_TableData_2t3YC {
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+.bbcodes_Table_2Z51g .bbcodes_TableData_2t3YC:first-of-type {
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+}
+.bbcodes_TableHeader_1vvfx {
+  display: table-cell;
+  font-weight: bold;
+  padding: 4px;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+.bbcodes_TableHeader_1vvfx:first-of-type {
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+}
+.bbcodes_TableRow_Ms77J {
+  display: table-row;
+}
+.bbcodes_TableData_2t3YC {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 4px;
+}
+.bbcodes_ExpandSectionBlock_YvEQh .bbcodes_ExpandSectionHeader_3OxxM {
+  padding: 3px 8px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: fit-content;
+  background-color: rgba(255, 255, 255, 0.11);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  cursor: pointer;
+  color: #aebac2;
+}
+.bbcodes_ExpandSectionBlock_YvEQh
+  .bbcodes_ExpandSectionHeader_3OxxM
+  .bbcodes_EmbedArrow_WXJl-
+  svg {
+  margin-left: 10px;
+  width: 12px;
+  height: 12px;
+  fill: #aebac2;
+  transition: transform;
+  transition-duration: 0.2s;
+}
+.bbcodes_ExpandSectionBlock_YvEQh .bbcodes_ExpandSectionHeader_3OxxM:hover {
+  color: #fff;
+}
+.bbcodes_ExpandSectionBlock_YvEQh
+  .bbcodes_ExpandSectionHeader_3OxxM:hover
+  .bbcodes_EmbedArrow_WXJl-
+  svg {
+  fill: #fff;
+}
+.bbcodes_ExpandSectionBlock_YvEQh .bbcodes_ExpandSectionBody_2sCNL {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 8px;
+  border-radius: 2px;
+}
+.bbcodes_ExpandSectionBlock_YvEQh.bbcodes_ExpandSection_WithTitle_22nl0 {
+  padding-bottom: 8px;
+}
+.bbcodes_ExpandSectionBlock_YvEQh.bbcodes_ExpandSection_WithTitle_22nl0
+  .bbcodes_ExpandSectionHeader_3OxxM {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 8px;
+  color: #fff;
+  font-size: 19px;
+  line-height: 22px;
+  font-weight: 300;
+}
+.bbcodes_ExpandSectionBlock_YvEQh.bbcodes_ExpandSection_WithTitle_22nl0
+  .bbcodes_ExpandSectionHeader_3OxxM
+  .bbcodes_EmbedArrow_WXJl- {
+  margin-left: auto;
+}
+.bbcodes_ExpandSectionBlock_YvEQh.bbcodes_ExpandSection_WithTitle_22nl0
+  .bbcodes_ExpandSectionHeader_3OxxM
+  .bbcodes_EmbedArrow_WXJl-
+  svg {
+  margin-right: 8px;
+}
+a.bbcodes_LinkButton_lMVeY {
+  background-color: #2681da;
+  font-size: 14px;
+  padding: 6px 20px;
+  display: inline-block;
+  border-radius: 3px;
+  margin: 4px 0px;
+}
+a.bbcodes_LinkButton_lMVeY span {
+  color: #fff;
+  padding-bottom: 6px;
+}
+a.bbcodes_LinkButton_lMVeY:hover {
+  background-color: #3691fa;
+  color: #fff;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+.bbcodes_Image_1CmpC {
+  max-width: 100%;
+}
+.prosemirror_Container_3lEt5 {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+.prosemirror_Container_3lEt5 > .ProseMirror {
+  padding: 12px;
+  user-select: auto;
+}
+.prosemirror_ToolbarRow_2H40R {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+.prosemirror_ToolbarRow_2H40R .prosemirror_CommandButton_1-R1U {
+  margin-right: 4px;
+  width: 30px;
+  height: 30px;
+}
+.BasicUI .prosemirror_ToolbarRow_2H40R .prosemirror_CommandButton_1-R1U {
+  padding: unset;
+  margin-right: 4px;
+  min-width: unset;
+}
+.BasicUI
+  .prosemirror_ToolbarRow_2H40R
+  .prosemirror_CommandButton_1-R1U.gpfocus {
+  color: #0e141b;
+}
+.BasicUI
+  .prosemirror_ToolbarRow_2H40R
+  .prosemirror_CommandButton_1-R1U.gpfocus
+  svg {
+  fill: currentColor;
+  stroke: currentColor;
+  color: inherit;
+}
+.BasicUI
+  .prosemirror_ToolbarRow_2H40R
+  .prosemirror_CommandButton_1-R1U.gpfocus
+  svg
+  path {
+  stroke: currentColor;
+}
+.BasicUI
+  .prosemirror_ToolbarRow_2H40R
+  .prosemirror_CommandButton_1-R1U.gpfocus
+  svg
+  line,
+.BasicUI
+  .prosemirror_ToolbarRow_2H40R
+  .prosemirror_CommandButton_1-R1U.gpfocus
+  svg
+  polygon {
+  stroke: currentColor;
+  fill: currentColor;
+}
+.prosemirror_ToolbarRow_2H40R
+  .prosemirror_CommandButton_1-R1U.DialogButton
+  .SVGIcon_Button {
+  width: 20px;
+  height: 20px;
+  padding-bottom: 4px;
+  padding-left: 1px;
+}
+.prosemirror_ToolbarRow_2H40R
+  .prosemirror_CommandButton_1-R1U.DialogButton
+  .SVGIcon_Button.SVGIcon_TextBold,
+.prosemirror_ToolbarRow_2H40R
+  .prosemirror_CommandButton_1-R1U.DialogButton
+  .SVGIcon_Button.SVGIcon_TextItalic,
+.prosemirror_ToolbarRow_2H40R
+  .prosemirror_CommandButton_1-R1U.DialogButton
+  .SVGIcon_Button.SVGIcon_TextUnderline,
+.prosemirror_ToolbarRow_2H40R
+  .prosemirror_CommandButton_1-R1U.DialogButton
+  .SVGIcon_Button.SVGIcon_TextStrikethrough {
+  width: 18px;
+  height: 18px;
+}
+.prosemirror_ToolbarRow_2H40R
+  .prosemirror_CommandButton_1-R1U.DialogButton
+  .SVGIcon_Button.SVGIcon_SpellCheck {
+  width: 20px;
+  height: 20px;
+  margin-left: 1px;
+  margin-top: 1px;
+}
+.prosemirror_ToolbarRow_2H40R
+  .prosemirror_CommandButton_1-R1U.DialogButton
+  .SVGIcon_Button.SVGIcon_TextUnderline {
+  padding-bottom: 5px;
+}
+.prosemirror_ToolbarRow_2H40R
+  .prosemirror_CommandButton_1-R1U.prosemirror_Toggled_41y1p {
+  background: #626c7f;
+  color: #fff;
+}
+.prosemirror_ToolbarRow_2H40R .prosemirror_Gap_2BPaP {
+  width: 12px;
+}
+.prosemirror_ToolbarRow_2H40R .prosemirror_Spacer_2Zt31 {
+  flex: 1;
+}
+.prosemirror_ExpandButton_3454x svg {
+  width: 21px;
+  height: 21px;
+  padding-top: 6px;
+}
+.prosemirror_ExpandButton_3454x.prosemirror_Toggled_41y1p svg {
+  transform: rotate(180deg);
+  margin-top: 3px;
+  margin-right: 1px;
+}
+.pmhover_Hover_3tNcT {
+  position: absolute;
+  background: #ccc;
+  color: #000;
+  padding: 4px;
+}
+.pmhover_Link_ovQsF {
+  font-size: 12px;
+}
+.pmhover_LinkHelp_2Az4l {
+  font-size: 10px;
+  font-weight: italic;
+}
 .gamenotes_Page_ZUB8z {
   display: flex;
   flex-direction: row;
-  margin: 0 2%;
+  margin: 12px 2%;
+  min-height: 50vh;
+  max-height: 90vh;
 }
 .gamenotes_Page_ZUB8z .gamenotes_Content_1aZdz {
   flex: 1;
+  display: flex;
+  min-width: 0;
+}
+.gamenotes_NotesPagedSettings_1dBCP {
+  flex: 1;
+  height: auto;
+}
+.gamenotes_NotesPagedSettings_1dBCP .DialogContentTransition {
+  width: auto;
+  max-width: none;
+}
+.gamenotes_NotesPagedSettings_1dBCP
+  .gamenotes_NotePage_2r0iB
+  > .DialogContent_InnerWidth {
+  max-width: none;
+  min-height: 0;
+}
+.gamenotes_NotesPagedSettings_1dBCP.gamenotes_PinnedView_3mIft
+  .DialogContentTransition {
+  background: none;
+}
+.gamenotes_NotesPagedSettings_1dBCP.gamenotes_PinnedView_3mIft .PageListColumn {
+  visibility: hidden;
+}
+.gamenotes_NotesPagedSettings_1dBCP.gamenotes_PinnedView_3mIft
+  .gamenotes_NotePage_2r0iB {
+  background: none;
+}
+.gamenotes_NotesPagedSettings_1dBCP.gamenotes_PinnedView_3mIft
+  .gamenotes_Toolbar_A6mhR,
+.gamenotes_NotesPagedSettings_1dBCP.gamenotes_PinnedView_3mIft
+  .gamenotes_NoteActions_3uGOy {
+  visibility: hidden;
+}
+.gamenotes_NotesPagedSettings_1dBCP.gamenotes_PinnedView_3mIft
+  .gamenotes_NoteEditorArea_3WOF4
+  .gamenotes_EditorInput_3zWun {
+  overflow: hidden;
+}
+.gamenotes_NotesPagedSettings_1dBCP .gamenotes_NewNoteButton_2J6kv {
+  width: 36px;
+  height: 36px;
+  margin: 0px 0px 10px 10px;
+  padding: 0px;
+}
+.BasicUI .gamenotes_NotesPagedSettings_1dBCP .gamenotes_NewNoteButton_2J6kv {
+  padding: 0px;
+  min-width: unset;
+  box-sizing: unset;
+  position: absolute !important;
+}
+.BasicUI
+  .gamenotes_NotesPagedSettings_1dBCP
+  .gamenotes_NewNoteButton_2J6kv.gpfocus {
+  color: #0e141b;
+}
+.BasicUI
+  .gamenotes_NotesPagedSettings_1dBCP
+  .gamenotes_NewNoteButton_2J6kv.gpfocus
+  svg {
+  fill: currentColor;
+  stroke: currentColor;
+  color: inherit;
+}
+.BasicUI
+  .gamenotes_NotesPagedSettings_1dBCP
+  .gamenotes_NewNoteButton_2J6kv.gpfocus
+  svg
+  path {
+  stroke: currentColor;
+}
+.BasicUI
+  .gamenotes_NotesPagedSettings_1dBCP
+  .gamenotes_NewNoteButton_2J6kv.gpfocus
+  svg
+  line,
+.BasicUI
+  .gamenotes_NotesPagedSettings_1dBCP
+  .gamenotes_NewNoteButton_2J6kv.gpfocus
+  svg
+  polygon {
+  stroke: currentColor;
+  fill: currentColor;
+}
+.gamenotes_NotesPagedSettings_1dBCP .gamenotes_NewNoteButton_2J6kv svg {
+  margin-bottom: 4px;
+}
+.gamenotes_NoteEditorArea_3WOF4 {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-height: 0;
+  min-width: 0;
+  margin: 0px 10px 25px 0px;
+  position: relative;
+  color: #c1c6cf;
+}
+.BasicUI .gamenotes_NoteEditorArea_3WOF4 {
+  min-height: 75vh;
+  max-height: 75vh;
+}
+.gamenotes_NoteEditorArea_3WOF4 .gamenotes_EditorInput_3zWun {
+  flex: 1;
+  overflow: auto;
+  min-height: 0;
+}
+.gamenotes_NoteEditorArea_3WOF4 .gamenotes_NoteActions_3uGOy {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  display: flex;
+  flex-direction: row;
+}
+.gamenotes_NoteEditorArea_3WOF4 .gamenotes_NoteActions_3uGOy .DialogButton {
+  width: 22px;
+  height: 30px;
+  padding: 8px 8px 0px 8px;
+  opacity: 0.5;
+}
+.gamenotes_NoteEditorArea_3WOF4
+  .gamenotes_NoteActions_3uGOy
+  .DialogButton:hover {
+  opacity: 0.8;
+}
+.BasicUI
+  .gamenotes_NoteEditorArea_3WOF4
+  .gamenotes_NoteActions_3uGOy
+  .DialogButton {
+  padding: 8px 8px 0px 8px;
+  min-width: unset;
+  box-sizing: unset;
+}
+.BasicUI
+  .gamenotes_NoteEditorArea_3WOF4
+  .gamenotes_NoteActions_3uGOy
+  .DialogButton.gpfocus {
+  color: #0e141b;
+}
+.BasicUI
+  .gamenotes_NoteEditorArea_3WOF4
+  .gamenotes_NoteActions_3uGOy
+  .DialogButton.gpfocus
+  svg {
+  fill: currentColor;
+  stroke: currentColor;
+  color: inherit;
+}
+.BasicUI
+  .gamenotes_NoteEditorArea_3WOF4
+  .gamenotes_NoteActions_3uGOy
+  .DialogButton.gpfocus
+  svg
+  path {
+  stroke: currentColor;
+}
+.BasicUI
+  .gamenotes_NoteEditorArea_3WOF4
+  .gamenotes_NoteActions_3uGOy
+  .DialogButton.gpfocus
+  svg
+  line,
+.BasicUI
+  .gamenotes_NoteEditorArea_3WOF4
+  .gamenotes_NoteActions_3uGOy
+  .DialogButton.gpfocus
+  svg
+  polygon {
+  stroke: currentColor;
+  fill: currentColor;
+}
+.gamenotes_NoteEditorArea_3WOF4
+  .gamenotes_NoteActions_3uGOy
+  .gamenotes_CloseWindowButton_G0Fgh {
+  margin-left: 8px;
+  width: fit-content;
+  padding: 0px 8px;
+  height: 38px;
+}
+.gamenotes_Toolbar_A6mhR {
+  padding: 12px 0;
+  -webkit-app-region: no-drag;
+  position: relative;
+  z-index: 3;
+}
+.gamenotes_EditorInput_3zWun {
+  background: #111;
+  box-shadow: inset 0 8px 6px -6px #000;
+  display: flex;
+  flex-direction: column;
+}
+.gamenotes_EditorInput_3zWun > .ProseMirror {
+  flex: 1;
+  min-height: 0;
+}
+.gamenotes_EditorInput_3zWun > .ProseMirror:focus-visible {
+  outline: none;
+}
+.gamenotes_EditorInput_3zWun a {
+  color: #aad8ec;
+  text-decoration: none;
+  border-bottom: 1px dotted rgba(109, 207, 246, 0.6);
+}
+.gamenotes_EditorInput_3zWun a:hover {
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 1px dotted rgba(176, 233, 255, 0.5);
+}
+.gamenotes_EditorInput_3zWun h1,
+.gamenotes_EditorInput_3zWun h2,
+.gamenotes_EditorInput_3zWun h3,
+.gamenotes_EditorInput_3zWun h4,
+.gamenotes_EditorInput_3zWun h5 {
+  margin: 0.5em 0;
+}
+.gamenotes_EditorInput_3zWun ul,
+.gamenotes_EditorInput_3zWun ol {
+  margin: 0.5em 0;
+}
+.gamenotes_EditorInput_3zWun li > p:first-of-type {
+  margin: 0;
 }

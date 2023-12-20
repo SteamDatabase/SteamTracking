@@ -1561,11 +1561,12 @@
           t = (0, ee.zD)(),
           n = K()("2023-12-21T10:00:00-08:00").unix(),
           s = K()("2024-01-02T10:00:00-08:00").unix(),
-          i = t >= n && t < s;
+          i = t >= n && t < s,
+          o = t >= s;
         return r.createElement(
           m.s,
           { className: Se().VotingPageContent },
-          r.createElement(ye, { bIsVotingOpen: i }),
+          r.createElement(ye, { bIsVotingOpen: i, bIsVotingPast: o }),
           r.createElement(
             "div",
             { className: Se().VotingArea },
@@ -1576,57 +1577,76 @@
         );
       }
       function ye(e) {
-        const { bIsVotingOpen: a } = e;
-        return r.createElement(
-          m.s,
-          null,
+        const { bIsVotingOpen: a, bIsVotingPast: t } = e;
+        let n;
+        return (
+          (n = a
+            ? (0, A.Xx)("#Steamawards_Voting_Header_VoteNow")
+            : t
+            ? (0, A.Xx)("#Steamawards_Voting_Header_WinnersUp")
+            : (0, A.Xx)("#Steamawards_Voting_Header_VoteSoon")),
           r.createElement(
-            "div",
-            { className: Se().HeaderCtn },
+            m.s,
+            null,
             r.createElement(
               "div",
-              { className: Se().HeaderContent },
+              { className: Se().HeaderCtn },
               r.createElement(
                 "div",
-                { className: Se().TextColumn },
+                { className: Se().HeaderContent },
                 r.createElement(
                   "div",
-                  { className: Se().EventTitle },
-                  (0, A.kQ)(
-                    "#Steamawards_Title_WithYear",
-                    "2023",
-                    r.createElement("br", null),
-                  ),
-                ),
-                a
-                  ? r.createElement(
-                      "div",
-                      { className: (0, w.Z)(Se().InfoText, Se().Large) },
-                      (0, A.Xx)("#Steamawards_Voting_Header_VoteNow"),
-                    )
-                  : r.createElement(
-                      "div",
-                      { className: (0, w.Z)(Se().InfoText, Se().Large) },
-                      (0, A.Xx)("#Steamawards_Voting_Header_VoteSoon"),
+                  { className: Se().TextColumn },
+                  r.createElement(
+                    "div",
+                    { className: Se().EventTitle },
+                    (0, A.kQ)(
+                      "#Steamawards_Title_WithYear",
+                      "2023",
+                      r.createElement("br", null),
                     ),
-                r.createElement(
-                  "div",
-                  { className: Se().InfoText },
-                  (0, A.Xx)("#Steamawards_Voting_Header_Finalists"),
-                ),
-                r.createElement(
-                  "div",
-                  { className: Se().InfoText },
-                  (0, A.Xx)("#Steamawards_Voting_Header_HowTo"),
-                ),
-                r.createElement(
-                  "div",
-                  { className: Se().InfoText },
-                  (0, A.Xx)("#Steamawards_Voting_Header_Dates"),
+                  ),
+                  r.createElement(
+                    "div",
+                    { className: (0, w.Z)(Se().InfoText, Se().Large) },
+                    n,
+                  ),
+                  t
+                    ? r.createElement(
+                        r.Fragment,
+                        null,
+                        r.createElement(
+                          "div",
+                          { className: Se().InfoText },
+                          (0, A.kQ)(
+                            "#Steamawards_Voting_Header_Winners",
+                            "2023",
+                          ),
+                        ),
+                      )
+                    : r.createElement(
+                        r.Fragment,
+                        null,
+                        r.createElement(
+                          "div",
+                          { className: Se().InfoText },
+                          (0, A.Xx)("#Steamawards_Voting_Header_Finalists"),
+                        ),
+                        r.createElement(
+                          "div",
+                          { className: Se().InfoText },
+                          (0, A.Xx)("#Steamawards_Voting_Header_HowTo"),
+                        ),
+                        r.createElement(
+                          "div",
+                          { className: Se().InfoText },
+                          (0, A.Xx)("#Steamawards_Voting_Header_Dates"),
+                        ),
+                      ),
                 ),
               ),
             ),
-          ),
+          )
         );
       }
       function Fe(e) {
@@ -1992,24 +2012,19 @@
           );
         return t
           ? r.createElement(
-              "a",
-              { href: n },
-              r.createElement("img", {
-                src: t.GetAssets().GetMainCapsuleURL(),
-              }),
+              r.Fragment,
+              null,
               r.createElement(
                 "div",
-                { className: Se().WinnerInfoCtn },
-                r.createElement(
-                  "div",
-                  { className: Se().WinnerText },
-                  (0, A.Xx)("#Steamawards_Voting_Winner"),
-                ),
-                r.createElement(
-                  "div",
-                  { className: Se().WinnerName },
-                  t.GetName(),
-                ),
+                { className: Se().CurrentVoteBanner },
+                (0, A.Xx)("#Steamawards_Voting_Winner"),
+              ),
+              r.createElement(
+                "a",
+                { href: n },
+                r.createElement("img", {
+                  src: t.GetAssets().GetMainCapsuleURL(),
+                }),
               ),
             )
           : null;

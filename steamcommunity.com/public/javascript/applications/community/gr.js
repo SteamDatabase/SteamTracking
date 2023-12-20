@@ -496,7 +496,7 @@
         B7: () => M,
         Be: () => F,
         Bu: () => h,
-        CJ: () => H,
+        CJ: () => G,
         Cd: () => V,
         Eq: () => ne,
         FE: () => Z,
@@ -521,7 +521,7 @@
         WF: () => X,
         WN: () => f,
         X: () => U,
-        Xd: () => G,
+        Xd: () => H,
         Xs: () => g,
         ZA: () => y,
         _O: () => w,
@@ -1028,7 +1028,7 @@
           }),
         );
       }
-      function H(e) {
+      function G(e) {
         return l.createElement(
           "svg",
           {
@@ -1046,7 +1046,7 @@
           }),
         );
       }
-      function G(e) {
+      function H(e) {
         return l.createElement(
           "svg",
           {
@@ -1563,6 +1563,11 @@
                 const r = C.gA.Init(a.qS);
                 r.Body().set_clip_id(e);
                 const n = yield a.xG.GetSingleSharedClip(t, r);
+                if (1 != n.GetEResult())
+                  return (
+                    (0, c.F0)("GetSingleSharedClip failed"),
+                    void n.DEBUG_LogToConsole()
+                  );
                 let l,
                   o = n.Body().toObject().clip,
                   i = [];

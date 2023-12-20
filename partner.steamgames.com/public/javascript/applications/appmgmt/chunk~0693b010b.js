@@ -489,6 +489,13 @@
             !this.m_Assets &&
             ((this.m_Assets = new h(e.assets(), e.id())),
             (this.m_DataRequested.include_assets = !0)),
+            t.include_assets_without_overrides &&
+              !this.m_AssetsWithoutOverrides &&
+              ((this.m_AssetsWithoutOverrides = new h(
+                e.assets_without_overrides(),
+                e.id(),
+              )),
+              (this.m_DataRequested.include_assets_without_overrides = !0)),
             t.include_release &&
               !this.m_ReleaseInfo &&
               ((this.m_ReleaseInfo = e.release().toObject()),
@@ -882,6 +889,14 @@
           return (
             this.BCheckDataRequestIncluded({ include_assets: !0 }),
             this.m_Assets
+          );
+        }
+        GetAssetsWithoutOverrides() {
+          return (
+            this.BCheckDataRequestIncluded({
+              include_assets_without_overrides: !0,
+            }),
+            this.m_AssetsWithoutOverrides
           );
         }
         GetOriginalReleaseDateRTime() {
@@ -1427,6 +1442,9 @@
             e.include_full_description || t.include_full_description,
           include_included_items:
             e.include_included_items || t.include_included_items,
+          include_assets_without_overrides:
+            e.include_assets_without_overrides ||
+            t.include_assets_without_overrides,
         };
       }
       function p(e, t) {
@@ -1984,9 +2002,9 @@
               let C = null !== (d = e.creatorid()) && void 0 !== d ? d : 0,
                 y = null !== (c = t.creatorid()) && void 0 !== c ? c : 0;
               if (C != y) return C - y;
-              let S = null !== (h = e.hubcategoryid()) && void 0 !== h ? h : 0,
-                k = null !== (m = t.hubcategoryid()) && void 0 !== m ? m : 0;
-              return S != k ? S - k : 0;
+              let k = null !== (h = e.hubcategoryid()) && void 0 !== h ? h : 0,
+                S = null !== (m = t.hubcategoryid()) && void 0 !== m ? m : 0;
+              return k != S ? k - S : 0;
             }),
             t
           );
@@ -2473,6 +2491,21 @@
           : 0;
       }
       function p(e) {
+        return (null == e ? void 0 : e.appid)
+          ? 0
+          : (null == e ? void 0 : e.packageid)
+          ? 1
+          : (null == e ? void 0 : e.bundleid)
+          ? 2
+          : (null == e ? void 0 : e.hubcategoryid)
+          ? 6
+          : (null == e ? void 0 : e.creatorid)
+          ? 5
+          : (null == e ? void 0 : e.tagid)
+          ? 4
+          : 0;
+      }
+      function g(e) {
         return "app" == (null == e ? void 0 : e.item_type)
           ? 0
           : "sub" == (null == e ? void 0 : e.item_type)
@@ -2481,7 +2514,7 @@
           ? 2
           : -1;
       }
-      function g(e) {
+      function v(e) {
         const t = Number.parseInt(e.substring(1));
         switch (e.charAt(0)) {
           case "a":
@@ -2492,7 +2525,7 @@
             return { bundleid: t };
         }
       }
-      function v(e) {
+      function f(e) {
         return "application" == e
           ? 0
           : "bundle" == e
@@ -2501,7 +2534,7 @@
           ? 1
           : -1;
       }
-      function f(e) {
+      function I(e) {
         return 0 == e
           ? "application"
           : 1 == e
@@ -2510,10 +2543,10 @@
           ? "bundle"
           : null;
       }
-      function I(e) {
+      function R(e) {
         return 1 == e ? 0 : 5 == e ? 2 : 2 == e ? 1 : -1;
       }
-      function R(e) {
+      function b(e) {
         return 0 == e ? 1 : 1 == e ? 2 : 2 == e ? 5 : null;
       }
       s.d(t, {
@@ -2522,14 +2555,15 @@
         D3: () => a,
         GV: () => i,
         Hy: () => l,
-        RB: () => R,
+        RB: () => b,
         TM: () => o,
-        Uc: () => v,
+        Uc: () => f,
         Xm: () => d,
-        YF: () => p,
-        bg: () => f,
-        hQ: () => g,
-        mm: () => I,
+        YF: () => g,
+        bg: () => I,
+        hQ: () => v,
+        iV: () => p,
+        mm: () => R,
         qE: () => n,
         t9: () => c,
         u$: () => _,

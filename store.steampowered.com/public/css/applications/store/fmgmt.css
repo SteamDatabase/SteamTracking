@@ -54,7 +54,7 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
 .familyincominginvites_IncomingInviteRow_1GICw {
   background-color: #0e141b;
   margin: 10px;
-  padding: 5px;
+  padding: 20px;
 }
 .familyincominginvites_IncomingInviteRow_1GICw
   .familyincominginvites_InviteRowHeader_AYHhN {
@@ -96,6 +96,11 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   text-transform: uppercase;
   color: #fff;
   font-weight: bold;
+}
+.familyincominginvites_IncomingInviteRow_1GICw
+  .familyincominginvites_RoleDescriptionShort_OKxvR {
+  display: flex;
+  justify-content: center;
 }
 .familyincominginvites_IncomingInviteRow_1GICw
   .familyincominginvites_LearnMoreLink_32K94 {
@@ -253,6 +258,15 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   overflow: hidden;
   flex-grow: 1;
 }
+@media screen and (max-width: 500px) {
+  .familysharedcomponents_FamilyMemberRow_3QkkY
+    .familysharedcomponents_FamilyMemberRowTop_3kaLZ,
+  .familysharedcomponents_FamilyMemberRow_3QkkY
+    .familysharedcomponents_FamilyMemberRowTop_3kaLZ
+    .familysharedcomponents_Left_3KlqU {
+    flex-direction: column;
+  }
+}
 .familysharedcomponents_FamilyMemberRow_3QkkY
   .familysharedcomponents_InvitePending_2xtN_ {
   display: flex;
@@ -276,6 +290,13 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   color: #fff;
   height: 24px;
   width: 24px;
+}
+@media screen and (max-width: 500px) {
+  .familysharedcomponents_FamilyMemberRow_3QkkY
+    .familysharedcomponents_ExpandRowButton_2a0Yy {
+    width: 100%;
+    background-color: #23262e;
+  }
 }
 .familysharedcomponents_FamilyMemberRow_3QkkY
   .familysharedcomponents_ExpandRowButton_2a0Yy:hover {
@@ -598,6 +619,9 @@ a:hover {
   padding: 0px 20px;
   width: auto;
 }
+.familyinvite_SelectFriendModal_JR6QK.familyinvite_SelectFriendModal_JR6QK {
+  min-width: 35vw;
+}
 .familyinvite_InviteFriendSelector_21OW_ {
   display: flex;
   flex-direction: column;
@@ -663,6 +687,7 @@ a:hover {
   padding: 0px 0px 10px 0px;
 }
 .familymanagement_AccountHeader_2kInm {
+  cursor: pointer;
   display: flex;
   padding: 5px;
   gap: 8px;
@@ -686,6 +711,13 @@ a:hover {
   align-items: baseline;
   justify-content: space-between;
   flex-direction: row;
+}
+@media screen and (max-width: 500px) {
+  .familymanagement_ManageFamily_3ayYO
+    .familymanagement_FamilyNameAndSlots_rG9v6 {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .familymanagement_ManageFamily_3ayYO
   .familymanagement_FamilyNameAndSlots_rG9v6
@@ -773,7 +805,14 @@ a:hover {
   .familymanagement_ExpandedPendingInvite_2t7pN
   .familymanagement_InviteDescription_3hEFW {
   text-align: center;
-  width: 70%;
+  width: 80%;
+}
+@media screen and (max-width: 500px) {
+  .familymanagement_ManageFamily_3ayYO
+    .familymanagement_ExpandedPendingInvite_2t7pN
+    .familymanagement_InviteDescription_3hEFW {
+    width: auto;
+  }
 }
 .familymanagement_ManageFamily_3ayYO
   .familymanagement_ExpandedPendingInvite_2t7pN
@@ -785,6 +824,14 @@ a:hover {
   margin-top: 20px;
   gap: 8px;
 }
+@media screen and (max-width: 500px) {
+  .familymanagement_ManageFamily_3ayYO
+    .familymanagement_ExpandedPendingInvite_2t7pN
+    .familymanagement_Buttons_27d1E {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .familymanagement_ManageFamily_3ayYO
   .familymanagement_ExpandedPendingInvite_2t7pN
   .familymanagement_Buttons_27d1E
@@ -793,9 +840,8 @@ a:hover {
   justify-content: center;
   align-items: center;
   gap: 5px;
-  flex: 1 1 5em;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding: 8px 24px;
+  width: fit-content;
 }
 .familymanagement_ManageFamily_3ayYO
   .familymanagement_ExpandedPendingInvite_2t7pN
@@ -823,16 +869,21 @@ a:hover {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 16px;
-  margin: 32px 48px 16px 48px;
 }
 .familymanagement_OnboardSplashContainer_3HBvb
   .familymanagement_OnboardSplashButtons_12md3
   .familymanagement_OnboardSplashButton_2R8KF {
   text-align: center;
   padding: 16px 8px;
-  margin: 8px;
+  margin: 16px;
   border-radius: 3px;
+}
+@media screen and (max-width: 500px) {
+  .familymanagement_OnboardSplashContainer_3HBvb
+    .familymanagement_OnboardSplashButtons_12md3
+    .familymanagement_OnboardSplashButton_2R8KF {
+    margin: 3px;
+  }
 }
 .familymanagement_OnboardSplashContainer_3HBvb
   .familymanagement_OnboardSplashButtons_12md3
@@ -959,10 +1010,20 @@ a:hover {
   b {
   color: #ffc82c;
 }
+.familymember_ManagementLabel_3oofp {
+  font-size: 16px;
+  color: #b8bcbf;
+  margin: 10px 5px;
+}
+@media screen and (max-width: 500px) {
+  .familymember_ManagementLabel_3oofp {
+    text-align: center;
+  }
+}
 .familymember_FamilyMemberManagementButtons_-kADz {
   display: flex;
+  justify-content: flex-end;
   flex-direction: row;
-  justify-content: end;
   gap: 6px;
   margin-bottom: 8px;
 }
@@ -972,23 +1033,14 @@ a:hover {
   justify-content: center;
   align-items: center;
   gap: 5px;
-  flex: 2 2 5em;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding: 8px 24px;
+  width: fit-content;
 }
 .familymember_FamilyMemberManagementButtons_-kADz
   .familymember_ManagementButton_vDtJq
   svg {
   width: 20px;
   height: 20px;
-}
-.familymember_FamilyMemberManagementButtons_-kADz
-  .familymember_ManagementLabel_3oofp {
-  font-size: 16px;
-  color: #dcdedf;
-  flex: 1 1 20em;
-  margin-left: 8px;
-  align-self: center;
 }
 .familymember_FamilyMemberManagementButtons_-kADz
   .familymember_Remove_UzQPb:hover {
@@ -998,8 +1050,29 @@ a:hover {
   .familymember_DeleteFamily_2zCYL:hover {
   background-color: #de3618;
 }
+@media screen and (max-width: 500px) {
+  .familymember_FamilyMemberManagementButtons_-kADz {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .familyparentalsettings_FamilyMemberParentalSettingsInner_2WflO {
+  display: flex;
+  flex-direction: column;
   padding: 0px 6px;
+}
+.familyparentalsettings_FamilyMemberParentalSettingsInner_2WflO
+  .familyparentalsettings_ParentalGames_1itpR {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+@media screen and (max-width: 500px) {
+  .familyparentalsettings_FamilyMemberParentalSettingsInner_2WflO
+    .familyparentalsettings_ParentalGames_1itpR
+    div:nth-child(1) {
+    flex-direction: column;
+  }
 }
 .familyparentalsettings_ParentalGameListHeader_2oJ9B {
   display: flex;
@@ -1018,6 +1091,24 @@ a:hover {
   line-height: normal;
   text-transform: uppercase;
   flex-grow: 1;
+}
+.familyparentalsettings_ParentalGameListHeader_2oJ9B
+  .familyparentalsettings_SelectorCtn_257si {
+  display: flex;
+  gap: 8px;
+}
+.familyparentalsettings_ParentalGameListHeader_2oJ9B
+  .familyparentalsettings_SelectorCtn_257si
+  button {
+  background-color: rgba(0, 0, 0, 0);
+  padding: 3px;
+  height: 18px;
+  width: 18px;
+}
+.familyparentalsettings_ParentalGameListHeader_2oJ9B
+  .familyparentalsettings_SelectorCtn_257si
+  button:hover {
+  background-color: #1a9fff;
 }
 .familyparentalsettings_ParentalGameListHeader_2oJ9B
   .familyparentalsettings_Selector_2Qb3- {
@@ -1051,12 +1142,17 @@ a:hover {
   align-items: center;
   cursor: pointer;
   height: 40px;
-  padding: 4px 0px;
+  padding: 4px;
   box-sizing: border-box;
+  transition: background-color 100ms ease-in-out;
+  border-bottom: 2px solid #0e141b;
 }
 .familyparentalsettings_ParentalGameRow_e8fXQ
   .familyparentalsettings_Name_3L8NH {
   flex-grow: 1;
+}
+.familyparentalsettings_ParentalGameRow_e8fXQ.familyparentalsettings_Allowed_2JNwI {
+  background-color: #23262e;
 }
 .familyparentalsettings_ParentalGameRow_e8fXQ.familyparentalsettings_Allowed_2JNwI
   .familyparentalsettings_Name_3L8NH {
@@ -1073,6 +1169,9 @@ a:hover {
   width: 16px;
   height: 16px;
 }
+.familyparentalsettings_ParentalGameRow_e8fXQ:hover {
+  background-color: #23262e;
+}
 .familyparentalsettings_ParentalFeatures_Cj34z {
   margin-bottom: 12px;
 }
@@ -1087,9 +1186,20 @@ a:hover {
   gap: 8px;
   align-items: center;
   cursor: pointer;
+  transition: background-color 100ms ease-in-out;
+  padding: 4px;
+}
+@media screen and (max-width: 500px) {
+  .familyparentalsettings_ParentalPlaytimeRow_2X1Gp {
+    flex-direction: column;
+    background-color: #23262e;
+    border-radius: 3px;
+  }
 }
 .familyparentalsettings_ParentalPlaytimeRow_2X1Gp
   .familyparentalsettings_Day_2WgTQ {
+  color: #1a9fff;
+  font-weight: 600;
   flex: 0 0 20%;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -1103,6 +1213,12 @@ a:hover {
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+@media screen and (max-width: 500px) {
+  .familyparentalsettings_ParentalPlaytimeRow_2X1Gp
+    .familyparentalsettings_Windows_30S29 {
+    text-wrap: wrap;
+  }
+}
 .familyparentalsettings_ParentalPlaytimeRow_2X1Gp
   .familyparentalsettings_Minutes_2q90E {
   flex: 0 0 25%;
@@ -1110,6 +1226,10 @@ a:hover {
   display: flex;
   flex-direction: row;
   gap: 10px;
+  justify-content: flex-end;
+}
+.familyparentalsettings_ParentalPlaytimeRow_2X1Gp:hover {
+  background-color: #23262e;
 }
 .familyparentalsettings_ParentalPlaytimeWindowsDialog_1Ezae
   .familyparentalsettings_Title_-8pd6 {
@@ -1273,9 +1393,14 @@ a:hover {
 .familyparentalsettings_ParentalApp_wpR_G {
   opacity: 0.5;
   position: relative;
+  transition: opacity 100ms ease-in-out;
+}
+.familyparentalsettings_ParentalApp_wpR_G:hover {
+  opacity: 1;
 }
 .familyparentalsettings_ParentalApp_wpR_G.familyparentalsettings_Allowed_2JNwI {
   opacity: 1;
+  border: 2px solid #1a9fff;
 }
 .familyparentalsettings_ParentalApp_wpR_G
   .familyparentalsettings_Children_30Msm {

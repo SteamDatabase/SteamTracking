@@ -136,7 +136,7 @@
         I = a(98889),
         P = a(75687),
         G = a(69485),
-        w = a(27704),
+        w = a(25589),
         x = a(54297),
         A = a(46294),
         k = a(701),
@@ -617,7 +617,7 @@
                         "bordered_title_trgt",
                       ),
                     },
-                    l.createElement(w.xP, null),
+                    l.createElement(w.x, null),
                     l.createElement("div", { className: U().streamTitle }, o),
                     l.createElement(
                       "div",

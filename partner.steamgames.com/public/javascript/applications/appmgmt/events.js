@@ -2609,35 +2609,19 @@
         te = n(36320);
       const ne = (e) => {
           const { clanSteamID: t, fnImageSelectCallBack: n } = e,
-            i = (0, l.useRef)(null),
-            [r, s] = (0, l.useState)(!h.U8.BHasLoadedClanImages(t)),
-            [c, d] = (0, l.useState)("");
-          (0, l.useEffect)(() => {
-            if (!h.U8.BHasLoadedClanImages(t)) {
-              i.current && i.current(), s(!0);
-              (() =>
-                (0, a.mG)(void 0, void 0, void 0, function* () {
-                  const e = o().CancelToken.source();
-                  (i.current = e.cancel),
-                    yield h.U8.LoadClanImages(t, !1, e),
-                    e.token.reason || s(!1);
-                }))();
-            }
-            return () => {
-              i.current && i.current("ClanImageChooseDialog: unmounting");
-            };
-          }, [t]);
-          const m = () => e.closeModal && e.closeModal(),
-            p = h.U8.GetFilteredClanImages(t, c),
-            u = (e) => {
-              n(e), m();
+            [a, i] = (0, l.useState)(""),
+            o = (0, h.Fm)(e.clanSteamID.GetAccountID()),
+            r = () => e.closeModal && e.closeModal(),
+            s = h.U8.GetFilteredClanImages(t, a),
+            c = (e) => {
+              n(e), r();
             };
           return l.createElement(
             ee.SV,
             null,
             l.createElement(
               U.e1,
-              { onEscKeypress: m },
+              { onEscKeypress: r },
               l.createElement(
                 B.VY,
                 null,
@@ -2659,27 +2643,27 @@
                     ),
                     l.createElement(B.II, {
                       placeholder: (0, G.Xx)("#ClanImageChooser_Search"),
-                      value: c,
-                      onChange: (e) => d(e.currentTarget.value),
+                      value: a,
+                      onChange: (e) => i(e.currentTarget.value),
                     }),
                     l.createElement(
                       "div",
                       { className: te.ImagesOuterContainer },
-                      r
+                      o
                         ? l.createElement(Z.V, {
                             size: "medium",
                             string: (0, G.Xx)("#Loading"),
                           })
-                        : Boolean(p.length > 0)
-                        ? p.map((e) =>
+                        : Boolean(s.length > 0)
+                        ? s.map((e) =>
                             l.createElement(ae, {
                               key: "ci" + e.image_hash,
                               clanImage: e,
-                              searchStringHilight: c,
-                              fnImageClick: u,
+                              searchStringHilight: a,
+                              fnImageClick: c,
                             }),
                           )
-                        : Boolean(0 == c.trim().length)
+                        : Boolean(0 == a.trim().length)
                         ? l.createElement(
                             "div",
                             null,
@@ -2698,7 +2682,7 @@
                   null,
                   l.createElement(
                     B.zx,
-                    { onClick: m },
+                    { onClick: r },
                     (0, G.Xx)("#Button_Cancel"),
                   ),
                 ),
@@ -6724,7 +6708,7 @@
           )
         );
       }
-      var ie = n(31936),
+      var ie = n(91181),
         oe = n(77555);
       function le(e) {
         const { inputType: t, id: n } = e;
@@ -23559,7 +23543,7 @@
                     e.appid,
                   ))
                 : (e.long_term_sales_rank = 1e6),
-                (e.discount_info = (0, Wt.L)(e.appid, t, i, o, a));
+                (e.discount_info = (0, Wt.Lr)(e.appid, t, i, o, a));
             }),
             e)
           : e;
@@ -23583,7 +23567,7 @@
             return Array.from(i).sort();
           }, [r, s, c, d]),
           p = (0, Zt.l)(m),
-          u = (0, Wt.o)(o, m, l),
+          u = (0, Wt.oC)(o, m, l),
           _ = (0, I.useMemo)(() => {
             const e = i.GetDiscountEventID(),
               t = i.GetEventStartTime(),

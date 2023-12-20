@@ -4,6 +4,308 @@
 a {
   text-decoration: none;
 }
+ul li {
+  list-style-type: square;
+}
+hr {
+  height: 0px;
+  border-bottom: 2px solid #67c1f5;
+  margin-bottom: 4px;
+}
+hr.VO {
+  border-bottom: 2px solid #e26748;
+}
+button.dashboard_Warning_5z9Gp {
+  background-color: red;
+}
+#application_root {
+  min-height: inherit;
+}
+button.DialogButton {
+  width: fit-content !important;
+  padding-left: 12px !important;
+  padding-right: 12px !important;
+}
+.dashboard_Separator_mmbGk {
+  width: 100%;
+  height: 1px;
+  background-color: #444;
+  margin: 10px 0px;
+}
+.dashboard_TextButton_2USoM {
+  width: fit-content;
+  cursor: pointer;
+  user-select: none;
+  color: #999;
+}
+.dashboard_TextButton_2USoM:hover {
+  color: #fff;
+}
+.dashboard_OptionBlock_2rxRG {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.dashboard_OptionBlock_2rxRG .dashboard_OptionHeader_2XvR4 {
+  font-size: 16px;
+  color: #67c1f5;
+  margin-bottom: 6px;
+}
+.dashboard_OptionBlock_2rxRG .dashboard_OptionDesc_2UCgr {
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+.dashboard_SteamLearnButton_I9Ady {
+  width: fit-content;
+  padding: 2px 6px;
+  border-radius: 2px;
+  user-select: none;
+  transition-property: color, background-color, opacity;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.1s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.dashboard_SteamLearnButton_I9Ady:not(.dashboard_Disabled_5Ie4U) {
+  cursor: pointer;
+}
+.dashboard_SteamLearnButton_I9Ady.dashboard_Hidden_3lQcG {
+  opacity: 0;
+  height: 0px;
+  margin: 0px;
+  padding: 0px;
+}
+.dashboard_SteamLearnButton_I9Ady.dashboard_Large_155KA {
+  font-size: 14px;
+}
+.dashboard_SteamLearnButton_I9Ady.dashboard_Medium_3Lvdz {
+  font-size: 13px;
+}
+.dashboard_SteamLearnButton_I9Ady.dashboard_Blue_1qMTR {
+  background-color: #417a9b;
+  color: #dbdbdb;
+}
+.dashboard_SteamLearnButton_I9Ady.dashboard_Red_14L88 {
+  background-color: #c64444;
+  color: #000;
+}
+.dashboard_SteamLearnButton_I9Ady.dashboard_Disabled_5Ie4U {
+  background-color: #4e4e4e;
+  color: #888;
+}
+.dashboard_SteamLearnButton_I9Ady:hover.dashboard_Blue_1qMTR:not(
+    .dashboard_Disabled_5Ie4U
+  ) {
+  background-color: #57a3cf;
+  color: #fff;
+}
+.dashboard_SteamLearnButton_I9Ady:hover.dashboard_Red_14L88:not(
+    .dashboard_Disabled_5Ie4U
+  ) {
+  background-color: #f93d3d;
+  color: #000;
+}
+.dashboard_DashboardPage_2DQPU {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  margin-top: 20px;
+}
+.dashboard_DashboardPage_2DQPU .dashboard_ProjectListContainer_2Hvue {
+  flex-grow: 1;
+  flex-basis: 1px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.dashboard_DashboardPage_2DQPU .dashboard_EventsContainer_1-cSL {
+  flex-grow: 1;
+  flex-basis: 1px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.dashboard_DashboardHeader_3J7N7 {
+  font-size: 18px;
+  color: #ac966a;
+}
+.dashboard_DashboardUnderline_3pRYN {
+  width: 100%;
+  height: 1px;
+  margin-bottom: 8px;
+  background: linear-gradient(to right, #a97950, #61491b);
+}
+.dashboard_ProjectList_3ugiC,
+.dashboard_EventList_1qhv5 {
+  width: 100%;
+  height: 100%;
+  background-color: #262626;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.dashboard_DashboardProjectList_3ktOM {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.dashboard_DashboardProjectList_3ktOM .dashboard_ListFilter_2_9dl {
+  margin-bottom: 8px;
+}
+.dashboard_DashboardProjectList_3ktOM .dashboard_ListContainer_3-UwI {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.dashboard_ProjectEntry_24VHy {
+  width: 100%;
+  min-height: 60px;
+  max-height: 90px;
+  background-color: #363636;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  padding: 6px 10px;
+  transition-property: filter, max-height, min-height, padding-top,
+    padding-bottom, margin-bottom;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.1s;
+  margin-bottom: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  user-select: none;
+}
+.dashboard_ProjectEntry_24VHy.dashboard_Hidden_3lQcG {
+  max-height: 0px;
+  min-height: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+.dashboard_ProjectEntry_24VHy .dashboard_ProjectName_NTb04 {
+  font-size: 18px;
+  color: #67c1f5;
+}
+.dashboard_ProjectEntry_24VHy .dashboard_ProjectDescription_2jQN5 {
+  font-size: 13px;
+}
+.dashboard_ProjectEntry_24VHy .dashboard_ProjectID_1VkdZ {
+  font-size: 13px;
+  color: #ac966a;
+}
+.dashboard_ProjectEntry_24VHy:hover {
+  filter: brightness(1.3);
+}
+.dashboard_DashboardEventList_1uQs0 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.dashboard_DashboardEventList_1uQs0 .dashboard_EventsListContainer_3vNwv {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.dashboard_DashboardEventList_1uQs0
+  .dashboard_EventsListContainer_3vNwv
+  .dashboard_WeekSelector_10tnb {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  background-color: #222;
+  border-radius: 5px;
+  color: #ddd;
+}
+.dashboard_DashboardEventList_1uQs0
+  .dashboard_EventsListContainer_3vNwv
+  .dashboard_WeekSelector_10tnb
+  .dashboard_LeftArrow_2hUp3,
+.dashboard_DashboardEventList_1uQs0
+  .dashboard_EventsListContainer_3vNwv
+  .dashboard_WeekSelector_10tnb
+  .dashboard_RightArrow_1fyZC {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ccc;
+  text-align: center;
+  padding: 0px 10px;
+  cursor: pointer;
+  user-select: none;
+}
+.dashboard_DashboardEventList_1uQs0
+  .dashboard_EventsListContainer_3vNwv
+  .dashboard_WeekSelector_10tnb
+  .dashboard_LeftArrow_2hUp3:hover,
+.dashboard_DashboardEventList_1uQs0
+  .dashboard_EventsListContainer_3vNwv
+  .dashboard_WeekSelector_10tnb
+  .dashboard_RightArrow_1fyZC:hover {
+  filter: brightness(1.3);
+}
+.dashboard_DashboardEventList_1uQs0
+  .dashboard_EventsListContainer_3vNwv
+  .dashboard_WeekSelector_10tnb
+  .dashboard_DateRange_3Nfe7 {
+  font-size: 16px;
+}
+.dashboard_EventEntry_1xbpy {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #363636;
+  border-radius: 3px;
+  padding: 6px 10px;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+}
+.dashboard_EventEntry_1xbpy .dashboard_Timestamp_3xtj3 {
+  position: absolute;
+  top: 6px;
+  right: 10px;
+}
+.dashboard_EventEntry_1xbpy .dashboard_Name_1conF {
+  font-size: 16px;
+  color: #fff;
+}
+.dashboard_EventEntry_1xbpy .dashboard_ProjectID_1VkdZ {
+  font-size: 13px;
+  color: #ac966a;
+}
+.dashboard_EventEntry_1xbpy .dashboard_Title_3_50p {
+  font-size: 14px;
+  color: #67c1f5;
+}
+.dashboard_EventEntry_1xbpy .dashboard_Status_2PMPJ {
+  font-size: 13px;
+  color: #888;
+}
+.dashboard_EventEntry_1xbpy
+  .dashboard_Status_2PMPJ
+  .dashboard_ProjectStatusInfo_3ThAG {
+  color: #b1f3bf;
+}
+* {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+ul li {
+  list-style-type: square;
+}
 hr {
   height: 0px;
   border-bottom: 2px solid #67c1f5;
@@ -164,6 +466,9 @@ button.DialogButton {
 }
 a {
   text-decoration: none;
+}
+ul li {
+  list-style-type: square;
 }
 hr {
   height: 0px;
@@ -544,9 +849,8 @@ button.DialogButton {
 .projectdatasources_ProjectConfigDataSourceElementRouting_3RUIE
   .projectdatasources_NormalizeSection_1dPgp
   .projectdatasources_Option_1JgGh
-  .projectdatasources_ValueInput_PLcgR
-  .projectdatasources_Wide_Max2Z {
-  width: 100px;
+  .projectdatasources_ValueInput_PLcgR.projectdatasources_Wide_Max2Z {
+  width: 200px;
 }
 .projectdatasources_ProjectConfigDataSourceElementRouting_3RUIE
   .projectdatasources_NormalizeSection_1dPgp
@@ -566,184 +870,8 @@ button.DialogButton {
 a {
   text-decoration: none;
 }
-hr {
-  height: 0px;
-  border-bottom: 2px solid #67c1f5;
-  margin-bottom: 4px;
-}
-hr.VO {
-  border-bottom: 2px solid #e26748;
-}
-button.projectevents_Warning_i92FE {
-  background-color: red;
-}
-#application_root {
-  min-height: inherit;
-}
-button.DialogButton {
-  width: fit-content !important;
-  padding-left: 12px !important;
-  padding-right: 12px !important;
-}
-.projectevents_Separator_1cxQf {
-  width: 100%;
-  height: 1px;
-  background-color: #444;
-  margin: 10px 0px;
-}
-.projectevents_TextButton_1fNtA {
-  width: fit-content;
-  cursor: pointer;
-  user-select: none;
-  color: #999;
-}
-.projectevents_TextButton_1fNtA:hover {
-  color: #fff;
-}
-.projectevents_OptionBlock_3RdcA {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-.projectevents_OptionBlock_3RdcA .projectevents_OptionHeader_1sx6K {
-  font-size: 16px;
-  color: #67c1f5;
-  margin-bottom: 6px;
-}
-.projectevents_OptionBlock_3RdcA .projectevents_OptionDesc_2eO58 {
-  font-size: 13px;
-  margin-bottom: 8px;
-}
-.projectevents_SteamLearnButton_1HUKJ {
-  width: fit-content;
-  padding: 2px 6px;
-  border-radius: 2px;
-  user-select: none;
-  transition-property: color, background-color, opacity;
-  transition-timing-function: ease-in-out;
-  transition-duration: 0.1s;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.projectevents_SteamLearnButton_1HUKJ:not(.projectevents_Disabled_j67ht) {
-  cursor: pointer;
-}
-.projectevents_SteamLearnButton_1HUKJ.projectevents_Hidden_1_hba {
-  opacity: 0;
-  height: 0px;
-  margin: 0px;
-  padding: 0px;
-}
-.projectevents_SteamLearnButton_1HUKJ.projectevents_Large_3zXGw {
-  font-size: 14px;
-}
-.projectevents_SteamLearnButton_1HUKJ.projectevents_Medium_294HW {
-  font-size: 13px;
-}
-.projectevents_SteamLearnButton_1HUKJ.projectevents_Blue_3zLfs {
-  background-color: #417a9b;
-  color: #dbdbdb;
-}
-.projectevents_SteamLearnButton_1HUKJ.projectevents_Red_2NUlJ {
-  background-color: #c64444;
-  color: #000;
-}
-.projectevents_SteamLearnButton_1HUKJ.projectevents_Disabled_j67ht {
-  background-color: #4e4e4e;
-  color: #888;
-}
-.projectevents_SteamLearnButton_1HUKJ:hover.projectevents_Blue_3zLfs:not(
-    .projectevents_Disabled_j67ht
-  ) {
-  background-color: #57a3cf;
-  color: #fff;
-}
-.projectevents_SteamLearnButton_1HUKJ:hover.projectevents_Red_2NUlJ:not(
-    .projectevents_Disabled_j67ht
-  ) {
-  background-color: #f93d3d;
-  color: #000;
-}
-.projectevents_ProjectEventsPage_bh2lf {
-  width: 100%;
-  padding: 20px;
-  padding-left: 30px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-.projectevents_ProjectEventCapsule_3-at1 {
-  width: 500px;
-  padding: 6px 10px;
-  background-color: #313131;
-  color: #fff;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  border-radius: 2px;
-  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2666666667);
-}
-.projectevents_ProjectEventCapsule_3-at1 .projectevents_EventCapsuleBody_WSNDs {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-}
-.projectevents_ProjectEventCapsule_3-at1
-  .projectevents_EventCapsuleBody_WSNDs
-  .projectevents_ProjectName_XKtZB {
-  font-size: 16px;
-  font-weight: bold;
-  letter-spacing: 2px;
-  color: #fff;
-}
-.projectevents_ProjectEventCapsule_3-at1
-  .projectevents_EventCapsuleBody_WSNDs
-  .projectevents_ProjectName_XKtZB
-  .projectevents_ProjectID_2walF {
-  color: #aaa;
-}
-.projectevents_ProjectEventCapsule_3-at1
-  .projectevents_EventCapsuleBody_WSNDs
-  .projectevents_Type_PgSnu {
-  font-size: 15px;
-  letter-spacing: 1px;
-  color: #67c1f5;
-}
-.projectevents_ProjectEventCapsule_3-at1
-  .projectevents_EventCapsuleBody_WSNDs
-  .projectevents_Timestamp_2K0VY {
-  font-size: 13px;
-  color: #ac966a;
-}
-.projectevents_ProjectEventCapsule_3-at1
-  .projectevents_EventCapsuleBody_WSNDs
-  .projectevents_LabelValue_QVmLj {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  gap: 4px;
-}
-.projectevents_ProjectEventCapsule_3-at1
-  .projectevents_EventCapsuleBody_WSNDs
-  .projectevents_LabelValue_QVmLj
-  .projectevents_Label_20Vsd {
-  font-size: 15px;
-  color: #999;
-}
-.projectevents_ProjectEventCapsule_3-at1
-  .projectevents_EventCapsuleBody_WSNDs
-  .projectevents_LabelValue_QVmLj
-  .projectevents_Value_1vUuH {
-  font-size: 15px;
-  color: #fff;
-}
-* {
-  box-sizing: border-box;
-}
-a {
-  text-decoration: none;
+ul li {
+  list-style-type: square;
 }
 hr {
   height: 0px;
@@ -943,155 +1071,8 @@ button.DialogButton {
 a {
   text-decoration: none;
 }
-hr {
-  height: 0px;
-  border-bottom: 2px solid #67c1f5;
-  margin-bottom: 4px;
-}
-hr.VO {
-  border-bottom: 2px solid #e26748;
-}
-button.projectlist_Warning_qLXTI {
-  background-color: red;
-}
-#application_root {
-  min-height: inherit;
-}
-button.DialogButton {
-  width: fit-content !important;
-  padding-left: 12px !important;
-  padding-right: 12px !important;
-}
-.projectlist_Separator_3YyKf {
-  width: 100%;
-  height: 1px;
-  background-color: #444;
-  margin: 10px 0px;
-}
-.projectlist_TextButton_1cqhS {
-  width: fit-content;
-  cursor: pointer;
-  user-select: none;
-  color: #999;
-}
-.projectlist_TextButton_1cqhS:hover {
-  color: #fff;
-}
-.projectlist_OptionBlock_2axkD {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-.projectlist_OptionBlock_2axkD .projectlist_OptionHeader_1FhOQ {
-  font-size: 16px;
-  color: #67c1f5;
-  margin-bottom: 6px;
-}
-.projectlist_OptionBlock_2axkD .projectlist_OptionDesc_1Grio {
-  font-size: 13px;
-  margin-bottom: 8px;
-}
-.projectlist_SteamLearnButton_3pEd7 {
-  width: fit-content;
-  padding: 2px 6px;
-  border-radius: 2px;
-  user-select: none;
-  transition-property: color, background-color, opacity;
-  transition-timing-function: ease-in-out;
-  transition-duration: 0.1s;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.projectlist_SteamLearnButton_3pEd7:not(.projectlist_Disabled_107Sd) {
-  cursor: pointer;
-}
-.projectlist_SteamLearnButton_3pEd7.projectlist_Hidden_zvAb3 {
-  opacity: 0;
-  height: 0px;
-  margin: 0px;
-  padding: 0px;
-}
-.projectlist_SteamLearnButton_3pEd7.projectlist_Large_1KskQ {
-  font-size: 14px;
-}
-.projectlist_SteamLearnButton_3pEd7.projectlist_Medium_3-zYh {
-  font-size: 13px;
-}
-.projectlist_SteamLearnButton_3pEd7.projectlist_Blue_2ezkO {
-  background-color: #417a9b;
-  color: #dbdbdb;
-}
-.projectlist_SteamLearnButton_3pEd7.projectlist_Red_swy6m {
-  background-color: #c64444;
-  color: #000;
-}
-.projectlist_SteamLearnButton_3pEd7.projectlist_Disabled_107Sd {
-  background-color: #4e4e4e;
-  color: #888;
-}
-.projectlist_SteamLearnButton_3pEd7:hover.projectlist_Blue_2ezkO:not(
-    .projectlist_Disabled_107Sd
-  ) {
-  background-color: #57a3cf;
-  color: #fff;
-}
-.projectlist_SteamLearnButton_3pEd7:hover.projectlist_Red_swy6m:not(
-    .projectlist_Disabled_107Sd
-  ) {
-  background-color: #f93d3d;
-  color: #000;
-}
-.projectlist_ProjectListPage_XGVzX {
-  width: 100%;
-  padding: 20px;
-  padding-left: 30px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-.projectlist_ProjectListElement_d64QC {
-  width: 500px;
-  padding: 6px 10px;
-  background-color: #313131;
-  color: #fff;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  border-radius: 2px;
-  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2666666667);
-  transition-property: transform, filter;
-  transition-duration: 0.1s;
-  transition-timing-function: ease-in-out;
-}
-.projectlist_ProjectListElement_d64QC .projectlist_Name_7UoFG {
-  color: #fff;
-  font-size: 16px;
-  letter-spacing: 1px;
-}
-.projectlist_ProjectListElement_d64QC .projectlist_Description_2jeKX {
-  color: #999;
-  font-size: 13px;
-}
-.projectlist_ProjectListElement_d64QC .projectlist_CreatedDate_1Ujp5 {
-  margin-top: 5px;
-  margin-bottom: 6px;
-  color: #ac966a;
-  font-size: 11px;
-}
-.projectlist_ProjectListElement_d64QC .projectlist_Version_1cT2n {
-  position: absolute;
-  top: 6px;
-  right: 10px;
-  color: #fff;
-  font-size: 13px;
-}
-* {
-  box-sizing: border-box;
-}
-a {
-  text-decoration: none;
+ul li {
+  list-style-type: square;
 }
 hr {
   height: 0px;
@@ -1626,6 +1607,9 @@ div.react-flow__handle-right {
 a {
   text-decoration: none;
 }
+ul li {
+  list-style-type: square;
+}
 hr {
   height: 0px;
   border-bottom: 2px solid #67c1f5;
@@ -1755,6 +1739,7 @@ button.DialogButton {
   display: flex;
   flex-direction: row;
   gap: 8px;
+  align-items: center;
 }
 .projectselector_ProjectSelector_2u7nD
   .projectselector_ProjectSelectorInner_2pWB9
@@ -1769,6 +1754,16 @@ button.DialogButton {
   .projectselector_ProjectIDAndVersionSection_3sB67
   .projectselector_PublishedVersionInput_3r5Qp {
   width: 200px;
+}
+.projectselector_ProjectSelector_2u7nD
+  .projectselector_ProjectSelectorInner_2pWB9
+  .projectselector_ProjectSection_2PvCc
+  .projectselector_ProjectIDAndVersionSection_3sB67
+  .projectselector_EditButton_S8TDZ {
+  font-size: 13px;
+  color: #555;
+  cursor: pointer;
+  user-select: none;
 }
 .projectselector_ProjectSelector_2u7nD
   .projectselector_ProjectSelectorInner_2pWB9
@@ -1812,11 +1807,65 @@ button.DialogButton {
     rgb(122, 22, 22) 60%
   );
 }
+.CreateOrEditProjectPopup .DialogContent {
+  width: 600px;
+}
+.CreateOrEditProjectPopup .DialogContent .projectselector_Guidance_AJEjx {
+  font-size: 14px;
+}
+.CreateOrEditProjectPopup .DialogContent .projectselector_EditSection_5e61c {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #333;
+  border-top: 1px solid #333;
+  padding-bottom: 10px;
+}
+.CreateOrEditProjectPopup
+  .DialogContent
+  .projectselector_EditSection_5e61c
+  .projectselector_EditSectionTitle_14qzh {
+  color: #67c1f5;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 18px;
+}
+.CreateOrEditProjectPopup
+  .DialogContent
+  .projectselector_EditSection_5e61c
+  .projectselector_InputTitle_3Ta4R {
+  color: #fff;
+  font-size: 15px;
+  margin-top: 10px;
+}
+.CreateOrEditProjectPopup
+  .DialogContent
+  .projectselector_EditSection_5e61c
+  .projectselector_InputWide_3Xf1g {
+  width: 300px;
+}
+.CreateOrEditProjectPopup
+  .DialogContent
+  .projectselector_EditSection_5e61c
+  .projectselector_InputAreaWide_1IsfK {
+  width: 100%;
+  height: 100px;
+}
+.CreateOrEditProjectPopup
+  .DialogContent
+  .projectselector_ButtonContainer_2vjHb {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-top: 8px;
+}
 * {
   box-sizing: border-box;
 }
 a {
   text-decoration: none;
+}
+ul li {
+  list-style-type: square;
 }
 hr {
   height: 0px;
@@ -1960,6 +2009,9 @@ button.DialogButton {
 a {
   text-decoration: none;
 }
+ul li {
+  list-style-type: square;
+}
 hr {
   height: 0px;
   border-bottom: 2px solid #67c1f5;
@@ -2074,6 +2126,9 @@ button.DialogButton {
 }
 a {
   text-decoration: none;
+}
+ul li {
+  list-style-type: square;
 }
 hr {
   height: 0px;
@@ -2466,6 +2521,7 @@ button.DialogButton {
   margin-bottom: 6px;
   border: 1px solid #333;
   color: #fff;
+  padding: 6px 10px;
 }
 .projecttrainstatus_TrainStatusPanel_BbjEt
   .projecttrainstatus_EpochSelectorSection_duyKv {
@@ -2599,6 +2655,9 @@ button.DialogButton {
 }
 a {
   text-decoration: none;
+}
+ul li {
+  list-style-type: square;
 }
 hr {
   height: 0px;
@@ -2821,6 +2880,9 @@ button.DialogButton {
 }
 a {
   text-decoration: none;
+}
+ul li {
+  list-style-type: square;
 }
 hr {
   height: 0px;

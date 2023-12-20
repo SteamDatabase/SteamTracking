@@ -1573,6 +1573,16 @@ div#global_header .submenuitem
 	padding-left: 15px;
 }
 
+div#global_header .submenuitem span.new {
+    color: white;
+    background: #c37f00 ;
+    padding: 1px 3px;
+    font-size: 10px;
+    border-radius: 2px;
+    text-shadow: none;
+    text-transform: uppercase;
+}
+
 div#global_header .submenuitem.active, div#global_header .submenuitem:hover
 {
 	text-decoration: none;

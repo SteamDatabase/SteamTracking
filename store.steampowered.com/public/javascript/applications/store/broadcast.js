@@ -2762,7 +2762,7 @@
         Ue = s(98889),
         Ve = s(75687),
         He = s(92616),
-        We = s(21219),
+        We = s(25589),
         je = s(54297),
         Xe = s(46294),
         ze = s(84343),
@@ -3262,7 +3262,7 @@
                         "bordered_title_trgt",
                       ),
                     },
-                    l.createElement(We.xP, null),
+                    l.createElement(We.x, null),
                     l.createElement("div", { className: Ye().streamTitle }, i),
                     l.createElement(
                       "div",

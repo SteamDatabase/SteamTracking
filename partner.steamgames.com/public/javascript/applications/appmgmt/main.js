@@ -2611,7 +2611,7 @@
                   ref: f,
                   className: (0, o.Z)(t, v && l().DebugFocusRing),
                   render: r,
-                  bFocusWithin: S && b,
+                  bFocusWithin: S && (b || v),
                   navTarget: E,
                   refContainer: g,
                   bDebug: v,
@@ -3436,13 +3436,15 @@
         SetActive(e, t, n = void 0) {
           this.m_controller.BatchedUpdate(() => {
             var i;
-            e
-              ? ((this.m_activeWindow = t),
-                (this.m_activeBrowserView = n),
-                this.m_controller.OnContextActivated(this))
-              : ((this.m_activeBrowserView = void 0),
-                this.m_controller.OnContextDeactivated(this, !1)),
-              this.m_bActive != e &&
+            const o = this.m_bActive != e;
+            (this.m_bActive = e),
+              e
+                ? ((this.m_activeWindow = t),
+                  (this.m_activeBrowserView = n),
+                  this.m_controller.OnContextActivated(this))
+                : ((this.m_activeBrowserView = void 0),
+                  this.m_controller.OnContextDeactivated(this, !1)),
+              o &&
                 ((this.m_bActive = e),
                 this.m_ActiveCallbacks.Dispatch(e),
                 null === (i = this.m_LastActiveFocusNavTree) ||
@@ -19135,7 +19137,7 @@
             r = n[3] || "",
             a = m(r, ...t),
             l = (e >= 1 && e <= t.length ? t[e - 1] : null)
-              ? i.cloneElement(t[e - 1], {}, r ? [a] : null)
+              ? i.cloneElement(t[e - 1], {}, r ? a : null)
               : r;
           o.push(l);
         }
@@ -21340,7 +21342,7 @@
         ),
         U = c.lazy(() =>
           Promise.all([n.e(9584), n.e(744), n.e(5117), n.e(5676)]).then(
-            n.bind(n, 56981),
+            n.bind(n, 25415),
           ),
         ),
         j = c.lazy(() =>

@@ -9,6 +9,96 @@
     margin-bottom: 10px;
 }
 
+.giftcard_content {
+    font-family: "Motiva Sans", Sans-serif;
+}
+
+.giftcard_title {
+    text-align: center;
+    font-size: 40px;
+    font-weight: bolder;
+    color: #FFFFFF;
+}
+
+.giftcard_available {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bolder;
+    color: rgba(255,255,255,0.75);
+    margin-bottom: 20px;
+}
+
+.giftcard_howwork {
+    width: 580px;
+    text-align: center;
+    font-size: 16px;
+    color: #C6D4DF;
+    margin: auto;
+    margin-bottom: 40px;
+}
+
+.giftcard_home_cont {
+    border-radius: 10px;
+    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.35);
+    padding: 10px;
+}
+
+.giftcard_home_cont_digital {
+    background-image: linear-gradient(to bottom right, #2F3B42, #202839);
+}
+
+.giftcard_home_cont_physical {
+    margin-top: 20px;
+    background-image: linear-gradient(to bottom right, #422F2F, #202839);
+}
+
+.giftcard_home_image {
+    object-fit: cover;
+    width: 100%;
+}
+
+.giftcard_title_inner {
+    font-weight: bolder;
+    font-size: 32px;
+    color: #FFFFFF;
+}
+
+.giftcard_subtitle_inner {
+    font-weight: bolder;
+    font-size: 24px;
+    color: #FFFFFF;
+}
+
+.giftcard_text_inner {
+    font-size: 14px;
+    color: #C6D4DF;
+}
+
+.giftcard_subtext_inner {
+    font-size: 14px;
+    color: rgba(198,212,223,0.5);
+}
+
+.giftcard_buttons {
+    margin-top: 20px;
+}
+
+.giftcard_addfunds_link {
+    margin-left: 20px;
+}
+
+.giftcard_faq {
+    margin-top: 20px;
+    font-size: 16px;
+    text-decoration: underline;
+    text-align: center;
+}
+
+.giftcard_addfunds {
+    font-size: 14px;
+    text-decoration: underline;
+}
+
 .giftcard_amounts {
     background: rgba( 0, 0, 0, 0.2 );
     padding: 25px 15px 25px 15px;
@@ -233,13 +323,13 @@
 
 .giftcard_inner_leftcol {
     float:left;
-    width: 50%;
+    width: 30%;
 }
 
 .giftcard_inner_rightcol {
     float:right;
-    margin-left: 10px;
-    width: 40%;
+    margin-top: 30px;
+    width: 70%;
 }
 
 .giftcard_leftcol {
@@ -263,5 +353,29 @@
     html.responsive .giftcard_rightcol {
         max-width: none;
         margin-left: 0;
+    }
+
+    html.responsive .giftcard_home_image {
+        z-index: -1;
+        position: relative;
+        top: -75px;
+        object-fit: none;
+        width:auto;
+    }
+
+    html.responsive .giftcard_home_cont_physical .giftcard_home_image {
+        display:none;
+    }
+
+    html.responsive .giftcard_inner_rightcol {
+        width: 100%;
+    }
+
+    html.responsive .giftcard_inner_leftcol {
+        position: absolute;
+    }
+
+    html.responsive .giftcard_home_cont {
+        position:relative;
     }
 }

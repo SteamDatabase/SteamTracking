@@ -108,6 +108,32 @@ select.gray_bevel {
     max-width: 652px;
 }
 
+@media screen and (max-width: 940px)
+{
+    .profile_showcase_selection_options_ctn {
+        flex-direction: column;
+    }
+
+    .customization_controls .profile_showcase_selection_options_ctn select {
+        margin-right: 0px;
+    }
+
+    .profile_showcase_selection_options_ctn .showcase_selection_pre,
+    .profile_showcase_selection_options_ctn .showcase_selection_post{
+        display: none;
+    }
+
+    body.profile_edit_page .customization_controls_nextprev {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.customization_controls_nextprev a span {
+    line-height: 26px;
+    font-size: 13px;
+}
+
 .showcase_selection_pre {
     display: block;
     height: 14px;
@@ -140,6 +166,7 @@ select.gray_bevel {
 
 .customization_controls select {
 	flex-grow: 1;
+    max-width: 50%;
     text-align: left;
     margin-bottom: 0;
     height: 29px;

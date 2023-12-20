@@ -171,7 +171,7 @@
         UC: () => m,
         A1: () => h,
         yp: () => _,
-        iP: () => p,
+        iP: () => u,
       });
       var r = n(89526),
         a = n(40442),
@@ -477,7 +477,7 @@
           "uploadfilebutton",
           "docimg",
         ],
-        p = [
+        u = [
           "h1",
           "h2",
           "h3",
@@ -489,7 +489,7 @@
           "noparse",
           "url",
         ],
-        u = [
+        p = [
           "img",
           "previewyoutube",
           "looping_media",
@@ -500,7 +500,7 @@
           "youtubeorvideo",
           "docimg",
         ],
-        h = (_.filter((e) => -1 == u.indexOf(e)), "{STEAM_CLAN_IMAGE}"),
+        h = (_.filter((e) => -1 == p.indexOf(e)), "{STEAM_CLAN_IMAGE}"),
         m = "{STEAM_CLAN_LOC_IMAGE}";
       function g(e, t = null, n = " ") {
         let r = null == t ? void 0 : t.join("|");
@@ -604,7 +604,7 @@
     25871: (e, t, n) => {
       "use strict";
       n.d(t, {
-        Vm: () => p,
+        Vm: () => u,
         dY: () => m,
         ie: () => _,
         jk: () => l,
@@ -622,9 +622,9 @@
           d = (0, o.useRef)(void 0),
           c = (0, i.NW)();
         l.current = e;
-        const [_, p] = (0, o.useState)(void 0),
+        const [_, u] = (0, o.useState)(void 0),
           {
-            include_assets: u,
+            include_assets: p,
             include_release: h,
             include_platforms: m,
             include_all_purchase_options: g,
@@ -637,11 +637,12 @@
             include_supported_languages: x,
             include_full_description: D,
             include_included_items: T,
+            include_assets_without_overrides: L,
           } = n;
         if (
           ((0, o.useEffect)(() => {
             const n = {
-              include_assets: u,
+              include_assets: p,
               include_release: h,
               include_platforms: m,
               include_all_purchase_options: g,
@@ -654,30 +655,31 @@
               include_supported_languages: x,
               include_full_description: D,
               include_included_items: T,
+              include_assets_without_overrides: L,
             };
             let o = null;
             return (
               !e ||
                 s.Z.Get().BHasStoreItem(e, t, n) ||
                 (void 0 !== _ && r && r == d.current) ||
-                (r !== d.current && (p(void 0), (d.current = r)),
+                (r !== d.current && (u(void 0), (d.current = r)),
                 (o = a().CancelToken.source()),
                 s.Z.Get()
                   .QueueStoreItemRequest(e, t, n)
                   .then((t) => {
-                    o.token.reason || l.current !== e || p(1 == t), c();
+                    o.token.reason || l.current !== e || u(1 == t), c();
                   })),
               () => o && o.cancel("useStoreItemCache: unmounting")
             );
-          }, [e, t, r, _, u, h, m, g, v, C, f, S, E, A, x, D, T, c]),
+          }, [e, t, r, _, p, h, m, g, v, C, f, S, E, A, x, D, T, L, c]),
           !e)
         )
           return [null, 2];
         if (!1 === _) return [void 0, 2];
         if (s.Z.Get().BIsStoreItemMissing(e, t)) return [void 0, 2];
         if (!s.Z.Get().BHasStoreItem(e, t, n)) return [void 0, 1];
-        const L = s.Z.Get().GetStoreItemWithLegacyVisibilityCheck(e, t);
-        return L ? [L, 3] : [null, 2];
+        const I = s.Z.Get().GetStoreItemWithLegacyVisibilityCheck(e, t);
+        return I ? [I, 3] : [null, 2];
       }
       function d(e, t, n) {
         return l(e, 0, t, n);
@@ -688,10 +690,10 @@
       function _(e, t, n) {
         return l(e, 1, t, n);
       }
-      function p(e, t, n) {
+      function u(e, t, n) {
         const [r, i] = l(e, t, n),
           [s, c] = (0, o.useState)(null),
-          [_, p] = d(s, n);
+          [_, u] = d(s, n);
         return (
           (0, o.useEffect)(() => {
             var e;
@@ -710,17 +712,17 @@
             return () =>
               t.cancel("useStoreItemCacheOrPackageSingleApp: unmounting");
           }, [s, r]),
-          s ? [_, p] : [r, i]
+          s ? [_, u] : [r, i]
         );
       }
-      function u(e, t, n, r) {
+      function p(e, t, n, r) {
         const l = (0, i.NW)(),
           {
             include_assets: d,
             include_release: c,
             include_platforms: _,
-            include_all_purchase_options: p,
-            include_screenshots: u,
+            include_all_purchase_options: u,
+            include_screenshots: p,
             include_trailers: h,
             include_ratings: m,
             include_tag_count: g,
@@ -729,6 +731,7 @@
             include_supported_languages: f,
             include_full_description: S,
             include_included_items: E,
+            include_assets_without_overrides: A,
           } = n;
         if (
           ((0, o.useEffect)(() => {
@@ -737,8 +740,8 @@
                 include_assets: d,
                 include_release: c,
                 include_platforms: _,
-                include_all_purchase_options: p,
-                include_screenshots: u,
+                include_all_purchase_options: u,
+                include_screenshots: p,
                 include_trailers: h,
                 include_ratings: m,
                 include_tag_count: g,
@@ -747,6 +750,7 @@
                 include_supported_languages: f,
                 include_full_description: S,
                 include_included_items: E,
+                include_assets_without_overrides: A,
               },
               r = e.filter(
                 (e) =>
@@ -764,7 +768,7 @@
               }),
               () => o.cancel("useStoreItemCacheMultiplePackages: unmounting")
             );
-          }, [e, t, r, l, d, c, _, p, u, h, m, g, v, C, f, S, E]),
+          }, [e, t, r, l, d, c, _, u, p, h, m, g, v, C, f, S, E, A]),
           !e)
         )
           return 2;
@@ -783,10 +787,10 @@
           : 2;
       }
       function h(e, t, n) {
-        return u(e, 0, t, n);
+        return p(e, 0, t, n);
       }
       function m(e, t, n) {
-        return u(e, 1, t, n);
+        return p(e, 1, t, n);
       }
     },
     207: (e, t, n) => {
@@ -794,11 +798,11 @@
       n.d(t, {
         FM: () => s,
         H7: () => i,
-        OL: () => u,
+        OL: () => p,
         Pm: () => c,
         XW: () => l,
         bk: () => g,
-        dK: () => p,
+        dK: () => u,
         et: () => _,
         iv: () => m,
         md: () => h,
@@ -876,7 +880,7 @@
               (e = (0, o.HZ)(e)))
           : e;
       }
-      function p(e) {
+      function u(e) {
         if (!e) return !0;
         const t = s(e).toLocaleLowerCase();
         return (
@@ -894,7 +898,7 @@
           ].indexOf(t) >= 0
         );
       }
-      function u(e) {
+      function p(e) {
         return r.De.SNR &&
           r.De.SNR.length > 0 &&
           e &&

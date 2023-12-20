@@ -1149,6 +1149,7 @@ background-color: transparent;
 .profile_customization_block.customize_replay {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     line-height: 17px;
 }
 
@@ -1232,6 +1233,11 @@ background-color: transparent;
 
 .customization_edit_instructions {
     padding: 8px;
+}
+
+/* hide this background if the header is rendered within the instructions */
+.customization_edit_instructions .profile_customization_header {
+    background: transparent;
 }
 
 .customization_edit_instructions_text

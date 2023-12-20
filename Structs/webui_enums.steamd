@@ -3713,6 +3713,15 @@ enum ESteamDeckCompatibilityResultDisplayType
 	k_ESteamDeckCompatibilityResultDisplayType_Verified = 4;
 }
 
+enum ESteamDeckCompatibilityTestResult
+{
+	k_ESteamDeckCompatibilityTestResult_Invalid = 0;
+	k_ESteamDeckCompatibilityTestResult_NotApplicable = 1;
+	k_ESteamDeckCompatibilityTestResult_Pass = 2;
+	k_ESteamDeckCompatibilityTestResult_Fail = 3;
+	k_ESteamDeckCompatibilityTestResult_FailMinor = 4;
+}
+
 enum ESteamGuard
 {
 	k_ESteamGuardOffline = 0;
@@ -5877,6 +5886,13 @@ enum UnnamedEnum322f4518bf470232
 	Tooltip = 2;
 	PopupContextMenu = 3;
 	StandaloneContextMenu = 4;
+}
+
+enum UnnamedEnum32d9c79bb287cb61
+{
+	Hidden = 0;
+	Create = 1;
+	Edit = 2;
 }
 
 enum UnnamedEnum336a74c93bcf88cc

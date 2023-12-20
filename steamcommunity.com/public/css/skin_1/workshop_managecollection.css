@@ -233,12 +233,20 @@
 
 .collectionChoiceSection
 {
-	height: 200px;
-	overflow-y: auto;
 }
 
 .collectionChoiceSectionControls {
 	margin-top: 15px;
+	display: flex;
+	gap: 4px;
+}
+.collectionChoiceSectionControls .filter {
+	color: #ffffff;
+	font-size: 14px;
+	line-height: 22px;
+}
+.collectionChoiceSectionControls .filter input {
+	top: 0px;
 }
 
 .itemChoice
@@ -253,6 +261,9 @@
 	background-color: #4d4d4d;
 	margin-bottom: 1px;
 	cursor: pointer;
+}
+.itemChoice.filtered {
+	display: none;
 }
 
 .itemChoiceEmpty
@@ -611,4 +622,29 @@
 	width: 0px;
 	padding: 0;
 	margin: 0;
+}
+
+#ItemsWrapper {
+	position: relative;
+	height: 200px;
+}
+#Items {
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+}
+.ui-resizable-handle {
+	position: absolute;
+	font-size: 0.1px;
+	display: block;
+	-ms-touch-action: none;
+	touch-action: none;
+}
+.ui-resizable-s {
+	cursor: s-resize;
+	height: 2px;
+	width: 100%;
+	bottom: -2px;
+	left: 0;
+	background-color: #888888;
 }

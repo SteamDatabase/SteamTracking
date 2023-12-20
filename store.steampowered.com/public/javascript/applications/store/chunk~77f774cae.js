@@ -305,15 +305,16 @@
           "salepreviewwidgets_LibraryAssetExpandedDisplay_3b-fA",
         SaleItemDefaultCapsuleDisplay:
           "salepreviewwidgets_SaleItemDefaultCapsuleDisplay_34o91",
+        MarketingMessage: "salepreviewwidgets_MarketingMessage_1THFm",
+        StoreSaleWidgetRight: "salepreviewwidgets_StoreSaleWidgetRight_1lRFu",
         StoreSaleWidgetHalfLeft:
           "salepreviewwidgets_StoreSaleWidgetHalfLeft_2Va3O",
-        StoreSaleWidgetRight: "salepreviewwidgets_StoreSaleWidgetRight_1lRFu",
+        StoreSaleWidgetTitle: "salepreviewwidgets_StoreSaleWidgetTitle_3jI46",
         StoreSaleDiscountBox: "salepreviewwidgets_StoreSaleDiscountBox_2fpFv",
         StoreSaleWidgetLibraryAssetExtendedTop:
           "salepreviewwidgets_StoreSaleWidgetLibraryAssetExtendedTop_3z02e",
         StoreSaleWidgetImage: "salepreviewwidgets_StoreSaleWidgetImage_21N0p",
         CapsuleMicroTrailer: "salepreviewwidgets_CapsuleMicroTrailer_1oq5U",
-        StoreSaleWidgetTitle: "salepreviewwidgets_StoreSaleWidgetTitle_3jI46",
         CapsulePlatform: "salepreviewwidgets_CapsulePlatform_3vzWb",
         StoreSaleWidgetContents:
           "salepreviewwidgets_StoreSaleWidgetContents_2YlSb",
@@ -418,8 +419,6 @@
         PreviewItem: "salepreviewwidgets_PreviewItem_2-qCG",
         DeckCompatIcon: "salepreviewwidgets_DeckCompatIcon_hup-v",
         PreviewImg: "salepreviewwidgets_PreviewImg_3sPmB",
-        bordered_live_stream_icon:
-          "salepreviewwidgets_bordered_live_stream_icon_FYzAY",
         DemoLayoutPopup: "salepreviewwidgets_DemoLayoutPopup_21bkM",
         FreeWeekendBar: "salepreviewwidgets_FreeWeekendBar_3jk3Q",
         FreeWeekendLabel: "salepreviewwidgets_FreeWeekendLabel_2lfCI",
@@ -427,6 +426,11 @@
         LocalizationSpan: "salepreviewwidgets_LocalizationSpan_3WrJ4",
         CapsuleName: "salepreviewwidgets_CapsuleName_3SHK9",
         DiscountIconCtn: "salepreviewwidgets_DiscountIconCtn_LpnSX",
+      };
+    },
+    8751: (e) => {
+      e.exports = {
+        bordered_live_stream_icon: "liveicon_bordered_live_stream_icon_13j0c",
       };
     },
     65014: (e) => {
@@ -12013,35 +12017,36 @@
               bShowDeckCompatibilityDialog: z,
               bAutoFocus: Z,
               fnOnClickOverride: q,
+              bIsMarketingMessage: Y,
             } = e,
-            Y = (0, P.bJ)(),
-            J = i.useMemo(
+            J = (0, P.bJ)(),
+            K = i.useMemo(
               () => (null == u ? void 0 : u.GetIncludedAppIDsOrSelf()),
               [u],
             ),
-            K = (0, O.id)();
+            $ = (0, O.id)();
           if (!u) return null;
-          const $ = u.GetBestPurchaseOption().discount_pct,
-            Q = u.GetIncludedAppIDs().length;
-          let ee = u.GetShortDescription();
+          const Q = u.GetBestPurchaseOption().discount_pct,
+            ee = u.GetIncludedAppIDs().length;
+          let te = u.GetShortDescription();
           (2 != u.GetStoreItemType() && 1 != u.GetStoreItemType()) ||
-            (ee = $
-              ? (0, R.Xx)("#Sale_BundleSave_WithDiscount", $, Q)
-              : (0, R.Xx)("#Sale_BundleSave", Q));
-          const te = (0, m.mY)(Y),
-            ae = (0, r.bt)(u.GetStorePageURL()),
-            ne = Boolean(!x && Q > 0),
-            ie = u.BHasTags()
+            (te = Q
+              ? (0, R.Xx)("#Sale_BundleSave_WithDiscount", Q, ee)
+              : (0, R.Xx)("#Sale_BundleSave", ee));
+          const ae = (0, m.mY)(J),
+            ne = (0, r.bt)(u.GetStorePageURL()),
+            ie = Boolean(!x && ee > 0),
+            re = u.BHasTags()
               ? u.GetTagIDs()
               : (null == p ? void 0 : p.BHasTags())
               ? p.GetTagIDs()
               : [],
-            re = 0 == u.GetStoreItemType(),
-            se = (0, m.Hf)(ae, Y),
-            oe = K || u.BIsReleased() || u.BIsPrePurchase();
+            se = 0 == u.GetStoreItemType(),
+            oe = (0, m.Hf)(ne, J),
+            le = $ || u.BIsReleased() || u.BIsPrePurchase();
           return i.createElement(
             D.zw,
-            { appid: re ? u.GetAppID() : void 0 },
+            { appid: se ? u.GetAppID() : void 0 },
             i.createElement(
               o.s,
               {
@@ -12060,13 +12065,15 @@
                 s.Ks,
                 Object.assign(
                   {
+                    onClick: Y ? q : null,
                     className: (0, L.Z)(
                       j().StoreSaleWidgetContainer,
                       j().SaleItemDefaultCapsuleDisplay,
+                      Y ? j().MarketingMessage : "",
                     ),
                   },
-                  (0, w.h)(u, Y, K, void 0, q),
-                  { preferredFocus: ne },
+                  (0, w.h)(u, J, $, void 0, q),
+                  { preferredFocus: ie },
                 ),
                 i.createElement(
                   "div",
@@ -12074,14 +12081,14 @@
                   i.createElement(
                     "a",
                     {
-                      href: q ? void 0 : se,
+                      href: q ? void 0 : oe,
                       target: O.De.IN_CLIENT || q ? void 0 : "_blank",
                       onClick: q,
                     },
                     i.createElement(
                       "div",
                       { className: j().StoreSaleWidgetImage },
-                      i.createElement(E.vs, { appids: J }),
+                      i.createElement(E.v, { appids: K }),
                       i.createElement(X, { info: G, imageType: "header" }),
                       i.createElement(T.y, {
                         eDeckCompatibilityCategory:
@@ -12098,17 +12105,17 @@
                   {
                     className: (0, L.Z)(
                       j().StoreSaleWidgetRight,
-                      ne ? j().Bundle : "",
+                      ie ? j().Bundle : "",
                     ),
                   },
-                  Boolean(re && !q) &&
+                  Boolean(se && !q) &&
                     i.createElement(F.RJ, {
                       appID: _.id,
                       classOverride: (0, L.Z)(
                         S().WishlistButtonNotTop,
                         "WishlistButton",
                       ),
-                      snr: te,
+                      snr: ae,
                     }),
                   i.createElement(
                     "div",
@@ -12116,7 +12123,7 @@
                     i.createElement(
                       "a",
                       {
-                        href: q ? void 0 : se,
+                        href: q ? void 0 : oe,
                         target: O.De.IN_CLIENT ? void 0 : "_blank",
                         onClick: q,
                       },
@@ -12135,11 +12142,11 @@
                   i.createElement(
                     "div",
                     { className: j().StoreSaleWidgetReleaseAndTags },
-                    ie &&
+                    re &&
                       i.createElement(
                         "div",
                         { className: j().StoreSaleWidgetTags },
-                        ie.map((e) =>
+                        re.map((e) =>
                           i.createElement(C.H, {
                             key: "tag_" + e,
                             tagid: e,
@@ -12150,7 +12157,7 @@
                     i.createElement(
                       "div",
                       { className: j().WidgetReleaseDateAndPlatformCtn },
-                      re &&
+                      se &&
                         i.createElement(
                           "div",
                           { className: j().StoreSaleWidgetRelease },
@@ -12176,8 +12183,8 @@
                     ),
                     W && i.createElement(F.Yb, { appInfo: _ }),
                   ),
-                  ne && i.createElement(H, { info: h }),
-                  Boolean(re && ee) &&
+                  ie && i.createElement(H, { info: h }),
+                  Boolean(se && te) &&
                     i.createElement(
                       "div",
                       {
@@ -12186,31 +12193,31 @@
                           "StoreSaleWidgetShortDesc",
                         ),
                       },
-                      Boolean(ee.startsWith("#") && -1 == ee.indexOf(" "))
+                      Boolean(te.startsWith("#") && -1 == te.indexOf(" "))
                         ? i.createElement(
                             "span",
                             { className: j().LocalizationSpan },
                             (0, R.yu)(
-                              ee,
+                              te,
                               i.createElement("i", null),
                               i.createElement("i", null),
                               i.createElement("i", null),
                               i.createElement("i", null),
                             ),
                           )
-                        : ee,
+                        : te,
                     ),
                   Boolean(!q)
                     ? i.createElement(
                         i.Fragment,
                         null,
-                        Boolean(U && re)
+                        Boolean(U && se)
                           ? i.createElement(A.r, { appid: _.id, bIsMuted: n })
                           : i.createElement(b.x1, {
                               info: h,
                               bShowDemoButton: k,
                               bHidePrice: N,
-                              bHideWishlistButton: oe,
+                              bHideWishlistButton: le,
                               bShowDeckCompatibilityDialog: z,
                             }),
                       )
@@ -12429,6 +12436,20 @@
         );
       });
     },
+    25589: (e, t, a) => {
+      "use strict";
+      a.d(t, { x: () => s });
+      var n = a(89526),
+        i = a(14826),
+        r = a(8751);
+      function s() {
+        return n.createElement(
+          "div",
+          { className: r.bordered_live_stream_icon },
+          (0, i.Xx)("#home_page_live_broadcast"),
+        );
+      }
+    },
     67935: (e, t, a) => {
       "use strict";
       a.d(t, { v: () => d });
@@ -12524,7 +12545,7 @@
     },
     21219: (e, t, a) => {
       "use strict";
-      a.d(t, { Bj: () => _, vs: () => p, xP: () => h });
+      a.d(t, { B: () => h, v: () => _ });
       var n = a(89526),
         i = a(11985),
         r = a(10178),
@@ -12534,14 +12555,15 @@
         d = a(23715),
         c = a.n(d),
         m = a(19304),
-        u = a(14826);
-      function p(e) {
+        u = a(14826),
+        p = a(25589);
+      function _(e) {
         const { appids: t, hide_status_banners: a } = e,
           s = t.every((e) => o.jg.Get().BOwnsApp(e)),
           d = t.every((e) => o.jg.Get().BIsGameWishlisted(e)),
-          p = t.some((e) => {
+          _ = t.some((e) => {
             const t = l.Z.Get().GetApp(e);
-            return t && _(e, null == t ? void 0 : t.GetParentAppID());
+            return t && h(e, null == t ? void 0 : t.GetParentAppID());
           }),
           g = s && !a,
           v = d && !a;
@@ -12562,22 +12584,16 @@
               n.createElement("img", { src: r.Z, className: c().LinesImg }),
               (0, u.Xx)("#Sale_OnWishlist"),
             ),
-          p && n.createElement(h, null),
+          _ && n.createElement(p.x, null),
         );
       }
-      function _(e, t) {
+      function h(e, t) {
         if (t || e) {
           const a = t || e;
           return a && s.ai.Get().BIsAppStreaming(a);
         }
         return !1;
       }
-      const h = () =>
-        n.createElement(
-          "div",
-          { className: c().bordered_live_stream_icon },
-          (0, u.Xx)("#home_page_live_broadcast"),
-        );
     },
     59648: (e, t, a) => {
       "use strict";
@@ -13964,6 +13980,7 @@
       "use strict";
       a.d(t, { P: () => i });
       var n = a(89526);
+      a(73070);
       function i(e, t) {
         n.useEffect(() => {
           const a = (a) => {

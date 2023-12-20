@@ -869,6 +869,7 @@ ${MEDIA_CDN_COMMUNITY_URL}images/items/1658760/${item_image_small}
 ${MEDIA_CDN_COMMUNITY_URL}images/steamtv/${}/${}
 ${MEDIA_CDN_COMMUNITY_URL}images/steamworks_docs/${LANGUAGE}/${}
 ${MEDIA_CDN_COMMUNITY_URL}images/steamworks_docs/english/${}
+${MEDIA_CDN_URL}${asset_url}
 ${MEDIA_CDN_URL}${}
 ${MEDIA_CDN_URL}steam/
 ${MEDIA_CDN_URL}steam/apps/${m_unAppID}/capsule_231x87.jpg
@@ -1118,6 +1119,7 @@ ${STORE_BASE_URL}${image_url}
 ${STORE_BASE_URL}${logged_in ? "reservation/ajaxgetuserstate" : "reservation/ajaxgetdefaultstate"}
 ${STORE_BASE_URL}${m_strStoreURLPath}
 ${STORE_BASE_URL}${newshubUrl}
+${STORE_BASE_URL}${store_url_path}
 ${STORE_BASE_URL}${url}
 ${STORE_BASE_URL}${}
 ${STORE_BASE_URL}${}/${id}${_ ? `?${}` : ""}
@@ -2593,6 +2595,7 @@ https://steamcommunity.com/groups/${groupid}/deleterecommendation/
 https://steamcommunity.com/groups/${groupid}/followcurator/
 https://steamcommunity.com/groups/${groupid}/setcuratordetails/
 https://steamcommunity.com/groups/${url}
+https://steamcommunity.com/groups/SteamClientBeta/discussions/
 https://steamcommunity.com/groups/steamworks/discussions/24/
 https://steamcommunity.com/groups/steamworks/discussions/29/
 https://steamcommunity.com/inventory/${m_steamid}/${m_appid}/${m_contextid}

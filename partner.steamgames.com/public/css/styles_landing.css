@@ -777,6 +777,12 @@ p {
 		color: #E7E8E9;
 	}
 
+.landingTable .tr.financialAccess a, .landingTable .tr.financialAccess div.td {
+	background-color: #103010;
+}
+.landingTable .tr.financialAccess.highlightHover:hover a, .landingTable .tr.financialAccess.highlightHover:hover div.td {
+	background-color: #104F10;
+}
 	.landingTable .currency_input_field {
 		background: transparent;
 		border: none;

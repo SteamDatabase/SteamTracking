@@ -3634,16 +3634,14 @@ div.ModalPosition_TopBar {
   height: 100%;
 }
 .DialogHeader {
-  font-weight: 300;
-  font-size: 32px;
-  line-height: 36px;
-  letter-spacing: 2px;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 30px;
   color: #fff;
-  text-transform: uppercase;
   flex-shrink: 0;
   user-select: none;
   margin-right: 26px;
-  margin-bottom: 12px;
+  margin-bottom: 4px;
 }
 .DesktopUI .DialogHeader,
 .friendsui-container .DialogHeader {

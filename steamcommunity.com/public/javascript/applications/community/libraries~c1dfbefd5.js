@@ -622,6 +622,7 @@
                     br: a.FE.readBool,
                     bw: a.Xc.writeBool,
                   },
+                  assets_without_overrides: { n: 60, c: g },
                 },
               }),
             c.sm_m
@@ -2283,6 +2284,11 @@
                     bw: a.Xc.writeBool,
                   },
                   included_item_data_request: { n: 14, c: O },
+                  include_assets_without_overrides: {
+                    n: 15,
+                    br: a.FE.readBool,
+                    bw: a.Xc.writeBool,
+                  },
                 },
               }),
             O.sm_m

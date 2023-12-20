@@ -5500,7 +5500,6 @@ td.rdtYear:hover {
 .personanameandstatus_richPresenceContainer_2nrSd {
   display: flex;
   flex-direction: column;
-  width: calc(100% - 30px);
 }
 .personanameandstatus_richPresenceContainer_2nrSd.GamepadMode
   .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N.personanameandstatus_threeLines_3ms2P,
@@ -5531,7 +5530,7 @@ td.rdtYear:hover {
     rgb(0, 0, 0) calc(100% - 8px),
     rgba(0, 0, 0, 0.15) 100%
   );
-  margin-right: -24px;
+  padding-right: 24px;
 }
 .BasicUI .personanameandstatus_richPresenceLabel_1k82N {
   display: block;
@@ -7161,12 +7160,36 @@ td.rdtYear:hover {
   margin-left: auto;
   overflow: hidden;
   position: relative;
+  background-color: #386483;
+}
+.discoveryqueuewidget_DiscoveryQueueWidgetCtn_1iOb7:not(
+    .discoveryqueuewidget_Initialized_DcGKB
+  )
+  .discoveryqueuewidget_AppCarouselPosition_3bu52 {
+  display: flex;
+}
+.discoveryqueuewidget_AppCarouselPosition_3bu52
+  .discoveryqueuewidget_Spinner_3Pisp {
+  margin: auto;
+  margin-right: 90px;
+  width: 30px;
+  height: 30px;
+  opacity: 0.5;
+}
+@keyframes discoveryqueuewidget_FadeIn_2Y2J0 {
+  from {
+    opacity: 0;
+  }
 }
 .discoveryqueuewidget_AppCarouselCtn_29s_c {
   display: flex;
   position: absolute;
   top: 0;
   left: 0;
+  animation-name: discoveryqueuewidget_FadeIn_2Y2J0;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
 }
 .discoveryqueuewidget_WidgetHeaderText_uUpem {
   font-weight: 700;

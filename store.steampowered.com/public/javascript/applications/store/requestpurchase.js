@@ -175,7 +175,10 @@
             y &&
               r.createElement(
                 o.Yz,
-                { className: n.ExpandRowButton, onClick: () => P(!h) },
+                {
+                  className: (0, i.Z)(n.ExpandRowButton, h && n.Selected),
+                  onClick: () => P(!h),
+                },
                 r.createElement(s.vVQ, { direction: "down" }),
               ),
           ),

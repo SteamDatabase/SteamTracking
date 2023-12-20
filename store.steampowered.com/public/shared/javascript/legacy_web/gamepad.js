@@ -15,12 +15,12 @@
         FocusRingOnHiddenItem: "focusring_FocusRingOnHiddenItem_2OusV",
       };
     },
-    659: (e, t, n) => {
+    332: (e, t, n) => {
       "use strict";
       n.d(t, { Pf: () => r, y5: () => a });
       var i = n(655),
-        o = n(584),
-        s = n(799);
+        o = n(620),
+        s = n(877);
       class r {
         constructor() {
           (this.m_fnCallback = void 0),
@@ -84,7 +84,7 @@
       }
       (0, i.gn)([o.a], a.prototype, "OnMessage", null);
     },
-    799: (e, t, n) => {
+    877: (e, t, n) => {
       "use strict";
       n.d(t, { i: () => o, l: () => i });
       const i = "GamepadInput";
@@ -97,14 +97,14 @@
           (e[(e.Full = 4)] = "Full");
       })(o || (o = {}));
     },
-    52: (e, t, n) => {
+    903: (e, t, n) => {
       "use strict";
       n.r(t), n.d(t, { InitializeGamepadNavigation: () => ht });
       var i,
         o = n(655),
         s = n(311),
         r = n.n(s),
-        a = n(302);
+        a = n(895);
       !(function (e) {
         (e[(e.GAMEPAD = 0)] = "GAMEPAD"),
           (e[(e.KEYBOARD = 1)] = "KEYBOARD"),
@@ -164,10 +164,10 @@
           l
         );
       }
-      var g = n(584),
-        _ = n(799),
-        v = n(698),
-        p = n(659);
+      var g = n(620),
+        _ = n(877),
+        v = n(322),
+        p = n(332);
       class f {
         constructor(e) {
           (this.m_bIsGamepadInputExternallyControlled = !1),
@@ -575,7 +575,7 @@
             : console.assert(!!e, t, ...n)
           : e || console.warn(t, ...n);
       }
-      var y = n(421);
+      var y = n(851);
       class B extends class {
         GetObject(e) {
           return (0, o.mG)(this, void 0, void 0, function* () {
@@ -984,7 +984,7 @@
           );
         }
       }
-      var Y = n(843);
+      var Y = n(100);
       const X = new G("FocusNavigation").Debug,
         z = new G("GamepadEvents").Debug;
       class Q {
@@ -1324,13 +1324,15 @@
         SetActive(e, t, n) {
           this.m_controller.BatchedUpdate(() => {
             var i;
-            e
-              ? ((this.m_activeWindow = t),
-                (this.m_activeBrowserView = n),
-                this.m_controller.OnContextActivated(this))
-              : ((this.m_activeBrowserView = void 0),
-                this.m_controller.OnContextDeactivated(this, !1)),
-              this.m_bActive != e &&
+            const o = this.m_bActive != e;
+            (this.m_bActive = e),
+              e
+                ? ((this.m_activeWindow = t),
+                  (this.m_activeBrowserView = n),
+                  this.m_controller.OnContextActivated(this))
+                : ((this.m_activeBrowserView = void 0),
+                  this.m_controller.OnContextDeactivated(this, !1)),
+              o &&
                 ((this.m_bActive = e),
                 this.m_ActiveCallbacks.Dispatch(e),
                 null === (i = this.m_LastActiveFocusNavTree) ||

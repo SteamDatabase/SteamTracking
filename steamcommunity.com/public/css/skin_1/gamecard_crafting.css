@@ -199,6 +199,9 @@
 
 .completed_badge_inner {
 	position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 
 	background-color: #262627;
 	border-radius: 3px;
@@ -210,9 +213,7 @@
 }
 
 .completed_badge_icon {
-	position: absolute;
-	left: 17px;
-	top: 11px;
+	margin-left: 17px;
 }
 
 .completed_badge_icon, .completed_badge_icon img {
@@ -221,8 +222,8 @@
 }
 
 .completed_badge_content {
-	padding-left: 116px;
-	padding-top: 24px;
+	padding-left: 16px;
+    padding-right: 8px;
 
 	font-size: 13px;
 	line-height: 18px;

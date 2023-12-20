@@ -9254,6 +9254,16 @@
                     br: i.FE.readUint32,
                     bw: i.Xc.writeUint32,
                   },
+                  train_optimizer: {
+                    n: 7,
+                    br: i.FE.readEnum,
+                    bw: i.Xc.writeEnum,
+                  },
+                  train_learning_rate: {
+                    n: 8,
+                    br: i.FE.readFloat,
+                    bw: i.Xc.writeFloat,
+                  },
                 },
               }),
             E.sm_m
@@ -14800,7 +14810,7 @@
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            ct.prototype.look_behind_days || i.aR(ct.M()),
+            ct.prototype.start_timestamp || i.aR(ct.M()),
             o.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
@@ -14809,12 +14819,12 @@
               (ct.sm_m = {
                 proto: ct,
                 fields: {
-                  look_behind_days: {
+                  start_timestamp: {
                     n: 1,
                     br: i.FE.readUint32,
                     bw: i.Xc.writeUint32,
                   },
-                  look_ahead_days: {
+                  end_timestamp: {
                     n: 2,
                     br: i.FE.readUint32,
                     bw: i.Xc.writeUint32,

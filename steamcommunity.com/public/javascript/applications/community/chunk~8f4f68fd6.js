@@ -384,7 +384,7 @@
         gs: () => te,
         sS: () => ee,
         fH: () => x,
-        Sh: () => F,
+        Sh: () => b,
         nM: () => se,
         a8: () => A,
         VE: () => ie,
@@ -448,6 +448,8 @@
             "k_EFamilyQuerySetCooldownOverrides");
       })(h || (h = {}));
       h.k_EFamilyQueryCreateFamily,
+        h.k_EFamilyQueryJoinFamily,
+        h.k_EFamilyQueryCreateFamily,
         h.k_EFamilyQueryJoinFamily,
         h.k_EFamilyQueryRemoveFromFamily,
         h.k_EFamilyQueryJoinFamily,
@@ -588,7 +590,7 @@
           (e[(e.Basic = 7)] = "Basic"),
           (e[(e.SimplePersona = 8)] = "SimplePersona");
       })(k || (k = {}));
-      const b = {
+      const F = {
         3: { fnGet: q, eRenderID: k.Comment },
         5: { fnGet: te, eRenderID: k.FriendInvite },
         2: { fnGet: ee, eRenderID: k.Gift },
@@ -597,14 +599,14 @@
         9: { fnGet: ie, eRenderID: k.TradeOffer },
         12: { fnGet: z, eRenderID: k.AsyncGame },
       };
-      function F(e) {
+      function b(e) {
         let t;
         return (
           (t = T(e)
             ? { eRenderID: k.SimplePersona }
             : E(e)
             ? { eRenderID: k.Basic }
-            : b[e]),
+            : F[e]),
           t
         );
       }
@@ -907,7 +909,7 @@
                       return (
                         E(e) ||
                         T(e) ||
-                        !!(null === (i = b[e]) || void 0 === i
+                        !!(null === (i = F[e]) || void 0 === i
                           ? void 0
                           : i.fnGet(t))
                       );
@@ -1636,7 +1638,7 @@
             "div",
             { className: y().Header },
             a.createElement(k, { icon: t }),
-            !!i && a.createElement(b, { title: i }),
+            !!i && a.createElement(F, { title: i }),
             r && l({ timestamp: n }),
           )
         );
@@ -1644,10 +1646,10 @@
       function k(e) {
         return a.createElement("div", { className: y().Icon }, e.icon);
       }
-      function b(e) {
+      function F(e) {
         return a.createElement("div", { className: y().Title }, e.title);
       }
-      function F(e) {
+      function b(e) {
         let t = (0, u.Z)(
           y().StandardNotificationDescription,
           e.multiline && y().Multiline,
@@ -1799,7 +1801,7 @@
                   location: r,
                   fnRenderTimestamp: d,
                 }),
-                a.createElement(F, { multiline: !f }, p),
+                a.createElement(b, { multiline: !f }, p),
                 !!f && a.createElement(D, null, f),
                 c ? a.createElement(K, { onHide: c }) : null,
               ),
@@ -1844,7 +1846,7 @@
                   location: i,
                   fnRenderTimestamp: s,
                 }),
-                a.createElement(F, null, d),
+                a.createElement(b, null, d),
                 a.createElement(D, null, c),
                 r ? a.createElement(K, { onHide: r }) : null,
               ),
@@ -1889,7 +1891,7 @@
                   location: i,
                   fnRenderTimestamp: s,
                 }),
-                a.createElement(F, { multiline: !d }, m),
+                a.createElement(b, { multiline: !d }, m),
                 !!d && a.createElement(D, null, d),
                 r ? a.createElement(K, { onHide: r }) : null,
               ),
@@ -1958,7 +1960,7 @@
                   location: s,
                   fnRenderTimestamp: m,
                 }),
-                a.createElement(F, { multiline: !p }, N),
+                a.createElement(b, { multiline: !p }, N),
                 !!p && a.createElement(D, null, p),
                 d ? a.createElement(K, { onHide: d }) : null,
               ),
@@ -2063,7 +2065,7 @@
               location: r,
               fnRenderTimestamp: d,
             }),
-            a.createElement(F, { multiline: !S }, E),
+            a.createElement(b, { multiline: !S }, E),
             !!S && a.createElement(D, null, S),
             p ? a.createElement(K, { onHide: p }) : null,
           ),
@@ -2124,7 +2126,7 @@
                     location: o,
                     fnRenderTimestamp: m,
                   }),
-                  a.createElement(F, null, f),
+                  a.createElement(b, null, f),
                   a.createElement(D, null, null == i ? void 0 : i.GetName()),
                   d ? a.createElement(K, { onHide: d }) : null,
                 ),
@@ -2181,7 +2183,7 @@
                   location: l,
                   fnRenderTimestamp: d,
                 }),
-                a.createElement(F, { multiline: !0 }, i),
+                a.createElement(b, { multiline: !0 }, i),
                 r ? a.createElement(K, { onHide: r }) : null,
               ),
             );
@@ -2205,8 +2207,8 @@
           } = e,
           E = u.title;
         const A = w(p),
-          [k, b] = a.useState(!1),
-          L = () => b(!0),
+          [k, F] = a.useState(!1),
+          L = () => F(!0),
           [R, B] = (0, O.KU)(
             u.bclan_account ? u.owner_steam_id.GetAccountID() : void 0,
           ),
@@ -2319,7 +2321,7 @@
                   location: p,
                   fnRenderTimestamp: y,
                 }),
-                a.createElement(F, null, E),
+                a.createElement(b, null, E),
                 U,
                 x,
                 S ? a.createElement(K, { onHide: S }) : null,
@@ -2407,7 +2409,7 @@
                     location: o,
                     fnRenderTimestamp: l,
                   }),
-                  a.createElement(F, { multiline: !f }, p),
+                  a.createElement(b, { multiline: !f }, p),
                   !!f && a.createElement(D, null, f),
                   m ? a.createElement(K, { onHide: m }) : null,
                 ),

@@ -4,6 +4,20 @@ html.responsive
   padding-bottom: 0;
   min-height: auto;
 }
+html.responsive
+  body.messagelist_MarketingMessagePage_1HVoK
+  .responsive_page_template_content
+  div:focus,
+html.responsive
+  body.messagelist_MarketingMessagePage_1HVoK
+  .responsive_page_template_content
+  a:focus,
+html.responsive
+  body.messagelist_MarketingMessagePage_1HVoK
+  .responsive_page_template_content
+  span:focus {
+  outline: none;
+}
 .messagelist_MessageListPage_1N7O3 {
   position: fixed;
   top: 0;

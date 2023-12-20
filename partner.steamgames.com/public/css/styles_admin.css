@@ -3553,28 +3553,27 @@ h2.giveawayFilter_titleArea {
 .advisory_header {
     width: 100%;
     box-sizing: border-box;
-    background: -webkit-linear-gradient( top, #c6d4df 5%, #e5ebf0 95%);
-	background: linear-gradient( to bottom, #c6d4df 5%, #e5ebf0 95%);
+    background: #36577f;
 	padding: 16px;
-	color: #db6a00;
-    text-shadow: 1px 1px 0 rgba(255,255,255,0.25);
+	color: #ffffff;
     border-radius: 2px;
-    border: 1px solid #bb4c16;
+    border-left: 5px solid #bb4c16;
+    margin-bottom: 12px;
 }
 .advisory_header h2 {
-	color: #db6a00;
+	color: #ffffff;
     font-weight: 500;
 }
 .advisory_header p {
 	color: #444;
 }
 .advisory_header p.notice {
-	color: #db6a00;
+	color: #ffffff;
     margin-top: 0px;
     margin-bottom: 0px;
 }
 .advisory_header p.notice a {
-    color: #db6a00;
+    color: #ffffff;
 }
 .advisory_header.with_icon {
     display: flex;

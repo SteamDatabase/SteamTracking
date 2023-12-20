@@ -5,7 +5,7 @@
   [4040],
   {
     11195: (e, t, s) => {
-      s.d(t, { De: () => l, Fq: () => o, pA: () => n });
+      s.d(t, { De: () => u, Fq: () => o, pA: () => n });
       var r = s(85251),
         i = s(32765),
         a = s(2232);
@@ -23,7 +23,7 @@
           t
         );
       }
-      function l(e, t) {
+      function u(e, t) {
         e.Body().set_data_request(r.Qn.fromObject(t));
       }
     },
@@ -34,8 +34,8 @@
         a = s(68333),
         n = s(19094),
         o = s(14596),
-        l = s(85251),
-        u = s(23801),
+        u = s(85251),
+        l = s(23801),
         c = s(23217),
         d = s(32765),
         _ = s(11195),
@@ -109,6 +109,13 @@
             !this.m_Assets &&
             ((this.m_Assets = new v(e.assets(), e.id())),
             (this.m_DataRequested.include_assets = !0)),
+            t.include_assets_without_overrides &&
+              !this.m_AssetsWithoutOverrides &&
+              ((this.m_AssetsWithoutOverrides = new v(
+                e.assets_without_overrides(),
+                e.id(),
+              )),
+              (this.m_DataRequested.include_assets_without_overrides = !0)),
             t.include_release &&
               !this.m_ReleaseInfo &&
               ((this.m_ReleaseInfo = e.release().toObject()),
@@ -179,7 +186,7 @@
         }
         BCheckDataRequestIncluded(e) {
           ("dev" != d.De.WEB_UNIVERSE && "beta" != d.De.WEB_UNIVERSE) ||
-            (0, u.X)(
+            (0, l.X)(
               this.BContainDataRequest(e),
               `Requested data without for ${(0, h.qE)(this.m_eItemType)} @ ${
                 this.m_unID
@@ -502,6 +509,14 @@
           return (
             this.BCheckDataRequestIncluded({ include_assets: !0 }),
             this.m_Assets
+          );
+        }
+        GetAssetsWithoutOverrides() {
+          return (
+            this.BCheckDataRequestIncluded({
+              include_assets_without_overrides: !0,
+            }),
+            this.m_AssetsWithoutOverrides
           );
         }
         GetOriginalReleaseDateRTime() {
@@ -1032,6 +1047,9 @@
             e.include_full_description || t.include_full_description,
           include_included_items:
             e.include_included_items || t.include_included_items,
+          include_assets_without_overrides:
+            e.include_assets_without_overrides ||
+            t.include_assets_without_overrides,
         };
       }
       function G(e, t) {
@@ -1094,7 +1112,7 @@
         }
         static Initialize(e, t) {
           return (0, r.mG)(this, void 0, void 0, function* () {
-            (0, u.X)(
+            (0, l.X)(
               !y.Get().m_bInitialized,
               "CStoreItemCache was already initialized; initialize it only once.",
             ),
@@ -1262,7 +1280,7 @@
         QueueStoreItemRequest(e, t, s) {
           return (0, r.mG)(this, void 0, void 0, function* () {
             if (
-              ((0, u.X)(
+              ((0, l.X)(
                 y.ValidateDataRequest(s),
                 "Invalid Data Request: " + JSON.stringify(s),
               ),
@@ -1276,7 +1294,7 @@
               );
             if (!e)
               return (
-                (0, u.X)(
+                (0, l.X)(
                   !e,
                   `unexpected id ${e} of zero or undefined for type ${t}`,
                 ),
@@ -1318,7 +1336,7 @@
                 this.m_setPendingHubCategoryInfo.add(e);
                 break;
               default:
-                (0, u.X)(!1, `Unexpected Type ${t}`);
+                (0, l.X)(!1, `Unexpected Type ${t}`);
             }
             const i = this.m_PendingInfoPromise;
             return (
@@ -1428,18 +1446,18 @@
             ? r.promise
             : null;
         }
-        HintLoadStoreItems(e, t, s, i, a, n, o, u) {
+        HintLoadStoreItems(e, t, s, i, a, n, o, l) {
           return (0, r.mG)(this, void 0, void 0, function* () {
             let r = null;
             const c = new Promise((e) => (r = e));
             let d = [],
               _ = [];
             (t || []).forEach((e) => {
-              const t = this.GetPreviousSupersetLoadPromise(e, 0, u);
+              const t = this.GetPreviousSupersetLoadPromise(e, 0, l);
               if (t) _.push(t);
               else {
-                d.push(l.oY.fromObject({ appid: e }));
-                let t = S(this.GetStoreItemDataRequest(e, 0), u);
+                d.push(u.oY.fromObject({ appid: e }));
+                let t = S(this.GetStoreItemDataRequest(e, 0), l);
                 const s = this.m_mapAppsInFlight.get(e);
                 (t = S(null == s ? void 0 : s.dataRequest, t)),
                   s && _.push(s.promise),
@@ -1450,11 +1468,11 @@
               }
             }),
               (s || []).forEach((e) => {
-                const t = this.GetPreviousSupersetLoadPromise(e, 1, u);
+                const t = this.GetPreviousSupersetLoadPromise(e, 1, l);
                 if (t) _.push(t);
                 else {
-                  d.push(l.oY.fromObject({ packageid: e }));
-                  let t = S(this.GetStoreItemDataRequest(e, 1), u);
+                  d.push(u.oY.fromObject({ packageid: e }));
+                  let t = S(this.GetStoreItemDataRequest(e, 1), l);
                   const s = this.m_mapPackageInFlight.get(e);
                   (t = S(null == s ? void 0 : s.dataRequest, t)),
                     s && _.push(s.promise),
@@ -1465,11 +1483,11 @@
                 }
               }),
               (i || []).forEach((e) => {
-                const t = this.GetPreviousSupersetLoadPromise(e, 2, u);
+                const t = this.GetPreviousSupersetLoadPromise(e, 2, l);
                 if (t) _.push(t);
                 else {
-                  d.push(l.oY.fromObject({ bundleid: e }));
-                  let t = S(this.GetStoreItemDataRequest(e, 2), u);
+                  d.push(u.oY.fromObject({ bundleid: e }));
+                  let t = S(this.GetStoreItemDataRequest(e, 2), l);
                   const s = this.m_mapBundleInFlight.get(e);
                   (t = S(null == s ? void 0 : s.dataRequest, t)),
                     s && _.push(s.promise),
@@ -1480,11 +1498,11 @@
                 }
               }),
               (a || []).forEach((e) => {
-                const t = this.GetPreviousSupersetLoadPromise(e, 4, u);
+                const t = this.GetPreviousSupersetLoadPromise(e, 4, l);
                 if (t) _.push(t);
                 else {
-                  d.push(l.oY.fromObject({ tagid: e }));
-                  let t = S(this.GetStoreItemDataRequest(e, 4), u);
+                  d.push(u.oY.fromObject({ tagid: e }));
+                  let t = S(this.GetStoreItemDataRequest(e, 4), l);
                   const s = this.m_mapTagsInFlight.get(e);
                   (t = S(null == s ? void 0 : s.dataRequest, t)),
                     s && _.push(s.promise),
@@ -1495,11 +1513,11 @@
                 }
               }),
               (n || []).forEach((e) => {
-                const t = this.GetPreviousSupersetLoadPromise(e, 5, u);
+                const t = this.GetPreviousSupersetLoadPromise(e, 5, l);
                 if (t) _.push(t);
                 else {
-                  d.push(l.oY.fromObject({ creatorid: e }));
-                  let t = S(this.GetStoreItemDataRequest(e, 5), u);
+                  d.push(u.oY.fromObject({ creatorid: e }));
+                  let t = S(this.GetStoreItemDataRequest(e, 5), l);
                   const s = this.m_mapCreatorsInFlight.get(e);
                   (t = S(null == s ? void 0 : s.dataRequest, t)),
                     s && _.push(s.promise),
@@ -1510,11 +1528,11 @@
                 }
               }),
               (o || []).forEach((e) => {
-                const t = this.GetPreviousSupersetLoadPromise(e, 6, u);
+                const t = this.GetPreviousSupersetLoadPromise(e, 6, l);
                 if (t) _.push(t);
                 else {
-                  d.push(l.oY.fromObject({ hubcategoryid: e }));
-                  let t = S(this.GetStoreItemDataRequest(e, 6), u);
+                  d.push(u.oY.fromObject({ hubcategoryid: e }));
+                  let t = S(this.GetStoreItemDataRequest(e, 6), l);
                   const s = this.m_mapHubCategoriesInFlight.get(e);
                   (t = S(null == s ? void 0 : s.dataRequest, t)),
                     s && _.push(s.promise),
@@ -1527,7 +1545,7 @@
             let h = 1;
             if (
               (d.length > 0 &&
-                (h = yield this.InternalHandleLoadStoreItems(e, d, u)),
+                (h = yield this.InternalHandleLoadStoreItems(e, d, l)),
               r(h),
               _.length > 0)
             ) {
@@ -1573,7 +1591,7 @@
           let t = e.slice();
           return (
             t.sort((e, t) => {
-              var s, r, i, a, n, o, l, u, c, d, _, h;
+              var s, r, i, a, n, o, u, l, c, d, _, h;
               let m = null !== (s = e.appid()) && void 0 !== s ? s : 0,
                 p = null !== (r = t.appid()) && void 0 !== r ? r : 0;
               if (m != p) return m - p;
@@ -1583,8 +1601,8 @@
               let f = null !== (n = e.bundleid()) && void 0 !== n ? n : 0,
                 v = null !== (o = t.bundleid()) && void 0 !== o ? o : 0;
               if (f != v) return f - v;
-              let R = null !== (l = e.tagid()) && void 0 !== l ? l : 0,
-                b = null !== (u = t.tagid()) && void 0 !== u ? u : 0;
+              let R = null !== (u = e.tagid()) && void 0 !== u ? u : 0,
+                b = null !== (l = t.tagid()) && void 0 !== l ? l : 0;
               if (R != b) return R - b;
               let C = null !== (c = e.creatorid()) && void 0 !== c ? c : 0,
                 S = null !== (d = t.creatorid()) && void 0 !== d ? d : 0;
@@ -1611,25 +1629,25 @@
                     { include_included_items: !1 },
                   ),
                 }));
-            const u = new Array();
+            const l = new Array();
             try {
               const n = [];
               for (; t.length > 0; ) {
                 const r = t.splice(0, this.k_nMaxBatchSize);
-                if ((u.push(r), this.m_bUsePartnerAPI)) {
+                if ((l.push(r), this.m_bUsePartnerAPI)) {
                   const t = a.gA.Init(o.z);
                   t.Body().set_include_unpublished(!1);
                   const i = t.Body().request(!0);
                   i.set_context((0, _.Fq)(this.m_bUsePartnerAPI)),
-                    i.set_data_request(l.Qn.fromObject(s)),
+                    i.set_data_request(u.Qn.fromObject(s)),
                     i.set_ids(r),
                     n.push(o.n.GetItems(e.GetServiceTransport(), t));
                 } else {
-                  const t = a.gA.Init(l.eK);
+                  const t = a.gA.Init(u.eK);
                   (0, _.pA)(t, this.m_bUsePartnerAPI),
                     (0, _.De)(t, s),
                     t.Body().set_ids(r),
-                    n.push(l.VJ.GetItems(e.GetAnonymousServiceTransport(), t));
+                    n.push(u.VJ.GetItems(e.GetAnonymousServiceTransport(), t));
                 }
               }
               (yield Promise.all(n)).forEach((e, a) => {
@@ -1642,9 +1660,9 @@
                           n = r.item_type();
                         let o =
                             this.m_bReturnUnavailableItems && 15 == r.success(),
-                          l =
+                          u =
                             1 == r.success() && !this.BIsStoreItemMissing(a, n);
-                        if (o || l) this.ReadItem(r, s);
+                        if (o || u) this.ReadItem(r, s);
                         else {
                           switch (
                             ("dev" == d.De.WEB_UNIVERSE &&
@@ -1724,7 +1742,7 @@
                       (0, i.ZN)(t),
                     ),
                     (1 == e.Hdr().transport_error() || d.De.FROM_WEB) &&
-                      this.MarkStoreItemIDUnavailable(u[a]),
+                      this.MarkStoreItemIDUnavailable(l[a]),
                     1 == r && (r = e.GetEResult()));
               });
             } catch (e) {
@@ -1735,7 +1753,7 @@
                     t.strErrorMsg,
                   t,
                 ),
-                u.forEach((e) => this.MarkStoreItemIDUnavailable(e)),
+                l.forEach((e) => this.MarkStoreItemIDUnavailable(e)),
                 79
               );
             }
@@ -2026,7 +2044,7 @@
             }
         }
       }
-      function l(e) {
+      function u(e) {
         switch (e) {
           case 2:
             return "bundle";
@@ -2040,7 +2058,7 @@
         $k: () => r,
         Ds: () => o,
         GV: () => i,
-        Hy: () => l,
+        Hy: () => u,
         TM: () => n,
         qE: () => a,
       }),
@@ -2072,20 +2090,20 @@
       s.d(t, {
         Vm: () => d,
         ie: () => c,
-        jk: () => l,
-        vs: () => u,
+        jk: () => u,
+        vs: () => l,
         wZ: () => h,
       });
       var r = s(52868),
         i = s.n(r),
         a = s(89526),
-        n = (s(24174), s(4306)),
+        n = (s(88071), s(4306)),
         o = s(69485);
-      function l(e, t, s, r) {
-        const l = (0, a.useRef)(),
-          u = (0, a.useRef)(void 0),
+      function u(e, t, s, r) {
+        const u = (0, a.useRef)(),
+          l = (0, a.useRef)(void 0),
           c = (0, n.NW)();
-        l.current = e;
+        u.current = e;
         const [d, _] = (0, a.useState)(void 0),
           {
             include_assets: h,
@@ -2101,6 +2119,7 @@
             include_supported_languages: S,
             include_full_description: G,
             include_included_items: y,
+            include_assets_without_overrides: B,
           } = s;
         if (
           ((0, a.useEffect)(() => {
@@ -2118,41 +2137,42 @@
               include_supported_languages: S,
               include_full_description: G,
               include_included_items: y,
+              include_assets_without_overrides: B,
             };
             let a = null;
             return (
               !e ||
                 o.Z.Get().BHasStoreItem(e, t, s) ||
-                (void 0 !== d && r && r == u.current) ||
-                (r !== u.current && (_(void 0), (u.current = r)),
+                (void 0 !== d && r && r == l.current) ||
+                (r !== l.current && (_(void 0), (l.current = r)),
                 (a = i().CancelToken.source()),
                 o.Z.Get()
                   .QueueStoreItemRequest(e, t, s)
                   .then((t) => {
-                    a.token.reason || l.current !== e || _(1 == t), c();
+                    a.token.reason || u.current !== e || _(1 == t), c();
                   })),
               () => a && a.cancel("useStoreItemCache: unmounting")
             );
-          }, [e, t, r, d, h, m, p, g, I, f, v, R, b, C, S, G, y, c]),
+          }, [e, t, r, d, h, m, p, g, I, f, v, R, b, C, S, G, y, B, c]),
           !e)
         )
           return [null, 2];
         if (!1 === d) return [void 0, 2];
         if (o.Z.Get().BIsStoreItemMissing(e, t)) return [void 0, 2];
         if (!o.Z.Get().BHasStoreItem(e, t, s)) return [void 0, 1];
-        const B = o.Z.Get().GetStoreItemWithLegacyVisibilityCheck(e, t);
-        return B ? [B, 3] : [null, 2];
+        const k = o.Z.Get().GetStoreItemWithLegacyVisibilityCheck(e, t);
+        return k ? [k, 3] : [null, 2];
       }
-      function u(e, t, s) {
-        return l(e, 0, t, s);
+      function l(e, t, s) {
+        return u(e, 0, t, s);
       }
       function c(e, t, s) {
-        return l(e, 1, t, s);
+        return u(e, 1, t, s);
       }
       function d(e, t, s) {
-        const [r, n] = l(e, t, s),
+        const [r, n] = u(e, t, s),
           [o, c] = (0, a.useState)(null),
-          [d, _] = u(o, s);
+          [d, _] = l(o, s);
         return (
           (0, a.useEffect)(() => {
             var e;
@@ -2175,9 +2195,9 @@
         );
       }
       function _(e, t, s, r) {
-        const l = (0, n.NW)(),
+        const u = (0, n.NW)(),
           {
-            include_assets: u,
+            include_assets: l,
             include_release: c,
             include_platforms: d,
             include_all_purchase_options: _,
@@ -2190,12 +2210,13 @@
             include_supported_languages: v,
             include_full_description: R,
             include_included_items: b,
+            include_assets_without_overrides: C,
           } = s;
         if (
           ((0, a.useEffect)(() => {
             if (!e || 0 == e.length) return;
             const s = {
-                include_assets: u,
+                include_assets: l,
                 include_release: c,
                 include_platforms: d,
                 include_all_purchase_options: _,
@@ -2208,6 +2229,7 @@
                 include_supported_languages: v,
                 include_full_description: R,
                 include_included_items: b,
+                include_assets_without_overrides: C,
               },
               r = e.filter(
                 (e) =>
@@ -2221,11 +2243,11 @@
               n = r.map((e) => o.Z.Get().QueueStoreItemRequest(e, t, s));
             return (
               Promise.all(n).then(() => {
-                a.token.reason || l();
+                a.token.reason || u();
               }),
               () => a.cancel("useStoreItemCacheMultiplePackages: unmounting")
             );
-          }, [e, t, r, l, u, c, d, _, h, m, p, g, I, f, v, R, b]),
+          }, [e, t, r, u, l, c, d, _, h, m, p, g, I, f, v, R, b, C]),
           !e)
         )
           return 2;
