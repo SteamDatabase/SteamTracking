@@ -1822,6 +1822,66 @@
       };
       g = (0, n.gn)([i.Pi], g);
     },
+    32905: (e, t, r) => {
+      "use strict";
+      r.d(t, { X: () => d, _: () => p });
+      var n = r(89526),
+        a = r(57742),
+        i = r(14826),
+        o = r(32765),
+        s = r(90580),
+        l = r(19094),
+        c = r(79925);
+      function m(e) {
+        return n.createElement(
+          a.e1,
+          { onEscKeypress: e.closeModal, bDisableBackgroundDismiss: !0 },
+          n.createElement(u, { redirectURL: e.redirectURL }),
+        );
+      }
+      function d() {
+        (0, a.AM)(
+          n.createElement(m, {
+            ownerWin: window,
+            redirectURL: window.location.href,
+          }),
+          window,
+          { strTitle: (0, i.Xx)("#Login_SignIn") },
+        );
+      }
+      function p(e) {
+        (0, a.AM)(
+          n.createElement(m, { ownerWin: window, redirectURL: e }),
+          window,
+          { strTitle: (0, i.Xx)("#Login_SignIn") },
+        );
+      }
+      function u(e) {
+        const { redirectURL: t } = e,
+          [r] = (0, n.useState)(
+            new l.J(o.De.WEBAPI_BASE_URL).GetAnonymousServiceTransport(),
+          ),
+          [a, i] = (0, n.useState)(!1);
+        return n.createElement(
+          "div",
+          null,
+          a
+            ? n.createElement(s.pT, null)
+            : n.createElement(s.wK, {
+                autoFocus: !0,
+                transport: r,
+                platform: 2,
+                onComplete: (e) => {
+                  e == c.TG.k_PrimaryDomainFail
+                    ? i(!0)
+                    : window.location.assign(t);
+                },
+                redirectUrl: t,
+                theme: "modal",
+              }),
+        );
+      }
+    },
     87178: (e, t, r) => {
       "use strict";
       r.d(t, { j: () => o });

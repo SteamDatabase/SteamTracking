@@ -2595,7 +2595,7 @@ https://steamcommunity.com/groups/${groupid}/deleterecommendation/
 https://steamcommunity.com/groups/${groupid}/followcurator/
 https://steamcommunity.com/groups/${groupid}/setcuratordetails/
 https://steamcommunity.com/groups/${url}
-https://steamcommunity.com/groups/SteamClientBeta/discussions/
+https://steamcommunity.com/groups/SteamClientBeta/discussions/3/4038104598693698820/
 https://steamcommunity.com/groups/steamworks/discussions/24/
 https://steamcommunity.com/groups/steamworks/discussions/29/
 https://steamcommunity.com/inventory/${m_steamid}/${m_appid}/${m_contextid}

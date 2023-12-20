@@ -408,7 +408,7 @@
     },
     85651: (e, t, n) => {
       "use strict";
-      n.d(t, { JW: () => v, kl: () => h, rw: () => c, zD: () => u });
+      n.d(t, { JW: () => v, kl: () => h, rw: () => u, zD: () => c });
       var r = n(33940),
         a = n(59621),
         s = n(36105),
@@ -475,10 +475,10 @@
         var e;
         return null !== (e = v.nOverrideDateNow) && void 0 !== e ? e : p;
       }
-      function u() {
+      function c() {
         return i.useMemo(() => h(), []);
       }
-      function c() {
+      function u() {
         return i.useMemo(() => v.GetTimeNowWithOverrideAsDate(), []);
       }
     },
@@ -513,6 +513,66 @@
           ),
         );
       };
+    },
+    32905: (e, t, n) => {
+      "use strict";
+      n.d(t, { X: () => _, _: () => p });
+      var r = n(89526),
+        a = n(57742),
+        s = n(14826),
+        o = n(32765),
+        i = n(90580),
+        l = n(19094),
+        d = n(79925);
+      function v(e) {
+        return r.createElement(
+          a.e1,
+          { onEscKeypress: e.closeModal, bDisableBackgroundDismiss: !0 },
+          r.createElement(h, { redirectURL: e.redirectURL }),
+        );
+      }
+      function _() {
+        (0, a.AM)(
+          r.createElement(v, {
+            ownerWin: window,
+            redirectURL: window.location.href,
+          }),
+          window,
+          { strTitle: (0, s.Xx)("#Login_SignIn") },
+        );
+      }
+      function p(e) {
+        (0, a.AM)(
+          r.createElement(v, { ownerWin: window, redirectURL: e }),
+          window,
+          { strTitle: (0, s.Xx)("#Login_SignIn") },
+        );
+      }
+      function h(e) {
+        const { redirectURL: t } = e,
+          [n] = (0, r.useState)(
+            new l.J(o.De.WEBAPI_BASE_URL).GetAnonymousServiceTransport(),
+          ),
+          [a, s] = (0, r.useState)(!1);
+        return r.createElement(
+          "div",
+          null,
+          a
+            ? r.createElement(i.pT, null)
+            : r.createElement(i.wK, {
+                autoFocus: !0,
+                transport: n,
+                platform: 2,
+                onComplete: (e) => {
+                  e == d.TG.k_PrimaryDomainFail
+                    ? s(!0)
+                    : window.location.assign(t);
+                },
+                redirectUrl: t,
+                theme: "modal",
+              }),
+        );
+      }
     },
     58218: (e, t, n) => {
       "use strict";

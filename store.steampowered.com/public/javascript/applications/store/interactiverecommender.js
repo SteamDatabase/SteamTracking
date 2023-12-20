@@ -93,6 +93,66 @@
         OptionSuggestion: "interactiverecommender_OptionSuggestion_3VKY5",
       };
     },
+    32905: (e, t, i) => {
+      "use strict";
+      i.d(t, { X: () => m, _: () => _ });
+      var a = i(89526),
+        n = i(57742),
+        s = i(14826),
+        o = i(32765),
+        r = i(90580),
+        l = i(19094),
+        c = i(79925);
+      function d(e) {
+        return a.createElement(
+          n.e1,
+          { onEscKeypress: e.closeModal, bDisableBackgroundDismiss: !0 },
+          a.createElement(p, { redirectURL: e.redirectURL }),
+        );
+      }
+      function m() {
+        (0, n.AM)(
+          a.createElement(d, {
+            ownerWin: window,
+            redirectURL: window.location.href,
+          }),
+          window,
+          { strTitle: (0, s.Xx)("#Login_SignIn") },
+        );
+      }
+      function _(e) {
+        (0, n.AM)(
+          a.createElement(d, { ownerWin: window, redirectURL: e }),
+          window,
+          { strTitle: (0, s.Xx)("#Login_SignIn") },
+        );
+      }
+      function p(e) {
+        const { redirectURL: t } = e,
+          [i] = (0, a.useState)(
+            new l.J(o.De.WEBAPI_BASE_URL).GetAnonymousServiceTransport(),
+          ),
+          [n, s] = (0, a.useState)(!1);
+        return a.createElement(
+          "div",
+          null,
+          n
+            ? a.createElement(r.pT, null)
+            : a.createElement(r.wK, {
+                autoFocus: !0,
+                transport: i,
+                platform: 2,
+                onComplete: (e) => {
+                  e == c.TG.k_PrimaryDomainFail
+                    ? s(!0)
+                    : window.location.assign(t);
+                },
+                redirectUrl: t,
+                theme: "modal",
+              }),
+        );
+      }
+    },
     49633: (e, t, i) => {
       "use strict";
       i.d(t, { Z: () => l });
@@ -156,7 +216,7 @@
     },
     42591: (e, t, i) => {
       "use strict";
-      i.r(t), i.d(t, { default: () => M });
+      i.r(t), i.d(t, { default: () => b });
       var a,
         n = i(33940),
         s = i(32765),
@@ -320,13 +380,13 @@
         EXCLUDE_WISHLIST: !1,
         USE_MICROTRAILERS: !1,
       };
-      var y;
+      var R;
       !(function (e) {
         (e[(e.ClickThrough = 1)] = "ClickThrough"),
           (e[(e.AddToWishlist = 2)] = "AddToWishlist"),
           (e[(e.AddToCart = 3)] = "AddToCart");
-      })(y || (y = {}));
-      class R {
+      })(R || (R = {}));
+      class y {
         constructor() {
           (this.m_fPopularityValue = void 0),
             (this.m_fRecencyValue = void 0),
@@ -616,7 +676,7 @@
               session_id: T.SESSION_ID,
               app_id: e,
               app_rank: t,
-              action: y.AddToWishlist,
+              action: R.AddToWishlist,
               algorithm: 1,
               setting_1: 100 * this.m_fPopularityValue,
               setting_2: 100 * this.m_fRecencyValue,
@@ -642,7 +702,7 @@
               session_id: T.SESSION_ID,
               app_id: e,
               app_rank: t,
-              action: y.AddToCart,
+              action: R.AddToCart,
               algorithm: 1,
               setting_1: 100 * this.m_fPopularityValue,
               setting_2: 100 * this.m_fRecencyValue,
@@ -664,44 +724,44 @@
           return this.m_bUseMicrotrailers;
         }
       }
-      (0, n.gn)([r.LO], R.prototype, "m_fPopularityValue", void 0),
-        (0, n.gn)([r.LO], R.prototype, "m_fRecencyValue", void 0),
-        (0, n.gn)([r.LO], R.prototype, "m_rgFilterTags", void 0),
-        (0, n.gn)([r.LO], R.prototype, "m_rgExcludeTags", void 0),
-        (0, n.gn)([r.LO], R.prototype, "m_fQueuedPopularityValue", void 0),
-        (0, n.gn)([r.LO], R.prototype, "m_fQueuedRecencyValue", void 0),
-        (0, n.gn)([r.LO], R.prototype, "m_bExcludeWishlisted", void 0),
-        (0, n.gn)([r.LO], R.prototype, "m_bShouldMute", void 0),
-        (0, n.gn)([r.LO], R.prototype, "m_bUseMicrotrailers", void 0),
-        (0, n.gn)([r.LO], R.prototype, "m_bIgnoredEdited", void 0),
-        (0, n.gn)([p.ak], R.prototype, "getTagHeight", null),
-        (0, n.gn)([p.ak], R.prototype, "onPopularityChanged", null),
-        (0, n.gn)([p.ak], R.prototype, "onRecencyChanged", null),
-        (0, n.gn)([p.ak], R.prototype, "onTagFilterAdd", null),
-        (0, n.gn)([p.ak], R.prototype, "onTagFilterRemove", null),
-        (0, n.gn)([p.ak], R.prototype, "onTagExcludeAdd", null),
-        (0, n.gn)([p.ak], R.prototype, "onTagExcludeRemove", null),
-        (0, n.gn)([p.ak], R.prototype, "doTagsPassFilter", null),
-        (0, n.gn)([p.ak], R.prototype, "doTagsFailExclusion", null),
-        (0, n.gn)([p.ak], R.prototype, "onExcludeWishlistedToggled", null),
-        (0, n.gn)([p.ak], R.prototype, "onSaveUserSettings", null),
-        (0, n.gn)([p.ak], R.prototype, "onToggleIgnore", null),
-        (0, n.gn)([p.ak], R.prototype, "onUpdateWithIgnored", null),
-        (0, n.gn)([p.ak], R.prototype, "onAddToWishlist", null),
-        (0, n.gn)([p.ak], R.prototype, "onGoToWishlist", null),
-        (0, n.gn)([p.ak], R.prototype, "onAddToCart", null),
-        (0, n.gn)([p.ak], R.prototype, "onMuteClicked", null),
-        (0, n.gn)([p.ak], R.prototype, "onUnMuteClicked", null),
-        (0, n.gn)([p.ak], R.prototype, "shouldMute", null),
-        (0, n.gn)([p.ak], R.prototype, "shouldUseMicrotrailers", null);
-      const f = new R();
+      (0, n.gn)([r.LO], y.prototype, "m_fPopularityValue", void 0),
+        (0, n.gn)([r.LO], y.prototype, "m_fRecencyValue", void 0),
+        (0, n.gn)([r.LO], y.prototype, "m_rgFilterTags", void 0),
+        (0, n.gn)([r.LO], y.prototype, "m_rgExcludeTags", void 0),
+        (0, n.gn)([r.LO], y.prototype, "m_fQueuedPopularityValue", void 0),
+        (0, n.gn)([r.LO], y.prototype, "m_fQueuedRecencyValue", void 0),
+        (0, n.gn)([r.LO], y.prototype, "m_bExcludeWishlisted", void 0),
+        (0, n.gn)([r.LO], y.prototype, "m_bShouldMute", void 0),
+        (0, n.gn)([r.LO], y.prototype, "m_bUseMicrotrailers", void 0),
+        (0, n.gn)([r.LO], y.prototype, "m_bIgnoredEdited", void 0),
+        (0, n.gn)([p.ak], y.prototype, "getTagHeight", null),
+        (0, n.gn)([p.ak], y.prototype, "onPopularityChanged", null),
+        (0, n.gn)([p.ak], y.prototype, "onRecencyChanged", null),
+        (0, n.gn)([p.ak], y.prototype, "onTagFilterAdd", null),
+        (0, n.gn)([p.ak], y.prototype, "onTagFilterRemove", null),
+        (0, n.gn)([p.ak], y.prototype, "onTagExcludeAdd", null),
+        (0, n.gn)([p.ak], y.prototype, "onTagExcludeRemove", null),
+        (0, n.gn)([p.ak], y.prototype, "doTagsPassFilter", null),
+        (0, n.gn)([p.ak], y.prototype, "doTagsFailExclusion", null),
+        (0, n.gn)([p.ak], y.prototype, "onExcludeWishlistedToggled", null),
+        (0, n.gn)([p.ak], y.prototype, "onSaveUserSettings", null),
+        (0, n.gn)([p.ak], y.prototype, "onToggleIgnore", null),
+        (0, n.gn)([p.ak], y.prototype, "onUpdateWithIgnored", null),
+        (0, n.gn)([p.ak], y.prototype, "onAddToWishlist", null),
+        (0, n.gn)([p.ak], y.prototype, "onGoToWishlist", null),
+        (0, n.gn)([p.ak], y.prototype, "onAddToCart", null),
+        (0, n.gn)([p.ak], y.prototype, "onMuteClicked", null),
+        (0, n.gn)([p.ak], y.prototype, "onUnMuteClicked", null),
+        (0, n.gn)([p.ak], y.prototype, "shouldMute", null),
+        (0, n.gn)([p.ak], y.prototype, "shouldUseMicrotrailers", null);
+      const f = new y();
       window.g_InteractiveRecommender = f;
       var L = i(32905);
       !(function () {
         let e = (0, s.kQ)("ir_config", "application_config");
         e && (Object.assign(T, e), f.Init());
       })();
-      const N = ({ accountID: e }) => {
+      const A = ({ accountID: e }) => {
           const t = f.getInputApps(),
             i = Object.keys(t).length;
           let a = 0;
@@ -783,7 +843,7 @@
             )
           );
         };
-      let A = class extends l.Component {
+      let N = class extends l.Component {
         constructor(e) {
           super(e), (this.state = {});
         }
@@ -825,13 +885,13 @@
                 { className: u.Header },
                 (0, _.Xx)("#PlaytimeList_Header"),
               ),
-              l.createElement(N, { accountID: this.props.accountID }),
+              l.createElement(A, { accountID: this.props.accountID }),
               l.createElement("div", { className: u.List }, t),
             )
           );
         }
       };
-      A = (0, n.gn)([o.Pi], A);
+      N = (0, n.gn)([o.Pi], N);
       const D = ({
           titleLabel: e,
           minLabel: t,
@@ -1172,12 +1232,12 @@
             v = !0;
           a < g ? ((E = 66), (v = !1)) : a < h && ((E = 87), (v = !1));
           const S = v && this.state.hovered,
-            y = Math.min(Number(t) / 100, 1e3);
-          let R = !1,
+            R = Math.min(Number(t) / 100, 1e3);
+          let y = !1,
             L = !1,
-            N = !0,
+            A = !0,
             I = "",
-            A = "",
+            N = "",
             D = "",
             C = "",
             x = "",
@@ -1186,9 +1246,9 @@
           if (S) {
             const e = f.getDetails(this.props.appID);
             e &&
-              ((R = !0),
+              ((y = !0),
               (L = e.discount_pct > 0),
-              (N = "0" == e.discount_price),
+              (A = "0" == e.discount_price),
               "probably" ==
               document
                 .createElement("video")
@@ -1200,8 +1260,8 @@
                 ? ((x = e.microtrailer_mp4), (P = !0), (U = !1))
                 : (x = e.video_mp4),
               (I = `-${e.discount_pct}%`),
-              (A = e.base_price),
-              (D = N ? (0, _.Xx)("#FreeToPlay") : e.discount_price),
+              (N = e.base_price),
+              (D = A ? (0, _.Xx)("#FreeToPlay") : e.discount_price),
               (C = e.description));
           }
           const w = x && x.length > 0;
@@ -1291,7 +1351,7 @@
                         { className: u.BarContainer },
                         l.createElement("div", {
                           className: u.Bar,
-                          style: { width: `${y}%` },
+                          style: { width: `${R}%` },
                         }),
                       ),
                       l.createElement("div", { className: u.Tags }, p),
@@ -1308,7 +1368,7 @@
                       C,
                     ),
                   ),
-                  R &&
+                  y &&
                     l.createElement(
                       "div",
                       { className: u.BottomEntrySection },
@@ -1346,7 +1406,7 @@
                                 l.createElement(
                                   "div",
                                   { className: "discount_original_price" },
-                                  A,
+                                  N,
                                 ),
                                 l.createElement(
                                   "div",
@@ -1367,7 +1427,7 @@
                               },
                               D,
                             ),
-                          !N &&
+                          !A &&
                             l.createElement(
                               "div",
                               {
@@ -1390,7 +1450,7 @@
                         ),
                       ),
                       !this.state.wishlisted &&
-                        !N &&
+                        !A &&
                         l.createElement(
                           "div",
                           {
@@ -1409,7 +1469,7 @@
                           ),
                         ),
                       this.state.wishlisted &&
-                        !N &&
+                        !A &&
                         l.createElement(
                           "div",
                           {
@@ -1558,7 +1618,7 @@
         }
       };
       w = (0, n.gn)([o.Pi], w);
-      let b = class extends l.Component {
+      let M = class extends l.Component {
         constructor() {
           super(...arguments), (this.state = { width: window.innerWidth });
         }
@@ -1599,7 +1659,7 @@
                   l.createElement(
                     "div",
                     { className: u.BottomSection },
-                    l.createElement(A, { accountID: s.L7.accountid }),
+                    l.createElement(N, { accountID: s.L7.accountid }),
                     l.createElement("div", { className: u.VerticalBar }),
                     l.createElement(w, { width: this.state.width }),
                   ),
@@ -1631,10 +1691,10 @@
               );
         }
       };
-      (0, n.gn)([p.ak], b.prototype, "updateDimensions", null),
-        (0, n.gn)([p.ak], b.prototype, "ShowLoginDialog", null),
-        (b = (0, n.gn)([o.Pi], b));
-      const M = b;
+      (0, n.gn)([p.ak], M.prototype, "updateDimensions", null),
+        (0, n.gn)([p.ak], M.prototype, "ShowLoginDialog", null),
+        (M = (0, n.gn)([o.Pi], M));
+      const b = M;
     },
   },
 ]);

@@ -1278,7 +1278,7 @@
                 if (e.coupon_applied) return e.coupon_applied.discount_pct;
                 const t = parseInt(e.original_price.amount_in_cents),
                   n = parseInt(e.subtotal.amount_in_cents);
-                return Math.round((t - n) / t);
+                return Math.min(99, Math.floor(((t - n) / t) * 100 + 0.5));
               })(u)
             : d.discount_pct,
           w = r.GetIncludedAppIDsOrSelf(),
@@ -2231,7 +2231,7 @@
             (0, o.yu)(
               "#Cart_BetaNotice",
               i.createElement("a", {
-                href: "https://steamcommunity.com/groups/SteamClientBeta/discussions/",
+                href: "https://steamcommunity.com/groups/SteamClientBeta/discussions/3/4038104598693698820/",
               }),
             ),
           ),
