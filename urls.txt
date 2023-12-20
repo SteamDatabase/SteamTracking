@@ -418,6 +418,7 @@ https://store.steampowered.com/public/javascript/applications/store/reviewaward.
 https://store.steampowered.com/public/javascript/applications/store/saledisplay.js?__TIME__&l=english&_cdn=cloudflare
 https://store.steampowered.com/public/javascript/applications/store/sales_english-json.js?__TIME__&l=english&_cdn=cloudflare
 https://store.steampowered.com/public/javascript/applications/store/shared_english-json.js?__TIME__&l=english&_cdn=cloudflare
+https://store.steampowered.com/public/javascript/applications/store/libraries~b28b7af69.js?__TIME__&l=english&_cdn=cloudflare
 https://store.steampowered.com/public/javascript/broadcast_carousel.js?__TIME__&l=english&_cdn=cloudflare
 https://store.steampowered.com/public/javascript/cart.js?__TIME__&l=english&_cdn=cloudflare
 https://store.steampowered.com/public/javascript/cluster.js?__TIME__&l=english&_cdn=cloudflare

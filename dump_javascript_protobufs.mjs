@@ -769,7 +769,10 @@ function TraverseModule(ast) {
 							if (property.value.body.type === Syntax.MemberExpression) {
 								continue;
 							}
-							throw new Error("Unexpected webpack function");
+
+							console.error("Unexpected webpack function");
+							return;
+							//throw new Error("Unexpected webpack function");
 						}
 
 						const exportedId = property.key.name;
@@ -786,7 +789,9 @@ function TraverseModule(ast) {
 					node.arguments[2].body.type !== Syntax.BlockStatement ||
 					node.arguments[2].body.body[0].type !== Syntax.ReturnStatement
 				) {
-					throw new Error("Unexpected webpack function");
+					console.error("Unexpected webpack function");
+					return;
+					//throw new Error("Unexpected webpack function");
 				}
 
 				const exportedId = node.arguments[1].value;
