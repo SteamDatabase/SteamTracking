@@ -14140,20 +14140,27 @@
     },
     17547: (e, t, n) => {
       "use strict";
-      n.d(t, { AP: () => s, SV: () => a });
+      n.d(t, { AP: () => s, DT: () => a, SV: () => l });
       var o = n(33940),
         i = n(89526),
         r = n(4306);
       function s(e) {
         return function (t) {
           return i.createElement(
-            a,
+            l,
             null,
             i.createElement(e, Object.assign({}, t)),
           );
         };
       }
-      class a extends i.Component {
+      function a(e) {
+        return i.createElement(
+          i.Fragment,
+          null,
+          i.Children.map(e.children, (e) => i.createElement(l, null, e)),
+        );
+      }
+      class l extends i.Component {
         constructor(e) {
           super(e), (this.state = {}), (this.state.lastErrorKey = e.errorKey);
         }
@@ -14161,7 +14168,7 @@
           this.sm_ErrorReportingStore = e;
         }
         componentDidCatch(e, t) {
-          const n = a.sm_ErrorReportingStore;
+          const n = l.sm_ErrorReportingStore;
           n
             ? n
                 .ReportError(e)
@@ -14188,27 +14195,27 @@
               ? "function" == typeof t
                 ? t(o.error)
                 : t
-              : a.sm_ErrorReportingStore &&
-                a.sm_ErrorReportingStore.reporting_enabled
-              ? i.createElement(c, {
+              : l.sm_ErrorReportingStore &&
+                l.sm_ErrorReportingStore.reporting_enabled
+              ? i.createElement(u, {
                   error: o,
                   identifierHash: r,
-                  store: a.sm_ErrorReportingStore,
+                  store: l.sm_ErrorReportingStore,
                   onRefresh: this.Reset,
                 })
-              : i.createElement(l, { error: o, onDismiss: this.Reset })
+              : i.createElement(c, { error: o, onDismiss: this.Reset })
             : e || null;
         }
       }
-      (0, o.gn)([r.ak], a.prototype, "Reset", null);
-      const l = ({ error: e, onDismiss: t }) => {
+      (0, o.gn)([r.ak], l.prototype, "Reset", null);
+      const c = ({ error: e, onDismiss: t }) => {
           let n = e.error ? e.error.stack : "Stack missing",
             o = e.info ? e.info.componentStack : "",
             r = (e.error && e.error.message) || "unknown error";
           return i.createElement(
-            u,
+            d,
             null,
-            i.createElement(d, null, 'Error: "', r, '"'),
+            i.createElement(m, null, 'Error: "', r, '"'),
             "   ",
             i.createElement(
               "span",
@@ -14219,19 +14226,19 @@
               "(x) Dismiss",
             ),
             i.createElement("br", null),
-            i.createElement(m, null, n),
-            i.createElement(m, null, "The error occurred while rendering:", o),
+            i.createElement(h, null, n),
+            i.createElement(h, null, "The error occurred while rendering:", o),
           );
         },
-        c = (e) => {
+        u = (e) => {
           const { error: t, onRefresh: n, identifierHash: o, store: r } = e,
             s = (t.error && t.error.message) || "unknown error",
             a = `${r.product}_${r.version}_${o}`;
           return i.createElement(
-            u,
+            d,
             null,
             i.createElement(
-              d,
+              m,
               null,
               "Something went wrong while displaying this content. ",
               i.createElement(
@@ -14243,11 +14250,11 @@
                 "Refresh",
               ),
             ),
-            i.createElement(m, null, "Error Reference: ", a),
-            i.createElement(m, null, s),
+            i.createElement(h, null, "Error Reference: ", a),
+            i.createElement(h, null, s),
           );
         },
-        u = ({ children: e }) =>
+        d = ({ children: e }) =>
           i.createElement(
             "div",
             {
@@ -14263,7 +14270,7 @@
             },
             e,
           ),
-        d = ({ children: e }) =>
+        m = ({ children: e }) =>
           i.createElement(
             "h1",
             {
@@ -14276,7 +14283,7 @@
             },
             e,
           ),
-        m = ({ children: e }) =>
+        h = ({ children: e }) =>
           i.createElement(
             "pre",
             { style: { marginTop: "15px", opacity: 0.7, userSelect: "auto" } },
@@ -24136,8 +24143,9 @@
           ),
         );
       };
-      var T = n(71161);
-      const A = i.lazy(() =>
+      var T = n(71161),
+        A = n(17547);
+      const N = i.lazy(() =>
           Promise.all([
             n.e(3801),
             n.e(6588),
@@ -24161,7 +24169,7 @@
             n.e(6845),
           ]).then(n.bind(n, 74182)),
         ),
-        N = i.lazy(() =>
+        k = i.lazy(() =>
           Promise.all([
             n.e(3801),
             n.e(6588),
@@ -24190,7 +24198,7 @@
             n.e(2136),
           ]).then(n.bind(n, 38644)),
         ),
-        k = i.lazy(() =>
+        B = i.lazy(() =>
           Promise.all([
             n.e(3801),
             n.e(6588),
@@ -24220,7 +24228,7 @@
             n.e(9349),
           ]).then(n.bind(n, 38676)),
         ),
-        B = i.lazy(() =>
+        F = i.lazy(() =>
           Promise.all([
             n.e(3801),
             n.e(6588),
@@ -24249,7 +24257,7 @@
             n.e(3352),
           ]).then(n.bind(n, 53376)),
         ),
-        F = i.lazy(() =>
+        P = i.lazy(() =>
           Promise.all([
             n.e(3275),
             n.e(6148),
@@ -24258,7 +24266,7 @@
             n.e(238),
           ]).then(n.bind(n, 29347)),
         ),
-        P = i.lazy(() =>
+        V = i.lazy(() =>
           Promise.all([
             n.e(3801),
             n.e(6588),
@@ -24286,7 +24294,7 @@
             n.e(5436),
           ]).then(n.bind(n, 25911)),
         ),
-        V = i.lazy(() =>
+        H = i.lazy(() =>
           Promise.all([
             n.e(9976),
             n.e(6820),
@@ -24295,8 +24303,8 @@
             n.e(6838),
           ]).then(n.bind(n, 74251)),
         ),
-        H = i.lazy(() => n.e(8647).then(n.bind(n, 16258))),
-        G = i.lazy(() =>
+        G = i.lazy(() => n.e(8647).then(n.bind(n, 16258))),
+        U = i.lazy(() =>
           Promise.all([
             n.e(3801),
             n.e(6588),
@@ -24327,7 +24335,7 @@
             n.e(3499),
           ]).then(n.bind(n, 21290)),
         ),
-        U = i.lazy(() =>
+        W = i.lazy(() =>
           Promise.all([
             n.e(3801),
             n.e(6588),
@@ -24358,7 +24366,7 @@
             n.e(6272),
           ]).then(n.bind(n, 45906)),
         ),
-        W = i.lazy(() =>
+        j = i.lazy(() =>
           Promise.all([
             n.e(6588),
             n.e(7948),
@@ -24369,12 +24377,12 @@
             n.e(908),
           ]).then(n.bind(n, 57927)),
         ),
-        j = i.lazy(() =>
+        Z = i.lazy(() =>
           Promise.all([n.e(6588), n.e(2822), n.e(2530), n.e(4535)]).then(
             n.bind(n, 58301),
           ),
         ),
-        Z = i.lazy(() =>
+        z = i.lazy(() =>
           Promise.all([
             n.e(3801),
             n.e(6588),
@@ -24392,10 +24400,10 @@
             n.e(3903),
           ]).then(n.bind(n, 24830)),
         ),
-        z = i.lazy(() =>
+        K = i.lazy(() =>
           Promise.all([n.e(3801), n.e(4040), n.e(312)]).then(n.bind(n, 15844)),
         ),
-        K = i.lazy(() =>
+        X = i.lazy(() =>
           Promise.all([
             n.e(3801),
             n.e(9295),
@@ -24405,7 +24413,7 @@
             n.e(3068),
           ]).then(n.bind(n, 58564)),
         ),
-        X = i.lazy(() =>
+        $ = i.lazy(() =>
           Promise.all([
             n.e(3801),
             n.e(9295),
@@ -24415,14 +24423,14 @@
             n.e(1909),
           ]).then(n.bind(n, 6914)),
         ),
-        $ = i.lazy(() =>
+        Y = i.lazy(() =>
           Promise.all([n.e(3863), n.e(2822), n.e(7901), n.e(5710)]).then(
             n.bind(n, 88324),
           ),
         ),
-        Y = () => (w.JA.IS_OGG ? "games" : "groups"),
-        q = {},
-        Q = Object.assign(
+        q = () => (w.JA.IS_OGG ? "games" : "groups"),
+        Q = {},
+        J = Object.assign(
           Object.assign(
             {
               DiagData: () => "/:anything*/diagdata",
@@ -24430,14 +24438,14 @@
               OAuthLogin: () => "/oauth/loginform",
               OpenidLogin: () => "/openid/loginform",
               EventsInternal: () => "/(migrateevents|migrate)",
-              EventEditor: (e) => `/${Y()}/${e}/partnerevents`,
-              EventReaders: (e) => `/${Y()}/${e}/(events|announcements)`,
+              EventEditor: (e) => `/${q()}/${e}/partnerevents`,
+              EventReaders: (e) => `/${q()}/${e}/(events|announcements)`,
               HubRoot: (e) => `/app/${e}(/workshop/)?`,
               GroupRoot: (e) => `/groups/${e}/`,
               ProfileVanity: (e) => `/id/${e}`,
               ProfileSteamID: (e) => `/profiles/${e}`,
-              ProfileVanityGamesList: (e) => `${Q.ProfileVanity(e)}/games`,
-              ProfileSteamIDGamesLIst: (e) => `${Q.ProfileSteamID(e)}/games`,
+              ProfileVanityGamesList: (e) => `${J.ProfileVanity(e)}/games`,
+              ProfileSteamIDGamesLIst: (e) => `${J.ProfileSteamID(e)}/games`,
               UGCDetailsPage: () => "/:anything/filedetails",
               UserReviewRewardAppVanity: () =>
                 "/id/:vanity_url/recommended/:appid/",
@@ -24456,59 +24464,32 @@
               QuestionsApp: () => "/questions/",
               ConferenceApp: () => "/(conference|steamworksvirtualconference)/",
               ProfileVanityNotifications: (e) =>
-                `${Q.ProfileVanity(e)}/notifications`,
+                `${J.ProfileVanity(e)}/notifications`,
               ProfileSteamIDNotifications: (e) =>
-                `${Q.ProfileSteamID(e)}/notifications`,
+                `${J.ProfileSteamID(e)}/notifications`,
             },
-            q,
+            Q,
           ),
           { CommunityHomeRoot: () => "/" },
         );
-      class J extends i.Component {
+      class ee extends i.Component {
         render() {
           return i.createElement(
             r.VK,
-            { basename: oe() },
+            { basename: re() },
             i.createElement(
-              ee,
+              te,
               null,
+              i.createElement(ne, null),
               i.createElement(
                 i.Suspense,
                 { fallback: null },
-                i.createElement(h.d, {
-                  config: {
-                    "green-envelope": () =>
-                      i.createElement(K, {
-                        bResponsiveHeader: !1,
-                        notifications: (0, w.kQ)(
-                          "steam_notifications",
-                          "application_config",
-                        ),
-                      }),
-                    "green-envelope-responsive": () =>
-                      i.createElement(K, {
-                        bResponsiveHeader: !0,
-                        notifications: (0, w.kQ)(
-                          "steam_notifications",
-                          "application_config",
-                        ),
-                      }),
-                    parentalunlock: (e) =>
-                      i.createElement(R, Object.assign({}, e)),
-                  },
-                }),
-                i.createElement(h.d, {
-                  config: {
-                    parentalfeaturerequest: (e) =>
-                      i.createElement(I, Object.assign({}, e)),
-                  },
-                }),
                 i.createElement(
                   s.rs,
                   null,
                   i.createElement(s.AW, {
                     exact: !0,
-                    path: Q.DiagData(),
+                    path: J.DiagData(),
                     render: (e) =>
                       i.createElement(
                         d.m,
@@ -24520,166 +24501,166 @@
                   }),
                   i.createElement(
                     s.AW,
-                    { path: [Q.Login(), Q.OAuthLogin()] },
+                    { path: [J.Login(), J.OAuthLogin()] },
                     i.createElement(h.d, {
                       config: {
-                        login: (e) => i.createElement(j, Object.assign({}, e)),
+                        login: (e) => i.createElement(Z, Object.assign({}, e)),
                       },
                     }),
                   ),
                   i.createElement(
                     s.AW,
-                    { path: [Q.Login(), Q.OpenidLogin()] },
+                    { path: [J.Login(), J.OpenidLogin()] },
                     i.createElement(h.d, {
                       config: {
-                        login: (e) => i.createElement(j, Object.assign({}, e)),
+                        login: (e) => i.createElement(Z, Object.assign({}, e)),
                       },
                     }),
                   ),
                   i.createElement(s.AW, {
-                    path: Q.EventEditor(":appid_or_vanity_str"),
-                    component: k,
-                  }),
-                  i.createElement(s.AW, {
-                    path: Q.EventsInternal(),
+                    path: J.EventEditor(":appid_or_vanity_str"),
                     component: B,
                   }),
                   i.createElement(s.AW, {
-                    path: Q.EventReaders(":appid_or_vanity_str"),
-                    component: N,
+                    path: J.EventsInternal(),
+                    component: F,
                   }),
                   i.createElement(s.AW, {
-                    path: Q.BroadcastApp(),
-                    component: P,
+                    path: J.EventReaders(":appid_or_vanity_str"),
+                    component: k,
                   }),
                   i.createElement(s.AW, {
-                    path: Q.HubRoot(":appid"),
+                    path: J.BroadcastApp(),
+                    component: V,
+                  }),
+                  i.createElement(s.AW, {
+                    path: J.HubRoot(":appid"),
                     render: (e) =>
                       i.createElement(h.d, {
                         config: {
-                          "apphub-events": () => i.createElement(N, null),
+                          "apphub-events": () => i.createElement(k, null),
                           "apphub-ugcrewards": () =>
-                            i.createElement(F, Object.assign({}, e)),
+                            i.createElement(P, Object.assign({}, e)),
                           "community-awards": () =>
-                            i.createElement(F, Object.assign({}, e)),
+                            i.createElement(P, Object.assign({}, e)),
                         },
                       }),
                   }),
                   i.createElement(s.AW, {
-                    path: Q.GroupRoot(":groupid_or_vanity_str"),
+                    path: J.GroupRoot(":groupid_or_vanity_str"),
                     render: (e) =>
                       i.createElement(h.d, {
                         config: {
-                          "apphub-events": () => i.createElement(N, null),
+                          "apphub-events": () => i.createElement(k, null),
                           "community-awards": () =>
-                            i.createElement(F, Object.assign({}, e)),
+                            i.createElement(P, Object.assign({}, e)),
                         },
                       }),
                   }),
                   i.createElement(s.AW, {
-                    path: Q.UserReviewRewardAppVanity(),
-                    render: (e) => i.createElement(F, Object.assign({}, e)),
+                    path: J.UserReviewRewardAppVanity(),
+                    render: (e) => i.createElement(P, Object.assign({}, e)),
                   }),
                   i.createElement(s.AW, {
-                    path: Q.UserReviewRewardApp(),
-                    render: (e) => i.createElement(F, Object.assign({}, e)),
+                    path: J.UserReviewRewardApp(),
+                    render: (e) => i.createElement(P, Object.assign({}, e)),
                   }),
                   i.createElement(s.AW, {
-                    path: Q.UserReviewsRewardVanity(),
-                    render: (e) => i.createElement(F, Object.assign({}, e)),
+                    path: J.UserReviewsRewardVanity(),
+                    render: (e) => i.createElement(P, Object.assign({}, e)),
                   }),
                   i.createElement(s.AW, {
-                    path: Q.UserReviewsReward(),
-                    render: (e) => i.createElement(F, Object.assign({}, e)),
+                    path: J.UserReviewsReward(),
+                    render: (e) => i.createElement(P, Object.assign({}, e)),
                   }),
                   i.createElement(s.AW, {
                     path: [
-                      Q.DiscussionsAppGeneral(),
-                      Q.DiscussionsAppWorkshop(),
-                      Q.DiscussionsAppUGC(),
+                      J.DiscussionsAppGeneral(),
+                      J.DiscussionsAppWorkshop(),
+                      J.DiscussionsAppUGC(),
                     ],
                     render: (e) =>
                       i.createElement(h.d, {
                         config: {
                           "community-awards": () =>
-                            i.createElement(F, Object.assign({}, e)),
+                            i.createElement(P, Object.assign({}, e)),
                         },
                       }),
                   }),
                   i.createElement(s.AW, {
-                    path: [Q.ManageFriendsApp(), Q.ManageFriendsProfileApp()],
+                    path: [J.ManageFriendsApp(), J.ManageFriendsProfileApp()],
                     render: () =>
                       i.createElement(h.d, {
                         config: {
-                          "manage-friends": () => i.createElement(H, null),
+                          "manage-friends": () => i.createElement(G, null),
                         },
                       }),
                   }),
                   i.createElement(s.AW, {
                     path: [
-                      Q.ProfileVanityGamesList(":vanity_url"),
-                      Q.ProfileSteamIDGamesLIst(":steamid"),
+                      J.ProfileVanityGamesList(":vanity_url"),
+                      J.ProfileSteamIDGamesLIst(":steamid"),
                     ],
                     render: (e) =>
                       i.createElement(h.d, {
                         config: {
                           "gameslist-root": () =>
-                            i.createElement(Z, Object.assign({}, e)),
+                            i.createElement(z, Object.assign({}, e)),
                         },
                       }),
                   }),
                   i.createElement(s.AW, {
-                    path: Q.ProfileVanityNotifications(":vanity_url"),
-                    render: (e) => i.createElement(X, Object.assign({}, e)),
+                    path: J.ProfileVanityNotifications(":vanity_url"),
+                    render: (e) => i.createElement($, Object.assign({}, e)),
                   }),
                   i.createElement(s.AW, {
-                    path: Q.ProfileSteamIDNotifications(":steamid"),
-                    render: (e) => i.createElement(X, Object.assign({}, e)),
+                    path: J.ProfileSteamIDNotifications(":steamid"),
+                    render: (e) => i.createElement($, Object.assign({}, e)),
                   }),
                   i.createElement(s.AW, {
-                    path: Q.ProfileVanity(":vanity_url"),
-                    render: (e) => i.createElement(A, Object.assign({}, e)),
+                    path: J.ProfileVanity(":vanity_url"),
+                    render: (e) => i.createElement(N, Object.assign({}, e)),
                   }),
                   i.createElement(s.AW, {
-                    path: Q.ProfileSteamID(":steamid"),
-                    render: (e) => i.createElement(A, Object.assign({}, e)),
+                    path: J.ProfileSteamID(":steamid"),
+                    render: (e) => i.createElement(N, Object.assign({}, e)),
                   }),
                   i.createElement(s.AW, {
-                    path: Q.UGCDetailsPage(),
+                    path: J.UGCDetailsPage(),
                     render: (e) =>
                       i.createElement(
                         i.Fragment,
                         null,
-                        i.createElement(F, Object.assign({}, e)),
+                        i.createElement(P, Object.assign({}, e)),
                         i.createElement(h.d, {
                           config: {
                             "game-recording-clip": (e) =>
-                              i.createElement($, Object.assign({}, e)),
+                              i.createElement(Y, Object.assign({}, e)),
                           },
                         }),
                       ),
                   }),
-                  i.createElement(s.AW, { path: Q.GameNotes(), component: V }),
-                  i.createElement(s.AW, { path: Q.FAQApp(), component: G }),
+                  i.createElement(s.AW, { path: J.GameNotes(), component: H }),
+                  i.createElement(s.AW, { path: J.FAQApp(), component: U }),
                   i.createElement(s.AW, {
-                    path: Q.QuestionsApp(),
-                    component: W,
+                    path: J.QuestionsApp(),
+                    component: j,
                   }),
                   i.createElement(s.AW, {
-                    path: Q.ConferenceApp(),
-                    component: U,
+                    path: J.ConferenceApp(),
+                    component: W,
                   }),
                   !1,
                   i.createElement(s.AW, {
-                    path: Q.CommunityHomeRoot(),
+                    path: J.CommunityHomeRoot(),
                     render: (e) =>
                       i.createElement(h.d, {
                         config: {
-                          "apphub-events": () => i.createElement(N, null),
+                          "apphub-events": () => i.createElement(k, null),
                           "apphub-ugcrewards": () =>
-                            i.createElement(F, Object.assign({}, e)),
+                            i.createElement(P, Object.assign({}, e)),
                           "community-home-header-v2": () =>
-                            i.createElement(z, null),
+                            i.createElement(K, null),
                         },
                       }),
                   }),
@@ -24690,7 +24671,7 @@
           );
         }
       }
-      function ee(e) {
+      function te(e) {
         return i.createElement(
           T.ZP,
           { domain: "steamcommunity.com" },
@@ -24698,7 +24679,7 @@
             w.fI,
             null,
             i.createElement(
-              ne,
+              ie,
               null,
               i.createElement(
                 _.R,
@@ -24709,12 +24690,53 @@
           ),
         );
       }
-      function te() {
+      function ne() {
+        return i.createElement(
+          A.DT,
+          null,
+          i.createElement(
+            i.Suspense,
+            { fallback: null },
+            i.createElement(h.d, {
+              config: {
+                "green-envelope": () =>
+                  i.createElement(X, {
+                    bResponsiveHeader: !1,
+                    notifications: (0, w.kQ)(
+                      "steam_notifications",
+                      "application_config",
+                    ),
+                  }),
+                "green-envelope-responsive": () =>
+                  i.createElement(X, {
+                    bResponsiveHeader: !0,
+                    notifications: (0, w.kQ)(
+                      "steam_notifications",
+                      "application_config",
+                    ),
+                  }),
+              },
+            }),
+          ),
+          i.createElement(h.d, {
+            config: {
+              parentalunlock: (e) => i.createElement(R, Object.assign({}, e)),
+            },
+          }),
+          i.createElement(h.d, {
+            config: {
+              parentalfeaturerequest: (e) =>
+                i.createElement(I, Object.assign({}, e)),
+            },
+          }),
+        );
+      }
+      function oe() {
         const e = (0, w.kQ)("loyalty_webapi_token", "application_config");
         return new u.J(w.De.WEBAPI_BASE_URL, e);
       }
-      function ne(e) {
-        const t = (0, g.kD)(te),
+      function ie(e) {
+        const t = (0, g.kD)(oe),
           n = (0, g.kD)(i.useCallback(() => new c.Z(), [])),
           o = (0, i.useMemo)(
             () => ({ useActiveAccount: () => w.L7.steamid }),
@@ -24730,27 +24752,27 @@
           ),
         );
       }
-      function oe() {
+      function re() {
         let e = document.createElement("a");
         e.href = w.De.COMMUNITY_BASE_URL;
         let t = e.pathname;
         return t.endsWith("/") || (t += "/"), t;
       }
-      var ie = n(24470),
-        re = n(59621);
+      var se = n(24470),
+        ae = n(59621);
       n(88026);
-      var se = n(23801),
-        ae = n(2758),
-        le = n(60161);
+      var le = n(23801),
+        ce = n(2758),
+        ue = n(60161);
       n(701), n(50454), n(99307), n(57742), n(72163), n(30252);
       n(1721);
-      (0, re.jQ)({ enforceActions: "never" }),
-        (0, le.Dj)(() =>
+      (0, ae.jQ)({ enforceActions: "never" }),
+        (0, ue.Dj)(() =>
           (0, o.mG)(void 0, void 0, void 0, function* () {
             document.getElementById("application_config")
               ? (0, w.Ek)("application_config")
               : (0, w.Ek)(),
-              (0, ae.Uh)().Init(
+              (0, ce.Uh)().Init(
                 "Community",
                 CLSTAMP,
                 new u.J(w.De.WEBAPI_BASE_URL).GetServiceTransport(),
@@ -24783,8 +24805,8 @@
                       Object.assign(Object.assign(Object.assign({}, l), a), c),
                     );
                   }
-                  for (const e of ce) E.Yt.AddTokens(e);
-                  ce = void 0;
+                  for (const e of de) E.Yt.AddTokens(e);
+                  de = void 0;
                 });
               })(w.De.LANGUAGE);
             const e =
@@ -24793,21 +24815,21 @@
             if (e) {
               const t = window;
               if (t.g_bCommunityReactInitialized) return void 0;
-              ie.createRoot(e).render(i.createElement(J, {})),
+              se.createRoot(e).render(i.createElement(ee, {})),
                 (t.g_bCommunityReactInitialized = !0);
             }
           }),
         );
-      let ce = [];
-      function ue(e, t, n) {
-        (0, se.X)("manifest" === t, `Expected manifest not "${t}"`),
-          void 0 !== ce ? ce.push(n) : E.Yt.AddTokens(n);
+      let de = [];
+      function me(e, t, n) {
+        (0, le.X)("manifest" === t, `Expected manifest not "${t}"`),
+          void 0 !== de ? de.push(n) : E.Yt.AddTokens(n);
       }
       !(function () {
         const e = window;
         e.g_rgPendingLocManifests &&
-          e.g_rgPendingLocManifests.forEach((e) => ue(...e)),
-          (e.LocalizationManifestReady = ue),
+          e.g_rgPendingLocManifests.forEach((e) => me(...e)),
+          (e.LocalizationManifestReady = me),
           (e.g_rgPendingLocManifests = void 0);
       })();
     },
