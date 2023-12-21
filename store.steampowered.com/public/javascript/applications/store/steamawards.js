@@ -1554,7 +1554,7 @@
         Ce = t(2758);
       const Ne = {
         include_basic_info: !0,
-        include_assets: !0,
+        include_assets_without_overrides: !0,
         include_trailers: !0,
       };
       function he(e) {
@@ -1998,7 +1998,7 @@
                 "a",
                 { href: n },
                 r.createElement("img", {
-                  src: t.GetAssets().GetMainCapsuleURL(),
+                  src: t.GetAssetsWithoutOverrides().GetMainCapsuleURL(),
                 }),
               ),
             )
@@ -2024,7 +2024,7 @@
                 "a",
                 { href: n },
                 r.createElement("img", {
-                  src: t.GetAssets().GetMainCapsuleURL(),
+                  src: t.GetAssetsWithoutOverrides().GetMainCapsuleURL(),
                 }),
               ),
             )
@@ -2053,7 +2053,7 @@
                 "video",
                 {
                   className: (0, A.Z)(Se().MicrotrailerVideo, i && Se().Active),
-                  poster: c.GetAssets().GetMainCapsuleURL(),
+                  poster: c.GetAssetsWithoutOverrides().GetMainCapsuleURL(),
                   onEnded: o,
                   ref: d,
                   preload: "auto",
@@ -2132,27 +2132,23 @@
             "a",
             { href: p, className: Se().CapsuleLink },
             r.createElement("img", {
-              src: g.GetAssets().GetHeroCapsuleURL(),
+              src: g.GetAssetsWithoutOverrides().GetHeroCapsuleURL(),
               className: Se().Capsule,
             }),
             r.createElement("div", { className: Se().Highlight }, " "),
           ),
-          r.createElement(
-            r.Fragment,
-            null,
-            c &&
-              r.createElement(
-                S.zx,
-                { onClick: N, className: Se().ActionButton },
-                h,
-              ),
-            C &&
-              r.createElement(
-                "div",
-                { className: Se().YourNomination },
-                (0, w.Xx)("#Steamawards_Voting_Action_YourNominee"),
-              ),
-          ),
+          c &&
+            r.createElement(
+              S.zx,
+              { onClick: N, className: Se().ActionButton },
+              h,
+            ),
+          C &&
+            r.createElement(
+              "div",
+              { className: Se().YourNomination },
+              (0, w.Xx)("#Steamawards_Voting_Action_YourNominee"),
+            ),
         );
       }
       function Re() {

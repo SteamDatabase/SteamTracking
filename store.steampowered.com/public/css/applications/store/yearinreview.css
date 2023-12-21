@@ -3904,8 +3904,7 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   font-size: clamp(16px, 1.8vw, 26px);
   font-weight: 500;
   margin-bottom: 8px;
-  display: -webkit-box;
-  flex-wrap: wrap;
+  white-space: pre;
 }
 .yirbadges_PlayBehaviorContainer_1NBM7
   .yirbadges_PlayerBehaviorProgressCnt_pYgyD

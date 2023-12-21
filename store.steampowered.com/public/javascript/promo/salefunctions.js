@@ -275,7 +275,7 @@ function HomeSaleFilterHeroes( $Parent, rgHeroItems )
 	var $HeroItemCtn = $Parent.find('.carousel_items' );
 
 	
-	var rgFilteredHeroes = GHomepage.FilterItemsForDisplay( rgHeroItems, 'home', 3, 21, Settings );
+	var rgFilteredHeroes = GHomepage.FilterItemsForDisplay( rgHeroItems, 'home', 3, 42, Settings );
 
 	
 	GDynamicStore.MarkItemsAsDisplayed( rgFilteredHeroes );

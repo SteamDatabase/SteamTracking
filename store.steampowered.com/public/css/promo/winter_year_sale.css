@@ -664,6 +664,12 @@ body.v6 .discount_block {
 
 body.v6 .sale_capsule {
     position: relative;
+    z-index: 1;
+}
+
+body.v6 .sale_capsule.with_microtrailer.microtrailer_active {
+    position: relative;
+    z-index: 3;
 }
 
 body.v6 .discount_block {}
@@ -725,14 +731,11 @@ body.v6 .discount_block {}
 .sale_capsule_image {
     display: block;
     max-width: 100%;
-    box-shadow: 2px 2px 4px #0e0a0a;
+    box-shadow: 2px 2px 9px #0e0a0a;
 }
 
-.sale_capsule.with_microtrailer .sale_capsule_image
-{
-
-    transition: opacity 0.6s;
-
+.sale_capsule.with_microtrailer .sale_capsule_image {
+    transition: opacity 0.3s;
     position: relative;
     z-index: 2;
 }
@@ -2338,6 +2341,7 @@ body.v6 .sale_capsule .discount_block_inline
 .sale_capsule_image_ctn
 {
     position: relative;
+    z-index: 2;
 
 	&:hover {
 		transform: scale(1.1);
@@ -2349,20 +2353,18 @@ body.v6 .sale_capsule .discount_block_inline
     opacity: 0;
     pointer-events: none;
     position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
+    left: 1px;
+    right: 1px;
+    top: 1px;
+    bottom: 1px;
     box-shadow: 4px 4px 10px #110c0c;
-    transition: opacity 0.4s;
+    transition: opacity 0.3s;
     z-index: 3;
 }
 
-.sale_capsule:hover .sale_capsule_image_hover
-{
+.sale_capsule:hover .sale_capsule_image_hover {
     opacity: 1;
 }
-
 
 @media screen and (max-width:580px)
 {
@@ -2499,7 +2501,7 @@ body.v6 .sale_capsule .discount_block_inline
 {
     position: absolute;
     right: 0;
-    bottom: 5%;
+    bottom: 0;
     transition: bottom 0.6s;
 }
 

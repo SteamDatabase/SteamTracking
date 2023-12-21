@@ -3323,7 +3323,6 @@
             [],
           ),
           b = n.createElement(it, {
-            spaceAroundCount: !0,
             endValue: h,
             maxValue: (100 * h) / S,
             duration: 2e3,
@@ -3331,7 +3330,6 @@
             delay: 1e3,
           }),
           R = n.createElement(it, {
-            spaceAroundCount: !0,
             endValue: y,
             maxValue: (100 * y) / E,
             duration: 2e3,
@@ -3339,7 +3337,6 @@
             delay: 2300,
           }),
           T = n.createElement(it, {
-            spaceAroundCount: !0,
             endValue: v,
             maxValue: (100 * v) / C,
             duration: 2e3,

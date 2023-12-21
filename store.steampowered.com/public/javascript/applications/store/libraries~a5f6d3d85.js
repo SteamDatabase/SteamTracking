@@ -4821,6 +4821,12 @@
                     br: n.FE.readBool,
                     bw: n.Xc.writeBool,
                   },
+                  visibility: {
+                    n: 7,
+                    br: n.FE.readUint32,
+                    bw: n.Xc.writeUint32,
+                  },
+                  spoiler_tag: { n: 8, br: n.FE.readBool, bw: n.Xc.writeBool },
                 },
               }),
             X.sm_m
