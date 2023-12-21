@@ -5633,6 +5633,12 @@ enum UnnamedEnum1e5291df888dba39
 	CLOSETAG = 3;
 }
 
+enum UnnamedEnum1e6f97ac4db559c6
+{
+	k_BlockDate = 1;
+	k_ScheduleSlot = 2;
+}
+
 enum UnnamedEnum1eb9732e676a1f8b
 {
 	Loaded = 0;
@@ -5775,6 +5781,19 @@ enum UnnamedEnum2c41fa064d91dbff
 	k_EOpenMic = 0;
 	k_EPushToTalk = 1;
 	k_EPushToMute = 2;
+}
+
+enum UnnamedEnum2c763df13954ae16
+{
+	Unknown = 0;
+	Cancelled = 1;
+	InviteActive = 2;
+	InviteExpired = 3;
+	InviteAccepted = 4;
+	DealReady = 5;
+	DealLive = 6;
+	DealCompleted = 7;
+	DealFailed = 8;
 }
 
 enum UnnamedEnum2cb9b3e31468ae28
@@ -7867,18 +7886,6 @@ enum UnnamedEnumf711bb3dceab35ce
 	Confirmation = 1;
 	Uploading = 2;
 	Error = 3;
-}
-
-enum UnnamedEnumf8b1e6b24c299dc7
-{
-	Unknown = 0;
-	InviteActive = 1;
-	InviteExpired = 2;
-	InviteAccepted = 3;
-	DealReady = 4;
-	DealLive = 5;
-	DealCompleted = 6;
-	DealFailed = 7;
 }
 
 enum UnnamedEnumf8c8b38ac1dd39c3

@@ -2148,7 +2148,7 @@
         N = r(58961),
         M = r(54671),
         b = r(25508);
-      const A = 2640280,
+      const A = 2750340,
         x = 2 === m.De.EUNIVERSE ? 404860 : 1675200;
       function D(e, t = !1) {
         const r = (e) => (0, s.Xx)(t ? `${e}_Plural` : e);
@@ -5399,7 +5399,6 @@
                       iconComponent: f.Tk,
                       children: (0, y.Xx)("#ShopNav_ByEvent"),
                       to: h.Z.LoyaltyByEvent(),
-                      iconCallout: f.KB,
                     },
                   },
                   {
@@ -5506,6 +5505,7 @@
                 props: {
                   iconComponent: g.Cts,
                   children: (0, y.Xx)("#ShopNav_SeasonalBadgeLink"),
+                  iconCallout: f.KB,
                   to: h.Z.LoyaltySteamBadge(),
                 },
               }),

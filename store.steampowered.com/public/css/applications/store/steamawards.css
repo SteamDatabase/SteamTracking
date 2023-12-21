@@ -1100,6 +1100,15 @@ body.v6 h3.steamawards2023_FaqSectionTitle_3iDsX {
     padding-bottom: 20px;
   }
 }
+.steamawards2023_SteamAwardCategory_3AoAT .steamawards2023_Anchor_3VtRP {
+  position: absolute;
+  top: -100px;
+}
+@media screen and (max-width: 910px) {
+  .steamawards2023_SteamAwardCategory_3AoAT .steamawards2023_Anchor_3VtRP {
+    position: relative;
+  }
+}
 .steamawards2023_SteamAwardCategory_3AoAT.steamawards2023_Active_tH2TN {
   filter: saturate(1);
   opacity: 1;
