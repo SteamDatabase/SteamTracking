@@ -23832,25 +23832,29 @@
     },
     87458: (e, t, n) => {
       "use strict";
-      n.d(t, { RY: () => c, g3: () => d, yp: () => u });
-      let o = !1,
-        i = !1,
+      function o() {
+        var e;
+        const t =
+          null ===
+            (e = (function () {
+              const e = navigator.userAgent.match(
+                /Valve (?<family>Steam (?:Client|GameOverlay|Tenfoot|ClientUI|Gamepad(?: VR)?(?:\/Steam Deck)?))( \[(?<betaid>[A-Za-z0-9_\- ]*)\])?(\/(?<launcher>[A-Za-z0-9_]+))?\/(?<version>[0-9]*)/,
+              );
+              return e ? e.groups : void 0;
+            })()) || void 0 === e
+            ? void 0
+            : e.betaid;
+        return t && ("Steam Main Client" == t || "Steam Beta Update" == t);
+      }
+      n.d(t, { M4: () => o, RY: () => u, g3: () => d });
+      let i = !1,
         r = !1,
         s = !1,
         a = !1,
-        l = !1;
-      function c() {
-        return o || h(), l;
-      }
+        l = !1,
+        c = !1;
       function u() {
-        if ((o || h(), !i && !r)) return 0;
-        if ("undefined" != typeof navigator && navigator.userAgent) {
-          let e = navigator.userAgent.match(
-            /Valve Steam [^\/]*\/(?:[^/]*\/)?([0-9]+)/,
-          );
-          if (e && 2 == e.length) return Number.parseInt(e[1]);
-        }
-        return 0;
+        return i || h(), c;
       }
       function d() {
         if (
@@ -23873,17 +23877,17 @@
         );
       }
       function h() {
-        (s = m("Valve Steam Tenfoot", "force_tenfoot_client_view")),
-          (r = m("Valve Steam GameOverlay", "force_overlay_view")),
-          (i = s || m("Valve Steam Client", "force_client_view")),
-          (l =
+        (a = m("Valve Steam Tenfoot", "force_tenfoot_client_view")),
+          (s = m("Valve Steam GameOverlay", "force_overlay_view")),
+          (r = a || m("Valve Steam Client", "force_client_view")),
+          (c =
             m("iphone", "force_ios_view") ||
             m("ipad", "force_ios_view") ||
             m("ipod", "force_ios_view") ||
             (m("macintosh", "force_ios_view") &&
               m("safari", "force_ios_view"))),
-          (a = m("android", "force_android_view")),
-          (o = !0);
+          (l = m("android", "force_android_view")),
+          (i = !0);
       }
     },
     19464: (e, t, n) => {
