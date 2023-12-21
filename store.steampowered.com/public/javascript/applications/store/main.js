@@ -35454,10 +35454,14 @@
               r = 3 === (0, b.dY)(n, { include_all_purchase_options: !0 }),
               s = w.Z.Get(),
               c = r
-                ? n.filter(
-                    (e) =>
-                      s.GetPackage(e).GetSelfPurchaseOption().requires_shipping,
-                  )
+                ? n.filter((e) => {
+                    var t;
+                    return null ===
+                      (t = s.GetPackage(e).GetSelfPurchaseOption()) ||
+                      void 0 === t
+                      ? void 0
+                      : t.requires_shipping;
+                  })
                 : null;
             return (0, o.useQuery)(
               ["cart", "validateHardware", n.join("|")],
@@ -35503,12 +35507,17 @@
               n = 3 === (0, b.dY)(t, { include_all_purchase_options: !0 }),
               i = w.Z.Get(),
               r = n
-                ? t.filter(
-                    (e) =>
-                      i.GetPackage(e).GetSelfPurchaseOption().recurrence_info &&
+                ? t.filter((e) => {
+                    var t;
+                    return (
+                      (null === (t = i.GetPackage(e).GetSelfPurchaseOption()) ||
+                      void 0 === t
+                        ? void 0
+                        : t.recurrence_info) &&
                       i.GetPackage(e).GetSelfPurchaseOption().recurrence_info
-                        .packageid !== y.kI,
-                  )
+                        .packageid !== y.kI
+                    );
+                  })
                 : [],
               s = r.map(
                 (e) =>

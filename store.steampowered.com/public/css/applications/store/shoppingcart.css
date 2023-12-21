@@ -742,6 +742,20 @@ td.rdtYear:hover {
 .lineitem_WhiteText_rXbF7 {
   color: #fff;
 }
+.lineitem_ErrorLineItem_32I-X {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.lineitem_ErrorLineItem_32I-X .lineitem_Left_2CRe2 {
+  flex: 1;
+}
+.lineitem_ErrorLineItem_32I-X .lineitem_Left_2CRe2 .lineitem_Error_2p9UO {
+  color: #de3618;
+}
+.lineitem_ErrorLineItem_32I-X .lineitem_Left_2CRe2 .lineitem_Muted_33fUn {
+  color: #606f7f;
+}
 .cartupsell_CartUpsellArea_2rkDl {
   margin-top: 48px;
 }
