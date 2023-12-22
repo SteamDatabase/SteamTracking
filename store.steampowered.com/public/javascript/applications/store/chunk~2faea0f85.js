@@ -58,10 +58,10 @@
     },
     23276: (e, t, a) => {
       "use strict";
-      a.d(t, { Pl: () => b, k8: () => E, Jm: () => S, $1: () => g });
+      a.d(t, { Pl: () => b, k8: () => D, Jm: () => S, $1: () => g });
       var n = a(89526),
-        r = a(98009),
-        o = a(85886),
+        o = a(98009),
+        r = a(85886),
         i = a(44973);
       var c = a(23715),
         l = a.n(c),
@@ -89,12 +89,12 @@
             t.open_in_new_window
               ? n.createElement(
                   _.ns,
-                  { href: (0, r.Hf)(t.url, a) },
+                  { href: (0, o.Hf)(t.url, a) },
                   n.createElement("img", { src: t.image_url, alt: t.title }),
                 )
               : n.createElement(
                   "a",
-                  { href: (0, r.Hf)(t.url, a) },
+                  { href: (0, o.Hf)(t.url, a) },
                   n.createElement("img", { src: t.image_url, alt: t.title }),
                 ),
           ),
@@ -106,7 +106,7 @@
             n.createElement(
               "div",
               { className: h.BottomBarPriceInfo },
-              n.createElement(D, {
+              n.createElement(E, {
                 discountBlock: t.discount_block,
                 bIsSalePage: t.is_sale_page,
               }),
@@ -116,33 +116,33 @@
       }
       function S(e) {
         var t, a;
-        const { spotlight: r } = e,
-          o = r.associated_item,
+        const { spotlight: o } = e,
+          r = o.associated_item,
           c = Object.assign(
             {
-              is_weeklong_deals: "weeklong_deals" == r.spotlight_template,
-              url: r.spotlight_link_url,
-              image_url: i.De.MEDIA_CDN_URL + r.asset_url,
-              title: r.spotlight_title,
-              body: r.spotlight_body,
+              is_weeklong_deals: "weeklong_deals" == o.spotlight_template,
+              url: o.spotlight_link_url,
+              image_url: i.De.MEDIA_CDN_URL + o.asset_url,
+              title: o.spotlight_title,
+              body: o.spotlight_body,
             },
-            f(o),
+            f(r),
           );
         if (
-          (!c.url && o && (c.url = i.De.STORE_BASE_URL + o.store_url_path),
+          (!c.url && r && (c.url = i.De.STORE_BASE_URL + r.store_url_path),
           (null ===
             (a =
-              null === (t = null == o ? void 0 : o.best_purchase_option) ||
+              null === (t = null == r ? void 0 : r.best_purchase_option) ||
               void 0 === t
                 ? void 0
                 : t.active_discounts) || void 0 === a
             ? void 0
-            : a.length) > 0 && -1 !== r.spotlight_body.indexOf("%1$s"))
+            : a.length) > 0 && -1 !== o.spotlight_body.indexOf("%1$s"))
         ) {
           const e = new Date(
-            1e3 * o.best_purchase_option.active_discounts[0].discount_end_date,
+            1e3 * r.best_purchase_option.active_discounts[0].discount_end_date,
           );
-          c.body = r.spotlight_body.replace(
+          c.body = o.spotlight_body.replace(
             "%1$s",
             e.toLocaleTimeString(m.Yt.GetPreferredLocales(), {
               hour: "numeric",
@@ -168,7 +168,7 @@
               { className: h.DailyDealImageCtn },
               n.createElement(
                 "a",
-                { href: (0, r.Hf)(t.target, a) },
+                { href: (0, o.Hf)(t.target, a) },
                 n.createElement("img", { src: t.image }),
               ),
             ),
@@ -176,7 +176,7 @@
               "div",
               { className: h.DailyDealTextCtn },
               n.createElement("div", { className: h.DailyDealDesc }, t.desc),
-              n.createElement(D, {
+              n.createElement(E, {
                 discountBlock: t.discount_block,
                 bIsSalePage: t.is_sale_page,
               }),
@@ -184,12 +184,12 @@
           ),
         );
       }
-      function E(e) {
+      function D(e) {
         var t;
         const {
             dailyDeal: { item: a },
           } = e,
-          r = Object.assign(
+          o = Object.assign(
             {
               end_date:
                 null === (t = a.best_purchase_option.active_discounts[0]) ||
@@ -198,20 +198,20 @@
                   : t.discount_end_date,
               target: i.De.STORE_BASE_URL + a.store_url_path,
               image:
-                ((o = a.assets),
+                ((r = a.assets),
                 (c = "header"),
                 i.De.MEDIA_CDN_URL +
-                  o.asset_url_format.replace("${FILENAME}", o[c])),
+                  r.asset_url_format.replace("${FILENAME}", r[c])),
             },
             f(a),
           );
-        var o, c;
-        return n.createElement(b, { dailyDeal: r });
+        var r, c;
+        return n.createElement(b, { dailyDeal: o });
       }
-      const D = (e) => {
+      const E = (e) => {
         const { discountBlock: t, bIsSalePage: a } = e;
         if (!t) return null;
-        const r = e.discountBlock.hide_discount_percent_for_compliance && !0;
+        const o = e.discountBlock.hide_discount_percent_for_compliance && !0;
         return a
           ? null == t.discount_max || t.discount_max <= 0
             ? null
@@ -232,7 +232,7 @@
                   "%",
                 ),
               )
-            : r
+            : o
             ? n.createElement(
                 "div",
                 { className: l().DiscountIconCtn },
@@ -264,7 +264,7 @@
               )
           : null == t.final_price || "" === t.final_price
           ? null
-          : null != t.bundle_discount && t.bundle_discount > 0 && !r
+          : null != t.bundle_discount && t.bundle_discount > 0 && !o
           ? n.createElement(
               "div",
               { className: h.DiscountBlock },
@@ -277,7 +277,7 @@
               ),
             )
           : null != t.discount_percent && t.discount_percent > 0
-          ? r
+          ? o
             ? n.createElement(
                 "div",
                 {
@@ -347,7 +347,7 @@
       function f(e) {
         return e
           ? {
-              item: { type: (0, o.qE)(e.item_type), id: e.id },
+              item: { type: (0, r.qE)(e.item_type), id: e.id },
               discount_block: {
                 orig_price: e.best_purchase_option.formatted_original_price,
                 final_price: e.best_purchase_option.formatted_final_price,
@@ -361,10 +361,10 @@
     },
     61963: (e, t, a) => {
       "use strict";
-      a.d(t, { Eu: () => E, J8: () => S, gq: () => f, nk: () => h });
+      a.d(t, { Eu: () => D, J8: () => S, gq: () => f, nk: () => h });
       var n,
-        r = a(88464),
-        o = a(89526),
+        o = a(88464),
+        r = a(89526),
         i = a(98009),
         c = a(25871),
         l = a(55290),
@@ -385,16 +385,16 @@
           case n.k_eFinal:
             return (
               Boolean(e.formatted_final_price) &&
-              o.createElement("span", null, e.formatted_final_price)
+              r.createElement("span", null, e.formatted_final_price)
             );
           case n.k_eOriginal:
             const t = e.formatted_orig_price || e.formatted_final_price;
-            return Boolean(t) && o.createElement("span", null, t);
+            return Boolean(t) && r.createElement("span", null, t);
         }
         const t = "reservation" == e.display_style,
           a = e.bHideDiscountPercentForCompliance && !0,
-          r = "bbcode_price" == e.className;
-        return o.createElement(
+          o = "bbcode_price" == e.className;
+        return r.createElement(
           "span",
           {
             className: (0, u.Z)({
@@ -404,7 +404,7 @@
             }),
           },
           Boolean(e.discount_percent && !a) &&
-            o.createElement(
+            r.createElement(
               "span",
               {
                 className: (0, u.Z)(
@@ -416,58 +416,58 @@
               `-${e.discount_percent}%`,
             ),
           Boolean(e.discount_percent && a) &&
-            o.createElement(
+            r.createElement(
               "div",
               {
                 className: (0, u.Z)({
                   [m.DiscountIconCtn]: !0,
-                  bbcode_price_discount: r,
+                  bbcode_price_discount: o,
                 }),
               },
-              o.createElement(d.dCe, null),
+              r.createElement(d.dCe, null),
             ),
           Boolean(e.formatted_final_price) &&
             (Boolean(e.discount_percent && e.formatted_orig_price)
-              ? o.createElement(
+              ? r.createElement(
                   "div",
                   {
                     className: (0, u.Z)({
                       [m.StoreSaleDiscountedPriceCtn]: !0,
-                      bbcode_price_ctn: r,
+                      bbcode_price_ctn: o,
                     }),
                   },
-                  o.createElement(
+                  r.createElement(
                     "div",
                     {
                       className: (0, u.Z)({
                         [m.StoreOriginalPrice]: !0,
                         StoreOriginalPrice: !0,
-                        bbcode_price_orig: r,
+                        bbcode_price_orig: o,
                       }),
                     },
                     e.formatted_orig_price,
                   ),
-                  o.createElement(
+                  r.createElement(
                     "div",
                     {
                       className: (0, u.Z)({
                         [m.StoreSalePriceBox]: !0,
-                        bbcode_price_box: r,
+                        bbcode_price_box: o,
                         [m.StoreSaleReservationPriceBox]: t,
-                        bbcode_price_final: r,
+                        bbcode_price_final: o,
                       }),
                     },
                     e.formatted_final_price,
                   ),
                 )
-              : o.createElement(
+              : r.createElement(
                   "div",
                   {
                     className: (0, u.Z)({
                       [m.StoreSalePriceBox]: !0,
-                      bbcode_price_box: r,
+                      bbcode_price_box: o,
                       [m.StoreSaleReservationPriceBox]: t,
-                      bbcode_price_final: r,
+                      bbcode_price_final: o,
                     }),
                   },
                   e.formatted_final_price,
@@ -478,7 +478,7 @@
         const [t] = (0, c.ie)(e.packageID, {});
         if (t) {
           const a = t.GetBestPurchaseOption();
-          return o.createElement(h, {
+          return r.createElement(h, {
             formatted_final_price: a.formatted_final_price,
             formatted_orig_price: a.formatted_original_price,
             discount_percent: a.discount_pct,
@@ -494,9 +494,9 @@
         const t = Number(e.args.packageid);
         if (!t) return null;
         const a = e.args.display;
-        return o.createElement(g, { packageID: t, display_style: a });
+        return r.createElement(g, { packageID: t, display_style: a });
       }
-      const b = (0, r.Pi)((e) => {
+      const b = (0, o.Pi)((e) => {
         const [t] = (0, c.ie)(e.packageID, {}),
           [a] = (0, c.ie)(e.compareID, {});
         if (!t || !a) return null;
@@ -527,19 +527,19 @@
         })(t, a);
         return void 0 === n
           ? null
-          : o.createElement("span", { className: m.StorePriceSavings }, n);
+          : r.createElement("span", { className: m.StorePriceSavings }, n);
       });
-      function E(e) {
+      function D(e) {
         const t = Number(e.args.packageid),
           a = Number(e.args.compareid);
         return t && a
-          ? o.createElement(b, { packageID: t, compareID: a })
+          ? r.createElement(b, { packageID: t, compareID: a })
           : null;
       }
-      const D = (e) => {
+      const E = (e) => {
         const t = (0, _.bJ)(),
           a = (0, i.mY)(t);
-        return o.createElement(p.RJ, {
+        return r.createElement(p.RJ, {
           snr: a,
           appID: e.appid,
           classOverride: (0, u.Z)(s().WishlistButtonNotTop, "WishlistButton"),
@@ -547,15 +547,15 @@
       };
       function f(e) {
         const t = Number(e.args.appid);
-        return t ? o.createElement(D, { appid: t }) : null;
+        return t ? r.createElement(E, { appid: t }) : null;
       }
     },
     31245: (e, t, a) => {
       "use strict";
       a.d(t, { B: () => x, O: () => k });
       var n = a(89526),
-        r = a(62983),
-        o = a(44026),
+        o = a(62983),
+        r = a(44026),
         i = a(51438),
         c = a(16221),
         l = a(98009),
@@ -569,14 +569,14 @@
         g = a.n(h),
         S = a(67935),
         b = a(21219),
-        E = a(87539),
-        D = a(3991),
+        D = a(87539),
+        E = a(3991),
         f = a(33406),
         v = a(98389),
         C = a(42317),
         P = a(71161),
-        B = a(19304),
-        y = a(14826),
+        y = a(19304),
+        B = a(14826),
         N = a(207),
         I = a(32765);
       const k = "capsule_index_";
@@ -589,26 +589,28 @@
             index: m,
             navKey: h,
             bHideStoreHover: S,
+            onlyOneDiscountPct: b,
           } = e,
-          [b, f] = n.useState(!1),
-          [C] = (0, u.jk)(t.id, (0, d.TM)(t.type), r.bk),
-          [N] = (0, u.vs)(a && (null == C ? void 0 : C.GetParentAppID()), r.bk),
-          x = (0, P.bJ)(),
+          [f, C] = n.useState(!1),
+          [N] = (0, u.jk)(t.id, (0, d.TM)(t.type), o.bk),
+          [x] = (0, u.vs)(a && (null == N ? void 0 : N.GetParentAppID()), o.bk),
+          O = (0, P.bJ)(),
           w = (0, I.id)();
-        if (!C) return null;
-        const H = Boolean(N),
-          O = n.createElement(
+        if (!N) return null;
+        const H = Boolean(x),
+          A = n.createElement(
             T,
             Object.assign({}, e, {
               info: t,
-              bIsHovered: b,
+              bIsHovered: f,
               bHasParentAppToDisplay: H,
+              onlyOneDiscountPct: b,
             }),
           );
         return n.createElement(
           i.s,
           {
-            className: (0, B.Z)({
+            className: (0, y.Z)({
               [g().OuterCapsuleContainer]: !0,
               [k + m]: 0 == m,
             }),
@@ -616,10 +618,10 @@
             navKey: h,
           },
           n.createElement(
-            D.zw,
-            { appid: C.GetAppID() },
+            E.zw,
+            { appid: N.GetAppID() },
             Boolean(S)
-              ? n.createElement(n.Fragment, null, O)
+              ? n.createElement(n.Fragment, null, A)
               : n.createElement(
                   p.ll,
                   {
@@ -632,28 +634,28 @@
                     bHidePrice: e.bHidePrice,
                     bUseSubscriptionLayout: e.bUseSubscriptionLayout,
                     strExtraParams: e.strExtraParams,
-                    fnOnHoverStateChange: !w && f,
+                    fnOnHoverStateChange: !w && C,
                     nCreatorAccountID: e.creatorAccountID,
                   },
-                  O,
+                  A,
                 ),
             Boolean(s) && n.createElement("div", null, s),
           ),
           H &&
             n.createElement(
-              o.Ks,
+              r.Ks,
               Object.assign(
                 { className: g().CapsuleParentInfo },
-                (0, E.h)(N, x, w, e.strExtraParams),
+                (0, D.h)(x, O, w, e.strExtraParams),
               ),
               n.createElement(
-                D.zw,
-                { appid: N.GetAppID() },
+                E.zw,
+                { appid: x.GetAppID() },
                 n.createElement(
                   "div",
                   { className: g().ParentType },
-                  (0, y.Xx)(
-                    11 == C.GetAppType()
+                  (0, B.Xx)(
+                    11 == N.GetAppType()
                       ? "#SalePage_ParentApp_SoundTrack"
                       : "#SalePage_ParentApp_DLC",
                   ),
@@ -662,7 +664,7 @@
                   v._,
                   {
                     type: "app",
-                    id: N.GetAppID(),
+                    id: x.GetAppID(),
                     strExtraParams: e.strExtraParams,
                   },
                   n.createElement(
@@ -671,10 +673,10 @@
                       {
                         loading: "lazy",
                         className: _.AppCapsuleImage,
-                        alt: N.GetName(),
-                        src: N.GetAssets().GetSmallCapsuleURL(),
+                        alt: x.GetName(),
+                        src: x.GetAssets().GetSmallCapsuleURL(),
                       },
-                      (0, r.fn)(),
+                      (0, o.fn)(),
                     ),
                   ),
                 ),
@@ -686,81 +688,83 @@
         var t;
         const {
             info: a,
-            bHidePriceIfOwned: r,
+            bHidePriceIfOwned: o,
             bHideStatusBanners: i,
             strExtraParams: c,
             imageType: _,
             bHasParentAppToDisplay: h,
             bUseSubscriptionLayout: g,
-            elElementToAppendToHover: E,
+            elElementToAppendToHover: D,
             bHidePrice: v,
-            bHidePlatforms: B,
-            creatorAccountID: y,
+            bHidePlatforms: y,
+            creatorAccountID: B,
             bIsHovered: I,
+            onlyOneDiscountPct: k,
           } = e,
-          [k] = (0, u.jk)(a.id, (0, d.TM)(a.type), { include_platforms: !0 }),
-          x = (0, P.bJ)(),
-          T =
-            ((0, D.Dt)(a.type),
+          [x] = (0, u.jk)(a.id, (0, d.TM)(a.type), { include_platforms: !0 }),
+          T = (0, P.bJ)(),
+          O =
+            ((0, E.Dt)(a.type),
             (0, n.useMemo)(
-              () => (null == k ? void 0 : k.GetIncludedAppIDsOrSelf()),
-              [k],
+              () => (null == x ? void 0 : x.GetIncludedAppIDsOrSelf()),
+              [x],
             )),
           w =
-            k &&
-            (null == k
+            x &&
+            (null == x
               ? void 0
-              : k
+              : x
                   .GetIncludedAppIDsOrSelf()
                   .every((e) => s.jg.Get().BOwnsApp(e)));
-        if (!k) return null;
+        if (!x) return null;
         const H = w && !i,
-          O = (0, N.bk)((0, l.Hf)(`${k.GetStorePageURL()}${c || ""}`, x));
-        let A,
-          G = null;
-        if (g && 0 == (null == k ? void 0 : k.GetStoreItemType()))
-          G = n.createElement(f.r, { appid: k.GetAppID(), bIsMuted: I });
-        else if (E);
+          A = (0, N.bk)((0, l.Hf)(`${x.GetStorePageURL()}${c || ""}`, T));
+        let G,
+          R = null;
+        if (g && 0 == (null == x ? void 0 : x.GetStoreItemType()))
+          R = n.createElement(f.r, { appid: x.GetAppID(), bIsMuted: I });
+        else if (D);
         else {
-          const t = w && r,
-            o = H;
-          G = n.createElement(m.Hl, {
+          const t = w && o,
+            r = H;
+          R = n.createElement(m.Hl, {
             info: a,
-            bShowAsMuted: o,
+            bShowAsMuted: r,
             bHidePrice: v,
             bShowInLibraryInsteadOfPrice: t,
-            bHidePlatforms: B,
-            creatorAccountID: y,
+            bHidePlatforms: y,
+            creatorAccountID: B,
             bShowName: e.bShowName,
+            onlyOneDiscountPct: k,
           });
         }
         return (
           "overrideNavigation" in a &&
-            (A = (e) => (
+            (G = (e) => (
               a.overrideNavigation(e),
               e.preventDefault(),
               e.stopPropagation(),
               !1
             )),
           n.createElement(
-            o.IS,
+            r.IS,
             {
-              href: A ? null : O,
+              href: G ? null : A,
               style: { display: "block", cursor: "pointer" },
               preferredFocus: h,
-              onClick: A,
+              onClick: G,
             },
-            n.createElement(b.v, { appids: T, hide_status_banners: i }),
+            n.createElement(b.v, { appids: O, hide_status_banners: i }),
             n.createElement(m.a4, { imageType: _, info: a }),
             n.createElement(C.y, {
               eDeckCompatibilityCategory:
-                null === (t = null == k ? void 0 : k.GetPlatforms()) ||
+                null === (t = null == x ? void 0 : x.GetPlatforms()) ||
                 void 0 === t
                   ? void 0
                   : t.steam_deck_compat_category,
             }),
             Boolean(I && !(0, p.Hu)()) && n.createElement(S.v, { appInfo: a }),
-            G,
+            R,
           )
         );
       }

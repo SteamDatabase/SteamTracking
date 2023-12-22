@@ -1645,7 +1645,7 @@
                         { href: r.GetStorePageURL() },
                         r.GetName(),
                       ),
-                      a < t.GetIncludedAppIDs().length - 1 ? ", " : "",
+                      a < t.GetIncludedAppIDs().length - 1 ? ", " : "",
                     ),
                   );
               }),
@@ -1873,6 +1873,7 @@
         return i.createElement($e.B, {
           capsule: { id: t.id, type: (0, L.Ds)(t.item_type, t.type) },
           imageType: "header",
+          onlyOneDiscountPct: !0,
         });
       }
       function at(e) {

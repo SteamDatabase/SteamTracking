@@ -649,8 +649,6 @@ td.rdtYear:hover {
   align-items: center;
   margin-top: 8px;
   flex-wrap: wrap;
-  white-space: pre;
-  text-wrap: wrap;
   font-size: 13px;
 }
 .lineitem_InnerLineItemCtn_yW_j0 .lineitem_LineItemDetailsRowTop_1SauQ {
@@ -778,7 +776,8 @@ td.rdtYear:hover {
   min-height: 148px;
 }
 .cartupsell_Specials_2-sCa > div {
-  flex: 1;
+  flex: 1 1 0px;
+  min-width: 0;
 }
 .cartupsell_DailyDeals_rpifv,
 .cartupsell_Spotlights_udcFp {

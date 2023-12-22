@@ -11376,7 +11376,7 @@
                 l.createElement(
                   "div",
                   { className: M().Price },
-                  l.createElement(C.Jc, { info: t }),
+                  l.createElement(C.Jc, { info: t, onlyOneDiscountPct: !0 }),
                 ),
             ),
             l.createElement(
@@ -12378,8 +12378,9 @@
               strClassName: o,
               creatorAccountID: l,
               bShowName: d,
+              onlyOneDiscountPct: c,
             } = e,
-            c = (0, i.useMemo)(() => {
+            m = (0, i.useMemo)(() => {
               var e;
               return (
                 d &&
@@ -12406,10 +12407,14 @@
                 i.createElement(
                   "span",
                   { className: j().BottomBarPriceInfo },
-                  i.createElement(b.Jc, { info: t, bShowInLibrary: r }),
+                  i.createElement(b.Jc, {
+                    info: t,
+                    bShowInLibrary: r,
+                    onlyOneDiscountPct: c,
+                  }),
                 ),
             ),
-            d && i.createElement("div", { className: j().CapsuleName }, c),
+            d && i.createElement("div", { className: j().CapsuleName }, m),
             l && i.createElement(Z, Object.assign({ creatorAccountID: l }, e)),
           );
         },
@@ -12925,14 +12930,14 @@
       }
       function D(e) {
         var t, a;
-        const { bSingleLineMode: n, storeItem: i } = e;
+        const { bSingleLineMode: n, storeItem: i, onlyOneDiscountPct: r } = e;
         if (!i) return null;
-        const r = (0, f.Z)(
+        const o = (0, f.Z)(
             v().StoreSalePriceWidgetContainer,
             n && v().SingleLineMode,
             "StoreSalePriceWidgetContainer",
           ),
-          o =
+          l =
             2 == i.GetStoreItemType() &&
             (null === (t = i.GetBestPurchaseOption()) || void 0 === t
               ? void 0
@@ -12940,7 +12945,7 @@
         if (e.bShowInLibrary)
           return s.createElement(
             "div",
-            { className: r },
+            { className: o },
             s.createElement(
               "div",
               { className: v().StoreSalePriceBox },
@@ -12955,7 +12960,7 @@
         )
           return s.createElement(
             "div",
-            { className: r },
+            { className: o },
             s.createElement(
               "div",
               { className: v().StoreSalePriceBox },
@@ -12966,7 +12971,7 @@
           return 0 == i.GetStoreItemType() && 1 == i.GetAppType()
             ? s.createElement(
                 "div",
-                { className: r },
+                { className: o },
                 s.createElement(
                   "div",
                   { className: v().StoreSalePriceBox },
@@ -12975,7 +12980,7 @@
               )
             : s.createElement(
                 "div",
-                { className: r },
+                { className: o },
                 s.createElement(
                   "div",
                   { className: v().StoreSalePriceBox },
@@ -12984,19 +12989,22 @@
               );
         if (!i.GetBestPurchasePriceFormatted() || !i.GetBestPurchaseOption())
           return null;
-        const l = i.GetBestPurchaseOption().discount_pct || o,
-          d = l && o && l > o && o;
-        return s.createElement(G, {
-          bSingleLineMode: n,
-          nBaseDiscountPercentage: d,
-          nDiscountPercentage: l,
-          bIsPrePurchase: i.BIsPrePurchase(),
-          strBestPurchaseOriginalPriceFormatted:
-            i.GetBestPurchaseOriginalPriceFormatted(),
-          strBestPurchasePriceFormatted: i.GetBestPurchasePriceFormatted(),
-          bHideDiscountPercentForCompliance:
-            i.GetBestPurchaseOption().hide_discount_pct_for_compliance,
-        });
+        let d = i.GetBestPurchaseOption().discount_pct || l,
+          c = d && l && d > l && l;
+        return (
+          r && d > 0 && (c = 0),
+          s.createElement(G, {
+            bSingleLineMode: n,
+            nBaseDiscountPercentage: c,
+            nDiscountPercentage: d,
+            bIsPrePurchase: i.BIsPrePurchase(),
+            strBestPurchaseOriginalPriceFormatted:
+              i.GetBestPurchaseOriginalPriceFormatted(),
+            strBestPurchasePriceFormatted: i.GetBestPurchasePriceFormatted(),
+            bHideDiscountPercentForCompliance:
+              i.GetBestPurchaseOption().hide_discount_pct_for_compliance,
+          })
+        );
       }
       function G(e) {
         const {
