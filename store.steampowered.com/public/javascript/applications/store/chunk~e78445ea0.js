@@ -1433,8 +1433,8 @@
         }
         constructor() {
           (this.m_transport = void 0),
-            (this.m_dateSaleStart = new Date("2023-12-21T18:00:00")),
-            (this.m_dateSaleEnd = new Date("2024-01-04T18:00:00"));
+            (this.m_dateSaleStart = new Date("2023-12-21T18:00:00Z")),
+            (this.m_dateSaleEnd = new Date("2024-01-04T18:00:00Z"));
         }
       }
       var C = n(92616),

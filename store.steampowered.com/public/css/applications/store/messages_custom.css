@@ -18,18 +18,18 @@
 }
 .replay_MMFrame_kmeCX .replay_HeaderCtn_1x7ZL {
   position: absolute;
-  right: 8px;
-  top: 8px;
   display: flex;
+  margin-left: 50%;
   align-items: flex-start;
+  transform: translateX(-50%);
+  top: 8px;
 }
 .replay_MMFrame_kmeCX .replay_Header_3zmnJ {
-  font-size: 35px;
-  line-height: 42px;
+  font-size: 20px;
+  line-height: 24px;
   color: #fff;
   font-weight: 800;
   text-align: left;
-  max-width: 180px;
 }
 .replay_MMFrame_kmeCX .replay_YearSubtitle_GD-gM {
   color: #4ad4ff;
@@ -68,6 +68,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-top: 40px;
 }
 .replay_MMFrame_kmeCX .replay_Avatar_3Or4z {
   border: 4.95px solid #4ad4ff;
@@ -120,6 +121,46 @@
 .replay_MMFrame_kmeCX .replay_DataBlock_Vs2aJ,
 .replay_MMFrame_kmeCX .replay_Description_3PEXE {
   max-width: 480px;
+}
+@media screen and (max-width: 500px) {
+  .replay_MMFrame_kmeCX {
+    width: 100vw;
+    height: 100vh;
+    padding: 0px;
+  }
+  .replay_MMFrame_kmeCX .replay_Header_3zmnJ {
+    font-size: 15px;
+    line-height: 15px;
+  }
+  .replay_MMFrame_kmeCX .replay_ReplayLogo_1YyUU {
+    width: 60px;
+    height: 40px;
+  }
+  .replay_MMFrame_kmeCX .replay_Content_11Hvb {
+    padding-top: 20px;
+  }
+  .replay_MMFrame_kmeCX .replay_Avatar_3Or4z {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 4px;
+  }
+  .replay_MMFrame_kmeCX .replay_DataBlock_Vs2aJ {
+    font-size: 20px;
+    line-height: normal;
+  }
+  .replay_MMFrame_kmeCX .replay_ViewPageButton_1Dve5 {
+    font-size: 14px;
+    line-height: normal;
+  }
+  .replay_MMFrame_kmeCX .replay_Description_3PEXE {
+    font-size: 14px;
+    line-height: normal;
+  }
+  .replay_MMFrame_kmeCX .replay_Hashtag_3ys0V {
+    left: 50%;
+    text-align: center;
+    transform: translateX(-50%);
+  }
 }
 .yir2022_ImagesCtn_wLcoY {
   background: linear-gradient(180deg, #642452 30%, #06123d 90%, transparent);
