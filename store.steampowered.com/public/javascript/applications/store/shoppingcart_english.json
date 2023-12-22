@@ -147,5 +147,12 @@
     "Cart_LineItemOptions_PrivateTooltip": "Marking a game as private will hide it everywhere outside of your Library. Your ownership, in-game status, playtime, and activity will not be visible to other people.",
     "Cart_BetaNotice": "You're seeing a new version of the shopping cart because you're participating in the Steam Client Beta. <1>Leave feedback or report bugs</1>",
     "Cart_GiftScheduleError_TooFar": "You cannot schedule a gift for this far in the future.",
-    "Cart_LineItem_ErrorBoundary": "There was a problem displaying this item"
+    "Cart_LineItem_ErrorBoundary": "There was a problem displaying this item",
+    "Cart_SaleCardDrops_EarnedMessage": "This purchase will earn you %1$s %2$s Trading Card.",
+    "Cart_SaleCardDrops_EarnedMessage_Plural": "This purchase will earn you %1$s %2$s Trading Cards.",
+    "Cart_SaleCardDrops_Explanation": "Purchases made on the Steam Store during the sale will earn you %1$s Trading Cards.",
+    "Cart_SaleCardDrops_Explanation_Gifts": "You will recieve the cards earned even if this is purchased as a gift.",
+    "Cart_SaleCardDrops_ProgressLabel": "Progress to next card",
+    "Cart_SaleCardDrops_CardCost": "approximately %1$s per card",
+    "Cart_SaleCardDrops_PrepurchaseIneligible": "Note: Pre-purchase items are not eligible for %s Trading Card rewards. The following items will not earn trading card rewards:"
 }

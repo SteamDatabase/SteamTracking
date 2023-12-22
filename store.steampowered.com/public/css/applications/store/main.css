@@ -3204,13 +3204,13 @@ body.modals_BodyNoScrollDialog_3lrlA {
 .trailerplayer_UserInputNeeded_tH6oU > svg {
   height: 150px;
 }
-body.ShoppingCart {
-  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
-  font-weight: normal;
-}
 .shoppingcart_CartCard_2w0ZE {
   background-color: rgba(0, 0, 0, 0.2);
   padding: 15px;
+}
+body.ShoppingCart {
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  font-weight: normal;
 }
 .shoppingcart_ShoppingCartPage_22xts {
   max-width: 940px;

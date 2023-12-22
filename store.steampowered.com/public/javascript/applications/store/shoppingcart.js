@@ -61,6 +61,22 @@
         DateErrorCtn: "partnereventshareddates_DateErrorCtn_Bww9B",
       };
     },
+    21154: (e) => {
+      e.exports = { CartCard: "cartcommon_CartCard_29hIq" };
+    },
+    73933: (e) => {
+      e.exports = {
+        CartCard: "carttradingcardprogress_CartCard_3s8Si",
+        TradingCardContainer:
+          "carttradingcardprogress_TradingCardContainer_2haWA",
+        EarnedMessage: "carttradingcardprogress_EarnedMessage_2p5xY",
+        Right: "carttradingcardprogress_Right_18eO4",
+        ProgressSection: "carttradingcardprogress_ProgressSection_2M_5i",
+        Progress: "carttradingcardprogress_Progress_lf5Wn",
+        ProgressRail: "carttradingcardprogress_ProgressRail_3TjWh",
+        IneligbleList: "carttradingcardprogress_IneligbleList_1r6nj",
+      };
+    },
     34515: (e) => {
       e.exports = {
         CartUpsellArea: "cartupsell_CartUpsellArea_2rkDl",
@@ -125,6 +141,7 @@
     },
     8371: (e) => {
       e.exports = {
+        CartCard: "lineitem_CartCard_31xpG",
         LineItemWrapper: "lineitem_LineItemWrapper_2KiPY",
         LineItemCapsule: "lineitem_LineItemCapsule_2_GgL",
         LineItemPlaceholder: "lineitem_LineItemPlaceholder_1qKu4",
@@ -158,9 +175,9 @@
         Muted: "lineitem_Muted_33fUn",
       };
     },
-    27743: (e, t, n) => {
+    41118: (e, t, n) => {
       "use strict";
-      n.d(t, { y: () => lt, J: () => st });
+      n.d(t, { y: () => ut, J: () => _t });
       var i = n(89526),
         a = n(28841),
         r = n(79865),
@@ -181,14 +198,14 @@
         return i.createElement(u.Provider, { value: r }, a);
       }
       var f = n(59934),
-        v = n(17547),
-        E = n(96927),
-        g = n(33940),
+        g = n(17547),
+        v = n(96927),
+        E = n(33940),
         C = n(25871),
         h = n(51438),
         I = n(80845),
-        L = n(85886),
-        S = n(69338),
+        S = n(85886),
+        L = n(69338),
         D = n(92616),
         N = n(98389),
         T = n(207),
@@ -196,13 +213,13 @@
         b = n(88464),
         y = n(5556),
         A = n.n(y);
-      var w = n(85651),
-        x = n(17318),
-        k = n.n(x),
+      var x = n(85651),
+        w = n(17318),
+        k = n.n(w),
         R = n(4306),
-        F = n(84343),
-        P = n(69409),
-        O = n.n(P),
+        P = n(84343),
+        F = n(69409),
+        O = n.n(F),
         B = n(47812),
         M = n.n(B);
       let Z = class extends i.Component {
@@ -257,7 +274,7 @@
             e = t;
           }
           const n = this.props.fnGetTimeToUpdate(),
-            i = M().unix(n || w.JW.GetTimeNowWithOverride());
+            i = M().unix(n || x.JW.GetTimeNowWithOverride());
           e.hour(i.hour()),
             e.minute(i.minute()),
             e.second(0),
@@ -288,8 +305,8 @@
         }
         SetToNow() {
           this.props.fnSetToNow
-            ? this.props.fnSetToNow(w.JW.GetTimeNowWithOverride())
-            : this.props.fnSetTimeToUpdate(w.JW.GetTimeNowWithOverride());
+            ? this.props.fnSetToNow(x.JW.GetTimeNowWithOverride())
+            : this.props.fnSetTimeToUpdate(x.JW.GetTimeNowWithOverride());
         }
         componentDidMount() {
           this.UpdateError();
@@ -330,7 +347,7 @@
             u = "h:mm A";
           const p = !a && this.state.strError;
           let _, f;
-          if (e && t && e == t && t > w.JW.GetTimeNowWithOverride()) {
+          if (e && t && e == t && t > x.JW.GetTimeNowWithOverride()) {
             let e = M().unix(t);
             (_ = {
               hours: { max: e.hour(), min: e.hour(), step: 0 },
@@ -341,9 +358,9 @@
               (u = "HH:mm");
           }
           m || !t || s || (f = M().unix(t));
-          const v = M().tz.guess(),
-            E = M().unix(m).tz(v),
-            g = !!r && v != r && M().unix(m).tz(r);
+          const g = M().tz.guess(),
+            v = M().unix(m).tz(g),
+            E = !!r && g != r && M().unix(m).tz(r);
           return i.createElement(
             "div",
             { className: (0, c.Z)(O().EventTimeSection, this.props.className) },
@@ -351,7 +368,7 @@
               "div",
               { className: (0, c.Z)(O().EventTimeTitle, "DialogLabel") },
               i.createElement(
-                F.HP,
+                P.HP,
                 { toolTipContent: this.props.strDescToolTip, direction: "top" },
                 Boolean(this.props.strDescription) &&
                   i.createElement("span", null, this.props.strDescription),
@@ -388,11 +405,11 @@
                     disabled: l,
                   },
                 }),
-                !!g &&
+                !!E &&
                   i.createElement(
                     "div",
                     { className: O().PacificTimeHint },
-                    g.format("L"),
+                    E.format("L"),
                   ),
               ),
               i.createElement(
@@ -414,11 +431,11 @@
                     disabled: l,
                   },
                 }),
-                !!g &&
+                !!E &&
                   i.createElement(
                     "div",
                     { className: O().PacificTimeHint },
-                    g.format("LT"),
+                    E.format("LT"),
                   ),
               ),
               this.props.bShowTimeZone &&
@@ -428,13 +445,13 @@
                   i.createElement(
                     "div",
                     { className: O().TimeZone },
-                    E.zoneAbbr(),
+                    v.zoneAbbr(),
                   ),
-                  !!g &&
+                  !!E &&
                     i.createElement(
                       "div",
                       { className: O().TimeZone },
-                      g.zoneAbbr(),
+                      E.zoneAbbr(),
                     ),
                 ),
             ),
@@ -447,11 +464,11 @@
           );
         }
       };
-      (0, g.gn)([R.ak], Z.prototype, "OnTimeChange", null),
-        (0, g.gn)([R.ak], Z.prototype, "OnDateChange", null),
-        (0, g.gn)([R.ak], Z.prototype, "IsValidDate", null),
-        (0, g.gn)([R.ak], Z.prototype, "SetToNow", null),
-        (Z = (0, g.gn)([b.Pi], Z));
+      (0, E.gn)([R.ak], Z.prototype, "OnTimeChange", null),
+        (0, E.gn)([R.ak], Z.prototype, "OnDateChange", null),
+        (0, E.gn)([R.ak], Z.prototype, "IsValidDate", null),
+        (0, E.gn)([R.ak], Z.prototype, "SetToNow", null),
+        (Z = (0, E.gn)([b.Pi], Z));
       var X = n(82529),
         U = n.n(X),
         W = n(99307),
@@ -489,7 +506,7 @@
             { className: U().FormTitle },
             (0, o.Xx)("#Cart_GiftRecipientModal_Title"),
           ),
-          !s && i.createElement(S.V, { position: "center", size: "large" }),
+          !s && i.createElement(L.V, { position: "center", size: "large" }),
           s &&
             i.createElement(J, {
               selectedSteamID: m,
@@ -707,12 +724,12 @@
               ? void 0
               : t.time_scheduled_send,
           ),
-          [v, E] = i.useState(
+          [g, v] = i.useState(
             (null === (n = p.gift_info) || void 0 === n
               ? void 0
               : n.time_scheduled_send) > 0,
           ),
-          [g, C] = i.useState(
+          [E, C] = i.useState(
             (null ===
               (l =
                 null === (r = p.gift_info) || void 0 === r
@@ -722,7 +739,7 @@
               : l.message) || "",
           ),
           [h, I] = i.useState(null),
-          [L, S] = i.useState(!1),
+          [S, L] = i.useState(!1),
           [D, N] = i.useState(
             (null ===
               (d =
@@ -734,17 +751,17 @@
           ),
           T = (0, K.IE)(m.L7.accountid),
           G = (0, R.fB)(3e3),
-          b = ne - g.length,
+          b = ne - E.length,
           y = {
             accountid_giftee:
               null === (u = p.gift_info) || void 0 === u
                 ? void 0
                 : u.accountid_giftee,
-            gift_message: { message: g, signature: D },
+            gift_message: { message: E, signature: D },
             time_scheduled_send: _,
           },
           A = (0, a.G1)(),
-          w = () =>
+          x = () =>
             G(() =>
               A.mutate({
                 lineItemID: p.line_item_id,
@@ -753,7 +770,7 @@
               }),
             );
         if (!T.data) return null;
-        const x = p.line_item_id;
+        const w = p.line_item_id;
         return i.createElement(
           i.Fragment,
           null,
@@ -775,14 +792,14 @@
             i.createElement(s.E0, {
               nMinHeight: 50,
               className: U().GiftNoteInput,
-              value: g,
-              onBlur: w,
+              value: E,
+              onBlur: x,
               onKeyDown: (e) => {
-                g.length >= ne
+                E.length >= ne
                   ? "Backspace" !== e.key &&
                     "Delete" !== e.key &&
                     (e.preventDefault(), e.stopPropagation())
-                  : w();
+                  : x();
               },
               onChange: (e) => C(e.target.value),
             }),
@@ -801,17 +818,17 @@
               }),
               " ",
               T.data.m_strPlayerName,
-              !L &&
+              !S &&
                 i.createElement(
                   oe,
-                  { onClick: () => S(!0) },
+                  { onClick: () => L(!0) },
                   "(",
                   (0, o.Xx)("#Cart_GiftDelivery_AddSignature"),
                   ")",
                 ),
             ),
           ),
-          L &&
+          S &&
             i.createElement(
               ae,
               null,
@@ -824,8 +841,8 @@
                 value: D,
                 className: U().GiftSignatureInput,
                 onChange: (e) => N(e.target.value),
-                onBlur: w,
-                onKeyDown: w,
+                onBlur: x,
+                onKeyDown: x,
                 maxChars: ne,
               }),
             ),
@@ -837,18 +854,18 @@
               re,
               null,
               i.createElement("input", {
-                id: `${x}_delivery_now`,
-                name: `${x}_delivery`,
+                id: `${w}_delivery_now`,
+                name: `${w}_delivery`,
                 defaultChecked: !_,
                 value: 1,
                 type: "radio",
                 onClick: () => {
-                  f(0), E(!1), w();
+                  f(0), v(!1), x();
                 },
               }),
               i.createElement(
                 "label",
-                { className: U().GiftRadioLabel, htmlFor: `${x}_delivery_now` },
+                { className: U().GiftRadioLabel, htmlFor: `${w}_delivery_now` },
                 (0, o.Xx)("#Cart_GiftDelivery_Now"),
               ),
             ),
@@ -856,32 +873,32 @@
               re,
               null,
               i.createElement("input", {
-                id: `${x}_delivery_schedule`,
-                name: `${x}_delivery`,
+                id: `${w}_delivery_schedule`,
+                name: `${w}_delivery`,
                 defaultChecked: _ > 0,
                 value: 1,
                 type: "radio",
                 onClick: () => {
-                  _ || f(Date.now() / 1e3), E(!0), w();
+                  _ || f(Date.now() / 1e3), v(!0), x();
                 },
               }),
               i.createElement(
                 "label",
                 {
                   className: U().GiftRadioLabel,
-                  htmlFor: `${x}_delivery_schedule`,
+                  htmlFor: `${w}_delivery_schedule`,
                 },
                 (0, o.Xx)("#Cart_GiftDelivery_ScheduleDelivery"),
               ),
               h && i.createElement("div", { className: U().ScheduleError }, h),
-              v &&
+              g &&
                 i.createElement(Z, {
                   bShowTimeZone: !0,
                   className: U().GiftDatePicker,
                   nEarliestTime: Date.now() / 1e3,
                   fnGetTimeToUpdate: () => _,
                   fnSetTimeToUpdate: (e) => {
-                    f(e), w();
+                    f(e), x();
                   },
                   fnIsValidDateTime: () => {
                     const e = Date.now() / 1e3 + Q._H.PerYear;
@@ -980,7 +997,7 @@
             "div",
             { className: se.CouponPickerRow },
             t ? i.createElement(pe, Object.assign({}, t)) : null,
-            i.createElement(Ee, null, (0, o.kb)("#Cart_CouponAvailability", n)),
+            i.createElement(ve, null, (0, o.kb)("#Cart_CouponAvailability", n)),
             i.createElement(
               "div",
               { className: se.ModifyLink },
@@ -1058,7 +1075,7 @@
           { className: se.CouponListContainer },
           n.map((e) =>
             i.createElement(
-              ve,
+              ge,
               Object.assign({ key: e.gidcoupon }, e, {
                 applied: r === e.gidcoupon,
                 selected: l === e.gidcoupon,
@@ -1069,7 +1086,7 @@
           ),
         );
       }
-      function ve(e) {
+      function ge(e) {
         const {
             applied: t,
             inUse: n,
@@ -1087,25 +1104,25 @@
             className: (0, c.Z)(se.CouponListItem, d && se.Disabled),
             onClick: u,
           },
-          i.createElement(ge, { checked: a, hidden: d }),
+          i.createElement(Ee, { checked: a, hidden: d }),
           i.createElement("img", { src: r, title: l, className: se.Image }),
           i.createElement(
             "div",
             { className: se.Info },
-            t && i.createElement(Ee, null, (0, o.Xx)("#Cart_Coupons_Applied")),
-            d && i.createElement(Ee, null, (0, o.Xx)("#Cart_Coupons_InUse")),
+            t && i.createElement(ve, null, (0, o.Xx)("#Cart_Coupons_Applied")),
+            d && i.createElement(ve, null, (0, o.Xx)("#Cart_Coupons_InUse")),
           ),
           i.createElement("div", { className: se.Discount }, "-", s, "%"),
         );
       }
-      function Ee(e) {
+      function ve(e) {
         return i.createElement(
           "div",
           { className: se.CouponInfoText },
           e.children,
         );
       }
-      function ge(e) {
+      function Ee(e) {
         const { checked: t, hidden: n } = e;
         return i.createElement(
           "div",
@@ -1116,13 +1133,13 @@
       var Ce = n(68333),
         he = n(30659),
         Ie = n(5615),
-        Le = n(27070);
-      function Se() {
-        const e = (0, Le.bY)();
+        Se = n(27070);
+      function Le() {
+        const e = (0, Se.bY)();
         return (0, Ie.useQuery)(
           ["AccountPrivateApps"],
           () =>
-            (0, g.mG)(this, void 0, void 0, function* () {
+            (0, E.mG)(this, void 0, void 0, function* () {
               const t = Ce.gA.Init(he.XR),
                 n = yield he.kk.GetPrivateAppList(e, t);
               return new Set(n.Body().private_apps(!0).appids());
@@ -1134,7 +1151,7 @@
         e.invalidateQueries(["AccountPrivateApps"]);
       }
       function Ne(e, t, n) {
-        return (0, g.mG)(this, void 0, void 0, function* () {
+        return (0, E.mG)(this, void 0, void 0, function* () {
           const i = Ce.gA.Init(he._c);
           i.Body().set_appids(t.slice()), i.Body().set_private(n);
           const a = yield he.kk.ToggleAppPrivacy(e, i);
@@ -1158,7 +1175,7 @@
       const ye = {
         1: function (e) {
           const { item: t } = e,
-            n = (0, g._T)(e, ["item"]),
+            n = (0, E._T)(e, ["item"]),
             [a, r] = (0, C.ie)(t.packageid, {
               include_all_purchase_options: !0,
             }),
@@ -1170,16 +1187,16 @@
             });
           if (2 === o || 2 === r)
             return i.createElement(Re, { lineItemID: t.line_item_id });
-          if (!l || !a) return i.createElement(xe, null);
+          if (!l || !a) return i.createElement(we, null);
           const s = a.GetSelfPurchaseOption();
           return i.createElement(
-            Fe,
+            Pe,
             Object.assign({ storeItem: l, lineItem: t, purchaseOption: s }, n),
           );
         },
         2: function (e) {
           const { item: t } = e,
-            n = (0, g._T)(e, ["item"]),
+            n = (0, E._T)(e, ["item"]),
             [a, r] = (0, C.jk)(t.bundleid, 2, {
               include_assets: !0,
               include_platforms: !0,
@@ -1189,10 +1206,10 @@
             });
           if (2 === r)
             return i.createElement(Re, { lineItemID: t.line_item_id });
-          if (!a) return i.createElement(xe, null);
+          if (!a) return i.createElement(we, null);
           const l = a.GetSelfPurchaseOption();
           return i.createElement(
-            Fe,
+            Pe,
             Object.assign({ storeItem: a, lineItem: t, purchaseOption: l }, n),
           );
         },
@@ -1202,16 +1219,16 @@
           n = ye[t.type];
         return n
           ? i.createElement(
-              v.SV,
+              g.SV,
               {
                 fallback: (t) =>
-                  i.createElement(we, Object.assign({}, e, { error: t })),
+                  i.createElement(xe, Object.assign({}, e, { error: t })),
               },
               i.createElement(n, Object.assign({}, e)),
             )
           : (console.error(`Unknown line item type (${t.type})`), null);
       }
-      function we(e) {
+      function xe(e) {
         const { item: t, error: n } = e,
           r = (0, a.fn)(t.line_item_id);
         return i.createElement(
@@ -1234,7 +1251,7 @@
           ),
         );
       }
-      function xe() {
+      function we() {
         return i.createElement(
           Ve,
           { placeholder: !0 },
@@ -1245,7 +1262,7 @@
         return i.createElement(
           "div",
           { className: be().LoadingThrobber },
-          i.createElement(S.V, {
+          i.createElement(L.V, {
             size: "medium",
             position: "center",
             msDelayAppear: 250,
@@ -1272,7 +1289,7 @@
           ),
         );
       }
-      function Fe(e) {
+      function Pe(e) {
         var t, n;
         const {
             storeItem: r,
@@ -1283,18 +1300,18 @@
             availableCoupons: _,
           } = e,
           f = l.line_item_id,
-          v = {
+          g = {
             id: null == r ? void 0 : r.GetID(),
-            type: (0, L.Ds)(
+            type: (0, S.Ds)(
               null == r ? void 0 : r.GetStoreItemType(),
               null == r ? void 0 : r.GetAppType(),
             ),
           },
-          E = (0, a.fn)(f),
-          g = (0, a.tI)(l.packageid, l.bundleid, !0),
+          v = (0, a.fn)(f),
+          E = (0, a.tI)(l.packageid, l.bundleid, !0),
           [C] = p(),
-          h = E.isLoading || E.isSuccess || g.isLoading,
-          S = "gifts" === C && !!l.flags.is_gift,
+          h = v.isLoading || v.isSuccess || E.isLoading,
+          L = "gifts" === C && !!l.flags.is_gift,
           D = !!_.length,
           N = (function (e) {
             const t = `${m.De.STORE_BASE_URL}public/images/checkout/Cart_generic_header_logo.png`;
@@ -1317,16 +1334,16 @@
                 return Math.min(99, Math.floor(((t - n) / t) * 100 + 0.5));
               })(u)
             : d.discount_pct,
-          w = r.GetIncludedAppIDsOrSelf(),
-          { data: x, isLoading: k } = Se(),
-          R = w.filter((e) => (null == x ? void 0 : x.has(e)));
-        if (k) return i.createElement(xe, null);
-        const F = null === (t = l.flags) || void 0 === t ? void 0 : t.is_gift,
-          P = R.length === w.length,
-          O = !F && R.length > 0 && !P;
-        let B = F ? "gift" : "myself";
+          x = r.GetIncludedAppIDsOrSelf(),
+          { data: w, isLoading: k } = Le(),
+          R = x.filter((e) => (null == w ? void 0 : w.has(e)));
+        if (k) return i.createElement(we, null);
+        const P = null === (t = l.flags) || void 0 === t ? void 0 : t.is_gift,
+          F = R.length === x.length,
+          O = !P && R.length > 0 && !F;
+        let B = P ? "gift" : "myself";
         return (
-          "myself" === B && P && (B = "private"),
+          "myself" === B && F && (B = "private"),
           i.createElement(
             "div",
             null,
@@ -1371,7 +1388,7 @@
                       r.GetName(),
                     ),
                   ),
-                  r.BIsComingSoon() && i.createElement(Pe, { storeItem: r }),
+                  r.BIsComingSoon() && i.createElement(Fe, { storeItem: r }),
                   i.createElement(
                     Oe,
                     { lineItemID: f },
@@ -1393,7 +1410,7 @@
                         ),
                       },
                       i.createElement(I.a, {
-                        item: v,
+                        item: g,
                         strClassName: be().LineItemPlatforms,
                       }),
                     ),
@@ -1434,7 +1451,7 @@
                       i.createElement(
                         "div",
                         {
-                          onClick: () => E.mutate(),
+                          onClick: () => v.mutate(),
                           className: be().RemoveLineItem,
                         },
                         (0, o.Xx)("#Cart_Remove"),
@@ -1443,7 +1460,7 @@
                   ),
                 ),
               ),
-              S && i.createElement($, { storeItem: r, lineItem: l }),
+              L && i.createElement($, { storeItem: r, lineItem: l }),
             ),
             D &&
               i.createElement(de, {
@@ -1455,7 +1472,7 @@
           )
         );
       }
-      function Pe(e) {
+      function Fe(e) {
         const { storeItem: t } = e;
         let n = (0, o.Xx)("#Cart_ComingSoon", t.GetFormattedSteamReleaseDate());
         return (
@@ -1552,11 +1569,11 @@
           [s, c] = i.useState(r),
           m = (0, a.G1)(),
           d = (function () {
-            const e = (0, Le.bY)(),
+            const e = (0, Se.bY)(),
               t = (0, Ie.useQueryClient)();
             return (0, Ie.useMutation)({
               mutationFn: (t) =>
-                (0, g.mG)(this, void 0, void 0, function* () {
+                (0, E.mG)(this, void 0, void 0, function* () {
                   const { rgAppIDs: n, bPrivate: i } = t;
                   return Ne(e, n, i);
                 }),
@@ -1755,11 +1772,11 @@
         Je = n(11195);
       function qe() {
         return (function (e, t) {
-          const n = (0, Le.bY)();
+          const n = (0, Se.bY)();
           return (0, Ie.useQuery)(
             ["ItemsToFeature", e],
             () =>
-              (0, g.mG)(this, void 0, void 0, function* () {
+              (0, E.mG)(this, void 0, void 0, function* () {
                 const i = Ce.gA.Init(Ye.JD);
                 (0, Je.pA)(i),
                   (0, Je.De)(i, t),
@@ -1861,7 +1878,7 @@
                     .slice(0, 3)
                     .map(({ item_id: e, item: t }) =>
                       i.createElement(it, {
-                        key: (0, L.y)(e),
+                        key: (0, S.y)(e),
                         item_id: e,
                         item: t,
                       }),
@@ -1871,7 +1888,7 @@
       function it(e) {
         const { item: t } = e;
         return i.createElement($e.B, {
-          capsule: { id: t.id, type: (0, L.Ds)(t.item_type, t.type) },
+          capsule: { id: t.id, type: (0, S.Ds)(t.item_type, t.type) },
           imageType: "header",
           onlyOneDiscountPct: !0,
         });
@@ -1895,7 +1912,7 @@
                     .slice(0, 2)
                     .map((e) =>
                       i.createElement(Qe.k8, {
-                        key: (0, L.y)(e.item_id),
+                        key: (0, S.y)(e.item_id),
                         dailyDeal: e,
                       }),
                     ),
@@ -1925,13 +1942,130 @@
               },
               a.map((e) =>
                 i.createElement(Qe.Jm, {
-                  key: e.item_id ? (0, L.y)(e.item_id) : e.spotlight_title,
+                  key: e.item_id ? (0, S.y)(e.item_id) : e.spotlight_title,
                   spotlight: e,
                 }),
               ),
             );
       }
-      function lt(e) {
+      var lt = n(37760),
+        ot = n(21154);
+      function st(e) {
+        return i.createElement(
+          "div",
+          { className: (0, c.Z)(ot.CartCard, e.className) },
+          e.children,
+        );
+      }
+      var ct = n(73933);
+      function mt(e) {
+        const { cart: t } = e,
+          n = lt.C.Get().BIsSaleActive(),
+          r = (function (e) {
+            var t, n;
+            const i = (0, a.AL)();
+            if (!e || !i.isSuccess) return null;
+            const r = new Set();
+            let l = 0;
+            for (const i of e.cart_items) {
+              (null === (t = i.store_item.release) || void 0 === t
+                ? void 0
+                : t.is_coming_soon) &&
+              (null === (n = i.store_item.best_purchase_option) || void 0 === n
+                ? void 0
+                : n.packageid)
+                ? r.add(i.store_item.name)
+                : (l += parseInt(i.subtotal.amount_in_cents));
+            }
+            const {
+                sale_name: o,
+                spend_earned_for_next_drop: s,
+                spend_needed_for_next_drop: c,
+                formatted_spend_per_drop: m,
+              } = i.data,
+              d = l + s,
+              u = Math.floor(d / c),
+              p = Math.floor(((d % c) * 100) / c);
+            return {
+              cEarned: u,
+              pctProgress: p,
+              strFormattedSpendPerDrop: m,
+              rgPrepurchaseApps: Array.from(r),
+              strSaleName: o,
+            };
+          })(t);
+        if (!(t && m.L7.logged_in && n && r)) return null;
+        const {
+            cEarned: l,
+            pctProgress: s,
+            rgPrepurchaseApps: c,
+            strFormattedSpendPerDrop: d,
+            strSaleName: u,
+          } = r,
+          p = l > 0,
+          _ = i.createElement(
+            "div",
+            { className: ct.Explanation },
+            (0, o.Xx)("#Cart_SaleCardDrops_Explanation", u),
+          );
+        return i.createElement(
+          st,
+          { className: ct.TradingCardContainer },
+          p &&
+            i.createElement(
+              "div",
+              { className: ct.EarnedMessage },
+              (0, o.kb)("#Cart_SaleCardDrops_EarnedMessage", l, u),
+            ),
+          !p && _,
+          i.createElement(
+            "div",
+            { className: ct.ProgressSection },
+            i.createElement(
+              "div",
+              null,
+              (0, o.Xx)("#Cart_SaleCardDrops_ProgressLabel"),
+            ),
+            i.createElement(dt, { value: s }),
+            i.createElement(
+              "div",
+              { className: ct.Right },
+              "(",
+              (0, o.Xx)("#Cart_SaleCardDrops_CardCost", d),
+              ")",
+            ),
+          ),
+          p && _,
+          c.length > 0 &&
+            i.createElement(
+              "div",
+              { className: ct.IneligbleList },
+              i.createElement(
+                "p",
+                null,
+                (0, o.Xx)("#Cart_SaleCardDrops_PrepurchaseIneligible", u),
+              ),
+              i.createElement(
+                "ul",
+                null,
+                c.map((e) => i.createElement("li", { key: e }, e)),
+              ),
+            ),
+        );
+      }
+      function dt(e) {
+        const { value: t } = e,
+          n = Math.min(100, Math.max(0, t));
+        return i.createElement(
+          "div",
+          { className: ct.ProgressRail },
+          i.createElement("div", {
+            className: ct.Progress,
+            style: { width: `${n}%` },
+          }),
+        );
+      }
+      function ut(e) {
         var t, n, r, o;
         const { step: s, onStepChange: c } = e,
           m = (0, a.g1)(),
@@ -1979,18 +2113,18 @@
                     });
             return { sortedLineItems: r, bCartIncludesGifts: a };
           }, [null === (t = m.data) || void 0 === t ? void 0 : t.line_items]),
-          { validateCart: E, lineItemValidation: g } = (0, a.td)(),
+          { validateCart: v, lineItemValidation: E } = (0, a.td)(),
           { mapValidateNoticesToError: C, mapValidateNoticesToFootnote: h } =
             (0, a.dW)(),
           I = (
-            (null === (n = E.data) || void 0 === n ? void 0 : n.cart_items) ||
+            (null === (n = v.data) || void 0 === n ? void 0 : n.cart_items) ||
             []
           ).reduce((e, t) => e.concat(t.store_item.included_appids), []);
         return i.createElement(
           _,
           { step: s, setStep: c },
           !!(null == C ? void 0 : C.size) &&
-            i.createElement(ct, { notices: C }),
+            i.createElement(ft, { notices: C }),
           i.createElement(
             "div",
             { className: l().ShoppingCartCtn },
@@ -1999,28 +2133,31 @@
               { className: l().ShoppingCartLeftCol },
               u && i.createElement(ke, null),
               i.createElement(
-                v.SV,
+                g.SV,
                 null,
-                i.createElement(st, {
+                i.createElement(_t, {
                   lineItems: p,
-                  validation: g,
-                  cartValidation: E.data,
+                  validation: E,
+                  cartValidation: v.data,
                   coupons: null == d ? void 0 : d.data,
                 }),
               ),
               !!(null == h ? void 0 : h.size) &&
                 i.createElement(
-                  v.SV,
+                  g.SV,
                   null,
-                  i.createElement(dt, { notices: h }),
+                  i.createElement(vt, { notices: h }),
                 ),
               i.createElement(
-                v.SV,
+                g.SV,
                 null,
-                i.createElement(pt, { isCartEmpty: 0 === p.length }),
+                i.createElement(Ct, {
+                  isCartEmpty: 0 === p.length,
+                  cart: v.data,
+                }),
               ),
               i.createElement(
-                v.SV,
+                g.SV,
                 null,
                 i.createElement(tt, { appsToIgnore: I }),
               ),
@@ -2028,12 +2165,12 @@
             i.createElement(
               "div",
               { className: l().ShoppingCartRightCol },
-              i.createElement(ot, {
+              i.createElement(pt, {
                 bCartIncludesGifts: f,
                 strEstimatedTotal:
                   null ===
                     (o =
-                      null === (r = E.data) || void 0 === r
+                      null === (r = v.data) || void 0 === r
                         ? void 0
                         : r.estimated_totals) || void 0 === o
                     ? void 0
@@ -2043,13 +2180,13 @@
           ),
         );
       }
-      function ot(e) {
+      function pt(e) {
         var t;
         const { strEstimatedTotal: n, bCartIncludesGifts: r } = e,
           u = (0, f.k6)(),
           _ = (0, a.g1)(),
-          { bValidForCheckout: v } = (0, a.td)(),
-          [g, C] = p(),
+          { bValidForCheckout: g } = (0, a.td)(),
+          [E, C] = p(),
           h = (0, ze.Rs)(),
           I =
             _.isSuccess &&
@@ -2062,19 +2199,19 @@
                   : n.accountid_giftee)
               );
             }),
-          L =
+          S =
             m.L7.logged_in &&
-            (("initial" === g && !r && !v) ||
-              ("gifts" === g && (!v || I)) ||
+            (("initial" === E && !r && !g) ||
+              ("gifts" === E && (!g || I)) ||
               (_.isSuccess && 0 == _.data.line_items.length)),
-          S = h.isSuccess && 2 == h.data.role(),
+          L = h.isSuccess && 2 == h.data.role(),
           D = (function (e) {
             if (!m.L7.logged_in) return (0, o.Xx)("#Cart_ContinueButton_Login");
             if (e.bCartIncludesGifts && "initial" === e.step)
               return (0, o.Xx)("#Cart_ContinueButton_Gifts");
             return (0, o.Xx)("#Cart_ContinueButton_Payment");
-          })({ bCartIncludesGifts: r, step: g }),
-          N = (0, c.Z)(l().CartSummaryBtn, !S && l().SummaryMarginBottom);
+          })({ bCartIncludesGifts: r, step: E }),
+          N = (0, c.Z)(l().CartSummaryBtn, !L && l().SummaryMarginBottom);
         return i.createElement(
           "div",
           { className: l().CartSummaryCtn },
@@ -2101,21 +2238,21 @@
           i.createElement(
             s.KM,
             {
-              disabled: L,
+              disabled: S,
               className: N,
               onClick: () => {
                 m.L7.logged_in
-                  ? r && "initial" == g
-                    ? (C("gifts"), u.push(E.Z.ShoppingCartGifts()))
+                  ? r && "initial" == E
+                    ? (C("gifts"), u.push(v.Z.ShoppingCartGifts()))
                     : (location.href = `${m.De.STORE_CHECKOUT_BASE_URL}checkout/?accountcart=1`)
                   : (0, d.X)();
               },
             },
             D,
           ),
-          S &&
-            i.createElement(vt, {
-              disabled: L,
+          L &&
+            i.createElement(It, {
+              disabled: S,
               familyGroupID:
                 null === (t = h.data) || void 0 === t
                   ? void 0
@@ -2123,7 +2260,7 @@
             }),
         );
       }
-      function st(e) {
+      function _t(e) {
         const {
           lineItems: t,
           validation: n = {},
@@ -2148,33 +2285,33 @@
                     validatedItem: s[e.line_item_id],
                     availableCoupons: r[e.line_item_id] || [],
                   })
-                : i.createElement(xe, { key: t }),
+                : i.createElement(we, { key: t }),
             ),
         );
       }
-      function ct(e) {
+      function ft(e) {
         const { notices: t } = e;
         return i.createElement(
           "div",
           { className: l().HeaderNotices },
-          Array.from(t).map(([e, t], n) => i.createElement(mt, { key: e }, t)),
+          Array.from(t).map(([e, t], n) => i.createElement(gt, { key: e }, t)),
         );
       }
-      function mt(e) {
+      function gt(e) {
         const { children: t } = e;
         return i.createElement("div", { className: l().HeaderNotice }, t);
       }
-      function dt(e) {
+      function vt(e) {
         const { notices: t } = e;
         return i.createElement(
           "div",
           { className: l().FooterNoticesCtn },
           Array.from(t).map(([e, t]) =>
-            i.createElement(ut, { key: t.index, notice: t }),
+            i.createElement(Et, { key: t.index, notice: t }),
           ),
         );
       }
-      function ut(e) {
+      function Et(e) {
         const { notice: t } = e;
         return i.createElement(
           "div",
@@ -2191,14 +2328,15 @@
           ),
         );
       }
-      function pt(e) {
-        const { isCartEmpty: t } = e,
-          n = (0, a.i2)();
-        if (t) return i.createElement(_t, null);
+      function Ct(e) {
+        const { isCartEmpty: t, cart: n } = e,
+          r = (0, a.i2)();
+        if (t) return i.createElement(ht, null);
         return i.createElement(
           i.Fragment,
           null,
-          i.createElement(_t, null),
+          i.createElement(ht, null),
+          i.createElement(mt, { cart: n }),
           i.createElement(
             "div",
             { className: l().CartFooter },
@@ -2216,15 +2354,15 @@
             ),
             i.createElement(
               oe,
-              { onClick: () => n.mutate() },
+              { onClick: () => r.mutate() },
               (0, o.Xx)("#Cart_RemoveAll"),
             ),
           ),
         );
       }
-      function _t() {
+      function ht() {
         return i.createElement(
-          ft,
+          st,
           { className: l().BetaNotice },
           i.createElement(
             "div",
@@ -2288,14 +2426,7 @@
           ),
         );
       }
-      function ft(e) {
-        return i.createElement(
-          "div",
-          { className: (0, c.Z)(l().CartCard, e.className) },
-          e.children,
-        );
-      }
-      function vt(e) {
+      function It(e) {
         const { disabled: t, familyGroupID: n } = e,
           a = (0, ze.ih)(n, m.L7.country_code);
         return i.createElement(
@@ -2315,7 +2446,7 @@
                 a.mutate(void 0, {
                   onSuccess: () => {
                     window.location.assign(
-                      E.Z.ShoppingCartAccountCartPurchaseRequested(),
+                      v.Z.ShoppingCartAccountCartPurchaseRequested(),
                     );
                   },
                 });
@@ -2337,7 +2468,7 @@
       var i = n(28841),
         a = n(89526),
         r = n(99307),
-        l = n(27743),
+        l = n(41118),
         o = n(14826),
         s = n(79865),
         c = n.n(s),
@@ -2404,11 +2535,11 @@
     },
     34273: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { default: () => v });
+      n.r(t), n.d(t, { default: () => g });
       var i = n(89526),
         a = n(79865),
         r = n.n(a),
-        l = n(27743),
+        l = n(41118),
         o = n(14826),
         s = n(44973),
         c = n(69338),
@@ -2418,7 +2549,7 @@
         p = n(57361),
         _ = n(25871),
         f = n(92616);
-      function v(e) {
+      function g(e) {
         return (function () {
           const [e, t] = i.useState(!1);
           return (
@@ -2428,10 +2559,10 @@
             e
           );
         })()
-          ? i.createElement(E, Object.assign({}, e))
+          ? i.createElement(v, Object.assign({}, e))
           : i.createElement(c.V, { position: "center" });
       }
-      function E(e) {
+      function v(e) {
         const { initialStep: t = "initial" } = e,
           [n, a] = i.useState(t),
           c = (function () {
@@ -2480,7 +2611,7 @@
             if ("gifts" === e) return (0, o.Xx)("#Cart_GiftOptions");
             return (0, o.Xx)("#Cart_YourShoppingCart");
           })(n),
-          v = (function (e) {
+          g = (function (e) {
             if ("gifts" === e)
               return i.createElement(
                 i.Fragment,
@@ -2513,7 +2644,7 @@
                 (0, o.Xx)("#Cart_Bradcrumb_Home"),
               ),
               " ",
-              v,
+              g,
               " ",
               i.createElement(
                 "span",

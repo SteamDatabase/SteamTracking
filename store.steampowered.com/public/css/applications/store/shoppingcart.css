@@ -610,6 +610,10 @@ td.rdtYear:hover {
 .coupons_Checkbox_265qJ.coupons_Hidden_21w27 {
   visibility: hidden;
 }
+.lineitem_CartCard_31xpG {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 15px;
+}
 .lineitem_LineItemWrapper_2KiPY {
   position: relative;
   padding: 15px;
@@ -1770,4 +1774,52 @@ html.tablet .contenthubshared_ContentHubTakeoverCtn_2w_95 a img {
 }
 .BasicUI .eventrow_AppCapsulePrice_Jq75m span:last-child {
   padding-bottom: unset;
+}
+.cartcommon_CartCard_29hIq {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 15px;
+}
+.carttradingcardprogress_CartCard_3s8Si {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 15px;
+}
+.carttradingcardprogress_TradingCardContainer_2haWA {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: #8b9db0;
+  font-size: 12px;
+}
+.carttradingcardprogress_EarnedMessage_2p5xY {
+  color: #1a9fff;
+  font-weight: bold;
+  font-size: 14px;
+}
+.carttradingcardprogress_Right_18eO4 {
+  align-self: flex-end;
+}
+.carttradingcardprogress_ProgressSection_2M_5i {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.carttradingcardprogress_Progress_lf5Wn,
+.carttradingcardprogress_ProgressRail_3TjWh {
+  height: 10px;
+  border-radius: 5px;
+}
+.carttradingcardprogress_ProgressRail_3TjWh {
+  width: 100%;
+  background-color: #67707b;
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.2) inset;
+}
+.carttradingcardprogress_ProgressRail_3TjWh
+  .carttradingcardprogress_Progress_lf5Wn {
+  background-color: #1a9fff;
+  box-shadow:
+    1px 0px 2px 0px rgba(0, 0, 0, 0.2),
+    0px 5px 5px 0px rgba(0, 0, 0, 0.2) inset;
+}
+.carttradingcardprogress_IneligbleList_1r6nj {
+  color: #ffcc6a;
 }
