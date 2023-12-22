@@ -1901,8 +1901,17 @@
             );
       }
       function rt(e) {
-        const { data: t, isLoaded: n } = e;
-        return !t && n
+        const { data: t, isLoaded: n } = e,
+          a = i.useMemo(
+            () =>
+              null == t
+                ? void 0
+                : t
+                    .filter((e) => "weeklong_deals" != e.spotlight_template)
+                    .slice(0, 2),
+            [t],
+          );
+        return !a && n
           ? null
           : i.createElement(
               "div",
@@ -1913,18 +1922,12 @@
                   !n && Ke.Loading,
                 ),
               },
-              null == t
-                ? void 0
-                : t
-                    .slice(0, 2)
-                    .map((e) =>
-                      i.createElement(Qe.Jm, {
-                        key: e.item_id
-                          ? (0, L.y)(e.item_id)
-                          : e.spotlight_title,
-                        spotlight: e,
-                      }),
-                    ),
+              a.map((e) =>
+                i.createElement(Qe.Jm, {
+                  key: e.item_id ? (0, L.y)(e.item_id) : e.spotlight_title,
+                  spotlight: e,
+                }),
+              ),
             );
       }
       function lt(e) {

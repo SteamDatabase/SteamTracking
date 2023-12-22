@@ -1553,7 +1553,7 @@ function addToCart( subid, dedupe )
 		var filterStringForm = 'form[name=add_to_cart_'+subid+']';
 		var $Form = jQuery( filterStringForm );
 
-		if ( !$Form.length || ( Form[0].getAttribute( 'action' ) || '' ).indexOf( '/freelicense/' ) === -1 )
+		if ( !$Form.length || ( $Form[0].getAttribute( 'action' ) || '' ).indexOf( '/freelicense/' ) === -1 )
 		{
 			if ( typeof g_bUseNewCartAPI != 'undefined' && g_bUseNewCartAPI && typeof window.AddItemToCart !== 'undefined' )
 			{
