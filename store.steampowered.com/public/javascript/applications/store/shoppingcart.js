@@ -2048,18 +2048,29 @@
           [g, C] = p(),
           h = (0, ze.Rs)(),
           I =
+            _.isSuccess &&
+            _.data.line_items.some((e) => {
+              var t, n;
+              return (
+                (null === (t = e.flags) || void 0 === t ? void 0 : t.is_gift) &&
+                !(null === (n = e.gift_info) || void 0 === n
+                  ? void 0
+                  : n.accountid_giftee)
+              );
+            }),
+          L =
             m.L7.logged_in &&
             (("initial" === g && !r && !v) ||
-              ("gifts" === g && !v) ||
+              ("gifts" === g && (!v || I)) ||
               (_.isSuccess && 0 == _.data.line_items.length)),
-          L = h.isSuccess && 2 == h.data.role(),
-          S = (function (e) {
+          S = h.isSuccess && 2 == h.data.role(),
+          D = (function (e) {
             if (!m.L7.logged_in) return (0, o.Xx)("#Cart_ContinueButton_Login");
             if (e.bCartIncludesGifts && "initial" === e.step)
               return (0, o.Xx)("#Cart_ContinueButton_Gifts");
             return (0, o.Xx)("#Cart_ContinueButton_Payment");
           })({ bCartIncludesGifts: r, step: g }),
-          D = (0, c.Z)(l().CartSummaryBtn, !L && l().SummaryMarginBottom);
+          N = (0, c.Z)(l().CartSummaryBtn, !S && l().SummaryMarginBottom);
         return i.createElement(
           "div",
           { className: l().CartSummaryCtn },
@@ -2086,8 +2097,8 @@
           i.createElement(
             s.KM,
             {
-              disabled: I,
-              className: D,
+              disabled: L,
+              className: N,
               onClick: () => {
                 m.L7.logged_in
                   ? r && "initial" == g
@@ -2096,11 +2107,11 @@
                   : (0, d.X)();
               },
             },
-            S,
+            D,
           ),
-          L &&
+          S &&
             i.createElement(vt, {
-              disabled: I,
+              disabled: L,
               familyGroupID:
                 null === (t = h.data) || void 0 === t
                   ? void 0

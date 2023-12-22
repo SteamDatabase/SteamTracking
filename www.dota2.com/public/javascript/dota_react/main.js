@@ -17728,8 +17728,11 @@
       const Pt = (0, c.Pi)((e) => {
         const t = (0, m.UO)(),
           [a, r] = (0, i.useState)(void 0),
-          n = (0, m.TH)(),
-          s = new URLSearchParams(n.search).has("is_embedded_in_client");
+          [n, s] = (0, i.useState)(void 0),
+          [o, c] = (0, i.useState)(!1),
+          u = (0, m.TH)(),
+          _ = new URLSearchParams(u.search).has("is_embedded_in_client");
+        if (o) return i.createElement(m.l_, { to: l._.news() });
         if (!a)
           return (
             Tt.j1
@@ -17737,55 +17740,61 @@
               .then((e) => r(e)),
             i.createElement("div", null)
           );
-        let o = a.find((e) => e.GID == t.id);
-        if (!o) return i.createElement(m.l_, { to: l._.news() });
-        const c = (0, yt.jM)(p.Y.LANGUAGE),
-          u = new Date(
-            1e3 * o.GetStartTimeAndDateUnixSeconds(),
+        if (!n || (n && n.GID != parseInt(t.id)))
+          return (
+            Tt.j1
+              .LoadPartnerEventFromClanEventGID(570, t.id, 0)
+              .then((e) => s(e))
+              .catch((e) => c(!0)),
+            i.createElement("div", null)
+          );
+        const g = (0, yt.jM)(p.Y.LANGUAGE),
+          h = new Date(
+            1e3 * n.GetStartTimeAndDateUnixSeconds(),
           ).toLocaleDateString(void 0, {
             month: "long",
             day: "numeric",
             year: "numeric",
           }),
-          _ = o.GetDescriptionWithFallback(c);
-        let g = [];
+          E = n.GetDescriptionWithFallback(g);
+        let b = [];
         for (const e of a)
           if (
-            e != o &&
-            (Lt(!1, e) && g.push(i.createElement(St, { event: e, key: e.GID })),
-            3 == g.length)
+            e != n &&
+            (Lt(!1, e) && b.push(i.createElement(St, { event: e, key: e.GID })),
+            3 == b.length)
           )
             break;
-        const h = o.GetNameWithFallback(c),
-          E = o.GetImageURL("background"),
-          b = (0, v.Jr)((0, v.Ds)(_));
+        const f = n.GetNameWithFallback(g),
+          y = n.GetImageURL("background"),
+          S = (0, v.Jr)((0, v.Ds)(E));
         return i.createElement(
           "div",
           { className: vt().BlogEntryPage },
-          i.createElement(R.ql, null, i.createElement("title", null, h)),
+          i.createElement(R.ql, null, i.createElement("title", null, f)),
           i.createElement(Mt.Z, null),
-          !s && i.createElement(Me.j, { bOverlapping: !0 }),
-          !s &&
+          !_ && i.createElement(Me.j, { bOverlapping: !0 }),
+          !_ &&
             p.Y.VALVE_INTERNAL &&
             i.createElement(
               "a",
               {
                 className: vt().CommunityLink,
-                href: `https://steamcommunity.com/games/dota2/announcements/detail/${o.AnnouncementGID}`,
+                href: `https://steamcommunity.com/games/dota2/announcements/detail/${n.AnnouncementGID}`,
               },
               "Admin Community Link",
             ),
           i.createElement(
             "div",
             {
-              className: s ? vt().TitleContainerInClient : vt().TitleContainer,
+              className: _ ? vt().TitleContainerInClient : vt().TitleContainer,
             },
             i.createElement("div", {
               className: vt().TitleBackground,
-              style: { backgroundImage: E ? `url( ${E} )` : null },
+              style: { backgroundImage: y ? `url( ${y} )` : null },
             }),
           ),
-          !s &&
+          !_ &&
             i.createElement(
               d.rU,
               { to: l._.news(), className: vt().BackToOverview },
@@ -17795,10 +17804,10 @@
               }),
               (0, v.Jr)("#back_to_news"),
             ),
-          i.createElement("div", { className: vt().Title }, h),
-          i.createElement("div", { className: vt().Date }, u),
-          i.createElement("div", { className: vt().Body }, b),
-          !s &&
+          i.createElement("div", { className: vt().Title }, f),
+          i.createElement("div", { className: vt().Date }, h),
+          i.createElement("div", { className: vt().Body }, S),
+          !_ &&
             i.createElement(
               "div",
               { className: vt().LatestNews },
@@ -17810,10 +17819,10 @@
               i.createElement(
                 "div",
                 { className: vt().LatestNewsContainer },
-                g,
+                b,
               ),
             ),
-          !s && i.createElement(C.U, null),
+          !_ && i.createElement(C.U, null),
         );
       });
       var Gt = a(24870),
