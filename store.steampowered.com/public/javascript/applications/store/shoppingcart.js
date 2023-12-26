@@ -177,7 +177,7 @@
     },
     41118: (e, t, n) => {
       "use strict";
-      n.d(t, { y: () => ut, J: () => _t });
+      n.d(t, { y: () => pt, J: () => ft });
       var i = n(89526),
         a = n(28841),
         r = n(79865),
@@ -204,8 +204,8 @@
         C = n(25871),
         h = n(51438),
         I = n(80845),
-        S = n(85886),
-        L = n(69338),
+        L = n(85886),
+        S = n(69338),
         D = n(92616),
         N = n(98389),
         T = n(207),
@@ -506,7 +506,7 @@
             { className: U().FormTitle },
             (0, o.Xx)("#Cart_GiftRecipientModal_Title"),
           ),
-          !s && i.createElement(L.V, { position: "center", size: "large" }),
+          !s && i.createElement(S.V, { position: "center", size: "large" }),
           s &&
             i.createElement(J, {
               selectedSteamID: m,
@@ -739,7 +739,7 @@
               : l.message) || "",
           ),
           [h, I] = i.useState(null),
-          [S, L] = i.useState(!1),
+          [L, S] = i.useState(!1),
           [D, N] = i.useState(
             (null ===
               (d =
@@ -818,17 +818,17 @@
               }),
               " ",
               T.data.m_strPlayerName,
-              !S &&
+              !L &&
                 i.createElement(
                   oe,
-                  { onClick: () => L(!0) },
+                  { onClick: () => S(!0) },
                   "(",
                   (0, o.Xx)("#Cart_GiftDelivery_AddSignature"),
                   ")",
                 ),
             ),
           ),
-          S &&
+          L &&
             i.createElement(
               ae,
               null,
@@ -1133,9 +1133,9 @@
       var Ce = n(68333),
         he = n(30659),
         Ie = n(5615),
-        Se = n(27070);
-      function Le() {
-        const e = (0, Se.bY)();
+        Le = n(27070);
+      function Se() {
+        const e = (0, Le.bY)();
         return (0, Ie.useQuery)(
           ["AccountPrivateApps"],
           () =>
@@ -1262,7 +1262,7 @@
         return i.createElement(
           "div",
           { className: be().LoadingThrobber },
-          i.createElement(L.V, {
+          i.createElement(S.V, {
             size: "medium",
             position: "center",
             msDelayAppear: 250,
@@ -1302,7 +1302,7 @@
           f = l.line_item_id,
           g = {
             id: null == r ? void 0 : r.GetID(),
-            type: (0, S.Ds)(
+            type: (0, L.Ds)(
               null == r ? void 0 : r.GetStoreItemType(),
               null == r ? void 0 : r.GetAppType(),
             ),
@@ -1311,7 +1311,7 @@
           E = (0, a.tI)(l.packageid, l.bundleid, !0),
           [C] = p(),
           h = v.isLoading || v.isSuccess || E.isLoading,
-          L = "gifts" === C && !!l.flags.is_gift,
+          S = "gifts" === C && !!l.flags.is_gift,
           D = !!_.length,
           N = (function (e) {
             const t = `${m.De.STORE_BASE_URL}public/images/checkout/Cart_generic_header_logo.png`;
@@ -1335,7 +1335,7 @@
               })(u)
             : d.discount_pct,
           x = r.GetIncludedAppIDsOrSelf(),
-          { data: w, isLoading: k } = Le(),
+          { data: w, isLoading: k } = Se(),
           R = x.filter((e) => (null == w ? void 0 : w.has(e)));
         if (k) return i.createElement(we, null);
         const P = null === (t = l.flags) || void 0 === t ? void 0 : t.is_gift,
@@ -1460,7 +1460,7 @@
                   ),
                 ),
               ),
-              L && i.createElement($, { storeItem: r, lineItem: l }),
+              S && i.createElement($, { storeItem: r, lineItem: l }),
             ),
             D &&
               i.createElement(de, {
@@ -1569,7 +1569,7 @@
           [s, c] = i.useState(r),
           m = (0, a.G1)(),
           d = (function () {
-            const e = (0, Se.bY)(),
+            const e = (0, Le.bY)(),
               t = (0, Ie.useQueryClient)();
             return (0, Ie.useMutation)({
               mutationFn: (t) =>
@@ -1772,7 +1772,7 @@
         Je = n(11195);
       function qe() {
         return (function (e, t) {
-          const n = (0, Se.bY)();
+          const n = (0, Le.bY)();
           return (0, Ie.useQuery)(
             ["ItemsToFeature", e],
             () =>
@@ -1878,7 +1878,7 @@
                     .slice(0, 3)
                     .map(({ item_id: e, item: t }) =>
                       i.createElement(it, {
-                        key: (0, S.y)(e),
+                        key: (0, L.y)(e),
                         item_id: e,
                         item: t,
                       }),
@@ -1888,7 +1888,7 @@
       function it(e) {
         const { item: t } = e;
         return i.createElement($e.B, {
-          capsule: { id: t.id, type: (0, S.Ds)(t.item_type, t.type) },
+          capsule: { id: t.id, type: (0, L.Ds)(t.item_type, t.type) },
           imageType: "header",
           onlyOneDiscountPct: !0,
         });
@@ -1912,7 +1912,7 @@
                     .slice(0, 2)
                     .map((e) =>
                       i.createElement(Qe.k8, {
-                        key: (0, S.y)(e.item_id),
+                        key: (0, L.y)(e.item_id),
                         dailyDeal: e,
                       }),
                     ),
@@ -1942,7 +1942,7 @@
               },
               a.map((e) =>
                 i.createElement(Qe.Jm, {
-                  key: e.item_id ? (0, S.y)(e.item_id) : e.spotlight_title,
+                  key: e.item_id ? (0, L.y)(e.item_id) : e.spotlight_title,
                   spotlight: e,
                 }),
               ),
@@ -1957,8 +1957,9 @@
           e.children,
         );
       }
-      var ct = n(73933);
-      function mt(e) {
+      var ct = n(2232),
+        mt = n(73933);
+      function dt(e) {
         const { cart: t } = e,
           n = lt.C.Get().BIsSaleActive(),
           r = (function (e) {
@@ -1994,7 +1995,8 @@
               strSaleName: o,
             };
           })(t);
-        if (!(t && m.L7.logged_in && n && r)) return null;
+        if (!t || !m.L7.logged_in || !n || !r || (0, ct.e7)(m.De.EREALM))
+          return null;
         const {
             cEarned: l,
             pctProgress: s,
@@ -2005,31 +2007,31 @@
           p = l > 0,
           _ = i.createElement(
             "div",
-            { className: ct.Explanation },
+            { className: mt.Explanation },
             (0, o.Xx)("#Cart_SaleCardDrops_Explanation", u),
           );
         return i.createElement(
           st,
-          { className: ct.TradingCardContainer },
+          { className: mt.TradingCardContainer },
           p &&
             i.createElement(
               "div",
-              { className: ct.EarnedMessage },
+              { className: mt.EarnedMessage },
               (0, o.kb)("#Cart_SaleCardDrops_EarnedMessage", l, u),
             ),
           !p && _,
           i.createElement(
             "div",
-            { className: ct.ProgressSection },
+            { className: mt.ProgressSection },
             i.createElement(
               "div",
               null,
               (0, o.Xx)("#Cart_SaleCardDrops_ProgressLabel"),
             ),
-            i.createElement(dt, { value: s }),
+            i.createElement(ut, { value: s }),
             i.createElement(
               "div",
-              { className: ct.Right },
+              { className: mt.Right },
               "(",
               (0, o.Xx)("#Cart_SaleCardDrops_CardCost", d),
               ")",
@@ -2039,7 +2041,7 @@
           c.length > 0 &&
             i.createElement(
               "div",
-              { className: ct.IneligbleList },
+              { className: mt.IneligbleList },
               i.createElement(
                 "p",
                 null,
@@ -2053,19 +2055,19 @@
             ),
         );
       }
-      function dt(e) {
+      function ut(e) {
         const { value: t } = e,
           n = Math.min(100, Math.max(0, t));
         return i.createElement(
           "div",
-          { className: ct.ProgressRail },
+          { className: mt.ProgressRail },
           i.createElement("div", {
-            className: ct.Progress,
+            className: mt.Progress,
             style: { width: `${n}%` },
           }),
         );
       }
-      function ut(e) {
+      function pt(e) {
         var t, n, r, o;
         const { step: s, onStepChange: c } = e,
           m = (0, a.g1)(),
@@ -2124,7 +2126,7 @@
           _,
           { step: s, setStep: c },
           !!(null == C ? void 0 : C.size) &&
-            i.createElement(ft, { notices: C }),
+            i.createElement(gt, { notices: C }),
           i.createElement(
             "div",
             { className: l().ShoppingCartCtn },
@@ -2135,7 +2137,7 @@
               i.createElement(
                 g.SV,
                 null,
-                i.createElement(_t, {
+                i.createElement(ft, {
                   lineItems: p,
                   validation: E,
                   cartValidation: v.data,
@@ -2146,12 +2148,12 @@
                 i.createElement(
                   g.SV,
                   null,
-                  i.createElement(vt, { notices: h }),
+                  i.createElement(Et, { notices: h }),
                 ),
               i.createElement(
                 g.SV,
                 null,
-                i.createElement(Ct, {
+                i.createElement(ht, {
                   isCartEmpty: 0 === p.length,
                   cart: v.data,
                 }),
@@ -2165,7 +2167,7 @@
             i.createElement(
               "div",
               { className: l().ShoppingCartRightCol },
-              i.createElement(pt, {
+              i.createElement(_t, {
                 bCartIncludesGifts: f,
                 strEstimatedTotal:
                   null ===
@@ -2180,7 +2182,7 @@
           ),
         );
       }
-      function pt(e) {
+      function _t(e) {
         var t;
         const { strEstimatedTotal: n, bCartIncludesGifts: r } = e,
           u = (0, f.k6)(),
@@ -2199,19 +2201,19 @@
                   : n.accountid_giftee)
               );
             }),
-          S =
+          L =
             m.L7.logged_in &&
             (("initial" === E && !r && !g) ||
               ("gifts" === E && (!g || I)) ||
               (_.isSuccess && 0 == _.data.line_items.length)),
-          L = h.isSuccess && 2 == h.data.role(),
+          S = h.isSuccess && 2 == h.data.role(),
           D = (function (e) {
             if (!m.L7.logged_in) return (0, o.Xx)("#Cart_ContinueButton_Login");
             if (e.bCartIncludesGifts && "initial" === e.step)
               return (0, o.Xx)("#Cart_ContinueButton_Gifts");
             return (0, o.Xx)("#Cart_ContinueButton_Payment");
           })({ bCartIncludesGifts: r, step: E }),
-          N = (0, c.Z)(l().CartSummaryBtn, !L && l().SummaryMarginBottom);
+          N = (0, c.Z)(l().CartSummaryBtn, !S && l().SummaryMarginBottom);
         return i.createElement(
           "div",
           { className: l().CartSummaryCtn },
@@ -2238,7 +2240,7 @@
           i.createElement(
             s.KM,
             {
-              disabled: S,
+              disabled: L,
               className: N,
               onClick: () => {
                 m.L7.logged_in
@@ -2250,9 +2252,9 @@
             },
             D,
           ),
-          L &&
-            i.createElement(It, {
-              disabled: S,
+          S &&
+            i.createElement(Lt, {
+              disabled: L,
               familyGroupID:
                 null === (t = h.data) || void 0 === t
                   ? void 0
@@ -2260,7 +2262,7 @@
             }),
         );
       }
-      function _t(e) {
+      function ft(e) {
         const {
           lineItems: t,
           validation: n = {},
@@ -2289,29 +2291,29 @@
             ),
         );
       }
-      function ft(e) {
+      function gt(e) {
         const { notices: t } = e;
         return i.createElement(
           "div",
           { className: l().HeaderNotices },
-          Array.from(t).map(([e, t], n) => i.createElement(gt, { key: e }, t)),
+          Array.from(t).map(([e, t], n) => i.createElement(vt, { key: e }, t)),
         );
       }
-      function gt(e) {
+      function vt(e) {
         const { children: t } = e;
         return i.createElement("div", { className: l().HeaderNotice }, t);
       }
-      function vt(e) {
+      function Et(e) {
         const { notices: t } = e;
         return i.createElement(
           "div",
           { className: l().FooterNoticesCtn },
           Array.from(t).map(([e, t]) =>
-            i.createElement(Et, { key: t.index, notice: t }),
+            i.createElement(Ct, { key: t.index, notice: t }),
           ),
         );
       }
-      function Et(e) {
+      function Ct(e) {
         const { notice: t } = e;
         return i.createElement(
           "div",
@@ -2328,15 +2330,15 @@
           ),
         );
       }
-      function Ct(e) {
+      function ht(e) {
         const { isCartEmpty: t, cart: n } = e,
           r = (0, a.i2)();
-        if (t) return i.createElement(ht, null);
+        if (t) return i.createElement(It, null);
         return i.createElement(
           i.Fragment,
           null,
-          i.createElement(ht, null),
-          i.createElement(mt, { cart: n }),
+          i.createElement(It, null),
+          i.createElement(dt, { cart: n }),
           i.createElement(
             "div",
             { className: l().CartFooter },
@@ -2360,7 +2362,7 @@
           ),
         );
       }
-      function ht() {
+      function It() {
         return i.createElement(
           st,
           { className: l().BetaNotice },
@@ -2426,7 +2428,7 @@
           ),
         );
       }
-      function It(e) {
+      function Lt(e) {
         const { disabled: t, familyGroupID: n } = e,
           a = (0, ze.ih)(n, m.L7.country_code);
         return i.createElement(
