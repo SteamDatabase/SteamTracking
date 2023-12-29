@@ -1573,7 +1573,11 @@
             "div",
             { className: Se().VotingArea },
             r.createElement(Fe, { unSaleAppID: a, bIsVotingOpen: i }),
-            r.createElement(Be, { bIsVotingOpen: i, unSaleAppID: a }),
+            r.createElement(Be, {
+              bIsVotingOpen: i,
+              bIsVotingPast: o,
+              unSaleAppID: a,
+            }),
           ),
           r.createElement(Re, null),
         );
@@ -1720,11 +1724,12 @@
         );
       }
       function Be(e) {
-        const { unSaleAppID: a, bIsVotingOpen: t } = e,
-          n = (0, d.$)(a).data.votes.map((e) =>
+        const { unSaleAppID: a, bIsVotingOpen: t, bIsVotingPast: n } = e,
+          s = (0, d.$)(a).data.votes.map((e) =>
             r.createElement(Qe, {
               key: e.voteid,
               bIsVotingOpen: t,
+              bIsVotingPast: n,
               unSaleAppID: a,
               definition: e,
             }),
@@ -1735,58 +1740,63 @@
             id: "Categories",
             className: (0, w.Z)(Se().CategoryList, Se().SectionContent),
           },
-          n,
+          s,
         );
       }
       function Qe(e) {
-        const { definition: a, unSaleAppID: t, bIsVotingOpen: n } = e,
-          s = (0, _.wZ)(
+        const {
+            definition: a,
+            unSaleAppID: t,
+            bIsVotingOpen: n,
+            bIsVotingPast: s,
+          } = e,
+          i = (0, _.wZ)(
             a.app_discounts.map((e) => e.appid),
             Ne,
           ),
-          i = (0, d.GC)(t, a.voteid),
-          o = r.useRef(0),
-          l = (0, X.Wy)(),
-          [c, u] = r.useState([]),
-          [g, p] = r.useState(0),
-          [v, C] = r.useState(!1),
-          [N, F] = r.useState(0),
-          [I, B] = r.useState(!i),
-          [Q, x] = r.useState(),
-          [f, T] = r.useState(669),
-          k =
+          o = (0, d.GC)(t, a.voteid),
+          l = r.useRef(0),
+          c = (0, X.Wy)(),
+          [u, g] = r.useState([]),
+          [p, v] = r.useState(0),
+          [C, N] = r.useState(!1),
+          [F, I] = r.useState(0),
+          [B, Q] = r.useState(!o),
+          [x, f] = r.useState(),
+          [T, k] = r.useState(669),
+          R =
             E.De.BASE_URL_STORE_CDN_ASSETS +
             "promo/steamawards2023/backgrounds/awardbg_" +
             a.voteid +
             ".jpg?v=3",
-          R = E.De.IMG_URL + "promo/steamawards2023/placeholder_main.png",
-          b = (null == l ? void 0 : l.ownerWindow) || window,
-          L = r.useCallback((e) => {
-            T(e.contentRect.height);
+          b = E.De.IMG_URL + "promo/steamawards2023/placeholder_main.png",
+          L = (null == c ? void 0 : c.ownerWindow) || window,
+          V = r.useCallback((e) => {
+            k(e.contentRect.height);
           }, []),
-          V = (0, D.yU)(L),
-          G = r.useCallback(() => {
+          G = (0, D.yU)(V),
+          P = r.useCallback(() => {
             let e = "-20% 0px -50% 0px";
-            if (b.innerHeight <= f) e = "0px 0px 0px 0px";
+            if (L.innerHeight <= T) e = "0px 0px 0px 0px";
             else {
               const a = 40,
-                t = b.innerHeight / f,
-                n = Math.min(t * a + t * f - (f + a), 0.65 * b.innerHeight);
+                t = L.innerHeight / T,
+                n = Math.min(t * a + t * T - (T + a), 0.65 * L.innerHeight);
               e = `-${Math.min(
-                0.4 * f,
-                0.1 * b.innerHeight,
+                0.4 * T,
+                0.1 * L.innerHeight,
               )}px 0px -${n}px 0px`;
             }
-            x(e);
-          }, [b.innerHeight, f]);
+            f(e);
+          }, [L.innerHeight, T]);
         r.useEffect(
           () => (
-            window.addEventListener("resize", G),
-            () => window.removeEventListener("resize", G)
+            window.addEventListener("resize", P),
+            () => window.removeEventListener("resize", P)
           ),
         ),
           r.useEffect(() => {
-            c.length ||
+            u.length ||
               (() => {
                 (0, h.mG)(this, void 0, void 0, function* () {
                   var e;
@@ -1807,65 +1817,65 @@
                       (t = n.map((e) => e.appid));
                   } else
                     (t = a.app_discounts.map((e) => e.appid)), (0, ve.LQ)(t);
-                  u(t), p(t[o.current]), G();
+                  g(t), v(t[l.current]), P();
                 });
               })();
-          }, [a.app_discounts, G, c]);
-        const P = r.useCallback(() => {
-            if (!N) {
-              let e = o.current + 1;
-              e >= c.length && (e = 0), (o.current = e), p(c[o.current]);
+          }, [a.app_discounts, P, u]);
+        const H = r.useCallback(() => {
+            if (!F) {
+              let e = l.current + 1;
+              e >= u.length && (e = 0), (l.current = e), v(u[l.current]);
             }
-          }, [c, N]),
-          H = r.useCallback((e) => {
-            C(e);
-          }, []),
+          }, [u, F]),
           M = r.useCallback((e) => {
-            F(e), p(e);
+            N(e);
           }, []),
-          W = r.useCallback(() => {
-            F(0), p(c[o.current]);
-          }, [c]);
-        if (1 == s)
+          W = r.useCallback((e) => {
+            I(e), v(e);
+          }, []),
+          O = r.useCallback(() => {
+            I(0), v(u[l.current]);
+          }, [u]);
+        if (1 == i)
           return r.createElement(y.V, {
             position: "center",
             size: "large",
             msDelayAppear: 300,
           });
-        const O =
-            null == c
+        const U =
+            null == u
               ? void 0
-              : c.map((e) =>
+              : u.map((e) =>
                   r.createElement(ke, {
                     key: e,
                     eCategory: a.voteid,
                     unSaleAppID: t,
-                    bCurrentlyActive: g === e,
+                    bCurrentlyActive: p === e,
                     unAppID: e,
                     bIsVotingOpen: n,
-                    bIsCurrentVoteApp: i == e,
-                    fnOnMouseLeaveApp: W,
-                    fnOnMouseEnterApp: M,
+                    bIsCurrentVoteApp: o == e,
+                    fnOnMouseLeaveApp: O,
+                    fnOnMouseEnterApp: W,
                   }),
                 ),
-          U =
-            null == c
+          Z =
+            null == u
               ? void 0
-              : c.map((e) =>
+              : u.map((e) =>
                   r.createElement(Te, {
                     key: e,
-                    bHoveringApp: e == N,
+                    bHoveringApp: e == F,
                     unAppID: e,
-                    bPlayMicrotrailers: v,
-                    bCurrentlyActive: g === e,
-                    fnOnVideoEnd: P,
+                    bPlayMicrotrailers: C,
+                    bCurrentlyActive: p === e,
+                    fnOnVideoEnd: H,
                   }),
                 );
-        let Z = r.createElement(r.Fragment, null, U);
+        let Y = r.createElement(r.Fragment, null, Z);
         return (
-          a.winner_appid
-            ? (Z = r.createElement(fe, { unAppID: a.winner_appid }))
-            : i && (Z = r.createElement(xe, { unAppID: i })),
+          a.winner_appid && s
+            ? (Y = r.createElement(fe, { unAppID: a.winner_appid }))
+            : o && (Y = r.createElement(xe, { unAppID: o })),
           r.createElement(
             we.SV,
             null,
@@ -1873,18 +1883,18 @@
               Ae.U,
               {
                 thresholds: [0.4],
-                rootMargin: Q,
+                rootMargin: x,
                 trigger: "repeated",
-                onVisibilityChange: H,
+                onVisibilityChange: M,
               },
               r.createElement(
                 m.s,
                 {
-                  ref: V,
+                  ref: G,
                   className: (0, w.Z)(
                     Se().SteamAwardCategory,
-                    i && Se().CategoryVoted,
-                    v && Se().Active,
+                    o && Se().CategoryVoted,
+                    C && Se().Active,
                   ),
                 },
                 r.createElement("a", {
@@ -1893,11 +1903,11 @@
                 }),
                 r.createElement("div", {
                   className: (0, w.Z)(Se().SteamAwardCategoryBackground),
-                  style: { backgroundImage: `url( ${k} )` },
+                  style: { backgroundImage: `url( ${R} )` },
                 }),
                 r.createElement("div", {
                   className: (0, w.Z)(Se().SteamAwardCategoryBlurryBackground),
-                  style: { backgroundImage: `url( ${k} )` },
+                  style: { backgroundImage: `url( ${R} )` },
                 }),
                 r.createElement(
                   "div",
@@ -1927,11 +1937,11 @@
                       { className: Se().CategoryDescription },
                       a.localization.award_description,
                     ),
-                    i &&
+                    o &&
                       r.createElement(
                         S.zx,
-                        { className: Se().HideShowBtn, onClick: () => B(!I) },
-                        I
+                        { className: Se().HideShowBtn, onClick: () => Q(!B) },
+                        B
                           ? (0, A.Xx)("#Steamawards_HideFinalists_Btn")
                           : (0, A.Xx)("#Steamawards_ShowFinalists_Btn"),
                       ),
@@ -1942,8 +1952,8 @@
                     r.createElement(
                       "div",
                       { className: Se().CapsuleContainer },
-                      Z,
-                      r.createElement("img", { src: R }),
+                      Y,
+                      r.createElement("img", { src: b }),
                     ),
                   ),
                 ),
@@ -1953,7 +1963,7 @@
                     timeout: 500,
                     unmountOnExit: !0,
                     mountOnEnter: !0,
-                    in: I,
+                    in: B,
                     classNames: {
                       enter: Se().Enter,
                       enterActive: Se().EnterActive,
@@ -1974,7 +1984,7 @@
                       ),
                       r.createElement("div", { className: Se().FinalistsLine }),
                     ),
-                    r.createElement("div", { className: Se().FinalistsRow }, O),
+                    r.createElement("div", { className: Se().FinalistsRow }, U),
                   ),
                 ),
               ),
