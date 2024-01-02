@@ -547,17 +547,20 @@
                       -1 === e.nickname.toLocaleLowerCase().indexOf(r)
                     ),
                 )
-                .sort((e, t) =>
-                  (e.favorite && t.favorite) || (e.bOwnsGame && t.bOwnsGame)
-                    ? 0
-                    : (!e.bOwnsGame && t.bOwnsGame) ||
-                      (e.favorite && !t.favorite) ||
-                      (e.bWishlistsGame && !t.bWishlistsGame)
-                    ? -1
-                    : e.bWishlistsGame && t.bWishlistsGame
-                    ? 0
-                    : 1,
-                ),
+                .sort((e, t) => {
+                  if (e.favorite) {
+                    if (!t.favorite) return -1;
+                  } else if (t.favorite) return 1;
+                  if (e.bWishlistsGame) {
+                    if (!t.bWishlistsGame) return -1;
+                  } else if (t.bWishlistsGame) return 1;
+                  if (e.bOwnsGame) {
+                    if (!t.bOwnsGame) return 1;
+                  } else if (t.bOwnsGame) return -1;
+                  return e.persona.m_strPlayerName.localeCompare(
+                    t.persona.m_strPlayerName,
+                  );
+                }),
             [t, r],
           );
         return i.createElement(

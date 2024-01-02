@@ -13458,17 +13458,11 @@
       }
       function _(e, t = {}) {
         const n = (0, s.bY)(),
-          a = (0, r.M)();
+          i = (0, r.M)();
         return (0, o.useQueries)(
           e.map((e) =>
             Object.assign(
-              {
-                queryKey: `GameplayInfo_${a}_${e}`,
-                queryFn: () =>
-                  (0, i.mG)(this, void 0, void 0, function* () {
-                    return yield g(n, e);
-                  }),
-              },
+              { queryKey: `GameplayInfo_${i}_${e}`, queryFn: () => g(n, e) },
               t,
             ),
           ),
@@ -35137,28 +35131,32 @@
         let d = new Map();
         return (
           o.forEach((e) => {
-            var t, n, i, r;
-            null ===
-              (n =
-                null === (t = null == e ? void 0 : e.data) || void 0 === t
-                  ? void 0
-                  : t.owns) ||
-              void 0 === n ||
-              n.forEach((e) => {
-                var t;
-                let n =
-                  null !== (t = d.get(e.steamid)) && void 0 !== t
-                    ? t
-                    : { steamid: e.steamid };
-                (n.bOwnsGame = !0), d.set(e.steamid, n);
-              }),
+            var t, n, i, r, s;
+            [
+              ...((null === (t = null == e ? void 0 : e.data) || void 0 === t
+                ? void 0
+                : t.owns) || []),
+              ...((null === (n = null == e ? void 0 : e.data) || void 0 === n
+                ? void 0
+                : n.played_ever) || []),
+              ...((null === (i = null == e ? void 0 : e.data) || void 0 === i
+                ? void 0
+                : i.played_recently) || []),
+            ].forEach((e) => {
+              var t;
+              let n =
+                null !== (t = d.get(e.steamid)) && void 0 !== t
+                  ? t
+                  : { steamid: e.steamid };
+              (n.bOwnsGame = !0), d.set(e.steamid, n);
+            }),
               null ===
-                (r =
-                  null === (i = null == e ? void 0 : e.data) || void 0 === i
+                (s =
+                  null === (r = null == e ? void 0 : e.data) || void 0 === r
                     ? void 0
-                    : i.in_wishlist) ||
-                void 0 === r ||
-                r.forEach((e) => {
+                    : r.in_wishlist) ||
+                void 0 === s ||
+                s.forEach((e) => {
                   var t;
                   let n =
                     null !== (t = d.get(e.steamid)) && void 0 !== t
