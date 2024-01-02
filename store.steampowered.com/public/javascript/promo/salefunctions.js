@@ -304,11 +304,61 @@ function HomeSaleFilterHeroes( $Parent, rgHeroItems )
 	$HeroItemCtn.css('minHeight', '' );
 }
 
+function HomeSaleSteamAwardWinners( $Parent, rgSteamAwardWinners, rgSteamAwardDefs )
+{
+	const rgSteamAwardWinnerFiltered = GHomepage.FilterItemsForDisplay( rgSteamAwardWinners, 'home', 0, 11, { games_already_in_library: true, localized: true, displayed_elsewhere: false, only_current_platform: false, virtual_reality: true } );
+	GDynamicStore.MarkAppDisplayed( rgSteamAwardWinnerFiltered );
 
+	if ( !rgSteamAwardWinnerFiltered.length )
+	{
+		$Parent.hide();
+		return;
+	}
 
+	
+	const mapFilteredAppIDs = new Map();
+	for( let i = 0; i < rgSteamAwardWinnerFiltered.length; i++ )
+	{
+		const item = rgSteamAwardWinnerFiltered[i];
+		mapFilteredAppIDs.set( item.appid, true );
+	}
 
+	let $WinnerCapsules = $Parent.find('.winner_grid' );
 
-function HomeRenderFeaturedItems( rgDisplayLists, rgTagData, rgFranchiseData )
+	rgSteamAwardDefs.forEach( function ( def, i )  {
+		if ( !def.winner_appid )
+			return;
+
+		if ( !mapFilteredAppIDs.has( def.winner_appid ) )
+			return;
+
+		let params = { 'class': 'winner_ctn' };
+		const rgItemData = GStoreItemData.GetCapParams( 'sale_steamawards', def.winner_appid, null, null, params );
+		if ( !rgItemData )
+			return;
+
+		let purchaseAction = 'addToCart( %subid% )'.replace( '%subid%', rgItemData.pricing_subid );
+		let $Cap = $J( '<div/>', {'class': 'winner_ctn', 'data-panel': '{"clickOnActivate":"firstChild","onOptionsActionDescription":"Add to Cart","onOptionsButton":"%onOptionsButton%","flow-children":"column"}'.replace( '%onOptionsButton%', purchaseAction ) } );
+		$Cap.append( $J('<a/>', {'class': 'hero_click_overlay', 'href': params['href'], 'aria-label': rgItemData.name } ) );
+		$Cap.append( $J('<div/>', {'class': 'category_background', 'style': 'background-image: url( \'https://cdn.cloudflare.steamstatic.com/store/promo/steamawards2023/backgrounds/awardbg_' + def.voteid +'.jpg\');' } ) );
+
+		let $Content = $J('<div/>', {'class': 'category_content' } );
+		$Content.append( $J('<div/>', {'class': 'category_title' } ).append( def.localization.title_linebreak.replace( '<1></1>', '<br/>' ).replace( '<2></2>', '<br/>' ) ) );
+
+		let $Images = $J('<div/>', {'class': 'game_capsule' } );
+		$Images.append( $J('<img/>', {'src': rgItemData.hero_capsule } ) );
+		$Images.append( $J('<img/>', {'src': rgItemData.main_capsule } ) );
+
+		$Content.append( $Images );
+		$Cap.append( $Content );
+
+		$Cap.append( $J( rgItemData.discount_block ).addClass( 'discount_block_inline' ) );
+
+		$WinnerCapsules.append( $Cap );
+	} );
+}
+
+function HomeRenderFeaturedItems( rgDisplayLists, rgTagData, rgFranchiseData, rgSteamAwardDefs )
 {
 	var k_nTier1ItemsMin = 14;
 	var k_nTier1ItemsMax = 14;
@@ -316,14 +366,14 @@ function HomeRenderFeaturedItems( rgDisplayLists, rgTagData, rgFranchiseData )
 	var k_nTier2ItemsMin = 14;
 	var k_nTier2ItemsMax = 14;
 
-	if ( rgDisplayLists.steam_award_winners )
+	if ( rgDisplayLists.steam_award_winners && rgSteamAwardDefs )
 	{
-		var rgSteamAwardWinners = GHomepage.FilterItemsForDisplay( rgDisplayLists.steam_award_winners, 'home', 10, 10, { games_already_in_library: false, localized: true, displayed_elsewhere: false, only_current_platform: false, enforce_minimum: true } );
-		GDynamicStore.MarkAppDisplayed( rgSteamAwardWinners );
-		HomeSaleBlock( rgSteamAwardWinners, $J('#steamawards_target' ), 'sale_steamawards' );
+		HomeSaleSteamAwardWinners( $J( '.home_steamawards_ctn' ), rgDisplayLists.steam_award_winners, rgSteamAwardDefs );
 	}
-
-	HomeSaleFilterHeroes( $J('.hero_parent_ctn'), SortItemListByPriorityList( rgDisplayLists.heros, 'tier1' ) );
+	else
+	{
+		HomeSaleFilterHeroes( $J('.hero_parent_ctn'), SortItemListByPriorityList( rgDisplayLists.heros, 'tier1' ) );
+	}
 
 	var rgAllTier1Items = GHomepage.MergeLists( rgDisplayLists.sale_tier1, false, rgDisplayLists.sale_tier1_fallback, false );
 
