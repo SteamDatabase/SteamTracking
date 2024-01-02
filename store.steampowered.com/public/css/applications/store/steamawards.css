@@ -1564,6 +1564,9 @@ body.v6 h3.steamawards2023_FaqSectionTitle_3iDsX {
   font-size: 28px;
   margin-top: 10px;
 }
+.steamawards2023_WinnerCapsule_1bA3S {
+  z-index: 1;
+}
 .steamawards2023_VotingArea_3chYY {
   position: relative;
   box-sizing: border-box;
