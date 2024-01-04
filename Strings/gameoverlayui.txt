@@ -7291,6 +7291,7 @@ N4vgui11InputDialogE
 N4vgui5LabelE
 10CUtlString
 10CUtlVectorIN4vgui5Label10TImageInfoE10CUtlMemoryIS2_EE
+N4vgui17ListPanelCheckBoxE
 N4vgui21ListPanelColumnHeaderE
 N4vgui13ListPanelItemE
 16ListPanelDragger
@@ -7503,8 +7504,6 @@ log_files_always_flush
 %s
 %lld
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlstring.h
-arrURLs
-T@"NSArray",R,N,V_arrURLs
 HOME
 r
 Unknown
@@ -7762,8 +7761,8 @@ Steam pid that launched us
 VGUI_Application_001
 OK
 Cancel
-Dec 20 2023
-11:06:35
+Jan  3 2024
+16:23:47
 crashhandler004
 gameoverlayui
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/overlay/gameoverlayui/main.cpp
@@ -8745,6 +8744,8 @@ CHECK failed: !fields_.empty():
 CHECK failed: (TYPE_LENGTH_DELIMITED) == (type()):
 ./google/protobuf/message_lite.h
 CHECK failed: (size) <= (static_cast<size_t>(2147483647)):
+CHECK failed: *ptr:
+CHECK failed: (overrun) <= (kSlopBytes):
 Can't happen
 google/protobuf/wire_format.cc
 CHECK failed: descriptor:
@@ -10775,9 +10776,13 @@ Nov
 Dec
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
++
++
++
++
++
 0
-D+
-0
+2+
 
 
 
@@ -10799,6 +10804,8 @@ j
 j
 j
 j
+!
+Ic]
 j
 j
 j
@@ -10806,6 +10813,11 @@ j
 j
 j
 j
+j
+j
+j
+j
+Hc
 Ic
 0
 0
@@ -10853,7 +10865,10 @@ V
 =
 !
 @
+@
+C$
 &
+m"
 @
 M9e
 @
@@ -10994,28 +11009,47 @@ P
 @
 @
 ?
+0
 @
-@
-
-g
 d
+Z
+
+
+
+j
+j
+j
+j
+j
+j
+
+
 
 
 
 
 
 A+M
-
-
-/
 j
 j
 j
 j
 j
 j
+j
+j
+j
+j
+j
+j
+j
+0
 =
 0
+j
+j
+
+
 j
 j
 j
@@ -11102,7 +11136,15 @@ j
 j
 j
 j
+j
+j
+j
+j
+j
 =
+j
+j
+j
 
 
 
@@ -11117,6 +11159,14 @@ j
 j
 j
 E
+j
+j
+j
+j
+j
+j
+j
+j
 j
 j
 j
@@ -11261,11 +11311,9 @@ d
 =*.*
 =
 @
-:
 @
 @
-0
-s
+"
 @
 @
 @

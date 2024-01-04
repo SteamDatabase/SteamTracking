@@ -8,11 +8,13 @@ __TEXT
 __stub_helper
 __TEXT
 __gcc_except_tab__TEXT
-05
+H4
 __const
 __TEXT
+CB
 __objc_methname
 __TEXT
+>$
 __objc_classname__TEXT
 __objc_methtype
 __TEXT
@@ -110,7 +112,7 @@ h
 8
 /usr/lib/libobjc.A.dylib
 &
-0
+8
 )
 NSt3__117bad_function_callE
 10CUtlVectorIN12CFontAmalgam10TFontRangeE10CUtlMemoryIS1_EE
@@ -203,6 +205,7 @@ N4vgui6IInputE
 7CUtlMapI8HotKey_tPN4vgui6VPanelEi8CDefLessE
 10CUtlRBTreeIN7CUtlMapI8HotKey_tPN4vgui6VPanelEi8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiES1_E
 9CInputOSX
+11CLayoutFile
 9CStyleSet
 16CStyleAppearance
 N4vgui11IAppearanceE
@@ -770,8 +773,6 @@ d
 19CUtlNoEscConversion
 14CUtlMemoryBase
 12CIMENullImpl
-arrURLs
-T@"NSArray",R,N,V_arrURLs
 STEAM_APP_BUNDLE_PATH
 en_US
 HOME
@@ -1426,15 +1427,6 @@ IsInList(after)
 !"Current texture not set"
 id
 wide && tall
-activateAppOnNextResize
-TB,V_bActivateAppOnNextResize
-hash
-TQ,R
-superclass
-T#,R
-description
-T@"NSString",R,C
-debugDescription
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/src/surface_osx.mm
 unmarkText was called, this is unexpected
 ApplyBlurAndTransparencyToTextBitmap
@@ -2272,6 +2264,8 @@ Seconds
 @
 @
 @
+Ic]
+Hc
 Ic
 0
 0
@@ -2280,7 +2274,7 @@ A;E
 0
 
 
-;
+a
 PPj
 `
 `

@@ -1,6 +1,8 @@
 __TEXT
 __text
 __TEXT
+p_
+p_
 __stubs
 __TEXT
 __stub_helper
@@ -10,7 +12,7 @@ __TEXT
 __cstring
 __TEXT
 __gcc_except_tab__TEXT
-8#
+l#
 __objc_methname
 __TEXT
 __unwind_info
@@ -1521,21 +1523,22 @@ E
 
 @
 =
-S
 0
 0
 j
 @
 @
 0
-Ic
 0
 
 =
 =
 @
 =*.*
-i
+Ic]
+Hc
+Ic
+_
 @
 @
 0
@@ -1551,3 +1554,4 @@ i
 0
 0
 0
+A

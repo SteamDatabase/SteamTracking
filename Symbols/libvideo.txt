@@ -29,6 +29,7 @@
  CFStringGetCString
  CFURLCreateWithBytes
  D typeinfo for std::__1::__basic_string_common<true>
+ D typeinfo for std::__1::__function::__base<void (unsigned long long)>
  D typeinfo for std::__1::bad_function_call
  D typeinfo for std::__1::basic_ostringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> >
  D typeinfo for std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >
@@ -60,6 +61,7 @@
  R kYvuJPEGConstants
  R kYvuV2020Constants
  R typeinfo name for std::__1::__basic_string_common<true>
+ R typeinfo name for std::__1::__function::__base<void (unsigned long long)>
  R typeinfo name for std::__1::bad_function_call
  R typeinfo name for std::__1::basic_ostringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> >
  R typeinfo name for std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >

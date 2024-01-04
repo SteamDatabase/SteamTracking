@@ -95,7 +95,6 @@ P^_]
 SQSS
 ^_[]
 ,^_[]
-SSPW
 ^_[]
 ^_[]
 \^_[]
@@ -121,22 +120,23 @@ t.A9
 ^_[]
 t.C9
 ^_[]
-PPRV
+^_[]
+RQWP
 ^_[]
 <\t	
 ^_[]
 ,^_[]
-</t2
-L^_[]
+</t,
+\^_[]
 L^_[]
 ^_[]
-^_[]
+,^_[]
 ^_[]
 <^_[]
 ,^_[]
 <^_[]
-,^_[]
-QRPV
+<^_[]
+QRPS
 ^_[]
 Wj/PQRS
 ^_[]
@@ -158,14 +158,11 @@ SSh)
 rp;]
 ,^_[]
 ^_[]
-WQPR
-t?9B
-^_[]
 ^_[]
 ^_[]
 ,^_[]
 ,^_[]
-QQPVRS
+QQPVj
 ^_[]
 ^_[]
 ^_[]
@@ -176,13 +173,11 @@ QPRRR
 ^_[]
 ~@O1
 ^_[]
-^_[]
  ^_]
 ^_[]
 VRQP
 ^_[]
 PRQj
-PWVQ
 SWVP
 ^_[]
 ^_[]
@@ -228,7 +223,7 @@ _l;_|r
 ^_[]
 %UUUU
 3333
-UUUU
+%UUUU
 3333!
 3333
 \^_[]
@@ -244,7 +239,7 @@ QjNP
 ^_[]
 ^_[]
 ^_[]
-UUUU
+%UUUU
 3333
 ^_[]
 %UUUU
@@ -265,6 +260,7 @@ u4;}
 %UUUU
 3333
 ^_[]
+G<;E
 L^_[]
 ^_[]
 ^_[]
@@ -277,7 +273,7 @@ L^_[]
 %UUUU
 3333
 ^_[]
-UUUU
+%UUUU
 3333
 ^_[]
 %UUUU
@@ -296,12 +292,11 @@ VRQP
 L^_[]
  ^_]
 ^_[]
-PQRW
 ^_[]
 Ph@B
 ^_[]
 ^_[]
-xbub
+xdud
 ,^_[]
 ^_[]
 ^_[]
@@ -314,14 +309,13 @@ SWV1
 ^_[]
 QPRj W
 VUUU
-L^_[]
+\^_[]
 N$t)
 Qj1P
 ^_[]
 ^_[]
 ^_[]
 ^_[]
-GL9G
 ^_[]
 VWPS
 ^_[]
@@ -543,8 +537,8 @@ CreateInterface
 steamwebhelper
 Steam Helper
 cefwebhelper
-Dec 20 2023
-11:04:21
+Jan  3 2024
+16:19:38
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 MainThrd
@@ -776,13 +770,14 @@ CreateInterface
 -Breakpad_SetSteamID
 08:<
 2$$$&$$
-TJ",\
-c5u6
-:zll
+TJ",Z
+c;uB
+&>pj
+Dxll
 ){c$V
-8/m(w
+8/l(x
 !	'J+
-feS<>O
+feS0>O
 _Breakpad_SetSteamID
 _CreateInterface
 .objc_class_name_NSArray
@@ -945,24 +940,25 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-RJ~7H
-Z_!MA
-.NQ9
-,xf]}
+QIXB
+=]p+
+11Xu_
+Oy9(h
+tn<X
+,e7`
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-Tsmu
-&1f9xD
-\y_,
-s_r4
-3[	5
-Z^Y H'-=HR7^
-3rc~QZJ
-O8>hG@
-IhM=x
-<@*1V
+HNE1}
+9%M[
+4c]0
+Q~d1
+>.V3z
+eTm^#
+Vj74_
+$Qsmj:
+fH{%'
 Apple Inc.1&0$
 Apple Certification Authority1
 Apple Root CA0
@@ -1018,9 +1014,7 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231220190444Z0/
-FW'3
-[<0[
+240104002000Z0/
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -1028,21 +1022,17 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		+mb9OLNBD8UTUmy4+4aWUHxi21A=
+		YjiBHWNIYf16U7Z1qhqqhRdS9QQ=
 		</data>
 		<data>
-		bECaKG9Yo6auAuTlsUQ0Bp/pE4E=
+		/1SXzB2TPzue6NM2NvUmAQ48PZg=
 		</data>
 	</array>
 </dict>
 </plist>
-YpqIa
-f&$?
-:<<mOp
-yOlv
-W\&w9
-<pF"
-20231220190511Z0
+={HF
+^:'nl,
+20240104002151Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
@@ -1101,11 +1091,11 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231220190511Z0#
-$^d,
-A%'.
--h,)'v
-Oyo?F!
+240104002151Z0#
+VX	2f
+mt<,
+Z6m3
+W)~N
 __TEXT
 __text
 __TEXT
@@ -1269,7 +1259,7 @@ AWAVSPI
 [A^A_]
 AWAVATSH
 .u"F8t 
-.u F8t 
+.u A
 <$.u'E8t$
 [A\A^A_]
 D83t
@@ -1283,27 +1273,33 @@ x%Lc
  u&E1
 AWAVAUATSPH
 x&Hc
- u6E1
+ u7E1
 [A\A]A^A_]
 AWAVAUATSPH
 [A\A]A^A_]
 AWAVAUATSH
 [A\A]A^A_]
-AWAVSH
-</t0
-[A^A_]
+AVSH
+ [A^]
+AWAVATSH
+</t+
+ [A\A^A_]
+AWAVATSH
+ [A\A^A_]
+AVSH
+[A^]
 AWAVSH
 ([A^A_]
-AWAVSH
-([A^A_]
+AVSH
+[A^]
 AWAVATSH
 [A\A^A_]
 AWAVSH
 [A^A_]
 AWAVAUATSH
 ([A\A]A^A_]
-AVSH
- [A^]
+AWAVSH
+[A^A_]
 AWAVAUATSH
 [A\A]A^A_]
 AVSH
@@ -1341,7 +1337,7 @@ rlL9
 [A\A]A^A_]
 AWAVAUATSH
 [A\A]A^A_]
-w\H9
+rAH9
 AWAVSPH
 [A^A_]
 AWAVSP
@@ -1351,9 +1347,9 @@ AVSH
 AWAVAUATSH
 [A\A]A^A_]
 [A\A]A^A_]
-AWAVSH
+AVSH
 	H;M
-[A^A_]
+[A^]
 AVSH
 [A^]
 AWAVAUATSH
@@ -1363,8 +1359,6 @@ AWAVSH
 [A^A_]
 AWAVAUATSP
 [A\A]A^A_]
-AVSH
- [A^]
 AWAVAUATSH
 [A\A]A^A_]
 	H;M
@@ -1400,8 +1394,8 @@ UUUUUUUUH!
 33333333H
 L$ t
 [A\A]A^A_]
-AWAVSPH
-[A^A_]
+AWAVATSH
+[A\A^A_]
 AWAVSPI
 t%L9
 [A^A_]
@@ -1435,9 +1429,11 @@ UUUUUUUUH!
 33333333H!
 u*D9G
 u$L9
-{0I9
 fffffff
+{0I9
 3333333
+D$ I
+fffffff
 fffffff
 (H;]
 [A\A]A^A_]
@@ -1485,7 +1481,6 @@ UUUUUUUUH!
 AVSH
 UUUUUUUUH!
 33333333H
-v1M9
 [A^]
 UUUUUUUUH!
 33333333H
@@ -1507,35 +1502,42 @@ UUUUUUUUH!
 33333333H
 u0L9
 u	L9[
-vFL9
 [A\A]A^A_]
 AWAVSPH
 [A^A_]
 AVSH
 UUUUUUUUH!
 33333333H
-v1M9
 N(H;J(t
 [A^]
 AWAVSPI
 gffffff
 [A^A_]
 AWAVAUATSH
-E(I;V
-EPH;P
-H;r8H
-B(H;q
-](H9
-H9r8H
-Z(H9q
 L$ H
-L$ H
-UxL9
-|5 I
-I;T5
+t$ H
+t$(I9
+(H9w8s
+D$(I;O
+D$PH;H
+(H;P8r
+I;D$
+D$ H
+D$ I
+\$PI
+t$(L
+L$xL9
+T4 I
+I;L4
 H[A\A]A^A_]
+t$(L
 H[A\A]A^A_]
+t$(I
+T$PL
 H[A\A]A^A_]
+t$(I
+T$PI
+L$xL
 H[A\A]A^A_]
 AWAVATSH
 L$ H
@@ -1549,13 +1551,14 @@ L$ I
 L$ H
 ([A\A]A^A_]
 AWAVATSH
-sxL9
+SxL9
 |$ H
-T; H
-H;t;
+t; H
+H;T;
+T$(H
 @[A\A^A_]
-AWAVATSE1
-[A\A^A_]
+AWAVSP1
+[A^A_]
 AWAVAUATSPI
 M9n(
 UUUUUUUUH!
@@ -1574,7 +1577,6 @@ UUUUUUUUH!
 AVSH
 UUUUUUUUH!
 33333333H
-v1M9
 [A^]
 [A^]
 AVSA
@@ -1657,7 +1659,6 @@ AWAVAUATSPI
 AVSH
 [A^]
 AVSI
-F(I9F
 [A^]
 [A^]
 AVSI
@@ -1669,7 +1670,7 @@ t<UH
 AVSH
 [A^]
 AWAVSPI
-<u4H
+<u8H
 [A^A_]
 AWAVATSE1
 [A\A^A_]
@@ -1841,8 +1842,8 @@ CreateInterface
 steamwebhelper
 Steam Helper
 cefwebhelper
-Dec 20 2023
-11:04:22
+Jan  3 2024
+16:19:41
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 MainThrd
@@ -1931,7 +1932,6 @@ length
 ?20CUniformRandomStream
 20IUniformRandomStream
 N(knN
-:./-
 ?11CPathString
 21CUtlCStringConversion
 18CUtlCharConversion
@@ -2114,12 +2114,11 @@ A_mach_continuous_time
 CreateInterface
 -Breakpad_SetSteamID
 6@@D
-|Z>x2
-"4jx
-Bjtt
-Hvvh
+yXEx?
+Njtt
+Bvvh
 8*g'b
-n]G*4Bd
+t]G.4Bj
 _Breakpad_SetSteamID
 _CreateInterface
 _BreakpadAddUploadParameter
@@ -2283,25 +2282,25 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-@auMD
-%b]m
-90[7
-=v	k7
-O}4r
-"B5n
+.)laO
+9I~+
+he1x
+r*3Mt
+UYR7
+2uxaT5d1
+nL'6
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-UHuY
-N<W^9
-dW'}
-&m0m
-QF|TZ
-'K&\
-f2^4
-& v 
-9'uo
+XO@<
+O`dz
+;='0
+y.e/L
+ZK>S
+<Y|s
+9m4'
+}o>m
 Apple Inc.1&0$
 Apple Certification Authority1
 Apple Root CA0
@@ -2357,8 +2356,10 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231220190444Z0/
-j&u"a0-
+240104002000Z0/
+=:uS
+lP0,j6K0[
+ 7k<e.(
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -2366,20 +2367,17 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		RXKWbNuvStOxZZFYX6iqaiZ1ImE=
+		cs3UTdp5iubN+nfSJ3A6x+mdB9Q=
 		</data>
 		<data>
-		jBaVztr/f3Sc/QghtVWmowEKJ/s=
+		sUyNA/oz1G3w7SA3azxlLigKC7o=
 		</data>
 	</array>
 </dict>
 </plist>
-Z?#	
-@vt$
-`AQ4o
-qd=n
-B^ o
-20231220190511Z0
+@P6'e
+qBi1
+20240104002151Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
@@ -2438,8 +2436,9 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231220190511Z0#
-t!Cz
+240104002151Z0#
+a-&@
+kAd H
 __TEXT
 __text
 __TEXT
@@ -2486,7 +2485,6 @@ __common
 __DATA
 __LINKEDIT
 @loader_path/crashhandler.dylib
-P;. 0^
 /usr/lib/libiconv.2.dylib
 /System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices
 /System/Library/Frameworks/IOKit.framework/Versions/A/IOKit
@@ -2498,30 +2496,28 @@ P;. 0^
 /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
 /usr/lib/libobjc.A.dylib
 Tv*@
- @9H5
-cS9 
-Q)Ij8?
+ @9(4
+cS9@
  @9H
 5h"@9
 h&B)
-Lii8k	
-+ih8J	
 (	.9
-ii8J	
 T@SE
-jv8(
+Thjv8H
 h(8*
+QiJh8?
 ij`8
 @9_q
 	K"}@
 jh8_
 )	@9?
-jh8_
+Jh8?
+Ji8?
 *-@8
 h48	
 7I}@
 i+8B
-7	}@
+7*}@
 Tjji8)
 j)8)
 j)8s
@@ -2552,7 +2548,6 @@ ii8J
 <l9@
 +ih8J	
 T+	@
-<9`|
 @9_q
 jt8 
 (hh8!
@@ -2564,8 +2559,7 @@ hBA9
 h2@9
 0@9h
 5h2@9
-Q+}@
-Th&Y
+Ti"Y
 Installing breakpad crash handler
 BreakpadProductDisplay
 BreakpadProduct
@@ -2738,8 +2732,8 @@ CreateInterface
 steamwebhelper
 Steam Helper
 cefwebhelper
-Dec 20 2023
-11:04:22
+Jan  3 2024
+16:19:44
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 MainThrd
@@ -2821,8 +2815,6 @@ length
 16IBreakpadFactory
 13CCrashHandler
 13ICrashHandler
-?BEHKNQTWZ]`cfilorux{~
-adgj
 ?20CUniformRandomStream
 20IUniformRandomStream
 $tI(knN
@@ -2830,8 +2822,8 @@ $tI(knN
 21CUtlCStringConversion
 18CUtlCharConversion
 19CUtlNoEscConversion
-EP\VV
-DPI12CStdMemAlloc
+DO[UU
+COH12CStdMemAlloc
 9IMemAlloc
 Mb@?
 A\Ap
@@ -3172,24 +3164,27 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-gjs{
-<'[b
-`r[>
-u*"V
-`z.W
-Q;Ua
-%9,[.c
-jG.L
+s]6>m
+x-i0
+wnuSjHj
+&%T]
+%Eck
+)yju
+qpkYd
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-9:7c8
-DA#q
-J6rg
-Lg:\
-.,W5
-=oOu3
+|HDE
+>3L8
+[;7v{
++LMw
+wT,5
+3gN'r
+IUXm1
+^R6q
+:RbfV
+$V0"d
 Apple Inc.1&0$
 Apple Certification Authority1
 Apple Root CA0
@@ -3245,7 +3240,9 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231220190444Z0/
+240104002000Z0/
+^#rB
+tg.?
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -3253,37 +3250,39 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		nchCx4of6r7aq4jWhiz9COguRak=
+		w1+SuI1WLQyx45DfuOHhhM/bDLE=
 		</data>
 		<data>
-		OZHnQKBYquN9LGqRW8edyjkIlBQ=
+		51HsEcY+CtdyGpp0Zy4/gssuXPU=
 		</data>
 	</array>
 </dict>
 </plist>
->qc|8
-c%Y8
-20231220190511Z0
+5dj3
+74;/
+[U:Xu
+ p\f?S*=
+20240104002152Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231214210037Z
-240125210036Z0B1
-Timestamp Signer NWK21
+231214211511Z
+240125211510Z0B1
+Timestamp Signer NWK11
 Apple Inc.1
-`\ju
-zDi	N
-Ip/?y
+7_haJ
+r}z0
+*ss?
+,$.Y
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-D(*T
-|%bC
-6vO:
-`;X)
-R{F0
+Ygl=#
+ywSr$
+i+3t'e
+\W$"
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -3322,5 +3321,7 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231220190511Z0#
-{L}p
+240104002152Z0#
+s4Ma
+*X4O0
+4MY^

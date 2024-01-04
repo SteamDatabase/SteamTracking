@@ -3197,6 +3197,8 @@
     "Settings_Display_ScheduleNightMode": "Schedule Night Mode",
     "Settings_Display_AutoEnableBetween": "Auto-Enable Between",
     "Settings_Display_AutoEnableBetween_And": "and",
+    "Settings_Display_LEDSection": "LED Control",
+    "Settings_Display_StatusLEDBrightness": "Status LED Brightness",
     "Settings_Display_BPM": "Big Picture Mode",
     "Settings_Display_BPM_Windowed": "Windowed",
     "Settings_Display_BPM_Windowed_Desc": "Start Big Picture mode Windowed",

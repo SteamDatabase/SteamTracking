@@ -10,6 +10,7 @@ message CSteamOSManagerState {
 	optional string os_version = 2;
 	optional bool is_mandatory_update_available = 3;
 	optional .EStartupMovieVariant startup_movie_variant = 4 [default = k_EStartupMovieVariant_Invalid];
+	optional bool is_status_led_control_available = 5;
 }
 
 message CSteamOSManager_GetState_Request {

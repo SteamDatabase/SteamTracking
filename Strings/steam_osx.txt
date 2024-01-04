@@ -1,14 +1,11 @@
 H
 __PAGEZERO
 __TEXT
-@?
-@?
+?
+?
 
 __text
 __TEXT
-P
-bp4
-P
 __stubs
 __TEXT
 __stub_helper
@@ -18,26 +15,26 @@ __const
 __TEXT
 __objc_methname
 __TEXT
-:
+T
 __objc_classname__TEXT
 __objc_methtype
 __TEXT
 0
 __cstring
 __TEXT
-PO:
-PO:
 __unwind_info
 __TEXT
 __DATA
-@?
-@?
+?
+?
 __nl_symbol_ptr
 __DATA
-@?
-@?
+?
+?
 __got
 __DATA
+?
+?
 __la_symbol_ptr
 __DATA
 __mod_init_func
@@ -48,18 +45,34 @@ __cfstring
 __DATA
 __objc_classlist__DATA
 __objc_imageinfo__DATA
+`B
+`B
 __objc_const
 __DATA
+(`B
+(`B
 __objc_selrefs
 __DATA
+(bB
+(bB
 __objc_classrefs__DATA
+xfB
+xfB
 __objc_superrefs__DATA
+hgB
+hgB
 __objc_ivar
 __DATA
+pgB
+pgB
 __objc_data
 __DATA
+xgB
+xgB
 __data
 __DATA
+hB
+hB
 __thread_vars
 __DATA
 0
@@ -74,9 +87,14 @@ __common
 __DATA
 H
 __LINKEDIT
+@C
 "
+@C
 H%
-8gD
+HeC
+`rC
+PtC
+H'D
 P
 /usr/lib/dyld
 
@@ -115,61 +133,59 @@ h
 /usr/lib/libobjc.A.dylib
 &
 )
-RB
-)
-Y4
+]D
 0
-EG
-9
-cG
-0
-@
-@
+44
+f95S2G
 4
+^G
+0
+*
+@
+@
+U<
 @
 @
 @
 @
-VB
+x)
 $
 Hi
 Hi
 Hi
-O9
++B
+}3
 >
-(
-(
-(
-(
-(
-(
-9
-x3
-G)
-m3
-B
-B
-9
-9
+6)
+)
+,
+)
+)
+3
 
 %
-)
-)
-)
-)
-4
-D8
-;
+U;
 
--(
-0
-5
+(
+4
 '
-&2
+'
+
+8
+8
+8
+8
+8
+5
+%(
+(
+(
+(
+(
 (
 
+j&
 0
-Ic
 0
 0
 AT=
@@ -180,16 +196,13 @@ AT=
 D
 @
 @
-E1
--7
-+7
-!7
+r1
+(1
 7
 7
 7
 7
 7
-1
 1
 @
 Hc
@@ -223,7 +236,10 @@ IcE
 @
 @
 ;
-;6
+!0
+6
+6
+V
 NSt3__117bad_function_callE
 15CBaseFileSystem
 11IFileSystem
@@ -1575,7 +1591,6 @@ N11SteamStdLib12ICommandLineE
 16CKeyValuesSystem
 16IKeyValuesSystem
 20IUniformRandomStream
-:./-
 14ConCommandBase
 6ConVar
 8CAutoPtrI7CUtlMapIybi8CDefLessEE
@@ -2004,8 +2019,6 @@ N12_GLOBAL__N_127CDummySSLConnectionCallbackE
 15CWorkThreadPool
 10CUtlVectorIP11CWorkThread10CUtlMemoryIS1_EE
 10CUtlVectorIP9CWorkItem10CUtlMemoryIS1_EE
->
-?
 
 
 #
@@ -2025,8 +2038,6 @@ a
 
 
 
-arrURLs
-T@"NSArray",R,N,V_arrURLs
 Steam
 STEAM_APP_BUNDLE_PATH
 HOME
@@ -2389,7 +2400,7 @@ ReLaunchCmdLine
 ClientLauncherType
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlqueue.h
 IsValidIndex( idx )
-Startup - updater built Dec 20 2023 11:06:29
+Startup - updater built Jan  3 2024 16:23:39
 Startup - Steam Client launched with: %s
 Shutdown
 no hosts found
@@ -2680,8 +2691,8 @@ m_iRefs >= 0 && m_iRefs < 0x0ffffff
 #SteamBootstrapper_UpdatingSteam
 Updating Steam...
 Tahoma
-Dec 20 2023
-11:06:30
+Jan  3 2024
+16:23:40
 crashhandler004
 steam
 Steam Executable Crash
@@ -2778,7 +2789,7 @@ China
 %s/%s%s
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamexe/updateui.h
 ThreadInMainThread()
-11:06:28
+16:23:38
 [%3d%%] %s
 [----] %s
 [%3d%%] !!! Fatal Error: %s
@@ -3602,6 +3613,8 @@ type() == TYPE_FIXED64
 google/protobuf/unknown_field_set.cc
 CHECK failed: !fields_.empty():
 CHECK failed: (TYPE_LENGTH_DELIMITED) == (type()):
+CHECK failed: *ptr:
+CHECK failed: (overrun) <= (kSlopBytes):
 Can't happen
 google/protobuf/wire_format.cc
 Extensions of MessageSets must be optional messages.
@@ -10538,7 +10551,6 @@ CKeyValuesSystem::AddStringToPool: running out of memory (%u bytes left)
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/osversion.cpp
 Invalid macOS version %d.%d.%d
 PS3
-ps3
 web
 windows
 macos
@@ -10901,7 +10913,7 @@ steamwebhelper
 Steam Helper
 cefwebhelper
 1.0
-11:04:22
+16:19:41
 Jan
 Feb
 Mar
@@ -13354,65 +13366,67 @@ out of memory
 n <= (size_t)INT_MAX
 file_ofs == pFile->GetBytesWritten()
 
-{w:
-HJ=
+!+:
+3+:
+:W:
+%W:
 
+0W:
+DW:
+MW:
 0
-RB
-)
-Y4
 0
-EG
-9
-cG
-0
-@
-@
+44
+f95S2G
 4
+^G
+0
+*
+@
+@
+U<
 @
 @
 @
 @
-VB
+x)
 $
 Hi
 Hi
 Hi
-O9
++B
+}3
 >
-(
-(
-(
-(
-(
-(
-9
-x3
-G)
-m3
-B
-B
-9
-9
+6)
+)
+,
+)
+)
+3
 
 %
-)
-)
-)
-)
-4
-D8
-;
+U;
 
--(
-0
-5
+(
+4
 '
-&2
+'
+
+8
+8
+8
+8
+8
+5
+%(
+(
+(
+(
+(
 (
 
+j&
 0
-Ic
 0
 0
 AT=
@@ -13423,16 +13437,13 @@ AT=
 D
 @
 @
-E1
--7
-+7
-!7
+r1
+(1
 7
 7
 7
 7
 7
-1
 1
 @
 Hc
@@ -13466,72 +13477,63 @@ IcE
 @
 @
 ;
-;6
+!0
 6
 6
 V
 =
-O/
-7/
+I/
+F/
+H5
 /
-/
-/
-/
-/
-/
-/
-/
+5
+5
 5
 5
 =
-s.
-M.
-14
+P4
 .
 .
 .
-2-
+.
+.
+/
+8
+8
 !
 -
--
--
--
 *
-?$
-7
-':
+*
+i,
+`,
 @
-&
-L+
-+
-+
-+
-1
-1
-1
-1
 ,
+&
+h+
+6
++
+$1
+1
+1
+1
+1
+1
+1
+1
+5
 *
-*
-*
-2
-4
-4
-3)
-)
-)
-)
-)
-)
-)
-)
+0
+0
+t1
 )
 @
 M9e
 @
 @
-X(
-.(
+{.
+3
+B(
+=(
 ?
 ?
 ?
@@ -13544,6 +13546,9 @@ X(
 ?
 ?
 :
+(
+(
+(
 ?
 ?
 ?
@@ -13554,29 +13559,35 @@ AESNI-CBC+SHA256 stitch for x86_64, CRYPTOGAMS by <appro@openssl.org>
 @
 AES for Intel AES-NI, CRYPTOGAMS by <appro@openssl.org>
 @
+7-
 %
 `
 `
 @
 -
 -
+-
+-
+-
+-
+,
 j
 j
+-
 Pj
 ARj
 j
 0
-&
 0
 IcU
 E;e
+?,
+1,
 M)u
 =
 =
 @
 =
-
-
 =
 %
 =
@@ -13870,8 +13881,6 @@ OO
 expand 32-byte k
 ChaCha20 for x86_64, CRYPTOGAMS by <appro@openssl.org>
 @
-W#
-4
 =
 @
 
@@ -13879,36 +13888,28 @@ W#
 @
 @
 0
-
-
-
-#
-)-
-'-
 H=
 Ic]
 j
 j
 j
 j
-)
 j
 j
+$
+$
 
-B'
-+'
+"'
 t$I;M
 '
-)
+'
 e
 W
 ,7~5d
-#}q/
-#=j/
+#]t/
+#=q/
 H
 0
-"
-"
 
 
 
@@ -13920,12 +13921,13 @@ H
 
 
 Hc
+6(
+4(
 AES-NI GCM module for x86_64, CRYPTOGAMS by <appro@openssl.org>
 %
 @
 @8
 `$
-'
 '
 '
 @
@@ -13938,10 +13940,10 @@ Poly1305 for x86_64, CRYPTOGAMS by <appro@openssl.org>
 $
 0
 0
+F&
 N
 N
 N
-'+
 rc4(8x,int)
 rc4(8x,char)
 rc4(16x,int)
@@ -14106,7 +14108,6 @@ H=LA
 =
 |q=
 | =
-
 |O=
 | =
 |"=
@@ -14162,6 +14163,7 @@ to=
 |&=
 =
 |-=
+m
 @
 @
 @
@@ -14184,9 +14186,13 @@ H=
 =
 @
 =*.*
+Ic]
+O
+H
 @
 @
-S
+u
+r
 @
 @
 @
@@ -14202,31 +14208,28 @@ S
 8
 @
 @
-
-
-
-
 0
 0
 0
 0
 0
+|
 0
+n
 0
 H=
 0
 &
-E
 0
 Hi
 E
-0
-0
-m
 
 
 0
-
+0
+q
+Hc
+Ic
 
 
 
@@ -14236,25 +14239,22 @@ m
 
 j
 j
-?
 0
+.
 @
 @
 @
 @
-6
 0
 0
 Hc
-J
-&
 0
+f
 @
 @
-t
-Y
 &
 %
+7
 @
 =h2
 P
@@ -14263,7 +14263,9 @@ P
 @
 @
 @
+=
 @
+=
 ?
 ?
 ?
@@ -14273,7 +14275,12 @@ P
 @
 =a
 0
+0
+0
+]
 Hi
+B
 $
 $
 $
+=

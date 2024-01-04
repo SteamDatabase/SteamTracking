@@ -53,7 +53,7 @@ VVRQj
  ^_]
 ^_[]
 ^_[]
-QQPVRS
+QQPVj
 ^_[]
 ^_[]
 ^_[]
@@ -75,7 +75,6 @@ SSh]
 ^_[]
 ^_[]
 ^_[]
-^_[]
  ^_]
 <^_[]
 ^_[]
@@ -83,7 +82,6 @@ VRQP
 ^_[]
 VRQP
 PRQj
-PWVQ
 ^_[]
 ^_[]
 ^_[]
@@ -131,7 +129,7 @@ _l;_|r
 ^_[]
 %UUUU
 3333
-UUUU
+%UUUU
 3333!
 3333
 \^_[]
@@ -147,7 +145,7 @@ QjNP
 ^_[]
 ^_[]
 ^_[]
-UUUU
+%UUUU
 3333
 ^_[]
 %UUUU
@@ -168,6 +166,7 @@ u4;}
 %UUUU
 3333
 ^_[]
+G<;E
 L^_[]
 ^_[]
 ^_[]
@@ -180,7 +179,7 @@ L^_[]
 %UUUU
 3333
 ^_[]
-UUUU
+%UUUU
 3333
 ^_[]
 %UUUU
@@ -207,7 +206,6 @@ QPSV
 QPSV
 ^_[]
 ^_[]
-OVVWh
 ^_[]
 ^_[]
 ^_[]
@@ -222,7 +220,6 @@ unkn
 ^_[]
 unkn
 ^_[]
-PQRW
 ^_[]
 Ph@B
 ^_[]
@@ -231,7 +228,7 @@ Wh@B
  ^_]
 ^_[]
 ,^_[]
-xbub
+xdud
 ,^_[]
 j%PWj
 L^_[]
@@ -253,7 +250,6 @@ l^_[]
 ^_[]
 t*;E
 ^_[]
-SWVP
 ^_[]
 ^_[]
 ^_[]
@@ -291,9 +287,9 @@ PQRV
 ^_[]
 QPRj W
 VUUU
-L^_[]
+\^_[]
 ^_[]
-K(+F$f
+C$+F$
 <^_[]
 ^_[]
 N$t)
@@ -302,7 +298,6 @@ Qj1P
 ^_[]
 ^_[]
 ^_[]
-GL9G
 ^_[]
 VWPS
 ^_[]
@@ -323,8 +318,6 @@ PQRWV
 tq;S
 <^_[]
 ^_[]
-l$@f
-T$8f
 |^_[]
 9WPu>
 ^_[]
@@ -341,7 +334,6 @@ PSj	V
 ^_[]
 ^_[]
 ^_[]
-^_[]
 F,^_]
 ^_[]
 F,^_]
@@ -351,12 +343,9 @@ F,^_]
 ^_[]
 ^_[]
 ^_[]
-VPQR
-VPRW
-L^_[]
-A WSPQ
-WSQPR
-WSRQPV
+QWPS
+RQPS
+l^_[]
 ,^_[]
 ,^_[]
 ,^_[]
@@ -431,8 +420,8 @@ Steam
 steamwebhelper
 Steam Helper
 cefwebhelper
-Dec 20 2023
-11:04:45
+Jan  3 2024
+16:20:02
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 CatchAndWriteContext_t::Invoke with bogus argc/argv
@@ -1230,21 +1219,23 @@ Uile
 ; .#
 $<$<$q
 	PZW
-pI#WnI
-#	v>,
-:zll
+pI#TnI
+#	r>,
+Dxll
 ){c$TII
 789>>8$@'
-RO""@HF
+TO""@DF
 			BA
 Y@@@EE88
-iF=+
+	 l(
+iG=+
 E5'$
 	   rt
 5/)*D
 @x2,&0
 \Rj.T
 FIS0
+H\zv~@\
 _AllocateCrashMemoryReserve
 _AreStackTrackingFiltersEnabledAtStart
 _AssertMsgImplementationF
@@ -1819,34 +1810,28 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-P@/~
-U)IJ
-6hURl
-ot+1
-kpm5b ~:xA}
- fRp
-JB8CRKh
-j42bN$
-]iok
-2EDu/
--X%a
+=:/n
+!7V~
+iTgc
+*iE;z
+4&M;Xv
 SV,JD
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-*SdEw]&
-3XFP
-5oX@I
-7lEaE
-GV.(
-u6Fk
-rrjQ
-C([ddf
-K+7|
-'%/`6
- d$24
-w	3X.
+E+8q
+q(>e;\
+PNgZE
+qSn#
+vL	$U
+/&-[
+	&oy
++YfBv
++1X 
+PKNyNr
++"eY
+>xK5
 ?XT5)R
 :7X!pSq
 Apple Inc.1&0$
@@ -1904,7 +1889,8 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231220190447Z0/
+240104002005Z0/
+k4u{
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -1912,40 +1898,45 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		M+ae6wqIQhexXLT7nEkCorY8duo=
+		DA60RN1KCvOWuQ2tkvNrNHV7geA=
 		</data>
 		<data>
-		P9N6rp6Wa03yoS9aUOpNGULKwDE=
+		TbUzm8/Tqspe0Yopc5bmbx6NBY8=
 		</data>
 	</array>
 </dict>
 </plist>
-0"Dh
-Ys%	z_
-h\Mx
-UG	i
-({#i
-20231220190514Z0
+EETw&
+8XwC
+@"+(
+}-Xn|
+~,/^
+	"MX
+O2@1
+?EJf0qI
+jS'2
+20240104002156Z0
+I!Gf
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231214210037Z
-240125210036Z0B1
-Timestamp Signer NWK21
+231214211511Z
+240125211510Z0B1
+Timestamp Signer NWK11
 Apple Inc.1
-`\ju
-zDi	N
-Ip/?y
+7_haJ
+r}z0
+*ss?
+,$.Y
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-D(*T
-|%bC
-6vO:
-`;X)
-R{F0
+Ygl=#
+ywSr$
+i+3t'e
+\W$"
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -1984,11 +1975,7 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231220190514Z0#
-W	0+
-xSYMe
-2{T|
-<2gX
+240104002156Z0#
 __TEXT
 __text
 __TEXT
@@ -2042,9 +2029,9 @@ AWAVAUATSH
 AWAVAUATSH
 ([A\A]A^A_]
 ([A\A]A^A_]
-AWAVSH
+AVSH
 	H;M
-[A^A_]
+[A^]
 AVSH
 [A^]
 AWAVAUATSH
@@ -2057,7 +2044,8 @@ AWAVAUATSP
 AWAVATSH
 <$*u
 t	Hc]
-tZHk
+tWHk
+|08H
 [A\A^A_]
 AWAVSPA
 8D9|
@@ -2069,8 +2057,6 @@ AVSH
 [A^]
 AVSH
 [A^]
-AVSH
- [A^]
 AWAVAUATSH
 SASAR
 L90t
@@ -2088,6 +2074,8 @@ AVS1
 AWAVSP1
 [A^A_]
 AVS1
+t}E1
+ t>H
 [A^]
 t-UH
 AVSH
@@ -2107,8 +2095,8 @@ AWAVAUATSP
 AWAVAUATSH
 [A\A]A^A_]
 [A\A]A^A_]
-AVSH
-[A^]
+AWAVSH
+[A^A_]
 AWAVSPA
 [A^A_]
 [A^A_]
@@ -2119,8 +2107,8 @@ UUUUUUUUH!
 33333333H
 L$ t
 [A\A]A^A_]
-AWAVSPH
-[A^A_]
+AWAVATSH
+[A\A^A_]
 AWAVSPI
 t%L9
 [A^A_]
@@ -2154,9 +2142,11 @@ UUUUUUUUH!
 33333333H!
 u*D9G
 u$L9
-{0I9
 fffffff
+{0I9
 3333333
+D$ I
+fffffff
 fffffff
 (H;]
 [A\A]A^A_]
@@ -2204,7 +2194,6 @@ UUUUUUUUH!
 AVSH
 UUUUUUUUH!
 33333333H
-v1M9
 [A^]
 UUUUUUUUH!
 33333333H
@@ -2226,35 +2215,42 @@ UUUUUUUUH!
 33333333H
 u0L9
 u	L9[
-vFL9
 [A\A]A^A_]
 AWAVSPH
 [A^A_]
 AVSH
 UUUUUUUUH!
 33333333H
-v1M9
 N(H;J(t
 [A^]
 AWAVSPI
 gffffff
 [A^A_]
 AWAVAUATSH
-E(I;V
-EPH;P
-H;r8H
-B(H;q
-](H9
-H9r8H
-Z(H9q
 L$ H
-L$ H
-UxL9
-|5 I
-I;T5
+t$ H
+t$(I9
+(H9w8s
+D$(I;O
+D$PH;H
+(H;P8r
+I;D$
+D$ H
+D$ I
+\$PI
+t$(L
+L$xL9
+T4 I
+I;L4
 H[A\A]A^A_]
+t$(L
 H[A\A]A^A_]
+t$(I
+T$PL
 H[A\A]A^A_]
+t$(I
+T$PI
+L$xL
 H[A\A]A^A_]
 AWAVATSH
 L$ H
@@ -2268,13 +2264,14 @@ L$ I
 L$ H
 ([A\A]A^A_]
 AWAVATSH
-sxL9
+SxL9
 |$ H
-T; H
-H;t;
+t; H
+H;T;
+T$(H
 @[A\A^A_]
-AWAVATSE1
-[A\A^A_]
+AWAVSP1
+[A^A_]
 AWAVAUATSPI
 M9n(
 UUUUUUUUH!
@@ -2293,7 +2290,6 @@ UUUUUUUUH!
 AVSH
 UUUUUUUUH!
 33333333H
-v1M9
 [A^]
 [A^]
 AVSA
@@ -2395,8 +2391,8 @@ AWAVSPA
 AWAVAUATSPA
 xDE1
 [A\A]A^A_]
-tMUH
-t<E1
+tGUH
+t6E1
 AWAVSPf
 [A^A_]
 AWAVAUATSPE
@@ -2419,8 +2415,8 @@ AWAVSH
 [A^A_]
 AVSL
 [A^]
-AWAVATS
-[A\A^A_]
+AWAVSP
+[A^A_]
 AWAVSH
 [A^A_]
 [A^]
@@ -2471,7 +2467,6 @@ D$@H
 d$ M
 X[A\A]A^A_]
 AWAVSH
-Lc5{
 x(Hc
 VUUUH
 X[A^A_]
@@ -2521,11 +2516,15 @@ AWAVSPH
 [A^A_]
 AWAVATSI
 D$ M
-~_Lc
+@H9L
 [A\A^A_]
 [A\A^A_]
 \K8f
+AVSH
 *H@H
+[A^]
+[A^]
+[A^]
 AWAVAUATSH
 [A\A]A^A_]
 AWAVATSH
@@ -2590,7 +2589,6 @@ AWAVAUATSPI
 AVSH
 [A^]
 AVSI
-F(I9F
 [A^]
 [A^]
 AWAVSPI
@@ -2632,7 +2630,21 @@ AVSH
 gffffff
 [A^]
 AWAVAUATSH
+t$(I
+D$HI
+D$@I
+D$8I
+D$(I
+L$0I
+D$HH
+D$@H
+D$8H
+L$0I
 W(L9
+D$(H
+D$ H
+D$ I
+(L9e
 X[A\A]A^A_]
 X[A\A]A^A_]
 X[A\A]A^A_]
@@ -2663,7 +2675,7 @@ t<UH
 AVSH
 [A^]
 AWAVSPI
-<u4H
+<u8H
 [A^A_]
 AWAVATSE1
 [A\A^A_]
@@ -2732,8 +2744,8 @@ Steam
 steamwebhelper
 Steam Helper
 cefwebhelper
-Dec 20 2023
-11:04:45
+Jan  3 2024
+16:20:02
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 CatchAndWriteContext_t::Invoke with bogus argc/argv
@@ -3525,8 +3537,8 @@ UllisecondsMultiplier
 ProfilesRunningCount
 UManager
 Uile
-Bjtt
-Dvvh
+Njtt
+Nvvh
 LAA~{
 23.5/+
 GG>.1i1
@@ -4110,31 +4122,34 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-*XY{
-W&S	
-j;DO
-SwYR
-3:J5n
- w	I
-C 2pL
-'[ M
+QX:wn
++pXZx
+:!m+ 
+2=Hf
+2W K
+6OQN
+W1TTG
+\	UQ}qo
+Q2dq
+'9dN
 xb25
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-0~9=
-	~)e
-#0|/
-G@EV
-h"KW
-^3qVB
-n2MK&
-g)El
-*z8 
-hTso
-qG,Gu
-EB@U
+A,m[
+M;jZ[
+/4<&
+|Qgg
+,:Be
+;o,E
+`2u?"
+\.s9_
+`NI_
+p9=GDmNO
+2;4I
+He;@
+r^!~{
 ."-'
 H}ni
 R@	?
@@ -4193,7 +4208,8 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231220190447Z0/
+240104002005Z0/
+#-9'*
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -4201,21 +4217,19 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		ioclxKPRgqntVJAoSJ5wg1kDFSw=
+		zbZE7pu/jk9R3zdSZN8nwRgwJaA=
 		</data>
 		<data>
-		CqzPqMmhFS1zioTqLnk21ijkTfk=
+		Cl/eIy05JyoH2IWpiOYIw7paOSg=
 		</data>
 	</array>
 </dict>
 </plist>
-t";]
-xY3@$
-zk#_
-lM@x
-&	m+oP
->(mG
-20231220190514Z0
+OiB=Cl
+C%Sfc
+b?je)5
+JB#<HP
+20240104002156Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
@@ -4274,12 +4288,9 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231220190514Z0#
-!fp}
-%tKp
-a1BM
-BQU+
-hk&J
+240104002156Z0#
+BdUgs
+*|tV
 __TEXT
 __text
 __TEXT
@@ -4316,27 +4327,26 @@ __common
 __DATA
 __LINKEDIT
 @loader_path/libtier0_s.dylib
-ii<3
 @loader_path/crashhandler.dylib
 /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
 /usr/lib/libc++.1.dylib
 /usr/lib/libSystem.B.dylib
 /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
- h	0
-#8) W	0
+6`h	P
+#8) X	0
 bU9(
 bU9(
 T		@9?
 5'qHs
-	(B)J
+$B))
 ?i(8
 kjh8k
 ?i(8
 i+8,
 (a@9
 5(	@
-[	\!
-[	\!
+]	\!
+\	\!
 ThZ@
 ThZ@
 TiZ@
@@ -4355,12 +4365,10 @@ ii8J
 <l9@
 +ih8J	
 T+	@
-09`I
 @9?q
 @9_q
 jt8 
 "J9h
-4aQ	
 h"R9(
 RHk88Z
 b2@9
@@ -4394,8 +4402,7 @@ h2@9
 5h2@9
 0@9H
 0@9H
-Q+}@
-Th&Y
+Ti"Y
 4h"@
 Th&Y
 T		@
@@ -4408,6 +4415,7 @@ ib@9
 ?k<8
 4j"@
 TW1@
+a^XM
 o( `
 3IYi
 SHYh
@@ -4488,8 +4496,8 @@ Steam
 steamwebhelper
 Steam Helper
 cefwebhelper
-Dec 20 2023
-11:04:45
+Jan  3 2024
+16:20:02
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 CatchAndWriteContext_t::Invoke with bogus argc/argv
@@ -4681,8 +4689,8 @@ WARNING: Disabling vprof spike dumping and stopping profile for thread %d - %s b
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/vprof.h
 m_nRecursions > 0
 m_pszName
-EP\VV
-DPI12CStdMemAlloc
+DO[UU
+COH12CStdMemAlloc
 9IMemAlloc
 N16SteamThreadTools7CThreadE
 QkkXa
@@ -5856,33 +5864,33 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-E[l	
-}86?
-ZJwBH9"
-e@V=
-\/t_j
-zYO:
-ib_y
-!oo/b
+30?}!
+T!!E
+)Wh8
+werE
+@h2:
+<~&%L:
+Fy`O
+s7jXH@
 ]n4-
 Ka$}
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-;s+!
-,,@Y
-8D1Q
-o,Iq
-r?>r
-O?G0
-/p({
-y4Uu'
-`;/	
-C:"$
-\'N%
-1Jfw
-WgRd
+cFDeP
+C'CA
+5eUxD
+<.&U
+QNX#v
+=K-'
+T[K)
+r"gh
+~$hM
+QdZ+
+N}.^
+FdU[
+9I8$
 y8~C
 !n8a
 U.%+3
@@ -5941,9 +5949,8 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231220190447Z0/
-_mo+0-
-x|t^
+240104002005Z0/
+ {E[A
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -5951,41 +5958,37 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		f74RPRUOK7Dr/ukrjP4Up19tbys=
+		cv4kVwDtBBbzOgzxvmr2ZBAUSh4=
 		</data>
 		<data>
-		MavxQu0FeKaym3h8dF7uVl8U8WI=
+		+/+3V3mJJtYh+7Huz3mSzQ1FwUs=
 		</data>
 	</array>
 </dict>
 </plist>
-Qg*2
-9t\K
-x;MU
-kVm|,
-%RB_
-$o+N
-20231220190514Z0
+;WQt
+Lp`]
+20240104002156Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231214211511Z
-240125211510Z0B1
-Timestamp Signer NWK11
+231214210037Z
+240125210036Z0B1
+Timestamp Signer NWK21
 Apple Inc.1
-7_haJ
-r}z0
-*ss?
-,$.Y
+`\ju
+zDi	N
+Ip/?y
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-Ygl=#
-ywSr$
-i+3t'e
-\W$"
+D(*T
+|%bC
+6vO:
+`;X)
+R{F0
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -6024,5 +6027,9 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231220190514Z0#
-"R$@
+240104002156Z0#
+3ZW3
+I$ux
+Q^m;
+tS88
+Ae5Fk

@@ -2,8 +2,6 @@ __TEXT
 
 __text
 __TEXT
-`~
-`~
 __stubs
 __TEXT
 __stub_helper
@@ -21,7 +19,7 @@ __TEXT
 __gcc_except_tab__TEXT
 __unwind_info
 __TEXT
-Hf
+df
 __DATA
 __nl_symbol_ptr
 __DATA
@@ -867,8 +865,6 @@ N6google8protobuf2io14ErrorCollectorE
 18CUtlCharConversion
 19CUtlNoEscConversion
 14CUtlMemoryBase
-arrURLs
-T@"NSArray",R,N,V_arrURLs
 en_US
 r
 com.valvesoftware.steam.ipctool
@@ -2073,6 +2069,8 @@ type() == TYPE_FIXED64
 google/protobuf/unknown_field_set.cc
 CHECK failed: !fields_.empty():
 CHECK failed: (TYPE_LENGTH_DELIMITED) == (type()):
+CHECK failed: *ptr:
+CHECK failed: (overrun) <= (kSlopBytes):
 Can't happen
 google/protobuf/wire_format.cc
 Extensions of MessageSets must be optional messages.
@@ -2416,27 +2414,20 @@ id
 @
 
 @
+,
+
+
+~
 @
-)
 
-
-
-
-@
-Ic
-v
-n
-1
-
-
-
-
-
-
+F
+G
+_
 
 0
 0
-C
+
+
 Hi
 `
 0
@@ -2449,6 +2440,7 @@ AT=
 D
 @
 @
+
 
 
 @
@@ -2484,15 +2476,17 @@ IcE
 @
 V
 =
+N
 =
 !
+@
 @
 &
 @
 M9e
 @
 @
-Z
+
 ?
 ?
 ?
@@ -2505,12 +2499,14 @@ Z
 ?
 ?
 :
-G
 ?
 ?
 ?
 
-/
+=
+Ic]
+Hc
+Ic
 @
 @
 @
