@@ -4563,19 +4563,10 @@ html.responsive.touch
   box-sizing: border-box;
   margin-top: 16px;
   margin-bottom: 18px;
+  gap: 15px;
 }
 .dailydealeditor_ButtonRow_2fO-C .dailydealeditor_DashLink_1Xkkb {
   margin-bottom: 0px;
-}
-.dailydealeditor_ButtonRow_2fO-C .dailydealeditor_ButtonRowSpacer_3PObg {
-  flex-grow: 1;
-}
-.dailydealeditor_ButtonRow_2fO-C button.DialogButton {
-  width: 25%;
-  margin-left: 18px;
-}
-.dailydealeditor_ButtonRow_2fO-C button.DialogButton.Primary {
-  margin-left: 0px;
 }
 .dailydealeditor_DDAdminColums_1KdA5 {
   display: flex;
@@ -4595,6 +4586,9 @@ html.responsive.touch
 .dailydealeditor_DiscountEventCtn_2Pk6W {
   background-color: #2e3138;
   margin-top: 8px;
+}
+.dailydealeditor_DeleteDialogBody_144lk {
+  padding-top: 20px;
 }
 .dailydealarchives_SearchCtn_1xsEI {
   margin-top: 30px;
@@ -6214,7 +6208,7 @@ button.rbc-input::-moz-focus-inner {
   flex-direction: row;
 }
 .invitesdashboard_InviteItemAdminList_eCacw {
-  padding: 5px 0px;
+  padding: 5px;
 }
 .invitesdashboard_InvitePageHeader_1rKT2 .invitesdashboard_InviteTitle_2k3HT {
   color: #fff;
