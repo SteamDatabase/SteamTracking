@@ -35396,7 +35396,7 @@
                       C.push({
                         purchase_state: 5,
                         notice_text: (0, S.Xx)(
-                          "#Cart_Warning_NoRefunds_LineItem",
+                          "#Cart_Warning_NoRefund_LineItem",
                         ),
                       }),
                     C
