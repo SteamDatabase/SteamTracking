@@ -4,10 +4,10 @@
   self.webpackChunkappmgmt_storeadmin || []).push([
   [2522],
   {
-    64738: (e) => {
+    57410: (e) => {
       e.exports = { "duration-app-launch": "800ms" };
     },
-    38735: (e) => {
+    96829: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         TopCapsule: "sharedappdetailsheader_TopCapsule_2meE3",
@@ -68,7 +68,7 @@
         TopGradient: "sharedappdetailsheader_TopGradient_2qcOu",
       };
     },
-    53738: (e) => {
+    75811: (e) => {
       e.exports = {
         Container: "fakeappdetailsrow_Container_ImYU5",
         StickyHeader: "fakeappdetailsrow_StickyHeader_2C2bs",
@@ -122,7 +122,7 @@
         ButtonText: "fakeappdetailsrow_ButtonText_3PV-5",
       };
     },
-    64122: (e) => {
+    23773: (e) => {
       e.exports = {
         GameList: "fakegamelist_GameList_2Ke99",
         GameListEntry: "fakegamelist_GameListEntry_14lr0",
@@ -133,7 +133,7 @@
         GameIconPlaceholder: "fakegamelist_GameIconPlaceholder_2AyMQ",
       };
     },
-    72201: (e) => {
+    69067: (e) => {
       e.exports = {
         LogoEditorContainer: "logoeditor_LogoEditorContainer_3G8aW",
         LogoEditorHeaderContainer: "logoeditor_LogoEditorHeaderContainer_31GWs",
@@ -160,13 +160,13 @@
         Instructions: "logoeditor_Instructions_HQq3b",
       };
     },
-    95872: (e, t, o) => {
+    54357: (e, t, o) => {
       "use strict";
       o.d(t, { x: () => n });
-      var s = o(33940),
-        a = o(89526),
-        i = o(4306),
-        r = o(85246);
+      var s = o(85556),
+        a = o(47427),
+        i = o(20417),
+        r = o(45492);
       class n extends a.Component {
         constructor() {
           super(...arguments),
@@ -225,12 +225,12 @@
       (0, s.gn)([i.ak], n.prototype, "BindCanvasRef", null),
         (0, s.gn)([i.ak], n.prototype, "updateCanvas", null);
     },
-    87178: (e, t, o) => {
+    28918: (e, t, o) => {
       "use strict";
       o.d(t, { j: () => r });
-      var s = o(33940),
-        a = o(89526),
-        i = o(4306);
+      var s = o(85556),
+        a = o(47427),
+        i = o(20417);
       class r extends a.Component {
         constructor(e) {
           super(e),
@@ -294,7 +294,7 @@
       }
       (0, s.gn)([i.ak], r.prototype, "OnImageError", null);
     },
-    37541: (e, t, o) => {
+    49575: (e, t, o) => {
       "use strict";
       o.r(t),
         o.d(t, {
@@ -302,25 +302,25 @@
           LogoEditor: () => oe,
           LogoEditorPopup: () => te,
         });
-      var s = o(33940),
-        a = o(89526),
-        i = o(24470),
-        r = o(52868),
+      var s = o(85556),
+        a = o(47427),
+        i = o(24522),
+        r = o(80751),
         n = o.n(r),
-        l = o(88464),
-        p = o(1981),
-        d = o(4306),
-        c = o(87178),
-        h = o(23801),
-        g = o(19304),
-        m = o(95872),
-        u = o(85246),
-        _ = o(38735),
+        l = o(27605),
+        p = o(58747),
+        d = o(20417),
+        c = o(28918),
+        h = o(62210),
+        g = o(13129),
+        m = o(54357),
+        u = o(45492),
+        _ = o(96829),
         P = o.n(_),
-        f = o(64738),
+        f = o(57410),
         L = o.n(f),
-        E = o(75962),
-        C = o(99825);
+        E = o(14609),
+        C = o(23163);
       const S = {
           exit: P().FullscreenExitStart,
           exitActive: P().FullscreenExitActive,
@@ -1303,7 +1303,7 @@
           ),
         );
       }
-      var A = o(59621);
+      var A = o(54842);
       class D {
         constructor(e) {
           (this.m_logoPosition = void 0),
@@ -1344,11 +1344,11 @@
         }
       }
       (0, s.gn)([A.LO], D.prototype, "m_logoPosition", void 0);
-      var M = o(72201),
+      var M = o(69067),
         H = o.n(M),
-        U = o(53738),
+        U = o(75811),
         G = o.n(U),
-        F = o(701);
+        F = o(62613);
       function z() {
         return a.createElement(
           a.Fragment,
@@ -1490,7 +1490,7 @@
           ),
         );
       }
-      var $ = o(64122),
+      var $ = o(23773),
         V = o.n($);
       class J extends a.Component {
         OnHighlightRef(e) {
@@ -1523,10 +1523,10 @@
           );
         }
       }
-      var j = o(14826),
-        K = o(32765),
-        Q = o(69338),
-        q = o(22444);
+      var j = o(31846),
+        K = o(37563),
+        Q = o(46882),
+        q = o(53040);
       function ee(e, t) {
         const o = (0, K.kQ)("editorconfig", t);
         let s = new D(o);

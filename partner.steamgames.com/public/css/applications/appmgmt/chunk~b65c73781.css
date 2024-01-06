@@ -492,7 +492,7 @@
   font-size: 14px;
 }
 .discountcustomdialog_CreateCustomDiscountCtn_2T8Dy input:disabled {
-  background-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
   border: 1px solid rgba(59, 63, 72, 0.5);
   padding: 10px;
   font-size: 14px;
@@ -515,7 +515,7 @@
 .discountcustomdialog_DiscountHelperCtn_3B4DZ:after {
   right: 100%;
   top: 50%;
-  border: solid rgba(0, 0, 0, 0);
+  border: solid transparent;
   content: "";
   height: 0;
   width: 0;
@@ -847,7 +847,7 @@
   .tabulator-col-content
   .tabulator-header-filter
   input:focus {
-  box-shadow: inset 1px 1px 4px rgba(0, 0, 0, 0.6666666667);
+  box-shadow: inset 1px 1px 4px #000a;
 }
 .tabulator.tabulator
   .tabulator-header.tabulator-header
@@ -1569,7 +1569,7 @@ div.savetoolbar_HoverToolTip_gba9O {
   flex-direction: column;
   min-height: 100px;
   height: 100%;
-  border: 1px solid rgba(0, 0, 0, 0);
+  border: 1px solid transparent;
   padding: 7px;
   box-sizing: border-box;
   font-weight: 400;
@@ -1854,7 +1854,7 @@ div.savetoolbar_HoverToolTip_gba9O {
 .singleeventdetails_SingleEventDetailsCtn_381ib:after {
   right: 100%;
   top: 17px;
-  border: solid rgba(0, 0, 0, 0);
+  border: solid transparent;
   content: "";
   height: 0;
   width: 0;
@@ -2007,7 +2007,7 @@ div.savetoolbar_HoverToolTip_gba9O {
   margin: 0 16px;
   padding: 4px 12px;
   cursor: pointer;
-  border-bottom: 4px solid rgba(0, 0, 0, 0);
+  border-bottom: 4px solid transparent;
   transition-property: border-bottom-color;
   transition-duration: 0.25s;
   font-size: 14px;
@@ -3961,7 +3961,7 @@ html.responsive.touch
   padding: 1px;
   left: 10px;
   margin-bottom: 14px;
-  border-top: 1px solid rgba(0, 0, 0, 0);
+  border-top: 1px solid transparent;
 }
 .artworkuploader_PreviewImgInfo_3Iv_t:hover {
   background-color: #000;
@@ -4296,7 +4296,7 @@ html.responsive.touch
 .promotionplaneditor_IncreaseRateInfo_39MX0:after {
   bottom: 100%;
   left: 80%;
-  border: solid rgba(0, 0, 0, 0);
+  border: solid transparent;
   content: "";
   height: 0;
   width: 0;
@@ -4472,6 +4472,13 @@ html.responsive.touch
   .dailydealadmincreatenew_NormalPrice_3WNQa {
   text-decoration: line-through;
   font-size: 12px;
+}
+.dailydealadmincreatenew_CreationDialogueBody_1Bifj {
+  padding: 20px 0;
+}
+.dailydealadmincreatenew_DiscountLimited_5k1Wu {
+  color: orange;
+  padding: 5px 0px;
 }
 .dailydealdiscounts_HoverObject_2x-6c {
   background: #2e3138;
@@ -5252,6 +5259,18 @@ html.responsive.touch
   background: #303645;
   text-align: center;
 }
+.dailydealcalendar_ConflictWarning_rvzQP {
+  display: flex;
+  flex-direction: row;
+  color: #7d5636;
+  justify-content: center;
+  font-weight: bold;
+}
+.dailydealcalendar_ConflictWarning_rvzQP svg {
+  height: 14px;
+  fill: #7d5636;
+  margin-left: 8px;
+}
 .dailydealpartnerinfo_InfoCtn_1__uv {
   display: flex;
   flex-direction: column;
@@ -5298,6 +5317,10 @@ ul li {
   font-weight: 400;
   color: #fff;
 }
+.dailydealsdashboard_DailyDeal_Container_2CWQT.dailydealsdashboard_Cancelled_1BYSD {
+  opacity: 0.3;
+  filter: saturate(0.1);
+}
 .dailydealsdashboard_DailyDeal_Container_2CWQT
   .dailydealsdashboard_AppName_YQi_M {
   color: #fff;
@@ -5334,26 +5357,26 @@ ul li {
 .dailydealsdashboard_NoScheduledDealsContainer_2gv7s {
   padding-top: 20px;
 }
-.dailydealsdashboard_PartnerDashboard_DailyDealStatusContainer_3VTwN {
+.dailydealsdashboard_DailyDealStatusContainer_3b7O9 {
   display: flex;
   flex-direction: row;
 }
-.dailydealsdashboard_PartnerDashboard_DailyDealStatusContainer_3VTwN
+.dailydealsdashboard_DailyDealStatusContainer_3b7O9
   .dailydealsdashboard_Column_3GuhU {
   display: flex;
   flex-direction: column;
   min-width: 40%;
 }
-.dailydealsdashboard_PartnerDashboard_DailyDealStatusContainer_3VTwN
+.dailydealsdashboard_DailyDealStatusContainer_3b7O9
   .dailydealsdashboard_DailyDealCheckbox_1WzIi {
   cursor: unset;
 }
-.dailydealsdashboard_PartnerDashboard_DailyDealStatusContainer_3VTwN
+.dailydealsdashboard_DailyDealStatusContainer_3b7O9
   .dailydealsdashboard_DailyDealTitle_yYzcp {
   margin-bottom: 8px;
   padding: 4px;
 }
-.dailydealsdashboard_PartnerDashboard_DailyDealStatusContainer_3VTwN
+.dailydealsdashboard_DailyDealStatusContainer_3b7O9
   .dailydealsdashboard_DailyDealButton_1MMGd {
   display: flex;
   flex-direction: row;
@@ -5365,28 +5388,28 @@ ul li {
   background: linear-gradient(90deg, #3a9bed 0%, #235ecf 100%);
   text-decoration: none;
 }
-.dailydealsdashboard_PartnerDashboard_DailyDealStatusContainer_3VTwN
+.dailydealsdashboard_DailyDealStatusContainer_3b7O9
   .dailydealsdashboard_DailyDealButton_1MMGd:hover {
   background: linear-gradient(90deg, #3a9bed 0%, #235ecf 100%);
 }
-.dailydealsdashboard_PartnerDashboard_DailyDealStatusContainer_3VTwN
+.dailydealsdashboard_DailyDealStatusContainer_3b7O9
   .dailydealsdashboard_DiscountButtonRow_2Qkeo {
   display: inline-block;
 }
-.dailydealsdashboard_PartnerDashboard_DailyDealStatusContainer_3VTwN
+.dailydealsdashboard_DailyDealStatusContainer_3b7O9
   .dailydealsdashboard_DiscountButtonRow_2Qkeo
   .dailydealsdashboard_DiscountPercentage_3yMTP {
   background-color: green;
   display: inline-block;
 }
-.dailydealsdashboard_PartnerDashboard_DailyDealStatusContainer_3VTwN
+.dailydealsdashboard_DailyDealStatusContainer_3b7O9
   .dailydealsdashboard_DiscountButtonRow_2Qkeo
   .dailydealsdashboard_EditDiscounts_1uVhk {
   background: gray;
   display: inline-block;
   margin-left: 10px;
 }
-.dailydealsdashboard_PartnerDashboard_DailyDealStatusContainer_3VTwN
+.dailydealsdashboard_DailyDealStatusContainer_3b7O9
   .dailydealsdashboard_Completed_3h1p3 {
   display: flex;
   flex-direction: column;
@@ -6404,7 +6427,7 @@ textarea.cloudlocalizedartdisplay_ArtPreview_2V4yU {
   margin: 0;
   border: none;
   border-radius: 3px;
-  box-shadow: inset 0px 0px 0px rgba(0, 0, 0, 0);
+  box-shadow: inset 0px 0px 0px #0000;
 }
 .marketingmessageeditor_CountryInOut_219uC {
   width: 30%;

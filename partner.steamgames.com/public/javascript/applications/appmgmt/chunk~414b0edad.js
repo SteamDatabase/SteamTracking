@@ -4,7 +4,7 @@
   self.webpackChunkappmgmt_storeadmin || []).push([
   [7510],
   {
-    96469: (e) => {
+    22593: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         BannerContainer: "deckverified_BannerContainer_2b4eh",
@@ -57,7 +57,7 @@
           "deckverified_DeveloperComments_LinkIcon_1cm6k",
       };
     },
-    78942: (e) => {
+    97672: (e) => {
       e.exports = {
         Dark: "footericons_Dark_2SV_e",
         Background: "footericons_Background_I3P4e",
@@ -70,14 +70,14 @@
         ChordSummary: "footericons_ChordSummary_2sFpI",
       };
     },
-    81039: (e, t, r) => {
+    4654: (e, t, r) => {
       "use strict";
       r.d(t, { sC: () => i });
-      var l = r(89526),
-        n = r(19304),
-        o = r(701),
-        a = r(59743);
-      r(14826), r(32765);
+      var l = r(47427),
+        n = r(13129),
+        o = r(62613),
+        a = r(45691);
+      r(31846), r(37563);
       l.createContext({ bShowCompatInfo: !1 });
       const i = (e) => {
           const t = ((r = e.category), c[r] || o.z5E);
@@ -91,20 +91,20 @@
         },
         c = { 1: o.vyu, 2: o.KKY, 3: o.YVI, 0: o.z5E };
     },
-    34768: (e, t, r) => {
+    16907: (e, t, r) => {
       "use strict";
       r.d(t, { Rd: () => R, _R: () => y, Ws: () => M });
-      var l = r(89526),
-        n = r(44026),
-        o = (r(17589), r(51438)),
-        a = (r(96572), r(81039)),
-        i = r(33940),
-        c = r(52868),
+      var l = r(47427),
+        n = r(82493),
+        o = (r(4030), r(91618)),
+        a = (r(20922), r(4654)),
+        i = r(85556),
+        c = r(80751),
         s = r.n(c),
-        C = r(23217),
-        u = r(85246),
-        m = r(4306),
-        d = r(32765);
+        C = r(16649),
+        u = r(45492),
+        m = r(20417),
+        d = r(37563);
       class p {
         GetCompatabilityResultForApp(e) {
           return this.m_mapAppResults.get(e);
@@ -206,18 +206,18 @@
         }
       }
       (0, i.gn)([m.ak], p.prototype, "LoadAppCompabitilityResult", null);
-      var g = r(22444),
-        f = r(67736),
-        H = r(701),
-        v = r(14965),
-        w = r(69338),
-        h = r(19304),
-        L = r(60161),
-        V = r(14826),
-        E = r(81349),
-        k = r(96469),
+      var g = r(53040),
+        f = r(77178),
+        H = r(62613),
+        v = r(76756),
+        w = r(46882),
+        h = r(13129),
+        L = r(50423),
+        V = r(31846),
+        E = r(45284),
+        k = r(22593),
         b = r.n(k),
-        _ = r(57742);
+        _ = r(90069);
       function M(e) {
         var t;
         const { storeItem: r } = e;
@@ -364,22 +364,22 @@
         }
       }
     },
-    14965: (e, t, r) => {
+    76756: (e, t, r) => {
       "use strict";
       r.r(t), r.d(t, { default: () => re });
       var l,
-        n = r(89526),
-        o = r(14826),
-        a = r(32765),
-        i = r(51438),
-        c = r(96469),
+        n = r(47427),
+        o = r(31846),
+        a = r(37563),
+        i = r(91618),
+        c = r(22593),
         s = r.n(c),
-        C = r(34329),
-        u = r(701),
-        m = r(33940),
-        d = r(8179),
-        p = r(50454),
-        g = r(4306);
+        C = r(47144),
+        u = r(62613),
+        m = r(85556),
+        d = r(15633),
+        p = r(68785),
+        g = r(20417);
       function f(e) {
         switch (e) {
           case d.eV.OK:
@@ -575,9 +575,9 @@
         (0, m.gn)([g.ak], H.prototype, "SetActionDescriptionsFromMap", null);
       var v,
         w,
-        h = r(78942),
+        h = r(97672),
         L = r.n(h),
-        V = r(19304);
+        V = r(13129);
       function E(e) {
         switch (e) {
           case w.Small:
@@ -2143,7 +2143,7 @@
             (e[(e.Medium = 1)] = "Medium"),
             (e[(e.Large = 2)] = "Large");
         })(w || (w = {}));
-      var te = r(34768);
+      var te = r(16907);
       function re(e) {
         var t, r;
         const {

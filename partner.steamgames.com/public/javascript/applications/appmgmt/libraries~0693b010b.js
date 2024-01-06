@@ -5,12 +5,12 @@
   self.webpackChunkappmgmt_storeadmin || []).push([
   [8389],
   {
-    14596: (e, r, t) => {
+    23309: (e, r, t) => {
       t.d(r, { n: () => c, z: () => o });
-      var i = t(45878),
-        a = t(50995),
-        n = t(68333),
-        s = t(85251);
+      var i = t(10059),
+        a = t(39087),
+        n = t(21928),
+        s = t(80002);
       const l = i.Message;
       class o extends l {
         static ImplementsStaticInterface() {}
@@ -83,7 +83,7 @@
         };
       })(c || (c = {}));
     },
-    85251: (e, r, t) => {
+    80002: (e, r, t) => {
       t.d(r, {
         Qn: () => O,
         VJ: () => J,
@@ -94,10 +94,10 @@
         eK: () => C,
         oY: () => v,
       });
-      var i = t(45878),
-        a = t(50995),
-        n = t(68333),
-        s = t(56305);
+      var i = t(10059),
+        a = t(39087),
+        n = t(21928),
+        s = t(38079);
       const l = i.Message;
       class o extends l {
         static ImplementsStaticInterface() {}
@@ -3163,12 +3163,12 @@
           });
       })(J || (J = {}));
     },
-    63261: (e, r, t) => {
-      var i = t(45878),
-        a = t(50995),
-        n = t(68333),
-        s = t(56305),
-        l = t(85251);
+    44922: (e, r, t) => {
+      var i = t(10059),
+        a = t(39087),
+        n = t(21928),
+        s = t(38079),
+        l = t(80002);
       const o = i.Message;
       class c extends o {
         static ImplementsStaticInterface() {}

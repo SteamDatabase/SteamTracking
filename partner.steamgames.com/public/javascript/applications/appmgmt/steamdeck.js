@@ -5,10 +5,10 @@
   self.webpackChunkappmgmt_storeadmin || []).push([
   [6699],
   {
-    96405: (r, s, e) => {
+    2157: (r, s, e) => {
       e.r(s), e.d(s, { default: () => n });
-      var o = e(89526),
-        t = e(14965);
+      var o = e(47427),
+        t = e(76756);
       function n(r) {
         var s, e;
         const { dataprops: n, results: a } = r;
@@ -28,11 +28,11 @@
         return d ? o.createElement(t.default, { results: d }) : null;
       }
     },
-    23217: (r, s, e) => {
+    16649: (r, s, e) => {
       e.d(s, { l: () => a });
-      var o = e(52868),
+      var o = e(80751),
         t = e.n(o),
-        n = e(68333);
+        n = e(21928);
       function a(r) {
         if (t().isCancel(r))
           return { strErrorMsg: "Action Cancelled:" + r, errorCode: 52 };

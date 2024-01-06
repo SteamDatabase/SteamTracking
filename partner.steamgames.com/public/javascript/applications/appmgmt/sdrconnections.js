@@ -4,7 +4,7 @@
   self.webpackChunkappmgmt_storeadmin || []).push([
   [4935],
   {
-    45194: (e) => {
+    79308: (e) => {
       e.exports = {
         SDRConnectionsAppCtn: "connections_SDRConnectionsAppCtn_3Vqm_",
         SDRConnectionsAppTitle: "connections_SDRConnectionsAppTitle_1VJcG",
@@ -54,12 +54,12 @@
         ClientIPInfo: "connections_ClientIPInfo_1IW5o",
       };
     },
-    23217: (e, t, n) => {
+    16649: (e, t, n) => {
       "use strict";
       n.d(t, { l: () => l });
-      var s = n(52868),
+      var s = n(80751),
         a = n.n(s),
-        r = n(68333);
+        r = n(21928);
       function l(e) {
         if (a().isCancel(e))
           return { strErrorMsg: "Action Cancelled:" + e, errorCode: 52 };
@@ -130,22 +130,22 @@
           : { strErrorMsg: "Unknown Error: " + e, errorCode: 2 };
       }
     },
-    94527: (e, t, n) => {
+    21452: (e, t, n) => {
       "use strict";
       n.r(t), n.d(t, { default: () => w });
-      var s = n(33940),
-        a = n(52868),
+      var s = n(85556),
+        a = n(80751),
         r = n.n(a),
-        l = n(89526),
-        c = n(19304),
-        o = n(59934),
-        i = n(22444),
-        m = n(17547),
-        d = n(23217),
-        u = n(32765),
-        p = n(45194),
-        _ = n(69338),
-        E = n(72120);
+        l = n(47427),
+        c = n(13129),
+        o = n(8285),
+        i = n(53040),
+        m = n(10162),
+        d = n(16649),
+        u = n(37563),
+        p = n(79308),
+        _ = n(46882),
+        E = n(12251);
       function f(e) {
         return l.createElement(
           "span",

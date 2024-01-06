@@ -4,7 +4,7 @@
   self.webpackChunkappmgmt_storeadmin || []).push([
   [3863],
   {
-    91990: (a) => {
+    92151: (a) => {
       a.exports = {
         DailyDealInvite: "publisherdashboardlanding_DailyDealInvite_3eCJT",
         Title: "publisherdashboardlanding_Title_3se9d",
@@ -13,14 +13,14 @@
           "publisherdashboardlanding_ButtonDailyDealDashboard_2rZlP",
       };
     },
-    1495: (a, e, l) => {
+    94912: (a, e, l) => {
       "use strict";
       l.r(e), l.d(e, { default: () => d });
-      var i = l(89526),
-        n = l(32765),
-        t = l(91990),
-        s = l(14826),
-        r = l(22444);
+      var i = l(47427),
+        n = l(37563),
+        t = l(92151),
+        s = l(31846),
+        r = l(53040);
       function d(a) {
         const e = (0, n.kQ)("rgDailyDealInvitations", "application_config");
         return (null == e ? void 0 : e.length) > 0

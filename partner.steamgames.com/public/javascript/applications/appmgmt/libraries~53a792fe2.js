@@ -4,7 +4,7 @@
   self.webpackChunkappmgmt_storeadmin || []).push([
   [4309, 9035],
   {
-    50132: function (e, t, o) {
+    21807: function (e, t, o) {
       /*!
        * @overview es6-promise - a tiny implementation of Promises/A+.
        * @copyright Copyright (c) 2014 Yehuda Katz, Tom Dale, Stefan Penner and contributors (Conversion to ES6 API by Jake Archibald)
@@ -451,11 +451,11 @@
         );
       })();
     },
-    54905: function (e, t) {
+    25307: function (e, t) {
       var o, i, n;
       /* @license
 Papa Parse
-v5.3.2
+v5.4.1
 https://github.com/mholt/PapaParse
 License: MIT
 */ (i = []),
@@ -470,7 +470,7 @@ License: MIT
                 ? t
                 : {},
             o = !t.document && !!t.postMessage,
-            i = o && /blob:/i.test((t.location || {}).protocol),
+            i = t.IS_PAPA_WORKER || !1,
             n = {},
             r = 0,
             s = {
@@ -491,9 +491,15 @@ License: MIT
                         (i = e.toString()),
                         s.BLOB_URL ||
                           (s.BLOB_URL = o.createObjectURL(
-                            new Blob(["(", i, ")();"], {
-                              type: "text/javascript",
-                            }),
+                            new Blob(
+                              [
+                                "var global = (function() { if (typeof self !== 'undefined') { return self; } if (typeof window !== 'undefined') { return window; } if (typeof global !== 'undefined') { return global; } return {}; })(); global.IS_PAPA_WORKER=true; ",
+                                "(",
+                                i,
+                                ")();",
+                              ],
+                              { type: "text/javascript" },
+                            ),
                           ))),
                       l = new t.Worker(a);
                     return (l.onmessage = g), (l.id = r++), (n[l.id] = l);
@@ -515,7 +521,10 @@ License: MIT
                 return (
                   s.NODE_STREAM_INPUT,
                   "string" == typeof o
-                    ? (p = i.download ? new u(i) : new d(i))
+                    ? ((o = (function (e) {
+                        return 65279 === e.charCodeAt(0) ? e.slice(1) : e;
+                      })(o)),
+                      (p = i.download ? new u(i) : new d(i)))
                     : !0 === o.readable && E(o.read) && E(o.on)
                     ? (p = new h(i))
                     : ((t.File && o instanceof File) || o instanceof Object) &&
@@ -1026,7 +1035,7 @@ License: MIT
               r = -n,
               a = /^\s*-?(\d+\.?|\.\d+|\d+\.\d+)([eE][-+]?\d+)?\s*$/,
               l =
-                /^(\d{4}-[01]\d-[0-3]\dT[0-2]\d:[0-5]\d:[0-5]\d\.\d+([+-][0-2]\d:[0-5]\d|Z))|(\d{4}-[01]\d-[0-3]\dT[0-2]\d:[0-5]\d:[0-5]\d([+-][0-2]\d:[0-5]\d|Z))|(\d{4}-[01]\d-[0-3]\dT[0-2]\d:[0-5]\d([+-][0-2]\d:[0-5]\d|Z))$/,
+                /^((\d{4}-[01]\d-[0-3]\dT[0-2]\d:[0-5]\d:[0-5]\d\.\d+([+-][0-2]\d:[0-5]\d|Z))|(\d{4}-[01]\d-[0-3]\dT[0-2]\d:[0-5]\d:[0-5]\d([+-][0-2]\d:[0-5]\d|Z))|(\d{4}-[01]\d-[0-3]\dT[0-2]\d:[0-5]\d([+-][0-2]\d:[0-5]\d|Z)))$/,
               u = this,
               c = 0,
               d = 0,
@@ -1301,149 +1310,172 @@ License: MIT
               "\n" !== i && "\r" !== i && "\r\n" !== i && (i = "\n");
             var c = 0,
               d = !1;
-            (this.parse = function (e, s, h) {
-              if ("string" != typeof e)
+            (this.parse = function (s, h, p) {
+              if ("string" != typeof s)
                 throw new Error("Input must be a string");
-              var p = e.length,
-                f = o.length,
-                g = i.length,
-                b = n.length,
-                v = E(r),
-                y = [],
+              var f = s.length,
+                g = o.length,
+                b = i.length,
+                v = n.length,
+                y = E(r),
                 w = [],
                 C = [],
-                x = (c = 0);
-              if (!e) return F();
-              if (l || (!1 !== l && -1 === e.indexOf(t))) {
-                for (var R = e.split(i), M = 0; M < R.length; M++) {
-                  if (((C = R[M]), (c += C.length), M !== R.length - 1))
+                x = [],
+                R = (c = 0);
+              if (!s) return Y();
+              if (e.header && !h) {
+                var M = s.split(i)[0].split(o),
+                  D = [],
+                  L = {},
+                  T = !1;
+                for (var k in M) {
+                  var S = M[k];
+                  E(e.transformHeader) && (S = e.transformHeader(S, k));
+                  var _ = S,
+                    z = L[S] || 0;
+                  for (
+                    0 < z && ((T = !0), (_ = S + "_" + z)), L[S] = z + 1;
+                    D.includes(_);
+
+                  )
+                    _ = _ + "_" + z;
+                  D.push(_);
+                }
+                if (T) {
+                  var P = s.split(i);
+                  (P[0] = D.join(o)), (s = P.join(i));
+                }
+              }
+              if (l || (!1 !== l && -1 === s.indexOf(t))) {
+                for (var A = s.split(i), H = 0; H < A.length; H++) {
+                  if (((x = A[H]), (c += x.length), H !== A.length - 1))
                     c += i.length;
-                  else if (h) return F();
-                  if (!n || C.substring(0, b) !== n) {
-                    if (v) {
-                      if (((y = []), z(C.split(o)), O(), d)) return F();
-                    } else z(C.split(o));
-                    if (a && a <= M) return (y = y.slice(0, a)), F(!0);
+                  else if (p) return Y();
+                  if (!n || x.substring(0, v) !== n) {
+                    if (y) {
+                      if (((w = []), V(x.split(o)), q(), d)) return Y();
+                    } else V(x.split(o));
+                    if (a && a <= H) return (w = w.slice(0, a)), Y(!0);
                   }
                 }
-                return F();
+                return Y();
               }
               for (
-                var D = e.indexOf(o, c),
-                  L = e.indexOf(i, c),
-                  T = new RegExp(m(u) + m(t), "g"),
-                  k = e.indexOf(t, c);
+                var F = s.indexOf(o, c),
+                  O = s.indexOf(i, c),
+                  N = new RegExp(m(u) + m(t), "g"),
+                  I = s.indexOf(t, c);
                 ;
 
               )
-                if (e[c] !== t)
-                  if (n && 0 === C.length && e.substring(c, c + b) === n) {
-                    if (-1 === L) return F();
-                    (c = L + g), (L = e.indexOf(i, c)), (D = e.indexOf(o, c));
-                  } else if (-1 !== D && (D < L || -1 === L))
-                    C.push(e.substring(c, D)),
-                      (c = D + f),
-                      (D = e.indexOf(o, c));
+                if (s[c] !== t)
+                  if (n && 0 === x.length && s.substring(c, c + v) === n) {
+                    if (-1 === O) return Y();
+                    (c = O + b), (O = s.indexOf(i, c)), (F = s.indexOf(o, c));
+                  } else if (-1 !== F && (F < O || -1 === O))
+                    x.push(s.substring(c, F)),
+                      (c = F + g),
+                      (F = s.indexOf(o, c));
                   else {
-                    if (-1 === L) break;
-                    if ((C.push(e.substring(c, L)), H(L + g), v && (O(), d)))
-                      return F();
-                    if (a && y.length >= a) return F(!0);
+                    if (-1 === O) break;
+                    if ((x.push(s.substring(c, O)), U(O + b), y && (q(), d)))
+                      return Y();
+                    if (a && w.length >= a) return Y(!0);
                   }
                 else
-                  for (k = c, c++; ; ) {
-                    if (-1 === (k = e.indexOf(t, k + 1)))
+                  for (I = c, c++; ; ) {
+                    if (-1 === (I = s.indexOf(t, I + 1)))
                       return (
-                        h ||
-                          w.push({
+                        p ||
+                          C.push({
                             type: "Quotes",
                             code: "MissingQuotes",
                             message: "Quoted field unterminated",
-                            row: y.length,
+                            row: w.length,
                             index: c,
                           }),
-                        A()
+                        G()
                       );
-                    if (k === p - 1) return A(e.substring(c, k).replace(T, t));
-                    if (t !== u || e[k + 1] !== u) {
-                      if (t === u || 0 === k || e[k - 1] !== u) {
-                        -1 !== D && D < k + 1 && (D = e.indexOf(o, k + 1)),
-                          -1 !== L && L < k + 1 && (L = e.indexOf(i, k + 1));
-                        var S = P(-1 === L ? D : Math.min(D, L));
-                        if (e.substr(k + 1 + S, f) === o) {
-                          C.push(e.substring(c, k).replace(T, t)),
-                            e[(c = k + 1 + S + f)] !== t &&
-                              (k = e.indexOf(t, c)),
-                            (D = e.indexOf(o, c)),
-                            (L = e.indexOf(i, c));
+                    if (I === f - 1) return G(s.substring(c, I).replace(N, t));
+                    if (t !== u || s[I + 1] !== u) {
+                      if (t === u || 0 === I || s[I - 1] !== u) {
+                        -1 !== F && F < I + 1 && (F = s.indexOf(o, I + 1)),
+                          -1 !== O && O < I + 1 && (O = s.indexOf(i, I + 1));
+                        var B = W(-1 === O ? F : Math.min(F, O));
+                        if (s.substr(I + 1 + B, g) === o) {
+                          x.push(s.substring(c, I).replace(N, t)),
+                            s[(c = I + 1 + B + g)] !== t &&
+                              (I = s.indexOf(t, c)),
+                            (F = s.indexOf(o, c)),
+                            (O = s.indexOf(i, c));
                           break;
                         }
-                        var _ = P(L);
-                        if (e.substring(k + 1 + _, k + 1 + _ + g) === i) {
+                        var j = W(O);
+                        if (s.substring(I + 1 + j, I + 1 + j + b) === i) {
                           if (
-                            (C.push(e.substring(c, k).replace(T, t)),
-                            H(k + 1 + _ + g),
-                            (D = e.indexOf(o, c)),
-                            (k = e.indexOf(t, c)),
-                            v && (O(), d))
+                            (x.push(s.substring(c, I).replace(N, t)),
+                            U(I + 1 + j + b),
+                            (F = s.indexOf(o, c)),
+                            (I = s.indexOf(t, c)),
+                            y && (q(), d))
                           )
-                            return F();
-                          if (a && y.length >= a) return F(!0);
+                            return Y();
+                          if (a && w.length >= a) return Y(!0);
                           break;
                         }
-                        w.push({
+                        C.push({
                           type: "Quotes",
                           code: "InvalidQuotes",
                           message:
                             "Trailing quote on quoted field is malformed",
-                          row: y.length,
+                          row: w.length,
                           index: c,
                         }),
-                          k++;
+                          I++;
                       }
-                    } else k++;
+                    } else I++;
                   }
-              return A();
-              function z(e) {
-                y.push(e), (x = c);
+              return G();
+              function V(e) {
+                w.push(e), (R = c);
               }
-              function P(t) {
-                var o = 0;
-                if (-1 !== t) {
-                  var i = e.substring(k + 1, t);
-                  i && "" === i.trim() && (o = i.length);
+              function W(e) {
+                var t = 0;
+                if (-1 !== e) {
+                  var o = s.substring(I + 1, e);
+                  o && "" === o.trim() && (t = o.length);
                 }
-                return o;
+                return t;
               }
-              function A(t) {
+              function G(e) {
                 return (
-                  h ||
-                    (void 0 === t && (t = e.substring(c)),
-                    C.push(t),
-                    (c = p),
-                    z(C),
-                    v && O()),
-                  F()
+                  p ||
+                    (void 0 === e && (e = s.substring(c)),
+                    x.push(e),
+                    (c = f),
+                    V(x),
+                    y && q()),
+                  Y()
                 );
               }
-              function H(t) {
-                (c = t), z(C), (C = []), (L = e.indexOf(i, c));
+              function U(e) {
+                (c = e), V(x), (x = []), (O = s.indexOf(i, c));
               }
-              function F(e) {
+              function Y(e) {
                 return {
-                  data: y,
-                  errors: w,
+                  data: w,
+                  errors: C,
                   meta: {
                     delimiter: o,
                     linebreak: i,
                     aborted: d,
                     truncated: !!e,
-                    cursor: x + (s || 0),
+                    cursor: R + (h || 0),
                   },
                 };
               }
-              function O() {
-                r(F()), (y = []), (w = []);
+              function q() {
+                r(Y()), (w = []), (C = []);
               }
             }),
               (this.abort = function () {
@@ -1550,7 +1582,7 @@ License: MIT
         void 0 === (n = "function" == typeof o ? o.apply(t, i) : o) ||
           (e.exports = n);
     },
-    29196: (e) => {
+    22086: (e) => {
       e.exports = (function (e) {
         var t = {};
         function o(i) {
@@ -2176,7 +2208,7 @@ License: MIT
         },
       ]);
     },
-    28838: function (e, t, o) {
+    76470: function (e, t, o) {
       "use strict";
       var i =
           (this && this.__awaiter) ||
@@ -2305,8 +2337,8 @@ License: MIT
             }
           };
       (t.__esModule = !0), (t.propsToOptions = void 0);
-      var r = o(50132),
-        s = o(73961),
+      var r = o(21807),
+        s = o(42287),
         a = function () {};
       function l(e, t) {
         return new r.Promise(function (o, i) {
@@ -2444,7 +2476,7 @@ License: MIT
         });
       };
     },
-    78848: function (e, t, o) {
+    15602: function (e, t, o) {
       "use strict";
       var i,
         n =
@@ -2623,12 +2655,12 @@ License: MIT
             }
           };
       t.__esModule = !0;
-      var l = o(89526),
-        u = o(73961),
-        c = o(29196),
-        d = o(28838),
-        h = o(3073),
-        p = o(16894),
+      var l = o(47427),
+        u = o(42287),
+        c = o(22086),
+        d = o(76470),
+        h = o(4532),
+        p = o(59072),
         m = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
@@ -2736,7 +2768,7 @@ License: MIT
         })(l.Component);
       t.default = m;
     },
-    9667: function (e, t, o) {
+    85405: function (e, t, o) {
       "use strict";
       var i,
         n =
@@ -2922,12 +2954,12 @@ License: MIT
             return e;
           };
       t.__esModule = !0;
-      var u = o(89526),
-        c = o(73961),
-        d = o(29196),
-        h = o(28838),
-        p = o(3073),
-        m = o(16894),
+      var u = o(47427),
+        c = o(42287),
+        d = o(22086),
+        h = o(76470),
+        p = o(4532),
+        m = o(59072),
         f = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
@@ -3075,7 +3107,7 @@ License: MIT
         })(u.Component);
       t.default = f;
     },
-    72576: function (e, t, o) {
+    99244: function (e, t, o) {
       "use strict";
       var i,
         n,
@@ -3113,11 +3145,11 @@ License: MIT
                   : ((o.prototype = t.prototype), new o()));
           });
       t.__esModule = !0;
-      var s = o(89526),
-        a = o(9667),
-        l = o(25348),
-        u = o(10150),
-        c = o(73066);
+      var s = o(47427),
+        a = o(85405),
+        l = o(28930),
+        u = o(20023),
+        c = o(19106);
       var d = [
           { title: "Name", field: "name", width: 150 },
           {
@@ -3145,7 +3177,7 @@ License: MIT
             field: "custom",
             hozAlign: "center",
             editor: "input",
-            formatter: o(3073).reactFormatter(
+            formatter: o(4532).reactFormatter(
               s.createElement(function (e) {
                 var t = e.cell._cell.row.data,
                   o = e.cell._cell.value || "Edit | Show";
@@ -3437,12 +3469,12 @@ License: MIT
         })(s.Component);
       t.default = f;
     },
-    3073: (e, t, o) => {
+    4532: (e, t, o) => {
       "use strict";
       (t.__esModule = !0),
         (t.reactFormatter = t.isSameObject = t.isSameArray = t.clone = void 0);
-      var i = o(89526),
-        n = o(73961);
+      var i = o(47427),
+        n = o(42287);
       function r(e) {
         var t = 0;
         return function (o, i) {
@@ -3487,7 +3519,7 @@ License: MIT
           };
         });
     },
-    25348: function (e, t, o) {
+    28930: function (e, t, o) {
       "use strict";
       var i,
         n =
@@ -3524,9 +3556,9 @@ License: MIT
                   : ((o.prototype = t.prototype), new o()));
           });
       t.__esModule = !0;
-      var r = o(89526),
-        s = o(73961),
-        a = o(1857),
+      var r = o(47427),
+        s = o(42287),
+        a = o(99021),
         l = "YYYY-MM-DD",
         u = {
           width: "100%",
@@ -3625,7 +3657,7 @@ License: MIT
         );
       };
     },
-    1857: (e, t) => {
+    99021: (e, t) => {
       "use strict";
       (t.__esModule = !0),
         (t.setGlobalDateMasks =
@@ -4033,7 +4065,7 @@ License: MIT
           setGlobalDateMasks: D,
         });
     },
-    10150: function (e, t, o) {
+    20023: function (e, t, o) {
       "use strict";
       var i,
         n =
@@ -4070,10 +4102,10 @@ License: MIT
                   : ((o.prototype = t.prototype), new o()));
           });
       t.__esModule = !0;
-      var r = o(89526),
-        s = o(73961),
-        a = o(3073),
-        l = o(79416),
+      var r = o(47427),
+        s = o(42287),
+        a = o(4532),
+        l = o(8050),
         u = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
@@ -4181,11 +4213,11 @@ License: MIT
         );
       };
     },
-    73066: (e, t, o) => {
+    19106: (e, t, o) => {
       "use strict";
       t.__esModule = !0;
-      var i = o(89526),
-        n = o(73961);
+      var i = o(47427),
+        n = o(42287);
       t.default = function (e, t, o) {
         var r = t.style || "",
           s = e.getValue() || [],
@@ -4216,7 +4248,7 @@ License: MIT
         );
       };
     },
-    20614: function (e, t, o) {
+    6683: function (e, t, o) {
       "use strict";
       var i =
         (this && this.__createBinding) ||
@@ -4239,14 +4271,14 @@ License: MIT
           t.React15Tabulator =
           t.ReactTabulator =
             void 0),
-        i(t, o(9667), "default", "ReactTabulator"),
-        i(t, o(78848), "default", "React15Tabulator"),
-        i(t, o(72576), "default", "ReactTabulatorExample"),
-        i(t, o(3073), "reactFormatter");
+        i(t, o(85405), "default", "ReactTabulator"),
+        i(t, o(15602), "default", "React15Tabulator"),
+        i(t, o(99244), "default", "ReactTabulatorExample"),
+        i(t, o(4532), "reactFormatter");
     },
-    79135: (e, t, o) => {
+    83397: (e, t, o) => {
       "use strict";
-      var i = o(89526),
+      var i = o(47427),
         n = {
           position: "absolute",
           width: 0,
@@ -4343,13 +4375,13 @@ License: MIT
         })(i.Component);
       e.exports = s;
     },
-    79416: (e, t, o) => {
+    8050: (e, t, o) => {
       "use strict";
-      var i = o(89526),
-        n = o(2652),
-        r = o(83604),
-        s = o(79135),
-        a = o(78762),
+      var i = o(47427),
+        n = o(25816),
+        r = o(12740),
+        s = o(83397),
+        a = o(90945),
         l = 13,
         u = 9,
         c = 8,
@@ -4600,9 +4632,9 @@ License: MIT
         }),
         (e.exports = m);
     },
-    78762: (e, t, o) => {
+    90945: (e, t, o) => {
       "use strict";
-      var i = o(89526);
+      var i = o(47427);
       function n(e) {
         return e.replace(/[-\\^$*+?.()|[\]{}]/g, "\\$&");
       }
@@ -4711,9 +4743,9 @@ License: MIT
       })(i.Component);
       e.exports = a;
     },
-    83604: (e, t, o) => {
+    12740: (e, t, o) => {
       "use strict";
-      var i = o(89526);
+      var i = o(47427);
       e.exports = function (e) {
         return i.createElement(
           "button",
@@ -4731,7 +4763,7 @@ License: MIT
         );
       };
     },
-    16894: (t, o, n) => {
+    59072: (t, o, n) => {
       "use strict";
       n.r(o), n.d(o, { default: () => oe });
       var r =

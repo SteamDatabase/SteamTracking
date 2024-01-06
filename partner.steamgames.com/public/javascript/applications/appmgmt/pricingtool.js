@@ -4,7 +4,7 @@
   self.webpackChunkappmgmt_storeadmin || []).push([
   [2529],
   {
-    1721: (e) => {
+    7765: (e) => {
       e.exports = {
         v6: "shared_common_v6_3r3Le",
         SubText: "shared_common_SubText_3Ctn8",
@@ -23,7 +23,7 @@
         RemoveIcon: "shared_common_RemoveIcon_1iOrE",
       };
     },
-    71641: (e) => {
+    94478: (e) => {
       e.exports = {
         PriceGuidelinesPicker: "guidelinespicker_PriceGuidelinesPicker_4Xo2k",
         GuidelinesPanel: "guidelinespicker_GuidelinesPanel_1vwM_",
@@ -33,10 +33,10 @@
         CurrentPrice: "guidelinespicker_CurrentPrice_2Addn",
       };
     },
-    7751: (e) => {
+    72938: (e) => {
       e.exports = { MoreDots: "pricingcomponents_MoreDots_2YpW8" };
     },
-    54149: (e) => {
+    2579: (e) => {
       e.exports = {
         DashboardPage: "pricingdashboard_DashboardPage_fIACD",
         DashTitle: "pricingdashboard_DashTitle_3GHz1",
@@ -48,7 +48,7 @@
         Instructions: "pricingdashboard_Instructions_1mz7G",
       };
     },
-    26231: (e) => {
+    26578: (e) => {
       e.exports = {
         PricingGridCtn: "pricinggrid_PricingGridCtn_2j-z9",
         PricingGridWrapper: "pricinggrid_PricingGridWrapper_185dc",
@@ -74,7 +74,7 @@
         ApprovedCanPublish: "pricinggrid_ApprovedCanPublish_2ejxC",
       };
     },
-    22243: (e) => {
+    75241: (e) => {
       e.exports = {
         PriceCell: "pricinggridcell_PriceCell_1sKIc",
         PricePrefix: "pricinggridcell_PricePrefix_gPcNw",
@@ -102,7 +102,7 @@
         HoverToolTip: "pricinggridcell_HoverToolTip_36qS7",
       };
     },
-    74198: (e) => {
+    21443: (e) => {
       e.exports = {
         Instructions: "pricingimportexport_Instructions_2A9me",
         ButtonRows: "pricingimportexport_ButtonRows_3Bpob",
@@ -115,7 +115,7 @@
         ParseErrors: "pricingimportexport_ParseErrors_1VTD4",
       };
     },
-    46645: (e) => {
+    71031: (e) => {
       e.exports = {
         ToolbarInfo: "saveprices_ToolbarInfo_1bPMN",
         Visible: "saveprices_Visible_CLKT9",
@@ -151,10 +151,10 @@
           "saveprices_PriceChangeSaveWarningArrow_B3-IB",
       };
     },
-    15254: (e, r, t) => {
+    88408: (e, r, t) => {
       "use strict";
       t.d(r, { K: () => a });
-      var n = t(54905),
+      var n = t(25307),
         i = t.n(n);
       class a {
         static ParseCSVFile(e) {
@@ -204,49 +204,49 @@
       }
       a.m_DummyValueForQuestionHack = 0;
     },
-    91374: (e, r, t) => {
+    22331: (e, r, t) => {
       "use strict";
       t.r(r), t.d(r, { PricingRoutes: () => Se, default: () => Ie });
-      var n = t(96927),
-        i = t(71209),
-        a = t(89526),
-        o = t(565),
-        l = t(59934),
-        c = t(82988),
-        s = t(22444),
-        d = t(54149),
+      var n = t(760),
+        i = t(69406),
+        a = t(47427),
+        o = t(28017),
+        l = t(8285),
+        c = t(71630),
+        s = t(53040),
+        d = t(2579),
         u = t.n(d),
-        m = t(19533),
-        g = t(66104),
-        P = t(62176),
-        p = t(67736),
-        _ = t(57742),
-        h = t(75962),
-        b = t(60161),
-        E = t(14826),
-        v = t(32765),
-        D = t(19304),
-        C = t(26231),
+        m = t(98061),
+        g = t(66263),
+        P = t(82416),
+        p = t(77178),
+        _ = t(90069),
+        h = t(14609),
+        b = t(50423),
+        E = t(31846),
+        v = t(37563),
+        D = t(13129),
+        C = t(26578),
         x = t.n(C),
-        f = t(22243),
+        f = t(75241),
         N = t.n(f),
-        S = t(20614),
-        I = t(3073),
-        k = t(24448),
-        w = t(17547),
-        T = t(84343),
-        B = t(93923),
-        X = t(40790),
-        y = t(33940),
-        A = t(701),
-        O = t(46645),
+        S = t(6683),
+        I = t(4532),
+        k = t(28738),
+        w = t(10162),
+        T = t(59728),
+        B = t(23121),
+        X = t(18500),
+        y = t(85556),
+        A = t(62613),
+        O = t(71031),
         G = t.n(O),
-        R = t(36998),
-        M = t(16169),
-        H = t(85651),
-        F = t(69338),
-        W = t(58218),
-        L = t(25508);
+        R = t(7073),
+        M = t(95518),
+        H = t(64936),
+        F = t(46882),
+        W = t(29480),
+        L = t(46984);
       const K = 30,
         U = 40;
       function V(e) {
@@ -860,9 +860,9 @@
             (e[(e.OK = 2)] = "OK"),
             (e[(e.Failed = 3)] = "Failed");
         })(re || (re = {}));
-      var ne = t(71169),
-        ie = (t(65131), t(17661), t(1721), t(5615)),
-        ae = t(5029);
+      var ne = t(82e3),
+        ie = (t(55215), t(69727), t(7765), t(42718)),
+        ae = t(71472);
       function oe(e) {
         return e.contains_game && e.contains_dlc
           ? "BOTH"
@@ -1257,10 +1257,10 @@
           ),
         );
       }
-      var Pe = t(36105),
+      var Pe = t(37485),
         pe = t.n(Pe),
-        _e = t(15254),
-        he = t(74198),
+        _e = t(88408),
+        he = t(21443),
         be = t.n(he);
       function Ee(e) {
         const { closeModal: r } = e,
@@ -1640,7 +1640,7 @@
           ),
         );
       }
-      var Ne = t(70903);
+      var Ne = t(9781);
       const Se = { PricingDashboard: () => "/dashboard/:publisherid(\\d*)" };
       function Ie(e) {
         return (0, Ne.N)()
@@ -1671,16 +1671,16 @@
           : null;
       }
     },
-    71169: (e, r, t) => {
+    82e3: (e, r, t) => {
       "use strict";
       t.d(r, { G: () => u, T: () => d });
-      var n = t(89526),
-        i = t(7751),
+      var n = t(47427),
+        i = t(72938),
         a = t.n(i),
-        o = t(701),
-        l = t(19304),
-        c = t(894),
-        s = t(69206);
+        o = t(62613),
+        l = t(13129),
+        c = t(83654),
+        s = t(37265);
       const d = new c.AN("price-grid-cell-popout-elements");
       function u(e) {
         let { hoverKey: r, className: t, renderHover: i } = e,
@@ -1718,7 +1718,7 @@
         );
       }
     },
-    40790: (e, r, t) => {
+    18500: (e, r, t) => {
       "use strict";
       t.d(r, {
         lp: () => k,
@@ -1727,20 +1727,20 @@
         tQ: () => f,
         bm: () => N,
       });
-      var n = t(66104),
-        i = t(61785),
-        a = t(89526),
-        o = t(69206),
-        l = t(24448),
-        c = t(22444),
-        s = t(701),
-        d = t(84343),
-        u = t(19304),
-        m = t(14826),
-        g = t(40103),
-        P = t(93765),
+      var n = t(66263),
+        i = t(42006),
+        a = t(47427),
+        o = t(37265),
+        l = t(28738),
+        c = t(53040),
+        s = t(62613),
+        d = t(59728),
+        u = t(13129),
+        m = t(31846),
+        g = t(95315),
+        P = t(27241),
         p = t.n(P),
-        _ = t(71641),
+        _ = t(94478),
         h = t.n(_);
       function b(e) {
         const { packageID: r } = e,
@@ -1802,8 +1802,8 @@
           ),
         );
       }
-      var v = t(71169),
-        D = t(22243),
+      var v = t(82e3),
+        D = t(75241),
         C = t.n(D);
       function x(e) {
         const { cell: r } = e,

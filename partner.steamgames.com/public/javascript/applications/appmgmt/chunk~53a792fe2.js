@@ -4,7 +4,7 @@
   self.webpackChunkappmgmt_storeadmin || []).push([
   [5875],
   {
-    65131: (t) => {
+    55215: (t) => {
       t.exports = {
         DashboardPage: "discountdashboard_DashboardPage_353rn",
         DashTitleBar: "discountdashboard_DashTitleBar_2m-_V",
@@ -15,7 +15,7 @@
         ButtonGroup: "discountdashboard_ButtonGroup_2peTi",
       };
     },
-    17661: (t) => {
+    69727: (t) => {
       t.exports = {
         EventDetails: "discountgridheaders_EventDetails_3LMXj",
         Active: "discountgridheaders_Active_2BLec",
@@ -53,7 +53,7 @@
           "discountgridheaders_RelatedInfoDropDownItem_1ORam",
       };
     },
-    91849: (t) => {
+    9953: (t) => {
       t.exports = {
         UnknownValue: "gridcomponents_UnknownValue_3ovtf",
         PackageName: "gridcomponents_PackageName_t8fSj",
@@ -65,7 +65,7 @@
         PackagePricesBelowMin: "gridcomponents_PackagePricesBelowMin_2x4be",
       };
     },
-    65395: (t, e, n) => {
+    14694: (t, e, n) => {
       "use strict";
       n.d(e, {
         J7: () => E,
@@ -78,16 +78,16 @@
         vc: () => k,
         z8: () => S,
       });
-      var i = n(33940),
-        a = n(52868),
+      var i = n(85556),
+        a = n(80751),
         s = n.n(a),
-        o = n(89526),
-        r = n(85651),
-        c = n(23217),
-        l = n(26464),
-        u = n(85246),
-        d = n(4306),
-        p = n(32765);
+        o = n(47427),
+        r = n(64936),
+        c = n(16649),
+        l = n(16997),
+        u = n(45492),
+        d = n(20417),
+        p = n(37563);
       const g = "1",
         D = "SaleEvent_DurationDiscount_Tooltip",
         m = "discount";
@@ -573,7 +573,7 @@
           null,
         );
     },
-    16586: (t, e, n) => {
+    10095: (t, e, n) => {
       "use strict";
       n.d(e, {
         A0: () => _,
@@ -591,20 +591,20 @@
         py: () => P,
         qh: () => h,
       });
-      var i = n(33940),
-        a = n(52868),
+      var i = n(85556),
+        a = n(80751),
         s = n.n(a),
-        o = n(59621),
-        r = n(89526),
-        c = n(5615),
-        l = n(11837),
-        u = n(23801),
-        d = n(23217),
-        p = n(26464),
-        g = n(85246),
-        D = n(4306),
-        m = n(32765),
-        v = n(58218);
+        o = n(54842),
+        r = n(47427),
+        c = n(42718),
+        l = n(83999),
+        u = n(62210),
+        d = n(16649),
+        p = n(16997),
+        g = n(45492),
+        D = n(20417),
+        m = n(37563),
+        v = n(29480);
       class h {
         constructor() {
           (this.m_mapRegistrations = new Map()),
@@ -1386,7 +1386,7 @@
         (0, i.gn)([p.a], h.prototype, "UpdateAppealState", null),
         (0, i.gn)([o.aD], h.prototype, "Init", null);
     },
-    36998: (t, e, n) => {
+    7073: (t, e, n) => {
       "use strict";
       n.d(e, {
         EV: () => L,
@@ -1406,16 +1406,16 @@
         v6: () => k,
         yI: () => I,
       });
-      var i = n(33940),
-        a = n(52868),
+      var i = n(85556),
+        a = n(80751),
         s = n.n(a),
-        o = n(89526),
-        r = n(85651),
-        c = n(23217),
-        l = n(85246),
-        u = n(4306),
-        d = n(81349),
-        p = n(32765);
+        o = n(47427),
+        r = n(64936),
+        c = n(16649),
+        l = n(45492),
+        u = n(20417),
+        d = n(45284),
+        p = n(37563);
       class g {
         static Get() {
           return (
@@ -1927,7 +1927,7 @@
         return g.Get().GetMaxDiscountPercentageForGroup(t);
       }
     },
-    16169: (t, e, n) => {
+    95518: (t, e, n) => {
       "use strict";
       n.d(e, {
         B6: () => A,
@@ -1948,21 +1948,21 @@
         yn: () => N,
         z$: () => j,
       });
-      var i = n(65395),
-        a = n(16586),
-        s = n(36998),
-        o = n(19533),
-        r = n(2220),
-        c = n(7164),
-        l = n(89526),
-        u = n(85651),
-        d = n(92616),
-        p = n(85246),
-        g = n(4306),
-        D = n(81349),
-        m = n(25508),
-        v = n(32765),
-        h = n(86873);
+      var i = n(14694),
+        a = n(10095),
+        s = n(7073),
+        o = n(98061),
+        r = n(87813),
+        c = n(37047),
+        l = n(47427),
+        u = n(64936),
+        d = n(15690),
+        p = n(45492),
+        g = n(20417),
+        D = n(45284),
+        m = n(46984),
+        v = n(37563),
+        h = n(70044);
       function _(t, e) {
         var n, i;
         return (
@@ -2699,7 +2699,7 @@
       }
       G.s_initializationCallbackList = new p.pB();
     },
-    86873: (t, e, n) => {
+    70044: (t, e, n) => {
       "use strict";
       n.d(e, {
         $f: () => E,
@@ -2714,14 +2714,14 @@
         x9: () => _,
         y4: () => k,
       });
-      var i = n(89526),
-        a = n(85651),
-        s = n(85246),
-        o = n(4306),
-        r = n(32765),
-        c = n(65395),
-        l = n(36998),
-        u = n(16169);
+      var i = n(47427),
+        a = n(64936),
+        s = n(45492),
+        o = n(20417),
+        r = n(37563),
+        c = n(14694),
+        l = n(7073),
+        u = n(95518);
       const d = "related-discount-view";
       class p {
         static Get() {
@@ -2966,7 +2966,7 @@
         }, []);
       }
     },
-    93923: (t, e, n) => {
+    23121: (t, e, n) => {
       "use strict";
       n.d(e, {
         A$: () => S,
@@ -2978,19 +2978,19 @@
         zQ: () => E,
         zV: () => I,
       });
-      var i = n(89526),
-        a = n(84343),
-        s = n(32765),
-        o = n(14826),
-        r = n(91849),
+      var i = n(47427),
+        a = n(59728),
+        s = n(37563),
+        o = n(31846),
+        r = n(9953),
         c = n.n(r),
-        l = n(20614),
-        u = n(61785),
-        d = n(66104),
-        p = n(64403),
+        l = n(6683),
+        u = n(42006),
+        d = n(66263),
+        p = n(30500),
         g = n.n(p),
-        D = n(36998),
-        m = n(16169);
+        D = n(7073),
+        m = n(95518);
       function v(t) {
         const { cell: e } = t,
           n = e.getRow().getData().packageID || 0,
@@ -3208,11 +3208,11 @@
         );
       }
     },
-    62176: (t, e, n) => {
+    82416: (t, e, n) => {
       "use strict";
       n.d(e, { j: () => s });
-      var i = n(89526),
-        a = n(14826);
+      var i = n(47427),
+        a = n(31846);
       function s(t) {
         const e = i.useCallback(
           (e) => {
@@ -3236,12 +3236,12 @@
         );
       }
     },
-    2220: (t, e, n) => {
+    87813: (t, e, n) => {
       "use strict";
       n.d(e, { R1: () => c, Sx: () => o, xs: () => u });
-      var i = n(33940),
-        a = n(92616),
-        s = n(14826);
+      var i = n(85556),
+        a = n(15690),
+        s = n(31846);
       const o = new Set([0, 2, 6, 13]),
         r = new Set([4, 7, 11]);
       function c(t) {

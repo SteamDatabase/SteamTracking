@@ -210,7 +210,7 @@
 .releasedaterequest_PublishNowWarning_2-dra:after {
   top: 100%;
   left: 24%;
-  border: solid rgba(0, 0, 0, 0);
+  border: solid transparent;
   content: "";
   height: 0;
   width: 0;
@@ -682,7 +682,7 @@ button.DialogButton.controllersupportinfo_StartWizardButton_lKVYB {
 .controllersupportedit_PublishNowWarning_GSVWx:after {
   top: 100%;
   left: 24%;
-  border: solid rgba(0, 0, 0, 0);
+  border: solid transparent;
   content: "";
   height: 0;
   width: 0;
@@ -846,7 +846,7 @@ button.DialogButton.controllersupportinfo_StartWizardButton_lKVYB {
   color: #8bb006;
 }
 .reviewpricetable_outofmatrix_1v_RE {
-  background: rgba(226, 64, 67, 0.1725490196);
+  background: #e240432c;
 }
 .reviewpricetable_pricingerror_1flav {
   color: #e24044 !important;
@@ -855,7 +855,7 @@ button.DialogButton.controllersupportinfo_StartWizardButton_lKVYB {
   background-color: #500 !important;
 }
 .reviewpricetable_outofmatrixlower_1yBYL {
-  background: rgba(139, 176, 6, 0.137254902);
+  background: #8bb00623;
 }
 .reviewpricetable_pricingLegend_31Qzh {
   display: inline-block;
@@ -1051,7 +1051,7 @@ button.DialogButton.controllersupportinfo_StartWizardButton_lKVYB {
   font-size: 13px;
   color: #fff;
   box-sizing: border-box;
-  border: 1px solid rgba(0, 0, 0, 0);
+  border: 1px solid transparent;
 }
 .pricinggridcell_PriceCell_1sKIc .pricinggridcell_PricePrefix_gPcNw,
 .pricinggridcell_PriceCell_1sKIc .pricinggridcell_PriceSuffix_3AEJb {
@@ -1181,8 +1181,8 @@ button.DialogButton.controllersupportinfo_StartWizardButton_lKVYB {
   color: #e0e1e6;
   padding: 6px 8px;
   box-shadow:
-    1px 1px 8px rgba(0, 0, 0, 0.3333333333),
-    2px 2px 16px 1px rgba(0, 0, 0, 0.3333333333);
+    1px 1px 8px #0005,
+    2px 2px 16px 1px #0005;
   user-select: none;
 }
 .pricinggridcell_DetailRow_3P_fJ {
@@ -1382,7 +1382,7 @@ div.pricinggridcell_HoverToolTip_36qS7 {
   margin: 0 16px;
   padding: 4px 12px;
   cursor: pointer;
-  border-bottom: 4px solid rgba(0, 0, 0, 0);
+  border-bottom: 4px solid transparent;
   transition-property: border-bottom-color;
   transition-duration: 0.25s;
   font-size: 14px;

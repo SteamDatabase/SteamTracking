@@ -5,9 +5,71 @@
   self.webpackChunkappmgmt_storeadmin || []).push([
   [6739],
   {
-    74802: (e, r, t) => {
+    54674: (e, r) => {
+      var t,
+        i = Symbol.for("react.element"),
+        n = Symbol.for("react.portal"),
+        a = Symbol.for("react.fragment"),
+        s = Symbol.for("react.strict_mode"),
+        o = Symbol.for("react.profiler"),
+        l = Symbol.for("react.provider"),
+        c = Symbol.for("react.context"),
+        u = Symbol.for("react.server_context"),
+        m = Symbol.for("react.forward_ref"),
+        d = Symbol.for("react.suspense"),
+        B = Symbol.for("react.suspense_list"),
+        y = Symbol.for("react.memo"),
+        b = Symbol.for("react.lazy"),
+        w = Symbol.for("react.offscreen");
+      /**
+       * @license React
+       * react-is.production.min.js
+       *
+       * Copyright (c) Facebook, Inc. and its affiliates.
+       *
+       * This source code is licensed under the MIT license found in the
+       * LICENSE file in the root directory of this source tree.
+       */ function p(e) {
+        if ("object" == typeof e && null !== e) {
+          var r = e.$$typeof;
+          switch (r) {
+            case i:
+              switch ((e = e.type)) {
+                case a:
+                case o:
+                case s:
+                case d:
+                case B:
+                  return e;
+                default:
+                  switch ((e = e && e.$$typeof)) {
+                    case u:
+                    case c:
+                    case m:
+                    case b:
+                    case y:
+                    case l:
+                      return e;
+                    default:
+                      return r;
+                  }
+              }
+            case n:
+              return r;
+          }
+        }
+      }
+      (t = Symbol.for("react.module.reference")),
+        (r.isForwardRef = function (e) {
+          return p(e) === m;
+        });
+    },
+    33928: (e, r, t) => {
+      e.exports = t(54674);
+    },
+    58112: (e, r, t) => {
       t.d(r, { h: () => h });
-      var i = t(74289),
+      var i = t(98425),
         n = !(
           "undefined" == typeof window ||
           !window.document ||
@@ -102,8 +164,8 @@
         })(i);
         return e[c].add(r, t, n);
       }
-      var m = t(89526),
-        d = t(338);
+      var m = t(47427),
+        d = t(33928);
       function B(e, r) {
         var t,
           i =
@@ -359,7 +421,7 @@
         (h.defaultProps = M),
         (h.displayName = "Waypoint");
     },
-    14077: (e, r, t) => {
+    89631: (e, r, t) => {
       function i(e) {
         return (
           "game" === e ||
@@ -377,7 +439,7 @@
       }
       t.d(r, { m: () => i });
     },
-    16744: (e, r, t) => {
+    18015: (e, r, t) => {
       t.d(r, {
         AE: () => te,
         DI: () => J,
@@ -387,10 +449,10 @@
         n6: () => W,
         tj: () => u,
       });
-      var i = t(45878),
-        n = t(50995),
-        a = t(68333),
-        s = t(27081);
+      var i = t(10059),
+        n = t(39087),
+        a = t(21928),
+        s = t(23722);
       const o = i.Message;
       class l extends o {
         static ImplementsStaticInterface() {}
@@ -3468,11 +3530,11 @@
           });
       })(te || (te = {}));
     },
-    12163: (e, r, t) => {
+    25492: (e, r, t) => {
       t.d(r, { I3: () => c, yl: () => o });
-      var i = t(45878),
-        n = t(50995),
-        a = t(68333);
+      var i = t(10059),
+        n = t(39087),
+        a = t(21928);
       const s = i.Message;
       class o extends s {
         static ImplementsStaticInterface() {}
@@ -3608,11 +3670,11 @@
         };
       })(c || (c = {}));
     },
-    44013: (e, r, t) => {
+    37099: (e, r, t) => {
       t.d(r, { A_: () => B, Q_: () => d, kI: () => w });
-      var i = t(45878),
-        n = t(50995),
-        a = t(68333);
+      var i = t(10059),
+        n = t(39087),
+        a = t(21928);
       const s = i.Message;
       class o extends s {
         static ImplementsStaticInterface() {}

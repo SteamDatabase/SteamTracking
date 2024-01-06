@@ -4,7 +4,7 @@
   self.webpackChunkappmgmt_storeadmin || []).push([
   [8974],
   {
-    6429: (e) => {
+    99837: (e) => {
       e.exports = {
         ReleaseDateInfoCtn: "controllersupportinfo_ReleaseDateInfoCtn_MjesD",
         GameEditCtn: "controllersupportinfo_GameEditCtn_22e4A",
@@ -47,7 +47,7 @@
         ToolTipContainer: "controllersupportinfo_ToolTipContainer_11C_j",
       };
     },
-    80122: (e) => {
+    97342: (e) => {
       e.exports = {
         GraphicalAssetsTabs: "tabbar_GraphicalAssetsTabs_36r8g",
         GraphicalAssetsTab: "tabbar_GraphicalAssetsTab_K1_Tp",
@@ -59,7 +59,7 @@
         StatusCaution: "tabbar_StatusCaution_31Lxu",
       };
     },
-    71641: (e) => {
+    94478: (e) => {
       e.exports = {
         PriceGuidelinesPicker: "guidelinespicker_PriceGuidelinesPicker_4Xo2k",
         GuidelinesPanel: "guidelinespicker_GuidelinesPanel_1vwM_",
@@ -69,10 +69,10 @@
         CurrentPrice: "guidelinespicker_CurrentPrice_2Addn",
       };
     },
-    7751: (e) => {
+    72938: (e) => {
       e.exports = { MoreDots: "pricingcomponents_MoreDots_2YpW8" };
     },
-    22243: (e) => {
+    75241: (e) => {
       e.exports = {
         PriceCell: "pricinggridcell_PriceCell_1sKIc",
         PricePrefix: "pricinggridcell_PricePrefix_gPcNw",
@@ -100,7 +100,7 @@
         HoverToolTip: "pricinggridcell_HoverToolTip_36qS7",
       };
     },
-    93056: (e) => {
+    31629: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         ControllerWizardModal:
@@ -135,7 +135,7 @@
         ControlsQuestion: "controllersupportedit_ControlsQuestion_86lVB",
       };
     },
-    19238: (e) => {
+    43126: (e) => {
       e.exports = {
         ReleaseDateInfoCtn: "controllersupportinfo_ReleaseDateInfoCtn_2ocuo",
         GameEditCtn: "controllersupportinfo_GameEditCtn_2o3d5",
@@ -165,14 +165,14 @@
         PreviewContainer: "controllersupportinfo_PreviewContainer_1WiJc",
       };
     },
-    25054: (e) => {
+    13942: (e) => {
       e.exports = {
         RadioButtons: "pricingreviewactions_RadioButtons_1o8Pe",
         ActionsCtn: "pricingreviewactions_ActionsCtn_3tmYm",
         NotesField: "pricingreviewactions_NotesField_hmIKA",
       };
     },
-    326: (e) => {
+    15300: (e) => {
       e.exports = {
         PriceDeltaCtn: "reviewdeltatable_PriceDeltaCtn_FR0Jb",
         PackageInfoColumn: "reviewdeltatable_PackageInfoColumn_1sw3l",
@@ -205,7 +205,7 @@
         ReleaseDateCallout: "reviewdeltatable_ReleaseDateCallout_1Xzwu",
       };
     },
-    78941: (e) => {
+    8315: (e) => {
       e.exports = {
         RowCtn: "reviewpricetable_RowCtn_2Kb5s",
         CurrencyHeaderRow: "reviewpricetable_CurrencyHeaderRow_1MTZX",
@@ -224,7 +224,7 @@
         FullCurrencyColumn: "reviewpricetable_FullCurrencyColumn_1VlWu",
       };
     },
-    81104: (e) => {
+    89315: (e) => {
       e.exports = {
         ReleaseDateInfoCtn: "releasedateinfo_ReleaseDateInfoCtn_2mHXb",
         GameEditCtn: "releasedateinfo_GameEditCtn_2JigU",
@@ -240,7 +240,7 @@
         Set: "releasedateinfo_Set_eEhAf",
       };
     },
-    80238: (e) => {
+    66193: (e) => {
       e.exports = {
         ReleaseDateModal: "releasedaterequest_ReleaseDateModal_RKE7g",
         ReleaseDateRequestBody:
@@ -255,18 +255,18 @@
         HTMLErrorBoxAppear: "releasedaterequest_HTMLErrorBoxAppear_bXT6n",
       };
     },
-    43068: (e, r, t) => {
+    23665: (e, r, t) => {
       "use strict";
       t.d(r, { n: () => C });
-      var n = t(89526),
-        o = t(59934),
-        a = t(19304),
-        l = t(14826),
-        i = t(5029),
-        c = t(80122),
+      var n = t(47427),
+        o = t(8285),
+        a = t(13129),
+        l = t(31846),
+        i = t(71472),
+        c = t(97342),
         s = t.n(c),
-        u = t(84343),
-        d = t(75962);
+        u = t(59728),
+        d = t(14609);
       class p extends n.Component {
         constructor() {
           super(...arguments), (this.state = { activeTab: "" });
@@ -375,15 +375,15 @@
       }
       const C = (0, o.EN)(p);
     },
-    38944: (e, r, t) => {
+    83831: (e, r, t) => {
       "use strict";
       t.d(r, { DV: () => d, Tt: () => s });
-      var n = t(33940),
-        o = t(52868),
+      var n = t(85556),
+        o = t(80751),
         a = t.n(o),
-        l = t(89526),
-        i = t(23217),
-        c = t(32765);
+        l = t(47427),
+        i = t(16649),
+        c = t(37563);
       function s() {
         return 2 == c.De.EUNIVERSE ? 12 : 1;
       }
@@ -510,16 +510,16 @@
         );
       }
     },
-    71169: (e, r, t) => {
+    82e3: (e, r, t) => {
       "use strict";
       t.d(r, { G: () => d, T: () => u });
-      var n = t(89526),
-        o = t(7751),
+      var n = t(47427),
+        o = t(72938),
         a = t.n(o),
-        l = t(701),
-        i = t(19304),
-        c = t(894),
-        s = t(69206);
+        l = t(62613),
+        i = t(13129),
+        c = t(83654),
+        s = t(37265);
       const u = new c.AN("price-grid-cell-popout-elements");
       function d(e) {
         let { hoverKey: r, className: t, renderHover: o } = e,
@@ -557,7 +557,7 @@
         );
       }
     },
-    40790: (e, r, t) => {
+    18500: (e, r, t) => {
       "use strict";
       t.d(r, {
         lp: () => N,
@@ -566,20 +566,20 @@
         tQ: () => f,
         bm: () => v,
       });
-      var n = t(66104),
-        o = t(61785),
-        a = t(89526),
-        l = t(69206),
-        i = t(24448),
-        c = t(22444),
-        s = t(701),
-        u = t(84343),
-        d = t(19304),
-        p = t(14826),
-        C = t(40103),
-        _ = t(93765),
+      var n = t(66263),
+        o = t(42006),
+        a = t(47427),
+        l = t(37265),
+        i = t(28738),
+        c = t(53040),
+        s = t(62613),
+        u = t(59728),
+        d = t(13129),
+        p = t(31846),
+        C = t(95315),
+        _ = t(27241),
         m = t.n(_),
-        E = t(71641),
+        E = t(94478),
         g = t.n(E);
       function S(e) {
         const { packageID: r } = e,
@@ -641,8 +641,8 @@
           ),
         );
       }
-      var k = t(71169),
-        y = t(22243),
+      var k = t(82e3),
+        y = t(75241),
         b = t.n(y);
       function h(e) {
         const { cell: r } = e,
@@ -970,7 +970,7 @@
         );
       }
     },
-    81864: (e, r, t) => {
+    88181: (e, r, t) => {
       "use strict";
       t.r(r), t.d(r, { default: () => et });
       let n = {
@@ -981,26 +981,26 @@
         ReviewPriceProposals: () => "/admin/reviewpricesubmissions/",
       };
       const o = ["edit", "diff", "revert", "prepare", "publish"];
-      var a = t(89526),
-        l = t(59934),
-        i = t(35993),
-        c = t(81500),
-        s = t(14826),
-        u = t(72120),
-        d = t(81104),
-        p = t(701),
-        C = t(33940),
-        _ = t(52868),
+      var a = t(47427),
+        l = t(8285),
+        i = t(56480),
+        c = t(35227),
+        s = t(31846),
+        u = t(12251),
+        d = t(89315),
+        p = t(62613),
+        C = t(85556),
+        _ = t(80751),
         m = t.n(_),
-        E = t(7164),
-        g = t(5615),
-        S = t(22444),
-        P = t(82971),
-        k = t(67736),
-        y = t(69338),
-        b = t(86900),
-        h = t(207),
-        f = t(32765);
+        E = t(37047),
+        g = t(42718),
+        S = t(53040),
+        P = t(92012),
+        k = t(77178),
+        y = t(46882),
+        b = t(2041),
+        h = t(13499),
+        f = t(37563);
       function v(e) {
         const { rtSteamReleaseDate: r, value: t, onChange: n } = e,
           o = !!r,
@@ -1033,7 +1033,7 @@
           onChange: i,
         });
       }
-      var R = t(80238);
+      var R = t(66193);
       function D(e) {
         const { appid: r, onClose: t, onCommit: n } = e,
           [o, l] = a.useState(null),
@@ -1341,7 +1341,7 @@
               ),
             );
       }
-      var H = t(19304);
+      var H = t(13129);
       function O(e) {
         const { bIsGameEdit: r, unAppID: t } = e,
           [n, o] = a.useState(e.rtReleaseDate),
@@ -1457,10 +1457,10 @@
           }),
         );
       }
-      var W = t(19238),
-        V = t(6429),
-        z = t(16826),
-        Z = t(84343);
+      var W = t(43126),
+        V = t(99837),
+        z = t(58538),
+        Z = t(59728);
       function $(e) {
         return a.createElement(
           "a",
@@ -1706,7 +1706,7 @@
       var ee,
         re,
         te,
-        ne = t(93056);
+        ne = t(31629);
       function oe(e, r) {
         const t = document.getElementById(e);
         if (t) {
@@ -2529,8 +2529,8 @@
           ),
         );
       }
-      var Se = t(6531),
-        Pe = t(4306);
+      var Se = t(77266),
+        Pe = t(20417);
       class ke extends a.Component {
         constructor() {
           super(...arguments),
@@ -2553,7 +2553,7 @@
         }
       }
       (0, C.gn)([Pe.ak], ke.prototype, "OnColorChange", null);
-      var ye = t(40103);
+      var ye = t(95315);
       function be(e) {
         const { rgGameProfileColorDefs: r } = e,
           t = r.map((e) =>
@@ -2609,8 +2609,8 @@
           );
         return a.createElement("div", { className: "profile_colors_ctn" }, t);
       }
-      var he = t(70903),
-        fe = t(59954);
+      var he = t(9781),
+        fe = t(82756);
       function ve() {
         const [e, r] = (0, a.useState)(() =>
           (function () {
@@ -2628,9 +2628,9 @@
         return e;
       }
       var Re,
-        De = t(44973),
-        Ne = t(85246),
-        Te = t(23217);
+        De = t(65255),
+        Ne = t(45492),
+        Te = t(16649);
       class Ae {
         GetProposals() {
           return Array.from(this.m_rgMapProposal.values());
@@ -3408,16 +3408,16 @@
             });
         }
       }
-      var Ze = t(24166),
-        $e = t(78941),
-        je = t(38944),
-        qe = t(25871),
-        Ye = t(16670);
+      var Ze = t(56164),
+        $e = t(8315),
+        je = t(83831),
+        qe = t(80886),
+        Ye = t(38201);
       const Qe = { include_release: !0 };
-      var Je = t(77557),
-        er = t(57742),
-        rr = t(60161),
-        tr = t(40790);
+      var Je = t(83743),
+        er = t(90069),
+        rr = t(50423),
+        tr = t(18500);
       function nr(e) {
         const r = new Array();
         return (
@@ -3512,7 +3512,7 @@
         const r = Math.floor(Date.now() / 1e3);
         return e.BIsReleased() && e.GetReleaseDateRTime() + 2592e3 > r;
       }
-      var cr = t(25054);
+      var cr = t(13942);
       function sr(e) {
         const { proposal: r, mapCurrentPrices: t, oGuideline: n } = e,
           { fnAcceptProposal: o } = Ie(),
@@ -3663,9 +3663,9 @@
               }),
             );
       }
-      var pr = t(326);
-      var Cr = t(34976),
-        _r = t(47165);
+      var pr = t(15300);
+      var Cr = t(72297),
+        _r = t(35427);
       function mr(e) {
         const { partnerID: r } = e,
           { data: t } = (function (e, r, t) {
@@ -4243,9 +4243,9 @@
           ),
         );
       }
-      var xr = t(17547),
-        Gr = t(43068),
-        Mr = t(5029);
+      var xr = t(10162),
+        Gr = t(23665),
+        Mr = t(71472);
       function Lr(e) {
         const {
             rgProposals: r,
@@ -4699,7 +4699,7 @@
               onChange: () => n(!0),
             });
       }
-      var qr = t(13364),
+      var qr = t(77681),
         Yr = t.n(qr);
       function Qr() {
         const [e, r] = (0, a.useState)(() =>

@@ -4,7 +4,7 @@
   self.webpackChunkappmgmt_storeadmin || []).push([
   [3233],
   {
-    23794: (e) => {
+    6514: (e) => {
       e.exports = {
         LoadingWrapper: "throbber_LoadingWrapper_3Z36h",
         Static: "throbber_Static_kwzRJ",
@@ -50,26 +50,26 @@
         NewThrobber: "throbber_NewThrobber_tAKvs",
       };
     },
-    44534: (e, r, t) => {
+    29459: (e, r, t) => {
       "use strict";
       t.d(r, { J: () => b });
-      var o = t(32765),
-        c = t(40442);
+      var o = t(37563),
+        c = t(77936);
       function b() {
         return o.De.IN_CLIENT && (0, c.px)(o.De.LAUNCHER_TYPE);
       }
     },
-    69338: (e, r, t) => {
+    46882: (e, r, t) => {
       "use strict";
       t.d(r, { V: () => a });
-      var o = t(89526),
-        c = t(19304),
-        b = t(23794),
+      var o = t(47427),
+        c = t(13129),
+        b = t(6514),
         l = t.n(b);
       const s =
         t.p +
         "images/applications/appmgmt/steam_spinner.png?v=valveisgoodatcaching";
-      var n = t(44534);
+      var n = t(29459);
       const a = o.memo(function (e) {
         const {
           className: r,

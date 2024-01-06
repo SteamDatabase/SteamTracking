@@ -4,7 +4,7 @@
   self.webpackChunkappmgmt_storeadmin || []).push([
   [6608],
   {
-    13364: (e) => {
+    77681: (e) => {
       e.exports = {
         AdminPageCtn: "adminshared_AdminPageCtn_KNaeC",
         WidePageCtn: "adminshared_WidePageCtn_3-Dwx",
@@ -50,7 +50,7 @@
         HalfWidthBtnCtn: "adminshared_HalfWidthBtnCtn_1mhRc",
       };
     },
-    17318: (e) => {
+    71741: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         PartnerEventFont: "partnereventshared_PartnerEventFont_22_fG",
@@ -162,7 +162,7 @@
           "partnereventshared_GamepadOnlyScrollPanel_cEBYf",
       };
     },
-    24174: (e, t, n) => {
+    83682: (e, t, n) => {
       "use strict";
       n.d(t, {
         Z6: () => c,
@@ -173,10 +173,10 @@
         yp: () => _,
         iP: () => u,
       });
-      var r = n(89526),
-        a = n(40442),
-        o = n(32765),
-        i = n(4116);
+      var r = n(47427),
+        a = n(77936),
+        o = n(37563),
+        i = n(4481);
       class s {
         constructor() {
           (this.type = 0), (this.text = "");
@@ -515,11 +515,11 @@
         return e.replace(new RegExp(a, "gi"), n);
       }
     },
-    4116: (e, t, n) => {
+    4481: (e, t, n) => {
       "use strict";
       n.d(t, { DX: () => i, LT: () => o, So: () => s });
-      var r = n(89526),
-        a = n(23801);
+      var r = n(47427),
+        a = n(62210);
       class o {
         constructor() {
           this.reactNodes = [];
@@ -586,11 +586,11 @@
         }
       }
     },
-    13345: (e, t, n) => {
+    19399: (e, t, n) => {
       "use strict";
       n.d(t, { HZ: () => s, OL: () => o, pd: () => i });
-      var r = n(24174),
-        a = n(44973);
+      var r = n(83682),
+        a = n(65255);
       function o() {
         return `${a.De.CLAN_CDN_ASSET_URL}images/`;
       }
@@ -601,7 +601,7 @@
         return e.replace(/{STEAM_CLAN_IMAGE}/g, o());
       }
     },
-    25871: (e, t, n) => {
+    80886: (e, t, n) => {
       "use strict";
       n.d(t, {
         Vm: () => u,
@@ -612,11 +612,11 @@
         wZ: () => h,
         yo: () => c,
       });
-      var r = n(52868),
+      var r = n(80751),
         a = n.n(r),
-        o = n(89526),
-        i = (n(24174), n(4306)),
-        s = n(92616);
+        o = n(47427),
+        i = (n(83682), n(20417)),
+        s = n(15690);
       function l(e, t, n, r) {
         const l = (0, o.useRef)(),
           d = (0, o.useRef)(void 0),
@@ -793,7 +793,7 @@
         return p(e, 1, t, n);
       }
     },
-    207: (e, t, n) => {
+    13499: (e, t, n) => {
       "use strict";
       n.d(t, {
         FM: () => s,
@@ -807,9 +807,9 @@
         iv: () => m,
         md: () => h,
       });
-      var r = n(32765),
-        a = n(14826),
-        o = n(13345);
+      var r = n(37563),
+        a = n(31846),
+        o = n(19399);
       const i =
         /((?:(?:https?:)|(?:www[.,])|(?:[!#-;=?-Z\\\^-~]+[\.,](?:(?:[a-zA-Z]{2,4}[\.?]*[\/\\\?#])|(?:(?:biz|com|gallery|in|name|net|online|org|tech|trade|xyz)(?=\W|$)))))(?:[^ː\s"<>\[\]]*[^\\s"<>\[\],.ː:])?)/;
       function s(e) {
@@ -927,7 +927,7 @@
         );
       }
     },
-    28542: (e, t, n) => {
+    36595: (e, t, n) => {
       "use strict";
       n.d(t, { Z: () => r });
       const r =

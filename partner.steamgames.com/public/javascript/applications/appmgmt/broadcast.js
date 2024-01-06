@@ -4,7 +4,7 @@
   self.webpackChunkappmgmt_storeadmin || []).push([
   [4601],
   {
-    43628: (e) => {
+    84426: (e) => {
       e.exports = {
         strStreamIconCapsuleArtHeight: "90px",
         strStreamIconScreenshotArtHeight: "90px",
@@ -70,7 +70,7 @@
         rightPanel: "broadcast_embeddable_rightPanel_2Xp5Y",
       };
     },
-    61037: (e) => {
+    44488: (e) => {
       e.exports = {
         BroadcastChat: "broadcastchat_BroadcastChat_37jsi",
         ChatEntry: "broadcastchat_ChatEntry_3o0ss",
@@ -109,7 +109,7 @@
         SignInButton: "broadcastchat_SignInButton_26lxf",
       };
     },
-    91820: (e) => {
+    67348: (e) => {
       e.exports = {
         GiveawayWinnerBox: "broadcastchatannouncement_GiveawayWinnerBox_1iRcs",
         GiveawayWinnerAnnounced:
@@ -133,7 +133,7 @@
           "broadcastchatannouncement_GiveawayAlreadyRegistered_17sxy",
       };
     },
-    25202: (e) => {
+    20006: (e) => {
       e.exports = {
         BroadcastPlayerLite: "broadcastplayer_BroadcastPlayerLite_3YmNP",
         BroadcastPlayerLiteVideo:
@@ -143,7 +143,7 @@
           "broadcastplayer_BroadcastPlaceholderImg_3Hcqn",
       };
     },
-    27618: (e) => {
+    2339: (e) => {
       e.exports = {
         StoreSaleWidgetContainer_mini:
           "broadcastwidgets_StoreSaleWidgetContainer_mini_1Vz-y",
@@ -156,7 +156,7 @@
           "broadcastwidgets_StoreSaleWidgetShortDesc_mini_DvDV2",
       };
     },
-    36315: (e) => {
+    32410: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         FriendsListInsetShadowCtn:
@@ -166,42 +166,42 @@
           "insetshadow_FriendListInsetShadowBottom_2hL6s",
       };
     },
-    66435: (e, t, a) => {
+    20249: (e, t, a) => {
       "use strict";
       a.r(t),
         a.d(t, {
           BroadcastEmbeddablePopoutHeader: () => Tt,
           default: () => wt,
         });
-      var s = a(33940),
-        n = a(52868),
+      var s = a(85556),
+        n = a(80751),
         r = a.n(n),
-        i = a(88464),
-        o = a(83315),
-        l = a(89526),
-        d = a(59621),
-        c = a(40103),
-        m = a(20069),
-        h = a(68333),
-        u = a(65406),
-        p = a(19094),
-        _ = a(47165),
-        g = a(88012),
-        S = a(27769),
-        v = a(26464),
-        b = a(85246),
-        C = a(14826),
-        y = a(32765),
-        f = a(40442),
-        E = a(97940),
-        w = a(2758),
-        D = a(23801),
-        I = a(74227),
-        B = a(4306),
-        M = a(93837),
-        k = a(87628),
-        T = a(50454);
-      a(95915);
+        i = a(27605),
+        o = a(30750),
+        l = a(47427),
+        d = a(54842),
+        c = a(95315),
+        m = a(71767),
+        h = a(21928),
+        u = a(61134),
+        p = a(77581),
+        _ = a(35427),
+        g = a(96501),
+        S = a(44958),
+        v = a(16997),
+        b = a(45492),
+        C = a(31846),
+        y = a(37563),
+        f = a(77936),
+        E = a(82182),
+        w = a(92011),
+        D = a(62210),
+        I = a(67005),
+        B = a(20417),
+        M = a(90938),
+        k = a(2260),
+        T = a(68785);
+      a(24308);
       class x {
         constructor() {
           (this.m_mapCallbacks = new Map()),
@@ -389,8 +389,8 @@
           "m_rgRegisteredServiceMethodHandlers",
           void 0,
         );
-      var N = a(65001),
-        P = a(44973);
+      var N = a(24701),
+        P = a(65255);
       const O = "127.0.0.1",
         G = new T.s("WebUITransport");
       class A {
@@ -1759,8 +1759,8 @@
         (0, s.gn)([v.a], H.prototype, "FetchChatModerators", null),
         (0, s.gn)([v.a], H.prototype, "RequestLoop", null),
         (0, s.gn)([v.a], H.prototype, "MuteUserForSession", null);
-      var W = a(85651),
-        X = a(13141);
+      var W = a(64936),
+        X = a(44174);
       class j {
         constructor() {
           (this.m_mapBroadcasterSteamIDToEvents = new Map()),
@@ -1913,16 +1913,16 @@
       }
       (0, s.gn)([d.LO], j.prototype, "m_mapBroadcasterSteamIDData", void 0);
       const Z = new j();
-      var $ = a(90531),
-        q = a(62404),
+      var $ = a(60646),
+        q = a(87368),
         z = a.n(q),
-        K = a(69159),
-        J = a(22444),
-        Y = a(50304),
-        Q = a(38278),
-        ee = a(32905),
-        te = a(77865),
-        ae = a(36315),
+        K = a(22042),
+        J = a(53040),
+        Y = a(33682),
+        Q = a(25906),
+        ee = a(80212),
+        te = a(58798),
+        ae = a(32410),
         se = a.n(ae);
       const ne = () =>
           l.createElement(
@@ -1940,12 +1940,12 @@
               className: se().FriendListInsetShadowBottom,
             }),
           );
-      var ie = a(701),
-        oe = a(19304),
-        le = a(61037),
+      var ie = a(62613),
+        oe = a(13129),
+        le = a(44488),
         de = a.n(le),
-        ce = a(45475),
-        me = a(13345);
+        ce = a(17060),
+        me = a(19399);
       class he {
         constructor() {
           (this.giveaway_id = void 0),
@@ -2167,10 +2167,10 @@
         (0, s.gn)([v.a], pe.prototype, "ClearCountDown", null),
         (0, s.gn)([v.a], pe.prototype, "SetupRefreshDataInterval", null),
         (0, s.gn)([v.a], pe.prototype, "SetupCountDown", null);
-      var Se = a(20620),
-        ve = a(75962),
-        be = a(207),
-        Ce = a(91820),
+      var Se = a(72728),
+        ve = a(14609),
+        be = a(13499),
+        Ce = a(67348),
         ye = a.n(Ce);
       function fe(e) {
         const { latestAnnouncement: t } = e;
@@ -2996,15 +2996,15 @@
             ),
         );
       }
-      var Ge = a(70005),
-        Ae = a(98009),
-        Le = a(25871),
-        Re = a(23715),
-        Fe = a(48541),
-        Ue = a(98389),
-        Ve = a(71161),
-        He = a(69338),
-        We = a(27618),
+      var Ge = a(65682),
+        Ae = a(28347),
+        Le = a(80886),
+        Re = a(7769),
+        Fe = a(11619),
+        Ue = a(34913),
+        Ve = a(25006),
+        He = a(46882),
+        We = a(2339),
         Xe = a.n(We);
       const je = (0, i.Pi)((e) => {
         const { appid: t } = e,
@@ -3094,14 +3094,14 @@
         let e = window.GetUsabilityTracker;
         if (e) return e();
       }
-      var $e = a(98889),
-        qe = a(75687),
-        ze = a(92616),
-        Ke = a(25589),
-        Je = a(54297),
-        Ye = a(46294),
-        Qe = a(84343),
-        et = a(74802);
+      var $e = a(36453),
+        qe = a(35134),
+        ze = a(15690),
+        Ke = a(58129),
+        Je = a(31659),
+        Ye = a(47242),
+        Qe = a(59728),
+        et = a(58112);
       const tt = (e) => {
         const { onPositionChange: t, onLeave: a } = e,
           s = l.useCallback(
@@ -3119,9 +3119,9 @@
           Object.assign({}, e, { onPositionChange: s }),
         );
       };
-      var at = a(88443),
-        st = a(74831),
-        nt = a(43628),
+      var at = a(24549),
+        st = a(58670),
+        nt = a(84426),
         rt = a.n(nt);
       const it = (0, i.Pi)((e) => {
         const { event: t } = e,
@@ -3185,15 +3185,15 @@
           ),
         );
       });
-      var ot = a(17318),
+      var ot = a(71741),
         lt = a.n(ot),
-        dt = a(37865),
-        ct = a(82248),
-        mt = a(15164),
-        ht = a(75313),
-        ut = a(67736),
-        pt = a(20790),
-        _t = a(43997),
+        dt = a(99839),
+        ct = a(71738),
+        mt = a(91120),
+        ht = a(80289),
+        ut = a(77178),
+        pt = a(81913),
+        _t = a(45557),
         gt = a.n(_t);
       function St(e) {
         const { steamid: t, closeModal: a } = e;
@@ -3326,8 +3326,8 @@
       function Ct(e, t) {
         return y.De.COMMUNITY_BASE_URL + "broadcast/share/" + e + "?site=" + t;
       }
-      var yt = a(60161),
-        ft = a(57742);
+      var yt = a(50423),
+        ft = a(90069);
       const Et = {
         list: [
           { appid: 444090, url: "https://steam.tv/paladins" },
@@ -4160,7 +4160,7 @@
           : null;
       }
     },
-    70005: (e, t, a) => {
+    65682: (e, t, a) => {
       "use strict";
       a.r(t),
         a.d(t, {
@@ -4168,21 +4168,21 @@
           LinkOverlay: () => le,
           default: () => z,
         });
-      var s = a(33940),
-        n = a(52868),
+      var s = a(85556),
+        n = a(80751),
         r = a.n(n),
-        i = a(59621),
-        o = a(88464),
-        l = a(89526),
-        d = a(40103),
-        c = a(98009),
-        m = a(45475),
-        h = a(92616),
-        u = a(95872),
-        p = a(69159),
-        _ = a(32873),
-        g = a(1981),
-        S = a(19304);
+        i = a(54842),
+        o = a(27605),
+        l = a(47427),
+        d = a(95315),
+        c = a(28347),
+        m = a(17060),
+        h = a(15690),
+        u = a(54357),
+        p = a(22042),
+        _ = a(39073),
+        g = a(58747),
+        S = a(13129);
       class v extends l.Component {
         render() {
           let e = this.props,
@@ -4232,23 +4232,23 @@
           );
         }
       }
-      var C = a(91181),
-        y = a(55330),
-        f = a(71937),
-        E = a(701),
-        w = a(75962),
-        D = a(85246),
-        I = a(60161),
-        B = a(14826),
-        M = a(88443),
-        k = a(36041),
-        T = a(4306),
-        x = a(32765),
-        N = a(73762),
-        P = a(80525),
-        O = a(25202),
+      var C = a(66833),
+        y = a(45610),
+        f = a(50727),
+        E = a(62613),
+        w = a(14609),
+        D = a(45492),
+        I = a(50423),
+        B = a(31846),
+        M = a(24549),
+        k = a(45651),
+        T = a(20417),
+        x = a(37563),
+        N = a(87534),
+        P = a(68324),
+        O = a(20006),
         G = a.n(O),
-        A = a(69338);
+        A = a(46882);
       function L() {
         return l.createElement(
           "div",
@@ -4605,7 +4605,7 @@
         }
       };
       V = (0, s.gn)([o.Pi], V);
-      var H = a(76476);
+      var H = a(38204);
       class W extends l.Component {
         constructor(e) {
           super(e),
@@ -4991,7 +4991,7 @@
         (0, s.gn)([T.ak], j.prototype, "OnMouseUp", null),
         (0, s.gn)([i.aD], j.prototype, "SetVolumeWithCoord", null),
         (j = (0, s.gn)([o.Pi], j));
-      var Z = a(14966);
+      var Z = a(43090);
       const $ = 15;
       let q = class extends l.Component {
         constructor(e) {
@@ -6184,10 +6184,9 @@
         }
         UpdatePanel(e, t) {
           return (0, s.mG)(this, void 0, void 0, function* () {
-            (this.state.sizableRegion[e] = t),
-              this.setState({ sizableRegion: this.state.sizableRegion }, () =>
-                this.OnSaveRegions(),
-              );
+            const a = [...this.state.sizableRegion];
+            (a[e] = t),
+              this.setState({ sizableRegion: a }, () => this.OnSaveRegions());
           });
         }
         render() {
@@ -6270,13 +6269,13 @@
         (0, s.gn)([T.ak], le.prototype, "UpdatePanel", null),
         (le = (0, s.gn)([o.Pi], le));
     },
-    95872: (e, t, a) => {
+    54357: (e, t, a) => {
       "use strict";
       a.d(t, { x: () => o });
-      var s = a(33940),
-        n = a(89526),
-        r = a(4306),
-        i = a(85246);
+      var s = a(85556),
+        n = a(47427),
+        r = a(20417),
+        i = a(45492);
       class o extends n.Component {
         constructor() {
           super(...arguments),

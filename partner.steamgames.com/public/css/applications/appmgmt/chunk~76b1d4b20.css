@@ -15,7 +15,7 @@
   flex-direction: row;
   padding: 10px;
   justify-content: space-between;
-  background-color: rgba(59, 90, 114, 0.5019607843);
+  background-color: #3b5a7280;
   align-items: center;
   transition: background-color 0.2s ease;
   flex-wrap: wrap;
@@ -29,7 +29,7 @@
 }
 .deckverified_BannerContentDesktop_2qr1f:focus-within,
 .deckverified_BannerContent_1B2KF:focus-within {
-  background-color: rgba(103, 139, 166, 0.4392156863);
+  background-color: #678ba670;
 }
 .deckverified_BannerContentDesktop_2qr1f {
   background: linear-gradient(
@@ -251,7 +251,7 @@
   cursor: pointer;
 }
 .deckverified_DeveloperComments_Icon_2JTRY {
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzYiIGhlaWdodD0iMzYiIHZpZXdCb3g9IjAgMCAzNiAzNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMiA0VjIwVjI0TDcgMjBIMjRWNEgyWk0zNCAxMlYzMkwyOSAyOEgxMlYyNEgyOFYxMkgzNFoiIGZpbGw9IndoaXRlIi8+DQo8L3N2Zz4NCg==);
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzYiIGhlaWdodD0iMzYiIHZpZXdCb3g9IjAgMCAzNiAzNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0yIDRWMjBWMjRMNyAyMEgyNFY0SDJaTTM0IDEyVjMyTDI5IDI4SDEyVjI0SDI4VjEySDM0WiIgZmlsbD0id2hpdGUiLz4KPC9zdmc+Cg==);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 20px;
@@ -364,14 +364,10 @@
   background-size: cover;
   -webkit-mask-image: radial-gradient(
     circle at top left,
-    rgb(0, 0, 0),
+    black,
     rgba(0, 0, 0, 0) 60%
   );
-  mask-image: radial-gradient(
-    circle at top left,
-    rgb(0, 0, 0),
-    rgba(0, 0, 0, 0) 60%
-  );
+  mask-image: radial-gradient(circle at top left, black, rgba(0, 0, 0, 0) 60%);
   filter: blur(30px);
   opacity: 0.3;
 }
@@ -1378,7 +1374,7 @@ div.creatorhomeembed_SocialContainer_1MvXz {
   .salepreviewwidgets_StoreSalePriceWidgetContainer_tqNH0,
 .salepreviewwidgets_InGameHover_2uFQ-
   .salepreviewwidgets_StoreSalePriceBox_Wh0L8 {
-  background-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
 }
 .salepreviewwidgets_InGameHover_2uFQ-
   .salepreviewwidgets_StoreSaleDiscountBox_2fpFv {
@@ -1571,16 +1567,8 @@ div.creatorhomeembed_SocialContainer_1MvXz {
   text-decoration: none !important;
   color: #d2e885 !important;
   background: #799905;
-  background: -webkit-linear-gradient(
-    top,
-    rgb(121, 153, 5) 5%,
-    rgb(83, 105, 4) 95%
-  );
-  background: linear-gradient(
-    to bottom,
-    rgb(121, 153, 5) 5%,
-    rgb(83, 105, 4) 95%
-  );
+  background: -webkit-linear-gradient(top, #799905 5%, #536904 95%);
+  background: linear-gradient(to bottom, #799905 5%, #536904 95%);
   padding: 0 15px;
   font-size: 15px;
   line-height: 30px;
@@ -1589,16 +1577,8 @@ div.creatorhomeembed_SocialContainer_1MvXz {
   text-decoration: none !important;
   color: #fff !important;
   background: #a4d007;
-  background: -webkit-linear-gradient(
-    top,
-    rgb(164, 208, 7) 5%,
-    rgb(107, 135, 5) 95%
-  );
-  background: linear-gradient(
-    to bottom,
-    rgb(164, 208, 7) 5%,
-    rgb(107, 135, 5) 95%
-  );
+  background: -webkit-linear-gradient(top, #a4d007 5%, #6b8705 95%);
+  background: linear-gradient(to bottom, #a4d007 5%, #6b8705 95%);
 }
 .salepreviewwidgets_OuterCapsuleContainer_Btar9 {
   position: relative;
@@ -2245,14 +2225,10 @@ html.touch
   border-radius: 3px;
   background: -webkit-radial-gradient(
     ellipse at top left,
-    rgba(66, 69, 76, 0.6),
-    rgba(37, 40, 46, 0.4)
+    #42454c99,
+    #25282e66
   );
-  background: radial-gradient(
-    ellipse at top left,
-    rgba(66, 69, 76, 0.6),
-    rgba(37, 40, 46, 0.4)
-  );
+  background: radial-gradient(ellipse at top left, #42454c99, #25282e66);
   backdrop-filter: blur(15px);
   height: 110px;
   position: absolute;
@@ -2294,8 +2270,12 @@ html.touch
 .salepreviewwidgets_SaleItemBrowserRow_y9MSd
   .salepreviewwidgets_StoreSaleWidgetOuterContainer_38DqR
   .salepreviewwidgets_StoreSaleWidgetContainer_UlvFk:hover {
-  background: -webkit-radial-gradient(ellipse at top left, #42454c, #25282e);
-  background: radial-gradient(ellipse at top left, #42454c, #25282e);
+  background: -webkit-radial-gradient(
+    ellipse at top left,
+    #42454cff,
+    #25282eff
+  );
+  background: radial-gradient(ellipse at top left, #42454cff, #25282eff);
 }
 .BasicUI
   .salepreviewwidgets_SaleItemBrowserRow_y9MSd
@@ -3664,7 +3644,7 @@ html.touch
   left: 4px;
   backdrop-filter: blur(24px);
   border-radius: 2px;
-  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1215686275);
+  text-shadow: 0px 1px 1px #0000001f;
 }
 .salepreviewwidgets_LocalizationSpan_3WrJ4 {
   white-space: pre-wrap;
@@ -3806,11 +3786,7 @@ html.touch
 .gameactions_GotSteamDialog_3omvM
   .gameactions_Buttons_2zw5J
   .gameactions_Button_dbZlJ:hover {
-  background: linear-gradient(
-    to bottom,
-    rgb(102, 192, 244) 5%,
-    rgb(47, 137, 188) 95%
-  );
+  background: linear-gradient(to bottom, #66c0f4 5%, #2f89bc 95%);
 }
 .gameactions_GotSteamDialog_3omvM
   .gameactions_Buttons_2zw5J
@@ -4023,7 +3999,7 @@ html.touch
   display: block;
 }
 .gamehover_WishlistButton_1l89v .gamehover_WishlistButtonText_-ne-j {
-  color: rgba(0, 0, 0, 0);
+  color: transparent;
   width: 0;
   height: 0;
   padding: 7px 0;
@@ -4049,7 +4025,7 @@ html.touch .gamehover_WishlistButton_1l89v .gamehover_WishlistButtonText_-ne-j,
 .gamehover_BottomShelf_2tBkj {
   background: linear-gradient(
     359.91deg,
-    rgb(43, 51, 58) 30%,
+    #2b333a 30%,
     rgba(103, 113, 122, 0.3) 85%
   );
   mix-blend-mode: normal;
@@ -4856,7 +4832,7 @@ html.tablet
   .partnersaledisplay_MobileTabSelectorButton_3JQSU
   .DialogDropDown {
   width: 100%;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
   font-weight: 700;
 }
 .partnersaledisplay_MobileTabSelector___-ej
@@ -4929,7 +4905,7 @@ html.tablet
 }
 .partnersaledisplay_TabButtonsCtn_2jMTe .partnersaledisplay_TabButton_3ZFfZ {
   display: flex;
-  background: linear-gradient(0deg, rgb(34, 31, 42) 0%, rgb(40, 56, 75) 100%);
+  background: linear-gradient(0deg, #221f2a 0%, #28384b 100%);
   border-radius: 3px;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
   padding: 20px 40px;
@@ -5080,7 +5056,7 @@ img {
 ::-webkit-scrollbar {
   height: 12px;
   width: 14px;
-  background: rgba(0, 0, 0, 0);
+  background: transparent;
   z-index: 12;
   overflow: visible;
 }
@@ -5104,7 +5080,7 @@ img {
 }
 ::selection {
   background: #54a5d4;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6666666667);
+  text-shadow: 1px 1px 2px #000000aa;
   color: #fff;
 }
 .shared_common_SubText_3Ctn8 {
@@ -5203,14 +5179,14 @@ img {
   padding: 4px;
   border: none;
   border-radius: 3px;
-  box-shadow: inset 0px 0px 0px rgba(0, 0, 0, 0);
+  box-shadow: inset 0px 0px 0px #0000;
   transition-property: background, box-shadow, padding-left;
   transition-duration: 0.2s;
   transition-timing-function: ease-in-out;
 }
 .shared_common_SummaryTextArea_2xqdR:focus {
   background: rgba(67, 73, 83, 0.6);
-  box-shadow: inset 1px 1px 8px rgba(0, 0, 0, 0.6666666667);
+  box-shadow: inset 1px 1px 8px #000a;
   padding-left: 6px;
   outline: none;
 }

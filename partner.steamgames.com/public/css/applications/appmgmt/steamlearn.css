@@ -629,7 +629,7 @@ button.DialogButton {
   position: relative;
   display: flex;
   flex-direction: column;
-  border: 1px solid rgba(0, 0, 0, 0);
+  border: 1px solid transparent;
   border-radius: 2px;
   padding: 4px;
 }
@@ -1801,11 +1801,7 @@ button.DialogButton {
   .projectselector_ProjectSelectorInner_2pWB9
   .projectselector_StatusSection_21dEp
   button.projectselector_Warning_ojjJ9 {
-  background: linear-gradient(
-    to right,
-    rgb(195, 41, 41) 0%,
-    rgb(122, 22, 22) 60%
-  );
+  background: linear-gradient(to right, #c32929 0%, #7a1616 60%);
 }
 .CreateOrEditProjectPopup .DialogContent {
   width: 600px;

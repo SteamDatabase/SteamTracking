@@ -4,7 +4,7 @@
   self.webpackChunkappmgmt_storeadmin || []).push([
   [2120],
   {
-    21112: (e, t, r) => {
+    61615: (e, t, r) => {
       "use strict";
       var n,
         a =
@@ -17,7 +17,7 @@
             }
             return e;
           },
-        o = r(89526),
+        o = r(47427),
         i = (n = o) && n.__esModule ? n : { default: n };
       t.Z = function (e) {
         var t = e.fill,
@@ -50,7 +50,7 @@
         );
       };
     },
-    47327: (e, t, r) => {
+    17523: (e, t, r) => {
       "use strict";
       var n,
         a =
@@ -63,7 +63,7 @@
             }
             return e;
           },
-        o = r(89526),
+        o = r(47427),
         i = (n = o) && n.__esModule ? n : { default: n };
       t.Z = function (e) {
         var t = e.fill,
@@ -96,7 +96,7 @@
         );
       };
     },
-    73034: (e) => {
+    78447: (e) => {
       e.exports = function (e, t) {
         for (
           var r = -1, n = null == e ? 0 : e.length;
@@ -106,52 +106,52 @@
         return e;
       };
     },
-    96122: (e, t, r) => {
-      var n = r(88039),
-        a = r(1316),
+    64801: (e, t, r) => {
+      var n = r(84423),
+        a = r(35800),
         o = Object.prototype.hasOwnProperty;
       e.exports = function (e, t, r) {
         var i = e[t];
         (o.call(e, t) && a(i, r) && (void 0 !== r || t in e)) || n(e, t, r);
       };
     },
-    73977: (e, t, r) => {
-      var n = r(34386),
-        a = r(23150);
+    52361: (e, t, r) => {
+      var n = r(5036),
+        a = r(34840);
       e.exports = function (e, t) {
         return e && n(t, a(t), e);
       };
     },
-    5081: (e, t, r) => {
-      var n = r(34386),
-        a = r(61530);
+    63959: (e, t, r) => {
+      var n = r(5036),
+        a = r(61190);
       e.exports = function (e, t) {
         return e && n(t, a(t), e);
       };
     },
-    49548: (e, t, r) => {
-      var n = r(34987),
-        a = r(73034),
-        o = r(96122),
-        i = r(73977),
-        l = r(5081),
-        s = r(728),
-        c = r(86923),
-        p = r(21375),
-        u = r(1584),
-        h = r(47461),
-        f = r(31441),
-        d = r(35551),
-        b = r(75539),
-        g = r(83394),
-        v = r(45010),
-        x = r(93706),
-        m = r(77638),
-        y = r(55948),
-        w = r(23619),
-        E = r(78255),
-        C = r(23150),
-        k = r(61530),
+    97454: (e, t, r) => {
+      var n = r(74814),
+        a = r(78447),
+        o = r(64801),
+        i = r(52361),
+        l = r(63959),
+        s = r(49615),
+        c = r(72458),
+        p = r(82620),
+        u = r(65237),
+        h = r(5547),
+        f = r(23810),
+        d = r(22926),
+        b = r(78758),
+        g = r(72650),
+        v = r(65211),
+        x = r(5370),
+        m = r(43800),
+        y = r(44358),
+        w = r(60486),
+        E = r(48918),
+        C = r(34840),
+        k = r(61190),
         S = "[object Arguments]",
         _ = "[object Function]",
         O = "[object Object]",
@@ -180,12 +180,12 @@
         M["[object Uint32Array]"] =
           !0),
         (M["[object Error]"] = M[_] = M["[object WeakMap]"] = !1),
-        (e.exports = function e(t, r, j, R, F, A) {
+        (e.exports = function e(t, r, R, j, F, A) {
           var B,
             P = 1 & r,
             T = 2 & r,
             H = 4 & r;
-          if ((j && (B = F ? j(t, R, F, A) : j(t)), void 0 !== B)) return B;
+          if ((R && (B = F ? R(t, j, F, A) : R(t)), void 0 !== B)) return B;
           if (!w(t)) return t;
           var L = x(t);
           if (L) {
@@ -208,23 +208,23 @@
           A.set(t, B),
             E(t)
               ? t.forEach(function (n) {
-                  B.add(e(n, r, j, n, t, A));
+                  B.add(e(n, r, R, n, t, A));
                 })
               : y(t) &&
                 t.forEach(function (n, a) {
-                  B.set(a, e(n, r, j, a, t, A));
+                  B.set(a, e(n, r, R, a, t, A));
                 });
           var N = L ? void 0 : (H ? (T ? f : h) : T ? k : C)(t);
           return (
             a(N || t, function (n, a) {
-              N && (n = t[(a = n)]), o(B, a, e(n, r, j, a, t, A));
+              N && (n = t[(a = n)]), o(B, a, e(n, r, R, a, t, A));
             }),
             B
           );
         });
     },
-    33776: (e, t, r) => {
-      var n = r(23619),
+    65006: (e, t, r) => {
+      var n = r(60486),
         a = Object.create,
         o = (function () {
           function e() {}
@@ -238,24 +238,24 @@
         })();
       e.exports = o;
     },
-    2471: (e, t, r) => {
-      var n = r(35551),
-        a = r(81653);
+    34894: (e, t, r) => {
+      var n = r(22926),
+        a = r(95753);
       e.exports = function (e) {
         return a(e) && "[object Map]" == n(e);
       };
     },
-    42388: (e, t, r) => {
-      var n = r(35551),
-        a = r(81653);
+    67755: (e, t, r) => {
+      var n = r(22926),
+        a = r(95753);
       e.exports = function (e) {
         return a(e) && "[object Set]" == n(e);
       };
     },
-    21506: (e, t, r) => {
-      var n = r(23619),
-        a = r(3067),
-        o = r(90807),
+    15126: (e, t, r) => {
+      var n = r(60486),
+        a = r(66484),
+        o = r(66818),
         i = Object.prototype.hasOwnProperty;
       e.exports = function (e) {
         if (!n(e)) return o(e);
@@ -266,22 +266,22 @@
         return r;
       };
     },
-    16073: (e, t, r) => {
-      var n = r(41549);
+    82827: (e, t, r) => {
+      var n = r(7414);
       e.exports = function (e) {
         return "function" == typeof e ? e : n;
       };
     },
-    53310: (e, t, r) => {
-      var n = r(48596);
+    88350: (e, t, r) => {
+      var n = r(25449);
       e.exports = function (e) {
         var t = new e.constructor(e.byteLength);
         return new n(t).set(new n(e)), t;
       };
     },
-    728: (e, t, r) => {
+    49615: (e, t, r) => {
       e = r.nmd(e);
-      var n = r(158),
+      var n = r(49656),
         a = t && !t.nodeType && t,
         o = a && e && !e.nodeType && e,
         i = o && o.exports === a ? n.Buffer : void 0,
@@ -293,36 +293,36 @@
         return e.copy(n), n;
       };
     },
-    14352: (e, t, r) => {
-      var n = r(53310);
+    41143: (e, t, r) => {
+      var n = r(88350);
       e.exports = function (e, t) {
         var r = t ? n(e.buffer) : e.buffer;
         return new e.constructor(r, e.byteOffset, e.byteLength);
       };
     },
-    44694: (e) => {
+    54890: (e) => {
       var t = /\w*$/;
       e.exports = function (e) {
         var r = new e.constructor(e.source, t.exec(e));
         return (r.lastIndex = e.lastIndex), r;
       };
     },
-    29169: (e, t, r) => {
-      var n = r(44937),
+    1371: (e, t, r) => {
+      var n = r(99513),
         a = n ? n.prototype : void 0,
         o = a ? a.valueOf : void 0;
       e.exports = function (e) {
         return o ? Object(o.call(e)) : {};
       };
     },
-    69752: (e, t, r) => {
-      var n = r(53310);
+    40868: (e, t, r) => {
+      var n = r(88350);
       e.exports = function (e, t) {
         var r = t ? n(e.buffer) : e.buffer;
         return new e.constructor(r, e.byteOffset, e.length);
       };
     },
-    86923: (e) => {
+    72458: (e) => {
       e.exports = function (e, t) {
         var r = -1,
           n = e.length;
@@ -330,9 +330,9 @@
         return t;
       };
     },
-    34386: (e, t, r) => {
-      var n = r(96122),
-        a = r(88039);
+    5036: (e, t, r) => {
+      var n = r(64801),
+        a = r(84423);
       e.exports = function (e, t, r, o) {
         var i = !r;
         r || (r = {});
@@ -344,37 +344,33 @@
         return r;
       };
     },
-    21375: (e, t, r) => {
-      var n = r(34386),
-        a = r(45278);
+    82620: (e, t, r) => {
+      var n = r(5036),
+        a = r(7501);
       e.exports = function (e, t) {
         return n(e, a(e), t);
       };
     },
-    1584: (e, t, r) => {
-      var n = r(34386),
-        a = r(27508);
+    65237: (e, t, r) => {
+      var n = r(5036),
+        a = r(966);
       e.exports = function (e, t) {
         return n(e, a(e), t);
       };
     },
-    31441: (e, t, r) => {
-      var n = r(45328),
-        a = r(27508),
-        o = r(61530);
+    23810: (e, t, r) => {
+      var n = r(73092),
+        a = r(966),
+        o = r(61190);
       e.exports = function (e) {
         return n(e, o, a);
       };
     },
-    97959: (e, t, r) => {
-      var n = r(78579)(Object.getPrototypeOf, Object);
-      e.exports = n;
-    },
-    27508: (e, t, r) => {
-      var n = r(52824),
-        a = r(97959),
-        o = r(45278),
-        i = r(59174),
+    966: (e, t, r) => {
+      var n = r(39809),
+        a = r(75440),
+        o = r(7501),
+        i = r(8562),
         l = Object.getOwnPropertySymbols
           ? function (e) {
               for (var t = []; e; ) n(t, o(e)), (e = a(e));
@@ -383,7 +379,7 @@
           : i;
       e.exports = l;
     },
-    75539: (e) => {
+    78758: (e) => {
       var t = Object.prototype.hasOwnProperty;
       e.exports = function (e) {
         var r = e.length,
@@ -397,12 +393,12 @@
         );
       };
     },
-    83394: (e, t, r) => {
-      var n = r(53310),
-        a = r(14352),
-        o = r(44694),
-        i = r(29169),
-        l = r(69752);
+    72650: (e, t, r) => {
+      var n = r(88350),
+        a = r(41143),
+        o = r(54890),
+        i = r(1371),
+        l = r(40868);
       e.exports = function (e, t, r) {
         var s = e.constructor;
         switch (t) {
@@ -436,80 +432,63 @@
         }
       };
     },
-    45010: (e, t, r) => {
-      var n = r(33776),
-        a = r(97959),
-        o = r(3067);
+    65211: (e, t, r) => {
+      var n = r(65006),
+        a = r(75440),
+        o = r(66484);
       e.exports = function (e) {
         return "function" != typeof e.constructor || o(e) ? {} : n(a(e));
       };
     },
-    90807: (e) => {
+    66818: (e) => {
       e.exports = function (e) {
         var t = [];
         if (null != e) for (var r in Object(e)) t.push(r);
         return t;
       };
     },
-    99748: (e, t, r) => {
-      var n = r(49548);
+    64419: (e, t, r) => {
+      var n = r(97454);
       e.exports = function (e) {
         return n(e, 5);
       };
     },
-    76955: (e, t, r) => {
-      var n = r(29415),
-        a = r(16073);
+    21421: (e, t, r) => {
+      var n = r(53120),
+        a = r(82827);
       e.exports = function (e, t) {
         return e && n(e, a(t));
       };
     },
-    55948: (e, t, r) => {
-      var n = r(2471),
-        a = r(2723),
-        o = r(41771),
+    44358: (e, t, r) => {
+      var n = r(34894),
+        a = r(43630),
+        o = r(21971),
         i = o && o.isMap,
         l = i ? a(i) : n;
       e.exports = l;
     },
-    82678: (e, t, r) => {
-      var n = r(20194),
-        a = r(97959),
-        o = r(81653),
-        i = Function.prototype,
-        l = Object.prototype,
-        s = i.toString,
-        c = l.hasOwnProperty,
-        p = s.call(Object);
-      e.exports = function (e) {
-        if (!o(e) || "[object Object]" != n(e)) return !1;
-        var t = a(e);
-        if (null === t) return !0;
-        var r = c.call(t, "constructor") && t.constructor;
-        return "function" == typeof r && r instanceof r && s.call(r) == p;
-      };
-    },
-    78255: (e, t, r) => {
-      var n = r(42388),
-        a = r(2723),
-        o = r(41771),
+    48918: (e, t, r) => {
+      var n = r(67755),
+        a = r(43630),
+        o = r(21971),
         i = o && o.isSet,
         l = i ? a(i) : n;
       e.exports = l;
     },
-    61530: (e, t, r) => {
-      var n = r(92554),
-        a = r(21506),
-        o = r(51528);
+    61190: (e, t, r) => {
+      var n = r(93914),
+        a = r(15126),
+        o = r(1161);
       e.exports = function (e) {
         return o(e) ? n(e, !0) : a(e);
       };
     },
-    6531: (e, t, r) => {
+    77266: (e, t, r) => {
       "use strict";
       r.d(t, { AI: () => It });
-      var n = r(89526),
-        a = r(40430),
+      var n = r(47427),
+        a = r(41321),
         o = {},
         i = function (e, t, r, n) {
           var a = e + "-" + t + "-" + r + (n ? "-server" : "");
@@ -1226,32 +1205,32 @@
           t
         );
       })(n.PureComponent || n.Component);
-      var w = r(2652),
+      var w = r(25816),
         E = r.n(w),
-        C = r(13953),
-        k = r(24077),
-        S = r(72831);
+        C = r(41682),
+        k = r(70590),
+        S = r(35773);
       const _ = function (e, t, r) {
         ((void 0 !== r && !(0, S.Z)(e[t], r)) || (void 0 === r && !(t in e))) &&
           (0, k.Z)(e, t, r);
       };
-      var O = r(14211),
-        M = r(77408),
-        j = r(97558),
-        R = r(32291),
-        F = r(23775),
-        A = r(84431),
-        B = r(92170),
-        P = r(50641),
-        T = r(25197);
+      var O = r(31812),
+        M = r(14293),
+        R = r(39994),
+        j = r(76740),
+        F = r(5620),
+        A = r(1662),
+        B = r(10339),
+        P = r(33700),
+        T = r(97703);
       const H = function (e) {
         return (0, T.Z)(e) && (0, P.Z)(e);
       };
-      var L = r(62246),
-        D = r(2619),
-        Z = r(96288),
-        z = r(44199),
-        N = r(70770);
+      var L = r(73127),
+        D = r(43967),
+        Z = r(78325),
+        z = r(86445),
+        N = r(85812);
       const G = function (e, t) {
         if (
           ("constructor" !== t || "function" != typeof e[t]) &&
@@ -1259,8 +1238,8 @@
         )
           return e[t];
       };
-      var U = r(7172),
-        W = r(85889);
+      var U = r(65731),
+        W = r(47429);
       const X = function (e) {
         return (0, U.Z)(e, (0, W.Z)(e));
       };
@@ -1281,11 +1260,11 @@
                 ? (0, B.Z)(l)
                   ? (p = l)
                   : H(l)
-                  ? (p = (0, R.Z)(l))
+                  ? (p = (0, j.Z)(l))
                   : f
                   ? ((u = !1), (p = (0, M.Z)(s, !0)))
                   : d
-                  ? ((u = !1), (p = (0, j.Z)(s, !0)))
+                  ? ((u = !1), (p = (0, R.Z)(s, !0)))
                   : (p = [])
                 : (0, z.Z)(s) || (0, A.Z)(s)
                 ? ((p = l),
@@ -1311,8 +1290,8 @@
             W.Z,
           );
       };
-      var Y = r(35651),
-        q = r(15974);
+      var Y = r(6841),
+        q = r(73380);
       const $ = (function (e) {
         return (0, Y.Z)(function (t, r) {
           var n = -1,
@@ -1414,11 +1393,11 @@
           styles: {},
         });
       const J = K;
-      var Q = r(57649);
+      var Q = r(68312);
       const ee = function () {
         return Q.Z.Date.now();
       };
-      var te = r(90312),
+      var te = r(20787),
         re = Math.max,
         ne = Math.min;
       const ae = function (e, t, r) {
@@ -1709,9 +1688,9 @@
         );
       })(n.PureComponent || n.Component);
       const se = le;
-      var ce = r(66662),
-        pe = r(63392),
-        ue = r(59996);
+      var ce = r(35943),
+        pe = r(64796),
+        ue = r(97652);
       const he = function (e) {
         return "function" == typeof e ? e : ue.Z;
       };
@@ -2009,11 +1988,11 @@
           n = (r.h + t) % 360;
         return (r.h = n < 0 ? 360 + n : n), ve(r);
       }
-      function je(e) {
+      function Re(e) {
         var t = ve(e).toHsl();
         return (t.h = (t.h + 180) % 360), ve(t);
       }
-      function Re(e, t) {
+      function je(e, t) {
         if (isNaN(t) || t <= 0)
           throw new Error("Argument to polyad must be a positive number");
         for (var r = ve(e).toHsl(), n = [ve(e)], a = 360 / t, o = 1; o < t; o++)
@@ -2301,7 +2280,7 @@
           return this._applyCombination(Ae, arguments);
         },
         complement: function () {
-          return this._applyCombination(je, arguments);
+          return this._applyCombination(Re, arguments);
         },
         monochromatic: function () {
           return this._applyCombination(Be, arguments);
@@ -2310,10 +2289,10 @@
           return this._applyCombination(Fe, arguments);
         },
         triad: function () {
-          return this._applyCombination(Re, [3]);
+          return this._applyCombination(je, [3]);
         },
         tetrad: function () {
-          return this._applyCombination(Re, [4]);
+          return this._applyCombination(je, [4]);
         },
       }),
         (ve.fromRatio = function (e, t) {
@@ -3048,9 +3027,9 @@
         pointer: st,
       };
       rt(pt);
-      var ut = r(72160),
-        ht = r(52942),
-        ft = r(3145);
+      var ut = r(57350),
+        ht = r(63361),
+        ft = r(76529);
       const dt = function (e, t) {
         return ((0, B.Z)(e) ? ut.Z : ft.Z)(e, (0, ht.Z)(t, 3));
       };
@@ -3397,7 +3376,7 @@
           a400: "#c6ff00",
           a700: "#aeea00",
         },
-        jt = {
+        Rt = {
           50: "#fffde7",
           100: "#fff9c4",
           200: "#fff59d",
@@ -3413,7 +3392,7 @@
           a400: "#ffea00",
           a700: "#ffd600",
         },
-        Rt = {
+        jt = {
           50: "#fff8e1",
           100: "#ffecb3",
           200: "#ffe082",
@@ -3600,8 +3579,8 @@
             _t[500],
             Ot[500],
             Mt[500],
-            jt[500],
             Rt[500],
+            jt[500],
             Ft[500],
             At[500],
             Bt[500],
@@ -3613,7 +3592,7 @@
       const Dt = function (e) {
         return void 0 === e;
       };
-      var Zt = r(47327),
+      var Zt = r(17523),
         zt = (function () {
           function e(e, t) {
             for (var r = 0; r < t.length; r++) {
@@ -5803,7 +5782,7 @@
       (vr.propTypes = { styles: E().object }),
         (vr.defaultProps = { pointer: gr, styles: {} });
       rt(vr);
-      var xr = r(21112);
+      var xr = r(61615);
       const mr = function (e) {
         var t = e.color,
           r = e.onClick,
@@ -5968,8 +5947,8 @@
             ["#194D33", _t[700], _t[500], _t[300], _t[100]],
             [Ot[900], Ot[700], Ot[500], Ot[300], Ot[100]],
             [Mt[900], Mt[700], Mt[500], Mt[300], Mt[100]],
-            [jt[900], jt[700], jt[500], jt[300], jt[100]],
             [Rt[900], Rt[700], Rt[500], Rt[300], Rt[100]],
+            [jt[900], jt[700], jt[500], jt[300], jt[100]],
             [Ft[900], Ft[700], Ft[500], Ft[300], Ft[100]],
             [At[900], At[700], At[500], At[300], At[100]],
             [Bt[900], Bt[700], Bt[500], Bt[300], Bt[100]],
@@ -6484,12 +6463,12 @@
         (Mr.defaultProps = { width: 652, styles: {}, header: "Color picker" });
       rt(Mr);
     },
-    61018: (e, t, r) => {
+    29073: (e, t, r) => {
       "use strict";
       Object.defineProperty(t, "__esModule", { value: !0 }),
         (t.autoprefix = void 0);
       var n,
-        a = r(76955),
+        a = r(21421),
         o = (n = a) && n.__esModule ? n : { default: n },
         i =
           Object.assign ||
@@ -6594,7 +6573,7 @@
         });
       t.default = s;
     },
-    35025: (e, t, r) => {
+    65337: (e, t, r) => {
       "use strict";
       Object.defineProperty(t, "__esModule", { value: !0 }),
         (t.active = void 0);
@@ -6609,7 +6588,7 @@
             }
             return e;
           },
-        o = r(89526),
+        o = r(47427),
         i = (n = o) && n.__esModule ? n : { default: n };
       function l(e, t) {
         if (!e)
@@ -6687,7 +6666,7 @@
       });
       t.default = s;
     },
-    12958: (e, t, r) => {
+    85374: (e, t, r) => {
       "use strict";
       Object.defineProperty(t, "__esModule", { value: !0 }), (t.hover = void 0);
       var n,
@@ -6701,7 +6680,7 @@
             }
             return e;
           },
-        o = r(89526),
+        o = r(47427),
         i = (n = o) && n.__esModule ? n : { default: n };
       function l(e, t) {
         if (!e)
@@ -6779,14 +6758,14 @@
       });
       t.default = s;
     },
-    9986: (e, t, r) => {
+    77931: (e, t, r) => {
       "use strict";
       Object.defineProperty(t, "__esModule", { value: !0 }),
         (t.flattenNames = void 0);
-      var n = l(r(72139)),
-        a = l(r(76955)),
-        o = l(r(82678)),
-        i = l(r(34118));
+      var n = l(r(30392)),
+        a = l(r(21421)),
+        o = l(r(38655)),
+        i = l(r(81319));
       function l(e) {
         return e && e.__esModule ? e : { default: e };
       }
@@ -6811,15 +6790,15 @@
       });
       t.default = s;
     },
-    40430: (e, t, r) => {
+    41321: (e, t, r) => {
       "use strict";
       t.tz = void 0;
-      var n = c(r(9986)),
-        a = c(r(20512)),
-        o = c(r(61018)),
-        i = c(r(12958)),
-        l = c(r(35025)),
-        s = c(r(74031));
+      var n = c(r(77931)),
+        a = c(r(23090)),
+        o = c(r(29073)),
+        i = c(r(85374)),
+        l = c(r(65337)),
+        s = c(r(19369));
       function c(e) {
         return e && e.__esModule ? e : { default: e };
       }
@@ -6837,7 +6816,7 @@
       };
       t.ZP = p;
     },
-    74031: (e, t) => {
+    19369: (e, t) => {
       "use strict";
       Object.defineProperty(t, "__esModule", { value: !0 });
       t.default = function (e, t) {
@@ -6858,12 +6837,12 @@
         );
       };
     },
-    20512: (e, t, r) => {
+    23090: (e, t, r) => {
       "use strict";
       Object.defineProperty(t, "__esModule", { value: !0 }),
         (t.mergeClasses = void 0);
-      var n = i(r(76955)),
-        a = i(r(99748)),
+      var n = i(r(21421)),
+        a = i(r(64419)),
         o =
           Object.assign ||
           function (e) {

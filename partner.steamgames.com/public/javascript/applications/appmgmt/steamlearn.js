@@ -4,7 +4,7 @@
   self.webpackChunkappmgmt_storeadmin || []).push([
   [5676],
   {
-    86610: (e) => {
+    73888: (e) => {
       e.exports = {
         InputOption: "inputs_InputOption_1ShdT",
         Name: "inputs_Name_3WEib",
@@ -13,7 +13,7 @@
         Invalid: "inputs_Invalid_9e38p",
       };
     },
-    838: (e) => {
+    86728: (e) => {
       e.exports = {
         Warning: "dashboard_Warning_5z9Gp",
         Separator: "dashboard_Separator_mmbGk",
@@ -56,7 +56,7 @@
         ProjectStatusInfo: "dashboard_ProjectStatusInfo_3ThAG",
       };
     },
-    48957: (e) => {
+    77723: (e) => {
       e.exports = {
         FlowNode: "nodes_FlowNode_3Eq1x",
         Title: "nodes_Title_meAbe",
@@ -91,7 +91,7 @@
         ConnectorID: "nodes_ConnectorID_1xOlw",
       };
     },
-    63625: (e) => {
+    64026: (e) => {
       e.exports = {
         Warning: "projectcreate_Warning_4AL0j",
         Separator: "projectcreate_Separator_3UsNd",
@@ -118,7 +118,7 @@
           "projectcreate_CreateProjectResultDialogContents_9vDId",
       };
     },
-    66346: (e) => {
+    36654: (e) => {
       e.exports = {
         Warning: "projectdatasources_Warning_34i0G",
         Separator: "projectdatasources_Separator_29kZX",
@@ -175,7 +175,7 @@
         RightSection: "projectdatasources_RightSection_3GaIb",
       };
     },
-    13658: (e) => {
+    47446: (e) => {
       e.exports = {
         Warning: "projectinferencetester_Warning_2kVss",
         Separator: "projectinferencetester_Separator_2czS-",
@@ -202,7 +202,7 @@
         Invalid: "projectinferencetester_Invalid_1d4Zd",
       };
     },
-    86167: (e) => {
+    44321: (e) => {
       e.exports = {
         Warning: "projectmodel_Warning_MBuZn",
         Separator: "projectmodel_Separator_3b4C1",
@@ -234,7 +234,7 @@
         CheckboxWithLabel: "projectmodel_CheckboxWithLabel_JQcNd",
       };
     },
-    72457: (e) => {
+    76841: (e) => {
       e.exports = {
         Warning: "projectselector_Warning_ojjJ9",
         Separator: "projectselector_Separator_2olXn",
@@ -269,7 +269,7 @@
         ButtonContainer: "projectselector_ButtonContainer_2vjHb",
       };
     },
-    20589: (e) => {
+    70674: (e) => {
       e.exports = {
         Warning: "projectsnapshotfilter_Warning_2prrB",
         Separator: "projectsnapshotfilter_Separator_1bgGe",
@@ -289,7 +289,7 @@
         ProjectConfigBody: "projectsnapshotfilter_ProjectConfigBody_2PIbe",
       };
     },
-    44987: (e) => {
+    57378: (e) => {
       e.exports = {
         Warning: "projecttrain_Warning_WZW8J",
         Separator: "projecttrain_Separator_1RDaZ",
@@ -311,7 +311,7 @@
         SaveWarning: "projecttrain_SaveWarning_3Lnx9",
       };
     },
-    17880: (e) => {
+    64292: (e) => {
       e.exports = {
         Warning: "projecttrainsettings_Warning_392Fn",
         Separator: "projecttrainsettings_Separator_14Ln1",
@@ -330,7 +330,7 @@
           "projecttrainsettings_ProjectTrainSettingsPage_3K9vg",
       };
     },
-    95752: (e) => {
+    90934: (e) => {
       e.exports = {
         Warning: "projecttrainstatus_Warning_3pURN",
         Separator: "projecttrainstatus_Separator_2BerN",
@@ -392,7 +392,7 @@
         Value: "projecttrainstatus_Value_28cVs",
       };
     },
-    71457: (e) => {
+    57024: (e) => {
       e.exports = {
         Warning: "steamlearn_routing_Warning_29_72",
         Separator: "steamlearn_routing_Separator_2k1-q",
@@ -420,7 +420,7 @@
         LeftMenuBarItem: "steamlearn_routing_LeftMenuBarItem_1jUn8",
       };
     },
-    25415: (e, t, a) => {
+    59530: (e, t, a) => {
       "use strict";
       a.r(t),
         a.d(t, {
@@ -431,17 +431,17 @@
           SteamLearnRoutes: () => ra,
           default: () => _a,
         });
-      var n = a(96927),
-        o = a(89526),
-        r = a(59934),
-        s = a(565),
-        i = a(19304),
-        c = a(14826),
-        l = a(33940),
-        d = a(2486),
-        _ = a(32765),
-        m = a(19094),
-        u = a(23801);
+      var n = a(760),
+        o = a(47427),
+        r = a(8285),
+        s = a(28017),
+        i = a(13129),
+        c = a(31846),
+        l = a(85556),
+        d = a(13485),
+        _ = a(37563),
+        m = a(77581),
+        u = a(62210);
       class p {
         constructor() {
           this.m_SteamInterface = null;
@@ -467,10 +467,10 @@
           return this.m_SteamInterface.GetServiceTransport();
         }
       }
-      var g = a(5615),
-        S = a(68333),
-        v = a(20936),
-        E = a(86900);
+      var g = a(42718),
+        S = a(21928),
+        v = a(45681),
+        E = a(2041);
       function f(e) {
         return `handle_${e}`;
       }
@@ -1221,8 +1221,8 @@
               )
             : o.createElement(ge, { steamLearnContext: {} }, e.children);
         };
-      var Ee = a(838),
-        fe = a(4306);
+      var Ee = a(86728),
+        fe = a(20417);
       const Ne = (e) => {
           const t = Math.max(
             0,
@@ -1619,10 +1619,10 @@
               o.createElement(xe, null),
             ),
           );
-      var je = a(63625),
-        Te = a(22444),
-        Pe = a(57742),
-        Ie = a(89156);
+      var je = a(64026),
+        Te = a(53040),
+        Pe = a(90069),
+        Ie = a(64560);
       const ye = () => {
           const [e, t] = o.useState(""),
             [a, n] = o.useState(""),
@@ -1727,8 +1727,8 @@
             ),
           );
         };
-      var Xe = a(66346),
-        Oe = a(67736);
+      var Xe = a(36654),
+        Oe = a(77178);
       const Ve = () => {
           const {
               msgWorkingProject: e,
@@ -2499,7 +2499,7 @@
             )
           );
         };
-      var Fe = a(13658);
+      var Fe = a(47446);
       const He = () => {
         const {
             msgWorkingProject: e,
@@ -2708,10 +2708,10 @@
               ),
             );
       };
-      var Re = a(86167),
-        Ge = a(28445),
-        $e = a(67923),
-        Ue = a(48957);
+      var Re = a(44321),
+        Ge = a(95791),
+        $e = a(39234),
+        Ue = a(77723);
       const Ze = (e) => {
           const t = e.data.msgNode,
             a = t.connectors().filter((e) => e.is_input_connector()),
@@ -2872,7 +2872,7 @@
             ),
           );
         };
-      var ze = a(16749);
+      var ze = a(88553);
       const Qe = (e) => {
           const t = e.data.msgNode,
             {
@@ -3209,7 +3209,7 @@
             ),
           );
         };
-      var Je = a(23295);
+      var Je = a(77826);
       const qe = (e) => {
           const t = e.data.msgNode,
             {
@@ -3446,7 +3446,7 @@
             ),
           );
         };
-      var tt = a(75962);
+      var tt = a(14609);
       const at = (e) => {
           const t = e.data.msgNode,
             a = t.connectors().filter((e) => e.is_input_connector()),
@@ -7708,7 +7708,7 @@
         }
         return [t, a];
       }
-      var Tt = a(72457);
+      var Tt = a(76841);
       function Pt(e, t, a, n, o) {
         if (0 == a) return void e.push(ra.SteamLearnProjectCreate());
         let r = n;
@@ -8084,8 +8084,8 @@
           a && o.createElement(Xt, { arrMsgProjects: a }),
         );
       }
-      var Vt = a(20589),
-        Bt = a(86610);
+      var Vt = a(70674),
+        Bt = a(73888);
       const wt = (e) =>
           e.isVisible ? o.createElement(Wt, Object.assign({}, e)) : null,
         Wt = (e) => {
@@ -8692,7 +8692,7 @@
             ),
           );
         };
-      var Ft = a(17880);
+      var Ft = a(64292);
       const Ht = () => {
         const { msgWorkingProjectConfig: e } = pe();
         return o.createElement(
@@ -8911,11 +8911,11 @@
           ),
         );
       };
-      var Rt = a(95424),
-        Gt = a(23007),
-        $t = a(58104),
-        Ut = a(52339),
-        Zt = a(95752);
+      var Rt = a(53664),
+        Gt = a(90291),
+        $t = a(56886),
+        Ut = a(52942),
+        Zt = a(90934);
       function Kt(e) {
         let t = "";
         return (
@@ -9878,8 +9878,8 @@
               : null
           );
         };
-      var aa = a(71457),
-        na = a(44987);
+      var aa = a(57024),
+        na = a(57378);
       const oa = () => {
           const {
               msgProject: e,
