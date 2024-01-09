@@ -62,6 +62,7 @@ message CFamilyGroups_CreateFamilyGroup_Response {
 
 message CFamilyGroups_GetFamilyGroup_Request {
 	optional uint64 family_groupid = 1;
+	optional bool send_running_apps = 2;
 }
 
 message FamilyGroupMember {
@@ -273,7 +274,7 @@ message CFamilyGroups_GetSharedLibraryApps_Response {
 	repeated .CFamilyGroups_GetSharedLibraryApps_Response.SharedApp apps = 1;
 }
 
-message CFamilyGroupsClient_GroupStatus_Notification {
+message CFamilyGroupsClient_NotifyRunningApps_Notification {
 	message PlayingMember {
 		optional fixed64 member_steamid = 1;
 		optional fixed64 owner_steamid = 2;
@@ -282,14 +283,18 @@ message CFamilyGroupsClient_GroupStatus_Notification {
 	message RunningApp {
 		optional uint32 appid = 1;
 		optional bool is_locked = 2;
-		repeated .CFamilyGroupsClient_GroupStatus_Notification.PlayingMember playing_members = 3;
+		repeated .CFamilyGroupsClient_NotifyRunningApps_Notification.PlayingMember playing_members = 3;
 	}
 
 	optional uint64 family_groupid = 1;
-	repeated .CFamilyGroupsClient_GroupStatus_Notification.RunningApp running_apps = 2;
+	repeated .CFamilyGroupsClient_NotifyRunningApps_Notification.RunningApp running_apps = 2;
 }
 
 message CFamilyGroupsClient_InviteStatus_Notification {
+}
+
+message CFamilyGroupsClient_GroupChanged_Notification {
+	optional uint64 family_groupid = 1;
 }
 
 service FamilyGroups {
@@ -315,6 +320,7 @@ service FamilyGroups {
 service FamilyGroupsClient {
 	option (service_execution_site) = k_EProtoExecutionSiteSteamClient;
 
-	rpc NotifyGroupStatus (.CFamilyGroupsClient_GroupStatus_Notification) returns (.NoResponse);
+	rpc NotifyRunningApps (.CFamilyGroupsClient_NotifyRunningApps_Notification) returns (.NoResponse);
 	rpc NotifyInviteStatus (.CFamilyGroupsClient_InviteStatus_Notification) returns (.NoResponse);
+	rpc NotifyGroupChanged (.CFamilyGroupsClient_GroupChanged_Notification) returns (.NoResponse);
 }
