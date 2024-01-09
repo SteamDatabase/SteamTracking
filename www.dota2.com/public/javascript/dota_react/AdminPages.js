@@ -1160,15 +1160,16 @@
               let e = ge.slice();
               (e = e.filter(
                 (e) =>
-                  !(!Fe && e.lobby_type == I.Eq.CASUAL_MATCH) &&
-                  !(!Ce && e.lobby_type == I.Eq.COMPETITIVE_MATCH) &&
+                  !(!Fe && e.lobbytype == I.Eq.CASUAL_MATCH) &&
+                  !(!Ce && e.lobbytype == I.Eq.COMPETITIVE_MATCH) &&
                   !(
                     !Me &&
                     ![
                       I.Eq.CASUAL_MATCH,
                       I.Eq.COMPETITIVE_MATCH,
                       I.Eq.WEEKEND_TOURNEY,
-                    ].includes(e.lobby_type)
+                      I.Eq.FEATURED_GAMEMODE,
+                    ].includes(e.lobbytype)
                   ) &&
                   !(!Ge && e.rankwassolo) &&
                   !(!we && !e.rankwassolo),
@@ -1376,7 +1377,7 @@
                 "Ranked/Unranked (this label isn't used, check headerRenderer)",
               widthRelative: 8,
               cellRenderer: (e) => {
-                let t = isNaN(e.cellData) ? e.rowData.lobby_type : e.cellData;
+                let t = isNaN(e.cellData) ? e.rowData.lobbytype : e.cellData;
                 t in I.Eq || (t = -1);
                 let a = J;
                 return (
