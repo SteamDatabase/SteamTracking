@@ -13498,6 +13498,7 @@
         IJ: () => l,
         L2: () => I,
         Ng: () => T,
+        QN: () => A,
         bn: () => y,
         eh: () => u,
         nd: () => H,
@@ -15875,7 +15876,7 @@
                 "PromotionEventInvites.GetInvite#1",
                 (0, a.MD)(P, t),
                 W,
-                { bConstMethod: !0, ePrivilege: 11 },
+                { bConstMethod: !0, ePrivilege: 1 },
               );
             }),
             (e.AcceptInvite = function (e, t) {

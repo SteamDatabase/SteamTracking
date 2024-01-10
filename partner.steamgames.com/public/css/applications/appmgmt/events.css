@@ -5357,7 +5357,7 @@ html.tablet .partnereventdisplay_EventDetailTitle_2_4FS {
 }
 .optin_admin_editor_Section_2yL7J p {
   font-size: 14px;
-  color: #dfe3e6;
+  color: #abb2b7;
 }
 .optin_admin_editor_Section_2yL7J .optin_admin_editor_SectionDesc_33_oC {
   font-size: 14px;
@@ -5369,6 +5369,16 @@ html.tablet .partnereventdisplay_EventDetailTitle_2_4FS {
 .optin_admin_editor_Section_2yL7J.optin_admin_editor_ManageTable_2afWv {
   height: calc(100vh - 421px);
   min-height: 900px;
+}
+.optin_admin_editor_Section_2yL7J
+  textarea.optin_admin_editor_EventBBCodeEditor_3UtWX {
+  resize: vertical;
+  width: calc(100% - 20px);
+  outline-width: 0;
+  padding: 10px;
+  color: var(--main-editor-text-color);
+  font-size: 14px;
+  overflow-x: hidden;
 }
 .optin_admin_editor_IndentedSubSection_3zYTc {
   margin-left: 16px;
@@ -5385,18 +5395,6 @@ html.tablet .partnereventdisplay_EventDetailTitle_2_4FS {
 .optin_admin_editor_RightSection_3NiRT {
   padding: 16px;
   background: #2c2e35;
-}
-.optin_admin_editor_EventBBCodeEditor_3UtWX {
-  resize: vertical;
-  width: calc(100% - 20px);
-  border: none;
-  outline-width: 0;
-  padding: 10px;
-  background-color: var(--main-editor-input-bg-color);
-  box-shadow: 0 0 5px #000 inset;
-  color: var(--main-editor-text-color);
-  font-size: 14px;
-  overflow-x: hidden;
 }
 .optin_admin_editor_InvitedAppHistoryDialog_1OeP6 {
   max-width: 700px;
@@ -5701,6 +5699,19 @@ table.optin_admin_editor_EligibleGamesTable_3sBXw td {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+}
+.optin_admin_manage_dashboard_DownloadRow_3Bo6G button.DialogButton {
+  display: flex;
+  flex-direction: row;
+  text-wrap: nowrap;
+  padding: 2px 12px;
+  justify-content: center;
+  width: fit-content;
+  margin-right: 10px;
+}
+.optin_admin_manage_dashboard_ManageCallout_24Sey {
+  color: orange;
+  margin-bottom: 8px;
 }
 .optin_admin_email_editor_CenterAlign_30g6t {
   display: flex;
@@ -6049,6 +6060,10 @@ table.optin_admin_editor_EligibleGamesTable_3sBXw td {
 .optin_admin_email_editor_BigButton_2d5qK span {
   color: #fff;
   text-decoration: none;
+}
+.optin_admin_email_editor_appItem_32UiY {
+  display: flex;
+  flex-direction: row;
 }
 .optin_admin_email_sections_Preview_3fMhG {
   max-width: 800px;

@@ -15,6 +15,9 @@ hr {
 hr.VO {
   border-bottom: 2px solid #e26748;
 }
+select {
+  width: fit-content !important;
+}
 button.dashboard_Warning_5z9Gp {
   background-color: red;
 }
@@ -25,6 +28,9 @@ button.DialogButton {
   width: fit-content !important;
   padding-left: 12px !important;
   padding-right: 12px !important;
+}
+._DialogColLayout {
+  gap: 8px;
 }
 .dashboard_Separator_mmbGk {
   width: 100%;
@@ -314,6 +320,9 @@ hr {
 hr.VO {
   border-bottom: 2px solid #e26748;
 }
+select {
+  width: fit-content !important;
+}
 button.projectcreate_Warning_4AL0j {
   background-color: red;
 }
@@ -324,6 +333,9 @@ button.DialogButton {
   width: fit-content !important;
   padding-left: 12px !important;
   padding-right: 12px !important;
+}
+._DialogColLayout {
+  gap: 8px;
 }
 .projectcreate_Separator_3UsNd {
   width: 100%;
@@ -478,6 +490,9 @@ hr {
 hr.VO {
   border-bottom: 2px solid #e26748;
 }
+select {
+  width: fit-content !important;
+}
 button.projectdatasources_Warning_34i0G {
   background-color: red;
 }
@@ -488,6 +503,9 @@ button.DialogButton {
   width: fit-content !important;
   padding-left: 12px !important;
   padding-right: 12px !important;
+}
+._DialogColLayout {
+  gap: 8px;
 }
 .projectdatasources_Separator_29kZX {
   width: 100%;
@@ -881,6 +899,9 @@ hr {
 hr.VO {
   border-bottom: 2px solid #e26748;
 }
+select {
+  width: fit-content !important;
+}
 button.projectinferencetester_Warning_2kVss {
   background-color: red;
 }
@@ -891,6 +912,9 @@ button.DialogButton {
   width: fit-content !important;
   padding-left: 12px !important;
   padding-right: 12px !important;
+}
+._DialogColLayout {
+  gap: 8px;
 }
 .projectinferencetester_Separator_2czS- {
   width: 100%;
@@ -1082,7 +1106,10 @@ hr {
 hr.VO {
   border-bottom: 2px solid #e26748;
 }
-button.projectmodel_Warning_MBuZn {
+select {
+  width: fit-content !important;
+}
+button.nodes_Warning_2zXmp {
   background-color: red;
 }
 #application_root {
@@ -1093,36 +1120,39 @@ button.DialogButton {
   padding-left: 12px !important;
   padding-right: 12px !important;
 }
-.projectmodel_Separator_3b4C1 {
+._DialogColLayout {
+  gap: 8px;
+}
+.nodes_Separator_12clB {
   width: 100%;
   height: 1px;
   background-color: #444;
   margin: 10px 0px;
 }
-.projectmodel_TextButton_x7w6X {
+.nodes_TextButton_s0iVy {
   width: fit-content;
   cursor: pointer;
   user-select: none;
   color: #999;
 }
-.projectmodel_TextButton_x7w6X:hover {
+.nodes_TextButton_s0iVy:hover {
   color: #fff;
 }
-.projectmodel_OptionBlock_2lpZU {
+.nodes_OptionBlock_Po3nH {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
-.projectmodel_OptionBlock_2lpZU .projectmodel_OptionHeader_33cLn {
+.nodes_OptionBlock_Po3nH .nodes_OptionHeader_3HJ1- {
   font-size: 16px;
   color: #67c1f5;
   margin-bottom: 6px;
 }
-.projectmodel_OptionBlock_2lpZU .projectmodel_OptionDesc_p2VDv {
+.nodes_OptionBlock_Po3nH .nodes_OptionDesc_1AUkO {
   font-size: 13px;
   margin-bottom: 8px;
 }
-.projectmodel_SteamLearnButton_2XyTR {
+.nodes_SteamLearnButton_sxu7e {
   width: fit-content;
   padding: 2px 6px;
   border-radius: 2px;
@@ -1135,163 +1165,42 @@ button.DialogButton {
   align-items: center;
   justify-content: center;
 }
-.projectmodel_SteamLearnButton_2XyTR:not(.projectmodel_Disabled_2hCF1) {
+.nodes_SteamLearnButton_sxu7e:not(.nodes_Disabled_1kGv5) {
   cursor: pointer;
 }
-.projectmodel_SteamLearnButton_2XyTR.projectmodel_Hidden_17HVA {
+.nodes_SteamLearnButton_sxu7e.nodes_Hidden_3Q350 {
   opacity: 0;
   height: 0px;
   margin: 0px;
   padding: 0px;
 }
-.projectmodel_SteamLearnButton_2XyTR.projectmodel_Large_2p4Ep {
+.nodes_SteamLearnButton_sxu7e.nodes_Large_2KBmq {
   font-size: 14px;
 }
-.projectmodel_SteamLearnButton_2XyTR.projectmodel_Medium_oyUgX {
+.nodes_SteamLearnButton_sxu7e.nodes_Medium_2ue2w {
   font-size: 13px;
 }
-.projectmodel_SteamLearnButton_2XyTR.projectmodel_Blue_3lg-R {
+.nodes_SteamLearnButton_sxu7e.nodes_Blue_2v0Io {
   background-color: #417a9b;
   color: #dbdbdb;
 }
-.projectmodel_SteamLearnButton_2XyTR.projectmodel_Red_e3J0- {
+.nodes_SteamLearnButton_sxu7e.nodes_Red_2WdNd {
   background-color: #c64444;
   color: #000;
 }
-.projectmodel_SteamLearnButton_2XyTR.projectmodel_Disabled_2hCF1 {
+.nodes_SteamLearnButton_sxu7e.nodes_Disabled_1kGv5 {
   background-color: #4e4e4e;
   color: #888;
 }
-.projectmodel_SteamLearnButton_2XyTR:hover.projectmodel_Blue_3lg-R:not(
-    .projectmodel_Disabled_2hCF1
+.nodes_SteamLearnButton_sxu7e:hover.nodes_Blue_2v0Io:not(
+    .nodes_Disabled_1kGv5
   ) {
   background-color: #57a3cf;
   color: #fff;
 }
-.projectmodel_SteamLearnButton_2XyTR:hover.projectmodel_Red_e3J0-:not(
-    .projectmodel_Disabled_2hCF1
-  ) {
+.nodes_SteamLearnButton_sxu7e:hover.nodes_Red_2WdNd:not(.nodes_Disabled_1kGv5) {
   background-color: #f93d3d;
   color: #000;
-}
-.projectmodel_ProjectModelPage_2m439 {
-  width: 100%;
-  height: 1400px;
-  display: flex;
-  flex-direction: column;
-}
-.projectmodel_ProjectModelPage_2m439 .projectmodel_ProjectModelReactFlow_16zi2 {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
-}
-.projectmodel_ProjectModelPage_2m439
-  .projectmodel_ProjectModelReactFlow_16zi2
-  .projectmodel_ReactFlowWrapper_3Qiql {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-.projectmodel_ProjectModelPage_2m439
-  .projectmodel_ProjectModelReactFlow_16zi2
-  .projectmodel_ReactFlowWrapper_3Qiql
-  .react-flow {
-  background-color: #151515;
-  border: 1px solid #000;
-}
-.projectmodel_ProjectModelPage_2m439
-  .projectmodel_ProjectModelReactFlow_16zi2
-  .projectmodel_DragSourcePanel_-6BVk {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-  padding: 10px;
-}
-.projectmodel_ProjectModelPage_2m439
-  .projectmodel_ProjectModelReactFlow_16zi2
-  .projectmodel_DragSourcePanel_-6BVk
-  .projectmodel_DragSource_xN6wI {
-  padding: 2px 4px;
-  border: 1px solid #fff;
-  font-size: 10px;
-}
-.projectmodel_ProjectModelPage_2m439
-  .projectmodel_ProjectModelReactFlow_16zi2
-  .projectmodel_DragSourcePanel_-6BVk
-  .projectmodel_DebugToggle_zsiFr {
-  flex-grow: 1;
-  text-align: right;
-  color: #a9a9a9;
-  cursor: pointer;
-  user-select: none;
-}
-.projectmodel_ProjectModelPage_2m439
-  .projectmodel_ProjectModelReactFlow_16zi2
-  .projectmodel_DragSourcePanel_-6BVk
-  .projectmodel_DebugToggle_zsiFr.projectmodel_Enabled_tWQvN {
-  color: #fff;
-}
-.projectmodel_EditOptions_3TQl6 {
-  border: 2px solid #000;
-  background-color: #333;
-  color: #fff;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-  display: flex;
-  flex-direction: column;
-  min-width: 200px;
-  min-height: 80px;
-}
-.projectmodel_EditOptions_3TQl6 .projectmodel_Title_21Zb4 {
-  font-size: 16px;
-  color: #fff;
-  border-bottom: 1px solid #777;
-  background-color: #444;
-  padding: 0px 4px;
-}
-.projectmodel_EditOptions_3TQl6 .projectmodel_Body_2qDZq {
-  font-size: 13px;
-  padding: 8px;
-  width: 100%;
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-}
-.projectmodel_EditOptions_3TQl6
-  .projectmodel_Body_2qDZq
-  .projectmodel_Shape_2S-T6 {
-  width: 100%;
-  text-align: center;
-  color: #888;
-}
-.projectmodel_EditOptions_3TQl6
-  .projectmodel_Body_2qDZq
-  .projectmodel_Option_pZE2H {
-  display: flex;
-  flex-direction: row;
-  gap: 8px;
-  align-items: center;
-}
-.projectmodel_EditOptions_3TQl6
-  .projectmodel_Body_2qDZq
-  .projectmodel_Option_pZE2H
-  .projectmodel_OptionInput_2iqXl {
-  width: 60px;
-  height: 26px;
-}
-.projectmodel_EditOptions_3TQl6
-  .projectmodel_Body_2qDZq
-  .projectmodel_Option_pZE2H
-  .projectmodel_OptionInput_2iqXl.projectmodel_Invalid_3Q2pf {
-  color: #f33;
-}
-.projectmodel_CheckboxWithLabel_JQcNd {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 2px;
 }
 .nodes_FlowNode_3Eq1x {
   border: 2px solid #000;
@@ -1355,10 +1264,22 @@ button.DialogButton {
 .nodes_FlowNode_3Eq1x .nodes_Title_meAbe .nodes_Delete_3yetd:hover {
   filter: sepia(1) hue-rotate(310deg) saturate(10) brightness(2);
 }
+.nodes_FlowNode_3Eq1x.nodes_Preprocessing_2bCs4 .nodes_Title_meAbe {
+  background: radial-gradient(
+      circle at top left,
+      rgba(40, 122, 245, 0.4) 0%,
+      #0e2247 60%
+    ),
+    #2c2f34;
+}
+.nodes_FlowNode_3Eq1x.nodes_Keras_8VekS .nodes_Title_meAbe {
+  background: radial-gradient(circle at top left, #736548 0%, #574b32 60%),
+    #2c2f34;
+}
 .nodes_FlowNode_3Eq1x .nodes_TitleUnderBar_3Rx6P {
   width: 100%;
   height: 1px;
-  background: linear-gradient(to right, #00ccff, #3366ff);
+  background-color: #000;
 }
 .nodes_FlowNode_3Eq1x .nodes_Body_Nhk_t {
   font-size: 13px;
@@ -1435,6 +1356,87 @@ button.DialogButton {
 }
 .nodes_TrainNode_2Z5Sy {
   min-width: 400px;
+}
+.NodeEditDialog .DialogContent {
+  padding: 12px;
+}
+.NodeEditDialog .nodes_NodeHeader_3yduK {
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #fff;
+  margin-bottom: 8px;
+}
+.NodeEditDialog .nodes_NodeHeader_3yduK .nodes_SubHeader_KhOcv {
+  font-size: 13px;
+  color: #95825b;
+  font-weight: initial;
+  letter-spacing: initial;
+  text-transform: none;
+  margin-top: 2px;
+}
+.NodeEditDialog .nodes_NodeBody_1QBSM {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.NodeEditDialog .nodes_NodeBody_1QBSM .nodes_NodeOptionBlock_9wvW1 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.NodeEditDialog
+  .nodes_NodeBody_1QBSM
+  .nodes_NodeOptionBlock_9wvW1
+  .nodes_NodeOptionHeader_WIkQy {
+  font-size: 16px;
+  color: #67c1f5;
+}
+.NodeEditDialog
+  .nodes_NodeBody_1QBSM
+  .nodes_NodeOptionBlock_9wvW1
+  .nodes_NodeOptionDesc_3amye {
+  font-size: 13px;
+  margin-bottom: 2px;
+}
+.NodeEditDialog
+  .nodes_NodeBody_1QBSM
+  .nodes_NodeOptionBlock_9wvW1
+  .nodes_OptionDescSub_1gb6_ {
+  font-size: 12px;
+  color: #8caeb9;
+  margin-left: 8px;
+}
+.NodeEditDialog
+  .nodes_NodeBody_1QBSM
+  .nodes_NodeOptionBlock_9wvW1
+  .nodes_CheckboxWithLabel_1nRNo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.NodeEditDialog
+  .nodes_NodeBody_1QBSM
+  .nodes_NodeOptionBlock_9wvW1
+  .nodes_CheckboxWithLabel_1nRNo
+  label {
+  font-size: 13px;
+}
+.NodeEditDialog .nodes_NodeBody_1QBSM .nodes_Separator_12clB {
+  width: 100%;
+  height: 1px;
+  background-color: #242424;
+  margin: 0px;
+}
+.NodeEditDialog .nodes_Buttons_2f9B5 {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  margin-top: 12px;
+}
+.NodeEditDialog .nodes_Buttons_2f9B5 .DialogButton {
+  flex-grow: 1;
 }
 .GenericConfirmDialog .nodes_SubHeader_KhOcv {
   font-size: 12px;
@@ -1601,6 +1603,31 @@ div.react-flow__handle-right {
   border-left-color: #000;
   right: -11px;
 }
+.inputs_InputOption_1ShdT {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+.inputs_InputOption_1ShdT .inputs_Name_3WEib {
+  font-size: 14px;
+  color: #ac966a;
+  min-width: 200px;
+}
+.inputs_InputOption_1ShdT .inputs_Name_3WEib.inputs_Small_2e22I {
+  font-size: 13px;
+}
+.inputs_InputOption_1ShdT .inputs_ValueInput_3xxzP {
+  width: 70px;
+  height: 20px;
+  text-align: right;
+}
+.inputs_InputOption_1ShdT .inputs_ValueInput_3xxzP .inputs_Wide_3CDBu {
+  width: 100px;
+}
+.inputs_InputOption_1ShdT .inputs_ValueInput_3xxzP.inputs_Invalid_9e38p {
+  color: red;
+}
 * {
   box-sizing: border-box;
 }
@@ -1618,6 +1645,343 @@ hr {
 hr.VO {
   border-bottom: 2px solid #e26748;
 }
+select {
+  width: fit-content !important;
+}
+button.projectmodel_Warning_MBuZn {
+  background-color: red;
+}
+#application_root {
+  min-height: inherit;
+}
+button.DialogButton {
+  width: fit-content !important;
+  padding-left: 12px !important;
+  padding-right: 12px !important;
+}
+._DialogColLayout {
+  gap: 8px;
+}
+.projectmodel_Separator_3b4C1 {
+  width: 100%;
+  height: 1px;
+  background-color: #444;
+  margin: 10px 0px;
+}
+.projectmodel_TextButton_x7w6X {
+  width: fit-content;
+  cursor: pointer;
+  user-select: none;
+  color: #999;
+}
+.projectmodel_TextButton_x7w6X:hover {
+  color: #fff;
+}
+.projectmodel_OptionBlock_2lpZU {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.projectmodel_OptionBlock_2lpZU .projectmodel_OptionHeader_33cLn {
+  font-size: 16px;
+  color: #67c1f5;
+  margin-bottom: 6px;
+}
+.projectmodel_OptionBlock_2lpZU .projectmodel_OptionDesc_p2VDv {
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+.projectmodel_SteamLearnButton_2XyTR {
+  width: fit-content;
+  padding: 2px 6px;
+  border-radius: 2px;
+  user-select: none;
+  transition-property: color, background-color, opacity;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.1s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.projectmodel_SteamLearnButton_2XyTR:not(.projectmodel_Disabled_2hCF1) {
+  cursor: pointer;
+}
+.projectmodel_SteamLearnButton_2XyTR.projectmodel_Hidden_17HVA {
+  opacity: 0;
+  height: 0px;
+  margin: 0px;
+  padding: 0px;
+}
+.projectmodel_SteamLearnButton_2XyTR.projectmodel_Large_2p4Ep {
+  font-size: 14px;
+}
+.projectmodel_SteamLearnButton_2XyTR.projectmodel_Medium_oyUgX {
+  font-size: 13px;
+}
+.projectmodel_SteamLearnButton_2XyTR.projectmodel_Blue_3lg-R {
+  background-color: #417a9b;
+  color: #dbdbdb;
+}
+.projectmodel_SteamLearnButton_2XyTR.projectmodel_Red_e3J0- {
+  background-color: #c64444;
+  color: #000;
+}
+.projectmodel_SteamLearnButton_2XyTR.projectmodel_Disabled_2hCF1 {
+  background-color: #4e4e4e;
+  color: #888;
+}
+.projectmodel_SteamLearnButton_2XyTR:hover.projectmodel_Blue_3lg-R:not(
+    .projectmodel_Disabled_2hCF1
+  ) {
+  background-color: #57a3cf;
+  color: #fff;
+}
+.projectmodel_SteamLearnButton_2XyTR:hover.projectmodel_Red_e3J0-:not(
+    .projectmodel_Disabled_2hCF1
+  ) {
+  background-color: #f93d3d;
+  color: #000;
+}
+.projectmodel_ProjectModelPage_2m439 {
+  width: 100%;
+  height: 1000px;
+  display: flex;
+  flex-direction: column;
+}
+.projectmodel_ProjectModelPage_2m439 .projectmodel_ProjectModelReactFlow_16zi2 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+.projectmodel_ProjectModelPage_2m439
+  .projectmodel_ProjectModelReactFlow_16zi2
+  .projectmodel_ReactFlowWrapper_3Qiql {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.projectmodel_ProjectModelPage_2m439
+  .projectmodel_ProjectModelReactFlow_16zi2
+  .projectmodel_ReactFlowWrapper_3Qiql
+  .react-flow {
+  background-color: #151515;
+  border: 1px solid #000;
+}
+.projectmodel_ProjectModelPage_2m439
+  .projectmodel_ProjectModelReactFlow_16zi2
+  .projectmodel_DragSourcePanel_-6BVk {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-bottom: 16px;
+}
+.projectmodel_ProjectModelPage_2m439
+  .projectmodel_ProjectModelReactFlow_16zi2
+  .projectmodel_DragSourcePanel_-6BVk
+  .projectmodel_DragRow_3uDEL {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+}
+.projectmodel_ProjectModelPage_2m439
+  .projectmodel_ProjectModelReactFlow_16zi2
+  .projectmodel_DragSourcePanel_-6BVk
+  .projectmodel_DragRow_3uDEL
+  .projectmodel_DragRowTitle_3akPU {
+  width: 200px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+.projectmodel_ProjectModelPage_2m439
+  .projectmodel_ProjectModelReactFlow_16zi2
+  .projectmodel_DragSourcePanel_-6BVk
+  .projectmodel_DragRow_3uDEL
+  .projectmodel_DragRowTitle_3akPU
+  .projectmodel_Title_21Zb4 {
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.projectmodel_ProjectModelPage_2m439
+  .projectmodel_ProjectModelReactFlow_16zi2
+  .projectmodel_DragSourcePanel_-6BVk
+  .projectmodel_DragRow_3uDEL
+  .projectmodel_DragRowTitle_3akPU.projectmodel_Preprocessing_gSeaK {
+  color: #00a3cb;
+}
+.projectmodel_ProjectModelPage_2m439
+  .projectmodel_ProjectModelReactFlow_16zi2
+  .projectmodel_DragSourcePanel_-6BVk
+  .projectmodel_DragRow_3uDEL
+  .projectmodel_DragRowTitle_3akPU.projectmodel_Preprocessing_gSeaK
+  .projectmodel_SpacerLine_3IPFv {
+  background-color: #005a70;
+}
+.projectmodel_ProjectModelPage_2m439
+  .projectmodel_ProjectModelReactFlow_16zi2
+  .projectmodel_DragSourcePanel_-6BVk
+  .projectmodel_DragRow_3uDEL
+  .projectmodel_DragRowTitle_3akPU.projectmodel_Keras_2lkoN {
+  color: #95825b;
+}
+.projectmodel_ProjectModelPage_2m439
+  .projectmodel_ProjectModelReactFlow_16zi2
+  .projectmodel_DragSourcePanel_-6BVk
+  .projectmodel_DragRow_3uDEL
+  .projectmodel_DragRowTitle_3akPU.projectmodel_Keras_2lkoN
+  .projectmodel_SpacerLine_3IPFv {
+  background-color: #5a4f38;
+}
+.projectmodel_ProjectModelPage_2m439
+  .projectmodel_ProjectModelReactFlow_16zi2
+  .projectmodel_DragSourcePanel_-6BVk
+  .projectmodel_DragRow_3uDEL
+  .projectmodel_DragRowTitle_3akPU
+  .projectmodel_SpacerLine_3IPFv {
+  flex-grow: 1;
+  height: 1px;
+  margin-right: 4px;
+}
+.projectmodel_ProjectModelPage_2m439
+  .projectmodel_ProjectModelReactFlow_16zi2
+  .projectmodel_DragSourcePanel_-6BVk
+  .projectmodel_DragRow_3uDEL
+  .projectmodel_DrawRowElements_1dKza {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+}
+.projectmodel_ProjectModelPage_2m439
+  .projectmodel_ProjectModelReactFlow_16zi2
+  .projectmodel_DragSourcePanel_-6BVk
+  .projectmodel_DragRow_3uDEL
+  .projectmodel_DrawRowElements_1dKza.projectmodel_Preprocessing_gSeaK
+  .projectmodel_DragSource_xN6wI {
+  border: 1px solid #1a405f;
+  background-color: #143059;
+}
+.projectmodel_ProjectModelPage_2m439
+  .projectmodel_ProjectModelReactFlow_16zi2
+  .projectmodel_DragSourcePanel_-6BVk
+  .projectmodel_DragRow_3uDEL
+  .projectmodel_DrawRowElements_1dKza.projectmodel_Keras_2lkoN
+  .projectmodel_DragSource_xN6wI {
+  border: 1px solid #453c28;
+  background-color: #332d20;
+}
+.projectmodel_ProjectModelPage_2m439
+  .projectmodel_ProjectModelReactFlow_16zi2
+  .projectmodel_DragSourcePanel_-6BVk
+  .projectmodel_DragRow_3uDEL
+  .projectmodel_DrawRowElements_1dKza
+  .projectmodel_DragSource_xN6wI {
+  color: #fff;
+  padding: 2px 4px;
+  font-size: 11px;
+}
+.projectmodel_ProjectModelPage_2m439
+  .projectmodel_ProjectModelReactFlow_16zi2
+  .projectmodel_DragSourcePanel_-6BVk
+  .projectmodel_DebugToggle_zsiFr {
+  flex-grow: 1;
+  text-align: right;
+  color: #a9a9a9;
+  cursor: pointer;
+  user-select: none;
+}
+.projectmodel_ProjectModelPage_2m439
+  .projectmodel_ProjectModelReactFlow_16zi2
+  .projectmodel_DragSourcePanel_-6BVk
+  .projectmodel_DebugToggle_zsiFr.projectmodel_Enabled_tWQvN {
+  color: #fff;
+}
+.projectmodel_EditOptions_3TQl6 {
+  border: 2px solid #000;
+  background-color: #333;
+  color: #fff;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  min-width: 200px;
+  min-height: 80px;
+}
+.projectmodel_EditOptions_3TQl6 .projectmodel_Title_21Zb4 {
+  font-size: 16px;
+  color: #fff;
+  border-bottom: 1px solid #777;
+  background-color: #444;
+  padding: 0px 4px;
+}
+.projectmodel_EditOptions_3TQl6 .projectmodel_Body_2qDZq {
+  font-size: 13px;
+  padding: 8px;
+  width: 100%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+.projectmodel_EditOptions_3TQl6
+  .projectmodel_Body_2qDZq
+  .projectmodel_Shape_2S-T6 {
+  width: 100%;
+  text-align: center;
+  color: #888;
+}
+.projectmodel_EditOptions_3TQl6
+  .projectmodel_Body_2qDZq
+  .projectmodel_Option_pZE2H {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+}
+.projectmodel_EditOptions_3TQl6
+  .projectmodel_Body_2qDZq
+  .projectmodel_Option_pZE2H
+  .projectmodel_OptionInput_2iqXl {
+  width: 60px;
+  height: 26px;
+}
+.projectmodel_EditOptions_3TQl6
+  .projectmodel_Body_2qDZq
+  .projectmodel_Option_pZE2H
+  .projectmodel_OptionInput_2iqXl.projectmodel_Invalid_3Q2pf {
+  color: #f33;
+}
+.projectmodel_CheckboxWithLabel_JQcNd {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2px;
+}
+* {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+ul li {
+  list-style-type: square;
+}
+hr {
+  height: 0px;
+  border-bottom: 2px solid #67c1f5;
+  margin-bottom: 4px;
+}
+hr.VO {
+  border-bottom: 2px solid #e26748;
+}
+select {
+  width: fit-content !important;
+}
 button.projectselector_Warning_ojjJ9 {
   background-color: red;
 }
@@ -1628,6 +1992,9 @@ button.DialogButton {
   width: fit-content !important;
   padding-left: 12px !important;
   padding-right: 12px !important;
+}
+._DialogColLayout {
+  gap: 8px;
 }
 .projectselector_Separator_2olXn {
   width: 100%;
@@ -1803,6 +2170,50 @@ button.DialogButton {
   button.projectselector_Warning_ojjJ9 {
   background: linear-gradient(to right, #c32929 0%, #7a1616 60%);
 }
+.projectselector_ShowChangesButton_3CKEA {
+  font-size: 14px;
+  color: #aaa;
+  cursor: pointer;
+  user-select: none;
+  margin-top: 20px;
+}
+.projectselector_ShowChangesButton_3CKEA:hover {
+  color: #fff;
+}
+.projectselector_DiffTableContainer_2NR83 {
+  width: 1000px;
+  max-height: 700px;
+  overflow-y: scroll;
+  margin: 8px 0px;
+  border: 1px solid #000;
+  background-color: #222;
+  padding: 4px;
+}
+.DiscardChangesPopup .DialogContent .DialogContent_InnerWidth {
+  max-width: 100%;
+}
+.projectselector_Buttons_29l8- {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  margin-top: 12px;
+  justify-content: space-around;
+}
+.projectselector_Buttons_29l8- .DialogButton {
+  flex-grow: 1;
+}
+.json-diff-viewer {
+  table-layout: auto !important;
+}
+.json-diff-viewer tr .line-modify {
+  background-color: #47453f !important;
+}
+.json-diff-viewer tr .line-add {
+  background-color: #1e411f !important;
+}
+.json-diff-viewer tr .line-remove {
+  background-color: #3d1818 !important;
+}
 .CreateOrEditProjectPopup .DialogContent {
   width: 600px;
 }
@@ -1854,6 +2265,104 @@ button.DialogButton {
   gap: 10px;
   margin-top: 8px;
 }
+.json-diff-viewer {
+  border-collapse: collapse;
+  border-spacing: 0;
+  table-layout: fixed;
+  width: 100%;
+}
+.json-diff-viewer tr {
+  vertical-align: top;
+}
+.json-diff-viewer tr .line-add {
+  background: #a5d6a7;
+}
+.json-diff-viewer tr .line-remove {
+  background: #ef9a9a;
+}
+.json-diff-viewer tr .line-modify {
+  background: #ffe082;
+}
+.json-diff-viewer tr:hover td {
+  position: relative;
+}
+.json-diff-viewer tr:hover td::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.05);
+  content: "";
+  pointer-events: none;
+}
+.json-diff-viewer tr.expand-line {
+  text-align: center;
+}
+.json-diff-viewer tr.expand-line td {
+  padding: 4px 0;
+}
+.json-diff-viewer tr.expand-line:hover td:before {
+  background: transparent;
+}
+.json-diff-viewer tr.expand-line .has-lines-before {
+  border-bottom: 1px solid;
+}
+.json-diff-viewer tr.expand-line .has-lines-after {
+  border-top: 1px solid;
+}
+.json-diff-viewer tr.expand-line button {
+  margin: 0 0.5em;
+  padding: 0;
+  color: #2196f3;
+  font-family: sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-size: 12px;
+  border: none;
+  background: transparent;
+  user-select: none;
+  cursor: pointer;
+}
+.json-diff-viewer tr.expand-line button:hover {
+  text-decoration: underline;
+}
+.json-diff-viewer td {
+  padding: 1px;
+  font-size: 0;
+}
+.json-diff-viewer td.line-number {
+  border-right: 1px solid;
+  box-sizing: content-box;
+  font-family: monospace;
+  font-size: 14px;
+  padding: 0 8px;
+  text-align: right;
+  user-select: none;
+}
+.json-diff-viewer pre {
+  margin: 0;
+  font-size: 12px;
+  line-height: 16px;
+  overflow: hidden;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+.json-diff-viewer pre .inline-diff-add {
+  background: rgba(0, 0, 0, 0.08);
+  text-decoration: underline;
+  word-break: break-all;
+}
+.json-diff-viewer pre .inline-diff-remove {
+  background: rgba(0, 0, 0, 0.08);
+  text-decoration: line-through;
+  word-break: break-all;
+}
+.json-diff-viewer-virtual pre {
+  white-space: pre;
+  overflow-x: auto;
+}
+.json-diff-viewer-virtual pre::-webkit-scrollbar {
+  display: none;
+}
 * {
   box-sizing: border-box;
 }
@@ -1871,6 +2380,9 @@ hr {
 hr.VO {
   border-bottom: 2px solid #e26748;
 }
+select {
+  width: fit-content !important;
+}
 button.projectsnapshotfilter_Warning_2prrB {
   background-color: red;
 }
@@ -1881,6 +2393,9 @@ button.DialogButton {
   width: fit-content !important;
   padding-left: 12px !important;
   padding-right: 12px !important;
+}
+._DialogColLayout {
+  gap: 8px;
 }
 .projectsnapshotfilter_Separator_1bgGe {
   width: 100%;
@@ -1977,28 +2492,6 @@ button.DialogButton {
   display: flex;
   flex-direction: column;
 }
-.inputs_InputOption_1ShdT {
-  display: flex;
-  flex-direction: row;
-  gap: 8px;
-  margin-bottom: 4px;
-}
-.inputs_InputOption_1ShdT .inputs_Name_3WEib {
-  font-size: 14px;
-  color: #ac966a;
-  min-width: 200px;
-}
-.inputs_InputOption_1ShdT .inputs_ValueInput_3xxzP {
-  width: 70px;
-  height: 20px;
-  text-align: right;
-}
-.inputs_InputOption_1ShdT .inputs_ValueInput_3xxzP .inputs_Wide_3CDBu {
-  width: 100px;
-}
-.inputs_InputOption_1ShdT .inputs_ValueInput_3xxzP.inputs_Invalid_9e38p {
-  color: red;
-}
 * {
   box-sizing: border-box;
 }
@@ -2016,6 +2509,9 @@ hr {
 hr.VO {
   border-bottom: 2px solid #e26748;
 }
+select {
+  width: fit-content !important;
+}
 button.projecttrainsettings_Warning_392Fn {
   background-color: red;
 }
@@ -2026,6 +2522,9 @@ button.DialogButton {
   width: fit-content !important;
   padding-left: 12px !important;
   padding-right: 12px !important;
+}
+._DialogColLayout {
+  gap: 8px;
 }
 .projecttrainsettings_Separator_14Ln1 {
   width: 100%;
@@ -2134,6 +2633,9 @@ hr {
 hr.VO {
   border-bottom: 2px solid #e26748;
 }
+select {
+  width: fit-content !important;
+}
 button.projecttrainstatus_Warning_3pURN {
   background-color: red;
 }
@@ -2144,6 +2646,9 @@ button.DialogButton {
   width: fit-content !important;
   padding-left: 12px !important;
   padding-right: 12px !important;
+}
+._DialogColLayout {
+  gap: 8px;
 }
 .projecttrainstatus_Separator_2BerN {
   width: 100%;
@@ -2663,6 +3168,9 @@ hr {
 hr.VO {
   border-bottom: 2px solid #e26748;
 }
+select {
+  width: fit-content !important;
+}
 button.steamlearn_routing_Warning_29_72 {
   background-color: red;
 }
@@ -2673,6 +3181,9 @@ button.DialogButton {
   width: fit-content !important;
   padding-left: 12px !important;
   padding-right: 12px !important;
+}
+._DialogColLayout {
+  gap: 8px;
 }
 .steamlearn_routing_Separator_2k1-q {
   width: 100%;
@@ -2888,6 +3399,9 @@ hr {
 hr.VO {
   border-bottom: 2px solid #e26748;
 }
+select {
+  width: fit-content !important;
+}
 button.projecttrain_Warning_WZW8J {
   background-color: red;
 }
@@ -2898,6 +3412,9 @@ button.DialogButton {
   width: fit-content !important;
   padding-left: 12px !important;
   padding-right: 12px !important;
+}
+._DialogColLayout {
+  gap: 8px;
 }
 .projecttrain_Separator_1RDaZ {
   width: 100%;

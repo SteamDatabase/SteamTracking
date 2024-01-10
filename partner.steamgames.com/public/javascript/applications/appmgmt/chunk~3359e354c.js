@@ -64,34 +64,34 @@
       "use strict";
       n.d(t, { NT: () => d, tx: () => l });
       var i = n(47427),
-        a = n(77178),
-        r = n(72297),
+        r = n(77178),
+        a = n(72297),
         s = n(31846),
         o = n(46882);
       function l() {
         const [e, t] = (0, i.useState)(!1),
-          [n, a] = (0, i.useState)(!1),
-          [r, s] = (0, i.useState)(!1),
+          [n, r] = (0, i.useState)(!1),
+          [a, s] = (0, i.useState)(!1),
           [o, l] = (0, i.useState)(null),
           [d, m] = (0, i.useState)(null),
           [c, u] = (0, i.useState)(null),
-          [p, g] = (0, i.useState)(null),
-          [h, T] = (0, i.useState)(null);
+          [p, h] = (0, i.useState)(null),
+          [g, T] = (0, i.useState)(null);
         return {
           bLoading: e,
           bError: n,
-          bSuccess: r,
+          bSuccess: a,
           strError: o,
           strSuccess: d,
           elSuccess: p,
           elError: c,
-          strThrobber: h,
+          strThrobber: g,
           fnSetLoading: t,
-          fnSetError: a,
+          fnSetError: r,
           fnSetSuccess: s,
           fnSetStrError: l,
           fnSetStrSuccess: m,
-          fnSetElSuccess: g,
+          fnSetElSuccess: h,
           fnSetElError: u,
           fnSetThrobber: T,
         };
@@ -108,39 +108,39 @@
             bError: c,
             bSuccess: u,
             strError: p,
-            strSuccess: g,
-            elSuccess: h,
+            strSuccess: h,
+            elSuccess: g,
             elError: T,
-            strThrobber: S,
+            strThrobber: E,
           } = n;
         return c || p || T
           ? i.createElement(
-              a.uH,
+              r.uH,
               { strTitle: t, bAlertDialog: !0, closeModal: l },
               Boolean(p) &&
                 i.createElement(
                   "div",
-                  { className: r.ErrorStylesWithIcon },
+                  { className: a.ErrorStylesWithIcon },
                   p || (0, s.Xx)("#Error_ErrorCommunicatingWithNetwork"),
                 ),
               Boolean(T) && T,
             )
-          : u || g || h
+          : u || h || g
           ? i.createElement(
-              a.uH,
+              r.uH,
               {
                 strTitle: t,
-                strDescription: g || (0, s.Xx)("#EventDisplay_Share_Success"),
+                strDescription: h || (0, s.Xx)("#EventDisplay_Share_Success"),
                 bAlertDialog: !0,
                 closeModal: l,
               },
-              i.createElement(i.Fragment, null, Boolean(h) && h),
+              i.createElement(i.Fragment, null, Boolean(g) && g),
             )
           : i.createElement(
-              a.uH,
+              r.uH,
               { strTitle: t, closeModal: () => {} },
               i.createElement(o.V, {
-                string: d || S || (0, s.Xx)("#Loading"),
+                string: d || E || (0, s.Xx)("#Loading"),
                 size: "medium",
                 position: "center",
               }),
@@ -151,8 +151,8 @@
       "use strict";
       n.d(t, { A: () => v });
       var i = n(85556),
-        a = n(27605),
-        r = n(47427),
+        r = n(27605),
+        a = n(47427),
         s = n(43344),
         o = n.n(s),
         l = n(36595),
@@ -161,19 +161,20 @@
         c = n.n(m),
         u = n(13129),
         p = n(31846),
-        g = n(20417),
-        h = n(59728),
+        h = n(20417),
+        g = n(59728),
         T = n(19452),
-        S = n.n(T),
-        E = n(98973),
-        _ = n.n(E);
-      let v = class extends r.Component {
+        E = n.n(T),
+        S = n(98973),
+        _ = n.n(S);
+      let v = class extends a.Component {
         constructor(e) {
           super(e),
             (this.state = {
               timeAsString: null,
               dateAsString: null,
               bEndTimeBeforeStartTime: !1,
+              strError: null,
             });
         }
         OnTimeChange(e) {
@@ -181,18 +182,18 @@
             nEarliestTime: t,
             fnSetTimeToUpdate: n,
             fnIsValidDateTime: i,
-            disabled: a,
+            disabled: r,
           } = this.props;
-          if (a) return;
+          if (r) return;
           if ("string" == typeof e) {
             let t = _()(e, "h:m a +-h:m", !0);
             if (!t.isValid()) return void this.setState({ timeAsString: e });
             e = t;
           }
-          let r = this.props.fnGetTimeToUpdate(),
+          let a = this.props.fnGetTimeToUpdate(),
             s = 0;
-          if (r) {
-            const t = _().unix(r);
+          if (a) {
+            const t = _().unix(a);
             e.year(t.year()),
               e.month(t.month()),
               e.day(t.day()),
@@ -223,12 +224,12 @@
             e.minute(i.minute()),
             e.second(0),
             this.props.fnSetTimeToUpdate(e.unix());
-          let a =
+          let r =
             this.props.fnIsValidDateTime &&
             !0 === this.props.fnIsValidDateTime();
           (null == this.state.dateAsString &&
-            a == this.state.bEndTimeBeforeStartTime) ||
-            this.setState({ dateAsString: null, bEndTimeBeforeStartTime: a });
+            r == this.state.bEndTimeBeforeStartTime) ||
+            this.setState({ dateAsString: null, bEndTimeBeforeStartTime: r });
         }
         IsValidDate(e) {
           if (this.props.disabled) return !1;
@@ -237,14 +238,14 @@
               nLatestTime: n,
               bWeekdaysOnly: i,
             } = this.props,
-            a = _().unix(t).hour(0).seconds(0).minute(0);
-          let r = e.unix() >= a.unix();
-          if (r && n && n >= t) {
+            r = _().unix(t).hour(0).seconds(0).minute(0);
+          let a = e.unix() >= r.unix();
+          if (a && n && n >= t) {
             const t = _().unix(n).hour(23).minute(59).seconds(59);
-            r = e.unix() <= t.unix();
+            a = e.unix() <= t.unix();
           }
           return (
-            r && i && ((0 != e.weekday() && 6 != e.weekday()) || (r = !1)), r
+            a && i && ((0 != e.weekday() && 6 != e.weekday()) || (a = !1)), a
           );
         }
         SetToNow() {
@@ -252,143 +253,153 @@
             ? this.props.fnSetToNow(d.JW.GetTimeNowWithOverride())
             : this.props.fnSetTimeToUpdate(d.JW.GetTimeNowWithOverride());
         }
+        componentDidMount() {
+          this.UpdateError();
+        }
+        componentDidUpdate() {
+          this.UpdateError();
+        }
+        UpdateError() {
+          const { fnIsValidDateTime: e } = this.props,
+            t = e && e();
+          let n = null;
+          (this.state.timeAsString ||
+            this.state.dateAsString ||
+            "string" == typeof t ||
+            !1 === t) &&
+            ((n = (0, p.Xx)("#DateTimePicker_Fallback_Invalid_DateTime")),
+            this.state.timeAsString
+              ? (n = (0, p.Xx)("#DateTimePicker_Time_CannotParse"))
+              : this.state.dateAsString
+              ? (n = (0, p.Xx)("#DateTimePicker_Date_CannotParse"))
+              : "string" == typeof t && (n = t)),
+            this.state.strError !== n &&
+              (this.setState({ strError: n }),
+              this.props.onError && this.props.onError(n));
+        }
         render() {
           const {
             nLatestTime: e,
             nEarliestTime: t,
             fnGetTimeToUpdate: n,
-            fnIsValidDateTime: i,
-            strAlsoShowTimeZone: a,
+            onError: i,
+            strAlsoShowTimeZone: r,
             disabled: s,
             bNoDefaultDate: m,
           } = this.props;
-          let g = n(),
-            T = g > 0 ? new Date(1e3 * g) : null,
-            E = "h:mm A";
-          const v = i && i(),
-            f =
-              this.state.timeAsString ||
-              this.state.dateAsString ||
-              "string" == typeof v ||
-              !1 === v;
-          let b,
-            y,
-            D = "#DateTimePicker_Fallback_Invalid_DateTime";
-          if (
-            (this.state.timeAsString
-              ? (D = "#DateTimePicker_Time_CannotParse")
-              : this.state.dateAsString
-              ? (D = "#DateTimePicker_Date_CannotParse")
-              : "string" == typeof v && (D = v),
-            e && t && e == t && t > d.JW.GetTimeNowWithOverride())
-          ) {
+          let h = n(),
+            T = h > 0 ? new Date(1e3 * h) : null,
+            S = "h:mm A";
+          const v = !i && this.state.strError;
+          let f, b;
+          if (e && t && e == t && t > d.JW.GetTimeNowWithOverride()) {
             let e = _().unix(t);
-            (b = {
+            (f = {
               hours: { max: e.hour(), min: e.hour(), step: 0 },
               minutes: { max: e.minute(), min: e.minute(), step: 0 },
               seconds: { max: e.seconds(), min: e.seconds(), step: 0 },
               milliseconds: { max: 0, min: 0, step: 0 },
             }),
-              (E = "HH:mm");
+              (S = "HH:mm");
           }
-          g || !t || m || (y = _().unix(t));
-          const I = _().tz.guess(),
-            x = _().unix(g).tz(I),
-            A = !!a && I != a && _().unix(g).tz(a);
-          return r.createElement(
+          h || !t || m || (b = _().unix(t));
+          const D = _().tz.guess(),
+            y = _().unix(h).tz(D),
+            I = !!r && D != r && _().unix(h).tz(r);
+          return a.createElement(
             "div",
-            { className: (0, u.Z)(S().EventTimeSection, this.props.className) },
-            r.createElement(
+            { className: (0, u.Z)(E().EventTimeSection, this.props.className) },
+            a.createElement(
               "div",
-              { className: (0, u.Z)(S().EventTimeTitle, "DialogLabel") },
-              r.createElement(
-                h.HP,
+              { className: (0, u.Z)(E().EventTimeTitle, "DialogLabel") },
+              a.createElement(
+                g.HP,
                 { toolTipContent: this.props.strDescToolTip, direction: "top" },
                 Boolean(this.props.strDescription) &&
-                  r.createElement("span", null, this.props.strDescription),
+                  a.createElement("span", null, this.props.strDescription),
               ),
-              f &&
-                r.createElement(
+              v &&
+                a.createElement(
                   "span",
-                  { className: S().DateErrorCtn },
-                  r.createElement("img", { src: l.Z }),
-                  (0, p.Xx)(D),
+                  { className: E().DateErrorCtn },
+                  a.createElement("img", { src: l.Z }),
+                  v,
                 ),
             ),
-            r.createElement(
+            a.createElement(
               "div",
               { className: c().FlexRowContainer },
-              r.createElement(
+              a.createElement(
                 "div",
-                { className: (0, u.Z)(c().InputBorder, S().TimeBlock) },
-                r.createElement(o(), {
+                { className: (0, u.Z)(c().InputBorder, E().TimeBlock) },
+                a.createElement(o(), {
                   onChange: this.OnDateChange,
                   timeFormat: !1,
                   value: this.state.dateAsString ? this.state.dateAsString : T,
                   isValidDate: this.IsValidDate,
-                  initialValue: y,
+                  initialValue: b,
                   inputProps: {
                     placeholder: (0, p.Xx)("#DateTimePicker_Enter_Date"),
                     className: (0, u.Z)(
-                      S().DateWidth,
+                      E().DateWidth,
                       "DialogInput",
                       "DialogTextInputBase",
                     ),
                     disabled: s,
                   },
                 }),
-                !!A &&
-                  r.createElement(
+                !!I &&
+                  a.createElement(
                     "div",
-                    { className: S().PacificTimeHint },
-                    A.format("L"),
+                    { className: E().PacificTimeHint },
+                    I.format("L"),
                   ),
               ),
-              r.createElement(
+              a.createElement(
                 "div",
-                { className: (0, u.Z)(c().InputBorder, S().TimeBlock) },
-                r.createElement(o(), {
+                { className: (0, u.Z)(c().InputBorder, E().TimeBlock) },
+                a.createElement(o(), {
                   onChange: this.OnTimeChange,
                   dateFormat: !1,
-                  timeFormat: E,
-                  timeConstraints: b,
+                  timeFormat: S,
+                  timeConstraints: f,
                   value: this.state.timeAsString ? this.state.timeAsString : T,
                   inputProps: {
                     placeholder: (0, p.Xx)("#DateTimePicker_Enter_Time"),
                     className: (0, u.Z)(
-                      S().TimeWidth,
+                      E().TimeWidth,
                       "DialogInput",
                       "DialogTextInputBase",
                     ),
                     disabled: s,
                   },
                 }),
-                !!A &&
-                  r.createElement(
+                !!I &&
+                  a.createElement(
                     "div",
-                    { className: S().PacificTimeHint },
-                    A.format("LT"),
+                    { className: E().PacificTimeHint },
+                    I.format("LT"),
                   ),
               ),
               this.props.bShowTimeZone &&
-                r.createElement(
+                a.createElement(
                   "div",
                   null,
-                  r.createElement(
+                  a.createElement(
                     "div",
-                    { className: S().TimeZone },
-                    x.zoneAbbr(),
+                    { className: E().TimeZone },
+                    y.zoneAbbr(),
                   ),
-                  !!A &&
-                    r.createElement(
+                  !!I &&
+                    a.createElement(
                       "div",
-                      { className: S().TimeZone },
-                      A.zoneAbbr(),
+                      { className: E().TimeZone },
+                      I.zoneAbbr(),
                     ),
                 ),
             ),
-            Boolean(b) &&
-              r.createElement(
+            Boolean(f) &&
+              a.createElement(
                 "div",
                 null,
                 (0, p.Xx)("#DateTimePicker_DateTime_Fixed"),
@@ -396,18 +407,18 @@
           );
         }
       };
-      (0, i.gn)([g.ak], v.prototype, "OnTimeChange", null),
-        (0, i.gn)([g.ak], v.prototype, "OnDateChange", null),
-        (0, i.gn)([g.ak], v.prototype, "IsValidDate", null),
-        (0, i.gn)([g.ak], v.prototype, "SetToNow", null),
-        (v = (0, i.gn)([a.Pi], v));
+      (0, i.gn)([h.ak], v.prototype, "OnTimeChange", null),
+        (0, i.gn)([h.ak], v.prototype, "OnDateChange", null),
+        (0, i.gn)([h.ak], v.prototype, "IsValidDate", null),
+        (0, i.gn)([h.ak], v.prototype, "SetToNow", null),
+        (v = (0, i.gn)([r.Pi], v));
     },
     38201: (e, t, n) => {
       "use strict";
       n.d(t, { N: () => v });
       var i = n(47427),
-        a = n(35427),
-        r = n(85556),
+        r = n(35427),
+        a = n(85556),
         s = n(80751),
         o = n.n(s),
         l = n(73799),
@@ -416,43 +427,43 @@
         c = n(16649),
         u = n(37563),
         p = n(21928),
-        g = n(82182),
-        h = n(40057);
+        h = n(82182),
+        g = n(40057);
       const T = "nicknames";
-      const S = new (d())(
+      const E = new (d())(
           (e) =>
             (function (e) {
               var t, n, i, s;
-              return (0, r.mG)(this, void 0, void 0, function* () {
+              return (0, a.mG)(this, void 0, void 0, function* () {
                 if (!e || 0 == e.length) return [];
-                const r =
+                const a =
                   "community" == (0, u.Zv)()
                     ? u.De.COMMUNITY_BASE_URL
                     : u.De.STORE_BASE_URL;
                 if (1 == e.length) {
                   const i = { accountid: e[0], origin: self.origin },
-                    a = yield o().get(`${r}actions/ajaxgetavatarpersona`, {
+                    r = yield o().get(`${a}actions/ajaxgetavatarpersona`, {
                       params: i,
                     });
                   if (
-                    !a ||
-                    200 != a.status ||
+                    !r ||
+                    200 != r.status ||
                     1 !=
-                      (null === (t = a.data) || void 0 === t
+                      (null === (t = r.data) || void 0 === t
                         ? void 0
                         : t.success) ||
-                    !(null === (n = a.data) || void 0 === n
+                    !(null === (n = r.data) || void 0 === n
                       ? void 0
                       : n.userinfo)
                   )
                     throw `Load single avatar/persona failed ${
-                      (0, c.l)(a).strErrorMsg
+                      (0, c.l)(r).strErrorMsg
                     }`;
-                  return [a.data.userinfo];
+                  return [r.data.userinfo];
                 }
                 {
                   const t = { accountids: e.join(","), origin: self.origin },
-                    n = yield o().get(`${r}actions/ajaxgetmultiavatarpersona`, {
+                    n = yield o().get(`${a}actions/ajaxgetmultiavatarpersona`, {
                       params: t,
                     });
                   if (
@@ -472,7 +483,7 @@
                   const l = new Map();
                   return (
                     n.data.userinfos.forEach((e) =>
-                      l.set(new a.K(e.steamid).GetAccountID(), e),
+                      l.set(new r.K(e.steamid).GetAccountID(), e),
                     ),
                     e.map((e) => l.get(e))
                   );
@@ -481,24 +492,24 @@
             })(e),
           { cache: !1 },
         ),
-        E = "avatarandpersonas";
+        S = "avatarandpersonas";
       var _ = n(47955);
       function v(e) {
         const { accountID: t, bHideWhenNotAvailable: n } = e,
           [s] = (function (e) {
-            const { data: t, isLoading: n } = (0, m.useQuery)([E, e], () =>
-              S.load(e),
+            const { data: t, isLoading: n } = (0, m.useQuery)([S, e], () =>
+              E.load(e),
             );
             return [t, n];
           })(t),
           o = (function (e) {
-            const t = (0, h.bY)(),
+            const t = (0, g.bY)(),
               { data: n, isLoading: i } = (0, m.useQuery)([T], () =>
-                (0, r.mG)(this, void 0, void 0, function* () {
+                (0, a.mG)(this, void 0, void 0, function* () {
                   const e = new Map();
                   if (u.L7.logged_in) {
-                    const n = p.gA.Init(g.bM),
-                      i = (yield g.lk.GetNicknameList(t, n)).Body().toObject();
+                    const n = p.gA.Init(h.bM),
+                      i = (yield h.lk.GetNicknameList(t, n)).Body().toObject();
                     (null == i ? void 0 : i.nicknames) &&
                       i.nicknames.length > 0 &&
                       i.nicknames.forEach((t) => {
@@ -510,7 +521,7 @@
               );
             return n ? n.get(e) : null;
           })(t),
-          l = i.useMemo(() => a.K.InitFromAccountID(t), [t]);
+          l = i.useMemo(() => r.K.InitFromAccountID(t), [t]);
         return i.createElement(
           i.Fragment,
           null,
@@ -541,8 +552,8 @@
       "use strict";
       n.d(t, { mY: () => u, ug: () => p });
       var i = n(53040),
-        a = n(31846),
-        r = n(62613),
+        r = n(31846),
+        a = n(62613),
         s = n(47427),
         o = n(13129),
         l = n(71741),
@@ -572,9 +583,9 @@
                 ),
               },
               e.title,
-              Boolean(e.tooltip) && s.createElement(h, { tooltip: e.tooltip }),
+              Boolean(e.tooltip) && s.createElement(g, { tooltip: e.tooltip }),
             ),
-            s.createElement(g, {
+            s.createElement(h, {
               bIsMinimized: e.getMinimized(),
               fnToggleMinimize: e.toggleMinimized,
             }),
@@ -593,18 +604,18 @@
           e.children,
         );
       }
-      function g(e) {
+      function h(e) {
         const { bIsMinimized: t, fnToggleMinimize: n } = e,
           o = t ? "#Section_Maximize_Tooltip" : "#Section_Minimize_Tooltip";
         return s.createElement(
           i.zx,
-          { "data-tooltip-text": (0, a.Xx)(o), onClick: n },
+          { "data-tooltip-text": (0, r.Xx)(o), onClick: n },
           e.bIsMinimized
-            ? s.createElement(r.YqJ, null)
-            : s.createElement(r.gR, null),
+            ? s.createElement(a.YqJ, null)
+            : s.createElement(a.gR, null),
         );
       }
-      function h(e) {
+      function g(e) {
         return s.createElement(
           "span",
           {
@@ -612,7 +623,7 @@
             className: (0, o.Z)(l.HelperTooltip, "HelperTooltip"),
           },
           " ",
-          s.createElement(r.WWB, null),
+          s.createElement(a.WWB, null),
         );
       }
     },

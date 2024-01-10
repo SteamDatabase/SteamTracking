@@ -68,7 +68,7 @@
     14694: (t, e, n) => {
       "use strict";
       n.d(e, {
-        J7: () => E,
+        BS: () => E,
         K$: () => I,
         Lr: () => P,
         Q: () => G,
@@ -97,6 +97,9 @@
           return Array.from(v.Get().m_mapDiscountEvents.values()).filter(
             (e) => e.end_date > t,
           );
+        }
+        GetAllDiscountEvents() {
+          return Array.from(v.Get().m_mapDiscountEvents.values());
         }
         GetFutureDiscountEventListCallback() {
           return this.m_discountEventsListCallback;
@@ -487,20 +490,26 @@
       function _() {
         return v.Get().GetFutureDiscountEventListCallback();
       }
-      function E(t) {
-        const e = v.Get().BLoadedViaInitOrFullLoad(),
-          [n, i] = o.useState(e ? v.Get().GetFutureDiscountEvents() : null),
-          [a, s] = o.useState(null),
-          r =
+      function E(t, e) {
+        const n = v.Get().BLoadedViaInitOrFullLoad(),
+          [i, a] = o.useState(
+            n
+              ? e
+                ? v.Get().GetAllDiscountEvents()
+                : v.Get().GetFutureDiscountEvents()
+              : null,
+          ),
+          [s, r] = o.useState(null),
+          c =
             t ||
             Number.parseInt((0, p.kQ)("publisherid", "application_config"));
-        (0, d.Qg)(v.Get().GetFutureDiscountEventListCallback(), i),
+        (0, d.Qg)(v.Get().GetFutureDiscountEventListCallback(), a),
           o.useEffect(() => {
             v.Get().BLoadedViaInitOrFullLoad() ||
-              v.Get().LoadAllDiscountEvents(r).then(s);
-          }, [n, r]);
-        const c = null != a ? a : (null == n ? void 0 : n.length) ? 1 : null;
-        return o.useMemo(() => ({ rgDiscountEvents: n, eResult: c }), [n, c]);
+              v.Get().LoadAllDiscountEvents(c).then(r);
+          }, [i, c]);
+        const l = null != s ? s : (null == i ? void 0 : i.length) ? 1 : null;
+        return o.useMemo(() => ({ rgDiscountEvents: i, eResult: l }), [i, l]);
       }
       function f(t) {
         return v.Get().GetDiscountEvent(t);
@@ -1905,7 +1914,9 @@
                   ? i
                   : [];
               for (const n of t)
-                n.rtEndDate < e && (!a || a.rtEndDate < n.rtEndDate) && (a = n);
+                n.rtStartDate < e &&
+                  (!a || a.rtEndDate < n.rtEndDate) &&
+                  (a = n);
             }
             return { mostRecentDiscount: a, bLoading: !1 };
           }, [e, t, n])

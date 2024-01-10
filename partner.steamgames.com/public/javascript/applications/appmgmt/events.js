@@ -694,10 +694,10 @@
         Section: "optin_admin_editor_Section_2yL7J",
         SectionDesc: "optin_admin_editor_SectionDesc_33_oC",
         ManageTable: "optin_admin_editor_ManageTable_2afWv",
+        EventBBCodeEditor: "optin_admin_editor_EventBBCodeEditor_3UtWX",
         IndentedSubSection: "optin_admin_editor_IndentedSubSection_3zYTc",
         Disabled: "optin_admin_editor_Disabled_2rKAB",
         RightSection: "optin_admin_editor_RightSection_3NiRT",
-        EventBBCodeEditor: "optin_admin_editor_EventBBCodeEditor_3UtWX",
         InvitedAppHistoryDialog:
           "optin_admin_editor_InvitedAppHistoryDialog_1OeP6",
         InvitedAppHistoryTable:
@@ -773,6 +773,7 @@
         StatCtn: "optin_admin_email_editor_StatCtn_3lCM2",
         StatNumber: "optin_admin_email_editor_StatNumber_3gAEw",
         BigButton: "optin_admin_email_editor_BigButton_2d5qK",
+        appItem: "optin_admin_email_editor_appItem_32UiY",
       };
     },
     28593: (e) => {
@@ -781,6 +782,7 @@
     68390: (e) => {
       e.exports = {
         DownloadRow: "optin_admin_manage_dashboard_DownloadRow_3Bo6G",
+        ManageCallout: "optin_admin_manage_dashboard_ManageCallout_24Sey",
       };
     },
     70185: (e) => {
@@ -7099,16 +7101,18 @@
                   this.file_upload_props.additionalProps,
                 );
             try {
-              let e = yield fetch(
-                this.m_Callbacks.GetBeginFileUploadURL() +
-                  `?l=${C.De.LANGUAGE}`,
-                { method: "POST", body: n, credentials: "include" },
-              );
-              const t = yield e.json();
+              let e,
+                t = yield fetch(
+                  this.m_Callbacks.GetBeginFileUploadURL() +
+                    `?l=${C.De.LANGUAGE}`,
+                  { method: "POST", body: n, credentials: "include" },
+                );
+              if ((t.ok && (e = yield t.json()), !e || !e.result))
+                throw new Error();
               return (
-                (this.m_fileUploadProps.timestamp = t.timestamp),
-                (this.m_fileUploadProps.hmac = t.hmac),
-                this.DoFileUpload(t.result)
+                (this.m_fileUploadProps.timestamp = e.timestamp),
+                (this.m_fileUploadProps.hmac = e.hmac),
+                this.DoFileUpload(e.result)
               );
             } catch (e) {
               const t = null == e ? void 0 : e.response;
@@ -19032,7 +19036,7 @@
                     (0, Z.RA)(e),
                   ),
               },
-              "Add Games to Featuring",
+              "Add Games to Featuring...",
             ),
             I.createElement(F.ji, {
               label: "Enable the Additional Featuring Section.",
@@ -19997,176 +20001,176 @@
               label: "Make participation invite-only",
               checked: t.BIsInvitationOnly(),
             }),
-          ),
-          t.BIsInvitationOnly() &&
-            I.createElement(
-              I.Fragment,
-              null,
+            t.BIsInvitationOnly() &&
               I.createElement(
-                "div",
-                { className: Le().Section },
-                I.createElement(It, null),
-              ),
-            ),
-          !t.BIsInvitationOnly() &&
-            I.createElement(
-              I.Fragment,
-              null,
-              I.createElement(
-                "div",
-                { className: Le().Section },
-                I.createElement("h3", null, "ELIGIBILITY CRITERIA SETTINGS"),
+                I.Fragment,
+                null,
                 I.createElement(
                   "div",
-                  { className: Le().IndentedSubSection },
+                  { className: Le().Section },
+                  I.createElement(It, null),
+                ),
+              ),
+            !t.BIsInvitationOnly() &&
+              I.createElement(
+                I.Fragment,
+                null,
+                I.createElement(
+                  "div",
+                  { className: Le().Section },
+                  I.createElement("h3", null, "ELIGIBILITY CRITERIA SETTINGS"),
                   I.createElement(
                     "div",
-                    { className: Le().SectionDesc },
-                    "Use the settings below to define one or more criteria that determines which games can participate.",
-                    I.createElement("br", null),
-                    I.createElement("br", null),
-                  ),
-                  I.createElement("h3", null, "LIMIT BY RELEASE DATE"),
-                  I.createElement(
-                    "div",
-                    { className: Le().Section },
-                    !Boolean(n) &&
-                      I.createElement(
-                        "div",
-                        { className: Ee().WarningStylesWithIcon },
-                        "Required Setting for OptIn",
-                      ),
-                    I.createElement(F.ji, {
-                      label: "Released games are eligible",
-                      checked: t.BIsReleaseGamesEligible(),
-                      onChange: t.SetReleaseGameEligible,
-                    }),
-                    I.createElement(F.ji, {
-                      label: "Unreleased games are eligible",
-                      checked: t.BIsUnreleaseGamesEligible(),
-                      onChange: t.SetUnreleaseGameEligible,
-                    }),
-                    Boolean(t.BIsUnreleaseGamesEligible()) &&
-                      I.createElement(
-                        I.Fragment,
-                        null,
-                        I.createElement(qe.A, {
-                          strDescription: "Must release AFTER",
-                          nEarliestTime: 0,
-                          fnGetTimeToUpdate: () =>
-                            t.GetEligibleReleaseAfterDate(),
-                          fnSetTimeToUpdate: t.SetEligibleReleaseAfterDate,
-                          fnIsValidDateTime: () => !0,
-                          bShowTimeZone: !0,
-                        }),
-                        I.createElement(qe.A, {
-                          strDescription: "Must release BEFORE",
-                          nEarliestTime: 0,
-                          fnGetTimeToUpdate: () =>
-                            t.GetEligibleReleaseBeforeDate(),
-                          fnSetTimeToUpdate: t.SetEligibleReleaseBeforeDate,
-                          fnIsValidDateTime: () => !0,
-                          bShowTimeZone: !0,
-                        }),
-                      ),
-                  ),
-                  I.createElement("h3", null, "LIMIT BY COOLDOWN GROUP"),
-                  I.createElement(
-                    "div",
-                    { className: Le().Section },
-                    I.createElement(F.ji, {
-                      label:
-                        "Games are ineligible to optin to this event if already opted in to an event of the same type",
-                      checked: t.GetCooldownRequired(),
-                      onChange: t.SetCooldownRequired,
-                    }),
+                    { className: Le().IndentedSubSection },
                     I.createElement(
                       "div",
-                      { className: Le().InviteButtonRow },
-                      I.createElement(F.ry, {
-                        label: "Cooldown Group",
-                        rgOptions: t.GetCooldownGroupOptions(),
-                        selectedOption: t.GetCooldownGroupType(),
-                        onChange: (e) => t.SetCooldownGroupType(e.data),
-                        contextMenuPositionOptions: {
-                          bDisableMouseOverlay: !0,
-                        },
+                      { className: Le().SectionDesc },
+                      "Use the settings below to define one or more criteria that determines which games can participate.",
+                      I.createElement("br", null),
+                      I.createElement("br", null),
+                    ),
+                    I.createElement("h3", null, "LIMIT BY RELEASE DATE"),
+                    I.createElement(
+                      "div",
+                      { className: Le().Section },
+                      !Boolean(n) &&
+                        I.createElement(
+                          "div",
+                          { className: Ee().WarningStylesWithIcon },
+                          "Required Setting for OptIn",
+                        ),
+                      I.createElement(F.ji, {
+                        label: "Released games are eligible",
+                        checked: t.BIsReleaseGamesEligible(),
+                        onChange: t.SetReleaseGameEligible,
                       }),
+                      I.createElement(F.ji, {
+                        label: "Unreleased games are eligible",
+                        checked: t.BIsUnreleaseGamesEligible(),
+                        onChange: t.SetUnreleaseGameEligible,
+                      }),
+                      Boolean(t.BIsUnreleaseGamesEligible()) &&
+                        I.createElement(
+                          I.Fragment,
+                          null,
+                          I.createElement(qe.A, {
+                            strDescription: "Must release AFTER",
+                            nEarliestTime: 0,
+                            fnGetTimeToUpdate: () =>
+                              t.GetEligibleReleaseAfterDate(),
+                            fnSetTimeToUpdate: t.SetEligibleReleaseAfterDate,
+                            fnIsValidDateTime: () => !0,
+                            bShowTimeZone: !0,
+                          }),
+                          I.createElement(qe.A, {
+                            strDescription: "Must release BEFORE",
+                            nEarliestTime: 0,
+                            fnGetTimeToUpdate: () =>
+                              t.GetEligibleReleaseBeforeDate(),
+                            fnSetTimeToUpdate: t.SetEligibleReleaseBeforeDate,
+                            fnIsValidDateTime: () => !0,
+                            bShowTimeZone: !0,
+                          }),
+                        ),
+                    ),
+                    I.createElement("h3", null, "LIMIT BY COOLDOWN GROUP"),
+                    I.createElement(
+                      "div",
+                      { className: Le().Section },
+                      I.createElement(F.ji, {
+                        label:
+                          "Games are ineligible to optin to this event if already opted in to an event of the same type",
+                        checked: t.GetCooldownRequired(),
+                        onChange: t.SetCooldownRequired,
+                      }),
+                      I.createElement(
+                        "div",
+                        { className: Le().InviteButtonRow },
+                        I.createElement(F.ry, {
+                          label: "Cooldown Group",
+                          rgOptions: t.GetCooldownGroupOptions(),
+                          selectedOption: t.GetCooldownGroupType(),
+                          onChange: (e) => t.SetCooldownGroupType(e.data),
+                          contextMenuPositionOptions: {
+                            bDisableMouseOverlay: !0,
+                          },
+                        }),
+                        I.createElement(
+                          "div",
+                          { className: Le().NarrowInputField },
+                          I.createElement(F.II, {
+                            label: "Cooldown Window (in number of days)",
+                            type: "number",
+                            value: t.GetCooldownDays(),
+                            maxLength: 4,
+                            onChange: (e) =>
+                              t.SetCooldownDays(parseInt(e.target.value)),
+                          }),
+                        ),
+                      ),
+                    ),
+                    I.createElement("h3", null, "LIMIT BY TAG"),
+                    I.createElement(
+                      "div",
+                      { className: Le().SectionDesc },
+                      "Games must have one of these tags to participate",
+                    ),
+                    I.createElement(
+                      "div",
+                      { className: Le().Section },
+                      I.createElement(ze.ZP, {
+                        isSearchable: !0,
+                        isMulti: !0,
+                        onChange: t.OnChangeRequiredTags,
+                        value: t.GetRequiredTags(),
+                        options: t.GetGameTagOptions(),
+                      }),
+                      I.createElement("br", null),
+                      I.createElement("br", null),
                       I.createElement(
                         "div",
                         { className: Le().NarrowInputField },
                         I.createElement(F.II, {
-                          label: "Cooldown Window (in number of days)",
                           type: "number",
-                          value: t.GetCooldownDays(),
-                          maxLength: 4,
-                          onChange: (e) =>
-                            t.SetCooldownDays(parseInt(e.target.value)),
+                          min: "1",
+                          max: "40",
+                          label:
+                            "Max Rank for the Apps Weighted Official Tag to Include",
+                          tooltip:
+                            "When comparing against the app list of official weighted tags; this is the largest rank to include. Default is 20 if not specified on the server.  Make sure 1) set field, 2) save opt in, 3) publish opt in, 4) refresh stats 5) ??? 6) Profit",
+                          value: t.GetAppOfficialWeightedTagRankToInclude(),
+                          onChange: (e) => {
+                            const n =
+                              Number.parseInt(e.currentTarget.value) || 20;
+                            t.SetAppOfficialWeightedTagRankToInclude(n);
+                          },
                         }),
                       ),
                     ),
-                  ),
-                  I.createElement("h3", null, "LIMIT BY TAG"),
-                  I.createElement(
-                    "div",
-                    { className: Le().SectionDesc },
-                    "Games must have one of these tags to participate",
-                  ),
-                  I.createElement(
-                    "div",
-                    { className: Le().Section },
-                    I.createElement(ze.ZP, {
-                      isSearchable: !0,
-                      isMulti: !0,
-                      onChange: t.OnChangeRequiredTags,
-                      value: t.GetRequiredTags(),
-                      options: t.GetGameTagOptions(),
-                    }),
-                    I.createElement("br", null),
-                    I.createElement("br", null),
+                    I.createElement("h3", null, "LIMIT BY APP FEATURES"),
                     I.createElement(
                       "div",
-                      { className: Le().NarrowInputField },
-                      I.createElement(F.II, {
-                        type: "number",
-                        min: "1",
-                        max: "40",
-                        label:
-                          "Max Rank for the Apps Weighted Official Tag to Include",
-                        tooltip:
-                          "When comparing against the app list of official weighted tags; this is the largest rank to include. Default is 20 if not specified on the server.  Make sure 1) set field, 2) save opt in, 3) publish opt in, 4) refresh stats 5) ??? 6) Profit",
-                        value: t.GetAppOfficialWeightedTagRankToInclude(),
-                        onChange: (e) => {
-                          const n =
-                            Number.parseInt(e.currentTarget.value) || 20;
-                          t.SetAppOfficialWeightedTagRankToInclude(n);
-                        },
+                      { className: Le().SectionDesc },
+                      "Games must have one of these features to participate",
+                    ),
+                    I.createElement(
+                      "div",
+                      { className: Le().Section },
+                      I.createElement(F.ji, {
+                        label: "Remote Play Together",
+                        checked: t.BRequiresRemotePlayTogether(),
+                        onChange: t.SetRequiresRemotePlayTogether,
+                      }),
+                      I.createElement(F.ji, {
+                        label: "VR",
+                        checked: t.BRequiresVR(),
+                        onChange: t.SetRequiresVR,
                       }),
                     ),
                   ),
-                  I.createElement("h3", null, "LIMIT BY APP FEATURES"),
-                  I.createElement(
-                    "div",
-                    { className: Le().SectionDesc },
-                    "Games must have one of these features to participate",
-                  ),
-                  I.createElement(
-                    "div",
-                    { className: Le().Section },
-                    I.createElement(F.ji, {
-                      label: "Remote Play Together",
-                      checked: t.BRequiresRemotePlayTogether(),
-                      onChange: t.SetRequiresRemotePlayTogether,
-                    }),
-                    I.createElement(F.ji, {
-                      label: "VR",
-                      checked: t.BRequiresVR(),
-                      onChange: t.SetRequiresVR,
-                    }),
-                  ),
                 ),
               ),
-            ),
+          ),
         );
       });
       var xt = n(80445);
@@ -21339,8 +21343,6 @@
                 bSingleLine: !0,
               }),
             I.createElement("br", null),
-            "Eligible information is based on the published page",
-            I.createElement("br", null),
             I.createElement(
               "span",
               { className: Yt.Warning },
@@ -21366,21 +21368,23 @@
         );
       }
       var Kt = n(6683),
-        $t = n(52108);
-      function Jt(e) {
+        $t = n(68390),
+        Jt = n.n($t),
+        en = n(52108);
+      function tn(e) {
         const t = R.Get(),
           n = [
-            { title: "App ID", field: "appid", formatter: $t.L2, width: 80 },
+            { title: "App ID", field: "appid", formatter: en.L2, width: 80 },
             {
               title: "App Name",
               field: "app_name",
-              formatter: $t.IX,
+              formatter: en.IX,
               width: 250,
             },
             {
               title: "Is Released",
               field: "released",
-              formatter: $t.c8,
+              formatter: en.c8,
               width: 120,
             },
           ];
@@ -21390,13 +21394,13 @@
               {
                 title: "Long Term Sales Rank",
                 field: "long_term_sales_rank",
-                formatter: $t.AV,
+                formatter: en.AV,
                 width: 80,
               },
               {
                 title: "Discounts",
                 field: "discount_info",
-                formatter: $t.sN,
+                formatter: en.sN,
                 width: 450,
                 variableHeight: !0,
               },
@@ -21405,7 +21409,7 @@
             {
               title: "Wishlists",
               field: "wishlists",
-              formatter: $t.AV,
+              formatter: en.AV,
               sorter: "number",
               width: 140,
             },
@@ -21434,17 +21438,17 @@
             {
               title: "Publisher ID",
               field: "publisherid",
-              formatter: $t.H,
+              formatter: en.H,
               width: 120,
             },
           ),
           n
         );
       }
-      function en(e, t) {
+      function nn(e, t) {
         return Number.parseInt(t.sales) - Number.parseInt(e.sales);
       }
-      function tn(e, t) {
+      function an(e, t) {
         const {
             oAllStats: n,
             mapAppToDiscountInfo: a,
@@ -21485,10 +21489,10 @@
           r
         );
       }
-      function nn(e) {
+      function on(e) {
         const { rgOverviewList: t } = e,
           [n, a] = (0, I.useMemo)(
-            () => [tn(t.sort(en).slice(0, 100), e), tn(t, e)],
+            () => [an(t.sort(nn).slice(0, 100), e), an(t, e)],
             [e, t],
           );
         return e.mapAppToDiscountInfo
@@ -21526,13 +21530,13 @@
                   "tr",
                   null,
                   I.createElement("td", null, "Top Hundred:"),
-                  I.createElement(an, { oCalc: n }),
+                  I.createElement(ln, { oCalc: n }),
                 ),
                 I.createElement(
                   "tr",
                   null,
                   I.createElement("td", null, "All Games:"),
-                  I.createElement(an, { oCalc: a }),
+                  I.createElement(ln, { oCalc: a }),
                 ),
               ),
             )
@@ -21542,7 +21546,7 @@
               position: "center",
             });
       }
-      function an(e) {
+      function ln(e) {
         const { oCalc: t } = e;
         return I.createElement(
           I.Fragment,
@@ -21564,7 +21568,7 @@
           I.createElement("td", null, t.nTopWithOverlappingDiscount),
         );
       }
-      class on {
+      class rn {
         GetOptInDemoApps(e, t) {
           return this.m_mapAppToDemoAppID.get(this.ConvertToKey(e, t));
         }
@@ -21645,11 +21649,11 @@
         }
         static Get() {
           return (
-            on.s_Singleton ||
-              ((on.s_Singleton = new on()),
+            rn.s_Singleton ||
+              ((rn.s_Singleton = new rn()),
               ("dev" != w.De.WEB_UNIVERSE && "beta" != w.De.WEB_UNIVERSE) ||
-                (window.g_OptInDemoAppStores = on.s_Singleton)),
-            on.s_Singleton
+                (window.g_OptInDemoAppStores = rn.s_Singleton)),
+            rn.s_Singleton
           );
         }
         constructor() {
@@ -21659,7 +21663,7 @@
             (0, c.rC)(this);
         }
       }
-      function ln(e) {
+      function sn(e) {
         const { tableRef: t, mapAppToDiscountInfo: n, oAllStats: a } = e,
           i = R.Get(),
           { jsonFeatured: o } = a,
@@ -21672,14 +21676,14 @@
               i.BIsCollectGameProfileIntent(),
           ]),
           c = (function (e, t) {
-            const [n, a] = (0, I.useState)(on.Get().GetOptInDemoApps(e));
+            const [n, a] = (0, I.useState)(rn.Get().GetOptInDemoApps(e));
             return (
               (0, I.useEffect)(() => {
                 t &&
-                  !on.Get().BHasLoaded(e) &&
-                  on.Get().LoadAppWithDemoAppIDs(e);
+                  !rn.Get().BHasLoaded(e) &&
+                  rn.Get().LoadAppWithDemoAppIDs(e);
               }, [e, t]),
-              (0, u.Qg)(on.Get().GetLoadCallback(e), a),
+              (0, u.Qg)(rn.Get().GetLoadCallback(e), a),
               n
             );
           })(
@@ -21749,17 +21753,17 @@
             {
               title: "Opted In",
               field: "opt_in",
-              formatter: $t.KF,
+              formatter: en.KF,
               width: 50,
               formatterParams: _,
             },
-            ...Jt(),
+            ...tn(),
           ];
         l &&
           h.push({
             title: "Trailer OptIn",
             field: "trailers_opt_in",
-            formatter: $t.Xv,
+            formatter: en.Xv,
             width: 50,
           }),
           r &&
@@ -21767,13 +21771,13 @@
               {
                 title: "Demo OptIn",
                 field: "demo_opt_in",
-                formatter: $t.Xv,
+                formatter: en.Xv,
                 width: 50,
               },
               {
                 title: "Demo State",
                 field: "demo_state",
-                formatter: $t.T6,
+                formatter: en.T6,
                 width: 100,
               },
             ),
@@ -21781,14 +21785,19 @@
             h.push({
               title: "Game Profile OptIn",
               field: "game_profile_intent",
-              formatter: $t.Xv,
+              formatter: en.Xv,
               width: 50,
             }),
           h.push({ title: "Store URL", field: "store_url", width: 350 });
-        const g = (0, $t.n_)();
+        const g = (0, en.n_)();
         return I.createElement(
           U.SV,
           null,
+          I.createElement(
+            "div",
+            { className: Jt().ManageCallout },
+            "To enable additional options unlocked during registration, switch over to the 'editor' tab and scroll to the very bottom. Games can be added to the featured list from the bottom of the 'editor' tab, or from the pruning process.",
+          ),
           I.createElement(Kt.ReactTabulator, {
             ref: t,
             columns: h,
@@ -21798,7 +21807,7 @@
           I.createElement("br", null),
         );
       }
-      function rn(e) {
+      function cn(e) {
         const {
             tableRef: t,
             bSomeEmailSent: n,
@@ -21821,25 +21830,25 @@
             jsonPruned: h,
             jsonPendingReview: g,
           } = i,
-          E = Jt(),
+          E = tn(),
           v = [
-            { title: "App ID", field: "appid", formatter: $t.L2, width: 80 },
+            { title: "App ID", field: "appid", formatter: en.L2, width: 80 },
             {
               title: "App Name",
               field: "app_name",
-              formatter: $t.IX,
+              formatter: en.IX,
               width: 250,
             },
             {
               title: "Is Released",
               field: "released",
-              formatter: $t.c8,
+              formatter: en.c8,
               width: 120,
             },
             {
               title: "Wishlists",
               field: "wishlists",
-              formatter: $t.AV,
+              formatter: en.AV,
               sorter: "number",
               width: 140,
             },
@@ -21868,11 +21877,11 @@
             {
               title: "Publisher IDs",
               field: "publishers",
-              formatter: $t.H,
+              formatter: en.H,
               width: 120,
             },
           ],
-          S = (0, $t.n_)(),
+          S = (0, en.n_)(),
           f = [];
         if (n && c) {
           if (n) {
@@ -21883,7 +21892,7 @@
             n.unshift({
               title: "State",
               field: "appid",
-              formatter: $t.oC,
+              formatter: en.oC,
               width: 120,
               formatterParams: i,
             });
@@ -21898,7 +21907,7 @@
               contents: I.createElement(
                 U.SV,
                 null,
-                I.createElement(nn, {
+                I.createElement(on, {
                   rgOverviewList: o,
                   oAllStats: i,
                   mapAppToDiscountInfo: a,
@@ -21929,6 +21938,11 @@
             contents: I.createElement(
               U.SV,
               null,
+              I.createElement(
+                "div",
+                { className: Jt().ManageCallout },
+                "Eligible information is based on the published page",
+              ),
               I.createElement(Kt.ReactTabulator, {
                 ref: t,
                 columns: v,
@@ -22043,15 +22057,15 @@
               key: "manage&section=featured",
               status: "",
               statusType: "success",
-              contents: I.createElement(ln, Object.assign({}, e)),
+              contents: I.createElement(sn, Object.assign({}, e)),
             },
           ),
           I.createElement(J.n, { tabs: f, bDisableRouting: !0 })
         );
       }
-      (0, o.gn)([c.LO], on.prototype, "m_mapAppToDemoAppID", void 0);
-      var sn = n(46984);
-      class cn {
+      (0, o.gn)([c.LO], rn.prototype, "m_mapAppToDemoAppID", void 0);
+      var dn = n(46984);
+      class mn {
         FetchAllEligibleOptInApps(e) {
           var t;
           return (0, o.mG)(this, void 0, void 0, function* () {
@@ -22065,19 +22079,19 @@
           });
         }
         static Get() {
-          return cn.s_Singleton || (cn.s_Singleton = new cn()), cn.s_Singleton;
+          return mn.s_Singleton || (mn.s_Singleton = new mn()), mn.s_Singleton;
         }
         constructor() {}
       }
-      function dn(e) {
+      function pn(e) {
         var t, n, a, i, l, r;
         const s = (0, te.useQuery)(
             ["useAllEligibleOptInApps", e],
             () =>
               (0, o.mG)(this, void 0, void 0, function* () {
-                return yield cn.Get().FetchAllEligibleOptInApps(e);
+                return yield mn.Get().FetchAllEligibleOptInApps(e);
               }),
-            { staleTime: 60 * sn._H.PerMinute * 1e3 },
+            { staleTime: 60 * dn._H.PerMinute * 1e3 },
           ),
           c = (0, I.useMemo)(() => {
             var e, t, n, a, i, o;
@@ -22126,8 +22140,8 @@
           ]);
         return s.isLoading || !c ? null : c;
       }
-      var mn = n(12251);
-      const pn = (e) => {
+      var un = n(12251);
+      const _n = (e) => {
         const t = R.Get(),
           n = (0, I.useRef)(null),
           [a, i] = I.useState("Demo Package " + t.GetFullName()),
@@ -22234,7 +22248,7 @@
                 ),
             );
       };
-      function un(e, t) {
+      function hn(e, t) {
         const n = R.Get(),
           a = new Array();
         return (
@@ -22260,12 +22274,12 @@
           a
         );
       }
-      const _n = (e) => {
+      const gn = (e) => {
           const t = {
               option: (e) =>
                 Object.assign(Object.assign({}, e), { color: "#444444" }),
             },
-            n = un(e.rgInputType);
+            n = hn(e.rgInputType);
           return I.createElement(
             I.Fragment,
             null,
@@ -22282,12 +22296,12 @@
             }),
           );
         },
-        hn = (e) => {
+        En = (e) => {
           const t = {
               option: (e) =>
                 Object.assign(Object.assign({}, e), { color: "#444444" }),
             },
-            n = un(e.rgInputType, e.bForDataExport);
+            n = hn(e.rgInputType, e.bForDataExport);
           return I.createElement(
             I.Fragment,
             null,
@@ -22304,7 +22318,7 @@
             }),
           );
         },
-        gn = (0, De.Pi)((e) => {
+        vn = (0, De.Pi)((e) => {
           var t;
           const { editModel: n } = e;
           return (null === (t = n.GetDemoPackages()) || void 0 === t
@@ -22317,7 +22331,7 @@
                 n
                   .GetDemoPackages()
                   .map((e) =>
-                    I.createElement(En, {
+                    I.createElement(Sn, {
                       key: "pack" + e.packageid,
                       demoPackageInfo: e,
                       editModel: n,
@@ -22326,7 +22340,7 @@
               )
             : null;
         }),
-        En = (0, De.Pi)((e) => {
+        Sn = (0, De.Pi)((e) => {
           const { demoPackageInfo: t, editModel: n } = e,
             [a, i] = (0, ht.ie)(t.packageid, { include_basic_info: !0 });
           return n.BInitialized() && null != t.packageid
@@ -22363,7 +22377,7 @@
                     "Created Time: ",
                     (0, ce.vX)(t.rtimecreated),
                     " - ",
-                    (0, mn.Sc)(t.rtimecreated, { bForce24HourClock: !1 }),
+                    (0, un.Sc)(t.rtimecreated, { bForce24HourClock: !1 }),
                   ),
                 )
               : 1 == i
@@ -22380,13 +22394,11 @@
                 )
             : I.createElement(de.V, null);
         });
-      function vn(e) {
+      function fn(e) {
         const t = e.split("|");
         return { section_id: t[0], list_id: t[1], option_id: t[2] };
       }
-      var Sn = n(68390),
-        fn = n.n(Sn),
-        yn = n(88408);
+      var yn = n(88408);
       class Dn {
         constructor() {
           (this.nLoadedOptIn = 0), (0, c.rC)(this);
@@ -22418,10 +22430,10 @@
             onCancel: e.closeModal,
             onOK: () => {
               e.closeModal && e.closeModal();
-              let t = n ? vn(n.value) : null,
+              let t = n ? fn(n.value) : null,
                 a =
                   (null == i ? void 0 : i.length) > 0
-                    ? i.map((e) => vn(e.value))
+                    ? i.map((e) => fn(e.value))
                     : null;
               (0, V.AM)(
                 I.createElement(Cn, {
@@ -22440,13 +22452,13 @@
             strDescription:
               "Choose an optional filter which will limit which partners to export. Choose optionally additional data to export that the partners would have entered",
           },
-          I.createElement(_n, {
+          I.createElement(gn, {
             selected: n,
             fnChoiceMade: a,
             rgInputType: ["checkbox"],
             label: "Choose Filter:",
           }),
-          I.createElement(hn, {
+          I.createElement(En, {
             selected: i,
             fnChoiceMade: o,
             bForDataExport: !0,
@@ -22516,7 +22528,7 @@
                   const e = r().CancelToken.source();
                   E.current = e.cancel;
                   let o = null;
-                  m && (o = yield on.Get().LoadAppWithDemoAppIDs(d, n));
+                  m && (o = yield rn.Get().LoadAppWithDemoAppIDs(d, n));
                   const s = new Array();
                   c
                     .filter((e) =>
@@ -22920,7 +22932,7 @@
           (0, I.useEffect)(() => {
             if (!y && (f || !g)) {
               const e = n.map((e) => e.appid),
-                t = d ? vn(d.value) : null,
+                t = d ? fn(d.value) : null,
                 a = e
                   .filter((e) => {
                     var t;
@@ -23080,7 +23092,7 @@
                         onChange: h,
                         label: "Require Trailer Featuring Opt-in Permissions",
                       }),
-                      I.createElement(_n, {
+                      I.createElement(gn, {
                         selected: d,
                         fnChoiceMade: m,
                         rgInputType: ["checkbox"],
@@ -23221,147 +23233,140 @@
           ]);
         return I.createElement(
           "div",
-          { className: fn().DownloadRow },
+          { className: Jt().DownloadRow },
           I.createElement(
             F.zx,
             {
               id: "download-csv",
               onClick: () => t.current.table.download("csv", "data.csv"),
-              style: { width: "120px" },
             },
             "Download CSV",
           ),
           I.createElement(
-            we.HP,
+            F.zx,
             {
-              toolTipContent:
-                "Generates a CSV of only opt-ed in games intended to be shared with the press",
+              id: "download-perss_csv",
+              onClick: function (e) {
+                (0, V.AM)(
+                  I.createElement(In, {
+                    strOptInName: i,
+                    optInStats: t.current.state.data,
+                  }),
+                  (0, Z.RA)(e),
+                );
+              },
             },
             I.createElement(
-              F.zx,
+              we.HP,
               {
-                id: "download-perss_csv",
-                onClick: function (e) {
-                  (0, V.AM)(
-                    I.createElement(In, {
-                      strOptInName: i,
-                      optInStats: t.current.state.data,
-                    }),
-                    (0, Z.RA)(e),
-                  );
-                },
-                style: { width: "200px", marginLeft: "10px" },
+                toolTipContent:
+                  "Generates a CSV of only opt-ed in games intended to be shared with the press",
               },
               "Download Press CSV",
             ),
           ),
           Boolean(o) &&
             I.createElement(
-              we.HP,
+              F.zx,
               {
-                toolTipContent:
-                  "Create a package for the demos that have opted-in to the event and allowed us to use their demo. The package is create with release override.",
+                id: "create_package",
+                onClick: () => {
+                  (0, V.AM)(I.createElement(_n, null), window);
+                },
               },
               I.createElement(
-                F.zx,
+                we.HP,
                 {
-                  id: "create_package",
-                  onClick: () => {
-                    (0, V.AM)(I.createElement(pn, null), window);
-                  },
-                  style: { width: "200px", marginLeft: "10px" },
+                  toolTipContent:
+                    "Create a package for the demos that have opted-in to the event and allowed us to use their demo. The package is create with release override.",
                 },
                 "Create Demo Package",
               ),
             ),
           I.createElement(
-            we.HP,
+            F.zx,
             {
-              toolTipContent:
-                "Download trailers or Game Capsules for opted-in games from this event.",
+              id: "download_trailer",
+              onClick: (e) =>
+                (0, V.AM)(
+                  I.createElement(Ln, { optInStats: t.current.state.data }),
+                  (0, Z.RA)(e),
+                ),
             },
             I.createElement(
-              F.zx,
+              we.HP,
               {
-                id: "download_trailer",
-                onClick: (e) =>
-                  (0, V.AM)(
-                    I.createElement(Ln, { optInStats: t.current.state.data }),
-                    (0, Z.RA)(e),
-                  ),
-                style: { width: "250px", marginLeft: "10px" },
+                toolTipContent:
+                  "Download trailers or Game Capsules for opted-in games from this event.",
               },
               "Download Trailers or Capsules",
             ),
           ),
           I.createElement(
-            we.HP,
+            F.zx,
             {
-              toolTipContent:
-                "Recommend we refresh stats before this call. This will search for the appids in the various buckets (optin, opted out etc...)",
+              id: "find_app",
+              onClick: (e) =>
+                (0, V.AM)(
+                  I.createElement(On, { strOptInName: a.GetOptInPageID() }),
+                  (0, Z.RA)(e),
+                ),
             },
             I.createElement(
-              F.zx,
+              we.HP,
               {
-                id: "find_app",
-                onClick: (e) =>
-                  (0, V.AM)(
-                    I.createElement(On, { strOptInName: a.GetOptInPageID() }),
-                    (0, Z.RA)(e),
-                  ),
-                style: { width: "200px", marginLeft: "10px" },
+                toolTipContent:
+                  "Recommend we refresh stats before this call. This will search for the appids in the various buckets (optin, opted out etc...)",
               },
-              "Find App",
+              "🔍 Find App...",
             ),
           ),
           Boolean((null == n ? void 0 : n.length) > 0) &&
             I.createElement(
-              we.HP,
+              F.zx,
               {
-                toolTipContent:
-                  "Recommend refresh stats before using this dialog. This will provide a dialog that will mass move apps into the pending_review state which allows us to do pruning before they are invited to participate.",
+                id: "eligible_to_invite",
+                onClick: (e) =>
+                  (0, V.AM)(
+                    I.createElement(Tn, {
+                      strOptInName: i,
+                      eligigleOptInStats: n,
+                      bPendingReviewInstead: !0,
+                    }),
+                    (0, Z.RA)(e),
+                  ),
               },
               I.createElement(
-                F.zx,
+                we.HP,
                 {
-                  id: "eligible_to_invite",
-                  onClick: (e) =>
-                    (0, V.AM)(
-                      I.createElement(Tn, {
-                        strOptInName: i,
-                        eligigleOptInStats: n,
-                        bPendingReviewInstead: !0,
-                      }),
-                      (0, Z.RA)(e),
-                    ),
-                  style: { width: "150px", marginLeft: "10px" },
+                  toolTipContent:
+                    "Recommend refresh stats before using this dialog. This will provide a dialog that will mass move apps into the pending_review state which allows us to do pruning before they are invited to participate.",
                 },
-                "Eligible => Pending Review",
+                "Eligible → Pending Review...",
               ),
             ),
           Boolean((null == n ? void 0 : n.length) > 0) &&
             I.createElement(
-              we.HP,
+              F.zx,
               {
-                toolTipContent:
-                  "Recommend refresh stats before using this dialog. This will provide a dialog that will mass invite eligible apps meeting a coming soon or release with min earn critria.",
+                id: "eligible_to_invite",
+                onClick: (e) =>
+                  (0, V.AM)(
+                    I.createElement(Tn, {
+                      strOptInName: i,
+                      eligigleOptInStats: n,
+                      bPendingReviewInstead: !1,
+                    }),
+                    (0, Z.RA)(e),
+                  ),
               },
               I.createElement(
-                F.zx,
+                we.HP,
                 {
-                  id: "eligible_to_invite",
-                  onClick: (e) =>
-                    (0, V.AM)(
-                      I.createElement(Tn, {
-                        strOptInName: i,
-                        eligigleOptInStats: n,
-                        bPendingReviewInstead: !1,
-                      }),
-                      (0, Z.RA)(e),
-                    ),
-                  style: { width: "150px", marginLeft: "10px" },
+                  toolTipContent:
+                    "Recommend refresh stats before using this dialog. This will provide a dialog that will mass invite eligible apps meeting a coming soon or release with min earn critria.",
                 },
-                "Eligible => Invited",
+                "Eligible → Invited...",
               ),
             ),
         );
@@ -23369,7 +23374,7 @@
       function On(e) {
         const { closeModal: t, strOptInName: n } = e,
           [a, i] = (0, I.useState)(""),
-          o = dn(n),
+          o = pn(n),
           l = (0, I.useMemo)(
             () =>
               a
@@ -23525,7 +23530,7 @@
                 bSomeEmailSent: n,
                 oAllStats: a,
               })
-            : I.createElement(rn, {
+            : I.createElement(cn, {
                 tableRef: l,
                 bSomeEmailSent: n,
                 oAllStats: a,
@@ -23580,7 +23585,7 @@
             });
           }, [i, p, u, a]);
         return p && u
-          ? I.createElement(rn, {
+          ? I.createElement(cn, {
               tableRef: t,
               bSomeEmailSent: n,
               mapAppToDiscountInfo: u,
@@ -24157,7 +24162,7 @@
                     u,
                     (0, ce.$1)(t.GetCancelDate() || 0) +
                       " @ " +
-                      (0, mn.Sc)(t.GetCancelDate() || 0, {
+                      (0, un.Sc)(t.GetCancelDate() || 0, {
                         bForce24HourClock: !1,
                       }),
                   ),
@@ -24572,7 +24577,7 @@
                     " " +
                       (0, ce.$1)(R.Get().GetEventStartTime() || 0) +
                       " @ " +
-                      (0, mn.Sc)(R.Get().GetEventStartTime() || 0, {
+                      (0, un.Sc)(R.Get().GetEventStartTime() || 0, {
                         bForce24HourClock: !1,
                       }),
                   ),
@@ -24616,7 +24621,7 @@
                   " discounts before the event begins on ",
                   (0, ce.$1)(R.Get().GetEventStartTime() || 0) +
                     " @ " +
-                    (0, mn.Sc)(R.Get().GetEventStartTime() || 0, {
+                    (0, un.Sc)(R.Get().GetEventStartTime() || 0, {
                       bForce24HourClock: !1,
                     }),
                   ". Visit your ",
@@ -24711,7 +24716,7 @@
                         " " +
                           (0, ce.$1)(t.GetQASessionDate() || 0) +
                           " @ " +
-                          (0, mn.Sc)(t.GetQASessionDate() || 0, {
+                          (0, un.Sc)(t.GetQASessionDate() || 0, {
                             bForce24HourClock: !1,
                           }),
                       ),
@@ -26137,8 +26142,8 @@
           a = "string" == typeof t ? Number.parseInt(t) : t,
           [i] = (0, ht.vs)(a, {});
         return I.createElement(
-          I.Fragment,
-          null,
+          "div",
+          { className: Kn.appItem },
           Boolean(i)
             ? I.createElement("div", null, i.GetName(), " (", t, ")")
             : I.createElement("div", null, "Store Item Not Loading Appid: ", t),
@@ -26344,7 +26349,7 @@
             return { rgEmailSentList: t.data, oEmailSummary: n };
           })(t.GetServerEmailDefID()),
           [r, s] = (0, I.useState)(!1),
-          c = dn(a),
+          c = pn(a),
           [d, m] = (0, I.useState)(!1);
         (0, I.useEffect)(() => {
           var e;
@@ -26576,14 +26581,14 @@
                         timeNotified:
                           (0, ce.$1)(e.rtime_notified) +
                           " " +
-                          (0, mn.Sc)(e.rtime_notified, {
+                          (0, un.Sc)(e.rtime_notified, {
                             bForce24HourClock: !1,
                           }),
                         status: a,
                         sentTime:
                           (0, ce.$1)(e.rtime_notified) +
                           " " +
-                          (0, mn.Sc)(e.send_rtime, { bForce24HourClock: !1 }),
+                          (0, un.Sc)(e.send_rtime, { bForce24HourClock: !1 }),
                         bSkipEmailingSinceEmailUnverified:
                           e.ignored_unverified_email,
                         bSkipEmailingAccountOptedOut: e.ignored_email_optout,
@@ -27372,7 +27377,7 @@
                   "Scheduled:",
                   (0, ce.$1)(n.start_rtime),
                   I.createElement("span", null, " - "),
-                  (0, mn.Sc)(n.start_rtime, { bForce24HourClock: !1 }),
+                  (0, un.Sc)(n.start_rtime, { bForce24HourClock: !1 }),
                 )
               : "Manual Email",
           ),
@@ -28159,7 +28164,7 @@
                   });
                 })(e);
               }),
-            { staleTime: 60 * sn._H.PerMinute * 1e3 },
+            { staleTime: 60 * dn._H.PerMinute * 1e3 },
           );
           return t.isLoading ? null : t.data;
         })(R.Get().GetOptInPageID());
@@ -28776,7 +28781,7 @@
                 contents: I.createElement(
                   U.SV,
                   null,
-                  I.createElement(gn, { editModel: t }),
+                  I.createElement(vn, { editModel: t }),
                   I.createElement(Bn, null),
                 ),
                 onClick: n,
@@ -32555,14 +32560,14 @@
             { className: Ze().SmallText },
             (0, ce.Xx)("#DiscountDashboard_DetailView_StartTimeLabel"),
             " ",
-            I.createElement("span", null, (0, mn.$1)(t.event_start_date), " "),
+            I.createElement("span", null, (0, un.$1)(t.event_start_date), " "),
           ),
           I.createElement(
             "div",
             { className: Ze().SmallText },
             (0, ce.Xx)("#DiscountDashboard_DetailView_EndTimeLabel"),
             " ",
-            I.createElement("span", null, (0, mn.$1)(t.event_end_date), " "),
+            I.createElement("span", null, (0, un.$1)(t.event_end_date), " "),
           ),
         );
       }
@@ -32629,7 +32634,7 @@
                 null,
                 (0, ce.Xx)("#OptIn_Submission_Deadline"),
                 " ",
-                (0, mn.$1)(t.optin_deadline_date),
+                (0, un.$1)(t.optin_deadline_date),
               ),
             Boolean(i) && I.createElement(Gi.d, { text: i }),
           ),

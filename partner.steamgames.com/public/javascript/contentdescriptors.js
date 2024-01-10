@@ -11,6 +11,23 @@ function SaveSurvey( appid )
 {
 
 
+	if ( $J("#categoryid_38" ).is(":checked") &&
+		 $J("#categoryid_40" ).is(":checked") &&
+		 $J("#categoryid_49" ).is(":checked") )
+	{
+		if ( v_trim( $J( "#external_service_name" ).val() ).length == 0 )
+		{
+			ShowAlertDialog( 'Error Saving Survey', 'Please specify the name of the external service your game connects to in order to live-generate content or code for your game.' );
+			return;
+		}
+
+		if ( !gValidURL.test( $J( "#external_service_url" ).val() ) )
+		{
+			ShowAlertDialog( 'Error Saving Survey', 'Please specify a valid URL for the website of the external service your game connects to in order to live-generate content or code for your game.' );
+			return;
+		}
+	}
+
 	var form = $J( "#SaveSurveyForm" );
 
 	$J.ajax(
@@ -185,6 +202,16 @@ function HandleCategoryRelatedDivVisibility( checkbox, relatedDiv, bAnimate )
 	else
 	{
 		relatedDiv.animate( { opacity: 'hide', height: 'hide'}, bAnimate ? 500 : 0 );
+	}
+}
+
+function CheckAOContentAndLiveGenerateAIContent()
+{
+	var checkboxAO = $J( '#descriptor_3' );
+	var checkboxAILive = $J( '#categoryid_40' );
+	if ( checkboxAO.prop( 'checked' ) && checkboxAILive.prop( 'checked' ) )
+	{
+		ShowAlertDialog( 'Warning', 'Steam cannot support Adult Only Sexual Content that is created with Live-Generated AI at this time. You may contact Steamworks support to request a refund of your app fee.' );
 	}
 }
 

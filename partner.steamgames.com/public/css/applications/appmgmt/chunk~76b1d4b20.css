@@ -100,6 +100,7 @@
 .deckverified_DialogHeader_1L5Or {
   display: flex;
   flex-direction: row;
+  align-items: center;
   padding-bottom: 10px;
 }
 .deckverified_DialogTitle_2FOcP {
@@ -114,7 +115,6 @@
 .deckverified_AppTitleCategory_2VgfB .deckverified_CategoryIcon_2yDLe {
   padding-top: 1px;
   width: 26px;
-  height: 100%;
 }
 .deckverified_CompatibilityDetailsStillLearning_1Ugyr {
   display: flex;
