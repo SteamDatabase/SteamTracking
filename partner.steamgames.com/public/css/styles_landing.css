@@ -2971,7 +2971,7 @@ ul.transfer_rights li {
 	width: 220px;
 	padding: 4px 0px 0px 8px;
 	display: inline-block;
-	overflow-wrap: break-spaces;
+	overflow-wrap: break-word;
 	hyphens: auto;
 }
 
@@ -2979,7 +2979,7 @@ ul.transfer_rights li {
 	width: 64px;
 	padding: 4px 0px 0px 0px;
 	display: inline-block;
-	overflow-wrap: break-spaces;
+	overflow-wrap: break-word;
 	hyphens: auto;
 }
 
