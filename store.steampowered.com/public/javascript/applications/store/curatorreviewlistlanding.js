@@ -3,17 +3,17 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [3207],
   {
-    16646: (e) => {
+    36998: (e) => {
       e.exports = {
         VideoReviewCtn: "twitchembed_VideoReviewCtn_nNaTz",
         YouTubePreviewImage: "twitchembed_YouTubePreviewImage__mxmF",
         TwitchPlayer: "twitchembed_TwitchPlayer_Ny5PH",
       };
     },
-    95771: (e) => {
+    9573: (e) => {
       e.exports = { BreadContainer: "breadcrumbs_BreadContainer_1QPim" };
     },
-    5089: (e) => {
+    90366: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         OtherEventsCtn: "eventrow_OtherEventsCtn_1qNsZ",
@@ -44,13 +44,13 @@
         AppCapsulePrice: "eventrow_AppCapsulePrice_Jq75m",
       };
     },
-    51857: (e) => {
+    46612: (e) => {
       e.exports = {
         YoutubePreviewImage: "youtubepreviewimage_YoutubePreviewImage_MzScK",
         YoutubePlayer: "youtubepreviewimage_YoutubePlayer_3uK6c",
       };
     },
-    94608: (e) => {
+    26416: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         CuratorListCtn: "curatorlist_CuratorListCtn_2gWFd",
@@ -85,19 +85,19 @@
         FullReviewDomain: "curatorlist_FullReviewDomain_2R37N",
       };
     },
-    11581: (e) => {
+    50747: (e) => {
       e.exports = { BreadContainer: "curatorminiheader_BreadContainer_GkVFI" };
     },
-    66294: (e, t, a) => {
+    13043: (e, t, a) => {
       "use strict";
       a.d(t, { p: () => c });
-      var n = a(33940),
-        r = a(89526),
-        o = a(44026),
-        l = a(17589),
-        i = a(4306),
-        s = a(32765),
-        u = a(94952);
+      var n = a(85556),
+        r = a(47427),
+        o = a(82493),
+        l = a(4030),
+        i = a(20417),
+        s = a(37563),
+        u = a(35643);
       function c(e) {
         const { children: t, navTreeRef: a } = e,
           c = (0, n._T)(e, ["children", "navTreeRef"]),
@@ -124,7 +124,7 @@
         return r.createElement(r.Fragment, null, t);
       }
     },
-    26412: (e, t, a) => {
+    89e3: (e, t, a) => {
       "use strict";
       a.d(t, { HO: () => u, S6: () => d });
       const n = 20,
@@ -176,15 +176,15 @@
         return { strVideoID: t, nStartSeconds: n };
       }
     },
-    68818: (e, t, a) => {
+    29292: (e, t, a) => {
       "use strict";
       a.d(t, { Me: () => s, Mx: () => c, XC: () => u });
-      var n = a(89526),
-        r = a(10412),
-        o = a(58218),
-        l = a(47165),
-        i = a(32765);
-      a(57361);
+      var n = a(47427),
+        r = a(82071),
+        o = a(29480),
+        l = a(35427),
+        i = a(37563);
+      a(22520);
       function s(e, t = 0, a) {
         const [s, u] = (0, n.useState)(r.j1.GetClanEventFromAnnouncementGID(e)),
           c = (0, o.T)("usePartnerEventByAnnouncementGID");
@@ -241,7 +241,7 @@
         );
       }
     },
-    16468: (e, t, a) => {
+    78910: (e, t, a) => {
       "use strict";
       a.d(t, {
         Bo: () => b,
@@ -251,22 +251,22 @@
         mb: () => f,
         yS: () => D,
       });
-      var n = a(33940),
-        r = a(52868),
+      var n = a(85556),
+        r = a(80751),
         o = a.n(r),
-        l = a(59621),
-        i = a(89526),
-        s = a(47165),
-        u = a(82079),
-        c = a(98210),
-        d = a(54671),
-        m = a(10412),
-        p = a(70750),
-        _ = a(11837),
-        v = a(23801),
-        h = a(23217),
-        y = a(4306),
-        g = a(32765);
+        l = a(54842),
+        i = a(47427),
+        s = a(35427),
+        u = a(93243),
+        c = a(84270),
+        d = a(77151),
+        m = a(82071),
+        p = a(50369),
+        _ = a(83999),
+        v = a(62210),
+        h = a(16649),
+        y = a(20417),
+        g = a(37563);
       function E(e) {
         e.list_jsondata && "string" == typeof e.list_jsondata
           ? (e.list_jsondata = JSON.parse(e.list_jsondata))
@@ -588,15 +588,15 @@
       }
       (0, n.gn)([l.LO], b.prototype, "m_mapList", void 0);
     },
-    65858: (e, t, a) => {
+    16390: (e, t, a) => {
       "use strict";
       a.d(t, { b: () => u });
-      var n = a(89526),
-        r = a(95771),
-        o = a(19304),
-        l = a(565),
-        i = a(44026),
-        s = a(51438);
+      var n = a(47427),
+        r = a(9573),
+        o = a(13129),
+        l = a(28017),
+        i = a(82493),
+        s = a(91618);
       function u(e) {
         const { crumbs: t, className: a } = e;
         return t && 0 != t.length
@@ -636,35 +636,35 @@
           : null;
       }
     },
-    31245: (e, t, a) => {
+    40833: (e, t, a) => {
       "use strict";
       a.d(t, { B: () => G, O: () => T });
-      var n = a(89526),
-        r = a(62983),
-        o = a(44026),
-        l = a(51438),
-        i = a(16221),
-        s = a(98009),
-        u = a(54671),
-        c = a(85886),
-        d = a(25871),
-        m = a(5089),
-        p = a(43840),
-        _ = a(44421),
-        v = a(23715),
+      var n = a(47427),
+        r = a(16610),
+        o = a(82493),
+        l = a(91618),
+        i = a(3783),
+        s = a(28347),
+        u = a(77151),
+        c = a(86437),
+        d = a(80886),
+        m = a(90366),
+        p = a(85305),
+        _ = a(85884),
+        v = a(7769),
         h = a.n(v),
-        y = a(67935),
-        g = a(21219),
-        E = a(87539),
-        f = a(3991),
-        C = a(33406),
-        b = a(98389),
-        I = a(42317),
-        w = a(71161),
-        S = a(19304),
-        D = a(14826),
-        P = a(207),
-        L = a(32765);
+        y = a(47625),
+        g = a(57803),
+        E = a(91552),
+        f = a(52841),
+        C = a(83502),
+        b = a(34913),
+        I = a(22446),
+        w = a(25006),
+        S = a(13129),
+        D = a(31846),
+        P = a(13499),
+        L = a(37563);
       const T = "capsule_index_";
       function G(e) {
         const {
@@ -855,17 +855,17 @@
         );
       }
     },
-    86177: (e, t, a) => {
+    61582: (e, t, a) => {
       "use strict";
       a.d(t, { e: () => v, m: () => p });
       var n,
-        r = a(33940),
-        o = a(89526),
-        l = a(11837),
-        i = a(74802),
-        s = a(4306),
-        u = a(19304),
-        c = a(69338);
+        r = a(85556),
+        o = a(47427),
+        l = a(83999),
+        i = a(58112),
+        s = a(20417),
+        u = a(13129),
+        c = a(46882);
       !(function (e) {
         (e[(e.NotLoaded = 0)] = "NotLoaded"),
           (e[(e.Loading = 1)] = "Loading"),
@@ -1046,16 +1046,16 @@
         (0, r.gn)([s.ak], v.prototype, "OnPlayerLeftView", null),
         (0, r.gn)([s.ak], v.prototype, "PlayVideo", null);
     },
-    6049: (e, t, a) => {
+    26028: (e, t, a) => {
       "use strict";
       a.d(t, { C: () => m, q: () => d });
-      var n = a(89526),
-        r = a(54297),
-        o = a(701),
-        l = a(86177),
-        i = a(19304),
-        s = a(14826),
-        u = a(51857),
+      var n = a(47427),
+        r = a(31659),
+        o = a(62613),
+        l = a(61582),
+        i = a(13129),
+        s = a(31846),
+        u = a(46612),
         c = a.n(u);
       const d = (e) => {
           const t = ["maxresdefault", "mqdefault", "default"],
@@ -1141,26 +1141,26 @@
           }
         };
     },
-    45334: (e, t, a) => {
+    33955: (e, t, a) => {
       "use strict";
       a.r(t), a.d(t, { CuratorReviewListContainer: () => q, default: () => K });
-      var n = a(88464),
-        r = a(89526),
-        o = a(14966),
-        l = a(40442),
-        i = a(44026),
-        s = a(66294),
-        u = a(51438),
-        c = a(26412),
-        d = a(68818),
-        m = a(47165),
-        p = a(98009),
-        _ = a(33940),
-        v = a(58218),
-        h = a(52868),
+      var n = a(27605),
+        r = a(47427),
+        o = a(43090),
+        l = a(77936),
+        i = a(82493),
+        s = a(13043),
+        u = a(91618),
+        c = a(89e3),
+        d = a(29292),
+        m = a(35427),
+        p = a(28347),
+        _ = a(85556),
+        v = a(29480),
+        h = a(80751),
         y = a.n(h),
-        g = a(32765),
-        E = a(23217);
+        g = a(37563),
+        E = a(16649);
       function f(e, t) {
         const [a, n] = (0, r.useState)(
             (null == e ? void 0 : e.BUsesContentHubForItemSource())
@@ -1220,19 +1220,19 @@
           a
         );
       }
-      var C = a(16468),
-        b = a(83145),
-        I = a(98210),
-        w = a(54671),
-        S = a(92616),
-        D = a(85886),
-        P = a(25871),
-        L = a(95408),
-        T = a(16646),
+      var C = a(78910),
+        b = a(41130),
+        I = a(84270),
+        w = a(77151),
+        S = a(15690),
+        D = a(86437),
+        P = a(80886),
+        L = a(74031),
+        T = a(36998),
         G = a.n(T),
-        N = a(701),
-        R = a(19304),
-        A = a(51857);
+        N = a(62613),
+        R = a(13129),
+        A = a(46612);
       const k = new RegExp(
         "(?:https?://)?(?:www.)?twitch.tv/videos/([0-9]+)S*",
       );
@@ -1315,19 +1315,19 @@
           )
         );
       }
-      var O = a(43840),
-        x = a(70750),
-        Y = a(44421),
-        j = a(31245),
-        H = a(69338),
-        M = a(66615),
-        V = a(6049),
-        U = a(14826),
-        z = a(207),
-        W = a(94608),
+      var O = a(85305),
+        x = a(50369),
+        Y = a(85884),
+        j = a(40833),
+        H = a(46882),
+        M = a(83059),
+        V = a(26028),
+        U = a(31846),
+        z = a(13499),
+        W = a(26416),
         Z = a.n(W),
-        X = a(65858),
-        Q = a(11581);
+        X = a(16390),
+        Q = a(50747);
       function $(e) {
         const { clanInfo: t } = e,
           { curator_link: a, curator_medium_avatar: n } = (0, g.kQ)(

@@ -3,7 +3,7 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [3238],
   {
-    96164: (e) => {
+    79883: (e) => {
       e.exports = {
         AppCarouselTrailerCtn: "appcarouseltrailer_AppCarouselTrailerCtn_3hJp_",
         AutoplayCheckbox: "appcarouseltrailer_AutoplayCheckbox_36Ep1",
@@ -12,7 +12,7 @@
         PlayButton: "appcarouseltrailer_PlayButton_2b7SF",
       };
     },
-    78913: (e) => {
+    44910: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         DiscoveryQueueCarouselCtn:
@@ -106,12 +106,12 @@
         DiscoveryQueueName: "discoveryqueuewizard_DiscoveryQueueName_1hDU6",
       };
     },
-    59983: (e, t, n) => {
+    26918: (e, t, n) => {
       "use strict";
       n.d(t, { _: () => a });
-      var o = n(89526),
-        r = n(85246),
-        i = n(4306);
+      var o = n(47427),
+        r = n(45492),
+        i = n(20417);
       const s = (e) => null != e;
       function a(e, t) {
         const [n, r] = o.useState(window.localStorage.getItem(e)),
@@ -157,18 +157,18 @@
         }
       }
     },
-    95501: (e, t, n) => {
+    52355: (e, t, n) => {
       "use strict";
       n.d(t, { C: () => m, Nl: () => h, Ud: () => p, a6: () => v });
-      var o = n(33940),
-        r = n(68333),
-        i = n(74492),
-        s = n(52868),
+      var o = n(85556),
+        r = n(35750),
+        i = n(54879),
+        s = n(80751),
         a = n.n(s),
-        l = n(5615),
-        u = n(54671),
-        c = n(66216),
-        d = n(32765);
+        l = n(42718),
+        u = n(77151),
+        c = n(54457),
+        d = n(37563);
       function m(e) {
         return (0, l.useQuery)(
           v.Get().GetFriendsRecommendedAppKey(e),
@@ -261,7 +261,7 @@
       }
       v.s_AppRelevanceStore = null;
     },
-    82588: (e, t, n) => {
+    74840: (e, t, n) => {
       "use strict";
       n.d(t, {
         GD: () => g,
@@ -271,16 +271,16 @@
         ZP: () => f,
         hc: () => C,
       });
-      var o = n(33940),
-        r = n(59621),
-        i = n(89526),
-        s = n(68333),
-        a = n(56305),
-        l = n(24709),
-        u = n(85246),
-        c = n(4306),
-        d = n(81349),
-        m = n(32765);
+      var o = n(85556),
+        r = n(54842),
+        i = n(47427),
+        s = n(35750),
+        a = n(38079),
+        l = n(98255),
+        u = n(45492),
+        c = n(20417),
+        d = n(45284),
+        m = n(37563);
       function p(e, t) {
         const n = null == t ? void 0 : t.nSaleTagID,
           o = null == t ? void 0 : t.strContentHubType,
@@ -541,17 +541,17 @@
       (y.s_DiscoveryQueueStore = null),
         (0, o.gn)([r.LO], y.prototype, "m_mapDiscoveryQueues", void 0);
     },
-    66216: (e, t, n) => {
+    54457: (e, t, n) => {
       "use strict";
       n.d(t, { cs: () => v, qX: () => p });
-      var o = n(33940),
-        r = n(89526),
-        i = n(5615),
-        s = n(68333),
-        a = n(63261),
-        l = n(11195),
-        u = n(92616),
-        c = n(23801);
+      var o = n(85556),
+        r = n(47427),
+        i = n(42718),
+        s = n(35750),
+        a = n(44922),
+        l = n(80998),
+        u = n(15690),
+        c = n(62210);
       const d = r.createContext({}),
         m = () => r.useContext(d);
       function p(e) {
@@ -643,20 +643,20 @@
         }
       }
     },
-    84291: (e, t, n) => {
+    67327: (e, t, n) => {
       "use strict";
       n.d(t, { S: () => _ });
-      var o = n(89526),
-        r = n(51438),
-        i = n(96164),
+      var o = n(47427),
+        r = n(91618),
+        i = n(79883),
         s = n.n(i),
-        a = n(701),
-        l = n(87361),
-        u = n(14826),
-        c = n(57605),
-        d = n(19304),
-        m = n(59983),
-        p = n(32765);
+        a = n(62613),
+        l = n(46009),
+        u = n(31846),
+        c = n(1485),
+        d = n(13129),
+        m = n(26918),
+        p = n(37563);
       const h = "bGameHighlightAutoplayDisabled",
         v = "discovery-queue-volume";
       function _(e) {
@@ -821,32 +821,32 @@
         );
       }
     },
-    48472: (e, t, n) => {
+    52689: (e, t, n) => {
       "use strict";
       n.d(t, { s: () => G });
-      var o = n(33940),
-        r = n(89526),
-        i = n(5615),
-        s = n(44026),
-        a = n(51438),
-        l = n(50355),
-        u = n(45761),
-        c = n(47165),
-        d = n(82079),
-        m = n(74831),
-        p = n(54671),
-        h = n(92616),
-        v = n(43840),
-        _ = n(701),
-        y = n(19304),
-        g = n(14826),
-        C = n(50454),
-        f = n(95501),
-        S = n(69338),
-        I = n(78913),
+      var o = n(85556),
+        r = n(47427),
+        i = n(42718),
+        s = n(82493),
+        a = n(91618),
+        l = n(38605),
+        u = n(70548),
+        c = n(35427),
+        d = n(93243),
+        m = n(58670),
+        p = n(77151),
+        h = n(15690),
+        v = n(85305),
+        _ = n(62613),
+        y = n(13129),
+        g = n(31846),
+        C = n(68785),
+        f = n(52355),
+        S = n(46882),
+        I = n(44910),
         D = n.n(I),
-        E = n(49437),
-        A = n(39323);
+        E = n(51915),
+        A = n(88619);
       const w = new C.s("AppRelevance").Debug;
       function G(e) {
         var t, n, s, a, l, u, m, v, _, C, I, E, G, B, L, N, Q, M;
@@ -1359,39 +1359,39 @@
         );
       }
     },
-    64693: (e, t, n) => {
+    3613: (e, t, n) => {
       "use strict";
       n.d(t, { MS: () => ue, Vw: () => se });
-      var o = n(33940),
-        r = n(83315),
-        i = n(89526),
-        s = n(44026),
-        a = n(17589),
-        l = n(51438),
-        u = n(30928),
-        c = n(16221),
-        d = n(81039),
-        m = n(98009),
-        p = n(98210),
-        h = n(54671),
-        v = n(37760),
-        _ = n(92616),
-        y = n(85886),
-        g = n(25871),
-        C = n(95408),
-        f = n(43840),
-        S = n(44865),
-        I = n(28183),
-        D = n(73961),
-        E = n(4306),
-        A = n(36041),
-        w = n(37377),
-        G = n(81209),
-        b = n(8179),
-        T = n(60729),
-        R = n(50454),
-        k = n(45820),
-        B = n(32765);
+      var o = n(85556),
+        r = n(30750),
+        i = n(47427),
+        s = n(82493),
+        a = n(4030),
+        l = n(91618),
+        u = n(84686),
+        c = n(3783),
+        d = n(4654),
+        m = n(28347),
+        p = n(84270),
+        h = n(77151),
+        v = n(89373),
+        _ = n(15690),
+        y = n(86437),
+        g = n(80886),
+        C = n(74031),
+        f = n(85305),
+        S = n(92797),
+        I = n(81424),
+        D = n(42287),
+        E = n(20417),
+        A = n(45651),
+        w = n(60616),
+        G = n(24995),
+        b = n(15633),
+        T = n(48766),
+        R = n(68785),
+        k = n(56617),
+        B = n(37563);
       const L = new R.s("VirtualizedBoxCarousel").Debug,
         N = i.forwardRef(function (e, t) {
           const { name: n, initialColumn: o } = e,
@@ -1938,25 +1938,25 @@
         (0, o.gn)([E.ak], x.prototype, "MoveRight", null),
         (0, o.gn)([E.ak], x.prototype, "OnGamepadButtonDown", null),
         (0, o.gn)([E.ak], x.prototype, "OnGamepadDirection", null);
-      var Q = n(99307),
-        M = n(701),
-        O = n(84291),
-        F = n(71161),
-        P = n(58218),
-        z = n(19304),
-        q = n(45437),
-        W = n(14826),
-        U = n(7029),
-        V = n(82588),
-        H = n(23186),
-        X = n(6319),
-        Z = n(48472),
-        j = n(78913),
+      var Q = n(50898),
+        M = n(62613),
+        O = n(67327),
+        F = n(25006),
+        P = n(29480),
+        z = n(13129),
+        q = n(8789),
+        W = n(31846),
+        U = n(93334),
+        V = n(74840),
+        H = n(81874),
+        X = n(99823),
+        Z = n(52689),
+        j = n(44910),
         K = n.n(j),
-        Y = n(26121),
-        J = n(89480),
-        $ = n(73070),
-        ee = n(207);
+        Y = n(89272),
+        J = n(30229),
+        $ = n(53087),
+        ee = n(13499);
       const te = new R.s("DiscoveryQueueWizard").Debug,
         ne = 0,
         oe = 1,
@@ -2856,15 +2856,15 @@
           : null;
       }
     },
-    35388: (e, t, n) => {
+    40735: (e, t, n) => {
       "use strict";
       n.d(t, { g: () => u });
-      var o = n(33940),
-        r = n(89526),
-        i = n(32765),
-        s = n(82588),
-        a = n(95501),
-        l = n(19094);
+      var o = n(85556),
+        r = n(47427),
+        i = n(37563),
+        s = n(74840),
+        a = n(52355),
+        l = n(77581);
       function u() {
         const [e, t] = (0, r.useState)(!1),
           n = (0, i.id)();

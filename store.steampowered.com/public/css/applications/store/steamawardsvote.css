@@ -837,7 +837,7 @@ button.Primary.partnereventshared_AddSectionButton_15e-D {
   padding: 0px;
   cursor: pointer;
   font-size: 13px;
-  background: rgba(0, 0, 0, 0);
+  background: transparent;
 }
 .nominationandvote_SteamAwardContainer_jBtX5
   .nominationandvote_SteamAwardVoteWidget_2-t3v
@@ -878,7 +878,7 @@ button.Primary.partnereventshared_AddSectionButton_15e-D {
   padding: 0px;
   cursor: pointer;
   font-size: 13px;
-  background: rgba(0, 0, 0, 0);
+  background: transparent;
   box-sizing: border-box;
 }
 .nominationandvote_SteamAwardContainer_jBtX5
@@ -955,7 +955,7 @@ button.Primary.partnereventshared_AddSectionButton_15e-D {
   .nominationandvote_NominateCtn_hS9w-
   .nominationandvote_SteamAwardCategoryDesc_3bu8i {
   margin-left: 0px;
-  background: rgba(255, 255, 255, 0.1019607843);
+  background: #ffffff1a;
   color: #d9ced7;
   padding: 4px 8px;
   font-size: 14px;

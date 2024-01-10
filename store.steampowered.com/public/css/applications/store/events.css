@@ -50,7 +50,7 @@
   color: orange;
 }
 .partnereventstats_StatsCtnTitle_1MBiN.partnereventstats_SmallStatsMode_kgm3s {
-  background-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
   padding: 0px;
   border: none;
 }
@@ -1696,7 +1696,7 @@ html.responsive.touch
   width: 100vw;
   height: 100vh;
   z-index: 50;
-  background-color: rgba(0, 0, 0, 0.3333333333);
+  background-color: #00000055;
 }
 .eventcalendar_MobileNavBannerCtn_2Frbv .eventcalendar_SearchBox_2M_7N {
   position: fixed;
@@ -1774,7 +1774,7 @@ html.responsive.touch
 }
 .eventcalendar_MobileNavBannerCtn_2Frbv
   .eventcalendar_MobileNavHScroll_2M1_b::-webkit-scrollbar-thumb {
-  background: rgba(0, 0, 0, 0);
+  background: transparent;
 }
 .eventcalendar_MobileNavBannerCtn_2Frbv
   .eventcalendar_MobileNavBannerList_UZcA8 {
@@ -2336,7 +2336,7 @@ html:not(.touch)
   .eventcalendartile_CoverImageCtn_1z05m
   .eventcalendartile_AppBannerLogo_QRRaO.eventcalendartile_FallbackImage_kbkLs.eventcalendartile_ClanSource_110XI {
   background-size: contain;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
   background-position: top right;
 }
 .eventcalendartile_TileContainer_27AwJ.eventcalendartile_EventType12_KucHh
@@ -2547,7 +2547,7 @@ html:not(.touch)
   .eventcalendartile_CoverImageCtn_1z05m
   .eventcalendartile_TileImage_Zo12U.eventcalendartile_FallbackImage_kbkLs.eventcalendartile_ClanSource_110XI {
   background-size: contain;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
   background-position: top right;
 }
 .eventcalendartile_TileContainer_27AwJ
@@ -2853,7 +2853,7 @@ html:not(.touch)
   }
   .eventcalendartile_TileContainer_27AwJ
     .eventcalendartile_FooterStat_3L6pU:hover {
-    background: rgba(0, 0, 0, 0);
+    background: transparent;
   }
 }
 .eventcalendartile_TileContainer_27AwJ
@@ -3539,7 +3539,7 @@ html:not(.touch)
   opacity: 1;
 }
 .youtubepreviewimage_YoutubePreviewImage_MzScK:hover .YoutubePreviewPlay svg {
-  filter: drop-shadow(0 0 5px rgb(0, 0, 0));
+  filter: drop-shadow(0 0 5px black);
 }
 .youtubepreviewimage_YoutubePreviewImage_MzScK:hover .YoutubePreviewImage {
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
@@ -4033,7 +4033,7 @@ html:not(.touch)
   margin-top: -5px;
 }
 .partnereventwebrowembed_SectionButton_1-yPT {
-  background: rgba(0, 0, 0, 0);
+  background: transparent;
   border: 1px solid rgba(255, 255, 255, 0.4);
   border-radius: 2px;
   color: #fff;
@@ -4076,7 +4076,7 @@ html:not(.touch)
 }
 .partnereventwebrowembed_LatestUpdateButton_3F6YM {
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
-  background: rgba(0, 0, 0, 0);
+  background: transparent;
   border: 1px solid rgba(255, 255, 255, 0.4);
   border-radius: 2px;
   color: #fff;

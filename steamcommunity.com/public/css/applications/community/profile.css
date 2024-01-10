@@ -168,10 +168,10 @@
 .ingame .steamavatar_avatarStatus_1yIzy {
   background: linear-gradient(
     to bottom,
-    rgb(140, 214, 29) 0%,
-    rgb(161, 244, 16) 30%,
-    rgb(161, 244, 16) 70%,
-    rgb(140, 214, 29) 100%
+    #8cd61d 0%,
+    #a1f410 30%,
+    #a1f410 70%,
+    #8cd61d 100%
   );
 }
 .ingame .steamavatar_avatarStatus_1yIzy.GamepadMode,
@@ -188,19 +188,19 @@
 .watchingbroadcast .steamavatar_avatarStatus_1yIzy {
   background: linear-gradient(
     to bottom,
-    rgb(156, 143, 212) 0%,
-    rgb(156, 143, 212) 30%,
-    rgb(156, 143, 212) 70%,
-    rgb(156, 143, 212) 100%
+    #9c8fd4 0%,
+    #9c8fd4 30%,
+    #9c8fd4 70%,
+    #9c8fd4 100%
   );
 }
 .online .steamavatar_avatarStatus_1yIzy {
   background: linear-gradient(
     to bottom,
-    rgb(109, 207, 246) 0%,
-    rgb(109, 207, 246) 30%,
-    rgb(109, 207, 246) 70%,
-    rgb(109, 207, 246) 100%
+    #6dcff6 0%,
+    #6dcff6 30%,
+    #6dcff6 70%,
+    #6dcff6 100%
   );
 }
 .online .steamavatar_avatarStatus_1yIzy.GamepadMode,
@@ -263,7 +263,7 @@
 }
 .steamavatar_avatar_1p_Qr.GamepadMode,
 .GamepadMode .steamavatar_avatar_1p_Qr {
-  border: 0px solid rgba(0, 0, 0, 0);
+  border: 0px solid transparent;
   height: 100%;
   width: 100%;
 }
@@ -364,7 +364,7 @@
 .miniprofile_miniProfile_1AMAp {
   width: fit-content;
   margin: 11px;
-  box-shadow: 0 10px 32px 0px rgba(0, 0, 0, 0.6705882353);
+  box-shadow: 0 10px 32px 0px #000000ab;
   overflow: hidden;
 }
 .miniprofile_miniProfileContent_3QoRR {
@@ -400,9 +400,9 @@
   z-index: -3;
   background: radial-gradient(
     ellipse farthest-corner at 20% 30%,
-    rgb(76, 80, 91) 0%,
-    rgb(52, 55, 63) 50%,
-    rgb(40, 44, 50) 100%
+    #4c505b 0%,
+    #34373f 50%,
+    #282c32 100%
   );
 }
 .miniprofile_miniProfileBackgroundBlur_QTyZx {
@@ -415,14 +415,14 @@
   opacity: 0.4;
   -webkit-mask: radial-gradient(
     ellipse farthest-corner at 150px 150px,
-    rgb(0, 0, 0) 0%,
+    black 0%,
     rgba(0, 0, 0, 0.6) 20%,
     rgba(0, 0, 0, 0.3) 34%,
     rgba(0, 0, 0, 0) 64%
   );
   mask: radial-gradient(
     ellipse farthest-corner at 150px 150px,
-    rgb(0, 0, 0) 0%,
+    black 0%,
     rgba(0, 0, 0, 0.6) 20%,
     rgba(0, 0, 0, 0.3) 34%,
     rgba(0, 0, 0, 0) 64%
@@ -756,7 +756,7 @@
   color: #b1b1b1;
 }
 .miniprofile_mutualFriends_3tWrb {
-  background-color: rgba(0, 0, 0, 0.6666666667);
+  background-color: #000a;
 }
 .miniprofile_miniProfileContent_3QoRR
   .miniprofile_miniProfileBottom_2MwqO
@@ -1297,11 +1297,7 @@
   right: 5%;
   bottom: 5%;
   left: 5%;
-  background: linear-gradient(
-    to bottom,
-    rgb(83, 164, 196) 5%,
-    rgb(69, 128, 151) 95%
-  );
+  background: linear-gradient(to bottom, #53a4c4 5%, #458097 95%);
 }
 .avatarcollection_FramePreview_16w1D
   .avatarcollection_DefaultAvatarFrame_Z3REH
@@ -1389,7 +1385,7 @@ body.profile_edit_page input.DialogTextInputBase,
 body.profile_edit_page input.DialogTextInputBase:not(:disabled):hover,
 body.profile_edit_page input.DialogTextInputBase:disabled:hover,
 body.profile_edit_page input.DialogTextInputBase:focus {
-  box-shadow: inset 1px 1px 0px rgba(0, 0, 0, 0.6666666667);
+  box-shadow: inset 1px 1px 0px #000a;
   border: none;
   background-color: rgba(0, 0, 0, 0.25);
 }
@@ -1602,7 +1598,7 @@ body.profile_edit_page .SaveActions button.DialogButton {
   color: #909090;
   font-size: 14px;
   line-height: 1.4em;
-  box-shadow: inset 1px 1px 0px rgba(0, 0, 0, 0.6666666667);
+  box-shadow: inset 1px 1px 0px #000a;
   border: none;
   background-color: rgba(0, 0, 0, 0.25);
   padding: 12px;
@@ -2767,7 +2763,7 @@ body.profilethemecolors_SteamDeckTheme_3TBj7 {
   .awardmodal_Button_zGUr9 {
   padding: 8px;
   border-radius: 2px;
-  border: 3px solid rgba(0, 0, 0, 0);
+  border: 3px solid transparent;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -2780,7 +2776,7 @@ body.profilethemecolors_SteamDeckTheme_3TBj7 {
   .awardmodal_GrantAwardModal_2vlF5
     .awardmodal_ButtonContainer_1SCKZ
     .awardmodal_Button_zGUr9 {
-    border: 2px solid rgba(0, 0, 0, 0);
+    border: 2px solid transparent;
     padding: 4px 12px;
     flex-direction: row;
     column-gap: 20px;

@@ -3,7 +3,7 @@
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
   [1909],
   {
-    48194: (t) => {
+    28319: (t) => {
       t.exports = {
         notificationRowHeight: "72px",
         NotificationPageCtn: "notifications_NotificationPageCtn_2DCeN",
@@ -37,29 +37,29 @@
         Expander: "notifications_Expander_MjW-I",
       };
     },
-    6914: (t, e, i) => {
+    66714: (t, e, i) => {
       "use strict";
       i.r(e), i.d(e, { default: () => K });
       var n,
-        o = i(89526),
-        s = i(711),
-        a = i(32765),
-        r = i(44973),
-        l = i(701),
-        c = i(40442),
-        m = i(27070),
-        d = i(57605),
-        f = i(14826),
-        p = i(48194),
+        o = i(47427),
+        s = i(85082),
+        a = i(37563),
+        r = i(65255),
+        l = i(62613),
+        c = i(77936),
+        m = i(40057),
+        d = i(1485),
+        f = i(31846),
+        p = i(28319),
         u = i.n(p),
-        _ = i(33940),
-        y = i(59621),
-        h = i(83315),
-        N = i(47742),
-        g = i(47165),
-        F = i(24448),
-        E = i(36041),
-        C = i(19934);
+        _ = i(85556),
+        y = i(54842),
+        h = i(30750),
+        N = i(53923),
+        g = i(35427),
+        F = i(28738),
+        E = i(45651),
+        C = i(75683);
       !(function (t) {
         (t[(t.k_All = 0)] = "k_All"),
           (t[(t.k_Owned = 1)] = "k_Owned"),
@@ -272,11 +272,11 @@
       const I = 300;
       const T = new S(),
         w = new s.tL();
-      var R = i(51438),
-        L = i(4306),
-        A = i(19304),
-        B = i(88778),
-        X = i(71161);
+      var R = i(91618),
+        L = i(20417),
+        A = i(13129),
+        B = i(19067),
+        X = i(25006);
       function M(t) {
         const { hash: e } = t;
         (0, o.useEffect)(() => {

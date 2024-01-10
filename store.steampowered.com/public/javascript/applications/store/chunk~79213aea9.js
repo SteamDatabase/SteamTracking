@@ -3,7 +3,7 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [8038],
   {
-    57489: (e) => {
+    29643: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         AppPartnerEventsPage: "apppartnereventspage_AppPartnerEventsPage_1m-hJ",
@@ -54,10 +54,10 @@
         ReadMoreCnt: "apppartnereventspage_ReadMoreCnt_3OLsV",
       };
     },
-    60361: (e) => {
+    22723: (e) => {
       e.exports = { Main: "basicpartnereventrender_Main_2U6-V" };
     },
-    43997: (e) => {
+    45557: (e) => {
       e.exports = {
         Container: "discussionwidget_Container_3BVe_",
         VoteContainer: "discussionwidget_VoteContainer_1uhQY",
@@ -91,7 +91,7 @@
         VoteButtonSelected: "discussionwidget_VoteButtonSelected_2c_5V",
       };
     },
-    5089: (e) => {
+    90366: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         OtherEventsCtn: "eventrow_OtherEventsCtn_1qNsZ",
@@ -122,7 +122,7 @@
         AppCapsulePrice: "eventrow_AppCapsulePrice_Jq75m",
       };
     },
-    83809: (e) => {
+    98851: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         EventDetailsPageContainer:
@@ -244,12 +244,12 @@
           "partnereventdisplay_VerticalLocalDateAndTime_1QFMN",
       };
     },
-    38279: (e) => {
+    98388: (e) => {
       e.exports = {
         ReferencedApps: "partnereventreferencedapps_ReferencedApps_2xZM7",
       };
     },
-    72775: (e) => {
+    4471: (e) => {
       e.exports = {
         Link: "salebanner_Link_26cHo",
         Banner: "salebanner_Banner_2df4N",
@@ -257,15 +257,15 @@
         Mobile: "salebanner_Mobile_2w3oX",
       };
     },
-    24218: (e, t, n) => {
+    208: (e, t, n) => {
       "use strict";
       n.d(t, { M: () => c });
-      var a = n(33940),
-        r = n(52868),
+      var a = n(85556),
+        r = n(80751),
         o = n.n(r),
-        i = n(32765),
-        s = n(10412),
-        l = n(84770);
+        i = n(37563),
+        s = n(82071),
+        l = n(51688);
       class c extends s.cA {
         DeleteOldAnnouncement(e, t) {
           return (0, a.mG)(this, void 0, void 0, function* () {
@@ -290,50 +290,50 @@
         }
       }
     },
-    66012: (e, t, n) => {
+    46986: (e, t, n) => {
       "use strict";
       n.d(t, { m$: () => X, v6: () => ee, Xy: () => J });
-      var a = n(33940),
-        r = n(59621),
-        o = n(88464),
-        i = n(89526),
-        s = n(74802),
-        l = n(40442),
-        c = n(51438),
-        p = n(1063),
-        d = n(82079),
-        m = n(85651),
-        u = n(56368),
-        v = n(69159),
-        _ = n(51696),
-        E = n(85521),
-        h = n(23496),
-        g = n(4795),
-        D = n(83809),
+      var a = n(85556),
+        r = n(54842),
+        o = n(27605),
+        i = n(47427),
+        s = n(58112),
+        l = n(77936),
+        c = n(91618),
+        p = n(68985),
+        d = n(93243),
+        m = n(64936),
+        u = n(42855),
+        v = n(22042),
+        _ = n(45206),
+        E = n(41424),
+        h = n(25979),
+        g = n(46521),
+        D = n(98851),
         S = n.n(D),
-        y = n(92358),
-        N = n(17318),
+        y = n(70609),
+        N = n(71741),
         M = n.n(N),
-        C = n(87178),
-        I = n(701),
-        L = n(69338),
-        T = n(75962),
-        A = n(60729),
-        w = n(23801),
-        B = n(85246),
-        f = n(19304),
-        O = n(60161),
-        k = n(14826),
-        x = n(4306),
-        G = n(207),
-        b = n(32765),
-        j = n(57489),
+        C = n(28918),
+        I = n(62613),
+        L = n(46882),
+        T = n(14609),
+        A = n(48766),
+        w = n(62210),
+        B = n(45492),
+        f = n(13129),
+        O = n(50423),
+        k = n(31846),
+        x = n(20417),
+        G = n(13499),
+        b = n(37563),
+        j = n(29643),
         z = n.n(j),
-        R = n(45711),
-        P = n(97352),
-        U = n(63266),
-        V = n(34329),
-        F = (n(47165), n(74831), n(25871));
+        R = n(74009),
+        P = n(26293),
+        U = n(4459),
+        V = n(47144),
+        F = (n(35427), n(58670), n(80886));
       function Q(e) {
         const { children: t } = e;
         return (0, b.id)() && !b.De.IN_STEAMUI
@@ -352,7 +352,7 @@
             )
           : i.createElement(i.Fragment, null, t);
       }
-      var H = n(55330);
+      var H = n(45610);
       const W = i.lazy(() =>
         Promise.all([
           n.e(3980),
@@ -370,7 +370,7 @@
           n.e(259),
           n.e(1979),
           n.e(4601),
-        ]).then(n.bind(n, 61909)),
+        ]).then(n.bind(n, 71461)),
       );
       function Z(e) {
         var t;
@@ -1152,29 +1152,29 @@
         ),
       );
     },
-    51696: (e, t, n) => {
+    45206: (e, t, n) => {
       "use strict";
       n.d(t, { n: () => M });
-      var a = n(88464),
-        r = n(89526),
-        o = n(84770),
-        i = n(47165),
-        s = n(82079),
-        l = n(54671),
-        c = n(56368),
-        p = n(92616),
-        d = n(701),
-        m = n(58218),
-        u = n(19304),
-        v = n(14826),
-        _ = n(207),
-        E = n(32765),
-        h = n(57489),
+      var a = n(27605),
+        r = n(47427),
+        o = n(51688),
+        i = n(35427),
+        s = n(93243),
+        l = n(77151),
+        c = n(42855),
+        p = n(15690),
+        d = n(62613),
+        m = n(29480),
+        u = n(13129),
+        v = n(31846),
+        _ = n(13499),
+        E = n(37563),
+        h = n(29643),
         g = n.n(h),
-        D = n(45711),
-        S = n(79586),
-        y = n(43840),
-        N = n(98389);
+        D = n(74009),
+        S = n(23120),
+        y = n(85305),
+        N = n(34913);
       const M = (0, a.Pi)((e) => {
         const { appId: t, clanId: n } = e,
           {
@@ -1386,20 +1386,20 @@
         );
       });
     },
-    74015: (e, t, n) => {
+    25386: (e, t, n) => {
       "use strict";
       n.d(t, { h: () => _, x: () => E });
-      var a = n(33940),
-        r = n(88464),
-        o = n(89526),
-        i = n(24218),
-        s = n(10412),
-        l = n(52316),
-        c = n(66012),
-        p = n(57742),
-        d = n(4306),
-        m = n(60361),
-        u = n(99307);
+      var a = n(85556),
+        r = n(27605),
+        o = n(47427),
+        i = n(208),
+        s = n(82071),
+        l = n(45167),
+        c = n(46986),
+        p = n(90069),
+        d = n(20417),
+        m = n(22723),
+        u = n(50898);
       function v(e) {
         const { event: t, closeModal: n } = e;
         return o.createElement(
@@ -1463,34 +1463,34 @@
         (0, a.gn)([d.ak], E.prototype, "OnBackgroundClick", null),
         (E = (0, a.gn)([r.Pi], E));
     },
-    85521: (e, t, n) => {
+    41424: (e, t, n) => {
       "use strict";
       n.d(t, { Q: () => R, L: () => U });
-      var a = n(33940),
-        r = n(89526),
-        o = n(88464),
-        i = n(32765),
-        s = n(14826),
-        l = n(4306),
-        c = n(17318),
+      var a = n(85556),
+        r = n(47427),
+        o = n(27605),
+        i = n(37563),
+        s = n(31846),
+        l = n(20417),
+        c = n(71741),
         p = n.n(c),
-        d = n(57742),
-        m = n(60161),
-        u = n(19304),
-        v = n(43997),
+        d = n(90069),
+        m = n(50423),
+        u = n(13129),
+        v = n(45557),
         _ = n.n(v),
-        E = n(99307),
-        h = n(36041),
-        g = n(52868),
+        E = n(50898),
+        h = n(45651),
+        g = n(80751),
         D = n.n(g),
-        S = n(23217),
-        y = n(56368),
-        N = n(701),
-        M = n(32905),
-        C = n(5557),
-        I = n(82079),
-        L = n(207),
-        T = n(59621);
+        S = n(16649),
+        y = n(42855),
+        N = n(62613),
+        M = n(80212),
+        C = n(66079),
+        I = n(93243),
+        L = n(13499),
+        T = n(54842);
       class A {
         constructor() {
           (this.m_mapClanReposted = new Set()),
@@ -1640,10 +1640,10 @@
         }
       }
       (0, a.gn)([T.LO], A.prototype, "m_mapClanReposted", void 0);
-      var w = n(47165),
-        B = n(57605),
-        f = n(17547),
-        O = n(69338);
+      var w = n(35427),
+        B = n(1485),
+        f = n(10162),
+        O = n(46882);
       const k = (0, o.Pi)((e) => {
         const { eventModel: t } = e,
           [n, o] = (0, r.useState)(!0),
@@ -1822,11 +1822,11 @@
           )
         );
       });
-      var x = n(51438),
-        G = n(44026),
-        b = n(88443),
-        j = n(82707),
-        z = n(45711);
+      var x = n(91618),
+        G = n(82493),
+        b = n(24549),
+        j = n(17995),
+        z = n(74009);
       function R(e, t) {
         if (!t.BIsUserLoggedIn())
           return (
@@ -2141,24 +2141,24 @@
         (0, a.gn)([l.ak], V.prototype, "OpenRepostDialogs", null),
         (V = (0, a.gn)([o.Pi], V));
     },
-    1275: (e, t, n) => {
+    27784: (e, t, n) => {
       "use strict";
       n.d(t, { x: () => g });
-      var a = n(33940),
-        r = n(52868),
+      var a = n(85556),
+        r = n(80751),
         o = n.n(r),
-        i = n(88464),
-        s = n(89526),
-        l = n(56368),
-        c = n(52316),
-        p = n(66012),
-        d = n(99307),
-        m = n(67122),
-        u = n(1721),
+        i = n(27605),
+        s = n(47427),
+        l = n(42855),
+        c = n(45167),
+        p = n(46986),
+        d = n(50898),
+        m = n(58412),
+        u = n(7765),
         v = n.n(u),
-        _ = n(69338),
-        E = n(23217),
-        h = n(32765);
+        _ = n(46882),
+        E = n(16649),
+        h = n(37563);
       const g = (e) => {
         let { bShowOnlyInitialEvent: t } = e;
         const n = (0, h.id)();
@@ -2299,44 +2299,44 @@
       };
       D = (0, a.gn)([i.Pi], D);
     },
-    49234: (e, t, n) => {
+    32144: (e, t, n) => {
       "use strict";
       n.d(t, { KE: () => F, T4: () => U, _G: () => R, zY: () => V });
-      var a = n(33940),
-        r = n(52868),
+      var a = n(85556),
+        r = n(80751),
         o = n.n(r),
-        i = n(88464),
-        s = n(83315),
-        l = n(89526),
-        c = n(40442),
-        p = n(62983),
-        d = n(51438),
-        m = n(16221),
-        u = n(84770),
-        v = n(47165),
-        _ = n(1063),
-        E = n(82079),
-        h = n(91656),
-        g = n(56368),
-        D = n(25871),
-        S = n(1275),
-        y = n(45711),
-        N = n(17318),
+        i = n(27605),
+        s = n(30750),
+        l = n(47427),
+        c = n(77936),
+        p = n(16610),
+        d = n(91618),
+        m = n(3783),
+        u = n(51688),
+        v = n(35427),
+        _ = n(68985),
+        E = n(93243),
+        h = n(30919),
+        g = n(42855),
+        D = n(80886),
+        S = n(27784),
+        y = n(74009),
+        N = n(71741),
         M = n.n(N),
-        C = n(87539),
-        I = n(21904),
-        L = n(701),
-        T = n(71161),
-        A = n(11837),
-        w = n(19304),
-        B = n(14826),
-        f = n(32765),
-        O = n(17547),
-        k = n(69338),
-        x = n(5089),
+        C = n(91552),
+        I = n(24827),
+        L = n(62613),
+        T = n(25006),
+        A = n(83999),
+        w = n(13129),
+        B = n(31846),
+        f = n(37563),
+        O = n(10162),
+        k = n(46882),
+        x = n(90366),
         G = n.n(x),
-        b = n(43840),
-        j = n(23715),
+        b = n(85305),
+        j = n(7769),
         z = n.n(j);
       const R = (0, i.Pi)((e) => {
           const {
@@ -2729,23 +2729,23 @@
           : l.createElement("div", { className: G().OtherEvents_EventCtn });
       }
     },
-    92358: (e, t, n) => {
+    70609: (e, t, n) => {
       "use strict";
       n.d(t, { HQ: () => h, wM: () => D, jd: () => S });
-      var a = n(83315),
-        r = n(89526),
-        o = n(5411),
-        i = n(32765),
-        s = n(68333),
-        l = n(19094);
-      var c = n(17318),
+      var a = n(30750),
+        r = n(47427),
+        o = n(84670),
+        i = n(37563),
+        s = n(35750),
+        l = n(77581);
+      var c = n(71741),
         p = n.n(c),
-        d = n(21904),
-        m = n(14826),
-        u = n(73406),
-        v = n(83809),
+        d = n(24827),
+        m = n(31846),
+        u = n(80445),
+        v = n(98851),
         _ = n.n(v),
-        E = n(207);
+        E = n(13499);
       function h(e) {
         const { appid: t } = e,
           n = (function (e) {
@@ -2875,15 +2875,15 @@
         );
       }
     },
-    63266: (e, t, n) => {
+    4459: (e, t, n) => {
       "use strict";
       n.d(t, { D: () => p });
-      var a = n(92616),
-        r = n(83315),
-        o = n(89526),
-        i = n(23496),
-        s = n(14826),
-        l = n(38279),
+      var a = n(15690),
+        r = n(30750),
+        o = n(47427),
+        i = n(25979),
+        s = n(31846),
+        l = n(98388),
         c = n.n(l);
       function p(e) {
         const { event: t } = e,
@@ -2918,18 +2918,18 @@
         );
       }
     },
-    55330: (e, t, n) => {
+    45610: (e, t, n) => {
       "use strict";
       n.d(t, { i: () => m });
-      var a = n(89526),
-        r = n(40442),
-        o = n(68818),
-        i = n(13345),
-        s = n(19304),
-        l = n(14826),
-        c = n(207),
-        p = n(32765),
-        d = n(72775);
+      var a = n(47427),
+        r = n(77936),
+        o = n(29292),
+        i = n(19399),
+        s = n(13129),
+        l = n(31846),
+        c = n(13499),
+        p = n(37563),
+        d = n(4471);
       function m(e) {
         const { gidEvent: t } = e,
           n = (0, o.XC)(t),
@@ -2987,32 +2987,32 @@
           : null;
       }
     },
-    82707: (e, t, n) => {
+    17995: (e, t, n) => {
       "use strict";
       n.d(t, { t6: () => L });
-      var a = n(33940),
-        r = n(89526),
-        o = n(40442),
-        i = n(45711),
-        s = n(17318),
+      var a = n(85556),
+        r = n(47427),
+        o = n(77936),
+        i = n(74009),
+        s = n(71741),
         l = n.n(s),
-        c = n(32905),
-        p = n(19304),
-        d = n(14826),
-        m = n(4306),
-        u = n(32765),
-        v = n(37865);
-      var _ = n(82248),
-        E = n(15164),
-        h = n(75313),
-        g = n(99307),
-        D = n(84343),
-        S = n(75962),
-        y = n(43997),
+        c = n(80212),
+        p = n(13129),
+        d = n(31846),
+        m = n(20417),
+        u = n(37563),
+        v = n(99839);
+      var _ = n(71738),
+        E = n(91120),
+        h = n(80289),
+        g = n(50898),
+        D = n(59728),
+        S = n(14609),
+        y = n(45557),
         N = n.n(y),
-        M = n(5386),
-        C = n(93528),
-        I = n(57605);
+        M = n(27910),
+        C = n(25787),
+        I = n(1485);
       class L extends r.Component {
         constructor() {
           super(...arguments),
@@ -3267,7 +3267,7 @@
           );
         };
     },
-    37865: (e, t, n) => {
+    99839: (e, t, n) => {
       "use strict";
       n.d(t, { Z: () => a });
       const a =

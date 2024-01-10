@@ -4,13 +4,13 @@
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
   [5119],
   {
-    52002: (e, t, a) => {
+    87699: (e, t, a) => {
       a.d(t, { C: () => c, R: () => d });
-      var n = a(33940),
-        r = a(59621),
-        o = a(47165),
-        i = a(85651),
-        s = a(10412);
+      var n = a(85556),
+        r = a(54842),
+        o = a(35427),
+        i = a(64936),
+        s = a(82071);
       class d {
         constructor() {
           (this.m_mapBroadcasterSteamIDToEvents = new Map()),
@@ -164,18 +164,18 @@
       (0, n.gn)([r.LO], d.prototype, "m_mapBroadcasterSteamIDData", void 0);
       const c = new d();
     },
-    93883: (e, t, a) => {
+    54154: (e, t, a) => {
       a.d(t, { J: () => h });
-      var n = a(33940),
-        r = a(52868),
+      var n = a(85556),
+        r = a(80751),
         o = a.n(r),
-        i = a(59621),
-        s = a(83315),
-        d = a(89526),
-        c = a(26464),
-        m = a(85246),
-        l = a(4306),
-        _ = a(32765);
+        i = a(54842),
+        s = a(30750),
+        d = a(47427),
+        c = a(16997),
+        m = a(45492),
+        l = a(20417),
+        _ = a(37563);
       class u {
         constructor() {
           (this.giveaway_id = void 0),

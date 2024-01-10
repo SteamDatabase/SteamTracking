@@ -1785,8 +1785,7 @@ CScrollOffsetWatcher.OnScroll = function()
 	var nScrollY = supportPageOffset ? window.pageYOffset : isCSS1Compat ? document.documentElement.scrollTop : document.body.scrollTop;
 	var nOffsetBottom = nScrollY + window.innerHeight;
 
-	var cCompletedWatchers = 0;
-	for( var i = 0; i < CScrollOffsetWatcher.sm_rgWatchers.length; i++ )
+	for( let i = CScrollOffsetWatcher.sm_rgWatchers.length - 1; i >= 0; i-- )
 	{
 		var Watcher = CScrollOffsetWatcher.sm_rgWatchers[i];
 		if ( nOffsetBottom > Watcher.nOffsetTopTrigger )
@@ -1796,19 +1795,12 @@ CScrollOffsetWatcher.OnScroll = function()
 			if ( nOffsetBottom > Watcher.nOffsetTopTrigger )
 			{
 				Watcher.fnOnHit();
-				cCompletedWatchers++;
+				CScrollOffsetWatcher.sm_rgWatchers.splice( i, 1 );
 			}
-		}
-		else
-		{
-			break;
 		}
 	}
 
-	if ( cCompletedWatchers )
-		CScrollOffsetWatcher.sm_rgWatchers.splice( 0, cCompletedWatchers );
-
-	if ( CScrollOffsetWatcher.sm_rgWatchers.length == 0 )
+	if ( CScrollOffsetWatcher.sm_rgWatchers.length === 0 )
 	{
 		$J(window).off( 'scroll.ScrollOffsetWatcher' );
 		$J(window).off( 'resize.ScrollOffsetWatcher' );

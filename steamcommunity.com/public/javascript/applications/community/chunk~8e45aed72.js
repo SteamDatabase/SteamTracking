@@ -3,7 +3,7 @@
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
   [8120],
   {
-    17962: (t) => {
+    21571: (t) => {
       t.exports = {
         FAQContainer: "faqbbcode_FAQContainer_1BWX4",
         Section: "faqbbcode_Section_NWJUH",
@@ -13,20 +13,20 @@
         FAQImage: "faqbbcode_FAQImage_1sKwB",
       };
     },
-    40993: (t, e, a) => {
+    19941: (t, e, a) => {
       "use strict";
       a.d(e, { R: () => f });
-      var r = a(89526),
-        s = a(2232),
-        n = a(54297),
-        o = a(87178),
-        i = a(19304),
-        l = a(32765),
-        m = a(88071),
-        d = a(4116),
-        u = a(14288),
-        c = a(29667),
-        _ = a(17962),
+      var r = a(47427),
+        s = a(49353),
+        n = a(31659),
+        o = a(28918),
+        i = a(13129),
+        l = a(37563),
+        m = a(16833),
+        d = a(4481),
+        u = a(29525),
+        c = a(58635),
+        _ = a(21571),
         p = a.n(_);
       const h = new Map([
           ...Array.from(u.Be.entries()),
@@ -140,35 +140,34 @@
           );
         };
     },
-    50672: (t, e, a) => {
+    70811: (t, e, a) => {
       "use strict";
       a.d(e, {
-        xP: () => v,
-        hS: () => y,
-        cJ: () => F,
-        wl: () => Q,
-        SP: () => G,
-        EH: () => E,
-        Ky: () => I,
-        NV: () => D,
+        xP: () => A,
+        hS: () => F,
+        cJ: () => S,
+        wl: () => D,
+        SP: () => E,
+        EH: () => Q,
+        Ky: () => G,
+        NV: () => y,
       });
-      var r = a(33940),
-        s = a(52868),
+      var r = a(85556),
+        s = a(80751),
         n = a.n(s),
-        o = a(38072),
-        i = a.n(o),
-        l = a(59621),
-        m = a(89526),
-        d = a(68333),
-        u = a(2232),
-        c = a(23801),
-        _ = a(26464),
-        p = a(23217),
-        h = a(32765);
-      class f {
+        o = a(8416),
+        i = a(54842),
+        l = a(47427),
+        m = a(51841),
+        d = a(49353),
+        u = a(62210),
+        c = a(16997),
+        _ = a(16649),
+        p = a(37563);
+      class h {
         constructor(t, e) {
           (this.m_mapLocalUpdates = new Map()),
-            (0, l.rC)(this),
+            (0, i.rC)(this),
             (this.m_summary = t),
             (this.m_mapStoredDrafts = e),
             (this.m_mapLocalUpdates = new Map());
@@ -186,7 +185,7 @@
         SaveDrafts() {
           var t, e, a, s;
           return (0, r.mG)(this, void 0, void 0, function* () {
-            (0, c.X)(
+            (0, u.X)(
               Boolean(
                 null === (t = this.m_summary) || void 0 === t
                   ? void 0
@@ -213,20 +212,18 @@
               ) {
                 const e = this.GetDraftTitle(t),
                   a = this.GetDraftContent(t),
-                  o = v
-                    .Get()
-                    .UpdateDraft(
-                      null === (s = this.m_summary) || void 0 === s
-                        ? void 0
-                        : s.faq_id,
-                      t,
-                      e,
-                      a,
-                    );
+                  o = A.Get().UpdateDraft(
+                    null === (s = this.m_summary) || void 0 === s
+                      ? void 0
+                      : s.faq_id,
+                    t,
+                    e,
+                    a,
+                  );
                 o
                   .then((s) => {
                     1 == s.eResult
-                      ? (0, l.z)(() => {
+                      ? (0, i.z)(() => {
                           this.m_mapStoredDrafts.has(t) ||
                             this.m_mapStoredDrafts.set(t, {}),
                             (this.m_mapStoredDrafts.get(t).title = e),
@@ -234,7 +231,7 @@
                             (this.m_mapStoredDrafts.get(t).timestamp =
                               s.rtUpdateTime),
                             (this.m_mapStoredDrafts.get(t).author_account_id =
-                              h.L7.accountid.toString()),
+                              p.L7.accountid.toString()),
                             (this.m_mapLocalUpdates.get(t).strTitle = null),
                             (this.m_mapLocalUpdates.get(t).strContent = null);
                           let r = !1;
@@ -262,7 +259,7 @@
                   .catch((t) => {
                     console.error(
                       "FAQModel.SaveDrafts: Hit error " +
-                        (0, p.l)(t).strErrorMsg,
+                        (0, _.l)(t).strErrorMsg,
                     ),
                       1 == r && (r = 2);
                   }),
@@ -295,9 +292,9 @@
             ? void 0
             : e.content;
         }
-        GetDraftTitleWithFallback(t, e = u.IN.k_ESteamRealmGlobal) {
+        GetDraftTitleWithFallback(t, e = d.IN.k_ESteamRealmGlobal) {
           var a, r, s, n, o, i;
-          const l = e == u.IN.k_ESteamRealmChina ? 6 : 0;
+          const l = e == d.IN.k_ESteamRealmChina ? 6 : 0;
           return null !==
             (i =
               null !==
@@ -321,9 +318,9 @@
             ? i
             : "";
         }
-        GetDraftContentWithFallback(t, e = u.IN.k_ESteamRealmGlobal) {
+        GetDraftContentWithFallback(t, e = d.IN.k_ESteamRealmGlobal) {
           var a, r, s, n, o, i;
-          const l = e == u.IN.k_ESteamRealmChina ? 6 : 0;
+          const l = e == d.IN.k_ESteamRealmChina ? 6 : 0;
           return null !==
             (i =
               null !==
@@ -375,11 +372,11 @@
           const t = new Array();
           return (
             this.m_summary.visible_in_global_realm &&
-              t.push(u.IN.k_ESteamRealmGlobal),
+              t.push(d.IN.k_ESteamRealmGlobal),
             this.m_summary.visible_in_global_realm &&
-              t.push(u.IN.k_ESteamRealmChina),
-            0 == t.length && t.push(u.IN.k_ESteamRealmGlobal),
-            (0, c.X)(
+              t.push(d.IN.k_ESteamRealmChina),
+            0 == t.length && t.push(d.IN.k_ESteamRealmGlobal),
+            (0, u.X)(
               t.length > 0,
               `FAQ ${this.m_summary.faq_id} is currently configured so that no realms are valid for display.`,
             ),
@@ -410,17 +407,17 @@
           return this.m_summary;
         }
       }
-      (0, r.gn)([l.LO], f.prototype, "m_mapLocalUpdates", void 0),
-        (0, r.gn)([_.a], f.prototype, "BHasSomeTextForLanguage", null),
-        (0, r.gn)([_.a], f.prototype, "GetLastTimeLanguageUpdated", null);
-      var g = a(19094),
-        A = a(14488);
-      class v {
+      (0, r.gn)([i.LO], h.prototype, "m_mapLocalUpdates", void 0),
+        (0, r.gn)([c.a], h.prototype, "BHasSomeTextForLanguage", null),
+        (0, r.gn)([c.a], h.prototype, "GetLastTimeLanguageUpdated", null);
+      var f = a(77581),
+        g = a(10580);
+      class A {
         static Get() {
-          return v.s_Singleton || (v.s_Singleton = new v()), v.s_Singleton;
+          return A.s_Singleton || (A.s_Singleton = new A()), A.s_Singleton;
         }
         static Init(t) {
-          v.Get().m_steamInterface = t;
+          A.Get().m_steamInterface = t;
         }
         constructor() {
           (this.m_mapFAQSummaries = new Map()),
@@ -428,20 +425,20 @@
             (this.m_mapFAQDrafts = new Map()),
             (this.m_bHasFAQEdit = !1),
             (this.m_steamInterface = null),
-            (0, l.rC)(this),
-            "dev" == h.De.WEB_UNIVERSE && (window.g_FAQStore = this),
-            h.De.IN_STEAMUI ||
+            (0, i.rC)(this),
+            "dev" == p.De.WEB_UNIVERSE && (window.g_FAQStore = this),
+            p.De.IN_STEAMUI ||
               (this.ReadInitialPayload(), this.SetUpWebAPIInterface());
         }
         SetUpWebAPIInterface() {
-          const t = (0, h.kQ)("faqstore", "application_config"),
+          const t = (0, p.kQ)("faqstore", "application_config"),
             e = null == t ? void 0 : t.webapi_token;
-          this.m_steamInterface = new g.J(h.De.WEBAPI_BASE_URL, e);
+          this.m_steamInterface = new f.J(p.De.WEBAPI_BASE_URL, e);
         }
         ReadInitialPayload() {
-          const t = (0, h.kQ)("faqstore", "application_config");
+          const t = (0, p.kQ)("faqstore", "application_config");
           if (
-            (("dev" != h.De.WEB_UNIVERSE && "beta" != h.De.WEB_UNIVERSE) ||
+            (("dev" != p.De.WEB_UNIVERSE && "beta" != p.De.WEB_UNIVERSE) ||
               console.log("DEV_DEBUG: CFAQStore loading payload: ", t),
             this.BIsConfigValid(t))
           ) {
@@ -463,7 +460,7 @@
                 for (const t of a.draft) r.set(t.language, t);
                 this.m_mapFAQDrafts.set(
                   e,
-                  new f(this.m_mapFAQSummaries.get(e), r),
+                  new h(this.m_mapFAQSummaries.get(e), r),
                 );
               }
             if (t.allfaqs)
@@ -473,7 +470,7 @@
                     this.m_mapFAQSummaries.set(e.faq_id, e));
             this.m_bHasFAQEdit = Boolean(t.has_faq_edit);
           } else
-            "dev" == h.De.WEB_UNIVERSE &&
+            "dev" == p.De.WEB_UNIVERSE &&
               console.error("CFAQStore Invalid payload");
         }
         BIsConfigValid(t) {
@@ -486,13 +483,13 @@
         }
         CreateFAQ(t) {
           return (0, r.mG)(this, void 0, void 0, function* () {
-            const e = d.gA.Init(A.jV);
-            e.Body().set_steamid(h.JA.CLANSTEAMID),
+            const e = m.gA.Init(g.jV);
+            e.Body().set_steamid(p.JA.CLANSTEAMID),
               e.Body().set_internal_name(t);
             let a,
               r = 2;
             try {
-              const s = yield A.KF.Create(
+              const s = yield g.KF.Create(
                 this.m_steamInterface.GetServiceTransport(),
                 e,
               );
@@ -503,7 +500,7 @@
               } else
                 console.error("FAQStore.CreateFAQ: Create request failed:", r);
             } catch (t) {
-              const e = (0, p.l)(t);
+              const e = (0, _.l)(t);
               console.error(
                 "FAQStore.CreateFAQ: caught error " + e.strErrorMsg,
                 e,
@@ -514,8 +511,8 @@
         }
         UpdateDraft(t, e, a, s) {
           return (0, r.mG)(this, void 0, void 0, function* () {
-            const r = d.gA.Init(A.Go);
-            r.Body().set_steamid(h.JA.CLANSTEAMID),
+            const r = m.gA.Init(g.Go);
+            r.Body().set_steamid(p.JA.CLANSTEAMID),
               r.Body().set_faq_id(t),
               r.Body().set_language(e),
               r.Body().set_content(s),
@@ -523,7 +520,7 @@
             let n = 2,
               o = 0;
             try {
-              const t = yield A.KF.UpdateDraft(
+              const t = yield g.KF.UpdateDraft(
                 this.m_steamInterface.GetServiceTransport(),
                 r,
               );
@@ -532,7 +529,7 @@
                   ? console.error("FAQStore.UpdateDraft request failed:", n)
                   : (o = t.Body().last_update_timestamp());
             } catch (t) {
-              const e = (0, p.l)(t);
+              const e = (0, _.l)(t);
               console.error(
                 "FAQStore.UpdateDraft: caught error " + e.strErrorMsg,
                 e,
@@ -544,13 +541,13 @@
         UpdateJsonData(t, e) {
           return (0, r.mG)(this, void 0, void 0, function* () {
             const a = JSON.stringify(e),
-              r = d.gA.Init(A.F2);
-            r.Body().set_steamid(h.JA.CLANSTEAMID),
+              r = m.gA.Init(g.F2);
+            r.Body().set_steamid(p.JA.CLANSTEAMID),
               r.Body().set_faq_id(t),
               r.Body().set_json_data(a);
             let s = 2;
             try {
-              (s = (yield A.KF.UpdateJsonData(
+              (s = (yield g.KF.UpdateJsonData(
                 this.m_steamInterface.GetServiceTransport(),
                 r,
               )).GetEResult()),
@@ -558,7 +555,7 @@
                   ? console.error("FAQStore.UpdateJsonData request failed:", s)
                   : (this.m_mapFAQSummaries.get(t).json_data = a);
             } catch (t) {
-              const e = (0, p.l)(t);
+              const e = (0, _.l)(t);
               console.error(
                 "FAQStore.UpdateJsonData: caught error " + e.strErrorMsg,
                 e,
@@ -569,13 +566,13 @@
         }
         GetFAQVersion(t, e, a) {
           return (0, r.mG)(this, void 0, void 0, function* () {
-            const r = d.gA.Init(A.dp);
-            r.Body().set_steamid(h.JA.CLANSTEAMID),
+            const r = m.gA.Init(g.dp);
+            r.Body().set_steamid(p.JA.CLANSTEAMID),
               r.Body().set_faq_id(t),
               r.Body().set_version(e),
               r.Body().set_language(a);
             try {
-              const t = yield A.KF.GetFAQVersion(
+              const t = yield g.KF.GetFAQVersion(
                   this.m_steamInterface.GetServiceTransport(),
                   r,
                 ),
@@ -583,7 +580,7 @@
               if (1 == e) return t.Body().faq().toObject();
               console.error("FAQStore.GetFAQVersion request failed:", e);
             } catch (t) {
-              const e = (0, p.l)(t);
+              const e = (0, _.l)(t);
               console.error(
                 "FAQStore.GetFAQVersion: caught error " + e.strErrorMsg,
                 e,
@@ -594,11 +591,11 @@
         }
         DeleteFAQ(t) {
           return (0, r.mG)(this, void 0, void 0, function* () {
-            const e = d.gA.Init(A.$H);
-            e.Body().set_steamid(h.JA.CLANSTEAMID), e.Body().set_faq_id(t);
+            const e = m.gA.Init(g.$H);
+            e.Body().set_steamid(p.JA.CLANSTEAMID), e.Body().set_faq_id(t);
             let a = 2;
             try {
-              (a = (yield A.KF.Delete(
+              (a = (yield g.KF.Delete(
                 this.m_steamInterface.GetServiceTransport(),
                 e,
               )).GetEResult()),
@@ -608,7 +605,7 @@
                     this.m_mapFAQPublishedContent.delete(t),
                     this.m_mapFAQSummaries.delete(t));
             } catch (t) {
-              const e = (0, p.l)(t);
+              const e = (0, _.l)(t);
               console.error(
                 "FAQStore.DeleteFAQ: caught error " + e.strErrorMsg,
                 e,
@@ -623,9 +620,9 @@
           let r = a.get(e);
           return (
             !r &&
-              v.sm_mapFallbackLanguages.has(e) &&
-              (r = a.get(v.sm_mapFallbackLanguages.get(e))),
-            r || 0 == e || (0, h.h4)() || (r = a.get(0)),
+              A.sm_mapFallbackLanguages.has(e) &&
+              (r = a.get(A.sm_mapFallbackLanguages.get(e))),
+            r || 0 == e || (0, p.h4)() || (r = a.get(0)),
             r
           );
         }
@@ -641,11 +638,11 @@
         LoadFAQDraftContent(t) {
           return (0, r.mG)(this, void 0, void 0, function* () {
             if (this.m_mapFAQDrafts.has(t)) return this.m_mapFAQDrafts.get(t);
-            const e = d.gA.Init(A.hU);
-            e.Body().set_steamid(h.JA.CLANSTEAMID), e.Body().set_faq_id(t);
+            const e = m.gA.Init(g.hU);
+            e.Body().set_steamid(p.JA.CLANSTEAMID), e.Body().set_faq_id(t);
             let a = 2;
             try {
-              const r = yield A.KF.GetAllDrafts(
+              const r = yield g.KF.GetAllDrafts(
                 this.m_steamInterface.GetServiceTransport(),
                 e,
               );
@@ -664,11 +661,11 @@
                 r.Body()
                   .draft()
                   .forEach((t) => a.set(t.language(), t.toObject()));
-                const s = new f(this.m_mapFAQSummaries.get(t), a);
+                const s = new h(this.m_mapFAQSummaries.get(t), a);
                 return this.m_mapFAQDrafts.set(t, s), s;
               }
             } catch (t) {
-              const e = (0, p.l)(t);
+              const e = (0, _.l)(t);
               console.error(
                 "FaqStore.LoadFAQDraftContent: exception " + e.strErrorMsg,
                 e,
@@ -679,15 +676,15 @@
         }
         UpdateVisibility(t, e, a) {
           return (0, r.mG)(this, void 0, void 0, function* () {
-            const r = d.gA.Init(A.tv);
-            r.Body().set_steamid(h.JA.CLANSTEAMID),
+            const r = m.gA.Init(g.tv);
+            r.Body().set_steamid(p.JA.CLANSTEAMID),
               r.Body().set_faq_id(t),
               r.Body().set_visible_in_global_realm(e),
               r.Body().set_visible_in_china_realm(a);
             let s = 2;
             try {
               if (
-                ((s = (yield A.KF.SetVisibility(
+                ((s = (yield g.KF.SetVisibility(
                   this.m_steamInterface.GetServiceTransport(),
                   r,
                 )).GetEResult()),
@@ -700,7 +697,7 @@
                   this.m_mapFAQSummaries.set(t, r));
               } else console.error("FaqStore.UpdateVisibility: Failed " + s);
             } catch (t) {
-              const e = (0, p.l)(t);
+              const e = (0, _.l)(t);
               console.error(
                 "FaqStore.UpdateVisibility: exception " + e.strErrorMsg,
                 e,
@@ -712,20 +709,20 @@
         PublishDraftByLanguage(t, e) {
           return (0, r.mG)(this, void 0, void 0, function* () {
             if (!e || 0 == e.length) return 1;
-            const a = d.gA.Init(A.SU);
-            a.Body().set_steamid(h.JA.CLANSTEAMID),
+            const a = m.gA.Init(g.SU);
+            a.Body().set_steamid(p.JA.CLANSTEAMID),
               a.Body().set_faq_id(t),
               e.forEach((t) => a.Body().add_language(t));
             let r = 2;
             try {
-              const s = yield A.KF.PublishDraft(
+              const s = yield g.KF.PublishDraft(
                 this.m_steamInterface.GetServiceTransport(),
                 a,
               );
               if (((r = s.GetEResult()), 1 === r)) {
                 const a = this.m_mapFAQSummaries.get(t);
                 a &&
-                  (0, l.z)(() => {
+                  (0, i.z)(() => {
                     this.m_mapFAQPublishedContent.has(t) ||
                       this.m_mapFAQPublishedContent.set(t, new Map()),
                       a.per_language_info.forEach((a) => {
@@ -748,7 +745,7 @@
               } else
                 console.error("FaqStore.PublishDraftByLanguage: Failed " + r);
             } catch (t) {
-              const e = (0, p.l)(t);
+              const e = (0, _.l)(t);
               console.error(
                 "FaqStore.PublishDraftByLanguage: exception " + e.strErrorMsg,
                 e,
@@ -759,18 +756,18 @@
         }
         UpdateInternalName(t, e) {
           return (0, r.mG)(this, void 0, void 0, function* () {
-            const a = d.gA.Init(A.sL);
-            a.Body().set_steamid(h.JA.CLANSTEAMID),
+            const a = m.gA.Init(g.sL);
+            a.Body().set_steamid(p.JA.CLANSTEAMID),
               a.Body().set_faq_id(t),
               a.Body().set_internal_name(e);
             let r = 2;
             try {
-              (r = (yield A.KF.UpdateInternalName(
+              (r = (yield g.KF.UpdateInternalName(
                 this.m_steamInterface.GetServiceTransport(),
                 a,
               )).GetEResult()),
                 1 === r
-                  ? (0, l.z)(() => {
+                  ? (0, i.z)(() => {
                       var a, r, s;
                       (null === (a = this.m_mapFAQSummaries.get(t)) ||
                       void 0 === a
@@ -791,7 +788,7 @@
                     })
                   : console.error("FaqStore.UpdateInternalName: Failed " + r);
             } catch (t) {
-              const e = (0, p.l)(t);
+              const e = (0, _.l)(t);
               console.error(
                 "FaqStore.UpdateInternalName: exception " + e.strErrorMsg,
                 e,
@@ -821,11 +818,11 @@
         ExportEnglishDraftToCrowdin(t) {
           return (0, r.mG)(this, void 0, void 0, function* () {
             const e =
-              h.De.COMMUNITY_BASE_URL +
+              p.De.COMMUNITY_BASE_URL +
               "faqs/" +
-              h.JA.VANITY_ID +
+              p.JA.VANITY_ID +
               "/ajaxpushtocrowdin/" +
-              y(t);
+              F(t);
             yield n().get(e);
           });
         }
@@ -833,13 +830,13 @@
           var s, o;
           return (0, r.mG)(this, void 0, void 0, function* () {
             const r =
-                h.De.COMMUNITY_BASE_URL +
+                p.De.COMMUNITY_BASE_URL +
                 "faqs/" +
-                h.JA.VANITY_ID +
+                p.JA.VANITY_ID +
                 "/ajaxpullfromcrowdin/" +
-                y(t),
+                F(t),
               i = new FormData();
-            i.append("sessionid", h.De.SESSIONID),
+            i.append("sessionid", p.De.SESSIONID),
               i.append("languages", e.join(","));
             let l = null;
             try {
@@ -870,7 +867,7 @@
             } catch (t) {
               l = t;
             }
-            const m = (0, p.l)(l);
+            const m = (0, _.l)(l);
             return (
               console.error(
                 "Could not import from crowdin",
@@ -905,21 +902,21 @@
             .map((t) => t.language);
         }
       }
-      (v.sm_mapFallbackLanguages = new Map([
+      (A.sm_mapFallbackLanguages = new Map([
         [5, 27],
         [27, 5],
         [29, 6],
       ])),
-        (0, r.gn)([l.LO], v.prototype, "m_mapFAQSummaries", void 0),
-        (0, r.gn)([l.aD], v.prototype, "RemoveAllDirtyDrafts", null);
-      const S = /^[0-9a-fA-F]+$/;
-      function F(t) {
+        (0, r.gn)([i.LO], A.prototype, "m_mapFAQSummaries", void 0),
+        (0, r.gn)([i.aD], A.prototype, "RemoveAllDirtyDrafts", null);
+      const v = /^[0-9a-fA-F]+$/;
+      function S(t) {
         const e = null == t ? void 0 : t.replace(/-/g, "");
-        if (16 != (null == e ? void 0 : e.length) || !S.test(e)) return null;
-        return i().fromString(e, !0, 16).toString();
+        if (16 != (null == e ? void 0 : e.length) || !v.test(e)) return null;
+        return o.Z.fromString(e, !0, 16).toString();
       }
-      function y(t) {
-        const e = ("0000000000000000" + i().fromString(t, !0, 10).toString(16))
+      function F(t) {
+        const e = ("0000000000000000" + o.Z.fromString(t, !0, 10).toString(16))
           .slice(-16)
           .toUpperCase();
         return `${e.slice(0, 4)}-${e.slice(4, 8)}-${e.slice(8, 12)}-${e.slice(
@@ -927,15 +924,15 @@
           16,
         )}`;
       }
-      function D(t, e) {
-        return [t && v.Get().GetFAQPublishedContent(t, e), !0];
+      function y(t, e) {
+        return [t && A.Get().GetFAQPublishedContent(t, e), !0];
       }
-      function Q(t) {
-        const [e, a] = m.useState(v.Get().GetFAQDraftContent(t)),
-          [r, s] = m.useState(!!e);
+      function D(t) {
+        const [e, a] = l.useState(A.Get().GetFAQDraftContent(t)),
+          [r, s] = l.useState(!!e);
         return (
-          (0, m.useEffect)(() => {
-            v.Get()
+          (0, l.useEffect)(() => {
+            A.Get()
               .LoadFAQDraftContent(t)
               .then((t) => a(t))
               .finally(() => s(!0));
@@ -943,21 +940,20 @@
           [e, r]
         );
       }
-      function E(t) {
-        return [v.Get().GetFAQArticleSummary(t), !0];
+      function Q(t) {
+        return [A.Get().GetFAQArticleSummary(t), !0];
       }
-      function G() {
-        const t = v.Get().GetAllFAQSummaries();
-        return m.useRef([t, !0]).current;
+      function E() {
+        const t = A.Get().GetAllFAQSummaries();
+        return l.useRef([t, !0]).current;
       }
-      function I(t, e, a) {
-        const [r, s] = m.useState(null),
-          [n, o] = m.useState(!1);
+      function G(t, e, a) {
+        const [r, s] = l.useState(null),
+          [n, o] = l.useState(!1);
         return (
-          (0, m.useEffect)(() => {
-            v.Get().BHasFAQEdit() &&
-              v
-                .Get()
+          (0, l.useEffect)(() => {
+            A.Get().BHasFAQEdit() &&
+              A.Get()
                 .GetFAQVersion(t, e, a)
                 .then((t) => s(t))
                 .finally(() => o(!0));

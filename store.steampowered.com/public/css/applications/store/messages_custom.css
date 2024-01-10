@@ -256,11 +256,7 @@
   background: linear-gradient(147.86deg, #782370 25.78%, #05113c 101.81%);
 }
 .yir2022_FriendCtn_10UIo {
-  background: linear-gradient(
-    14deg,
-    rgba(22, 41, 100, 0.8784313725),
-    rgba(16, 86, 98, 0.7215686275)
-  );
+  background: linear-gradient(14deg, #162964e0, #105662b8);
 }
 .yir2022_TopGameBlockContainer_3cqzP.yir2022_OddGradient_2MFzm {
   background: radial-gradient(
@@ -286,12 +282,7 @@
   );
 }
 .yir2022_FirstPlayCtn_-cK9w .yir2022_GamePlayDetails_161Uj {
-  background: linear-gradient(
-    45deg,
-    rgba(11, 112, 89, 0.5411764706) 15%,
-    rgba(0, 85, 128, 0.8509803922) 55%,
-    rgba(148, 26, 115, 0.7411764706)
-  );
+  background: linear-gradient(45deg, #0b70598a 15%, #005580d9 55%, #941a73bd);
 }
 .yir2022_PlatformChartsCtn_2gfnc {
   background: radial-gradient(#17333a, #0a0d0d);
@@ -381,9 +372,9 @@
 .yir2022_AllGamesBGImage_3BT7r {
   background-image: radial-gradient(
       94.31% 143.89% at 2.99% -1.75%,
-      rgba(2, 187, 255, 0.2039215686) 0%,
-      rgba(255, 3, 179, 0.2274509804) 52.6%,
-      rgba(106, 255, 0, 0.137254902)
+      #02bbff34 0%,
+      #ff03b33a 52.6%,
+      #6aff0023
     ),
     url("/public/images/yearinreview/steam_logo_offset.png");
 }
@@ -562,7 +553,7 @@
 .yir2023_TopGameBlockContainer_3F7PU.yir2023_OddGradient_w_Lxb {
   background: conic-gradient(
       from 87deg at -8.32% 0%,
-      rgba(105, 63, 0, 0.3019607843) 7.2531156242deg,
+      #693f004d 7.2531156242deg,
       rgba(0, 71, 44, 0.56) 42.3303329945deg,
       #33005c 96.4028513432deg
     ),
@@ -689,9 +680,9 @@
 .yir2023_AllGamesBGImage_1ujDQ {
   background-image: radial-gradient(
       94.31% 143.89% at 2.99% -1.75%,
-      rgba(211, 217, 32, 0.2274509804) 0%,
-      rgba(211, 217, 32, 0.2274509804) 52.6%,
-      rgba(211, 217, 32, 0.2274509804)
+      #d3d9203a 0%,
+      #d3d9203a 52.6%,
+      #d3d9203a
     ),
     url("/public/images/yearinreview/steam_logo_offset.png");
 }

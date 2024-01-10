@@ -1,3 +1,10 @@
+.gamerecordingclip_ClipDetails_3OZdT {
+  display: flex;
+  flex-direction: column;
+}
+.gamerecordingclip_ClipDetails_3OZdT .gamerecordingclip_VideoContainer_10C-F {
+  position: relative;
+}
 .shared_svg_gamerecordings_Dummy_J-nth {
   color: hotpink;
 }
@@ -24,7 +31,7 @@
 }
 .shared_svg_gamerecordings_RecordingIconContainer_2cO3k.shared_svg_gamerecordings_NotRecording_rB6rh
   .shared_svg_gamerecordings_Outer_2NMjl {
-  color: rgba(0, 0, 0, 0);
+  color: transparent;
 }
 .shared_svg_gamerecordings_RecordingIconContainer_2cO3k.shared_svg_gamerecordings_ManualRecording_2XB7-
   .shared_svg_gamerecordings_Inner_2FGUL,

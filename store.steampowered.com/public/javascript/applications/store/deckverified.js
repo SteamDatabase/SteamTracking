@@ -3,7 +3,7 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [1825],
   {
-    6429: (e) => {
+    99837: (e) => {
       e.exports = {
         ReleaseDateInfoCtn: "controllersupportinfo_ReleaseDateInfoCtn_MjesD",
         GameEditCtn: "controllersupportinfo_GameEditCtn_22e4A",
@@ -46,7 +46,7 @@
         ToolTipContainer: "controllersupportinfo_ToolTipContainer_11C_j",
       };
     },
-    24981: (e, t, o) => {
+    85401: (e, t, o) => {
       "use strict";
       o.r(t),
         o.d(t, {
@@ -55,13 +55,13 @@
           ControllerSupportInfoStoreDisplay: () => S,
           default: () => d,
         });
-      var r = o(89526),
-        l = o(14826),
-        n = o(6429),
-        a = o(19304),
-        i = o(16826),
-        p = o(84343),
-        s = o(32765);
+      var r = o(47427),
+        l = o(31846),
+        n = o(99837),
+        a = o(13129),
+        i = o(58538),
+        p = o(59728),
+        s = o(37563);
       function c(e) {
         return r.createElement(
           "a",
@@ -318,10 +318,10 @@
       }
       const d = S;
     },
-    74839: (e, t, o) => {
+    1688: (e, t, o) => {
       "use strict";
       o.r(t), o.d(t, { default: () => r });
-      const r = o(53913).$g;
+      const r = o(97695).$g;
     },
   },
 ]);

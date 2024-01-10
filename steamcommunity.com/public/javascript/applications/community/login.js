@@ -3,18 +3,18 @@
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
   [4535],
   {
-    25391: (e) => {
+    79707: (e) => {
       e.exports = { LoginContainer: "login_LoginContainer_2vAS_" };
     },
-    58301: (e, n, t) => {
+    32431: (e, n, t) => {
       "use strict";
       t.r(n), t.d(n, { default: () => l });
-      var r = t(89526),
-        o = t(90580),
-        a = t(19094),
-        i = t(32765),
-        s = t(79925),
-        c = t(25391);
+      var r = t(47427),
+        o = t(99327),
+        a = t(77581),
+        i = t(37563),
+        s = t(35791),
+        c = t(79707);
       function l(e) {
         const { redirectUrl: n = i.De.COMMUNITY_BASE_URL } = e,
           [t] = (0, r.useState)(

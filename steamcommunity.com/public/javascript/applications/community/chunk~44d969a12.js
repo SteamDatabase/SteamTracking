@@ -3,7 +3,7 @@
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
   [5503],
   {
-    30120: (e) => {
+    5167: (e) => {
       e.exports = {
         avatarHolder: "steamavatar_avatarHolder_1YGAH",
         avatarStatus: "steamavatar_avatarStatus_1yIzy",
@@ -12,16 +12,16 @@
         avatarFrameImg: "steamavatar_avatarFrameImg_338kJ",
       };
     },
-    11301: (e, t, a) => {
+    42411: (e, t, a) => {
       "use strict";
       a.d(t, { Pv: () => p, U0: () => A.U, WV: () => A.W, sB: () => l });
-      var i = a(33940),
-        r = a(59621),
-        s = a(39818),
-        n = a(58961),
-        o = a(14826),
-        m = a(32765),
-        A = a(4556);
+      var i = a(85556),
+        r = a(54842),
+        s = a(24289),
+        n = a(45944),
+        o = a(31846),
+        m = a(37563),
+        A = a(48760);
       function l(e) {
         let t = "offline";
         return (
@@ -306,20 +306,20 @@
         (0, i.gn)([r.LO], p.prototype, "m_strBroadcastTitle", void 0),
         (0, i.gn)([r.LO], p.prototype, "m_bCommunityBanned", void 0);
     },
-    50355: (e, t, a) => {
+    38605: (e, t, a) => {
       "use strict";
       a.d(t, { o: () => h, vV: () => c });
-      var i = a(33940),
-        r = a(89526),
-        s = a(88464),
-        n = a(11301),
-        o = a(19304),
-        m = a(32765),
-        A = a(87178);
+      var i = a(85556),
+        r = a(47427),
+        s = a(27605),
+        n = a(42411),
+        o = a(13129),
+        m = a(37563),
+        A = a(28918);
       const l =
         a.p +
         "images/applications/community/avatar_default_full.jpg?v=valveisgoodatcaching";
-      var p = a(30120),
+      var p = a(5167),
         _ = a.n(p);
       class h extends r.Component {
         render() {

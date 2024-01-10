@@ -3,7 +3,7 @@
 (self.webpackChunkHelp = self.webpackChunkHelp || []).push([
   [3068],
   {
-    5937: (e) => {
+    8234: (e) => {
       e.exports = {
         NotificationsMenu: "greenenvelope_NotificationsMenu_DHpNP",
         NotificationsMenuEntriesContainer:
@@ -29,7 +29,7 @@
         EmptyNotificationsBody: "greenenvelope_EmptyNotificationsBody_3YAs6",
       };
     },
-    6239: (e) => {
+    9129: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         loadinganimationiterationcount: "20",
@@ -87,6 +87,7 @@
         BottomBar: "shorttemplates_BottomBar_2qFDV",
         NewIndicator: "shorttemplates_NewIndicator_7k_rN",
         ShortTemplate: "shorttemplates_ShortTemplate_29NLb",
+        TwoLine: "shorttemplates_TwoLine_G6T84",
         BackgroundAnimation: "shorttemplates_BackgroundAnimation_OYUmx",
         "ItemFocusAnim-darkerGrey-nocolor":
           "shorttemplates_ItemFocusAnim-darkerGrey-nocolor_1kXW6",
@@ -103,7 +104,7 @@
         hoverAnimation: "shorttemplates_hoverAnimation_gYMVd",
       };
     },
-    3e3: (e) => {
+    5333: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         loadinganimationiterationcount: "20",
@@ -180,7 +181,7 @@
         hoverAnimation: "standardtemplates_hoverAnimation_3QUW0",
       };
     },
-    2427: (e) => {
+    434: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         loadinganimationiterationcount: "20",
@@ -259,12 +260,12 @@
         hoverAnimation: "steamtemplates_hoverAnimation_2q5uS",
       };
     },
-    10: (e) => {
+    6959: (e) => {
       e.exports = {
         WebPinnedNotification: "webtemplates_WebPinnedNotification_2_G4b",
       };
     },
-    6737: (e, t, i) => {
+    6350: (e, t, i) => {
       "use strict";
       i.r(t),
         i.d(t, {
@@ -272,26 +273,26 @@
           default: () => Ht,
           useSteamNotifications: () => Lt,
         });
-      var n = i(3940),
-        a = i(9526),
-        o = i(701),
-        r = i(5586),
-        s = i(9268),
-        l = i(713),
-        m = i(5615),
-        c = i(9621),
-        d = i(7165),
-        u = i(3647),
-        _ = i(3917),
-        p = i(5508),
-        f = i(454),
-        g = i(4973),
-        y = i(566),
-        v = i(4738),
-        h = i(7070),
-        N = (i(9447), i(4826)),
-        S = (i(6427), i(227)),
-        E = (i(7940), i(7361));
+      var n = i(5556),
+        a = i(7427),
+        o = i(2613),
+        r = i(9457),
+        s = i(8722),
+        l = i(212),
+        m = i(2718),
+        c = i(4842),
+        d = i(5427),
+        u = i(7979),
+        _ = i(4476),
+        p = i(6984),
+        f = i(8785),
+        g = i(5255),
+        y = i(6948),
+        v = i(3923),
+        h = i(57),
+        N = (i(5017), i(1846)),
+        S = (i(5516), i(2830)),
+        E = (i(2182), i(6009));
       function I(e) {
         return ["parentalsettings", e];
       }
@@ -393,7 +394,9 @@
           (e[(e.k_EFamilyQueryLoadHistory = 13)] = "k_EFamilyQueryLoadHistory"),
           (e[(e.k_EFamilyQueryLoadCart = 14)] = "k_EFamilyQueryLoadCart"),
           (e[(e.k_EFamilyQuerySetCooldownOverrides = 15)] =
-            "k_EFamilyQuerySetCooldownOverrides");
+            "k_EFamilyQuerySetCooldownOverrides"),
+          (e[(e.k_EFamilyQueryResendInvite = 16)] =
+            "k_EFamilyQueryResendInvite");
       })(D || (D = {}));
       D.k_EFamilyQueryCreateFamily,
         D.k_EFamilyQueryJoinFamily,
@@ -403,7 +406,7 @@
         D.k_EFamilyQueryJoinFamily,
         D.k_EFamilyQueryInviteToFamily,
         D.k_EFamilyQueryRemoveFromFamily;
-      var F = i(3801);
+      var F = i(2210);
       const R = {
         11: {
           displayNameLoc: "#SteamNotification_HelpRequest_Author",
@@ -556,8 +559,8 @@
       const x = 172800,
         q = 600,
         X = new f.s("SteamNotificationStore"),
-        j = X.Debug,
-        Q = X.Error,
+        Q = X.Debug,
+        j = X.Error,
         $ = X.Warning;
       class W {
         constructor() {
@@ -654,12 +657,12 @@
           if (-1 === n)
             return void (t
               ? this.NotifyServerNotificationsRead([e])
-              : Q(
+              : j(
                   "Attempted to mark notification read that is not in the notification store",
                 ));
           let a = this.m_rgNotificationRollups[n];
           if (a.item.read)
-            Q("Attempted to mark notification read that is already read");
+            j("Attempted to mark notification read that is already read");
           else if (
             ((a.item.read = !0),
             (null === (i = a.rgunread) || void 0 === i ? void 0 : i.length) > 0)
@@ -680,7 +683,7 @@
             (t) => t.item.notification_id == e,
           );
           if (-1 === n)
-            return void Q(
+            return void j(
               "Attempted to mark notification hidden that is not in the notification store",
             );
           let a = this.m_rgNotificationRollups[n];
@@ -755,7 +758,7 @@
         }
         ApplyNotificationsUpdate(e) {
           var t, i;
-          j("ApplyNotificationsUpdate", e),
+          Q("ApplyNotificationsUpdate", e),
             e &&
             ((null === (t = e.notifications) || void 0 === t
               ? void 0
@@ -787,10 +790,10 @@
                     (this.m_currentNotificationsData.pending_family_invite_count =
                       e.pending_family_invite_count),
                   this.ProcessNotifications())
-                : j(
+                : Q(
                     "Error: ApplyNotificationsUpdate was called before this.m_currentNotificationsData was set",
                   )
-              : j("Error: ApplyNotificationsUpdate was called with no data");
+              : Q("Error: ApplyNotificationsUpdate was called with no data");
         }
         ProcessNewNotificationPayload(e) {
           (this.m_currentNotificationsData = JSON.parse(JSON.stringify(e))),
@@ -1076,7 +1079,7 @@
                 return (0, n.mG)(this, void 0, void 0, function* () {
                   if (!(e && e.steamid && e.contextid && e.appid && e.assetid))
                     return (
-                      Q("Item notification missing required attributes"), null
+                      j("Item notification missing required attributes"), null
                     );
                   const i = s.gA.Init(l.IX);
                   i.Body().set_steamid(e.steamid),
@@ -1088,7 +1091,7 @@
                   const a = yield l.$n.GetInventoryItemsWithDescriptions(t, i);
                   if (1 !== a.GetEResult())
                     return (
-                      Q(
+                      j(
                         "Request for steam item metadata did not succeed",
                         a.GetEResult(),
                       ),
@@ -1102,7 +1105,7 @@
                   if (1 == r) {
                     const t = u.Z.Get().GetApp(parseInt(e.appid));
                     o = null == t ? void 0 : t.GetName();
-                  } else Q("Failed getting app info", r);
+                  } else j("Failed getting app info", r);
                   return {
                     app_name: o,
                     item_data: a.Body().toObject().descriptions[0],
@@ -1122,7 +1125,7 @@
           let a = JSON.parse(e);
           (t = a.app_id), (i = a.asset_id), (n = a.context_id);
         } catch (e) {
-          return Q("Item notification in invalid format"), null;
+          return j("Item notification in invalid format"), null;
         }
         return { appid: t, assetid: i, contextid: n };
       }
@@ -1160,7 +1163,7 @@
             i
           );
         } catch (e) {
-          j("Comment notification in invalid format");
+          Q("Comment notification in invalid format");
         }
         return null;
       }
@@ -1189,10 +1192,10 @@
             !t.state ||
             (t.state != ie.k_EAsyncGameSessionUserStateReadyForAction &&
               t.state != ie.k_EAsyncGameSessionUserStateDone)
-            ? (j("Async game notification invalid data", e), null)
+            ? (Q("Async game notification invalid data", e), null)
             : { appid: parseInt(t.appid), state: parseInt(t.state) };
         } catch (e) {
-          j("Async game notification in invalid format");
+          Q("Async game notification in invalid format");
         }
         return null;
       }
@@ -1206,7 +1209,7 @@
             appids: null !== (i = n.appids) && void 0 !== i ? i : [],
           };
         } catch (e) {
-          j("Wishlist notification in invalid format");
+          Q("Wishlist notification in invalid format");
         }
         return null;
       }
@@ -1214,7 +1217,7 @@
         try {
           return JSON.parse(e).gifter_account.toString();
         } catch (e) {
-          j("Gift notification in invalid format");
+          Q("Gift notification in invalid format");
         }
         return null;
       }
@@ -1226,7 +1229,7 @@
             state: t.state ? parseInt(t.state) : 0,
           };
         } catch (e) {
-          j("Friend invite notification in invalid format");
+          Q("Friend invite notification in invalid format");
         }
         return null;
       }
@@ -1234,7 +1237,7 @@
         try {
           return JSON.parse(e).sender;
         } catch (e) {
-          j("Trade offer notification in invalid format");
+          Q("Trade offer notification in invalid format");
         }
         return null;
       }
@@ -1252,7 +1255,7 @@
             default:
               return !1;
           }
-        return j("notification contained unexpected boolean value"), !1;
+        return Q("notification contained unexpected boolean value"), !1;
       }
       !(function (e) {
         (e[(e.k_EAsyncGameSessionUserStateWaitingForOthers = 0)] =
@@ -1309,16 +1312,16 @@
       function _e(e) {
         return e.viewed && e.viewed + x < (0, p.QU)();
       }
-      var pe = i(9304),
-        fe = i(103),
-        ge = i(5937),
+      var pe = i(3129),
+        fe = i(5315),
+        ge = i(8234),
         ye = i.n(ge),
-        ve = i(6826),
-        he = i(3315),
-        Ne = i(2868),
+        ve = i(8538),
+        he = i(750),
+        Ne = i(751),
         Se = i.n(Ne),
-        Ee = i(4556),
-        Ie = i(3217);
+        Ee = i(8760),
+        Ie = i(6649);
       class Ae {
         constructor() {
           (this.m_mapProfiles = new Map()),
@@ -1428,10 +1431,10 @@
         return be(a.useMemo(() => (e ? d.K.InitFromAccountID(e) : null), [e]));
       }
       window.g_ProfileStore = Te;
-      var Be = i(5871),
-        Le = i(1438),
-        De = i(2120),
-        Fe = i(3e3),
+      var Be = i(886),
+        Le = i(1618),
+        De = i(2251),
+        Fe = i(5333),
         Re = i.n(Fe);
       const we = !0;
       function Ge(e) {
@@ -1599,7 +1602,7 @@
         const s = !!n && (3 == o || 4 == o);
         let l;
         return (
-          (l = 4 == o ? je : null != r ? r : Qe),
+          (l = 4 == o ? Qe : null != r ? r : je),
           a.createElement(
             "div",
             { className: Re().Header },
@@ -1629,7 +1632,7 @@
         );
         return a.createElement("div", { className: t }, e.children);
       }
-      function je(e) {
+      function Qe(e) {
         let t = new Date(),
           i = new Date(1e3 * e.timestamp),
           n = (0, De.Sc)(e.timestamp);
@@ -1639,7 +1642,7 @@
           a.createElement("div", { className: Re().Timestamp }, n)
         );
       }
-      function Qe(e) {
+      function je(e) {
         let t = new Date(),
           i = new Date(1e3 * e.timestamp),
           n = (0, p.yK)(t, i)
@@ -1655,7 +1658,7 @@
           (e[(e.loadingActive = 1)] = "loadingActive"),
           (e[(e.loadingComplete = 2)] = "loadingComplete");
       })(Ue || (Ue = {}));
-      var We = i(6239),
+      var We = i(9129),
         Ye = i.n(We);
       function Ze(e) {
         let {
@@ -1667,8 +1670,9 @@
             body: s,
             personaStatus: l,
             className: m,
+            singleLineOnly: c,
           } = e,
-          c = (function (e, t) {
+          d = (function (e, t) {
             return a.useCallback(
               (i) => {
                 e && e(i), t && t();
@@ -1679,8 +1683,8 @@
         return a.createElement(
           Le.s,
           {
-            className: (0, pe.Z)(Ye().ShortTemplate, m),
-            onActivate: c,
+            className: (0, pe.Z)(Ye().ShortTemplate, !c && Ye().TwoLine, m),
+            onActivate: d,
             onMouseDown: (e) => {
               1 == e.button && i && i();
             },
@@ -1703,9 +1707,9 @@
           ),
         );
       }
-      var Je = i(2427),
+      var Je = i(434),
         Ve = i.n(Je),
-        ze = i(2079);
+        ze = i(3243);
       function Ke(e) {
         switch (e) {
           case 6:
@@ -2440,7 +2444,7 @@
           e.children,
         );
       }
-      var ut = i(10),
+      var ut = i(6959),
         _t = i.n(ut);
       function pt(e) {
         if (!e) return null;
@@ -2456,7 +2460,7 @@
               try {
                 return JSON.parse(e);
               } catch (e) {
-                j("Basic notification in invalid format");
+                Q("Basic notification in invalid format");
               }
               return null;
             })(t),
@@ -2490,7 +2494,7 @@
             try {
               return JSON.parse(e);
             } catch (e) {
-              j("Simple persona notification in invalid format");
+              Q("Simple persona notification in invalid format");
             }
             return null;
           })(t);
@@ -2510,7 +2514,7 @@
           };
         }, [t, e]);
       }
-      var yt = i(1161);
+      var yt = i(5006);
       const vt = {
         [P.Comment]: function (e) {
           var t, i, n;
@@ -2912,9 +2916,9 @@
               )
           : null;
       }
-      var Et = i(442),
-        It = i(161),
-        At = i(4306);
+      var Et = i(7936),
+        It = i(423),
+        At = i(417);
       class Tt extends a.Component {
         constructor() {
           super(...arguments),
@@ -3020,7 +3024,7 @@
         }
       }
       (0, n.gn)([At.ak], Tt.prototype, "OnIntersection", null);
-      var bt = i(7547);
+      var bt = i(162);
       const kt = new W(),
         Bt = (0, bt.AP)(function (e) {
           const { bResponsiveHeader: t, notifications: i } = e;

@@ -3,7 +3,7 @@
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
   [2530],
   {
-    22434: (e) => {
+    68628: (e) => {
       e.exports = {
         Login: "newlogindialog_Login_ZOBYq",
         SideBySide: "newlogindialog_SideBySide_1Wl13",
@@ -107,7 +107,7 @@
         Client: "newlogindialog_Client_1ZDxg",
       };
     },
-    60371: (e) => {
+    15996: (e) => {
       e.exports = {
         LoginQR: "qrlogin_LoginQR_1wtS3",
         NonPublic: "qrlogin_NonPublic_2iiMm",
@@ -123,14 +123,14 @@
         Large: "qrlogin_Large_elAzl",
       };
     },
-    78424: (e) => {
+    34317: (e) => {
       e.exports = {
         QRBits: "qrcode_QRBits_3FhhK",
         Bit: "qrcode_Bit_2Yuvr",
         Active: "qrcode_Active_274P1",
       };
     },
-    60143: (e) => {
+    72814: (e) => {
       e.exports = {
         SegmentedCharacterInput:
           "segmentedinputs_SegmentedCharacterInput_3PDBF",
@@ -141,7 +141,7 @@
         Input: "segmentedinputs_Input_HPSuA",
       };
     },
-    5634: (e, t, n) => {
+    88765: (e, t, n) => {
       "use strict";
       var o;
       n.d(t, { Z: () => D });
@@ -1191,7 +1191,7 @@
         },
       };
     },
-    79925: (e, t, n) => {
+    35791: (e, t, n) => {
       "use strict";
       n.d(t, {
         NZ: () => o,
@@ -1202,16 +1202,16 @@
       });
       var o,
         i,
-        r = n(33940),
-        s = n(59621),
-        a = n(52868),
+        r = n(85556),
+        s = n(54842),
+        a = n(80751),
         l = n.n(a),
-        c = n(68333),
-        u = n(26464),
-        m = n(32765),
-        d = n(40831),
-        h = n(5155),
-        g = n(97277);
+        c = n(51841),
+        u = n(16997),
+        m = n(37563),
+        d = n(42884),
+        h = n(50060),
+        g = n(97247);
       function f(e) {
         const {
             shared_secret: t,
@@ -1474,12 +1474,12 @@
         (0, r.gn)([u.a], p.prototype, "PollForUpdate", null),
         (0, r.gn)([u.a], p.prototype, "SetTokenToRevoke", null);
     },
-    97277: (e, t, n) => {
+    97247: (e, t, n) => {
       "use strict";
       n.d(t, { F0: () => l, IC: () => c, Zb: () => s, aF: () => a });
-      n(52868);
-      var o = n(50454);
-      const i = n(5634).Z,
+      n(80751);
+      var o = n(68785);
+      const i = n(88765).Z,
         r = new o.s("Login"),
         s = r.Info,
         a = (r.Debug, r.Warning),
@@ -1490,7 +1490,7 @@
         return !1 === o ? null : o;
       }
     },
-    90580: (e, t, n) => {
+    99327: (e, t, n) => {
       "use strict";
       n.d(t, {
         uU: () => he,
@@ -1499,22 +1499,22 @@
         pT: () => se,
         TK: () => Oe,
       });
-      var o = n(33940),
-        i = n(89526),
-        r = n(19304),
-        s = n(59621),
-        a = n(52868),
+      var o = n(85556),
+        i = n(47427),
+        r = n(13129),
+        s = n(54842),
+        a = n(80751),
         l = n.n(a),
-        c = n(32765),
-        u = n(68333),
-        m = n(79925),
-        d = n(40442),
-        h = n(83315),
-        g = n(4306),
-        f = n(97277),
-        p = n(40831),
-        _ = n(19094),
-        C = n(87640);
+        c = n(37563),
+        u = n(51841),
+        m = n(35791),
+        d = n(8004),
+        h = n(30750),
+        g = n(20417),
+        f = n(97247),
+        p = n(42884),
+        _ = n(77581),
+        C = n(3743);
       class E extends m.io {
         constructor(e) {
           super(
@@ -2086,11 +2086,11 @@
         AjaxFailureWithCode: (e) => `af-${e}`,
       };
       var L,
-        R = n(22434),
+        R = n(68628),
         T = n.n(R),
-        k = n(28545),
+        k = n(59223),
         A = n.n(k),
-        N = n(78424),
+        N = n(34317),
         D = n.n(N);
       function M(e) {
         let {
@@ -2231,9 +2231,9 @@
         }
       }
       (0, o.gn)([s.LO], B.prototype, "m_eStatus", void 0);
-      var x = n(60371),
+      var x = n(15996),
         F = n.n(x),
-        I = n(57605);
+        I = n(1485);
       function O(e) {
         const {
             transport: t,
@@ -2396,20 +2396,20 @@
           }),
         );
       }
-      var V = n(14826),
-        $ = n(69338),
-        X = n(2232),
-        q = n(701);
+      var V = n(31846),
+        $ = n(46882),
+        X = n(49353),
+        q = n(62613);
       const Q =
         n.p +
         "images/applications/community/login_mobile_auth.png?v=valveisgoodatcaching";
-      var j = n(59934),
-        z = n(17547),
-        W = n(73070),
-        J = n(84343),
-        K = n(44026),
-        Y = n(51438),
-        ee = n(60143),
+      var j = n(8285),
+        z = n(10162),
+        W = n(53087),
+        J = n(59728),
+        K = n(82493),
+        Y = n(91618),
+        ee = n(72814),
         te = n.n(ee);
       function ne(e) {
         const {
@@ -2520,8 +2520,8 @@
           v,
         );
       }
-      var oe = n(44534);
-      n(99825);
+      var oe = n(29459);
+      n(23163);
       const ie = (0, i.createContext)(!1),
         re = () => (0, i.useContext)(ie);
       function se() {

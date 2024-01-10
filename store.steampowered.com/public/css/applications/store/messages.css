@@ -44,7 +44,6 @@ html.responsive
 .messagelist_MessageListPage_1N7O3 .messagelist_MessageListScroll_2RW7G {
   flex: auto;
   min-height: 0;
-  overflow-y: auto;
   overflow: hidden;
 }
 .messagelist_CarouselBar_O7VJK {
@@ -563,18 +562,14 @@ html.responsive
     rgba(0, 0, 0, 0.98),
     rgba(0, 0, 0, 0) 44%
   );
-  mask-image: radial-gradient(at 50% 37%, rgb(0, 0, 0), rgba(0, 0, 0, 0) 44%);
+  mask-image: radial-gradient(at 50% 37%, black, rgba(0, 0, 0, 0) 44%);
 }
 .featuredlc_MainContainer_T3ysk
   .featuredlc_BackgroundImage_3vQ5a
   img:last-child {
   filter: opacity(0.8) blur(30px);
-  -webkit-mask-image: radial-gradient(
-    at 50% 45%,
-    rgb(0, 0, 0),
-    rgba(0, 0, 0, 0) 37%
-  );
-  mask-image: radial-gradient(at 50% 45%, rgb(0, 0, 0), rgba(0, 0, 0, 0) 37%);
+  -webkit-mask-image: radial-gradient(at 50% 45%, black, rgba(0, 0, 0, 0) 37%);
+  mask-image: radial-gradient(at 50% 45%, black, rgba(0, 0, 0, 0) 37%);
 }
 .featuredlc_BaseCtn_D3UK8 {
   display: flex;
@@ -758,7 +753,7 @@ html.responsive
   opacity: 0.5;
 }
 .featuredlc_DlcCtn_3H7i0 .CapsuleBottomBar {
-  background-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
 }
 div.StoreSaleWidgetTitle {
   font-size: 18px;
@@ -827,14 +822,14 @@ div.featuredlc_MessageFooter_2S4fB {
 }
 .image_MessageContent_rohJ-:hover .image_IsBlur_2lGtR img {
   filter: brightness(1.6) saturate(1.2);
-  box-shadow: inset 0 6px 10px rgba(0, 0, 0, 0.6666666667);
+  box-shadow: inset 0 6px 10px #000a;
 }
 .image_GameImage_2It5b {
   box-sizing: content-box;
   cursor: pointer;
   width: auto;
   position: relative;
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.6666666667);
+  box-shadow: 0 6px 10px #000a;
   font-size: 0px;
   transition: box-shadow 0.15s ease-out;
 }

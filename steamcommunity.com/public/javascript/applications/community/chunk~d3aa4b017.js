@@ -3,7 +3,7 @@
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
   [2832],
   {
-    27618: (e) => {
+    2339: (e) => {
       e.exports = {
         StoreSaleWidgetContainer_mini:
           "broadcastwidgets_StoreSaleWidgetContainer_mini_1Vz-y",
@@ -16,31 +16,31 @@
           "broadcastwidgets_StoreSaleWidgetShortDesc_mini_DvDV2",
       };
     },
-    94170: (e, t, a) => {
+    3438: (e, t, a) => {
       "use strict";
       a.r(t),
         a.d(t, {
           BroadcastEmbeddablePopoutHeader: () => he,
           default: () => ce,
         });
-      var n = a(33940),
-        r = a(52868),
+      var n = a(85556),
+        r = a(80751),
         s = a.n(r),
-        o = a(88464),
-        i = a(83315),
-        l = a(89526),
-        c = a(55844),
-        d = a(7671),
-        m = a(98009),
-        p = a(25871),
-        _ = a(23715),
-        u = a(44865),
-        h = a(98389),
-        b = a(71161),
-        E = a(69338),
-        g = a(19304),
-        S = a(32765),
-        v = a(27618),
+        o = a(27605),
+        i = a(30750),
+        l = a(47427),
+        c = a(6399),
+        d = a(58331),
+        m = a(28347),
+        p = a(80886),
+        _ = a(7769),
+        u = a(92797),
+        h = a(34913),
+        b = a(25006),
+        E = a(46882),
+        g = a(13129),
+        S = a(37563),
+        v = a(2339),
         f = a.n(v);
       const C = (0, o.Pi)((e) => {
         const { appid: t } = e,
@@ -126,28 +126,28 @@
           ),
         );
       });
-      var N = a(40442);
+      var N = a(8004);
       function y() {
         let e = window.GetUsabilityTracker;
         if (e) return e();
       }
-      var B = a(52002),
-        D = a(46486),
-        I = a(98889),
-        P = a(75687),
-        G = a(69485),
-        w = a(25589),
-        x = a(54297),
-        A = a(46294),
-        k = a(701),
-        O = a(84343),
-        T = a(52550),
-        L = a(14826),
-        R = a(88443),
-        V = a(4306),
-        W = a(47165),
-        H = a(74831),
-        M = a(43628),
+      var B = a(87699),
+        D = a(64730),
+        I = a(36453),
+        P = a(35134),
+        G = a(34310),
+        w = a(58129),
+        x = a(31659),
+        A = a(47242),
+        k = a(62613),
+        O = a(59728),
+        T = a(31028),
+        L = a(31846),
+        R = a(24549),
+        V = a(20417),
+        W = a(35427),
+        H = a(58670),
+        M = a(84426),
         U = a.n(M);
       const Z = (0, o.Pi)((e) => {
         const { event: t } = e,
@@ -211,16 +211,16 @@
           ),
         );
       });
-      var j = a(17318),
+      var j = a(71741),
         F = a.n(j),
-        X = a(37865),
-        Y = a(82248),
-        q = a(15164),
-        z = a(75313),
-        $ = a(99307),
-        J = a(75962),
-        K = a(20790),
-        Q = a(43997),
+        X = a(99839),
+        Y = a(71738),
+        q = a(91120),
+        z = a(80289),
+        $ = a(50898),
+        J = a(14609),
+        K = a(81913),
+        Q = a(45557),
         ee = a.n(Q);
       function te(e) {
         const { steamid: t, closeModal: a } = e;
@@ -346,9 +346,9 @@
       function re(e, t) {
         return S.De.COMMUNITY_BASE_URL + "broadcast/share/" + e + "?site=" + t;
       }
-      var se = a(60161),
-        oe = a(57742),
-        ie = a(50295);
+      var se = a(50423),
+        oe = a(90069),
+        ie = a(10994);
       const le = {
         list: [
           { appid: 444090, url: "https://steam.tv/paladins" },
@@ -1179,11 +1179,11 @@
           : null;
       }
     },
-    52550: (e, t, a) => {
+    31028: (e, t, a) => {
       "use strict";
       a.d(t, { h: () => s });
-      var n = a(89526),
-        r = a(74802);
+      var n = a(47427),
+        r = a(58112);
       const s = (e) => {
         const { onPositionChange: t, onLeave: a } = e,
           s = n.useCallback(

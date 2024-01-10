@@ -3,7 +3,7 @@
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
   [5436],
   {
-    5089: (e) => {
+    90366: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         OtherEventsCtn: "eventrow_OtherEventsCtn_1qNsZ",
@@ -34,14 +34,14 @@
         AppCapsulePrice: "eventrow_AppCapsulePrice_Jq75m",
       };
     },
-    42701: (e) => {
+    63024: (e) => {
       e.exports = {
         SubSection: "broadcastdebug_SubSection_3Ac4z",
         Header: "broadcastdebug_Header_2vrXB",
         AppSummaryWidgetCtn: "broadcastdebug_AppSummaryWidgetCtn_35ozI",
       };
     },
-    55395: (e) => {
+    8845: (e) => {
       e.exports = {
         BroadcastPage: "broadcastplayer_BroadcastPage_3IVNU",
         ChatAndVideoContainer: "broadcastplayer_ChatAndVideoContainer_3T2Xh",
@@ -59,7 +59,7 @@
         DebugCtn: "broadcastplayer_DebugCtn_FKW0z",
       };
     },
-    41917: (e) => {
+    421: (e) => {
       e.exports = {
         ProfileCtn: "broadcastprofile_ProfileCtn__qonR",
         GameAndOptionsCtn: "broadcastprofile_GameAndOptionsCtn_Qo4I3",
@@ -72,53 +72,53 @@
         GameCapsule: "broadcastprofile_GameCapsule_1oJMx",
       };
     },
-    70651: (e) => {
+    27842: (e) => {
       e.exports = { AdminControls: "broadcastsupport_AdminControls_3KL0b" };
     },
-    84436: (e) => {
+    52248: (e) => {
       e.exports = {
         AvatarCtn: "communityavatar_AvatarCtn_3n3n0",
         NameAndProps: "communityavatar_NameAndProps_3Pljh",
       };
     },
-    49234: (e, t, a) => {
+    32144: (e, t, a) => {
       "use strict";
       a.d(t, { KE: () => F, T4: () => H, _G: () => L, zY: () => z });
-      var n = a(33940),
-        r = a(52868),
+      var n = a(85556),
+        r = a(80751),
         o = a.n(r),
-        l = a(88464),
-        s = a(83315),
-        i = a(89526),
-        c = a(40442),
-        d = a(62983),
-        m = a(51438),
-        u = a(16221),
-        _ = a(81245),
-        v = a(47165),
-        p = a(1063),
-        E = a(82079),
-        S = a(62505),
-        C = a(56368),
-        h = a(25871),
-        b = a(1275),
-        g = a(20790),
-        f = a(17318),
+        l = a(27605),
+        s = a(30750),
+        i = a(47427),
+        c = a(8004),
+        d = a(16610),
+        m = a(91618),
+        u = a(3783),
+        _ = a(86878),
+        v = a(35427),
+        p = a(68985),
+        E = a(93243),
+        S = a(30851),
+        C = a(42855),
+        h = a(80886),
+        b = a(27784),
+        g = a(81913),
+        f = a(71741),
         B = a.n(f),
-        I = a(87539),
-        y = a(21904),
-        G = a(701),
-        D = a(71161),
-        A = a(11837),
-        N = a(19304),
-        w = a(14826),
-        T = a(32765),
-        O = a(17547),
-        k = a(69338),
-        x = a(5089),
+        I = a(91552),
+        y = a(24827),
+        G = a(62613),
+        D = a(25006),
+        A = a(83999),
+        N = a(13129),
+        w = a(31846),
+        T = a(37563),
+        O = a(10162),
+        k = a(46882),
+        x = a(90366),
         M = a.n(x),
-        R = a(43840),
-        U = a(23715),
+        R = a(85305),
+        U = a(7769),
         P = a.n(U);
       const L = (0, l.Pi)((e) => {
           const {
@@ -511,21 +511,21 @@
           : i.createElement("div", { className: M().OtherEvents_EventCtn });
       }
     },
-    25911: (e, t, a) => {
+    5870: (e, t, a) => {
       "use strict";
       a.r(t), a.d(t, { default: () => pe });
-      a(1721);
-      var n = a(89526),
-        r = a(59934),
-        o = a(71209),
-        l = a(33940),
-        s = a(52868),
+      a(7765);
+      var n = a(47427),
+        r = a(8285),
+        o = a(69406),
+        l = a(85556),
+        s = a(80751),
         i = a.n(s),
-        c = a(59621),
-        d = a(47165),
-        m = a(46486),
-        u = a(23217),
-        _ = a(32765);
+        c = a(54842),
+        d = a(35427),
+        m = a(64730),
+        u = a(16649),
+        _ = a(37563);
       class v {
         constructor() {
           (this.m_bShowOnlyVideo = !1),
@@ -728,30 +728,30 @@
         }
       }
       (0, l.gn)([c.LO], v.prototype, "m_curDebugInfo", void 0);
-      var p = a(88464),
-        E = a(55844),
-        S = a(7671),
-        C = a(43628),
+      var p = a(27605),
+        E = a(6399),
+        S = a(58331),
+        C = a(84426),
         h = a.n(C),
-        b = a(98889),
-        g = a(82079),
-        f = a(10412),
-        B = a(57605),
-        I = a(17547),
-        y = a(49234),
-        G = a(5029),
-        D = a(17318),
+        b = a(36453),
+        g = a(93243),
+        f = a(82071),
+        B = a(1485),
+        I = a(10162),
+        y = a(32144),
+        G = a(71472),
+        D = a(71741),
         A = a.n(D),
-        N = a(44421),
-        w = a(99307),
-        T = a(57742),
-        O = a(19304),
-        k = a(60161),
-        x = a(14826),
-        M = a(82988),
-        R = a(21904),
-        U = a(88443),
-        P = a(42701);
+        N = a(85884),
+        w = a(50898),
+        T = a(90069),
+        O = a(13129),
+        k = a(50423),
+        x = a(31846),
+        M = a(71630),
+        R = a(24827),
+        U = a(24549),
+        P = a(63024);
       const L = (e) => {
           const t = (0, n.useRef)(null),
             [a, r] = (0, n.useState)(null);
@@ -1147,11 +1147,11 @@
               ),
           );
         };
-      var H = a(55395),
-        z = a(11301),
-        F = a(50355),
-        X = a(24448),
-        W = a(84436);
+      var H = a(8845),
+        z = a(42411),
+        F = a(38605),
+        X = a(28738),
+        W = a(52248);
       function Z(e) {
         const t = X.y$.GetProfileByAccountID(e.GetAccountID());
         if (t) {
@@ -1214,13 +1214,13 @@
           )
         );
       };
-      var K = a(83315),
-        Y = a(25871),
-        j = a(32905),
-        $ = a(701),
-        Q = a(75962),
-        J = a(207),
-        ee = a(41917);
+      var K = a(30750),
+        Y = a(80886),
+        j = a(80212),
+        $ = a(62613),
+        Q = a(14609),
+        J = a(13499),
+        ee = a(421);
       function te(e) {
         const { broadcasterSteamID: t } = e,
           a = t.ConvertTo64BitString(),
@@ -1372,8 +1372,8 @@
             }),
           );
         };
-      var oe = a(70651),
-        le = a(69338);
+      var oe = a(27842),
+        le = a(46882);
       const se = (e) => {
           if (!_.L7.is_support) return null;
           const t = (t, a) => {
@@ -1881,7 +1881,7 @@
             ),
           );
         });
-      var _e = a(56368);
+      var _e = a(42855);
       let ve = { BroadcastWatch: (e) => `/broadcast/(watch|watchnew)/${e}` };
       function pe(e) {
         const [t, a] = n.useState(!0);

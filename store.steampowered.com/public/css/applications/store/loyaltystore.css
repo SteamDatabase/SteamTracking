@@ -339,8 +339,8 @@ body.v6.rewards .ModalPosition_Content {
   background: -webkit-linear-gradient(130deg, #d7e9f1, #78a9e2);
   background-clip: text;
   -webkit-background-clip: text;
-  color: rgba(0, 0, 0, 0);
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  color: transparent;
+  -webkit-text-fill-color: transparent;
 }
 .styles_PageHomeTopLink_1JlZb {
   margin-top: 10px;
@@ -402,12 +402,8 @@ body.v6.rewards .ModalPosition_Content {
   display: flex;
   align-items: center;
   margin: 25px auto 0px auto;
-  -webkit-mask-image: linear-gradient(
-    to bottom,
-    rgb(0, 0, 0),
-    rgba(0, 0, 0, 0.2) 70%
-  );
-  mask-image: linear-gradient(to bottom, rgb(0, 0, 0), rgba(0, 0, 0, 0.2) 70%);
+  -webkit-mask-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0.2) 70%);
+  mask-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0.2) 70%);
 }
 .styles_PageItemsContainer_NiGcL {
   display: flex;
@@ -2445,7 +2441,7 @@ body.v6.rewards .ModalPosition_Content {
   width: 13px;
   height: 13px;
   z-index: 4;
-  fill: rgba(235, 235, 235, 0.5960784314);
+  fill: #ebebeb98;
 }
 .rewarditem_ItemContainer_skI5t
   .rewarditem_Item_CcuoO
@@ -2713,7 +2709,7 @@ body.v6.rewards .ModalPosition_Content {
   background-image: linear-gradient(90deg, #c5cbd8 70%, rgba(0, 0, 0, 0));
   -webkit-background-clip: text;
   background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-fill-color: transparent;
   transition-duration: 0.4s;
   transition-timing-function: cubic-bezier(0, 0.73, 0.48, 1);
   transition-property: transform;
@@ -2736,8 +2732,8 @@ body.v6.rewards .ModalPosition_Content {
   background: linear-gradient(
     to bottom,
     rgba(242, 246, 248, 0.459) 0%,
-    rgb(216, 225, 231) 50%,
-    rgb(181, 198, 208) 52%,
+    #d8e1e7 50%,
+    #b5c6d0 52%,
     rgba(224, 239, 249, 0) 100%
   );
   position: absolute;
@@ -2898,7 +2894,7 @@ body.v6.rewards .ModalPosition_Content {
   width: 13px;
   height: 13px;
   z-index: 4;
-  fill: rgba(235, 235, 235, 0.5960784314);
+  fill: #ebebeb98;
 }
 .rewarditem_ItemWideContainer_26i5M
   .rewarditem_Item_CcuoO
@@ -3174,7 +3170,7 @@ body.v6.rewards .ModalPosition_Content {
   background-image: linear-gradient(90deg, #c5cbd8 70%, #c5cbd8);
   -webkit-background-clip: text;
   background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-fill-color: transparent;
   transition-duration: 0.4s;
   transition-timing-function: cubic-bezier(0, 0.73, 0.48, 1);
   transition-property: transform;
@@ -3197,8 +3193,8 @@ body.v6.rewards .ModalPosition_Content {
   background: linear-gradient(
     to bottom,
     rgba(242, 246, 248, 0.459) 0%,
-    rgb(216, 225, 231) 50%,
-    rgb(181, 198, 208) 52%,
+    #d8e1e7 50%,
+    #b5c6d0 52%,
     rgba(224, 239, 249, 0) 100%
   );
   position: absolute;
@@ -4764,7 +4760,7 @@ body.v6.rewards .ModalPosition_Content {
   background: linear-gradient(
     to bottom,
     rgba(6, 25, 51, 0.86) 0%,
-    rgba(0, 0, 0, 0) 60%
+    #00000000 60%
   );
 }
 .fadedbackground_BackgroundFadeImage_3YNnW {
@@ -7210,57 +7206,37 @@ body.v6.rewards .ModalPosition_Content {
 }
 .page_HomeBackground_1zw0I,
 .page_ParallaxBackground_1vgF7 {
-  -webkit-mask-image: linear-gradient(
-    to bottom,
-    rgb(0, 0, 0),
-    rgba(0, 0, 0, 0) 70%
-  );
-  mask-image: linear-gradient(to bottom, rgb(0, 0, 0), rgba(0, 0, 0, 0) 70%);
+  -webkit-mask-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0) 70%);
+  mask-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0) 70%);
   transform: translateZ(-1px) translateY(-5%) scale(2) rotateY(0deg);
 }
 @media (max-width: 2000px) {
   .page_HomeBackground_1zw0I,
   .page_ParallaxBackground_1vgF7 {
-    -webkit-mask-image: linear-gradient(
-      to bottom,
-      rgb(0, 0, 0),
-      rgba(0, 0, 0, 0) 55%
-    );
-    mask-image: linear-gradient(to bottom, rgb(0, 0, 0), rgba(0, 0, 0, 0) 55%);
+    -webkit-mask-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0) 55%);
+    mask-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0) 55%);
   }
 }
 @media (max-width: 1600px) {
   .page_HomeBackground_1zw0I,
   .page_ParallaxBackground_1vgF7 {
-    -webkit-mask-image: linear-gradient(
-      to bottom,
-      rgb(0, 0, 0),
-      rgba(0, 0, 0, 0) 50%
-    );
-    mask-image: linear-gradient(to bottom, rgb(0, 0, 0), rgba(0, 0, 0, 0) 50%);
+    -webkit-mask-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0) 50%);
+    mask-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0) 50%);
   }
 }
 @media (max-width: 1280px) {
   .page_HomeBackground_1zw0I,
   .page_ParallaxBackground_1vgF7 {
-    -webkit-mask-image: linear-gradient(
-      to bottom,
-      rgb(0, 0, 0),
-      rgba(0, 0, 0, 0) 30%
-    );
-    mask-image: linear-gradient(to bottom, rgb(0, 0, 0), rgba(0, 0, 0, 0) 30%);
+    -webkit-mask-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0) 30%);
+    mask-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0) 30%);
     background-size: 120%;
   }
 }
 @media (max-width: 900px) {
   .page_HomeBackground_1zw0I,
   .page_ParallaxBackground_1vgF7 {
-    -webkit-mask-image: linear-gradient(
-      to bottom,
-      rgb(0, 0, 0),
-      rgba(0, 0, 0, 0) 32%
-    );
-    mask-image: linear-gradient(to bottom, rgb(0, 0, 0), rgba(0, 0, 0, 0) 32%);
+    -webkit-mask-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0) 32%);
+    mask-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0) 32%);
     background-size: 150%;
   }
 }
@@ -7268,12 +7244,8 @@ body.v6.rewards .ModalPosition_Content {
   .page_HomeBackground_1zw0I,
   .page_ParallaxBackground_1vgF7 {
     background-position: top;
-    -webkit-mask-image: linear-gradient(
-      to bottom,
-      rgb(0, 0, 0),
-      rgba(0, 0, 0, 0) 37%
-    );
-    mask-image: linear-gradient(to bottom, rgb(0, 0, 0), rgba(0, 0, 0, 0) 37%);
+    -webkit-mask-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0) 37%);
+    mask-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0) 37%);
     background-size: 220%;
   }
 }
@@ -7313,7 +7285,7 @@ body.v6.rewards .ModalPosition_Content {
   background: linear-gradient(130deg, #d7e9f1, #78a9e2);
   -webkit-background-clip: text;
   background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-fill-color: transparent;
   padding-top: 60px;
 }
 .page_PageSubtitle_1j9rP {
@@ -7698,7 +7670,7 @@ body.v6.rewards .ModalPosition_Content {
   white-space: nowrap;
 }
 .loyaltyprimarynav_Focused_tLuQZ {
-  background-color: rgba(119, 119, 119, 0.3333333333);
+  background-color: #77777755;
 }
 .scrollabletabs_ItemContainer_25fHe {
   display: flex;
@@ -7731,7 +7703,7 @@ body.v6.rewards .ModalPosition_Content {
 }
 .scrollabletabs_ItemContainer_25fHe::-webkit-scrollbar {
   height: 0;
-  background: rgba(0, 0, 0, 0);
+  background: transparent;
 }
 .chatroomeffects_animation-container_3tul6 {
   animation-fill-mode: none;
@@ -11514,10 +11486,10 @@ body.v6.rewards .ModalPosition_Content {
 .ingame .steamavatar_avatarStatus_1yIzy {
   background: linear-gradient(
     to bottom,
-    rgb(140, 214, 29) 0%,
-    rgb(161, 244, 16) 30%,
-    rgb(161, 244, 16) 70%,
-    rgb(140, 214, 29) 100%
+    #8cd61d 0%,
+    #a1f410 30%,
+    #a1f410 70%,
+    #8cd61d 100%
   );
 }
 .ingame .steamavatar_avatarStatus_1yIzy.GamepadMode,
@@ -11534,19 +11506,19 @@ body.v6.rewards .ModalPosition_Content {
 .watchingbroadcast .steamavatar_avatarStatus_1yIzy {
   background: linear-gradient(
     to bottom,
-    rgb(156, 143, 212) 0%,
-    rgb(156, 143, 212) 30%,
-    rgb(156, 143, 212) 70%,
-    rgb(156, 143, 212) 100%
+    #9c8fd4 0%,
+    #9c8fd4 30%,
+    #9c8fd4 70%,
+    #9c8fd4 100%
   );
 }
 .online .steamavatar_avatarStatus_1yIzy {
   background: linear-gradient(
     to bottom,
-    rgb(109, 207, 246) 0%,
-    rgb(109, 207, 246) 30%,
-    rgb(109, 207, 246) 70%,
-    rgb(109, 207, 246) 100%
+    #6dcff6 0%,
+    #6dcff6 30%,
+    #6dcff6 70%,
+    #6dcff6 100%
   );
 }
 .online .steamavatar_avatarStatus_1yIzy.GamepadMode,
@@ -11609,7 +11581,7 @@ body.v6.rewards .ModalPosition_Content {
 }
 .steamavatar_avatar_1p_Qr.GamepadMode,
 .GamepadMode .steamavatar_avatar_1p_Qr {
-  border: 0px solid rgba(0, 0, 0, 0);
+  border: 0px solid transparent;
   height: 100%;
   width: 100%;
 }
@@ -11654,11 +11626,7 @@ body.v6.rewards .ModalPosition_Content {
   text-align: center;
   color: #efeaea;
   display: block;
-  background: linear-gradient(
-    to right,
-    rgb(138, 195, 41) 0%,
-    rgb(74, 122, 22) 60%
-  );
+  background: linear-gradient(to right, #8ac329 0%, #4a7a16 60%);
   background-position: 25%;
   background-size: 330% 100%;
   border-radius: 2px;
@@ -13590,7 +13558,7 @@ svg.index_SectionIcons_10ulS {
 }
 .index_GoldenFriendsList_3wLdE {
   border-radius: 20px;
-  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.6196078431);
+  box-shadow: 0px 4px 16px #0000009e;
 }
 .index_GoldStar1_1YAI6 {
   position: absolute;

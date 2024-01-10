@@ -9,7 +9,7 @@
   margin: 0 16px;
   padding: 4px 12px;
   cursor: pointer;
-  border-bottom: 4px solid rgba(0, 0, 0, 0);
+  border-bottom: 4px solid transparent;
   transition-property: border-bottom-color;
   transition-duration: 0.25s;
   font-size: 14px;
@@ -286,7 +286,7 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   fill: #fff;
   padding: 10px;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
   color: #fff;
   height: 24px;
   width: 24px;
@@ -315,7 +315,7 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   transform: rotateZ(180deg);
   transition: transform 0.2s ease-in-out;
 }
-.familyinvite_InviteSplashCtn_WkSxi {
+.familyinvite_InviteButtonCtn_O_QQd {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -324,7 +324,7 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   padding: 8px 24px;
   height: 84px;
 }
-.familyinvite_InviteSplashCtn_WkSxi .familyinvite_InviteSplash_2SFzY {
+.familyinvite_InviteButtonCtn_O_QQd .familyinvite_InviteButton_2hzB3 {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -335,7 +335,7 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   margin: 8px;
   max-width: 200px;
 }
-.familyinvite_InviteSplashCtn_WkSxi .familyinvite_InviteSplash_2SFzY svg {
+.familyinvite_InviteButtonCtn_O_QQd .familyinvite_InviteButton_2hzB3 svg {
   height: 32px;
   width: auto;
 }
@@ -359,7 +359,7 @@ a:hover {
   justify-content: center;
   padding: 10px;
   border-radius: 3px;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
   transition: background-color 80ms ease-in;
   width: 24px;
 }
@@ -1020,6 +1020,33 @@ a:hover {
     text-align: center;
   }
 }
+.familymember_FamilyMemberActions_1K1x9 {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 18px;
+  margin-bottom: 16px;
+}
+.familymember_FamilyMemberActions_1K1x9 > a {
+  background-color: #1a9fff;
+  color: #fff;
+  padding: 8px 24px;
+  border-radius: 2px;
+  flex-basis: 0;
+}
+@media screen and (max-width: 500px) {
+  .familymember_FamilyMemberActions_1K1x9 {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .familymember_FamilyMemberActions_1K1x9 > a {
+    padding: 12px 24px;
+    flex-basis: 0;
+    flex-grow: 0.8;
+    text-align: center;
+  }
+}
 .familymember_FamilyMemberManagementButtons_-kADz {
   display: flex;
   justify-content: flex-end;
@@ -1113,7 +1140,7 @@ a:hover {
 .familyparentalsettings_ParentalGameListHeader_2oJ9B
   .familyparentalsettings_SelectorCtn_257si
   button {
-  background-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
   padding: 3px;
   height: 18px;
   width: 18px;
@@ -1254,23 +1281,44 @@ a:hover {
 .familyparentalsettings_ParentalPlaytimeWindowsDialog_1Ezae
   .DialogContent_InnerWidth {
   max-width: 672px;
-  width: 672px;
+}
+@media screen and (min-width: 910px) {
+  .familyparentalsettings_ParentalPlaytimeWindowsDialog_1Ezae {
+    width: 672px;
+  }
 }
 .familyparentalsettings_ParentalPlaytimeWindowsDialog_1Ezae .DialogBodyText {
   margin-bottom: 0px;
 }
 .familyparentalsettings_ParentalPlaytimeWindows_11oc_ {
-  min-width: 500px;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 20px;
 }
+@media screen and (min-width: 620px) {
+  .familyparentalsettings_ParentalPlaytimeWindows_11oc_ {
+    min-width: 500px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .familyparentalsettings_ParentalPlaytimeWindows_11oc_
+    .familyparentalsettings_Grid_2arYw {
+    display: none;
+  }
+}
+@media screen and (min-width: 501px) {
+  .familyparentalsettings_ParentalPlaytimeWindows_11oc_
+    .familyparentalsettings_Input_y-FOn {
+    display: none;
+  }
+}
 .familyparentalsettings_ParentalPlaytimeGrid_l1Uf2 {
+  flex-grow: 1;
   display: grid;
-  grid-template-columns: repeat(48, 14px);
+  grid-template-columns: repeat(48, 2%);
   grid-template-rows: 30px 10px auto;
-  overflow: hidden;
+  justify-content: center;
 }
 .familyparentalsettings_ParentalPlaytimeGrid_l1Uf2
   .familyparentalsettings_Minutes_2q90E {
@@ -1351,12 +1399,48 @@ a:hover {
   align-items: center;
   gap: 10px;
 }
+@media screen and (max-width: 500px) {
+  .familyparentalsettings_ParentalPlaytimeWindowsDialogInner_w9peV
+    .familyparentalsettings_TopRow_3jjYv {
+    flex-direction: column;
+    align-items: start;
+  }
+}
+@media screen and (max-width: 500px) {
+  .familyparentalsettings_ParentalPlaytimeWindowsDialogInner_w9peV
+    .familyparentalsettings_TopRow_3jjYv
+    .familyparentalsettings_DaySelector_h80CX {
+    min-width: 30%;
+  }
+}
 .familyparentalsettings_ParentalPlaytimeWindowsDialogInner_w9peV
   .familyparentalsettings_Right_3r2iJ {
   display: flex;
   flex-grow: 1;
   flex-direction: column;
   overflow: hidden;
+}
+@media screen and (max-width: 500px) {
+  .familyparentalsettings_ParentalPlaytimeWindowsDialogInner_w9peV
+    .familyparentalsettings_Right_3r2iJ {
+    flex-direction: row;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .familyparentalsettings_ParentalPlaytimeWindowsDialogInner_w9peV
+    .familyparentalsettings_Right_3r2iJ
+    .familyparentalsettings_PlaytimeDescription_1--tA {
+    text-align: left;
+    overflow: hidden;
+    white-space: normal;
+    flex-grow: 1;
+  }
+  .familyparentalsettings_ParentalPlaytimeWindowsDialogInner_w9peV
+    .familyparentalsettings_Right_3r2iJ
+    .familyparentalsettings_PlaytimeButtons_2zGFi {
+    flex-shrink: 0;
+  }
 }
 .familyparentalsettings_ParentalPlaytimeWindowsDialogInner_w9peV
   .familyparentalsettings_DaySelector_h80CX {
@@ -1389,6 +1473,11 @@ a:hover {
   flex-direction: row;
   gap: 5px;
   align-items: center;
+}
+.familyparentalsettings_ParentalCopySelector_2RfjJ
+  .familyparentalsettings_ButtonCtn_2R0PG {
+  display: flex;
+  flex-direction: column;
 }
 .familyparentalsettings_ParentalCopySelector_2RfjJ
   .familyparentalsettings_ButtonWrapper_1QZ73 {
@@ -1432,6 +1521,49 @@ a:hover {
 }
 .familyparentalsettings_ViewSelector_2YLQ1:hover {
   color: #fff;
+}
+.familyparentalsettings_ParentalPlaytimeInput_1HPx9 {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  column-gap: 5px;
+}
+.familyparentalsettings_ParentalPlaytimeInput_1HPx9
+  .familyparentalsettings_Button_1snFf.familyparentalsettings_Button_1snFf {
+  min-width: auto;
+  width: 32px;
+}
+.familyparentalsettings_ParentalPlaytimeInput_1HPx9
+  .familyparentalsettings_ButtonWrapper_1QZ73 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.familyparentalsettings_Datetime_e_tMs.rdtOpen .rdtPicker {
+  min-width: auto;
+  width: 100%;
+  border: none;
+  box-shadow: none;
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.familyparentalsettings_Datetime_e_tMs.rdtOpen
+  .rdtPicker
+  .rdtTime
+  .rdtCounters
+  .rdtCounter {
+  width: 35px;
+}
+.familyparentalsettings_Datetime_e_tMs.rdtOpen
+  .rdtPicker
+  .rdtTime
+  .rdtCounters
+  .rdtCounter
+  .rdtCount {
+  font-size: 1em;
 }
 .familygames_FamilyGames_3Pnf9 {
   display: flex;
@@ -1532,16 +1664,16 @@ a:hover {
   height: 16px;
   width: 16px;
 }
-.appgrid_AppGridItem_3Ti0O {
+.appgrid_AppGridItem_cel2P {
   position: relative;
   height: 100%;
   box-sizing: border-box;
   overflow: hidden;
 }
-.appgrid_AppGridItem_3Ti0O.appgrid_NoImage_ccEyP {
+.appgrid_AppGridItem_cel2P.appgrid_NoImage_1-aFU {
   border: 1px solid #fff;
 }
-.appgrid_AppGridItem_3Ti0O .appgrid_Capsule_1FHOJ {
+.appgrid_AppGridItem_cel2P .appgrid_Capsule_3F_x5 {
   position: absolute;
   top: 0;
   left: 0;
@@ -1549,28 +1681,226 @@ a:hover {
   height: 100%;
   opacity: 0;
 }
-.appgrid_AppGridItem_3Ti0O.appgrid_Loaded_3_iQe .appgrid_Capsule_1FHOJ {
+.appgrid_AppGridItem_cel2P.appgrid_Loaded_2OzGy .appgrid_Capsule_3F_x5 {
   opacity: 1;
 }
-.appgrid_AppGridItem_3Ti0O.appgrid_Selectable_1coM2 {
+.appgrid_AppGridItem_cel2P.appgrid_Selectable_1VYcg {
   cursor: pointer;
 }
-.appgrid_Label_1vlhD {
+.appgrid_Label_1Pku- {
   position: relative;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
   padding: 6px;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.virtualizedgrid_VirtualizedGridWrapper_1FuQ7 {
+.virtualizedgrid_VirtualizedGridWrapper_R33oy {
   box-sizing: border-box;
   height: 100%;
 }
-.virtualizedgrid_VirtualizedGridRow_1aH3s {
+.virtualizedgrid_VirtualizedGridRow_3yp3J {
   display: flex;
   flex-direction: row;
   gap: 5px;
   box-sizing: border-box;
+}
+/*!
+ * https://github.com/arqex/react-datetime
+ */
+.rdt {
+  position: relative;
+}
+.rdtPicker {
+  display: none;
+  position: absolute;
+  min-width: 250px;
+  padding: 4px;
+  margin-top: 1px;
+  z-index: 99999 !important;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #f9f9f9;
+}
+.rdtOpen .rdtPicker {
+  display: block;
+}
+.rdtStatic .rdtPicker {
+  box-shadow: none;
+  position: static;
+}
+.rdtPicker .rdtTimeToggle {
+  text-align: center;
+}
+.rdtPicker table {
+  width: 100%;
+  margin: 0;
+}
+.rdtPicker td,
+.rdtPicker th {
+  text-align: center;
+  height: 28px;
+}
+.rdtPicker td {
+  cursor: pointer;
+}
+.rdtPicker td.rdtDay:hover,
+.rdtPicker td.rdtHour:hover,
+.rdtPicker td.rdtMinute:hover,
+.rdtPicker td.rdtSecond:hover,
+.rdtPicker .rdtTimeToggle:hover {
+  background: #eee;
+  cursor: pointer;
+}
+.rdtPicker td.rdtOld,
+.rdtPicker td.rdtNew {
+  color: #999;
+}
+.rdtPicker td.rdtToday {
+  position: relative;
+}
+.rdtPicker td.rdtToday:before {
+  content: "";
+  display: inline-block;
+  border-left: 7px solid transparent;
+  border-bottom: 7px solid #428bca;
+  border-top-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+}
+.rdtPicker td.rdtActive,
+.rdtPicker td.rdtActive:hover {
+  background-color: #428bca;
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+.rdtPicker td.rdtActive.rdtToday:before {
+  border-bottom-color: #fff;
+}
+.rdtPicker td.rdtDisabled,
+.rdtPicker td.rdtDisabled:hover {
+  background: none;
+  color: #999;
+  cursor: not-allowed;
+}
+.rdtPicker td span.rdtOld {
+  color: #999;
+}
+.rdtPicker td span.rdtDisabled,
+.rdtPicker td span.rdtDisabled:hover {
+  background: none;
+  color: #999;
+  cursor: not-allowed;
+}
+.rdtPicker th {
+  border-bottom: 1px solid #f9f9f9;
+}
+.rdtPicker .dow {
+  width: 14.2857%;
+  border-bottom: none;
+  cursor: default;
+}
+.rdtPicker th.rdtSwitch {
+  width: 100px;
+}
+.rdtPicker th.rdtNext,
+.rdtPicker th.rdtPrev {
+  font-size: 21px;
+  vertical-align: top;
+}
+.rdtPrev span,
+.rdtNext span {
+  display: block;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.rdtPicker th.rdtDisabled,
+.rdtPicker th.rdtDisabled:hover {
+  background: none;
+  color: #999;
+  cursor: not-allowed;
+}
+.rdtPicker thead tr:first-of-type th {
+  cursor: pointer;
+}
+.rdtPicker thead tr:first-of-type th:hover {
+  background: #eee;
+}
+.rdtPicker tfoot {
+  border-top: 1px solid #f9f9f9;
+}
+.rdtPicker button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.rdtPicker button:hover {
+  background-color: #eee;
+}
+.rdtPicker thead button {
+  width: 100%;
+  height: 100%;
+}
+td.rdtMonth,
+td.rdtYear {
+  height: 50px;
+  width: 25%;
+  cursor: pointer;
+}
+td.rdtMonth:hover,
+td.rdtYear:hover {
+  background: #eee;
+}
+.rdtCounters {
+  display: inline-block;
+}
+.rdtCounters > div {
+  float: left;
+}
+.rdtCounter {
+  height: 100px;
+}
+.rdtCounter {
+  width: 40px;
+}
+.rdtCounterSeparator {
+  line-height: 100px;
+}
+.rdtCounter .rdtBtn {
+  height: 40%;
+  line-height: 40px;
+  cursor: pointer;
+  display: block;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.rdtCounter .rdtBtn:hover {
+  background: #eee;
+}
+.rdtCounter .rdtCount {
+  height: 20%;
+  font-size: 1.2em;
+}
+.rdtMilli {
+  vertical-align: middle;
+  padding-left: 8px;
+  width: 48px;
+}
+.rdtMilli input {
+  width: 100%;
+  font-size: 1.2em;
+  margin-top: 37px;
+}
+.rdtTime td {
+  cursor: default;
 }
 .familyrequests_FamilyRequests_1VbIw {
   display: flex;

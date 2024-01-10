@@ -3,7 +3,7 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [4158],
   {
-    5089: (e) => {
+    90366: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         OtherEventsCtn: "eventrow_OtherEventsCtn_1qNsZ",
@@ -34,7 +34,7 @@
         AppCapsulePrice: "eventrow_AppCapsulePrice_Jq75m",
       };
     },
-    81124: (e) => {
+    49065: (e) => {
       e.exports = {
         MarketingMessagePage: "messagelist_MarketingMessagePage_1HVoK",
         MessageListPage: "messagelist_MessageListPage_1N7O3",
@@ -59,7 +59,7 @@
         ExitDone: "messagelist_ExitDone_3cFXR",
       };
     },
-    37977: (e) => {
+    64478: (e) => {
       e.exports = {
         MainContainer: "featuredlc_MainContainer_T3ysk",
         BackgroundImage: "featuredlc_BackgroundImage_3vQ5a",
@@ -80,7 +80,7 @@
         MessageFooter: "featuredlc_MessageFooter_2S4fB",
       };
     },
-    3028: (e) => {
+    92088: (e) => {
       e.exports = {
         Dummy: "featurevideo_Dummy_Bz-g3",
         PosterCtn: "featurevideo_PosterCtn_24bJJ",
@@ -88,7 +88,7 @@
         Video: "featurevideo_Video_2bH_J",
       };
     },
-    92894: (e) => {
+    4220: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         MessageContent: "image_MessageContent_rohJ-",
@@ -113,7 +113,7 @@
         ButtonContainer: "image_ButtonContainer_3CVNg",
       };
     },
-    1362: (e, t, a) => {
+    53545: (e, t, a) => {
       "use strict";
       a.d(t, {
         Ke: () => h,
@@ -122,17 +122,17 @@
         Q2: () => M,
         wM: () => E,
       });
-      var s = a(33940),
-        n = a(5615),
-        r = a(89526),
-        i = a(40442),
-        l = a(68333),
-        o = a(31527),
-        c = a(32765),
-        m = a(11195),
-        u = a(36704),
-        d = a(23801),
-        g = a(59621);
+      var s = a(85556),
+        n = a(42718),
+        r = a(47427),
+        i = a(77936),
+        l = a(35750),
+        o = a(44237),
+        c = a(37563),
+        m = a(80998),
+        u = a(51465),
+        d = a(62210),
+        g = a(54842);
       class _ {
         constructor(e) {
           (this.m_setMessagesSeen = new Set()), (this.m_SteamInterface = e);
@@ -424,35 +424,35 @@
         };
       }
     },
-    31245: (e, t, a) => {
+    40833: (e, t, a) => {
       "use strict";
       a.d(t, { B: () => w, O: () => T });
-      var s = a(89526),
-        n = a(62983),
-        r = a(44026),
-        i = a(51438),
-        l = a(16221),
-        o = a(98009),
-        c = a(54671),
-        m = a(85886),
-        u = a(25871),
-        d = a(5089),
-        g = a(43840),
-        _ = a(44421),
-        p = a(23715),
+      var s = a(47427),
+        n = a(16610),
+        r = a(82493),
+        i = a(91618),
+        l = a(3783),
+        o = a(28347),
+        c = a(77151),
+        m = a(86437),
+        u = a(80886),
+        d = a(90366),
+        g = a(85305),
+        _ = a(85884),
+        p = a(7769),
         v = a.n(p),
-        E = a(67935),
-        f = a(21219),
-        h = a(87539),
-        M = a(3991),
-        y = a(33406),
-        C = a(98389),
-        S = a(42317),
-        b = a(71161),
-        P = a(19304),
-        G = a(14826),
-        A = a(207),
-        D = a(32765);
+        E = a(47625),
+        f = a(57803),
+        h = a(91552),
+        M = a(52841),
+        y = a(83502),
+        C = a(34913),
+        S = a(22446),
+        b = a(25006),
+        P = a(13129),
+        G = a(31846),
+        A = a(13499),
+        D = a(37563);
       const T = "capsule_index_";
       function w(e) {
         const {
@@ -643,12 +643,12 @@
         );
       }
     },
-    39120: (e, t, a) => {
+    40945: (e, t, a) => {
       "use strict";
       a.d(t, { KY: () => l, Ks: () => c, li: () => o });
-      var s = a(89526),
-        n = a(34433),
-        r = a(32765);
+      var s = a(47427),
+        n = a(43235),
+        r = a(37563);
       const i = s.createContext({ setLegalText: void 0 });
       function l() {
         return !!s.useContext(i).setLegalText;
@@ -697,10 +697,10 @@
         );
       }
     },
-    12360: (e, t, a) => {
+    18641: (e, t, a) => {
       "use strict";
       a.d(t, { P: () => n, h: () => r });
-      var s = a(89526);
+      var s = a(47427);
       function n(e) {
         const { title: t, bodyClassName: a, children: n } = e;
         return (
@@ -730,10 +730,10 @@
         }, [e]);
       }
     },
-    29551: (e, t, a) => {
+    54117: (e, t, a) => {
       "use strict";
       a.d(t, { W: () => n });
-      var s = a(14826);
+      var s = a(31846);
       function n(e, t = "#Played_", a = !1) {
         if (e >= 120) {
           let a = e / 60;
@@ -750,20 +750,20 @@
           : (0, s.Xx)(t + "Minutes", e);
       }
     },
-    5742: (e, t, a) => {
+    16305: (e, t, a) => {
       "use strict";
       a.d(t, { hF: () => _, pT: () => p });
-      var s = a(33940),
-        n = a(5615),
-        r = a(68333),
-        i = a(27070),
-        l = a(57361),
-        o = a(97940),
-        c = a(44973),
-        m = a(32765),
-        u = a(71161),
-        d = a(60161),
-        g = a(89526);
+      var s = a(85556),
+        n = a(42718),
+        r = a(35750),
+        i = a(40057),
+        l = a(22520),
+        o = a(82182),
+        c = a(65255),
+        m = a(37563),
+        u = a(25006),
+        d = a(50423),
+        g = a(47427);
       function _(e) {
         const t = (0, i.bY)();
         let a = (0, n.useQuery)(
@@ -814,12 +814,12 @@
         );
       }
     },
-    70572: (e, t, a) => {
+    94012: (e, t, a) => {
       "use strict";
       a.d(t, { H: () => l, U: () => o });
-      var s = a(89526),
-        n = a(59934),
-        r = a(59954);
+      var s = a(47427),
+        n = a(8285),
+        r = a(82756);
       const i = s.createContext({ prioritized_list: !1 });
       function l(e) {
         const [t, a] = s.useState(),
@@ -843,23 +843,23 @@
         return s.useContext(i).prioritized_list;
       }
     },
-    55861: (e, t, a) => {
+    70267: (e, t, a) => {
       "use strict";
       a.d(t, { v: () => ce, U: () => oe });
-      var s = a(89526),
-        n = a(40442),
-        r = a(1362),
-        i = a(39120),
-        l = a(32765),
-        o = a(53853),
-        c = a(5742),
-        m = a(44026),
-        u = a(33940),
-        d = a(52868),
+      var s = a(47427),
+        n = a(77936),
+        r = a(53545),
+        i = a(40945),
+        l = a(37563),
+        o = a(27299),
+        c = a(16305),
+        m = a(82493),
+        u = a(85556),
+        d = a(80751),
         g = a.n(d),
-        _ = a(5615),
-        p = a(57361),
-        v = a(44973);
+        _ = a(42718),
+        p = a(22520),
+        v = a(65255);
       function E(e) {
         const {
           isLoading: t,
@@ -897,19 +897,19 @@
         );
         return t || a ? null : s;
       }
-      var f = a(85886),
-        h = a(25871),
-        M = a(44421),
-        y = a(31245),
-        C = a(20983),
-        S = a(71161),
-        b = a(14826),
-        P = a(29551),
-        G = a(37977),
-        A = a(83315),
-        D = a(51438),
-        T = a(17547),
-        w = a(44865);
+      var f = a(86437),
+        h = a(80886),
+        M = a(85884),
+        y = a(40833),
+        C = a(61183),
+        S = a(25006),
+        b = a(31846),
+        P = a(54117),
+        G = a(64478),
+        A = a(30750),
+        D = a(91618),
+        T = a(10162),
+        w = a(92797);
       function I(e, t, a, s) {
         if (!s) return null;
         const n = a ? "?t=" + a : "";
@@ -917,7 +917,7 @@
           ? `${v.De.MEDIA_CDN_URL}steam/marketing/${e}/${s.path}${n}`
           : `${v.De.BASE_URL_SHARED_CDN}store_item_assets/mm/${e}/${t}/${s.path}${n}`;
       }
-      var L = a(4306);
+      var L = a(20417);
       function k(e) {
         var t;
         const { path: a, message: n, eLanguage: r } = e,
@@ -958,12 +958,12 @@
           )
         );
       }
-      a(75962);
-      var N = a(19304),
-        x = a(70572),
-        O = a(701),
-        R = a(207),
-        V = a(3028);
+      a(14609);
+      var N = a(13129),
+        x = a(94012),
+        O = a(62613),
+        R = a(13499),
+        V = a(92088);
       function H(e) {
         const t = oe(),
           [a, n] = (0, s.useState)(!1);
@@ -1048,7 +1048,7 @@
           }, [t]);
         return s.createElement(s.Fragment, null, a);
       }
-      var j = a(92894);
+      var j = a(4220);
       function $(e) {
         const { bLowBandwidthMode: t } = e,
           a = oe(),
@@ -1468,7 +1468,7 @@
           )
         );
       }
-      const me = s.lazy(() => a.e(938).then(a.bind(a, 18795)));
+      const me = s.lazy(() => a.e(938).then(a.bind(a, 21400)));
       function ue(e) {
         const { message: t, active: a, preview: i } = e,
           c = (0, n.jM)(l.De.LANGUAGE),
@@ -1489,11 +1489,11 @@
           : null;
       }
     },
-    53853: (e, t, a) => {
+    27299: (e, t, a) => {
       "use strict";
       a.d(t, { YW: () => r, j4: () => i, p8: () => l });
-      var s = a(89526),
-        n = a(59934);
+      var s = a(47427),
+        n = a(8285);
       function r() {
         const e = (0, n.TH)();
         return s.useMemo(() => {
@@ -1529,24 +1529,24 @@
         );
       }
     },
-    28986: (e, t, a) => {
+    45127: (e, t, a) => {
       "use strict";
       a.r(t), a.d(t, { MarketingMessageRoutes: () => I, default: () => L });
-      var s = a(96927),
-        n = a(70572),
-        r = a(1362),
-        i = a(89526),
-        l = a(59934),
-        o = a(57605),
-        c = a(14826),
-        m = a(53853),
-        u = a(81124),
-        d = a(701),
-        g = a(19304),
-        _ = a(22171),
-        p = a(12360),
-        v = a(69338),
-        E = a(55861);
+      var s = a(760),
+        n = a(94012),
+        r = a(53545),
+        i = a(47427),
+        l = a(8285),
+        o = a(1485),
+        c = a(31846),
+        m = a(27299),
+        u = a(49065),
+        d = a(62613),
+        g = a(13129),
+        _ = a(50321),
+        p = a(18641),
+        v = a(46882),
+        E = a(70267);
       const f = 8;
       function h(e) {
         const { MarketingMessagesStore: t } = e,
@@ -1771,11 +1771,11 @@
           ),
         );
       }
-      var G = a(27070),
-        A = a(19094),
-        D = a(39120),
-        T = a(71161),
-        w = a(32765);
+      var G = a(40057),
+        A = a(77581),
+        D = a(40945),
+        T = a(25006),
+        w = a(37563);
       const I = {
         List: () => `${s.Z.MarketingMessages()}list/`,
         Message: (e) => `${s.Z.MarketingMessages()}${e}`,

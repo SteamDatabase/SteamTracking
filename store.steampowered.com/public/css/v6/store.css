@@ -649,6 +649,10 @@ a#store_search_link img {
 	width: 930px;
 }
 
+#genre_flyout .popup_body.popup_body_notfull {
+    width: auto;
+}
+
 @media screen and (max-width: 910px)
 {
 	html.responsive #genre_flyout .popup_body,

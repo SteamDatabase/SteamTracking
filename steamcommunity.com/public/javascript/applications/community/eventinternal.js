@@ -3,10 +3,10 @@
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
   [3352],
   {
-    47340: (e) => {
+    65534: (e) => {
       e.exports = { SearchResults: "search_curator_SearchResults_3ao90" };
     },
-    47029: (e) => {
+    19758: (e) => {
       e.exports = {
         SectionContainer: "migratesaletool_SectionContainer_3ZElG",
         SectionTitle: "migratesaletool_SectionTitle_1-ftd",
@@ -14,7 +14,7 @@
         RecordInfoCtn: "migratesaletool_RecordInfoCtn_6eQgp",
       };
     },
-    13078: (e) => {
+    46452: (e) => {
       e.exports = {
         MigrateToolCtn: "migratetool_MigrateToolCtn_fGggy",
         ToolHeader: "migratetool_ToolHeader_2cI57",
@@ -29,14 +29,14 @@
         LoadEventsButton: "migratetool_LoadEventsButton_2qtK6",
       };
     },
-    52002: (e, t, a) => {
+    87699: (e, t, a) => {
       "use strict";
       a.d(t, { C: () => c, R: () => s });
-      var n = a(33940),
-        r = a(59621),
-        o = a(47165),
-        i = a(85651),
-        l = a(10412);
+      var n = a(85556),
+        r = a(54842),
+        o = a(35427),
+        i = a(64936),
+        l = a(82071);
       class s {
         constructor() {
           (this.m_mapBroadcasterSteamIDToEvents = new Map()),
@@ -190,36 +190,36 @@
       (0, n.gn)([r.LO], s.prototype, "m_mapBroadcasterSteamIDData", void 0);
       const c = new s();
     },
-    53376: (e, t, a) => {
+    18312: (e, t, a) => {
       "use strict";
       a.r(t), a.d(t, { default: () => X });
-      var n = a(96927),
-        r = a(13394),
-        o = a(33940),
-        i = a(52868),
+      var n = a(760),
+        r = a(74257),
+        o = a(85556),
+        i = a(80751),
         l = a.n(i),
-        s = a(59621),
-        c = a(88464),
-        d = a(89526),
-        m = a(47165),
-        u = a(16468),
-        g = a(57605),
-        p = a(99307),
-        h = a(57742),
-        v = a(701),
-        E = a(69338),
-        _ = a(60161),
-        f = a(14826),
-        S = a(23217),
-        I = a(32765),
-        C = a(47029),
-        D = a(40103),
-        A = a(74831),
-        M = a(69159),
-        B = a(17547),
-        T = a(1721),
-        b = a(81349),
-        w = a(47340);
+        s = a(54842),
+        c = a(27605),
+        d = a(47427),
+        m = a(35427),
+        u = a(78910),
+        g = a(1485),
+        p = a(50898),
+        h = a(90069),
+        v = a(62613),
+        E = a(46882),
+        _ = a(50423),
+        f = a(31846),
+        S = a(16649),
+        I = a(37563),
+        C = a(19758),
+        D = a(95315),
+        A = a(58670),
+        M = a(22042),
+        B = a(10162),
+        T = a(7765),
+        b = a(45284),
+        w = a(65534);
       const G = (e) => {
           const {
               strLabel: t,
@@ -324,7 +324,7 @@
             ),
           );
         };
-      var P = a(93317);
+      var P = a(43389);
       const y = (0, c.Pi)((e) => {
           const t = (function () {
             const [e, t] = d.useState(!F.Get().BHasLoadCompleted());
@@ -790,9 +790,9 @@
       }
       (0, o.gn)([s.LO], F.prototype, "m_mapSaleIDToInfo", void 0),
         (0, o.gn)([s.LO], F.prototype, "m_listSaleState", void 0);
-      var H = a(82079),
-        x = a(56368),
-        U = a(5029);
+      var H = a(93243),
+        x = a(42855),
+        U = a(71472);
       class W {
         constructor() {
           (this.m_rgApps = []),
@@ -923,8 +923,8 @@
       }
       (0, o.gn)([s.LO.shallow], W.prototype, "m_rgApps", void 0),
         (0, o.gn)([s.LO.shallow], W.prototype, "m_rgClanAccountIDs", void 0);
-      var V = a(74314),
-        z = a(13078),
+      var V = a(73941),
+        z = a(46452),
         q = a.n(z);
       const $ = (0, c.Pi)((e) => {
           const [t, a] = (0, d.useState)(!0);
@@ -1154,9 +1154,9 @@
             )
           );
         });
-      var Y = a(59934),
-        K = a(10412),
-        Z = (a(88026), a(71209));
+      var Y = a(8285),
+        K = a(82071),
+        Z = (a(34345), a(69406));
       function X(e) {
         const [t, a] = d.useState(!0);
         return (

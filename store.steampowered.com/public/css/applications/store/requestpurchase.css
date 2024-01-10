@@ -524,7 +524,7 @@
   fill: #fff;
   padding: 10px;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
   color: #fff;
   height: 24px;
   width: 24px;

@@ -4,7 +4,7 @@
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
   [543],
   {
-    18848: (e, t, n) => {
+    88149: (e, t, n) => {
       /**
        * @license React
        * react-dom-server-legacy.browser.production.min.js
@@ -14,7 +14,7 @@
        * This source code is licensed under the MIT license found in the
        * LICENSE file in the root directory of this source tree.
        */
-      var r = n(89526);
+      var r = n(47427);
       function o(e) {
         for (
           var t = "https://reactjs.org/docs/error-decoder.html?invariant=" + e,
@@ -1988,7 +1988,7 @@
         }),
         (t.version = "18.2.0");
     },
-    8114: (e, t, n) => {
+    40623: (e, t, n) => {
       /**
        * @license React
        * react-dom-server.browser.production.min.js
@@ -1998,7 +1998,7 @@
        * This source code is licensed under the MIT license found in the
        * LICENSE file in the root directory of this source tree.
        */
-      var r = n(89526);
+      var r = n(47427);
       function o(e) {
         for (
           var t = "https://reactjs.org/docs/error-decoder.html?invariant=" + e,
@@ -4037,10 +4037,10 @@
       }),
         (t.version = "18.2.0");
     },
-    82279: (e, t, n) => {
+    19178: (e, t, n) => {
       var r, o;
-      (r = n(18848)),
-        (o = n(8114)),
+      (r = n(88149)),
+        (o = n(40623)),
         (t.version = r.version),
         (t.renderToString = r.renderToString),
         (t.renderToStaticMarkup = r.renderToStaticMarkup),

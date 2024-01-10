@@ -1809,7 +1809,7 @@ strong {
 .partnereventeditor_EventCategoryNotExpandable_3gOyF:hover:after {
   left: 100%;
   top: 50%;
-  border: solid rgba(0, 0, 0, 0);
+  border: solid transparent;
   content: " ";
   height: 0;
   width: 0;
@@ -2852,12 +2852,12 @@ input.clanimagepicker_SearchInput_lwt4u {
   display: flex;
   justify-content: center;
   cursor: pointer;
-  border: 1px solid rgba(0, 0, 0, 0);
+  border: 1px solid transparent;
   border-image-source: url(../../../images/applications/community/glassborder_02.png?v=valveisgoodatcaching);
   border-image-width: 1px;
   border-image-repeat: stretch;
   border-image-slice: 7;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1450980392);
+  box-shadow: 0 0 12px #00000025;
 }
 .spotlight_MajorEventImageContainer_35tOs {
   width: fit-content;
@@ -2868,15 +2868,15 @@ input.clanimagepicker_SearchInput_lwt4u {
   -webkit-mask-image: linear-gradient(
     to right,
     rgba(0, 0, 0, 0) 0%,
-    rgb(0, 0, 0) 44px,
-    rgb(0, 0, 0) calc(100% - 44px),
+    black 44px,
+    black calc(100% - 44px),
     transparent 100%
   );
   mask-image: linear-gradient(
     to right,
     rgba(0, 0, 0, 0) 0%,
-    rgb(0, 0, 0) 44px,
-    rgb(0, 0, 0) calc(100% - 44px),
+    black 44px,
+    black calc(100% - 44px),
     transparent 100%
   );
   -webkit-mask-repeat: no-repeat;
@@ -3025,7 +3025,7 @@ input.clanimagepicker_SearchInput_lwt4u {
     rgba(0, 0, 0, 0) 0%,
     rgba(0, 0, 0, 0) 35%,
     black 45%,
-    rgb(0, 0, 0) 80%,
+    black 80%,
     rgba(0, 0, 0, 0) 100%
   );
   mask-image: linear-gradient(
@@ -3033,7 +3033,7 @@ input.clanimagepicker_SearchInput_lwt4u {
     rgba(0, 0, 0, 0) 0%,
     rgba(0, 0, 0, 0) 35%,
     black 45%,
-    rgb(0, 0, 0) 80%,
+    black 80%,
     rgba(0, 0, 0, 0) 100%
   );
   filter: blur(30px);
@@ -3092,7 +3092,7 @@ input.clanimagepicker_SearchInput_lwt4u {
   flex-direction: column;
 }
 .spotlight_AppDetailsSpotlightContainer_30w2v {
-  box-shadow: 1px 2px 12px 1px rgba(0, 0, 0, 0.3333333333);
+  box-shadow: 1px 2px 12px 1px #00000055;
 }
 .spotlight_AppDetailsSpotlightContainer_30w2v .spotlight_BottomShadow_1AACQ {
   display: none;
@@ -3177,7 +3177,7 @@ p a:hover {
 }
 .partnereventartwork_EventEditorDragTargetArea_13RCA {
   width: calc(100% - 20px);
-  border: 2px solid rgba(0, 0, 0, 0);
+  border: 2px solid transparent;
   justify-content: center;
   display: flex;
   flex-direction: column;
@@ -3287,7 +3287,7 @@ p a:hover {
 .partnereventartwork_LanguageSelectorSelected_1M7um:after {
   right: calc(100% + 1px);
   top: 10px;
-  border: solid rgba(0, 0, 0, 0);
+  border: solid transparent;
   content: " ";
   height: 0;
   width: 0;
@@ -3473,7 +3473,7 @@ p a:hover {
   padding: 16px;
 }
 .partnereventartwork_SelectImageBlock_3jEs0.partnereventartwork_Tips_1CHYZ {
-  background-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
   padding-left: 16px;
   padding-right: 16px;
 }
@@ -3513,7 +3513,7 @@ p a:hover {
     #399aec 10%,
     #225dce 80%
   );
-  background-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
   padding: 4px 20px;
   border-radius: 2px;
   border: none;
@@ -3706,7 +3706,7 @@ p a:hover {
   padding: 1px;
   left: 10px;
   margin-bottom: 14px;
-  border-top: 1px solid rgba(0, 0, 0, 0);
+  border-top: 1px solid transparent;
 }
 .artworkuploader_PreviewImgInfo_3Iv_t:hover {
   background-color: #000;
@@ -3987,7 +3987,7 @@ input.imageseachinput_SearchInput_1MoNl {
 .rdtPicker td.rdtToday:before {
   content: "";
   display: inline-block;
-  border-left: 7px solid rgba(0, 0, 0, 0);
+  border-left: 7px solid transparent;
   border-bottom: 7px solid #428bca;
   border-top-color: rgba(0, 0, 0, 0.2);
   position: absolute;
@@ -4492,7 +4492,7 @@ td.rdtYear:hover {
   margin-right: 0px;
   height: 100%;
   opacity: 0.8;
-  -webkit-mask: linear-gradient(180deg, rgb(0, 0, 0) 58%, rgba(0, 0, 0, 0) 95%),
+  -webkit-mask: linear-gradient(180deg, black 58%, rgba(0, 0, 0, 0) 95%),
     radial-gradient(
       15.77% 44.22% at 50% 104.95%,
       rgba(66, 66, 66, 0) 0%,
@@ -4510,7 +4510,7 @@ td.rdtYear:hover {
       rgba(0, 0, 0, 0.18) 83.33%,
       rgba(0, 0, 0, 0) 95.31%
     );
-  mask: linear-gradient(180deg, rgb(0, 0, 0) 58%, rgba(0, 0, 0, 0) 95%),
+  mask: linear-gradient(180deg, black 58%, rgba(0, 0, 0, 0) 95%),
     radial-gradient(
       15.77% 44.22% at 50% 104.95%,
       rgba(66, 66, 66, 0) 0%,
@@ -4949,7 +4949,7 @@ td.rdtYear:hover {
 }
 .ContentHubMainCarouselCapsule .animated_featured_capsule_Info_2mUNQ {
   padding: 20px;
-  background: rgba(0, 0, 0, 0.3098039216);
+  background: #0000004f;
   backdrop-filter: blur(20px);
   height: 308px;
   width: 100%;
@@ -4961,7 +4961,7 @@ td.rdtYear:hover {
   .WidgetTag {
   font-size: 12px;
   color: #c6d4df;
-  background-color: rgba(198, 212, 223, 0.1490196078);
+  background-color: #c6d4df26;
 }
 .ContentHubMainCarouselCapsule
   .animated_featured_capsule_Info_2mUNQ
@@ -4969,7 +4969,7 @@ td.rdtYear:hover {
   .TagBox
   .WidgetTag:hover {
   color: #fff;
-  background-color: rgba(198, 212, 223, 0.3176470588);
+  background-color: #c6d4df51;
 }
 .ContentHubMainCarouselCapsule
   .animated_featured_capsule_Info_2mUNQ
@@ -4996,7 +4996,7 @@ td.rdtYear:hover {
   .ReviewScore {
   font-size: 16px;
   font-weight: 500;
-  background: rgba(0, 0, 0, 0.2705882353);
+  background: #00000045;
   border-radius: 2px;
   width: fit-content;
   width: moz-fit-content;
@@ -5091,10 +5091,10 @@ td.rdtYear:hover {
 .ingame .steamavatar_avatarStatus_1yIzy {
   background: linear-gradient(
     to bottom,
-    rgb(140, 214, 29) 0%,
-    rgb(161, 244, 16) 30%,
-    rgb(161, 244, 16) 70%,
-    rgb(140, 214, 29) 100%
+    #8cd61d 0%,
+    #a1f410 30%,
+    #a1f410 70%,
+    #8cd61d 100%
   );
 }
 .ingame .steamavatar_avatarStatus_1yIzy.GamepadMode,
@@ -5111,19 +5111,19 @@ td.rdtYear:hover {
 .watchingbroadcast .steamavatar_avatarStatus_1yIzy {
   background: linear-gradient(
     to bottom,
-    rgb(156, 143, 212) 0%,
-    rgb(156, 143, 212) 30%,
-    rgb(156, 143, 212) 70%,
-    rgb(156, 143, 212) 100%
+    #9c8fd4 0%,
+    #9c8fd4 30%,
+    #9c8fd4 70%,
+    #9c8fd4 100%
   );
 }
 .online .steamavatar_avatarStatus_1yIzy {
   background: linear-gradient(
     to bottom,
-    rgb(109, 207, 246) 0%,
-    rgb(109, 207, 246) 30%,
-    rgb(109, 207, 246) 70%,
-    rgb(109, 207, 246) 100%
+    #6dcff6 0%,
+    #6dcff6 30%,
+    #6dcff6 70%,
+    #6dcff6 100%
   );
 }
 .online .steamavatar_avatarStatus_1yIzy.GamepadMode,
@@ -5186,7 +5186,7 @@ td.rdtYear:hover {
 }
 .steamavatar_avatar_1p_Qr.GamepadMode,
 .GamepadMode .steamavatar_avatar_1p_Qr {
-  border: 0px solid rgba(0, 0, 0, 0);
+  border: 0px solid transparent;
   height: 100%;
   width: 100%;
 }
@@ -5470,12 +5470,12 @@ td.rdtYear:hover {
 .personanameandstatus_playerName_r62qz {
   -webkit-mask: linear-gradient(
     to right,
-    rgb(0, 0, 0) calc(100% - 6px),
+    black calc(100% - 6px),
     rgba(0, 0, 0, 0.15) 100%
   );
   mask: linear-gradient(
     to right,
-    rgb(0, 0, 0) calc(100% - 6px),
+    black calc(100% - 6px),
     rgba(0, 0, 0, 0.15) 100%
   );
   flex: initial;
@@ -5522,12 +5522,12 @@ td.rdtYear:hover {
   margin-top: -1px;
   -webkit-mask: linear-gradient(
     to right,
-    rgb(0, 0, 0) calc(100% - 8px),
+    black calc(100% - 8px),
     rgba(0, 0, 0, 0.15) 100%
   );
   mask: linear-gradient(
     to right,
-    rgb(0, 0, 0) calc(100% - 8px),
+    black calc(100% - 8px),
     rgba(0, 0, 0, 0.15) 100%
   );
   padding-right: 24px;
@@ -6503,7 +6503,7 @@ td.rdtYear:hover {
 }
 .discoveryqueuewizard_RelevantCtn_FGuCn {
   padding: 0;
-  border-top: 1px solid rgba(172, 178, 201, 0.1411764706);
+  border-top: 1px solid #acb2c924;
   display: flex;
   flex-direction: column;
   margin: 4px 0px;
@@ -6632,7 +6632,7 @@ td.rdtYear:hover {
   font-size: 14px;
   opacity: 0.8;
   padding-bottom: 16px;
-  border-bottom: 1px solid rgba(172, 178, 201, 0.1411764706);
+  border-bottom: 1px solid #acb2c924;
   width: 50%;
   text-align: center;
 }
@@ -6789,7 +6789,7 @@ td.rdtYear:hover {
 }
 .discoveryqueuewizard_LearnMoreLink_3bCDZ:hover {
   color: #fff;
-  background-color: rgba(172, 178, 201, 0.1411764706);
+  background-color: #acb2c924;
   border-radius: 2px;
 }
 .discoveryqueuewizard_LearnMoreLink_3bCDZ:visited {
@@ -6797,7 +6797,7 @@ td.rdtYear:hover {
 }
 .discoveryqueuewizard_LearnMoreLink_3bCDZ.gpfocus {
   color: #fff;
-  background-color: rgba(172, 178, 201, 0.1411764706);
+  background-color: #acb2c924;
 }
 .discoveryqueuewizard_ControlsCtn_3UbRl {
   display: flex;
@@ -6812,7 +6812,7 @@ td.rdtYear:hover {
   box-shadow: none;
   box-sizing: border-box;
   position: relative;
-  background-color: rgba(172, 178, 201, 0.1411764706);
+  background-color: #acb2c924;
   cursor: pointer;
   text-align: center;
   user-select: none;
@@ -6849,7 +6849,7 @@ td.rdtYear:hover {
 .discoveryqueuewizard_QueueButton_19cHb:hover:not(
     .discoveryqueuewizard_Disabled_1yh4o
   ) {
-  background-color: rgba(172, 178, 201, 0.2784313725);
+  background-color: #acb2c947;
 }
 .discoveryqueuewizard_QueueButton_19cHb.gpfocus {
   background-color: #fff;
@@ -6976,7 +6976,7 @@ td.rdtYear:hover {
 }
 .discoveryqueuewizard_TradingCardCtn_36Qbj {
   display: flex;
-  background: rgba(131, 190, 236, 0.1215686275);
+  background: #83beec1f;
   padding: 16px 1vw;
   align-items: center;
   color: var(--gpStoreLighterGrey);
@@ -6991,7 +6991,7 @@ td.rdtYear:hover {
 .discoveryqueuewizard_TradingCardCtn_36Qbj
   .discoveryqueuewizard_TradingCardImage_3wa0d {
   transform: rotate(-10deg);
-  filter: drop-shadow(0px 8px 6px rgba(0, 0, 0, 0.1333333333));
+  filter: drop-shadow(0px 8px 6px #00000022);
 }
 @media screen and (max-width: 1400px) {
   .discoveryqueuewizard_TradingCardCtn_36Qbj
@@ -7139,7 +7139,7 @@ td.rdtYear:hover {
 }
 .discoveryqueuewidget_DiscoveryQueueWidgetCtn_1iOb7:hover,
 .discoveryqueuewidget_DiscoveryQueueWidgetCtn_1iOb7.gpfocus {
-  box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.2392156863);
+  box-shadow: 0px 6px 12px 0px #0000003d;
 }
 .discoveryqueuewidget_DiscoveryQueueWidgetCtn_1iOb7:hover
   .discoveryqueuewidget_WidgetHeaderCtn_3u5R_,
@@ -7316,8 +7316,8 @@ td.rdtYear:hover {
   width: 64px;
   height: 64px;
   border-radius: 50%;
-  background-color: rgba(0, 0, 0, 0.4);
-  border: 1px solid rgba(170, 170, 170, 0.2);
+  background-color: #0006;
+  border: 1px solid #aaa3;
   opacity: 0.75;
   transition-property: opacity;
   transition-duration: 0.16s;
@@ -7350,7 +7350,7 @@ td.rdtYear:hover {
   left: 8px;
   border-radius: 4px;
   z-index: 3;
-  background-color: rgba(0, 0, 0, 0.8666666667);
+  background-color: #000d;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -7446,7 +7446,7 @@ td.rdtYear:hover {
   display: flex;
   flex-direction: column;
   margin: 0px 8px 0px 8px;
-  background: rgba(0, 0, 0, 0.5019607843);
+  background: #00000080;
   backdrop-filter: blur(20px);
   gap: 6px;
   border-radius: 3px;
@@ -7478,7 +7478,7 @@ td.rdtYear:hover {
   overflow: hidden;
 }
 .salepointshopsmartdisplay_RewardClass_194Jt {
-  color: rgba(255, 255, 255, 0.4196078431);
+  color: #ffffff6b;
   font-style: italic;
 }
 @media screen and (max-width: 620px) {
@@ -7587,6 +7587,9 @@ td.rdtYear:hover {
 }
 .salelinksectioneditor_DialogSize_37mjY {
   min-width: 500px;
+}
+.salehardwarerestriction_SubCheckbox_2HC4z {
+  margin-left: 40px;
 }
 .socialshareeditor_InputCtn_32aXg {
   padding: 8px;

@@ -3,7 +3,7 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [4601],
   {
-    43628: (e) => {
+    84426: (e) => {
       e.exports = {
         strStreamIconCapsuleArtHeight: "90px",
         strStreamIconScreenshotArtHeight: "90px",
@@ -69,7 +69,7 @@
         rightPanel: "broadcast_embeddable_rightPanel_2Xp5Y",
       };
     },
-    61037: (e) => {
+    44488: (e) => {
       e.exports = {
         BroadcastChat: "broadcastchat_BroadcastChat_37jsi",
         ChatEntry: "broadcastchat_ChatEntry_3o0ss",
@@ -108,7 +108,7 @@
         SignInButton: "broadcastchat_SignInButton_26lxf",
       };
     },
-    91820: (e) => {
+    67348: (e) => {
       e.exports = {
         GiveawayWinnerBox: "broadcastchatannouncement_GiveawayWinnerBox_1iRcs",
         GiveawayWinnerAnnounced:
@@ -132,7 +132,7 @@
           "broadcastchatannouncement_GiveawayAlreadyRegistered_17sxy",
       };
     },
-    25202: (e) => {
+    20006: (e) => {
       e.exports = {
         BroadcastPlayerLite: "broadcastplayer_BroadcastPlayerLite_3YmNP",
         BroadcastPlayerLiteVideo:
@@ -142,7 +142,7 @@
           "broadcastplayer_BroadcastPlaceholderImg_3Hcqn",
       };
     },
-    27618: (e) => {
+    2339: (e) => {
       e.exports = {
         StoreSaleWidgetContainer_mini:
           "broadcastwidgets_StoreSaleWidgetContainer_mini_1Vz-y",
@@ -155,7 +155,7 @@
           "broadcastwidgets_StoreSaleWidgetShortDesc_mini_DvDV2",
       };
     },
-    43997: (e) => {
+    45557: (e) => {
       e.exports = {
         Container: "discussionwidget_Container_3BVe_",
         VoteContainer: "discussionwidget_VoteContainer_1uhQY",
@@ -189,7 +189,7 @@
         VoteButtonSelected: "discussionwidget_VoteButtonSelected_2c_5V",
       };
     },
-    72775: (e) => {
+    4471: (e) => {
       e.exports = {
         Link: "salebanner_Link_26cHo",
         Banner: "salebanner_Banner_2df4N",
@@ -197,7 +197,7 @@
         Mobile: "salebanner_Mobile_2w3oX",
       };
     },
-    36315: (e) => {
+    32410: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         FriendsListInsetShadowCtn:
@@ -207,42 +207,42 @@
           "insetshadow_FriendListInsetShadowBottom_2hL6s",
       };
     },
-    61909: (e, t, s) => {
+    71461: (e, t, s) => {
       "use strict";
       s.r(t),
         s.d(t, {
           BroadcastEmbeddablePopoutHeader: () => Mt,
           default: () => St,
         });
-      var a = s(33940),
-        n = s(52868),
+      var a = s(85556),
+        n = s(80751),
         r = s.n(n),
-        i = s(88464),
-        o = s(83315),
-        l = s(89526),
-        d = s(59621),
-        c = s(40103),
-        m = s(20069),
-        h = s(68333),
-        u = s(65406),
-        _ = s(19094),
-        p = s(47165),
-        g = s(88012),
-        S = s(27769),
-        b = s(26464),
-        v = s(85246),
-        C = s(14826),
-        E = s(32765),
-        y = s(40442),
-        M = s(97940),
-        f = s(2758),
-        w = s(23801),
-        D = s(74227),
-        I = s(4306),
-        B = s(93837),
-        k = s(87628),
-        N = s(50454);
-      s(95915);
+        i = s(27605),
+        o = s(30750),
+        l = s(47427),
+        d = s(54842),
+        c = s(95315),
+        m = s(71767),
+        h = s(35750),
+        u = s(61134),
+        _ = s(77581),
+        p = s(35427),
+        g = s(96501),
+        S = s(44958),
+        b = s(16997),
+        v = s(45492),
+        C = s(31846),
+        E = s(37563),
+        y = s(77936),
+        M = s(82182),
+        f = s(92011),
+        w = s(62210),
+        D = s(67005),
+        I = s(20417),
+        B = s(90938),
+        k = s(2260),
+        N = s(68785);
+      s(24308);
       class T {
         constructor() {
           (this.m_mapCallbacks = new Map()),
@@ -430,8 +430,8 @@
           "m_rgRegisteredServiceMethodHandlers",
           void 0,
         );
-      var x = s(65001),
-        L = s(44973);
+      var x = s(24701),
+        L = s(65255);
       const O = "127.0.0.1",
         P = new N.s("WebUITransport");
       class A {
@@ -1800,17 +1800,17 @@
         (0, a.gn)([b.a], H.prototype, "FetchChatModerators", null),
         (0, a.gn)([b.a], H.prototype, "RequestLoop", null),
         (0, a.gn)([b.a], H.prototype, "MuteUserForSession", null);
-      var W = s(52002),
-        j = s(90531),
-        X = s(62404),
+      var W = s(87699),
+        j = s(60646),
+        X = s(87368),
         z = s.n(X),
-        Z = s(69159),
-        $ = s(57605),
-        Q = s(50304),
-        q = s(60866),
-        K = s(32905),
-        Y = s(24591),
-        J = s(36315),
+        Z = s(22042),
+        $ = s(1485),
+        Q = s(33682),
+        q = s(63109),
+        K = s(80212),
+        Y = s(63489),
+        J = s(32410),
         ee = s.n(J);
       const te = () =>
           l.createElement(
@@ -1828,17 +1828,17 @@
               className: ee().FriendListInsetShadowBottom,
             }),
           );
-      var ae = s(701),
-        ne = s(19304),
-        re = s(61037),
+      var ae = s(62613),
+        ne = s(13129),
+        re = s(44488),
         ie = s.n(re),
-        oe = s(46486),
-        le = s(13345),
-        de = s(93883),
-        ce = s(20620),
-        me = s(75962),
-        he = s(207),
-        ue = s(91820),
+        oe = s(64730),
+        le = s(19399),
+        de = s(54154),
+        ce = s(72728),
+        me = s(14609),
+        he = s(13499),
+        ue = s(67348),
         _e = s.n(ue);
       function pe(e) {
         const { latestAnnouncement: t } = e;
@@ -2664,15 +2664,15 @@
             ),
         );
       }
-      var Be = s(7671),
-        ke = s(98009),
-        Ne = s(25871),
-        Te = s(23715),
-        xe = s(44865),
-        Le = s(98389),
-        Oe = s(71161),
-        Pe = s(69338),
-        Ae = s(27618),
+      var Be = s(58331),
+        ke = s(28347),
+        Ne = s(80886),
+        Te = s(7769),
+        xe = s(92797),
+        Le = s(34913),
+        Oe = s(25006),
+        Pe = s(46882),
+        Ae = s(2339),
         Re = s.n(Ae);
       const Ge = (0, i.Pi)((e) => {
         const { appid: t } = e,
@@ -2758,15 +2758,15 @@
           ),
         );
       });
-      var Fe = s(65786),
-        Ue = s(98889),
-        Ve = s(75687),
-        He = s(92616),
-        We = s(25589),
-        je = s(54297),
-        Xe = s(46294),
-        ze = s(84343),
-        Ze = s(74802);
+      var Fe = s(59449),
+        Ue = s(36453),
+        Ve = s(35134),
+        He = s(15690),
+        We = s(58129),
+        je = s(31659),
+        Xe = s(47242),
+        ze = s(59728),
+        Ze = s(58112);
       const $e = (e) => {
         const { onPositionChange: t, onLeave: s } = e,
           a = l.useCallback(
@@ -2784,9 +2784,9 @@
           Object.assign({}, e, { onPositionChange: a }),
         );
       };
-      var Qe = s(88443),
-        qe = s(74831),
-        Ke = s(43628),
+      var Qe = s(24549),
+        qe = s(58670),
+        Ke = s(84426),
         Ye = s.n(Ke);
       const Je = (0, i.Pi)((e) => {
         const { event: t } = e,
@@ -2850,15 +2850,15 @@
           ),
         );
       });
-      var et = s(17318),
+      var et = s(71741),
         tt = s.n(et),
-        st = s(37865),
-        at = s(82248),
-        nt = s(15164),
-        rt = s(75313),
-        it = s(99307),
-        ot = s(45711),
-        lt = s(43997),
+        st = s(99839),
+        at = s(71738),
+        nt = s(91120),
+        rt = s(80289),
+        it = s(50898),
+        ot = s(74009),
+        lt = s(45557),
         dt = s.n(lt);
       function ct(e) {
         const { steamid: t, closeModal: s } = e;
@@ -2991,8 +2991,8 @@
       function ut(e, t) {
         return E.De.COMMUNITY_BASE_URL + "broadcast/share/" + e + "?site=" + t;
       }
-      var _t = s(60161),
-        pt = s(57742);
+      var _t = s(50423),
+        pt = s(90069);
       const gt = {
         list: [
           { appid: 444090, url: "https://steam.tv/paladins" },
@@ -3826,7 +3826,7 @@
           : null;
       }
     },
-    7671: (e, t, s) => {
+    58331: (e, t, s) => {
       "use strict";
       s.r(t),
         s.d(t, {
@@ -3834,18 +3834,18 @@
           LinkOverlay: () => le,
           default: () => Q,
         });
-      var a = s(33940),
-        n = s(52868),
+      var a = s(85556),
+        n = s(80751),
         r = s.n(n),
-        i = s(59621),
-        o = s(88464),
-        l = s(89526),
-        d = s(40103),
-        c = s(98009),
-        m = s(46486),
-        h = s(92616),
-        u = s(4306),
-        _ = s(85246);
+        i = s(54842),
+        o = s(27605),
+        l = s(47427),
+        d = s(95315),
+        c = s(28347),
+        m = s(64730),
+        h = s(15690),
+        u = s(20417),
+        _ = s(45492);
       class p extends l.Component {
         constructor() {
           super(...arguments),
@@ -3903,10 +3903,10 @@
       }
       (0, a.gn)([u.ak], p.prototype, "BindCanvasRef", null),
         (0, a.gn)([u.ak], p.prototype, "updateCanvas", null);
-      var g = s(69159),
-        S = s(32873),
-        b = s(22171),
-        v = s(19304);
+      var g = s(22042),
+        S = s(39073),
+        b = s(50321),
+        v = s(13129);
       class C extends l.Component {
         render() {
           let e = this.props,
@@ -3956,21 +3956,21 @@
           );
         }
       }
-      var y = s(44421),
-        M = s(55330),
-        f = s(71937),
-        w = s(701),
-        D = s(75962),
-        I = s(60161),
-        B = s(14826),
-        k = s(88443),
-        N = s(36041),
-        T = s(32765),
-        x = s(73762),
-        L = s(80525),
-        O = s(25202),
+      var y = s(85884),
+        M = s(45610),
+        f = s(50727),
+        w = s(62613),
+        D = s(14609),
+        I = s(50423),
+        B = s(31846),
+        k = s(24549),
+        N = s(45651),
+        T = s(37563),
+        x = s(87534),
+        L = s(68324),
+        O = s(20006),
         P = s.n(O),
-        A = s(69338);
+        A = s(46882);
       function R() {
         return l.createElement(
           "div",
@@ -4327,7 +4327,7 @@
         }
       };
       V = (0, a.gn)([o.Pi], V);
-      var H = s(76476);
+      var H = s(38204);
       class W extends l.Component {
         constructor(e) {
           super(e),
@@ -4713,7 +4713,7 @@
         (0, a.gn)([u.ak], X.prototype, "OnMouseUp", null),
         (0, a.gn)([i.aD], X.prototype, "SetVolumeWithCoord", null),
         (X = (0, a.gn)([o.Pi], X));
-      var z = s(14966);
+      var z = s(43090);
       const Z = 15;
       let $ = class extends l.Component {
         constructor(e) {
@@ -5906,10 +5906,9 @@
         }
         UpdatePanel(e, t) {
           return (0, a.mG)(this, void 0, void 0, function* () {
-            (this.state.sizableRegion[e] = t),
-              this.setState({ sizableRegion: this.state.sizableRegion }, () =>
-                this.OnSaveRegions(),
-              );
+            const s = [...this.state.sizableRegion];
+            (s[e] = t),
+              this.setState({ sizableRegion: s }, () => this.OnSaveRegions());
           });
         }
         render() {
@@ -5992,18 +5991,18 @@
         (0, a.gn)([u.ak], le.prototype, "UpdatePanel", null),
         (le = (0, a.gn)([o.Pi], le));
     },
-    55330: (e, t, s) => {
+    45610: (e, t, s) => {
       "use strict";
       s.d(t, { i: () => h });
-      var a = s(89526),
-        n = s(40442),
-        r = s(68818),
-        i = s(13345),
-        o = s(19304),
-        l = s(14826),
-        d = s(207),
-        c = s(32765),
-        m = s(72775);
+      var a = s(47427),
+        n = s(77936),
+        r = s(29292),
+        i = s(19399),
+        o = s(13129),
+        l = s(31846),
+        d = s(13499),
+        c = s(37563),
+        m = s(4471);
       function h(e) {
         const { gidEvent: t } = e,
           s = (0, r.XC)(t),
@@ -6061,13 +6060,13 @@
           : null;
       }
     },
-    93908: (e, t, s) => {
+    7686: (e, t, s) => {
       "use strict";
       s.d(t, { Jr: () => o, Mr: () => l, tk: () => d });
-      var a = s(89526),
-        n = s(701),
-        r = s(16826),
-        i = s(32765);
+      var a = s(47427),
+        n = s(62613),
+        r = s(58538),
+        i = s(37563);
       function o() {
         return (0, i.id)()
           ? a.createElement(r.MCw, null)
@@ -6082,7 +6081,7 @@
           : a.createElement(n.j5H, null);
       }
     },
-    37865: (e, t, s) => {
+    99839: (e, t, s) => {
       "use strict";
       s.d(t, { Z: () => a });
       const a =

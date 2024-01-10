@@ -3,7 +3,7 @@
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
   [2136],
   {
-    41855: (e) => {
+    92242: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         Container: "partnereventwebrowembed_Container_3DZHU",
@@ -17,14 +17,14 @@
         LatestUpdateButton: "partnereventwebrowembed_LatestUpdateButton_3F6YM",
       };
     },
-    52002: (e, t, n) => {
+    87699: (e, t, n) => {
       "use strict";
       n.d(t, { C: () => d, R: () => l });
-      var a = n(33940),
-        o = n(59621),
-        r = n(47165),
-        s = n(85651),
-        i = n(10412);
+      var a = n(85556),
+        o = n(54842),
+        r = n(35427),
+        s = n(64936),
+        i = n(82071);
       class l {
         constructor() {
           (this.m_mapBroadcasterSteamIDToEvents = new Map()),
@@ -178,25 +178,25 @@
       (0, a.gn)([o.LO], l.prototype, "m_mapBroadcasterSteamIDData", void 0);
       const d = new l();
     },
-    61557: (e, t, n) => {
+    82227: (e, t, n) => {
       "use strict";
       n.d(t, { M: () => w, q: () => D });
-      var a = n(33940),
-        o = n(89526),
-        r = n(88464),
-        s = n(32765),
-        i = n(40442),
-        l = n(47165),
-        d = n(14482),
-        c = n(13394),
-        m = n(73846),
-        p = n(51059),
-        u = n(96798),
-        v = n(49234),
-        h = n(52316),
-        E = n(17547),
-        S = n(1358),
-        I = n(74314);
+      var a = n(85556),
+        o = n(47427),
+        r = n(27605),
+        s = n(37563),
+        i = n(77936),
+        l = n(35427),
+        d = n(31959),
+        c = n(74257),
+        m = n(94621),
+        p = n(18538),
+        u = n(49513),
+        v = n(32144),
+        h = n(45167),
+        E = n(10162),
+        S = n(91494),
+        I = n(73941);
       let _ = class extends o.Component {
         constructor() {
           super(...arguments), (this.m_clanSteamID = new l.K(s.JA.CLANSTEAMID));
@@ -269,30 +269,30 @@
             }),
           );
     },
-    38644: (e, t, n) => {
+    96832: (e, t, n) => {
       "use strict";
       n.r(t), n.d(t, { default: () => N });
-      var a = n(96927),
-        o = n(61557),
-        r = n(89526),
-        s = n(59934),
-        i = n(19094),
-        l = n(58961),
-        d = n(56368),
-        c = n(10412),
-        m = n(20790),
-        p = n(1721),
+      var a = n(760),
+        o = n(82227),
+        r = n(47427),
+        s = n(8285),
+        i = n(77581),
+        l = n(45944),
+        d = n(42855),
+        c = n(82071),
+        m = n(81913),
+        p = n(7765),
         u = n.n(p),
-        v = n(71209),
-        h = n(32765),
-        E = n(33940),
-        S = n(88464),
-        I = n(4306),
-        _ = n(1275),
-        D = n(69338),
-        w = n(82079),
-        f = n(14826),
-        b = n(59621);
+        v = n(69406),
+        h = n(37563),
+        E = n(85556),
+        S = n(27605),
+        I = n(20417),
+        _ = n(27784),
+        D = n(46882),
+        w = n(93243),
+        f = n(31846),
+        b = n(54842);
       let B = class extends r.Component {
         constructor() {
           super(...arguments),
@@ -378,13 +378,13 @@
       };
       (0, E.gn)([I.ak], B.prototype, "HideModal", null),
         (B = (0, E.gn)([S.Pi], B));
-      var G = n(44026),
-        g = n(51438),
-        L = n(16221),
-        M = n(79233),
-        A = n(49234),
-        C = n(701),
-        k = n(41855);
+      var G = n(82493),
+        g = n(91618),
+        L = n(3783),
+        M = n(13049),
+        A = n(32144),
+        C = n(62613),
+        k = n(92242);
       class P extends r.Component {
         constructor(e) {
           super(e),
@@ -683,8 +683,8 @@
         (0, E.gn)([I.ak], P.prototype, "ShowModal", null),
         (0, E.gn)([I.ak], P.prototype, "ShowLatestUpdateModal", null),
         (0, E.gn)([I.ak], P.prototype, "CloseModal", null);
-      var W = n(13394),
-        F = n(85651);
+      var W = n(74257),
+        F = n(64936);
       class x extends r.Component {
         render() {
           const { appid: e } = this.props;

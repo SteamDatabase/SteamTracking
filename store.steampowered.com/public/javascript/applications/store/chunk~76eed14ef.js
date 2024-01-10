@@ -3,7 +3,7 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [7161],
   {
-    6864: (e) => {
+    52278: (e) => {
       e.exports = {
         SteamAwardContainer: "nominationandvote_SteamAwardContainer_jBtX5",
         InLibraryView: "nominationandvote_InLibraryView_1G81P",
@@ -48,7 +48,7 @@
         NominationSwitchCtn: "nominationandvote_NominationSwitchCtn_3IrPA",
       };
     },
-    42977: (e, t, a) => {
+    92280: (e, t, a) => {
       "use strict";
       a.d(t, {
         $: () => E,
@@ -67,20 +67,20 @@
         w6: () => f,
         yN: () => V,
       });
-      var n = a(33940),
-        o = a(2232),
-        i = a(68333),
-        r = a(97940),
-        s = a(43961),
-        d = a(5615),
-        l = a(27070),
-        m = a(44973),
-        c = a(59954),
-        u = a(54671),
-        v = a(52868),
+      var n = a(85556),
+        o = a(38071),
+        i = a(35750),
+        r = a(82182),
+        s = a(40354),
+        d = a(42718),
+        l = a(40057),
+        m = a(65255),
+        c = a(82756),
+        u = a(77151),
+        v = a(80751),
         g = a.n(v),
-        p = a(89526),
-        _ = a(75306);
+        p = a(47427),
+        _ = a(13557);
       const S = 2640290,
         A = 2215130;
       let w;
@@ -439,7 +439,7 @@
           : a.find((e) => e.item_type == s.item_type);
       }
     },
-    4795: (e, t, a) => {
+    46521: (e, t, a) => {
       "use strict";
       a.r(t),
         a.d(t, {
@@ -450,34 +450,34 @@
           WinterSaleSteamAwardVoteWrapper: () => F,
           default: () => R,
         });
-      var n = a(33940),
-        o = a(52868),
+      var n = a(85556),
+        o = a(80751),
         i = a.n(o),
-        r = a(59621),
-        s = a(83315),
-        d = a(88464),
-        l = a(89526),
-        m = a(85651),
-        c = a(42977),
-        u = a(92616),
-        v = a(25871),
-        g = a(57605),
-        p = a(17318),
+        r = a(54842),
+        s = a(30750),
+        d = a(27605),
+        l = a(47427),
+        m = a(64936),
+        c = a(92280),
+        u = a(15690),
+        v = a(80886),
+        g = a(1485),
+        p = a(71741),
         _ = a.n(p),
-        S = a(58218),
-        A = a(23217),
-        w = a(19304),
-        h = a(14826),
-        E = a(4306),
-        C = a(207),
-        y = a(32765),
-        f = a(99307),
-        N = a(57742),
-        D = a(69338),
-        T = a(5557),
-        G = a(6864),
+        S = a(29480),
+        A = a(16649),
+        w = a(13129),
+        h = a(31846),
+        E = a(20417),
+        C = a(13499),
+        y = a(37563),
+        f = a(50898),
+        N = a(90069),
+        D = a(46882),
+        T = a(66079),
+        G = a(52278),
         B = a.n(G),
-        L = a(32905);
+        L = a(80212);
       function V(e) {
         return y.L7.logged_in
           ? !y.L7.is_limited ||

@@ -264,7 +264,7 @@
 }
 .discoveryqueuewizard_RelevantCtn_FGuCn {
   padding: 0;
-  border-top: 1px solid rgba(172, 178, 201, 0.1411764706);
+  border-top: 1px solid #acb2c924;
   display: flex;
   flex-direction: column;
   margin: 4px 0px;
@@ -393,7 +393,7 @@
   font-size: 14px;
   opacity: 0.8;
   padding-bottom: 16px;
-  border-bottom: 1px solid rgba(172, 178, 201, 0.1411764706);
+  border-bottom: 1px solid #acb2c924;
   width: 50%;
   text-align: center;
 }
@@ -550,7 +550,7 @@
 }
 .discoveryqueuewizard_LearnMoreLink_3bCDZ:hover {
   color: #fff;
-  background-color: rgba(172, 178, 201, 0.1411764706);
+  background-color: #acb2c924;
   border-radius: 2px;
 }
 .discoveryqueuewizard_LearnMoreLink_3bCDZ:visited {
@@ -558,7 +558,7 @@
 }
 .discoveryqueuewizard_LearnMoreLink_3bCDZ.gpfocus {
   color: #fff;
-  background-color: rgba(172, 178, 201, 0.1411764706);
+  background-color: #acb2c924;
 }
 .discoveryqueuewizard_ControlsCtn_3UbRl {
   display: flex;
@@ -573,7 +573,7 @@
   box-shadow: none;
   box-sizing: border-box;
   position: relative;
-  background-color: rgba(172, 178, 201, 0.1411764706);
+  background-color: #acb2c924;
   cursor: pointer;
   text-align: center;
   user-select: none;
@@ -610,7 +610,7 @@
 .discoveryqueuewizard_QueueButton_19cHb:hover:not(
     .discoveryqueuewizard_Disabled_1yh4o
   ) {
-  background-color: rgba(172, 178, 201, 0.2784313725);
+  background-color: #acb2c947;
 }
 .discoveryqueuewizard_QueueButton_19cHb.gpfocus {
   background-color: #fff;
@@ -737,7 +737,7 @@
 }
 .discoveryqueuewizard_TradingCardCtn_36Qbj {
   display: flex;
-  background: rgba(131, 190, 236, 0.1215686275);
+  background: #83beec1f;
   padding: 16px 1vw;
   align-items: center;
   color: var(--gpStoreLighterGrey);
@@ -752,7 +752,7 @@
 .discoveryqueuewizard_TradingCardCtn_36Qbj
   .discoveryqueuewizard_TradingCardImage_3wa0d {
   transform: rotate(-10deg);
-  filter: drop-shadow(0px 8px 6px rgba(0, 0, 0, 0.1333333333));
+  filter: drop-shadow(0px 8px 6px #00000022);
 }
 @media screen and (max-width: 1400px) {
   .discoveryqueuewizard_TradingCardCtn_36Qbj

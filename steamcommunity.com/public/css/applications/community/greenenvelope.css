@@ -128,7 +128,7 @@
   animation-iteration-count: 1;
 }
 .greenenvelope_NotificationsButton_2Z7Ed.greenenvelope_Disabled_3KMlw {
-  background-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
   color: rgba(169, 169, 169, 0.5);
 }
 .greenenvelope_NotificationsButton_2Z7Ed.greenenvelope_Disabled_3KMlw svg {

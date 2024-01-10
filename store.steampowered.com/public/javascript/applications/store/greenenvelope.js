@@ -3,7 +3,7 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [3068],
   {
-    15937: (e) => {
+    88234: (e) => {
       e.exports = {
         NotificationsMenu: "greenenvelope_NotificationsMenu_DHpNP",
         NotificationsMenuEntriesContainer:
@@ -29,7 +29,7 @@
         EmptyNotificationsBody: "greenenvelope_EmptyNotificationsBody_3YAs6",
       };
     },
-    76239: (e) => {
+    39129: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         loadinganimationiterationcount: "20",
@@ -87,6 +87,7 @@
         BottomBar: "shorttemplates_BottomBar_2qFDV",
         NewIndicator: "shorttemplates_NewIndicator_7k_rN",
         ShortTemplate: "shorttemplates_ShortTemplate_29NLb",
+        TwoLine: "shorttemplates_TwoLine_G6T84",
         BackgroundAnimation: "shorttemplates_BackgroundAnimation_OYUmx",
         "ItemFocusAnim-darkerGrey-nocolor":
           "shorttemplates_ItemFocusAnim-darkerGrey-nocolor_1kXW6",
@@ -103,7 +104,7 @@
         hoverAnimation: "shorttemplates_hoverAnimation_gYMVd",
       };
     },
-    63e3: (e) => {
+    5333: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         loadinganimationiterationcount: "20",
@@ -180,7 +181,7 @@
         hoverAnimation: "standardtemplates_hoverAnimation_3QUW0",
       };
     },
-    2427: (e) => {
+    60434: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         loadinganimationiterationcount: "20",
@@ -259,24 +260,24 @@
         hoverAnimation: "steamtemplates_hoverAnimation_2q5uS",
       };
     },
-    10010: (e) => {
+    76959: (e) => {
       e.exports = {
         WebPinnedNotification: "webtemplates_WebPinnedNotification_2_G4b",
       };
     },
-    24448: (e, t, n) => {
+    28738: (e, t, n) => {
       "use strict";
       n.d(t, { Gr: () => f, Jq: () => g, y$: () => p });
-      var a = n(33940),
-        o = n(52868),
+      var a = n(85556),
+        o = n(80751),
         i = n.n(o),
-        s = n(59621),
-        l = n(89526),
-        r = n(4556),
-        m = n(47165),
-        c = n(23801),
-        d = n(23217),
-        u = n(32765);
+        s = n(54842),
+        l = n(47427),
+        r = n(48760),
+        m = n(35427),
+        c = n(62210),
+        d = n(16649),
+        u = n(37563);
       class _ {
         constructor() {
           (this.m_mapProfiles = new Map()),
@@ -388,7 +389,7 @@
       }
       window.g_ProfileStore = p;
     },
-    6040: (e, t, n) => {
+    14717: (e, t, n) => {
       "use strict";
       n.r(t),
         n.d(t, {
@@ -396,27 +397,27 @@
           default: () => De,
           useSteamNotifications: () => he,
         });
-      var a = n(33940),
-        o = n(89526),
-        i = n(701),
-        s = n(26),
-        l = n(19304),
-        r = n(14826),
-        m = n(40103),
-        c = n(15937),
+      var a = n(85556),
+        o = n(47427),
+        i = n(62613),
+        s = n(97423),
+        l = n(13129),
+        r = n(31846),
+        m = n(95315),
+        c = n(88234),
         d = n.n(c),
-        u = n(44973),
-        _ = n(16826),
-        p = n(83315),
-        f = n(47742),
-        g = n(27070),
-        N = n(47165),
-        v = n(24448),
-        h = n(25871),
-        y = n(51438),
-        E = n(72120),
-        S = n(25508),
-        T = n(63e3),
+        u = n(65255),
+        _ = n(58538),
+        p = n(30750),
+        f = n(53923),
+        g = n(40057),
+        N = n(35427),
+        v = n(28738),
+        h = n(80886),
+        y = n(91618),
+        E = n(12251),
+        S = n(46984),
+        T = n(5333),
         I = n.n(T);
       const A = !0;
       function B(e) {
@@ -586,7 +587,7 @@
             "div",
             { className: I().Header },
             o.createElement(G, { icon: t }),
-            !!n && o.createElement(U, { title: n }),
+            !!n && o.createElement(w, { title: n }),
             l && r({ timestamp: a }),
           )
         );
@@ -594,17 +595,17 @@
       function G(e) {
         return o.createElement("div", { className: I().Icon }, e.icon);
       }
-      function U(e) {
+      function w(e) {
         return o.createElement("div", { className: I().Title }, e.title);
       }
-      function C(e) {
+      function U(e) {
         let t = (0, l.Z)(
           I().StandardNotificationDescription,
           e.multiline && I().Multiline,
         );
         return o.createElement("div", { className: t }, e.children);
       }
-      function w(e) {
+      function C(e) {
         let t = (0, l.Z)(
           I().StandardNotificationSubText,
           e.multiline && I().Multiline,
@@ -633,11 +634,11 @@
           (e[(e.loadingActive = 1)] = "loadingActive"),
           (e[(e.loadingComplete = 2)] = "loadingComplete");
       })(L || (L = {}));
-      var R = n(32765);
+      var R = n(37563);
       function H(e) {
         return 1 == e;
       }
-      var O = n(76239),
+      var O = n(39129),
         x = n.n(O);
       function X(e) {
         let {
@@ -649,8 +650,9 @@
             body: r,
             personaStatus: m,
             className: c,
+            singleLineOnly: d,
           } = e,
-          d = (function (e, t) {
+          u = (function (e, t) {
             return o.useCallback(
               (n) => {
                 e && e(n), t && t();
@@ -661,8 +663,8 @@
         return o.createElement(
           y.s,
           {
-            className: (0, l.Z)(x().ShortTemplate, c),
-            onActivate: d,
+            className: (0, l.Z)(x().ShortTemplate, !d && x().TwoLine, c),
+            onActivate: u,
             onMouseDown: (e) => {
               1 == e.button && n && n();
             },
@@ -685,9 +687,9 @@
           ),
         );
       }
-      var W = n(2427),
+      var W = n(60434),
         j = n.n(W),
-        Y = n(82079);
+        Y = n(93243);
       function $(e) {
         switch (e) {
           case 6:
@@ -749,8 +751,8 @@
                   location: l,
                   fnRenderTimestamp: c,
                 }),
-                o.createElement(C, { multiline: !f }, p),
-                !!f && o.createElement(w, null, f),
+                o.createElement(U, { multiline: !f }, p),
+                !!f && o.createElement(C, null, f),
                 d ? o.createElement(ae, { onHide: d }) : null,
               ),
             );
@@ -794,8 +796,8 @@
                   location: n,
                   fnRenderTimestamp: s,
                 }),
-                o.createElement(C, null, d),
-                o.createElement(w, null, u),
+                o.createElement(U, null, d),
+                o.createElement(C, null, u),
                 l ? o.createElement(ae, { onHide: l }) : null,
               ),
             );
@@ -839,8 +841,8 @@
                   location: n,
                   fnRenderTimestamp: s,
                 }),
-                o.createElement(C, { multiline: !d }, c),
-                !!d && o.createElement(w, null, d),
+                o.createElement(U, { multiline: !d }, c),
+                !!d && o.createElement(C, null, d),
                 l ? o.createElement(ae, { onHide: l }) : null,
               ),
             );
@@ -908,8 +910,8 @@
                   location: l,
                   fnRenderTimestamp: d,
                 }),
-                o.createElement(C, { multiline: !p }, h),
-                !!p && o.createElement(w, null, p),
+                o.createElement(U, { multiline: !p }, h),
+                !!p && o.createElement(C, null, p),
                 u ? o.createElement(ae, { onHide: u }) : null,
               ),
             );
@@ -1013,8 +1015,8 @@
               location: l,
               fnRenderTimestamp: d,
             }),
-            o.createElement(C, { multiline: !E }, S),
-            !!E && o.createElement(w, null, E),
+            o.createElement(U, { multiline: !E }, S),
+            !!E && o.createElement(C, null, E),
             _ ? o.createElement(ae, { onHide: _ }) : null,
           ),
         );
@@ -1074,8 +1076,8 @@
                     location: i,
                     fnRenderTimestamp: c,
                   }),
-                  o.createElement(C, null, f),
-                  o.createElement(w, null, null == n ? void 0 : n.GetName()),
+                  o.createElement(U, null, f),
+                  o.createElement(C, null, null == n ? void 0 : n.GetName()),
                   d ? o.createElement(ae, { onHide: d }) : null,
                 ),
               )
@@ -1131,7 +1133,7 @@
                   location: r,
                   fnRenderTimestamp: c,
                 }),
-                o.createElement(C, { multiline: !0 }, n),
+                o.createElement(U, { multiline: !0 }, n),
                 l ? o.createElement(ae, { onHide: l }) : null,
               ),
             );
@@ -1203,18 +1205,18 @@
           : !S &&
             (null === (l = p.json_data) || void 0 === l ? void 0 : l.title) &&
             (S = p.json_data.title);
-        let U = null;
-        U =
+        let w = null;
+        w =
           7 == p.comment_type && p.bis_forum && p.comment
             ? o.createElement(
-                w,
+                C,
                 null,
                 (0, r.Xx)(
                   "#SteamNotifications_Comment_NewDiscussion",
                   p.comment,
                 ),
               )
-            : o.createElement(w, null, '"', p.comment, '"');
+            : o.createElement(C, null, '"', p.comment, '"');
         let P = (0, r.Xx)("#SteamNotifications_Comment"),
           F = null;
         if (h > 1) {
@@ -1269,8 +1271,8 @@
                   location: f,
                   fnRenderTimestamp: v,
                 }),
-                o.createElement(C, null, S),
-                U,
+                o.createElement(U, null, S),
+                w,
                 F,
                 E ? o.createElement(ae, { onHide: E }) : null,
               ),
@@ -1357,8 +1359,8 @@
                     location: i,
                     fnRenderTimestamp: m,
                   }),
-                  o.createElement(C, { multiline: !f }, p),
-                  !!f && o.createElement(w, null, f),
+                  o.createElement(U, { multiline: !f }, p),
+                  !!f && o.createElement(C, null, f),
                   c ? o.createElement(ae, { onHide: c }) : null,
                 ),
               )
@@ -1422,7 +1424,7 @@
           e.children,
         );
       }
-      var ie = n(10010),
+      var ie = n(76959),
         se = n.n(ie);
       function le(e) {
         if (!e) return null;
@@ -1430,8 +1432,8 @@
           n = "string" == typeof e ? [] : e.params || [];
         return t ? ("#" !== t[0] ? t : (0, r.Xx)(t, ...n)) : null;
       }
-      var re = n(19934),
-        me = n(71161);
+      var re = n(75683),
+        me = n(25006);
       const ce = {
         [s.rg.Comment]: function (e) {
           var t, n, a;
@@ -1870,9 +1872,9 @@
               )
           : null;
       }
-      var pe = n(40442),
-        fe = n(41576),
-        ge = n(17547);
+      var pe = n(77936),
+        fe = n(44500),
+        ge = n(10162);
       const Ne = new s.tL(),
         ve = (0, ge.AP)(function (e) {
           const { bResponsiveHeader: t, notifications: n } = e;
@@ -2197,13 +2199,13 @@
       }
       const De = ve;
     },
-    41576: (e, t, n) => {
+    44500: (e, t, n) => {
       "use strict";
       n.d(t, { U: () => l });
-      var a = n(33940),
-        o = n(89526),
-        i = n(60161),
-        s = n(4306);
+      var a = n(85556),
+        o = n(47427),
+        i = n(50423),
+        s = n(20417);
       class l extends o.Component {
         constructor() {
           super(...arguments),

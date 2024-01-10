@@ -114,11 +114,14 @@ function DoUnpackGift( gidGift, packageid, packagename )
 	if ( elUnpackGiftButtons )
 		ShowWaiting( gidGift, elUnpackGiftButtons,  $('unpack_gift_buttons_' + gidGift + '_wait') );
 
+	var elemUnpackPrivately = $J( '#gift' + gidGift + '_private_checkbox' );
+	var bPrivately = elemUnpackPrivately && elemUnpackPrivately.checked;
+
 	var action = 'unpack';
 
 	new Ajax.Request( 'https://steamcommunity.com/gifts/' + gidGift + '/' + action, {
 		method: 'post',
-		parameters: { sessionid: g_sessionID },
+		parameters: { sessionid: g_sessionID, bPrivately: !!bPrivately },
 		onComplete: function( transport ) { OnUnpackGiftResults( gidGift, packageid, packagename, transport ); }
 	} );
 }

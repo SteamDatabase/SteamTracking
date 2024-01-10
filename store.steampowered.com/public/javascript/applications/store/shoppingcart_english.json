@@ -31,6 +31,7 @@
     "Cart_GiftRecipientModal_OwnsGameLabel": "Already owns this item",
     "Cart_GiftRecipientModal_OnWishlist": "On wishlist",
     "Cart_GiftOptions": "Gift Options",
+    "Cart_GiftRecipientModal_IssueLoading": "There was a problem loading eligible gift recipients. Please try again later.",
     "Cart_ContinueButton_Payment": "Continue to payment",
     "Cart_ContinueButton_Gifts": "Continue to gift options",
     "Cart_ContinueButton_Login": "Sign in to purchase",

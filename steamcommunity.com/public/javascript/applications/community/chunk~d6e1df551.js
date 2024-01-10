@@ -3,7 +3,7 @@
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
   [2558],
   {
-    48348: (e) => {
+    72869: (e) => {
       e.exports = {
         Bold: "bbcodes_Bold_1opdq",
         Italic: "bbcodes_Italic_3PSCE",
@@ -45,16 +45,16 @@
         Image: "bbcodes_Image_1CmpC",
       };
     },
-    55811: (e, o, t) => {
+    80878: (e, o, t) => {
       "use strict";
       t.d(o, { Gg: () => _, L4: () => m });
-      var i = t(33940),
-        l = t(52868),
+      var i = t(85556),
+        l = t(80751),
         a = t.n(l),
-        s = t(59621),
-        r = t(23801),
-        p = t(14826),
-        d = t(32765);
+        s = t(54842),
+        r = t(62210),
+        p = t(31846),
+        d = t(37563);
       class n {
         constructor() {
           (this.file = void 0),
@@ -213,16 +213,18 @@
                   this.file_upload_props.additionalProps,
                 );
             try {
-              let e = yield fetch(
-                this.m_Callbacks.GetBeginFileUploadURL() +
-                  `?l=${d.De.LANGUAGE}`,
-                { method: "POST", body: t, credentials: "include" },
-              );
-              const o = yield e.json();
+              let e,
+                o = yield fetch(
+                  this.m_Callbacks.GetBeginFileUploadURL() +
+                    `?l=${d.De.LANGUAGE}`,
+                  { method: "POST", body: t, credentials: "include" },
+                );
+              if ((o.ok && (e = yield o.json()), !e || !e.result))
+                throw new Error();
               return (
-                (this.m_fileUploadProps.timestamp = o.timestamp),
-                (this.m_fileUploadProps.hmac = o.hmac),
-                this.DoFileUpload(o.result)
+                (this.m_fileUploadProps.timestamp = e.timestamp),
+                (this.m_fileUploadProps.hmac = e.hmac),
+                this.DoFileUpload(e.result)
               );
             } catch (e) {
               const o = null == e ? void 0 : e.response;

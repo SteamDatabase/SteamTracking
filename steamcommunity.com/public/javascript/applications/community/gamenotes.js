@@ -3,7 +3,7 @@
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
   [6838],
   {
-    67802: (e) => {
+    25251: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         Page: "gamenotes_Page_ZUB8z",
@@ -19,14 +19,14 @@
         CloseWindowButton: "gamenotes_CloseWindowButton_G0Fgh",
       };
     },
-    3564: (e) => {
+    31643: (e) => {
       e.exports = {
         Hover: "pmhover_Hover_3tNcT",
         Link: "pmhover_Link_ovQsF",
         LinkHelp: "pmhover_LinkHelp_2Az4l",
       };
     },
-    54146: (e) => {
+    56836: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         Container: "prosemirror_Container_3lEt5",
@@ -38,19 +38,19 @@
         ExpandButton: "prosemirror_ExpandButton_3454x",
       };
     },
-    74251: (e, t, n) => {
+    39214: (e, t, n) => {
       "use strict";
       n.r(t), n.d(t, { default: () => Nt });
-      var o = n(89526),
-        r = n(59934);
+      var o = n(47427),
+        r = n(8285);
       const a = {
         List: () => "/notes/list",
         AppNotes: (e, t) => `/notes/app/${e}/${null != t ? t : ""}`,
         ShortcutNotes: (e, t) => `/notes/shortcut/${e}/${null != t ? t : ""}`,
       };
-      var s = n(565),
-        i = n(33940),
-        l = n(5615);
+      var s = n(28017),
+        i = n(85556),
+        l = n(42718);
       function c(e) {
         return e.trim();
       }
@@ -89,7 +89,7 @@
       function g() {
         return o.useContext(u).store;
       }
-      var h = n(14826);
+      var h = n(31846);
       function f(e) {
         return "appid" in e
           ? ["GameNotes", "NotesByAppID", e.appid]
@@ -138,13 +138,13 @@
           [e, t],
         );
       }
-      var E = n(92994),
+      var E = n(73799),
         C = n.n(E),
-        T = n(68333),
-        N = n(16744),
-        B = n(27070),
-        y = n(44973),
-        w = n(40442);
+        T = n(51841),
+        N = n(17025),
+        B = n(40057),
+        y = n(65255),
+        w = n(8004);
       let A;
       const S = 864e5;
       function x(e) {
@@ -198,7 +198,7 @@
           { staleTime: S, enabled: !!e },
         ).data;
       }
-      var O = n(69338);
+      var O = n(46882);
       function P() {
         const { data: e, isLoading: t } = (function () {
           const e = g();
@@ -236,10 +236,10 @@
           ),
         );
       }
-      var G = n(79769),
-        I = n(50454),
-        L = n(25508),
-        R = n(26464);
+      var G = n(3792),
+        I = n(68785),
+        L = n(46984),
+        R = n(16997);
       const H = new I.s("ReactUsageReporting").Debug,
         U = 1e3 * L._H.PerMinute;
       class X {
@@ -315,15 +315,15 @@
       }
       (0, i.gn)([R.a], X.prototype, "CheckSend", null);
       const $ = new X();
-      var j = n(57605),
-        W = n(16826),
-        z = n(99307),
-        V = n(89205),
-        Z = n(95985),
-        K = n(72225),
-        Q = n(48348),
+      var j = n(1485),
+        W = n(58538),
+        z = n(50898),
+        V = n(7294),
+        Z = n(23126),
+        K = n(2761),
+        Q = n(72869),
         Y = n.n(Q),
-        J = n(19304);
+        J = n(13129);
       function q(e, t) {
         return () => [e, { class: t }, 0];
       }
@@ -653,8 +653,8 @@
           );
         }
       }
-      var le = n(11837),
-        ce = n(23801);
+      var le = n(83999),
+        ce = n(62210);
       function de(e, t = re) {
         const n = { mapMarks: new Map(), mapNodes: new Map() };
         return (
@@ -732,9 +732,9 @@
           { tag: n, args: o }
         );
       }
-      var ge = n(40267),
-        he = n(83116),
-        fe = n(73961);
+      var ge = n(23612),
+        he = n(31458),
+        fe = n(42287);
       function be(e) {
         const {
             visible: t = !0,
@@ -794,7 +794,7 @@
           ? o.createElement("div", { className: n, ref: d, style: l }, i)
           : null;
       }
-      var _e = n(47624);
+      var _e = n(26682);
       function ve(e, t) {
         o.useEffect(() => {
           if (e && t && !e.isDestroyed)
@@ -841,8 +841,8 @@
           return i.addMark(r, a, t.create(s)), i.removeStoredMark(t), i;
         });
       }
-      var Te = n(4306),
-        Ne = n(54146);
+      var Te = n(20417),
+        Ne = n(56836);
       function Be(e) {
         const { children: t } = e,
           { callbacks: n, view: r } = Oe(),
@@ -932,10 +932,10 @@
           )
         );
       });
-      var we = n(85246),
-        Ae = n(84343),
-        Se = n(45820),
-        xe = n(51438);
+      var we = n(45492),
+        Ae = n(59728),
+        Se = n(56617),
+        xe = n(91618);
       function Me(e) {
         const {
             view: t,
@@ -1383,12 +1383,12 @@
       function Ue(e) {
         return (0, he.AH)(e.state) > 0;
       }
-      var Xe = n(22039),
-        $e = n(19272),
-        je = n(32194),
-        We = n(94952),
-        ze = n(60161),
-        Ve = n(3564);
+      var Xe = n(62209),
+        $e = n(4005),
+        je = n(31934),
+        We = n(35643),
+        ze = n(50423),
+        Ve = n(31643);
       function Ze(e) {
         const { view: t } = e,
           [n, r] = o.useState(),
@@ -1471,9 +1471,9 @@
           "Shift-Ctrl-3": (0, ge.uJ)(ne.nodes.heading, { level: 3 }),
           "Shift-Ctrl-0": (0, ge.uJ)(ne.nodes.paragraph),
         });
-      var Je = n(75962),
-        qe = n(207),
-        et = n(55811);
+      var Je = n(14609),
+        qe = n(13499),
+        et = n(80878);
       function tt(e) {
         const { view: t, uploadImage: n } = e;
         return (
@@ -1523,8 +1523,8 @@
       const ot =
         n.p +
         "images/applications/community/image_error.svg?v=valveisgoodatcaching";
-      var rt = n(22612),
-        at = n(32765);
+      var rt = n(13974),
+        at = n(37563);
       function st(e) {
         const {
             bbcode: t,
@@ -1717,7 +1717,7 @@
         }
         return e;
       }
-      var mt = n(67802);
+      var mt = n(25251);
       const pt = 15;
       function gt(e) {
         const { note: t } = e,
@@ -1994,7 +1994,7 @@
             : a.ShortcutNotes(t.shortcut, n)),
           e.replace(o, e.location.state);
       }
-      var Ct = n(55158);
+      var Ct = n(76415);
       class Tt {
         constructor(e) {
           this.m_SteamInterface = e;

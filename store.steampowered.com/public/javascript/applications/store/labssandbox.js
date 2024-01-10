@@ -3,7 +3,7 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [2814],
   {
-    36025: (e) => {
+    84194: (e) => {
       e.exports = {
         LoginDialog: "login_LoginDialog_2y6W_",
         AccountPasswordPanel: "login_AccountPasswordPanel_3hiT2",
@@ -41,7 +41,7 @@
         LoginComplete: "login_LoginComplete_KmQja",
       };
     },
-    65889: (e) => {
+    6240: (e) => {
       e.exports = {
         AppSelector: "labssandbox_AppSelector_2Fikz",
         AppDisplay: "labssandbox_AppDisplay_3m6Sh",
@@ -79,7 +79,7 @@
         Active: "labssandbox_Active_2J9Kx",
       };
     },
-    76339: (e) => {
+    78788: (e) => {
       e.exports = {
         EntryError: "tagclustering_EntryError_1UGoD",
         ClusterConfig: "tagclustering_ClusterConfig_3Qp2u",
@@ -89,17 +89,17 @@
         SimilarTitle: "tagclustering_SimilarTitle_gRxJT",
       };
     },
-    88930: (e, t, a) => {
+    19952: (e, t, a) => {
       "use strict";
       a.r(t), a.d(t, { default: () => ge });
-      var s = a(96927),
-        n = a(33940),
-        r = a(58961),
-        i = a(19094),
-        o = a(32765),
-        l = a(59621),
-        p = a(4306),
-        m = a(52868),
+      var s = a(760),
+        n = a(85556),
+        r = a(45944),
+        i = a(77581),
+        o = a(37563),
+        l = a(54842),
+        p = a(20417),
+        m = a(80751),
         c = a.n(m);
       class d {
         constructor() {
@@ -335,14 +335,14 @@
       }
       const g = new d();
       window.g_LabsSandbox = g;
-      var _ = a(89526),
-        S = a(565),
-        C = a(59934),
-        E = a(65889),
-        f = a(57605),
-        b = a(2232),
-        y = a(88464),
-        v = a(19304);
+      var _ = a(47427),
+        S = a(28017),
+        C = a(8285),
+        E = a(6240),
+        f = a(1485),
+        b = a(38071),
+        y = a(27605),
+        v = a(13129);
       class L extends _.Component {
         constructor(e) {
           super(e),
@@ -1029,12 +1029,12 @@
         (0, n.gn)([p.ak], P.prototype, "OnSelectedStartApp", null),
         (0, n.gn)([p.ak], P.prototype, "OnSelectedEndApp", null),
         (P = (0, n.gn)([y.Pi], P));
-      var w = a(47165),
-        R = a(85246),
-        F = a(68333),
-        M = a(85238),
-        U = a(11195),
-        G = a(92616);
+      var w = a(35427),
+        R = a(45492),
+        F = a(35750),
+        M = a(37038),
+        U = a(80998),
+        G = a(15690);
       class T {
         constructor(e) {
           this.m_SteamInterface = e;
@@ -1087,12 +1087,12 @@
           );
         }
       }
-      var B = a(69338),
-        H = a(14826),
-        q = a(76339),
-        z = a(25871),
-        $ = a(74802),
-        X = a(17547);
+      var B = a(46882),
+        H = a(31846),
+        q = a(78788),
+        z = a(80886),
+        $ = a(58112),
+        X = a(10162);
       function Q(e) {
         const { SteamInterface: t } = e,
           a = _.useRef();
@@ -1346,11 +1346,11 @@
           t.GetName(),
         );
       }
-      var ee = a(701),
-        te = a(36025),
+      var ee = a(62613),
+        te = a(84194),
         ae = a.n(te),
-        se = a(97277),
-        ne = a(26464);
+        se = a(97247),
+        ne = a(16997);
       var re, ie;
       !(function (e) {
         (e[(e.Invalid = 0)] = "Invalid"),
@@ -1878,7 +1878,7 @@
       (0, n.gn)([p.ak], de.prototype, "OnSubmit", null),
         (0, n.gn)([p.ak], de.prototype, "OnChangeAuthCode", null),
         (de = (0, n.gn)([y.Pi], de));
-      var he = a(27070);
+      var he = a(40057);
       const ue = [
         {
           path: "similarity",

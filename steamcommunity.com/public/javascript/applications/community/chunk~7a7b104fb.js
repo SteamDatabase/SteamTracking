@@ -3,7 +3,7 @@
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
   [2449],
   {
-    43628: (e) => {
+    84426: (e) => {
       e.exports = {
         strStreamIconCapsuleArtHeight: "90px",
         strStreamIconScreenshotArtHeight: "90px",
@@ -69,7 +69,7 @@
         rightPanel: "broadcast_embeddable_rightPanel_2Xp5Y",
       };
     },
-    61037: (e) => {
+    44488: (e) => {
       e.exports = {
         BroadcastChat: "broadcastchat_BroadcastChat_37jsi",
         ChatEntry: "broadcastchat_ChatEntry_3o0ss",
@@ -108,7 +108,7 @@
         SignInButton: "broadcastchat_SignInButton_26lxf",
       };
     },
-    91820: (e) => {
+    67348: (e) => {
       e.exports = {
         GiveawayWinnerBox: "broadcastchatannouncement_GiveawayWinnerBox_1iRcs",
         GiveawayWinnerAnnounced:
@@ -132,7 +132,7 @@
           "broadcastchatannouncement_GiveawayAlreadyRegistered_17sxy",
       };
     },
-    25202: (e) => {
+    20006: (e) => {
       e.exports = {
         BroadcastPlayerLite: "broadcastplayer_BroadcastPlayerLite_3YmNP",
         BroadcastPlayerLiteVideo:
@@ -142,7 +142,7 @@
           "broadcastplayer_BroadcastPlaceholderImg_3Hcqn",
       };
     },
-    36315: (e) => {
+    32410: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         FriendsListInsetShadowCtn:
@@ -152,27 +152,27 @@
           "insetshadow_FriendListInsetShadowBottom_2hL6s",
       };
     },
-    55844: (e, t, s) => {
+    6399: (e, t, s) => {
       "use strict";
       s.d(t, { c: () => F });
-      var a = s(33940),
-        n = s(59621),
-        r = s(88464),
-        i = s(83315),
-        o = s(89526),
-        l = s(40103),
-        d = s(54178),
-        c = s(52002),
-        m = s(90531),
-        h = s(62404),
+      var a = s(85556),
+        n = s(54842),
+        r = s(27605),
+        i = s(30750),
+        o = s(47427),
+        l = s(95315),
+        d = s(6629),
+        c = s(87699),
+        m = s(60646),
+        h = s(87368),
         u = s.n(h),
-        _ = s(69159),
-        p = s(57605),
-        g = s(50304),
-        S = s(60866),
-        b = s(32905),
-        v = s(24591),
-        C = s(36315),
+        _ = s(22042),
+        p = s(1485),
+        g = s(33682),
+        S = s(63109),
+        b = s(80212),
+        v = s(63489),
+        C = s(32410),
         y = s.n(C);
       const f = () =>
           o.createElement(
@@ -188,15 +188,15 @@
               className: y().FriendListInsetShadowBottom,
             }),
           );
-      var M = s(701),
-        w = s(19304),
-        k = s(14826),
-        D = s(4306),
-        B = s(32765),
-        I = s(61037),
+      var M = s(62613),
+        w = s(13129),
+        k = s(31846),
+        D = s(20417),
+        B = s(37563),
+        I = s(44488),
         T = s.n(I),
-        x = s(50295),
-        P = s(20069);
+        x = s(10994),
+        P = s(71767);
       const O = new RegExp("ː([^ː]*)ː", "g"),
         L = new RegExp(
           "^https?://(?:[^/?#]+?\\.)?(?:valvesoftware|steamcommunity|steampowered)\\.com(?:/?#|$)",
@@ -853,22 +853,22 @@
         );
       }
     },
-    50295: (e, t, s) => {
+    10994: (e, t, s) => {
       "use strict";
       s.d(t, { E: () => S, U: () => v });
-      var a = s(83315),
-        n = s(89526),
-        r = s(54178),
-        i = s(46486),
-        o = s(13345),
-        l = s(93883),
-        d = s(20620),
-        c = s(75962),
-        m = s(19304),
-        h = s(14826),
-        u = s(207),
-        _ = s(32765),
-        p = s(91820),
+      var a = s(30750),
+        n = s(47427),
+        r = s(6629),
+        i = s(64730),
+        o = s(19399),
+        l = s(54154),
+        d = s(72728),
+        c = s(14609),
+        m = s(13129),
+        h = s(31846),
+        u = s(13499),
+        _ = s(37563),
+        p = s(67348),
         g = s.n(p);
       function S(e) {
         const { latestAnnouncement: t } = e;
@@ -1037,7 +1037,7 @@
         );
       }
     },
-    7671: (e, t, s) => {
+    58331: (e, t, s) => {
       "use strict";
       s.r(t),
         s.d(t, {
@@ -1045,18 +1045,18 @@
           LinkOverlay: () => le,
           default: () => Z,
         });
-      var a = s(33940),
-        n = s(52868),
+      var a = s(85556),
+        n = s(80751),
         r = s.n(n),
-        i = s(59621),
-        o = s(88464),
-        l = s(89526),
-        d = s(40103),
-        c = s(98009),
-        m = s(46486),
-        h = s(69485),
-        u = s(4306),
-        _ = s(85246);
+        i = s(54842),
+        o = s(27605),
+        l = s(47427),
+        d = s(95315),
+        c = s(28347),
+        m = s(64730),
+        h = s(34310),
+        u = s(20417),
+        _ = s(45492);
       class p extends l.Component {
         constructor() {
           super(...arguments),
@@ -1114,10 +1114,10 @@
       }
       (0, a.gn)([u.ak], p.prototype, "BindCanvasRef", null),
         (0, a.gn)([u.ak], p.prototype, "updateCanvas", null);
-      var g = s(69159),
-        S = s(32873),
-        b = s(26171),
-        v = s(19304);
+      var g = s(22042),
+        S = s(39073),
+        b = s(58747),
+        v = s(13129);
       class C extends l.Component {
         render() {
           let e = this.props,
@@ -1167,21 +1167,21 @@
           );
         }
       }
-      var f = s(44421),
-        E = s(55330),
-        M = s(71937),
-        w = s(701),
-        k = s(75962),
-        D = s(60161),
-        B = s(14826),
-        I = s(88443),
-        T = s(36041),
-        x = s(32765),
-        P = s(73762),
-        O = s(80525),
-        L = s(25202),
+      var f = s(85884),
+        E = s(45610),
+        M = s(50727),
+        w = s(62613),
+        k = s(14609),
+        D = s(50423),
+        B = s(31846),
+        I = s(24549),
+        T = s(45651),
+        x = s(37563),
+        P = s(87534),
+        O = s(68324),
+        L = s(20006),
         N = s.n(L),
-        R = s(69338);
+        R = s(46882);
       function F() {
         return l.createElement(
           "div",
@@ -1538,7 +1538,7 @@
         }
       };
       V = (0, a.gn)([o.Pi], V);
-      var H = s(76476);
+      var H = s(38204);
       class W extends l.Component {
         constructor(e) {
           super(e),
@@ -1924,7 +1924,7 @@
         (0, a.gn)([u.ak], $.prototype, "OnMouseUp", null),
         (0, a.gn)([i.aD], $.prototype, "SetVolumeWithCoord", null),
         ($ = (0, a.gn)([o.Pi], $));
-      var q = s(14966);
+      var q = s(43090);
       const j = 15;
       let z = class extends l.Component {
         constructor(e) {
@@ -3117,10 +3117,9 @@
         }
         UpdatePanel(e, t) {
           return (0, a.mG)(this, void 0, void 0, function* () {
-            (this.state.sizableRegion[e] = t),
-              this.setState({ sizableRegion: this.state.sizableRegion }, () =>
-                this.OnSaveRegions(),
-              );
+            const s = [...this.state.sizableRegion];
+            (s[e] = t),
+              this.setState({ sizableRegion: s }, () => this.OnSaveRegions());
           });
         }
         render() {
@@ -3203,34 +3202,34 @@
         (0, a.gn)([u.ak], le.prototype, "UpdatePanel", null),
         (le = (0, a.gn)([o.Pi], le));
     },
-    54178: (e, t, s) => {
+    6629: (e, t, s) => {
       "use strict";
       s.d(t, { Z: () => F });
-      var a = s(33940),
-        n = s(52868),
+      var a = s(85556),
+        n = s(80751),
         r = s.n(n),
-        i = s(59621),
-        o = s(20069),
-        l = s(68333),
-        d = s(65406),
-        c = s(19094),
-        m = s(47165),
-        h = s(88012),
-        u = s(27769),
-        _ = s(26464),
-        p = s(85246),
-        g = s(14826),
-        S = s(32765),
-        b = s(40442),
-        v = s(97940),
-        C = s(2758),
-        y = s(23801),
-        f = s(74227),
-        E = s(4306),
-        M = s(93837),
-        w = s(87628),
-        k = s(50454);
-      s(95915);
+        i = s(54842),
+        o = s(71767),
+        l = s(51841),
+        d = s(61134),
+        c = s(77581),
+        m = s(35427),
+        h = s(79993),
+        u = s(86487),
+        _ = s(16997),
+        p = s(45492),
+        g = s(31846),
+        S = s(37563),
+        b = s(8004),
+        v = s(94984),
+        C = s(92011),
+        y = s(62210),
+        f = s(44316),
+        E = s(20417),
+        M = s(76346),
+        w = s(24847),
+        k = s(68785);
+      s(21310);
       class D {
         constructor() {
           (this.m_mapCallbacks = new Map()),
@@ -3418,8 +3417,8 @@
           "m_rgRegisteredServiceMethodHandlers",
           void 0,
         );
-      var B = s(65001),
-        I = s(44973);
+      var B = s(64925),
+        I = s(65255);
       const T = "127.0.0.1",
         x = new k.s("WebUITransport");
       class P {

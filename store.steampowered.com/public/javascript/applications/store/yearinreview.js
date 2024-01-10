@@ -3,7 +3,7 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [8087],
   {
-    30120: (e) => {
+    5167: (e) => {
       e.exports = {
         avatarHolder: "steamavatar_avatarHolder_1YGAH",
         avatarStatus: "steamavatar_avatarStatus_1yIzy",
@@ -12,7 +12,7 @@
         avatarFrameImg: "steamavatar_avatarFrameImg_338kJ",
       };
     },
-    12671: (e) => {
+    27522: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         Icon: "achievementiconbase_Icon_2bzHb",
@@ -31,10 +31,10 @@
         HiddenLabel: "achievementiconbase_HiddenLabel_2yMyP",
       };
     },
-    77571: (e) => {
+    47955: (e) => {
       e.exports = { SmallAvatar: "userprofile_SmallAvatar_2cCH3" };
     },
-    80122: (e) => {
+    97342: (e) => {
       e.exports = {
         GraphicalAssetsTabs: "tabbar_GraphicalAssetsTabs_36r8g",
         GraphicalAssetsTab: "tabbar_GraphicalAssetsTab_K1_Tp",
@@ -46,7 +46,7 @@
         StatusCaution: "tabbar_StatusCaution_31Lxu",
       };
     },
-    54010: (e) => {
+    4839: (e) => {
       e.exports = {
         AchievementsCtn: "yirachievements_AchievementsCtn_2LUzg",
         AchievementSectionTitleCtn:
@@ -70,7 +70,7 @@
         Appear: "yirachievements_Appear_2HdNk",
       };
     },
-    79190: (e) => {
+    86274: (e) => {
       e.exports = {
         MonthGridOverallCtn: "yirallgames_MonthGridOverallCtn_2xKPi",
         MonthGroupCtn: "yirallgames_MonthGroupCtn_DMCZI",
@@ -80,7 +80,7 @@
         AllGamesBGImage: "yirallgames_AllGamesBGImage_Quroh",
       };
     },
-    53086: (e) => {
+    7065: (e) => {
       e.exports = {
         ImagesCtn: "yirbackgroundtiles_ImagesCtn_1qcMw",
         AllImagesCtn: "yirbackgroundtiles_AllImagesCtn_3mYNn",
@@ -93,7 +93,7 @@
         SingleGame: "yirbackgroundtiles_SingleGame_VGWhX",
       };
     },
-    74959: (e) => {
+    59848: (e) => {
       e.exports = {
         TopHonorsCtn: "yirbadges_TopHonorsCtn_1xRuk",
         BadgeBox: "yirbadges_BadgeBox_21Ah2",
@@ -172,7 +172,7 @@
         ElementFadeIn: "yirbadges_ElementFadeIn_rfg_i",
       };
     },
-    27869: (e) => {
+    23750: (e) => {
       e.exports = {
         strGameDetailsTransitionTimeMS: "300ms",
         TotalHoursContainer: "yircomponents_TotalHoursContainer_26dqO",
@@ -241,7 +241,7 @@
         BadgeBarFiller: "yircomponents_BadgeBarFiller_E8NuE",
       };
     },
-    21008: (e) => {
+    67430: (e) => {
       e.exports = {
         FriendCtn: "yirfriends_FriendCtn_1dEBr",
         FriendsSharedSection: "yirfriends_FriendsSharedSection_3zKPE",
@@ -249,7 +249,7 @@
         FriendsGrid: "yirfriends_FriendsGrid_OQcaq",
       };
     },
-    77456: (e) => {
+    33077: (e) => {
       e.exports = {
         Video: "yirhowyouplayed_Video_2etdS",
         PlatformDataContainer: "yirhowyouplayed_PlatformDataContainer_2gJdN",
@@ -261,7 +261,7 @@
         ScreenContainer: "yirhowyouplayed_ScreenContainer_13EBY",
       };
     },
-    97101: (e) => {
+    79127: (e) => {
       e.exports = {
         YearInReviewContainer: "yirlanding_YearInReviewContainer_1FBH8",
         YearInReviewContent: "yirlanding_YearInReviewContent_2Mj4n",
@@ -344,7 +344,7 @@
         BadgeBarFiller: "yirlanding_BadgeBarFiller_3FOBY",
       };
     },
-    9001: (e) => {
+    25815: (e) => {
       e.exports = {
         Section: "yirlongeststreak_Section_32a0u",
         SectionTitle: "yirlongeststreak_SectionTitle_3vl8p",
@@ -374,7 +374,7 @@
         BadgeBarFiller: "yirlongeststreak_BadgeBarFiller_Oawh_",
       };
     },
-    68603: (e) => {
+    61329: (e) => {
       e.exports = {
         OtherYearsCtn: "yirotheryears_OtherYearsCtn_q4Qku",
         OtherYearsHeader: "yirotheryears_OtherYearsHeader_22IIj",
@@ -382,7 +382,7 @@
         OtherYearLink: "yirotheryears_OtherYearLink_1DW3L",
       };
     },
-    78050: (e) => {
+    80597: (e) => {
       e.exports = {
         ScreenshotsCtn: "yirscreenshot_ScreenshotsCtn_HFVMb",
         ElementFadeIn: "yirscreenshot_ElementFadeIn_2S3v_",
@@ -395,7 +395,7 @@
         Appear: "yirscreenshot_Appear_3MN1n",
       };
     },
-    13316: (e) => {
+    80042: (e) => {
       e.exports = {
         ShareOptions: "yirshare_ShareOptions_1GTNK",
         ShareTitle: "yirshare_ShareTitle_3vsN5",
@@ -472,7 +472,7 @@
         Appear: "yirshare_Appear_lI6Qf",
       };
     },
-    89224: (e) => {
+    21082: (e) => {
       e.exports = {
         Section: "yirstatsbesidegametiles_Section_3Q6xY",
         Windows: "yirstatsbesidegametiles_Windows_1vF9u",
@@ -499,7 +499,7 @@
         Appear: "yirstatsbesidegametiles_Appear_7F-Qm",
       };
     },
-    50668: (e) => {
+    53370: (e) => {
       e.exports = {
         MonthlyChartTooltipCtn: "yirsummarycharts_MonthlyChartTooltipCtn_2XmLn",
         TooltipBackgroundOverlay:
@@ -512,7 +512,7 @@
         TotalPlaytime: "yirsummarycharts_TotalPlaytime_ObTF_",
       };
     },
-    71181: (e) => {
+    16173: (e) => {
       e.exports = {
         new_games_color: "#3cdf6a",
         used_games_color: "#4df",
@@ -600,7 +600,7 @@
         OtherYearLink: "yir2022_OtherYearLink_3itf8",
       };
     },
-    49686: (e) => {
+    61450: (e) => {
       e.exports = {
         new_games_color: "#d67070",
         used_games_color: "#683db4",
@@ -686,27 +686,27 @@
         OtherYearLink: "yir2023_OtherYearLink_1AcAx",
       };
     },
-    70365: (e) => {
+    19061: (e) => {
       e.exports = {
         Section: "yirtimelinecontainer_Section_389gB",
         ChartContainer: "yirtimelinecontainer_ChartContainer_3X3Ad",
         Chart: "yirtimelinecontainer_Chart_1YUut",
       };
     },
-    50355: (e, t, a) => {
+    38605: (e, t, a) => {
       "use strict";
       a.d(t, { o: () => u, _1: () => h, DY: () => g, vV: () => p });
-      var n = a(33940),
-        r = a(89526),
-        i = a(88464),
-        s = a(11301),
-        l = a(19304),
-        o = a(32765),
-        m = a(87178);
+      var n = a(85556),
+        r = a(47427),
+        i = a(27605),
+        s = a(42411),
+        l = a(13129),
+        o = a(37563),
+        m = a(28918);
       const c =
         a.p +
         "images/applications/store/avatar_default_full.jpg?v=valveisgoodatcaching";
-      var _ = a(30120),
+      var _ = a(5167),
         d = a.n(_);
       class u extends r.Component {
         render() {
@@ -928,11 +928,11 @@
       };
       h = (0, n.gn)([i.Pi], h);
     },
-    69513: (e, t, a) => {
+    66467: (e, t, a) => {
       "use strict";
       a.d(t, { C: () => i });
-      var n = a(54671),
-        r = a(89526);
+      var n = a(77151),
+        r = a(47427);
       function i(e) {
         const t = n.jg.Get().BIsLoaded() && n.jg.Get();
         return r.useMemo(
@@ -955,22 +955,22 @@
         );
       }
     },
-    20285: (e, t, a) => {
+    85948: (e, t, a) => {
       "use strict";
       a.d(t, { Fz: () => E, TQ: () => y, tE: () => C });
-      var n = a(33940),
-        r = a(52868),
+      var n = a(85556),
+        r = a(80751),
         i = a.n(r),
-        s = a(92994),
+        s = a(73799),
         l = a.n(s),
-        o = a(89526),
-        m = a(5615),
-        c = a(47165),
-        _ = a(23217),
-        d = a(32765),
-        u = a(68333),
-        p = a(97940),
-        g = a(27070);
+        o = a(47427),
+        m = a(42718),
+        c = a(35427),
+        _ = a(16649),
+        d = a(37563),
+        u = a(35750),
+        p = a(82182),
+        g = a(40057);
       const h = "nicknames";
       function y(e) {
         const t = (0, g.bY)(),
@@ -1086,13 +1086,13 @@
         return n ? null : r;
       }
     },
-    93908: (e, t, a) => {
+    7686: (e, t, a) => {
       "use strict";
       a.d(t, { Jr: () => l, Mr: () => o, tk: () => m });
-      var n = a(89526),
-        r = a(701),
-        i = a(16826),
-        s = a(32765);
+      var n = a(47427),
+        r = a(62613),
+        i = a(58538),
+        s = a(37563);
       function l() {
         return (0, s.id)()
           ? n.createElement(i.MCw, null)
@@ -1107,12 +1107,12 @@
           : n.createElement(r.j5H, null);
       }
     },
-    87178: (e, t, a) => {
+    28918: (e, t, a) => {
       "use strict";
       a.d(t, { j: () => s });
-      var n = a(33940),
-        r = a(89526),
-        i = a(4306);
+      var n = a(85556),
+        r = a(47427),
+        i = a(20417);
       class s extends r.Component {
         constructor(e) {
           super(e),
@@ -1176,18 +1176,18 @@
       }
       (0, n.gn)([i.ak], s.prototype, "OnImageError", null);
     },
-    43068: (e, t, a) => {
+    23665: (e, t, a) => {
       "use strict";
       a.d(t, { n: () => u });
-      var n = a(89526),
-        r = a(59934),
-        i = a(19304),
-        s = a(14826),
-        l = a(5029),
-        o = a(80122),
+      var n = a(47427),
+        r = a(8285),
+        i = a(13129),
+        s = a(31846),
+        l = a(71472),
+        o = a(97342),
         m = a.n(o),
-        c = a(84343),
-        _ = a(75962);
+        c = a(59728),
+        _ = a(14609);
       class d extends n.Component {
         constructor() {
           super(...arguments), (this.state = { activeTab: "" });
@@ -1296,20 +1296,20 @@
       }
       const u = (0, r.EN)(d);
     },
-    39097: (e, t, a) => {
+    83740: (e, t, a) => {
       "use strict";
       a.r(t), a.d(t, { YearInReviewRoutes: () => Hn, default: () => On });
-      var n = a(89526),
-        r = a(96927),
-        i = a(59934),
-        s = a(71161),
-        l = a(33940),
-        o = a(32765),
-        m = a(23801),
-        c = a(19094),
-        _ = a(68333),
-        d = a(27088),
-        u = a(5615);
+      var n = a(47427),
+        r = a(760),
+        i = a(8285),
+        s = a(25006),
+        l = a(85556),
+        o = a(37563),
+        m = a(62210),
+        c = a(77581),
+        _ = a(35750),
+        d = a(57335),
+        u = a(42718);
       const p = {
           19: [19, 1663, 1774, 3814, 1646, 4158],
           3859: [3859, 1685, 3843, 1775, 5711, 3878, 745697],
@@ -1713,7 +1713,7 @@
           11095: [11095],
         },
         g = [12095, 5611, 6650, 9130, 1721];
-      var h = a(36041);
+      var h = a(45651);
       function y(e, t, a) {
         const n = (function (e, t) {
             var a;
@@ -1775,9 +1775,9 @@
       }
       const E = "percentMonthOfOverall",
         C = "percentOtherGamesRelativeMonth";
-      var I = a(59621),
-        A = a(47165),
-        G = a(25508);
+      var I = a(54842),
+        A = a(35427),
+        G = a(46984);
       const B = 5;
       class N {
         GetRawStats() {
@@ -2061,11 +2061,11 @@
       }
       (0, l.gn)([I.LO], N.prototype, "m_privacyState", void 0);
       const f = "0px 0px 100% 0px";
-      var w = a(92616),
-        k = a(85251),
-        b = a(11195),
-        R = a(83315),
-        T = a(54671);
+      var w = a(15690),
+        k = a(80002),
+        b = a(80998),
+        R = a(30750),
+        T = a(77151);
       const P = { include_basic_info: !0, include_assets: !0 };
       class L {
         get SteamInterface() {
@@ -2241,11 +2241,11 @@
         }, [e]);
       }
       (0, l.gn)([I.LO], L.prototype, "m_GameDetailPopupData", void 0);
-      var M = a(92994),
+      var M = a(73799),
         F = a.n(M),
-        U = a(69513),
-        Z = a(14826),
-        H = a(97101),
+        U = a(66467),
+        Z = a(31846),
+        H = a(79127),
         O = a.n(H);
       function V() {
         return (0, n.useContext)(Pn).bIsUser;
@@ -2340,9 +2340,9 @@
           );
         return a;
       }
-      var $ = a(23217),
-        J = a(85246),
-        q = a(4306);
+      var $ = a(16649),
+        J = a(45492),
+        q = a(20417);
       function ee(e, t) {
         return (0, l.mG)(this, void 0, void 0, function* () {
           const a = yield t;
@@ -2504,23 +2504,23 @@
           r
         );
       }
-      var ne = a(50355),
-        re = a(20285),
-        ie = a(57605),
-        se = a(701),
-        le = a(17547),
-        oe = a(5029),
-        me = a(17318),
-        ce = a(69338),
-        _e = a(19304);
+      var ne = a(38605),
+        re = a(85948),
+        ie = a(1485),
+        se = a(62613),
+        le = a(10162),
+        oe = a(71472),
+        me = a(71741),
+        ce = a(46882),
+        _e = a(13129);
       const de =
         a.p +
         "images/applications/store/defaultappimage.png?v=valveisgoodatcaching";
-      var ue = a(25871),
-        pe = a(88443),
-        ge = a(27869),
+      var ue = a(80886),
+        pe = a(24549),
+        ge = a(23750),
         he = a.n(ge),
-        ye = a(89224),
+        ye = a(21082),
         ve = a.n(ye);
       const Se = Object.assign(Object.assign({}, P), {
         include_screenshots: !0,
@@ -2713,12 +2713,12 @@
           ),
         );
       }
-      var Ne = a(98009),
-        fe = a(3991),
-        we = a(43068),
-        ke = a(72120),
-        be = a(79190),
-        Re = a(41576);
+      var Ne = a(28347),
+        fe = a(52841),
+        we = a(23665),
+        ke = a(12251),
+        be = a(86274),
+        Re = a(44500);
       function Te(e) {
         const { className: t, children: a, strClassOnFirstVisible: r } = e,
           [i, s] = (0, n.useState)(!1);
@@ -2934,7 +2934,7 @@
           ),
         );
       }
-      var Me = a(53086),
+      var Me = a(7065),
         Fe = a.n(Me);
       const Ue = 9e3,
         Ze = 10,
@@ -3046,17 +3046,17 @@
           e.children,
         );
       }
-      var We = a(74959),
+      var We = a(59848),
         je = a.n(We),
-        Ke = a(95408),
-        ze = a(71824),
-        $e = a(77434),
-        Je = a(86246),
-        qe = a(32214),
-        et = a(93950),
-        tt = a(83962),
-        at = a(10562),
-        nt = a(57103);
+        Ke = a(74031),
+        ze = a(8114),
+        $e = a(74436),
+        Je = a(6104),
+        qe = a(85674),
+        et = a(588),
+        tt = a(1039),
+        at = a(71068),
+        nt = a(50524);
       const rt = ({
         spaceAroundCount: e,
         endValue: t,
@@ -3112,7 +3112,7 @@
       };
       rt.defaultProps = { duration: 1e3, spaceAroundCount: !1 };
       const it = rt;
-      var st = a(87458);
+      var st = a(41003);
       const lt = () => {
           const e = Q();
           return n.createElement(
@@ -3914,7 +3914,7 @@
             (this.m_SteamInterface = new c.J(o.De.WEBAPI_BASE_URL, e));
         }
       }
-      var Et = a(77571);
+      var Et = a(47955);
       function Ct(e) {
         const { accountID: t, bHideWhenNotAvailable: a } = e,
           [r] = (0, re.Fz)(t),
@@ -3945,8 +3945,8 @@
               ),
         );
       }
-      var It = a(46294),
-        At = a(21008);
+      var It = a(47242),
+        At = a(67430);
       function Gt(e) {
         const { userYearInReview: t } = e;
         return o.L7.is_support || o.L7.accountid == t.GetAccountID()
@@ -4043,11 +4043,11 @@
           }),
         );
       }
-      var wt = a(77456),
+      var wt = a(33077),
         kt = a.n(wt),
-        bt = a(68537),
-        Rt = a(98241),
-        Tt = a(84343);
+        bt = a(72236),
+        Rt = a(88579),
+        Tt = a(59728);
       const Pt = 100;
       var Lt;
       function Yt(e) {
@@ -4505,9 +4505,9 @@
           )
         );
       }
-      var Ht = a(13316),
+      var Ht = a(80042),
         Ot = a.n(Ht),
-        Vt = a(9001),
+        Vt = a(25815),
         Qt = a.n(Vt);
       function Xt(e) {
         const { userYearInReview: t } = e,
@@ -4671,15 +4671,15 @@
         }
         return null;
       }
-      var jt = a(57742),
-        Kt = a(45711),
-        zt = a(5386),
-        $t = a(40442),
-        Jt = a(75962),
-        qt = a(82248),
-        ea = a(15164),
-        ta = a(75313),
-        aa = a(99307);
+      var jt = a(90069),
+        Kt = a(74009),
+        zt = a(27910),
+        $t = a(77936),
+        Jt = a(14609),
+        qt = a(71738),
+        ea = a(91120),
+        ta = a(80289),
+        aa = a(50898);
       class na {
         get SteamInterface() {
           return this.m_SteamInterface;
@@ -4729,8 +4729,8 @@
         }
       }
       const ra = "yir_social_images";
-      var ia = a(93528),
-        sa = a(7029);
+      var ia = a(25787),
+        sa = a(93334);
       function la(e) {
         const { userYearInReview: t, steamId: a, nYear: r } = e,
           i = V(),
@@ -5987,12 +5987,12 @@
           n.createElement("div", { className: O().SmallText }, (0, Z.Xx)(s)),
         );
       }
-      var Ra = a(97225),
-        Ta = a(42333),
-        Pa = a(58104),
-        La = a(48218),
-        Ya = a(23007),
-        xa = a(50668);
+      var Ra = a(22559),
+        Ta = a(48359),
+        Pa = a(56886),
+        La = a(28531),
+        Ya = a(90291),
+        xa = a(53370);
       const Da = n.memo((e) => {
           const { data: t, topMonthlyAppsAndRanks: a } = e,
             r = Q(),
@@ -6306,7 +6306,7 @@
         const i = `${a}_Percent`;
         return (0, Z.kQ)(i, n.createElement("b", null, j(e)), t, ...r);
       }
-      var ja = a(70365);
+      var ja = a(19061);
       function Ka(e) {
         var t;
         const { userYearInReview: a } = e,
@@ -6339,7 +6339,7 @@
             ),
         );
       }
-      var za = a(97940);
+      var za = a(82182);
       class $a {
         GetAchievements(e) {
           return this.m_mapAchievementDef.get(e);
@@ -6476,9 +6476,9 @@
           s
         );
       }
-      var en = a(73961),
-        tn = a(56491),
-        an = a(12671),
+      var en = a(42287),
+        tn = a(28718),
+        an = a(27522),
         nn = a.n(an);
       const rn = n.forwardRef(function (
         {
@@ -6526,9 +6526,9 @@
           }),
         );
       });
-      var sn = a(50500),
+      var sn = a(81212),
         ln = a.n(sn),
-        on = a(54010);
+        on = a(4839);
       function mn(e) {
         var t;
         const { appid: a, userYearInReview: r } = e,
@@ -6735,7 +6735,7 @@
           )
         );
       }
-      var gn = a(78050);
+      var gn = a(80597);
       function hn(e) {
         const { appid: t, bBlurContent: a, nYear: r } = e,
           i = z(t);
@@ -6800,7 +6800,7 @@
           n.createElement("img", { src: `${c}` }),
         );
       }
-      var Sn = a(52868),
+      var Sn = a(80751),
         En = a.n(Sn);
       function Cn(e) {
         const { userYearInReview: t } = e,
@@ -7276,8 +7276,8 @@
           (0, Z.Xx)(a ? "#Sale_RemoveFromWishlist" : "#Sale_AddToWishlist"),
         );
       }
-      var wn = a(14057),
-        kn = a(68603);
+      var wn = a(37588),
+        kn = a(61329);
       function bn(e) {
         const { steamId: t, year: a } = e,
           r = Q(),
@@ -7869,11 +7869,11 @@
         );
       }
     },
-    14057: (e, t, a) => {
+    37588: (e, t, a) => {
       "use strict";
       a.d(t, { N: () => l });
-      var n = a(89526);
-      const r = { 2022: a(71181), 2023: a(49686) },
+      var n = a(47427);
+      const r = { 2022: a(16173), 2023: a(61450) },
         i = Object.values(r).reduce(
           (e, t) => Object.assign(Object.assign({}, e), t),
           {},

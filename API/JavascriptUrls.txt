@@ -1323,6 +1323,7 @@ ${STORE_BASE_URL}pointssummary/
 ${STORE_BASE_URL}privacy_agreement
 ${STORE_BASE_URL}prizes/nextdraw/${}
 ${STORE_BASE_URL}prizes/view/${giveaway_id}${SNR ? _ : ""}
+${STORE_BASE_URL}profiles/${steamid}
 ${STORE_BASE_URL}promotion/ajaxclaimstickerforgenre
 ${STORE_BASE_URL}promotion/ajaxhasclaimedgenresticker
 ${STORE_BASE_URL}public/images/checkout/Cart_generic_header_logo.png
@@ -1396,6 +1397,7 @@ ${STORE_BASE_URL}updated/ajaxrateupdate/${AnnouncementGID}
 ${STORE_BASE_URL}video/details/${}/0
 ${STORE_BASE_URL}vtt/video/${}
 ${STORE_BASE_URL}wishlist
+${STORE_BASE_URL}wishlist/profiles/${}
 ${STORE_BASE_URL}wishlist/profiles/${}/${}#sort=discount
 ${STORE_BASE_URL}wishlist/profiles/${}/?wng=${}#sort=discount
 ${STORE_BASE_URL}yearinreview/${steamid}/${}?src=9

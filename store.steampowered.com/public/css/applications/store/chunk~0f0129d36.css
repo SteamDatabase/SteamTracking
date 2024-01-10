@@ -15,7 +15,7 @@
   right: 0;
   background: #2c3036;
   padding: 12px 0px 12px 12px;
-  box-shadow: 0 0 32px 0px rgba(0, 0, 0, 0.6705882353);
+  box-shadow: 0 0 32px 0px #000000ab;
   overflow-y: auto;
   overflow-x: hidden;
   white-space: nowrap;
@@ -167,7 +167,7 @@ span.suggestdialog_mentionSearchMatch_mBrO4 {
   filter: blur(5px);
 }
 .bbcodeeditor_DescriptionCtn_3uiaP {
-  border: 2px solid rgba(0, 0, 0, 0);
+  border: 2px solid transparent;
   margin: -2px;
 }
 .bbcodeeditor_DescriptionCtn_3uiaP.bbcodeeditor_DragTarget_2Mg-b {
@@ -184,12 +184,12 @@ span.suggestdialog_mentionSearchMatch_mBrO4 {
   color: #dfe3e6;
   background: rgba(59, 63, 72, 0.5);
   border: none;
-  box-shadow: inset 0px 0px 0px rgba(0, 0, 0, 0);
+  box-shadow: inset 0px 0px 0px #0000;
   border-radius: 3px;
 }
 .bbcodeeditor_EventEditorLinkInput_2tulF input:focus {
   background: rgba(67, 73, 83, 0.6);
-  box-shadow: inset 1px 1px 8px rgba(0, 0, 0, 0.6666666667);
+  box-shadow: inset 1px 1px 8px #000a;
   padding-left: 11px;
   outline: none;
 }
@@ -275,12 +275,12 @@ span.suggestdialog_mentionSearchMatch_mBrO4 {
   color: #dfe3e6;
   background: rgba(59, 63, 72, 0.5);
   border: none;
-  box-shadow: inset 0px 0px 0px rgba(0, 0, 0, 0);
+  box-shadow: inset 0px 0px 0px #0000;
   border-radius: 3px;
 }
 .bbcodeeditor_YouTubeInput_20wVy input[type="text"]:focus {
   background: rgba(67, 73, 83, 0.6);
-  box-shadow: inset 1px 1px 8px rgba(0, 0, 0, 0.6666666667);
+  box-shadow: inset 1px 1px 8px #000a;
   padding-left: 11px;
   outline: none;
 }
@@ -662,7 +662,7 @@ span.suggestdialog_mentionSearchMatch_mBrO4 {
 }
 .carousel_carouselNavButton_1KK5N {
   border: none;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
   outline: none !important;
   display: flex;
   cursor: pointer;
@@ -827,7 +827,7 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
 }
 .carousel_pip_3Bznr {
   border: none;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
   outline: none !important;
   cursor: pointer;
   width: 18px;
@@ -971,7 +971,7 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   background: #2c3036;
   padding: 8px;
   border-radius: 4px;
-  box-shadow: 0 10px 32px 0px rgba(0, 0, 0, 0.6705882353);
+  box-shadow: 0 10px 32px 0px #000000ab;
   margin-bottom: 16px;
   display: flex;
   flex-direction: column;
@@ -986,7 +986,7 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
 .cloudfileuploadprogress_UploadPreviewContainer_2IhGM
   .cloudfileuploadprogress_SVGIcon_Video_2TqYK {
   fill: #788a92;
-  background-color: rgba(0, 0, 0, 0.2666666667);
+  background-color: #0004;
   border-radius: 4px;
   height: 150px;
   width: 100%;
@@ -1021,7 +1021,7 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   width: 16px;
   height: 16px;
   vertical-align: middle;
-  box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.5333333333);
+  box-shadow: 0 0 4px 1px #00000088;
 }
 .cloudfileuploadprogress_FileUploadCancel_2MPbU
   .cloudfileuploadprogress_SVGIcon_X_Line_3ad65
@@ -1053,7 +1053,7 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   background: #2c3036;
   padding: 8px;
   border-radius: 4px;
-  box-shadow: 0 10px 32px 0px rgba(0, 0, 0, 0.6705882353);
+  box-shadow: 0 10px 32px 0px #000000ab;
   margin-bottom: 16px;
   display: flex;
   flex-direction: column;

@@ -3,7 +3,7 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [6440],
   {
-    51964: (e) => {
+    16091: (e) => {
       e.exports = {
         SnoozeContainer: "friendsnooze_SnoozeContainer_3EzTy",
         SnoozeZ: "friendsnooze_SnoozeZ_1DArl",
@@ -19,7 +19,7 @@
         Snoring: "friendsnooze_Snoring_YuCwj",
       };
     },
-    27245: (e) => {
+    32633: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         statusAndName: "personanameandstatus_statusAndName_3n8q8",
@@ -44,14 +44,14 @@
         PendingPersona: "personanameandstatus_PendingPersona_ifetn",
       };
     },
-    61204: (e) => {
+    26358: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         PersonaStatusIcon: "personastatusicons_PersonaStatusIcon_1YsWj",
         MobilePhoneIcon: "personastatusicons_MobilePhoneIcon_3pGV8",
       };
     },
-    30120: (e) => {
+    5167: (e) => {
       e.exports = {
         avatarHolder: "steamavatar_avatarHolder_1YGAH",
         avatarStatus: "steamavatar_avatarStatus_1yIzy",
@@ -60,17 +60,17 @@
         avatarFrameImg: "steamavatar_avatarFrameImg_338kJ",
       };
     },
-    45761: (e, a, t) => {
+    70548: (e, a, t) => {
       "use strict";
       t.d(a, { r: () => C, o: () => P });
-      var n = t(33940),
-        s = t(89526),
-        r = t(88464),
-        o = t(14826),
-        i = t(40442),
-        m = t(11301),
-        l = t(19304),
-        c = t(51964),
+      var n = t(85556),
+        s = t(47427),
+        r = t(27605),
+        o = t(31846),
+        i = t(77936),
+        m = t(42411),
+        l = t(13129),
+        c = t(16091),
         A = t.n(c);
       let p = class extends s.Component {
         static get hoverClass() {
@@ -124,10 +124,10 @@
         }
       };
       p = (0, n.gn)([r.Pi], p);
-      var u = t(701),
-        g = t(61204),
+      var u = t(62613),
+        g = t(26358),
         d = t.n(g),
-        h = t(93908);
+        h = t(7686);
       const B = (0, r.Pi)((e) => {
         const { persona: a, className: t } = e,
           r = (0, n._T)(e, ["persona", "className"]);
@@ -192,9 +192,9 @@
             ),
         );
       });
-      var E = t(27245),
+      var E = t(32633),
         _ = t.n(E),
-        N = t(32765);
+        N = t(37563);
       function S(e) {
         return s.createElement(
           s.Fragment,
@@ -427,20 +427,20 @@
         );
       });
     },
-    50355: (e, a, t) => {
+    38605: (e, a, t) => {
       "use strict";
       t.d(a, { o: () => u, _1: () => h, DY: () => d, vV: () => g });
-      var n = t(33940),
-        s = t(89526),
-        r = t(88464),
-        o = t(11301),
-        i = t(19304),
-        m = t(32765),
-        l = t(87178);
+      var n = t(85556),
+        s = t(47427),
+        r = t(27605),
+        o = t(42411),
+        i = t(13129),
+        m = t(37563),
+        l = t(28918);
       const c =
         t.p +
         "images/applications/store/avatar_default_full.jpg?v=valveisgoodatcaching";
-      var A = t(30120),
+      var A = t(5167),
         p = t.n(A);
       class u extends s.Component {
         render() {
@@ -662,13 +662,13 @@
       };
       h = (0, n.gn)([r.Pi], h);
     },
-    93908: (e, a, t) => {
+    7686: (e, a, t) => {
       "use strict";
       t.d(a, { Jr: () => i, Mr: () => m, tk: () => l });
-      var n = t(89526),
-        s = t(701),
-        r = t(16826),
-        o = t(32765);
+      var n = t(47427),
+        s = t(62613),
+        r = t(58538),
+        o = t(37563);
       function i() {
         return (0, o.id)()
           ? n.createElement(r.MCw, null)
@@ -683,12 +683,12 @@
           : n.createElement(s.j5H, null);
       }
     },
-    87178: (e, a, t) => {
+    28918: (e, a, t) => {
       "use strict";
       t.d(a, { j: () => o });
-      var n = t(33940),
-        s = t(89526),
-        r = t(4306);
+      var n = t(85556),
+        s = t(47427),
+        r = t(20417);
       class o extends s.Component {
         constructor(e) {
           super(e),

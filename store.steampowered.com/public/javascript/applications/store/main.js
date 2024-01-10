@@ -3,7 +3,7 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [179],
   {
-    12069: (e) => {
+    51194: (e) => {
       e.exports = {
         FocusRingRoot: "focusring_FocusRingRoot_3PH_X",
         FocusRing: "focusring_FocusRing_1IZrQ",
@@ -15,7 +15,7 @@
         FocusRingOnHiddenItem: "focusring_FocusRingOnHiddenItem_2OusV",
       };
     },
-    35352: (e) => {
+    87123: (e) => {
       e.exports = {
         ScrollPanel: "scrollpanel_ScrollPanel_1CXdi",
         ScrollY: "scrollpanel_ScrollY_313lB",
@@ -23,7 +23,7 @@
         ScrollBoth: "scrollpanel_ScrollBoth_3S2Ko",
       };
     },
-    48410: (e) => {
+    74736: (e) => {
       e.exports = {
         HoverPosition: "hoverposition_HoverPosition_3XUAN",
         Ready: "hoverposition_Ready_qEo88",
@@ -33,7 +33,7 @@
         HoverPositionOuter: "hoverposition_HoverPositionOuter_EUN4G",
       };
     },
-    93765: (e) => {
+    27241: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         ContextMenuMouseOverlay: "contextmenu_ContextMenuMouseOverlay_pu9cO",
@@ -58,13 +58,13 @@
         PopoutSubMenuItems: "contextmenu_PopoutSubMenuItems_y5L1f",
       };
     },
-    64359: (e) => {
+    97696: (e) => {
       e.exports = {
         DialogDropDownMenu_Item: "dropdown_DialogDropDownMenu_Item_1R-DV",
         DialogDropDownMenu: "dropdown_DialogDropDownMenu_1tiuY",
       };
     },
-    19979: (e) => {
+    64012: (e) => {
       e.exports = {
         DropDownLabelContainer: "dropdownlabel_DropDownLabelContainer_2wVxO",
         DropDownLabelIconContainer:
@@ -77,7 +77,7 @@
           "dropdownlabel_DropDownLabelDescription_1JPcb",
       };
     },
-    40468: (e) => {
+    99967: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         GamepadDialogContent: "gamepaddialog_GamepadDialogContent_3joNk",
@@ -163,13 +163,13 @@
         hoverAnimation: "gamepaddialog_hoverAnimation_22zeK",
       };
     },
-    73364: (e) => {
+    81921: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         DropDownControlButton: "gamepaddropdown_DropDownControlButton_28bny",
       };
     },
-    30113: (e) => {
+    20204: (e) => {
       e.exports = {
         TogglePasswordVisibilityBtn:
           "gamepadinput_TogglePasswordVisibilityBtn_1Z-Cc",
@@ -177,7 +177,7 @@
         PinDigit: "gamepadinput_PinDigit_1oiQ5",
       };
     },
-    91429: (e) => {
+    74491: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         PagedSettingsDialog: "gamepadpagedsettings_PagedSettingsDialog_2P_CG",
@@ -231,7 +231,7 @@
         hoverAnimation: "gamepadpagedsettings_hoverAnimation_vXWdQ",
       };
     },
-    74259: (e) => {
+    13708: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         "error-shake-duration": "500ms",
@@ -300,7 +300,7 @@
         "ItemFocusAnim-green": "gamepadslider_ItemFocusAnim-green_8o7mU",
       };
     },
-    96777: (e) => {
+    40093: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         PagedSettingsDialog: "pagedsettings_PagedSettingsDialog_3I6h_",
@@ -329,14 +329,14 @@
         HidePageListButton: "pagedsettings_HidePageListButton_3i4Ep",
       };
     },
-    31632: (e) => {
+    27363: (e) => {
       e.exports = {
         Group: "radio_Group_2qYC3",
         Button: "radio_Button_3lwcR",
         Active: "radio_Active_3ZBFo",
       };
     },
-    3367: (e) => {
+    24672: (e) => {
       e.exports = {
         Toggle: "toggle_Toggle_3jXWQ",
         Disabled: "toggle_Disabled_2V_kU",
@@ -349,7 +349,7 @@
         Label: "toggle_Label_2sb8q",
       };
     },
-    19634: (e) => {
+    37990: (e) => {
       e.exports = {
         Spinner: "gamepadui_svg_library_Spinner_2Hc4f",
         SpinnerSpokeFade: "gamepadui_svg_library_SpinnerSpokeFade_2QBT4",
@@ -367,7 +367,7 @@
           "gamepadui_svg_library_GenericGamepadHighlight_1zfyD",
       };
     },
-    67122: (e) => {
+    58412: (e) => {
       e.exports = {
         BodyNoScroll: "modals_BodyNoScroll_3ItVl",
         BodyNoScrollDialog: "modals_BodyNoScrollDialog_3lrlA",
@@ -376,7 +376,7 @@
         GamepadOnlyPanelWrapper: "modals_GamepadOnlyPanelWrapper_1vgBE",
       };
     },
-    61832: (e) => {
+    49632: (e) => {
       e.exports = {
         ParentalPINDialog: "parentalunlockdialog_ParentalPINDialog_176OW",
         ParentalUnlock: "parentalunlockdialog_ParentalUnlock_26x49",
@@ -389,7 +389,7 @@
         Button: "parentalunlockdialog_Button_1v4Js",
       };
     },
-    8849: (e) => {
+    79124: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         PurchaseNoticeContainer:
@@ -404,7 +404,7 @@
         VROnly: "purchasenotices_VROnly_30HWu",
       };
     },
-    1721: (e) => {
+    7765: (e) => {
       e.exports = {
         v6: "shared_common_v6_3r3Le",
         SubText: "shared_common_SubText_3Ctn8",
@@ -423,7 +423,7 @@
         RemoveIcon: "shared_common_RemoveIcon_1iOrE",
       };
     },
-    59743: (e) => {
+    45691: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         EmoticonBow: "shared_svg_library_EmoticonBow_S9_rt",
@@ -442,7 +442,7 @@
           "shared_svg_library_SteamDeckCompatUnknown_15dEs",
       };
     },
-    50500: (e) => {
+    81212: (e) => {
       e.exports = {
         TextToolTip: "tooltip_TextToolTip_29b2a",
         ToolTipCustom: "tooltip_ToolTipCustom_3Dt__",
@@ -451,7 +451,7 @@
         ToolTipInsetContent: "tooltip_ToolTipInsetContent_1nxOn",
       };
     },
-    86137: (e) => {
+    13447: (e) => {
       e.exports = {
         nTimelineHoverEdgePadding: "4",
         TrailerPlayer: "trailerplayer_TrailerPlayer_1i1EC",
@@ -466,16 +466,16 @@
         UserInputNeeded: "trailerplayer_UserInputNeeded_tH6oU",
       };
     },
-    25887: (e) => {
+    53909: (e) => {
       e.exports = {
         TransitionGroup: "overlappingtransition_TransitionGroup_11Twu",
         ContentWrapper: "overlappingtransition_ContentWrapper_1knAs",
       };
     },
-    54978: (e) => {
+    22871: (e) => {
       e.exports = { App: "app_App_2uHYt" };
     },
-    79865: (e) => {
+    91585: (e) => {
       e.exports = {
         CartCard: "shoppingcart_CartCard_2w0ZE",
         ShoppingCartPage: "shoppingcart_ShoppingCartPage_22xts",
@@ -514,7 +514,7 @@
         HeaderNotice: "shoppingcart_HeaderNotice_2zWY-",
       };
     },
-    24174: (e, t, n) => {
+    83682: (e, t, n) => {
       "use strict";
       n.d(t, {
         Z6: () => u,
@@ -525,10 +525,10 @@
         yp: () => d,
         iP: () => m,
       });
-      var i = n(89526),
-        r = n(40442),
-        s = n(32765),
-        o = n(4116);
+      var i = n(47427),
+        r = n(77936),
+        s = n(37563),
+        o = n(4481);
       class a {
         constructor() {
           (this.type = 0), (this.text = "");
@@ -867,11 +867,11 @@
         return e.replace(new RegExp(r, "gi"), n);
       }
     },
-    4116: (e, t, n) => {
+    4481: (e, t, n) => {
       "use strict";
       n.d(t, { DX: () => o, LT: () => s, So: () => a });
-      var i = n(89526),
-        r = n(23801);
+      var i = n(47427),
+        r = n(62210);
       class s {
         constructor() {
           this.reactNodes = [];
@@ -938,10 +938,10 @@
         }
       }
     },
-    80525: (e, t, n) => {
+    68324: (e, t, n) => {
       "use strict";
       n.d(t, { Pw: () => a, c8: () => o, hB: () => r, zB: () => s });
-      const i = new (n(50454).s)("video"),
+      const i = new (n(68785).s)("video"),
         r = (i.Info, i.Debug);
       i.Error, i.Warning;
       function s(e) {
@@ -973,23 +973,23 @@
         return "probably" === e || "maybe" === e;
       }
     },
-    24141: (e, t, n) => {
+    46157: (e, t, n) => {
       "use strict";
       n.d(t, { C2: () => H, N1: () => F, YW: () => N });
-      var i = n(33940),
-        r = n(52868),
+      var i = n(85556),
+        r = n(80751),
         s = n.n(r),
-        o = n(59621),
-        a = n(40442),
-        l = (n(11837), n(23801)),
-        c = n(85246),
-        u = n(14826),
-        d = n(36041),
-        m = n(26464),
-        h = n(25508),
-        p = n(32765),
-        g = n(80525),
-        _ = n(56189);
+        o = n(54842),
+        a = n(77936),
+        l = (n(83999), n(62210)),
+        c = n(45492),
+        u = n(31846),
+        d = n(45651),
+        m = n(16997),
+        h = n(46984),
+        p = n(37563),
+        g = n(68324),
+        _ = n(48695);
       function f(e, t) {
         let n = e.getElementsByTagName("MPD");
         return n && 1 == n.length ? n[0] : null;
@@ -3192,19 +3192,19 @@
         (0, i.gn)([m.a], H.prototype, "ReportPlayerStats", null),
         (0, i.gn)([o.aD.bound], H.prototype, "CaptureStatsForDisplay", null);
     },
-    56189: (e, t, n) => {
+    48695: (e, t, n) => {
       "use strict";
       n.d(t, { vf: () => f });
-      var i = n(33940),
-        r = n(59621),
-        s = n(52868),
+      var i = n(85556),
+        r = n(54842),
+        s = n(80751),
         o = n.n(s),
-        a = n(47165),
-        l = n(80525),
-        c = n(32765),
-        u = n(85246),
-        d = n(14826),
-        m = n(88443);
+        a = n(35427),
+        l = n(68324),
+        c = n(37563),
+        u = n(45492),
+        d = n(31846),
+        m = n(24549);
       const h = 1e6;
       class p {
         constructor() {
@@ -3873,10 +3873,10 @@
         (0, i.gn)([r.LO], S.prototype, "m_nCurrentFPS", void 0),
         (0, i.gn)([r.aD.bound], S.prototype, "TakeReading", null);
     },
-    47742: (e, t, n) => {
+    53923: (e, t, n) => {
       "use strict";
       n.d(t, { B: () => s, M: () => o });
-      var i = n(89526);
+      var i = n(47427);
       const r = (0, i.createContext)(void 0),
         s = r.Provider,
         o = () => {
@@ -3888,7 +3888,7 @@
           return e.useActiveAccount();
         };
     },
-    19934: (e, t, n) => {
+    75683: (e, t, n) => {
       "use strict";
       n.d(t, {
         BZ: () => w,
@@ -3905,16 +3905,16 @@
         v$: () => M,
         w7: () => L,
       });
-      var i = n(33940),
-        r = n(5615),
-        s = n(40442),
-        o = n(68333),
-        a = n(27070),
-        l = n(40227),
-        c = (n(97940), n(32765), n(93917)),
-        u = n(87361),
-        d = n(47742),
-        m = n(47165);
+      var i = n(85556),
+        r = n(42718),
+        s = n(77936),
+        o = n(35750),
+        a = n(40057),
+        l = n(32830),
+        c = (n(82182), n(37563), n(14476)),
+        u = n(46009),
+        d = n(53923),
+        m = n(35427);
       function h(e) {
         return ["parentalsettings", e];
       }
@@ -4178,7 +4178,7 @@
         });
       }
     },
-    27070: (e, t, n) => {
+    40057: (e, t, n) => {
       "use strict";
       n.d(t, {
         Ub: () => l,
@@ -4187,8 +4187,8 @@
         sG: () => u,
         y$: () => d,
       });
-      var i = n(89526),
-        r = n(23801);
+      var i = n(47427),
+        r = n(62210);
       const s = i.createContext(void 0),
         o = s.Provider,
         a = () => {
@@ -4225,10 +4225,10 @@
         d = () => a().useStorage(),
         m = () => a().useActiveSteamInterface();
     },
-    65406: (e, t, n) => {
+    61134: (e, t, n) => {
       "use strict";
       n.d(t, { Z: () => s });
-      var i = n(33940);
+      var i = n(85556);
       class r {
         GetObject(e) {
           return (0, i.mG)(this, void 0, void 0, function* () {
@@ -4258,13 +4258,13 @@
         }
       }
     },
-    40103: (e, t, n) => {
+    95315: (e, t, n) => {
       "use strict";
       n.d(t, { Oo: () => a, yV: () => l });
-      n(65850);
-      var i = n(30837),
-        r = n(16383),
-        s = n(23801);
+      n(85496);
+      var i = n(89570),
+        r = n(47692),
+        s = n(62210);
       class o {
         constructor() {
           this.m_mapManagers = new WeakMap();
@@ -4327,13 +4327,13 @@
         return l.Show(), (null == n ? void 0 : n.bCreateHidden) && l.Hide(), l;
       }
     },
-    65850: (e, t, n) => {
+    85496: (e, t, n) => {
       "use strict";
       n.d(t, { $Y: () => l });
-      var i = n(33940),
-        r = n(59621),
-        s = n(60161),
-        o = (n(69159), n(40442));
+      var i = n(85556),
+        r = n(54842),
+        s = n(50423),
+        o = (n(22042), n(77936));
       class a {
         constructor(e, t) {
           (this.m_nKey = null),
@@ -4589,13 +4589,13 @@
         }
       }
     },
-    30837: (e, t, n) => {
+    89570: (e, t, n) => {
       "use strict";
       n.d(t, { u: () => a });
-      var i = n(65850),
-        r = n(23801),
-        s = n(85246),
-        o = n(11837);
+      var i = n(85496),
+        r = n(62210),
+        s = n(45492),
+        o = n(83999);
       class a {
         constructor() {
           (this.m_callbacksMenusChanged = new s.pB()),
@@ -4679,11 +4679,11 @@
         }
       }
     },
-    894: (e, t, n) => {
+    83654: (e, t, n) => {
       "use strict";
       n.d(t, { AN: () => a });
-      var i = n(24470),
-        r = n(60161);
+      var i = n(24522),
+        r = n(50423);
       class s {
         constructor(e) {
           this.instance = new o(e, !1);
@@ -4769,7 +4769,7 @@
         }
       }
     },
-    73070: (e, t, n) => {
+    53087: (e, t, n) => {
       "use strict";
       n.d(t, {
         Rt: () => E,
@@ -4780,18 +4780,18 @@
         AN: () => I,
         Wy: () => y,
       });
-      var i = n(33940),
-        r = n(59621),
-        s = n(89526),
-        o = n(60161),
-        a = n(37377),
-        l = n(26464),
-        c = n(52696),
-        u = n(40442),
-        d = n(14826),
-        m = n(32765),
-        h = n(23801),
-        p = n(11837);
+      var i = n(85556),
+        r = n(54842),
+        s = n(47427),
+        o = n(50423),
+        a = n(60616),
+        l = n(16997),
+        c = n(37066),
+        u = n(77936),
+        d = n(31846),
+        m = n(37563),
+        h = n(62210),
+        p = n(83999);
       class g {
         constructor(e, t, n) {
           if (((this.m_rgLoadingLinks = []), (this.m_rgLoadingLinks = []), n))
@@ -4833,8 +4833,8 @@
       (0, i.gn)([l.a], g.prototype, "OnLinkLoad", null);
       var _,
         f,
-        v = n(16383),
-        C = n(34433);
+        v = n(47692),
+        C = n(43235);
       function S() {
         return (0, m.Me)() ? _.BackgroundTransparent : _.None;
       }
@@ -5534,17 +5534,17 @@
       let I = (0, v.Yt)("PopupManager", () => new L());
       window.g_PopupManager = I;
     },
-    86777: (e, t, n) => {
+    697: (e, t, n) => {
       "use strict";
       n.d(t, { B: () => c });
-      var i = n(89526),
-        r = n(73070);
+      var i = n(47427),
+        r = n(53087);
       const s = i.createContext({ body_class: "" });
       function o() {
         return i.useContext(s);
       }
-      var a = n(40442),
-        l = n(19304);
+      var a = n(77936),
+        l = n(13129);
       function c(e, t, n) {
         const r = i.useRef(),
           [s, c] = i.useState(void 0),
@@ -5638,7 +5638,7 @@
         }
       }
     },
-    23384: (e, t, n) => {
+    92686: (e, t, n) => {
       "use strict";
       n.d(t, {
         BU: () => x,
@@ -5653,6 +5653,7 @@
         Xe: () => F,
         Xn: () => k,
         ZB: () => P,
+        aF: () => Y,
         bF: () => A,
         cL: () => U,
         cc: () => K,
@@ -5666,19 +5667,19 @@
         zj: () => j,
         zs: () => V,
       });
-      var i = n(33940),
-        r = n(89526),
-        s = n(68333),
-        o = n(5615),
-        a = n(47742),
-        l = n(27070),
-        c = n(19447),
-        u = n(14826),
-        d = n(66427),
-        m = n(44973),
-        h = n(87361),
-        p = n(19934),
-        g = n(81349);
+      var i = n(85556),
+        r = n(47427),
+        s = n(35750),
+        o = n(42718),
+        a = n(53923),
+        l = n(40057),
+        c = n(75017),
+        u = n(31846),
+        d = n(85516),
+        m = n(65255),
+        h = n(46009),
+        p = n(75683),
+        g = n(45284);
       const _ = (e) => (t, n) => (n ? [e, t, n] : t ? [e, t] : [e]),
         f = _("get_family_group_for_user "),
         v = _("get_family_group"),
@@ -5949,7 +5950,9 @@
           (e[(e.k_EFamilyQueryLoadHistory = 13)] = "k_EFamilyQueryLoadHistory"),
           (e[(e.k_EFamilyQueryLoadCart = 14)] = "k_EFamilyQueryLoadCart"),
           (e[(e.k_EFamilyQuerySetCooldownOverrides = 15)] =
-            "k_EFamilyQuerySetCooldownOverrides");
+            "k_EFamilyQuerySetCooldownOverrides"),
+          (e[(e.k_EFamilyQueryResendInvite = 16)] =
+            "k_EFamilyQueryResendInvite");
       })(V || (V = {}));
       const H = {
         8: "#FamilyManagement_ErrorInternalServerError",
@@ -6135,8 +6138,20 @@
           );
         return (0, r.useMemo)(() => h.slice().sort(g), [h, g]);
       }
+      function Y(e, t) {
+        const n = (0, l.bY)();
+        return (0, o.useMutation)({
+          mutationFn: () =>
+            (0, i.mG)(this, void 0, void 0, function* () {
+              const i = s.gA.Init(c.e0);
+              i.Body().set_family_groupid(e), i.Body().set_steamid(t);
+              const r = yield c.s4.ResendInvitationToFamilyGroup(n, i);
+              return y(r.GetEResult()), r;
+            }),
+        });
+      }
     },
-    44026: (e, t, n) => {
+    82493: (e, t, n) => {
       "use strict";
       n.d(t, {
         Fe: () => c,
@@ -6147,12 +6162,12 @@
         bX: () => _,
         wl: () => p,
       });
-      var i = n(33940),
-        r = n(89526),
-        s = n(44673),
-        o = n(88045),
-        a = n(4306),
-        l = n(32053);
+      var i = n(85556),
+        r = n(47427),
+        s = n(28781),
+        o = n(25849),
+        a = n(20417),
+        l = n(59885);
       const c = r.forwardRef(function (e, t) {
           const {
               NavigationManager: n,
@@ -6248,7 +6263,7 @@
         _ = (0, s.hi)("input");
       (0, s.hi)("textarea"), (0, s.lP)("img");
     },
-    44673: (e, t, n) => {
+    28781: (e, t, n) => {
       "use strict";
       n.d(t, {
         CO: () => S,
@@ -6260,20 +6275,20 @@
         ET: () => f,
         Pd: () => C,
       });
-      var i = n(33940),
-        r = n(89526),
-        s = n(44026),
-        o = n(32053),
-        a = n(58123),
-        l = n(47927),
-        c = n(94952);
-      var u = n(16383),
-        d = n(78330),
-        m = n(72566),
-        h = n(19304),
-        p = n(4306),
-        g = n(32765),
-        _ = n(76552);
+      var i = n(85556),
+        r = n(47427),
+        s = n(82493),
+        o = n(59885),
+        a = n(77262),
+        l = n(40659),
+        c = n(35643);
+      var u = n(47692),
+        d = n(14243),
+        m = n(87476),
+        h = n(13129),
+        p = n(20417),
+        g = n(37563),
+        _ = n(6799);
       const f = (0, u.Yt)("GamepadNavigationContext", () =>
           r.createContext(null),
         ),
@@ -6602,18 +6617,18 @@
         });
       }
     },
-    17589: (e, t, n) => {
+    4030: (e, t, n) => {
       "use strict";
       n.d(t, { O: () => h });
-      var i = n(89526),
-        r = n(19304),
-        s = n(50454),
-        o = (n(47927), n(44673)),
-        a = n(12069),
+      var i = n(47427),
+        r = n(13129),
+        s = n(68785),
+        o = (n(40659), n(28781)),
+        a = n(51194),
         l = n.n(a),
-        c = n(4306),
-        u = n(32765),
-        d = n(44026);
+        c = n(20417),
+        u = n(37563),
+        d = n(82493);
       const m = new s.s("FocusNavigation").Debug;
       function h(e) {
         const {
@@ -6778,14 +6793,14 @@
         });
       }
     },
-    32053: (e, t, n) => {
+    59885: (e, t, n) => {
       "use strict";
       n.d(t, { Jd: () => u, pD: () => l });
-      var i = n(33940),
-        r = n(89526),
-        s = n(58123),
-        o = n(50454);
-      n(44673);
+      var i = n(85556),
+        r = n(47427),
+        s = n(77262),
+        o = n(68785);
+      n(28781);
       const a = new o.s("GamepadEvents").Debug;
       function l(e, t, n) {
         void 0 === n &&
@@ -6862,21 +6877,21 @@
         );
       }
     },
-    51438: (e, t, n) => {
+    91618: (e, t, n) => {
       "use strict";
       n.d(t, { s: () => g });
-      var i = n(33940),
-        r = n(89526),
-        s = n(44673),
-        o = n(19304),
-        a = n(4306),
-        l = n(16221),
-        c = n(44026),
-        u = n(32053),
-        d = n(88045);
+      var i = n(85556),
+        r = n(47427),
+        s = n(28781),
+        o = n(13129),
+        a = n(20417),
+        l = n(3783),
+        c = n(82493),
+        u = n(59885),
+        d = n(25849);
       const m = (0, r.createContext)(null);
-      var h = n(72566),
-        p = n(76552);
+      var h = n(87476),
+        p = n(6799);
       const g = r.forwardRef(function (e, t) {
         const {
             "flow-children": n,
@@ -6947,14 +6962,14 @@
         );
       });
     },
-    30928: (e, t, n) => {
+    84686: (e, t, n) => {
       "use strict";
       n.d(t, { eh: () => l });
-      var i = n(33940),
-        r = n(89526),
-        s = n(4306),
-        o = n(51438),
-        a = n(34329);
+      var i = n(85556),
+        r = n(47427),
+        s = n(20417),
+        o = n(91618),
+        a = n(47144);
       const l = r.forwardRef(function (e, t) {
         const {
             onExplicitFocusLevelChanged: n,
@@ -7055,20 +7070,20 @@
         return e.ChildTakeFocus(t);
       }
     },
-    34329: (e, t, n) => {
+    47144: (e, t, n) => {
       "use strict";
       n.d(t, { P8: () => g, TN: () => _ });
-      var i = n(33940),
-        r = n(89526),
-        s = n(23801),
-        o = n(19304),
-        a = n(4306),
-        l = n(45820),
-        c = n(16221),
-        u = n(22612),
-        d = n(17589),
-        m = n(51438),
-        h = n(35352),
+      var i = n(85556),
+        r = n(47427),
+        s = n(62210),
+        o = n(13129),
+        a = n(20417),
+        l = n(56617),
+        c = n(3783),
+        u = n(13974),
+        d = n(4030),
+        m = n(91618),
+        h = n(87123),
         p = n.n(h);
       const g = r.forwardRef(function (e, t) {
           var n;
@@ -7201,7 +7216,7 @@
         return r.useMemo(() => c(f, v), [f, v, c]);
       }
     },
-    58123: (e, t, n) => {
+    77262: (e, t, n) => {
       "use strict";
       n.d(t, {
         $G: () => p,
@@ -7220,7 +7235,7 @@
         x: () => c,
       });
       var i,
-        r = n(8179);
+        r = n(15633);
       !(function (e) {
         (e[(e.GAMEPAD = 0)] = "GAMEPAD"),
           (e[(e.KEYBOARD = 1)] = "KEYBOARD"),
@@ -7321,13 +7336,13 @@
         );
       }
     },
-    8179: (e, t, n) => {
+    15633: (e, t, n) => {
       "use strict";
       n.d(t, { eV: () => r, Rr: () => s, oH: () => c });
       var i,
         r,
         s,
-        o = n(85246);
+        o = n(45492);
       class a {
         constructor(e) {
           this.m_config = e;
@@ -7540,11 +7555,11 @@
         }
       }
     },
-    60142: (e, t, n) => {
+    22671: (e, t, n) => {
       "use strict";
       n.d(t, { $y: () => a, Sp: () => o, VA: () => l, Y0: () => c });
-      var i = n(23801),
-        r = n(58123);
+      var i = n(62210),
+        r = n(77262);
       class s {
         constructor(e) {
           this.m_root = e;
@@ -7645,20 +7660,20 @@
         }
       }
     },
-    96572: (e, t, n) => {
+    20922: (e, t, n) => {
       "use strict";
       n.d(t, { Z: () => S });
-      var i = n(33940),
-        r = n(8179),
-        s = n(34433),
-        o = n(11837),
-        a = n(23801),
-        l = n(26464),
-        c = n(85246),
-        u = n(60161),
-        d = n(50454),
-        m = n(58123),
-        h = n(9501);
+      var i = n(85556),
+        r = n(15633),
+        s = n(43235),
+        o = n(83999),
+        a = n(62210),
+        l = n(16997),
+        c = n(45492),
+        u = n(50423),
+        d = n(68785),
+        m = n(77262),
+        h = n(78078);
       const p = new d.s("FocusNavigation").Debug;
       class g {
         constructor(e, t, n) {
@@ -8246,7 +8261,7 @@
         (0, i.gn)([l.a], S.prototype, "OnNavigationTypeChange", null),
         (0, i.gn)([l.a], S.prototype, "UpdateRepeatAllowed", null);
     },
-    47927: (e, t, n) => {
+    40659: (e, t, n) => {
       "use strict";
       n.d(t, {
         Ii: () => g,
@@ -8259,13 +8274,13 @@
         sq: () => d,
         uW: () => c,
       });
-      var i = n(8179),
-        r = n(23801),
-        s = n(58123),
-        o = n(60142),
-        a = n(16221),
-        l = n(96572);
-      n(9501);
+      var i = n(15633),
+        r = n(62210),
+        s = n(77262),
+        o = n(22671),
+        a = n(3783),
+        l = n(20922);
+      n(78078);
       class c {
         constructor(e) {
           this.m_node = e;
@@ -8402,7 +8417,7 @@
         }
       }
     },
-    16221: (e, t, n) => {
+    3783: (e, t, n) => {
       "use strict";
       n.d(t, {
         Vp: () => F,
@@ -8411,16 +8426,16 @@
         c4: () => N,
         mz: () => P,
       });
-      var i = n(33940),
-        r = n(8179),
-        s = n(89855),
-        o = n(23801),
-        a = n(26464),
-        l = n(85246),
-        c = n(50454);
-      var u = n(58123),
-        d = n(47927),
-        m = n(60161);
+      var i = n(85556),
+        r = n(15633),
+        s = n(77816),
+        o = n(62210),
+        a = n(16997),
+        l = n(45492),
+        c = n(68785);
+      var u = n(77262),
+        d = n(40659),
+        m = n(50423);
       function h(e, t, n) {
         const i = [],
           [r, s] = e.GetChildren(),
@@ -8526,8 +8541,8 @@
           distance: s,
         };
       }
-      var f = n(36041),
-        v = n(60729);
+      var f = n(45651),
+        v = n(48766);
       const C = new c.s("ScrollSnap").Debug;
       let S = !1;
       let b;
@@ -9723,14 +9738,14 @@
         (0, i.gn)([a.a], F.prototype, "OnDOMBlur", null),
         (0, i.gn)([a.a], F.prototype, "OnNavigationEvent", null);
     },
-    9501: (e, t, n) => {
+    78078: (e, t, n) => {
       "use strict";
       n.d(t, { C: () => u });
-      var i = n(8179),
-        r = n(85246),
-        s = n(50454),
-        o = n(58123),
-        a = n(16221);
+      var i = n(15633),
+        r = n(45492),
+        s = n(68785),
+        o = n(77262),
+        a = n(3783);
       const l = new s.s("FocusNavigation").Debug,
         c = new s.s("GamepadEvents").Debug;
       class u {
@@ -10016,10 +10031,10 @@
         }
       }
     },
-    88045: (e, t, n) => {
+    25849: (e, t, n) => {
       "use strict";
       n.d(t, { t: () => r });
-      var i = n(16221);
+      var i = n(3783);
       function r(e) {
         switch (e) {
           case "column":
@@ -10037,13 +10052,13 @@
         }
       }
     },
-    22612: (e, t, n) => {
+    13974: (e, t, n) => {
       "use strict";
       n.d(t, { $1: () => l, pj: () => a });
-      var i = n(89526),
-        r = n(60729),
-        s = n(4306),
-        o = n(8179);
+      var i = n(47427),
+        r = n(48766),
+        s = n(20417),
+        o = n(15633);
       function a(e, t = "smooth", n, s) {
         const a = (null != n ? n : 30) / 100,
           l = i.useRef(void 0),
@@ -10149,16 +10164,16 @@
         return { ref: (0, s.yU)(t), navRef: e };
       }
     },
-    94952: (e, t, n) => {
+    35643: (e, t, n) => {
       "use strict";
       n.d(t, { k$: () => m, o5: () => d });
-      var i = n(33940),
-        r = n(52696),
-        s = n(89526),
-        o = n(73070),
-        a = n(58123),
-        l = n(4306),
-        c = n(32765);
+      var i = n(85556),
+        r = n(37066),
+        s = n(47427),
+        o = n(53087),
+        a = n(77262),
+        l = n(20417),
+        c = n(37563);
       const u = s.createContext(function (e, t) {
         return {
           ShowVirtualKeyboard: () => {},
@@ -10327,19 +10342,19 @@
         );
       }
     },
-    19094: (e, t, n) => {
+    77581: (e, t, n) => {
       "use strict";
       n.d(t, { J: () => g });
-      var i = n(33940),
-        r = n(5155),
-        s = n(45878),
-        o = n(68333),
-        a = n(26464),
-        l = n(52868),
+      var i = n(85556),
+        r = n(50060),
+        s = n(10059),
+        o = n(35750),
+        a = n(16997),
+        l = n(80751),
         c = n.n(l),
-        u = n(93837),
-        d = n(47165),
-        m = n(81349);
+        u = n(90938),
+        d = n(35427),
+        m = n(45284);
       function h(e) {
         try {
           if (!e || "string" != typeof e) return null;
@@ -10554,12 +10569,12 @@
         (0, i.gn)([a.a], g.prototype, "SendNotification", null),
         (0, i.gn)([a.a], g.prototype, "Send", null);
     },
-    57361: (e, t, n) => {
+    22520: (e, t, n) => {
       "use strict";
       n.d(t, { Am: () => c, kI: () => o, x3: () => l });
-      var i = n(32765),
-        r = n(4556),
-        s = n(23801);
+      var i = n(37563),
+        r = n(48760),
+        s = n(62210);
       const o = 0,
         a = "061818254b2c99ac49e6626adb128ed1282a392f",
         l = 120;
@@ -10656,15 +10671,15 @@
         }
       }
     },
-    58961: (e, t, n) => {
+    45944: (e, t, n) => {
       "use strict";
       n.d(t, { Q8: () => f });
-      var i = n(33940),
-        r = n(59621),
-        s = n(40442),
-        o = n(68333),
-        a = n(57361),
-        l = n(32765);
+      var i = n(85556),
+        r = n(54842),
+        s = n(77936),
+        o = n(35750),
+        a = n(22520),
+        l = n(37563);
       class c {
         constructor(e) {
           (this.m_nLastUpdated = 0),
@@ -10749,9 +10764,9 @@
           }
         return e;
       }
-      var h = n(16744),
-        p = n(23801),
-        g = n(85246);
+      var h = n(18015),
+        p = n(62210),
+        g = n(45492);
       class _ {
         constructor() {
           (this.m_mapAppInfo = r.LO.map()),
@@ -11039,7 +11054,7 @@
         (0, i.gn)([r.aD], _.prototype, "OnRichPresenceLocUpdate", null);
       const f = new _();
     },
-    16383: (e, t, n) => {
+    47692: (e, t, n) => {
       "use strict";
       var i;
       n.d(t, { Yt: () => r }),
@@ -11053,16 +11068,16 @@
         return t();
       }
     },
-    69206: (e, t, n) => {
+    37265: (e, t, n) => {
       "use strict";
       n.d(t, { T: () => d });
-      var i = n(33940),
-        r = n(89526),
-        s = n(4306),
-        o = n(88464),
-        a = n(85246),
-        l = n(19304),
-        c = n(48410),
+      var i = n(85556),
+        r = n(47427),
+        s = n(20417),
+        o = n(27605),
+        a = n(45492),
+        l = n(13129),
+        c = n(74736),
         u = n.n(c);
       let d = class extends r.Component {
         constructor() {
@@ -11316,10 +11331,10 @@
         (0, i.gn)([s.ak], d.prototype, "OnWindowBlur", null),
         (d = (0, i.gn)([o.Pi], d));
     },
-    14966: (e, t, n) => {
+    43090: (e, t, n) => {
       "use strict";
       n.d(t, { A: () => s, d: () => r });
-      var i = n(44973);
+      var i = n(65255);
       function r(e) {
         return (
           i.De.COMMUNITY_BASE_URL + "linkfilter/?u=" + encodeURIComponent(e)
@@ -11352,16 +11367,16 @@
         return n && n.length > 5 ? n[6].toString() : e;
       }
     },
-    11301: (e, t, n) => {
+    42411: (e, t, n) => {
       "use strict";
       n.d(t, { Pv: () => d, WV: () => c.W, sB: () => u });
-      var i = n(33940),
-        r = n(59621),
-        s = n(39818),
-        o = n(58961),
-        a = n(14826),
-        l = n(32765),
-        c = n(4556);
+      var i = n(85556),
+        r = n(54842),
+        s = n(24289),
+        o = n(45944),
+        a = n(31846),
+        l = n(37563),
+        c = n(48760);
       function u(e) {
         let t = "offline";
         return (
@@ -11646,10 +11661,10 @@
         (0, i.gn)([r.LO], d.prototype, "m_strBroadcastTitle", void 0),
         (0, i.gn)([r.LO], d.prototype, "m_bCommunityBanned", void 0);
     },
-    4556: (e, t, n) => {
+    48760: (e, t, n) => {
       "use strict";
       n.d(t, { U: () => s, W: () => r });
-      var i = n(32765);
+      var i = n(37563);
       const r = "fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb";
       function s(e, t) {
         let n = ".jpg";
@@ -11667,13 +11682,13 @@
         );
       }
     },
-    47165: (e, t, n) => {
+    35427: (e, t, n) => {
       "use strict";
       n.d(t, { K: () => a });
-      var i = n(38072),
+      var i = n(94947),
         r = n.n(i),
-        s = n(40442),
-        o = n(32765);
+        s = n(77936),
+        o = n(37563);
       class a {
         constructor(e = 0, t, n, i) {
           e instanceof a
@@ -11839,7 +11854,7 @@
         }
       }
     },
-    98009: (e, t, n) => {
+    28347: (e, t, n) => {
       "use strict";
       n.d(t, {
         OL: () => a,
@@ -11848,9 +11863,9 @@
         B1: () => l,
         ZP: () => d,
       });
-      var i = n(23801),
-        r = n(207),
-        s = n(32765);
+      var i = n(62210),
+        r = n(13499),
+        s = n(37563);
       const o = JSON.parse(
         '{"store.steampowered.com":1,"steamcommunity.com":2,"default":4,"message":41,"notification":48,"mobileapp":700,"steamtv":2200,"steamclient":5000,"library":5100,"friendsui":5200,"friendcontextmenu":5201,"topsellers":7000,"steamcharts":7001,"weeklytopsellers":7002,"topchartlist":7003,"overview":7004,"mostplayed":7005,"help.steampowered.com":100601,"salecreatorhome":100700,"saleitembrowse":100701,"salefacetbrowse":100702,"salesection":100703,"saletabsection":100704,"salebroadcast":100705,"salecuratorrec":100706,"saleeventsched":100707,"salesubscription":100708,"saleitemsearch":100709,"salesmartwishlist":100710,"salesmartir":100711,"salesmartdlc":100712,"salesmarttagrec":100713,"salebrowsetopwishlisted":100714,"salebrowsetrendingwishlisted":100715,"salebrowsepopularcomingsoon":100716,"salebrowsemostplayeddemo":100717,"salebrowsedailyactiveuserdemo":100718,"salebrowseplayednowdemo":100719,"salebrowserecentlyreleased":100720,"salebrowsepopularpurchased":100721,"salebrowsepopularpurchaseddiscounted":100722,"salebrowsediscounted":100723,"salebrowseprice":100724,"salebrowsenewandtrending":100725,"salebrowsetopsellers":100726,"salebrowsetoprated":100727,"discoveryqueue2022":100728,"saleeventsection":100729,"salesectionlinks":100730,"salesectionrewards":100731,"salesectiontext":100732,"salesectioneventschedule":100733,"spotlight":40,"daily-deal":43,"promo-takeover":118,"live-broadcast":143,"large-cluster":201,"yearinreview":662}',
       );
@@ -11975,7 +11990,7 @@
         }
       }
     },
-    34433: (e, t, n) => {
+    43235: (e, t, n) => {
       "use strict";
       function i(e, t) {
         return !!e && "object" == typeof e.SteamClient && t in e.SteamClient;
@@ -11990,11 +12005,11 @@
       }
       n.d(t, { U5: () => s, w3: () => r });
     },
-    78330: (e, t, n) => {
+    14243: (e, t, n) => {
       "use strict";
       n.d(t, { LT: () => s, qr: () => i });
       var i,
-        r = n(85246);
+        r = n(45492);
       !(function (e) {
         (e[(e.LaunchGame = 0)] = "LaunchGame"),
           (e[(e.FriendMessage = 1)] = "FriendMessage"),
@@ -12037,11 +12052,11 @@
         }
       })();
     },
-    13345: (e, t, n) => {
+    19399: (e, t, n) => {
       "use strict";
       n.d(t, { HZ: () => a, OL: () => s, pd: () => o });
-      var i = n(24174),
-        r = n(44973);
+      var i = n(83682),
+        r = n(65255);
       function s() {
         return `${r.De.CLAN_CDN_ASSET_URL}images/`;
       }
@@ -12052,12 +12067,12 @@
         return e.replace(/{STEAM_CLAN_IMAGE}/g, s());
       }
     },
-    83145: (e, t, n) => {
+    41130: (e, t, n) => {
       "use strict";
       n.d(t, { L: () => b });
-      var i = n(33940),
-        r = n(8179),
-        s = n(26464);
+      var i = n(85556),
+        r = n(15633),
+        s = n(16997);
       let o = [
         { index: 0, type: r.eV.OK, category: "action" },
         { index: 1, type: r.eV.CANCEL, category: "action" },
@@ -12121,8 +12136,8 @@
       }
       (0, i.gn)([s.a], a.prototype, "PollGamepads", null),
         (0, i.gn)([s.a], a.prototype, "OnWindowRegainedFocus", null);
-      var l = n(52696),
-        c = n(86984);
+      var l = n(37066),
+        c = n(87040);
       const u = {
           [c.A.GAMEPAD_BUTTON_A]: r.eV.OK,
           [c.A.GAMEPAD_BUTTON_B]: r.eV.CANCEL,
@@ -12232,8 +12247,8 @@
         (0, i.gn)([s.a], m.prototype, "HandleSystemKeyEvents", null),
         (0, i.gn)([s.a], m.prototype, "EnableAnalogInputMessages", null),
         (0, i.gn)([s.a], m.prototype, "HandleControllerInputMessages", null);
-      var h = n(60161),
-        p = n(44973);
+      var h = n(50423),
+        p = n(65255);
       class g extends r.oH {
         constructor(e) {
           super(),
@@ -12447,9 +12462,9 @@
         (0, i.gn)([s.a], _.prototype, "OnMouseUp", null),
         (0, i.gn)([s.a], _.prototype, "OnMouseMove", null),
         (0, i.gn)([s.a], _.prototype, "Reset", null);
-      var f = n(47927),
-        v = n(32765),
-        C = n(73961);
+      var f = n(40659),
+        v = n(37563),
+        C = n(42287);
       class S {
         GetNavigationController() {
           return this.m_GamepadNavigationController;
@@ -12487,19 +12502,31 @@
         );
       }
     },
-    54671: (e, t, n) => {
+    77151: (e, t, n) => {
       "use strict";
-      n.d(t, { LA: () => h, jg: () => m });
-      var i = n(33940),
-        r = n(52868),
-        s = n.n(r),
-        o = n(59621),
-        a = n(23217),
-        l = n(32765),
-        c = n(89526),
-        u = n(60161);
-      const d = "unUserdataVersion";
-      class m {
+      n.d(t, { LA: () => p, jg: () => h });
+      var i,
+        r = n(85556),
+        s = n(80751),
+        o = n.n(s),
+        a = n(54842),
+        l = n(16649),
+        c = n(37563),
+        u = n(47427),
+        d = n(50423);
+      !(function (e) {
+        (e[(e.AnyController = 0)] = "AnyController"),
+          (e[(e.XboxController = 1)] = "XboxController"),
+          (e[(e.Ps3Controller = 2)] = "Ps3Controller"),
+          (e[(e.Ps4Controller = 3)] = "Ps4Controller"),
+          (e[(e.Ps5Controller = 4)] = "Ps5Controller"),
+          (e[(e.SwitchController = 5)] = "SwitchController"),
+          (e[(e.SteamController = 6)] = "SteamController"),
+          (e[(e.SteamDeckNeptune = 7)] = "SteamDeckNeptune"),
+          (e[(e.SteamDeckGalileo = 8)] = "SteamDeckGalileo");
+      })(i || (i = {}));
+      const m = "unUserdataVersion";
+      class h {
         BIsLoaded() {
           return this.m_bIsLoaded;
         }
@@ -12588,6 +12615,9 @@
         BOwnsPackage(e) {
           return this.m_setOwnedPackages.has(Number(e));
         }
+        BHasUsedHardware(e) {
+          return this.m_rgHardwareUsed.has(e);
+        }
         BShowFilteredUserReviewScores() {
           return this.m_bShowFilteredUserReviewScores;
         }
@@ -12631,7 +12661,7 @@
           return this.m_setWishList;
         }
         HintLoad() {
-          return (0, i.mG)(this, void 0, void 0, function* () {
+          return (0, r.mG)(this, void 0, void 0, function* () {
             return (
               this.m_promise || (this.m_promise = this.InternalLoad()),
               this.m_promise
@@ -12639,20 +12669,20 @@
           });
         }
         InternalLoad() {
-          return (0, i.mG)(this, void 0, void 0, function* () {
-            let e = window.localStorage.getItem(d) || "0",
+          return (0, r.mG)(this, void 0, void 0, function* () {
+            let e = window.localStorage.getItem(m) || "0",
               t = {
                 v: "0" == e ? void 0 : e,
-                id: "" + l.L7.accountid,
-                cc: "" + l.De.COUNTRY,
+                id: "" + c.L7.accountid,
+                cc: "" + c.De.COUNTRY,
                 origin: self.origin,
               },
-              n = l.De.STORE_BASE_URL + "dynamicstore/userdata/";
+              n = c.De.STORE_BASE_URL + "dynamicstore/userdata/";
             try {
-              let e = yield s().get(n, { params: t, withCredentials: !0 });
+              let e = yield o().get(n, { params: t, withCredentials: !0 });
               e &&
                 200 == e.status &&
-                (0, o.z)(() => {
+                (0, a.z)(() => {
                   if (((this.m_bIsLoaded = !0), e.data.rgCurators)) {
                     this.m_setCuratorsFollowed = new Set();
                     for (const t in e.data.rgCurators)
@@ -12748,26 +12778,45 @@
                         0 === e.data.rgCurations[t][i] && n.push(Number(i));
                       this.m_mapRecommendingCuratorsForApp.set(Number(t), n);
                     }
+                  e.data.hardwareUsed &&
+                    (e.data.hardwareUsed.any_controller &&
+                      this.m_rgHardwareUsed.add(i.AnyController),
+                    e.data.hardwareUsed.xbox_controller &&
+                      this.m_rgHardwareUsed.add(i.XboxController),
+                    e.data.hardwareUsed.ps3_controller &&
+                      this.m_rgHardwareUsed.add(i.Ps3Controller),
+                    e.data.hardwareUsed.ps4_controller &&
+                      this.m_rgHardwareUsed.add(i.Ps4Controller),
+                    e.data.hardwareUsed.ps5_controller &&
+                      this.m_rgHardwareUsed.add(i.Ps5Controller),
+                    e.data.hardwareUsed.switch_controller &&
+                      this.m_rgHardwareUsed.add(i.SwitchController),
+                    e.data.hardwareUsed.steam_controller &&
+                      this.m_rgHardwareUsed.add(i.SteamController),
+                    e.data.hardwareUsed.steam_deck_neptune &&
+                      this.m_rgHardwareUsed.add(i.SteamDeckNeptune),
+                    e.data.hardwareUsed.steam_deck_galileo &&
+                      this.m_rgHardwareUsed.add(i.SteamDeckGalileo));
                 });
             } catch (e) {
-              let t = (0, a.l)(e);
+              let t = (0, l.l)(e);
               console.error("CDynamicStore.InternalLoad", t.strErrorMsg, t);
             }
             return this;
           });
         }
         UpdateFollowOrIgnoreCurator(e, t, n) {
-          return (0, i.mG)(this, void 0, void 0, function* () {
+          return (0, r.mG)(this, void 0, void 0, function* () {
             let i =
-              l.De.STORE_BASE_URL +
+              c.De.STORE_BASE_URL +
               "curators/" +
               (t ? "ajaxfollow/" : "ajaxignore/");
             const r = e.GetAccountID(),
-              o = new FormData();
-            o.append("clanid", "" + r),
-              o.append("sessionid", l.De.SESSIONID),
-              o.append(t ? "follow" : "ignore", n ? "1" : "0");
-            let a = yield s().post(i, o, { withCredentials: !0 });
+              s = new FormData();
+            s.append("clanid", "" + r),
+              s.append("sessionid", c.De.SESSIONID),
+              s.append(t ? "follow" : "ignore", n ? "1" : "0");
+            let a = yield o().post(i, s, { withCredentials: !0 });
             if (a && 200 == a.status) {
               this.InvalidateCache();
               const e = t
@@ -12779,52 +12828,52 @@
           });
         }
         UpdateAppIgnore(e, t, n = 0) {
-          return (0, i.mG)(this, void 0, void 0, function* () {
-            let i = l.De.STORE_BASE_URL + "recommended/ignorerecommendation";
+          return (0, r.mG)(this, void 0, void 0, function* () {
+            let i = c.De.STORE_BASE_URL + "recommended/ignorerecommendation";
             const r = new FormData();
-            r.append("sessionid", l.De.SESSIONID),
+            r.append("sessionid", c.De.SESSIONID),
               r.append("appid", "" + e),
               r.append("remove", t ? "0" : "1"),
-              r.append("snr", l.De.SNR),
+              r.append("snr", c.De.SNR),
               r.append("ignore_reason", "" + n);
             try {
               this.m_bAjaxInFlight = !0;
-              let a = yield s().post(i, r, { withCredentials: !0 });
+              let s = yield o().post(i, r, { withCredentials: !0 });
               return (
-                a &&
-                  200 == a.status &&
-                  (0, o.z)(() => {
+                s &&
+                  200 == s.status &&
+                  (0, a.z)(() => {
                     this.InvalidateCache(),
                       t
                         ? this.m_mapIgnoredApps.set(e, n)
                         : this.m_mapIgnoredApps.delete(e);
                   }),
                 (this.m_bAjaxInFlight = !1),
-                a.data
+                s.data
               );
             } catch (e) {
-              let t = (0, a.l)(e);
+              let t = (0, l.l)(e);
               console.error("UpdateAppIgnore", t.strErrorMsg, t);
             }
             return (this.m_bAjaxInFlight = !1), { success: 2 };
           });
         }
-        UpdateGameWishlist(e, t, n, r) {
-          return (0, i.mG)(this, void 0, void 0, function* () {
-            let i =
-              l.De.STORE_BASE_URL +
+        UpdateGameWishlist(e, t, n, i) {
+          return (0, r.mG)(this, void 0, void 0, function* () {
+            let r =
+              c.De.STORE_BASE_URL +
               "api/" +
               (t ? "addtowishlist" : "removefromwishlist");
-            const o = new FormData();
-            o.append("appid", "" + e),
-              o.append("sessionid", l.De.SESSIONID),
-              n && o.append("snr", n),
+            const s = new FormData();
+            s.append("appid", "" + e),
+              s.append("sessionid", c.De.SESSIONID),
+              n && s.append("snr", n),
               (this.m_bAjaxInFlight = !0);
-            let a = yield s().post(i, o, {
+            let a = yield o().post(r, s, {
               withCredentials: !0,
-              cancelToken: r ? r.token : void 0,
+              cancelToken: i ? i.token : void 0,
             });
-            if (((this.m_bAjaxInFlight = !1), r && r.token.reason))
+            if (((this.m_bAjaxInFlight = !1), i && i.token.reason))
               return { success: 52 };
             if (
               ((a.data.success = 1 == a.data.success ? 1 : 2),
@@ -12843,30 +12892,30 @@
             return a.data;
           });
         }
-        AddToCart(e, t, n, r, o, a, c) {
-          return (0, i.mG)(this, void 0, void 0, function* () {
+        AddToCart(e, t, n, i, s, a, l) {
+          return (0, r.mG)(this, void 0, void 0, function* () {
             if (
               void 0 !== window.g_bUseNewCartAPI &&
               window.g_bUseNewCartAPI &&
               "function" == typeof window.AddItemToCart
             )
               return window.AddItemToCart(t, a), !0;
-            const i = new FormData();
-            i.append("action", "add_to_cart"),
+            const r = new FormData();
+            r.append("action", "add_to_cart"),
               a
-                ? i.append("bundleid", a.toString())
-                : i.append("subid", "" + t),
-              o && i.append("snr", o),
-              i.append("sessionid", l.De.SESSIONID),
-              i.append("quantity", "1");
-            const d = (0, u.RA)(e);
+                ? r.append("bundleid", a.toString())
+                : r.append("subid", "" + t),
+              s && r.append("snr", s),
+              r.append("sessionid", c.De.SESSIONID),
+              r.append("quantity", "1");
+            const u = (0, d.RA)(e);
             e.preventDefault();
             try {
-              yield s().post(n, i, { withCredentials: !0 }),
-                this.InvalidateCache(d),
-                (null == c ? void 0 : c.fnSetURL)
-                  ? c.fnSetURL(r)
-                  : (d.location.href = r);
+              yield o().post(n, r, { withCredentials: !0 }),
+                this.InvalidateCache(u),
+                (null == l ? void 0 : l.fnSetURL)
+                  ? l.fnSetURL(i)
+                  : (u.location.href = i);
             } catch (e) {
               return console.log("HandleOnAddToCart", e), !1;
             }
@@ -12874,16 +12923,16 @@
           });
         }
         AddLicenseForFreeGame(e) {
-          return (0, i.mG)(this, void 0, void 0, function* () {
+          return (0, r.mG)(this, void 0, void 0, function* () {
             if (this.BOwnsApp(e)) return 1;
             try {
               const t = new FormData();
-              t.append("sessionid", l.De.SESSIONID),
+              t.append("sessionid", c.De.SESSIONID),
                 t.append("appid", "" + e),
-                t.append("cc", l.De.COUNTRY);
+                t.append("cc", c.De.COUNTRY);
               let n =
-                  l.De.STORE_BASE_URL + "actions/addappformastersubscription",
-                i = yield s().post(n, t, { withCredentials: !0 });
+                  c.De.STORE_BASE_URL + "actions/addappformastersubscription",
+                i = yield o().post(n, t, { withCredentials: !0 });
               if (
                 (this.InvalidateCache(),
                 !i.data.success || 1 !== i.data.success)
@@ -12891,7 +12940,7 @@
                 return i.data.success ? i.data.success : 2;
               this.m_setOwnedApps.add(Number(e));
             } catch (e) {
-              let t = (0, a.l)(e);
+              let t = (0, l.l)(e);
               return (
                 console.log("AddLicense request failed:", t.strErrorMsg, t), 2
               );
@@ -12900,14 +12949,14 @@
           });
         }
         UpdateFollowingApp(e, t) {
-          return (0, i.mG)(this, void 0, void 0, function* () {
+          return (0, r.mG)(this, void 0, void 0, function* () {
             try {
-              const n = l.De.STORE_BASE_URL + "explore/followgame",
+              const n = c.De.STORE_BASE_URL + "explore/followgame",
                 i = new FormData();
               i.append("appid", "" + e),
-                i.append("sessionid", l.De.SESSIONID),
+                i.append("sessionid", c.De.SESSIONID),
                 t || i.append("unfollow", "1");
-              const r = yield s().post(n, i, { withCredentials: !0 });
+              const r = yield o().post(n, i, { withCredentials: !0 });
               if (!r.data) return 2;
               this.InvalidateCache(),
                 t
@@ -12931,17 +12980,17 @@
         InvalidateCache(e) {
           const t = e || window;
           t.localStorage.setItem(
-            d,
-            (Number.parseInt(t.localStorage.getItem(d) || "0") + 1).toString(),
+            m,
+            (Number.parseInt(t.localStorage.getItem(m) || "0") + 1).toString(),
           );
         }
         static Get() {
           return (
-            m.s_globalSingletonStore ||
-              ((m.s_globalSingletonStore = new m()),
-              "dev" == l.De.WEB_UNIVERSE &&
-                (window.DUS = m.s_globalSingletonStore)),
-            m.s_globalSingletonStore
+            h.s_globalSingletonStore ||
+              ((h.s_globalSingletonStore = new h()),
+              "dev" == c.De.WEB_UNIVERSE &&
+                (window.DUS = h.s_globalSingletonStore)),
+            h.s_globalSingletonStore
           );
         }
         constructor() {
@@ -12968,70 +13017,72 @@
             (this.m_setPackagesInCart = new Set()),
             (this.m_setAppsInCart = new Set()),
             (this.m_nCartLineItemCount = 0),
+            (this.m_rgHardwareUsed = new Set()),
             (this.m_bIsLoaded = !1),
             (this.m_bAjaxInFlight = !1),
-            (0, o.rC)(this);
+            (0, a.rC)(this);
         }
       }
-      function h() {
-        const [e, t] = (0, c.useState)(!m.Get().BIsLoaded());
+      function p() {
+        const [e, t] = (0, u.useState)(!h.Get().BIsLoaded());
         return (
-          (0, c.useEffect)(() => {
+          (0, u.useEffect)(() => {
             e &&
-              m
+              h
                 .Get()
                 .HintLoad()
-                .finally(() => t(!m.Get().BIsLoaded()));
+                .finally(() => t(!h.Get().BIsLoaded()));
           }, [e]),
-          [e, m.Get()]
+          [e, h.Get()]
         );
       }
-      (0, i.gn)([o.LO], m.prototype, "m_setWishList", void 0),
-        (0, i.gn)([o.LO], m.prototype, "m_setOwnedPackages", void 0),
-        (0, i.gn)([o.LO], m.prototype, "m_setOwnedApps", void 0),
-        (0, i.gn)([o.LO], m.prototype, "m_setFollowedApps", void 0),
-        (0, i.gn)([o.LO], m.prototype, "m_setExcludedTagsIds", void 0),
-        (0, i.gn)(
-          [o.LO],
-          m.prototype,
+      (0, r.gn)([a.LO], h.prototype, "m_setWishList", void 0),
+        (0, r.gn)([a.LO], h.prototype, "m_setOwnedPackages", void 0),
+        (0, r.gn)([a.LO], h.prototype, "m_setOwnedApps", void 0),
+        (0, r.gn)([a.LO], h.prototype, "m_setFollowedApps", void 0),
+        (0, r.gn)([a.LO], h.prototype, "m_setExcludedTagsIds", void 0),
+        (0, r.gn)(
+          [a.LO],
+          h.prototype,
           "m_setExcludedContentDescriptors",
           void 0,
         ),
-        (0, i.gn)([o.LO], m.prototype, "m_setRecommendedApps", void 0),
-        (0, i.gn)([o.LO], m.prototype, "m_mapIgnoredApps", void 0),
-        (0, i.gn)([o.LO], m.prototype, "m_mapIgnoredPackages", void 0),
-        (0, i.gn)([o.LO], m.prototype, "m_setCuratorsFollowed", void 0),
-        (0, i.gn)([o.LO], m.prototype, "m_setCuratorsIgnored", void 0),
-        (0, i.gn)(
-          [o.LO],
-          m.prototype,
+        (0, r.gn)([a.LO], h.prototype, "m_setRecommendedApps", void 0),
+        (0, r.gn)([a.LO], h.prototype, "m_mapIgnoredApps", void 0),
+        (0, r.gn)([a.LO], h.prototype, "m_mapIgnoredPackages", void 0),
+        (0, r.gn)([a.LO], h.prototype, "m_setCuratorsFollowed", void 0),
+        (0, r.gn)([a.LO], h.prototype, "m_setCuratorsIgnored", void 0),
+        (0, r.gn)(
+          [a.LO],
+          h.prototype,
           "m_bShowFilteredUserReviewScores",
           void 0,
         ),
-        (0, i.gn)([o.LO], m.prototype, "m_primaryLanguage", void 0),
-        (0, i.gn)([o.LO], m.prototype, "m_secondaryLanguages", void 0),
-        (0, i.gn)([o.LO], m.prototype, "m_setRecommendedTags", void 0),
-        (0, i.gn)(
-          [o.LO],
-          m.prototype,
+        (0, r.gn)([a.LO], h.prototype, "m_primaryLanguage", void 0),
+        (0, r.gn)([a.LO], h.prototype, "m_secondaryLanguages", void 0),
+        (0, r.gn)([a.LO], h.prototype, "m_setRecommendedTags", void 0),
+        (0, r.gn)(
+          [a.LO],
+          h.prototype,
           "m_mapRecommendingCuratorsForApp",
           void 0,
         ),
-        (0, i.gn)([o.LO], m.prototype, "m_setPackagesInCart", void 0),
-        (0, i.gn)([o.LO], m.prototype, "m_setAppsInCart", void 0),
-        (0, i.gn)([o.LO], m.prototype, "m_nCartLineItemCount", void 0),
-        (0, i.gn)([o.LO], m.prototype, "m_bAjaxInFlight", void 0),
-        (0, i.gn)([o.Fl], m.prototype, "ExcludedContentDescriptor", null),
-        (0, i.gn)([o.aD], m.prototype, "UpdateAppIgnore", null);
+        (0, r.gn)([a.LO], h.prototype, "m_setPackagesInCart", void 0),
+        (0, r.gn)([a.LO], h.prototype, "m_setAppsInCart", void 0),
+        (0, r.gn)([a.LO], h.prototype, "m_nCartLineItemCount", void 0),
+        (0, r.gn)([a.LO], h.prototype, "m_rgHardwareUsed", void 0),
+        (0, r.gn)([a.LO], h.prototype, "m_bAjaxInFlight", void 0),
+        (0, r.gn)([a.Fl], h.prototype, "ExcludedContentDescriptor", null),
+        (0, r.gn)([a.aD], h.prototype, "UpdateAppIgnore", null);
     },
-    2758: (e, t, n) => {
+    92011: (e, t, n) => {
       "use strict";
       n.d(t, { Uh: () => y, jh: () => D });
-      var i = n(33940),
-        r = n(68333),
-        s = n(79769),
-        o = n(17547),
-        a = n(14826);
+      var i = n(85556),
+        r = n(35750),
+        s = n(14351),
+        o = n(10162),
+        a = n(31846);
       const l =
         window.addEventListener || (n.g && n.g.addEventListener) || (() => {});
       let c,
@@ -13348,7 +13399,7 @@
         });
       }
     },
-    39323: (e, t, n) => {
+    88619: (e, t, n) => {
       "use strict";
       n.d(t, {
         Ce: () => _,
@@ -13358,14 +13409,14 @@
         sZ: () => m,
         wP: () => p,
       });
-      var i = n(33940),
-        r = n(47742),
-        s = n(27070),
-        o = n(5615),
-        a = n(68333),
-        l = n(47165),
-        c = n(99250),
-        u = n(97940);
+      var i = n(85556),
+        r = n(53923),
+        s = n(40057),
+        o = n(42718),
+        a = n(35750),
+        l = n(35427),
+        c = n(3172),
+        u = n(82182);
       function d() {
         const e = (0, s.bY)(),
           t = (0, r.M)();
@@ -13485,20 +13536,20 @@
         );
       }
     },
-    49437: (e, t, n) => {
+    51915: (e, t, n) => {
       "use strict";
       n.d(t, { IE: () => p, vP: () => g });
-      var i = n(33940),
-        r = n(92994),
+      var i = n(85556),
+        r = n(73799),
         s = n.n(r),
-        o = n(89526),
-        a = n(5615),
-        l = n(68333),
-        c = n(27070),
-        u = n(93837),
-        d = n(11301),
-        m = n(47165),
-        h = n(97940);
+        o = n(47427),
+        a = n(42718),
+        l = n(35750),
+        c = n(40057),
+        u = n(90938),
+        d = n(42411),
+        m = n(35427),
+        h = n(82182);
       function p(e) {
         const t = (0, c.bY)(),
           n = o.useContext(_);
@@ -13590,14 +13641,14 @@
       }
       let v;
     },
-    37760: (e, t, n) => {
+    89373: (e, t, n) => {
       "use strict";
       n.d(t, { C: () => l });
-      var i = n(33940),
-        r = n(68333),
-        s = n(19094),
-        o = n(75306),
-        a = n(32765);
+      var i = n(85556),
+        r = n(35750),
+        s = n(77581),
+        o = n(13557),
+        a = n(37563);
       class l {
         BIsSaleActive() {
           const e = Date.now();
@@ -13658,7 +13709,7 @@
         }
       }
     },
-    26: (e, t, n) => {
+    97423: (e, t, n) => {
       "use strict";
       n.d(t, {
         CO: () => K,
@@ -13687,21 +13738,21 @@
         tL: () => k,
         x: () => j,
       });
-      var i = n(33940),
-        r = n(5586),
-        s = n(68333),
-        o = n(10713),
-        a = n(5615),
-        l = n(59621),
-        c = n(47165),
-        u = n(92616),
-        d = n(93917),
-        m = n(25508),
-        h = n(50454),
-        p = n(44973),
-        g = n(32765),
-        _ = n(23384),
-        f = n(23801);
+      var i = n(85556),
+        r = n(49457),
+        s = n(35750),
+        o = n(40212),
+        a = n(42718),
+        l = n(54842),
+        c = n(35427),
+        u = n(15690),
+        d = n(14476),
+        m = n(46984),
+        h = n(68785),
+        p = n(65255),
+        g = n(37563),
+        _ = n(92686),
+        f = n(62210);
       const v = {
         11: {
           displayNameLoc: "#SteamNotification_HelpRequest_Author",
@@ -14658,13 +14709,13 @@
         return e.viewed && e.viewed + R < (0, m.QU)();
       }
     },
-    11195: (e, t, n) => {
+    80998: (e, t, n) => {
       "use strict";
       n.d(t, { De: () => l, Fq: () => a, pA: () => o });
-      var i = n(85251),
-        r = n(32765),
-        s = n(2232);
-      n(63261);
+      var i = n(80002),
+        r = n(37563),
+        s = n(38071);
+      n(44922);
       function o(e, t) {
         e.Body().set_context(a(t));
       }
@@ -14682,15 +14733,15 @@
         e.Body().set_data_request(i.Qn.fromObject(t));
       }
     },
-    36704: (e, t, n) => {
+    51465: (e, t, n) => {
       "use strict";
       n.d(t, { Z: () => u });
-      var i = n(59621),
-        r = n(85886),
-        s = n(23801),
-        o = n(14826),
-        a = n(72120),
-        l = n(32765);
+      var i = n(54842),
+        r = n(86437),
+        s = n(62210),
+        o = n(31846),
+        a = n(12251),
+        l = n(37563);
       function c(e) {
         return (function (e, t, n) {
           switch (e) {
@@ -15674,20 +15725,20 @@
         }
       }
     },
-    92616: (e, t, n) => {
+    15690: (e, t, n) => {
       "use strict";
       n.d(t, { Z: () => f });
-      var i = n(33940),
-        r = n(59621),
-        s = n(68333),
-        o = n(19094),
-        a = n(14596),
-        l = n(85251),
-        c = n(23801),
-        u = n(23217),
-        d = n(32765),
-        m = n(11195),
-        h = n(36704);
+      var i = n(85556),
+        r = n(54842),
+        s = n(35750),
+        o = n(77581),
+        a = n(23309),
+        l = n(80002),
+        c = n(62210),
+        u = n(16649),
+        d = n(37563),
+        m = n(80998),
+        h = n(51465);
       function p(e, t) {
         if (!e) return t;
         if (!t) return e;
@@ -16643,7 +16694,7 @@
         });
       const f = _;
     },
-    85886: (e, t, n) => {
+    86437: (e, t, n) => {
       "use strict";
       var i;
       function r(e) {
@@ -16719,7 +16770,16 @@
             return "app";
         }
       }
-      function c(e) {
+      function c(e, t) {
+        return 0 == t
+          ? { appid: e }
+          : 1 == t
+          ? { packageid: e }
+          : 2 == t
+          ? { bundleid: e }
+          : null;
+      }
+      function u(e) {
         return (null == e ? void 0 : e.appid)
           ? "a" + e.appid
           : (null == e ? void 0 : e.packageid)
@@ -16730,12 +16790,13 @@
       }
       n.d(t, {
         $k: () => i,
+        Bo: () => c,
         Ds: () => a,
         GV: () => r,
         Hy: () => l,
         TM: () => o,
         qE: () => s,
-        y: () => c,
+        y: () => u,
       }),
         (function (e) {
           (e[(e.k_NotRejected = -1)] = "k_NotRejected"),
@@ -16761,7 +16822,7 @@
             (e[(e.k_RejectAlreadyDisplayed = 17)] = "k_RejectAlreadyDisplayed");
         })(i || (i = {}));
     },
-    25871: (e, t, n) => {
+    80886: (e, t, n) => {
       "use strict";
       n.d(t, {
         Vm: () => d,
@@ -16772,11 +16833,11 @@
         vs: () => c,
         wZ: () => h,
       });
-      var i = n(52868),
+      var i = n(80751),
         r = n.n(i),
-        s = n(89526),
-        o = (n(24174), n(4306)),
-        a = n(92616);
+        s = n(47427),
+        o = (n(83682), n(20417)),
+        a = n(15690);
       function l(e, t, n, i) {
         const l = (0, s.useRef)(),
           c = (0, s.useRef)(void 0),
@@ -16959,16 +17020,16 @@
         );
       }
     },
-    72566: (e, t, n) => {
+    87476: (e, t, n) => {
       "use strict";
       n.d(t, { Ze: () => u });
-      var i = n(33940),
-        r = n(89526),
-        s = n(59621),
-        o = n(28381),
-        a = n(59293),
-        l = n(50454);
-      n(4306);
+      var i = n(85556),
+        r = n(47427),
+        s = n(54842),
+        o = n(52178),
+        a = n(19929),
+        l = n(68785);
+      n(20417);
       new l.s("VR");
       class c {
         constructor() {
@@ -17245,7 +17306,7 @@
         (0, i.gn)([s.aD.bound], c.prototype, "ClearError", null);
       const d = new c();
     },
-    69159: (e, t, n) => {
+    22042: (e, t, n) => {
       "use strict";
       n.d(t, {
         Td: () => R,
@@ -17256,15 +17317,15 @@
         Wn: () => T,
         T: () => B,
       });
-      var i = n(33940),
-        r = n(88464),
-        s = n(89526),
-        o = n(40103),
-        a = n(44026),
-        l = n(51438),
-        c = n(16221),
-        u = n(58123);
-      n(8179);
+      var i = n(85556),
+        r = n(27605),
+        s = n(47427),
+        o = n(95315),
+        a = n(82493),
+        l = n(91618),
+        c = n(3783),
+        u = n(77262);
+      n(15633);
       const d = Object.seal({ onMoveUp: m, onMoveDown: m });
       Object.seal({ onMoveRight: m, onMoveLeft: m });
       function m(e, t) {
@@ -17274,17 +17335,17 @@
           ? t.BFocusFirstChild(u.uS.GAMEPAD)
           : n == c.zE.BACKWARD && t.BFocusLastChild(u.uS.GAMEPAD);
       }
-      var h = n(16383),
-        p = n(34433),
-        g = n(76476),
-        _ = (n(99307), n(57742), n(701)),
-        f = n(19304),
-        v = n(37377),
-        C = n(60161),
-        S = n(14826),
-        b = n(4306),
-        w = n(32765),
-        y = n(93765),
+      var h = n(47692),
+        p = n(43235),
+        g = n(38204),
+        _ = (n(50898), n(90069), n(62613)),
+        f = n(13129),
+        v = n(60616),
+        C = n(50423),
+        S = n(31846),
+        b = n(20417),
+        w = n(37563),
+        y = n(27241),
         E = n.n(y);
       const D = (0, h.Yt)("ContextMenuInstanceContext", () =>
         s.createContext(null),
@@ -18138,13 +18199,13 @@
         );
       }
     },
-    76476: (e, t, n) => {
+    38204: (e, t, n) => {
       "use strict";
       n.d(t, { P: () => c, s: () => l });
-      var i = n(33940),
-        r = n(89526),
-        s = n(19304),
-        o = n(93765),
+      var i = n(85556),
+        r = n(47427),
+        s = n(13129),
+        o = n(27241),
         a = n.n(o);
       const l = r.forwardRef((e, t) => {
         const { className: n, contextMenuStyles: o, disabled: l } = e,
@@ -18174,7 +18235,7 @@
       }
       l.displayName = "MenuItem";
     },
-    57605: (e, t, n) => {
+    1485: (e, t, n) => {
       "use strict";
       n.d(t, {
         E0: () => tt,
@@ -18208,20 +18269,20 @@
         gE: () => j,
         Uq: () => I,
       });
-      var i = n(33940),
-        r = n(89526),
-        s = n(44026),
-        o = n(51438),
-        a = n(701),
-        l = n(19304),
-        c = n(14826),
-        u = n(26464);
-      const d = (0, n(16383).Yt)("DialogPresentationContext", () =>
+      var i = n(85556),
+        r = n(47427),
+        s = n(82493),
+        o = n(91618),
+        a = n(62613),
+        l = n(13129),
+        c = n(31846),
+        u = n(16997);
+      const d = (0, n(47692).Yt)("DialogPresentationContext", () =>
           r.createContext({}),
         ),
         m = () => r.useContext(d);
-      var h = n(39884),
-        p = n(3367),
+      var h = n(51592),
+        p = n(24672),
         g = n.n(p);
       const _ = (e) => {
           const t = m();
@@ -18254,7 +18315,7 @@
             }),
           );
         };
-      var v = n(75962);
+      var v = n(14609);
       function C(e) {
         return r.forwardRef(function (t, n) {
           return r.createElement(
@@ -18780,10 +18841,10 @@
       }
       (0, i.gn)([u.a], W.prototype, "OnOffKeyDown", null),
         (0, i.gn)([u.a], W.prototype, "OnNewUIToggle", null);
-      var Z = n(4306),
-        z = n(73961),
-        K = n(60161),
-        q = n(60729);
+      var Z = n(20417),
+        z = n(42287),
+        K = n(50423),
+        q = n(48766);
       class $ extends q.Rq {
         constructor(e, t, n) {
           super(K.kR(z.findDOMNode(e)), n),
@@ -18816,7 +18877,7 @@
               this.m_component.setState(this.m_setStateOnComplete);
         }
       }
-      var X = n(23801);
+      var X = n(62210);
       const Y = r.forwardRef(function (e, t) {
         const n = m();
         return r.createElement(
@@ -19422,7 +19483,7 @@
         (0, i.gn)([Z.ak], ne.prototype, "OnTouchMove", null),
         (0, i.gn)([Z.ak], ne.prototype, "OnTouchEnd", null),
         (0, i.gn)([Z.ak], ne.prototype, "OnKeyDown", null);
-      var ie = n(31632),
+      var ie = n(27363),
         re = n.n(ie);
       const se = r.createContext({ setValue: () => {} });
       function oe(e) {
@@ -19459,10 +19520,10 @@
           e.children,
         );
       }
-      var le = n(40103),
-        ce = n(64359),
+      var le = n(95315),
+        ce = n(97696),
         ue = n.n(ce),
-        de = n(84343);
+        de = n(59728);
       function me(e) {
         return "object" == typeof e && "data" in e;
       }
@@ -19832,12 +19893,12 @@
         }
       }
       (0, i.gn)([Z.ak], De.prototype, "OnMenuOpened", null);
-      n(19979);
-      var Le = n(59621),
-        Ie = n(894),
-        Re = n(11837),
-        Me = n(36041);
-      const Ae = new (n(50454).s)("DragDrop").Debug;
+      n(64012);
+      var Le = n(54842),
+        Ie = n(83654),
+        Re = n(83999),
+        Me = n(45651);
+      const Ae = new (n(68785).s)("DragDrop").Debug;
       class Te extends r.Component {
         constructor() {
           super(...arguments), (this.m_coordinator = new Be());
@@ -20456,13 +20517,13 @@
           );
         }
       }
-      var Fe = n(8179),
-        Ve = n(78330),
-        He = n(17547),
-        Ue = n(96777),
+      var Fe = n(15633),
+        Ve = n(14243),
+        He = n(10162),
+        Ue = n(40093),
         je = n.n(Ue),
-        We = n(16221),
-        Ze = n(16826);
+        We = n(3783),
+        Ze = n(58538);
       class ze {
         constructor() {
           (this.m_flPageListScrollTop = 0),
@@ -20875,11 +20936,11 @@
         (0, i.gn)([Z.ak], tt.prototype, "OnClick", null),
         (0, i.gn)([Z.ak], tt.prototype, "OnPaste", null),
         (0, i.gn)([Z.ak], tt.prototype, "OnCut", null);
-      var nt = n(40468),
+      var nt = n(99967),
         it = n.n(nt),
-        rt = n(32765),
-        st = n(73070),
-        ot = n(99307);
+        rt = n(37563),
+        st = n(53087),
+        ot = n(50898);
       const at = r.forwardRef(function (e, t) {
         const {
             label: n,
@@ -21155,10 +21216,10 @@
           }),
         );
       });
-      var ct = n(73364),
+      var ct = n(81921),
         ut = n.n(ct),
-        dt = n(69159),
-        mt = n(44673);
+        dt = n(22042),
+        mt = n(28781);
       function ht(e) {
         const {
             label: t,
@@ -21228,7 +21289,7 @@
           ),
         );
       });
-      var pt = n(30113);
+      var pt = n(20204);
       r.forwardRef(function (e, t) {
         const { className: n } = e,
           s = (0, i._T)(e, ["className"]);
@@ -21310,11 +21371,11 @@
           ),
         );
       });
-      var gt = n(74259),
+      var gt = n(13708),
         _t = n.n(gt),
-        ft = n(89855),
-        vt = n(30928),
-        Ct = n(59293);
+        ft = n(77816),
+        vt = n(84686),
+        Ct = n(19929);
       const St = 1;
       (0, v.Qc)(_t()["error-shake-duration"]);
       function bt(e, t) {
@@ -22098,12 +22159,12 @@
         }
       }
       (0, i.gn)([Z.ak], Mt.prototype, "OnToggleChange", null);
-      n(22612);
+      n(13974);
       var At,
-        Tt = n(25887),
+        Tt = n(53909),
         Ot = n.n(Tt),
-        Bt = n(32873),
-        kt = n(22171);
+        Bt = n(39073),
+        kt = n(50321);
       function xt(e) {
         const {
             childrenKey: t,
@@ -22222,7 +22283,7 @@
           (e[(e.Up = 3)] = "Up"),
           (e[(e.Down = 4)] = "Down");
       })(At || (At = {}));
-      var Gt = n(91429),
+      var Gt = n(74491),
         Ft = n.n(Gt);
       const Vt = r.createContext(null);
       function Ht(e) {
@@ -22305,11 +22366,11 @@
         );
       }
     },
-    39884: (e, t, n) => {
+    51592: (e, t, n) => {
       "use strict";
       n.d(t, { T: () => s });
-      var i = n(33940),
-        r = n(89526);
+      var i = n(85556),
+        r = n(47427);
       function s(e) {
         const { component: t, fallback: n, componentRef: s } = e,
           o = (0, i._T)(e, ["component", "fallback", "componentRef"]),
@@ -22321,12 +22382,12 @@
         );
       }
     },
-    17547: (e, t, n) => {
+    10162: (e, t, n) => {
       "use strict";
       n.d(t, { AP: () => o, SV: () => a });
-      var i = n(33940),
-        r = n(89526),
-        s = n(4306);
+      var i = n(85556),
+        r = n(47427),
+        s = n(20417);
       function o(e) {
         return function (t) {
           return r.createElement(
@@ -22466,12 +22527,12 @@
             e,
           );
     },
-    87338: (e, t, n) => {
+    15363: (e, t, n) => {
       "use strict";
       n.d(t, { u: () => i });
-      const i = n(89526).createContext({ bCanUseLink: !1 });
+      const i = n(47427).createContext({ bCanUseLink: !1 });
     },
-    16826: (e, t, n) => {
+    58538: (e, t, n) => {
       "use strict";
       n.d(t, {
         $jN: () => S,
@@ -22500,12 +22561,12 @@
         uWd: () => O,
         vVQ: () => f,
       });
-      var i = n(33940),
-        r = n(89526),
-        s = n(19634),
+      var i = n(85556),
+        r = n(47427),
+        s = n(37990),
         o = n.n(s),
-        a = n(99825),
-        l = n(19304);
+        a = n(23163),
+        l = n(13129);
       function c() {
         return r.createElement(
           "svg",
@@ -23647,16 +23708,16 @@
         );
       }
     },
-    68493: (e, t, n) => {
+    7341: (e, t, n) => {
       "use strict";
       n.d(t, { t: () => C });
-      var i = n(33940),
-        r = n(89526),
-        s = n(73070),
-        o = n(17547),
-        a = n(37494),
-        l = n(73961),
-        c = n(32765);
+      var i = n(85556),
+        r = n(47427),
+        s = n(53087),
+        o = n(10162),
+        a = n(43099),
+        l = n(42287),
+        c = n(37563);
       function u(e) {
         const { ModalManager: t } = e,
           [n, i] = r.useState(void 0),
@@ -23732,11 +23793,11 @@
           r.createElement(o.SV, null, s.rctToMeasure)
         );
       }
-      var h = n(19304),
-        p = n(4306),
-        g = n(84168),
-        _ = n(52321),
-        f = n(67122);
+      var h = n(13129),
+        p = n(20417),
+        g = n(61809),
+        _ = n(45329),
+        f = n(58412);
       function v(e) {
         r.useEffect(() => {
           if (e)
@@ -23900,7 +23961,7 @@
         );
       }
     },
-    99307: (e, t, n) => {
+    50898: (e, t, n) => {
       "use strict";
       n.d(t, {
         On: () => S,
@@ -23915,11 +23976,11 @@
         jF: () => F,
         Yy: () => l,
       });
-      var i = n(89526),
-        r = n(57605),
-        s = n(73961),
-        o = n(51594),
-        a = n(52321);
+      var i = n(47427),
+        r = n(1485),
+        s = n(42287),
+        o = n(98843),
+        a = n(45329);
       function l(e) {
         const { active: t, children: n } = e,
           r = (0, o.$C)() || (0, a.BL)(window),
@@ -23950,11 +24011,11 @@
           s.createPortal(p, c)
         );
       }
-      var c = n(16383),
-        u = n(17547),
-        d = n(701),
-        m = n(60161),
-        h = n(39884);
+      var c = n(47692),
+        u = n(10162),
+        d = n(62613),
+        m = n(50423),
+        h = n(51592);
       const p = (0, c.Yt)("ModalPresentationContext", () =>
           i.createContext({}),
         ),
@@ -24017,10 +24078,10 @@
           s({ className: "ModalPosition_Content", children: o }),
         );
       }
-      n(86777), n(69159), n(92990);
-      var v = n(4306),
-        C = (n(73070), n(32765));
-      n(86352);
+      n(697), n(22042), n(35949);
+      var v = n(20417),
+        C = (n(53087), n(37563));
+      n(12135);
       const S = ({
         active: e,
         onDismiss: t,
@@ -24045,12 +24106,12 @@
           i.createElement("div", { className: t }, n),
         );
       }
-      n(68493);
-      var w = n(44026),
-        y = n(17589),
-        E = n(51438),
-        D = n(83145),
-        L = n(67122);
+      n(7341);
+      var w = n(82493),
+        y = n(4030),
+        E = n(91618),
+        D = n(41130),
+        L = n(58412);
       function I(e) {
         const { children: t, navID: n, closeModal: r } = e,
           s = i.createRef(),
@@ -24082,11 +24143,11 @@
             )
           : i.createElement(i.Fragment, null, t);
       }
-      var R = n(33940),
-        M = n(88464),
-        A = n(14826),
-        T = n(23801),
-        O = n(19304);
+      var R = n(85556),
+        M = n(27605),
+        A = n(31846),
+        T = n(62210),
+        O = n(13129);
       const B = (0, M.Pi)((e) => {
         const { onCancel: t, closeModal: n, bOKDisabled: s, onOK: o } = e,
           a = (0, C.id)();
@@ -24128,7 +24189,7 @@
           ),
         );
       });
-      var k = n(57742);
+      var k = n(90069);
       let x = class extends i.Component {
         Cancel() {
           this.props.onCancel && this.props.onCancel(),
@@ -24245,19 +24306,19 @@
       }
       G = (0, R.gn)([M.Pi], G);
     },
-    37494: (e, t, n) => {
+    43099: (e, t, n) => {
       "use strict";
       n.d(t, { l6: () => m, lc: () => h });
-      var i = n(89526),
-        r = n(73961),
-        s = n(73070),
-        o = n(86777),
-        a = n(69159),
-        l = n(84168),
-        c = n(51594),
-        u = n(92990),
-        d = n(32765);
-      n(99307);
+      var i = n(47427),
+        r = n(42287),
+        s = n(53087),
+        o = n(697),
+        a = n(22042),
+        l = n(61809),
+        c = n(98843),
+        u = n(35949),
+        d = n(37563);
+      n(50898);
       function m(e) {
         const { Modal: t } = e,
           { name: n, modalProps: l, options: m } = t,
@@ -24368,12 +24429,12 @@
         }
       }
     },
-    84168: (e, t, n) => {
+    61809: (e, t, n) => {
       "use strict";
       n.d(t, { QA: () => l, kv: () => a });
-      var i = n(33940),
-        r = n(26464),
-        s = n(85246);
+      var i = n(85556),
+        r = n(16997),
+        s = n(45492);
       class o {
         constructor() {
           this.key = "Modal_" + o.sm_lastKey++;
@@ -24409,26 +24470,26 @@
       }
       (0, i.gn)([r.a], l.prototype, "RefModalElement", null);
     },
-    51594: (e, t, n) => {
+    98843: (e, t, n) => {
       "use strict";
       n.d(t, { Y0: () => I, Yu: () => A, eR: () => M, $C: () => R });
-      var i = n(33940),
-        r = n(89526),
-        s = n(73961),
-        o = n(74082),
-        a = n(68493),
-        l = n(52321),
-        c = n(40103),
-        u = n(30837),
-        d = n(73070),
-        m = n(40442),
-        h = n(86777),
-        p = n(69159),
-        g = n(93765),
+      var i = n(85556),
+        r = n(47427),
+        s = n(42287),
+        o = n(32573),
+        a = n(7341),
+        l = n(45329),
+        c = n(95315),
+        u = n(89570),
+        d = n(53087),
+        m = n(77936),
+        h = n(697),
+        p = n(22042),
+        g = n(27241),
         _ = n.n(g),
-        f = n(17547),
-        v = n(60161),
-        C = n(4306);
+        f = n(10162),
+        v = n(50423),
+        C = n(20417);
       function S(e) {
         const {
             manager: t,
@@ -24689,16 +24750,16 @@
         }, [e, t]);
       }
     },
-    52321: (e, t, n) => {
+    45329: (e, t, n) => {
       "use strict";
       n.d(t, { BL: () => d, Zp: () => u, pG: () => l });
-      n(89526);
-      var i = n(16383),
-        r = n(37494),
-        s = n(23801),
-        o = n(85246),
-        a = (n(4306), n(84168));
-      n(51594);
+      n(47427);
+      var i = n(47692),
+        r = n(43099),
+        s = n(62210),
+        o = n(45492),
+        a = (n(20417), n(61809));
+      n(98843);
       class l {
         constructor() {
           (this.m_bUsePopups = !0),
@@ -24916,14 +24977,14 @@
         return u.GetModalManager(e);
       }
     },
-    35993: (e, t, n) => {
+    56480: (e, t, n) => {
       "use strict";
       n.d(t, { d: () => l });
-      var i = n(89526),
-        r = n(73961),
-        s = n(60161),
-        o = n(11837),
-        a = n(30252);
+      var i = n(47427),
+        r = n(42287),
+        s = n(50423),
+        o = n(83999),
+        a = n(93855);
       function l({ config: e, isDynamic: t }) {
         const n = t ? u : c;
         return i.createElement(
@@ -25037,15 +25098,15 @@
         return e.matches(t) ? [e] : e.querySelectorAll(t);
       }
     },
-    57742: (e, t, n) => {
+    90069: (e, t, n) => {
       "use strict";
       n.d(t, { AM: () => u, BR: () => d, e1: () => s.e1, x1: () => c });
-      var i = n(33940),
-        r = n(89526),
-        s = n(99307),
-        o = n(23801),
-        a = n(14826),
-        l = n(32765);
+      var i = n(85556),
+        r = n(47427),
+        s = n(50898),
+        o = n(62210),
+        a = n(31846),
+        l = n(37563);
       function c(e, t, n) {
         return (0, i.mG)(this, void 0, void 0, function* () {
           const l = (0, s.BL)(t),
@@ -25142,7 +25203,7 @@
         return e.BOnlyPopups && e.BOnlyPopups();
       }
     },
-    18180: (e, t, n) => {
+    90071: (e, t, n) => {
       "use strict";
       n.r(t),
         n.d(t, {
@@ -25150,13 +25211,13 @@
           PurchaseNotice: () => d,
           default: () => g,
         });
-      var i = n(89526),
-        r = n(26),
-        s = n(19304),
-        o = n(14826),
-        a = n(8849),
+      var i = n(47427),
+        r = n(97423),
+        s = n(13129),
+        o = n(31846),
+        a = n(79124),
         l = n.n(a),
-        c = (n(44973), n(16826));
+        c = (n(65255), n(58538));
       new r.tL();
       var u;
       function d(e) {
@@ -25241,7 +25302,7 @@
       })(u || (u = {}));
       const g = d;
     },
-    701: (e, t, n) => {
+    62613: (e, t, n) => {
       "use strict";
       n.d(t, {
         $06: () => ue,
@@ -25356,14 +25417,14 @@
         yh4: () => ke,
         z5E: () => ot,
       });
-      var i = n(33940),
-        r = n(89526),
-        s = n(19304),
-        o = n(59743),
+      var i = n(85556),
+        r = n(47427),
+        s = n(13129),
+        o = n(45691),
         a = n.n(o),
-        l = n(32765),
-        c = n(99825),
-        u = n(87458);
+        l = n(37563),
+        c = n(23163),
+        u = n(41003);
       function d(e) {
         return r.createElement(
           "svg",
@@ -28976,10 +29037,10 @@
         }
       }
     },
-    25817: (e, t, n) => {
+    2324: (e, t, n) => {
       "use strict";
       n.d(t, { B: () => r });
-      var i = n(14826);
+      var i = n(31846);
       function r(e) {
         return (0, i.Xx)(
           "#Cart_ShippingEstimate_Range",
@@ -28988,13 +29049,13 @@
         );
       }
     },
-    71161: (e, t, n) => {
+    25006: (e, t, n) => {
       "use strict";
       n.d(t, { HC: () => c, YR: () => d, ZP: () => l, bJ: () => u });
-      var i = n(33940),
-        r = n(89526),
-        s = n(98009),
-        o = n(32765);
+      var i = n(85556),
+        r = n(47427),
+        s = n(28347),
+        o = n(37563);
       const a = r.createContext({});
       function l(e) {
         const { children: t } = e,
@@ -29041,10 +29102,10 @@
         return r.useMemo(() => s.ZP.AddNavParamToURL(e, o), [e, o]);
       }
     },
-    99825: (e, t, n) => {
+    23163: (e, t, n) => {
       "use strict";
       n.d(t, { y: () => s });
-      var i = n(89526);
+      var i = n(47427);
       let r = 0;
       function s() {
         const e = i.useRef();
@@ -29054,15 +29115,15 @@
         );
       }
     },
-    92990: (e, t, n) => {
+    35949: (e, t, n) => {
       "use strict";
       n.d(t, { T: () => h });
-      var i = n(89526),
-        r = n(34433),
-        s = n(701),
-        o = n(19304),
-        a = n(86352),
-        l = n(32765);
+      var i = n(47427),
+        r = n(43235),
+        s = n(62613),
+        o = n(13129),
+        a = n(12135),
+        l = n(37563);
       function c(e) {
         const { popup: t, onMaximize: n, bOSX: a } = e,
           [l, c] = i.useState(),
@@ -29206,17 +29267,17 @@
         );
       }
     },
-    84343: (e, t, n) => {
+    59728: (e, t, n) => {
       "use strict";
       n.d(t, { HP: () => m, gz: () => g });
-      var i = n(33940),
-        r = n(89526),
-        s = n(73961),
-        o = n(44026),
-        a = n(69206),
-        l = n(19304),
-        c = n(14826),
-        u = n(50500),
+      var i = n(85556),
+        r = n(47427),
+        s = n(42287),
+        o = n(82493),
+        a = n(37265),
+        l = n(13129),
+        c = n(31846),
+        u = n(81212),
         d = n.n(u);
       function m(e) {
         var t;
@@ -29349,7 +29410,7 @@
         );
       }
     },
-    75962: (e, t, n) => {
+    14609: (e, t, n) => {
       "use strict";
       n.d(t, {
         M2: () => C,
@@ -29358,17 +29419,17 @@
         Sb: () => S,
         ns: () => g,
       });
-      var i = n(33940),
-        r = n(59621),
-        s = n(89526),
-        o = n(40103),
-        a = n(14966),
-        l = n(34433),
-        c = n(19304),
-        u = n(60161),
-        d = n(14826),
-        m = n(32765),
-        h = n(69159);
+      var i = n(85556),
+        r = n(54842),
+        s = n(47427),
+        o = n(95315),
+        a = n(43090),
+        l = n(43235),
+        c = n(13129),
+        u = n(50423),
+        d = n(31846),
+        m = n(37563),
+        h = n(22042);
       function p(e, t) {
         let n;
         (n =
@@ -29528,7 +29589,7 @@
         void 0,
       );
     },
-    89855: (e, t, n) => {
+    77816: (e, t, n) => {
       "use strict";
       n.d(t, { TP: () => i, UA: () => o, iD: () => a, kN: () => r });
       const i = { x: "y", y: "x" };
@@ -29546,10 +29607,10 @@
         return Math.sqrt(s(n, n));
       }
     },
-    60729: (e, t, n) => {
+    48766: (e, t, n) => {
       "use strict";
       n.d(t, { Rq: () => r, jg: () => o, sw: () => s });
-      var i = n(60161);
+      var i = n(50423);
       class r {
         constructor(e, t) {
           (this.m_bActive = !1),
@@ -29649,15 +29710,15 @@
         }
       }
     },
-    11837: (e, t, n) => {
+    83999: (e, t, n) => {
       "use strict";
-      function i(e, t) {
+      function i(e, t = 0) {
         if ((null == e ? void 0 : e.length) > 1) {
           let n = t > 0 ? Math.min(t, e.length) : e.length;
           for (; 0 !== n; ) {
-            let t = Math.floor(Math.random() * n);
+            const t = Math.floor(Math.random() * n);
             n -= 1;
-            let i = e[n];
+            const i = e[n];
             (e[n] = e[t]), (e[t] = i);
           }
         }
@@ -29682,14 +29743,14 @@
         return a(e, (e) => t == e);
       }
       function a(e, t) {
-        let n = e.findIndex(t);
+        const n = e.findIndex(t);
         return n >= 0 && (e.splice(n, 1), !0);
       }
       function l(e, t) {
         let n = 0,
           i = e.length - 1;
         for (; n <= i; ) {
-          let r = Math.floor((n + i) / 2),
+          const r = Math.floor((n + i) / 2),
             s = t(e[r]);
           if (s > 0) n = r + 1;
           else if (s < 0) i = r - 1;
@@ -29720,7 +29781,7 @@
         wc: () => r,
       });
     },
-    23801: (e, t, n) => {
+    62210: (e, t, n) => {
       "use strict";
       function i(e, t, ...n) {
         console.assert
@@ -29734,12 +29795,12 @@
       }
       n.d(t, { X: () => i, Z: () => r });
     },
-    23217: (e, t, n) => {
+    16649: (e, t, n) => {
       "use strict";
       n.d(t, { l: () => o });
-      var i = n(52868),
+      var i = n(80751),
         r = n.n(i),
-        s = n(68333);
+        s = n(35750);
       function o(e) {
         if (r().isCancel(e))
           return { strErrorMsg: "Action Cancelled:" + e, errorCode: 52 };
@@ -29810,7 +29871,7 @@
           : { strErrorMsg: "Unknown Error: " + e, errorCode: 2 };
       }
     },
-    26464: (e, t, n) => {
+    16997: (e, t, n) => {
       "use strict";
       function i(e, t, n) {
         return {
@@ -29826,7 +29887,7 @@
       }
       n.d(t, { a: () => i });
     },
-    85246: (e, t, n) => {
+    45492: (e, t, n) => {
       "use strict";
       n.d(t, {
         Ar: () => d,
@@ -29837,9 +29898,9 @@
         pB: () => o,
         vq: () => l,
       });
-      var i = n(33940),
-        r = n(11837),
-        s = n(26464);
+      var i = n(85556),
+        r = n(83999),
+        s = n(16997);
       class o {
         constructor() {
           this.m_vecCallbacks = [];
@@ -29910,10 +29971,13 @@
               : t.Subscribe(e);
           return {
             Unsubscribe: () => {
+              var e;
               n.Unsubscribe(),
                 0 == --this.m_subscriptionRefCount &&
-                  (this.m_mappedUnsubscribe.Unsubscribe(),
-                  (this.m_mappedUnsubscribe = null));
+                  (null === (e = this.m_mappedUnsubscribe) ||
+                    void 0 === e ||
+                    e.Unsubscribe(),
+                  (this.m_mappedUnsubscribe = void 0));
             },
           };
         }
@@ -29936,8 +30000,8 @@
         }
         ScheduledInternal() {
           this.m_schTimer = void 0;
-          let e = this.m_fnCallback;
-          (this.m_fnCallback = void 0), e();
+          const e = this.m_fnCallback;
+          (this.m_fnCallback = void 0), null == e || e();
         }
       }
       (0, i.gn)([s.a], d.prototype, "ScheduledInternal", null);
@@ -29950,15 +30014,15 @@
             this.m_rgListeners.push({ element: e, type: t, listener: n });
         }
         Unregister() {
-          for (let e of this.m_rgListeners)
+          for (const e of this.m_rgListeners)
             e.element.removeEventListener(e.type, e.listener);
           this.m_rgListeners = [];
         }
       }
       function h(e) {
         return (0, i.mG)(this, void 0, void 0, function* () {
-          let t = [];
-          const n = Object.keys(e);
+          const t = [],
+            n = Object.keys(e);
           n.forEach((n) => t.push(e[n]));
           return (yield Promise.all(t)).reduce(
             (e, t, i) => ((e[n[i]] = t), e),
@@ -29977,7 +30041,7 @@
           this.m_vecCallbacks.push(() => r.Zf(e, t));
         }
         Unregister() {
-          for (let e of this.m_vecCallbacks) e();
+          for (const e of this.m_vecCallbacks) e();
           this.m_vecCallbacks = [];
         }
         GetUnregisterFunc() {
@@ -29986,7 +30050,7 @@
       }
       (0, i.gn)([s.a], p.prototype, "Unregister", null);
     },
-    19304: (e, t, n) => {
+    13129: (e, t, n) => {
       "use strict";
       function i(...e) {
         return e.reduce(
@@ -30013,11 +30077,11 @@
       }
       n.d(t, { Z: () => i });
     },
-    87361: (e, t, n) => {
+    46009: (e, t, n) => {
       "use strict";
       function i(e) {
         if (!s() || !window.document.cookie) return null;
-        let t = document.cookie.match("(^|; )" + e + "=([^;]*)");
+        const t = document.cookie.match("(^|; )" + e + "=([^;]*)");
         return t && t[2] ? decodeURIComponent(t[2]) : null;
       }
       function r(e, t, n, i) {
@@ -30025,7 +30089,7 @@
         i || (i = "/");
         let r = "";
         if (void 0 !== n && n) {
-          let e = new Date();
+          const e = new Date();
           e.setTime(e.getTime() + 864e5 * n),
             (r = "; expires=" + e.toUTCString());
         }
@@ -30042,43 +30106,47 @@
       }
       n.d(t, { I1: () => r, bG: () => i, t$: () => s });
     },
-    37377: (e, t, n) => {
+    60616: (e, t, n) => {
       "use strict";
-      function i(e) {
-        return function (t, n, i) {
-          const r = i.value;
-          i.value = function (...t) {
-            let i = this[n + "_DebounceProperties"];
-            void 0 === i &&
-              (i = this[n + "_DebounceProperties"] =
+      function i(e, t = !0) {
+        return function (n, i, r) {
+          const s = r.value;
+          r.value = function (...n) {
+            let r = this[i + "_DebounceProperties"];
+            void 0 === r &&
+              (r = this[i + "_DebounceProperties"] =
                 { hTimer: void 0, nPending: 0 }),
-              void 0 === i.hTimer
-                ? (r.apply(this, t),
-                  (i.hTimer = window.setInterval(() => {
-                    i.nPending > 0
-                      ? (r.apply(this, t), (i.nPending = 0))
-                      : (window.clearInterval(i.hTimer), (i.hTimer = void 0));
+              void 0 === r.hTimer
+                ? (t ? s.apply(this, n) : (r.nPending += 1),
+                  (r.hTimer = window.setInterval(() => {
+                    r.nPending > 0
+                      ? (s.apply(this, n), (r.nPending = 0))
+                      : (window.clearInterval(r.hTimer), (r.hTimer = void 0));
                   }, e)))
-                : (i.nPending += 1);
+                : (r.nPending += 1);
           };
         };
       }
       n.d(t, { D: () => i });
     },
-    60161: (e, t, n) => {
+    50423: (e, t, n) => {
       "use strict";
       function i(e) {
         return null != e && void 0 !== e.focus;
       }
       function r(e, t) {
-        for (; t; ) {
+        var n;
+        let i = t;
+        for (; i; ) {
           if (
-            (t.parentNode.nodeType == Node.DOCUMENT_FRAGMENT_NODE &&
-              (t = t.parentNode.host),
-            t == e)
+            ((null === (n = i.parentNode) || void 0 === n
+              ? void 0
+              : n.nodeType) == Node.DOCUMENT_FRAGMENT_NODE &&
+              (i = i.parentNode.host),
+            i == e)
           )
             return !0;
-          t = t.parentElement;
+          i = i.parentElement;
         }
         return !1;
       }
@@ -30124,7 +30192,7 @@
             try {
               t = window.top.document;
             } catch (e) {}
-            let n = t.createElement("textarea");
+            const n = t.createElement("textarea");
             (n.textContent = e),
               (n.style.position = "fixed"),
               t.body.appendChild(n),
@@ -30139,7 +30207,7 @@
           })(e);
       }
       function u(e) {
-        let t = e.ownerDocument;
+        const t = e.ownerDocument;
         return (
           t.fullscreen ||
           t.webkitIsFullScreen ||
@@ -30148,7 +30216,7 @@
         );
       }
       function d(e, t) {
-        let n = e;
+        const n = e;
         n.requestFullscreen
           ? n.requestFullscreen()
           : n.webkitRequestFullscreen
@@ -30160,7 +30228,7 @@
           : n.msRequestFullscreen && n.msRequestFullscreen();
       }
       function m(e) {
-        let t = e.ownerDocument;
+        const t = e.ownerDocument;
         t.cancelFullscreen
           ? t.cancelFullscreen()
           : t.webkitCancelFullScreen
@@ -30241,7 +30309,7 @@
         let n = null == e ? void 0 : e.parentElement;
         for (; n; ) {
           if (!t || "x" == t) {
-            let e = window.getComputedStyle(n);
+            const e = window.getComputedStyle(n);
             if (
               "scroll" == e.overflowX ||
               "auto" == e.overflowX ||
@@ -30250,7 +30318,7 @@
               break;
           }
           if (!t || "y" == t) {
-            let e = window.getComputedStyle(n);
+            const e = window.getComputedStyle(n);
             if (
               "scroll" == e.overflowY ||
               "auto" == e.overflowY ||
@@ -30269,9 +30337,10 @@
         return n;
       }
       function C(e, t) {
-        for (; e; ) {
-          if (t(e)) return e;
-          e = e.parentElement;
+        let n = e;
+        for (; n; ) {
+          if (t(n)) return n;
+          n = n.parentElement;
         }
       }
       function S(e, t) {
@@ -30295,25 +30364,29 @@
         y(e.document, t, !0);
       }
       function y(e, t, n) {
-        const i = Object.assign({}, t),
-          r = e.getElementsByTagName("head")[0],
-          s = r.getElementsByTagName("link"),
-          o = s.length;
-        for (let e = 0; e < o; ++e) {
-          const t = s[e];
-          i[t.href] ? delete i[t.href] : n && t.parentNode.removeChild(t);
+        var i;
+        const r = Object.assign({}, t),
+          s = e.getElementsByTagName("head")[0],
+          o = s.getElementsByTagName("link"),
+          a = o.length;
+        for (let e = 0; e < a; ++e) {
+          const t = o[e];
+          r[t.href]
+            ? delete r[t.href]
+            : n &&
+              (null === (i = t.parentNode) || void 0 === i || i.removeChild(t));
         }
-        let a = [];
-        for (let t in i) {
-          const n = i[t],
-            r = e.createElement("link");
+        const l = [];
+        for (const t in r) {
+          const n = r[t],
+            i = e.createElement("link");
           for (let e = 0; e < n.attributes.length; e++) {
-            let t = n.attributes.item(e);
-            r.setAttribute(t.name, t.value);
+            const t = n.attributes.item(e);
+            i.setAttribute(t.name, t.value);
           }
-          a.push(r);
+          l.push(i);
         }
-        return r.prepend(...a), a;
+        return s.prepend(...l), l;
       }
       function E(e, t, n) {
         if ("childList" === e.type) {
@@ -30326,7 +30399,7 @@
           }
           for (let t = 0; t < e.removedNodes.length; t++) {
             const i = e.removedNodes[t];
-            i.nodeType === Node.ELEMENT_NODE && n(i);
+            i.nodeType === Node.ELEMENT_NODE && (null == n || n(i));
           }
         }
       }
@@ -30336,7 +30409,7 @@
         return n;
       }
     },
-    14826: (e, t, n) => {
+    31846: (e, t, n) => {
       "use strict";
       n.d(t, {
         $1: () => c.$1,
@@ -30360,13 +30433,13 @@
         yW: () => c.yW,
         yu: () => h,
       });
-      var i = n(89526),
-        r = n(40442),
-        s = n(2232),
-        o = n(32765),
-        a = n(11837),
-        l = n(85246),
-        c = n(72120);
+      var i = n(47427),
+        r = n(77936),
+        s = n(38071),
+        o = n(37563),
+        a = n(83999),
+        l = n(45492),
+        c = n(12251);
       class u {
         constructor() {
           (this.m_mapTokens = new Map()),
@@ -30644,7 +30717,7 @@
       const y = new u();
       window.LocalizationManager = y;
     },
-    72120: (e, t, n) => {
+    12251: (e, t, n) => {
       "use strict";
       n.d(t, {
         $1: () => c,
@@ -30666,9 +30739,9 @@
         yW: () => l,
       });
       var i,
-        r = n(39818),
-        s = n(14826),
-        o = n(25508);
+        r = n(24289),
+        s = n(31846),
+        o = n(46984);
       function a(e, t) {
         return l(Date.now() / 1e3 - e, t);
       }
@@ -31042,10 +31115,10 @@
         );
       }
     },
-    88443: (e, t, n) => {
+    24549: (e, t, n) => {
       "use strict";
       n.d(t, { AV: () => s, X_: () => o, l: () => r });
-      var i = n(14826);
+      var i = n(31846);
       function r(e, t, n, r) {
         let s = t;
         s =
@@ -31108,13 +31181,13 @@
           : e.toString();
       }
     },
-    50454: (e, t, n) => {
+    68785: (e, t, n) => {
       "use strict";
       n.d(t, { s: () => c });
-      var i = n(33940),
-        r = n(26464),
-        s = n(65406),
-        o = n(85246);
+      var i = n(85556),
+        r = n(16997),
+        s = n(61134),
+        o = n(45492);
       const a = [
         "ActionDescription",
         "Backstack",
@@ -31398,7 +31471,7 @@
         (window.EnableSteamConsole = (e = !0) =>
           u.Get().SetDebugLogEnabled("SteamClient", e));
     },
-    36041: (e, t, n) => {
+    45651: (e, t, n) => {
       "use strict";
       function i(e, t) {
         return (
@@ -31422,7 +31495,7 @@
       }
       n.d(t, { LO: () => i, Lh: () => r, bU: () => o, r4: () => s });
     },
-    4306: (e, t, n) => {
+    20417: (e, t, n) => {
       "use strict";
       n.d(t, {
         KM: () => i.KM,
@@ -31447,10 +31520,10 @@
         fB: () => i.fB,
         Dc: () => i.Dc,
       });
-      var i = n(30252),
-        r = n(74082),
-        s = n(89526),
-        o = n(23801);
+      var i = n(93855),
+        r = n(32573),
+        s = n(47427),
+        o = n(62210);
       function a(e, t) {
         return (0, r.xK)(
           (n) => {
@@ -31488,14 +31561,14 @@
         const n = new e.ownerDocument.defaultView.IntersectionObserver(...t);
         return n.observe(e), n;
       }
-      var d = n(26464);
+      var d = n(16997);
     },
-    86900: (e, t, n) => {
+    2041: (e, t, n) => {
       "use strict";
       n.d(t, { R: () => s });
-      var i = n(89526),
-        r = n(5615);
-      n(84084), n(17547);
+      var i = n(47427),
+        r = n(42718);
+      n(70610), n(10162);
       function s(e) {
         const t = i.useRef(o),
           n = function (e, t, ...n) {
@@ -31516,7 +31589,7 @@
         defaultOptions: { queries: { staleTime: 1 / 0 } },
       });
     },
-    30252: (e, t, n) => {
+    93855: (e, t, n) => {
       "use strict";
       n.d(t, {
         B8: () => s,
@@ -31532,9 +31605,9 @@
         fB: () => l,
         kD: () => g,
       });
-      var i = n(89526),
-        r = (n(74082), n(60161));
-      n(4306);
+      var i = n(47427),
+        r = (n(32573), n(50423));
+      n(20417);
       function s(e, t, n) {
         return [e, t, n];
       }
@@ -31543,14 +31616,15 @@
         return i.useCallback(() => e((e) => e + 1), []);
       }
       function a(e) {
-        let t = 1;
-        for (; null != e && "HTML" != e.tagName; ) {
-          const n = getComputedStyle(e);
-          if (n.zoom) {
-            const e = Number.parseFloat(n.zoom);
-            isNaN(e) || (t *= e);
+        let t = 1,
+          n = e;
+        for (; null != n && "HTML" != n.tagName; ) {
+          const e = getComputedStyle(n);
+          if (e.zoom) {
+            const n = Number.parseFloat(e.zoom);
+            isNaN(n) || (t *= n);
           }
-          e = e.parentElement;
+          n = n.parentElement;
         }
         return t;
       }
@@ -31610,7 +31684,7 @@
       function d(e, t) {
         i.useLayoutEffect(() => {
           if (!t || !e) return;
-          let n = e.Register(t);
+          const n = e.Register(t);
           return () => n.Unregister();
         }, [e, t]);
       }
@@ -31669,10 +31743,10 @@
             for (const e of t.current) e();
             t.current = [];
           }, []),
-          [s, o] = i.useState();
+          [s, o] = i.useState(null);
         return (
           i.useEffect(() => {
-            if ((n(), null != e)) {
+            if ((n(), s && null != e)) {
               const n = (0, r.H8)(s);
               for (const i of n)
                 i.addEventListener("scroll", e),
@@ -31684,7 +31758,7 @@
         );
       }
     },
-    74082: (e, t, n) => {
+    32573: (e, t, n) => {
       "use strict";
       n.d(t, {
         BE: () => s,
@@ -31694,7 +31768,7 @@
         ww: () => l,
         xK: () => a,
       });
-      var i = n(89526);
+      var i = n(47427);
       function r(e, t) {
         null != e &&
           ("function" == typeof e ? e(t) : "current" in e && (e.current = t));
@@ -31736,11 +31810,11 @@
           }, [e, t]);
       }
     },
-    45820: (e, t, n) => {
+    56617: (e, t, n) => {
       "use strict";
       n.d(t, { i4: () => s, lJ: () => o });
-      var i = n(89526),
-        r = n(59934);
+      var i = n(47427),
+        r = n(8285);
       function s(e, t) {
         var n;
         const s = `${e}_HistoryValue`,
@@ -31794,7 +31868,7 @@
         );
       }
     },
-    81349: (e, t, n) => {
+    45284: (e, t, n) => {
       "use strict";
       function i(e, t) {
         return e < t ? -1 : e > t ? 1 : 0;
@@ -31878,7 +31952,7 @@
         tN: () => r,
       });
     },
-    25508: (e, t, n) => {
+    46984: (e, t, n) => {
       "use strict";
       n.d(t, {
         QU: () => l,
@@ -31924,7 +31998,7 @@
         return Math.floor(Date.now() / 1e3);
       }
     },
-    207: (e, t, n) => {
+    13499: (e, t, n) => {
       "use strict";
       n.d(t, {
         FM: () => o,
@@ -31939,8 +32013,8 @@
         md: () => _,
         xL: () => h,
       });
-      var i = n(32765),
-        r = (n(14826), n(13345));
+      var i = n(37563),
+        r = (n(31846), n(19399));
       const s =
         /((?:(?:https?:)|(?:www[.,])|(?:[!#-;=?-Z\\\^-~]+[\.,](?:(?:[a-zA-Z]{2,4}[\.?]*[\/\\\?#])|(?:(?:biz|com|gallery|in|name|net|online|org|tech|trade|xyz)(?=\W|$)))))(?:[^ː\s"<>\[\]]*[^\\s"<>\[\],.ː:])?)/;
       function o(e) {
@@ -32064,11 +32138,11 @@
         );
       }
     },
-    86352: (e, t, n) => {
+    12135: (e, t, n) => {
       "use strict";
       n.d(t, { n8: () => s });
-      var i = n(89526),
-        r = n(4306);
+      var i = n(47427),
+        r = n(20417);
       function s(e, t = 100) {
         const [n, s] = i.useState(!1),
           o = i.useCallback(() => s(!0), [s]),
@@ -32090,14 +32164,14 @@
         );
       }
     },
-    76552: (e, t, n) => {
+    6799: (e, t, n) => {
       "use strict";
       n.d(t, { B: () => d, M: () => u });
-      var i = n(89526),
-        r = n(78330),
-        s = n(60161),
-        o = n(4306),
-        a = n(32765);
+      var i = n(47427),
+        r = n(14243),
+        s = n(50423),
+        o = n(20417),
+        a = n(37563);
       const l = new Map();
       function c(e) {
         return l.has(e) || l.set(e, new Set()), l.get(e);
@@ -32223,7 +32297,7 @@
         t && n && (e.onClick = s);
       }
     },
-    32765: (e, t, n) => {
+    37563: (e, t, n) => {
       "use strict";
       n.d(t, {
         De: () => a.De,
@@ -32247,16 +32321,16 @@
         x: () => v,
         y9: () => c.y9,
       });
-      var i = n(33940),
-        r = n(89526),
-        s = n(2232),
-        o = n(23801),
-        a = n(44973),
-        l = n(87458),
-        c = n(59954);
+      var i = n(85556),
+        r = n(47427),
+        s = n(38071),
+        o = n(62210),
+        a = n(65255),
+        l = n(41003),
+        c = n(82756);
       const u = r.createContext({}),
         d = (e) => {
-          let t = r.useContext(u);
+          const t = r.useContext(u);
           return (
             (0, o.X)(
               (null == e ? void 0 : e.bSuppressAssert) ||
@@ -32316,11 +32390,11 @@
       }
       function v(e, t, n) {
         return (0, i.mG)(this, void 0, void 0, function* () {
-          if (n.config) {
+          if (null == n ? void 0 : n.config) {
             const n = (yield e.get(t + "ajaxgetconfig")).data;
             n && (delete n.SESSIONID, Object.assign(a.De, n));
           }
-          if (n.userConfig) {
+          if (null == n ? void 0 : n.userConfig) {
             const n = (yield e.get(t + "ajaxgetuserconfig", {
               withCredentials: !0,
             })).data;
@@ -32374,7 +32448,7 @@
           : "";
       }
     },
-    44973: (e, t, n) => {
+    65255: (e, t, n) => {
       "use strict";
       n.d(t, {
         De: () => r,
@@ -32383,7 +32457,7 @@
         Wj: () => l,
         dk: () => o,
       });
-      var i = n(59954);
+      var i = n(82756);
       const r = {
         EUNIVERSE: 0,
         WEB_UNIVERSE: "",
@@ -32484,7 +32558,7 @@
         },
         l = { ANNOUNCEMENT_GID: "", TAKEOVER_ANNOUNCEMENT_GID: "" };
     },
-    59954: (e, t, n) => {
+    82756: (e, t, n) => {
       "use strict";
       n.d(t, {
         Ek: () => u,
@@ -32493,9 +32567,9 @@
         kQ: () => d,
         y9: () => g,
       });
-      var i = n(36041),
-        r = n(87361),
-        s = n(44973);
+      var i = n(45651),
+        r = n(46009),
+        s = n(65255);
       const o = "webui_config";
       let a;
       function l() {
@@ -32504,7 +32578,7 @@
         return e || (e = c()), e;
       }
       function c() {
-        let e = (function () {
+        const e = (function () {
           let e = "";
           for (let t = 0; t < 24; t++) e += (0, i.LO)(0, 35).toString(36);
           return e;
@@ -32538,8 +32612,9 @@
         if (
           ((i =
             "string" == typeof t
-              ? !{ NODE_ENV: "production", STEAM_BUILD: "buildbot" }
-                  .MOBILE_BUILD && document.getElementById(t)
+              ? { NODE_ENV: "production", STEAM_BUILD: "buildbot" }.MOBILE_BUILD
+                ? null
+                : document.getElementById(t)
               : t),
           i)
         )
@@ -32569,7 +32644,7 @@
         );
       }
     },
-    34726: (e, t, n) => {
+    316: (e, t, n) => {
       "use strict";
       "VALVE_PUBLIC_PATH" in window
         ? (n.p = window.VALVE_PUBLIC_PATH)
@@ -32581,7 +32656,7 @@
           "Should not include prototypejs.",
         );
     },
-    87458: (e, t, n) => {
+    41003: (e, t, n) => {
       "use strict";
       n.d(t, { RY: () => u, g3: () => d, k0: () => c });
       let i = !1,
@@ -32603,7 +32678,7 @@
             : navigator.userAgent)
         )
           return;
-        let e = navigator.userAgent.match(/Valve Steam ([^\/]*)\//);
+        const e = navigator.userAgent.match(/Valve Steam ([^\/]*)\//);
         return e && 2 == e.length ? e[1] : void 0;
       }
       function m(e, t) {
@@ -32630,10 +32705,10 @@
           (i = !0);
       }
     },
-    96927: (e, t, n) => {
+    760: (e, t, n) => {
       "use strict";
       n.d(t, { Z: () => u, l: () => d });
-      var i = n(32765);
+      var i = n(37563);
       const r = {},
         s = { LoyaltyEquippedProfile: (e) => `/points/profile/${e}` },
         o = {
@@ -32881,31 +32956,31 @@
         return t.endsWith("/") || (t += "/"), t;
       }
     },
-    90415: (e, t, n) => {
+    96668: (e, t, n) => {
       "use strict";
       n.d(t, { T: () => r });
-      var i = n(32765);
+      var i = n(37563);
       function r(e = !1) {
         return e
           ? (0, i.ip)("store_user_config", "application_config")
           : (0, i.kQ)("store_user_config", "application_config");
       }
     },
-    81908: (e, t, n) => {
+    20599: (e, t, n) => {
       "use strict";
-      var i = n(33940),
-        r = (n(34726), n(76583), n(24470)),
-        s = n(89526),
-        o = n(52868),
+      var i = n(85556),
+        r = (n(316), n(69414), n(24522)),
+        s = n(47427),
+        o = n(80751),
         a = n.n(o),
-        l = n(32765),
-        c = n(14826);
-      var u = n(96927),
-        d = n(54978),
+        l = n(37563),
+        c = n(31846);
+      var u = n(760),
+        d = n(22871),
         m = n.n(d),
-        h = n(565),
-        p = n(59934),
-        g = n(40442);
+        h = n(28017),
+        p = n(8285),
+        g = n(77936);
       class _ extends s.Component {
         render() {
           if ("dev" !== l.De.WEB_UNIVERSE) return null;
@@ -32940,17 +33015,17 @@
           );
         }
       }
-      var v = n(87338),
-        C = n(51594),
-        S = n(35993),
-        b = n(59621),
-        w = n(701),
-        y = n(36041),
-        E = n(86137),
+      var v = n(15363),
+        C = n(98843),
+        S = n(56480),
+        b = n(54842),
+        w = n(62613),
+        y = n(45651),
+        E = n(13447),
         D = n.n(E),
-        L = n(24141),
-        I = n(85246),
-        R = n(4306);
+        L = n(46157),
+        I = n(45492),
+        R = n(20417);
       class M {
         constructor() {
           (this.m_elVideo = null),
@@ -33089,9 +33164,9 @@
         (0, i.gn)([R.ak], M.prototype, "OnDownloadFailed", null),
         (0, i.gn)([R.ak], M.prototype, "OnUserInputNeeded", null),
         (0, i.gn)([R.ak], M.prototype, "UserInputReceived", null);
-      var A = n(83315),
-        T = n(19304),
-        O = n(81349);
+      var A = n(30750),
+        T = n(13129),
+        O = n(45284);
       const B = parseInt(D().nTimelineHoverEdgePadding);
       function k(e) {
         let { manifest: t, forcePause: n } = e,
@@ -33300,7 +33375,7 @@
       }
       (0, i.gn)([b.LO], j.prototype, "m_mapTrailerPlay", void 0);
       let W = null;
-      var Z = n(86900);
+      var Z = n(2041);
       function z(e) {
         const t = (0, p.TH)();
         return t.pathname.includes("//")
@@ -33344,7 +33419,7 @@
               n.e(691),
               n.e(2136),
             ])
-              .then(n.bind(n, 38212))
+              .then(n.bind(n, 60284))
               .then((n) => {
                 r(s.createElement(n[e], t));
               }),
@@ -33354,19 +33429,19 @@
       }
       const q = K("Events"),
         $ = K("DemoAndQuickPitch");
-      var X = n(19094),
-        Y = n(27070),
-        Q = n(65406),
-        J = n(90415),
-        ee = n(47742),
-        te = n(28841),
-        ne = n(5615),
-        ie = n(24420),
-        re = n(79865),
+      var X = n(77581),
+        Y = n(40057),
+        Q = n(61134),
+        J = n(96668),
+        ee = n(53923),
+        te = n(45137),
+        ne = n(42718),
+        ie = n(5522),
+        re = n(91585),
         se = n.n(re),
-        oe = n(88443),
-        ae = n(44973),
-        le = n(207);
+        oe = n(24549),
+        ae = n(65255),
+        le = n(13499);
       function ce(e) {
         var t;
         const n = (0, te.g1)();
@@ -33399,7 +33474,7 @@
           n.e(2848),
           n.e(1347),
           n.e(4640),
-          n.e(1942),
+          n.e(8204),
           n.e(1095),
           n.e(4077),
           n.e(5819),
@@ -33410,7 +33485,7 @@
           n.e(6440),
           n.e(1949),
           n.e(7311),
-        ]).then(n.bind(n, 86990)),
+        ]).then(n.bind(n, 11001)),
       );
       function de(e) {
         const [t, n, i] = (0, R.X9)(),
@@ -33464,12 +33539,12 @@
             )
           : null;
       }
-      var me = n(18180),
-        he = n(57605),
-        pe = n(93917),
-        ge = n(61832),
+      var me = n(90071),
+        he = n(1485),
+        pe = n(14476),
+        ge = n(49632),
         _e = n.n(ge),
-        fe = n(19934);
+        fe = n(75683);
       function ve(e) {
         return s.createElement(
           "a",
@@ -33690,7 +33765,7 @@
           ),
         );
       };
-      var ye = n(71161);
+      var ye = n(25006);
       const Ee = s.lazy(() =>
           Promise.all([
             n.e(3980),
@@ -33706,7 +33781,7 @@
             n.e(5302),
             n.e(4383),
             n.e(5331),
-          ]).then(n.bind(n, 55331)),
+          ]).then(n.bind(n, 35661)),
         ),
         De = s.lazy(() =>
           Promise.all([
@@ -33717,7 +33792,7 @@
             n.e(5819),
             n.e(1430),
             n.e(9682),
-          ]).then(n.bind(n, 42591)),
+          ]).then(n.bind(n, 67938)),
         ),
         Le = s.lazy(() =>
           Promise.all([
@@ -33731,7 +33806,7 @@
             n.e(1430),
             n.e(6571),
             n.e(8986),
-          ]).then(n.bind(n, 21102)),
+          ]).then(n.bind(n, 61216)),
         ),
         Ie = s.lazy(() =>
           Promise.all([
@@ -33740,7 +33815,7 @@
             n.e(4077),
             n.e(6571),
             n.e(988),
-          ]).then(n.bind(n, 30361)),
+          ]).then(n.bind(n, 42705)),
         ),
         Re = s.lazy(() =>
           Promise.all([
@@ -33759,7 +33834,7 @@
             n.e(259),
             n.e(1979),
             n.e(4601),
-          ]).then(n.bind(n, 61909)),
+          ]).then(n.bind(n, 71461)),
         ),
         Me = s.lazy(() =>
           Promise.all([
@@ -33768,7 +33843,7 @@
             n.e(4077),
             n.e(5819),
             n.e(2814),
-          ]).then(n.bind(n, 88930)),
+          ]).then(n.bind(n, 19952)),
         ),
         Ae = s.lazy(() =>
           Promise.all([
@@ -33780,11 +33855,11 @@
             n.e(1430),
             n.e(7161),
             n.e(40),
-          ]).then(n.bind(n, 4795)),
+          ]).then(n.bind(n, 46521)),
         ),
-        Te = s.lazy(() => n.e(5821).then(n.bind(n, 14491))),
+        Te = s.lazy(() => n.e(5821).then(n.bind(n, 58289))),
         Oe = s.lazy(() =>
-          Promise.all([n.e(477), n.e(1918)]).then(n.bind(n, 39070)),
+          Promise.all([n.e(477), n.e(1918)]).then(n.bind(n, 85121)),
         ),
         Be = s.lazy(() =>
           Promise.all([
@@ -33799,10 +33874,10 @@
             n.e(5302),
             n.e(4383),
             n.e(3207),
-          ]).then(n.bind(n, 45334)),
+          ]).then(n.bind(n, 33955)),
         ),
         ke = s.lazy(() =>
-          Promise.all([n.e(4077), n.e(5114), n.e(1825)]).then(n.bind(n, 74839)),
+          Promise.all([n.e(4077), n.e(5114), n.e(1825)]).then(n.bind(n, 1688)),
         ),
         xe = s.lazy(() =>
           Promise.all([
@@ -33833,7 +33908,7 @@
             n.e(477),
             n.e(691),
             n.e(2136),
-          ]).then(n.bind(n, 8132)),
+          ]).then(n.bind(n, 63897)),
         ),
         Ne = s.lazy(() =>
           Promise.all([
@@ -33847,7 +33922,7 @@
             n.e(8359),
             n.e(1712),
             n.e(9177),
-            n.e(1942),
+            n.e(8204),
             n.e(3321),
             n.e(4077),
             n.e(5819),
@@ -33866,7 +33941,7 @@
             n.e(477),
             n.e(691),
             n.e(9788),
-          ]).then(n.bind(n, 92067)),
+          ]).then(n.bind(n, 64663)),
         ),
         Pe = s.lazy(() =>
           Promise.all([
@@ -33880,7 +33955,7 @@
             n.e(8359),
             n.e(1712),
             n.e(9177),
-            n.e(1942),
+            n.e(8204),
             n.e(3321),
             n.e(4077),
             n.e(5819),
@@ -33899,7 +33974,7 @@
             n.e(477),
             n.e(691),
             n.e(9788),
-          ]).then(n.bind(n, 85329)),
+          ]).then(n.bind(n, 53553)),
         ),
         Ge = s.lazy(() =>
           Promise.all([
@@ -33930,7 +34005,7 @@
             n.e(477),
             n.e(691),
             n.e(680),
-          ]).then(n.bind(n, 11513)),
+          ]).then(n.bind(n, 13854)),
         ),
         Fe = s.lazy(() =>
           Promise.all([
@@ -33961,7 +34036,7 @@
             n.e(477),
             n.e(691),
             n.e(680),
-          ]).then(n.bind(n, 53805)),
+          ]).then(n.bind(n, 98079)),
         ),
         Ve = s.lazy(() =>
           Promise.all([
@@ -33970,7 +34045,7 @@
             n.e(5819),
             n.e(1430),
             n.e(4535),
-          ]).then(n.bind(n, 86401)),
+          ]).then(n.bind(n, 9084)),
         ),
         He = s.lazy(() =>
           Promise.all([
@@ -33988,7 +34063,7 @@
             n.e(6440),
             n.e(3238),
             n.e(556),
-          ]).then(n.bind(n, 89350)),
+          ]).then(n.bind(n, 86445)),
         ),
         Ue = s.lazy(() =>
           Promise.all([
@@ -34006,7 +34081,7 @@
             n.e(6440),
             n.e(3238),
             n.e(556),
-          ]).then(n.bind(n, 77091)),
+          ]).then(n.bind(n, 78862)),
         ),
         je = s.lazy(() =>
           Promise.all([
@@ -34022,7 +34097,7 @@
             n.e(5302),
             n.e(4383),
             n.e(4158),
-          ]).then(n.bind(n, 28986)),
+          ]).then(n.bind(n, 45127)),
         ),
         We = s.lazy(() =>
           Promise.all([
@@ -34044,16 +34119,16 @@
             n.e(259),
             n.e(4970),
             n.e(8087),
-          ]).then(n.bind(n, 39097)),
+          ]).then(n.bind(n, 83740)),
         ),
         Ze = s.lazy(() =>
-          Promise.all([n.e(5302), n.e(3068)]).then(n.bind(n, 6040)),
+          Promise.all([n.e(5302), n.e(3068)]).then(n.bind(n, 14717)),
         ),
         ze = s.lazy(() =>
-          Promise.all([n.e(4077), n.e(5114), n.e(1825)]).then(n.bind(n, 18180)),
+          Promise.all([n.e(4077), n.e(5114), n.e(1825)]).then(n.bind(n, 90071)),
         ),
         Ke = s.lazy(() =>
-          Promise.all([n.e(4077), n.e(5114), n.e(1825)]).then(n.bind(n, 24981)),
+          Promise.all([n.e(4077), n.e(5114), n.e(1825)]).then(n.bind(n, 85401)),
         ),
         qe = s.lazy(() =>
           Promise.all([
@@ -34062,7 +34137,7 @@
             n.e(2848),
             n.e(1347),
             n.e(4640),
-            n.e(1942),
+            n.e(8204),
             n.e(1095),
             n.e(4077),
             n.e(5819),
@@ -34073,13 +34148,13 @@
             n.e(6440),
             n.e(1949),
             n.e(7311),
-          ]).then(n.bind(n, 34273)),
+          ]).then(n.bind(n, 24782)),
         ),
         $e = s.lazy(() =>
-          Promise.all([n.e(4077), n.e(6440), n.e(7280)]).then(n.bind(n, 40151)),
+          Promise.all([n.e(4077), n.e(6440), n.e(7280)]).then(n.bind(n, 54845)),
         ),
         Xe = s.lazy(() =>
-          Promise.all([n.e(4077), n.e(6440), n.e(7280)]).then(n.bind(n, 37046)),
+          Promise.all([n.e(4077), n.e(6440), n.e(7280)]).then(n.bind(n, 79798)),
         ),
         Ye = s.lazy(() =>
           Promise.all([
@@ -34103,7 +34178,7 @@
             n.e(7161),
             n.e(8038),
             n.e(3805),
-          ]).then(n.bind(n, 66295)),
+          ]).then(n.bind(n, 42957)),
         );
       class Qe extends s.Component {
         componentDidMount() {
@@ -34662,9 +34737,9 @@
           ),
         );
       });
-      var rt = n(2758),
-        st = n(60161);
-      n(1721);
+      var rt = n(92011),
+        st = n(50423);
+      n(7765);
       (0, b.jQ)({ enforceActions: "never" }),
         st.Dj(function () {
           return (0, i.mG)(this, void 0, void 0, function* () {
@@ -34711,90 +34786,92 @@
           });
         });
     },
-    28841: (e, t, n) => {
+    45137: (e, t, n) => {
       "use strict";
       n.d(t, {
-        AL: () => se,
-        G1: () => $,
-        Nv: () => Z,
-        bn: () => re,
-        dW: () => ee,
-        fn: () => V,
-        g1: () => P,
-        i2: () => H,
-        j0: () => X,
-        tI: () => q,
-        td: () => ie,
-        z5: () => te,
+        AL: () => ae,
+        G1: () => X,
+        Nv: () => z,
+        bn: () => oe,
+        dW: () => ne,
+        fn: () => H,
+        g1: () => G,
+        i2: () => U,
+        j0: () => Y,
+        jy: () => Q,
+        tI: () => $,
+        td: () => se,
+        z5: () => ie,
       });
-      var i = n(33940),
-        r = n(89526),
-        s = n(90415),
-        o = n(5615),
-        a = n(68333),
-        l = n(27070),
-        c = n(42439),
-        u = n(66427),
-        d = n(44601),
-        m = n(87361),
-        h = n(44973),
-        p = n(85251),
-        g = n(40442),
-        _ = n(39323),
-        f = n(49437),
-        v = n(47165),
-        C = n(25628),
-        S = n(14826),
-        b = n(25871),
-        w = n(92616),
-        y = n(57361),
-        E = n(25817),
-        D = n(52868),
+      var i = n(85556),
+        r = n(47427),
+        s = n(96668),
+        o = n(42718),
+        a = n(35750),
+        l = n(40057),
+        c = n(83065),
+        u = n(85516),
+        d = n(82973),
+        m = n(46009),
+        h = n(65255),
+        p = n(80002),
+        g = n(77936),
+        _ = n(88619),
+        f = n(51915),
+        v = n(35427),
+        C = n(61231),
+        S = n(31846),
+        b = n(80886),
+        w = n(15690),
+        y = n(22520),
+        E = n(2324),
+        D = n(80751),
         L = n.n(D),
-        I = n(59954),
-        R = n(54671),
-        M = n(37760);
-      function A() {
+        I = n(82756),
+        R = n(77151),
+        M = n(89373),
+        A = n(86437);
+      function T() {
         return (0, I.ip)("cart_config", "application_config");
       }
-      const T = "shoppingCartGID";
-      function O() {
-        return (0, m.bG)(T);
+      const O = "shoppingCartGID";
+      function B() {
+        return (0, m.bG)(O);
       }
-      function B(e) {
+      function k(e) {
         return ["shopping_cart", e, h.L7.accountid];
       }
-      function k() {
-        const e = O();
-        return !!e && "-1" != e && "null" != e;
-      }
       function x() {
-        const e = new URLSearchParams(document.location.search).get("prsi");
+        const e = B();
         return !!e && "-1" != e && "null" != e;
       }
       function N() {
-        var e;
-        return x()
-          ? null === (e = A()) || void 0 === e
-            ? void 0
-            : e.requestcartgid
-          : O();
+        const e = new URLSearchParams(document.location.search).get("prsi");
+        return !!e && "-1" != e && "null" != e;
       }
       function P() {
-        const e = N(),
+        var e;
+        return N()
+          ? null === (e = T()) || void 0 === e
+            ? void 0
+            : e.requestcartgid
+          : B();
+      }
+      function G() {
+        const e = P(),
           t = (0, l.bY)();
         return (0, o.useQuery)(
-          B(e),
+          k(e),
           () =>
             (0, i.mG)(this, void 0, void 0, function* () {
-              return F(t);
+              return V(t);
             }),
           {
-            enabled: k() || z() || x(),
+            enabled: x() || K() || N(),
             initialData: () => {
               var e, t, n, i;
-              const r = x()
-                  ? null === (e = A()) || void 0 === e
+              const r = N()
+                  ? null === (e = T()) || void 0 === e
                     ? void 0
                     : e.requestcart
                   : null === (t = (0, s.T)(!0)) || void 0 === t
@@ -34804,17 +34881,17 @@
                   null === (n = (0, s.T)(!0)) || void 0 === n
                     ? void 0
                     : n.accountcart;
-              return z() &&
+              return K() &&
                 (null === (i = null == o ? void 0 : o.cart) || void 0 === i
                   ? void 0
                   : i.line_items.length)
                 ? o.cart
-                : G(r);
+                : F(r);
             },
           },
         );
       }
-      function G(e) {
+      function F(e) {
         var t;
         let n = { line_items: [] };
         return (
@@ -34869,10 +34946,10 @@
           n
         );
       }
-      function F(e) {
+      function V(e) {
         var t;
         return (0, i.mG)(this, void 0, void 0, function* () {
-          if (z()) {
+          if (K()) {
             const n = a.gA.Init(d.rm);
             n.Body().set_user_country(h.L7.country_code);
             const i = yield d.Wr.GetCart(e, n);
@@ -34881,18 +34958,18 @@
               : t.cart;
           }
           {
-            const t = N(),
+            const t = P(),
               n = a.gA.Init(u.AC);
             n.Body().set_gidshoppingcart(t);
-            return G(
+            return F(
               (yield u.FP.GetShoppingCartContents(e, n)).Body().toObject()
                 .contents,
             );
           }
         });
       }
-      function V(e) {
-        const t = N(),
+      function H(e) {
+        const t = P(),
           n = (0, l.bY)(),
           r = (0, o.useQueryClient)();
         return (0, o.useMutation)(
@@ -34900,7 +34977,7 @@
             (0, i.mG)(this, void 0, void 0, function* () {
               return yield (function (e, t) {
                 return (0, i.mG)(this, void 0, void 0, function* () {
-                  if (z()) {
+                  if (K()) {
                     const n = a.gA.Init(d.CQ);
                     n.Body().set_line_item_id(t),
                       n.Body().set_user_country(h.L7.country_code);
@@ -34908,7 +34985,7 @@
                     return R.jg.Get().InvalidateCache(), i.Body().toObject();
                   }
                   {
-                    const n = N(),
+                    const n = P(),
                       i = a.gA.Init(u.Rg);
                     i.Body().set_gidlineitems([t]),
                       i.Body().set_gidshoppingcart(n);
@@ -34920,13 +34997,13 @@
             }),
           {
             onSuccess() {
-              j(r, t);
+              W(r, t);
             },
           },
         );
       }
-      function H() {
-        const e = N(),
+      function U() {
+        const e = P(),
           t = (0, l.bY)(),
           n = (0, o.useQueryClient)();
         return (0, o.useMutation)(
@@ -34934,13 +35011,13 @@
             (0, i.mG)(this, void 0, void 0, function* () {
               return yield (function (e) {
                 return (0, i.mG)(this, void 0, void 0, function* () {
-                  if (z()) {
+                  if (K()) {
                     const t = a.gA.Init(d.AQ);
                     return (yield d.Wr.DeleteCart(e, t)).BSuccess();
                   }
                   {
-                    const t = N(),
-                      n = yield F(e);
+                    const t = P(),
+                      n = yield V(e);
                     if (n && n.line_items && n.line_items.length) {
                       const i = a.gA.Init(u.Rg);
                       return (
@@ -34960,25 +35037,25 @@
             }),
           {
             onSuccess() {
-              j(n, e);
+              W(n, e);
             },
           },
         );
       }
-      function U(e, t) {
-        e.invalidateQueries(Q(t));
-      }
       function j(e, t) {
-        e.invalidateQueries(B(t)), U(e, t);
+        e.invalidateQueries(ee(t));
       }
-      function W(e, t, n) {
-        e.setQueryData(B(t), n), U(e, t);
+      function W(e, t) {
+        e.invalidateQueries(k(t)), j(e, t);
       }
-      function Z(e, t, n, r, s) {
-        const o = O();
-        z()
-          ? K(e, n, r).then(([e, n]) => {
-              1 == e && (W(t, o, n.cart), s && s(n.line_item_id));
+      function Z(e, t, n) {
+        e.setQueryData(k(t), n), j(e, t);
+      }
+      function z(e, t, n, r, s) {
+        const o = B();
+        K()
+          ? q(e, n, r).then(([e, n]) => {
+              1 == e && (Z(t, o, n.cart), s && s(n.line_item_id));
             })
           : (function (e, t, n, r) {
               var s, o;
@@ -35000,7 +35077,7 @@
                 ];
               });
             })(0, n, r).then(([e, i]) => {
-              if (e && (W(t, o, G(i)), s)) {
+              if (e && (Z(t, o, F(i)), s)) {
                 let e = n
                   ? i.lineitems.find((e) => {
                       var t;
@@ -35023,10 +35100,10 @@
             }),
           R.jg.Get().InvalidateCache();
       }
-      function z() {
-        return h.L7.logged_in && !x();
+      function K() {
+        return h.L7.logged_in && !N();
       }
-      function K(e, t, n, r) {
+      function q(e, t, n, r) {
         return (0, i.mG)(this, void 0, void 0, function* () {
           const i = a.gA.Init(d.ll);
           if (!t && !n)
@@ -35050,27 +35127,27 @@
           );
         });
       }
-      function q(e, t, n) {
-        const r = O(),
+      function $(e, t, n) {
+        const r = B(),
           s = (0, l.bY)(),
           a = (0, o.useQueryClient)();
         return (0, o.useMutation)(
           () =>
             (0, i.mG)(this, void 0, void 0, function* () {
-              return yield K(s, e, t, n);
+              return yield q(s, e, t, n);
             }),
           {
             onSuccess([e, t]) {
-              1 == e && W(a, r, t.cart);
+              1 == e && Z(a, r, t.cart);
             },
           },
         );
       }
-      function $(e) {
-        const t = O(),
+      function X(e) {
+        const t = B(),
           n = (0, l.bY)(),
           r = (0, o.useQueryClient)(),
-          s = B(t);
+          s = k(t);
         return (0, o.useMutation)({
           mutationFn: (e) =>
             (function (e, t, n, r, s) {
@@ -35112,14 +35189,14 @@
               );
             }),
           onSuccess: ([n, i], o, { previousCart: a }) => {
-            1 == n ? (W(r, t, i.cart), e && e()) : r.setQueryData(s, a);
+            1 == n ? (Z(r, t, i.cart), e && e()) : r.setQueryData(s, a);
           },
           onError: (e, t, { previousCart: n }) => {
             r.setQueryData(s, n);
           },
         });
       }
-      function X(e) {
+      function Y(e) {
         var t, n, i, r;
         const s = (0, _.co)(),
           o = (0, _.Ce)(e),
@@ -35203,7 +35280,76 @@
           })
         );
       }
-      function Y() {
+      function Q(e) {
+        const t = (function (e) {
+            const t = (0, l.bY)(),
+              n = (0, A.Bo)(e.GetID(), e.GetStoreItemType());
+            return (0, o.useQuery)([n], () =>
+              (0, i.mG)(this, void 0, void 0, function* () {
+                const e = a.gA.Init(c.Yq);
+                e.Body().set_item_ids([p.oY.fromObject(n)]);
+                const i = yield c.ZY.GetFriendOwnershipForGifting(t, e);
+                if (!i.BSuccess()) throw i.GetEResult();
+                return i.Body().toObject();
+              }),
+            );
+          })(e),
+          n = (0, _.co)(),
+          s = (0, f.vP)(n.data || []),
+          u = (0, _.N5)(),
+          d = (0, _.wP)(),
+          m = r.useMemo(() => {
+            if (
+              t.isLoading ||
+              n.isLoading ||
+              d.isLoading ||
+              s.some(({ isLoading: e }) => e)
+            )
+              return { isLoading: !0 };
+            if (
+              t.isError ||
+              n.isError ||
+              0 === t.data.ownership_info.length ||
+              s.some(({ isError: e }) => e)
+            )
+              return { isError: !0 };
+            const e = t.data.ownership_info[0].friend_ownership,
+              i = new Map(e.map((e) => [e.accountid, e])),
+              r = new Map((d.data || []).map((e) => [e, !0]));
+            return n.data
+              .slice()
+              .map((e, t) => {
+                const n = v.K.InitFromString(e).GetAccountID(),
+                  r = s[t].data;
+                return {
+                  accountid: n,
+                  ownership: i.get(n) || { already_owns: !1, wishes_for: !1 },
+                  persona: r,
+                };
+              })
+              .sort((e, t) =>
+                r.has(e.accountid) != r.has(t.accountid)
+                  ? r.has(e.accountid)
+                    ? -1
+                    : 1
+                  : e.ownership.wishes_for !== t.ownership.wishes_for
+                  ? e.ownership.wishes_for
+                    ? -1
+                    : 1
+                  : e.ownership.already_owns !== t.ownership.already_owns
+                  ? e.ownership.already_owns
+                    ? 1
+                    : -1
+                  : e.persona.m_strPlayerName.localeCompare(
+                      t.persona.m_strPlayerName,
+                    ),
+              );
+          }, [t, n, d, s]);
+        return Array.isArray(m)
+          ? { rgFriendsForGifting: m, mapNicknames: u.data }
+          : m;
+      }
+      function J() {
         const e = new p.WJ();
         return (
           e.set_country_code(h.L7.country_code),
@@ -35212,21 +35358,21 @@
           e
         );
       }
-      function Q(e) {
+      function ee(e) {
         return ["validate_checkout", e, h.L7.accountid];
       }
-      function J() {
-        const e = N(),
+      function te() {
+        const e = P(),
           t = (0, l.bY)();
         return (0, o.useQuery)(
-          Q(e),
+          ee(e),
           () =>
             (0, i.mG)(this, void 0, void 0, function* () {
               return (function (e, t) {
                 return (0, i.mG)(this, void 0, void 0, function* () {
                   const n = a.gA.Init(c.yF);
                   n.Body().set_gidshoppingcart(t),
-                    n.Body().set_context(Y()),
+                    n.Body().set_context(J()),
                     n.Body().data_request().set_include_basic_info(!0),
                     n.Body().data_request().set_include_release(!0);
                   const i = yield c.ZY.ValidateStartCheckout(e, n);
@@ -35240,11 +35386,11 @@
                 });
               })(t, e);
             }),
-          { staleTime: 1 / 0, enabled: z() || x() },
+          { staleTime: 1 / 0, enabled: K() || N() },
         );
       }
-      function ee() {
-        const e = J();
+      function ne() {
+        const e = te();
         return r.useMemo(() => {
           var t, n;
           let i = new Map(),
@@ -35468,12 +35614,12 @@
           );
         }, [e]);
       }
-      function te(e) {
+      function ie(e) {
         const { mapLineItemToNotices: t, mapValidateNoticesToFootnote: n } =
-          ee();
+          ne();
         return [t.get(e) || [], n];
       }
-      function ne(e, t) {
+      function re(e, t) {
         let n = "#Package";
         const i = e.GetSelfPurchaseOption(),
           r = null == i ? void 0 : i.recurrence_info;
@@ -35501,10 +35647,10 @@
           s.discount_pct,
         );
       }
-      function ie() {
+      function se() {
         var e, t;
-        const n = P(),
-          s = J(),
+        const n = G(),
+          s = te(),
           c = (function (e) {
             const t = (0, l.bY)(),
               n = e.map(({ packageid: e }) => e).filter(Boolean),
@@ -35525,7 +35671,7 @@
               () =>
                 (0, i.mG)(this, void 0, void 0, function* () {
                   const e = a.gA.Init(p.lj);
-                  e.Body().set_context(Y()), e.Body().set_packageid(c);
+                  e.Body().set_context(J()), e.Body().set_packageid(c);
                   const n = yield p.VJ.GetHardwareItems(t, e);
                   return (
                     n.BSuccess() ||
@@ -35588,7 +35734,7 @@
                   return (
                     (e[t] = [
                       {
-                        strNotice: ne(
+                        strNotice: re(
                           n,
                           i.GetPackage(
                             n.GetSelfPurchaseOption().recurrence_info.packageid,
@@ -35629,7 +35775,7 @@
           bValidForCheckout: !m,
         };
       }
-      function re() {
+      function oe() {
         const e = (0, l.bY)();
         return (0, o.useQuery)(
           ["shopping_cart", "relevant_coupons"],
@@ -35653,7 +35799,7 @@
           { enabled: h.L7.logged_in, placeholderData: () => ({}) },
         );
       }
-      function se() {
+      function ae() {
         return (0, o.useQuery)(
           ["shopping_cart", "sale_drop_progress"],
           () =>
@@ -35672,12 +35818,12 @@
         );
       }
     },
-    24420: (e, t, n) => {
+    5522: (e, t, n) => {
       "use strict";
       n.d(t, { v: () => o });
-      var i = n(33940),
-        r = n(14826),
-        s = n(44973);
+      var i = n(85556),
+        r = n(31846),
+        s = n(65255);
       function o() {
         return (0, i.mG)(this, void 0, void 0, function* () {
           const e = s.De.LANGUAGE,
@@ -35703,7 +35849,7 @@
         "./marketing_french.json": [45185, 4199],
         "./marketing_german.json": [60503, 2824],
         "./marketing_greek.json": [67395, 7871],
-        "./marketing_hungarian.json": [21507, 8994],
+        "./marketing_hungarian.json": [64634, 8994],
         "./marketing_indonesian.json": [5725, 8399],
         "./marketing_italian.json": [14031, 8001],
         "./marketing_japanese.json": [93191, 7082],
@@ -35748,7 +35894,7 @@
         "./marketing_french.json": [45185, 4199],
         "./marketing_german.json": [60503, 2824],
         "./marketing_greek.json": [67395, 7871],
-        "./marketing_hungarian.json": [21507, 8994],
+        "./marketing_hungarian.json": [64634, 8994],
         "./marketing_indonesian.json": [5725, 8399],
         "./marketing_italian.json": [14031, 8001],
         "./marketing_japanese.json": [93191, 7082],
@@ -35967,7 +36113,7 @@
       var i = {
         "./shoppingcart_brazilian.json": [79281, 7548],
         "./shoppingcart_bulgarian.json": [79475, 6802],
-        "./shoppingcart_czech.json": [45652, 2908],
+        "./shoppingcart_czech.json": [24714, 2908],
         "./shoppingcart_danish.json": [22870, 8589],
         "./shoppingcart_dutch.json": [49194, 230],
         "./shoppingcart_english.json": [5582, 3766],
@@ -36012,7 +36158,7 @@
       var i = {
         "./shoppingcart_brazilian.json": [79281, 7548],
         "./shoppingcart_bulgarian.json": [79475, 6802],
-        "./shoppingcart_czech.json": [45652, 2908],
+        "./shoppingcart_czech.json": [24714, 2908],
         "./shoppingcart_danish.json": [22870, 8589],
         "./shoppingcart_dutch.json": [49194, 230],
         "./shoppingcart_english.json": [5582, 3766],
@@ -36146,7 +36292,7 @@
   },
   (e) => {
     e.O(0, [3250], () => {
-      return (t = 81908), e((e.s = t));
+      return (t = 20599), e((e.s = t));
       var t;
     });
     e.O();

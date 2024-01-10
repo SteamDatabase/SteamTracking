@@ -3,7 +3,7 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [1949],
   {
-    31465: (e) => {
+    39451: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         MainCarousel: "contenthubshared_MainCarousel_rKC9i",
@@ -43,7 +43,7 @@
         MenuOptions: "contenthubshared_MenuOptions_1UNUd",
       };
     },
-    10809: (e) => {
+    61931: (e) => {
       e.exports = {
         StoreSalePriceWidget: "packagepricewidget_StoreSalePriceWidget_2ykYV",
         StoreSaleDiscountedPriceCtn:
@@ -56,22 +56,22 @@
         StoreOriginalPrice: "packagepricewidget_StoreOriginalPrice_3h9iQ",
       };
     },
-    23276: (e, t, a) => {
+    1774: (e, t, a) => {
       "use strict";
       a.d(t, { Pl: () => b, k8: () => D, Jm: () => S, $1: () => g });
-      var n = a(89526),
-        o = a(98009),
-        r = a(85886),
-        i = a(44973);
-      var c = a(23715),
+      var n = a(47427),
+        o = a(28347),
+        r = a(86437),
+        i = a(65255);
+      var c = a(7769),
         l = a.n(c),
-        s = a(25589),
-        d = a(701),
-        u = a(71161),
-        _ = a(75962),
-        p = a(19304),
-        m = a(14826),
-        h = a(31465);
+        s = a(58129),
+        d = a(62613),
+        u = a(25006),
+        _ = a(14609),
+        p = a(13129),
+        m = a(31846),
+        h = a(39451);
       function g(e) {
         const { spotlight: t } = e,
           a = (0, u.bJ)();
@@ -359,21 +359,21 @@
           : {};
       }
     },
-    61963: (e, t, a) => {
+    84823: (e, t, a) => {
       "use strict";
       a.d(t, { Eu: () => D, J8: () => S, gq: () => f, nk: () => h });
       var n,
-        o = a(88464),
-        r = a(89526),
-        i = a(98009),
-        c = a(25871),
-        l = a(55290),
+        o = a(27605),
+        r = a(47427),
+        i = a(28347),
+        c = a(80886),
+        l = a(35714),
         s = a.n(l),
-        d = a(701),
-        u = a(19304),
-        _ = a(71161),
-        p = a(43840),
-        m = a(10809);
+        d = a(62613),
+        u = a(13129),
+        _ = a(25006),
+        p = a(85305),
+        m = a(61931);
       !(function (e) {
         (e.k_eBlock = "block"),
           (e.k_eFinal = "final"),
@@ -550,35 +550,35 @@
         return t ? r.createElement(E, { appid: t }) : null;
       }
     },
-    31245: (e, t, a) => {
+    40833: (e, t, a) => {
       "use strict";
       a.d(t, { B: () => x, O: () => k });
-      var n = a(89526),
-        o = a(62983),
-        r = a(44026),
-        i = a(51438),
-        c = a(16221),
-        l = a(98009),
-        s = a(54671),
-        d = a(85886),
-        u = a(25871),
-        _ = a(5089),
-        p = a(43840),
-        m = a(44421),
-        h = a(23715),
+      var n = a(47427),
+        o = a(16610),
+        r = a(82493),
+        i = a(91618),
+        c = a(3783),
+        l = a(28347),
+        s = a(77151),
+        d = a(86437),
+        u = a(80886),
+        _ = a(90366),
+        p = a(85305),
+        m = a(85884),
+        h = a(7769),
         g = a.n(h),
-        S = a(67935),
-        b = a(21219),
-        D = a(87539),
-        E = a(3991),
-        f = a(33406),
-        v = a(98389),
-        C = a(42317),
-        P = a(71161),
-        y = a(19304),
-        B = a(14826),
-        N = a(207),
-        I = a(32765);
+        S = a(47625),
+        b = a(57803),
+        D = a(91552),
+        E = a(52841),
+        f = a(83502),
+        v = a(34913),
+        C = a(22446),
+        P = a(25006),
+        y = a(13129),
+        B = a(31846),
+        N = a(13499),
+        I = a(37563);
       const k = "capsule_index_";
       function x(e) {
         const {

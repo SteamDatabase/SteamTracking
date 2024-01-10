@@ -3,7 +3,7 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [938],
   {
-    28241: (e) => {
+    81519: (e) => {
       e.exports = {
         MMFrame: "replay_MMFrame_kmeCX",
         HeaderCtn: "replay_HeaderCtn_1x7ZL",
@@ -23,7 +23,7 @@
         Description: "replay_Description_3PEXE",
       };
     },
-    71181: (e) => {
+    16173: (e) => {
       e.exports = {
         new_games_color: "#3cdf6a",
         used_games_color: "#4df",
@@ -111,7 +111,7 @@
         OtherYearLink: "yir2022_OtherYearLink_3itf8",
       };
     },
-    49686: (e) => {
+    61450: (e) => {
       e.exports = {
         new_games_color: "#d67070",
         used_games_color: "#683db4",
@@ -197,22 +197,22 @@
         OtherYearLink: "yir2023_OtherYearLink_1AcAx",
       };
     },
-    20285: (e, a, r) => {
+    85948: (e, a, r) => {
       "use strict";
       r.d(a, { Fz: () => h, TQ: () => u, tE: () => k });
-      var t = r(33940),
-        i = r(52868),
+      var t = r(85556),
+        i = r(80751),
         n = r.n(i),
-        o = r(92994),
+        o = r(73799),
         _ = r.n(o),
-        l = r(89526),
-        c = r(5615),
-        s = r(47165),
-        y = r(23217),
-        m = r(32765),
-        d = r(68333),
-        C = r(97940),
-        g = r(27070);
+        l = r(47427),
+        c = r(42718),
+        s = r(35427),
+        y = r(16649),
+        m = r(37563),
+        d = r(35750),
+        C = r(82182),
+        g = r(40057);
       const p = "nicknames";
       function u(e) {
         const a = (0, g.bY)(),
@@ -328,19 +328,19 @@
         return t ? null : i;
       }
     },
-    18795: (e, a, r) => {
+    21400: (e, a, r) => {
       "use strict";
       r.r(a), r.d(a, { default: () => d });
-      var t = r(5742),
-        i = r(55861),
-        n = r(89526),
-        o = r(51438),
-        _ = r(20285),
-        l = r(14826),
-        c = r(32765),
-        s = r(28241),
-        y = r(14057),
-        m = r(19304);
+      var t = r(16305),
+        i = r(70267),
+        n = r(47427),
+        o = r(91618),
+        _ = r(85948),
+        l = r(31846),
+        c = r(37563),
+        s = r(81519),
+        y = r(37588),
+        m = r(13129);
       function d(e) {
         const a = (0, y.N)(e.year),
           r = h();
@@ -508,11 +508,11 @@
         return (0, t.pT)(e.linkurl);
       }
     },
-    14057: (e, a, r) => {
+    37588: (e, a, r) => {
       "use strict";
       r.d(a, { N: () => _ });
-      var t = r(89526);
-      const i = { 2022: r(71181), 2023: r(49686) },
+      var t = r(47427);
+      const i = { 2022: r(16173), 2023: r(61450) },
         n = Object.values(i).reduce(
           (e, a) => Object.assign(Object.assign({}, e), a),
           {},

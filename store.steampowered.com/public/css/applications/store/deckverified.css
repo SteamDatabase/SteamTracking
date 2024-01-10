@@ -15,7 +15,7 @@
   flex-direction: row;
   padding: 10px;
   justify-content: space-between;
-  background-color: rgba(59, 90, 114, 0.5019607843);
+  background-color: #3b5a7280;
   align-items: center;
   transition: background-color 0.2s ease;
   flex-wrap: wrap;
@@ -29,7 +29,7 @@
 }
 .deckverified_BannerContentDesktop_2qr1f:focus-within,
 .deckverified_BannerContent_1B2KF:focus-within {
-  background-color: rgba(103, 139, 166, 0.4392156863);
+  background-color: #678ba670;
 }
 .deckverified_BannerContentDesktop_2qr1f {
   background: linear-gradient(
@@ -100,6 +100,7 @@
 .deckverified_DialogHeader_1L5Or {
   display: flex;
   flex-direction: row;
+  align-items: center;
   padding-bottom: 10px;
 }
 .deckverified_DialogTitle_2FOcP {
@@ -114,7 +115,6 @@
 .deckverified_AppTitleCategory_2VgfB .deckverified_CategoryIcon_2yDLe {
   padding-top: 1px;
   width: 26px;
-  height: 100%;
 }
 .deckverified_CompatibilityDetailsStillLearning_1Ugyr {
   display: flex;

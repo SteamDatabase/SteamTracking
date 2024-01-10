@@ -3,37 +3,37 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [8820],
   {
-    38938: (e) => {
+    78534: (e) => {
       e.exports = {
-        AppGridItem: "appgrid_AppGridItem_3Ti0O",
-        NoImage: "appgrid_NoImage_ccEyP",
-        Capsule: "appgrid_Capsule_1FHOJ",
-        Loaded: "appgrid_Loaded_3_iQe",
-        Selectable: "appgrid_Selectable_1coM2",
-        Label: "appgrid_Label_1vlhD",
+        AppGridItem: "appgrid_AppGridItem_cel2P",
+        NoImage: "appgrid_NoImage_1-aFU",
+        Capsule: "appgrid_Capsule_3F_x5",
+        Loaded: "appgrid_Loaded_2OzGy",
+        Selectable: "appgrid_Selectable_1VYcg",
+        Label: "appgrid_Label_1Pku-",
       };
     },
-    64666: (e) => {
+    71960: (e) => {
       e.exports = {
-        VirtualizedGridWrapper: "virtualizedgrid_VirtualizedGridWrapper_1FuQ7",
-        VirtualizedGridRow: "virtualizedgrid_VirtualizedGridRow_1aH3s",
+        VirtualizedGridWrapper: "virtualizedgrid_VirtualizedGridWrapper_R33oy",
+        VirtualizedGridRow: "virtualizedgrid_VirtualizedGridRow_3yp3J",
       };
     },
-    401: (e, n, t) => {
+    47844: (e, n, t) => {
       "use strict";
       t.d(n, { d: () => E });
-      var o = t(33940),
-        r = t(89526),
-        i = t(32765),
-        s = t(19304);
+      var o = t(85556),
+        r = t(47427),
+        i = t(37563),
+        s = t(13129);
       const l =
         t.p +
         "images/applications/store/defaultappimage.png?v=valveisgoodatcaching";
-      var a = t(38938),
-        u = t(9353),
-        c = t(4306),
-        d = t(64666),
-        f = t(60161);
+      var a = t(78534),
+        u = t(813),
+        c = t(20417),
+        d = t(71960),
+        f = t(50423);
       function m(e) {
         const {
             idxStart: n,
@@ -72,49 +72,59 @@
             nColumns: i = 7,
             nColumnGap: s = 10,
             nRowGap: l = 10,
+            onWidthChanged: a,
           } = e,
-          a = r.useRef(),
-          [u, m] = r.useState(0),
-          h = a.current && (0, f.Et)(a.current, "y"),
-          v = Math.ceil(n / i),
-          b = Math.floor((u - (i - 1) * s) / i),
-          E = Math.floor(b / o) + l,
+          u = r.useRef(null),
+          [m, h] = r.useState(0),
+          v = u.current && (0, f.Et)(u.current, "y"),
+          b = Math.ceil(n / i),
+          E = Math.floor((m - (i - 1) * s) / i),
+          y = Math.floor(E / o) + l,
           I = r.useCallback((e) => {
-            m(e.borderBoxSize[0].inlineSize);
+            var n;
+            h(e.borderBoxSize[0].inlineSize),
+              a &&
+                a(
+                  (null === (n = e.target.ownerDocument.defaultView) ||
+                  void 0 === n
+                    ? void 0
+                    : n.innerWidth) || 0,
+                  e.borderBoxSize[0].inlineSize,
+                );
           }, []),
-          y = (0, c.yU)(I),
-          S = (0, c.BE)(a, y);
+          S = (0, c.yU)(I),
+          z = (0, c.BE)(u, S);
         return r.createElement(
           "div",
-          { className: d.VirtualizedGridOuter, ref: S },
-          h &&
-            r.createElement(g, {
-              renderItem: t,
-              nItems: n,
-              nColumns: i,
-              nColumnGap: s,
-              nRowGap: l,
-              nRows: v,
-              elScrollable: h,
-              nRowHeight: E,
-              nItemWidth: b,
-            }),
-          a.current &&
-            !h &&
+          { className: d.VirtualizedGridOuter, ref: z },
+          v &&
             r.createElement(p, {
               renderItem: t,
               nItems: n,
               nColumns: i,
               nColumnGap: s,
               nRowGap: l,
-              nRows: v,
-              containerRef: a,
-              nRowHeight: E,
-              nItemWidth: b,
+              nRows: b,
+              elScrollable: v,
+              nRowHeight: y,
+              nItemWidth: E,
+            }),
+          u.current &&
+            !v &&
+            r.createElement(g, {
+              renderItem: t,
+              nItems: n,
+              nColumns: i,
+              nColumnGap: s,
+              nRowGap: l,
+              nRows: b,
+              containerRef: u,
+              nRowHeight: y,
+              nItemWidth: E,
             }),
         );
       }
-      function p(e) {
+      function g(e) {
         var n;
         const { containerRef: t, nRows: i, nRowHeight: s } = e,
           l = (0, o._T)(e, ["containerRef", "nRows", "nRowHeight"]),
@@ -132,7 +142,7 @@
           r.createElement(v, Object.assign({}, l, { virtualizer: a }))
         );
       }
-      function g(e) {
+      function p(e) {
         const { nRows: n, elScrollable: t, nRowHeight: i } = e,
           s = (0, o._T)(e, ["nRows", "elScrollable", "nRowHeight"]),
           l = (0, u.MG)({
@@ -151,9 +161,9 @@
       function v(e) {
         const {
             nItems: n,
-            nColumns: t,
-            nColumnGap: i,
-            nRowGap: s,
+            nColumns: t = 0,
+            nColumnGap: i = 0,
+            nRowGap: s = 0,
             nItemWidth: l,
             virtualizer: a,
           } = e,
@@ -207,15 +217,15 @@
             getClassName: d,
           } = e,
           [f, m] = r.useState(0),
-          [h, p] = r.useState(!1),
-          g = i.De.STORE_ICON_BASE_URL;
+          [h, g] = r.useState(!1),
+          p = i.De.STORE_ICON_BASE_URL;
         let v = [
-          `${g}${n.appid}/library_600x900.jpg`,
-          `${g}${n.appid}/portrait.png`,
+          `${p}${n.appid}/library_600x900.jpg`,
+          `${p}${n.appid}/portrait.png`,
           l,
         ];
         e.app.localized_capsule_filename &&
-          (v = [`${g}${n.appid}/${e.app.localized_capsule_filename}`, ...v]);
+          (v = [`${p}${n.appid}/${e.app.localized_capsule_filename}`, ...v]);
         const b = u && u(n, o);
         return r.createElement(
           "div",
@@ -234,7 +244,7 @@
             r.createElement("img", {
               className: a.Capsule,
               onLoad: () => {
-                p(!0);
+                g(!0);
               },
               onError: () => {
                 f < v.length && m((e) => e + 1);
@@ -285,7 +295,7 @@
         );
       }
     },
-    9353: (e, n, t) => {
+    813: (e, n, t) => {
       "use strict";
       /**
        * react-virtual
@@ -313,8 +323,8 @@
         );
       }
       t.d(n, { MG: () => S, hO: () => z });
-      var r = t(89526),
-        i = t(73961);
+      var r = t(47427),
+        i = t(42287);
       /**
        * virtual-core
        *
@@ -483,7 +493,7 @@
             );
           }
         },
-        p = function (e, n, t) {
+        g = function (e, n, t) {
           if (null != n && n.borderBoxSize) {
             var o = n.borderBoxSize[0];
             if (o)
@@ -497,7 +507,7 @@
             ],
           );
         },
-        g = function (e, n, t) {
+        p = function (e, n, t) {
           var o,
             r,
             i = n.adjustments,
@@ -591,7 +601,7 @@
                     getItemKey: u,
                     rangeExtractor: c,
                     onChange: function () {},
-                    measureElement: p,
+                    measureElement: g,
                     initialRect: { width: 0, height: 0 },
                     scrollMargin: 0,
                     scrollingDelay: 150,
@@ -748,15 +758,15 @@
                     f = d ? d.end : r + i,
                     m = n.get(c),
                     h = "number" == typeof m ? m : o.options.estimateSize(u),
-                    p = f + h,
-                    g = d ? d.lane : u % o.options.lanes;
+                    g = f + h,
+                    p = d ? d.lane : u % o.options.lanes;
                   a[u] = {
                     index: u,
                     start: f,
                     size: h,
-                    end: p,
+                    end: g,
                     key: c,
-                    lane: g,
+                    lane: p,
                   };
                 }
                 return (o.measurementsCache = a), a;
@@ -1054,8 +1064,8 @@
        *
        * @license MIT
        */
-      var I = "undefined" != typeof document ? r.useLayoutEffect : r.useEffect;
-      function y(e) {
+      var y = "undefined" != typeof document ? r.useLayoutEffect : r.useEffect;
+      function I(e) {
         var n = r.useReducer(function () {
             return {};
           }, {})[1],
@@ -1073,14 +1083,14 @@
           r.useEffect(function () {
             return s._didMount();
           }, []),
-          I(function () {
+          y(function () {
             return s._willUpdate();
           }),
           s
         );
       }
       function S(e) {
-        return y(
+        return I(
           o(
             { observeElementRect: d, observeElementOffset: m, scrollToFn: v },
             e,
@@ -1088,7 +1098,7 @@
         );
       }
       function z(e) {
-        return y(
+        return I(
           o(
             {
               getScrollElement: function () {
@@ -1096,7 +1106,7 @@
               },
               observeElementRect: f,
               observeElementOffset: h,
-              scrollToFn: g,
+              scrollToFn: p,
               initialOffset:
                 "undefined" != typeof document ? window.scrollY : void 0,
             },

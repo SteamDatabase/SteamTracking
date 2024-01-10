@@ -577,7 +577,7 @@ body.v6 {
   font-size: 1.1vw;
   text-align: center;
   font-weight: 200;
-  color: rgba(255, 255, 255, 0.5215686275);
+  color: #ffffff85;
   overflow: visible;
   z-index: 1;
 }
@@ -906,7 +906,7 @@ body.v6 {
 }
 .yirlanding_QuestionCtn_1_WCk .yirlanding_Answer_zGzLS {
   font-weight: 400;
-  color: rgba(255, 255, 255, 0.6784313725);
+  color: #ffffffad;
   font-size: 16px;
 }
 .yirlanding_QuestionCtn_1_WCk .yirlanding_Answer_zGzLS ol {
@@ -965,10 +965,10 @@ body.v6 {
 .ingame .steamavatar_avatarStatus_1yIzy {
   background: linear-gradient(
     to bottom,
-    rgb(140, 214, 29) 0%,
-    rgb(161, 244, 16) 30%,
-    rgb(161, 244, 16) 70%,
-    rgb(140, 214, 29) 100%
+    #8cd61d 0%,
+    #a1f410 30%,
+    #a1f410 70%,
+    #8cd61d 100%
   );
 }
 .ingame .steamavatar_avatarStatus_1yIzy.GamepadMode,
@@ -985,19 +985,19 @@ body.v6 {
 .watchingbroadcast .steamavatar_avatarStatus_1yIzy {
   background: linear-gradient(
     to bottom,
-    rgb(156, 143, 212) 0%,
-    rgb(156, 143, 212) 30%,
-    rgb(156, 143, 212) 70%,
-    rgb(156, 143, 212) 100%
+    #9c8fd4 0%,
+    #9c8fd4 30%,
+    #9c8fd4 70%,
+    #9c8fd4 100%
   );
 }
 .online .steamavatar_avatarStatus_1yIzy {
   background: linear-gradient(
     to bottom,
-    rgb(109, 207, 246) 0%,
-    rgb(109, 207, 246) 30%,
-    rgb(109, 207, 246) 70%,
-    rgb(109, 207, 246) 100%
+    #6dcff6 0%,
+    #6dcff6 30%,
+    #6dcff6 70%,
+    #6dcff6 100%
   );
 }
 .online .steamavatar_avatarStatus_1yIzy.GamepadMode,
@@ -1060,7 +1060,7 @@ body.v6 {
 }
 .steamavatar_avatar_1p_Qr.GamepadMode,
 .GamepadMode .steamavatar_avatar_1p_Qr {
-  border: 0px solid rgba(0, 0, 0, 0);
+  border: 0px solid transparent;
   height: 100%;
   width: 100%;
 }
@@ -1611,7 +1611,7 @@ html.responsive.touch .yircomponents_TopGameBlockContainer_1o-Oa {
   .yircomponents_GameChart_3EsVJ
   .recharts-cartesian-axis-ticks
   line {
-  stroke: rgba(255, 255, 255, 0.231372549);
+  stroke: #ffffff3b;
 }
 .yircomponents_StandardInfoCtn_qUC7C
   .yircomponents_GameChartCtn_3gqqv
@@ -1815,7 +1815,7 @@ html.responsive.touch .yircomponents_TopGameBlockContainer_1o-Oa {
   top: 0;
 }
 .yircomponents_PlatformChartsCtn_1dYXW .recharts-pie-sector path {
-  stroke: rgba(15, 26, 29, 0.4196078431);
+  stroke: #0f1a1d6b;
   stroke-width: 6px;
   stroke-linecap: round;
   stroke-linejoin: round;
@@ -2589,7 +2589,7 @@ html.responsive.touch .yircomponents_TopGameBlockContainer_1o-Oa {
     linear,
     left 90%,
     left bottom,
-    from(rgb(14, 16, 20)),
+    from(#0e1014),
     to(rgba(0, 0, 0, 0))
   );
 }
@@ -2751,7 +2751,7 @@ html.responsive.touch .yircomponents_TopGameBlockContainer_1o-Oa {
   margin: 0 16px;
   padding: 4px 12px;
   cursor: pointer;
-  border-bottom: 4px solid rgba(0, 0, 0, 0);
+  border-bottom: 4px solid transparent;
   transition-property: border-bottom-color;
   transition-duration: 0.25s;
   font-size: 14px;
@@ -2879,7 +2879,7 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
     linear,
     left 90%,
     left bottom,
-    from(rgb(14, 16, 20)),
+    from(#0e1014),
     to(rgba(0, 0, 0, 0))
   );
   background-size: clamp(180px, 25vw, 400px);
@@ -2895,7 +2895,7 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
     linear,
     left 90%,
     left bottom,
-    from(rgb(14, 16, 20)),
+    from(#0e1014),
     to(rgba(0, 0, 0, 0))
   );
   z-index: -1;
@@ -2933,13 +2933,13 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   -webkit-mask: linear-gradient(180deg, black 58%, rgba(0, 0, 0, 0) 95%),
     radial-gradient(
       48.77% 50.22% at 47% 42.95%,
-      rgb(66, 66, 66) 0%,
+      #424242 0%,
       rgba(66, 66, 66, 0) 100%
     );
   mask: linear-gradient(180deg, black 58%, rgba(0, 0, 0, 0) 95%),
     radial-gradient(
       48.77% 50.22% at 47% 42.95%,
-      rgb(66, 66, 66) 0%,
+      #424242 0%,
       rgba(66, 66, 66, 0) 100%
     );
   -webkit-mask-composite: source-in;
@@ -2979,13 +2979,13 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   -webkit-mask: linear-gradient(180deg, black 58%, rgba(0, 0, 0, 0) 95%),
     radial-gradient(
       48.77% 50.22% at 47% 42.95%,
-      rgb(66, 66, 66) 0%,
+      #424242 0%,
       rgba(66, 66, 66, 0) 100%
     );
   mask: linear-gradient(180deg, black 58%, rgba(0, 0, 0, 0) 95%),
     radial-gradient(
       48.77% 50.22% at 47% 42.95%,
-      rgb(66, 66, 66) 0%,
+      #424242 0%,
       rgba(66, 66, 66, 0) 100%
     );
   -webkit-mask-composite: source-in;
@@ -3079,8 +3079,8 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   flex-direction: row;
   background-image: radial-gradient(
     100% 100% at 25% 0%,
-    rgba(255, 255, 255, 0.3882352941) 0%,
-    rgba(253, 253, 253, 0.2784313725) 100%
+    #ffffff63 0%,
+    #fdfdfd47 100%
   );
   transition:
     transform 250ms ease-out,
@@ -3151,7 +3151,7 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   display: flex;
   flex-direction: row;
   background: rgba(0, 0, 0, 0.2);
-  box-shadow: 6px 6px 15px 0px rgba(0, 0, 0, 0.5019607843) inset;
+  box-shadow: 6px 6px 15px 0px #00000080 inset;
   border-radius: 4px;
 }
 .yirbadges_TopHonorsCtn_1xRuk
@@ -3510,7 +3510,7 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   path {
   stroke: rgba(255, 255, 255, 0.5);
   stroke-width: 2px;
-  fill: rgba(0, 0, 0, 0);
+  fill: #0000;
 }
 .yirbadges_SpidergraphContainer_2zK9j
   .yirbadges_GraphBox_2n56d
@@ -3858,7 +3858,7 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   .yirbadges_ProgressIcon_3J3rX {
   width: clamp(80px, 8vw, 156px);
   height: clamp(80px, 8vw, 156px);
-  background-color: rgba(0, 0, 0, 0.5333333333);
+  background-color: #0008;
   flex-shrink: 0;
   display: flex;
   padding: 20px;
@@ -3905,6 +3905,7 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   font-weight: 500;
   margin-bottom: 8px;
   white-space: pre;
+  display: flex;
 }
 .yirbadges_PlayBehaviorContainer_1NBM7
   .yirbadges_PlayerBehaviorProgressCnt_pYgyD
@@ -3919,8 +3920,8 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   .yirbadges_ProgressRightSide_3FXre
   .yirbadges_ProgressBar_ImOR1 {
   height: clamp(12px, 1.75vw, 26px);
-  border: 4px solid rgba(0, 0, 0, 0.3333333333);
-  background-color: rgba(0, 0, 0, 0.2);
+  border: 4px solid #0005;
+  background-color: #0003;
   align-self: stretch;
   border-radius: 6px;
   position: relative;
@@ -4012,7 +4013,7 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   .yirbadges_WheelChart_3uLgh
   .recharts-pie-sector
   path {
-  stroke: rgba(0, 0, 0, 0.2);
+  stroke: #0003;
   stroke-width: 4px;
   stroke-linecap: round;
   stroke-linejoin: round;
@@ -4165,7 +4166,7 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   border-radius: 5px;
   padding: 8px;
   font-size: 14px;
-  filter: drop-shadow(2px 4px 6px rgba(2, 27, 35, 0.9098039216));
+  filter: drop-shadow(2px 4px 6px #021b23e8);
   transition-property: filter, transform;
   transition-duration: 0.2s;
   transition-timing-function: linear;
@@ -4432,7 +4433,7 @@ div.yirhowyouplayed_DeckContainer_3G2ne .yirhowyouplayed_Disclaimer_1h_am {
   padding: 8px;
 }
 .yirshare_ShareCtn_3wBwg .yirshare_DropdownButton_H5GE- {
-  background: rgba(255, 255, 255, 0.4196078431);
+  background: #ffffff6b;
   color: #fff;
   font-size: 18px;
   margin-top: 8px;
@@ -5460,12 +5461,7 @@ div.yirsummarycharts_MonthlyChartTooltipCtn_2XmLn
   bottom: 0;
   right: 0;
   left: 0;
-  background: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0),
-    rgba(255, 255, 255, 0.2705882353) 22%,
-    rgba(255, 255, 255, 0.4588235294) 24%
-  );
+  background: linear-gradient(to right, #0000, #ffffff45 22%, #ffffff75 24%);
 }
 div.yirsummarycharts_MonthlyChartTooltipCtn_2XmLn
   .yirsummarycharts_TotalPlaytimeContainer_1yw88 {
@@ -5619,7 +5615,7 @@ div.yirsummarycharts_MonthlyChartTooltipCtn_2XmLn
   paint-order: stroke;
   z-index: 2;
   transform: translateX(-1px);
-  filter: drop-shadow(0px 0px 8px rgb(0, 0, 0)) brightness(1.1);
+  filter: drop-shadow(0px 0px 8px black) brightness(1.1);
   transition-property: filter, transform, stroke, stroke-width;
   transition-duration: 0.16s;
   transition-timing-function: ease-in-out;
@@ -5639,7 +5635,7 @@ div.yirsummarycharts_MonthlyChartTooltipCtn_2XmLn
   position: relative;
   transition: transform 0.1s ease-in-out;
   vertical-align: top;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3333333333);
+  box-shadow: 0 0 3px #0005;
   cursor: pointer;
 }
 .achievementiconbase_Icon_2bzHb.achievementiconbase_IconGlow_tH67c {
@@ -5714,11 +5710,11 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlowContainer_leuGO {
     rgba(255, 217, 0, 0.178) 0%,
     rgba(255, 184, 78, 0) 6%,
     rgba(255, 217, 0, 0.178) 10%,
-    rgb(255, 184, 78) 26%,
+    #ffb84e 26%,
     rgba(255, 217, 0, 0.178) 35%,
-    rgb(255, 184, 78) 40%,
+    #ffb84e 40%,
     rgba(255, 217, 0, 0.178) 60%,
-    rgb(255, 184, 78) 82%,
+    #ffb84e 82%,
     rgba(255, 217, 0, 0.178) 100%
   );
   overflow: hidden;
@@ -5744,13 +5740,13 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   text-align: center;
   vertical-align: middle;
   position: relative;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3333333333);
+  box-shadow: 0 0 3px #0005;
   background: linear-gradient(to right, #3b414a 0%, #2c3138 95%);
 }
 .BasicUI .achievementiconbase_HiddenLabel_2yMyP {
   width: 64px;
   height: 64px;
-  background: rgba(172, 178, 201, 0.1411764706);
+  background: #acb2c924;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -6193,11 +6189,7 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   background: linear-gradient(147.86deg, #782370 25.78%, #05113c 101.81%);
 }
 .yir2022_FriendCtn_10UIo {
-  background: linear-gradient(
-    14deg,
-    rgba(22, 41, 100, 0.8784313725),
-    rgba(16, 86, 98, 0.7215686275)
-  );
+  background: linear-gradient(14deg, #162964e0, #105662b8);
 }
 .yir2022_TopGameBlockContainer_3cqzP.yir2022_OddGradient_2MFzm {
   background: radial-gradient(
@@ -6223,12 +6215,7 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   );
 }
 .yir2022_FirstPlayCtn_-cK9w .yir2022_GamePlayDetails_161Uj {
-  background: linear-gradient(
-    45deg,
-    rgba(11, 112, 89, 0.5411764706) 15%,
-    rgba(0, 85, 128, 0.8509803922) 55%,
-    rgba(148, 26, 115, 0.7411764706)
-  );
+  background: linear-gradient(45deg, #0b70598a 15%, #005580d9 55%, #941a73bd);
 }
 .yir2022_PlatformChartsCtn_2gfnc {
   background: radial-gradient(#17333a, #0a0d0d);
@@ -6318,9 +6305,9 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
 .yir2022_AllGamesBGImage_3BT7r {
   background-image: radial-gradient(
       94.31% 143.89% at 2.99% -1.75%,
-      rgba(2, 187, 255, 0.2039215686) 0%,
-      rgba(255, 3, 179, 0.2274509804) 52.6%,
-      rgba(106, 255, 0, 0.137254902)
+      #02bbff34 0%,
+      #ff03b33a 52.6%,
+      #6aff0023
     ),
     url("/public/images/yearinreview/steam_logo_offset.png");
 }
@@ -6499,7 +6486,7 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
 .yir2023_TopGameBlockContainer_3F7PU.yir2023_OddGradient_w_Lxb {
   background: conic-gradient(
       from 87deg at -8.32% 0%,
-      rgba(105, 63, 0, 0.3019607843) 7.2531156242deg,
+      #693f004d 7.2531156242deg,
       rgba(0, 71, 44, 0.56) 42.3303329945deg,
       #33005c 96.4028513432deg
     ),
@@ -6626,9 +6613,9 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
 .yir2023_AllGamesBGImage_1ujDQ {
   background-image: radial-gradient(
       94.31% 143.89% at 2.99% -1.75%,
-      rgba(211, 217, 32, 0.2274509804) 0%,
-      rgba(211, 217, 32, 0.2274509804) 52.6%,
-      rgba(211, 217, 32, 0.2274509804)
+      #d3d9203a 0%,
+      #d3d9203a 52.6%,
+      #d3d9203a
     ),
     url("/public/images/yearinreview/steam_logo_offset.png");
 }

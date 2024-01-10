@@ -213,7 +213,7 @@
 .rdtPicker td.rdtToday:before {
   content: "";
   display: inline-block;
-  border-left: 7px solid rgba(0, 0, 0, 0);
+  border-left: 7px solid transparent;
   border-bottom: 7px solid #428bca;
   border-top-color: rgba(0, 0, 0, 0.2);
   position: absolute;
@@ -380,7 +380,7 @@ td.rdtYear:hover {
   border-radius: 4px;
   background: rgba(59, 63, 72, 0.5);
   color: #dfe3e6;
-  box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0);
+  box-shadow: inset 0px 0px 4px transparent;
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
   resize: none;
   padding: 8px;
@@ -537,6 +537,10 @@ td.rdtYear:hover {
 .giftform_ScheduleError_3y4Bq {
   color: #de3618;
 }
+.giftform_LoadingError_35a12 {
+  margin-top: 14px;
+  color: #de3618;
+}
 .coupons_CouponPickerRowGlow_2ETXQ {
   background: linear-gradient(-45deg, #0056d6 8%, #1a9fff 90%);
   border-radius: 2px;
@@ -562,7 +566,7 @@ td.rdtYear:hover {
 .coupons_CouponRepresentation_1_LYY {
   width: 80px;
   height: 40px;
-  background-color: rgba(26, 160, 255, 0.3254901961);
+  background-color: #1aa0ff53;
 }
 .coupons_PackageName_3L1DF {
   font-weight: bold;
@@ -581,7 +585,7 @@ td.rdtYear:hover {
   padding: 12px;
   gap: 12px;
   min-width: 400px;
-  background-color: rgba(61, 68, 80, 0.5019607843);
+  background-color: #3d445080;
 }
 .coupons_CouponListItem_3pw4q.coupons_Disabled_1GFD8 {
   opacity: 0.5;
@@ -705,8 +709,8 @@ td.rdtYear:hover {
   display: flex;
 }
 .lineitem_PriceWidget_2yigx div {
-  background: rgba(0, 0, 0, 0);
-  background-color: rgba(0, 0, 0, 0);
+  background: transparent;
+  background-color: transparent;
   padding-right: 0px;
 }
 .lineitem_Warning_1PZ2h {

@@ -3,495 +3,485 @@
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
   [3863],
   {
-    87228: (e) => {
+    72478: (e) => {
       e.exports = {
-        Dummy: "gamerecordingmarkers_Dummy_COUpR",
-        Selected: "gamerecordingmarkers_Selected_o4ujS",
-        HighlightIcon: "gamerecordingmarkers_HighlightIcon_2HB5V",
-        CustomMarker: "gamerecordingmarkers_CustomMarker_1rrTH",
-        MarkerBacking: "gamerecordingmarkers_MarkerBacking_3VL7B",
-        HighlightIconSVG: "gamerecordingmarkers_HighlightIconSVG_3gFi3",
-        Faded: "gamerecordingmarkers_Faded_cPJMu",
-        MarkerCtn: "gamerecordingmarkers_MarkerCtn_1Nuyi",
-        MarkerElt: "gamerecordingmarkers_MarkerElt_2hqDH",
+        Dummy: "gamerecordingmarkers_Dummy_hxIbi",
+        Selected: "gamerecordingmarkers_Selected_12ZI7",
+        HighlightIcon: "gamerecordingmarkers_HighlightIcon_2pQVu",
+        CustomMarker: "gamerecordingmarkers_CustomMarker_1ZsnY",
+        MarkerBacking: "gamerecordingmarkers_MarkerBacking_36MmS",
+        HighlightIconSVG: "gamerecordingmarkers_HighlightIconSVG_PW5DU",
+        Faded: "gamerecordingmarkers_Faded_Jk9mX",
+        MarkerCtn: "gamerecordingmarkers_MarkerCtn_13iNQ",
+        MarkerElt: "gamerecordingmarkers_MarkerElt_1TDCq",
       };
     },
-    71488: (e) => {
+    14078: (e) => {
       e.exports = {
-        GameRecordingPlayer: "gamerecordingplayer_GameRecordingPlayer_3jI6y",
-        NoVideo: "gamerecordingplayer_NoVideo_23VPl",
-        PlayerError: "gamerecordingplayer_PlayerError_3U5hK",
-        Text: "gamerecordingplayer_Text_RAmBa",
-        PerfCtnVideo: "gamerecordingplayer_PerfCtnVideo_1dj9T",
-        PerfCtnThumbnails: "gamerecordingplayer_PerfCtnThumbnails_2OYmS",
+        GameRecordingPlayer: "gamerecordingplayer_GameRecordingPlayer_3y8Yb",
+        NoVideo: "gamerecordingplayer_NoVideo_2tKI2",
+        PositionAbsolute: "gamerecordingplayer_PositionAbsolute_1tAIj",
+        PlayerError: "gamerecordingplayer_PlayerError_29Jnj",
+        Text: "gamerecordingplayer_Text_1SFoD",
+        PerfCtnVideo: "gamerecordingplayer_PerfCtnVideo_1QonA",
+        PerfCtnThumbnails: "gamerecordingplayer_PerfCtnThumbnails_3uvXI",
       };
     },
-    81768: (e) => {
+    57003: (e) => {
       e.exports = {
-        GoLiveButtonCtn: "golivebutton_GoLiveButtonCtn_2yilN",
-        GoLiveButton: "golivebutton_GoLiveButton_34wWG",
-        IsLive: "golivebutton_IsLive_3LAZF",
+        GoLiveButtonCtn: "golivebutton_GoLiveButtonCtn_10eOW",
+        GoLiveButton: "golivebutton_GoLiveButton_2umas",
+        IsLive: "golivebutton_IsLive_-kbc0",
       };
     },
-    25733: (e) => {
+    65713: (e) => {
       e.exports = {
-        PlaybackControls: "playbackcontrols_PlaybackControls_ohJRT",
-        Show: "playbackcontrols_Show_3NIQX",
-        PlaybackControlsBar: "playbackcontrols_PlaybackControlsBar_33Kac",
-        PlaybackButton: "playbackcontrols_PlaybackButton_2W5Kg",
-        PlaybackButtonContents: "playbackcontrols_PlaybackButtonContents_3OnFL",
-        JumpButton: "playbackcontrols_JumpButton_2dKFb",
-        JumpLegend: "playbackcontrols_JumpLegend_pqvN-",
-        NudgeBackButton: "playbackcontrols_NudgeBackButton_UaITj",
-        NudgeForwardButton: "playbackcontrols_NudgeForwardButton_2y_f0",
-        JumpBackButton: "playbackcontrols_JumpBackButton_39u7G",
-        JumpForwardButton: "playbackcontrols_JumpForwardButton_2H7GM",
-        CircleButtonLarge: "playbackcontrols_CircleButtonLarge_2RnUQ",
-        CircleButtonMedium: "playbackcontrols_CircleButtonMedium_25OY9",
-        SpeedDrop: "playbackcontrols_SpeedDrop_3WHcx",
-        PlaybackControlsStyles: "playbackcontrols_PlaybackControlsStyles_3dGyK",
-        DialogTextInputBase: "playbackcontrols_DialogTextInputBase_N8wgs",
-        MuteMaxButtons: "playbackcontrols_MuteMaxButtons_3Ye2F",
-        UserSelectionControls: "playbackcontrols_UserSelectionControls_2P3vw",
+        ThumbnailBarCtn: "thumbnailbar_ThumbnailBarCtn_R-p0J",
+        IsDragging: "thumbnailbar_IsDragging_QJN5O",
+        ThumbCtn: "thumbnailbar_ThumbCtn_2o30j",
+        Thumb: "thumbnailbar_Thumb_3t5Mb",
+        ThumbScrubber: "thumbnailbar_ThumbScrubber_3X4Qp",
+        BlockPointerEvents: "thumbnailbar_BlockPointerEvents_1wALj",
+        ThumbnailImage: "thumbnailbar_ThumbnailImage_Wuaj3",
       };
     },
-    33337: (e) => {
+    95694: (e) => {
       e.exports = {
-        TimeBar: "playbackelapsedtime_TimeBar_8-UPu",
-        RangeSelection: "playbackelapsedtime_RangeSelection_1AqPD",
-      };
-    },
-    7610: (e) => {
-      e.exports = {
-        LoadingTimeline: "horizontalscrollbar_LoadingTimeline_1D-So",
-        ScrollAndControlsCtn: "horizontalscrollbar_ScrollAndControlsCtn_1fKRe",
-        Controls: "horizontalscrollbar_Controls_38yPH",
+        LoadingTimeline: "horizontalscrollbar_LoadingTimeline_1i1Lv",
+        ScrollAndControlsCtn: "horizontalscrollbar_ScrollAndControlsCtn_W_zhB",
+        Controls: "horizontalscrollbar_Controls_3-Ctq",
         TimelineScrollContainer:
-          "horizontalscrollbar_TimelineScrollContainer_xRa-T",
-        ContentContainer: "horizontalscrollbar_ContentContainer_vgmXO",
-        AbsoluteLayer: "horizontalscrollbar_AbsoluteLayer_3G_ex",
-        HideOverflow: "horizontalscrollbar_HideOverflow_3D4u3",
-        RelativeLayer: "horizontalscrollbar_RelativeLayer_1m9da",
-        WithPointerEvents: "horizontalscrollbar_WithPointerEvents_a4CUE",
-        RecordingDecorators: "horizontalscrollbar_RecordingDecorators_15gQK",
-        ClipDecorators: "horizontalscrollbar_ClipDecorators_7Kw7g",
-        GameModes: "horizontalscrollbar_GameModes_27tZ7",
-        DateDecorator: "horizontalscrollbar_DateDecorator_3rA50",
-        BackgroundTicks: "horizontalscrollbar_BackgroundTicks_30NkC",
-        Highlights: "horizontalscrollbar_Highlights_33gT4",
-        Timestamps: "horizontalscrollbar_Timestamps_YbTgd",
-        RangeSelector: "horizontalscrollbar_RangeSelector_1t9Pg",
-        SeekScrubber: "horizontalscrollbar_SeekScrubber_27y0R",
-        PlayHead: "horizontalscrollbar_PlayHead_1jPrR",
-        ContentAndGradient: "horizontalscrollbar_ContentAndGradient_1dDu2",
+          "horizontalscrollbar_TimelineScrollContainer_36b_K",
+        ContentContainer: "horizontalscrollbar_ContentContainer_1Vt3v",
+        AbsoluteLayer: "horizontalscrollbar_AbsoluteLayer_tMyh7",
+        HideOverflow: "horizontalscrollbar_HideOverflow_2nUMn",
+        RelativeLayer: "horizontalscrollbar_RelativeLayer_108CZ",
+        WithPointerEvents: "horizontalscrollbar_WithPointerEvents_unNGM",
+        RecordingDecorators: "horizontalscrollbar_RecordingDecorators_1axnx",
+        ClipDecorators: "horizontalscrollbar_ClipDecorators_tw5fA",
+        GameModes: "horizontalscrollbar_GameModes_3fweC",
+        DateDecorator: "horizontalscrollbar_DateDecorator_1_cOs",
+        BackgroundTicks: "horizontalscrollbar_BackgroundTicks_CL4a7",
+        Highlights: "horizontalscrollbar_Highlights_198JA",
+        Timestamps: "horizontalscrollbar_Timestamps_LbQ-i",
+        RangeSelector: "horizontalscrollbar_RangeSelector_35tVK",
+        SeekScrubber: "horizontalscrollbar_SeekScrubber_1uy0t",
+        PlayHead: "horizontalscrollbar_PlayHead_1hMz0",
+        Thumbnails: "horizontalscrollbar_Thumbnails_3R28Y",
+        ContentAndGradient: "horizontalscrollbar_ContentAndGradient_vr6fk",
         LeftControlsAndContent:
-          "horizontalscrollbar_LeftControlsAndContent_3yc4q",
-        ScrollGradientCtn: "horizontalscrollbar_ScrollGradientCtn_3fqpl",
-        FrontGradient: "horizontalscrollbar_FrontGradient_1hkgv",
-        HideGradient: "horizontalscrollbar_HideGradient_qhlja",
-        EndGradient: "horizontalscrollbar_EndGradient_2JQjg",
-        StartClipRangeButton: "horizontalscrollbar_StartClipRangeButton_w2UDC",
-        ScrollbarAndSiblings: "horizontalscrollbar_ScrollbarAndSiblings_3W7zz",
-        ScrollBarCtn: "horizontalscrollbar_ScrollBarCtn_13PY_",
-        HideScrollBar: "horizontalscrollbar_HideScrollBar_1twVP",
-        ScrollTrack: "horizontalscrollbar_ScrollTrack_1Vd-p",
-        PlayHeadAnnotation: "horizontalscrollbar_PlayHeadAnnotation_2cNai",
-        RangeAnnotation: "horizontalscrollbar_RangeAnnotation_2vBrC",
-        ScrollThumb: "horizontalscrollbar_ScrollThumb_302_7",
+          "horizontalscrollbar_LeftControlsAndContent_2ZLpF",
+        ScrollGradientCtn: "horizontalscrollbar_ScrollGradientCtn_1hyEG",
+        FrontGradient: "horizontalscrollbar_FrontGradient_2D5le",
+        HideGradient: "horizontalscrollbar_HideGradient_2KBvZ",
+        EndGradient: "horizontalscrollbar_EndGradient_2HOPE",
+        ScrollbarAndSiblings: "horizontalscrollbar_ScrollbarAndSiblings_3A6_p",
+        ScrollBarCtn: "horizontalscrollbar_ScrollBarCtn_3dZUY",
+        HideScrollBar: "horizontalscrollbar_HideScrollBar_eTpZa",
+        ScrollTrack: "horizontalscrollbar_ScrollTrack_ypAP4",
+        PlayHeadAnnotation: "horizontalscrollbar_PlayHeadAnnotation_VzCqG",
+        RangeAnnotation: "horizontalscrollbar_RangeAnnotation_1OHs7",
+        ScrollThumb: "horizontalscrollbar_ScrollThumb_iOMps",
       };
     },
-    53643: (e) => {
+    28995: (e) => {
       e.exports = {
         MouseListenerContainer:
-          "mouselistenercontext_MouseListenerContainer_lXJ5r",
+          "mouselistenercontext_MouseListenerContainer_2qBcG",
       };
     },
-    11426: (e) => {
+    57837: (e) => {
       e.exports = {
-        LoadingTimeline: "timeline_LoadingTimeline_104yw",
-        ScrollAndControlsCtn: "timeline_ScrollAndControlsCtn_1w0s0",
-        Controls: "timeline_Controls_1-2MV",
-        TimelineScrollContainer: "timeline_TimelineScrollContainer_16HSK",
-        ContentContainer: "timeline_ContentContainer_Heach",
-        AbsoluteLayer: "timeline_AbsoluteLayer_31ugB",
-        HideOverflow: "timeline_HideOverflow_RIvxG",
-        RelativeLayer: "timeline_RelativeLayer_3KbHI",
-        WithPointerEvents: "timeline_WithPointerEvents_epSRg",
-        RecordingDecorators: "timeline_RecordingDecorators_2YjCV",
-        ClipDecorators: "timeline_ClipDecorators_1jwHn",
-        GameModes: "timeline_GameModes_1FyW2",
-        DateDecorator: "timeline_DateDecorator_3gxdx",
-        BackgroundTicks: "timeline_BackgroundTicks_3VSuB",
-        Highlights: "timeline_Highlights_17PaA",
-        Timestamps: "timeline_Timestamps_2iQC-",
-        RangeSelector: "timeline_RangeSelector_1LdSo",
-        SeekScrubber: "timeline_SeekScrubber_1kifR",
-        PlayHead: "timeline_PlayHead_1edPX",
+        LoadingTimeline: "timeline_LoadingTimeline_2q1bR",
+        ScrollAndControlsCtn: "timeline_ScrollAndControlsCtn_b4rbI",
+        Controls: "timeline_Controls_IiKYe",
+        TimelineScrollContainer: "timeline_TimelineScrollContainer_lQDa_",
+        ContentContainer: "timeline_ContentContainer_3cS9l",
+        AbsoluteLayer: "timeline_AbsoluteLayer_1T_Gi",
+        HideOverflow: "timeline_HideOverflow_3peke",
+        RelativeLayer: "timeline_RelativeLayer_3b9Vm",
+        WithPointerEvents: "timeline_WithPointerEvents_3qu76",
+        RecordingDecorators: "timeline_RecordingDecorators_rel6L",
+        ClipDecorators: "timeline_ClipDecorators_zmWGV",
+        GameModes: "timeline_GameModes_3DFg3",
+        DateDecorator: "timeline_DateDecorator_3DsmI",
+        BackgroundTicks: "timeline_BackgroundTicks_2KJX1",
+        Highlights: "timeline_Highlights_1fOid",
+        Timestamps: "timeline_Timestamps_2jDX9",
+        RangeSelector: "timeline_RangeSelector_1LGsB",
+        SeekScrubber: "timeline_SeekScrubber_1z7bJ",
+        PlayHead: "timeline_PlayHead_1Iku0",
+        Thumbnails: "timeline_Thumbnails_1hMNW",
       };
     },
-    48203: (e) => {
+    97929: (e) => {
       e.exports = {
-        LoadingTimeline: "backgroundticks_LoadingTimeline_1nhyp",
-        ScrollAndControlsCtn: "backgroundticks_ScrollAndControlsCtn_2jMxR",
-        Controls: "backgroundticks_Controls_1akwd",
+        LoadingTimeline: "backgroundticks_LoadingTimeline_2JDrG",
+        ScrollAndControlsCtn: "backgroundticks_ScrollAndControlsCtn_VOrb9",
+        Controls: "backgroundticks_Controls_qaanL",
         TimelineScrollContainer:
-          "backgroundticks_TimelineScrollContainer_1J3s3",
-        ContentContainer: "backgroundticks_ContentContainer_AhkWT",
-        AbsoluteLayer: "backgroundticks_AbsoluteLayer_BzbH8",
-        HideOverflow: "backgroundticks_HideOverflow_3-Piz",
-        RelativeLayer: "backgroundticks_RelativeLayer_3L5Lq",
-        WithPointerEvents: "backgroundticks_WithPointerEvents_1yz9f",
-        RecordingDecorators: "backgroundticks_RecordingDecorators_39-GX",
-        ClipDecorators: "backgroundticks_ClipDecorators_VVE9n",
-        GameModes: "backgroundticks_GameModes_1vjnV",
-        DateDecorator: "backgroundticks_DateDecorator_2FJv6",
-        BackgroundTicks: "backgroundticks_BackgroundTicks_3xCy4",
-        Highlights: "backgroundticks_Highlights_3d76O",
-        Timestamps: "backgroundticks_Timestamps_1XD0r",
-        RangeSelector: "backgroundticks_RangeSelector_32HZT",
-        SeekScrubber: "backgroundticks_SeekScrubber_33GBk",
-        PlayHead: "backgroundticks_PlayHead_2Vpra",
-        TimeTick: "backgroundticks_TimeTick_wC1Hp",
-        TickLine: "backgroundticks_TickLine_123yn",
-        Whole: "backgroundticks_Whole_2ZgId",
-        TickStamp: "backgroundticks_TickStamp_1Roio",
-        timelineFadeIn: "backgroundticks_timelineFadeIn_28Avs",
+          "backgroundticks_TimelineScrollContainer_2G_8g",
+        ContentContainer: "backgroundticks_ContentContainer_1uVCC",
+        AbsoluteLayer: "backgroundticks_AbsoluteLayer_2SFFi",
+        HideOverflow: "backgroundticks_HideOverflow_cU6ws",
+        RelativeLayer: "backgroundticks_RelativeLayer_2fDI2",
+        WithPointerEvents: "backgroundticks_WithPointerEvents_2-MGG",
+        RecordingDecorators: "backgroundticks_RecordingDecorators_1NjYZ",
+        ClipDecorators: "backgroundticks_ClipDecorators_pUy7f",
+        GameModes: "backgroundticks_GameModes_1sHfw",
+        DateDecorator: "backgroundticks_DateDecorator_1VMlB",
+        BackgroundTicks: "backgroundticks_BackgroundTicks_3IRCx",
+        Highlights: "backgroundticks_Highlights_1az5e",
+        Timestamps: "backgroundticks_Timestamps_1BzfU",
+        RangeSelector: "backgroundticks_RangeSelector_fskko",
+        SeekScrubber: "backgroundticks_SeekScrubber_2eYek",
+        PlayHead: "backgroundticks_PlayHead_ULwMT",
+        Thumbnails: "backgroundticks_Thumbnails_1fW9b",
+        TimeTick: "backgroundticks_TimeTick_21gY8",
+        TickLine: "backgroundticks_TickLine_1Yp6J",
+        Whole: "backgroundticks_Whole_onnFS",
+        TickStamp: "backgroundticks_TickStamp_dAEn_",
+        timelineFadeIn: "backgroundticks_timelineFadeIn_3tTAd",
       };
     },
-    88068: (e) => {
+    91839: (e) => {
       e.exports = {
-        LoadingTimeline: "clipdecorators_LoadingTimeline_2bY2S",
-        ScrollAndControlsCtn: "clipdecorators_ScrollAndControlsCtn_1xMEz",
-        Controls: "clipdecorators_Controls_4lBIa",
-        TimelineScrollContainer: "clipdecorators_TimelineScrollContainer_3a6K_",
-        ContentContainer: "clipdecorators_ContentContainer_1u95L",
-        AbsoluteLayer: "clipdecorators_AbsoluteLayer_2_sGi",
-        HideOverflow: "clipdecorators_HideOverflow_3SCxg",
-        RelativeLayer: "clipdecorators_RelativeLayer_3qNMl",
-        WithPointerEvents: "clipdecorators_WithPointerEvents_2Efl8",
-        RecordingDecorators: "clipdecorators_RecordingDecorators_2-j8G",
-        ClipDecorators: "clipdecorators_ClipDecorators_1a1y2",
-        GameModes: "clipdecorators_GameModes_Va-lx",
-        DateDecorator: "clipdecorators_DateDecorator_3Qm_f",
-        BackgroundTicks: "clipdecorators_BackgroundTicks_AQyTU",
-        Highlights: "clipdecorators_Highlights_19_CN",
-        Timestamps: "clipdecorators_Timestamps_3eeJo",
-        RangeSelector: "clipdecorators_RangeSelector_2rR88",
-        SeekScrubber: "clipdecorators_SeekScrubber_1RkKY",
-        PlayHead: "clipdecorators_PlayHead_2C0ir",
-        ClipDecorator: "clipdecorators_ClipDecorator_25Sue",
-        gradient: "clipdecorators_gradient_8rwKt",
+        LoadingTimeline: "clipdecorators_LoadingTimeline_2SUXO",
+        ScrollAndControlsCtn: "clipdecorators_ScrollAndControlsCtn_2-ruW",
+        Controls: "clipdecorators_Controls_28WZ8",
+        TimelineScrollContainer: "clipdecorators_TimelineScrollContainer_3hZDt",
+        ContentContainer: "clipdecorators_ContentContainer_Gg4Gc",
+        AbsoluteLayer: "clipdecorators_AbsoluteLayer_2pPjf",
+        HideOverflow: "clipdecorators_HideOverflow_s7QCX",
+        RelativeLayer: "clipdecorators_RelativeLayer_3ZcXD",
+        WithPointerEvents: "clipdecorators_WithPointerEvents_3swr0",
+        RecordingDecorators: "clipdecorators_RecordingDecorators_2Ahak",
+        ClipDecorators: "clipdecorators_ClipDecorators_3URh6",
+        GameModes: "clipdecorators_GameModes_3mmUZ",
+        DateDecorator: "clipdecorators_DateDecorator_2rq8p",
+        BackgroundTicks: "clipdecorators_BackgroundTicks_2DMNt",
+        Highlights: "clipdecorators_Highlights_34GQ7",
+        Timestamps: "clipdecorators_Timestamps_1Uiir",
+        RangeSelector: "clipdecorators_RangeSelector_3K5gQ",
+        SeekScrubber: "clipdecorators_SeekScrubber_2veVL",
+        PlayHead: "clipdecorators_PlayHead_3vRVR",
+        Thumbnails: "clipdecorators_Thumbnails_3gqbj",
+        ClipDecorator: "clipdecorators_ClipDecorator_2F-fi",
+        gradient: "clipdecorators_gradient_VZFF-",
       };
     },
-    7023: (e) => {
+    60024: (e) => {
       e.exports = {
-        LoadingTimeline: "datedecorator_LoadingTimeline_3khna",
-        ScrollAndControlsCtn: "datedecorator_ScrollAndControlsCtn_p0F5H",
-        Controls: "datedecorator_Controls_3EWZM",
-        TimelineScrollContainer: "datedecorator_TimelineScrollContainer_2nj1y",
-        ContentContainer: "datedecorator_ContentContainer_K0sdF",
-        AbsoluteLayer: "datedecorator_AbsoluteLayer_3lb95",
-        HideOverflow: "datedecorator_HideOverflow_1F1t_",
-        RelativeLayer: "datedecorator_RelativeLayer_2Pthd",
-        WithPointerEvents: "datedecorator_WithPointerEvents_J2gfp",
-        RecordingDecorators: "datedecorator_RecordingDecorators_1sNRj",
-        ClipDecorators: "datedecorator_ClipDecorators_3Oi0q",
-        GameModes: "datedecorator_GameModes_2q2sI",
-        DateDecorator: "datedecorator_DateDecorator_1QlrO",
-        BackgroundTicks: "datedecorator_BackgroundTicks_21N75",
-        Highlights: "datedecorator_Highlights_1YYhG",
-        Timestamps: "datedecorator_Timestamps_2RiSJ",
-        RangeSelector: "datedecorator_RangeSelector_2qFLl",
-        SeekScrubber: "datedecorator_SeekScrubber_GMVvU",
-        PlayHead: "datedecorator_PlayHead_3N85p",
-        TimelineRelativeDate: "datedecorator_TimelineRelativeDate_1D9m_",
-        Overlay: "datedecorator_Overlay_RZAFF",
-        ManagerView: "datedecorator_ManagerView_1-j3U",
+        LoadingTimeline: "datedecorator_LoadingTimeline_3FP8P",
+        ScrollAndControlsCtn: "datedecorator_ScrollAndControlsCtn_2QQg8",
+        Controls: "datedecorator_Controls_2PkCJ",
+        TimelineScrollContainer: "datedecorator_TimelineScrollContainer_2ZjcG",
+        ContentContainer: "datedecorator_ContentContainer_3DCVC",
+        AbsoluteLayer: "datedecorator_AbsoluteLayer_215Gh",
+        HideOverflow: "datedecorator_HideOverflow_1cXe_",
+        RelativeLayer: "datedecorator_RelativeLayer_2nfZp",
+        WithPointerEvents: "datedecorator_WithPointerEvents_N6qu1",
+        RecordingDecorators: "datedecorator_RecordingDecorators_2kam9",
+        ClipDecorators: "datedecorator_ClipDecorators_1TCCx",
+        GameModes: "datedecorator_GameModes_QJ50z",
+        DateDecorator: "datedecorator_DateDecorator_2qeKv",
+        BackgroundTicks: "datedecorator_BackgroundTicks_EjRsH",
+        Highlights: "datedecorator_Highlights_3ldb9",
+        Timestamps: "datedecorator_Timestamps_1S60e",
+        RangeSelector: "datedecorator_RangeSelector_32yf9",
+        SeekScrubber: "datedecorator_SeekScrubber_ypfLl",
+        PlayHead: "datedecorator_PlayHead_185Pb",
+        Thumbnails: "datedecorator_Thumbnails_rcepX",
+        TimelineRelativeDate: "datedecorator_TimelineRelativeDate_3T-pn",
+        Overlay: "datedecorator_Overlay_1fN7j",
+        ManagerView: "datedecorator_ManagerView_9cRGI",
       };
     },
-    22334: (e) => {
+    72759: (e) => {
       e.exports = {
-        LoadingTimeline: "gamemodes_LoadingTimeline_1IVkG",
-        ScrollAndControlsCtn: "gamemodes_ScrollAndControlsCtn_3_Qj1",
-        Controls: "gamemodes_Controls_3mb2k",
-        TimelineScrollContainer: "gamemodes_TimelineScrollContainer_2AO8D",
-        ContentContainer: "gamemodes_ContentContainer_1RqXh",
-        AbsoluteLayer: "gamemodes_AbsoluteLayer_3QmvO",
-        HideOverflow: "gamemodes_HideOverflow_1goyR",
-        RelativeLayer: "gamemodes_RelativeLayer_3jSxE",
-        WithPointerEvents: "gamemodes_WithPointerEvents_szEfh",
-        RecordingDecorators: "gamemodes_RecordingDecorators_3P6oP",
-        ClipDecorators: "gamemodes_ClipDecorators_2XyFM",
-        GameModes: "gamemodes_GameModes_3Ut9P",
-        DateDecorator: "gamemodes_DateDecorator_3YVVo",
-        BackgroundTicks: "gamemodes_BackgroundTicks_tBpGy",
-        Highlights: "gamemodes_Highlights_YTgZZ",
-        Timestamps: "gamemodes_Timestamps_2ZW-4",
-        RangeSelector: "gamemodes_RangeSelector_3CzcB",
-        SeekScrubber: "gamemodes_SeekScrubber_2ze2f",
-        PlayHead: "gamemodes_PlayHead_1NeZL",
-        GameModeMarker: "gamemodes_GameModeMarker_2axJa",
-        Playing: "gamemodes_Playing_2xUFa",
-        Staging: "gamemodes_Staging_2Sw_C",
-        Menus: "gamemodes_Menus_1x_n7",
-        Unspecified: "gamemodes_Unspecified_MPJuS",
+        LoadingTimeline: "gamemodes_LoadingTimeline_37fn0",
+        ScrollAndControlsCtn: "gamemodes_ScrollAndControlsCtn_256lw",
+        Controls: "gamemodes_Controls_25ROF",
+        TimelineScrollContainer: "gamemodes_TimelineScrollContainer_pppD3",
+        ContentContainer: "gamemodes_ContentContainer_3vtI4",
+        AbsoluteLayer: "gamemodes_AbsoluteLayer_2w4xP",
+        HideOverflow: "gamemodes_HideOverflow_oJrCO",
+        RelativeLayer: "gamemodes_RelativeLayer_3lH9p",
+        WithPointerEvents: "gamemodes_WithPointerEvents_2hCJg",
+        RecordingDecorators: "gamemodes_RecordingDecorators_rhw2i",
+        ClipDecorators: "gamemodes_ClipDecorators_3y2rq",
+        GameModes: "gamemodes_GameModes_3VPJv",
+        DateDecorator: "gamemodes_DateDecorator_2fovT",
+        BackgroundTicks: "gamemodes_BackgroundTicks_2Jyqo",
+        Highlights: "gamemodes_Highlights_SKVlm",
+        Timestamps: "gamemodes_Timestamps_31dCG",
+        RangeSelector: "gamemodes_RangeSelector_2TX8k",
+        SeekScrubber: "gamemodes_SeekScrubber_FkKvi",
+        PlayHead: "gamemodes_PlayHead_35rsu",
+        Thumbnails: "gamemodes_Thumbnails_1Usen",
+        GameModeMarker: "gamemodes_GameModeMarker_3j3jo",
+        Playing: "gamemodes_Playing_hLQ3v",
+        Staging: "gamemodes_Staging_cUeHk",
+        Menus: "gamemodes_Menus_1qcOd",
+        Unspecified: "gamemodes_Unspecified_616kx",
       };
     },
-    85540: (e) => {
+    86946: (e) => {
       e.exports = {
-        LoadingTimeline: "highlights_LoadingTimeline_sb7yY",
-        ScrollAndControlsCtn: "highlights_ScrollAndControlsCtn_1RtbZ",
-        Controls: "highlights_Controls_3aQw3",
-        TimelineScrollContainer: "highlights_TimelineScrollContainer_1DYx0",
-        ContentContainer: "highlights_ContentContainer_3bI7o",
-        AbsoluteLayer: "highlights_AbsoluteLayer_My3fU",
-        HideOverflow: "highlights_HideOverflow_8_D6v",
-        RelativeLayer: "highlights_RelativeLayer_1jOZC",
-        WithPointerEvents: "highlights_WithPointerEvents_151i5",
-        RecordingDecorators: "highlights_RecordingDecorators_2ljWd",
-        ClipDecorators: "highlights_ClipDecorators_w7v-G",
-        GameModes: "highlights_GameModes_1B9gv",
-        DateDecorator: "highlights_DateDecorator_7JUrE",
-        BackgroundTicks: "highlights_BackgroundTicks_1EkxN",
-        Highlights: "highlights_Highlights_3tKtB",
-        Timestamps: "highlights_Timestamps_1xidT",
-        RangeSelector: "highlights_RangeSelector_3lOkM",
-        SeekScrubber: "highlights_SeekScrubber_PoPV5",
-        PlayHead: "highlights_PlayHead_1i_vM",
-        RangeCtn: "highlights_RangeCtn_283NJ",
-        RangeControls: "highlights_RangeControls_35TYa",
-        InactiveRangeCtn: "highlights_InactiveRangeCtn_y_aFD",
-        RangeControl: "highlights_RangeControl_rg9-W",
-        RangeIcon: "highlights_RangeIcon_3iIaT",
-        RangeSelectorCtn: "highlights_RangeSelectorCtn_1cuH_",
-        Active: "highlights_Active_ahpcF",
+        LoadingTimeline: "highlights_LoadingTimeline_3srjw",
+        ScrollAndControlsCtn: "highlights_ScrollAndControlsCtn_2AMvj",
+        Controls: "highlights_Controls_w72_z",
+        TimelineScrollContainer: "highlights_TimelineScrollContainer_3rWaM",
+        ContentContainer: "highlights_ContentContainer_2WuH7",
+        AbsoluteLayer: "highlights_AbsoluteLayer_3BkCi",
+        HideOverflow: "highlights_HideOverflow_2wekE",
+        RelativeLayer: "highlights_RelativeLayer_2Xizs",
+        WithPointerEvents: "highlights_WithPointerEvents_27oHs",
+        RecordingDecorators: "highlights_RecordingDecorators_idjHE",
+        ClipDecorators: "highlights_ClipDecorators_2IhOo",
+        GameModes: "highlights_GameModes_2ggxz",
+        DateDecorator: "highlights_DateDecorator_2iJsq",
+        BackgroundTicks: "highlights_BackgroundTicks_b-NNc",
+        Highlights: "highlights_Highlights_21Lpg",
+        Timestamps: "highlights_Timestamps_28JV_",
+        RangeSelector: "highlights_RangeSelector_FYw7K",
+        SeekScrubber: "highlights_SeekScrubber_-7enw",
+        PlayHead: "highlights_PlayHead_3-bdB",
+        Thumbnails: "highlights_Thumbnails_LHbL6",
+        RangeCtn: "highlights_RangeCtn_2aZOy",
+        RangeControls: "highlights_RangeControls_1EbiE",
+        InactiveRangeCtn: "highlights_InactiveRangeCtn_3uv1X",
+        RangeControl: "highlights_RangeControl_2KIaJ",
+        RangeIcon: "highlights_RangeIcon_2hrBC",
+        RangeSelectorCtn: "highlights_RangeSelectorCtn_361nH",
+        Active: "highlights_Active_RwloF",
         InactiveSelectedRangeControl:
-          "highlights_InactiveSelectedRangeControl_1IiJm",
-        SelectedRangeMask: "highlights_SelectedRangeMask_1Ukhf",
-        HoverRangePreviewCtn: "highlights_HoverRangePreviewCtn_1_DFf",
-        Show: "highlights_Show_15hXc",
-        RangePreview: "highlights_RangePreview_5PJkh",
-        TrackRangeControls: "highlights_TrackRangeControls_11g6H",
-        Left: "highlights_Left_1fuwA",
-        RangeMask: "highlights_RangeMask_6B4TJ",
-        FullMask: "highlights_FullMask_1vdKH",
+          "highlights_InactiveSelectedRangeControl_34Wp7",
+        SelectedRangeMask: "highlights_SelectedRangeMask_2li0H",
+        HoverRangePreviewCtn: "highlights_HoverRangePreviewCtn_2VvgR",
+        Show: "highlights_Show_11f98",
+        RangePreview: "highlights_RangePreview_MY3EM",
+        TrackRangeControls: "highlights_TrackRangeControls_6t_x3",
+        Left: "highlights_Left_2FBYJ",
+        RangeMask: "highlights_RangeMask_RJQC_",
+        FullMask: "highlights_FullMask_3IXt0",
         RangeSelectionFloatingControls:
-          "highlights_RangeSelectionFloatingControls_1rzkJ",
-        FloatingControlsButton: "highlights_FloatingControlsButton_30PBr",
-        Disabled: "highlights_Disabled_2yg9d",
-        TimelineMarkerCtn: "highlights_TimelineMarkerCtn_29Mte",
-        TimelineMarker: "highlights_TimelineMarker_1PIad",
-        TimelineMarkerDropLine: "highlights_TimelineMarkerDropLine_3Vhs4",
-        TimelineMarkerRangeMarker: "highlights_TimelineMarkerRangeMarker_23IIP",
-        ToolTipSource: "highlights_ToolTipSource_3wrKj",
-        TooltipContainer: "highlights_TooltipContainer_1KdnX",
-        Timestamp: "highlights_Timestamp_35fXc",
-        TooltipHighlight: "highlights_TooltipHighlight_24dSV",
-        HighlightIcon: "highlights_HighlightIcon_9j13W",
-        HighlightInfoBlock: "highlights_HighlightInfoBlock_V1fsH",
-        HighlightTitle: "highlights_HighlightTitle_2EFGh",
-        HighlightDesc: "highlights_HighlightDesc_16ny8",
-        ThumbnailContainer: "highlights_ThumbnailContainer_1thNt",
+          "highlights_RangeSelectionFloatingControls_2uLG2",
+        FloatingControlsButton: "highlights_FloatingControlsButton_j3ZB0",
+        Disabled: "highlights_Disabled_30ZzB",
+        TimelineMarkerCtn: "highlights_TimelineMarkerCtn_2VPQg",
+        TimelineMarker: "highlights_TimelineMarker_38PoJ",
+        TimelineMarkerDropLine: "highlights_TimelineMarkerDropLine_s8D99",
+        TimelineMarkerRangeMarker: "highlights_TimelineMarkerRangeMarker_2arLJ",
+        ToolTipSource: "highlights_ToolTipSource_wbDLg",
+        TooltipContainer: "highlights_TooltipContainer_1ufF8",
+        Timestamp: "highlights_Timestamp_19yAZ",
+        TooltipHighlight: "highlights_TooltipHighlight_2_fsd",
+        HighlightIcon: "highlights_HighlightIcon_1V9hL",
+        HighlightInfoBlock: "highlights_HighlightInfoBlock_3mQqF",
+        HighlightTitle: "highlights_HighlightTitle_1RRuJ",
+        HighlightDesc: "highlights_HighlightDesc_3rGun",
+        ThumbnailContainer: "highlights_ThumbnailContainer_2xuWL",
       };
     },
-    58422: (e) => {
+    28349: (e) => {
       e.exports = {
-        PlayheadInteractionCtn: "playhead_PlayheadInteractionCtn_RDoh7",
-        ActiveCtn: "playhead_ActiveCtn_mRa9P",
-        PlayHeadContainer: "playhead_PlayHeadContainer_PDJC8",
-        Active: "playhead_Active_1C7Oa",
-        PlayHeadContent: "playhead_PlayHeadContent_3Hv8o",
+        PlayheadInteractionCtn: "playhead_PlayheadInteractionCtn_2vyRo",
+        ActiveCtn: "playhead_ActiveCtn_89rGv",
+        PlayHeadContainer: "playhead_PlayHeadContainer_2x8YN",
+        Active: "playhead_Active_1xsR-",
+        PlayHeadContent: "playhead_PlayHeadContent_1pnAm",
         PlayHeadCurrentTimeContainer:
-          "playhead_PlayHeadCurrentTimeContainer_3vMod",
-        Show: "playhead_Show_zd20V",
-        PlayHead: "playhead_PlayHead_QEZCb",
+          "playhead_PlayHeadCurrentTimeContainer_2DxZJ",
+        Show: "playhead_Show_3OvNN",
+        PlayHead: "playhead_PlayHead_23Eh5",
       };
     },
-    83047: (e) => {
+    94314: (e) => {
       e.exports = {
-        LoadingTimeline: "rangeselector_LoadingTimeline_1jZyX",
-        ScrollAndControlsCtn: "rangeselector_ScrollAndControlsCtn_3BMP0",
-        Controls: "rangeselector_Controls_3bo-v",
-        TimelineScrollContainer: "rangeselector_TimelineScrollContainer_3fj6B",
-        ContentContainer: "rangeselector_ContentContainer_3WodS",
-        AbsoluteLayer: "rangeselector_AbsoluteLayer_1Q33W",
-        HideOverflow: "rangeselector_HideOverflow_22Yk1",
-        RelativeLayer: "rangeselector_RelativeLayer_3lWuc",
-        WithPointerEvents: "rangeselector_WithPointerEvents_2x9rK",
-        RecordingDecorators: "rangeselector_RecordingDecorators_2Ri1V",
-        ClipDecorators: "rangeselector_ClipDecorators_1s80y",
-        GameModes: "rangeselector_GameModes_ebeBY",
-        DateDecorator: "rangeselector_DateDecorator_eYEfF",
-        BackgroundTicks: "rangeselector_BackgroundTicks_YsZlm",
-        Highlights: "rangeselector_Highlights_2fRvO",
-        Timestamps: "rangeselector_Timestamps_27RGd",
-        RangeSelector: "rangeselector_RangeSelector_162QY",
-        SeekScrubber: "rangeselector_SeekScrubber_1VmX4",
-        PlayHead: "rangeselector_PlayHead_23Doj",
-        RangeCtn: "rangeselector_RangeCtn_3f_8F",
-        RangeControls: "rangeselector_RangeControls_1eWoh",
-        InactiveRangeCtn: "rangeselector_InactiveRangeCtn_1hSVa",
-        RangeControl: "rangeselector_RangeControl_2mPhA",
-        RangeIcon: "rangeselector_RangeIcon_H6D9V",
-        RangeSelectorCtn: "rangeselector_RangeSelectorCtn_1-ZAa",
-        Active: "rangeselector_Active_3Cmth",
+        LoadingTimeline: "rangeselector_LoadingTimeline_1t3ac",
+        ScrollAndControlsCtn: "rangeselector_ScrollAndControlsCtn_1QTGk",
+        Controls: "rangeselector_Controls_1ESz5",
+        TimelineScrollContainer: "rangeselector_TimelineScrollContainer_2p7wq",
+        ContentContainer: "rangeselector_ContentContainer_2a4VQ",
+        AbsoluteLayer: "rangeselector_AbsoluteLayer_kI13-",
+        HideOverflow: "rangeselector_HideOverflow_1lmBZ",
+        RelativeLayer: "rangeselector_RelativeLayer_3X-hz",
+        WithPointerEvents: "rangeselector_WithPointerEvents_5uPve",
+        RecordingDecorators: "rangeselector_RecordingDecorators_2FrUV",
+        ClipDecorators: "rangeselector_ClipDecorators_3nQCy",
+        GameModes: "rangeselector_GameModes_S91J4",
+        DateDecorator: "rangeselector_DateDecorator_2l9rT",
+        BackgroundTicks: "rangeselector_BackgroundTicks_2ZhoF",
+        Highlights: "rangeselector_Highlights_353kP",
+        Timestamps: "rangeselector_Timestamps_1EQP_",
+        RangeSelector: "rangeselector_RangeSelector_H9Zal",
+        SeekScrubber: "rangeselector_SeekScrubber_3BJnQ",
+        PlayHead: "rangeselector_PlayHead_3NsP0",
+        Thumbnails: "rangeselector_Thumbnails_c4-WJ",
+        RangeCtn: "rangeselector_RangeCtn_2oZ5E",
+        RangeControls: "rangeselector_RangeControls_hBMLo",
+        InactiveRangeCtn: "rangeselector_InactiveRangeCtn_2gpTU",
+        RangeControl: "rangeselector_RangeControl_3GVFt",
+        RangeIcon: "rangeselector_RangeIcon_2p3OJ",
+        RangeSelectorCtn: "rangeselector_RangeSelectorCtn_2a0WE",
+        Active: "rangeselector_Active_3pSft",
         InactiveSelectedRangeControl:
-          "rangeselector_InactiveSelectedRangeControl_35iQJ",
-        SelectedRangeMask: "rangeselector_SelectedRangeMask_e5WBn",
-        HoverRangePreviewCtn: "rangeselector_HoverRangePreviewCtn_SP1zJ",
-        Show: "rangeselector_Show_1v0p-",
-        RangePreview: "rangeselector_RangePreview_3xBB_",
-        TrackRangeControls: "rangeselector_TrackRangeControls_2GUCw",
-        Left: "rangeselector_Left_1wCmX",
-        RangeMask: "rangeselector_RangeMask_A951h",
-        FullMask: "rangeselector_FullMask_EAr6M",
+          "rangeselector_InactiveSelectedRangeControl_3RFz2",
+        SelectedRangeMask: "rangeselector_SelectedRangeMask_1-ecZ",
+        HoverRangePreviewCtn: "rangeselector_HoverRangePreviewCtn_2ToXA",
+        Show: "rangeselector_Show_1HTzm",
+        RangePreview: "rangeselector_RangePreview_29B7C",
+        TrackRangeControls: "rangeselector_TrackRangeControls_3tMry",
+        Left: "rangeselector_Left_329qv",
+        RangeMask: "rangeselector_RangeMask_1PHxK",
+        FullMask: "rangeselector_FullMask_3KOU4",
         RangeSelectionFloatingControls:
-          "rangeselector_RangeSelectionFloatingControls_3b6gC",
-        FloatingControlsButton: "rangeselector_FloatingControlsButton_20ufi",
-        Disabled: "rangeselector_Disabled_1h3Sz",
+          "rangeselector_RangeSelectionFloatingControls_3m-Ic",
+        FloatingControlsButton: "rangeselector_FloatingControlsButton_3Jknf",
+        Disabled: "rangeselector_Disabled_1h3af",
       };
     },
-    90722: (e) => {
+    64287: (e) => {
       e.exports = {
-        LoadingTimeline: "recordingdecorator_LoadingTimeline_2UnYK",
-        ScrollAndControlsCtn: "recordingdecorator_ScrollAndControlsCtn_OiNEg",
-        Controls: "recordingdecorator_Controls_3Rmgs",
+        LoadingTimeline: "recordingdecorator_LoadingTimeline_1_t3n",
+        ScrollAndControlsCtn: "recordingdecorator_ScrollAndControlsCtn_2lDH0",
+        Controls: "recordingdecorator_Controls_2W7Bc",
         TimelineScrollContainer:
-          "recordingdecorator_TimelineScrollContainer_ObEiF",
-        ContentContainer: "recordingdecorator_ContentContainer_2PJ5K",
-        AbsoluteLayer: "recordingdecorator_AbsoluteLayer_2s8Of",
-        HideOverflow: "recordingdecorator_HideOverflow_2jvQn",
-        RelativeLayer: "recordingdecorator_RelativeLayer_2p_iP",
-        WithPointerEvents: "recordingdecorator_WithPointerEvents_2V9SP",
-        RecordingDecorators: "recordingdecorator_RecordingDecorators_3FIfp",
-        ClipDecorators: "recordingdecorator_ClipDecorators_3CDC9",
-        GameModes: "recordingdecorator_GameModes_1MGXg",
-        DateDecorator: "recordingdecorator_DateDecorator_29slA",
-        BackgroundTicks: "recordingdecorator_BackgroundTicks_1qBhc",
-        Highlights: "recordingdecorator_Highlights_3ztWs",
-        Timestamps: "recordingdecorator_Timestamps_1kRHw",
-        RangeSelector: "recordingdecorator_RangeSelector_NdYLh",
-        SeekScrubber: "recordingdecorator_SeekScrubber_AUPyQ",
-        PlayHead: "recordingdecorator_PlayHead_3rm6B",
-        RecordingDecorator: "recordingdecorator_RecordingDecorator_QLJH4",
+          "recordingdecorator_TimelineScrollContainer_1q6-L",
+        ContentContainer: "recordingdecorator_ContentContainer_1s9mu",
+        AbsoluteLayer: "recordingdecorator_AbsoluteLayer_3uK4E",
+        HideOverflow: "recordingdecorator_HideOverflow_1jtc5",
+        RelativeLayer: "recordingdecorator_RelativeLayer_ns-Ph",
+        WithPointerEvents: "recordingdecorator_WithPointerEvents_eaWC-",
+        RecordingDecorators: "recordingdecorator_RecordingDecorators_1Bij-",
+        ClipDecorators: "recordingdecorator_ClipDecorators_3YTYr",
+        GameModes: "recordingdecorator_GameModes_1iTzu",
+        DateDecorator: "recordingdecorator_DateDecorator_Iqluh",
+        BackgroundTicks: "recordingdecorator_BackgroundTicks_2_cUl",
+        Highlights: "recordingdecorator_Highlights_3u682",
+        Timestamps: "recordingdecorator_Timestamps_2ial0",
+        RangeSelector: "recordingdecorator_RangeSelector_AQt-j",
+        SeekScrubber: "recordingdecorator_SeekScrubber_fxHTi",
+        PlayHead: "recordingdecorator_PlayHead_33Q4J",
+        Thumbnails: "recordingdecorator_Thumbnails_2b6w4",
+        RecordingDecorator: "recordingdecorator_RecordingDecorator_rhzh6",
       };
     },
-    92310: (e) => {
+    90254: (e) => {
       e.exports = {
         thumbnailWidth: "200",
-        LoadingTimeline: "seekscrubber_LoadingTimeline_dGjnj",
-        ScrollAndControlsCtn: "seekscrubber_ScrollAndControlsCtn_fHO8b",
-        Controls: "seekscrubber_Controls_2Gtqj",
-        TimelineScrollContainer: "seekscrubber_TimelineScrollContainer_2qTzJ",
-        ContentContainer: "seekscrubber_ContentContainer_29wfn",
-        AbsoluteLayer: "seekscrubber_AbsoluteLayer_SvhOc",
-        HideOverflow: "seekscrubber_HideOverflow_1cd0L",
-        RelativeLayer: "seekscrubber_RelativeLayer_1DNZ_",
-        WithPointerEvents: "seekscrubber_WithPointerEvents_J4Q3f",
-        RecordingDecorators: "seekscrubber_RecordingDecorators_1Hicx",
-        ClipDecorators: "seekscrubber_ClipDecorators_2eEzj",
-        GameModes: "seekscrubber_GameModes_oyZ_y",
-        DateDecorator: "seekscrubber_DateDecorator_VJPXr",
-        BackgroundTicks: "seekscrubber_BackgroundTicks_3Fdr3",
-        Highlights: "seekscrubber_Highlights_2f-WJ",
-        Timestamps: "seekscrubber_Timestamps_2jJ78",
-        RangeSelector: "seekscrubber_RangeSelector_1ED6u",
-        SeekScrubber: "seekscrubber_SeekScrubber_1_oM_",
-        PlayHead: "seekscrubber_PlayHead_ykSFj",
-        PlayheadInteractionCtn: "seekscrubber_PlayheadInteractionCtn_1oH3S",
-        ActiveCtn: "seekscrubber_ActiveCtn_3oet5",
-        PlayHeadContainer: "seekscrubber_PlayHeadContainer_17PRn",
-        Active: "seekscrubber_Active_2KcgL",
-        PlayHeadContent: "seekscrubber_PlayHeadContent_36jZY",
+        LoadingTimeline: "seekscrubber_LoadingTimeline_2h2w_",
+        ScrollAndControlsCtn: "seekscrubber_ScrollAndControlsCtn_1EJup",
+        Controls: "seekscrubber_Controls_2s8o8",
+        TimelineScrollContainer: "seekscrubber_TimelineScrollContainer_1nVuq",
+        ContentContainer: "seekscrubber_ContentContainer_31xC-",
+        AbsoluteLayer: "seekscrubber_AbsoluteLayer_Ov5VE",
+        HideOverflow: "seekscrubber_HideOverflow_3pwlG",
+        RelativeLayer: "seekscrubber_RelativeLayer_3Sywb",
+        WithPointerEvents: "seekscrubber_WithPointerEvents_F7QDh",
+        RecordingDecorators: "seekscrubber_RecordingDecorators_1yuLK",
+        ClipDecorators: "seekscrubber_ClipDecorators_1X5z7",
+        GameModes: "seekscrubber_GameModes_2XHYr",
+        DateDecorator: "seekscrubber_DateDecorator_3cfYv",
+        BackgroundTicks: "seekscrubber_BackgroundTicks_sdaoa",
+        Highlights: "seekscrubber_Highlights_2-Rwp",
+        Timestamps: "seekscrubber_Timestamps_3sY9-",
+        RangeSelector: "seekscrubber_RangeSelector_W6nan",
+        SeekScrubber: "seekscrubber_SeekScrubber_1ZJdK",
+        PlayHead: "seekscrubber_PlayHead_32dft",
+        Thumbnails: "seekscrubber_Thumbnails_2DqP8",
+        PlayheadInteractionCtn: "seekscrubber_PlayheadInteractionCtn_2uglQ",
+        ActiveCtn: "seekscrubber_ActiveCtn_kYAHf",
+        PlayHeadContainer: "seekscrubber_PlayHeadContainer_LF77_",
+        Active: "seekscrubber_Active_1F8CR",
+        PlayHeadContent: "seekscrubber_PlayHeadContent_29NxD",
         PlayHeadCurrentTimeContainer:
-          "seekscrubber_PlayHeadCurrentTimeContainer_184R3",
-        Show: "seekscrubber_Show_20CY0",
-        RangeCtn: "seekscrubber_RangeCtn_1-9u5",
-        RangeControls: "seekscrubber_RangeControls_FzAnV",
-        InactiveRangeCtn: "seekscrubber_InactiveRangeCtn_3vxTR",
-        RangeControl: "seekscrubber_RangeControl_27Uqd",
-        RangeIcon: "seekscrubber_RangeIcon_1pb95",
-        RangeSelectorCtn: "seekscrubber_RangeSelectorCtn_3bdm3",
+          "seekscrubber_PlayHeadCurrentTimeContainer_3vGJJ",
+        Show: "seekscrubber_Show_GDOzd",
+        RangeCtn: "seekscrubber_RangeCtn_2wWUf",
+        RangeControls: "seekscrubber_RangeControls_2XSXT",
+        InactiveRangeCtn: "seekscrubber_InactiveRangeCtn_s3jxp",
+        RangeControl: "seekscrubber_RangeControl_1ka6R",
+        RangeIcon: "seekscrubber_RangeIcon_2g3Hn",
+        RangeSelectorCtn: "seekscrubber_RangeSelectorCtn_2a8UI",
         InactiveSelectedRangeControl:
-          "seekscrubber_InactiveSelectedRangeControl_2byyh",
-        SelectedRangeMask: "seekscrubber_SelectedRangeMask_1TpL9",
-        HoverRangePreviewCtn: "seekscrubber_HoverRangePreviewCtn_2n27d",
-        RangePreview: "seekscrubber_RangePreview_1ELS0",
-        TrackRangeControls: "seekscrubber_TrackRangeControls_33ooe",
-        Left: "seekscrubber_Left_12LBv",
-        RangeMask: "seekscrubber_RangeMask_1WtTn",
-        FullMask: "seekscrubber_FullMask_2Nu8Y",
+          "seekscrubber_InactiveSelectedRangeControl_NXvNd",
+        SelectedRangeMask: "seekscrubber_SelectedRangeMask_1R6Lr",
+        HoverRangePreviewCtn: "seekscrubber_HoverRangePreviewCtn_LgjYY",
+        RangePreview: "seekscrubber_RangePreview_2wrkl",
+        TrackRangeControls: "seekscrubber_TrackRangeControls_3HuvE",
+        Left: "seekscrubber_Left_2e7WP",
+        RangeMask: "seekscrubber_RangeMask_1yjoF",
+        FullMask: "seekscrubber_FullMask_1D2Fv",
         RangeSelectionFloatingControls:
-          "seekscrubber_RangeSelectionFloatingControls_n4r_h",
-        FloatingControlsButton: "seekscrubber_FloatingControlsButton_TvO6P",
-        Disabled: "seekscrubber_Disabled_2GkLo",
-        ZoomRangePreview: "seekscrubber_ZoomRangePreview_1DHUL",
-        Hidden: "seekscrubber_Hidden_3JE0U",
-        GhostPlayheadCtn: "seekscrubber_GhostPlayheadCtn_efeV_",
-        GhostPlayheadContent: "seekscrubber_GhostPlayheadContent_1JmPz",
-        GhostPlayhead: "seekscrubber_GhostPlayhead_2TbCq",
-        GhostPlayheadTooltip: "seekscrubber_GhostPlayheadTooltip_2eqfw",
-        SeekTimeContainer: "seekscrubber_SeekTimeContainer_6-9F-",
-        timelineFadeIn: "seekscrubber_timelineFadeIn_2eLFd",
+          "seekscrubber_RangeSelectionFloatingControls_1M0d4",
+        FloatingControlsButton: "seekscrubber_FloatingControlsButton_28T2d",
+        Disabled: "seekscrubber_Disabled_MN0RD",
+        ZoomRangePreview: "seekscrubber_ZoomRangePreview_1OADv",
+        Hidden: "seekscrubber_Hidden_qY8YD",
+        GhostPlayheadCtn: "seekscrubber_GhostPlayheadCtn_33Yre",
+        GhostPlayheadContent: "seekscrubber_GhostPlayheadContent_3jTEG",
+        GhostPlayhead: "seekscrubber_GhostPlayhead_3pYqa",
+        GhostPlayheadTooltip: "seekscrubber_GhostPlayheadTooltip_3tvAp",
+        SeekTimeContainer: "seekscrubber_SeekTimeContainer_1aDRj",
+        timelineFadeIn: "seekscrubber_timelineFadeIn_2JHcP",
       };
     },
-    84174: (e) => {
+    37151: (e) => {
       e.exports = {
-        MenuItem: "timelinecontextmenu_MenuItem_3kdHy",
-        AddUserMarker: "timelinecontextmenu_AddUserMarker_E9Gc9",
-        StartEndClip: "timelinecontextmenu_StartEndClip_x_Xf0",
+        MenuItem: "timelinecontextmenu_MenuItem_3tt4z",
+        AddUserMarker: "timelinecontextmenu_AddUserMarker_HkXS0",
+        StartEndClip: "timelinecontextmenu_StartEndClip_1bAd6",
       };
     },
-    15352: (e) => {
+    74875: (e) => {
       e.exports = {
-        LoadingTimeline: "timestamps_LoadingTimeline_I8lCT",
-        ScrollAndControlsCtn: "timestamps_ScrollAndControlsCtn_2csgI",
-        Controls: "timestamps_Controls_2dCGB",
-        TimelineScrollContainer: "timestamps_TimelineScrollContainer_37S_R",
-        ContentContainer: "timestamps_ContentContainer_2YtcD",
-        AbsoluteLayer: "timestamps_AbsoluteLayer_SCBbw",
-        HideOverflow: "timestamps_HideOverflow_3R5sC",
-        RelativeLayer: "timestamps_RelativeLayer_1aN6X",
-        WithPointerEvents: "timestamps_WithPointerEvents_3Pm2m",
-        RecordingDecorators: "timestamps_RecordingDecorators_1NIuI",
-        ClipDecorators: "timestamps_ClipDecorators_14X6e",
-        GameModes: "timestamps_GameModes_3Eki-",
-        DateDecorator: "timestamps_DateDecorator_1Em4P",
-        BackgroundTicks: "timestamps_BackgroundTicks_z1eZI",
-        Highlights: "timestamps_Highlights_1wVcI",
-        Timestamps: "timestamps_Timestamps_rywDX",
-        RangeSelector: "timestamps_RangeSelector_10jtX",
-        SeekScrubber: "timestamps_SeekScrubber_k2RBd",
-        PlayHead: "timestamps_PlayHead_nu0fs",
+        LoadingTimeline: "timestamps_LoadingTimeline_yJKPf",
+        ScrollAndControlsCtn: "timestamps_ScrollAndControlsCtn_m-I63",
+        Controls: "timestamps_Controls_3A_z_",
+        TimelineScrollContainer: "timestamps_TimelineScrollContainer_KCJNg",
+        ContentContainer: "timestamps_ContentContainer_3xaiI",
+        AbsoluteLayer: "timestamps_AbsoluteLayer_SUVsQ",
+        HideOverflow: "timestamps_HideOverflow_21uYQ",
+        RelativeLayer: "timestamps_RelativeLayer_7S4aq",
+        WithPointerEvents: "timestamps_WithPointerEvents_3oKzA",
+        RecordingDecorators: "timestamps_RecordingDecorators_3Z9jb",
+        ClipDecorators: "timestamps_ClipDecorators_2uTGW",
+        GameModes: "timestamps_GameModes_1W3yk",
+        DateDecorator: "timestamps_DateDecorator_3Plt3",
+        BackgroundTicks: "timestamps_BackgroundTicks_1vvWa",
+        Highlights: "timestamps_Highlights_3cmAL",
+        Timestamps: "timestamps_Timestamps_29iss",
+        RangeSelector: "timestamps_RangeSelector_17hy2",
+        SeekScrubber: "timestamps_SeekScrubber_3uBdy",
+        PlayHead: "timestamps_PlayHead_1GBMP",
+        Thumbnails: "timestamps_Thumbnails_2AVoa",
         TimelineRelativeTimestampContainer:
-          "timestamps_TimelineRelativeTimestampContainer_3JmIk",
-        TimelineRelativeTimestamp: "timestamps_TimelineRelativeTimestamp_3_QYB",
+          "timestamps_TimelineRelativeTimestampContainer_21AP6",
+        TimelineRelativeTimestamp: "timestamps_TimelineRelativeTimestamp_1x-9j",
       };
     },
-    94580: (e) => {
+    99463: (e) => {
       e.exports = {
-        ZoomControls: "zoomcontrol_ZoomControls_f2gx_",
-        ZoomTooltipCtn: "zoomcontrol_ZoomTooltipCtn_22C_i",
-        ZoomIcon: "zoomcontrol_ZoomIcon_13Dum",
-        Disabled: "zoomcontrol_Disabled_S6tVK",
-        ResolutionCtn: "zoomcontrol_ResolutionCtn_QNyKn",
-        ResolutionFill: "zoomcontrol_ResolutionFill_2yThW",
+        ZoomControls: "zoomcontrol_ZoomControls_187cP",
+        ZoomTooltipCtn: "zoomcontrol_ZoomTooltipCtn_3fl25",
+        ZoomIcon: "zoomcontrol_ZoomIcon_2wnBf",
+        Disabled: "zoomcontrol_Disabled_5HBhk",
+        ResolutionCtn: "zoomcontrol_ResolutionCtn_11EGQ",
+        ResolutionFill: "zoomcontrol_ResolutionFill_2uCiq",
       };
     },
-    1345: (e) => {
-      e.exports = {
-        UserSelectionButton: "userselectioncontrols_UserSelectionButton_3irz5",
-        AddUserMarker: "userselectioncontrols_AddUserMarker_3Rc_v",
-        AddMarkerLabel: "userselectioncontrols_AddMarkerLabel_3Pkoj",
-        StartClipRange: "userselectioncontrols_StartClipRange_lZppc",
-        EndClipRange: "userselectioncontrols_EndClipRange_2AbDS",
-        InlineClipControl: "userselectioncontrols_InlineClipControl_2wm_V",
-      };
-    },
-    97578: (e, t, r) => {
+    12015: (e, t, r) => {
       "use strict";
-      r.d(t, { F0: () => o, Zb: () => s, aF: () => l, hB: () => a });
-      const n = new (r(50454).s)("GR");
+      r.d(t, {
+        F0: () => s,
+        Rv: () => l,
+        Zb: () => c,
+        aF: () => o,
+        hB: () => a,
+      });
+      const n = new (r(68785).s)("GR");
       function i(e) {
         return (...t) => {
           const r = `[${(performance.now() / 1e3).toFixed(3)}]`;
@@ -499,331 +489,63 @@
         };
       }
       const a = i(n.Debug),
-        l = (i(n.Info), i(n.Warning)),
-        o = i(n.Error),
-        s = a;
+        l = i(n.Info),
+        o = i(n.Warning),
+        s = i(n.Error),
+        c = a;
     },
-    55385: (e, t, r) => {
+    14592: (e, t, r) => {
       "use strict";
-      r.d(t, { i: () => I });
-      var n = r(89526),
-        i = r(19304),
-        a = r(71488),
+      r.d(t, { i: () => _ });
+      var n = r(47427),
+        i = r(13129),
+        a = r(14078),
         l = r.n(a),
-        o = r(77822),
-        s = r(83315),
-        c = r(14826),
-        m = r(77613),
-        d = r(50454),
-        u = r(87195),
-        h = r(33940),
-        _ = r(16826),
-        g = r(818),
-        f = r(84343),
-        S = r(25733),
-        b = r.n(S),
-        v = r(57605),
-        P = r(88199),
-        p = r(60161),
-        M = r(44973);
-      function C(e) {
-        let { refContainer: t, visible: r } = e;
-        const a = (0, m.we)(),
-          l = a.GetGameRecordingVideo(),
-          [o, c] = (0, n.useState)(!1),
-          d = (0, s.SZ)(() => l.IsPaused());
-        return l
-          ? n.createElement(
-              "div",
-              {
-                className: (0, i.Z)(
-                  b().PlaybackControls,
-                  (r || o || d) && b().Show,
-                ),
-              },
-              M.De.IN_CLIENT &&
-                n.createElement(
-                  "div",
-                  { className: b().UserSelectionControls },
-                  n.createElement(P.QY, null),
-                  n.createElement(P.mp, null),
-                  n.createElement(P.a7, null),
-                ),
-              n.createElement(y, { playbackCoordinator: a, setPinOpen: c }),
-              n.createElement(
-                "div",
-                { className: b().MuteMaxButtons },
-                n.createElement(w, { player: l, setPinOpen: c }),
-                n.createElement(B, { player: l }),
-                n.createElement(O, { refContainer: t }),
-              ),
-            )
-          : n.createElement("div", { className: b().PlaybackControls });
-      }
-      function y(e) {
-        const { playbackCoordinator: t, setPinOpen: r } = e,
-          a = t.GetGameRecordingVideo(),
-          l = (0, i.Z)(b().PlaybackControlsBar),
-          o = (0, s.SZ)(() => a.IsPaused());
-        return n.createElement(
-          "div",
-          { className: l },
-          n.createElement(X, { playbackCoordinator: t }),
-          o && n.createElement(G, { playbackCoordinator: t }),
-          n.createElement(k, { player: a }),
-          o && n.createElement(R, { playbackCoordinator: t }),
-          n.createElement(E, { playbackCoordinator: t }),
-        );
-      }
-      function T(e) {
-        let { className: t, tooltip: r, onClick: a, children: l } = e,
-          o =
-            ((0, h._T)(e, ["className", "tooltip", "onClick", "children"]),
-            (0, i.Z)(b().PlaybackButton, t));
-        return n.createElement(
-          f.HP,
-          { toolTipContent: r },
-          n.createElement(
-            "div",
-            {
-              className: o,
-              onClick: (e) => {
-                a(e), e.stopPropagation();
-              },
-            },
-            l,
-          ),
-        );
-      }
-      function k(e) {
-        const { player: t } = e,
-          r = (0, s.SZ)(() => t.IsPaused()),
-          i = r ? n.createElement(g.o1, null) : n.createElement(g.fp, null);
-        let a = (0, c.Xx)(
-          r ? "#Playback_Play_Tooltip" : "#Playback_Pause_Tooltip",
-        );
-        return n.createElement(
-          T,
-          {
-            className: b().CircleButtonLarge,
-            onClick: () => t.TogglePlayPause(),
-            tooltip: a,
-          },
-          n.createElement("div", { className: b().PlaybackButtonContents }, i),
-        );
-      }
-      function G(e) {
-        var t;
-        const { playbackCoordinator: r } = e,
-          a = null !== (t = e.ms) && void 0 !== t ? t : 100;
-        return n.createElement(
-          T,
-          {
-            onClick: function () {
-              r.SeekDeltaMS(-a);
-            },
-            className: (0, i.Z)(b().CircleButtonMedium, b().NudgeBackButton),
-            tooltip: (0, c.Xx)("#Playback_PrevFrame_Tooltip"),
-          },
-          n.createElement(
-            "div",
-            { className: b().PlaybackButtonContents },
-            n.createElement(g.xg, null),
-          ),
-        );
-      }
-      function R(e) {
-        var t;
-        const { playbackCoordinator: r } = e,
-          a = null !== (t = e.ms) && void 0 !== t ? t : 100;
-        return n.createElement(
-          T,
-          {
-            onClick: function () {
-              r.SeekDeltaMS(a);
-            },
-            className: (0, i.Z)(b().CircleButtonMedium, b().NudgeForwardButton),
-            tooltip: (0, c.Xx)("#Playback_NextFrame_Tooltip"),
-          },
-          n.createElement(
-            "div",
-            { className: b().PlaybackButtonContents },
-            n.createElement(g.LF, null),
-          ),
-        );
-      }
-      function X(e) {
-        var t;
-        const { playbackCoordinator: r } = e,
-          a = null !== (t = e.ms) && void 0 !== t ? t : 1e4;
-        const l = `-${a / 1e3}s`;
-        return n.createElement(
-          T,
-          {
-            onClick: function () {
-              r.SeekDeltaMS(-a);
-            },
-            className: (0, i.Z)(
-              b().CircleButtonMedium,
-              b().JumpButton,
-              b().JumpBackButton,
-            ),
-            tooltip: (0, c.Xx)("#Playback_JumpBack_Tooltip"),
-          },
-          n.createElement(
-            "div",
-            { className: b().PlaybackButtonContents },
-            n.createElement(g.Sg, null),
-            n.createElement("span", { className: b().JumpLegend }, l),
-          ),
-        );
-      }
-      function E(e) {
-        var t;
-        const { playbackCoordinator: r } = e,
-          a = null !== (t = e.ms) && void 0 !== t ? t : 1e4;
-        const l = `+${a / 1e3}s`;
-        return n.createElement(
-          T,
-          {
-            onClick: function () {
-              r.SeekDeltaMS(a);
-            },
-            className: (0, i.Z)(
-              b().CircleButtonMedium,
-              b().JumpButton,
-              b().JumpForwardButton,
-            ),
-            tooltip: (0, c.Xx)("#Playback_JumpForward_Tooltip"),
-          },
-          n.createElement(
-            "div",
-            { className: b().PlaybackButtonContents },
-            n.createElement(g.sR, null),
-            n.createElement("span", { className: b().JumpLegend }, l),
-          ),
-        );
-      }
-      function B(e) {
-        const { player: t } = e,
-          r = (0, s.SZ)(() => t.GetMuted());
-        return n.createElement(
-          T,
-          {
-            onClick: function () {
-              t.SetMute(!r);
-            },
-            className: b().CircleButtonMedium,
-            tooltip: (0, c.Xx)("#Playback_ToggleMute_Tooltip"),
-          },
-          n.createElement(
-            "div",
-            { className: b().PlaybackButtonContents },
-            r ? n.createElement(_.D1O, null) : n.createElement(_.ffh, null),
-          ),
-        );
-      }
-      function O(e) {
-        const { refContainer: t } = e;
-        let r = n.useCallback(() => {
-          t.current && (0, p.$S)(t.current);
-        }, [t]);
-        return n.createElement(
-          T,
-          {
-            onClick: r,
-            className: b().CircleButtonMedium,
-            tooltip: (0, c.Xx)("#Playback_FullScreen_Tooltip"),
-          },
-          n.createElement(
-            "div",
-            { className: b().PlaybackButtonContents },
-            " ",
-            n.createElement(g.IT, null),
-          ),
-        );
-      }
-      function w(e) {
-        const { player: t, setPinOpen: r } = e,
-          i = n.useMemo(
-            () => [
-              { data: 0.25, label: "0.25x" },
-              { data: 0.5, label: "0.5x" },
-              { data: 1, label: "1x" },
-              { data: 1.5, label: "1.5x" },
-              { data: 2, label: "2x" },
-              { data: 4, label: "4x" },
-              { data: 8, label: "8x" },
-            ],
-            [],
-          );
-        return n.createElement(v.ry, {
-          strClassName: b().SpeedDrop,
-          rgOptions: i,
-          selectedOption: t.GetPlaybackSpeed(),
-          onChange: (e) => t.SetPlaybackSpeed(e.data),
-          tooltip: (0, c.Xx)("#Playback_Speed_Tooltip"),
-          onMenuOpened: () => r(!0),
-          onMenuClose: () => r(!1),
-        });
-      }
-      function I(e) {
-        const { disableSound: t, managerView: r } = e,
-          a = (0, m.we)(),
-          c = (0, o.e4)(a.StopPlayback, a.SetVideoElement),
-          d = a.GetGameRecordingVideo(),
-          u = (0, s.SZ)(() => a.GetRecordingID()),
-          h = (0, s.SZ)(() => d.GetPlaybackError()) || !u,
-          [_, g] = (function () {
-            const [e, t] = n.useState(!1),
-              r = n.useRef(null);
-            let i = n.useCallback(
-                (e) => {
-                  r.current && (clearTimeout(r.current), (r.current = void 0)),
-                    e
-                      ? t(!0)
-                      : (r.current = window.setTimeout(() => t(!1), 800));
-                },
-                [r, t],
-              ),
-              a = n.useCallback(() => {
-                i(!0);
-              }, [i]),
-              l = n.useCallback(() => {
-                i(!1);
-              }, [i]);
-            return (
-              n.useEffect(() => () => clearTimeout(r.current), []),
-              [e, { enter: a, leave: l, move: a }]
-            );
-          })(),
-          f = n.useRef();
-        let S = (0, i.Z)(
+        o = r(63201),
+        s = r(30750),
+        c = r(31846),
+        m = r(86357),
+        d = r(68785),
+        u = r(31360),
+        h = r(65255);
+      function _(e) {
+        const { disableSound: t, managerView: r, positionAbsolute: a = !0 } = e,
+          c = (0, m.we)(),
+          d = (0, o.e4)(c.StopPlayback, c.SetVideoElement),
+          u = c.GetGameRecordingVideo(),
+          _ = (0, s.SZ)(() => c.GetRecordingID()),
+          v = (0, s.SZ)(() => u.GetPlaybackError()) || !_,
+          P = n.useRef();
+        const M = !h.De.IN_STEAMUI;
+        let p = (0, i.Z)(
           l().GameRecordingPlayer,
-          h && l().NoVideo,
+          v && l().NoVideo,
           r && l().ManagerView,
+          a && l().PositionAbsolute,
         );
         return n.createElement(
           "div",
           {
-            ref: f,
-            className: S,
+            ref: P,
+            className: p,
             onClick: function () {
-              a.TogglePlayPause();
+              c.TogglePlayPause();
             },
-            onMouseEnter: g.enter,
-            onMouseLeave: g.leave,
-            onMouseMove: g.move,
           },
-          n.createElement("video", { ref: c, controls: !1, muted: t }),
-          n.createElement(L, { player: d }),
-          n.createElement(D, null),
-          n.createElement(F, null),
-          u && n.createElement(C, { refContainer: f, visible: _ }),
-          !u && n.createElement(W, null),
+          n.createElement("video", {
+            ref: d,
+            controls: !1,
+            muted: t,
+            autoPlay: M,
+            playsInline: M,
+          }),
+          n.createElement(S, { player: u }),
+          n.createElement(g, null),
+          n.createElement(f, null),
+          !_ && n.createElement(b, null),
         );
       }
-      function D() {
+      function g() {
         const e = (0, m.we)(),
           t = d.c.Get().IsDebugLogEnabled("GR"),
           r = (0, s.SZ)(() => e.GetPlaybackStats());
@@ -870,7 +592,7 @@
             )
           : null;
       }
-      function F() {
+      function f() {
         const e = d.c.Get().IsDebugLogEnabled("GR"),
           t = (0, m.we)(),
           r =
@@ -921,7 +643,7 @@
             )
           : null;
       }
-      function L(e) {
+      function S(e) {
         let { player: t } = e,
           r = "";
         switch ((0, s.SZ)(() => t.GetPlaybackError())) {
@@ -941,7 +663,7 @@
             )
           : null;
       }
-      function W(e) {
+      function b(e) {
         return n.createElement(
           "div",
           { className: l().PlayerError },
@@ -953,16 +675,16 @@
         );
       }
     },
-    77822: (e, t, r) => {
+    63201: (e, t, r) => {
       "use strict";
       r.d(t, { Is: () => m, e4: () => d, qd: () => n });
       var n,
-        i = r(33940),
-        a = r(59621),
-        l = r(24141),
-        o = r(85246),
-        s = r(4306),
-        c = r(97578);
+        i = r(85556),
+        a = r(54842),
+        l = r(46157),
+        o = r(45492),
+        s = r(20417),
+        c = r(12015);
       !(function (e) {
         (e[(e.None = 0)] = "None"),
           (e[(e.DownloadFailed = 1)] = "DownloadFailed"),
@@ -1160,7 +882,12 @@
             (this.m_ePlayerError = n.PlaybackError);
         }
         OnUserInputNeeded() {
-          this.m_bUserInputNeeded = !0;
+          (this.m_bUserInputNeeded = !0),
+            !this.m_bMuted &&
+              this.m_elVideo.autoplay &&
+              ((0, c.Rv)("Failed to autoplay video. Muting and trying again."),
+              this.SetMute(!0),
+              this.Play());
         }
         OnVolumeChange() {
           (0, c.Zb)("volume change"),
@@ -1254,18 +981,18 @@
         (0, i.gn)([s.ak], m.prototype, "OnVideoWaiting", null),
         (0, i.gn)([s.ak], m.prototype, "UserInputReceived", null);
     },
-    87195: (e, t, r) => {
+    31360: (e, t, r) => {
       "use strict";
       r.d(t, { sC: () => f, wn: () => g });
-      var n = r(33940),
-        i = r(89526),
-        a = r(58218),
-        l = r(23801),
-        o = r(44973),
-        s = r(97578),
-        c = r(65689),
-        m = r(77613),
-        d = r(4306);
+      var n = r(85556),
+        i = r(47427),
+        a = r(29480),
+        l = r(62210),
+        o = r(65255),
+        s = r(12015),
+        c = r(91707),
+        m = r(86357),
+        d = r(20417);
       class u {
         constructor() {
           (this.k_QueueWaitUntilRequestMS = 10),
@@ -1553,7 +1280,7 @@
         );
       }
     },
-    65689: (e, t, r) => {
+    91707: (e, t, r) => {
       "use strict";
       r.d(t, {
         $H: () => u,
@@ -1565,8 +1292,8 @@
         oV: () => c,
         uI: () => m,
       });
-      var n = r(33940),
-        i = r(83315);
+      var n = r(85556),
+        i = r(30750);
       function a(e, t, r) {
         return (0, n.mG)(this, void 0, void 0, function* () {
           0;
@@ -1596,151 +1323,7 @@
         });
       }
     },
-    48704: (e, t, r) => {
-      "use strict";
-      r.d(t, {
-        Kc: () => g,
-        NN: () => _,
-        Op: () => P,
-        Uk: () => f,
-        _H: () => o,
-        az: () => v,
-        jg: () => S,
-        mo: () => b,
-        n9: () => p,
-        oR: () => c,
-        pI: () => h,
-        pT: () => u,
-        q1: () => m,
-        wR: () => s,
-        x8: () => d,
-      });
-      var n = r(89526),
-        i = r(50796);
-      const a = { nBeforeMS: 0, nAfterMS: 12e3 },
-        l = n.createContext({
-          globalStartMS: void 0,
-          globalEndMS: void 0,
-          setRange: null,
-          setStartMS: null,
-          setEndMS: null,
-          globalPreviewStartMS: void 0,
-          globalPreviewEndMS: void 0,
-          setPreviewRange: null,
-          clearPreviewSelection: null,
-          selectionZoomCount: 0,
-          zoomIntoSelection: null,
-        });
-      function o() {
-        const e = (0, n.useContext)(l);
-        return { nGlobalStartMS: e.globalStartMS, nGlobalEndMS: e.globalEndMS };
-      }
-      function s() {
-        return (0, n.useContext)(l).globalStartMS;
-      }
-      function c() {
-        return (0, n.useContext)(l).globalEndMS;
-      }
-      function m() {
-        return (0, n.useContext)(l).setRange;
-      }
-      function d() {
-        return (0, n.useContext)(l).setStartMS;
-      }
-      function u() {
-        return (0, n.useContext)(l).setEndMS;
-      }
-      function h() {
-        const e = (0, n.useContext)(l);
-        return {
-          selectedMarker: e.selectedMarker,
-          setSelectedMarker: e.setSelectedMarker,
-        };
-      }
-      function _() {
-        var e, t;
-        const r = (0, n.useContext)(l);
-        return (
-          !isNaN(
-            null === (e = r.globalStartMS) || void 0 === e ? void 0 : e.valMS,
-          ) &&
-          !isNaN(
-            null === (t = r.globalEndMS) || void 0 === t ? void 0 : t.valMS,
-          )
-        );
-      }
-      function g() {
-        return (0, n.useContext)(l).clearSelection;
-      }
-      function f() {
-        return (0, n.useContext)(l).setPreviewRange;
-      }
-      function S() {
-        const e = (0, n.useContext)(l);
-        return {
-          globalStartMS: e.globalPreviewStartMS,
-          globalEndMS: e.globalPreviewEndMS,
-        };
-      }
-      function b() {
-        var e, t;
-        const r = (0, n.useContext)(l);
-        return (
-          !isNaN(
-            null === (e = r.globalPreviewStartMS) || void 0 === e
-              ? void 0
-              : e.valMS,
-          ) &&
-          !isNaN(
-            null === (t = r.globalPreviewEndMS) || void 0 === t
-              ? void 0
-              : t.valMS,
-          )
-        );
-      }
-      function v() {
-        return (0, n.useContext)(l).clearPreviewSelection;
-      }
-      function P(e, t) {
-        const r = m(),
-          l = o();
-        let s = n.useCallback(
-          (e, t, n) => {
-            if (void 0 === t && void 0 === n) return;
-            let o = t || l.nGlobalStartMS,
-              s = n || l.nGlobalEndMS;
-            o &&
-              s &&
-              s.valMS <= o.valMS &&
-              (void 0 !== t ? (s = void 0) : (o = void 0));
-            let c = a.nBeforeMS + a.nAfterMS;
-            void 0 === o && (o = (0, i.Z6)(s.valMS - c)),
-              void 0 === s && (s = (0, i.Z6)(o.valMS + c)),
-              r(o, s),
-              e.SetPlaybackStop(s);
-          },
-          [l, r],
-        );
-        return s;
-      }
-      function p(e) {
-        let t = (0, n.useContext)(l),
-          r = t.selectionZoomCount,
-          i = t.globalStartMS,
-          a = t.globalEndMS,
-          o = (0, n.useRef)(r),
-          s = (0, n.useRef)(null);
-        (s.current = e),
-          (0, n.useEffect)(() => {
-            let e =
-              !isNaN(null == i ? void 0 : i.valMS) &&
-              !isNaN(null == a ? void 0 : a.valMS);
-            (o.current == r && e) ||
-              ((o.current = r), e ? s.current(i, a) : s.current(null, null));
-          }, [r, i, a, o, s]);
-      }
-    },
-    50796: (e, t, r) => {
+    40420: (e, t, r) => {
       "use strict";
       function n(e) {
         return { type: "global", valMS: e };
@@ -1764,21 +1347,21 @@
       }
       s("global"), s("clientWindow"), s("virtualWindow"), s("scrollWindow");
     },
-    50953: (e, t, r) => {
+    66992: (e, t, r) => {
       "use strict";
-      r.d(t, { k9: () => Dt, $z: () => It, Lj: () => wt });
-      var n = r(89526),
-        i = r(83315),
-        a = r(11426),
-        l = r(48203),
-        o = r(19304),
-        s = r(50796),
-        c = r(33940),
-        m = r(59621),
-        d = r(36041),
-        u = r(11837),
-        h = r(97578),
-        _ = r(4306);
+      r.d(t, { k9: () => Nt, $z: () => Vt, Lj: () => Zt });
+      var n = r(47427),
+        i = r(30750),
+        a = r(57837),
+        l = r(97929),
+        o = r(13129),
+        s = r(40420),
+        c = r(85556),
+        m = r(54842),
+        d = r(45651),
+        u = r(83999),
+        h = r(12015),
+        _ = r(20417);
       const g = [12e3, 7500, 4500, 3e3, 1500, 1e3, 750, 400, 250, 100],
         f = {
           12e3: 7.5,
@@ -1802,10 +1385,61 @@
         })(e);
         return f[t];
       }
-      var b = r(23801),
-        v = r(65689),
-        P = r(48704);
-      class p {
+      var b = r(62210),
+        v = r(91707);
+      const P = { nBeforeMS: 0, nAfterMS: 12e3 },
+        M = n.createContext({
+          globalStartMS: void 0,
+          globalEndMS: void 0,
+          setRange: null,
+          setStartMS: null,
+          setEndMS: null,
+          globalPreviewStartMS: void 0,
+          globalPreviewEndMS: void 0,
+          setPreviewRange: null,
+          clearPreviewSelection: null,
+          selectionZoomCount: 0,
+          zoomIntoSelection: null,
+        });
+      function p() {
+        const e = (0, n.useContext)(M);
+        return { nGlobalStartMS: e.globalStartMS, nGlobalEndMS: e.globalEndMS };
+      }
+      function C() {
+        return (0, n.useContext)(M).globalStartMS;
+      }
+      function T() {
+        return (0, n.useContext)(M).globalEndMS;
+      }
+      function y() {
+        return (0, n.useContext)(M).setRange;
+      }
+      function X() {
+        const e = (0, n.useContext)(M);
+        return {
+          selectedMarker: e.selectedMarker,
+          setSelectedMarker: e.setSelectedMarker,
+        };
+      }
+      function G() {
+        var e, t;
+        const r = (0, n.useContext)(M);
+        return (
+          !isNaN(
+            null === (e = r.globalStartMS) || void 0 === e ? void 0 : e.valMS,
+          ) &&
+          !isNaN(
+            null === (t = r.globalEndMS) || void 0 === t ? void 0 : t.valMS,
+          )
+        );
+      }
+      function k() {
+        return (0, n.useContext)(M).setPreviewRange;
+      }
+      function R() {
+        return (0, n.useContext)(M).clearPreviewSelection;
+      }
+      class E {
         constructor(e, t, r, n, i) {
           (this.m_bLoaderInitialized = !1),
             (this.m_durationMS = (0, s.Z6)(null)),
@@ -1975,8 +1609,11 @@
           return this.m_nGapBetweenTimelinesPX;
         }
         SetClipSummaries(e) {
-          (this.m_rgClipSummaries = e || []),
-            this.BInitialized() && this.ComputeClipOffsets();
+          (e = e || []),
+            (0 == this.m_rgClipSummaries.length && 0 == e.length) ||
+              this.m_rgClipSummaries == e ||
+              ((this.m_rgClipSummaries = e || []),
+              this.BInitialized() && this.ComputeClipOffsets());
         }
         GetDuration() {
           return this.m_durationMS;
@@ -2039,6 +1676,7 @@
               return {
                 recordingID: t.recording_id(),
                 globalOffsetMS: a,
+                timelineOffsetMS: i,
                 nDurationMS: o,
                 startOffsetPX: (0, s.bu)(l),
                 endOffsetPX: (0, s.bu)(c),
@@ -2599,68 +2237,91 @@
           return this.m_managerView;
         }
       }
-      (0, c.gn)([m.LO], p.prototype, "m_bLoaderInitialized", void 0),
-        (0, c.gn)([m.LO], p.prototype, "m_durationMS", void 0),
-        (0, c.gn)([m.LO], p.prototype, "m_timelineIDToClipMap", void 0),
-        (0, c.gn)([m.LO], p.prototype, "m_scrollLeftPX", void 0),
-        (0, c.gn)([m.LO], p.prototype, "m_scrollWindowWidth", void 0),
-        (0, c.gn)([m.LO], p.prototype, "m_scrollWindowOffsetPX", void 0),
-        (0, c.gn)([m.LO], p.prototype, "m_bAutoScrollPaused", void 0),
-        (0, c.gn)([m.LO], p.prototype, "m_autoScrollPauseTimeout", void 0),
-        (0, c.gn)([m.LO], p.prototype, "m_nMaxAutoZoomScale", void 0),
-        (0, c.gn)([m.LO], p.prototype, "m_nUserZoomScaleMS", void 0),
-        (0, c.gn)([m.LO], p.prototype, "m_nCurrentZoomScaleMS", void 0),
-        (0, c.gn)([m.LO], p.prototype, "m_nTempZoomScaleMS", void 0),
-        (0, c.gn)([m.LO], p.prototype, "m_timelineOffsets", void 0),
-        (0, c.gn)([m.LO], p.prototype, "m_loadedTimelines", void 0),
-        (0, c.gn)([m.LO], p.prototype, "m_managerView", void 0),
-        (0, c.gn)([m.aD], p.prototype, "OnLoaderInitialized", null),
-        (0, c.gn)([m.aD], p.prototype, "SetUserZoomScale", null),
-        (0, c.gn)([_.ak], p.prototype, "BReachedMaxScroll", null),
-        (0, c.gn)([_.ak], p.prototype, "BReachedMinScroll", null);
-      const M = n.createContext(null);
-      function C(e) {
-        var t;
+      (0, c.gn)([m.LO], E.prototype, "m_bLoaderInitialized", void 0),
+        (0, c.gn)([m.LO], E.prototype, "m_durationMS", void 0),
+        (0, c.gn)([m.LO], E.prototype, "m_timelineIDToClipMap", void 0),
+        (0, c.gn)([m.LO], E.prototype, "m_scrollLeftPX", void 0),
+        (0, c.gn)([m.LO], E.prototype, "m_scrollWindowWidth", void 0),
+        (0, c.gn)([m.LO], E.prototype, "m_scrollWindowOffsetPX", void 0),
+        (0, c.gn)([m.LO], E.prototype, "m_bAutoScrollPaused", void 0),
+        (0, c.gn)([m.LO], E.prototype, "m_autoScrollPauseTimeout", void 0),
+        (0, c.gn)([m.LO], E.prototype, "m_nMaxAutoZoomScale", void 0),
+        (0, c.gn)([m.LO], E.prototype, "m_nUserZoomScaleMS", void 0),
+        (0, c.gn)([m.LO], E.prototype, "m_nCurrentZoomScaleMS", void 0),
+        (0, c.gn)([m.LO], E.prototype, "m_nTempZoomScaleMS", void 0),
+        (0, c.gn)([m.LO], E.prototype, "m_timelineOffsets", void 0),
+        (0, c.gn)([m.LO], E.prototype, "m_loadedTimelines", void 0),
+        (0, c.gn)([m.LO], E.prototype, "m_managerView", void 0),
+        (0, c.gn)([m.aD], E.prototype, "OnLoaderInitialized", null),
+        (0, c.gn)([m.aD], E.prototype, "SetUserZoomScale", null),
+        (0, c.gn)([_.ak], E.prototype, "BReachedMaxScroll", null),
+        (0, c.gn)([_.ak], E.prototype, "BReachedMinScroll", null);
+      const O = n.createContext(null);
+      function w(e) {
         let {
-          loader: r,
-          playbackCoordinator: i,
-          children: a,
-          clipSummaries: l,
-          managerView: o,
-        } = e;
-        const c = (0, _.NW)();
-        let m = (0, n.useRef)(null);
-        (m.current && m.current.IsSameLoader(r)) ||
-          (null === (t = m.current) || void 0 === t || t.Close(),
-          (m.current = new p(r, i, c, l, o)));
-        let d = m.current;
+            loader: t,
+            playbackCoordinator: r,
+            children: i,
+            clipSummaries: a,
+            managerView: l,
+          } = e,
+          o = (0, _.NW)(),
+          [c, m] = (0, n.useState)(null);
         return (
           (0, n.useEffect)(() => {
-            d.SetClipSummaries(l);
-          }, [d, l]),
-          n.useEffect(() => () => m.current && m.current.Close(), []),
-          (0, P.n9)((e, t) => {
-            if (!e || !t) return void d.ClearTempZoomScale();
-            let r = Math.floor(0.1 * (t.valMS - e.valMS)),
-              n = (0, s.Z6)(e.valMS - r),
-              i = (0, s.Z6)(t.valMS + r);
-            d.SetTempZoomScale(n, i);
-          }),
-          n.createElement(M.Provider, { value: m.current }, a)
+            if (!t) return;
+            let e = new E(t, r, o, a, l);
+            return m(e), () => e.Close();
+          }, [t]),
+          (0, n.useEffect)(() => {
+            c && c.SetClipSummaries(a);
+          }, [c, a]),
+          (function (e) {
+            let t = n.useCallback(
+              (t, r) => {
+                if (!e) return;
+                if (!t || !r) return void e.ClearTempZoomScale();
+                let n = Math.floor(0.1 * (r.valMS - t.valMS)),
+                  i = (0, s.Z6)(t.valMS - n),
+                  a = (0, s.Z6)(r.valMS + n);
+                e.SetTempZoomScale(i, a);
+              },
+              [e],
+            );
+            !(function (e) {
+              let t = (0, n.useContext)(M),
+                r = t.selectionZoomCount,
+                i = t.globalStartMS,
+                a = t.globalEndMS,
+                l = (0, n.useRef)(r),
+                o = (0, n.useRef)(null);
+              (o.current = e),
+                (0, n.useEffect)(() => {
+                  if (!o.current) return;
+                  let e =
+                    !isNaN(null == i ? void 0 : i.valMS) &&
+                    !isNaN(null == a ? void 0 : a.valMS);
+                  (l.current == r && e) ||
+                    ((l.current = r),
+                    e ? o.current(i, a) : o.current(null, null));
+                }, [r, i, a, l, o]);
+            })(t);
+          })(c),
+          c ? n.createElement(O.Provider, { value: c }, i) : null
         );
       }
-      function y() {
-        return (0, n.useContext)(M);
+      function I() {
+        return (0, n.useContext)(O);
       }
-      var T = r(72120);
-      const k = n.memo(function (e) {
-          const t = y(),
+      var B = r(12251);
+      const D = n.memo(function (e) {
+          const t = I(),
             r = (0, i.SZ)(() => t.GetWindowRelativeTimelines());
           return n.createElement(
             n.Fragment,
             null,
             r.map((e) =>
-              n.createElement(G, {
+              n.createElement(F, {
                 key: e.timelineID,
                 timelineID: e.timelineID,
                 ticksStartPX: e.nStartPX,
@@ -2670,9 +2331,9 @@
             ),
           );
         }),
-        G = n.memo(function (e) {
+        F = n.memo(function (e) {
           const { timelineID: t, ticksEndPX: r, ticksStartMS: a } = e,
-            l = y(),
+            l = I(),
             o = (0, i.SZ)(() => l.GetCurrentZoomScale()),
             c = S(o),
             m = (0, n.useMemo)(() => {
@@ -2702,7 +2363,7 @@
                 n.Fragment,
                 null,
                 m.map((e) =>
-                  n.createElement(R, {
+                  n.createElement(L, {
                     key: e.key,
                     timeMS: e.timeMS.valMS,
                     timelineRelativeIndex: e.nTimelineRelativeTickIndex,
@@ -2712,7 +2373,7 @@
               )
             : null;
         }),
-        R = n.memo(function (e) {
+        L = n.memo(function (e) {
           const { timeMS: t, globalOffsetPX: r, timelineRelativeIndex: i } = e,
             a = n.useMemo(
               () =>
@@ -2740,22 +2401,22 @@
                 { className: l.TickStamp },
                 (function (e) {
                   const t = !1;
-                  return (0, T.SF)(e / 1e3, t);
+                  return (0, B.SF)(e / 1e3, t);
                 })(t),
               ),
           );
         });
-      var X,
-        E = r(85540),
-        B = r(77613);
-      function O(e) {
+      var W,
+        A = r(86946),
+        z = r(86357);
+      function x(e) {
         return (
           (function (e) {
             return "highlight" === e.type;
           })(e) && "steam_achievement" == e.icon
         );
       }
-      function w(e) {
+      function Z(e) {
         return "usermarker" === e.type;
       }
       !(function (e) {
@@ -2763,18 +2424,18 @@
           (e[(e.Playing = 1)] = "Playing"),
           (e[(e.Staging = 2)] = "Staging"),
           (e[(e.Menus = 3)] = "Menus");
-      })(X || (X = {}));
-      var I = r(84682),
-        D = r(61385),
-        F = r(57605),
-        L = r(77557),
-        W = r(99307),
-        x = r(57742),
-        A = r(60161),
-        z = r(14826),
-        N = r(87228),
-        Z = r(70487);
-      function V(e) {
+      })(W || (W = {}));
+      var V = r(50928),
+        N = r(10082),
+        U = r(1485),
+        H = r(83743),
+        j = r(50898),
+        $ = r(90069),
+        q = r(50423),
+        J = r(31846),
+        Q = r(72478),
+        K = r(37796);
+      function Y(e) {
         var t;
         let {
           markerInfo: r,
@@ -2785,22 +2446,22 @@
           style: c,
           faded: m,
         } = e;
-        const d = (0, B.we)(),
-          { selectedMarker: u } = (0, P.pI)(),
-          h = (0, P.Kc)(),
+        const d = (0, z.we)(),
+          { selectedMarker: u } = X(),
+          h = (0, n.useContext)(M).clearSelection,
           _ =
             (null === (t = r.entry) || void 0 === t ? void 0 : t.id) ==
               (null == u ? void 0 : u.strEntryID) &&
             r.strTimelineID == (null == u ? void 0 : u.strTimelineID);
         let g = n.useCallback(
           (e) => {
-            if (!w(r.entry)) return;
-            let t = n.createElement(J, {
+            if (!Z(r.entry)) return;
+            let t = n.createElement(ae, {
               markerInfo: r,
               playbackCoordinator: d,
               fnClearSelection: h,
             });
-            (0, x.AM)(t, (0, A.RA)(e)), e.stopPropagation(), e.preventDefault();
+            (0, $.AM)(t, (0, q.RA)(e)), e.stopPropagation(), e.preventDefault();
           },
           [d, r, h],
         );
@@ -2809,9 +2470,9 @@
           {
             style: null != c ? c : {},
             className: (0, o.Z)(s, {
-              [N.HighlightIcon]: !0,
-              [N.Selected]: _,
-              [N.Faded]: m,
+              [Q.HighlightIcon]: !0,
+              [Q.Selected]: _,
+              [Q.Faded]: m,
             }),
             onClick: (e) => {
               i && i(e);
@@ -2820,60 +2481,60 @@
             onMouseEnter: a,
             onMouseLeave: l,
           },
-          n.createElement(U, { markerInfo: r }),
+          n.createElement(ee, { markerInfo: r }),
         );
       }
-      function U(e) {
+      function ee(e) {
         let { markerInfo: t } = e;
-        const r = (0, B.we)().GetGameID(),
-          i = O(t.entry),
-          a = !i && (0, D.jq)(t.strMarkerIcon),
+        const r = (0, z.we)().GetGameID(),
+          i = x(t.entry),
+          a = !i && (0, N.jq)(t.strMarkerIcon),
           l = !i && !a;
         return n.createElement(
           n.Fragment,
           null,
-          i && n.createElement(H, { markerInfo: t, strGameID: r }),
-          a && n.createElement(j, { markerInfo: t }),
+          i && n.createElement(te, { markerInfo: t, strGameID: r }),
+          a && n.createElement(re, { markerInfo: t }),
           l &&
-            n.createElement($, {
+            n.createElement(ne, {
               strMarkerIcon: t.strMarkerIcon,
               strGameID: r,
             }),
         );
       }
-      function H(e) {
+      function te(e) {
         const { markerInfo: t, strGameID: r } = e,
-          i = new Z.N1(r),
+          i = new K.N1(r),
           a = (0, v.$H)(i.GetAppID(), t.strDescription);
         let l, o;
         if (a) (l = "white"), (o = n.createElement("img", { src: a.iconURL }));
         else {
-          const e = (0, D.cY)();
-          (l = (0, D.Mv)(e.color)), (o = e.func({}));
+          const e = (0, N.cY)();
+          (l = (0, N.Mv)(e.color)), (o = e.func({}));
         }
         return n.createElement("div", { style: { color: l } }, o);
       }
-      function j(e) {
+      function re(e) {
         const { markerInfo: t } = e;
         let r, i;
-        w(t.entry)
-          ? ((r = (0, D.vt)()), (i = N.CustomMarker))
-          : (r = (0, D.XT)(t.strMarkerIcon));
-        const a = (0, D.Mv)(r.color),
+        Z(t.entry)
+          ? ((r = (0, N.vt)()), (i = Q.CustomMarker))
+          : (r = (0, N.XT)(t.strMarkerIcon));
+        const a = (0, N.Mv)(r.color),
           l = r.func({}),
           o = n.createElement("div", { className: i }, l);
-        return n.createElement(q, { element: o, color: a });
+        return n.createElement(ie, { element: o, color: a });
       }
-      function $(e) {
+      function ne(e) {
         const { strMarkerIcon: t, strGameID: r } = e,
-          i = new Z.N1(r).GetAppID(),
-          a = (0, I.JZ)(i, t);
+          i = new K.N1(r).GetAppID(),
+          a = (0, V.JZ)(i, t);
         if (null === a) return null;
         if (void 0 === a) {
-          const e = (0, D.vt)();
+          const e = (0, N.vt)();
           return n.createElement(
             "div",
-            { style: { color: (0, D.Mv)(e.color) } },
+            { style: { color: (0, N.Mv)(e.color) } },
             e.func({}),
           );
         }
@@ -2884,27 +2545,27 @@
             { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 36 36" },
             n.createElement("g", { dangerouslySetInnerHTML: { __html: s } }),
           ),
-          m = (0, D.Mv)(l);
-        return n.createElement(q, { element: c, color: m });
+          m = (0, N.Mv)(l);
+        return n.createElement(ie, { element: c, color: m });
       }
-      function q(e) {
+      function ie(e) {
         const { element: t, color: r } = e;
         return n.createElement(
           "div",
-          { className: N.MarkerCtn },
+          { className: Q.MarkerCtn },
           n.createElement(
             "div",
-            { className: (0, o.Z)(N.MarkerBacking, N.MarkerElt) },
+            { className: (0, o.Z)(Q.MarkerBacking, Q.MarkerElt) },
             t,
           ),
           n.createElement(
             "div",
-            { className: N.MarkerElt, style: { color: r } },
+            { className: Q.MarkerElt, style: { color: r } },
             t,
           ),
         );
       }
-      function J(e) {
+      function ae(e) {
         const {
             closeModal: t,
             markerInfo: r,
@@ -2914,18 +2575,18 @@
           l = r.entry,
           [o, s] = n.useState(l.title || ""),
           [m, d] = n.useState(l.description || ""),
-          u = (0, L.tx)();
+          u = (0, H.tx)();
         return u.bLoading
-          ? n.createElement(L.NT, {
+          ? n.createElement(H.NT, {
               state: u,
-              strDialogTitle: (0, z.Xx)("#Marker_Dialog"),
+              strDialogTitle: (0, J.Xx)("#Marker_Dialog"),
               closeModal: t,
             })
           : n.createElement(
-              W.uH,
+              j.uH,
               {
-                strTitle: (0, z.Xx)("#Marker_Dialog"),
-                strMiddleButtonText: (0, z.Xx)("#Marker_Action_Delete"),
+                strTitle: (0, J.Xx)("#Marker_Dialog"),
+                strMiddleButtonText: (0, J.Xx)("#Marker_Action_Delete"),
                 onCancel: t,
                 onOK: () =>
                   (0, c.mG)(this, void 0, void 0, function* () {
@@ -2949,10 +2610,10 @@
                         (r.strTitle = o),
                         u.fnSetSuccess(!0),
                         u.fnSetStrSuccess(
-                          (0, z.Xx)("#EventDisplay_Share_Success"),
+                          (0, J.Xx)("#EventDisplay_Share_Success"),
                         ))
                       : (u.fnSetError(!0),
-                        u.fnSetStrSuccess((0, z.Xx)("#ImageUpload_Failed")));
+                        u.fnSetStrSuccess((0, J.Xx)("#ImageUpload_Failed")));
                   }),
                 onMiddleButton: () =>
                   (0, c.mG)(this, void 0, void 0, function* () {
@@ -2976,24 +2637,24 @@
                     1 == e ? t() : u.fnSetError(!0);
                   }),
               },
-              n.createElement(F.II, {
+              n.createElement(U.II, {
                 type: "text",
                 value: o,
                 onChange: (e) => s(e.currentTarget.value),
-                label: (0, z.Xx)("#Marker_Title"),
+                label: (0, J.Xx)("#Marker_Title"),
               }),
-              n.createElement(F.II, {
+              n.createElement(U.II, {
                 type: "text",
                 value: m,
                 onChange: (e) => d(e.currentTarget.value),
-                label: (0, z.Xx)("#Marker_Description"),
+                label: (0, J.Xx)("#Marker_Description"),
               }),
             );
       }
-      var K = r(84343),
-        Y = r(87195),
-        Q = r(818);
-      class ee {
+      var le = r(59728),
+        oe = r(31360),
+        se = r(77556);
+      class ce {
         constructor(e) {
           (this.m_reservations = []), (this.m_nIconWidth = e);
         }
@@ -3013,7 +2674,7 @@
           return this.m_reservations.splice(r, 0, t), !0;
         }
       }
-      function te(e) {
+      function me(e) {
         const {
             view: t,
             coordinator: r,
@@ -3023,9 +2684,9 @@
             timelineID: c,
             faded: m,
           } = e,
-          { setSelectedMarker: d } = (0, P.pI)(),
-          u = (0, P.Uk)(),
-          _ = (0, P.az)();
+          { setSelectedMarker: d } = X(),
+          u = k(),
+          _ = R();
         let g = { strType: "chunk", entry: a };
         const f = (0, s.Z6)(parseInt(a.time) + l.valMS),
           S = t.ConvertGlobalMSToGlobalPXOffset(f),
@@ -3047,7 +2708,7 @@
             },
             [f.valMS, u],
           ),
-          p = (0, n.useCallback)(
+          P = (0, n.useCallback)(
             (e) => {
               null == _ || _();
             },
@@ -3061,17 +2722,17 @@
             null
           );
         let M = a;
-        const C = { transform: `translateX( calc( ${S.valPX}px - 50% ))` },
-          y = { transform: `translateX( ${S.valPX - 1}px )` };
+        const p = { transform: `translateX( calc( ${S.valPX}px - 50% ))` },
+          C = { transform: `translateX( ${S.valPX - 1}px )` };
         (g.strMarkerIcon = M.icon),
           (g.nMarkerPriority = M.priority),
           (g.strTimelineID = c);
         let T = null;
-        if (O(M)) {
+        if (x(M)) {
           const t = M;
           (g.strTitle = t.title),
             (g.strDescription = t.description),
-            (T = n.createElement(le, {
+            (T = n.createElement(ge, {
               markerInfo: g,
               entry: t,
               gameID: e.gameID,
@@ -3083,7 +2744,7 @@
           })(M)
         ) {
           M.handle;
-          T = n.createElement(ie, {
+          T = n.createElement(he, {
             markerInfo: g,
             entry: M,
             gameID: e.gameID,
@@ -3093,45 +2754,45 @@
           const t = M;
           (g.strTitle = t.title),
             (g.strDescription = t.description),
-            (T = n.createElement(ie, {
+            (T = n.createElement(he, {
               markerInfo: g,
               entry: M,
               gameID: e.gameID,
               nGlobalMS: f,
             }));
         }
-        const k = i ? "bottom" : "top",
+        const y = i ? "bottom" : "top",
           G = i ? 100 : 40;
         return n.createElement(
           n.Fragment,
           null,
           n.createElement(
-            K.HP,
+            le.HP,
             {
               toolTipContent: T,
-              direction: k,
+              direction: y,
               nDelayShowMS: 20,
               nBodyDistance: G,
-              className: (0, o.Z)(E.TimelineMarkerCtn),
-              style: C,
+              className: (0, o.Z)(A.TimelineMarkerCtn),
+              style: p,
             },
-            n.createElement(V, {
-              classNames: E.TimelineMarker,
+            n.createElement(Y, {
+              classNames: A.TimelineMarker,
               key: M.id,
               markerInfo: g,
               faded: m,
               onClick: b,
               onMouseEnter: v,
-              onMouseLeave: p,
+              onMouseLeave: P,
             }),
           ),
           n.createElement("div", {
-            className: E.TimelineMarkerDropLine,
-            style: y,
+            className: A.TimelineMarkerDropLine,
+            style: C,
           }),
         );
       }
-      function re(e) {
+      function de(e) {
         const {
             view: t,
             coordinator: r,
@@ -3141,9 +2802,9 @@
             timelineID: c,
             faded: m,
           } = e,
-          { setSelectedMarker: d } = (0, P.pI)(),
-          u = (0, P.Uk)(),
-          h = (0, P.az)(),
+          { setSelectedMarker: d } = X(),
+          u = k(),
+          h = R(),
           _ = (0, s.Z6)(parseInt(a.time) + l.valMS),
           g = t.ConvertGlobalMSToGlobalPXOffset(_),
           f = (0, s.Z6)(parseInt(a.time) + parseInt(a.duration) + l.valMS);
@@ -3171,97 +2832,97 @@
             },
             [_, f, u],
           ),
-          p = (0, n.useCallback)(
+          P = (0, n.useCallback)(
             (e) => {
               h && h();
             },
             [h],
           ),
           M = { transform: `translateX( calc( ${g.valPX}px - 50% ))` },
-          C = { transform: `translateX( ${g.valPX - 1}px )` };
+          p = { transform: `translateX( ${g.valPX - 1}px )` };
         (S.strMarkerIcon = a.icon),
           (S.nMarkerPriority = a.priority),
           (S.strTitle = a.title),
           (S.strDescription = a.description),
           (S.strTimelineID = c);
-        const y = i ? "bottom" : "top",
+        const C = i ? "bottom" : "top",
           T = i ? 100 : 40,
-          k = n.createElement(ae, { range: a, gameID: e.gameID, nGlobalMS: _ });
+          y = n.createElement(_e, { range: a, gameID: e.gameID, nGlobalMS: _ });
         return n.createElement(
           n.Fragment,
           null,
           n.createElement(
-            K.HP,
+            le.HP,
             {
-              toolTipContent: k,
-              direction: y,
+              toolTipContent: y,
+              direction: C,
               nDelayShowMS: 20,
               nBodyDistance: T,
-              className: (0, o.Z)(E.TimelineMarkerCtn),
+              className: (0, o.Z)(A.TimelineMarkerCtn),
               style: M,
             },
-            n.createElement(V, {
-              classNames: E.TimelineMarker,
+            n.createElement(Y, {
+              classNames: A.TimelineMarker,
               key: a.id,
               markerInfo: S,
               faded: m,
               onClick: b,
               onMouseEnter: v,
-              onMouseLeave: p,
+              onMouseLeave: P,
             }),
           ),
           n.createElement(
             "div",
-            { className: E.TimelineMarkerRangeMarker, style: C },
-            n.createElement(Q.Hi, null),
+            { className: A.TimelineMarkerRangeMarker, style: p },
+            n.createElement(se.Hi, null),
             " ",
           ),
         );
       }
-      function ne(e) {
+      function ue(e) {
         const { nGlobalMS: t, gameID: r } = e,
-          i = ((0, B.we)(), (0, Y.sC)(r, t.valMS, 200, !1));
+          i = ((0, z.we)(), (0, oe.sC)(r, t.valMS, 200, !1));
         return Boolean(i)
           ? n.createElement("img", { src: i })
           : n.createElement(n.Fragment, null);
       }
-      function ie(e) {
+      function he(e) {
         const { markerInfo: t, entry: r, gameID: i, nGlobalMS: a } = e,
-          l = w(r) ? (0, z.Xx)("#Marker_UserMarker_Title") : r.title,
+          l = Z(r) ? (0, J.Xx)("#Marker_UserMarker_Title") : r.title,
           o = r.description,
           c = (0, s.pX)(parseInt(r.time));
         return n.createElement(
           "div",
-          { className: E.TooltipContainer },
+          { className: A.TooltipContainer },
           n.createElement(
             "div",
-            { className: E.ThumbnailContainer },
-            n.createElement(ne, { nGlobalMS: a, gameID: i }),
+            { className: A.ThumbnailContainer },
+            n.createElement(ue, { nGlobalMS: a, gameID: i }),
           ),
           (l || o) &&
             n.createElement(
               "div",
-              { className: E.TooltipHighlight },
+              { className: A.TooltipHighlight },
               n.createElement(
                 "div",
-                { className: E.HighlightIcon },
-                n.createElement(U, { markerInfo: t }),
+                { className: A.HighlightIcon },
+                n.createElement(ee, { markerInfo: t }),
               ),
               n.createElement(
                 "div",
-                { className: E.HighlightInfoBlock },
-                l && n.createElement("div", { className: E.HighlightTitle }, l),
-                o && n.createElement("div", { className: E.HighlightDesc }, o),
+                { className: A.HighlightInfoBlock },
+                l && n.createElement("div", { className: A.HighlightTitle }, l),
+                o && n.createElement("div", { className: A.HighlightDesc }, o),
               ),
             ),
           n.createElement(
             "div",
-            { className: E.Timestamp },
-            (0, T.SF)(c.valMS / 1e3),
+            { className: A.Timestamp },
+            (0, B.SF)(c.valMS / 1e3),
           ),
         );
       }
-      function ae(e) {
+      function _e(e) {
         const { range: t, gameID: r, nGlobalMS: i } = e,
           a = t.title,
           l = t.title,
@@ -3270,44 +2931,44 @@
         let m = { strType: "chunk", entry: t, strMarkerIcon: t.icon };
         return n.createElement(
           "div",
-          { className: E.TooltipContainer },
+          { className: A.TooltipContainer },
           n.createElement(
             "div",
-            { className: E.ThumbnailContainer },
-            n.createElement(ne, { nGlobalMS: i, gameID: r }),
+            { className: A.ThumbnailContainer },
+            n.createElement(ue, { nGlobalMS: i, gameID: r }),
           ),
           (a || l) &&
             n.createElement(
               "div",
-              { className: E.TooltipHighlight },
+              { className: A.TooltipHighlight },
               n.createElement(
                 "div",
-                { className: E.HighlightIcon },
-                n.createElement(U, { markerInfo: m }),
+                { className: A.HighlightIcon },
+                n.createElement(ee, { markerInfo: m }),
               ),
               n.createElement(
                 "div",
-                { className: E.HighlightInfoBlock },
-                a && n.createElement("div", { className: E.HighlightTitle }, a),
-                l && n.createElement("div", { className: E.HighlightDesc }, l),
+                { className: A.HighlightInfoBlock },
+                a && n.createElement("div", { className: A.HighlightTitle }, a),
+                l && n.createElement("div", { className: A.HighlightDesc }, l),
               ),
             ),
           n.createElement(
             "div",
-            { className: E.Timestamp },
-            (0, T.SF)(o.valMS / 1e3),
+            { className: A.Timestamp },
+            (0, B.SF)(o.valMS / 1e3),
           ),
           n.createElement(
             "div",
-            { className: E.Timestamp },
-            (0, T.SF)(c.valMS / 1e3),
+            { className: A.Timestamp },
+            (0, B.SF)(c.valMS / 1e3),
           ),
         );
       }
-      function le(e) {
+      function ge(e) {
         var t, r, i;
         const { markerInfo: a, entry: l, gameID: o, nGlobalMS: s } = e,
-          c = new Z.N1(o),
+          c = new K.N1(o),
           m = (0, v.$H)(
             c.GetAppID(),
             null !== (t = a.strDescription) && void 0 !== t ? t : "",
@@ -3318,7 +2979,7 @@
           (d.title = null !== (r = m.name) && void 0 !== r ? r : ""),
           (d.description =
             null !== (i = m.description) && void 0 !== i ? i : ""),
-          n.createElement(ie, {
+          n.createElement(he, {
             markerInfo: a,
             entry: d,
             gameID: o,
@@ -3326,14 +2987,14 @@
           })
         );
       }
-      const oe = n.memo(function (e) {
-          const t = y(),
+      const fe = n.memo(function (e) {
+          const t = I(),
             r = (0, i.SZ)(() => t.GetTimelinesInWindow());
           return n.createElement(
             n.Fragment,
             null,
             r.map((e) =>
-              n.createElement(se, {
+              n.createElement(Se, {
                 key: e.timelineID,
                 timelineID: e.timelineID,
                 timelineOffset: e.globalOffsetMS,
@@ -3341,10 +3002,10 @@
             ),
           );
         }),
-        se = n.memo(function (e) {
+        Se = n.memo(function (e) {
           const { timelineID: t, timelineOffset: r } = e,
-            a = y(),
-            l = (0, B.we)(),
+            a = I(),
+            l = (0, z.we)(),
             o = (0, i.SZ)(() => l.GetHidePlayer()),
             s = l.GetGameID(),
             c = 16 * a.GetCurrentZoomScale(),
@@ -3362,7 +3023,7 @@
           );
           const { strState: u, rgRanges: h } = a.FetchTimelineRanges(r);
           if ("loaded" != u) return null;
-          let _ = new ee(c),
+          let _ = new ce(c),
             g = [];
           const f = d.filter((e) => "usermarker" == e.type),
             S = d.filter((e) => "usermarker" != e.type);
@@ -3376,7 +3037,7 @@
                 case "highlight":
                 case "screenshot":
                   g.push(
-                    n.createElement(te, {
+                    n.createElement(me, {
                       gameID: s,
                       key: d,
                       view: a,
@@ -3391,7 +3052,7 @@
                   break;
                 case "range":
                   g.push(
-                    n.createElement(re, {
+                    n.createElement(de, {
                       gameID: s,
                       key: d,
                       view: a,
@@ -3408,8 +3069,8 @@
             n.createElement(n.Fragment, null, g.reverse())
           );
         });
-      var ce = r(22334);
-      function me(e) {
+      var be = r(72759);
+      function ve(e) {
         const {
             view: t,
             entry: r,
@@ -3424,25 +3085,25 @@
             width: m.valPX - c.valPX,
           },
           u = (0, o.Z)({
-            [ce.Unspecified]: r.mode === X.Invalid,
-            [ce.Staging]: r.mode === X.Staging,
-            [ce.Menus]: r.mode === X.Menus,
-            [ce.Playing]: r.mode === X.Playing,
+            [be.Unspecified]: r.mode === W.Invalid,
+            [be.Staging]: r.mode === W.Staging,
+            [be.Menus]: r.mode === W.Menus,
+            [be.Playing]: r.mode === W.Playing,
           });
         return n.createElement("div", {
           key: r.id,
-          className: (0, o.Z)(ce.GameModeMarker, u),
+          className: (0, o.Z)(be.GameModeMarker, u),
           style: d,
         });
       }
-      const de = n.memo(function (e) {
-          const t = y(),
+      const Pe = n.memo(function (e) {
+          const t = I(),
             r = (0, i.SZ)(() => t.GetTimelinesInWindow());
           return n.createElement(
             n.Fragment,
             null,
             r.map((e) =>
-              n.createElement(ue, {
+              n.createElement(Me, {
                 timelineID: e.timelineID,
                 key: e.timelineID,
                 timelineOffset: e.globalOffsetMS,
@@ -3451,15 +3112,15 @@
             ),
           );
         }),
-        ue = n.memo(function (e) {
+        Me = n.memo(function (e) {
           const { timelineID: t, timelineOffset: r, duration: i } = e,
-            a = y(),
+            a = I(),
             l = (0, s.Z6)(r.valMS + i);
           let { strState: o, rgEntry: c } = a.FetchTimelineGameModes(r);
           if ("loaded" != o) return null;
           0 == c.length &&
             (c = [
-              { time: "0", type: "gamemode", mode: X.Invalid, id: "synthetic" },
+              { time: "0", type: "gamemode", mode: W.Invalid, id: "synthetic" },
             ]);
           let m = [];
           for (let e = 0; e < c.length; e++) {
@@ -3469,7 +3130,7 @@
                 : l.valMS - 1,
             );
             m.push(
-              me({
+              ve({
                 view: a,
                 entry: c[e],
                 nGlobalEntryEndMS: t,
@@ -3479,9 +3140,9 @@
           }
           return n.createElement(n.Fragment, null, m);
         });
-      var he = r(92310),
-        _e = r(53643);
-      const ge = n.createContext({
+      var pe = r(90254),
+        Ce = r(28995);
+      const Te = n.createContext({
         bInContainer: null,
         bContainerFocus: null,
         nMouseClientXPX: null,
@@ -3489,13 +3150,13 @@
         scrollWindowMouseXPX: null,
         fnRegisterMouseEvent: null,
       });
-      function fe(e) {
+      function ye(e) {
         const { children: t } = e,
           [r, a] = (0, n.useState)(),
           [l, o] = (0, n.useState)(),
           [c, m] = (0, n.useState)(),
           u = (0, n.useRef)(),
-          h = y(),
+          h = I(),
           _ = (0, i.SZ)(() => h.GetScrollableWidthPX()),
           g = (0, i.SZ)(() => h.GetVisualWindowStartPX()),
           f = (0, i.SZ)(() => h.GetScrollWindowWidth()),
@@ -3527,10 +3188,10 @@
             ),
             [],
           ),
-          p = (0, n.useCallback)(() => {
+          M = (0, n.useCallback)(() => {
             a(!0);
           }, []),
-          M = (0, n.useCallback)(() => {
+          p = (0, n.useCallback)(() => {
             a(!1);
           }, []),
           C = (0, n.useCallback)((e) => {
@@ -3539,11 +3200,11 @@
           T = (0, n.useCallback)((e) => {
             o(!0);
           }, []),
-          k = (0, n.useCallback)((e) => {
+          y = (0, n.useCallback)((e) => {
             o(!1);
           }, []);
         (0, n.useEffect)(() => {
-          const e = (0, A.kR)(u.current);
+          const e = (0, q.kR)(u.current);
           return (
             e.addEventListener("mousemove", C),
             () => {
@@ -3551,7 +3212,7 @@
             }
           );
         }, [C]);
-        const G = (0, n.useMemo)(
+        const X = (0, n.useMemo)(
           () => ({
             bContainerFocus: l,
             bInContainer: r,
@@ -3563,35 +3224,35 @@
           [l, r, c, b, v, P],
         );
         return n.createElement(
-          ge.Provider,
-          { value: G },
+          Te.Provider,
+          { value: X },
           n.createElement(
             "div",
             {
               ref: u,
               onMouseOver: T,
               onFocus: T,
-              onMouseOut: k,
-              onBlur: k,
-              onMouseEnter: p,
-              onMouseLeave: M,
-              className: _e.MouseListenerContainer,
+              onMouseOut: y,
+              onBlur: y,
+              onMouseEnter: M,
+              onMouseLeave: p,
+              className: Ce.MouseListenerContainer,
             },
             t,
           ),
         );
       }
-      function Se() {
-        return (0, n.useContext)(ge).globalMouseXPX;
+      function Xe() {
+        return (0, n.useContext)(Te).globalMouseXPX;
       }
-      function be() {
-        return (0, n.useContext)(ge).scrollWindowMouseXPX;
+      function Ge() {
+        return (0, n.useContext)(Te).scrollWindowMouseXPX;
       }
-      function ve() {
-        return (0, n.useContext)(ge).bInContainer;
+      function ke() {
+        return (0, n.useContext)(Te).bInContainer;
       }
-      function Pe(e, t) {
-        const r = (0, n.useContext)(ge).fnRegisterMouseEvent,
+      function Re(e, t) {
+        const r = (0, n.useContext)(Te).fnRegisterMouseEvent,
           i = (0, n.useRef)(),
           a = (0, n.useCallback)(() => {
             i.current = r(e, t);
@@ -3601,29 +3262,50 @@
           }, []);
         (0, n.useEffect)(() => (a(), () => l()), [a, l]);
       }
-      var pe = r(58422),
-        Me = r(69159),
-        Ce = r(40103),
-        ye = r(84174);
-      function Te() {
-        const e = y(),
-          t = (0, B.we)(),
-          r = (0, P.Op)();
+      var Ee = r(28349),
+        Oe = r(22042),
+        we = r(95315),
+        Ie = r(37151);
+      function Be() {
+        const e = I(),
+          t = (0, z.we)(),
+          r = (function (e, t) {
+            const r = y(),
+              i = p();
+            let a = n.useCallback(
+              (e, t, n) => {
+                if (void 0 === t && void 0 === n) return;
+                let a = t || i.nGlobalStartMS,
+                  l = n || i.nGlobalEndMS;
+                a &&
+                  l &&
+                  l.valMS <= a.valMS &&
+                  (void 0 !== t ? (l = void 0) : (a = void 0));
+                let o = P.nBeforeMS + P.nAfterMS;
+                void 0 === a && (a = (0, s.Z6)(l.valMS - o)),
+                  void 0 === l && (l = (0, s.Z6)(a.valMS + o)),
+                  r(a, l),
+                  e.SetPlaybackStop(l);
+              },
+              [i, r],
+            );
+            return a;
+          })();
         return n.useCallback(
           (i, a, l, o) => {
-            const s = n.createElement(ke, {
+            const s = n.createElement(De, {
               isCurrentPlayback: l,
               nGlobalOffsetMS: a,
               playbackCoordinator: t,
               timelineView: e,
               fnSetSelectionClipRange: r,
             });
-            (0, Ce.yV)(s, i, o);
+            (0, we.yV)(s, i, o);
           },
           [t, e, r],
         );
       }
-      function ke(e) {
+      function De(e) {
         const {
             playbackCoordinator: t,
             timelineView: r,
@@ -3645,10 +3327,10 @@
             c && r.ClearAutoScrollPauseTimeout();
           }, [c, r]);
         return n.createElement(
-          Me.xV,
+          Oe.xV,
           { refInstance: u },
           n.createElement(
-            Me.Zo,
+            Oe.Zo,
             {
               onSelected: () => {
                 t.AddUserMarkerAtGlobalMS(a),
@@ -3658,9 +3340,9 @@
             },
             n.createElement(
               "div",
-              { className: (0, o.Z)(ye.MenuItem, ye.AddUserMarker) },
-              n.createElement(Q.KT, null),
-              (0, z.Xx)(
+              { className: (0, o.Z)(Ie.MenuItem, Ie.AddUserMarker) },
+              n.createElement(se.KT, null),
+              (0, J.Xx)(
                 s
                   ? "#Playback_UserSelectionControls_AddUserMarker"
                   : "#TimelineDialog_AddMarker",
@@ -3668,7 +3350,7 @@
             ),
           ),
           n.createElement(
-            Me.Zo,
+            Oe.Zo,
             {
               onSelected: () => {
                 l(t, a, void 0),
@@ -3678,9 +3360,9 @@
             },
             n.createElement(
               "div",
-              { className: (0, o.Z)(ye.MenuItem, ye.StartEndClip) },
-              n.createElement(Q.Eq, { direction: "left" }),
-              (0, z.Xx)(
+              { className: (0, o.Z)(Ie.MenuItem, Ie.StartEndClip) },
+              n.createElement(se.Eq, { direction: "left" }),
+              (0, J.Xx)(
                 s
                   ? "#Playback_UserSelectionControls_SetClipStart"
                   : "#TimelineContext_SetClipStart",
@@ -3688,7 +3370,7 @@
             ),
           ),
           n.createElement(
-            Me.Zo,
+            Oe.Zo,
             {
               onSelected: () => {
                 l(t, void 0, a),
@@ -3698,9 +3380,9 @@
             },
             n.createElement(
               "div",
-              { className: (0, o.Z)(ye.MenuItem, ye.StartEndClip) },
-              n.createElement(Q.Eq, { direction: "right" }),
-              (0, z.Xx)(
+              { className: (0, o.Z)(Ie.MenuItem, Ie.StartEndClip) },
+              n.createElement(se.Eq, { direction: "right" }),
+              (0, J.Xx)(
                 s
                   ? "#Playback_UserSelectionControls_SetClipEnd"
                   : "#TimelineContext_SetClipEnd",
@@ -3709,18 +3391,18 @@
           ),
         );
       }
-      function Ge(e) {
-        const t = (0, B.we)(),
+      function Fe(e) {
+        const t = (0, z.we)(),
           r = (0, i.SZ)(() => t.GetHidePlayer()),
           [a, l] = (0, n.useState)(!1);
         return r
-          ? n.createElement(Re, { setIsActive: l })
-          : n.createElement(Xe, { bActive: a, setIsActive: l });
+          ? n.createElement(Le, { setIsActive: l })
+          : n.createElement(We, { bActive: a, setIsActive: l });
       }
-      const Re = (0, n.memo)(function (e) {
+      const Le = (0, n.memo)(function (e) {
           const { setIsActive: t } = e,
-            r = ve(),
-            a = y(),
+            r = ke(),
+            a = I(),
             l = (0, i.SZ)(() => a.GetScrollableWidthPX()),
             c = (0, _.fB)(100),
             m = (0, n.useCallback)(
@@ -3739,23 +3421,23 @@
           return n.createElement(
             "div",
             {
-              className: (0, o.Z)(pe.PlayHeadContainer),
+              className: (0, o.Z)(Ee.PlayHeadContainer),
               style: { transform: `translateX( calc(${l}px - 50% ))` },
             },
-            n.createElement(Ee, {
+            n.createElement(Ae, {
               setIsActive: t,
               timelinePlaytimeMS: d.valMS,
               bShowContent: r,
             }),
           );
         }),
-        Xe = (0, n.memo)(function (e) {
+        We = (0, n.memo)(function (e) {
           const { bActive: t, setIsActive: r } = e,
-            a = (0, B.we)(),
+            a = (0, z.we)(),
             l = (0, i.SZ)(() => a.GetGlobalMSPlaytime()),
-            c = y(),
+            c = I(),
             m = (0, i.SZ)(() => c.ConvertGlobalMSToGlobalPXOffset(l)),
-            u = Se(),
+            u = Xe(),
             h = (function (e, t, r, a, l) {
               const o = (0, n.useRef)(),
                 c = (0, i.SZ)(() => t.GetScrollableWidthPX()),
@@ -3763,8 +3445,8 @@
                 [u, h] = (0, n.useState)(),
                 _ = (0, n.useMemo)(
                   () => ({
-                    rightBreakpoint: (0, s.yj)(m * wt),
-                    leftBreakpoint: (0, s.yj)(m * It),
+                    rightBreakpoint: (0, s.yj)(m * Zt),
+                    leftBreakpoint: (0, s.yj)(m * Vt),
                   }),
                   [m],
                 ),
@@ -3833,7 +3515,7 @@
                 }, [r, _, g, e.valPX, a.valPX, l.valPX, c, t, S, m]),
                 u
               );
-            })(be(), c, t, m, u),
+            })(Ge(), c, t, m, u),
             _ = (0, n.useMemo)(
               () =>
                 t
@@ -3851,17 +3533,17 @@
               "div",
               {
                 className: (0, o.Z)(
-                  pe.PlayheadInteractionCtn,
-                  t && pe.ActiveCtn,
+                  Ee.PlayheadInteractionCtn,
+                  t && Ee.ActiveCtn,
                 ),
               },
               n.createElement(
                 "div",
                 {
-                  className: (0, o.Z)(pe.PlayHeadContainer, t && pe.Active),
+                  className: (0, o.Z)(Ee.PlayHeadContainer, t && Ee.Active),
                   style: { transform: `translateX( calc(${h}px - 50% ))` },
                 },
-                n.createElement(Ee, {
+                n.createElement(Ae, {
                   setIsActive: r,
                   timelinePlaytimeMS: _,
                   bShowContent: !0,
@@ -3870,8 +3552,8 @@
             )
           );
         }),
-        Ee = (0, n.memo)(function (e) {
-          ve();
+        Ae = (0, n.memo)(function (e) {
+          ke();
           const { setIsActive: t, timelinePlaytimeMS: r, bShowContent: i } = e,
             a = (0, n.useCallback)((e) => {
               e.stopPropagation();
@@ -3882,23 +3564,23 @@
           return n.createElement(
             "div",
             {
-              className: (0, o.Z)(pe.PlayHeadContent, i && pe.Show),
+              className: (0, o.Z)(Ee.PlayHeadContent, i && Ee.Show),
               onMouseOver: a,
               onMouseOut: l,
               onFocus: a,
               onBlur: l,
             },
-            n.createElement(Be, { setIsActive: t }),
+            n.createElement(ze, { setIsActive: t }),
           );
         }),
-        Be = n.memo(function (e) {
+        ze = n.memo(function (e) {
           const { setIsActive: t } = e,
-            r = (0, B.we)(),
-            i = Te(),
+            r = (0, z.we)(),
+            i = Be(),
             a = (0, n.useCallback)(
               (e) => {
                 if (0 != e.button) return;
-                const r = (0, A.RA)(e);
+                const r = (0, q.RA)(e);
                 let n, i;
                 const a = () => {
                   t(!0), n();
@@ -3926,11 +3608,11 @@
             );
           return n.createElement(
             "div",
-            { className: pe.PlayHead, onMouseDown: a, onContextMenu: l },
-            n.createElement(Oe, null),
+            { className: Ee.PlayHead, onMouseDown: a, onContextMenu: l },
+            n.createElement(xe, null),
           );
         });
-      function Oe(e) {
+      function xe(e) {
         return n.createElement(
           "svg",
           Object.assign({}, e, {
@@ -3953,19 +3635,19 @@
           }),
         );
       }
-      function we(e) {
-        const t = (0, n.useContext)(ge);
+      function Ze(e) {
+        const t = (0, n.useContext)(Te);
         return t.bInContainer
-          ? n.createElement(Ie, { globalMouseXPX: t.globalMouseXPX.valPX || 0 })
+          ? n.createElement(Ve, { globalMouseXPX: t.globalMouseXPX.valPX || 0 })
           : null;
       }
-      const Ie = n.memo(function (e) {
+      const Ve = n.memo(function (e) {
           const { globalMouseXPX: t } = e,
-            r = ve(),
-            a = y(),
-            l = (0, B.we)(),
-            c = (0, n.useContext)(ge).bContainerFocus,
-            m = Te();
+            r = ke(),
+            a = I(),
+            l = (0, z.we)(),
+            c = (0, n.useContext)(Te).bContainerFocus,
+            m = Be();
           let u = (0, i.SZ)(() =>
             a.ConvertPXToTimelineRelativeMS((0, s.bu)(t), "end-if-active"),
           );
@@ -3993,85 +3675,100 @@
               [c, a, m],
             );
           return (
-            Pe("click", h),
-            Pe("contextmenu", _),
+            Re("click", h),
+            Re("contextmenu", _),
             n.createElement(
               "div",
               {
-                className: he.GhostPlayheadCtn,
+                className: pe.GhostPlayheadCtn,
                 style: { transform: `translateX( calc(${t}px - 50% ))` },
               },
-              n.createElement(Le, null),
+              n.createElement(He, null),
               n.createElement(
                 "div",
-                { className: (0, o.Z)(he.SeekTimeContainer, r && he.Show) },
-                u && (0, T.SF)(u.valMS / 1e3, !1),
+                { className: (0, o.Z)(pe.SeekTimeContainer, r && pe.Show) },
+                u && (0, B.SF)(u.valMS / 1e3, !1),
               ),
             )
           );
         }),
-        De = (0, n.memo)(function (e) {
-          const t = (0, B.we)(),
-            r = parseInt(he.thumbnailWidth),
-            i = (0, Y.sC)(t.GetGameID(), e.globalMS, r, !1),
+        Ne = (0, n.memo)(function (e) {
+          const t = (0, z.we)(),
+            r = parseInt(pe.thumbnailWidth),
+            i = (0, oe.sC)(t.GetGameID(), e.globalMS, r, !1),
             a = Boolean(i)
               ? n.createElement("img", { src: i })
               : n.createElement("div", null);
           return n.createElement(
             "div",
-            { className: he.GhostPlayheadTooltip },
+            { className: pe.GhostPlayheadTooltip },
             a,
           );
         }),
-        Fe = (0, n.memo)(function (e) {
+        Ue = (0, n.memo)(function (e) {
           const { globalMS: t } = e,
             r = t - (t % 9e3);
-          return n.createElement(De, { key: r, globalMS: r });
+          return n.createElement(Ne, { key: r, globalMS: r });
         }),
-        Le = (0, n.memo)(function () {
-          const e = y(),
-            t = Se(),
+        He = (0, n.memo)(function () {
+          const e = I(),
+            t = Xe(),
             r = (0, i.SZ)(() => e.ConvertPXOffsetToGlobalMSOrNone(t)),
-            a = ve(),
-            l = (0, B.we)(),
+            a = ke(),
+            l = (0, z.we)(),
             o = (0, i.SZ)(() => l.GetHidePlayer());
           if (!r) return null;
           if (!a) return null;
           const s = o ? "bottom" : "top";
           return n.createElement(
-            K.HP,
+            le.HP,
             {
-              toolTipContent: n.createElement(Fe, { globalMS: r.valMS }),
+              toolTipContent: n.createElement(Ue, { globalMS: r.valMS }),
               direction: s,
               nDelayShowMS: 0,
               nBodyDistance: 8,
             },
             n.createElement(
               "div",
-              { className: he.GhostPlayheadContent },
-              n.createElement(Oe, { className: he.GhostPlayhead }),
+              { className: pe.GhostPlayheadContent },
+              n.createElement(xe, { className: pe.GhostPlayhead }),
             ),
           );
         });
-      var We = r(83047);
-      const xe = (0, n.memo)(function () {
+      var je = r(94314);
+      const $e = (0, n.memo)(function () {
           const [e, t] = (0, n.useState)("none");
-          return (0, P.q1)()
-            ? n.createElement(Ae, {
+          return y()
+            ? n.createElement(qe, {
                 activeControlState: e,
                 setActiveControlState: t,
               })
             : null;
         }),
-        Ae = (0, n.memo)(function (e) {
+        qe = (0, n.memo)(function (e) {
           const { activeControlState: t, setActiveControlState: r } = e,
-            i = (0, P.NN)(),
-            a = (0, P.mo)();
+            i = G(),
+            a = (function () {
+              var e, t;
+              const r = (0, n.useContext)(M);
+              return (
+                !isNaN(
+                  null === (e = r.globalPreviewStartMS) || void 0 === e
+                    ? void 0
+                    : e.valMS,
+                ) &&
+                !isNaN(
+                  null === (t = r.globalPreviewEndMS) || void 0 === t
+                    ? void 0
+                    : t.valMS,
+                )
+              );
+            })();
           return n.createElement(
             "div",
-            { className: We.RangeControls },
+            { className: je.RangeControls },
             i &&
-              n.createElement(Ne, {
+              n.createElement(Qe, {
                 activeControlState: t,
                 setActiveControlState: r,
               }),
@@ -4079,17 +3776,23 @@
               "div",
               {
                 className: (0, o.Z)(
-                  We.HoverRangePreviewCtn,
-                  a && "none" === t && We.Show,
+                  je.HoverRangePreviewCtn,
+                  a && "none" === t && je.Show,
                 ),
               },
-              a && n.createElement(ze, null),
+              a && n.createElement(Je, null),
             ),
           );
         }),
-        ze = (0, n.memo)(function () {
-          const e = (0, P.jg)(),
-            t = y(),
+        Je = (0, n.memo)(function () {
+          const e = (function () {
+              const e = (0, n.useContext)(M);
+              return {
+                globalStartMS: e.globalPreviewStartMS,
+                globalEndMS: e.globalPreviewEndMS,
+              };
+            })(),
+            t = I(),
             r = (0, i.SZ)(
               () => t.ConvertGlobalMSToGlobalPXOffset(e.globalStartMS).valPX,
             ),
@@ -4098,23 +3801,23 @@
             );
           return n.createElement(
             "div",
-            { className: (0, o.Z)(We.RangePreview) },
+            { className: (0, o.Z)(je.RangePreview) },
             n.createElement(
               "div",
-              { className: We.TrackRangeControls },
-              n.createElement(qe, { direction: "left", offsetPX: r }),
-              n.createElement($e, { startOffsetPX: r, endOffsetPX: a }),
-              n.createElement(qe, { direction: "right", offsetPX: a }),
+              { className: je.TrackRangeControls },
+              n.createElement(it, { direction: "left", offsetPX: r }),
+              n.createElement(nt, { startOffsetPX: r, endOffsetPX: a }),
+              n.createElement(it, { direction: "right", offsetPX: a }),
             ),
           );
         }),
-        Ne = (0, n.memo)(function (e) {
+        Qe = (0, n.memo)(function (e) {
           const { activeControlState: t, setActiveControlState: r } = e,
             [a, l] = (0, n.useState)(),
             [s, c] = (0, n.useState)(),
-            m = (0, P.wR)(),
-            d = (0, P.oR)(),
-            u = y(),
+            m = C(),
+            d = T(),
+            u = I(),
             h = (0, i.SZ)(() => u.ConvertGlobalMSToGlobalPXOffset(m).valPX),
             _ = (0, i.SZ)(() => u.ConvertGlobalMSToGlobalPXOffset(d).valPX),
             g = (0, n.useCallback)(
@@ -4133,8 +3836,8 @@
             "div",
             {
               className: (0, o.Z)(
-                We.RangeSelectorCtn,
-                "none" !== t && We.Active,
+                je.RangeSelectorCtn,
+                "none" !== t && je.Active,
               ),
               onMouseOver: g,
               onMouseOut: f,
@@ -4143,19 +3846,19 @@
             },
             n.createElement(
               "div",
-              { className: We.TrackRangeControls },
-              n.createElement(Ze, {
+              { className: je.TrackRangeControls },
+              n.createElement(Ke, {
                 isActive: "left" === t,
                 setControlState: r,
                 setRangeControlPX: l,
                 pxOffset: a,
               }),
-              n.createElement($e, {
+              n.createElement(nt, {
                 startOffsetPX: "left" === t ? a : h,
                 endOffsetPX: "right" === t ? s : _,
-                className: We.SelectedRangeMask,
+                className: je.SelectedRangeMask,
               }),
-              n.createElement(Ue, {
+              n.createElement(et, {
                 isActive: "right" === t,
                 setControlState: r,
                 setRangeControlPX: c,
@@ -4164,41 +3867,41 @@
             ),
           );
         });
-      const Ze = (0, n.memo)(function (e) {
+      const Ke = (0, n.memo)(function (e) {
           const {
               isActive: t,
               setControlState: r,
               setRangeControlPX: i,
               pxOffset: a,
             } = e,
-            l = (0, P.wR)();
+            l = C();
           return t
-            ? n.createElement(Ve, {
+            ? n.createElement(Ye, {
                 setControlState: r,
                 setRangeControlPX: i,
                 pxOffset: a,
               })
-            : n.createElement(je, {
+            : n.createElement(rt, {
                 offsetMS: l,
                 direction: "left",
                 setControlState: r,
                 setRangeControlPX: i,
               });
         }),
-        Ve = (0, n.memo)(function (e) {
+        Ye = (0, n.memo)(function (e) {
           const { setControlState: t, setRangeControlPX: r, pxOffset: a } = e,
-            l = (0, P.x8)(),
-            o = (0, P.oR)(),
-            c = y(),
-            m = (0, B.we)(),
-            u = Se(),
-            h = be(),
+            l = (0, n.useContext)(M).setStartMS,
+            o = T(),
+            c = I(),
+            m = (0, z.we)(),
+            u = Xe(),
+            h = Ge(),
             _ = (0, i.SZ)(() => c.GetScrollableWidthPX()),
             g = (0, i.SZ)(() => c.GetScrollWindowWidth()),
             f = (0, n.useMemo)(
               () => ({
-                rightBreakpoint: (0, s.yj)(g * wt),
-                leftBreakpoint: (0, s.yj)(g * It),
+                rightBreakpoint: (0, s.yj)(g * Zt),
+                leftBreakpoint: (0, s.yj)(g * Vt),
               }),
               [g],
             ),
@@ -4302,44 +4005,44 @@
               );
               m.SetPlaytimeFromGlobalMS(e), l(e);
             }, [m, a, l, c]),
-            n.createElement(qe, { offsetPX: a, direction: "left" })
+            n.createElement(it, { offsetPX: a, direction: "left" })
           );
         }),
-        Ue = (0, n.memo)(function (e) {
+        et = (0, n.memo)(function (e) {
           const {
               isActive: t,
               setControlState: r,
               setRangeControlPX: i,
               pxOffset: a,
             } = e,
-            l = (0, P.oR)();
+            l = T();
           return t
-            ? n.createElement(He, {
+            ? n.createElement(tt, {
                 setControlState: r,
                 setRangeControlPX: i,
                 pxOffset: a,
               })
-            : n.createElement(je, {
+            : n.createElement(rt, {
                 offsetMS: l,
                 direction: "right",
                 setControlState: r,
                 setRangeControlPX: i,
               });
         }),
-        He = (0, n.memo)(function (e) {
+        tt = (0, n.memo)(function (e) {
           const { setControlState: t, setRangeControlPX: r, pxOffset: a } = e,
-            l = (0, P.pT)(),
-            o = (0, P.wR)(),
-            c = y(),
-            m = (0, B.we)(),
-            u = Se(),
-            h = be(),
+            l = (0, n.useContext)(M).setEndMS,
+            o = C(),
+            c = I(),
+            m = (0, z.we)(),
+            u = Xe(),
+            h = Ge(),
             _ = (0, i.SZ)(() => c.GetScrollableWidthPX()),
             g = (0, i.SZ)(() => c.GetScrollWindowWidth()),
             f = (0, n.useMemo)(
               () => ({
-                rightBreakpoint: (0, s.yj)(g * wt),
-                leftBreakpoint: (0, s.yj)(g * It),
+                rightBreakpoint: (0, s.yj)(g * Zt),
+                leftBreakpoint: (0, s.yj)(g * Vt),
               }),
               [g],
             ),
@@ -4441,17 +4144,17 @@
               );
               m.SetPlaytimeFromGlobalMS(e), m.SetPlaybackStop(e), l(e);
             }, [m, a, l, c]),
-            n.createElement(qe, { offsetPX: a, direction: "right" })
+            n.createElement(it, { offsetPX: a, direction: "right" })
           );
         });
-      const je = (0, n.memo)(function (e) {
+      const rt = (0, n.memo)(function (e) {
           const {
               offsetMS: t,
               direction: r,
               setControlState: a,
               setRangeControlPX: l,
             } = e,
-            o = y(),
+            o = I(),
             s = (0, i.SZ)(() => o.ConvertGlobalMSToGlobalPXOffset(t));
           (0, n.useEffect)(
             () => (
@@ -4464,7 +4167,7 @@
           );
           const c = (0, n.useCallback)(
             (e) => {
-              const t = (0, A.RA)(e);
+              const t = (0, q.RA)(e);
               let n, i;
               const l = () => {
                 a(r), n();
@@ -4481,32 +4184,32 @@
           );
           return n.createElement(
             "div",
-            { className: We.InactiveSelectedRangeControl, onMouseDown: c },
-            n.createElement(qe, { offsetPX: s.valPX, direction: r }),
+            { className: je.InactiveSelectedRangeControl, onMouseDown: c },
+            n.createElement(it, { offsetPX: s.valPX, direction: r }),
           );
         }),
-        $e = (0, n.memo)(function (e) {
+        nt = (0, n.memo)(function (e) {
           const { startOffsetPX: t, endOffsetPX: r, className: i } = e,
             a = { width: r - t || 0, transform: `translateX(${t}px)` };
           return n.createElement("div", {
-            className: (0, o.Z)(We.RangeMask, i),
+            className: (0, o.Z)(je.RangeMask, i),
             style: a,
           });
         }),
-        qe = (0, n.memo)(function (e) {
+        it = (0, n.memo)(function (e) {
           const { direction: t, offsetPX: r } = e,
             i = { transform: `translateX(${r}px)` };
           return n.createElement(
             "div",
-            { className: We.RangeControl, style: i },
+            { className: je.RangeControl, style: i },
             n.createElement(
               "div",
-              { className: (0, o.Z)(We.RangeIcon, "left" === t && We.Left) },
-              n.createElement(Je, { innerFill: "#171d25", direction: t }),
+              { className: (0, o.Z)(je.RangeIcon, "left" === t && je.Left) },
+              n.createElement(at, { innerFill: "#171d25", direction: t }),
             ),
           );
         });
-      function Je(e) {
+      function at(e) {
         return n.createElement(
           "svg",
           {
@@ -4539,16 +4242,16 @@
           }),
         );
       }
-      var Ke = r(7023);
-      const Ye = n.memo(function (e) {
-          const t = y(),
+      var lt = r(60024);
+      const ot = n.memo(function (e) {
+          const t = I(),
             r = (0, i.SZ)(() => t.GetVisibleWindowRelativeTimelines());
           return n.createElement(
             n.Fragment,
             null,
             r.map((e) => {
               const r = t.GetTimeRecorded(e.timelineID);
-              return n.createElement(Qe, {
+              return n.createElement(st, {
                 key: e.timelineID,
                 startPX: e.nVisibleStartPX,
                 timestamp: r,
@@ -4557,32 +4260,32 @@
             }),
           );
         }),
-        Qe = n.memo(function (e) {
+        st = n.memo(function (e) {
           const { timestamp: t, startPX: r, managerView: i } = e,
-            a = (0, B.we)().GetRecordingMode(),
-            l = (0, z.m9)(t);
+            a = (0, z.we)().GetRecordingMode(),
+            l = (0, J.m9)(t);
           return n.createElement(
             "div",
             {
               className: (0, o.Z)(
-                Ke.TimelineRelativeDate,
-                Ke[a],
-                i && Ke.ManagerView,
+                lt.TimelineRelativeDate,
+                lt[a],
+                i && lt.ManagerView,
               ),
               style: { transform: `translateX(${r.valPX}px)` },
             },
             l,
           );
         });
-      var et = r(90722);
-      const tt = (0, n.memo)(function (e) {
-        const t = y(),
+      var ct = r(64287);
+      const mt = (0, n.memo)(function (e) {
+        const t = I(),
           r = (0, i.SZ)(() => t.GetWindowRelativeRecordings());
         return n.createElement(
           n.Fragment,
           null,
           r.map((e) =>
-            n.createElement(rt, {
+            n.createElement(dt, {
               key: e.recordingID,
               startPX: e.nStartPX.valPX,
               endPX: e.nEndPX.valPX,
@@ -4590,23 +4293,23 @@
           ),
         );
       });
-      function rt(e) {
+      function dt(e) {
         const { endPX: t, startPX: r } = e,
           i = { width: t - r || 0, transform: `translateX(${r}px)` };
         return n.createElement("div", {
-          className: et.RecordingDecorator,
+          className: ct.RecordingDecorator,
           style: i,
         });
       }
-      var nt = r(88068);
-      const it = (0, n.memo)(function (e) {
-          const t = y(),
+      var ut = r(91839);
+      const ht = (0, n.memo)(function (e) {
+          const t = I(),
             r = (0, i.SZ)(() => t.GetWindowRelativeClips());
           return n.createElement(
             n.Fragment,
             null,
             r.map((e) =>
-              n.createElement(at, {
+              n.createElement(_t, {
                 key: e.clipID,
                 startPX: e.nStartPX.valPX,
                 endPX: e.nEndPX.valPX,
@@ -4614,26 +4317,26 @@
             ),
           );
         }),
-        at = (0, n.memo)(function (e) {
+        _t = (0, n.memo)(function (e) {
           const { endPX: t, startPX: r } = e,
             i = { width: t - r || 0, transform: `translateX(${r}px)` };
           return n.createElement("div", {
-            className: nt.ClipDecorator,
+            className: ut.ClipDecorator,
             style: i,
           });
         });
-      var lt = r(15352);
-      function ot(e, t) {
+      var gt = r(74875);
+      function ft(e, t) {
         return e.globalOffsetMS.valMS - t.globalOffsetMS.valMS;
       }
-      function st(e, t) {
+      function St(e, t) {
         return parseInt(e.time) - parseInt(t.time);
       }
-      function ct(e) {
-        const t = y(),
+      function bt(e) {
+        const t = I(),
           r = (0, i.SZ)(() => t.GetTimelinesInWindow()),
           a = n.useMemo(() => {
-            const e = [...r].sort(ot);
+            const e = [...r].sort(ft);
             let i = [];
             for (const r of e) {
               const e = r.globalOffsetMS,
@@ -4643,7 +4346,7 @@
                 );
               if ("loaded" != n) continue;
               let l;
-              a.sort(st);
+              a.sort(St);
               for (let r of a) {
                 let n = r;
                 if ((null == l ? void 0 : l.title) == n.title) continue;
@@ -4659,7 +4362,7 @@
               let l;
               e < i.length - 1 && (l = i[e + 1].nOffsetPX),
                 a.push(
-                  n.createElement(mt, {
+                  n.createElement(vt, {
                     key: t.time + t.title,
                     startPX: r,
                     endPX: l,
@@ -4671,7 +4374,7 @@
           }, [t, r]);
         return n.createElement(n.Fragment, null, a);
       }
-      function mt(e) {
+      function vt(e) {
         const { title: t, startPX: r, endPX: i } = e;
         let a = {
           transform: `translateX(${r.valPX}px)`,
@@ -4679,38 +4382,38 @@
         };
         return n.createElement(
           "div",
-          { className: lt.TimelineRelativeTimestampContainer, style: a },
+          { className: gt.TimelineRelativeTimestampContainer, style: a },
           n.createElement(
             "div",
-            { className: lt.TimelineRelativeTimestamp },
+            { className: gt.TimelineRelativeTimestamp },
             t,
           ),
         );
       }
-      var dt,
-        ut = r(7610),
-        ht = r(81768);
-      function _t() {
+      var Pt,
+        Mt = r(95694),
+        pt = r(57003);
+      function Ct() {
         const e = (function (e) {
           const t = (0, v.D0)().find((t) => t.game_id() == e);
-          if (!t) return dt.NotRecording;
+          if (!t) return Pt.NotRecording;
           switch (t.recording_type()) {
             default:
             case 0:
             case 1:
-              return dt.NotRecording;
+              return Pt.NotRecording;
             case 2:
-              return dt.ManualRecording;
+              return Pt.ManualRecording;
             case 3:
-              return dt.BackgroundRecording;
+              return Pt.BackgroundRecording;
           }
-        })((0, B.we)().GetGameID());
-        return e === dt.NotRecording || e === dt.NotRunning
+        })((0, z.we)().GetGameID());
+        return e === Pt.NotRecording || e === Pt.NotRunning
           ? null
-          : n.createElement(gt, null);
+          : n.createElement(Tt, null);
       }
-      function gt(e) {
-        const t = (0, B.we)(),
+      function Tt(e) {
+        const t = (0, z.we)(),
           r = (0, i.SZ)(() => t.GetIsLiveEdge()),
           a = n.useCallback(() => {
             t.SetHidePlayer(!1);
@@ -4718,20 +4421,20 @@
             t.SeekToGlobalOffsetMS(e.valMS), t.FocusGlobalMS(e);
           }, [t]);
         return n.createElement(
-          K.HP,
+          le.HP,
           {
-            className: ht.GoLiveButtonCtn,
-            toolTipContent: (0, z.Xx)("#Playback_JumpToLatest"),
+            className: pt.GoLiveButtonCtn,
+            toolTipContent: (0, J.Xx)("#Playback_JumpToLatest"),
             direction: "bottom",
           },
           n.createElement(
-            F.zx,
+            U.zx,
             {
               disabled: r,
               onClick: a,
-              className: (0, o.Z)(ht.GoLiveButton, r && ht.IsLive),
+              className: (0, o.Z)(pt.GoLiveButton, r && pt.IsLive),
             },
-            n.createElement(Q.sR, null),
+            n.createElement(se.sR, null),
           ),
         );
       }
@@ -4741,22 +4444,22 @@
           (e.ManualRecording = "ManualRecording"),
           (e.BackgroundRecording = "BackgroundRecording"),
           (e.ForeverRecording = "ForeverRecording");
-      })(dt || (dt = {}));
-      var ft = r(94580),
-        St = r(16826);
-      function bt(e) {
-        const t = y(),
-          r = (0, P.NN)(),
-          a = (0, P._H)(),
-          l = (0, B.we)(),
+      })(Pt || (Pt = {}));
+      var yt = r(99463),
+        Xt = r(58538);
+      function Gt(e) {
+        const t = I(),
+          r = G(),
+          a = p(),
+          l = (0, z.we)(),
           s = (0, i.SZ)(() => t.GetCurrentZoomScale()),
           c = (0, i.SZ)(() => t.GetMaxZoomScale()),
           m = (0, n.useCallback)(() => {
-            const e = vt(t, l, r, a);
+            const e = kt(t, l, r, a);
             t.ZoomIn(e);
           }, [r, l, a, t]),
           d = (0, n.useCallback)(() => {
-            const e = vt(t, l, r, a);
+            const e = kt(t, l, r, a);
             t.ZoomOut(e);
           }, [r, l, a, t]);
         let u = g.length - 1,
@@ -4768,49 +4471,49 @@
         let f = { width: `${(((_ - h) / (u - h)) * 100).toFixed(0)}%` };
         return n.createElement(
           "div",
-          { className: ft.ZoomControls },
+          { className: yt.ZoomControls },
           n.createElement(
-            K.HP,
+            le.HP,
             {
-              className: ft.ZoomTooltipCtn,
+              className: yt.ZoomTooltipCtn,
               direction: "bottom",
-              toolTipContent: (0, z.Xx)("#TimelineDialog_Decrease_Resolution"),
+              toolTipContent: (0, J.Xx)("#TimelineDialog_Decrease_Resolution"),
             },
             n.createElement(
-              F.zx,
+              U.zx,
               {
                 disabled: s >= c,
-                className: (0, o.Z)(ft.ZoomIcon, s >= c && ft.Disabled),
+                className: (0, o.Z)(yt.ZoomIcon, s >= c && yt.Disabled),
                 onClick: d,
               },
-              n.createElement(St.WF_, null),
+              n.createElement(Xt.WF_, null),
             ),
           ),
           n.createElement(
             "div",
-            { className: ft.ResolutionCtn },
-            n.createElement("div", { className: ft.ResolutionFill, style: f }),
+            { className: yt.ResolutionCtn },
+            n.createElement("div", { className: yt.ResolutionFill, style: f }),
           ),
           n.createElement(
-            K.HP,
+            le.HP,
             {
-              className: ft.ZoomTooltipCtn,
+              className: yt.ZoomTooltipCtn,
               direction: "bottom",
-              toolTipContent: (0, z.Xx)("#TimelineDialog_Increase_Resolution"),
+              toolTipContent: (0, J.Xx)("#TimelineDialog_Increase_Resolution"),
             },
             n.createElement(
-              F.zx,
+              U.zx,
               {
                 disabled: s <= g[u],
-                className: (0, o.Z)(ft.ZoomIcon, s <= g[u] && ft.Disabled),
+                className: (0, o.Z)(yt.ZoomIcon, s <= g[u] && yt.Disabled),
                 onClick: m,
               },
-              n.createElement(St.mm_, null),
+              n.createElement(Xt.mm_, null),
             ),
           ),
         );
       }
-      function vt(e, t, r, n) {
+      function kt(e, t, r, n) {
         const i = e.GetVisualWindowStartPX(),
           a = e.GetVisualWindowEndPX(),
           l = t.GetGlobalMSPlaytime();
@@ -4832,58 +4535,10 @@
           if (r > i.valPX && r < a.valPX) return r;
         }
       }
-      var Pt = r(88199),
-        pt = r(33337);
-      const Mt = "--:--";
-      function Ct() {
-        const e = (0, B.we)(),
-          t = (0, i.SZ)(() => e.GetTimelineRelativePlayback()),
-          r = (0, n.useMemo)(
-            () =>
-              isNaN(t.timelineDuration)
-                ? Mt
-                : (0, T.SF)(t.timelinePlaybackMS.valMS / 1e3, !1),
-            [t.timelineDuration, t.timelinePlaybackMS.valMS],
-          ),
-          a = (0, n.useMemo)(
-            () =>
-              isNaN(t.timelineDuration)
-                ? Mt
-                : (0, T.SF)(t.timelineDuration / 1e3, !1),
-            [t.timelineDuration],
-          );
-        return n.createElement("div", { className: pt.TimeBar }, `${r} / ${a}`);
-      }
-      function yt() {
-        const e = (0, B.we)(),
-          t = (0, i.SZ)(() => e.GetGlobalMSPlaytime()),
-          { nGlobalEndMS: r, nGlobalStartMS: a } = (0, P._H)(),
-          l = (0, n.useMemo)(
-            () =>
-              t.valMS > r.valMS || t.valMS < a.valMS
-                ? Mt
-                : (0, T.SF)((t.valMS - a.valMS) / 1e3, !1),
-            [t.valMS, r.valMS, a.valMS],
-          ),
-          s = (0, n.useMemo)(
-            () => (0, T.SF)((r.valMS - a.valMS) / 1e3, !1),
-            [r.valMS, a.valMS],
-          );
-        return n.createElement(
-          "div",
-          { className: (0, o.Z)(pt.TimeBar, pt.RangeSelection) },
-          `${l} / ${s}`,
-        );
-      }
-      function Tt() {
-        return (0, P.NN)()
-          ? n.createElement(yt, null)
-          : n.createElement(Ct, null);
-      }
-      function kt(e) {
+      function Rt(e) {
         const { children: t, className: r } = e,
-          a = (0, B.we)(),
-          l = y(),
+          a = (0, z.we)(),
+          l = I(),
           s = n.useCallback(
             (e) => {
               const t = e.target.getBoundingClientRect();
@@ -4940,54 +4595,48 @@
             { onWheel: m, onMouseEnter: d, onMouseLeave: u },
             n.createElement(
               "div",
-              { className: ut.LeftControlsAndContent },
+              { className: Mt.LeftControlsAndContent },
               n.createElement(
                 "div",
-                { ref: c, className: (0, o.Z)(ut.ContentAndGradient, r) },
+                { ref: c, className: (0, o.Z)(Mt.ContentAndGradient, r) },
                 t,
-                n.createElement(Gt, { timelineView: l }),
+                n.createElement(Et, { timelineView: l }),
               ),
-              a.GetRecordingMode() === B.tP.Overlay &&
-                n.createElement(_t, null),
-              n.createElement(
-                "div",
-                { className: ut.StartClipRangeButton },
-                n.createElement(Pt.H_, null),
-              ),
+              a.GetRecordingMode() === z.tP.Overlay &&
+                n.createElement(Ct, null),
             ),
             n.createElement(
               "div",
-              { className: ut.ScrollbarAndSiblings },
-              n.createElement(Rt, null),
+              { className: Mt.ScrollbarAndSiblings },
+              n.createElement(Ot, null),
               n.createElement(
                 "div",
-                { className: ut.Controls },
-                n.createElement(bt, null),
-                n.createElement(Tt, null),
+                { className: Mt.Controls },
+                n.createElement(Gt, null),
               ),
             ),
           )
         );
       }
-      const Gt = (0, n.memo)(function (e) {
+      const Et = (0, n.memo)(function (e) {
         const { timelineView: t } = e,
           r = (0, i.SZ)(() => t.GetVisualWindowStartPX()),
           a = (0, i.SZ)(() => t.BReachedMaxScroll());
         return n.createElement(
           "div",
-          { className: ut.ScrollGradientCtn },
+          { className: Mt.ScrollGradientCtn },
           n.createElement("div", {
             className: (0, o.Z)(
-              ut.FrontGradient,
-              0 === r.valPX && ut.HideGradient,
+              Mt.FrontGradient,
+              0 === r.valPX && Mt.HideGradient,
             ),
           }),
           n.createElement("div", {
-            className: (0, o.Z)(ut.EndGradient, a && ut.HideGradient),
+            className: (0, o.Z)(Mt.EndGradient, a && Mt.HideGradient),
           }),
         );
       });
-      function Rt() {
+      function Ot() {
         const [e, t] = (0, n.useState)({
             scrollBarWidth: 0,
             scrollBarXOffset: 0,
@@ -4996,7 +4645,7 @@
             const r = e.target.getBoundingClientRect();
             t({ scrollBarWidth: r.width, scrollBarXOffset: r.x });
           }, []),
-          a = y(),
+          a = I(),
           l = (0, i.SZ)(() => a.GetScrollableWidthWithOffsets()),
           s = (0, i.SZ)(() => a.GetVisualWidth()),
           c = (0, n.useMemo)(
@@ -5008,14 +4657,14 @@
           "div",
           {
             className: (0, o.Z)(
-              ut.ScrollBarCtn,
+              Mt.ScrollBarCtn,
               Math.round(c) === Math.round(e.scrollBarWidth) &&
-                ut.HideScrollBar,
+                Mt.HideScrollBar,
             ),
             ref: m,
           },
-          n.createElement(Xt, { timelineView: a, scrollSize: e }),
-          n.createElement(Ot, {
+          n.createElement(wt, { timelineView: a, scrollSize: e }),
+          n.createElement(Dt, {
             scrollSize: e,
             timelineView: a,
             timelineWidth: l,
@@ -5023,9 +4672,9 @@
           }),
         );
       }
-      function Xt(e) {
+      function wt(e) {
         const { timelineView: t, scrollSize: r } = e,
-          i = (0, B.we)(),
+          i = (0, z.we)(),
           a = (function (e, t) {
             const r = (0, n.useRef)(),
               i = (0, n.useRef)(),
@@ -5092,8 +4741,8 @@
           );
         return n.createElement(
           "div",
-          Object.assign({ className: ut.ScrollTrack }, a),
-          n.createElement(Et, {
+          Object.assign({ className: Mt.ScrollTrack }, a),
+          n.createElement(It, {
             timelineView: t,
             playbackCoordinator: i,
             fnConvertGlobalPXToTrackPX: l,
@@ -5104,7 +4753,7 @@
           }),
         );
       }
-      function Et(e) {
+      function It(e) {
         const {
             timelineView: t,
             playbackCoordinator: r,
@@ -5120,7 +4769,7 @@
           });
         if (!l) return null;
         return n.createElement("div", {
-          className: ut.PlayHeadAnnotation,
+          className: Mt.PlayHeadAnnotation,
           onClick: () => {
             const e = r.GetGlobalMSPlaytime();
             t.ScrollToCenteredGlobalMS(e);
@@ -5130,8 +4779,8 @@
       }
       function Bt(e) {
         const { timelineView: t, fnConvertGlobalPXToTrackPX: r } = e,
-          a = (0, P.NN)(),
-          l = (0, P._H)(),
+          a = G(),
+          l = p(),
           o = (0, i.SZ)(() => {
             if (a && t.BInitialized()) {
               const e = Math.floor(
@@ -5146,7 +4795,7 @@
           });
         if (!o) return null;
         return n.createElement("div", {
-          className: ut.RangeAnnotation,
+          className: Mt.RangeAnnotation,
           onClick: () => {
             t.ScrollToCenteredGlobalMS(l.nGlobalStartMS);
           },
@@ -5156,7 +4805,7 @@
           },
         });
       }
-      function Ot(e) {
+      function Dt(e) {
         const {
             scrollSize: t,
             timelineWidth: r,
@@ -5183,7 +4832,7 @@
                 (t) => {
                   c(h), o(!0);
                   const r = t.nativeEvent.offsetX,
-                    n = (0, A.RA)(t);
+                    n = (0, q.RA)(t);
                   let i, a;
                   const l = (t) => {
                     c(t.clientX - e.scrollBarXOffset - r);
@@ -5213,21 +4862,106 @@
             );
           })(t, r, a, l);
         return n.createElement("div", {
-          className: ut.ScrollThumb,
+          className: Mt.ScrollThumb,
           style: { width: a, transform: `translateX(${o}px)` },
           onMouseDown: s,
         });
       }
-      const wt = 0.85,
-        It = 0.15;
-      function Dt(e) {
+      r(19416);
+      var Ft = r(65713),
+        Lt = r.n(Ft);
+      function Wt() {
+        const e = I(),
+          t = (0, i.SZ)(() => e.GetWindowRelativeTimelines());
+        return n.createElement(
+          n.Fragment,
+          null,
+          t.map((e) =>
+            n.createElement(At, {
+              key: e.timelineID,
+              timelineID: e.timelineID,
+              startPX: e.nStartPX,
+              endPX: e.nEndPX,
+              startMS: e.nTimelineStartMS,
+            }),
+          ),
+        );
+      }
+      const At = n.memo(function (e) {
+        const { timelineID: t, startPX: r, endPX: a, startMS: l } = e,
+          o = I(),
+          c = (0, i.SZ)(() => o.GetCurrentZoomScale()),
+          m = (S(c), o.GetGameID()),
+          d = 108,
+          u = (0, i.SZ)(() => {
+            var e;
+            const r = o.FindTimelineOffsets(t);
+            return r &&
+              (null === (e = r.recordingOffsets) || void 0 === e
+                ? void 0
+                : e.length)
+              ? r.recordingOffsets[0].timelineOffsetMS.valMS
+              : 0;
+          }),
+          h = (0, n.useMemo)(() => {
+            const e = c * d,
+              r = (0, s.pX)(Math.ceil(l.valMS / e) * e + u),
+              n = o.ConvertTimelineRelativeMSToGlobalPX(t, r),
+              i = a.valPX - n.valPX,
+              m = Math.ceil(i / d);
+            return Array.from({ length: m }).map((i, a) => {
+              const l = r.valMS + e * a,
+                s = n.valPX + a * d,
+                c = l / e;
+              return {
+                key: `${t}_${l}`,
+                offsetPX: s,
+                timeMS: o.ConvertTimelineRelativeOffsetToGlobalOffsetMS(t, l),
+                nTimelineRelativeThumbnailIndex: c,
+              };
+            });
+          }, [c, d, l.valMS, u, o, t, a.valPX]);
+        return h
+          ? n.createElement(
+              n.Fragment,
+              null,
+              h.map((e) =>
+                n.createElement(zt, {
+                  key: e.key,
+                  gameID: m,
+                  nGlobalOffsetMS: e.timeMS,
+                  thumbnailWidthPX: d,
+                }),
+              ),
+            )
+          : null;
+      });
+      function zt(e) {
+        const { nGlobalOffsetMS: t, thumbnailWidthPX: r, gameID: a } = e,
+          l = I(),
+          o = (0, i.SZ)(() => l.ConvertGlobalMSToGlobalPXOffset((0, s.Z6)(t))),
+          c = (0, oe.sC)(a, t, r);
+        return n.createElement(
+          "div",
+          {
+            className: Lt().ThumbnailImage,
+            style: { transform: `translateX(${o.valPX}px)` },
+          },
+          Boolean(c) &&
+            n.createElement("img", { src: c, style: { width: `${r}px` } }),
+        );
+      }
+      var xt = r(68785);
+      const Zt = 0.85,
+        Vt = 0.15;
+      function Nt(e) {
         const { loader: t, className: r, clipSummaries: l, managerView: s } = e,
           c = (0, i.SZ)(() => t.BInitialized()),
-          m = (0, B.we)();
+          m = (0, z.we)();
         c || n.createElement("div", { className: a.LoadingTimeline });
         let d = (0, o.Z)(a.ScrollAndControlsCtn, s && a.ManagerView, r);
         return n.createElement(
-          C,
+          w,
           {
             loader: t,
             clipSummaries: l,
@@ -5238,24 +4972,25 @@
             "div",
             { className: d },
             n.createElement(
-              kt,
+              Rt,
               { className: a.TimelineScrollContainer },
-              n.createElement(Ft, null),
+              n.createElement(Ut, null),
             ),
           ),
         );
       }
-      const Ft = (0, n.memo)(function (e) {
-        const t = y();
+      const Ut = (0, n.memo)(function (e) {
+        const t = I();
         return (0, i.SZ)(() => t.BInitialized())
-          ? n.createElement(Lt, null)
+          ? n.createElement(Ht, null)
           : null;
       });
-      function Lt() {
-        const e = y(),
+      function Ht() {
+        const e = I(),
           t = (0, i.SZ)(() => e.GetScrollableWidthPX()),
           r = (0, i.SZ)(() => e.GetVisualWindowStartPX()),
-          l = (0, i.SZ)(() => e.GetTimelineGapWidth());
+          l = (0, i.SZ)(() => e.GetTimelineGapWidth()),
+          o = xt.c.Get().IsDebugLogEnabled("GR");
         return n.createElement(
           "div",
           {
@@ -5267,63 +5002,69 @@
               transform: `translateX(${-r.valPX}px)`,
             },
           },
+          o &&
+            n.createElement(
+              jt,
+              { id: "thumbnailbar", className: a.Thumbnails },
+              n.createElement(Wt, null),
+            ),
           n.createElement(
-            Wt,
+            jt,
             { id: "recordings", className: a.RecordingDecorators },
-            n.createElement(tt, null),
+            n.createElement(mt, null),
           ),
           n.createElement(
-            Wt,
+            jt,
             { id: "clips", className: a.ClipDecorators },
-            n.createElement(it, null),
+            n.createElement(ht, null),
           ),
           n.createElement(
-            Wt,
+            jt,
             { id: "game_modes", className: a.GameModes },
-            n.createElement(de, null),
+            n.createElement(Pe, null),
           ),
           n.createElement(
-            Wt,
+            jt,
             { id: "date_decorators", className: a.DateDecorator },
-            n.createElement(Ye, null),
+            n.createElement(ot, null),
           ),
           n.createElement(
-            Wt,
+            jt,
             { id: "ticks", className: a.BackgroundTicks },
-            n.createElement(k, null),
+            n.createElement(D, null),
           ),
           n.createElement(
-            Wt,
+            jt,
             { id: "highlights", className: a.Highlights },
-            n.createElement(oe, null),
+            n.createElement(fe, null),
           ),
           n.createElement(
-            Wt,
+            jt,
             { id: "timestamps", className: a.Timestamps },
-            n.createElement(ct, null),
+            n.createElement(bt, null),
           ),
           n.createElement(
-            fe,
+            ye,
             null,
             n.createElement(
-              Wt,
+              jt,
               { id: "range_selection", className: a.RangeSelector },
-              n.createElement(xe, null),
+              n.createElement($e, null),
             ),
             n.createElement(
-              Wt,
+              jt,
               { id: "seek_scrub", className: a.SeekScrubber },
-              n.createElement(we, null),
+              n.createElement(Ze, null),
             ),
             n.createElement(
-              Wt,
+              jt,
               { id: "play_head", className: a.PlayHead },
-              n.createElement(Ge, null),
+              n.createElement(Fe, null),
             ),
           ),
         );
       }
-      function Wt(e) {
+      function jt(e) {
         const { children: t, id: r, className: i } = e;
         return n.createElement(
           "div",
@@ -5332,21 +5073,21 @@
         );
       }
     },
-    77613: (e, t, r) => {
+    86357: (e, t, r) => {
       "use strict";
       r.d(t, { dF: () => S, tP: () => n, we: () => b });
       var n,
-        i = r(33940),
-        a = r(89526),
-        l = r(4306),
-        o = r(59621),
-        s = r(97578),
-        c = r(83315),
-        m = r(65689),
-        d = r(36041),
-        u = r(50796),
-        h = r(11837),
-        _ = r(77822);
+        i = r(85556),
+        a = r(47427),
+        l = r(20417),
+        o = r(54842),
+        s = r(12015),
+        c = r(30750),
+        m = r(91707),
+        d = r(45651),
+        u = r(40420),
+        h = r(83999),
+        _ = r(63201);
       !(function (e) {
         (e.Overlay = "Overlay"), (e.Clips = "Clips"), (e.Dialog = "Dialog");
       })(n || (n = {}));
@@ -5778,165 +5519,12 @@
         return (0, a.useContext)(f).timelinePlaybackCoordinator;
       }
     },
-    88199: (e, t, r) => {
+    6279: (e, t, r) => {
       "use strict";
-      r.d(t, { H_: () => f, QY: () => h, a7: () => g, mp: () => _ });
-      var n = r(84343),
-        i = r(19304),
-        a = r(14826),
-        l = r(48704),
-        o = r(77613),
-        s = r(89526),
-        c = r(818),
-        m = r(1345),
-        d = r.n(m),
-        u = r(57605);
-      function h(e) {
-        const t = (0, o.we)();
-        return s.createElement(
-          n.HP,
-          {
-            direction: "top",
-            toolTipContent: (0, a.Xx)(
-              "#Playback_UserSelectionControls_AddUserMarker",
-            ),
-          },
-          s.createElement(
-            u.zx,
-            {
-              onClick: () => {
-                const e = t.GetGlobalMSPlaytime();
-                t.AddUserMarkerAtGlobalMS(e),
-                  t.SeekToGlobalOffsetMS(e.valMS),
-                  t.FocusGlobalMS(e);
-              },
-              className: (0, i.Z)(
-                d().UserSelectionButton,
-                d().AddUserMarker,
-                e.className,
-              ),
-            },
-            s.createElement(c.KT, null),
-            s.createElement(
-              "span",
-              { className: d().AddMarkerLabel },
-              (0, a.Xx)("#TimelineDialog_AddMarker"),
-            ),
-          ),
-        );
-      }
-      function _(e) {
-        const t = (0, l.q1)(),
-          r = (0, l.Op)(),
-          m = (0, o.we)();
-        if (!t) return null;
-        return s.createElement(
-          n.HP,
-          {
-            direction: "top",
-            toolTipContent: (0, a.Xx)(
-              "#Playback_UserSelectionControls_SetClipStart",
-            ),
-          },
-          s.createElement(
-            u.zx,
-            {
-              onClick: () => {
-                const e = m.GetGlobalMSPlaytime();
-                r(m, e, void 0),
-                  m.SeekToGlobalOffsetMS(e.valMS),
-                  m.FocusGlobalMS(e);
-              },
-              className: (0, i.Z)(
-                d().UserSelectionButton,
-                d().StartClipRange,
-                e.className,
-              ),
-            },
-            s.createElement(c.Eq, { direction: "left" }),
-          ),
-        );
-      }
-      function g(e) {
-        const t = (0, l.q1)(),
-          r = (0, l.Op)(),
-          m = (0, o.we)();
-        if (!t) return null;
-        return s.createElement(
-          n.HP,
-          {
-            direction: "top",
-            toolTipContent: (0, a.Xx)(
-              "#Playback_UserSelectionControls_SetClipEnd",
-            ),
-          },
-          s.createElement(
-            u.zx,
-            {
-              onClick: () => {
-                const e = m.GetGlobalMSPlaytime();
-                r(m, void 0, e),
-                  m.SeekToGlobalOffsetMS(e.valMS),
-                  m.FocusGlobalMS(e);
-              },
-              className: (0, i.Z)(
-                d().UserSelectionButton,
-                d().EndClipRange,
-                e.className,
-              ),
-            },
-            s.createElement(c.Eq, { direction: "right" }),
-          ),
-        );
-      }
-      function f(e) {
-        const t = (0, l.q1)(),
-          r = (0, l.NN)(),
-          m = (0, l.Kc)(),
-          h = (0, l.Op)(),
-          _ = (0, o.we)();
-        if (!t) return null;
-        return s.createElement(
-          n.HP,
-          {
-            direction: "top",
-            toolTipContent: (0, a.Xx)(
-              r
-                ? "#SeekBar_Clear_Selection"
-                : "#Playback_UserSelectionControls_SetClipStart",
-            ),
-          },
-          s.createElement(
-            u.zx,
-            {
-              onClick: () => {
-                if (r) m();
-                else {
-                  const e = _.GetGlobalMSPlaytime();
-                  h(_, e, void 0),
-                    _.SeekToGlobalOffsetMS(e.valMS),
-                    _.FocusGlobalMS(e);
-                }
-              },
-              className: (0, i.Z)(
-                d().UserSelectionButton,
-                d().InlineClipControl,
-                e.className,
-              ),
-            },
-            r
-              ? s.createElement(c.X, null)
-              : s.createElement(c.Eq, { direction: "left" }),
-          ),
-        );
-      }
-    },
-    52430: (e, t, r) => {
-      "use strict";
-      r.d(t, { qS: () => P, xG: () => k });
-      var n = r(45878),
-        i = r(50995),
-        a = r(68333);
+      r.d(t, { qS: () => P, xG: () => X });
+      var n = r(10059),
+        i = r(39087),
+        a = r(75997);
       const l = n.Message;
       class o extends l {
         static ImplementsStaticInterface() {}
@@ -6795,85 +6383,16 @@
           return "CGameRecording_GetSingleSharedClip_Request";
         }
       }
-      class p extends h {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            p.prototype.clip || i.aR(p.M()),
-            h.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            p.sm_m || (p.sm_m = { proto: p, fields: { clip: { n: 1, c: g } } }),
-            p.sm_m
-          );
-        }
-        static MBF() {
-          return p.sm_mbf || (p.sm_mbf = i.Bh(p.M())), p.sm_mbf;
-        }
-        toObject(e = !1) {
-          return p.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return i.TA(p.M(), e, t);
-        }
-        static fromObject(e) {
-          return i.aD(p.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new n.BinaryReader(e),
-            r = new p();
-          return p.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return i.F(p.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new n.BinaryWriter();
-          return p.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          i.l2(p.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new n.BinaryWriter();
-          return p.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CGameRecording_GetSingleSharedClip_Response";
-        }
-      }
       class M extends h {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            M.prototype.recording_id || i.aR(M.M()),
-            h.initialize(this, e, 0, -1, [4], null);
+            M.prototype.clip || i.aR(M.M()),
+            h.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
-            M.sm_m ||
-              (M.sm_m = {
-                proto: M,
-                fields: {
-                  recording_id: {
-                    n: 1,
-                    br: i.FE.readUint64String,
-                    bw: i.Xc.writeUint64String,
-                  },
-                  component_name: {
-                    n: 2,
-                    br: i.FE.readString,
-                    bw: i.Xc.writeString,
-                  },
-                  representation_name: {
-                    n: 3,
-                    br: i.FE.readString,
-                    bw: i.Xc.writeString,
-                  },
-                  segments_to_store: { n: 4, c: m, r: !0, q: !0 },
-                },
-              }),
+            M.sm_m || (M.sm_m = { proto: M, fields: { clip: { n: 1, c: g } } }),
             M.sm_m
           );
         }
@@ -6907,6 +6426,75 @@
         serializeBase64String() {
           var e = new n.BinaryWriter();
           return M.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CGameRecording_GetSingleSharedClip_Response";
+        }
+      }
+      class p extends h {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            p.prototype.recording_id || i.aR(p.M()),
+            h.initialize(this, e, 0, -1, [4], null);
+        }
+        static M() {
+          return (
+            p.sm_m ||
+              (p.sm_m = {
+                proto: p,
+                fields: {
+                  recording_id: {
+                    n: 1,
+                    br: i.FE.readUint64String,
+                    bw: i.Xc.writeUint64String,
+                  },
+                  component_name: {
+                    n: 2,
+                    br: i.FE.readString,
+                    bw: i.Xc.writeString,
+                  },
+                  representation_name: {
+                    n: 3,
+                    br: i.FE.readString,
+                    bw: i.Xc.writeString,
+                  },
+                  segments_to_store: { n: 4, c: m, r: !0, q: !0 },
+                },
+              }),
+            p.sm_m
+          );
+        }
+        static MBF() {
+          return p.sm_mbf || (p.sm_mbf = i.Bh(p.M())), p.sm_mbf;
+        }
+        toObject(e = !1) {
+          return p.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return i.TA(p.M(), e, t);
+        }
+        static fromObject(e) {
+          return i.aD(p.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new n.BinaryReader(e),
+            r = new p();
+          return p.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return i.F(p.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new n.BinaryWriter();
+          return p.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          i.l2(p.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new n.BinaryWriter();
+          return p.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CVideo_BeginGameRecordingSegmentsUpload_Request";
@@ -6967,18 +6555,18 @@
           return "CVideo_BeginGameRecordingSegmentsUpload_Response";
         }
       }
-      class y extends h {
+      class T extends h {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            y.prototype.recording_id || i.aR(y.M()),
+            T.prototype.recording_id || i.aR(T.M()),
             h.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
-            y.sm_m ||
-              (y.sm_m = {
-                proto: y,
+            T.sm_m ||
+              (T.sm_m = {
+                proto: T,
                 fields: {
                   recording_id: {
                     n: 1,
@@ -7012,57 +6600,20 @@
                   },
                 },
               }),
-            y.sm_m
+            T.sm_m
           );
         }
         static MBF() {
-          return y.sm_mbf || (y.sm_mbf = i.Bh(y.M())), y.sm_mbf;
-        }
-        toObject(e = !1) {
-          return y.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return i.TA(y.M(), e, t);
-        }
-        static fromObject(e) {
-          return i.aD(y.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new n.BinaryReader(e),
-            r = new y();
-          return y.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return i.F(y.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new n.BinaryWriter();
-          return y.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          i.l2(y.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new n.BinaryWriter();
-          return y.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CVideo_CommitGameRecordingSegmentsUpload_Request";
-        }
-      }
-      class T extends h {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(), h.initialize(this, e, 0, -1, void 0, null);
+          return T.sm_mbf || (T.sm_mbf = i.Bh(T.M())), T.sm_mbf;
         }
         toObject(e = !1) {
           return T.toObject(e, this);
         }
         static toObject(e, t) {
-          return e ? { $jspbMessageInstance: t } : {};
+          return i.TA(T.M(), e, t);
         }
         static fromObject(e) {
-          return new T();
+          return i.aD(T.M(), e);
         }
         static deserializeBinary(e) {
           let t = new n.BinaryReader(e),
@@ -7070,22 +6621,59 @@
           return T.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return e;
+          return i.F(T.MBF(), e, t);
         }
         serializeBinary() {
           var e = new n.BinaryWriter();
           return T.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
-        static serializeBinaryToWriter(e, t) {}
+        static serializeBinaryToWriter(e, t) {
+          i.l2(T.M(), e, t);
+        }
         serializeBase64String() {
           var e = new n.BinaryWriter();
           return T.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
+          return "CVideo_CommitGameRecordingSegmentsUpload_Request";
+        }
+      }
+      class y extends h {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(), h.initialize(this, e, 0, -1, void 0, null);
+        }
+        toObject(e = !1) {
+          return y.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return e ? { $jspbMessageInstance: t } : {};
+        }
+        static fromObject(e) {
+          return new y();
+        }
+        static deserializeBinary(e) {
+          let t = new n.BinaryReader(e),
+            r = new y();
+          return y.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return e;
+        }
+        serializeBinary() {
+          var e = new n.BinaryWriter();
+          return y.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {}
+        serializeBase64String() {
+          var e = new n.BinaryWriter();
+          return y.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
           return "CVideo_CommitGameRecordingSegmentsUpload_Response";
         }
       }
-      var k, G;
+      var X, G;
       !(function (e) {
         (e.CreateShareClip = function (e, t) {
           return e.SendMsg(
@@ -7107,16 +6695,16 @@
             return e.SendMsg(
               "GameRecordingClip.GetSingleSharedClip#1",
               (0, a.MD)(P, t),
-              p,
+              M,
               { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 },
             );
           });
-      })(k || (k = {})),
+      })(X || (X = {})),
         (function (e) {
           (e.BeginGameRecordingSegmentsUpload = function (e, t) {
             return e.SendMsg(
               "VideoClip.BeginGameRecordingSegmentsUpload#1",
-              (0, a.MD)(M, t),
+              (0, a.MD)(p, t),
               C,
               { ePrivilege: 1 },
             );
@@ -7124,8 +6712,8 @@
             (e.CommitGameRecordingSegmentsUpload = function (e, t) {
               return e.SendMsg(
                 "VideoClip.CommitGameRecordingSegmentsUpload#1",
-                (0, a.MD)(y, t),
-                T,
+                (0, a.MD)(T, t),
+                y,
                 { ePrivilege: 1 },
               );
             });

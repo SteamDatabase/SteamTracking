@@ -4571,6 +4571,12 @@ body.modals_BodyNoScrollDialog_3jhMI {
   animation-name: ItemFocusAnim-darkerGrey;
   z-index: 1;
 }
+.chatRoomHeader.GamepadMode,
+.GamepadMode .chatRoomHeader {
+  position: absolute;
+  bottom: 7px;
+  width: 100%;
+}
 .FriendPickerScrollPanel {
   padding: 1px 0;
 }
@@ -4956,6 +4962,10 @@ body.modals_BodyNoScrollDialog_3jhMI {
   background: transparent;
   z-index: 2;
 }
+.chatHeader.titleBarContainer.GamepadMode,
+.GamepadMode .chatHeader.titleBarContainer {
+  height: 100px;
+}
 .titleBarContainer.ChatTabs.GamepadMode,
 .GamepadMode .titleBarContainer.ChatTabs {
   padding-bottom: 8px;
@@ -5177,6 +5187,7 @@ body.modals_BodyNoScrollDialog_3jhMI {
   padding: 0px;
   height: 30px;
   padding-bottom: 8px;
+  justify-content: space-around;
 }
 .GamepadMode.friendlist .FriendsListSteamDeckTabs .SVGIcon_FavoriteFriends {
   margin-top: 3px;
@@ -5290,11 +5301,13 @@ body.modals_BodyNoScrollDialog_3jhMI {
 .GamepadMode.friendlist .TabPanelHeader .NewChatGroupButton,
 .GamepadMode.friendlist .TabPanelHeader .AddFriendButton,
 .GamepadMode.friendlist .TabPanelHeader .FriendsInvitesButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: #67707b;
-  width: 20px;
-  height: 20px;
+  width: 26px;
+  height: 26px;
   position: relative;
-  padding: 1px 3px 1px 3px;
   margin: 0 0px 0 4px;
   background-color: rgba(103, 112, 123, 0.25);
   border-radius: 3px;
@@ -5341,7 +5354,7 @@ body.modals_BodyNoScrollDialog_3jhMI {
   padding: 2px;
   line-height: 10px;
   align-self: center;
-  margin-left: -3px;
+  margin: 2px;
   z-index: 3;
   color: #0e141b;
   font-size: 12px;
@@ -5656,14 +5669,8 @@ body.modals_BodyNoScrollDialog_3jhMI {
 }
 .chatRoomGroupHeader.GamepadMode,
 .GamepadMode .chatRoomGroupHeader {
-  background-color: #0e141b;
-  box-shadow: 0 0 14px #0e141b;
   padding: 6px 4px 6px 10px;
   max-height: 34px;
-}
-.chatroom_SteamDeckChats_1QPlo.gpfocuswithin .chatRoomGroupHeader.GamepadMode,
-.chatroom_SteamDeckChats_1QPlo.gpfocuswithin .GamepadMode .chatRoomGroupHeader {
-  background-color: #23262e;
 }
 .chatRoomGroupHeader.GamepadMode .ChatRoomGroupAvatar,
 .GamepadMode .chatRoomGroupHeader .ChatRoomGroupAvatar {
@@ -5982,7 +5989,7 @@ body.modals_BodyNoScrollDialog_3jhMI {
   background-color: #0e141b;
   background-color: transparent;
   border-left: 2px solid rgba(103, 112, 123, 0.2);
-  margin-top: 6px;
+  margin-top: 18px;
   align-self: center;
   transition:
     opacity 0.21s ease-in-out,
@@ -6035,8 +6042,18 @@ body.modals_BodyNoScrollDialog_3jhMI {
 }
 .chatroom_ChatRoomGroupControlsSteamDeck_imObP
   > div.chatroom_currentUserInVoiceChannel_2TAg1
+  .SVGIcon_Button.SVGIcon_VoiceRoom {
+  color: rgba(255, 255, 255, 0.7);
+}
+.chatroom_ChatRoomGroupControlsSteamDeck_imObP
+  > div.chatroom_currentUserInVoiceChannel_2TAg1
   .chatroom_HasActiveVoiceRoom_3leHQ {
   color: #8f0;
+}
+.chatroom_ChatRoomGroupControlsSteamDeck_imObP
+  > div.chatroom_currentUserInVoiceChannel_2TAg1
+  .chatroom_VoiceChannelCount_115TN {
+  color: rgba(255, 255, 255, 0.7);
 }
 .SteamDeckChats.gpfocuswithin
   .chatroom_ChatRoomGroupControlsSteamDeck_imObP
@@ -6048,6 +6065,18 @@ body.modals_BodyNoScrollDialog_3jhMI {
   .chatroom_ChatRoomGroupControlsSteamDeck_imObP
   > div.chatroom_currentUserInVoiceChannel_2TAg1 {
   background-color: #59bf40;
+}
+.SteamDeckChats.gpfocuswithin
+  .chatroom_ChatRoomGroupControlsSteamDeck_imObP
+  > div.chatroom_currentUserInVoiceChannel_2TAg1
+  .SVGIcon_Button.SVGIcon_VoiceRoom {
+  color: #fff;
+}
+.SteamDeckChats.gpfocuswithin
+  .chatroom_ChatRoomGroupControlsSteamDeck_imObP
+  > div.chatroom_currentUserInVoiceChannel_2TAg1
+  .chatroom_VoiceChannelCount_115TN {
+  color: #fff;
 }
 .SteamDeckChats.gpfocuswithin
   .chatroom_ChatRoomGroupControlsSteamDeck_imObP
@@ -16412,6 +16441,12 @@ a.bbcodes_LinkButton_jPpgc:hover {
   animation-name: ItemFocusAnim-darkerGrey;
   z-index: 1;
 }
+.chatRoomHeader.GamepadMode,
+.GamepadMode .chatRoomHeader {
+  position: absolute;
+  bottom: 7px;
+  width: 100%;
+}
 .FriendPickerScrollPanel {
   padding: 1px 0;
 }
@@ -16798,6 +16833,10 @@ a.bbcodes_LinkButton_jPpgc:hover {
   background: transparent;
   z-index: 2;
 }
+.chatHeader.titleBarContainer.GamepadMode,
+.GamepadMode .chatHeader.titleBarContainer {
+  height: 100px;
+}
 .titleBarContainer.ChatTabs.GamepadMode,
 .GamepadMode .titleBarContainer.ChatTabs {
   padding-bottom: 8px;
@@ -17019,6 +17058,7 @@ a.bbcodes_LinkButton_jPpgc:hover {
   padding: 0px;
   height: 30px;
   padding-bottom: 8px;
+  justify-content: space-around;
 }
 .GamepadMode.friendlist .FriendsListSteamDeckTabs .SVGIcon_FavoriteFriends {
   margin-top: 3px;
@@ -17132,11 +17172,13 @@ a.bbcodes_LinkButton_jPpgc:hover {
 .GamepadMode.friendlist .TabPanelHeader .NewChatGroupButton,
 .GamepadMode.friendlist .TabPanelHeader .AddFriendButton,
 .GamepadMode.friendlist .TabPanelHeader .FriendsInvitesButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: #67707b;
-  width: 20px;
-  height: 20px;
+  width: 26px;
+  height: 26px;
   position: relative;
-  padding: 1px 3px 1px 3px;
   margin: 0 0px 0 4px;
   background-color: rgba(103, 112, 123, 0.25);
   border-radius: 3px;
@@ -17183,7 +17225,7 @@ a.bbcodes_LinkButton_jPpgc:hover {
   padding: 2px;
   line-height: 10px;
   align-self: center;
-  margin-left: -3px;
+  margin: 2px;
   z-index: 3;
   color: #0e141b;
   font-size: 12px;
@@ -17501,17 +17543,8 @@ a.bbcodes_LinkButton_jPpgc:hover {
 }
 .chatRoomGroupHeader.GamepadMode,
 .GamepadMode .chatRoomGroupHeader {
-  background-color: #0e141b;
-  box-shadow: 0 0 14px #0e141b;
   padding: 6px 4px 6px 10px;
   max-height: 34px;
-}
-.quickaccessvoicecontrolssteamdeck_SteamDeckChats_1oa5-.gpfocuswithin
-  .chatRoomGroupHeader.GamepadMode,
-.quickaccessvoicecontrolssteamdeck_SteamDeckChats_1oa5-.gpfocuswithin
-  .GamepadMode
-  .chatRoomGroupHeader {
-  background-color: #23262e;
 }
 .chatRoomGroupHeader.GamepadMode .ChatRoomGroupAvatar,
 .GamepadMode .chatRoomGroupHeader .ChatRoomGroupAvatar {
@@ -18391,6 +18424,12 @@ a.bbcodes_LinkButton_jPpgc:hover {
   animation-name: ItemFocusAnim-darkerGrey;
   z-index: 1;
 }
+.chatRoomHeader.GamepadMode,
+.GamepadMode .chatRoomHeader {
+  position: absolute;
+  bottom: 7px;
+  width: 100%;
+}
 .FriendPickerScrollPanel {
   padding: 1px 0;
 }
@@ -18776,6 +18815,10 @@ a.bbcodes_LinkButton_jPpgc:hover {
   background: transparent;
   z-index: 2;
 }
+.chatHeader.titleBarContainer.GamepadMode,
+.GamepadMode .chatHeader.titleBarContainer {
+  height: 100px;
+}
 .titleBarContainer.ChatTabs.GamepadMode,
 .GamepadMode .titleBarContainer.ChatTabs {
   padding-bottom: 8px;
@@ -18997,6 +19040,7 @@ a.bbcodes_LinkButton_jPpgc:hover {
   padding: 0px;
   height: 30px;
   padding-bottom: 8px;
+  justify-content: space-around;
 }
 .GamepadMode.friendlist .FriendsListSteamDeckTabs .SVGIcon_FavoriteFriends {
   margin-top: 3px;
@@ -19110,11 +19154,13 @@ a.bbcodes_LinkButton_jPpgc:hover {
 .GamepadMode.friendlist .TabPanelHeader .NewChatGroupButton,
 .GamepadMode.friendlist .TabPanelHeader .AddFriendButton,
 .GamepadMode.friendlist .TabPanelHeader .FriendsInvitesButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: #67707b;
-  width: 20px;
-  height: 20px;
+  width: 26px;
+  height: 26px;
   position: relative;
-  padding: 1px 3px 1px 3px;
   margin: 0 0px 0 4px;
   background-color: rgba(103, 112, 123, 0.25);
   border-radius: 3px;
@@ -19161,7 +19207,7 @@ a.bbcodes_LinkButton_jPpgc:hover {
   padding: 2px;
   line-height: 10px;
   align-self: center;
-  margin-left: -3px;
+  margin: 2px;
   z-index: 3;
   color: #0e141b;
   font-size: 12px;
@@ -19476,14 +19522,8 @@ a.bbcodes_LinkButton_jPpgc:hover {
 }
 .chatRoomGroupHeader.GamepadMode,
 .GamepadMode .chatRoomGroupHeader {
-  background-color: #0e141b;
-  box-shadow: 0 0 14px #0e141b;
   padding: 6px 4px 6px 10px;
   max-height: 34px;
-}
-.chattabs_SteamDeckChats_14odW.gpfocuswithin .chatRoomGroupHeader.GamepadMode,
-.chattabs_SteamDeckChats_14odW.gpfocuswithin .GamepadMode .chatRoomGroupHeader {
-  background-color: #23262e;
 }
 .chatRoomGroupHeader.GamepadMode .ChatRoomGroupAvatar,
 .GamepadMode .chatRoomGroupHeader .ChatRoomGroupAvatar {
@@ -19959,7 +19999,7 @@ a.bbcodes_LinkButton_jPpgc:hover {
   width: 100%;
   border-radius: 0;
   padding: 40px 12px 0px 6px;
-  height: 118px;
+  height: 100px;
 }
 .chattabs_ChatTab_2Vrcp.GamepadMode .chattabs_CloseButton_7gMwY,
 .GamepadMode .chattabs_ChatTab_2Vrcp .chattabs_CloseButton_7gMwY {
@@ -20408,6 +20448,12 @@ a.bbcodes_LinkButton_jPpgc:hover {
   animation-name: ItemFocusAnim-darkerGrey;
   z-index: 1;
 }
+.chatRoomHeader.GamepadMode,
+.GamepadMode .chatRoomHeader {
+  position: absolute;
+  bottom: 7px;
+  width: 100%;
+}
 .FriendPickerScrollPanel {
   padding: 1px 0;
 }
@@ -20793,6 +20839,10 @@ a.bbcodes_LinkButton_jPpgc:hover {
   background: transparent;
   z-index: 2;
 }
+.chatHeader.titleBarContainer.GamepadMode,
+.GamepadMode .chatHeader.titleBarContainer {
+  height: 100px;
+}
 .titleBarContainer.ChatTabs.GamepadMode,
 .GamepadMode .titleBarContainer.ChatTabs {
   padding-bottom: 8px;
@@ -21014,6 +21064,7 @@ a.bbcodes_LinkButton_jPpgc:hover {
   padding: 0px;
   height: 30px;
   padding-bottom: 8px;
+  justify-content: space-around;
 }
 .GamepadMode.friendlist .FriendsListSteamDeckTabs .SVGIcon_FavoriteFriends {
   margin-top: 3px;
@@ -21127,11 +21178,13 @@ a.bbcodes_LinkButton_jPpgc:hover {
 .GamepadMode.friendlist .TabPanelHeader .NewChatGroupButton,
 .GamepadMode.friendlist .TabPanelHeader .AddFriendButton,
 .GamepadMode.friendlist .TabPanelHeader .FriendsInvitesButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: #67707b;
-  width: 20px;
-  height: 20px;
+  width: 26px;
+  height: 26px;
   position: relative;
-  padding: 1px 3px 1px 3px;
   margin: 0 0px 0 4px;
   background-color: rgba(103, 112, 123, 0.25);
   border-radius: 3px;
@@ -21178,7 +21231,7 @@ a.bbcodes_LinkButton_jPpgc:hover {
   padding: 2px;
   line-height: 10px;
   align-self: center;
-  margin-left: -3px;
+  margin: 2px;
   z-index: 3;
   color: #0e141b;
   font-size: 12px;
@@ -21496,17 +21549,8 @@ a.bbcodes_LinkButton_jPpgc:hover {
 }
 .chatRoomGroupHeader.GamepadMode,
 .GamepadMode .chatRoomGroupHeader {
-  background-color: #0e141b;
-  box-shadow: 0 0 14px #0e141b;
   padding: 6px 4px 6px 10px;
   max-height: 34px;
-}
-.pagedcontent_SteamDeckChats_1VMXc.gpfocuswithin
-  .chatRoomGroupHeader.GamepadMode,
-.pagedcontent_SteamDeckChats_1VMXc.gpfocuswithin
-  .GamepadMode
-  .chatRoomGroupHeader {
-  background-color: #23262e;
 }
 .chatRoomGroupHeader.GamepadMode .ChatRoomGroupAvatar,
 .GamepadMode .chatRoomGroupHeader .ChatRoomGroupAvatar {
@@ -22280,6 +22324,12 @@ a.bbcodes_LinkButton_jPpgc:hover {
   animation-name: ItemFocusAnim-darkerGrey;
   z-index: 1;
 }
+.chatRoomHeader.GamepadMode,
+.GamepadMode .chatRoomHeader {
+  position: absolute;
+  bottom: 7px;
+  width: 100%;
+}
 .FriendPickerScrollPanel {
   padding: 1px 0;
 }
@@ -22665,6 +22715,10 @@ a.bbcodes_LinkButton_jPpgc:hover {
   background: transparent;
   z-index: 2;
 }
+.chatHeader.titleBarContainer.GamepadMode,
+.GamepadMode .chatHeader.titleBarContainer {
+  height: 100px;
+}
 .titleBarContainer.ChatTabs.GamepadMode,
 .GamepadMode .titleBarContainer.ChatTabs {
   padding-bottom: 8px;
@@ -22886,6 +22940,7 @@ a.bbcodes_LinkButton_jPpgc:hover {
   padding: 0px;
   height: 30px;
   padding-bottom: 8px;
+  justify-content: space-around;
 }
 .GamepadMode.friendlist .FriendsListSteamDeckTabs .SVGIcon_FavoriteFriends {
   margin-top: 3px;
@@ -22999,11 +23054,13 @@ a.bbcodes_LinkButton_jPpgc:hover {
 .GamepadMode.friendlist .TabPanelHeader .NewChatGroupButton,
 .GamepadMode.friendlist .TabPanelHeader .AddFriendButton,
 .GamepadMode.friendlist .TabPanelHeader .FriendsInvitesButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: #67707b;
-  width: 20px;
-  height: 20px;
+  width: 26px;
+  height: 26px;
   position: relative;
-  padding: 1px 3px 1px 3px;
   margin: 0 0px 0 4px;
   background-color: rgba(103, 112, 123, 0.25);
   border-radius: 3px;
@@ -23050,7 +23107,7 @@ a.bbcodes_LinkButton_jPpgc:hover {
   padding: 2px;
   line-height: 10px;
   align-self: center;
-  margin-left: -3px;
+  margin: 2px;
   z-index: 3;
   color: #0e141b;
   font-size: 12px;
@@ -23368,17 +23425,8 @@ a.bbcodes_LinkButton_jPpgc:hover {
 }
 .chatRoomGroupHeader.GamepadMode,
 .GamepadMode .chatRoomGroupHeader {
-  background-color: #0e141b;
-  box-shadow: 0 0 14px #0e141b;
   padding: 6px 4px 6px 10px;
   max-height: 34px;
-}
-.friendslist_SteamDeckChats_si2vK.gpfocuswithin
-  .chatRoomGroupHeader.GamepadMode,
-.friendslist_SteamDeckChats_si2vK.gpfocuswithin
-  .GamepadMode
-  .chatRoomGroupHeader {
-  background-color: #23262e;
 }
 .chatRoomGroupHeader.GamepadMode .ChatRoomGroupAvatar,
 .GamepadMode .chatRoomGroupHeader .ChatRoomGroupAvatar {
@@ -26014,6 +26062,12 @@ svg.reorderablelist_ReorderArrow_1jEeo {
   animation-name: ItemFocusAnim-darkerGrey;
   z-index: 1;
 }
+.chatRoomHeader.GamepadMode,
+.GamepadMode .chatRoomHeader {
+  position: absolute;
+  bottom: 7px;
+  width: 100%;
+}
 .FriendPickerScrollPanel {
   padding: 1px 0;
 }
@@ -26400,6 +26454,10 @@ svg.reorderablelist_ReorderArrow_1jEeo {
   background: transparent;
   z-index: 2;
 }
+.chatHeader.titleBarContainer.GamepadMode,
+.GamepadMode .chatHeader.titleBarContainer {
+  height: 100px;
+}
 .titleBarContainer.ChatTabs.GamepadMode,
 .GamepadMode .titleBarContainer.ChatTabs {
   padding-bottom: 8px;
@@ -26621,6 +26679,7 @@ svg.reorderablelist_ReorderArrow_1jEeo {
   padding: 0px;
   height: 30px;
   padding-bottom: 8px;
+  justify-content: space-around;
 }
 .GamepadMode.friendlist .FriendsListSteamDeckTabs .SVGIcon_FavoriteFriends {
   margin-top: 3px;
@@ -26734,11 +26793,13 @@ svg.reorderablelist_ReorderArrow_1jEeo {
 .GamepadMode.friendlist .TabPanelHeader .NewChatGroupButton,
 .GamepadMode.friendlist .TabPanelHeader .AddFriendButton,
 .GamepadMode.friendlist .TabPanelHeader .FriendsInvitesButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: #67707b;
-  width: 20px;
-  height: 20px;
+  width: 26px;
+  height: 26px;
   position: relative;
-  padding: 1px 3px 1px 3px;
   margin: 0 0px 0 4px;
   background-color: rgba(103, 112, 123, 0.25);
   border-radius: 3px;
@@ -26785,7 +26846,7 @@ svg.reorderablelist_ReorderArrow_1jEeo {
   padding: 2px;
   line-height: 10px;
   align-self: center;
-  margin-left: -3px;
+  margin: 2px;
   z-index: 3;
   color: #0e141b;
   font-size: 12px;
@@ -27103,17 +27164,8 @@ svg.reorderablelist_ReorderArrow_1jEeo {
 }
 .chatRoomGroupHeader.GamepadMode,
 .GamepadMode .chatRoomGroupHeader {
-  background-color: #0e141b;
-  box-shadow: 0 0 14px #0e141b;
   padding: 6px 4px 6px 10px;
   max-height: 34px;
-}
-.recentchatssteamdeck_SteamDeckChats_dSuq8.gpfocuswithin
-  .chatRoomGroupHeader.GamepadMode,
-.recentchatssteamdeck_SteamDeckChats_dSuq8.gpfocuswithin
-  .GamepadMode
-  .chatRoomGroupHeader {
-  background-color: #23262e;
 }
 .chatRoomGroupHeader.GamepadMode .ChatRoomGroupAvatar,
 .GamepadMode .chatRoomGroupHeader .ChatRoomGroupAvatar {
@@ -30185,6 +30237,12 @@ div:hover > .BBCodeCollapseControl {
   animation-name: ItemFocusAnim-darkerGrey;
   z-index: 1;
 }
+.chatRoomHeader.GamepadMode,
+.GamepadMode .chatRoomHeader {
+  position: absolute;
+  bottom: 7px;
+  width: 100%;
+}
 .FriendPickerScrollPanel {
   padding: 1px 0;
 }
@@ -30570,6 +30628,10 @@ div:hover > .BBCodeCollapseControl {
   background: transparent;
   z-index: 2;
 }
+.chatHeader.titleBarContainer.GamepadMode,
+.GamepadMode .chatHeader.titleBarContainer {
+  height: 100px;
+}
 .titleBarContainer.ChatTabs.GamepadMode,
 .GamepadMode .titleBarContainer.ChatTabs {
   padding-bottom: 8px;
@@ -30791,6 +30853,7 @@ div:hover > .BBCodeCollapseControl {
   padding: 0px;
   height: 30px;
   padding-bottom: 8px;
+  justify-content: space-around;
 }
 .GamepadMode.friendlist .FriendsListSteamDeckTabs .SVGIcon_FavoriteFriends {
   margin-top: 3px;
@@ -30904,11 +30967,13 @@ div:hover > .BBCodeCollapseControl {
 .GamepadMode.friendlist .TabPanelHeader .NewChatGroupButton,
 .GamepadMode.friendlist .TabPanelHeader .AddFriendButton,
 .GamepadMode.friendlist .TabPanelHeader .FriendsInvitesButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: #67707b;
-  width: 20px;
-  height: 20px;
+  width: 26px;
+  height: 26px;
   position: relative;
-  padding: 1px 3px 1px 3px;
   margin: 0 0px 0 4px;
   background-color: rgba(103, 112, 123, 0.25);
   border-radius: 3px;
@@ -30955,7 +31020,7 @@ div:hover > .BBCodeCollapseControl {
   padding: 2px;
   line-height: 10px;
   align-self: center;
-  margin-left: -3px;
+  margin: 2px;
   z-index: 3;
   color: #0e141b;
   font-size: 12px;
@@ -31273,17 +31338,8 @@ div:hover > .BBCodeCollapseControl {
 }
 .chatRoomGroupHeader.GamepadMode,
 .GamepadMode .chatRoomGroupHeader {
-  background-color: #0e141b;
-  box-shadow: 0 0 14px #0e141b;
   padding: 6px 4px 6px 10px;
   max-height: 34px;
-}
-.friendinvites_SteamDeckChats_P_ryT.gpfocuswithin
-  .chatRoomGroupHeader.GamepadMode,
-.friendinvites_SteamDeckChats_P_ryT.gpfocuswithin
-  .GamepadMode
-  .chatRoomGroupHeader {
-  background-color: #23262e;
 }
 .chatRoomGroupHeader.GamepadMode .ChatRoomGroupAvatar,
 .GamepadMode .chatRoomGroupHeader .ChatRoomGroupAvatar {
@@ -31978,6 +32034,12 @@ div:hover > .BBCodeCollapseControl {
   animation-name: ItemFocusAnim-darkerGrey;
   z-index: 1;
 }
+.chatRoomHeader.GamepadMode,
+.GamepadMode .chatRoomHeader {
+  position: absolute;
+  bottom: 7px;
+  width: 100%;
+}
 .FriendPickerScrollPanel {
   padding: 1px 0;
 }
@@ -32364,6 +32426,10 @@ div:hover > .BBCodeCollapseControl {
   background: transparent;
   z-index: 2;
 }
+.chatHeader.titleBarContainer.GamepadMode,
+.GamepadMode .chatHeader.titleBarContainer {
+  height: 100px;
+}
 .titleBarContainer.ChatTabs.GamepadMode,
 .GamepadMode .titleBarContainer.ChatTabs {
   padding-bottom: 8px;
@@ -32585,6 +32651,7 @@ div:hover > .BBCodeCollapseControl {
   padding: 0px;
   height: 30px;
   padding-bottom: 8px;
+  justify-content: space-around;
 }
 .GamepadMode.friendlist .FriendsListSteamDeckTabs .SVGIcon_FavoriteFriends {
   margin-top: 3px;
@@ -32698,11 +32765,13 @@ div:hover > .BBCodeCollapseControl {
 .GamepadMode.friendlist .TabPanelHeader .NewChatGroupButton,
 .GamepadMode.friendlist .TabPanelHeader .AddFriendButton,
 .GamepadMode.friendlist .TabPanelHeader .FriendsInvitesButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: #67707b;
-  width: 20px;
-  height: 20px;
+  width: 26px;
+  height: 26px;
   position: relative;
-  padding: 1px 3px 1px 3px;
   margin: 0 0px 0 4px;
   background-color: rgba(103, 112, 123, 0.25);
   border-radius: 3px;
@@ -32749,7 +32818,7 @@ div:hover > .BBCodeCollapseControl {
   padding: 2px;
   line-height: 10px;
   align-self: center;
-  margin-left: -3px;
+  margin: 2px;
   z-index: 3;
   color: #0e141b;
   font-size: 12px;
@@ -33067,17 +33136,8 @@ div:hover > .BBCodeCollapseControl {
 }
 .chatRoomGroupHeader.GamepadMode,
 .GamepadMode .chatRoomGroupHeader {
-  background-color: #0e141b;
-  box-shadow: 0 0 14px #0e141b;
   padding: 6px 4px 6px 10px;
   max-height: 34px;
-}
-.unreadchatmessagesheadersteamdeck_SteamDeckChats_1fte5.gpfocuswithin
-  .chatRoomGroupHeader.GamepadMode,
-.unreadchatmessagesheadersteamdeck_SteamDeckChats_1fte5.gpfocuswithin
-  .GamepadMode
-  .chatRoomGroupHeader {
-  background-color: #23262e;
 }
 .chatRoomGroupHeader.GamepadMode .ChatRoomGroupAvatar,
 .GamepadMode .chatRoomGroupHeader .ChatRoomGroupAvatar {
@@ -33594,6 +33654,12 @@ div:hover > .BBCodeCollapseControl {
   animation-name: ItemFocusAnim-darkerGrey;
   z-index: 1;
 }
+.chatRoomHeader.GamepadMode,
+.GamepadMode .chatRoomHeader {
+  position: absolute;
+  bottom: 7px;
+  width: 100%;
+}
 .FriendPickerScrollPanel {
   padding: 1px 0;
 }
@@ -33980,6 +34046,10 @@ div:hover > .BBCodeCollapseControl {
   background: transparent;
   z-index: 2;
 }
+.chatHeader.titleBarContainer.GamepadMode,
+.GamepadMode .chatHeader.titleBarContainer {
+  height: 100px;
+}
 .titleBarContainer.ChatTabs.GamepadMode,
 .GamepadMode .titleBarContainer.ChatTabs {
   padding-bottom: 8px;
@@ -34201,6 +34271,7 @@ div:hover > .BBCodeCollapseControl {
   padding: 0px;
   height: 30px;
   padding-bottom: 8px;
+  justify-content: space-around;
 }
 .GamepadMode.friendlist .FriendsListSteamDeckTabs .SVGIcon_FavoriteFriends {
   margin-top: 3px;
@@ -34314,11 +34385,13 @@ div:hover > .BBCodeCollapseControl {
 .GamepadMode.friendlist .TabPanelHeader .NewChatGroupButton,
 .GamepadMode.friendlist .TabPanelHeader .AddFriendButton,
 .GamepadMode.friendlist .TabPanelHeader .FriendsInvitesButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: #67707b;
-  width: 20px;
-  height: 20px;
+  width: 26px;
+  height: 26px;
   position: relative;
-  padding: 1px 3px 1px 3px;
   margin: 0 0px 0 4px;
   background-color: rgba(103, 112, 123, 0.25);
   border-radius: 3px;
@@ -34365,7 +34438,7 @@ div:hover > .BBCodeCollapseControl {
   padding: 2px;
   line-height: 10px;
   align-self: center;
-  margin-left: -3px;
+  margin: 2px;
   z-index: 3;
   color: #0e141b;
   font-size: 12px;
@@ -34683,17 +34756,8 @@ div:hover > .BBCodeCollapseControl {
 }
 .chatRoomGroupHeader.GamepadMode,
 .GamepadMode .chatRoomGroupHeader {
-  background-color: #0e141b;
-  box-shadow: 0 0 14px #0e141b;
   padding: 6px 4px 6px 10px;
   max-height: 34px;
-}
-.voicechatheadersteamdeck_SteamDeckChats_3WPMf.gpfocuswithin
-  .chatRoomGroupHeader.GamepadMode,
-.voicechatheadersteamdeck_SteamDeckChats_3WPMf.gpfocuswithin
-  .GamepadMode
-  .chatRoomGroupHeader {
-  background-color: #23262e;
 }
 .chatRoomGroupHeader.GamepadMode .ChatRoomGroupAvatar,
 .GamepadMode .chatRoomGroupHeader .ChatRoomGroupAvatar {
@@ -35359,6 +35423,12 @@ div:hover > .BBCodeCollapseControl {
   animation-name: ItemFocusAnim-darkerGrey;
   z-index: 1;
 }
+.chatRoomHeader.GamepadMode,
+.GamepadMode .chatRoomHeader {
+  position: absolute;
+  bottom: 7px;
+  width: 100%;
+}
 .FriendPickerScrollPanel {
   padding: 1px 0;
 }
@@ -35743,6 +35813,10 @@ div:hover > .BBCodeCollapseControl {
   background: transparent;
   z-index: 2;
 }
+.chatHeader.titleBarContainer.GamepadMode,
+.GamepadMode .chatHeader.titleBarContainer {
+  height: 100px;
+}
 .titleBarContainer.ChatTabs.GamepadMode,
 .GamepadMode .titleBarContainer.ChatTabs {
   padding-bottom: 8px;
@@ -35964,6 +36038,7 @@ div:hover > .BBCodeCollapseControl {
   padding: 0px;
   height: 30px;
   padding-bottom: 8px;
+  justify-content: space-around;
 }
 .GamepadMode.friendlist .FriendsListSteamDeckTabs .SVGIcon_FavoriteFriends {
   margin-top: 3px;
@@ -36077,11 +36152,13 @@ div:hover > .BBCodeCollapseControl {
 .GamepadMode.friendlist .TabPanelHeader .NewChatGroupButton,
 .GamepadMode.friendlist .TabPanelHeader .AddFriendButton,
 .GamepadMode.friendlist .TabPanelHeader .FriendsInvitesButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: #67707b;
-  width: 20px;
-  height: 20px;
+  width: 26px;
+  height: 26px;
   position: relative;
-  padding: 1px 3px 1px 3px;
   margin: 0 0px 0 4px;
   background-color: rgba(103, 112, 123, 0.25);
   border-radius: 3px;
@@ -36128,7 +36205,7 @@ div:hover > .BBCodeCollapseControl {
   padding: 2px;
   line-height: 10px;
   align-self: center;
-  margin-left: -3px;
+  margin: 2px;
   z-index: 3;
   color: #0e141b;
   font-size: 12px;
@@ -36441,14 +36518,8 @@ div:hover > .BBCodeCollapseControl {
 }
 .chatRoomGroupHeader.GamepadMode,
 .GamepadMode .chatRoomGroupHeader {
-  background-color: #0e141b;
-  box-shadow: 0 0 14px #0e141b;
   padding: 6px 4px 6px 10px;
   max-height: 34px;
-}
-.main_SteamDeckChats_3ENf8.gpfocuswithin .chatRoomGroupHeader.GamepadMode,
-.main_SteamDeckChats_3ENf8.gpfocuswithin .GamepadMode .chatRoomGroupHeader {
-  background-color: #23262e;
 }
 .chatRoomGroupHeader.GamepadMode .ChatRoomGroupAvatar,
 .GamepadMode .chatRoomGroupHeader .ChatRoomGroupAvatar {
@@ -39115,6 +39186,65 @@ body.in_global_drag .title-area {
 .DesktopUI .title-area .title-bar-actions {
   margin-right: 0px;
 }
+#dota_react_root .ModalPosition_TopBar {
+  height: 3px;
+  background: #ff6046;
+}
+#dota_react_root .ModalPosition_Dismiss {
+  right: 20px;
+  top: 20px;
+}
+#dota_react_root .ModalPosition_Dismiss .closeButton {
+  width: unset;
+  height: unset;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 3px;
+  display: flex;
+  background-color: rgba(168, 183, 196, 0.15);
+  backdrop-filter: blur(16px);
+  box-shadow: 0px 0px 0px #00000000;
+  transition-property: background-color, box-shadow, transform;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
+}
+#dota_react_root .ModalPosition_Dismiss .closeButton:hover {
+  background-color: rgba(168, 183, 196, 0.4);
+  box-shadow: 0px 4px 8px #0000004f;
+  transform: translateY(-2px);
+}
+#dota_react_root .ModalPosition_Dismiss .closeButton .SVGIcon_Button {
+  width: 24px;
+  height: 24px;
+}
+#dota_react_root .ModalPosition_Dismiss .closeButton .SVGIcon_X_Line line {
+  stroke: #a9b2b6;
+  stroke-width: 32px;
+  transition-property: stroke;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
+}
+#dota_react_root
+  .ModalPosition_Dismiss
+  .closeButton:hover
+  .SVGIcon_X_Line
+  line {
+  stroke: #fff;
+}
+#dota_react_root .DialogContent,
+#dota_react_root .DialogContentTransition {
+  background: linear-gradient(to bottom, #2c3237, #05060a);
+  box-shadow: inset 0px 0px 0px 1px #ffffff0f;
+}
+#dota_react_root .DialogContent_InnerWidth::-webkit-scrollbar {
+  width: 8px;
+}
+#dota_react_root .DialogContent_InnerWidth::-webkit-scrollbar-thumb {
+  background-color: rgba(180, 192, 201, 0.4);
+}
+#dota_react_root .DialogContent_InnerWidth::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(180, 192, 201, 0.8);
+}
 @keyframes BackgroundAnimation {
   from {
     background-position: 0 100%;
@@ -39391,6 +39521,12 @@ body.in_global_drag .title-area {
 .DialogContent_InnerWidth .chatRoomTextChannel.gpfocus {
   animation-name: ItemFocusAnim-darkerGrey;
   z-index: 1;
+}
+.chatRoomHeader.GamepadMode,
+.GamepadMode .chatRoomHeader {
+  position: absolute;
+  bottom: 7px;
+  width: 100%;
 }
 .FriendPickerScrollPanel {
   padding: 1px 0;
@@ -39775,6 +39911,10 @@ body.in_global_drag .title-area {
   background: transparent;
   z-index: 2;
 }
+.chatHeader.titleBarContainer.GamepadMode,
+.GamepadMode .chatHeader.titleBarContainer {
+  height: 100px;
+}
 .titleBarContainer.ChatTabs.GamepadMode,
 .GamepadMode .titleBarContainer.ChatTabs {
   padding-bottom: 8px;
@@ -39996,6 +40136,7 @@ body.in_global_drag .title-area {
   padding: 0px;
   height: 30px;
   padding-bottom: 8px;
+  justify-content: space-around;
 }
 .GamepadMode.friendlist .FriendsListSteamDeckTabs .SVGIcon_FavoriteFriends {
   margin-top: 3px;
@@ -40109,11 +40250,13 @@ body.in_global_drag .title-area {
 .GamepadMode.friendlist .TabPanelHeader .NewChatGroupButton,
 .GamepadMode.friendlist .TabPanelHeader .AddFriendButton,
 .GamepadMode.friendlist .TabPanelHeader .FriendsInvitesButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: #67707b;
-  width: 20px;
-  height: 20px;
+  width: 26px;
+  height: 26px;
   position: relative;
-  padding: 1px 3px 1px 3px;
   margin: 0 0px 0 4px;
   background-color: rgba(103, 112, 123, 0.25);
   border-radius: 3px;
@@ -40160,7 +40303,7 @@ body.in_global_drag .title-area {
   padding: 2px;
   line-height: 10px;
   align-self: center;
-  margin-left: -3px;
+  margin: 2px;
   z-index: 3;
   color: #0e141b;
   font-size: 12px;
@@ -40473,14 +40616,8 @@ body.in_global_drag .title-area {
 }
 .chatRoomGroupHeader.GamepadMode,
 .GamepadMode .chatRoomGroupHeader {
-  background-color: #0e141b;
-  box-shadow: 0 0 14px #0e141b;
   padding: 6px 4px 6px 10px;
   max-height: 34px;
-}
-.SteamDeckChats.gpfocuswithin .chatRoomGroupHeader.GamepadMode,
-.SteamDeckChats.gpfocuswithin .GamepadMode .chatRoomGroupHeader {
-  background-color: #23262e;
 }
 .chatRoomGroupHeader.GamepadMode .ChatRoomGroupAvatar,
 .GamepadMode .chatRoomGroupHeader .ChatRoomGroupAvatar {
@@ -40924,6 +41061,7 @@ html.web_chat_frame body {
   width: 20px;
   height: 20px;
   margin-right: 0;
+  color: #67707b;
 }
 .friendsui-container .SVGIcon_TextRoom.GamepadMode,
 .GamepadMode .friendsui-container .SVGIcon_TextRoom,

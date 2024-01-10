@@ -576,25 +576,25 @@ function SendSubscribeItemRequest( id, appID, bIncludeDependencies )
 				$('SubscribeItemOptionAdd').className = "subscribeOption add";
 				$('SubscribeItemOptionSubscribed').className = "subscribeOption subscribed selected";
 			}
-				break;
+			break;
 
 			case 15:
 			{
 				ShowAlertDialog( "Error", "You do not have permission to subscribe to this item." );
 			}
-				break;
+			break;
 
 			case 25:
 			{
 				ShowAlertDialog( "Error", "You cannot subscribe to this item because you have reached the limit of 15,000 subscriptions across all products on Steam." );
 			}
-				break;
+			break;
 
 			default:
 			{
 				ShowAlertDialog( "Error", "There was a problem trying to subscribe to this item. Please try again later." );
 			}
-				break;
+			break;
 		}
 
 		$('action_wait').hide();
@@ -607,7 +607,8 @@ function SubscribeItem( id, appID )
 	if ( !$('SubscribeItemBtn').hasClassName( "toggled" ) )
 	{
 		var requiredItems = $J( "#RequiredItems" ).clone();
-		if ( requiredItems.length != 0 )
+		var subscribedRequiredItems = $J( requiredItems ).find( "[data-subscribed=0]" );
+		if ( subscribedRequiredItems.length != 0 )
 		{
 			requiredItems.prepend( 'This item requires all of the following other items in order to function properly.<br><br>You can click on each one here to learn more about and subscribe to the item before proceeding.<br><br>You can also choose to subscribe to all these required items (and all the items they in turn require), but be warned that could include many more items.<br><br>' );
 			var dialog = ShowConfirmDialog( 'Additional Required Items', requiredItems, 'Subscribe to Just This Item', undefined, 'Subscribe to All' );

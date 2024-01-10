@@ -3,7 +3,7 @@
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
   [3068],
   {
-    15937: (e) => {
+    88234: (e) => {
       e.exports = {
         NotificationsMenu: "greenenvelope_NotificationsMenu_DHpNP",
         NotificationsMenuEntriesContainer:
@@ -29,7 +29,7 @@
         EmptyNotificationsBody: "greenenvelope_EmptyNotificationsBody_3YAs6",
       };
     },
-    58564: (e, t, n) => {
+    38965: (e, t, n) => {
       "use strict";
       n.r(t),
         n.d(t, {
@@ -37,25 +37,25 @@
           default: () => O,
           useSteamNotifications: () => T,
         });
-      var i = n(33940),
-        o = n(89526),
-        r = n(701),
-        s = n(711),
-        l = n(19304),
-        a = n(14826),
-        c = n(40103),
-        m = n(15937),
+      var i = n(85556),
+        o = n(47427),
+        r = n(62613),
+        s = n(85082),
+        l = n(13129),
+        a = n(31846),
+        c = n(95315),
+        m = n(88234),
         u = n.n(m),
-        d = n(44973),
-        f = n(16826),
-        _ = n(83315),
-        v = n(88778),
-        p = n(40442),
-        N = n(27070),
-        h = n(41576),
-        g = n(47742),
-        y = n(19934),
-        E = n(17547);
+        d = n(65255),
+        f = n(58538),
+        _ = n(30750),
+        v = n(19067),
+        p = n(8004),
+        N = n(40057),
+        h = n(44500),
+        g = n(53923),
+        y = n(75683),
+        E = n(10162);
       const b = new s.tL(),
         M = (0, E.AP)(function (e) {
           const { bResponsiveHeader: t, notifications: n } = e;
@@ -380,13 +380,13 @@
       }
       const O = M;
     },
-    41576: (e, t, n) => {
+    44500: (e, t, n) => {
       "use strict";
       n.d(t, { U: () => l });
-      var i = n(33940),
-        o = n(89526),
-        r = n(60161),
-        s = n(4306);
+      var i = n(85556),
+        o = n(47427),
+        r = n(50423),
+        s = n(20417);
       class l extends o.Component {
         constructor() {
           super(...arguments),

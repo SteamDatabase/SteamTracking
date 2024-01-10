@@ -3,7 +3,7 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [691],
   {
-    48636: (e) => {
+    94877: (e) => {
       e.exports = {
         fullscreen_bg: "contenthubpartnertakeover_fullscreen_bg_1kVV4",
         fullscreen_bg__video:
@@ -14,7 +14,7 @@
         gradient_width: "contenthubpartnertakeover_gradient_width_2wPYM",
       };
     },
-    39073: (e) => {
+    79790: (e) => {
       e.exports = {
         Container: "greatondeckgriddisplay_Container_1d905",
         FullRow: "greatondeckgriddisplay_FullRow_2VB7_",
@@ -25,7 +25,7 @@
         CompatIconOverride: "greatondeckgriddisplay_CompatIconOverride_2hRdC",
       };
     },
-    99200: (e) => {
+    34316: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         DummyValue: "maincapsule_DummyValue_3dnfO",
@@ -34,7 +34,7 @@
         PlaceholderCompact: "maincapsule_PlaceholderCompact_12-VZ",
       };
     },
-    76315: (e) => {
+    4746: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         FeatureCtn: "animated_featured_capsule_FeatureCtn_1No48",
@@ -72,7 +72,7 @@
           "animated_featured_capsule_DeckCompatIconOverride_on2Le",
       };
     },
-    27028: (e) => {
+    4483: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         ContentHubTitleCtn: "contenthubmaincarousel_ContentHubTitleCtn_61ECB",
@@ -93,7 +93,7 @@
           "contenthubmaincarousel_ReducedMotionToggleCtn_2Ykob",
       };
     },
-    72799: (e) => {
+    87676: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         strWidescreenWidth: "1420px",
@@ -126,7 +126,7 @@
         FacetValueSearch: "facetedbrowse_FacetValueSearch_1nSEf",
       };
     },
-    16947: (e) => {
+    1761: (e) => {
       e.exports = {
         countdownCtn: "giveawaynextdraw_countdownCtn_awreX",
         Closed: "giveawaynextdraw_Closed_26nqf",
@@ -140,19 +140,19 @@
         WinnerText: "giveawaynextdraw_WinnerText_2s2hb",
       };
     },
-    73807: (e) => {
+    88436: (e) => {
       e.exports = {
         HorizontalScrollInDragForceCursor:
           "horizontalscrollcontainer_HorizontalScrollInDragForceCursor_1uftH",
       };
     },
-    71714: (e) => {
+    28538: (e) => {
       e.exports = {
         EventBannerCtn: "partnersalesectionlayout_EventBannerCtn_2drT0",
         EventBannerImg: "partnersalesectionlayout_EventBannerImg_MJdDH",
       };
     },
-    5698: (e) => {
+    97626: (e) => {
       e.exports = {
         description: "reservations_description_VmWUF",
         description2: "reservations_description2_1seHG",
@@ -172,7 +172,7 @@
         Link: "reservations_Link_CzZBM",
       };
     },
-    46215: (e) => {
+    15337: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         CuratorCtn: "salecuratorrecommendations_CuratorCtn_1NvS6",
@@ -196,7 +196,7 @@
         ListLink: "salecuratorrecommendations_ListLink_2vNXt",
       };
     },
-    24334: (e) => {
+    16095: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         strMediumWidth: "800px",
@@ -218,7 +218,7 @@
         VideoLarge: "salehilightplayerembed_VideoLarge_2b5SY",
       };
     },
-    19110: (e) => {
+    3669: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         SaleItemBrowserContainer:
@@ -243,7 +243,7 @@
         WGTesterLink: "saleitembrowser_WGTesterLink_2UmRv",
       };
     },
-    58298: (e) => {
+    66110: (e) => {
       e.exports = {
         QuanityAndPrice: "saleitemdefdisplay_QuanityAndPrice_2BmhS",
         PriceCtn: "saleitemdefdisplay_PriceCtn_2SLvc",
@@ -252,7 +252,7 @@
         ItemActionBtn: "saleitemdefdisplay_ItemActionBtn_3GaOl",
       };
     },
-    97448: (e) => {
+    23840: (e) => {
       e.exports = {
         ControllerFilterCtn:
           "controllerfiltersection_ControllerFilterCtn_1Pytb",
@@ -266,7 +266,7 @@
         FilterHeading: "controllerfiltersection_FilterHeading_3o6sN",
       };
     },
-    69356: (e) => {
+    66262: (e) => {
       e.exports = {
         SectionTitle: "dlcforyou_SectionTitle_22Ren",
         ShowMore: "dlcforyou_ShowMore_1cqMF",
@@ -290,17 +290,17 @@
         CarouselDlcCapsule: "dlcforyou_CarouselDlcCapsule_363dj",
       };
     },
-    33150: (e) => {
+    52813: (e) => {
       e.exports = { Ctn: "reservationdate_Ctn_Zy-bB" };
     },
-    33803: (e) => {
+    83143: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         SaleBackgroundOverlay:
           "salebackgroundoverlay_SaleBackgroundOverlay_MrIcZ",
       };
     },
-    21534: (e) => {
+    28388: (e) => {
       e.exports = {
         OuterCtn: "salebadgeprogressdisplay_OuterCtn_3yY4b",
         ImgSpread: "salebadgeprogressdisplay_ImgSpread_47-JS",
@@ -315,7 +315,7 @@
           "salebadgeprogressdisplay_DiscoveryQueueBelow_QVX8a",
       };
     },
-    38322: (e) => {
+    14023: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         ClaimCtn: "saleclaimitem_ClaimCtn_d5PCH",
@@ -328,13 +328,13 @@
         Timer: "saleclaimitem_Timer_2zqp4",
       };
     },
-    64084: (e) => {
+    50683: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         SalePageLogoCtn: "saledisplaylogo_SalePageLogoCtn_2kLRR",
       };
     },
-    6028: (e) => {
+    37082: (e) => {
       e.exports = {
         GhostCtn: "saleghostsections_GhostCtn_3gdzT",
         PlaceholderCap: "saleghostsections_PlaceholderCap_2BOsP",
@@ -361,7 +361,7 @@
         PlaceholderTags: "saleghostsections_PlaceholderTags_gvNj1",
       };
     },
-    80298: (e) => {
+    53343: (e) => {
       e.exports = {
         SectionLabelCtn: "salelabels_SectionLabelCtn_17xMe",
         SectionLabelRight: "salelabels_SectionLabelRight_3B4Ic",
@@ -369,7 +369,7 @@
         SectionTitleInnerCtn: "salelabels_SectionTitleInnerCtn_2R3H5",
       };
     },
-    87453: (e) => {
+    43589: (e) => {
       e.exports = {
         Ctn: "saleminigames_Ctn_1SGWR",
         DetailText: "saleminigames_DetailText_aLmWP",
@@ -378,7 +378,7 @@
         ImgFullBagde: "saleminigames_ImgFullBagde_2Sm--",
       };
     },
-    74489: (e) => {
+    21726: (e) => {
       e.exports = {
         RewardCtn: "salepointshopsmartdisplay_RewardCtn_2iyxZ",
         RewardImage: "salepointshopsmartdisplay_RewardImage_21I3G",
@@ -387,7 +387,7 @@
         RewardClass: "salepointshopsmartdisplay_RewardClass_194Jt",
       };
     },
-    79073: (e) => {
+    68604: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         Name: "salepurchaseonlydisplay_Name_2K2zo",
@@ -397,14 +397,14 @@
           "salepurchaseonlydisplay_PurchaseOnlyActionCtn_2kAdn",
       };
     },
-    97169: (e) => {
+    64600: (e) => {
       e.exports = {
         description: "salequestdisplay_description_22ryq",
         description2: "salequestdisplay_description2_xidiW",
         questCtn: "salequestdisplay_questCtn_14UQz",
       };
     },
-    81162: (e) => {
+    36119: (e) => {
       e.exports = {
         description: "salequiz_description_5YDkS",
         description2: "salequiz_description2_h6YBi",
@@ -415,13 +415,13 @@
         RevealFooterImage: "salequiz_RevealFooterImage_QR_Su",
       };
     },
-    40172: (e) => {
+    16197: (e) => {
       e.exports = {
         RewardContainer: "salerewardshelfdisplay_RewardContainer_10sVo",
         RewardShelfCtn: "salerewardshelfdisplay_RewardShelfCtn_2u8Xp",
       };
     },
-    51192: (e) => {
+    82969: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         ShowContentsContainer: "salesection_ShowContentsContainer_14g7C",
@@ -430,7 +430,7 @@
           "salesection_FacetedBrowseLoadThrobber_1hNUt",
       };
     },
-    97313: (e) => {
+    96064: (e) => {
       e.exports = {
         DoorOptionsContainer:
           "salesocialsharedisplay_DoorOptionsContainer_cP3hd",
@@ -441,7 +441,7 @@
         ShareIcon: "salesocialsharedisplay_ShareIcon_TFbD2",
       };
     },
-    33265: (e) => {
+    2460: (e) => {
       e.exports = {
         strMediumWidth: "800px",
         strMaxMobileWidth: "600px",
@@ -500,7 +500,7 @@
         SpeakerEventTitle: "salesectioneventschedule_SpeakerEventTitle_Uqfjf",
       };
     },
-    16477: (e) => {
+    84995: (e) => {
       e.exports = {
         MainBlock: "salesectionsubscription_MainBlock_2xkU3",
         SelectAPlan: "salesectionsubscription_SelectAPlan_1_1rg",
@@ -523,7 +523,7 @@
         DiscountPriceBlock: "salesectionsubscription_DiscountPriceBlock_2wQcn",
       };
     },
-    36164: (e) => {
+    8534: (e) => {
       e.exports = {
         SaleSection: "storywidget_SaleSection_2lR1Z",
         BookmarkCtn: "storywidget_BookmarkCtn_1YzIh",
@@ -560,7 +560,7 @@
         BadgeFooter: "storywidget_BadgeFooter_3kBeS",
       };
     },
-    72946: (e) => {
+    98866: (e) => {
       e.exports = {
         DiscoveryQueueWidgetCtn:
           "discoveryqueuewidget_DiscoveryQueueWidgetCtn_1iOb7",
@@ -579,10 +579,10 @@
         Placeholder: "discoveryqueuewidget_Placeholder_3rUZ-",
       };
     },
-    52102: (e, t, a) => {
+    8904: (e, t, a) => {
       "use strict";
       a.d(t, { P: () => i });
-      var n = a(84770);
+      var n = a(51688);
       function i(e) {
         const t = Object.assign({}, e);
         if (!t) return t;
@@ -609,7 +609,7 @@
         return t;
       }
     },
-    84646: (e, t, a) => {
+    60083: (e, t, a) => {
       "use strict";
       var n;
       a.d(t, { F: () => n }),
@@ -630,12 +630,12 @@
               "k_EPurchaseReservationState_UnavailableRegion");
         })(n || (n = {}));
     },
-    41068: (e, t, a) => {
+    70879: (e, t, a) => {
       "use strict";
       a.d(t, { m: () => n });
       const n = "terminal";
     },
-    57257: (e, t, a) => {
+    24977: (e, t, a) => {
       "use strict";
       a.d(t, {
         g6: () => y,
@@ -646,21 +646,21 @@
       });
       var n,
         i,
-        s = a(33940),
-        o = a(52868),
+        s = a(85556),
+        o = a(80751),
         r = a.n(o),
-        l = a(89526),
-        c = a(62983),
-        d = a(54671),
-        u = a(92616),
-        m = a(85886),
-        _ = a(70750),
-        p = a(11837),
-        g = a(23217),
-        h = a(85246),
-        v = a(4306),
-        f = a(32765),
-        S = a(83373);
+        l = a(47427),
+        c = a(16610),
+        d = a(77151),
+        u = a(15690),
+        m = a(86437),
+        _ = a(50369),
+        p = a(83999),
+        g = a(16649),
+        h = a(45492),
+        v = a(20417),
+        f = a(37563),
+        S = a(76245);
       function b(e, t, a, n) {
         let i = e;
         return (
@@ -1481,7 +1481,7 @@
         }
       }
     },
-    16468: (e, t, a) => {
+    78910: (e, t, a) => {
       "use strict";
       a.d(t, {
         Bo: () => C,
@@ -1491,22 +1491,22 @@
         mb: () => b,
         yS: () => I,
       });
-      var n = a(33940),
-        i = a(52868),
+      var n = a(85556),
+        i = a(80751),
         s = a.n(i),
-        o = a(59621),
-        r = a(89526),
-        l = a(47165),
-        c = a(82079),
-        d = a(98210),
-        u = a(54671),
-        m = a(10412),
-        _ = a(70750),
-        p = a(11837),
-        g = a(23801),
-        h = a(23217),
-        v = a(4306),
-        f = a(32765);
+        o = a(54842),
+        r = a(47427),
+        l = a(35427),
+        c = a(93243),
+        d = a(84270),
+        u = a(77151),
+        m = a(82071),
+        _ = a(50369),
+        p = a(83999),
+        g = a(62210),
+        h = a(16649),
+        v = a(20417),
+        f = a(37563);
       function S(e) {
         e.list_jsondata && "string" == typeof e.list_jsondata
           ? (e.list_jsondata = JSON.parse(e.list_jsondata))
@@ -1828,17 +1828,17 @@
       }
       (0, n.gn)([o.LO], C.prototype, "m_mapList", void 0);
     },
-    72709: (e, t, a) => {
+    59777: (e, t, a) => {
       "use strict";
       a.d(t, { U: () => u, V: () => m });
-      var n = a(33940),
-        i = a(52868),
+      var n = a(85556),
+        i = a(80751),
         s = a.n(i),
-        o = a(89526),
-        r = a(23217),
-        l = a(85246),
-        c = a(4306),
-        d = a(32765);
+        o = a(47427),
+        r = a(16649),
+        l = a(45492),
+        c = a(20417),
+        d = a(37563);
       class u {
         GetUserLibraryCompatList() {
           return this.m_library || this.m_emptyList;
@@ -2005,18 +2005,18 @@
       }
       (0, n.gn)([c.ak], u.prototype, "LoadCompatabilityAppList", null);
     },
-    32870: (e, t, a) => {
+    88276: (e, t, a) => {
       "use strict";
       a.d(t, { LO: () => g, oS: () => _, xH: () => p });
-      var n = a(33940),
-        i = a(23217),
-        s = a(32765),
-        o = a(52868),
+      var n = a(85556),
+        i = a(16649),
+        s = a(37563),
+        o = a(80751),
         r = a.n(o),
-        l = a(89526),
-        c = a(85246),
-        d = a(4306),
-        u = a(23801);
+        l = a(47427),
+        c = a(45492),
+        d = a(20417),
+        u = a(62210);
       class m {
         GetBadgeInfo(e) {
           return this.m_mapBadgeInfo.get(e);
@@ -2144,22 +2144,22 @@
         );
       }
     },
-    24307: (e, t, a) => {
+    79873: (e, t, a) => {
       "use strict";
       a.d(t, { Jv: () => f, Mx: () => n, cR: () => S, p6: () => v });
       var n,
-        i = a(33940),
-        s = a(68333),
-        o = a(24709),
-        r = a(85251),
-        l = a(89526),
-        c = a(19094),
-        d = a(11837),
-        u = a(85246),
-        m = a(4306),
-        _ = a(44973),
-        p = a(59954),
-        g = a(11195);
+        i = a(85556),
+        s = a(35750),
+        o = a(98255),
+        r = a(80002),
+        l = a(47427),
+        c = a(77581),
+        d = a(83999),
+        u = a(45492),
+        m = a(20417),
+        _ = a(65255),
+        p = a(82756),
+        g = a(80998);
       class h {
         GetDetail(e) {
           return this.m_mapHardwareDetails.get(e);
@@ -2380,17 +2380,17 @@
             (e[(e.k_LoadFailure = 2)] = "k_LoadFailure");
         })(n || (n = {}));
     },
-    8894: (e, t, a) => {
+    17634: (e, t, a) => {
       "use strict";
       a.d(t, { $4: () => m, wG: () => _ });
-      var n = a(33940),
-        i = a(52868),
+      var n = a(85556),
+        i = a(80751),
         s = a.n(i),
-        o = a(89526),
-        r = a(23217),
-        l = a(85246),
-        c = a(4306),
-        d = a(32765);
+        o = a(47427),
+        r = a(16649),
+        l = a(45492),
+        c = a(20417),
+        d = a(37563);
       class u {
         GetItemDef(e, t) {
           var a;
@@ -2628,14 +2628,14 @@
         (0, n.gn)([c.ak], u.prototype, "LoadItemDef", null),
         (0, n.gn)([c.ak], u.prototype, "LoadAllItemDefForSingleApp", null);
     },
-    60016: (e, t, a) => {
+    39652: (e, t, a) => {
       "use strict";
       a.d(t, { A: () => l });
-      var n = a(33940),
-        i = a(59621),
-        s = a(41068),
-        o = a(11837),
-        r = a(32765);
+      var n = a(85556),
+        i = a(54842),
+        s = a(70879),
+        o = a(83999),
+        r = a(37563);
       class l {
         SetAnswerCategory(e, t) {
           const a = Math.min(e, 64);
@@ -2714,7 +2714,7 @@
       (0, n.gn)([i.LO], l.prototype, "m_rgAnswerToCategoryID", void 0),
         (0, n.gn)([i.LO], l.prototype, "m_rgAnswerChosen", void 0);
     },
-    74710: (e, t, a) => {
+    7081: (e, t, a) => {
       "use strict";
       a.d(t, {
         Nh: () => p,
@@ -2727,17 +2727,17 @@
         rr: () => y,
         wB: () => b,
       });
-      var n = a(33940),
-        i = a(52868),
+      var n = a(85556),
+        i = a(80751),
         s = a.n(i),
-        o = a(59621),
-        r = a(89526),
-        l = a(23217),
-        c = a(85246),
-        d = a(4306),
-        u = a(32765),
-        m = a(85651),
-        _ = a(35340);
+        o = a(54842),
+        r = a(47427),
+        l = a(16649),
+        c = a(45492),
+        d = a(20417),
+        u = a(37563),
+        m = a(64936),
+        _ = a(54797);
       const p = 9,
         g = -1;
       class h {
@@ -3055,7 +3055,7 @@
         (0, n.gn)([d.ak], h.prototype, "BIsDoorOpened", null),
         (0, n.gn)([d.ak], h.prototype, "OpenDoor", null);
     },
-    35340: (e, t, a) => {
+    54797: (e, t, a) => {
       "use strict";
       a.d(t, {
         F2: () => g,
@@ -3066,15 +3066,15 @@
         vS: () => f,
       });
       var n,
-        i = a(33940),
-        s = a(59621),
-        o = (a(89526), a(23801)),
-        r = a(85246),
-        l = a(4306),
-        c = a(32765),
-        d = a(10412),
-        u = a(92616),
-        m = a(651);
+        i = a(85556),
+        s = a(54842),
+        o = (a(47427), a(62210)),
+        r = a(45492),
+        l = a(20417),
+        c = a(37563),
+        d = a(82071),
+        u = a(15690),
+        m = a(54652);
       !(function (e) {
         (e[(e.k_EDiscoveryAction_Invalid = 0)] = "k_EDiscoveryAction_Invalid"),
           (e[(e.k_EDiscoveryAction_OpenStorePage = 1)] =
@@ -3310,11 +3310,11 @@
       (0, i.gn)([l.ak], _.prototype, "SaleInteractionCallback", null),
         (0, i.gn)([s.aD], _.prototype, "DeployCapsuleIfPossible", null);
     },
-    651: (e, t, a) => {
+    54652: (e, t, a) => {
       "use strict";
       a.d(t, { _: () => s });
-      var n = a(85246),
-        i = a(32765);
+      var n = a(45492),
+        i = a(37563);
       class s {
         GetNewInteractionCallback() {
           return this.m_interactionCallback;
@@ -3359,33 +3359,33 @@
         Init() {}
       }
     },
-    93317: (e, t, a) => {
+    43389: (e, t, a) => {
       "use strict";
       a.d(t, { oZ: () => w, sE: () => I });
-      var n = a(89526),
-        i = a(44026),
-        s = a(51438),
-        o = a(74831),
-        r = a(54671),
-        l = a(25871),
-        c = a(43511),
-        d = a(19304),
-        u = a(14826),
-        m = a(88443),
-        _ = a(207),
-        p = a(32765),
-        g = a(82248);
+      var n = a(47427),
+        i = a(82493),
+        s = a(91618),
+        o = a(58670),
+        r = a(77151),
+        l = a(80886),
+        c = a(35314),
+        d = a(13129),
+        u = a(31846),
+        m = a(24549),
+        _ = a(13499),
+        p = a(37563),
+        g = a(71738);
       const h =
         "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAgJJREFUeNrsmz9LxDAYxpNyIhzICeIkiLM46KAf4EY9HBzcnDwXJ0cnFxddHdQP4ScQcXJxUvDP7qAOLg5Ot8TnpDhIkja5mL5t3hcechDS9Pmlb3mba6VSSqQcmUg8GAADYAAMgAHoQkr5K8QppGouvU9THZAbF+hvo3mDOjVfbOmbApsNMD/SPaDf5HuANQXQN4+fT4ax79CAqK9ZzSWvTYFWwYF2LH2rgHRP0T0W7rNs2maWg4yj2Uq5DtiAplIG0BcJhA1Al0thBsAAGEDToxVzMtQWL38LFBRTk6HHkAWQG+lEGMMpwAAYAANgAAyAATAABsAAGAADIPUw1POYs/ef5xkVAB5jb2KMSToFlFITaMaSBADzw32DK6idHIDc/CW0klwKlDB/bhtsUlEsUjEP3VrO8wySJp+1BlDWvG2hawvAxXzjALiatwEYpRBad4BwgYLmS2NkGs2ax9y70LKh7wTaw3yqLE3fK8Al5nTmoYfA8xy5+swquoSHK38NLQQ87DFWfZ98KUzJfHQA1MxHBUDRfEwAJM3/PG5bvhkK+THRKzRTpXnjC6GRAISMA5g/9EhB5x2hJY+Tu/MY8whti3Kv3Q5g/jnoLlXR6/KOlJWH+S7m+ohwEya3HxDNPMUNERLmqwJAxnwVAEiZjw2AnPmiOiCJ4D9HUwfwLcAAxHgyaE4johYAAAAASUVORK5CYII=";
-      var v = a(75313);
+      var v = a(80289);
       const f =
         "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAtNJREFUeNrsmk1rE0EYgHe19ZBIY2kj4qUQVGjxAz2J4gcVvfmBP8FI8eZF8OJNL4oFPYrGX1CK4lEMiChe/aCClNBeRGxLTTE5GDU+Y2bDJG5rL5lZ950XnsxkE5h9n8zszkw2bDabgeTYEAgPL8AL8AK8AC/AC/AC5EafegnDcM0vMVvMUOyA7bBNswVymgHYDOp7m/SxUNczRlvZdZ5XDX7oeh2+q9OAqq6rY99gRR9TfIXPmk8wS171f+QVhH9eYgRw/BhFEQ7q5MP/7MdVwmbhNZTI8fm6BPBe/XoP4XzKevs0XCDX6qoCdPIvYE9Kh/xbOBpJULl3XwQfpDh5FXt1ju1o9wDKQ7x/KeTif5icX3X3gKKgu18xbh4wLkjAeMcQIPLwRdgcaCssRD1gTOAkcMwcAgWBAgqmgBGBAkZMAfkeN1ZPoIC8KWCox409hePwJkEChmwKCPRi5ABMJOSO0yFg2EaLSPgF96nuhFt6aesqhk0BgzZbRsIKXKU6Co8dCRg0BWRdnAESKnCO6gl4Z7n5rCmg3+VgREKZYj9cUrMzS832mwJyrq9ISPgJ9/T1YRIaPW4y170YSkSozQq4QnU3POl1e4ndFUbCRzhD9RS8FyfAVvQl9cRYpu+iuA2nRQnQG7PX4LKNu1MkoOr6TkDiGykuwnULi7Mo57aAhuPk1RbVncDujnTDvAjWHCVegEdUnwX2t+NrpoBly4kPwE2qH+Cso463bA6BRUuJK+FqS/pG0NqUdBmLpoAlC8mrP1vvwr6E3HCWbAo46bCrrykgugb0egWWSeBca8EUMC9wFjxvCqgIFFAxBcwIFDDTFsCyU42HOUHJz+mcO5bDZUECynH7ASVBAkp/CVBPTFBMCUh+Sufayts/JGWE/uBI0HqkLG0xbSYf2wNi5u7yHpRcZSGT7kdlJYd/XN4L8AK8AC/AC/ACvACx8VuAAQDxke5GRJ5P8AAAAABJRU5ErkJggg==";
-      var S = a(17547),
-        b = a(71161),
-        y = a(69338),
-        C = a(72213),
-        E = a(79586),
-        D = a(17318);
+      var S = a(10162),
+        b = a(25006),
+        y = a(46882),
+        C = a(94930),
+        E = a(23120),
+        D = a(71741);
       function w(e) {
         const {
             creatorID: t,
@@ -3639,30 +3639,30 @@
         );
       }
     },
-    97506: (e, t, a) => {
+    55480: (e, t, a) => {
       "use strict";
       a.d(t, { H: () => H });
-      var n = a(33940),
-        i = a(52868),
+      var n = a(85556),
+        i = a(80751),
         s = a.n(i),
-        o = a(83315),
-        r = a(89526),
-        l = a(84770),
-        c = a(5080),
-        d = a(32870),
-        u = a(56368),
-        m = a(35340),
-        _ = a(57605),
-        p = a(17547),
-        g = a(99307),
-        h = a(14826),
-        v = a(4306),
-        f = a(34976),
+        o = a(30750),
+        r = a(47427),
+        l = a(51688),
+        c = a(97087),
+        d = a(88276),
+        u = a(42855),
+        m = a(54797),
+        _ = a(1485),
+        p = a(10162),
+        g = a(50898),
+        h = a(31846),
+        v = a(20417),
+        f = a(72297),
         S = a.n(f),
-        b = a(40442),
-        y = a(69338),
-        C = a(32765),
-        E = a(23217);
+        b = a(77936),
+        y = a(46882),
+        C = a(37563),
+        E = a(16649);
       const D = new (class {
         DeleteForumTopic(e, t, a, i, o) {
           return (0, n.mG)(this, void 0, void 0, function* () {
@@ -3869,16 +3869,16 @@
         (0, n.gn)([v.ak], w.prototype, "SetToWaiting", null),
         (0, n.gn)([v.ak], w.prototype, "OnDelete", null),
         (0, n.gn)([v.ak], w.prototype, "OnChangeDeleteForum", null);
-      var I = a(45711),
-        G = a(17318),
-        k = a(57742),
-        A = a(19304),
-        L = a(60161),
-        B = a(59621),
-        T = a(60016),
-        N = a(74710),
-        P = a(54124),
-        F = a(83809);
+      var I = a(74009),
+        G = a(71741),
+        k = a(90069),
+        A = a(13129),
+        L = a(50423),
+        B = a(54842),
+        T = a(39652),
+        N = a(7081),
+        P = a(19486),
+        F = a(98851);
       function R(e) {
         const { eventModel: t } = e,
           a = (0, o.SZ)(() => t.jsondata.sale_sections);
@@ -4074,7 +4074,7 @@
           }),
         );
       }
-      var M = a(5029);
+      var M = a(71472);
       function H(e) {
         const {
             eventModel: t,
@@ -4421,15 +4421,15 @@
         });
       }
     },
-    5418: (e, t, a) => {
+    18919: (e, t, a) => {
       "use strict";
       a.d(t, { I: () => u });
-      var n = a(89526),
-        i = a(74802),
-        s = a(85246),
-        o = a(56368),
-        r = a(91656),
-        l = a(61615);
+      var n = a(47427),
+        i = a(58112),
+        s = a(45492),
+        o = a(42855),
+        r = a(30919),
+        l = a(73229);
       class c {
         constructor() {
           (this.m_bHasBeenTracked = !1), (this.m_fnSubmit = null);
@@ -4480,15 +4480,15 @@
           return null;
         };
     },
-    94496: (e, t, a) => {
+    78458: (e, t, a) => {
       "use strict";
       a.d(t, { O: () => c });
-      var n = a(33940),
-        i = a(89526),
-        s = a(4306),
-        o = a(73807),
+      var n = a(85556),
+        i = a(47427),
+        s = a(20417),
+        o = a(88436),
         r = a.n(o),
-        l = a(51438);
+        l = a(91618);
       class c extends i.Component {
         constructor() {
           super(...arguments),
@@ -4566,40 +4566,40 @@
         (0, n.gn)([s.ak], c.prototype, "OnPointerUp", null),
         (0, n.gn)([s.ak], c.prototype, "OnPointerMove", null);
     },
-    67389: (e, t, a) => {
+    41769: (e, t, a) => {
       "use strict";
       a.d(t, { CZ: () => zo, oS: () => Zo });
-      var n = a(89526),
-        i = a(59934),
-        s = a(40442),
-        o = a(51438),
-        r = a(5080),
-        l = a(57257),
-        c = a(85651),
-        d = a(74710),
-        u = a(62983),
-        m = a(98009),
-        _ = a(25871),
-        p = a(29054),
+      var n = a(47427),
+        i = a(8285),
+        s = a(77936),
+        o = a(91618),
+        r = a(97087),
+        l = a(24977),
+        c = a(64936),
+        d = a(7081),
+        u = a(16610),
+        m = a(28347),
+        _ = a(80886),
+        p = a(11448),
         g = a.n(p),
-        h = a(23280),
-        v = a(48294),
+        h = a(11578),
+        v = a(15980),
         f = a.n(v),
-        S = a(99028),
-        b = a(70750),
-        y = a(46294),
-        C = a(701),
-        E = a(71161),
-        D = a(69338),
-        w = a(19304),
-        I = a(32765),
-        G = a(33940),
-        k = a(52868),
+        S = a(79411),
+        b = a(50369),
+        y = a(47242),
+        C = a(62613),
+        E = a(25006),
+        D = a(46882),
+        w = a(13129),
+        I = a(37563),
+        G = a(85556),
+        k = a(80751),
         A = a.n(k),
-        L = a(92616),
-        B = a(85886),
-        T = a(21219),
-        N = a(14826);
+        L = a(15690),
+        B = a(86437),
+        T = a(57803),
+        N = a(31846);
       function P(e) {
         return "dev" === I.De.WEB_UNIVERSE
           ? e.replace(
@@ -4913,8 +4913,8 @@
           }
         }
       }
-      var H = a(54671),
-        U = a(23217);
+      var H = a(77151),
+        U = a(16649);
       class V {
         constructor() {
           (this.m_rgMyWishlistOnSale = null),
@@ -5567,9 +5567,9 @@
           }
         );
       }
-      var W = a(31465),
-        Z = a(45429),
-        z = a(6028),
+      var W = a(39451),
+        Z = a(34535),
+        z = a(37082),
         X = a.n(z);
       function Q(e) {
         const {
@@ -5975,10 +5975,10 @@
               ),
             );
       }
-      var $ = a(44026),
-        K = a(66615),
-        ee = a(3991),
-        te = a(48636);
+      var $ = a(82493),
+        K = a(83059),
+        ee = a(52841),
+        te = a(94877);
       function ae(e) {
         const {
             hubtype: t,
@@ -6160,15 +6160,15 @@
             )
           : null;
       }
-      var se = a(651),
-        oe = a(59621),
-        re = a(88464),
-        le = a(83315),
-        ce = a(52102),
-        de = a(84770),
-        ue = a(95408),
-        me = a(57605),
-        _e = a(72799);
+      var se = a(54652),
+        oe = a(54842),
+        re = a(27605),
+        le = a(30750),
+        ce = a(8904),
+        de = a(51688),
+        ue = a(74031),
+        me = a(1485),
+        _e = a(87676);
       function pe(e, t) {
         const a = new Set(e);
         return (
@@ -7715,7 +7715,7 @@
             return !0;
         }
       }
-      var Fe = a(31245);
+      var Fe = a(40833);
       const Re = (e) => {
         const {
             hubtype: t,
@@ -8087,7 +8087,7 @@
       function Ue(e, t) {
         return Pe(e, j([t])[0]);
       }
-      var Ve = a(23276);
+      var Ve = a(1774);
       function je(e) {
         const {
             strHubType: t,
@@ -8368,9 +8368,9 @@
         }
         return "unknown";
       }
-      var Qe = a(43840),
-        Ye = a(42317),
-        Je = a(39073);
+      var Qe = a(85305),
+        Ye = a(22446),
+        Je = a(79790);
       const $e = 4,
         Ke = 6,
         et = Ke * $e + 3;
@@ -8483,13 +8483,13 @@
           }),
         );
       }
-      var st = a(11491),
-        ot = a(82079),
-        rt = a(47165),
-        lt = a(48743),
-        ct = a(99200),
-        dt = a(35388),
-        ut = a(5615);
+      var st = a(73168),
+        ot = a(93243),
+        rt = a(35427),
+        lt = a(75591),
+        ct = a(34316),
+        dt = a(40735),
+        ut = a(42718);
       function mt(e) {
         return e.recommendation &&
           e.recommendation.reason === l.rb.k_EStatusString
@@ -8730,8 +8730,8 @@
           );
         },
         gt = 12;
-      var ht = a(17547),
-        vt = a(27028);
+      var ht = a(10162),
+        vt = a(4483);
       const ft = (e) => {
         const {
             hubtype: t,
@@ -8807,12 +8807,12 @@
         );
         var p;
       };
-      var St = a(93317),
-        bt = a(5029),
-        yt = a(74802),
-        Ct = a(59983),
-        Et = a(46486),
-        Dt = a(98889);
+      var St = a(43389),
+        bt = a(71472),
+        yt = a(58112),
+        Ct = a(26918),
+        Et = a(64730),
+        Dt = a(36453);
       const wt = n.lazy(() =>
           Promise.all([
             a.e(3980),
@@ -8830,7 +8830,7 @@
             a.e(259),
             a.e(1979),
             a.e(4601),
-          ]).then(a.bind(a, 61909)),
+          ]).then(a.bind(a, 71461)),
         ),
         It = "broadcast-preroll-",
         Gt = "viewed";
@@ -8930,14 +8930,14 @@
           ),
         );
       }
-      var At = a(43946),
-        Lt = a(97506),
-        Bt = a(17318),
+      var At = a(43301),
+        Lt = a(55480),
+        Bt = a(71741),
         Tt = a.n(Bt),
-        Nt = a(16468),
-        Pt = a(84343),
-        Ft = a(79586),
-        Rt = a(46215);
+        Nt = a(78910),
+        Pt = a(59728),
+        Ft = a(23120),
+        Rt = a(15337);
       function xt(e) {
         const { section: t, event: a, bPreviewMode: i } = e;
         return (0, I.h4)() ||
@@ -9251,22 +9251,22 @@
             this.m_storyImages || (this.m_storyImages = new Array(d.Nh));
         }
       }
-      var Vt = a(10412),
-        jt = a(43997),
+      var Vt = a(82071),
+        jt = a(45557),
         qt = a.n(jt),
-        Wt = a(75962),
-        Zt = a(82248),
-        zt = a(75313),
-        Xt = a(50500),
+        Wt = a(14609),
+        Zt = a(71738),
+        zt = a(80289),
+        Xt = a(81212),
         Qt = a.n(Xt),
-        Yt = a(23496),
-        Jt = a(97313),
+        Yt = a(25979),
+        Jt = a(96064),
         $t = a.n(Jt),
-        Kt = a(57742),
-        ea = a(82707),
-        ta = a(60161),
-        aa = a(45711),
-        na = a(52316);
+        Kt = a(90069),
+        ea = a(17995),
+        ta = a(50423),
+        aa = a(74009),
+        na = a(45167);
       function ia(e) {
         var t;
         const { bIsPreview: a, event: i, section: s, language: o } = e,
@@ -9691,8 +9691,8 @@
           },
           e || (0, N.Xx)("#Sale_BrowseMore_Text_Default"),
         );
-      var va = a(44973),
-        fa = a(59954);
+      var va = a(65255),
+        fa = a(82756);
       const Sa = 2 == va.De.EUNIVERSE ? 404860 : 1675200,
         ba = ["HK", "JP", "KR", "TW"],
         ya =
@@ -9707,13 +9707,13 @@
           if (e && Ca > e) return Ca;
         }
       }
-      var wa = a(84646),
-        Ia = a(24307),
-        Ga = a(55290),
+      var wa = a(60083),
+        Ia = a(79873),
+        Ga = a(35714),
         ka = a.n(Ga),
-        Aa = a(42764),
-        La = a(5698),
-        Ba = a(25508);
+        Aa = a(77557),
+        La = a(97626),
+        Ba = a(46984);
       function Ta(e) {
         const { hardwareDetail: t } = e,
           a = Da(t.packageid),
@@ -9964,11 +9964,11 @@
               string: (0, N.Xx)("#Loading"),
             });
       }
-      var xa = a(34714),
-        Oa = a(83809),
+      var xa = a(87635),
+        Oa = a(98851),
         Ma = a.n(Oa),
-        Ha = a(32905),
-        Ua = a(99307);
+        Ha = a(80212),
+        Ua = a(50898);
       class Va {
         constructor() {
           (this.m_mySummary = { points: 0, points_earned: 0, points_spent: 0 }),
@@ -10028,8 +10028,8 @@
       (0, G.gn)([oe.LO], Va.prototype, "m_mySummary", void 0);
       const ja = new Va();
       window.g_SaleTokenPointStore = ja;
-      var qa = a(23801),
-        Wa = a(4306);
+      var qa = a(62210),
+        Wa = a(20417);
       let Za = class extends n.Component {
         componentDidMount() {
           d.Zb.Get().GetRawDoorData() || d.Zb.Get().LoadDoorData(),
@@ -10333,11 +10333,11 @@
             ),
           );
         };
-      var $a = a(82588),
-        Ka = a(32870),
-        en = a(207),
-        tn = a(21534),
-        an = a(4170);
+      var $a = a(74840),
+        Ka = a(88276),
+        en = a(13499),
+        tn = a(28388),
+        an = a(94005);
       function nn(e) {
         var t;
         const { event: a, section: i, language: s } = e,
@@ -10757,7 +10757,7 @@
             )
           : null;
       }
-      var pn = a(64084),
+      var pn = a(50683),
         gn = a.n(pn);
       function hn(e) {
         const { eventModel: t, language: a } = e,
@@ -10788,7 +10788,7 @@
               )
           : null;
       }
-      var vn = a(97169);
+      var vn = a(64600);
       function fn(e) {
         return (0, d.jK)() ? n.createElement(Sn, Object.assign({}, e)) : null;
       }
@@ -10957,15 +10957,15 @@
             )
           : null;
       }
-      var yn = a(41068),
-        Cn = a(13345),
-        En = a(60016),
-        Dn = a(77557),
-        wn = a(34976),
-        In = a(58218),
-        Gn = a(11837),
-        kn = a(94843),
-        An = a(81162);
+      var yn = a(70879),
+        Cn = a(19399),
+        En = a(39652),
+        Dn = a(83743),
+        wn = a(72297),
+        In = a(29480),
+        Gn = a(83999),
+        kn = a(84478),
+        An = a(36119);
       function Ln(e) {
         var t, a, i, s, o, l, c, u, m, _, p;
         const { bIsPreview: f, event: S, section: b, language: C } = e,
@@ -11630,9 +11630,9 @@
               },
             });
       }
-      var xn = a(54124),
-        On = a(89082),
-        Mn = a(40172);
+      var xn = a(19486),
+        On = a(46186),
+        Mn = a(16197);
       const Hn = 5;
       function Un(e) {
         const { bIsPreview: t, event: a, section: i, language: s } = e,
@@ -11759,8 +11759,8 @@
               ),
             );
       }
-      var qn = a(26464),
-        Wn = a(85246);
+      var qn = a(16997),
+        Wn = a(45492);
       class Zn {
         GetTimerSecondsLeft() {
           const e = Math.floor(
@@ -12027,10 +12027,10 @@
         (0, G.gn)([oe.LO], Zn.prototype, "m_mapSectionToNewEvents", void 0),
         (0, G.gn)([qn.a], Zn.prototype, "FireRequestNow", null),
         (0, G.gn)([qn.a], Zn.prototype, "TimerAction", null);
-      var zn = a(51192),
+      var zn = a(82969),
         Xn = a.n(zn),
-        Qn = a(39818),
-        Yn = a(1721),
+        Qn = a(24289),
+        Yn = a(7765),
         Jn = a.n(Yn);
       const $n = (0, re.Pi)((e) => {
         const {
@@ -12102,8 +12102,8 @@
               ),
             );
       });
-      var Kn = a(83373),
-        ei = a(81349);
+      var Kn = a(76245),
+        ei = a(45284);
       function ti(e, t = null) {
         if (null == t ? void 0 : t.BUsesContentHubForItemSource())
           switch (e.GetStoreItemType()) {
@@ -12561,9 +12561,9 @@
       (0, G.gn)([oe.LO], _i.prototype, "m_rgRecentEvent", void 0),
         (0, G.gn)([oe.aD], _i.prototype, "Init", null),
         (0, G.gn)([oe.aD], _i.prototype, "AddAllRecentEvents", null);
-      var pi = a(35340),
-        gi = a(81362),
-        hi = a(87453);
+      var pi = a(54797),
+        gi = a(49026),
+        hi = a(43589);
       function vi(e, t, a) {
         if (t.some((t) => t.id == e.appid && "game" == t.type)) return;
         const i = {
@@ -12708,7 +12708,7 @@
           ),
         );
       }
-      var Si = a(72709);
+      var Si = a(59777);
       class bi {
         static Get() {
           return (
@@ -13743,7 +13743,7 @@
         );
       }
       (0, G.gn)([oe.LO], bi.prototype, "m_mapMasterAppToBenefitApps", void 0);
-      const Gi = new (a(50454).s)("SalePage"),
+      const Gi = new (a(68785).s)("SalePage"),
         ki = 50;
       class Ai {
         constructor() {
@@ -14040,10 +14040,10 @@
           );
         }
       }
-      var Li = a(94496),
-        Bi = a(19110),
+      var Li = a(78458),
+        Bi = a(3669),
         Ti = a.n(Bi),
-        Ni = a(61141);
+        Ni = a(51026);
       let Pi = class extends n.Component {
         constructor(e) {
           super(e),
@@ -14855,7 +14855,7 @@
           ),
         );
       });
-      var Hi = a(1063);
+      var Hi = a(68985);
       function Ui(e, t, a) {
         return {
           color: e,
@@ -15312,8 +15312,8 @@
           ),
         );
       }
-      var Ji = a(75687),
-        $i = a(52002);
+      var Ji = a(35134),
+        $i = a(87699);
       class Ki {
         constructor() {
           (this.m_mapAnnounceGIDToTrack = new Map()),
@@ -15364,7 +15364,7 @@
           return Boolean(this.m_mapEventGIDToTrack.has(e));
         }
       }
-      var es = a(91656);
+      var es = a(30919);
       class ts {
         constructor() {
           (this.m_gidClanEventSelected = void 0), (0, oe.rC)(this);
@@ -15396,12 +15396,12 @@
         }
       }
       (0, G.gn)([oe.LO], ts.prototype, "m_gidClanEventSelected", void 0);
-      var as = a(80845),
-        ns = a(72120),
-        is = a(74015),
-        ss = a(5418),
-        os = a(25589),
-        rs = a(33265),
+      var as = a(34909),
+        ns = a(12251),
+        is = a(25386),
+        ss = a(18919),
+        os = a(58129),
+        rs = a(2460),
         ls = a.n(rs);
       const cs = (e) => {
           const {
@@ -15592,13 +15592,13 @@
           ),
         );
       });
-      var gs = a(17325),
-        hs = a(6319),
-        vs = a(97352),
-        fs = a(24591),
-        Ss = a(24334),
+      var gs = a(90362),
+        hs = a(99823),
+        vs = a(26293),
+        fs = a(63489),
+        Ss = a(16095),
         bs = a.n(Ss),
-        ys = a(74621);
+        ys = a(4684);
       const Cs = (0, re.Pi)((e) => {
           const t = (0, s.jM)(I.De.LANGUAGE),
             a = Ki.Get().GetScheduleTrackByEvent(e.event),
@@ -15753,8 +15753,8 @@
           );
         });
       var ws,
-        Is = a(12681),
-        Gs = a(23715),
+        Is = a(95284),
+        Gs = a(7769),
         ks = a.n(Gs);
       function As(e) {
         let t = Math.floor(Date.now() / 1e3);
@@ -16638,7 +16638,7 @@
         );
       };
       var qs,
-        Ws = a(14288);
+        Ws = a(29525);
       !(function (e) {
         (e[(e.k_eNone = 0)] = "k_eNone"),
           (e[(e.k_eSecond = 1)] = "k_eSecond"),
@@ -16828,8 +16828,8 @@
         (0, G.gn)([oe.aD], zs.prototype, "AddPackages", null);
       const Xs = new zs();
       window.g_PackageInfoStore = Xs;
-      var Qs = a(87178),
-        Ys = a(16477),
+      var Qs = a(28918),
+        Ys = a(84995),
         Js = a.n(Ys);
       function $s(e, t) {
         let a = [];
@@ -17079,9 +17079,9 @@
         }
       };
       ao = (0, G.gn)([re.Pi], ao);
-      var no = a(22171),
-        io = a(90210),
-        so = a(36164),
+      var no = a(50321),
+        io = a(85801),
+        so = a(8534),
         oo = a.n(so);
       const ro = (0, re.Pi)((e) => {
           var t, a;
@@ -17456,10 +17456,10 @@
           t > 0 ? this.m_mapVisible.set(e, t) : this.m_mapVisible.delete(e);
         }
       }
-      var mo = a(68333),
-        _o = a(19094),
-        po = (a(57361), a(85251)),
-        go = a(24709);
+      var mo = a(35750),
+        _o = a(77581),
+        po = (a(22520), a(80002)),
+        go = a(98255);
       class ho {
         BIsPlaytimeLoaded() {
           return Boolean(this.m_mapPlaytime);
@@ -18015,8 +18015,8 @@
           return ho.s_singleton || (ho.s_singleton = new ho()), ho.s_singleton;
         }
       }
-      var vo = a(29551),
-        fo = a(69356);
+      var vo = a(54117),
+        fo = a(66262);
       function So(e) {
         var t, a, i, s, o, r, l;
         const { event: c, section: d, activeTab: m } = e,
@@ -18657,7 +18657,7 @@
               ),
         );
       }
-      var Eo = a(33803),
+      var Eo = a(83143),
         Do = a.n(Eo);
       function wo(e) {
         const { event: t, language: a, url: i } = e;
@@ -18666,7 +18666,7 @@
           style: { backgroundImage: `url('${i}')` },
         });
       }
-      var Io = a(21261);
+      var Io = a(97076);
       function Go(e) {
         const { countDownUntil: t, fnCallbackOnZero: a } = e,
           i = (0, G._T)(e, ["countDownUntil", "fnCallbackOnZero"]),
@@ -18708,8 +18708,8 @@
             (e.current = window.setTimeout(() => Lo(e, t, a), 1e3));
       }
       var Bo,
-        To = a(15715),
-        No = a(38322);
+        To = a(4367),
+        No = a(14023);
       function Po(e) {
         var t, a, i, s;
         const { bIsPreview: o, event: l, section: c, language: d } = e,
@@ -18914,11 +18914,11 @@
           (e.k_ClaimState_Next = "nextclaim"),
           (e.k_ClaimState_NoMoreClaimsLeft = "nomoreclaims");
       })(Bo || (Bo = {}));
-      var Ro = a(1434),
-        xo = a(27070),
-        Oo = a(16826),
-        Mo = a(97448),
-        Ho = a(47742);
+      var Ro = a(45335),
+        xo = a(40057),
+        Oo = a(58538),
+        Mo = a(23840),
+        Ho = a(53923);
       function Uo(e) {
         const { controllerCategory: t, setControllerCategory: a } = e,
           i = (0, I.id)(),
@@ -19027,7 +19027,7 @@
           { enabled: !!I.L7.accountid },
         );
       }
-      var jo = a(25817);
+      var jo = a(2324);
       function qo(e) {
         var t, a;
         const { section: i, language: s, event: o, bIsPreview: l } = e,
@@ -19631,13 +19631,13 @@
         let C = !1;
         const E = [{ elements: [], activeTab: new gi.u(null, s) }];
         t.GetSaleSections().forEach((i, s) => {
-          var r, u, _;
-          const p = E[E.length - 1].activeTab,
-            g = (0, c.kl)();
+          var r, u, _, p;
+          const g = E[E.length - 1].activeTab,
+            v = (0, c.kl)();
           if (
-            (p && (!p.ShouldShowSection(i) || i.hide_section)) ||
-            (i.hide_section_before_rtime && g < i.hide_section_before_rtime) ||
-            (i.hide_section_after_rtime && i.hide_section_after_rtime < g)
+            (g && (!g.ShouldShowSection(i) || i.hide_section)) ||
+            (i.hide_section_before_rtime && v < i.hide_section_before_rtime) ||
+            (i.hide_section_after_rtime && i.hide_section_after_rtime < v)
           )
             return;
           if (
@@ -19657,18 +19657,28 @@
             if (!i.package_allow_list.some((e) => H.jg.Get().BOwnsPackage(e)))
               return;
           }
-          const v = "tabs" != i.section_type,
-            f = l.g6
+          if (
+            (null === (_ = i.hardware_allow_list) || void 0 === _
+              ? void 0
+              : _.length) > 0
+          ) {
+            if (
+              !i.hardware_allow_list.some((e) => H.jg.Get().BHasUsedHardware(e))
+            )
+              return;
+          }
+          const f = "tabs" != i.section_type,
+            D = l.g6
               .Get()
               .BIsPartnerTakeoverActive(
                 t.GetContentHubType(),
                 t.GetContentHubCategory(),
                 t.GetContentHubTag(),
               ),
-            D = d && !f && !Boolean(t.jsondata.content_hub_restricted_width);
-          let G = null;
+            G = d && !D && !Boolean(t.jsondata.content_hub_restricted_width);
+          let k = null;
           if (i.disable_section)
-            G = n.createElement(Ii, { section: i, event: t, language: a });
+            k = n.createElement(Ii, { section: i, event: t, language: a });
           else if (
             (function (e) {
               return (
@@ -19693,17 +19703,17 @@
             !I.L7.logged_in
           )
             C ||
-              ((G = n.createElement(dn, { section: i, event: t, language: a })),
+              ((k = n.createElement(dn, { section: i, event: t, language: a })),
               (C = !0));
           else {
             const t = i.diable_tab_id_filtering
-              ? new gi.u(null, p.GetSaleDay())
-              : p;
+              ? new gi.u(null, g.GetSaleDay())
+              : g;
             if ("tabs" == i.section_type) {
               const e = y.get(i);
               E.push({ activeTab: e, elements: [] });
             }
-            G = n.createElement(
+            k = n.createElement(
               zo,
               Object.assign({}, e, {
                 section: i,
@@ -19711,13 +19721,13 @@
                 appVisibilityTracker: m,
                 selectedTabs: y,
                 setTabUniqueIDQueryParam: h,
-                expanded: D,
+                expanded: G,
                 controllerCategory: S,
                 setControllerCategory: b,
               }),
             );
           }
-          const k = "SaleSection_" + (i.unique_id || s);
+          const A = "SaleSection_" + (i.unique_id || s);
           E[E.length - 1].elements.push(
             n.createElement(
               ht.SV,
@@ -19729,26 +19739,26 @@
                     i.visibility_by_door_index_state,
                   door_index_visibility: i.door_index_visibility,
                 },
-                v
+                f
                   ? n.createElement(
                       o.s,
                       {
-                        navKey: k,
-                        id: k,
+                        navKey: A,
+                        id: A,
                         className: (0, w.Z)({
                           SaleSectionCtn: !0,
                           [i.section_type]: !0,
-                          [(null === (_ = i.internal_section_data) ||
-                          void 0 === _
+                          [(null === (p = i.internal_section_data) ||
+                          void 0 === p
                             ? void 0
-                            : _.internal_type) || ""]: !0,
-                          expanded: D,
+                            : p.internal_type) || ""]: !0,
+                          expanded: G,
                           [i.single_item_style || ""]: !0,
                         }),
                       },
-                      G,
+                      k,
                     )
-                  : G,
+                  : k,
               ),
             ),
           );
@@ -19853,7 +19863,7 @@
         );
       }
     },
-    99028: (e, t, a) => {
+    79411: (e, t, a) => {
       "use strict";
       a.d(t, {
         Pe: () => U,
@@ -19863,36 +19873,36 @@
         qu: () => P,
         tT: () => F,
       });
-      var n = a(89526),
-        i = a(51438),
-        s = a(16221),
-        o = a(84770),
-        r = a(56368),
-        l = a(11491),
-        c = a(5089),
+      var n = a(47427),
+        i = a(91618),
+        s = a(3783),
+        o = a(51688),
+        r = a(42855),
+        l = a(73168),
+        c = a(90366),
         d = a.n(c),
-        u = a(17318),
+        u = a(71741),
         m = a.n(u),
-        _ = a(34714),
-        p = a(31245),
-        g = a(19304),
-        h = a(60161),
-        v = a(71161),
-        f = a(74015),
-        S = a(5418),
-        b = a(49234),
-        y = a(48294),
+        _ = a(87635),
+        p = a(40833),
+        g = a(13129),
+        h = a(50423),
+        v = a(25006),
+        f = a(25386),
+        S = a(18919),
+        b = a(32144),
+        y = a(15980),
         C = a.n(y),
-        E = a(70750),
-        D = a(44421),
-        w = a(36041),
-        I = a(651),
-        G = a(48743),
-        k = a(1434),
-        A = a(66615),
-        L = a(71714),
-        B = a(1063),
-        T = a(45711);
+        E = a(50369),
+        D = a(85884),
+        w = a(45651),
+        I = a(54652),
+        G = a(75591),
+        k = a(45335),
+        A = a(83059),
+        L = a(28538),
+        B = a(68985),
+        T = a(74009);
       function N(e) {
         return (
           ["dlc", "dlc_onsale", "dlc_music_onsale"].includes(
@@ -20360,31 +20370,31 @@
         );
       };
     },
-    42764: (e, t, a) => {
+    77557: (e, t, a) => {
       "use strict";
       a.d(t, { tZ: () => N, EU: () => L, TN: () => A });
-      var n = a(89526),
-        i = a(84646),
-        s = a(98009),
-        o = a(54671),
-        r = a(24307),
-        l = a(85651),
-        c = a(57605),
-        d = a(34976),
-        u = a(21904),
-        m = a(25817),
-        _ = a(69338),
-        p = a(58218),
-        g = a(19304),
-        h = a(60161),
-        v = a(14826),
-        f = a(32765),
-        S = a(99307),
-        b = a(57742),
-        y = a(71161),
-        C = a(32905),
-        E = a(5698),
-        D = a(33150),
+      var n = a(47427),
+        i = a(60083),
+        s = a(28347),
+        o = a(77151),
+        r = a(79873),
+        l = a(64936),
+        c = a(1485),
+        d = a(72297),
+        u = a(24827),
+        m = a(2324),
+        _ = a(46882),
+        p = a(29480),
+        g = a(13129),
+        h = a(50423),
+        v = a(31846),
+        f = a(37563),
+        S = a(50898),
+        b = a(90069),
+        y = a(25006),
+        C = a(80212),
+        E = a(97626),
+        D = a(52813),
         w = a.n(D);
       function I(e, t) {
         return e > t + 1 ? e - t : e + 12 - t;
@@ -20787,23 +20797,23 @@
         }
       }
     },
-    12681: (e, t, a) => {
+    95284: (e, t, a) => {
       "use strict";
       a.d(t, { O: () => v });
-      var n = a(32765),
-        i = a(85886),
-        s = a(25871),
-        o = a(89526),
-        r = a(701),
-        l = a(66615),
-        c = a(19304),
-        d = a(60161),
-        u = a(99307),
-        m = a(57742),
-        _ = a(69338),
-        p = a(24334),
+      var n = a(37563),
+        i = a(86437),
+        s = a(80886),
+        o = a(47427),
+        r = a(62613),
+        l = a(83059),
+        c = a(13129),
+        d = a(50423),
+        u = a(50898),
+        m = a(90069),
+        _ = a(46882),
+        p = a(16095),
         g = a.n(p),
-        h = a(56491);
+        h = a(28718);
       function v(e) {
         var t;
         const { info: a, bPopOutTrailerPlayback: p } = e,
@@ -20987,32 +20997,32 @@
         );
       }
     },
-    34714: (e, t, a) => {
+    87635: (e, t, a) => {
       "use strict";
       a.d(t, { R: () => I, t: () => k });
-      var n = a(89526),
-        i = a(5080),
-        s = a(98009),
-        o = a(13345),
-        r = a(8894),
-        l = a(57605),
-        c = a(29054),
+      var n = a(47427),
+        i = a(97087),
+        s = a(28347),
+        o = a(19399),
+        r = a(17634),
+        l = a(1485),
+        c = a(11448),
         d = a.n(c),
-        u = a(61963),
-        m = a(17318),
+        u = a(84823),
+        m = a(71741),
         _ = a.n(m),
-        p = a(99028),
-        g = a(45429),
-        h = a(23280),
-        v = a(43946),
-        f = a(46294),
-        S = a(71161),
-        b = a(19304),
-        y = a(14826),
-        C = a(32765),
-        E = a(48294),
+        p = a(79411),
+        g = a(34535),
+        h = a(11578),
+        v = a(43301),
+        f = a(47242),
+        S = a(25006),
+        b = a(13129),
+        y = a(31846),
+        C = a(37563),
+        E = a(15980),
         D = a.n(E),
-        w = a(58298);
+        w = a(66110);
       function I(e) {
         const { event: t, activeTab: a, section: i } = e,
           [s, o] = n.useState(null),
@@ -21167,12 +21177,12 @@
         return null;
       }
     },
-    61141: (e, t, a) => {
+    51026: (e, t, a) => {
       "use strict";
       a.d(t, { a: () => r });
-      var n = a(89526),
-        i = a(44421),
-        s = a(23715),
+      var n = a(47427),
+        i = a(85884),
+        s = a(7769),
         o = a.n(s);
       function r(e) {
         return n.createElement(
@@ -21188,26 +21198,26 @@
         );
       }
     },
-    4170: (e, t, a) => {
+    94005: (e, t, a) => {
       "use strict";
       a.d(t, { l: () => E, N: () => C });
-      var n = a(89526),
-        i = a(5080),
-        s = a(82588),
-        o = a(46294),
-        r = a(29054),
+      var n = a(47427),
+        i = a(97087),
+        s = a(74840),
+        o = a(47242),
+        r = a(11448),
         l = a.n(r),
-        c = a(23280),
-        d = a(6069),
-        u = a(19304),
-        m = a(14826),
-        _ = a(48294),
-        p = a(32870),
-        g = a(32765),
-        h = a(78913),
+        c = a(11578),
+        d = a(21865),
+        u = a(13129),
+        m = a(31846),
+        _ = a(15980),
+        p = a(88276),
+        g = a(37563),
+        h = a(44910),
         v = a.n(h),
-        f = a(23801),
-        S = a(207);
+        f = a(62210),
+        S = a(13499);
       function b(e) {
         var t;
         const { badgeRewardSection: a, relativeQueueCompleted: i } = e,
@@ -21250,7 +21260,7 @@
         }
         return null;
       }
-      var y = a(66615);
+      var y = a(83059);
       function C(e, t) {
         return {
           storePageFilter: {
@@ -21336,36 +21346,36 @@
             );
       }
     },
-    48743: (e, t, a) => {
+    75591: (e, t, a) => {
       "use strict";
       a.d(t, { T: () => q });
-      var n = a(89526),
-        i = a(66615),
-        s = a(32765),
-        o = a(51438),
-        r = a(98009),
-        l = a(57257),
-        c = a(76315),
-        d = a(44421),
-        u = a(59648),
-        m = a(49571),
-        _ = a(3991),
-        p = a(19304),
-        g = a(14826),
-        h = a(71161),
-        v = a(43840),
-        f = a(23715),
+      var n = a(47427),
+        i = a(83059),
+        s = a(37563),
+        o = a(91618),
+        r = a(28347),
+        l = a(24977),
+        c = a(4746),
+        d = a(85884),
+        u = a(45937),
+        m = a(61440),
+        _ = a(52841),
+        p = a(13129),
+        g = a(31846),
+        h = a(25006),
+        v = a(85305),
+        f = a(7769),
         S = a.n(f),
-        b = a(48472),
-        y = a(21219),
-        C = a(42317),
-        E = a(33406),
-        D = a(20983),
-        w = a(44026),
-        I = a(5029),
-        G = a(35388),
-        k = a(84291),
-        A = a(6069);
+        b = a(52689),
+        y = a(57803),
+        C = a(22446),
+        E = a(83502),
+        D = a(61183),
+        w = a(82493),
+        I = a(71472),
+        G = a(40735),
+        k = a(67327),
+        A = a(21865);
       const L = (e) => {
         var t, a, i, s;
         const {
@@ -21624,14 +21634,14 @@
           ),
         );
       };
-      var B = a(61141),
-        T = a(88464),
-        N = a(55290),
+      var B = a(51026),
+        T = a(27605),
+        N = a(35714),
         P = a.n(N),
-        F = a(44865),
-        R = a(12681),
-        x = a(98389),
-        O = a(80845);
+        F = a(92797),
+        R = a(95284),
+        x = a(34913),
+        O = a(34909);
       const M = (0, T.Pi)((e) => {
         var t, a, i, s, o;
         const {
@@ -21832,9 +21842,9 @@
           ),
         );
       });
-      var H = a(16221),
-        U = a(79073),
-        V = a(81039);
+      var H = a(3783),
+        U = a(68604),
+        V = a(4654);
       function j(e) {
         const {
             displayStoreItem: t,
@@ -21921,22 +21931,22 @@
         }
       };
     },
-    45429: (e, t, a) => {
+    34535: (e, t, a) => {
       "use strict";
       a.d(t, { AO: () => f, YK: () => h, _U: () => v, iM: () => y });
-      var n = a(89526),
-        i = a(47165),
-        s = a(74831),
-        o = a(19304),
-        r = a(32765),
-        l = a(17318),
+      var n = a(47427),
+        i = a(35427),
+        s = a(58670),
+        o = a(13129),
+        r = a(37563),
+        l = a(71741),
         c = a.n(l),
-        d = a(43946),
-        u = a(84343),
-        m = a(14826),
-        _ = a(80298),
-        p = a(48294),
-        g = a(13345);
+        d = a(43301),
+        u = a(59728),
+        m = a(31846),
+        _ = a(53343),
+        p = a(15980),
+        g = a(19399);
       function h(e, t) {
         return (
           m.LZ.GetWithFallback(e.localized_label, t) ||
@@ -22137,32 +22147,32 @@
         );
       }
     },
-    1434: (e, t, a) => {
+    45335: (e, t, a) => {
       "use strict";
       a.d(t, { j: () => I, r: () => k });
-      var n = a(83315),
-        i = a(89526),
-        s = a(5080),
-        o = a(98009),
-        r = a(43658),
-        l = a(29054),
+      var n = a(30750),
+        i = a(47427),
+        s = a(97087),
+        o = a(28347),
+        r = a(10777),
+        l = a(11448),
         c = a.n(l),
-        d = a(99028),
-        u = a(45429),
-        m = a(23280),
-        _ = a(43946),
-        p = a(46294),
-        g = a(71161),
-        h = a(19304),
-        v = a(32765),
-        f = a(48294),
+        d = a(79411),
+        u = a(34535),
+        m = a(11578),
+        _ = a(43301),
+        p = a(47242),
+        g = a(25006),
+        h = a(13129),
+        v = a(37563),
+        f = a(15980),
         S = a.n(f),
-        b = a(74489),
-        y = a(25871),
-        C = a(62983),
-        E = a(14826),
-        D = a(49234),
-        w = a(84343);
+        b = a(21726),
+        y = a(80886),
+        C = a(16610),
+        E = a(31846),
+        D = a(32144),
+        w = a(59728);
       function I(e) {
         const { event: t, activeTab: a, section: s } = e,
           [o, l] = (0, n.SZ)(() => {
@@ -22285,10 +22295,10 @@
         );
       }
     },
-    23280: (e, t, a) => {
+    11578: (e, t, a) => {
       "use strict";
       a.d(t, { V: () => i });
-      var n = a(1063);
+      var n = a(68985);
       function i(e, t, a) {
         if (e.disable_background && !a)
           return { paddingLeft: 0, paddingRight: 0 };
@@ -22311,10 +22321,10 @@
         };
       }
     },
-    81362: (e, t, a) => {
+    49026: (e, t, a) => {
       "use strict";
       a.d(t, { K: () => i, u: () => s });
-      var n = a(52102);
+      var n = a(8904);
       function i(e, t) {
         return e.filter(
           (e) => null == e.visibility_index || e.visibility_index == t,
@@ -22483,32 +22493,32 @@
         }
       }
     },
-    6069: (e, t, a) => {
+    21865: (e, t, a) => {
       "use strict";
       a.d(t, { A: () => I, U: () => G });
-      var n = a(33940),
-        i = a(83315),
-        s = a(89526),
-        o = a(89480),
-        r = a(51438),
-        l = a(95501),
-        c = a(54671),
-        d = a(92616),
-        u = a(25871),
-        m = a(66216),
-        _ = a(701),
-        p = a(64693),
-        g = a(35388),
-        h = a(41576),
-        v = a(58218),
-        f = a(19304),
-        S = a(14826),
-        b = a(32765),
-        y = a(82588),
-        C = a(44865),
-        E = a(72946),
+      var n = a(85556),
+        i = a(30750),
+        s = a(47427),
+        o = a(30229),
+        r = a(91618),
+        l = a(52355),
+        c = a(77151),
+        d = a(15690),
+        u = a(80886),
+        m = a(54457),
+        _ = a(62613),
+        p = a(3613),
+        g = a(40735),
+        h = a(44500),
+        v = a(29480),
+        f = a(13129),
+        S = a(31846),
+        b = a(37563),
+        y = a(74840),
+        C = a(92797),
+        E = a(98866),
         D = a.n(E),
-        w = a(16826);
+        w = a(58538);
       function I(e) {
         const t = (0, g.g)(),
           a = (0, b.id)();
@@ -22763,13 +22773,13 @@
         );
       }
     },
-    43511: (e, t, a) => {
+    35314: (e, t, a) => {
       "use strict";
       a.d(t, { V: () => r });
-      var n = a(33940),
-        i = a(44026),
-        s = a(89526),
-        o = a(32765);
+      var n = a(85556),
+        i = a(82493),
+        s = a(47427),
+        o = a(37563);
       function r(e) {
         const { href: t, children: a, bAllowFocuseableAnchor: r } = e,
           l = (0, n._T)(e, ["href", "children", "bAllowFocuseableAnchor"]);
@@ -22780,10 +22790,10 @@
           : s.createElement("a", Object.assign({ href: t }, l), a);
       }
     },
-    29551: (e, t, a) => {
+    54117: (e, t, a) => {
       "use strict";
       a.d(t, { W: () => i });
-      var n = a(14826);
+      var n = a(31846);
       function i(e, t = "#Played_", a = !1) {
         if (e >= 120) {
           let a = e / 60;
@@ -22800,22 +22810,22 @@
           : (0, n.Xx)(t + "Minutes", e);
       }
     },
-    56903: (e, t, a) => {
+    55163: (e, t, a) => {
       "use strict";
       a.d(t, { n: () => le });
-      var n = a(36105),
-        i = a(89526),
-        s = a(19094),
-        o = a(58961),
-        r = a(56368),
-        l = a(10412),
-        c = a(14826),
-        d = a(32765),
-        u = a(14288),
-        m = a(33940),
-        _ = a(52868),
+      var n = a(37485),
+        i = a(47427),
+        s = a(77581),
+        o = a(45944),
+        r = a(42855),
+        l = a(82071),
+        c = a(31846),
+        d = a(37563),
+        u = a(29525),
+        m = a(85556),
+        _ = a(80751),
         p = a.n(_),
-        g = a(23217);
+        g = a(16649);
       class h {
         GetCounts() {
           return this.m_counts;
@@ -22888,14 +22898,14 @@
           );
         }
       }
-      var v = a(72709),
-        f = a(8894),
-        S = a(74710),
-        b = a(34714),
-        y = a(69338),
-        C = a(29054),
-        E = a(93883),
-        D = a(16947);
+      var v = a(59777),
+        f = a(17634),
+        S = a(7081),
+        b = a(87635),
+        y = a(46882),
+        C = a(11448),
+        E = a(54154),
+        D = a(1761);
       function w(e) {
         return e < 10 ? "0" + e : e;
       }
@@ -22970,17 +22980,17 @@
                 ),
             );
       }
-      var G = a(61963),
-        k = a(32870),
-        A = a(57605),
-        L = a(701),
-        B = a(32905),
-        T = a(67389),
-        N = a(59934),
-        P = a(20993),
-        F = a(81362),
-        R = a(4170),
-        x = a(82588);
+      var G = a(84823),
+        k = a(88276),
+        A = a(1485),
+        L = a(62613),
+        B = a(80212),
+        T = a(41769),
+        N = a(8285),
+        P = a(63493),
+        F = a(49026),
+        R = a(94005),
+        x = a(74840);
       function O(e) {
         const { eventModel: t, nEventBadgeID: a } = e,
           n = (0, k.oS)(a);
@@ -23116,9 +23126,9 @@
         }
         return null;
       }
-      var W = a(17547),
-        Z = a(42764),
-        z = a(24307);
+      var W = a(10162),
+        Z = a(77557),
+        z = a(79873);
       const X = i.Fragment;
       function Q(e) {
         const {
@@ -23300,7 +23310,7 @@
         }
         return i.createElement(i.Fragment, null);
       }
-      var re = a(23496);
+      var re = a(25979);
       function le(e) {
         const { bSalePage: t } = e,
           [a, u] = i.useState(r.cb.IsInitialized());

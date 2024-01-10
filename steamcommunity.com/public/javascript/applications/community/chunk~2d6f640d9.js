@@ -4,9 +4,9 @@
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
   [7901],
   {
-    80525: (e, t, i) => {
+    68324: (e, t, i) => {
       i.d(t, { Pw: () => o, c8: () => a, hB: () => s, zB: () => r });
-      const n = new (i(50454).s)("video"),
+      const n = new (i(68785).s)("video"),
         s = (n.Info, n.Debug);
       n.Error, n.Warning;
       function r(e) {
@@ -38,22 +38,22 @@
         return "probably" === e || "maybe" === e;
       }
     },
-    24141: (e, t, i) => {
+    46157: (e, t, i) => {
       i.d(t, { C2: () => O, N1: () => U, tA: () => N, YW: () => F });
-      var n = i(33940),
-        s = i(52868),
+      var n = i(85556),
+        s = i(80751),
         r = i.n(s),
-        a = i(59621),
-        o = i(40442),
-        m = (i(11837), i(23801)),
-        d = i(85246),
-        h = i(14826),
-        l = i(36041),
-        u = i(26464),
-        _ = i(25508),
-        p = i(32765),
-        g = i(80525),
-        f = i(56189);
+        a = i(54842),
+        o = i(8004),
+        m = (i(83999), i(62210)),
+        d = i(45492),
+        h = i(31846),
+        l = i(45651),
+        u = i(16997),
+        _ = i(46984),
+        p = i(37563),
+        g = i(68324),
+        f = i(48695);
       function S(e, t) {
         let i = e.getElementsByTagName("MPD");
         return i && 1 == i.length ? i[0] : null;
@@ -2256,18 +2256,18 @@
         (0, n.gn)([u.a], O.prototype, "ReportPlayerStats", null),
         (0, n.gn)([a.aD.bound], O.prototype, "CaptureStatsForDisplay", null);
     },
-    56189: (e, t, i) => {
+    48695: (e, t, i) => {
       i.d(t, { vf: () => S });
-      var n = i(33940),
-        s = i(59621),
-        r = i(52868),
+      var n = i(85556),
+        s = i(54842),
+        r = i(80751),
         a = i.n(r),
-        o = i(47165),
-        m = i(80525),
-        d = i(32765),
-        h = i(85246),
-        l = i(14826),
-        u = i(88443);
+        o = i(35427),
+        m = i(68324),
+        d = i(37563),
+        h = i(45492),
+        l = i(31846),
+        u = i(24549);
       const _ = 1e6;
       class p {
         constructor() {
@@ -2936,11 +2936,11 @@
         (0, n.gn)([s.LO], T.prototype, "m_nCurrentFPS", void 0),
         (0, n.gn)([s.aD.bound], T.prototype, "TakeReading", null);
     },
-    57361: (e, t, i) => {
+    22520: (e, t, i) => {
       i.d(t, { Am: () => d, kI: () => a, x3: () => m });
-      var n = i(32765),
-        s = i(4556),
-        r = i(23801);
+      var n = i(37563),
+        s = i(48760),
+        r = i(62210);
       const a = 0,
         o = "061818254b2c99ac49e6626adb128ed1282a392f",
         m = 120;
@@ -3037,9 +3037,9 @@
         }
       }
     },
-    88443: (e, t, i) => {
+    24549: (e, t, i) => {
       i.d(t, { AV: () => r, l: () => s });
-      var n = i(14826);
+      var n = i(31846);
       function s(e, t, i, s) {
         let r = t;
         r =

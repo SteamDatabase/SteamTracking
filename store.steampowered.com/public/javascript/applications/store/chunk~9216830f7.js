@@ -3,7 +3,7 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [1430],
   {
-    22434: (e) => {
+    68628: (e) => {
       e.exports = {
         Login: "newlogindialog_Login_ZOBYq",
         SideBySide: "newlogindialog_SideBySide_1Wl13",
@@ -107,7 +107,7 @@
         Client: "newlogindialog_Client_1ZDxg",
       };
     },
-    60371: (e) => {
+    15996: (e) => {
       e.exports = {
         LoginQR: "qrlogin_LoginQR_1wtS3",
         NonPublic: "qrlogin_NonPublic_2iiMm",
@@ -123,14 +123,14 @@
         Large: "qrlogin_Large_elAzl",
       };
     },
-    78424: (e) => {
+    34317: (e) => {
       e.exports = {
         QRBits: "qrcode_QRBits_3FhhK",
         Bit: "qrcode_Bit_2Yuvr",
         Active: "qrcode_Active_274P1",
       };
     },
-    60143: (e) => {
+    72814: (e) => {
       e.exports = {
         SegmentedCharacterInput:
           "segmentedinputs_SegmentedCharacterInput_3PDBF",
@@ -141,7 +141,7 @@
         Input: "segmentedinputs_Input_HPSuA",
       };
     },
-    79925: (e, t, n) => {
+    35791: (e, t, n) => {
       "use strict";
       n.d(t, {
         NZ: () => o,
@@ -152,16 +152,16 @@
       });
       var o,
         r,
-        a = n(33940),
-        i = n(59621),
-        s = n(52868),
+        a = n(85556),
+        i = n(54842),
+        s = n(80751),
         l = n.n(s),
-        c = n(68333),
-        m = n(26464),
-        u = n(32765),
-        d = n(40831),
-        g = n(5155),
-        _ = n(97277);
+        c = n(35750),
+        m = n(16997),
+        u = n(37563),
+        d = n(5490),
+        g = n(50060),
+        _ = n(97247);
       function h(e) {
         const {
             shared_secret: t,
@@ -424,7 +424,7 @@
         (0, a.gn)([m.a], C.prototype, "PollForUpdate", null),
         (0, a.gn)([m.a], C.prototype, "SetTokenToRevoke", null);
     },
-    90580: (e, t, n) => {
+    99327: (e, t, n) => {
       "use strict";
       n.d(t, {
         uU: () => ge,
@@ -433,22 +433,22 @@
         pT: () => ie,
         TK: () => Ge,
       });
-      var o = n(33940),
-        r = n(89526),
-        a = n(19304),
-        i = n(59621),
-        s = n(52868),
+      var o = n(85556),
+        r = n(47427),
+        a = n(13129),
+        i = n(54842),
+        s = n(80751),
         l = n.n(s),
-        c = n(32765),
-        m = n(68333),
-        u = n(79925),
-        d = n(40442),
-        g = n(83315),
-        _ = n(4306),
-        h = n(97277),
-        C = n(40831),
-        p = n(19094),
-        f = n(87640);
+        c = n(37563),
+        m = n(35750),
+        u = n(35791),
+        d = n(77936),
+        g = n(30750),
+        _ = n(20417),
+        h = n(97247),
+        C = n(5490),
+        p = n(77581),
+        f = n(46945);
       class E extends u.io {
         constructor(e) {
           super(
@@ -1020,11 +1020,11 @@
         AjaxFailureWithCode: (e) => `af-${e}`,
       };
       var k,
-        R = n(22434),
+        R = n(68628),
         y = n.n(R),
-        A = n(28545),
+        A = n(59223),
         N = n.n(A),
-        F = n(78424),
+        F = n(34317),
         x = n.n(F);
       function I(e) {
         let {
@@ -1165,9 +1165,9 @@
         }
       }
       (0, o.gn)([i.LO], M.prototype, "m_eStatus", void 0);
-      var B = n(60371),
+      var B = n(15996),
         D = n.n(B),
-        T = n(57605);
+        T = n(1485);
       function G(e) {
         const {
             transport: t,
@@ -1330,20 +1330,20 @@
           }),
         );
       }
-      var $ = n(14826),
-        X = n(69338),
-        Q = n(2232),
-        j = n(701);
+      var $ = n(31846),
+        X = n(46882),
+        Q = n(38071),
+        j = n(62613);
       const z =
         n.p +
         "images/applications/store/login_mobile_auth.png?v=valveisgoodatcaching";
-      var V = n(59934),
-        q = n(17547),
-        W = n(73070),
-        J = n(84343),
-        K = n(44026),
-        Y = n(51438),
-        ee = n(60143),
+      var V = n(8285),
+        q = n(10162),
+        W = n(53087),
+        J = n(59728),
+        K = n(82493),
+        Y = n(91618),
+        ee = n(72814),
         te = n.n(ee);
       function ne(e) {
         const {
@@ -1454,8 +1454,8 @@
           S,
         );
       }
-      var oe = n(44534);
-      n(99825);
+      var oe = n(29459);
+      n(23163);
       const re = (0, r.createContext)(!1),
         ae = () => (0, r.useContext)(re);
       function ie() {

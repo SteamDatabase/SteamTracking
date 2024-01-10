@@ -89,7 +89,7 @@ body.v6.SteamAwardsNominations #footer_spacer {
   color: #e5c6df;
   line-height: 71px;
   margin: 15px 0;
-  text-shadow: 0 0 16px rgba(34, 19, 27, 0.4588235294);
+  text-shadow: 0 0 16px #22131b75;
 }
 @media screen and (max-width: 910px) {
   .nominations_NominationsHeaderCtn_1TnKc .nominations_FAQSaletitle_3s_6V {
@@ -103,7 +103,7 @@ body.v6.SteamAwardsNominations #footer_spacer {
   color: #e5c6df;
   letter-spacing: 1px;
   margin: 5px 0;
-  text-shadow: 0 0 16px rgba(34, 19, 27, 0.4588235294);
+  text-shadow: 0 0 16px #22131b75;
 }
 .nominations_NominationsFAQCtn_296AV {
   display: flex;
@@ -189,7 +189,7 @@ body.v6.SteamAwardsNominations #footer_spacer {
   opacity: 1;
   z-index: 1;
   filter: unset;
-  box-shadow: 1px 1px 0px rgba(255, 255, 255, 0.0784313725) inset;
+  box-shadow: 1px 1px 0px #ffffff14 inset;
 }
 .nominations_SteamAwardCategory_3i1u-.nominations_Nominated_4GIBs
   .nominations_SteamAwardCategoryBlurryBackground_3obFc {
@@ -484,7 +484,7 @@ body.v6.SteamAwardsNominations #footer_spacer {
   .nominations_BadgeImageRow_2MLgo
   .nominations_BadgeItem_PJRtC
   .nominations_BadgeImage_2sB2c {
-  border: 1px solid rgba(0, 0, 0, 0);
+  border: 1px solid transparent;
   margin-bottom: 18px;
   margin-left: 20px;
   margin-right: 20px;
@@ -543,7 +543,7 @@ body.v6.SteamAwardsNominations #footer_spacer {
 .nominations_NominationPickerCtn_3I1Ga .nominations_TopRow_1ARPX:after {
   bottom: 100%;
   left: 82%;
-  border: solid rgba(0, 0, 0, 0);
+  border: solid transparent;
   content: "";
   height: 0;
   width: 0;
@@ -739,7 +739,7 @@ body.v6.SteamAwardsNominations #footer_spacer {
 .nominations_NominationPickerCtn_3I1Ga
   .nominations_GameCarouselItemCtn_1Em3_
   .nominations_PlaytimeIndicator_3t0T2 {
-  background-color: rgba(0, 0, 0, 0.5098039216);
+  background-color: #00000082;
   color: #fff;
   position: absolute;
   font-size: 11px;
@@ -1001,7 +1001,7 @@ body.SteamAwardsVoting .responsive_page_frame {
   color: #e5c6df;
   line-height: 71px;
   margin: 15px 0;
-  text-shadow: 0 0 16px rgba(34, 19, 27, 0.4588235294);
+  text-shadow: 0 0 16px #22131b75;
 }
 @media screen and (max-width: 910px) {
   .steamawards2023_HeaderCtn_1oXTW .steamawards2023_EventTitle_3xLoB {
@@ -1015,7 +1015,7 @@ body.SteamAwardsVoting .responsive_page_frame {
   font-weight: 200;
   color: #e5c6df;
   margin: 5px 0;
-  text-shadow: 0 0 16px rgba(34, 19, 27, 0.4588235294);
+  text-shadow: 0 0 16px #22131b75;
 }
 .steamawards2023_HeaderCtn_1oXTW
   .steamawards2023_InfoText_2ajjx.steamawards2023_Large_TDUFD {
@@ -1130,7 +1130,7 @@ body.v6 h3.steamawards2023_FaqSectionTitle_3iDsX {
   .steamawards2023_SteamAwardCategoryBackground_1Yf31 {
   opacity: 1;
   filter: brightness(1) saturate(1);
-  box-shadow: 1px 1px 0px rgba(255, 255, 255, 0.0784313725) inset;
+  box-shadow: 1px 1px 0px #ffffff14 inset;
 }
 .steamawards2023_SteamAwardCategory_3AoAT.steamawards2023_CategoryVoted_29XoN
   .steamawards2023_SteamAwardCategoryBlurryBackground_2O2Df {
@@ -1393,7 +1393,7 @@ body.v6 h3.steamawards2023_FaqSectionTitle_3iDsX {
   flex-grow: 1;
   margin-left: 12px;
   height: 1px;
-  background-color: rgba(255, 255, 255, 0.3490196078);
+  background-color: #ffffff59;
 }
 .steamawards2023_SteamAwardCategory_3AoAT .steamawards2023_FinalistsRow_3vJww {
   position: relative;
@@ -1505,7 +1505,7 @@ body.v6 h3.steamawards2023_FaqSectionTitle_3iDsX {
   .steamawards2023_FinalistGameCtn_1GFLe
   button.DialogButton.steamawards2023_ActionButton_-3I1t {
   margin-top: 20px;
-  background: rgba(0, 0, 0, 0);
+  background: transparent;
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 2px;
   text-transform: uppercase;
@@ -1531,7 +1531,7 @@ body.v6 h3.steamawards2023_FaqSectionTitle_3iDsX {
   .steamawards2023_YourNomination_2JxCj:after {
   bottom: 100%;
   left: 50%;
-  border: solid rgba(0, 0, 0, 0);
+  border: solid transparent;
   content: "";
   height: 0;
   width: 0;
@@ -1612,7 +1612,7 @@ body.v6 h3.steamawards2023_FaqSectionTitle_3iDsX {
 .steamawards2023_ProgressCtn_10nGa .steamawards2023_CategoryStickerCtn_bI10T {
   position: relative;
   background-color: rgba(0, 0, 0, 0.1);
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4196078431) inset;
+  box-shadow: 0 0 5px #0000006b inset;
   border-radius: 3px;
 }
 .steamawards2023_ProgressCtn_10nGa
@@ -1653,7 +1653,7 @@ body.v6 h3.steamawards2023_FaqSectionTitle_3iDsX {
   transition:
     filter 0.3s ease-in-out,
     transform 0.3s ease-in-out;
-  filter: opacity(0) drop-shadow(0px 0px 10px rgba(119, 60, 108, 0));
+  filter: opacity(0) drop-shadow(0px 0px 10px #773c6c00);
   z-index: 3;
   pointer-events: none;
 }
@@ -1666,7 +1666,7 @@ body.v6 h3.steamawards2023_FaqSectionTitle_3iDsX {
   .steamawards2023_CategoryStickerCtn_bI10T:hover
   .steamawards2023_CategoryStickerHover_10Srg {
   transform: scale(1);
-  filter: opacity(1) drop-shadow(0px 0px 10px rgba(119, 60, 108, 0.8117647059));
+  filter: opacity(1) drop-shadow(0px 0px 10px #773c6ccf);
 }
 @-webkit-keyframes steamawards2023_open-finalists_2jzg7 {
   0% {

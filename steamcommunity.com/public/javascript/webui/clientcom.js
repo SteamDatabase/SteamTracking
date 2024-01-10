@@ -1,11 +1,11 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "8601984";
+var CLSTAMP = "8622903";
 (() => {
   "use strict";
   function e(e) {
     if (!t() || !window.document.cookie) return null;
-    let s = document.cookie.match("(^|; )" + e + "=([^;]*)");
+    const s = document.cookie.match("(^|; )" + e + "=([^;]*)");
     return s && s[2] ? decodeURIComponent(s[2]) : null;
   }
   function t() {
@@ -118,7 +118,7 @@ var CLSTAMP = "8601984";
     u = "webui_config";
   let _;
   function E() {
-    let e = (function () {
+    const e = (function () {
       let e = "";
       for (let n = 0; n < 24; n++)
         e += ((t = 0),
@@ -135,7 +135,7 @@ var CLSTAMP = "8601984";
         i || (i = "/");
         let l = "";
         if (void 0 !== n && n) {
-          let e = new Date();
+          const e = new Date();
           e.setTime(e.getTime() + 864e5 * n),
             (l = "; expires=" + e.toUTCString());
         }
@@ -180,11 +180,13 @@ var CLSTAMP = "8601984";
     if (
       ((i =
         "string" == typeof t
-          ? !{
+          ? {
               NODE_ENV: "production",
               STEAM_BUILD: "buildbot",
               VALVE_BUILD: "false",
-            }.MOBILE_BUILD && document.getElementById(t)
+            }.MOBILE_BUILD
+            ? null
+            : document.getElementById(t)
           : t),
       i)
     )

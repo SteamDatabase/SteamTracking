@@ -413,7 +413,7 @@ iframe.eventbbcodeparser_MedalTVWidget_1Ysh1 {
 .eventreminder_ReminderDialog_2S_bd.eventreminder_ReminderOptions_P5dFj {
   width: 300px;
   padding: 0px;
-  background: rgba(0, 0, 0, 0);
+  background: transparent;
   border-left: none;
 }
 .eventreminder_ReminderBackground_GDF1p {
@@ -756,7 +756,7 @@ html:not(.touch)
   justify-content: center;
   align-items: center;
   text-align: center;
-  border-bottom: 4px solid rgba(0, 0, 0, 0);
+  border-bottom: 4px solid transparent;
   padding: 2px 2px;
   cursor: pointer;
 }
@@ -1472,7 +1472,7 @@ img.emoticon_emoticon_316r8.emoticon_large_2mWtZ {
 .presenterpopup_SpeakerPopup_ntY3G {
   font-size: 14px;
   background-color: #383e47;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 12px #00000066;
   border: 1px solid #404754;
   border-radius: 2px;
   padding: 8px;
@@ -1690,7 +1690,7 @@ img.emoticon_emoticon_316r8.emoticon_large_2mWtZ {
 }
 .carousel_carouselNavButton_1KK5N {
   border: none;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
   outline: none !important;
   display: flex;
   cursor: pointer;
@@ -1855,7 +1855,7 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
 }
 .carousel_pip_3Bznr {
   border: none;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
   outline: none !important;
   cursor: pointer;
   width: 18px;
@@ -1895,7 +1895,7 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   background: #2c3036;
   padding: 8px;
   border-radius: 4px;
-  box-shadow: 0 10px 32px 0px rgba(0, 0, 0, 0.6705882353);
+  box-shadow: 0 10px 32px 0px #000000ab;
   margin-bottom: 16px;
   display: flex;
   flex-direction: column;
@@ -1910,7 +1910,7 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
 .cloudfileuploadprogress_UploadPreviewContainer_2IhGM
   .cloudfileuploadprogress_SVGIcon_Video_2TqYK {
   fill: #788a92;
-  background-color: rgba(0, 0, 0, 0.2666666667);
+  background-color: #0004;
   border-radius: 4px;
   height: 150px;
   width: 100%;
@@ -1945,7 +1945,7 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   width: 16px;
   height: 16px;
   vertical-align: middle;
-  box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.5333333333);
+  box-shadow: 0 0 4px 1px #00000088;
 }
 .cloudfileuploadprogress_FileUploadCancel_2MPbU
   .cloudfileuploadprogress_SVGIcon_X_Line_3ad65
@@ -1977,7 +1977,7 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   background: #2c3036;
   padding: 8px;
   border-radius: 4px;
-  box-shadow: 0 10px 32px 0px rgba(0, 0, 0, 0.6705882353);
+  box-shadow: 0 10px 32px 0px #000000ab;
   margin-bottom: 16px;
   display: flex;
   flex-direction: column;
@@ -2102,18 +2102,18 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   box-shadow: inset 0px 0px 4px #000;
   outline-width: 0px;
   color: #aaa;
-  border: 0px solid rgba(0, 0, 0, 0);
+  border: 0px solid transparent;
   padding-right: 2px;
 }
 .chatentry_chatTextarea_pewyB {
   resize: none;
   margin-right: 4px;
   height: 42px;
-  background-color: rgba(0, 0, 0, 0);
-  box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0);
+  background-color: transparent;
+  box-shadow: inset 0px 0px 4px transparent;
   outline-width: 0px;
   color: #aaa;
-  border: 0px solid rgba(0, 0, 0, 0);
+  border: 0px solid transparent;
   font-size: 14px;
   font-family: Arial, Helvetica, sans-serif;
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
@@ -2407,11 +2407,7 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
 }
 .chatentry_chatEntryControls_2gP0D
   .chatentry_chatSubmitButton_1IEiK:not(.chatentry_disabled_2GM2k) {
-  background: linear-gradient(
-    136deg,
-    rgb(0, 86, 214) 1%,
-    rgb(26, 159, 255) 60%
-  );
+  background: linear-gradient(136deg, #0056d6 1%, #1a9fff 60%);
 }
 .chatentry_chatEntryControls_2gP0D
   .chatentry_chatSubmitButton_1IEiK.GamepadMode,
@@ -2423,8 +2419,8 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   margin: 0;
   width: 100%;
   height: 100%;
-  border: 0px solid rgba(0, 0, 0, 0);
-  background-color: rgba(0, 0, 0, 0);
+  border: 0px solid transparent;
+  background-color: transparent;
   max-width: 44px;
   min-width: 0;
 }
@@ -2478,7 +2474,7 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   transition-duration: 0.3s, 0.3s, 0.3s, 0.6s;
   background: radial-gradient(
     128px 128px at 20% 50%,
-    rgb(29, 168, 52) 0%,
+    #1da834 0%,
     rgba(27, 28, 32, 0) 100%
   );
   background-position: -190px 0px;
@@ -2500,7 +2496,7 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
 .ChatMessageEntryVoice.Disabled {
   opacity: 0.2;
   border: 1px dashed #000;
-  outline: 2px solid rgba(0, 0, 0, 0.4666666667);
+  outline: 2px solid #0007;
 }
 .ChatMessageEntryVoice.Active {
   min-width: 136px;
@@ -2518,7 +2514,7 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   width: 87px;
   text-align: center;
   color: #74c069;
-  background-color: rgba(0, 0, 0, 0.3333333333);
+  background-color: #0005;
   font-size: 10px;
   margin-top: 0px;
 }
@@ -2539,8 +2535,8 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
 }
 .ChatMessageEntryVoice .activeVoiceControls {
   min-width: 0px;
-  border-top: 0px solid rgba(0, 0, 0, 0);
-  border-bottom: 0px solid rgba(0, 0, 0, 0);
+  border-top: 0px solid transparent;
+  border-bottom: 0px solid transparent;
   background: none;
 }
 .ChatMessageEntryVoice.Inactive .VoiceControlPanelButton {
@@ -2719,5 +2715,5 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   width: 66px;
   text-align: center;
   color: #74c069;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: #0000;
 }

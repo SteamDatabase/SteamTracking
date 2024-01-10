@@ -3,7 +3,7 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [5114],
   {
-    96469: (e) => {
+    22593: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         BannerContainer: "deckverified_BannerContainer_2b4eh",
@@ -56,7 +56,7 @@
           "deckverified_DeveloperComments_LinkIcon_1cm6k",
       };
     },
-    78942: (e) => {
+    97672: (e) => {
       e.exports = {
         Dark: "footericons_Dark_2SV_e",
         Background: "footericons_Background_I3P4e",
@@ -69,14 +69,14 @@
         ChordSummary: "footericons_ChordSummary_2sFpI",
       };
     },
-    81039: (e, t, r) => {
+    4654: (e, t, r) => {
       "use strict";
       r.d(t, { ck: () => C, sC: () => m });
-      var l = r(89526),
-        n = r(19304),
-        o = r(701),
-        a = r(59743),
-        c = (r(14826), r(32765));
+      var l = r(47427),
+        n = r(13129),
+        o = r(62613),
+        a = r(45691),
+        c = (r(31846), r(37563));
       const i = l.createContext({ bShowCompatInfo: !1 }),
         s = () => l.useContext(i);
       function C() {
@@ -96,7 +96,7 @@
         },
         u = { 1: o.vyu, 2: o.KKY, 3: o.YVI, 0: o.z5E };
     },
-    65786: (e, t, r) => {
+    59449: (e, t, r) => {
       "use strict";
       function l() {
         let e = window.GetUsabilityTracker;
@@ -104,14 +104,14 @@
       }
       r.d(t, { X: () => l });
     },
-    23186: (e, t, r) => {
+    81874: (e, t, r) => {
       "use strict";
       r.d(t, { FX: () => l });
       var l,
-        n = r(33940),
-        o = r(8179),
-        a = r(50454),
-        c = r(4306);
+        n = r(85556),
+        o = r(15633),
+        a = r(68785),
+        c = r(20417);
       function i(e) {
         switch (e) {
           case o.eV.OK:
@@ -306,23 +306,23 @@
         (0, n.gn)([c.ak], s.prototype, "OnFocusNavigationChanged", null),
         (0, n.gn)([c.ak], s.prototype, "SetActionDescriptionsFromMap", null);
     },
-    53913: (e, t, r) => {
+    97695: (e, t, r) => {
       "use strict";
       r.d(t, { Rd: () => T, _R: () => O, $g: () => S, Ws: () => B });
-      var l = r(89526),
-        n = r(44026),
-        o = r(17589),
-        a = r(51438),
-        c = r(96572),
-        i = r(81039),
-        s = r(65786),
-        C = r(33940),
-        m = r(52868),
+      var l = r(47427),
+        n = r(82493),
+        o = r(4030),
+        a = r(91618),
+        c = r(20922),
+        i = r(4654),
+        s = r(59449),
+        C = r(85556),
+        m = r(80751),
         u = r.n(m),
-        d = r(23217),
-        p = r(85246),
-        g = r(4306),
-        f = r(32765);
+        d = r(16649),
+        p = r(45492),
+        g = r(20417),
+        f = r(37563);
       class H {
         GetCompatabilityResultForApp(e) {
           return this.m_mapAppResults.get(e);
@@ -424,15 +424,15 @@
         }
       }
       (0, C.gn)([g.ak], H.prototype, "LoadAppCompabitilityResult", null);
-      var v = r(57605),
-        w = r(99307),
-        h = r(701),
-        L = r(14826),
-        E = r(96469),
+      var v = r(1485),
+        w = r(50898),
+        h = r(62613),
+        L = r(31846),
+        E = r(22593),
         V = r.n(E),
-        k = r(34329),
-        _ = r(28183),
-        b = r(23186);
+        k = r(47144),
+        _ = r(81424),
+        b = r(81874);
       function M(e) {
         var t, r;
         const {
@@ -669,11 +669,11 @@
             );
         }
       }
-      var D = r(69338),
-        R = r(19304),
-        Z = r(60161),
-        x = r(81349),
-        I = r(57742);
+      var D = r(46882),
+        R = r(13129),
+        Z = r(50423),
+        x = r(45284),
+        I = r(90069);
       function B(e) {
         var t;
         const { storeItem: r } = e;
@@ -967,17 +967,17 @@
         }
       }
     },
-    28183: (e, t, r) => {
+    81424: (e, t, r) => {
       "use strict";
       r.d(t, { VC: () => d, iM: () => n, yV: () => l });
       var l,
         n,
-        o = r(33940),
-        a = r(89526),
-        c = r(23186),
-        i = r(78942),
+        o = r(85556),
+        a = r(47427),
+        c = r(81874),
+        i = r(97672),
         s = r.n(i),
-        C = r(19304);
+        C = r(13129);
       function m(e) {
         switch (e) {
           case n.Small:

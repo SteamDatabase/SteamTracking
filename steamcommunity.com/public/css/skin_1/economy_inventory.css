@@ -691,6 +691,13 @@ a.recommendation_btn:hover, a.recommendation_imgbtn:hover
 	margin-right: 8px;
 }
 
+.pending_gift_accept_privately {
+	margin-top: 8px;
+	display: inline-flex;
+	flex-direction: row;
+	gap: 3px;
+}
+
 .content.gift_controls {
 	max-width: 434px;
 	margin: 70px auto 0px;

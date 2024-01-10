@@ -3,7 +3,7 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [5331],
   {
-    59046: (e) => {
+    38694: (e) => {
       e.exports = {
         PageSection: "chartscommon_PageSection_3JAzR",
         SectionTitle: "chartscommon_SectionTitle_f7CCw",
@@ -48,7 +48,7 @@
         GameUnavailable: "chartscommon_GameUnavailable_eEqFi",
       };
     },
-    50143: (e) => {
+    14467: (e) => {
       e.exports = {
         ChartContainerPlaceholder:
           "onlineuserchart_ChartContainerPlaceholder_2XkUV",
@@ -62,7 +62,7 @@
         CurrentStats: "onlineuserchart_CurrentStats_3uEBR",
       };
     },
-    25766: (e) => {
+    25225: (e) => {
       e.exports = {
         PageContainer: "overviewpage_PageContainer_ACgX0",
         ChartItemsCtn: "overviewpage_ChartItemsCtn_3BNYF",
@@ -92,7 +92,7 @@
         Mobile: "overviewpage_Mobile_1cKll",
       };
     },
-    39559: (e) => {
+    2233: (e) => {
       e.exports = {
         SteamChartsPage: "steamchartsshell_SteamChartsPage_2aYDM",
         SteamChartsShell: "steamchartsshell_SteamChartsShell_2rArj",
@@ -121,7 +121,7 @@
         ChartNavNext: "steamchartsshell_ChartNavNext_27ASB",
       };
     },
-    96571: (e) => {
+    85278: (e) => {
       e.exports = {
         HelpRequestChartContainer:
           "supportstats_HelpRequestChartContainer_1dbAl",
@@ -134,12 +134,12 @@
         NumberCol: "supportstats_NumberCol_1GPA-",
       };
     },
-    27617: (e) => {
+    28526: (e) => {
       e.exports = {
         TopReleasesContainer: "topreleasespage_TopReleasesContainer_2ZjmC",
       };
     },
-    2518: (e) => {
+    11964: (e) => {
       e.exports = {
         PageSection: "weeklytopsellers_PageSection_2zGFB",
         SectionTitle: "weeklytopsellers_SectionTitle_1tl1E",
@@ -197,15 +197,15 @@
         TopReleasesContainer: "weeklytopsellers_TopReleasesContainer_HVGCL",
       };
     },
-    68818: (e, t, a) => {
+    29292: (e, t, a) => {
       "use strict";
       a.d(t, { Me: () => c, Mx: () => m, XC: () => i });
-      var r = a(89526),
-        n = a(10412),
-        l = a(58218),
-        s = a(47165),
-        o = a(32765);
-      a(57361);
+      var r = a(47427),
+        n = a(82071),
+        l = a(29480),
+        s = a(35427),
+        o = a(37563);
+      a(22520);
       function c(e, t = 0, a) {
         const [c, i] = (0, r.useState)(n.j1.GetClanEventFromAnnouncementGID(e)),
           m = (0, l.T)("usePartnerEventByAnnouncementGID");
@@ -262,11 +262,11 @@
         );
       }
     },
-    69513: (e, t, a) => {
+    66467: (e, t, a) => {
       "use strict";
       a.d(t, { C: () => l });
-      var r = a(54671),
-        n = a(89526);
+      var r = a(77151),
+        n = a(47427);
       function l(e) {
         const t = r.jg.Get().BIsLoaded() && r.jg.Get();
         return n.useMemo(
@@ -289,17 +289,17 @@
         );
       }
     },
-    66216: (e, t, a) => {
+    54457: (e, t, a) => {
       "use strict";
       a.d(t, { cs: () => h, qX: () => _ });
-      var r = a(33940),
-        n = a(89526),
-        l = a(5615),
-        s = a(68333),
-        o = a(63261),
-        c = a(11195),
-        i = a(92616),
-        m = a(23801);
+      var r = a(85556),
+        n = a(47427),
+        l = a(42718),
+        s = a(35750),
+        o = a(44922),
+        c = a(80998),
+        i = a(15690),
+        m = a(62210);
       const u = n.createContext({}),
         d = () => n.useContext(u);
       function _(e) {
@@ -391,10 +391,10 @@
         }
       }
     },
-    12360: (e, t, a) => {
+    18641: (e, t, a) => {
       "use strict";
       a.d(t, { P: () => n, h: () => l });
-      var r = a(89526);
+      var r = a(47427);
       function n(e) {
         const { title: t, bodyClassName: a, children: n } = e;
         return (
@@ -424,19 +424,19 @@
         }, [e]);
       }
     },
-    55331: (e, t, a) => {
+    35661: (e, t, a) => {
       "use strict";
       a.r(t), a.d(t, { SteamChartsRoutes: () => $t, default: () => jt });
       var r,
-        n = a(33940),
-        l = a(96927),
-        s = a(52868),
+        n = a(85556),
+        l = a(760),
+        s = a(80751),
         o = a.n(s),
-        c = a(5615),
-        i = a(68333),
-        m = a(22919),
-        u = a(11195),
-        d = a(92616);
+        c = a(42718),
+        i = a(35750),
+        m = a(62768),
+        u = a(80998),
+        d = a(15690);
       !(function (e) {
         (e.DailyActiveUsers = "DailyActiveUsers"),
           (e.ConcurrentUsers = "ConcurrentUsers");
@@ -512,7 +512,7 @@
           staleTime: 3e5,
         });
       }
-      var S = a(25871);
+      var S = a(80886);
       class E {
         constructor(e) {
           this.m_WebAPI = e;
@@ -546,10 +546,10 @@
         const { data: t } = (0, c.useQuery)([v], () => e.LoadTopReleases());
         return t;
       }
-      var g = a(89526),
-        k = a(9245),
-        T = a(23801),
-        f = a(32765);
+      var g = a(47427),
+        k = a(15689),
+        T = a(62210),
+        f = a(37563);
       const N = 20;
       class P {
         constructor(e, t) {
@@ -759,8 +759,8 @@
         const { rtCurrentWeek: l } = G(e, a);
         return w(e, l, t, a, r, n);
       }
-      var B = a(54671),
-        L = a(14826);
+      var B = a(77151),
+        L = a(31846);
       class D {
         constructor(e) {
           this.m_WebAPI = e;
@@ -919,8 +919,8 @@
         include_screenshots: !0,
         include_tag_count: 20,
       };
-      var X = a(59934),
-        Z = a(72120);
+      var X = a(8285),
+        Z = a(12251);
       const H = 1079395200;
       function V(e) {
         return (0, L.Xx)(
@@ -966,21 +966,21 @@
           t && ("global" == a || e.BIsValidTopSellersCountry(a))
         );
       }
-      var Q = a(66216),
-        z = a(19304),
-        K = a(88443),
-        J = a(50143),
+      var Q = a(54457),
+        z = a(13129),
+        K = a(24549),
+        J = a(14467),
         ee = a.n(J),
-        te = a(71824),
-        ae = a(97225),
-        re = a(42333),
-        ne = a(58104),
-        le = a(68537),
-        se = a(48218),
-        oe = a(48586),
-        ce = a(84343),
-        ie = a(17547),
-        me = a(59046),
+        te = a(8114),
+        ae = a(22559),
+        re = a(48359),
+        ne = a(56886),
+        le = a(72236),
+        se = a(28531),
+        oe = a(84965),
+        ce = a(59728),
+        ie = a(10162),
+        me = a(38694),
         ue = a.n(me);
       const de = g.memo((e) => {
           const t = O();
@@ -1117,11 +1117,11 @@
         }
         return null;
       }
-      var he = a(565),
-        Ce = a(74802),
-        Se = a(98009),
-        Ee = a(45437),
-        ve = a(71161);
+      var he = a(28017),
+        Ce = a(58112),
+        Se = a(28347),
+        Ee = a(8789),
+        ve = a(25006);
       function ye(e) {
         const { item: t, feature: a, depth: r, children: l } = e,
           s = (0, n._T)(e, ["item", "feature", "depth", "children"]),
@@ -1148,12 +1148,12 @@
           _ = g.createElement("a", Object.assign({}, s, { href: u }), l);
         return c ? g.createElement(Ce.h, { onEnter: d }, _) : _;
       }
-      var ge = a(12360),
-        ke = a(39559),
+      var ge = a(18641),
+        ke = a(2233),
         Te = a.n(ke),
-        fe = a(25766),
+        fe = a(25225),
         Ne = a.n(fe),
-        Pe = a(13345);
+        Pe = a(19399);
       function Ie(e) {
         const { SteamCharts: t } = e;
         return g.createElement(
@@ -1609,9 +1609,9 @@
           g.createElement("a", { href: $t.BestOfYear(o) }, m),
         );
       }
-      var Me = a(73961),
-        xe = a(701),
-        We = a(83315);
+      var Me = a(42287),
+        xe = a(62613),
+        We = a(30750);
       function Oe(e) {
         var t;
         const {
@@ -1846,11 +1846,11 @@
           g.createElement("div", { className: Te().MenuLinks }, r),
         );
       }
-      var Ve = a(2518),
+      var Ve = a(11964),
         Ye = a.n(Ve),
-        Fe = a(11985),
-        $e = a(10178),
-        je = a(69513);
+        Fe = a(88074),
+        $e = a(33012),
+        je = a(66467);
       function qe(e) {
         const { Item: t } = e,
           a = (0, je.C)(t),
@@ -1914,9 +1914,9 @@
           ),
         );
       }
-      var Ke = a(44865),
-        Je = a(85886),
-        et = a(43840);
+      var Ke = a(92797),
+        Je = a(86437),
+        et = a(85305);
       function tt(e) {
         const { children: t, mostPlayedOption: a } = e;
         return g.createElement(
@@ -2136,8 +2136,8 @@
           }),
         );
       }
-      var st = a(57605),
-        ot = a(69338);
+      var st = a(1485),
+        ot = a(46882);
       function ct(e) {
         const { MostPlayedStore: t } = e,
           [a, n] = g.useState(r.ConcurrentUsers);
@@ -2679,7 +2679,7 @@
           )
         );
       }
-      var Et = a(45820);
+      var Et = a(56617);
       function vt(e) {
         const { TopSellersStore: t, week: a, country: r } = e;
         let n = (function (e) {
@@ -2943,9 +2943,9 @@
             })
           : null;
       });
-      var Nt = a(40442),
-        Pt = a(68818),
-        It = a(27617),
+      var Nt = a(77936),
+        Pt = a(29292),
+        It = a(28526),
         Gt = a.n(It);
       const bt = g.lazy(() =>
         Promise.all([
@@ -2976,7 +2976,7 @@
           a.e(477),
           a.e(691),
           a.e(680),
-        ]).then(a.bind(a, 11513)),
+        ]).then(a.bind(a, 13854)),
       );
       function wt(e) {
         var t, a;
@@ -3003,12 +3003,12 @@
           }),
         );
       }
-      var Rt = a(96571),
+      var Rt = a(85278),
         Bt = a.n(Rt),
-        Lt = a(95424),
-        Dt = a(23007),
-        At = a(98241),
-        Mt = a(52339);
+        Lt = a(53664),
+        Dt = a(90291),
+        At = a(88579),
+        Mt = a(52942);
       function xt() {
         var e;
         const t = (function () {
@@ -3298,7 +3298,7 @@
       function Yt(e) {
         return (0, L.yW)(e, { eSuffix: Z.U$.None, bAllowDecimal: !0 });
       }
-      var Ft = a(27070);
+      var Ft = a(40057);
       const $t = {
         Overview: () => `${l.Z.SteamCharts()}`,
         MostPlayed: () => `${l.Z.SteamCharts()}mostplayed`,
