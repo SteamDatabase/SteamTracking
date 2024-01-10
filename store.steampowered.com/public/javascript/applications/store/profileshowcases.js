@@ -10,23 +10,23 @@
         ShowcaseSubhead: "profileshowcases_ShowcaseSubhead_2BmNv",
       };
     },
-    17444: (e, t, s) => {
+    17444: (e, t, a) => {
       "use strict";
-      s.r(t), s.d(t, { ProfileShowcasesPage: () => S, default: () => C });
-      var a = s(85556),
-        r = s(47427),
-        o = s(27605),
-        l = s(69247),
-        c = s(67075),
-        n = s(38244),
-        i = s(42364),
-        p = s(31846),
-        h = s(48976),
-        m = s(83955),
-        u = s(75321),
-        _ = s(46824);
+      a.r(t), a.d(t, { ProfileShowcasesPage: () => S, default: () => C });
+      var s = a(85556),
+        r = a(47427),
+        o = a(27605),
+        l = a(69247),
+        c = a(67075),
+        n = a(38244),
+        i = a(42364),
+        p = a(31846),
+        h = a(48976),
+        m = a(83955),
+        u = a(75321),
+        _ = a(46824);
       const d =
-          s.p +
+          a.p +
           "images/applications/store/showcases_header_image.svg?v=valveisgoodatcaching",
         g = (e) =>
           r.createElement(
@@ -73,26 +73,26 @@
         P = (e) => {
           const {
             point_cost: t,
-            upgradable_showcases: s,
-            purchased_upgrades: a,
+            upgradable_showcases: a,
+            purchased_upgrades: s,
           } = e;
           let o = new Map();
-          s.forEach((e) => {
+          a.forEach((e) => {
             o.set(e, 1);
           }),
-            a &&
-              a.forEach((e) => {
+            s &&
+              s.forEach((e) => {
                 o.set(e.customization_type, e.level);
               });
-          let c = s.map((e) => {
-            const s = o.get(e),
-              a = s + 1;
+          let c = a.map((e) => {
+            const a = o.get(e),
+              s = a + 1;
             return r.createElement(g, {
               key: e,
               point_cost: t,
               customization_type: e,
-              current_level: s,
-              desired_level: a,
+              current_level: a,
+              desired_level: s,
             });
           });
           return r.createElement(
@@ -115,24 +115,24 @@
         b = (e) => {
           const {
             point_cost: t,
-            purchasable_showcases: s,
-            purchased_showcases: a,
+            purchasable_showcases: a,
+            purchased_showcases: s,
             purchased_upgrades: o,
           } = e;
           let c = new Map(),
             i = new Map();
-          s.forEach((e) => {
+          a.forEach((e) => {
             c.set(e, 0), i.set(e, 1);
           }),
-            a &&
-              a.forEach((e) => {
+            s &&
+              s.forEach((e) => {
                 c.set(e.customization_type, e.count);
               }),
             o &&
               o.forEach((e) => {
                 i.set(e.customization_type, e.level);
               });
-          let h = s.map((e) =>
+          let h = a.map((e) =>
             r.createElement(f, {
               key: e,
               point_cost: t,
@@ -162,8 +162,8 @@
         render() {
           let e = h.Vb.Get().GetUpgradableProfileShowcaseCost(),
             t = h.Vb.Get().GetUpgradableProfileShowcases(),
-            s = h.Vb.Get().GetUpgradedProfileCustomizations(),
-            a = h.Vb.Get().GetPurchasableProfileShowcaseSlotCost(),
+            a = h.Vb.Get().GetUpgradedProfileCustomizations(),
+            s = h.Vb.Get().GetPurchasableProfileShowcaseSlotCost(),
             o = h.Vb.Get().GetPurchasableProfileShowcaseSlots(),
             c = h.Vb.Get().GetPurchasedProfileCustomizations();
           return r.createElement(
@@ -187,20 +187,20 @@
               r.createElement(P, {
                 point_cost: e,
                 upgradable_showcases: t,
-                purchased_upgrades: s,
+                purchased_upgrades: a,
               }),
               r.createElement(b, {
-                point_cost: a,
+                point_cost: s,
                 purchasable_showcases: o,
                 purchased_showcases: c,
-                purchased_upgrades: s,
+                purchased_upgrades: a,
               }),
               this.props.children,
             ),
           );
         }
       };
-      S = (0, a.gn)([o.Pi], S);
+      S = (0, s.gn)([o.Pi], S);
       const C = S;
     },
   },

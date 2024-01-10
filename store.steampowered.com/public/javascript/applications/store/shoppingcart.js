@@ -209,8 +209,8 @@
         S = n(46882),
         D = n(15690),
         N = n(34913),
-        T = n(13499),
-        G = n(84823),
+        G = n(13499),
+        T = n(84823),
         b = n(27605),
         y = n(43344),
         A = n.n(y);
@@ -857,8 +857,8 @@
               ? void 0
               : d.signature) || "",
           ),
-          T = (0, ie.IE)(m.L7.accountid),
-          G = (0, R.fB)(3e3),
+          G = (0, ie.IE)(m.L7.accountid),
+          T = (0, R.fB)(3e3),
           b = se - v.length,
           y = {
             accountid_giftee:
@@ -870,14 +870,14 @@
           },
           A = (0, a.G1)(),
           w = () =>
-            G(() =>
+            T(() =>
               A.mutate({
                 lineItemID: p.line_item_id,
                 lineItemFlags: p.flags,
                 giftInfo: y,
               }),
             );
-        if (!T.data) return null;
+        if (!G.data) return null;
         const x = p.line_item_id;
         return i.createElement(
           i.Fragment,
@@ -922,10 +922,10 @@
               i.createElement(V.vV, {
                 className: U().FriendAvatar,
                 statusPosition: "right",
-                persona: T.data,
+                persona: G.data,
               }),
               " ",
-              T.data.m_strPlayerName,
+              G.data.m_strPlayerName,
               !L &&
                 i.createElement(
                   pe,
@@ -1239,17 +1239,17 @@
         );
       }
       var Ne = n(35750),
-        Te = n(75545),
-        Ge = n(42718),
+        Ge = n(75545),
+        Te = n(42718),
         be = n(40057);
       function ye() {
         const e = (0, be.bY)();
-        return (0, Ge.useQuery)(
+        return (0, Te.useQuery)(
           ["AccountPrivateApps"],
           () =>
             (0, v.mG)(this, void 0, void 0, function* () {
-              const t = Ne.gA.Init(Te.XR),
-                n = yield Te.kk.GetPrivateAppList(e, t);
+              const t = Ne.gA.Init(Ge.XR),
+                n = yield Ge.kk.GetPrivateAppList(e, t);
               return new Set(n.Body().private_apps(!0).appids());
             }),
           { enabled: !!m.L7.accountid },
@@ -1260,9 +1260,9 @@
       }
       function we(e, t, n) {
         return (0, v.mG)(this, void 0, void 0, function* () {
-          const i = Ne.gA.Init(Te._c);
+          const i = Ne.gA.Init(Ge._c);
           i.Body().set_appids(t.slice()), i.Body().set_private(n);
-          const a = yield Te.kk.ToggleAppPrivacy(e, i);
+          const a = yield Ge.kk.ToggleAppPrivacy(e, i);
           if (!a.BSuccess()) throw a.GetErrorMessage();
         });
       }
@@ -1299,7 +1299,15 @@
           const s = a.GetSelfPurchaseOption();
           return i.createElement(
             Ze,
-            Object.assign({ storeItem: l, lineItem: t, purchaseOption: s }, n),
+            Object.assign(
+              {
+                name: a.GetName(),
+                storeItem: l,
+                lineItem: t,
+                purchaseOption: s,
+              },
+              n,
+            ),
           );
         },
         2: function (e) {
@@ -1400,28 +1408,29 @@
       function Ze(e) {
         var t, n;
         const {
-            storeItem: r,
-            lineItem: l,
-            validation: s = [],
-            purchaseOption: d,
-            validatedItem: u,
-            availableCoupons: _,
+            name: r,
+            storeItem: l,
+            lineItem: s,
+            validation: d = [],
+            purchaseOption: u,
+            validatedItem: _,
+            availableCoupons: f,
           } = e,
-          f = l.line_item_id,
-          g = {
-            id: null == r ? void 0 : r.GetID(),
+          g = s.line_item_id,
+          E = {
+            id: null == l ? void 0 : l.GetID(),
             type: (0, L.Ds)(
-              null == r ? void 0 : r.GetStoreItemType(),
-              null == r ? void 0 : r.GetAppType(),
+              null == l ? void 0 : l.GetStoreItemType(),
+              null == l ? void 0 : l.GetAppType(),
             ),
           },
-          E = (0, a.fn)(f),
-          v = (0, a.tI)(l.packageid, l.bundleid, !0),
-          [C] = p(),
-          h = E.isLoading || E.isSuccess || v.isLoading,
-          S = "gifts" === C && !!l.flags.is_gift,
-          D = !!_.length,
-          N = (function (e) {
+          v = (0, a.fn)(g),
+          C = (0, a.tI)(s.packageid, s.bundleid, !0),
+          [h] = p(),
+          S = v.isLoading || v.isSuccess || C.isLoading,
+          D = "gifts" === h && !!s.flags.is_gift,
+          N = !!f.length,
+          b = (function (e) {
             const t = `${m.De.STORE_BASE_URL}public/images/checkout/Cart_generic_header_logo.png`;
             if (!e) return t;
             const n = e.GetAssets();
@@ -1429,42 +1438,42 @@
             const i = n.GetHeaderURL(),
               a = n.GetSmallCapsuleURL();
             return i || a || t;
-          })(r),
-          b = u
-            ? u.original_price.formatted_amount
-            : d.formatted_original_price,
-          y = u ? u.subtotal.formatted_amount : d.formatted_final_price,
-          A = u
+          })(l),
+          y = _
+            ? _.original_price.formatted_amount
+            : u.formatted_original_price,
+          A = _ ? _.subtotal.formatted_amount : u.formatted_final_price,
+          w = _
             ? (function (e) {
                 if (e.coupon_applied) return e.coupon_applied.discount_pct;
                 const t = parseInt(e.original_price.amount_in_cents),
                   n = parseInt(e.subtotal.amount_in_cents);
                 return Math.min(99, Math.floor(((t - n) / t) * 100 + 0.5));
-              })(u)
-            : d.discount_pct,
-          w = r.GetIncludedAppIDsOrSelf(),
-          { data: x, isLoading: k } = ye(),
-          R = w.filter((e) => (null == x ? void 0 : x.has(e)));
-        if (k) return i.createElement(Be, null);
-        const P = null === (t = l.flags) || void 0 === t ? void 0 : t.is_gift,
-          F = R.length === w.length,
-          O = !P && R.length > 0 && !F;
-        let B = P ? "gift" : "myself";
+              })(_)
+            : u.discount_pct,
+          x = l.GetIncludedAppIDsOrSelf(),
+          { data: k, isLoading: R } = ye(),
+          P = x.filter((e) => (null == k ? void 0 : k.has(e)));
+        if (R) return i.createElement(Be, null);
+        const F = null === (t = s.flags) || void 0 === t ? void 0 : t.is_gift,
+          O = P.length === x.length,
+          B = !F && P.length > 0 && !O;
+        let M = F ? "gift" : "myself";
         return (
-          "myself" === B && F && (B = "private"),
+          "myself" === M && O && (M = "private"),
           i.createElement(
             "div",
             null,
             i.createElement(
               Ke,
               null,
-              h && i.createElement(Me, null),
+              S && i.createElement(Me, null),
               i.createElement(
                 "div",
                 {
                   className: (0, c.Z)(
                     Re().InnerLineItemCtn,
-                    h && Re().PendingLineItem,
+                    S && Re().PendingLineItem,
                   ),
                 },
                 i.createElement(
@@ -1477,10 +1486,10 @@
                   },
                   i.createElement(
                     "a",
-                    { href: (0, T.OL)(r.GetStorePageURL()) },
+                    { href: (0, G.OL)(l.GetStorePageURL()) },
                     i.createElement("img", {
                       className: Re().HeaderImg,
-                      src: N,
+                      src: b,
                     }),
                   ),
                 ),
@@ -1493,19 +1502,19 @@
                     i.createElement(
                       "div",
                       { className: Re().LineItemTitle },
-                      r.GetName(),
+                      r || l.GetName(),
                     ),
                   ),
-                  r.BIsComingSoon() && i.createElement(Ue, { storeItem: r }),
+                  l.BIsComingSoon() && i.createElement(Ue, { storeItem: l }),
                   i.createElement(
                     We,
-                    { lineItemID: f },
-                    s.map((e) =>
+                    { lineItemID: g },
+                    d.map((e) =>
                       i.createElement(Ve, { key: e.strNotice }, e.strNotice),
                     ),
                   ),
-                  i.createElement(Ye, { storeItem: r }),
-                  O && i.createElement(Qe, { appids: R }),
+                  i.createElement(Ye, { storeItem: l }),
+                  B && i.createElement(Qe, { appids: P }),
                   i.createElement(
                     Je,
                     { className: Re().LineItemSpaceBetween },
@@ -1518,22 +1527,22 @@
                         ),
                       },
                       i.createElement(I.a, {
-                        item: g,
+                        item: E,
                         strClassName: Re().LineItemPlatforms,
                       }),
                     ),
                     i.createElement(
                       "div",
                       { className: Re().LineItemRightCol },
-                      i.createElement(G.nk, {
+                      i.createElement(T.nk, {
                         className: Re().PriceWidget,
-                        formatted_orig_price: b,
-                        formatted_final_price: y,
-                        discount_percent: A,
+                        formatted_orig_price: y,
+                        formatted_final_price: A,
+                        discount_percent: w,
                         bHideDiscountPercentForCompliance:
-                          d.hide_discount_pct_for_compliance,
+                          u.hide_discount_pct_for_compliance,
                         bDiscountFromCoupon: !!(null ===
-                          (n = null == u ? void 0 : u.coupon_discount) ||
+                          (n = null == _ ? void 0 : _.coupon_discount) ||
                         void 0 === n
                           ? void 0
                           : n.amount_in_cents),
@@ -1547,10 +1556,10 @@
                       "div",
                       { className: Re().LineItemCol },
                       i.createElement(je, {
-                        lineItem: l,
-                        storeItem: r,
-                        initialValue: B,
-                        purchaseOption: d,
+                        lineItem: s,
+                        storeItem: l,
+                        initialValue: M,
+                        purchaseOption: u,
                       }),
                     ),
                     i.createElement(
@@ -1559,7 +1568,7 @@
                       i.createElement(
                         "div",
                         {
-                          onClick: () => E.mutate(),
+                          onClick: () => v.mutate(),
                           className: Re().RemoveLineItem,
                         },
                         (0, o.Xx)("#Cart_Remove"),
@@ -1568,14 +1577,14 @@
                   ),
                 ),
               ),
-              S && i.createElement(re, { storeItem: r, lineItem: l }),
+              D && i.createElement(re, { storeItem: l, lineItem: s }),
             ),
-            D &&
+            N &&
               i.createElement(Ee, {
-                storeItem: r,
-                lineItem: l,
-                couponApplied: null == u ? void 0 : u.coupon_applied,
-                availableCoupons: _,
+                storeItem: l,
+                lineItem: s,
+                couponApplied: null == _ ? void 0 : _.coupon_applied,
+                availableCoupons: f,
               }),
           )
         );
@@ -1678,8 +1687,8 @@
           m = (0, a.G1)(),
           d = (function () {
             const e = (0, be.bY)(),
-              t = (0, Ge.useQueryClient)();
-            return (0, Ge.useMutation)({
+              t = (0, Te.useQueryClient)();
+            return (0, Te.useMutation)({
               mutationFn: (t) =>
                 (0, v.mG)(this, void 0, void 0, function* () {
                   const { rgAppIDs: n, bPrivate: i } = t;
@@ -1881,7 +1890,7 @@
       function nt() {
         return (function (e, t) {
           const n = (0, be.bY)();
-          return (0, Ge.useQuery)(
+          return (0, Te.useQuery)(
             ["ItemsToFeature", e],
             () =>
               (0, v.mG)(this, void 0, void 0, function* () {
@@ -2261,7 +2270,7 @@
               i.createElement(
                 g.SV,
                 null,
-                i.createElement(Tt, {
+                i.createElement(Gt, {
                   isCartEmpty: 0 === p.length,
                   cart: E.data,
                 }),
@@ -2431,14 +2440,14 @@
           ),
         );
       }
-      function Tt(e) {
+      function Gt(e) {
         const { isCartEmpty: t, cart: n } = e,
           r = (0, a.i2)();
-        if (t) return i.createElement(Gt, null);
+        if (t) return i.createElement(Tt, null);
         return i.createElement(
           i.Fragment,
           null,
-          i.createElement(Gt, null),
+          i.createElement(Tt, null),
           i.createElement(Et, { cart: n }),
           i.createElement(
             "div",
@@ -2463,7 +2472,7 @@
           ),
         );
       }
-      function Gt() {
+      function Tt() {
         return i.createElement(
           _t,
           { className: l().BetaNotice },

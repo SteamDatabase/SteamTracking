@@ -1557,7 +1557,18 @@ function addToCart( subid, dedupe )
 		{
 			if ( typeof g_bUseNewCartAPI != 'undefined' && g_bUseNewCartAPI && typeof window.AddItemToCart !== 'undefined' )
 			{
-				window.AddItemToCart( subid );
+				// subid may represent an actual subid... or it might just be a way to get the right form. Figure that out here.
+				var actualSubID = subid;
+				if ( $Form.length )
+				{
+					var $Input = $Form.children( 'input[name=subid]' );
+					if ( $Input.length )
+					{
+						actualSubID = JSON.parse( $Input[0].value );
+					}
+				}
+
+				window.AddItemToCart( actualSubID );
 				return;
 			}
 		}
