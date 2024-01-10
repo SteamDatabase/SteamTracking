@@ -12971,10 +12971,7 @@
       function C(e) {
         const { rgPackageIDs: t } = e,
           { mostRecentDiscount: a, bLoading: n } = (0, i.k1)(t),
-          l = (0, i.yI)(),
-          r = (0, p.vX)(a.rtStartDate),
-          o = Date.now() / 1e3,
-          c = o - 7884864;
+          l = (0, i.yI)();
         if (
           (s.useEffect(() => {
             n || a || l(t);
@@ -12988,21 +12985,24 @@
             null,
             (0, p.Xx)("#DailyDeals_New_NoLastDiscount"),
           );
-        const m =
-          a.rtEndDate > o
-            ? s.createElement(
-                "div",
-                null,
-                (0, p.kQ)(
-                  "#DailyDeals_New_LastDiscount_Ends",
-                  s.createElement(
-                    "span",
-                    { className: _.RecentDiscount },
-                    (0, p.vX)(a.rtEndDate),
+        const r = (0, p.vX)(a.rtStartDate),
+          o = Date.now() / 1e3,
+          c = o - 7884864,
+          m =
+            a.rtEndDate > o
+              ? s.createElement(
+                  "div",
+                  null,
+                  (0, p.kQ)(
+                    "#DailyDeals_New_LastDiscount_Ends",
+                    s.createElement(
+                      "span",
+                      { className: _.RecentDiscount },
+                      (0, p.vX)(a.rtEndDate),
+                    ),
                   ),
-                ),
-              )
-            : s.createElement("br", null);
+                )
+              : s.createElement("br", null);
         return s.createElement(
           "div",
           { className: _.LastDiscount },
