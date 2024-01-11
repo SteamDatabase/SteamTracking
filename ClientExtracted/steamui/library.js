@@ -1,4 +1,4 @@
-var CLSTAMP = "8620437";
+var CLSTAMP = "8625566";
 /* Third-party software licenses can be found at licenses.txt */ (() => {
   var e,
     t,
@@ -2099,9 +2099,9 @@ var CLSTAMP = "8620437";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "Jan 8 2024 : 16:10:17",
-                BUILD_TIME_UTC: "Jan 9 2024 : 00:10:17",
-                BUILD_RTIME_UTC: 1704759017,
+                BUILD_TIME_LOCAL: "Jan 10 2024 : 14:48:41",
+                BUILD_TIME_UTC: "Jan 10 2024 : 22:48:41",
+                BUILD_RTIME_UTC: 1704926921,
               }.MOBILE_BUILD)
             ) {
               window.addEventListener("beforeunload", (e) => {
@@ -47920,9 +47920,9 @@ var CLSTAMP = "8620437";
                 ? !{
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Jan 8 2024 : 16:10:17",
-                    BUILD_TIME_UTC: "Jan 9 2024 : 00:10:17",
-                    BUILD_RTIME_UTC: 1704759017,
+                    BUILD_TIME_LOCAL: "Jan 10 2024 : 14:48:41",
+                    BUILD_TIME_UTC: "Jan 10 2024 : 22:48:41",
+                    BUILD_RTIME_UTC: 1704926921,
                   }.MOBILE_BUILD && document.getElementById(t)
                 : t),
             r)
@@ -47955,21 +47955,41 @@ var CLSTAMP = "8620437";
       },
       13678: (e, t, n) => {
         "use strict";
-        n.d(t, { RY: () => C, g3: () => h, k0: () => c, yp: () => u });
-        let r = !1,
-          i = !1,
+        function r() {
+          var e;
+          const t =
+            null ===
+              (e = (function () {
+                const e = navigator.userAgent.match(
+                  /Valve (?<family>Steam (?:Client|GameOverlay|Tenfoot|ClientUI|Gamepad(?: VR)?(?:\/Steam Deck)?))( \[(?<betaid>[A-Za-z0-9_\- ]*)\])?(\/(?<launcher>[A-Za-z0-9_]+))?\/(?<version>[0-9]*)/,
+                );
+                return e ? e.groups : void 0;
+              })()) || void 0 === e
+              ? void 0
+              : e.betaid;
+          return t && ("Steam Main Client" == t || "Steam Beta Update" == t);
+        }
+        n.d(t, {
+          M4: () => r,
+          RY: () => u,
+          g3: () => d,
+          k0: () => C,
+          yp: () => h,
+        });
+        let i = !1,
           o = !1,
           l = !1,
           a = !1,
-          s = !1;
-        function c() {
-          return r || m(), i || o;
-        }
+          s = !1,
+          c = !1;
         function C() {
-          return r || m(), s;
+          return i || p(), o || l;
         }
         function u() {
-          if (!c()) return 0;
+          return i || p(), c;
+        }
+        function h() {
+          if (!C()) return 0;
           if ("undefined" != typeof navigator && navigator.userAgent) {
             let e = navigator.userAgent.match(
               /Valve Steam [^\/]*\/(?:[^/]*\/)?([0-9]+)/,
@@ -47978,7 +47998,7 @@ var CLSTAMP = "8620437";
           }
           return 0;
         }
-        function h() {
+        function d() {
           if (
             !(null === navigator || void 0 === navigator
               ? void 0
@@ -47988,7 +48008,7 @@ var CLSTAMP = "8620437";
           let e = navigator.userAgent.match(/Valve Steam ([^\/]*)\//);
           return e && 2 == e.length ? e[1] : void 0;
         }
-        function d(e, t) {
+        function m(e, t) {
           return (
             !!window.location.href.match("[?&]" + t + "=") ||
             !(
@@ -47998,18 +48018,18 @@ var CLSTAMP = "8620437";
             )
           );
         }
-        function m() {
-          (l = d("Valve Steam Tenfoot", "force_tenfoot_client_view")),
-            (o = d("Valve Steam GameOverlay", "force_overlay_view")),
-            (i = l || d("Valve Steam Client", "force_client_view")),
-            (s =
-              d("iphone", "force_ios_view") ||
-              d("ipad", "force_ios_view") ||
-              d("ipod", "force_ios_view") ||
-              (d("macintosh", "force_ios_view") &&
-                d("safari", "force_ios_view"))),
-            (a = d("android", "force_android_view")),
-            (r = !0);
+        function p() {
+          (a = m("Valve Steam Tenfoot", "force_tenfoot_client_view")),
+            (l = m("Valve Steam GameOverlay", "force_overlay_view")),
+            (o = a || m("Valve Steam Client", "force_client_view")),
+            (c =
+              m("iphone", "force_ios_view") ||
+              m("ipad", "force_ios_view") ||
+              m("ipod", "force_ios_view") ||
+              (m("macintosh", "force_ios_view") &&
+                m("safari", "force_ios_view"))),
+            (s = m("android", "force_android_view")),
+            (i = !0);
         }
       },
       23477: (e, t, n) => {
@@ -48484,7 +48504,7 @@ var CLSTAMP = "8620437";
       {
         27: "75d98efd4adc67f89843",
         33: "7c4273befe3c3cc82980",
-        58: "3fb883893011ccd7b5e7",
+        58: "842d2d9e02b07a2961fe",
         131: "48a649fe33cb509558a8",
         146: "691947ff243fd40854d6",
         200: "a5382d4346eadef3d5b5",
@@ -48586,7 +48606,7 @@ var CLSTAMP = "8620437";
         7781: "590a62c639e0ee5c03e0",
         7832: "9d6d3d860dea2a65797b",
         7850: "de745d07d1eca8730ab1",
-        7962: "3255a6d00d939e00e024",
+        7962: "8341ef6356cc8888bf61",
         8011: "cd9fdcd3471ebd4fb569",
         8052: "90ca8df91679205a09bc",
         8085: "d77147b1e9da595b4579",
