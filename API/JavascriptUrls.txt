@@ -1025,6 +1025,7 @@ ${PARTNER_BASE_URL}promotion/dailydeals/ajaxgetpartner
 ${PARTNER_BASE_URL}promotion/dailydeals/ajaxsearcharchives
 ${PARTNER_BASE_URL}promotion/dailydeals/ajaxsetblackout
 ${PARTNER_BASE_URL}promotion/dailydeals/dashboard
+${PARTNER_BASE_URL}promotion/dailydeals/dashboard/${partner_id}
 ${PARTNER_BASE_URL}promotion/discounts${}?de=${discount_event_id}
 ${PARTNER_BASE_URL}promotion/discounts/ajaxgetalldiscountevents/${}
 ${PARTNER_BASE_URL}promotion/discounts/ajaxgetdiscounteventapplist
@@ -1032,6 +1033,7 @@ ${PARTNER_BASE_URL}promotion/discounts/ajaxgetdiscounteventbyid
 ${PARTNER_BASE_URL}promotion/discounts/ajaxgetpackagediscounts/${}
 ${PARTNER_BASE_URL}promotion/discounts/ajaxupdatediscountevent
 ${PARTNER_BASE_URL}promotion/discounts/dashboard/
+${PARTNER_BASE_URL}promotion/discounts/dashboard/${}?de=${}
 ${PARTNER_BASE_URL}promotion/discounts/dashboard/?de=${_ ? _ : _}
 ${PARTNER_BASE_URL}promotion/marketingmessages/ajaxgetsnrmetrics
 ${PARTNER_BASE_URL}promotion/marketingmessages/ajaxuploadasset/${}

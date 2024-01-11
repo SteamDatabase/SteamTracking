@@ -10,6 +10,7 @@
         WidePageCtn: "adminshared_WidePageCtn_3-Dwx",
         PageTitleFlexCtn: "adminshared_PageTitleFlexCtn_SZQhW",
         PageTitle: "adminshared_PageTitle_15d88",
+        Beta: "adminshared_Beta_TuglB",
         PageSubTitle: "adminshared_PageSubTitle_3gMUt",
         ValveOnlyTitle: "adminshared_ValveOnlyTitle_3ccYi",
         ValveOnlyBackground: "adminshared_ValveOnlyBackground_TRbfz",
@@ -20,7 +21,6 @@
         SectionCtn: "adminshared_SectionCtn_3la4r",
         Bright: "adminshared_Bright_1Sq2a",
         ActionBar: "adminshared_ActionBar_1lvk-",
-        SectionIntroText: "adminshared_SectionIntroText_2BLTK",
         SectionIntroRequirements: "adminshared_SectionIntroRequirements_2wFwI",
         warning: "adminshared_warning_3RQNx",
         RightCol: "adminshared_RightCol_p8nGm",
@@ -656,7 +656,7 @@
     },
     84877: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { default: () => X });
+      n.r(t), n.d(t, { default: () => K });
       var r = n(47427),
         a = n(82756);
       const s = (0, a.kQ)("physical_goods", "application_config");
@@ -998,8 +998,8 @@
         T = n(71741),
         A = n(52813),
         I = n.n(A),
-        x = n(64936);
-      function B(e, t) {
+        B = n(64936);
+      function x(e, t) {
         return e > t + 1 ? e - t : e + 12 - t;
       }
       function L(e) {
@@ -1021,17 +1021,17 @@
               (i = "" + a.getFullYear());
             break;
           case "#Sale_Reservation_TwoMonthRangeYear":
-            (o = (0, y.Xx)("#Sale_Reservation_MonthNoun_" + B(s, 1))),
+            (o = (0, y.Xx)("#Sale_Reservation_MonthNoun_" + x(s, 1))),
               (i = (0, y.Xx)("#Sale_Reservation_MonthNoun_" + s)),
               (l = "" + a.getFullYear());
             break;
           case "#Sale_Reservation_ThreeMonthRangeYear":
-            (o = (0, y.Xx)("#Sale_Reservation_MonthNoun_" + B(s, 2))),
+            (o = (0, y.Xx)("#Sale_Reservation_MonthNoun_" + x(s, 2))),
               (i = (0, y.Xx)("#Sale_Reservation_MonthNoun_" + s)),
               (l = "" + a.getFullYear());
             break;
           case "#Sale_Reservation_FourMonthRangeYear":
-            (o = (0, y.Xx)("#Sale_Reservation_MonthNoun_" + B(s, 3))),
+            (o = (0, y.Xx)("#Sale_Reservation_MonthNoun_" + x(s, 3))),
               (i = (0, y.Xx)("#Sale_Reservation_MonthNoun_" + s)),
               (l = "" + a.getFullYear());
             break;
@@ -1047,7 +1047,7 @@
             break;
           case "#Sale_Reservation_RelativeWeekly":
             {
-              const e = x.JW.GetTimeNowWithOverride(),
+              const e = B.JW.GetTimeNowWithOverride(),
                 t = Math.floor((n - e) / 86400);
               t < 7 ||
                 (t < 28
@@ -1446,50 +1446,50 @@
       }
       var Q = n(13129),
         H = n(77681),
-        K = n.n(H);
-      function X(e) {
+        X = n.n(H);
+      function K(e) {
         return r.createElement(
           "div",
-          { className: (0, Q.Z)(f.ctn, K().AdminPageCtn) },
+          { className: (0, Q.Z)(f.ctn, X().AdminPageCtn) },
           r.createElement(
             "h1",
-            { className: K().PageTitle },
+            { className: X().PageTitle },
             "Reservation Queue - Messaging Tools",
           ),
           r.createElement("hr", { className: "VO" }),
           r.createElement(
             "div",
-            { className: K().ColumnCtn },
+            { className: X().ColumnCtn },
             r.createElement(
               "div",
-              { className: K().LeftCol },
+              { className: X().LeftCol },
               r.createElement(
                 "div",
-                { className: K().SectionCtn },
+                { className: X().SectionCtn },
                 r.createElement(C, null),
               ),
               r.createElement(
                 "div",
-                { className: K().SectionCtn },
+                { className: X().SectionCtn },
                 r.createElement(N, null),
               ),
             ),
             r.createElement(
               "div",
-              { className: K().RightCol },
+              { className: X().RightCol },
               r.createElement(
                 "div",
-                { className: K().SectionCtn },
+                { className: X().SectionCtn },
                 r.createElement(G, null),
               ),
               r.createElement(
                 "div",
-                { className: K().SectionCtn },
+                { className: X().SectionCtn },
                 r.createElement(O, null),
               ),
               r.createElement(
                 "div",
-                { className: K().SectionCtn },
+                { className: X().SectionCtn },
                 r.createElement(S.__, null, "Useful Links:"),
                 r.createElement(
                   "ul",

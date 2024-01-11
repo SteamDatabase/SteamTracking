@@ -15579,6 +15579,11 @@
                     br: i.FE.readString,
                     bw: i.Xc.writeString,
                   },
+                  skip_discount_event: {
+                    n: 5,
+                    br: i.FE.readBool,
+                    bw: i.Xc.writeBool,
+                  },
                 },
               }),
             L.sm_m

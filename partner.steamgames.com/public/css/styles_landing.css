@@ -3228,11 +3228,26 @@ div .cdkey_request_details_row
 	padding: 5px 0px 0px 12px;
 }
 
-.price_pending {
-    width: 30%;
+.price_pending_ctn {
     float: left;
-    margin: 20px 10px 30px 0px;
-    padding: 12px 10px 10px 10px;
+    width: 30%;
+    margin: 20px 10px 0px 10px;
+    font-size: 16px;
+    color: white;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.price_pending_ctn .title {
+    color: #B5B5B5;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.price_pending {
+
+    padding: 14px;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -3240,9 +3255,19 @@ div .cdkey_request_details_row
     color: white;
     display: flex;
     flex-direction: row;
-    background: linear-gradient(269.68deg, #c54c12 0.2%, #e76e34 99.92%);
+    border-top: 1px solid #DB4D32;
+    background: radial-gradient(178.33% 103.37% at 9.71% 4.8%, #674232 0%, #2B3036 86.43%);
+    box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.75);
 
     color: white;
+}
+
+.price_pending .body {
+    margin-bottom: 12px;
+}
+
+.price_pending .link {
+    font-size: 14px;
 }
 
 .price_pending .icon_cost {

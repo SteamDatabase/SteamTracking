@@ -10,6 +10,7 @@
         WidePageCtn: "adminshared_WidePageCtn_3-Dwx",
         PageTitleFlexCtn: "adminshared_PageTitleFlexCtn_SZQhW",
         PageTitle: "adminshared_PageTitle_15d88",
+        Beta: "adminshared_Beta_TuglB",
         PageSubTitle: "adminshared_PageSubTitle_3gMUt",
         ValveOnlyTitle: "adminshared_ValveOnlyTitle_3ccYi",
         ValveOnlyBackground: "adminshared_ValveOnlyBackground_TRbfz",
@@ -20,7 +21,6 @@
         SectionCtn: "adminshared_SectionCtn_3la4r",
         Bright: "adminshared_Bright_1Sq2a",
         ActionBar: "adminshared_ActionBar_1lvk-",
-        SectionIntroText: "adminshared_SectionIntroText_2BLTK",
         SectionIntroRequirements: "adminshared_SectionIntroRequirements_2wFwI",
         warning: "adminshared_warning_3RQNx",
         RightCol: "adminshared_RightCol_p8nGm",
@@ -631,8 +631,8 @@
             include_screenshots: v,
             include_trailers: C,
             include_ratings: f,
-            include_tag_count: S,
-            include_reviews: E,
+            include_tag_count: E,
+            include_reviews: S,
             include_basic_info: A,
             include_supported_languages: x,
             include_full_description: D,
@@ -649,8 +649,8 @@
               include_screenshots: v,
               include_trailers: C,
               include_ratings: f,
-              include_tag_count: S,
-              include_reviews: E,
+              include_tag_count: E,
+              include_reviews: S,
               include_basic_info: A,
               include_supported_languages: x,
               include_full_description: D,
@@ -671,7 +671,7 @@
                   })),
               () => o && o.cancel("useStoreItemCache: unmounting")
             );
-          }, [e, t, r, _, p, h, m, g, v, C, f, S, E, A, x, D, T, L, c]),
+          }, [e, t, r, _, p, h, m, g, v, C, f, E, S, A, x, D, T, L, c]),
           !e)
         )
           return [null, 2];
@@ -729,8 +729,8 @@
             include_reviews: v,
             include_basic_info: C,
             include_supported_languages: f,
-            include_full_description: S,
-            include_included_items: E,
+            include_full_description: E,
+            include_included_items: S,
             include_assets_without_overrides: A,
           } = n;
         if (
@@ -748,8 +748,8 @@
                 include_reviews: v,
                 include_basic_info: C,
                 include_supported_languages: f,
-                include_full_description: S,
-                include_included_items: E,
+                include_full_description: E,
+                include_included_items: S,
                 include_assets_without_overrides: A,
               },
               r = e.filter(
@@ -768,7 +768,7 @@
               }),
               () => o.cancel("useStoreItemCacheMultiplePackages: unmounting")
             );
-          }, [e, t, r, l, d, c, _, u, p, h, m, g, v, C, f, S, E, A]),
+          }, [e, t, r, l, d, c, _, u, p, h, m, g, v, C, f, E, S, A]),
           !e)
         )
           return 2;

@@ -25171,13 +25171,13 @@
               return I.createElement(
                 I.Fragment,
                 null,
-                "We've got an upcoming opportunity on Steam for ",
+                "Regarding your game ",
                 I.createElement(
                   "a",
                   { href: n.GetStorePageURL() },
                   n.GetName(),
                 ),
-                ".",
+                " on Steam.",
               );
             case g.k_SteamAwardFinalists:
               return I.createElement(
@@ -25316,23 +25316,24 @@
                         partnerInfo: i,
                       }),
                     ),
-                    I.createElement(
-                      "div",
-                      { className: Kn.EventCtn },
+                    t.GetType() != g.k_GeneralCommunication &&
                       I.createElement(
                         "div",
-                        { className: Kn.EventTitle },
-                        o.GetCurEventTitle(),
-                      ),
-                      Boolean(t.GetType() != g.k_PermissionRequest) &&
+                        { className: Kn.EventCtn },
                         I.createElement(
                           "div",
-                          { className: Kn.EventDates },
-                          (0, ce.$1)(o.GetEventStartTime()),
-                          " - ",
-                          (0, ce.$1)(o.GetEventEndTime()),
+                          { className: Kn.EventTitle },
+                          o.GetCurEventTitle(),
                         ),
-                    ),
+                        Boolean(t.GetType() != g.k_PermissionRequest) &&
+                          I.createElement(
+                            "div",
+                            { className: Kn.EventDates },
+                            (0, ce.$1)(o.GetEventStartTime()),
+                            " - ",
+                            (0, ce.$1)(o.GetEventEndTime()),
+                          ),
+                      ),
                     I.createElement(
                       "div",
                       { className: Kn.DevEmail_Subject },

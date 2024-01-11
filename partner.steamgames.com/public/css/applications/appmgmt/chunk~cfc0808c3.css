@@ -303,12 +303,11 @@ b {
   text-align: center;
   color: #ebebeb;
   background: #3d434d;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
   text-decoration: none;
 }
 .partnereventshared_EditPreviewButton_3NmFF:hover {
   cursor: pointer;
-  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3);
 }
 .partnereventshared_EditPreviewButton_3NmFF.partnereventshared_Delete_2GdGz {
   border: 1px solid #ca5029;
@@ -1101,13 +1100,24 @@ button.Primary.partnereventshared_AddSectionButton_15e-D {
 }
 .adminshared_PageTitle_15d88 {
   font-size: 32px;
-  color: #67c1f5;
+  color: #fff;
   font-weight: 200;
   margin-bottom: 8px;
 }
 .adminshared_PageTitle_15d88 span {
   color: #848f95;
   margin-left: 8px;
+}
+.adminshared_PageTitle_15d88 .adminshared_Beta_TuglB {
+  display: inline;
+  background: orange;
+  padding: 3px 6px;
+  border-radius: 2px;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #000;
+  font-weight: 500;
+  vertical-align: middle;
 }
 .adminshared_PageSubTitle_3gMUt {
   font-size: 16px;
@@ -1170,6 +1180,9 @@ button.Primary.partnereventshared_AddSectionButton_15e-D {
   .adminshared_LeftCol_1neFt
   .adminshared_SectionCtn_3la4r.adminshared_Bright_1Sq2a {
   background: linear-gradient(127deg, #474c5c, #32363e, #363944);
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+  z-index: 1;
 }
 .adminshared_ColumnCtn_1Mnmn
   .adminshared_LeftCol_1neFt
@@ -1182,10 +1195,11 @@ button.Primary.partnereventshared_AddSectionButton_15e-D {
 .adminshared_ColumnCtn_1Mnmn
   .adminshared_LeftCol_1neFt
   .adminshared_SectionCtn_3la4r
-  .adminshared_SectionIntroText_2BLTK {
+  h2 {
   font-size: 21px;
   font-weight: 500;
   margin-bottom: 6px;
+  color: #fff;
 }
 .adminshared_ColumnCtn_1Mnmn
   .adminshared_LeftCol_1neFt
@@ -1330,6 +1344,12 @@ button.Primary.partnereventshared_AddSectionButton_15e-D {
 .adminshared_ColumnCtn_1Mnmn
   .adminshared_RightCol_p8nGm
   .adminshared_SectionCtn_3la4r
+  h2 {
+  color: #fff;
+}
+.adminshared_ColumnCtn_1Mnmn
+  .adminshared_RightCol_p8nGm
+  .adminshared_SectionCtn_3la4r
   .adminshared_TitleSmall_oEKks {
   font-size: 12px;
   color: #cacaca;
@@ -1368,6 +1388,7 @@ button.Primary.partnereventshared_AddSectionButton_15e-D {
 .adminshared_DefaultSectionCtn_2Cn7r.adminshared_ActionBar_1lvk- {
   position: sticky;
   bottom: 0;
+  z-index: 2;
   background: linear-gradient(0deg, #2c2e35, #383a43);
   box-shadow: 0 0 10px #000;
 }

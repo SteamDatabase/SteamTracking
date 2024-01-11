@@ -2068,9 +2068,11 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   a {
   display: block;
   margin-bottom: 8px;
+  margin-left: 0;
 }
 .requirevalvepublishapproval_Title_1TI4b {
-  font-weight: bold;
+  font-weight: 500;
+  font-size: 18px;
 }
 .requirevalvepublishapproval_RequireText_rZkfY {
   color: #888;
@@ -3820,6 +3822,9 @@ html.responsive.touch
 .assetportal_ChecklistTitleCtn_2at5P .assetportal_Optional_24ZWq {
   color: #aeaeae;
 }
+.assetportal_ChecklistTitleCtn_2at5P .assetportal_Completed_32heB {
+  color: #adff2f;
+}
 .assetportal_ChecklistDescription_1hBXn {
   margin-bottom: 12px;
   margin-left: 26px;
@@ -3839,6 +3844,70 @@ button.DialogButton.Primary.assetportal_SubmitButton_1SeDT {
   font-size: 16px;
   padding: 6px 20px;
   font-weight: 500;
+}
+.assetportal_DateCustomizeCtn_1ImfN {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 6px;
+}
+.assetportal_DateCustomizeCtn_1ImfN span {
+  background: #383b43;
+  padding: 2px 4px;
+  border-radius: 2px;
+  margin-left: 6px;
+}
+.assetportal_DateCustomizeCtn_1ImfN span .DialogCheckbox_Container {
+  margin-bottom: 0;
+}
+.assetportal_AssetRequestDoneCtn_29h_j {
+  width: 100%;
+  border-left: 5px solid #98dc00;
+  background: #464b5a;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 6px;
+  padding: 8px;
+  box-sizing: border-box;
+}
+.assetportal_AssetRequestDoneCtn_29h_j .assetportal_CheckMark_3ZLM- {
+  font-size: 50px;
+  line-height: 58px;
+  font-weight: 800;
+  color: #98dc00;
+  margin: 8px 12px 8px 6px;
+}
+.assetportal_AssetRequestDoneCtn_29h_j .assetportal_Body_1ZWLu {
+  font-size: 16px;
+  font-weight: 300;
+  color: #fff;
+}
+.assetportal_AssetRequestDoneCtn_29h_j .assetportal_Body_1ZWLu h2 {
+  color: #fff;
+  font-weight: 700;
+}
+.assetportal_DiscountReminderCtn_NKqq6 {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 8px;
+  box-sizing: border-box;
+  color: #fff;
+  font-size: 14px;
+}
+.assetportal_DiscountReminderCtn_NKqq6 button.DialogButton {
+  width: fit-content;
+  padding-right: 12px;
+  padding-left: 12px;
+}
+.assetportal_ReviewSubmissionDetailsCtn_1eh8p button.DialogButton {
+  width: fit-content;
+  padding-right: 12px;
+  padding-left: 12px;
 }
 .collapseablesection_SectionTitleHeader_1K5gA {
   display: flex;
@@ -4320,6 +4389,41 @@ button.DialogButton.Primary.assetportal_SubmitButton_1SeDT {
 .promotionplaneditor_StatusRow_DF-Ee span:not(:first-child) {
   margin-left: 16px;
 }
+.dailydealdiscounts_HoverObject_2x-6c {
+  background: #2e3138;
+  color: #fff;
+  padding: 16px;
+  box-sizing: border-box;
+}
+.dailydealdiscounts_HoverCtn_3cend {
+  border-radius: 3px;
+  padding: 5px;
+  margin-right: auto;
+}
+.dailydealdiscounts_HoverCtn_3cend:hover {
+  background: #1c95ff;
+}
+.dailydealdiscounts_DiscountEventName_2H6CR {
+  font-size: 22px;
+}
+.dailydealdiscounts_DiscountDates_3fhuW {
+  font-size: 12px;
+}
+.dailydealdiscounts_DiscountedPackageList_2ixiP {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #7c7e83;
+}
+.dailydealdiscounts_MissingDiscount_1gz3F {
+  color: #e3d49b;
+}
+.dailydealdiscounts_LastDiscount_2gbaQ {
+  position: relative;
+}
+.dailydealdiscounts_LastDiscount_2gbaQ
+  .dailydealdiscounts_RecentDiscount_W5lwN {
+  color: orange;
+}
 .partnersiteappsearch_Results_3mK1P {
   max-height: 35vh;
   overflow-y: auto;
@@ -4487,41 +4591,6 @@ button.DialogButton.Primary.assetportal_SubmitButton_1SeDT {
 }
 .dailydealadmincreatenew_CurrentPrice_3UShm {
   position: relative;
-}
-.dailydealdiscounts_HoverObject_2x-6c {
-  background: #2e3138;
-  color: #fff;
-  padding: 16px;
-  box-sizing: border-box;
-}
-.dailydealdiscounts_HoverCtn_3cend {
-  border-radius: 3px;
-  padding: 5px;
-  margin-right: auto;
-}
-.dailydealdiscounts_HoverCtn_3cend:hover {
-  background: #1c95ff;
-}
-.dailydealdiscounts_DiscountEventName_2H6CR {
-  font-size: 22px;
-}
-.dailydealdiscounts_DiscountDates_3fhuW {
-  font-size: 12px;
-}
-.dailydealdiscounts_DiscountedPackageList_2ixiP {
-  margin-top: 8px;
-  font-size: 12px;
-  color: #7c7e83;
-}
-.dailydealdiscounts_MissingDiscount_1gz3F {
-  color: #e3d49b;
-}
-.dailydealdiscounts_LastDiscount_2gbaQ {
-  position: relative;
-}
-.dailydealdiscounts_LastDiscount_2gbaQ
-  .dailydealdiscounts_RecentDiscount_W5lwN {
-  color: orange;
 }
 .dailydealeditor_PromoTitle_1rgqM {
   font-size: 30px;
@@ -4717,6 +4786,9 @@ button.DialogButton.Primary.assetportal_SubmitButton_1SeDT {
   background: #58792b;
   cursor: pointer;
 }
+.dailydealcalendar_DailyDealCtn_2XgAJ.dailydealcalendar_InviteTaken_3muZe:hover {
+  cursor: unset;
+}
 .dailydealcalendar_DailyDealCtn_2XgAJ.dailydealcalendar_Reserved_s-YTZ {
   background: #282e3b;
   justify-content: center;
@@ -4836,7 +4908,10 @@ button.DialogButton.Primary.assetportal_SubmitButton_1SeDT {
   margin-bottom: 8px;
   padding: 18px;
   box-sizing: border-box;
+  background: #0b1119;
   opacity: 90%;
+  font-size: 14px;
+  font-weight: 200;
 }
 .dailydealpartnerinfo_PartnerFooter_226LW
   .dailydealpartnerinfo_InfoSection_hdU6S
@@ -4844,12 +4919,8 @@ button.DialogButton.Primary.assetportal_SubmitButton_1SeDT {
   padding-top: 20px;
   margin-top: auto;
 }
-.dailydealpartnerinfo_PartnerFooter_226LW
-  .dailydealpartnerinfo_InfoSection_hdU6S
-  .dailydealpartnerinfo_MoreInfo_3DU0H
-  a {
-  color: #69dcf5;
-  opacity: 90%;
+.dailydealpartnerinfo_PartnerFooter_226LW ul {
+  margin-top: 8px;
 }
 .dailydealpartnerinfo_PartnerFooter_226LW ul li {
   list-style-type: square;
@@ -4911,6 +4982,9 @@ button.DialogButton.Primary.assetportal_SubmitButton_1SeDT {
 }
 .dailydealsdashboard_PartnerDashboard_NoInvites_W2HsX {
   font-size: 15px;
+  padding: 16px;
+  background: #272b34;
+  box-sizing: border-box;
 }
 .dailydealsdashboard_Orange_235Vr {
   color: orange;
