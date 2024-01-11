@@ -19679,12 +19679,14 @@
           ),
           m = (null == s ? void 0 : s.length) || 0;
         let d = Gt.Ef;
-        !n &&
-          i &&
-          ((d = (t - i) / F._H.PerDay),
-          (0, Oa.X)(d >= Gt.NB, "maximum discount days is less than minimum"),
-          (d = Math.max(Gt.NB, d)),
-          (d = Math.min(Gt.Ef, d)));
+        if (!n && i) {
+          const e = Math.floor((i + F._H.PerHour - t) / F._H.PerDay);
+          (0, Oa.X)(
+            i > t && e > 0,
+            "days until next cooldown conflict is not greater than 0",
+          ),
+            e > 0 && (d = Math.min(Gt.Ef, Gt.NB + (e - 1)));
+        }
         const u = ce.JW.GetTimeNowWithOverride(),
           p = t > u,
           _ = Ka - (m + o),
