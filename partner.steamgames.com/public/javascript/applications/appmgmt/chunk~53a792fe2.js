@@ -2750,6 +2750,7 @@
             (this.m_bIncludeCustomEvents = !0),
             (this.m_bIncludeIneligibleEvents = !1),
             (this.m_bIncludeConflictsInSingleEventView = !0),
+            (this.m_bEditingDailyDealDiscount = !1),
             (this.m_eRelatedDiscountView = "deepest-past"),
             (this.m_RelatedDiscountViewCallbackList = new s.pB()),
             (this.m_gridEventSelectionParametersCallbackList = new s.pB()),
@@ -2864,6 +2865,10 @@
             const e = t.get("cf");
             this.m_bIncludeConflictsInSingleEventView = "0" != e;
           }
+          if (t.has("dd")) {
+            const e = t.get("dd");
+            this.m_bEditingDailyDealDiscount = "0" != e;
+          }
         }
         HandleEventSelectionChangeAndNotifyListeners() {
           const t = new URL(window.location.href);
@@ -2882,6 +2887,9 @@
             this.m_bIncludeConflictsInSingleEventView
               ? t.searchParams.delete("cf")
               : t.searchParams.set("cf", "0"),
+            this.m_bEditingDailyDealDiscount &&
+              ((this.m_bEditingDailyDealDiscount = !1),
+              t.searchParams.delete("dd")),
             window.history.replaceState({}, "", t.toString()),
             this.UpdateVisibleDiscountEventIDs(),
             this.m_gridEventSelectionParametersCallbackList.Dispatch(
@@ -2892,6 +2900,7 @@
           return {
             bSingleDiscountEventView: null != this.m_strSelectedDiscountEventID,
             strSelectedEvent: this.m_strSelectedDiscountEventID,
+            bEditingDailyDealDiscount: this.m_bEditingDailyDealDiscount,
             fnSelectEvent: (t) => {
               (this.m_strSelectedDiscountEventID = t),
                 this.HandleEventSelectionChangeAndNotifyListeners();

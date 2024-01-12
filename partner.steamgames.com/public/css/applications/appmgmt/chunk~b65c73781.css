@@ -2213,8 +2213,15 @@ hr.VO {
   font-size: 18px;
   color: #fff;
 }
+.saledashboard_BigNumber_2akdc span {
+  text-align: center;
+}
 .saledashboard_BigNumber_2akdc.saledashboard_Highlight_1XloL {
   color: #a4d00b;
+}
+.saledashboard_StatText_3pruE {
+  text-align: center;
+  display: inline;
 }
 .saledashboard_StatusCtn_1tIk2 {
   display: flex;
@@ -2244,6 +2251,150 @@ hr.VO {
 .saledashboard_VisualBar_1wyrg {
   background: #67c1f5;
   height: 16px;
+}
+.saledashboard_QuickViewCtn_12r1v {
+  max-width: 80vw;
+}
+.salerowsection_SectionContainer_DPwXX {
+  min-height: 250px;
+}
+.salerowsection_SaleSectionTitle_jRz_c {
+  padding-top: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+.salerowsection_SaleSectionResizeButton_J8r3M {
+  max-width: 50px;
+}
+.salerowsection_SaleSectionDesc_3LwmL {
+  font-size: 16px;
+  color: #fff;
+  padding: 12px 0;
+}
+.salerowsection_TileContainer_3miRj {
+  width: 100%;
+  min-height: 189px;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "title group" "info info";
+  background: linear-gradient(90deg, #2c2e35, #25272c, #2c2e35);
+  border-top: 1px solid #2c2e35;
+  margin-bottom: 8px;
+  box-sizing: border-box;
+  padding: 12px;
+}
+.salerowsection_TileContainer_3miRj .salerowsection_EventNameCtn_YXjI3 {
+  grid-area: title;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.salerowsection_TileContainer_3miRj
+  .salerowsection_EventNameCtn_YXjI3
+  .salerowsection_EventName_1MeeJ {
+  padding-right: 5px;
+  font-size: 18px;
+  color: #fff;
+  text-decoration: none;
+  line-height: 34px;
+}
+.salerowsection_TileContainer_3miRj
+  .salerowsection_EventNameCtn_YXjI3
+  .salerowsection_DatesCtn_1r5cs
+  > span {
+  display: inline-block;
+  padding: 0px 0px 4px 0px;
+  margin-right: 10px;
+}
+.salerowsection_TileContainer_3miRj .salerowsection_EventDetailsCtn_iajpg {
+  grid-area: info;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 12px 0px 0px 0px;
+  border-top: 1px solid #424242;
+}
+.salerowsection_TileContainer_3miRj .salerowsection_CapsuleImg_jrn9l {
+  height: 90px;
+  width: auto;
+  width: 160px;
+}
+.salerowsection_TileContainer_3miRj .salerowsection_ClanInfoCtn_3ZTR5 {
+  grid-area: group;
+  display: flex;
+  flex: none;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 0 0 auto 8px;
+}
+.salerowsection_TileContainer_3miRj
+  .salerowsection_ClanInfoCtn_3ZTR5
+  .salerowsection_ClanInfoName_QkmRb {
+  padding: 0 4px;
+  color: #d3d3d3;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.salerowsection_TileContainer_3miRj
+  .salerowsection_ClanInfoCtn_3ZTR5
+  .salerowsection_HoverCtn_1euON {
+  border-radius: 3px;
+  padding: 1px;
+}
+.salerowsection_TileContainer_3miRj
+  .salerowsection_ClanInfoCtn_3ZTR5
+  .salerowsection_HoverCtn_1euON:hover {
+  background: #1c95ff;
+}
+.salerowsection_TileContainer_3miRj
+  .salerowsection_ClanInfoCtn_3ZTR5
+  .salerowsection_Avatar_1KgRK {
+  width: 50px;
+  height: auto;
+  display: block;
+}
+.salerowsection_TileContainer_3miRj .salerowsection_TopStatsCtn_1mhrs {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  margin-left: 5px;
+  width: 350px;
+  flex: none;
+  margin-bottom: 4px;
+}
+.salerowsection_TileContainer_3miRj
+  .salerowsection_TopStatsCtn_1mhrs
+  .salerowsection_FeaturedApps_OfWnM,
+.salerowsection_TileContainer_3miRj
+  .salerowsection_TopStatsCtn_1mhrs
+  .salerowsection_EventStats_E5F7A,
+.salerowsection_TileContainer_3miRj
+  .salerowsection_TopStatsCtn_1mhrs
+  .salerowsection_SaleDetails_1TNA2 {
+  background: rgba(255, 255, 255, 0.1);
+  width: 50%;
+  margin-right: 4px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0px 6px;
+  min-height: 89px;
+}
+.salerowsection_TileContainer_3miRj .salerowsection_BasicStatsCtn_2pNPE {
+  width: 160px;
+  flex: none;
+  padding-left: 5px;
+}
+.salerowsection_TileContainer_3miRj .salerowsection_LinkCtn_y7fEJ {
+  width: 160px;
+  flex: none;
+  padding-left: 5px;
+}
+.salerowsection_BrowseLink_3isng {
+  text-decoration: underline;
+  cursor: pointer;
 }
 .saleghostsections_GhostCtn_3gdzT {
   width: 100%;
@@ -3332,140 +3483,6 @@ html.responsive.touch
   background-color: pink;
   color: #000;
 }
-.salerowsection_SectionContainer_DPwXX {
-  min-height: 250px;
-}
-.salerowsection_SaleSectionTitle_jRz_c {
-  padding-top: 30px;
-  display: flex;
-  justify-content: space-between;
-}
-.salerowsection_SaleSectionResizeButton_J8r3M {
-  max-width: 50px;
-}
-.salerowsection_SaleSectionDesc_3LwmL {
-  font-size: 16px;
-  color: #fff;
-  padding: 12px 0;
-}
-.salerowsection_TileContainer_3miRj {
-  width: 100%;
-  min-height: 189px;
-  display: flex;
-  flex-direction: column;
-  background: #262626;
-  margin-bottom: 8px;
-  box-sizing: border-box;
-  padding: 12px;
-}
-.salerowsection_TileContainer_3miRj .salerowsection_EventNameCtn_YXjI3 {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  border-bottom: 1px solid #424242;
-}
-.salerowsection_TileContainer_3miRj
-  .salerowsection_EventNameCtn_YXjI3
-  .salerowsection_EventName_1MeeJ {
-  padding-right: 5px;
-  font-size: 18px;
-  color: #fff;
-  text-decoration: none;
-  line-height: 34px;
-}
-.salerowsection_TileContainer_3miRj
-  .salerowsection_EventNameCtn_YXjI3
-  .salerowsection_DatesCtn_1r5cs
-  > span {
-  display: inline-block;
-  padding: 0px 0px 4px 0px;
-  margin-right: 10px;
-}
-.salerowsection_TileContainer_3miRj .salerowsection_EventDetailsCtn_iajpg {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 12px 0px 0px 0px;
-}
-.salerowsection_TileContainer_3miRj .salerowsection_CapsuleImg_jrn9l {
-  height: 90px;
-  width: auto;
-  width: 160px;
-}
-.salerowsection_TileContainer_3miRj .salerowsection_ClanInfoCtn_3ZTR5 {
-  display: flex;
-  width: 80px;
-  flex: none;
-  flex-direction: column;
-  margin: 0 0 auto 8px;
-}
-.salerowsection_TileContainer_3miRj
-  .salerowsection_ClanInfoCtn_3ZTR5
-  .salerowsection_ClanInfoName_QkmRb {
-  padding: 0 4px;
-  color: #d3d3d3;
-  white-space: nowrap;
-  overflow: hidden;
-}
-.salerowsection_TileContainer_3miRj
-  .salerowsection_ClanInfoCtn_3ZTR5
-  .salerowsection_HoverCtn_1euON {
-  border-radius: 3px;
-  padding: 5px;
-  margin-right: auto;
-}
-.salerowsection_TileContainer_3miRj
-  .salerowsection_ClanInfoCtn_3ZTR5
-  .salerowsection_HoverCtn_1euON:hover {
-  background: #1c95ff;
-}
-.salerowsection_TileContainer_3miRj
-  .salerowsection_ClanInfoCtn_3ZTR5
-  .salerowsection_Avatar_1KgRK {
-  width: 50px;
-  height: auto;
-}
-.salerowsection_TileContainer_3miRj .salerowsection_TopStatsCtn_1mhrs {
-  display: flex;
-  flex-direction: row;
-  text-align: center;
-  margin-left: 5px;
-  width: 350px;
-  flex: none;
-  margin-bottom: 4px;
-}
-.salerowsection_TileContainer_3miRj
-  .salerowsection_TopStatsCtn_1mhrs
-  .salerowsection_FeaturedApps_OfWnM,
-.salerowsection_TileContainer_3miRj
-  .salerowsection_TopStatsCtn_1mhrs
-  .salerowsection_EventStats_E5F7A,
-.salerowsection_TileContainer_3miRj
-  .salerowsection_TopStatsCtn_1mhrs
-  .salerowsection_SaleDetails_1TNA2 {
-  background: #333;
-  width: 50%;
-  margin-right: 4px;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  padding: 0px 6px;
-  min-height: 89px;
-}
-.salerowsection_TileContainer_3miRj .salerowsection_BasicStatsCtn_2pNPE {
-  width: 160px;
-  flex: none;
-  padding-left: 5px;
-}
-.salerowsection_TileContainer_3miRj .salerowsection_LinkCtn_y7fEJ {
-  width: 160px;
-  flex: none;
-  padding-left: 5px;
-}
-.salerowsection_BrowseLink_3isng {
-  text-decoration: underline;
-  cursor: pointer;
-}
 .salestats_DetailedStats_z2xIG {
   margin-top: 8px;
   border-top: 1px solid #000;
@@ -3582,8 +3599,14 @@ html.responsive.touch
   max-height: 94px;
   overflow-y: auto;
 }
+.valveaccesslogs_AccessLog_3H6ey .valveaccesslogs_AccessLogHeader_1qWNl {
+  text-transform: uppercase;
+  color: #e2e2e2;
+}
 .valveaccesslogs_AccessLog_3H6ey .valveaccesslogs_AccessLogEntry_2e3po {
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 .valveaccesslogs_AccessLog_3H6ey
   .valveaccesslogs_AccessLogEntry_2e3po
@@ -4886,172 +4909,6 @@ button.DialogButton.Primary.assetportal_SubmitButton_1SeDT {
   fill: #7d5636;
   margin-left: 8px;
 }
-.dailydealpartnerinfo_PartnerFooter_226LW {
-  margin-top: 40px;
-  color: #fff;
-}
-.dailydealpartnerinfo_PartnerFooter_226LW .dailydealpartnerinfo_InfoRow_101h8 {
-  display: flex;
-  flex-direction: row;
-}
-.dailydealpartnerinfo_PartnerFooter_226LW .dailydealpartnerinfo_Title_2Ttas {
-  text-transform: uppercase;
-  font-size: 18px;
-  margin-bottom: 6px;
-}
-.dailydealpartnerinfo_PartnerFooter_226LW
-  .dailydealpartnerinfo_InfoSection_hdU6S {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  margin-right: 8px;
-  margin-bottom: 8px;
-  padding: 18px;
-  box-sizing: border-box;
-  background: #0b1119;
-  opacity: 90%;
-  font-size: 14px;
-  font-weight: 200;
-}
-.dailydealpartnerinfo_PartnerFooter_226LW
-  .dailydealpartnerinfo_InfoSection_hdU6S
-  .dailydealpartnerinfo_MoreInfo_3DU0H {
-  padding-top: 20px;
-  margin-top: auto;
-}
-.dailydealpartnerinfo_PartnerFooter_226LW ul {
-  margin-top: 8px;
-}
-.dailydealpartnerinfo_PartnerFooter_226LW ul li {
-  list-style-type: square;
-  list-style-position: outside;
-  margin-bottom: 6px;
-}
-.dailydealpartnerinfo_PartnerFooter_226LW
-  .dailydealpartnerinfo_DDVisibilityExample_3OAcn {
-  max-width: 1000px;
-}
-.dailydealsdashboard_Row_2fsEu {
-  background-color: pink;
-  padding-bottom: 10px;
-}
-.dailydealsdashboard_DailyDeal_Container_2CWQT {
-  display: grid;
-  grid-template-columns: 200px auto;
-  grid-template-rows: auto;
-  grid-template-areas: "image info" "button button";
-  margin: 5px 0px;
-  box-sizing: border-box;
-  border-radius: 3px;
-  padding: 10px;
-  background: #2c2e35;
-  font-size: 14;
-  font-weight: 400;
-  color: #fff;
-}
-.dailydealsdashboard_DailyDeal_Container_2CWQT.dailydealsdashboard_Cancelled_1BYSD {
-  opacity: 0.3;
-  filter: saturate(0.1);
-}
-.dailydealsdashboard_DailyDeal_Container_2CWQT
-  .dailydealsdashboard_AppName_YQi_M {
-  color: #fff;
-  font-size: 17px;
-}
-.dailydealsdashboard_DailyDeal_Container_2CWQT img {
-  width: 180px;
-  grid-area: image;
-}
-.dailydealsdashboard_PartnerDashboard_ScheduledHeader_UmxF5 {
-  padding-top: 20px;
-  color: #fff;
-  text-transform: uppercase;
-}
-.dailydealsdashboard_PartnerDashboard_InvitationHeader_Cqoj5 {
-  color: #fff;
-  text-transform: uppercase;
-}
-.dailydealsdashboard_PartnerDashboard_InvitationHeader_Cqoj5
-  .dailydealsdashboard_PartnerDashboard_Incomplete_Description_39yxF {
-  padding-left: 5px;
-  color: orange;
-  text-transform: none;
-}
-.dailydealsdashboard_PartnerDashboard_Invite_147XK {
-  margin: 5px 0px;
-}
-.dailydealsdashboard_PartnerDashboard_NoInvites_W2HsX {
-  font-size: 15px;
-  padding: 16px;
-  background: #272b34;
-  box-sizing: border-box;
-}
-.dailydealsdashboard_Orange_235Vr {
-  color: orange;
-}
-.dailydealsdashboard_NoScheduledDealsContainer_2gv7s {
-  padding-top: 20px;
-}
-.dailydealsdashboard_DailyDealStatusContainer_3b7O9 {
-  display: flex;
-  flex-direction: row;
-}
-.dailydealsdashboard_DailyDealStatusContainer_3b7O9
-  .dailydealsdashboard_Column_3GuhU {
-  display: flex;
-  flex-direction: column;
-  min-width: 40%;
-}
-.dailydealsdashboard_DailyDealStatusContainer_3b7O9
-  .dailydealsdashboard_DailyDealCheckbox_1WzIi {
-  cursor: unset;
-}
-.dailydealsdashboard_DailyDealStatusContainer_3b7O9
-  .dailydealsdashboard_DailyDealTitle_yYzcp {
-  margin-bottom: 8px;
-  padding: 4px;
-}
-.dailydealsdashboard_DailyDealStatusContainer_3b7O9
-  .dailydealsdashboard_DailyDealButton_1MMGd {
-  display: flex;
-  flex-direction: row;
-  width: fit-content;
-  justify-content: center;
-  padding: 0px 20px;
-  margin-left: 40px;
-  color: #fff;
-  background: linear-gradient(90deg, #3a9bed 0%, #235ecf 100%);
-  text-decoration: none;
-}
-.dailydealsdashboard_DailyDealStatusContainer_3b7O9
-  .dailydealsdashboard_DailyDealButton_1MMGd:hover {
-  background: linear-gradient(90deg, #3a9bed 0%, #235ecf 100%);
-}
-.dailydealsdashboard_DailyDealStatusContainer_3b7O9
-  .dailydealsdashboard_DiscountButtonRow_2Qkeo {
-  display: inline-block;
-}
-.dailydealsdashboard_DailyDealStatusContainer_3b7O9
-  .dailydealsdashboard_DiscountButtonRow_2Qkeo
-  .dailydealsdashboard_DiscountPercentage_3yMTP {
-  background-color: green;
-  display: inline-block;
-}
-.dailydealsdashboard_DailyDealStatusContainer_3b7O9
-  .dailydealsdashboard_DiscountButtonRow_2Qkeo
-  .dailydealsdashboard_EditDiscounts_1uVhk {
-  background: gray;
-  display: inline-block;
-  margin-left: 10px;
-}
-.dailydealsdashboard_DailyDealStatusContainer_3b7O9
-  .dailydealsdashboard_Completed_3h1p3 {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  font-size: 19px;
-  color: #b8bcbf;
-}
 .planningdashboard_Container_1IVr1 {
   position: relative;
 }
@@ -5434,6 +5291,7 @@ button.DialogButton.Primary.assetportal_SubmitButton_1SeDT {
 }
 .promoagendarow_Col_2x28W.promoagendarow_Type_1hntl {
   flex-grow: 1;
+  width: 110px;
 }
 .promoagendarow_Col_2x28W.promoagendarow_Type_1hntl.promoagendarow_Deal_1I4-4
   span {
@@ -5523,6 +5381,124 @@ button.DialogButton.Primary.assetportal_SubmitButton_1SeDT {
   color: #8b1c00;
   padding: 2px 4px;
   margin-top: 4px;
+}
+.invitesdashboard_SelectedAppCtn_1kLuQ {
+  margin: 20px 0px;
+}
+.invitesdashboard_SelectedAppCtn_1kLuQ .invitesdashboard_SelectedApp_3FFre {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.invitesdashboard_SelectedAppCtn_1kLuQ
+  .invitesdashboard_SelectedApp_3FFre
+  .invitesdashboard_AppName_1FeTr {
+  color: #fff;
+  font-size: 21px;
+  margin-left: 12px;
+}
+.invitesdashboard_InviteBtnCtn_2iMIj button.DialogButton {
+  padding: 2px 12px;
+}
+.invitesdashboard_InvitedAppsCtn_3Fouw {
+  display: flex;
+  flex-direction: column;
+  background: #000;
+  padding: 18px 18px 8px 18px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 12px;
+}
+.invitesdashboard_InvitedAppsCtn_3Fouw .invitesdashboard_InviteTitleCtn_IO0gU {
+  display: flex;
+  flex-direction: row;
+  padding: 0 0 16px 0;
+}
+.invitesdashboard_InvitedAppsCtn_3Fouw
+  .invitesdashboard_InvitedAppsRowScrollCtn_uIqPl {
+  overflow-x: scroll;
+}
+.invitesdashboard_InvitedAppsCtn_3Fouw
+  .invitesdashboard_InvitedAppsRowScrollCtn_uIqPl
+  .invitesdashboard_InvitedAppsRow_2GaU2 {
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+}
+.invitesdashboard_InviteItemAdminList_eCacw {
+  padding: 5px;
+}
+.invitesdashboard_InvitePageHeader_1rKT2 .invitesdashboard_InviteTitle_2k3HT {
+  color: #fff;
+  font-size: 22px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+.invitesdashboard_InvitePageHeader_1rKT2
+  .invitesdashboard_InviteTitle_2k3HT
+  .invitesdashboard_InviteTitle_AppName_GZ2Kk {
+  padding-left: 5px;
+  color: gray;
+}
+.invitesdashboard_InvitedAppCtn_14klK {
+  display: grid;
+  grid-template-columns: 200px auto;
+  grid-template-rows: auto;
+  grid-template-areas: "image info" "button button";
+  box-sizing: border-box;
+  border-radius: 3px;
+  padding: 10px;
+  background: #2c2e35;
+  font-size: 14;
+  font-weight: 400;
+  color: #fff;
+}
+.invitesdashboard_InvitedAppCtn_14klK .invitesdashboard_AppName_1FeTr {
+  color: #fff;
+  font-size: 17px;
+}
+.invitesdashboard_InvitedAppCtn_14klK img {
+  width: 180px;
+  grid-area: image;
+}
+.invitesdashboard_InvitedAppCtn_14klK .invitesdashboard_InvitedAppInfo_2h8se {
+  display: flex;
+  flex-direction: column;
+  grid-area: info;
+  padding-left: 8px;
+  justify-content: center;
+}
+.invitesdashboard_InviteAdminButtons_L4pIQ button {
+  font-size: 12px;
+  line-height: 24px;
+  width: fit-content;
+  white-space: nowrap;
+  padding: 5px 12px !important;
+}
+.invitesdashboard_InviteResult_677sG {
+  padding-top: 10px;
+}
+.invitesdashboard_InviteNotAvailableContainer_3-W-u {
+  width: 100%;
+  text-align: center;
+  padding-top: 100px;
+  color: #ccc;
+}
+.invitesdashboard_InviteNotAvailableContainer_3-W-u
+  .invitesdashboard_ReturnToDashboard_DB8o7 {
+  padding-top: 10px;
+  font-size: 14px;
+}
+.invitesdashboard_InviteNotAvailableContainer_3-W-u
+  .invitesdashboard_WhyUnavailable_34Ock {
+  color: #67c1f5;
+  font-size: 22px;
+}
+.invitesdialog_DialogCtn_3sIyQ {
+  margin-top: 20px;
+}
+.invitesdialog_InviteResult_Fz3D_ {
+  padding-top: 10px;
 }
 .rbc-btn {
   color: inherit;
@@ -6294,69 +6270,61 @@ button.rbc-input::-moz-focus-inner {
   background-color: #74ad31;
   pointer-events: none;
 }
-.invitesdashboard_SelectedAppCtn_1kLuQ {
-  margin: 20px 0px;
+.dailydealpartnerinfo_PartnerFooter_226LW {
+  margin-top: 40px;
+  color: #fff;
 }
-.invitesdashboard_SelectedAppCtn_1kLuQ .invitesdashboard_SelectedApp_3FFre {
+.dailydealpartnerinfo_PartnerFooter_226LW .dailydealpartnerinfo_InfoRow_101h8 {
   display: flex;
   flex-direction: row;
-  align-items: center;
 }
-.invitesdashboard_SelectedAppCtn_1kLuQ
-  .invitesdashboard_SelectedApp_3FFre
-  .invitesdashboard_AppName_1FeTr {
-  color: #fff;
-  font-size: 21px;
-  margin-left: 12px;
+.dailydealpartnerinfo_PartnerFooter_226LW .dailydealpartnerinfo_Title_2Ttas {
+  text-transform: uppercase;
+  font-size: 18px;
+  margin-bottom: 6px;
 }
-.invitesdashboard_InviteBtnCtn_2iMIj button.DialogButton {
-  padding: 2px 12px;
-}
-.invitesdashboard_InvitedAppsCtn_3Fouw {
+.dailydealpartnerinfo_PartnerFooter_226LW
+  .dailydealpartnerinfo_InfoSection_hdU6S {
   display: flex;
   flex-direction: column;
-  background: #000;
-  padding: 18px 18px 8px 18px;
-  width: 100%;
+  flex: 1;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  padding: 18px;
   box-sizing: border-box;
-  margin-bottom: 12px;
+  background: #0b1119;
+  opacity: 90%;
+  font-size: 14px;
+  font-weight: 200;
 }
-.invitesdashboard_InvitedAppsCtn_3Fouw .invitesdashboard_InviteTitleCtn_IO0gU {
-  display: flex;
-  flex-direction: row;
-  padding: 0 0 16px 0;
-}
-.invitesdashboard_InvitedAppsCtn_3Fouw
-  .invitesdashboard_InvitedAppsRowScrollCtn_uIqPl {
-  overflow-x: scroll;
-}
-.invitesdashboard_InvitedAppsCtn_3Fouw
-  .invitesdashboard_InvitedAppsRowScrollCtn_uIqPl
-  .invitesdashboard_InvitedAppsRow_2GaU2 {
-  width: fit-content;
-  display: flex;
-  flex-direction: row;
-}
-.invitesdashboard_InviteItemAdminList_eCacw {
-  padding: 5px;
-}
-.invitesdashboard_InvitePageHeader_1rKT2 .invitesdashboard_InviteTitle_2k3HT {
-  color: #fff;
-  font-size: 22px;
+.dailydealpartnerinfo_PartnerFooter_226LW
+  .dailydealpartnerinfo_InfoSection_hdU6S
+  .dailydealpartnerinfo_MoreInfo_3DU0H {
   padding-top: 20px;
+  margin-top: auto;
+}
+.dailydealpartnerinfo_PartnerFooter_226LW ul {
+  margin-top: 8px;
+}
+.dailydealpartnerinfo_PartnerFooter_226LW ul li {
+  list-style-type: square;
+  list-style-position: outside;
+  margin-bottom: 6px;
+}
+.dailydealpartnerinfo_PartnerFooter_226LW
+  .dailydealpartnerinfo_DDVisibilityExample_3OAcn {
+  max-width: 1000px;
+}
+.dailydealsdashboard_Row_2fsEu {
+  background-color: pink;
   padding-bottom: 10px;
 }
-.invitesdashboard_InvitePageHeader_1rKT2
-  .invitesdashboard_InviteTitle_2k3HT
-  .invitesdashboard_InviteTitle_AppName_GZ2Kk {
-  padding-left: 5px;
-  color: gray;
-}
-.invitesdashboard_InvitedAppCtn_14klK {
+.dailydealsdashboard_DailyDeal_Container_2CWQT {
   display: grid;
   grid-template-columns: 200px auto;
   grid-template-rows: auto;
   grid-template-areas: "image info" "button button";
+  margin: 5px 0px;
   box-sizing: border-box;
   border-radius: 3px;
   padding: 10px;
@@ -6365,52 +6333,124 @@ button.rbc-input::-moz-focus-inner {
   font-weight: 400;
   color: #fff;
 }
-.invitesdashboard_InvitedAppCtn_14klK .invitesdashboard_AppName_1FeTr {
+.dailydealsdashboard_DailyDeal_Container_2CWQT.dailydealsdashboard_Cancelled_1BYSD {
+  opacity: 0.3;
+  filter: saturate(0.1);
+}
+.dailydealsdashboard_DailyDeal_Container_2CWQT
+  .dailydealsdashboard_AppName_YQi_M {
   color: #fff;
   font-size: 17px;
 }
-.invitesdashboard_InvitedAppCtn_14klK img {
+.dailydealsdashboard_DailyDeal_Container_2CWQT img {
   width: 180px;
   grid-area: image;
 }
-.invitesdashboard_InvitedAppCtn_14klK .invitesdashboard_InvitedAppInfo_2h8se {
+.dailydealsdashboard_PartnerDashboard_ScheduledHeader_UmxF5 {
+  padding-top: 20px;
+  color: #fff;
+  text-transform: uppercase;
+}
+.dailydealsdashboard_PartnerDashboard_ArchiveHeader_3DXdj {
+  padding-top: 20px;
+}
+.dailydealsdashboard_PartnerDashboard_ArchiveHeader_3DXdj
+  .EventEditorTextTitle {
+  padding-top: 0px;
+  font-size: 13px;
+}
+.dailydealsdashboard_PartnerDashboard_InvitationHeader_Cqoj5 {
+  color: #fff;
+  text-transform: uppercase;
+}
+.dailydealsdashboard_PartnerDashboard_InvitationHeader_Cqoj5
+  .dailydealsdashboard_PartnerDashboard_Incomplete_Description_39yxF {
+  padding-left: 5px;
+  color: orange;
+  text-transform: none;
+}
+.dailydealsdashboard_PartnerDashboard_Invite_147XK {
+  margin: 5px 0px;
+}
+.dailydealsdashboard_PartnerDashboard_NoInvites_W2HsX {
+  font-size: 15px;
+  padding: 16px;
+  background: #272b34;
+  box-sizing: border-box;
+}
+.dailydealsdashboard_Orange_235Vr {
+  color: orange;
+}
+.dailydealsdashboard_NoScheduledDealsContainer_2gv7s {
+  padding-top: 20px;
+}
+.dailydealsdashboard_DailyDealStatusContainer_3b7O9 {
+  display: flex;
+  flex-direction: row;
+}
+.dailydealsdashboard_DailyDealStatusContainer_3b7O9
+  .dailydealsdashboard_Column_3GuhU {
   display: flex;
   flex-direction: column;
-  grid-area: info;
-  padding-left: 8px;
-  justify-content: center;
+  min-width: 40%;
 }
-.invitesdashboard_InviteAdminButtons_L4pIQ button {
-  font-size: 12px;
-  line-height: 24px;
+.dailydealsdashboard_DailyDealStatusContainer_3b7O9
+  .dailydealsdashboard_DailyDealCheckbox_1WzIi {
+  cursor: unset;
+}
+.dailydealsdashboard_DailyDealStatusContainer_3b7O9
+  .dailydealsdashboard_DailyDealTitle_yYzcp {
+  margin-bottom: 8px;
+  padding: 4px;
+}
+.dailydealsdashboard_DailyDealStatusContainer_3b7O9
+  .dailydealsdashboard_DailyDealButton_1MMGd {
+  display: flex;
+  flex-direction: row;
   width: fit-content;
-  white-space: nowrap;
-  padding: 5px 12px !important;
+  justify-content: center;
+  padding: 0px 20px;
+  color: #fff;
+  background: linear-gradient(90deg, #3a9bed 0%, #235ecf 100%);
+  text-decoration: none;
 }
-.invitesdashboard_InviteResult_677sG {
-  padding-top: 10px;
+.dailydealsdashboard_DailyDealStatusContainer_3b7O9
+  .dailydealsdashboard_DailyDealButton_1MMGd:hover {
+  background: linear-gradient(90deg, #3a9bed 0%, #235ecf 100%);
 }
-.invitesdashboard_InviteNotAvailableContainer_3-W-u {
-  width: 100%;
-  text-align: center;
-  padding-top: 100px;
-  color: #ccc;
+.dailydealsdashboard_DailyDealStatusContainer_3b7O9
+  .dailydealsdashboard_InviteBody_1rjF1 {
+  margin-left: 40px;
+  color: #b8bcbf;
 }
-.invitesdashboard_InviteNotAvailableContainer_3-W-u
-  .invitesdashboard_ReturnToDashboard_DB8o7 {
-  padding-top: 10px;
-  font-size: 14px;
+.dailydealsdashboard_DailyDealStatusContainer_3b7O9
+  .dailydealsdashboard_DiscountBody_3tOBZ {
+  margin-left: 40px;
 }
-.invitesdashboard_InviteNotAvailableContainer_3-W-u
-  .invitesdashboard_WhyUnavailable_34Ock {
-  color: #67c1f5;
-  font-size: 22px;
+.dailydealsdashboard_DailyDealStatusContainer_3b7O9
+  .dailydealsdashboard_DiscountButtonRow_2Qkeo {
+  display: inline-block;
 }
-.invitesdialog_DialogCtn_3sIyQ {
-  margin-top: 20px;
+.dailydealsdashboard_DailyDealStatusContainer_3b7O9
+  .dailydealsdashboard_DiscountButtonRow_2Qkeo
+  .dailydealsdashboard_DiscountPercentage_3yMTP {
+  background-color: green;
+  display: inline-block;
 }
-.invitesdialog_InviteResult_Fz3D_ {
-  padding-top: 10px;
+.dailydealsdashboard_DailyDealStatusContainer_3b7O9
+  .dailydealsdashboard_DiscountButtonRow_2Qkeo
+  .dailydealsdashboard_EditDiscounts_1uVhk {
+  background: gray;
+  display: inline-block;
+  margin-left: 10px;
+}
+.dailydealsdashboard_DailyDealStatusContainer_3b7O9
+  .dailydealsdashboard_BasicResult_YsPk0 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 19px;
+  color: #b8bcbf;
 }
 .marketingmessagecreatedialog_DateCtn_1mrqJ {
   min-height: 200px;
