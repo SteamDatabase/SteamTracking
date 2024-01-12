@@ -6397,6 +6397,7 @@ button.rbc-input::-moz-focus-inner {
 .dailydealsdashboard_DailyDealStatusContainer_3b7O9
   .dailydealsdashboard_DailyDealCheckbox_1WzIi {
   cursor: unset;
+  color: gray;
 }
 .dailydealsdashboard_DailyDealStatusContainer_3b7O9
   .dailydealsdashboard_DailyDealTitle_yYzcp {
@@ -6420,22 +6421,35 @@ button.rbc-input::-moz-focus-inner {
 }
 .dailydealsdashboard_DailyDealStatusContainer_3b7O9
   .dailydealsdashboard_InviteBody_1rjF1 {
-  margin-left: 40px;
+  margin-left: 34px;
   color: #b8bcbf;
 }
 .dailydealsdashboard_DailyDealStatusContainer_3b7O9
+  .dailydealsdashboard_InviteBody_1rjF1
+  .dailydealsdashboard_FeaturedDate_3aUGm {
+  font-size: 16px;
+  color: #fff;
+  font-weight: 300;
+}
+.dailydealsdashboard_DailyDealStatusContainer_3b7O9
   .dailydealsdashboard_DiscountBody_3tOBZ {
-  margin-left: 40px;
+  margin-left: 34px;
 }
 .dailydealsdashboard_DailyDealStatusContainer_3b7O9
   .dailydealsdashboard_DiscountButtonRow_2Qkeo {
-  display: inline-block;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 .dailydealsdashboard_DailyDealStatusContainer_3b7O9
   .dailydealsdashboard_DiscountButtonRow_2Qkeo
   .dailydealsdashboard_DiscountPercentage_3yMTP {
-  background-color: green;
+  background-color: #4c6b22;
+  color: #beee11;
   display: inline-block;
+  padding: 1px 12px;
+  font-size: 22px;
+  line-height: 30px;
 }
 .dailydealsdashboard_DailyDealStatusContainer_3b7O9
   .dailydealsdashboard_DiscountButtonRow_2Qkeo

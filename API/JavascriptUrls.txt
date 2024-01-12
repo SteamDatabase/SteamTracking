@@ -1026,6 +1026,7 @@ ${PARTNER_BASE_URL}promotion/dailydeals/ajaxsearcharchives
 ${PARTNER_BASE_URL}promotion/dailydeals/ajaxsetblackout
 ${PARTNER_BASE_URL}promotion/dailydeals/dashboard
 ${PARTNER_BASE_URL}promotion/dailydeals/dashboard/${partner_id}
+${PARTNER_BASE_URL}promotion/dailydeals/edit/${gid}
 ${PARTNER_BASE_URL}promotion/discounts${}?de=${discount_event_id}&dd=1
 ${PARTNER_BASE_URL}promotion/discounts/ajaxgetalldiscountevents/${}
 ${PARTNER_BASE_URL}promotion/discounts/ajaxgetdiscounteventapplist
