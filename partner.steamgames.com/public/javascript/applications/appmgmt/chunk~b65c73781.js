@@ -9178,6 +9178,9 @@
         GetDeliveryReviewTime() {
           return this.m_oPromotionPlan.delivery_review_time;
         }
+        GetDeliveryReviewNotes() {
+          return this.m_oPromotionPlan.delivery_review_notes;
+        }
         BHasOperatorOwner() {
           return Boolean(this.m_oPromotionPlan.operator_account_id);
         }
@@ -9244,18 +9247,22 @@
             ((this.m_oPromotionPlan.artwork_completed_time = e),
             this.Dispatch());
         }
-        SetDeliveryReviewedAccountAndTime(e, t) {
+        SetDeliveryReviewedAccountAndTime(e, t, a) {
           (this.m_oPromotionPlan.delivery_review_account_id == e &&
-            this.m_oPromotionPlan.delivery_review_time == t) ||
+            this.m_oPromotionPlan.delivery_review_time == t &&
+            this.m_originalPromotionPlan.delivery_review_notes == a) ||
             ((this.m_oPromotionPlan.delivery_review_account_id = e),
             (this.m_oPromotionPlan.delivery_review_time = t),
+            (this.m_oPromotionPlan.delivery_review_notes = a),
             this.Dispatch());
         }
         ClearDeliveryReviewedStatus() {
           (Boolean(this.m_oPromotionPlan.delivery_review_account_id) ||
-            Boolean(this.m_oPromotionPlan.delivery_review_time)) &&
+            Boolean(this.m_oPromotionPlan.delivery_review_time) ||
+            Boolean(this.m_oPromotionPlan.delivery_review_notes)) &&
             ((this.m_oPromotionPlan.delivery_review_account_id = void 0),
             (this.m_oPromotionPlan.delivery_review_time = void 0),
+            (this.m_oPromotionPlan.delivery_review_notes = void 0),
             this.Dispatch());
         }
         SetReviewedAccountAndTime(e, t) {
@@ -28868,7 +28875,8 @@
       }
       function j(e) {
         const { oEditablePlan: t } = e,
-          a = (0, G.eQ)(t.GetID());
+          a = (0, G.eQ)(t.GetID()),
+          [n] = (0, i.SZ)(() => [t.GetDeliveryReviewNotes()]);
         return a && a.submitting_accountid && a.input_artwork_url
           ? s.createElement(
               "div",
@@ -28884,6 +28892,13 @@
                 bShowCopyAction: !0,
               }),
               s.createElement(W, { oEditablePlan: t }),
+              Boolean((null == n ? void 0 : n.trim().length) > 0) &&
+                s.createElement(
+                  "div",
+                  null,
+                  s.createElement("div", null, "Operation Notes on Assets"),
+                  s.createElement("textarea", { value: n, disabled: !0 }),
+                ),
             )
           : null;
       }
@@ -28970,7 +28985,8 @@
       }
       function $(e) {
         const { oEditablePlan: t, closeModal: a, bReviewVerify: n } = e,
-          i = (0, G.eQ)(t.GetID());
+          i = (0, G.eQ)(t.GetID()),
+          [l, r] = (0, s.useState)(t.GetDeliveryReviewNotes());
         return s.createElement(
           L,
           {
@@ -28987,6 +29003,7 @@
                 ? t.SetDeliveryReviewedAccountAndTime(
                     H.L7.accountid,
                     Math.floor(new Date().getTime() / 1e3),
+                    l,
                   )
                 : t.ClearDeliveryReviewedStatus();
             },
@@ -29007,6 +29024,7 @@
                     null,
                     "Does it include layered PSD file",
                   ),
+                  s.createElement("li", null, "Are assets high quality"),
                   s.createElement("li", null, "No burned in dates"),
                   s.createElement(
                     "li",
@@ -29017,6 +29035,18 @@
                   s.createElement("li", null, "No logo or trademark parade"),
                 ),
               ),
+              s.createElement(
+                "div",
+                null,
+                "Optional: Notes for Art Team about Assets",
+              ),
+              s.createElement("textarea", {
+                cols: 120,
+                rows: 10,
+                onChange: (e) => r(e.currentTarget.value),
+                value: l,
+                autoFocus: !0,
+              }),
               s.createElement(d.II, {
                 type: "text",
                 label: "Asset Request URL",
