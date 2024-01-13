@@ -1,6 +1,6 @@
 "ubuntu12"
 {
-	"version"		"1705102252"
+	"version"		"1705108172"
 	"tenfoot_images_all"
 	{
 		"file"		"tenfoot_images_all.zip.86419c7a56c12dd107b5e0d46f50c8a9b121f3cc"
@@ -79,19 +79,19 @@
 	}
 	"bins_ubuntu12"
 	{
-		"file"		"bins_ubuntu12.zip.b228786a01a3b0d36d16586019da1757e634d2bd"
-		"size"		"49065797"
-		"sha2"		"38b14b04e4f33beb85b9295a8cde6c784cb8eccb59b821737081093d175d060c"
-		"zipvz"		"bins_ubuntu12.zip.vz.f25c0ffc2143d4c17281345333367066ebd868a8_28835582"
-		"sha2vz"		"5bd2f4eec5f4c97f4bdf12d0475413dc08f06b1370ba51eb40cc7d3e3ca7ae5a"
+		"file"		"bins_ubuntu12.zip.a9ff5ff8ce33682169d797aaea9bf8411dc436f4"
+		"size"		"49067447"
+		"sha2"		"6edc488bf61f29f8c872a712809818c47fa1fd13ee48e64126a512e1ca514ce9"
+		"zipvz"		"bins_ubuntu12.zip.vz.deafc7c0f6a65678752ef2642549c2b7615f3d86_28830118"
+		"sha2vz"		"d7fcd8e97df1d83d3a2c4e1110a7672ebe401803fb4e2d0e4994b8e0f4041d90"
 	}
 	"bins_sdk_ubuntu12"
 	{
-		"file"		"bins_sdk_ubuntu12.zip.f486158b7d8e095840c6c684f12b284b1510b987"
-		"size"		"28260961"
-		"sha2"		"04e03034092fe0f708316d806881ca041d8675f7203bc224b81992d229665150"
-		"zipvz"		"bins_sdk_ubuntu12.zip.vz.c33e3ae3db6d23f378cb2b1ecf26b792114b0f57_19220977"
-		"sha2vz"		"399780f92f4e4f5c0e94b400d25ba5106bcd2a9d2fe30d95d31e0232174cff2c"
+		"file"		"bins_sdk_ubuntu12.zip.2a5a12a07bc33835c724c0fe7c2a8ca51a254605"
+		"size"		"28261235"
+		"sha2"		"25609b43ced30c97cc171c8a73ac76a162287ee6594de27b62d8ebc06ab51860"
+		"zipvz"		"bins_sdk_ubuntu12.zip.vz.dd1a171cd6da5ddfb6c5a52e245e43b8b2f7cf95_19219174"
+		"sha2vz"		"67ba1cbf36507c1459dc3d2633b5a3981819f20b118cc68f4e9bcab71b3a1900"
 	}
 	"bins_codecs_ubuntu12"
 	{
@@ -103,11 +103,11 @@
 	}
 	"bins_misc_ubuntu12"
 	{
-		"file"		"bins_misc_ubuntu12.zip.30118b405e1bef83acde7e23964269c88452885d"
-		"size"		"27162927"
-		"sha2"		"1854e39b4214bdd033ce1fa53cff908fe884ed9b9eb99cc572d22f2a6210700d"
-		"zipvz"		"bins_misc_ubuntu12.zip.vz.c04169efbad2fae8a7ca99f9a8e304ef7e4f2f78_18448025"
-		"sha2vz"		"2322d3167e3617f7ac752c4ce7df19d855898fd1f35bdbf3ca6e744a1ac820c6"
+		"file"		"bins_misc_ubuntu12.zip.0d5af2e8887d1dade12bb2a4800a6e64aac6a41b"
+		"size"		"27162791"
+		"sha2"		"6ab2f5b7931c4457274d4e7528fb881206dc672c7393baa8080f24b2acbbbe4f"
+		"zipvz"		"bins_misc_ubuntu12.zip.vz.8ea54d5d83c9d7f0fedbbe3693d9a90f923e6814_18449088"
+		"sha2vz"		"be27c169bed956b9d706a43b389e56a0200f398cda6f62b1bd24c9c0f699cea4"
 	}
 	"webkit_ubuntu12"
 	{
@@ -135,11 +135,11 @@
 	}
 	"steam_ubuntu12"
 	{
-		"file"		"steam_ubuntu12.zip.974635fec3bcfece2325783def368936581b84c1"
-		"size"		"3220908"
-		"sha2"		"db25dfe352c9c1cc51df596a927c3956b7402ef1be08afe2d5d402bc392434d6"
-		"zipvz"		"steam_ubuntu12.zip.vz.6d84fffd2cc16688b19b591b5bf4087af97b866d_2548017"
-		"sha2vz"		"7253708e3d7d83922bc30ae44d83d0ef27ac8d51a543aa2a222b88d6ff9615ac"
+		"file"		"steam_ubuntu12.zip.14fdc579746aa6c796115583187990f06379a002"
+		"size"		"3220885"
+		"sha2"		"e8ba616d948724c65cf3fdf5dd2d924b30f94e5db05ffb32892d0e748a4f8c67"
+		"zipvz"		"steam_ubuntu12.zip.vz.c9487f6b85727bc78c638ade7e0e05e684babc04_2547477"
+		"sha2vz"		"2d96c016ba80a6fe8aa45080960fd0c6d6e2729e02f8e31a338d26cb09142876"
 		"IsBootstrapperPackage"		"1"
 	}
 	"runtime_part0_ubuntu12"
@@ -163,9 +163,9 @@
 }
 "kvsign2"
 {
-	"ubuntu12"		"f1619dc7b0e1a2ab4c1168a6a2d959bd712fb06f5c4cea178d94719a5c9f3e9734acefa173083150756094eb868fd755661dad0e65ca2f6adbfdc272936aa801"
+	"ubuntu12"		"3171c546dc6a448bb4ca89f3d52e7618f41a3f9b5cc0747a4dccb0800b8bb6dcd83d007a7dfa4bdc77442c741c7126c0761bf8aa53c6cbbb003eb1b0b546a60d"
 }
 "kvsignatures"
 {
-	"ubuntu12"		"3ba891e9d7e74c2bd977091469922f3698f91338cfcd6730f7101571dfe77f7ec5cdc4b89f4e845fad6ccee4c2815e478020185e954716ccee5584045392d7cefcfc919598303ec58d1d92f7af9db253c2603f49e0e742dc9701cfbf64ad3c6590d5402fa8725ba5fec224f4fa73b3a4d3996a6fc9d4b53c9317b5c256d93f50"
+	"ubuntu12"		"206bc74a9d973075c9432309ee692b085ec6a5259555e45c28c738c18bf5673b3453c3dcce2a49a53c7c87c68c66c6a5764e3276b332159dd333f581eb0e4488a1c20cf7849fa68ea5c45bedd28ae85d5dcb271e294e812d072956687617aa6fb17b5c7152b47db8929e6fc6198ac23934cfeb79311bae1df71b7753adff52a2"
 }
