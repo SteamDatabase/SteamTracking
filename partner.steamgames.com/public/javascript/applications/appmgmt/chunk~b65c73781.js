@@ -19508,19 +19508,18 @@
       }
       function ja(e) {
         const { rtDay: t, closeModal: a, invite: n, nMaxDiscountDays: i } = e,
-          s = (0, ye.Z)(),
-          [l, o] = r.useState(new Array()),
-          [c, d] = r.useState(Bt.NB),
-          [u, p] = r.useState({ appid: n.appid }),
-          [_] = (0, N.vs)(n.appid, {}),
-          { fnAcceptInvitation: h } = (0, pa.fZ)(),
-          [g, v] = r.useState(""),
-          E = (e) => {
+          [s, l] = r.useState(new Array()),
+          [o, c] = r.useState(Bt.NB),
+          [d, u] = r.useState({ appid: n.appid }),
+          [p] = (0, N.vs)(n.appid, {}),
+          { fnAcceptInvitation: _ } = (0, pa.fZ)(),
+          [h, g] = r.useState(""),
+          v = (e) => {
             const t = Xa(e.errorCode);
             ("dev" != w.De.WEB_UNIVERSE && "beta" != w.De.WEB_UNIVERSE) ||
             1 == e.errorCode
-              ? v(t)
-              : v(
+              ? g(t)
+              : g(
                   r.createElement(
                     r.Fragment,
                     null,
@@ -19536,35 +19535,34 @@
                   ),
                 );
           },
-          D = r.useCallback(
+          E = r.useCallback(
             () =>
               (0, A.mG)(this, void 0, void 0, function* () {
-                if (s != n.primary_partnerid) return void E({ errorCode: 15 });
-                const e = (0, Ua.d)("dailydeal", t, _, u),
+                const e = (0, Ua.d)("dailydeal", t, p, d),
                   a = (0, m.Q)(
                     e,
                     e,
                     Va.FF.get("dailydeal"),
                     [n.primary_partnerid],
-                    [u.appid],
+                    [d.appid],
                   );
-                yield h(n.inviteid, t, c, a, !1)
+                yield _(n.inviteid, t, o, a, !1)
                   .then((e) => {
-                    E(e);
+                    v(e);
                   })
                   .catch((e) => {
-                    E((0, he.l)(e));
+                    v((0, he.l)(e));
                   });
               }),
-            [h, n.inviteid, n.primary_partnerid, c, s, u, t, _],
+            [_, n.inviteid, n.primary_partnerid, o, d, t, p],
           ),
-          f = r.useCallback(() => {
+          D = r.useCallback(() => {
             a(),
               window.location.assign(
                 `${w.De.PARTNER_BASE_URL}promotion${Ul.DailyDealDashboard()}`,
               );
           }, [a]),
-          y = c < Bt.NB || c > i;
+          f = o < Bt.NB || o > i;
         return r.createElement(
           B.RG,
           { onCancel: a },
@@ -19578,45 +19576,45 @@
           r.createElement(
             S.uT,
             null,
-            g
+            h
               ? r.createElement(
                   "div",
                   { className: Oa.CreationDialogueBody },
-                  g,
+                  h,
                 )
               : r.createElement(
                   "div",
                   null,
                   r.createElement(Zt.Ce, { id: n.appid, itemType: 0 }),
                   r.createElement(Wa, {
-                    nDiscountDays: c,
-                    fnSetDiscountDays: d,
-                    rgDiscountPackages: l,
-                    fnSetDiscountPackages: o,
+                    nDiscountDays: o,
+                    fnSetDiscountDays: c,
+                    rgDiscountPackages: s,
+                    fnSetDiscountPackages: l,
                     nAppID: n.appid,
                     nMaxDiscountDays: i,
                   }),
                   r.createElement(Zt.CC, {
                     nAppID: n.appid,
-                    oFeaturedItem: u,
-                    fnSetFeaturedItem: p,
+                    oFeaturedItem: d,
+                    fnSetFeaturedItem: u,
                   }),
                 ),
           ),
           r.createElement(
             S.$_,
             null,
-            g
+            h
               ? r.createElement(
                   S.zx,
-                  { onClick: f },
+                  { onClick: D },
                   (0, P.Xx)("#Button_Close"),
                 )
               : r.createElement(S.o9, {
                   strOKText: (0, P.Xx)("#Button_Save"),
                   strCancelText: (0, P.Xx)("#Button_Cancel"),
-                  onOK: D,
-                  bOKDisabled: y,
+                  onOK: E,
+                  bOKDisabled: f,
                   onCancel: a,
                 }),
           ),
@@ -19746,11 +19744,13 @@
             );
       }
       function Za(e) {
-        const { strPublisherID: t, strInviteID: a } = e,
-          n = (0, pa.Nt)(a),
-          i = Number.parseInt(t),
-          s = (0, ca.og)([null == n ? void 0 : n.appid], i),
-          l = r.useMemo(
+        const { strInviteID: t } = e,
+          a = (0, pa.Nt)(t),
+          n = (0, ca.og)(
+            [null == a ? void 0 : a.appid],
+            null == a ? void 0 : a.primary_partnerid,
+          ),
+          i = r.useMemo(
             () =>
               (function (e) {
                 let t = new Array();
@@ -19794,27 +19794,26 @@
                   t.sort((e, t) => e.rtStart - t.rtStart),
                   t
                 );
-              })(null == s ? void 0 : s.get(null == n ? void 0 : n.appid)),
-            [null == n ? void 0 : n.appid, s],
+              })(null == n ? void 0 : n.get(null == a ? void 0 : a.appid)),
+            [null == a ? void 0 : a.appid, n],
           );
-        return s
+        return n
           ? r.createElement(Da, {
               nMaxWeeksToDisplay: 26,
               fnCreateCalendarEntries: (e) => {
-                const t = new Array();
+                const a = new Array();
                 for (let n = 0; n < fa; ++n) {
                   const s = e + n * F._H.PerWeek;
-                  t.push(
+                  a.push(
                     r.createElement($a, {
                       key: "calrow" + n,
                       rtFirstDay: s,
-                      nPartnerID: i,
-                      strInviteID: a,
-                      rgCooldownConflict: l,
+                      strInviteID: t,
+                      rgCooldownConflict: i,
                     }),
                   );
                 }
-                return t;
+                return a;
               },
             })
           : r.createElement(b.V, {
@@ -19824,34 +19823,29 @@
             });
       }
       function $a(e) {
-        const {
-            rtFirstDay: t,
-            nPartnerID: a,
-            strInviteID: n,
-            rgCooldownConflict: i,
-          } = e,
-          s = new Array();
+        const { rtFirstDay: t, strInviteID: a, rgCooldownConflict: n } = e,
+          i = new Array();
         for (let e = 0; e < 7; ++e) {
-          const a = (0, Vt.ou)(t + e * F._H.PerDay);
+          const s = (0, Vt.ou)(t + e * F._H.PerDay);
           let l,
             o = "",
             c = "",
             d = 0;
-          i.length > 0 &&
-            i.forEach((e) => {
-              e.rtStart <= a && e.rtEnd >= a
-                ? e.rtDiscountStart <= a && a <= e.rtDiscountEnd
+          n.length > 0 &&
+            n.forEach((e) => {
+              e.rtStart <= s && e.rtEnd >= s
+                ? e.rtDiscountStart <= s && s <= e.rtDiscountEnd
                   ? (!l || e.nHighestDiscount > l) &&
                     ((l = e.nHighestDiscount), (o = e.strDiscountName))
                   : (c && (c += ", "), (c += e.description))
-                : !d && e.rtStart > a && (d = e.rtStart);
+                : !d && e.rtStart > s && (d = e.rtStart);
             }),
-            s.push(
+            i.push(
               r.createElement(Ka, {
-                key: "calday" + a,
-                rtDay: a,
+                key: "calday" + s,
+                rtDay: s,
                 nDiscount: l,
-                strInviteID: n,
+                strInviteID: a,
                 strConflict: c,
                 strDiscountName: o,
                 rtNextConflictStart: d,
@@ -19861,7 +19855,7 @@
         return r.createElement(
           "div",
           { className: va.CalendarRow },
-          s.map((e) =>
+          i.map((e) =>
             r.createElement(
               "div",
               { className: va.CalendarDate, key: "col_" + e.key },
@@ -20306,18 +20300,18 @@
           : null;
       }
       function _n(e) {
-        const { strPublisherID: t, strInviteID: a } = e,
-          n = (0, pa.Nt)(a);
-        return n
-          ? 0 != n.rtdatechosen
+        const { strInviteID: t } = e,
+          a = (0, pa.Nt)(t);
+        return a
+          ? 0 != a.rtdatechosen
             ? r.createElement(hn, {
                 strMessage: (0, P.Xx)("#DailyDeals_InviteAlreadyAccepted"),
               })
-            : n.rtexpiretime < Date.now() / 1e3
+            : a.rtexpiretime < Date.now() / 1e3
             ? r.createElement(hn, {
                 strMessage: (0, P.Xx)(
                   "#DailyDeals_InviteExpired",
-                  (0, P.$1)(n.rtexpiretime),
+                  (0, P.$1)(a.rtexpiretime),
                 ),
               })
             : r.createElement(
@@ -20326,9 +20320,9 @@
                 r.createElement(
                   "div",
                   { style: { paddingBottom: 20 } },
-                  r.createElement(gn, { promo: n }),
+                  r.createElement(gn, { promo: a }),
                 ),
-                r.createElement(Za, { strPublisherID: t, strInviteID: a }),
+                r.createElement(Za, { strInviteID: t }),
                 r.createElement(mn, null),
               )
           : r.createElement(hn, {
