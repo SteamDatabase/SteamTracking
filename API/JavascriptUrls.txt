@@ -1027,6 +1027,7 @@ ${PARTNER_BASE_URL}promotion/dailydeals/ajaxsetblackout
 ${PARTNER_BASE_URL}promotion/dailydeals/dashboard
 ${PARTNER_BASE_URL}promotion/dailydeals/dashboard/${partner_id}
 ${PARTNER_BASE_URL}promotion/dailydeals/edit/${gid}
+${PARTNER_BASE_URL}promotion/discountevents/dashboard
 ${PARTNER_BASE_URL}promotion/discounts${}?de=${discount_event_id}&dd=1
 ${PARTNER_BASE_URL}promotion/discounts/ajaxgetalldiscountevents/${}
 ${PARTNER_BASE_URL}promotion/discounts/ajaxgetdiscounteventapplist
@@ -1050,6 +1051,7 @@ ${PARTNER_BASE_URL}promotion/planning/ajaxpostcontenthubstats
 ${PARTNER_BASE_URL}promotion/planning/ajaxuserwithreceivecommunications
 ${PARTNER_BASE_URL}promotion/planning/dashboard
 ${PARTNER_BASE_URL}promotion/planning/edit/${id}
+${PARTNER_BASE_URL}promotion/planning/edit/${}
 ${PARTNER_BASE_URL}promotion/planning/salesrank
 ${PARTNER_BASE_URL}promotion/planning/themes
 ${PARTNER_BASE_URL}promotion/spotlights/ajaxcreatenewspotlight
