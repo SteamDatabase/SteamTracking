@@ -58,6 +58,8 @@
   max-height: 320px;
   display: flex;
   justify-content: center;
+  transform-style: preserve-3d;
+  background-color: transparent;
 }
 .BasicUI
   .sharedappdetailsheader_TopCapsule_2meE3.sharedappdetailsheader_TopCapsule_2meE3 {

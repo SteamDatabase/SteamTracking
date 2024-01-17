@@ -499,13 +499,15 @@
         const [r, t] = l.useState(() => u.Get().GetPartnerInfo(e));
         return (
           l.useEffect(() => {
-            !u.Get().BHasPartnerInfoLoad(e) &&
-              e > 0 &&
-              u
-                .Get()
-                .LoadPartnerInfo(e)
-                .then((e) => t(e));
-          }, [e]),
+            !u.Get().BHasPartnerInfoLoad(e) && e > 0
+              ? u
+                  .Get()
+                  .LoadPartnerInfo(e)
+                  .then((e) => t(e))
+              : u.Get().BHasPartnerInfoLoad(e) &&
+                (null == r ? void 0 : r.partnerid) != e &&
+                t(u.Get().GetPartnerInfo(e));
+          }, [e, r]),
           [r]
         );
       }

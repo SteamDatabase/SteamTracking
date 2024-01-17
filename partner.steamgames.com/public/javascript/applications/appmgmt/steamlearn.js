@@ -1048,6 +1048,22 @@
             }
             break;
           }
+          case 7: {
+            const a = t
+              .connectors()
+              .filter((e) => e.is_input_connector())
+              .map((e) => e.connector_id());
+            for (const t of a) {
+              const { msgIncomingNode: a, nIncomingConnectorID: n } = ne(e, t),
+                o = oe(e, a, n);
+              (0, u.X)(
+                1 == o.length,
+                `Input tensor to STEAMLEARN_NODE_TYPE_CONDITIONAL_EXTRACT not one-dimensional! (node ${a}, connector ${n}`,
+              ),
+                r.push(o[0]);
+            }
+            break;
+          }
           default:
             (0, u.X)(
               !1,
@@ -1433,13 +1449,16 @@
               o.createElement(
                 "div",
                 { className: Ne.Timestamp },
-                new Date(1e3 * e.msgEvent.timestamp()).toLocaleString("en-US", {
-                  month: "long",
-                  day: "numeric",
-                  hour: "numeric",
-                  minute: "numeric",
-                  hour12: !0,
-                }),
+                new Date(1e3 * e.msgEvent.timestamp()).toLocaleString(
+                  c.Yt.GetPreferredLocales(),
+                  {
+                    month: "long",
+                    day: "numeric",
+                    hour: "numeric",
+                    minute: "numeric",
+                    hour12: !0,
+                  },
+                ),
               ),
               o.createElement(
                 "div",
@@ -1478,11 +1497,10 @@
                       { className: Ne.Completed },
                       (0, c.Xx)(
                         "#SteamLearn_Event_Completed",
-                        new Date(1e3 * e.nEndTime).toLocaleString("en-US", {
-                          hour: "numeric",
-                          minute: "numeric",
-                          hour12: !0,
-                        }),
+                        new Date(1e3 * e.nEndTime).toLocaleString(
+                          c.Yt.GetPreferredLocales(),
+                          { hour: "numeric", minute: "numeric", hour12: !0 },
+                        ),
                         m,
                       ),
                     ),
@@ -1589,9 +1607,15 @@
                 o.createElement(
                   "div",
                   { className: Ne.DateRange },
-                  new Date(1e3 * n).toLocaleString("en-US", i),
+                  new Date(1e3 * n).toLocaleString(
+                    c.Yt.GetPreferredLocales(),
+                    i,
+                  ),
                   " - ",
-                  new Date(1e3 * r).toLocaleString("en-US", i),
+                  new Date(1e3 * r).toLocaleString(
+                    c.Yt.GetPreferredLocales(),
+                    i,
+                  ),
                 ),
                 o.createElement(
                   "div",
@@ -2385,7 +2409,7 @@
                     disabled: !1,
                     value: P,
                     onChange: (e) =>
-                      K((t) =>
+                      O(e.target.value, T, X, (t) =>
                         t.set_compact_table_count(parseInt(e.target.value)),
                       ),
                   }),
@@ -2539,9 +2563,10 @@
           } = pe(),
           [r, s] = o.useState({}),
           [d, _] = o.useState(o.createElement("div", null)),
-          [m, u] = o.useState(""),
+          [m, u] = o.useState("10"),
           [g, N] = o.useState(0),
-          E = o.useMemo(
+          [E, v] = o.useState(""),
+          h = o.useMemo(
             () =>
               Array.from(t.data_source_element_usages().values()).sort(
                 (e, t) => {
@@ -2570,13 +2595,13 @@
           N(e);
         }, [t]),
           o.useEffect(() => {
-            for (const e of E)
+            for (const e of h)
               s((t) =>
                 Object.assign(Object.assign({}, t), {
                   [e.data_element_path()]: "0",
                 }),
               );
-          }, [E]);
+          }, [h]);
         return 0 == Object.keys(r).length
           ? null
           : o.createElement(
@@ -2585,7 +2610,19 @@
               o.createElement(
                 "div",
                 { className: Fe.ProjectInferenceTesterBody },
-                E.map((e) =>
+                o.createElement(
+                  "div",
+                  { className: Fe.Keys },
+                  (0, c.Xx)("#SteamLearn_InferenceTester_Keys"),
+                ),
+                o.createElement("input", {
+                  type: "text",
+                  className: Fe.ValueInput,
+                  value: E,
+                  onChange: (e) => v(e.target.value),
+                }),
+                o.createElement("hr", null),
+                h.map((e) =>
                   0 == e.input()
                     ? null
                     : o.createElement(
@@ -2664,28 +2701,36 @@
                               .find((e) => e.train_id() == g)) || void 0 === a
                             ? void 0
                             : a.fetch_id()) || 0;
-                        n.Body().set_fetch_id(i), n.Body().set_train_id(g);
-                        const c = E.sort(
-                          (e, t) => e.sql_column() - t.sql_column(),
-                        );
-                        for (const e of c) {
-                          if (0 == e.input()) continue;
-                          const t = new f.dq();
-                          t.set_float_value(
-                            parseFloat(r[e.data_element_path()]),
-                          ),
-                            n.Body().add_data(t);
+                        if (
+                          (n.Body().set_fetch_id(i),
+                          n.Body().set_train_id(g),
+                          E.length > 0)
+                        ) {
+                          const e = E.split(",");
+                          for (const t of e) n.Body().add_keys(t);
+                        } else {
+                          const e = h.sort(
+                            (e, t) => e.sql_column() - t.sql_column(),
+                          );
+                          for (const t of e) {
+                            if (0 == t.input()) continue;
+                            const e = new f.dq();
+                            e.set_float_value(
+                              parseFloat(r[t.data_element_path()]),
+                            ),
+                              n.Body().add_data(e);
+                          }
                         }
-                        const l = yield f.NG.InferenceBackend(
+                        const c = yield f.NG.InferenceBackend(
                           p.Get().GetServiceTransport(),
                           n,
                         );
                         if (
-                          (console.log(l.Body().toObject()),
-                          l.BIsValid() && 1 == l.GetEResult())
+                          (console.log(c.Body().toObject()),
+                          c.BIsValid() && 1 == c.GetEResult())
                         ) {
                           let e = [];
-                          for (const t of l.Body().outputs()) {
+                          for (const t of c.Body().outputs()) {
                             if (
                               t.multi_binary_crossentropy().value().length > 0
                             ) {
@@ -8179,7 +8224,7 @@
             maxDepth: 1 / 0,
             showModifications: !0,
             arrayDiffMethod: "lcs",
-          }).diff(t.toObject(), a.toObject());
+          });
           return o.createElement(
             Ve.On,
             {
@@ -8206,7 +8251,7 @@
                     "div",
                     { className: Bt.DiffTableContainer },
                     o.createElement(wt.A, {
-                      diff: s,
+                      diff: s.diff(t.toObject(), a.toObject()),
                       hideUnchangedLines: !0,
                       highlightInlineDiff: !0,
                       lineNumbers: !0,
@@ -9357,14 +9402,7 @@
             s = R(e.nProjectID, e.nFetchID),
             [d, _] = o.useState("");
           (0, Ee.Yz)(() => {
-            switch (m.status()) {
-              case 0:
-              case 1:
-              case 2:
-              case 5:
-              case 6:
-                K(e.nProjectID, e.nFetchID);
-            }
+            m.status(), K(e.nProjectID, e.nFetchID);
           }, 3e3);
           if (0 == t)
             return o.createElement(
@@ -9755,6 +9793,7 @@
                 case 2:
                 case 1:
                 case 6:
+                default:
                   z(e.nProjectID, e.nTrainID);
                   break;
                 case 3:

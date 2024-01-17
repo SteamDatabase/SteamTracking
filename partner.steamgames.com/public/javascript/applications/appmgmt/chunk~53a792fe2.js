@@ -65,17 +65,17 @@
         PackagePricesBelowMin: "gridcomponents_PackagePricesBelowMin_2x4be",
       };
     },
-    14694: (t, e, n) => {
+    81033: (t, e, n) => {
       "use strict";
       n.d(e, {
-        BS: () => E,
-        K$: () => I,
-        Lr: () => P,
         Q: () => G,
         fH: () => f,
         i4: () => _,
         o: () => h,
         vc: () => k,
+        K$: () => I,
+        BS: () => E,
+        Lr: () => P,
         z8: () => S,
       });
       var i = n(85556),
@@ -1398,22 +1398,24 @@
     7073: (t, e, n) => {
       "use strict";
       n.d(e, {
-        EV: () => L,
-        Fi: () => S,
-        ID: () => G,
-        LT: () => h,
-        Qy: () => R,
-        Su: () => f,
-        XM: () => E,
-        Xj: () => A,
-        _J: () => v,
-        b2: () => P,
-        co: () => _,
-        hd: () => b,
-        k1: () => C,
-        kk: () => m,
-        v6: () => k,
-        yI: () => I,
+        EV: () => y,
+        Fi: () => C,
+        ID: () => P,
+        LT: () => E,
+        Qy: () => A,
+        Su: () => I,
+        U8: () => g,
+        XM: () => k,
+        Xj: () => w,
+        _J: () => _,
+        b2: () => b,
+        co: () => f,
+        dE: () => D,
+        hd: () => L,
+        k1: () => R,
+        kk: () => h,
+        v6: () => G,
+        yI: () => S,
       });
       var i = n(85556),
         a = n(80751),
@@ -1425,11 +1427,13 @@
         u = n(20417),
         d = n(45284),
         p = n(37563);
-      class g {
+      const g = 95,
+        D = 10;
+      class m {
         static Get() {
           return (
-            g.s_Singleton || ((g.s_Singleton = new g()), g.s_Singleton.Init()),
-            g.s_Singleton
+            m.s_Singleton || ((m.s_Singleton = new m()), m.s_Singleton.Init()),
+            m.s_Singleton
           );
         }
         constructor() {
@@ -1479,7 +1483,7 @@
           for (const e of t)
             (null === (n = e.discountEventID) || void 0 === n
               ? void 0
-              : n.length) || (e.discountEventID = D(e)),
+              : n.length) || (e.discountEventID = v(e)),
               this.m_mapPackageDiscountsById.set(e.nDiscountID, e),
               this.GetCallbackListForDiscount(e.nDiscountID).Dispatch(e),
               this.m_mapPackageDiscountsByPackageId.has(e.packageID) ||
@@ -1577,7 +1581,9 @@
               }),
               d = new Set();
             for (const e of t)
-              this.m_mapPackageDiscountsByPackageId.has(e) || d.add(e);
+              this.m_mapPackageDiscountsByPackageId.has(e) ||
+                0 == e ||
+                d.add(e);
             const g = Array.from(d).sort();
             if (0 == g.length) return 1;
             const D = (0, p.kQ)("publisherid", "application_config"),
@@ -1664,7 +1670,7 @@
               l.append("name", t.strDiscountName),
               l.append("description", t.strDiscountDescription),
               t.discountEventID &&
-                !m(t.discountEventID) &&
+                !h(t.discountEventID) &&
                 l.append("type", t.discountEventID),
               l.append("percent", t.nDiscountPct.toString()),
               l.append(
@@ -1821,67 +1827,68 @@
         }
         GetMaxDiscountPercentage(t) {
           var e;
+          const n = g;
           return null !==
             (e = this.m_mapMaxDiscountPercentageByPackageId.get(t)) &&
             void 0 !== e
             ? e
-            : 90;
+            : n;
         }
         GetMaxDiscountPercentageForGroup(t) {
           const e = t.map((t) => this.GetMaxDiscountPercentage(t));
           return Math.min(...e);
         }
       }
-      function D(t) {
+      function v(t) {
         return `custom-event-${t.rtStartDate}-${t.rtEndDate}-${(0, d.JD)(
           t.strDiscountName,
         )}`;
       }
-      function m(t) {
+      function h(t) {
         return t.startsWith("custom-event-");
       }
-      function v(t) {
-        return g.Get().GetDiscountByID(t);
-      }
-      function h(t) {
-        return g.Get().GetAllDiscountsForDiscountEvent(t);
-      }
       function _(t) {
-        return g.Get().GetAllDiscountsForPackage(t);
+        return m.Get().GetDiscountByID(t);
       }
       function E(t) {
-        return g.Get().GetCallbackListForPackage(t);
+        return m.Get().GetAllDiscountsForDiscountEvent(t);
       }
-      function f() {
-        return g.Get().GetAllDiscountsForAllPackages();
+      function f(t) {
+        return m.Get().GetAllDiscountsForPackage(t);
       }
-      function k() {
-        return g.Get().GetGlobalCallbackList();
+      function k(t) {
+        return m.Get().GetCallbackListForPackage(t);
       }
       function I() {
+        return m.Get().GetAllDiscountsForAllPackages();
+      }
+      function G() {
+        return m.Get().GetGlobalCallbackList();
+      }
+      function S() {
         return o.useCallback(
-          (t, e, n) => g.Get().LoadPackageDiscounts(t, e, n),
+          (t, e, n) => m.Get().LoadPackageDiscounts(t, e, n),
           [],
         );
       }
-      function G() {
-        const t = (t) => g.Get().SaveDiscountToServer(t),
-          e = (t, e, n) => g.Get().DeleteDiscountOnServer(t, e, n);
+      function P() {
+        const t = (t) => m.Get().SaveDiscountToServer(t),
+          e = (t, e, n) => m.Get().DeleteDiscountOnServer(t, e, n);
         return o.useMemo(
           () => ({ fnSaveDiscount: t, fnDeleteDiscount: e }),
           [],
         );
       }
-      function S(t) {
+      function C(t) {
         return new Map(
-          Array.from(t.map((t) => [t, g.Get().GetDiscountByID(t)])),
+          Array.from(t.map((t) => [t, m.Get().GetDiscountByID(t)])),
         );
       }
-      function P(t) {
+      function b(t) {
         const e = (0, r.zD)(),
-          [n, i] = o.useState(g.Get().GetAllDiscountsForPackage(t));
+          [n, i] = o.useState(m.Get().GetAllDiscountsForPackage(t));
         return (
-          (0, u.Qg)(g.Get().GetCallbackListForPackage(t), i),
+          (0, u.Qg)(m.Get().GetCallbackListForPackage(t), i),
           o.useMemo(() => {
             let t = null;
             if (null == n) return { deepestDiscount: t, bLoading: !0 };
@@ -1898,18 +1905,18 @@
           }, [t, e, n])
         );
       }
-      function C(t) {
+      function R(t) {
         const e = (0, r.zD)(),
-          [n, i] = o.useState(g.Get().GetAllDiscountsForAllPackages());
+          [n, i] = o.useState(m.Get().GetAllDiscountsForAllPackages());
         return (
-          (0, u.Qg)(g.Get().GetGlobalCallbackList(), i),
+          (0, u.Qg)(m.Get().GetGlobalCallbackList(), i),
           o.useMemo(() => {
             var i;
             let a = null;
             if (null == n) return { mostRecentDiscount: a, bLoading: !0 };
             for (const n of t) {
               const t =
-                null !== (i = g.Get().GetAllDiscountsForPackage(n)) &&
+                null !== (i = m.Get().GetAllDiscountsForPackage(n)) &&
                 void 0 !== i
                   ? i
                   : [];
@@ -1922,20 +1929,20 @@
           }, [e, t, n])
         );
       }
-      function b(t) {
-        const [e, n] = o.useState(g.Get().GetAllDiscountsForDiscountEvent(t));
-        return (0, u.Qg)(g.Get().GetCallbackListForDiscountEvent(t), n), e;
-      }
-      function R(t) {
-        return g.Get().GetMaxDiscountPercentage(t);
-      }
       function L(t) {
-        return t.some(
-          (t) => t.nDiscountPct > g.Get().GetMaxDiscountPercentage(t.packageID),
-        );
+        const [e, n] = o.useState(m.Get().GetAllDiscountsForDiscountEvent(t));
+        return (0, u.Qg)(m.Get().GetCallbackListForDiscountEvent(t), n), e;
       }
       function A(t) {
-        return g.Get().GetMaxDiscountPercentageForGroup(t);
+        return m.Get().GetMaxDiscountPercentage(t);
+      }
+      function y(t) {
+        return t.some(
+          (t) => t.nDiscountPct > m.Get().GetMaxDiscountPercentage(t.packageID),
+        );
+      }
+      function w(t) {
+        return m.Get().GetMaxDiscountPercentageForGroup(t);
       }
     },
     95518: (t, e, n) => {
@@ -1959,7 +1966,7 @@
         yn: () => N,
         z$: () => j,
       });
-      var i = n(14694),
+      var i = n(81033),
         a = n(10095),
         s = n(7073),
         o = n(98061),
@@ -2730,7 +2737,7 @@
         s = n(45492),
         o = n(20417),
         r = n(37563),
-        c = n(14694),
+        c = n(81033),
         l = n(7073),
         u = n(95518);
       const d = "related-discount-view";

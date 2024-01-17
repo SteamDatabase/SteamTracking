@@ -963,6 +963,7 @@ ${PARTNER_BASE_URL}giveaways/control/${}
 ${PARTNER_BASE_URL}marketing/message/${gid}
 ${PARTNER_BASE_URL}marketing/message/${}
 ${PARTNER_BASE_URL}marketingmessages/messagepreview/${gid}/?cc=${}&l=${}&bForceSteamChina=${}&low_bandwidth=${}&dlc_override=${_ ? _ : ""}
+${PARTNER_BASE_URL}marketingmessages/messagepreview/${}/?cc=${}&l=${language}
 ${PARTNER_BASE_URL}optin${}
 ${PARTNER_BASE_URL}optin/${pageid}/sale/${}
 ${PARTNER_BASE_URL}optin/admin/edit/${pageid}
@@ -1030,6 +1031,7 @@ ${PARTNER_BASE_URL}promotion/dailydeals/dashboard
 ${PARTNER_BASE_URL}promotion/dailydeals/dashboard/${partner_id}
 ${PARTNER_BASE_URL}promotion/dailydeals/edit/${gid}
 ${PARTNER_BASE_URL}promotion/discountevents/dashboard
+${PARTNER_BASE_URL}promotion/discountevents/edit/${}
 ${PARTNER_BASE_URL}promotion/discounts${}?de=${discount_event_id}&dd=1
 ${PARTNER_BASE_URL}promotion/discounts/ajaxgetalldiscountevents/${}
 ${PARTNER_BASE_URL}promotion/discounts/ajaxgetdiscounteventapplist
@@ -1039,10 +1041,12 @@ ${PARTNER_BASE_URL}promotion/discounts/ajaxupdatediscountevent
 ${PARTNER_BASE_URL}promotion/discounts/dashboard/
 ${PARTNER_BASE_URL}promotion/discounts/dashboard/${}?de=${}
 ${PARTNER_BASE_URL}promotion/discounts/dashboard/?de=${_ ? _ : _}
+${PARTNER_BASE_URL}promotion/invitationplanner/dashboard
 ${PARTNER_BASE_URL}promotion/marketingmessages/ajaxgetsnrmetrics
 ${PARTNER_BASE_URL}promotion/marketingmessages/ajaxuploadasset/${}
 ${PARTNER_BASE_URL}promotion/marketingmessages/dashboard
 ${PARTNER_BASE_URL}promotion/marketingmessages/edit/${}
+${PARTNER_BASE_URL}promotion/marketingmessages/partnerpreview/${}
 ${PARTNER_BASE_URL}promotion/planning/ajaxgetappsalesummaries
 ${PARTNER_BASE_URL}promotion/planning/ajaxgetcategoryeditorapplist
 ${PARTNER_BASE_URL}promotion/planning/ajaxgetcontenthubapplist

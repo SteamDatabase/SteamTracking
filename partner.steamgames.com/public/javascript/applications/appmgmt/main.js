@@ -18074,34 +18074,36 @@
         const { popup: t, onMaximize: n, bOSX: a } = e,
           [l, c] = i.useState(),
           u = i.useCallback(() => {
-            t.SteamClient.Window.ToggleMaximize();
-          }, [t]),
-          d = i.useCallback(() => {
-            let e = t.screen.availWidth - t.innerWidth,
-              n = t.screen.availHeight - t.innerHeight;
-            return 0 === e && 0 === n;
-          }, [t]),
-          m = i.useCallback(() => {
             if ((0, o.w3)(t, "Window.IsWindowMaximized"))
               t.SteamClient.Window.IsWindowMaximized((e) => {
                 e != l && c(e);
               });
-            else {
-              let e = d();
+            else if (t && t.screen) {
+              let e = (function (e) {
+                if (!e || !e.screen) return !1;
+                let t = e.screen.availWidth - e.innerWidth,
+                  n = e.screen.availHeight - e.innerHeight,
+                  i = 0 === t && 0 === n;
+                return i;
+              })(t);
               e != l && c(e);
             }
-          }, [t, d, l]);
+          }, [t, l]);
         i.useEffect(
           () => (
-            m(),
-            t.addEventListener("resize", m),
-            () => t.removeEventListener("resize", m)
+            u(),
+            t.addEventListener("resize", u),
+            () => t.removeEventListener("resize", u)
           ),
-          [t, m],
+          [t, u],
         );
-        const p = i.useCallback(() => {
-          n ? n() : u(), m();
-        }, [n, u, m]);
+        const d = i.useCallback(() => {
+          n
+            ? n()
+            : (0, o.w3)(t, "Window.ToggleMaximize") &&
+              t.SteamClient.Window.ToggleMaximize(),
+            u();
+        }, [t, n, u]);
         return i.createElement(
           h,
           {
@@ -18109,7 +18111,7 @@
               l ? "restoreButton" : "maximizeButton",
               "windowControlButton",
             ),
-            onClick: p,
+            onClick: d,
           },
           !a &&
             (l ? i.createElement(r.r6F, null) : i.createElement(r.YqJ, null)),
@@ -21167,6 +21169,7 @@
         IN_TENFOOT: !1,
         PLATFORM: "",
         SNR: "",
+        SNR_OBJ: void 0,
         LAUNCHER_TYPE: 0,
         EREALM: 0,
         IN_CHROMEOS: !1,
@@ -21690,7 +21693,7 @@
             n.e(5875),
             n.e(4033),
             n.e(2136),
-          ]).then(n.bind(n, 85387)),
+          ]).then(n.bind(n, 82625)),
         ),
         H = c.lazy(() =>
           Promise.all([
@@ -21719,7 +21722,7 @@
             n.e(5875),
             n.e(4033),
             n.e(2136),
-          ]).then(n.bind(n, 55809)),
+          ]).then(n.bind(n, 56254)),
         ),
         G = c.lazy(() =>
           Promise.all([

@@ -16088,6 +16088,11 @@
                     bw: i.Xc.writeUint32,
                   },
                   end_time: { n: 8, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
+                  error_string: {
+                    n: 10,
+                    br: i.FE.readString,
+                    bw: i.Xc.writeString,
+                  },
                 },
               }),
             Xe.sm_m
@@ -16702,7 +16707,7 @@
         constructor(e = null) {
           super(),
             Ke.prototype.project_id || i.aR(Ke.M()),
-            o.initialize(this, e, 0, -1, [4, 5], null);
+            o.initialize(this, e, 0, -1, [4, 7, 6], null);
         }
         static M() {
           return (
@@ -16719,12 +16724,20 @@
                   train_id: { n: 3, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
                   data: { n: 4, c: Ge, r: !0, q: !0 },
                   additional_data: {
-                    n: 5,
+                    n: 7,
                     r: !0,
                     q: !0,
-                    br: i.FE.readUint32,
-                    pbr: i.FE.readPackedUint32,
-                    bw: i.Xc.writeRepeatedUint32,
+                    br: i.FE.readFloat,
+                    pbr: i.FE.readPackedFloat,
+                    bw: i.Xc.writeRepeatedFloat,
+                  },
+                  keys: {
+                    n: 6,
+                    r: !0,
+                    q: !0,
+                    br: i.FE.readUint64String,
+                    pbr: i.FE.readPackedUint64String,
+                    bw: i.Xc.writeRepeatedUint64String,
                   },
                 },
               }),

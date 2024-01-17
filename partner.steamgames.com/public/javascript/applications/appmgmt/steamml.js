@@ -863,7 +863,7 @@
             L =
               null === (t = u.Get().GetSchemaList(0, !0)) || void 0 === t
                 ? void 0
-                : t.sort((e, t) => (e.name < t.name ? -1 : 1)),
+                : t.slice().sort((e, t) => (e.name < t.name ? -1 : 1)),
             C =
               null == L
                 ? void 0

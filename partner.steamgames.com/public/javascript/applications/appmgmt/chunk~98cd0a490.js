@@ -6,7 +6,7 @@
   [7241],
   {
     28738: (e, t, r) => {
-      r.d(t, { Gr: () => m, Jq: () => f, si: () => h, y$: () => g });
+      r.d(t, { Jq: () => m, si: () => f, y$: () => g });
       var i = r(85556),
         a = r(80751),
         s = r.n(a),
@@ -93,40 +93,41 @@
       (0, i.gn)([n.LO], P.prototype, "m_mapProfiles", void 0);
       const g = new P();
       function m(e) {
-        const t = o.useMemo(
-            () => (e ? ("string" == typeof e ? new l.K(e) : e) : null),
-            [e],
-          ),
-          [r, i] = (0, o.useState)(!!t && !g.BHasProfileBySteamID(t));
-        (0, o.useEffect)(() => {
-          const e = s().CancelToken.source();
+        return (function (e) {
+          const t = o.useMemo(
+              () => (e ? ("string" == typeof e ? new l.K(e) : e) : null),
+              [e],
+            ),
+            [r, i] = (0, o.useState)(!!t && !g.BHasProfileBySteamID(t));
           return (
-            t &&
-              !g.BHasProfileBySteamID(t) &&
-              g
-                .LoadProfiles([t.ConvertTo64BitString()])
-                .catch((e) => {
-                  const r = (0, p.l)(e);
-                  console.error(
-                    "useUserProfile failed to load profile for " +
-                      t.ConvertTo64BitString() +
-                      ": " +
-                      r.strErrorMsg,
-                    r,
-                  );
-                })
-                .finally(() => {
-                  e.token.reason || i(!1);
-                }),
-            () => e.cancel("unmounting useUserProfile")
+            (0, o.useEffect)(() => {
+              const e = s().CancelToken.source();
+              return (
+                t &&
+                  !g.BHasProfileBySteamID(t) &&
+                  g
+                    .LoadProfiles([t.ConvertTo64BitString()])
+                    .catch((e) => {
+                      const r = (0, p.l)(e);
+                      console.error(
+                        "useUserProfile failed to load profile for " +
+                          t.ConvertTo64BitString() +
+                          ": " +
+                          r.strErrorMsg,
+                        r,
+                      );
+                    })
+                    .finally(() => {
+                      e.token.reason || i(!1);
+                    }),
+                () => e.cancel("unmounting useUserProfile")
+              );
+            }, [e]),
+            [r, !!t && g.GetProfileBySteamID(t)]
           );
-        }, [e]);
-        return [r, !!t && g.GetProfileBySteamID(t)];
+        })(o.useMemo(() => (e ? l.K.InitFromAccountID(e) : null), [e]));
       }
       function f(e) {
-        return m(o.useMemo(() => (e ? l.K.InitFromAccountID(e) : null), [e]));
-      }
-      function h(e) {
         return (function (e) {
           const t = o.useMemo(
               () =>
