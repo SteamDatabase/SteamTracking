@@ -6074,42 +6074,32 @@
               { settings: r, mapAppsAllowed: u } = (0, p.X1)(n).data,
               d = (0, p.T8)(),
               h = (0, l.bY)(),
-              {
-                bIncludeOwn: g,
-                bIncludeExcluded: _,
-                bIncludeFreeSub: f,
-              } = null != t ? t : {},
-              v = (function (e, t, n, i) {
+              { bIncludeOwn: g, bIncludeExcluded: _ } = null != t ? t : {},
+              f = (function (e, t, n, i) {
                 return [
                   "get_shared_library_apps",
                   e,
                   null == t ? void 0 : t.bIncludeOwn,
                   null == t ? void 0 : t.bIncludeExcluded,
-                  null == t ? void 0 : t.bIncludeFreeSub,
                   null == n ? void 0 : n.toObject(),
                   i,
                 ];
               })(e, t, r, d),
-              C = (e) => !(0, p.IL)(e.appid(), d, r, u);
-            return (0, o.useQuery)(v, {
+              v = (e) => !(0, p.IL)(e.appid(), d, r, u);
+            return (0, o.useQuery)(f, {
               queryFn: () =>
                 (0, i.mG)(this, void 0, void 0, function* () {
                   const t = s.gA.Init(c.Ai);
                   t.Body().set_family_groupid(e),
                     t.Body().set_include_own(g),
                     t.Body().set_include_excluded(_),
-                    t.Body().set_include_free(f),
                     t.Body().set_language(m.De.LANGUAGE);
                   const n = yield c.s4.GetSharedLibraryApps(h, t);
-                  return y(n.GetEResult()), n.Body().apps().filter(C);
+                  return y(n.GetEResult()), n.Body().apps().filter(v);
                 }),
               enabled: !!r,
             });
-          })(e, {
-            bIncludeOwn: !0,
-            bIncludeExcluded: !0,
-            bIncludeFreeSub: 1 != m.De.EUNIVERSE,
-          }),
+          })(e, u),
           h = (0, r.useMemo)(() => {
             var e;
             return (
