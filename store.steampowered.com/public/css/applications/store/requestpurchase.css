@@ -443,6 +443,7 @@
   align-items: center;
   gap: 10px;
   overflow: hidden;
+  max-width: 100%;
 }
 .familysharedcomponents_MeBadge_qeLJ_ {
   display: flex;
@@ -458,6 +459,7 @@
 }
 .familysharedcomponents_PlayerName_3YHL9 {
   font-size: 20px;
+  overflow: hidden;
 }
 .familysharedcomponents_RoleAndIcon_1VP1W {
   display: flex;
@@ -495,6 +497,7 @@
   align-items: center;
   overflow: hidden;
   flex-grow: 1;
+  max-width: 100%;
 }
 @media screen and (max-width: 500px) {
   .familysharedcomponents_FamilyMemberRow_3QkkY
@@ -503,6 +506,7 @@
     .familysharedcomponents_FamilyMemberRowTop_3kaLZ
     .familysharedcomponents_Left_3KlqU {
     flex-direction: column;
+    overflow: hidden;
   }
 }
 .familysharedcomponents_FamilyMemberRow_3QkkY

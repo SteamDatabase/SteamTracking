@@ -53,7 +53,7 @@
       "use strict";
       t.d(r, { J: () => b });
       var o = t(37563),
-        c = t(8004);
+        c = t(77936);
       function b() {
         return o.De.IN_CLIENT && (0, c.px)(o.De.LAUNCHER_TYPE);
       }

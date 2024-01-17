@@ -7558,24 +7558,24 @@
         R = a(74736),
         O = a.n(R),
         N = a(35427),
-        L = a(28738),
-        H = a(71741),
-        V = a.n(H),
-        G = a(84996),
-        U = a(29480),
-        B = a(50423),
-        j = a(12251),
-        Y = a(45070),
-        X = a(26461);
+        L = a(71741),
+        H = a.n(L),
+        V = a(84996),
+        G = a(29480),
+        U = a(50423),
+        B = a(12251),
+        j = a(45070),
+        Y = a(26461),
+        X = a(51915);
       const $ = "title",
         Q = "content";
       const K = (e) => {
           const { draft: t, eLanguage: a } = e;
           return n.createElement(
             "div",
-            { className: H.FlexRowContainer },
+            { className: L.FlexRowContainer },
             n.createElement(ee, { draft: t, eLanguage: a }),
-            n.createElement(G.Q0, {
+            n.createElement(V.Q0, {
               strToolTip: (0, M.Xx)("#FAQEditor_Loc_Import_ttip"),
               strLabel: (0, M.Xx)("#EventEditor_Loc_Import_Short"),
               fnOnImportLocData: (e, a) =>
@@ -7612,15 +7612,15 @@
           const { draft: t } = e;
           return n.createElement(
             "div",
-            { className: H.FlexRowContainer },
+            { className: L.FlexRowContainer },
             n.createElement(
               "div",
               {
-                className: H.EditPreviewButton,
+                className: L.EditPreviewButton,
                 onClick: (e) => {
                   (0, T.AM)(
                     n.createElement(Z, { direction: "export", draft: t }, " "),
-                    (0, B.RA)(e),
+                    (0, U.RA)(e),
                   );
                 },
               },
@@ -7629,11 +7629,11 @@
             n.createElement(
               "div",
               {
-                className: H.EditPreviewButton,
+                className: L.EditPreviewButton,
                 onClick: (e) => {
                   (0, T.AM)(
                     n.createElement(Z, { direction: "import", draft: t }, " "),
-                    (0, B.RA)(e),
+                    (0, U.RA)(e),
                   );
                 },
               },
@@ -7669,7 +7669,7 @@
           return n.createElement(
             C.uH,
             {
-              className: X.LanguageListDialog,
+              className: Y.LanguageListDialog,
               closeModal: t,
               strTitle: h,
               strDescription: c,
@@ -7702,7 +7702,7 @@
             n.createElement(
               "div",
               {
-                className: H.EditPreviewButton,
+                className: L.EditPreviewButton,
                 onClick: (e) => {
                   (0, T.AM)(
                     n.createElement(
@@ -7711,11 +7711,11 @@
                         strTitle: (0, M.Xx)("#EventEditor_Loc_Export"),
                         bAlertDialog: !0,
                       },
-                      n.createElement(G.Gp, {
+                      n.createElement(V.Gp, {
                         fnGetLocData: () =>
                           (function (e, t) {
                             var a, o;
-                            let i = new Y.C();
+                            let i = new j.C();
                             for (let s = 0; s < 31; ++s)
                               (e.BHasSomeTextForLanguage(s) || 0 == t) &&
                                 (i.SetLocalization(
@@ -7742,7 +7742,7 @@
                         lang: a,
                       }),
                     ),
-                    (0, B.RA)(e),
+                    (0, U.RA)(e),
                   );
                 },
               },
@@ -7791,20 +7791,20 @@
             null,
             n.createElement(
               "div",
-              { className: X.ChecklistHeader },
+              { className: Y.ChecklistHeader },
               n.createElement(
                 "div",
-                { className: X.Language },
+                { className: Y.Language },
                 (0, M.Xx)("#FAQCrowdin_LanguageHeader"),
               ),
               n.createElement(
                 "div",
-                { className: X.Timestamp },
+                { className: Y.Timestamp },
                 (0, M.Xx)("#FAQCrowdin_DraftTimestampHeader"),
               ),
             ),
             n.createElement(A.ji, {
-              className: X.CheckAll,
+              className: Y.CheckAll,
               label: (0, M.Xx)("#FAQCrowdin_SelectAllCheckboxes"),
               onChange: (e) => {
                 i(e ? a.slice() : []);
@@ -7812,7 +7812,7 @@
             }),
             n.createElement(
               "div",
-              { className: X.ChecklistRows },
+              { className: Y.ChecklistRows },
               null != r
                 ? r
                 : n.createElement(
@@ -7830,32 +7830,32 @@
             l = r
               ? N.K.InitFromAccountID(Number.parseInt(r.author_account_id))
               : null,
-            [d, h] = (0, L.Gr)(l),
-            c = r
+            { data: d } = (0, X.IE)(l.GetAccountID()),
+            h = r
               ? (0, M.Xx)(
                   "#FAQCrowdin_SavedAtTimeByAuthor",
                   (0, M.$1)(r.timestamp) +
                     " @ " +
-                    (0, j.Sc)(r.timestamp, { bForce24HourClock: !1 }),
-                  null !== (t = null == h ? void 0 : h.persona_name) &&
+                    (0, B.Sc)(r.timestamp, { bForce24HourClock: !1 }),
+                  null !== (t = null == d ? void 0 : d.m_strPlayerName) &&
                     void 0 !== t
                     ? t
                     : r.author_account_id,
                 )
               : (0, M.Xx)("#FAQCrowdin_NoDraftFound"),
-            u = n.createElement(
+            c = n.createElement(
               "div",
-              { className: X.LanguageCheckboxLabel },
+              { className: Y.LanguageCheckboxLabel },
               n.createElement(
                 "div",
-                { className: X.Language },
+                { className: Y.Language },
                 (0, M.Xx)("#Language_" + (0, p.j_)(o)),
               ),
-              n.createElement("div", { className: X.Timestamp }, c),
+              n.createElement("div", { className: Y.Timestamp }, h),
             );
           return n.createElement(A.ji, {
-            className: X.LanguageCheckbox,
-            label: u,
+            className: Y.LanguageCheckbox,
+            label: c,
             checked: i,
             onChange: (e) => s(e, o),
           });
@@ -7866,7 +7866,7 @@
           [r, l] = n.useState(!1),
           [h, c] = n.useState(!1),
           [u, m] = n.useState(null),
-          f = (0, U.T)("CrowdinImportDialog"),
+          f = (0, G.T)("CrowdinImportDialog"),
           g = n.useRef([]);
         if (u)
           return n.createElement(C.uH, {
@@ -7907,7 +7907,7 @@
               ),
               n.createElement(
                 "div",
-                { className: X.Warning },
+                { className: Y.Warning },
                 (0, M.Xx)("#FAQDashboard_CrowdinToolWarning"),
               ),
             ),
@@ -7989,15 +7989,15 @@
           null,
           n.createElement(
             "div",
-            { className: X.ImportProgressBar },
+            { className: Y.ImportProgressBar },
             n.createElement("div", {
-              className: X.ProgressMarker,
+              className: Y.ProgressMarker,
               style: { width: t + "%" },
             }),
           ),
           n.createElement(
             "div",
-            { className: X.CurrentFAQ },
+            { className: Y.CurrentFAQ },
             (0, M.Xx)("#FAQDashboard_CrowdinToolProgress", a),
           ),
         );
@@ -8007,10 +8007,10 @@
           [a, o] = (0, d.SP)();
         return n.createElement(
           "div",
-          { className: X.ImportResults },
+          { className: Y.ImportResults },
           n.createElement(
             "div",
-            { className: X.ImportResultLabel },
+            { className: Y.ImportResultLabel },
             (0, M.Xx)("#FAQDashboard_CrowdinToolResultsLabel"),
           ),
           t.map((e, t) => {
@@ -8022,14 +8022,14 @@
               { key: o.faq_id },
               n.createElement(
                 "div",
-                { className: X.ImportResult },
+                { className: Y.ImportResult },
                 n.createElement(
                   q.HP,
                   {
                     toolTipContent: o.internal_name,
                     strTooltipClassname: O().HoverAboveModal,
                     nAllowOffscreenPx: 4e4,
-                    className: X.UrlCode,
+                    className: Y.UrlCode,
                   },
                   o.url_code + ": ",
                 ),
@@ -8040,7 +8040,7 @@
                     strTooltipClassname: O().HoverAboveModal,
                     nAllowOffscreenPx: 4e4,
                     direction: "left",
-                    className: X.LanguageList,
+                    className: Y.LanguageList,
                   },
                   i,
                 ),
@@ -8440,11 +8440,11 @@
             n.createElement(
               "div",
               {
-                className: (0, g.Z)(H.EditPreviewButton, H.Delete),
+                className: (0, g.Z)(L.EditPreviewButton, L.Delete),
                 onClick: (t) => {
                   (0, T.AM)(
                     n.createElement(qe, { draft: e.draft }),
-                    (0, B.RA)(t),
+                    (0, U.RA)(t),
                   );
                 },
               },
@@ -8551,7 +8551,7 @@
             n.createElement(
               "div",
               {
-                className: (0, g.Z)(H.EditPreviewButton, a && H.Disabled),
+                className: (0, g.Z)(L.EditPreviewButton, a && L.Disabled),
                 onClick: (t) => {
                   a ||
                     (0, T.AM)(
@@ -8562,7 +8562,7 @@
                             ),
                           })
                         : n.createElement(ze, { draft: e.draft }),
-                      (0, B.RA)(t),
+                      (0, U.RA)(t),
                     );
                 },
               },
@@ -8647,7 +8647,7 @@
               { onEscKeypress: o },
               n.createElement(
                 A.VY,
-                { className: X.LanguageListDialog },
+                { className: Y.LanguageListDialog },
                 n.createElement(A.h4, null, (0, M.Xx)("#FAQPublish_Publish")),
                 n.createElement(A.uT, null, n.createElement(A.Ac, null, b)),
                 n.createElement(
@@ -8692,11 +8692,11 @@
             n.createElement(
               "div",
               {
-                className: H.EditPreviewButton,
+                className: L.EditPreviewButton,
                 onClick: (t) => {
                   (0, T.AM)(
                     n.createElement(Fe, { draft: e.draft }),
-                    (0, B.RA)(t),
+                    (0, U.RA)(t),
                   );
                 },
               },
@@ -9032,7 +9032,7 @@
               onClick: (t) =>
                 (0, T.AM)(
                   n.createElement(je, { draft: e.draft }),
-                  (0, B.RA)(t),
+                  (0, U.RA)(t),
                 ),
             },
             n.createElement(
@@ -9146,7 +9146,7 @@
                 {
                   route: a ? o.k_eCommunityEdit : o.k_eCommunityDashboard,
                   faqid: t.GetFAQID(),
-                  className: V().EditPreviewButton,
+                  className: H().EditPreviewButton,
                 },
                 (0, M.Xx)(
                   a ? "#FAQEditor_EditFAQ" : "#EventDisplay_EventsDashBtn",
@@ -9173,14 +9173,14 @@
                     onClick: (e) =>
                       (0, T.AM)(
                         n.createElement(Qe, { draft: t }),
-                        (0, B.RA)(e),
+                        (0, U.RA)(e),
                       ),
                   }),
                 ),
               ),
               n.createElement(
                 "div",
-                { className: V().EventOptions },
+                { className: H().EventOptions },
                 n.createElement(Le.uW, {
                   selectedLang: Ie.U.Get().GetCurEditLanguage(),
                   fnOnLanguageChanged: Ie.U.Get().SetCurEditLanguage,
@@ -9195,7 +9195,7 @@
                     {
                       route: o.k_eCommunityPreview,
                       faqid: t.GetFAQID(),
-                      className: V().EditPreviewButton,
+                      className: H().EditPreviewButton,
                     },
                     (0, M.Xx)("#Button_Preview"),
                   ),
@@ -9294,18 +9294,18 @@
             null,
             n.createElement(
               "div",
-              { className: (0, g.Z)(V().SaveBackground) },
+              { className: (0, g.Z)(H().SaveBackground) },
               n.createElement(
                 "div",
                 {
-                  className: V().FlexRowWrapFlexStartContainer,
+                  className: H().FlexRowWrapFlexStartContainer,
                   style: { width: "unset", justifyContent: "center" },
                 },
                 n.createElement(Be, { draft: t }),
                 Boolean(l) &&
                   n.createElement(
                     "div",
-                    { className: V().EditPreviewButton },
+                    { className: H().EditPreviewButton },
                     n.createElement(
                       "a",
                       { href: u.De.HELP_BASE_URL + "faqs/view/" + i.url_code },
@@ -9351,10 +9351,10 @@
                   { className: Pe().FAQEditor },
                   n.createElement(
                     "div",
-                    { className: V().Columns },
+                    { className: H().Columns },
                     n.createElement(
                       "div",
-                      { className: (0, g.Z)(V().LeftCol) },
+                      { className: (0, g.Z)(H().LeftCol) },
                       n.createElement(et, { draft: a, eLanguage: s }),
                       n.createElement(tt, {
                         bbcodeEditorRef: i,
@@ -9365,7 +9365,7 @@
                     n.createElement(Ze, {
                       draft: a,
                       bbcodeEditorRef: i,
-                      className: V().RightCol,
+                      className: H().RightCol,
                     }),
                   ),
                 ),
@@ -9517,8 +9517,8 @@
         lt = a(73799),
         pt = a.n(lt),
         dt = a(42718),
-        ht = a(51841),
-        ct = a(94984),
+        ht = a(21928),
+        ct = a(82182),
         ut = a(40057);
       const mt = "nicknames";
       const ft = new (pt())(
@@ -9647,7 +9647,7 @@
           return d.xP.Get().BHasFAQEdit()
             ? n.createElement(
                 "div",
-                { className: (0, g.Z)(vt.Section, H.ValveOnlyBackground) },
+                { className: (0, g.Z)(vt.Section, L.ValveOnlyBackground) },
                 n.createElement(
                   "div",
                   { className: vt.TopicHeader },
@@ -9668,7 +9668,7 @@
                       null,
                       (0, M.$1)(t.timestamp) +
                         "@" +
-                        (0, j.Sc)(t.timestamp, { bForce24HourClock: !1 }),
+                        (0, B.Sc)(t.timestamp, { bForce24HourClock: !1 }),
                     ),
                   ),
                 ),
@@ -9708,7 +9708,7 @@
                 null,
                 (0, M.$1)(i.timestamp) +
                   "@" +
-                  (0, j.Sc)(i.timestamp, { bForce24HourClock: !1 }),
+                  (0, B.Sc)(i.timestamp, { bForce24HourClock: !1 }),
               ),
             ),
           );
@@ -9745,7 +9745,7 @@
                     "a",
                     {
                       href: u.De.HELP_BASE_URL,
-                      className: H.EditPreviewButton,
+                      className: L.EditPreviewButton,
                     },
                     (0, M.Xx)("#FAQViewer_SideBar_ProblemWithSteam_Link"),
                   ),
@@ -9781,7 +9781,7 @@
                       "a",
                       {
                         href: u.De.COMMUNITY_BASE_URL + "discussions",
-                        className: H.EditPreviewButton,
+                        className: L.EditPreviewButton,
                       },
                       (0, M.Xx)("#FAQViewer_SideBar_CommunityHelp_Link"),
                     ),

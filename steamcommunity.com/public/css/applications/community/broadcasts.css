@@ -43,6 +43,7 @@
   overflow: hidden;
   cursor: pointer;
   min-width: 200px;
+  min-height: 210px;
   background-image: radial-gradient(ellipse at top left, #42454c, #25282e);
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
   border-radius: 4px;
@@ -99,6 +100,7 @@
 }
 .eventrow_OtherEvents_MainImageCtn_1_8oy {
   width: 100%;
+  max-height: 171px;
   height: auto;
   position: relative;
   overflow: hidden;
@@ -244,6 +246,7 @@
     rgba(62, 70, 80, 0.5) 20%,
     rgba(36, 40, 47, 0.5) 100%
   );
+  min-height: auto;
 }
 .eventrow_OtherEvents_EventCtn_17gGs.eventrow_HorizontalEvent_1RS0b
   .eventrow_OtherEvents_TextCtn_2AVL1 {

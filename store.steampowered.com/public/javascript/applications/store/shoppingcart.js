@@ -146,10 +146,10 @@
         LineItemWrapper: "lineitem_LineItemWrapper_2KiPY",
         LineItemCapsule: "lineitem_LineItemCapsule_2_GgL",
         LineItemPlaceholder: "lineitem_LineItemPlaceholder_1qKu4",
+        RemoveLineItem: "lineitem_RemoveLineItem_33j4S",
         InnerLineItemCtn: "lineitem_InnerLineItemCtn_yW_j0",
         LineItemDetailsCtn: "lineitem_LineItemDetailsCtn_jRg6O",
         LineItemCol: "lineitem_LineItemCol_26Nx9",
-        RemoveLineItem: "lineitem_RemoveLineItem_33j4S",
         LineItemDetailsRow: "lineitem_LineItemDetailsRow_F6ZEr",
         LineItemDetailsRowTop: "lineitem_LineItemDetailsRowTop_1SauQ",
         LineItemSpaceBetween: "lineitem_LineItemSpaceBetween_n7b9Q",
@@ -1649,7 +1649,7 @@
                   const n = D.Z.Get().GetApp(e);
                   return i.createElement(
                     N.W,
-                    { key: e, type: "app", id: e },
+                    { key: `${e}_${t}`, type: "app", id: e },
                     i.createElement(
                       "a",
                       { href: n.GetStorePageURL() },
@@ -2554,59 +2554,56 @@
         u = n(13499);
       function p(e) {
         var t;
-        const { closeCart: n, lineItemID: s } = e,
+        const { closeCart: n, lineItemIDs: s } = e,
           p = (0, i.g1)(),
-          _ = [
-            a.useMemo(
-              () =>
-                p.data && s
-                  ? p.data.line_items.find((e) => e.line_item_id == s)
-                  : null,
-              [s, p.data],
-            ) || null,
-          ];
+          _ = a.useMemo(
+            () =>
+              p.data && s && 0 !== s.length
+                ? p.data.line_items.filter((e) => s.includes(e.line_item_id))
+                : null,
+            [s, p.data],
+          );
         return (
           a.useEffect(() => {
-            p.isSuccess &&
-              s &&
-              p.data.line_items.every((e) => e.line_item_id !== s) &&
-              n();
-          }, [p, s, n]),
-          a.createElement(
-            r.On,
-            { active: !0, className: c().ShoppingCartModal, onDismiss: n },
-            a.createElement(
-              "div",
-              { className: c().ShoppingCartHeader },
-              (0, o.Xx)("#Cart_AddedToYourCart"),
-            ),
-            a.createElement(l.J, { lineItems: _ }),
-            a.createElement(
-              "div",
-              { className: c().ShoppingCartModalBtns },
-              a.createElement(
-                m.zx,
-                { onClick: n },
-                (0, o.Xx)("#Cart_ContinueShopping"),
-              ),
-              a.createElement(
-                m.KM,
-                {
-                  className: c().OpenCartBtn,
-                  onClick: () =>
-                    (window.location.href = (0, u.OL)(
-                      d.De.STORE_BASE_URL + "cart",
-                    )),
-                },
-                (0, o.Xx)(
-                  "#Cart_ViewMyCart",
-                  null === (t = p.data) || void 0 === t
-                    ? void 0
-                    : t.line_items.length,
+            p.isSuccess && _ && 0 === _.length && n();
+          }, [p, _, n]),
+          _
+            ? a.createElement(
+                r.On,
+                { active: !0, className: c().ShoppingCartModal, onDismiss: n },
+                a.createElement(
+                  "div",
+                  { className: c().ShoppingCartHeader },
+                  (0, o.Xx)("#Cart_AddedToYourCart"),
                 ),
-              ),
-            ),
-          )
+                a.createElement(l.J, { lineItems: _ }),
+                a.createElement(
+                  "div",
+                  { className: c().ShoppingCartModalBtns },
+                  a.createElement(
+                    m.zx,
+                    { onClick: n },
+                    (0, o.Xx)("#Cart_ContinueShopping"),
+                  ),
+                  a.createElement(
+                    m.KM,
+                    {
+                      className: c().OpenCartBtn,
+                      onClick: () =>
+                        (window.location.href = (0, u.OL)(
+                          d.De.STORE_BASE_URL + "cart",
+                        )),
+                    },
+                    (0, o.Xx)(
+                      "#Cart_ViewMyCart",
+                      null === (t = p.data) || void 0 === t
+                        ? void 0
+                        : t.line_items.length,
+                    ),
+                  ),
+                ),
+              )
+            : null
         );
       }
     },

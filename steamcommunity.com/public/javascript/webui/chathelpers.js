@@ -1,13 +1,13 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "8622903";
+var CLSTAMP = "8636748";
 (() => {
   var e,
     t,
     n,
     r,
-    a,
-    o = {
+    o,
+    a = {
       3119: (e, t, n) => {
         var r = {
           "./friendsui_arabic.json": [58480, 6992],
@@ -42,17 +42,17 @@ var CLSTAMP = "8622903";
           "./friendsui_ukrainian.json": [83292, 2822],
           "./friendsui_vietnamese.json": [39248, 1635],
         };
-        function a(e) {
+        function o(e) {
           if (!n.o(r, e))
             return Promise.resolve().then(() => {
               var t = new Error("Cannot find module '" + e + "'");
               throw ((t.code = "MODULE_NOT_FOUND"), t);
             });
           var t = r[e],
-            a = t[0];
-          return n.e(t[1]).then(() => n.t(a, 19));
+            o = t[0];
+          return n.e(t[1]).then(() => n.t(o, 19));
         }
-        (a.keys = () => Object.keys(r)), (a.id = 3119), (e.exports = a);
+        (o.keys = () => Object.keys(r)), (o.id = 3119), (e.exports = o);
       },
       9014: (e, t, n) => {
         var r = {
@@ -88,25 +88,25 @@ var CLSTAMP = "8622903";
           "./friendsui_ukrainian.json": [83292, 2822],
           "./friendsui_vietnamese.json": [39248, 1635],
         };
-        function a(e) {
+        function o(e) {
           if (!n.o(r, e))
             return Promise.resolve().then(() => {
               var t = new Error("Cannot find module '" + e + "'");
               throw ((t.code = "MODULE_NOT_FOUND"), t);
             });
           var t = r[e],
-            a = t[0];
-          return n.e(t[1]).then(() => n.t(a, 19));
+            o = t[0];
+          return n.e(t[1]).then(() => n.t(o, 19));
         }
-        (a.keys = () => Object.keys(r)), (a.id = 9014), (e.exports = a);
+        (o.keys = () => Object.keys(r)), (o.id = 9014), (e.exports = o);
       },
-      10650: (e, t, n) => {
+      37290: (e, t, n) => {
         "use strict";
         function r(e, t, n, r) {
-          var a,
-            o = arguments.length,
+          var o,
+            a = arguments.length,
             i =
-              o < 3
+              a < 3
                 ? t
                 : null === r
                 ? (r = Object.getOwnPropertyDescriptor(t, n))
@@ -118,30 +118,30 @@ var CLSTAMP = "8622903";
             i = Reflect.decorate(e, t, n, r);
           else
             for (var s = e.length - 1; s >= 0; s--)
-              (a = e[s]) &&
-                (i = (o < 3 ? a(i) : o > 3 ? a(t, n, i) : a(t, n)) || i);
-          return o > 3 && i && Object.defineProperty(t, n, i), i;
+              (o = e[s]) &&
+                (i = (a < 3 ? o(i) : a > 3 ? o(t, n, i) : o(t, n)) || i);
+          return a > 3 && i && Object.defineProperty(t, n, i), i;
         }
-        function a(e, t, n, r) {
-          return new (n || (n = Promise))(function (a, o) {
+        function o(e, t, n, r) {
+          return new (n || (n = Promise))(function (o, a) {
             function i(e) {
               try {
                 _(r.next(e));
               } catch (e) {
-                o(e);
+                a(e);
               }
             }
             function s(e) {
               try {
                 _(r.throw(e));
               } catch (e) {
-                o(e);
+                a(e);
               }
             }
             function _(e) {
               var t;
               e.done
-                ? a(e.value)
+                ? o(e.value)
                 : ((t = e.value),
                   t instanceof n
                     ? t
@@ -155,8 +155,8 @@ var CLSTAMP = "8622903";
         Object.create;
         Object.create;
         "function" == typeof SuppressedError && SuppressedError;
-        n(35520);
-        var o = n(27378),
+        n(49429);
+        var a = n(27378),
           i = n(37634);
         function s(e) {
           if (!_() || !window.document.cookie) return null;
@@ -184,17 +184,17 @@ var CLSTAMP = "8622903";
             (function (e, t, n, r) {
               if (!_()) return;
               r || (r = "/");
-              let a = "";
+              let o = "";
               if (void 0 !== n && n) {
                 const e = new Date();
                 e.setTime(e.getTime() + 864e5 * n),
-                  (a = "; expires=" + e.toUTCString());
+                  (o = "; expires=" + e.toUTCString());
               }
               document.cookie =
                 encodeURIComponent(e) +
                 "=" +
                 encodeURIComponent(t) +
-                a +
+                o +
                 ";path=" +
                 r;
             })("sessionid", e, 0),
@@ -216,10 +216,10 @@ var CLSTAMP = "8622903";
                 return Boolean(e && 1 === Number.parseInt(e));
               })() &&
               (h.is_support = !1));
-          const a = u("broadcast", e);
-          a && (Object.assign(m, a), (t.broadcastConfig = !0));
-          const o = u("community", e);
-          o && (Object.assign(y, o), (t.communityConfig = !0));
+          const o = u("broadcast", e);
+          o && (Object.assign(m, o), (t.broadcastConfig = !0));
+          const a = u("community", e);
+          a && (Object.assign(y, a), (t.communityConfig = !0));
           const i = u("event", e);
           return i && (Object.assign(g, i), (t.eventConfig = !0)), t;
         }
@@ -295,6 +295,7 @@ var CLSTAMP = "8622903";
           IN_TENFOOT: !1,
           PLATFORM: "",
           SNR: "",
+          SNR_OBJ: void 0,
           LAUNCHER_TYPE: 0,
           EREALM: 0,
           IN_CHROMEOS: !1,
@@ -362,7 +363,7 @@ var CLSTAMP = "8622903";
             IS_ALLOWED_SC: !1,
           },
           g = { ANNOUNCEMENT_GID: "", TAKEOVER_ANNOUNCEMENT_GID: "" };
-        o.createContext({});
+        a.createContext({});
         var T;
         !(function (e) {
           (e[(e.k_EResultOK = 1)] = "k_EResultOK"),
@@ -760,7 +761,7 @@ var CLSTAMP = "8622903";
         let I = new v();
         window.ClientConnectionAPI = I;
         n(14206);
-        var L, f, A, P, M, b, F, D, N, U, G, w, O, j;
+        var L, A, f, P, M, b, F, D, N, U, G, w, O, j;
         !(function (e) {
           (e[(e.k_ETransportOK = 1)] = "k_ETransportOK"),
             (e[(e.k_ETransportRequestNotSent = 2)] =
@@ -879,7 +880,7 @@ var CLSTAMP = "8622903";
               (e[(e.k_EAppErrorParentalPlaytimeExceeded = 56)] =
                 "k_EAppErrorParentalPlaytimeExceeded"),
               (e[(e.k_EAppErrorMax = 57)] = "k_EAppErrorMax");
-          })(f || (f = {})),
+          })(A || (A = {})),
           (function (e) {
             (e[(e.k_EAvatarFriendStateOffline = 0)] =
               "k_EAvatarFriendStateOffline"),
@@ -887,7 +888,7 @@ var CLSTAMP = "8622903";
                 "k_EAvatarFriendStateOnline"),
               (e[(e.k_EAvatarFriendStateInGame = 2)] =
                 "k_EAvatarFriendStateInGame");
-          })(A || (A = {})),
+          })(f || (f = {})),
           (function (e) {
             (e[(e.k_EScreenshot = 0)] = "k_EScreenshot"),
               (e[(e.k_ETradingCard = 1)] = "k_ETradingCard"),
@@ -1509,8 +1510,8 @@ var CLSTAMP = "8622903";
           te,
           ne,
           re,
-          ae,
           oe,
+          ae,
           ie,
           se,
           _e,
@@ -1725,7 +1726,7 @@ var CLSTAMP = "8622903";
                 "k_EUIMode_EmbeddedClient"),
               (e[(e.k_EUIMode_DesktopUI = 7)] = "k_EUIMode_DesktopUI"),
               (e[(e.k_EUIMode_MAX = 8)] = "k_EUIMode_MAX");
-          })(ae || (ae = {})),
+          })(oe || (oe = {})),
           (function (e) {
             (e[(e.k_EStoreCategoryMultiplayer = 1)] =
               "k_EStoreCategoryMultiplayer"),
@@ -1815,7 +1816,7 @@ var CLSTAMP = "8622903";
               (e[(e.k_EStoreCategoryGamepadPreferred = 60)] =
                 "k_EStoreCategoryGamepadPreferred"),
               (e[(e.k_EStoreCategoryHDR = 61)] = "k_EStoreCategoryHDR");
-          })(oe || (oe = {})),
+          })(ae || (ae = {})),
           (function (e) {
             (e[(e.k_PFI_MatchingFileType_Items = 0)] =
               "k_PFI_MatchingFileType_Items"),
@@ -2162,16 +2163,16 @@ var CLSTAMP = "8622903";
           "Unregister",
           null,
         );
-        var fe;
+        var Ae;
         !(function (e) {
           (e[(e.None = 0)] = "None"),
             (e[(e.Ago = 1)] = "Ago"),
             (e[(e.Remaining = 2)] = "Remaining");
-        })(fe || (fe = {}));
+        })(Ae || (Ae = {}));
         new Map();
         new Map(), new Map();
         new Map(), new Map(), new Map(), new Map(), new Map(), new Map();
-        class Ae {
+        class fe {
           constructor() {
             (this.m_mapTokens = new Map()),
               (this.m_mapFallbackTokens = new Map()),
@@ -2206,11 +2207,11 @@ var CLSTAMP = "8622903";
                 }
             return t;
           }
-          InitFromObjects(e, t, n, r, a) {
-            a || this.m_mapTokens.clear();
-            const o = Object.assign(Object.assign({}, n || {}), e),
+          InitFromObjects(e, t, n, r, o) {
+            o || this.m_mapTokens.clear();
+            const a = Object.assign(Object.assign({}, n || {}), e),
               i = Object.assign(Object.assign({}, r || {}), t || {});
-            this.AddTokens(o, i), this.m_cbkTokensChanged.Dispatch();
+            this.AddTokens(a, i), this.m_cbkTokensChanged.Dispatch();
           }
           InitDirect(e, t) {
             this.m_mapTokens.clear(),
@@ -2247,7 +2248,7 @@ var CLSTAMP = "8622903";
               }),
               e)
             ) {
-              Ae.GetLanguageListForRealms(e).forEach((e) => {
+              fe.GetLanguageListForRealms(e).forEach((e) => {
                 -1 == t.indexOf(e) && t.push(e);
               });
             }
@@ -2267,8 +2268,8 @@ var CLSTAMP = "8622903";
             let n = this.m_mapTokens.get(e.substring(1));
             if (void 0 !== n) return n;
             !t &&
-              Ae.sm_ErrorReportingStore &&
-              Ae.sm_ErrorReportingStore.ReportError(
+              fe.sm_ErrorReportingStore &&
+              fe.sm_ErrorReportingStore.ReportError(
                 new Error(
                   `Unable to find localization token '${e}' for language '${S.LANGUAGE}', ${this.m_mapTokens.size} tokens in map`,
                 ),
@@ -2289,15 +2290,15 @@ var CLSTAMP = "8622903";
           let n = Fe.LocalizeString(e);
           if (void 0 === n) return e;
           let r,
-            a = [],
+            o = [],
             i = /(.*?)%(\d+)\$s/g,
             s = 0;
           for (; (r = i.exec(n)); ) {
-            (s += r[0].length), a.push(r[1]);
+            (s += r[0].length), o.push(r[1]);
             let e = parseInt(r[2]);
-            e >= 1 && e <= t.length && a.push(t[e - 1]);
+            e >= 1 && e <= t.length && o.push(t[e - 1]);
           }
-          return a.push(n.substr(s)), o.createElement(o.Fragment, null, ...a);
+          return o.push(n.substr(s)), a.createElement(a.Fragment, null, ...o);
         }
         function be(e, ...t) {
           return 0 == t.length
@@ -2340,7 +2341,7 @@ var CLSTAMP = "8622903";
           H.k_Lang_Latam_Spanish,
           H.k_Lang_Vietnamese,
           H.k_Lang_Indonesian;
-        const Fe = new Ae();
+        const Fe = new fe();
         function De(e, t, ...n) {
           console.assert
             ? 0 == n.length
@@ -2504,10 +2505,10 @@ var CLSTAMP = "8622903";
           static InitFromString(e) {
             let t = new Oe();
             try {
-              let [n, r, a, o, i] =
+              let [n, r, o, a, i] =
                   e.match(/\[([I|g|A|G|M|P|C|U]):(\d+):(\d+):?(\d+)?\]/) || [],
-                s = Number(a),
-                _ = Number(o),
+                s = Number(o),
+                _ = Number(a),
                 E = i ? Number(i) : 1;
               switch (r) {
                 case "I":
@@ -2586,9 +2587,9 @@ var CLSTAMP = "8622903";
             );
           }
           SetFromComponents(e, t, n, r) {
-            let a = ((255 & r) << 24) + ((15 & n) << 20) + (1048575 & t),
-              o = 4294967295 & e;
-            this.m_ulSteamID = new we.Z(o, a, !0);
+            let o = ((255 & r) << 24) + ((15 & n) << 20) + (1048575 & t),
+              a = 4294967295 & e;
+            this.m_ulSteamID = new we.Z(a, o, !0);
           }
         }
         var je = n(82989);
@@ -2655,13 +2656,13 @@ var CLSTAMP = "8622903";
               if (n) {
                 if (e) {
                   let n = function (r) {
-                    let a = S.COMMUNITY_BASE_URL.replace(
+                    let o = S.COMMUNITY_BASE_URL.replace(
                       /(https?:\/\/[^/]*).*$/,
                       "$1",
                     );
                     r.source == t &&
                       "FriendsUIReady" == r.data &&
-                      r.origin == a &&
+                      r.origin == o &&
                       (t.postMessage(e, S.COMMUNITY_BASE_URL),
                       window.removeEventListener("message", n));
                   };
@@ -2698,19 +2699,19 @@ var CLSTAMP = "8622903";
         }
         r([Ne.LO], We.prototype, "m_bConnectingToClient", void 0),
           r([Ne.LO], We.prototype, "m_connectResult", void 0);
-        let xe = class extends o.Component {
+        let xe = class extends a.Component {
           render() {
-            return o.createElement(
+            return a.createElement(
               "div",
               { className: "InviteLandingRoot" },
               this.props.controller.BIsInviteValid()
-                ? o.createElement(Ve, { controller: this.props.controller })
-                : o.createElement(He, { controller: this.props.controller }),
+                ? a.createElement(Ve, { controller: this.props.controller })
+                : a.createElement(He, { controller: this.props.controller }),
             );
           }
         };
         xe = r([Ue.Pi], xe);
-        let Ve = class extends o.Component {
+        let Ve = class extends a.Component {
           constructor(e) {
             super(e), (this.m_bTriedToLaunchSteam = !1), (0, Ne.rC)(this);
           }
@@ -2737,10 +2738,10 @@ var CLSTAMP = "8622903";
           }
           render() {
             if (this.props.controller.BIsConnectingToClient())
-              return o.createElement(
+              return a.createElement(
                 "div",
                 { className: "ChatMessageInvite RequestingInfo NoColumns" },
-                o.createElement(
+                a.createElement(
                   "div",
                   { className: "postedExpiredInvite" },
                   Pe("#bbcode_invite_requesting_info"),
@@ -2753,20 +2754,20 @@ var CLSTAMP = "8622903";
             return (
               t.BIsVoiceChatInvite() && (r += " inviteButtonJoinVoice"),
               e.success
-                ? o.createElement(
+                ? a.createElement(
                     "div",
                     { className: "ChatMessageInvite NoColumns" },
-                    o.createElement(
+                    a.createElement(
                       "div",
                       { className: "groupName" },
                       Pe("#InviteLanding_SentToSteam"),
                     ),
-                    o.createElement(
+                    a.createElement(
                       "div",
                       { className: "inviteLabel" },
                       Me(
                         "#InviteLanding_SentToSteam_Desc",
-                        o.createElement(
+                        a.createElement(
                           "a",
                           {
                             href: "javascript:void(0);",
@@ -2778,18 +2779,18 @@ var CLSTAMP = "8622903";
                     ),
                   )
                 : e.account_mismatch
-                ? o.createElement(
+                ? a.createElement(
                     Ke,
                     { render: this.props.controller.GetPreRenderedHTML() },
-                    o.createElement(
+                    a.createElement(
                       "div",
                       { className: "inviteLabel" },
                       Pe("#InviteLanding_AccountMismatch"),
                     ),
-                    o.createElement(
+                    a.createElement(
                       "div",
                       { className: "inviteLabel" },
-                      o.createElement(
+                      a.createElement(
                         "button",
                         {
                           className: r,
@@ -2798,7 +2799,7 @@ var CLSTAMP = "8622903";
                         },
                         Pe("#InviteLanding_OpenInSteam"),
                       ),
-                      o.createElement(
+                      a.createElement(
                         "button",
                         {
                           className: r,
@@ -2810,20 +2811,20 @@ var CLSTAMP = "8622903";
                     ),
                   )
                 : e.call_unsupported
-                ? o.createElement(
+                ? a.createElement(
                     "div",
                     { className: "ChatMessageInvite" },
-                    o.createElement(
+                    a.createElement(
                       "div",
                       { className: "groupName" },
                       Pe("#InviteLanding_SentToSteam"),
                     ),
-                    o.createElement(
+                    a.createElement(
                       "div",
                       { className: "inviteLabel" },
                       Me(
                         "#InviteLanding_SentToSteam_Desc",
-                        o.createElement(
+                        a.createElement(
                           "a",
                           {
                             href: "javascript:void(0);",
@@ -2834,14 +2835,14 @@ var CLSTAMP = "8622903";
                       ),
                     ),
                   )
-                : o.createElement(
+                : a.createElement(
                     Ke,
                     { render: this.props.controller.GetPreRenderedHTML() },
-                    o.createElement(
+                    a.createElement(
                       "div",
                       { className: "inviteLabel inviteLabelButtons" },
                       !n &&
-                        o.createElement(
+                        a.createElement(
                           "button",
                           {
                             className: r,
@@ -2850,7 +2851,7 @@ var CLSTAMP = "8622903";
                           },
                           Pe("#InviteLanding_OpenInSteam"),
                         ),
-                      o.createElement(
+                      a.createElement(
                         "button",
                         {
                           className: r,
@@ -2861,7 +2862,7 @@ var CLSTAMP = "8622903";
                       ),
                     ),
                     this.m_bTriedToLaunchSteam &&
-                      o.createElement(
+                      a.createElement(
                         "div",
                         { className: "inviteLabel inviteLabelLaunchPrompt" },
                         Pe("#InviteLanding_OpenInSteam_Help"),
@@ -2875,12 +2876,12 @@ var CLSTAMP = "8622903";
           r([Ie], Ve.prototype, "OpenInSteamIgnoreAccount", null),
           r([Ie], Ve.prototype, "LaunchSteamClient", null),
           (Ve = r([Ue.Pi], Ve));
-        class He extends o.Component {
+        class He extends a.Component {
           render() {
-            return o.createElement(
+            return a.createElement(
               "div",
               { className: "ChatMessageInvite" },
-              o.createElement(
+              a.createElement(
                 "div",
                 { className: "postedExpiredInvite" },
                 Pe("#InviteLanding_ExpiredOrInvalid"),
@@ -2889,29 +2890,29 @@ var CLSTAMP = "8622903";
           }
         }
         function Ke(e) {
-          return o.createElement(
+          return a.createElement(
             "div",
             { className: "ChatMessageInvite" },
-            o.createElement("div", {
+            a.createElement("div", {
               className: "leftInviteContainer",
               dangerouslySetInnerHTML: { __html: e.render.strAvatarHTML },
             }),
-            o.createElement(
+            a.createElement(
               "div",
               { className: "rightInviteContainer" },
-              o.createElement(
+              a.createElement(
                 "div",
                 { className: "inviteLabel" },
                 Me(
                   "#bbcode_invite_description",
-                  o.createElement("span", {
+                  a.createElement("span", {
                     dangerouslySetInnerHTML: {
                       __html: e.render.strInviterNameLinkHTML,
                     },
                   }),
                 ),
               ),
-              o.createElement(
+              a.createElement(
                 "div",
                 { className: "groupName" },
                 e.render.strChatRoomGroupName,
@@ -2929,24 +2930,24 @@ var CLSTAMP = "8622903";
           } catch (e) {}
           We.sm_rtTimeCur = t.rtTimeCur;
           let n = new We(t);
-          i.s(e).render(o.createElement(xe, { controller: n }));
+          i.s(e).render(a.createElement(xe, { controller: n }));
         }
         (window.ClientConnectionAPI = ze),
           document.addEventListener("DOMContentLoaded", function () {
-            return a(this, void 0, void 0, function* () {
+            return o(this, void 0, void 0, function* () {
               c(),
                 yield (function (e) {
-                  return a(this, void 0, void 0, function* () {
-                    const t = Ae.GetLanguageFallback(e),
+                  return o(this, void 0, void 0, function* () {
+                    const t = fe.GetLanguageFallback(e),
                       r = e === t,
-                      [a, o, i, s] = yield Promise.all([
+                      [o, a, i, s] = yield Promise.all([
                         n(41171)(`./shared_${e}.json`),
                         n(3119)(`./friendsui_${e}.json`),
                         r ? {} : n(91090)(`./shared_${t}.json`),
                         r ? {} : n(9014)(`./friendsui_${t}.json`),
                       ]);
                     Fe.AddTokens(
-                      Object.assign(Object.assign({}, a), o),
+                      Object.assign(Object.assign({}, o), a),
                       Object.assign(Object.assign({}, i), s),
                     );
                   });
@@ -2964,7 +2965,7 @@ var CLSTAMP = "8622903";
             });
           });
       },
-      35520: (e, t, n) => {
+      49429: (e, t, n) => {
         "use strict";
         "VALVE_PUBLIC_PATH" in window
           ? (n.p = window.VALVE_PUBLIC_PATH)
@@ -3010,17 +3011,17 @@ var CLSTAMP = "8622903";
           "./shared_ukrainian.json": [32110, 7781],
           "./shared_vietnamese.json": [59201, 4964],
         };
-        function a(e) {
+        function o(e) {
           if (!n.o(r, e))
             return Promise.resolve().then(() => {
               var t = new Error("Cannot find module '" + e + "'");
               throw ((t.code = "MODULE_NOT_FOUND"), t);
             });
           var t = r[e],
-            a = t[0];
-          return n.e(t[1]).then(() => n.t(a, 19));
+            o = t[0];
+          return n.e(t[1]).then(() => n.t(o, 19));
         }
-        (a.keys = () => Object.keys(r)), (a.id = 41171), (e.exports = a);
+        (o.keys = () => Object.keys(r)), (o.id = 41171), (e.exports = o);
       },
       91090: (e, t, n) => {
         var r = {
@@ -3056,17 +3057,17 @@ var CLSTAMP = "8622903";
           "./shared_ukrainian.json": [32110, 7781],
           "./shared_vietnamese.json": [59201, 4964],
         };
-        function a(e) {
+        function o(e) {
           if (!n.o(r, e))
             return Promise.resolve().then(() => {
               var t = new Error("Cannot find module '" + e + "'");
               throw ((t.code = "MODULE_NOT_FOUND"), t);
             });
           var t = r[e],
-            a = t[0];
-          return n.e(t[1]).then(() => n.t(a, 19));
+            o = t[0];
+          return n.e(t[1]).then(() => n.t(o, 19));
         }
-        (a.keys = () => Object.keys(r)), (a.id = 91090), (e.exports = a);
+        (o.keys = () => Object.keys(r)), (o.id = 91090), (e.exports = o);
       },
     },
     i = {};
@@ -3074,19 +3075,19 @@ var CLSTAMP = "8622903";
     var t = i[e];
     if (void 0 !== t) return t.exports;
     var n = (i[e] = { id: e, loaded: !1, exports: {} });
-    return o[e].call(n.exports, n, n.exports, s), (n.loaded = !0), n.exports;
+    return a[e].call(n.exports, n, n.exports, s), (n.loaded = !0), n.exports;
   }
-  (s.m = o),
+  (s.m = a),
     (s.amdO = {}),
     (e = []),
-    (s.O = (t, n, r, a) => {
+    (s.O = (t, n, r, o) => {
       if (!n) {
-        var o = 1 / 0;
+        var a = 1 / 0;
         for (k = 0; k < e.length; k++) {
-          for (var [n, r, a] = e[k], i = !0, _ = 0; _ < n.length; _++)
-            (!1 & a || o >= a) && Object.keys(s.O).every((e) => s.O[e](n[_]))
+          for (var [n, r, o] = e[k], i = !0, _ = 0; _ < n.length; _++)
+            (!1 & o || a >= o) && Object.keys(s.O).every((e) => s.O[e](n[_]))
               ? n.splice(_--, 1)
-              : ((i = !1), a < o && (o = a));
+              : ((i = !1), o < a && (a = o));
           if (i) {
             e.splice(k--, 1);
             var E = r();
@@ -3095,9 +3096,9 @@ var CLSTAMP = "8622903";
         }
         return t;
       }
-      a = a || 0;
-      for (var k = e.length; k > 0 && e[k - 1][2] > a; k--) e[k] = e[k - 1];
-      e[k] = [n, r, a];
+      o = o || 0;
+      for (var k = e.length; k > 0 && e[k - 1][2] > o; k--) e[k] = e[k - 1];
+      e[k] = [n, r, o];
     }),
     (s.n = (e) => {
       var t = e && e.__esModule ? () => e.default : () => e;
@@ -3112,13 +3113,13 @@ var CLSTAMP = "8622903";
         if (4 & r && e.__esModule) return e;
         if (16 & r && "function" == typeof e.then) return e;
       }
-      var a = Object.create(null);
-      s.r(a);
-      var o = {};
+      var o = Object.create(null);
+      s.r(o);
+      var a = {};
       t = t || [null, n({}), n([]), n(n)];
       for (var i = 2 & r && e; "object" == typeof i && !~t.indexOf(i); i = n(i))
-        Object.getOwnPropertyNames(i).forEach((t) => (o[t] = () => e[t]));
-      return (o.default = () => e), s.d(a, o), a;
+        Object.getOwnPropertyNames(i).forEach((t) => (a[t] = () => e[t]));
+      return (a.default = () => e), s.d(o, a), o;
     }),
     (s.d = (e, t) => {
       for (var n in t)
@@ -3197,68 +3198,68 @@ var CLSTAMP = "8622903";
       }[e] +
       ".js?contenthash=" +
       {
-        699: "ca920acefe1840657583",
-        1162: "eaa0df361d0f1bf7c1b9",
-        1313: "0bcb24ba6b2a2d61cc26",
-        1471: "306592f12173693eb926",
-        1635: "4faddaf6781f5bbdd0d7",
-        2029: "176b720cefb602847bf9",
-        2431: "3f330a391b919f3bb87d",
-        2443: "b3b11912e9746ff85313",
-        2537: "d6b323be8fc433105d15",
-        2822: "1930acba561078a18a98",
-        2844: "8158d8709289764037b4",
-        2862: "919b0f8467aa4d0dd8af",
-        2913: "9caa9f9765f6b6fbfe0d",
-        3112: "62f28a93820632152c91",
-        3140: "67232a94c8f87bf86abf",
-        3182: "78426ae7398d18bb7a4f",
-        3252: "f2005a851bbe9936321a",
-        3471: "3d722f5b01571f009d05",
-        3500: "f13fdf3a74837ff48203",
-        3557: "0d356d16eac5a4f54f6e",
-        4108: "a5697e1ab92d7fc123d8",
-        4189: "f4f9ac34f753240c3fda",
-        4264: "3f7370d48d57123da3f4",
-        4297: "e35d012f218d02b6e9f3",
-        4448: "dc34ef362bd30950e27e",
-        4596: "b64463f287913ed1b4f2",
-        4716: "0d03a3ed1cc805af2770",
-        4823: "bf7ce90e5ad82a99f54f",
-        4964: "1545d525b69b17c9fa21",
-        4989: "7080a6ac094d0c96366d",
-        5438: "6a5ba15e67ceb108a2aa",
-        5625: "2ca7249f85b4d716859c",
-        5632: "339503c63d708a076334",
-        5802: "debc3461bbf286c8c1df",
-        5849: "138bf48f10e7d0e74cc8",
-        5925: "a1ef9ed1e0d04726cfcc",
-        5933: "b4d3243a1cec981a90c2",
-        5948: "8a0bcd451f3ad70dd8ef",
-        6007: "102a30c4e90cda0e5c9f",
-        6492: "ed2ac8f191115f2777d0",
-        6542: "62fb39301a67a2598e10",
-        6646: "6424317e3f55a734bbf0",
-        6727: "423386e0c251115c756d",
-        6986: "c54148885851b5b1f61d",
-        6992: "3b30a7e01544619acb07",
-        7340: "c1a4e0c03e9ab095fae9",
-        7575: "3e33390f518ecc16c2e0",
-        7602: "4b9fbff8fca842595533",
-        7651: "3773770e781326effa2e",
-        7706: "415e651d68936074233f",
-        7781: "bbe8209ab7a0c6346d54",
-        7975: "0292d3accf1ebd0ae18f",
-        8247: "f25e033938692b5767ad",
-        8385: "843f826a31c5249ad7b5",
-        8518: "cd9a798946d052ef9d1e",
-        8754: "e31db22217cd3998f40b",
-        8815: "b6f126427894d82506bb",
-        9062: "9f5066b05c6a0999798f",
-        9263: "22ff8437b54da780aac3",
-        9753: "be52eb75e7a6181f48d5",
-        9775: "660b7785225eab50cda3",
-        9818: "f7b856f8c101aa9cae33",
+        699: "01a0ea616859f7a6357c",
+        1162: "5189f3923a5581ba6aba",
+        1313: "0fdb6a9f907c22d6fba5",
+        1471: "b9f8339c9d11edbb5ca3",
+        1635: "b2d3d1c58ffd9271290b",
+        2029: "df06aa91cf033c600e3b",
+        2431: "423f5ac04b6d9e2e0940",
+        2443: "eaa36bb0443d9c68145e",
+        2537: "2a87476f94508db27183",
+        2822: "3672547b9bde7123b5bc",
+        2844: "786cc7c7f9ea25d38829",
+        2862: "a436979121e21aa2eb2e",
+        2913: "0eb85276570eaa67c722",
+        3112: "5c0039f164a2df33f625",
+        3140: "e2daae18faf0f0c9eae9",
+        3182: "c4c6e973accc177ee3e9",
+        3252: "18cdfba2a43874485a9b",
+        3471: "5f7342fdbb57a4aad6eb",
+        3500: "02c13528b454a4e72b84",
+        3557: "9fdca2179a963536193a",
+        4108: "24e405501056df64a948",
+        4189: "9f22492e39622f17a547",
+        4264: "bba4909ba52ce5f3b0bf",
+        4297: "290797579177e20af4f4",
+        4448: "435879628bb2a3e19fca",
+        4596: "fa11f386da252954f036",
+        4716: "1f3f79e223cc6c8c7c6d",
+        4823: "570713682096f8072ca7",
+        4964: "241a79c2da2bee827c4c",
+        4989: "7d7fac1d2836aa7bb9d5",
+        5438: "afe1e144d58ecef865bd",
+        5625: "08d3f2d0d03a4bef715a",
+        5632: "d77710fb47fa272b8d06",
+        5802: "346c42754de3994c7d85",
+        5849: "d7902ca2902a84f573ee",
+        5925: "ca6db35026323bb9b46f",
+        5933: "7444233988a1a8235157",
+        5948: "8abf88f2b301e6df66d7",
+        6007: "b933d7d61cfa32a2ae2f",
+        6492: "08b22a27941214c1cc14",
+        6542: "f0674b7c2c103ca2eb9c",
+        6646: "888eb191178110a0a9de",
+        6727: "a0f0f460af57d1a8212c",
+        6986: "6cabfd9b3c19278df4d5",
+        6992: "4ad80ddfef0256c67745",
+        7340: "1eb17ae963a326a49b2b",
+        7575: "83a34f38d7969313b1a4",
+        7602: "864b401fd44bb07e3369",
+        7651: "075823af40f8fee52c1b",
+        7706: "e25a36e8c63440a9e9fb",
+        7781: "2c7ff561f71dbb8023b7",
+        7975: "4c26f278e6462e2a2411",
+        8247: "d0562c540f1faa49f914",
+        8385: "404704e196032d5beebf",
+        8518: "56acc4a58c6afcd3a3ac",
+        8754: "08cf1709b7eaa3381501",
+        8815: "2bc9ff9f1a96d29b366a",
+        9062: "08e7b6073fccdb4f5722",
+        9263: "b679c34c88e992f06aaa",
+        9753: "5377b824906ca6c60220",
+        9775: "f5319d5ca9d4f61ad424",
+        9818: "0d1645336639f5840fbd",
       }[e]),
     (s.miniCssF = (e) => {}),
     (s.g = (function () {
@@ -3271,8 +3272,8 @@ var CLSTAMP = "8622903";
     })()),
     (s.o = (e, t) => Object.prototype.hasOwnProperty.call(e, t)),
     (r = {}),
-    (a = "@steam/friendsui:"),
-    (s.l = (e, t, n, o) => {
+    (o = "@steam/friendsui:"),
+    (s.l = (e, t, n, a) => {
       if (r[e]) r[e].push(t);
       else {
         var i, _;
@@ -3285,7 +3286,7 @@ var CLSTAMP = "8622903";
             var l = E[k];
             if (
               l.getAttribute("src") == e ||
-              l.getAttribute("data-webpack") == a + n
+              l.getAttribute("data-webpack") == o + n
             ) {
               i = l;
               break;
@@ -3296,16 +3297,16 @@ var CLSTAMP = "8622903";
           ((i = document.createElement("script")).charset = "utf-8"),
           (i.timeout = 120),
           s.nc && i.setAttribute("nonce", s.nc),
-          i.setAttribute("data-webpack", a + n),
+          i.setAttribute("data-webpack", o + n),
           (i.src = e)),
           (r[e] = [t]);
         var c = (t, n) => {
             (i.onerror = i.onload = null), clearTimeout(u);
-            var a = r[e];
+            var o = r[e];
             if (
               (delete r[e],
               i.parentNode && i.parentNode.removeChild(i),
-              a && a.forEach((e) => e(n)),
+              o && o.forEach((e) => e(n)),
               t)
             )
               return t(n);
@@ -3352,21 +3353,21 @@ var CLSTAMP = "8622903";
         if (0 !== r)
           if (r) n.push(r[2]);
           else {
-            var a = new Promise((n, a) => (r = e[t] = [n, a]));
-            n.push((r[2] = a));
-            var o = s.p + s.u(t),
+            var o = new Promise((n, o) => (r = e[t] = [n, o]));
+            n.push((r[2] = o));
+            var a = s.p + s.u(t),
               i = new Error();
             s.l(
-              o,
+              a,
               (n) => {
                 if (s.o(e, t) && (0 !== (r = e[t]) && (e[t] = void 0), r)) {
-                  var a = n && ("load" === n.type ? "missing" : n.type),
-                    o = n && n.target && n.target.src;
+                  var o = n && ("load" === n.type ? "missing" : n.type),
+                    a = n && n.target && n.target.src;
                   (i.message =
-                    "Loading chunk " + t + " failed.\n(" + a + ": " + o + ")"),
+                    "Loading chunk " + t + " failed.\n(" + o + ": " + a + ")"),
                     (i.name = "ChunkLoadError"),
-                    (i.type = a),
-                    (i.request = o),
+                    (i.type = o),
+                    (i.request = a),
                     r[1](i);
                 }
               },
@@ -3378,21 +3379,21 @@ var CLSTAMP = "8622903";
         (s.O.j = (t) => 0 === e[t]);
       var t = (t, n) => {
           var r,
-            a,
-            [o, i, _] = n,
+            o,
+            [a, i, _] = n,
             E = 0;
-          if (o.some((t) => 0 !== e[t])) {
+          if (a.some((t) => 0 !== e[t])) {
             for (r in i) s.o(i, r) && (s.m[r] = i[r]);
             if (_) var k = _(s);
           }
-          for (t && t(n); E < o.length; E++)
-            (a = o[E]), s.o(e, a) && e[a] && e[a][0](), (e[a] = 0);
+          for (t && t(n); E < a.length; E++)
+            (o = a[E]), s.o(e, o) && e[o] && e[o][0](), (e[o] = 0);
           return s.O(k);
         },
         n = (self.webpackChunk_steam_friendsui =
           self.webpackChunk_steam_friendsui || []);
       n.forEach(t.bind(null, 0)), (n.push = t.bind(null, n.push.bind(n)));
     })();
-  var _ = s.O(void 0, [5968], () => s(10650));
+  var _ = s.O(void 0, [5968], () => s(37290));
   _ = s.O(_);
 })();

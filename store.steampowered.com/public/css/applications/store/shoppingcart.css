@@ -621,10 +621,10 @@ td.rdtYear:hover {
 .lineitem_LineItemWrapper_2KiPY {
   position: relative;
   padding: 15px;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.25);
 }
 .lineitem_LineItemCapsule_2_GgL {
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.2) 5;
   width: 200px;
   height: 94px;
   display: flex;
@@ -632,6 +632,14 @@ td.rdtYear:hover {
 }
 .lineitem_LineItemPlaceholder_1qKu4 {
   min-height: 110px;
+}
+.lineitem_RemoveLineItem_33j4S {
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 12px;
+}
+.lineitem_RemoveLineItem_33j4S:hover {
+  color: #fff;
 }
 .lineitem_InnerLineItemCtn_yW_j0 {
   display: flex;
@@ -1462,6 +1470,7 @@ html.tablet .contenthubshared_ContentHubTakeoverCtn_2w_95 a img {
   overflow: hidden;
   cursor: pointer;
   min-width: 200px;
+  min-height: 210px;
   background-image: radial-gradient(ellipse at top left, #42454c, #25282e);
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
   border-radius: 4px;
@@ -1518,6 +1527,7 @@ html.tablet .contenthubshared_ContentHubTakeoverCtn_2w_95 a img {
 }
 .eventrow_OtherEvents_MainImageCtn_1_8oy {
   width: 100%;
+  max-height: 171px;
   height: auto;
   position: relative;
   overflow: hidden;
@@ -1663,6 +1673,7 @@ html.tablet .contenthubshared_ContentHubTakeoverCtn_2w_95 a img {
     rgba(62, 70, 80, 0.5) 20%,
     rgba(36, 40, 47, 0.5) 100%
   );
+  min-height: auto;
 }
 .eventrow_OtherEvents_EventCtn_17gGs.eventrow_HorizontalEvent_1RS0b
   .eventrow_OtherEvents_TextCtn_2AVL1 {

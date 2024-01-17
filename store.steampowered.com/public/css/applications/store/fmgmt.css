@@ -205,6 +205,7 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   align-items: center;
   gap: 10px;
   overflow: hidden;
+  max-width: 100%;
 }
 .familysharedcomponents_MeBadge_qeLJ_ {
   display: flex;
@@ -220,6 +221,7 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
 }
 .familysharedcomponents_PlayerName_3YHL9 {
   font-size: 20px;
+  overflow: hidden;
 }
 .familysharedcomponents_RoleAndIcon_1VP1W {
   display: flex;
@@ -257,6 +259,7 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   align-items: center;
   overflow: hidden;
   flex-grow: 1;
+  max-width: 100%;
 }
 @media screen and (max-width: 500px) {
   .familysharedcomponents_FamilyMemberRow_3QkkY
@@ -265,6 +268,7 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
     .familysharedcomponents_FamilyMemberRowTop_3kaLZ
     .familysharedcomponents_Left_3KlqU {
     flex-direction: column;
+    overflow: hidden;
   }
 }
 .familysharedcomponents_FamilyMemberRow_3QkkY
@@ -912,6 +916,8 @@ a:hover {
   color: #fff;
   border-radius: 10px;
   text-transform: uppercase;
+  line-height: 16px;
+  margin-top: 8px;
   text-align: center;
   width: 80%;
   margin-left: auto;
@@ -1024,28 +1030,19 @@ a:hover {
   display: flex;
   justify-content: flex-start;
   flex-direction: row;
-  gap: 18px;
+  gap: 5px;
   margin-bottom: 16px;
-}
-.familymember_FamilyMemberActions_1K1x9 > a {
-  background-color: #1a9fff;
-  color: #fff;
-  padding: 8px 24px;
-  border-radius: 2px;
-  flex-basis: 0;
 }
 @media screen and (max-width: 500px) {
   .familymember_FamilyMemberActions_1K1x9 {
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
   }
-  .familymember_FamilyMemberActions_1K1x9 > a {
-    padding: 12px 24px;
-    flex-basis: 0;
-    flex-grow: 0.8;
-    text-align: center;
-  }
+}
+.familymember_FamilyMemberActions_1K1x9 .familymember_Link_wFnzm {
+  width: fit-content;
+  padding: 0px 20px;
 }
 .familymember_FamilyMemberManagementButtons_-kADz {
   display: flex;
@@ -1546,6 +1543,7 @@ a:hover {
   box-shadow: none;
   box-sizing: border-box;
   position: relative;
+  background: #3d4450;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1555,7 +1553,8 @@ a:hover {
   .rdtTime
   .rdtCounters
   .rdtCounter {
-  width: 35px;
+  width: 30px;
+  padding: 2px;
 }
 .familyparentalsettings_Datetime_e_tMs.rdtOpen
   .rdtPicker
@@ -1901,6 +1900,14 @@ td.rdtYear:hover {
 }
 .rdtTime td {
   cursor: default;
+}
+.layout_InlineContainer_3nHer {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.layout_RemoveOnEmpty_1Y8hK:empty {
+  display: none;
 }
 .familyrequests_FamilyRequests_1VbIw {
   display: flex;

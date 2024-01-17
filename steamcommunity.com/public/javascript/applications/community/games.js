@@ -180,15 +180,15 @@
       var a = n(85556),
         s = n(47427),
         i = n(82493),
-        o = n(4030),
-        r = n(20417),
+        r = n(4030),
+        o = n(20417),
         l = n(37563),
         c = n(35643);
       function m(e) {
         const { children: t, navTreeRef: n } = e,
           m = (0, a._T)(e, ["children", "navTreeRef"]),
           d = s.useRef(),
-          u = (0, r.BE)(d, n),
+          u = (0, o.BE)(d, n),
           p = (0, l.id)(),
           _ = window.__virtual_keyboard_client;
         if (p) {
@@ -203,16 +203,139 @@
             s.createElement(
               c.o5,
               { factory: _ },
-              s.createElement(o.O, null, t),
+              s.createElement(r.O, null, t),
             ),
           );
         }
         return s.createElement(s.Fragment, null, t);
       }
     },
+    22520: (e, t, n) => {
+      "use strict";
+      n.d(t, { Am: () => c, kI: () => r, x3: () => l });
+      var a = n(37563),
+        s = n(48760),
+        i = n(62210);
+      const r = 0,
+        o = "061818254b2c99ac49e6626adb128ed1282a392f",
+        l = 120;
+      class c {
+        constructor(e) {
+          (this.m_bInitialized = !1), (this.m_unAppID = e);
+        }
+        get appid() {
+          return this.m_unAppID;
+        }
+        get is_initialized() {
+          return this.m_bInitialized;
+        }
+        get is_valid() {
+          return this.m_bInitialized && !!this.m_strName;
+        }
+        get name() {
+          return this.m_strName;
+        }
+        get header_image_url() {
+          return a.De.MEDIA_CDN_URL + `steam/apps/${this.m_unAppID}/header.jpg`;
+        }
+        get icon_url_no_default() {
+          return this.m_strIconURL && this.BuildAppURL(this.m_strIconURL, o);
+        }
+        get icon_url() {
+          return this.BuildAppURL(this.m_strIconURL, o);
+        }
+        get logo_url() {
+          return (
+            a.De.MEDIA_CDN_URL +
+            `steam/apps/${this.m_unAppID}/capsule_231x87.jpg`
+          );
+        }
+        get time_updated_from_server() {
+          return this.m_dtUpdatedFromServer;
+        }
+        get apptype() {
+          return this.m_eAppType;
+        }
+        BIsApplicationOrTool() {
+          return 4 == this.apptype || 2 == this.apptype;
+        }
+        BuildAppURL(e, t) {
+          return e
+            ? a.De.MEDIA_CDN_COMMUNITY_URL +
+                "images/apps/" +
+                this.appid +
+                "/" +
+                e +
+                ".jpg"
+            : (0, s.U)(t);
+        }
+        DeserializeFromMessage(e) {
+          (this.m_bInitialized = !0),
+            (this.m_strName = e.name()),
+            (this.m_strIconURL = e.icon()),
+            (this.m_dtUpdatedFromServer = new Date()),
+            (this.m_eAppType = e.app_type());
+        }
+        DeserializeFromAppOverview(e) {
+          e.icon_hash() && 1073741824 != e.app_type()
+            ? ((this.m_bInitialized = !0),
+              (this.m_strName = e.display_name()),
+              (this.m_strIconURL = e.icon_hash()),
+              (this.m_dtUpdatedFromServer = new Date()),
+              (this.m_eAppType = e.app_type()))
+            : (this.m_bInitialized = !1);
+        }
+        DeserializeFromCacheObject(e) {
+          try {
+            (this.m_strName = e.strName),
+              (this.m_strIconURL = e.strIconURL),
+              (this.m_dtUpdatedFromServer = new Date(e.strUpdatedFromServer)),
+              (this.m_eAppType = e.eAppType),
+              (this.m_bInitialized = !0);
+          } catch (e) {}
+        }
+        SerializeToCacheObject() {
+          return (
+            (0, i.X)(
+              this.m_bInitialized,
+              "Attempting to serialize an uninitialized AppInfo object for caching!",
+            ),
+            this.m_bInitialized
+              ? {
+                  strName: this.m_strName,
+                  strIconURL: this.m_strIconURL,
+                  strUpdatedFromServer: this.m_dtUpdatedFromServer.toJSON(),
+                  eAppType: this.m_eAppType,
+                }
+              : null
+          );
+        }
+      }
+    },
+    48760: (e, t, n) => {
+      "use strict";
+      n.d(t, { U: () => i, W: () => s });
+      var a = n(37563);
+      const s = "fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb";
+      function i(e, t) {
+        let n = ".jpg";
+        (e && "0000000000000000000000000000000000000000" !== e) || (e = s),
+          44 == e.length && ((n = e.substr(-4)), (e = e.substr(0, 40)));
+        let i = a.De.AVATAR_BASE_URL;
+        return (
+          i ||
+            ((i = a.De.MEDIA_CDN_COMMUNITY_URL + "images/avatars/"),
+            (i += e.substr(0, 2) + "/")),
+          (i += e),
+          t && "small" != t && (i += "_" + t),
+          (i += n),
+          i
+        );
+      }
+    },
     71472: (e, t, n) => {
       "use strict";
-      n.d(t, { Ar: () => l, Wo: () => c, i9: () => r, ks: () => i });
+      n.d(t, { Ar: () => l, Wo: () => c, i9: () => o, ks: () => i });
       var a = n(47427),
         s = n(8285);
       function i(e, t) {
@@ -228,11 +351,11 @@
           return e[e.length - 1];
         }
       }
-      const o = (e) => null != e;
-      function r(e, t, n, a = !1) {
+      const r = (e) => null != e;
+      function o(e, t, n, a = !1) {
         const s = new URLSearchParams(e.location.search.substring(1));
         s.delete(t),
-          o(n) && s.append(t, n),
+          r(n) && s.append(t, n),
           a
             ? e.replace(`?${s.toString()}`, Object.assign({}, e.location.state))
             : e.push(`?${s.toString()}`);
@@ -242,8 +365,8 @@
           l = (0, s.TH)(),
           c = (0, a.useMemo)(() => {
             const n = i(l.search, e);
-            return o(n)
-              ? o(t)
+            return r(n)
+              ? r(t)
                 ? "boolean" == typeof t
                   ? t.constructor("false" !== n)
                   : t.constructor(n)
@@ -252,7 +375,7 @@
           }, [l.search, e, t]),
           m = (0, a.useCallback)(
             (t) => {
-              r(n, e, o(t) ? String(t) : null);
+              o(n, e, r(t) ? String(t) : null);
             },
             [n, e],
           );
@@ -263,11 +386,28 @@
         for (const e in t)
           if (t.hasOwnProperty(e)) {
             const n = t[e];
-            a.delete(e), o(n) && a.append(e, n);
+            a.delete(e), r(n) && a.append(e, n);
           }
         n
           ? e.replace(`?${a.toString()}`, Object.assign({}, e.location.state))
           : e.push(`?${a.toString()}`);
+      }
+    },
+    29480: (e, t, n) => {
+      "use strict";
+      n.d(t, { T: () => r });
+      var a = n(80751),
+        s = n.n(a),
+        i = n(47427);
+      function r(e) {
+        const t = i.useRef(s().CancelToken.source());
+        return (
+          i.useEffect(() => {
+            const n = t.current;
+            return () => n.cancel(e ? `${e}: unmounting` : "unmounting");
+          }, [e]),
+          t.current
+        );
       }
     },
     54117: (e, t, n) => {
@@ -297,12 +437,12 @@
     },
     39047: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { default: () => Mn });
+      n.r(t), n.d(t, { default: () => xn });
       var a = n(85556),
         s = n(47427),
         i = n(42718),
-        o = n(75997),
-        r = n(40057),
+        r = n(21928),
+        o = n(40057),
         l = n(77581),
         c = n(82182),
         m = n(48746),
@@ -322,7 +462,7 @@
               i.set(s, e.request),
               new Promise((s, i) => {
                 if (p.get(n)) return;
-                const o = setTimeout(
+                const r = setTimeout(
                   () =>
                     (0, a.mG)(this, void 0, void 0, function* () {
                       try {
@@ -330,13 +470,13 @@
                           s = Array.from(a.keys()),
                           i = Array.from(a.values());
                         a.clear(), p.delete(n);
-                        const o = yield e.queryFn(i);
+                        const r = yield e.queryFn(i);
                         i.forEach((n, a) => {
                           t.setQueryData(
                             [e.batchKey, s[a]],
                             e.requestMatcher
-                              ? o.find((t) => e.requestMatcher(n, t))
-                              : o[a],
+                              ? r.find((t) => e.requestMatcher(n, t))
+                              : r[a],
                           );
                         });
                       } catch (e) {
@@ -345,7 +485,7 @@
                     }),
                   e.batchDuration,
                 );
-                p.set(n, o);
+                p.set(n, r);
               })
             );
           },
@@ -362,20 +502,20 @@
           .replace(/^[^\w]+/u, "");
         if (t != e) return t;
       }
-      function E(e) {
+      function y(e) {
         if (!(e < 1e5)) return e;
       }
-      class y {
+      class E {
         static Get() {
           return this.s_Singleton
             ? this.s_Singleton
-            : (this.s_Singleton = new y(
+            : (this.s_Singleton = new E(
                 (0, f.kQ)("config", "profile_config"),
                 (0, f.kQ)("profile-gameslist", "gameslist_config"),
               ));
         }
         constructor(e, t) {
-          var n, a, s, o, r, l, c;
+          var n, a, s, r, o, l, c;
           (this.rgGameslistConfig = t),
             (this.setExcludedContentDescriptorIds = new Set()),
             e && Object.assign(h._, e),
@@ -398,17 +538,17 @@
           const m = this.GetProfileSteamId();
           if (
             ((null ===
-              (r =
-                null === (o = this.rgGameslistConfig) || void 0 === o
+              (o =
+                null === (r = this.rgGameslistConfig) || void 0 === r
                   ? void 0
-                  : o.rgGames) || void 0 === r
+                  : r.rgGames) || void 0 === o
               ? void 0
-              : r.length) > 0 &&
+              : o.length) > 0 &&
               g.U.setQueryData(
                 ["OwnedGames", m, f.De.LANGUAGE],
                 this.rgGameslistConfig.rgGames.map((e) =>
                   Object.assign(Object.assign({}, e), {
-                    rtime_last_played: E(e.rtime_last_played),
+                    rtime_last_played: y(e.rtime_last_played),
                   }),
                 ),
               ),
@@ -430,7 +570,7 @@
           return (0, a.mG)(this, void 0, void 0, function* () {
             const a = n.filter((e) => e.has_community_visible_stats);
             if (0 === a.length) return [];
-            const s = o.gA.Init(c.M4);
+            const s = r.gA.Init(c.M4);
             s.Body().set_steamid(t),
               s.Body().set_language(f.De.LANGUAGE),
               s.Body().set_appids(a.map((e) => e.appid));
@@ -459,7 +599,7 @@
           return (0, a.mG)(this, void 0, void 0, function* () {
             const a = n.filter((e) => e.has_community_visible_stats);
             if (0 === a.length) return [];
-            const s = o.gA.Init(c.OZ);
+            const s = r.gA.Init(c.OZ);
             s.Body().set_steamid(t),
               s.Body().set_language(f.De.LANGUAGE),
               s.Body().set_appids(a.map((e) => e.appid)),
@@ -496,7 +636,7 @@
         }
         GetGames(e, t) {
           return (0, a.mG)(this, void 0, void 0, function* () {
-            const n = o.gA.Init(c.pp);
+            const n = r.gA.Init(c.pp);
             n.Body().set_steamid(e),
               n.Body().set_include_appinfo(!0),
               n.Body().set_skip_unvetted_apps(!1),
@@ -522,7 +662,7 @@
                 playtime_forever: e.playtime_forever(),
                 playtime_2weeks: e.playtime_2weeks(),
                 playtime_disconnected: e.playtime_disconnected(),
-                rtime_last_played: E(e.rtime_last_played()),
+                rtime_last_played: y(e.rtime_last_played()),
                 capsule_filename: e.capsule_filename(),
                 has_dlc: e.has_dlc() || !1,
                 has_workshop: e.has_workshop() || !1,
@@ -537,7 +677,7 @@
         }
         GetUserFileCount(e, t, n) {
           return (0, a.mG)(this, void 0, void 0, function* () {
-            let a = o.gA.Init(m.AO);
+            let a = r.gA.Init(m.AO);
             a.Body().set_steamid(e),
               a.Body().set_filetype(4),
               a.Body().set_totalonly(!0),
@@ -556,7 +696,7 @@
         }
         GetFriendsWhoPlayCount(e, t) {
           return (0, a.mG)(this, void 0, void 0, function* () {
-            let n = o.gA.Init(c.$_);
+            let n = r.gA.Init(c.$_);
             n.Body().set_appid(t);
             const a = yield c.lk.GetFriendsGameplayInfo(e, n);
             if (1 !== a.GetEResult())
@@ -574,8 +714,8 @@
         }
         GetIndividualHasRecommendations(e, t, n) {
           return (0, a.mG)(this, void 0, void 0, function* () {
-            let a = o.gA.Init(d.Vy),
-              s = o.gA.Init(d.K9);
+            let a = r.gA.Init(d.Vy),
+              s = r.gA.Init(d.K9);
             s.Body().set_steamid(e),
               s.Body().set_appid(n),
               a.Body().add_requests(s.Body());
@@ -615,12 +755,12 @@
                   )
                 : new Error(`Bad HTTP request for ajax for ${n}`);
             }
-            const o = null == i ? void 0 : i.badgedata;
-            if (!o) return;
-            let r = 0,
+            const r = null == i ? void 0 : i.badgedata;
+            if (!r) return;
+            let o = 0,
               l = 0;
-            for (let e of o.rgCards) r++, e.owned && l++;
-            return { total: r, owned: l };
+            for (let e of r.rgCards) o++, e.owned && l++;
+            return { total: o, owned: l };
           });
         }
         GetProfileName() {
@@ -655,8 +795,8 @@
         }
       }
       function b(e, t = {}) {
-        const n = y.Get(),
-          a = (0, r.bY)();
+        const n = E.Get(),
+          a = (0, o.bY)();
         return (0, i.useQuery)(
           Object.assign(
             {
@@ -669,49 +809,49 @@
         );
       }
       function C() {
-        return y.Get().GetProfileName();
+        return E.Get().GetProfileName();
       }
       function G() {
-        return y.Get().GetProfileSteamId();
+        return E.Get().GetProfileSteamId();
       }
       function w() {
-        return y.Get().BViewingOwnProfile();
+        return E.Get().BViewingOwnProfile();
       }
       function L() {
         const [e] = (0, s.useState)(
-          () => new l.J(f.De.WEBAPI_BASE_URL, y.Get().GetWebAPIToken()),
+          () => new l.J(f.De.WEBAPI_BASE_URL, E.Get().GetWebAPIToken()),
         );
         return e;
       }
       function R(e) {
         var t;
-        const n = y.Get().GetExcludedContentDescriptors();
+        const n = E.Get().GetExcludedContentDescriptors();
         return null === (t = null == e ? void 0 : e.content_descriptorids) ||
           void 0 === t
           ? void 0
           : t.some((e) => n.has(e));
       }
       function A(e) {
-        const t = (0, r.bY)(),
-          n = y.Get(),
+        const t = (0, o.bY)(),
+          n = E.Get(),
           a = (0, i.useQueryClient)(),
           s = ["AchievementProgress", e, f.De.LANGUAGE],
-          o = b(e);
+          r = b(e);
         return (0, i.useQuery)({
           queryKey: s,
-          queryFn: () => n.FetchAchievementProgressBatch(t, e, o.data),
+          queryFn: () => n.FetchAchievementProgressBatch(t, e, r.data),
           onSuccess(e) {
             e.forEach((e) => {
               const t = [s, (0, i.hashQueryKey)([e.appid])];
               a.setQueryData(t, e);
             });
           },
-          enabled: void 0 !== o.data && o.data.length > 0,
+          enabled: void 0 !== r.data && r.data.length > 0,
         });
       }
       function N(e, t) {
-        const n = (0, r.bY)(),
-          a = y.Get(),
+        const n = (0, o.bY)(),
+          a = E.Get(),
           s = a.GetProfileSteamId();
         return _({
           batchKey: ["AchievementProgress", s, f.De.LANGUAGE],
@@ -723,30 +863,30 @@
           enabled: t,
         });
       }
-      function S(e) {
-        const t = (0, r.bY)(),
-          n = y.Get(),
+      function I(e) {
+        const t = (0, o.bY)(),
+          n = E.Get(),
           a = n.GetProfileSteamId();
         return (0, i.useQuery)(["ScreenshotCount", a, e], () =>
           n.GetUserFileCount(a, t, e),
         );
       }
-      var B = n(61134),
-        k = n(20417),
-        I = n(13043),
-        P = n(91618),
-        D = n(41130),
+      var S = n(61134),
+        B = n(20417),
+        D = n(13043),
+        k = n(91618),
+        P = n(41130),
         x = n(1485),
-        M = n(71472),
+        U = n(71472),
         T = n(46882),
-        U = n(59728),
-        O = n(13129);
-      var F = n(31846),
+        M = n(59728),
+        F = n(13129);
+      var O = n(31846),
         $ = n(33672),
         H = n(58538),
         X = n(62613),
         Q = n(1086);
-      function Z(e, t, n = !1) {
+      function j(e, t, n = !1) {
         return (0, s.useMemo)(() => {
           var a;
           return {
@@ -756,19 +896,19 @@
           };
         }, [e.data, e.isLoading, e.error, t, n]);
       }
-      const j = 2592e3;
+      const Z = 2592e3;
       function q(e) {
         return (
           void 0 !== e.rtime_last_played &&
-          e.rtime_last_played > Date.now() / 1e3 - j
+          e.rtime_last_played > Date.now() / 1e3 - Z
         );
       }
-      function Y({ strNameFilter: e, setStrNameFilter: t, className: n }) {
+      function z({ strNameFilter: e, setStrNameFilter: t, className: n }) {
         const a = (0, s.useRef)(null),
           i = e && "" != e;
         return s.createElement(
           "div",
-          { className: (0, O.Z)(Q.Filter, n) },
+          { className: (0, F.Z)(Q.Filter, n) },
           s.createElement("input", {
             ref: a,
             onChange: () => {
@@ -778,7 +918,7 @@
               );
             },
             value: null != e ? e : "",
-            placeholder: (0, F.Xx)("#GamesList_Filter_Placeholder"),
+            placeholder: (0, O.Xx)("#GamesList_Filter_Placeholder"),
           }),
           i
             ? s.createElement(
@@ -793,7 +933,7 @@
               ),
         );
       }
-      function W(e) {
+      function Y(e) {
         return s.createElement(
           "svg",
           Object.assign(
@@ -816,7 +956,7 @@
           }),
         );
       }
-      function V(e) {
+      function W(e) {
         return s.createElement(
           "svg",
           Object.assign(
@@ -833,7 +973,7 @@
           }),
         );
       }
-      function K(e) {
+      function V(e) {
         return s.createElement(
           "svg",
           Object.assign(
@@ -852,7 +992,7 @@
           }),
         );
       }
-      function z(e) {
+      function K(e) {
         return s.createElement(
           "svg",
           Object.assign(
@@ -891,26 +1031,25 @@
         te = n(95315),
         ne = n(82493),
         ae = n(84686),
-        se = n(8004),
+        se = n(77936),
         ie = n(53923),
-        oe = n(51841),
-        re = (n(40384), n(9e4));
-      const le = "RemoteDownload_OnlineClient",
-        ce = "RemoteDownload_ClientAppList",
-        me = "RemoteDownload_ClientAppData";
-      class de extends Error {
+        re = (n(67573), n(83120));
+      const oe = "RemoteDownload_OnlineClient",
+        le = "RemoteDownload_ClientAppList",
+        ce = "RemoteDownload_ClientAppData";
+      class me extends Error {
         constructor(e, t) {
           super(e), (this.result = t);
         }
       }
-      function ue() {
-        const e = (0, r.bY)(),
+      function de() {
+        const e = (0, o.bY)(),
           t = (0, ie.M)();
         return (0, i.useQuery)(
-          [le, t],
+          [oe, t],
           () =>
             (0, a.mG)(this, void 0, void 0, function* () {
-              const t = oe.gA.Init(re.II),
+              const t = r.gA.Init(re.II),
                 n = yield re.b5.GetAllClientLogonInfo(e, t);
               if (1 !== n.GetEResult())
                 throw (
@@ -939,7 +1078,7 @@
           },
         );
       }
-      class pe {
+      class ue {
         constructor(e) {
           Object.assign(this, e.toObject()),
             (this.bytes_to_download = parseInt(e.bytes_to_download()) || 0),
@@ -971,10 +1110,10 @@
           );
         }
       }
-      function _e(e, t, n) {
+      function pe(e, t, n) {
         return (0, a.mG)(this, void 0, void 0, function* () {
           const a = t.client_instanceid,
-            s = oe.gA.Init(re.eV);
+            s = r.gA.Init(re.eV);
           s.Body().set_fields("games"),
             s.Body().set_filters(n),
             s.Body().set_client_instanceid(a),
@@ -987,14 +1126,14 @@
                 i.GetEResult(),
                 i.Hdr().transport_error(),
               ),
-              new de(
+              new me(
                 `Error from GetClientAppList: ${i.GetEResult()}`,
                 i.GetEResult(),
               ))
             );
           const o = new Map();
           for (const e of i.Body().apps()) {
-            const t = new pe(e);
+            const t = new ue(e);
             o.set(e.appid(), t);
           }
           return {
@@ -1009,13 +1148,13 @@
           };
         });
       }
-      function ge(e, t, n) {
-        return [ce, e, t, n];
+      function _e(e, t, n) {
+        return [le, e, t, n];
       }
-      function fe(e, t = !0) {
-        var n, o;
-        const l = ue(),
-          c = (0, r.bY)(),
+      function ge(e, t = !0) {
+        var n, r;
+        const l = de(),
+          c = (0, o.bY)(),
           m = (0, ie.M)(),
           d = (e) => {
             t && ((21 != e.result && 16 != e.result) || l.refetch());
@@ -1025,10 +1164,10 @@
               (null === (n = l.data) || void 0 === n ? void 0 : n.sessions) ||
               []
             ).map((e) => ({
-              queryKey: ge(m, e.client_instanceid, "none"),
+              queryKey: _e(m, e.client_instanceid, "none"),
               queryFn: () =>
                 (0, a.mG)(this, void 0, void 0, function* () {
-                  return _e(c, e, "none");
+                  return pe(c, e, "none");
                 }),
               staletime: 36e5,
               refetchInterval: (e) =>
@@ -1048,16 +1187,16 @@
           ),
           _ = (0, i.useQueries)(
             (
-              (null === (o = l.data) || void 0 === o ? void 0 : o.sessions) ||
+              (null === (r = l.data) || void 0 === r ? void 0 : r.sessions) ||
               []
             ).map((e, n) => ({
-              queryKey: ge(m, e.client_instanceid, "changing"),
+              queryKey: _e(m, e.client_instanceid, "changing"),
               queryFn: () =>
                 (0, a.mG)(this, void 0, void 0, function* () {
                   return (function (e, t, n, s) {
                     return (0, a.mG)(this, void 0, void 0, function* () {
                       if (!s) return;
-                      const a = yield _e(e, t, n);
+                      const a = yield pe(e, t, n);
                       for (const [e, t] of a.mapApps) s.mapApps.set(e, t);
                       return Object.assign(Object.assign({}, a), {
                         mapApps: s.mapApps,
@@ -1093,14 +1232,14 @@
           },
         };
       }
-      function he(e, t) {
-        return [me, e, t];
+      function fe(e, t) {
+        return [ce, e, t];
       }
-      function ve(e, t = !0) {
+      function he(e, t = !0) {
         const n = (0, ie.M)(),
-          { rgQueries: a } = fe(void 0, t);
+          { rgQueries: a } = ge(void 0, t);
         return (0, i.useQuery)(
-          he(n, e),
+          fe(n, e),
           () => {
             var t, n;
             const s = new Map();
@@ -1110,13 +1249,13 @@
                     null === (t = i.data) || void 0 === t
                       ? void 0
                       : t.session.client_instanceid,
-                  o = (
+                  r = (
                     null === (n = i.data) || void 0 === n ? void 0 : n.mapApps
                   ).get(e);
-                o &&
+                r &&
                   s.set(a, {
                     session: i.data.session,
-                    app: o,
+                    app: r,
                     clientInfo: i.data.clientInfo,
                   });
               }
@@ -1129,16 +1268,16 @@
           },
         );
       }
-      function Ee(e, t, n, s) {
-        const o = (0, r.bY)(),
-          l = ve(e),
-          c = (0, ie.M)(),
-          m = (0, i.useQueryClient)();
+      function ve(e, t, n, s) {
+        const l = (0, o.bY)(),
+          c = he(e),
+          m = (0, ie.M)(),
+          d = (0, i.useQueryClient)();
         return (0, i.useMutation)(
           () =>
             (0, a.mG)(this, void 0, void 0, function* () {
               var a;
-              const s = null == l ? void 0 : l.data,
+              const s = null == c ? void 0 : c.data,
                 i = s && s.get(t);
               if (
                 (null === (a = null == i ? void 0 : i.clientInfo) ||
@@ -1146,9 +1285,9 @@
                   ? void 0
                   : a.clientcomm_version) >= 1
               ) {
-                const e = oe.gA.Init(re.BF);
+                const e = r.gA.Init(re.BF);
                 e.Body().set_client_instanceid(t), e.Body().set_enable(!n);
-                const a = yield re.b5.EnableOrDisableDownloads(o, e);
+                const a = yield re.b5.EnableOrDisableDownloads(l, e);
                 if (1 != a.GetEResult())
                   throw (
                     (console.error(
@@ -1160,11 +1299,11 @@
                     ))
                   );
               } else {
-                const a = oe.gA.Init(re.iH);
+                const a = r.gA.Init(re.iH);
                 a.Body().set_appid(e),
                   a.Body().set_client_instanceid(t),
                   a.Body().set_action(n ? 0 : 1);
-                const s = yield re.b5.SetClientAppUpdateState(o, a);
+                const s = yield re.b5.SetClientAppUpdateState(l, a);
                 if (1 != s.GetEResult())
                   throw (
                     (console.error(
@@ -1179,53 +1318,53 @@
               i &&
                 ((s.get(t).app.download_paused = n),
                 (s.get(t).app.num_downloading = n ? 0 : 1)),
-                m.setQueryData(he(c, e), s),
-                l.refetch();
+                d.setQueryData(fe(m, e), s),
+                c.refetch();
             }),
           { onSuccess: s },
         );
       }
       var ye = n(27522),
-        be = n.n(ye);
-      const Ce = s.forwardRef(function (
+        Ee = n.n(ye);
+      const be = s.forwardRef(function (
         {
           imgURL: e,
           glow: t,
           pauseAnimation: n,
           hidden: a,
           alt: i,
-          className: o,
+          className: r,
         },
-        r,
+        o,
       ) {
         const [l, c] = s.useState(!1);
         if (a)
-          return s.createElement("div", { className: be().HiddenLabel }, "?");
+          return s.createElement("div", { className: Ee().HiddenLabel }, "?");
         const m = l && t;
         return s.createElement(
           "div",
           {
-            ref: r,
-            className: (0, O.Z)(
-              be().AchievementIconWrapper,
-              o,
-              n && be().RareAchievementNoAnimation,
+            ref: o,
+            className: (0, F.Z)(
+              Ee().AchievementIconWrapper,
+              r,
+              n && Ee().RareAchievementNoAnimation,
             ),
           },
           m &&
             s.createElement(
               "div",
-              { className: be().RareAchievementIconGlowContainerRoot },
+              { className: Ee().RareAchievementIconGlowContainerRoot },
               s.createElement(
                 "div",
-                { className: be().RareAchievementIconGlowContainer },
+                { className: Ee().RareAchievementIconGlowContainer },
                 s.createElement("div", {
-                  className: be().RareAchievementIconGlow,
+                  className: Ee().RareAchievementIconGlow,
                 }),
               ),
             ),
           s.createElement("img", {
-            className: (0, O.Z)(be().Icon, m && be().IconGlow),
+            className: (0, F.Z)(Ee().Icon, m && Ee().IconGlow),
             src: e,
             loading: "lazy",
             alt: i,
@@ -1233,43 +1372,42 @@
           }),
         );
       });
-      var Ge = n(22042),
-        we = n(10162),
-        Le = n(85305),
-        Re = n(76478);
-      function Ae({ nPercent: e, indeterminate: t, animate: n, className: a }) {
+      var Ce = n(22042),
+        Ge = n(10162),
+        we = n(85305),
+        Le = n(76478);
+      function Re({ nPercent: e, indeterminate: t, animate: n, className: a }) {
         return s.createElement("div", {
-          className: (0, O.Z)(
-            Re.ProgressBar,
-            n && Re.AnimateProgress,
-            t && Re.Indeterminate,
+          className: (0, F.Z)(
+            Le.ProgressBar,
+            n && Le.AnimateProgress,
+            t && Le.Indeterminate,
             a,
           ),
           style: { "--percent": e / 100 },
         });
       }
-      var Ne = n(54117);
-      var Se = n(89729),
-        Be = n(19766),
-        ke = n(77936),
-        Ie = n(50898),
-        Pe = n(90069),
+      var Ae = n(54117);
+      var Ne = n(89729),
+        Ie = n(19766),
+        Se = n(50898),
+        Be = n(90069),
         De = n(12251),
-        xe = n(24549),
-        Me = n(3980);
-      const Te = s.createContext(void 0);
+        ke = n(24549),
+        Pe = n(3980);
+      const xe = s.createContext(void 0);
       function Ue() {
-        const e = (0, s.useContext)(Te);
+        const e = (0, s.useContext)(xe);
         if (!e)
           throw new Error(
             "Attempted to get download client context outside of provider",
           );
         return e;
       }
-      function Oe() {
+      function Te() {
         const e = Ue().remoteDownloadClientId,
-          t = ue(),
-          n = fe();
+          t = de(),
+          n = ge();
         if (
           !f.De.IN_CLIENT &&
           t.data &&
@@ -1280,86 +1418,86 @@
             ? t.data.sessions.find((t) => t.client_instanceid === e)
             : t.data.sessions[0];
       }
-      function Fe({ children: e }) {
+      function Me({ children: e }) {
         const [t, n] = (0, s.useState)(void 0),
           a = (0, s.useMemo)(
             () => ({ remoteDownloadClientId: t, setRemoteDownloadClientId: n }),
             [t],
           );
-        return s.createElement(Te.Provider, { value: a }, e);
+        return s.createElement(xe.Provider, { value: a }, e);
       }
-      function $e(e) {
+      function Fe(e) {
         switch (e) {
-          case ke.gg.k_EGamingDeviceType_StandardPC:
-            return (0, F.Xx)("#Library_DeviceType_PC");
-          case ke.gg.k_EGamingDeviceType_SteamDeck:
-            return (0, F.Xx)("#Library_DeviceType_SteamDeck");
+          case se.gg.k_EGamingDeviceType_StandardPC:
+            return (0, O.Xx)("#Library_DeviceType_PC");
+          case se.gg.k_EGamingDeviceType_SteamDeck:
+            return (0, O.Xx)("#Library_DeviceType_SteamDeck");
           default:
             return;
         }
       }
-      const He = {
+      const Oe = {
         bFitToWindow: !0,
         bOverlapHorizontal: !0,
         bMatchWidth: !1,
         bShiftToFitWindow: !0,
       };
-      function Xe({ sessions: e, setRemoteDownloadClientId: t }) {
+      function $e({ sessions: e, setRemoteDownloadClientId: t }) {
         return s.createElement(
           "ul",
-          { className: Me.ClientListDropdownMenu },
+          { className: Pe.ClientListDropdownMenu },
           e.map((e) =>
             s.createElement(
-              Ge.Zo,
+              Ce.Zo,
               {
                 onSelected: () => {
                   t(e.client_instanceid);
                 },
                 key: e.client_instanceid,
               },
-              (0, F.Xx)(
+              (0, O.Xx)(
                 "#GamesList_Client_Indicator",
-                $e(e.device_type),
+                Fe(e.device_type),
                 e.machine_name,
               ),
             ),
           ),
         );
       }
-      function Qe() {
-        const e = ue(),
-          t = Oe(),
+      function He() {
+        const e = de(),
+          t = Te(),
           n = Ue().setRemoteDownloadClientId,
           a = (0, s.useRef)(null),
           i = (0, s.useCallback)(() => {
             e.data &&
               (0, te.yV)(
-                s.createElement(Xe, {
+                s.createElement($e, {
                   sessions: e.data.sessions,
                   setRemoteDownloadClientId: n,
                 }),
                 a.current,
-                He,
+                Oe,
               );
           }, [n, a, e.data]);
         return t
           ? s.createElement(
               "div",
-              { className: Me.RemoteDownloadClientBar },
+              { className: Pe.RemoteDownloadClientBar },
               s.createElement(
                 "span",
-                { className: Me.RemoteDownloadHeader },
-                (0, F.kQ)(
+                { className: Pe.RemoteDownloadHeader },
+                (0, O.kQ)(
                   "#GamesList_Header_RemoteDownload",
                   s.createElement(
                     s.Fragment,
                     null,
                     s.createElement(
                       "span",
-                      { className: Me.ClientIndicator },
-                      (0, F.Xx)(
+                      { className: Pe.ClientIndicator },
+                      (0, O.Xx)(
                         "#GamesList_Client_Indicator",
-                        $e(t.device_type),
+                        Fe(t.device_type),
                         t.machine_name,
                       ),
                       e.data.sessions.length > 1 &&
@@ -1368,85 +1506,85 @@
                           {
                             ref: a,
                             onClick: i,
-                            className: Me.ClientSelectDropdown,
+                            className: Pe.ClientSelectDropdown,
                           },
-                          s.createElement(z, null),
+                          s.createElement(K, null),
                         ),
                     ),
                   ),
                 ),
               ),
               s.createElement(
-                U.HP,
+                M.HP,
                 {
-                  toolTipContent: (0, F.Xx)("#GamesList_RemoteDownload_Help"),
-                  className: Me.InfoIcon,
+                  toolTipContent: (0, O.Xx)("#GamesList_RemoteDownload_Help"),
+                  className: Pe.InfoIcon,
                 },
-                s.createElement(K, null),
+                s.createElement(V, null),
               ),
             )
           : s.createElement(
               "details",
               {
-                className: (0, O.Z)(
-                  Me.RemoteDownloadClientBar,
-                  Me.NoConnection,
+                className: (0, F.Z)(
+                  Pe.RemoteDownloadClientBar,
+                  Pe.NoConnection,
                 ),
               },
               s.createElement(
                 "summary",
-                { className: Me.RemoteDownloadHeader },
+                { className: Pe.RemoteDownloadHeader },
                 s.createElement(
                   "span",
-                  { className: Me.RemoteDownloadStatus },
-                  (0, F.kQ)(
+                  { className: Pe.RemoteDownloadStatus },
+                  (0, O.kQ)(
                     "#GamesList_Header_RemoteDownloadStatus",
                     s.createElement(
                       "span",
-                      { className: Me.NoConnectionText },
-                      (0, F.Xx)("#GamesList_RemoteDownload_NoConnection"),
+                      { className: Pe.NoConnectionText },
+                      (0, O.Xx)("#GamesList_RemoteDownload_NoConnection"),
                     ),
                   ),
                 ),
                 s.createElement(
                   "span",
-                  { className: Me.LearnMoreCta },
-                  (0, F.Xx)("#GamesList_RemoteDownload_LearnMore"),
-                  s.createElement(z, null),
+                  { className: Pe.LearnMoreCta },
+                  (0, O.Xx)("#GamesList_RemoteDownload_LearnMore"),
+                  s.createElement(K, null),
                 ),
               ),
               s.createElement(
                 "p",
-                { className: Me.RemoteDownloadHelp },
-                (0, F.kQ)(
+                { className: Pe.RemoteDownloadHelp },
+                (0, O.kQ)(
                   "#GamesList_RemoteDownload_Info",
-                  (0, F.Xx)("#GamesList_RemoteDownload_Help"),
+                  (0, O.Xx)("#GamesList_RemoteDownload_Help"),
                   s.createElement(
                     "a",
                     {
                       href: "https://help.steampowered.com/faqs/view/1025-BD94-12FC-3409",
                     },
-                    (0, F.Xx)("#GamesList_RemoteDownload_ReadTheFAQ"),
+                    (0, O.Xx)("#GamesList_RemoteDownload_ReadTheFAQ"),
                   ),
                 ),
               ),
             );
       }
-      function Ze({ app: e, clientid: t }) {
+      function Xe({ app: e, clientid: t }) {
         const n = !e.download_paused,
-          a = Ee(e.appid, t, !0),
-          i = Ee(e.appid, t, !1),
-          o = n ? "#GamesList_Header_Downloading" : "#GamesList_Header_Paused",
-          r = n ? a : i,
+          a = ve(e.appid, t, !0),
+          i = ve(e.appid, t, !1),
+          r = n ? "#GamesList_Header_Downloading" : "#GamesList_Header_Paused",
+          o = n ? a : i,
           l = e.bytes_to_download
             ? Math.floor((100 * e.bytes_downloaded) / e.bytes_to_download)
             : 0,
           c = !(e.bytes_downloaded && e.bytes_to_download),
-          m = n ? s.createElement(X.dzL, null) : s.createElement(W, null),
+          m = n ? s.createElement(X.dzL, null) : s.createElement(Y, null),
           d = n
-            ? (0, F.Xx)("#GamesList_Button_Pause")
-            : (0, F.Xx)("#GamesList_Button_Resume"),
-          u = (0, s.useContext)(Cn);
+            ? (0, O.Xx)("#GamesList_Button_Pause")
+            : (0, O.Xx)("#GamesList_Button_Resume"),
+          u = (0, s.useContext)(bn);
         return (
           (0, s.useEffect)(
             () => (
@@ -1460,19 +1598,19 @@
             null,
             s.createElement(
               "div",
-              { className: Me.DownloadBarWithLabel },
+              { className: Pe.DownloadBarWithLabel },
               s.createElement(
                 "span",
-                { className: Me.DownloadStatus },
-                (0, F.Xx)(o, l),
+                { className: Pe.DownloadStatus },
+                (0, O.Xx)(r, l),
               ),
               s.createElement(
                 "div",
-                { className: Me.DownloadProgress },
+                { className: Pe.DownloadProgress },
                 s.createElement(
                   "span",
-                  { className: Me.CurrentSpace },
-                  (0, xe.l)(e.bytes_downloaded, {
+                  { className: Pe.CurrentSpace },
+                  (0, ke.l)(e.bytes_downloaded, {
                     nDigitsAfterDecimal: 1,
                     nMinimumDigitsAfterDecimal: 1,
                     bValueIsInBytes: !0,
@@ -1481,8 +1619,8 @@
                 s.createElement("span", null, " / "),
                 s.createElement(
                   "span",
-                  { className: Me.TotalSpace },
-                  (0, xe.l)(e.bytes_to_download, {
+                  { className: Pe.TotalSpace },
+                  (0, ke.l)(e.bytes_to_download, {
                     nDigitsAfterDecimal: 1,
                     nMinimumDigitsAfterDecimal: 1,
                     bValueIsInBytes: !0,
@@ -1493,11 +1631,11 @@
                 e.estimated_seconds_remaining > 0 &&
                 s.createElement(
                   "span",
-                  { className: Me.DownloadEstimate },
+                  { className: Pe.DownloadEstimate },
                   (0, De.jA)(e.estimated_seconds_remaining),
                 ),
-              s.createElement(Ae, {
-                className: Me.DownloadBar,
+              s.createElement(Re, {
+                className: Pe.DownloadBar,
                 animate: n,
                 nPercent: l,
                 indeterminate: c,
@@ -1506,11 +1644,11 @@
             s.createElement(
               "button",
               {
-                disabled: r.isLoading,
+                disabled: o.isLoading,
                 onClick: () => {
-                  r.mutateAsync(), fn(e.appid);
+                  o.mutateAsync(), gn(e.appid);
                 },
-                className: Me.DownloadIconButton,
+                className: Pe.DownloadIconButton,
               },
               m,
               d,
@@ -1518,100 +1656,100 @@
           )
         );
       }
-      function je({ app: e, clientid: t }) {
+      function Qe({ app: e, clientid: t }) {
         return s.createElement(
           s.Fragment,
           null,
           s.createElement(
             "button",
-            { disabled: !0, className: Me.DownloadIconButton },
-            s.createElement(V, null),
-            (0, F.Xx)("#GamesList_Button_Uninstalling"),
+            { disabled: !0, className: Pe.DownloadIconButton },
+            s.createElement(W, null),
+            (0, O.Xx)("#GamesList_Button_Uninstalling"),
           ),
         );
       }
-      function qe({ app: e, clientid: t }) {
+      function je({ app: e, clientid: t }) {
         const n = (function (e, t, n) {
-            const s = (0, r.bY)(),
-              o = ve(e),
-              l = (0, ie.M)(),
-              c = (0, i.useQueryClient)();
+            const s = (0, o.bY)(),
+              l = he(e),
+              c = (0, ie.M)(),
+              m = (0, i.useQueryClient)();
             return (0, i.useMutation)(
               () =>
                 (0, a.mG)(this, void 0, void 0, function* () {
-                  const n = null == o ? void 0 : o.data,
+                  const n = null == l ? void 0 : l.data,
                     a = n && n.get(t),
-                    i = oe.gA.Init(re.iH);
+                    i = r.gA.Init(re.iH);
                   i.Body().set_appid(e),
                     i.Body().set_client_instanceid(t),
                     i.Body().set_action(1);
-                  const r = yield re.b5.SetClientAppUpdateState(s, i);
-                  if (1 != r.GetEResult())
+                  const o = yield re.b5.SetClientAppUpdateState(s, i);
+                  if (1 != o.GetEResult())
                     throw (
                       (console.error(
                         "Received error from SetClientAppUpdateState",
-                        r.GetEResult(),
+                        o.GetEResult(),
                       ),
                       new Error(
-                        `Error from SetClientAppUpdateState: ${r.GetEResult()}`,
+                        `Error from SetClientAppUpdateState: ${o.GetEResult()}`,
                       ))
                     );
                   a &&
                     ((n.get(t).app.download_paused = !1),
                     (n.get(t).app.num_downloading = 1)),
-                    c.setQueryData(he(l, e), n),
-                    o.refetch();
+                    m.setQueryData(fe(c, e), n),
+                    l.refetch();
                 }),
               { onSuccess: n },
             );
           })(e.appid, t),
-          o = e.rt_time_scheduled,
-          l =
-            o &&
-            (0, F.jr)(o, { bGranularFutureTime: !0 }) +
+          l = e.rt_time_scheduled,
+          c =
+            l &&
+            (0, O.jr)(l, { bGranularFutureTime: !0 }) +
               " " +
-              (0, De.Sc)(o, { bForce24HourClock: !1 });
+              (0, De.Sc)(l, { bForce24HourClock: !1 });
         return s.createElement(
           s.Fragment,
           null,
-          l && s.createElement("span", { className: Me.UpdateSchedule }, l),
+          c && s.createElement("span", { className: Pe.UpdateSchedule }, c),
           s.createElement(
             "button",
             {
               disabled: n.isLoading,
               onClick: () => {
-                n.mutateAsync(), fn(e.appid);
+                n.mutateAsync(), gn(e.appid);
               },
-              className: Me.DownloadIconButton,
+              className: Pe.DownloadIconButton,
             },
             s.createElement(X.Lao, null),
-            (0, F.Xx)("#GamesList_Button_UpdateRequired"),
+            (0, O.Xx)("#GamesList_Button_UpdateRequired"),
           ),
         );
       }
-      function Ye({ app: e, closeModal: t, onOK: n }) {
-        return s.createElement(Ie.uH, {
-          strOKButtonText: (0, F.Xx)("#GamesList_Button_Uninstall"),
-          strCancelButtonText: (0, F.Xx)("#GamesList_Button_Cancel"),
-          strDescription: (0, F.Xx)(
+      function Ze({ app: e, closeModal: t, onOK: n }) {
+        return s.createElement(Se.uH, {
+          strOKButtonText: (0, O.Xx)("#GamesList_Button_Uninstall"),
+          strCancelButtonText: (0, O.Xx)("#GamesList_Button_Cancel"),
+          strDescription: (0, O.Xx)(
             "#GamesList_RemoteDownload_UninstallConfirm",
             e.app,
           ),
-          strTitle: (0, F.Xx)("#GamesList_Button_Uninstall"),
+          strTitle: (0, O.Xx)("#GamesList_Button_Uninstall"),
           closeModal: t,
           onOK: n,
         });
       }
-      function We({ app: e, clientid: t }) {
+      function qe({ app: e, clientid: t }) {
         const n = (function (e, t, n) {
-            const s = (0, r.bY)(),
-              o = ve(e),
-              l = (0, ie.M)(),
-              c = (0, i.useQueryClient)();
+            const s = (0, o.bY)(),
+              l = he(e),
+              c = (0, ie.M)(),
+              m = (0, i.useQueryClient)();
             return (0, i.useMutation)(
               () =>
                 (0, a.mG)(this, void 0, void 0, function* () {
-                  const n = oe.gA.Init(re.fF);
+                  const n = r.gA.Init(re.fF);
                   n.Body().set_appid(e), n.Body().set_client_instanceid(t);
                   const a = yield re.b5.InstallClientApp(s, n);
                   if (1 != a.GetEResult())
@@ -1624,26 +1762,26 @@
                         `Error from InstallClientApp: ${a.GetEResult()}`,
                       ))
                     );
-                  const i = null == o ? void 0 : o.data;
+                  const i = null == l ? void 0 : l.data;
                   i &&
                     i.get(t) &&
                     ((i.get(t).app.num_downloading = 1),
                     (i.get(t).app.download_paused = !1)),
-                    c.setQueryData(he(l, e), i),
-                    o.refetch();
+                    m.setQueryData(fe(c, e), i),
+                    l.refetch();
                 }),
               { onSuccess: n },
             );
           })(e.appid, t),
-          o = (function (e, t, n) {
-            const s = (0, r.bY)(),
-              o = ve(e),
-              l = (0, ie.M)(),
-              c = (0, i.useQueryClient)();
+          l = (function (e, t, n) {
+            const s = (0, o.bY)(),
+              l = he(e),
+              c = (0, ie.M)(),
+              m = (0, i.useQueryClient)();
             return (0, i.useMutation)(
               () =>
                 (0, a.mG)(this, void 0, void 0, function* () {
-                  const n = oe.gA.Init(re.Zu);
+                  const n = r.gA.Init(re.Zu);
                   n.Body().set_appid(e), n.Body().set_client_instanceid(t);
                   const a = yield re.b5.UninstallClientApp(s, n);
                   if (1 != a.GetEResult())
@@ -1656,34 +1794,34 @@
                         `Error from UninstallClientApp: ${a.GetEResult()}`,
                       ))
                     );
-                  const i = null == o ? void 0 : o.data;
+                  const i = null == l ? void 0 : l.data;
                   i && i.get(t) && (i.get(t).app.uninstalling = !0),
-                    c.setQueryData(he(l, e), i),
-                    o.refetch();
+                    m.setQueryData(fe(c, e), i),
+                    l.refetch();
                 }),
               { onSuccess: n },
             );
           })(e.appid, t),
-          l = e.installed ? o : n,
-          c = e.installed
+          c = e.installed ? l : n,
+          m = e.installed
             ? () => {
-                (0, Pe.AM)(
-                  s.createElement(Ye, {
+                (0, Be.AM)(
+                  s.createElement(Ze, {
                     app: e,
                     onOK: () => {
-                      o.mutateAsync(), fn(e.appid);
+                      l.mutateAsync(), gn(e.appid);
                     },
                   }),
                   window,
                 );
               }
             : () => {
-                n.mutateAsync(), fn(e.appid);
+                n.mutateAsync(), gn(e.appid);
               },
-          m = e.installed
+          d = e.installed
             ? "#GamesList_Button_Uninstall"
             : "#GamesList_Button_Download",
-          d = e.installed ? V : W;
+          u = e.installed ? W : Y;
         return s.createElement(
           s.Fragment,
           null,
@@ -1691,28 +1829,28 @@
             e.bytes_required > 0 &&
             s.createElement(
               "span",
-              { className: Me.DownloadSize },
-              (0, xe.l)(e.bytes_required, { nDigitsAfterDecimal: 1 }),
+              { className: Pe.DownloadSize },
+              (0, ke.l)(e.bytes_required, { nDigitsAfterDecimal: 1 }),
             ),
           s.createElement(
             "button",
             {
-              disabled: l.isLoading,
-              onClick: c,
-              className: Me.DownloadIconButton,
+              disabled: c.isLoading,
+              onClick: m,
+              className: Pe.DownloadIconButton,
             },
-            s.createElement(d, null),
-            (0, F.Xx)(m),
+            s.createElement(u, null),
+            (0, O.Xx)(d),
           ),
         );
       }
-      function Ve(e) {
+      function ze(e) {
         return e.BIsDownloading() || e.BIsPaused() || e.changing;
       }
-      function Ke({ game: e }) {
+      function Ye({ game: e }) {
         var t;
-        const n = ve(e.appid, !1),
-          a = Oe(),
+        const n = he(e.appid, !1),
+          a = Te(),
           i = null == a ? void 0 : a.client_instanceid;
         if (
           a &&
@@ -1720,101 +1858,101 @@
         )
           return null;
         if (!n.data || 0 === n.data.size || !a) return null;
-        const o = n.data.get(i).app;
-        return o.BIsDownloading() || o.BIsPaused()
+        const r = n.data.get(i).app;
+        return r.BIsDownloading() || r.BIsPaused()
           ? s.createElement(
               "div",
-              { className: Me.DownloadBarContainer },
-              s.createElement(Ze, { key: "downloading", app: o, clientid: i }),
+              { className: Pe.DownloadBarContainer },
+              s.createElement(Xe, { key: "downloading", app: r, clientid: i }),
             )
           : null;
       }
-      function ze({ game: e, className: t, enableDownloadBar: n = !1 }) {
+      function We({ game: e, className: t, enableDownloadBar: n = !1 }) {
         var a;
-        const i = ve(e.appid, !1),
-          o = Oe(),
-          r = null == o ? void 0 : o.client_instanceid;
+        const i = he(e.appid, !1),
+          r = Te(),
+          o = null == r ? void 0 : r.client_instanceid;
         if (
-          o &&
+          r &&
           0 === (null === (a = i.data) || void 0 === a ? void 0 : a.size)
         )
           return s.createElement(
             "div",
-            { className: (0, O.Z)(Me.RemoteControls, t) },
+            { className: (0, F.Z)(Pe.RemoteControls, t) },
             s.createElement(
               "span",
-              { className: Me.NoRemoteControl },
-              (0, F.Xx)("#GamesList_RemoteDownload_NoRemoteControl"),
+              { className: Pe.NoRemoteControl },
+              (0, O.Xx)("#GamesList_RemoteDownload_NoRemoteControl"),
             ),
           );
-        if (!i.data || 0 === i.data.size || !o) return null;
+        if (!i.data || 0 === i.data.size || !r) return null;
         const l = [],
-          c = i.data.get(r),
+          c = i.data.get(o),
           m = null == c ? void 0 : c.app;
         if (!m) return null;
         if (m.BIsDownloading() || m.BIsPaused()) {
           if (!n) return null;
           l.push(
-            s.createElement(Ze, { key: "downloading", app: m, clientid: r }),
+            s.createElement(Xe, { key: "downloading", app: m, clientid: o }),
           );
         } else
           m.uninstalling
             ? l.push(
-                s.createElement(je, {
+                s.createElement(Qe, {
                   key: "uninstalling",
                   app: m,
-                  clientid: r,
+                  clientid: o,
                 }),
               )
             : m.BHasPendingUpdate()
             ? l.push(
-                s.createElement(qe, {
+                s.createElement(je, {
                   key: "updatePending",
                   app: m,
-                  clientid: r,
+                  clientid: o,
                 }),
               )
             : l.push(
-                s.createElement(We, {
+                s.createElement(qe, {
                   key: "installuninstall",
                   app: m,
-                  clientid: r,
+                  clientid: o,
                 }),
               );
         return s.createElement(
           "div",
-          { className: (0, O.Z)(Me.RemoteControls, t) },
-          s.createElement("div", { className: Me.ButtonContainer }, l),
+          { className: (0, F.Z)(Pe.RemoteControls, t) },
+          s.createElement("div", { className: Pe.ButtonContainer }, l),
         );
       }
-      function Je(e) {
+      function Ve(e) {
         var { visible: t } = e,
           n = (0, a._T)(e, ["visible"]);
-        return t ? s.createElement(Ke, Object.assign({}, n)) : null;
+        return t ? s.createElement(Ye, Object.assign({}, n)) : null;
       }
-      function et(e) {
+      function Ke(e) {
         var { visible: t, className: n } = e,
           i = (0, a._T)(e, ["visible", "className"]);
-        return Oe()
+        return Te()
           ? t
-            ? s.createElement(ze, Object.assign({ className: n }, i))
+            ? s.createElement(We, Object.assign({ className: n }, i))
             : s.createElement("div", {
-                className: (0, O.Z)(Me.RemoteControls, n),
+                className: (0, F.Z)(Pe.RemoteControls, n),
               })
           : null;
       }
-      var tt;
+      var Je;
       !(function (e) {
         (e.HoursPlayed = "playtime"),
           (e.RecentlyPlayed = "recent"),
           (e.Name = "name"),
           (e.AchievementCompletion = "achievements");
-      })(tt || (tt = {}));
-      const nt = (0, ke.dt)((0, ke.jM)(f.De.LANGUAGE)),
-        at = new Intl.Collator([nt, "en"]);
-      function st(e, t) {
+      })(Je || (Je = {}));
+      const et = (0, se.dt)((0, se.jM)(f.De.LANGUAGE)),
+        tt = new Intl.Collator([et, "en"]);
+      function nt(e, t) {
         return (
-          at.compare(
+          tt.compare(
             (e.sort_as || e.name || "").trim(),
             (t.sort_as || t.name || "").trim(),
           ) ||
@@ -1823,18 +1961,18 @@
           })(e, t)
         );
       }
-      function it(e, t, n) {
+      function at(e, t, n) {
         var a, s;
         const i =
             null !== (a = n.find((t) => t.appid === e.appid)) && void 0 !== a
               ? a
               : { unlocked: 0, total: 0 },
-          o =
+          r =
             null !== (s = n.find((e) => e.appid === t.appid)) && void 0 !== s
               ? s
               : { unlocked: 0, total: 0 };
         return (
-          o.unlocked / (o.total || 1) - i.unlocked / (i.total || 1) ||
+          r.unlocked / (r.total || 1) - i.unlocked / (i.total || 1) ||
           (function (e, t, n) {
             var a, s;
             const i =
@@ -1845,39 +1983,39 @@
               (null !== (s = n.find((e) => e.appid === t.appid)) && void 0 !== s
                 ? s
                 : { unlocked: 0, total: 0 }
-              ).total - i.total || st(e, t)
+              ).total - i.total || nt(e, t)
             );
           })(e, t, n)
         );
       }
-      function ot(e, t) {
+      function st(e, t) {
         const n = A(G()),
           a = (0, s.useCallback)(
             (e, a) => {
               switch (t) {
-                case tt.HoursPlayed:
+                case Je.HoursPlayed:
                   return (
                     (s = e),
-                    (null !== (o = (i = a).playtime_forever) && void 0 !== o
-                      ? o
+                    (null !== (r = (i = a).playtime_forever) && void 0 !== r
+                      ? r
                       : 0) -
-                      (null !== (r = s.playtime_forever) && void 0 !== r
-                        ? r
-                        : 0) || st(s, i)
+                      (null !== (o = s.playtime_forever) && void 0 !== o
+                        ? o
+                        : 0) || nt(s, i)
                   );
-                case tt.RecentlyPlayed:
+                case Je.RecentlyPlayed:
                   return (function (e, t) {
                     return (
-                      t.rtime_last_played - e.rtime_last_played || st(e, t)
+                      t.rtime_last_played - e.rtime_last_played || nt(e, t)
                     );
                   })(e, a);
-                case tt.AchievementCompletion:
-                  if (n.data) return it(e, a, n.data);
+                case Je.AchievementCompletion:
+                  if (n.data) return at(e, a, n.data);
                 default:
-                case tt.Name:
-                  return st(e, a);
+                case Je.Name:
+                  return nt(e, a);
               }
-              var s, i, o, r;
+              var s, i, r, o;
             },
             [t, n.data],
           );
@@ -1885,81 +2023,81 @@
           () => ({
             data: e.data && [...e.data].sort(a),
             isLoading:
-              e.isLoading || (t === tt.AchievementCompletion && n.isLoading),
+              e.isLoading || (t === Je.AchievementCompletion && n.isLoading),
             error: e.error,
           }),
           [a, e.data, e.isLoading, e.error, n.isLoading, t],
         );
       }
-      var rt,
-        lt = n(54129);
-      function ct(e) {
+      var it,
+        rt = n(54129);
+      function ot(e) {
         var t;
         if (e.isLoading) return "";
         const n = null === (t = e.data) || void 0 === t ? void 0 : t.length;
         return void 0 === n ? "" : `(${n})`;
       }
-      function mt(e, t, n, a) {
+      function lt(e, t, n, a) {
         const i = w(),
-          o = y.Get().GetReviewCount(),
-          r = y.Get().GetFollowedCount();
+          r = E.Get().GetReviewCount(),
+          o = E.Get().GetFollowedCount();
         return (0, s.useMemo)(() => {
           const s = [];
           return (
             s.push({
-              tab: rt.RecentlyPlayed,
-              label: (0, F.Xx)("#GamesList_Tab_RecentlyPlayed", ct(n)),
+              tab: it.RecentlyPlayed,
+              label: (0, O.Xx)("#GamesList_Tab_RecentlyPlayed", ot(n)),
             }),
             s.push({
-              tab: rt.All,
-              label: (0, F.Xx)("#GamesList_Tab_AllGames", ct(t)),
+              tab: it.All,
+              label: (0, O.Xx)("#GamesList_Tab_AllGames", ot(t)),
             }),
             (i ||
-              e === rt.Perfect ||
+              e === it.Perfect ||
               a.isLoading ||
               (a.data && a.data.length > 0)) &&
               s.push({
-                tab: rt.Perfect,
-                label: (0, F.Xx)("#GamesList_Tab_PerfectGames", ct(a)),
+                tab: it.Perfect,
+                label: (0, O.Xx)("#GamesList_Tab_PerfectGames", ot(a)),
               }),
             s.push(
               {
-                tab: rt.Followed,
+                tab: it.Followed,
                 href: `${h._.ProfileURL}followedgames`,
-                label: (0, F.Xx)(
+                label: (0, O.Xx)(
                   "#GamesList_Tab_Followed",
-                  r > 0 ? `(${r})` : "",
-                ),
-              },
-              {
-                tab: rt.Reviews,
-                href: `${h._.ProfileURL}reviews`,
-                label: (0, F.Xx)(
-                  "#GamesList_Tab_Reviews",
                   o > 0 ? `(${o})` : "",
                 ),
               },
               {
-                tab: rt.Wishlist,
+                tab: it.Reviews,
+                href: `${h._.ProfileURL}reviews`,
+                label: (0, O.Xx)(
+                  "#GamesList_Tab_Reviews",
+                  r > 0 ? `(${r})` : "",
+                ),
+              },
+              {
+                tab: it.Wishlist,
                 href: `${h._.ProfileURL}wishlist`,
-                label: (0, F.Xx)("#GamesList_Tab_Wishlist"),
-                className: lt.WishlistTab,
+                label: (0, O.Xx)("#GamesList_Tab_Wishlist"),
+                className: rt.WishlistTab,
               },
             ),
             s
           );
-        }, [e, t, n, a, o, r, i]);
+        }, [e, t, n, a, r, o, i]);
       }
-      function dt({ tabs: e, strTab: t, setStrTab: n }) {
+      function ct({ tabs: e, strTab: t, setStrTab: n }) {
         return s.createElement(
           s.Fragment,
           null,
           s.createElement(
             "div",
             {
-              className: (0, O.Z)(
+              className: (0, F.Z)(
                 "sectionTabs item responsive_hidden",
-                lt.tabList,
+                rt.tabList,
               ),
             },
             e.map((e) =>
@@ -1967,7 +2105,7 @@
                 ? s.createElement(
                     "a",
                     {
-                      className: (0, O.Z)("sectionTab", e.className),
+                      className: (0, F.Z)("sectionTab", e.className),
                       href: e.href,
                       key: e.label,
                     },
@@ -1976,7 +2114,7 @@
                 : s.createElement(
                     "a",
                     {
-                      className: (0, O.Z)(
+                      className: (0, F.Z)(
                         "sectionTab",
                         e.tab === t && "active",
                         e.className,
@@ -1994,9 +2132,9 @@
           s.createElement(
             "div",
             {
-              className: (0, O.Z)(
+              className: (0, F.Z)(
                 "nonresponsive_hidden responsive_tab_ctn sharedfiles_responsive_tab",
-                lt.SelectBaseline,
+                rt.SelectBaseline,
               ),
             },
             s.createElement(
@@ -2031,7 +2169,7 @@
           ),
           s.createElement("div", {
             id: "tabs_baseline",
-            className: (0, O.Z)("responsive_tab_baseline", lt.TabBaseline),
+            className: (0, F.Z)("responsive_tab_baseline", rt.TabBaseline),
           }),
         );
       }
@@ -2042,63 +2180,73 @@
           (e.Followed = "followed"),
           (e.Reviews = "reviews"),
           (e.Wishlist = "wishlist");
-      })(rt || (rt = {}));
-      const ut =
+      })(it || (it = {}));
+      const mt =
         n.p +
         "images/applications/community/defaultappheader.png?v=valveisgoodatcaching";
-      var pt = n(67598),
-        _t = n(65255);
-      function gt() {
-        const e = (0, r.bY)();
+      var dt = n(75545),
+        ut = n(65255),
+        pt = n(41003);
+      function _t() {
+        const e = (0, o.bY)();
         return (0, i.useQuery)(
           ["AccountPrivateApps"],
           () =>
             (0, a.mG)(this, void 0, void 0, function* () {
-              const t = oe.gA.Init(pt.XR),
-                n = yield pt.kk.GetPrivateAppList(e, t);
+              const t = r.gA.Init(dt.XR),
+                n = yield dt.kk.GetPrivateAppList(e, t);
               return new Set(n.Body().private_apps(!0).appids());
             }),
-          { enabled: !!_t.L7.accountid },
+          { enabled: !!ut.L7.accountid },
         );
       }
-      function ft() {
-        return (
-          (function () {
-            const { data: e } = gt();
+      function gt() {
+        const e = (function () {
+            const { data: e } = _t();
             return e ? e.size > 0 : void 0;
-          })() || !0
-        );
+          })(),
+          { data: t } = (0, i.useQuery)(
+            ["ClientPrivateAppsEnabled"],
+            () =>
+              (0, a.mG)(this, void 0, void 0, function* () {
+                return ut.De.IN_STEAMUI
+                  ? yield SteamClient.Apps.ArePrivateAppsEnabled()
+                  : (0, pt.M4)();
+              }),
+            { staleTime: 3e4 },
+          );
+        return e || !0 === t || !1;
+      }
+      function ft(e) {
+        const { data: t } = _t();
+        return !!ut.L7.accountid && !!e && (t ? t.has(e) : void 0);
       }
       function ht(e) {
-        const { data: t } = gt();
-        return !!_t.L7.accountid && !!e && (t ? t.has(e) : void 0);
-      }
-      function vt(e) {
         e.invalidateQueries(["AccountPrivateApps"]);
       }
-      function Et(e) {
-        const t = (0, r.bY)(),
+      function vt(e) {
+        const t = (0, o.bY)(),
           n = (0, i.useQueryClient)();
         return (0, i.useMutation)({
           mutationFn: (n) =>
             (0, a.mG)(this, void 0, void 0, function* () {
               return yt(t, [e], n);
             }),
-          onSuccess: (t, a) => bt(n, [e], a),
+          onSuccess: (t, a) => Et(n, [e], a),
           onError() {
-            vt(n);
+            ht(n);
           },
         });
       }
       function yt(e, t, n) {
         return (0, a.mG)(this, void 0, void 0, function* () {
-          const a = oe.gA.Init(pt._c);
+          const a = r.gA.Init(dt._c);
           a.Body().set_appids(t.slice()), a.Body().set_private(n);
-          const s = yield pt.kk.ToggleAppPrivacy(e, a);
+          const s = yield dt.kk.ToggleAppPrivacy(e, a);
           if (!s.BSuccess()) throw s.GetErrorMessage();
         });
       }
-      function bt(e, t, n) {
+      function Et(e, t, n) {
         e.setQueryData(["AccountPrivateApps"], (e) => {
           if (!e) return;
           const a = new Set(e);
@@ -2110,11 +2258,11 @@
           );
         });
       }
-      const Ct = parseInt(Se.GameHeight),
-        Gt = parseInt(Se.GamePadding),
-        wt = parseInt(Se.RemoteControlsHeight),
-        Lt = Ct + Gt;
-      function Rt() {
+      const bt = parseInt(Ne.GameHeight),
+        Ct = parseInt(Ne.GamePadding),
+        Gt = parseInt(Ne.RemoteControlsHeight),
+        wt = bt + Ct;
+      function Lt() {
         return (function (e) {
           const t = (0, s.useMemo)(() => matchMedia(e), [e]),
             [n, a] = (0, s.useState)(t.matches);
@@ -2130,19 +2278,19 @@
             }, [t]),
             n
           );
-        })(`(max-width: ${Se.MobileBreakpoint})`);
+        })(`(max-width: ${Ne.MobileBreakpoint})`);
       }
-      function At(e) {
-        const t = S(e.appid),
+      function Rt(e) {
+        const t = I(e.appid),
           n = (function (e) {
-            const t = (0, r.bY)(),
-              n = y.Get();
+            const t = (0, o.bY)(),
+              n = E.Get();
             return (0, i.useQuery)(["FriendsWhoPlayCount", e], () =>
               n.GetFriendsWhoPlayCount(t, e),
             );
           })(e.appid),
           a = (function (e) {
-            const t = y.Get(),
+            const t = E.Get(),
               n = t.GetProfileSteamId();
             return (0, i.useQuery)(["TradingCardsCount", n, e], () =>
               t.GetTradingCardsCount(n, e),
@@ -2153,13 +2301,13 @@
           return (
             s.push({
               href: `${f.De.COMMUNITY_BASE_URL}app/${e.appid}`,
-              label: (0, F.Xx)("#Community_GameHubMenuItem"),
+              label: (0, O.Xx)("#Community_GameHubMenuItem"),
               key: "gamehub",
             }),
             void 0 !== t.data &&
               s.push({
                 href: `${h._.ProfileURL}screenshots/?appid=${e.appid}`,
-                label: (0, F.Xx)(
+                label: (0, O.Xx)(
                   "#Community_ScreenshotsMenuItemFirstPerson",
                   t.data > 0 ? `(${t.data})` : "",
                 ),
@@ -2168,7 +2316,7 @@
             void 0 !== n.data &&
               s.push({
                 href: `${h._.ProfileURL}friendsthatplay/${e.appid}`,
-                label: (0, F.Xx)(
+                label: (0, O.Xx)(
                   "#Community_FriendsWhoPlayMenuItemFirstPerson",
                   n.data > 0 ? `(${n.data})` : "",
                 ),
@@ -2177,7 +2325,7 @@
             void 0 !== a.data &&
               s.push({
                 href: `${h._.ProfileURL}gamecards/${e.appid}`,
-                label: (0, F.Xx)(
+                label: (0, O.Xx)(
                   "#Community_TradingCardsMenuItemFirstPerson",
                   `(${a.data.owned}/${a.data.total})`,
                 ),
@@ -2185,7 +2333,7 @@
               }),
             s.push({
               href: `${h._.ProfileURL}recommended/${e.appid}`,
-              label: (0, F.Xx)("#Community_ReviewMenuItemFirstPerson"),
+              label: (0, O.Xx)("#Community_ReviewMenuItemFirstPerson"),
               key: "review",
             }),
             {
@@ -2195,12 +2343,12 @@
           );
         }, [e, t.data, t.isLoading, n.data, n.isLoading, a.data, a.isLoading]);
       }
-      function Nt(e) {
+      function At(e) {
         const t = C(),
-          n = S(e.appid),
+          n = I(e.appid),
           a = (function (e) {
-            const t = (0, r.bY)(),
-              n = y.Get(),
+            const t = (0, o.bY)(),
+              n = E.Get(),
               a = n.GetProfileSteamId();
             return (0, i.useQuery)(
               ["UserIndividualRecommendations", a, e],
@@ -2212,14 +2360,14 @@
           return (
             s.push({
               href: `${f.De.COMMUNITY_BASE_URL}app/${e.appid}`,
-              label: (0, F.Xx)("#Community_GameHubMenuItem"),
+              label: (0, O.Xx)("#Community_GameHubMenuItem"),
               key: "gamehub",
             }),
             n.data &&
               n.data > 0 &&
               s.push({
                 href: `${h._.ProfileURL}screenshots/?appid=${e.appid}`,
-                label: (0, F.Xx)(
+                label: (0, O.Xx)(
                   "#Community_ScreenshotsMenuItemThirdPerson",
                   t,
                   n.data > 0 ? `(${n.data})` : "",
@@ -2229,20 +2377,20 @@
             a.data &&
               s.push({
                 href: `${h._.ProfileURL}recommended/${e.appid}`,
-                label: (0, F.Xx)("#Community_ReviewMenuItemThirdPerson", t),
+                label: (0, O.Xx)("#Community_ReviewMenuItemThirdPerson", t),
                 key: "review",
               }),
             { rgLinks: s, bIsLoading: n.isLoading }
           );
         }, [e, t, n.data, n.isLoading, a.data]);
       }
-      function St(e) {
-        return w() ? At(e) : Nt(e);
+      function Nt(e) {
+        return w() ? Rt(e) : At(e);
       }
-      function Bt(e) {
+      function It(e) {
         const t = C(),
           n = (function (e) {
-            return y.Get().GetGCPDGames().includes(e.appid);
+            return E.Get().GetGCPDGames().includes(e.appid);
           })(e),
           a = w();
         return (0, s.useMemo)(() => {
@@ -2252,50 +2400,50 @@
               (s.push({
                 href: `${h._.ProfileURL}stats/${e.appid}/?tab=achievements`,
                 label: a
-                  ? (0, F.Xx)("#Community_UsersAchievementsFirstPerson")
-                  : (0, F.Xx)("#Community_UsersAchievements", t),
+                  ? (0, O.Xx)("#Community_UsersAchievementsFirstPerson")
+                  : (0, O.Xx)("#Community_UsersAchievements", t),
                 key: "achievements",
               }),
               s.push({
                 href: `${f.De.COMMUNITY_BASE_URL}stats/${e.appid}/achievements/`,
-                label: (0, F.Xx)("#Community_GlobalAchievements"),
+                label: (0, O.Xx)("#Community_GlobalAchievements"),
                 key: "global_achievements",
               })),
             e.has_leaderboards &&
               (s.push({
                 href: `${h._.ProfileURL}stats/${e.appid}/?tab=leaderboards`,
                 label: a
-                  ? (0, F.Xx)("#Community_UsersLeaderboardsFirstPerson")
-                  : (0, F.Xx)("#Community_UsersLeaderboards", t),
+                  ? (0, O.Xx)("#Community_UsersLeaderboardsFirstPerson")
+                  : (0, O.Xx)("#Community_UsersLeaderboards", t),
                 key: "leaderboards",
               }),
               s.push({
                 href: `${f.De.COMMUNITY_BASE_URL}stats/${e.appid}/leaderboards/`,
-                label: (0, F.Xx)("#Community_GlobalLeaderboards"),
+                label: (0, O.Xx)("#Community_GlobalLeaderboards"),
                 key: "global_leaderboards",
               })),
             a &&
               n &&
               s.push({
                 href: `${h._.ProfileURL}gcpd/${e.appid}/`,
-                label: (0, F.Xx)("#Community_GamePersonalData", t),
+                label: (0, O.Xx)("#Community_GamePersonalData", t),
                 key: "gcpd",
               }),
             s
           );
         }, [t, e, n, a]);
       }
-      function kt(e) {
+      function St(e) {
         const t = w(),
-          n = ht(e.appid),
-          a = ft() && t,
-          { mutate: i } = Et(e.appid);
+          n = ft(e.appid),
+          a = gt() && t,
+          { mutate: i } = vt(e.appid);
         return (0, s.useMemo)(() => {
           const t = [];
           return (
             t.push({
               href: `${f.De.STORE_BASE_URL}app/${e.appid}`,
-              label: (0, F.Xx)("#Community_StorePage"),
+              label: (0, O.Xx)("#Community_StorePage"),
               key: "store",
             }),
             (0, ee.e7)(f.De.EREALM) ||
@@ -2304,26 +2452,26 @@
                   href: `${f.De.IN_CLIENT ? "steam://openurl_external/" : ""}${
                     f.De.STORE_BASE_URL
                   }forum/${e.appid}`,
-                  label: (0, F.Xx)("#Community_Forums"),
+                  label: (0, O.Xx)("#Community_Forums"),
                   key: "forums",
                 },
                 {
                   href: `${
                     f.De.COMMUNITY_BASE_URL
                   }search/groups/?text=${encodeURIComponent(e.name)}`,
-                  label: (0, F.Xx)("#Community_Groups"),
+                  label: (0, O.Xx)("#Community_Groups"),
                   key: "groups",
                 },
                 {
                   href: `${f.De.IN_CLIENT ? "steam://openurl_external/" : ""}${
                     f.De.STORE_BASE_URL
                   }appofficialsite/${e.appid}`,
-                  label: (0, F.Xx)("#Community_OfficialWebsite"),
+                  label: (0, O.Xx)("#Community_OfficialWebsite"),
                   key: "website",
                 },
                 {
                   href: `${f.De.STORE_BASE_URL}news/?appids=${e.appid}`,
-                  label: (0, F.Xx)("#Community_News"),
+                  label: (0, O.Xx)("#Community_News"),
                   key: "news",
                 },
               ),
@@ -2331,65 +2479,65 @@
               (n
                 ? t.push({
                     action: () => i(!1),
-                    label: (0, F.Xx)("#AppPrivacy_UnmarkAsPrivate"),
+                    label: (0, O.Xx)("#AppPrivacy_UnmarkAsPrivate"),
                     key: "appprivacy",
                   })
                 : t.push({
                     action: () => i(!0),
-                    label: (0, F.Xx)("#AppPrivacy_MarkAsPrivate"),
+                    label: (0, O.Xx)("#AppPrivacy_MarkAsPrivate"),
                     key: "appprivacy",
-                    tooltip: (0, F.Xx)("#AppPrivacy_Explanation"),
+                    tooltip: (0, O.Xx)("#AppPrivacy_Explanation"),
                   })),
             t
           );
         }, [e, a, n, i]);
       }
-      const It = s.forwardRef(
+      const Bt = s.forwardRef(
         ({ achievement: e, appid: t, className: n }, a) => {
           const i = parseFloat(e.player_percent_unlocked) < 10,
-            o = `${f.De.MEDIA_CDN_COMMUNITY_URL}images/apps/${t}/${e.icon}`;
-          return s.createElement(Ce, {
+            r = `${f.De.MEDIA_CDN_COMMUNITY_URL}images/apps/${t}/${e.icon}`;
+          return s.createElement(be, {
             ref: a,
-            className: (0, O.Z)(
-              Be.AchievementIcon,
-              Be.RareAchievementIconWrapper,
+            className: (0, F.Z)(
+              Ie.AchievementIcon,
+              Ie.RareAchievementIconWrapper,
               n,
             ),
             glow: i,
-            imgURL: o,
+            imgURL: r,
           });
         },
       );
-      function Pt({ appid: e, achievement: t }) {
+      function Dt({ appid: e, achievement: t }) {
         const n = `${f.De.MEDIA_CDN_COMMUNITY_URL}images/apps/${e}/${t.icon}`,
           a = parseFloat(t.player_percent_unlocked) < 10;
         return s.createElement(
           "div",
-          { className: Be.AchievementHover },
+          { className: Ie.AchievementHover },
           s.createElement(
             "div",
-            { className: Be.Background },
-            s.createElement("img", { className: Be.Blur, src: n }),
+            { className: Ie.Background },
+            s.createElement("img", { className: Ie.Blur, src: n }),
           ),
           s.createElement(
             "div",
-            { className: Be.TopSection },
-            s.createElement(It, { appid: e, achievement: t }),
+            { className: Ie.TopSection },
+            s.createElement(Bt, { appid: e, achievement: t }),
             s.createElement(
               "div",
-              { className: Be.TextSection },
-              s.createElement("div", { className: Be.Name }, t.name),
-              s.createElement("div", { className: Be.Desc }, t.desc),
+              { className: Ie.TextSection },
+              s.createElement("div", { className: Ie.Name }, t.name),
+              s.createElement("div", { className: Ie.Desc }, t.desc),
             ),
           ),
           t.player_percent_unlocked &&
             s.createElement(
               "div",
-              { className: Be.Unlocked },
+              { className: Ie.Unlocked },
               s.createElement(
                 "span",
-                { className: (0, O.Z)(a && Be.RareLabel) },
-                (0, F.Xx)(
+                { className: (0, F.Z)(a && Ie.RareLabel) },
+                (0, O.Xx)(
                   "#GamesList_Achievement_Unlock_Percentage",
                   t.player_percent_unlocked,
                 ),
@@ -2397,39 +2545,39 @@
             ),
         );
       }
-      const Dt = {
+      const kt = {
           direction: "top",
           bEnablePointerEvents: !1,
           style: { width: void 0, height: void 0, minHeight: void 0 },
         },
-        xt = s.forwardRef(({ appid: e, achievement: t }, n) =>
+        Pt = s.forwardRef(({ appid: e, achievement: t }, n) =>
           s.createElement(
-            Le.tl,
+            we.tl,
             {
-              hoverContent: s.createElement(Pt, { appid: e, achievement: t }),
-              hoverProps: Dt,
+              hoverContent: s.createElement(Dt, { appid: e, achievement: t }),
+              hoverProps: kt,
             },
-            s.createElement(It, { ref: n, achievement: t, appid: e }),
+            s.createElement(Bt, { ref: n, achievement: t, appid: e }),
           ),
         );
-      function Mt(e) {
+      function xt(e) {
         var {
             children: t,
             remainderRenderer: n,
             totalItemOverride: i,
-            itemPadding: o = 0,
+            itemPadding: r = 0,
           } = e,
-          r = (0, a._T)(e, [
+          o = (0, a._T)(e, [
             "children",
             "remainderRenderer",
             "totalItemOverride",
             "itemPadding",
           ]);
         const [l, ...c] = t,
-          m = (0, k.yU)((e) => {
+          m = (0, B.yU)((e) => {
             g(e.contentRect.width);
           }),
-          d = (0, k.yU)((e) => {
+          d = (0, B.yU)((e) => {
             p(e.contentRect.width);
           }),
           [u, p] = (0, s.useState)(0),
@@ -2439,12 +2587,12 @@
         if (_ && u) {
           let e = 1,
             n = _;
-          for (; n < u; ) (n += o), n + _ <= u && ((n += _), e++);
+          for (; n < u; ) (n += r), n + _ <= u && ((n += _), e++);
           e < f && (h = Math.max(0, Math.min(t.length, e - 1)));
         }
         return s.createElement(
           "div",
-          Object.assign({ ref: d }, r, {
+          Object.assign({ ref: d }, o, {
             style: 0 === u || 0 === _ ? { opacity: 0 } : void 0,
           }),
           h > 0 && s.cloneElement(l, { ref: m }),
@@ -2452,11 +2600,11 @@
           h < f && n(f - h),
         );
       }
-      function Tt({ game: e, visible: t, totalUnlocked: n }) {
+      function Ut({ game: e, visible: t, totalUnlocked: n }) {
         var a, i;
-        const o = (function (e, t) {
-            const n = (0, r.bY)(),
-              a = y.Get(),
+        const r = (function (e, t) {
+            const n = (0, o.bY)(),
+              a = E.Get(),
               s = a.GetProfileSteamId();
             return _({
               batchKey: ["TopAchievements", s, f.De.LANGUAGE],
@@ -2471,26 +2619,26 @@
           l = `${h._.ProfileURL}stats/${e.appid}/?tab=achievements`;
         return (null ===
           (i =
-            null === (a = o.data) || void 0 === a ? void 0 : a.achievements) ||
+            null === (a = r.data) || void 0 === a ? void 0 : a.achievements) ||
         void 0 === i
           ? void 0
           : i.length) > 0
           ? s.createElement(
-              Mt,
+              xt,
               {
-                className: Be.AchievementIcons,
+                className: Ie.AchievementIcons,
                 totalItemOverride: n,
                 itemPadding: 8,
                 remainderRenderer: (e) =>
                   s.createElement(
                     "a",
-                    { href: l, className: Be.Remainder },
+                    { href: l, className: Ie.Remainder },
                     "+",
                     e,
                   ),
               },
-              o.data.achievements.map((t) =>
-                s.createElement(xt, {
+              r.data.achievements.map((t) =>
+                s.createElement(Pt, {
                   appid: e.appid,
                   achievement: t,
                   key: `${t.statid}${t.bit}`,
@@ -2499,92 +2647,92 @@
             )
           : null;
       }
-      function Ut({ game: e, visible: t, showTop: n }) {
+      function Tt({ game: e, visible: t, showTop: n }) {
         const a = N(e, t).data;
         if (!a) return null;
         if (0 === a.total) return null;
         const i = Math.floor((a.unlocked / a.total) * 100),
-          o = (0, F.Xx)("#GamesList_Header_Achievements"),
-          r = (0, F.Xx)("#GamesList_Achievement_Fraction", a.unlocked, a.total),
+          r = (0, O.Xx)("#GamesList_Header_Achievements"),
+          o = (0, O.Xx)("#GamesList_Achievement_Fraction", a.unlocked, a.total),
           l = `${h._.ProfileURL}stats/${e.appid}/?tab=achievements`;
         return s.createElement(
           s.Fragment,
           null,
           s.createElement(
             "div",
-            { className: Be.AchievementsProgress },
+            { className: Ie.AchievementsProgress },
             s.createElement(
               "a",
-              { className: Be.AchievementsProgressLabel, href: l },
-              o,
+              { className: Ie.AchievementsProgressLabel, href: l },
+              r,
             ),
-            s.createElement("span", { className: Be.AchievementsFraction }, r),
-            s.createElement(Ae, {
-              className: Be.AchievementsProgressBar,
+            s.createElement("span", { className: Ie.AchievementsFraction }, o),
+            s.createElement(Re, {
+              className: Ie.AchievementsProgressBar,
               animate: !1,
               nPercent: i,
             }),
           ),
           n &&
-            s.createElement(Tt, {
+            s.createElement(Ut, {
               game: e,
               visible: t,
               totalUnlocked: a.unlocked,
             }),
         );
       }
-      function Ot({ game: e, visible: t }) {
+      function Mt({ game: e, visible: t }) {
         const n = N(e, t).data;
         return n && t && n.total && n.unlocked === n.total
           ? s.createElement(
               "div",
-              { title: (0, F.Xx)("#Perfect_Game_Description") },
+              { title: (0, O.Xx)("#Perfect_Game_Description") },
               s.createElement(X.Gue, {
                 fullcolor: !0,
-                className: Be.PerfectRibbon,
+                className: Ie.PerfectRibbon,
               }),
             )
           : null;
       }
       const Ft = () => {};
-      function $t({ links: e }) {
+      function Ot({ links: e }) {
         return s.createElement(
-          Ge.xV,
-          { className: Be.NavDropdownMenu },
+          Ce.xV,
+          { className: Ie.NavDropdownMenu },
           e.map((e) =>
             s.createElement(
-              Ge.Zo,
+              Ce.Zo,
               { onSelected: "action" in e ? () => e.action() : Ft, key: e.key },
-              s.createElement(nn, { link: e }),
+              s.createElement(tn, { link: e }),
             ),
           ),
         );
       }
-      function Ht({ game: e }) {
-        const t = St(e);
+      function $t({ game: e }) {
+        const t = Nt(e);
         return t.bIsLoading
           ? s.createElement(
-              Ge.xV,
-              { className: Be.NavDropdownMenu },
+              Ce.xV,
+              { className: Ie.NavDropdownMenu },
               s.createElement(T.V, { size: "small", position: "center" }),
             )
-          : s.createElement($t, { links: t.rgLinks });
+          : s.createElement(Ot, { links: t.rgLinks });
       }
-      const Xt = {
+      const Ht = {
         bFitToWindow: !0,
         bOverlapHorizontal: !0,
         bMatchWidth: !1,
         bShiftToFitWindow: !0,
       };
-      function Qt({ links: e, children: t, className: n }) {
+      function Xt({ links: e, children: t, className: n }) {
         const a = (0, s.useRef)(null),
           i = (0, s.useCallback)(() => {
-            (0, te.yV)(s.createElement($t, { links: e }), a.current, Xt);
+            (0, te.yV)(s.createElement(Ot, { links: e }), a.current, Ht);
           }, [a, e]);
         return s.createElement(
-          P.s,
+          k.s,
           {
-            className: (0, O.Z)(Be.NavButton, n),
+            className: (0, F.Z)(Ie.NavButton, n),
             onActivate: i,
             ref: a,
             focusable: !0,
@@ -2592,7 +2740,7 @@
           t,
         );
       }
-      function Zt({ links: e, label: t, className: n, onClick: a }) {
+      function Qt({ links: e, label: t, className: n, onClick: a }) {
         return s.createElement(x.gB, {
           rgOptions: e.map((e) => ({ label: e.label, data: e })),
           onMenuOpened: a,
@@ -2600,13 +2748,13 @@
             "href" in e.data ? (location.href = e.data.href) : e.data.action();
           },
           strDefaultLabel: t,
-          strClassName: (0, O.Z)(Be.GamepadNavigationDropdown, n),
-          strDropDownButtonClassName: Be.GamepadNavigationDropdownButton,
+          strClassName: (0, F.Z)(Ie.GamepadNavigationDropdown, n),
+          strDropDownButtonClassName: Ie.GamepadNavigationDropdownButton,
           highlightOnFocus: !0,
         });
       }
       function jt({ game: e, setLinkData: t }) {
-        const n = St(e);
+        const n = Nt(e);
         return (
           (0, s.useEffect)(() => {
             t(n.rgLinks);
@@ -2614,155 +2762,155 @@
           null
         );
       }
-      function qt({ game: e }) {
+      function Zt({ game: e }) {
         const t = w(),
-          n = (0, F.Xx)(
+          n = (0, O.Xx)(
             t ? "#Community_GameContentFirstPerson" : "#Community_GameContent",
           ),
           [a, i] = (0, s.useState)([]),
-          [o, r] = (0, s.useState)(!1);
+          [r, o] = (0, s.useState)(!1);
         return s.createElement(
           s.Fragment,
           null,
-          s.createElement(Zt, { links: a, label: n, onClick: () => r(!0) }),
-          o && s.createElement(jt, { game: e, setLinkData: i }),
+          s.createElement(Qt, { links: a, label: n, onClick: () => o(!0) }),
+          r && s.createElement(jt, { game: e, setLinkData: i }),
         );
       }
-      function Yt(e) {
+      function qt(e) {
         const { game: t, children: n } = e,
           a = w();
         return s.createElement(
           "div",
-          { className: Be.GameLinks },
-          a && s.createElement(Wt, { game: t }),
+          { className: Ie.GameLinks },
+          a && s.createElement(zt, { game: t }),
           n,
         );
       }
-      function Wt(e) {
+      function zt(e) {
         const { game: t } = e,
-          n = ht(t.appid),
-          a = Et(t.appid);
+          n = ft(t.appid),
+          a = vt(t.appid);
         return !0 !== n
           ? null
           : s.createElement(
-              P.s,
+              k.s,
               {
-                className: (0, O.Z)(
-                  Be.AppPrivateIndicator,
-                  Be.GameLinksButton,
-                  Be.NavButton,
+                className: (0, F.Z)(
+                  Ie.AppPrivateIndicator,
+                  Ie.GameLinksButton,
+                  Ie.NavButton,
                 ),
                 onActivate: () => a.mutate(!1),
               },
               s.createElement(H.dQJ, null),
             );
       }
-      function Vt({ game: e }) {
-        const t = kt(e);
+      function Yt({ game: e }) {
+        const t = St(e);
         return (0, f.id)()
-          ? s.createElement(Zt, {
+          ? s.createElement(Qt, {
               links: t,
-              label: (0, F.Xx)("#Community_GameLinks"),
+              label: (0, O.Xx)("#Community_GameLinks"),
             })
           : s.createElement(
-              Qt,
-              { links: t, className: Be.GameLinksButton },
+              Xt,
+              { links: t, className: Ie.GameLinksButton },
               s.createElement(H.bbz, null),
             );
       }
-      function Kt({ game: e }) {
-        const t = Bt(e),
+      function Wt({ game: e }) {
+        const t = It(e),
           n = w(),
           a = (0, f.id)();
         if (0 === t.length) return null;
-        const i = (0, F.Xx)(
+        const i = (0, O.Xx)(
           n ? "#Community_GameStatsFirstPerson" : "#Community_GameStats",
         );
         return a
-          ? s.createElement(Zt, { links: t, label: i })
+          ? s.createElement(Qt, { links: t, label: i })
           : s.createElement(
-              Qt,
-              { links: t, className: Be.StatLinks },
+              Xt,
+              { links: t, className: Ie.StatLinks },
               s.createElement("span", null, " ", i, " "),
-              s.createElement(z, null),
+              s.createElement(K, null),
             );
       }
-      function zt({ game: e }) {
+      function Vt({ game: e }) {
         const t = (0, s.useRef)(null),
-          n = (0, r.P9)(),
+          n = (0, o.P9)(),
           a = (0, s.useCallback)(() => {
             (0, te.yV)(
               s.createElement(
-                r.Ub,
+                o.Ub,
                 {
                   useActiveSteamInterface: n.useActiveSteamInterface,
                   useStorage: n.useStorage,
                 },
-                s.createElement(Ht, { game: e }),
+                s.createElement($t, { game: e }),
               ),
               t.current,
-              Xt,
+              Ht,
             );
           }, [t, e, n]),
           i = w(),
-          o = (0, f.id)(),
-          l = (0, F.Xx)(
+          r = (0, f.id)(),
+          l = (0, O.Xx)(
             i ? "#Community_GameContentFirstPerson" : "#Community_GameContent",
           );
-        return o
-          ? s.createElement(qt, { game: e })
+        return r
+          ? s.createElement(Zt, { game: e })
           : s.createElement(
-              P.s,
+              k.s,
               {
-                className: (0, O.Z)(Be.NavButton, Be.ContentLinks),
+                className: (0, F.Z)(Ie.NavButton, Ie.ContentLinks),
                 onActivate: a,
                 ref: t,
               },
               s.createElement("span", null, " ", l, " "),
-              s.createElement(z, null),
+              s.createElement(K, null),
             );
       }
-      function Jt({ label: e, children: t }) {
+      function Kt({ label: e, children: t }) {
         return s.createElement(
           "details",
-          { className: Be.BottomSheetSection },
-          s.createElement("summary", null, e, s.createElement(z, null)),
-          s.createElement("div", { className: Be.SectionContent }, t),
+          { className: Ie.BottomSheetSection },
+          s.createElement("summary", null, e, s.createElement(K, null)),
+          s.createElement("div", { className: Ie.SectionContent }, t),
         );
       }
-      function en({ game: e }) {
-        const t = Bt(e);
+      function Jt({ game: e }) {
+        const t = It(e);
         return 0 === t.length
           ? null
           : s.createElement(
-              Jt,
-              { label: (0, F.Xx)("#Community_GameStats") },
+              Kt,
+              { label: (0, O.Xx)("#Community_GameStats") },
               t.map((e) =>
-                s.createElement(nn, {
+                s.createElement(tn, {
                   key: e.key,
                   link: e,
-                  className: Be.BottomSheetLink,
+                  className: Ie.BottomSheetLink,
                 }),
               ),
             );
       }
-      function tn({ game: e }) {
-        const t = St(e);
+      function en({ game: e }) {
+        const t = Nt(e);
         return 0 === t.rgLinks.length
           ? null
           : s.createElement(
-              Jt,
-              { label: (0, F.Xx)("#Community_GameContent") },
+              Kt,
+              { label: (0, O.Xx)("#Community_GameContent") },
               t.rgLinks.map((e) =>
-                s.createElement(nn, {
+                s.createElement(tn, {
                   key: e.key,
                   link: e,
-                  className: Be.BottomSheetLink,
+                  className: Ie.BottomSheetLink,
                 }),
               ),
             );
       }
-      function nn(e) {
+      function tn(e) {
         const { link: t, className: n } = e;
         let a;
         return (
@@ -2775,55 +2923,55 @@
                   t.label,
                 )),
           t.tooltip &&
-            (a = s.createElement(U.HP, { toolTipContent: t.tooltip }, a)),
+            (a = s.createElement(M.HP, { toolTipContent: t.tooltip }, a)),
           a
         );
       }
-      function an({ game: e }) {
-        const t = kt(e);
+      function nn({ game: e }) {
+        const t = St(e);
         return 0 === t.length
           ? null
           : s.createElement(
-              Jt,
-              { label: (0, F.Xx)("#GamesList_MenuLabel_GameInfo") },
+              Kt,
+              { label: (0, O.Xx)("#GamesList_MenuLabel_GameInfo") },
               t.map((e) =>
-                s.createElement(nn, {
+                s.createElement(tn, {
                   key: e.key,
                   link: e,
-                  className: Be.BottomSheetLink,
+                  className: Ie.BottomSheetLink,
                 }),
               ),
             );
       }
-      function sn({ game: e }) {
+      function an({ game: e }) {
         const t = w(),
           n = (function () {
-            const e = Oe();
+            const e = Te();
             return e
-              ? (0, F.Xx)(
+              ? (0, O.Xx)(
                   "#GamesList_Client_Indicator",
-                  $e(e.device_type),
+                  Fe(e.device_type),
                   e.machine_name,
                 )
               : null;
           })();
         return t && n
           ? s.createElement(
-              Jt,
-              { label: (0, F.Xx)("#GamesList_MenuLabel_RemoteDownload") },
-              s.createElement("span", { className: Be.ClientName }, n),
-              s.createElement(et, {
+              Kt,
+              { label: (0, O.Xx)("#GamesList_MenuLabel_RemoteDownload") },
+              s.createElement("span", { className: Ie.ClientName }, n),
+              s.createElement(Ke, {
                 game: e,
-                className: Be.BottomSheetRemoteControls,
+                className: Ie.BottomSheetRemoteControls,
                 visible: !0,
                 enableDownloadBar: !0,
               }),
             )
           : null;
       }
-      function on({ tab: e }) {
-        const t = un().openGame,
-          n = dn(),
+      function sn({ tab: e }) {
+        const t = dn().openGame,
+          n = mn(),
           a = (0, s.useRef)(null);
         (0, s.useEffect)(() => {
           var e;
@@ -2834,15 +2982,15 @@
         }, [t]);
         const i = R(t);
         if (!t) return null;
-        const o =
+        const r =
           f.De.STORE_ICON_BASE_URL +
           `/${t.appid}/${t.capsule_filename || "library_600x900.jpg"}`;
         return s.createElement(
           "div",
           {
-            className: (0, O.Z)(
-              Be.BottomSheetContainer,
-              i && Be.HasAdultContent,
+            className: (0, F.Z)(
+              Ie.BottomSheetContainer,
+              i && Ie.HasAdultContent,
             ),
             role: "dialog",
             "aria-modal": "true",
@@ -2851,108 +2999,108 @@
             },
           },
           s.createElement("div", {
-            className: Be.BottomSheetOverlay,
+            className: Ie.BottomSheetOverlay,
             onClick: (e) => {
               e.preventDefault(), e.stopPropagation(), n(void 0);
             },
           }),
           s.createElement(
             "div",
-            { className: Be.BottomSheet, ref: a },
+            { className: Ie.BottomSheet, ref: a },
             s.createElement(
               "div",
-              { className: Be.GameInfo },
+              { className: Ie.GameInfo },
               s.createElement(
                 "div",
-                { className: Be.BlurredBackground },
-                s.createElement("img", { src: o, alt: t.name }),
+                { className: Ie.BlurredBackground },
+                s.createElement("img", { src: r, alt: t.name }),
               ),
               s.createElement("img", {
-                src: o,
+                src: r,
                 alt: t.name,
-                className: Be.Portrait,
+                className: Ie.Portrait,
               }),
               s.createElement(
                 "div",
-                { className: Be.Facts },
-                s.createElement("span", { className: Be.GameTitle }, t.name),
+                { className: Ie.Facts },
+                s.createElement("span", { className: Ie.GameTitle }, t.name),
                 s.createElement(rn, { game: t, visible: !0, tab: e }),
               ),
             ),
-            s.createElement(tn, { game: t }),
             s.createElement(en, { game: t }),
+            s.createElement(Jt, { game: t }),
+            s.createElement(nn, { game: t }),
             s.createElement(an, { game: t }),
-            s.createElement(sn, { game: t }),
           ),
         );
       }
       function rn({ game: e, visible: t, tab: n }) {
         const a = w(),
           i = R(e),
-          o = Rt(),
-          r = n !== rt.All && !(o && n === rt.RecentlyPlayed);
+          r = Lt(),
+          o = n !== it.All && !(r && n === it.RecentlyPlayed);
         return s.createElement(
           "div",
-          { className: Be.Playtime },
-          n === rt.RecentlyPlayed &&
+          { className: Ie.Playtime },
+          n === it.RecentlyPlayed &&
             !!e.playtime_2weeks &&
             s.createElement(
               "span",
-              { className: Be.Hours2weeks },
+              { className: Ie.Hours2weeks },
               s.createElement(
                 "span",
-                { className: Be.FactLabel },
-                (0, F.Xx)("#GamesList_Header_TwoWeeks"),
+                { className: Ie.FactLabel },
+                (0, O.Xx)("#GamesList_Header_TwoWeeks"),
               ),
-              (0, Ne.W)(e.playtime_2weeks),
+              (0, Ae.W)(e.playtime_2weeks),
             ),
           !!e.playtime_forever &&
             s.createElement(
               "span",
-              { className: Be.Hours },
+              { className: Ie.Hours },
               s.createElement(
                 "span",
-                { className: Be.FactLabel },
-                (0, F.Xx)("#GamesList_Header_TotalPlayed"),
+                { className: Ie.FactLabel },
+                (0, O.Xx)("#GamesList_Header_TotalPlayed"),
               ),
-              (0, Ne.W)(
+              (0, Ae.W)(
                 e.playtime_forever +
                   (e.playtime_disconnected ? e.playtime_disconnected : 0),
               ),
             ),
-          n !== rt.RecentlyPlayed &&
+          n !== it.RecentlyPlayed &&
             a &&
             !!e.rtime_last_played &&
             s.createElement(
               "span",
-              { className: Be.LastPlayed },
+              { className: Ie.LastPlayed },
               s.createElement(
                 "span",
-                { className: Be.FactLabel },
-                (0, F.Xx)("#GamesList_Header_LastPlayed"),
+                { className: Ie.FactLabel },
+                (0, O.Xx)("#GamesList_Header_LastPlayed"),
               ),
-              (0, F.m9)(e.rtime_last_played),
+              (0, O.m9)(e.rtime_last_played),
             ),
           !i &&
             s.createElement(
               "div",
-              { className: Be.AchievementContainer },
-              s.createElement(Ut, { game: e, visible: t, showTop: r }),
+              { className: Ie.AchievementContainer },
+              s.createElement(Tt, { game: e, visible: t, showTop: o }),
             ),
         );
       }
-      function ln({ game: e }) {
-        const t = Rt(),
+      function on({ game: e }) {
+        const t = Lt(),
           [n, a] = (0, s.useState)(0),
           i = [
             `${f.De.STORE_ICON_BASE_URL}${e.appid}/${
               e.capsule_filename || "library_600x900.jpg"
             }`,
             `${f.De.STORE_ICON_BASE_URL}${e.appid}/portrait.png`,
-            ut,
+            mt,
           ],
-          o = [`${f.De.STORE_ICON_BASE_URL}${e.appid}/header.jpg`, ut],
-          r = t ? i[n] === ut : o[n] === ut;
+          r = [`${f.De.STORE_ICON_BASE_URL}${e.appid}/header.jpg`, mt],
+          o = t ? i[n] === mt : r[n] === mt;
         return s.createElement(
           s.Fragment,
           null,
@@ -2960,32 +3108,32 @@
             "picture",
             { onError: () => a((e) => e + 1) },
             s.createElement("source", {
-              media: `(max-width: ${Se.MobileBreakpoint})`,
+              media: `(max-width: ${Ne.MobileBreakpoint})`,
               srcSet: i[n],
             }),
-            s.createElement("img", { src: o[n], alt: e.name, loading: "lazy" }),
+            s.createElement("img", { src: r[n], alt: e.name, loading: "lazy" }),
           ),
-          r && s.createElement("span", { className: Be.FallbackTitle }, e.name),
+          o && s.createElement("span", { className: Ie.FallbackTitle }, e.name),
         );
       }
-      function cn({ game: e, hasEverBeenVisible: t }) {
-        const n = Rt();
+      function ln({ game: e, hasEverBeenVisible: t }) {
+        const n = Lt();
         return s.createElement(
           "div",
-          { className: Be.PortraitContainer },
-          s.createElement(ln, { game: e }),
-          !n && s.createElement(Ot, { game: e, visible: t }),
+          { className: Ie.PortraitContainer },
+          s.createElement(on, { game: e }),
+          !n && s.createElement(Mt, { game: e, visible: t }),
         );
       }
-      const mn = s.memo(function ({ game: e, top: t, tab: n }) {
+      const cn = s.memo(function ({ game: e, top: t, tab: n }) {
         const a = `${f.De.STORE_BASE_URL}app/${e.appid}`,
           i = w(),
-          o = Rt(),
-          r = dn(),
-          l = o ? "button" : ae.eh,
-          c = o ? () => r(e) : void 0,
+          r = Lt(),
+          o = mn(),
+          l = r ? "button" : ae.eh,
+          c = r ? () => o(e) : void 0,
           [m, d] = (0, s.useState)(!1),
-          u = (0, k.S1)(
+          u = (0, B.S1)(
             (0, s.useCallback)((e) => {
               e.isIntersecting && d(!0);
             }, []),
@@ -2993,14 +3141,14 @@
           ),
           p = R(e),
           _ = (0, f.id)(),
-          g = o ? "div" : ne.IS,
-          h = o ? "span" : "a";
+          g = r ? "div" : ne.IS,
+          h = r ? "span" : "a";
         return s.createElement(
           "div",
           {
-            className: (0, O.Z)(
-              Be.GamesListItemContainer,
-              p && Be.HasAdultContent,
+            className: (0, F.Z)(
+              Ie.GamesListItemContainer,
+              p && Ie.HasAdultContent,
             ),
             style: { top: `${t}px` },
             ref: u,
@@ -3008,76 +3156,76 @@
           s.createElement(
             l,
             {
-              className: (0, O.Z)(Be.GamesListItem, e.changing && Be.Changing),
+              className: (0, F.Z)(Ie.GamesListItem, e.changing && Ie.Changing),
               onClick: c,
             },
             s.createElement(
               g,
-              { href: a, className: Be.GameItemPortrait },
-              s.createElement(cn, { game: e, hasEverBeenVisible: m }),
+              { href: a, className: Ie.GameItemPortrait },
+              s.createElement(ln, { game: e, hasEverBeenVisible: m }),
             ),
             s.createElement(
               "span",
-              { className: Be.GameNameContainer },
-              s.createElement(h, { href: a, className: Be.GameName }, e.name),
+              { className: Ie.GameNameContainer },
+              s.createElement(h, { href: a, className: Ie.GameName }, e.name),
             ),
             s.createElement(rn, { game: e, visible: m, tab: n }),
-            !o &&
+            !r &&
               s.createElement(
                 s.Fragment,
                 null,
                 s.createElement(
                   "div",
-                  { className: Be.Buttons },
-                  s.createElement(Kt, { game: e }),
-                  s.createElement(zt, { game: e }),
-                  _ && s.createElement(Vt, { game: e }),
+                  { className: Ie.Buttons },
+                  s.createElement(Wt, { game: e }),
+                  s.createElement(Vt, { game: e }),
+                  _ && s.createElement(Yt, { game: e }),
                 ),
                 !_ &&
                   s.createElement(
-                    Yt,
+                    qt,
                     { game: e },
-                    s.createElement(Vt, { game: e }),
+                    s.createElement(Yt, { game: e }),
                   ),
               ),
             i &&
-              !o &&
-              s.createElement(et, {
-                className: Be.DownloadStatus,
+              !r &&
+              s.createElement(Ke, {
+                className: Ie.DownloadStatus,
                 game: e,
                 visible: m,
               }),
-            o && s.createElement(Ot, { game: e, visible: m }),
+            r && s.createElement(Mt, { game: e, visible: m }),
           ),
-          i && s.createElement(Je, { game: e, visible: m }),
+          i && s.createElement(Ve, { game: e, visible: m }),
         );
       });
-      function dn() {
-        return un().fnSetOpenGame;
+      function mn() {
+        return dn().fnSetOpenGame;
       }
-      function un() {
-        const e = (0, s.useContext)(pn);
+      function dn() {
+        const e = (0, s.useContext)(un);
         if (!e)
           throw new Error(
             "attempted to use BottomSheetContext outside of provider",
           );
         return e;
       }
-      const pn = s.createContext(void 0);
-      function _n({ children: e }) {
+      const un = s.createContext(void 0);
+      function pn({ children: e }) {
         const [t, n] = (0, s.useState)(void 0);
         return s.createElement(
-          pn.Provider,
+          un.Provider,
           { value: { openGame: t, fnSetOpenGame: n } },
           e,
         );
       }
-      const gn = new Set();
-      function fn(e) {
-        gn.add(e);
+      const _n = new Set();
+      function gn(e) {
+        _n.add(e);
       }
-      const hn = new Set();
-      function vn({ games: e, tab: t, fnCalculateGameSize: n }) {
+      const fn = new Set();
+      function hn({ games: e, tab: t, fnCalculateGameSize: n }) {
         const [a, i] = (0, s.useMemo)(() => {
           let t = 0;
           const a = e.map((e) => {
@@ -3121,30 +3269,30 @@
               );
             }, []);
         })();
-        const o = (0, s.useRef)(null);
-        let r = 0;
+        const r = (0, s.useRef)(null);
+        let o = 0;
         return s.createElement(
-          P.s,
-          { ref: o, className: Be.List, style: { height: a }, autoFocus: !0 },
+          k.s,
+          { ref: r, className: Ie.List, style: { height: a }, autoFocus: !0 },
           s.createElement(
             yn,
             {
               disableContinuousRender: e.length > 1024,
               batchSize: 16,
-              containerRef: o,
+              containerRef: r,
               childSizes: i,
             },
             e.map((e, n) => {
-              const a = r;
+              const a = o;
               return (
-                (r += i[n]),
-                s.createElement(mn, { game: e, key: e.appid, top: a, tab: t })
+                (o += i[n]),
+                s.createElement(cn, { game: e, key: e.appid, top: a, tab: t })
               );
             }),
           ),
         );
       }
-      function En() {
+      function vn() {
         return (0, a.mG)(this, void 0, void 0, function* () {
           return new Promise((e) => {
             setTimeout(e, 0);
@@ -3156,23 +3304,23 @@
         batchSize: t,
         containerRef: n,
         childSizes: i,
-        disableContinuousRender: o,
+        disableContinuousRender: r,
       }) {
-        const [r] = (0, s.useState)([]);
+        const [o] = (0, s.useState)([]);
         return (
           (0, s.useEffect)(() => {
-            if (o) return () => {};
+            if (r) return () => {};
             let e = !1;
             return (
               (function () {
                 var n;
                 (0, a.mG)(this, void 0, void 0, function* () {
-                  for (let a = 0; a < r.length + t; a += t) {
+                  for (let a = 0; a < o.length + t; a += t) {
                     for (let s = a; s < a + t; s++) {
                       if (e) return;
-                      null === (n = r[s]) || void 0 === n || n.call(r, !0);
+                      null === (n = o[s]) || void 0 === n || n.call(o, !0);
                     }
-                    yield En();
+                    yield vn();
                   }
                 });
               })(),
@@ -3180,7 +3328,7 @@
                 e = !0;
               }
             );
-          }, [r, t, e.length, o]),
+          }, [o, t, e.length, r]),
           (0, s.useEffect)(() => {
             if (!n || !i) return () => {};
             function e() {
@@ -3190,12 +3338,12 @@
               let a = 0,
                 s = 0;
               for (; a > e; ) (a -= i[s]), s++;
-              const o = s - n,
-                l = o + 3 * n;
-              for (let e = o; e < l; e++)
+              const r = s - n,
+                l = r + 3 * n;
+              for (let e = r; e < l; e++)
                 setTimeout(() => {
                   var t;
-                  null === (t = r[e]) || void 0 === t || t.call(r, !0);
+                  null === (t = o[e]) || void 0 === t || t.call(o, !0);
                 }, 0);
             }
             const t = n.current;
@@ -3208,27 +3356,27 @@
                   t.ownerDocument.defaultView.removeEventListener("scroll", e);
               }
             );
-          }, [e.length, e, n, i, t, r]),
+          }, [e.length, e, n, i, t, o]),
           s.createElement(
             s.Fragment,
             null,
             e.map((e, t) =>
-              s.createElement(bn, { key: e.key, index: t, renderers: r }, e),
+              s.createElement(En, { key: e.key, index: t, renderers: o }, e),
             ),
           )
         );
       }
-      function bn({ renderers: e, index: t, children: n }) {
+      function En({ renderers: e, index: t, children: n }) {
         const [a, i] = (0, s.useState)(!1);
         return (e[t] = i), a ? s.createElement(s.Fragment, null, n) : null;
       }
-      const Cn = s.createContext(void 0);
-      function Gn({ query: e, isLoading: t, tab: n }) {
+      const bn = s.createContext(void 0);
+      function Cn({ query: e, isLoading: t, tab: n }) {
         var a;
-        const i = ue(),
-          o = (function (e) {
-            const t = Oe(),
-              n = fe(void 0, !1).rgQueries.find((e) => {
+        const i = de(),
+          r = (function (e) {
+            const t = Te(),
+              n = ge(void 0, !1).rgQueries.find((e) => {
                 var n;
                 return (
                   (null === (n = e.data) || void 0 === n
@@ -3242,8 +3390,8 @@
               const a = new Set();
               if (null == n ? void 0 : n.data)
                 for (const e of n.data.mapApps.values())
-                  (hn.has(e.appid) || (!gn.has(e.appid) && Ve(e))) &&
-                    (a.add(e.appid), hn.add(e.appid));
+                  (fn.has(e.appid) || (!_n.has(e.appid) && ze(e))) &&
+                    (a.add(e.appid), fn.add(e.appid));
               const s = [],
                 i = [];
               return (
@@ -3260,85 +3408,85 @@
               );
             }, [e.data, e.isLoading, e.error, null == n ? void 0 : n.data]);
           })(e),
-          [r, l] = (0, s.useState)({}),
+          [o, l] = (0, s.useState)({}),
           c = (0, s.useCallback)((e, t) => {
             l((n) => Object.assign(Object.assign({}, n), { [e]: t }));
           }, []),
-          m = (0, s.useCallback)((e) => (r[e.appid] ? Lt + wt : Lt), [r]);
-        return o.isLoading || i.isLoading || t
+          m = (0, s.useCallback)((e) => (o[e.appid] ? wt + Gt : wt), [o]);
+        return r.isLoading || i.isLoading || t
           ? s.createElement(T.V, {
-              string: (0, F.Xx)("#Loading"),
+              string: (0, O.Xx)("#Loading"),
               position: "center",
             })
-          : 0 === (null === (a = o.data) || void 0 === a ? void 0 : a.length) &&
-            n === rt.Perfect
+          : 0 === (null === (a = r.data) || void 0 === a ? void 0 : a.length) &&
+            n === it.Perfect
           ? s.createElement(
               "p",
-              { className: Be.emptyDescription },
-              (0, F.Xx)("#GamesList_PerfectGames_Description"),
+              { className: Ie.emptyDescription },
+              (0, O.Xx)("#GamesList_PerfectGames_Description"),
             )
           : s.createElement(
-              Cn.Provider,
+              bn.Provider,
               { value: c },
-              !f.De.IN_CLIENT && s.createElement(Qe, null),
-              s.createElement(vn, {
-                games: o.data,
+              !f.De.IN_CLIENT && s.createElement(He, null),
+              s.createElement(hn, {
+                games: r.data,
                 tab: n,
                 fnCalculateGameSize: m,
               }),
             );
       }
-      function wn(e) {
-        return Lt;
+      function Gn(e) {
+        return wt;
       }
-      function Ln({ query: e, isLoading: t, tab: n }) {
+      function wn({ query: e, isLoading: t, tab: n }) {
         return void 0 === e.data || t
           ? null
-          : s.createElement(vn, {
+          : s.createElement(hn, {
               games: e.data,
               tab: n,
-              fnCalculateGameSize: wn,
+              fnCalculateGameSize: Gn,
             });
       }
-      const Rn = (0, we.AP)(
+      const Ln = (0, Ge.AP)(
           ({ owned: e, filter: t, dependencyLoading: n, sort: a, tab: i }) => {
-            const o = ot(Z(e, t), a),
-              r = w(),
-              l = o.isLoading || n;
-            if (o.error && !l) throw o.error;
+            const r = st(j(e, t), a),
+              o = w(),
+              l = r.isLoading || n;
+            if (r.error && !l) throw r.error;
             return s.createElement(
-              _n,
+              pn,
               null,
-              s.createElement(on, { tab: i }),
-              r
-                ? s.createElement(Gn, { query: o, isLoading: l, tab: i })
-                : s.createElement(Ln, { query: o, isLoading: l, tab: i }),
+              s.createElement(sn, { tab: i }),
+              o
+                ? s.createElement(Cn, { query: r, isLoading: l, tab: i })
+                : s.createElement(wn, { query: r, isLoading: l, tab: i }),
             );
           },
         ),
-        An = [
+        Rn = [
           {
-            label: (0, F.Xx)("#GamesList_Sort_HoursPlayed"),
-            sortOption: tt.HoursPlayed,
+            label: (0, O.Xx)("#GamesList_Sort_HoursPlayed"),
+            sortOption: Je.HoursPlayed,
           },
-          { label: (0, F.Xx)("#GamesList_Sort_Name"), sortOption: tt.Name },
+          { label: (0, O.Xx)("#GamesList_Sort_Name"), sortOption: Je.Name },
           {
-            label: (0, F.Xx)("#GamesList_Sort_AchievementCompletion"),
-            sortOption: tt.AchievementCompletion,
+            label: (0, O.Xx)("#GamesList_Sort_AchievementCompletion"),
+            sortOption: Je.AchievementCompletion,
           },
         ];
-      function Nn({ strSort: e, setStrSort: t }) {
+      function An({ strSort: e, setStrSort: t }) {
         return s.createElement(
           "ul",
           { className: $.SortOptions },
-          An.map((n) =>
+          Rn.map((n) =>
             s.createElement(
               "li",
               { key: n.sortOption },
               s.createElement(
                 "button",
                 {
-                  className: (0, O.Z)(
+                  className: (0, F.Z)(
                     $.SortOption,
                     e === n.sortOption && $.SelectedSort,
                   ),
@@ -3350,12 +3498,12 @@
           ),
         );
       }
-      function Sn() {
-        const [e, t] = (0, M.Ar)("games_in_common", !1);
+      function Nn() {
+        const [e, t] = (0, U.Ar)("games_in_common", !1);
         return s.createElement(
           "label",
           { className: $.BothOwnedFilter },
-          (0, F.Xx)("#GamesList_Filter_BothOwned"),
+          (0, O.Xx)("#GamesList_Filter_BothOwned"),
           s.createElement("input", {
             type: "checkbox",
             checked: e,
@@ -3363,12 +3511,12 @@
           }),
         );
       }
-      function Bn() {
+      function In() {
         return s.createElement(
-          U.HP,
+          M.HP,
           {
-            toolTipContent: (0, F.Xx)("#GamesList_PrivacySettings_Tooltip"),
-            "aria-label": (0, F.Xx)("#GamesList_PrivacySettings_Tooltip"),
+            toolTipContent: (0, O.Xx)("#GamesList_PrivacySettings_Tooltip"),
+            "aria-label": (0, O.Xx)("#GamesList_PrivacySettings_Tooltip"),
             className: $.PrivacySettingsLink,
           },
           s.createElement(
@@ -3378,16 +3526,16 @@
           ),
         );
       }
-      function kn(e) {
+      function Sn(e) {
         const t = new Set();
         return null == e || e.forEach((e) => t.add(e.appid)), t;
       }
-      function In(e, t, n) {
-        const [a, s] = (0, M.Ar)(e, n);
+      function Bn(e, t, n) {
+        const [a, s] = (0, U.Ar)(e, n);
         let i = a;
         return Object.values(t).includes(a) || (i = n), [i, s];
       }
-      function Pn(e, t) {
+      function Dn(e, t) {
         return (0, s.useMemo)(() => {
           var n;
           return {
@@ -3397,27 +3545,27 @@
           };
         }, [e.data, e.isLoading, e.error, t]);
       }
-      function Dn({ children: e }) {
+      function kn({ children: e }) {
         return (0, f.id)() ? s.createElement(x.vY, null, e) : e;
       }
-      function xn(e) {
+      function Pn(e) {
         const t = G(),
-          [n, a] = In("sort", tt, tt.HoursPlayed),
-          [i, o] = In("tab", rt),
-          r = null != i ? i : rt.RecentlyPlayed,
+          [n, a] = Bn("sort", Je, Je.HoursPlayed),
+          [i, r] = Bn("tab", it),
+          o = null != i ? i : it.RecentlyPlayed,
           [l, c, m] = (function (e, t) {
             const [n, a] = (0, s.useState)(e),
-              [i, o] = (0, s.useState)(e);
+              [i, r] = (0, s.useState)(e);
             return (
               (0, s.useEffect)(() => {
-                if (t < 1) return o(n), () => {};
-                const e = setTimeout(() => o(n), t);
+                if (t < 1) return r(n), () => {};
+                const e = setTimeout(() => r(n), t);
                 return () => clearTimeout(e);
               }, [n, t]),
               [n, i, a]
             );
           })(void 0, 100),
-          d = r === rt.RecentlyPlayed,
+          d = o === it.RecentlyPlayed,
           u = (0, s.useCallback)(
             (e) => {
               var t;
@@ -3442,16 +3590,16 @@
               ),
             [p.data],
           ),
-          [g] = (0, M.Ar)("games_in_common", !1),
-          h = g && r === rt.All,
+          [g] = (0, U.Ar)("games_in_common", !1),
+          h = g && o === it.All,
           v = (function (e) {
             const t = b(f.L7.steamid, { enabled: e });
             return (0, s.useMemo)(
-              () => ({ data: kn(t.data), isLoading: t.isLoading }),
+              () => ({ data: Sn(t.data), isLoading: t.isLoading }),
               [t.data, t.isLoading],
             );
           })(h),
-          E = (0, s.useCallback)(
+          y = (0, s.useCallback)(
             (e) => {
               var t;
               return (
@@ -3464,85 +3612,85 @@
             [h, v],
           ),
           C = b(t),
-          L = y.Get().GetPerfectUnownedGames(),
-          R = y.Get().GetRecentlyPlayedUnownedGames(),
-          N = Pn(Z(C, _, p.isLoading), L),
-          S = Pn(Z(C, q), R);
+          L = E.Get().GetPerfectUnownedGames(),
+          R = E.Get().GetRecentlyPlayedUnownedGames(),
+          N = Dn(j(C, _, p.isLoading), L),
+          I = Dn(j(C, q), R);
         (0, s.useEffect)(() => {
-          !i && S.data && 0 === S.data.length && o(rt.All);
-        }, [i, S.data, o]);
-        const B = w(),
-          k = (0, f.id)();
+          !i && I.data && 0 === I.data.length && r(it.All);
+        }, [i, I.data, r]);
+        const S = w(),
+          B = (0, f.id)();
         let x = C;
-        r === rt.RecentlyPlayed ? (x = S) : r === rt.Perfect && (x = N),
+        o === it.RecentlyPlayed ? (x = I) : o === it.Perfect && (x = N),
           (0, s.useEffect)(() => {
-            gn.clear();
-          }, [r]);
-        const U = mt(r, C, S, N),
+            _n.clear();
+          }, [o]);
+        const M = lt(o, C, I, N),
           H = (function (...e) {
             return (0, s.useCallback)((t) => {
               for (const n of e) if (n && !n(t)) return !1;
               return !0;
             }, e);
-          })(c && u, h && E),
-          X = (0, O.Z)($.Gameslistapp, k && "GamepadMode"),
-          Q = (0, D.L)(),
-          j = n === tt.AchievementCompletion && p.isLoading,
-          W = x.isLoading || j;
+          })(c && u, h && y),
+          X = (0, F.Z)($.Gameslistapp, B && "GamepadMode"),
+          Q = (0, P.L)(),
+          Z = n === Je.AchievementCompletion && p.isLoading,
+          Y = x.isLoading || Z;
         return s.createElement(
-          I.p,
+          D.p,
           { navID: "Gamelist", NavigationManager: Q },
           s.createElement(
-            Fe,
+            Me,
             null,
             s.createElement(
-              Dn,
+              kn,
               null,
               s.createElement(
-                P.s,
+                k.s,
                 { className: X },
-                W &&
+                Y &&
                   s.createElement(T.V, {
-                    string: (0, F.Xx)("#Loading"),
+                    string: (0, O.Xx)("#Loading"),
                     position: "center",
                   }),
-                !W &&
+                !Y &&
                   s.createElement(
                     s.Fragment,
                     null,
-                    s.createElement(dt, { tabs: U, strTab: r, setStrTab: o }),
-                    r !== rt.RecentlyPlayed &&
+                    s.createElement(ct, { tabs: M, strTab: o, setStrTab: r }),
+                    o !== it.RecentlyPlayed &&
                       s.createElement(
                         "div",
                         { className: $.DisplayControls },
-                        s.createElement(Y, {
+                        s.createElement(z, {
                           strNameFilter: l,
                           setStrNameFilter: m,
                           className: $.FilterInput,
                         }),
-                        B && s.createElement(Bn, null),
-                        !B && r === rt.All && s.createElement(Sn, null),
-                        s.createElement(Nn, { strSort: n, setStrSort: a }),
+                        S && s.createElement(In, null),
+                        !S && o === it.All && s.createElement(Nn, null),
+                        s.createElement(An, { strSort: n, setStrSort: a }),
                       ),
                   ),
-                s.createElement(Rn, {
+                s.createElement(Ln, {
                   owned: x,
                   filter: H,
-                  sort: r === rt.RecentlyPlayed ? tt.RecentlyPlayed : n,
-                  dependencyLoading: W,
-                  tab: r,
+                  sort: o === it.RecentlyPlayed ? Je.RecentlyPlayed : n,
+                  dependencyLoading: Y,
+                  tab: o,
                 }),
               ),
             ),
           ),
         );
       }
-      function Mn(e) {
-        const t = (0, k.kD)(s.useCallback(() => new B.Z(), []));
+      function xn(e) {
+        const t = (0, B.kD)(s.useCallback(() => new S.Z(), []));
         return s.createElement(
-          r.Ub,
+          o.Ub,
           { useActiveSteamInterface: L, useStorage: t },
-          s.createElement(xn, Object.assign({}, e)),
+          s.createElement(Pn, Object.assign({}, e)),
         );
       }
     },

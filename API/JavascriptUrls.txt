@@ -223,6 +223,7 @@ ${COMMUNITY_BASE_URL}groups/SteamLabs/discussions/15/
 ${COMMUNITY_BASE_URL}groups/SteamLabs/discussions/17/
 ${COMMUNITY_BASE_URL}groups/bigpicture/discussions/4/
 ${COMMUNITY_BASE_URL}id/${m_strCustomURL}/
+${COMMUNITY_BASE_URL}id/${m_strProfileURL}/
 ${COMMUNITY_BASE_URL}id/${profile_url}
 ${COMMUNITY_BASE_URL}invites/ajaxcreate
 ${COMMUNITY_BASE_URL}invites/ajaxgetall
@@ -275,6 +276,7 @@ ${COMMUNITY_BASE_URL}profiles/${steamid}/notifications
 ${COMMUNITY_BASE_URL}profiles/${steamid}/notifications#comments
 ${COMMUNITY_BASE_URL}profiles/${steamid}/tradeoffers
 ${COMMUNITY_BASE_URL}profiles/${}
+${COMMUNITY_BASE_URL}profiles/${}/
 ${COMMUNITY_BASE_URL}profiles/${}/ajaxpostuserstatus
 ${COMMUNITY_BASE_URL}profiles/${}/friends/pending
 ${COMMUNITY_BASE_URL}profiles/${}/home
@@ -1142,6 +1144,7 @@ ${STORE_BASE_URL}account/ajaxsetcookiepreferences
 ${STORE_BASE_URL}account/ajaxsetnotificationsettings
 ${STORE_BASE_URL}account/emailoptout/app
 ${STORE_BASE_URL}account/familymanagement/join?ft=${steamid}
+${STORE_BASE_URL}account/familymanagement/join?invitation=${familyid}
 ${STORE_BASE_URL}account/familymanagement/join?invitation=${familyid}&ft=${steamid}
 ${STORE_BASE_URL}account/familymanagement?tab=requests
 ${STORE_BASE_URL}account/languagepreferences/
@@ -1328,7 +1331,6 @@ ${STORE_BASE_URL}pointssummary/
 ${STORE_BASE_URL}privacy_agreement
 ${STORE_BASE_URL}prizes/nextdraw/${}
 ${STORE_BASE_URL}prizes/view/${giveaway_id}${SNR ? _ : ""}
-${STORE_BASE_URL}profiles/${steamid}
 ${STORE_BASE_URL}promotion/ajaxclaimstickerforgenre
 ${STORE_BASE_URL}promotion/ajaxhasclaimedgenresticker
 ${STORE_BASE_URL}public/images/checkout/Cart_generic_header_logo.png

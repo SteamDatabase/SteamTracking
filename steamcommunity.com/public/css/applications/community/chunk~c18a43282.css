@@ -303,12 +303,11 @@ b {
   text-align: center;
   color: #ebebeb;
   background: #3d434d;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
   text-decoration: none;
 }
 .partnereventshared_EditPreviewButton_3NmFF:hover {
   cursor: pointer;
-  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3);
 }
 .partnereventshared_EditPreviewButton_3NmFF.partnereventshared_Delete_2GdGz {
   border: 1px solid #ca5029;
@@ -925,7 +924,7 @@ button.Primary.partnereventshared_AddSectionButton_15e-D {
   cursor: pointer;
 }
 .deckverified_DeveloperComments_Icon_2JTRY {
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzYiIGhlaWdodD0iMzYiIHZpZXdCb3g9IjAgMCAzNiAzNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMiA0VjIwVjI0TDcgMjBIMjRWNEgyWk0zNCAxMlYzMkwyOSAyOEgxMlYyNEgyOFYxMkgzNFoiIGZpbGw9IndoaXRlIi8+DQo8L3N2Zz4NCg==);
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzYiIGhlaWdodD0iMzYiIHZpZXdCb3g9IjAgMCAzNiAzNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0yIDRWMjBWMjRMNyAyMEgyNFY0SDJaTTM0IDEyVjMyTDI5IDI4SDEyVjI0SDI4VjEySDM0WiIgZmlsbD0id2hpdGUiLz4KPC9zdmc+Cg==);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 20px;

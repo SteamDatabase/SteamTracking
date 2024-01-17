@@ -4729,7 +4729,7 @@
         }
       }
       const ra = "yir_social_images";
-      var ia = a(25787),
+      var ia = a(15858),
         sa = a(93334);
       function la(e) {
         const { userYearInReview: t, steamId: a, nYear: r } = e,
@@ -6850,40 +6850,32 @@
       }
       function In(e) {
         const { gameSummary: t, index: a, userYearInReview: r } = e,
-          i = (0, n.useContext)(Pn),
-          s = W();
-        if (i.bIsUser) {
-          const e = t.appid,
-            a = r.GetYear();
-          for (let t = a; t >= 2022; --t) {
-            const r = `#steamrewind${t}_gametext_appid_${e}`,
-              i = (0, Z.Xx)(r);
-            if (r != i && (t == a || !i.includes("" + t)))
-              return n.createElement(
-                "div",
-                { className: ge.IntroLine },
-                i,
-                " ",
-              );
-          }
+          i = W(),
+          s = t.appid,
+          l = r.GetYear();
+        for (let e = l; e >= 2022; --e) {
+          const t = `#steamrewind${e}_gametext_appid_${s}`,
+            a = i(t, l);
+          if (t != a)
+            return n.createElement("div", { className: ge.IntroLine }, a, " ");
         }
-        let l;
+        let o;
         return (
           0 == a
-            ? (l = Boolean(null == t ? void 0 : t.new_this_year)
+            ? (o = Boolean(null == t ? void 0 : t.new_this_year)
                 ? t.total_playtime_percentagex100 > 1e3
                   ? "#YIR_TopGame_first_new_hooked"
                   : "#YIR_TopGame_first_new"
                 : "#YIR_TopGame_first_continued")
             : 1 == a &&
-              (l = Boolean(null == t ? void 0 : t.new_this_year)
+              (o = Boolean(null == t ? void 0 : t.new_this_year)
                 ? "#YIR_TopGame_top_new"
                 : "#YIR_TopGame_top_continued"),
-          l
+          o
             ? n.createElement(
                 "div",
                 { className: ge.IntroLine },
-                s(l, r.GetYear()),
+                i(o, r.GetYear()),
               )
             : null
         );

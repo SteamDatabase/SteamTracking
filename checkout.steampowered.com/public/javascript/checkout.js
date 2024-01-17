@@ -5151,6 +5151,18 @@ function UpdateReviewPageBillingInfoWithCurrentValues( price_data )
 				$('review_import_fee_value').style.display = 'none';
 			}
 
+			if ( price_data.formattedRecyclingFee && price_data.formattedRecyclingFee != '' )
+			{
+				$('review_recycling_fee_value').innerHTML = price_data.formattedRecyclingFee;
+				$('cart_price_summary_recycling_fee').style.display = 'block';
+				$('review_recycling_fee_value').style.display = 'block';
+			}
+			else
+			{
+				$('cart_price_summary_recycling_fee').style.display =  'none';
+				$('review_recycling_fee_value').style.display = 'none';
+			}
+
 			if ( price_data.formattedDepositApplied && price_data.formattedDepositApplied != '' )
 			{
 				$('review_deposit_value').innerHTML = price_data.formattedDepositApplied;
@@ -5162,7 +5174,6 @@ function UpdateReviewPageBillingInfoWithCurrentValues( price_data )
 				$('cart_price_summary_deposit').style.display =  'none';
 				$('review_deposit_value').style.display = 'none';
 			}
-
 
 			if ( price_data.base )
 				$('review_total_value').innerHTML = price_data.formattedTotal;

@@ -4049,9 +4049,11 @@ a.storywidget_BadgeFooter_3kBeS:hover {
   a {
   display: block;
   margin-bottom: 8px;
+  margin-left: 0;
 }
 .requirevalvepublishapproval_Title_1TI4b {
-  font-weight: bold;
+  font-weight: 500;
+  font-size: 18px;
 }
 .requirevalvepublishapproval_RequireText_rZkfY {
   color: #888;

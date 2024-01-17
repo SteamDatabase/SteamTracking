@@ -727,7 +727,7 @@
           t
             ? r.createElement(
                 "div",
-                { ref: d, className: o().SuggestionCarousel },
+                { ref: d, className: o().EventCarousel },
                 r.createElement(
                   y.ZP,
                   { feature: "steamawards_event" },

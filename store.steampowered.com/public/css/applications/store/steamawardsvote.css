@@ -303,12 +303,11 @@ b {
   text-align: center;
   color: #ebebeb;
   background: #3d434d;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
   text-decoration: none;
 }
 .partnereventshared_EditPreviewButton_3NmFF:hover {
   cursor: pointer;
-  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3);
 }
 .partnereventshared_EditPreviewButton_3NmFF.partnereventshared_Delete_2GdGz {
   border: 1px solid #ca5029;

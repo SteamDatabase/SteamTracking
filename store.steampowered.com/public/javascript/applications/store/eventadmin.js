@@ -3192,14 +3192,14 @@
         (0, s.gn)([H.aD], me.prototype, "ClearAllSolrEvents", null);
       var ue = n(15690),
         pe = n(25386),
-        _e = n(28738),
-        he = n(12251),
-        ve = n(61063);
+        _e = n(12251),
+        he = n(61063),
+        ve = n(51915);
       function ge(e) {
         const { accountID: t, locToken: n } = e,
           a = p.useMemo(() => h.K.InitFromAccountID(t), [t]),
-          [s, r] = (0, _e.Gr)(a);
-        let i =
+          { data: s } = (0, ve.IE)(t);
+        let r =
           "https://steamsupport.valvesoftware.com/account/overview/" +
           a.ConvertTo64BitString();
         return p.createElement(
@@ -3209,9 +3209,9 @@
             n,
             p.createElement(
               "a",
-              { href: i, target: o.De.IN_CLIENT ? void 0 : "_blank" },
-              Boolean(!s && r)
-                ? p.createElement(p.Fragment, null, r.persona_name)
+              { href: r, target: o.De.IN_CLIENT ? void 0 : "_blank" },
+              Boolean(s)
+                ? p.createElement(p.Fragment, null, s.m_strPlayerName)
                 : p.createElement(
                     p.Fragment,
                     null,
@@ -3226,7 +3226,7 @@
           n =
             (0, b.$1)(t.m_rtWhen) +
             " @ " +
-            (0, he.Sc)(t.m_rtWhen, { bForce24HourClock: !1 }),
+            (0, _e.Sc)(t.m_rtWhen, { bForce24HourClock: !1 }),
           a = p.createElement(ge, {
             locToken: "#EventModTile_Moderator",
             accountID: t.m_moderator,
@@ -3235,7 +3235,7 @@
           case le.k_ModReviewed:
             return p.createElement(
               "div",
-              { className: ve.ModeratorAuditActionCtn },
+              { className: he.ModeratorAuditActionCtn },
               (0, b.kQ)(
                 "#EventModTile_Action_Reviewed",
                 p.createElement("span", null, n),
@@ -3245,7 +3245,7 @@
           case le.k_ModUnreviewed:
             return p.createElement(
               "div",
-              { className: ve.ModeratorAuditActionCtn },
+              { className: he.ModeratorAuditActionCtn },
               (0, b.kQ)(
                 "#EventModTile_Action_UnReviewed",
                 p.createElement("span", null, n),
@@ -3255,7 +3255,7 @@
           case le.k_ChangeEventType:
             return p.createElement(
               "div",
-              { className: ve.ModeratorAuditActionCtn },
+              { className: he.ModeratorAuditActionCtn },
               (0, b.kQ)(
                 "#EventModTile_Action_NewEventType",
                 p.createElement("span", null, n),
@@ -3266,7 +3266,7 @@
           case le.k_UpdateSeasonTags:
             return p.createElement(
               "div",
-              { className: ve.ModeratorAuditActionCtn },
+              { className: he.ModeratorAuditActionCtn },
               (0, b.kQ)(
                 "#EventModTile_Action_SeasonTagUpdate",
                 p.createElement("span", null, n),
@@ -3277,7 +3277,7 @@
           case le.k_ModReReviewed:
             return p.createElement(
               "div",
-              { className: ve.ModeratorAuditActionCtn },
+              { className: he.ModeratorAuditActionCtn },
               (0, b.kQ)(
                 "#EventModTile_Action_ReReviewed",
                 p.createElement("span", null, n),
@@ -3287,7 +3287,7 @@
           case le.k_ModRemovedFromSteamChina:
             return p.createElement(
               "div",
-              { className: ve.ModeratorAuditActionCtn },
+              { className: he.ModeratorAuditActionCtn },
               (0, b.kQ)(
                 "#EventModTile_Action_RemoveFromSC",
                 p.createElement("span", null, n),
@@ -3297,7 +3297,7 @@
           case le.k_ModFlagAdultOnlyContent:
             return p.createElement(
               "div",
-              { className: ve.ModeratorAuditActionCtn },
+              { className: he.ModeratorAuditActionCtn },
               (0, b.kQ)(
                 "#EventModTile_Action_FlagAdultContent",
                 p.createElement("span", null, n),
@@ -3307,7 +3307,7 @@
           case le.k_ModRemoveAdultOnlyContent:
             return p.createElement(
               "div",
-              { className: ve.ModeratorAuditActionCtn },
+              { className: he.ModeratorAuditActionCtn },
               (0, b.kQ)(
                 "#EventModTile_Action_RemoveAdultContent",
                 p.createElement("span", null, n),
@@ -3317,7 +3317,7 @@
           default:
             return p.createElement(
               "div",
-              { className: ve.ModeratorAuditActionCtn },
+              { className: he.ModeratorAuditActionCtn },
               t.ToModString(),
             );
         }
@@ -3355,13 +3355,13 @@
               o &&
                 p.createElement(
                   "a",
-                  { onClick: () => n(!1), className: ve.ExpandModActions },
+                  { onClick: () => n(!1), className: he.ExpandModActions },
                   (0, b.Xx)("#EventModTile_Action_More", r - 3),
                 ),
               Boolean(!o && r > 3) &&
                 p.createElement(
                   "a",
-                  { onClick: () => n(!0), className: ve.ExpandModActions },
+                  { onClick: () => n(!0), className: he.ExpandModActions },
                   (0, b.Xx)("#EventModTile_Action_Hide"),
                 ),
             ));
@@ -4138,7 +4138,7 @@
                           "#EventModTile_LastModified",
                           (0, b.$1)(l) +
                             "@" +
-                            (0, he.Sc)(l, { bForce24HourClock: !1 }),
+                            (0, _e.Sc)(l, { bForce24HourClock: !1 }),
                         ),
                       ),
                     r &&

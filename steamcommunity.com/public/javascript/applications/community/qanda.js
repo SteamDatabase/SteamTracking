@@ -128,8 +128,8 @@
         ShortDateRange: "localdateandtime_ShortDateRange_3sqcQ",
       };
     },
-    95126: (e, t, r) => {
-      var n = {
+    95126: (e, t, n) => {
+      var r = {
         "./af": 75436,
         "./af.js": 75436,
         "./ar": 27662,
@@ -403,54 +403,274 @@
       };
       function a(e) {
         var t = s(e);
-        return r(t);
+        return n(t);
       }
       function s(e) {
-        if (!r.o(n, e)) {
+        if (!n.o(r, e)) {
           var t = new Error("Cannot find module '" + e + "'");
           throw ((t.code = "MODULE_NOT_FOUND"), t);
         }
-        return n[e];
+        return r[e];
       }
       (a.keys = function () {
-        return Object.keys(n);
+        return Object.keys(r);
       }),
         (a.resolve = s),
         (e.exports = a),
         (a.id = 95126);
     },
-    48760: (e, t, r) => {
+    73799: (e) => {
       "use strict";
-      r.d(t, { U: () => s, W: () => a });
-      var n = r(37563);
-      const a = "fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb";
-      function s(e, t) {
-        let r = ".jpg";
-        (e && "0000000000000000000000000000000000000000" !== e) || (e = a),
-          44 == e.length && ((r = e.substr(-4)), (e = e.substr(0, 40)));
-        let s = n.De.AVATAR_BASE_URL;
+      var t,
+        n = (function () {
+          function e(e, t) {
+            if ("function" != typeof e)
+              throw new TypeError(
+                "DataLoader must be constructed with a function which accepts Array<key> and returns Promise<Array<value>>, but got: " +
+                  e +
+                  ".",
+              );
+            (this._batchLoadFn = e),
+              (this._maxBatchSize = (function (e) {
+                var t = !e || !1 !== e.batch;
+                if (!t) return 1;
+                var n = e && e.maxBatchSize;
+                if (void 0 === n) return 1 / 0;
+                if ("number" != typeof n || n < 1)
+                  throw new TypeError(
+                    "maxBatchSize must be a positive number: " + n,
+                  );
+                return n;
+              })(t)),
+              (this._batchScheduleFn = (function (e) {
+                var t = e && e.batchScheduleFn;
+                if (void 0 === t) return r;
+                if ("function" != typeof t)
+                  throw new TypeError(
+                    "batchScheduleFn must be a function: " + t,
+                  );
+                return t;
+              })(t)),
+              (this._cacheKeyFn = (function (e) {
+                var t = e && e.cacheKeyFn;
+                if (void 0 === t)
+                  return function (e) {
+                    return e;
+                  };
+                if ("function" != typeof t)
+                  throw new TypeError("cacheKeyFn must be a function: " + t);
+                return t;
+              })(t)),
+              (this._cacheMap = (function (e) {
+                var t = !e || !1 !== e.cache;
+                if (!t) return null;
+                var n = e && e.cacheMap;
+                if (void 0 === n) return new Map();
+                if (null !== n) {
+                  var r = ["get", "set", "delete", "clear"].filter(
+                    function (e) {
+                      return n && "function" != typeof n[e];
+                    },
+                  );
+                  if (0 !== r.length)
+                    throw new TypeError(
+                      "Custom cacheMap missing methods: " + r.join(", "),
+                    );
+                }
+                return n;
+              })(t)),
+              (this._batch = null),
+              (this.name = (function (e) {
+                if (e && e.name) return e.name;
+                return null;
+              })(t));
+          }
+          var t = e.prototype;
+          return (
+            (t.load = function (e) {
+              if (null == e)
+                throw new TypeError(
+                  "The loader.load() function must be called with a value, but got: " +
+                    String(e) +
+                    ".",
+                );
+              var t = (function (e) {
+                  var t = e._batch;
+                  if (
+                    null !== t &&
+                    !t.hasDispatched &&
+                    t.keys.length < e._maxBatchSize
+                  )
+                    return t;
+                  var n = { hasDispatched: !1, keys: [], callbacks: [] };
+                  return (
+                    (e._batch = n),
+                    e._batchScheduleFn(function () {
+                      !(function (e, t) {
+                        if (((t.hasDispatched = !0), 0 === t.keys.length))
+                          return void s(t);
+                        var n;
+                        try {
+                          n = e._batchLoadFn(t.keys);
+                        } catch (n) {
+                          return a(
+                            e,
+                            t,
+                            new TypeError(
+                              "DataLoader must be constructed with a function which accepts Array<key> and returns Promise<Array<value>>, but the function errored synchronously: " +
+                                String(n) +
+                                ".",
+                            ),
+                          );
+                        }
+                        if (!n || "function" != typeof n.then)
+                          return a(
+                            e,
+                            t,
+                            new TypeError(
+                              "DataLoader must be constructed with a function which accepts Array<key> and returns Promise<Array<value>>, but the function did not return a Promise: " +
+                                String(n) +
+                                ".",
+                            ),
+                          );
+                        n.then(function (e) {
+                          if (!o(e))
+                            throw new TypeError(
+                              "DataLoader must be constructed with a function which accepts Array<key> and returns Promise<Array<value>>, but the function did not return a Promise of an Array: " +
+                                String(e) +
+                                ".",
+                            );
+                          if (e.length !== t.keys.length)
+                            throw new TypeError(
+                              "DataLoader must be constructed with a function which accepts Array<key> and returns Promise<Array<value>>, but the function did not return a Promise of an Array of the same length as the Array of keys.\n\nKeys:\n" +
+                                String(t.keys) +
+                                "\n\nValues:\n" +
+                                String(e),
+                            );
+                          s(t);
+                          for (var n = 0; n < t.callbacks.length; n++) {
+                            var r = e[n];
+                            r instanceof Error
+                              ? t.callbacks[n].reject(r)
+                              : t.callbacks[n].resolve(r);
+                          }
+                        }).catch(function (n) {
+                          a(e, t, n);
+                        });
+                      })(e, n);
+                    }),
+                    n
+                  );
+                })(this),
+                n = this._cacheMap,
+                r = this._cacheKeyFn(e);
+              if (n) {
+                var i = n.get(r);
+                if (i) {
+                  var l = t.cacheHits || (t.cacheHits = []);
+                  return new Promise(function (e) {
+                    l.push(function () {
+                      e(i);
+                    });
+                  });
+                }
+              }
+              t.keys.push(e);
+              var c = new Promise(function (e, n) {
+                t.callbacks.push({ resolve: e, reject: n });
+              });
+              return n && n.set(r, c), c;
+            }),
+            (t.loadMany = function (e) {
+              if (!o(e))
+                throw new TypeError(
+                  "The loader.loadMany() function must be called with Array<key> but got: " +
+                    e +
+                    ".",
+                );
+              for (var t = [], n = 0; n < e.length; n++)
+                t.push(
+                  this.load(e[n]).catch(function (e) {
+                    return e;
+                  }),
+                );
+              return Promise.all(t);
+            }),
+            (t.clear = function (e) {
+              var t = this._cacheMap;
+              if (t) {
+                var n = this._cacheKeyFn(e);
+                t.delete(n);
+              }
+              return this;
+            }),
+            (t.clearAll = function () {
+              var e = this._cacheMap;
+              return e && e.clear(), this;
+            }),
+            (t.prime = function (e, t) {
+              var n = this._cacheMap;
+              if (n) {
+                var r,
+                  a = this._cacheKeyFn(e);
+                if (void 0 === n.get(a))
+                  t instanceof Error
+                    ? (r = Promise.reject(t)).catch(function () {})
+                    : (r = Promise.resolve(t)),
+                    n.set(a, r);
+              }
+              return this;
+            }),
+            e
+          );
+        })(),
+        r =
+          "object" == typeof process && "function" == typeof process.nextTick
+            ? function (e) {
+                t || (t = Promise.resolve()),
+                  t.then(function () {
+                    process.nextTick(e);
+                  });
+              }
+            : "function" == typeof setImmediate
+            ? function (e) {
+                setImmediate(e);
+              }
+            : function (e) {
+                setTimeout(e);
+              };
+      function a(e, t, n) {
+        s(t);
+        for (var r = 0; r < t.keys.length; r++)
+          e.clear(t.keys[r]), t.callbacks[r].reject(n);
+      }
+      function s(e) {
+        if (e.cacheHits)
+          for (var t = 0; t < e.cacheHits.length; t++) e.cacheHits[t]();
+      }
+      function o(e) {
         return (
-          s ||
-            ((s = n.De.MEDIA_CDN_COMMUNITY_URL + "images/avatars/"),
-            (s += e.substr(0, 2) + "/")),
-          (s += e),
-          t && "small" != t && (s += "_" + t),
-          (s += r),
-          s
+          "object" == typeof e &&
+          null !== e &&
+          "number" == typeof e.length &&
+          (0 === e.length ||
+            (e.length > 0 &&
+              Object.prototype.hasOwnProperty.call(e, e.length - 1)))
         );
       }
+      e.exports = n;
     },
-    64936: (e, t, r) => {
+    64936: (e, t, n) => {
       "use strict";
-      r.d(t, { F_: () => u, JW: () => m, kl: () => h, zD: () => E });
-      var n = r(85556),
-        a = r(54842),
-        s = r(37485),
-        o = r.n(s),
-        i = r(47427),
-        l = r(29480),
-        d = r(37563);
-      class c {
+      n.d(t, { F_: () => m, JW: () => u, kl: () => _, zD: () => E });
+      var r = n(85556),
+        a = n(54842),
+        s = n(37485),
+        o = n.n(s),
+        i = n(47427),
+        l = n(29480),
+        c = n(37563);
+      class d {
         constructor() {
           (this.bOpenEventLandingPage = !1),
             (this.bIncludeFeaturedAsGameSource = !0),
@@ -461,10 +681,10 @@
           return !1;
         }
         get bIsFollowingEnabled() {
-          return !(0, d.h4)();
+          return !(0, c.h4)();
         }
         get bIsCuratorsEnabled() {
-          return !(0, d.h4)();
+          return !(0, c.h4)();
         }
         get bIncludeCurators() {
           return !0;
@@ -487,199 +707,193 @@
           const t = new URLSearchParams("?" == e[0] ? e.substring(1) : e);
           if (
             t.has("t") &&
-            ("dev" == d.De.WEB_UNIVERSE || "beta" == d.De.WEB_UNIVERSE)
+            ("dev" == c.De.WEB_UNIVERSE || "beta" == c.De.WEB_UNIVERSE)
           ) {
             const e = t.get("t");
-            let r = /^\d+$/.test(e) ? o().unix(Number.parseInt(e)) : o()(e);
-            (this.nOverrideDateNow = Math.floor(r.unix())),
+            let n = /^\d+$/.test(e) ? o().unix(Number.parseInt(e)) : o()(e);
+            (this.nOverrideDateNow = Math.floor(n.unix())),
               console.log(
                 "CEventCalendarDevFeatures overriding partner event time: " +
                   this.nOverrideDateNow +
                   " " +
-                  r.format(),
+                  n.format(),
               );
           }
         }
       }
-      (0, n.gn)([a.LO], c.prototype, "nOverrideDateNow", void 0);
-      const m = new c();
-      function u(e = 1) {
-        const [t, r] = i.useState(() => _()),
-          n = (0, l.T)("useTimeNowWithOverride"),
+      (0, r.gn)([a.LO], d.prototype, "nOverrideDateNow", void 0);
+      const u = new d();
+      function m(e = 1) {
+        const [t, n] = i.useState(() => p()),
+          r = (0, l.T)("useTimeNowWithOverride"),
           a = i.useCallback(() => {
-            n.token.reason || r(_());
+            r.token.reason || n(p());
           }, []);
         return (
           i.useEffect(() => {
             const t = 1e3 * e,
-              r = t - (Date.now() % t),
-              n = window.setTimeout(a, r);
+              n = t - (Date.now() % t),
+              r = window.setTimeout(a, n);
             return () => {
-              window.clearTimeout(n);
+              window.clearTimeout(r);
             };
           }, [t, e, a]),
           t
         );
       }
-      window.g_EventCalendarDevFeatures = m;
+      window.g_EventCalendarDevFeatures = u;
       const v = new Date(),
-        p = Math.floor(v.getTime() / 1e3);
-      function _() {
+        h = Math.floor(v.getTime() / 1e3);
+      function p() {
         const e = Math.floor(Date.now() / 1e3);
-        return m.nOverrideDateNow ? m.nOverrideDateNow + (e - p) : e;
+        return u.nOverrideDateNow ? u.nOverrideDateNow + (e - h) : e;
       }
-      function h() {
+      function _() {
         var e;
-        return null !== (e = m.nOverrideDateNow) && void 0 !== e ? e : p;
+        return null !== (e = u.nOverrideDateNow) && void 0 !== e ? e : h;
       }
       function E() {
-        return i.useMemo(() => h(), []);
+        return i.useMemo(() => _(), []);
       }
     },
-    28738: (e, t, r) => {
+    51915: (e, t, n) => {
       "use strict";
-      r.d(t, { Gr: () => _, Jq: () => h, y$: () => p });
-      var n = r(85556),
-        a = r(80751),
-        s = r.n(a),
-        o = r(54842),
-        i = r(47427),
-        l = r(48760),
-        d = r(35427),
-        c = r(62210),
-        m = r(16649),
-        u = r(37563);
-      class v {
-        constructor() {
-          (this.m_mapProfiles = new Map()),
-            (this.m_mapProfilesLoading = new Map()),
-            (0, o.rC)(this);
-        }
-        LoadProfiles(e, t) {
-          return (0, n.mG)(this, void 0, void 0, function* () {
-            (0, c.X)(
-              e.length <= 500,
-              "Check LoadProfiles, requesting too many steam IDs",
-            );
-            let r = e.filter(
-              (e) =>
-                !this.m_mapProfiles.has(e) && !this.m_mapProfilesLoading.has(e),
-            );
-            if (0 == r.length) return this.m_mapProfilesLoading.get(e[0]);
-            let n = u.De.COMMUNITY_BASE_URL + "actions/ajaxresolveusers",
-              a = s().get(n, {
-                params: { steamids: r.join(",") },
-                withCredentials: !0,
-                cancelToken: null == t ? void 0 : t.token,
-              });
-            r.forEach((e) => this.m_mapProfilesLoading.set(e, a));
-            let o = yield a;
-            o.data &&
-              200 == o.status &&
-              o.data.forEach((e) => {
-                (e.avatar_hash = e.avatar_url),
-                  (e.avatar_url_medium = (0, l.U)(e.avatar_url, "medium")),
-                  (e.avatar_url_full = (0, l.U)(e.avatar_url, "full")),
-                  (e.avatar_url = (0, l.U)(e.avatar_url)),
-                  this.m_mapProfiles.set(e.steamid, e),
-                  this.m_mapProfilesLoading.delete(e.steamid);
-              });
-          });
-        }
-        GetProfile(e) {
-          return this.m_mapProfiles.get(e);
-        }
-        GetProfileByAccountID(e) {
-          return this.m_mapProfiles.get(
-            d.K.InitFromAccountID(e).ConvertTo64BitString(),
-          );
-        }
-        GetProfileBySteamID(e) {
-          return this.m_mapProfiles.get(e.ConvertTo64BitString());
-        }
-        BHasProfile(e) {
-          return this.m_mapProfiles.has(e);
-        }
-        BHasProfileByAccountID(e) {
-          return this.m_mapProfiles.has(
-            d.K.InitFromAccountID(e).ConvertTo64BitString(),
-          );
-        }
-        BHasProfileBySteamID(e) {
-          return this.m_mapProfiles.has(e.ConvertTo64BitString());
-        }
-        BHasAllProfilesBySteamID(e) {
-          return !e.some((e) => !this.BHasProfileBySteamID(e));
-        }
-        GetProfileURLBySteamID(e) {
-          const t = this.GetProfileBySteamID(e);
-          return t && t.profile_url
-            ? u.De.COMMUNITY_BASE_URL + "id/" + t.profile_url
-            : u.De.COMMUNITY_BASE_URL + "profiles/" + e.ConvertTo64BitString();
-        }
-        GetPersonaNameBySteamID(e) {
-          const t = this.GetProfileBySteamID(e);
-          return t && t.persona_name ? t.persona_name : "";
-        }
-      }
-      (0, n.gn)([o.LO], v.prototype, "m_mapProfiles", void 0);
-      const p = new v();
-      function _(e) {
-        const t = i.useMemo(
-            () => (e ? ("string" == typeof e ? new d.K(e) : e) : null),
-            [e],
-          ),
-          [r, n] = (0, i.useState)(!!t && !p.BHasProfileBySteamID(t));
-        (0, i.useEffect)(() => {
-          const e = s().CancelToken.source();
-          return (
-            t &&
-              !p.BHasProfileBySteamID(t) &&
-              p
-                .LoadProfiles([t.ConvertTo64BitString()])
-                .catch((e) => {
-                  const r = (0, m.l)(e);
-                  console.error(
-                    "useUserProfile failed to load profile for " +
-                      t.ConvertTo64BitString() +
-                      ": " +
-                      r.strErrorMsg,
-                    r,
-                  );
-                })
-                .finally(() => {
-                  e.token.reason || n(!1);
-                }),
-            () => e.cancel("unmounting useUserProfile")
-          );
-        }, [e]);
-        return [r, !!t && p.GetProfileBySteamID(t)];
-      }
+      n.d(t, { IE: () => h, p2: () => p, vP: () => _ });
+      var r = n(85556),
+        a = n(73799),
+        s = n.n(a),
+        o = n(47427),
+        i = n(42718),
+        l = n(21928),
+        c = n(40057),
+        d = n(90938),
+        u = n(42411),
+        m = n(35427),
+        v = n(82182);
       function h(e) {
-        return _(i.useMemo(() => (e ? d.K.InitFromAccountID(e) : null), [e]));
+        const t = (0, c.bY)(),
+          n = o.useContext(E);
+        return (0, i.useQuery)(f(n, t, e));
       }
-      window.g_ProfileStore = p;
+      function p(e) {
+        const t = o.useRef(),
+          n = h(e);
+        return n.data
+          ? n
+          : (t.current ||
+              (t.current = new u.Pv(
+                "string" == typeof e ? new m.K(e) : m.K.InitFromAccountID(e),
+              )),
+            Object.assign(Object.assign({}, n), { data: t.current }));
+      }
+      function _(e) {
+        const t = (0, c.bY)(),
+          n = o.useContext(E);
+        return (0, i.useQueries)(e.map((e) => f(n, t, e)));
+      }
+      const E = o.createContext({
+        loadPersonaState: (e, t) =>
+          (0, r.mG)(void 0, void 0, void 0, function* () {
+            const n = yield (function (e) {
+              g ||
+                (g = new (s())(
+                  (t) =>
+                    (0, r.mG)(this, void 0, void 0, function* () {
+                      const n = l.gA.Init(v.oh);
+                      n.Body().set_steamids(
+                        t.map((e) =>
+                          m.K.InitFromAccountID(e).ConvertTo64BitString(),
+                        ),
+                      );
+                      const r = yield v.lk.GetPlayerLinkDetails(e, n);
+                      if (!r.BSuccess())
+                        throw `Failed to load player link details: ${r.GetErrorMessage()}`;
+                      const a = new Map();
+                      return (
+                        r
+                          .Body()
+                          .accounts()
+                          .forEach((e) => {
+                            const t = e.toObject();
+                            a.set(
+                              new m.K(t.public_data.steamid).GetAccountID(),
+                              t,
+                            );
+                          }),
+                        t.map((e) => a.get(e))
+                      );
+                    }),
+                  { maxBatchSize: 100 },
+                ));
+              return g;
+            })(t).load(e);
+            return (function (e, t) {
+              var n, r;
+              let a = new u.Pv(e);
+              const s = null == t ? void 0 : t.public_data,
+                o = null == t ? void 0 : t.private_data;
+              (a.m_bInitialized = !0),
+                (a.m_ePersonaState =
+                  null !== (n = null == o ? void 0 : o.persona_state) &&
+                  void 0 !== n
+                    ? n
+                    : 0),
+                (a.m_strAvatarHash = (null == s ? void 0 : s.sha_digest_avatar)
+                  ? (0, d.BH)(s.sha_digest_avatar)
+                  : u.WV),
+                (a.m_strPlayerName =
+                  null !== (r = null == s ? void 0 : s.persona_name) &&
+                  void 0 !== r
+                    ? r
+                    : e.ConvertTo64BitString()),
+                (a.m_strAccountName = null == o ? void 0 : o.account_name),
+                (null == o ? void 0 : o.persona_state_flags) &&
+                  (a.m_unPersonaStateFlags =
+                    t.private_data.persona_state_flags);
+              (null == o ? void 0 : o.game_id) &&
+                (a.m_gameid = t.private_data.game_id);
+              (null == o ? void 0 : o.game_server_ip_address) &&
+                (a.m_unGameServerIP = t.private_data.game_server_ip_address);
+              (null == o ? void 0 : o.lobby_steam_id) &&
+                (a.m_game_lobby_id = t.private_data.lobby_steam_id);
+              (null == o ? void 0 : o.game_extra_info) &&
+                (a.m_strGameExtraInfo = t.private_data.game_extra_info);
+              (null == s ? void 0 : s.profile_url) &&
+                (a.m_strProfileURL = s.profile_url);
+              return a;
+            })(m.K.InitFromAccountID(e), n);
+          }),
+      });
+      function f(e, t, n) {
+        const r = "string" == typeof n ? new m.K(n).GetAccountID() : n;
+        return {
+          queryKey: ["PlayerSummary", r],
+          queryFn: () => e.loadPersonaState(r, t),
+          enabled: !!r,
+        };
+      }
+      let g;
     },
-    80212: (e, t, r) => {
+    80212: (e, t, n) => {
       "use strict";
-      r.d(t, { X: () => m });
-      var n = r(47427),
-        a = r(90069),
-        s = r(31846),
-        o = r(37563),
-        i = r(99327),
-        l = r(77581),
-        d = r(35791);
-      function c(e) {
-        return n.createElement(
+      n.d(t, { X: () => u });
+      var r = n(47427),
+        a = n(90069),
+        s = n(31846),
+        o = n(37563),
+        i = n(99327),
+        l = n(77581),
+        c = n(35791);
+      function d(e) {
+        return r.createElement(
           a.e1,
           { onEscKeypress: e.closeModal, bDisableBackgroundDismiss: !0 },
-          n.createElement(u, { redirectURL: e.redirectURL }),
+          r.createElement(m, { redirectURL: e.redirectURL }),
         );
       }
-      function m() {
+      function u() {
         (0, a.AM)(
-          n.createElement(c, {
+          r.createElement(d, {
             ownerWin: window,
             redirectURL: window.location.href,
           }),
@@ -687,23 +901,23 @@
           { strTitle: (0, s.Xx)("#Login_SignIn") },
         );
       }
-      function u(e) {
+      function m(e) {
         const { redirectURL: t } = e,
-          [r] = (0, n.useState)(
+          [n] = (0, r.useState)(
             new l.J(o.De.WEBAPI_BASE_URL).GetAnonymousServiceTransport(),
           ),
-          [a, s] = (0, n.useState)(!1);
-        return n.createElement(
+          [a, s] = (0, r.useState)(!1);
+        return r.createElement(
           "div",
           null,
           a
-            ? n.createElement(i.pT, null)
-            : n.createElement(i.wK, {
+            ? r.createElement(i.pT, null)
+            : r.createElement(i.wK, {
                 autoFocus: !0,
-                transport: r,
+                transport: n,
                 platform: 2,
                 onComplete: (e) => {
-                  e == d.TG.k_PrimaryDomainFail
+                  e == c.TG.k_PrimaryDomainFail
                     ? s(!0)
                     : window.location.assign(t);
                 },
@@ -713,91 +927,91 @@
         );
       }
     },
-    24827: (e, t, r) => {
+    24827: (e, t, n) => {
       "use strict";
-      r.d(t, {
-        Ai: () => g,
-        H6: () => h,
-        Kj: () => p,
-        Sw: () => D,
+      n.d(t, {
+        Ai: () => f,
+        H6: () => _,
+        Kj: () => h,
+        Sw: () => y,
         Zg: () => E,
-        uv: () => f,
-        w$: () => _,
+        uv: () => g,
+        w$: () => p,
       });
-      var n = r(85556),
-        a = r(47427),
-        s = r(59728),
-        o = r(31846),
-        i = r(27605),
-        l = r(13129),
-        d = r(46984),
-        c = r(81602),
-        m = r.n(c),
-        u = r(64936);
-      const v = r(98973);
-      function p(e) {
+      var r = n(85556),
+        a = n(47427),
+        s = n(59728),
+        o = n(31846),
+        i = n(27605),
+        l = n(13129),
+        c = n(46984),
+        d = n(81602),
+        u = n.n(d),
+        m = n(64936);
+      const v = n(98973);
+      function h(e) {
         const t = v.tz.guess(),
-          r = v.unix(e).tz(t),
-          n = (0, o.CE)();
-        return n && r.locale(n), r.format("LT");
+          n = v.unix(e).tz(t),
+          r = (0, o.CE)();
+        return r && n.locale(r), n.format("LT");
       }
-      function _(e, t) {
-        const r = v.tz.guess(),
-          n = v.unix(e).tz(r),
+      function p(e, t) {
+        const n = v.tz.guess(),
+          r = v.unix(e).tz(n),
           s = (0, o.CE)();
         return (
-          s && n.locale(s),
+          s && r.locale(s),
           a.createElement(
             a.Fragment,
             null,
-            n.format("LT"),
+            r.format("LT"),
             t
               ? a.createElement(
                   "span",
-                  { "data-tooltip-text": n.format("Z") + ", " + r },
+                  { "data-tooltip-text": r.format("Z") + ", " + n },
                   " ",
-                  n.zoneAbbr(),
+                  r.zoneAbbr(),
                 )
               : null,
           )
         );
       }
-      const h = (0, i.Pi)((e) => {
+      const _ = (0, i.Pi)((e) => {
           const {
               dateAndTime: t,
-              bSingleLine: r,
-              bOnlyTime: n,
+              bSingleLine: n,
+              bOnlyTime: r,
               bOnlyDate: s,
             } = e,
-            i = !n && Boolean(t),
+            i = !r && Boolean(t),
             l = !s && Boolean(t),
-            d = i && (0, o.$1)(t),
-            c = e.stylesmodule
-              ? Object.assign(Object.assign({}, m()), e.stylesmodule)
-              : m();
-          return r
+            c = i && (0, o.$1)(t),
+            d = e.stylesmodule
+              ? Object.assign(Object.assign({}, u()), e.stylesmodule)
+              : u();
+          return n
             ? a.createElement(
                 "span",
-                { className: n || s ? c.DateAndTimeInline : c.DateAndTime },
-                i && d,
+                { className: r || s ? d.DateAndTimeInline : d.DateAndTime },
+                i && c,
                 a.createElement("span", null, " "),
-                Boolean(t && l) && _(t, !0),
+                Boolean(t && l) && p(t, !0),
               )
             : a.createElement(
                 "div",
-                { className: c.DateAndTime },
+                { className: d.DateAndTime },
                 i &&
                   a.createElement(
                     a.Fragment,
                     null,
-                    a.createElement("div", { className: c.LocalizedDate }, d),
+                    a.createElement("div", { className: d.LocalizedDate }, c),
                     " ",
-                    a.createElement("span", { className: c.At }, "@"),
+                    a.createElement("span", { className: d.At }, "@"),
                   ),
                 a.createElement(
                   "div",
-                  { className: c.LocalizedTime },
-                  Boolean(t && l) && _(t, !0),
+                  { className: d.LocalizedTime },
+                  Boolean(t && l) && p(t, !0),
                 ),
               );
         }),
@@ -805,7 +1019,7 @@
           const t = a.createElement(
             "div",
             { className: e.stylesmodule.DateToolTip },
-            a.createElement(h, {
+            a.createElement(_, {
               dateAndTime: e.rtFullDate,
               bSingleLine: !0,
               stylesmodule: e.stylesmodule,
@@ -822,117 +1036,16 @@
             e.children,
           );
         };
-      let g = class extends a.Component {
+      let f = class extends a.Component {
         render() {
           const { startDateAndTime: e, endDateAndTime: t } = this.props,
-            r = this.props.stylesmodule
-              ? Object.assign(Object.assign({}, m()), this.props.stylesmodule)
-              : m();
-          let n =
+            n = this.props.stylesmodule
+              ? Object.assign(Object.assign({}, u()), this.props.stylesmodule)
+              : u();
+          let r =
             this.props.bHideEndTime ||
             null == this.props.endDateAndTime ||
             this.props.endDateAndTime < 1;
-          if (null == e || 0 == e)
-            return a.createElement(
-              "div",
-              { className: r.DateAndTime },
-              a.createElement(
-                "span",
-                { className: r.RightSideTitles },
-                (0, o.Xx)("#EventDisplay_TimeRange"),
-              ),
-              (0, o.Xx)("#EventDisplay_TimeDisplayNone"),
-            );
-          let s = u.JW.GetTimeNowWithOverride();
-          if (n)
-            return a.createElement(
-              "div",
-              { className: r.StartDate },
-              a.createElement(
-                "div",
-                { className: r.RightSideTitles },
-                (0, o.Xx)(
-                  e < s
-                    ? "#EventDisplay_TimeInPast"
-                    : "#EventDisplay_TimeUpcoming",
-                ),
-                " ",
-              ),
-              a.createElement(h, { stylesmodule: r, dateAndTime: e }),
-            );
-          let i = e <= s && s <= t;
-          const c = (0, d.yK)(new Date(1e3 * e), new Date(1e3 * t));
-          return a.createElement(
-            "div",
-            { className: r.MultiDateAndTime },
-            a.createElement(
-              "div",
-              { className: r.StartDate },
-              a.createElement(
-                "span",
-                { className: r.RightSideTitles },
-                (0, o.Xx)(
-                  e >= s
-                    ? "#EventDisplay_TimeBeginsOn"
-                    : t >= s
-                    ? "#EventDisplay_TimeBeginsOn_Past"
-                    : "#EventDisplay_TimeBeginsOn_StartAndEnd_Past",
-                ),
-              ),
-              a.createElement(h, {
-                stylesmodule: r,
-                bSingleLine: !0,
-                dateAndTime: e,
-              }),
-            ),
-            a.createElement(
-              "div",
-              { className: r.EndDate },
-              a.createElement(
-                "span",
-                { className: r.RightSideTitles },
-                (0, o.Xx)(
-                  t < s
-                    ? "#EventDisplay_TimeEndsOn_Past"
-                    : "#EventDisplay_TimeEndsOn",
-                ),
-              ),
-              a.createElement(h, {
-                stylesmodule: r,
-                bSingleLine: !0,
-                bOnlyTime: c,
-                dateAndTime: t,
-              }),
-            ),
-            i &&
-              a.createElement(
-                "span",
-                { className: r.ActiveEvent },
-                a.createElement(
-                  "span",
-                  {
-                    className: (0, l.Z)(
-                      r.RightSideTitles,
-                      r.ActiveEventCallOut,
-                    ),
-                  },
-                  (0, o.Xx)("#Time_Now"),
-                ),
-              ),
-          );
-        }
-      };
-      g = (0, n.gn)([i.Pi], g);
-      let f = class extends a.Component {
-        render() {
-          const {
-              startDateAndTime: e,
-              endDateAndTime: t,
-              bHideEndTime: r,
-            } = this.props,
-            n = this.props.stylesmodule
-              ? Object.assign(Object.assign({}, m()), this.props.stylesmodule)
-              : m();
           if (null == e || 0 == e)
             return a.createElement(
               "div",
@@ -944,84 +1057,185 @@
               ),
               (0, o.Xx)("#EventDisplay_TimeDisplayNone"),
             );
-          const s = u.JW.GetTimeNowWithOverrideAsDate(),
-            i = u.JW.GetTimeNowWithOverride(),
-            l = (0, d.U8)(new Date(1e3 * e), s),
-            c = a.createElement(
+          let s = m.JW.GetTimeNowWithOverride();
+          if (r)
+            return a.createElement(
               "div",
-              { className: n.ShortDateAndTime },
+              { className: n.StartDate },
+              a.createElement(
+                "div",
+                { className: n.RightSideTitles },
+                (0, o.Xx)(
+                  e < s
+                    ? "#EventDisplay_TimeInPast"
+                    : "#EventDisplay_TimeUpcoming",
+                ),
+                " ",
+              ),
+              a.createElement(_, { stylesmodule: n, dateAndTime: e }),
+            );
+          let i = e <= s && s <= t;
+          const d = (0, c.yK)(new Date(1e3 * e), new Date(1e3 * t));
+          return a.createElement(
+            "div",
+            { className: n.MultiDateAndTime },
+            a.createElement(
+              "div",
+              { className: n.StartDate },
+              a.createElement(
+                "span",
+                { className: n.RightSideTitles },
+                (0, o.Xx)(
+                  e >= s
+                    ? "#EventDisplay_TimeBeginsOn"
+                    : t >= s
+                    ? "#EventDisplay_TimeBeginsOn_Past"
+                    : "#EventDisplay_TimeBeginsOn_StartAndEnd_Past",
+                ),
+              ),
+              a.createElement(_, {
+                stylesmodule: n,
+                bSingleLine: !0,
+                dateAndTime: e,
+              }),
+            ),
+            a.createElement(
+              "div",
+              { className: n.EndDate },
+              a.createElement(
+                "span",
+                { className: n.RightSideTitles },
+                (0, o.Xx)(
+                  t < s
+                    ? "#EventDisplay_TimeEndsOn_Past"
+                    : "#EventDisplay_TimeEndsOn",
+                ),
+              ),
+              a.createElement(_, {
+                stylesmodule: n,
+                bSingleLine: !0,
+                bOnlyTime: d,
+                dateAndTime: t,
+              }),
+            ),
+            i &&
+              a.createElement(
+                "span",
+                { className: n.ActiveEvent },
+                a.createElement(
+                  "span",
+                  {
+                    className: (0, l.Z)(
+                      n.RightSideTitles,
+                      n.ActiveEventCallOut,
+                    ),
+                  },
+                  (0, o.Xx)("#Time_Now"),
+                ),
+              ),
+          );
+        }
+      };
+      f = (0, r.gn)([i.Pi], f);
+      let g = class extends a.Component {
+        render() {
+          const {
+              startDateAndTime: e,
+              endDateAndTime: t,
+              bHideEndTime: n,
+            } = this.props,
+            r = this.props.stylesmodule
+              ? Object.assign(Object.assign({}, u()), this.props.stylesmodule)
+              : u();
+          if (null == e || 0 == e)
+            return a.createElement(
+              "div",
+              { className: r.DateAndTime },
+              a.createElement(
+                "span",
+                { className: r.RightSideTitles },
+                (0, o.Xx)("#EventDisplay_TimeRange"),
+              ),
+              (0, o.Xx)("#EventDisplay_TimeDisplayNone"),
+            );
+          const s = m.JW.GetTimeNowWithOverrideAsDate(),
+            i = m.JW.GetTimeNowWithOverride(),
+            l = (0, c.U8)(new Date(1e3 * e), s),
+            d = a.createElement(
+              "div",
+              { className: r.ShortDateAndTime },
               (0, o.$1)(e, l),
             );
           let v = a.createElement(
             E,
-            { rtFullDate: e, stylesmodule: n },
+            { rtFullDate: e, stylesmodule: r },
             a.createElement(
               "div",
-              { className: n.RightSideTitles },
+              { className: r.RightSideTitles },
               (0, o.Xx)(
                 e < i
                   ? "#EventDisplay_TimeInPast"
                   : "#EventDisplay_TimeUpcoming",
               ),
             ),
-            c,
+            d,
           );
           if (
             (i < e &&
-              e < i + d._H.PerWeek &&
+              e < i + c._H.PerWeek &&
               (v = a.createElement(
                 E,
-                { rtFullDate: e, stylesmodule: n },
+                { rtFullDate: e, stylesmodule: r },
                 a.createElement(
                   "div",
-                  { className: n.RightSideTitles },
+                  { className: r.RightSideTitles },
                   (0, o.kQ)(
                     "#EventDisplay_EventUpcoming_WithDateAndTime",
-                    c,
+                    d,
                     a.createElement(
                       "div",
-                      { className: n.ShortDateAndTime },
-                      _(e),
+                      { className: r.ShortDateAndTime },
+                      p(e),
                       " ",
                     ),
                   ),
                 ),
               )),
-            r || null == t || t < 1)
+            n || null == t || t < 1)
           )
             return v;
-          const p = e <= i && i <= t;
-          p &&
+          const h = e <= i && i <= t;
+          h &&
             (v = a.createElement(
               E,
-              { rtFullDate: e, className: n.ActiveEvent, stylesmodule: n },
+              { rtFullDate: e, className: r.ActiveEvent, stylesmodule: r },
               a.createElement(
                 "span",
-                { className: n.ActiveEventCallOut },
+                { className: r.ActiveEventCallOut },
                 (0, o.Xx)("#Time_Now"),
               ),
             ));
-          let h = null;
-          const g = p ? t - i : t - e;
-          if (g <= d._H.PerDay) {
+          let _ = null;
+          const f = h ? t - i : t - e;
+          if (f <= c._H.PerDay) {
             const e = a.createElement(
               "div",
-              { className: n.ShortDateAndTime },
-              (0, o.yW)(g, !0),
+              { className: r.ShortDateAndTime },
+              (0, o.yW)(f, !0),
             );
-            h =
+            _ =
               t < i
                 ? a.createElement(
                     "div",
-                    { className: n.RightSideTitles },
+                    { className: r.RightSideTitles },
                     (0, o.Xx)("#EventDisplay_TimeEndsOn_Ran"),
                     e,
                   )
                 : a.createElement(
                     "div",
-                    { className: n.RightSideTitles },
+                    { className: r.RightSideTitles },
                     (0, o.kQ)(
-                      p
+                      h
                         ? "#EventDisplay_TimeLeft"
                         : "#EventDisplay_RunsForDuration",
                       e,
@@ -1029,12 +1243,12 @@
                   );
           } else {
             const e = s.getFullYear() == new Date(1e3 * t).getFullYear();
-            h = a.createElement(
+            _ = a.createElement(
               a.Fragment,
               null,
               a.createElement(
                 "div",
-                { className: n.RightSideTitles },
+                { className: r.RightSideTitles },
                 (0, o.Xx)(
                   t < i
                     ? "#EventDisplay_TimeEndsOn_Past"
@@ -1043,80 +1257,63 @@
               ),
               a.createElement(
                 "div",
-                { className: n.ShortDateAndTime },
+                { className: r.ShortDateAndTime },
                 (0, o.$1)(t, e),
               ),
             );
           }
-          const f = a.createElement(E, { rtFullDate: t, stylesmodule: n }, h);
-          return a.createElement("div", { className: n.ShortDateRange }, v, f);
+          const g = a.createElement(E, { rtFullDate: t, stylesmodule: r }, _);
+          return a.createElement("div", { className: r.ShortDateRange }, v, g);
         }
       };
-      function D(e) {
+      function y(e) {
         const {
           rtStartDate: t,
-          rtEndDate: r,
-          strMonthFormat: n,
+          rtEndDate: n,
+          strMonthFormat: r,
           className: s,
         } = e;
         return a.createElement(
           "div",
           { className: s },
-          (function (e, t, r) {
-            const n = u.JW.GetTimeNowWithOverrideAsDate(),
+          (function (e, t, n) {
+            const r = m.JW.GetTimeNowWithOverrideAsDate(),
               a = new Date(1e3 * e),
               s = new Date(1e3 * t),
-              i = n.getFullYear() == a.getFullYear(),
-              l = n.getFullYear() == s.getFullYear(),
-              d = a.getFullYear() == s.getFullYear(),
-              c = d && a.getMonth() == s.getMonth(),
-              m = c && a.getDate() == s.getDate(),
+              i = r.getFullYear() == a.getFullYear(),
+              l = r.getFullYear() == s.getFullYear(),
+              c = a.getFullYear() == s.getFullYear(),
+              d = c && a.getMonth() == s.getMonth(),
+              u = d && a.getDate() == s.getDate(),
               v = {
                 day: "numeric",
-                month: null != r ? r : "long",
+                month: null != n ? n : "long",
                 year: i ? void 0 : "numeric",
               },
-              p = a.toLocaleDateString(o.Yt.GetPreferredLocales(), v);
-            if (m) return p;
+              h = a.toLocaleDateString(o.Yt.GetPreferredLocales(), v);
+            if (u) return h;
             {
               const e = {
                 day: "numeric",
-                month: c && l ? void 0 : null != r ? r : "long",
-                year: d ? void 0 : "numeric",
+                month: d && l ? void 0 : null != n ? n : "long",
+                year: c ? void 0 : "numeric",
               };
               return (
-                p + " - " + s.toLocaleDateString(o.Yt.GetPreferredLocales(), e)
+                h + " - " + s.toLocaleDateString(o.Yt.GetPreferredLocales(), e)
               );
             }
-          })(t, r, n),
+          })(t, n, r),
           " ",
         );
       }
-      f = (0, n.gn)([i.Pi], f);
+      g = (0, r.gn)([i.Pi], g);
     },
-    29480: (e, t, r) => {
+    16649: (e, t, n) => {
       "use strict";
-      r.d(t, { T: () => o });
-      var n = r(80751),
-        a = r.n(n),
-        s = r(47427);
-      function o(e) {
-        const t = s.useRef(a().CancelToken.source());
-        return (
-          s.useEffect(() => {
-            const r = t.current;
-            return () => r.cancel(e ? `${e}: unmounting` : "unmounting");
-          }, [e]),
-          t.current
-        );
-      }
-    },
-    16649: (e, t, r) => {
-      "use strict";
-      r.d(t, { l: () => o });
-      var n = r(80751),
-        a = r.n(n),
-        s = r(51841);
+      n.d(t, { l: () => o });
+      var r = n(80751),
+        a = n.n(r),
+        s = n(21928);
       function o(e) {
         if (a().isCancel(e))
           return { strErrorMsg: "Action Cancelled:" + e, errorCode: 52 };
@@ -1187,19 +1384,19 @@
           : { strErrorMsg: "Unknown Error: " + e, errorCode: 2 };
       }
     },
-    83313: (e, t, r) => {
+    83313: (e, t, n) => {
       "use strict";
-      r.r(t), r.d(t, { QAndARoutes: () => l, default: () => d });
-      var n = r(97504),
-        a = r(47427),
-        s = r(8285),
-        o = r(56480),
-        i = r(69406);
+      n.r(t), n.d(t, { QAndARoutes: () => l, default: () => c });
+      var r = n(97504),
+        a = n(47427),
+        s = n(8285),
+        o = n(56480),
+        i = n(69406);
       const l = {
         Dashboard: (e) => `/questions/${e}/dashboard`,
         FullPageView: (e, t) => `/questions/${e}/view/${t}`,
       };
-      const d = function (e) {
+      const c = function (e) {
         return a.createElement(
           s.rs,
           null,
@@ -1210,7 +1407,7 @@
                 config: {
                   "qanda-root": () => {
                     const { vanity_str: t } = e.match.params;
-                    return a.createElement(n.A, { vanity_str: t });
+                    return a.createElement(r.A, { vanity_str: t });
                   },
                 },
               }),
@@ -1221,8 +1418,8 @@
               a.createElement(o.d, {
                 config: {
                   "qanda-root": () => {
-                    const { vanity_str: t, session_gid: r } = e.match.params;
-                    return a.createElement(n.EI, { gidSession: r });
+                    const { vanity_str: t, session_gid: n } = e.match.params;
+                    return a.createElement(r.EI, { gidSession: n });
                   },
                 },
               }),

@@ -511,6 +511,7 @@ body.v6.SteamAwardsNominations #footer_spacer {
 .nominations_NominationPickerCtn_3I1Ga .nominations_CarouselView_3mKDm {
   backdrop-filter: blur(9px);
   background-color: rgba(0, 0, 0, 0.36);
+  min-height: 790px;
 }
 .nominations_NominationPickerCtn_3I1Ga .nominations_BottomRow_a3_pm {
   margin-top: 20px;
@@ -600,6 +601,7 @@ body.v6.SteamAwardsNominations #footer_spacer {
 }
 .nominations_NominationPickerCtn_3I1Ga .nominations_RecommendationRow_3Xwn8 {
   padding: 16px;
+  min-height: 140px;
 }
 .nominations_NominationPickerCtn_3I1Ga
   .nominations_RecommendationRow_3Xwn8
@@ -871,7 +873,7 @@ html.tablet .carousel__slider-tray-wrapper {
   color: #ffb335;
 }
 .nominations_EventCarousel_1ggzs {
-  min-height: 315px;
+  min-height: 340px;
 }
 .nominations_ShareModalBody_3gj5b {
   width: fit-content;

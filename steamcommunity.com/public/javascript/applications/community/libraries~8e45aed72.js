@@ -4,7 +4,7 @@
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
   [2837],
   {
-    10580: (e, r, t) => {
+    10309: (e, r, t) => {
       t.d(r, {
         $H: () => B,
         F2: () => g,
@@ -18,8 +18,8 @@
         tv: () => f,
       });
       var i = t(10059),
-        a = t(39435),
-        n = t(51841);
+        a = t(39087),
+        n = t(21928);
       const s = i.Message;
       class l extends s {
         static ImplementsStaticInterface() {}

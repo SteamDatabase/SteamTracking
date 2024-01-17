@@ -2121,7 +2121,7 @@
               "MarketingMessages.GetPartnerReadyToPublishMessages#1",
               (0, a.MD)(C, r),
               X,
-              { bConstMethod: !0, ePrivilege: 8, eWebAPIKeyRequirement: 2 },
+              { bConstMethod: !0, ePrivilege: 1, eWebAPIKeyRequirement: 2 },
             );
           }),
           (e.PublishPartnerMessage = function (e, r) {
@@ -2129,7 +2129,7 @@
               "MarketingMessages.PublishPartnerMessage#1",
               (0, a.MD)(x, r),
               D,
-              { bConstMethod: !0, ePrivilege: 8, eWebAPIKeyRequirement: 2 },
+              { bConstMethod: !0, ePrivilege: 1, eWebAPIKeyRequirement: 2 },
             );
           }),
           (e.GetPartnerMessagePreview = function (e, r) {
@@ -2137,7 +2137,7 @@
               "MarketingMessages.GetPartnerMessagePreview#1",
               (0, a.MD)(U, r),
               P,
-              { bConstMethod: !0, ePrivilege: 8, eWebAPIKeyRequirement: 2 },
+              { bConstMethod: !0, ePrivilege: 1, eWebAPIKeyRequirement: 2 },
             );
           });
       })(A || (A = {}));

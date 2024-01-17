@@ -45,11 +45,113 @@
         VideoContainer: "gamerecordingclip_VideoContainer_10C-F",
       };
     },
+    22520: (e, t, r) => {
+      "use strict";
+      r.d(t, { Am: () => a, kI: () => o, x3: () => s });
+      var n = r(37563),
+        i = r(48760),
+        l = r(62210);
+      const o = 0,
+        C = "061818254b2c99ac49e6626adb128ed1282a392f",
+        s = 120;
+      class a {
+        constructor(e) {
+          (this.m_bInitialized = !1), (this.m_unAppID = e);
+        }
+        get appid() {
+          return this.m_unAppID;
+        }
+        get is_initialized() {
+          return this.m_bInitialized;
+        }
+        get is_valid() {
+          return this.m_bInitialized && !!this.m_strName;
+        }
+        get name() {
+          return this.m_strName;
+        }
+        get header_image_url() {
+          return n.De.MEDIA_CDN_URL + `steam/apps/${this.m_unAppID}/header.jpg`;
+        }
+        get icon_url_no_default() {
+          return this.m_strIconURL && this.BuildAppURL(this.m_strIconURL, C);
+        }
+        get icon_url() {
+          return this.BuildAppURL(this.m_strIconURL, C);
+        }
+        get logo_url() {
+          return (
+            n.De.MEDIA_CDN_URL +
+            `steam/apps/${this.m_unAppID}/capsule_231x87.jpg`
+          );
+        }
+        get time_updated_from_server() {
+          return this.m_dtUpdatedFromServer;
+        }
+        get apptype() {
+          return this.m_eAppType;
+        }
+        BIsApplicationOrTool() {
+          return 4 == this.apptype || 2 == this.apptype;
+        }
+        BuildAppURL(e, t) {
+          return e
+            ? n.De.MEDIA_CDN_COMMUNITY_URL +
+                "images/apps/" +
+                this.appid +
+                "/" +
+                e +
+                ".jpg"
+            : (0, i.U)(t);
+        }
+        DeserializeFromMessage(e) {
+          (this.m_bInitialized = !0),
+            (this.m_strName = e.name()),
+            (this.m_strIconURL = e.icon()),
+            (this.m_dtUpdatedFromServer = new Date()),
+            (this.m_eAppType = e.app_type());
+        }
+        DeserializeFromAppOverview(e) {
+          e.icon_hash() && 1073741824 != e.app_type()
+            ? ((this.m_bInitialized = !0),
+              (this.m_strName = e.display_name()),
+              (this.m_strIconURL = e.icon_hash()),
+              (this.m_dtUpdatedFromServer = new Date()),
+              (this.m_eAppType = e.app_type()))
+            : (this.m_bInitialized = !1);
+        }
+        DeserializeFromCacheObject(e) {
+          try {
+            (this.m_strName = e.strName),
+              (this.m_strIconURL = e.strIconURL),
+              (this.m_dtUpdatedFromServer = new Date(e.strUpdatedFromServer)),
+              (this.m_eAppType = e.eAppType),
+              (this.m_bInitialized = !0);
+          } catch (e) {}
+        }
+        SerializeToCacheObject() {
+          return (
+            (0, l.X)(
+              this.m_bInitialized,
+              "Attempting to serialize an uninitialized AppInfo object for caching!",
+            ),
+            this.m_bInitialized
+              ? {
+                  strName: this.m_strName,
+                  strIconURL: this.m_strIconURL,
+                  strUpdatedFromServer: this.m_dtUpdatedFromServer.toJSON(),
+                  eAppType: this.m_eAppType,
+                }
+              : null
+          );
+        }
+      }
+    },
     37796: (e, t, r) => {
       "use strict";
       r.d(t, { N1: () => C });
       var n = r(8416),
-        i = r(8004),
+        i = r(77936),
         l = r(22520),
         o = r(62210);
       class C {
@@ -253,10 +355,10 @@
       r.d(t, {
         Mv: () => s,
         XT: () => u,
-        cY: () => m,
+        cY: () => L,
         iv: () => a,
-        jq: () => g,
-        vt: () => L,
+        jq: () => p,
+        vt: () => m,
       });
       var n = r(65255),
         i = r(77556),
@@ -393,13 +495,13 @@
       function u(e) {
         return h.Get().GetMarkerByID(e);
       }
-      function L() {
+      function m() {
         return { func: i.Jx, color: C.Blue };
       }
-      function m() {
+      function L() {
         return { func: i.Gu, color: C.White };
       }
-      function g(e) {
+      function p(e) {
         return e.toLowerCase().startsWith(o);
       }
     },
@@ -418,8 +520,8 @@
           [C, s] = (0, n.useState)(null),
           [a, c] = (0, n.useState)(null),
           [d, h] = (0, n.useState)(null),
-          [u, L] = (0, n.useState)(null),
-          [m, g] = (0, n.useState)(null);
+          [u, m] = (0, n.useState)(null),
+          [L, p] = (0, n.useState)(null);
         return {
           bLoading: e,
           bError: r,
@@ -428,15 +530,15 @@
           strSuccess: a,
           elSuccess: u,
           elError: d,
-          strThrobber: m,
+          strThrobber: L,
           fnSetLoading: t,
           fnSetError: i,
           fnSetSuccess: o,
           fnSetStrError: s,
           fnSetStrSuccess: c,
-          fnSetElSuccess: L,
+          fnSetElSuccess: m,
           fnSetElError: h,
-          fnSetThrobber: g,
+          fnSetThrobber: p,
         };
       }
       function a(e, t) {
@@ -454,12 +556,12 @@
             bError: d,
             bSuccess: h,
             strError: u,
-            strSuccess: L,
-            elSuccess: m,
-            elError: g,
-            strThrobber: w,
+            strSuccess: m,
+            elSuccess: L,
+            elError: p,
+            strThrobber: g,
           } = r;
-        return d || u || g
+        return d || u || p
           ? n.createElement(
               i.uH,
               { strTitle: t, bAlertDialog: !0, closeModal: s },
@@ -469,24 +571,24 @@
                   { className: l.ErrorStylesWithIcon },
                   u || (0, o.Xx)("#Error_ErrorCommunicatingWithNetwork"),
                 ),
-              Boolean(g) && g,
+              Boolean(p) && p,
             )
-          : h || L || m
+          : h || m || L
           ? n.createElement(
               i.uH,
               {
                 strTitle: t,
-                strDescription: L || (0, o.Xx)("#EventDisplay_Share_Success"),
+                strDescription: m || (0, o.Xx)("#EventDisplay_Share_Success"),
                 bAlertDialog: !0,
                 closeModal: s,
               },
-              n.createElement(n.Fragment, null, Boolean(m) && m),
+              n.createElement(n.Fragment, null, Boolean(L) && L),
             )
           : n.createElement(
               i.uH,
               { strTitle: t, closeModal: () => {} },
               n.createElement(C.V, {
-                string: a || w || (0, o.Xx)("#Loading"),
+                string: a || g || (0, o.Xx)("#Loading"),
                 size: "medium",
                 position: "center",
               }),
@@ -497,52 +599,52 @@
       "use strict";
       r.d(t, {
         AP: () => v,
-        B7: () => M,
-        Be: () => W,
-        Bu: () => L,
-        CJ: () => I,
-        Cd: () => S,
-        Eq: () => $,
+        B7: () => _,
+        Be: () => U,
+        Bu: () => m,
+        CJ: () => y,
+        Cd: () => Z,
+        Eq: () => J,
         FE: () => k,
         FG: () => d,
-        G7: () => U,
+        G7: () => W,
         Gu: () => s,
-        Hi: () => Q,
-        I8: () => Z,
+        Hi: () => q,
+        I8: () => A,
         Io: () => E,
         Jx: () => C,
-        KT: () => j,
+        KT: () => X,
         MC: () => h,
-        OQ: () => D,
-        Q0: () => x,
+        OQ: () => V,
+        Q0: () => B,
         Qm: () => u,
-        Ux: () => A,
-        Vy: () => m,
+        Ux: () => I,
+        Vy: () => L,
         W4: () => T,
-        WF: () => X,
+        WF: () => j,
         WN: () => f,
-        X: () => N,
-        Xd: () => H,
-        Xs: () => g,
-        ZA: () => V,
-        _O: () => w,
+        X: () => P,
+        Xd: () => G,
+        Xs: () => p,
+        ZA: () => b,
+        _O: () => g,
         _n: () => o,
-        bK: () => G,
+        bK: () => S,
         bz: () => F,
-        en: () => _,
+        en: () => M,
         ge: () => l,
-        hF: () => P,
-        hy: () => p,
+        hF: () => N,
+        hy: () => w,
         jf: () => O,
         kI: () => a,
-        n5: () => b,
+        n5: () => D,
         rZ: () => c,
-        rp: () => B,
-        sO: () => R,
-        sR: () => q,
-        u4: () => y,
-        v3: () => Y,
-        w_: () => z,
+        rp: () => x,
+        sO: () => H,
+        sR: () => $,
+        u4: () => R,
+        v3: () => z,
+        w_: () => Y,
       });
       var n = r(85556),
         i = r(47427);
@@ -737,7 +839,7 @@
           }),
         );
       }
-      function L(e) {
+      function m(e) {
         return i.createElement(
           "svg",
           {
@@ -755,7 +857,7 @@
           }),
         );
       }
-      function m(e) {
+      function L(e) {
         return i.createElement(
           "svg",
           {
@@ -771,7 +873,7 @@
           }),
         );
       }
-      function g(e) {
+      function p(e) {
         return i.createElement(
           "svg",
           {
@@ -791,7 +893,7 @@
           }),
         );
       }
-      function w(e) {
+      function g(e) {
         return i.createElement(
           "svg",
           {
@@ -807,7 +909,7 @@
           }),
         );
       }
-      function p(e) {
+      function w(e) {
         return i.createElement(
           "svg",
           {
@@ -855,7 +957,7 @@
           }),
         );
       }
-      function M(e) {
+      function _(e) {
         return i.createElement(
           "svg",
           {
@@ -871,7 +973,7 @@
           }),
         );
       }
-      function _(e) {
+      function M(e) {
         return i.createElement(
           "svg",
           {
@@ -921,7 +1023,7 @@
           }),
         );
       }
-      function Z(e) {
+      function A(e) {
         return i.createElement(
           "svg",
           {
@@ -941,7 +1043,7 @@
           }),
         );
       }
-      function B(e) {
+      function x(e) {
         return i.createElement(
           "svg",
           {
@@ -957,7 +1059,7 @@
           }),
         );
       }
-      function x(e) {
+      function B(e) {
         return i.createElement(
           "svg",
           {
@@ -973,7 +1075,7 @@
           }),
         );
       }
-      function A(e) {
+      function I(e) {
         return i.createElement(
           "svg",
           {
@@ -989,7 +1091,7 @@
           }),
         );
       }
-      function S(e) {
+      function Z(e) {
         return i.createElement(
           "svg",
           {
@@ -1007,7 +1109,7 @@
           }),
         );
       }
-      function G(e) {
+      function S(e) {
         return i.createElement(
           "svg",
           {
@@ -1026,7 +1128,7 @@
           }),
         );
       }
-      function I(e) {
+      function y(e) {
         return i.createElement(
           "svg",
           {
@@ -1044,7 +1146,7 @@
           }),
         );
       }
-      function H(e) {
+      function G(e) {
         return i.createElement(
           "svg",
           {
@@ -1060,7 +1162,7 @@
           }),
         );
       }
-      function y(e) {
+      function R(e) {
         return i.createElement(
           "svg",
           {
@@ -1076,7 +1178,7 @@
           }),
         );
       }
-      function V(e) {
+      function b(e) {
         return i.createElement(
           "svg",
           {
@@ -1092,7 +1194,7 @@
           }),
         );
       }
-      function R(e) {
+      function H(e) {
         return i.createElement(
           "svg",
           {
@@ -1108,7 +1210,7 @@
           }),
         );
       }
-      function b(e) {
+      function D(e) {
         return i.createElement(
           "svg",
           {
@@ -1124,7 +1226,7 @@
           }),
         );
       }
-      function D(e) {
+      function V(e) {
         return i.createElement(
           "svg",
           {
@@ -1158,7 +1260,7 @@
           }),
         );
       }
-      function W(e) {
+      function U(e) {
         return i.createElement(
           "svg",
           {
@@ -1208,7 +1310,7 @@
           }),
         );
       }
-      function U(e) {
+      function W(e) {
         return i.createElement(
           "svg",
           {
@@ -1226,7 +1328,7 @@
           }),
         );
       }
-      function P(e) {
+      function N(e) {
         return i.createElement(
           "svg",
           {
@@ -1242,7 +1344,7 @@
           }),
         );
       }
-      function N(e) {
+      function P(e) {
         return i.createElement(
           "svg",
           {
@@ -1258,7 +1360,7 @@
           }),
         );
       }
-      function Y(e) {
+      function z(e) {
         return i.createElement(
           "svg",
           {
@@ -1274,7 +1376,7 @@
           }),
         );
       }
-      function X(e) {
+      function j(e) {
         return i.createElement(
           "svg",
           {
@@ -1290,7 +1392,7 @@
           }),
         );
       }
-      function z(e) {
+      function Y(e) {
         return i.createElement(
           "svg",
           {
@@ -1306,7 +1408,7 @@
           }),
         );
       }
-      function j(e) {
+      function X(e) {
         return i.createElement(
           "svg",
           {
@@ -1324,7 +1426,7 @@
           }),
         );
       }
-      function q(e) {
+      function $(e) {
         return i.createElement(
           "svg",
           {
@@ -1341,7 +1443,7 @@
           }),
         );
       }
-      function Q(e) {
+      function q(e) {
         return i.createElement(
           "svg",
           {
@@ -1357,36 +1459,60 @@
           }),
         );
       }
-      function $(e) {
+      function J(e) {
         let { direction: t } = e,
-          r = (0, n._T)(e, ["direction"]),
-          l = { transform: `scaleX( ${"right" == t ? "-1" : "1"} )` };
+          r =
+            ((0, n._T)(e, ["direction"]),
+            { transform: `scaleX( ${"right" == t ? "-1" : "1"} )` });
         return i.createElement(
           "svg",
           Object.assign(
             {
-              style: l,
-              width: "36",
-              height: "36",
+              style: r,
+              xmlns: "http://www.w3.org/2000/svg",
               viewBox: "0 0 36 36",
               fill: "none",
-              xmlns: "http://www.w3.org/2000/svg",
             },
-            r,
+            e,
           ),
           i.createElement("path", {
-            d: "M6 11.1829C7.46837 9.31024 10.2216 8.92161 12.1671 10.2996L22.2622 17.5075L25.3824 15.2815C25.7128 15.0342 25.8964 14.6101 25.7862 14.2215C25.6027 13.4795 25.566 12.7021 25.7495 11.8896C26.19 9.94626 27.8787 8.39162 29.9344 8.07363C33.1648 7.54363 35.9914 9.94632 35.9914 12.9849C35.9914 15.7409 33.6786 17.9668 30.8154 17.9668C29.8243 17.9668 28.9432 17.7195 28.1355 17.2601C27.7685 17.0482 27.2912 17.0835 26.9609 17.3308L23.9508 19.486L26.9609 21.6413C27.2913 21.8886 27.7685 21.924 28.1355 21.7119C29.1635 21.1113 30.4115 20.8639 31.733 21.0759C33.9356 21.4645 35.6609 23.1958 35.9546 25.3511C36.395 28.6017 33.5685 31.3224 30.1913 30.969C27.9154 30.7218 26.0431 28.9904 25.676 26.7998C25.5659 26.0931 25.6027 25.3865 25.7862 24.7504C25.8964 24.3618 25.7128 23.9377 25.3824 23.6904L22.2622 21.4644L12.1671 28.6723C10.2215 30.0856 7.46838 29.697 6.00001 27.789L17.6368 19.4858L6 11.1829ZM30.8154 15.0695C31.99 15.0695 32.9813 14.1509 32.9813 12.9849C32.9813 11.8543 32.0268 10.9002 30.8154 10.9002C29.6408 10.9002 28.6495 11.8188 28.6495 12.9849C28.6495 14.1156 29.6039 15.0695 30.8154 15.0695ZM30.8154 28.072C31.99 28.072 32.9813 27.1534 32.9813 25.9873C32.9813 24.8567 32.0268 23.9027 30.8154 23.9027C29.6408 23.9027 28.6495 24.8213 28.6495 25.9873C28.6495 27.1179 29.6039 28.072 30.8154 28.072ZM20.4267 20.4755C20.9773 20.4755 21.4546 20.0161 21.4546 19.4861C21.4546 18.9561 20.9773 18.4967 20.4267 18.4967C19.8761 18.4967 19.3988 18.9561 19.3988 19.4861C19.3989 20.0161 19.8393 20.4755 20.4267 20.4755Z",
             fill: "currentColor",
+            d: "M8 10.7678C9.27258 9.13934 11.6587 8.8014 13.3449 9.99967L22.0939 16.2674L24.7981 14.3317C25.0845 14.1167 25.2435 13.7479 25.148 13.41C24.989 12.7648 24.9572 12.0888 25.1162 11.3822C25.498 9.6924 26.9615 8.34054 28.7431 8.06402C31.5428 7.60316 33.9925 9.69245 33.9925 12.3347C33.9925 14.7312 31.9881 16.6668 29.5067 16.6668C28.6477 16.6668 27.8841 16.4518 27.1841 16.0523C26.866 15.868 26.4524 15.8987 26.1661 16.1137L23.5574 17.9879L26.1661 19.862C26.4525 20.077 26.866 20.1078 27.1841 19.9234C28.075 19.4011 29.1566 19.186 30.302 19.3703C32.2108 19.7083 33.7061 21.2138 33.9606 23.0879C34.3424 25.9146 31.8927 28.2803 28.9658 27.9731C26.9933 27.7581 25.3707 26.2526 25.0526 24.3476C24.9571 23.7331 24.989 23.1187 25.1481 22.5656C25.2435 22.2276 25.0845 21.8589 24.7981 21.6439L22.0939 19.7082L13.3449 25.9759C11.6586 27.2049 9.27259 26.8669 8.00001 25.2078L18.0852 17.9876L8 10.7678ZM29.5067 14.1474C30.5247 14.1474 31.3838 13.3486 31.3838 12.3347C31.3838 11.3516 30.5566 10.5219 29.5067 10.5219C28.4887 10.5219 27.6296 11.3207 27.6296 12.3347C27.6296 13.3179 28.4567 14.1474 29.5067 14.1474ZM29.5067 25.4539C30.5247 25.4539 31.3838 24.6551 31.3838 23.6412C31.3838 22.658 30.5566 21.8284 29.5067 21.8284C28.4887 21.8284 27.6296 22.6272 27.6296 23.6412C27.6296 24.6243 28.4567 25.4539 29.5067 25.4539ZM20.5031 18.8482C20.9804 18.8482 21.394 18.4488 21.394 17.9879C21.394 17.527 20.9804 17.1276 20.5031 17.1276C20.0259 17.1276 19.6123 17.527 19.6123 17.9879C19.6124 18.4488 19.9941 18.8482 20.5031 18.8482Z",
           }),
-          i.createElement("path", {
-            fillRule: "evenodd",
-            clipRule: "evenodd",
-            d: "M3 14.8L3 12L2.62268e-07 12L3.8466e-07 14.8L3 14.8ZM3 20.4L3 17.6L5.07052e-07 17.6L6.29444e-07 20.4L3 20.4ZM3 26L3 23.2L7.51836e-07 23.2L8.74228e-07 26L3 26ZM3 31.6L3 28.8L9.9662e-07 28.8L1.11901e-06 31.6L3 31.6Z",
+          i.createElement("rect", {
             fill: "currentColor",
+            x: "2",
+            y: "10",
+            width: "3",
+            height: "4",
           }),
-          i.createElement("path", {
-            d: "M3 8.8L3 6L2.62268e-07 6L3.8466e-07 8.8L3 8.8Z",
+          i.createElement("rect", {
             fill: "currentColor",
+            x: "2",
+            y: "4",
+            width: "3",
+            height: "4",
+          }),
+          i.createElement("rect", {
+            fill: "currentColor",
+            x: "2",
+            y: "16",
+            width: "3",
+            height: "4",
+          }),
+          i.createElement("rect", {
+            fill: "currentColor",
+            x: "2",
+            y: "22",
+            width: "3",
+            height: "4",
+          }),
+          i.createElement("rect", {
+            fill: "currentColor",
+            x: "2",
+            y: "28",
+            width: "3",
+            height: "4",
           }),
         );
       }
@@ -1478,39 +1604,39 @@
       "use strict";
       r.r(t),
         r.d(t, {
-          GameRecordingClipContent: () => w,
-          default: () => g,
+          GameRecordingClipContent: () => g,
+          default: () => p,
           useTimelineLoaderForCommunityClip: () => f,
         });
       var n = r(85556),
         i = r(47427),
         l = r(40057),
         o = r(42718),
-        C = r(75997),
+        C = r(21928),
         s = r(6279),
         a = r(91707),
         c = r(12015),
         d = r(86357),
         h = r(14592),
         u = r(66992),
-        L = r(48081),
-        m = r(61134);
-      function g(e) {
+        m = r(48081),
+        L = r(61134);
+      function p(e) {
         const [t, r] = i.useState(!1);
         return (
           i.useEffect(() => {
-            (0, a.Vj)(new m.Z(), void 0).then(() => {
+            (0, a.Vj)(new L.Z(), void 0).then(() => {
               r(!0);
             });
           }, []),
           i.createElement(
             i.Fragment,
             null,
-            t && i.createElement(w, Object.assign({}, e)),
+            t && i.createElement(g, Object.assign({}, e)),
           )
         );
       }
-      function w(e) {
+      function g(e) {
         const { clipID: t } = e,
           r = (function (e) {
             const t = (0, l.bY)();
@@ -1534,7 +1660,7 @@
                   );
                 for (let e of l.video_ids)
                   (i && i.timeline_id == e.server_timeline_id) ||
-                    ((i = p(l, e)), o.push(i)),
+                    ((i = w(l, e)), o.push(i)),
                     i.recordings.push({
                       recording_id: e.video_manager_video_id,
                       start_offset_ms: e.start_offset_ms.toFixed(0),
@@ -1550,7 +1676,7 @@
           ? i.createElement(v, { clip: r.data })
           : i.createElement("div", { style: { color: "white" } }, "Loading...");
       }
-      function p(e, t) {
+      function w(e, t) {
         return {
           timeline_id: t.server_timeline_id,
           game_id: e.clip_id,
@@ -1585,10 +1711,10 @@
             { loader: r, fnGetManifest: n, mode: d.tP.Clips },
             i.createElement(
               "div",
-              { className: L.ClipDetails },
+              { className: m.ClipDetails },
               i.createElement(
                 "div",
-                { className: L.VideoContainer },
+                { className: m.VideoContainer },
                 i.createElement(h.i, { positionAbsolute: !1 }),
               ),
               i.createElement(u.k9, { loader: r }),

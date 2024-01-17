@@ -1568,7 +1568,11 @@ function addToCart( subid, dedupe )
 					}
 				}
 
-				window.AddItemToCart( actualSubID );
+												var navdata;
+				if ( typeof GStoreItemData !== 'undefined' )
+					navdata = $Form.find('input[name=originating_snr]').length > 0 ? GStoreItemData.GetPreviousPageNavParamObj() : GStoreItemData.GetCurrentPageNavParamObj();
+
+				window.AddItemToCart( actualSubID, undefined /* bundleid */, navdata );
 				return;
 			}
 		}
@@ -1771,7 +1775,11 @@ function addBundleToCart( bundleid, dedupe )
 		{
 			if ( typeof g_bUseNewCartAPI != 'undefined' && g_bUseNewCartAPI && typeof window.AddItemToCart !== 'undefined' )
 			{
-				window.AddItemToCart( null, bundleid );
+				var navdata;
+				if ( typeof GStoreItemData !== 'undefined' )
+					navdata = $Form.find('input[name=originating_snr]').length > 0 ? GStoreItemData.GetPreviousPageNavParamObj() : GStoreItemData.GetCurrentPageNavParamObj();
+
+				window.AddItemToCart( null, bundleid, navdata );
 				return;
 			}
 		}
@@ -1947,7 +1955,25 @@ function addAllDlcToCart()
 
 	try
 	{
-		document.forms['add_all_dlc_to_cart'].submit();
+		if ( typeof g_bUseNewCartAPI != 'undefined' && g_bUseNewCartAPI && typeof window.AddItemToCart !== 'undefined' )
+		{
+			var $Inputs = $J( 'form[name=add_all_dlc_to_cart' ).find( 'input' );
+			var rgSubIDs = [];
+
+			for ( var i = 0; i < $Inputs.length; i++ )
+			{
+				if ( $Inputs[i].name.startsWith( 'subid' ) )
+					rgSubIDs.push( JSON.parse( $Inputs[i].value ) );
+			}
+
+			window.AddItemToCart( rgSubIDs.length === 1 ? rgSubIDs[0] : rgSubIDs );
+			return;
+		}
+		else
+		{
+			document.forms['add_all_dlc_to_cart'].submit();
+		}
+
 	}
 	catch( e )
 	{

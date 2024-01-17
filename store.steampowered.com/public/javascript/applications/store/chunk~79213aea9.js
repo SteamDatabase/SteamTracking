@@ -2515,6 +2515,7 @@
           });
         if (!C && m)
           return l.createElement(x.V, {
+            className: O().OtherEvents_EventCtn,
             size: "small",
             position: "center",
             string: (0, B.Xx)("#Loading"),
@@ -3003,7 +3004,7 @@
         M = n(45557),
         y = n.n(M),
         N = n(27910),
-        C = n(25787),
+        C = n(15858),
         I = n(1485);
       class L extends r.Component {
         constructor() {

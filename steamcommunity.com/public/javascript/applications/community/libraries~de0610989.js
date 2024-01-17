@@ -696,6 +696,7 @@
             (this.m_player = null),
             (this.m_listeners = new o.G_()),
             (this.m_nDownloadFailureCount = 0),
+            (this.m_bInitailized = !1),
             (this.m_bPaused = !1),
             (this.m_bAtEnd = !1),
             (this.m_ePlayerError = n.None),
@@ -815,13 +816,15 @@
           (0, c.hB)(`CGameRecordingVideo:: perf mark ${i}`),
             performance.mark(i),
             this.m_player.Seek(r, l.tA.FromAvailableStart),
-            (this.m_bPaused = this.m_player.IsPaused());
+            (this.m_bPaused = this.m_player.IsPaused()),
+            (this.m_bInitailized = !0);
         }
         Stop() {
           this.m_listeners.Unregister(),
             this.m_player && this.m_player.Close(),
             (this.m_elVideo = null),
             (this.m_player = null),
+            (this.m_bInitailized = !1),
             (this.m_bPaused = !1),
             (this.m_bAtEnd = !1),
             (this.m_bSeekReadyToPlay = !1),
@@ -840,7 +843,7 @@
           });
         }
         IsInitialized() {
-          return !!this.m_player;
+          return this.m_bInitailized;
         }
         OnCanPlay() {
           this.m_bSeekReadyToPlay = !0;
@@ -958,7 +961,8 @@
         }
         return u;
       }
-      (0, i.gn)([a.LO], m.prototype, "m_bPaused", void 0),
+      (0, i.gn)([a.LO], m.prototype, "m_bInitailized", void 0),
+        (0, i.gn)([a.LO], m.prototype, "m_bPaused", void 0),
         (0, i.gn)([a.LO], m.prototype, "m_bAtEnd", void 0),
         (0, i.gn)([a.LO], m.prototype, "m_ePlayerError", void 0),
         (0, i.gn)([a.LO], m.prototype, "m_bUserInputNeeded", void 0),
@@ -968,6 +972,8 @@
         (0, i.gn)([a.LO], m.prototype, "m_nVideoStartTime", void 0),
         (0, i.gn)([a.LO], m.prototype, "m_nVideoDuration", void 0),
         (0, i.gn)([a.LO], m.prototype, "m_nVolume", void 0),
+        (0, i.gn)([a.aD], m.prototype, "Start", null),
+        (0, i.gn)([a.aD], m.prototype, "Stop", null),
         (0, i.gn)([s.ak], m.prototype, "OnCanPlay", null),
         (0, i.gn)([s.ak], m.prototype, "OnUserPauseChange", null),
         (0, i.gn)([s.ak], m.prototype, "OnVideoPlaying", null),
@@ -1283,42 +1289,43 @@
     91707: (e, t, r) => {
       "use strict";
       r.d(t, {
-        $H: () => u,
-        D0: () => l,
-        GL: () => o,
-        VA: () => d,
-        Vj: () => a,
-        no: () => s,
-        oV: () => c,
-        uI: () => m,
+        $H: () => h,
+        D0: () => o,
+        GL: () => s,
+        VA: () => u,
+        Vj: () => l,
+        no: () => c,
+        oV: () => m,
+        uI: () => d,
       });
       var n = r(85556),
-        i = r(30750);
-      function a(e, t, r) {
+        i = r(47427),
+        a = r(30750);
+      function l(e, t, r) {
         return (0, n.mG)(this, void 0, void 0, function* () {
           0;
         });
       }
-      function l() {
-        return (0, i.SZ)(() => null);
+      function o() {
+        return (0, i.useMemo)(() => null, []);
       }
-      function o(e) {
+      function s(e) {
         return null;
       }
-      function s(e, t, r, n, i) {
-        return null;
-      }
-      function c() {
+      function c(e, t, r, n, i) {
         return null;
       }
       function m() {
+        return null;
+      }
+      function d() {
         return 0;
       }
-      function d(e) {
+      function u(e) {
         0;
       }
-      function u(e, t) {
-        return (0, i.SZ)(() => {
+      function h(e, t) {
+        return (0, a.SZ)(() => {
           0;
         });
       }
@@ -5213,6 +5220,9 @@
               (this.m_nPendingSeekSec =
                 this.m_gameRecordingVideo.GetPlaybackTime());
         }
+        BPlayerInitialized() {
+          return this.m_gameRecordingVideo.IsInitialized();
+        }
         GetGameRecordingVideo() {
           return this.m_gameRecordingVideo;
         }
@@ -5524,7 +5534,7 @@
       r.d(t, { qS: () => P, xG: () => X });
       var n = r(10059),
         i = r(39087),
-        a = r(75997);
+        a = r(21928);
       const l = n.Message;
       class o extends l {
         static ImplementsStaticInterface() {}

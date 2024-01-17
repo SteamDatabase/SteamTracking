@@ -1698,6 +1698,16 @@ GStoreItemData = {
 				return GStoreItemData.rgNavParams['__page_default'];
 	},
 
+	GetCurrentPageNavParamObj: function()
+	{
+				return GStoreItemData.rgNavParams['__page_default_obj'];
+	},
+
+	GetPreviousPageNavParamObj: function()
+	{
+				return GStoreItemData.rgNavParams['__originating_obj'];
+	},
+
 	GetAppURL: function( unAppID, strFeatureContext, nDepth, nCuratorClanID)
 	{
 		if ( typeof GStoreItemData.rgAppData[ unAppID ] == 'object' && 'url_name' in GStoreItemData.rgAppData[ unAppID ] ) {

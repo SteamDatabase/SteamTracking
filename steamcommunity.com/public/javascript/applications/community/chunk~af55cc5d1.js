@@ -4,26 +4,6 @@
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
   [1496],
   {
-    48760: (t, a, e) => {
-      e.d(a, { U: () => r, W: () => o });
-      var n = e(37563);
-      const o = "fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb";
-      function r(t, a) {
-        let e = ".jpg";
-        (t && "0000000000000000000000000000000000000000" !== t) || (t = o),
-          44 == t.length && ((e = t.substr(-4)), (t = t.substr(0, 40)));
-        let r = n.De.AVATAR_BASE_URL;
-        return (
-          r ||
-            ((r = n.De.MEDIA_CDN_COMMUNITY_URL + "images/avatars/"),
-            (r += t.substr(0, 2) + "/")),
-          (r += t),
-          a && "small" != a && (r += "_" + a),
-          (r += e),
-          r
-        );
-      }
-    },
     93243: (t, a, e) => {
       e.d(a, { KU: () => _, sV: () => d, yh: () => h });
       var n = e(85556),
@@ -706,22 +686,6 @@
         );
       }
       window.g_CreatorHomeStore = d;
-    },
-    29480: (t, a, e) => {
-      e.d(a, { T: () => i });
-      var n = e(80751),
-        o = e.n(n),
-        r = e(47427);
-      function i(t) {
-        const a = r.useRef(o().CancelToken.source());
-        return (
-          r.useEffect(() => {
-            const e = a.current;
-            return () => e.cancel(t ? `${t}: unmounting` : "unmounting");
-          }, [t]),
-          a.current
-        );
-      }
     },
   },
 ]);

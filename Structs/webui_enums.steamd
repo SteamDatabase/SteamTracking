@@ -858,6 +858,7 @@ enum EClanAccountFlag
 	k_EClanAccountFlag_AllowPartnerEventEditor = 8;
 	k_EClanAccountFlag_AllowFAQEditing = 16;
 	k_EClanAccountFlag_AllowSalePageEditing = 32;
+	k_EClanAccountFlag_AllowSalePagePublishWithoutReview = 64;
 }
 
 enum EClanChangeType
@@ -4007,6 +4008,8 @@ enum EStoreUsabilityEvent
 	k_EStoreUsabilityEvent_IRNav = 10;
 	k_EStoreUsabilityEvent_CommunityRecommendationsNav = 11;
 	k_EStoreUsabilityEvent_DeepDiveNav = 12;
+	k_EStoreUsabilityEvent_VRNav = 13;
+	k_EStoreUsabilityEvent_DeveloperFollowedNav = 14;
 	k_EStoreUsabilityEvent_App_MoreLikeThisScroll = 1000;
 	k_EStoreUsabilityEvent_App_ViewTags = 1001;
 	k_EStoreUsabilityEvent_App_AllLanguages = 1002;
@@ -5200,6 +5203,14 @@ enum Load
 	k_Loading = 0;
 	k_LoadSuccess = 1;
 	k_LoadFailure = 2;
+}
+
+enum Notification
+{
+	Notification_Shown = 600;
+	Notification_Hidden = 601;
+	Notification_BeginInteraction = 602;
+	Notification_Destroyed = 603;
 }
 
 enum PFI_MatchingFileType
@@ -7704,6 +7715,19 @@ enum UnnamedEnumdc9256109fda0b46
 	Settings = 4;
 	Perf = 5;
 	Help = 6;
+}
+
+enum UnnamedEnumdd1b4ee475c337fd
+{
+	AnyController = 0;
+	XboxController = 1;
+	Ps3Controller = 2;
+	Ps4Controller = 3;
+	Ps5Controller = 4;
+	SwitchController = 5;
+	SteamController = 6;
+	SteamDeckNeptune = 7;
+	SteamDeckGalileo = 8;
 }
 
 enum UnnamedEnumddf21b2888ecc060
