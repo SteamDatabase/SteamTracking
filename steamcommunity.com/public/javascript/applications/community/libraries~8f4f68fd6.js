@@ -3926,7 +3926,6 @@
                     br: a.FE.readBool,
                     bw: a.Xc.writeBool,
                   },
-                  include_free: { n: 4, br: a.FE.readBool, bw: a.Xc.writeBool },
                   language: { n: 5, br: a.FE.readString, bw: a.Xc.writeString },
                   max_apps: { n: 6, br: a.FE.readUint32, bw: a.Xc.writeUint32 },
                 },
@@ -4043,7 +4042,6 @@
                     pbr: a.FE.readPackedFixed64String,
                     bw: a.Xc.writeRepeatedFixed64String,
                   },
-                  free_app: { n: 5, br: a.FE.readBool, bw: a.Xc.writeBool },
                   name: { n: 6, br: a.FE.readString, bw: a.Xc.writeString },
                   sort_as: { n: 7, br: a.FE.readString, bw: a.Xc.writeString },
                   capsule_filename: {

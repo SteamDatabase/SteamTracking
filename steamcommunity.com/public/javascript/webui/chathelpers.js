@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "8636748";
+var CLSTAMP = "8636951";
 (() => {
   var e,
     t,
@@ -14,7 +14,7 @@ var CLSTAMP = "8636748";
           "./friendsui_brazilian.json": [33109, 2862],
           "./friendsui_bulgarian.json": [5242, 8518],
           "./friendsui_czech.json": [98399, 4448],
-          "./friendsui_danish.json": [34581, 9775],
+          "./friendsui_danish.json": [5836, 9775],
           "./friendsui_dutch.json": [27904, 7575],
           "./friendsui_english.json": [67927, 8247],
           "./friendsui_finnish.json": [63907, 4596],
@@ -60,7 +60,7 @@ var CLSTAMP = "8636748";
           "./friendsui_brazilian.json": [33109, 2862],
           "./friendsui_bulgarian.json": [5242, 8518],
           "./friendsui_czech.json": [98399, 4448],
-          "./friendsui_danish.json": [34581, 9775],
+          "./friendsui_danish.json": [5836, 9775],
           "./friendsui_dutch.json": [27904, 7575],
           "./friendsui_english.json": [67927, 8247],
           "./friendsui_finnish.json": [63907, 4596],
@@ -100,7 +100,7 @@ var CLSTAMP = "8636748";
         }
         (o.keys = () => Object.keys(r)), (o.id = 9014), (e.exports = o);
       },
-      37290: (e, t, n) => {
+      10974: (e, t, n) => {
         "use strict";
         function r(e, t, n, r) {
           var o,
@@ -155,7 +155,7 @@ var CLSTAMP = "8636748";
         Object.create;
         Object.create;
         "function" == typeof SuppressedError && SuppressedError;
-        n(49429);
+        n(42793);
         var a = n(27378),
           i = n(37634);
         function s(e) {
@@ -761,7 +761,7 @@ var CLSTAMP = "8636748";
         let I = new v();
         window.ClientConnectionAPI = I;
         n(14206);
-        var L, A, f, P, M, b, F, D, N, U, G, w, O, j;
+        var L, A, f, P, b, M, F, D, N, U, G, w, O, j;
         !(function (e) {
           (e[(e.k_ETransportOK = 1)] = "k_ETransportOK"),
             (e[(e.k_ETransportRequestNotSent = 2)] =
@@ -907,7 +907,7 @@ var CLSTAMP = "8636748";
               (e[(e.k_EPersonaStateInvisible = 7)] =
                 "k_EPersonaStateInvisible"),
               (e[(e.k_EPersonaStateMax = 8)] = "k_EPersonaStateMax");
-          })(M || (M = {})),
+          })(b || (b = {})),
           (function (e) {
             (e[(e.k_EWorkshopFileTypeInvalid = -1)] =
               "k_EWorkshopFileTypeInvalid"),
@@ -944,7 +944,7 @@ var CLSTAMP = "8636748";
               (e[(e.k_EWorkshopFileTypeFirst = 0)] =
                 "k_EWorkshopFileTypeFirst"),
               (e[(e.k_EWorkshopFileTypeMax = 16)] = "k_EWorkshopFileTypeMax");
-          })(b || (b = {})),
+          })(M || (M = {})),
           (function (e) {
             (e[(e.k_ELoginState_None = 0)] = "k_ELoginState_None"),
               (e[(e.k_ELoginState_WelcomeDialog = 1)] =
@@ -2284,9 +2284,9 @@ var CLSTAMP = "8636748";
         }
         function Pe(e, ...t) {
           let n = Fe.LocalizeString(e);
-          return void 0 === n ? e : be(n, ...t);
+          return void 0 === n ? e : Me(n, ...t);
         }
-        function Me(e, ...t) {
+        function be(e, ...t) {
           let n = Fe.LocalizeString(e);
           if (void 0 === n) return e;
           let r,
@@ -2300,7 +2300,7 @@ var CLSTAMP = "8636748";
           }
           return o.push(n.substr(s)), a.createElement(a.Fragment, null, ...o);
         }
-        function be(e, ...t) {
+        function Me(e, ...t) {
           return 0 == t.length
             ? e
             : (e = e.replace(/%(?:(\d+)\$)?s/g, function (e, n) {
@@ -2765,7 +2765,7 @@ var CLSTAMP = "8636748";
                     a.createElement(
                       "div",
                       { className: "inviteLabel" },
-                      Me(
+                      be(
                         "#InviteLanding_SentToSteam_Desc",
                         a.createElement(
                           "a",
@@ -2822,7 +2822,7 @@ var CLSTAMP = "8636748";
                     a.createElement(
                       "div",
                       { className: "inviteLabel" },
-                      Me(
+                      be(
                         "#InviteLanding_SentToSteam_Desc",
                         a.createElement(
                           "a",
@@ -2903,7 +2903,7 @@ var CLSTAMP = "8636748";
               a.createElement(
                 "div",
                 { className: "inviteLabel" },
-                Me(
+                be(
                   "#bbcode_invite_description",
                   a.createElement("span", {
                     dangerouslySetInnerHTML: {
@@ -2965,7 +2965,7 @@ var CLSTAMP = "8636748";
             });
           });
       },
-      49429: (e, t, n) => {
+      42793: (e, t, n) => {
         "use strict";
         "VALVE_PUBLIC_PATH" in window
           ? (n.p = window.VALVE_PUBLIC_PATH)
@@ -3258,7 +3258,7 @@ var CLSTAMP = "8636748";
         9062: "08e7b6073fccdb4f5722",
         9263: "b679c34c88e992f06aaa",
         9753: "5377b824906ca6c60220",
-        9775: "f5319d5ca9d4f61ad424",
+        9775: "12605ec0ea1b430912f1",
         9818: "0d1645336639f5840fbd",
       }[e]),
     (s.miniCssF = (e) => {}),
@@ -3394,6 +3394,6 @@ var CLSTAMP = "8636748";
           self.webpackChunk_steam_friendsui || []);
       n.forEach(t.bind(null, 0)), (n.push = t.bind(null, n.push.bind(n)));
     })();
-  var _ = s.O(void 0, [5968], () => s(37290));
+  var _ = s.O(void 0, [5968], () => s(10974));
   _ = s.O(_);
 })();
