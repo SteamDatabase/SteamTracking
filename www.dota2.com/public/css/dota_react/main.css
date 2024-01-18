@@ -552,12 +552,12 @@ iframe.youtubeembed_PreviewYouTubeVideo_3ebu4.youtubeembed_floatRight_3NCOz {
   opacity: 1;
   background: radial-gradient(
     ellipse farthest-corner at 50% 0%,
-    rgb(60, 64, 71) 0%,
-    rgb(60, 64, 71) 50%,
-    rgb(51, 54, 61) 100%
+    #3c4047 0%,
+    #3c4047 50%,
+    #33363d 100%
   );
   transition: opacity 200ms;
-  box-shadow: 0 10px 32px 0px rgba(0, 0, 0, 0.6705882353);
+  box-shadow: 0 10px 32px 0px #000000ab;
   z-index: 1600;
   user-select: none;
   padding: 4px;
@@ -652,8 +652,8 @@ html.contextmenu_ContextMenuPopup_152-v body {
   border-top: 1px solid dimgray;
 }
 .contextmenu_contextMenuItem_3hJA5.contextmenu_NoSeparation_2ct40 {
-  border-top-color: rgba(0, 0, 0, 0);
-  border-bottom-color: rgba(0, 0, 0, 0);
+  border-top-color: transparent;
+  border-bottom-color: transparent;
 }
 .contextmenu_contextMenuItem_3hJA5.contextmenu_UpperCase_3aR4r {
   text-transform: uppercase;
@@ -735,7 +735,7 @@ html.contextmenu_ContextMenuPopup_152-v body {
 }
 .DesktopUI .contextmenu_contextMenu_4fpUg,
 .contextmenu_ForceDesktop_1w_41 .contextmenu_contextMenu_4fpUg {
-  box-shadow: 0 10px 32px 0px rgba(0, 0, 0, 0.6705882353);
+  box-shadow: 0 10px 32px 0px #000000ab;
   background: #3d4450;
   -webkit-app-region: no-drag;
 }
@@ -792,11 +792,11 @@ html.contextmenu_ContextMenuPopup_152-v body {
   top: 0;
   background: radial-gradient(
     ellipse farthest-corner at 50% 0%,
-    rgb(60, 64, 71) 0%,
-    rgb(60, 64, 71) 50%,
-    rgb(51, 54, 61) 100%
+    #3c4047 0%,
+    #3c4047 50%,
+    #33363d 100%
   );
-  box-shadow: 0 10px 32px 0px rgba(0, 0, 0, 0.6705882353);
+  box-shadow: 0 10px 32px 0px #000000ab;
   opacity: 1;
   word-wrap: break-word;
 }
@@ -862,7 +862,7 @@ html.contextmenu_ContextMenuPopup_152-v body {
   height: 10.6666666667px;
   width: 36px;
   border-radius: 5.3333333333px;
-  box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.4666666667);
+  box-shadow: inset 1px 1px 1px #0007;
   position: absolute;
   left: 2.6666666667px;
   top: 2.6666666667px;
@@ -884,7 +884,7 @@ html.contextmenu_ContextMenuPopup_152-v body {
   width: 16px;
   height: 16px;
   border-radius: 8px;
-  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.6666666667);
+  box-shadow: 0px 0px 3px #000a;
   position: absolute;
   left: 0;
   transition:
@@ -893,11 +893,7 @@ html.contextmenu_ContextMenuPopup_152-v body {
 }
 .toggle_Toggle_10LNB .toggle_ToggleSwitch_1mv6S.toggle_On_2ma00 {
   background-color: #16a1e1;
-  background-image: linear-gradient(
-    to bottom,
-    rgb(1, 199, 249),
-    rgb(48, 102, 245)
-  );
+  background-image: linear-gradient(to bottom, #01c7f9, #3066f5);
   transform: translateX(25.3333333333px);
 }
 .toggle_Toggle_10LNB .toggle_ToggleSwitch_1mv6S.toggle_Off_1sqAs {
@@ -931,7 +927,7 @@ html.contextmenu_ContextMenuPopup_152-v body {
   padding-left: 6px;
   border-radius: 2px;
   color: #dfe3e6;
-  box-shadow: inset 0 1px 1px 0px rgba(0, 0, 0, 0.6666666667);
+  box-shadow: inset 0 1px 1px 0px #000a;
 }
 .radio_Button_YWN38 {
   flex: 1;
@@ -1006,8 +1002,8 @@ html.contextmenu_ContextMenuPopup_152-v body {
   color: #e0e1e6;
   padding: 6px 8px;
   box-shadow:
-    1px 1px 8px rgba(0, 0, 0, 0.3333333333),
-    2px 2px 16px 1px rgba(0, 0, 0, 0.3333333333);
+    1px 1px 8px #0005,
+    2px 2px 16px 1px #0005;
   max-width: 300px;
   user-select: none;
   overflow: hidden;
@@ -1021,8 +1017,8 @@ html.contextmenu_ContextMenuPopup_152-v body {
   color: #e0e1e6;
   padding: 6px 8px;
   box-shadow:
-    1px 1px 8px rgba(0, 0, 0, 0.3333333333),
-    2px 2px 16px 1px rgba(0, 0, 0, 0.3333333333);
+    1px 1px 8px #0005,
+    2px 2px 16px 1px #0005;
   max-width: 300px;
   user-select: none;
 }
@@ -1219,7 +1215,7 @@ html.contextmenu_ContextMenuPopup_152-v body {
   padding-bottom: 40px;
 }
 .pagedsettings_PagedSettingsDialog_PageList_2f7v2::-webkit-scrollbar-corner {
-  background: rgba(0, 0, 0, 0);
+  background: transparent;
 }
 .pagedsettings_PagedSettingsDialog_PageList_2f7v2.pagedsettings_PagedSettingsDialog_PageList_DisableScrolling_e76ZQ {
   overflow-y: hidden;
@@ -1304,7 +1300,7 @@ html.contextmenu_ContextMenuPopup_152-v body {
 .pagedsettings_PageListSeparator_17Ug7.pagedsettings_Transparent_pR-Zm.DesktopUI,
 .DesktopUI
   .pagedsettings_PageListSeparator_17Ug7.pagedsettings_Transparent_pR-Zm {
-  background: rgba(0, 0, 0, 0);
+  background: transparent;
 }
 .pagedsettings_HidePageListButton_xhtqn {
   position: absolute;
@@ -1840,7 +1836,7 @@ button.gamepaddialog_Button_32WBl.DialogButton.BarButton,
 button.gamepaddialog_Button_32WBl.DialogButton:enabled.BarButton,
 button.gamepaddialog_Button_32WBl.DialogButton:active.BarButton,
 button.gamepaddialog_Button_32WBl.DialogButton:enabled:active:hover.BarButton {
-  background: rgba(0, 0, 0, 0.1019607843);
+  background: #0000001a;
   color: #fff;
 }
 button.gamepaddialog_Button_32WBl.DialogButton.gamepaddialog_ActiveAndUnfocused_vSuyp,
@@ -1860,7 +1856,7 @@ button.gamepaddialog_Button_32WBl.DialogButton.Primary:hover,
 button.gamepaddialog_Button_32WBl.DialogButton:enabled.Primary:hover,
 button.gamepaddialog_Button_32WBl.DialogButton:active.Primary:hover,
 button.gamepaddialog_Button_32WBl.DialogButton:enabled:active:hover.Primary:hover {
-  background: rgba(26, 160, 255, 0.4862745098);
+  background: #1aa0ff7c;
 }
 button.gamepaddialog_Button_32WBl.DialogButton.gpfocus,
 button.gamepaddialog_Button_32WBl.DialogButton:active,
@@ -2033,7 +2029,7 @@ button.gamepaddialog_Button_32WBl.DialogButton:enabled:active:hover:before {
     .gamepaddialog_Disabled_kT2gh
   ):hover {
   margin-top: -1px;
-  border-top: solid 1px rgba(0, 0, 0, 0);
+  border-top: solid 1px transparent;
 }
 .gamepaddialog_Field_BBGW4.gamepaddialog_Field_BBGW4.gamepaddialog_WithBottomSeparatorThick_3B93D
   + .gamepaddialog_Field_BBGW4.gamepaddialog_HighlightOnFocus_vOOfL.gpfocus,
@@ -2044,7 +2040,7 @@ button.gamepaddialog_Button_32WBl.DialogButton:enabled:active:hover:before {
     .gamepaddialog_Disabled_kT2gh
   ):hover {
   margin-top: -1.5px;
-  border-top: solid 1.5px rgba(0, 0, 0, 0);
+  border-top: solid 1.5px transparent;
 }
 .gamepaddialog_Field_BBGW4.gamepaddialog_HighlightOnFocus_vOOfL.gpfocus::after,
 .gamepaddialog_Field_BBGW4.gamepaddialog_HighlightOnFocus_vOOfL.gpfocuswithin::after,
@@ -2781,8 +2777,8 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Ozw- svg {
   pointer-events: none;
 }
 .gamepadslider_VerticalLineSliderHandle_102f1 {
-  background: rgba(255, 255, 255, 0.3764705882);
-  background: rgba(255, 213, 95, 0.5647058824);
+  background: #ffffff60;
+  background: #ffd55f90;
   height: 24px;
   padding-bottom: 4px;
   width: 3px;
@@ -2991,7 +2987,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Ozw- svg {
 .gamepadslider_CompoundSliderSubSlider_2o_DG.gpfocuswithin
   .gamepadslider_ParenSliderHandleContainer_2HSG5::before {
   content: "";
-  background: rgba(255, 255, 255, 0.4392156863);
+  background: #ffffff70;
   height: 27px;
   top: -4px;
   width: 11px;
@@ -3049,7 +3045,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Ozw- svg {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  background-color: rgba(255, 255, 255, 0.9333333333);
+  background-color: #ffffffee;
   color: #1a9fff;
   font-weight: bold;
   border-radius: 3px;
@@ -3527,7 +3523,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Ozw- svg {
   flex-shrink: 0;
 }
 .gamepadpagedsettings_PagedSettingDialog_ContentColumn_3nGJH {
-  background: rgba(0, 0, 0, 0);
+  background: transparent;
 }
 .gamepadpagedsettings_Up_2QzBg
   > .gamepadpagedsettings_ContentTransition_6AYoY.gamepadpagedsettings_Enter_2jEMo {
@@ -3891,7 +3887,7 @@ iframe.eventbbcodeparser_MedalTVWidget_3pE8b {
 .eventreminder_ReminderDialog_1DoQh.eventreminder_ReminderOptions_2yPmn {
   width: 300px;
   padding: 0px;
-  background: rgba(0, 0, 0, 0);
+  background: transparent;
   border-left: none;
 }
 .eventreminder_ReminderBackground_2wcJ6 {
@@ -4503,12 +4499,11 @@ b {
   text-align: center;
   color: #ebebeb;
   background: #3d434d;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
   text-decoration: none;
 }
 .partnereventshared_EditPreviewButton_1Hpie:hover {
   cursor: pointer;
-  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3);
 }
 .partnereventshared_EditPreviewButton_1Hpie.partnereventshared_Delete_2joF8 {
   border: 1px solid #ca5029;
@@ -5216,7 +5211,7 @@ button.Primary.partnereventshared_AddSectionButton_24jC1 {
 }
 .newlogindialog_Login_1sORI
   .newlogindialog_SubmitButton_1fgOu.newlogindialog_Loading_1yva_ {
-  color: rgba(0, 0, 0, 0);
+  color: transparent;
 }
 .newlogindialog_Login_1sORI
   .newlogindialog_SubmitButton_1fgOu
@@ -5424,7 +5419,7 @@ button.Primary.partnereventshared_AddSectionButton_24jC1 {
   letter-spacing: 36px;
   font-size: 28px;
   padding: 12px 26px;
-  background: rgba(0, 0, 0, 0);
+  background: transparent;
   border: none;
   outline: none;
   color: #fff;
@@ -5500,7 +5495,7 @@ button.Primary.partnereventshared_AddSectionButton_24jC1 {
     .newlogindialog_StandardLayout_23HHn
     .newlogindialog_FormContainer_2kJQe {
     min-width: 0px;
-    background-color: rgba(0, 0, 0, 0);
+    background-color: transparent;
   }
 }
 .newlogindialog_Login_1sORI
@@ -5515,7 +5510,7 @@ button.Primary.partnereventshared_AddSectionButton_24jC1 {
 .newlogindialog_Login_1sORI
   .newlogindialog_StandardLayout_23HHn.newlogindialog_Embedded_uif43
   .newlogindialog_FormContainer_2kJQe {
-  background: rgba(0, 0, 0, 0);
+  background: transparent;
   padding: 14px 0px;
 }
 @media screen and (max-width: 796px) {
@@ -5541,7 +5536,7 @@ button.Primary.partnereventshared_AddSectionButton_24jC1 {
     .IN_CLIENT
   )
   .newlogindialog_FormContainer_2kJQe {
-  background: rgba(33, 35, 40, 0.5019607843);
+  background: #21232880;
 }
 .newlogindialog_Login_1sORI
   .newlogindialog_StandardLayout_23HHn.newlogindialog_Embedded_uif43.IN_CLIENT {
@@ -5950,7 +5945,7 @@ button.Primary.partnereventshared_AddSectionButton_24jC1 {
   gap: 20px;
   padding: 10px 28px 20px;
   cursor: text;
-  border: 1px solid rgba(0, 0, 0, 0);
+  border: 1px solid transparent;
   position: relative;
 }
 .segmentedinputs_SegmentedCharacterInput_-x0mI.segmentedinputs_Disabled_3myAy {
@@ -5980,7 +5975,7 @@ button.Primary.partnereventshared_AddSectionButton_24jC1 {
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: rgba(0, 0, 0, 0.4666666667);
+  background-color: #00000077;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -6788,7 +6783,7 @@ a {
   font-style: normal;
 }
 .battlepasspage_StandardButton_16dWI {
-  border: 3px solid rgba(255, 255, 255, 0.3137254902);
+  border: 3px solid #ffffff50;
   padding: 15px 25px;
   margin: 10px 30px;
   border-radius: 5px;
@@ -7014,7 +7009,7 @@ a {
   background: linear-gradient(#f8e8b9 10%, #ffffff 90%);
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-fill-color: transparent;
   filter: drop-shadow(0px 0px 10px black);
 }
 .battlepasspage_BattlepassPage_1BKbo {
@@ -8461,7 +8456,7 @@ a {
   left: 150px;
   top: 50%;
   transform: translateY(-50%);
-  background-image: linear-gradient(to right, rgb(32, 62, 75), #070707);
+  background-image: linear-gradient(to right, #203e4b, #070707);
 }
 .battlepasspage_BattlepassPage_1BKbo .battlepasspage_SpraysHeight_38woB {
   height: 1000px;
@@ -8951,7 +8946,7 @@ a {
   margin-top: 25px;
   width: 64px;
   height: 64px;
-  border: double 2px rgba(0, 0, 0, 0);
+  border: double 2px transparent;
   border-radius: 50%;
   background-image: linear-gradient(black, black),
     linear-gradient(to right, #f8e8b9, #c79123);
@@ -9228,7 +9223,7 @@ a {
   opacity: 1;
   transition: 0.2s;
   margin-bottom: 10px;
-  border: 2px solid rgba(0, 0, 0, 0);
+  border: 2px solid transparent;
   padding-bottom: 8px;
 }
 .battlepasspage_BattlepassPage_1BKbo
@@ -10816,7 +10811,7 @@ a {
   transform: scale(0.9);
   opacity: 1;
   transition: 0.2s;
-  border-bottom: 2px solid rgba(0, 0, 0, 0);
+  border-bottom: 2px solid #00000000;
 }
 .battlepasspage_BattlepassPage_1BKbo
   .battlepasspage_SeasonalEffects_1Gk6a
@@ -10953,7 +10948,7 @@ a {
   align-items: center;
   opacity: 1;
   transition: 0.2s;
-  border-bottom: 2px solid rgba(0, 0, 0, 0);
+  border-bottom: 2px solid #00000000;
 }
 .battlepasspage_BattlepassPage_1BKbo
   .battlepasspage_RiverVials_3bqCT
@@ -11210,7 +11205,7 @@ a {
   padding: 0px;
   margin: 0px 4px;
   border: none;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
   outline: none !important;
   cursor: pointer;
 }
@@ -11237,7 +11232,7 @@ a {
   flex-wrap: wrap;
 }
 .battlepasspage_CarouselDots_WeMel * {
-  background-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
   border: 0px;
 }
 .battlepasspage_CarouselDots_WeMel .battlepasspage_Dot_C8PM6 {
@@ -11495,9 +11490,9 @@ a {
   border-bottom: 1px solid #5f4318;
   border-image: linear-gradient(
     269.92deg,
-    rgba(79, 54, 18, 0.5019607843) 0%,
-    rgba(147, 103, 37, 0.5019607843) 47.92%,
-    rgba(79, 54, 18, 0.5019607843) 100%
+    #4f361280 0%,
+    #93672580 47.92%,
+    #4f361280 100%
   );
   border-image-slice: 1;
 }
@@ -11777,11 +11772,7 @@ a {
   padding-right: 40px;
   padding-left: 0px;
   color: #ecb681;
-  background-image: linear-gradient(
-    to right,
-    rgb(0, 0, 0) 50%,
-    rgba(0, 0, 0, 0)
-  );
+  background-image: linear-gradient(to right, black 50%, rgba(0, 0, 0, 0));
   text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.8);
   z-index: 1;
 }
@@ -12537,7 +12528,7 @@ a {
   font-style: normal;
 }
 .oldheader_StandardButton_2TkOU {
-  border: 3px solid rgba(255, 255, 255, 0.3137254902);
+  border: 3px solid #ffffff50;
   padding: 15px 25px;
   margin: 10px 30px;
   border-radius: 5px;
@@ -13406,7 +13397,7 @@ a {
   font-style: normal;
 }
 .rootfooter_StandardButton_3oalD {
-  border: 3px solid rgba(255, 255, 255, 0.3137254902);
+  border: 3px solid #ffffff50;
   padding: 15px 25px;
   margin: 10px 30px;
   border-radius: 5px;
@@ -14231,7 +14222,7 @@ a {
   font-style: normal;
 }
 .bpimmortalcarouselti11_StandardButton_2r7jb {
-  border: 3px solid rgba(255, 255, 255, 0.3137254902);
+  border: 3px solid #ffffff50;
   padding: 15px 25px;
   margin: 10px 30px;
   border-radius: 5px;
@@ -14428,7 +14419,7 @@ a {
 }
 .bpimmortalcarouselti11_MajorHeaderTitle_gKjhI {
   font-family: "Reaver", serif;
-  filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.7137254902));
+  filter: drop-shadow(0px 3px 3px #000000b6);
   font-size: 38px;
   letter-spacing: 2px;
   font-weight: 600;
@@ -14499,7 +14490,7 @@ a {
 }
 .bpimmortalcarouselti11_TextColorWhite_2ziDm {
   color: #fff;
-  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.8);
+  text-shadow: 0px 2px 4px #000000cc;
 }
 .bpimmortalcarouselti11_TextColorGoldGlow_3RYPZ {
   color: #fff;
@@ -14513,63 +14504,63 @@ a {
   background: -webkit-linear-gradient(#ebcf87 10%, #ea6953 90%);
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-fill-color: transparent;
   filter: drop-shadow(0px 2px 2px #000000);
 }
 .bpimmortalcarouselti11_TextColorYellowGradient_1n90y {
   background: -webkit-linear-gradient(#ebcf87 10%, #ea6953 90%);
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-fill-color: transparent;
   filter: drop-shadow(0px 0px 5px #e1261c);
 }
 .bpimmortalcarouselti11_TextColorFVArcanaGradient_2gDxr {
   background: -webkit-linear-gradient(#e4cdff 10%, #945bd6 90%);
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-fill-color: transparent;
   filter: drop-shadow(0px 0px 5px #721fd1);
 }
 .bpimmortalcarouselti11_TextColorPurpleGradient_2iZzN {
   background: -webkit-linear-gradient(#c5c1ff 10%, #6a6cff 90%);
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-fill-color: transparent;
   filter: drop-shadow(0px 0px 5px #1b1ed4);
 }
 .bpimmortalcarouselti11_TextColorGreenGradient_3PHdv {
   background: -webkit-linear-gradient(#f8ffcd 10%, #899155 90%);
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-fill-color: transparent;
   filter: drop-shadow(0px 0px 5px #106618);
 }
 .bpimmortalcarouselti11_TextColorBlueGradient_yO1WP {
   background: -webkit-linear-gradient(#ffffff 10%, #00a3d7 90%);
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-fill-color: transparent;
   filter: drop-shadow(0px 0px 5px #0089d8);
 }
 .bpimmortalcarouselti11_TextColorPhantomGradient_2HX_g {
   background: -webkit-linear-gradient(#ffffff 10%, #8364a5 90%);
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-fill-color: transparent;
   filter: drop-shadow(0px 0px 7px #debfff);
 }
 .bpimmortalcarouselti11_TextColorBlueShadowGradient_1jntG {
   background: -webkit-linear-gradient(#ffffff 10%, #00a3d7 90%);
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-fill-color: transparent;
   filter: drop-shadow(0px 2px 2px #000000);
 }
 .bpimmortalcarouselti11_TextColorGoldGradient_1Ayvq {
   background: linear-gradient(#f8e8b9 10%, #ffffff 90%);
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-fill-color: transparent;
   filter: drop-shadow(0px 0px 10px black);
 }
 .bpimmortalcarouselti11_BattlePassImmortalCarouselTI11_1CSgm
@@ -14704,10 +14695,10 @@ a {
   padding: 0px 100px;
   background-image: linear-gradient(
     to right,
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0.7411764706) 25%,
-    rgba(0, 0, 0, 0.7411764706) 75%,
-    rgba(0, 0, 0, 0)
+    #00000000,
+    #000000bd 25%,
+    #000000bd 75%,
+    #00000000
   );
   flex-direction: column;
   align-items: center;
@@ -14805,7 +14796,7 @@ a {
   position: relative;
 }
 .bpimmortalcarouselti11_CarouselDots_1lOrU * {
-  background-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
   border: 0px;
 }
 .bpimmortalcarouselti11_CarouselDots_1lOrU .bpimmortalcarouselti11_Dot_32F8o {
@@ -14832,7 +14823,7 @@ a {
   margin: 0px 4px;
   margin-top: 10px;
   border: none;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
   outline: none !important;
   cursor: pointer;
 }
@@ -15362,7 +15353,7 @@ a {
   font-style: normal;
 }
 .bprivervialcarousel_StandardButton_2M920 {
-  border: 3px solid rgba(255, 255, 255, 0.3137254902);
+  border: 3px solid #ffffff50;
   padding: 15px 25px;
   margin: 10px 30px;
   border-radius: 5px;
@@ -15557,7 +15548,7 @@ a {
 }
 .bprivervialcarousel_MajorHeaderTitle_An-D6 {
   font-family: "Reaver", serif;
-  filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.7137254902));
+  filter: drop-shadow(0px 3px 3px #000000b6);
   font-size: 38px;
   letter-spacing: 2px;
   font-weight: 600;
@@ -15628,7 +15619,7 @@ a {
 }
 .bprivervialcarousel_TextColorWhite_2JAUV {
   color: #fff;
-  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.8);
+  text-shadow: 0px 2px 4px #000000cc;
 }
 .bprivervialcarousel_TextColorGoldGlow_3yp0U {
   color: #fff;
@@ -15642,63 +15633,63 @@ a {
   background: -webkit-linear-gradient(#ebcf87 10%, #ea6953 90%);
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-fill-color: transparent;
   filter: drop-shadow(0px 2px 2px #000000);
 }
 .bprivervialcarousel_TextColorYellowGradient_1k346 {
   background: -webkit-linear-gradient(#ebcf87 10%, #ea6953 90%);
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-fill-color: transparent;
   filter: drop-shadow(0px 0px 5px #e1261c);
 }
 .bprivervialcarousel_TextColorFVArcanaGradient_3tHCF {
   background: -webkit-linear-gradient(#e4cdff 10%, #945bd6 90%);
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-fill-color: transparent;
   filter: drop-shadow(0px 0px 5px #721fd1);
 }
 .bprivervialcarousel_TextColorPurpleGradient_2z-th {
   background: -webkit-linear-gradient(#c5c1ff 10%, #6a6cff 90%);
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-fill-color: transparent;
   filter: drop-shadow(0px 0px 5px #1b1ed4);
 }
 .bprivervialcarousel_TextColorGreenGradient_6_dzx {
   background: -webkit-linear-gradient(#f8ffcd 10%, #899155 90%);
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-fill-color: transparent;
   filter: drop-shadow(0px 0px 5px #106618);
 }
 .bprivervialcarousel_TextColorBlueGradient_1iq7d {
   background: -webkit-linear-gradient(#ffffff 10%, #00a3d7 90%);
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-fill-color: transparent;
   filter: drop-shadow(0px 0px 5px #0089d8);
 }
 .bprivervialcarousel_TextColorPhantomGradient_1wS4C {
   background: -webkit-linear-gradient(#ffffff 10%, #8364a5 90%);
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-fill-color: transparent;
   filter: drop-shadow(0px 0px 7px #debfff);
 }
 .bprivervialcarousel_TextColorBlueShadowGradient_1PaT2 {
   background: -webkit-linear-gradient(#ffffff 10%, #00a3d7 90%);
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-fill-color: transparent;
   filter: drop-shadow(0px 2px 2px #000000);
 }
 .bprivervialcarousel_TextColorGoldGradient_1ZW8m {
   background: linear-gradient(#f8e8b9 10%, #ffffff 90%);
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-fill-color: transparent;
   filter: drop-shadow(0px 0px 10px black);
 }
 .bprivervialcarousel_RiverVials_OevQC {
@@ -15742,7 +15733,7 @@ a {
   margin: 0px 4px;
   margin-top: 8px;
   border: none;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
   outline: none !important;
   cursor: pointer;
 }
@@ -15782,10 +15773,10 @@ a {
   padding: 0px 100px;
   background-image: linear-gradient(
     to right,
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0.7411764706) 25%,
-    rgba(0, 0, 0, 0.7411764706) 75%,
-    rgba(0, 0, 0, 0)
+    #00000000,
+    #000000bd 25%,
+    #000000bd 75%,
+    #00000000
   );
   flex-direction: column;
   align-items: center;
@@ -15816,7 +15807,7 @@ a {
 .bprivervialcarousel_RiverVials_OevQC
   .bprivervialcarousel_CarouselDots_2dfAh
   * {
-  background-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
   border: 0px;
 }
 .bprivervialcarousel_RiverVials_OevQC
@@ -15846,7 +15837,7 @@ a {
   align-items: center;
   opacity: 0.5;
   transition: 0.2s;
-  border-bottom: 2px solid rgba(0, 0, 0, 0);
+  border-bottom: 2px solid #00000000;
   padding-left: 5px;
   padding-right: 5px;
 }
@@ -16366,7 +16357,7 @@ a {
   font-style: normal;
 }
 .bpcountdownti11_StandardButton_3mdWp {
-  border: 3px solid rgba(255, 255, 255, 0.3137254902);
+  border: 3px solid #ffffff50;
   padding: 15px 25px;
   margin: 10px 30px;
   border-radius: 5px;
@@ -16560,7 +16551,7 @@ a {
 }
 .bpcountdownti11_MajorHeaderTitle_1nsZT {
   font-family: "Reaver", serif;
-  filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.7137254902));
+  filter: drop-shadow(0px 3px 3px #000000b6);
   font-size: 38px;
   letter-spacing: 2px;
   font-weight: 600;
@@ -16631,7 +16622,7 @@ a {
 }
 .bpcountdownti11_TextColorWhite_2CAn8 {
   color: #fff;
-  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.8);
+  text-shadow: 0px 2px 4px #000000cc;
 }
 .bpcountdownti11_TextColorGoldGlow_2Jj64 {
   color: #fff;
@@ -16645,63 +16636,63 @@ a {
   background: -webkit-linear-gradient(#ebcf87 10%, #ea6953 90%);
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-fill-color: transparent;
   filter: drop-shadow(0px 2px 2px #000000);
 }
 .bpcountdownti11_TextColorYellowGradient_1jnFa {
   background: -webkit-linear-gradient(#ebcf87 10%, #ea6953 90%);
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-fill-color: transparent;
   filter: drop-shadow(0px 0px 5px #e1261c);
 }
 .bpcountdownti11_TextColorFVArcanaGradient_f6f9h {
   background: -webkit-linear-gradient(#e4cdff 10%, #945bd6 90%);
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-fill-color: transparent;
   filter: drop-shadow(0px 0px 5px #721fd1);
 }
 .bpcountdownti11_TextColorPurpleGradient_3siPE {
   background: -webkit-linear-gradient(#c5c1ff 10%, #6a6cff 90%);
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-fill-color: transparent;
   filter: drop-shadow(0px 0px 5px #1b1ed4);
 }
 .bpcountdownti11_TextColorGreenGradient_WsI4_ {
   background: -webkit-linear-gradient(#f8ffcd 10%, #899155 90%);
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-fill-color: transparent;
   filter: drop-shadow(0px 0px 5px #106618);
 }
 .bpcountdownti11_TextColorBlueGradient_6zMtl {
   background: -webkit-linear-gradient(#ffffff 10%, #00a3d7 90%);
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-fill-color: transparent;
   filter: drop-shadow(0px 0px 5px #0089d8);
 }
 .bpcountdownti11_TextColorPhantomGradient_7RVUu {
   background: -webkit-linear-gradient(#ffffff 10%, #8364a5 90%);
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-fill-color: transparent;
   filter: drop-shadow(0px 0px 7px #debfff);
 }
 .bpcountdownti11_TextColorBlueShadowGradient_1IbTD {
   background: -webkit-linear-gradient(#ffffff 10%, #00a3d7 90%);
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-fill-color: transparent;
   filter: drop-shadow(0px 2px 2px #000000);
 }
 .bpcountdownti11_TextColorGoldGradient_gNktw {
   background: linear-gradient(#f8e8b9 10%, #ffffff 90%);
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-fill-color: transparent;
   filter: drop-shadow(0px 0px 10px black);
 }
 .bpcountdownti11_Countdown_JNwKR {
@@ -16715,8 +16706,8 @@ a {
     #ffe2b4
   );
   -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
-  filter: drop-shadow(0px 8px 8px rgba(0, 0, 0, 0.4));
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0px 8px 8px #00000066);
 }
 * {
   box-sizing: border-box;
@@ -17215,7 +17206,7 @@ a {
   font-style: normal;
 }
 .microheader_StandardButton_3mkXB {
-  border: 3px solid rgba(255, 255, 255, 0.3137254902);
+  border: 3px solid #ffffff50;
   padding: 15px 25px;
   margin: 10px 30px;
   border-radius: 5px;
@@ -17336,7 +17327,7 @@ a {
   top: 0;
   position: absolute;
   z-index: 9999;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
 }
 .microheader_MicroHeader_U7wdC .microheader_HeaderContents_RsnZk {
   width: 100%;
@@ -17423,8 +17414,8 @@ a {
   padding: 3px 0px;
   margin: 0px 20px;
   text-transform: uppercase;
-  border-top: 3px solid rgba(0, 0, 0, 0);
-  border-bottom: 3px solid rgba(0, 0, 0, 0);
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
 }
 @media (max-width: 700px) {
   .microheader_MicroHeader_U7wdC
@@ -17444,7 +17435,7 @@ a {
   .microheader_HeaderContents_RsnZk
   .microheader_NavItems_3WYkc
   .microheader_NavLink_15Uwp.microheader_GameDropdown_2cfJE {
-  border: 2px solid rgba(0, 0, 0, 0);
+  border: 2px solid transparent;
   transition-duration: 0.2s;
   padding: 12px 20px;
   margin: 0px;
@@ -17595,7 +17586,7 @@ a {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: rgba(255, 255, 255, 0.5647058824);
+  color: #ffffff90;
 }
 .microheader_MicroHeader_U7wdC
   .microheader_HeaderContents_RsnZk
@@ -17852,7 +17843,7 @@ a {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: rgba(255, 255, 255, 0.5647058824);
+  color: #ffffff90;
 }
 .microheader_MicroHeader_U7wdC
   .microheader_MobilePopup_27Q74
@@ -18401,7 +18392,7 @@ a {
   font-style: normal;
 }
 .languageselector_StandardButton_2bKb2 {
-  border: 3px solid rgba(255, 255, 255, 0.3137254902);
+  border: 3px solid #ffffff50;
   padding: 15px 25px;
   margin: 10px 30px;
   border-radius: 5px;
@@ -18514,7 +18505,7 @@ a {
   text-transform: uppercase;
   font-size: 14px;
   letter-spacing: 2px;
-  color: rgba(255, 255, 255, 0.5647058824);
+  color: #ffffff90;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -19083,7 +19074,7 @@ a {
   font-style: normal;
 }
 .battlepasspageinternational2022_StandardButton_3FsSu {
-  border: 3px solid rgba(255, 255, 255, 0.3137254902);
+  border: 3px solid #ffffff50;
   padding: 15px 25px;
   margin: 10px 30px;
   border-radius: 5px;
@@ -19280,7 +19271,7 @@ a {
 }
 .battlepasspageinternational2022_MajorHeaderTitle_1IoAf {
   font-family: "Reaver", serif;
-  filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.7137254902));
+  filter: drop-shadow(0px 3px 3px #000000b6);
   font-size: 38px;
   letter-spacing: 2px;
   font-weight: 600;
@@ -19351,7 +19342,7 @@ a {
 }
 .battlepasspageinternational2022_TextColorWhite_pVaLm {
   color: #fff;
-  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.8);
+  text-shadow: 0px 2px 4px #000000cc;
 }
 .battlepasspageinternational2022_TextColorGoldGlow_iwN-N {
   color: #fff;
@@ -19365,63 +19356,63 @@ a {
   background: -webkit-linear-gradient(#ebcf87 10%, #ea6953 90%);
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-fill-color: transparent;
   filter: drop-shadow(0px 2px 2px #000000);
 }
 .battlepasspageinternational2022_TextColorYellowGradient_Fm6A9 {
   background: -webkit-linear-gradient(#ebcf87 10%, #ea6953 90%);
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-fill-color: transparent;
   filter: drop-shadow(0px 0px 5px #e1261c);
 }
 .battlepasspageinternational2022_TextColorFVArcanaGradient_3Ylcj {
   background: -webkit-linear-gradient(#e4cdff 10%, #945bd6 90%);
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-fill-color: transparent;
   filter: drop-shadow(0px 0px 5px #721fd1);
 }
 .battlepasspageinternational2022_TextColorPurpleGradient_2kPSZ {
   background: -webkit-linear-gradient(#c5c1ff 10%, #6a6cff 90%);
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-fill-color: transparent;
   filter: drop-shadow(0px 0px 5px #1b1ed4);
 }
 .battlepasspageinternational2022_TextColorGreenGradient_BprGh {
   background: -webkit-linear-gradient(#f8ffcd 10%, #899155 90%);
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-fill-color: transparent;
   filter: drop-shadow(0px 0px 5px #106618);
 }
 .battlepasspageinternational2022_TextColorBlueGradient_1LBz6 {
   background: -webkit-linear-gradient(#ffffff 10%, #00a3d7 90%);
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-fill-color: transparent;
   filter: drop-shadow(0px 0px 5px #0089d8);
 }
 .battlepasspageinternational2022_TextColorPhantomGradient_20-8v {
   background: -webkit-linear-gradient(#ffffff 10%, #8364a5 90%);
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-fill-color: transparent;
   filter: drop-shadow(0px 0px 7px #debfff);
 }
 .battlepasspageinternational2022_TextColorBlueShadowGradient_dOSaK {
   background: -webkit-linear-gradient(#ffffff 10%, #00a3d7 90%);
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-fill-color: transparent;
   filter: drop-shadow(0px 2px 2px #000000);
 }
 .battlepasspageinternational2022_TextColorGoldGradient_FluGY {
   background: linear-gradient(#f8e8b9 10%, #ffffff 90%);
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-fill-color: transparent;
   filter: drop-shadow(0px 0px 10px black);
 }
 .battlepasspageinternational2022_BattlepassPage2022_2MNrt {
@@ -19629,7 +19620,7 @@ a {
   .battlepasspageinternational2022_BPPurchaseBody_3iwtB {
   margin-top: 1.25em;
   max-width: 790px;
-  color: rgba(255, 255, 255, 0.7137254902);
+  color: #ffffffb6;
   text-align: center;
   font-size: 16px;
 }
@@ -19681,7 +19672,7 @@ a {
   .battlepasspageinternational2022_CountdownPreHeader_1jvN9 {
   background: -webkit-linear-gradient(#ebcf87 10%, #ea6953 90%);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-fill-color: transparent;
   font-size: 20;
   font-size: clamp(20px, -0.4255319149vw + 28.170212766px, 24px);
   margin-top: 1em;
@@ -19734,7 +19725,7 @@ a {
   font-size: 18px;
   font-weight: 600;
   background: linear-gradient(90deg, #ea6953 0%, #952e46 100%);
-  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3411764706);
+  box-shadow: 0px 6px 10px #00000057;
   border-top: 2px solid #ffa192;
   letter-spacing: 1px;
   transition: 0.15s;
@@ -19754,7 +19745,7 @@ a {
   .battlepasspageinternational2022_KeepUpHeader_2LYPo {
   background: -webkit-linear-gradient(#ebcf87 10%, #ea6953 90%);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-fill-color: transparent;
   font-size: 20;
   font-size: clamp(20px, -0.6382978723vw + 32.2553191489px, 26px);
   margin-top: 2em;
@@ -19831,11 +19822,7 @@ a {
   letter-spacing: 1px;
   border: 3px solid #c14c4d;
   border-radius: 10px;
-  background: linear-gradient(
-    to right,
-    rgba(234, 106, 83, 0.2509803922),
-    rgba(149, 46, 70, 0.2509803922)
-  );
+  background: linear-gradient(to right, #ea6a5340, #952e4640);
   transition: 0.15s;
   transition-property: filter, transform, box-shadow, background;
   animation-timing-function: ease-in-out;
@@ -19868,13 +19855,9 @@ a {
   .battlepasspageinternational2022_JumpLinkButtons_tlnLI
   .battlepasspageinternational2022_JumpLinkLeft_3zkJh:hover {
   transform: translateY(-2px);
-  filter: drop-shadow(0px 0px 10px rgba(225, 38, 28, 0.7176470588));
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3882352941);
-  background: linear-gradient(
-    to right,
-    rgba(234, 106, 83, 0.3490196078),
-    rgba(149, 46, 70, 0.3490196078)
-  );
+  filter: drop-shadow(0px 0px 10px #e1261cb7);
+  box-shadow: 0px 4px 6px #00000063;
+  background: linear-gradient(to right, #ea6a5359, #952e4659);
 }
 .battlepasspageinternational2022_BattlepassPage2022_2MNrt
   .battlepasspageinternational2022_BPNavBarFixed_3GcdW
@@ -19895,11 +19878,7 @@ a {
   pointer-events: auto;
   border: 3px solid #3195ad;
   border-radius: 10px;
-  background: linear-gradient(
-    to right,
-    rgba(52, 204, 195, 0.2509803922),
-    rgba(46, 87, 149, 0.2509803922)
-  );
+  background: linear-gradient(to right, #34ccc340, #2e579540);
 }
 .battlepasspageinternational2022_BattlepassPage2022_2MNrt
   .battlepasspageinternational2022_BPNavBarFixed_3GcdW
@@ -19927,13 +19906,9 @@ a {
   .battlepasspageinternational2022_JumpLinkButtons_tlnLI
   .battlepasspageinternational2022_JumpLinkRight_28KSd:hover {
   transform: translateY(-2px);
-  filter: drop-shadow(0px 0px 10px rgba(0, 138, 216, 0.7176470588));
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3882352941);
-  background: linear-gradient(
-    to right,
-    rgba(52, 204, 195, 0.3490196078),
-    rgba(46, 87, 149, 0.3490196078)
-  );
+  filter: drop-shadow(0px 0px 10px #008ad8b7);
+  box-shadow: 0px 4px 6px #00000063;
+  background: linear-gradient(to right, #34ccc359, #2e579559);
 }
 .battlepasspageinternational2022_BattlepassPage2022_2MNrt
   .battlepasspageinternational2022_PrizePoolContainer_1efaU {
@@ -19965,7 +19940,7 @@ a {
   .battlepasspageinternational2022_PrizePoolTitle_2jjmP {
   background: -webkit-linear-gradient(#ebcf87 10%, #ea6953 90%);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-fill-color: transparent;
   margin-bottom: 9px;
   text-align: left;
   font-family: "Radiance", sans-serif;
@@ -19991,7 +19966,7 @@ a {
   .battlepasspageinternational2022_PrizePoolValue_2-5to {
   background: -webkit-linear-gradient(#ebcf87 10%, #ea6953 90%);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-fill-color: transparent;
   justify-self: start;
   align-self: center;
   height: 100%;
@@ -20001,7 +19976,7 @@ a {
   margin-left: 20px;
   font-size: 70px;
   letter-spacing: 2px;
-  filter: drop-shadow(0px 0px 10px rgba(225, 38, 28, 0.8352941176));
+  filter: drop-shadow(0px 0px 10px #e1261cd5);
 }
 .battlepasspageinternational2022_BattlepassPage2022_2MNrt
   .battlepasspageinternational2022_StickersHeight_n299E {
@@ -20160,7 +20135,7 @@ a {
   font-size: 18px;
   font-weight: 600;
   background: linear-gradient(90deg, #ea6953 0%, #952e46 100%);
-  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3411764706);
+  box-shadow: 0px 6px 10px #00000057;
   border-top: 2px solid #ffa192;
   letter-spacing: 1px;
   transition: 0.15s;
@@ -20772,7 +20747,7 @@ a {
 .battlepasspageinternational2022_BattlepassPage2022_2MNrt
   .battlepasspageinternational2022_VoidArcana_1pvGw
   .battlepasspageinternational2022_VoidArcanaLogo_2F3rh {
-  filter: drop-shadow(0px 0px 10px rgba(47, 129, 0, 0.6862745098));
+  filter: drop-shadow(0px 0px 10px #2f8100af);
 }
 .battlepasspageinternational2022_BattlepassPage2022_2MNrt
   .battlepasspageinternational2022_VoidLoreHeight_i946C {
@@ -20884,7 +20859,7 @@ a {
   .battlepasspageinternational2022_PhantomLogoImg_1JnU6 {
   width: 800px;
   height: auto;
-  filter: drop-shadow(0px 0px 10px rgba(119, 184, 233, 0.6862745098));
+  filter: drop-shadow(0px 0px 10px #77b8e9af);
 }
 .battlepasspageinternational2022_BattlepassPage2022_2MNrt
   .battlepasspageinternational2022_PhantomLoreHeight_8A-xS {
@@ -21077,7 +21052,7 @@ a {
   .battlepasspageinternational2022_PhantomWallpapersContainer_1wuT6
   .battlepasspageinternational2022_PhantomWallpaperLink_3VoA_:hover {
   transform: translateY(-2px);
-  filter: drop-shadow(0px 0px 10px rgba(222, 191, 255, 0.5843137255));
+  filter: drop-shadow(0px 0px 10px #debfff95);
   border: 2px solid;
   border-image: linear-gradient(to top, #b4b1b7, #b4b1b7);
   border-image-slice: 1;
@@ -21116,7 +21091,7 @@ a {
   .battlepasspageinternational2022_CrystalLogo_30MEo {
   width: 800px;
   height: auto;
-  filter: drop-shadow(0px 0px 10px rgba(0, 145, 255, 0.6862745098));
+  filter: drop-shadow(0px 0px 10px #0091ffaf);
 }
 @media (max-width: 375px) {
   .battlepasspageinternational2022_BattlepassPage2022_2MNrt
@@ -21336,7 +21311,7 @@ a {
   .battlepasspageinternational2022_CrystalWallpapersContainer_2YeRu
   .battlepasspageinternational2022_CrystalWallpaperLink_2PR3f:hover {
   transform: translateY(-2px);
-  filter: drop-shadow(0px 0px 10px rgba(0, 91, 209, 0.7607843137));
+  filter: drop-shadow(0px 0px 10px #005bd1c2);
   border: 2px solid;
   border-image: linear-gradient(to top, #5cc3ff, #d794f1);
   border-image-slice: 1;
@@ -21831,7 +21806,7 @@ a {
   .battlepasspageinternational2022_BPPurchaseBody_3iwtB {
   margin-top: 1.25em;
   max-width: 790px;
-  color: rgba(255, 255, 255, 0.7137254902);
+  color: #ffffffb6;
   text-align: center;
   font-size: 16px;
 }
@@ -22818,7 +22793,7 @@ a {
   top: 50%;
   left: 80%;
   transform: translate(-50%, -50%);
-  filter: drop-shadow(0px 0px 20px rgba(34, 75, 172, 0.4549019608));
+  filter: drop-shadow(0px 0px 20px #224bac74);
 }
 @media (max-width: 1200px) {
   .battlepasspageinternational2022_BattlepassPage2022_2MNrt
@@ -23239,7 +23214,7 @@ a {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-color: rgba(0, 0, 0, 0.3960784314);
+  background-color: #00000065;
   border: 1px solid;
   border-image: linear-gradient(to bottom, #ea6953, #952e46);
   border-image-slice: 1;
@@ -23331,7 +23306,7 @@ a {
   background-position-x: 50%;
   background-position-y: 50%;
   background-repeat: no-repeat;
-  background-color: rgba(0, 0, 0, 0.3960784314);
+  background-color: #00000065;
   border: 1px solid;
   border-image: linear-gradient(to bottom, #ea6953, #952e46);
   border-image-slice: 1;
@@ -23467,7 +23442,7 @@ a {
   font-size: 18px;
   font-weight: 600;
   background: linear-gradient(90deg, #77afce 0%, #006586 100%);
-  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3411764706);
+  box-shadow: 0px 6px 10px #00000057;
   border-top: 2px solid #caf2ff;
   letter-spacing: 1px;
   transition: 0.15s;
@@ -23677,7 +23652,7 @@ a {
   .battlepasspageinternational2022_RazorLogo_1moOf {
   width: 800px;
   height: auto;
-  filter: drop-shadow(0px 0px 10px rgba(52, 49, 212, 0.662745098));
+  filter: drop-shadow(0px 0px 10px #3431d4a9);
 }
 @media (max-width: 1200px) {
   .battlepasspageinternational2022_BattlepassPage2022_2MNrt
@@ -23825,7 +23800,7 @@ a {
   .battlepasspageinternational2022_RazorWallpaperContainer_3kp5G
   .battlepasspageinternational2022_RazorWallpaperLink_1NQ8K:hover {
   transform: translateY(-2px);
-  filter: drop-shadow(0px 0px 10px rgba(52, 49, 212, 0.8431372549));
+  filter: drop-shadow(0px 0px 10px #3431d4d7);
   border: 2px solid;
   border-image: linear-gradient(to top, #cccbff, #cccbff);
   border-image-slice: 1;
@@ -24193,7 +24168,7 @@ a {
   flex-direction: column;
   align-items: left;
   justify-content: center;
-  border-right: 2px solid rgba(31, 136, 255, 0.2470588235);
+  border-right: 2px solid #1f88ff3f;
   padding: 0px 20px 0px 0;
 }
 .battlepasspageinternational2022_BattlepassPage2022_2MNrt
@@ -24280,10 +24255,10 @@ a {
   padding: 0px 100px;
   background-image: linear-gradient(
     to right,
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0.7411764706) 25%,
-    rgba(0, 0, 0, 0.7411764706) 75%,
-    rgba(0, 0, 0, 0)
+    #00000000,
+    #000000bd 25%,
+    #000000bd 75%,
+    #00000000
   );
   flex-direction: column;
   align-items: center;
@@ -24511,10 +24486,10 @@ a {
   padding: 0px 100px;
   background-image: linear-gradient(
     to right,
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0.7411764706) 25%,
-    rgba(0, 0, 0, 0.7411764706) 75%,
-    rgba(0, 0, 0, 0)
+    #00000000,
+    #000000bd 25%,
+    #000000bd 75%,
+    #00000000
   );
   flex-direction: column;
   align-items: center;
@@ -24675,7 +24650,7 @@ a {
   flex-direction: column;
   justify-content: center;
   align-content: center;
-  background-color: rgba(0, 0, 0, 0.6784313725);
+  background-color: #000000ad;
   border-radius: 10px;
 }
 .battlepasspageinternational2022_BattlepassPage2022_2MNrt
@@ -24731,7 +24706,7 @@ a {
 .battlepasspageinternational2022_BattlepassPage2022_2MNrt
   .battlepasspageinternational2022_PlayButton_SCRK0:hover {
   filter: brightness(1.2);
-  filter: drop-shadow(0px 1px 12px rgba(192, 20, 20, 0.8431372549));
+  filter: drop-shadow(0px 1px 12px #c01414d7);
 }
 .battlepasspageinternational2022_BattlepassPage2022_2MNrt
   .battlepasspageinternational2022_PlayButton_SCRK0
@@ -24769,7 +24744,7 @@ a {
   width: 100%;
   max-width: 1000px;
   height: 500px;
-  background-color: rgba(44, 44, 44, 0.5411764706);
+  background-color: #2c2c2c8a;
 }
 .battlepasspageinternational2022_BattlepassPage2022_2MNrt
   .battlepasspageinternational2022_CustomHudHeight_2yhGp
@@ -24974,7 +24949,7 @@ a {
   max-height: 225px;
   background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/international2022/icons/part2_badge_bg.png");
   background-size: cover;
-  filter: drop-shadow(0px 5px 8px rgba(0, 0, 0, 0.7058823529));
+  filter: drop-shadow(0px 5px 8px #000000b4);
   cursor: pointer;
   pointer-events: auto;
   transition: 0.15s;
@@ -25032,7 +25007,7 @@ a {
   background-position: center;
   background-color: #c4331c;
   border: 1px solid #fa705b;
-  color: rgba(0, 0, 0, 0);
+  color: transparent;
   cursor: pointer;
   animation-timing-function: ease-in-out;
   transition: 0.15s;
@@ -25079,7 +25054,7 @@ a {
   margin: 0px 4px;
   margin-top: 8px;
   border: none;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
   outline: none !important;
   cursor: pointer;
 }
@@ -25111,7 +25086,7 @@ a {
   flex-wrap: wrap;
 }
 .battlepasspageinternational2022_CarouselDots_2bJax * {
-  background-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
   border: 0px;
 }
 .battlepasspageinternational2022_CarouselDots_2bJax
@@ -25208,7 +25183,7 @@ a {
   font-size: 18px;
   font-weight: 600;
   background: linear-gradient(90deg, #ea6953 0%, #952e46 100%);
-  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3411764706);
+  box-shadow: 0px 6px 10px #00000057;
   border-top: 2px solid #ffa192;
   letter-spacing: 1px;
   transition: 0.15s;
@@ -25254,7 +25229,7 @@ a {
   align-items: center;
   background-repeat: no-repeat;
   background-size: cover;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.8509803922);
+  box-shadow: 0px 5px 15px #000000d9;
 }
 .battlepasspageinternational2022_BuyBattlePassCapsule_C7Wxj
   .battlepasspageinternational2022_CapsuleTitle_3JuCT {
@@ -25289,7 +25264,7 @@ a {
   padding: 1em 2em;
   border-radius: 4px;
   margin-top: 0.75em;
-  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3411764706);
+  box-shadow: 0px 6px 10px #00000057;
   text-shadow: none;
   color: #fffbcd;
   font-size: 18px;
@@ -25316,7 +25291,7 @@ a {
   text-align: center;
   background-repeat: no-repeat;
   background-size: cover;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.8509803922);
+  box-shadow: 0px 5px 15px #000000d9;
 }
 .battlepasspageinternational2022_BuyBattlePassLevelsCapsule_3X4uH
   .battlepasspageinternational2022_CapsuleTitle_3JuCT {
@@ -25342,7 +25317,7 @@ a {
   padding: 18px 40px;
   margin: 0px 0px 5px 0px;
   border-radius: 4px;
-  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3411764706);
+  box-shadow: 0px 6px 10px #00000057;
   text-shadow: none;
   color: #fffbcd;
   font-size: 18px;
@@ -25371,7 +25346,7 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.7411764706);
+  box-shadow: 0px 5px 10px #000000bd;
 }
 .battlepasspageinternational2022_MajorHeaderDivider_20ReT
   .battlepasspageinternational2022_MajorHeaderPreTitle_2qYmA {
@@ -25398,7 +25373,7 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.7411764706);
+  box-shadow: 0px 5px 10px #000000bd;
 }
 .battlepasspageinternational2022_MajorHeaderDividerIce_3uZmG
   .battlepasspageinternational2022_MajorHeaderPreTitle_2qYmA {
@@ -25571,7 +25546,7 @@ a {
   padding-left: 50px;
   padding-right: 60px;
   height: 56px;
-  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.7411764706);
+  box-shadow: 0px 3px 10px #000000bd;
   background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/international2022/icons/level_indicator.jpg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -26150,7 +26125,7 @@ a {
   font-style: normal;
 }
 .blogentrypage_StandardButton_axn8m {
-  border: 3px solid rgba(255, 255, 255, 0.3137254902);
+  border: 3px solid #ffffff50;
   padding: 15px 25px;
   margin: 10px 30px;
   border-radius: 5px;
@@ -26981,7 +26956,7 @@ a {
   font-style: normal;
 }
 .blogcapsule_StandardButton_3Ep64 {
-  border: 3px solid rgba(255, 255, 255, 0.3137254902);
+  border: 3px solid #ffffff50;
   padding: 15px 25px;
   margin: 10px 30px;
   border-radius: 5px;
@@ -27688,7 +27663,7 @@ a {
   font-style: normal;
 }
 .updatecapsule_StandardButton_2es3S {
-  border: 3px solid rgba(255, 255, 255, 0.3137254902);
+  border: 3px solid #ffffff50;
   padding: 15px 25px;
   margin: 10px 30px;
   border-radius: 5px;
@@ -28348,7 +28323,7 @@ a {
   font-style: normal;
 }
 .blogoverviewpage_StandardButton_3f666 {
-  border: 3px solid rgba(255, 255, 255, 0.3137254902);
+  border: 3px solid #ffffff50;
   padding: 15px 25px;
   margin: 10px 30px;
   border-radius: 5px;
@@ -28591,7 +28566,7 @@ a {
     left bottom,
     color-stop(60%, rgba(0, 0, 0, 0)),
     color-stop(80%, rgba(0, 0, 0, 0.7)),
-    color-stop(100%, rgb(0, 0, 0))
+    color-stop(100%, black)
   );
 }
 .blogoverviewpage_BlogOverviewPage_1mf6e
@@ -28612,7 +28587,7 @@ a {
   .blogoverviewpage_FeaturedContent_3x-xx
   .blogoverviewpage_Date_37cbM {
   font-size: 18px;
-  color: rgba(255, 255, 255, 0.5647058824);
+  color: #ffffff90;
   text-align: left;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -28627,7 +28602,7 @@ a {
   font-size: 16px;
   font-weight: bold;
   letter-spacing: 2px;
-  background: rgba(255, 255, 255, 0.3137254902);
+  background: #ffffff50;
   color: #fff;
   padding: 5px 10px;
   text-transform: uppercase;
@@ -28823,7 +28798,7 @@ a {
   width: 30px;
   height: 30px;
   padding: 5px 10px;
-  background-color: rgba(255, 255, 255, 0.3137254902);
+  background-color: #ffffff50;
   margin: 0px 5px;
   font-family: "Radiance", sans-serif;
   font-size: 16px;
@@ -29363,7 +29338,7 @@ a {
   font-style: normal;
 }
 .dpcmenubar_StandardButton_2RYGb {
-  border: 3px solid rgba(255, 255, 255, 0.3137254902);
+  border: 3px solid #ffffff50;
   padding: 15px 25px;
   margin: 10px 30px;
   border-radius: 5px;
@@ -29479,7 +29454,7 @@ a {
   align-items: center;
   justify-content: center;
   background: #131315;
-  filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.5019607843));
+  filter: drop-shadow(0px 4px 6px #00000080);
 }
 .dpcmenubar_DPCMenuBar_1SBIP.dpcmenubar_IsEventInactive_2Ixc4 {
   top: 80px;
@@ -29558,8 +29533,8 @@ a {
   justify-content: center;
   align-items: center;
   color: #6b7785;
-  border-bottom: 3px solid rgba(0, 0, 0, 0);
-  border-top: 3px solid rgba(0, 0, 0, 0);
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid transparent;
   transition-property: color;
   transition-timing-function: ease-in-out;
   transition-duration: 0.15s;
@@ -29691,72 +29666,227 @@ a {
   color: #6b7785;
 }
 .dpcmenubar_SelectLeagueModalPopup_14PR0 {
-  width: 80vw;
-  height: 80vh;
+  padding: 0px !important;
 }
 .dpcmenubar_SelectLeagueModalPopup_14PR0 .DialogContent_InnerWidth {
-  max-width: 100%;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
+  max-width: unset;
   align-items: center;
-  gap: 16px;
+  flex: unset;
+  padding: 40px 32px;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 .dpcmenubar_SelectLeagueModalPopup_14PR0
   .DialogContent_InnerWidth
+  .dpcmenubar_Title_39DVH {
+  font-size: 28px;
+  color: #f5f5f5;
+  text-shadow: 0px 2px 8px #00000088;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+  margin: 12px 0px 32px;
+  font-family: "Reaver", sans-serif;
+}
+@media (max-width: 980px) {
+  .dpcmenubar_SelectLeagueModalPopup_14PR0
+    .DialogContent_InnerWidth
+    .dpcmenubar_Title_39DVH {
+    font-size: 22px;
+  }
+}
+.dpcmenubar_SelectLeagueModalPopup_14PR0
+  .DialogContent_InnerWidth
+  .dpcmenubar_LineDivider_tHWqw {
+  width: 770px;
+  height: 12px;
+  background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/global/divider-line-point.svg");
+  background-size: cover;
+  background-position: center;
+  flex: none;
+  margin: 32px 0px 12px;
+  opacity: 0.3;
+}
+@media (max-width: 1400px) {
+  .dpcmenubar_SelectLeagueModalPopup_14PR0
+    .DialogContent_InnerWidth
+    .dpcmenubar_LineDivider_tHWqw {
+    display: none;
+  }
+}
+.dpcmenubar_SelectLeagueModalPopup_14PR0
+  .DialogContent_InnerWidth
+  .dpcmenubar_LeagueGrid_WVvBE {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+  width: fit-content;
+}
+@media (max-width: 1400px) {
+  .dpcmenubar_SelectLeagueModalPopup_14PR0
+    .DialogContent_InnerWidth
+    .dpcmenubar_LeagueGrid_WVvBE {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 980px) {
+  .dpcmenubar_SelectLeagueModalPopup_14PR0
+    .DialogContent_InnerWidth
+    .dpcmenubar_LeagueGrid_WVvBE {
+    grid-template-columns: 1fr;
+  }
+}
+.dpcmenubar_SelectLeagueModalPopup_14PR0
+  .DialogContent_InnerWidth
+  .dpcmenubar_LeagueGrid_WVvBE
   .dpcmenubar_EventEntry_1oQoo {
-  width: 300px;
+  width: 360px;
+  height: 130px;
+  background: #000;
+  box-shadow: 0px 4px 12px #00000088;
   display: flex;
-  flex-direction: column;
-  padding: 8px 8px 10px 8px;
-  border: 1px solid #000;
-  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5333333333);
-  background: linear-gradient(225deg, #1d1d1d, #222);
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
   cursor: pointer;
   user-select: none;
+  transition-property: box-shadow;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
 }
 .dpcmenubar_SelectLeagueModalPopup_14PR0
   .DialogContent_InnerWidth
-  .dpcmenubar_EventEntry_1oQoo:hover {
-  background: linear-gradient(225deg, #222, #2d2d2d);
-}
-.dpcmenubar_SelectLeagueModalPopup_14PR0
-  .DialogContent_InnerWidth
-  .dpcmenubar_EventEntry_1oQoo:hover
-  .dpcmenubar_Name_36A9F {
-  color: #fff;
-}
-.dpcmenubar_SelectLeagueModalPopup_14PR0
-  .DialogContent_InnerWidth
+  .dpcmenubar_LeagueGrid_WVvBE
   .dpcmenubar_EventEntry_1oQoo
   .dpcmenubar_Logo_1JGuW {
   width: 100%;
-  height: 40px;
-  margin-bottom: 6px;
+  height: 100%;
+  opacity: 0.3;
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
+  transition-property: transform, opacity;
+  transition-duration: 0.35s;
+  transition-timing-function: ease;
 }
 .dpcmenubar_SelectLeagueModalPopup_14PR0
   .DialogContent_InnerWidth
+  .dpcmenubar_LeagueGrid_WVvBE
   .dpcmenubar_EventEntry_1oQoo
+  .dpcmenubar_InfoContainer_2APQE {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  align-items: center;
+  position: absolute;
+  margin-top: 2px;
+  color: #fff;
+  width: 280px;
+  transform: translateY(8px);
+  transition-property: transform;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
+}
+.dpcmenubar_SelectLeagueModalPopup_14PR0
+  .DialogContent_InnerWidth
+  .dpcmenubar_LeagueGrid_WVvBE
+  .dpcmenubar_EventEntry_1oQoo
+  .dpcmenubar_InfoContainer_2APQE
   .dpcmenubar_Name_36A9F {
-  font-size: 17px;
-  letter-spacing: 1px;
-  color: #ccc;
-  text-shadow: 0px 0px 2px #000;
+  font-family: "Reaver", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  letter-spacing: 0.3px;
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.6);
+  opacity: 0.85;
+  text-align: center;
   text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
   overflow: hidden;
-  white-space: nowrap;
+  transition-property: opacity;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
 }
 .dpcmenubar_SelectLeagueModalPopup_14PR0
   .DialogContent_InnerWidth
+  .dpcmenubar_LeagueGrid_WVvBE
   .dpcmenubar_EventEntry_1oQoo
+  .dpcmenubar_InfoContainer_2APQE
   .dpcmenubar_Dates_2HyIs {
   font-size: 13px;
-  color: #aaa;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.6);
+  opacity: 0.6;
+  text-align: center;
+  transition-property: opacity;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
+}
+.dpcmenubar_SelectLeagueModalPopup_14PR0
+  .DialogContent_InnerWidth
+  .dpcmenubar_LeagueGrid_WVvBE
+  .dpcmenubar_EventEntry_1oQoo
+  .dpcmenubar_InfoContainer_2APQE
+  .dpcmenubar_Dash_1kZGI {
+  width: 60px;
+  height: 2px;
+  background-color: #ff6046;
+  margin-top: 8px;
+  opacity: 0;
+  transform: scale3d(0.6, 1, 1);
+  transition-property: opacity, transform;
+  transition-duration: 0.4s;
+  transition-timing-function: ease;
+}
+.dpcmenubar_SelectLeagueModalPopup_14PR0
+  .DialogContent_InnerWidth
+  .dpcmenubar_LeagueGrid_WVvBE
+  .dpcmenubar_EventEntry_1oQoo:hover {
+  box-shadow: 0px 8px 24px #00000088;
+}
+.dpcmenubar_SelectLeagueModalPopup_14PR0
+  .DialogContent_InnerWidth
+  .dpcmenubar_LeagueGrid_WVvBE
+  .dpcmenubar_EventEntry_1oQoo:hover
+  .dpcmenubar_Logo_1JGuW {
+  transform: scale3d(1.1, 1.1, 1);
+  opacity: 0.7;
+}
+.dpcmenubar_SelectLeagueModalPopup_14PR0
+  .DialogContent_InnerWidth
+  .dpcmenubar_LeagueGrid_WVvBE
+  .dpcmenubar_EventEntry_1oQoo:hover
+  .dpcmenubar_InfoContainer_2APQE {
+  transform: none;
+}
+.dpcmenubar_SelectLeagueModalPopup_14PR0
+  .DialogContent_InnerWidth
+  .dpcmenubar_LeagueGrid_WVvBE
+  .dpcmenubar_EventEntry_1oQoo:hover
+  .dpcmenubar_InfoContainer_2APQE
+  .dpcmenubar_Name_36A9F {
+  opacity: 1;
+}
+.dpcmenubar_SelectLeagueModalPopup_14PR0
+  .DialogContent_InnerWidth
+  .dpcmenubar_LeagueGrid_WVvBE
+  .dpcmenubar_EventEntry_1oQoo:hover
+  .dpcmenubar_InfoContainer_2APQE
+  .dpcmenubar_Dates_2HyIs {
+  opacity: 0.8;
+}
+.dpcmenubar_SelectLeagueModalPopup_14PR0
+  .DialogContent_InnerWidth
+  .dpcmenubar_LeagueGrid_WVvBE
+  .dpcmenubar_EventEntry_1oQoo:hover
+  .dpcmenubar_InfoContainer_2APQE
+  .dpcmenubar_Dash_1kZGI {
+  opacity: 1;
+  transform: scale3d(1, 1, 1);
 }
 * {
   box-sizing: border-box;
@@ -30255,7 +30385,7 @@ a {
   font-style: normal;
 }
 .matchesheader_StandardButton_3ZQa4 {
-  border: 3px solid rgba(255, 255, 255, 0.3137254902);
+  border: 3px solid #ffffff50;
   padding: 15px 25px;
   margin: 10px 30px;
   border-radius: 5px;
@@ -30408,7 +30538,7 @@ a {
   width: 60px;
   min-width: 60px;
   height: 100%;
-  filter: drop-shadow(3px 0px 6px rgba(0, 0, 0, 0.6));
+  filter: drop-shadow(3px 0px 6px #00000099);
   position: absolute;
   top: 0;
   z-index: 1;
@@ -30548,7 +30678,7 @@ a {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
 }
 .matchesheader_MatchesContainer_3ycH_
   .matchesheader_MatchesScroller_3VLyy
@@ -30558,7 +30688,7 @@ a {
   border: 1px solid #a3a3a3;
   border-radius: 3px;
   padding: 10px 15px;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
   color: #a3a3a3;
   font-size: 15px;
   font-weight: 700;
@@ -30575,7 +30705,7 @@ a {
   .matchesheader_ScheduleLink_21jOl:hover {
   border-color: #fff;
   color: #fff;
-  background-color: rgba(255, 255, 255, 0.1019607843);
+  background-color: #ffffff1a;
 }
 .matchesheader_MatchesContainer_3ycH_
   .matchesheader_MatchesScroller_3VLyy
@@ -30661,7 +30791,7 @@ a {
   width: 150px;
   min-width: 150px;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
   border: 1px solid #a3a3a3;
 }
 .matchesheader_DPCMatchBannerNode_2ONCG {
@@ -30750,7 +30880,7 @@ a {
   border: 1px solid #a3a3a3;
   border-radius: 3px;
   padding: 6px 15px;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
   color: #a3a3a3;
   font-size: 12px;
   font-weight: 700;
@@ -30765,7 +30895,7 @@ a {
   .matchesheader_HoverOption_3rOI0:hover {
   border-color: #fff;
   color: #fff;
-  background-color: rgba(255, 255, 255, 0.1019607843);
+  background-color: #ffffff1a;
 }
 .matchesheader_DPCMatchBannerNode_2ONCG .matchesheader_UpperContainer_zLmZg {
   width: 100%;
@@ -31205,7 +31335,7 @@ a {
   border-color: #5e6976;
   border-radius: 3px;
   padding: 0px 31px;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
   transition-property: color, border-color, background-color;
   transition-timing-function: ease-in-out;
   transition-duration: 0.1s;
@@ -31213,12 +31343,12 @@ a {
 .dpcselectors_TextInput_33HiC input:hover {
   color: #fff;
   border-color: #5e6976;
-  background-color: rgba(94, 105, 118, 0.2509803922);
+  background-color: #5e697640;
 }
 .dpcselectors_TextInput_33HiC input:focus {
   color: #fff;
   border-color: #5e6976;
-  background-color: rgba(94, 105, 118, 0.2509803922);
+  background-color: #5e697640;
 }
 .dpcselectors_TextInput_33HiC .dpcselectors_MagnifyingGlass_3N27p {
   width: 13px;
@@ -31248,7 +31378,7 @@ a {
 }
 .dpcselectors_Switch_26we-.dpcselectors_On_IFTP8 .dpcselectors_Selector_17u1z {
   background-color: #ff6046;
-  box-shadow: -0.2em 0 0.3em rgba(0, 0, 0, 0.2509803922);
+  box-shadow: -0.2em 0 0.3em #00000040;
   margin-left: 30px;
 }
 .dpcselectors_Switch_26we- .dpcselectors_Background_3oinv {
@@ -31263,7 +31393,7 @@ a {
   left: 0;
   margin-left: 0px;
   background-color: #6b7785;
-  box-shadow: 2px 0 0.3em rgba(0, 0, 0, 0.3019607843);
+  box-shadow: 2px 0 0.3em #0000004d;
   width: 30px;
   height: 20px;
   border-radius: 4px;
@@ -31287,7 +31417,7 @@ a {
 .dpcselectors_SwitchSmall_1KHEx.dpcselectors_On_IFTP8
   .dpcselectors_Selector_17u1z {
   background-color: #fff;
-  box-shadow: -0.2em 0 0.3em rgba(0, 0, 0, 0.2509803922);
+  box-shadow: -0.2em 0 0.3em #00000040;
   margin-left: 14px;
 }
 .dpcselectors_SwitchSmall_1KHEx .dpcselectors_Background_3oinv {
@@ -31302,7 +31432,7 @@ a {
   left: 0;
   margin-left: 0px;
   background-color: #6b7785;
-  box-shadow: 2px 0 0.3em rgba(0, 0, 0, 0.3019607843);
+  box-shadow: 2px 0 0.3em #0000004d;
   width: 14px;
   height: 14px;
   border-radius: 7px;
@@ -31811,7 +31941,7 @@ a {
   font-style: normal;
 }
 .dpctooltips_StandardButton_1_NP4 {
-  border: 3px solid rgba(255, 255, 255, 0.3137254902);
+  border: 3px solid #ffffff50;
   padding: 15px 25px;
   margin: 10px 30px;
   border-radius: 5px;
@@ -32548,7 +32678,7 @@ a {
   font-style: normal;
 }
 .aboutpage_StandardButton_3Doa7 {
-  border: 3px solid rgba(255, 255, 255, 0.3137254902);
+  border: 3px solid #ffffff50;
   padding: 15px 25px;
   margin: 10px 30px;
   border-radius: 5px;
@@ -32670,12 +32800,7 @@ a {
   flex-direction: column;
   justify-content: center;
   background: #161618;
-  background: linear-gradient(
-    145deg,
-    rgb(22, 22, 24) 0%,
-    rgb(20, 32, 49) 0%,
-    rgb(29, 43, 65) 100%
-  );
+  background: linear-gradient(145deg, #161618 0%, #142031 0%, #1d2b41 100%);
   background-size: cover;
   background-position: top, center;
   background-repeat: no-repeat;
@@ -32833,12 +32958,7 @@ a {
   justify-content: center;
   align-items: center;
   background: #161618;
-  background: linear-gradient(
-    300deg,
-    rgb(22, 22, 24) 0%,
-    rgb(20, 32, 49) 0%,
-    rgb(29, 43, 65) 100%
-  );
+  background: linear-gradient(300deg, #161618 0%, #142031 0%, #1d2b41 100%);
   background-size: cover;
   background-position: top, center;
   background-repeat: no-repeat;
@@ -33764,7 +33884,7 @@ a {
   font-style: normal;
 }
 .dpcroot_StandardButton_nQgCM {
-  border: 3px solid rgba(255, 255, 255, 0.3137254902);
+  border: 3px solid #ffffff50;
   padding: 15px 25px;
   margin: 10px 30px;
   border-radius: 5px;
@@ -33874,7 +33994,7 @@ a {
   height: 100%;
   overflow: hidden;
   position: fixed;
-  background-color: rgba(0, 0, 0, 0.6666666667);
+  background-color: #000000aa;
   backdrop-filter: blur(10px);
   display: flex;
   flex-direction: column;
@@ -33892,7 +34012,7 @@ a {
   align-items: center;
 }
 .dpcroot_SpoilerBlockPopup_2bfYT .dpcroot_Box_4lvVV .dpcroot_ModalImg_qjUwd {
-  background-color: rgba(0, 0, 0, 0.5647058824);
+  background-color: #00000090;
   width: 100%;
   padding: 20px 0px;
   display: flex;
@@ -33925,7 +34045,7 @@ a {
 .dpcroot_SpoilerBlockPopup_2bfYT .dpcroot_Box_4lvVV .dpcroot_Skip_1zyxm {
   width: 100%;
   padding: 10px 0px;
-  background-color: rgba(0, 0, 0, 0.5647058824);
+  background-color: #00000090;
   text-decoration: underline;
   text-align: center;
   color: #6d6d6d;
@@ -33946,7 +34066,7 @@ a {
   height: 100%;
   width: 3px;
   margin: 10px;
-  background-color: rgba(146, 146, 146, 0.5647058824);
+  background-color: #92929290;
 }
 .dpcroot_SpoilerBlockPopup_2bfYT .dpcroot_Box_4lvVV .dpcroot_Option_1hsRf {
   display: flex;
@@ -34034,7 +34154,7 @@ a {
   .dpcroot_Option_1hsRf
   .dpcroot_Button_11bp1:hover {
   filter: brightness(1.3);
-  background-color: rgba(255, 255, 255, 0.062745098);
+  background-color: #ffffff10;
 }
 .dpcroot_SpoilerBlockPopup_2bfYT
   .dpcroot_Box_4lvVV
@@ -34264,7 +34384,7 @@ a {
 .dpcroot_DPCHeaderGenericLeague_3VSU1
   .dpcroot_TextContainer_1g0r7
   .dpcroot_EventResultsButton_3yzbY:hover {
-  background-color: rgba(255, 255, 255, 0.1019607843);
+  background-color: #ffffff1a;
 }
 .dpcroot_DPCHeaderWinter2023Major_14smV {
   width: 100%;
@@ -34578,7 +34698,7 @@ a {
 .dpcroot_DPCHeaderSpring2021League_3DTMe
   .dpcroot_TextContainer_1g0r7
   .dpcroot_EventResultsButton_3yzbY:hover {
-  background-color: rgba(255, 255, 255, 0.1019607843);
+  background-color: #ffffff1a;
 }
 .dpcroot_DPCHeaderSpring2021Major_IXyx- {
   width: 100%;
@@ -34786,7 +34906,7 @@ a {
 .dpcroot_DPCHeaderSpring2021Major_IXyx-
   .dpcroot_TextContainer_1g0r7
   .dpcroot_EventResultsButton_3yzbY:hover {
-  background-color: rgba(255, 255, 255, 0.1019607843);
+  background-color: #ffffff1a;
 }
 @media (max-width: 1300px) {
   .dpcroot_DPCHeaderSpring2021Major_IXyx-
@@ -34921,21 +35041,21 @@ a {
   font-size: 14px;
   font-weight: 600px;
   font-family: "Reaver", serif;
-  color: rgba(0, 0, 0, 0);
+  color: transparent;
   background-image: linear-gradient(
     145deg,
-    rgb(187, 154, 74) 0%,
-    rgb(255, 220, 136) 45%,
-    rgb(255, 233, 179) 52%,
-    rgb(187, 154, 74) 69%
+    #bb9a4a 0%,
+    #ffdc88 45%,
+    #ffe9b3 52%,
+    #bb9a4a 69%
   );
   background-size: 100%;
   background-repeat: repeat;
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-fill-color: transparent;
   -moz-background-clip: text;
-  -moz-text-fill-color: rgba(0, 0, 0, 0);
+  -moz-text-fill-color: transparent;
   letter-spacing: 1px;
   text-align: center;
   width: 400px;
@@ -35047,7 +35167,7 @@ a {
 .dpcroot_DPCHeaderTI2021Quals_2SWDa
   .dpcroot_TextContainer_1g0r7
   .dpcroot_EventResultsButton_3yzbY:hover {
-  background-color: rgba(255, 255, 255, 0.1019607843);
+  background-color: #ffffff1a;
 }
 @media (max-width: 1300px) {
   .dpcroot_DPCHeaderTI2021Quals_2SWDa
@@ -35124,21 +35244,21 @@ a {
   .dpcroot_EventPhaseTitle_2z9IC {
   font-size: 14px;
   font-family: "Reaver", serif;
-  color: rgba(0, 0, 0, 0);
+  color: transparent;
   background-image: linear-gradient(
     145deg,
-    rgb(187, 154, 74) 0%,
-    rgb(255, 220, 136) 45%,
-    rgb(255, 233, 179) 52%,
-    rgb(187, 154, 74) 69%
+    #bb9a4a 0%,
+    #ffdc88 45%,
+    #ffe9b3 52%,
+    #bb9a4a 69%
   );
   background-size: 100%;
   background-repeat: repeat;
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-fill-color: transparent;
   -moz-background-clip: text;
-  -moz-text-fill-color: rgba(0, 0, 0, 0);
+  -moz-text-fill-color: transparent;
   letter-spacing: 1px;
   text-align: center;
   width: 400px;
@@ -35197,21 +35317,21 @@ a {
   .dpcroot_PrizePoolTitle_JYJRh {
   font-size: 20px;
   font-family: "Reaver", serif;
-  color: rgba(0, 0, 0, 0);
+  color: transparent;
   background-image: linear-gradient(
     145deg,
-    rgb(187, 154, 74) 0%,
-    rgb(255, 220, 136) 45%,
-    rgb(255, 233, 179) 52%,
-    rgb(187, 154, 74) 69%
+    #bb9a4a 0%,
+    #ffdc88 45%,
+    #ffe9b3 52%,
+    #bb9a4a 69%
   );
   background-size: 100%;
   background-repeat: repeat;
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-fill-color: transparent;
   -moz-background-clip: text;
-  -moz-text-fill-color: rgba(0, 0, 0, 0);
+  -moz-text-fill-color: transparent;
   letter-spacing: 1px;
   text-align: center;
   width: 400px;
@@ -35255,7 +35375,7 @@ a {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3137254902);
+  text-shadow: 0px 0px 10px #00000050;
 }
 .dpcroot_DPCHeaderSpring2022Major_2dShq .dpcroot_TextContainer_1g0r7 {
   width: 100%;
@@ -35324,7 +35444,7 @@ a {
   font-size: 13px;
   font-weight: 800;
   font-family: "Radiance", sans-serif;
-  color: rgba(0, 0, 0, 0.5019607843);
+  color: #00000080;
   letter-spacing: 1px;
   text-align: center;
   position: absolute;
@@ -35441,7 +35561,7 @@ a {
 .dpcroot_DPCHeaderSpring2022Major_2dShq
   .dpcroot_TextContainer_1g0r7
   .dpcroot_EventResultsButton_3yzbY:hover {
-  background-color: rgba(255, 255, 255, 0.1019607843);
+  background-color: #ffffff1a;
 }
 @media (max-width: 1300px) {
   .dpcroot_DPCHeaderSpring2022Major_2dShq
@@ -35504,7 +35624,7 @@ a {
   align-items: center;
   text-shadow:
     0px 0px 10px #370058,
-    1px 2px 5px rgba(28, 0, 46, 0.3137254902);
+    1px 2px 5px #1c002e50;
 }
 .dpcroot_DPCHeaderSummer2022League_BVcaX .dpcroot_TextContainer_1g0r7 {
   width: 100%;
@@ -35690,8 +35810,8 @@ a {
   .dpcroot_PrizePoolBox_2Ik9u
   .dpcroot_EventResultsButton_3yzbY:hover {
   border: 1px solid #fff;
-  background: rgba(255, 255, 255, 0.2117647059);
-  box-shadow: 0px 3px 10px rgba(27, 20, 36, 0.2823529412);
+  background: #ffffff36;
+  box-shadow: 0px 3px 10px #1b142448;
 }
 @media (max-width: 1300px) {
   .dpcroot_DPCHeaderSummer2022League_BVcaX
@@ -35976,9 +36096,9 @@ a {
   .dpcroot_EventTextContainer_2ax5-
   .dpcroot_PrizePoolBox_2Ik9u
   .dpcroot_EventResultsButton_3yzbY:hover {
-  border: 1px solid rgba(0, 0, 0, 0);
+  border: 1px solid transparent;
   background: #6142c2;
-  box-shadow: 0px 3px 10px rgba(27, 20, 36, 0.2392156863);
+  box-shadow: 0px 3px 10px #1b14243d;
 }
 @media (max-width: 1300px) {
   .dpcroot_DPCHeaderSummer2022Major_1u3lV
@@ -36081,7 +36201,7 @@ a {
   filter: drop-shadow(0px 0px 4px #e1261c);
   background: -webkit-linear-gradient(#ebcf87 10%, #ea6953 90%);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-fill-color: transparent;
 }
 @media (max-width: 1300px) {
   .dpcroot_DPCHeaderTI2022LastChance_uCZSs
@@ -36145,7 +36265,7 @@ a {
   filter: drop-shadow(0px 0px 4px #e1261c);
   background: -webkit-linear-gradient(#ebcf87 10%, #ea6953 90%);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-fill-color: transparent;
 }
 .dpcroot_DPCHeaderTI2022LastChance_uCZSs
   .dpcroot_LCQTextContainer_3xD8y
@@ -36212,7 +36332,7 @@ a {
   letter-spacing: 1px;
   text-align: center;
   background: linear-gradient(90deg, #ea6953 0%, #952e46 100%);
-  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3411764706);
+  box-shadow: 0px 6px 10px #00000057;
   border-top: 2px solid #ffa192;
   border-radius: 4px;
   transition: 0.15s;
@@ -36343,7 +36463,7 @@ a {
   filter: drop-shadow(0px 0px 4px #e1261c);
   background: -webkit-linear-gradient(#ebcf87 10%, #ea6953 90%);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-fill-color: transparent;
 }
 @media (max-width: 1300px) {
   .dpcroot_DPCHeaderTI2022_1W8FK
@@ -36470,7 +36590,7 @@ a {
   filter: drop-shadow(0px 0px 4px #e1261c);
   background: -webkit-linear-gradient(#ebcf87 10%, #ea6953 90%);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-fill-color: transparent;
 }
 @media (max-width: 1300px) {
   .dpcroot_DPCHeaderTI2022_1W8FK
@@ -36544,7 +36664,7 @@ a {
   letter-spacing: 1px;
   text-align: center;
   background: linear-gradient(90deg, #ea6953 0%, #952e46 100%);
-  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3411764706);
+  box-shadow: 0px 6px 10px #00000057;
   border-top: 2px solid #ffa192;
   border-radius: 4px;
   transition: 0.15s;
@@ -36846,7 +36966,7 @@ a {
   letter-spacing: 1px;
   text-align: center;
   background: linear-gradient(90deg, #30de9f 0%, #1fbd84 100%);
-  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3411764706);
+  box-shadow: 0px 6px 10px #00000057;
   border-top: 2px solid #7cffd0;
   border-radius: 4px;
   transition: 0.15s;
@@ -36860,7 +36980,7 @@ a {
   .dpcroot_W23BannerContent_2HMLp
   .dpcroot_W23PrizePoolBox_2QyYg
   .dpcroot_W23EventResultsButton_2i2YM:hover {
-  box-shadow: 0px 0px 10px rgba(0, 255, 162, 0.5490196078);
+  box-shadow: 0px 0px 10px #00ffa28c;
   transform: translateY(-2px);
 }
 @media (max-width: 1300px) {
@@ -37141,7 +37261,7 @@ a {
   letter-spacing: 1px;
   text-align: center;
   background: linear-gradient(90deg, #30de9f 0%, #1fbd84 100%);
-  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3411764706);
+  box-shadow: 0px 6px 10px #00000057;
   border-top: 2px solid #7cffd0;
   border-radius: 4px;
   transition: 0.15s;
@@ -37155,7 +37275,7 @@ a {
   .dpcroot_Spring23BannerContent_3_RbB
   .dpcroot_Spring23PrizePoolBox_1uW2t
   .dpcroot_Spring23EventResultsButton_1GOpZ:hover {
-  box-shadow: 0px 0px 10px rgba(0, 255, 162, 0.5490196078);
+  box-shadow: 0px 0px 10px #00ffa28c;
   transform: translateY(-2px);
 }
 @media (max-width: 1300px) {
@@ -37313,7 +37433,7 @@ a {
   letter-spacing: 1px;
   text-align: center;
   background: linear-gradient(90deg, #e21c1c 0%, #bb1818 100%);
-  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3411764706);
+  box-shadow: 0px 6px 10px #00000057;
   border-radius: 4px;
   transition: 0.15s;
   transition-property: box-shadow, transform;
@@ -37631,7 +37751,7 @@ a {
   letter-spacing: 1px;
   text-align: center;
   background: linear-gradient(90deg, #e58a2a 0%, #e58a2a 100%);
-  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3411764706);
+  box-shadow: 0px 6px 10px #00000057;
   border-radius: 4px;
   transition: 0.15s;
   transition-property: box-shadow, transform;
@@ -37801,7 +37921,7 @@ a {
   letter-spacing: 1px;
   text-align: center;
   background: linear-gradient(90deg, #e58a2a 0%, #e58a2a 100%);
-  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3411764706);
+  box-shadow: 0px 6px 10px #00000057;
   border-radius: 4px;
   transition: 0.15s;
   transition-property: box-shadow, transform;
@@ -37945,7 +38065,7 @@ a {
     #ffe2b4
   );
   -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-fill-color: transparent;
 }
 .dpcroot_DPCHeaderTI2023_rgs4D
   .dpcroot_TI12BannerContainer_3TN1e
@@ -38081,7 +38201,7 @@ a {
   filter: drop-shadow(0px 0px 4px #002c4c);
   background: -webkit-linear-gradient(#31c8db 10%, #176490 90%);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-fill-color: transparent;
 }
 @media (max-width: 1300px) {
   .dpcroot_DPCHeaderTI2023_rgs4D
@@ -38140,7 +38260,7 @@ a {
   letter-spacing: 1px;
   text-align: center;
   background: linear-gradient(90deg, #ea6953 0%, #952e46 100%);
-  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3411764706);
+  box-shadow: 0px 6px 10px #00000057;
   border-top: 2px solid #ffa192;
   border-radius: 4px;
   transition: 0.15s;
@@ -38654,7 +38774,7 @@ a {
   font-style: normal;
 }
 .schedulepage_StandardButton_22Vf3 {
-  border: 3px solid rgba(255, 255, 255, 0.3137254902);
+  border: 3px solid #ffffff50;
   padding: 15px 25px;
   margin: 10px 30px;
   border-radius: 5px;
@@ -38806,9 +38926,9 @@ a {
   align-items: center;
   background: linear-gradient(
     180deg,
-    rgb(22, 22, 24) 0%,
-    rgb(22, 22, 24) 0%,
-    rgb(22, 22, 24) 75%,
+    #161618 0%,
+    #161618 0%,
+    #161618 75%,
     rgba(22, 22, 24, 0) 100%
   );
   z-index: 998;
@@ -38866,7 +38986,7 @@ a {
   .schedulepage_AllDays_nwkeQ:hover {
   transform: translateY(-1px);
   filter: brightness(1.2);
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6431372549);
+  box-shadow: 0px 4px 8px #000000a4;
 }
 .schedulepage_DPCScheduleHeader_1-Phy
   .schedulepage_InternationalDaySelector_bsIjw
@@ -38931,7 +39051,7 @@ a {
   .schedulepage_DayContainer_1adcC:hover {
   transform: translateY(-1px);
   filter: brightness(1.2);
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6431372549);
+  box-shadow: 0px 4px 8px #000000a4;
 }
 .schedulepage_DPCScheduleHeader_1-Phy
   .schedulepage_InternationalDaySelector_bsIjw
@@ -39020,12 +39140,12 @@ a {
 .schedulepage_DPCScheduleEntry_3y0l2 {
   width: 100%;
   max-width: 1200px;
-  background-color: rgba(39, 39, 45, 0.7490196078);
+  background-color: #27272dbf;
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
   margin-bottom: 2px;
-  border: 1px solid rgba(0, 0, 0, 0);
+  border: 1px solid transparent;
   transition-property: border, background-color;
   transition-timing-function: ease-in-out;
   transition-duration: 0.2s;
@@ -39281,7 +39401,7 @@ a {
   .schedulepage_MatchDetailsButton_3egRQ:hover {
   background-color: #707e8f;
   transform: translateY(-1px);
-  filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.5215686275));
+  filter: drop-shadow(0px 3px 6px #00000085);
 }
 .schedulepage_DPCScheduleEntry_3y0l2 .schedulepage_Expansion_30W3U {
   width: 100%;
@@ -39446,7 +39566,7 @@ a {
   .schedulepage_WatchVODButton_3BXoh:hover {
   background-color: #3a3f44;
   transform: translateY(-1px);
-  filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.5215686275));
+  filter: drop-shadow(0px 3px 6px #00000085);
 }
 .schedulepage_DPCScheduleGameDetails_34rHh::after {
   width: calc(100% - 48px);
@@ -39957,7 +40077,7 @@ a {
   font-style: normal;
 }
 .aboutbanner_StandardButton_24Nmu {
-  border: 3px solid rgba(255, 255, 255, 0.3137254902);
+  border: 3px solid #ffffff50;
   padding: 15px 25px;
   margin: 10px 30px;
   border-radius: 5px;
@@ -40125,7 +40245,7 @@ a {
   .aboutbanner_Background_3O-Jk
   .aboutbanner_Content_25lN3
   .aboutbanner_Button_3WY5V {
-  border: 3px solid rgba(255, 255, 255, 0.3137254902);
+  border: 3px solid #ffffff50;
   border-radius: 5px;
   padding: 15px 25px;
   color: #fff;
@@ -40134,7 +40254,7 @@ a {
   font-family: "Radiance", sans-serif;
   text-transform: uppercase;
   letter-spacing: 2px;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
   transition-property: transform, border-color;
   transition-timing-function: ease;
   transition-duration: 0.2s;
@@ -40662,7 +40782,7 @@ a {
   font-style: normal;
 }
 .internationalstandingspage_StandardButton_3FwRA {
-  border: 3px solid rgba(255, 255, 255, 0.3137254902);
+  border: 3px solid #ffffff50;
   padding: 15px 25px;
   margin: 10px 30px;
   border-radius: 5px;
@@ -41022,7 +41142,7 @@ a {
   transition-property: background-color;
   transition-timing-function: ease-in-out;
   transition-duration: 0.2s;
-  background-color: rgba(39, 39, 45, 0.7490196078);
+  background-color: #27272dbf;
 }
 .standingsbracket_DPCStandingsBracket_1Xt0p
   .standingsbracket_BracketBody_25x0d.standingsbracket_NodeExpanded_3KF2_ {
@@ -41120,7 +41240,7 @@ a {
 }
 .standingsbracket_DPCStandingsBracket_1Xt0p
   .standingsbracket_BracketScroller_1NHYa::-webkit-scrollbar-track {
-  background-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
 }
 .standingsbracket_DPCStandingsBracket_1Xt0p
   .standingsbracket_BracketScroller_1NHYa::-webkit-scrollbar {
@@ -41530,11 +41650,11 @@ a {
   color: #35231e;
   background: linear-gradient(
     108deg,
-    rgb(122, 107, 88) 0%,
-    rgb(169, 152, 120) 28%,
-    rgb(212, 207, 194) 52%,
-    rgb(169, 152, 120) 76%,
-    rgb(122, 107, 88) 100%
+    #7a6b58 0%,
+    #a99878 28%,
+    #d4cfc2 52%,
+    #a99878 76%,
+    #7a6b58 100%
   );
   border: 1.5px solid #564c40;
 }
@@ -41543,11 +41663,11 @@ a {
   color: #1f2c49;
   background: linear-gradient(
     108deg,
-    rgb(72, 82, 102) 0%,
-    rgb(101, 108, 127) 28%,
-    rgb(160, 169, 186) 52%,
-    rgb(101, 108, 127) 76%,
-    rgb(72, 82, 102) 100%
+    #485266 0%,
+    #656c7f 28%,
+    #a0a9ba 52%,
+    #656c7f 76%,
+    #485266 100%
   );
   border: 1.5px solid #394151;
 }
@@ -41556,11 +41676,11 @@ a {
   color: #311d2c;
   background: linear-gradient(
     108deg,
-    rgb(83, 62, 66) 0%,
-    rgb(130, 99, 99) 28%,
-    rgb(195, 165, 149) 52%,
-    rgb(130, 99, 99) 76%,
-    rgb(83, 62, 66) 100%
+    #533e42 0%,
+    #826363 28%,
+    #c3a595 52%,
+    #826363 76%,
+    #533e42 100%
   );
   border: 1.5px solid #443336;
 }
@@ -41572,10 +41692,10 @@ a {
   align-items: center;
   background: linear-gradient(
     108deg,
-    rgba(42, 42, 50, 0.7490196078) 0%,
-    rgba(42, 42, 50, 0.7490196078) calc(100% - 400px),
-    rgba(54, 54, 62, 0.7490196078) calc(100% - 400px),
-    rgba(54, 54, 62, 0.7490196078) 100%
+    #2a2a32bf 0%,
+    #2a2a32bf calc(100% - 400px),
+    #36363ebf calc(100% - 400px),
+    #36363ebf 100%
   );
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -41597,11 +41717,11 @@ a {
   color: #35231e;
   background: linear-gradient(
     108deg,
-    rgb(122, 107, 88) 0%,
-    rgb(169, 152, 120) 28%,
-    rgb(212, 207, 194) 52%,
-    rgb(169, 152, 120) 76%,
-    rgb(122, 107, 88) 100%
+    #7a6b58 0%,
+    #a99878 28%,
+    #d4cfc2 52%,
+    #a99878 76%,
+    #7a6b58 100%
   );
   border: 1.5px solid #564c40;
 }
@@ -41610,11 +41730,11 @@ a {
   color: #1f2c49;
   background: linear-gradient(
     108deg,
-    rgb(72, 82, 102) 0%,
-    rgb(101, 108, 127) 28%,
-    rgb(160, 169, 186) 52%,
-    rgb(101, 108, 127) 76%,
-    rgb(72, 82, 102) 100%
+    #485266 0%,
+    #656c7f 28%,
+    #a0a9ba 52%,
+    #656c7f 76%,
+    #485266 100%
   );
   border: 1.5px solid #394151;
 }
@@ -41623,11 +41743,11 @@ a {
   color: #311d2c;
   background: linear-gradient(
     108deg,
-    rgb(83, 62, 66) 0%,
-    rgb(130, 99, 99) 28%,
-    rgb(195, 165, 149) 52%,
-    rgb(130, 99, 99) 76%,
-    rgb(83, 62, 66) 100%
+    #533e42 0%,
+    #826363 28%,
+    #c3a595 52%,
+    #826363 76%,
+    #533e42 100%
   );
   border: 1.5px solid #443336;
 }
@@ -42173,7 +42293,7 @@ a {
   font-style: normal;
 }
 .standingspage_StandardButton_1_67o {
-  border: 3px solid rgba(255, 255, 255, 0.3137254902);
+  border: 3px solid #ffffff50;
   padding: 15px 25px;
   margin: 10px 30px;
   border-radius: 5px;
@@ -42378,7 +42498,7 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: rgba(39, 39, 45, 0.7490196078);
+  background-color: #27272dbf;
   box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.4);
 }
 .standingsgrid_DPCStandingsGrid_27wR8
@@ -42684,7 +42804,7 @@ a {
 .standingsteamlist_DPCStandingsTeam_1_RVZ {
   width: 100%;
   height: 70px;
-  background-color: rgba(39, 39, 45, 0.7490196078);
+  background-color: #27272dbf;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -43275,7 +43395,7 @@ a {
   font-style: normal;
 }
 .international2021_StandardButton_28Po- {
-  border: 3px solid rgba(255, 255, 255, 0.3137254902);
+  border: 3px solid #ffffff50;
   padding: 15px 25px;
   margin: 10px 30px;
   border-radius: 5px;
@@ -43429,7 +43549,7 @@ a {
   );
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-fill-color: transparent;
 }
 .international2021_InternationalPrizeSplits_DbYSg {
   width: 100%;
@@ -43491,7 +43611,7 @@ a {
   );
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-fill-color: transparent;
 }
 .international2021_InternationalPrizeSplits_DbYSg
   .international2021_PrizeGridContain_3zm2W
@@ -43509,7 +43629,7 @@ a {
   );
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-fill-color: transparent;
   margin-bottom: 26px;
 }
 .international2021_InternationalPrizeSplits_DbYSg
@@ -43553,7 +43673,7 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.5647058824);
+  background-color: #00000090;
 }
 .international2021_InternationalPrizeSplits_DbYSg
   .international2021_PrizeGridContain_3zm2W
@@ -43574,7 +43694,7 @@ a {
   );
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-fill-color: transparent;
 }
 .international2021_InternationalPrizeSplits_DbYSg
   .international2021_PrizeGridContain_3zm2W
@@ -43664,7 +43784,7 @@ a {
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 600;
-  color: rgba(255, 255, 255, 0.5647058824);
+  color: #ffffff90;
 }
 .international2021_InternationalCompendiumBanner_ZUzrp
   .international2021_Intro_1TvG5
@@ -43728,7 +43848,7 @@ a {
   border: 1px solid #bb9a4a;
   border-radius: 3px;
   padding: 10px 35px;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
   color: #fff;
   font-size: 15px;
   font-weight: 700;
@@ -43745,13 +43865,13 @@ a {
   .international2021_LearnMoreButton_2gEDj:hover {
   border-color: #e6c373;
   color: #fff;
-  background-color: rgba(255, 255, 255, 0.1019607843);
+  background-color: #ffffff1a;
 }
 .international2021_InternationalCompendiumBanner_ZUzrp
   .international2021_Background_2GXMw {
   width: 100%;
   height: auto;
-  background-color: rgba(0, 0, 0, 0.3764705882);
+  background-color: #00000060;
   overflow: visible;
   background-position: center bottom;
   background-size: 100% auto;
@@ -43908,7 +44028,7 @@ a {
   border: 1px solid #bb9a4a;
   border-radius: 3px;
   padding: 10px 35px;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
   color: #fff;
   font-size: 15px;
   font-weight: 700;
@@ -43927,7 +44047,7 @@ a {
   .international2021_LearnMoreButton_2gEDj:hover {
   border-color: #e6c373;
   color: #fff;
-  background-color: rgba(255, 255, 255, 0.1019607843);
+  background-color: #ffffff1a;
 }
 .international2021_InternationalCompendiumBanner_ZUzrp
   .international2021_Background_2GXMw
@@ -43990,9 +44110,9 @@ a {
   justify-content: center;
   align-items: center;
   gap: 4px;
-  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.6666666667);
+  box-shadow: 0px 0px 30px #000000aa;
   border: 2px solid #000;
-  background-color: rgba(0, 0, 0, 0.5647058824);
+  background-color: #00000090;
 }
 .international2021_IternationalTeamListTeam_3r5UZ
   .international2021_GoldTeamLogo_RqoEQ {
@@ -44514,7 +44634,7 @@ a {
   font-style: normal;
 }
 .international2022_StandardButton_2i0to {
-  border: 3px solid rgba(255, 255, 255, 0.3137254902);
+  border: 3px solid #ffffff50;
   padding: 15px 25px;
   margin: 10px 30px;
   border-radius: 5px;
@@ -44708,7 +44828,7 @@ a {
 }
 .international2022_MajorHeaderTitle_23nz3 {
   font-family: "Reaver", serif;
-  filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.7137254902));
+  filter: drop-shadow(0px 3px 3px #000000b6);
   font-size: 38px;
   letter-spacing: 2px;
   font-weight: 600;
@@ -44779,7 +44899,7 @@ a {
 }
 .international2022_TextColorWhite_2eY4a {
   color: #fff;
-  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.8);
+  text-shadow: 0px 2px 4px #000000cc;
 }
 .international2022_TextColorGoldGlow_iZ26R {
   color: #fff;
@@ -44793,63 +44913,63 @@ a {
   background: -webkit-linear-gradient(#ebcf87 10%, #ea6953 90%);
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-fill-color: transparent;
   filter: drop-shadow(0px 2px 2px #000000);
 }
 .international2022_TextColorYellowGradient_2tmeV {
   background: -webkit-linear-gradient(#ebcf87 10%, #ea6953 90%);
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-fill-color: transparent;
   filter: drop-shadow(0px 0px 5px #e1261c);
 }
 .international2022_TextColorFVArcanaGradient_3-QgQ {
   background: -webkit-linear-gradient(#e4cdff 10%, #945bd6 90%);
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-fill-color: transparent;
   filter: drop-shadow(0px 0px 5px #721fd1);
 }
 .international2022_TextColorPurpleGradient_1Xdaa {
   background: -webkit-linear-gradient(#c5c1ff 10%, #6a6cff 90%);
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-fill-color: transparent;
   filter: drop-shadow(0px 0px 5px #1b1ed4);
 }
 .international2022_TextColorGreenGradient_IoO50 {
   background: -webkit-linear-gradient(#f8ffcd 10%, #899155 90%);
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-fill-color: transparent;
   filter: drop-shadow(0px 0px 5px #106618);
 }
 .international2022_TextColorBlueGradient_3Z6Ls {
   background: -webkit-linear-gradient(#ffffff 10%, #00a3d7 90%);
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-fill-color: transparent;
   filter: drop-shadow(0px 0px 5px #0089d8);
 }
 .international2022_TextColorPhantomGradient_2hc8W {
   background: -webkit-linear-gradient(#ffffff 10%, #8364a5 90%);
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-fill-color: transparent;
   filter: drop-shadow(0px 0px 7px #debfff);
 }
 .international2022_TextColorBlueShadowGradient_2HkIu {
   background: -webkit-linear-gradient(#ffffff 10%, #00a3d7 90%);
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-fill-color: transparent;
   filter: drop-shadow(0px 2px 2px #000000);
 }
 .international2022_TextColorGoldGradient_1IAzS {
   background: linear-gradient(#f8e8b9 10%, #ffffff 90%);
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-fill-color: transparent;
   filter: drop-shadow(0px 0px 10px black);
 }
 .international2022_InternationalCountdownContainer_3ACB8 {
@@ -44878,7 +44998,7 @@ a {
   .international2022_CountdownPreHeader_2oWFL {
   background: -webkit-linear-gradient(#ebcf87 10%, #ea6953 90%);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-fill-color: transparent;
   font-size: 20px;
   margin-top: 1em;
 }
@@ -44925,7 +45045,7 @@ a {
   font-size: 18px;
   font-weight: 600;
   background: linear-gradient(90deg, #ea6953 0%, #952e46 100%);
-  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3411764706);
+  box-shadow: 0px 6px 10px #00000057;
   border-top: 2px solid #ffa192;
   letter-spacing: 1px;
   transition: 0.15s;
@@ -44943,7 +45063,7 @@ a {
   .international2022_KeepUpHeader_3Yc2o {
   background: -webkit-linear-gradient(#ebcf87 10%, #ea6953 90%);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-fill-color: transparent;
   font-size: 20;
   font-size: clamp(20px, -0.6382978723vw + 32.2553191489px, 26px);
   margin-top: 2em;
@@ -45029,7 +45149,7 @@ a {
   );
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-fill-color: transparent;
 }
 .international2022_InternationalPrizeSplits_2Wz0V
   .international2022_PrizeGridContain_1TiJs
@@ -45047,7 +45167,7 @@ a {
   );
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-fill-color: transparent;
   margin-bottom: 26px;
 }
 .international2022_InternationalPrizeSplits_2Wz0V
@@ -45091,7 +45211,7 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.5647058824);
+  background-color: #00000090;
 }
 .international2022_InternationalPrizeSplits_2Wz0V
   .international2022_PrizeGridContain_1TiJs
@@ -45112,7 +45232,7 @@ a {
   );
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-fill-color: transparent;
 }
 .international2022_InternationalPrizeSplits_2Wz0V
   .international2022_PrizeGridContain_1TiJs
@@ -45244,7 +45364,7 @@ a {
   font-size: 18px;
   font-weight: 600;
   background: linear-gradient(90deg, #ea6953 0%, #952e46 100%);
-  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3411764706);
+  box-shadow: 0px 6px 10px #00000057;
   border-top: 2px solid #ffa192;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -45547,10 +45667,10 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.6666666667);
+  box-shadow: 0px 0px 30px #000000aa;
   border-radius: 10px;
   border: 1.5px solid #e34b4b;
-  background-color: rgba(227, 75, 75, 0.3058823529);
+  background-color: #e34b4b4e;
 }
 .international2022_InternationalTeamListTeam_3Ps_n
   .international2022_TeamName_1wOTn {
@@ -46102,7 +46222,7 @@ a {
   font-style: normal;
 }
 .international2023_StandardButton_1zWEo {
-  border: 3px solid rgba(255, 255, 255, 0.3137254902);
+  border: 3px solid #ffffff50;
   padding: 15px 25px;
   margin: 10px 30px;
   border-radius: 5px;
@@ -46296,7 +46416,7 @@ a {
 }
 .international2023_MajorHeaderTitle_39dsr {
   font-family: "Reaver", serif;
-  filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.7137254902));
+  filter: drop-shadow(0px 3px 3px #000000b6);
   font-size: 38px;
   letter-spacing: 2px;
   font-weight: 600;
@@ -46367,7 +46487,7 @@ a {
 }
 .international2023_TextColorWhite_3-502 {
   color: #fff;
-  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.8);
+  text-shadow: 0px 2px 4px #000000cc;
 }
 .international2023_TextColorGoldGlow_2zYDw {
   color: #fff;
@@ -46381,63 +46501,63 @@ a {
   background: -webkit-linear-gradient(#ebcf87 10%, #ea6953 90%);
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-fill-color: transparent;
   filter: drop-shadow(0px 2px 2px #000000);
 }
 .international2023_TextColorYellowGradient_3TWdW {
   background: -webkit-linear-gradient(#ebcf87 10%, #ea6953 90%);
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-fill-color: transparent;
   filter: drop-shadow(0px 0px 5px #e1261c);
 }
 .international2023_TextColorFVArcanaGradient_3U-68 {
   background: -webkit-linear-gradient(#e4cdff 10%, #945bd6 90%);
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-fill-color: transparent;
   filter: drop-shadow(0px 0px 5px #721fd1);
 }
 .international2023_TextColorPurpleGradient_1ilNK {
   background: -webkit-linear-gradient(#c5c1ff 10%, #6a6cff 90%);
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-fill-color: transparent;
   filter: drop-shadow(0px 0px 5px #1b1ed4);
 }
 .international2023_TextColorGreenGradient_3OZzP {
   background: -webkit-linear-gradient(#f8ffcd 10%, #899155 90%);
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-fill-color: transparent;
   filter: drop-shadow(0px 0px 5px #106618);
 }
 .international2023_TextColorBlueGradient_14IFp {
   background: -webkit-linear-gradient(#ffffff 10%, #00a3d7 90%);
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-fill-color: transparent;
   filter: drop-shadow(0px 0px 5px #0089d8);
 }
 .international2023_TextColorPhantomGradient_1VKR_ {
   background: -webkit-linear-gradient(#ffffff 10%, #8364a5 90%);
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-fill-color: transparent;
   filter: drop-shadow(0px 0px 7px #debfff);
 }
 .international2023_TextColorBlueShadowGradient_39Zzm {
   background: -webkit-linear-gradient(#ffffff 10%, #00a3d7 90%);
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-fill-color: transparent;
   filter: drop-shadow(0px 2px 2px #000000);
 }
 .international2023_TextColorGoldGradient_1DXTf {
   background: linear-gradient(#f8e8b9 10%, #ffffff 90%);
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-fill-color: transparent;
   filter: drop-shadow(0px 0px 10px black);
 }
 .international2023_InternationalCountdownContainer_3cS7W {
@@ -46465,7 +46585,7 @@ a {
   .international2023_CountdownPreHeader_19yH6 {
   background: -webkit-linear-gradient(#31c8db 10%, #30a4d5 90%);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-fill-color: transparent;
   font-size: 20px;
   margin-top: 1em;
 }
@@ -46483,13 +46603,7 @@ a {
   margin: 16px auto 0 auto;
   border-top: 1px solid;
   border-bottom: 1px solid;
-  border-image: linear-gradient(
-      to right,
-      rgba(148, 138, 118, 0),
-      #eadac0,
-      rgba(148, 138, 118, 0)
-    )
-    1;
+  border-image: linear-gradient(to right, #948a7600, #eadac0, #948a7600) 1;
   padding-top: 10px;
   padding-bottom: 10px;
 }
@@ -46519,7 +46633,7 @@ a {
   font-size: 18px;
   font-weight: 600;
   background: linear-gradient(90deg, #ea6953 0%, #952e46 100%);
-  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3411764706);
+  box-shadow: 0px 6px 10px #00000057;
   border-top: 2px solid #ffa192;
   letter-spacing: 1px;
   transition: 0.15s;
@@ -46537,7 +46651,7 @@ a {
   .international2023_KeepUpHeader_2mkMw {
   background: -webkit-linear-gradient(#31c8db 10%, #30a4d5 90%);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-fill-color: transparent;
   font-size: 20;
   font-size: clamp(20px, -0.6382978723vw + 32.2553191489px, 26px);
   margin-top: 2em;
@@ -46623,7 +46737,7 @@ a {
   );
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-fill-color: transparent;
 }
 .international2023_InternationalPrizeSplits_3aSjJ
   .international2023_PrizeGridContain_3DfGa
@@ -46641,7 +46755,7 @@ a {
   );
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-fill-color: transparent;
   margin-bottom: 26px;
 }
 .international2023_InternationalPrizeSplits_3aSjJ
@@ -46685,7 +46799,7 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.5647058824);
+  background-color: #00000090;
 }
 .international2023_InternationalPrizeSplits_3aSjJ
   .international2023_PrizeGridContain_3DfGa
@@ -46706,7 +46820,7 @@ a {
   );
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-fill-color: transparent;
 }
 .international2023_InternationalPrizeSplits_3aSjJ
   .international2023_PrizeGridContain_3DfGa
@@ -46802,7 +46916,7 @@ a {
   color: #31c8db;
   background: -webkit-linear-gradient(#31c8db, #30a4d5);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-fill-color: transparent;
 }
 .international2023_TheInternational2023Plugs_EZoZN
   .international2023_BattlePassPlug_3JqwU
@@ -46825,7 +46939,7 @@ a {
   font-size: 18px;
   font-weight: 400;
   line-height: 160%;
-  color: rgba(255, 255, 255, 0.8666666667);
+  color: #ffffffdd;
 }
 .international2023_TheInternational2023Plugs_EZoZN
   .international2023_BattlePassPlug_3JqwU
@@ -46841,8 +46955,8 @@ a {
   font-size: 18px;
   font-weight: 600;
   background: linear-gradient(180deg, #30a4d5 0%, #0e4b80 100%);
-  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3411764706);
-  border-top: 1px solid rgba(255, 255, 255, 0.262745098);
+  box-shadow: 0px 6px 10px #00000057;
+  border-top: 1px solid #ffffff43;
   letter-spacing: 1px;
   text-transform: uppercase;
   transition: 0.15s;
@@ -47328,7 +47442,7 @@ a {
   position: relative;
   opacity: 0.5;
   filter: brightness(0.3);
-  filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.5019607843));
+  filter: drop-shadow(4px 4px 6px #00000080);
 }
 .nextmatchbanner_DPCNextMatchBanner_2UcZ1
   .nextmatchbanner_BannerContents_4w40D
@@ -47381,7 +47495,7 @@ a {
   .nextmatchbanner_BannerContents_4w40D
   .nextmatchbanner_ScheduleButtonContainer_N5OW3
   .nextmatchbanner_ScheduleButton_3R4ex:hover {
-  background-color: rgba(255, 255, 255, 0.1019607843);
+  background-color: #ffffff1a;
   transform: translateY(-1px);
   filter: drop-shadow(0px 6px 6px #000);
 }
@@ -47893,7 +48007,7 @@ a {
   font-style: normal;
 }
 .seriesdetails_StandardButton_1ceHq {
-  border: 3px solid rgba(255, 255, 255, 0.3137254902);
+  border: 3px solid #ffffff50;
   padding: 15px 25px;
   margin: 10px 30px;
   border-radius: 5px;
@@ -48434,12 +48548,7 @@ a {
 .seriesdetails_DPCSeriesGameSelector_1awtC
   .seriesdetails_GameOption_Fym_x.seriesdetails_Selected_zwoN1 {
   background: #161618;
-  background: linear-gradient(
-    145deg,
-    rgb(22, 22, 24) 0%,
-    rgb(34, 39, 57) 0%,
-    rgb(42, 49, 74) 100%
-  );
+  background: linear-gradient(145deg, #161618 0%, #222739 0%, #2a314a 100%);
 }
 .seriesdetails_DPCSeriesGameSelector_1awtC
   .seriesdetails_GameOption_Fym_x.seriesdetails_Selected_zwoN1
@@ -48496,7 +48605,7 @@ a {
   .seriesdetails_CenterContainer_JDws6 {
   width: 300px;
   height: 400px;
-  background-color: rgba(11, 11, 12, 0.6);
+  background-color: #0b0b0c99;
   box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.3);
 }
 .seriesdetails_DPCSeriesDetailsOverview_31oDf
@@ -48650,7 +48759,7 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgba(11, 11, 12, 0.6);
+  background-color: #0b0b0c99;
   box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.3);
 }
 .seriesdetails_DPCSeriesDetailsGameOverview_2py8I
@@ -48870,8 +48979,8 @@ a {
   transition-property: color, background-color;
   transition-timing-function: ease-in-out;
   transition-duration: 0.1s;
-  border-top: 1px solid rgba(0, 0, 0, 0);
-  border-bottom: 1px solid rgba(0, 0, 0, 0);
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
 }
 .seriesdetails_MatchSectionPlayer_3hFuP.seriesdetails_Selected_zwoN1,
 .seriesdetails_MatchSectionPlayer_3hFuP.seriesdetails_Hovered_3ZB2G {
@@ -49286,7 +49395,7 @@ a {
   font-size: 20px;
   font-weight: 500px;
   color: #6b7785;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
 }
 .seriesdetails_DPCSeriesDetailsGameVOD_1WMFr
   .seriesdetails_OptionContainer_zZZiu {
@@ -49354,13 +49463,8 @@ a {
   .seriesdetails_LeftTabs_3cPV9
   .seriesdetails_SeriesViewTab_Q7INw.seriesdetails_Selected_zwoN1 {
   background: #161618;
-  background: linear-gradient(
-    145deg,
-    rgb(22, 22, 24) 0%,
-    rgb(34, 39, 57) 0%,
-    rgb(42, 49, 74) 100%
-  );
-  border-right: 1px solid rgba(0, 0, 0, 0);
+  background: linear-gradient(145deg, #161618 0%, #222739 0%, #2a314a 100%);
+  border-right: 1px solid transparent;
 }
 .seriesdetails_DPCSeriesFooter_2k_FY
   .seriesdetails_LeftTabs_3cPV9
@@ -49507,13 +49611,8 @@ a {
   .seriesdetails_RightTabs_kYWar
   .seriesdetails_SizeTab_3aPBc.seriesdetails_Selected_zwoN1 {
   background: #161618;
-  background: linear-gradient(
-    145deg,
-    rgb(22, 22, 24) 0%,
-    rgb(34, 39, 57) 0%,
-    rgb(42, 49, 74) 100%
-  );
-  border-left: 1px solid rgba(0, 0, 0, 0);
+  background: linear-gradient(145deg, #161618 0%, #222739 0%, #2a314a 100%);
+  border-left: 1px solid transparent;
 }
 .seriesdetails_DPCSeriesFooter_2k_FY
   .seriesdetails_RightTabs_kYWar
@@ -50126,7 +50225,7 @@ a {
   font-style: normal;
 }
 .teamlist_StandardButton_Yf2zE {
-  border: 3px solid rgba(255, 255, 255, 0.3137254902);
+  border: 3px solid #ffffff50;
   padding: 15px 25px;
   margin: 10px 30px;
   border-radius: 5px;
@@ -50307,7 +50406,7 @@ a {
   display: flex;
   flex-direction: row;
   align-items: center;
-  background-color: rgba(54, 54, 62, 0.7490196078);
+  background-color: #36363ebf;
   color: #a3a3a3;
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
 }
@@ -50322,7 +50421,7 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgba(110, 110, 119, 0.4);
+  background-color: #6e6e7766;
 }
 .teamlist_TeamEntry_3IATc
   .teamlist_FavoriteSection_3iDaV
@@ -50472,7 +50571,7 @@ a {
 .teamlist_TeamEntry_3IATc .teamlist_MatchSection_2WfoI .teamlist_TopBar_28KpJ {
   width: 100%;
   height: 30px;
-  background-color: rgba(32, 32, 35, 0.7490196078);
+  background-color: #202023bf;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -50489,7 +50588,7 @@ a {
   .teamlist_BottomSectionWrapper_1LWA- {
   width: 100%;
   flex-grow: 1;
-  background-color: rgba(37, 37, 40, 0.7490196078);
+  background-color: #252528bf;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -50614,7 +50713,7 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgba(25, 25, 28, 0.7019607843);
+  background-color: #19191cb3;
 }
 .followedteammatches_DPCFollowedTeamSeries_1YTlH
   .followedteammatches_Gradient_139Gz
@@ -50792,7 +50891,7 @@ a {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: rgba(0, 0, 0, 0);
+  color: transparent;
   margin-bottom: -20px;
 }
 * {
@@ -51292,7 +51391,7 @@ a {
   font-style: normal;
 }
 .watchpage_StandardButton_2BDAy {
-  border: 3px solid rgba(255, 255, 255, 0.3137254902);
+  border: 3px solid #ffffff50;
   padding: 15px 25px;
   margin: 10px 30px;
   border-radius: 5px;
@@ -51901,7 +52000,7 @@ a {
   font-style: normal;
 }
 .internationalrulespage_StandardButton_2BWNB {
-  border: 3px solid rgba(255, 255, 255, 0.3137254902);
+  border: 3px solid #ffffff50;
   padding: 15px 25px;
   margin: 10px 30px;
   border-radius: 5px;
@@ -52028,12 +52127,7 @@ a {
   flex-direction: column;
   justify-content: center;
   background: #161618;
-  background: linear-gradient(
-    145deg,
-    rgb(22, 22, 24) 0%,
-    rgb(20, 32, 49) 0%,
-    rgb(29, 43, 65) 100%
-  );
+  background: linear-gradient(145deg, #161618 0%, #142031 0%, #1d2b41 100%);
   background-size: cover;
   background-position: top, center;
   background-repeat: no-repeat;
@@ -52632,7 +52726,7 @@ a {
   font-style: normal;
 }
 .herogridpage_StandardButton_3UdqM {
-  border: 3px solid rgba(255, 255, 255, 0.3137254902);
+  border: 3px solid #ffffff50;
   padding: 15px 25px;
   margin: 10px 30px;
   border-radius: 5px;
@@ -52895,8 +52989,8 @@ a {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid rgba(17, 17, 17, 0.5647058824);
-  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.3137254902);
+  border: 1px solid #11111190;
+  box-shadow: 0px 0px 30px #00000050;
   margin-top: 20px;
   background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3));
 }
@@ -53043,7 +53137,7 @@ a {
   input {
   height: 30px;
   width: 100%;
-  border: 0px solid rgba(0, 0, 0, 0);
+  border: 0px solid transparent;
   background-color: #25282a;
   outline: none;
   color: #fff;
@@ -53660,7 +53754,7 @@ a {
   font-style: normal;
 }
 .heropage_StandardButton_3bUty {
-  border: 3px solid rgba(255, 255, 255, 0.3137254902);
+  border: 3px solid #ffffff50;
   padding: 15px 25px;
   margin: 10px 30px;
   border-radius: 5px;
@@ -54020,7 +54114,7 @@ a {
 .heropage_BackgroundGradient_2-K5f {
   width: 150%;
   height: 650px;
-  background-color: rgba(0, 0, 0, 0.3764705882);
+  background-color: #00000060;
   position: absolute;
   transform: skewY(-45deg) translateX(-50vw);
   overflow: hidden;
@@ -54160,14 +54254,14 @@ a {
 .heropage_HeroSummary_2jP25
   .heropage_BioOrSummaryContainer_3NVqF
   .heropage_BioContainer_33H8i::-webkit-scrollbar-track {
-  background-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
 }
 .heropage_HeroSummary_2jP25
   .heropage_BioOrSummaryContainer_3NVqF
   .heropage_BioContainer_33H8i::-webkit-scrollbar {
   width: 12px;
   border-radius: 10px;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: #00000033;
 }
 .heropage_HeroSummary_2jP25
   .heropage_BioOrSummaryContainer_3NVqF
@@ -54608,7 +54702,7 @@ a {
   text-align: center;
   font-weight: 400;
   font-size: 13px;
-  color: rgba(255, 255, 255, 0.7333333333);
+  color: #ffffffbb;
 }
 .heropage_TopAbilitySelector_3HNRl
   .heropage_AbilityList_x-wl1
@@ -54657,8 +54751,8 @@ a {
   .heropage_TooltipPointer_3LFoc {
   width: 0;
   height: 0;
-  border-left: 20px solid rgba(0, 0, 0, 0);
-  border-right: 20px solid rgba(0, 0, 0, 0);
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
   border-top: 20px solid blue;
   position: absolute;
   left: 0;
@@ -55554,7 +55648,7 @@ a {
   .heropage_AbilityDetails_2lY3B
   .heropage_ShardScepterText_2YWa6 {
   display: none;
-  color: rgba(255, 255, 255, 0.9333333333);
+  color: #ffffffee;
   font-size: 16px;
 }
 .heropage_HeroAbilities_1yoiZ
@@ -56277,7 +56371,7 @@ a {
   font-style: normal;
 }
 .homepage_StandardButton_1W4Sc {
-  border: 3px solid rgba(255, 255, 255, 0.3137254902);
+  border: 3px solid #ffffff50;
   padding: 15px 25px;
   margin: 10px 30px;
   border-radius: 5px;
@@ -56393,7 +56487,7 @@ a {
   min-width: 288px;
   height: 78px;
   border-radius: 6px;
-  border: 3px solid rgba(255, 255, 255, 0.5647058824);
+  border: 3px solid #ffffff90;
   box-shadow: 0px 0px 5px #000;
   display: inline-flex;
   flex-direction: row;
@@ -56483,7 +56577,7 @@ a {
     left bottom,
     color-stop(60%, rgba(0, 0, 0, 0)),
     color-stop(80%, rgba(0, 0, 0, 0.7)),
-    color-stop(100%, rgb(0, 0, 0))
+    color-stop(100%, black)
   );
 }
 .homepage_HomePage_owcSF
@@ -56547,7 +56641,7 @@ a {
   font-family: "Reaver", serif;
   letter-spacing: 5px;
   font-weight: 600;
-  color: rgba(255, 255, 255, 0.9333333333);
+  color: #ffffffee;
   text-transform: uppercase;
   text-shadow: 0px 0px 20px #000;
 }
@@ -56566,7 +56660,7 @@ a {
   font-size: 20px;
   font-family: "Radiance", sans-serif;
   letter-spacing: 2px;
-  color: rgba(255, 255, 255, 0.5647058824);
+  color: #ffffff90;
   font-weight: 600;
   margin-top: 5px;
   margin-bottom: 20px;
@@ -56625,7 +56719,7 @@ a {
   align-items: center;
   cursor: pointer;
   border-radius: 6px;
-  border: 3px solid rgba(255, 255, 255, 0.3137254902);
+  border: 3px solid #ffffff50;
   filter: drop-shadow(0px 3px 4px #000);
   transition-duration: 0.2s;
 }
@@ -56785,7 +56879,7 @@ a {
     left bottom,
     color-stop(60%, rgba(0, 0, 0, 0)),
     color-stop(80%, rgba(0, 0, 0, 0.7)),
-    color-stop(100%, rgb(0, 0, 0))
+    color-stop(100%, black)
   );
 }
 .homepage_HomePage_owcSF
@@ -56854,8 +56948,8 @@ a {
   position: absolute;
   top: 0px;
   border-top: 400px solid rgba(0, 0, 0, 0.7);
-  border-left: 100px solid rgba(0, 0, 0, 0);
-  border-right: 100px solid rgba(0, 0, 0, 0);
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
   z-index: -1;
   width: 900px;
   height: 0px;
@@ -57117,7 +57211,7 @@ a {
 .homepage_HeaderText_37wqy .Minor,
 .homepage_HeaderText_37wqy * .Minor {
   font-size: 70px;
-  color: rgba(226, 218, 206, 0.5647058824);
+  color: #e2dace90;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
@@ -57801,7 +57895,7 @@ a {
   font-style: normal;
 }
 .springcleaning_StandardButton_3yT4p {
-  border: 3px solid rgba(255, 255, 255, 0.3137254902);
+  border: 3px solid #ffffff50;
   padding: 15px 25px;
   margin: 10px 30px;
   border-radius: 5px;
@@ -58540,7 +58634,7 @@ a {
   font-style: normal;
 }
 .requestforproposalpage_StandardButton_2Dn39 {
-  border: 3px solid rgba(255, 255, 255, 0.3137254902);
+  border: 3px solid #ffffff50;
   padding: 15px 25px;
   margin: 10px 30px;
   border-radius: 5px;
@@ -59254,7 +59348,7 @@ a {
   font-style: normal;
 }
 .majorsregistrationautographspage_StandardButton_2zccE {
-  border: 3px solid rgba(255, 255, 255, 0.3137254902);
+  border: 3px solid #ffffff50;
   padding: 15px 25px;
   margin: 10px 30px;
   border-radius: 5px;
@@ -60321,7 +60415,7 @@ a {
   font-style: normal;
 }
 .autographguidelines_StandardButton_2_eVW {
-  border: 3px solid rgba(255, 255, 255, 0.3137254902);
+  border: 3px solid #ffffff50;
   padding: 15px 25px;
   margin: 10px 30px;
   border-radius: 5px;
@@ -61189,7 +61283,7 @@ a {
   font-style: normal;
 }
 .portraitguidelines_StandardButton_3CCXp {
-  border: 3px solid rgba(255, 255, 255, 0.3137254902);
+  border: 3px solid #ffffff50;
   padding: 15px 25px;
   margin: 10px 30px;
   border-radius: 5px;
@@ -62042,7 +62136,7 @@ a {
   font-style: normal;
 }
 .controllerfaqpage_StandardButton_1SyeC {
-  border: 3px solid rgba(255, 255, 255, 0.3137254902);
+  border: 3px solid #ffffff50;
   padding: 15px 25px;
   margin: 10px 30px;
   border-radius: 5px;
@@ -62735,7 +62829,7 @@ a {
   font-style: normal;
 }
 .pastupdates_StandardButton_2_Cmv {
-  border: 3px solid rgba(255, 255, 255, 0.3137254902);
+  border: 3px solid #ffffff50;
   padding: 15px 25px;
   margin: 10px 30px;
   border-radius: 5px;
@@ -62885,7 +62979,7 @@ a {
 }
 .pastupdates_Description_3j_E1 {
   font-family: "Radiance", sans-serif;
-  color: rgba(255, 255, 255, 0.9333333333);
+  color: #ffffffee;
   font-size: 22px;
   text-align: center;
   line-height: 28px;
@@ -62940,7 +63034,7 @@ a {
   height: 281px;
   border: 1px solid #727272;
   box-shadow: 0px 0px 20px #000;
-  background-color: rgba(0, 0, 0, 0.1254901961);
+  background-color: #00000020;
   background-size: cover;
   background-position: center bottom;
   display: flex;
@@ -62967,7 +63061,7 @@ a {
   .pastupdates_UpdatesContainer_fJ31i
   .pastupdates_UpdateBlock_2ao7w
   .pastupdates_Date_3AU7D {
-  background-color: rgba(0, 0, 0, 0.5647058824);
+  background-color: #00000090;
   padding: 2px 5px;
   border-radius: 3px;
   position: absolute;
@@ -63478,7 +63572,7 @@ a {
   font-style: normal;
 }
 .patchnotespage_StandardButton_nQppD {
-  border: 3px solid rgba(255, 255, 255, 0.3137254902);
+  border: 3px solid #ffffff50;
   padding: 15px 25px;
   margin: 10px 30px;
   border-radius: 5px;
@@ -63676,7 +63770,7 @@ a {
 }
 .patchnotespage_UpdatesSection_3n8oL
   .patchnotespage_PatchNotesHeaderLabel_1WjLC {
-  background: linear-gradient(to right, #833312, rgba(131, 51, 18, 0));
+  background: linear-gradient(to right, #833312ff, #83331200);
   border-left: 2px solid #ff5005;
   font-size: clamp(20px, 2vw, 30px);
   font-weight: 600;
@@ -63690,7 +63784,7 @@ a {
 }
 .patchnotespage_UpdatesSection_3n8oL .patchnotespage_PatchNotesList_2bYtA {
   width: 100%;
-  border-left: 2px solid rgba(255, 255, 255, 0.062745098);
+  border-left: 2px solid #ffffff10;
   margin-bottom: 30px;
   background: linear-gradient(
     90deg,
@@ -63710,7 +63804,7 @@ a {
   flex-direction: column;
   padding: 18px;
   padding-bottom: 0px;
-  border-left: 2px solid rgba(255, 255, 255, 0.062745098);
+  border-left: 2px solid #ffffff10;
   margin-bottom: 30px;
   background: linear-gradient(
     90deg,
@@ -64011,7 +64105,7 @@ a {
 }
 .patchnotespage_NoteElement_1gbgx .patchnotespage_Note_eSxyZ {
   font-size: clamp(17px, 1.5vw, 19px);
-  color: rgba(187, 187, 187, 0.9333333333);
+  color: #bbbbbbee;
   line-height: 1.3;
   font-weight: 200;
 }
@@ -64536,7 +64630,7 @@ a {
   font-style: normal;
 }
 .augupdate22_StandardButton_1CSSv {
-  border: 3px solid rgba(255, 255, 255, 0.3137254902);
+  border: 3px solid #ffffff50;
   padding: 15px 25px;
   margin: 10px 30px;
   border-radius: 5px;
@@ -64684,18 +64778,18 @@ a {
   height: 2px;
   background: linear-gradient(
     to right,
-    rgba(146, 30, 94, 0),
+    #921e5e00,
     #921e5e,
     #f5a043,
     #921e5e,
-    rgba(146, 30, 94, 0)
+    #921e5e00
   );
 }
 .augupdate22_Aug2023Page_VM6IJ .augupdate22_LeftDivider_1rrwb {
   margin: 15px 0 25px 0;
   width: 100%;
   height: 2px;
-  background: linear-gradient(to right, #5cb1ff, rgba(0, 71, 255, 0));
+  background: linear-gradient(to right, #5cb1ff, #0047ff00);
 }
 .augupdate22_Aug2023Page_VM6IJ .augupdate22_HeaderContainer_1IF2b {
   width: 100%;
@@ -64741,8 +64835,8 @@ a {
       linear,
       left top,
       right top,
-      from(rgba(146, 30, 94, 0)),
-      to(rgba(146, 30, 94, 0)),
+      from(#921e5e00),
+      to(#921e5e00),
       color-stop(0.2, #f5a043),
       color-stop(0.8, #f5a043)
     )
@@ -64751,10 +64845,10 @@ a {
   border-bottom: 2px solid;
   background: radial-gradient(
     circle at top,
-    rgba(200, 104, 0, 0.5019607843),
-    rgba(200, 104, 0, 0.5019607843),
-    rgba(146, 30, 94, 0.5019607843),
-    rgba(146, 30, 94, 0)
+    #c8680080,
+    #c8680080,
+    #921e5e80,
+    #921e5e00
   );
   backdrop-filter: blur(16px);
   text-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
@@ -64876,7 +64970,7 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  filter: drop-shadow(-20px 20px 15px rgba(0, 0, 0, 0.5058823529));
+  filter: drop-shadow(-20px 20px 15px #00000081);
 }
 .augupdate22_Aug2023Page_VM6IJ
   .augupdate22_XLImage_32nlH
@@ -64886,7 +64980,7 @@ a {
 }
 .augupdate22_Aug2023Page_VM6IJ .augupdate22_RowImage_1g7Zm {
   width: 58%;
-  filter: drop-shadow(20px 20px 15px rgba(0, 0, 0, 0.5058823529));
+  filter: drop-shadow(20px 20px 15px #00000081);
 }
 @media (max-width: 980px) {
   .augupdate22_Aug2023Page_VM6IJ .augupdate22_RowImage_1g7Zm {
@@ -64932,7 +65026,7 @@ a {
   letter-spacing: 3px;
   background: -webkit-linear-gradient(#cab197, #eadfd4);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-fill-color: transparent;
 }
 .augupdate22_Aug2023Page_VM6IJ .augupdate22_XLSubtitle_2rNUf {
   padding: 0 0 20px 0;
@@ -64995,11 +65089,7 @@ a {
   justify-content: center;
   filter: drop-shadow(0 2px 2px #000);
   border-left: 4px solid #f5a043;
-  background: linear-gradient(
-    to right,
-    rgba(245, 160, 67, 0.2117647059),
-    rgba(146, 30, 94, 0.0470588235)
-  );
+  background: linear-gradient(to right, #f5a04336, #921e5e0c);
   backdrop-filter: blur(5px);
 }
 @media (max-width: 1200px) {
@@ -65030,11 +65120,7 @@ a {
   filter: drop-shadow(0 2px 2px #000);
   backdrop-filter: blur(5px);
   border-left: 4px solid #f5a043;
-  background: linear-gradient(
-    to right,
-    rgba(245, 160, 67, 0.2117647059),
-    rgba(146, 30, 94, 0.0470588235)
-  );
+  background: linear-gradient(to right, #f5a04336, #921e5e0c);
 }
 .augupdate22_Aug2023Page_VM6IJ .augupdate22_ContainerCarousel_3ujUS {
   width: 100%;
@@ -65071,7 +65157,7 @@ a {
   text-align: center;
   background: -webkit-linear-gradient(#919191, #fff);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-fill-color: transparent;
   filter: drop-shadow(0 2px 2px #000);
 }
 .augupdate22_Aug2023Page_VM6IJ .augupdate22_CCSubtitle_2Uv5v {
@@ -65166,7 +65252,7 @@ a {
   font-size: 28px;
   line-height: 170%;
   font-family: "Radiance", sans-serif;
-  text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.4);
+  text-shadow: 0px 1px 4px #00000066;
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: 1px;
@@ -65180,7 +65266,7 @@ a {
   border: none;
   align-self: center;
   background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/augupdate23/treasure_carousel_dot.png");
-  background-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -65199,7 +65285,7 @@ a {
   height: 80px;
   border: none;
   background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/augupdate23/treasure_carousel_arrow.png");
-  background-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -65211,7 +65297,7 @@ a {
   height: 80px;
   border: none;
   background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/augupdate23/treasure_carousel_arrow.png");
-  background-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -65273,7 +65359,7 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.231372549);
+  background-color: #0000003b;
   backdrop-filter: blur(5px);
 }
 @media (max-width: 1200px) {
@@ -65333,7 +65419,7 @@ a {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  color: rgba(182, 182, 182, 0.4588235294);
+  color: #b6b6b675;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 600;
@@ -65342,7 +65428,7 @@ a {
   width: 100%;
   margin: 30px;
   height: 1px;
-  background-color: rgba(182, 182, 182, 0.4588235294);
+  background-color: #b6b6b675;
 }
 .augupdate22_ComparisonSelector_2mm9z {
   width: 90%;
@@ -65385,7 +65471,7 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.231372549);
+  background-color: #0000003b;
   backdrop-filter: blur(5px);
   z-index: 1;
 }
@@ -65471,7 +65557,7 @@ a {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  color: rgba(182, 182, 182, 0.4588235294);
+  color: #b6b6b675;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 600;
@@ -65485,7 +65571,7 @@ a {
   width: 100%;
   margin: 30px;
   height: 1px;
-  background-color: rgba(182, 182, 182, 0.4588235294);
+  background-color: #b6b6b675;
 }
 .augupdate22_ComparisonSelector_2mm9z .augupdate22_ComparisonSelectors_Wz8cK {
   display: flex;
@@ -65495,7 +65581,7 @@ a {
   width: 100%;
   height: 130px;
   padding: 0px 12.5%;
-  background-color: rgba(0, 0, 0, 0.231372549);
+  background-color: #0000003b;
   backdrop-filter: blur(5px);
 }
 .augupdate22_ComparisonSelector_2mm9z
@@ -65560,7 +65646,7 @@ a {
   display: inline;
   width: 1px;
   padding: 0px;
-  background-color: rgba(36, 36, 36, 0.3019607843);
+  background-color: #2424244d;
 }
 * {
   box-sizing: border-box;
@@ -66059,7 +66145,7 @@ a {
   font-style: normal;
 }
 .shortfilmcontest_StandardButton_8vKFn {
-  border: 3px solid rgba(255, 255, 255, 0.3137254902);
+  border: 3px solid #ffffff50;
   padding: 15px 25px;
   margin: 10px 30px;
   border-radius: 5px;
@@ -66190,7 +66276,7 @@ a {
   filter: brightness(0.7);
 }
 .shortfilmcontest_FilmButton_3f-RA {
-  border: 3px solid rgba(255, 255, 255, 0.1882352941);
+  border: 3px solid #ffffff30;
   padding: 20px 30px;
   border-radius: 5px;
   cursor: pointer;
@@ -66270,7 +66356,7 @@ a {
     left bottom,
     color-stop(60%, rgba(0, 0, 0, 0)),
     color-stop(80%, rgba(0, 0, 0, 0.7)),
-    color-stop(100%, rgb(0, 0, 0))
+    color-stop(100%, black)
   );
 }
 .shortfilmcontest_HomePage_19ELl
@@ -66375,7 +66461,7 @@ a {
   font-family: "Reaver", serif;
   letter-spacing: 5px;
   font-weight: 600;
-  color: rgba(255, 255, 255, 0.9333333333);
+  color: #ffffffee;
   text-transform: uppercase;
   text-shadow: 0px 0px 20px #000;
 }
@@ -66465,8 +66551,8 @@ a {
   background: -webkit-linear-gradient(#ffeab5, #ac822f);
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
-  filter: drop-shadow(2px 2px 10px rgba(255, 153, 0, 0.6509803922));
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(2px 2px 10px #ff9900a6);
 }
 .shortfilmcontest_HomePage_19ELl
   .shortfilmcontest_TitleContainer_1qvNp
@@ -66475,8 +66561,8 @@ a {
   background: -webkit-linear-gradient(#cfddff, #696f7c);
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
-  filter: drop-shadow(2px 2px 10px rgba(74, 109, 189, 0.7960784314));
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(2px 2px 10px #4a6dbdcb);
 }
 .shortfilmcontest_HomePage_19ELl
   .shortfilmcontest_TitleContainer_1qvNp
@@ -66485,8 +66571,8 @@ a {
   background: -webkit-linear-gradient(#d1af8e, #97573e);
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
-  filter: drop-shadow(2px 2px 10px rgba(189, 64, 15, 0.7607843137));
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(2px 2px 10px #bd400fc2);
 }
 .shortfilmcontest_HomePage_19ELl
   .shortfilmcontest_TitleContainer_1qvNp
@@ -66495,7 +66581,7 @@ a {
   background: -webkit-linear-gradient(#cccccc, #808080);
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  -webkit-text-fill-color: transparent;
   filter: drop-shadow(2px 2px 10px #808080);
 }
 .shortfilmcontest_HomePage_19ELl
@@ -66508,7 +66594,7 @@ a {
   align-items: left;
   width: 40%;
   margin-left: auto;
-  background-color: rgba(0, 0, 0, 0.3764705882);
+  background-color: #00000060;
   padding: 20px;
   margin-top: 200px;
 }
@@ -66590,8 +66676,8 @@ a {
   align-items: center;
   z-index: 5;
   overflow: hidden;
-  border-top: 3px solid rgba(255, 255, 255, 0.3137254902);
-  border-bottom: 3px solid rgba(255, 255, 255, 0.3137254902);
+  border-top: 3px solid #ffffff50;
+  border-bottom: 3px solid #ffffff50;
   padding: 100px 10vw;
 }
 .shortfilmcontest_HomePage_19ELl
@@ -66666,8 +66752,8 @@ a {
   background-size: cover;
   z-index: 10;
   position: relative;
-  border-top: 2px solid rgba(255, 255, 255, 0.3764705882);
-  border-bottom: 2px solid rgba(255, 255, 255, 0.3764705882);
+  border-top: 2px solid #ffffff60;
+  border-bottom: 2px solid #ffffff60;
 }
 .shortfilmcontest_HomePage_19ELl
   .shortfilmcontest_WallpaperSection_2V4ms
@@ -67107,16 +67193,14 @@ div.ModalPosition_TopBar {
   height: 100%;
 }
 .DialogHeader {
-  font-weight: 300;
-  font-size: 32px;
-  line-height: 36px;
-  letter-spacing: 2px;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 30px;
   color: #fff;
-  text-transform: uppercase;
   flex-shrink: 0;
   user-select: none;
   margin-right: 26px;
-  margin-bottom: 12px;
+  margin-bottom: 4px;
 }
 .DesktopUI .DialogHeader,
 .friendsui-container .DialogHeader {
@@ -67212,12 +67296,7 @@ div.ModalPosition_TopBar {
   flex: 1;
   min-height: 1px;
   max-height: 1px;
-  background: linear-gradient(
-    to right,
-    rgb(57, 62, 71) 0%,
-    rgb(64, 70, 79) 20%,
-    rgb(57, 62, 71) 100%
-  );
+  background: linear-gradient(to right, #393e47 0%, #40464f 20%, #393e47 100%);
   margin-bottom: 16px;
 }
 .OrSeparator .DialogHBar {
@@ -67306,12 +67385,12 @@ div.ModalPosition_TopBar {
   margin: 0;
   border: none;
   border-radius: 3px;
-  box-shadow: inset 0px 0px 0px rgba(0, 0, 0, 0);
+  box-shadow: inset 0px 0px 0px #0000;
 }
 .DialogTextInputBase:focus,
 .DialogTextInputBase:focus-within {
   background: rgba(67, 73, 83, 0.6);
-  box-shadow: inset 1px 1px 8px rgba(0, 0, 0, 0.6666666667);
+  box-shadow: inset 1px 1px 8px #000a;
   padding-left: 11px;
 }
 .DialogTextInputBase:not(:disabled):hover {
@@ -67320,7 +67399,7 @@ div.ModalPosition_TopBar {
 .DesktopUI .DialogTextInputBase:focus,
 .DialogTextInputBase:focus-within {
   background: #23262e;
-  box-shadow: inset 1px 1px 4px rgba(0, 0, 0, 0.6666666667);
+  box-shadow: inset 1px 1px 4px #000a;
   padding-left: 11px;
 }
 .DialogTextInputBase:disabled:hover {
@@ -67351,7 +67430,7 @@ div.ModalPosition_TopBar {
   background: #30353b;
   margin-right: 4px;
   flex-grow: 4;
-  box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.4);
+  box-shadow: inset 0px 0px 4px #0006;
   border: 0.5px solid rgba(139, 153, 170, 0.4);
   border-style: inset;
 }
@@ -67444,27 +67523,19 @@ button.DialogButton.DialogButtonTall {
   padding-bottom: 16px;
 }
 button.DialogButton.Primary {
-  background: rgba(0, 0, 0, 0);
+  background: transparent;
   background: linear-gradient(to right, #47bfff 0%, #1a44c2 60%);
   background-position: 25%;
   background-size: 330% 100%;
 }
 button.DialogButton.GreenPlay {
-  background: linear-gradient(
-    to right,
-    rgb(138, 195, 41) 0%,
-    rgb(74, 122, 22) 60%
-  );
+  background: linear-gradient(to right, #8ac329 0%, #4a7a16 60%);
   background-position: 25%;
   background-size: 330% 100%;
 }
 button.DialogButton.GreenPlay:hover,
 button.DialogButton.GreenPlay.gpfocus {
-  background: linear-gradient(
-    to right,
-    rgb(138, 195, 41) 0%,
-    rgb(74, 122, 22) 60%
-  );
+  background: linear-gradient(to right, #8ac329 0%, #4a7a16 60%);
   background-position: 0%;
   background-size: 330% 100%;
   color: #fff;
@@ -67472,16 +67543,12 @@ button.DialogButton.GreenPlay.gpfocus {
 button.DialogButton.GreenPlay:active,
 button.DialogButton.GreenPlay:active:hover,
 button.DialogButton.GreenPlay:active.gpfocus {
-  background: linear-gradient(
-    to right,
-    rgb(138, 195, 41) 0%,
-    rgb(74, 122, 22) 60%
-  );
+  background: linear-gradient(to right, #8ac329 0%, #4a7a16 60%);
   background-position: 40%;
   transition-duration: 0.04s;
 }
 button.DialogButton.Secondary.Off {
-  box-shadow: inset 1px 1px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 1px 1px 4px #0003;
 }
 button.DialogButton:enabled:active,
 button.DialogButton:enabled:active:hover,
@@ -67523,14 +67590,14 @@ button.DialogButton.Small {
   line-height: 22px;
 }
 button.TextButton {
-  background-color: rgba(0, 0, 0, 0);
-  border: 0px hidden rgba(0, 0, 0, 0);
+  background-color: transparent;
+  border: 0px hidden transparent;
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
   padding: 0;
   color: #fff;
   cursor: pointer;
   font-weight: 100;
-  border-bottom: 1px dotted rgba(0, 0, 0, 0);
+  border-bottom: 1px dotted #0000;
 }
 button.TextButton .SVGIcon_Button {
   transition: opacity 0.2s ease-in-out;
@@ -67594,7 +67661,7 @@ button.TextButton.gpfocus {
 .Disabled .DialogToggleField_Option:hover:not(.Active),
 .Disabled .DialogToggleField_Option.Active,
 .Disabled .DialogToggleField_Option {
-  background-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
   color: #555;
   cursor: default;
 }
@@ -67782,7 +67849,7 @@ button.TextButton.gpfocus {
 }
 .DialogListBuilderInput_Input {
   border: none;
-  background: rgba(0, 0, 0, 0);
+  background: transparent;
   color: #fff;
   outline: none;
 }
@@ -67859,7 +67926,7 @@ button.TextButton.gpfocus {
 .DialogCheckbox {
   width: 22px;
   height: 22px;
-  background-color: rgba(0, 0, 0, 0.2666666667);
+  background-color: #0004;
   padding: 0;
   box-shadow: inset 1px 0.5px 3px rgba(1, 1, 1, 0.4);
   cursor: pointer;
@@ -68050,16 +68117,16 @@ body.in_global_drag .title-area {
   background: linear-gradient(to right, #007896, #1f3d96);
   -webkit-mask: linear-gradient(
     to bottom,
-    rgb(0, 0, 0) 0px,
-    rgb(0, 0, 0) 1px,
+    black 0px,
+    black 1px,
     rgba(0, 0, 0, 0.4) 1px,
     rgba(0, 0, 0, 0.2) 8px,
     rgba(0, 0, 0, 0) 100%
   );
   mask: linear-gradient(
     to bottom,
-    rgb(0, 0, 0) 0px,
-    rgb(0, 0, 0) 1px,
+    black 0px,
+    black 1px,
     rgba(0, 0, 0, 0.4) 1px,
     rgba(0, 0, 0, 0.2) 8px,
     rgba(0, 0, 0, 0) 100%
@@ -68084,16 +68151,16 @@ body.in_global_drag .title-area {
   background: linear-gradient(to right, #007896, #1f3d96);
   -webkit-mask: linear-gradient(
     to bottom,
-    rgb(0, 0, 0) 0px,
-    rgb(0, 0, 0) 1px,
+    black 0px,
+    black 1px,
     rgba(0, 0, 0, 0.4) 1px,
     rgba(0, 0, 0, 0.2) 8px,
     rgba(0, 0, 0, 0) 100%
   );
   mask: linear-gradient(
     to bottom,
-    rgb(0, 0, 0) 0px,
-    rgb(0, 0, 0) 1px,
+    black 0px,
+    black 1px,
     rgba(0, 0, 0, 0.4) 1px,
     rgba(0, 0, 0, 0.2) 8px,
     rgba(0, 0, 0, 0) 100%
@@ -68323,17 +68390,17 @@ body.in_global_drag .title-area {
   flex-direction: column;
 }
 .A {
-  background-color: rgba(255, 0, 0, 0.4);
+  background-color: #f006;
   height: 40px;
 }
 .B {
-  background-color: rgba(0, 255, 0, 0.4);
+  background-color: #0f06;
   display: flex;
   flex-direction: column;
 }
 .ScrollList {
   border: 2px solid pink;
-  background-color: rgba(0, 0, 0, 0.6666666667);
+  background-color: #000a;
   margin: 16px 32px;
   overflow-y: auto;
   overflow-x: hidden;
@@ -68344,17 +68411,17 @@ body.in_global_drag .title-area {
   border: 2px outset red;
   height: 60px;
   margin: 4px 32px;
-  background-color: rgba(0, 0, 0, 0.6666666667);
+  background-color: #000a;
   margin-bottom: 16px;
 }
 .VariableHeight {
   border: 2px inset blue;
   height: 60px;
   margin: 4px 32px;
-  background-color: rgba(0, 0, 0, 0.6666666667);
+  background-color: #000a;
 }
 .C {
-  background-color: rgba(0, 0, 255, 0.4);
+  background-color: #00f6;
   height: 40px;
 }
 .largeThrobber {
@@ -68513,4 +68580,63 @@ body.in_global_drag .title-area {
 .friendsui-container .title-area .title-bar-actions,
 .DesktopUI .title-area .title-bar-actions {
   margin-right: 0px;
+}
+#dota_react_root .ModalPosition_TopBar {
+  height: 3px;
+  background: #ff6046;
+}
+#dota_react_root .ModalPosition_Dismiss {
+  right: 20px;
+  top: 20px;
+}
+#dota_react_root .ModalPosition_Dismiss .closeButton {
+  width: unset;
+  height: unset;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 3px;
+  display: flex;
+  background-color: rgba(168, 183, 196, 0.15);
+  backdrop-filter: blur(16px);
+  box-shadow: 0px 0px 0px #00000000;
+  transition-property: background-color, box-shadow, transform;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
+}
+#dota_react_root .ModalPosition_Dismiss .closeButton:hover {
+  background-color: rgba(168, 183, 196, 0.4);
+  box-shadow: 0px 4px 8px #0000004f;
+  transform: translateY(-2px);
+}
+#dota_react_root .ModalPosition_Dismiss .closeButton .SVGIcon_Button {
+  width: 24px;
+  height: 24px;
+}
+#dota_react_root .ModalPosition_Dismiss .closeButton .SVGIcon_X_Line line {
+  stroke: #a9b2b6;
+  stroke-width: 32px;
+  transition-property: stroke;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
+}
+#dota_react_root
+  .ModalPosition_Dismiss
+  .closeButton:hover
+  .SVGIcon_X_Line
+  line {
+  stroke: #fff;
+}
+#dota_react_root .DialogContent,
+#dota_react_root .DialogContentTransition {
+  background: linear-gradient(to bottom, #2c3237, #05060a);
+  box-shadow: inset 0px 0px 0px 1px #ffffff0f;
+}
+#dota_react_root .DialogContent_InnerWidth::-webkit-scrollbar {
+  width: 8px;
+}
+#dota_react_root .DialogContent_InnerWidth::-webkit-scrollbar-thumb {
+  background-color: rgba(180, 192, 201, 0.4);
+}
+#dota_react_root .DialogContent_InnerWidth::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(180, 192, 201, 0.8);
 }
