@@ -1099,6 +1099,7 @@ button.Primary.partnereventshared_AddSectionButton_15e-D {
   align-items: center;
 }
 .adminshared_PageTitle_15d88 {
+  position: relative;
   font-size: 32px;
   color: #fff;
   font-weight: 200;
@@ -1109,9 +1110,13 @@ button.Primary.partnereventshared_AddSectionButton_15e-D {
   margin-left: 8px;
 }
 .adminshared_PageTitle_15d88 .adminshared_Beta_TuglB {
+  position: absolute;
+  left: -11px;
+  top: -12px;
+  transform: rotate(353deg);
   display: inline;
   background: orange;
-  padding: 3px 6px;
+  padding: 1px 6px;
   border-radius: 2px;
   font-size: 12px;
   text-transform: uppercase;
@@ -1540,4 +1545,57 @@ button.Primary.partnereventshared_AddSectionButton_15e-D {
 }
 .adminshared_HalfWidthBtnCtn_1mhRc {
   width: 50%;
+}
+.adminshared_StatReportCtn_1vqQF {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.adminshared_StatReportCtn_1vqQF .adminshared_Stat_10Rmi {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: center;
+  background-color: #1a75c2;
+  padding: 10px;
+}
+.adminshared_StatReportCtn_1vqQF .adminshared_Stat_10Rmi:not(:first-child) {
+  margin-left: 5px;
+}
+.adminshared_StatReportCtn_1vqQF
+  .adminshared_Stat_10Rmi
+  .adminshared_BigStat_2Agsi {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+  color: #fff;
+}
+.adminshared_StatReportCtn_1vqQF
+  .adminshared_Stat_10Rmi
+  .adminshared_SmallText_1YUYd {
+  text-align: center;
+  color: #86bfee;
+}
+.adminshared_IncreaseRateInfo_2sCgJ {
+  padding: 8px;
+  font-size: 13px;
+  background: #2e475d;
+  border-radius: 4px;
+  position: relative;
+}
+.adminshared_IncreaseRateInfo_2sCgJ:after {
+  bottom: 100%;
+  left: 80%;
+  border: solid transparent;
+  content: "";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(136, 183, 213, 0);
+  border-bottom-color: #2e475d;
+  border-width: 15px;
+  margin-left: 0;
 }

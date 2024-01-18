@@ -48,6 +48,10 @@
         EditCtn: "adminshared_EditCtn_152-T",
         StatusBtn: "adminshared_StatusBtn_3diJD",
         HalfWidthBtnCtn: "adminshared_HalfWidthBtnCtn_1mhRc",
+        StatReportCtn: "adminshared_StatReportCtn_1vqQF",
+        Stat: "adminshared_Stat_10Rmi",
+        BigStat: "adminshared_BigStat_2Agsi",
+        IncreaseRateInfo: "adminshared_IncreaseRateInfo_2sCgJ",
       };
     },
     71741: (e) => {
@@ -171,7 +175,7 @@
         UC: () => m,
         A1: () => h,
         yp: () => _,
-        iP: () => u,
+        iP: () => p,
       });
       var r = n(47427),
         a = n(77936),
@@ -477,7 +481,7 @@
           "uploadfilebutton",
           "docimg",
         ],
-        u = [
+        p = [
           "h1",
           "h2",
           "h3",
@@ -489,7 +493,7 @@
           "noparse",
           "url",
         ],
-        p = [
+        u = [
           "img",
           "previewyoutube",
           "looping_media",
@@ -500,7 +504,7 @@
           "youtubeorvideo",
           "docimg",
         ],
-        h = (_.filter((e) => -1 == p.indexOf(e)), "{STEAM_CLAN_IMAGE}"),
+        h = (_.filter((e) => -1 == u.indexOf(e)), "{STEAM_CLAN_IMAGE}"),
         m = "{STEAM_CLAN_LOC_IMAGE}";
       function g(e, t = null, n = " ") {
         let r = null == t ? void 0 : t.join("|");
@@ -604,7 +608,7 @@
     80886: (e, t, n) => {
       "use strict";
       n.d(t, {
-        Vm: () => u,
+        Vm: () => p,
         dY: () => m,
         ie: () => _,
         jk: () => l,
@@ -622,17 +626,17 @@
           d = (0, o.useRef)(void 0),
           c = (0, i.NW)();
         l.current = e;
-        const [_, u] = (0, o.useState)(void 0),
+        const [_, p] = (0, o.useState)(void 0),
           {
-            include_assets: p,
+            include_assets: u,
             include_release: h,
             include_platforms: m,
             include_all_purchase_options: g,
             include_screenshots: v,
             include_trailers: C,
             include_ratings: f,
-            include_tag_count: E,
-            include_reviews: S,
+            include_tag_count: S,
+            include_reviews: E,
             include_basic_info: A,
             include_supported_languages: x,
             include_full_description: D,
@@ -642,15 +646,15 @@
         if (
           ((0, o.useEffect)(() => {
             const n = {
-              include_assets: p,
+              include_assets: u,
               include_release: h,
               include_platforms: m,
               include_all_purchase_options: g,
               include_screenshots: v,
               include_trailers: C,
               include_ratings: f,
-              include_tag_count: E,
-              include_reviews: S,
+              include_tag_count: S,
+              include_reviews: E,
               include_basic_info: A,
               include_supported_languages: x,
               include_full_description: D,
@@ -662,16 +666,16 @@
               !e ||
                 s.Z.Get().BHasStoreItem(e, t, n) ||
                 (void 0 !== _ && r && r == d.current) ||
-                (r !== d.current && (u(void 0), (d.current = r)),
+                (r !== d.current && (p(void 0), (d.current = r)),
                 (o = a().CancelToken.source()),
                 s.Z.Get()
                   .QueueStoreItemRequest(e, t, n)
                   .then((t) => {
-                    o.token.reason || l.current !== e || u(1 == t), c();
+                    o.token.reason || l.current !== e || p(1 == t), c();
                   })),
               () => o && o.cancel("useStoreItemCache: unmounting")
             );
-          }, [e, t, r, _, p, h, m, g, v, C, f, E, S, A, x, D, T, L, c]),
+          }, [e, t, r, _, u, h, m, g, v, C, f, S, E, A, x, D, T, L, c]),
           !e)
         )
           return [null, 2];
@@ -690,10 +694,10 @@
       function _(e, t, n) {
         return l(e, 1, t, n);
       }
-      function u(e, t, n) {
+      function p(e, t, n) {
         const [r, i] = l(e, t, n),
           [s, c] = (0, o.useState)(null),
-          [_, u] = d(s, n);
+          [_, p] = d(s, n);
         return (
           (0, o.useEffect)(() => {
             var e;
@@ -712,25 +716,25 @@
             return () =>
               t.cancel("useStoreItemCacheOrPackageSingleApp: unmounting");
           }, [s, r]),
-          s ? [_, u] : [r, i]
+          s ? [_, p] : [r, i]
         );
       }
-      function p(e, t, n, r) {
+      function u(e, t, n, r) {
         const l = (0, i.NW)(),
           {
             include_assets: d,
             include_release: c,
             include_platforms: _,
-            include_all_purchase_options: u,
-            include_screenshots: p,
+            include_all_purchase_options: p,
+            include_screenshots: u,
             include_trailers: h,
             include_ratings: m,
             include_tag_count: g,
             include_reviews: v,
             include_basic_info: C,
             include_supported_languages: f,
-            include_full_description: E,
-            include_included_items: S,
+            include_full_description: S,
+            include_included_items: E,
             include_assets_without_overrides: A,
           } = n;
         if (
@@ -740,16 +744,16 @@
                 include_assets: d,
                 include_release: c,
                 include_platforms: _,
-                include_all_purchase_options: u,
-                include_screenshots: p,
+                include_all_purchase_options: p,
+                include_screenshots: u,
                 include_trailers: h,
                 include_ratings: m,
                 include_tag_count: g,
                 include_reviews: v,
                 include_basic_info: C,
                 include_supported_languages: f,
-                include_full_description: E,
-                include_included_items: S,
+                include_full_description: S,
+                include_included_items: E,
                 include_assets_without_overrides: A,
               },
               r = e.filter(
@@ -768,7 +772,7 @@
               }),
               () => o.cancel("useStoreItemCacheMultiplePackages: unmounting")
             );
-          }, [e, t, r, l, d, c, _, u, p, h, m, g, v, C, f, E, S, A]),
+          }, [e, t, r, l, d, c, _, p, u, h, m, g, v, C, f, S, E, A]),
           !e)
         )
           return 2;
@@ -787,10 +791,10 @@
           : 2;
       }
       function h(e, t, n) {
-        return p(e, 0, t, n);
+        return u(e, 0, t, n);
       }
       function m(e, t, n) {
-        return p(e, 1, t, n);
+        return u(e, 1, t, n);
       }
     },
     13499: (e, t, n) => {
@@ -798,11 +802,11 @@
       n.d(t, {
         FM: () => s,
         H7: () => i,
-        OL: () => p,
+        OL: () => u,
         Pm: () => c,
         XW: () => l,
         bk: () => g,
-        dK: () => u,
+        dK: () => p,
         et: () => _,
         iv: () => m,
         md: () => h,
@@ -880,7 +884,7 @@
               (e = (0, o.HZ)(e)))
           : e;
       }
-      function u(e) {
+      function p(e) {
         if (!e) return !0;
         const t = s(e).toLocaleLowerCase();
         return (
@@ -898,7 +902,7 @@
           ].indexOf(t) >= 0
         );
       }
-      function p(e) {
+      function u(e) {
         return r.De.SNR &&
           r.De.SNR.length > 0 &&
           e &&

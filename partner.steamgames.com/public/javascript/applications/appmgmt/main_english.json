@@ -530,7 +530,7 @@
     "Existing_Discount": "Existing discount starting %1$s",
     "DailyDeals_LoadingPackageDiscounts": "Loading Package Discounts",
     "DailyDeals_ExistingDiscount": "Existing Discount:",
-    "DailyDeals_ReuseDesc": "We already have an existing discount on this date. Should we schedule Daily Deal featuring on this date?",
+    "DailyDeals_ReuseDesc": "There is already an existing discount for this game scheduled to run on this date. Selecting this date will schedule your game to be featured as a Daily Deal on this date while using the existing discount that is indicated on the calendar.",
     "DailyDeals_PartnerDashboard_Title": "Daily Deals",
     "DailyDeals_PartnerDashboard_Invite_Body": "You have an invitation to schedule a Daily Deal",
     "DailyDeals_PriceIncrease": "Price Increase Cooldown",

@@ -925,6 +925,7 @@ ${PARTNER_BASE_URL}admin/store/spotlight/${}
 ${PARTNER_BASE_URL}admin/store/suggestpackage
 ${PARTNER_BASE_URL}apprelease/ajaxgetreleaserequest/${}
 ${PARTNER_BASE_URL}apprelease/ajaxupdatereleaserequest/${}
+${PARTNER_BASE_URL}apps/ajaxcreatenewapp/
 ${PARTNER_BASE_URL}apps/builddetails/${appid}/${}
 ${PARTNER_BASE_URL}apps/communityitems/${}
 ${PARTNER_BASE_URL}apps/demo/${}
@@ -966,9 +967,11 @@ ${PARTNER_BASE_URL}marketingmessages/messagepreview/${gid}/?cc=${}&l=${}&bForceS
 ${PARTNER_BASE_URL}marketingmessages/messagepreview/${}/?cc=${}&l=${language}
 ${PARTNER_BASE_URL}optin${}
 ${PARTNER_BASE_URL}optin/${pageid}/sale/${}
+${PARTNER_BASE_URL}optin/admin/analysis/${}
 ${PARTNER_BASE_URL}optin/admin/edit/${pageid}
 ${PARTNER_BASE_URL}optin/admin/edit/${pageid}?tab=manage
 ${PARTNER_BASE_URL}optin/admin/edit/${}
+${PARTNER_BASE_URL}optin/ajaxadmingetdefandstats
 ${PARTNER_BASE_URL}optin/ajaxadminupdate
 ${PARTNER_BASE_URL}optin/ajaxbatchgetoptinregistation
 ${PARTNER_BASE_URL}optin/ajaxcreatedemopackage

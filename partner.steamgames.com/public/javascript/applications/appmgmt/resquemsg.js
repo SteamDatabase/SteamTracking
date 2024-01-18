@@ -48,6 +48,10 @@
         EditCtn: "adminshared_EditCtn_152-T",
         StatusBtn: "adminshared_StatusBtn_3diJD",
         HalfWidthBtnCtn: "adminshared_HalfWidthBtnCtn_1mhRc",
+        StatReportCtn: "adminshared_StatReportCtn_1vqQF",
+        Stat: "adminshared_Stat_10Rmi",
+        BigStat: "adminshared_BigStat_2Agsi",
+        IncreaseRateInfo: "adminshared_IncreaseRateInfo_2sCgJ",
       };
     },
     71741: (e) => {
@@ -989,9 +993,9 @@
       }
       var j = n(83743),
         M = n(92012),
-        k = n(38201),
-        w = n(77178),
-        R = n(90069),
+        R = n(38201),
+        k = n(77178),
+        w = n(90069),
         D = n(56164),
         P = n(50423),
         y = n(31846),
@@ -1121,7 +1125,7 @@
           r.createElement(
             S.zx,
             {
-              onClick: (e) => (0, R.AM)(r.createElement(V, null), (0, P.RA)(e)),
+              onClick: (e) => (0, w.AM)(r.createElement(V, null), (0, P.RA)(e)),
             },
             "Force Reload Definitions on Steam Servers",
           ),
@@ -1154,7 +1158,7 @@
             S.zx,
             {
               onClick: (e) =>
-                (0, R.AM)(r.createElement(U, { productID: t }), (0, P.RA)(e)),
+                (0, w.AM)(r.createElement(U, { productID: t }), (0, P.RA)(e)),
             },
             "Add new start position",
           ),
@@ -1212,7 +1216,7 @@
             r.createElement(
               "div",
               null,
-              r.createElement(k.N, { accountID: t.accountid }),
+              r.createElement(R.N, { accountID: t.accountid }),
             ),
             r.createElement("br", null),
             "On: ",
@@ -1225,7 +1229,7 @@
               S.zx,
               {
                 onClick: (e) =>
-                  (0, R.AM)(
+                  (0, w.AM)(
                     r.createElement(U, {
                       productID: t,
                       existingPositionMsg: t,
@@ -1239,7 +1243,7 @@
               S.zx,
               {
                 onClick: (e) =>
-                  (0, R.AM)(
+                  (0, w.AM)(
                     r.createElement(q, { positionMsg: t }),
                     (0, P.RA)(e),
                   ),
@@ -1272,7 +1276,7 @@
               closeModal: a,
             })
           : r.createElement(
-              w.uH,
+              k.uH,
               {
                 bDisableBackgroundDismiss: !0,
                 strTitle: m,
@@ -1351,7 +1355,7 @@
               strDialogTitle: s,
               closeModal: n,
             })
-          : r.createElement(w.uH, {
+          : r.createElement(k.uH, {
               strTitle: s,
               strDescription: "Are you sure, this action is no undo'able?",
               onCancel: n,
@@ -1377,7 +1381,7 @@
           (0, r.useEffect)(() => {
             n().then(() => s(!0));
           }, [n]),
-          r.createElement(w.uH, {
+          r.createElement(k.uH, {
             bAlertDialog: !0,
             strTitle: "Reload Definition",
             strDescription: a
