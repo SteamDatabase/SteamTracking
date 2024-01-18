@@ -475,6 +475,7 @@
     "DailyDeals_Partner_InviteDesc_row2": "You will be able to set your discount to start on the same day, or earlier if you wish.",
     "DailyDeals_Partner_InviteDesc_row3": "You need to register before %1$s.",
     "DailyDeals_Partner_Expires": "This invitation expires on %1$s",
+    "DailyDeals_CreateFromInvite": "Create Daily Deal",
     "DailyDeals_CreateNew": "Create Daily Deal - %1$s",
     "DailyDeals_NoInvitation": "Error: No game eligible for this daily deal.",
     "DailyDeals_ChooseInvitation": "Choose An App",
