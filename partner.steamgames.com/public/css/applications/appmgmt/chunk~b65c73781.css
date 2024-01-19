@@ -10572,11 +10572,28 @@ h1.optin_display_appeal_AppealTitle_X7wqW {
   border-collapse: collapse;
   width: 100%;
 }
-.invitationplanner_CandidateHeader_3XLXx {
-  border: 1px solid #ddd;
+.invitationplanner_CandidateTable_2qjp5
+  th.invitationplanner_CandidateHeader_3XLXx {
   text-align: center;
   padding: 8px;
-  background-color: #f2f2f2;
-  border-top: 2px solid #000;
-  border-bottom: 2px solid #000;
+  background: #33373f;
+}
+.invitationplanner_CandidateTable_2qjp5 td {
+  background: linear-gradient(0deg, #2a2d32, #23262b);
+}
+.invitationplanner_CandidateTable_2qjp5 tr:hover td {
+  background: #3c4046;
+}
+.invitationplanner_AppCtn_38wbG {
+  display: flex;
+  flex-direction: row;
+}
+.invitationplanner_AppCtn_38wbG .invitationplanner_AppImgCtn_1IPZB {
+  width: 120px;
+  height: auto;
+  margin-right: 8px;
+}
+.invitationplanner_AppCtn_38wbG .invitationplanner_AppName_2ubxS {
+  font-size: 16px;
+  color: #fff;
 }

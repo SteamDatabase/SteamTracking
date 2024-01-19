@@ -10794,7 +10794,7 @@
       r.d(t, {
         NK: () => u,
         Wx: () => d,
-        X3: () => b,
+        X3: () => g,
         b8: () => y,
         iC: () => o,
         sj: () => l,
@@ -11315,7 +11315,120 @@
           return "CDailyDeal_CancelDailyDeal_Response";
         }
       }
-      var b;
+      class b extends s {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            b.prototype.appids || n.aR(b.M()),
+            s.initialize(this, e, 0, -1, [1], null);
+        }
+        static M() {
+          return (
+            b.sm_m ||
+              (b.sm_m = {
+                proto: b,
+                fields: {
+                  appids: {
+                    n: 1,
+                    r: !0,
+                    q: !0,
+                    br: n.FE.readUint32,
+                    pbr: n.FE.readPackedUint32,
+                    bw: n.Xc.writeRepeatedUint32,
+                  },
+                },
+              }),
+            b.sm_m
+          );
+        }
+        static MBF() {
+          return b.sm_mbf || (b.sm_mbf = n.Bh(b.M())), b.sm_mbf;
+        }
+        toObject(e = !1) {
+          return b.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return n.TA(b.M(), e, t);
+        }
+        static fromObject(e) {
+          return n.aD(b.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new i.BinaryReader(e),
+            r = new b();
+          return b.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return n.F(b.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new i.BinaryWriter();
+          return b.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          n.l2(b.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new i.BinaryWriter();
+          return b.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CDailyDeal_GetDailyDealsForApps_Request";
+        }
+      }
+      class B extends s {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            B.prototype.daily_deals || n.aR(B.M()),
+            s.initialize(this, e, 0, -1, [1], null);
+        }
+        static M() {
+          return (
+            B.sm_m ||
+              (B.sm_m = {
+                proto: B,
+                fields: { daily_deals: { n: 1, c: o, r: !0, q: !0 } },
+              }),
+            B.sm_m
+          );
+        }
+        static MBF() {
+          return B.sm_mbf || (B.sm_mbf = n.Bh(B.M())), B.sm_mbf;
+        }
+        toObject(e = !1) {
+          return B.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return n.TA(B.M(), e, t);
+        }
+        static fromObject(e) {
+          return n.aD(B.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new i.BinaryReader(e),
+            r = new B();
+          return B.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return n.F(B.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new i.BinaryWriter();
+          return B.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          n.l2(B.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new i.BinaryWriter();
+          return B.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CDailyDeal_GetDailyDealsForApps_Response";
+        }
+      }
+      var g;
       !(function (e) {
         (e.CreateDailyDeal = function (e, t) {
           return e.SendMsg("DailyDeal.CreateDailyDeal#1", (0, a.MD)(l, t), c, {
@@ -11345,8 +11458,16 @@
               p,
               { ePrivilege: 1 },
             );
+          }),
+          (e.GetDailyDealsForApps = function (e, t) {
+            return e.SendMsg(
+              "DailyDeal.GetDailyDealsForApps#1",
+              (0, a.MD)(b, t),
+              B,
+              { bConstMethod: !0, ePrivilege: 4 },
+            );
           });
-      })(b || (b = {}));
+      })(g || (g = {}));
     },
     3172: (e, t, r) => {
       "use strict";
@@ -15463,7 +15584,7 @@
       r.d(t, {
         $k: () => W,
         Ax: () => l,
-        Bn: () => X,
+        Bn: () => L,
         F5: () => B,
         MJ: () => O,
         Pe: () => d,
@@ -17473,7 +17594,120 @@
           return "CMarketingMessages_GetPartnerMessagePreview_Response";
         }
       }
-      var X;
+      class X extends o {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            X.prototype.appids || n.aR(X.M()),
+            o.initialize(this, e, 0, -1, [1], null);
+        }
+        static M() {
+          return (
+            X.sm_m ||
+              (X.sm_m = {
+                proto: X,
+                fields: {
+                  appids: {
+                    n: 1,
+                    r: !0,
+                    q: !0,
+                    br: n.FE.readUint32,
+                    pbr: n.FE.readPackedUint32,
+                    bw: n.Xc.writeRepeatedUint32,
+                  },
+                },
+              }),
+            X.sm_m
+          );
+        }
+        static MBF() {
+          return X.sm_mbf || (X.sm_mbf = n.Bh(X.M())), X.sm_mbf;
+        }
+        toObject(e = !1) {
+          return X.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return n.TA(X.M(), e, t);
+        }
+        static fromObject(e) {
+          return n.aD(X.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new i.BinaryReader(e),
+            r = new X();
+          return X.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return n.F(X.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new i.BinaryWriter();
+          return X.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          n.l2(X.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new i.BinaryWriter();
+          return X.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CMarketingMessage_GetMarketingMessagesForApps_Request";
+        }
+      }
+      class N extends o {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            N.prototype.messages || n.aR(N.M()),
+            o.initialize(this, e, 0, -1, [1], null);
+        }
+        static M() {
+          return (
+            N.sm_m ||
+              (N.sm_m = {
+                proto: N,
+                fields: { messages: { n: 1, c: l, r: !0, q: !0 } },
+              }),
+            N.sm_m
+          );
+        }
+        static MBF() {
+          return N.sm_mbf || (N.sm_mbf = n.Bh(N.M())), N.sm_mbf;
+        }
+        toObject(e = !1) {
+          return N.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return n.TA(N.M(), e, t);
+        }
+        static fromObject(e) {
+          return n.aD(N.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new i.BinaryReader(e),
+            r = new N();
+          return N.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return n.F(N.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new i.BinaryWriter();
+          return N.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          n.l2(N.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new i.BinaryWriter();
+          return N.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CMarketingMessage_GetMarketingMessagesForApps_Response";
+        }
+      }
+      var L;
       !(function (e) {
         (e.GetActiveMarketingMessages = function (e, t) {
           return e.SendMsg(
@@ -17609,8 +17843,16 @@
               k,
               { bConstMethod: !0, ePrivilege: 1, eWebAPIKeyRequirement: 2 },
             );
+          }),
+          (e.GetMarketingMessagesForApps = function (e, t) {
+            return e.SendMsg(
+              "MarketingMessages.GetMarketingMessagesForApps#1",
+              (0, a.MD)(X, t),
+              N,
+              { ePrivilege: 4 },
+            );
           });
-      })(X || (X = {}));
+      })(L || (L = {}));
     },
     5697: (e, t, r) => {
       "use strict";

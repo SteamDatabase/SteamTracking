@@ -1398,24 +1398,26 @@
     7073: (t, e, n) => {
       "use strict";
       n.d(e, {
-        EV: () => y,
-        Fi: () => C,
-        ID: () => P,
-        LT: () => E,
-        Qy: () => A,
-        Su: () => I,
-        U8: () => g,
-        XM: () => k,
-        Xj: () => w,
-        _J: () => _,
-        b2: () => b,
-        co: () => f,
-        dE: () => D,
-        hd: () => L,
-        k1: () => R,
-        kk: () => h,
-        v6: () => G,
-        yI: () => S,
+        EV: () => N,
+        Fi: () => R,
+        ID: () => b,
+        L1: () => y,
+        LT: () => k,
+        Qy: () => B,
+        Su: () => S,
+        U8: () => m,
+        XM: () => G,
+        Xj: () => F,
+        _J: () => f,
+        b2: () => L,
+        co: () => I,
+        dE: () => v,
+        hd: () => O,
+        k1: () => w,
+        kk: () => E,
+        ls: () => A,
+        v6: () => P,
+        yI: () => C,
       });
       var i = n(85556),
         a = n(80751),
@@ -1426,14 +1428,16 @@
         l = n(45492),
         u = n(20417),
         d = n(45284),
-        p = n(37563);
-      const g = 95,
-        D = 10;
-      class m {
+        p = n(37563),
+        g = n(83999),
+        D = n(46984);
+      const m = 95,
+        v = 10;
+      class h {
         static Get() {
           return (
-            m.s_Singleton || ((m.s_Singleton = new m()), m.s_Singleton.Init()),
-            m.s_Singleton
+            h.s_Singleton || ((h.s_Singleton = new h()), h.s_Singleton.Init()),
+            h.s_Singleton
           );
         }
         constructor() {
@@ -1445,6 +1449,7 @@
             (this.m_mapDiscountEventCallbackList = new Map()),
             (this.m_allDiscountCallbackList = new l.pB()),
             (this.m_mapMaxDiscountPercentageByPackageId = new Map()),
+            (this.m_mapExistingPackageRequests = new Map()),
             "dev" == p.De.WEB_UNIVERSE &&
               (window.g_PackageDiscountStore = this);
         }
@@ -1483,7 +1488,7 @@
           for (const e of t)
             (null === (n = e.discountEventID) || void 0 === n
               ? void 0
-              : n.length) || (e.discountEventID = v(e)),
+              : n.length) || (e.discountEventID = _(e)),
               this.m_mapPackageDiscountsById.set(e.nDiscountID, e),
               this.GetCallbackListForDiscount(e.nDiscountID).Dispatch(e),
               this.m_mapPackageDiscountsByPackageId.has(e.packageID) ||
@@ -1573,20 +1578,33 @@
           return !1;
         }
         LoadPackageDiscounts(t, e, n = 0) {
+          return (0, i.mG)(this, void 0, void 0, function* () {
+            const i = g.kp(t).sort().join(",");
+            return (
+              this.m_mapExistingPackageRequests.has(i) ||
+                this.m_mapExistingPackageRequests.set(
+                  i,
+                  this.InternalLoadPackageDiscounts(t, e, n),
+                ),
+              this.m_mapExistingPackageRequests.get(i)
+            );
+          });
+        }
+        InternalLoadPackageDiscounts(t, e, n = 0) {
           var a, o, r, l;
           return (0, i.mG)(this, void 0, void 0, function* () {
-            let i = null;
-            const u = new Promise((t, e) => {
-                i = t;
-              }),
-              d = new Set();
+            const i = new Set();
             for (const e of t)
               this.m_mapPackageDiscountsByPackageId.has(e) ||
                 0 == e ||
-                d.add(e);
-            const g = Array.from(d).sort();
-            if (0 == g.length) return 1;
-            const D = (0, p.kQ)("publisherid", "application_config"),
+                i.add(e);
+            const u = Array.from(i).sort();
+            if (0 == u.length) return 1;
+            let d = null;
+            const g = new Promise((t, e) => {
+                d = t;
+              }),
+              D = (0, p.kQ)("publisherid", "application_config"),
               m =
                 p.De.PARTNER_BASE_URL +
                 "promotion/discounts/ajaxgetpackagediscounts/" +
@@ -1595,25 +1613,25 @@
               h = null;
             try {
               const t = [],
-                i = new Array();
-              for (; g.length > 0; ) {
-                const a = g.splice(0, 50);
-                i.push(a);
-                const o = { packageids: a.join(","), origin: self.origin };
+                o = new Array();
+              for (; u.length > 0; ) {
+                const i = u.splice(0, 50);
+                o.push(i);
+                const a = { packageids: i.join(","), origin: self.origin };
                 t.push(
                   s().get(m, {
-                    params: o,
+                    params: a,
                     withCredentials: !0,
                     cancelToken: null == e ? void 0 : e.token,
                     timeout: n,
                   }),
                 );
               }
-              const o = yield Promise.all(t),
-                r = [];
-              for (const t of o) {
+              const r = yield Promise.all(t),
+                c = [];
+              for (const t of r) {
                 if (
-                  ((h = i.unshift()),
+                  ((h = o.unshift()),
                   200 != (null == t ? void 0 : t.status) ||
                     1 !=
                       (null === (a = t.data) || void 0 === a
@@ -1624,13 +1642,13 @@
                   v = { response: t };
                   break;
                 }
-                t.data.discounts.forEach((t) => r.push(t));
+                t.data.discounts.forEach((t) => c.push(t));
               }
-              null == v && this.InternalAddDiscounts(r, Array.from(d));
+              null == v && this.InternalAddDiscounts(c, Array.from(i));
             } catch (t) {
               v = t;
             }
-            if (null == v) i(1);
+            if (null == v) d(1);
             else {
               const t = (0, c.l)(v);
               console.error(
@@ -1639,7 +1657,7 @@
                 t.strErrorMsg,
                 t,
               ),
-                i(
+                d(
                   null !==
                     (l =
                       null ===
@@ -1654,7 +1672,7 @@
                     : 2,
                 );
             }
-            return u;
+            return g;
           });
         }
         SaveDiscountToServer(t, e) {
@@ -1670,7 +1688,7 @@
               l.append("name", t.strDiscountName),
               l.append("description", t.strDiscountDescription),
               t.discountEventID &&
-                !h(t.discountEventID) &&
+                !E(t.discountEventID) &&
                 l.append("type", t.discountEventID),
               l.append("percent", t.nDiscountPct.toString()),
               l.append(
@@ -1827,7 +1845,7 @@
         }
         GetMaxDiscountPercentage(t) {
           var e;
-          const n = g;
+          const n = m;
           return null !==
             (e = this.m_mapMaxDiscountPercentageByPackageId.get(t)) &&
             void 0 !== e
@@ -1839,56 +1857,56 @@
           return Math.min(...e);
         }
       }
-      function v(t) {
+      function _(t) {
         return `custom-event-${t.rtStartDate}-${t.rtEndDate}-${(0, d.JD)(
           t.strDiscountName,
         )}`;
       }
-      function h(t) {
+      function E(t) {
         return t.startsWith("custom-event-");
       }
-      function _(t) {
-        return m.Get().GetDiscountByID(t);
-      }
-      function E(t) {
-        return m.Get().GetAllDiscountsForDiscountEvent(t);
-      }
       function f(t) {
-        return m.Get().GetAllDiscountsForPackage(t);
+        return h.Get().GetDiscountByID(t);
       }
       function k(t) {
-        return m.Get().GetCallbackListForPackage(t);
+        return h.Get().GetAllDiscountsForDiscountEvent(t);
       }
-      function I() {
-        return m.Get().GetAllDiscountsForAllPackages();
+      function I(t) {
+        return h.Get().GetAllDiscountsForPackage(t);
       }
-      function G() {
-        return m.Get().GetGlobalCallbackList();
+      function G(t) {
+        return h.Get().GetCallbackListForPackage(t);
       }
       function S() {
+        return h.Get().GetAllDiscountsForAllPackages();
+      }
+      function P() {
+        return h.Get().GetGlobalCallbackList();
+      }
+      function C() {
         return o.useCallback(
-          (t, e, n) => m.Get().LoadPackageDiscounts(t, e, n),
+          (t, e, n) => h.Get().LoadPackageDiscounts(t, e, n),
           [],
         );
       }
-      function P() {
-        const t = (t) => m.Get().SaveDiscountToServer(t),
-          e = (t, e, n) => m.Get().DeleteDiscountOnServer(t, e, n);
+      function b() {
+        const t = (t) => h.Get().SaveDiscountToServer(t),
+          e = (t, e, n) => h.Get().DeleteDiscountOnServer(t, e, n);
         return o.useMemo(
           () => ({ fnSaveDiscount: t, fnDeleteDiscount: e }),
           [],
         );
       }
-      function C(t) {
+      function R(t) {
         return new Map(
-          Array.from(t.map((t) => [t, m.Get().GetDiscountByID(t)])),
+          Array.from(t.map((t) => [t, h.Get().GetDiscountByID(t)])),
         );
       }
-      function b(t) {
+      function L(t) {
         const e = (0, r.zD)(),
-          [n, i] = o.useState(m.Get().GetAllDiscountsForPackage(t));
+          [n, i] = o.useState(h.Get().GetAllDiscountsForPackage(t));
         return (
-          (0, u.Qg)(m.Get().GetCallbackListForPackage(t), i),
+          (0, u.Qg)(h.Get().GetCallbackListForPackage(t), i),
           o.useMemo(() => {
             let t = null;
             if (null == n) return { deepestDiscount: t, bLoading: !0 };
@@ -1905,18 +1923,68 @@
           }, [t, e, n])
         );
       }
-      function R(t) {
-        const e = (0, r.zD)(),
-          [n, i] = o.useState(m.Get().GetAllDiscountsForAllPackages());
+      function A(t) {
+        const e = (0, r.zD)();
+        if (!t) return null;
+        let n = null;
         return (
-          (0, u.Qg)(m.Get().GetGlobalCallbackList(), i),
+          t.forEach((t) => {
+            const i = h.Get().GetAllDiscountsForPackage(t);
+            if ((null == i ? void 0 : i.length) > 0)
+              for (const t of i)
+                t.rtEndDate > e ||
+                  t.nDiscountPct <= 0 ||
+                  ((null == n ||
+                    t.nDiscountPct > n.nDiscountPct ||
+                    (t.nDiscountPct == n.nDiscountPct &&
+                      t.rtEndDate > n.rtEndDate)) &&
+                    (n = t));
+          }),
+          n
+        );
+      }
+      function y(t, e, n) {
+        const [i, a] = (0, o.useState)(),
+          [s, r] = (0, o.useState)([]);
+        return (
+          (0, o.useEffect)(() => {
+            if (e < n && (null == t ? void 0 : t.length) > 0) {
+              let i = new Array(),
+                s = new Array(),
+                o = new Array();
+              for (let t = e; t < n; t += D._H.PerDay) i.push(t), s.push(!1);
+              t.forEach((t) => {
+                const a = h.Get().GetAllDiscountsForPackage(t);
+                if ((null == a ? void 0 : a.length) > 0)
+                  for (const t of a)
+                    t.rtStartDate > n ||
+                      t.rtEndDate < e ||
+                      (o.push(t),
+                      i.forEach((e, n) => {
+                        e < t.rtEndDate &&
+                          t.rtStartDate < e + D._H.PerDay &&
+                          (s[n] = !0);
+                      }));
+              }),
+                r(o),
+                a(s.filter((t) => !0 === t).length);
+            } else a(0);
+          }, [t, e, n]),
+          { nDaysInDiscount: i, rgDiscountWithOverlap: s }
+        );
+      }
+      function w(t) {
+        const e = (0, r.zD)(),
+          [n, i] = o.useState(h.Get().GetAllDiscountsForAllPackages());
+        return (
+          (0, u.Qg)(h.Get().GetGlobalCallbackList(), i),
           o.useMemo(() => {
             var i;
             let a = null;
             if (null == n) return { mostRecentDiscount: a, bLoading: !0 };
             for (const n of t) {
               const t =
-                null !== (i = m.Get().GetAllDiscountsForPackage(n)) &&
+                null !== (i = h.Get().GetAllDiscountsForPackage(n)) &&
                 void 0 !== i
                   ? i
                   : [];
@@ -1929,20 +1997,20 @@
           }, [e, t, n])
         );
       }
-      function L(t) {
-        const [e, n] = o.useState(m.Get().GetAllDiscountsForDiscountEvent(t));
-        return (0, u.Qg)(m.Get().GetCallbackListForDiscountEvent(t), n), e;
+      function O(t) {
+        const [e, n] = o.useState(h.Get().GetAllDiscountsForDiscountEvent(t));
+        return (0, u.Qg)(h.Get().GetCallbackListForDiscountEvent(t), n), e;
       }
-      function A(t) {
-        return m.Get().GetMaxDiscountPercentage(t);
+      function B(t) {
+        return h.Get().GetMaxDiscountPercentage(t);
       }
-      function y(t) {
+      function N(t) {
         return t.some(
-          (t) => t.nDiscountPct > m.Get().GetMaxDiscountPercentage(t.packageID),
+          (t) => t.nDiscountPct > h.Get().GetMaxDiscountPercentage(t.packageID),
         );
       }
-      function w(t) {
-        return m.Get().GetMaxDiscountPercentageForGroup(t);
+      function F(t) {
+        return h.Get().GetMaxDiscountPercentageForGroup(t);
       }
     },
     95518: (t, e, n) => {

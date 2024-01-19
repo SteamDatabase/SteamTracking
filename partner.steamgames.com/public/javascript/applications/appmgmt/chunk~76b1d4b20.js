@@ -1134,7 +1134,7 @@
               localized_sale_logo: new Array(31),
               sale_font: "",
               sale_background_color: "",
-              sale_header_offset: 150,
+              sale_header_offset: 386,
               referenced_appids: [],
             },
             o,

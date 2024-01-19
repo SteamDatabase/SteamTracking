@@ -941,7 +941,6 @@ ${PARTNER_BASE_URL}dailydeals/ajaxremoveappinvite
 ${PARTNER_BASE_URL}dailydeals/ajaxresendinvitationemail
 ${PARTNER_BASE_URL}discounts/ajaxgetdiscountbyapp
 ${PARTNER_BASE_URL}doc/${}
-${PARTNER_BASE_URL}doc/marketing/discount_rule_changes
 ${PARTNER_BASE_URL}doc/marketing/discounts
 ${PARTNER_BASE_URL}doc/marketing/discounts#limits
 ${PARTNER_BASE_URL}doc/marketing/discounts/dailydeal
@@ -1045,6 +1044,8 @@ ${PARTNER_BASE_URL}promotion/discounts/dashboard/
 ${PARTNER_BASE_URL}promotion/discounts/dashboard/${}?de=${}
 ${PARTNER_BASE_URL}promotion/discounts/dashboard/?de=${_ ? _ : _}
 ${PARTNER_BASE_URL}promotion/invitationplanner/dashboard
+${PARTNER_BASE_URL}promotion/invitationplanner/dashboard?start=${}${}&count=${}
+${PARTNER_BASE_URL}promotion/invitationplanner/dashboard?start=${}&count=${}
 ${PARTNER_BASE_URL}promotion/marketingmessages/ajaxgetsnrmetrics
 ${PARTNER_BASE_URL}promotion/marketingmessages/ajaxuploadasset/${}
 ${PARTNER_BASE_URL}promotion/marketingmessages/dashboard

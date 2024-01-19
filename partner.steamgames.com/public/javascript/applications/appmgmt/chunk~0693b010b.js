@@ -2473,6 +2473,12 @@
           ? { packageid: e }
           : 2 == t
           ? { bundleid: e }
+          : 4 == t
+          ? { tagid: e }
+          : 5 == t
+          ? { creatorid: e }
+          : 6 == t
+          ? { hubcategoryid: e }
           : null;
       }
       function _(e) {
@@ -2484,7 +2490,18 @@
           ? "b" + e.bundleid
           : "unknown0";
       }
-      function p(e) {
+      function p(e, t) {
+        switch (t) {
+          case 0:
+            return "a" + e;
+          case 1:
+            return "p" + e;
+          case 2:
+            return "b" + e;
+        }
+        return "unknown0";
+      }
+      function g(e) {
         return (null == e ? void 0 : e.appid)
           ? e.appid
           : (null == e ? void 0 : e.packageid)
@@ -2499,7 +2516,7 @@
           ? e.tagid
           : 0;
       }
-      function g(e) {
+      function v(e) {
         return (null == e ? void 0 : e.appid)
           ? 0
           : (null == e ? void 0 : e.packageid)
@@ -2514,7 +2531,7 @@
           ? 4
           : 0;
       }
-      function v(e) {
+      function f(e) {
         return "app" == (null == e ? void 0 : e.item_type)
           ? 0
           : "sub" == (null == e ? void 0 : e.item_type)
@@ -2523,7 +2540,7 @@
           ? 2
           : -1;
       }
-      function f(e) {
+      function I(e) {
         const t = Number.parseInt(e.substring(1));
         switch (e.charAt(0)) {
           case "a":
@@ -2534,7 +2551,7 @@
             return { bundleid: t };
         }
       }
-      function I(e) {
+      function R(e) {
         return "application" == e
           ? 0
           : "bundle" == e
@@ -2543,7 +2560,7 @@
           ? 1
           : -1;
       }
-      function R(e) {
+      function b(e) {
         return 0 == e
           ? "application"
           : 1 == e
@@ -2552,10 +2569,10 @@
           ? "bundle"
           : null;
       }
-      function b(e) {
+      function C(e) {
         return 1 == e ? 0 : 5 == e ? 2 : 2 == e ? 1 : -1;
       }
-      function C(e) {
+      function y(e) {
         return 0 == e ? 1 : 1 == e ? 2 : 2 == e ? 5 : null;
       }
       s.d(t, {
@@ -2565,18 +2582,19 @@
         D3: () => a,
         GV: () => i,
         Hy: () => l,
-        RB: () => C,
+        RB: () => y,
         TM: () => o,
-        Uc: () => I,
+        Uc: () => R,
         Xm: () => d,
-        YF: () => v,
-        bg: () => R,
-        hQ: () => f,
-        iV: () => g,
-        mm: () => b,
+        YF: () => f,
+        bg: () => b,
+        hQ: () => I,
+        iV: () => v,
+        mm: () => C,
         qE: () => n,
+        qw: () => p,
         t9: () => h,
-        u$: () => p,
+        u$: () => g,
         y: () => _,
       }),
         (function (e) {
