@@ -1,7 +1,7 @@
 (self.webpackChunksteamui = self.webpackChunksteamui || []).push([
   [4601],
   {
-    17157: (e) => {
+    65122: (e) => {
       e.exports = {
         strStreamIconCapsuleArtHeight: "90px",
         strStreamIconScreenshotArtHeight: "90px",
@@ -67,7 +67,7 @@
         rightPanel: "broadcast_embeddable_rightPanel_2Xp5Y",
       };
     },
-    56052: (e) => {
+    15996: (e) => {
       e.exports = {
         StoreSaleWidgetContainer_mini:
           "broadcastwidgets_StoreSaleWidgetContainer_mini_1Vz-y",
@@ -80,31 +80,31 @@
           "broadcastwidgets_StoreSaleWidgetShortDesc_mini_DvDV2",
       };
     },
-    61931: (e, t, a) => {
+    52394: (e, t, a) => {
       "use strict";
       a.r(t),
         a.d(t, {
           BroadcastEmbeddablePopoutHeader: () => ue,
           default: () => de,
         });
-      var r = a(97582),
-        n = a(9669),
+      var r = a(85556),
+        n = a(14206),
         s = a.n(n),
-        o = a(29323),
-        i = a(50242),
-        l = a(67294),
-        c = a(91148),
-        d = a(52649),
-        m = a(73185),
-        _ = a(17297),
-        p = a(88335),
-        b = a(71367),
-        h = a(83631),
-        u = a(12633),
-        g = a(85660),
-        S = a(51878),
-        v = a(81673),
-        E = a(56052),
+        o = a(50649),
+        i = a(41370),
+        l = a(27378),
+        c = a(36531),
+        d = a(77079),
+        m = a(10582),
+        _ = a(93957),
+        p = a(34163),
+        b = a(83282),
+        h = a(99340),
+        u = a(36060),
+        g = a(27258),
+        S = a(35484),
+        v = a(85164),
+        E = a(15996),
         f = a.n(E);
       const C = (0, o.observer)((e) => {
         const { appid: t } = e,
@@ -190,22 +190,22 @@
           ),
         );
       });
-      var B = a(66458);
+      var B = a(63083);
       function y() {
         let e = window.GetUsabilityTracker;
         if (e) return e();
       }
-      var w = a(8164),
-        N = a(38180),
-        P = a(58959),
-        G = a(81082),
-        I = a(55660),
-        A = a(44742),
-        D = a(66249),
-        k = a(38973),
-        O = a(90437),
-        T = a(76023),
-        L = a(80533);
+      var w = a(52503),
+        N = a(29442),
+        P = a(34203),
+        G = a(38206),
+        I = a(88726),
+        A = a(23392),
+        D = a(41608),
+        k = a(75400),
+        O = a(22435),
+        T = a(94256),
+        L = a(70756);
       const x = (e) => {
         const { onPositionChange: t, onLeave: a } = e,
           r = l.useCallback(
@@ -223,12 +223,12 @@
           Object.assign({}, e, { onPositionChange: r }),
         );
       };
-      var R = a(92312),
-        W = a(24934),
-        V = a(48287),
-        U = a(41353),
-        M = a(13416),
-        F = a(17157),
+      var R = a(86064),
+        W = a(5075),
+        V = a(50947),
+        U = a(49118),
+        M = a(83278),
+        F = a(65122),
         H = a.n(F);
       const j = (0, o.observer)((e) => {
         const { event: t } = e,
@@ -292,16 +292,16 @@
           ),
         );
       });
-      var z = a(34133),
+      var z = a(77065),
         Z = a.n(z),
-        Y = a(92377),
-        q = a(99212),
-        Q = a(88393),
-        X = a(51751),
-        $ = a(57542),
-        J = a(68503),
-        K = a(8410),
-        ee = a(55285),
+        Y = a(8031),
+        q = a(29967),
+        Q = a(64839),
+        X = a(6833),
+        $ = a(79509),
+        J = a(16195),
+        K = a(61683),
+        ee = a(85503),
         te = a.n(ee);
       function ae(e) {
         const { steamid: t, closeModal: a } = e;
@@ -448,9 +448,9 @@
           v.Config.COMMUNITY_BASE_URL + "broadcast/share/" + e + "?site=" + t
         );
       }
-      var oe = a(49358),
-        ie = a(23512),
-        le = a(38078);
+      var oe = a(29853),
+        ie = a(26721),
+        le = a(7037);
       const ce = {
         list: [
           { appid: 444090, url: "https://steam.tv/paladins" },
@@ -725,7 +725,7 @@
                         "bordered_title_trgt",
                       ),
                     },
-                    l.createElement(A.xP, null),
+                    l.createElement(A.x, null),
                     l.createElement("div", { className: H().streamTitle }, o),
                     l.createElement(
                       "div",
@@ -1302,23 +1302,23 @@
           : null;
       }
     },
-    79927: (e, t, a) => {
+    91785: (e, t, a) => {
       "use strict";
       a.r(t), a.d(t, { default: () => S });
-      var r = a(97582),
-        n = a(67294),
-        s = a(90437),
-        o = a(29323),
-        i = a(68949),
-        l = a(81761),
-        c = a(92312),
-        d = a(41353),
-        m = a(48287),
-        _ = a(17257),
-        p = a(95379),
+      var r = a(85556),
+        n = a(27378),
+        s = a(22435),
+        o = a(50649),
+        i = a(79588),
+        l = a(86644),
+        c = a(86064),
+        d = a(49118),
+        m = a(50947),
+        _ = a(92737),
+        p = a(17787),
         b = a.n(p),
-        h = a(52649),
-        u = a(51878);
+        h = a(77079),
+        u = a(35484);
       let g = class extends n.Component {
         constructor(e) {
           super(e),
@@ -1448,4 +1448,4 @@
     },
   },
 ]);
-//# sourceMappingURL=sourcemaps\broadcast.js.map
+//# sourceMappingURL=sourcemaps/broadcast.js.map

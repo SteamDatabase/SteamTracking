@@ -3967,7 +3967,7 @@ Windows до Windows XP Service Pack 2 или по-нов."
 "Friends_game_on_PS3"	"%s1 на PlayStation®3"
 
 "tooltip_view_details"		"Преглед с подробности"
-"tooltip_view_list"			"Преглед във вид на списък"
+"tooltip_view_list"			"Изглед списък"
 "tooltip_view_grid"			"Изглед решетка"
 "tooltip_view_fullscreen"	"Режим „Голям екран“"
 "tooltip_view_vr_start"	"Стартиране на SteamVR "

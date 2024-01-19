@@ -341,6 +341,14 @@ enum ESteamDeckCompatibilityResultDisplayType {
 	k_ESteamDeckCompatibilityResultDisplayType_Verified = 4;
 }
 
+enum ESteamDeckCompatibilityTestResult {
+	k_ESteamDeckCompatibilityTestResult_Invalid = 0;
+	k_ESteamDeckCompatibilityTestResult_NotApplicable = 1;
+	k_ESteamDeckCompatibilityTestResult_Pass = 2;
+	k_ESteamDeckCompatibilityTestResult_Fail = 3;
+	k_ESteamDeckCompatibilityTestResult_FailMinor = 4;
+}
+
 enum EACState {
 	k_EACState_Unknown = 0;
 	k_EACState_Disconnected = 1;

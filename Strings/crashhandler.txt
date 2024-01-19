@@ -46,7 +46,6 @@ __image_info
 __OBJC
 __LINKEDIT
 @loader_path/crashhandler.dylib
-z%#@$
 /usr/lib/libiconv.2.dylib
 /System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices
 /System/Library/Frameworks/IOKit.framework/Versions/A/IOKit
@@ -122,8 +121,6 @@ t.A9
 t.C9
 ^_[]
 ^_[]
-RQWP
-^_[]
 <\t	
 ^_[]
 ,^_[]
@@ -159,6 +156,8 @@ SSh)
 rp;]
 ,^_[]
 ^_[]
+WQPR
+^_[]
 ^_[]
 ^_[]
 ,^_[]
@@ -184,7 +183,6 @@ SWVP
 ^_[]
 ^_[]
 ^_[]
-323B
 ^_[]
 ^_[]
 ^_[]
@@ -208,6 +206,8 @@ SWVP
 ^_[]
 ;Nxs
 ^_[]
+;Vxs
+9~tw
 _l;_|r
 ^_[]
 9{dw
@@ -224,7 +224,7 @@ _l;_|r
 ^_[]
 %UUUU
 3333
-%UUUU
+%UUUU)
 3333!
 3333
 \^_[]
@@ -257,12 +257,13 @@ QjNP
 %UUUU
 3333
 u4;}
-<^_[]
+,^_[]
 %UUUU
 3333
 ^_[]
-G<;E
-L^_[]
+sl;E
+C(;H
+<^_[]
 ^_[]
 ^_[]
 ^_[]
@@ -311,7 +312,6 @@ SWV1
 QPRj W
 VUUU
 \^_[]
-N$t)
 Qj1P
 ^_[]
 ^_[]
@@ -538,8 +538,8 @@ CreateInterface
 steamwebhelper
 Steam Helper
 cefwebhelper
-Jan 12 2024
-16:50:56
+Jan 18 2024
+17:57:30
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 MainThrd
@@ -597,6 +597,7 @@ allocator<T>::allocate(size_t n) 'n' exceeds maximum supported size
 ?20CUniformRandomStream
 20IUniformRandomStream
 N(knN
+:.+-
 11CPathString
 ?21CUtlCStringConversion
 18CUtlCharConversion
@@ -677,7 +678,6 @@ RIQ"
 @_backtrace
 @_backtrace_symbols
 @_bootstrap_look_up
-@_ceilf
 @_dladdr
 @_dlclose
 @_dlopen
@@ -704,7 +704,7 @@ RIQ"
 @_launch_msg
 @_lchmod
 @_lstat$INODE64
-@_mach_absolute_time
+@_mach_continuous_time
 @_mach_msg
 @_mach_port_allocate
 @_mach_port_deallocate
@@ -771,14 +771,14 @@ CreateInterface
 -Breakpad_SetSteamID
 08:<
 2$$$&$$
-TJ",Z
-c;uB
+TJ"0V
+c;jA
 &>pj
 Dxll
 ){c$V
-8/l(x
+86l(x
 !	'J+
-feS0>O
+hiS>>O
 _Breakpad_SetSteamID
 _CreateInterface
 .objc_class_name_NSArray
@@ -843,7 +843,6 @@ _backtrace
 _backtrace_symbols
 _bootstrap_look_up
 _bootstrap_port
-_ceilf
 _dladdr
 _dlclose
 _dlopen
@@ -873,7 +872,7 @@ _launch_data_new_string
 _launch_msg
 _lchmod
 _lstat$INODE64
-_mach_absolute_time
+_mach_continuous_time
 _mach_msg
 _mach_port_allocate
 _mach_port_deallocate
@@ -941,21 +940,13 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-=]p+
-11Xu_
-Oy9(h
-,e7`
+&Fxc
+1"w5wc
+sbffR'
+ZB2b
+QYw9<
 subject.OU
 MXGJJ98X76
-com.valvesoftware.steam
-MXGJJ98X76
-9%M[
-4c]0
-Q~d1
->.V3z
-eTm^#
-Vj74_
-fH{%'
 Apple Inc.1&0$
 Apple Certification Authority1
 Apple Root CA0
@@ -1011,47 +1002,45 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240113005120Z0/
-me0-
-H<?xml version="1.0" encoding="UTF-8"?>
+240119015755Z0/
+DcOC
+1/0-
+DcOC
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		KDIWXvxpbB3Sjwo10qs96n3vbWU=
-		</data>
-		<data>
-		kcQWLmMQGP+oHBUcS9NT+ojoZX8=
+		E7/zKA4maJjnf2HdFZds5PQfWBA=
 		</data>
 	</array>
 </dict>
 </plist>
-`D#oQ
-8bhS
-20240113005133Z0
-4Uf|
+u	DiK
+tU-cE
+20240119015807Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240111205539Z
-240222205538Z0B1
-Timestamp Signer NWK21
+240111211011Z
+240222211010Z0B1
+Timestamp Signer NWK11
 Apple Inc.1
-Q2T4(
-\rZ(
-PI,|
-	7MFm
-*~8M
+r^N_&
+9io+
+o"E 6-
+MNc,
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-,+	(_
-_u][
-Dq%v
+FG~V
+UDK6
+t?DF
+H=Jx
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -1090,12 +1079,10 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240113005133Z0#
-\]0+
-AAT_):
-<XU%
-q0q*
-8 >U
+240119015807Z0#
+!rk\J
+$c=TC"
+,ce~
 __TEXT
 __text
 __TEXT
@@ -1141,8 +1128,6 @@ __common
 __DATA
 __LINKEDIT
 @loader_path/crashhandler.dylib
-	x>x
-<68U
 /usr/lib/libiconv.2.dylib
 /System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices
 /System/Library/Frameworks/IOKit.framework/Versions/A/IOKit
@@ -1257,7 +1242,7 @@ AWAVAUATSPI
 AWAVAUATSPI
 [A\A]A^A_]
 AWAVSPI
-\u(L
+/u(B
 [A^A_]
 AWAVATSH
 .u"F8t 
@@ -1275,7 +1260,7 @@ x%Lc
  u&E1
 AWAVAUATSPH
 x&Hc
- u7E1
+ u6E1
 [A\A]A^A_]
 AWAVAUATSPH
 [A\A]A^A_]
@@ -1389,8 +1374,8 @@ AWAVAUATSH
 AWAVSPA
 [A^A_]
 [A^A_]
-AWAVAUATSH
-[A\A]A^A_]
+AWAVATSH
+[A\A^A_]
 AWAVAUATSPL
 UUUUUUUUH!
 33333333H
@@ -1445,6 +1430,7 @@ Ict$
 UUUUUUUUH!
 33333333H
 L9K(
+^@ f
 UUUUUUUUH!
 33333333H
 [A\A]A^A_]
@@ -1476,6 +1462,7 @@ t	[A^]
 AVSH
 [A^]
 AWAVSPI
+^F f
 UUUUUUUUH!
 33333333H
 [A^A_]
@@ -1572,6 +1559,7 @@ t	[A^]
 UUUUUUUUH!
 33333333H
 AWAVSPI
+^F f
 UUUUUUUUH!
 33333333H
 [A^A_]
@@ -1844,8 +1832,8 @@ CreateInterface
 steamwebhelper
 Steam Helper
 cefwebhelper
-Jan 12 2024
-16:50:57
+Jan 18 2024
+17:57:31
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 MainThrd
@@ -1934,6 +1922,7 @@ length
 ?20CUniformRandomStream
 20IUniformRandomStream
 N(knN
+:.+-
 ?11CPathString
 21CUtlCStringConversion
 18CUtlCharConversion
@@ -1941,7 +1930,6 @@ N(knN
 _12CStdMemAlloc
 9IMemAlloc
 Mb@?
-D`yA`
 A\Ap
 UA\Ap
 RAVAp
@@ -2023,7 +2011,6 @@ HpHp
 @_backtrace
 @_backtrace_symbols
 @_bootstrap_look_up
-@_ceilf
 @_dladdr
 @_dlclose
 @_dlopen
@@ -2050,7 +2037,7 @@ HpHp
 @_launch_msg
 @_lchmod
 @_lstat$INODE64
-A_mach_continuous_time
+@_mach_continuous_time
 @_mach_msg
 @_mach_port_allocate
 @_mach_port_deallocate
@@ -2116,11 +2103,11 @@ A_mach_continuous_time
 CreateInterface
 -Breakpad_SetSteamID
 6@@D
-yXEx?
+yXEu?
 Njtt
-Bvvh
+Dvvh
 8*g'b
-t]G.4Bj
+l]G.4Bj
 _Breakpad_SetSteamID
 _CreateInterface
 _BreakpadAddUploadParameter
@@ -2184,7 +2171,6 @@ _backtrace
 _backtrace_symbols
 _bootstrap_look_up
 _bootstrap_port
-_ceilf
 _dladdr
 _dlclose
 _dlopen
@@ -2284,24 +2270,18 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-.)laO
-9I~+
-he1x
-r*3Mt
-UYR7
-T5d1
-nL'6
+[;E^hu+ 
+xk-a
+NxfL
+2/cC/rC0
+W[OQ
+.uPd#N
+9n Ys
+"^9>X
+*#q>
+V]}4i
 subject.OU
 MXGJJ98X76
-com.valvesoftware.steam
-MXGJJ98X76
-XO@<
-O`dz
-;='0
-y.e/L
-ZK>S
-<Y|s
-}o>m
 Apple Inc.1&0$
 Apple Certification Authority1
 Apple Root CA0
@@ -2357,29 +2337,26 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240113005120Z0/
-<,R4
-H<?xml version="1.0" encoding="UTF-8"?>
+240119015756Z0/
+y^n",K
+1/0-
+y^n",K
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		T+6nmdXEI/MoABhcEb5YmhugjOg=
-		</data>
-		<data>
-		z7MbZx0gG9EJ7apBA8/wXjktqnE=
+		O2j6prV5Xm4iLEuVNnT6/Ag5TSs=
 		</data>
 	</array>
 </dict>
 </plist>
-(6_XJ
-$+($
-TM8*^
-@rc3h@
-20240113005133Z0
-8qx})7
++Mcx5
+| P+8
+,4{7
+20240119015807Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
@@ -2438,9 +2415,10 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240113005133Z0#
-3g.z7
-z'1e
+240119015807Z0#
+R2v[
++K\J
+!TIm
 __TEXT
 __text
 __TEXT
@@ -2487,7 +2465,6 @@ __common
 __DATA
 __LINKEDIT
 @loader_path/crashhandler.dylib
-@k8~
 /usr/lib/libiconv.2.dylib
 /System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices
 /System/Library/Frameworks/IOKit.framework/Versions/A/IOKit
@@ -2510,8 +2487,9 @@ Thjv8H
 h(8*
 QiJh8?
 ij`8
-@9_q
-	K"}@
+@9?q
+@8?q
+K"}@
 jh8_
 )	@9?
 Jh8?
@@ -2735,8 +2713,8 @@ CreateInterface
 steamwebhelper
 Steam Helper
 cefwebhelper
-Jan 12 2024
-16:50:59
+Jan 18 2024
+17:57:32
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 MainThrd
@@ -3167,18 +3145,8 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-s]6>m
-x-i0
-wnuSjHj
-&%T]
-%Eck
-)yju
-qpkYd
-subject.OU
-MXGJJ98X76
-com.valvesoftware.steam
-MXGJJ98X76
-|HDE
+-o6'}T
+qZan
 >3L8
 [;7v{
 +LMw
@@ -3188,6 +3156,8 @@ IUXm1
 ^R6q
 :RbfV
 $V0"d
+subject.OU
+MXGJJ98X76
 Apple Inc.1&0$
 Apple Certification Authority1
 Apple Root CA0
@@ -3243,49 +3213,44 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240113005120Z0/
-0A98
-H<?xml version="1.0" encoding="UTF-8"?>
+240119015756Z0/
+1/0-
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		2cG9iTmnFjA2yPj1eHLz35IQCjk=
-		</data>
-		<data>
-		GyD6KZ6MMEE5OItY+xNAI2STnmE=
+		S0cNxiMKU7m5QUVvCCkEoinaOYk=
 		</data>
 	</array>
 </dict>
 </plist>
-{OVa.
-/	f'
-?qYv@
-&~U(}S
-<^$%
-20240113005133Z0
+"D,J
+l\bD
+f7m'
+20240119015807Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240111211011Z
-240222211010Z0B1
-Timestamp Signer NWK11
+240111205539Z
+240222205538Z0B1
+Timestamp Signer NWK21
 Apple Inc.1
-r^N_&
-9io+
-o"E 6-
-MNc,
+Q2T4(
+\rZ(
+PI,|
+	7MFm
+*~8M
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-FG~V
-UDK6
-t?DF
-H=Jx
+,+	(_
+_u][
+Dq%v
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -3324,7 +3289,4 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240113005133Z0#
-A@G=
-0f& 
-#1eo
+240119015807Z0#

@@ -3001,12 +3001,12 @@
 "Steam_LogoColumn"						"그림"
 
 "Steam_GamesDialog_RightClick_AddToFavorites"			"즐겨찾기에 추가"
-"Steam_GamesDialog_RightClick_RemoveFromFavorites"	"즐겨찾기에서 삭제"
+"Steam_GamesDialog_RightClick_RemoveFromFavorites"	"즐겨찾기에서 제거"
 
-"Steam_GamesDialog_RightClick_RemoveFromHidden"	"숨김 목록에서 제거"
+"Steam_GamesDialog_RightClick_RemoveFromHidden"	"숨기기 해제"
 
-"Steam_GamesDialog_RightClick_AddToUnblockedGames"			"가족 게임에 추가하기"
-"Steam_GamesDialog_RightClick_RemoveFromUnblockedGames"		"가족 게임에서 제거하기"
+"Steam_GamesDialog_RightClick_AddToUnblockedGames"			"가족 게임에 추가"
+"Steam_GamesDialog_RightClick_RemoveFromUnblockedGames"		"가족 게임에서 제거"
 
 "steam_menu_checkforupdates"						"Steam 클라이언트 업데이트 확인"
 "steam_menu_checkforupdates_osx"					"업데이트 확인..."
@@ -3985,7 +3985,7 @@ Windows에 관리자로 로그인해야 합니다.
 "steam_menu_newcategory"		"새로 만들기..."
 
 "steam_details_changetag"		"범주 변경..."
-"steam_GamesDialog_RightClick_RemoveFromCategory"		"'%category%'에서 삭제"
+"steam_GamesDialog_RightClick_RemoveFromCategory"		"'%category%'에서 제거"
 
 "steam_recentlyplayed_today"		"오늘"
 "steam_recentlyplayed_yesterday"		"어제"

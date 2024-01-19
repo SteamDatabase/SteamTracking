@@ -73,9 +73,10 @@
  SDL_GetDisplayBounds
  SDL_GetDisplays
  SDL_GetPrimaryDisplay
+ SDL_GetProperty
  SDL_GetWindowFromID
+ SDL_GetWindowProperties
  SDL_GetWindowSize
- SDL_GetWindowWMInfo
  SDL_HideCursor
  SDL_InitSubSystem
  SDL_RaiseWindow
@@ -217,8 +218,6 @@
  fclose
  fcntl
  fflush
- floor
- floorf
  fmodf
  fnmatch
  fopen
@@ -297,8 +296,6 @@
  readdir$INODE64
  realpath$DARWIN_EXTSN
  rindex
- round
- roundf
  scandir$INODE64
  setjmp
  setlocale

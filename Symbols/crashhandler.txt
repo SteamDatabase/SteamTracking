@@ -57,7 +57,6 @@
  backtrace_symbols
  bootstrap_look_up
  bootstrap_port
- ceilf
  dladdr
  dlclose
  dlopen
@@ -92,7 +91,6 @@
  launch_msg
  lchmod
  lstat$INODE64
- mach_absolute_time
  mach_continuous_time
  mach_msg
  mach_port_allocate

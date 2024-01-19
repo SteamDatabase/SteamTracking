@@ -167,6 +167,7 @@ message CMsgClientSettings {
 	optional bool g_background_devmode = 18206 [(setting_store) = k_EClientSettingStore_CustomFunc];
 	optional .CMsgHotkey g_background_mk = 18207 [(setting_store) = k_EClientSettingStore_CustomFunc];
 	optional .CMsgHotkey g_background_tg = 18208 [(setting_store) = k_EClientSettingStore_CustomFunc];
+	optional bool g_background_a_m = 18209 [(setting_store) = k_EClientSettingStore_CustomFunc];
 	optional bool show_timestamps_in_console = 20000 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Developer\\ShowTimestampsInConsole"];
 	optional bool force_oobe = 20001 [(setting_store) = k_EClientSettingStore_Registry, (setting_name) = "HKEY_CURRENT_USER\\Software\\Valve\\Steam\\ForceOOBE"];
 	optional int32 override_browser_composer_mode = 20002 [(setting_store) = k_EClientSettingStore_CustomFunc];

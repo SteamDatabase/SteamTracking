@@ -8,10 +8,10 @@ __TEXT
 __stub_helper
 __TEXT
 __gcc_except_tab__TEXT
-H4
+44
 __const
 __TEXT
-CB
+SB
 __objc_methname
 __TEXT
 >$
@@ -2265,8 +2265,6 @@ Seconds
 @
 @
 Ic]
-Hc
-Ic
 0
 0
 
@@ -2274,7 +2272,6 @@ A;E
 0
 
 
-a
 PPj
 `
 `
@@ -2305,6 +2302,8 @@ P
 
 =
 @
+Hc
+Ic
 @
 @
 0

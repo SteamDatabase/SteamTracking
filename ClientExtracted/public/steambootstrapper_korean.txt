@@ -23,7 +23,7 @@
 "SteamBootstrapper_UpdateChecking"			"사용 가능한 업데이트 확인 중..."
 "SteamBootstrapper_UpdatePrepare"				"업데이트 준비 중..."
 "SteamBootstrapper_UpdateDownload"			"업데이트 다운로드 중..."
-"SteamBootstrapper_UpdateDownloading"			"업데이트(%bytes%/%size%KB) 다운로드 중..."
+"SteamBootstrapper_UpdateDownloading"			"업데이트 다운로드 중...(%bytes%/%size%KB)"
 "SteamBootstrapper_UpdateExtractingPackage"	"패키지 압축 푸는 중..."
 "SteamBootstrapper_UpdateInstalling"			"업데이트 설치 중..."
 "SteamBootstrapper_InstallVerify"				"설치 확인 중..."

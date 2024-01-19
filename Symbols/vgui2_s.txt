@@ -250,7 +250,6 @@
  accept
  atoi
  bind
- ceilf
  close
  closedir
  crc32
@@ -319,7 +318,6 @@
  readdir$INODE64
  realpath$DARWIN_EXTSN
  recvmsg
- round
  sendmsg
  setjmp
  setlocale

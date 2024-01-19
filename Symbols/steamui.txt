@@ -251,6 +251,7 @@
  D vtable for tinyxml2::XMLUnknown
  DebugStatsSystem
  DeclareCurrentThreadIsMainThread
+ DeleteAudioEncoder
  DeleteAudioResampler
  Error
  FSCreateFileUnicode
@@ -473,12 +474,13 @@
  SDL_GetNumJoystickAxes
  SDL_GetPlatform
  SDL_GetPrimaryDisplay
+ SDL_GetProperty
  SDL_GetRectIntersection
  SDL_GetRectUnion
  SDL_GetRevision
  SDL_GetWindowFromID
+ SDL_GetWindowProperties
  SDL_GetWindowSize
- SDL_GetWindowWMInfo
  SDL_HideCursor
  SDL_InitSubSystem
  SDL_IsGamepad
@@ -1568,7 +1570,6 @@
  bootstrap_look_up
  bootstrap_port
  calloc
- ceil
  ceilf
  chmod
  close
@@ -1922,7 +1923,6 @@
  rindex
  rmdir
  round
- roundf
  rsaz_1024_gather5_avx2
  rsaz_1024_mul_avx2
  rsaz_1024_norm2red_avx2
@@ -2071,7 +2071,6 @@
  thread_policy
  thread_policy_set
  time
- truncf
  typeinfo for SteamThreadTools::CThread
  typeinfo for bool
  typeinfo for char

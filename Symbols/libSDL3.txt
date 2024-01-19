@@ -4,7 +4,6 @@
  .objc_class_name_NSApplication
  .objc_class_name_NSArray
  .objc_class_name_NSAttributedString
- .objc_class_name_NSBezierPath
  .objc_class_name_NSBitmapImageRep
  .objc_class_name_NSBundle
  .objc_class_name_NSColor
@@ -124,7 +123,6 @@
  CGMainDisplayID
  CGReleaseDisplayFadeReservation
  CGWarpMouseCursorPosition
- CGWindowLevelForKey
  CVDisplayLinkCreateWithActiveCGDisplays
  CVDisplayLinkCreateWithCGDisplay
  CVDisplayLinkGetNominalOutputVideoRefreshPeriod
@@ -141,10 +139,8 @@
  D .objc_class_name_SDLTranslatorResponder
  D .objc_class_name_SDLView
  D .objc_class_name_SDLWindow
- D .objc_class_name_SDL_CocoaClosure
  D .objc_class_name_SDL_CocoaVideoData
  D .objc_class_name_SDL_CocoaWindowData
- D .objc_class_name_SDL_ShapeData
  FFCreateDevice
  FFDeviceCreateEffect
  FFDeviceGetForceFeedbackCapabilities
@@ -250,6 +246,8 @@
  NSWindowWillCloseNotification
  NSWindowWillEnterFullScreenNotification
  NSWindowWillExitFullScreenNotification
+ NSWindowWillMiniaturizeNotification
+ NSWindowWillMoveNotification
  NSZeroPoint
  NSZeroRect
  OBJC_CLASS_$_CAMetalLayer
@@ -263,7 +261,6 @@
  OBJC_CLASS_$_NSApplication
  OBJC_CLASS_$_NSArray
  OBJC_CLASS_$_NSAttributedString
- OBJC_CLASS_$_NSBezierPath
  OBJC_CLASS_$_NSBitmapImageRep
  OBJC_CLASS_$_NSBundle
  OBJC_CLASS_$_NSColor
@@ -304,12 +301,14 @@
  OBJC_METACLASS_$_NSResponder
  OBJC_METACLASS_$_NSView
  OBJC_METACLASS_$_NSWindow
+ T SDL_AcquireVideoCaptureFrame
  T SDL_AddEventWatch
  T SDL_AddGamepadMapping
  T SDL_AddGamepadMappingsFromFile
  T SDL_AddGamepadMappingsFromRW
  T SDL_AddHintCallback
  T SDL_AddTimer
+ T SDL_AllocateEventMemory
  T SDL_AtomicAdd
  T SDL_AtomicCAS
  T SDL_AtomicCASPtr
@@ -342,6 +341,7 @@
  T SDL_CloseGamepad
  T SDL_CloseJoystick
  T SDL_CloseSensor
+ T SDL_CloseVideoCapture
  T SDL_ComposeCustomBlendMode
  T SDL_ConvertAudioSamples
  T SDL_ConvertEventToRenderCoordinates
@@ -360,8 +360,8 @@
  T SDL_CreateRW
  T SDL_CreateRWLock
  T SDL_CreateRenderer
+ T SDL_CreateRendererWithProperties
  T SDL_CreateSemaphore
- T SDL_CreateShapedWindow
  T SDL_CreateSoftwareRenderer
  T SDL_CreateSurface
  T SDL_CreateSurfaceFrom
@@ -369,12 +369,12 @@
  T SDL_CreateTLS
  T SDL_CreateTexture
  T SDL_CreateTextureFromSurface
+ T SDL_CreateTextureWithProperties
  T SDL_CreateThread
  T SDL_CreateThreadWithStackSize
  T SDL_CreateWindow
  T SDL_CreateWindowAndRenderer
- T SDL_CreateWindowFrom
- T SDL_CreateWindowWithPosition
+ T SDL_CreateWindowWithProperties
  T SDL_CursorVisible
  T SDL_DYNAPI_entry
  T SDL_DelEventWatch
@@ -407,6 +407,7 @@
  T SDL_EGL_SetEGLAttributeCallbacks
  T SDL_EnableScreenSaver
  T SDL_EnterAppMainCallbacks
+ T SDL_EnumerateProperties
  T SDL_Error
  T SDL_EventEnabled
  T SDL_FillSurfaceRect
@@ -416,7 +417,7 @@
  T SDL_FlushAudioStream
  T SDL_FlushEvent
  T SDL_FlushEvents
- T SDL_GL_BindTexture
+ T SDL_FlushRenderer
  T SDL_GL_CreateContext
  T SDL_GL_DeleteContext
  T SDL_GL_ExtensionSupported
@@ -431,7 +432,6 @@
  T SDL_GL_SetAttribute
  T SDL_GL_SetSwapInterval
  T SDL_GL_SwapWindow
- T SDL_GL_UnbindTexture
  T SDL_GL_UnloadLibrary
  T SDL_GUIDFromString
  T SDL_GUIDToString
@@ -459,6 +459,7 @@
  T SDL_GetAudioStreamProperties
  T SDL_GetAudioStreamQueued
  T SDL_GetBasePath
+ T SDL_GetBooleanProperty
  T SDL_GetCPUCacheLineSize
  T SDL_GetCPUCount
  T SDL_GetClipboardData
@@ -479,11 +480,12 @@
  T SDL_GetDisplayForRect
  T SDL_GetDisplayForWindow
  T SDL_GetDisplayName
+ T SDL_GetDisplayProperties
  T SDL_GetDisplayUsableBounds
  T SDL_GetDisplays
  T SDL_GetError
- T SDL_GetErrorMsg
  T SDL_GetEventFilter
+ T SDL_GetFloatProperty
  T SDL_GetFullscreenDisplayModes
  T SDL_GetGamepadAppleSFSymbolsNameForAxis
  T SDL_GetGamepadAppleSFSymbolsNameForButton
@@ -492,6 +494,8 @@
  T SDL_GetGamepadBindings
  T SDL_GetGamepadButton
  T SDL_GetGamepadButtonFromString
+ T SDL_GetGamepadButtonLabel
+ T SDL_GetGamepadButtonLabelForType
  T SDL_GetGamepadFirmwareVersion
  T SDL_GetGamepadFromInstanceID
  T SDL_GetGamepadFromPlayerIndex
@@ -508,7 +512,7 @@
  T SDL_GetGamepadJoystick
  T SDL_GetGamepadMapping
  T SDL_GetGamepadMappingForGUID
- T SDL_GetGamepadMappingForIndex
+ T SDL_GetGamepadMappings
  T SDL_GetGamepadName
  T SDL_GetGamepadPath
  T SDL_GetGamepadPlayerIndex
@@ -519,6 +523,7 @@
  T SDL_GetGamepadSensorData
  T SDL_GetGamepadSensorDataRate
  T SDL_GetGamepadSerial
+ T SDL_GetGamepadSteamHandle
  T SDL_GetGamepadStringForAxis
  T SDL_GetGamepadStringForButton
  T SDL_GetGamepadStringForType
@@ -528,6 +533,7 @@
  T SDL_GetGamepadVendor
  T SDL_GetGamepads
  T SDL_GetGlobalMouseState
+ T SDL_GetGlobalProperties
  T SDL_GetGrabbedWindow
  T SDL_GetHint
  T SDL_GetHintBoolean
@@ -575,17 +581,25 @@
  T SDL_GetNaturalDisplayOrientation
  T SDL_GetNumAllocations
  T SDL_GetNumAudioDrivers
- T SDL_GetNumGamepadMappings
  T SDL_GetNumGamepadTouchpadFingers
  T SDL_GetNumGamepadTouchpads
  T SDL_GetNumJoystickAxes
  T SDL_GetNumJoystickButtons
  T SDL_GetNumJoystickHats
  T SDL_GetNumRenderDrivers
- T SDL_GetNumTouchDevices
  T SDL_GetNumTouchFingers
+ T SDL_GetNumVideoCaptureFormats
+ T SDL_GetNumVideoCaptureFrameSizes
  T SDL_GetNumVideoDrivers
+ T SDL_GetNumberProperty
  T SDL_GetOriginalMemoryFunctions
+ T SDL_GetPenCapabilities
+ T SDL_GetPenFromGUID
+ T SDL_GetPenGUID
+ T SDL_GetPenName
+ T SDL_GetPenStatus
+ T SDL_GetPenType
+ T SDL_GetPens
  T SDL_GetPerformanceCounter
  T SDL_GetPerformanceFrequency
  T SDL_GetPixelFormatEnumForMasks
@@ -597,6 +611,7 @@
  T SDL_GetPrimaryDisplay
  T SDL_GetPrimarySelectionText
  T SDL_GetProperty
+ T SDL_GetPropertyType
  T SDL_GetRGB
  T SDL_GetRGBA
  T SDL_GetRWProperties
@@ -626,6 +641,7 @@
  T SDL_GetRenderViewport
  T SDL_GetRenderWindow
  T SDL_GetRenderer
+ T SDL_GetRendererFromTexture
  T SDL_GetRendererInfo
  T SDL_GetRendererProperties
  T SDL_GetRevision
@@ -644,8 +660,8 @@
  T SDL_GetSensorProperties
  T SDL_GetSensorType
  T SDL_GetSensors
- T SDL_GetShapedWindowMode
  T SDL_GetSilenceValueForFormat
+ T SDL_GetStringProperty
  T SDL_GetSurfaceAlphaMod
  T SDL_GetSurfaceBlendMode
  T SDL_GetSurfaceClipRect
@@ -658,19 +674,24 @@
  T SDL_GetTextureAlphaMod
  T SDL_GetTextureBlendMode
  T SDL_GetTextureColorMod
- T SDL_GetTextureDXGIResource
  T SDL_GetTextureProperties
  T SDL_GetTextureScaleMode
  T SDL_GetThreadID
  T SDL_GetThreadName
  T SDL_GetTicks
  T SDL_GetTicksNS
- T SDL_GetTouchDevice
+ T SDL_GetTouchDeviceName
  T SDL_GetTouchDeviceType
+ T SDL_GetTouchDevices
  T SDL_GetTouchFinger
- T SDL_GetTouchName
  T SDL_GetUserFolder
  T SDL_GetVersion
+ T SDL_GetVideoCaptureDeviceName
+ T SDL_GetVideoCaptureDevices
+ T SDL_GetVideoCaptureFormat
+ T SDL_GetVideoCaptureFrameSize
+ T SDL_GetVideoCaptureSpec
+ T SDL_GetVideoCaptureStatus
  T SDL_GetVideoDriver
  T SDL_GetWindowBordersSize
  T SDL_GetWindowDisplayScale
@@ -695,7 +716,6 @@
  T SDL_GetWindowSizeInPixels
  T SDL_GetWindowSurface
  T SDL_GetWindowTitle
- T SDL_GetWindowWMInfo
  T SDL_GetYUVConversionMode
  T SDL_GetYUVConversionModeForResolution
  T SDL_HapticClose
@@ -754,7 +774,6 @@
  T SDL_InitSubSystem
  T SDL_IsGamepad
  T SDL_IsJoystickVirtual
- T SDL_IsShapedWindow
  T SDL_IsTablet
  T SDL_JoystickConnected
  T SDL_JoystickEventsEnabled
@@ -818,8 +837,11 @@
  T SDL_OpenJoystick
  T SDL_OpenSensor
  T SDL_OpenURL
+ T SDL_OpenVideoCapture
+ T SDL_OpenVideoCaptureWithSpec
  T SDL_PauseAudioDevice
  T SDL_PeepEvents
+ T SDL_PenConnected
  T SDL_PollEvent
  T SDL_PostSemaphore
  T SDL_PremultiplyAlpha
@@ -833,10 +855,12 @@
  T SDL_RWFromFile
  T SDL_RWFromMem
  T SDL_RWclose
+ T SDL_RWprintf
  T SDL_RWread
  T SDL_RWseek
  T SDL_RWsize
  T SDL_RWtell
+ T SDL_RWvprintf
  T SDL_RWwrite
  T SDL_RaiseWindow
  T SDL_ReadS16BE
@@ -853,6 +877,7 @@
  T SDL_ReadU64LE
  T SDL_ReadU8
  T SDL_RegisterEvents
+ T SDL_ReleaseVideoCaptureFrame
  T SDL_ReloadGamepadMappings
  T SDL_RemoveTimer
  T SDL_RenderClear
@@ -861,7 +886,6 @@
  T SDL_RenderCoordinatesToWindow
  T SDL_RenderFillRect
  T SDL_RenderFillRects
- T SDL_RenderFlush
  T SDL_RenderGeometry
  T SDL_RenderGeometryRaw
  T SDL_RenderLine
@@ -899,12 +923,14 @@
  T SDL_SetAudioStreamFrequencyRatio
  T SDL_SetAudioStreamGetCallback
  T SDL_SetAudioStreamPutCallback
+ T SDL_SetBooleanProperty
  T SDL_SetClipboardData
  T SDL_SetClipboardText
  T SDL_SetCursor
  T SDL_SetError
  T SDL_SetEventEnabled
  T SDL_SetEventFilter
+ T SDL_SetFloatProperty
  T SDL_SetGamepadEventsEnabled
  T SDL_SetGamepadLED
  T SDL_SetGamepadMapping
@@ -921,10 +947,12 @@
  T SDL_SetMainReady
  T SDL_SetMemoryFunctions
  T SDL_SetModState
+ T SDL_SetNumberProperty
  T SDL_SetPaletteColors
  T SDL_SetPixelFormatPalette
  T SDL_SetPrimarySelectionText
  T SDL_SetProperty
+ T SDL_SetPropertyWithCleanup
  T SDL_SetRelativeMouseMode
  T SDL_SetRenderClipRect
  T SDL_SetRenderDrawBlendMode
@@ -934,6 +962,7 @@
  T SDL_SetRenderTarget
  T SDL_SetRenderVSync
  T SDL_SetRenderViewport
+ T SDL_SetStringProperty
  T SDL_SetSurfaceAlphaMod
  T SDL_SetSurfaceBlendMode
  T SDL_SetSurfaceClipRect
@@ -948,6 +977,7 @@
  T SDL_SetTextureColorMod
  T SDL_SetTextureScaleMode
  T SDL_SetThreadPriority
+ T SDL_SetVideoCaptureSpec
  T SDL_SetWindowAlwaysOnTop
  T SDL_SetWindowBordered
  T SDL_SetWindowFocusable
@@ -966,9 +996,9 @@
  T SDL_SetWindowOpacity
  T SDL_SetWindowPosition
  T SDL_SetWindowResizable
- T SDL_SetWindowShape
  T SDL_SetWindowSize
  T SDL_SetWindowTitle
+ T SDL_SetX11EventHook
  T SDL_SetYUVConversionMode
  T SDL_ShowCursor
  T SDL_ShowMessageBox
@@ -977,11 +1007,13 @@
  T SDL_ShowWindowSystemMenu
  T SDL_SignalCondition
  T SDL_SoftStretch
- T SDL_SoftStretchLinear
  T SDL_StartTextInput
+ T SDL_StartVideoCapture
  T SDL_StopTextInput
+ T SDL_StopVideoCapture
  T SDL_SurfaceHasColorKey
  T SDL_SurfaceHasRLE
+ T SDL_SyncWindow
  T SDL_TextInputActive
  T SDL_TextInputShown
  T SDL_ThreadID
@@ -1152,6 +1184,7 @@
  T SDL_strncmp
  T SDL_strndup
  T SDL_strnlen
+ T SDL_strnstr
  T SDL_strrchr
  T SDL_strrev
  T SDL_strstr
@@ -1188,6 +1221,7 @@
  T SDL_wcsncasecmp
  T SDL_wcsncmp
  T SDL_wcsnlen
+ T SDL_wcsnstr
  T SDL_wcsstr
  T SDL_wcstol
  TISCopyCurrentKeyboardLayoutInputSource
@@ -1231,8 +1265,6 @@
  atoi
  bsearch
  calloc
- ceil
- ceilf
  cos
  cosf
  dispatch_async
@@ -1251,8 +1283,6 @@
  ferror
  fflush
  fgets
- floor
- floorf
  fmod
  fmodf
  fopen
@@ -1336,6 +1366,7 @@
  objc_storeWeak
  objc_sync_enter
  objc_sync_exit
+ objc_unsafeClaimAutoreleasedReturnValue
  pow
  powf
  pthread_attr_init
@@ -1388,8 +1419,6 @@
  qsort
  realloc
  rewind
- round
- roundf
  scalbn
  scalbnf
  sched_get_priority_max
@@ -1402,6 +1431,7 @@
  sinf
  snprintf
  sscanf
+ stat$INODE64
  strcasecmp
  strcasestr
  strchr
@@ -1415,6 +1445,7 @@
  strncasecmp
  strncmp
  strnlen
+ strnstr
  strrchr
  strstr
  strtod
@@ -1429,8 +1460,6 @@
  sysctlbyname
  tan
  tanf
- trunc
- truncf
  vsnprintf
  vsscanf
  wcscasecmp

@@ -388,8 +388,8 @@
 "Friends_NameTooShort_Title"			"เพื่อน - ชื่อเล่นสั้นเกินไป"
 "Friends_NameTooShort_Info"			"ช่องข้อมูลชื่อเล่นต้องมีอย่างน้อย 2 ตัวอักษร"
 "Friends_NameChangeFailed_Title"		"เพื่อน - การเปลี่ยนชื่อโปรไฟล์ล้มเหลว"
-"Friends_NameChangeFailed_Info"		"ล้มเหลวในการเปลี่ยนชื่อโปรไฟล์ กรุณาลองใหม่ในอีกไม่กี่นาทีข้างหน้า"
-"Friends_NameChangeThrottled_Info"		"ไม่อนุญาตให้เปลี่ยนชื่อโปรไฟล์บ่อยมากเกินไป กรุณาลองใหม่ในอีกไม่กี่นาทีข้างหน้า"
+"Friends_NameChangeFailed_Info"		"ล้มเหลวในการเปลี่ยนชื่อโปรไฟล์ โปรดลองใหม่ในอีกไม่กี่นาทีข้างหน้า"
+"Friends_NameChangeThrottled_Info"		"ไม่อนุญาตให้เปลี่ยนชื่อโปรไฟล์บ่อยมากเกินไป โปรดลองใหม่ในอีกไม่กี่นาทีข้างหน้า"
 
 "Friends_OnlineNotification_Info"			"กำลังออนไลน์ในขณะนี้"
 "Friends_InGameNotification_Info"			"กำลังเล่นในขณะนี้"
@@ -769,10 +769,10 @@
 "Broadcast_RecordingError_LowVideo" "Steam ได้เปลี่ยนการเข้ารหัสของการถ่ายทอดสดเป็น \"ประสิทธิภาพดีที่สุด\""
 
 "Broadcast_RecordingError_Title" "ถ่ายทอดสด - ไม่มีการบันทึกเสียง"
-"Broadcast_RecordingError_General" "Steam ไม่สามารถบันทึกเสียงสำหรับการถ่ายทอดสดนี้ได้ กรุณาเยี่ยมชมบทความฝ่ายสนับสนุนด้านล่างสำหรับความช่วยเหลือในการแก้ไขปัญหานี้"
+"Broadcast_RecordingError_General" "Steam ไม่สามารถบันทึกเสียงสำหรับการถ่ายทอดสดนี้ได้ โปรดเยี่ยมชมบทความฝ่ายสนับสนุนด้านล่างสำหรับความช่วยเหลือในการแก้ไขปัญหานี้"
 "Broadcast_RecordingError_URL_Text" "ฝ่ายสนับสนุน Steam - เสียงไม่ถูกบันทึก"
 "Broadcast_RecordingError_URL_General" "https://support.steampowered.com/kb_article.php?ref=1874-QRUJ-3541"
-"Broadcast_RecordingError_Razer" "Steam ไม่สามารถบันทึกเสียงสำหรับการถ่ายทอดสดนี้ได้ กรุณาเยี่ยมชมบทความฝ่ายสนับสนุนด้านล่าง และอ่านหมวด \"ฮาร์ดแวร์ระบบเสียง Razer\" สำหรับความช่วยเหลือในการแก้ไขปัญหานี้"
+"Broadcast_RecordingError_Razer" "Steam ไม่สามารถบันทึกเสียงสำหรับการถ่ายทอดสดนี้ได้ โปรดเยี่ยมชมบทความฝ่ายสนับสนุนด้านล่าง และอ่านหมวด \"ฮาร์ดแวร์ระบบเสียง Razer\" สำหรับความช่วยเหลือในการแก้ไขปัญหานี้"
 "Broadcast_RecordingError_URL_Razer" "https://support.steampowered.com/kb_article.php?ref=1874-QRUJ-3541#2"
 
 "Broadcast_UploadError_Notification" "การอัปโหลดสตรีมถูกหยุด (%reason%)"

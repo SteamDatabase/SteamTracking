@@ -10,6 +10,12 @@ enum EFamilyGroupRole {
 	k_EFamilyGroupRole_MAX = 3;
 }
 
+enum EFamilyGroupsTwoFactorMethod {
+	k_EFamilyGroupsTwoFactorMethodNone = 0;
+	k_EFamilyGroupsTwoFactorMethodMobile = 1;
+	k_EFamilyGroupsTwoFactorMethodEmail = 2;
+}
+
 enum EPurchaseRequestAction {
 	k_EPurchaseRequestAction_None = 0;
 	k_EPurchaseRequestAction_Decline = 1;
@@ -49,6 +55,7 @@ enum ESharedLibraryExcludeReason {
 	k_ESharedLibrary_AppExcluded = 1;
 	k_ESharedLibrary_LicenseExcluded = 2;
 	k_ESharedLibrary_FreeGame = 3;
+	k_ESharedLibrary_LicensePrivate = 4;
 }
 
 message CFamilyGroups_CreateFamilyGroup_Request {
@@ -126,13 +133,43 @@ message CFamilyGroups_InviteToFamilyGroup_Request {
 }
 
 message CFamilyGroups_InviteToFamilyGroup_Response {
+	optional uint64 invite_id = 1;
+	optional .EFamilyGroupsTwoFactorMethod two_factor_method = 2 [default = k_EFamilyGroupsTwoFactorMethodNone];
+}
+
+message CFamilyGroups_ConfirmInviteToFamilyGroup_Request {
+	optional uint64 family_groupid = 1;
+	optional uint64 invite_id = 2;
+	optional uint64 nonce = 3;
+}
+
+message CFamilyGroups_ConfirmInviteToFamilyGroup_Response {
+}
+
+message CFamilyGroups_ResendInvitationToFamilyGroup_Request {
+	optional uint64 family_groupid = 1;
+	optional uint64 steamid = 2;
+}
+
+message CFamilyGroups_ResendInvitationToFamilyGroup_Response {
 }
 
 message CFamilyGroups_JoinFamilyGroup_Request {
 	optional uint64 family_groupid = 1;
+	optional uint64 nonce = 2;
 }
 
 message CFamilyGroups_JoinFamilyGroup_Response {
+	optional .EFamilyGroupsTwoFactorMethod two_factor_method = 2 [default = k_EFamilyGroupsTwoFactorMethodNone];
+}
+
+message CFamilyGroups_ConfirmJoinFamilyGroup_Request {
+	optional uint64 family_groupid = 1;
+	optional uint64 invite_id = 2;
+	optional uint64 nonce = 3;
+}
+
+message CFamilyGroups_ConfirmJoinFamilyGroup_Response {
 }
 
 message CFamilyGroups_RemoveFromFamilyGroup_Request {
@@ -303,7 +340,10 @@ service FamilyGroups {
 	rpc GetFamilyGroupForUser (.CFamilyGroups_GetFamilyGroupForUser_Request) returns (.CFamilyGroups_GetFamilyGroupForUser_Response);
 	rpc ModifyFamilyGroupDetails (.CFamilyGroups_ModifyFamilyGroupDetails_Request) returns (.CFamilyGroups_ModifyFamilyGroupDetails_Response);
 	rpc InviteToFamilyGroup (.CFamilyGroups_InviteToFamilyGroup_Request) returns (.CFamilyGroups_InviteToFamilyGroup_Response);
+	rpc ConfirmInviteToFamilyGroup (.CFamilyGroups_ConfirmInviteToFamilyGroup_Request) returns (.CFamilyGroups_ConfirmInviteToFamilyGroup_Response);
+	rpc ResendInvitationToFamilyGroup (.CFamilyGroups_ResendInvitationToFamilyGroup_Request) returns (.CFamilyGroups_ResendInvitationToFamilyGroup_Response);
 	rpc JoinFamilyGroup (.CFamilyGroups_JoinFamilyGroup_Request) returns (.CFamilyGroups_JoinFamilyGroup_Response);
+	rpc ConfirmJoinFamilyGroup (.CFamilyGroups_ConfirmJoinFamilyGroup_Request) returns (.CFamilyGroups_ConfirmJoinFamilyGroup_Response);
 	rpc RemoveFromFamilyGroup (.CFamilyGroups_RemoveFromFamilyGroup_Request) returns (.CFamilyGroups_RemoveFromFamilyGroup_Response);
 	rpc CancelFamilyGroupInvite (.CFamilyGroups_CancelFamilyGroupInvite_Request) returns (.CFamilyGroups_CancelFamilyGroupInvite_Response);
 	rpc GetUsersSharingDevice (.CFamilyGroups_GetUsersSharingDevice_Request) returns (.CFamilyGroups_GetUsersSharingDevice_Response);

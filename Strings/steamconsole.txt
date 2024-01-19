@@ -1,8 +1,8 @@
 __TEXT
 __text
 __TEXT
-p_
-p_
+@_
+@_
 __stubs
 __TEXT
 __stub_helper
@@ -75,7 +75,6 @@ h
 /usr/lib/libobjc.A.dylib
 &
 )
-PX
 public
 local
 anonymous
@@ -215,7 +214,7 @@ ClientAPI_Init(GlobalInstance): GetIClientInventory returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientBluetoothManager returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientParties returned NULL.
 ClientAPI_RunCallbacks
-IVRSteamPrivate_019
+IVRSteamPrivate_020
 com.valvesoftware.steam.ipctool
 ipcserver restart: expected: %d, got: %d
 pid %d != %d, clearing client_port = %d, server_port = %d
@@ -1535,23 +1534,26 @@ j
 =
 @
 =*.*
-Ic]
+r
 Hc
 Ic
-_
 @
 @
 0
+#
 @
 @
 @
 @
 @
 @
-0
-0
 0
 0
 0
 0
+0
+g
+\
+0
+Ic]
 A

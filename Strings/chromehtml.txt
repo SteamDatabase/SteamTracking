@@ -19,7 +19,7 @@ __TEXT
 __gcc_except_tab__TEXT
 __unwind_info
 __TEXT
-df
+`f
 __DATA
 __nl_symbol_ptr
 __DATA
@@ -62,7 +62,6 @@ __LINKEDIT
 8
 @loader_path/chromehtml.dylib
 "
-8!
 P
 
 *
@@ -235,6 +234,7 @@ $
 8
 <
 =
+@
 (
 0
 0
@@ -369,7 +369,7 @@ h
 (
 (
 0
-@
+H
 (
 8
 @
@@ -1016,6 +1016,7 @@ HTML_MSG_FUNC eHTMLCommands_IME_CompositionRangeChanged
 HTML_MSG_FUNC eHTMLCommands_AckScreenDPI
 CHTMLController::RunFrame - Deferred paint
 RetryCreateBrowser id:%u type:%u flags:%u: (%d, %d) %dx%d
+Forcing secure cookie flag as samesite=none
 STEAMVIDEOTOKEN
 m_ChromeIPCClient
 CHTMLController::ValidateStatics
@@ -1060,7 +1061,6 @@ Enable sandbox logging in CEF
 disables loading winh264.dll
 -disablehighdpi
 disables high-DPI support in CEF
--dev
 -cef-verbose-logging
 enables verbose logging from CEF
 -cef-disable-js-logging
@@ -1087,8 +1087,6 @@ disables GPU and renderer hang timeouts
 enables Chromium remote debugging, defaulting to localhost:8080
 -cef-disable-occlusion
 disables Chromium window occlusion testing on Windows
--cef-no-linux-angle
-Don't use ANGLE for rendering backend on Linux
 -cef-enable-gpu-debugging
 Enable GPU debugging in Chromium, costs a glGetError() call after every command
 -cef-disable-gpu
@@ -1099,14 +1097,14 @@ Force enable GPU acceleration
 Enable early-out for known page loads
 -cef-disable-delaypageload
 Disable early-out for known page loads
--cef-enable-samesite-by-default-cookies
-Treat unspecified samesite as samesite=lax
 -cef-disable-renderer-restart
 Disable auto-restart of renderer process for existing browsers
 -cef-disable-gpu-compositing
 Disable GPU accelerated compositing in browsers
 -cef-use-shell-exec
 Launch CEF process via sub-shell
+-cef-use-execv
+Launch CEF process via execv
 -cef-disable-safe-shutdown-workaround
 Force the usage of the safe browser shutdown workaround for Linux+NV
 -cef-disable-xcomposite-workaround
@@ -1117,6 +1115,13 @@ Force the usage of opaque backgrounds for CEF
 Don't restart the renderer on UI mode changes
 -cef-force-accessibility
 Force enable CEF accessibility features
+-cef-enable-fatal-dcheck
+-dev
+-html-perf-monitor
+Draws html perf data
+-browser-offline
+-no-dwrite
+forces CEF to use GDI text even if DWrite support is available
 -clientui
 -gamepadui
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/html/chrome_ipc_client.cpp
@@ -1139,8 +1144,6 @@ BREAKPAD_DUMP_LOCATION
 -steamdeck
 -steamos3
 -chromeos
--html-perf-monitor
-Draws html perf data
 -steamuniverse=Dev
 -steamuniverse=Beta
 -steamuniverse=Internal
@@ -1153,7 +1156,6 @@ clientui
 -steampath=%s
 GetClientActualLauncherType
 -launcher=%d
--browser-offline
 -fakeoffline
 -disablerendererrestart
 -use_safe_shutdown_workaround
@@ -1167,12 +1169,8 @@ GetClientActualLauncherType
 "
 --proxy-server="%s"
 --proxy-bypass-list="localhost;127.0.0.1"
-ResizeObserver
-Worklet
-AudioWorklet
 --enable-media-stream
-Badging
-SameSiteByDefaultCookies
+DcheckIsFatal
 .cef-enable-remote-debugging
 -devtools-address
 127.0.0.1
@@ -1197,7 +1195,6 @@ WebContentsOcclusion
 --single-process
 --in-process-gpu
 --ignore-gpu-blocklist
---ignore-gpu-blacklist
 --disable-d3d11
 --enable-logging
 --v=%s
@@ -2414,18 +2411,19 @@ id
 @
 
 @
-,
 
 
-~
+O
 @
 
 F
-G
-_
+u
+S
+$
+=
+0
+0
 
-0
-0
 
 
 Hi
@@ -2440,7 +2438,6 @@ AT=
 D
 @
 @
-
 
 
 @
@@ -2476,7 +2473,6 @@ IcE
 @
 V
 =
-N
 =
 !
 @
@@ -2486,7 +2482,6 @@ N
 M9e
 @
 @
-
 ?
 ?
 ?
@@ -2503,7 +2498,6 @@ M9e
 ?
 ?
 
-=
 Ic]
 Hc
 Ic
@@ -2518,3 +2512,4 @@ Ic
 0
 0
 0
+[

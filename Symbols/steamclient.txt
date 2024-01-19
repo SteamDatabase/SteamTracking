@@ -195,6 +195,7 @@
  OBJC_METACLASS_$_NSObject
  OSAtomicAdd32Barrier
  OSAtomicCompareAndSwapPtrBarrier
+ OSAtomicDecrement32Barrier
  OSTypesAreCompatible
  Plat_AbsoluteTime
  Plat_AbsoluteTimeToFloat
@@ -539,7 +540,6 @@
  bootstrap_port
  bzero
  calloc
- ceil
  ceilf
  chdir
  chmod
@@ -823,7 +823,6 @@
  remove
  rename
  rmdir
- roundf
  scandir$INODE64
  sched_get_priority_max
  sched_get_priority_min
@@ -1023,7 +1022,6 @@
  tcsetattr
  time
  timegm
- truncf
  typeinfo for SteamThreadTools::CThread
  typeinfo for bool
  typeinfo for char

@@ -1,8 +1,8 @@
 __TEXT
 __text
 __TEXT
-0^
-0^
+^
+^
 __stubs
 __TEXT
 __stub_helper
@@ -267,10 +267,11 @@ num > 0
 s_bAllowStaticSymbolTable
 s_pSymbolTable
 0
+~
 0
 @
 @
-3
+=
 =
 @
 =

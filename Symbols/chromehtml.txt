@@ -43,7 +43,6 @@
  OBJC_CLASS_$_NSWorkspace
  OBJC_METACLASS_$_NSObject
  Plat_AbsoluteTime
- Plat_CommandLineParamExists
  Plat_CommandLineParamValue
  Plat_FloatTime
  Plat_GetExecutablePath

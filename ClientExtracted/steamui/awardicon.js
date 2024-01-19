@@ -1,7 +1,7 @@
 (self.webpackChunksteamui = self.webpackChunksteamui || []).push([
   [6109],
   {
-    20111: (n) => {
+    68277: (n) => {
       n.exports = {
         IconContainer: "awardicon_IconContainer_6TbQg",
         ButtonContainer: "awardicon_ButtonContainer_kaquA",
@@ -11,16 +11,16 @@
         IconList: "awardicon_IconList_1NEGw",
       };
     },
-    14906: (n, e, t) => {
+    31149: (n, e, t) => {
       "use strict";
       t.r(e), t.d(e, { AwardIcon: () => u, AwardIconList: () => l });
-      var o = t(67294),
-        a = t(52436),
-        r = t(76023),
-        c = t(20111),
+      var o = t(27378),
+        a = t(91055),
+        r = t(94256),
+        c = t(68277),
         i = t.n(c),
-        s = t(92312),
-        p = t(51878);
+        s = t(86064),
+        p = t(35484);
       class u extends o.PureComponent {
         render() {
           const n = (0, s.LocalizePlural)(
@@ -58,4 +58,4 @@
     },
   },
 ]);
-//# sourceMappingURL=sourcemaps\awardicon.js.map
+//# sourceMappingURL=sourcemaps/awardicon.js.map

@@ -320,16 +320,14 @@ div.ModalPosition_TopBar {
   height: 100%;
 }
 .DialogHeader {
-  font-weight: 300;
-  font-size: 32px;
-  line-height: 36px;
-  letter-spacing: 2px;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 30px;
   color: #fff;
-  text-transform: uppercase;
   flex-shrink: 0;
   user-select: none;
   margin-right: 26px;
-  margin-bottom: 12px;
+  margin-bottom: 4px;
 }
 .DesktopUI .DialogHeader,
 .friendsui-container .DialogHeader {
@@ -1709,6 +1707,65 @@ body.in_global_drag .title-area {
 .friendsui-container .title-area .title-bar-actions,
 .DesktopUI .title-area .title-bar-actions {
   margin-right: 0px;
+}
+#dota_react_root .ModalPosition_TopBar {
+  height: 3px;
+  background: #ff6046;
+}
+#dota_react_root .ModalPosition_Dismiss {
+  right: 20px;
+  top: 20px;
+}
+#dota_react_root .ModalPosition_Dismiss .closeButton {
+  width: unset;
+  height: unset;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 3px;
+  display: flex;
+  background-color: rgba(168, 183, 196, 0.15);
+  backdrop-filter: blur(16px);
+  box-shadow: 0px 0px 0px #00000000;
+  transition-property: background-color, box-shadow, transform;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
+}
+#dota_react_root .ModalPosition_Dismiss .closeButton:hover {
+  background-color: rgba(168, 183, 196, 0.4);
+  box-shadow: 0px 4px 8px #0000004f;
+  transform: translateY(-2px);
+}
+#dota_react_root .ModalPosition_Dismiss .closeButton .SVGIcon_Button {
+  width: 24px;
+  height: 24px;
+}
+#dota_react_root .ModalPosition_Dismiss .closeButton .SVGIcon_X_Line line {
+  stroke: #a9b2b6;
+  stroke-width: 32px;
+  transition-property: stroke;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
+}
+#dota_react_root
+  .ModalPosition_Dismiss
+  .closeButton:hover
+  .SVGIcon_X_Line
+  line {
+  stroke: #fff;
+}
+#dota_react_root .DialogContent,
+#dota_react_root .DialogContentTransition {
+  background: linear-gradient(to bottom, #2c3237, #05060a);
+  box-shadow: inset 0px 0px 0px 1px #ffffff0f;
+}
+#dota_react_root .DialogContent_InnerWidth::-webkit-scrollbar {
+  width: 8px;
+}
+#dota_react_root .DialogContent_InnerWidth::-webkit-scrollbar-thumb {
+  background-color: rgba(180, 192, 201, 0.4);
+}
+#dota_react_root .DialogContent_InnerWidth::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(180, 192, 201, 0.8);
 }
 div:focus,
 a:focus,
@@ -5246,4 +5303,4 @@ body.modals_BodyNoScrollDialog_3lrlA {
   min-height: 0;
 }
 
-/*# sourceMappingURL=sourcemaps\css\library.css.map*/
+/*# sourceMappingURL=../sourcemaps/css/library.css.map*/

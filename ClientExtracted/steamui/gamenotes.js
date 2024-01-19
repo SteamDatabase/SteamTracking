@@ -1,7 +1,7 @@
 (self.webpackChunksteamui = self.webpackChunksteamui || []).push([
   [6838],
   {
-    10485: (e) => {
+    12041: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         Page: "gamenotes_Page_ZUB8z",
@@ -17,14 +17,14 @@
         CloseWindowButton: "gamenotes_CloseWindowButton_G0Fgh",
       };
     },
-    46152: (e) => {
+    64452: (e) => {
       e.exports = {
         Hover: "pmhover_Hover_3tNcT",
         Link: "pmhover_Link_ovQsF",
         LinkHelp: "pmhover_LinkHelp_2Az4l",
       };
     },
-    80227: (e) => {
+    94950: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         Container: "prosemirror_Container_3lEt5",
@@ -36,25 +36,25 @@
         ExpandButton: "prosemirror_ExpandButton_3454x",
       };
     },
-    79476: (e) => {
+    97896: (e) => {
       e.exports = { GameNotesPopup: "gamenotespopups_GameNotesPopup_3hIt9" };
     },
-    3439: (e, t, n) => {
+    94494: (e, t, n) => {
       "use strict";
       n.d(t, { X: () => Oe });
-      var o = n(67294),
-        r = n(16685),
-        a = n(18837),
-        l = n(99995),
-        s = n(22277),
-        i = n(35659),
-        c = n(57542),
-        u = n(56140),
-        d = n(87823),
-        m = n(53833),
-        p = n(10126),
+      var o = n(27378),
+        r = n(47228),
+        a = n(39459),
+        l = n(98571),
+        s = n(62923),
+        i = n(62914),
+        c = n(79509),
+        u = n(52833),
+        d = n(70732),
+        m = n(55751),
+        p = n(35864),
         g = n.n(p),
-        f = n(51878);
+        f = n(35484);
       function h(e, t) {
         return () => [e, { class: t }, 0];
       }
@@ -384,8 +384,8 @@
           );
         }
       }
-      var B = n(59071),
-        w = n(83630);
+      var B = n(56815),
+        w = n(9891);
       function L(e, t = T) {
         const n = { mapMarks: new Map(), mapNodes: new Map() };
         return (
@@ -464,10 +464,10 @@
           { tag: n, args: o }
         );
       }
-      var S = n(97582),
-        M = n(25804),
-        O = n(8363),
-        D = n(73935);
+      var S = n(85556),
+        M = n(38321),
+        O = n(24589),
+        D = n(31542);
       function x(e) {
         const {
             visible: t = !0,
@@ -527,7 +527,7 @@
           ? o.createElement("div", { className: n, ref: u, style: i }, s)
           : null;
       }
-      var F = n(36912);
+      var F = n(65109);
       function H(e, t) {
         o.useEffect(() => {
           if (e && t && !e.isDestroyed)
@@ -574,9 +574,9 @@
           return s.addMark(r, a, t.create(l)), s.removeStoredMark(t), s;
         });
       }
-      var G = n(92312),
-        U = n(48287),
-        W = n(80227);
+      var G = n(86064),
+        U = n(50947),
+        W = n(94950);
       function $(e) {
         const { children: t } = e,
           { callbacks: n, view: r } = Z(),
@@ -666,10 +666,10 @@
           )
         );
       });
-      var K = n(48393),
-        V = n(76023),
-        J = n(39485),
-        X = n(85622);
+      var K = n(40885),
+        V = n(94256),
+        J = n(46048),
+        X = n(2286);
       function q(e) {
         const {
             view: t,
@@ -1137,12 +1137,12 @@
       function le(e) {
         return (0, O.AH)(e.state) > 0;
       }
-      var se = n(82337),
-        ie = n(2376),
-        ce = n(84348),
-        ue = n(68784),
-        de = n(49358),
-        me = n(46152);
+      var se = n(23507),
+        ie = n(82789),
+        ce = n(15463),
+        ue = n(81257),
+        de = n(29853),
+        me = n(64452);
       function pe(e) {
         const { view: t } = e,
           [n, r] = o.useState(),
@@ -1225,9 +1225,9 @@
           "Shift-Ctrl-3": (0, M.uJ)(k.nodes.heading, { level: 3 }),
           "Shift-Ctrl-0": (0, M.uJ)(k.nodes.paragraph),
         });
-      var be = n(68503),
-        Ee = n(40046),
-        ke = n(21067);
+      var be = n(16195),
+        Ee = n(82997),
+        ke = n(47739);
       function ve(e) {
         const { view: t, uploadImage: n } = e;
         return (
@@ -1277,8 +1277,8 @@
         });
       }
       const _e = "/images/image_error.svg";
-      var Ce = n(39043),
-        Ne = n(81673);
+      var Ce = n(52824),
+        Ne = n(85164);
       function Be(e) {
         const {
             bbcode: t,
@@ -1473,7 +1473,7 @@
         }
         return e;
       }
-      var Se = n(10485);
+      var Se = n(12041);
       const Me = 15;
       function Oe(e) {
         const { note: t } = e,
@@ -1623,22 +1623,22 @@
         return t.trim();
       }
     },
-    83920: (e, t, n) => {
+    9205: (e, t, n) => {
       "use strict";
       n.r(t), n.d(t, { default: () => h });
-      var o = n(17137),
-        r = n(68743),
-        a = n(84295),
-        l = n(67294),
-        s = n(16550),
-        i = n(68126),
-        c = n(13890),
-        u = n(16685),
-        d = n(3439),
-        m = n(22277),
-        p = n(57542),
-        g = n(92312),
-        f = n(79476);
+      var o = n(44611),
+        r = n(58428),
+        a = n(7996),
+        l = n(27378),
+        s = n(3620),
+        i = n(66101),
+        c = n(91971),
+        u = n(47228),
+        d = n(94494),
+        m = n(62923),
+        p = n(79509),
+        g = n(86064),
+        f = n(97896);
       function h(e) {
         const { popup: t } = e,
           [n, r] = l.useState();
@@ -1717,23 +1717,23 @@
         );
       }
     },
-    84295: (e, t, n) => {
+    7996: (e, t, n) => {
       "use strict";
       n.r(t), n.d(t, { default: () => I });
-      var o = n(67294),
-        r = n(16550),
-        a = n(13890),
-        l = n(16685),
-        s = n(3439),
-        i = n(22277),
-        c = n(51878),
-        u = n(92312),
-        d = n(39485),
-        m = n(10485),
-        p = n(18837),
-        g = n(35659),
-        f = n(76023),
-        h = n(81673);
+      var o = n(27378),
+        r = n(3620),
+        a = n(91971),
+        l = n(47228),
+        s = n(94494),
+        i = n(62923),
+        c = n(35484),
+        u = n(86064),
+        d = n(46048),
+        m = n(12041),
+        p = n(39459),
+        g = n(62914),
+        f = n(94256),
+        h = n(85164);
       function b() {
         const e = (0, r.$B)(),
           t = (0, l.PC)(
@@ -1814,16 +1814,16 @@
             : a.O.ShortcutNotes(t.shortcut, n)),
           e.replace(o, e.location.state);
       }
-      var v = n(73727),
-        T = n(97582),
-        _ = n(45933),
+      var v = n(4289),
+        T = n(85556),
+        _ = n(20879),
         C = n.n(_),
-        N = n(88767),
-        B = n(4969),
-        w = n(2955),
-        L = n(78884),
-        A = n(78288),
-        y = n(66458);
+        N = n(56552),
+        B = n(85067),
+        w = n(42324),
+        L = n(34656),
+        A = n(72467),
+        y = n(63083);
       let P;
       const S = 864e5;
       function M(e) {
@@ -1877,7 +1877,7 @@
           { staleTime: S, enabled: !!e },
         ).data;
       }
-      var x = n(85660);
+      var x = n(27258);
       function F() {
         const { data: e, isLoading: t } = (0, l.i5)();
         return t
@@ -1935,4 +1935,4 @@
     },
   },
 ]);
-//# sourceMappingURL=sourcemaps\gamenotes.js.map
+//# sourceMappingURL=sourcemaps/gamenotes.js.map

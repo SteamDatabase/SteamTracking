@@ -59,7 +59,6 @@
  fcntl
  fcntl$UNIX2003
  flock
- floor
  fprintf
  free
  fstat$INODE64

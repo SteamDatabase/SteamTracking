@@ -637,6 +637,7 @@ message CMsgSetCookie {
 	optional uint32 expires = 5;
 	optional bool secure = 6;
 	optional bool httponly = 7;
+	optional int32 samesite = 8;
 }
 
 message CMsgSetTargetFrameRate {

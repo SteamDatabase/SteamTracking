@@ -386,6 +386,7 @@
  T CopyRow_ERMS
  T CopyRow_SSE2
  T CpuId
+ T CreateAudioEncoder
  T CreateAudioFileDecoder
  T CreateAudioResampler
  T CreateExportVideoContainer
@@ -404,6 +405,7 @@
  T DES_encrypt2
  T DES_encrypt3
  T DES_ncbc_encrypt
+ T DeleteAudioEncoder
  T DeleteAudioFileDecoder
  T DeleteAudioResampler
  T DeleteExportVideoContainer
@@ -1506,6 +1508,7 @@
  av_frame_free
  av_frame_get_buffer
  av_free
+ av_free_packet
  av_get_bytes_per_sample
  av_get_channel_layout_nb_channels
  av_get_default_channel_layout
@@ -1533,7 +1536,10 @@
  avcodec_close
  avcodec_decode_audio4
  avcodec_decode_video2
+ avcodec_encode_audio2
+ avcodec_fill_audio_frame
  avcodec_find_decoder
+ avcodec_find_encoder
  avcodec_flush_buffers
  avcodec_free_context
  avcodec_open2
@@ -1565,7 +1571,6 @@
  bind
  bind$UNIX2003
  calloc
- ceil
  ceilf
  chmod
  chmod$UNIX2003
@@ -1658,7 +1663,6 @@
  longjmp
  lseek
  lstat$INODE64
- mach_absolute_time
  mach_continuous_time
  mach_timebase_info
  makecontext

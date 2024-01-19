@@ -73,7 +73,8 @@ __LINKEDIT
 @loader_path/gameoverlayui.dylib
 "
 ,
-@9
+pO,
+89
 P
 Y
 Z
@@ -123,7 +124,7 @@ h
 8
 /usr/lib/libobjc.A.dylib
 &
-`],
+@],
 P6
 )
 -
@@ -175,7 +176,6 @@ N4vgui20IVGUIHostApplicationE
 15IOverlayOSPumps
 13CCallbackImplILi8EE
 9CCallbackI22SerializedOverlayPumps21ScreenshotTriggered_tLb0EE
-13CEmbeddedHTML
 20COverlayWebVguiFrame
 20CJSMethodCallHandlerI19COverlayHTMLHandlerJbEE
 20IJSMethodCallHandler
@@ -372,6 +372,7 @@ N6google8protobuf8internal23RepeatedPtrFieldWrapperINSt3__112basic_stringIcNS3_1
 N6google8protobuf8internal16MapFieldAccessorE
 N6google8protobuf8internal31RepeatedPtrFieldMessageAccessorE
 N6google8protobuf8internal23RepeatedPtrFieldWrapperINS0_7MessageEEE
+N6google8protobuf10TextFormat17BaseTextGeneratorE
 N6google8protobuf10TextFormat6FinderE
 N6google8protobuf10TextFormat21FastFieldValuePrinterE
 N6google8protobuf10TextFormat6Parser10ParserImpl20ParserErrorCollectorE
@@ -6521,6 +6522,7 @@ $
 8
 <
 =
+@
 (
 0
 0
@@ -6655,7 +6657,7 @@ h
 (
 (
 0
-@
+H
 (
 8
 @
@@ -7496,7 +7498,7 @@ d
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/friendsuihelpers.cpp
 IsARM() || GetCPUInformation().m_bSSE2
 GetBootstrapperVersion
-IVRSteamPrivate_019
+IVRSteamPrivate_020
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlvector.h
 !pToCopy || (pToCopy + num <= Base()) || (pToCopy >= (Base() + Count()) )
 log_files_always_flush
@@ -7761,8 +7763,8 @@ Steam pid that launched us
 VGUI_Application_001
 OK
 Cancel
-Jan 12 2024
-16:53:15
+Jan 18 2024
+18:00:00
 crashhandler004
 gameoverlayui
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/overlay/gameoverlayui/main.cpp
@@ -9397,7 +9399,7 @@ SDL_VIDEO_MINIMIZE_ON_FOCUS_LOSS
 SDL_TIMER_RESOLUTION
 Steam HTML FullScreen
 SDL_CreateWindow failed
-SDL_GetWindowWMInfo failed
+SDL.window.cocoa.window
 SDL_GetWindowWMInfo returned an unsupported subsystem (we require Cocoa)
 SDL_GL_CreateContext failed
 glGenTextures failed %d
@@ -10776,35 +10778,37 @@ Nov
 Dec
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
-+
-+
-+
-+
-+
 0
-2+
-
-
-
-
-
-@
-
-0
-@
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
+@+
+>+
+;+
+%+
+L+
 !
+!
+
+
+
+
+
+@
+
+0
+!
+@
++
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
 Ic]
 j
 j
@@ -10817,8 +10821,6 @@ j
 j
 j
 j
-Hc
-Ic
 0
 0
 AT=
@@ -10866,9 +10868,7 @@ V
 !
 @
 @
-C$
 &
-m"
 @
 M9e
 @
@@ -11009,27 +11009,27 @@ P
 @
 @
 ?
-0
 @
+g
+f
+b
 d
-Z
+\
 
 
 
 j
 j
+6
 j
 j
 j
 j
-
-
-
-
-
-
-
 A+M
+
+
+Hc
+Ic
 j
 j
 j
@@ -11043,11 +11043,15 @@ j
 j
 j
 j
+W
 0
 =
 0
+0
 j
 j
+
+
 
 
 j
@@ -11120,6 +11124,10 @@ j
 j
 j
 j
+
+
+
+
 j
 j
 j
@@ -11173,6 +11181,7 @@ j
 j
 j
 j
+O
 j
 j
 j
@@ -11325,5 +11334,6 @@ d
 0
 0
 0
+5
 0
 E

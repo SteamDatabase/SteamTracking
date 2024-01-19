@@ -129,7 +129,6 @@
  atoi
  bootstrap_look_up
  bootstrap_port
- ceilf
  class_addMethod
  class_copyMethodList
  class_getClassMethod
@@ -199,7 +198,6 @@
  launch_msg
  lround
  lroundf
- mach_absolute_time
  mach_continuous_time
  mach_msg
  mach_port_allocate

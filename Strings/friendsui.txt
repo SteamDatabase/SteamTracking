@@ -11,12 +11,8 @@ __TEXT
 __cstring
 __TEXT
 __gcc_except_tab__TEXT
-,-!
-,-!
 __const
 __TEXT
-`l"
-`l"
 __objc_methname
 __TEXT
 __unwind_info
@@ -34,22 +30,23 @@ __DATA
 %
 __la_symbol_ptr
 __DATA
-
 __mod_init_func
 __DATA
 __const
 __DATA
 __cfstring
 __DATA
-@N-
-@N-
+0N-
+0N-
 __objc_imageinfo__DATA
 __objc_selrefs
 __DATA
 __objc_classrefs__DATA
+pO-
+pO-
 __data
 __DATA
-`M
+pM
 __thread_vars
 __DATA
 0
@@ -69,8 +66,8 @@ __LINKEDIT
 8
 @loader_path/friendsui.dylib
 "
-0#
-(%
+H}.
+%
 P
 
 *
@@ -103,7 +100,6 @@ h
 /usr/lib/libobjc.A.dylib
 &
 )
-0S.
 22CJSCallbackFunc_HTMLJS
 15CJSCallbackFunc
 11CRefCountedI20CRefCountServiceBaseILb1E6CRefMTEE
@@ -753,6 +749,7 @@ N6google8protobuf16RepeatedPtrFieldINS0_11MessageLiteEEE
 NSt3__13mapIiN6google8protobuf8internal12ExtensionSet9ExtensionENS_4lessIiEENS_9allocatorINS_4pairIKiS5_EEEEEE
 N6google8protobuf11MessageLiteE
 N6google8protobuf2io19ZeroCopyInputStreamE
+
 
 
 N6google8protobuf2io16ArrayInputStreamE
@@ -1080,6 +1077,7 @@ $
 8
 <
 =
+@
 (
 0
 0
@@ -1214,7 +1212,7 @@ h
 (
 (
 0
-@
+H
 (
 8
 @
@@ -1761,6 +1759,8 @@ N4vgui20CTreeViewListControlE
 N4vgui18CTypingJumpHandlerE
 N4vgui8URLLabelE
 10CUtlVectorIPN4vgui10ToolWindowE10CUtlMemoryIS2_EE
+aaaa
+@@@@
 _14ConCommandBase
 6ConVar
 8CAutoPtrI7CUtlMapIybi8CDefLessEE
@@ -2093,7 +2093,7 @@ none
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/friendsuihelpers.cpp
 IsARM() || GetCPUInformation().m_bSSE2
 GetBootstrapperVersion
-IVRSteamPrivate_019
+IVRSteamPrivate_020
 resolve
 reject
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/refcount.h
@@ -4079,7 +4079,7 @@ SDL_VIDEO_MINIMIZE_ON_FOCUS_LOSS
 SDL_TIMER_RESOLUTION
 Steam HTML FullScreen
 SDL_CreateWindow failed
-SDL_GetWindowWMInfo failed
+SDL.window.cocoa.window
 SDL_GetWindowWMInfo returned an unsupported subsystem (we require Cocoa)
 SDL_GL_CreateContext failed
 glGenTextures failed %d
@@ -5300,8 +5300,12 @@ m_bitsMigratedBuckets
 steamIDChat.GetEAccountType() == k_EAccountTypeChat
 k_EChatInstanceFlagClan & steamIDChat.GetUnAccountInstance()
 0
-$
-$
+-
+-
+-
+-
+-
+-
 
 @
 @
@@ -5309,13 +5313,28 @@ $
 
 x
 
+K#
+#
+"
+7"
 =
 @
 =
+,!
 x
 H!
 0
 0
+-!
+p
+0
+p
+0
+p
+0
+!
+!
+!
 p
 0
 p
@@ -5326,13 +5345,6 @@ p
 0
 p
 0
-p
-0
-p
-0
-p
-0
-%
 H=
 p
 0
@@ -5458,8 +5470,13 @@ B
 
 
 
+]
+
+
+
 d
 
+f9
 A+M
 S
 
@@ -5515,10 +5532,10 @@ j
 d
 &
 &
-
 d
 0
 A+4$A+u
+2
 =
 =
 @
@@ -5591,7 +5608,6 @@ j
 j
 j
 j
-N
 j
 j
 j
@@ -5708,12 +5724,12 @@ j
 .
 d
 =
+Lc%
 =
 @
 =*.*
 =
 @
-Ic]
 
 @
 @
@@ -5734,4 +5750,6 @@ Ic]
 &
 Hc
 E
+$
+Ic]
 p

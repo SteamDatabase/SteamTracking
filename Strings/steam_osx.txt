@@ -6,6 +6,8 @@ __TEXT
 
 __text
 __TEXT
+0
+0
 __stubs
 __TEXT
 __stub_helper
@@ -94,7 +96,8 @@ H%
 HeC
 `rC
 PtC
-H'D
+x%
+('D
 P
 /usr/lib/dyld
 
@@ -133,58 +136,68 @@ h
 /usr/lib/libobjc.A.dylib
 &
 )
-]D
-0
-44
-f95S2G
-4
-^G
+*:
+J4
+?4
 0
 *
+*
+f95S"G
+4
+NG
+0
 @
 @
-U<
+G
+{9
+a9
 @
 @
 @
 @
-x)
+R.
+E9
+,
+,
+,
 $
 Hi
 Hi
 Hi
-+B
-}3
+9
 >
-6)
-)
-,
-)
+B
+9
+~(
 )
 3
 
 %
-U;
+)
+)
+)
+)
 
+"8
+O8
 (
-4
+;
 '
+(
 '
+8
 
+x+
 8
 8
 8
 8
 8
 5
-%(
-(
-(
-(
+m:
 (
 (
 
-j&
 0
 0
 0
@@ -196,13 +209,13 @@ AT=
 D
 @
 @
-r1
-(1
+x1
+57
+81
 7
 7
 7
-7
-7
+1
 1
 @
 Hc
@@ -235,11 +248,11 @@ IcE
 IcE
 @
 @
-;
-!0
+r6
+16
+0
 6
-6
-V
+`1
 NSt3__117bad_function_callE
 15CBaseFileSystem
 11IFileSystem
@@ -1591,6 +1604,7 @@ N11SteamStdLib12ICommandLineE
 16CKeyValuesSystem
 16IKeyValuesSystem
 20IUniformRandomStream
+:.+-
 14ConCommandBase
 6ConVar
 8CAutoPtrI7CUtlMapIybi8CDefLessEE
@@ -2019,6 +2033,8 @@ N12_GLOBAL__N_127CDummySSLConnectionCallbackE
 15CWorkThreadPool
 10CUtlVectorIP11CWorkThread10CUtlMemoryIS1_EE
 10CUtlVectorIP9CWorkItem10CUtlMemoryIS1_EE
+>
+?
 
 
 #
@@ -2400,7 +2416,7 @@ ReLaunchCmdLine
 ClientLauncherType
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlqueue.h
 IsValidIndex( idx )
-Startup - updater built Jan 12 2024 16:53:09
+Startup - updater built Jan 18 2024 17:59:45
 Startup - Steam Client launched with: %s
 Shutdown
 no hosts found
@@ -2691,8 +2707,8 @@ m_iRefs >= 0 && m_iRefs < 0x0ffffff
 #SteamBootstrapper_UpdatingSteam
 Updating Steam...
 Tahoma
-Jan 12 2024
-16:53:10
+Jan 18 2024
+17:59:45
 crashhandler004
 steam
 Steam Executable Crash
@@ -2789,7 +2805,7 @@ China
 %s/%s%s
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamexe/updateui.h
 ThreadInMainThread()
-16:53:08
+17:59:43
 [%3d%%] %s
 [----] %s
 [%3d%%] !!! Fatal Error: %s
@@ -10913,7 +10929,7 @@ steamwebhelper
 Steam Helper
 cefwebhelper
 1.0
-16:50:57
+17:57:31
 Jan
 Feb
 Mar
@@ -13353,7 +13369,6 @@ CWorkThread -- OnWorkItemCompleted - unordered
 CWorkThread -- OnWorkItemCompleted - ordered
 m_WorkThreads
 m_WorkThreads[ iWorkThread ]
-m_vecBusyWork
 m_pTSQueueCompleted
 m_pTSQueueToProcess
 m_vecCompletedAndWaiting
@@ -13366,66 +13381,73 @@ out of memory
 n <= (size_t)INT_MAX
 file_ofs == pFile->GetBytesWritten()
 
-!+:
-3+:
-:W:
-%W:
+y8:
+d:
 
-0W:
-DW:
-MW:
+d:
 0
-0
-44
-f95S2G
-4
-^G
+*:
+J4
+?4
 0
 *
+*
+f95S"G
+4
+NG
+0
 @
 @
-U<
+G
+{9
+a9
 @
 @
 @
 @
-x)
+R.
+E9
+,
+,
+,
 $
 Hi
 Hi
 Hi
-+B
-}3
+9
 >
-6)
-)
-,
-)
+B
+9
+~(
 )
 3
 
 %
-U;
+)
+)
+)
+)
 
+"8
+O8
 (
-4
+;
 '
+(
 '
+8
 
+x+
 8
 8
 8
 8
 8
 5
-%(
-(
-(
-(
+m:
 (
 (
 
-j&
 0
 0
 0
@@ -13437,13 +13459,13 @@ AT=
 D
 @
 @
-r1
-(1
+x1
+57
+81
 7
 7
 7
-7
-7
+1
 1
 @
 Hc
@@ -13476,64 +13498,69 @@ IcE
 IcE
 @
 @
-;
-!0
+r6
+16
+0
 6
-6
+`1
 V
+:
+p/
 =
-I/
-F/
-H5
+?/
+:/
+/
 /
 5
 5
-5
-5
 =
-P4
+^4
+&.
+54
 .
 .
 .
 .
-.
-/
-8
-8
+4
+4
+c"
+S3
 !
+-
 -
 *
 *
-i,
-`,
+7
+7
 @
-,
+2
+2
+2
 &
-h+
-6
+K6
+1
+1
 +
-$1
-1
-1
-1
-1
-1
-1
-1
-5
-*
-0
-0
-t1
+,
+9
+<*
++
+2
+C)
 )
+)
+)
+)
+)
+)
+)
+/
 @
+/
 M9e
 @
 @
-{.
-3
-B(
-=(
+((
 ?
 ?
 ?
@@ -13545,10 +13572,10 @@ B(
 ?
 ?
 ?
+(
+(
+(
 :
-(
-(
-(
 ?
 ?
 ?
@@ -13559,7 +13586,6 @@ AESNI-CBC+SHA256 stitch for x86_64, CRYPTOGAMS by <appro@openssl.org>
 @
 AES for Intel AES-NI, CRYPTOGAMS by <appro@openssl.org>
 @
-7-
 %
 `
 `
@@ -13567,27 +13593,27 @@ AES for Intel AES-NI, CRYPTOGAMS by <appro@openssl.org>
 -
 -
 -
--
--
--
-,
 j
 j
--
 Pj
 ARj
 j
+<&
+1
+1
 0
 0
 IcU
 E;e
-?,
-1,
 M)u
+)
+)
 =
 =
 @
 =
+P+
+/
 =
 %
 =
@@ -13881,6 +13907,7 @@ OO
 expand 32-byte k
 ChaCha20 for x86_64, CRYPTOGAMS by <appro@openssl.org>
 @
+2
 =
 @
 
@@ -13888,7 +13915,10 @@ ChaCha20 for x86_64, CRYPTOGAMS by <appro@openssl.org>
 @
 @
 0
+#
 H=
+_0
+)
 Ic]
 j
 j
@@ -13896,18 +13926,22 @@ j
 j
 j
 j
-$
-$
+,
 
-"'
+i+
+t'
+S'
 t$I;M
+'
 '
 '
 e
 W
 ,7~5d
-#]t/
+#=t/
 #=q/
+#]d/
+#=a/
 H
 0
 
@@ -13921,15 +13955,16 @@ H
 
 
 Hc
-6(
-4(
+&(
+$(
+'
+'
+'
 AES-NI GCM module for x86_64, CRYPTOGAMS by <appro@openssl.org>
 %
 @
 @8
 `$
-'
-'
 @
 ,
 *
@@ -13937,10 +13972,9 @@ AES-NI GCM module for x86_64, CRYPTOGAMS by <appro@openssl.org>
 
 @
 Poly1305 for x86_64, CRYPTOGAMS by <appro@openssl.org>
-$
 0
 0
-F&
+6&
 N
 N
 N
@@ -13948,6 +13982,7 @@ rc4(8x,int)
 rc4(8x,char)
 rc4(16x,int)
 RC4 for x86_64, CRYPTOGAMS by <appro@openssl.org>
+"
 j
 j
 $
@@ -14163,10 +14198,10 @@ to=
 |&=
 =
 |-=
-m
 @
 @
 @
+E
 0
 (
 0
@@ -14186,13 +14221,11 @@ H=
 =
 @
 =*.*
-Ic]
-O
-H
+Hc
+Ic
 @
 @
-u
-r
+_
 @
 @
 @
@@ -14205,6 +14238,9 @@ r
 0
 0
 0
+
+
+
 8
 @
 @
@@ -14213,23 +14249,18 @@ r
 0
 0
 0
-|
+
 0
-n
 0
 H=
 0
 &
+J
 0
 Hi
 E
-
-
 0
 0
-q
-Hc
-Ic
 
 
 
@@ -14240,21 +14271,24 @@ Ic
 j
 j
 0
-.
 @
 @
 @
 @
 0
 0
+0
+0
+
 Hc
 0
-f
 @
 @
+
 &
 %
-7
+1
+%
 @
 =h2
 P
@@ -14275,11 +14309,8 @@ P
 @
 =a
 0
-0
-0
-]
 Hi
-B
+Ic]
 $
 $
 $

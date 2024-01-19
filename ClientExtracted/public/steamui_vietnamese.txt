@@ -4218,7 +4218,7 @@ Cuộc thử nghiệm beta đã kết thúc - xin vui lòng khởi động lại
 "steam_subnav_featured"		"Đặc sắc"
 "steam_subnav_news"			"Tin tức"
 "steam_subnav_recommended"	"Nên xem"
-"steam_subnav_discovery_queue"		"Hàng chờ khám phá"
+"steam_subnav_discovery_queue"		"Hàng khám phá"
 "steam_subnav_points_shop"		"Cửa hàng điểm"
 "steam_subnav_wishlist"		"Danh sách ước"
 "steam_subnav_stats"		"Thống kê"

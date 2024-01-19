@@ -448,7 +448,7 @@
 "Steam_CheckingForUpdates"			"Γίνεται έλεγχος για ενημερώσεις…"
 "Steam_LaunchingSteam"				"Σύνδεση λογαριασμού Steam: %AccountName%..."
 "Steam_UpdatingSteamInformation"	"Ενημέρωση πληροφοριών Steam..."
-"Steam_UpdatingUserConfiguration"	"Ενημέρωση ρυθμίσεων χρήστη..."
+"Steam_UpdatingUserConfiguration"	"Γίνεται ενημέρωση των ρυθμίσεων χρήστη…"
 "Steam_ExitingSteam"				"Έξοδος ..."
 "SteamUI_GamePropertiesContent_RequiresUpdate"  "Απαιτεί ενημέρωση"
 "SteamUI_GamePropertiesContent_NotReleased"  "Ακυκλοφόρητο"

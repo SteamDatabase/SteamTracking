@@ -57,7 +57,7 @@
 "Friends_InShortcut"		"En un juego que no es de Steam"
 "Friends_Blocked"		"Bloqueado"
 
-"Friends_AddFriend"		"Añadir a un amigo..."
+"Friends_AddFriend"		"Agregar un amigo..."
 "Friends_Edit_Profile"	"Modificar perfil…"
 
 "Friends_FriendList_CurrentGame"	"PARTIDA ACTUAL"
@@ -76,11 +76,11 @@
 "Friends_RemoveUser"				"Eliminar amigo..."
 
 "Friends_RemoveFriend_Title"			"Amigos - Eliminar usuario"
-"Friends_RemoveFriend_Info"				"¿Seguro que deseas eliminar a %friend% de la lista de amigos?\n\n(Podrás añadirlo de nuevo más tarde mediante la opción + AÑADIR A UN AMIGO...).\n"
+"Friends_RemoveFriend_Info"				"¿Seguro que deseas eliminar a %friend% de la lista de amigos?\n\n(Podrás agregarlo de nuevo más tarde mediante la opción + AÑADIR A UN AMIGO...).\n"
 "Friends_RemoveFriend_Button"			"Eliminar a %friend%"
 
 "Friends_HideFriend_Title"				"Amigos - Ignorar usuario"
-"Friends_HideFriend_Info"				"¿Estás seguro de que quieres ignorar y eliminar a %friend% de tu lista de amigos sugeridos?\n\n(Podrás añadirlo de nuevo más tarde mediante la opción 'Añadir a un amigo...').\n"
+"Friends_HideFriend_Info"				"¿Estás seguro de que quieres ignorar y eliminar a %friend% de tu lista de amigos sugeridos?\n\n(Podrás agregarlo de nuevo más tarde mediante la opción 'Agregar un amigo...').\n"
 "Friends_HideFriend_Button"				"Ignorar a %friend%"
 "Friends_HideFriend_Failed"				"No se ha podido ignorar a %friend%"
 
@@ -92,12 +92,12 @@
 "Friends_Options_SoundsTab"	"Sonidos"
 
 
-"Friends_EnterAccountNameOrEmailAddress"	"Introduce el nombre de cuenta de Steam, O el correo electrónico de la persona que deseas añadir a tu lista de amigos."
+"Friends_EnterAccountNameOrEmailAddress"	"Introduce el nombre de cuenta de Steam, O el correo electrónico de la persona que deseas agregar a tu lista de amigos."
 "Friends_SearchingForFriend"				"Buscando a %search%..."
-"Friends_FriendHasBeenAddedToYourListUnderName" "%search% se ha añadido a tu lista de amigos con el nombre '%friend%'."
-"Friends_FriendHasBeenAddedToYourList"		"%friend% se ha añadido a tu lista de amigos."
+"Friends_FriendHasBeenAddedToYourListUnderName" "%search% se ha agregado a tu lista de amigos con el nombre '%friend%'."
+"Friends_FriendHasBeenAddedToYourList"		"%friend% se ha agregado a tu lista de amigos."
 "Friends_UnableToFindFriendByThatName"		"No se ha podido encontrar a %search%. Pulsa 'Atrás' si quieres repetir la búsqueda."
-"Friends_CannotAddSelfToList"				"¡No puedes añadirte a ti mismo a tu lista de amigos!"
+"Friends_CannotAddSelfToList"				"¡No puedes agregarte a ti mismo a tu lista de amigos!"
 "Friends_CannotAddFriendWhoIsAlreadyInList" "%search% ya se encuentra en tu lista de amigos con el nombre '%friend%'."
 
 "Friends_ConnectedButOffline"					"Tu estado está configurado como Desconectado para todos tus amigos."
@@ -118,11 +118,11 @@
 
 
 "Friends_UserRequestingFriendship_Title"		"Amigos - %friend%"
-"Friends_UserRequestingFriendship_Info"		"%friend% te ha añadido a su lista de amigos."
+"Friends_UserRequestingFriendship_Info"		"%friend% te ha agregado a su lista de amigos."
 "Friends_AllowUserToSeeMeOnline"				"Permitir a %friend% ver cuándo estás en línea y ponerse en contacto contigo."
 "Friends_BlockUserFromSeeingMeOnline"			"Impedir que esta persona vea cuándo estás en línea y ponerse en contacto contigo."
 
-"Friends_AddFriend_Title"			"Añadir a un amigo"
+"Friends_AddFriend_Title"			"Agregar un amigo"
 
 "Friends_FriendInfoDialog_DetailsTab"		"Detalles"
 "Friends_FriendInfoDialog_StatusTab"		"Estado"
@@ -160,11 +160,11 @@
 "Friends_TargetIgnored"				"%search% no te hace caso."
 "Friends_TooManyFriends"				"¡Tu lista de amigos está llena! Elimina algunos e inténtalo de nuevo."
 "Friends_TargetHasTooManyFriends"		"¡La lista de amigos de %search% está llena!"
-"Friends_DefaultAddError"	 			"Ha habido un problema al añadir a %search% a tu lista de amigos."
-"Friends_UnableToFindFriendByThatNameInvitePrompt"		"No se ha podido encontrar un usuario de Steam con el correo electrónico %search%.\n\nSi quieres invitar a %search% a que se una a Steam y añadirlo a tu lista de Amigos, pulsa 'Siguiente' o pulsa 'Atrás' para repetir la búsqueda."
+"Friends_DefaultAddError"	 			"Ha habido un problema al agregar a %search% a tu lista de amigos."
+"Friends_UnableToFindFriendByThatNameInvitePrompt"		"No se ha podido encontrar un usuario de Steam con el correo electrónico %search%.\n\nSi quieres invitar a %search% a que se una a Steam y agregarlo a tu lista de Amigos, pulsa 'Siguiente' o pulsa 'Atrás' para repetir la búsqueda."
 "Friends_InvitingFriend"				"Enviando invitación a %search%..."
-"Friends_InvitationPending"			"Se ha invitado a %search% a que se una a Steam recientemente; cuando responda, se añadirá a tu lista de amigos.\n"
-"Friends_InvitationSent"				"Se ha enviado a %search% una invitación por email, y se añadirá a tu lista de amigos cuando responda.\n"
+"Friends_InvitationPending"			"Se ha invitado a %search% a que se una a Steam recientemente; cuando responda, se agregará a tu lista de amigos.\n"
+"Friends_InvitationSent"				"Se ha enviado a %search% una invitación por email, y se agregará a tu lista de amigos cuando responda.\n"
 "Friends_DefaultInviteError"			"Ha habido un problema al enviar la invitación a %search%." 
 "Friends_TooManyPendingInvitations"   "Has enviado demasiadas invitaciones recientemente.  Intenta invitar a %search% de nuevo en uno o dos días."
 "Friends_InvitationBlocking"		"Estás bloqueando toda comunicación con este usuario. Antes de poder comunicarte con él, debes desbloquearlo visitando su perfil de la Comunidad de Steam."
@@ -305,7 +305,7 @@
 "Friends_MsgNotification_Sender"		"%name% dice:"
 "Friends_MsgNotification_Body"		"%message%"
 
-"Friends_AddUser"				"Añadir a tu lista de amigos..."
+"Friends_AddUser"				"Agregar a tu lista de amigos..."
 "Friends_HideUser"				"Ignorar usuario..."
 
 "Friends_Voice_Call"				"Comenzar chat de voz"
@@ -409,7 +409,7 @@
 "Friends_PlayersDialog_Title"				"Jugadores"
 "Friends_CurrentPlayers_TabTitle"			"Partida actual"
 "Friends_RecentPlayers_TabTitle"			"Partidas recientes"
-"Friends_AddPlayerAsFriend"				"Añadir como amigo..."
+"Friends_AddPlayerAsFriend"				"Agregar como amigo..."
 "Friends_NoRecentlyPlayedWithUsers"		"No has jugado recientemente a juegos de Steam con nadie."
 "Friends_NoCurrentlyPlayedWithUsers"		"El servidor de la partida no ha detectado usuarios de Steam."
 "Friends_PlayerName"						"Nombre del perfil"
@@ -437,7 +437,7 @@
 "Friends_WhenThisFriendJoinsGame"				"Cuando %FriendName% se una a una partida"
 "Friends_WhenThisFriendComesOnline"			"Cuando %FriendName% se conecte"
 "Friends_WhenReceiveMessageFromThisFriend"	"Cuando reciba un mensaje de %FriendName%"
-"Friends_InviteInfo_HasAdded"					"te ha añadido a su"
+"Friends_InviteInfo_HasAdded"					"te ha agregado a su"
 "Friends_InviteInfo_FriendsList"				"Lista de amigos"
 "Friends_InviteInfo_BeenInvited"				"Has sido invitado"
 "Friends_InviteInfo_JoinGroup"				"a unirte al grupo de Steam"
@@ -664,7 +664,7 @@
 "friends_giftreceived_info"		"te ha enviado un regalo"
 "friends_itemreceived_info"		"Tienes 1 nuevo artículo en tu inventario"
 "friends_itemsreceived_info"	"Tienes %items% nuevos artículos en tu inventario"
-"friends_setnickname"			"Añadir alias"
+"friends_setnickname"			"Agregar alias"
 "friends_setnickname_title"		"Amigos: %friend%"
 "friends_setnickname_info"		"Añade un alias persistente a este jugador para seguirle la pista."
 "friends_managefriends"			"Administrar amigos"
