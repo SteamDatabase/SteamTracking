@@ -2416,7 +2416,7 @@ ReLaunchCmdLine
 ClientLauncherType
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlqueue.h
 IsValidIndex( idx )
-Startup - updater built Jan 18 2024 17:59:45
+Startup - updater built Jan 19 2024 18:59:52
 Startup - Steam Client launched with: %s
 Shutdown
 no hosts found
@@ -2707,8 +2707,8 @@ m_iRefs >= 0 && m_iRefs < 0x0ffffff
 #SteamBootstrapper_UpdatingSteam
 Updating Steam...
 Tahoma
-Jan 18 2024
-17:59:45
+Jan 19 2024
+18:59:52
 crashhandler004
 steam
 Steam Executable Crash
@@ -2805,7 +2805,7 @@ China
 %s/%s%s
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamexe/updateui.h
 ThreadInMainThread()
-17:59:43
+18:59:50
 [%3d%%] %s
 [----] %s
 [%3d%%] !!! Fatal Error: %s
@@ -10929,7 +10929,7 @@ steamwebhelper
 Steam Helper
 cefwebhelper
 1.0
-17:57:31
+18:57:38
 Jan
 Feb
 Mar

@@ -310,15 +310,12 @@
  T SDL_AddTimer
  T SDL_AllocateEventMemory
  T SDL_AtomicAdd
- T SDL_AtomicCAS
- T SDL_AtomicCASPtr
+ T SDL_AtomicCompareAndSwap
+ T SDL_AtomicCompareAndSwapPointer
  T SDL_AtomicGet
  T SDL_AtomicGetPtr
- T SDL_AtomicLock
  T SDL_AtomicSet
  T SDL_AtomicSetPtr
- T SDL_AtomicTryLock
- T SDL_AtomicUnlock
  T SDL_AttachVirtualJoystick
  T SDL_AttachVirtualJoystickEx
  T SDL_AudioDevicePaused
@@ -339,6 +336,7 @@
  T SDL_ClearProperty
  T SDL_CloseAudioDevice
  T SDL_CloseGamepad
+ T SDL_CloseHaptic
  T SDL_CloseJoystick
  T SDL_CloseSensor
  T SDL_CloseVideoCapture
@@ -352,6 +350,7 @@
  T SDL_CreateColorCursor
  T SDL_CreateCondition
  T SDL_CreateCursor
+ T SDL_CreateHapticEffect
  T SDL_CreateMutex
  T SDL_CreatePalette
  T SDL_CreatePixelFormat
@@ -384,6 +383,7 @@
  T SDL_DestroyAudioStream
  T SDL_DestroyCondition
  T SDL_DestroyCursor
+ T SDL_DestroyHapticEffect
  T SDL_DestroyMutex
  T SDL_DestroyPalette
  T SDL_DestroyPixelFormat
@@ -469,6 +469,7 @@
  T SDL_GetCurrentDisplayMode
  T SDL_GetCurrentDisplayOrientation
  T SDL_GetCurrentRenderOutputSize
+ T SDL_GetCurrentThreadID
  T SDL_GetCurrentVideoDriver
  T SDL_GetCursor
  T SDL_GetDefaultAssertionHandler
@@ -535,6 +536,13 @@
  T SDL_GetGlobalMouseState
  T SDL_GetGlobalProperties
  T SDL_GetGrabbedWindow
+ T SDL_GetHapticEffectStatus
+ T SDL_GetHapticFeatures
+ T SDL_GetHapticFromInstanceID
+ T SDL_GetHapticInstanceID
+ T SDL_GetHapticInstanceName
+ T SDL_GetHapticName
+ T SDL_GetHaptics
  T SDL_GetHint
  T SDL_GetHintBoolean
  T SDL_GetJoystickAxis
@@ -574,6 +582,8 @@
  T SDL_GetKeyboardFocus
  T SDL_GetKeyboardState
  T SDL_GetMasksForPixelFormatEnum
+ T SDL_GetMaxHapticEffects
+ T SDL_GetMaxHapticEffectsPlaying
  T SDL_GetMemoryFunctions
  T SDL_GetModState
  T SDL_GetMouseFocus
@@ -583,6 +593,7 @@
  T SDL_GetNumAudioDrivers
  T SDL_GetNumGamepadTouchpadFingers
  T SDL_GetNumGamepadTouchpads
+ T SDL_GetNumHapticAxes
  T SDL_GetNumJoystickAxes
  T SDL_GetNumJoystickButtons
  T SDL_GetNumJoystickHats
@@ -718,33 +729,8 @@
  T SDL_GetWindowTitle
  T SDL_GetYUVConversionMode
  T SDL_GetYUVConversionModeForResolution
- T SDL_HapticClose
- T SDL_HapticDestroyEffect
  T SDL_HapticEffectSupported
- T SDL_HapticGetEffectStatus
- T SDL_HapticIndex
- T SDL_HapticName
- T SDL_HapticNewEffect
- T SDL_HapticNumAxes
- T SDL_HapticNumEffects
- T SDL_HapticNumEffectsPlaying
- T SDL_HapticOpen
- T SDL_HapticOpenFromJoystick
- T SDL_HapticOpenFromMouse
- T SDL_HapticOpened
- T SDL_HapticPause
- T SDL_HapticQuery
- T SDL_HapticRumbleInit
- T SDL_HapticRumblePlay
- T SDL_HapticRumbleStop
  T SDL_HapticRumbleSupported
- T SDL_HapticRunEffect
- T SDL_HapticSetAutocenter
- T SDL_HapticSetGain
- T SDL_HapticStopAll
- T SDL_HapticStopEffect
- T SDL_HapticUnpause
- T SDL_HapticUpdateEffect
  T SDL_HasARMSIMD
  T SDL_HasAVX
  T SDL_HasAVX2
@@ -771,16 +757,18 @@
  T SDL_HideCursor
  T SDL_HideWindow
  T SDL_Init
+ T SDL_InitHapticRumble
  T SDL_InitSubSystem
  T SDL_IsGamepad
+ T SDL_IsJoystickHaptic
  T SDL_IsJoystickVirtual
+ T SDL_IsMouseHaptic
  T SDL_IsTablet
  T SDL_JoystickConnected
  T SDL_JoystickEventsEnabled
  T SDL_JoystickHasLED
  T SDL_JoystickHasRumble
  T SDL_JoystickHasRumbleTriggers
- T SDL_JoystickIsHaptic
  T SDL_LoadBMP
  T SDL_LoadBMP_RW
  T SDL_LoadFile
@@ -795,6 +783,7 @@
  T SDL_LockProperties
  T SDL_LockRWLockForReading
  T SDL_LockRWLockForWriting
+ T SDL_LockSpinlock
  T SDL_LockSurface
  T SDL_LockTexture
  T SDL_LockTextureToSurface
@@ -823,8 +812,6 @@
  T SDL_Metal_GetLayer
  T SDL_MinimizeWindow
  T SDL_MixAudioFormat
- T SDL_MouseIsHaptic
- T SDL_NumHaptics
  T SDL_OnApplicationDidBecomeActive
  T SDL_OnApplicationDidEnterBackground
  T SDL_OnApplicationDidReceiveMemoryWarning
@@ -834,14 +821,19 @@
  T SDL_OpenAudioDevice
  T SDL_OpenAudioDeviceStream
  T SDL_OpenGamepad
+ T SDL_OpenHaptic
+ T SDL_OpenHapticFromJoystick
+ T SDL_OpenHapticFromMouse
  T SDL_OpenJoystick
  T SDL_OpenSensor
  T SDL_OpenURL
  T SDL_OpenVideoCapture
  T SDL_OpenVideoCaptureWithSpec
  T SDL_PauseAudioDevice
+ T SDL_PauseHaptic
  T SDL_PeepEvents
  T SDL_PenConnected
+ T SDL_PlayHapticRumble
  T SDL_PollEvent
  T SDL_PostSemaphore
  T SDL_PremultiplyAlpha
@@ -869,6 +861,7 @@
  T SDL_ReadS32LE
  T SDL_ReadS64BE
  T SDL_ReadS64LE
+ T SDL_ReadSurfacePixel
  T SDL_ReadU16BE
  T SDL_ReadU16LE
  T SDL_ReadU32BE
@@ -905,11 +898,13 @@
  T SDL_ResetKeyboard
  T SDL_RestoreWindow
  T SDL_ResumeAudioDevice
+ T SDL_ResumeHaptic
  T SDL_RumbleGamepad
  T SDL_RumbleGamepadTriggers
  T SDL_RumbleJoystick
  T SDL_RumbleJoystickTriggers
  T SDL_RunApp
+ T SDL_RunHapticEffect
  T SDL_SIMDGetAlignment
  T SDL_SaveBMP
  T SDL_SaveBMP_RW
@@ -936,6 +931,8 @@
  T SDL_SetGamepadMapping
  T SDL_SetGamepadPlayerIndex
  T SDL_SetGamepadSensorEnabled
+ T SDL_SetHapticAutocenter
+ T SDL_SetHapticGain
  T SDL_SetHint
  T SDL_SetHintWithPriority
  T SDL_SetJoystickEventsEnabled
@@ -1009,6 +1006,9 @@
  T SDL_SoftStretch
  T SDL_StartTextInput
  T SDL_StartVideoCapture
+ T SDL_StopHapticEffect
+ T SDL_StopHapticEffects
+ T SDL_StopHapticRumble
  T SDL_StopTextInput
  T SDL_StopVideoCapture
  T SDL_SurfaceHasColorKey
@@ -1016,10 +1016,10 @@
  T SDL_SyncWindow
  T SDL_TextInputActive
  T SDL_TextInputShown
- T SDL_ThreadID
  T SDL_TryLockMutex
  T SDL_TryLockRWLockForReading
  T SDL_TryLockRWLockForWriting
+ T SDL_TryLockSpinlock
  T SDL_TryWaitSemaphore
  T SDL_UnbindAudioStream
  T SDL_UnbindAudioStreams
@@ -1029,9 +1029,11 @@
  T SDL_UnlockMutex
  T SDL_UnlockProperties
  T SDL_UnlockRWLock
+ T SDL_UnlockSpinlock
  T SDL_UnlockSurface
  T SDL_UnlockTexture
  T SDL_UpdateGamepads
+ T SDL_UpdateHapticEffect
  T SDL_UpdateJoysticks
  T SDL_UpdateNVTexture
  T SDL_UpdateSensors
