@@ -10499,7 +10499,7 @@
     53664: (e, t, r) => {
       "use strict";
       r.d(t, { w: () => l });
-      var n = r(11914),
+      var n = r(6256),
         i = r(52942),
         a = r(90291),
         o = r(56886),
@@ -10541,7 +10541,7 @@
       });
       var n = r(10059),
         i = r(39087),
-        a = r(21928);
+        a = r(79545);
       const o = n.Message;
       class s extends o {
         static ImplementsStaticInterface() {}
@@ -13695,7 +13695,7 @@
         constructor(e = null) {
           super(),
             re.prototype.inference_result || i.aR(re.M()),
-            o.initialize(this, e, 0, -1, void 0, null);
+            o.initialize(this, e, 0, -1, [3], null);
         }
         static M() {
           return (
@@ -13709,6 +13709,14 @@
                     bw: i.Xc.writeEnum,
                   },
                   backend_response: { n: 2, c: Qe },
+                  keys: {
+                    n: 3,
+                    r: !0,
+                    q: !0,
+                    br: i.FE.readUint64String,
+                    pbr: i.FE.readPackedUint64String,
+                    bw: i.Xc.writeRepeatedUint64String,
+                  },
                 },
               }),
             re.sm_m
@@ -14632,7 +14640,7 @@
         constructor(e = null) {
           super(),
             ge.prototype.cache_data_requests || i.aR(ge.M()),
-            o.initialize(this, e, 0, -1, [1, 2], null);
+            o.initialize(this, e, 0, -1, [1, 2, 3], null);
         }
         static M() {
           return (
@@ -14642,6 +14650,7 @@
                 fields: {
                   cache_data_requests: { n: 1, c: K, r: !0, q: !0 },
                   snapshot_requests: { n: 2, c: J, r: !0, q: !0 },
+                  inference_requests: { n: 3, c: te, r: !0, q: !0 },
                 },
               }),
             ge.sm_m
@@ -14687,7 +14696,7 @@
         constructor(e = null) {
           super(),
             be.prototype.cache_data_responses || i.aR(be.M()),
-            o.initialize(this, e, 0, -1, [1, 2], null);
+            o.initialize(this, e, 0, -1, [1, 2, 3], null);
         }
         static M() {
           return (
@@ -14697,6 +14706,7 @@
                 fields: {
                   cache_data_responses: { n: 1, c: Q, r: !0, q: !0 },
                   snapshot_responses: { n: 2, c: ee, r: !0, q: !0 },
+                  inference_responses: { n: 3, c: re, r: !0, q: !0 },
                 },
               }),
             be.sm_m

@@ -2857,15 +2857,26 @@ a.bbcodes_LinkButton_lMVeY:hover {
 .partnereventdialog_ErrorIconLayout_15HwA,
 .partnereventdialog_ErrorStylesWithIcon_1mcSA,
 .partnereventdialog_ErrorStylesBackground_3Ht2e {
+  display: block;
   padding: 10px;
   padding-left: 42px;
   background-image: url("https://partner.steamgames.com/public/images//sharedfiles/icons/icon_warning.png");
   background-repeat: no-repeat;
   background-position-x: 10px;
-  background-position-y: 10px;
+  background-position-y: 6px;
 }
 .partnereventdialog_ErrorStylesBackground_3Ht2e {
   background-color: #472025;
+}
+.partnereventdialog_ErrorStylesWithIcon_1mcSA.partnereventdialog_ErrorFloatBelow_1mTCT {
+  padding: 5px;
+  padding-left: 32px;
+  font-size: 14px;
+  position: absolute;
+  bottom: -5px;
+  background-color: #682d2c;
+  z-index: 1;
+  box-shadow: 2px 2px 5px #000;
 }
 .partnereventdialog_ErrorStyles_2TszC > div,
 .partnereventdialog_ErrorStylesWithIcon_1mcSA > div {
@@ -6272,6 +6283,11 @@ html.responsive.touch
   a {
   color: #fff;
 }
+.assetportal_AssetSection_2Sa_- .assetportal_AssetSpecs_25TK9 ul li {
+  list-style-type: square;
+  margin-bottom: 6px;
+  list-style-position: outside;
+}
 .assetportal_AssetSection_2Sa_- .assetportal_AssetUploadPreviewCtn_2kDp_ {
   width: 60%;
   flex-direction: column;
@@ -6316,6 +6332,17 @@ html.responsive.touch
   padding-left: 24px;
   padding-bottom: 4px;
 }
+.assetportal_AssetTypeCtn_37aDa {
+  margin-top: 16px;
+}
+.assetportal_AssetTypeCtn_37aDa .assetportal_AssetTitle_3Te6X {
+  font-weight: 500;
+  color: #fff;
+  font-size: 15px;
+}
+.assetportal_AssetTypeCtn_37aDa div {
+  margin-bottom: 5px;
+}
 .assetportal_SetupRow_Bif2R {
   display: flex;
   flex-direction: row;
@@ -6335,6 +6362,7 @@ html.responsive.touch
   height: 100px;
 }
 .assetportal_PartnerIdRow_2BgYY {
+  position: relative;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -6395,11 +6423,14 @@ html.responsive.touch
   .StoreSalePriceWidgetContainer {
   width: fit-content;
 }
-.assetportal_MarketingMessagePreviewCtn_1XRRQ {
-  width: 570px;
-  height: 600px;
+.assetportal_AssetRequestPreviewCtn_1H2Hz {
   background: #000;
   position: relative;
+}
+.assetportal_AssetRequestPreviewCtn_1H2Hz img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 .assetportal_PromoDetailsCtn_3GPlR {
   display: flex;
@@ -10579,10 +10610,10 @@ h1.optin_display_appeal_AppealTitle_X7wqW {
   background: #33373f;
 }
 .invitationplanner_CandidateTable_2qjp5 td {
-  background: linear-gradient(0deg, #2a2d32, #23262b);
+  background: linear-gradient(0deg, #282d39, #2c323f);
 }
 .invitationplanner_CandidateTable_2qjp5 tr:hover td {
-  background: #3c4046;
+  background: #343c4b;
 }
 .invitationplanner_AppCtn_38wbG {
   display: flex;
@@ -10596,4 +10627,73 @@ h1.optin_display_appeal_AppealTitle_X7wqW {
 .invitationplanner_AppCtn_38wbG .invitationplanner_AppName_2ubxS {
   font-size: 16px;
   color: #fff;
+}
+.invitationplanner_CandidateRow_1-lXe .invitationplanner_DiscountPercent_uq9p7 {
+  color: #adff2f;
+}
+.invitationplanner_CandidateRow_1-lXe .invitationplanner_InviteActions_2PnU0 {
+  position: relative;
+}
+.invitationplanner_CandidateRow_1-lXe
+  .invitationplanner_InviteActions_2PnU0
+  button.DialogButton {
+  padding-right: 12px;
+  padding-left: 12px;
+  box-sizing: border-box;
+}
+.invitationplanner_CandidateRow_1-lXe .invitationplanner_RecentPromos_gUn74 {
+  position: relative;
+}
+.invitationplanner_CandidateRow_1-lXe
+  .invitationplanner_RecentPromos_gUn74
+  .invitationplanner_Promo_Tk6iB {
+  padding: 1px 3px;
+  background: rgba(255, 255, 255, 0.05);
+  margin-bottom: 1px;
+}
+.invitationplanner_CandidateRow_1-lXe
+  .invitationplanner_RecentPromos_gUn74
+  .invitationplanner_Promo_Tk6iB.invitationplanner_Upcoming_3ruO2 {
+  background: #4c6b22;
+  color: #beee11;
+}
+.invitationplanner_CandidateRow_1-lXe
+  .invitationplanner_RecentPromos_gUn74
+  .invitationplanner_OpenInvite_wA4yC {
+  color: #adff2f;
+}
+.invitationplanner_CandidateRow_1-lXe .invitationplanner_SalesRank_2KWeG {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+}
+.invitationplanner_CandidateRow_1-lXe .invitationplanner_PartnerCol_2DqGf {
+  display: flex;
+  flex-direction: column;
+}
+.invitationplanner_CandidateRow_1-lXe
+  .invitationplanner_PartnerCol_2DqGf
+  .invitationplanner_PartnerName_3Tyh3 {
+  margin-bottom: 2px;
+}
+.invitationplanner_PagingRow_3qLRl {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: #282d39;
+  width: 100%;
+  padding: 4px 8px;
+  box-sizing: border-box;
+  margin-bottom: 24px;
+}
+.invitationplanner_PagingRow_3qLRl a {
+  display: block;
+  margin-right: 8px;
+  text-decoration: none;
+}
+.invitationplanner_PagingRow_3qLRl a button.DialogButton {
+  box-sizing: border-box;
+  padding-left: 12px;
+  padding-right: 12px;
+  text-decoration: none;
 }

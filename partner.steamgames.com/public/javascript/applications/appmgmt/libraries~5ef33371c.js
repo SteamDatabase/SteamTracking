@@ -5,7 +5,7 @@
   self.webpackChunkappmgmt_storeadmin || []).push([
   [3786],
   {
-    31872: (e, t, r) => {
+    15459: (e, t, r) => {
       r.d(t, { ZP: () => Bn });
       var n = r(25630),
         i = r(17600),
@@ -134,7 +134,7 @@
         C = 0,
         I = 0,
         T = "";
-      function x(e, t, r, n, i, a, s) {
+      function W(e, t, r, n, i, a, s) {
         return {
           value: e,
           root: t,
@@ -148,9 +148,9 @@
           return: "",
         };
       }
-      function W(e, t) {
+      function x(e, t) {
         return v(
-          x("", null, null, "", null, null, 0),
+          W("", null, null, "", null, null, 0),
           e,
           { length: -e.length },
           t,
@@ -428,13 +428,13 @@
           )
             (M = y(b > 0 ? p[v] + " " + w : B(w, /&\f/g, p[v]))) &&
               (u[h++] = M);
-        return x(e, t, r, 0 === i ? J : o, u, l, c);
+        return W(e, t, r, 0 === i ? J : o, u, l, c);
       }
       function oe(e, t, r) {
-        return x(e, t, r, K, h(I), _(e, 2, -2), 0);
+        return W(e, t, r, K, h(I), _(e, 2, -2), 0);
       }
       function ue(e, t, r, n) {
-        return x(e, t, r, ee, _(e, 0, n), _(e, n + 1, -1), n);
+        return W(e, t, r, ee, _(e, 0, n), _(e, n + 1, -1), n);
       }
       var le = function (e, t, r) {
           for (
@@ -701,7 +701,7 @@
                   e.return = fe(e.value, e.length);
                   break;
                 case te:
-                  return re([W(e, { value: B(e.value, "@", "@" + Y) })], n);
+                  return re([x(e, { value: B(e.value, "@", "@" + Y) })], n);
                 case J:
                   if (e.length)
                     return (function (e, t) {
@@ -716,7 +716,7 @@
                         case ":read-write":
                           return re(
                             [
-                              W(e, {
+                              x(e, {
                                 props: [B(t, /:(read-\w+)/, ":-moz-$1")],
                               }),
                             ],
@@ -725,13 +725,13 @@
                         case "::placeholder":
                           return re(
                             [
-                              W(e, {
+                              x(e, {
                                 props: [
                                   B(t, /:(plac\w+)/, ":" + Y + "input-$1"),
                                 ],
                               }),
-                              W(e, { props: [B(t, /:(plac\w+)/, ":-moz-$1")] }),
-                              W(e, {
+                              x(e, { props: [B(t, /:(plac\w+)/, ":-moz-$1")] }),
+                              x(e, {
                                 props: [B(t, /:(plac\w+)/, $ + "input-$1")],
                               }),
                             ],
@@ -1021,13 +1021,13 @@
             return e();
           },
         Te = (Ce || s.useLayoutEffect, {}.hasOwnProperty),
-        xe = s.createContext(
+        We = s.createContext(
           "undefined" != typeof HTMLElement ? ge({ key: "css" }) : null,
         );
-      xe.Provider;
-      var We = function (e) {
+      We.Provider;
+      var xe = function (e) {
         return (0, s.forwardRef)(function (t, r) {
-          var n = (0, s.useContext)(xe);
+          var n = (0, s.useContext)(We);
           return e(t, n, r);
         });
       };
@@ -1055,7 +1055,7 @@
             null
           );
         },
-        ke = We(function (e, t, r) {
+        ke = xe(function (e, t, r) {
           var n = e.css;
           "string" == typeof n &&
             void 0 !== t.registered[n] &&
@@ -1528,15 +1528,15 @@
         }
       }
       var Tt = !1,
-        xt = {
+        Wt = {
           get passive() {
             return (Tt = !0);
           },
         },
-        Wt = "undefined" != typeof window ? window : {};
-      Wt.addEventListener &&
-        Wt.removeEventListener &&
-        (Wt.addEventListener("p", Bt, xt), Wt.removeEventListener("p", Bt, !1));
+        xt = "undefined" != typeof window ? window : {};
+      xt.addEventListener &&
+        xt.removeEventListener &&
+        (xt.addEventListener("p", Bt, Wt), xt.removeEventListener("p", Bt, !1));
       var jt = Tt;
       function Pt(e) {
         return null != e;
@@ -2722,10 +2722,10 @@
         Tr = function (e) {
           return e.replace(/^\s+|\s+$/g, "");
         },
-        xr = function (e) {
+        Wr = function (e) {
           return "".concat(e.label, " ").concat(e.value);
         },
-        Wr = ["innerRef"];
+        xr = ["innerRef"];
       function jr(e) {
         var t = e.innerRef,
           r = (function (e) {
@@ -2745,7 +2745,7 @@
                 a = r[1];
               return (e[n] = a), e;
             }, {});
-          })((0, a.Z)(e, Wr), "onExited", "in", "enter", "exit", "appear");
+          })((0, a.Z)(e, xr), "onExited", "in", "enter", "exit", "appear");
         return Ue(
           "input",
           (0, l.Z)({ ref: t }, r, {
@@ -3445,7 +3445,7 @@
                 {
                   ignoreCase: !0,
                   ignoreAccents: !0,
-                  stringify: xr,
+                  stringify: Wr,
                   trim: !0,
                   matchFrom: "any",
                 },
@@ -4811,25 +4811,25 @@
                       if (null === T) return null;
                       C = s.createElement(u, p, T);
                     } else {
-                      var x = z({ inputValue: g });
-                      if (null === x) return null;
-                      C = s.createElement(c, p, x);
+                      var W = z({ inputValue: g });
+                      if (null === W) return null;
+                      C = s.createElement(c, p, W);
                     }
-                    var W = {
+                    var x = {
                         minMenuHeight: y,
                         maxMenuHeight: B,
                         menuPlacement: M,
                         menuPosition: _,
                         menuShouldScrollIntoView: F,
                       },
-                      j = s.createElement(Xt, (0, l.Z)({}, p, W), function (t) {
+                      j = s.createElement(Xt, (0, l.Z)({}, p, x), function (t) {
                         var r = t.ref,
                           n = t.placerProps,
                           o = n.placement,
                           u = n.maxHeight;
                         return s.createElement(
                           i,
-                          (0, l.Z)({}, p, W, {
+                          (0, l.Z)({}, p, x, {
                             innerRef: r,
                             innerProps: {
                               onMouseDown: e.onMenuMouseDown,
@@ -5144,7 +5144,7 @@
                 },
                 [f],
               ),
-              x = (0, s.useCallback)(
+              W = (0, s.useCallback)(
                 function (e, t) {
                   var r;
                   "function" == typeof b && (r = b(e, t)),
@@ -5152,7 +5152,7 @@
                 },
                 [b],
               ),
-              W = (0, s.useCallback)(
+              x = (0, s.useCallback)(
                 function () {
                   "function" == typeof h && h(), z(!0);
                 },
@@ -5174,9 +5174,9 @@
                 inputValue: P,
                 menuIsOpen: D,
                 onChange: T,
-                onInputChange: x,
+                onInputChange: W,
                 onMenuClose: j,
-                onMenuOpen: W,
+                onMenuOpen: x,
                 value: k,
               },
             );
@@ -5196,7 +5196,7 @@
       });
       var n = r(10059),
         i = r(39087),
-        a = r(21928),
+        a = r(79545),
         s = r(38079),
         o = r(23722);
       const u = n.Message;
@@ -6822,53 +6822,53 @@
           return "CStore_ReportApp_Request";
         }
       }
-      class x extends u {
+      class W extends u {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(), u.initialize(this, e, 0, -1, void 0, null);
         }
         toObject(e = !1) {
-          return x.toObject(e, this);
+          return W.toObject(e, this);
         }
         static toObject(e, t) {
           return e ? { $jspbMessageInstance: t } : {};
         }
         static fromObject(e) {
-          return new x();
+          return new W();
         }
         static deserializeBinary(e) {
           let t = new n.BinaryReader(e),
-            r = new x();
-          return x.deserializeBinaryFromReader(r, t);
+            r = new W();
+          return W.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
           return e;
         }
         serializeBinary() {
           var e = new n.BinaryWriter();
-          return x.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return W.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {}
         serializeBase64String() {
           var e = new n.BinaryWriter();
-          return x.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return W.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CStore_ReportApp_Response";
         }
       }
-      class W extends u {
+      class x extends u {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            W.prototype.primary_language || i.aR(W.M()),
+            x.prototype.primary_language || i.aR(x.M()),
             u.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
-            W.sm_m ||
-              (W.sm_m = {
-                proto: W,
+            x.sm_m ||
+              (x.sm_m = {
+                proto: x,
                 fields: {
                   primary_language: {
                     n: 1,
@@ -6923,39 +6923,39 @@
                   },
                 },
               }),
-            W.sm_m
+            x.sm_m
           );
         }
         static MBF() {
-          return W.sm_mbf || (W.sm_mbf = i.Bh(W.M())), W.sm_mbf;
+          return x.sm_mbf || (x.sm_mbf = i.Bh(x.M())), x.sm_mbf;
         }
         toObject(e = !1) {
-          return W.toObject(e, this);
+          return x.toObject(e, this);
         }
         static toObject(e, t) {
-          return i.TA(W.M(), e, t);
+          return i.TA(x.M(), e, t);
         }
         static fromObject(e) {
-          return i.aD(W.M(), e);
+          return i.aD(x.M(), e);
         }
         static deserializeBinary(e) {
           let t = new n.BinaryReader(e),
-            r = new W();
-          return W.deserializeBinaryFromReader(r, t);
+            r = new x();
+          return x.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return i.F(W.MBF(), e, t);
+          return i.F(x.MBF(), e, t);
         }
         serializeBinary() {
           var e = new n.BinaryWriter();
-          return W.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return x.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          i.l2(W.M(), e, t);
+          i.l2(x.M(), e, t);
         }
         serializeBase64String() {
           var e = new n.BinaryWriter();
-          return W.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return x.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CStore_UserPreferences";
@@ -7121,7 +7121,7 @@
               (k.sm_m = {
                 proto: k,
                 fields: {
-                  preferences: { n: 1, c: W },
+                  preferences: { n: 1, c: x },
                   tag_preferences: { n: 2, c: j },
                   content_descriptor_preferences: { n: 3, c: o.cF },
                 },
@@ -8278,7 +8278,7 @@
               (ae.sm_m = {
                 proto: ae,
                 fields: {
-                  preferences: { n: 1, c: W },
+                  preferences: { n: 1, c: x },
                   tag_preferences: { n: 2, c: j },
                   content_descriptor_preferences: { n: 3, c: o.cF },
                 },
@@ -8389,7 +8389,7 @@
             );
           }),
           (e.ReportApp = function (e, t) {
-            return e.SendMsg("Store.ReportApp#1", (0, a.MD)(T, t), x, {
+            return e.SendMsg("Store.ReportApp#1", (0, a.MD)(T, t), W, {
               ePrivilege: 3,
             });
           }),
@@ -8532,40 +8532,36 @@
           n(e)
         );
       }
-      r.d(t, { Z: () => s });
-      var i = r(26082),
-        a = r(50491);
-      function s(e) {
-        var t = (function () {
-          if ("undefined" == typeof Reflect || !Reflect.construct) return !1;
-          if (Reflect.construct.sham) return !1;
-          if ("function" == typeof Proxy) return !0;
-          try {
-            return (
-              Boolean.prototype.valueOf.call(
-                Reflect.construct(Boolean, [], function () {}),
-              ),
-              !0
-            );
-          } catch (e) {
-            return !1;
-          }
+      function i() {
+        try {
+          var e = !Boolean.prototype.valueOf.call(
+            Reflect.construct(Boolean, [], function () {}),
+          );
+        } catch (e) {}
+        return (i = function () {
+          return !!e;
         })();
+      }
+      r.d(t, { Z: () => o });
+      var a = r(26082),
+        s = r(50491);
+      function o(e) {
+        var t = i();
         return function () {
           var r,
-            s = n(e);
+            i = n(e);
           if (t) {
             var o = n(this).constructor;
-            r = Reflect.construct(s, arguments, o);
-          } else r = s.apply(this, arguments);
+            r = Reflect.construct(i, arguments, o);
+          } else r = i.apply(this, arguments);
           return (function (e, t) {
-            if (t && ("object" === (0, i.Z)(t) || "function" == typeof t))
+            if (t && ("object" === (0, a.Z)(t) || "function" == typeof t))
               return t;
             if (void 0 !== t)
               throw new TypeError(
                 "Derived constructors may only return object or undefined",
               );
-            return (0, a.Z)(e);
+            return (0, s.Z)(e);
           })(this, r);
         };
       }

@@ -257,7 +257,7 @@
     },
     23665: (e, r, t) => {
       "use strict";
-      t.d(r, { n: () => C });
+      t.d(r, { n: () => _ });
       var n = t(47427),
         o = t(8285),
         a = t(13129),
@@ -266,8 +266,9 @@
         c = t(97342),
         s = t.n(c),
         u = t(59728),
-        d = t(14609);
-      class p extends n.Component {
+        d = t(14609),
+        p = t(91618);
+      class C extends n.Component {
         constructor() {
           super(...arguments), (this.state = { activeTab: "" });
         }
@@ -301,7 +302,7 @@
             n.Fragment,
             null,
             n.createElement(
-              "div",
+              p.s,
               {
                 className: (0, a.Z)(
                   s().GraphicalAssetsTabs,
@@ -330,7 +331,7 @@
                           ),
                       },
                       n.createElement(
-                        "div",
+                        p.s,
                         {
                           key: r.key,
                           className: (0, a.Z)(
@@ -341,7 +342,7 @@
                             }`,
                             this.props.classNameTab,
                           ),
-                          onClick: () => this.OnTabClick(r),
+                          onActivate: () => this.OnTabClick(r),
                         },
                         Boolean(r.vo_warning) &&
                           n.createElement(
@@ -369,11 +370,15 @@
                 return null;
               }),
             ),
-            n.createElement("div", null, e && e.contents),
+            n.createElement(
+              p.s,
+              null,
+              e && n.createElement(p.s, null, e.contents),
+            ),
           );
         }
       }
-      const C = (0, o.EN)(p);
+      const _ = (0, o.EN)(C);
     },
     83831: (e, r, t) => {
       "use strict";
@@ -453,6 +458,8 @@
         }
         LoadPartnerInfo(e) {
           return (0, n.mG)(this, void 0, void 0, function* () {
+            if (this.m_mapOptInToPartners.has(e))
+              return this.m_mapOptInToPartners.get(e);
             yield this.FindPartnerByName("" + e);
             return (
               this.BHasPartnerInfoLoad(e) ||
@@ -510,6 +517,57 @@
           }, [e, r]),
           [r]
         );
+      }
+    },
+    62043: (e, r, t) => {
+      "use strict";
+      t.d(r, { M: () => i, V: () => l });
+      var n = t(82756),
+        o = t(47427);
+      class a {
+        GetMap() {
+          return this.m_mapPackageToPartners;
+        }
+        static Get() {
+          return (
+            a.s_Singleton || ((a.s_Singleton = new a()), a.s_Singleton.Init()),
+            a.s_Singleton
+          );
+        }
+        constructor() {
+          this.m_mapPackageToPartners = new Map();
+        }
+        Init() {
+          (0, n.kQ)("package_to_paid_partners", "application_config").forEach(
+            (e) => {
+              this.m_mapPackageToPartners.has(e.packageid) ||
+                this.m_mapPackageToPartners.set(e.packageid, new Array()),
+                this.m_mapPackageToPartners.get(e.packageid).push(e.partnerid);
+            },
+          );
+        }
+      }
+      function l() {
+        const [e, r] = (0, o.useState)(() => a.Get().GetMap());
+        return e;
+      }
+      function i(e) {
+        const r = l();
+        return (0, o.useMemo)(() => {
+          if (e) {
+            const t = new Set();
+            return (
+              e.forEach((e) => {
+                if (r.has(e)) {
+                  const n = r.get(e);
+                  n.length <= 3 && n.forEach((e) => t.add(e));
+                }
+              }),
+              Array.from(t.values())
+            );
+          }
+          return [];
+        }, [e, r]);
       }
     },
     82e3: (e, r, t) => {
@@ -972,7 +1030,7 @@
         );
       }
     },
-    88181: (e, r, t) => {
+    21747: (e, r, t) => {
       "use strict";
       t.r(r), t.d(r, { default: () => et });
       let n = {
@@ -4702,25 +4760,8 @@
             });
       }
       var qr = t(77681),
-        Yr = t.n(qr);
-      function Qr() {
-        const [e, r] = (0, a.useState)(() =>
-          (function () {
-            const e = new Map();
-            return (
-              (0, fe.kQ)(
-                "package_to_paid_partners",
-                "application_config",
-              ).forEach((r) => {
-                e.has(r.packageid) || e.set(r.packageid, new Array()),
-                  e.get(r.packageid).push(r.partnerid);
-              }),
-              e
-            );
-          })(),
-        );
-        return e;
-      }
+        Yr = t.n(qr),
+        Qr = t(62043);
       function Jr(e) {
         (0, he.N)();
         const [r] = (0, a.useState)(
@@ -4738,7 +4779,7 @@
             return e;
           })(),
           o = ve(),
-          l = Qr(),
+          l = (0, Qr.V)(),
           [i, c] = (0, Mr.Ar)("tab", "delta"),
           s = (e) => c(e.key),
           u = [

@@ -172,6 +172,8 @@
           "projectdatasources_ProjectConfigDataSourceElement_yhrLn",
         IsOldDataSourceVersion:
           "projectdatasources_IsOldDataSourceVersion_1rvbT",
+        NameAndID: "projectdatasources_NameAndID_1_r3g",
+        ID: "projectdatasources_ID_37ejl",
         Remove: "projectdatasources_Remove_3sDBJ",
         ProjectConfigDataSourceDataElementRoutingList:
           "projectdatasources_ProjectConfigDataSourceDataElementRoutingList_26BWQ",
@@ -498,7 +500,7 @@
         }
       }
       var g = a(42718),
-        S = a(21928),
+        S = a(79545),
         f = a(45681),
         N = a(2041);
       function E(e) {
@@ -605,7 +607,7 @@
             }
           }
       }
-      function M(e) {
+      function A(e) {
         return (0, l.mG)(this, void 0, void 0, function* () {
           const t = yield (function (e) {
               return (0, l.mG)(this, void 0, void 0, function* () {
@@ -634,7 +636,7 @@
           return [t, n];
         });
       }
-      function A() {
+      function M() {
         return (0, g.useQuery)(
           [x],
           () =>
@@ -669,7 +671,7 @@
           [D, e],
           () =>
             (0, l.mG)(this, void 0, void 0, function* () {
-              return M(e);
+              return A(e);
             }),
           { staleTime: 1 / 0 },
         );
@@ -1301,7 +1303,7 @@
         },
         he = () => {
           const [e, t] = o.useState(""),
-            a = A(),
+            a = M(),
             n = a.data;
           return o.createElement(
             "div",
@@ -1839,13 +1841,13 @@
                 t
                   .data_source_ids()
                   .map((e) =>
-                    o.createElement(Me, {
+                    o.createElement(Ae, {
                       key: e,
                       nDataSourceID: e,
                       fnRemoveDataSource: i ? l : void 0,
                     }),
                   ),
-                o.createElement(Ae, {
+                o.createElement(Me, {
                   bShowPopup: r,
                   fnSetShowPopup: s,
                   fnAddSelectedDataSources: (t) => {
@@ -2059,8 +2061,8 @@
             );
           const B = 2 == r.data_type(),
             H = 3 == r.data_type(),
-            M = 1 == r.data_type(),
-            A = 4 == r.data_type(),
+            A = 1 == r.data_type(),
+            M = 4 == r.data_type(),
             W = 5 == r.data_type();
           let G = "";
           switch (r.data_type()) {
@@ -2205,8 +2207,8 @@
                       Xe.DataSourceType,
                       B && Xe.Float,
                       H && Xe.Bool,
-                      M && Xe.Int,
-                      A && Xe.String,
+                      A && Xe.Int,
+                      M && Xe.String,
                       W && Xe.Object,
                     ),
                   },
@@ -2417,7 +2419,7 @@
             ),
           );
         },
-        Me = (e) => {
+        Ae = (e) => {
           const t = B(e.nDataSourceID),
             a = O();
           if (!t.isSuccess || !a.isSuccess) return null;
@@ -2436,7 +2438,12 @@
                 r && Xe.IsOldDataSourceVersion,
               ),
             },
-            o.createElement("div", { className: Xe.Name }, n.name()),
+            o.createElement(
+              "div",
+              { className: Xe.NameAndID },
+              o.createElement("div", { className: Xe.Name }, n.name()),
+              o.createElement("div", { className: Xe.ID }, `(ID ${n.id()})`),
+            ),
             o.createElement(
               "div",
               { className: Xe.Description },
@@ -2454,7 +2461,7 @@
               ),
           );
         },
-        Ae = (e) => {
+        Me = (e) => {
           const [t, a] = o.useState([]),
             n = O();
           if (n.isError) return e.fnSetShowPopup(!1), null;
@@ -2754,7 +2761,20 @@
                                   ),
                                 );
                             }
-                            if (t.categorical_crossentropy().value().length > 0)
+                            if (
+                              (t.binary_crossentropy().value() &&
+                                (e.push(o.createElement("div", null, "OUTPUT")),
+                                e.push(
+                                  o.createElement(
+                                    "div",
+                                    null,
+                                    `${(
+                                      100 * t.binary_crossentropy().value()
+                                    ).toFixed(2)}%`,
+                                  ),
+                                )),
+                              t.categorical_crossentropy().value().length > 0)
+                            )
                               for (
                                 let a = 0;
                                 a < t.categorical_crossentropy().value().length;
@@ -8151,7 +8171,7 @@
             _a.SteamLearnProjectInferenceTester(void 0, void 0),
           ]) && e.push(_a.SteamLearnProjectInferenceTester(a, r));
       }
-      const Mt = (e) => {
+      const At = (e) => {
           const { msgProject: t, msgWorkingProject: a } = pe(),
             n = t
               ? t.published_configs().map((e) => e.published_version())
@@ -8213,7 +8233,7 @@
             ),
           );
         },
-        At = (e) => {
+        Mt = (e) => {
           const { msgProject: t, msgWorkingProject: a } = pe(),
             [n, r] = o.useState(!1);
           o.useEffect(() => {
@@ -8560,14 +8580,14 @@
                   { disabled: x, onClick: (e) => D() },
                   (0, c.Xx)("#SteamLearn_Project_Publish"),
                 ),
-              o.createElement(At, { bVisible: N, fnClosePopup: v }),
+              o.createElement(Mt, { bVisible: N, fnClosePopup: v }),
               x &&
                 o.createElement(
                   Pe.h5,
                   { className: Bt.Warning, disabled: !x, onClick: E },
                   (0, c.Xx)("#SteamLearn_Project_Discard"),
                 ),
-              o.createElement(Mt, { bVisible: m, fnClosePopup: g }),
+              o.createElement(At, { bVisible: m, fnClosePopup: g }),
               0 == i &&
                 a &&
                 a.published_configs().length > 0 &&
@@ -8582,7 +8602,7 @@
         };
       function Rt() {
         const e = (0, r.TH)(),
-          t = A();
+          t = M();
         if (!ua(e.pathname)) return null;
         const a = t.data;
         return o.createElement(
@@ -8642,6 +8662,12 @@
             },
           ],
           r = [
+            {
+              label: (0, c.Xx)(
+                "#SteamLearn_ScheduledTrain_IntervalNotScheduled",
+              ),
+              value: 0,
+            },
             {
               label: (0, c.Xx)("#SteamLearn_ScheduledTrain_IntervalWeekly"),
               value: 3,
@@ -9235,14 +9261,14 @@
             ),
             o.createElement(Qe, {
               label: (0, c.Xx)("#SteamLearn_TrainSettings_TrainLearningRate"),
-              digitCount: 4,
+              digitCount: 5,
               fnGetInitialValue: () => {
                 var t;
                 return (
                   (null === (t = e.train_config().train_learning_rate()) ||
                   void 0 === t
                     ? void 0
-                    : t.toFixed(4)) || "0"
+                    : t.toFixed(5)) || "0"
                 );
               },
               fnValidateValue: (e) => _e(e, 0, 1),

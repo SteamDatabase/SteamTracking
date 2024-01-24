@@ -10,6 +10,7 @@
         ErrorStylesWithIcon: "partnereventdialog_ErrorStylesWithIcon_1mcSA",
         ErrorIconLayout: "partnereventdialog_ErrorIconLayout_15HwA",
         ErrorStylesBackground: "partnereventdialog_ErrorStylesBackground_3Ht2e",
+        ErrorFloatBelow: "partnereventdialog_ErrorFloatBelow_1mTCT",
         WarningStyles: "partnereventdialog_WarningStyles_1C_Im",
         WarningStylesWithIcon: "partnereventdialog_WarningStylesWithIcon_3p5KO",
         WarningIconLayout: "partnereventdialog_WarningIconLayout_3POKG",
@@ -426,7 +427,7 @@
         m = n(42718),
         c = n(16649),
         u = n(37563),
-        p = n(21928),
+        p = n(79545),
         h = n(82182),
         g = n(40057);
       const T = "nicknames";
@@ -495,14 +496,14 @@
         S = "avatarandpersonas";
       var _ = n(47955);
       function v(e) {
-        const { accountID: t, bHideWhenNotAvailable: n } = e,
-          [s] = (function (e) {
+        const { accountID: t, bHideWhenNotAvailable: n, bHideName: s } = e,
+          [o] = (function (e) {
             const { data: t, isLoading: n } = (0, m.useQuery)([S, e], () =>
               E.load(e),
             );
             return [t, n];
           })(t),
-          o = (function (e) {
+          l = (function (e) {
             const t = (0, g.bY)(),
               { data: n, isLoading: i } = (0, m.useQuery)([T], () =>
                 (0, a.mG)(this, void 0, void 0, function* () {
@@ -521,11 +522,11 @@
               );
             return n ? n.get(e) : null;
           })(t),
-          l = i.useMemo(() => r.K.InitFromAccountID(t), [t]);
+          d = i.useMemo(() => r.K.InitFromAccountID(t), [t]);
         return i.createElement(
           i.Fragment,
           null,
-          Boolean(!s)
+          Boolean(!o)
             ? i.createElement(
                 i.Fragment,
                 null,
@@ -536,14 +537,15 @@
                 null,
                 i.createElement("img", {
                   className: _.SmallAvatar,
-                  src: s.avatar_url,
-                  "data-miniprofile": "s" + l.ConvertTo64BitString(),
+                  src: o.avatar_url,
+                  "data-miniprofile": "s" + d.ConvertTo64BitString(),
                 }),
-                i.createElement(
-                  "span",
-                  null,
-                  o ? `${o} (${s.persona_name})` : s.persona_name,
-                ),
+                Boolean(!s) &&
+                  i.createElement(
+                    "span",
+                    null,
+                    l ? `${l} (${o.persona_name})` : o.persona_name,
+                  ),
               ),
         );
       }
