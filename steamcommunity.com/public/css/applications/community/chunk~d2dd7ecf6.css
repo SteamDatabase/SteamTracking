@@ -3601,6 +3601,21 @@ p a:hover {
 .partnereventartwork_AssetExampleSpotlightCtn_taJSe {
   position: relative;
 }
+.partnereventartwork_BackgroundConfigCtn_1bekK {
+  margin-top: 8px;
+  border-top: 1px solid #484b53;
+  padding-top: 20px;
+  margin-bottom: 12px;
+}
+.partnereventartwork_BackgroundConfigCtn_1bekK
+  .partnereventartwork_OptionCtn_32kWb {
+  flex-grow: 1;
+}
+.partnereventartwork_BackgroundConfigCtn_1bekK
+  button.DialogButton.partnereventartwork_BackgroundColorBtn_3GcT6 {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
 .imagedraganddroptarget_DragAndDropContainer_1BEPN,
 .imagedraganddroptarget_DragAndDropContainerDragging_2pUkO {
   border: 1px dashed #06beff;

@@ -9517,7 +9517,7 @@
         lt = a(73799),
         pt = a.n(lt),
         dt = a(42718),
-        ht = a(21928),
+        ht = a(79545),
         ct = a(82182),
         ut = a(40057);
       const mt = "nicknames";
@@ -9587,14 +9587,14 @@
         gt = "avatarandpersonas";
       var yt = a(47955);
       function bt(e) {
-        const { accountID: t, bHideWhenNotAvailable: a } = e,
-          [o] = (function (e) {
+        const { accountID: t, bHideWhenNotAvailable: a, bHideName: o } = e,
+          [s] = (function (e) {
             const { data: t, isLoading: a } = (0, dt.useQuery)([gt, e], () =>
               ft.load(e),
             );
             return [t, a];
           })(t),
-          s = (function (e) {
+          r = (function (e) {
             const t = (0, ut.bY)(),
               { data: a, isLoading: o } = (0, dt.useQuery)([mt], () =>
                 (0, i.mG)(this, void 0, void 0, function* () {
@@ -9613,11 +9613,11 @@
               );
             return a ? a.get(e) : null;
           })(t),
-          r = n.useMemo(() => N.K.InitFromAccountID(t), [t]);
+          l = n.useMemo(() => N.K.InitFromAccountID(t), [t]);
         return n.createElement(
           n.Fragment,
           null,
-          Boolean(!o)
+          Boolean(!s)
             ? n.createElement(
                 n.Fragment,
                 null,
@@ -9628,14 +9628,15 @@
                 null,
                 n.createElement("img", {
                   className: yt.SmallAvatar,
-                  src: o.avatar_url,
-                  "data-miniprofile": "s" + r.ConvertTo64BitString(),
+                  src: s.avatar_url,
+                  "data-miniprofile": "s" + l.ConvertTo64BitString(),
                 }),
-                n.createElement(
-                  "span",
-                  null,
-                  s ? `${s} (${o.persona_name})` : o.persona_name,
-                ),
+                Boolean(!o) &&
+                  n.createElement(
+                    "span",
+                    null,
+                    r ? `${r} (${s.persona_name})` : s.persona_name,
+                  ),
               ),
         );
       }

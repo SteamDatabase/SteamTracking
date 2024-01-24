@@ -3975,7 +3975,7 @@ div.early_access_announcements .divider {
 
 #app_tagging_modal.advanced_enabled .app_tag
 {
-	max_width: 140px;
+	max-width: 140px;
 }
 
 .app_tag_checkbox {

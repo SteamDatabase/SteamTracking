@@ -3053,6 +3053,19 @@ button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover:before {
   height: 1em;
   margin: auto;
 }
+.gamepaddialog_DropDownRow_1fwM1 {
+  display: flex;
+  width: 100%;
+}
+.gamepaddialog_DropDownRow_1fwM1 .gamepaddialog_IconContainer_3xrmZ {
+  width: 2ch;
+  height: 100%;
+  flex-shrink: 0;
+  margin-right: 1ch;
+}
+.gamepaddialog_DropDownRow_1fwM1 .gamepaddialog_Label_sNbXz {
+  flex-grow: 1;
+}
 .gamepaddialog_ControlsListOuterPanel_2XSsN {
   --controls-list-spacing: 0px;
   --controls-child-max-width: 250px;
@@ -3312,6 +3325,33 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   width: var(--normalized-width-handle);
   border-radius: 3px;
 }
+.gamepadslider_DefaultValueIsColorRange_BKyEN
+  .gamepadslider_SliderTrack_2_vG6::before {
+  --signed-normalized-slider-default-value: calc(
+    2 * var(--normalized-slider-default-value) - 1
+  );
+  --gradient-split-pct: calc(
+    100% * var(--normalized-slider-default-value) /
+      var(--normalized-slider-value) -
+      (24px * 0.5 * var(--signed-normalized-slider-default-value))
+  );
+}
+.gamepadslider_DefaultValueColorLeft_3mRyv
+  .gamepadslider_SliderTrack_2_vG6::before {
+  background: linear-gradient(
+    90deg,
+    var(--default-value-track-color) 0% var(--gradient-split-pct),
+    var(--left-track-color) calc(var(--gradient-split-pct))
+  );
+}
+.gamepadslider_DefaultValueColorRight_2KP6T
+  .gamepadslider_SliderTrack_2_vG6::before {
+  background: linear-gradient(
+    90deg,
+    var(--left-track-color) 0% var(--gradient-split-pct),
+    var(--default-value-track-color) calc(var(--gradient-split-pct))
+  );
+}
 .gamepadslider_SliderControlAndNotches_23hjX.gamepadslider_Disabled_35GyZ
   .gamepadslider_SliderTrack_2_vG6::before {
   background: #67707b;
@@ -3328,7 +3368,8 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   position: absolute;
   transform: translateX(
     calc(
-      -100% * var(--inverse-normalized-value) + 24px * var(--inverse-normalized-value)
+      -100% * var(--inverse-normalized-value) + (24px *
+            var(--inverse-normalized-value))
     )
   );
 }
@@ -3662,7 +3703,8 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   position: absolute;
   transform: translateX(
     calc(
-      -100% * var(--inverse-normalized-default-value) + 24px * var(--inverse-normalized-default-value)
+      -100% * var(--inverse-normalized-default-value) + (24px *
+            var(--inverse-normalized-default-value))
     )
   );
 }
@@ -29712,6 +29754,2937 @@ div:hover > .BBCodeCollapseControl {
   line-height: 30px;
   font-size: 26px;
   margin-right: 8px;
+}
+.sharedclip_ClipDetails_1fyr- {
+  display: flex;
+  flex-direction: column;
+}
+.sharedclip_ClipDetails_1fyr- .sharedclip_VideoContainer_1Ml8- {
+  position: relative;
+}
+@font-face {
+  src: url(../..images/webui/e14e25b7c497634efdfef3a67da27ae1.ttf)
+    format("truetype");
+  font-family: "Roboto-Mono";
+  font-style: normal;
+  font-weight: 100 700;
+}
+@font-face {
+  src: url(../..images/webui/a53103a7b0e22765d7ffa6dbc4cfcf87.ttf)
+    format("truetype");
+  font-family: "Roboto-Mono";
+  font-style: italic;
+  font-weight: 100 700;
+}
+.gamerecordingplayer_GameRecordingPlayer_1AGqA {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0b101600;
+  box-shadow: inset 0 0 80px #000000bb;
+}
+.gamerecordingplayer_GameRecordingPlayer_1AGqA.gamerecordingplayer_NoVideo_DaqWG {
+  box-shadow: none;
+}
+.gamerecordingplayer_GameRecordingPlayer_1AGqA.gamerecordingplayer_PositionAbsolute_1OoTI {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.gamerecordingplayer_GameRecordingPlayer_1AGqA video {
+  max-width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: 0% 0%;
+  background-color: #0b101600;
+}
+.gamerecordingplayer_GameRecordingPlayer_1AGqA video:focus {
+  outline: none;
+}
+.gamerecordingplayer_PlayerError_3ixlq {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.gamerecordingplayer_PlayerError_3ixlq .gamerecordingplayer_Text_27SGd {
+  color: #8b929a;
+  max-width: 80%;
+  text-align: center;
+}
+.gamerecordingplayer_PerfCtnVideo_adSGJ {
+  background-color: #00000088;
+  color: red;
+  font-size: 10;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: fit-content;
+  height: fit-content;
+  font-family: "Roboto-Mono";
+}
+.gamerecordingplayer_PerfCtnThumbnails_1Yw-S {
+  background-color: #00000088;
+  color: #adff2f;
+  font-size: 10;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: fit-content;
+  height: fit-content;
+  font-family: "Roboto-Mono";
+}
+.timeline_LoadingTimeline__3HMM {
+  min-height: 54px;
+}
+.timeline_ScrollAndControlsCtn_gAhqB {
+  display: flex;
+  flex-direction: column;
+  min-height: 54px;
+}
+.timeline_Controls_uwbPY {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  width: min-content;
+  gap: 8px;
+}
+.timeline_TimelineScrollContainer_II0EI {
+  text-align: end;
+  flex: 1;
+}
+.timeline_TimelineScrollContainer_II0EI::-webkit-scrollbar-thumb {
+  background-color: #23262e;
+  height: 15px;
+  width: 20px;
+  border: 0px;
+  border-radius: 16px;
+  box-shadow: inset 1px 1px 2px 0px rgba(255, 255, 255, 0.1);
+  cursor: grab;
+}
+.timeline_TimelineScrollContainer_II0EI::-webkit-scrollbar {
+  background-color: #0e141b;
+  border-radius: 16px;
+  height: 0px;
+  padding: 16px;
+  box-shadow: inset 2px 2px 4px 0px rgba(0, 0, 0, 0.5);
+}
+.timeline_ContentContainer_2eSQS {
+  display: inline-block;
+  position: relative;
+  height: 54px;
+  box-sizing: content-box;
+}
+.timeline_AbsoluteLayer_2fti4 {
+  position: absolute;
+  width: 100%;
+  pointer-events: none;
+  box-sizing: border-box;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+.timeline_AbsoluteLayer_2fti4.timeline_HideOverflow_16Ta9 {
+  overflow: hidden;
+}
+.timeline_AbsoluteLayer_2fti4 .timeline_RelativeLayer_1RIfc {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+}
+.timeline_AbsoluteLayer_2fti4
+  .timeline_RelativeLayer_1RIfc.timeline_WithPointerEvents_2Sk-L {
+  pointer-events: all;
+}
+.timeline_RecordingDecorators_NBc0P {
+  bottom: 25%;
+}
+.timeline_ClipDecorators_YBRVE {
+  bottom: calc(25% - 4px);
+  z-index: 2;
+}
+.timeline_GameModes_3vfGk {
+  top: 0%;
+  bottom: 25%;
+}
+.timeline_DateDecorator_kakzX {
+  overflow: hidden;
+  top: 0%;
+  z-index: 2;
+}
+.timeline_BackgroundTicks_3bRgO {
+  bottom: 0%;
+  top: 75%;
+}
+.timeline_Highlights_LzHSW {
+  z-index: 4;
+  overflow: hidden;
+  margin-top: 0%;
+  bottom: 25%;
+}
+.timeline_Timestamps_36FQk {
+  z-index: 4;
+  overflow: hidden;
+  top: 74%;
+  bottom: 0px;
+}
+.timeline_RangeSelector_3jnVE {
+  z-index: 4;
+  top: 0%;
+  bottom: 21%;
+}
+.timeline_SeekScrubber_3x48w {
+  bottom: 0%;
+  z-index: 3;
+}
+.timeline_PlayHead_3ckxI {
+  z-index: 5;
+  bottom: 0%;
+}
+.timeline_Thumbnails_31eJn {
+  top: 0px;
+  bottom: 0px;
+}
+.horizontalscrollbar_LoadingTimeline_3AC5P {
+  min-height: 54px;
+}
+.horizontalscrollbar_ScrollAndControlsCtn_1CYsm {
+  display: flex;
+  flex-direction: column;
+  min-height: 54px;
+}
+.horizontalscrollbar_Controls_1l2J- {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  width: min-content;
+  gap: 8px;
+}
+.horizontalscrollbar_TimelineScrollContainer_3v-bz {
+  text-align: end;
+  flex: 1;
+}
+.horizontalscrollbar_TimelineScrollContainer_3v-bz::-webkit-scrollbar-thumb {
+  background-color: #23262e;
+  height: 15px;
+  width: 20px;
+  border: 0px;
+  border-radius: 16px;
+  box-shadow: inset 1px 1px 2px 0px rgba(255, 255, 255, 0.1);
+  cursor: grab;
+}
+.horizontalscrollbar_TimelineScrollContainer_3v-bz::-webkit-scrollbar {
+  background-color: #0e141b;
+  border-radius: 16px;
+  height: 0px;
+  padding: 16px;
+  box-shadow: inset 2px 2px 4px 0px rgba(0, 0, 0, 0.5);
+}
+.horizontalscrollbar_ContentContainer_1Jjb0 {
+  display: inline-block;
+  position: relative;
+  height: 54px;
+  box-sizing: content-box;
+}
+.horizontalscrollbar_AbsoluteLayer_2F0d9 {
+  position: absolute;
+  width: 100%;
+  pointer-events: none;
+  box-sizing: border-box;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+.horizontalscrollbar_AbsoluteLayer_2F0d9.horizontalscrollbar_HideOverflow_2GDis {
+  overflow: hidden;
+}
+.horizontalscrollbar_AbsoluteLayer_2F0d9
+  .horizontalscrollbar_RelativeLayer_1xZCN {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+}
+.horizontalscrollbar_AbsoluteLayer_2F0d9
+  .horizontalscrollbar_RelativeLayer_1xZCN.horizontalscrollbar_WithPointerEvents_12MLk {
+  pointer-events: all;
+}
+.horizontalscrollbar_RecordingDecorators_2PJGD {
+  bottom: 25%;
+}
+.horizontalscrollbar_ClipDecorators_tbss_ {
+  bottom: calc(25% - 4px);
+  z-index: 2;
+}
+.horizontalscrollbar_GameModes_1Bh3P {
+  top: 0%;
+  bottom: 25%;
+}
+.horizontalscrollbar_DateDecorator_2w-ta {
+  overflow: hidden;
+  top: 0%;
+  z-index: 2;
+}
+.horizontalscrollbar_BackgroundTicks_xD30a {
+  bottom: 0%;
+  top: 75%;
+}
+.horizontalscrollbar_Highlights_56YDW {
+  z-index: 4;
+  overflow: hidden;
+  margin-top: 0%;
+  bottom: 25%;
+}
+.horizontalscrollbar_Timestamps_xLUyq {
+  z-index: 4;
+  overflow: hidden;
+  top: 74%;
+  bottom: 0px;
+}
+.horizontalscrollbar_RangeSelector_2vqUV {
+  z-index: 4;
+  top: 0%;
+  bottom: 21%;
+}
+.horizontalscrollbar_SeekScrubber_3MV0K {
+  bottom: 0%;
+  z-index: 3;
+}
+.horizontalscrollbar_PlayHead_37u67 {
+  z-index: 5;
+  bottom: 0%;
+}
+.horizontalscrollbar_Thumbnails_1pOPb {
+  top: 0px;
+  bottom: 0px;
+}
+.horizontalscrollbar_ContentAndGradient_XrJof {
+  overflow: hidden;
+  position: relative;
+  flex: 1;
+  height: 54px;
+}
+.horizontalscrollbar_LeftControlsAndContent_1vc8f {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.horizontalscrollbar_ScrollGradientCtn_rWNgV {
+  height: 68px;
+  width: 100%;
+  position: absolute;
+  pointer-events: none;
+  z-index: 6;
+  top: 28px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.horizontalscrollbar_ScrollGradientCtn_rWNgV
+  .horizontalscrollbar_FrontGradient_2M09u {
+  float: left;
+  background-color: #282a31;
+  height: 100%;
+  width: 28px;
+  -webkit-mask-image: linear-gradient(to left, transparent 8px, black 20px);
+  mask-image: linear-gradient(to left, transparent 8px, black 20px);
+  transition: width ease 0.3s;
+}
+.horizontalscrollbar_ScrollGradientCtn_rWNgV
+  .horizontalscrollbar_FrontGradient_2M09u.horizontalscrollbar_HideGradient_28_y- {
+  width: 0px;
+}
+.horizontalscrollbar_ScrollGradientCtn_rWNgV
+  .horizontalscrollbar_EndGradient_YzFF9 {
+  float: right;
+  background-color: #25282e;
+  height: 100%;
+  width: 28px;
+  -webkit-mask-image: linear-gradient(to right, transparent 8px, black 20px);
+  mask-image: linear-gradient(to right, transparent 8px, black 20px);
+  transition: width ease 0.3s;
+}
+.horizontalscrollbar_ScrollGradientCtn_rWNgV
+  .horizontalscrollbar_EndGradient_YzFF9.horizontalscrollbar_HideGradient_28_y- {
+  width: 0px;
+}
+.horizontalscrollbar_ScrollbarAndSiblings_34dlB {
+  position: relative;
+  align-items: center;
+  padding-top: 6px;
+}
+.horizontalscrollbar_ScrollbarAndSiblings_34dlB
+  .horizontalscrollbar_ScrollBarCtn_1-ooP {
+  position: relative;
+  flex: 1;
+}
+.horizontalscrollbar_ScrollbarAndSiblings_34dlB
+  .horizontalscrollbar_ScrollBarCtn_1-ooP.horizontalscrollbar_HideScrollBar_N-Wti {
+  opacity: 0;
+  pointer-events: none;
+}
+.horizontalscrollbar_ScrollbarAndSiblings_34dlB
+  .horizontalscrollbar_ScrollBarCtn_1-ooP
+  .horizontalscrollbar_ScrollTrack_NP3Dl {
+  background-color: #00000004;
+  box-shadow: inset 0 0 6px #00000066;
+  height: 3px;
+  border-radius: 3px;
+  position: relative;
+}
+.horizontalscrollbar_ScrollbarAndSiblings_34dlB
+  .horizontalscrollbar_ScrollBarCtn_1-ooP
+  .horizontalscrollbar_PlayHeadAnnotation_32vHJ {
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: -6px;
+  top: 0px;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #b8bcbf;
+  cursor: pointer;
+  z-index: 10;
+}
+.horizontalscrollbar_ScrollbarAndSiblings_34dlB
+  .horizontalscrollbar_ScrollBarCtn_1-ooP
+  .horizontalscrollbar_PlayHeadAnnotation_32vHJ:hover {
+  border-top: 6px solid #dcdedf;
+}
+.horizontalscrollbar_ScrollbarAndSiblings_34dlB
+  .horizontalscrollbar_ScrollBarCtn_1-ooP
+  .horizontalscrollbar_RangeAnnotation_2cjQV {
+  position: absolute;
+  top: 0px;
+  height: 3px;
+  background-color: #ffd55f44;
+  cursor: pointer;
+  z-index: 9;
+  transition-property: background-color;
+  transition-duration: 0.15s;
+}
+.horizontalscrollbar_ScrollbarAndSiblings_34dlB
+  .horizontalscrollbar_ScrollBarCtn_1-ooP
+  .horizontalscrollbar_RangeAnnotation_2cjQV:hover {
+  background-color: #ffd55fcc;
+}
+.horizontalscrollbar_ScrollbarAndSiblings_34dlB
+  .horizontalscrollbar_ScrollBarCtn_1-ooP
+  .horizontalscrollbar_ScrollThumb_JffqX {
+  position: absolute;
+  background-color: #e2e7eb20;
+  background-color: linear-gradient(-45deg, red 8%, blue 90%);
+  height: 2px;
+  top: 0;
+  left: 0;
+  min-width: 2px;
+  border-radius: 3px;
+  cursor: grab;
+  z-index: 11;
+  transition-duration: 0.1s;
+  transition-property: filter;
+  box-shadow: 0 0 8px #06080b44;
+  backdrop-filter: blur(0.3px);
+  border-top: 1px solid #ffffff11;
+  border-bottom: 1px solid #00000011;
+}
+.horizontalscrollbar_ScrollbarAndSiblings_34dlB
+  .horizontalscrollbar_ScrollBarCtn_1-ooP
+  .horizontalscrollbar_ScrollThumb_JffqX:active {
+  cursor: grabbing;
+}
+.horizontalscrollbar_ScrollbarAndSiblings_34dlB
+  .horizontalscrollbar_ScrollBarCtn_1-ooP
+  .horizontalscrollbar_ScrollThumb_JffqX:hover,
+.horizontalscrollbar_ScrollbarAndSiblings_34dlB
+  .horizontalscrollbar_ScrollBarCtn_1-ooP
+  .horizontalscrollbar_ScrollThumb_JffqX:active {
+  filter: brightness(1.2);
+}
+.shared_svg_gamerecordings_Dummy_3d7vg {
+  color: hotpink;
+}
+.shared_svg_gamerecordings_RecordingIconContainer_2aEWn {
+  position: relative;
+  width: 16px;
+  height: 16px;
+}
+.shared_svg_gamerecordings_RecordingIconContainer_2aEWn > svg {
+  height: 16px;
+  width: 16px;
+}
+.shared_svg_gamerecordings_RecordingIconContainer_2aEWn
+  .shared_svg_gamerecordings_Outer_1Zy09 {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.shared_svg_gamerecordings_RecordingIconContainer_2aEWn
+  .shared_svg_gamerecordings_Inner_B70ft {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.shared_svg_gamerecordings_RecordingIconContainer_2aEWn.shared_svg_gamerecordings_NotRecording_3YKHQ
+  .shared_svg_gamerecordings_Outer_1Zy09 {
+  color: transparent;
+}
+.shared_svg_gamerecordings_RecordingIconContainer_2aEWn.shared_svg_gamerecordings_ManualRecording_3ei4n
+  .shared_svg_gamerecordings_Inner_B70ft,
+.shared_svg_gamerecordings_RecordingIconContainer_2aEWn.shared_svg_gamerecordings_ManualRecording_3ei4n
+  .shared_svg_gamerecordings_Outer_1Zy09 {
+  color: #bf4833;
+}
+.shared_svg_gamerecordings_RecordingIconContainer_2aEWn.shared_svg_gamerecordings_BackgroundRecording_ORVlI
+  .shared_svg_gamerecordings_Inner_B70ft,
+.shared_svg_gamerecordings_RecordingIconContainer_2aEWn.shared_svg_gamerecordings_BackgroundRecording_ORVlI
+  .shared_svg_gamerecordings_Outer_1Zy09 {
+  color: #bf4833;
+}
+.shared_svg_gamerecordings_RecordingIconContainer_2aEWn.shared_svg_gamerecordings_ForeverRecording_doQfz
+  .shared_svg_gamerecordings_Inner_B70ft,
+.shared_svg_gamerecordings_RecordingIconContainer_2aEWn.shared_svg_gamerecordings_ForeverRecording_doQfz
+  .shared_svg_gamerecordings_Outer_1Zy09 {
+  color: #bf4833;
+}
+.golivebutton_GoLiveButtonCtn_1Ssh6 {
+  padding-top: 24px;
+}
+.golivebutton_GoLiveButtonCtn_1Ssh6 .DialogButton {
+  width: 24px;
+  height: 24px;
+  margin: 0px;
+}
+.golivebutton_GoLiveButtonCtn_1Ssh6 .golivebutton_GoLiveButton_1rZeq {
+  color: #8b929a;
+  background: none;
+  white-space: nowrap;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  padding: 4px;
+}
+.golivebutton_GoLiveButtonCtn_1Ssh6 .golivebutton_GoLiveButton_1rZeq:hover,
+.golivebutton_GoLiveButtonCtn_1Ssh6 .golivebutton_GoLiveButton_1rZeq:active {
+  background: red;
+}
+.golivebutton_GoLiveButtonCtn_1Ssh6
+  .golivebutton_GoLiveButton_1rZeq.golivebutton_IsLive_2MGny {
+  background: #23262e;
+  color: red;
+  pointer-events: none;
+}
+.recordingdecorator_LoadingTimeline_3tH-U {
+  min-height: 54px;
+}
+.recordingdecorator_ScrollAndControlsCtn_3EGBZ {
+  display: flex;
+  flex-direction: column;
+  min-height: 54px;
+}
+.recordingdecorator_Controls_3nrFG {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  width: min-content;
+  gap: 8px;
+}
+.recordingdecorator_TimelineScrollContainer_3vqWS {
+  text-align: end;
+  flex: 1;
+}
+.recordingdecorator_TimelineScrollContainer_3vqWS::-webkit-scrollbar-thumb {
+  background-color: #23262e;
+  height: 15px;
+  width: 20px;
+  border: 0px;
+  border-radius: 16px;
+  box-shadow: inset 1px 1px 2px 0px rgba(255, 255, 255, 0.1);
+  cursor: grab;
+}
+.recordingdecorator_TimelineScrollContainer_3vqWS::-webkit-scrollbar {
+  background-color: #0e141b;
+  border-radius: 16px;
+  height: 0px;
+  padding: 16px;
+  box-shadow: inset 2px 2px 4px 0px rgba(0, 0, 0, 0.5);
+}
+.recordingdecorator_ContentContainer_2_mqy {
+  display: inline-block;
+  position: relative;
+  height: 54px;
+  box-sizing: content-box;
+}
+.recordingdecorator_AbsoluteLayer_CiFLr {
+  position: absolute;
+  width: 100%;
+  pointer-events: none;
+  box-sizing: border-box;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+.recordingdecorator_AbsoluteLayer_CiFLr.recordingdecorator_HideOverflow_2BoIL {
+  overflow: hidden;
+}
+.recordingdecorator_AbsoluteLayer_CiFLr
+  .recordingdecorator_RelativeLayer_3obgM {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+}
+.recordingdecorator_AbsoluteLayer_CiFLr
+  .recordingdecorator_RelativeLayer_3obgM.recordingdecorator_WithPointerEvents_1e6-Z {
+  pointer-events: all;
+}
+.recordingdecorator_RecordingDecorators_3l9q4 {
+  bottom: 25%;
+}
+.recordingdecorator_ClipDecorators_1HU0h {
+  bottom: calc(25% - 4px);
+  z-index: 2;
+}
+.recordingdecorator_GameModes_2FL-N {
+  top: 0%;
+  bottom: 25%;
+}
+.recordingdecorator_DateDecorator_2bCxb {
+  overflow: hidden;
+  top: 0%;
+  z-index: 2;
+}
+.recordingdecorator_BackgroundTicks_2UfqY {
+  bottom: 0%;
+  top: 75%;
+}
+.recordingdecorator_Highlights_2iZX0 {
+  z-index: 4;
+  overflow: hidden;
+  margin-top: 0%;
+  bottom: 25%;
+}
+.recordingdecorator_Timestamps_2TfF2 {
+  z-index: 4;
+  overflow: hidden;
+  top: 74%;
+  bottom: 0px;
+}
+.recordingdecorator_RangeSelector_wMeTv {
+  z-index: 4;
+  top: 0%;
+  bottom: 21%;
+}
+.recordingdecorator_SeekScrubber_1x23j {
+  bottom: 0%;
+  z-index: 3;
+}
+.recordingdecorator_PlayHead_3hU0q {
+  z-index: 5;
+  bottom: 0%;
+}
+.recordingdecorator_Thumbnails_3U1E2 {
+  top: 0px;
+  bottom: 0px;
+}
+.recordingdecorator_RecordingDecorator_24zNS {
+  background: linear-gradient(180deg, #144b75 0%, #0172ac 80%);
+  height: 8px;
+  opacity: 1;
+  position: absolute;
+  bottom: 0;
+}
+.clipdecorators_LoadingTimeline_1ZSym {
+  min-height: 54px;
+}
+.clipdecorators_ScrollAndControlsCtn_1q95s {
+  display: flex;
+  flex-direction: column;
+  min-height: 54px;
+}
+.clipdecorators_Controls_z15TY {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  width: min-content;
+  gap: 8px;
+}
+.clipdecorators_TimelineScrollContainer_R0SGd {
+  text-align: end;
+  flex: 1;
+}
+.clipdecorators_TimelineScrollContainer_R0SGd::-webkit-scrollbar-thumb {
+  background-color: #23262e;
+  height: 15px;
+  width: 20px;
+  border: 0px;
+  border-radius: 16px;
+  box-shadow: inset 1px 1px 2px 0px rgba(255, 255, 255, 0.1);
+  cursor: grab;
+}
+.clipdecorators_TimelineScrollContainer_R0SGd::-webkit-scrollbar {
+  background-color: #0e141b;
+  border-radius: 16px;
+  height: 0px;
+  padding: 16px;
+  box-shadow: inset 2px 2px 4px 0px rgba(0, 0, 0, 0.5);
+}
+.clipdecorators_ContentContainer_2XMJZ {
+  display: inline-block;
+  position: relative;
+  height: 54px;
+  box-sizing: content-box;
+}
+.clipdecorators_AbsoluteLayer_3AkqW {
+  position: absolute;
+  width: 100%;
+  pointer-events: none;
+  box-sizing: border-box;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+.clipdecorators_AbsoluteLayer_3AkqW.clipdecorators_HideOverflow_qGvsK {
+  overflow: hidden;
+}
+.clipdecorators_AbsoluteLayer_3AkqW .clipdecorators_RelativeLayer_3zzAf {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+}
+.clipdecorators_AbsoluteLayer_3AkqW
+  .clipdecorators_RelativeLayer_3zzAf.clipdecorators_WithPointerEvents_3z05u {
+  pointer-events: all;
+}
+.clipdecorators_RecordingDecorators_TlW7m {
+  bottom: 25%;
+}
+.clipdecorators_ClipDecorators_2HPd5 {
+  bottom: calc(25% - 4px);
+  z-index: 2;
+}
+.clipdecorators_GameModes_mKXM6 {
+  top: 0%;
+  bottom: 25%;
+}
+.clipdecorators_DateDecorator_1KAHy {
+  overflow: hidden;
+  top: 0%;
+  z-index: 2;
+}
+.clipdecorators_BackgroundTicks_1sDp4 {
+  bottom: 0%;
+  top: 75%;
+}
+.clipdecorators_Highlights_3vFdT {
+  z-index: 4;
+  overflow: hidden;
+  margin-top: 0%;
+  bottom: 25%;
+}
+.clipdecorators_Timestamps_3esOh {
+  z-index: 4;
+  overflow: hidden;
+  top: 74%;
+  bottom: 0px;
+}
+.clipdecorators_RangeSelector_NMfai {
+  z-index: 4;
+  top: 0%;
+  bottom: 21%;
+}
+.clipdecorators_SeekScrubber_3n81R {
+  bottom: 0%;
+  z-index: 3;
+}
+.clipdecorators_PlayHead_1j_4J {
+  z-index: 5;
+  bottom: 0%;
+}
+.clipdecorators_Thumbnails_1a1mk {
+  top: 0px;
+  bottom: 0px;
+}
+.clipdecorators_ClipDecorator_3EWp_ {
+  background: #ffd55faa;
+  height: 4px;
+  opacity: 1;
+  position: absolute;
+  bottom: 0;
+  background-size: 200% 200%;
+  animation: clipdecorators_gradient_3vAWn 2.5s ease infinite;
+}
+@keyframes clipdecorators_gradient_3vAWn {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.gamemodes_LoadingTimeline_ALhsP {
+  min-height: 54px;
+}
+.gamemodes_ScrollAndControlsCtn_5tbL0 {
+  display: flex;
+  flex-direction: column;
+  min-height: 54px;
+}
+.gamemodes_Controls_u1VLC {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  width: min-content;
+  gap: 8px;
+}
+.gamemodes_TimelineScrollContainer_2IbHV {
+  text-align: end;
+  flex: 1;
+}
+.gamemodes_TimelineScrollContainer_2IbHV::-webkit-scrollbar-thumb {
+  background-color: #23262e;
+  height: 15px;
+  width: 20px;
+  border: 0px;
+  border-radius: 16px;
+  box-shadow: inset 1px 1px 2px 0px rgba(255, 255, 255, 0.1);
+  cursor: grab;
+}
+.gamemodes_TimelineScrollContainer_2IbHV::-webkit-scrollbar {
+  background-color: #0e141b;
+  border-radius: 16px;
+  height: 0px;
+  padding: 16px;
+  box-shadow: inset 2px 2px 4px 0px rgba(0, 0, 0, 0.5);
+}
+.gamemodes_ContentContainer_2akKk {
+  display: inline-block;
+  position: relative;
+  height: 54px;
+  box-sizing: content-box;
+}
+.gamemodes_AbsoluteLayer_2e4Hs {
+  position: absolute;
+  width: 100%;
+  pointer-events: none;
+  box-sizing: border-box;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+.gamemodes_AbsoluteLayer_2e4Hs.gamemodes_HideOverflow_2Cp35 {
+  overflow: hidden;
+}
+.gamemodes_AbsoluteLayer_2e4Hs .gamemodes_RelativeLayer_124G2 {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+}
+.gamemodes_AbsoluteLayer_2e4Hs
+  .gamemodes_RelativeLayer_124G2.gamemodes_WithPointerEvents_ZoJ5c {
+  pointer-events: all;
+}
+.gamemodes_RecordingDecorators_1b3xB {
+  bottom: 25%;
+}
+.gamemodes_ClipDecorators_12hX8 {
+  bottom: calc(25% - 4px);
+  z-index: 2;
+}
+.gamemodes_GameModes_1w4EC {
+  top: 0%;
+  bottom: 25%;
+}
+.gamemodes_DateDecorator_2_LxF {
+  overflow: hidden;
+  top: 0%;
+  z-index: 2;
+}
+.gamemodes_BackgroundTicks_1wC4n {
+  bottom: 0%;
+  top: 75%;
+}
+.gamemodes_Highlights_3Mwk0 {
+  z-index: 4;
+  overflow: hidden;
+  margin-top: 0%;
+  bottom: 25%;
+}
+.gamemodes_Timestamps_2_I_T {
+  z-index: 4;
+  overflow: hidden;
+  top: 74%;
+  bottom: 0px;
+}
+.gamemodes_RangeSelector_2509e {
+  z-index: 4;
+  top: 0%;
+  bottom: 21%;
+}
+.gamemodes_SeekScrubber_3Re46 {
+  bottom: 0%;
+  z-index: 3;
+}
+.gamemodes_PlayHead_3BW9N {
+  z-index: 5;
+  bottom: 0%;
+}
+.gamemodes_Thumbnails_3WC2e {
+  top: 0px;
+  bottom: 0px;
+}
+.gamemodes_GameModeMarker__XZRb {
+  position: absolute;
+  bottom: 0;
+  height: 8px;
+  opacity: 0.3;
+}
+.gamemodes_GameModeMarker__XZRb.gamemodes_Playing_1QXuD {
+  background: #ffffff66;
+}
+.gamemodes_GameModeMarker__XZRb.gamemodes_Staging_5elfn {
+  background: repeating-linear-gradient(
+    120deg,
+    #00000088,
+    #00000088 2px,
+    #ffffff88 2px,
+    #ffffff88 4px
+  );
+}
+.gamemodes_GameModeMarker__XZRb.gamemodes_Menus_2ouy5 {
+  background: repeating-linear-gradient(
+    120deg,
+    #000000ee,
+    #000000ee 2px,
+    #00000055 2px,
+    #00000055 4px
+  );
+}
+.gamemodes_GameModeMarker__XZRb.gamemodes_Unspecified_3tV_P {
+  background: #ffffff66;
+}
+.datedecorator_LoadingTimeline_3KG8z {
+  min-height: 54px;
+}
+.datedecorator_ScrollAndControlsCtn_2Ox4l {
+  display: flex;
+  flex-direction: column;
+  min-height: 54px;
+}
+.datedecorator_Controls_1S92s {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  width: min-content;
+  gap: 8px;
+}
+.datedecorator_TimelineScrollContainer_2yvt6 {
+  text-align: end;
+  flex: 1;
+}
+.datedecorator_TimelineScrollContainer_2yvt6::-webkit-scrollbar-thumb {
+  background-color: #23262e;
+  height: 15px;
+  width: 20px;
+  border: 0px;
+  border-radius: 16px;
+  box-shadow: inset 1px 1px 2px 0px rgba(255, 255, 255, 0.1);
+  cursor: grab;
+}
+.datedecorator_TimelineScrollContainer_2yvt6::-webkit-scrollbar {
+  background-color: #0e141b;
+  border-radius: 16px;
+  height: 0px;
+  padding: 16px;
+  box-shadow: inset 2px 2px 4px 0px rgba(0, 0, 0, 0.5);
+}
+.datedecorator_ContentContainer_28oA6 {
+  display: inline-block;
+  position: relative;
+  height: 54px;
+  box-sizing: content-box;
+}
+.datedecorator_AbsoluteLayer_3RYVN {
+  position: absolute;
+  width: 100%;
+  pointer-events: none;
+  box-sizing: border-box;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+.datedecorator_AbsoluteLayer_3RYVN.datedecorator_HideOverflow_1kDYn {
+  overflow: hidden;
+}
+.datedecorator_AbsoluteLayer_3RYVN .datedecorator_RelativeLayer_189IQ {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+}
+.datedecorator_AbsoluteLayer_3RYVN
+  .datedecorator_RelativeLayer_189IQ.datedecorator_WithPointerEvents_V18cw {
+  pointer-events: all;
+}
+.datedecorator_RecordingDecorators_2u47I {
+  bottom: 25%;
+}
+.datedecorator_ClipDecorators_2Lgpd {
+  bottom: calc(25% - 4px);
+  z-index: 2;
+}
+.datedecorator_GameModes_32FUO {
+  top: 0%;
+  bottom: 25%;
+}
+.datedecorator_DateDecorator_3I1C0 {
+  overflow: hidden;
+  top: 0%;
+  z-index: 2;
+}
+.datedecorator_BackgroundTicks_-YJsX {
+  bottom: 0%;
+  top: 75%;
+}
+.datedecorator_Highlights_1YMPr {
+  z-index: 4;
+  overflow: hidden;
+  margin-top: 0%;
+  bottom: 25%;
+}
+.datedecorator_Timestamps_2GK8q {
+  z-index: 4;
+  overflow: hidden;
+  top: 74%;
+  bottom: 0px;
+}
+.datedecorator_RangeSelector_pUP4y {
+  z-index: 4;
+  top: 0%;
+  bottom: 21%;
+}
+.datedecorator_SeekScrubber_4LzfJ {
+  bottom: 0%;
+  z-index: 3;
+}
+.datedecorator_PlayHead_7tgJL {
+  z-index: 5;
+  bottom: 0%;
+}
+.datedecorator_Thumbnails_TulKT {
+  top: 0px;
+  bottom: 0px;
+}
+.datedecorator_TimelineRelativeDate_xYXzi {
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 800;
+  opacity: 1;
+  color: #3d4450;
+  height: fit-content;
+  padding: 0px 2px 2px 0px;
+  margin-left: 0px;
+  margin-top: 8px;
+  position: absolute;
+  bottom: calc(25% + 8px);
+}
+.datedecorator_TimelineRelativeDate_xYXzi.datedecorator_Overlay_c1Fn5 {
+  color: #67707b;
+}
+.datedecorator_TimelineRelativeDate_xYXzi.datedecorator_ManagerView_3sYIn {
+  color: #67707b;
+}
+@keyframes backgroundticks_timelineFadeIn_IXU1z {
+  0%,
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.backgroundticks_LoadingTimeline_JGGVR {
+  min-height: 54px;
+}
+.backgroundticks_ScrollAndControlsCtn_2RzAy {
+  display: flex;
+  flex-direction: column;
+  min-height: 54px;
+}
+.backgroundticks_Controls_HvZN6 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  width: min-content;
+  gap: 8px;
+}
+.backgroundticks_TimelineScrollContainer_1cFVE {
+  text-align: end;
+  flex: 1;
+}
+.backgroundticks_TimelineScrollContainer_1cFVE::-webkit-scrollbar-thumb {
+  background-color: #23262e;
+  height: 15px;
+  width: 20px;
+  border: 0px;
+  border-radius: 16px;
+  box-shadow: inset 1px 1px 2px 0px rgba(255, 255, 255, 0.1);
+  cursor: grab;
+}
+.backgroundticks_TimelineScrollContainer_1cFVE::-webkit-scrollbar {
+  background-color: #0e141b;
+  border-radius: 16px;
+  height: 0px;
+  padding: 16px;
+  box-shadow: inset 2px 2px 4px 0px rgba(0, 0, 0, 0.5);
+}
+.backgroundticks_ContentContainer_3wqjs {
+  display: inline-block;
+  position: relative;
+  height: 54px;
+  box-sizing: content-box;
+}
+.backgroundticks_AbsoluteLayer_1vYBX {
+  position: absolute;
+  width: 100%;
+  pointer-events: none;
+  box-sizing: border-box;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+.backgroundticks_AbsoluteLayer_1vYBX.backgroundticks_HideOverflow_C6chO {
+  overflow: hidden;
+}
+.backgroundticks_AbsoluteLayer_1vYBX .backgroundticks_RelativeLayer_1_XjI {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+}
+.backgroundticks_AbsoluteLayer_1vYBX
+  .backgroundticks_RelativeLayer_1_XjI.backgroundticks_WithPointerEvents_2Grri {
+  pointer-events: all;
+}
+.backgroundticks_RecordingDecorators_T_GKy {
+  bottom: 25%;
+}
+.backgroundticks_ClipDecorators_3jAa3 {
+  bottom: calc(25% - 4px);
+  z-index: 2;
+}
+.backgroundticks_GameModes_z3tCl {
+  top: 0%;
+  bottom: 25%;
+}
+.backgroundticks_DateDecorator_EiFtp {
+  overflow: hidden;
+  top: 0%;
+  z-index: 2;
+}
+.backgroundticks_BackgroundTicks_2abPm {
+  bottom: 0%;
+  top: 75%;
+}
+.backgroundticks_Highlights_2_8rC {
+  z-index: 4;
+  overflow: hidden;
+  margin-top: 0%;
+  bottom: 25%;
+}
+.backgroundticks_Timestamps_1e7MB {
+  z-index: 4;
+  overflow: hidden;
+  top: 74%;
+  bottom: 0px;
+}
+.backgroundticks_RangeSelector_4kLbm {
+  z-index: 4;
+  top: 0%;
+  bottom: 21%;
+}
+.backgroundticks_SeekScrubber_23WuC {
+  bottom: 0%;
+  z-index: 3;
+}
+.backgroundticks_PlayHead_1Zf0U {
+  z-index: 5;
+  bottom: 0%;
+}
+.backgroundticks_Thumbnails_Px56H {
+  top: 0px;
+  bottom: 0px;
+}
+.backgroundticks_TimeTick_faIAh {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  top: 0;
+  justify-content: flex-start;
+}
+.backgroundticks_TimeTick_faIAh .backgroundticks_TickLine_iLLzn {
+  height: 4px;
+  width: 1px;
+  background-color: #3d4450;
+  margin-top: 4px;
+}
+.backgroundticks_TimeTick_faIAh .backgroundticks_Whole_19vpM {
+  background-color: #67707b;
+  width: 2px;
+}
+.backgroundticks_TimeTick_faIAh .backgroundticks_TickStamp_gp_ZR {
+  font-size: 12px;
+  line-height: 10px;
+  font-family: "Roboto Mono", monospace;
+  font-weight: bold;
+  margin-left: 2px;
+  margin-top: 2px;
+  color: #67707b;
+  padding: 0px 4px 0px 0px;
+  position: absolute;
+  bottom: 0;
+}
+.highlights_LoadingTimeline_2i7Ck {
+  min-height: 54px;
+}
+.highlights_ScrollAndControlsCtn_3fITr {
+  display: flex;
+  flex-direction: column;
+  min-height: 54px;
+}
+.highlights_Controls_1EiX3 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  width: min-content;
+  gap: 8px;
+}
+.highlights_TimelineScrollContainer_2RYEV {
+  text-align: end;
+  flex: 1;
+}
+.highlights_TimelineScrollContainer_2RYEV::-webkit-scrollbar-thumb {
+  background-color: #23262e;
+  height: 15px;
+  width: 20px;
+  border: 0px;
+  border-radius: 16px;
+  box-shadow: inset 1px 1px 2px 0px rgba(255, 255, 255, 0.1);
+  cursor: grab;
+}
+.highlights_TimelineScrollContainer_2RYEV::-webkit-scrollbar {
+  background-color: #0e141b;
+  border-radius: 16px;
+  height: 0px;
+  padding: 16px;
+  box-shadow: inset 2px 2px 4px 0px rgba(0, 0, 0, 0.5);
+}
+.highlights_ContentContainer_2lWpy {
+  display: inline-block;
+  position: relative;
+  height: 54px;
+  box-sizing: content-box;
+}
+.highlights_AbsoluteLayer_3wd1J {
+  position: absolute;
+  width: 100%;
+  pointer-events: none;
+  box-sizing: border-box;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+.highlights_AbsoluteLayer_3wd1J.highlights_HideOverflow_2PTM3 {
+  overflow: hidden;
+}
+.highlights_AbsoluteLayer_3wd1J .highlights_RelativeLayer_237IH {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+}
+.highlights_AbsoluteLayer_3wd1J
+  .highlights_RelativeLayer_237IH.highlights_WithPointerEvents_sMhiT {
+  pointer-events: all;
+}
+.highlights_RecordingDecorators_3S9aE {
+  bottom: 25%;
+}
+.highlights_ClipDecorators_3sy9Q {
+  bottom: calc(25% - 4px);
+  z-index: 2;
+}
+.highlights_GameModes_2zfIT {
+  top: 0%;
+  bottom: 25%;
+}
+.highlights_DateDecorator_2ad7Z {
+  overflow: hidden;
+  top: 0%;
+  z-index: 2;
+}
+.highlights_BackgroundTicks_2rdq8 {
+  bottom: 0%;
+  top: 75%;
+}
+.highlights_Highlights_2MKxD {
+  z-index: 4;
+  overflow: hidden;
+  margin-top: 0%;
+  bottom: 25%;
+}
+.highlights_Timestamps_1BmX- {
+  z-index: 4;
+  overflow: hidden;
+  top: 74%;
+  bottom: 0px;
+}
+.highlights_RangeSelector_3Kw_b {
+  z-index: 4;
+  top: 0%;
+  bottom: 21%;
+}
+.highlights_SeekScrubber_lP4qn {
+  bottom: 0%;
+  z-index: 3;
+}
+.highlights_PlayHead_3pAXA {
+  z-index: 5;
+  bottom: 0%;
+}
+.highlights_Thumbnails_26VL6 {
+  top: 0px;
+  bottom: 0px;
+}
+.highlights_RangeCtn_2g7ov {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+.highlights_RangeControls_3UCf1 {
+  height: 12px;
+  bottom: 0;
+  width: 100%;
+  position: absolute;
+}
+.highlights_InactiveRangeCtn_1A1i- {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.highlights_InactiveRangeCtn_1A1i-
+  .highlights_RangeControl_n-rpx
+  .highlights_RangeIcon_1qzKT {
+  color: #3d4450;
+}
+.highlights_RangeSelectorCtn_yhwFH {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: absolute;
+}
+.highlights_RangeSelectorCtn_yhwFH.highlights_Active_1ZTa2 {
+  pointer-events: all;
+}
+.highlights_RangeSelectorCtn_yhwFH
+  .highlights_InactiveSelectedRangeControl_3Vp7Q {
+  display: flex;
+  align-items: center;
+  z-index: 4;
+  height: 100%;
+}
+.highlights_RangeSelectorCtn_yhwFH
+  .highlights_InactiveSelectedRangeControl_3Vp7Q
+  .highlights_SelectedRangeMask_3cQXa {
+  z-index: 4;
+}
+.highlights_RangeSelectorCtn_yhwFH
+  .highlights_InactiveSelectedRangeControl_3Vp7Q
+  .highlights_RangeIcon_1qzKT {
+  pointer-events: all;
+  transition-property: transform, color;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-out;
+}
+.highlights_RangeSelectorCtn_yhwFH
+  .highlights_InactiveSelectedRangeControl_3Vp7Q
+  .highlights_RangeIcon_1qzKT:hover,
+.highlights_RangeSelectorCtn_yhwFH
+  .highlights_InactiveSelectedRangeControl_3Vp7Q
+  .highlights_RangeIcon_1qzKT:active {
+  transform: scale(1.06);
+  color: #ffe088;
+}
+.highlights_HoverRangePreviewCtn_CLcQt {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition-delay: 150ms;
+  transition-property: opacity;
+  transition-duration: 150ms;
+  transition-timing-function: ease-in-out;
+  pointer-events: none;
+}
+.highlights_HoverRangePreviewCtn_CLcQt.highlights_Show_lQq2_ {
+  opacity: 1;
+}
+.highlights_RangePreview_2R661 {
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.highlights_RangePreview_2R661 .highlights_TrackRangeControls_IirGT {
+  pointer-events: none;
+}
+.highlights_RangePreview_2R661
+  .highlights_TrackRangeControls_IirGT
+  .highlights_RangeControl_n-rpx {
+  height: 100%;
+}
+.highlights_RangePreview_2R661
+  .highlights_TrackRangeControls_IirGT
+  .highlights_RangeControl_n-rpx
+  .highlights_RangeIcon_1qzKT {
+  color: #ffd55f;
+}
+.highlights_TrackRangeControls_IirGT {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  bottom: 0;
+  height: 100%;
+}
+.highlights_RangeControl_n-rpx {
+  color: #3d4450;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.highlights_RangeIcon_1qzKT {
+  height: 100%;
+  width: 12px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  color: #ffd55f;
+  cursor: pointer;
+  display: flex;
+  align-items: flex-start;
+  transition-property: background-color;
+  transition-timing-function: ease-in-out;
+}
+.highlights_RangeIcon_1qzKT > svg {
+  height: 100%;
+  width: 12px;
+}
+.highlights_RangeIcon_1qzKT.highlights_Left_1TXvp {
+  margin-left: -12px;
+}
+.highlights_RangeMask_2qCmJ {
+  position: absolute;
+  background-color: #ffd55f;
+  backdrop-filter: blur(8px);
+  opacity: 0.3;
+  height: 100%;
+}
+.highlights_RangeMask_2qCmJ.highlights_FullMask_3QY3m {
+  top: 76%;
+  height: 24%;
+}
+.highlights_RangeSelectionFloatingControls_2xUyo {
+  background-color: #3e3b29;
+  padding: 8px 16px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  border-radius: 3px;
+  width: fit-content;
+  margin: auto;
+}
+.highlights_RangeSelectionFloatingControls_2xUyo
+  .highlights_FloatingControlsButton_3orTd {
+  display: inline-block;
+  font-size: 14px;
+  cursor: pointer;
+  width: 26px;
+  height: 26px;
+}
+.highlights_RangeSelectionFloatingControls_2xUyo
+  .highlights_FloatingControlsButton_3orTd:hover {
+  transform: scale(1.03);
+}
+.highlights_RangeSelectionFloatingControls_2xUyo
+  .highlights_FloatingControlsButton_3orTd
+  > svg {
+  width: 100%;
+  height: 100%;
+  transition-duration: 0.1s;
+  transition-property: color;
+  color: #ffd55f;
+}
+.highlights_RangeSelectionFloatingControls_2xUyo
+  .highlights_FloatingControlsButton_3orTd
+  > svg:hover {
+  color: #fff3d0;
+}
+.highlights_RangeSelectionFloatingControls_2xUyo.highlights_Disabled_2IM9b {
+  visibility: hidden;
+  background-color: #3d4450;
+}
+.highlights_RangeSelectionFloatingControls_2xUyo.highlights_Disabled_2IM9b
+  .highlights_FloatingControlsButton_3orTd {
+  pointer-events: none;
+}
+.highlights_RangeSelectionFloatingControls_2xUyo.highlights_Disabled_2IM9b
+  .highlights_FloatingControlsButton_3orTd
+  > svg {
+  color: #67707b;
+}
+.highlights_LoadingTimeline_2i7Ck {
+  min-height: 54px;
+}
+.highlights_ScrollAndControlsCtn_3fITr {
+  display: flex;
+  flex-direction: column;
+  min-height: 54px;
+}
+.highlights_Controls_1EiX3 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  width: min-content;
+  gap: 8px;
+}
+.highlights_TimelineScrollContainer_2RYEV {
+  text-align: end;
+  flex: 1;
+}
+.highlights_TimelineScrollContainer_2RYEV::-webkit-scrollbar-thumb {
+  background-color: #23262e;
+  height: 15px;
+  width: 20px;
+  border: 0px;
+  border-radius: 16px;
+  box-shadow: inset 1px 1px 2px 0px rgba(255, 255, 255, 0.1);
+  cursor: grab;
+}
+.highlights_TimelineScrollContainer_2RYEV::-webkit-scrollbar {
+  background-color: #0e141b;
+  border-radius: 16px;
+  height: 0px;
+  padding: 16px;
+  box-shadow: inset 2px 2px 4px 0px rgba(0, 0, 0, 0.5);
+}
+.highlights_ContentContainer_2lWpy {
+  display: inline-block;
+  position: relative;
+  height: 54px;
+  box-sizing: content-box;
+}
+.highlights_AbsoluteLayer_3wd1J {
+  position: absolute;
+  width: 100%;
+  pointer-events: none;
+  box-sizing: border-box;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+.highlights_AbsoluteLayer_3wd1J.highlights_HideOverflow_2PTM3 {
+  overflow: hidden;
+}
+.highlights_AbsoluteLayer_3wd1J .highlights_RelativeLayer_237IH {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+}
+.highlights_AbsoluteLayer_3wd1J
+  .highlights_RelativeLayer_237IH.highlights_WithPointerEvents_sMhiT {
+  pointer-events: all;
+}
+.highlights_RecordingDecorators_3S9aE {
+  bottom: 25%;
+}
+.highlights_ClipDecorators_3sy9Q {
+  bottom: calc(25% - 4px);
+  z-index: 2;
+}
+.highlights_GameModes_2zfIT {
+  top: 0%;
+  bottom: 25%;
+}
+.highlights_DateDecorator_2ad7Z {
+  overflow: hidden;
+  top: 0%;
+  z-index: 2;
+}
+.highlights_BackgroundTicks_2rdq8 {
+  bottom: 0%;
+  top: 75%;
+}
+.highlights_Highlights_2MKxD {
+  z-index: 4;
+  overflow: hidden;
+  margin-top: 0%;
+  bottom: 25%;
+}
+.highlights_Timestamps_1BmX- {
+  z-index: 4;
+  overflow: hidden;
+  top: 74%;
+  bottom: 0px;
+}
+.highlights_RangeSelector_3Kw_b {
+  z-index: 4;
+  top: 0%;
+  bottom: 21%;
+}
+.highlights_SeekScrubber_lP4qn {
+  bottom: 0%;
+  z-index: 3;
+}
+.highlights_PlayHead_3pAXA {
+  z-index: 5;
+  bottom: 0%;
+}
+.highlights_Thumbnails_26VL6 {
+  top: 0px;
+  bottom: 0px;
+}
+.highlights_TimelineMarkerCtn_1Dg_c {
+  pointer-events: all;
+  position: absolute;
+  width: fit-content;
+  bottom: 30px;
+}
+.highlights_TimelineMarker_2CNnK {
+  pointer-events: all;
+  width: fit-content;
+  position: unset;
+  filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.4));
+}
+.highlights_TimelineMarkerDropLine_3JsMm {
+  pointer-events: none;
+  position: absolute;
+  width: 1px;
+  height: 8px;
+  background-color: #99d4ff;
+  bottom: 0px;
+}
+.highlights_TimelineMarkerRangeMarker_2f1mn {
+  pointer-events: none;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 69px;
+  border-left: solid 1px;
+  border-left-color: #8b929a;
+  color: #8b929a;
+}
+.highlights_TimelineMarker_2CNnK svg:hover {
+  transform: scale(1.2);
+  transform-origin: center;
+  transition-duration: 0.1s;
+  transition-timing-function: ease-in-out;
+}
+.highlights_TimelineMarker_2CNnK .highlights_ToolTipSource_15ccW {
+  width: 0px;
+}
+.highlights_TimelineMarkerCtn_1Dg_c:hover + .highlights_RangeSelector_3Kw_b {
+  display: block;
+}
+.highlights_RangeSelector_3Kw_b {
+  display: none;
+}
+.highlights_TooltipContainer_1apNe {
+  background: linear-gradient(359.47deg, #181a1d 0.49%, #343a42 99.58%);
+  transition: 0s;
+  box-shadow: 0px 0px 8px #00000088;
+  width: 220px;
+  position: absolute;
+  bottom: 0;
+  transform: translateX(-50%);
+}
+.highlights_TooltipContainer_1apNe .highlights_Timestamp_3kAHy {
+  color: #67707b;
+  padding: 8px;
+  font-size: 12px;
+  display: none;
+}
+.highlights_TooltipContainer_1apNe .highlights_TooltipHighlight_18kbk {
+  padding: 8px 16px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.highlights_TooltipContainer_1apNe
+  .highlights_TooltipHighlight_18kbk
+  .highlights_HighlightIcon_2P16Z {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  margin-left: 8px;
+}
+.highlights_TooltipContainer_1apNe
+  .highlights_TooltipHighlight_18kbk
+  .highlights_HighlightIcon_2P16Z
+  img,
+.highlights_TooltipContainer_1apNe
+  .highlights_TooltipHighlight_18kbk
+  .highlights_HighlightIcon_2P16Z
+  svg {
+  height: 20px;
+  width: 20px;
+  fill: currentColor;
+  color: currentColor;
+  padding-top: 4px;
+}
+.highlights_TooltipContainer_1apNe
+  .highlights_TooltipHighlight_18kbk
+  .highlights_HighlightInfoBlock_1tFIK {
+  color: #b8bcbf;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 0px 4px;
+}
+.highlights_TooltipContainer_1apNe
+  .highlights_TooltipHighlight_18kbk
+  .highlights_HighlightTitle_2PC0c {
+  color: #b8bcbf;
+  padding: 0px 4px;
+  font-size: 14px;
+  font-weight: bold;
+}
+.highlights_TooltipContainer_1apNe
+  .highlights_TooltipHighlight_18kbk
+  .highlights_HighlightDesc_3B9qE {
+  color: #8b929a;
+  padding: 4px;
+  font-size: 12px;
+  font-weight: 400;
+  margin-top: -6px;
+}
+.highlights_TooltipContainer_1apNe .highlights_ThumbnailContainer_2kBbp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.highlights_TooltipContainer_1apNe .highlights_ThumbnailContainer_2kBbp img {
+  margin: auto;
+  width: 100%;
+}
+.partnereventdialog_ErrorStyles_2Sg7W,
+.partnereventdialog_ErrorStylesWithIcon_Lc2PK {
+  color: #c44848;
+}
+.partnereventdialog_ErrorIconLayout_42__6,
+.partnereventdialog_ErrorStylesWithIcon_Lc2PK,
+.partnereventdialog_ErrorStylesBackground_3fVv6 {
+  display: block;
+  padding: 10px;
+  padding-left: 42px;
+  background-image: url("https://community.cloudflare.steamstatic.com/public/images//sharedfiles/icons/icon_warning.png");
+  background-repeat: no-repeat;
+  background-position-x: 10px;
+  background-position-y: 6px;
+}
+.partnereventdialog_ErrorStylesBackground_3fVv6 {
+  background-color: #472025;
+}
+.partnereventdialog_ErrorStylesWithIcon_Lc2PK.partnereventdialog_ErrorFloatBelow_2aKyl {
+  padding: 5px;
+  padding-left: 32px;
+  font-size: 14px;
+  position: absolute;
+  bottom: -5px;
+  background-color: #682d2c;
+  z-index: 1;
+  box-shadow: 2px 2px 5px #000;
+}
+.partnereventdialog_ErrorStyles_2Sg7W > div,
+.partnereventdialog_ErrorStylesWithIcon_Lc2PK > div {
+  display: inline;
+  color: #d78484;
+}
+.partnereventdialog_WarningStyles_3gxgE,
+.partnereventdialog_WarningStylesWithIcon_1S_uS {
+  color: #b8860b;
+}
+.partnereventdialog_WarningIconLayout_2jM80,
+.partnereventdialog_WarningStylesWithIcon_1S_uS,
+.partnereventdialog_WarningStylesBackground_UYrHs {
+  padding: 10px;
+  padding-left: 42px;
+  background-image: url("https://community.cloudflare.steamstatic.com/public/images//sharedfiles/icons/icon_warning.png");
+  background-repeat: no-repeat;
+  background-position-x: 10px;
+  background-position-y: 10px;
+}
+.partnereventdialog_WarningStylesBackground_UYrHs {
+  background-color: #b8860b;
+  color: #fff;
+}
+.partnereventdialog_WarningStylesBackground_UYrHs
+  .partnereventdialog_Stuck_2b5wW {
+  position: sticky;
+  top: 89px;
+  z-index: 1;
+}
+.partnereventdialog_InfoStyles_2lreM,
+.partnereventdialog_InfoStylesWithIcon_1_-Pi {
+  color: #556b2f;
+}
+.partnereventdialog_InfoIconLayout_3kyPz,
+.partnereventdialog_InfoStylesWithIcon_1_-Pi,
+.partnereventdialog_InfoStylesBackground_3gNTI {
+  padding: 10px;
+  padding-left: 42px;
+  background-image: url("https://community.cloudflare.steamstatic.com/public/images//sharedfiles/icons/icon_spoiler_tag.png");
+  background-repeat: no-repeat;
+  background-position-x: 10px;
+  background-position-y: 10px;
+}
+.partnereventdialog_InfoStylesBackground_3gNTI {
+  background-color: #556b2f;
+  color: #fff;
+}
+.partnereventdialog_InfoStylesBackground_3gNTI .partnereventdialog_Stuck_2b5wW {
+  position: sticky;
+  top: 89px;
+  z-index: 1;
+}
+.partnereventdialog_Padding_36hma {
+  padding-top: 10px;
+}
+.ModalPosition_Content .partnereventdialog_NotTooWideModal_UfQcb.DialogContent {
+  width: initial;
+}
+.ModalPosition_Content
+  .partnereventdialog_NotTooWideModal_UfQcb.DialogContent
+  .DialogContent_InnerWidth
+  > form {
+  padding-right: 8px;
+}
+.gamerecordingmarkers_Dummy_2840r {
+  background: hotpink;
+}
+.gamerecordingmarkers_Selected_WvAtV {
+  transform: scale(1.2);
+  filter: brightness(1.5);
+}
+.gamerecordingmarkers_HighlightIcon_3rt1q:hover
+  .gamerecordingmarkers_Selected_WvAtV {
+  transform: scale(1.2);
+}
+.gamerecordingmarkers_CustomMarker_3F_Gf {
+  color: #1a9fff;
+}
+.gamerecordingmarkers_MarkerBacking_1ft3M
+  .gamerecordingmarkers_CustomMarker_3F_Gf {
+  color: currentColor;
+}
+.gamerecordingmarkers_HighlightIcon_3rt1q {
+  position: absolute;
+  color: #dcdedf;
+  overflow: visible;
+}
+.gamerecordingmarkers_HighlightIcon_3rt1q
+  .gamerecordingmarkers_HighlightIconSVG_nt4N5 {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+  color: currentColor;
+}
+.gamerecordingmarkers_HighlightIcon_3rt1q svg,
+.gamerecordingmarkers_HighlightIcon_3rt1q img {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+.gamerecordingmarkers_Faded_3G-TE.gamerecordingmarkers_HighlightIcon_3rt1q {
+  opacity: 25%;
+  z-index: -1;
+}
+.gamerecordingmarkers_MarkerCtn_3W7ba
+  .gamerecordingmarkers_MarkerBacking_1ft3M {
+  filter: blur(2px);
+  color: #000;
+}
+.gamerecordingmarkers_MarkerCtn_3W7ba .gamerecordingmarkers_MarkerElt_2tRcZ {
+  transform: translateX(-50%);
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.timestamps_LoadingTimeline_21-Ha {
+  min-height: 54px;
+}
+.timestamps_ScrollAndControlsCtn_1jHRO {
+  display: flex;
+  flex-direction: column;
+  min-height: 54px;
+}
+.timestamps_Controls_3CBg5 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  width: min-content;
+  gap: 8px;
+}
+.timestamps_TimelineScrollContainer_2o3bu {
+  text-align: end;
+  flex: 1;
+}
+.timestamps_TimelineScrollContainer_2o3bu::-webkit-scrollbar-thumb {
+  background-color: #23262e;
+  height: 15px;
+  width: 20px;
+  border: 0px;
+  border-radius: 16px;
+  box-shadow: inset 1px 1px 2px 0px rgba(255, 255, 255, 0.1);
+  cursor: grab;
+}
+.timestamps_TimelineScrollContainer_2o3bu::-webkit-scrollbar {
+  background-color: #0e141b;
+  border-radius: 16px;
+  height: 0px;
+  padding: 16px;
+  box-shadow: inset 2px 2px 4px 0px rgba(0, 0, 0, 0.5);
+}
+.timestamps_ContentContainer_pUrL4 {
+  display: inline-block;
+  position: relative;
+  height: 54px;
+  box-sizing: content-box;
+}
+.timestamps_AbsoluteLayer_3TaQS {
+  position: absolute;
+  width: 100%;
+  pointer-events: none;
+  box-sizing: border-box;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+.timestamps_AbsoluteLayer_3TaQS.timestamps_HideOverflow_1hfDd {
+  overflow: hidden;
+}
+.timestamps_AbsoluteLayer_3TaQS .timestamps_RelativeLayer_Z5Mve {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+}
+.timestamps_AbsoluteLayer_3TaQS
+  .timestamps_RelativeLayer_Z5Mve.timestamps_WithPointerEvents_2EfVp {
+  pointer-events: all;
+}
+.timestamps_RecordingDecorators_4yZiE {
+  bottom: 25%;
+}
+.timestamps_ClipDecorators_1GWFW {
+  bottom: calc(25% - 4px);
+  z-index: 2;
+}
+.timestamps_GameModes_2JE4V {
+  top: 0%;
+  bottom: 25%;
+}
+.timestamps_DateDecorator_1bxUF {
+  overflow: hidden;
+  top: 0%;
+  z-index: 2;
+}
+.timestamps_BackgroundTicks_3Mx56 {
+  bottom: 0%;
+  top: 75%;
+}
+.timestamps_Highlights_3Mg09 {
+  z-index: 4;
+  overflow: hidden;
+  margin-top: 0%;
+  bottom: 25%;
+}
+.timestamps_Timestamps_3RGsH {
+  z-index: 4;
+  overflow: hidden;
+  top: 74%;
+  bottom: 0px;
+}
+.timestamps_RangeSelector_1JUsB {
+  z-index: 4;
+  top: 0%;
+  bottom: 21%;
+}
+.timestamps_SeekScrubber_3VcmV {
+  bottom: 0%;
+  z-index: 3;
+}
+.timestamps_PlayHead_Cenl5 {
+  z-index: 5;
+  bottom: 0%;
+}
+.timestamps_Thumbnails_25_bJ {
+  top: 0px;
+  bottom: 0px;
+}
+.timestamps_TimelineRelativeTimestampContainer_oPidm {
+  font-size: 14px;
+  opacity: 1;
+  position: absolute;
+  color: #67707b;
+  background: linear-gradient(#26292f00 40%, #26292f 41%, #26292f 100%);
+  padding: 6px 6px 0px 2px;
+  margin-left: -1px;
+  border-left: 1px solid;
+  border-left-color: #67707b;
+}
+.timestamps_TimelineRelativeTimestampContainer_oPidm
+  .timestamps_TimelineRelativeTimestamp_VHnT6 {
+  position: unset;
+  text-align: left;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-right: 4px;
+}
+.mouselistenercontext_MouseListenerContainer_1t81J {
+  height: 100%;
+  width: 100%;
+}
+.rangeselector_LoadingTimeline_15xYd {
+  min-height: 54px;
+}
+.rangeselector_ScrollAndControlsCtn_39WVq {
+  display: flex;
+  flex-direction: column;
+  min-height: 54px;
+}
+.rangeselector_Controls_q39fh {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  width: min-content;
+  gap: 8px;
+}
+.rangeselector_TimelineScrollContainer_2Ns82 {
+  text-align: end;
+  flex: 1;
+}
+.rangeselector_TimelineScrollContainer_2Ns82::-webkit-scrollbar-thumb {
+  background-color: #23262e;
+  height: 15px;
+  width: 20px;
+  border: 0px;
+  border-radius: 16px;
+  box-shadow: inset 1px 1px 2px 0px rgba(255, 255, 255, 0.1);
+  cursor: grab;
+}
+.rangeselector_TimelineScrollContainer_2Ns82::-webkit-scrollbar {
+  background-color: #0e141b;
+  border-radius: 16px;
+  height: 0px;
+  padding: 16px;
+  box-shadow: inset 2px 2px 4px 0px rgba(0, 0, 0, 0.5);
+}
+.rangeselector_ContentContainer_2flM0 {
+  display: inline-block;
+  position: relative;
+  height: 54px;
+  box-sizing: content-box;
+}
+.rangeselector_AbsoluteLayer_hPYov {
+  position: absolute;
+  width: 100%;
+  pointer-events: none;
+  box-sizing: border-box;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+.rangeselector_AbsoluteLayer_hPYov.rangeselector_HideOverflow_zl42_ {
+  overflow: hidden;
+}
+.rangeselector_AbsoluteLayer_hPYov .rangeselector_RelativeLayer_wxj4I {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+}
+.rangeselector_AbsoluteLayer_hPYov
+  .rangeselector_RelativeLayer_wxj4I.rangeselector_WithPointerEvents_2AobD {
+  pointer-events: all;
+}
+.rangeselector_RecordingDecorators_1hCGw {
+  bottom: 25%;
+}
+.rangeselector_ClipDecorators_1d_mX {
+  bottom: calc(25% - 4px);
+  z-index: 2;
+}
+.rangeselector_GameModes_26Bbv {
+  top: 0%;
+  bottom: 25%;
+}
+.rangeselector_DateDecorator_2BqCI {
+  overflow: hidden;
+  top: 0%;
+  z-index: 2;
+}
+.rangeselector_BackgroundTicks_2YoyA {
+  bottom: 0%;
+  top: 75%;
+}
+.rangeselector_Highlights_2hsue {
+  z-index: 4;
+  overflow: hidden;
+  margin-top: 0%;
+  bottom: 25%;
+}
+.rangeselector_Timestamps_3O3iR {
+  z-index: 4;
+  overflow: hidden;
+  top: 74%;
+  bottom: 0px;
+}
+.rangeselector_RangeSelector_2gSg5 {
+  z-index: 4;
+  top: 0%;
+  bottom: 21%;
+}
+.rangeselector_SeekScrubber_sTaCR {
+  bottom: 0%;
+  z-index: 3;
+}
+.rangeselector_PlayHead_3Ra6B {
+  z-index: 5;
+  bottom: 0%;
+}
+.rangeselector_Thumbnails_7KwbB {
+  top: 0px;
+  bottom: 0px;
+}
+.rangeselector_RangeCtn_CpHhu {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+.rangeselector_RangeControls_3TsJz {
+  height: 12px;
+  bottom: 0;
+  width: 100%;
+  position: absolute;
+}
+.rangeselector_InactiveRangeCtn_2VlTh {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.rangeselector_InactiveRangeCtn_2VlTh
+  .rangeselector_RangeControl_106ZA
+  .rangeselector_RangeIcon_DTarG {
+  color: #3d4450;
+}
+.rangeselector_RangeSelectorCtn_2ULjG {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: absolute;
+}
+.rangeselector_RangeSelectorCtn_2ULjG.rangeselector_Active_2bFlc {
+  pointer-events: all;
+}
+.rangeselector_RangeSelectorCtn_2ULjG
+  .rangeselector_InactiveSelectedRangeControl_2uX26 {
+  display: flex;
+  align-items: center;
+  z-index: 4;
+  height: 100%;
+}
+.rangeselector_RangeSelectorCtn_2ULjG
+  .rangeselector_InactiveSelectedRangeControl_2uX26
+  .rangeselector_SelectedRangeMask_2C2hW {
+  z-index: 4;
+}
+.rangeselector_RangeSelectorCtn_2ULjG
+  .rangeselector_InactiveSelectedRangeControl_2uX26
+  .rangeselector_RangeIcon_DTarG {
+  pointer-events: all;
+  transition-property: transform, color;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-out;
+}
+.rangeselector_RangeSelectorCtn_2ULjG
+  .rangeselector_InactiveSelectedRangeControl_2uX26
+  .rangeselector_RangeIcon_DTarG:hover,
+.rangeselector_RangeSelectorCtn_2ULjG
+  .rangeselector_InactiveSelectedRangeControl_2uX26
+  .rangeselector_RangeIcon_DTarG:active {
+  transform: scale(1.06);
+  color: #ffe088;
+}
+.rangeselector_HoverRangePreviewCtn_2oITQ {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition-delay: 150ms;
+  transition-property: opacity;
+  transition-duration: 150ms;
+  transition-timing-function: ease-in-out;
+  pointer-events: none;
+}
+.rangeselector_HoverRangePreviewCtn_2oITQ.rangeselector_Show_1cEhZ {
+  opacity: 1;
+}
+.rangeselector_RangePreview_1Y3hz {
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.rangeselector_RangePreview_1Y3hz .rangeselector_TrackRangeControls_1xinh {
+  pointer-events: none;
+}
+.rangeselector_RangePreview_1Y3hz
+  .rangeselector_TrackRangeControls_1xinh
+  .rangeselector_RangeControl_106ZA {
+  height: 100%;
+}
+.rangeselector_RangePreview_1Y3hz
+  .rangeselector_TrackRangeControls_1xinh
+  .rangeselector_RangeControl_106ZA
+  .rangeselector_RangeIcon_DTarG {
+  color: #ffd55f;
+}
+.rangeselector_TrackRangeControls_1xinh {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  bottom: 0;
+  height: 100%;
+}
+.rangeselector_RangeControl_106ZA {
+  color: #3d4450;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.rangeselector_RangeIcon_DTarG {
+  height: 100%;
+  width: 12px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  color: #ffd55f;
+  cursor: pointer;
+  display: flex;
+  align-items: flex-start;
+  transition-property: background-color;
+  transition-timing-function: ease-in-out;
+}
+.rangeselector_RangeIcon_DTarG > svg {
+  height: 100%;
+  width: 12px;
+}
+.rangeselector_RangeIcon_DTarG.rangeselector_Left_1D8O6 {
+  margin-left: -12px;
+}
+.rangeselector_RangeMask_1SW3y {
+  position: absolute;
+  background-color: #ffd55f;
+  backdrop-filter: blur(8px);
+  opacity: 0.3;
+  height: 100%;
+}
+.rangeselector_RangeMask_1SW3y.rangeselector_FullMask_HBfBm {
+  top: 76%;
+  height: 24%;
+}
+.rangeselector_RangeSelectionFloatingControls_hUFNS {
+  background-color: #3e3b29;
+  padding: 8px 16px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  border-radius: 3px;
+  width: fit-content;
+  margin: auto;
+}
+.rangeselector_RangeSelectionFloatingControls_hUFNS
+  .rangeselector_FloatingControlsButton_3uvBm {
+  display: inline-block;
+  font-size: 14px;
+  cursor: pointer;
+  width: 26px;
+  height: 26px;
+}
+.rangeselector_RangeSelectionFloatingControls_hUFNS
+  .rangeselector_FloatingControlsButton_3uvBm:hover {
+  transform: scale(1.03);
+}
+.rangeselector_RangeSelectionFloatingControls_hUFNS
+  .rangeselector_FloatingControlsButton_3uvBm
+  > svg {
+  width: 100%;
+  height: 100%;
+  transition-duration: 0.1s;
+  transition-property: color;
+  color: #ffd55f;
+}
+.rangeselector_RangeSelectionFloatingControls_hUFNS
+  .rangeselector_FloatingControlsButton_3uvBm
+  > svg:hover {
+  color: #fff3d0;
+}
+.rangeselector_RangeSelectionFloatingControls_hUFNS.rangeselector_Disabled_2HMQH {
+  visibility: hidden;
+  background-color: #3d4450;
+}
+.rangeselector_RangeSelectionFloatingControls_hUFNS.rangeselector_Disabled_2HMQH
+  .rangeselector_FloatingControlsButton_3uvBm {
+  pointer-events: none;
+}
+.rangeselector_RangeSelectionFloatingControls_hUFNS.rangeselector_Disabled_2HMQH
+  .rangeselector_FloatingControlsButton_3uvBm
+  > svg {
+  color: #67707b;
+}
+.timelinecontextmenu_MenuItem_1wPm9 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.timelinecontextmenu_MenuItem_1wPm9 > svg {
+  height: 16px;
+  width: 16px;
+}
+.timelinecontextmenu_MenuItem_1wPm9.timelinecontextmenu_AddUserMarker_3VSFd
+  > svg {
+  color: #1a9fff;
+}
+.timelinecontextmenu_MenuItem_1wPm9.timelinecontextmenu_StartEndClip_1eb1c {
+  color: #ffd55f;
+}
+.seekscrubber_LoadingTimeline_3Tmq4 {
+  min-height: 54px;
+}
+.seekscrubber_ScrollAndControlsCtn_2zSlR {
+  display: flex;
+  flex-direction: column;
+  min-height: 54px;
+}
+.seekscrubber_Controls_3Sigu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  width: min-content;
+  gap: 8px;
+}
+.seekscrubber_TimelineScrollContainer_36TGe {
+  text-align: end;
+  flex: 1;
+}
+.seekscrubber_TimelineScrollContainer_36TGe::-webkit-scrollbar-thumb {
+  background-color: #23262e;
+  height: 15px;
+  width: 20px;
+  border: 0px;
+  border-radius: 16px;
+  box-shadow: inset 1px 1px 2px 0px rgba(255, 255, 255, 0.1);
+  cursor: grab;
+}
+.seekscrubber_TimelineScrollContainer_36TGe::-webkit-scrollbar {
+  background-color: #0e141b;
+  border-radius: 16px;
+  height: 0px;
+  padding: 16px;
+  box-shadow: inset 2px 2px 4px 0px rgba(0, 0, 0, 0.5);
+}
+.seekscrubber_ContentContainer_2mJpX {
+  display: inline-block;
+  position: relative;
+  height: 54px;
+  box-sizing: content-box;
+}
+.seekscrubber_AbsoluteLayer_1hyNg {
+  position: absolute;
+  width: 100%;
+  pointer-events: none;
+  box-sizing: border-box;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+.seekscrubber_AbsoluteLayer_1hyNg.seekscrubber_HideOverflow_1IkW2 {
+  overflow: hidden;
+}
+.seekscrubber_AbsoluteLayer_1hyNg .seekscrubber_RelativeLayer_1RLJo {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+}
+.seekscrubber_AbsoluteLayer_1hyNg
+  .seekscrubber_RelativeLayer_1RLJo.seekscrubber_WithPointerEvents_1o2r- {
+  pointer-events: all;
+}
+.seekscrubber_RecordingDecorators_2qcUY {
+  bottom: 25%;
+}
+.seekscrubber_ClipDecorators_3qqUO {
+  bottom: calc(25% - 4px);
+  z-index: 2;
+}
+.seekscrubber_GameModes_2K3UB {
+  top: 0%;
+  bottom: 25%;
+}
+.seekscrubber_DateDecorator_2BEmr {
+  overflow: hidden;
+  top: 0%;
+  z-index: 2;
+}
+.seekscrubber_BackgroundTicks_WbVOg {
+  bottom: 0%;
+  top: 75%;
+}
+.seekscrubber_Highlights_2nvnM {
+  z-index: 4;
+  overflow: hidden;
+  margin-top: 0%;
+  bottom: 25%;
+}
+.seekscrubber_Timestamps_R3B96 {
+  z-index: 4;
+  overflow: hidden;
+  top: 74%;
+  bottom: 0px;
+}
+.seekscrubber_RangeSelector_3DWye {
+  z-index: 4;
+  top: 0%;
+  bottom: 21%;
+}
+.seekscrubber_SeekScrubber_2wVY5 {
+  bottom: 0%;
+  z-index: 3;
+}
+.seekscrubber_PlayHead_3knz_ {
+  z-index: 5;
+  bottom: 0%;
+}
+.seekscrubber_Thumbnails_JjnuX {
+  top: 0px;
+  bottom: 0px;
+}
+.seekscrubber_PlayheadInteractionCtn_cxkAk {
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+}
+.seekscrubber_PlayheadInteractionCtn_cxkAk.seekscrubber_ActiveCtn_3HMQw {
+  pointer-events: all;
+}
+.seekscrubber_PlayHeadContainer_3Fg3B {
+  position: absolute;
+  width: fit-content;
+  bottom: -4px;
+}
+.seekscrubber_PlayHeadContainer_3Fg3B.seekscrubber_Active_G8XiK {
+  color: #1a9fff;
+}
+.seekscrubber_PlayHeadContainer_3Fg3B.seekscrubber_Active_G8XiK
+  .seekscrubber_PlayHeadContent_t2rs7 {
+  color: #1a9fff;
+}
+.seekscrubber_PlayHeadContainer_3Fg3B.seekscrubber_Active_G8XiK
+  .seekscrubber_PlayHeadContent_t2rs7
+  .seekscrubber_PlayHeadCurrentTimeContainer_1BM_Z {
+  background-color: #1a9fff;
+  color: #fff;
+}
+.seekscrubber_PlayHeadContainer_3Fg3B .seekscrubber_PlayHeadContent_t2rs7 {
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  color: #fff;
+  display: none;
+}
+.seekscrubber_PlayHeadContainer_3Fg3B
+  .seekscrubber_PlayHeadContent_t2rs7.seekscrubber_Show_2rHDn {
+  display: flex;
+}
+.seekscrubber_PlayHeadContainer_3Fg3B
+  .seekscrubber_PlayHeadContent_t2rs7
+  .seekscrubber_PlayHead_3knz_ {
+  pointer-events: all;
+  cursor: col-resize;
+}
+@keyframes seekscrubber_timelineFadeIn_n3gsk {
+  0%,
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.seekscrubber_LoadingTimeline_3Tmq4 {
+  min-height: 54px;
+}
+.seekscrubber_ScrollAndControlsCtn_2zSlR {
+  display: flex;
+  flex-direction: column;
+  min-height: 54px;
+}
+.seekscrubber_Controls_3Sigu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  width: min-content;
+  gap: 8px;
+}
+.seekscrubber_TimelineScrollContainer_36TGe {
+  text-align: end;
+  flex: 1;
+}
+.seekscrubber_TimelineScrollContainer_36TGe::-webkit-scrollbar-thumb {
+  background-color: #23262e;
+  height: 15px;
+  width: 20px;
+  border: 0px;
+  border-radius: 16px;
+  box-shadow: inset 1px 1px 2px 0px rgba(255, 255, 255, 0.1);
+  cursor: grab;
+}
+.seekscrubber_TimelineScrollContainer_36TGe::-webkit-scrollbar {
+  background-color: #0e141b;
+  border-radius: 16px;
+  height: 0px;
+  padding: 16px;
+  box-shadow: inset 2px 2px 4px 0px rgba(0, 0, 0, 0.5);
+}
+.seekscrubber_ContentContainer_2mJpX {
+  display: inline-block;
+  position: relative;
+  height: 54px;
+  box-sizing: content-box;
+}
+.seekscrubber_AbsoluteLayer_1hyNg {
+  position: absolute;
+  width: 100%;
+  pointer-events: none;
+  box-sizing: border-box;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+.seekscrubber_AbsoluteLayer_1hyNg.seekscrubber_HideOverflow_1IkW2 {
+  overflow: hidden;
+}
+.seekscrubber_AbsoluteLayer_1hyNg .seekscrubber_RelativeLayer_1RLJo {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+}
+.seekscrubber_AbsoluteLayer_1hyNg
+  .seekscrubber_RelativeLayer_1RLJo.seekscrubber_WithPointerEvents_1o2r- {
+  pointer-events: all;
+}
+.seekscrubber_RecordingDecorators_2qcUY {
+  bottom: 25%;
+}
+.seekscrubber_ClipDecorators_3qqUO {
+  bottom: calc(25% - 4px);
+  z-index: 2;
+}
+.seekscrubber_GameModes_2K3UB {
+  top: 0%;
+  bottom: 25%;
+}
+.seekscrubber_DateDecorator_2BEmr {
+  overflow: hidden;
+  top: 0%;
+  z-index: 2;
+}
+.seekscrubber_BackgroundTicks_WbVOg {
+  bottom: 0%;
+  top: 75%;
+}
+.seekscrubber_Highlights_2nvnM {
+  z-index: 4;
+  overflow: hidden;
+  margin-top: 0%;
+  bottom: 25%;
+}
+.seekscrubber_Timestamps_R3B96 {
+  z-index: 4;
+  overflow: hidden;
+  top: 74%;
+  bottom: 0px;
+}
+.seekscrubber_RangeSelector_3DWye {
+  z-index: 4;
+  top: 0%;
+  bottom: 21%;
+}
+.seekscrubber_SeekScrubber_2wVY5 {
+  bottom: 0%;
+  z-index: 3;
+}
+.seekscrubber_PlayHead_3knz_ {
+  z-index: 5;
+  bottom: 0%;
+}
+.seekscrubber_Thumbnails_JjnuX {
+  top: 0px;
+  bottom: 0px;
+}
+.seekscrubber_RangeCtn_2Xv5L {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+.seekscrubber_RangeControls_2ylJ7 {
+  height: 12px;
+  bottom: 0;
+  width: 100%;
+  position: absolute;
+}
+.seekscrubber_InactiveRangeCtn_Fuvz5 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.seekscrubber_InactiveRangeCtn_Fuvz5
+  .seekscrubber_RangeControl_3Z9hk
+  .seekscrubber_RangeIcon_3H1CU {
+  color: #3d4450;
+}
+.seekscrubber_RangeSelectorCtn_35GmR {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: absolute;
+}
+.seekscrubber_RangeSelectorCtn_35GmR.seekscrubber_Active_G8XiK {
+  pointer-events: all;
+}
+.seekscrubber_RangeSelectorCtn_35GmR
+  .seekscrubber_InactiveSelectedRangeControl__bKQM {
+  display: flex;
+  align-items: center;
+  z-index: 4;
+  height: 100%;
+}
+.seekscrubber_RangeSelectorCtn_35GmR
+  .seekscrubber_InactiveSelectedRangeControl__bKQM
+  .seekscrubber_SelectedRangeMask_3PO0l {
+  z-index: 4;
+}
+.seekscrubber_RangeSelectorCtn_35GmR
+  .seekscrubber_InactiveSelectedRangeControl__bKQM
+  .seekscrubber_RangeIcon_3H1CU {
+  pointer-events: all;
+  transition-property: transform, color;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-out;
+}
+.seekscrubber_RangeSelectorCtn_35GmR
+  .seekscrubber_InactiveSelectedRangeControl__bKQM
+  .seekscrubber_RangeIcon_3H1CU:hover,
+.seekscrubber_RangeSelectorCtn_35GmR
+  .seekscrubber_InactiveSelectedRangeControl__bKQM
+  .seekscrubber_RangeIcon_3H1CU:active {
+  transform: scale(1.06);
+  color: #ffe088;
+}
+.seekscrubber_HoverRangePreviewCtn_1useo {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition-delay: 150ms;
+  transition-property: opacity;
+  transition-duration: 150ms;
+  transition-timing-function: ease-in-out;
+  pointer-events: none;
+}
+.seekscrubber_HoverRangePreviewCtn_1useo.seekscrubber_Show_2rHDn {
+  opacity: 1;
+}
+.seekscrubber_RangePreview_mOuyd {
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.seekscrubber_RangePreview_mOuyd .seekscrubber_TrackRangeControls_23YDd {
+  pointer-events: none;
+}
+.seekscrubber_RangePreview_mOuyd
+  .seekscrubber_TrackRangeControls_23YDd
+  .seekscrubber_RangeControl_3Z9hk {
+  height: 100%;
+}
+.seekscrubber_RangePreview_mOuyd
+  .seekscrubber_TrackRangeControls_23YDd
+  .seekscrubber_RangeControl_3Z9hk
+  .seekscrubber_RangeIcon_3H1CU {
+  color: #ffd55f;
+}
+.seekscrubber_TrackRangeControls_23YDd {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  bottom: 0;
+  height: 100%;
+}
+.seekscrubber_RangeControl_3Z9hk {
+  color: #3d4450;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.seekscrubber_RangeIcon_3H1CU {
+  height: 100%;
+  width: 12px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  color: #ffd55f;
+  cursor: pointer;
+  display: flex;
+  align-items: flex-start;
+  transition-property: background-color;
+  transition-timing-function: ease-in-out;
+}
+.seekscrubber_RangeIcon_3H1CU > svg {
+  height: 100%;
+  width: 12px;
+}
+.seekscrubber_RangeIcon_3H1CU.seekscrubber_Left_20JKa {
+  margin-left: -12px;
+}
+.seekscrubber_RangeMask_Cr2Md {
+  position: absolute;
+  background-color: #ffd55f;
+  backdrop-filter: blur(8px);
+  opacity: 0.3;
+  height: 100%;
+}
+.seekscrubber_RangeMask_Cr2Md.seekscrubber_FullMask_3qoMx {
+  top: 76%;
+  height: 24%;
+}
+.seekscrubber_RangeSelectionFloatingControls_w3q4r {
+  background-color: #3e3b29;
+  padding: 8px 16px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  border-radius: 3px;
+  width: fit-content;
+  margin: auto;
+}
+.seekscrubber_RangeSelectionFloatingControls_w3q4r
+  .seekscrubber_FloatingControlsButton_27wUl {
+  display: inline-block;
+  font-size: 14px;
+  cursor: pointer;
+  width: 26px;
+  height: 26px;
+}
+.seekscrubber_RangeSelectionFloatingControls_w3q4r
+  .seekscrubber_FloatingControlsButton_27wUl:hover {
+  transform: scale(1.03);
+}
+.seekscrubber_RangeSelectionFloatingControls_w3q4r
+  .seekscrubber_FloatingControlsButton_27wUl
+  > svg {
+  width: 100%;
+  height: 100%;
+  transition-duration: 0.1s;
+  transition-property: color;
+  color: #ffd55f;
+}
+.seekscrubber_RangeSelectionFloatingControls_w3q4r
+  .seekscrubber_FloatingControlsButton_27wUl
+  > svg:hover {
+  color: #fff3d0;
+}
+.seekscrubber_RangeSelectionFloatingControls_w3q4r.seekscrubber_Disabled_2-Zoa {
+  visibility: hidden;
+  background-color: #3d4450;
+}
+.seekscrubber_RangeSelectionFloatingControls_w3q4r.seekscrubber_Disabled_2-Zoa
+  .seekscrubber_FloatingControlsButton_27wUl {
+  pointer-events: none;
+}
+.seekscrubber_RangeSelectionFloatingControls_w3q4r.seekscrubber_Disabled_2-Zoa
+  .seekscrubber_FloatingControlsButton_27wUl
+  > svg {
+  color: #67707b;
+}
+.seekscrubber_ZoomRangePreview_1PQ22 {
+  pointer-events: all;
+  opacity: 0;
+  height: 35%;
+  left: 0;
+  width: 100%;
+  cursor: pointer;
+  transition-delay: 150ms;
+  transition-property: opacity, box-shadow;
+  transition-duration: 150ms;
+  transition-timing-function: ease-in-out;
+}
+.seekscrubber_ZoomRangePreview_1PQ22.seekscrubber_Hidden_2YByD {
+  opacity: 0;
+  pointer-events: none;
+}
+.seekscrubber_ZoomRangePreview_1PQ22:hover {
+  opacity: 0.5;
+}
+.seekscrubber_GhostPlayheadCtn_2QEZw {
+  width: fit-content;
+  position: absolute;
+  bottom: 6px;
+  pointer-events: auto;
+}
+.seekscrubber_GhostPlayheadContent_2-Dqj {
+  display: flex;
+  bottom: 0;
+}
+.seekscrubber_GhostPlayhead_1NsKS {
+  opacity: 0.5;
+  margin-right: 50%;
+}
+.seekscrubber_GhostPlayheadTooltip_2n0UV {
+  position: absolute;
+  bottom: 0;
+  margin-right: 50%;
+  background-color: none;
+  min-width: 200px;
+  box-shadow: 0px 0px 8px #00000088;
+  transform: translateX(-50%);
+}
+.seekscrubber_SeekTimeContainer_110qg {
+  position: absolute;
+  width: fit-content;
+  top: 0;
+  background-color: #3d4450;
+  color: #fff;
+  transform: translateX(-45%);
+  left: 0;
+  padding: 3px 8px 2px 8px;
+  font-size: 12px;
+  font-family: "Roboto Mono", monospace;
+}
+.playhead_PlayheadInteractionCtn_3_VTf {
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+}
+.playhead_PlayheadInteractionCtn_3_VTf.playhead_ActiveCtn_2bsFx {
+  pointer-events: all;
+}
+.playhead_PlayHeadContainer_2Rtcu {
+  position: absolute;
+  width: fit-content;
+  bottom: -4px;
+}
+.playhead_PlayHeadContainer_2Rtcu.playhead_Active_3N6L2 {
+  color: #1a9fff;
+}
+.playhead_PlayHeadContainer_2Rtcu.playhead_Active_3N6L2
+  .playhead_PlayHeadContent_1zm_a {
+  color: #1a9fff;
+}
+.playhead_PlayHeadContainer_2Rtcu.playhead_Active_3N6L2
+  .playhead_PlayHeadContent_1zm_a
+  .playhead_PlayHeadCurrentTimeContainer_38jg4 {
+  background-color: #1a9fff;
+  color: #fff;
+}
+.playhead_PlayHeadContainer_2Rtcu .playhead_PlayHeadContent_1zm_a {
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  color: #fff;
+  display: none;
+}
+.playhead_PlayHeadContainer_2Rtcu
+  .playhead_PlayHeadContent_1zm_a.playhead_Show_33Pe- {
+  display: flex;
+}
+.playhead_PlayHeadContainer_2Rtcu
+  .playhead_PlayHeadContent_1zm_a
+  .playhead_PlayHead_NAXFU {
+  pointer-events: all;
+  cursor: col-resize;
 }
 .managefriends_Heading_3kTQI {
   font-size: 17px;

@@ -13,7 +13,7 @@
       t.d(r, { $n: () => F, IX: () => B, _B: () => d });
       var i = t(59),
         a = t(9087),
-        n = t(8722);
+        n = t(1952);
       const s = i.Message;
       class l extends s {
         static ImplementsStaticInterface() {}
@@ -1097,7 +1097,7 @@
     5017: (e, r, t) => {
       var i = t(59),
         a = t(9087),
-        n = t(8722);
+        n = t(1952);
       const s = i.Message;
       class l extends s {
         static ImplementsStaticInterface() {}
@@ -1900,16 +1900,42 @@
       class _ extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
-          super(), s.initialize(this, e, 0, -1, void 0, null);
+          super(),
+            _.prototype.invite_id || a.aR(_.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  invite_id: {
+                    n: 1,
+                    br: a.FE.readUint64String,
+                    bw: a.Xc.writeUint64String,
+                  },
+                  two_factor_method: {
+                    n: 2,
+                    br: a.FE.readEnum,
+                    bw: a.Xc.writeEnum,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = a.Bh(_.M())), _.sm_mbf;
         }
         toObject(e = !1) {
           return _.toObject(e, this);
         }
         static toObject(e, r) {
-          return e ? { $jspbMessageInstance: r } : {};
+          return a.TA(_.M(), e, r);
         }
         static fromObject(e) {
-          return new _();
+          return a.aD(_.M(), e);
         }
         static deserializeBinary(e) {
           let r = new i.BinaryReader(e),
@@ -1917,13 +1943,15 @@
           return _.deserializeBinaryFromReader(t, r);
         }
         static deserializeBinaryFromReader(e, r) {
-          return e;
+          return a.F(_.MBF(), e, r);
         }
         serializeBinary() {
           var e = new i.BinaryWriter();
           return _.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
-        static serializeBinaryToWriter(e, r) {}
+        static serializeBinaryToWriter(e, r) {
+          a.l2(_.M(), e, r);
+        }
         serializeBase64String() {
           var e = new i.BinaryWriter();
           return _.serializeBinaryToWriter(this, e), e.getResultBase64String();
@@ -1947,6 +1975,11 @@
                 fields: {
                   family_groupid: {
                     n: 1,
+                    br: a.FE.readUint64String,
+                    bw: a.Xc.writeUint64String,
+                  },
+                  nonce: {
+                    n: 2,
                     br: a.FE.readUint64String,
                     bw: a.Xc.writeUint64String,
                   },
@@ -1993,16 +2026,37 @@
       class F extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
-          super(), s.initialize(this, e, 0, -1, void 0, null);
+          super(),
+            F.prototype.two_factor_method || a.aR(F.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            F.sm_m ||
+              (F.sm_m = {
+                proto: F,
+                fields: {
+                  two_factor_method: {
+                    n: 2,
+                    br: a.FE.readEnum,
+                    bw: a.Xc.writeEnum,
+                  },
+                },
+              }),
+            F.sm_m
+          );
+        }
+        static MBF() {
+          return F.sm_mbf || (F.sm_mbf = a.Bh(F.M())), F.sm_mbf;
         }
         toObject(e = !1) {
           return F.toObject(e, this);
         }
         static toObject(e, r) {
-          return e ? { $jspbMessageInstance: r } : {};
+          return a.TA(F.M(), e, r);
         }
         static fromObject(e) {
-          return new F();
+          return a.aD(F.M(), e);
         }
         static deserializeBinary(e) {
           let r = new i.BinaryReader(e),
@@ -2010,13 +2064,15 @@
           return F.deserializeBinaryFromReader(t, r);
         }
         static deserializeBinaryFromReader(e, r) {
-          return e;
+          return a.F(F.MBF(), e, r);
         }
         serializeBinary() {
           var e = new i.BinaryWriter();
           return F.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
-        static serializeBinaryToWriter(e, r) {}
+        static serializeBinaryToWriter(e, r) {
+          a.l2(F.M(), e, r);
+        }
         serializeBase64String() {
           var e = new i.BinaryWriter();
           return F.serializeBinaryToWriter(this, e), e.getResultBase64String();
@@ -3635,7 +3691,6 @@
                     br: a.FE.readBool,
                     bw: a.Xc.writeBool,
                   },
-                  include_free: { n: 4, br: a.FE.readBool, bw: a.Xc.writeBool },
                   language: { n: 5, br: a.FE.readString, bw: a.Xc.writeString },
                   max_apps: { n: 6, br: a.FE.readUint32, bw: a.Xc.writeUint32 },
                 },
@@ -3752,7 +3807,6 @@
                     pbr: a.FE.readPackedFixed64String,
                     bw: a.Xc.writeRepeatedFixed64String,
                   },
-                  free_app: { n: 5, br: a.FE.readBool, bw: a.Xc.writeBool },
                   name: { n: 6, br: a.FE.readString, bw: a.Xc.writeString },
                   sort_as: { n: 7, br: a.FE.readString, bw: a.Xc.writeString },
                   capsule_filename: {
@@ -4308,7 +4362,7 @@
       });
       var i = t(59),
         a = t(9087),
-        n = t(8722);
+        n = t(1952);
       const s = i.Message;
       class l extends s {
         static ImplementsStaticInterface() {}
@@ -5153,7 +5207,7 @@
       t.d(r, { LD: () => F, RR: () => g, pR: () => K });
       var i = t(59),
         a = t(9087),
-        n = t(8722);
+        n = t(1952);
       const s = i.Message;
       class l extends s {
         static ImplementsStaticInterface() {}
@@ -7709,7 +7763,7 @@
     5516: (e, r, t) => {
       var i = t(59),
         a = t(9087),
-        n = t(8722);
+        n = t(1952);
       const s = i.Message;
       class l extends s {
         static ImplementsStaticInterface() {}

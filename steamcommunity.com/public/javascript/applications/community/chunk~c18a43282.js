@@ -294,6 +294,7 @@
         SaleOuterContainer: "partnersaledisplay_SaleOuterContainer_3FwA4",
         CustomStyle_together: "partnersaledisplay_CustomStyle_together_uGPz3",
         SalePageLogoSet: "partnersaledisplay_SalePageLogoSet_3Od0-",
+        SaleNewSizing: "partnersaledisplay_SaleNewSizing_20BNh",
         SaleBackground: "partnersaledisplay_SaleBackground_dmyDb",
         SaleSectionTitleCtn: "partnersaledisplay_SaleSectionTitleCtn_15zSJ",
         SaleSectionSubtext: "partnersaledisplay_SaleSectionSubtext_1BNUj",
@@ -538,6 +539,8 @@
         "./ar-ly.js": 45801,
         "./ar-ma": 64784,
         "./ar-ma.js": 64784,
+        "./ar-ps": 86701,
+        "./ar-ps.js": 86701,
         "./ar-sa": 59050,
         "./ar-sa.js": 59050,
         "./ar-tn": 62042,
@@ -672,6 +675,8 @@
         "./ko": 65508,
         "./ko.js": 65508,
         "./ku": 18195,
+        "./ku-kmr": 53905,
+        "./ku-kmr.js": 53905,
         "./ku.js": 18195,
         "./ky": 83971,
         "./ky.js": 83971,
@@ -820,7 +825,7 @@
       "use strict";
       a.d(t, { bt: () => d, hF: () => c, z: () => m });
       var n = a(47427),
-        r = a(28347),
+        r = a(31421),
         i = a(13499),
         s = a(37563),
         o = a(43090);
@@ -1859,7 +1864,7 @@
               localized_sale_logo: new Array(31),
               sale_font: "",
               sale_background_color: "",
-              sale_header_offset: 150,
+              sale_header_offset: 530,
               referenced_appids: [],
             },
             o.Y,
@@ -6518,7 +6523,7 @@
     },
     77151: (e, t, a) => {
       "use strict";
-      a.d(t, { AR: () => n, LA: () => _, jg: () => p });
+      a.d(t, { AR: () => n, LA: () => h, jg: () => _ });
       var n,
         r = a(85556),
         i = a(80751),
@@ -6539,8 +6544,19 @@
           (e[(e.SteamDeckNeptune = 7)] = "SteamDeckNeptune"),
           (e[(e.SteamDeckGalileo = 8)] = "SteamDeckGalileo");
       })(n || (n = {}));
-      const u = "unUserdataVersion";
-      class p {
+      const u = {
+          any_controller: n.AnyController,
+          xbox_controller: n.XboxController,
+          ps3_controller: n.Ps3Controller,
+          ps4_controller: n.Ps4Controller,
+          ps5_controller: n.Ps5Controller,
+          switch_controller: n.SwitchController,
+          steam_controller: n.SteamController,
+          steam_deck_neptune: n.SteamDeckNeptune,
+          steam_deck_galileo: n.SteamDeckGalileo,
+        },
+        p = "unUserdataVersion";
+      class _ {
         BIsLoaded() {
           return this.m_bIsLoaded;
         }
@@ -6684,7 +6700,7 @@
         }
         InternalLoad() {
           return (0, r.mG)(this, void 0, void 0, function* () {
-            let e = window.localStorage.getItem(u) || "0",
+            let e = window.localStorage.getItem(p) || "0",
               t = {
                 v: "0" == e ? void 0 : e,
                 id: "" + d.L7.accountid,
@@ -6792,25 +6808,11 @@
                         0 === e.data.rgCurations[t][n] && a.push(Number(n));
                       this.m_mapRecommendingCuratorsForApp.set(Number(t), a);
                     }
-                  e.data.hardwareUsed &&
-                    (e.data.hardwareUsed.any_controller &&
-                      this.m_rgHardwareUsed.add(n.AnyController),
-                    e.data.hardwareUsed.xbox_controller &&
-                      this.m_rgHardwareUsed.add(n.XboxController),
-                    e.data.hardwareUsed.ps3_controller &&
-                      this.m_rgHardwareUsed.add(n.Ps3Controller),
-                    e.data.hardwareUsed.ps4_controller &&
-                      this.m_rgHardwareUsed.add(n.Ps4Controller),
-                    e.data.hardwareUsed.ps5_controller &&
-                      this.m_rgHardwareUsed.add(n.Ps5Controller),
-                    e.data.hardwareUsed.switch_controller &&
-                      this.m_rgHardwareUsed.add(n.SwitchController),
-                    e.data.hardwareUsed.steam_controller &&
-                      this.m_rgHardwareUsed.add(n.SteamController),
-                    e.data.hardwareUsed.steam_deck_neptune &&
-                      this.m_rgHardwareUsed.add(n.SteamDeckNeptune),
-                    e.data.hardwareUsed.steam_deck_galileo &&
-                      this.m_rgHardwareUsed.add(n.SteamDeckGalileo));
+                  if (e.data.rgHardwareUsed)
+                    for (const t of e.data.rgHardwareUsed) {
+                      const e = u[t];
+                      e && this.m_rgHardwareUsed.add(e);
+                    }
                 });
             } catch (e) {
               let t = (0, l.l)(e);
@@ -6994,17 +6996,17 @@
         InvalidateCache(e) {
           const t = e || window;
           t.localStorage.setItem(
-            u,
-            (Number.parseInt(t.localStorage.getItem(u) || "0") + 1).toString(),
+            p,
+            (Number.parseInt(t.localStorage.getItem(p) || "0") + 1).toString(),
           );
         }
         static Get() {
           return (
-            p.s_globalSingletonStore ||
-              ((p.s_globalSingletonStore = new p()),
+            _.s_globalSingletonStore ||
+              ((_.s_globalSingletonStore = new _()),
               "dev" == d.De.WEB_UNIVERSE &&
-                (window.DUS = p.s_globalSingletonStore)),
-            p.s_globalSingletonStore
+                (window.DUS = _.s_globalSingletonStore)),
+            _.s_globalSingletonStore
           );
         }
         constructor() {
@@ -7037,57 +7039,56 @@
             (0, o.rC)(this);
         }
       }
-      function _() {
-        const [e, t] = (0, c.useState)(!p.Get().BIsLoaded());
+      function h() {
+        const [e, t] = (0, c.useState)(!_.Get().BIsLoaded());
         return (
           (0, c.useEffect)(() => {
             e &&
-              p
-                .Get()
+              _.Get()
                 .HintLoad()
-                .finally(() => t(!p.Get().BIsLoaded()));
+                .finally(() => t(!_.Get().BIsLoaded()));
           }, [e]),
-          [e, p.Get()]
+          [e, _.Get()]
         );
       }
-      (0, r.gn)([o.LO], p.prototype, "m_setWishList", void 0),
-        (0, r.gn)([o.LO], p.prototype, "m_setOwnedPackages", void 0),
-        (0, r.gn)([o.LO], p.prototype, "m_setOwnedApps", void 0),
-        (0, r.gn)([o.LO], p.prototype, "m_setFollowedApps", void 0),
-        (0, r.gn)([o.LO], p.prototype, "m_setExcludedTagsIds", void 0),
+      (0, r.gn)([o.LO], _.prototype, "m_setWishList", void 0),
+        (0, r.gn)([o.LO], _.prototype, "m_setOwnedPackages", void 0),
+        (0, r.gn)([o.LO], _.prototype, "m_setOwnedApps", void 0),
+        (0, r.gn)([o.LO], _.prototype, "m_setFollowedApps", void 0),
+        (0, r.gn)([o.LO], _.prototype, "m_setExcludedTagsIds", void 0),
         (0, r.gn)(
           [o.LO],
-          p.prototype,
+          _.prototype,
           "m_setExcludedContentDescriptors",
           void 0,
         ),
-        (0, r.gn)([o.LO], p.prototype, "m_setRecommendedApps", void 0),
-        (0, r.gn)([o.LO], p.prototype, "m_mapIgnoredApps", void 0),
-        (0, r.gn)([o.LO], p.prototype, "m_mapIgnoredPackages", void 0),
-        (0, r.gn)([o.LO], p.prototype, "m_setCuratorsFollowed", void 0),
-        (0, r.gn)([o.LO], p.prototype, "m_setCuratorsIgnored", void 0),
+        (0, r.gn)([o.LO], _.prototype, "m_setRecommendedApps", void 0),
+        (0, r.gn)([o.LO], _.prototype, "m_mapIgnoredApps", void 0),
+        (0, r.gn)([o.LO], _.prototype, "m_mapIgnoredPackages", void 0),
+        (0, r.gn)([o.LO], _.prototype, "m_setCuratorsFollowed", void 0),
+        (0, r.gn)([o.LO], _.prototype, "m_setCuratorsIgnored", void 0),
         (0, r.gn)(
           [o.LO],
-          p.prototype,
+          _.prototype,
           "m_bShowFilteredUserReviewScores",
           void 0,
         ),
-        (0, r.gn)([o.LO], p.prototype, "m_primaryLanguage", void 0),
-        (0, r.gn)([o.LO], p.prototype, "m_secondaryLanguages", void 0),
-        (0, r.gn)([o.LO], p.prototype, "m_setRecommendedTags", void 0),
+        (0, r.gn)([o.LO], _.prototype, "m_primaryLanguage", void 0),
+        (0, r.gn)([o.LO], _.prototype, "m_secondaryLanguages", void 0),
+        (0, r.gn)([o.LO], _.prototype, "m_setRecommendedTags", void 0),
         (0, r.gn)(
           [o.LO],
-          p.prototype,
+          _.prototype,
           "m_mapRecommendingCuratorsForApp",
           void 0,
         ),
-        (0, r.gn)([o.LO], p.prototype, "m_setPackagesInCart", void 0),
-        (0, r.gn)([o.LO], p.prototype, "m_setAppsInCart", void 0),
-        (0, r.gn)([o.LO], p.prototype, "m_nCartLineItemCount", void 0),
-        (0, r.gn)([o.LO], p.prototype, "m_rgHardwareUsed", void 0),
-        (0, r.gn)([o.LO], p.prototype, "m_bAjaxInFlight", void 0),
-        (0, r.gn)([o.Fl], p.prototype, "ExcludedContentDescriptor", null),
-        (0, r.gn)([o.aD], p.prototype, "UpdateAppIgnore", null);
+        (0, r.gn)([o.LO], _.prototype, "m_setPackagesInCart", void 0),
+        (0, r.gn)([o.LO], _.prototype, "m_setAppsInCart", void 0),
+        (0, r.gn)([o.LO], _.prototype, "m_nCartLineItemCount", void 0),
+        (0, r.gn)([o.LO], _.prototype, "m_rgHardwareUsed", void 0),
+        (0, r.gn)([o.LO], _.prototype, "m_bAjaxInFlight", void 0),
+        (0, r.gn)([o.Fl], _.prototype, "ExcludedContentDescriptor", null),
+        (0, r.gn)([o.aD], _.prototype, "UpdateAppIgnore", null);
     },
     48371: (e, t, a) => {
       "use strict";
@@ -8657,7 +8658,7 @@
         r = a(80751),
         i = a.n(r),
         s = a(54842),
-        o = a(21928),
+        o = a(79545),
         l = a(18015),
         d = a(45492),
         c = a(16997),
@@ -10545,7 +10546,7 @@
       a.d(t, { Eq: () => p, NH: () => c, QG: () => m, wj: () => u });
       var n = a(85556),
         r = a(42718),
-        i = a(21928),
+        i = a(79545),
         s = a(40057),
         o = a(98255),
         l = a(2041),
@@ -10676,7 +10677,7 @@
       var n = a(85556),
         r = a(80751),
         i = a.n(r),
-        s = a(21928),
+        s = a(79545),
         o = a(77581),
         l = a(37099),
         d = a(16649),
@@ -11533,13 +11534,13 @@
       "use strict";
       a.d(t, { a: () => A });
       var n = a(47427),
-        r = a(28347),
+        r = a(31421),
         i = a(77151);
       const s = (0, n.createContext)({}),
         o = () => (0, n.useContext)(s);
       var l = a(85556),
         d = a(42718),
-        c = a(21928),
+        c = a(79545),
         m = a(40057),
         u = a(22520),
         p = a(25492),
@@ -11792,7 +11793,7 @@
       var d,
         c,
         m = a(25006),
-        u = a(28347),
+        u = a(31421),
         p = a(13499);
       !(function (e) {
         (e.k_eView = "view"),
@@ -12274,10 +12275,10 @@
         o = a(27605),
         l = a(47427),
         d = a(42287),
-        c = a(58747),
+        c = a(4170),
         m = a(37265),
         u = a(48760),
-        p = a(28347),
+        p = a(31421),
         _ = a(93243),
         h = a(58670),
         g = a(77151),
@@ -13337,7 +13338,7 @@
         l = a(3783),
         d = a(48760),
         c = a(4654),
-        m = a(28347),
+        m = a(31421),
         u = a(19399),
         p = a(93243),
         _ = a(34310),
@@ -14079,7 +14080,7 @@
         r = a(80751),
         i = a.n(r),
         s = a(47427),
-        o = a(58747),
+        o = a(4170),
         l = a(89631),
         d = a(84270),
         c = a(86437),
@@ -14407,7 +14408,7 @@
     91552: (e, t, a) => {
       "use strict";
       a.d(t, { h: () => d });
-      var n = a(28347),
+      var n = a(31421),
         r = a(83266),
         i = a(62210),
         s = a(50423),
@@ -14500,7 +14501,7 @@
       a.d(t, { zw: () => _, Dt: () => u, $N: () => p });
       var n = a(47427),
         r = a(89631),
-        i = a(28347),
+        i = a(31421),
         s = a(85556),
         o = a(8789),
         l = a(58112),
@@ -14553,7 +14554,7 @@
       var n = a(85556),
         r = a(30750),
         i = a(47427),
-        s = a(28347),
+        s = a(31421),
         o = a(77151),
         l = a(80886),
         d = a(7769),
@@ -14679,7 +14680,7 @@
       a.d(t, { K: () => u, r: () => p });
       var n = a(47427),
         r = a(82493),
-        i = a(28347),
+        i = a(31421),
         s = a(15980),
         o = a.n(s),
         l = a(25006),
@@ -15001,7 +15002,7 @@
       a.d(t, { W: () => d, _: () => c });
       var n = a(47427),
         r = a(82493),
-        i = a(28347),
+        i = a(31421),
         s = a(25006),
         o = a(62210),
         l = a(37563);

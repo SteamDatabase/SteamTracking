@@ -58,15 +58,26 @@
 .partnereventdialog_ErrorIconLayout_15HwA,
 .partnereventdialog_ErrorStylesWithIcon_1mcSA,
 .partnereventdialog_ErrorStylesBackground_3Ht2e {
+  display: block;
   padding: 10px;
   padding-left: 42px;
   background-image: url("https://community.cloudflare.steamstatic.com/public/images//sharedfiles/icons/icon_warning.png");
   background-repeat: no-repeat;
   background-position-x: 10px;
-  background-position-y: 10px;
+  background-position-y: 6px;
 }
 .partnereventdialog_ErrorStylesBackground_3Ht2e {
   background-color: #472025;
+}
+.partnereventdialog_ErrorStylesWithIcon_1mcSA.partnereventdialog_ErrorFloatBelow_1mTCT {
+  padding: 5px;
+  padding-left: 32px;
+  font-size: 14px;
+  position: absolute;
+  bottom: -5px;
+  background-color: #682d2c;
+  z-index: 1;
+  box-shadow: 2px 2px 5px #000;
 }
 .partnereventdialog_ErrorStyles_2TszC > div,
 .partnereventdialog_ErrorStylesWithIcon_1mcSA > div {

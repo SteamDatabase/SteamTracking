@@ -4941,6 +4941,13 @@ html.responsive.touch .ContentHubSalePage {
     margin-top: 41vw;
   }
 }
+@media screen and (max-width: 940px) {
+  .partnersaledisplay_SaleOuterContainer_3FwA4.partnersaledisplay_SaleNewSizing_20BNh:not(
+      .partnersaledisplay_SalePageLogoSet_3Od0-
+    ) {
+    margin-top: 54vw !important;
+  }
+}
 .partnersaledisplay_SaleBackground_dmyDb {
   background-position: center top;
   background-repeat: no-repeat;

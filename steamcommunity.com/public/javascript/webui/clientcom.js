@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "8636951";
+var CLSTAMP = "8650317";
 (() => {
   "use strict";
   function e(e) {
@@ -47,7 +47,6 @@ var CLSTAMP = "8636951";
     IN_TENFOOT: !1,
     PLATFORM: "",
     SNR: "",
-    SNR_OBJ: void 0,
     LAUNCHER_TYPE: 0,
     EREALM: 0,
     IN_CHROMEOS: !1,
@@ -153,11 +152,11 @@ var CLSTAMP = "8636951";
   }
   function c(_ = u) {
     const E = {},
-      c = R("config", _);
+      c = r("config", _);
     c && (delete c.SESSIONID, Object.assign(s, c), (E.config = !0));
-    const r = R("userinfo", _);
-    r &&
-      (Object.assign(n, r),
+    const R = r("userinfo", _);
+    R &&
+      (Object.assign(n, R),
       (E.userConfig = !0),
       n.is_support &&
         (function () {
@@ -166,17 +165,17 @@ var CLSTAMP = "8636951";
           return Boolean(s && 1 === Number.parseInt(s));
         })() &&
         (n.is_support = !1));
-    const d = R("broadcast", _);
+    const d = r("broadcast", _);
     d && (Object.assign(i, d), (E.broadcastConfig = !0));
-    const k = R("community", _);
+    const k = r("community", _);
     k && (Object.assign(l, k), (E.communityConfig = !0));
-    const m = R("event", _);
+    const m = r("event", _);
     return m && (Object.assign(o, m), (E.eventConfig = !0)), E;
   }
-  function R(e, t = u) {
-    return r(e, t, !0);
+  function r(e, t = u) {
+    return R(e, t, !0);
   }
-  function r(e, t = u, s) {
+  function R(e, t = u, s) {
     let i;
     if (
       ((i =

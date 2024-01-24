@@ -2791,6 +2791,15 @@ ul.actualUL li,
 	color: #A4D007;
 }
 
+.landingRightCol .panel h2 {
+	color: #e5e5e5;
+	font-size: 14px;
+	font-weight: normal;
+	text-transform: none;
+	margin-top: 10px;
+    letter-spacing: 0px;
+}
+
 .landingRightCol .panel h3 {
 	color: #e5e5e5;
 	font-size: 13px;
@@ -3625,4 +3634,9 @@ ul.pub_rights li {
 }
 .statInstructionsCtn a {
     color: black;
+}
+
+.launch_discount_length_banner {
+	font-size: 12px;
+	color: #808285;
 }

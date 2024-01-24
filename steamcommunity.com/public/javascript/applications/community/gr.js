@@ -9,6 +9,7 @@
         ErrorStylesWithIcon: "partnereventdialog_ErrorStylesWithIcon_1mcSA",
         ErrorIconLayout: "partnereventdialog_ErrorIconLayout_15HwA",
         ErrorStylesBackground: "partnereventdialog_ErrorStylesBackground_3Ht2e",
+        ErrorFloatBelow: "partnereventdialog_ErrorFloatBelow_1mTCT",
         WarningStyles: "partnereventdialog_WarningStyles_1C_Im",
         WarningStylesWithIcon: "partnereventdialog_WarningStylesWithIcon_3p5KO",
         WarningIconLayout: "partnereventdialog_WarningIconLayout_3POKG",
@@ -47,14 +48,14 @@
     },
     22520: (e, t, r) => {
       "use strict";
-      r.d(t, { Am: () => a, kI: () => o, x3: () => s });
+      r.d(t, { Am: () => s, kI: () => l, x3: () => a });
       var n = r(37563),
         i = r(48760),
-        l = r(62210);
-      const o = 0,
+        o = r(62210);
+      const l = 0,
         C = "061818254b2c99ac49e6626adb128ed1282a392f",
-        s = 120;
-      class a {
+        a = 120;
+      class s {
         constructor(e) {
           (this.m_bInitialized = !1), (this.m_unAppID = e);
         }
@@ -131,7 +132,7 @@
         }
         SerializeToCacheObject() {
           return (
-            (0, l.X)(
+            (0, o.X)(
               this.m_bInitialized,
               "Attempting to serialize an uninitialized AppInfo object for caching!",
             ),
@@ -152,15 +153,15 @@
       r.d(t, { N1: () => C });
       var n = r(8416),
         i = r(77936),
-        l = r(22520),
-        o = r(62210);
+        o = r(22520),
+        l = r(62210);
       class C {
         constructor(e, t, r) {
           if ("string" == typeof e) this.m_ulGameID = n.Z.fromString(e, !0);
           else {
             const i = r,
-              l = ((255 & e) << 24) + (16777215 & t);
-            this.m_ulGameID = n.Z.fromBits(l, i, !0);
+              o = ((255 & e) << 24) + (16777215 & t);
+            this.m_ulGameID = n.Z.fromBits(o, i, !0);
           }
         }
         GetAppID() {
@@ -190,15 +191,15 @@
         BIsValid() {
           switch (this.GetType()) {
             case i.b7.k_EGameIDTypeApp:
-              return this.GetAppID() !== l.kI;
+              return this.GetAppID() !== o.kI;
             case i.b7.k_EGameIDTypeGameMod:
-              return this.GetAppID() !== l.kI && 2147483648 & this.GetModID();
+              return this.GetAppID() !== o.kI && 2147483648 & this.GetModID();
             case i.b7.k_EGameIDTypeShortcut:
               return 0 != (2147483648 & this.GetModID());
             case i.b7.k_EGameIDTypeP2P:
-              return this.GetAppID() === l.kI && 2147483648 & this.GetModID();
+              return this.GetAppID() === o.kI && 2147483648 & this.GetModID();
             default:
-              return (0, o.X)(!1, `Unknown GameID type: ${this.GetType()}`), !1;
+              return (0, l.X)(!1, `Unknown GameID type: ${this.GetType()}`), !1;
           }
         }
         static InitFromAppID(e) {
@@ -211,22 +212,22 @@
     },
     48760: (e, t, r) => {
       "use strict";
-      r.d(t, { U: () => l, W: () => i });
+      r.d(t, { U: () => o, W: () => i });
       var n = r(37563);
       const i = "fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb";
-      function l(e, t) {
+      function o(e, t) {
         let r = ".jpg";
         (e && "0000000000000000000000000000000000000000" !== e) || (e = i),
           44 == e.length && ((r = e.substr(-4)), (e = e.substr(0, 40)));
-        let l = n.De.AVATAR_BASE_URL;
+        let o = n.De.AVATAR_BASE_URL;
         return (
-          l ||
-            ((l = n.De.MEDIA_CDN_COMMUNITY_URL + "images/avatars/"),
-            (l += e.substr(0, 2) + "/")),
-          (l += e),
-          t && "small" != t && (l += "_" + t),
-          (l += r),
-          l
+          o ||
+            ((o = n.De.MEDIA_CDN_COMMUNITY_URL + "images/avatars/"),
+            (o += e.substr(0, 2) + "/")),
+          (o += e),
+          t && "small" != t && (o += "_" + t),
+          (o += r),
+          o
         );
       }
     },
@@ -235,11 +236,11 @@
       r.d(t, { JZ: () => d });
       var n = r(85556),
         i = r(47427),
-        l = r(65255),
-        o = r(10082),
+        o = r(65255),
+        l = r(10082),
         C = r(54842),
-        s = r(30750);
-      class a {
+        a = r(30750);
+      class s {
         constructor() {
           (this.m_mapAppMarkerLoadingPromises = new Map()),
             (this.m_mapAppMarkers = new Map()),
@@ -278,16 +279,16 @@
             try {
               const n = yield fetch(t);
               n.ok ||
-                (l.De.IN_CLIENT &&
+                (o.De.IN_CLIENT &&
                   SteamClient.Apps.ReportLibraryAssetCacheMiss(e, 6));
               const i = yield n.text(),
                 C = new DOMParser(),
-                s = C.parseFromString(i, "image/svg+xml").getElementsByTagName(
+                a = C.parseFromString(i, "image/svg+xml").getElementsByTagName(
                   "defs",
                 )[0];
-              Array.from(s.children).forEach((e) => {
+              Array.from(a.children).forEach((e) => {
                 var t;
-                const n = (0, o.iv)(
+                const n = (0, l.iv)(
                     null ===
                       (t = e.attributes.getNamedItem("steam-timeline-color")) ||
                       void 0 === t
@@ -311,61 +312,61 @@
         }
         static Get() {
           return (
-            a.s_Singleton ||
-              ((a.s_Singleton = new a()),
-              "dev" == l.De.WEB_UNIVERSE &&
-                (window.g_GameTimelineMarker = a.s_Singleton)),
-            a.s_Singleton
+            s.s_Singleton ||
+              ((s.s_Singleton = new s()),
+              "dev" == o.De.WEB_UNIVERSE &&
+                (window.g_GameTimelineMarker = s.s_Singleton)),
+            s.s_Singleton
           );
         }
       }
       function c(e) {
-        return (0, s.SZ)(() => a.Get().BIsLoaded(e));
+        return (0, a.SZ)(() => s.Get().BIsLoaded(e));
       }
       function d(e, t) {
-        const r = a.Get(),
+        const r = s.Get(),
           n = c(e),
-          l = h(e),
-          [o, C] = (0, i.useState)(null);
+          o = h(e),
+          [l, C] = (0, i.useState)(null);
         return (
           (0, i.useEffect)(() => {
-            n ? C(r.GetSVGForID(e, t, l)) : r.LoadAppPublicMarkers(e, l);
-          }, [o, e, t, r, n, l]),
-          o
+            n ? C(r.GetSVGForID(e, t, o)) : r.LoadAppPublicMarkers(e, o);
+          }, [l, e, t, r, n, o]),
+          l
         );
       }
       function h(e) {
-        const t = a.Get();
-        return (0, s.SZ)(() => {
+        const t = s.Get();
+        return (0, a.SZ)(() => {
           const r = t.GetTimelineMarkerURLFunction();
           return r
             ? r(e)
             : (function (e) {
-                return `${l.De.BASE_URL_SHARED_CDN}app_config/timeline/${e}_markers.svg`;
+                return `${o.De.BASE_URL_SHARED_CDN}app_config/timeline/${e}_markers.svg`;
               })(e);
         });
       }
-      (0, n.gn)([C.LO], a.prototype, "m_mapAppMarkerLoadingPromises", void 0),
-        (0, n.gn)([C.LO], a.prototype, "m_mapAppMarkers", void 0),
-        (0, n.gn)([C.LO], a.prototype, "m_mapURLForApp", void 0),
-        (0, n.gn)([C.LO], a.prototype, "m_fnTimelineURLGenerator", void 0);
+      (0, n.gn)([C.LO], s.prototype, "m_mapAppMarkerLoadingPromises", void 0),
+        (0, n.gn)([C.LO], s.prototype, "m_mapAppMarkers", void 0),
+        (0, n.gn)([C.LO], s.prototype, "m_mapURLForApp", void 0),
+        (0, n.gn)([C.LO], s.prototype, "m_fnTimelineURLGenerator", void 0);
     },
     10082: (e, t, r) => {
       "use strict";
       r.d(t, {
-        Mv: () => s,
+        Mv: () => a,
         XT: () => u,
-        cY: () => L,
-        iv: () => a,
+        cY: () => m,
+        iv: () => s,
         jq: () => p,
-        vt: () => m,
+        vt: () => L,
       });
       var n = r(65255),
         i = r(77556),
-        l = r(37563);
-      const o = "steam_";
+        o = r(37563);
+      const l = "steam_";
       var C;
-      function s(e) {
+      function a(e) {
         switch (e) {
           default:
           case C.White:
@@ -385,10 +386,10 @@
           case C.Brown:
             return "#C18C5B";
           case C.Gray:
-            return "#979899";
+            return "#B8BCBF";
         }
       }
-      function a(e) {
+      function s(e) {
         if (!e) return C.White;
         const t = e.toLowerCase(),
           r = c(C);
@@ -415,8 +416,8 @@
           this.m_mapSteamTimelineMarkers = new Map();
         }
         GetMarkerByID(e) {
-          const t = e.toLowerCase().startsWith(o)
-            ? e.slice(o.length).toLowerCase()
+          const t = e.toLowerCase().startsWith(l)
+            ? e.slice(l.length).toLowerCase()
             : e.toLowerCase();
           return this.m_mapSteamTimelineMarkers.has(t)
             ? this.m_mapSteamTimelineMarkers.get(t)
@@ -424,7 +425,7 @@
         }
         GetAllUseableMarkerID() {
           return Array.from(this.m_mapSteamTimelineMarkers.keys()).map(
-            (e) => o + e,
+            (e) => l + e,
           );
         }
         static Get() {
@@ -446,149 +447,149 @@
           }
         }
         Init() {
-          this.AddMarker("explosion", i.OQ, C.Orange),
-            this.AddMarker("attack", i.W4, C.Red),
-            this.AddMarker("defend", i.Be, C.Blue),
-            this.AddMarker("combat", i.jf, C.White),
-            this.AddMarker("chest", i.bz, C.Brown),
-            this.AddMarker("view", i.G7, C.Blue),
-            (0, l.h4)()
-              ? this.AddMarker("death", i.X, C.Red)
-              : this.AddMarker("death", i.hF, C.Red),
-            this.AddMarker("x", i.X, C.Orange),
-            this.AddMarker("plus", i.v3, C.Green),
-            this.AddMarker("minus", i.WF, C.Red),
-            this.AddMarker("info", i.kI, C.Yellow),
-            this.AddMarker("bolt", i.rZ, C.Yellow),
-            this.AddMarker("caution", i.ge, C.Yellow),
-            this.AddMarker("completed", i.FG, C.Green),
-            this.AddMarker("checkmark", i.MC, C.Green),
-            this.AddMarker("effect", i.Qm, C.Purple),
-            this.AddMarker("purchase", i.Bu, C.Green),
-            this.AddMarker("ribbon", i.Vy, C.Blue),
-            this.AddMarker("scroll", i.Xs, C.Brown),
-            this.AddMarker("crown", i._O, C.Yellow),
-            this.AddMarker("starburst", i.hy, C.Yellow),
-            this.AddMarker("flag", i.WN, C.Blue),
-            this.AddMarker("cart", i.AP, C.Green),
-            this.AddMarker("timer", i.B7, C.Yellow),
-            this.AddMarker("chat", i.en, C.White),
-            this.AddMarker("wrench", i.Io, C.White),
-            this.AddMarker("transfer", i.FE, C.Green),
-            this.AddMarker("edit", i.I8, C.Green),
-            this.AddMarker("bookmark", i.rp, C.Blue),
-            this.AddMarker("invalid", i.Q0, C.Red),
-            this.AddMarker("star", i.Ux, C.Yellow),
-            this.AddMarker("circle", i.Cd, C.Blue),
-            this.AddMarker("square", i.bK, C.Purple),
-            this.AddMarker("triangle", i.CJ, C.Orange),
-            this.AddMarker("heart", i.Xd, C.Red),
-            this.AddMarker("diamond", i.u4, C.Blue),
-            this.AddMarker("gem", i._n, C.Purple),
-            this.AddMarker("group", i.ZA, C.Green),
-            this.AddMarker("pair", i.sO, C.Green),
-            this.AddMarker("single", i.n5, C.Green),
-            this.AddMarker("achievement", i.Gu, C.Yellow),
-            this.AddMarker("screenshot", i.w_, C.Purple);
+          this.AddMarker("explosion", i.OQ, C.Gray),
+            this.AddMarker("attack", i.W4, C.Gray),
+            this.AddMarker("defend", i.Be, C.Gray),
+            this.AddMarker("combat", i.jf, C.Gray),
+            this.AddMarker("chest", i.bz, C.Gray),
+            this.AddMarker("view", i.G7, C.Gray),
+            (0, o.h4)()
+              ? this.AddMarker("death", i.X, C.Gray)
+              : this.AddMarker("death", i.hF, C.Gray),
+            this.AddMarker("x", i.X, C.Gray),
+            this.AddMarker("plus", i.v3, C.Gray),
+            this.AddMarker("minus", i.WF, C.Gray),
+            this.AddMarker("info", i.kI, C.Gray),
+            this.AddMarker("bolt", i.rZ, C.Gray),
+            this.AddMarker("caution", i.ge, C.Gray),
+            this.AddMarker("completed", i.FG, C.Gray),
+            this.AddMarker("checkmark", i.MC, C.Gray),
+            this.AddMarker("effect", i.Qm, C.Gray),
+            this.AddMarker("purchase", i.Bu, C.Gray),
+            this.AddMarker("ribbon", i.Vy, C.Gray),
+            this.AddMarker("scroll", i.Xs, C.Gray),
+            this.AddMarker("crown", i._O, C.Gray),
+            this.AddMarker("starburst", i.hy, C.Gray),
+            this.AddMarker("flag", i.WN, C.Gray),
+            this.AddMarker("cart", i.AP, C.Gray),
+            this.AddMarker("timer", i.B7, C.Gray),
+            this.AddMarker("chat", i.en, C.Gray),
+            this.AddMarker("wrench", i.Io, C.Gray),
+            this.AddMarker("transfer", i.FE, C.Gray),
+            this.AddMarker("edit", i.I8, C.Gray),
+            this.AddMarker("bookmark", i.rp, C.Gray),
+            this.AddMarker("invalid", i.Q0, C.Gray),
+            this.AddMarker("star", i.Ux, C.Gray),
+            this.AddMarker("circle", i.Cd, C.Gray),
+            this.AddMarker("square", i.bK, C.Gray),
+            this.AddMarker("triangle", i.CJ, C.Gray),
+            this.AddMarker("heart", i.Xd, C.Gray),
+            this.AddMarker("diamond", i.u4, C.Gray),
+            this.AddMarker("gem", i._n, C.Gray),
+            this.AddMarker("group", i.ZA, C.Gray),
+            this.AddMarker("pair", i.sO, C.Gray),
+            this.AddMarker("single", i.n5, C.Gray),
+            this.AddMarker("achievement", i.Gu, C.Gray),
+            this.AddMarker("screenshot", i.w_, C.Gray);
         }
       }
       function u(e) {
         return h.Get().GetMarkerByID(e);
       }
-      function m() {
+      function L() {
         return { func: i.Jx, color: C.Blue };
       }
-      function L() {
+      function m() {
         return { func: i.Gu, color: C.White };
       }
       function p(e) {
-        return e.toLowerCase().startsWith(o);
+        return e.toLowerCase().startsWith(l);
       }
     },
     83743: (e, t, r) => {
       "use strict";
-      r.d(t, { NT: () => c, T$: () => a, tx: () => s });
+      r.d(t, { NT: () => c, T$: () => s, tx: () => a });
       var n = r(47427),
         i = r(50898),
-        l = r(72297),
-        o = r(31846),
+        o = r(72297),
+        l = r(31846),
         C = r(46882);
-      function s() {
+      function a() {
         const [e, t] = (0, n.useState)(!1),
           [r, i] = (0, n.useState)(!1),
-          [l, o] = (0, n.useState)(!1),
-          [C, s] = (0, n.useState)(null),
-          [a, c] = (0, n.useState)(null),
+          [o, l] = (0, n.useState)(!1),
+          [C, a] = (0, n.useState)(null),
+          [s, c] = (0, n.useState)(null),
           [d, h] = (0, n.useState)(null),
-          [u, m] = (0, n.useState)(null),
-          [L, p] = (0, n.useState)(null);
+          [u, L] = (0, n.useState)(null),
+          [m, p] = (0, n.useState)(null);
         return {
           bLoading: e,
           bError: r,
-          bSuccess: l,
+          bSuccess: o,
           strError: C,
-          strSuccess: a,
+          strSuccess: s,
           elSuccess: u,
           elError: d,
-          strThrobber: L,
+          strThrobber: m,
           fnSetLoading: t,
           fnSetError: i,
-          fnSetSuccess: o,
-          fnSetStrError: s,
+          fnSetSuccess: l,
+          fnSetStrError: a,
           fnSetStrSuccess: c,
-          fnSetElSuccess: m,
+          fnSetElSuccess: L,
           fnSetElError: h,
           fnSetThrobber: p,
         };
       }
-      function a(e, t) {
+      function s(e, t) {
         1 != t ? e.fnSetError(!0) : e.fnSetSuccess(!0);
       }
       function c(e) {
         const {
             strDialogTitle: t,
             state: r,
-            closeModal: s,
-            strThrobber: a,
+            closeModal: a,
+            strThrobber: s,
           } = e,
           {
             bLoading: c,
             bError: d,
             bSuccess: h,
             strError: u,
-            strSuccess: m,
-            elSuccess: L,
+            strSuccess: L,
+            elSuccess: m,
             elError: p,
             strThrobber: g,
           } = r;
         return d || u || p
           ? n.createElement(
               i.uH,
-              { strTitle: t, bAlertDialog: !0, closeModal: s },
+              { strTitle: t, bAlertDialog: !0, closeModal: a },
               Boolean(u) &&
                 n.createElement(
                   "div",
-                  { className: l.ErrorStylesWithIcon },
-                  u || (0, o.Xx)("#Error_ErrorCommunicatingWithNetwork"),
+                  { className: o.ErrorStylesWithIcon },
+                  u || (0, l.Xx)("#Error_ErrorCommunicatingWithNetwork"),
                 ),
               Boolean(p) && p,
             )
-          : h || m || L
+          : h || L || m
           ? n.createElement(
               i.uH,
               {
                 strTitle: t,
-                strDescription: m || (0, o.Xx)("#EventDisplay_Share_Success"),
+                strDescription: L || (0, l.Xx)("#EventDisplay_Share_Success"),
                 bAlertDialog: !0,
-                closeModal: s,
+                closeModal: a,
               },
-              n.createElement(n.Fragment, null, Boolean(L) && L),
+              n.createElement(n.Fragment, null, Boolean(m) && m),
             )
           : n.createElement(
               i.uH,
               { strTitle: t, closeModal: () => {} },
               n.createElement(C.V, {
-                string: a || g || (0, o.Xx)("#Loading"),
+                string: s || g || (0, l.Xx)("#Loading"),
                 size: "medium",
                 position: "center",
               }),
@@ -600,56 +601,56 @@
       r.d(t, {
         AP: () => v,
         B7: () => _,
-        Be: () => U,
-        Bu: () => m,
-        CJ: () => y,
-        Cd: () => Z,
+        Be: () => F,
+        Bu: () => L,
+        CJ: () => B,
+        Cd: () => I,
         Eq: () => J,
-        FE: () => k,
+        FE: () => y,
         FG: () => d,
         G7: () => W,
-        Gu: () => s,
-        Hi: () => q,
-        I8: () => A,
+        Gu: () => a,
+        Hi: () => Y,
+        I8: () => G,
         Io: () => E,
         Jx: () => C,
-        KT: () => X,
+        KT: () => $,
         MC: () => h,
-        OQ: () => V,
-        Q0: () => B,
+        OQ: () => R,
+        Q0: () => k,
         Qm: () => u,
-        Ux: () => I,
-        Vy: () => L,
+        Ux: () => x,
+        Vy: () => m,
         W4: () => T,
         WF: () => j,
         WN: () => f,
         X: () => P,
-        Xd: () => G,
+        Xd: () => S,
         Xs: () => p,
-        ZA: () => b,
+        ZA: () => V,
         _O: () => g,
-        _n: () => o,
-        bK: () => S,
-        bz: () => F,
+        _n: () => l,
+        bK: () => Z,
+        bz: () => U,
         en: () => M,
-        ge: () => l,
-        hF: () => N,
+        ge: () => o,
+        hF: () => O,
         hy: () => w,
-        jf: () => O,
-        kI: () => a,
-        n5: () => D,
+        jf: () => N,
+        kI: () => s,
+        n5: () => b,
         rZ: () => c,
-        rp: () => x,
-        sO: () => H,
-        sR: () => $,
-        u4: () => R,
+        rp: () => A,
+        sO: () => D,
+        sR: () => q,
+        u4: () => H,
         v3: () => z,
-        w_: () => Y,
+        w_: () => X,
       });
       var n = r(85556),
         i = r(47427);
       r(69622);
-      function l(e) {
+      function o(e) {
         return i.createElement(
           "svg",
           Object.assign(
@@ -668,7 +669,7 @@
           }),
         );
       }
-      function o(e) {
+      function l(e) {
         return i.createElement(
           "svg",
           Object.assign(
@@ -723,7 +724,7 @@
           }),
         );
       }
-      function s(e) {
+      function a(e) {
         return i.createElement(
           "svg",
           {
@@ -739,7 +740,7 @@
           }),
         );
       }
-      function a(e) {
+      function s(e) {
         return i.createElement(
           "svg",
           {
@@ -839,7 +840,7 @@
           }),
         );
       }
-      function m(e) {
+      function L(e) {
         return i.createElement(
           "svg",
           {
@@ -857,7 +858,7 @@
           }),
         );
       }
-      function L(e) {
+      function m(e) {
         return i.createElement(
           "svg",
           {
@@ -1007,7 +1008,7 @@
           }),
         );
       }
-      function k(e) {
+      function y(e) {
         return i.createElement(
           "svg",
           {
@@ -1023,7 +1024,7 @@
           }),
         );
       }
-      function A(e) {
+      function G(e) {
         return i.createElement(
           "svg",
           {
@@ -1043,7 +1044,7 @@
           }),
         );
       }
-      function x(e) {
+      function A(e) {
         return i.createElement(
           "svg",
           {
@@ -1059,7 +1060,7 @@
           }),
         );
       }
-      function B(e) {
+      function k(e) {
         return i.createElement(
           "svg",
           {
@@ -1075,7 +1076,7 @@
           }),
         );
       }
-      function I(e) {
+      function x(e) {
         return i.createElement(
           "svg",
           {
@@ -1091,7 +1092,7 @@
           }),
         );
       }
-      function Z(e) {
+      function I(e) {
         return i.createElement(
           "svg",
           {
@@ -1109,7 +1110,7 @@
           }),
         );
       }
-      function S(e) {
+      function Z(e) {
         return i.createElement(
           "svg",
           {
@@ -1128,7 +1129,7 @@
           }),
         );
       }
-      function y(e) {
+      function B(e) {
         return i.createElement(
           "svg",
           {
@@ -1146,7 +1147,7 @@
           }),
         );
       }
-      function G(e) {
+      function S(e) {
         return i.createElement(
           "svg",
           {
@@ -1162,7 +1163,7 @@
           }),
         );
       }
-      function R(e) {
+      function H(e) {
         return i.createElement(
           "svg",
           {
@@ -1178,7 +1179,7 @@
           }),
         );
       }
-      function b(e) {
+      function V(e) {
         return i.createElement(
           "svg",
           {
@@ -1194,7 +1195,7 @@
           }),
         );
       }
-      function H(e) {
+      function D(e) {
         return i.createElement(
           "svg",
           {
@@ -1210,7 +1211,7 @@
           }),
         );
       }
-      function D(e) {
+      function b(e) {
         return i.createElement(
           "svg",
           {
@@ -1226,7 +1227,7 @@
           }),
         );
       }
-      function V(e) {
+      function R(e) {
         return i.createElement(
           "svg",
           {
@@ -1260,7 +1261,7 @@
           }),
         );
       }
-      function U(e) {
+      function F(e) {
         return i.createElement(
           "svg",
           {
@@ -1276,7 +1277,7 @@
           }),
         );
       }
-      function F(e) {
+      function U(e) {
         return i.createElement(
           "svg",
           {
@@ -1294,7 +1295,7 @@
           }),
         );
       }
-      function O(e) {
+      function N(e) {
         return i.createElement(
           "svg",
           {
@@ -1328,7 +1329,7 @@
           }),
         );
       }
-      function N(e) {
+      function O(e) {
         return i.createElement(
           "svg",
           {
@@ -1392,7 +1393,7 @@
           }),
         );
       }
-      function Y(e) {
+      function X(e) {
         return i.createElement(
           "svg",
           {
@@ -1408,16 +1409,16 @@
           }),
         );
       }
-      function X(e) {
+      function $(e) {
         return i.createElement(
           "svg",
-          {
+          Object.assign({}, e, {
             width: "36",
             height: "36",
             viewBox: "0 0 36 36",
             fill: "none",
             xmlns: "http://www.w3.org/2000/svg",
-          },
+          }),
           i.createElement("path", {
             fillRule: "evenodd",
             clipRule: "evenodd",
@@ -1426,7 +1427,7 @@
           }),
         );
       }
-      function $(e) {
+      function q(e) {
         return i.createElement(
           "svg",
           {
@@ -1443,7 +1444,7 @@
           }),
         );
       }
-      function q(e) {
+      function Y(e) {
         return i.createElement(
           "svg",
           {
@@ -1517,82 +1518,16 @@
         );
       }
     },
-    19416: (e, t, r) => {
-      "use strict";
-      var n = r(85556),
-        i = r(47427),
-        l = r(20417);
-      class o extends i.Component {
-        constructor(e) {
-          super(e),
-            (this.m_elContainer = null),
-            (this.m_resizeObserver = null),
-            (this.state = { nWidth: 0, nHeight: 0 });
-        }
-        componentWillUnmount() {
-          this.m_resizeObserver && this.m_resizeObserver.disconnect();
-        }
-        BindContainerRef(e) {
-          this.m_resizeObserver &&
-            (this.m_resizeObserver.disconnect(),
-            (this.m_resizeObserver = null)),
-            (this.m_elContainer = e),
-            this.m_elContainer &&
-              ((this.m_resizeObserver = (0, l.it)(
-                this.m_elContainer,
-                this.OnResize,
-              )),
-              this.UpdateDimensions(
-                this.m_elContainer.clientWidth,
-                this.m_elContainer.clientHeight,
-              )),
-            this.props.refToDiv && this.props.refToDiv(e);
-        }
-        UpdateDimensions(e, t) {
-          (this.state.nWidth == e && this.state.nHeight == t) ||
-            this.setState({ nWidth: e, nHeight: t });
-        }
-        OnResize(e, t) {
-          let r = 0,
-            n = 0;
-          if (e.length > 0) {
-            let t = e[0].contentRect;
-            (r = t.width), (n = t.height);
-          }
-          this.UpdateDimensions(r, n);
-        }
-        render() {
-          const e = this.props,
-            { bUseRelativePosition: t, className: r, refToDiv: l } = e,
-            o = (0, n._T)(e, ["bUseRelativePosition", "className", "refToDiv"]),
-            C = t
-              ? { position: "relative" }
-              : { position: "absolute", top: 0, right: 0, bottom: 0, left: 0 },
-            s = { width: this.state.nWidth, height: this.state.nHeight },
-            a = this.props.children(s);
-          return i.createElement(
-            "div",
-            Object.assign(
-              { className: r, style: C, ref: this.BindContainerRef },
-              o,
-            ),
-            a,
-          );
-        }
-      }
-      (0, n.gn)([l.ak], o.prototype, "BindContainerRef", null),
-        (0, n.gn)([l.ak], o.prototype, "OnResize", null);
-    },
     29480: (e, t, r) => {
       "use strict";
-      r.d(t, { T: () => o });
+      r.d(t, { T: () => l });
       var n = r(80751),
         i = r.n(n),
-        l = r(47427);
-      function o(e) {
-        const t = l.useRef(i().CancelToken.source());
+        o = r(47427);
+      function l(e) {
+        const t = o.useRef(i().CancelToken.source());
         return (
-          l.useEffect(() => {
+          o.useEffect(() => {
             const r = t.current;
             return () => r.cancel(e ? `${e}: unmounting` : "unmounting");
           }, [e]),
@@ -1610,22 +1545,22 @@
         });
       var n = r(85556),
         i = r(47427),
-        l = r(40057),
-        o = r(42718),
-        C = r(21928),
-        s = r(6279),
-        a = r(91707),
+        o = r(40057),
+        l = r(42718),
+        C = r(79545),
+        a = r(6279),
+        s = r(91707),
         c = r(12015),
         d = r(86357),
         h = r(14592),
-        u = r(66992),
-        m = r(48081),
-        L = r(61134);
+        u = r(6189),
+        L = r(48081),
+        m = r(61134);
       function p(e) {
         const [t, r] = i.useState(!1);
         return (
           i.useEffect(() => {
-            (0, a.Vj)(new L.Z(), void 0).then(() => {
+            (0, s.Vj)(new m.Z(), void 0).then(() => {
               r(!0);
             });
           }, []),
@@ -1639,28 +1574,28 @@
       function g(e) {
         const { clipID: t } = e,
           r = (function (e) {
-            const t = (0, l.bY)();
-            return (0, o.useQuery)(["grclip", e], () =>
+            const t = (0, o.bY)();
+            return (0, l.useQuery)(["grclip", e], () =>
               (0, n.mG)(this, void 0, void 0, function* () {
-                const r = C.gA.Init(s.qS);
+                const r = C.gA.Init(a.qS);
                 r.Body().set_clip_id(e);
-                const n = yield s.xG.GetSingleSharedClip(t, r);
+                const n = yield a.xG.GetSingleSharedClip(t, r);
                 if (1 != n.GetEResult())
                   return (
                     (0, c.F0)("GetSingleSharedClip failed"),
                     void n.DEBUG_LogToConsole()
                   );
                 let i,
-                  l = n.Body().toObject().clip,
-                  o = [];
-                if (0 == l.video_ids.length)
+                  o = n.Body().toObject().clip,
+                  l = [];
+                if (0 == o.video_ids.length)
                   return (
                     (0, c.F0)("No video ids in clip", e),
                     void n.DEBUG_LogToConsole()
                   );
-                for (let e of l.video_ids)
+                for (let e of o.video_ids)
                   (i && i.timeline_id == e.server_timeline_id) ||
-                    ((i = w(l, e)), o.push(i)),
+                    ((i = w(o, e)), l.push(i)),
                     i.recordings.push({
                       recording_id: e.video_manager_video_id,
                       start_offset_ms: e.start_offset_ms.toFixed(0),
@@ -1668,7 +1603,7 @@
                       recording_type: 4,
                       cdn_manifest_url: e.manifest_url,
                     });
-                return { clip_id: l.clip_id, game_id: l.gameid, timelines: o };
+                return { clip_id: o.clip_id, game_id: o.gameid, timelines: l };
               }),
             );
           })(t);
@@ -1686,7 +1621,7 @@
         };
       }
       function f(e) {
-        const t = i.useMemo(() => (0, a.GL)(e), [e]),
+        const t = i.useMemo(() => (0, s.GL)(e), [e]),
           r = i.useCallback(
             (t) => {
               for (const r of e.timelines)
@@ -1711,10 +1646,10 @@
             { loader: r, fnGetManifest: n, mode: d.tP.Clips },
             i.createElement(
               "div",
-              { className: m.ClipDetails },
+              { className: L.ClipDetails },
               i.createElement(
                 "div",
-                { className: m.VideoContainer },
+                { className: L.VideoContainer },
                 i.createElement(h.i, { positionAbsolute: !1 }),
               ),
               i.createElement(u.k9, { loader: r }),

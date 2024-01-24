@@ -488,7 +488,8 @@
               2 & n && o.push(2),
               4 & n && o.push(4),
               16 & n && o.push(16),
-              32 & n && o.push(32);
+              32 & n && o.push(32),
+              64 & n && o.push(64);
             let r = new FormData();
             r.append("sessionid", m.De.SESSIONID),
               r.append("clan_account_id", this.GetClanAccountID().toString()),

@@ -247,7 +247,7 @@
         o = i.n(n),
         s = i(47427),
         r = i(42718),
-        l = i(21928),
+        l = i(79545),
         m = i(40057),
         d = i(90938),
         c = i(42411),
@@ -391,7 +391,7 @@
       });
       var a = i(85556),
         n = i(49457),
-        o = i(21928),
+        o = i(79545),
         s = i(40212),
         r = i(42718),
         l = i(54842),
@@ -518,8 +518,12 @@
           titleLoc: "#SteamNotifications_FamilyPurchaseRequestTitle",
           bodyLoc: "#SteamNotifications_FamilyPurchaseRequestBody",
           url: (e) => {
-            return (t = e.request_id), `${p.De.STORE_BASE_URL}cart/?prsi=${t}`;
-            var t;
+            return (
+              (t = e.familyid),
+              (i = e.request_id),
+              `${p.De.STORE_BASE_URL}cart/purchaserequest/${t}/${i}`
+            );
+            var t, i;
           },
         },
         19: {

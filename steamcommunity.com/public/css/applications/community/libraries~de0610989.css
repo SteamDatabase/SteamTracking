@@ -16,7 +16,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background-color: #0b1016;
+  background-color: #0b101600;
   box-shadow: inset 0 0 80px #000000bb;
 }
 .gamerecordingplayer_GameRecordingPlayer_3y8Yb.gamerecordingplayer_NoVideo_2tKI2 {
@@ -33,8 +33,8 @@
   max-width: 100%;
   height: 100%;
   object-fit: contain;
-  object-position: 50% 50%;
-  background-color: #0b1016;
+  object-position: 0% 0%;
+  background-color: #0b101600;
 }
 .gamerecordingplayer_GameRecordingPlayer_3y8Yb video:focus {
   outline: none;
@@ -77,12 +77,12 @@
   font-family: "Roboto-Mono";
 }
 .timeline_LoadingTimeline_2q1bR {
-  min-height: 80px;
+  min-height: 54px;
 }
 .timeline_ScrollAndControlsCtn_b4rbI {
   display: flex;
   flex-direction: column;
-  min-height: 80px;
+  min-height: 54px;
 }
 .timeline_Controls_IiKYe {
   display: flex;
@@ -115,7 +115,7 @@
 .timeline_ContentContainer_3cS9l {
   display: inline-block;
   position: relative;
-  height: 80px;
+  height: 54px;
   box-sizing: content-box;
 }
 .timeline_AbsoluteLayer_1T_Gi {
@@ -176,7 +176,7 @@
 .timeline_RangeSelector_1LGsB {
   z-index: 4;
   top: 0%;
-  bottom: 23%;
+  bottom: 21%;
 }
 .timeline_SeekScrubber_1z7bJ {
   bottom: 0%;
@@ -191,12 +191,12 @@
   bottom: 0px;
 }
 .horizontalscrollbar_LoadingTimeline_1i1Lv {
-  min-height: 80px;
+  min-height: 54px;
 }
 .horizontalscrollbar_ScrollAndControlsCtn_W_zhB {
   display: flex;
   flex-direction: column;
-  min-height: 80px;
+  min-height: 54px;
 }
 .horizontalscrollbar_Controls_3-Ctq {
   display: flex;
@@ -229,7 +229,7 @@
 .horizontalscrollbar_ContentContainer_1Vt3v {
   display: inline-block;
   position: relative;
-  height: 80px;
+  height: 54px;
   box-sizing: content-box;
 }
 .horizontalscrollbar_AbsoluteLayer_tMyh7 {
@@ -291,7 +291,7 @@
 .horizontalscrollbar_RangeSelector_35tVK {
   z-index: 4;
   top: 0%;
-  bottom: 23%;
+  bottom: 21%;
 }
 .horizontalscrollbar_SeekScrubber_1uy0t {
   bottom: 0%;
@@ -309,7 +309,7 @@
   overflow: hidden;
   position: relative;
   flex: 1;
-  height: 80px;
+  height: 54px;
 }
 .horizontalscrollbar_LeftControlsAndContent_2ZLpF {
   display: flex;
@@ -357,15 +357,13 @@
 }
 .horizontalscrollbar_ScrollbarAndSiblings_3A6_p {
   position: relative;
-  display: flex;
   align-items: center;
-  gap: 12px;
+  padding-top: 6px;
 }
 .horizontalscrollbar_ScrollbarAndSiblings_3A6_p
   .horizontalscrollbar_ScrollBarCtn_3dZUY {
   position: relative;
   flex: 1;
-  height: 8px;
 }
 .horizontalscrollbar_ScrollbarAndSiblings_3A6_p
   .horizontalscrollbar_ScrollBarCtn_3dZUY.horizontalscrollbar_HideScrollBar_eTpZa {
@@ -375,11 +373,9 @@
 .horizontalscrollbar_ScrollbarAndSiblings_3A6_p
   .horizontalscrollbar_ScrollBarCtn_3dZUY
   .horizontalscrollbar_ScrollTrack_ypAP4 {
-  background-color: #00000005;
+  background-color: #00000004;
   box-shadow: inset 0 0 6px #00000066;
-  height: 6px;
-  margin-top: 2px;
-  margin-bottom: auto;
+  height: 3px;
   border-radius: 3px;
   position: relative;
 }
@@ -406,8 +402,9 @@
   .horizontalscrollbar_ScrollBarCtn_3dZUY
   .horizontalscrollbar_RangeAnnotation_1OHs7 {
   position: absolute;
-  height: 100%;
-  background-color: #ffd55f99;
+  top: 0px;
+  height: 3px;
+  background-color: #ffd55f44;
   cursor: pointer;
   z-index: 9;
   transition-property: background-color;
@@ -422,12 +419,12 @@
   .horizontalscrollbar_ScrollBarCtn_3dZUY
   .horizontalscrollbar_ScrollThumb_iOMps {
   position: absolute;
-  background-color: #e2e7eb33;
+  background-color: #e2e7eb20;
   background-color: linear-gradient(-45deg, red 8%, blue 90%);
-  height: 8px;
+  height: 2px;
   top: 0;
   left: 0;
-  min-width: 6px;
+  min-width: 2px;
   border-radius: 3px;
   cursor: grab;
   z-index: 11;
@@ -478,105 +475,13 @@
   color: red;
   pointer-events: none;
 }
-.zoomcontrol_ZoomControls_187cP {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 0px;
-}
-.zoomcontrol_ZoomControls_187cP .zoomcontrol_ZoomTooltipCtn_3fl25 {
-  align-self: center;
-}
-.zoomcontrol_ZoomControls_187cP button.zoomcontrol_ZoomIcon_2wnBf {
-  display: flex;
-  background: #3d4450;
-  padding: 4px;
-  height: 14px;
-  margin: 4px;
-  border-radius: 50%;
-  width: fit-content;
-  align-items: center;
-  gap: 4px;
-  transition-duration: 0.2s;
-  transition-property: filter;
-}
-.zoomcontrol_ZoomControls_187cP
-  button.zoomcontrol_ZoomIcon_2wnBf.zoomcontrol_Disabled_5HBhk {
-  filter: brightness(0.65);
-}
-.zoomcontrol_ZoomControls_187cP
-  button.zoomcontrol_ZoomIcon_2wnBf.zoomcontrol_Disabled_5HBhk
-  > svg {
-  color: darkestGrey;
-  filter: brightness(0.65);
-}
-.zoomcontrol_ZoomControls_187cP button.zoomcontrol_ZoomIcon_2wnBf > svg {
-  color: #dcdedf;
-  width: 14px;
-  height: 14px;
-}
-.zoomcontrol_ZoomControls_187cP button.zoomcontrol_ZoomIcon_2wnBf:hover,
-.zoomcontrol_ZoomControls_187cP button.zoomcontrol_ZoomIcon_2wnBf:active {
-  filter: brightness(1.25);
-}
-.zoomcontrol_ZoomControls_187cP .zoomcontrol_ResolutionCtn_11EGQ {
-  width: 40px;
-  height: 4px;
-  border-radius: 2px;
-  margin: 2px;
-  overflow: hidden;
-  background-color: rgba(255, 255, 255, 0.2);
-  position: relative;
-}
-.zoomcontrol_ZoomControls_187cP
-  .zoomcontrol_ResolutionCtn_11EGQ
-  .zoomcontrol_ResolutionFill_2uCiq {
-  background-color: #b8bcbf;
-  position: absolute;
-  bottom: 0;
-  height: 4px;
-}
-.thumbnailbar_ThumbnailBarCtn_R-p0J {
-  display: flex;
-  cursor: default;
-}
-.thumbnailbar_IsDragging_QJN5O {
-  cursor: grabbing !important;
-}
-.thumbnailbar_ThumbCtn_2o30j {
-  overflow-x: hidden;
-  overflow-y: hidden;
-  padding: 6px 0px;
-  margin-top: 20px;
-}
-.thumbnailbar_Thumb_3t5Mb {
-  height: 96px;
-}
-.thumbnailbar_ThumbScrubber_3X4Qp {
-  position: relative;
-  z-index: 4;
-  top: 0;
-  margin-top: 3px;
-  cursor: pointer;
-}
-.thumbnailbar_ThumbScrubber_3X4Qp.thumbnailbar_BlockPointerEvents_1wALj {
-  pointer-events: none;
-}
-.thumbnailbar_ThumbScrubber_3X4Qp svg {
-  height: 80px;
-}
-.thumbnailbar_ThumbnailImage_Wuaj3 {
-  position: absolute;
-  border: solid 4px #000;
-}
 .recordingdecorator_LoadingTimeline_1_t3n {
-  min-height: 80px;
+  min-height: 54px;
 }
 .recordingdecorator_ScrollAndControlsCtn_2lDH0 {
   display: flex;
   flex-direction: column;
-  min-height: 80px;
+  min-height: 54px;
 }
 .recordingdecorator_Controls_2W7Bc {
   display: flex;
@@ -609,7 +514,7 @@
 .recordingdecorator_ContentContainer_1s9mu {
   display: inline-block;
   position: relative;
-  height: 80px;
+  height: 54px;
   box-sizing: content-box;
 }
 .recordingdecorator_AbsoluteLayer_3uK4E {
@@ -671,7 +576,7 @@
 .recordingdecorator_RangeSelector_AQt-j {
   z-index: 4;
   top: 0%;
-  bottom: 23%;
+  bottom: 21%;
 }
 .recordingdecorator_SeekScrubber_fxHTi {
   bottom: 0%;
@@ -687,18 +592,18 @@
 }
 .recordingdecorator_RecordingDecorator_rhzh6 {
   background: linear-gradient(180deg, #144b75 0%, #0172ac 80%);
-  height: 12px;
+  height: 8px;
   opacity: 1;
   position: absolute;
   bottom: 0;
 }
 .clipdecorators_LoadingTimeline_2SUXO {
-  min-height: 80px;
+  min-height: 54px;
 }
 .clipdecorators_ScrollAndControlsCtn_2-ruW {
   display: flex;
   flex-direction: column;
-  min-height: 80px;
+  min-height: 54px;
 }
 .clipdecorators_Controls_28WZ8 {
   display: flex;
@@ -731,7 +636,7 @@
 .clipdecorators_ContentContainer_Gg4Gc {
   display: inline-block;
   position: relative;
-  height: 80px;
+  height: 54px;
   box-sizing: content-box;
 }
 .clipdecorators_AbsoluteLayer_2pPjf {
@@ -792,7 +697,7 @@
 .clipdecorators_RangeSelector_3K5gQ {
   z-index: 4;
   top: 0%;
-  bottom: 23%;
+  bottom: 21%;
 }
 .clipdecorators_SeekScrubber_2veVL {
   bottom: 0%;
@@ -827,12 +732,12 @@
   }
 }
 .gamemodes_LoadingTimeline_37fn0 {
-  min-height: 80px;
+  min-height: 54px;
 }
 .gamemodes_ScrollAndControlsCtn_256lw {
   display: flex;
   flex-direction: column;
-  min-height: 80px;
+  min-height: 54px;
 }
 .gamemodes_Controls_25ROF {
   display: flex;
@@ -865,7 +770,7 @@
 .gamemodes_ContentContainer_3vtI4 {
   display: inline-block;
   position: relative;
-  height: 80px;
+  height: 54px;
   box-sizing: content-box;
 }
 .gamemodes_AbsoluteLayer_2w4xP {
@@ -926,7 +831,7 @@
 .gamemodes_RangeSelector_2TX8k {
   z-index: 4;
   top: 0%;
-  bottom: 23%;
+  bottom: 21%;
 }
 .gamemodes_SeekScrubber_FkKvi {
   bottom: 0%;
@@ -943,7 +848,7 @@
 .gamemodes_GameModeMarker_3j3jo {
   position: absolute;
   bottom: 0;
-  height: 12px;
+  height: 8px;
   opacity: 0.3;
 }
 .gamemodes_GameModeMarker_3j3jo.gamemodes_Playing_hLQ3v {
@@ -971,12 +876,12 @@
   background: #ffffff66;
 }
 .datedecorator_LoadingTimeline_3FP8P {
-  min-height: 80px;
+  min-height: 54px;
 }
 .datedecorator_ScrollAndControlsCtn_2QQg8 {
   display: flex;
   flex-direction: column;
-  min-height: 80px;
+  min-height: 54px;
 }
 .datedecorator_Controls_2PkCJ {
   display: flex;
@@ -1009,7 +914,7 @@
 .datedecorator_ContentContainer_3DCVC {
   display: inline-block;
   position: relative;
-  height: 80px;
+  height: 54px;
   box-sizing: content-box;
 }
 .datedecorator_AbsoluteLayer_215Gh {
@@ -1070,7 +975,7 @@
 .datedecorator_RangeSelector_32yf9 {
   z-index: 4;
   top: 0%;
-  bottom: 23%;
+  bottom: 21%;
 }
 .datedecorator_SeekScrubber_ypfLl {
   bottom: 0%;
@@ -1089,12 +994,13 @@
   line-height: 18px;
   font-weight: 800;
   opacity: 1;
-  position: absolute;
   color: #3d4450;
   height: fit-content;
   padding: 0px 2px 2px 0px;
   margin-left: 0px;
   margin-top: 8px;
+  position: absolute;
+  bottom: calc(25% + 8px);
 }
 .datedecorator_TimelineRelativeDate_3T-pn.datedecorator_Overlay_1fN7j {
   color: #67707b;
@@ -1112,12 +1018,12 @@
   }
 }
 .backgroundticks_LoadingTimeline_2JDrG {
-  min-height: 80px;
+  min-height: 54px;
 }
 .backgroundticks_ScrollAndControlsCtn_VOrb9 {
   display: flex;
   flex-direction: column;
-  min-height: 80px;
+  min-height: 54px;
 }
 .backgroundticks_Controls_qaanL {
   display: flex;
@@ -1150,7 +1056,7 @@
 .backgroundticks_ContentContainer_1uVCC {
   display: inline-block;
   position: relative;
-  height: 80px;
+  height: 54px;
   box-sizing: content-box;
 }
 .backgroundticks_AbsoluteLayer_2SFFi {
@@ -1211,7 +1117,7 @@
 .backgroundticks_RangeSelector_fskko {
   z-index: 4;
   top: 0%;
-  bottom: 23%;
+  bottom: 21%;
 }
 .backgroundticks_SeekScrubber_2eYek {
   bottom: 0%;
@@ -1256,12 +1162,12 @@
   bottom: 0;
 }
 .highlights_LoadingTimeline_3srjw {
-  min-height: 80px;
+  min-height: 54px;
 }
 .highlights_ScrollAndControlsCtn_2AMvj {
   display: flex;
   flex-direction: column;
-  min-height: 80px;
+  min-height: 54px;
 }
 .highlights_Controls_w72_z {
   display: flex;
@@ -1294,7 +1200,7 @@
 .highlights_ContentContainer_2WuH7 {
   display: inline-block;
   position: relative;
-  height: 80px;
+  height: 54px;
   box-sizing: content-box;
 }
 .highlights_AbsoluteLayer_3BkCi {
@@ -1355,7 +1261,7 @@
 .highlights_RangeSelector_FYw7K {
   z-index: 4;
   top: 0%;
-  bottom: 23%;
+  bottom: 21%;
 }
 .highlights_SeekScrubber_-7enw {
   bottom: 0%;
@@ -1376,7 +1282,7 @@
   position: relative;
 }
 .highlights_RangeControls_1EbiE {
-  height: 15px;
+  height: 12px;
   bottom: 0;
   width: 100%;
   position: absolute;
@@ -1484,7 +1390,7 @@
 }
 .highlights_RangeIcon_2hrBC {
   height: 100%;
-  width: 16px;
+  width: 12px;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
   color: #ffd55f;
@@ -1496,10 +1402,10 @@
 }
 .highlights_RangeIcon_2hrBC > svg {
   height: 100%;
-  width: 16px;
+  width: 12px;
 }
 .highlights_RangeIcon_2hrBC.highlights_Left_2FBYJ {
-  margin-left: -16px;
+  margin-left: -12px;
 }
 .highlights_RangeMask_RJQC_ {
   position: absolute;
@@ -1562,12 +1468,12 @@
   color: #67707b;
 }
 .highlights_LoadingTimeline_3srjw {
-  min-height: 80px;
+  min-height: 54px;
 }
 .highlights_ScrollAndControlsCtn_2AMvj {
   display: flex;
   flex-direction: column;
-  min-height: 80px;
+  min-height: 54px;
 }
 .highlights_Controls_w72_z {
   display: flex;
@@ -1600,7 +1506,7 @@
 .highlights_ContentContainer_2WuH7 {
   display: inline-block;
   position: relative;
-  height: 80px;
+  height: 54px;
   box-sizing: content-box;
 }
 .highlights_AbsoluteLayer_3BkCi {
@@ -1661,7 +1567,7 @@
 .highlights_RangeSelector_FYw7K {
   z-index: 4;
   top: 0%;
-  bottom: 23%;
+  bottom: 21%;
 }
 .highlights_SeekScrubber_-7enw {
   bottom: 0%;
@@ -1679,8 +1585,7 @@
   pointer-events: all;
   position: absolute;
   width: fit-content;
-  padding-top: 2px;
-  top: 40%;
+  bottom: 30px;
 }
 .highlights_TimelineMarker_38PoJ {
   pointer-events: all;
@@ -1692,7 +1597,7 @@
   pointer-events: none;
   position: absolute;
   width: 1px;
-  height: 12px;
+  height: 8px;
   background-color: #99d4ff;
   bottom: 0px;
 }
@@ -1851,12 +1756,12 @@
   top: 0;
 }
 .timestamps_LoadingTimeline_yJKPf {
-  min-height: 80px;
+  min-height: 54px;
 }
 .timestamps_ScrollAndControlsCtn_m-I63 {
   display: flex;
   flex-direction: column;
-  min-height: 80px;
+  min-height: 54px;
 }
 .timestamps_Controls_3A_z_ {
   display: flex;
@@ -1889,7 +1794,7 @@
 .timestamps_ContentContainer_3xaiI {
   display: inline-block;
   position: relative;
-  height: 80px;
+  height: 54px;
   box-sizing: content-box;
 }
 .timestamps_AbsoluteLayer_SUVsQ {
@@ -1950,7 +1855,7 @@
 .timestamps_RangeSelector_17hy2 {
   z-index: 4;
   top: 0%;
-  bottom: 23%;
+  bottom: 21%;
 }
 .timestamps_SeekScrubber_3uBdy {
   bottom: 0%;
@@ -1989,12 +1894,12 @@
   width: 100%;
 }
 .rangeselector_LoadingTimeline_1t3ac {
-  min-height: 80px;
+  min-height: 54px;
 }
 .rangeselector_ScrollAndControlsCtn_1QTGk {
   display: flex;
   flex-direction: column;
-  min-height: 80px;
+  min-height: 54px;
 }
 .rangeselector_Controls_1ESz5 {
   display: flex;
@@ -2027,7 +1932,7 @@
 .rangeselector_ContentContainer_2a4VQ {
   display: inline-block;
   position: relative;
-  height: 80px;
+  height: 54px;
   box-sizing: content-box;
 }
 .rangeselector_AbsoluteLayer_kI13- {
@@ -2088,7 +1993,7 @@
 .rangeselector_RangeSelector_H9Zal {
   z-index: 4;
   top: 0%;
-  bottom: 23%;
+  bottom: 21%;
 }
 .rangeselector_SeekScrubber_3BJnQ {
   bottom: 0%;
@@ -2109,7 +2014,7 @@
   position: relative;
 }
 .rangeselector_RangeControls_hBMLo {
-  height: 15px;
+  height: 12px;
   bottom: 0;
   width: 100%;
   position: absolute;
@@ -2217,7 +2122,7 @@
 }
 .rangeselector_RangeIcon_2p3OJ {
   height: 100%;
-  width: 16px;
+  width: 12px;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
   color: #ffd55f;
@@ -2229,10 +2134,10 @@
 }
 .rangeselector_RangeIcon_2p3OJ > svg {
   height: 100%;
-  width: 16px;
+  width: 12px;
 }
 .rangeselector_RangeIcon_2p3OJ.rangeselector_Left_329qv {
-  margin-left: -16px;
+  margin-left: -12px;
 }
 .rangeselector_RangeMask_1PHxK {
   position: absolute;
@@ -2311,12 +2216,12 @@
   color: #ffd55f;
 }
 .seekscrubber_LoadingTimeline_2h2w_ {
-  min-height: 80px;
+  min-height: 54px;
 }
 .seekscrubber_ScrollAndControlsCtn_1EJup {
   display: flex;
   flex-direction: column;
-  min-height: 80px;
+  min-height: 54px;
 }
 .seekscrubber_Controls_2s8o8 {
   display: flex;
@@ -2349,7 +2254,7 @@
 .seekscrubber_ContentContainer_31xC- {
   display: inline-block;
   position: relative;
-  height: 80px;
+  height: 54px;
   box-sizing: content-box;
 }
 .seekscrubber_AbsoluteLayer_Ov5VE {
@@ -2410,7 +2315,7 @@
 .seekscrubber_RangeSelector_W6nan {
   z-index: 4;
   top: 0%;
-  bottom: 23%;
+  bottom: 21%;
 }
 .seekscrubber_SeekScrubber_1ZJdK {
   bottom: 0%;
@@ -2435,7 +2340,7 @@
 .seekscrubber_PlayHeadContainer_LF77_ {
   position: absolute;
   width: fit-content;
-  bottom: 0;
+  bottom: -4px;
 }
 .seekscrubber_PlayHeadContainer_LF77_.seekscrubber_Active_1F8CR {
   color: #1a9fff;
@@ -2477,12 +2382,12 @@
   }
 }
 .seekscrubber_LoadingTimeline_2h2w_ {
-  min-height: 80px;
+  min-height: 54px;
 }
 .seekscrubber_ScrollAndControlsCtn_1EJup {
   display: flex;
   flex-direction: column;
-  min-height: 80px;
+  min-height: 54px;
 }
 .seekscrubber_Controls_2s8o8 {
   display: flex;
@@ -2515,7 +2420,7 @@
 .seekscrubber_ContentContainer_31xC- {
   display: inline-block;
   position: relative;
-  height: 80px;
+  height: 54px;
   box-sizing: content-box;
 }
 .seekscrubber_AbsoluteLayer_Ov5VE {
@@ -2576,7 +2481,7 @@
 .seekscrubber_RangeSelector_W6nan {
   z-index: 4;
   top: 0%;
-  bottom: 23%;
+  bottom: 21%;
 }
 .seekscrubber_SeekScrubber_1ZJdK {
   bottom: 0%;
@@ -2597,7 +2502,7 @@
   position: relative;
 }
 .seekscrubber_RangeControls_2XSXT {
-  height: 15px;
+  height: 12px;
   bottom: 0;
   width: 100%;
   position: absolute;
@@ -2705,7 +2610,7 @@
 }
 .seekscrubber_RangeIcon_2g3Hn {
   height: 100%;
-  width: 16px;
+  width: 12px;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
   color: #ffd55f;
@@ -2717,10 +2622,10 @@
 }
 .seekscrubber_RangeIcon_2g3Hn > svg {
   height: 100%;
-  width: 16px;
+  width: 12px;
 }
 .seekscrubber_RangeIcon_2g3Hn.seekscrubber_Left_2e7WP {
-  margin-left: -16px;
+  margin-left: -12px;
 }
 .seekscrubber_RangeMask_1yjoF {
   position: absolute;
@@ -2847,7 +2752,7 @@
 .playhead_PlayHeadContainer_2x8YN {
   position: absolute;
   width: fit-content;
-  bottom: 0;
+  bottom: -4px;
 }
 .playhead_PlayHeadContainer_2x8YN.playhead_Active_1xsR- {
   color: #1a9fff;

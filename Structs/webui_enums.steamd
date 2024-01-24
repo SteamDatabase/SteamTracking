@@ -28,6 +28,8 @@ enum ATTRIBCAP
 	ATTRIBCAP_CENTER_TRACKPAD = 33554432;
 	ATTRIBCAP_NINTENDO_LAYOUT = 67108864;
 	ATTRIBCAP_CANT_READ_GUIDEBUTTON = 134217728;
+	ATTRIBCAP_GRIPS_FLIPPED = 268435456;
+	ATTRIBCAP_PLAYER_LED = 536870912;
 }
 
 enum BluetoothDeviceType
@@ -1638,6 +1640,15 @@ enum EGameIDType
 	k_EGameIDTypeP2P = 3;
 }
 
+enum EGameRecordingType
+{
+	k_EGameRecordingType_Unknown = 0;
+	k_EGameRecordingType_NotRecording = 1;
+	k_EGameRecordingType_ManualRecording = 2;
+	k_EGameRecordingType_BackgroundRecording = 3;
+	k_EGameRecordingType_Clip = 4;
+}
+
 enum EGamescopeBlurMode
 {
 	k_EGamescopeBlurMode_Disabled = 0;
@@ -1699,6 +1710,59 @@ enum EGraphicsPerfOverlayState
 	EGraphicsPerfOverlayState_Medium = 2;
 	EGraphicsPerfOverlayState_Full = 3;
 	EGraphicsPerfOverlayState_Max = 3;
+}
+
+enum eGyroButtonBitMask
+{
+	k_eGyroButtonBitMask_SelectNone = undefined;
+	k_eGyroButtonBitMask_SelectAll = 4503599627370495;
+	k_eGyroButtonBitMask_RightTriggerFullPull = 0;
+	k_eGyroButtonBitMask_LeftTriggerFullPull = 1;
+	k_eGyroButtonBitMask_ButtonRightBumper = 2;
+	k_eGyroButtonBitMask_ButtonLeftBumper = 3;
+	k_eGyroButtonBitMask_ButtonNorth = 4;
+	k_eGyroButtonBitMask_ButtonEast = 5;
+	k_eGyroButtonBitMask_ButtonWest = 6;
+	k_eGyroButtonBitMask_ButtonSouth = 7;
+	k_eGyroButtonBitMask_ButtonDPadUp = 8;
+	k_eGyroButtonBitMask_ButtonDPadRight = 9;
+	k_eGyroButtonBitMask_ButtonDPadLeft = 10;
+	k_eGyroButtonBitMask_ButtonDPadDown = 11;
+	k_eGyroButtonBitMask_ButtonMenu = 12;
+	k_eGyroButtonBitMask_ButtonSteam = 13;
+	k_eGyroButtonBitMask_ButtonEscape = 14;
+	k_eGyroButtonBitMask_ButtonBackGripLeftLower = 15;
+	k_eGyroButtonBitMask_ButtonBackGripRightLower = 16;
+	k_eGyroButtonBitMask_ButtonLeftPadClicked = 17;
+	k_eGyroButtonBitMask_ButtonRightPadClicked = 18;
+	k_eGyroButtonBitMask_CapSenseLeftTouchPad = 19;
+	k_eGyroButtonBitMask_CapSenseRightTouchPad = 20;
+	k_eGyroButtonBitMask_ButtonLeftStick = 22;
+	k_eGyroButtonBitMask_RightTriggerSoftPull = 24;
+	k_eGyroButtonBitMask_LeftTriggerSoftPull = 25;
+	k_eGyroButtonBitMask_ButtonRightStick = 26;
+	k_eGyroButtonBitMask_CapSenseCenterTouchPad = 27;
+	k_eGyroButtonBitMask_ButtonCenterpadClicked = 28;
+	k_eGyroButtonBitMask_ButtonAncillary1 = 29;
+	k_eGyroButtonBitMask_AxisDeflectionLeftStick = 30;
+	k_eGyroButtonBitMask_AxisDeflectionRightStick = 31;
+	k_eGyroButtonBitMask_ButtonMacro0 = 32;
+	k_eGyroButtonBitMask_ButtonMacro1 = 33;
+	k_eGyroButtonBitMask_ButtonMacro2 = 34;
+	k_eGyroButtonBitMask_ButtonMacro3 = 35;
+	k_eGyroButtonBitMask_ButtonMacro4 = 36;
+	k_eGyroButtonBitMask_ButtonMacro5 = 37;
+	k_eGyroButtonBitMask_ButtonMacro6 = 38;
+	k_eGyroButtonBitMask_ButtonMacro7 = 39;
+	k_eGyroButtonBitMask_ButtonBackGripLeftUpper = 41;
+	k_eGyroButtonBitMask_ButtonBackGripRightUpper = 42;
+	k_eGyroButtonBitMask_LeftbumperFingerdown = 44;
+	k_eGyroButtonBitMask_RightbumperFingerdown = 45;
+	k_eGyroButtonBitMask_CapSenseLeftStick = 46;
+	k_eGyroButtonBitMask_CapSenseRightStick = 47;
+	k_eGyroButtonBitMask_ButtonMacro1Finger = 48;
+	k_eGyroButtonBitMask_ButtonMacro2Finger = 49;
+	k_eGyroButtonBitMask_ButtonAltGuide = 50;
 }
 
 enum EHDRSupport
@@ -3319,6 +3383,13 @@ enum ERecommendationIgnoreReason
 	k_ERecommendationIgnoreReasonOwnedElsewhere = 2;
 }
 
+enum ERecordingSessionChangeNotificationType
+{
+	k_ERecordingSessionChangeNotificationType_Started = 1;
+	k_ERecordingSessionChangeNotificationType_Stopped = 2;
+	k_ERecordingSessionChangeNotificationType_Deleted = 3;
+}
+
 enum ERegionCode
 {
 	k_ERegionCodeInvalid = 0;
@@ -4436,6 +4507,27 @@ enum ETextFilterSetting
 	k_ETextFilterSettingDisabled = 3;
 }
 
+enum ETimelineChangeNotificationType
+{
+	k_ETimelineChangeNotificationType_Started = 1;
+	k_ETimelineChangeNotificationType_Stopped = 2;
+	k_ETimelineChangeNotificationType_Deleted = 3;
+	k_ETimelineChangeNotificationType_RecordingStarted = 4;
+	k_ETimelineChangeNotificationType_RecordingStopped = 5;
+}
+
+enum ETimelineEntryType
+{
+	k_ETimelineEntryType_Invalid = 0;
+	k_ETimelineEntryType_GameMode = 1;
+	k_ETimelineEntryType_Range = 2;
+	k_ETimelineEntryType_Timestamp = 3;
+	k_ETimelineEntryType_Highlight = 4;
+	k_ETimelineEntryType_UserMarker = 5;
+	k_ETimelineEntryType_RichPresence = 6;
+	k_ETimelineEntryType_Screenshot = 7;
+}
+
 enum ETokenRenewalType
 {
 	k_ETokenRenewalType_None = 0;
@@ -5264,6 +5356,20 @@ enum PublishedFileQueryType
 	k_PublishedFileQueryType_RankedByInappropriateContentRating = 19;
 	k_PublishedFileQueryType_RankedByBanContentCheck = 20;
 	k_PublishedFileQueryType_RankedByLastUpdatedDate = 21;
+}
+
+enum Resolution
+{
+	Resolution_0 = 12000;
+	Resolution_1 = 7500;
+	Resolution_2 = 4500;
+	Resolution_3 = 3000;
+	Resolution_4 = 1500;
+	Resolution_5 = 1000;
+	Resolution_6 = 750;
+	Resolution_7 = 400;
+	Resolution_8 = 250;
+	Resolution_9 = 100;
 }
 
 enum Show
@@ -6271,6 +6377,14 @@ enum UnnamedEnum55a9e12958fe69d4
 	Days = 86400000;
 }
 
+enum UnnamedEnum56fdca98a5fc5dc5
+{
+	NOT_TRACKING_ = undefined;
+	UP_TO_DATE_ = 0;
+	POSSIBLY_STALE_ = 1;
+	STALE_ = 2;
+}
+
 enum UnnamedEnum57a3dfe446c1fa85
 {
 	Low = 0;
@@ -6319,6 +6433,12 @@ enum UnnamedEnum5b9e1e5238550b64
 	ForceRoundedCorners = 524288;
 	OverrideRedirect = 1048576;
 	IgnoreSteamDisplayScale = 2097152;
+}
+
+enum UnnamedEnum5dbe2848aedba785
+{
+	k_ePrecise = 0;
+	k_eLoose = 1;
 }
 
 enum UnnamedEnum5e14c6d1b71a889d
