@@ -2881,7 +2881,7 @@
           } = e,
           { data: u } = (0, ae.IE)(t);
         if (!o) return null;
-        const p = !!u,
+        const p = !u,
           f = (0, _.Xx)(n, null == u ? void 0 : u.m_strPlayerName),
           g = (0, _.Xx)(o, null == u ? void 0 : u.m_strPlayerName);
         return a.createElement(
