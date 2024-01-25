@@ -1044,12 +1044,14 @@ ${PARTNER_BASE_URL}promotion/discounts/dashboard/
 ${PARTNER_BASE_URL}promotion/discounts/dashboard/${}?de=${}
 ${PARTNER_BASE_URL}promotion/discounts/dashboard/?de=${_ ? _ : _}
 ${PARTNER_BASE_URL}promotion/invitationplanner/dashboard
+${PARTNER_BASE_URL}promotion/invitationplanner/dashboard?appidlist=${}
 ${PARTNER_BASE_URL}promotion/invitationplanner/dashboard?partneridlist=${partnerid}
 ${PARTNER_BASE_URL}promotion/invitationplanner/dashboard?start=${}${}&count=${}
 ${PARTNER_BASE_URL}promotion/invitationplanner/dashboard?start=${}&count=${}
 ${PARTNER_BASE_URL}promotion/marketingmessages/ajaxgetsnrmetrics
 ${PARTNER_BASE_URL}promotion/marketingmessages/ajaxuploadasset/${}
 ${PARTNER_BASE_URL}promotion/marketingmessages/dashboard
+${PARTNER_BASE_URL}promotion/marketingmessages/edit/${gid}
 ${PARTNER_BASE_URL}promotion/marketingmessages/edit/${}
 ${PARTNER_BASE_URL}promotion/marketingmessages/partnerpreview/${}
 ${PARTNER_BASE_URL}promotion/planning/ajaxgetappsalesummaries

@@ -10,8 +10,8 @@
       n.r(t), n.d(t, { default: () => d });
       var o = n(87380),
         a = n(47427),
-        c = n(46882),
-        r = n(65255),
+        r = n(46882),
+        c = n(65255),
         i = n(89654),
         u = n(66387);
       function d(e) {
@@ -26,23 +26,22 @@
                   return (
                     t.start_date > e &&
                     t.start_date < n &&
-                    !t.reviewed_by_account &&
                     ((!t.owner_account_id &&
-                      t.creator_account_id == r.L7.accountid) ||
-                      t.owner_account_id == r.L7.accountid ||
-                      (t.artwork_owner_account_id == r.L7.accountid &&
+                      t.creator_account_id == c.L7.accountid) ||
+                      t.owner_account_id == c.L7.accountid ||
+                      (t.artwork_owner_account_id == c.L7.accountid &&
                         !t.artwork_completed_time) ||
-                      t.operator_account_id == r.L7.accountid ||
+                      t.operator_account_id == c.L7.accountid ||
                       (null === (o = t.watch_list) || void 0 === o
                         ? void 0
-                        : o.includes(r.L7.accountid)))
+                        : o.includes(c.L7.accountid)))
                   );
                 })
                 .map((e) => e.id);
             }
             return null;
           }, [t]);
-        return r.L7.is_support
+        return c.L7.is_support
           ? n && 0 != t.length
             ? 0 == n.length
               ? a.createElement(
@@ -57,9 +56,10 @@
                     planIDs: n,
                     bExcludeHideButton: !0,
                     bHideTypeField: !0,
+                    bHideDoneByDefault: !0,
                   }),
                 )
-            : a.createElement(c.V, {
+            : a.createElement(r.V, {
                 string: "loading",
                 size: "medium",
                 position: "center",

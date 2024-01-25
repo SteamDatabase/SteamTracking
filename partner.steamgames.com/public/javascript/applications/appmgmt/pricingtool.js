@@ -232,10 +232,10 @@
         N = t.n(f),
         S = t(6683),
         I = t(4532),
-        k = t(28738),
-        w = t(10162),
-        T = t(59728),
-        B = t(23121),
+        k = t(10162),
+        w = t(59728),
+        T = t(23121),
+        B = t(82e3),
         X = t(18500),
         y = t(85556),
         A = t(62613),
@@ -332,7 +332,7 @@
           "div",
           { className: (0, D.Z)(G().PriceOverrideSummary) },
           a.createElement(
-            T.HP,
+            w.HP,
             {
               toolTipContent: _,
               direction: "top",
@@ -342,7 +342,7 @@
             n,
           ),
           a.createElement(
-            T.HP,
+            w.HP,
             {
               toolTipContent: `${t}: ${l}`,
               direction: "overlay",
@@ -860,9 +860,10 @@
             (e[(e.OK = 2)] = "OK"),
             (e[(e.Failed = 3)] = "Failed");
         })(re || (re = {}));
-      var ne = t(82e3),
-        ie = (t(55215), t(69727), t(7765), t(42718)),
+      var ne = t(42718),
+        ie = t(23951),
         ae = t(71472);
+      t(7765), t(55215), t(69727);
       function oe(e) {
         return e.contains_game && e.contains_dlc
           ? "BOTH"
@@ -881,7 +882,7 @@
           "div",
           { className: x().CurrencyHeader },
           a.createElement(
-            T.HP,
+            w.HP,
             {
               toolTipContent: n,
               direction: "top",
@@ -896,7 +897,7 @@
             ),
           ),
           i > 0 &&
-            a.createElement(ne.G, {
+            a.createElement(B.G, {
               hoverKey: t,
               className: x().CurrencyMore,
               renderHover: () => a.createElement(me, { priceKey: t }),
@@ -909,31 +910,35 @@
           o = (0, g.df)(i),
           l = (0, g.ps)(i),
           c = l && (0, X.lp)(l.rtSubmitted),
-          [d, u] = (0, k.Jq)(null == l ? void 0 : l.submitterID),
-          m = u ? u.persona_name : null == l ? void 0 : l.submitterID;
-        let P = "PackageMore_" + i,
+          d = (0, ie.IE)(null == l ? void 0 : l.submitterID),
+          u = (null == d ? void 0 : d.data)
+            ? d.data.m_strPlayerName
+            : null == l
+            ? void 0
+            : l.submitterID;
+        let m = "PackageMore_" + i,
+          P = null,
           p = null,
-          h = null,
-          v = null;
+          h = null;
         o
-          ? ((p = x().NeedsReview),
-            (v = (0, E.Xx)("#PricingDashboard_PriceProposal_NeedsReview_ttip")),
-            (h = (0, E.Xx)("#PricingDashboard_PriceProposal_NeedsReview")))
+          ? ((P = x().NeedsReview),
+            (h = (0, E.Xx)("#PricingDashboard_PriceProposal_NeedsReview_ttip")),
+            (p = (0, E.Xx)("#PricingDashboard_PriceProposal_NeedsReview")))
           : 1 == (null == l ? void 0 : l.eState) && l.bPartnerWillPublish
-          ? ((p = x().PartnerWillPublish),
-            (v = (0, E.Xx)(
+          ? ((P = x().PartnerWillPublish),
+            (h = (0, E.Xx)(
               "#PricingDashboard_PriceProposal_WaitingForReview_PartnerWillPublish_ttip",
-              m,
+              u,
               c,
             )),
-            (h = (0, E.Xx)(
+            (p = (0, E.Xx)(
               "#PricingDashboard_PriceProposal_WaitingForReview_PartnerWillPublish",
             )))
           : 1 != (null == l ? void 0 : l.eState) || l.bPartnerWillPublish
           ? 4 == (null == l ? void 0 : l.eState)
-            ? ((p = x().ApprovedCanPublish),
-              (v = (0, E.Xx)("#PricingDashboard_PriceProposal_Approved_ttip")),
-              (h = a.createElement(
+            ? ((P = x().ApprovedCanPublish),
+              (h = (0, E.Xx)("#PricingDashboard_PriceProposal_Approved_ttip")),
+              (p = a.createElement(
                 s.KM,
                 {
                   onClick: (e) =>
@@ -946,18 +951,18 @@
                   "#PricingDashboard_PriceProposal_PublishDialog_Button",
                 ),
               )))
-            : ((p = x().NoProposalsInFlight),
-              (v = (0, E.Xx)(
+            : ((P = x().NoProposalsInFlight),
+              (h = (0, E.Xx)(
                 "#PricingDashboard_PriceProposal_NoneInFlight_ttip",
               )),
-              (h = (0, E.Xx)("#PricingDashboard_PriceProposal_NoneInFlight")))
-          : ((p = x().AutoPublish),
-            (v = (0, E.Xx)(
+              (p = (0, E.Xx)("#PricingDashboard_PriceProposal_NoneInFlight")))
+          : ((P = x().AutoPublish),
+            (h = (0, E.Xx)(
               "#PricingDashboard_PriceProposal_WaitingForReview_AutoPublish_ttip",
-              m,
+              u,
               c,
             )),
-            (h = a.createElement(
+            (p = a.createElement(
               "div",
               null,
               (0, E.Xx)("#PricingDashboard_PriceProposal_WaitingForReview"),
@@ -970,19 +975,19 @@
                 ),
               ),
             )));
-        let C = o || !!l;
+        let v = o || !!l;
         return a.createElement(
           "div",
-          { className: (0, D.Z)(x().ProposalState, p) },
+          { className: (0, D.Z)(x().ProposalState, P) },
           a.createElement(
-            T.HP,
-            { toolTipContent: v, className: x().StateText },
+            w.HP,
+            { toolTipContent: h, className: x().StateText },
             a.createElement("div", { className: x().ProposalStateKey }),
-            h,
+            p,
           ),
-          C &&
-            a.createElement(ne.G, {
-              hoverKey: P,
+          v &&
+            a.createElement(B.G, {
+              hoverKey: m,
               className: x().PackageMore,
               renderHover: () => a.createElement(ge, { packageID: i }),
             }),
@@ -998,16 +1003,16 @@
               ),
             [],
           ),
-          n = (0, ie.useQueryClient)(),
+          n = (0, ne.useQueryClient)(),
           i = a.useMemo(
             () => ({ client: n, fnBLocalChangesExist: r, fnWarnUser: t }),
             [r, t, n],
           ),
-          o = (0, B.zV)(i),
-          l = (0, B.zQ)(i),
-          c = (0, B.O7)(i),
-          s = (0, B.Ii)(i),
-          d = (0, B.UA)(i, !1),
+          o = (0, T.zV)(i),
+          l = (0, T.zQ)(i),
+          c = (0, T.O7)(i),
+          s = (0, T.Ii)(i),
+          d = (0, T.UA)(i, !1),
           u =
             ((m = i),
             a.useMemo(
@@ -1129,7 +1134,7 @@
             ],
             movableColumns: !0,
             groupToggleElement: "header",
-            rowFormatter: B.A$,
+            rowFormatter: T.A$,
             groupVisibilityChanged: _,
             renderComplete: _,
           };
@@ -1198,7 +1203,7 @@
               "div",
               { className: (0, D.Z)(x().PricingGrid, t && "CompactMode") },
               a.createElement(
-                w.SV,
+                k.SV,
                 null,
                 a.createElement(S.ReactTabulator, {
                   ref: d,
@@ -1731,7 +1736,7 @@
         i = t(42006),
         a = t(47427),
         o = t(37265),
-        l = t(28738),
+        l = t(23951),
         c = t(53040),
         s = t(62613),
         d = t(59728),
@@ -2021,8 +2026,12 @@
           p = !(!c || (o && c == o)),
           _ = (0, n.ps)(r),
           h = _ && k(_.rtSubmitted),
-          [b, E] = (0, l.Jq)(null == _ ? void 0 : _.submitterID),
-          v = E ? E.persona_name : null == _ ? void 0 : _.submitterID;
+          b = (0, l.IE)(null == _ ? void 0 : _.submitterID),
+          E = (null == b ? void 0 : b.data)
+            ? b.data.m_strPlayerName
+            : null == _
+            ? void 0
+            : _.submitterID;
         return a.createElement(
           "div",
           { className: C().PricePopout },
@@ -2067,7 +2076,7 @@
                 direction: "left",
                 toolTipContent: (0, m.Xx)(
                   "#PricingDashboard_ProposedPrice_ttip",
-                  v,
+                  E,
                   h,
                 ),
               },

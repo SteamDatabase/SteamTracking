@@ -18631,6 +18631,11 @@
                     br: n.FE.readBool,
                     bw: n.Xc.writeBool,
                   },
+                  exclude_direct_featuring: {
+                    n: 3,
+                    br: n.FE.readBool,
+                    bw: n.Xc.writeBool,
+                  },
                 },
               }),
             _.sm_m

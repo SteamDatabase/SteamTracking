@@ -639,7 +639,7 @@
         o = t(42006),
         a = t(47427),
         l = t(37265),
-        i = t(28738),
+        i = t(23951),
         c = t(53040),
         s = t(62613),
         u = t(59728),
@@ -929,8 +929,12 @@
           m = !(!c || (l && c == l)),
           E = (0, n.ps)(r),
           g = E && N(E.rtSubmitted),
-          [S, P] = (0, i.Jq)(null == E ? void 0 : E.submitterID),
-          k = P ? P.persona_name : null == E ? void 0 : E.submitterID;
+          S = (0, i.IE)(null == E ? void 0 : E.submitterID),
+          P = (null == S ? void 0 : S.data)
+            ? S.data.m_strPlayerName
+            : null == E
+            ? void 0
+            : E.submitterID;
         return a.createElement(
           "div",
           { className: b().PricePopout },
@@ -975,7 +979,7 @@
                 direction: "left",
                 toolTipContent: (0, p.Xx)(
                   "#PricingDashboard_ProposedPrice_ttip",
-                  k,
+                  P,
                   g,
                 ),
               },
