@@ -127,7 +127,6 @@
           );
         })(c.useMemo(() => (e ? l.K.InitFromAccountID(e) : null), [e]));
       }
-      window.g_ProfileStore = g;
     },
     9781: (e, t, r) => {
       r.d(t, { N: () => p, a: () => u });

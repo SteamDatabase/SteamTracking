@@ -1116,6 +1116,8 @@ Don't restart the renderer on UI mode changes
 -cef-force-accessibility
 Force enable CEF accessibility features
 -cef-enable-fatal-dcheck
+-cef-disable-touch-focus-workaround
+Disable touch input browser focus workaround
 -dev
 -html-perf-monitor
 Draws html perf data
@@ -1158,6 +1160,7 @@ GetClientActualLauncherType
 -launcher=%d
 -fakeoffline
 -disablerendererrestart
+-disabletouchfocusworkaround
 -use_safe_shutdown_workaround
 -use_xcomposite_workaround
 -force-sandbox
@@ -2413,17 +2416,17 @@ id
 @
 
 
-O
+P
+
+
+
 @
 
-F
-u
-S
-$
-=
+J
+U
+K
 0
 0
-
 
 
 Hi
@@ -2438,6 +2441,7 @@ AT=
 D
 @
 @
+
 
 
 @
@@ -2512,4 +2516,3 @@ Ic
 0
 0
 0
-[

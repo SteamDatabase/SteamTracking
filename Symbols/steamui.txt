@@ -503,7 +503,6 @@
  SDL_WasInit
  SDL_abs
  SDL_free
- SDL_memset
  SHA3_absorb
  SHA3_squeeze
  ScaleARGBCols64_C

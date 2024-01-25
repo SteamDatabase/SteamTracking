@@ -9346,6 +9346,7 @@
                 require_creator: t,
                 cc: d.De.COUNTRY,
                 l: d.De.LANGUAGE,
+                origin: self.origin,
               },
               s = new Array();
             const l = yield r().get(n, { params: i, cancelToken: a.token });

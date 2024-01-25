@@ -414,6 +414,7 @@
  T SDL_FillSurfaceRects
  T SDL_FilterEvents
  T SDL_FlashWindow
+ T SDL_FlipSurface
  T SDL_FlushAudioStream
  T SDL_FlushEvent
  T SDL_FlushEvents
@@ -439,9 +440,6 @@
  T SDL_GamepadEventsEnabled
  T SDL_GamepadHasAxis
  T SDL_GamepadHasButton
- T SDL_GamepadHasLED
- T SDL_GamepadHasRumble
- T SDL_GamepadHasRumbleTriggers
  T SDL_GamepadHasSensor
  T SDL_GamepadSensorEnabled
  T SDL_GetAssertionHandler
@@ -497,6 +495,7 @@
  T SDL_GetGamepadButtonFromString
  T SDL_GetGamepadButtonLabel
  T SDL_GetGamepadButtonLabelForType
+ T SDL_GetGamepadCaps
  T SDL_GetGamepadFirmwareVersion
  T SDL_GetGamepadFromInstanceID
  T SDL_GetGamepadFromPlayerIndex
@@ -548,6 +547,7 @@
  T SDL_GetJoystickAxis
  T SDL_GetJoystickAxisInitialState
  T SDL_GetJoystickButton
+ T SDL_GetJoystickCaps
  T SDL_GetJoystickFirmwareVersion
  T SDL_GetJoystickFromInstanceID
  T SDL_GetJoystickFromPlayerIndex
@@ -766,9 +766,6 @@
  T SDL_IsTablet
  T SDL_JoystickConnected
  T SDL_JoystickEventsEnabled
- T SDL_JoystickHasLED
- T SDL_JoystickHasRumble
- T SDL_JoystickHasRumbleTriggers
  T SDL_LoadBMP
  T SDL_LoadBMP_RW
  T SDL_LoadFile
@@ -1243,6 +1240,7 @@
  __divdi3
  __error
  __maskrune
+ __memcpy_chk
  __objc_personality_v0
  __stack_chk_fail
  __stack_chk_guard

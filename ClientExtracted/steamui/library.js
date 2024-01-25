@@ -1,4 +1,4 @@
-var CLSTAMP = "8644328";
+var CLSTAMP = "8653329";
 /* Third-party software licenses can be found at licenses.txt */ (() => {
   var e,
     t,
@@ -2099,9 +2099,9 @@ var CLSTAMP = "8644328";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "Jan 19 2024 : 17:04:30",
-                BUILD_TIME_UTC: "Jan 20 2024 : 01:04:30",
-                BUILD_RTIME_UTC: 1705712670,
+                BUILD_TIME_LOCAL: "Jan 24 2024 : 15:55:16",
+                BUILD_TIME_UTC: "Jan 24 2024 : 23:55:16",
+                BUILD_RTIME_UTC: 1706140516,
               }.MOBILE_BUILD)
             ) {
               window.addEventListener("beforeunload", (e) => {
@@ -14369,17 +14369,19 @@ var CLSTAMP = "8644328";
             const {
                 label: n,
                 description: l,
-                icon: s,
-                layout: c,
-                bottomSeparator: C,
-                highlightOnFocus: u,
-                childrenContainerWidth: h,
-                padding: d,
-                inlineWrap: m,
+                explainer: s,
+                icon: c,
+                layout: C,
+                bottomSeparator: u,
+                highlightOnFocus: h,
+                childrenContainerWidth: d,
+                padding: m,
+                inlineWrap: p,
               } = e,
-              p = (0, i._T)(e, [
+              g = (0, i._T)(e, [
                 "label",
                 "description",
+                "explainer",
                 "icon",
                 "layout",
                 "bottomSeparator",
@@ -14388,7 +14390,7 @@ var CLSTAMP = "8644328";
                 "padding",
                 "inlineWrap",
               ]),
-              { refWithValue: g, refForElement: f } = (0, a.useRefAndShareWith)(
+              { refWithValue: f, refForElement: v } = (0, a.useRefAndShareWith)(
                 t,
               );
             return o.createElement(
@@ -14396,20 +14398,21 @@ var CLSTAMP = "8644328";
               {
                 label: n,
                 description: l,
-                icon: s,
-                bottomSeparator: C,
-                highlightOnFocus: u,
-                childrenLayout: null != c ? c : "inline",
-                childrenContainerWidth: null != h ? h : "min",
+                icon: c,
+                bottomSeparator: u,
+                highlightOnFocus: h,
+                childrenLayout: null != C ? C : "inline",
+                childrenContainerWidth: null != d ? d : "min",
                 onMouseDown: (e) => {
                   var t;
-                  null === (t = g.current) || void 0 === t || t.focus(),
+                  null === (t = f.current) || void 0 === t || t.focus(),
                     e.preventDefault();
                 },
-                padding: d,
-                inlineWrap: m,
+                padding: m,
+                inlineWrap: p,
+                explainer: s,
               },
-              o.createElement(r.zx, Object.assign({}, p, { ref: f })),
+              o.createElement(r.zx, Object.assign({}, g, { ref: v })),
             );
           }),
           ae = o.forwardRef(function (e, t) {
@@ -43328,50 +43331,25 @@ var CLSTAMP = "8644328";
           a = n(72595),
           s = n(85164);
         function c(e) {
-          const { popup: t, onMaximize: n, bOSX: a } = e,
-            [s, c] = r.useState(),
+          const { popup: t, onMaximize: n, bOSX: s } = e,
+            c = (0, a.b3)(t),
             C = r.useCallback(() => {
-              if ((0, i.w3)(t, "Window.IsWindowMaximized"))
-                t.SteamClient.Window.IsWindowMaximized((e) => {
-                  e != s && c(e);
-                });
-              else if (t && t.screen) {
-                let e = (function (e) {
-                  if (!e || !e.screen) return !1;
-                  let t = e.screen.availWidth - e.innerWidth,
-                    n = e.screen.availHeight - e.innerHeight,
-                    r = 0 === t && 0 === n;
-                  return r;
-                })(t);
-                e != s && c(e);
-              }
-            }, [t, s]);
-          r.useEffect(
-            () => (
-              C(),
-              t.addEventListener("resize", C),
-              () => t.removeEventListener("resize", C)
-            ),
-            [t, C],
-          );
-          const u = r.useCallback(() => {
-            n
-              ? n()
-              : (0, i.w3)(t, "Window.ToggleMaximize") &&
-                t.SteamClient.Window.ToggleMaximize(),
-              C();
-          }, [t, n, C]);
+              n
+                ? n()
+                : (0, i.w3)(t, "Window.ToggleMaximize") &&
+                  t.SteamClient.Window.ToggleMaximize();
+            }, [t, n]);
           return r.createElement(
             h,
             {
               className: (0, l.default)(
-                s ? "restoreButton" : "maximizeButton",
+                c ? "restoreButton" : "maximizeButton",
                 "windowControlButton",
               ),
-              onClick: u,
+              onClick: C,
             },
-            !a &&
-              (s
+            !s &&
+              (c
                 ? r.createElement(o.Restore, null)
                 : r.createElement(o.Maximize, null)),
           );
@@ -46528,6 +46506,7 @@ var CLSTAMP = "8644328";
             useInterval: () => r.Yz,
             useIsUnmounted: () => r.Sd,
             useLazyMemoizedValue: () => r.kD,
+            useLocalizedTimeUntil: () => r.e0,
             useMemoWithDependencyDebugging: () => r.S,
             useModalState: () => r.X9,
             useMouseDownOrTouchStartRef: () => r.yx,
@@ -46661,58 +46640,61 @@ var CLSTAMP = "8644328";
       26927: (e, t, n) => {
         "use strict";
         n.d(t, {
-          B: () => R,
-          B8: () => s,
-          Dc: () => Z,
-          I5: () => P,
-          Iy: () => G,
-          J7: () => d,
-          JI: () => w,
-          KM: () => f,
-          KS: () => C,
-          L8: () => a,
-          Me: () => B,
-          NW: () => p,
-          OR: () => M,
-          Qg: () => H,
-          S: () => y,
-          Sd: () => g,
-          U4: () => b,
-          X9: () => D,
-          Yj: () => F,
-          Yz: () => h,
-          e1: () => k,
-          eF: () => E,
-          fB: () => L,
-          fF: () => W,
-          fJ: () => m,
-          h4: () => z,
-          kD: () => I,
-          l4: () => u,
-          m4: () => c,
-          ok: () => v,
-          rA: () => x,
-          vK: () => _,
-          w2: () => V,
-          yX: () => T,
-          yx: () => N,
-          zP: () => S,
-          zZ: () => A,
+          B: () => D,
+          B8: () => C,
+          Dc: () => O,
+          I5: () => z,
+          Iy: () => P,
+          J7: () => p,
+          JI: () => H,
+          KM: () => L,
+          KS: () => h,
+          L8: () => c,
+          Me: () => T,
+          NW: () => f,
+          OR: () => w,
+          Qg: () => b,
+          S: () => Z,
+          Sd: () => v,
+          U4: () => S,
+          X9: () => B,
+          Yj: () => W,
+          Yz: () => m,
+          e0: () => K,
+          e1: () => x,
+          eF: () => _,
+          fB: () => E,
+          fF: () => U,
+          fJ: () => g,
+          h4: () => j,
+          kD: () => N,
+          l4: () => d,
+          m4: () => u,
+          ok: () => M,
+          rA: () => V,
+          vK: () => k,
+          w2: () => R,
+          yX: () => A,
+          yx: () => G,
+          zP: () => y,
+          zZ: () => F,
         });
         var r = n(27378),
           i = n(78633),
           o = n(29853),
-          l = n(50947);
-        function a(e, t) {
+          l = n(50947),
+          a = n(36879),
+          s = n(66566);
+        function c(e, t) {
           return (e, t, n) => n;
         }
-        function s(e, t, n) {
+        function C(e, t, n) {
           return [e, t, n];
         }
-        function c(e, t, n, r) {
+        function u(e, t, n, r) {
           return [e, t, n, r];
         }
-        function C(e, t, n = []) {
+        function h(e, t, n = []) {
           const i = r.useCallback(e, []);
           r.useEffect(() => {
             if (!i) return;
@@ -46720,7 +46702,7 @@ var CLSTAMP = "8644328";
             return () => clearTimeout(e);
           }, [t, ...n]);
         }
-        function u(e, t, n = []) {
+        function d(e, t, n = []) {
           const i = r.useRef(e);
           (i.current = e),
             r.useEffect(() => {
@@ -46731,7 +46713,7 @@ var CLSTAMP = "8644328";
               return () => clearTimeout(e);
             }, [t, ...n]);
         }
-        function h(e, t, n = []) {
+        function m(e, t, n = []) {
           const i = r.useRef(e);
           (i.current = e),
             r.useEffect(() => {
@@ -46742,7 +46724,7 @@ var CLSTAMP = "8644328";
               return () => clearInterval(e);
             }, [t, ...n]);
         }
-        function d(e, t, n = !0) {
+        function p(e, t, n = !0) {
           const i = r.useRef(t);
           i.current = t;
           const [o, l] = r.useState(!1),
@@ -46765,7 +46747,7 @@ var CLSTAMP = "8644328";
             { bTimerCompleted: o, fnStopTimer: c, fnRestartTimer: C }
           );
         }
-        function m(e, t, n) {
+        function g(e, t, n) {
           const [i, o] = r.useState(n);
           return (
             r.useEffect(() => {
@@ -46784,11 +46766,11 @@ var CLSTAMP = "8644328";
             i
           );
         }
-        function p() {
+        function f() {
           const [, e] = r.useState(0);
           return r.useCallback(() => e((e) => e + 1), []);
         }
-        function g() {
+        function v() {
           const e = r.useRef(!1);
           r.useEffect(
             () => () => {
@@ -46798,7 +46780,7 @@ var CLSTAMP = "8644328";
           );
           return r.useCallback(() => e.current, []);
         }
-        function f(e) {
+        function L(e) {
           let t = 1,
             n = e;
           for (; null != n && "HTML" != n.tagName; ) {
@@ -46811,11 +46793,11 @@ var CLSTAMP = "8644328";
           }
           return t;
         }
-        function v(e) {
+        function M(e) {
           const [t, n] = r.useState(1);
-          return r.useEffect(() => n(f(e.current)), [e]), t;
+          return r.useEffect(() => n(L(e.current)), [e]), t;
         }
-        function L(e) {
+        function E(e) {
           const [t] = r.useState({
               flLastExecutionTimeMs: 0,
               fnLatestCallback: null,
@@ -46840,7 +46822,7 @@ var CLSTAMP = "8644328";
             }
           );
         }
-        function M(e, t, n, i) {
+        function w(e, t, n, i) {
           r.useEffect(() => {
             const r = null == e ? void 0 : e.current;
             if (r && n)
@@ -46849,7 +46831,7 @@ var CLSTAMP = "8644328";
               );
           }, [e, t, n]);
         }
-        function E(e, t, n) {
+        function _(e, t, n) {
           const i = r.useRef();
           i.current = n;
           const o = r.useRef(),
@@ -46869,7 +46851,7 @@ var CLSTAMP = "8644328";
             );
           return r.useEffect(() => l, [l]), a;
         }
-        function w(e, t, n, i) {
+        function H(e, t, n, i) {
           r.useEffect(() => {
             if (e && n)
               return (
@@ -46878,8 +46860,8 @@ var CLSTAMP = "8644328";
               );
           }, [e, t, n]);
         }
-        function _(e, t, n, r) {
-          return w(
+        function k(e, t, n, r) {
+          return H(
             e,
             "message",
             function (e) {
@@ -46888,14 +46870,14 @@ var CLSTAMP = "8644328";
             r,
           );
         }
-        function H(e, t) {
+        function b(e, t) {
           r.useLayoutEffect(() => {
             if (!t || !e) return;
             const n = e.Register(t);
             return () => n.Unregister();
           }, [e, t]);
         }
-        function k(e) {
+        function x(e) {
           const [t, n] = r.useState(null == e ? void 0 : e.Value);
           return (
             r.useEffect(() => {
@@ -46908,14 +46890,14 @@ var CLSTAMP = "8644328";
             t
           );
         }
-        function b(e, t) {
+        function S(e, t) {
           r.useEffect(() => {
             if (null == e) return () => {};
             const n = e.Subscribe(t);
             return null == n ? void 0 : n.Unsubscribe;
           }, [e, t]);
         }
-        function x(e, t, n = 1e3) {
+        function V(e, t, n = 1e3) {
           const i = r.useRef(t);
           i.current = t;
           const [o, l] = r.useState(e),
@@ -46923,7 +46905,7 @@ var CLSTAMP = "8644328";
             c = r.useCallback(() => {
               l(e), s(!1);
             }, [e, l]),
-            { fnStopTimer: C, fnRestartTimer: u } = d(n, c, !1),
+            { fnStopTimer: C, fnRestartTimer: u } = p(n, c, !1),
             h = r.useCallback(
               (e) => {
                 u(), l(e), s(!0), i.current && i.current(e);
@@ -46932,7 +46914,7 @@ var CLSTAMP = "8644328";
             );
           return [a ? o : e, h, c];
         }
-        function S(e) {
+        function y(e) {
           const t = r.useRef(null);
           return (
             r.useEffect(() => {
@@ -46941,9 +46923,9 @@ var CLSTAMP = "8644328";
             t.current
           );
         }
-        function V(e, t, n = "") {
+        function R(e, t, n = "") {
           var i;
-          const o = null !== (i = S(t)) && void 0 !== i ? i : [];
+          const o = null !== (i = y(t)) && void 0 !== i ? i : [];
           for (let e = 0; e < o.length; e++)
             o[e] !== t[e] &&
               console.log(
@@ -46953,9 +46935,9 @@ var CLSTAMP = "8644328";
               );
           r.useEffect(e, t);
         }
-        function y(e, t, n = "") {
+        function Z(e, t, n = "") {
           var i;
-          const o = null !== (i = S(t)) && void 0 !== i ? i : [];
+          const o = null !== (i = y(t)) && void 0 !== i ? i : [];
           for (let e = 0; e < o.length; e++)
             o[e] !== t[e] &&
               console.log(
@@ -46965,7 +46947,7 @@ var CLSTAMP = "8644328";
               );
           return r.useMemo(e, t);
         }
-        function R(e, t) {
+        function D(e, t) {
           const [n, i] = r.useState(e);
           return (
             r.useEffect(() => {
@@ -46978,10 +46960,10 @@ var CLSTAMP = "8644328";
             n
           );
         }
-        function Z(e, t) {
-          return R(e, t) || e;
+        function O(e, t) {
+          return D(e, t) || e;
         }
-        function D(e = !1) {
+        function B(e = !1) {
           const [t, n] = r.useState(e);
           return [
             t,
@@ -46989,12 +46971,12 @@ var CLSTAMP = "8644328";
             r.useCallback(() => n(!1), []),
           ];
         }
-        let O = 0;
-        function B() {
-          const [e] = r.useState(() => `:valve${(O++).toString(32)}:`);
+        let I = 0;
+        function T() {
+          const [e] = r.useState(() => `:valve${(I++).toString(32)}:`);
           return e;
         }
-        function I(e) {
+        function N(e) {
           const t = r.useRef();
           return r.useCallback(
             () => (
@@ -47005,7 +46987,7 @@ var CLSTAMP = "8644328";
             [e],
           );
         }
-        function T(e, t) {
+        function A(e, t) {
           const n = r.useRef();
           return null == e
             ? ((n.current = e), e)
@@ -47014,7 +46996,7 @@ var CLSTAMP = "8644328";
               (n.current = Math.max(n.current, e - t)),
               n.current);
         }
-        function N(e) {
+        function G(e) {
           const t = r.useRef();
           t.current = e;
           const n = r.useRef(!1),
@@ -47031,17 +47013,17 @@ var CLSTAMP = "8644328";
               null === (r = t.current) || void 0 === r || r.call(t, e),
                 (n.current = !0);
             }, []),
-            a = [E("mousedown", o), E("touchstart", l)];
+            a = [_("mousedown", o), _("touchstart", l)];
           return (0, i.BE)(...a);
         }
-        function A() {
+        function F() {
           const [e, t] = r.useState(!1),
             n = r.useCallback(() => t(!0), []),
             o = r.useCallback(() => t(!1), []),
-            l = [E("mouseenter", n), E("mouseleave", o)];
+            l = [_("mouseenter", n), _("mouseleave", o)];
           return { bHovering: e, ref: (0, i.BE)(...l) };
         }
-        function G(e, t) {
+        function P(e, t) {
           const n = r.useRef(),
             i = r.useCallback(
               (r) => {
@@ -47068,12 +47050,12 @@ var CLSTAMP = "8644328";
             i
           );
         }
-        function F(e = "vertical") {
+        function W(e = "vertical") {
           const t = "vertical" == e,
             n = r.useRef(),
             o = r.useRef(!0),
             l = r.useRef(!0),
-            a = p(),
+            a = f(),
             s = r.useCallback(() => {
               var e, r, i, s, c, C, u, h, d;
               const m =
@@ -47126,11 +47108,11 @@ var CLSTAMP = "8644328";
               [s],
             );
           r.useLayoutEffect(s, [s]);
-          const u = G(
+          const u = P(
               r.useCallback(() => s(), [s]),
               { subtree: !0, childList: !0 },
             ),
-            h = E("scroll", C),
+            h = _("scroll", C),
             d = (0, i.BE)(h, c, u);
           return {
             bScrolledToBeginning: o.current,
@@ -47138,7 +47120,7 @@ var CLSTAMP = "8644328";
             ref: d,
           };
         }
-        function P(e) {
+        function z(e) {
           const t = r.useRef([]),
             n = r.useCallback(() => {
               for (const e of t.current) e();
@@ -47158,7 +47140,7 @@ var CLSTAMP = "8644328";
             l
           );
         }
-        function W(e) {
+        function U(e) {
           const t = r.useRef(!0),
             n = r.useRef(void 0),
             o = r.useRef(void 0),
@@ -47197,10 +47179,10 @@ var CLSTAMP = "8644328";
           const u = (0, l.useResizeObserver)(C);
           return (0, i.BE)(c, u);
         }
-        function z() {
+        function j() {
           const [e, t] = r.useState({ flOffsetWidth: 0, flOffsetHeight: 0 });
           return {
-            ref: W(
+            ref: U(
               r.useCallback(
                 (e, n) => t({ flOffsetWidth: e, flOffsetHeight: n }),
                 [],
@@ -47209,6 +47191,25 @@ var CLSTAMP = "8644328";
             flOffsetWidth: e.flOffsetWidth,
             flOffsetHeight: e.flOffsetHeight,
           };
+        }
+        function K(e, t = s.LocalizeTimeRemaining, n = 2 * a.Seconds.PerDay) {
+          const [i, o] = r.useState(null);
+          return (
+            m(
+              () => {
+                const r = (0, a.GetUnixTime)(),
+                  i = e - r;
+                if (null == e || i > n || isNaN(i)) return void o(null);
+                let l = i < 1 ? 1 : i;
+                l = Math.floor(l);
+                const s = t(l);
+                o(s);
+              },
+              500,
+              [e, t, n],
+            ),
+            i
+          );
         }
       },
       78633: (e, t, n) => {
@@ -47645,7 +47646,8 @@ var CLSTAMP = "8644328";
                   ? e.SteamClient.Window.IsWindowMaximized((e) => {
                       n(e);
                     })
-                  : n(
+                  : e.screen &&
+                    n(
                       e.screen.availWidth == e.innerWidth &&
                         e.screen.availHeight == e.innerHeight,
                     ));
@@ -47653,7 +47655,7 @@ var CLSTAMP = "8644328";
           return (
             r.useEffect(l, [l, e]),
             (0, o.useGlobalEventListener)(e, "resize", l),
-            (0, o.useGlobalMessageListener)(e, ["window_toggle_maximized"], l),
+            (0, o.useGlobalMessageListener)(e, ["window_moved"], l),
             t
           );
         }
@@ -48179,9 +48181,9 @@ var CLSTAMP = "8644328";
                 ? {
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Jan 19 2024 : 17:04:30",
-                    BUILD_TIME_UTC: "Jan 20 2024 : 01:04:30",
-                    BUILD_RTIME_UTC: 1705712670,
+                    BUILD_TIME_LOCAL: "Jan 24 2024 : 15:55:16",
+                    BUILD_TIME_UTC: "Jan 24 2024 : 23:55:16",
+                    BUILD_RTIME_UTC: 1706140516,
                   }.MOBILE_BUILD
                   ? null
                   : document.getElementById(t)
@@ -48765,7 +48767,7 @@ var CLSTAMP = "8644328";
       {
         27: "b51bbfffd9248d5f52f4",
         33: "7c4273befe3c3cc82980",
-        58: "601ea68ef5338b9c1444",
+        58: "5295844fea86b7a0d8a8",
         131: "38dbc775fee4b8fa5a5c",
         146: "b371614045b2fea74712",
         200: "fb361c81a60324e0cd4f",
@@ -48853,7 +48855,7 @@ var CLSTAMP = "8644328";
         6403: "a8d94a26f1c692c9fa63",
         6678: "20589a0ca986e61e948d",
         6703: "0ea55aef48dc7bf97dde",
-        6838: "e1814c7a8f06d979a6fe",
+        6838: "668c33052db055681397",
         6844: "4d742b8e6ae3543f360c",
         6877: "052f2fc85d5b30e28f69",
         6964: "6f39b6e0516d1722b95e",
@@ -48867,7 +48869,7 @@ var CLSTAMP = "8644328";
         7781: "3902e285771a0b583dc2",
         7832: "9d6d3d860dea2a65797b",
         7850: "de745d07d1eca8730ab1",
-        7962: "592d076ffb57c1768a48",
+        7962: "f285c4c792e9a3831a98",
         8011: "933d70e0f66ae55773cc",
         8052: "90ca8df91679205a09bc",
         8085: "f8249144614a6967664c",
@@ -48877,7 +48879,7 @@ var CLSTAMP = "8644328";
         8282: "a21aec99eaa71f16dbb9",
         8319: "b4041d7500ef12a5d236",
         8433: "b066173c685366bbe0bb",
-        8467: "8434711f346a02d8715b",
+        8467: "dab14f3a5e0f45a48c7a",
         8490: "17fb2306ca0033fc5bc9",
         8778: "746794b385de2032f078",
         8805: "340d65d13b70b0f9f611",

@@ -32276,6 +32276,9 @@ button.TextButton.appdetailsfriendssection_ShowMore_34gmV
 :root {
   --gamepad-page-content-max-width: 1100px;
 }
+.steamos_DestructiveActionButtonIcon_1LMoH {
+  color: #ffc82c;
+}
 @keyframes searchbar_BackgroundAnimation_3j8cH {
   from {
     background-position: 0 100%;
@@ -38326,6 +38329,9 @@ div.HighPerfMode .appdetails_ScrollContainer_2l416 {
 }
 .appdetails_Header_2gZXh.appdetails_HeaderLoaded_tXlLv {
   opacity: 1;
+}
+.appdetails_AppDetailsOverviewPanel_1_cYN {
+  transform-style: preserve-3d;
 }
 .sharedappdetailsheader_TopCapsule_2meE3 {
   --header-height: 24vw;
@@ -47521,6 +47527,7 @@ div.NarrowRightPanel
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
+  transform-style: preserve-3d;
 }
 .appdetailsoverview_Container_27RcN .SteamLogoThrobber {
   height: 100%;
@@ -47635,6 +47642,7 @@ div.UltraNarrowRightPanel
   box-sizing: border-box;
   position: absolute;
   top: 0;
+  transform-style: preserve-3d;
 }
 .appdetailsoverview_Glassy_2OOzY .appdetailsoverview_BackdropGlass_Jbe-- {
   box-sizing: border-box;
@@ -74332,6 +74340,11 @@ svg.steamtemplates_FriendIndicator_suNJh .Outline {
 .gamepadtoasts_GamepadToastPopup_3YTh8.gamepadtoasts_PositionLeft_2VAm- {
   left: 0;
   right: 20px;
+}
+.gamepadtoasts_GamepadToastPopup_3YTh8.gamepadtoasts_Warning_2pBjZ {
+  top: 20px;
+  bottom: 20px;
+  display: block;
 }
 @keyframes gamepadtoasts_toastEnter_16D0E {
   0% {
@@ -118970,6 +118983,13 @@ div.UltraRightPanel
 .appproperties_AppProperties_1FyBL
   .DialogBody
   .appproperties_DlcGrid_3sXdO
+  .appproperties_Name_bP2Ip:hover {
+  text-decoration: underline;
+  color: #fff;
+}
+.appproperties_AppProperties_1FyBL
+  .DialogBody
+  .appproperties_DlcGrid_3sXdO
   .appproperties_Name_bP2Ip.appproperties_HideImages_3mxYy {
   overflow: hidden;
 }
@@ -119668,6 +119688,78 @@ div.UltraRightPanel
   .appproperties_WorkshopCollections_3KmXj
   .appproperties_WorkshopCollection_t-5I7:hover {
   background: #464d58;
+  color: #fff;
+}
+.appproperties_WorkAroundFieldStyles_2l3hk {
+  flex: 1;
+  min-width: 0;
+}
+.appproperties_PrivacyDLCSection_3S8RX {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.appproperties_PrivacyDLCSection_3S8RX
+  .appproperties_PrivacyDLCDescription_3cAh0 {
+  flex: 1;
+  margin-right: 12px;
+}
+.appproperties_PrivacyDLCSection_3S8RX .appproperties_PrefDetailsToggle_Htkkt {
+  width: 32px;
+}
+.appproperties_PrivacyDLCSection_3S8RX
+  .appproperties_PrefDetailsToggle_Htkkt
+  svg {
+  transition: transform 0.2s ease-in-out;
+  height: 18px;
+  margin-top: 4px;
+}
+.appproperties_PrivacyDLCSection_3S8RX
+  .appproperties_PrefDetailsToggle_Htkkt.appproperties_Selected_dB7T-
+  svg {
+  transform: rotateZ(180deg);
+  transition: transform 0.2s ease-in-out;
+}
+.appproperties_PrivacyDLCList_3PdB1 {
+  padding-top: 16px;
+}
+.appproperties_PrivacyDLCRow_2ULTJ {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.appproperties_PrivacyDLCRow_2ULTJ .appproperties_CheckboxCol_v3o1d {
+  vertical-align: middle;
+}
+.appproperties_PrivacyDLCRow_2ULTJ .DialogCheckbox {
+  background-color: #000;
+}
+.appproperties_PrivacyDLCRow_2ULTJ .DialogCheckbox:hover {
+  background-color: #000;
+}
+.appproperties_PrivacyDLCRow_2ULTJ .appproperties_DLCTitleArea_3FcoB {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.appproperties_PrivacyDLCRow_2ULTJ
+  .appproperties_DLCTitleArea_3FcoB
+  .appproperties_DlcArt_3vsfp {
+  width: 120px;
+}
+.appproperties_PrivacyDLCRow_2ULTJ
+  .appproperties_DLCTitleArea_3FcoB
+  .appproperties_NameText_a19Ki {
+  flex: 1;
+  color: #dfe3e6;
+}
+.appproperties_PrivacyDLCRow_2ULTJ
+  .appproperties_DLCTitleArea_3FcoB
+  .appproperties_NameText_a19Ki:hover {
+  text-decoration: underline;
   color: #fff;
 }
 .actionbuttonlegenditem_ActionButtonLegend_Mbyhb {

@@ -10596,9 +10596,6 @@ h1.optin_display_appeal_AppealTitle_X7wqW {
   .marketingmessagepartnerpreview_PreviewButtons_21DYW {
   text-wrap: nowrap;
 }
-.promotioncreatedialog_DateCtn_13RGK {
-  min-height: 200px;
-}
 .invitationplanner_CandidateTable_2qjp5 {
   border-collapse: collapse;
   width: 100%;
@@ -10696,4 +10693,11 @@ h1.optin_display_appeal_AppealTitle_X7wqW {
   padding-left: 12px;
   padding-right: 12px;
   text-decoration: none;
+}
+.promotioncreatedialog_DateCtn_13RGK {
+  min-height: 200px;
+}
+.search_partner_SearchResults_3MD3z {
+  overflow: scroll;
+  max-height: 300px;
 }

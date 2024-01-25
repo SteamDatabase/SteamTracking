@@ -382,17 +382,18 @@
     },
     83831: (e, r, t) => {
       "use strict";
-      t.d(r, { DV: () => d, Tt: () => s });
+      t.d(r, { DV: () => p, Tt: () => u, kr: () => C });
       var n = t(85556),
         o = t(80751),
         a = t.n(o),
         l = t(47427),
         i = t(16649),
-        c = t(37563);
-      function s() {
+        c = t(37563),
+        s = t(16997);
+      function u() {
         return 2 == c.De.EUNIVERSE ? 12 : 1;
       }
-      class u {
+      class d {
         GetPartnerInfo(e) {
           return this.m_mapOptInToPartners.get(e);
         }
@@ -414,7 +415,11 @@
             const n = new Array();
             try {
               const l = c.De.PARTNER_BASE_URL + "pub/ajaxfindpublishers",
-                i = { sessionid: c.De.SESSIONID, searchtext: e },
+                i = {
+                  sessionid: c.De.SESSIONID,
+                  searchtext: e,
+                  origin: self.origin,
+                },
                 s = yield a().get(l, { params: i });
               200 == (null == s ? void 0 : s.status) &&
               1 ==
@@ -470,11 +475,11 @@
         }
         static Get() {
           return (
-            u.s_Singleton ||
-              ((u.s_Singleton = new u()),
+            d.s_Singleton ||
+              ((d.s_Singleton = new d()),
               ("dev" != c.De.WEB_UNIVERSE && "beta" != c.De.WEB_UNIVERSE) ||
-                (window.g_PartnerInfoStore = u.s_Singleton)),
-            u.s_Singleton
+                (window.g_PartnerInfoStore = d.s_Singleton)),
+            d.s_Singleton
           );
         }
         constructor() {
@@ -502,22 +507,26 @@
           );
         }
       }
-      function d(e) {
-        const [r, t] = l.useState(() => u.Get().GetPartnerInfo(e));
+      function p(e) {
+        const [r, t] = l.useState(() => d.Get().GetPartnerInfo(e));
         return (
           l.useEffect(() => {
-            !u.Get().BHasPartnerInfoLoad(e) && e > 0
-              ? u
+            !d.Get().BHasPartnerInfoLoad(e) && e > 0
+              ? d
                   .Get()
                   .LoadPartnerInfo(e)
                   .then((e) => t(e))
-              : u.Get().BHasPartnerInfoLoad(e) &&
+              : d.Get().BHasPartnerInfoLoad(e) &&
                 (null == r ? void 0 : r.partnerid) != e &&
-                t(u.Get().GetPartnerInfo(e));
+                t(d.Get().GetPartnerInfo(e));
           }, [e, r]),
           [r]
         );
       }
+      function C() {
+        return { fnFindPartnerByName: d.Get().FindPartnerByName };
+      }
+      (0, n.gn)([s.a], d.prototype, "FindPartnerByName", null);
     },
     62043: (e, r, t) => {
       "use strict";
