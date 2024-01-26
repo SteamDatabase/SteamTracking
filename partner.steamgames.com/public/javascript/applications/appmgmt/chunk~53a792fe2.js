@@ -498,7 +498,7 @@
             }
             return (
               console.error(
-                "CPromotionInviteStore.InternalLoadSingleDiscountEvent failed: " +
+                "CDiscountEventStore.InternalLoadSingleDiscountEvent failed: " +
                   (null == i ? void 0 : i.strErrorMsg),
                 i,
               ),
@@ -560,7 +560,7 @@
             }
             return (
               console.error(
-                "CPromotionInviteStore.InternalLoadSingleDiscountEventsAppList failed: " +
+                "CDiscountEventStore.InternalLoadSingleDiscountEventsAppList failed: " +
                   (null == i ? void 0 : i.strErrorMsg),
                 i,
               ),

@@ -19496,24 +19496,24 @@
     93727: (e, t, n) => {
       "use strict";
       n.d(t, {
-        Ef: () => D,
-        Iw: () => L,
-        JE: () => M,
-        Lu: () => b,
-        Mg: () => A,
-        NB: () => S,
-        O7: () => C,
-        Oc: () => B,
-        TQ: () => R,
-        To: () => T,
-        W7: () => y,
-        Wp: () => P,
-        cG: () => w,
-        hc: () => x,
-        lI: () => O,
-        nt: () => N,
-        oQ: () => G,
-        sm: () => I,
+        Ef: () => f,
+        Iw: () => x,
+        JE: () => O,
+        Lu: () => C,
+        Mg: () => w,
+        NB: () => D,
+        O7: () => I,
+        Oc: () => L,
+        TQ: () => G,
+        To: () => N,
+        W7: () => b,
+        Wp: () => T,
+        cG: () => P,
+        hc: () => M,
+        lI: () => F,
+        nt: () => R,
+        oQ: () => B,
+        sm: () => k,
       });
       var a = n(85556),
         i = n(47427),
@@ -19529,38 +19529,39 @@
         _ = n(12439),
         h = n(67675),
         g = n(46984),
-        v = n(86437);
-      const E = new p.s("DailyDealAdmin"),
-        S = 7,
-        D = 14,
-        f = "#DailyDeals_Blackout";
-      function y(e) {
-        return e.store_item_name == f;
+        v = n(86437),
+        E = n(83999);
+      const S = new p.s("DailyDealAdmin"),
+        D = 7,
+        f = 14,
+        y = "#DailyDeals_Blackout";
+      function b(e) {
+        return e.store_item_name == y;
       }
-      var b, C;
-      function I(e, t) {
-        let n = C.Unknown;
+      var C, I;
+      function k(e, t) {
+        let n = I.Unknown;
         const a = Date.now() / 1e3;
         return e.rtime32_start_time
           ? e.cancelled
-            ? C.Cancelled
+            ? I.Cancelled
             : ((n =
                 e.rtime32_start_time > a
                   ? t > 0
-                    ? C.DealReady
-                    : C.InviteAccepted
+                    ? I.DealReady
+                    : I.InviteAccepted
                   : t > 0
                   ? e.rtime32_start_time + g._H.PerDay < a
-                    ? C.DealCompleted
-                    : C.DealLive
-                  : C.DealFailed),
+                    ? I.DealCompleted
+                    : I.DealLive
+                  : I.DealFailed),
               n)
-          : C.Unknown;
+          : I.Unknown;
       }
       !(function (e) {
         (e[(e.k_BlockDate = 1)] = "k_BlockDate"),
           (e[(e.k_ScheduleSlot = 2)] = "k_ScheduleSlot");
-      })(b || (b = {})),
+      })(C || (C = {})),
         (function (e) {
           (e[(e.Unknown = 0)] = "Unknown"),
             (e[(e.Cancelled = 1)] = "Cancelled"),
@@ -19571,8 +19572,8 @@
             (e[(e.DealLive = 6)] = "DealLive"),
             (e[(e.DealCompleted = 7)] = "DealCompleted"),
             (e[(e.DealFailed = 8)] = "DealFailed");
-        })(C || (C = {}));
-      class k {
+        })(I || (I = {}));
+      class A {
         GetAllDailyDeals() {
           return Array.from(this.m_mapCDailyDeals.values());
         }
@@ -19625,7 +19626,7 @@
         SetDailyDeal(e) {
           this.m_mapCDailyDeals.set(e.gid, e),
             this.GetCallbackForDailyDealID(e.gid).Dispatch(e),
-            E.Debug("SetDailyDeal", e);
+            S.Debug("SetDailyDeal", e);
         }
         CreateVanityToDailyDealMap() {
           (this.m_mapSaleVanityDailyDeals = new Map()),
@@ -19734,7 +19735,7 @@
               a = (0, r.l)(e);
             }
             return (
-              E.Error(
+              S.Error(
                 "CDailyDealStore.AddDailyDeal failed: " +
                   (null == a ? void 0 : a.strErrorMsg),
                 a,
@@ -19748,7 +19749,7 @@
             let t = null;
             try {
               let n = c.iC.fromObject(e);
-              E.Info("Saving:" + JSON.stringify(n)),
+              S.Info("Saving:" + JSON.stringify(n)),
                 this.m_mapCDailyDeals.set(e.gid, e);
               const a = m.gA.Init(c.NK);
               a.Body().set_gid(e.gid), a.Body().set_daily_deal(n);
@@ -19767,7 +19768,7 @@
               t = (0, r.l)(e);
             }
             return (
-              E.Error(
+              S.Error(
                 "CDailyDealStore.SaveDailyDeal failed: " +
                   (null == t ? void 0 : t.strErrorMsg),
                 t,
@@ -19780,9 +19781,9 @@
           return (0, a.mG)(this, void 0, void 0, function* () {
             const t = this.m_mapCDailyDeals.get(e);
             let n = null;
-            if ((E.Debug("Deleting Deal:" + JSON.stringify(t)), !t || !t.gid))
+            if ((S.Debug("Deleting Deal:" + JSON.stringify(t)), !t || !t.gid))
               return (
-                E.Error(
+                S.Error(
                   "CDailyDealStore.RemoveDailyDeal ID does not exist: " + e,
                 ),
                 !1
@@ -19819,7 +19820,7 @@
               n = (0, r.l)(e);
             }
             return (
-              E.Error(
+              S.Error(
                 "CDailyDealStore.RemoveDailyDeal failed: " +
                   (null == n ? void 0 : n.strErrorMsg),
                 n,
@@ -19833,11 +19834,11 @@
             const t = this.m_mapCDailyDeals.get(e);
             let n = null;
             if (
-              (E.Debug("Canceling daily deal:" + JSON.stringify(t)),
+              (S.Debug("Canceling daily deal:" + JSON.stringify(t)),
               !t || !t.gid)
             )
               return (
-                E.Error(
+                S.Error(
                   "CDailyDealStore.CancelDailyDeal ID does not exist: " + e,
                 ),
                 !1
@@ -19876,7 +19877,7 @@
               n = (0, r.l)(e);
             }
             return (
-              E.Error(
+              S.Error(
                 "CDailyDealStore.CancelDailyDeal failed: " +
                   (null == n ? void 0 : n.strErrorMsg),
                 n,
@@ -19892,7 +19893,7 @@
               let a = new c.iC();
               if (t) {
                 a.set_rtime32_start_time(e),
-                  a.set_store_item_name(f),
+                  a.set_store_item_name(y),
                   a.set_template_json("{}"),
                   a.set_store_item_type(-1),
                   a.set_store_item_id(0),
@@ -19921,7 +19922,7 @@
               } else if (this.m_mapCDailyDealsByDay.has(e)) {
                 const t = this.m_mapCDailyDealsByDay.get(e).find((e) => {
                   const t = this.m_mapCDailyDeals.get(e);
-                  return t.store_item_name == f && !t.deleted;
+                  return t.store_item_name == y && !t.deleted;
                 });
                 if (null != t) {
                   const a = this.m_mapCDailyDeals.get(t),
@@ -19957,7 +19958,7 @@
               n = (0, r.l)(e);
             }
             return (
-              E.Error(
+              S.Error(
                 "CDailyDealStore.SetBlackoutDate failed: " +
                   (null == n ? void 0 : n.strErrorMsg),
                 n,
@@ -19968,12 +19969,12 @@
         }
         static Get() {
           return (
-            k.s_Singleton ||
-              ((k.s_Singleton = new k()),
-              k.s_Singleton.Init(),
+            A.s_Singleton ||
+              ((A.s_Singleton = new A()),
+              A.s_Singleton.Init(),
               "dev" == s.De.WEB_UNIVERSE &&
-                (window.g_DailyDealStore = k.s_Singleton)),
-            k.s_Singleton
+                (window.g_DailyDealStore = A.s_Singleton)),
+            A.s_Singleton
           );
         }
         constructor() {
@@ -20027,8 +20028,8 @@
             const n = (0, s.kQ)("blockout_dates", "application_config") || [],
               a = (0, s.kQ)("scheduled_slots", "application_config") || [];
             (n.length > 0 || a.length > 0) &&
-              (this.HelperAddEDailyDealDisplayInfo(n, b.k_BlockDate),
-              this.HelperAddEDailyDealDisplayInfo(a, b.k_ScheduleSlot)),
+              (this.HelperAddEDailyDealDisplayInfo(n, C.k_BlockDate),
+              this.HelperAddEDailyDealDisplayInfo(a, C.k_ScheduleSlot)),
               "dev" == s.De.WEB_UNIVERSE &&
                 console.log(
                   `DEV_DEBUG: CDailyDealStore loaded ${t.length} daily deals, separate blocked dates ${n.length}, separated schedule dates ${a.length}`,
@@ -20046,24 +20047,33 @@
           });
         }
       }
-      function A() {
-        const [e, t] = i.useState(k.Get().GetAllDailyDeals());
-        return (0, o.Qg)(k.Get().GetCallbackForDailyDealList(), t), e;
+      function w() {
+        const [e, t] = i.useState(A.Get().GetAllDailyDeals());
+        return (0, o.Qg)(A.Get().GetCallbackForDailyDealList(), t), e;
       }
-      function w(e) {
-        return e
-          ? e
-              .filter((e) => e.store_item_id && 0 == e.store_item_type)
-              .map((e) => e.store_item_id)
-          : null;
+      function P(e, t) {
+        let n = null;
+        if (
+          ((null == e ? void 0 : e.length) > 0 &&
+            (n = E.kp(
+              e
+                .filter((e) => e.store_item_id && 0 == e.store_item_type)
+                .map((e) => e.store_item_id),
+            )),
+          (null == t ? void 0 : t.length) > 0)
+        ) {
+          const e = t.map((e) => e.appid).filter(Boolean);
+          n && 0 != n.length ? (n.push(...e), (n = E.kp(n))) : (n = E.kp(e));
+        }
+        return n;
       }
-      function P(e) {
-        const t = k.Get(),
+      function T(e) {
+        const t = A.Get(),
           [n, a] = i.useState(t.GetDailyDealByID(e));
         return (0, o.Qg)(t.GetCallbackForDailyDealID(e), a), n;
       }
-      function T(e) {
-        const t = k.Get(),
+      function N(e) {
+        const t = A.Get(),
           [n, a] = i.useState(t.GetDailyDealStartTime(e));
         return (
           (0, o.Qg)(t.GetCallbackForDailyDealID(e), () =>
@@ -20072,39 +20082,39 @@
           n
         );
       }
-      function N(e) {
-        const [t, n] = i.useState(() => k.Get().GetDailyDealByDay(e));
-        return (0, o.Qg)(k.Get().GetCallbackForDailyDealByDayList(e), n), t;
-      }
-      function R() {
-        return { fnAddDailyDeal: k.Get().AddDailyDeal };
+      function R(e) {
+        const [t, n] = i.useState(() => A.Get().GetDailyDealByDay(e));
+        return (0, o.Qg)(A.Get().GetCallbackForDailyDealByDayList(e), n), t;
       }
       function G() {
-        return {
-          fnSaveDailyDeal: k.Get().SaveDailyDeal,
-          fnRemoveDailyDeal: k.Get().RemoveDailyDeal,
-          fnCancelDailyDeal: k.Get().CancelDailyDeal,
-        };
+        return { fnAddDailyDeal: A.Get().AddDailyDeal };
       }
       function B() {
-        return k.Get().SetBlackoutDate;
+        return {
+          fnSaveDailyDeal: A.Get().SaveDailyDeal,
+          fnRemoveDailyDeal: A.Get().RemoveDailyDeal,
+          fnCancelDailyDeal: A.Get().CancelDailyDeal,
+        };
       }
-      function L(e) {
-        return k.Get().GetDailyDealsBySalePageVanity(e);
+      function L() {
+        return A.Get().SetBlackoutDate;
       }
       function x(e) {
-        return k.Get().GetDailyDealDisplayOverridesByDay(e);
+        return A.Get().GetDailyDealsBySalePageVanity(e);
       }
-      function M() {
-        const [e, t] = (0, i.useState)(() => k.Get().CreateMapByStoreItem());
+      function M(e) {
+        return A.Get().GetDailyDealDisplayOverridesByDay(e);
+      }
+      function O() {
+        const [e, t] = (0, i.useState)(() => A.Get().CreateMapByStoreItem());
         return (
-          (0, o.Qg)(k.Get().GetCallbackForDailyDealList(), () =>
-            t(k.Get().CreateMapByStoreItem()),
+          (0, o.Qg)(A.Get().GetCallbackForDailyDealList(), () =>
+            t(A.Get().CreateMapByStoreItem()),
           ),
           e
         );
       }
-      function O(e, t) {
+      function F(e, t) {
         var n;
         if (e && t && 0 == e.store_item_type) {
           const a = e.rtime32_start_time,
@@ -20132,14 +20142,14 @@
         }
         return { nDiscountPercent: 0, dtDiscountStart: 0, dtDiscountEnd: 0 };
       }
-      (0, a.gn)([o.ak], k.prototype, "SetDailyDeal", null),
-        (0, a.gn)([o.ak], k.prototype, "GetDailyDealsBySalePageVanity", null),
-        (0, a.gn)([o.ak], k.prototype, "AddDailyDeal", null),
-        (0, a.gn)([o.ak], k.prototype, "SaveDailyDeal", null),
-        (0, a.gn)([o.ak], k.prototype, "RemoveDailyDeal", null),
-        (0, a.gn)([o.ak], k.prototype, "CancelDailyDeal", null),
-        (0, a.gn)([o.ak], k.prototype, "SetBlackoutDate", null),
-        (0, a.gn)([o.ak], k.prototype, "InternalAddCDailyDeal", null);
+      (0, a.gn)([o.ak], A.prototype, "SetDailyDeal", null),
+        (0, a.gn)([o.ak], A.prototype, "GetDailyDealsBySalePageVanity", null),
+        (0, a.gn)([o.ak], A.prototype, "AddDailyDeal", null),
+        (0, a.gn)([o.ak], A.prototype, "SaveDailyDeal", null),
+        (0, a.gn)([o.ak], A.prototype, "RemoveDailyDeal", null),
+        (0, a.gn)([o.ak], A.prototype, "CancelDailyDeal", null),
+        (0, a.gn)([o.ak], A.prototype, "SetBlackoutDate", null),
+        (0, a.gn)([o.ak], A.prototype, "InternalAddCDailyDeal", null);
     },
     43204: (e, t, n) => {
       "use strict";
@@ -51373,7 +51383,7 @@
         const { strInviteID: t, strPublisherID: n } = e,
           a = (0, An.Nt)(t),
           i = (0, xt.Mg)(),
-          l = c.useMemo(() => (0, xt.cG)(i), [i]),
+          l = c.useMemo(() => (0, xt.cG)(i, [a]), [i, a]),
           r = (0, bn.og)(l, n ? parseInt(n) : null);
         return a
           ? 0 != a.rtdatechosen
@@ -58631,8 +58641,8 @@
       }
       function ts(e) {
         const { nApps: t, nTotalApps: n, strQueryParams: a } = e,
-          [i] = (0, b.Ar)("start", 0),
-          [l] = (0, b.Ar)("count", 50),
+          [i] = (0, b.Ar)("start", 600),
+          [l] = (0, b.Ar)("count", 100),
           [r] = (0, b.Ar)("appidlist", ""),
           [o] = (0, b.Ar)("partneridlist", ""),
           s = Boolean(r.length > 0 || o.length > 0);

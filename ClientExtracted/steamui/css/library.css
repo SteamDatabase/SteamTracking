@@ -2899,7 +2899,6 @@ html.contextmenu_ContextMenuPopup_2GpKT body {
 }
 .pagedsettings_PagedSettingsDialog_PageList__EebF {
   line-height: 16px;
-  height: 100vh;
   white-space: nowrap;
   overflow: scroll;
   flex-shrink: 1;
@@ -2907,6 +2906,9 @@ html.contextmenu_ContextMenuPopup_2GpKT body {
   display: flex;
   flex-direction: column;
   padding-bottom: 40px;
+}
+.BasicUI .pagedsettings_PagedSettingsDialog_PageList__EebF {
+  height: 100vh;
 }
 .pagedsettings_PagedSettingsDialog_PageList__EebF::-webkit-scrollbar-corner {
   background: transparent;
