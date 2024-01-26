@@ -581,7 +581,7 @@ function _BuildDialogButton( strText, bActive, rgOptions )
 	return elButton;
 }
 
-/**	Implemented for Gamepad: show content in a fullscreen, borderless, modal which gets navigation support.  
+/**	Implemented for Gamepad: show content in a fullscreen, borderless, modal which gets navigation support.
  *  Used on the app details page to show screenshots in full screen.
  *  Closing the dialog resolves deferred with done().
  *
@@ -1055,22 +1055,22 @@ function InitCookiePreferencesPopup()
 
 		var fnPostPreference = function ( bAllowChoice )
 		{
-			$J.ajax( { type: "POST", 
-						url: $AllowURL, 
+			$J.ajax( { type: "POST",
+						url: $AllowURL,
 						data: { bAllow: bAllowChoice, sessionid: g_sessionID },
 						crossDomain: true,
-						xhrFields: { withCredentials: true } 
+						xhrFields: { withCredentials: true }
 			} ).done( function ( data )
 			{
 				if ( data && data.transfer_urls && data.transfer_params )
 				{
 					for ( var i = 0; i < data.transfer_urls.length; i++ )
 					{
-						$J.ajax( { type: "POST", 
-									url: data.transfer_urls[i], 
+						$J.ajax( { type: "POST",
+									url: data.transfer_urls[i],
 									data: { transfer_params: data.transfer_params },
 									crossDomain: true,
-									xhrFields: { withCredentials: true } 
+									xhrFields: { withCredentials: true }
 						} );
 					}
 				}
@@ -2130,7 +2130,7 @@ function CAjaxInfiniteScrollingControls( rgSearchData, url )
 	this.m_strClassPrefix = "";
 	this.m_StrRowsId = "";
 	this.m_rgStaticParams = null;
-	
+
 	this.m_bLoading = false;
 
 	this.m_fnPreRequestHandler = null;
@@ -3222,7 +3222,7 @@ function RegisterPopupDismissal( dismissFunc, elemIgnore )
 	}, 1 );
 }
 
-/* Cleanup function for the above RegisterPopupDismissal()  
+/* Cleanup function for the above RegisterPopupDismissal()
    This needs to be accessible to popup owners so they can call this if they're closing the popup */
 function UnregisterPopupDismissal( elemIgnore )
 {
@@ -3275,7 +3275,7 @@ function ShowMenu( elemLink, elemPopup, align, valign, bLinkHasBorder )
 	$Link.addClass('focus');
 	RegisterPopupDismissal( function() { HideMenu( elemLink, elemPopup ); }, $Popup );
 
-	// If we use this control on gamepad (haven't found an example yet we're going to keep) then we'll need to 
+	// If we use this control on gamepad (haven't found an example yet we're going to keep) then we'll need to
 	// add calling: GPOnShowingModalWindow( $Popup[0] ).  See shared_responsive_adapter.js for example
 }
 
@@ -3423,7 +3423,7 @@ function AlignMenu( elemLink, elemPopup, align, valign, bLinkHasBorder, elemAlte
 	var borderpx = bLinkHasBorder ? 1 : 0;
 	var shadowpx = $Popup.hasClass( 'popup_block_new' ) ? 0 : 12;
 	var offsetLeft = 0;
-	
+
 	if ( align == 'left' )
 	{
 		//elemPopup.style.left = ( elemLink.positionedOffset()[0] - 12 ) + 'px';
@@ -3784,7 +3784,7 @@ function LockFamilyView( bStore )
 			$J.when(
 									CrossDomainPost( 'https://checkout.steampowered.com/parental/ajaxlock', {} ),
 								CrossDomainPost( urlSecond + 'parental/ajaxlock', {} )
-			).done( function()
+			).always( function()
 			{
 				window.location = urlFirst;
 			} );

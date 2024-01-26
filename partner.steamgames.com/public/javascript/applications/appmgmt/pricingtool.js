@@ -861,7 +861,7 @@
             (e[(e.Failed = 3)] = "Failed");
         })(re || (re = {}));
       var ne = t(42718),
-        ie = t(23951),
+        ie = t(28738),
         ae = t(71472);
       t(7765), t(55215), t(69727);
       function oe(e) {
@@ -910,35 +910,31 @@
           o = (0, g.df)(i),
           l = (0, g.ps)(i),
           c = l && (0, X.lp)(l.rtSubmitted),
-          d = (0, ie.IE)(null == l ? void 0 : l.submitterID),
-          u = (null == d ? void 0 : d.data)
-            ? d.data.m_strPlayerName
-            : null == l
-            ? void 0
-            : l.submitterID;
-        let m = "PackageMore_" + i,
-          P = null,
+          [d, u] = (0, ie.Jq)(null == l ? void 0 : l.submitterID),
+          m = u ? u.persona_name : null == l ? void 0 : l.submitterID;
+        let P = "PackageMore_" + i,
           p = null,
-          h = null;
+          h = null,
+          v = null;
         o
-          ? ((P = x().NeedsReview),
-            (h = (0, E.Xx)("#PricingDashboard_PriceProposal_NeedsReview_ttip")),
-            (p = (0, E.Xx)("#PricingDashboard_PriceProposal_NeedsReview")))
+          ? ((p = x().NeedsReview),
+            (v = (0, E.Xx)("#PricingDashboard_PriceProposal_NeedsReview_ttip")),
+            (h = (0, E.Xx)("#PricingDashboard_PriceProposal_NeedsReview")))
           : 1 == (null == l ? void 0 : l.eState) && l.bPartnerWillPublish
-          ? ((P = x().PartnerWillPublish),
-            (h = (0, E.Xx)(
+          ? ((p = x().PartnerWillPublish),
+            (v = (0, E.Xx)(
               "#PricingDashboard_PriceProposal_WaitingForReview_PartnerWillPublish_ttip",
-              u,
+              m,
               c,
             )),
-            (p = (0, E.Xx)(
+            (h = (0, E.Xx)(
               "#PricingDashboard_PriceProposal_WaitingForReview_PartnerWillPublish",
             )))
           : 1 != (null == l ? void 0 : l.eState) || l.bPartnerWillPublish
           ? 4 == (null == l ? void 0 : l.eState)
-            ? ((P = x().ApprovedCanPublish),
-              (h = (0, E.Xx)("#PricingDashboard_PriceProposal_Approved_ttip")),
-              (p = a.createElement(
+            ? ((p = x().ApprovedCanPublish),
+              (v = (0, E.Xx)("#PricingDashboard_PriceProposal_Approved_ttip")),
+              (h = a.createElement(
                 s.KM,
                 {
                   onClick: (e) =>
@@ -951,18 +947,18 @@
                   "#PricingDashboard_PriceProposal_PublishDialog_Button",
                 ),
               )))
-            : ((P = x().NoProposalsInFlight),
-              (h = (0, E.Xx)(
+            : ((p = x().NoProposalsInFlight),
+              (v = (0, E.Xx)(
                 "#PricingDashboard_PriceProposal_NoneInFlight_ttip",
               )),
-              (p = (0, E.Xx)("#PricingDashboard_PriceProposal_NoneInFlight")))
-          : ((P = x().AutoPublish),
-            (h = (0, E.Xx)(
+              (h = (0, E.Xx)("#PricingDashboard_PriceProposal_NoneInFlight")))
+          : ((p = x().AutoPublish),
+            (v = (0, E.Xx)(
               "#PricingDashboard_PriceProposal_WaitingForReview_AutoPublish_ttip",
-              u,
+              m,
               c,
             )),
-            (p = a.createElement(
+            (h = a.createElement(
               "div",
               null,
               (0, E.Xx)("#PricingDashboard_PriceProposal_WaitingForReview"),
@@ -975,19 +971,19 @@
                 ),
               ),
             )));
-        let v = o || !!l;
+        let C = o || !!l;
         return a.createElement(
           "div",
-          { className: (0, D.Z)(x().ProposalState, P) },
+          { className: (0, D.Z)(x().ProposalState, p) },
           a.createElement(
             w.HP,
-            { toolTipContent: h, className: x().StateText },
+            { toolTipContent: v, className: x().StateText },
             a.createElement("div", { className: x().ProposalStateKey }),
-            p,
+            h,
           ),
-          v &&
+          C &&
             a.createElement(B.G, {
-              hoverKey: m,
+              hoverKey: P,
               className: x().PackageMore,
               renderHover: () => a.createElement(ge, { packageID: i }),
             }),

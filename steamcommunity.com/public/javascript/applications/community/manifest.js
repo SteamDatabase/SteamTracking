@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "8652533";
+var CLSTAMP = "8657129";
 (() => {
   "use strict";
   var a,
@@ -21,22 +21,22 @@ var CLSTAMP = "8652533";
     (s.O = (e, n, c, i) => {
       if (!n) {
         var o = 1 / 0;
-        for (l = 0; l < a.length; l++) {
-          for (var [n, c, i] = a[l], d = !0, t = 0; t < n.length; t++)
+        for (f = 0; f < a.length; f++) {
+          for (var [n, c, i] = a[f], d = !0, t = 0; t < n.length; t++)
             (!1 & i || o >= i) && Object.keys(s.O).every((a) => s.O[a](n[t]))
               ? n.splice(t--, 1)
               : ((d = !1), i < o && (o = i));
           if (d) {
-            a.splice(l--, 1);
-            var f = c();
-            void 0 !== f && (e = f);
+            a.splice(f--, 1);
+            var l = c();
+            void 0 !== l && (e = l);
           }
         }
         return e;
       }
       i = i || 0;
-      for (var l = a.length; l > 0 && a[l - 1][2] > i; l--) a[l] = a[l - 1];
-      a[l] = [n, c, i];
+      for (var f = a.length; f > 0 && a[f - 1][2] > i; f--) a[f] = a[f - 1];
+      a[f] = [n, c, i];
     }),
     (s.n = (a) => {
       var e = a && a.__esModule ? () => a.default : () => a;
@@ -461,11 +461,11 @@ var CLSTAMP = "8652533";
         var d, t;
         if (void 0 !== n)
           for (
-            var f = document.getElementsByTagName("script"), l = 0;
-            l < f.length;
-            l++
+            var l = document.getElementsByTagName("script"), f = 0;
+            f < l.length;
+            f++
           ) {
-            var r = f[l];
+            var r = l[f];
             if (
               r.getAttribute("src") == a ||
               r.getAttribute("data-webpack") == i + n
@@ -676,14 +676,14 @@ var CLSTAMP = "8652533";
           var c,
             i,
             [o, d, t] = n,
-            f = 0;
+            l = 0;
           if (o.some((e) => 0 !== a[e])) {
             for (c in d) s.o(d, c) && (s.m[c] = d[c]);
-            if (t) var l = t(s);
+            if (t) var f = t(s);
           }
-          for (e && e(n); f < o.length; f++)
-            (i = o[f]), s.o(a, i) && a[i] && a[i][0](), (a[i] = 0);
-          return s.O(l);
+          for (e && e(n); l < o.length; l++)
+            (i = o[l]), s.o(a, i) && a[i] && a[i][0](), (a[i] = 0);
+          return s.O(f);
         },
         n = (self.webpackChunkcommunity = self.webpackChunkcommunity || []);
       n.forEach(e.bind(null, 0)), (n.push = e.bind(null, n.push.bind(n)));
