@@ -16298,6 +16298,7 @@
           "saleevent",
           "themesale",
           "nextfest",
+          "seasonalsale",
           "informational",
           "vacation",
           "important",
@@ -16317,6 +16318,7 @@
             "preload",
             "themesale",
             "nextfest",
+            "seasonalsale",
           ])),
         d = new Set(["dailydeal", "assetrequest"]),
         u = 604800,
@@ -16326,6 +16328,7 @@
         p.set("saleevent", "Sale Events"),
         p.set("themesale", "Steam Theme Sales"),
         p.set("nextfest", "Next Fests"),
+        p.set("seasonalsale", "Seasonal Sale"),
         p.set("informational", "Informational"),
         p.set("dailydeal", "Daily Deals"),
         p.set("vacation", "Vacation/PTO"),
@@ -16338,6 +16341,7 @@
         _.set("saleevent", "#819c8a"),
         _.set("themesale", "#819c8a"),
         _.set("nextfest", "#819c8a"),
+        _.set("seasonalsale", "#819c8a"),
         _.set("informational", "#474747"),
         _.set("dailydeal", "#80275D"),
         _.set("vacation", "#6f7485"),
@@ -16350,6 +16354,7 @@
         h.set("saleevent", "#discount_desc_preset_special"),
         h.set("themesale", "#discount_desc_preset_special"),
         h.set("nextfest", "#discount_desc_preset_special"),
+        h.set("seasonalsale", "#discount_desc_preset_special"),
         h.set("informational", "#discount_desc_limited_time_date"),
         h.set("dailydeal", "#discount_desc_preset_daily"),
         h.set("vacation", "#discount_desc_limited_time_date"),
@@ -42512,7 +42517,7 @@
     },
     17098: (e, t, n) => {
       "use strict";
-      n.d(t, { F: () => f });
+      n.d(t, { F: () => D });
       var a = n(1698),
         i = n(51485),
         l = n(36342),
@@ -42529,9 +42534,8 @@
         g = n(18133),
         v = n.n(g),
         E = n(17912),
-        S = n(45180),
-        D = n(82624);
-      function f(e) {
+        S = n(45180);
+      function D(e) {
         const { bShowLinkToPromotionPlan: t } = e,
           n = (0, l.Gn)(),
           r = (0, i.Dv)(),
@@ -42553,7 +42557,7 @@
               "Valve Only",
             ),
             Boolean(s)
-              ? o.createElement(y, null)
+              ? o.createElement(f, null)
               : o.createElement(d.ji, {
                   label: "Enable requesting featuring assets from partner?",
                   checked: s,
@@ -42603,31 +42607,24 @@
           ),
         );
       }
-      function y(e) {
+      function f(e) {
         const t = (0, l.Gn)(),
-          [n, a, i, s] = (0, r.SZ)(() => [
+          [n, a] = (0, r.SZ)(() => [
             t.GetID(),
             t.GetPartnerRequireArtworkReview(),
-            t.GetStoreItemKey(),
-            t.GetPartnerID(),
           ]);
         return o.createElement(
           "div",
           null,
-          o.createElement(D.x, {
-            storeItemKey: i,
-            nPartnerID: s,
-            fnUpdatePartnerID: t.SetPartnerID,
-          }),
           o.createElement(
             "div",
             { className: v().SetupRow },
-            o.createElement(b, null),
+            o.createElement(y, null),
             o.createElement(
               "div",
               null,
-              o.createElement(C, null),
-              o.createElement(k, null),
+              o.createElement(b, null),
+              o.createElement(I, null),
             ),
           ),
           o.createElement("br", null),
@@ -42648,7 +42645,7 @@
           }),
         );
       }
-      function b(e) {
+      function y(e) {
         return o.createElement(
           "div",
           { className: v().AssetNeedsColumn },
@@ -42657,7 +42654,7 @@
             o.createElement(
               "div",
               { key: e, className: v().AssetTypeRow },
-              o.createElement(I, {
+              o.createElement(C, {
                 type: e,
                 index: "marketingmessage_art_2" === e ? 1 : void 0,
               }),
@@ -42665,7 +42662,7 @@
           ),
         );
       }
-      function C(e) {
+      function b(e) {
         const t = (0, l.Gn)(),
           n = (0, i.Dv)(),
           [c, m] = (0, o.useState)(Boolean(n.GetDueDate())),
@@ -42718,7 +42715,7 @@
               ),
             );
       }
-      function I(e) {
+      function C(e) {
         const { type: t, index: n } = e,
           s = (0, l.Gn)(),
           c = (0, i.Dv)(),
@@ -42739,7 +42736,7 @@
               o.createElement("b", null, (0, a.gl)(t)),
             );
       }
-      function k(e) {
+      function I(e) {
         const t = (0, i.Dv)();
         return o.createElement(
           "div",
@@ -59599,6 +59596,11 @@
                 data: "nextfest",
                 tooltip: "Steam Next Fest",
               }),
+              e.push({
+                label: l.j.get("seasonalsale"),
+                data: "seasonalsale",
+                tooltip: "Steam Offical Seasonal Sale",
+              }),
               e
             );
           }, []);
@@ -60208,7 +60210,7 @@
     },
     49913: (e, t, n) => {
       "use strict";
-      n.d(t, { o6: () => Xe, pt: () => Ue, aX: () => Fe });
+      n.d(t, { o6: () => je, pt: () => He, aX: () => Ue });
       var a = n(4618),
         i = n(1698),
         l = n(81033),
@@ -60884,6 +60886,7 @@
                   Ce.k_OptIn,
                   Ce.k_SlackChannel,
                 ]),
+                e.set("seasonalsale", [Ce.k_SalePage]),
                 e.set("informational", []),
                 e.set("dailydeal", []),
                 e.set("vacation", []),
@@ -61152,7 +61155,8 @@
               }),
             );
       }
-      function Fe(e) {
+      var Fe = n(82624);
+      function Ue(e) {
         var t;
         const { planid: n, children: a, bCanBeMissing: i } = e,
           { oPlanContainer: l, bError: r } = (0, c.kA)(n),
@@ -61196,7 +61200,7 @@
               })
         );
       }
-      function Ue(e) {
+      function He(e) {
         const { planid: t } = e,
           n = (e) =>
             window.sessionStorage.setItem("editorCurrentTab", `?tab=${e.key}`),
@@ -61204,7 +61208,7 @@
             {
               name: "Editor Tab",
               key: "editor",
-              contents: u.createElement(E.SV, null, u.createElement(Ve, null)),
+              contents: u.createElement(E.SV, null, u.createElement(Xe, null)),
               onClick: n,
             },
             {
@@ -61225,19 +61229,19 @@
             },
           ];
         return u.createElement(
-          Fe,
+          Ue,
           { planid: t },
           u.createElement(
             "div",
             { className: g().AdminPageCtn },
             u.createElement(me, null),
-            u.createElement(He, null),
+            u.createElement(Ve, null),
             u.createElement(b.n, { tabs: a }),
             u.createElement("div", { className: D().ClearThings }),
           ),
         );
       }
-      function He(e) {
+      function Ve(e) {
         const t = (0, s.Gn)(),
           n = new Date(),
           a = (0, d.SZ)(() => new Date(1e3 * t.GetStartDate())),
@@ -61257,7 +61261,7 @@
           u.createElement("div", null, "Return to Dashboard"),
         );
       }
-      function Ve(e) {
+      function Xe(e) {
         const t = (0, s.Gn)();
         return u.createElement(
           "div",
@@ -61351,7 +61355,7 @@
                   u.createElement(
                     "div",
                     { className: g().SectionCtn },
-                    u.createElement(Xe, { oEditablePlan: t }),
+                    u.createElement(je, { oEditablePlan: t }),
                     u.createElement(we, { oEditablePlan: t }),
                   ),
                 ),
@@ -61373,7 +61377,16 @@
                   u.createElement(
                     "div",
                     { className: g().SectionCtn },
-                    u.createElement(je, { oEditablePlan: t }),
+                    u.createElement(We, { oEditablePlan: t }),
+                  ),
+                ),
+                u.createElement(
+                  E.SV,
+                  null,
+                  u.createElement(
+                    "div",
+                    { className: g().SectionCtn },
+                    u.createElement(qe, { oEditablePlan: t }),
                   ),
                 ),
                 u.createElement(
@@ -61409,7 +61422,7 @@
           ),
         );
       }
-      function Xe(e) {
+      function je(e) {
         const { oEditablePlan: t } = e,
           n = (0, m.dh)(t.GetSpotlightIDs(0)),
           a = (0, l.vc)(t.GetDiscountEventID()),
@@ -61591,7 +61604,32 @@
           }),
         );
       }
-      function je(e) {
+      function qe(e) {
+        const { oEditablePlan: t } = e,
+          [n, a, i] = (0, d.SZ)(() => [
+            t.GetType(),
+            t.GetStoreItemKey(),
+            t.GetPartnerID(),
+          ]);
+        return u.createElement(
+          I.ug,
+          {
+            title: "Visibility",
+            tooltip: "Allows you to change who is able to see this promotion",
+            bStartMinimized: !0,
+          },
+          u.createElement(
+            "div",
+            { className: G.LinksCtn },
+            u.createElement(Fe.x, {
+              storeItemKey: a,
+              nPartnerID: i,
+              fnUpdatePartnerID: t.SetPartnerID,
+            }),
+          ),
+        );
+      }
+      function We(e) {
         const { oEditablePlan: t } = e;
         t.GetType();
         return u.createElement(
