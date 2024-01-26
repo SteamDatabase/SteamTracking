@@ -435,6 +435,7 @@
     "DailyDeals_New_SelectPackage": "Select Package",
     "DailyDeals_New_SelectBundle": "Select Bundle",
     "DailyDeals_New_LastDiscount": "Last Discount: %1$s @ %2$s% %4$sPackageID: %3$s",
+    "DailyDeals_New_LastDiscount_SansPackage": "Last Discount: %1$s @ %2$s% %4$s",
     "DailyDeals_New_LastDiscount_Ends": "Ending on: %1$s",
     "DailyDeals_New_NoLastDiscount": "No previous discount info available",
     "DailyDeals_New_CurrentPrice": "Current price: %1$s",

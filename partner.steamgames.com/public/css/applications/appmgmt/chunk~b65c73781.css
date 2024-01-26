@@ -7102,6 +7102,16 @@ textarea.promotionplaneditor_AssetNotes_VaLwy {
   .dailydealdiscounts_RecentDiscount_W5lwN {
   color: orange;
 }
+.dailydealdiscounts_LastDiscount_2gbaQ
+  .dailydealdiscounts_ActiveDiscount_2VxE0 {
+  padding-left: 2px;
+  padding-right: 2px;
+  background: #4c6b22;
+  color: #beee11;
+}
+.dailydealdiscounts_Inline_2HIMH {
+  display: inline-block;
+}
 .partnersiteappsearch_Results_3mK1P {
   max-height: 35vh;
   overflow-y: auto;
@@ -10615,6 +10625,7 @@ h1.optin_display_appeal_AppealTitle_X7wqW {
 }
 .invitationplanner_CandidateTable_2qjp5 td {
   background: linear-gradient(0deg, #282d39, #2c323f);
+  padding: 12px 7px 12px 7px;
 }
 .invitationplanner_CandidateTable_2qjp5 tr:hover td {
   background: #343c4b;
@@ -10622,6 +10633,7 @@ h1.optin_display_appeal_AppealTitle_X7wqW {
 .invitationplanner_AppCtn_38wbG {
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 .invitationplanner_AppCtn_38wbG .invitationplanner_AppImgCtn_1IPZB {
   width: 120px;
@@ -10631,6 +10643,9 @@ h1.optin_display_appeal_AppealTitle_X7wqW {
 .invitationplanner_AppCtn_38wbG .invitationplanner_AppName_2ubxS {
   font-size: 16px;
   color: #fff;
+}
+.invitationplanner_CandidateRow_1-lXe {
+  border-bottom: 5px solid #1b1e22;
 }
 .invitationplanner_CandidateRow_1-lXe .invitationplanner_DiscountPercent_uq9p7 {
   color: #adff2f;
@@ -10679,6 +10694,22 @@ h1.optin_display_appeal_AppealTitle_X7wqW {
   .invitationplanner_PartnerCol_2DqGf
   .invitationplanner_PartnerName_3Tyh3 {
   margin-bottom: 2px;
+}
+.invitationplanner_FilterRow_3x4ua {
+  width: 100%;
+  padding: 4px 8px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: #282d39;
+  margin-bottom: 20px;
+}
+.invitationplanner_FilterRow_3x4ua .DialogInputLabelGroup {
+  margin-bottom: 0;
+}
+.invitationplanner_FilterRow_3x4ua .invitationplanner_Filter_2h6Fv {
+  margin-right: 10px;
 }
 .invitationplanner_PagingRow_3qLRl {
   display: flex;
