@@ -20052,20 +20052,18 @@
         return (0, o.Qg)(A.Get().GetCallbackForDailyDealList(), t), e;
       }
       function P(e, t) {
-        let n = null;
+        let n = [];
         if (
           ((null == e ? void 0 : e.length) > 0 &&
-            (n = E.kp(
-              e
-                .filter((e) => e.store_item_id && 0 == e.store_item_type)
-                .map((e) => e.store_item_id),
-            )),
+            (n = e
+              .filter((e) => e.store_item_id && 0 == e.store_item_type)
+              .map((e) => e.store_item_id)),
           (null == t ? void 0 : t.length) > 0)
         ) {
           const e = t.map((e) => e.appid).filter(Boolean);
-          n && 0 != n.length ? (n.push(...e), (n = E.kp(n))) : (n = E.kp(e));
+          n.push(...e);
         }
-        return n;
+        return E.kp(n);
       }
       function T(e) {
         const t = A.Get(),
