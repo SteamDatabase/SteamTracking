@@ -63558,23 +63558,23 @@
                     a = /app\/(\d+)\/view\/(\d+)\/?$/.exec(t),
                     i = /group\/(\d+)\/view\/(\d+)\/?$/.exec(t),
                     l =
-                      /groups\/([A-Za-z0-9\-@#!$]+)\/announcements\/detail\/(\d+)+\/?$/.exec(
+                      /groups\/([A-Za-z0-9\-@#!$_]+)\/announcements\/detail\/(\d+)+\/?$/.exec(
                         t,
                       ),
                     r = /games\/(\d+)\/announcements\/detail\/(\d+)+\/?$/.exec(
                       t,
                     ),
                     o =
-                      /games\/([A-Za-z0-9\-@#!$]+)\/announcements\/detail\/(\d+)+\/?$/.exec(
+                      /games\/([A-Za-z0-9\-@#!$_]+)\/announcements\/detail\/(\d+)+\/?$/.exec(
                         t,
                       ),
                     c =
-                      /groups\/([A-Za-z0-9\-@#!$]+)\/partnerevents\/edit\/(\d+)+/.exec(
+                      /groups\/([A-Za-z0-9\-@#!$_]+)\/partnerevents\/edit\/(\d+)+/.exec(
                         t,
                       ),
                     m = /games\/(\d+)\/partnerevents\/edit\/(\d+)+/.exec(t),
                     d =
-                      /games\/([A-Za-z0-9\-@#!$]+)\/announcements\/detail\/(\d+)+\/?$/.exec(
+                      /games\/([A-Za-z0-9\-@#!$_]+)\/announcements\/detail\/(\d+)+\/?$/.exec(
                         t,
                       );
                   let _ = null,
