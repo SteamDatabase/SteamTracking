@@ -48655,7 +48655,7 @@ div.LowPerfMode
   z-index: 1;
 }
 .BasicUI .downloads_DownloadsPage_1bq4x {
-  padding-top: 0px;
+  padding-top: var(--basicui-header-height);
   background: radial-gradient(
     155.42% 100% at 0% 0%,
     #060a0e 0 0%,

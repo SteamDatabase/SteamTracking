@@ -311,6 +311,28 @@ message CFamilyGroups_GetSharedLibraryApps_Response {
 	repeated .CFamilyGroups_GetSharedLibraryApps_Response.SharedApp apps = 1;
 }
 
+message CFamilyGroups_SetPreferredLender_Request {
+	optional uint64 family_groupid = 1;
+	optional uint32 appid = 2;
+	optional fixed64 lender_steamid = 3;
+}
+
+message CFamilyGroups_SetPreferredLender_Response {
+}
+
+message CFamilyGroups_GetPreferredLenders_Request {
+	optional uint64 family_groupid = 1;
+}
+
+message CFamilyGroups_GetPreferredLenders_Response {
+	message FamilyMember {
+		optional fixed64 steamid = 1;
+		repeated uint32 preferred_appids = 2;
+	}
+
+	repeated .CFamilyGroups_GetPreferredLenders_Response.FamilyMember members = 1;
+}
+
 message CFamilyGroupsClient_NotifyRunningApps_Notification {
 	message PlayingMember {
 		optional fixed64 member_steamid = 1;
@@ -319,7 +341,6 @@ message CFamilyGroupsClient_NotifyRunningApps_Notification {
 
 	message RunningApp {
 		optional uint32 appid = 1;
-		optional bool is_locked = 2;
 		repeated .CFamilyGroupsClient_NotifyRunningApps_Notification.PlayingMember playing_members = 3;
 	}
 
@@ -355,6 +376,8 @@ service FamilyGroups {
 	rpc GetChangeLog (.CFamilyGroups_GetChangeLog_Request) returns (.CFamilyGroups_GetChangeLog_Response);
 	rpc SetFamilyCooldownOverrides (.CFamilyGroups_SetFamilyCooldownOverrides_Request) returns (.CFamilyGroups_SetFamilyCooldownOverrides_Response);
 	rpc GetSharedLibraryApps (.CFamilyGroups_GetSharedLibraryApps_Request) returns (.CFamilyGroups_GetSharedLibraryApps_Response);
+	rpc SetPreferredLender (.CFamilyGroups_SetPreferredLender_Request) returns (.CFamilyGroups_SetPreferredLender_Response);
+	rpc GetPreferredLenders (.CFamilyGroups_GetPreferredLenders_Request) returns (.CFamilyGroups_GetPreferredLenders_Response);
 }
 
 service FamilyGroupsClient {
