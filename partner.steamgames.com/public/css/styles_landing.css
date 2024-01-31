@@ -510,7 +510,7 @@ span.motd {
 
 
 	.panel.announcementPanel .date {
-		color: #6B8805;
+		color: #93979a;
 		line-height: 16px;
 		font-size: 11px;
 		display: inline-block;
@@ -519,24 +519,32 @@ span.motd {
 		font-family: arial;
 	}
 
+    .panel.announcementPanel .icon.icon_announcement_green {
+        filter: saturate(0);
+    }
+
 	.panel.announcementPanel a.readMore {
-		color: #8BB006;
+		color: #b0e9ff;
 		text-transform: uppercase;
 		text-decoration: none;
+        border-bottom: 1px dotted rgba(176,233,255,.5);
 		font-size: 11px;
 	}
-
-	.panel.announcementPanel h1,
+    .panel.announcementPanel h1 {
+        display: block;
+    }
 	.panel.announcementPanel h1 a {
-		color: #A4D007;
+		color: #b0e9ff;
+        border-bottom: 1px dotted rgba(176,233,255,.5);
 		font-weight: normal;
 		font-size: 17px;
-		text-decoration: none;
-        display: block;
+        text-decoration: none;
+        display: inline;
 	}
 	.panel.announcementPanel a.readMore:hover,
 	.panel.announcementPanel h1 a:hover {
 		color: #ffffff;
+        border-bottom: 1px dotted rgba255,255,255,.5);
         cursor: pointer;
 	}
 

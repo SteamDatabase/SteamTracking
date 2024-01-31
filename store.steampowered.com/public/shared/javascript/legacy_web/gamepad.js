@@ -15,12 +15,12 @@
         FocusRingOnHiddenItem: "focusring_FocusRingOnHiddenItem_2OusV",
       };
     },
-    182: (e, t, n) => {
+    453: (e, t, n) => {
       "use strict";
       n.d(t, { Pf: () => r, y5: () => a });
       var i = n(556),
-        o = n(243),
-        s = n(458);
+        o = n(136),
+        s = n(300);
       class r {
         constructor() {
           (this.m_fnCallback = void 0),
@@ -84,7 +84,7 @@
       }
       (0, i.gn)([o.a], a.prototype, "OnMessage", null);
     },
-    458: (e, t, n) => {
+    300: (e, t, n) => {
       "use strict";
       n.d(t, { i: () => o, l: () => i });
       const i = "GamepadInput";
@@ -97,14 +97,14 @@
           (e[(e.Full = 4)] = "Full");
       })(o || (o = {}));
     },
-    647: (e, t, n) => {
+    803: (e, t, n) => {
       "use strict";
       n.r(t), n.d(t, { InitializeGamepadNavigation: () => gt });
       var i,
         o = n(556),
         s = n(311),
         r = n.n(s),
-        a = n(75);
+        a = n(5);
       !(function (e) {
         (e[(e.GAMEPAD = 0)] = "GAMEPAD"),
           (e[(e.KEYBOARD = 1)] = "KEYBOARD"),
@@ -164,10 +164,10 @@
           l
         );
       }
-      var g = n(243),
-        _ = n(458),
-        v = n(83),
-        p = n(182);
+      var g = n(136),
+        _ = n(300),
+        v = n(783),
+        p = n(453);
       class f {
         constructor(e) {
           (this.m_bIsGamepadInputExternallyControlled = !1),
@@ -575,7 +575,7 @@
             : console.assert(!!e, t, ...n)
           : e || console.warn(t, ...n);
       }
-      var L = n(436);
+      var L = n(661);
       class B {
         GetObject(e) {
           return (0, o.mG)(this, void 0, void 0, function* () {
@@ -632,6 +632,7 @@
         "VR",
         "VRDashboardPopupStore",
         "VRGamepadUIMessages",
+        "VRPathProperties",
       ];
       var G;
       !(function (e) {
@@ -1000,7 +1001,7 @@
           );
         }
       }
-      var z = n(123);
+      var z = n(10);
       const Q = new x("FocusNavigation").Debug,
         q = new x("GamepadEvents").Debug;
       class J {

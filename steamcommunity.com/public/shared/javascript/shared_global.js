@@ -485,6 +485,10 @@ function ShowBlockingWaitDialog( strTitle, strDescription )
 	var throbber = $J('<div/>', {'class': 'waiting_dialog_throbber'} );
 	container.append( throbber );
 	container.append( strDescription );
+	if ( !strDescription )
+	{
+		container.addClass( 'waiting_dialog_centered' );
+	}
 
 	var Modal = _BuildDialog( strTitle, container, [], fnOK, { bExplicitDismissalOnly: true } );
 	deferred.always( function() { Modal.Dismiss(); } );

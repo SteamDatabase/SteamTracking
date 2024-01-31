@@ -711,7 +711,6 @@ html.contextmenu_ContextMenuPopup_2GpKT body {
 }
 .pagedsettings_PagedSettingsDialog_PageList__EebF {
   line-height: 16px;
-  height: 100vh;
   white-space: nowrap;
   overflow: scroll;
   flex-shrink: 1;
@@ -719,6 +718,9 @@ html.contextmenu_ContextMenuPopup_2GpKT body {
   display: flex;
   flex-direction: column;
   padding-bottom: 40px;
+}
+.BasicUI .pagedsettings_PagedSettingsDialog_PageList__EebF {
+  height: 100vh;
 }
 .pagedsettings_PagedSettingsDialog_PageList__EebF::-webkit-scrollbar-corner {
   background: transparent;
@@ -1431,6 +1433,16 @@ button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover[disabled] {
   background: #23262e;
   color: #fff;
   pointer-events: none;
+}
+button.gamepaddialog_Button_1kn70.DialogButton.Disabled.gpfocus,
+button.gamepaddialog_Button_1kn70.DialogButton[disabled].gpfocus,
+button.gamepaddialog_Button_1kn70.DialogButton:enabled.Disabled.gpfocus,
+button.gamepaddialog_Button_1kn70.DialogButton:enabled[disabled].gpfocus,
+button.gamepaddialog_Button_1kn70.DialogButton:active.Disabled.gpfocus,
+button.gamepaddialog_Button_1kn70.DialogButton:active[disabled].gpfocus,
+button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover.Disabled.gpfocus,
+button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover[disabled].gpfocus {
+  background: #000;
 }
 button.gamepaddialog_Button_1kn70.DialogButton:before,
 button.gamepaddialog_Button_1kn70.DialogButton:enabled:before,
@@ -3156,6 +3168,534 @@ body.modals_BodyNoScrollDialog_3lrlA {
   flex-direction: column;
   min-height: 0;
 }
+@keyframes gamepadcontextmenu_BackgroundAnimation_J5n9q {
+  from {
+    background-position: 0 100%;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
+@keyframes gamepadcontextmenu_ItemFocusAnim-darkerGrey-nocolor_15NxM {
+  from {
+    background: #3d4450;
+  }
+  to {
+    background: #23262e;
+  }
+}
+@keyframes gamepadcontextmenu_ItemFocusAnim-darkerGrey_1m4Mb {
+  from {
+    background: #3d4450;
+    color: #8b929a;
+  }
+  to {
+    background: #23262e;
+    color: #fff;
+  }
+}
+@keyframes gamepadcontextmenu_ItemFocusAnim-darkGrey_26VnW {
+  from {
+    background: rgba(255, 255, 255, 0.25);
+    color: #8b929a;
+  }
+  to {
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+  }
+}
+@keyframes gamepadcontextmenu_ItemFocusAnim-grey_3kAMT {
+  from {
+    background: #8b929a;
+    color: #fff;
+  }
+  to {
+    background: #67707b;
+    color: #fff;
+  }
+}
+@keyframes gamepadcontextmenu_ItemFocusAnim-translucent-white-10_xal37 {
+  from {
+    background: rgba(255, 255, 255, 0.3);
+    color: #fff;
+  }
+  to {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+  }
+}
+@keyframes gamepadcontextmenu_ItemFocusAnim-translucent-white-20_3IpHn {
+  from {
+    background: rgba(255, 255, 255, 0.5);
+    color: #fff;
+  }
+  to {
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+  }
+}
+@keyframes gamepadcontextmenu_ItemFocusAnimBorder-darkGrey_-BoSi {
+  from {
+    border-color: #67707b;
+  }
+  to {
+    border-color: #3d4450;
+  }
+}
+@keyframes gamepadcontextmenu_ItemFocusAnim-green_ta8gI {
+  from {
+    background: #c9ffc9;
+    color: #8b929a;
+  }
+  to {
+    background: #59bf40;
+    color: #fff;
+  }
+}
+@keyframes gamepadcontextmenu_focusAnimation_HkwmL {
+  0% {
+    background-position: 0% 0%;
+    opacity: 1;
+  }
+  100% {
+    background-position: -180% 0%;
+    opacity: 0.8;
+  }
+}
+@keyframes gamepadcontextmenu_hoverAnimation_9vT7O {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 50% 0%;
+  }
+}
+.gamepadcontextmenu_BasicContextMenuModal_2xS2_ {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+.gamepadcontextmenu_BasicContextMenuHeader_2Jp8B {
+  margin: 10px 20px 0;
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  color: #dcdedf;
+  flex-shrink: 0;
+  min-height: 1em;
+}
+.gamepadcontextmenu_BasicContextMenuHeader_2Jp8B:empty {
+  display: none;
+}
+.gamepadcontextmenu_BasicContextMenuHeaderShrinkableSpacing_21uc7 {
+  flex-shrink: 10;
+  height: 10px;
+}
+.gamepadcontextmenu_BasicContextMenuContainer_2ZDB6 {
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 1;
+  justify-content: center;
+  box-sizing: border-box;
+  animation-name: gamepadcontextmenu_slideInAnimation_2z70Q;
+  animation-duration: 0.5s;
+  animation-timing-function: cubic-bezier(0.16, 0.86, 0.43, 0.99);
+  animation-fill-mode: both;
+  max-height: fit-content;
+  overflow: hidden;
+}
+@keyframes gamepadcontextmenu_slideInAnimation_2z70Q {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.gamepadcontextmenu_contextMenu_x13bN {
+  position: absolute;
+  background: radial-gradient(
+    ellipse farthest-corner at 50% 0%,
+    #3c4047 0%,
+    #3c4047 50%,
+    #33363d 100%
+  );
+  box-shadow: 0 10px 32px 0px #000000ab;
+  opacity: 1;
+  transition: opacity 200ms;
+  z-index: 1600;
+  user-select: none;
+  padding: 4px;
+}
+.gamepadcontextmenu_contextMenuContents_sIgB- {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  max-width: 70%;
+  flex-shrink: 0;
+  pointer-events: all;
+  height: fit-content;
+  max-height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scroll-padding: 72px 0;
+  position: relative;
+  filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 0.5));
+}
+.gamepadcontextmenu_contextMenuContents_sIgB-.gamepadcontextmenu_hasSubMenu_E-IgW {
+  margin-right: -84px;
+}
+.gamepadcontextmenu_contextMenuContents_sIgB-::-webkit-scrollbar {
+  display: none;
+}
+.gamepadcontextmenu_contextMenuContents_sIgB- > :first-child {
+  margin-top: 15px;
+}
+.gamepadcontextmenu_contextMenuContents_sIgB- > :last-child {
+  margin-bottom: 40px;
+}
+.gamepadcontextmenu_contextMenuFade_3jmEJ {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: #000;
+  opacity: 0.4;
+}
+.gamepadcontextmenu_contextMenu_x13bN:not(.visible) {
+  opacity: 0;
+  pointer-events: none;
+}
+.gamepadcontextmenu_contextMenuItem_1sdvo {
+  display: flex;
+  line-height: 20px;
+  position: relative;
+  cursor: pointer;
+  width: 100%;
+  min-width: 280px;
+  box-sizing: border-box;
+  padding: 14px;
+  background: #23262e;
+  color: #b8bcbf;
+  align-items: center;
+}
+.gamepadcontextmenu_contextMenuItem_1sdvo.Stream,
+.gamepadcontextmenu_contextMenuItem_1sdvo.Connect,
+.gamepadcontextmenu_contextMenuItem_1sdvo.Launch,
+.gamepadcontextmenu_contextMenuItem_1sdvo.PlayMusic,
+.gamepadcontextmenu_contextMenuItem_1sdvo.Play,
+.gamepadcontextmenu_contextMenuItem_1sdvo.Resume,
+.gamepadcontextmenu_contextMenuItem_1sdvo.BorrowApp,
+.gamepadcontextmenu_contextMenuItem_1sdvo.Download,
+.gamepadcontextmenu_contextMenuItem_1sdvo.Update,
+.gamepadcontextmenu_contextMenuItem_1sdvo.PreLoad,
+.gamepadcontextmenu_contextMenuItem_1sdvo.Install,
+.gamepadcontextmenu_contextMenuItem_1sdvo.Pause,
+.gamepadcontextmenu_contextMenuItem_1sdvo.Stop,
+.gamepadcontextmenu_contextMenuItem_1sdvo.Cancel {
+  background: #23262e;
+  color: #dcdedf;
+  text-transform: none;
+  letter-spacing: 0px;
+}
+.gamepadcontextmenu_contextMenuItem_1sdvo:hover {
+  background: #3d4450;
+  transition: background 100ms ease-in;
+}
+.gamepadcontextmenu_contextMenuItem_1sdvo:hover.gamepadcontextmenu_Destructive_3aIFv,
+.gamepadcontextmenu_contextMenuItem_1sdvo:hover.Stop,
+.gamepadcontextmenu_contextMenuItem_1sdvo:hover.Cancel {
+  background: #8a220f;
+}
+.gamepadcontextmenu_contextMenuItem_1sdvo:hover.gamepadcontextmenu_Positive_2gJWj,
+.gamepadcontextmenu_contextMenuItem_1sdvo:hover.Stream,
+.gamepadcontextmenu_contextMenuItem_1sdvo:hover.Connect,
+.gamepadcontextmenu_contextMenuItem_1sdvo:hover.Launch,
+.gamepadcontextmenu_contextMenuItem_1sdvo:hover.PlayMusic,
+.gamepadcontextmenu_contextMenuItem_1sdvo:hover.Play,
+.gamepadcontextmenu_contextMenuItem_1sdvo:hover.Resume,
+.gamepadcontextmenu_contextMenuItem_1sdvo:hover.BorrowApp {
+  background: #236c39;
+  color: #fff;
+}
+.gamepadcontextmenu_contextMenuItem_1sdvo:hover.gamepadcontextmenu_Emphasis_1viOG,
+.gamepadcontextmenu_contextMenuItem_1sdvo:hover.Download,
+.gamepadcontextmenu_contextMenuItem_1sdvo:hover.Update,
+.gamepadcontextmenu_contextMenuItem_1sdvo:hover.PreLoad,
+.gamepadcontextmenu_contextMenuItem_1sdvo:hover.Install,
+.gamepadcontextmenu_contextMenuItem_1sdvo:hover.Pause {
+  background: #216495;
+  color: #fff;
+}
+.gamepadcontextmenu_contextMenuItem_1sdvo.gamepadcontextmenu_active_2Pk-x {
+  background: #fff;
+  color: #000;
+}
+.gamepadcontextmenu_contextMenuItem_1sdvo.gamepadcontextmenu_Selected_1PnET {
+  background: #3d4450;
+  color: #fff;
+}
+.gamepadcontextmenu_contextMenuItem_1sdvo.gamepadcontextmenu_Focused_X813r {
+  outline: none;
+  background: #fff;
+  color: #0e141b;
+}
+.gamepadcontextmenu_contextMenuItem_1sdvo.gamepadcontextmenu_Focused_X813r.gamepadcontextmenu_Positive_2gJWj,
+.gamepadcontextmenu_contextMenuItem_1sdvo.gamepadcontextmenu_Focused_X813r.Stream,
+.gamepadcontextmenu_contextMenuItem_1sdvo.gamepadcontextmenu_Focused_X813r.Connect,
+.gamepadcontextmenu_contextMenuItem_1sdvo.gamepadcontextmenu_Focused_X813r.Launch,
+.gamepadcontextmenu_contextMenuItem_1sdvo.gamepadcontextmenu_Focused_X813r.PlayMusic,
+.gamepadcontextmenu_contextMenuItem_1sdvo.gamepadcontextmenu_Focused_X813r.Play,
+.gamepadcontextmenu_contextMenuItem_1sdvo.gamepadcontextmenu_Focused_X813r.Resume,
+.gamepadcontextmenu_contextMenuItem_1sdvo.gamepadcontextmenu_Focused_X813r.BorrowApp {
+  background: #59bf40;
+  color: #fff;
+}
+.gamepadcontextmenu_contextMenuItem_1sdvo.gamepadcontextmenu_Focused_X813r.gamepadcontextmenu_Emphasis_1viOG,
+.gamepadcontextmenu_contextMenuItem_1sdvo.gamepadcontextmenu_Focused_X813r.Download,
+.gamepadcontextmenu_contextMenuItem_1sdvo.gamepadcontextmenu_Focused_X813r.Update,
+.gamepadcontextmenu_contextMenuItem_1sdvo.gamepadcontextmenu_Focused_X813r.PreLoad,
+.gamepadcontextmenu_contextMenuItem_1sdvo.gamepadcontextmenu_Focused_X813r.Install,
+.gamepadcontextmenu_contextMenuItem_1sdvo.gamepadcontextmenu_Focused_X813r.Pause {
+  background: #1a9fff;
+  color: #fff;
+}
+.gamepadcontextmenu_contextMenuItem_1sdvo.gamepadcontextmenu_Focused_X813r.gamepadcontextmenu_Destructive_3aIFv,
+.gamepadcontextmenu_contextMenuItem_1sdvo.gamepadcontextmenu_Focused_X813r.Stop,
+.gamepadcontextmenu_contextMenuItem_1sdvo.gamepadcontextmenu_Focused_X813r.Cancel {
+  background: #de3618;
+  color: #fff;
+}
+.gamepadcontextmenu_contextMenuItem_1sdvo.gamepadcontextmenu_Capitalized_3Jww5 {
+  text-transform: uppercase;
+}
+.gamepadcontextmenu_contextMenuItem_1sdvo.disabled {
+  color: rgba(255, 255, 255, 0.3);
+}
+.gamepadcontextmenu_contextMenuItem_1sdvo.disabled.gpfocus {
+  color: rgba(0, 0, 0, 0.5);
+}
+.gamepadcontextmenu_contextMenuItem_1sdvo.menuChecked {
+  color: #6dcff6;
+}
+.gamepadcontextmenu_contextMenuItem_1sdvo.menuChecked.contextMenuCheckMark {
+  display: block;
+}
+.gamepadcontextmenu_contextMenuItem_1sdvo > svg {
+  height: 16px;
+  width: 16px;
+  margin-right: 8px;
+}
+.gamepadcontextmenu_contextMenuItem_1sdvo.gamepadcontextmenu_MenuSectionHeader_1EMaM {
+  padding-top: 8px;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+.gamepadcontextmenu_contextMenuItem_1sdvo.gamepadcontextmenu_UpperCase_2bA03 {
+  text-transform: uppercase;
+}
+.gamepadcontextmenu_contextMenuItem_1sdvo .SVGIcon_Button {
+  margin-right: 12px;
+  padding-top: 2px;
+  height: 16px;
+  width: 16px;
+}
+.gamepadcontextmenu_contextMenuItem_1sdvo .SVGIcon_PlusCircle {
+  height: 16px;
+  width: 16px;
+  margin-left: -3px;
+  margin-bottom: -3px;
+}
+.gamepadcontextmenu_contextMenuItem_1sdvo .SVGIcon_PlusCircle line {
+  stroke: gray;
+  shape-rendering: crispEdges;
+  stroke-width: 20px;
+}
+.gamepadcontextmenu_contextMenuItem_1sdvo .SVGIcon_PlusCircle circle {
+  opacity: 0;
+}
+.gamepadcontextmenu_contextMenuItem_1sdvo.gamepadcontextmenu_SubMenu_1_tPN {
+  display: flex;
+  padding-right: 2px;
+}
+.gamepadcontextmenu_contextMenuItem_1sdvo.gamepadcontextmenu_SubMenu_1_tPN.gamepadcontextmenu_active_2Pk-x {
+  background: #fff;
+  color: #000;
+}
+.gamepadcontextmenu_contextMenuItem_1sdvo.gamepadcontextmenu_SubMenu_1_tPN
+  .SVGIcon_DownArrowContextMenu {
+  height: 14px;
+  width: 14px;
+  transform: rotateZ(-90deg);
+  fill: #9ca4a7;
+  margin: 0px 3px;
+}
+.gamepadcontextmenu_ContextMenuSeparator_1KL6n {
+  height: 2px;
+  min-height: 2px;
+}
+.gamepadcontextmenu_contextMenuItem_1sdvo.gamepadcontextmenu_SubMenu_1_tPN
+  .gamepadcontextmenu_Label_1WqSg {
+  flex: 1 0 auto;
+}
+.gamepadcontextmenu_contextMenuItem_1sdvo.gamepadcontextmenu_SubMenu_1_tPN
+  .gamepadcontextmenu_Arrow_2EDBb {
+  flex: 0 0 auto;
+  margin: 0px 0px 0px 4px;
+}
+.gamepadcontextmenu_contextMenuItem_1sdvo .contextMenuCheckMark {
+  width: 4px;
+  height: 18px;
+  background-color: #6dcff6;
+  min-height: 1px;
+  position: absolute;
+  left: -4px;
+  margin-top: 0px;
+  display: none;
+}
+.parentalunlockdialog_ParentalPINDialog_176OW {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.parentalunlockdialog_ParentalUnlock_26x49,
+.parentalunlockdialog_ParentalRequest_3CX0p {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+}
+.parentalunlockdialog_Body_3Vbr2 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-image: url(../../../images/applications/store/keybg.png?v=valveisgoodatcaching);
+  background-repeat: no-repeat;
+  background-position: 80% 50%;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+.parentalunlockdialog_ParentalRequest_3CX0p .parentalunlockdialog_Body_3Vbr2 {
+  min-height: 142px;
+}
+.parentalunlockdialog_Title_heMWC {
+  font-size: 16px;
+  font-weight: bold;
+}
+.parentalunlockdialog_ErrorText_332yb {
+  color: #de3618;
+}
+.parentalunlockdialog_TextInput_2WMdv {
+  height: 50px;
+  font-size: 35px;
+  max-width: 25%;
+  text-align: center;
+  background: rgba(59, 63, 72, 0.5);
+  color: #dcdedf;
+  border: none;
+  border-radius: 3px;
+  box-shadow: inset 0px 0px 0px #0000;
+}
+.parentalunlockdialog_TextInput_2WMdv:focus {
+  background: rgba(67, 73, 83, 0.6);
+  box-shadow: inset 1px 1px 8px #000a;
+  border: none;
+  outline: none;
+}
+.parentalunlockdialog_ButtonWrapper_Q7uvx .parentalunlockdialog_Button_1v4Js {
+  box-sizing: border-box;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.purchasenotices_PurchaseNoticeContainer_3MM2B {
+  display: flex;
+  flex-direction: row;
+  min-height: 52px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 2px;
+  margin-bottom: 12px;
+}
+.purchasenotices_PurchaseNoticeContainer_3MM2B.purchasenotices_RightHandImage_1rj3M {
+  flex-direction: row-reverse;
+}
+.purchasenotices_PurchaseNoticeLabel_3isvN {
+  font-family: "Motiva Sans", Sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  text-align: left;
+  white-space: pre-wrap;
+  text-wrap: wrap;
+  color: #fff;
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  padding: 6px 12px;
+  background: linear-gradient(90.41deg, #2c3c49 16.25%, #576674 99.89%);
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 2px;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.75);
+}
+.BasicUI .purchasenotices_PurchaseNoticeLabel_3isvN {
+  font-size: 12px;
+  white-space: initial;
+  padding: 4px 8px;
+}
+.purchasenotices_PurchaseNoticeImageContainer_2oYi0 {
+  min-height: 52px;
+  min-width: 52px;
+  background-color: #ffc82c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2px 0px 0px 2px;
+}
+.purchasenotices_PurchaseNoticeImageContainer_2oYi0.purchasenotices_VRSupported_PJBlJ {
+  width: 72px;
+}
+.purchasenotices_PurchaseNoticeImage_1vJ5G {
+  height: 55%;
+  color: #000;
+}
+.purchasenotices_PurchaseNoticeImage_1vJ5G.purchasenotices_Tilt_2YKuv {
+  transform: rotate(-15deg);
+}
+.purchasenotices_PurchaseNoticeImage_1vJ5G.purchasenotices_VRSupported_PJBlJ {
+  height: 85%;
+  margin-left: 12%;
+  margin-top: 5%;
+}
+.purchasenotices_PurchaseNoticeImage_1vJ5G.purchasenotices_VROnly_30HWu {
+  height: 1em;
+}
 .trailerplayer_TrailerPlayer_1i1EC {
   position: absolute;
   top: 0;
@@ -3254,6 +3794,7 @@ body.ShoppingCart {
   max-width: 940px;
   min-height: 50vh;
   margin: 0 auto;
+  padding: 0 2%;
 }
 .shoppingcart_ShoppingCartPage_22xts .shoppingcart_CartCheckboxNoMargin_1S9a0 {
   margin: 0;
@@ -3270,12 +3811,30 @@ body.ShoppingCart {
   justify-content: space-between;
   gap: 10px;
 }
+@media screen and (max-width: 840px) {
+  html:not(.force_desktop) .shoppingcart_ShoppingCartCtn_1jqUY {
+    flex-direction: column-reverse;
+    max-width: 615px;
+    margin: 0 auto;
+  }
+}
 .shoppingcart_ShoppingCartCtn_1jqUY .shoppingcart_ShoppingCartLeftCol_17GFd {
   max-width: 615px;
   flex-grow: 1;
+  min-width: 0;
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+.shoppingcart_ShoppingCartCtn_1jqUY .shoppingcart_ShoppingCartRightCol_3HIve {
+  flex-shrink: 0;
+}
+@media screen and (max-width: 840px) {
+  html:not(.force_desktop)
+    .shoppingcart_ShoppingCartCtn_1jqUY
+    .shoppingcart_ShoppingCartRightCol_3HIve.shoppingcart_SmallCart_31YlK {
+    display: none;
+  }
 }
 .shoppingcart_LoadingThrobber_eDdFp {
   position: absolute;
@@ -3292,6 +3851,13 @@ body.ShoppingCart {
   position: sticky;
   top: 10px;
 }
+@media screen and (max-width: 840px) {
+  html:not(.force_desktop) .shoppingcart_CartSummaryCtn_2bIzQ {
+    position: static;
+    margin: 0 auto;
+    max-width: none;
+  }
+}
 .shoppingcart_CartSummaryCtn_2bIzQ .shoppingcart_EstimatedTotalFlex_2Djad {
   display: flex;
   justify-content: space-between;
@@ -3299,6 +3865,14 @@ body.ShoppingCart {
 }
 .shoppingcart_CartSummaryCtn_2bIzQ .shoppingcart_SummaryMarginBottom_qV80o {
   margin-bottom: 10px;
+}
+.shoppingcart_ResponsiveShoppingCartSummary_dpVdC {
+  display: none;
+}
+@media screen and (max-width: 840px) {
+  html:not(.force_desktop) .shoppingcart_ResponsiveShoppingCartSummary_dpVdC {
+    display: block;
+  }
 }
 .shoppingcart_RequestPurchaseCtn_2jup- {
   display: flex;
@@ -3348,8 +3922,7 @@ body.ShoppingCart {
 }
 .shoppingcart_ShoppingCartModal_28yxH {
   width: 600px;
-  position: relative;
-  min-height: 400px;
+  max-width: calc(100% - 48px);
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
   font-weight: normal;
 }
@@ -3360,9 +3933,12 @@ body.ShoppingCart {
 .shoppingcart_ShoppingCartModalBtns_1qRag {
   display: flex;
   margin-top: 20px;
+  gap: 20px;
 }
-.shoppingcart_ShoppingCartModalBtns_1qRag .shoppingcart_OpenCartBtn_5w5S6 {
-  margin-left: 20px;
+@media screen and (max-width: 440px) {
+  .shoppingcart_ShoppingCartModalBtns_1qRag {
+    flex-direction: column;
+  }
 }
 .shoppingcart_FooterNotice_LXZhw {
   display: flex;
@@ -3436,127 +4012,6 @@ body.ShoppingCart {
   background-color: #ffc82c;
   font-size: 12px;
   font-weight: 500;
-}
-.purchasenotices_PurchaseNoticeContainer_3MM2B {
-  display: flex;
-  flex-direction: row;
-  min-height: 52px;
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.25);
-  border-radius: 2px;
-  margin-bottom: 12px;
-}
-.purchasenotices_PurchaseNoticeContainer_3MM2B.purchasenotices_RightHandImage_1rj3M {
-  flex-direction: row-reverse;
-}
-.purchasenotices_PurchaseNoticeLabel_3isvN {
-  font-family: "Motiva Sans", Sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  text-align: left;
-  white-space: pre-wrap;
-  text-wrap: wrap;
-  color: #fff;
-  display: flex;
-  align-content: center;
-  flex-wrap: wrap;
-  flex-grow: 1;
-  padding: 6px 12px;
-  background: linear-gradient(90.41deg, #2c3c49 16.25%, #576674 99.89%);
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.25);
-  border-radius: 2px;
-  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.75);
-}
-.BasicUI .purchasenotices_PurchaseNoticeLabel_3isvN {
-  font-size: 12px;
-  white-space: initial;
-  padding: 4px 8px;
-}
-.purchasenotices_PurchaseNoticeImageContainer_2oYi0 {
-  min-height: 52px;
-  min-width: 52px;
-  background-color: #ffc82c;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 2px 0px 0px 2px;
-}
-.purchasenotices_PurchaseNoticeImageContainer_2oYi0.purchasenotices_VRSupported_PJBlJ {
-  width: 72px;
-}
-.purchasenotices_PurchaseNoticeImage_1vJ5G {
-  height: 55%;
-  color: #000;
-}
-.purchasenotices_PurchaseNoticeImage_1vJ5G.purchasenotices_Tilt_2YKuv {
-  transform: rotate(-15deg);
-}
-.purchasenotices_PurchaseNoticeImage_1vJ5G.purchasenotices_VRSupported_PJBlJ {
-  height: 85%;
-  margin-left: 12%;
-  margin-top: 5%;
-}
-.purchasenotices_PurchaseNoticeImage_1vJ5G.purchasenotices_VROnly_30HWu {
-  height: 1em;
-}
-.parentalunlockdialog_ParentalPINDialog_176OW {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-.parentalunlockdialog_ParentalUnlock_26x49,
-.parentalunlockdialog_ParentalRequest_3CX0p {
-  width: 70%;
-  display: flex;
-  justify-content: center;
-}
-.parentalunlockdialog_Body_3Vbr2 {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 16px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  background-image: url(../../../images/applications/store/keybg.png?v=valveisgoodatcaching);
-  background-repeat: no-repeat;
-  background-position: 80% 50%;
-  background-color: rgba(0, 0, 0, 0.3);
-  position: relative;
-}
-.parentalunlockdialog_ParentalRequest_3CX0p .parentalunlockdialog_Body_3Vbr2 {
-  min-height: 142px;
-}
-.parentalunlockdialog_Title_heMWC {
-  font-size: 16px;
-  font-weight: bold;
-}
-.parentalunlockdialog_ErrorText_332yb {
-  color: #de3618;
-}
-.parentalunlockdialog_TextInput_2WMdv {
-  height: 50px;
-  font-size: 35px;
-  max-width: 25%;
-  text-align: center;
-  background: rgba(59, 63, 72, 0.5);
-  color: #dcdedf;
-  border: none;
-  border-radius: 3px;
-  box-shadow: inset 0px 0px 0px #0000;
-}
-.parentalunlockdialog_TextInput_2WMdv:focus {
-  background: rgba(67, 73, 83, 0.6);
-  box-shadow: inset 1px 1px 8px #000a;
-  border: none;
-  outline: none;
-}
-.parentalunlockdialog_ButtonWrapper_Q7uvx .parentalunlockdialog_Button_1v4Js {
-  box-sizing: border-box;
-  padding-left: 10px;
-  padding-right: 10px;
 }
 body,
 body.shared_common_v6_3r3Le {
@@ -3933,7 +4388,7 @@ div.ModalPosition_TopBar {
   position: absolute;
   top: 0;
   width: 100%;
-  z-index: 1;
+  z-index: 2;
 }
 .ModalDialogPopup .DesktopUI:not(.WindowFocus) .ModalPosition_TopBar {
   opacity: 0;

@@ -1188,6 +1188,12 @@ select.blueish {
 	line-height: 32px;
 }
 
+.waiting_dialog_centered
+{
+	display: flex;
+	justify-content: center;
+}
+
 .waiting_dialog_throbber
 {
 	width: 32px;

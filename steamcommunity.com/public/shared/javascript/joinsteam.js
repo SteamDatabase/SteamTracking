@@ -575,6 +575,7 @@ function TransferLogin( data )
 function ReallyCreateAccount()
 {
 	++iAjaxCalls;
+	let $waitDialog = ShowBlockingWaitDialog( 'Creating your Steam account...' );
 	new Ajax.Request( g_sBaseURL + 'join/createaccount/',
 	{
 		type: 'POST', 	    parameters: { accountname : $('accountname').value,
@@ -604,9 +605,12 @@ function ReallyCreateAccount()
 
 								if (result && result.redirect)
 					window.location = result.redirect;
+
+				$waitDialog.Dismiss();
 			}
 			else if ( result && result.bInSteamClient && !result.redirect )
 			{
+				$waitDialog.Dismiss();
 				ShowAlertDialog( 'New Account Created Successfully', 'Please close this window or click continue to sign in with your new account.', 'Continue' )
 					.always( function() {
 												window.location = "steam://close";
@@ -625,6 +629,7 @@ function ReallyCreateAccount()
 				} )
 				.fail( function() {
 					ShowError( 'Your account creation request failed, please try again later.' );
+					$waitDialog.Dismiss();
 				})
 				.done( function( data )
 				{
@@ -643,6 +648,7 @@ function ReallyCreateAccount()
 	    onFailure: function()
 	    {
 		    ShowError( 'Your account creation request failed, please try again later.' );
+			$waitDialog.Dismiss();
 		}
   });
 }
@@ -672,14 +678,14 @@ var g_bAccountNameAvailable = false;
 function CheckAccountNameAvailability()
 {
 	var strName = document.getElementById('accountname').value;
-	if ( strName == g_strLastAccountNameCheck )
+	if ( strName == g_strLastAccountNameCheck || !g_creationSessionID )
 		return;
 	g_strLastAccountNameCheck = strName;
 	++iAjaxCalls;
 	new Ajax.Request( g_sBaseURL + 'join/checkavail/',
 	  {
 	    type: 'POST',
-	    parameters: { accountname: strName, count : iAjaxCalls },
+	    parameters: { accountname: strName, count : iAjaxCalls, creationid: g_creationSessionID },
 	    onSuccess: function(transport)
 		{
 	      if ( transport.responseText )
