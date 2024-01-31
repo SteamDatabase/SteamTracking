@@ -726,41 +726,46 @@
                 ));
               return D;
             })(t).load(e);
-            return (function (e, t) {
-              var i, r;
-              let a = new P(e);
-              const n = null == t ? void 0 : t.public_data,
-                s = null == t ? void 0 : t.private_data;
-              (a.m_bInitialized = !0),
-                (a.m_ePersonaState =
-                  null !== (i = null == s ? void 0 : s.persona_state) &&
-                  void 0 !== i
-                    ? i
-                    : 0),
-                (a.m_strAvatarHash = (null == n ? void 0 : n.sha_digest_avatar)
-                  ? (0, p.BH)(n.sha_digest_avatar)
-                  : g.W),
-                (a.m_strPlayerName =
-                  null !== (r = null == n ? void 0 : n.persona_name) &&
-                  void 0 !== r
-                    ? r
-                    : e.ConvertTo64BitString()),
-                (a.m_strAccountName = null == s ? void 0 : s.account_name),
-                (null == s ? void 0 : s.persona_state_flags) &&
-                  (a.m_unPersonaStateFlags =
-                    t.private_data.persona_state_flags);
-              (null == s ? void 0 : s.game_id) &&
-                (a.m_gameid = t.private_data.game_id);
-              (null == s ? void 0 : s.game_server_ip_address) &&
-                (a.m_unGameServerIP = t.private_data.game_server_ip_address);
-              (null == s ? void 0 : s.lobby_steam_id) &&
-                (a.m_game_lobby_id = t.private_data.lobby_steam_id);
-              (null == s ? void 0 : s.game_extra_info) &&
-                (a.m_strGameExtraInfo = t.private_data.game_extra_info);
-              (null == n ? void 0 : n.profile_url) &&
-                (a.m_strProfileURL = n.profile_url);
-              return a;
-            })(f.K.InitFromAccountID(e), i);
+            return i
+              ? (function (e, t) {
+                  var i, r;
+                  let a = new P(e);
+                  const n = null == t ? void 0 : t.public_data,
+                    s = null == t ? void 0 : t.private_data;
+                  (a.m_bInitialized = !0),
+                    (a.m_ePersonaState =
+                      null !== (i = null == s ? void 0 : s.persona_state) &&
+                      void 0 !== i
+                        ? i
+                        : 0),
+                    (a.m_strAvatarHash = (
+                      null == n ? void 0 : n.sha_digest_avatar
+                    )
+                      ? (0, p.BH)(n.sha_digest_avatar)
+                      : g.W),
+                    (a.m_strPlayerName =
+                      null !== (r = null == n ? void 0 : n.persona_name) &&
+                      void 0 !== r
+                        ? r
+                        : e.ConvertTo64BitString()),
+                    (a.m_strAccountName = null == s ? void 0 : s.account_name),
+                    (null == s ? void 0 : s.persona_state_flags) &&
+                      (a.m_unPersonaStateFlags =
+                        t.private_data.persona_state_flags);
+                  (null == s ? void 0 : s.game_id) &&
+                    (a.m_gameid = t.private_data.game_id);
+                  (null == s ? void 0 : s.game_server_ip_address) &&
+                    (a.m_unGameServerIP =
+                      t.private_data.game_server_ip_address);
+                  (null == s ? void 0 : s.lobby_steam_id) &&
+                    (a.m_game_lobby_id = t.private_data.lobby_steam_id);
+                  (null == s ? void 0 : s.game_extra_info) &&
+                    (a.m_strGameExtraInfo = t.private_data.game_extra_info);
+                  (null == n ? void 0 : n.profile_url) &&
+                    (a.m_strProfileURL = n.profile_url);
+                  return a;
+                })(f.K.InitFromAccountID(e), i)
+              : null;
           }),
       });
       function k(e, t, i) {

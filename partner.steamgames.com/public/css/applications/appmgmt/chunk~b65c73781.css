@@ -8875,6 +8875,10 @@ button.rbc-input::-moz-focus-inner {
   display: flex;
   flex-direction: column;
 }
+.planningdashboard_OtherLinks_1ePXE a {
+  width: fit-content;
+  display: block;
+}
 .promotioncreatedialog_DateCtn_13RGK {
   min-height: 200px;
 }
@@ -9784,6 +9788,20 @@ textarea.cloudlocalizedartdisplay_ArtPreview_2V4yU {
 .optin_admin_email_dashboard_EmailAdmin_2PhkO h2 {
   margin-top: 20px;
 }
+.optin_admin_email_dashboard_CreationRow_3Uphn {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.optin_admin_email_dashboard_CreationRow_3Uphn button.DialogButton {
+  width: fit-content;
+  padding-left: 12px;
+  padding-right: 12px;
+  box-sizing: border-box;
+  margin-right: 8px;
+  display: flex;
+  flex-direction: row;
+}
 .optin_admin_email_dashboard_EmailsCtn_30DZ2 td,
 .optin_admin_email_dashboard_EmailsCtn_30DZ2 th {
   padding: 2px 12px 2px 6px;
@@ -10074,160 +10092,153 @@ h1.optin_display_appeal_AppealTitle_X7wqW {
   color: gray;
   font-size: 10px;
 }
-.promoagendarow_RowCtn_1Cq0N {
-  margin-top: 10px;
-  background: #2c2e35;
-  padding: 12px;
-  border-left: 20px solid #2a2a2d;
-  position: relative;
+.marketingmessageeditor_Dummy_3x7rO {
+  background-color: hotpink;
 }
-.promoagendarow_RowCtn_1Cq0N::before {
-  letter-spacing: 1px;
-  position: absolute;
-  left: -37px;
-  width: 55px;
-  transform: rotate(-90deg);
-  top: 34%;
-  text-align: center;
+.marketingmessageeditor_MessageCtn_18Z_Q select {
+  background: rgba(59, 63, 72, 0.5);
+  color: #dfe3e6;
+  font-size: 12px;
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  margin: 0;
+  border: none;
+  border-radius: 3px;
+  box-shadow: inset 0px 0px 0px #0000;
 }
-.promoagendarow_RowCtn_1Cq0N.promoagendarow_Public_2p_SN {
-  background: #4f525f;
-  border-left: 20px solid #84d0fb;
+.marketingmessageeditor_CountryInOut_219uC {
+  width: 30%;
+  margin-right: 8px;
 }
-.promoagendarow_RowCtn_1Cq0N.promoagendarow_Public_2p_SN::before {
-  content: "LIVE";
-  color: #078cda;
-}
-.promoagendarow_RowCtn_1Cq0N.promoagendarow_Public_2p_SN.promoagendarow_Future_EJs6P {
-  border-left: 20px solid #fce6a0;
-}
-.promoagendarow_RowCtn_1Cq0N.promoagendarow_Public_2p_SN.promoagendarow_Future_EJs6P::before {
-  content: "STAGED";
-  color: #ad8e05;
-}
-.promoagendarow_RowCtn_1Cq0N.promoagendarow_Ready_1PRvx {
-  background: #4f525f;
-  border-left: 20px solid #8afb84;
-}
-.promoagendarow_RowCtn_1Cq0N.promoagendarow_Ready_1PRvx::before {
-  content: "READY";
-  color: #0d2600;
-}
-.promoagendarow_RowCtn_1Cq0N:hover {
-  cursor: pointer;
-  background: #5d606f;
-}
-.promoagendarow_Row_2KUhB {
-  display: flex;
-  flex-direction: row;
-}
-.promoagendarow_Row_2KUhB.promoagendarow_Primary_2tQk8 {
-  color: #fff;
-  font-size: 14px;
-  justify-content: space-between;
-}
-.promoagendarow_Row_2KUhB:not(.promoagendarow_Primary_2tQk8) {
-  margin-top: 8px;
-}
-.promoagendarow_Col_2x28W {
-  line-height: 17px;
-}
-.promoagendarow_Col_2x28W.promoagendarow_ItemName_K3sWB {
-  width: 45%;
-  font-size: 16px;
-}
-.promoagendarow_Col_2x28W.promoagendarow_Type_1hntl {
+.marketingmessageeditor_CountryText_YvodB {
   flex-grow: 1;
-  width: 110px;
 }
-.promoagendarow_Col_2x28W.promoagendarow_Type_1hntl.promoagendarow_Deal_1I4-4
-  span {
-  background-color: #254069;
-  padding: 2px 4px;
+.marketingmessageeditor_RemoveLegacyBtn_1pvKr {
+  width: 30%;
 }
-.promoagendarow_Col_2x28W.promoagendarow_Date_17dLA {
-  width: 320px;
-}
-.promoagendarow_Col_2x28W.promoagendarow_Creator_3VjL- {
-  width: 175px;
-}
-.promoagendarow_Col_2x28W.promoagendarow_Visibility_wvE-j {
-  width: 75px;
-  font-size: 12px;
-}
-.promoagendarow_CountryList_17dzI {
-  max-width: 50%;
-  overflow-wrap: anywhere;
-  word-break: break-all;
-  padding: 0px 6px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 2px;
-  margin-right: 8px;
-}
-.promoagendarow_OwnerLimit_LDwRn {
-  padding: 0px 6px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 2px;
-  margin-right: 8px;
-}
-.promoagendarow_CapsulePlatform_2OJsE {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin-right: 8px;
-  opacity: 0.5;
-}
-.promoagendarow_CapsulePlatform_2OJsE span {
-  margin-left: 8px;
-}
-.promoagendarow_CapsulePlatform_2OJsE img,
-.promoagendarow_CapsulePlatform_2OJsE svg {
-  height: 14px;
-  width: 14px;
-}
-.promoagendarow_ViewsColumn_1Wtq4 {
-  width: 45%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding-right: 16px;
+.marketingmessageeditor_MessageImagePreview_3vqnt img {
+  width: 100%;
   box-sizing: border-box;
-  font-size: 14px;
-  color: #84d0fb;
 }
-.promoagendarow_ViewsColumn_1Wtq4 .promoagendarow_ViewsCtn_qbvhk {
-  width: 175px;
+.marketingmessageeditor_ScopeNameGlobal_1mF1E {
+  font-size: 21px;
+  color: #fff;
+}
+.marketingmessageeditor_ScopeNameChina_2O5jc {
+  font-size: 21px;
+  color: #c93a3a;
+  font-weight: 500;
+}
+.marketingmessageeditor_ApprovedForPublishStatus_13Use {
+  color: #7aed03;
+}
+.marketingmessageeditor_PartnerPreviewLink_3QdBI {
+  padding: 8px 0px 16px 0px;
+}
+.marketingmessageeditor_SecondaryButton_3l4An {
+  background-color: #7aed03;
+}
+.marketingmessageeditor_SecondaryButton_3l4An.marketingmessageeditor_hover_o9oXD {
+  background-color: #b3e97a;
+}
+.marketingmessagepreview_PreviewRow_Wog1G {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
 }
-.promoagendarow_ViewsColumn_1Wtq4 span {
-  margin-left: 8px;
-  color: #a7a9af;
+.marketingmessagepreview_Spacer_1rAD1 {
+  margin-right: 20px;
 }
-.promoagendarow_WillBecomeVisible_26S-q {
-  background-color: #fce6a0;
-  color: #ad8e05;
-  text-transform: uppercase;
-  padding: 2px 4px;
-  font-size: 12px;
-  margin-top: 4px;
-  display: block;
-  width: fit-content;
+.marketingmessagestats_DashStatsContainerPlaceholder_2NZrJ {
+  height: 210px;
+  width: 940px;
 }
-.promoagendarow_MissedRelease_1f2UQ {
-  background-color: #f77f47;
-  color: #8b1c00;
-  padding: 2px 4px;
-  margin-top: 4px;
-  display: block;
-  width: fit-content;
+.marketingmessagestats_DashStatsContainer_2QKKG {
+  background-image: linear-gradient(
+    180deg,
+    rgba(144, 153, 161, 0.1) 0%,
+    rgba(0, 0, 0, 0.06) 100%
+  );
+  height: 210px;
+  display: flex;
+  flex-direction: row;
+  padding: 16px 16px 0px 0px;
 }
-.promoagendarow_Unset_mDhm0 {
-  background-color: #f77f47;
-  color: #8b1c00;
-  padding: 2px 4px;
-  margin-top: 4px;
+@media all and (max-width: 700px) {
+  .marketingmessagestats_DashStatsContainer_2QKKG {
+    flex-direction: column-reverse;
+  }
+}
+.marketingmessagestats_DashStatsContainer_2QKKG
+  .marketingmessagestats_Chart_1aib0 {
+  flex: 1;
+}
+.marketingmessagestats_DashStatsContainer_2QKKG
+  .marketingmessagestats_Chart_1aib0
+  .recharts-cartesian-grid-horizontal
+  line {
+  stroke: #4c5661;
+}
+.marketingmessagestats_DashStatsContainer_2QKKG
+  .marketingmessagestats_Stats_ANrNA {
+  min-width: 25%;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex-shrink: 0;
+}
+@media all and (max-width: 700px) {
+  .marketingmessagestats_DashStatsContainer_2QKKG
+    .marketingmessagestats_Stats_ANrNA {
+    flex-direction: row;
+  }
+}
+.marketingmessagestats_DashStatsContainer_2QKKG
+  .marketingmessagestats_Stats_ANrNA
+  .marketingmessagestats_StatsTitle_3PO4S {
+  color: #fff;
+  letter-spacing: 0px;
+  font-size: 27px;
+  font-weight: 300;
+}
+@media all and (max-width: 700px) {
+  .marketingmessagestats_DashStatsContainer_2QKKG
+    .marketingmessagestats_Stats_ANrNA
+    .marketingmessagestats_StatsTitle_3PO4S {
+    font-size: 21px;
+  }
+}
+.marketingmessagestats_DashStatsContainer_2QKKG
+  .marketingmessagestats_Stats_ANrNA
+  .marketingmessagestats_StatSubtitle_1sGxv {
+  font-size: 10px;
+  color: #b6b6b6;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+.marketingmessagestats_DashStatsContainer_2QKKG
+  .marketingmessagestats_Stats_ANrNA
+  .marketingmessagestats_StatSubtitle_1sGxv
+  .marketingmessagestats_Concurrent_1mHgM {
+  color: #82ff01;
+}
+.marketingmessagestats_DashStatsContainer_2QKKG
+  .marketingmessagestats_Stats_ANrNA
+  .marketingmessagestats_StatSubtitle_1sGxv
+  .marketingmessagestats_Now_2gkN3 {
+  color: #70c3ff;
+}
+.marketingmessagestats_DashStatsContainer_2QKKG
+  .marketingmessagestats_Stats_ANrNA
+  .marketingmessagestats_CurrentStats_20pLu {
+  padding-bottom: 30px;
+}
+@media all and (max-width: 700px) {
+  .marketingmessagestats_DashStatsContainer_2QKKG
+    .marketingmessagestats_Stats_ANrNA
+    .marketingmessagestats_CurrentStats_20pLu {
+    padding-bottom: 0px;
+  }
 }
 .marketingmessagefiltersedit_Dummy_3glD2 {
   background-color: hotpink;
@@ -10343,157 +10354,6 @@ h1.optin_display_appeal_AppealTitle_X7wqW {
   margin-top: 12px;
   color: #fff;
 }
-.marketingmessagedashboard_HeaderButtons_1Q4Pq {
-  float: right;
-}
-.marketingmessagestats_DashStatsContainerPlaceholder_2NZrJ {
-  height: 210px;
-  width: 940px;
-}
-.marketingmessagestats_DashStatsContainer_2QKKG {
-  background-image: linear-gradient(
-    180deg,
-    rgba(144, 153, 161, 0.1) 0%,
-    rgba(0, 0, 0, 0.06) 100%
-  );
-  height: 210px;
-  display: flex;
-  flex-direction: row;
-  padding: 16px 16px 0px 0px;
-}
-@media all and (max-width: 700px) {
-  .marketingmessagestats_DashStatsContainer_2QKKG {
-    flex-direction: column-reverse;
-  }
-}
-.marketingmessagestats_DashStatsContainer_2QKKG
-  .marketingmessagestats_Chart_1aib0 {
-  flex: 1;
-}
-.marketingmessagestats_DashStatsContainer_2QKKG
-  .marketingmessagestats_Chart_1aib0
-  .recharts-cartesian-grid-horizontal
-  line {
-  stroke: #4c5661;
-}
-.marketingmessagestats_DashStatsContainer_2QKKG
-  .marketingmessagestats_Stats_ANrNA {
-  min-width: 25%;
-  margin-left: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  flex-shrink: 0;
-}
-@media all and (max-width: 700px) {
-  .marketingmessagestats_DashStatsContainer_2QKKG
-    .marketingmessagestats_Stats_ANrNA {
-    flex-direction: row;
-  }
-}
-.marketingmessagestats_DashStatsContainer_2QKKG
-  .marketingmessagestats_Stats_ANrNA
-  .marketingmessagestats_StatsTitle_3PO4S {
-  color: #fff;
-  letter-spacing: 0px;
-  font-size: 27px;
-  font-weight: 300;
-}
-@media all and (max-width: 700px) {
-  .marketingmessagestats_DashStatsContainer_2QKKG
-    .marketingmessagestats_Stats_ANrNA
-    .marketingmessagestats_StatsTitle_3PO4S {
-    font-size: 21px;
-  }
-}
-.marketingmessagestats_DashStatsContainer_2QKKG
-  .marketingmessagestats_Stats_ANrNA
-  .marketingmessagestats_StatSubtitle_1sGxv {
-  font-size: 10px;
-  color: #b6b6b6;
-  font-weight: 500;
-  letter-spacing: 1px;
-}
-.marketingmessagestats_DashStatsContainer_2QKKG
-  .marketingmessagestats_Stats_ANrNA
-  .marketingmessagestats_StatSubtitle_1sGxv
-  .marketingmessagestats_Concurrent_1mHgM {
-  color: #82ff01;
-}
-.marketingmessagestats_DashStatsContainer_2QKKG
-  .marketingmessagestats_Stats_ANrNA
-  .marketingmessagestats_StatSubtitle_1sGxv
-  .marketingmessagestats_Now_2gkN3 {
-  color: #70c3ff;
-}
-.marketingmessagestats_DashStatsContainer_2QKKG
-  .marketingmessagestats_Stats_ANrNA
-  .marketingmessagestats_CurrentStats_20pLu {
-  padding-bottom: 30px;
-}
-@media all and (max-width: 700px) {
-  .marketingmessagestats_DashStatsContainer_2QKKG
-    .marketingmessagestats_Stats_ANrNA
-    .marketingmessagestats_CurrentStats_20pLu {
-    padding-bottom: 0px;
-  }
-}
-.marketingmessageeditor_Dummy_3x7rO {
-  background-color: hotpink;
-}
-.marketingmessageeditor_MessageCtn_18Z_Q select {
-  background: rgba(59, 63, 72, 0.5);
-  color: #dfe3e6;
-  font-size: 12px;
-  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
-  font-weight: 300;
-  margin: 0;
-  border: none;
-  border-radius: 3px;
-  box-shadow: inset 0px 0px 0px #0000;
-}
-.marketingmessageeditor_CountryInOut_219uC {
-  width: 30%;
-  margin-right: 8px;
-}
-.marketingmessageeditor_CountryText_YvodB {
-  flex-grow: 1;
-}
-.marketingmessageeditor_RemoveLegacyBtn_1pvKr {
-  width: 30%;
-}
-.marketingmessageeditor_MessageImagePreview_3vqnt img {
-  width: 100%;
-  box-sizing: border-box;
-}
-.marketingmessageeditor_ScopeNameGlobal_1mF1E {
-  font-size: 21px;
-  color: #fff;
-}
-.marketingmessageeditor_ScopeNameChina_2O5jc {
-  font-size: 21px;
-  color: #c93a3a;
-  font-weight: 500;
-}
-.marketingmessageeditor_ApprovedForPublishStatus_13Use {
-  color: #7aed03;
-}
-.marketingmessageeditor_PartnerPreviewLink_3QdBI {
-  padding: 8px 0px 16px 0px;
-}
-.marketingmessageeditor_SecondaryButton_3l4An {
-  background-color: #7aed03;
-}
-.marketingmessageeditor_SecondaryButton_3l4An.marketingmessageeditor_hover_o9oXD {
-  background-color: #b3e97a;
-}
-.marketingmessagepreview_PreviewRow_Wog1G {
-  display: flex;
-  flex-direction: row;
-}
-.marketingmessagepreview_Spacer_1rAD1 {
-  margin-right: 20px;
-}
 .marketingmessageassets_MMArtPreview_uaJWO {
   width: 342px;
   height: 360px;
@@ -10519,6 +10379,178 @@ h1.optin_display_appeal_AppealTitle_X7wqW {
   .marketingmessageassets_previewSection_18ctS {
   padding: 12px;
   background: #000;
+}
+.promoagendarow_RowCtn_1Cq0N {
+  margin-top: 10px;
+  background: #2c2e35;
+  padding: 12px;
+  border-left: 20px solid #2a2a2d;
+  position: relative;
+}
+.promoagendarow_RowCtn_1Cq0N::before {
+  letter-spacing: 1px;
+  position: absolute;
+  left: -37px;
+  width: 55px;
+  transform: rotate(-90deg);
+  top: 34%;
+  text-align: center;
+}
+.promoagendarow_RowCtn_1Cq0N.promoagendarow_Public_2p_SN {
+  background: #4f525f;
+  border-left: 20px solid #84d0fb;
+}
+.promoagendarow_RowCtn_1Cq0N.promoagendarow_Public_2p_SN::before {
+  content: "LIVE";
+  color: #078cda;
+}
+.promoagendarow_RowCtn_1Cq0N.promoagendarow_Public_2p_SN.promoagendarow_Future_EJs6P {
+  border-left: 20px solid #fce6a0;
+}
+.promoagendarow_RowCtn_1Cq0N.promoagendarow_Public_2p_SN.promoagendarow_Future_EJs6P::before {
+  content: "STAGED";
+  color: #ad8e05;
+}
+.promoagendarow_RowCtn_1Cq0N.promoagendarow_Soon_3txtb {
+  border-left: 20px solid #ff8549;
+}
+.promoagendarow_RowCtn_1Cq0N.promoagendarow_Ready_1PRvx {
+  background: #4f525f;
+  border-left: 20px solid #8afb84;
+}
+.promoagendarow_RowCtn_1Cq0N.promoagendarow_Ready_1PRvx::before {
+  content: "READY";
+  color: #0d2600;
+}
+.promoagendarow_RowCtn_1Cq0N.promoagendarow_Approved_V_M3Q {
+  background: #4f525f;
+  border-left: 20px solid #fff;
+}
+.promoagendarow_RowCtn_1Cq0N.promoagendarow_Approved_V_M3Q::before {
+  content: "READY";
+  color: #0d2600;
+}
+.promoagendarow_RowCtn_1Cq0N:hover {
+  cursor: pointer;
+  background: #5d606f;
+}
+.promoagendarow_Row_2KUhB {
+  display: flex;
+  flex-direction: row;
+}
+.promoagendarow_Row_2KUhB.promoagendarow_Primary_2tQk8 {
+  color: #fff;
+  font-size: 14px;
+  justify-content: space-between;
+}
+.promoagendarow_Row_2KUhB:not(.promoagendarow_Primary_2tQk8) {
+  margin-top: 8px;
+}
+.promoagendarow_Col_2x28W {
+  line-height: 17px;
+}
+.promoagendarow_Col_2x28W.promoagendarow_ItemName_K3sWB {
+  width: 45%;
+  font-size: 16px;
+}
+.promoagendarow_Col_2x28W.promoagendarow_Type_1hntl {
+  flex-grow: 1;
+  width: 110px;
+}
+.promoagendarow_Col_2x28W.promoagendarow_Type_1hntl.promoagendarow_Deal_1I4-4
+  span {
+  background-color: #254069;
+  padding: 2px 4px;
+}
+.promoagendarow_Col_2x28W.promoagendarow_Date_17dLA {
+  width: 320px;
+}
+.promoagendarow_Col_2x28W.promoagendarow_Date_17dLA.promoagendarow_Soon_3txtb {
+  color: #ff8549;
+}
+.promoagendarow_Col_2x28W.promoagendarow_Creator_3VjL- {
+  width: 175px;
+}
+.promoagendarow_Col_2x28W.promoagendarow_Visibility_wvE-j {
+  width: 75px;
+  font-size: 12px;
+}
+.promoagendarow_CountryList_17dzI {
+  max-width: 50%;
+  overflow-wrap: anywhere;
+  word-break: break-all;
+  padding: 0px 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+  margin-right: 8px;
+}
+.promoagendarow_OwnerLimit_LDwRn {
+  padding: 0px 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+  margin-right: 8px;
+}
+.promoagendarow_CapsulePlatform_2OJsE {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 8px;
+  opacity: 0.5;
+}
+.promoagendarow_CapsulePlatform_2OJsE span {
+  margin-left: 8px;
+}
+.promoagendarow_CapsulePlatform_2OJsE img,
+.promoagendarow_CapsulePlatform_2OJsE svg {
+  height: 14px;
+  width: 14px;
+}
+.promoagendarow_ViewsColumn_1Wtq4 {
+  width: 45%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-right: 16px;
+  box-sizing: border-box;
+  font-size: 14px;
+  color: #84d0fb;
+}
+.promoagendarow_ViewsColumn_1Wtq4 .promoagendarow_ViewsCtn_qbvhk {
+  width: 175px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.promoagendarow_ViewsColumn_1Wtq4 span {
+  margin-left: 8px;
+  color: #a7a9af;
+}
+.promoagendarow_WillBecomeVisible_26S-q {
+  background-color: #fce6a0;
+  color: #ad8e05;
+  text-transform: uppercase;
+  padding: 2px 4px;
+  font-size: 12px;
+  margin-top: 4px;
+  display: block;
+  width: fit-content;
+}
+.promoagendarow_MissedRelease_1f2UQ {
+  background-color: #f77f47;
+  color: #8b1c00;
+  padding: 2px 4px;
+  margin-top: 4px;
+  display: block;
+  width: fit-content;
+}
+.promoagendarow_Unset_mDhm0 {
+  background-color: #f77f47;
+  color: #8b1c00;
+  padding: 2px 4px;
+  margin-top: 4px;
+}
+.marketingmessagedashboard_HeaderButtons_1Q4Pq {
+  float: right;
 }
 .marketingmessagepartnerpreview_Throbber_38Qg3 {
   padding: 16px;
@@ -10636,13 +10668,42 @@ h1.optin_display_appeal_AppealTitle_X7wqW {
   align-items: center;
 }
 .invitationplanner_AppCtn_38wbG .invitationplanner_AppImgCtn_1IPZB {
-  width: 120px;
+  width: 231px;
   height: auto;
   margin-right: 8px;
 }
 .invitationplanner_AppCtn_38wbG .invitationplanner_AppName_2ubxS {
   font-size: 16px;
   color: #fff;
+}
+.invitationplanner_AppCtn_38wbG .invitationplanner_AppName_2ubxS span {
+  display: inline-block;
+  margin-right: 12px;
+}
+.invitationplanner_AppCtn_38wbG
+  .invitationplanner_AppName_2ubxS
+  span.invitationplanner_Ao_2mq4l {
+  color: pink;
+}
+.invitationplanner_AppCtn_38wbG
+  .invitationplanner_AppName_2ubxS
+  span.invitationplanner_F2p_2ZQqs {
+  color: #adff2f;
+}
+.invitationplanner_AppCtn_38wbG
+  .invitationplanner_AppName_2ubxS
+  span.invitationplanner_VrRequired_rozJX {
+  color: orange;
+}
+.invitationplanner_AppCtn_38wbG
+  .invitationplanner_AppName_2ubxS
+  span.invitationplanner_VrSupported_6Fqyy {
+  color: #ff0;
+}
+.invitationplanner_AppCtn_38wbG
+  .invitationplanner_AppName_2ubxS
+  span.invitationplanner_Ea_1W10g {
+  color: #add8e6;
 }
 .invitationplanner_CandidateRow_1-lXe {
   border-bottom: 5px solid #1b1e22;
@@ -10672,9 +10733,51 @@ h1.optin_display_appeal_AppealTitle_X7wqW {
 }
 .invitationplanner_CandidateRow_1-lXe
   .invitationplanner_RecentPromos_gUn74
+  .invitationplanner_Promo_Tk6iB
+  a {
+  white-space: nowrap;
+  display: flex;
+  flex-direction: row;
+}
+.invitationplanner_CandidateRow_1-lXe
+  .invitationplanner_RecentPromos_gUn74
+  .invitationplanner_Promo_Tk6iB:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+.invitationplanner_CandidateRow_1-lXe
+  .invitationplanner_RecentPromos_gUn74
+  .invitationplanner_Promo_Tk6iB.invitationplanner_Recent_2O0cu {
+  background: #6b5422;
+  color: #eeb311;
+}
+.invitationplanner_CandidateRow_1-lXe
+  .invitationplanner_RecentPromos_gUn74
   .invitationplanner_Promo_Tk6iB.invitationplanner_Upcoming_3ruO2 {
   background: #4c6b22;
   color: #beee11;
+}
+.invitationplanner_CandidateRow_1-lXe
+  .invitationplanner_RecentPromos_gUn74
+  .invitationplanner_Promo_Tk6iB
+  b:nth-child(1) {
+  display: inline-block;
+  width: 124px;
+  flex-shrink: 0;
+}
+.invitationplanner_CandidateRow_1-lXe
+  .invitationplanner_RecentPromos_gUn74
+  .invitationplanner_Promo_Tk6iB
+  b:nth-child(2) {
+  display: inline-block;
+  width: 200px;
+  flex-shrink: 0;
+}
+.invitationplanner_CandidateRow_1-lXe
+  .invitationplanner_RecentPromos_gUn74
+  .invitationplanner_Promo_Tk6iB
+  span {
+  display: block;
+  text-wrap: balance;
 }
 .invitationplanner_CandidateRow_1-lXe
   .invitationplanner_RecentPromos_gUn74
@@ -10687,15 +10790,44 @@ h1.optin_display_appeal_AppealTitle_X7wqW {
   font-weight: 500;
 }
 .invitationplanner_CandidateRow_1-lXe .invitationplanner_PartnerCol_2DqGf {
+  width: fit-content;
   display: flex;
   flex-direction: column;
+  border-top: 1px solid #000;
+  margin-top: 4px;
+  padding-top: 4px;
 }
 .invitationplanner_CandidateRow_1-lXe
   .invitationplanner_PartnerCol_2DqGf
   .invitationplanner_PartnerName_3Tyh3 {
   margin-bottom: 2px;
 }
+.invitationplanner_CandidateRow_1-lXe .invitationplanner_BizContactsCtn_3670N {
+  display: flex;
+  flex-direction: row;
+}
+.invitationplanner_CandidateRow_1-lXe
+  .invitationplanner_BizContactsCtn_3670N
+  .invitationplanner_BizContact_1e7dY {
+  width: fit-content;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 2px;
+  padding: 1px 7px 3px 3px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 4px;
+}
+.invitationplanner_CandidateRow_1-lXe
+  .invitationplanner_BizContactsCtn_3670N
+  .invitationplanner_BizContact_1e7dY
+  img {
+  height: 16px;
+  width: 16px;
+}
 .invitationplanner_FilterRow_3x4ua {
+  position: relative;
   width: 100%;
   padding: 4px 8px;
   box-sizing: border-box;
@@ -10704,12 +10836,26 @@ h1.optin_display_appeal_AppealTitle_X7wqW {
   align-items: center;
   background: #282d39;
   margin-bottom: 20px;
+  border-left: 20px solid #3d4557;
+}
+.invitationplanner_FilterRow_3x4ua::before {
+  content: "FILTERS";
+  letter-spacing: 1px;
+  position: absolute;
+  left: -37px;
+  width: 55px;
+  transform: rotate(-90deg);
+  top: 34%;
+  text-align: center;
 }
 .invitationplanner_FilterRow_3x4ua .DialogInputLabelGroup {
   margin-bottom: 0;
 }
 .invitationplanner_FilterRow_3x4ua .invitationplanner_Filter_2h6Fv {
   margin-right: 10px;
+}
+.invitationplanner_FilterRow_3x4ua .invitationplanner_AppInputCtn_1tIVZ {
+  min-width: 220px;
 }
 .invitationplanner_PagingRow_3qLRl {
   display: flex;
@@ -10719,7 +10865,7 @@ h1.optin_display_appeal_AppealTitle_X7wqW {
   width: 100%;
   padding: 4px 8px;
   box-sizing: border-box;
-  margin-bottom: 24px;
+  margin-bottom: 6px;
 }
 .invitationplanner_PagingRow_3qLRl a {
   display: block;
@@ -10731,4 +10877,7 @@ h1.optin_display_appeal_AppealTitle_X7wqW {
   padding-left: 12px;
   padding-right: 12px;
   text-decoration: none;
+}
+.invitationplanner_Inline_AzROo {
+  display: inline-block;
 }

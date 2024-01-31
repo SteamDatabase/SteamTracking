@@ -1,19 +1,4 @@
-.publisherdashboardlanding_DailyDealInvite_3eCJT {
-  margin-bottom: 10px;
-}
-.publisherdashboardlanding_DailyDealInvite_3eCJT
-  .publisherdashboardlanding_Title_3se9d {
-  margin-top: 20px;
-  font-size: 18px;
-  color: #67c1f5;
-  border-bottom: 1px solid #444;
-}
-.publisherdashboardlanding_DailyDealInvite_3eCJT
-  .publisherdashboardlanding_Body_uGv7K {
-  font-size: 13px;
-  padding: 5px 0px;
-}
-.publisherdashboardlanding_ButtonDailyDealDashboard_2rZlP {
+.dailydeals_ButtonDailyDealDashboard_IJS5R {
   display: flex;
   flex-direction: row;
   width: unset !important;
@@ -22,7 +7,20 @@
   background: linear-gradient(to bottom, #799905 5%, #536904 95%) !important;
   font-size: 15px !important;
 }
-.publisherdashboardlanding_ButtonDailyDealDashboard_2rZlP.DialogButton:hover {
+.dailydeals_ButtonDailyDealDashboard_IJS5R.DialogButton:hover {
   color: #fff !important;
   background: linear-gradient(to bottom, #a1bf07 5%, #80a006 95%) !important;
+}
+.section_Section_1FrGx {
+  margin-bottom: 10px;
+}
+.section_Section_1FrGx .section_Title_f3pCB {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #67c1f5;
+  border-bottom: 1px solid #444;
+}
+.section_Section_1FrGx .section_Body_1CaAp {
+  font-size: 13px;
+  padding: 5px 0px;
 }
