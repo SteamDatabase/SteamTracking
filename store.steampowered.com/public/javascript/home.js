@@ -1788,13 +1788,13 @@ GHomepage = {
 	{
 
 		var rgCapsules = GHomepage.FilterItemsForDisplay(
-			GHomepage.oDisplayLists.under10, 'home', 4, 8, { games_already_in_library: false, dlc: false, localized: true, displayed_elsewhere: false, only_current_platform: true }
+			GHomepage.oDisplayLists.under10, 'home', 4, 28, { games_already_in_library: false, dlc: false, localized: true, displayed_elsewhere: false, only_current_platform: true }
 		);
 
 		if( rgCapsules.length < 4 )
 		{
 			rgCapsules = GHomepage.FilterItemsForDisplay(
-				GHomepage.oDisplayLists.under10, 'home', 4, 8, { games_already_in_library: false, localized: true, only_current_platform: true }
+				GHomepage.oDisplayLists.under10, 'home', 4, 28, { games_already_in_library: false, localized: true, only_current_platform: true }
 			);
 		}
 

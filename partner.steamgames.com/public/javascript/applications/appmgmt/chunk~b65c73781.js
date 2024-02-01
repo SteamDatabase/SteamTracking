@@ -50478,7 +50478,7 @@
               })`,
               tooltip:
                 "On case where are required to provide assets for the partner to review prior to launch of the promotion",
-              key: "await_review",
+              key: "await_approvals",
               contents: s.createElement(
                 p.SV,
                 null,
