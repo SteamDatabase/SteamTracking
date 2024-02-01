@@ -24397,7 +24397,13 @@
             const y = {
               admin_jsondata: JSON.stringify(f),
               partner_jsondata: JSON.stringify({}),
+              partner_readonly_jsondata: JSON.stringify(
+                this.GeneratePartnerReadonlyFromAdminJson(f),
+              ),
+              partner_writable_jsondata: JSON.stringify({}),
               input_jsondata: JSON.stringify(E || {}),
+              assets_readonly_jsondata: JSON.stringify({}),
+              assets_writable_jsondata: JSON.stringify({}),
               rtime32_start_time: a,
               rtime32_end_time: i,
               partner_id: s,
@@ -24434,6 +24440,34 @@
             );
           });
         }
+        GeneratePartnerReadonlyFromAdminJson(e) {
+          const {
+            id: t,
+            name: n,
+            start_date: a,
+            end_date: i,
+            type: l,
+            store_item_type: r,
+            store_item_id: o,
+            discount_event_id: s,
+            opt_in_id: c,
+            sale_clan_event_gid: m,
+            sale_clan_account: d,
+          } = e;
+          return {
+            id: t,
+            name: n,
+            start_date: a,
+            end_date: i,
+            type: l,
+            store_item_type: r,
+            store_item_id: o,
+            discount_event_id: s,
+            opt_in_id: c,
+            sale_clan_event_gid: m,
+            sale_clan_account: d,
+          };
+        }
         UpdateAdminPlan(e, t, n, i) {
           return (0, a.mG)(this, void 0, void 0, function* () {
             const a = l.gA.Init(o.eh),
@@ -24455,6 +24489,9 @@
                   ? t.admin_accounts.push(p.L7.accountid)
                   : (t.admin_accounts = [p.L7.accountid])),
               (r.admin_jsondata = JSON.stringify(t)),
+              (r.partner_readonly_jsondata = JSON.stringify(
+                this.GeneratePartnerReadonlyFromAdminJson(t),
+              )),
               n && (r.partner_jsondata = JSON.stringify(n)),
               i &&
                 (t.discount_event_id !=
