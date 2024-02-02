@@ -1635,13 +1635,13 @@
               for (; t.length > 0; ) {
                 const r = t.splice(0, this.k_nMaxBatchSize);
                 if ((l.push(r), this.m_bUsePartnerAPI)) {
-                  const t = a.gA.Init(o.z);
+                  const t = a.gA.Init(o.z4);
                   t.Body().set_include_unpublished(!1);
                   const i = t.Body().request(!0);
                   i.set_context((0, _.Fq)(this.m_bUsePartnerAPI)),
                     i.set_data_request(u.Qn.fromObject(s)),
                     i.set_ids(r),
-                    n.push(o.n.GetItems(e.GetServiceTransport(), t));
+                    n.push(o.n7.GetItems(e.GetServiceTransport(), t));
                 } else {
                   const t = a.gA.Init(u.eK);
                   (0, _.pA)(t, this.m_bUsePartnerAPI),

@@ -17173,25 +17173,25 @@
         r = n(42718),
         o = n(31846),
         s = n(37563);
-      function c(e, t) {
+      function c(e, t = !0, n) {
         return (0, a.mG)(this, void 0, void 0, function* () {
-          const n = s.De.PARTNER_BASE_URL + "discounts/ajaxgetdiscountbyapp",
-            a = new Map();
-          if (!e || 0 == e.length) return a;
-          const i = [...e],
-            r = (i.length, []);
-          for (; i.length > 0; ) {
-            const e = i.splice(0, 250),
-              a = new FormData();
-            a.append("sessionid", s.De.SESSIONID),
-              a.append("rgAppIDs", e.join(",")),
-              a.append("bExcludeExpired", "1"),
-              t && a.append("publisherid", t.toString()),
-              r.push(l().post(n, a, { withCredentials: !0 }));
+          const a = s.De.PARTNER_BASE_URL + "discounts/ajaxgetdiscountbyapp",
+            i = new Map();
+          if (!e || 0 == e.length) return i;
+          const r = [...e],
+            o = (r.length, []);
+          for (; r.length > 0; ) {
+            const e = r.splice(0, 250),
+              i = new FormData();
+            i.append("sessionid", s.De.SESSIONID),
+              i.append("rgAppIDs", e.join(",")),
+              i.append("bExcludeExpired", t ? "1" : "0"),
+              n && i.append("publisherid", n.toString()),
+              o.push(l().post(a, i, { withCredentials: !0 }));
           }
           return (
-            (yield Promise.all(r)).forEach((e) => {
-              var t, n, i;
+            (yield Promise.all(o)).forEach((e) => {
+              var t, n, a;
               if (
                 200 == (null == e ? void 0 : e.status) &&
                 1 ==
@@ -17204,7 +17204,7 @@
               )
                 for (let t in e.data.map) {
                   const n = Number.parseInt(t);
-                  n && a.set(n, e.data.map[n]);
+                  n && i.set(n, e.data.map[n]);
                 }
               else
                 console.log(
@@ -17213,12 +17213,12 @@
                     " " +
                     (null == e ? void 0 : e.statusText) +
                     " " +
-                    (null === (i = null == e ? void 0 : e.data) || void 0 === i
+                    (null === (a = null == e ? void 0 : e.data) || void 0 === a
                       ? void 0
-                      : i.success),
+                      : a.success),
                 );
             }),
-            a
+            i
           );
         });
       }
@@ -17230,13 +17230,13 @@
         );
         return a ? null : i;
       }
-      function d(e, t) {
-        const { isLoading: n, data: a } = (0, r.useQuery)(
-          ["useAppWithDiscounts", e.join(","), t],
-          () => c(e, t),
+      function d(e, t = !0, n) {
+        const { isLoading: a, data: i } = (0, r.useQuery)(
+          ["useAppWithDiscounts", e.join(","), t, n],
+          () => c(e, t, n),
           { enabled: (null == e ? void 0 : e.length) > 0 },
         );
-        return n ? null : a;
+        return a ? null : i;
       }
       function u(e, t, n, a, i) {
         var l, r;
@@ -56093,7 +56093,7 @@
           n = (0, _n.Nt)(t),
           a = (0, Gt.Mg)(),
           i = r.useMemo(() => (0, Gt.cG)(a, [n]), [a, n]),
-          l = (0, mn.og)(i, null == n ? void 0 : n.primary_partnerid);
+          l = (0, mn.og)(i, !1, null == n ? void 0 : n.primary_partnerid);
         return n
           ? 0 != n.rtdatechosen
             ? r.createElement(_a, {
@@ -56371,7 +56371,7 @@
           [i] = (0, dn.DV)(a),
           l = (0, Gt.Mg)(),
           o = r.useMemo(() => (0, Gt.cG)(l), [l]),
-          s = (0, mn.og)(o, a),
+          s = (0, mn.og)(o, !1, a),
           [c, d] = (0, r.useMemo)(() => {
             let e = new Array(),
               t = new Array();

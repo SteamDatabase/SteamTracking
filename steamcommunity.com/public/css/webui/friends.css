@@ -1924,7 +1924,6 @@ html.contextmenu_ContextMenuPopup_14wqd body {
 }
 .pagedsettings_PagedSettingsDialog_PageList_18QCu {
   line-height: 16px;
-  height: 100vh;
   white-space: nowrap;
   overflow: scroll;
   flex-shrink: 1;
@@ -1932,6 +1931,9 @@ html.contextmenu_ContextMenuPopup_14wqd body {
   display: flex;
   flex-direction: column;
   padding-bottom: 40px;
+}
+.BasicUI .pagedsettings_PagedSettingsDialog_PageList_18QCu {
+  height: 100vh;
 }
 .pagedsettings_PagedSettingsDialog_PageList_18QCu::-webkit-scrollbar-corner {
   background: transparent;
@@ -2527,6 +2529,16 @@ button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover[disabled] {
   background: #23262e;
   color: #fff;
   pointer-events: none;
+}
+button.gamepaddialog_Button_cXzBZ.DialogButton.Disabled.gpfocus,
+button.gamepaddialog_Button_cXzBZ.DialogButton[disabled].gpfocus,
+button.gamepaddialog_Button_cXzBZ.DialogButton:enabled.Disabled.gpfocus,
+button.gamepaddialog_Button_cXzBZ.DialogButton:enabled[disabled].gpfocus,
+button.gamepaddialog_Button_cXzBZ.DialogButton:active.Disabled.gpfocus,
+button.gamepaddialog_Button_cXzBZ.DialogButton:active[disabled].gpfocus,
+button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover.Disabled.gpfocus,
+button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover[disabled].gpfocus {
+  background: #000;
 }
 button.gamepaddialog_Button_cXzBZ.DialogButton:before,
 button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:before,
@@ -6925,6 +6937,20 @@ body.modals_BodyNoScrollDialog_3jhMI {
 }
 .throbber_NewThrobber_1m8iQ img {
   width: 100%;
+}
+.clipupload_ClipUploadStatus_3Ebq4 {
+  position: absolute;
+  bottom: 72px;
+  left: 16px;
+  min-width: 260px;
+  background: #2c3036;
+  padding: 8px;
+  border-radius: 4px;
+  box-shadow: 0 10px 32px 0px #000000ab;
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .personanameandstatus_statusAndName_4ZTzG {
   display: flex;
@@ -29758,6 +29784,7 @@ div:hover > .BBCodeCollapseControl {
 .sharedclip_ClipDetails_1fyr- {
   display: flex;
   flex-direction: column;
+  word-break: normal;
 }
 .sharedclip_ClipDetails_1fyr- .sharedclip_VideoContainer_1Ml8- {
   position: relative;
@@ -29795,7 +29822,7 @@ div:hover > .BBCodeCollapseControl {
 }
 .gamerecordingplayer_GameRecordingPlayer_1AGqA video {
   max-width: 100%;
-  height: 100%;
+  max-height: 100%;
   object-fit: contain;
   object-position: 0% 0%;
   background-color: #0b101600;
@@ -30267,23 +30294,33 @@ div:hover > .BBCodeCollapseControl {
   margin: 0px;
 }
 .golivebutton_GoLiveButtonCtn_1Ssh6 .golivebutton_GoLiveButton_1rZeq {
-  color: #8b929a;
+  color: rgba(255, 255, 255, 0.7);
   background: none;
   white-space: nowrap;
   justify-content: center;
   align-items: center;
   display: flex;
   padding: 4px;
+  box-shadow: none;
+  cursor: pointer;
 }
-.golivebutton_GoLiveButtonCtn_1Ssh6 .golivebutton_GoLiveButton_1rZeq:hover,
-.golivebutton_GoLiveButtonCtn_1Ssh6 .golivebutton_GoLiveButton_1rZeq:active {
-  background: red;
+.golivebutton_GoLiveButtonCtn_1Ssh6 .golivebutton_GoLiveButton_1rZeq:hover {
+  color: rgba(255, 255, 255, 0.9);
+  transform: scale(1.03);
+  box-shadow: none;
+}
+.golivebutton_GoLiveButtonCtn_1Ssh6
+  .golivebutton_GoLiveButton_1rZeq:hover:active {
+  color: rgba(255, 255, 255, 0.4);
+  transform: scale(0.96);
+  box-shadow: none;
 }
 .golivebutton_GoLiveButtonCtn_1Ssh6
   .golivebutton_GoLiveButton_1rZeq.golivebutton_IsLive_2MGny {
-  background: #23262e;
-  color: red;
+  color: rgba(255, 255, 255, 0.1);
   pointer-events: none;
+  background: none;
+  cursor: default;
 }
 .recordingdecorator_LoadingTimeline_3tH-U {
   min-height: 54px;
@@ -30660,6 +30697,7 @@ div:hover > .BBCodeCollapseControl {
   bottom: 0;
   height: 8px;
   opacity: 0.3;
+  box-shadow: inset 0px 2px 6px #00000088;
 }
 .gamemodes_GameModeMarker__XZRb.gamemodes_Playing_1QXuD {
   background: #ffffff66;
@@ -30815,9 +30853,6 @@ div:hover > .BBCodeCollapseControl {
 .datedecorator_TimelineRelativeDate_xYXzi.datedecorator_Overlay_c1Fn5 {
   color: #67707b;
 }
-.datedecorator_TimelineRelativeDate_xYXzi.datedecorator_ManagerView_3sYIn {
-  color: #67707b;
-}
 @keyframes backgroundticks_timelineFadeIn_IXU1z {
   0%,
   75% {
@@ -30950,14 +30985,15 @@ div:hover > .BBCodeCollapseControl {
   justify-content: flex-start;
 }
 .backgroundticks_TimeTick_faIAh .backgroundticks_TickLine_iLLzn {
-  height: 4px;
+  height: 2px;
   width: 1px;
-  background-color: #3d4450;
-  margin-top: 4px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin-top: 2px;
 }
 .backgroundticks_TimeTick_faIAh .backgroundticks_Whole_19vpM {
-  background-color: #67707b;
-  width: 2px;
+  background-color: rgba(255, 255, 255, 0.4);
+  width: 1px;
+  height: 6px;
 }
 .backgroundticks_TimeTick_faIAh .backgroundticks_TickStamp_gp_ZR {
   font-size: 12px;
@@ -40670,7 +40706,7 @@ div.ModalPosition_TopBar {
   position: absolute;
   top: 0;
   width: 100%;
-  z-index: 1;
+  z-index: 2;
 }
 .ModalDialogPopup .DesktopUI:not(.WindowFocus) .ModalPosition_TopBar {
   opacity: 0;
@@ -56322,6 +56358,7 @@ button.DialogButton.LocalMicTestButton {
 }
 .FriendMenuRoleCheckbox .DialogCheckbox_Container {
   margin-bottom: 0;
+  display: flex;
 }
 .FriendMenuRoleCheckbox.disabled .DialogCheckbox_Container {
   cursor: default;

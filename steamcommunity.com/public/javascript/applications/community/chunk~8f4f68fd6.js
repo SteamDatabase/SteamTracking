@@ -253,6 +253,7 @@
         c = i(42411),
         _ = i(35427),
         u = i(82182);
+      i(2041);
       function p(e) {
         const t = (0, m.bY)(),
           i = s.useContext(y);
@@ -310,41 +311,46 @@
                 ));
               return h;
             })(t).load(e);
-            return (function (e, t) {
-              var i, a;
-              let n = new c.Pv(e);
-              const o = null == t ? void 0 : t.public_data,
-                s = null == t ? void 0 : t.private_data;
-              (n.m_bInitialized = !0),
-                (n.m_ePersonaState =
-                  null !== (i = null == s ? void 0 : s.persona_state) &&
-                  void 0 !== i
-                    ? i
-                    : 0),
-                (n.m_strAvatarHash = (null == o ? void 0 : o.sha_digest_avatar)
-                  ? (0, d.BH)(o.sha_digest_avatar)
-                  : c.WV),
-                (n.m_strPlayerName =
-                  null !== (a = null == o ? void 0 : o.persona_name) &&
-                  void 0 !== a
-                    ? a
-                    : e.ConvertTo64BitString()),
-                (n.m_strAccountName = null == s ? void 0 : s.account_name),
-                (null == s ? void 0 : s.persona_state_flags) &&
-                  (n.m_unPersonaStateFlags =
-                    t.private_data.persona_state_flags);
-              (null == s ? void 0 : s.game_id) &&
-                (n.m_gameid = t.private_data.game_id);
-              (null == s ? void 0 : s.game_server_ip_address) &&
-                (n.m_unGameServerIP = t.private_data.game_server_ip_address);
-              (null == s ? void 0 : s.lobby_steam_id) &&
-                (n.m_game_lobby_id = t.private_data.lobby_steam_id);
-              (null == s ? void 0 : s.game_extra_info) &&
-                (n.m_strGameExtraInfo = t.private_data.game_extra_info);
-              (null == o ? void 0 : o.profile_url) &&
-                (n.m_strProfileURL = o.profile_url);
-              return n;
-            })(_.K.InitFromAccountID(e), i);
+            return i
+              ? (function (e, t) {
+                  var i, a;
+                  let n = new c.Pv(e);
+                  const o = null == t ? void 0 : t.public_data,
+                    s = null == t ? void 0 : t.private_data;
+                  (n.m_bInitialized = !0),
+                    (n.m_ePersonaState =
+                      null !== (i = null == s ? void 0 : s.persona_state) &&
+                      void 0 !== i
+                        ? i
+                        : 0),
+                    (n.m_strAvatarHash = (
+                      null == o ? void 0 : o.sha_digest_avatar
+                    )
+                      ? (0, d.BH)(o.sha_digest_avatar)
+                      : c.WV),
+                    (n.m_strPlayerName =
+                      null !== (a = null == o ? void 0 : o.persona_name) &&
+                      void 0 !== a
+                        ? a
+                        : e.ConvertTo64BitString()),
+                    (n.m_strAccountName = null == s ? void 0 : s.account_name),
+                    (null == s ? void 0 : s.persona_state_flags) &&
+                      (n.m_unPersonaStateFlags =
+                        t.private_data.persona_state_flags);
+                  (null == s ? void 0 : s.game_id) &&
+                    (n.m_gameid = t.private_data.game_id);
+                  (null == s ? void 0 : s.game_server_ip_address) &&
+                    (n.m_unGameServerIP =
+                      t.private_data.game_server_ip_address);
+                  (null == s ? void 0 : s.lobby_steam_id) &&
+                    (n.m_game_lobby_id = t.private_data.lobby_steam_id);
+                  (null == s ? void 0 : s.game_extra_info) &&
+                    (n.m_strGameExtraInfo = t.private_data.game_extra_info);
+                  (null == o ? void 0 : o.profile_url) &&
+                    (n.m_strProfileURL = o.profile_url);
+                  return n;
+                })(_.K.InitFromAccountID(e), i)
+              : null;
           }),
       });
       function v(e, t, i) {

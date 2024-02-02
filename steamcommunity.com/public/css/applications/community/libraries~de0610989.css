@@ -31,7 +31,7 @@
 }
 .gamerecordingplayer_GameRecordingPlayer_3y8Yb video {
   max-width: 100%;
-  height: 100%;
+  max-height: 100%;
   object-fit: contain;
   object-position: 0% 0%;
   background-color: #0b101600;
@@ -457,23 +457,33 @@
   margin: 0px;
 }
 .golivebutton_GoLiveButtonCtn_10eOW .golivebutton_GoLiveButton_2umas {
-  color: #8b929a;
+  color: rgba(255, 255, 255, 0.7);
   background: none;
   white-space: nowrap;
   justify-content: center;
   align-items: center;
   display: flex;
   padding: 4px;
+  box-shadow: none;
+  cursor: pointer;
 }
-.golivebutton_GoLiveButtonCtn_10eOW .golivebutton_GoLiveButton_2umas:hover,
-.golivebutton_GoLiveButtonCtn_10eOW .golivebutton_GoLiveButton_2umas:active {
-  background: red;
+.golivebutton_GoLiveButtonCtn_10eOW .golivebutton_GoLiveButton_2umas:hover {
+  color: rgba(255, 255, 255, 0.9);
+  transform: scale(1.03);
+  box-shadow: none;
+}
+.golivebutton_GoLiveButtonCtn_10eOW
+  .golivebutton_GoLiveButton_2umas:hover:active {
+  color: rgba(255, 255, 255, 0.4);
+  transform: scale(0.96);
+  box-shadow: none;
 }
 .golivebutton_GoLiveButtonCtn_10eOW
   .golivebutton_GoLiveButton_2umas.golivebutton_IsLive_-kbc0 {
-  background: #23262e;
-  color: red;
+  color: rgba(255, 255, 255, 0.1);
   pointer-events: none;
+  background: none;
+  cursor: default;
 }
 .recordingdecorator_LoadingTimeline_1_t3n {
   min-height: 54px;
@@ -850,6 +860,7 @@
   bottom: 0;
   height: 8px;
   opacity: 0.3;
+  box-shadow: inset 0px 2px 6px #00000088;
 }
 .gamemodes_GameModeMarker_3j3jo.gamemodes_Playing_hLQ3v {
   background: #ffffff66;
@@ -1005,9 +1016,6 @@
 .datedecorator_TimelineRelativeDate_3T-pn.datedecorator_Overlay_1fN7j {
   color: #67707b;
 }
-.datedecorator_TimelineRelativeDate_3T-pn.datedecorator_ManagerView_9cRGI {
-  color: #67707b;
-}
 @keyframes backgroundticks_timelineFadeIn_3tTAd {
   0%,
   75% {
@@ -1140,14 +1148,15 @@
   justify-content: flex-start;
 }
 .backgroundticks_TimeTick_21gY8 .backgroundticks_TickLine_1Yp6J {
-  height: 4px;
+  height: 2px;
   width: 1px;
-  background-color: #3d4450;
-  margin-top: 4px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin-top: 2px;
 }
 .backgroundticks_TimeTick_21gY8 .backgroundticks_Whole_onnFS {
-  background-color: #67707b;
-  width: 2px;
+  background-color: rgba(255, 255, 255, 0.4);
+  width: 1px;
+  height: 6px;
 }
 .backgroundticks_TimeTick_21gY8 .backgroundticks_TickStamp_dAEn_ {
   font-size: 12px;

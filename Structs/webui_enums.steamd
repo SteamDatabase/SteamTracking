@@ -529,6 +529,20 @@ enum EBanContentCheckResult
 	k_EBanContentCheckResult_VeryLikely = 100;
 }
 
+enum EBannedVanityURLAction
+{
+	k_EBannedVanityURLAction_Invalid = 0;
+	k_EBannedVanityURLAction_Add = 1;
+	k_EBannedVanityURLAction_Remove = 2;
+}
+
+enum EBannedVanityURLSource
+{
+	k_EBannedVanityURLSource_Unknown = 0;
+	k_EBannedVanityURLSource_ResetContent = 1;
+	k_EBannedVanityURLSource_Manual = 2;
+}
+
 enum EBatteryState
 {
 	k_EBatteryState_Unknown = 0;
@@ -4459,6 +4473,7 @@ enum ESupport
 	k_ESupportPermissions_CSGOTools = 27;
 	k_ESupportPermissions_LocalizationAdvanceAccess = 28;
 	k_ESupportPermissions_BulkRefundTool = 29;
+	k_ESupportPermissions_LocalizationAssetTools = 30;
 }
 
 enum ESuspendResumeProgressState

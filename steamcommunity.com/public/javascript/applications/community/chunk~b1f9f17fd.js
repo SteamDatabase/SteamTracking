@@ -6787,10 +6787,16 @@
         he = a(14609);
       function Se(e) {
         const { spotlight: t } = e,
-          a = (0, f.bJ)();
+          a = (0, f.bJ)(),
+          i = (0, u.Hf)(t.url, a);
         return n.createElement(
-          "div",
-          { className: z.SpotlightCtn },
+          o.s,
+          {
+            className: z.SpotlightCtn,
+            onOKButton: () => {
+              window.location.href = i;
+            },
+          },
           n.createElement(
             "div",
             { className: z.SpotlightImageCtn },
@@ -6804,12 +6810,12 @@
             t.open_in_new_window
               ? n.createElement(
                   he.ns,
-                  { href: (0, u.Hf)(t.url, a) },
+                  { href: i },
                   n.createElement("img", { src: t.image_url, alt: t.title }),
                 )
               : n.createElement(
                   "a",
-                  { href: (0, u.Hf)(t.url, a) },
+                  { href: i },
                   n.createElement("img", { src: t.image_url, alt: t.title }),
                 ),
           ),
@@ -6831,19 +6837,25 @@
       }
       function be(e) {
         const { dailyDeal: t } = e,
-          a = (0, f.bJ)();
+          a = (0, f.bJ)(),
+          i = (0, u.Hf)(t.target, a);
         return n.createElement(
           f.ZP,
           { feature: "daily-deal" },
           n.createElement(
-            "div",
-            { className: z.DailyDealCtn },
+            o.s,
+            {
+              className: z.DailyDealCtn,
+              onOKButton: () => {
+                window.location.href = i;
+              },
+            },
             n.createElement(
               "div",
               { className: z.DailyDealImageCtn },
               n.createElement(
                 "a",
-                { href: (0, u.Hf)(t.target, a) },
+                { href: i },
                 n.createElement("img", { src: t.image }),
               ),
             ),

@@ -355,10 +355,11 @@
       "use strict";
       r.d(t, {
         Mv: () => a,
+        Q2: () => p,
         XT: () => u,
         cY: () => m,
         iv: () => s,
-        jq: () => p,
+        jq: () => g,
         vt: () => L,
       });
       var n = r(65255),
@@ -421,7 +422,7 @@
             : e.toLowerCase();
           return this.m_mapSteamTimelineMarkers.has(t)
             ? this.m_mapSteamTimelineMarkers.get(t)
-            : { func: i.Q0, color: C.Gray };
+            : p();
         }
         GetAllUseableMarkerID() {
           return Array.from(this.m_mapSteamTimelineMarkers.keys()).map(
@@ -502,7 +503,10 @@
       function m() {
         return { func: i.Gu, color: C.White };
       }
-      function p(e) {
+      function p() {
+        return { func: i.Jx, color: C.Gray };
+      }
+      function g(e) {
         return e.toLowerCase().startsWith(l);
       }
     },
@@ -609,8 +613,9 @@
         FE: () => y,
         FG: () => d,
         G7: () => W,
+        Gn: () => Y,
         Gu: () => a,
-        Hi: () => Y,
+        Hi: () => q,
         I8: () => G,
         Io: () => E,
         Jx: () => C,
@@ -622,7 +627,7 @@
         Ux: () => x,
         Vy: () => m,
         W4: () => T,
-        WF: () => j,
+        WF: () => z,
         WN: () => f,
         X: () => P,
         Xd: () => S,
@@ -642,9 +647,8 @@
         rZ: () => c,
         rp: () => A,
         sO: () => D,
-        sR: () => q,
         u4: () => H,
-        v3: () => z,
+        v3: () => j,
         w_: () => X,
       });
       var n = r(85556),
@@ -1361,7 +1365,7 @@
           }),
         );
       }
-      function z(e) {
+      function j(e) {
         return i.createElement(
           "svg",
           {
@@ -1377,7 +1381,7 @@
           }),
         );
       }
-      function j(e) {
+      function z(e) {
         return i.createElement(
           "svg",
           {
@@ -1428,23 +1432,6 @@
         );
       }
       function q(e) {
-        return i.createElement(
-          "svg",
-          {
-            className: "SVGIcon_Button",
-            width: "36",
-            height: "36",
-            viewBox: "0 0 36 36",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-          },
-          i.createElement("path", {
-            d: "M21.77 30.75L34.54 18L21.77 5.20999L18.23 8.74999L27.46 18L18.23 27.23L21.77 30.75ZM4.23004 27.21L13.46 18L4.23004 8.76999L7.77004 5.20999L20.54 18L7.77004 30.75L4.23004 27.21Z",
-            fill: "currentColor",
-          }),
-        );
-      }
-      function Y(e) {
         return i.createElement(
           "svg",
           {
@@ -1514,6 +1501,27 @@
             y: "28",
             width: "3",
             height: "4",
+          }),
+        );
+      }
+      function Y(e) {
+        return i.createElement(
+          "svg",
+          Object.assign(
+            {
+              xmlns: "http://www.w3.org/2000/svg",
+              viewBox: "0 0 36 36",
+              fill: "none",
+            },
+            e,
+          ),
+          i.createElement("path", {
+            fill: "currentColor",
+            d: "M32 33L27.95 33L27.95 3L32 3L32 33Z",
+          }),
+          i.createElement("path", {
+            fill: "currentColor",
+            d: "M15.8432 20L11.2574 24.5858L14.0858 27.4142L23.5 18L14.0858 8.58581L11.2574 11.4142L15.8431 16L3 16L3 20L15.8432 20Z",
           }),
         );
       }
@@ -1643,14 +1651,14 @@
           null,
           i.createElement(
             d.dF,
-            { loader: r, fnGetManifest: n, mode: d.tP.Clips },
+            { loader: r, fnGetManifest: n, mode: d.tP.CommunityClip },
             i.createElement(
               "div",
               { className: L.ClipDetails },
               i.createElement(
                 "div",
                 { className: L.VideoContainer },
-                i.createElement(h.i, { positionAbsolute: !1 }),
+                i.createElement(h.i, { positionAbsolute: !1, autoPlay: !0 }),
               ),
               i.createElement(u.k9, { loader: r }),
             ),

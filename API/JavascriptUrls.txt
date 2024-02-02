@@ -1130,6 +1130,7 @@ ${STATS_BASE_URL}package/details/${}/${}
 ${STATS_BASE_URL}sales/details/?gid=${GID}&clanid=${}
 ${STATS_BASE_URL}sales/details/?gid=${}&clanid=${}
 ${STATS_BASE_URL}steamdeck/reservations/
+${STEAMTV_BASE_URL}parental/ajaxunlock
 ${STORE_BASE_URL}
 ${STORE_BASE_URL}${_ ? "events/ajaxgeteventdetailsforedit/" : "events/ajaxgeteventdetails/"}
 ${STORE_BASE_URL}${_ ? "saleaction/ajaxpreviewsaledynamicappquery" : "saleaction/ajaxgetsaledynamicappquery"}
