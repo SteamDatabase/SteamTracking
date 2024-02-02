@@ -55176,14 +55176,16 @@
             closeModal: n,
             strInviteID: a,
             nMaxDiscountDays: i,
+            nextDiscount: l,
           } = e,
-          l = (0, _n.Nt)(a);
-        return l
+          o = (0, _n.Nt)(a);
+        return o
           ? r.createElement(Vn, {
               rtDay: t,
               closeModal: n,
-              invite: l,
+              invite: o,
               nMaxDiscountDays: i,
+              nextDiscount: l,
             })
           : r.createElement(G.JX, {
               strDescription: (0, k.Xx)("#DailyDeals_NoInvitation"),
@@ -55205,19 +55207,25 @@
         );
       }
       function Vn(e) {
-        const { rtDay: t, closeModal: n, invite: a, nMaxDiscountDays: i } = e,
-          [l, o] = r.useState(new Array()),
-          [s, c] = r.useState(Gt.NB),
-          [d, u] = r.useState({ appid: a.appid }),
-          [p] = (0, T.vs)(a.appid, {}),
-          { fnAcceptInvitation: _ } = (0, _n.fZ)(),
-          [h, g] = r.useState(""),
-          v = (e) => {
+        const {
+            rtDay: t,
+            closeModal: n,
+            invite: a,
+            nMaxDiscountDays: i,
+            nextDiscount: l,
+          } = e,
+          [o, s] = r.useState(new Array()),
+          [c, d] = r.useState(Gt.NB),
+          [u, p] = r.useState({ appid: a.appid }),
+          [_] = (0, T.vs)(a.appid, {}),
+          { fnAcceptInvitation: h } = (0, _n.fZ)(),
+          [g, v] = r.useState(""),
+          E = (e) => {
             const t = Hn(e.errorCode);
             ("dev" != A.De.WEB_UNIVERSE && "beta" != A.De.WEB_UNIVERSE) ||
             1 == e.errorCode
-              ? g(t)
-              : g(
+              ? v(t)
+              : v(
                   r.createElement(
                     r.Fragment,
                     null,
@@ -55233,41 +55241,44 @@
                   ),
                 );
           },
-          E = r.useCallback(
+          D = r.useCallback(
             () =>
               (0, w.mG)(this, void 0, void 0, function* () {
-                const e = (0, jt.Xq)(p),
+                const e = (0, jt.Xq)(_),
                   n = (0, m.Q)(
                     e,
                     e,
                     Fn.FF.get("dailydeal"),
                     [a.primary_partnerid],
-                    [d.appid],
+                    [u.appid],
                   );
-                yield _(a.inviteid, t, s, n, !1)
+                yield h(a.inviteid, t, c, n, !1)
                   .then((e) => {
-                    v(e);
+                    E(e);
                   })
                   .catch((e) => {
-                    v((0, _e.l)(e));
+                    E((0, _e.l)(e));
                   });
               }),
-            [_, a.inviteid, a.primary_partnerid, s, d, t, p],
+            [h, a.inviteid, a.primary_partnerid, c, u, t, _],
           ),
-          D = r.useCallback(() => {
+          f = r.useCallback(() => {
             n(),
               window.location.assign(
                 `${A.De.PARTNER_BASE_URL}promotion${gr.DailyDealDashboard()}`,
               );
           }, [n]),
-          f = s < Gt.NB || s > i,
-          y = "America/Los_Angeles",
-          b = {
+          y = c < Gt.NB || c > i,
+          b = "America/Los_Angeles",
+          C = {
             weekday: "short",
             timeZoneName: "longGeneric",
             hour: "numeric",
           },
-          C = y != Intl.DateTimeFormat().resolvedOptions().timeZone;
+          I = b != Intl.DateTimeFormat().resolvedOptions().timeZone,
+          P = l
+            ? Math.floor((l.rtDiscountStart - t + M._H.PerHour) / M._H.PerDay)
+            : void 0;
         return r.createElement(
           G.RG,
           { onCancel: n },
@@ -55281,11 +55292,11 @@
           r.createElement(
             S.uT,
             null,
-            h
+            g
               ? r.createElement(
                   "div",
                   { className: On.CreationDialogueBody },
-                  h,
+                  g,
                 )
               : r.createElement(
                   "div",
@@ -55293,47 +55304,48 @@
                   r.createElement(
                     "div",
                     { className: On.Accept_StartDate },
-                    C &&
+                    I &&
                       r.createElement(
                         "div",
                         null,
                         (0, k.$1)(
                           t,
-                          Object.assign(Object.assign({}, b), { timeZone: y }),
+                          Object.assign(Object.assign({}, C), { timeZone: b }),
                         ),
                       ),
-                    r.createElement("div", null, (0, k.$1)(t, b)),
+                    r.createElement("div", null, (0, k.$1)(t, C)),
                   ),
                   r.createElement(Wt.Ce, { id: a.appid, itemType: 0 }),
                   r.createElement(Xn, {
-                    nDiscountDays: s,
-                    fnSetDiscountDays: c,
-                    rgDiscountPackages: l,
-                    fnSetDiscountPackages: o,
+                    nDiscountDays: c,
+                    fnSetDiscountDays: d,
+                    rgDiscountPackages: o,
+                    fnSetDiscountPackages: s,
                     nAppID: a.appid,
                     nMaxDiscountDays: i,
+                    nDaysUntilNextDiscount: P,
                   }),
                   r.createElement(Wt.CC, {
                     nAppID: a.appid,
-                    oFeaturedItem: d,
-                    fnSetFeaturedItem: u,
+                    oFeaturedItem: u,
+                    fnSetFeaturedItem: p,
                   }),
                 ),
           ),
           r.createElement(
             S.$_,
             null,
-            h
+            g
               ? r.createElement(
                   S.zx,
-                  { onClick: D },
+                  { onClick: f },
                   (0, k.Xx)("#Button_Close"),
                 )
               : r.createElement(S.o9, {
                   strOKText: (0, k.Xx)("#Button_Save"),
                   strCancelText: (0, k.Xx)("#Button_Cancel"),
-                  onOK: E,
-                  bOKDisabled: f,
+                  onOK: D,
+                  bOKDisabled: y,
                   onCancel: n,
                 }),
           ),
@@ -55347,28 +55359,25 @@
             fnSetDiscountPackages: i,
             nAppID: l,
             nMaxDiscountDays: o,
+            nDaysUntilNextDiscount: s,
           } = e,
-          [s] = (0, T.vs)(l, {
+          [c] = (0, T.vs)(l, {
             include_assets: !0,
             include_all_purchase_options: !0,
           });
-        if (!s)
+        if (!c)
           return r.createElement(y.V, {
             size: "small",
             position: "center",
             string: (0, k.Xx)("#Loading"),
           });
-        const c = null != o ? o : Gt.Ef,
-          m =
-            c < Gt.Ef
+        const m = null != o ? o : Gt.Ef,
+          d =
+            m < Gt.Ef && s > 0
               ? r.createElement(
                   "div",
                   { className: On.DiscountLimited },
-                  (0, k.Xx)(
-                    "#DailyDeals_New_DailiyDeal_DurationLimited",
-                    _.Eh + c,
-                    c,
-                  ),
+                  (0, k.Xx)("#DailyDeals_New_DailiyDeal_DurationLimited", s, m),
                 )
               : null;
         return r.createElement(
@@ -55385,13 +55394,13 @@
             r.createElement(
               "div",
               null,
-              m,
+              d,
               r.createElement(
                 "div",
                 null,
-                c == Gt.NB
+                m == Gt.NB
                   ? (0, k.Xx)("#DailyDeals_New_DailyDeal_Length_Min")
-                  : (0, k.Xx)("#DailyDeals_New_DailyDeal_Length", Gt.NB, c),
+                  : (0, k.Xx)("#DailyDeals_New_DailyDeal_Length", Gt.NB, m),
               ),
               r.createElement(
                 "div",
@@ -55399,7 +55408,7 @@
                 r.createElement(S.II, {
                   type: "number",
                   min: Gt.NB,
-                  max: c,
+                  max: m,
                   value: t,
                   onChange: (e) => {
                     var t;
@@ -55418,11 +55427,11 @@
               ),
             ),
           ),
-          Boolean(s) &&
+          Boolean(c) &&
             r.createElement(jn, {
               rgDiscountPackages: a,
               fnSetDiscountPackages: i,
-              oAppInfo: s,
+              oAppInfo: c,
             }),
         );
       }
@@ -55466,66 +55475,80 @@
         const { strInviteID: t } = e,
           n = (0, _n.Nt)(t),
           a = (0, fn.ns)(),
-          i = r.useMemo(
+          { rgDiscountEvents: i, eResult: l } = (0, m.BS)(
+            n.primary_partnerid,
+            !0,
+          ),
+          o = r.useMemo(
             () =>
-              (function (e) {
-                let t = new Array();
-                const n = (_.Eh + Gt.NB - 1) * M._H.PerDay,
-                  a = _.Eh * M._H.PerDay,
-                  i = Number.parseInt(
+              (function (e, t) {
+                let n = new Array();
+                const a = (Gt.NB - 1) * M._H.PerDay,
+                  i = a + _.Eh * M._H.PerDay,
+                  l = _.Eh * M._H.PerDay,
+                  r = Number.parseInt(
                     "" +
                       (0, xn.kQ)(
                         "most_recent_price_increase",
                         "application_config",
                       ),
                   );
-                (0, jt.Rf)(Math.floor(Date.now() / 1e3)) < i + _.LX &&
-                  t.push({
-                    rtStart: i - n,
-                    rtEnd: i + a,
+                (0, jt.Rf)(Math.floor(Date.now() / 1e3)) < r + _.LX &&
+                  n.push({
+                    rtConflictStart: r - i,
+                    rtConflictEnd: r + l,
                     description: (0, k.Xx)("#DailyDeals_PriceIncrease"),
+                    bMajorSale: !1,
                   });
                 if (!e || e.is_free || !e.discounts || 0 == e.discounts.length)
-                  return t;
+                  return n;
                 return (
                   e.discounts.forEach((e) => {
-                    var i;
-                    const l =
-                      null !== (i = e.strDiscountName) && void 0 !== i
-                        ? i
+                    var r;
+                    const o =
+                      null !== (r = e.strDiscountName) && void 0 !== r
+                        ? r
                         : (0, k.Xx)(
                             "#Existing_Discount",
                             (0, k.$1)(e.rtStartDate),
                           );
-                    t.push({
-                      rtStart: e.rtStartDate - n,
-                      rtEnd: e.rtEndDate + a,
-                      description: l,
+                    let s = !1;
+                    if (e.discountEventID && t) {
+                      const n = t.find((t) => t.id == e.discountEventID);
+                      n && (s = "unique" == n.collision_type);
+                    }
+                    n.push({
+                      rtConflictStart: s
+                        ? e.rtStartDate - a
+                        : e.rtStartDate - i,
+                      rtConflictEnd: s ? e.rtEndDate : e.rtEndDate + l,
+                      description: o,
                       rtDiscountStart: e.rtStartDate,
                       rtDiscountEnd: e.rtEndDate,
                       nHighestDiscount: e.nDiscountPct,
                       strDiscountName: e.strDiscountName,
+                      bMajorSale: s,
                     });
                   }),
-                  t.sort((e, t) => e.rtStart - t.rtStart),
-                  t
+                  n.sort((e, t) => e.rtConflictStart - t.rtConflictStart),
+                  n
                 );
-              })(null == a ? void 0 : a.get(null == n ? void 0 : n.appid)),
-            [null == n ? void 0 : n.appid, a],
+              })(null == a ? void 0 : a.get(null == n ? void 0 : n.appid), i),
+            [null == n ? void 0 : n.appid, a, i],
           );
-        return a
+        return a && null != l
           ? r.createElement(Sn, {
               nMaxWeeksToDisplay: 26,
               fnCreateCalendarEntries: (e) => {
                 const n = new Array();
                 for (let a = 0; a < yn; ++a) {
-                  const l = e + a * M._H.PerWeek;
+                  const i = e + a * M._H.PerWeek;
                   n.push(
                     r.createElement(Wn, {
                       key: "calrow" + a,
-                      rtFirstDay: l,
+                      rtFirstDay: i,
                       strInviteID: t,
-                      rgCooldownConflict: i,
+                      rgDiscountConflict: o,
                     }),
                   );
                 }
@@ -55539,32 +55562,36 @@
             });
       }
       function Wn(e) {
-        const { rtFirstDay: t, strInviteID: n, rgCooldownConflict: a } = e,
+        const { rtFirstDay: t, strInviteID: n, rgDiscountConflict: a } = e,
           i = new Array();
         for (let e = 0; e < 7; ++e) {
           const l = (0, jt.Rf)(t + e * M._H.PerDay);
           let o,
             s = "",
-            c = "",
-            m = 0;
+            c = !1,
+            m = "",
+            d = null;
           a.length > 0 &&
             a.forEach((e) => {
-              e.rtStart <= l && e.rtEnd >= l
+              e.rtConflictStart <= l && e.rtConflictEnd >= l
                 ? e.rtDiscountStart <= l && l <= e.rtDiscountEnd
                   ? (!o || e.nHighestDiscount > o) &&
-                    ((o = e.nHighestDiscount), (s = e.strDiscountName))
-                  : (c && (c += ", "), (c += e.description))
-                : !m && e.rtStart > l && (m = e.rtStart);
+                    ((o = e.nHighestDiscount),
+                    (s = e.strDiscountName),
+                    (c = e.bMajorSale))
+                  : (m && (m += ", "), (m += e.description))
+                : !d && e.rtConflictStart > l && (d = e);
             }),
             i.push(
               r.createElement(Zn, {
                 key: "calday" + l,
                 rtDay: l,
                 nDiscount: o,
+                bMajorSale: c,
                 strInviteID: n,
-                strConflict: c,
+                strConflict: m,
                 strDiscountName: s,
-                rtNextConflictStart: m,
+                nextDiscount: d,
               }),
             );
         }
@@ -55586,43 +55613,46 @@
             rtDay: t,
             strInviteID: n,
             strConflict: a,
-            rtNextConflictStart: i,
+            nextDiscount: i,
             nDiscount: l,
             strDiscountName: o,
+            bMajorSale: s,
           } = e,
-          s = (0, Gt.nt)(t),
-          c = (0, Gt.hc)(t),
-          m =
-            (null == c
+          c = (0, Gt.nt)(t),
+          m = (0, Gt.hc)(t),
+          d =
+            (null == m
               ? void 0
-              : c.filter((e) => e == Gt.Lu.k_ScheduleSlot).length) || 0,
-          d = Boolean(
-            null == c ? void 0 : c.some((e) => e == Gt.Lu.k_BlockDate),
+              : m.filter((e) => e == Gt.Lu.k_ScheduleSlot).length) || 0,
+          u = Boolean(
+            null == m ? void 0 : m.some((e) => e == Gt.Lu.k_BlockDate),
           ),
-          u = (null == s ? void 0 : s.length) || 0;
-        let p = Gt.Ef;
-        if (!a && i) {
-          const e = Math.floor((i + M._H.PerHour - t) / M._H.PerDay);
+          p = (null == c ? void 0 : c.length) || 0;
+        let _ = Gt.Ef;
+        if (!a && (null == i ? void 0 : i.rtConflictStart)) {
+          const e = Math.floor(
+            (i.rtConflictStart + M._H.PerHour - t) / M._H.PerDay,
+          );
           (0, Bn.X)(
-            i > t && e > 0,
+            i.rtConflictStart > t && e > 0,
             "days until next cooldown conflict is not greater than 0",
           ),
-            e > 0 && (p = Math.min(Gt.Ef, Gt.NB + (e - 1)));
+            e > 0 && (_ = Math.min(Gt.Ef, Gt.NB + (e - 1)));
         }
-        const _ = se.JW.GetTimeNowWithOverride(),
-          h = t > _,
-          g = zn - (u + m),
-          v = !a && h && !d && g > 0;
+        const h = se.JW.GetTimeNowWithOverride(),
+          g = t > h,
+          v = zn - (p + d),
+          E = !a && g && !u && v > 0 && !s;
         return r.createElement(
           In,
           { rtDay: t },
-          r.createElement(Kn, { rgDailyDeals: s }),
-          Boolean(v) &&
+          r.createElement(Kn, { rgDailyDeals: c }),
+          Boolean(E) &&
             r.createElement(
               r.Fragment,
               null,
               r.createElement(Yn, {
-                nAvailableSlots: g,
+                nAvailableSlots: v,
                 onClick: (e) => {
                   (0, f.AM)(
                     l
@@ -55630,7 +55660,8 @@
                       : r.createElement(Un, {
                           rtDay: t,
                           strInviteID: n,
-                          nMaxDiscountDays: p,
+                          nMaxDiscountDays: _,
+                          nextDiscount: i,
                         }),
                     (0, I.RA)(e),
                   );
@@ -55649,8 +55680,20 @@
                   r.createElement("div", null, l, " %"),
                 ),
             ),
-          Boolean(!v && h && a) && r.createElement(Jn, { strConflict: a }),
-          Boolean(!v && h && !a) && r.createElement(Qn, null),
+          Boolean(s) &&
+            r.createElement(
+              "div",
+              { className: vn.ExistingDiscountCtn },
+              r.createElement(
+                "div",
+                { className: vn.Title },
+                (0, k.Xx)("#DailyDeals_ExistingDiscount"),
+              ),
+              r.createElement("div", null, o),
+              r.createElement("div", null, l, " %"),
+            ),
+          Boolean(!E && g && a) && r.createElement(Jn, { strConflict: a }),
+          Boolean(!E && g && !a) && r.createElement(Qn, null),
         );
       }
       function $n(e) {
