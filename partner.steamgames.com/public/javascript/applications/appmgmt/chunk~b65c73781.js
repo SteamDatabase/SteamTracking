@@ -16905,17 +16905,18 @@
     1698: (e, t, n) => {
       "use strict";
       n.d(t, {
-        FF: () => h,
-        Ii: () => S,
+        FF: () => g,
+        Ii: () => D,
         Rg: () => m,
-        Vd: () => g,
-        b5: () => D,
-        gl: () => v,
+        Vd: () => v,
+        b5: () => f,
+        gl: () => E,
         hZ: () => u,
         j: () => p,
+        kj: () => _,
         nR: () => c,
-        pk: () => _,
-        tA: () => E,
+        pk: () => h,
+        tA: () => S,
         ti: () => d,
       });
       var a = n(35427),
@@ -16967,32 +16968,34 @@
         p.set("important", "Takeover / Takeunder"),
         p.set("preload", "Pre-load"),
         p.set("assetrequest", "Asset Request Only");
-      const _ = new Map();
-      _.set("midweek", "#254069"),
-        _.set("weekenddeal", "#254069"),
-        _.set("saleevent", "#819c8a"),
-        _.set("themesale", "#819c8a"),
-        _.set("nextfest", "#819c8a"),
-        _.set("seasonalsale", "#819c8a"),
-        _.set("informational", "#474747"),
-        _.set("dailydeal", "#80275D"),
-        _.set("vacation", "#6f7485"),
-        _.set("important", "#40ccfd"),
-        _.set("preload", "#A47332"),
-        _.set("assetrequest", "#80875D");
+      const _ = new Set();
+      _.add("seasonalsale"), _.add("themesale"), _.add("nextfest");
       const h = new Map();
-      h.set("midweek", "#discount_desc_preset_midweek"),
-        h.set("weekenddeal", "#discount_desc_preset_weekend"),
-        h.set("saleevent", "#discount_desc_preset_special"),
-        h.set("themesale", "#discount_desc_preset_special"),
-        h.set("nextfest", "#discount_desc_preset_special"),
-        h.set("seasonalsale", "#discount_desc_preset_special"),
-        h.set("informational", "#discount_desc_limited_time_date"),
-        h.set("dailydeal", "#discount_desc_preset_daily"),
-        h.set("vacation", "#discount_desc_limited_time_date"),
-        h.set("important", "#discount_desc_limited_time_date"),
-        h.set("preload", "#discount_desc_limited_time_date");
-      const g = [
+      h.set("midweek", "#254069"),
+        h.set("weekenddeal", "#254069"),
+        h.set("saleevent", "#819c8a"),
+        h.set("themesale", "#819c8a"),
+        h.set("nextfest", "#819c8a"),
+        h.set("seasonalsale", "#819c8a"),
+        h.set("informational", "#474747"),
+        h.set("dailydeal", "#80275D"),
+        h.set("vacation", "#6f7485"),
+        h.set("important", "#40ccfd"),
+        h.set("preload", "#A47332"),
+        h.set("assetrequest", "#80875D");
+      const g = new Map();
+      g.set("midweek", "#discount_desc_preset_midweek"),
+        g.set("weekenddeal", "#discount_desc_preset_weekend"),
+        g.set("saleevent", "#discount_desc_preset_special"),
+        g.set("themesale", "#discount_desc_preset_special"),
+        g.set("nextfest", "#discount_desc_preset_special"),
+        g.set("seasonalsale", "#discount_desc_preset_special"),
+        g.set("informational", "#discount_desc_limited_time_date"),
+        g.set("dailydeal", "#discount_desc_preset_daily"),
+        g.set("vacation", "#discount_desc_limited_time_date"),
+        g.set("important", "#discount_desc_limited_time_date"),
+        g.set("preload", "#discount_desc_limited_time_date");
+      const v = [
         "spotlight_art",
         "marketingmessage_art",
         "marketingmessage_art_2",
@@ -17006,7 +17009,7 @@
         "product_banner",
         "product_mobile_banner",
       ];
-      function v(e) {
+      function E(e) {
         switch (e) {
           case "marketingmessage_art":
             return "Marketing Message Banner";
@@ -17036,7 +17039,7 @@
             return "Unknown Promo Art Request";
         }
       }
-      class E {
+      class S {
         static GetSpotlightEditURL(e) {
           return o.De.PARTNER_BASE_URL + "admin/store/spotlight/" + e;
         }
@@ -17048,11 +17051,11 @@
         static GetClusterEditURL(e, t) {
           switch (e) {
             case s.R6.k_ConfigPage_Takeover:
-              return E.GetTakeoverEditURL(t);
+              return S.GetTakeoverEditURL(t);
             case s.R6.k_ConfigPage_Takeunder:
-              return E.GetTakeunderEditURL(t);
+              return S.GetTakeunderEditURL(t);
             case s.R6.k_ConfigPage_TakeoverSteamChina:
-              return E.GetSteamChinaTakeoverEditURL(t);
+              return S.GetSteamChinaTakeoverEditURL(t);
           }
           return "";
         }
@@ -17110,8 +17113,8 @@
           return o.De.PARTNER_BASE_URL + "apps/landing/" + e;
         }
       }
-      const S = new Map();
-      S.set("midweek", {
+      const D = new Map();
+      D.set("midweek", {
         nMaxSlots: 6,
         rtStartModifier: 10 * r._H.PerHour,
         rtEndModifier: 3 * r._H.PerDay + 10 * r._H.PerHour,
@@ -17132,7 +17135,7 @@
         nDaysDiscountEvent: 7,
         rtDays: 3,
       }),
-        S.set("weekenddeal", {
+        D.set("weekenddeal", {
           nMaxSlots: 6,
           rtStartModifier: 3 * r._H.PerDay + 10 * r._H.PerHour,
           rtEndModifier: 7 * r._H.PerDay + 10 * r._H.PerHour,
@@ -17153,8 +17156,8 @@
           nDaysDiscountEvent: 7,
           rtDays: 4,
         });
-      const D = ["midweek", "weekenddeal"];
-      new Set(D);
+      const f = ["midweek", "weekenddeal"];
+      new Set(f);
     },
     14790: (e, t, n) => {
       "use strict";
@@ -42880,7 +42883,10 @@
               },
               "Promotion Plan Link",
             ),
-            l.createElement(M.t, { nPartnerID: t.permitted_partner_id || s }),
+            l.createElement(M.t, {
+              nPartnerID: t.permitted_partner_id || s,
+              showPartnerUnsetWarning: !0,
+            }),
             Boolean(n.GetSubmittingAccount()) &&
               l.createElement(
                 l.Fragment,
@@ -44200,7 +44206,7 @@
     },
     5462: (e, t, n) => {
       "use strict";
-      n.d(t, { F: () => I });
+      n.d(t, { F: () => k });
       var a = n(1698),
         i = n(51485),
         l = n(36342),
@@ -44217,25 +44223,33 @@
         g = n(92012),
         v = n(31846),
         E = n(18133),
-        S = n.n(E);
-      function D(e) {
+        S = n.n(E),
+        D = n(82624);
+      function f(e) {
         const t = (0, l.Gn)(),
-          [n, a] = (0, _.SZ)(() => [
+          [n, a, i, o] = (0, _.SZ)(() => [
             t.GetID(),
             t.GetPartnerRequireArtworkReview(),
+            t.GetStoreItemKey(),
+            t.GetPartnerID(),
           ]);
         return r.createElement(
           "div",
           null,
+          r.createElement(D.x, {
+            storeItemKey: i,
+            nPartnerID: o,
+            fnUpdatePartnerID: t.SetPartnerID,
+          }),
           r.createElement(
             "div",
             { className: S().SetupRow },
-            r.createElement(f, null),
+            r.createElement(y, null),
             r.createElement(
               "div",
               null,
-              r.createElement(y, null),
-              r.createElement(C, null),
+              r.createElement(b, null),
+              r.createElement(I, null),
             ),
           ),
           r.createElement("br", null),
@@ -44256,7 +44270,7 @@
           }),
         );
       }
-      function f(e) {
+      function y(e) {
         const { bReviewApprovals: t } = e;
         return r.createElement(
           "div",
@@ -44266,7 +44280,7 @@
             r.createElement(
               "div",
               { key: e, className: S().AssetTypeRow },
-              r.createElement(b, {
+              r.createElement(C, {
                 bReviewApprovals: t,
                 type: e,
                 index: "marketingmessage_art_2" === e ? 1 : void 0,
@@ -44275,7 +44289,7 @@
           ),
         );
       }
-      function y(e) {
+      function b(e) {
         const t = (0, l.Gn)(),
           n = (0, i.Dv)(),
           [o, s] = (0, r.useState)(Boolean(n.GetDueDate())),
@@ -44328,7 +44342,7 @@
               ),
             );
       }
-      function b(e) {
+      function C(e) {
         const { type: t, index: n, bReviewApprovals: o } = e,
           s = (0, l.Gn)(),
           m = (0, i.Dv)(),
@@ -44349,7 +44363,7 @@
               r.createElement("b", null, (0, a.gl)(t)),
             );
       }
-      function C(e) {
+      function I(e) {
         const t = (0, i.Dv)();
         return r.createElement(
           "div",
@@ -44375,7 +44389,7 @@
           ),
         );
       }
-      function I(e) {
+      function k(e) {
         const { bShowLinkToPromotionPlan: t } = e,
           n = (0, l.Gn)(),
           o = (0, i.Dv)(),
@@ -44397,7 +44411,7 @@
               "Valve Only",
             ),
             Boolean(_)
-              ? r.createElement(D, { bReviewApprovals: !1 })
+              ? r.createElement(f, { bReviewApprovals: !1 })
               : r.createElement(c.ji, {
                   label: "Enable requesting featuring assets from partner?",
                   checked: _,
@@ -49947,7 +49961,12 @@
         m = n(18133),
         d = n.n(m);
       function u(e) {
-        const { nPartnerID: t, storeItemKey: n, fnUpdatePartnerID: a } = e;
+        const {
+          nPartnerID: t,
+          storeItemKey: n,
+          fnUpdatePartnerID: a,
+          showPartnerUnsetWarning: i,
+        } = e;
         return l.createElement(
           "div",
           { className: d().PartnerIdRow },
@@ -49977,27 +49996,33 @@
             nPartnerID: t,
             storeItemKey: n,
             fnUpdatePartnerID: a,
+            showPartnerUnsetWarning: null == i || i,
           }),
         );
       }
       function p(e) {
-        const { storeItemKey: t, nPartnerID: n, fnUpdatePartnerID: a } = e,
-          s = (0, i.Gk)(
+        const {
+            storeItemKey: t,
+            nPartnerID: n,
+            fnUpdatePartnerID: a,
+            showPartnerUnsetWarning: s,
+          } = e,
+          c = (0, i.Gk)(
             null == t ? void 0 : t.id,
             (0, r.GV)(null == t ? void 0 : t.item_type),
           );
         return l.createElement(
           l.Fragment,
           null,
-          l.createElement(_, { nPartnerID: n }),
+          l.createElement(_, { nPartnerID: n, showPartnerUnsetWarning: s }),
           Boolean(
-            (null == s ? void 0 : s.filter((e) => e.partner_id != n).length) >
+            (null == c ? void 0 : c.filter((e) => e.partner_id != n).length) >
               0,
           ) &&
             l.createElement(
               "div",
               { className: d().SetObviousPartner },
-              s.map((e) =>
+              c.map((e) =>
                 l.createElement(
                   o.zx,
                   { key: e.partner_id, onClick: () => a(e.partner_id) },
@@ -50012,28 +50037,28 @@
         );
       }
       function _(e) {
-        const { nPartnerID: t } = e,
-          [n] = (0, a.DV)(t);
-        return t
-          ? n
-            ? l.createElement(
-                "div",
-                { className: d().PartnerLink },
-                l.createElement(
-                  "a",
-                  { href: n.partner_url },
-                  n.name,
-                  " (",
-                  n.partnerid,
-                  ")",
-                ),
-              )
-            : null
-          : l.createElement(
+        const { nPartnerID: t, showPartnerUnsetWarning: n } = e,
+          [i] = (0, a.DV)(t);
+        return n && !t
+          ? l.createElement(
               "div",
               { className: (0, s.Z)(c.ErrorStylesWithIcon, c.ErrorFloatBelow) },
               "No Partner ID set; no partner can access this request",
-            );
+            )
+          : i
+          ? l.createElement(
+              "div",
+              { className: d().PartnerLink },
+              l.createElement(
+                "a",
+                { href: i.partner_url },
+                i.name,
+                " (",
+                i.partnerid,
+                ")",
+              ),
+            )
+          : null;
       }
     },
     9071: (e, t, n) => {
@@ -63013,15 +63038,6 @@
                   u.createElement(
                     "div",
                     { className: g().SectionCtn },
-                    u.createElement(nt, { oEditablePlan: t }),
-                  ),
-                ),
-                u.createElement(
-                  E.SV,
-                  null,
-                  u.createElement(
-                    "div",
-                    { className: g().SectionCtn },
                     u.createElement(tt, { oEditablePlan: t }),
                   ),
                 ),
@@ -63064,8 +63080,9 @@
           a = (0, l.vc)(t.GetDiscountEventID()),
           s = (0, r.Q2)(t.GetMarketingMessageID(0)),
           c = (0, r.Q2)(t.GetMarketingMessageID(1)),
-          [d] = (0, _.vs)(t.GetAdvertisingAppID(), {}),
-          p = (0, o.Dv)();
+          [p] = (0, _.vs)(t.GetAdvertisingAppID(), {}),
+          h = (0, o.Dv)(),
+          [g, S] = (0, d.SZ)(() => [t.GetStoreItemKey(), t.GetPartnerID()]);
         return u.createElement(
           "div",
           { className: G.PreviewLinksCtn },
@@ -63104,6 +63121,13 @@
                 }),
               ),
           ),
+          !i.kj.has(t.GetType()) &&
+            u.createElement(He.x, {
+              storeItemKey: g,
+              showPartnerUnsetWarning: !1,
+              nPartnerID: S,
+              fnUpdatePartnerID: t.SetPartnerID,
+            }),
           u.createElement(v.__, null, "Associated Editor Links:"),
           u.createElement(
             "p",
@@ -63154,7 +63178,7 @@
           u.createElement(R.id, {
             name: "",
             type: "External Partner Assets",
-            id: p.GetArtInputLink(),
+            id: h.GetArtInputLink(),
             fnGetURL: (e) => e,
             fnGetReviewed: t.GetPartnerArtworkSubmissionReviewed,
             fnSetReviewed: t.SetPartnerArtworkSubmissionReviewed,
@@ -63169,7 +63193,7 @@
           }),
           u.createElement(Ae.c, { oEditablePlan: t }),
           u.createElement(R.id, {
-            name: d ? `: ${d.GetName()}` : "",
+            name: p ? `: ${p.GetName()}` : "",
             type: "Advertising AppID",
             id: t.GetAdvertisingAppID() ? "" + t.GetAdvertisingAppID() : null,
             fnGetURL: i.tA.GetAdvertingAppLandingURL,
@@ -63243,31 +63267,6 @@
         );
       }
       function tt(e) {
-        const { oEditablePlan: t } = e,
-          [n, a, i] = (0, d.SZ)(() => [
-            t.GetType(),
-            t.GetStoreItemKey(),
-            t.GetPartnerID(),
-          ]);
-        return u.createElement(
-          I.ug,
-          {
-            title: "Visibility",
-            tooltip: "Allows you to change who is able to see this promotion",
-            bStartMinimized: !0,
-          },
-          u.createElement(
-            "div",
-            { className: G.LinksCtn },
-            u.createElement(He.x, {
-              storeItemKey: a,
-              nPartnerID: i,
-              fnUpdatePartnerID: t.SetPartnerID,
-            }),
-          ),
-        );
-      }
-      function nt(e) {
         const { oEditablePlan: t } = e;
         t.GetType();
         return u.createElement(

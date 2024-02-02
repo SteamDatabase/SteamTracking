@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "8671516";
+var CLSTAMP = "8671873";
 (() => {
   "use strict";
   var a,
@@ -21,22 +21,22 @@ var CLSTAMP = "8671516";
     (s.O = (e, n, c, i) => {
       if (!n) {
         var o = 1 / 0;
-        for (r = 0; r < a.length; r++) {
-          for (var [n, c, i] = a[r], d = !0, t = 0; t < n.length; t++)
-            (!1 & i || o >= i) && Object.keys(s.O).every((a) => s.O[a](n[t]))
-              ? n.splice(t--, 1)
+        for (l = 0; l < a.length; l++) {
+          for (var [n, c, i] = a[l], d = !0, f = 0; f < n.length; f++)
+            (!1 & i || o >= i) && Object.keys(s.O).every((a) => s.O[a](n[f]))
+              ? n.splice(f--, 1)
               : ((d = !1), i < o && (o = i));
           if (d) {
-            a.splice(r--, 1);
-            var l = c();
-            void 0 !== l && (e = l);
+            a.splice(l--, 1);
+            var t = c();
+            void 0 !== t && (e = t);
           }
         }
         return e;
       }
       i = i || 0;
-      for (var r = a.length; r > 0 && a[r - 1][2] > i; r--) a[r] = a[r - 1];
-      a[r] = [n, c, i];
+      for (var l = a.length; l > 0 && a[l - 1][2] > i; l--) a[l] = a[l - 1];
+      a[l] = [n, c, i];
     }),
     (s.n = (a) => {
       var e = a && a.__esModule ? () => a.default : () => a;
@@ -458,24 +458,24 @@ var CLSTAMP = "8671516";
     (s.l = (a, e, n, o) => {
       if (c[a]) c[a].push(e);
       else {
-        var d, t;
+        var d, f;
         if (void 0 !== n)
           for (
-            var l = document.getElementsByTagName("script"), r = 0;
-            r < l.length;
-            r++
+            var t = document.getElementsByTagName("script"), l = 0;
+            l < t.length;
+            l++
           ) {
-            var f = l[r];
+            var r = t[l];
             if (
-              f.getAttribute("src") == a ||
-              f.getAttribute("data-webpack") == i + n
+              r.getAttribute("src") == a ||
+              r.getAttribute("data-webpack") == i + n
             ) {
-              d = f;
+              d = r;
               break;
             }
           }
         d ||
-          ((t = !0),
+          ((f = !0),
           ((d = document.createElement("script")).charset = "utf-8"),
           (d.timeout = 120),
           s.nc && d.setAttribute("nonce", s.nc),
@@ -499,7 +499,7 @@ var CLSTAMP = "8671516";
           );
         (d.onerror = b.bind(null, d.onerror)),
           (d.onload = b.bind(null, d.onload)),
-          t && document.head.appendChild(d);
+          f && document.head.appendChild(d);
       }
     }),
     (s.r = (a) => {
@@ -569,7 +569,7 @@ var CLSTAMP = "8671516";
                       else {
                         var d = n && n.type,
                           s = (n && n.target && n.target.href) || e,
-                          t = new Error(
+                          f = new Error(
                             "Loading CSS chunk " +
                               a +
                               " failed.\n(" +
@@ -578,12 +578,12 @@ var CLSTAMP = "8671516";
                               s +
                               ")",
                           );
-                        (t.name = "ChunkLoadError"),
-                          (t.code = "CSS_CHUNK_LOAD_FAILED"),
-                          (t.type = d),
-                          (t.request = s),
+                        (f.name = "ChunkLoadError"),
+                          (f.code = "CSS_CHUNK_LOAD_FAILED"),
+                          (f.type = d),
+                          (f.request = s),
                           o.parentNode && o.parentNode.removeChild(o),
-                          i(t);
+                          i(f);
                       }
                     }),
                   (o.href = e),
@@ -675,15 +675,15 @@ var CLSTAMP = "8671516";
       var e = (e, n) => {
           var c,
             i,
-            [o, d, t] = n,
-            l = 0;
+            [o, d, f] = n,
+            t = 0;
           if (o.some((e) => 0 !== a[e])) {
             for (c in d) s.o(d, c) && (s.m[c] = d[c]);
-            if (t) var r = t(s);
+            if (f) var l = f(s);
           }
-          for (e && e(n); l < o.length; l++)
-            (i = o[l]), s.o(a, i) && a[i] && a[i][0](), (a[i] = 0);
-          return s.O(r);
+          for (e && e(n); t < o.length; t++)
+            (i = o[t]), s.o(a, i) && a[i] && a[i][0](), (a[i] = 0);
+          return s.O(l);
         },
         n = (self.webpackChunkcommunity = self.webpackChunkcommunity || []);
       n.forEach(e.bind(null, 0)), (n.push = e.bind(null, n.push.bind(n)));
