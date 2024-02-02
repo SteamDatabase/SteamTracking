@@ -2527,6 +2527,7 @@ https://steam.tv/artifact
 https://steam.tv/csgo
 https://steam.tv/dota
 https://steam.tv/paladins
+https://steam.tv/parental/ajaxlock
 https://steam.tv/realmroyale
 https://steam.tv/smite
 https://steam.tv/steamawards

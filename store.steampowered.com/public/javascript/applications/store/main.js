@@ -33549,8 +33549,13 @@
                     n,
                     { withCredentials: !0 },
                   ),
-                  d = yield Promise.all([i, s, o]);
-                for (let e of d)
+                  d = a().post(
+                    l.De.STEAMTV_BASE_URL + "parental/ajaxunlock",
+                    n,
+                    { withCredentials: !0 },
+                  ),
+                  p = yield Promise.all([i, s, o, d]);
+                for (let e of p)
                   if (!e.data.success && 21 != e.data.eresult)
                     return (
                       m(""),
