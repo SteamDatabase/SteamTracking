@@ -41,7 +41,7 @@
     },
     72453: (e, t, n) => {
       "use strict";
-      n.d(t, { X: () => Se });
+      n.d(t, { X: () => Oe });
       var o = n(27378),
         r = n(47228),
         a = n(39459),
@@ -65,7 +65,7 @@
             content: "inline*",
             group: "block",
             parseDOM: [{ tag: "p" }],
-            toDOM: b("p", (0, f.default)("pm_paragraph", g().Paragraph)),
+            toDOM: b("p", (0, f.Z)("pm_paragraph", g().Paragraph)),
           },
           heading: {
             attrs: { level: { default: 1 } },
@@ -164,7 +164,7 @@
                 getAttrs: (e) => /^(bold(er)?|[5-9]\d{2,})$/.test(e) && null,
               },
             ],
-            toDOM: b("b", (0, f.default)("BB_Bold", g().Bold)),
+            toDOM: b("b", (0, f.Z)("BB_Bold", g().Bold)),
           },
           italic: {
             parseDOM: [
@@ -176,19 +176,19 @@
                 clearMark: (e) => "em" == e.type.name,
               },
             ],
-            toDOM: b("i", (0, f.default)("BB_Italic", g().Italic)),
+            toDOM: b("i", (0, f.Z)("BB_Italic", g().Italic)),
           },
           underline: {
             parseDOM: [{ tag: "u" }, { style: "text-decoration=underline" }],
-            toDOM: b("u", (0, f.default)("BB_Underline", g().Underline)),
+            toDOM: b("u", (0, f.Z)("BB_Underline", g().Underline)),
           },
           strike: {
             parseDOM: [{ style: "text-decoration=line-through" }],
-            toDOM: b("span", (0, f.default)("BB_Strike", g().Strike)),
+            toDOM: b("span", (0, f.Z)("BB_Strike", g().Strike)),
           },
           code: {
             parseDOM: [{ tag: "code" }],
-            toDOM: b("code", (0, f.default)("BB_Code", g().Code)),
+            toDOM: b("code", (0, f.Z)("BB_Code", g().Code)),
           },
           link: {
             attrs: { href: {}, title: { default: null } },
@@ -356,7 +356,7 @@
           ? e.node.create(o, n)
           : n.map((t) => t.mark([...t.marks, e.mark.create(o)]));
       }
-      class B extends u.AX {
+      class N extends u.AX {
         constructor(e) {
           super(e, () => new v());
         }
@@ -384,9 +384,9 @@
           );
         }
       }
-      var N = n(56815),
-        w = n(9891);
-      function A(e, t = _) {
+      var B = n(56815),
+        x = n(9891);
+      function w(e, t = _) {
         const n = { mapMarks: new Map(), mapNodes: new Map() };
         return (
           t.forEach((e, t) => {
@@ -400,10 +400,10 @@
                   AttrsToBBArgs: e.Constructor.AttrsToBBArgs,
                 });
           }),
-          L(n, e)
+          A(n, e)
         );
       }
-      function L(e, t) {
+      function A(e, t) {
         let n = t.marks,
           o = "";
         const r = e.mapNodes.get(t.type),
@@ -428,7 +428,7 @@
                 ? (o += (0, u.bU)(t.text))
                 : t.type == k.nodes.hard_break
                 ? (o += "\n")
-                : (o += L(e, t));
+                : (o += A(e, t));
           }),
           ([o] = y(e, n, [], o)),
           a && (o += (0, u.Ec)(a)),
@@ -442,14 +442,13 @@
         const a = t.slice();
         for (
           ;
-          r.length &&
-          ((0, w.AssertMsg)(a.length, "no marks left to close"), a.length);
+          r.length && ((0, x.X)(a.length, "no marks left to close"), a.length);
 
         ) {
           const t = a.pop(),
             n = e.mapMarks.get(t.type),
             { tag: l } = P(n, t.attrs);
-          (o += (0, u.Ec)(l)), N.FindAndRemove(r, t);
+          (o += (0, u.Ec)(l)), B.Zf(r, t);
         }
         return [o, a];
       }
@@ -464,12 +463,12 @@
           { tag: n, args: o }
         );
       }
-      var M = n(85556),
-        S = n(38321),
-        O = n(24589),
+      var F = n(85556),
+        O = n(38321),
+        M = n(24589),
         D = n(99659),
-        F = n(65109);
-      function x(e, t) {
+        S = n(65109);
+      function H(e, t) {
         o.useEffect(() => {
           if (e && t && !e.isDestroyed)
             return (
@@ -491,7 +490,7 @@
             );
         }, [e, t]);
       }
-      function H(e, t) {
+      function L(e, t) {
         let { from: n, $from: o, to: r, empty: a } = e.selection;
         return a
           ? !!t.isInSet(e.storedMarks || o.marks())
@@ -501,8 +500,8 @@
         let { $from: o, to: r, node: a } = e.selection;
         return !a && r <= o.end() && (a = o.parent), !!a && a.hasMarkup(t, n);
       }
-      function z(e, t, n = {}) {
-        return new F.VK(e, (e, o, r, a) => {
+      function X(e, t, n = {}) {
+        return new S.VK(e, (e, o, r, a) => {
           const l = n instanceof Function ? n(o) : n,
             s = e.tr;
           if (o[1]) {
@@ -515,38 +514,38 @@
           return s.addMark(r, a, t.create(l)), s.removeStoredMark(t), s;
         });
       }
-      var R = n(86064),
-        G = n(50947),
+      var G = n(86064),
+        R = n(50947),
         U = n(94950);
       function W(e) {
         const { children: t } = e,
-          { callbacks: n, view: r } = Y(),
-          [a, l] = o.useState(() => H(r.state, k.marks.link)),
-          i = o.useCallback((e) => l(H(e.state, k.marks.link)), []);
-        (0, G.useCallbackList)(n, i);
-        const [u, d, m] = (0, G.useModalState)();
+          { callbacks: n, view: r } = J(),
+          [a, l] = o.useState(() => L(r.state, k.marks.link)),
+          i = o.useCallback((e) => l(L(e.state, k.marks.link)), []);
+        (0, R.Qg)(n, i);
+        const [u, d, m] = (0, R.X9)();
         return o.createElement(
           o.Fragment,
           null,
           o.createElement(
-            c.SimpleModal,
+            c.Yy,
             { active: u },
-            o.createElement(K, { active: u, closeModal: m, view: r }),
+            o.createElement($, { active: u, closeModal: m, view: r }),
           ),
           o.createElement(
-            s.Button,
+            s.zx,
             {
-              className: (0, f.default)(U.CommandButton, a && U.Toggled),
+              className: (0, f.Z)(U.CommandButton, a && U.Toggled),
               onMouseDown: (e) => {
                 e.preventDefault(), d();
               },
-              title: (0, R.Localize)("#FormattingToolbar_InsertLink"),
+              title: (0, G.Xx)("#FormattingToolbar_InsertLink"),
             },
             t,
           ),
         );
       }
-      const K = o.memo(function (e) {
+      const $ = o.memo(function (e) {
         const { active: t, closeModal: n, view: r } = e,
           [a, l] = o.useState(""),
           [i, u] = o.useState(""),
@@ -574,7 +573,7 @@
             }
           }, [t, r]),
           o.createElement(
-            c.GenericConfirmDialog,
+            c.uH,
             {
               onOK: () => {
                 r.dispatch(
@@ -588,30 +587,30 @@
                   n();
               },
               closeModal: n,
-              strTitle: (0, R.Localize)("#FormattingToolbar_InsertLink"),
-              strOKButtonText: (0, R.Localize)("#FormattingToolbar_InsertLink"),
+              strTitle: (0, G.Xx)("#FormattingToolbar_InsertLink"),
+              strOKButtonText: (0, G.Xx)("#FormattingToolbar_InsertLink"),
               bOKDisabled: 0 == i.length,
             },
-            o.createElement(s.Input, {
+            o.createElement(s.II, {
               ref: d,
               value: a,
               onChange: (e) => l(e.currentTarget.value),
-              label: (0, R.Localize)("#FormattingToolbar_LinkText"),
+              label: (0, G.Xx)("#FormattingToolbar_LinkText"),
             }),
-            o.createElement(s.Input, {
+            o.createElement(s.II, {
               ref: m,
               value: i,
               onChange: (e) => u(e.currentTarget.value),
-              label: (0, R.Localize)("#FormattingToolbar_LinkAddress"),
+              label: (0, G.Xx)("#FormattingToolbar_LinkAddress"),
             }),
           )
         );
       });
-      var $ = n(40885),
-        j = n(94256),
-        V = n(46048),
-        J = n(2286);
-      function X(e) {
+      var Z = n(40885),
+        K = n(94256),
+        z = n(46048),
+        V = n(2286);
+      function j(e) {
         const {
             view: t,
             refUpdateToolbar: n,
@@ -619,28 +618,25 @@
             bSpellcheckEnabled: a,
             setSpellcheckEnabled: l,
           } = e,
-          [c, u] = (0, V.i4)("FormattingToolbar_Expanded", !1),
-          [d] = o.useState(() => new $.CCallbackList());
+          [c, u] = (0, z.i4)("FormattingToolbar_Expanded", !1),
+          [d] = o.useState(() => new Z.pB());
         o.useEffect(
-          () => (
-            (0, G.setRef)(n, () => d.Dispatch(t)),
-            () => (0, G.setRef)(n, void 0)
-          ),
+          () => ((0, R.k$)(n, () => d.Dispatch(t)), () => (0, R.k$)(n, void 0)),
           [d, t, n],
         );
         const p = o.useMemo(() => ({ callbacks: d, view: t }), [d, t]);
         return t
           ? o.createElement(
-              q.Provider,
+              Y.Provider,
               { value: p },
               o.createElement(
                 "div",
-                { className: (0, f.default)(U.Toolbar, r) },
+                { className: (0, f.Z)(U.Toolbar, r) },
                 o.createElement(
-                  Z,
+                  q,
                   null,
                   o.createElement(
-                    j.HP,
+                    K.HP,
                     {
                       toolTipContent: "#FormattingToolbar_Undo",
                       direction: "bottom",
@@ -648,15 +644,15 @@
                     o.createElement(
                       te,
                       {
-                        title: (0, R.Localize)("#FormattingToolbar_Undo"),
-                        command: O.Yw,
+                        title: (0, G.Xx)("#FormattingToolbar_Undo"),
+                        command: M.Yw,
                         fnEnabledCheck: re,
                       },
                       o.createElement(i.Undo, null),
                     ),
                   ),
                   o.createElement(
-                    j.HP,
+                    K.HP,
                     {
                       toolTipContent: "#FormattingToolbar_Redo",
                       direction: "bottom",
@@ -664,8 +660,8 @@
                     o.createElement(
                       te,
                       {
-                        title: (0, R.Localize)("#FormattingToolbar_Redo"),
-                        command: O.KX,
+                        title: (0, G.Xx)("#FormattingToolbar_Redo"),
+                        command: M.KX,
                         fnEnabledCheck: ae,
                       },
                       o.createElement(i.Redo, null),
@@ -673,7 +669,7 @@
                   ),
                   o.createElement("div", { className: U.Gap }),
                   o.createElement(
-                    j.HP,
+                    K.HP,
                     {
                       toolTipContent: "#FormattingToolbar_Bold",
                       direction: "bottom",
@@ -681,14 +677,14 @@
                     o.createElement(
                       ee,
                       {
-                        title: (0, R.Localize)("#FormattingToolbar_Bold"),
+                        title: (0, G.Xx)("#FormattingToolbar_Bold"),
                         mark: k.marks.strong,
                       },
                       o.createElement(i.TextBold, null),
                     ),
                   ),
                   o.createElement(
-                    j.HP,
+                    K.HP,
                     {
                       toolTipContent: "#FormattingToolbar_Italic",
                       direction: "bottom",
@@ -696,14 +692,14 @@
                     o.createElement(
                       ee,
                       {
-                        title: (0, R.Localize)("#FormattingToolbar_Italic"),
+                        title: (0, G.Xx)("#FormattingToolbar_Italic"),
                         mark: k.marks.italic,
                       },
                       o.createElement(i.TextItalic, null),
                     ),
                   ),
                   o.createElement(
-                    j.HP,
+                    K.HP,
                     {
                       toolTipContent: "#FormattingToolbar_Underline",
                       direction: "bottom",
@@ -711,14 +707,14 @@
                     o.createElement(
                       ee,
                       {
-                        title: (0, R.Localize)("#FormattingToolbar_Underline"),
+                        title: (0, G.Xx)("#FormattingToolbar_Underline"),
                         mark: k.marks.underline,
                       },
                       o.createElement(i.TextUnderline, null),
                     ),
                   ),
                   o.createElement(
-                    j.HP,
+                    K.HP,
                     {
                       toolTipContent: "#FormattingToolbar_Strike",
                       direction: "bottom",
@@ -726,14 +722,14 @@
                     o.createElement(
                       ee,
                       {
-                        title: (0, R.Localize)("#FormattingToolbar_Strike"),
+                        title: (0, G.Xx)("#FormattingToolbar_Strike"),
                         mark: k.marks.strike,
                       },
                       o.createElement(i.TextStrikethrough, null),
                     ),
                   ),
                   o.createElement(
-                    j.HP,
+                    K.HP,
                     {
                       toolTipContent: "#FormattingToolbar_InlineCode",
                       direction: "bottom",
@@ -741,7 +737,7 @@
                     o.createElement(
                       ee,
                       {
-                        title: (0, R.Localize)("#FormattingToolbar_InlineCode"),
+                        title: (0, G.Xx)("#FormattingToolbar_InlineCode"),
                         mark: k.marks.code,
                       },
                       o.createElement(i.TextCode, null),
@@ -749,15 +745,15 @@
                   ),
                   o.createElement("div", { className: U.Spacer }),
                   o.createElement(
-                    j.HP,
+                    K.HP,
                     {
                       toolTipContent: "#FormattingToolbar_ExpandOptions",
                       direction: "bottom",
                     },
                     o.createElement(
-                      s.Button,
+                      s.zx,
                       {
-                        className: (0, f.default)(
+                        className: (0, f.Z)(
                           U.CommandButton,
                           U.ExpandButton,
                           c && U.Toggled,
@@ -769,10 +765,10 @@
                   ),
                 ),
                 o.createElement(
-                  Z,
+                  q,
                   { visible: c },
                   o.createElement(
-                    j.HP,
+                    K.HP,
                     {
                       toolTipContent: "#FormattingToolbar_Paragraph",
                       direction: "bottom",
@@ -781,13 +777,13 @@
                       Q,
                       {
                         nodeType: k.nodes.paragraph,
-                        title: (0, R.Localize)("#FormattingToolbar_Paragraph"),
+                        title: (0, G.Xx)("#FormattingToolbar_Paragraph"),
                       },
                       o.createElement(i.TextParagraph, null),
                     ),
                   ),
                   o.createElement(
-                    j.HP,
+                    K.HP,
                     {
                       toolTipContent: "#FormattingToolbar_HeadingLevel1",
                       direction: "bottom",
@@ -797,16 +793,13 @@
                       {
                         nodeType: k.nodes.heading,
                         attrs: { level: 1 },
-                        title: (0, R.Localize)(
-                          "#FormattingToolbar_HeadingLevelN",
-                          1,
-                        ),
+                        title: (0, G.Xx)("#FormattingToolbar_HeadingLevelN", 1),
                       },
                       o.createElement(i.TextH1, null),
                     ),
                   ),
                   o.createElement(
-                    j.HP,
+                    K.HP,
                     {
                       toolTipContent: "#FormattingToolbar_HeadingLevel2",
                       direction: "bottom",
@@ -816,16 +809,13 @@
                       {
                         nodeType: k.nodes.heading,
                         attrs: { level: 2 },
-                        title: (0, R.Localize)(
-                          "#FormattingToolbar_HeadingLevelN",
-                          2,
-                        ),
+                        title: (0, G.Xx)("#FormattingToolbar_HeadingLevelN", 2),
                       },
                       o.createElement(i.TextH2, null),
                     ),
                   ),
                   o.createElement(
-                    j.HP,
+                    K.HP,
                     {
                       toolTipContent: "#FormattingToolbar_HeadingLevel3",
                       direction: "bottom",
@@ -835,16 +825,13 @@
                       {
                         nodeType: k.nodes.heading,
                         attrs: { level: 3 },
-                        title: (0, R.Localize)(
-                          "#FormattingToolbar_HeadingLevelN",
-                          3,
-                        ),
+                        title: (0, G.Xx)("#FormattingToolbar_HeadingLevelN", 3),
                       },
                       o.createElement(i.TextH3, null),
                     ),
                   ),
                   o.createElement(
-                    j.HP,
+                    K.HP,
                     {
                       toolTipContent: "#FormattingToolbar_HeadingLevel4",
                       direction: "bottom",
@@ -854,16 +841,13 @@
                       {
                         nodeType: k.nodes.heading,
                         attrs: { level: 4 },
-                        title: (0, R.Localize)(
-                          "#FormattingToolbar_HeadingLevelN",
-                          4,
-                        ),
+                        title: (0, G.Xx)("#FormattingToolbar_HeadingLevelN", 4),
                       },
                       o.createElement(i.TextH4, null),
                     ),
                   ),
                   o.createElement(
-                    j.HP,
+                    K.HP,
                     {
                       toolTipContent: "#FormattingToolbar_HeadingLevel5",
                       direction: "bottom",
@@ -873,16 +857,13 @@
                       {
                         nodeType: k.nodes.heading,
                         attrs: { level: 5 },
-                        title: (0, R.Localize)(
-                          "#FormattingToolbar_HeadingLevelN",
-                          5,
-                        ),
+                        title: (0, G.Xx)("#FormattingToolbar_HeadingLevelN", 5),
                       },
                       o.createElement(i.TextH5, null),
                     ),
                   ),
                   o.createElement(
-                    j.HP,
+                    K.HP,
                     {
                       toolTipContent: "#FormattingToolbar_CodeBlock",
                       direction: "bottom",
@@ -891,14 +872,14 @@
                       Q,
                       {
                         nodeType: k.nodes.code_block,
-                        title: (0, R.Localize)("#FormattingToolbar_CodeBlock"),
+                        title: (0, G.Xx)("#FormattingToolbar_CodeBlock"),
                       },
                       o.createElement(i.TextCodeBlock, null),
                     ),
                   ),
                   o.createElement("div", { className: U.Gap }),
                   o.createElement(
-                    j.HP,
+                    K.HP,
                     {
                       toolTipContent: "#FormattingToolbar_BulletedList",
                       direction: "bottom",
@@ -906,16 +887,14 @@
                     o.createElement(
                       ne,
                       {
-                        title: (0, R.Localize)(
-                          "#FormattingToolbar_BulletedList",
-                        ),
+                        title: (0, G.Xx)("#FormattingToolbar_BulletedList"),
                         command: (0, m.KI)(k.nodes.bullet_list),
                       },
                       o.createElement(i.TextBullets, null),
                     ),
                   ),
                   o.createElement(
-                    j.HP,
+                    K.HP,
                     {
                       toolTipContent: "#FormattingToolbar_IndentList",
                       direction: "bottom",
@@ -923,14 +902,14 @@
                     o.createElement(
                       ne,
                       {
-                        title: (0, R.Localize)("#FormattingToolbar_IndentList"),
+                        title: (0, G.Xx)("#FormattingToolbar_IndentList"),
                         command: (0, m.IB)(k.nodes.list_item),
                       },
                       o.createElement(i.TextIndent, null),
                     ),
                   ),
                   o.createElement(
-                    j.HP,
+                    K.HP,
                     {
                       toolTipContent: "#FormattingToolbar_OutdentList",
                       direction: "bottom",
@@ -938,9 +917,7 @@
                     o.createElement(
                       ne,
                       {
-                        title: (0, R.Localize)(
-                          "#FormattingToolbar_OutdentList",
-                        ),
+                        title: (0, G.Xx)("#FormattingToolbar_OutdentList"),
                         command: (0, m.bw)(k.nodes.list_item),
                       },
                       o.createElement(i.TextOutdent, null),
@@ -948,7 +925,7 @@
                   ),
                   o.createElement("div", { className: U.Gap }),
                   o.createElement(
-                    j.HP,
+                    K.HP,
                     {
                       toolTipContent: "#FormattingToolbar_InsertLink",
                       direction: "bottom",
@@ -958,7 +935,7 @@
                   o.createElement("div", { className: U.Spacer }),
                   l &&
                     o.createElement(
-                      j.HP,
+                      K.HP,
                       {
                         toolTipContent: a
                           ? "#FormattingToolbar_DisableSpellcheck"
@@ -976,26 +953,26 @@
             )
           : null;
       }
-      const q = o.createContext(void 0),
-        Y = () => o.useContext(q);
-      function Z(e) {
+      const Y = o.createContext(void 0),
+        J = () => o.useContext(Y);
+      function q(e) {
         return o.createElement(
           D.G,
           { visible: e.visible },
           o.createElement(
-            J.Panel,
-            { className: (0, f.default)(U.ToolbarRow), "flow-children": "row" },
+            V.s,
+            { className: (0, f.Z)(U.ToolbarRow), "flow-children": "row" },
             e.children,
           ),
         );
       }
       function Q(e) {
         const { nodeType: t, title: n, attrs: r, children: a } = e,
-          { callbacks: l, view: s } = Y(),
+          { callbacks: l, view: s } = J(),
           [i, c] = o.useState(() => I(s.state, t, r)),
           u = o.useCallback((e) => c(I(e.state, t, r)), [t, r]);
-        (0, G.useCallbackList)(l, u);
-        const d = o.useMemo(() => (0, S.uJ)(t, r), [r, t]);
+        (0, R.Qg)(l, u);
+        const d = o.useMemo(() => (0, O.uJ)(t, r), [r, t]);
         return o.createElement(ne, {
           command: d,
           title: n,
@@ -1005,11 +982,11 @@
       }
       function ee(e) {
         const { mark: t, title: n, children: r } = e,
-          { callbacks: a, view: l } = Y(),
-          [s, i] = o.useState(() => H(l.state, t)),
-          c = o.useCallback((e) => i(H(e.state, t)), [t]);
-        (0, G.useCallbackList)(a, c);
-        const u = o.useMemo(() => (0, S.w9)(t), [t]);
+          { callbacks: a, view: l } = J(),
+          [s, i] = o.useState(() => L(l.state, t)),
+          c = o.useCallback((e) => i(L(e.state, t)), [t]);
+        (0, R.Qg)(a, c);
+        const u = o.useMemo(() => (0, O.w9)(t), [t]);
         return o.createElement(ne, {
           command: u,
           title: n,
@@ -1019,12 +996,12 @@
       }
       function te(e) {
         const { fnEnabledCheck: t } = e,
-          n = (0, M._T)(e, ["fnEnabledCheck"]),
-          { callbacks: r, view: a } = Y(),
+          n = (0, F._T)(e, ["fnEnabledCheck"]),
+          { callbacks: r, view: a } = J(),
           [l, s] = o.useState(() => t(a)),
           i = o.useCallback((e) => s(t(e)), [t]);
         return (
-          (0, G.useCallbackList)(r, i),
+          (0, R.Qg)(r, i),
           o.createElement(ne, Object.assign({}, n, { disabled: !l }))
         );
       }
@@ -1036,11 +1013,11 @@
             disabled: a,
             children: l,
           } = e,
-          { view: i } = Y();
+          { view: i } = J();
         return o.createElement(
-          s.Button,
+          s.zx,
           {
-            className: (0, f.default)(U.CommandButton, n && U.Toggled),
+            className: (0, f.Z)(U.CommandButton, n && U.Toggled),
             title: r,
             onMouseDown: (e) => {
               e.preventDefault(), t(i.state, i.dispatch, i);
@@ -1060,9 +1037,9 @@
           children: l,
         } = e;
         return o.createElement(
-          s.Button,
+          s.zx,
           {
-            className: (0, f.default)(U.CommandButton, n && U.Toggled),
+            className: (0, f.Z)(U.CommandButton, n && U.Toggled),
             title: r,
             onMouseDown: (e) => {
               e.preventDefault(), t();
@@ -1073,10 +1050,10 @@
         );
       }
       function re(e) {
-        return (0, O.of)(e.state) > 0;
+        return (0, M.of)(e.state) > 0;
       }
       function ae(e) {
-        return (0, O.AH)(e.state) > 0;
+        return (0, M.AH)(e.state) > 0;
       }
       var le = n(23507),
         se = n(82789),
@@ -1091,7 +1068,7 @@
           [s, i] = o.useState(),
           c = o.useCallback((e, t) => {
             const n = t.target;
-            if ((0, ue.IsHTMLElement)(n) && "A" == n.nodeName) {
+            if ((0, ue.GB)(n) && "A" == n.nodeName) {
               const e = n.getBoundingClientRect();
               r(e.left + e.width / 2), l(e.bottom + 2), i(n);
             } else i(void 0);
@@ -1099,7 +1076,7 @@
           }, []),
           u = o.useCallback((e, t) => (i(void 0), !1), []);
         if (
-          (x(
+          (H(
             t,
             o.useMemo(
               () =>
@@ -1120,7 +1097,7 @@
           o.createElement(
             "div",
             { className: de.LinkHelp },
-            (0, R.Localize)("#UserGameNotes_ClickToOpenLink"),
+            (0, G.Xx)("#UserGameNotes_ClickToOpenLink"),
           ),
         );
       }
@@ -1138,8 +1115,8 @@
           r,
         );
       }
-      const ge = (0, S.QF)(
-          S.uo,
+      const ge = (0, O.QF)(
+          O.uo,
           (e, t) => (
             t &&
               t(
@@ -1151,20 +1128,20 @@
           ),
         ),
         fe = (0, le.h)({
-          "Mod-z": O.Yw,
-          "Mod-y": O.KX,
-          Backspace: F.dU,
+          "Mod-z": M.Yw,
+          "Mod-y": M.KX,
+          Backspace: S.dU,
           "Mod-Enter": ge,
           "Shift-Enter": ge,
-          "Mod-b": (0, S.w9)(k.marks.strong),
-          "Mod-i": (0, S.w9)(k.marks.italic),
+          "Mod-b": (0, O.w9)(k.marks.strong),
+          "Mod-i": (0, O.w9)(k.marks.italic),
           Enter: (0, m.s6)(k.nodes.list_item),
           "Mod-[": (0, m.IB)(k.nodes.list_item),
           "Mod-]": (0, m.bw)(k.nodes.list_item),
-          "Shift-Ctrl-1": (0, S.uJ)(k.nodes.heading, { level: 1 }),
-          "Shift-Ctrl-2": (0, S.uJ)(k.nodes.heading, { level: 2 }),
-          "Shift-Ctrl-3": (0, S.uJ)(k.nodes.heading, { level: 3 }),
-          "Shift-Ctrl-0": (0, S.uJ)(k.nodes.paragraph),
+          "Shift-Ctrl-1": (0, O.uJ)(k.nodes.heading, { level: 1 }),
+          "Shift-Ctrl-2": (0, O.uJ)(k.nodes.heading, { level: 2 }),
+          "Shift-Ctrl-3": (0, O.uJ)(k.nodes.heading, { level: 3 }),
+          "Shift-Ctrl-0": (0, O.uJ)(k.nodes.paragraph),
         });
       var be = n(16195),
         he = n(82997),
@@ -1172,7 +1149,7 @@
       function ke(e) {
         const { view: t, uploadImage: n } = e;
         return (
-          x(
+          H(
             t,
             new se.Sy({
               props: {
@@ -1186,13 +1163,11 @@
                     r.length > 0 &&
                       setTimeout(() => {
                         !(function (e, t, n) {
-                          (0, M.mG)(this, void 0, void 0, function* () {
+                          (0, F.mG)(this, void 0, void 0, function* () {
                             for (const o of e) {
                               const e = yield fetch(o),
                                 r = yield e.blob(),
-                                a = (0, Ee.StripExifMetadata)(
-                                  yield r.arrayBuffer(),
-                                );
+                                a = (0, Ee.L4)(yield r.arrayBuffer());
                               Te(
                                 o,
                                 yield n(e.headers.get("Content-Type"), a),
@@ -1220,7 +1195,7 @@
       const _e = "/images/image_error.svg";
       var ve = n(52824),
         Ce = n(85164);
-      function Be(e) {
+      function Ne(e) {
         const {
             bbcode: t,
             className: n,
@@ -1232,11 +1207,11 @@
           } = e,
           c = o.useRef();
         c.current = r;
-        const u = (0, Ce.useConfigContext)(),
+        const u = (0, Ce.qt)(),
           [d, m] = o.useState(),
           p = o.useRef(),
           g = o.useRef();
-        g.current = l || Ne;
+        g.current = l || Be;
         const b = o.useCallback((e) => {
           var t, n;
           if (!e)
@@ -1264,7 +1239,7 @@
                   }
                   return !1;
                 })(g.current, ...e),
-              clipboardTextParser: Ae,
+              clipboardTextParser: we,
               transformPasted: ye,
             })),
             m(p.current),
@@ -1272,7 +1247,7 @@
         }, []);
         o.useLayoutEffect(() => {
           const e = (function (e, t = _) {
-            return new B(t).ParseBBCode(e);
+            return new N(t).ParseBBCode(e);
           })(t);
           p.current.updateState(
             (function (e, t) {
@@ -1280,12 +1255,12 @@
               return se.yy.create({
                 schema: k,
                 doc: e,
-                plugins: [(0, O.m8)(), fe, (0, le.h)(S.YR), n, we()],
+                plugins: [(0, M.m8)(), fe, (0, le.h)(O.YR), n, xe()],
               });
             })(e, (...e) => c.current && c.current(...e)),
           );
         }, [t]),
-          (0, G.useSetRef)(a, d);
+          (0, R.LY)(a, d);
         const h = o.useRef(),
           E = o.useCallback(
             (e) => {
@@ -1328,24 +1303,24 @@
               }
             }
           }, [v]),
-          N = (0, G.useMultipleRefs)(h, b),
-          w = o.useCallback((e) => e.currentTarget == e.target, []),
-          A = (0, ve.pj)(h, null, null, w);
+          B = (0, R.BE)(h, b),
+          x = o.useCallback((e) => e.currentTarget == e.target, []),
+          w = (0, ve.pj)(h, null, null, x);
         return o.createElement(
           o.Fragment,
           null,
           o.createElement(
-            J.Panel,
+            V.s,
             Object.assign(
               {
                 key: `editordiv_${s}`,
-                className: (0, f.default)(n, U.Container),
-                ref: N,
+                className: (0, f.Z)(n, U.Container),
+                ref: B,
                 spellCheck: s,
                 focusable: !0,
                 onActivate: C,
-                onOKActionDescription: (0, R.Localize)("#UserGameNotes_Edit"),
-                onGamepadDirection: A,
+                onOKActionDescription: (0, G.Xx)("#UserGameNotes_Edit"),
+                onGamepadDirection: w,
               },
               i,
             ),
@@ -1355,39 +1330,37 @@
             o.createElement(ke, { view: d, uploadImage: e.uploadImage }),
         );
       }
-      function Ne(e, t) {
-        (0, be.OpenLinkInNewWindow)(t, e);
+      function Be(e, t) {
+        (0, be.b8)(t, e);
       }
-      function we() {
-        return (0, F.Hw)({
+      function xe() {
+        return (0, S.Hw)({
           rules: [
-            (0, F.S0)(
+            (0, S.S0)(
               /^(\d+)\.\s$/,
               k.nodes.ordered_list,
               (e) => ({ order: parseInt(e[1]) }),
               (e, t) => t.childCount + t.attrs.order == parseInt(e[1]),
             ),
-            (0, F.S0)(/^\s*([-+*])\s$/, k.nodes.bullet_list),
-            z(/\*([^*]+)\*/, k.marks.strong),
-            z(/_([^_]+)_/, k.marks.italic),
-            z(/~([^~]+)~/, k.marks.strike),
-            z(/`([^`]+)`/, k.marks.code),
-            (0, F.zK)(/^```$/, k.nodes.code_block),
-            (0, F.zK)(/^(#{1,5})\s$/, k.nodes.heading, (e) => ({
+            (0, S.S0)(/^\s*([-+*])\s$/, k.nodes.bullet_list),
+            X(/\*([^*]+)\*/, k.marks.strong),
+            X(/_([^_]+)_/, k.marks.italic),
+            X(/~([^~]+)~/, k.marks.strike),
+            X(/`([^`]+)`/, k.marks.code),
+            (0, S.zK)(/^```$/, k.nodes.code_block),
+            (0, S.zK)(/^(#{1,5})\s$/, k.nodes.heading, (e) => ({
               level: e[1].length,
             })),
           ],
         });
       }
-      function Ae(e, t, n, o) {
+      function we(e, t, n, o) {
         let r,
           a = [];
-        for (; (r = e.match(he.k_LinkRegex)); )
+        for (; (r = e.match(he.H7)); )
           r.index > 0 && a.push(k.text(e.substring(0, r.index))),
             a.push(
-              k.text(r[0], [
-                k.marks.link.create({ href: (0, he.EnsureKnownScheme)(r[0]) }),
-              ]),
+              k.text(r[0], [k.marks.link.create({ href: (0, he.Pm)(r[0]) })]),
             ),
             (e = e.substring(r.index + r[0].length));
         return (
@@ -1395,19 +1368,19 @@
           new d.p2(d.HY.from(a), t.start(), t.end())
         );
       }
-      const Le = 52428800;
+      const Ae = 52428800;
       function ye(e, t) {
         let n = !1;
         if (
           (e.content.descendants((e, t) => {
-            "image" === e.type.name && e.attrs.src.length > Le && (n = !0);
+            "image" === e.type.name && e.attrs.src.length > Ae && (n = !0);
           }),
           n)
         ) {
           let e = [
             k.nodes.image.create({
               src: _e,
-              title: (0, R.Localize)("#UserGameNotes_ImageTooLarge"),
+              title: (0, G.Xx)("#UserGameNotes_ImageTooLarge"),
             }),
           ];
           return new d.p2(d.HY.from(e), 0, 0);
@@ -1415,8 +1388,8 @@
         return e;
       }
       var Pe = n(12041);
-      const Me = 15;
-      function Se(e) {
+      const Fe = 15;
+      function Oe(e) {
         const { note: t } = e,
           [n, s] = o.useState(!1),
           [i, c] = o.useState(),
@@ -1428,7 +1401,7 @@
           f = (0, a.ZW)(),
           b = (0, a.Am)(),
           h = (0, r.RE)(t.appid),
-          E = (0, Ce.useInGamepadUI)();
+          E = (0, Ce.id)();
         m.current == t.content || p.current || (m.current = t.content);
         const k = m.current,
           T = (0, r.eD)(),
@@ -1438,12 +1411,10 @@
                 t.doc != e.state.doc &&
                 (p.current ||
                   ((p.current = !0),
-                  l.ReactUsageReportingStore.ReportTrackedAction(
-                    "/GameNotes/NoteModified",
-                  )),
+                  l.q.ReportTrackedAction("/GameNotes/NoteModified")),
                 (d.current = () => ({
-                  title: xe(e.state.doc),
-                  bbcode: A(e.state.doc),
+                  title: He(e.state.doc),
+                  bbcode: w(e.state.doc),
                 })),
                 s(!0));
           }, []);
@@ -1459,16 +1430,16 @@
               }
               (e = void 0), (d.current = void 0);
             },
-            r = window.setTimeout(o, 1e3 * Me);
+            r = window.setTimeout(o, 1e3 * Fe);
           return () => {
             window.clearTimeout(r), o();
           };
         }, [T, n, t]);
         const v = (0, a.eE)(),
           C = (0, r.CN)(t, v),
-          B = {
+          N = {
             onSecondaryButton: () => C.mutate(),
-            onSecondaryActionDescription: (0, R.Localize)(
+            onSecondaryActionDescription: (0, G.Xx)(
               "#UserGameNotes_DeleteNote",
             ),
           };
@@ -1476,14 +1447,14 @@
           "div",
           { className: Pe.NoteEditorArea },
           !E &&
-            o.createElement(X, {
+            o.createElement(j, {
               view: i,
               refUpdateToolbar: u,
               className: Pe.Toolbar,
               bSpellcheckEnabled: f,
               setSpellcheckEnabled: b,
             }),
-          o.createElement(Be, {
+          o.createElement(Ne, {
             className: Pe.EditorInput,
             bbcode: k,
             onUpdate: _,
@@ -1491,14 +1462,14 @@
             onClickURL: g,
             bSpellcheckEnabled: f,
             uploadImage: h,
-            panelProps: B,
+            panelProps: N,
           }),
-          !E && o.createElement(Oe, { note: t, bDirty: n }),
+          !E && o.createElement(Me, { note: t, bDirty: n }),
         );
       }
-      function Oe(e) {
+      function Me(e) {
         const { note: t, bDirty: n } = e,
-          [l, c, u] = (0, G.useModalState)(!1),
+          [l, c, u] = (0, R.X9)(!1),
           d = (0, a.j_)(),
           m = (0, a.eE)(),
           p = (0, r.CN)(t, m),
@@ -1508,12 +1479,12 @@
         return o.createElement(
           "div",
           { className: Pe.NoteActions },
-          l && o.createElement(Fe, { note: t, closeModal: u, deleteNote: p }),
+          l && o.createElement(Se, { note: t, closeModal: u, deleteNote: p }),
           o.createElement(
-            j.HP,
+            K.HP,
             { toolTipContent: "#UserGameNotes_DeleteNote", direction: "top" },
             o.createElement(
-              s.Button,
+              s.zx,
               { onClick: g },
               o.createElement(i.Trash, null),
             ),
@@ -1526,39 +1497,39 @@
           n = (0, a.eE)();
         return t
           ? o.createElement(
-              s.PrimaryButton,
+              s.KM,
               { onClick: () => n(), className: Pe.CloseWindowButton },
-              (0, R.Localize)("#Button_SaveAndClose"),
+              (0, G.Xx)("#Button_SaveAndClose"),
             )
           : o.createElement(
-              s.Button,
+              s.zx,
               { onClick: () => n(), className: Pe.CloseWindowButton },
-              (0, R.Localize)("#Button_Close"),
+              (0, G.Xx)("#Button_Close"),
             );
       }
-      function Fe(e) {
+      function Se(e) {
         const { note: t, closeModal: n, deleteNote: r } = e;
         return o.createElement(
-          c.SimpleModal,
+          c.Yy,
           { active: !0 },
-          o.createElement(c.GenericConfirmDialog, {
-            strTitle: (0, R.Localize)("#UserGameNotes_DeleteNote"),
-            strDescription: (0, R.Localize)("#UserGameNotes_PromptDelete"),
+          o.createElement(c.uH, {
+            strTitle: (0, G.Xx)("#UserGameNotes_DeleteNote"),
+            strDescription: (0, G.Xx)("#UserGameNotes_PromptDelete"),
             onOK: () => r.mutate(),
             bOKDisabled: r.isLoading,
-            strOKButtonText: (0, R.Localize)("#Button_Delete"),
+            strOKButtonText: (0, G.Xx)("#Button_Delete"),
             closeModal: n,
           }),
         );
       }
-      function xe(e) {
+      function He(e) {
         let t = "";
         for (let n = 0; n < e.content.childCount; n++) {
           const o = e.content.child(n);
           if (o.isText) t += o.text;
           else {
             if (((t = t.trim()), t.length > 4)) return t;
-            if (((t = xe(o)), t.length > 4)) return t;
+            if (((t = He(o)), t.length > 4)) return t;
           }
         }
         return t.trim();
@@ -1597,12 +1568,12 @@
       }
       function h(e) {
         const { popup: t, refPopup: n } = e,
-          o = (0, g.Localize)("#GameNotes_NoteForGame", t.display_name);
+          o = (0, g.Xx)("#GameNotes_NoteForGame", t.display_name);
         return l.createElement(
-          i.PopupStyleContextRoot,
+          i.F,
           { body_class: f.GameNotesPopup },
           l.createElement(
-            p.DialogPopup,
+            p.tb,
             {
               strName: t.id,
               strTitle: o,
@@ -1613,7 +1584,7 @@
               refPopup: n,
               className: "TODO",
             },
-            l.createElement(m.Header, null, o),
+            l.createElement(m.h4, null, o),
             l.createElement(
               r.T,
               { mode: "single", closePopup: () => t.close() },
@@ -1635,7 +1606,7 @@
           o = t.noteParent,
           i = l.useMemo(() => [(0, c.q)(o)], [o]);
         return l.createElement(
-          p.DialogPopup,
+          p.tb,
           {
             strName: t.id,
             strTitle: t.display_name,
@@ -1696,7 +1667,7 @@
           f.HP,
           { toolTipContent: "#UserGameNotes_NewNote", direction: "top" },
           o.createElement(
-            i.Button,
+            i.zx,
             {
               className: m.NewNoteButton,
               onClick: () => {
@@ -1720,14 +1691,14 @@
         const { noteParent: t, notes: n, activeNoteID: a, actions: l } = e,
           [g, f] = (0, d.i4)("NotesListCollapsed", !1),
           h = (0, p.V5)(),
-          E = (0, b.useInGamepadUI)(),
+          E = (0, b.id)(),
           T = n.map((e) => {
             var t;
             return {
               title:
                 (null === (t = e.title) || void 0 === t ? void 0 : t.length) > 0
                   ? e.title
-                  : (0, u.Localize)("#UserGameNotes_Untitled"),
+                  : (0, u.Xx)("#UserGameNotes_Untitled"),
               identifier: e.id,
               content: o.createElement(s.X, { note: e }),
               pageClassName: m.NotePage,
@@ -1736,10 +1707,10 @@
           }),
           _ = (0, r.k6)(),
           v = o.useCallback((e) => k(_, t, e), [_, t]);
-        return o.createElement(i.PagedSettings, {
-          title: (0, u.Localize)("#UserGameNotes_NotesList"),
+        return o.createElement(i.TI, {
+          title: (0, u.Xx)("#UserGameNotes_NotesList"),
           pages: T,
-          className: (0, c.default)(m.NotesPagedSettings, h && m.PinnedView),
+          className: (0, c.Z)(m.NotesPagedSettings, h && m.PinnedView),
           page: a,
           onPageRequested: v,
           bottomControls: l,
@@ -1759,24 +1730,24 @@
         _ = n(85556),
         v = n(20879),
         C = n.n(v),
-        B = n(56552),
-        N = n(85067),
-        w = n(42324),
-        A = n(34656),
-        L = n(72467),
+        N = n(56552),
+        B = n(20352),
+        x = n(42324),
+        w = n(34656),
+        A = n(72467),
         y = n(63083);
       let P;
-      const M = 864e5;
-      function S(e) {
-        return `appinfo_${e}_${L.De.LANGUAGE}`;
-      }
+      const F = 864e5;
       function O(e) {
-        return Boolean(e && Date.now() - e.timeCached < M);
+        return `appinfo_${e}_${A.De.LANGUAGE}`;
+      }
+      function M(e) {
+        return Boolean(e && Date.now() - e.timeCached < F);
       }
       function D(e) {
-        const t = (0, A.useActiveServiceTransport)(),
-          n = (0, A.useStorage)();
-        return (0, B.useQuery)(
+        const t = (0, w.bY)(),
+          n = (0, w.y$)();
+        return (0, N.useQuery)(
           ["appinfo", e],
           () =>
             (0, _.mG)(this, void 0, void 0, function* () {
@@ -1787,20 +1758,20 @@
                       (n) =>
                         (0, _.mG)(this, void 0, void 0, function* () {
                           const o = new Map();
-                          (yield Promise.all(n.map((e) => t.GetObject(S(e)))))
-                            .filter(O)
+                          (yield Promise.all(n.map((e) => t.GetObject(O(e)))))
+                            .filter(M)
                             .forEach(({ value: e }) => o.set(e.appid, e));
                           const r = n.slice().filter((e) => !o.has(e));
                           if (r.length) {
-                            const n = N.gA.Init(w.Fi);
-                            n.Body().set_language((0, y.jM)(L.De.LANGUAGE)),
+                            const n = B.gA.Init(x.Fi);
+                            n.Body().set_language((0, y.jM)(A.De.LANGUAGE)),
                               n.Body().set_appids(r);
-                            const a = yield w.AE.GetApps(e, n);
+                            const a = yield x.AE.GetApps(e, n);
                             if (1 != a.GetEResult()) throw a.GetErrorMessage();
                             a.Body()
                               .toObject()
                               .apps.forEach((e) => {
-                                t.StoreObject(S(e.appid), {
+                                t.StoreObject(O(e.appid), {
                                   timeCached: Date.now(),
                                   value: e,
                                 }),
@@ -1815,30 +1786,30 @@
                 );
               })(t, n).load(e);
             }),
-          { staleTime: M, enabled: !!e },
+          { staleTime: F, enabled: !!e },
         ).data;
       }
-      var F = n(27258);
-      function x() {
+      var S = n(27258);
+      function H() {
         const { data: e, isLoading: t } = (0, l.i5)();
         return t
-          ? o.createElement(F.Throbber, { msDelayAppear: 300 })
+          ? o.createElement(S.V, { msDelayAppear: 300 })
           : o.createElement(
               "div",
               null,
               o.createElement(
                 "h1",
                 null,
-                (0, u.Localize)("#UserGameNotes_NotesList"),
+                (0, u.Xx)("#UserGameNotes_NotesList"),
               ),
               o.createElement(
                 "ul",
                 null,
-                e.map((e) => o.createElement(H, { key: e.appid, game: e })),
+                e.map((e) => o.createElement(L, { key: e.appid, game: e })),
               ),
             );
       }
-      function H(e) {
+      function L(e) {
         const { game: t } = e,
           n = D(t.appid);
         return o.createElement(
@@ -1855,7 +1826,7 @@
         return o.createElement(
           r.rs,
           null,
-          o.createElement(r.AW, { path: a.O.List() }, o.createElement(x, null)),
+          o.createElement(r.AW, { path: a.O.List() }, o.createElement(H, null)),
           o.createElement(
             r.AW,
             { path: a.O.AppNotes(":appid", ":noteid?") },

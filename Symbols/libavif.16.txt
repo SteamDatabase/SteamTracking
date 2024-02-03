@@ -1,0 +1,307 @@
+
+ T avifAlloc
+ T avifAreGridDimensionsValid
+ T avifArrayCreate
+ T avifArrayDestroy
+ T avifArrayPop
+ T avifArrayPush
+ T avifArrayPushIndex
+ T avifArrayPushPtr
+ T avifCTOHL
+ T avifCTOHS
+ T avifCalcYUVCoefficients
+ T avifCleanApertureBoxConvertCropRect
+ T avifCodecChoiceFromName
+ T avifCodecCreate
+ T avifCodecCreateAOM
+ T avifCodecCreateDav1d
+ T avifCodecDecodeInputCreate
+ T avifCodecDecodeInputDestroy
+ T avifCodecDestroy
+ T avifCodecEncodeOutputAddSample
+ T avifCodecEncodeOutputCreate
+ T avifCodecEncodeOutputDestroy
+ T avifCodecName
+ T avifCodecSpecificOptionsClear
+ T avifCodecSpecificOptionsCreate
+ T avifCodecSpecificOptionsDestroy
+ T avifCodecSpecificOptionsSet
+ T avifCodecTypeFromChoice
+ T avifCodecVersionAOM
+ T avifCodecVersionDav1d
+ T avifCodecVersions
+ T avifColorPrimariesFind
+ T avifColorPrimariesGetValues
+ T avifCropRectConvertCleanApertureBox
+ T avifDecoderCreate
+ T avifDecoderDecodedRowCount
+ T avifDecoderDestroy
+ T avifDecoderIsKeyframe
+ T avifDecoderNearestKeyframe
+ T avifDecoderNextImage
+ T avifDecoderNthImage
+ T avifDecoderNthImageMaxExtent
+ T avifDecoderNthImageTiming
+ T avifDecoderParse
+ T avifDecoderRead
+ T avifDecoderReadFile
+ T avifDecoderReadMemory
+ T avifDecoderReset
+ T avifDecoderSetIO
+ T avifDecoderSetIOFile
+ T avifDecoderSetIOMemory
+ T avifDecoderSetSource
+ T avifDiagnosticsClearError
+ T avifDiagnosticsPrintf
+ T avifDimensionsTooLarge
+ T avifEncoderAddImage
+ T avifEncoderAddImageGrid
+ T avifEncoderCreate
+ T avifEncoderDestroy
+ T avifEncoderFinish
+ T avifEncoderSetCodecSpecificOption
+ T avifEncoderWrite
+ T avifFillAlpha
+ T avifFractionAdd
+ T avifFractionCD
+ T avifFractionSimplify
+ T avifFractionSub
+ T avifFree
+ T avifFullToLimitedUV
+ T avifFullToLimitedY
+ T avifGetExifOrientationOffset
+ T avifGetExifTiffHeaderOffset
+ T avifGetPixelFormatInfo
+ T avifHTON64
+ T avifHTONL
+ T avifHTONS
+ T avifIOCreateFileReader
+ T avifIOCreateMemoryReader
+ T avifIODestroy
+ T avifImageAllocatePlanes
+ T avifImageCopy
+ T avifImageCopyNoAlloc
+ T avifImageCopySamples
+ T avifImageCreate
+ T avifImageCreateEmpty
+ T avifImageDestroy
+ T avifImageExtractExifOrientationToIrotImir
+ T avifImageFreePlanes
+ T avifImageIsOpaque
+ T avifImagePlane
+ T avifImagePlaneHeight
+ T avifImagePlaneRowBytes
+ T avifImagePlaneWidth
+ T avifImageRGBToYUV
+ T avifImageRGBToYUVLibSharpYUV
+ T avifImageRGBToYUVLibYUV
+ T avifImageScale
+ T avifImageSetDefaults
+ T avifImageSetMetadataExif
+ T avifImageSetMetadataXMP
+ T avifImageSetProfileICC
+ T avifImageSetViewRect
+ T avifImageStealPlanes
+ T avifImageUsesU16
+ T avifImageYUVToRGB
+ T avifImageYUVToRGBLibYUV
+ T avifLibYUVVersion
+ T avifLimitedToFullUV
+ T avifLimitedToFullY
+ T avifNTOH64
+ T avifNTOHL
+ T avifNTOHS
+ T avifPeekCompatibleFileType
+ T avifPixelFormatToString
+ T avifProgressiveStateToString
+ T avifRGBFormatChannelCount
+ T avifRGBFormatHasAlpha
+ T avifRGBImageAllocatePixels
+ T avifRGBImageFreePixels
+ T avifRGBImagePixelSize
+ T avifRGBImagePremultiplyAlpha
+ T avifRGBImagePremultiplyAlphaLibYUV
+ T avifRGBImageSetDefaults
+ T avifRGBImageToF16LibYUV
+ T avifRGBImageUnpremultiplyAlpha
+ T avifRGBImageUnpremultiplyAlphaLibYUV
+ T avifROStreamCurrent
+ T avifROStreamHasBytesLeft
+ T avifROStreamOffset
+ T avifROStreamRead
+ T avifROStreamReadAndEnforceVersion
+ T avifROStreamReadBits
+ T avifROStreamReadBits8
+ T avifROStreamReadBoxHeader
+ T avifROStreamReadBoxHeaderPartial
+ T avifROStreamReadString
+ T avifROStreamReadU16
+ T avifROStreamReadU16Endianness
+ T avifROStreamReadU32
+ T avifROStreamReadU32Endianness
+ T avifROStreamReadU64
+ T avifROStreamReadUX8
+ T avifROStreamReadVarInt
+ T avifROStreamReadVersionAndFlags
+ T avifROStreamRemainingBytes
+ T avifROStreamSetOffset
+ T avifROStreamSkip
+ T avifROStreamStart
+ T avifRWDataFree
+ T avifRWDataRealloc
+ T avifRWDataSet
+ T avifRWStreamFinishBox
+ T avifRWStreamFinishWrite
+ T avifRWStreamOffset
+ T avifRWStreamSetOffset
+ T avifRWStreamStart
+ T avifRWStreamWrite
+ T avifRWStreamWriteBits
+ T avifRWStreamWriteBox
+ T avifRWStreamWriteChars
+ T avifRWStreamWriteFullBox
+ T avifRWStreamWriteU16
+ T avifRWStreamWriteU32
+ T avifRWStreamWriteU64
+ T avifRWStreamWriteU8
+ T avifRWStreamWriteVarInt
+ T avifRWStreamWriteZeros
+ T avifReformatAlpha
+ T avifResultToString
+ T avifRoundf
+ T avifSequenceHeaderParse
+ T avifSetTileConfiguration
+ T avifTransferCharacteristicsFindByGamma
+ T avifTransferCharacteristicsGetGamma
+ T avifVersion
+ __bzero
+ __stack_chk_fail
+ __stack_chk_guard
+ abort
+ aom_codec_av1_cx
+ aom_codec_control
+ aom_codec_destroy
+ aom_codec_enc_config_default
+ aom_codec_enc_config_set
+ aom_codec_enc_init_ver
+ aom_codec_encode
+ aom_codec_err_to_string
+ aom_codec_error
+ aom_codec_error_detail
+ aom_codec_get_cx_data
+ aom_codec_set_option
+ aom_codec_version
+ aom_codec_version_str
+ aom_img_alloc
+ aom_img_free
+ d _dyld_private
+ d availableCodecs
+ d avifColorPrimariesTables
+ d endUsageEnum
+ d matrixCoefficientsTables
+ dav1d_close
+ dav1d_data_unref
+ dav1d_data_wrap
+ dav1d_default_settings
+ dav1d_get_picture
+ dav1d_open
+ dav1d_picture_unref
+ dav1d_send_data
+ dav1d_version
+ dyld_stub_binder
+ fclose
+ ferror
+ fopen
+ fread
+ free
+ fseek
+ ftell
+ malloc
+ memcmp
+ memcpy
+ memmove
+ memset
+ pthread_create
+ pthread_join
+ r alphaURN
+ r avifEncoderFinish.unityMatrix
+ r noScaling
+ r scalingModeMap
+ r xmpContentType
+ snprintf
+ strcmp
+ strlen
+ strncmp
+ strtol
+ t aomCodecDestroyInternal
+ t aomCodecEncodeFinish
+ t aomCodecEncodeImage
+ t avifCodecDecodeInputFillFromDecoderItem
+ t avifCodecDecodeInputFillFromSampleTable
+ t avifCropRectIsValid
+ t avifDav1dFreeCallback
+ t avifDecoderDataClearTiles
+ t avifDecoderDataCreateTile
+ t avifDecoderDataDestroy
+ t avifDecoderDataResetCodec
+ t avifDecoderDecodeTiles
+ t avifDecoderFindMetadata
+ t avifDecoderGenerateImageTiles
+ t avifDecoderItemGetGridCodecType
+ t avifDecoderItemRead
+ t avifDecoderItemValidateProperties
+ t avifDecoderPrepareSample
+ t avifEncoderAddImageInternal
+ t avifEncoderAddImageItems
+ t avifEncoderBackupSettings
+ t avifEncoderDataCreateExifItem
+ t avifEncoderDataCreateItem
+ t avifEncoderDataCreateXMPItem
+ t avifEncoderDataDestroy
+ t avifEncoderDataShouldForceKeyframeForAlpha
+ t avifEncoderDetectChanges
+ t avifEncoderWriteColorProperties
+ t avifEncoderWriteExtendedColorProperties
+ t avifEncoderWriteMediaDataBox
+ t avifEncoderWriteTrackMetaBox
+ t avifFileTypeIsCompatible
+ t avifIOFileReaderDestroy
+ t avifIOFileReaderRead
+ t avifIOMemoryReaderDestroy
+ t avifIOMemoryReaderRead
+ t avifImageCopyAndPad
+ t avifImageIdentity8ToRGB8ColorFullRange
+ t avifImageYUV16ToRGB16Color
+ t avifImageYUV16ToRGB16Mono
+ t avifImageYUV16ToRGB8Color
+ t avifImageYUV16ToRGB8Mono
+ t avifImageYUV8ToRGB16Color
+ t avifImageYUV8ToRGB16Mono
+ t avifImageYUV8ToRGB8Color
+ t avifImageYUV8ToRGB8Mono
+ t avifImageYUVToRGBImpl
+ t avifImageYUVToRGBThreadWorker
+ t avifItemPropertyDedupCreate
+ t avifItemPropertyDedupDestroy
+ t avifItemPropertyDedupFinish
+ t avifKeyEqualsName
+ t avifMetaDestroy
+ t avifMetaFindItem
+ t avifParseAV1LayeredImageIndexingProperty
+ t avifParseChunkOffsetBox
+ t avifParseContentLightLevelInformationBox
+ t avifParseFileTypeBox
+ t avifParseImageGridBox
+ t avifParseItemPropertyContainerBox
+ t avifParseLayerSelectorProperty
+ t avifParseMetaBox
+ t avifParseOperatingPointSelectorProperty
+ t avifParsePixelInformationProperty
+ t avifPrepareReformatState
+ t avifProcessAOMOptionsPostInit
+ t avifSampleTableDestroy
+ t dav1dCodecDestroyInternal
+ t dav1dCodecGetNextImage
+ t writeConfigBox
+ time
+ vsnprintf

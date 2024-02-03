@@ -44,6 +44,7 @@
  T CAdHocValidation::~CAdHocValidation()
  T CAdHocValidation_SimpleCallback::CAdHocValidation_SimpleCallback(void (*)(CValidator&))
  T CAdHocValidation_SimpleCallback::DoValidate(CValidator&) const
+ T CStack::Print(void (*)(int, CStack::PrintFrame const*, void*), void*) const
  T CTier0::ValidateGlobals(CValidator&)
  T CVProfile_ExitScope
  T CValidator::AddValidationLock(SteamThreadTools::CThreadMutex*)

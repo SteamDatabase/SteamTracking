@@ -1086,7 +1086,9 @@ disables GPU and renderer hang timeouts
 -cef-enable-debugging
 enables Chromium remote debugging, defaulting to localhost:8080
 -cef-disable-occlusion
-disables Chromium window occlusion testing on Windows
+disables Chromium window occlusion testing
+-cef-force-occlusion
+force enable Chromium window occlusion testing
 -cef-enable-gpu-debugging
 Enable GPU debugging in Chromium, costs a glGetError() call after every command
 -cef-disable-gpu
@@ -1172,7 +1174,6 @@ GetClientActualLauncherType
 "
 --proxy-server="%s"
 --proxy-bypass-list="localhost;127.0.0.1"
---enable-media-stream
 DcheckIsFatal
 .cef-enable-remote-debugging
 -devtools-address
@@ -1181,7 +1182,7 @@ DcheckIsFatal
 8080
 --remote-debugging-port=%s
 --remote-debugging-address=%s
-WebContentsOcclusion
+--disable-backgrounding-occluded-windows
 --enable-smooth-scrolling
 --disable-smooth-scrolling
 --disable-gpu-compositing
@@ -2414,23 +2415,27 @@ id
 @
 
 @
-
-
-P
-
+)
 
 
 @
 
-J
-U
-K
+F
+4
+)
+G
+9
+;
 0
 0
+?
+
 
 
 Hi
+%
 `
+,
 0
 0
 AT=

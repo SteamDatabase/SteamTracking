@@ -487,8 +487,7 @@ message CMsgSystemDisplay {
 	optional bool is_vrr_enabled = 15;
 	optional bool is_hdr_capable = 16;
 	optional bool is_hdr_enabled = 17;
-	repeated int32 compatibility_params = 18;
-	optional bool app_wants_hdr = 19;
+	repeated int32 supported_refresh_rates = 18;
 }
 
 message CMsgSystemDisplayManagerState {
@@ -538,6 +537,7 @@ message CMsgSystemManagerSettings {
 	optional float display_colortemp_default = 36;
 	optional bool display_colortemp_enabled = 37;
 	optional .EColorGamutLabelSet display_colorgamut_labelset = 38 [default = k_ColorGamutLabelSet_Default];
+	optional float display_brightness_overdrive_hdr_split = 39;
 }
 
 message CMsgSelectOSBranchParams {

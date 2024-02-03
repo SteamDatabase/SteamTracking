@@ -3506,7 +3506,7 @@
 "SteamUI_Settings_Security_Status_State_2" "Steam Guard отключен"
 "SteamUI_Settings_Security_Status_State_3" "Неизвестно, автономный режим"
 "SteamUI_Settings_Security_Status_State_4" "Steam Guard не включен"
-"SteamUI_Settings_Security_Status_State_1_WithTime" "Под защитой Steam Guard c %s1"
+"SteamUI_Settings_Security_Status_State_1_WithTime" "Под защитой Steam Guard c: %s1"
 
 "SteamUI_Settings_Security_Status_TwoFactor" "Под защитой мобильного аутентификатора Steam Guard"
 "SteamUI_Settings_Security_ManageTwoFactor_Title" "Настройки мобильного аутентификатора Steam Guard"

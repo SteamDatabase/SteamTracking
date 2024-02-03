@@ -16,7 +16,7 @@
 "FileOpenDialog_Name"		"ชื่อ"
 "FileOpenDialog_Type"		"ชนิด"
 "SysMenu_Minimize"		" ขนาดเล็กสุด "
-"SysMenu_Maximize"		" ขนาดใหญ่สุด "
+"SysMenu_Maximize"		" ขยายสุด "
 "SysMenu_Close"			" ปิด "
 "Frame_Untitled"		"ไม่มีหัวข้อ"
 "MessageBox_OK"			"ตกลง"
@@ -100,7 +100,7 @@
 "SMPEvent_JumpFwd"		"ข้ามไปข้างหน้า"
 "SMPEvent_JumpBack"		"ข้ามถอยหลัง"
 "SMPEvent_Repeat"		"ทำซ้ำ"
-"SMPEvent_Maximize"		"สูงสุด"
+"SMPEvent_Maximize"		"ขยายสุด"
 "SMPEvent_Minimize"		"ต่ำสุด"
 "SMPEvent_Restore"		"เรียกคืน"
 

@@ -164,5 +164,6 @@
     "SteamNotifications_ParentalFeatureAccessResponseBodyApproved": "%1$s 已批准您访问蒸汽平台功能的请求",
     "SteamNotifications_ParentalFeatureAccessResponseBodyDeclined": "%1$s 已拒绝您访问蒸汽平台功能的请求",
     "FamilyHistory_SteamSupport": "蒸汽平台客服",
-    "FamilyView_RequestFeatureAccess_Offline": "您目前已与蒸汽平台断开连接。上线向家庭中的成年人请求访问此功能。"
+    "FamilyView_RequestFeatureAccess_Offline": "您目前已与蒸汽平台断开连接。上线向家庭中的成年人请求访问此功能。",
+    "RemotePlay_StoreFunctionalityBlocked_Description": "通过此蒸汽平台流式应用客户端运行时无法访问商店。"
 }

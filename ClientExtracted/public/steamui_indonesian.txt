@@ -4696,7 +4696,7 @@ Pilih kategori untuk game-game ini agar kamu dapat mencarinya secara cepat dan m
 
 "SteamUI_StreamingIntro_Title"		"Selamat Datang di Steam Remote Play"
 "SteamUI_StreamingIntro"			"Kamu akan menjalankan game ini di komputer lain dan memainkannya di sini menggunakan Steam Remote Play."
-"SteamUI_StreamingIntro2"			"Pengalaman bermainmu bisa berbeda tergantung dari hardware dan jaringan lokalmu. Untuk meningkatkan performa, kunjungi pengaturan Remote Play."
+"SteamUI_StreamingIntro2"			"Pengalaman bermainmu bisa berbeda tergantung dari hardware dan jaringan rumahmu. Untuk meningkatkan performa, kunjungi pengaturan Remote Play."
 "SteamUI_StreamLaunch_ProgressTitle"		"%game% - Peluncuran Stream"
 "SteamUI_StreamLaunch_ServerProgress"			"Bersiap untuk streaming %game%..."
 "SteamUI_StreamLaunch_RemoteStart"				"Bersiap untuk streaming %game%..."

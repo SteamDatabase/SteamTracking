@@ -16,7 +16,6 @@
  GetMiniDumpBuildID
  GetMiniDumpDirectory
  GetMiniDumpSteamID
- GetOSType
  Log
  OBJC_CLASS_$_NSAppleEventManager
  OBJC_CLASS_$_NSApplication

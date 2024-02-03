@@ -243,6 +243,14 @@ message CMarketingMessages_GetPartnerMessagePreview_Response {
 	optional .CMarketingMessageProto message = 1;
 }
 
+message CMarketingMessage_GetMarketingMessagesForApps_Request {
+	repeated uint32 appids = 1;
+}
+
+message CMarketingMessage_GetMarketingMessagesForApps_Response {
+	repeated .CMarketingMessageProto messages = 1;
+}
+
 service MarketingMessages {
 	rpc GetActiveMarketingMessages (.CMarketingMessages_GetActiveMarketingMessages_Request) returns (.CMarketingMessages_GetActiveMarketingMessages_Response);
 	rpc GetMarketingMessagesForUser (.CMarketingMessages_GetMarketingMessagesForUser_Request) returns (.CMarketingMessages_GetMarketingMessagesForUser_Response);
@@ -261,4 +269,5 @@ service MarketingMessages {
 	rpc GetPartnerReadyToPublishMessages (.CMarketingMessages_GetPartnerReadyToPublishMessages_Request) returns (.CMarketingMessages_GetPartnerReadyToPublishMessages_Response);
 	rpc PublishPartnerMessage (.CMarketingMessages_PartnerPublishMessage_Request) returns (.CMarketingMessages_PartnerPublishMessage_Response);
 	rpc GetPartnerMessagePreview (.CMarketingMessages_GetPartnerMessagePreview_Request) returns (.CMarketingMessages_GetPartnerMessagePreview_Response);
+	rpc GetMarketingMessagesForApps (.CMarketingMessage_GetMarketingMessagesForApps_Request) returns (.CMarketingMessage_GetMarketingMessagesForApps_Response);
 }

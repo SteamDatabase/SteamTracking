@@ -220,7 +220,7 @@ div.ModalPosition_TopBar {
   position: absolute;
   top: 0;
   width: 100%;
-  z-index: 1;
+  z-index: 2;
 }
 .ModalDialogPopup .DesktopUI:not(.WindowFocus) .ModalPosition_TopBar {
   opacity: 0;
@@ -1202,7 +1202,7 @@ button.TextButton.gpfocus {
   min-height: 0;
   overflow-y: scroll;
 }
-ul {
+.DialogContent ul {
   list-style-type: disc;
   list-style-position: inside;
 }
@@ -3622,6 +3622,16 @@ button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover[disabled] {
   color: #fff;
   pointer-events: none;
 }
+button.gamepaddialog_Button_1kn70.DialogButton.Disabled.gpfocus,
+button.gamepaddialog_Button_1kn70.DialogButton[disabled].gpfocus,
+button.gamepaddialog_Button_1kn70.DialogButton:enabled.Disabled.gpfocus,
+button.gamepaddialog_Button_1kn70.DialogButton:enabled[disabled].gpfocus,
+button.gamepaddialog_Button_1kn70.DialogButton:active.Disabled.gpfocus,
+button.gamepaddialog_Button_1kn70.DialogButton:active[disabled].gpfocus,
+button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover.Disabled.gpfocus,
+button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover[disabled].gpfocus {
+  background: #000;
+}
 button.gamepaddialog_Button_1kn70.DialogButton:before,
 button.gamepaddialog_Button_1kn70.DialogButton:enabled:before,
 button.gamepaddialog_Button_1kn70.DialogButton:active:before,
@@ -4147,6 +4157,19 @@ button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover:before {
   height: 1em;
   margin: auto;
 }
+.gamepaddialog_DropDownRow_xCbGI {
+  display: flex;
+  width: 100%;
+}
+.gamepaddialog_DropDownRow_xCbGI .gamepaddialog_IconContainer_223iJ {
+  width: 2ch;
+  height: 100%;
+  flex-shrink: 0;
+  margin-right: 1ch;
+}
+.gamepaddialog_DropDownRow_xCbGI .gamepaddialog_Label_SqnsK {
+  flex-grow: 1;
+}
 .gamepaddialog_ControlsListOuterPanel_2Mvpu {
   --controls-list-spacing: 0px;
   --controls-child-max-width: 250px;
@@ -4406,6 +4429,33 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Z-Cc svg {
   width: var(--normalized-width-handle);
   border-radius: 3px;
 }
+.gamepadslider_DefaultValueIsColorRange_2xK5B
+  .gamepadslider_SliderTrack_Mq25N::before {
+  --signed-normalized-slider-default-value: calc(
+    2 * var(--normalized-slider-default-value) - 1
+  );
+  --gradient-split-pct: calc(
+    100% * var(--normalized-slider-default-value) /
+      var(--normalized-slider-value) -
+      (24px * 0.5 * var(--signed-normalized-slider-default-value))
+  );
+}
+.gamepadslider_DefaultValueColorLeft_uanTs
+  .gamepadslider_SliderTrack_Mq25N::before {
+  background: linear-gradient(
+    90deg,
+    var(--default-value-track-color) 0% var(--gradient-split-pct),
+    var(--left-track-color) calc(var(--gradient-split-pct))
+  );
+}
+.gamepadslider_DefaultValueColorRight_3aFKY
+  .gamepadslider_SliderTrack_Mq25N::before {
+  background: linear-gradient(
+    90deg,
+    var(--left-track-color) 0% var(--gradient-split-pct),
+    var(--default-value-track-color) calc(var(--gradient-split-pct))
+  );
+}
 .gamepadslider_SliderControlAndNotches_1Cccx.gamepadslider_Disabled_1lI1N
   .gamepadslider_SliderTrack_Mq25N::before {
   background: #67707b;
@@ -4422,7 +4472,8 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Z-Cc svg {
   position: absolute;
   transform: translateX(
     calc(
-      -100% * var(--inverse-normalized-value) + 24px * var(--inverse-normalized-value)
+      -100% * var(--inverse-normalized-value) + (24px *
+            var(--inverse-normalized-value))
     )
   );
 }
@@ -4756,7 +4807,8 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Z-Cc svg {
   position: absolute;
   transform: translateX(
     calc(
-      -100% * var(--inverse-normalized-default-value) + 24px * var(--inverse-normalized-default-value)
+      -100% * var(--inverse-normalized-default-value) + (24px *
+            var(--inverse-normalized-default-value))
     )
   );
 }

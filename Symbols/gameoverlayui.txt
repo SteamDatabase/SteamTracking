@@ -313,15 +313,30 @@
  __tolower
  _objc_empty_cache
  _tlv_bootstrap
+ abort
  alphasort$INODE64
  atoi
  atoll
+ avifEncoderAddImage
+ avifEncoderCreate
+ avifEncoderDestroy
+ avifEncoderFinish
+ avifImageCreate
+ avifImageDestroy
+ avifImageRGBToYUV
+ avifRGBImageSetDefaults
+ avifRWDataFree
  bootstrap_look_up
  bootstrap_port
  ceilf
  close
  closedir
  cos
+ crc32
+ deflate
+ deflateEnd
+ deflateInit2_
+ deflateReset
  dlclose
  dlopen
  dlsym
@@ -335,6 +350,7 @@
  fnmatch
  fopen
  fprintf
+ fputc
  fputs
  fread
  free
@@ -384,6 +400,7 @@
  launch_data_free
  launch_data_new_string
  launch_msg
+ longjmp
  lseek
  lstat$INODE64
  mach_msg
@@ -410,6 +427,7 @@
  operator new(unsigned long)
  operator new(unsigned long, std::nothrow_t const&)
  operator new[](unsigned long)
+ powf
  pthread_mutex_lock
  pthread_mutex_unlock
  pthread_self
@@ -426,6 +444,7 @@
  sem_trywait
  sem_unlink
  sem_wait
+ setjmp
  setlocale
  shm_open
  shm_unlink

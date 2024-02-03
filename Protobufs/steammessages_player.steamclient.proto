@@ -32,6 +32,22 @@ enum ETextFilterSetting {
 	k_ETextFilterSettingDisabled = 3;
 }
 
+message CPlayer_GetRecentPlaytimeSessionsForChild_Request {
+	optional uint64 steamid = 1;
+}
+
+message CPlayer_GetRecentPlaytimeSessionsForChild_Response {
+	message PlaytimeSession {
+		optional uint32 time_start = 1;
+		optional uint32 time_end = 2;
+		optional uint32 appid = 3;
+		optional uint32 device_type = 4;
+		optional bool disconnected = 5;
+	}
+
+	repeated .CPlayer_GetRecentPlaytimeSessionsForChild_Response.PlaytimeSession sessions = 1;
+}
+
 message CPlayer_GetPlayerLinkDetails_Request {
 	repeated uint64 steamids = 1;
 }
@@ -829,6 +845,7 @@ message CPlayer_PrivacySettingsChanged_Notification {
 }
 
 service Player {
+	rpc GetRecentPlaytimeSessionsForChild (.CPlayer_GetRecentPlaytimeSessionsForChild_Request) returns (.CPlayer_GetRecentPlaytimeSessionsForChild_Response);
 	rpc GetPlayerLinkDetails (.CPlayer_GetPlayerLinkDetails_Request) returns (.CPlayer_GetPlayerLinkDetails_Response);
 	rpc GetMutualFriendsForIncomingInvites (.CPlayer_GetMutualFriendsForIncomingInvites_Request) returns (.CPlayer_GetMutualFriendsForIncomingInvites_Response);
 	rpc GetOwnedGames (.CPlayer_GetOwnedGames_Request) returns (.CPlayer_GetOwnedGames_Response);

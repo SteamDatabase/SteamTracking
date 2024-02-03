@@ -6481,26 +6481,6 @@ enum UnnamedEnum5f9e5112c68eb7f0
 	k_ModRemoveAdultOnlyContent = 7;
 }
 
-enum UnnamedEnum5fafd99067d7a555
-{
-	k_eIntro = 0;
-	k_eNonVerifiedGame = 1;
-	k_eGyro = 2;
-	k_eAppTextInputDoesNotAutomaticallyInvokesKeyboard = 3;
-	k_eRemotePlayConfirm = 4;
-	k_eAppLauncherInteractionIssues = 5;
-	k_eAppHasSmallText = 6;
-	k_eExternalControllersAndSIAPI = 7;
-	k_eIntroToActionSets = 8;
-	k_eIntroToSteamInputGames = 9;
-	k_eGamepadRequired = 10;
-	k_eGamepadRecommended = 11;
-	k_eCurrentGamepadUnsupported = 12;
-	k_eCurrentGamepadSteamInputOptIn = 13;
-	k_eVRRequired = 14;
-	k_eIntroToVRTheater = 15;
-}
-
 enum UnnamedEnum618726a5cc07bf68
 {
 	Invalid = 0;
@@ -7222,6 +7202,27 @@ enum UnnamedEnuma68ec96c8362722a
 	UserInteraction_Timeout = 2;
 	Standby = 3;
 	Idle_Timeout = 4;
+}
+
+enum UnnamedEnuma73d7b4087cb9457
+{
+	k_eIntro = 0;
+	k_eNonVerifiedGame = 1;
+	k_eGyro = 2;
+	k_eAppTextInputDoesNotAutomaticallyInvokesKeyboard = 3;
+	k_eRemotePlayConfirm = 4;
+	k_eAppLauncherInteractionIssues = 5;
+	k_eAppHasSmallText = 6;
+	k_eExternalControllersAndSIAPI = 7;
+	k_eIntroToActionSets = 8;
+	k_eIntroToSteamInputGames = 9;
+	k_eGamepadRequired = 10;
+	k_eGamepadRecommended = 11;
+	k_eCurrentGamepadUnsupported = 12;
+	k_eCurrentGamepadSteamInputOptIn = 13;
+	k_eVRRequired = 14;
+	k_eIntroToVRTheater = 15;
+	k_eHDRRequiresUserAction = 16;
 }
 
 enum UnnamedEnuma744c529bb8c8699
@@ -8063,6 +8064,16 @@ enum UnnamedEnumfdf9542cbb4256c3
 	None = 0;
 	Main = 1;
 	QuickAccess = 2;
+}
+
+enum UnnamedEnumff958f9fe631673c
+{
+	String = 0;
+	Proto = 1;
+	Boolean = 2;
+	Float = 3;
+	Double = 4;
+	Int32 = 5;
 }
 
 enum UnnamedEnumff97bb87ab229b1b

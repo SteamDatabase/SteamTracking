@@ -85,6 +85,7 @@ ${CDN_URL}apps/dota2/images/leagues/${}/images/image_9.png
 ${CDN_URL}apps/dota2/players/${nAccountID}.png
 ${CDN_URL}apps/dota2/teamlogos/${nTeamID}.png
 ${CDN_URL}apps/dota2/teamlogos/${}.png
+${CHAT_BASE_URL}${offlineImage}
 ${CHAT_BASE_URL}actions/EmoticonData
 ${CHAT_BASE_URL}actions/ajaxgetgoldenprofiledata/
 ${CHAT_BASE_URL}broadcast/addbroadcastwebrtccandidate
@@ -868,7 +869,6 @@ ${MEDIA_CDN_COMMUNITY_URL}images/items/${}/${hero_carousel_image}
 ${MEDIA_CDN_COMMUNITY_URL}images/items/${}/${item_image_small}
 ${MEDIA_CDN_COMMUNITY_URL}images/items/${}/${}
 ${MEDIA_CDN_COMMUNITY_URL}images/items/1658760/${item_image_small}
-${MEDIA_CDN_COMMUNITY_URL}images/steamtv/${}/${}
 ${MEDIA_CDN_COMMUNITY_URL}images/steamworks_docs/${LANGUAGE}/${}
 ${MEDIA_CDN_COMMUNITY_URL}images/steamworks_docs/english/${}
 ${MEDIA_CDN_URL}${asset_url}
@@ -1209,7 +1209,6 @@ ${STORE_BASE_URL}buyitem/${DOTA_APP_ID}/${}/${}
 ${STORE_BASE_URL}buyitem/${nAppID}/${nItemDefID}/${}
 ${STORE_BASE_URL}cart
 ${STORE_BASE_URL}cart/
-${STORE_BASE_URL}cart/?prsi=${}
 ${STORE_BASE_URL}cart/addtocart
 ${STORE_BASE_URL}cart/ajaxredeemtokensforcartdiscount
 ${STORE_BASE_URL}cart/ajaxsaledropprogress
@@ -1308,6 +1307,7 @@ ${STORE_BASE_URL}labs/ajaxgetsimilarapps?appid=${}&model=${similarity_model}
 ${STORE_BASE_URL}labs/ajaxgetsimilaritymodelnames
 ${STORE_BASE_URL}labs/contenthub?optout=1
 ${STORE_BASE_URL}labs/trendingreviews/
+${STORE_BASE_URL}login/?steamtv
 ${STORE_BASE_URL}login/checkdevice
 ${STORE_BASE_URL}login?redir=${}
 ${STORE_BASE_URL}lunarnewyearmarket
@@ -1844,7 +1844,6 @@ http://cdn.steamcommunity.com/economy/emoticon/:twteamrandom:
 http://cdn.steamcommunity.com/economy/emoticon/:waterrune:
 http://cdn.steamcommunity.com/economy/emoticon/:wormwarp:
 http://help.steampowered.com/
-http://ns.adobe.com/AdobeIllustrator/10.0/
 http://proxy
 http://steamcommunity-a.akamaihd.net/economy/image/U8721VM9p9C2v1o6cKJ4qEnGqnE7IoTQgZI-VTdwyTBeimAcIoxXpgK8bPeslY9pPJIvB5IWW2-452kaM8heLSRgleGGo7VWk-kzO_V91empDlVz7ORGAWDqHhbR1TfHLen4wgZiPcIqcBn0kpYb7cAXB9ZJHRPUDQ
 http://steamcommunity-a.akamaihd.net/economy/image/U8721VM9p9C2v1o6cKJ4qEnGqnE7IoTQgZI-VTdwyTBeimAcIoxXpgK8bPeslY9pPJIvB5IWW2-452kaM8heLSRgleGHorVWwb1mbacg0bL6DV136-dDUDPhGBHXgmacLef8nQM0MpF8IBukyM1M7cAXB9aR2qBKFA

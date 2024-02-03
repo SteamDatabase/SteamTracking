@@ -13,7 +13,7 @@
     },
     31149: (n, e, t) => {
       "use strict";
-      t.r(e), t.d(e, { AwardIcon: () => u, AwardIconList: () => l });
+      t.r(e), t.d(e, { AwardIcon: () => u, AwardIconList: () => d });
       var o = t(27378),
         a = t(91055),
         r = t(94256),
@@ -23,7 +23,7 @@
         p = t(35484);
       class u extends o.PureComponent {
         render() {
-          const n = (0, s.LocalizePlural)(
+          const n = (0, s.kb)(
             "#RewardsReaction_Tooltip",
             this.props.reaction.count || 0,
             (0, a.C)(this.props.reaction.reaction_type),
@@ -31,7 +31,7 @@
           return o.createElement(
             r.HP,
             {
-              className: (0, p.default)(i().InfoContainer, i().IconContainer),
+              className: (0, p.Z)(i().InfoContainer, i().IconContainer),
               toolTipContent: n,
             },
             o.createElement("img", {
@@ -47,7 +47,7 @@
           );
         }
       }
-      class l extends o.PureComponent {
+      class d extends o.PureComponent {
         render() {
           let n = [];
           for (const e of this.props.reactions)

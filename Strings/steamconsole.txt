@@ -1,8 +1,6 @@
 __TEXT
 __text
 __TEXT
-@_
-@_
 __stubs
 __TEXT
 __stub_helper
@@ -214,7 +212,7 @@ ClientAPI_Init(GlobalInstance): GetIClientInventory returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientBluetoothManager returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientParties returned NULL.
 ClientAPI_RunCallbacks
-IVRSteamPrivate_020
+IVRSteamPrivate_021
 com.valvesoftware.steam.ipctool
 ipcserver restart: expected: %d, got: %d
 pid %d != %d, clearing client_port = %d, server_port = %d
@@ -261,7 +259,6 @@ ClientAPI_Init(GlobalInstance): GetIClientControllerSerialized returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientSharedConnection returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientShader returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientCompat returned NULL.
-ClientAPI_Init(GlobalInstance): GetIClientSTARInternal returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientNetworkingUtils returned NULL.
 -quicklogin
 Set the base used to construct quick login URLs
@@ -1556,4 +1553,3 @@ g
 \
 0
 Ic]
-A

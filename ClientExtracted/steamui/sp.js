@@ -3,23 +3,23 @@
   [5742],
   {
     67131: (e, n, t) => {
-      t.r(n), t.d(n, { default: () => p });
+      t.r(n), t.d(n, { default: () => v });
       var r = t(85556),
-        o = t(36512),
-        a = t(90829),
-        i = t(72927),
-        u = t(27378),
+        a = t(36512),
+        i = t(90829),
+        o = t(14413),
+        l = t(27378),
         c = t(31518),
-        l = t(76512),
+        u = t(76512),
         s = t(56552),
-        d = t(34656);
-      var m = t(60335);
-      const f = u.memo(function () {
+        m = t(34656);
+      var d = t(60335);
+      const f = l.memo(function () {
         const e = (0, s.useQueryClient)();
         return (
           (function (e, n) {
-            const t = (0, d.useActiveCMInterface)();
-            (0, u.useEffect)(() => {
+            const t = (0, m.rK)();
+            (0, l.useEffect)(() => {
               if (t)
                 return t.messageHandlers.RegisterServiceNotificationHandler(
                   e,
@@ -27,24 +27,20 @@
                 ).unregister;
             }, [t, e, n]);
           })(
-            l.oD.NotifyPrivateAppListChangedHandler,
-            u.useCallback(
-              (n) => ((0, m.z3)(e, n.Body().private_apps().appids()), 1),
+            u.oD.NotifyPrivateAppListChangedHandler,
+            l.useCallback(
+              (n) => ((0, d.z3)(e, n.Body().private_apps().appids()), 1),
               [e],
             ),
           ),
           null
         );
       });
-      var v = t(90660);
-      const w = u.memo(function (e) {
-        return u.createElement(
-          v.MultiErrorBoundary,
-          null,
-          u.createElement(f, null),
-        );
+      var w = t(90660);
+      const p = l.memo(function (e) {
+        return l.createElement(w.DT, null, l.createElement(f, null));
       });
-      (0, t(79588).configure)({ enforceActions: "never" }),
+      (0, t(79588).jQ)({ enforceActions: "never" }),
         (function () {
           (0, r.mG)(this, void 0, void 0, function* () {
             !(function () {
@@ -54,22 +50,22 @@
                 (e.SetBackgroundInterval = window.setInterval),
                 (e.SetBackgroundTimeout = window.setTimeout);
             })();
-            let e = (0, o.xz)();
+            let e = (0, a.xz)();
             yield e.Init(window.cm);
           });
         })();
-      const p = function (e) {
-        const n = (0, o.gl)();
+      const v = function (e) {
+        const n = (0, a.gl)();
         return (
-          (0, a.pJ)(1920, 1080),
-          u.createElement(
-            u.Fragment,
+          (0, i.pJ)(1920, 1080),
+          l.createElement(
+            l.Fragment,
             null,
-            u.createElement(
-              c.ModalRoot,
+            l.createElement(
+              c.Y0,
               { bOnlyPopups: !0 },
-              u.createElement(w, null),
-              n && u.createElement(i.g1, { cm: e.cm }),
+              l.createElement(p, null),
+              n && l.createElement(o.g1, { cm: e.cm }),
             ),
           )
         );

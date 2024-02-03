@@ -12,6 +12,8 @@ message CMsgDisplayInfo {
 	repeated int32 supported_refresh_rates = 4;
 	repeated int32 supported_frame_rates = 5;
 	optional bool is_external = 6;
+	optional bool is_hdr_capable = 7;
+	optional bool is_vrr_capable = 8;
 }
 
 message CMsgGamescopeState {

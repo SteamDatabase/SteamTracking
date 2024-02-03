@@ -91,6 +91,7 @@ message CMsgClientSettings {
 	optional string overlay_tabs = 4021 [(setting_store) = k_EClientSettingStore_ConfigStore_UserRoaming, (setting_name) = "OverlayTabs"];
 	optional bool overlay_scale_interface = 4022 [(setting_store) = k_EClientSettingStore_Registry, (setting_name) = "HKEY_CURRENT_USER\\Software\\Valve\\Steam\\OverlayScaleInterface", (setting_default_bool) = true];
 	optional bool overlay_restore_browser_tabs = 4023 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "system\\InGameOverlayRestoreBrowserTabs", (setting_default_bool) = true];
+	optional bool enable_avif_screenshots = 4024 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "system\\InGameOverlayScreenshotEnableAVIF"];
 	optional bool smooth_scroll_webviews = 5000 [(setting_store) = k_EClientSettingStore_Registry, (setting_name) = "HKEY_CURRENT_USER\\Software\\Valve\\Steam\\SmoothScrollWebViews", (setting_default_bool) = true];
 	optional bool enable_gpu_accelerated_webviews = 5001 [(setting_store) = k_EClientSettingStore_CustomFunc];
 	optional bool enable_hardware_video_decoding = 5003 [(setting_store) = k_EClientSettingStore_CustomFunc];
@@ -174,6 +175,7 @@ message CMsgClientSettings {
 	optional bool cef_remote_debugging_enabled = 20003 [(setting_store) = k_EClientSettingStore_CustomFunc];
 	optional bool force_deck_perf_tab = 20004 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "Developer/ForceDeckPerfTab"];
 	optional bool force_fake_mandatory_update = 20005 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "Developer/FakeMandatoryUpdate"];
+	optional bool hdr_compat_testing = 20006 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "Developer/HDRCompatTesting"];
 	optional .EHDRVisualization gamescope_hdr_visualization = 21001 [default = k_EHDRVisualization_None, (setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Gamescope/HDRVisualization2"];
 	optional int32 gamescope_app_target_framerate = 21002 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Gamescope/AppTargetFrameRate", (setting_default_int) = 0, (setting_profile_mode) = k_ESettingProfileMode_PerGamePerDisplay];
 	optional bool gamescope_enable_app_target_framerate = 21003 [(setting_store) = k_EClientSettingStore_Registry, (setting_name) = "HKEY_CURRENT_USER\\Software\\Valve\\Steam\\GamescopeEnableAppTargetRefreshRate2", (setting_default_bool) = true];

@@ -683,7 +683,7 @@
 "Friends_BroadcastInviteNotification" "mengundangmu untuk menonton siarannya"
 "Friends_Chat_InviteToBroadcast" "Undang untuk Menonton"
 "Friends_BroadcastApproveNotification" "ingin menonton siaranmu"
-"Friends_BroadcastCantStart_Streaming" "tidak dapat menonton siaranmu ketika sedang Streaming In-Home"
+"Friends_BroadcastCantStart_Streaming" "tidak dapat menonton siaranmu ketika sedang Streaming dari Rumah"
 "Friends_BroadcastApprove" "%friend% ingin menonton siaranmu"
 "Friends_BroadcastApprove_Approve" "IZINKAN"
 "Friends_BroadcastApprove_Or" "atau"

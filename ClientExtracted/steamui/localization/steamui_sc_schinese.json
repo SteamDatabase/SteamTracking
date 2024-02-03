@@ -270,6 +270,7 @@
     "Settings_Account_SteamGuard_LearnMore": "了解通过蒸汽平台手机应用进行双因素验证",
     "Settings_Account_SteamGuard_Status": "蒸汽平台令牌状态：",
     "Settings_Account_BackupCodes": "备用蒸汽平台令牌验证码",
+    "Steam_Reloading_Title": "正在重新载入蒸汽平台…",
     "Steam_Shutdown_Generic": "正在关闭蒸汽平台…",
     "Steam_Shutdown_Waiting_For_Cloud": "正在结束蒸汽平台云同步...",
     "ControllerConfigurator_Interstitial_Intro_Title": "蒸汽平台输入",
@@ -394,6 +395,8 @@
     "FamilyGroup_GameExcluded": "此游戏不支持蒸汽平台家庭共享",
     "FamilyGroup_GameBorrowerLocked": "来自您的蒸汽平台家庭库，当前使用者：",
     "FamilyGroup_GameOwnerLocked": "当前使用者为您的蒸汽平台家庭成员",
+    "FamilyGroup_ManageFamily": "管理您的蒸汽平台家庭",
+    "FamilyGroup_Offline": "离线时无法管理您的“%1$s”这一蒸汽平台家庭",
     "FamilyView_RequestPlaytime_Description_Offline": "您目前已与蒸汽平台断开连接。上线向家庭中的成年人请求给予更多游戏时间。",
     "FamilyView_RequestFeatureAccess_Offline": "您目前已与蒸汽平台断开连接。上线向家庭中的成年人请求访问此功能。"
 }

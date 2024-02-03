@@ -1,4 +1,4 @@
-"
+#
 __TEXT
 __text
 __TEXT
@@ -19,8 +19,6 @@ __TEXT
 __gcc_except_tab__TEXT
 __unwind_info
 __TEXT
-!
-!
 __eh_frame
 __TEXT
 __DATA
@@ -38,18 +36,32 @@ __DATA
 __cfstring
 __DATA
 __objc_classlist__DATA
+X,
+X,
 __objc_imageinfo__DATA
+(X,
+(X,
 __objc_const
 __DATA
+0X,
+0X,
 __objc_selrefs
 __DATA
+PY,
+PY,
 __objc_classrefs__DATA
 __objc_superrefs__DATA
+H],
+H],
 __objc_ivar
 __DATA
+P],
+P],
 __objc_data
 __DATA
+X],
 P
+X],
 __data
 __DATA
 __thread_vars
@@ -67,17 +79,18 @@ __DATA
 A
 H
 __LINKEDIT
-,
+@-
 
 @
 @loader_path/gameoverlayui.dylib
 "
-,
-pO,
-89
++
+H[-
+@:
 P
 Y
 Z
+(~-
 
 *
 8
@@ -86,6 +99,8 @@ Z
 @loader_path/libvstdlib_s.dylib
 8
 @loader_path/libSDL3.dylib
+8
+@loader_path/libavif.16.dylib
 8
 @loader_path/vgui2_s.dylib
 8
@@ -124,10 +139,7 @@ h
 8
 /usr/lib/libobjc.A.dylib
 &
-@],
-P6
 )
--
 C
 NSt3__117bad_function_callE
 11CURLManager
@@ -183,6 +195,8 @@ N4vgui20IVGUIHostApplicationE
 14CRunGameEngine
 14IRunGameEngine
 14IBaseInterface
+#>
+V?
 N6google8protobuf14FatalExceptionE
 NSt3__119basic_ostringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEEE
 NSt3__115basic_stringbufIcNS_11char_traitsIcEENS_9allocatorIcEEEE
@@ -6394,6 +6408,7 @@ m
 >
 ~
 x
+
 0C
 0E
 0C
@@ -7293,7 +7308,6 @@ N4vgui11InputDialogE
 N4vgui5LabelE
 10CUtlString
 10CUtlVectorIN4vgui5Label10TImageInfoE10CUtlMemoryIS2_EE
-N4vgui17ListPanelCheckBoxE
 N4vgui21ListPanelColumnHeaderE
 N4vgui13ListPanelItemE
 16ListPanelDragger
@@ -7498,7 +7512,7 @@ d
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/friendsuihelpers.cpp
 IsARM() || GetCPUInformation().m_bSSE2
 GetBootstrapperVersion
-IVRSteamPrivate_020
+IVRSteamPrivate_021
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlvector.h
 !pToCopy || (pToCopy + num <= Base()) || (pToCopy >= (Base() + Count()) )
 log_files_always_flush
@@ -7516,6 +7530,9 @@ pid %d != %d, re-initing before send; client_port = %d, server_port = %d
 StopJob
 pid %d != %d, skipping dealloc of client_port = %d, server_port = %d
 (&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
+1.5.26
+PNG load error %s
+PNG load warning %s
 [S_API FAIL] SteamAPI_Init() failed; steam path (%s) missing directory separator
 [S_API FAIL] SteamAPI_Init() failed; steam found, but process is dead.
 [S_API FAIL] SteamAPI_Init() failed; ipcserver init failed .
@@ -7566,7 +7583,6 @@ ClientAPI_Init(GlobalInstance): GetIClientControllerSerialized returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientSharedConnection returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientShader returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientCompat returned NULL.
-ClientAPI_Init(GlobalInstance): GetIClientSTARInternal returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientNetworkingUtils returned NULL.
 vars
 filter
@@ -7763,8 +7779,8 @@ Steam pid that launched us
 VGUI_Application_001
 OK
 Cancel
-Jan 30 2024
-10:29:06
+Feb  2 2024
+12:46:56
 crashhandler004
 gameoverlayui
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/overlay/gameoverlayui/main.cpp
@@ -7924,6 +7940,11 @@ RunGameEngine007
 m_pStream->BWaitForDataToGet()
 CScreenshotThread::Run - Screenshot that wasn't processed in time by the main thread
 CScreenshotThread::Run - Error reading screenshot stream. Clearing any remaining data.
+Unknown HDR10 pixel format %d
+Unknown scRGB pixel format %d
+Unknown HDR colorspace %d
+Failed to add image to avif encoder: %u
+Failed to finish encoder: %u
 Timeout waiting on input stream for a frame
 Overlay disable requested by game
 Overlay enable requested by game
@@ -8825,6 +8846,97 @@ NumberOfCapturingGroups
 pcre_retval == 0
 NewlineMode
 NULL == "Unexpected return value from pcre_config(NEWLINE)"
+Potential overflow in png_zalloc()
+Application built with libpng-
+but running with
+Ignoring attempt to set negative chromaticity value
+Invalid cHRM white point
+Invalid cHRM red point
+Invalid cHRM green point
+Invalid cHRM blue point
+Ignoring attempt to set cHRM RGB triangle with zero area
+Image width is zero in IHDR
+Invalid image width in IHDR
+Image width exceeds user limit in IHDR
+Image height is zero in IHDR
+Invalid image height in IHDR
+Image height exceeds user limit in IHDR
+Invalid bit depth in IHDR
+Invalid color type in IHDR
+Invalid color type/bit depth combination in IHDR
+Unknown interlace method in IHDR
+Unknown compression method in IHDR
+MNG features are not allowed in a PNG datastream
+Unknown filter method in IHDR
+Invalid filter method in IHDR
+Invalid IHDR data
+Unknown compression type @1
+Unrecognized equation type for pCAL chunk
+Invalid bit depth for grayscale image
+Invalid bit depth for RGB image
+Invalid bit depth for paletted image
+Invalid bit depth for grayscale+alpha image
+Invalid bit depth for RGBA image
+Invalid image color type specified
+Invalid compression type specified
+Invalid filter type specified
+Invalid interlace type specified
+Invalid number of colors in palette
+Ignoring request to write a PLTE chunk in grayscale PNG
+Invalid zlib compression method or flags in IDAT
+Invalid sRGB rendering intent specified
+Unknown compression type in iCCP chunk
+Embedded profile length in iCCP chunk is negative
+Embedded profile length too large in iCCP chunk
+Truncating profile to actual length in iCCP chunk
+Invalid sBIT depth specified
+Invalid number of transparent colors specified
+Ignoring attempt to write tRNS chunk out-of-range for bit_depth
+Ignoring attempt to write 16-bit tRNS chunk when bit_depth is 8
+Can't write tRNS with an alpha channel
+Invalid background palette index
+Ignoring attempt to write 16-bit bKGD chunk when bit_depth is 8
+Ignoring attempt to write bKGD chunk out-of-range for bit_depth
+Invalid number of histogram entries specified
+Unrecognized unit type for oFFs chunk
+Can't write sCAL (buffer too small)
+Unrecognized unit type for pHYs chunk
+Invalid time specified for tIME chunk
+length exceeds PNG maxima
+Invalid zlib compression method or flags in non-IDAT chunk
+end
+IDAT
+invalid zlib state
+zlib failed to initialize compressor (
+) version error
+) stream error
+) memory error
+) unknown error
+zstream already in use (internal error)
+version
+stream
+memory
+[no zlib message]
+zlib failed to reset compressor: @1(@2): @3
+zstream not in use (internal error)
+1.2.5
+Can't set both read_data_fn and write_data_fn in the same structure
+Call to NULL write function
+Write Error
+Writing zero-length unknown chunk
+Valid palette required for paletted images
+No IDATs written into file
+Wrote palette index exceeding num_palette
+png_write_info was never called before png_write_row
+internal write transform logic error
+zlib error
+incorrect png_set_filler call ignored
+Out of Memory
+0123456789ABCDEF
+123456789
+libpng error: %s
+undefined
+libpng warning: %s
 bool
 int
 double
@@ -10778,10 +10890,14 @@ Nov
 Dec
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
+,
+,
+,
+,
+,
+,
+,
 0
-4+
-!
-!
 
 
 
@@ -10790,9 +10906,7 @@ Dec
 @
 
 0
-!
 @
-+
 j
 j
 j
@@ -10805,8 +10919,8 @@ j
 j
 j
 j
-|
 Ic]
+A+
 j
 j
 j
@@ -10818,7 +10932,7 @@ j
 j
 j
 j
-3*
+d
 0
 0
 AT=
@@ -10862,12 +10976,15 @@ IcE
 @
 V
 =
+(
+(
+(
 =
 !
 @
 @
 &
-q"
+%
 @
 M9e
 @
@@ -10910,6 +11027,7 @@ S
 4
 9
 E
+l
 4
 @
 <
@@ -11008,6 +11126,57 @@ P
 @
 @
 ?
+"
+B
+"
+B
+"
+B
+"
+B
+"
+"
+B
+"
+B
+"
+B
+"
+B
+"
+B
+"
+B
+"
+B
+"
+B
+"
+B
+"
+B
+"
+B
+"
+B
+"
+B
+"
+B
+"
+B
+"
+B
+"
+B
+"
+B
+"
+B
+"
+B
+"
+B
 @
 
 f
@@ -11046,10 +11215,6 @@ j
 0
 j
 j
-
-
-
-
 j
 j
 j
@@ -11089,7 +11254,6 @@ A+4$A+u
 =
 =
 @
-Q
 j
 j
 j
@@ -11121,10 +11285,6 @@ j
 j
 j
 j
-
-
-
-
 j
 j
 j
@@ -11331,6 +11491,7 @@ d
 0
 0
 0
+>
 5
 0
 E

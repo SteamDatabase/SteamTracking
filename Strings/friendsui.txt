@@ -11,12 +11,16 @@ __TEXT
 __cstring
 __TEXT
 __gcc_except_tab__TEXT
+x,!
+x,!
 __const
 __TEXT
 __objc_methname
 __TEXT
 __unwind_info
 __TEXT
+| $
+| $
 __DATA
 %
 %
@@ -2093,7 +2097,7 @@ none
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/friendsuihelpers.cpp
 IsARM() || GetCPUInformation().m_bSSE2
 GetBootstrapperVersion
-IVRSteamPrivate_020
+IVRSteamPrivate_021
 resolve
 reject
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/refcount.h
@@ -2184,7 +2188,6 @@ ClientAPI_Init(GlobalInstance): GetIClientControllerSerialized returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientSharedConnection returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientShader returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientCompat returned NULL.
-ClientAPI_Init(GlobalInstance): GetIClientSTARInternal returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientNetworkingUtils returned NULL.
 CParentalCache::OnParentalLockChangeBegin
 steammessages_clientnotificationtypes.proto
@@ -5300,12 +5303,7 @@ m_bitsMigratedBuckets
 steamIDChat.GetEAccountType() == k_EAccountTypeChat
 k_EChatInstanceFlagClan & steamIDChat.GetUnAccountInstance()
 0
--
--
--
--
--
--
+J$
 
 @
 @
@@ -5313,25 +5311,22 @@ k_EChatInstanceFlagClan & steamIDChat.GetUnAccountInstance()
 
 x
 
-K#
-#
-"
-7"
 =
 @
 =
-,!
 x
-H!
 0
 0
--!
+7!
 p
 0
 p
 0
 p
 0
+!
+!
+!
 !
 !
 !
@@ -5394,6 +5389,7 @@ V
 !
 @
 @
+)!
 &
 @
 M9e
@@ -5476,13 +5472,11 @@ B
 
 d
 
-f9
+
 A+M
-S
 
 Hc
 Ic
-/
 j
 j
 j
@@ -5535,7 +5529,6 @@ d
 d
 0
 A+4$A+u
-2
 =
 =
 @
@@ -5724,7 +5717,6 @@ j
 .
 d
 =
-Lc%
 =
 @
 =*.*
@@ -5749,6 +5741,7 @@ Lc%
 0
 &
 Hc
+e
 E
 $
 Ic]

@@ -186,6 +186,9 @@ SWVP
 ^_[]
 ^_[]
 ^_[]
+t.RQPS
+RQPS
+,^_[]
 ^_[]
 ^_[]
 ^_[]
@@ -236,7 +239,7 @@ _l;_|r
 ^_[]
 ^_[]
 ^_[]
-QjNP
+QjYP
 ^_[]
 ^_[]
 ^_[]
@@ -505,13 +508,15 @@ DONT_BREAK_ON_ASSERT
 Fatal assert; application exiting
 Fatal assert
 _ExitOnFatalAssert
-Failed to generate callstack
+Failed to capture callstack
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/memblockhdr.cpp
+ppFrames[iFrame] != NULL
+Assertion Failed: stack%2d: %s (%d): %s
+Stack:%2d    %s (%d): %s
 Assertion Failed: stack%2d: %s
 Stack%2d: %s
 Assertion Failed: stack%2d: 0x%llX
 Stack%2d: 0x%llX
-ppFrames[iFrame] != NULL
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/memstd.cpp
 ((size_t)(m_nLogicalBytesAllocated) % 8) == 0
 No tracked allocs currently in use. Total %d
@@ -538,8 +543,8 @@ CreateInterface
 steamwebhelper
 Steam Helper
 cefwebhelper
-Jan 30 2024
-10:26:45
+Feb  2 2024
+12:44:29
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 MainThrd
@@ -773,7 +778,6 @@ CreateInterface
 2$$$&$$
 TJ"0V
 c;jA
-&>pj
 Dxll
 ){c$V
 86l(x
@@ -940,11 +944,11 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-&Fxc
-1"w5wc
-sbffR'
-ZB2b
-QYw9<
+KzwM
+z[q>
+HQ|L`
+ZB&{
+x0N7
 subject.OU
 MXGJJ98X76
 Apple Inc.1&0$
@@ -1002,8 +1006,10 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240130182709Z0/
+240202204453Z0/
+TiON
 1/0-
+TiON
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -1011,14 +1017,17 @@ Apple Inc.1
 	<key>cdhashes</key>
 	<array>
 		<data>
-		hBSX437m9zplUs+e5wqU78lyoos=
+		0hKSVGlPTqwuTaVu4+9rvvPzQXc=
 		</data>
 	</array>
 </dict>
 </plist>
-d9F`7
-ORet
-20240130182751Z0
+xlGP
+X0OO
+7"@X
+?\#X
+~?BCU
+20240202204554Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
@@ -1077,11 +1086,8 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240130182751Z0#
-GNk( 
-6V7L
-0mrn
-}LsZ
+240202204554Z0#
+(]n-
 __TEXT
 __text
 __TEXT
@@ -1127,7 +1133,6 @@ __common
 __DATA
 __LINKEDIT
 @loader_path/crashhandler.dylib
-[T>m
 /usr/lib/libiconv.2.dylib
 /System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices
 /System/Library/Frameworks/IOKit.framework/Versions/A/IOKit
@@ -1339,6 +1344,7 @@ AVSH
 [A^]
 AVSH
 [A^]
+\t	H
 AWAVAUATSH
 [A\A]A^A_]
 	H;M
@@ -1370,6 +1376,9 @@ AWAVAUATSP
 [A\A]A^A_]
 AWAVAUATSH
 [A\A]A^A_]
+AWAVAUATSPI
+[A\A]A^A_]
+ASAR
 [A\A]A^A_]
 AWAVSPA
 [A^A_]
@@ -1799,13 +1808,15 @@ DONT_BREAK_ON_ASSERT
 Fatal assert; application exiting
 Fatal assert
 _ExitOnFatalAssert
-Failed to generate callstack
+Failed to capture callstack
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/memblockhdr.cpp
+ppFrames[iFrame] != NULL
+Assertion Failed: stack%2d: %s (%d): %s
+Stack:%2d    %s (%d): %s
 Assertion Failed: stack%2d: %s
 Stack%2d: %s
 Assertion Failed: stack%2d: 0x%llX
 Stack%2d: 0x%llX
-ppFrames[iFrame] != NULL
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/memstd.cpp
 ((size_t)(m_nLogicalBytesAllocated) % 8) == 0
 No tracked allocs currently in use. Total %d
@@ -1832,8 +1843,8 @@ CreateInterface
 steamwebhelper
 Steam Helper
 cefwebhelper
-Jan 30 2024
-10:26:45
+Feb  2 2024
+12:44:29
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 MainThrd
@@ -2104,6 +2115,7 @@ CreateInterface
 -Breakpad_SetSteamID
 6@@D
 yXEu?
+"4jx
 Njtt
 Dvvh
 8*g'b
@@ -2270,16 +2282,12 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-[;E^hu+ 
-xk-a
-NxfL
-2/cC/rC0
-W[OQ
-.uPd#N
-9n Ys
-"^9>X
-*#q>
-V]}4i
+	hxK
+jWs3
+1AzB
+#!2iD
+2;6K
+`+B	
 subject.OU
 MXGJJ98X76
 Apple Inc.1&0$
@@ -2337,10 +2345,8 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240130182709Z0/
-/tVC
+240202204453Z0/
 1/0-
-/tVC
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -2348,38 +2354,36 @@ Apple Inc.1
 	<key>cdhashes</key>
 	<array>
 		<data>
-		4ERP4wBdytDrnXXjL3RWQ+fkZ1E=
+		QQBtGXEaBhyslYu5hYxzuJ/WJ1Y=
 		</data>
 	</array>
 </dict>
 </plist>
-[RoHJ
-~0$>
-EW	{
-df|yE
-=*O3
-}'5"Y
-20240130182751Z0
+8NG)	W#
+hMfEJ
+mLRK
+#XL?
+20240202204554Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240111205539Z
-240222205538Z0B1
-Timestamp Signer NWK21
+240111211011Z
+240222211010Z0B1
+Timestamp Signer NWK11
 Apple Inc.1
-Q2T4(
-\rZ(
-PI,|
-	7MFm
-*~8M
+r^N_&
+9io+
+o"E 6-
+MNc,
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-,+	(_
-_u][
-Dq%v
+FG~V
+UDK6
+t?DF
+H=Jx
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -2418,7 +2422,11 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240130182751Z0#
+240202204554Z0#
+?nJ	
+m7 v
+\hY+
+O5s(
 __TEXT
 __text
 __TEXT
@@ -2483,6 +2491,8 @@ cS9@
 h&B)
 (	.9
 T@SE
+@9M-
+@9@-
 Thjv8H
 h(8*
 QiJh8?
@@ -2680,13 +2690,15 @@ DONT_BREAK_ON_ASSERT
 Fatal assert; application exiting
 Fatal assert
 _ExitOnFatalAssert
-Failed to generate callstack
+Failed to capture callstack
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/memblockhdr.cpp
+ppFrames[iFrame] != NULL
+Assertion Failed: stack%2d: %s (%d): %s
+Stack:%2d    %s (%d): %s
 Assertion Failed: stack%2d: %s
 Stack%2d: %s
 Assertion Failed: stack%2d: 0x%llX
 Stack%2d: 0x%llX
-ppFrames[iFrame] != NULL
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/memstd.cpp
 ((size_t)(m_nLogicalBytesAllocated) % 8) == 0
 No tracked allocs currently in use. Total %d
@@ -2713,8 +2725,8 @@ CreateInterface
 steamwebhelper
 Steam Helper
 cefwebhelper
-Jan 30 2024
-10:26:46
+Feb  2 2024
+12:44:30
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 MainThrd
@@ -3145,16 +3157,16 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
->3L8
-[;7v{
-+LMw
-wT,5
-3gN'r
-IUXm1
-^R6q
-;J'J
-:RbfV
-$V0"d
+^G(N
+$Ed}
+};^/Q
+(	"53
+>GNw
+l=_$f
+DIG	
+yrI.
+]:(B
+dW~in
 subject.OU
 MXGJJ98X76
 Apple Inc.1&0$
@@ -3212,7 +3224,7 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240130182709Z0/
+240202204453Z0/
 1/0-
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
@@ -3221,36 +3233,35 @@ Apple Inc.1
 	<key>cdhashes</key>
 	<array>
 		<data>
-		lguzKFwAitRSnAH7QAABcBfgGAg=
+		Pj/nog0a33YQqZFKRIewFs40zBI=
 		</data>
 	</array>
 </dict>
 </plist>
-j.	|
-/JFCE
-'q|y
-nKRZ%
-20240130182751Z0
+}@.5
+"]'s
+9UH~
+20240202204554Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240111211011Z
-240222211010Z0B1
-Timestamp Signer NWK11
+240111205539Z
+240222205538Z0B1
+Timestamp Signer NWK21
 Apple Inc.1
-r^N_&
-9io+
-o"E 6-
-MNc,
+Q2T4(
+\rZ(
+PI,|
+	7MFm
+*~8M
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-FG~V
-UDK6
-t?DF
-H=Jx
+,+	(_
+_u][
+Dq%v
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -3289,6 +3300,10 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240130182751Z0#
-JVIN
-YAPQ
+240202204554Z0#
+	!(4
+Iip.^
+j1]<H
+C0Ytw
+eWY'
+`:}DHYl

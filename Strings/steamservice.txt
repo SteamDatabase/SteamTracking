@@ -7,9 +7,15 @@ __TEXT
 @
 __stubs
 __TEXT
+~$%
+~$%
 __stub_helper
 __TEXT
+h*%
+h*%
 __gcc_except_tab__TEXT
+4%
+4%
 __const
 __TEXT
 __cstring
@@ -90,28 +96,27 @@ h
 8
 /usr/lib/libobjc.A.dylib
 &
-x*
 )
 0
 0
 ,
 Hi
-S)
+?)
 H=
 #
-?%
+.)
+;%
 )
 )
 )
+]
+$
+$
 Ic]
-$
 Hc
 Hc
 $
-$
-$
 Hc
-!
 0
 0
 AT=
@@ -122,13 +127,11 @@ AT=
 D
 @
 @
+q(
 (
 (
 (
 (
-(
-7#
-"+
 @
 Hc
 Hc
@@ -164,11 +167,11 @@ IcE
 V
 "
 "
+"
+v&
 =
-e!
-D!
-,!
-!
+G!
+A!
 !
 =
 10CIPCServer
@@ -8745,13 +8748,15 @@ DONT_BREAK_ON_ASSERT
 Fatal assert; application exiting
 Fatal assert
 _ExitOnFatalAssert
-Failed to generate callstack
+Failed to capture callstack
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/memblockhdr.cpp
+ppFrames[iFrame] != NULL
+Assertion Failed: stack%2d: %s (%d): %s
+Stack:%2d    %s (%d): %s
 Assertion Failed: stack%2d: %s
 Stack%2d: %s
 Assertion Failed: stack%2d: 0x%llX
 Stack%2d: 0x%llX
-ppFrames[iFrame] != NULL
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/memstd.cpp
 ((size_t)(m_nLogicalBytesAllocated) % 8) == 0
 No tracked allocs currently in use. Total %d
@@ -8782,8 +8787,8 @@ steamwebhelper
 Steam Helper
 cefwebhelper
 1.0
-Jan 30 2024
-10:26:45
+Feb  2 2024
+12:44:29
 Jan
 Feb
 Mar
@@ -9227,8 +9232,6 @@ Default initial allocation size for PB arena
 @nProtobufArenaMaxBlockSize
 524288
 Max block allocation size for PB arena
-@bCheckMsgProtobufOnJobStackForArenaAlloc
-Should we only use the arena allocator if the protobuf is on the job stack
 @nSpewThrottlePeriodMs
 1000
 @nSpewThrottleTriggerThreshold
@@ -9396,22 +9399,22 @@ m_cCurrentDepth > 0
 0
 ,
 Hi
-S)
+?)
 H=
 #
-?%
+.)
+;%
 )
 )
 )
+]
+$
+$
 Ic]
-$
 Hc
 Hc
 $
-$
-$
 Hc
-!
 0
 0
 AT=
@@ -9422,13 +9425,11 @@ AT=
 D
 @
 @
+q(
 (
 (
 (
 (
-(
-7#
-"+
 @
 Hc
 Hc
@@ -9464,29 +9465,28 @@ IcE
 V
 "
 "
+"
+v&
 =
-e!
-D!
-,!
-!
+G!
+A!
 !
 =
-_
-S
-O
++
+'
+m$
 !
-$
-$
-v#
-=&
 @
+*&
 &
 #
+a"
 "
 "
 "
-T$
-H"
+"
+2$
+J!
 @
 M9e
 @
@@ -9847,7 +9847,6 @@ H
 
 
 
-
 *
 Hc
 AES-NI GCM module for x86_64, CRYPTOGAMS by <appro@openssl.org>
@@ -9882,8 +9881,8 @@ SHA1 block transform for x86_64, CRYPTOGAMS by <appro@openssl.org>
 0
 @
 @
+p
 @
-E
 d
 @
 
@@ -9941,8 +9940,8 @@ Ic
 0
 0
 H=
-W
 0
+2
 &
 @
 @
@@ -9952,12 +9951,12 @@ W
 Hi
 E
 0
+0
 
 Hc
 Hc
 Hc
 0
-0
 @
 @
 @
@@ -9971,5 +9970,4 @@ Hc
 @
 @
 @
-<
 Hi

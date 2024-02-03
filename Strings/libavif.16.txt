@@ -1,0 +1,2826 @@
+__TEXT
+__text
+__TEXT
+__stubs
+__TEXT
+__stub_helper
+__TEXT
+__const
+__TEXT
+__cstring
+__TEXT
+__unwind_info
+__TEXT
+__DATA
+__got
+__DATA
+__la_symbol_ptr
+__DATA
+__const
+__DATA
+__data
+__DATA
+__LINKEDIT
+@loader_path/libavif.16.dylib
+@loader_path/libdav1d.6.dylib
+@loader_path/libaom.3.dylib
+/usr/lib/libSystem.B.dylib
+/Users/valve/projects/SDL_image/build-macos/build-x64/external/dav1d
+/Users/valve/projects/SDL_image/build-macos/build-x64/external/aom
+AWAVATS
+[A\A^A_]
+AWAVAUATS
+ffffff.
+W8E1
+w(E1
+ffffff.
+smE1
+G(E1
+[A\A]A^A_]
+AWAVAUATSH
+g0E1
+g0E1
+g0E1
+[A\A]A^A_]
+AWAVAUATSH
+r0E1
+r0E1
+ffff.
+q0E1
+h[A\A]A^A_]
+fff.
+fff.
+ffff.
+AWAVATS1
+[A\A^A_]
+fffff.
+fffff.
+AWAVAUATSH
+X[A\A]A^A_]
+AWAVSP
+FlfA
+ u4A
+[A^A_]
+AVSA
+C@[A^]
+ffffff.
+AWAVAUATSH
+[A\A]A^A_]
+AWAVSPI
+[A^A_]
+AWAVSPA
+[A^A_]
+	s(M
+ffff.
+AVSH
+[A^]
+AWAVAUATSH
+H[A\A]A^A_]
+fffff.
+rAA9
+r4A9
+AWAVAUATSH
+rFD9
+r6D9
+([A\A]A^A_]
+fffff.
+AWAVATSH
+[A\A^A_]
+AWAVATSH
+[A\A^A_]
+fff.
+AWAVAUATSH
+[A\A]A^A_]
+AVSI
+[A^]
+AWAVAUATSPI
+dav1H
+ [dec]:
+[A\A]A^A_]
+fffff.
+ffffff.
+0H=<
+ffff.
+<7MM
+<7II*
+ffff.
+AWAVAUATSH
+!ffffff.
+X[A\A]A^A_]
+AVSH
+[A^]
+fff.
+AWAVATSH
+[A\A^A_]
+AVSH
+X8[A^]
+w8H)
+AWAVSPH
+[A^A_]
+ffffff.
+AWAVATS
+[A\A^A_]
+M9~8s
+AWAVAUATSH
+[A\A]A^A_]
+^fffff.
+t-E1
+	wnM
+AWAVATS1
+[A\A^A_]
+AWAVATSI
+[A\A^A_]
+AWAVSPH
+t2E1
+[A^A_]
+AVSH
+ftypu;
+p[A^]
+AWAVATSH
+@[A\A^A_]
+ffffff.
+?avif
+:avifttH
+:avifH
+?avis
+:avis
+:avisH
+?avis
+ffffff.
+AWAVAUATSH
+FDfA
+avist!A
+avif
+9av01t
+ffff.
+9av01M
+av01t
+gridu
+gridL
+av01
+?av01@
+A$E1
+9av01t
+9av01M
+av01t
+gridu
+?auxCt
+t/fH
+l"(M
+D($H
+D(&f
+D((f
+<(colru
+cllit
+pasp
+gridA
+gridI
+claptfH
+irott^H
+imir
+gridt)1
+av01
+D$(E1
+D$(I9
+[A\A]A^A_]
+<$auxCt
+<$auxCt
+AVSH
+[A^]
+AVSH
+[A^]
+fffff.
+AVSH
+[A^]
+AWAVAUATSH
+ffffff.
+ffff.
+D;p,
+1D;a
+L= K
+|=(H
+\= H
+uxH)
+ffff.
+[A\A]A^A_]
+fffff.
+AWAVATS
+[A\A^A_]
+AWAVAUATSH
+metat
+moovt
+ftyp
+meta
+moov
+ftyp
+avifM
+:avif
+fffff.
+:avifH
+meta
+trak
+=skhd
+=edtsL
+=tref
+=tkhd
+=mdia
+=meta
+elstu
+=premtN=auxlu
+=minf
+=mdhdu
+stbl
+=rtco
+=rtts
+=stco
+=stssu
+=co64
+=stsc
+=stsd
+?av01uNI
+OrEH
+=stts
+=stsz
+avistX
+9avist.H
+9avisH
+grid
+av01t
+ispet
+<$auxCt
+[A\A]A^A_]
+AWAVAUATSH
+D$,I9
+\$ O
+fffff.
+t%I;|$xt
+|$xH
+[A\A]A^A_]
+AWAVAUATSH
+ffff.
+ExiftzA
+mimeu
+oG,f
+nO<f
+x[A\A]A^A_]
+AWAVAUATSPD
+tEE1
+[A\A]A^A_]
+ffff.
+AWAVAUATSH
+4[C9<
+E;gT
+([A\A]A^A_]
+AWAVAUATSH
+vWL9
+h[A\A]A^A_]
+t	H9
+AWAVAUATSH
+H[A\A]A^A_]
+av01
+av01A
+AWAVAUATSH
+av01@
+a1optHI
+L$$I
+@,D)
+av01
+<8a1opt
+L$$I
+av02H
+T$ A
+L$@H
+H[A\A]A^A_]
+AWAVAUATSH
+gridI
+;pixit
+([A\A]A^A_]
+fff.
+>clap
+ffff.
+F:T?
+	F:T?	u_G
+F:T?
+F:T?
+F:T?
+F:T?
+F:T?
+F:T?
+F:L?
+9ispet<H
+fffff.
+AWAVATSH
+C(H9
+L;s(
+[A\A^A_]
+AWAVAUATSH
+D$<A;D$8u
+D$XA;D$Tu
+D$ H
+~<E;~8
+8ffffff.
+E;~8r
+D$xH
+D$ H
+D$ H
+D$,H
+D$xH
+fXE;fT
+E;fTr
+Q(8QXu@H
+y09w
+8Q(u
+0A9q
+D/(K
+;H8u9
+HX;HTu1
+[A\A]A^A_]
+ffffff.
+AWAVAUATSH
+H;L2(
+ffffff.
+n@E1
+ffff.
+t' C
+T'$H
+8;7u
+@lfA
+'H;M
+qhf;rh
+qjf;rj
+Ilf;Jl
+[A\A]A^A_]
+AWAVSH
+X`E1
+t=fH
+[A^A_]
+AWAVATSA
+x&D9s<~ 
+[A\A^A_]
+[A\A^A_]
+G<;G8u
+;wTt
+D9s8u
+AWAVATSH
+H;{xt
+[A\A^A_]
+@<A;@8uKH
+@XA;@Tty
+AVSH
+[A^]
+[A^]
+AWAVATSI
+t	[A\A^A_]
+[A\A^A_]
+AWAVSPI
+[A^A_]
+[A^A_]
+AWAVAUATSPH
+[A\A]A^A_]
+ffffff.
+AWAVSPH
+tTE1
+[A^A_]
+ffff.
+AWAVATSH
+[A\A^A_]
+AWAVAUATSH
+=oitm
+=iloc
+=iref
+=iinf
+=hdlr
+pict
+=pitmH
+=iprp
+=idatu
+ipco
+ipma
+>a1lx
+C$D9
+ispe
+>auxC
+>colr
+>av1C
+>pasp
+>clap
+>irot
+>imir
+>pixi
+>a1op
+>lsel
+>a1lx
+>clli
+>a1op
+>lsel
+fD;u
++fffff.
+cimg~-
+dimgtN
+auxltr
+prem
+thmb
+cdsc
+infe
+mimeu-L
+[A\A]A^A_]
+ffffff.
+AWAVAUATSH
+fffff.
+=blap
+=hmirL
+=hrot
+=imir
+=colrL
+rICC
+prof
+nclx
+=blliL
+=av1C
+=auxC
+=ispeL
+=clap
+=a1op
+=paspL
+=clli
+=pixi
+=lselL
+=irot
+=a1lxL
+[A\A]A^A_]
+AWAVAUATSH
+fff.
+8[A\A]A^A_]
+AWAVSH
+8[A^A_]
+ffff.
+AWAVSH
+8[A^A_]
+fffff.
+AWAVSH
+H[A^A_]
+AVSH
+@[A^]
+AWAVAUATSH
+tRE1
+H[A\A]A^A_]
+AWAVAUATSH
+ffffff.
+a1lxt
+teM)
+?lseltlI
+([A\A]A^A_]
+AWAVAUATSH
+[A\A]A^A_]
+fff.
+fffff.
+eff.
+ffff.
+F@E1
+ffff.
+AWAVATS
+[A\A^A_]
+fff.
+AWAVAUATSH
+[A\A]A^A_]
+AWAVAUATSH
+\D$<
+^D$D
+L$LH9
+L$@H
+\D$@
+^D$H
+\D$@
+^D$H
+\D$@
+^D$H
+D$8E
+T$0D
+L$TD
+Wffff.
+*\$0
+fff.
+83\^
+83$^f
+83l^
+83t^
+ffffff.
+[A\A]A^A_]
+fff.
+AWAVAUATSH
+'u_M
+[A\A]A^A_]
+AWAVAUATSH
+SLH9
+fffff.
+4kD9
+$WD9
+[A\A]A^A_]
+AWAVAUATSH
+(fffff.
+H[A\A]A^A_]
+AWAVAUATSH
+KLH9
+fffff.
+fffff.
+)ffffff.
+>ffffff.
+4YD9
+X[A\A]A^A_]
+AWAVAUATSH
+)ffffff.
+J E1
+8[A\A]A^A_]
+AWAVAUATSH
+SLH9
+fffff.
+fffff.
+[A\A]A^A_]
+AWAVAUATSH
+8[A\A]A^A_]
+AWAVAUATSH
+KLH9
+fffff.
+fffff.
+ffffff.
+H[A\A]A^A_]
+AWAVAUATSH
+$fff.
+C E1
+*fffff.
+8[A\A]A^A_]
+ffffff.
+ffffff.
+AVSH
+[A^]
+ffffff.
+fff.
+ffff.
+fffff.
+SPE1
+ffff.
+fff.
+[A^]
+fff.
+AWAVAUATSH
+ffff.
+ffffff.
+8[A\A]A^A_]
+AWAVAUATSPI
+ffffff.
+T$ H
+[A\A]A^A_]
+AWAVSPH
+[A^A_]
+uuidt%H
+uuidu
+ffff.
+AWAVSPI
+[A^A_]
+AWAVSP1
+[A^A_]
+AWAVSP1
+[A^A_]
+AWAVAUATSH
+fff.
+[A\A]A^A_]
+AWAVATSI
+[A\A^A_]
+AVSH
+[A^]
+AVSA
+fffff.
+[A^]
+AWAVSPA
+[A^A_]
+fffff.
+AWAVSPA
+[A^A_]
+AWAVSPI
+[A^A_]
+ffffff.
+AWAVSPH
+[A^A_]
+AWAVATSH
+[A\A^A_]
+AWAVAUATSPI
+ffff.
+[A\A]A^A_]
+fff.
+AWAVSPI
+[A^A_]
+AWAVSPH
+[A^A_]
+AWAVSPH
+[A^A_]
+ffffff.
+AWAVATSH
+[A\A^A_]
+Hc7HcO
+tRIc
+u>Lc
+ u'Ic
+fff.
+ tdL
+tcIc
+fff.
+ tdL
+tcIc
+fff.
+AWAVSP
+t)E1
+[A^A_]
+AWAVSPH
+t'E1
+[A^A_]
+fff.
+AWAVAUATSP
+[A\A]A^A_]
+[A^]
+AWAVAUATSH
+[A\A]A^A_]
+ffffff.
+AWAVSP
+[A^A_]
+AWAVAUATSH
+zhfA;yhuX
+zjfA;yjuM
+zlfA;yluBH
+zPA;yPu"H
+H[A\A]A^A_]
+~C8f
+f;Ah
+f;Aj
+f;Al
+l1xH
+tAfD9
+fD9.L
+D'4H
+AWAVAUATSPE
+[A\A]A^A_]
+[A\A]A^A_]
+AWAVAUATSH
+;H$uDA
+!ffffff.
+[A\A]A^A_]
+t/Hi
+tmf;
+t.Hi
+H$I9
+AWAVAUATSH
+t0M9l
+t$0L
+D$@A
+t$0H
+[A\A]A^A_]
+AVSH
+[A^]
+AWAVAUATSH
+[A\A]A^A_]
+AWAVAUATSH
+8[A\A]A^A_]
+AWAVAUATSH
+x[A\A]A^A_]
+t5 M
+fff.
+rFL)
+rFM)
+fff.
+r@M)
+AVSH
+[A^]
+[A^]
+QD;W
+QH;W
+QL;W
+QPH;W
+QX;W
+Q\;W
+;Q0t
+;Q4t
+Qh;W(t
+Ql;W,t
+Qp;W0t
+Qt;W4t
+;Q8t
+;Q<t
+oODf
+AWAVAUATSH
+~hE1
+8[A\A]A^A_]
+AWAVSPH
+[A^A_]
+AVSH
+[A^]
+[A^]
+AWAVAUATSH
+x[A\A]A^A_]
+AWAVAUATSPD
+t,E1
+t+E1
+[A\A]A^A_]
+AWAVAUATSPM
+[A\A]A^A_]
+fff.
+AWAVAUATSH
+t!A;G@
+A;OD
+A;GL
+IcWHH
+t6A;W@u
+A;wDu
+A;WLu
+[A\A]A^A_]
+AWAVAUATSH
+t$@A
+D$LA
+D$P;B
+L$HA
+D$`A
+D$dIc
+L$LIcG
+L$TA
+D$DH
+ uIA
+[A\A]A^A_]
+U(tJ
+83Ahf
+fffff.
+fff.
+AWAVAUATSPI
+[A\A]A^A_]
+fff.
+AWAVAUATSH
+8[A\A]A^A_]
+fff.
+AWAVATSA
+[A\A^A_]
+?333@
+application/rdf+application/rdf+xml
+urn:mpeg:mpegB:cicp:systems:auxiliary:alpha
+application/rdf+xml
+1.0.3
+YUV444
+YUV420
+YUV422
+YUV400
+Unknown
+Invalid ftyp
+No content
+No YUV format selected
+Reformat failed
+Unsupported depth
+Encoding of color planes failed
+Encoding of alpha plane failed
+BMFF parsing failed
+Missing or empty image item
+Decoding of color planes failed
+Decoding of alpha plane failed
+Color and alpha planes size mismatch
+Plane sizes don't match ispe values
+No codec available
+No images remaining
+Invalid Exif payload
+Invalid image grid
+Invalid codec-specific option
+Truncated data
+IO not set
+IO Error
+Waiting on IO
+Invalid argument
+Not implemented
+Out of memory
+Cannot change some setting during encoding
+The image is incompatible with already encoded images
+Unknown Error
+Unavailable
+Available
+Active
+[Strict] clap contains a denominator that is not strictly positive
+[Strict] clap width or height is negative
+[Strict] clap width %d/%d is not an integer
+[Strict] clap height %d/%d is not an integer
+[Strict] image width %u or height %u is greater than INT32_MAX
+[Strict] croppedCenterX overflowed
+[Strict] croppedCenterY overflowed
+[Strict] cropX overflowed
+[Strict] calculated crop X offset %d/%d is not an integer
+[Strict] cropY overflowed
+[Strict] calculated crop Y offset %d/%d is not an integer
+[Strict] at least one crop offset is not positive
+[Strict] crop rect width %u or height %u is greater than INT32_MAX
+[Strict] horizOff overflowed
+[Strict] vertOff overflowed
+Grid image tile width (%u) or height (%u) cannot be smaller than 64. See MIAF (ISO/IEC 23000-22:2019), Section 7.3.11.4.2
+Grid image width (%u) or height (%u) or tile width (%u) or height (%u) shall be even if chroma is subsampled in that dimension. See MIAF (ISO/IEC 23000-22:2019), Section 7.3.11.4.2
+ [enc]
+ [dec]
+[Strict] crop rect width and height must be nonzero
+[Strict] crop rect is out of the image's bounds
+[Strict] crop rect X offset must be even due to this image's YUV subsampling
+[Strict] crop rect Y offset must be even due to this image's YUV subsampling
+dav1d
+BT.709
+BT.470-6 System M
+BT.470-6 System BG
+BT.601
+SMPTE 240M
+Generic film
+BT.2020
+SMPTE RP 431-2
+SMPTE EG 432-1 (DCI P3)
+EBU Tech. 3213-E
+FCC USFC 73.682
+SMPTE ST 240
+BT.2020 (non-constant luminance)
+grid
+ispe
+Item ID [%u] has an invalid size [%ux%u]
+Item ID [%u] dimensions are too large [%ux%u]
+auxC
+[Strict] Alpha auxiliary image item ID [%u] is missing a mandatory ispe property
+Item ID [%u] is missing a mandatory ispe property
+avis
+avif
+Failed to find AV1 color track
+Failed to find AV1 color track's color properties
+Primary item not specified
+Primary item not found
+colr
+clli
+pasp
+clap
+irot
+imir
+Box[ftyp]
+Box[ftyp] contains a compatible brands section that isn't divisible by 4 [%zu]
+File-level box header
+meta
+Box[meta]
+hdlr
+Box[meta] does not have a Box[hdlr] as its first child box
+iloc
+pitm
+idat
+iprp
+iinf
+iref
+Box[meta] has no child boxes
+Box[%s] contains a duplicate unique box of type '%s'
+Box[hdlr]
+Box[hdlr] contains a pre_defined value that is nonzero
+pict
+Box[hdlr] handler_type is not 'pict'
+Box[iloc]
+Box[iloc] has an unsupported version [%u]
+Box[iloc] has an unsupported base_offset_size [%u]
+Box[iloc] has an invalid item ID [%u]
+Item ID [%u] contains duplicate sets of extents
+Box[iloc] has a non null reserved field [%u]
+Box[iloc] has an unsupported construction method [%u]
+Item ID [%u] contains an extent offset which overflows: [base: %llu offset:%llu]
+Item ID [%u] contains an extent length which overflows the item size: [%zu, %zu]
+Multiple boxes of unique Box[pitm] found
+Box[pitm]
+Meta box contains multiple idat boxes
+idat box has a length of 0
+Box[iprp]
+Failed to find Box[ipco] as the first box in Box[iprp]
+Multiple Box[ipma] with a given pair of values of version and flags. See HEIF (ISO 23008-12:2017) 9.3.1
+Exceeded possible count of unique ipma version and flags tuples
+Box[iprp] contains a box that isn't type 'ipma'
+Box[ipco]
+av1C
+pixi
+a1op
+lsel
+a1lx
+Box[ispe]
+Box[auxC]
+Box[colr]
+rICC
+prof
+nclx
+Box[colr] contains nonzero reserved bits [%u]
+Box[%.4s]
+%s contains illegal marker: [%u]
+%s contains illegal version: [%u]
+Box[pasp]
+Box[clap]
+Box[irot]
+Box[irot] contains nonzero reserved bits [%u]
+Box[imir]
+Box[imir] contains nonzero reserved bits [%u]
+Box[pixi]
+Box[pixi] contains unsupported plane count [%u]
+Box[a1op]
+Box[a1op] contains an unsupported operating point [%u]
+Box[lsel]
+Box[lsel] contains an unsupported layer [%u]
+Box[a1lx]
+Box[a1lx] has bits set in the reserved section [%u]
+Box[clli]
+Box[ipma]
+Box[ipma] item IDs are not ordered by increasing ID
+Box[ipma] has an invalid item ID [%u]
+Duplicate Box[ipma] for item ID [%u]
+Box[ipma] for item ID [%u] contains an illegal property index [%u] (out of [%u] properties)
+Item ID [%u] has a %s property association which must not be marked essential, but is
+Item ID [%u] has a %s property association which must be marked essential, but is not
+Box[iinf]
+Box[iinf] has an unsupported version %u
+Box[iinf] contains a box that isn't type 'infe'
+Box[infe]
+%s: Expecting box version 2 or 3, got version %u
+mime
+%s: Box[infe] with item_type %.4s has an invalid item_ID [%u]
+Box[iref]
+Box[iref] has an invalid item ID [%u]
+Box[iref] has an invalid item ID dimg ref [%u]
+Box[moov]
+Box[trak]
+More than one [edts] Box was found.
+Invalid track duration 0.
+Box[tkhd]
+Box[tkhd] has an unsupported version [%u]
+Track ID [%u] has an invalid size [%ux%u]
+Track ID [%u] dimensions are too large [%ux%u]
+Box[mdia]
+Box[mdhd]
+Box[mdhd] has an unsupported version [%u]
+Box[minf]
+Duplicate Box[stbl] for a single track detected
+Box[stbl]
+Box[co64]
+Box[stco]
+Box[stsc]
+Box[stsc] does not begin with chunk 1 [%u]
+Box[stsc] chunks are not strictly increasing
+Box[stsz]
+Box[stss]
+Box[stts]
+Box[stsd]
+Box[tref]
+Box[edts]
+More than one [elst] Box was found.
+Box[edts] contains no [elst] Box.
+Box[elst]
+Box[elst] contains an entry_count != 1 [%d]
+Box[elst] has an unsupported version [%u]
+Box[elst] Invalid value for segment_duration (0).
+av01
+urn:mpeg:mpegB:cicp:systems:auxiliary:alpha
+urn:mpeg:hevc:2015:auxid:1
+Exif
+Exif header
+Sample table contains a chunk with 0 samples
+Exceeded avifDecoder's imageCountLimit
+Truncated sample table
+Sample table contains an offset/size pair which overflows: [%llu / %u]
+Exceeded avifIO's sizeHint, possibly truncated data
+Item ID %u read has overflowing offset
+Item ID %u has zero extents
+Item ID %u is stored in an idat, but no associated idat box was found
+Item ID %u reported size failed size hint sanity check. Truncated data?
+Item ID %u has impossible extent offset in idat buffer
+Item ID %u has impossible extent size in idat buffer
+Item ID %u extent offset failed size hint sanity check. Truncated data?
+Item ID %u tried to read %zu bytes, but only received %zu bytes
+Item ID %u has %zu unexpected trailing bytes
+Box[grid]
+Box[grid] has unsupported version [%u]
+Grid box contains illegal field length: [%u]
+Grid box contains illegal dimensions: [%u x %u]
+Grid box dimensions are too large: [%u x %u]
+Tile item ID %u has an unknown item type '%.4s'
+Grid image contains tile with an unsupported property marked as essential
+av02
+av2C
+Grid image's first tile is missing an %s property
+Tile item ID %u of type '%.4s' differs from other tile type '%.4s'
+Grid image of dimensions %ux%u requires %u tiles, but %u were found
+a1lx layer index [%d] does not fit in item size
+lsel property requests layer index [%u] which isn't present in a1lx property ([%u] layers)
+Exceeded avifDecoder's imageCountLimit (progressive)
+Item ID %u of type '%.4s' is missing mandatory %s property
+Tile item ID %u of type '%.4s' is missing mandatory %s property
+The fields of the %s property of tile item ID %u of type '%.4s' differs from other tiles
+[Strict] Item ID %u of type '%.4s' is missing mandatory pixi property
+Item ID %u depth specified by pixi property [%u] does not match %s property depth [%u]
+[Strict] Item ID %u is missing an ispe property, so its clap property cannot be validated
+tile->codec->getNextImage() failed
+avifImageLimitedToFullAlpha failed
+avifImageScale() failed
+The color image item does not match the alpha image item in width, height, or bit depth
+Grid image tiles do not completely cover the image (HEIF (ISO/IEC 23008-12:2017), Section 6.6.2.3.1)
+Grid image tiles in the rightmost column and bottommost row do not overlap the reconstructed image grid canvas. See MIAF (ISO/IEC 23000-22:2019), Section 7.3.11.4.2, Figure 2
+Alpha plane dimensions do not match color plane dimensions
+Image allocation failure
+Grid image contains mismatched tiles
+avifImageScale() called, but is unimplemented without libyuv!
+%s: Failed to skip %zu bytes, truncated data?
+%s: Failed to read %zu bytes, truncated data?
+%s: Failed to read UX8 value; Unsupported UX8 factor [%llu]
+%s: Failed to find a NULL terminator when reading a string
+uuid
+%s: Header size overflow check failure
+%s: Child box too large, possibly truncated data
+%s: Expecting box version %u, got version %u
+Expected %u frames given to avifEncoderAddImage() to encode this layered image according to extraLayerCount, but got %u frames.
+ftyp
+msf1
+iso8
+mif1
+miaf
+MA1B
+MA1A
+libavif
+infe
+dimg
+ipco
+ipma
+moov
+mvhd
+trak
+tkhd
+tref
+edts
+elst
+mdia
+mdhd
+auxv
+minf
+vmhd
+dinf
+dref
+url 
+stbl
+stsd
+AOM Coding
+ccst
+auxi
+stts
+stsc
+stsz
+stco
+stss
+extraLayerCount [%u] must be less than %d
+auxl
+prem
+Alpha
+Color
+cdsc
+mdat
+aom_codec_enc_config_default() failed: %s
+Detected libaom v3.6.0 bug with large images. Upgrade to libaom v3.6.1 or later.
+aom_codec_enc_init() failed: %s: %s
+aom_codec_enc_config_set() failed: %s: %s
+Too many layers sent. Expected %u layers, but got %u layers.
+aom_codec_encode() failed: %s: %s
+end-usage
+Invalid value for end-usage: %s
+alpha:
+color:
+aom_codec_set_option("%s", "%s") failed: %s: %s
+tune
+aom_codec_encode() with img=NULL failed: %s: %s
+avifCodecEncodeOutputAddSample() failed: %s
+5?)\
+G!?{
+G!?{
+}?5?
+j<=7
+G!?{
+`1BSBSH
+@___stack_chk_guard
+@dyld_stub_binder
+@___bzero
+@___stack_chk_fail
+@_abort
+@_aom_codec_av1_cx
+@_aom_codec_control
+@_aom_codec_destroy
+@_aom_codec_enc_config_default
+@_aom_codec_enc_config_set
+@_aom_codec_enc_init_ver
+@_aom_codec_encode
+@_aom_codec_err_to_string
+@_aom_codec_error
+@_aom_codec_error_detail
+@_aom_codec_get_cx_data
+@_aom_codec_set_option
+@_aom_codec_version
+@_aom_codec_version_str
+@_aom_img_alloc
+@_aom_img_free
+@_dav1d_close
+@_dav1d_data_unref
+@_dav1d_data_wrap
+@_dav1d_default_settings
+@_dav1d_get_picture
+@_dav1d_open
+@_dav1d_picture_unref
+@_dav1d_send_data
+@_dav1d_version
+@_fclose
+@_ferror
+@_fopen
+@_fread
+@_free
+@_fseek
+@_ftell
+@_malloc
+@_memcmp
+@_memcpy
+@_memmove
+@_memset
+@_pthread_create
+@_pthread_join
+@_snprintf
+@_strcmp
+@_strlen
+@_strncmp
+@_strtol
+@_time
+@_vsnprintf
+_avif
+ChoiceFromName
+Name
+Versions
+Find
+MGetValues
++lorPrimaries
+leanApertureBoxConvertCropRect
+lropRectConvertCleanApertureBox
+codedRowCount
+stroy
+arestKeyframe
+xtImage
+MaxExtent
+Timing
+thImage
+File
+Memory
+File
+Memory
+Source
+Create
+IsKeyframe
+Parse
+ecoder
+iagnosticsClearError
+Grid
+AddImage
+Create
+Destroy
+Finish
+SetCodecSpecificOption
+Write
+ullToLimited
+OrientationOffset
+TiffHeaderOffset
+Exif
+PixelFormatInfo
+FileReader
+MemoryReader
+Create
+Destroy
+Empty
+reate
+Height
+RowBytes
+Width
+Exif
+Metadata
+ProfileICC
+ViewRect
+tealPlanes
+AllocatePlanes
+Destroy
+FreePlanes
+IsOpaque
+Plane
+RGBToYUV
+UsesU16
+YUVToRGB
+mage
+bYUVVersion
+	mitedToFull
+eekCompatibleFileType
+ixelFormatToString
+rogressiveStateToString
+ChannelCount
+HasAlpha
+ixelSize
+remultiplyAlpha
+AllocatePixels
+FreePixels
+SetDefaults
+UnpremultiplyAlpha
+Format
+Image
+Free
+Realloc
+WData
+esultToString
+FindByGamma
+GetGamma
+Alloc
+Encoder
+TransferCharacteristics
+Version
+0P00p
+``0 
+00  @@
+``P`
+&0@@
+ 0pp
+_avifAlloc
+_avifCleanApertureBoxConvertCropRect
+_avifCodecChoiceFromName
+_avifCodecName
+_avifCodecVersions
+_avifColorPrimariesFind
+_avifColorPrimariesGetValues
+_avifCropRectConvertCleanApertureBox
+_avifDecoderCreate
+_avifDecoderDecodedRowCount
+_avifDecoderDestroy
+_avifDecoderIsKeyframe
+_avifDecoderNearestKeyframe
+_avifDecoderNextImage
+_avifDecoderNthImage
+_avifDecoderNthImageMaxExtent
+_avifDecoderNthImageTiming
+_avifDecoderParse
+_avifDecoderRead
+_avifDecoderReadFile
+_avifDecoderReadMemory
+_avifDecoderReset
+_avifDecoderSetIO
+_avifDecoderSetIOFile
+_avifDecoderSetIOMemory
+_avifDecoderSetSource
+_avifDiagnosticsClearError
+_avifEncoderAddImage
+_avifEncoderAddImageGrid
+_avifEncoderCreate
+_avifEncoderDestroy
+_avifEncoderFinish
+_avifEncoderSetCodecSpecificOption
+_avifEncoderWrite
+_avifFree
+_avifFullToLimitedUV
+_avifFullToLimitedY
+_avifGetExifOrientationOffset
+_avifGetExifTiffHeaderOffset
+_avifGetPixelFormatInfo
+_avifIOCreateFileReader
+_avifIOCreateMemoryReader
+_avifIODestroy
+_avifImageAllocatePlanes
+_avifImageCopy
+_avifImageCreate
+_avifImageCreateEmpty
+_avifImageDestroy
+_avifImageFreePlanes
+_avifImageIsOpaque
+_avifImagePlane
+_avifImagePlaneHeight
+_avifImagePlaneRowBytes
+_avifImagePlaneWidth
+_avifImageRGBToYUV
+_avifImageSetMetadataExif
+_avifImageSetMetadataXMP
+_avifImageSetProfileICC
+_avifImageSetViewRect
+_avifImageStealPlanes
+_avifImageUsesU16
+_avifImageYUVToRGB
+_avifLibYUVVersion
+_avifLimitedToFullUV
+_avifLimitedToFullY
+_avifPeekCompatibleFileType
+_avifPixelFormatToString
+_avifProgressiveStateToString
+_avifRGBFormatChannelCount
+_avifRGBFormatHasAlpha
+_avifRGBImageAllocatePixels
+_avifRGBImageFreePixels
+_avifRGBImagePixelSize
+_avifRGBImagePremultiplyAlpha
+_avifRGBImageSetDefaults
+_avifRGBImageUnpremultiplyAlpha
+_avifRWDataFree
+_avifRWDataRealloc
+_avifRWDataSet
+_avifResultToString
+_avifTransferCharacteristicsFindByGamma
+_avifTransferCharacteristicsGetGamma
+_avifVersion
+___bzero
+___stack_chk_fail
+___stack_chk_guard
+_abort
+_aom_codec_av1_cx
+_aom_codec_control
+_aom_codec_destroy
+_aom_codec_enc_config_default
+_aom_codec_enc_config_set
+_aom_codec_enc_init_ver
+_aom_codec_encode
+_aom_codec_err_to_string
+_aom_codec_error
+_aom_codec_error_detail
+_aom_codec_get_cx_data
+_aom_codec_set_option
+_aom_codec_version
+_aom_codec_version_str
+_aom_img_alloc
+_aom_img_free
+_dav1d_close
+_dav1d_data_unref
+_dav1d_data_wrap
+_dav1d_default_settings
+_dav1d_get_picture
+_dav1d_open
+_dav1d_picture_unref
+_dav1d_send_data
+_dav1d_version
+_fclose
+_ferror
+_fopen
+_fread
+_free
+_fseek
+_ftell
+_malloc
+_memcmp
+_memcpy
+_memmove
+_memset
+_pthread_create
+_pthread_join
+_snprintf
+_strcmp
+_strlen
+_strncmp
+_strtol
+_time
+_vsnprintf
+dyld_stub_binder
+_avifFillAlpha
+_avifReformatAlpha
+_avifImageSetDefaults
+_avifImageCopyNoAlloc
+_avifImageCopySamples
+_avifDimensionsTooLarge
+_avifCodecDestroy
+_avifCropRectIsValid
+_avifAreGridDimensionsValid
+_avifCodecSpecificOptionsCreate
+_avifCodecSpecificOptionsClear
+_avifCodecSpecificOptionsDestroy
+_avifCodecSpecificOptionsSet
+_avifCodecTypeFromChoice
+_avifCodecCreate
+_avifCalcYUVCoefficients
+_avifDiagnosticsPrintf
+_avifImageExtractExifOrientationToIrotImir
+_avifIOMemoryReaderDestroy
+_avifIOMemoryReaderRead
+_avifIOFileReaderDestroy
+_avifIOFileReaderRead
+_avifSequenceHeaderParse
+_avifCodecDecodeInputCreate
+_avifCodecDecodeInputDestroy
+_avifParseFileTypeBox
+_avifFileTypeIsCompatible
+_avifMetaFindItem
+_avifDecoderDataClearTiles
+_avifDecoderFindMetadata
+_avifDecoderDataCreateTile
+_avifCodecDecodeInputFillFromSampleTable
+_avifDecoderItemRead
+_avifParseImageGridBox
+_avifDecoderItemGetGridCodecType
+_avifDecoderGenerateImageTiles
+_avifDecoderItemValidateProperties
+_avifDecoderPrepareSample
+_avifDecoderDecodeTiles
+_avifDecoderDataResetCodec
+_avifDecoderDataDestroy
+_avifMetaDestroy
+_avifSampleTableDestroy
+_avifParseMetaBox
+_avifParseItemPropertyContainerBox
+_avifParsePixelInformationProperty
+_avifParseOperatingPointSelectorProperty
+_avifParseLayerSelectorProperty
+_avifParseAV1LayeredImageIndexingProperty
+_avifParseContentLightLevelInformationBox
+_avifParseChunkOffsetBox
+_avifCodecDecodeInputFillFromDecoderItem
+_avifPrepareReformatState
+_avifImageYUVToRGBImpl
+_avifImageYUVToRGBThreadWorker
+_avifImageIdentity8ToRGB8ColorFullRange
+_avifImageYUV16ToRGB16Color
+_avifImageYUV16ToRGB16Mono
+_avifImageYUV16ToRGB8Color
+_avifImageYUV16ToRGB8Mono
+_avifImageYUV8ToRGB16Color
+_avifImageYUV8ToRGB16Mono
+_avifImageYUV8ToRGB8Color
+_avifImageYUV8ToRGB8Mono
+_avifImageRGBToYUVLibSharpYUV
+_avifImageRGBToYUVLibYUV
+_avifImageYUVToRGBLibYUV
+_avifRGBImagePremultiplyAlphaLibYUV
+_avifRGBImageUnpremultiplyAlphaLibYUV
+_avifRGBImageToF16LibYUV
+_avifImageScale
+_avifROStreamCurrent
+_avifROStreamStart
+_avifROStreamHasBytesLeft
+_avifROStreamRemainingBytes
+_avifROStreamOffset
+_avifROStreamSetOffset
+_avifROStreamSkip
+_avifROStreamRead
+_avifROStreamReadUX8
+_avifROStreamReadU16
+_avifROStreamReadU32
+_avifROStreamReadU64
+_avifROStreamReadU16Endianness
+_avifROStreamReadU32Endianness
+_avifROStreamReadBits8
+_avifROStreamReadBits
+_avifROStreamReadVarInt
+_avifROStreamReadString
+_avifROStreamReadBoxHeaderPartial
+_avifROStreamReadBoxHeader
+_avifROStreamReadVersionAndFlags
+_avifROStreamReadAndEnforceVersion
+_avifRWStreamStart
+_avifRWStreamOffset
+_avifRWStreamSetOffset
+_avifRWStreamFinishWrite
+_avifRWStreamWrite
+_avifRWStreamWriteChars
+_avifRWStreamWriteFullBox
+_avifRWStreamWriteBox
+_avifRWStreamFinishBox
+_avifRWStreamWriteU8
+_avifRWStreamWriteU16
+_avifRWStreamWriteU32
+_avifRWStreamWriteU64
+_avifRWStreamWriteZeros
+_avifRWStreamWriteBits
+_avifRWStreamWriteVarInt
+_avifRoundf
+_avifHTONS
+_avifNTOHS
+_avifCTOHS
+_avifHTONL
+_avifNTOHL
+_avifCTOHL
+_avifHTON64
+_avifNTOH64
+_avifArrayCreate
+_avifArrayPushIndex
+_avifArrayPushPtr
+_avifArrayPush
+_avifArrayPop
+_avifArrayDestroy
+_avifFractionSimplify
+_avifFractionCD
+_avifFractionAdd
+_avifFractionSub
+_avifSetTileConfiguration
+_avifCodecEncodeOutputCreate
+_avifCodecEncodeOutputDestroy
+_avifCodecEncodeOutputAddSample
+_avifEncoderDataDestroy
+_avifEncoderAddImageInternal
+_avifItemPropertyDedupCreate
+_avifItemPropertyDedupFinish
+_writeConfigBox
+_avifEncoderWriteColorProperties
+_avifItemPropertyDedupDestroy
+_avifEncoderWriteTrackMetaBox
+_avifEncoderWriteMediaDataBox
+_avifEncoderDetectChanges
+_avifEncoderBackupSettings
+_avifEncoderAddImageItems
+_avifEncoderDataCreateExifItem
+_avifEncoderDataCreateXMPItem
+_avifImageCopyAndPad
+_avifEncoderDataShouldForceKeyframeForAlpha
+_avifEncoderDataCreateItem
+_avifEncoderWriteExtendedColorProperties
+_avifCodecVersionDav1d
+_avifCodecCreateDav1d
+_dav1dCodecGetNextImage
+_dav1dCodecDestroyInternal
+_avifDav1dFreeCallback
+_avifCodecVersionAOM
+_avifCodecCreateAOM
+_aomCodecEncodeImage
+_aomCodecEncodeFinish
+_aomCodecDestroyInternal
+_avifProcessAOMOptionsPostInit
+_avifKeyEqualsName
+_xmpContentType
+_noScaling
+_alphaURN
+_avifEncoderFinish.unityMatrix
+_xmpContentType
+_scalingModeMap
+_availableCodecs
+_avifColorPrimariesTables
+_matrixCoefficientsTables
+_endUsageEnum
+__dyld_private
+/Users/valve/projects/SDL_image/external/libavif/src/
+alpha.c
+/Users/valve/projects/SDL_image/build-macos/build-x64/external/libavif/CMakeFiles/avif.dir/src/alpha.c.o
+_avifFillAlpha
+/Users/valve/projects/SDL_image/external/libavif/src/
+avif.c
+/Users/valve/projects/SDL_image/build-macos/build-x64/external/libavif/CMakeFiles/avif.dir/src/avif.c.o
+/Users/valve/projects/SDL_image/external/libavif/src/
+colr.c
+/Users/valve/projects/SDL_image/build-macos/build-x64/external/libavif/CMakeFiles/avif.dir/src/colr.c.o
+/Users/valve/projects/SDL_image/external/libavif/src/
+diag.c
+/Users/valve/projects/SDL_image/build-macos/build-x64/external/libavif/CMakeFiles/avif.dir/src/diag.c.o
+/Users/valve/projects/SDL_image/external/libavif/src/
+exif.c
+/Users/valve/projects/SDL_image/build-macos/build-x64/external/libavif/CMakeFiles/avif.dir/src/exif.c.o
+/Users/valve/projects/SDL_image/external/libavif/src/
+io.c
+/Users/valve/projects/SDL_image/build-macos/build-x64/external/libavif/CMakeFiles/avif.dir/src/io.c.o
+/Users/valve/projects/SDL_image/external/libavif/src/
+mem.c
+/Users/valve/projects/SDL_image/build-macos/build-x64/external/libavif/CMakeFiles/avif.dir/src/mem.c.o
+/Users/valve/projects/SDL_image/external/libavif/src/
+obu.c
+/Users/valve/projects/SDL_image/build-macos/build-x64/external/libavif/CMakeFiles/avif.dir/src/obu.c.o
+/Users/valve/projects/SDL_image/external/libavif/src/
+rawdata.c
+/Users/valve/projects/SDL_image/build-macos/build-x64/external/libavif/CMakeFiles/avif.dir/src/rawdata.c.o
+/Users/valve/projects/SDL_image/external/libavif/src/
+read.c
+/Users/valve/projects/SDL_image/build-macos/build-x64/external/libavif/CMakeFiles/avif.dir/src/read.c.o
+/Users/valve/projects/SDL_image/external/libavif/src/
+reformat.c
+/Users/valve/projects/SDL_image/build-macos/build-x64/external/libavif/CMakeFiles/avif.dir/src/reformat.c.o
+/Users/valve/projects/SDL_image/external/libavif/src/
+reformat_libsharpyuv.c
+/Users/valve/projects/SDL_image/build-macos/build-x64/external/libavif/CMakeFiles/avif.dir/src/reformat_libsharpyuv.c.o
+/Users/valve/projects/SDL_image/external/libavif/src/
+reformat_libyuv.c
+/Users/valve/projects/SDL_image/build-macos/build-x64/external/libavif/CMakeFiles/avif.dir/src/reformat_libyuv.c.o
+/Users/valve/projects/SDL_image/external/libavif/src/
+scale.c
+/Users/valve/projects/SDL_image/build-macos/build-x64/external/libavif/CMakeFiles/avif.dir/src/scale.c.o
+/Users/valve/projects/SDL_image/external/libavif/src/
+stream.c
+/Users/valve/projects/SDL_image/build-macos/build-x64/external/libavif/CMakeFiles/avif.dir/src/stream.c.o
+/Users/valve/projects/SDL_image/external/libavif/src/
+utils.c
+/Users/valve/projects/SDL_image/build-macos/build-x64/external/libavif/CMakeFiles/avif.dir/src/utils.c.o
+/Users/valve/projects/SDL_image/external/libavif/src/
+write.c
+/Users/valve/projects/SDL_image/build-macos/build-x64/external/libavif/CMakeFiles/avif.dir/src/write.c.o
+/Users/valve/projects/SDL_image/external/libavif/src/
+codec_dav1d.c
+/Users/valve/projects/SDL_image/build-macos/build-x64/external/libavif/CMakeFiles/avif.dir/src/codec_dav1d.c.o
+/Users/valve/projects/SDL_image/external/libavif/src/
+codec_aom.c
+/Users/valve/projects/SDL_image/build-macos/build-x64/external/libavif/CMakeFiles/avif.dir/src/codec_aom.c.o
+__TEXT
+__text
+__TEXT
+__stubs
+__TEXT
+__stub_helper
+__TEXT
+__cstring
+__TEXT
+__const
+__TEXT
+__unwind_info
+__TEXT
+__DATA_CONST
+__got
+__DATA_CONST
+__const
+__DATA_CONST
+__DATA
+__la_symbol_ptr
+__DATA
+__data
+__DATA
+__LINKEDIT
+@loader_path/libavif.16.dylib
+@loader_path/libdav1d.6.dylib
+@loader_path/libaom.3.dylib
+/usr/lib/libSystem.B.dylib
+/Users/valve/projects/SDL_image/build-macos/build-arm64/external/dav1d
+/Users/valve/projects/SDL_image/build-macos/build-arm64/external/aom
+GHqxgH!x!
+cHa|c
+H"xB
+jIj8
+cHa<c
+H"xB
+cIl|c
+I.8)
+j"A))!
+!~ 	 
+!~ 	 
+!~ 	 
+!~ 	 
+!~ 	 
+!~ 	 
+!~ 	 
+!~ 	 
+j"A))!
+!~@	 
+!~@	 
+!~@	 
+y !*
+!~@	 
+!~@	 
+!~@	 
+9 !*
+!~@	 
+!~@	 
+!~@	 
+y !*
+!~@	 
+!~@	 
+!~@	 
+9 !*
+j@))
+4h>@
+6hN@
+4`"@
+i*@))
+4h>@
+<hN@
+4`"@
+.@)I%
+4h>@
+<hN@
+4`"@
+6h"@
++B)(
+R6kw
+ ihx
+Lii8k	
+C-0("
+TjV@
+Iii8)	
+Lii8k	
+5vv@
+Iii8)	
+Lii8k	
+@8t"
+Q(~`
+TME@
+Rih	
+RIi	
+I@yk
+M@yj
+Q@yj
+Rh#@
+rMii
+rMii
+R+u~
+H)(}
+H)(}
+5H(@
+5@CB
+rMii
+7h*@
+rMii
+)!@9	
+rLii
+)!@9	
+R,ih
+j1@9
+j-@9L
+k5@9
+A@9H
+l9@9
+4k=@9K
+T*}@
+	k`	
+	ka]
+G9h9
+TmE@
+TLE@
+	+F)
+ThB@
+44yh
+S@9)
+	@z`
+TMyl
+RH}	
+1@9L
+T&~@
+B@@9
+B@9_
+-@9L
+@9jaA9_
+%G)?
+Hl@)
+q$	@z
+	D)?
+@)?!
+!ksx
+`k3x
+!ku8
+`k58
+T+	@
+(%@)
+T*M@
+RO1@
+RJ1@
+7h>@
+Ti:@
+(G)_
+5h:@
+ThB@
+%G)?
+	k	1
+	kJ1
+	k@1
+B9(a
+Q8H?
+wI 7
+	kAG
+	k ;
+	kB1
+a	*9
+Thy8
+sQ8	
+	ka.
+	k!)
+	k!"
+cY8(
++@yh
+_@9h
++@yh
+	-*@ 
+(I*8
+(I*8
++R)I}	
+3S)O
+il|"
+ik|!
+il<"
+ik<!
+6h@ 
+hK8xh
+K;xM
+(I*8h
+(I*8
+(I*8
+hJ4x3
+hJ4x
+(I*8
+(I*8
+(I3x
+hJ4x
+@y_9
++ih8J	
++*i.
+ThJB
+ThrC
+4`*A
+4`RB
+4`zC
+Th:I
+h%xM
+5SB 
+ia8)
+!im8
+fJ|8
+;Id8dJw8-
+:Im8
+yJm8-It8
+xJt8#
+!imx
+wKfx
+$Idx|Ktx-
+-Imx
+yKfx3Izx
+tKfx
+TT:5
+TMh~8
+Mx~x
+>QI})
+r	})
+>QI})
+r	})
+r*}*
+R*(	
+rK}+
+r*}*
+r*}*
+R*(	
+rK}+
+r*}*
+@81~
+ij8ci08
+ij8ci18
+ij8ci/8J
+I @-J
+<k|x
+lk%xP
+lk&x|k'x
+I @-J
+b@yl
+f$@x
+I @-J
+ykx?
+ibx?
+I @-J
+R`:@
+ib@y
+ykx?
+I @-J
+[k$xP
+[k%x\k&x
+I @-J
+4bA)
+eh0x
+eh1x
+eh!xc
+I @-J
+ij8pzb
+bia8
+I @-J
+R`:@
+pi-8qi.8ai/8
+3ai-x
+ib8)	
+)ih8
+iix)	
+iix(
+iix(
+_8?!
+ik8_!
+ik8_!
+ik8_!
+ik8_!
+#D))=
+j48 
+@9I	@9J
+	ij8H
+5h&@
+Th&@
+Si*@
+Si*@
+9h&@
+5h&@
+5h&@
+i)8h
+i)xh
+5h&@
+5h&@
+i)8i
+5h&@
+i)8i
+5h&@
+i)8i
+5h&@
+i)8i
+5h&@
+i)8i
+5h&@
+i)8i
+5h&@
+i)8i
+5h&@
+i)8i
+5h&@
+i)8i
+5h&@
+i)8i
+	 @i?
+)* @)L}@
+Rl}@
+Rn5)
+)I})
+RL-)
+)*}@
+RL-)
+)*}@
+Tm!@
+TmQ@
+	K*e
+j&E)I
+	K*e
+j&F)I
+w@y`
+y	#@
+s@y	
+*#@9
+J9Ay
+T!ivx
+	@z 
+)9Ay	
+qd	@
+R	)	
+=HQ@
+M@Ln
+M@Ln
+M@Ln
+M@LnA
+bO9?
+@9iBA9?=
+Rhj)8hBA9i
+5!#@
+q 	@z 
+T	E@
+T	I@
+T	M@
+T	)@
+T	Y@
+T	]@
+A@qC
+	kAU
+Th2@
+Th*@
+T?!@q
+T?A@q
+#L)?
+#L)?
+Lii8k	
+fA)?
+?	$q
+1.0.3
+YUV444
+YUV420
+YUV422
+YUV400
+Unknown
+Invalid ftyp
+No content
+No YUV format selected
+Reformat failed
+Unsupported depth
+Encoding of color planes failed
+Encoding of alpha plane failed
+BMFF parsing failed
+Missing or empty image item
+Decoding of color planes failed
+Decoding of alpha plane failed
+Color and alpha planes size mismatch
+Plane sizes don't match ispe values
+No codec available
+No images remaining
+Invalid Exif payload
+Invalid image grid
+Invalid codec-specific option
+Truncated data
+IO not set
+IO Error
+Waiting on IO
+Invalid argument
+Not implemented
+Out of memory
+Cannot change some setting during encoding
+The image is incompatible with already encoded images
+Unknown Error
+Unavailable
+Available
+Active
+[Strict] clap contains a denominator that is not strictly positive
+[Strict] clap width or height is negative
+[Strict] clap width %d/%d is not an integer
+[Strict] clap height %d/%d is not an integer
+[Strict] image width %u or height %u is greater than INT32_MAX
+[Strict] croppedCenterX overflowed
+[Strict] croppedCenterY overflowed
+[Strict] cropX overflowed
+[Strict] calculated crop X offset %d/%d is not an integer
+[Strict] cropY overflowed
+[Strict] calculated crop Y offset %d/%d is not an integer
+[Strict] at least one crop offset is not positive
+[Strict] crop rect width %u or height %u is greater than INT32_MAX
+[Strict] horizOff overflowed
+[Strict] vertOff overflowed
+Grid image tile width (%u) or height (%u) cannot be smaller than 64. See MIAF (ISO/IEC 23000-22:2019), Section 7.3.11.4.2
+Grid image width (%u) or height (%u) or tile width (%u) or height (%u) shall be even if chroma is subsampled in that dimension. See MIAF (ISO/IEC 23000-22:2019), Section 7.3.11.4.2
+ [enc]
+ [dec]
+[Strict] crop rect width and height must be nonzero
+[Strict] crop rect is out of the image's bounds
+[Strict] crop rect X offset must be even due to this image's YUV subsampling
+[Strict] crop rect Y offset must be even due to this image's YUV subsampling
+dav1d
+BT.709
+BT.470-6 System M
+BT.470-6 System BG
+BT.601
+SMPTE 240M
+Generic film
+BT.2020
+SMPTE RP 431-2
+SMPTE EG 432-1 (DCI P3)
+EBU Tech. 3213-E
+FCC USFC 73.682
+SMPTE ST 240
+BT.2020 (non-constant luminance)
+grid
+ispe
+Item ID [%u] has an invalid size [%ux%u]
+Item ID [%u] dimensions are too large [%ux%u]
+auxC
+[Strict] Alpha auxiliary image item ID [%u] is missing a mandatory ispe property
+Item ID [%u] is missing a mandatory ispe property
+avis
+avif
+Failed to find AV1 color track
+Failed to find AV1 color track's color properties
+Primary item not specified
+Primary item not found
+colr
+clli
+pasp
+clap
+irot
+imir
+Box[ftyp]
+Box[ftyp] contains a compatible brands section that isn't divisible by 4 [%zu]
+File-level box header
+meta
+Box[meta]
+hdlr
+Box[meta] does not have a Box[hdlr] as its first child box
+iloc
+pitm
+idat
+iprp
+iinf
+iref
+Box[meta] has no child boxes
+Box[%s] contains a duplicate unique box of type '%s'
+Box[hdlr]
+Box[hdlr] contains a pre_defined value that is nonzero
+pict
+Box[hdlr] handler_type is not 'pict'
+Box[iloc]
+Box[iloc] has an unsupported version [%u]
+Box[iloc] has an unsupported base_offset_size [%u]
+Box[iloc] has an invalid item ID [%u]
+Item ID [%u] contains duplicate sets of extents
+Box[iloc] has a non null reserved field [%u]
+Box[iloc] has an unsupported construction method [%u]
+Item ID [%u] contains an extent offset which overflows: [base: %llu offset:%llu]
+Item ID [%u] contains an extent length which overflows the item size: [%zu, %zu]
+Multiple boxes of unique Box[pitm] found
+Box[pitm]
+Meta box contains multiple idat boxes
+idat box has a length of 0
+Box[iprp]
+Failed to find Box[ipco] as the first box in Box[iprp]
+Multiple Box[ipma] with a given pair of values of version and flags. See HEIF (ISO 23008-12:2017) 9.3.1
+Exceeded possible count of unique ipma version and flags tuples
+Box[iprp] contains a box that isn't type 'ipma'
+Box[ipco]
+av1C
+pixi
+a1op
+lsel
+a1lx
+Box[ispe]
+Box[auxC]
+Box[colr]
+rICC
+prof
+nclx
+Box[colr] contains nonzero reserved bits [%u]
+Box[%.4s]
+%s contains illegal marker: [%u]
+%s contains illegal version: [%u]
+Box[pasp]
+Box[clap]
+Box[irot]
+Box[irot] contains nonzero reserved bits [%u]
+Box[imir]
+Box[imir] contains nonzero reserved bits [%u]
+Box[pixi]
+Box[pixi] contains unsupported plane count [%u]
+Box[a1op]
+Box[a1op] contains an unsupported operating point [%u]
+Box[lsel]
+Box[lsel] contains an unsupported layer [%u]
+Box[a1lx]
+Box[a1lx] has bits set in the reserved section [%u]
+Box[clli]
+Box[ipma]
+Box[ipma] item IDs are not ordered by increasing ID
+Box[ipma] has an invalid item ID [%u]
+Duplicate Box[ipma] for item ID [%u]
+Box[ipma] for item ID [%u] contains an illegal property index [%u] (out of [%u] properties)
+Item ID [%u] has a %s property association which must not be marked essential, but is
+Item ID [%u] has a %s property association which must be marked essential, but is not
+Box[iinf]
+Box[iinf] has an unsupported version %u
+Box[iinf] contains a box that isn't type 'infe'
+Box[infe]
+%s: Expecting box version 2 or 3, got version %u
+mime
+%s: Box[infe] with item_type %.4s has an invalid item_ID [%u]
+Box[iref]
+Box[iref] has an invalid item ID [%u]
+Box[iref] has an invalid item ID dimg ref [%u]
+Box[moov]
+Box[trak]
+More than one [edts] Box was found.
+Invalid track duration 0.
+Box[tkhd]
+Box[tkhd] has an unsupported version [%u]
+Track ID [%u] has an invalid size [%ux%u]
+Track ID [%u] dimensions are too large [%ux%u]
+Box[mdia]
+Box[mdhd]
+Box[mdhd] has an unsupported version [%u]
+Box[minf]
+Duplicate Box[stbl] for a single track detected
+Box[stbl]
+Box[co64]
+Box[stco]
+Box[stsc]
+Box[stsc] does not begin with chunk 1 [%u]
+Box[stsc] chunks are not strictly increasing
+Box[stsz]
+Box[stss]
+Box[stts]
+Box[stsd]
+Box[tref]
+Box[edts]
+More than one [elst] Box was found.
+Box[edts] contains no [elst] Box.
+Box[elst]
+Box[elst] contains an entry_count != 1 [%d]
+Box[elst] has an unsupported version [%u]
+Box[elst] Invalid value for segment_duration (0).
+av01
+urn:mpeg:mpegB:cicp:systems:auxiliary:alpha
+urn:mpeg:hevc:2015:auxid:1
+Exif
+Exif header
+Sample table contains a chunk with 0 samples
+Exceeded avifDecoder's imageCountLimit
+Truncated sample table
+Sample table contains an offset/size pair which overflows: [%llu / %u]
+Exceeded avifIO's sizeHint, possibly truncated data
+Item ID %u read has overflowing offset
+Item ID %u has zero extents
+Item ID %u is stored in an idat, but no associated idat box was found
+Item ID %u reported size failed size hint sanity check. Truncated data?
+Item ID %u has impossible extent offset in idat buffer
+Item ID %u has impossible extent size in idat buffer
+Item ID %u extent offset failed size hint sanity check. Truncated data?
+Item ID %u tried to read %zu bytes, but only received %zu bytes
+Item ID %u has %zu unexpected trailing bytes
+Box[grid]
+Box[grid] has unsupported version [%u]
+Grid box contains illegal field length: [%u]
+Grid box contains illegal dimensions: [%u x %u]
+Grid box dimensions are too large: [%u x %u]
+Tile item ID %u has an unknown item type '%.4s'
+Grid image contains tile with an unsupported property marked as essential
+av02
+av2C
+Grid image's first tile is missing an %s property
+Tile item ID %u of type '%.4s' differs from other tile type '%.4s'
+Grid image of dimensions %ux%u requires %u tiles, but %u were found
+a1lx layer index [%d] does not fit in item size
+lsel property requests layer index [%u] which isn't present in a1lx property ([%u] layers)
+Exceeded avifDecoder's imageCountLimit (progressive)
+Item ID %u of type '%.4s' is missing mandatory %s property
+Tile item ID %u of type '%.4s' is missing mandatory %s property
+The fields of the %s property of tile item ID %u of type '%.4s' differs from other tiles
+[Strict] Item ID %u of type '%.4s' is missing mandatory pixi property
+Item ID %u depth specified by pixi property [%u] does not match %s property depth [%u]
+[Strict] Item ID %u is missing an ispe property, so its clap property cannot be validated
+tile->codec->getNextImage() failed
+avifImageLimitedToFullAlpha failed
+avifImageScale() failed
+The color image item does not match the alpha image item in width, height, or bit depth
+Grid image tiles do not completely cover the image (HEIF (ISO/IEC 23008-12:2017), Section 6.6.2.3.1)
+Grid image tiles in the rightmost column and bottommost row do not overlap the reconstructed image grid canvas. See MIAF (ISO/IEC 23000-22:2019), Section 7.3.11.4.2, Figure 2
+Alpha plane dimensions do not match color plane dimensions
+Image allocation failure
+Grid image contains mismatched tiles
+avifImageScale() called, but is unimplemented without libyuv!
+%s: Failed to skip %zu bytes, truncated data?
+%s: Failed to read %zu bytes, truncated data?
+%s: Failed to read UX8 value; Unsupported UX8 factor [%llu]
+%s: Failed to find a NULL terminator when reading a string
+uuid
+%s: Header size overflow check failure
+%s: Child box too large, possibly truncated data
+%s: Expecting box version %u, got version %u
+Expected %u frames given to avifEncoderAddImage() to encode this layered image according to extraLayerCount, but got %u frames.
+ftyp
+msf1
+iso8
+mif1
+miaf
+MA1B
+MA1A
+libavif
+infe
+dimg
+ipco
+ipma
+moov
+mvhd
+trak
+tkhd
+tref
+edts
+elst
+mdia
+mdhd
+auxv
+minf
+vmhd
+dinf
+dref
+url 
+stbl
+stsd
+AOM Coding
+ccst
+auxi
+stts
+stsc
+stsz
+stco
+stss
+extraLayerCount [%u] must be less than %d
+auxl
+prem
+Alpha
+Color
+cdsc
+mdat
+aom_codec_enc_config_default() failed: %s
+Detected libaom v3.6.0 bug with large images. Upgrade to libaom v3.6.1 or later.
+aom_codec_enc_init() failed: %s: %s
+aom_codec_enc_config_set() failed: %s: %s
+Too many layers sent. Expected %u layers, but got %u layers.
+aom_codec_encode() failed: %s: %s
+end-usage
+Invalid value for end-usage: %s
+alpha:
+color:
+aom_codec_set_option("%s", "%s") failed: %s: %s
+tune
+aom_codec_encode() with img=NULL failed: %s: %s
+avifCodecEncodeOutputAddSample() failed: %s
+application/rdf+xml
+3=CINTZ
+urn:mpeg:mpegB:cicp:systems:auxiliary:alpha
+application/rdf+xml
+cV`VVVb
+5?)\
+G!?{
+G!?{
+}?5?
+j<=7
+G!?{
+SBSF`$A
+@___stack_chk_guard
+@dyld_stub_binder
+@___stack_chk_fail
+@_abort
+@_aom_codec_av1_cx
+@_aom_codec_control
+@_aom_codec_destroy
+@_aom_codec_enc_config_default
+@_aom_codec_enc_config_set
+@_aom_codec_enc_init_ver
+@_aom_codec_encode
+@_aom_codec_err_to_string
+@_aom_codec_error
+@_aom_codec_error_detail
+@_aom_codec_get_cx_data
+@_aom_codec_set_option
+@_aom_codec_version
+@_aom_codec_version_str
+@_aom_img_alloc
+@_aom_img_free
+@_bzero
+@_dav1d_close
+@_dav1d_data_unref
+@_dav1d_data_wrap
+@_dav1d_default_settings
+@_dav1d_get_picture
+@_dav1d_open
+@_dav1d_picture_unref
+@_dav1d_send_data
+@_dav1d_version
+@_fclose
+@_ferror
+@_fopen
+@_fread
+@_free
+@_fseek
+@_ftell
+@_malloc
+@_memcmp
+@_memcpy
+@_memmove
+@_memset
+@_pthread_create
+@_pthread_join
+@_snprintf
+@_strcmp
+@_strlen
+@_strncmp
+@_strtol
+@_time
+@_vsnprintf
+_avif
+ChoiceFromName
+Name
+Versions
+Find
+MGetValues
++lorPrimaries
+leanApertureBoxConvertCropRect
+lropRectConvertCleanApertureBox
+codedRowCount
+stroy
+arestKeyframe
+xtImage
+MaxExtent
+Timing
+thImage
+File
+Memory
+File
+Memory
+Source
+Create
+IsKeyframe
+Parse
+ecoder
+iagnosticsClearError
+Grid
+AddImage
+Create
+Destroy
+Finish
+SetCodecSpecificOption
+Write
+ullToLimited
+OrientationOffset
+TiffHeaderOffset
+Exif
+PixelFormatInfo
+FileReader
+MemoryReader
+Create
+Destroy
+Empty
+reate
+Height
+RowBytes
+Width
+Exif
+Metadata
+ProfileICC
+ViewRect
+tealPlanes
+AllocatePlanes
+Destroy
+FreePlanes
+IsOpaque
+Plane
+RGBToYUV
+UsesU16
+YUVToRGB
+mage
+bYUVVersion
+	mitedToFull
+eekCompatibleFileType
+ixelFormatToString
+rogressiveStateToString
+ChannelCount
+HasAlpha
+ixelSize
+remultiplyAlpha
+AllocatePixels
+FreePixels
+SetDefaults
+UnpremultiplyAlpha
+Format
+Image
+Free
+Realloc
+WData
+esultToString
+FindByGamma
+GetGamma
+Alloc
+Encoder
+TransferCharacteristics
+Version
+(L$$<
+pplp
+#,<D
+8\tttt
+_avifAlloc
+_avifCleanApertureBoxConvertCropRect
+_avifCodecChoiceFromName
+_avifCodecName
+_avifCodecVersions
+_avifColorPrimariesFind
+_avifColorPrimariesGetValues
+_avifCropRectConvertCleanApertureBox
+_avifDecoderCreate
+_avifDecoderDecodedRowCount
+_avifDecoderDestroy
+_avifDecoderIsKeyframe
+_avifDecoderNearestKeyframe
+_avifDecoderNextImage
+_avifDecoderNthImage
+_avifDecoderNthImageMaxExtent
+_avifDecoderNthImageTiming
+_avifDecoderParse
+_avifDecoderRead
+_avifDecoderReadFile
+_avifDecoderReadMemory
+_avifDecoderReset
+_avifDecoderSetIO
+_avifDecoderSetIOFile
+_avifDecoderSetIOMemory
+_avifDecoderSetSource
+_avifDiagnosticsClearError
+_avifEncoderAddImage
+_avifEncoderAddImageGrid
+_avifEncoderCreate
+_avifEncoderDestroy
+_avifEncoderFinish
+_avifEncoderSetCodecSpecificOption
+_avifEncoderWrite
+_avifFree
+_avifFullToLimitedUV
+_avifFullToLimitedY
+_avifGetExifOrientationOffset
+_avifGetExifTiffHeaderOffset
+_avifGetPixelFormatInfo
+_avifIOCreateFileReader
+_avifIOCreateMemoryReader
+_avifIODestroy
+_avifImageAllocatePlanes
+_avifImageCopy
+_avifImageCreate
+_avifImageCreateEmpty
+_avifImageDestroy
+_avifImageFreePlanes
+_avifImageIsOpaque
+_avifImagePlane
+_avifImagePlaneHeight
+_avifImagePlaneRowBytes
+_avifImagePlaneWidth
+_avifImageRGBToYUV
+_avifImageSetMetadataExif
+_avifImageSetMetadataXMP
+_avifImageSetProfileICC
+_avifImageSetViewRect
+_avifImageStealPlanes
+_avifImageUsesU16
+_avifImageYUVToRGB
+_avifLibYUVVersion
+_avifLimitedToFullUV
+_avifLimitedToFullY
+_avifPeekCompatibleFileType
+_avifPixelFormatToString
+_avifProgressiveStateToString
+_avifRGBFormatChannelCount
+_avifRGBFormatHasAlpha
+_avifRGBImageAllocatePixels
+_avifRGBImageFreePixels
+_avifRGBImagePixelSize
+_avifRGBImagePremultiplyAlpha
+_avifRGBImageSetDefaults
+_avifRGBImageUnpremultiplyAlpha
+_avifRWDataFree
+_avifRWDataRealloc
+_avifRWDataSet
+_avifResultToString
+_avifTransferCharacteristicsFindByGamma
+_avifTransferCharacteristicsGetGamma
+_avifVersion
+___stack_chk_fail
+___stack_chk_guard
+_abort
+_aom_codec_av1_cx
+_aom_codec_control
+_aom_codec_destroy
+_aom_codec_enc_config_default
+_aom_codec_enc_config_set
+_aom_codec_enc_init_ver
+_aom_codec_encode
+_aom_codec_err_to_string
+_aom_codec_error
+_aom_codec_error_detail
+_aom_codec_get_cx_data
+_aom_codec_set_option
+_aom_codec_version
+_aom_codec_version_str
+_aom_img_alloc
+_aom_img_free
+_bzero
+_dav1d_close
+_dav1d_data_unref
+_dav1d_data_wrap
+_dav1d_default_settings
+_dav1d_get_picture
+_dav1d_open
+_dav1d_picture_unref
+_dav1d_send_data
+_dav1d_version
+_fclose
+_ferror
+_fopen
+_fread
+_free
+_fseek
+_ftell
+_malloc
+_memcmp
+_memcpy
+_memmove
+_memset
+_pthread_create
+_pthread_join
+_snprintf
+_strcmp
+_strlen
+_strncmp
+_strtol
+_time
+_vsnprintf
+dyld_stub_binder
+_avifFillAlpha
+_avifReformatAlpha
+_avifImageSetDefaults
+_avifImageCopyNoAlloc
+_avifImageCopySamples
+_avifDimensionsTooLarge
+_avifCodecDestroy
+_avifCropRectIsValid
+_avifAreGridDimensionsValid
+_avifCodecSpecificOptionsCreate
+_avifCodecSpecificOptionsClear
+_avifCodecSpecificOptionsDestroy
+_avifCodecSpecificOptionsSet
+_avifCodecTypeFromChoice
+_avifCodecCreate
+_avifCalcYUVCoefficients
+_avifDiagnosticsPrintf
+_avifImageExtractExifOrientationToIrotImir
+_avifIOMemoryReaderDestroy
+_avifIOMemoryReaderRead
+_avifIOFileReaderDestroy
+_avifIOFileReaderRead
+_avifSequenceHeaderParse
+_avifCodecDecodeInputCreate
+_avifCodecDecodeInputDestroy
+_avifParseFileTypeBox
+_avifFileTypeIsCompatible
+_avifMetaFindItem
+_avifDecoderDataClearTiles
+_avifDecoderFindMetadata
+_avifDecoderDataCreateTile
+_avifCodecDecodeInputFillFromSampleTable
+_avifDecoderItemRead
+_avifParseImageGridBox
+_avifDecoderItemGetGridCodecType
+_avifDecoderGenerateImageTiles
+_avifDecoderItemValidateProperties
+_avifDecoderPrepareSample
+_avifDecoderDecodeTiles
+_avifDecoderDataResetCodec
+_avifDecoderDataDestroy
+_avifMetaDestroy
+_avifSampleTableDestroy
+_avifParseMetaBox
+_avifParseItemPropertyContainerBox
+_avifParsePixelInformationProperty
+_avifParseOperatingPointSelectorProperty
+_avifParseLayerSelectorProperty
+_avifParseAV1LayeredImageIndexingProperty
+_avifParseContentLightLevelInformationBox
+_avifParseChunkOffsetBox
+_avifCodecDecodeInputFillFromDecoderItem
+_avifPrepareReformatState
+_avifImageYUVToRGBImpl
+_avifImageYUVToRGBThreadWorker
+_avifImageIdentity8ToRGB8ColorFullRange
+_avifImageYUV16ToRGB16Color
+_avifImageYUV16ToRGB16Mono
+_avifImageYUV16ToRGB8Color
+_avifImageYUV16ToRGB8Mono
+_avifImageYUV8ToRGB16Color
+_avifImageYUV8ToRGB16Mono
+_avifImageYUV8ToRGB8Color
+_avifImageYUV8ToRGB8Mono
+_avifImageRGBToYUVLibSharpYUV
+_avifImageRGBToYUVLibYUV
+_avifImageYUVToRGBLibYUV
+_avifRGBImagePremultiplyAlphaLibYUV
+_avifRGBImageUnpremultiplyAlphaLibYUV
+_avifRGBImageToF16LibYUV
+_avifImageScale
+_avifROStreamCurrent
+_avifROStreamStart
+_avifROStreamHasBytesLeft
+_avifROStreamRemainingBytes
+_avifROStreamOffset
+_avifROStreamSetOffset
+_avifROStreamSkip
+_avifROStreamRead
+_avifROStreamReadUX8
+_avifROStreamReadU16
+_avifROStreamReadU32
+_avifROStreamReadU64
+_avifROStreamReadU16Endianness
+_avifROStreamReadU32Endianness
+_avifROStreamReadBits8
+_avifROStreamReadBits
+_avifROStreamReadVarInt
+_avifROStreamReadString
+_avifROStreamReadBoxHeaderPartial
+_avifROStreamReadBoxHeader
+_avifROStreamReadVersionAndFlags
+_avifROStreamReadAndEnforceVersion
+_avifRWStreamStart
+_avifRWStreamOffset
+_avifRWStreamSetOffset
+_avifRWStreamFinishWrite
+_avifRWStreamWrite
+_avifRWStreamWriteChars
+_avifRWStreamWriteFullBox
+_avifRWStreamWriteBox
+_avifRWStreamFinishBox
+_avifRWStreamWriteU8
+_avifRWStreamWriteU16
+_avifRWStreamWriteU32
+_avifRWStreamWriteU64
+_avifRWStreamWriteZeros
+_avifRWStreamWriteBits
+_avifRWStreamWriteVarInt
+_avifRoundf
+_avifHTONS
+_avifNTOHS
+_avifCTOHS
+_avifHTONL
+_avifNTOHL
+_avifCTOHL
+_avifHTON64
+_avifNTOH64
+_avifArrayCreate
+_avifArrayPushIndex
+_avifArrayPushPtr
+_avifArrayPush
+_avifArrayPop
+_avifArrayDestroy
+_avifFractionSimplify
+_avifFractionCD
+_avifFractionAdd
+_avifFractionSub
+_avifSetTileConfiguration
+_avifCodecEncodeOutputCreate
+_avifCodecEncodeOutputDestroy
+_avifCodecEncodeOutputAddSample
+_avifEncoderDataDestroy
+_avifEncoderAddImageInternal
+_avifItemPropertyDedupCreate
+_avifItemPropertyDedupFinish
+_writeConfigBox
+_avifEncoderWriteColorProperties
+_avifItemPropertyDedupDestroy
+_avifEncoderWriteTrackMetaBox
+_avifEncoderWriteMediaDataBox
+_avifEncoderDetectChanges
+_avifEncoderBackupSettings
+_avifEncoderAddImageItems
+_avifEncoderDataCreateExifItem
+_avifEncoderDataCreateXMPItem
+_avifImageCopyAndPad
+_avifEncoderDataShouldForceKeyframeForAlpha
+_avifEncoderDataCreateItem
+_avifEncoderWriteExtendedColorProperties
+_avifCodecVersionDav1d
+_avifCodecCreateDav1d
+_dav1dCodecGetNextImage
+_dav1dCodecDestroyInternal
+_avifDav1dFreeCallback
+_avifCodecVersionAOM
+_avifCodecCreateAOM
+_aomCodecEncodeImage
+_aomCodecEncodeFinish
+_aomCodecDestroyInternal
+_avifProcessAOMOptionsPostInit
+_avifKeyEqualsName
+_xmpContentType
+_noScaling
+_alphaURN
+_avifEncoderFinish.unityMatrix
+_xmpContentType
+_scalingModeMap
+_availableCodecs
+_avifColorPrimariesTables
+_matrixCoefficientsTables
+_endUsageEnum
+__dyld_private
+/Users/valve/projects/SDL_image/external/libavif/src/
+alpha.c
+/Users/valve/projects/SDL_image/build-macos/build-arm64/external/libavif/CMakeFiles/avif.dir/src/alpha.c.o
+_avifFillAlpha
+/Users/valve/projects/SDL_image/external/libavif/src/
+avif.c
+/Users/valve/projects/SDL_image/build-macos/build-arm64/external/libavif/CMakeFiles/avif.dir/src/avif.c.o
+/Users/valve/projects/SDL_image/external/libavif/src/
+colr.c
+/Users/valve/projects/SDL_image/build-macos/build-arm64/external/libavif/CMakeFiles/avif.dir/src/colr.c.o
+/Users/valve/projects/SDL_image/external/libavif/src/
+diag.c
+/Users/valve/projects/SDL_image/build-macos/build-arm64/external/libavif/CMakeFiles/avif.dir/src/diag.c.o
+/Users/valve/projects/SDL_image/external/libavif/src/
+exif.c
+/Users/valve/projects/SDL_image/build-macos/build-arm64/external/libavif/CMakeFiles/avif.dir/src/exif.c.o
+/Users/valve/projects/SDL_image/external/libavif/src/
+io.c
+/Users/valve/projects/SDL_image/build-macos/build-arm64/external/libavif/CMakeFiles/avif.dir/src/io.c.o
+/Users/valve/projects/SDL_image/external/libavif/src/
+mem.c
+/Users/valve/projects/SDL_image/build-macos/build-arm64/external/libavif/CMakeFiles/avif.dir/src/mem.c.o
+/Users/valve/projects/SDL_image/external/libavif/src/
+obu.c
+/Users/valve/projects/SDL_image/build-macos/build-arm64/external/libavif/CMakeFiles/avif.dir/src/obu.c.o
+/Users/valve/projects/SDL_image/external/libavif/src/
+rawdata.c
+/Users/valve/projects/SDL_image/build-macos/build-arm64/external/libavif/CMakeFiles/avif.dir/src/rawdata.c.o
+/Users/valve/projects/SDL_image/external/libavif/src/
+read.c
+/Users/valve/projects/SDL_image/build-macos/build-arm64/external/libavif/CMakeFiles/avif.dir/src/read.c.o
+/Users/valve/projects/SDL_image/external/libavif/src/
+reformat.c
+/Users/valve/projects/SDL_image/build-macos/build-arm64/external/libavif/CMakeFiles/avif.dir/src/reformat.c.o
+/Users/valve/projects/SDL_image/external/libavif/src/
+reformat_libsharpyuv.c
+/Users/valve/projects/SDL_image/build-macos/build-arm64/external/libavif/CMakeFiles/avif.dir/src/reformat_libsharpyuv.c.o
+/Users/valve/projects/SDL_image/external/libavif/src/
+reformat_libyuv.c
+/Users/valve/projects/SDL_image/build-macos/build-arm64/external/libavif/CMakeFiles/avif.dir/src/reformat_libyuv.c.o
+/Users/valve/projects/SDL_image/external/libavif/src/
+scale.c
+/Users/valve/projects/SDL_image/build-macos/build-arm64/external/libavif/CMakeFiles/avif.dir/src/scale.c.o
+/Users/valve/projects/SDL_image/external/libavif/src/
+stream.c
+/Users/valve/projects/SDL_image/build-macos/build-arm64/external/libavif/CMakeFiles/avif.dir/src/stream.c.o
+/Users/valve/projects/SDL_image/external/libavif/src/
+utils.c
+/Users/valve/projects/SDL_image/build-macos/build-arm64/external/libavif/CMakeFiles/avif.dir/src/utils.c.o
+/Users/valve/projects/SDL_image/external/libavif/src/
+write.c
+/Users/valve/projects/SDL_image/build-macos/build-arm64/external/libavif/CMakeFiles/avif.dir/src/write.c.o
+/Users/valve/projects/SDL_image/external/libavif/src/
+codec_dav1d.c
+/Users/valve/projects/SDL_image/build-macos/build-arm64/external/libavif/CMakeFiles/avif.dir/src/codec_dav1d.c.o
+/Users/valve/projects/SDL_image/external/libavif/src/
+codec_aom.c
+/Users/valve/projects/SDL_image/build-macos/build-arm64/external/libavif/CMakeFiles/avif.dir/src/codec_aom.c.o
+libavif.16.dylib
+bl?#*
++aeg
+GO[Z
+'\G,
+i[|9
+)@g;
+M >o<D
+;c{P
+Uza\
+f#m6
+[d1Y
+C\Xn
+KO1LF%G
+cM-C
+y.imb:
