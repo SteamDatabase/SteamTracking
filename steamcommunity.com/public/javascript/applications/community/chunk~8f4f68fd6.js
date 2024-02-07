@@ -376,7 +376,7 @@
         tL: () => P,
         fw: () => M,
         QN: () => K,
-        rg: () => k,
+        rg: () => T,
         gQ: () => U,
         ZJ: () => z,
         F1: () => Y,
@@ -409,14 +409,15 @@
         p = i(65255),
         f = i(37563),
         g = i(47427);
-      i(53923), i(40057), i(75017), i(31846), i(85516), i(75683);
+      i(53923), i(40057), i(75017), i(82182), i(31846), i(85516), i(75683);
       const y = (e) => (t, i) => (i ? [e, t, i] : t ? [e, t] : [e]);
       y("get_family_group_for_user "),
         y("get_family_group"),
         y("get_family_history"),
         y("get_users_sharing_device"),
         y("get_purchase_requests"),
-        y("get_shopping_cart_contents");
+        y("get_shopping_cart_contents"),
+        y("recent_playtime_sessions");
       (0, g.createContext)({ errorMessage: null, setErrorMessage: (e) => {} });
       var v;
       !(function (e) {
@@ -451,6 +452,7 @@
             "k_EFamilyQueryResendInvite");
       })(v || (v = {}));
       v.k_EFamilyQueryCreateFamily,
+        v.k_EFamilyQueryCreateFamily,
         v.k_EFamilyQueryJoinFamily,
         v.k_EFamilyQueryCreateFamily,
         v.k_EFamilyQueryJoinFamily,
@@ -582,10 +584,10 @@
       function A(e) {
         return I[e];
       }
-      function T(e) {
+      function k(e) {
         return !!A(e);
       }
-      var k;
+      var T;
       !(function (e) {
         (e[(e.Comment = 0)] = "Comment"),
           (e[(e.FriendInvite = 1)] = "FriendInvite"),
@@ -596,23 +598,23 @@
           (e[(e.AsyncGame = 6)] = "AsyncGame"),
           (e[(e.Basic = 7)] = "Basic"),
           (e[(e.SimplePersona = 8)] = "SimplePersona");
-      })(k || (k = {}));
+      })(T || (T = {}));
       const b = {
-        3: { fnGet: q, eRenderID: k.Comment },
-        5: { fnGet: te, eRenderID: k.FriendInvite },
-        2: { fnGet: ee, eRenderID: k.Gift },
-        4: { fnGet: H, eRenderID: k.ItemIdentifiers },
-        8: { fnGet: V, eRenderID: k.Wishlist },
-        9: { fnGet: ie, eRenderID: k.TradeOffer },
-        12: { fnGet: z, eRenderID: k.AsyncGame },
+        3: { fnGet: q, eRenderID: T.Comment },
+        5: { fnGet: te, eRenderID: T.FriendInvite },
+        2: { fnGet: ee, eRenderID: T.Gift },
+        4: { fnGet: H, eRenderID: T.ItemIdentifiers },
+        8: { fnGet: V, eRenderID: T.Wishlist },
+        9: { fnGet: ie, eRenderID: T.TradeOffer },
+        12: { fnGet: z, eRenderID: T.AsyncGame },
       };
       function F(e) {
         let t;
         return (
-          (t = T(e)
-            ? { eRenderID: k.SimplePersona }
+          (t = k(e)
+            ? { eRenderID: T.SimplePersona }
             : E(e)
-            ? { eRenderID: k.Basic }
+            ? { eRenderID: T.Basic }
             : b[e]),
           t
         );
@@ -915,7 +917,7 @@
                       var i;
                       return (
                         E(e) ||
-                        T(e) ||
+                        k(e) ||
                         !!(null === (i = b[e]) || void 0 === i
                           ? void 0
                           : i.fnGet(t))
@@ -1643,16 +1645,16 @@
           a.createElement(
             "div",
             { className: g().Header },
-            a.createElement(T, { icon: t }),
-            !!i && a.createElement(k, { title: i }),
+            a.createElement(k, { icon: t }),
+            !!i && a.createElement(T, { title: i }),
             r && l({ timestamp: n }),
           )
         );
       }
-      function T(e) {
+      function k(e) {
         return a.createElement("div", { className: g().Icon }, e.icon);
       }
-      function k(e) {
+      function T(e) {
         return a.createElement("div", { className: g().Title }, e.title);
       }
       function b(e) {
@@ -2033,7 +2035,7 @@
           )
             ? n.item_data.name
             : (0, _.Xx)("#Notification_Item_Body_Generic"),
-          T = !n || !n.item_data;
+          k = !n || !n.item_data;
         if (v) {
           let t = "";
           return (
@@ -2064,7 +2066,7 @@
           null,
           a.createElement(
             E,
-            Object.assign({ logo: h, bLoading: T }, e),
+            Object.assign({ logo: h, bLoading: k }, e),
             a.createElement(A, {
               icon: l,
               title: (0, _.Xx)("#Notification_ItemAnnouncement_TitleLong"),
@@ -2213,8 +2215,8 @@
             onHide: S,
           } = e,
           I = u.title;
-        const T = w(p),
-          [k, R] = a.useState(!1),
+        const k = w(p),
+          [T, R] = a.useState(!1),
           D = () => R(!0),
           [L, B] = (0, U.KU)(
             u.bclan_account ? u.owner_steam_id.GetAccountID() : void 0,
@@ -2287,8 +2289,8 @@
             : (x = x + " " + e);
         }
         let q = l;
-        if (!k) {
-          const e = T ? M().ShortLogoDimensions : M().StandardLogoDimensions;
+        if (!T) {
+          const e = k ? M().ShortLogoDimensions : M().StandardLogoDimensions;
           if (d && (0, r.rc)(u)) {
             const t = u.bhas_friend && 1 != p;
             q = a.createElement(
@@ -2305,7 +2307,7 @@
                 onError: D,
               }));
         }
-        return T
+        return k
           ? a.createElement(
               C,
               Object.assign({}, e, {

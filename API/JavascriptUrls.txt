@@ -1045,6 +1045,7 @@ ${PARTNER_BASE_URL}promotion/discounts/dashboard/?de=${_ ? _ : _}
 ${PARTNER_BASE_URL}promotion/invitationplanner/dashboard
 ${PARTNER_BASE_URL}promotion/invitationplanner/dashboard?appidlist=${}
 ${PARTNER_BASE_URL}promotion/invitationplanner/dashboard?partneridlist=${partnerid}
+${PARTNER_BASE_URL}promotion/invitationplanner/dashboard?saleclaneventgid=${}&saleclanaccountid=${}
 ${PARTNER_BASE_URL}promotion/invitationplanner/dashboard?start=${}${}&count=${}${}
 ${PARTNER_BASE_URL}promotion/invitationplanner/dashboard?start=${}&count=${}${}
 ${PARTNER_BASE_URL}promotion/marketingmessages/ajaxgetsnrmetrics
@@ -2818,7 +2819,7 @@ https://store.steampowered.com/app/${unAppID}/
 https://store.steampowered.com/app/${unAppID}/${url_name}/
 https://store.steampowered.com/app/1046930/Dota_Underlords/
 https://store.steampowered.com/app/570/Dota_2/
-https://store.steampowered.com/app/730/CounterStrike_Global_Offensive/
+https://store.steampowered.com/app/730/CounterStrike_2/
 https://store.steampowered.com/appreport/${nAppId}/report/
 https://store.steampowered.com/appreviewhistogram/${appid}
 https://store.steampowered.com/appreviews/${appid}

@@ -384,12 +384,11 @@
   .horizontalscrollbar_PlayHeadAnnotation_VzCqG {
   position: absolute;
   width: 0;
-  height: 0;
-  left: -6px;
+  height: 5px;
+  left: 0px;
   top: 0px;
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  border-top: 5px solid #b8bcbf;
+  border-left: 1px solid #8b929a;
+  border-right: 1px solid #8b929a;
   cursor: pointer;
   z-index: 10;
 }
@@ -447,6 +446,31 @@
   .horizontalscrollbar_ScrollBarCtn_3dZUY
   .horizontalscrollbar_ScrollThumb_iOMps:active {
   filter: brightness(1.2);
+}
+.highlightskipper_SkipperCtn_2pG4r {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  background-color: transparent;
+  display: flex;
+  z-index: 2;
+  padding-top: 12px;
+}
+.highlightskipper_SkipperCtn_2pG4r
+  .highlightskipper_ArrowButton_OItE5.DialogButton {
+  margin: 0px;
+  padding: 0px;
+  background: none;
+  gap: 0px;
+  background-color: #23262e;
+  border: none;
+}
+.highlightskipper_SkipperCtn_2pG4r
+  .highlightskipper_ArrowButton_OItE5
+  .SVGIcon_Button {
+  width: 16px;
+  height: 16px;
+  margin-right: 0px;
 }
 .golivebutton_GoLiveButtonCtn_10eOW {
   padding-top: 24px;
@@ -1154,8 +1178,8 @@
   margin-top: 2px;
 }
 .backgroundticks_TimeTick_21gY8 .backgroundticks_Whole_onnFS {
-  background-color: rgba(255, 255, 255, 0.4);
-  width: 1px;
+  background-color: rgba(255, 255, 255, 0.3);
+  width: 2px;
   height: 6px;
 }
 .backgroundticks_TimeTick_21gY8 .backgroundticks_TickStamp_dAEn_ {
@@ -1594,7 +1618,7 @@
   pointer-events: all;
   position: absolute;
   width: fit-content;
-  bottom: 30px;
+  bottom: 32px;
 }
 .highlights_TimelineMarker_38PoJ {
   pointer-events: all;
@@ -1643,6 +1667,11 @@
   position: absolute;
   bottom: 0;
   transform: translateX(-50%);
+}
+.highlights_TooltipContainer_1ufF8.highlights_BottomTooltipContainer_4Zm6a {
+  position: absolute;
+  bottom: 0;
+  transform: translateX(-50%) translateY(100%);
 }
 .highlights_TooltipContainer_1ufF8 .highlights_Timestamp_19yAZ {
   color: #67707b;
@@ -1758,7 +1787,7 @@
   filter: blur(2px);
   color: #000;
 }
-.gamerecordingmarkers_MarkerCtn_13iNQ .gamerecordingmarkers_MarkerElt_1TDCq {
+.gamerecordingmarkers_MarkerElt_1TDCq {
   transform: translateX(-50%);
   position: absolute;
   left: 0;

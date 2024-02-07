@@ -3012,6 +3012,25 @@
                     },
                     (0, y.Xx)("#EventDisplay_StatsPage"),
                   ),
+                Boolean(T && C.L7.is_support && x) &&
+                  l.createElement(
+                    "a",
+                    {
+                      href:
+                        C.De.PARTNER_BASE_URL +
+                        "promotion/invitationplanner/dashboard?saleclaneventgid=" +
+                        x +
+                        "&saleclanaccountid=" +
+                        B,
+                      target: C.De.IN_CLIENT ? "" : "_blank",
+                      className: (0, S.Z)(
+                        E.Button,
+                        I.AdminButton,
+                        E.ValveOnlyBackground,
+                      ),
+                    },
+                    (0, y.Xx)("#EventDisplay_InvitationPlannerPage"),
+                  ),
                 Boolean(R && (c || r)) &&
                   l.createElement(
                     v.JW,

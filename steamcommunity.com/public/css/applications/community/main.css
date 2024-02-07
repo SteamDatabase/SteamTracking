@@ -4566,7 +4566,7 @@ button.TextButton.gpfocus {
   min-height: 0;
   overflow-y: scroll;
 }
-ul {
+.DialogContent ul {
   list-style-type: disc;
   list-style-position: inside;
 }

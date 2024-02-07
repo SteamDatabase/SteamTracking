@@ -849,7 +849,11 @@
         );
       }
       function M(e) {
-        return i.createElement("ul", { className: I().List }, e.children);
+        return i.createElement(
+          "ul",
+          { className: (0, v.Z)(I().List, "bullets") },
+          e.children,
+        );
       }
       function F(e) {
         return i.createElement(

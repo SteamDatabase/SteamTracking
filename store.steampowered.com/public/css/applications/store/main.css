@@ -3878,7 +3878,6 @@ body.ShoppingCart {
   display: flex;
   flex-direction: column;
   row-gap: 10px;
-  margin-top: 20px;
 }
 .shoppingcart_CartNoteText_31DQW {
   color: #ccd5e0;
@@ -5370,7 +5369,7 @@ button.TextButton.gpfocus {
   min-height: 0;
   overflow-y: scroll;
 }
-ul {
+.DialogContent ul {
   list-style-type: disc;
   list-style-position: inside;
 }

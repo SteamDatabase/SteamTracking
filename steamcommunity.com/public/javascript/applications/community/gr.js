@@ -1547,9 +1547,9 @@
       "use strict";
       r.r(t),
         r.d(t, {
-          GameRecordingClipContent: () => g,
-          default: () => p,
-          useTimelineLoaderForCommunityClip: () => f,
+          GameRecordingClipContent: () => p,
+          default: () => m,
+          useTimelineLoaderForCommunityClip: () => w,
         });
       var n = r(85556),
         i = r(47427),
@@ -1561,25 +1561,24 @@
         c = r(12015),
         d = r(86357),
         h = r(14592),
-        u = r(6189),
-        L = r(48081),
-        m = r(61134);
-      function p(e) {
+        u = r(79826),
+        L = r(48081);
+      function m(e) {
         const [t, r] = i.useState(!1);
         return (
           i.useEffect(() => {
-            (0, s.Vj)(new m.Z(), void 0).then(() => {
+            (0, s.Vj)(void 0).then(() => {
               r(!0);
             });
           }, []),
           i.createElement(
             i.Fragment,
             null,
-            t && i.createElement(g, Object.assign({}, e)),
+            t && i.createElement(p, Object.assign({}, e)),
           )
         );
       }
-      function g(e) {
+      function p(e) {
         const { clipID: t } = e,
           r = (function (e) {
             const t = (0, o.bY)();
@@ -1603,7 +1602,7 @@
                   );
                 for (let e of o.video_ids)
                   (i && i.timeline_id == e.server_timeline_id) ||
-                    ((i = w(o, e)), l.push(i)),
+                    ((i = g(o, e)), l.push(i)),
                     i.recordings.push({
                       recording_id: e.video_manager_video_id,
                       start_offset_ms: e.start_offset_ms.toFixed(0),
@@ -1616,10 +1615,10 @@
             );
           })(t);
         return r.data
-          ? i.createElement(v, { clip: r.data })
+          ? i.createElement(f, { clip: r.data })
           : i.createElement("div", { style: { color: "white" } }, "Loading...");
       }
-      function w(e, t) {
+      function g(e, t) {
         return {
           timeline_id: t.server_timeline_id,
           game_id: e.clip_id,
@@ -1628,7 +1627,7 @@
           recordings: [],
         };
       }
-      function f(e) {
+      function w(e) {
         const t = i.useMemo(() => (0, s.GL)(e), [e]),
           r = i.useCallback(
             (t) => {
@@ -1643,9 +1642,9 @@
           { loader: t.loader, fnGetManifest: r }
         );
       }
-      function v(e) {
+      function f(e) {
         const { clip: t } = e,
-          { loader: r, fnGetManifest: n } = f(t);
+          { loader: r, fnGetManifest: n } = w(t);
         return i.createElement(
           i.Fragment,
           null,

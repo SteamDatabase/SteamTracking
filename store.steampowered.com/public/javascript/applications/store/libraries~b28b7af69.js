@@ -34715,6 +34715,9 @@
               "Hmd_SupportsAppThrottling_Bool"),
             (e[(e.Hmd_SupportsGpuBusMonitoring_Bool = 2107)] =
               "Hmd_SupportsGpuBusMonitoring_Bool"),
+            (e[(e.DriverProvidedIPDVisibility_Bool = 2108)] =
+              "DriverProvidedIPDVisibility_Bool"),
+            (e[(e.Prop_Driver_Reserved_01 = 2109)] = "Prop_Driver_Reserved_01"),
             (e[(e.DriverRequestedMuraCorrectionMode_Int32 = 2200)] =
               "DriverRequestedMuraCorrectionMode_Int32"),
             (e[(e.DriverRequestedMuraFeather_InnerLeft_Int32 = 2201)] =
@@ -46426,6 +46429,11 @@
                     br: n.FE.readUint64String,
                     bw: n.Xc.writeUint64String,
                   },
+                  gidshoppingcartcopy: {
+                    n: 3,
+                    br: n.FE.readUint64String,
+                    bw: n.Xc.writeUint64String,
+                  },
                 },
               }),
             j.sm_m
@@ -46578,6 +46586,11 @@
                     br: n.FE.readUint64String,
                     bw: n.Xc.writeUint64String,
                   },
+                  gidshoppingcartcopy: {
+                    n: 9,
+                    br: n.FE.readUint64String,
+                    bw: n.Xc.writeUint64String,
+                  },
                 },
               }),
             A.sm_m
@@ -46687,11 +46700,6 @@
                     n: 1,
                     br: n.FE.readUint64String,
                     bw: n.Xc.writeUint64String,
-                  },
-                  purchase_requester_steamid: {
-                    n: 2,
-                    br: n.FE.readFixed64String,
-                    bw: n.Xc.writeFixed64String,
                   },
                   action: { n: 3, br: n.FE.readEnum, bw: n.Xc.writeEnum },
                   request_id: {
@@ -47662,6 +47670,16 @@
                   },
                   rt_time_acquired: {
                     n: 11,
+                    br: n.FE.readUint32,
+                    bw: n.Xc.writeUint32,
+                  },
+                  rt_last_played: {
+                    n: 12,
+                    br: n.FE.readUint32,
+                    bw: n.Xc.writeUint32,
+                  },
+                  rt_playtime: {
+                    n: 13,
                     br: n.FE.readUint32,
                     bw: n.Xc.writeUint32,
                   },
@@ -52875,6 +52893,7 @@
         AP: () => St,
         DN: () => U,
         Dq: () => G,
+        Gz: () => l,
         N$: () => k,
         No: () => Ft,
         Oz: () => Et,
@@ -61428,7 +61447,7 @@
             "Player.GetRecentPlaytimeSessionsForChild#1",
             (0, a.MD)(l, t),
             u,
-            { ePrivilege: 1 },
+            { bConstMethod: !0, ePrivilege: 1 },
           );
         }),
           (e.GetPlayerLinkDetails = function (e, t) {

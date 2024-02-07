@@ -2609,11 +2609,6 @@ html, body { height:100%; }
     cursor: pointer;
 }
 
-.valveContact
-{
-
-}
-
 .valveContactRemove
 {
 	float: right;
@@ -2635,6 +2630,12 @@ html, body { height:100%; }
 	min-height: 50px;
 	padding: 20px 8px 8px;
 	text-align: center;
+}
+
+.video_upload_ctn {
+    background: rgba(255,255,255,0.1);
+    padding: 6px 12px;
+
 }
 
 .movie_upload_name_wrapper

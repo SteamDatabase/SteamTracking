@@ -158,11 +158,12 @@
           ? t.nDuration
           : (t.nDuration / t.nTimeScale) * 1e3;
       }
-      function V(e, t) {
-        let i = C(e);
-        return Math.floor(t / i) + e.segmentTemplate.nStartNumber;
+      function P(e, t, i) {
+        let n = C(t),
+          s = i + ((1e3 * e.GetStartTime()) % n);
+        return Math.floor(s / n) + t.segmentTemplate.nStartNumber;
       }
-      function P(e) {
+      function V(e) {
         return v(e.segmentTemplate.strInitialization, e.strID, 0);
       }
       class k {
@@ -632,7 +633,7 @@
           return C(this.m_representation);
         }
         GetCurrentSegmentInitializationURL() {
-          return P(this.m_representation);
+          return V(this.m_representation);
         }
         BIsCurrentRepresentation(e) {
           return e && e.strID == this.m_representation.strID;
@@ -662,7 +663,7 @@
           if (this.m_mpd.IsLiveContent()) return Number.MAX_VALUE;
           {
             let e = this.m_mpd.GetEndTime() - this.m_mpd.GetStartTime();
-            return V(this.m_representation, 1e3 * e);
+            return P(this.m_mpd, this.m_representation, 1e3 * e);
           }
         }
         GetAmountBufferedInPlayerMS(e) {
@@ -822,7 +823,7 @@
             t = 0,
             i = !1;
           if (this.m_bNeedInitSegment)
-            (e = P(this.m_representation)), (t = 0), (i = !0);
+            (e = V(this.m_representation)), (t = 0), (i = !0);
           else {
             if (this.m_nNextSegment < 0)
               return void console.error(
@@ -1050,7 +1051,7 @@
             return void this.ScheduleNextDownload();
           (this.m_bSeekInProgress = !0), this.ForceStopDownloads();
           const s = e - this.m_mpd.GetStartTime();
-          let r = V(this.m_representation, 1e3 * s);
+          let r = P(this.m_mpd, this.m_representation, 1e3 * s);
           if (
             ((this.m_nNextSegment = Math.min(r, this.GetMaxSegment())),
             (0, g.hB)(
@@ -1530,7 +1531,9 @@
             this.m_mpd.GetEndTime() - this.GetCurrentPlayTime() < 1
           )
             return (
-              (0, g.hB)("pausing playback due to OnVideoWaiting"),
+              (0, g.hB)(
+                `pausing playback due to OnVideoWaiting (endTime=${this.m_mpd.GetEndTime()}, currentPlaytime=${this.GetCurrentPlayTime()} )`,
+              ),
               void this.Pause()
             );
           if (

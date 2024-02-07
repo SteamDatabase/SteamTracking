@@ -263,6 +263,11 @@ b {
 .partnereventshared_EventBarTitleCtn_1bUXk .HelperTooltip svg {
   fill: #545454;
 }
+@media screen and (max-width: 800px) {
+  .partnereventshared_EventBarTitleCtn_1bUXk {
+    display: none;
+  }
+}
 .partnereventshared_EventBarTitle_3K6Ro {
   font-size: 22px;
   font-weight: bold;
@@ -315,6 +320,11 @@ b {
 }
 .partnereventshared_EditPreviewButton_3NmFF.partnereventshared_Disabled_v6Qy- {
   color: #777;
+}
+@media screen and (max-width: 940px) {
+  .partnereventshared_EditPreviewButton_3NmFF {
+    display: none;
+  }
 }
 .partnereventshared_BrowseMoreButton_3GBlO {
   display: inline-block;
@@ -1283,8 +1293,15 @@ html.touch .gamehover_WishlistButton_1l89v .gamehover_WishlistButtonText_-ne-j,
   .gamehover_TextContent_2ghgg
   .gamehover_PlatformDisplay_3zRPV {
   padding-left: 8px;
-  margin-bottom: 4px;
-  opacity: 0.4;
+  margin-top: 1px;
+  opacity: 0.7;
+}
+.gamehover_BottomShelf_2tBkj
+  .gamehover_TextContent_2ghgg
+  .gamehover_PlatformDisplay_3zRPV
+  svg {
+  fill: #6b8aaa;
+  color: #6b8aaa;
 }
 .gamehover_BottomShelf_2tBkj
   .gamehover_TextContent_2ghgg
@@ -2125,6 +2142,17 @@ html.touch .gamehover_WishlistButton_1l89v .gamehover_WishlistButtonText_-ne-j,
   margin-left: 5px;
 }
 .salepreviewwidgets_StoreSalePriceWidgetContainer_tqNH0.salepreviewwidgets_SingleLineMode_31Sy5
+  .salepreviewwidgets_StoreSaleDiscountedPriceCtn_3GLeQ
+  .salepreviewwidgets_StoreSaleNewItem_1W_-x {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  padding-left: 8px;
+  padding-right: 8px;
+  background-color: #3a9bed;
+}
+.salepreviewwidgets_StoreSalePriceWidgetContainer_tqNH0.salepreviewwidgets_SingleLineMode_31Sy5
   .salepreviewwidgets_StoreSaleDiscountBox_2fpFv {
   padding: 0 3px;
   line-height: normal;
@@ -2195,6 +2223,9 @@ html.touch .gamehover_WishlistButton_1l89v .gamehover_WishlistButtonText_-ne-j,
     position: relative;
   }
 }
+.salepreviewwidgets_InGameHover_2uFQ- {
+  container-type: inline-size;
+}
 .salepreviewwidgets_InGameHover_2uFQ-
   .salepreviewwidgets_StoreSalePriceWidgetContainer_tqNH0,
 .salepreviewwidgets_InGameHover_2uFQ-
@@ -2218,6 +2249,19 @@ html.touch .gamehover_WishlistButton_1l89v .gamehover_WishlistButtonText_-ne-j,
   .salepreviewwidgets_StoreSaleDiscountedPriceCtn_3GLeQ
   .salepreviewwidgets_StoreSalePriceBox_Wh0L8 {
   font-size: 1.5em;
+}
+@container (max-width: 300px) {
+  .salepreviewwidgets_InGameHover_2uFQ-
+    .salepreviewwidgets_Discounted_35-Ub
+    .salepreviewwidgets_StoreSaleNewItem_1W_-x {
+    display: none;
+  }
+  .salepreviewwidgets_InGameHover_2uFQ-
+    .salepreviewwidgets_StoreSaleDiscountedPriceCtn_3GLeQ {
+    background: #22272b;
+    height: 100%;
+    justify-content: center;
+  }
 }
 .salepreviewwidgets_StoreSaleDiscountedPriceCtn_3GLeQ {
   display: flex;
@@ -2380,6 +2424,16 @@ html.touch .gamehover_WishlistButton_1l89v .gamehover_WishlistButtonText_-ne-j,
   content: unset;
 }
 .salepreviewwidgets_Discounted_35-Ub
+  .salepreviewwidgets_StoreSaleNewItem_1W_-x {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  padding-left: 8px;
+  padding-right: 8px;
+  background-color: #3a9bed;
+}
+.salepreviewwidgets_Discounted_35-Ub
   .salepreviewwidgets_StoreSalePriceBox_Wh0L8 {
   border-radius: unset;
   color: #beee11;
@@ -2515,6 +2569,13 @@ html.touch .gamehover_WishlistButton_1l89v .gamehover_WishlistButtonText_-ne-j,
   z-index: 2;
   cursor: pointer;
   font-size: 14px;
+  container-type: inline-size;
+}
+@container (max-width: 225px) {
+  .salepreviewwidgets_CapsuleBottomBar_6IVLn
+    .salepreviewwidgets_StoreSaleDiscountBox_2fpFv {
+    font-size: 1.2em;
+  }
 }
 .salepreviewwidgets_CapsuleBottomBar_6IVLn
   .salepreviewwidgets_BottomBarPriceInfo_2F4qi {
@@ -5069,7 +5130,7 @@ span.partnersaledisplay_vr_required_1KRF9 {
 .partnersaledisplay_SaleSectionTabs_2xKqp {
   top: 0px;
   position: sticky;
-  z-index: 99;
+  z-index: 150;
   left: 0px;
   right: 0px;
   margin-left: auto;
@@ -5077,7 +5138,19 @@ span.partnersaledisplay_vr_required_1KRF9 {
   width: fit-content;
   width: -moz-fit-content;
   max-width: 100%;
-  padding: 8px;
+  padding: 10px 18px 10px 18px;
+  font-family: "Motiva Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+  margin-top: 30px;
+  border-radius: 50px;
+  border-top: #ffffff30 2px solid;
+  height: fit-content;
+  height: -moz-fit-content;
+  backdrop-filter: blur(4px);
+}
+.partnersaledisplay_SaleSectionTabs_2xKqp.Selected {
+  font-weight: 700;
 }
 html.responsive.touch .partnersaledisplay_SaleSectionTabs_2xKqp {
   left: 50%;
@@ -5253,7 +5326,17 @@ html.tablet
   justify-content: center;
   align-items: center;
   height: 40px;
-  margin: 0px;
+  margin: 12px;
+  border-radius: 28px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+  font-weight: 700;
+  font-size: 14px;
+  color: #0b2641;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-left: 6px;
+  margin-right: 6px;
+  border-top: 2px solid #575d6e;
 }
 .BasicUI
   .partnersaledisplay_SaleSectionTabs_2xKqp

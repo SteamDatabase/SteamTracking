@@ -9,8 +9,6 @@ var gValidURL = /^https?:\/\/(?:www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9
 
 function SaveSurvey( appid )
 {
-
-
 	if ( $J("#categoryid_38" ).is(":checked") &&
 		 $J("#categoryid_40" ).is(":checked") &&
 		 $J("#categoryid_49" ).is(":checked") )
@@ -26,6 +24,14 @@ function SaveSurvey( appid )
 			ShowAlertDialog( 'Error Saving Survey', 'Please specify a valid URL for the website of the external service your game connects to in order to live-generate content or code for your game.' );
 			return;
 		}
+	}
+
+	var checkboxAIYes = $J( '#categoryid_38' );
+	var checkboxAINo = $J( '#categoryid_50' );
+	if ( !checkboxAIYes.prop( 'checked' ) && !checkboxAINo.prop( 'checked' ) )
+	{
+		ShowAlertDialog( 'Error Saving Survey', 'Please specify whether your game uses generative artificial intelligence to generate content for the game, either pre-rendered or live-generated.' );
+		return;
 	}
 
 	var form = $J( "#SaveSurveyForm" );
@@ -174,7 +180,6 @@ function HandleRelatedTags( descid, bAnimate )
 function HandleMatureContentChange( bMature, bAnimate )
 {
 	var rgElements = [ '#customer_notes', '#dev_notes' ];
-
 	if ( bMature )
 	{
 		rgElements.each( function( id ) {
@@ -195,7 +200,53 @@ function HandleCategoryRelatedDivVisibility( checkbox, relatedDiv, bAnimate )
 {
 	var relatedDiv = $J( relatedDiv );
 	checkbox = $J( checkbox );
+
 	if ( checkbox.prop( 'checked' ) )
+	{
+		relatedDiv.animate( { opacity: 'show', height: 'show'}, bAnimate ? 500 : 0 );
+	}
+	else
+	{
+		relatedDiv.animate( { opacity: 'hide', height: 'hide'}, bAnimate ? 500 : 0 );
+	}
+}
+
+function HandleAISurveySelection( checkbox, bAnimate )
+{
+	var checkboxAIYes = $J( '#categoryid_38' );
+	var checkboxAINo = $J( '#categoryid_50' );
+
+	if ( checkbox )
+	{
+		checkbox = $J( checkbox );
+		var bIsYes = checkbox.prop( 'id' ) == checkboxAIYes.prop( 'id' );
+
+		if ( checkbox.prop( 'checked' ) )
+		{
+			if ( bIsYes )
+			{
+				checkboxAINo.prop( 'checked', false );
+			}
+			else
+			{
+				checkboxAIYes.prop( 'checked', false );
+			}
+		}
+		else
+		{
+			if ( bIsYes )
+			{
+				checkboxAINo.prop( 'checked', true );
+			}
+			else
+			{
+				checkboxAIYes.prop( 'checked', true );
+			}
+		}
+	}
+
+	var relatedDiv = $J( "#AISurvey" );
+	if ( checkboxAIYes.prop( 'checked') )
 	{
 		relatedDiv.animate( { opacity: 'show', height: 'show'}, bAnimate ? 500 : 0 );
 	}

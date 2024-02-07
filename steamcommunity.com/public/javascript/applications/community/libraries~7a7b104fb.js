@@ -52,11 +52,6 @@
                     br: a.FE.readBool,
                     bw: a.Xc.writeBool,
                   },
-                  client_beta: {
-                    n: 8,
-                    br: a.FE.readString,
-                    bw: a.Xc.writeString,
-                  },
                   sysid: { n: 9, br: a.FE.readUint32, bw: a.Xc.writeUint32 },
                   allow_webrtc: {
                     n: 10,
