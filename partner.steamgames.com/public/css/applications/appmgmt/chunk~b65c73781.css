@@ -4632,6 +4632,7 @@ div.savetoolbar_HoverToolTip_gba9O {
   border-bottom: 1px solid #67c1f5;
   align-items: flex-end;
   text-align: center;
+  flex-wrap: wrap;
 }
 .tabbar_GraphicalAssetsTab_K1_Tp {
   margin: 0 16px;
@@ -7067,6 +7068,81 @@ textarea.promotionplaneditor_AssetNotes_VaLwy {
 .promotionplaneditor_CalDownload_Y4Zfn:hover {
   background: rgba(255, 255, 255, 0.1);
 }
+.promotionplaneditor_AssetTimelineCtn_2StVt {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 94%;
+}
+.promotionplaneditor_AssetTimelineCtn_2StVt div {
+  background: linear-gradient(
+    90deg,
+    #3d4450 calc(100% - 37px),
+    #3d4450 calc(100% - 37px)
+  );
+  position: relative;
+  padding: 8px 0 8px 8px;
+  box-sizing: border-box;
+  width: fit-content;
+  height: 60px;
+  margin-left: 10px;
+  padding-left: 34px;
+  word-wrap: normal;
+}
+.promotionplaneditor_AssetTimelineCtn_2StVt div:after,
+.promotionplaneditor_AssetTimelineCtn_2StVt div:before {
+  left: 100%;
+  top: 50%;
+  border: solid transparent;
+  content: "";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+.promotionplaneditor_AssetTimelineCtn_2StVt div:after {
+  border-color: rgba(136, 183, 213, 0);
+  border-left-color: #3d4450;
+  border-width: 30px;
+  margin-top: -30px;
+}
+.promotionplaneditor_AssetTimelineCtn_2StVt div:before {
+  border-color: rgba(194, 225, 245, 0);
+  border-left-color: #17181c;
+  border-width: 36px;
+  margin-top: -36px;
+}
+.promotionplaneditor_AssetTimelineCtn_2StVt div:first-of-type {
+  margin-left: 0;
+  padding-left: 14px;
+  z-index: 4;
+}
+.promotionplaneditor_AssetTimelineCtn_2StVt div:nth-child(2) {
+  z-index: 3;
+}
+.promotionplaneditor_AssetTimelineCtn_2StVt div:nth-child(3) {
+  z-index: 2;
+}
+.promotionplaneditor_AssetTimelineCtn_2StVt div:last-of-type {
+  background: linear-gradient(
+    90deg,
+    #3d4450 calc(100% - 37px),
+    #3d4450 calc(100% - 37px)
+  );
+  z-index: 1;
+}
+.promotionplaneditor_AssetTimelineCtn_2StVt
+  div.promotionplaneditor_ActiveState_3Slqm {
+  background: linear-gradient(
+    90deg,
+    #5e832d calc(100% - 37px),
+    #5e832d calc(100% - 37px)
+  );
+}
+.promotionplaneditor_AssetTimelineCtn_2StVt
+  div.promotionplaneditor_ActiveState_3Slqm:after {
+  border-left-color: #5e832d;
+}
 .dailydealdiscounts_HoverObject_2x-6c {
   background: #2e3138;
   color: #fff;
@@ -8786,7 +8862,7 @@ button.rbc-input::-moz-focus-inner {
   display: flex;
   flex-direction: row;
   align-self: end;
-  padding: 11px 18px 18px 18px;
+  padding: 11px 0px 18px 18px;
   width: fit-content;
   box-sizing: border-box;
   position: sticky;
@@ -8810,6 +8886,18 @@ button.rbc-input::-moz-focus-inner {
   div.DialogInputLabelGroup
   .DialogDropDown {
   padding-right: 40px;
+}
+.planningdashboard_CreateNewCtn_OryGT
+  .planningdashboard_AccountSelectCtn_2-rb2 {
+  min-width: 220px;
+}
+.planningdashboard_CreateNewCtn_OryGT
+  .planningdashboard_AccountSelectCtn_2-rb2
+  > div {
+  width: 220px;
+}
+.planningdashboard_AccountList_1G9ck {
+  text-transform: capitalize;
 }
 .planningdashboard_filtersCtn_Epsp1 {
   display: flex;
@@ -10028,12 +10116,29 @@ textarea.cloudlocalizedartdisplay_ArtPreview_2V4yU {
 .optin_display_appeal_AppealResults_3RoeY h2 {
   color: #fff;
 }
-.optin_display_appeal_AppealResults_3RoeY.optin_display_appeal_Declined_3fgI8
-  h2 {
-  color: #ebce39;
+.optin_display_appeal_AppealResults_3RoeY.optin_display_appeal_Submitted_Z3TjV {
+  background: #618a97;
 }
-h1.optin_display_appeal_AppealTitle_X7wqW {
+.optin_display_appeal_AppealResults_3RoeY.optin_display_appeal_Declined_3fgI8 {
+  background: linear-gradient(45deg, #4a2f44, #612222);
+}
+.optin_display_appeal_AppealSummaryCtn_2NYKM {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.optin_display_appeal_AppealSummaryCtn_2NYKM
+  .optin_display_appeal_CapsuleImg_3bewl {
+  width: 33%;
+  height: auto;
+}
+.optin_display_appeal_AppealSummaryCtn_2NYKM
+  .optin_display_appeal_AppealTitle_X7wqW {
   font-weight: 600;
+  font-size: 28px;
+  line-height: 32px;
+  color: #fff;
+  margin-left: 12px;
 }
 .optin_display_appeal_AppealsEntryPointCtn_o0-VK {
   margin-top: 20px;
@@ -10443,6 +10548,10 @@ h1.optin_display_appeal_AppealTitle_X7wqW {
   font-size: 14px;
   justify-content: space-between;
 }
+.promoagendarow_Row_2KUhB.promoagendarow_HeaderRow_MGJxk {
+  margin-left: 32px;
+  margin-right: 18px;
+}
 .promoagendarow_Row_2KUhB:not(.promoagendarow_Primary_2tQk8) {
   margin-top: 8px;
 }
@@ -10454,7 +10563,7 @@ h1.optin_display_appeal_AppealTitle_X7wqW {
   font-size: 16px;
 }
 .promoagendarow_Col_2x28W.promoagendarow_Type_1hntl {
-  flex-grow: 1;
+  flex-grow: 0;
   width: 110px;
 }
 .promoagendarow_Col_2x28W.promoagendarow_Type_1hntl.promoagendarow_Deal_1I4-4
@@ -10548,6 +10657,13 @@ h1.optin_display_appeal_AppealTitle_X7wqW {
   color: #8b1c00;
   padding: 2px 4px;
   margin-top: 4px;
+}
+.promoagendarow_NoResults_1bOoI {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 24px;
+  min-height: 100px;
+  background: #272b30;
 }
 .marketingmessagedashboard_HeaderButtons_1Q4Pq {
   float: right;
@@ -10880,4 +10996,34 @@ h1.optin_display_appeal_AppealTitle_X7wqW {
 }
 .invitationplanner_Inline_AzROo {
   display: inline-block;
+}
+.datamigration_Container_398qz {
+  margin: 20px;
+  width: 100%;
+}
+.datamigration_Expander_2z_UT {
+  cursor: pointer;
+  user-select: none;
+}
+.datamigration_Expanded_5GSfz {
+  margin-top: 5px;
+  margin-left: 10px;
+}
+.datamigration_ExpanderContainer_2L-Rm {
+  display: flex;
+}
+.datamigration_DataMigrationListContainer_CWGwi {
+  display: flex;
+}
+.datamigration_DataMigrationTextArea_1QMUf {
+  width: 300px;
+  height: 160px;
+}
+.datamigration_DataMigrationButtonContainer_26gyM {
+  display: flex;
+  margin: 2px;
+  gap: 8px;
+}
+.datamigration_DataMigrationButton_1GAtn {
+  padding: 3px 10px;
 }

@@ -9277,7 +9277,7 @@
             "Player.GetRecentPlaytimeSessionsForChild#1",
             (0, c.MD)(o, z),
             r,
-            { ePrivilege: 1 },
+            { bConstMethod: !0, ePrivilege: 1 },
           );
         }),
           (M.GetPlayerLinkDetails = function (M, z) {

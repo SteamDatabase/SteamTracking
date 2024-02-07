@@ -1899,6 +1899,11 @@
               null,
               (0, s.Xx)("#ControllerSupportModal_PgOne_Instructions"),
             ),
+            a.createElement(
+              "p",
+              null,
+              (0, s.Xx)("#ControllerSupportModal_PgOne_Instructions_VR"),
+            ),
           );
         return a.createElement(Ce, {
           strStepName: (0, s.Xx)("#ControllerSupportModal_StepString", r + 1),

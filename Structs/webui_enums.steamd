@@ -79,11 +79,22 @@ enum ColorGamutLabelSet
 	k_ColorGamutLabelSet_Native_sRGB_Boosted = 2;
 }
 
-enum ConfigPage_Take
+enum ConfigPage
 {
 	k_ConfigPage_Takeover = 1;
 	k_ConfigPage_Takeunder = 2;
 	k_ConfigPage_TakeoverSteamChina = 3;
+	k_ConfigPage_Spotlight = 4;
+	k_ConfigPage_EarlyAccess_Takeover = 5;
+	k_ConfigPage_FreeToPlay_Takeover = 6;
+	k_ConfigPage_GreatOnDeck_Takeover = 7;
+	k_ConfigPage_Category_Action_Takeover = 8;
+	k_ConfigPage_Category_Multiplayer_Takeover = 9;
+	k_ConfigPage_Demo_Hub_Takeover = 10;
+	k_ConfigPage_RPG_Tag_Hub_Takeover = 11;
+	k_ConfigPage_Racing_Tag_Hub_Takeover = 12;
+	k_ConfigPage_VR_Hub_Takeover = 13;
+	k_ConfigPage_Casual_Tag_Hub_Takeover = 14;
 }
 
 enum Display
@@ -6371,6 +6382,15 @@ enum UnnamedEnum5b3ee43818cae779
 	k_None = 0;
 	k_Initialized = 1;
 	k_ShuttingDown = 2;
+}
+
+enum UnnamedEnum5b8032725cc6864d
+{
+	k_AwaitingPartner = 0;
+	k_AssetSubmitted = 1;
+	k_DeliveryReviewed = 2;
+	k_DesignComplete = 3;
+	k_LocalizationDone = 4;
 }
 
 enum UnnamedEnum5b9e1e5238550b64

@@ -194,7 +194,7 @@
       n.d(e, {
         Q: () => G,
         fH: () => E,
-        i4: () => _,
+        U8: () => _,
         o: () => h,
         vc: () => k,
         K$: () => I,
@@ -225,7 +225,7 @@
         GetAllDiscountEvents() {
           return Array.from(v.Get().m_mapDiscountEvents.values());
         }
-        GetFutureDiscountEventListCallback() {
+        GetDiscountEventListCallback() {
           return this.m_discountEventsListCallback;
         }
         BLoadedViaInitOrFullLoad() {
@@ -281,7 +281,7 @@
                 return (
                   (this.m_bLoadedViaInitOrFullLoad = !0),
                   this.m_discountEventsListCallback.Dispatch(
-                    this.GetFutureDiscountEvents(),
+                    this.GetAllDiscountEvents(),
                   ),
                   1
                 );
@@ -352,7 +352,7 @@
                 return (
                   this.m_mapDiscountEvents.set(i.id, i),
                   this.m_discountEventsListCallback.Dispatch(
-                    this.GetFutureDiscountEvents(),
+                    this.GetAllDiscountEvents(),
                   ),
                   i
                 );
@@ -432,7 +432,7 @@
                 return (
                   this.m_mapDiscountEvents.set(t.id, t),
                   this.m_discountEventsListCallback.Dispatch(
-                    this.GetFutureDiscountEvents(),
+                    this.GetAllDiscountEvents(),
                   ),
                   t
                 );
@@ -612,28 +612,28 @@
         return v.Get().GetFutureDiscountEvents();
       }
       function _() {
-        return v.Get().GetFutureDiscountEventListCallback();
+        return v.Get().GetDiscountEventListCallback();
       }
       function f(t, e) {
         const n = v.Get().BLoadedViaInitOrFullLoad(),
-          [i, a] = o.useState(
-            n
-              ? e
-                ? v.Get().GetAllDiscountEvents()
-                : v.Get().GetFutureDiscountEvents()
-              : null,
-          ),
+          [i, a] = o.useState(n ? v.Get().GetAllDiscountEvents() : null),
           [s, r] = o.useState(null),
           l =
             t ||
             Number.parseInt((0, p.kQ)("publisherid", "application_config"));
-        (0, d.Qg)(v.Get().GetFutureDiscountEventListCallback(), a),
+        (0, d.Qg)(v.Get().GetDiscountEventListCallback(), a),
           o.useEffect(() => {
             v.Get().BLoadedViaInitOrFullLoad() ||
               v.Get().LoadAllDiscountEvents(l).then(r);
           }, [i, l]);
         const c = null != s ? s : (null == i ? void 0 : i.length) ? 1 : null;
-        return o.useMemo(() => ({ rgDiscountEvents: i, eResult: c }), [i, c]);
+        return o.useMemo(
+          () => ({
+            rgDiscountEvents: e ? i : v.Get().GetFutureDiscountEvents(),
+            eResult: c,
+          }),
+          [i, c, e],
+        );
       }
       function E(t) {
         return v.Get().GetDiscountEvent(t);
@@ -1531,7 +1531,7 @@
         Su: () => P,
         U8: () => D,
         XM: () => G,
-        Xj: () => F,
+        Xj: () => M,
         _J: () => E,
         b2: () => L,
         co: () => I,
@@ -2133,7 +2133,7 @@
           (t) => t.nDiscountPct > h.Get().GetMaxDiscountPercentage(t.packageID),
         );
       }
-      function F(t) {
+      function M(t) {
         return h.Get().GetMaxDiscountPercentageForGroup(t);
       }
     },
@@ -2141,11 +2141,11 @@
       "use strict";
       n.d(e, {
         B6: () => A,
-        E5: () => T,
-        E_: () => F,
+        E5: () => U,
+        E_: () => M,
         Eh: () => E,
         HU: () => O,
-        JW: () => M,
+        JW: () => F,
         LX: () => k,
         TB: () => B,
         _9: () => y,
@@ -2772,7 +2772,7 @@
           ),
         };
       }
-      function F() {
+      function M() {
         return c.useCallback((t, e, n) => {
           const i = [];
           for (const a of n) {
@@ -2782,8 +2782,8 @@
           return i;
         }, []);
       }
-      function M(t) {
-        const e = T(t);
+      function F(t) {
+        const e = U(t);
         return c.useMemo(
           () => ({
             nAlreadySet: e.alreadySet.size,
@@ -2795,10 +2795,10 @@
           [e],
         );
       }
-      function T(t) {
-        const [e, n] = c.useState(() => U(t)),
+      function U(t) {
+        const [e, n] = c.useState(() => T(t)),
           i = c.useCallback(() => {
-            n(U(t));
+            n(T(t));
           }, [t]);
         return (
           c.useEffect(i, [t, i]),
@@ -2806,7 +2806,7 @@
           e
         );
       }
-      function U(t) {
+      function T(t) {
         var e, n;
         const i = G.Get().GetAllPackageStatesForDiscountEvent(t),
           a = {
@@ -2975,7 +2975,7 @@
               ? t
               : "deepest-past"),
             this.UpdateDiscountEventsForGrid(),
-            (0, l.i4)().Register(() => this.UpdateDiscountEventsForGrid()),
+            (0, l.U8)().Register(() => this.UpdateDiscountEventsForGrid()),
             (0, c.v6)().Register(() => this.UpdateDiscountEventsForGrid()),
             this.SetEventSelectionParametersFromURL(),
             this.UpdateVisibleDiscountEventIDs();

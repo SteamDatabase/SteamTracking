@@ -24,3 +24,168 @@
   font-size: 13px;
   padding: 5px 0px;
 }
+.upcomingeventscalendar_SectionContainer_1OBXz {
+  display: flex;
+  flex-direction: row;
+}
+.upcomingeventscalendar_CalendarContainer_pLKmG {
+  display: inline-block;
+  flex-direction: column;
+  color: #d0d0d0;
+  font-size: 0.9em;
+}
+.upcomingeventscalendar_MonthPickerContainer_3YUZn {
+  display: flex;
+  align-items: center;
+  margin-top: 12px;
+}
+.upcomingeventscalendar_MonthPickerArrow_2ht2t {
+  cursor: pointer;
+  user-select: none;
+  width: 30px;
+  text-align: center;
+  background-color: #3d444b;
+  margin: 2px;
+}
+.upcomingeventscalendar_MonthPickerArrow_2ht2t.upcomingeventscalendar_Inactive_3Z-w7 {
+  cursor: unset;
+  opacity: 0;
+}
+.upcomingeventscalendar_MonthPickerToday_iHTm_ {
+  cursor: pointer;
+  user-select: none;
+  width: 50px;
+  text-align: center;
+  background-color: #3d444b;
+  margin: 2px;
+}
+.upcomingeventscalendar_MonthPickerToday_iHTm_.upcomingeventscalendar_Inactive_3Z-w7 {
+  cursor: unset;
+  opacity: 0;
+}
+.upcomingeventscalendar_MonthPickerDate_2rZat {
+  flex: 1;
+  flex-shrink: auto;
+  text-align: center;
+  margin: 2px;
+}
+.upcomingeventscalendar_Week_2g35M {
+  display: flex;
+}
+.upcomingeventscalendar_DayName_PRNbj {
+  display: flex;
+  width: 30px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 6px 2px 2px 2px;
+}
+.upcomingeventscalendar_Day_357j5 {
+  display: flex;
+  width: 30px;
+  height: 30px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #3d444b;
+  margin: 2px;
+}
+.upcomingeventscalendar_Day_357j5.upcomingeventscalendar_OtherMonth_RgAj- {
+  opacity: 0.5;
+}
+.upcomingeventscalendar_Day_357j5.upcomingeventscalendar_Inactive_3Z-w7 {
+  opacity: 0;
+}
+.upcomingeventscalendar_Day_357j5.upcomingeventscalendar_Deadline_1OK2i {
+  cursor: pointer;
+  position: relative;
+}
+.upcomingeventscalendar_Day_357j5.upcomingeventscalendar_Deadline_1OK2i::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  background-color: #cf520c;
+  border-radius: 2px;
+  transform: translateX(2px) translateY(2px);
+}
+.upcomingeventscalendar_Day_357j5.upcomingeventscalendar_Release_xCJCO {
+  cursor: pointer;
+  color: #fff;
+  background-color: #83b5e6;
+}
+.upcomingeventscalendar_Day_357j5.upcomingeventscalendar_Event_2jrTK {
+  cursor: pointer;
+  color: #fff;
+  background-color: #a3d43b;
+}
+.upcomingeventscalendar_Day_357j5.upcomingeventscalendar_Release_xCJCO.upcomingeventscalendar_Event_2jrTK {
+  cursor: pointer;
+  background: linear-gradient(135deg, #83b5e6 50%, #a3d43b 50%);
+}
+.upcomingeventscalendar_ListContainer_1sKgk {
+  margin-top: 20px;
+  margin-left: 40px;
+  width: 100%;
+}
+.upcomingeventscalendar_List_1Vsjy {
+  width: 100%;
+  max-height: 750px;
+  overflow-y: auto;
+}
+.upcomingeventscalendar_ListMonth_2gBsU {
+  margin-bottom: 20px;
+}
+.upcomingeventscalendar_ListMonthTitle_1lMzi {
+  text-transform: uppercase;
+  position: sticky;
+  top: 0;
+  background-color: #1b1e22;
+  z-index: 1000;
+}
+.upcomingeventscalendar_ListDay_10JRf {
+  margin-bottom: 16px;
+}
+.upcomingeventscalendar_ListEvent_2OvrU {
+  margin: 2px;
+  border: 1px #434953 solid;
+  background-color: #2a2d32;
+}
+.upcomingeventscalendar_ListEventHeader_2JVkF {
+  display: flex;
+  flex-direction: row;
+  height: 24px;
+  color: #fff;
+  font-size: 0.9em;
+}
+.upcomingeventscalendar_ListEventHeader_2JVkF
+  .upcomingeventscalendar_ValveOnly_1PWl9 {
+  color: #ca5029;
+}
+.upcomingeventscalendar_ListDayNumber_3XINn {
+  height: 24px;
+  width: 24px;
+  text-align: center;
+}
+.upcomingeventscalendar_ListDayNumber_3XINn.upcomingeventscalendar_Deadline_1OK2i {
+  background-color: #cf520c;
+}
+.upcomingeventscalendar_ListDayNumber_3XINn.upcomingeventscalendar_Release_xCJCO {
+  background-color: #83b5e6;
+}
+.upcomingeventscalendar_ListDayNumber_3XINn.upcomingeventscalendar_Event_2jrTK {
+  background-color: #a3d43b;
+}
+.upcomingeventscalendar_ListEventType_1VxkA {
+  height: 24px;
+  padding: 0px 6px;
+  flex: 1;
+  text-align: left;
+  background-color: #363940;
+}
+.upcomingeventscalendar_ListEventEventSection_2L_1o {
+  text-align: left;
+  padding: 0 30px 10px 30px;
+}

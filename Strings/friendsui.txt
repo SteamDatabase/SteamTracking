@@ -11,16 +11,12 @@ __TEXT
 __cstring
 __TEXT
 __gcc_except_tab__TEXT
-x,!
-x,!
 __const
 __TEXT
 __objc_methname
 __TEXT
 __unwind_info
 __TEXT
-| $
-| $
 __DATA
 %
 %
@@ -73,6 +69,7 @@ __LINKEDIT
 H}.
 %
 P
+$
 
 *
 8
@@ -5303,7 +5300,6 @@ m_bitsMigratedBuckets
 steamIDChat.GetEAccountType() == k_EAccountTypeChat
 k_EChatInstanceFlagClan & steamIDChat.GetUnAccountInstance()
 0
-J$
 
 @
 @
@@ -5311,21 +5307,22 @@ J$
 
 x
 
+#
+
+"
 =
 @
 =
 x
+>!
 0
 0
-7!
 p
 0
 p
 0
 p
 0
-!
-!
 !
 !
 !
@@ -5389,7 +5386,6 @@ V
 !
 @
 @
-)!
 &
 @
 M9e
@@ -5464,15 +5460,12 @@ B
 B
 @
 
-
-
-]
+=
 
 
 
 d
-
-
+f9
 A+M
 
 Hc
@@ -5740,8 +5733,9 @@ d
 0
 0
 &
+n
 Hc
-e
+>
 E
 $
 Ic]

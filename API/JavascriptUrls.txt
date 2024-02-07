@@ -878,7 +878,9 @@ ${MEDIA_CDN_URL}steam/apps/${m_unAppID}/capsule_231x87.jpg
 ${MEDIA_CDN_URL}steam/apps/${m_unAppID}/header.jpg
 ${MEDIA_CDN_URL}steam/apps/${}/${}
 ${MEDIA_CDN_URL}steam/apps/${}/header.jpg
+${MEDIA_CDN_URL}steam/clusters/${}/${}/${}${}
 ${MEDIA_CDN_URL}steam/marketing/${}/${path}${}
+${MEDIA_CDN_URL}steam/spotlights/${}/${}${}
 ${MEDIA_CDN_URL}store/promo/autumn2020/event_nomination_banner_2020.png?v=2
 ${MEDIA_CDN_URL}store/promo/lunar2020/red_envelope_2020.mp4${bIsFirstOpen ? "" : "#t=5,6"}
 ${MEDIA_CDN_URL}store/promo/lunar2020/red_envelope_2020.webm${bIsFirstOpen ? "" : "#t=5,6"}
@@ -916,10 +918,12 @@ ${PARTNER_BASE_URL}admin/store/page/${}
 ${PARTNER_BASE_URL}admin/store/page/${}?activetab=tab_publish
 ${PARTNER_BASE_URL}admin/store/pageclusteredit/${cluster_name}/${id}?activetab=tab_capsules
 ${PARTNER_BASE_URL}admin/store/pageclusteredit/${}
+${PARTNER_BASE_URL}admin/store/pageclusteredit/${}/${}
 ${PARTNER_BASE_URL}admin/store/pageclusteredit/frontpage/${}
 ${PARTNER_BASE_URL}admin/store/pageclusteredit/frontpage/${}?activetab=tab_capsules
 ${PARTNER_BASE_URL}admin/store/pageclusteredit/frontpage_china/${}
 ${PARTNER_BASE_URL}admin/store/pageclusteredit/takeunder/${}
+${PARTNER_BASE_URL}admin/store/pageclusteredit/takeunder}
 ${PARTNER_BASE_URL}admin/store/spotlight/${id}
 ${PARTNER_BASE_URL}admin/store/spotlight/${}
 ${PARTNER_BASE_URL}admin/store/suggestpackage
@@ -935,6 +939,10 @@ ${PARTNER_BASE_URL}apps/suggestapps
 ${PARTNER_BASE_URL}bundles/suggestbundle
 ${PARTNER_BASE_URL}bundles/view/${}
 ${PARTNER_BASE_URL}cluster/ajaxcreatecluster
+${PARTNER_BASE_URL}cluster/ajaxloadcluster
+${PARTNER_BASE_URL}cluster/ajaxsaveclusterassets
+${PARTNER_BASE_URL}cluster/ajaxuploadasset?clusterid=${}&clustertype=${}
+${PARTNER_BASE_URL}cluster/ajaxuploadasset?clusterid=${}&clustertype=spotlights
 ${PARTNER_BASE_URL}dailydeals/ajaxacceptinvite
 ${PARTNER_BASE_URL}dailydeals/ajaxinviteapptopromo
 ${PARTNER_BASE_URL}dailydeals/ajaxremoveappinvite
@@ -1066,8 +1074,10 @@ ${PARTNER_BASE_URL}promotion/planning/dashboard
 ${PARTNER_BASE_URL}promotion/planning/edit/${id}
 ${PARTNER_BASE_URL}promotion/planning/edit/${planid}
 ${PARTNER_BASE_URL}promotion/planning/edit/${}
+${PARTNER_BASE_URL}promotion/planning/migration
 ${PARTNER_BASE_URL}promotion/planning/salesrank
 ${PARTNER_BASE_URL}promotion/planning/themes
+${PARTNER_BASE_URL}promotion/spotlight/edit/${}
 ${PARTNER_BASE_URL}promotion/spotlights/ajaxcreatenewspotlight
 ${PARTNER_BASE_URL}promotion/spotlights/ajaxloadspotlight
 ${PARTNER_BASE_URL}promotion/spotlights/dashboard
@@ -1082,6 +1092,7 @@ ${PARTNER_BASE_URL}sales/
 ${PARTNER_BASE_URL}sales/ajaxcreatesalepartnerevent
 ${PARTNER_BASE_URL}sales/ajaxgetsalerank
 ${PARTNER_BASE_URL}sales/ajaxupdateclanaccountflags
+${PARTNER_BASE_URL}sales/ajaxuploadasset/${}
 ${PARTNER_BASE_URL}sdr/ajaxsessionsearch?${}
 ${PARTNER_BASE_URL}steamml/create_problem
 ${PARTNER_BASE_URL}steamml/delete_problem
@@ -3115,6 +3126,7 @@ steam://settings/account${}
 steam://settings/broadcast
 steam://settings/downloads
 steam://settings/ingame
+steam://settings/interface
 steam://signout
 steam://stopstreaming
 steam://store

@@ -263,6 +263,11 @@ b {
 .partnereventshared_EventBarTitleCtn_1bUXk .HelperTooltip svg {
   fill: #545454;
 }
+@media screen and (max-width: 800px) {
+  .partnereventshared_EventBarTitleCtn_1bUXk {
+    display: none;
+  }
+}
 .partnereventshared_EventBarTitle_3K6Ro {
   font-size: 22px;
   font-weight: bold;
@@ -315,6 +320,11 @@ b {
 }
 .partnereventshared_EditPreviewButton_3NmFF.partnereventshared_Disabled_v6Qy- {
   color: #777;
+}
+@media screen and (max-width: 940px) {
+  .partnereventshared_EditPreviewButton_3NmFF {
+    display: none;
+  }
 }
 .partnereventshared_BrowseMoreButton_3GBlO {
   display: inline-block;
@@ -1247,6 +1257,7 @@ button.Primary.partnereventshared_AddSectionButton_15e-D {
   .adminshared_SectionCtn_3la4r
   p {
   font-size: 14px;
+  line-height: 21px;
   font-weight: 300;
   color: #dfe3e6;
 }

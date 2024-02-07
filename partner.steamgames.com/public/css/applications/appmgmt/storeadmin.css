@@ -1388,6 +1388,7 @@ div.pricinggridcell_HoverToolTip_36qS7 {
   border-bottom: 1px solid #67c1f5;
   align-items: flex-end;
   text-align: center;
+  flex-wrap: wrap;
 }
 .tabbar_GraphicalAssetsTab_K1_Tp {
   margin: 0 16px;

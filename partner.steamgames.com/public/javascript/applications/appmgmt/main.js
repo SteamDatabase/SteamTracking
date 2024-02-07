@@ -19857,28 +19857,29 @@
       }
       const m = new Map(),
         p = new Map();
-      function g(e, t, n = !0, i = !0) {
-        const s = new Date(),
-          a = new Date(1e3 * e);
-        if (a.getFullYear() != s.getFullYear()) return u(e);
-        i && o.zO(new Date().setHours(24, 0, 0, 0) - s.getTime());
-        const l = new Date();
-        if ((l.setHours(0, 0, 0, 0), n))
-          if (a >= l) {
-            if ((l.setDate(l.getDate() + 1), a < l))
+      function g(e, t, n = !0, i = !0, s = !1) {
+        const a = new Date(),
+          l = new Date(1e3 * e);
+        if (l.getFullYear() != a.getFullYear()) return u(e);
+        i && o.zO(new Date().setHours(24, 0, 0, 0) - a.getTime());
+        const c = new Date();
+        if ((c.setHours(0, 0, 0, 0), n))
+          if (l >= c) {
+            if ((c.setDate(c.getDate() + 1), l < c))
               return (0, r.Xx)("#Time_Today");
-            if ((l.setDate(l.getDate() + 1), a < l))
+            if ((c.setDate(c.getDate() + 1), l < c))
               return (0, r.Xx)("#Time_Tomorrow");
-          } else if ((l.setDate(l.getDate() - 1), a >= l))
+          } else if ((c.setDate(c.getDate() - 1), l >= c))
             return (0, r.Xx)("#Time_Yesterday");
-        const c = { month: t ? "long" : "short", day: "numeric" },
-          d = a.setHours(0, 0, 0, 0) + c.month;
-        let h = p.get(d);
+        const d = { month: t ? "long" : "short", day: "numeric" };
+        s && (d.weekday = "long");
+        const h = l.setHours(0, 0, 0, 0) + d.month;
+        let m = p.get(h);
         return (
-          h ||
-          ((h = a.toLocaleDateString(r.Yt.GetPreferredLocales(), c)),
-          p.set(d, h),
-          h)
+          m ||
+          ((m = l.toLocaleDateString(r.Yt.GetPreferredLocales(), d)),
+          p.set(h, m),
+          m)
         );
       }
       function _(e, t) {
@@ -21045,18 +21046,21 @@
         De: () => s.De,
         Ek: () => l.Ek,
         JA: () => s.JA,
-        Kc: () => C,
+        Kc: () => b,
         L7: () => s.L7,
         Me: () => p,
+        S$: () => v,
         Uy: () => g,
         Wj: () => s.Wj,
-        Zv: () => v,
+        Zv: () => w,
+        eG: () => _,
         fI: () => d,
         h4: () => m,
         id: () => h,
         ip: () => l.ip,
         kQ: () => l.kQ,
         qt: () => u,
+        wg: () => C,
         y9: () => l.y9,
       });
       var i = n(47427),
@@ -21121,48 +21125,57 @@
       function g() {
         return "macos" == s.De.PLATFORM;
       }
-      function _(e, t) {
-        return 0 != t.length && e.startsWith(t);
+      function _() {
+        return "linux" == s.De.PLATFORM;
       }
       function C() {
+        return s.De.IN_CHROMEOS;
+      }
+      function v() {
+        return s.De.ON_STEAMOS;
+      }
+      function f(e, t) {
+        return 0 != t.length && e.startsWith(t);
+      }
+      function b() {
         if (!window || !window.location || !window.location.href)
           return console.warn("Unable to determine base url!"), "unknown";
         const e = window.location.href;
-        return _(e, s.De.STORE_BASE_URL)
+        return f(e, s.De.STORE_BASE_URL)
           ? s.De.STORE_BASE_URL
-          : _(e, s.De.COMMUNITY_BASE_URL)
+          : f(e, s.De.COMMUNITY_BASE_URL)
           ? s.De.COMMUNITY_BASE_URL
-          : _(e, s.De.CHAT_BASE_URL)
+          : f(e, s.De.CHAT_BASE_URL)
           ? s.De.CHAT_BASE_URL
-          : _(e, s.De.PARTNER_BASE_URL)
+          : f(e, s.De.PARTNER_BASE_URL)
           ? s.De.PARTNER_BASE_URL
-          : _(e, s.De.HELP_BASE_URL)
+          : f(e, s.De.HELP_BASE_URL)
           ? s.De.HELP_BASE_URL
-          : _(e, s.De.STEAMTV_BASE_URL)
+          : f(e, s.De.STEAMTV_BASE_URL)
           ? s.De.STEAMTV_BASE_URL
-          : _(e, s.De.STATS_BASE_URL)
+          : f(e, s.De.STATS_BASE_URL)
           ? s.De.STATS_BASE_URL
-          : _(e, s.De.INTERNAL_STATS_BASE_URL)
+          : f(e, s.De.INTERNAL_STATS_BASE_URL)
           ? s.De.INTERNAL_STATS_BASE_URL
-          : _(e, s.De.STORE_CHECKOUT_BASE_URL)
+          : f(e, s.De.STORE_CHECKOUT_BASE_URL)
           ? s.De.STORE_CHECKOUT_BASE_URL
-          : _(e, "https://steamloopback.host")
+          : f(e, "https://steamloopback.host")
           ? "https://steamloopback.host"
           : "";
       }
-      function v() {
+      function w() {
         const e = window.location.href;
-        return _(e, s.De.STORE_BASE_URL) || _(e, s.De.STORE_CHECKOUT_BASE_URL)
+        return f(e, s.De.STORE_BASE_URL) || f(e, s.De.STORE_CHECKOUT_BASE_URL)
           ? "store"
-          : _(e, s.De.COMMUNITY_BASE_URL)
+          : f(e, s.De.COMMUNITY_BASE_URL)
           ? "community"
-          : _(e, s.De.PARTNER_BASE_URL)
+          : f(e, s.De.PARTNER_BASE_URL)
           ? "partnerweb"
-          : _(e, s.De.HELP_BASE_URL)
+          : f(e, s.De.HELP_BASE_URL)
           ? "help"
-          : _(e, s.De.STEAMTV_BASE_URL)
+          : f(e, s.De.STEAMTV_BASE_URL)
           ? "steamtv"
-          : _(e, s.De.STATS_BASE_URL) || _(e, s.De.INTERNAL_STATS_BASE_URL)
+          : f(e, s.De.STATS_BASE_URL) || f(e, s.De.INTERNAL_STATS_BASE_URL)
           ? "stats"
           : "";
       }
@@ -21765,7 +21778,7 @@
             n.e(5875),
             n.e(4033),
             n.e(2136),
-          ]).then(n.bind(n, 89837)),
+          ]).then(n.bind(n, 14381)),
         ),
         G = c.lazy(() =>
           Promise.all([
@@ -21823,7 +21836,7 @@
             n.e(5875),
             n.e(4033),
             n.e(2136),
-          ]).then(n.bind(n, 52671)),
+          ]).then(n.bind(n, 93267)),
         ),
         W = c.lazy(() =>
           Promise.all([n.e(9584), n.e(744), n.e(5117), n.e(5676)]).then(
@@ -21868,7 +21881,7 @@
         K = c.lazy(() =>
           Promise.all([n.e(3233), n.e(4935)]).then(n.bind(n, 21452)),
         ),
-        z = c.lazy(() => n.e(3863).then(n.bind(n, 10173))),
+        z = c.lazy(() => n.e(3863).then(n.bind(n, 32765))),
         X = () => c.createElement("div", null),
         Y = c.lazy(() =>
           Promise.all([
