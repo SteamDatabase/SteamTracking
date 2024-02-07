@@ -10825,15 +10825,14 @@
     },
     45944: (e, t, n) => {
       "use strict";
-      n.d(t, { Q8: () => C, L7: () => f });
+      n.d(t, { Q8: () => f });
       var i = n(85556),
         r = n(54842),
-        s = n(30750),
-        o = n(77936),
-        a = n(79545),
-        l = n(22520),
-        c = n(37563);
-      class u {
+        s = n(77936),
+        o = n(79545),
+        a = n(22520),
+        l = n(37563);
+      class c {
         constructor(e) {
           (this.m_nLastUpdated = 0),
             (this.m_mapLanguages = r.LO.map()),
@@ -10847,8 +10846,8 @@
           return this.m_mapLanguages.has(e) ? this.m_mapLanguages.get(e) : null;
         }
         Localize(e, t) {
-          let n = c.De.LANGUAGE;
-          return d(
+          let n = l.De.LANGUAGE;
+          return u(
             e,
             this.GetTokenList(n),
             "english" != n ? this.GetTokenList("english") : null,
@@ -10857,8 +10856,8 @@
           );
         }
         SubstituteParams(e, t) {
-          let n = c.De.LANGUAGE;
-          return m(
+          let n = l.De.LANGUAGE;
+          return d(
             e,
             this.GetTokenList(n),
             "english" != n ? this.GetTokenList("english") : null,
@@ -10867,7 +10866,7 @@
           );
         }
       }
-      function d(e, t, n, i, r) {
+      function u(e, t, n, i, r) {
         if (!e.startsWith("#"))
           return console.log("Token doesn't start with #:", e), "";
         let s = e;
@@ -10878,7 +10877,7 @@
           !o && n && n.has(e) && (o = n.get(e)),
           o)
         )
-          o = m(o, t, n, i, r);
+          o = d(o, t, n, i, r);
         else if (
           ((t || n) &&
             console.log(
@@ -10890,22 +10889,22 @@
               "Fallback:",
               n,
             ),
-          t && 1 != c.De.EUNIVERSE)
+          t && 1 != l.De.EUNIVERSE)
         )
           return e;
         return o;
       }
-      function m(e, t, n, i, r) {
+      function d(e, t, n, i, r) {
         let s = e.match(/{[A-za-z0-9_%#:]+}/g);
         if (s)
           for (let o of s) {
-            let s = d(h(o.slice(1, -1), r), t, n, i, r);
+            let s = u(m(o.slice(1, -1), r), t, n, i, r);
             if (!s) return "";
             e = e.replace(o, s);
           }
-        return (e = h(e, r));
+        return (e = m(e, r));
       }
-      function h(e, t) {
+      function m(e, t) {
         let n = e.match(/%[A-Za-z0-9_:]+%/g);
         if (n)
           for (let i of n) {
@@ -10917,20 +10916,17 @@
           }
         return e;
       }
-      var p = n(18015),
-        g = n(62210),
-        _ = n(45492);
-      function f(e) {
-        return (0, s.SZ)(() => C.GetAppInfo(e));
-      }
-      class v {
+      var h = n(18015),
+        p = n(62210),
+        g = n(45492);
+      class _ {
         constructor() {
           (this.m_mapAppInfo = r.LO.map()),
             (this.m_mapRichPresenceLoc = r.LO.map()),
             (this.m_cAppInfoRequestsInFlight = 0),
             (this.m_setPendingAppInfo = new Set()),
             (this.m_CacheStorage = null),
-            (this.m_fnCallbackOnAppInfoLoaded = new _.pB()),
+            (this.m_fnCallbackOnAppInfoLoaded = new g.pB()),
             (0, r.rC)(this);
         }
         Init(e) {
@@ -10948,7 +10944,7 @@
         RegisterCallbackOnLoad(e) {
           if (!this.BHavePendingAppInfoRequests())
             return (
-              (0, g.X)(
+              (0, p.X)(
                 !1,
                 "Registering for callback on appinfo load, but nothing queued",
               ),
@@ -10961,13 +10957,13 @@
         }
         GetAppInfo(e) {
           if (
-            ((0, g.X)(
+            ((0, p.X)(
               this.m_CMInterface,
               "CAppInfoStore.GetAppInfo called before Init",
             ),
             !this.m_mapAppInfo.has(e))
           ) {
-            let t = new l.Am(e);
+            let t = new a.Am(e);
             this.m_mapAppInfo.set(e, t), this.QueueAppInfoRequest(e);
           }
           return this.m_mapAppInfo.get(e);
@@ -11001,14 +10997,14 @@
             if (t.length) {
               console.log("Loading batch of App Info from Steam: ", t),
                 yield this.m_CMInterface.WaitUntilLoggedOn();
-              let e = a.gA.Init(p.Fi);
-              e.Body().set_language((0, o.jM)(c.De.LANGUAGE));
+              let e = o.gA.Init(h.Fi);
+              e.Body().set_language((0, s.jM)(l.De.LANGUAGE));
               const n = 50;
               for (; t.length > 0; ) {
                 const i = Math.min(n, t.length),
                   r = t.slice(0, i);
                 (t = t.slice(i)), e.Body().set_appids(r);
-                const s = yield p.AE.GetApps(
+                const s = yield h.AE.GetApps(
                   this.m_CMInterface.GetServiceTransport(),
                   e,
                 );
@@ -11030,12 +11026,12 @@
           let t = [];
           for (let n of e.Body().apps()) {
             let e = this.m_mapAppInfo.get(n.appid());
-            (0, g.X)(
+            (0, p.X)(
               e,
               `Got AppInfo response for unrequested AppID: ${n.appid()}`,
             ),
               e &&
-                ((e = new l.Am(n.appid())),
+                ((e = new a.Am(n.appid())),
                 e.DeserializeFromMessage(n),
                 this.m_mapAppInfo.set(n.appid(), e),
                 t.push(e));
@@ -11044,7 +11040,7 @@
         }
         OnAppOverviewChange(e) {
           for (let t of e) {
-            const e = new l.Am(t.appid());
+            const e = new a.Am(t.appid());
             e.DeserializeFromAppOverview(t),
               e.is_initialized && this.m_mapAppInfo.set(t.appid(), e);
           }
@@ -11057,7 +11053,7 @@
                 let n = this.m_mapAppInfo.get(e);
                 n
                   ? n.is_valid || (t = !0)
-                  : ((n = new l.Am(e)),
+                  : ((n = new a.Am(e)),
                     this.m_mapAppInfo.set(e, n),
                     this.QueueAppInfoRequest(e),
                     (t = !0));
@@ -11087,12 +11083,12 @@
                   if (!n) return e;
                   let i = this.m_mapAppInfo.get(e);
                   return (
-                    (0, g.X)(
+                    (0, p.X)(
                       i,
                       "Didn't find AppInfo in our map when loading from cache but it should've been there?",
                     ),
                     i
-                      ? ((i = new l.Am(e)),
+                      ? ((i = new a.Am(e)),
                         i.DeserializeFromCacheObject(n),
                         i.is_initialized
                           ? (this.m_mapAppInfo.set(e, i),
@@ -11132,7 +11128,7 @@
           const i = this.GetRichPresenceLoc(e);
           return i
             ? i.Localize(t, n)
-            : 1 != c.De.EUNIVERSE
+            : 1 != l.De.EUNIVERSE
             ? (console.log(
                 `Unable to find app localization information for app ${e} token ${t}, this may not have had a chance to load yet`,
               ),
@@ -11143,12 +11139,12 @@
           if (this.m_mapRichPresenceLoc.has(e.toString())) {
             let t = this.m_mapRichPresenceLoc.get(e.toString());
             return (
-              t.m_nLastUpdated + 6e4 * l.x3 < Date.now() &&
+              t.m_nLastUpdated + 6e4 * a.x3 < Date.now() &&
                 this.QueueRichPresenceLocRequest(t),
               t
             );
           }
-          let t = new u(e);
+          let t = new c(e);
           return (
             this.m_mapRichPresenceLoc.set(e.toString(), t),
             this.QueueRichPresenceLocRequest(t),
@@ -11177,11 +11173,11 @@
               ((e.m_fetching = this.m_CMInterface
                 .WaitUntilLoggedOn()
                 .then(() => {
-                  let t = a.gA.Init(p.tj);
+                  let t = o.gA.Init(h.tj);
                   return (
                     t.Body().set_appid(e.GetAppID()),
-                    t.Body().set_language(c.De.LANGUAGE),
-                    p.AE.GetAppRichPresenceLocalization(
+                    t.Body().set_language(l.De.LANGUAGE),
+                    h.AE.GetAppRichPresenceLocalization(
                       this.m_CMInterface.GetServiceTransport(),
                       t,
                     )
@@ -11206,9 +11202,9 @@
           );
         }
       }
-      (0, i.gn)([r.aD], v.prototype, "OnGetAppsResponse", null),
-        (0, i.gn)([r.aD], v.prototype, "OnRichPresenceLocUpdate", null);
-      const C = new v();
+      (0, i.gn)([r.aD], _.prototype, "OnGetAppsResponse", null),
+        (0, i.gn)([r.aD], _.prototype, "OnRichPresenceLocUpdate", null);
+      const f = new _();
     },
     47692: (e, t, n) => {
       "use strict";
@@ -31389,19 +31385,21 @@
       }
       function O(e) {
         const t = B(e),
-          n = Math.floor(t.hours / 24),
-          i = Math.floor(n / 30);
-        return i > 1
-          ? (0, s.Xx)("#ReadableDuration_Months", i)
-          : 1 === i
-          ? (0, s.Xx)("#ReadableDuration_OneMonth", n)
+          n = 60 * t.hours + t.minutes,
+          i = t.hours,
+          r = Math.floor(t.hours / 24),
+          o = Math.floor(r / 30);
+        return o > 1
+          ? (0, s.Xx)("#ReadableDuration_Months", o)
+          : 1 === o
+          ? (0, s.Xx)("#ReadableDuration_OneMonth", r)
+          : r > 1
+          ? (0, s.Xx)("#ReadableDuration_Days", r)
+          : i > 2
+          ? (0, s.Xx)("#ReadableDuration_Hours", i)
+          : n > 2
+          ? (0, s.Xx)("#ReadableDuration_Minutes", n)
           : n > 1
-          ? (0, s.Xx)("#ReadableDuration_Days", n)
-          : t.hours > 2
-          ? (0, s.Xx)("#ReadableDuration_Hours", t.hours)
-          : t.minutes > 2
-          ? (0, s.Xx)("#ReadableDuration_Minutes", t.minutes)
-          : 1 === t.minutes
           ? (0, s.Xx)("#ReadableDuration_OneMinute")
           : (0, s.Xx)("#ReadableDuration_LessThanOneMinute");
       }
