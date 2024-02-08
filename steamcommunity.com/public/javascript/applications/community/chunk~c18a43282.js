@@ -1524,15 +1524,15 @@
         PJ: () => z,
         zf: () => q,
         MF: () => J,
-        in: () => me,
-        bH: () => ue,
+        in: () => ue,
+        bH: () => pe,
         eu: () => ee,
         qH: () => Q,
         kd: () => $,
         B3: () => te,
         fD: () => W,
         VL: () => ie,
-        ax: () => _e,
+        ax: () => he,
         xb: () => Z,
         bN: () => L,
         GB: () => de,
@@ -1547,7 +1547,7 @@
         z5: () => j,
         Pg: () => x,
         Vv: () => oe,
-        ON: () => pe,
+        ON: () => _e,
       });
       var n = a(85556),
         r = a(54842),
@@ -1897,6 +1897,19 @@
         de = 120,
         ce = 180,
         me = [
+          "workshop",
+          "patchnotes",
+          "contenthub",
+          "skip_megaphone",
+          "curator",
+          "curator_group_members",
+          "curator_public",
+          "audience_followers",
+          "enable_steam_china",
+          "disable_steam_global",
+          "adult_only_content",
+        ],
+        ue = [
           "patchnotes",
           "steam_award_nomination_request",
           "steam_award_vote_request",
@@ -1909,7 +1922,7 @@
           "curator_group_members",
           "curator_public",
         ];
-      class ue {
+      class pe {
         constructor() {
           (this.GID = void 0),
             (this.AnnouncementGID = void 0),
@@ -1952,7 +1965,7 @@
           return !this.bOldAnnouncement && Boolean(this.GID);
         }
         static FromJSON(e) {
-          let t = new ue(),
+          let t = new pe(),
             a = JSON.parse(e);
           return (
             Object.assign(t, a),
@@ -1988,7 +2001,7 @@
           );
         }
         clone(e = !1) {
-          let t = new ue();
+          let t = new pe();
           return (
             (t.GID = this.GID),
             (t.AnnouncementGID = this.AnnouncementGID),
@@ -2035,10 +2048,13 @@
               : null),
             (t.jsondata = JSON.parse(JSON.stringify(this.jsondata))),
             (t.vecTags = new Array()),
-            this.vecTags.forEach((e) => t.vecTags.push(e)),
-            e &&
-              ((t.m_nBuildID = this.m_nBuildID),
-              (t.m_strBuildBranch = this.m_strBuildBranch)),
+            e
+              ? ((t.m_nBuildID = this.m_nBuildID),
+                (t.m_strBuildBranch = this.m_strBuildBranch),
+                this.vecTags.forEach((e) => t.vecTags.push(e)))
+              : this.vecTags.forEach((e) => {
+                  me.includes(e) && t.vecTags.push(e);
+                }),
             t
           );
         }
@@ -2461,7 +2477,7 @@
                 ? void 0
                 : t.localized_subtitle,
               e,
-            ) || ue.GenerateSummaryFromText(this.GetDescriptionWithFallback(e))
+            ) || pe.GenerateSummaryFromText(this.GetDescriptionWithFallback(e))
           );
         }
         GetSummaryWithFallback(e, t) {
@@ -2473,7 +2489,7 @@
                 : a.localized_summary,
               e,
             ) ||
-            ue.GenerateSummaryFromText(this.GetDescriptionWithFallback(e), t)
+            pe.GenerateSummaryFromText(this.GetDescriptionWithFallback(e), t)
           );
         }
         GetSummary(e) {
@@ -2693,14 +2709,14 @@
             null === (a = this.jsondata.tagged_items) ||
               void 0 === a ||
               a.forEach((e) => {
-                ue.AccumulateCapsuleListIDs([e.capsule], n, r, t);
+                pe.AccumulateCapsuleListIDs([e.capsule], n, r, t);
               }),
             this.jsondata.sale_sections.forEach((e) => {
               if ("items" === e.section_type)
-                ue.AccumulateCapsuleListIDs(e.capsules, n, r, t);
+                pe.AccumulateCapsuleListIDs(e.capsules, n, r, t);
               else if ("tabs" === e.section_type && e.tabs)
                 for (const a of e.tabs)
-                  ue.AccumulateCapsuleListIDs(a.capsules, n, r, t);
+                  pe.AccumulateCapsuleListIDs(a.capsules, n, r, t);
             }),
             r
           );
@@ -2879,56 +2895,56 @@
           return this.jsondata.content_hub_discounted_only;
         }
       }
-      (0, n.gn)([r.LO], ue.prototype, "GID", void 0),
-        (0, n.gn)([r.LO], ue.prototype, "AnnouncementGID", void 0),
-        (0, n.gn)([r.LO], ue.prototype, "forumTopicGID", void 0),
-        (0, n.gn)([r.LO], ue.prototype, "type", void 0),
-        (0, n.gn)([r.LO], ue.prototype, "appid", void 0),
-        (0, n.gn)([r.LO], ue.prototype, "name", void 0),
-        (0, n.gn)([r.LO], ue.prototype, "description", void 0),
-        (0, n.gn)([r.LO], ue.prototype, "timestamp_loc_updated", void 0),
-        (0, n.gn)([r.LO], ue.prototype, "startTime", void 0),
-        (0, n.gn)([r.LO], ue.prototype, "endTime", void 0),
-        (0, n.gn)([r.LO], ue.prototype, "visibilityStartTime", void 0),
-        (0, n.gn)([r.LO], ue.prototype, "visibilityEndTime", void 0),
-        (0, n.gn)([r.LO], ue.prototype, "m_nBuildID", void 0),
-        (0, n.gn)([r.LO], ue.prototype, "m_strBuildBranch", void 0),
-        (0, n.gn)([r.LO], ue.prototype, "postTime", void 0),
-        (0, n.gn)([r.LO], ue.prototype, "visibility_state", void 0),
-        (0, n.gn)([r.LO], ue.prototype, "broadcaster", void 0),
-        (0, n.gn)([r.LO], ue.prototype, "jsondata", void 0),
-        (0, n.gn)([r.LO], ue.prototype, "nCommentCount", void 0),
-        (0, n.gn)([r.LO], ue.prototype, "nVotesUp", void 0),
-        (0, n.gn)([r.LO], ue.prototype, "nVotesDown", void 0),
-        (0, n.gn)([r.LO], ue.prototype, "bOldAnnouncement", void 0),
-        (0, n.gn)([r.LO], ue.prototype, "announcementClanSteamID", void 0),
-        (0, n.gn)([r.LO], ue.prototype, "loadedAllLanguages", void 0),
-        (0, n.gn)([r.LO], ue.prototype, "bLoaded", void 0),
-        (0, n.gn)([r.LO], ue.prototype, "deleteInProgress", void 0),
-        (0, n.gn)([r.LO], ue.prototype, "vecTags", void 0),
-        (0, n.gn)([r.LO], ue.prototype, "last_update_steamid", void 0),
-        (0, n.gn)([r.LO], ue.prototype, "rtime32_last_modified", void 0),
+      (0, n.gn)([r.LO], pe.prototype, "GID", void 0),
+        (0, n.gn)([r.LO], pe.prototype, "AnnouncementGID", void 0),
+        (0, n.gn)([r.LO], pe.prototype, "forumTopicGID", void 0),
+        (0, n.gn)([r.LO], pe.prototype, "type", void 0),
+        (0, n.gn)([r.LO], pe.prototype, "appid", void 0),
+        (0, n.gn)([r.LO], pe.prototype, "name", void 0),
+        (0, n.gn)([r.LO], pe.prototype, "description", void 0),
+        (0, n.gn)([r.LO], pe.prototype, "timestamp_loc_updated", void 0),
+        (0, n.gn)([r.LO], pe.prototype, "startTime", void 0),
+        (0, n.gn)([r.LO], pe.prototype, "endTime", void 0),
+        (0, n.gn)([r.LO], pe.prototype, "visibilityStartTime", void 0),
+        (0, n.gn)([r.LO], pe.prototype, "visibilityEndTime", void 0),
+        (0, n.gn)([r.LO], pe.prototype, "m_nBuildID", void 0),
+        (0, n.gn)([r.LO], pe.prototype, "m_strBuildBranch", void 0),
+        (0, n.gn)([r.LO], pe.prototype, "postTime", void 0),
+        (0, n.gn)([r.LO], pe.prototype, "visibility_state", void 0),
+        (0, n.gn)([r.LO], pe.prototype, "broadcaster", void 0),
+        (0, n.gn)([r.LO], pe.prototype, "jsondata", void 0),
+        (0, n.gn)([r.LO], pe.prototype, "nCommentCount", void 0),
+        (0, n.gn)([r.LO], pe.prototype, "nVotesUp", void 0),
+        (0, n.gn)([r.LO], pe.prototype, "nVotesDown", void 0),
+        (0, n.gn)([r.LO], pe.prototype, "bOldAnnouncement", void 0),
+        (0, n.gn)([r.LO], pe.prototype, "announcementClanSteamID", void 0),
+        (0, n.gn)([r.LO], pe.prototype, "loadedAllLanguages", void 0),
+        (0, n.gn)([r.LO], pe.prototype, "bLoaded", void 0),
+        (0, n.gn)([r.LO], pe.prototype, "deleteInProgress", void 0),
+        (0, n.gn)([r.LO], pe.prototype, "vecTags", void 0),
+        (0, n.gn)([r.LO], pe.prototype, "last_update_steamid", void 0),
+        (0, n.gn)([r.LO], pe.prototype, "rtime32_last_modified", void 0),
         (0, n.gn)(
           [r.LO],
-          ue.prototype,
+          pe.prototype,
           "rtime32_last_solr_search_col_updated",
           void 0,
         ),
         (0, n.gn)(
           [r.LO],
-          ue.prototype,
+          pe.prototype,
           "rtime32_last_local_modification",
           void 0,
         ),
-        (0, n.gn)([r.LO], ue.prototype, "rtime32_moderator_reviewed", void 0),
-        (0, n.gn)([r.LO], ue.prototype, "video_preview_type", void 0),
-        (0, n.gn)([r.LO], ue.prototype, "video_preview_id", void 0),
-        (0, n.gn)([r.LO], ue.prototype, "m_overrideCurrentDay", void 0);
-      const pe = (e) => {
+        (0, n.gn)([r.LO], pe.prototype, "rtime32_moderator_reviewed", void 0),
+        (0, n.gn)([r.LO], pe.prototype, "video_preview_type", void 0),
+        (0, n.gn)([r.LO], pe.prototype, "video_preview_id", void 0),
+        (0, n.gn)([r.LO], pe.prototype, "m_overrideCurrentDay", void 0);
+      const _e = (e) => {
         const t = (0, S.b)(e.appid);
         return e.appid ? t : I.JA.IS_ALLOWED_SC;
       };
-      function _e(e) {
+      function he(e) {
         return null == e ? void 0 : e.replace("(", "\\(").replace(")", "\\)");
       }
     },
