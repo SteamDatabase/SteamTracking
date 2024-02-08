@@ -4012,6 +4012,28 @@ body.ShoppingCart {
   font-size: 12px;
   font-weight: 500;
 }
+.shoppingcart_ErrorModalContent_1Fli5 {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.shoppingcart_ErrorModalMessage_vNpgP {
+  color: #fff;
+  font-size: 14px;
+  margin: 12px 0;
+}
+.shoppingcart_ErrorModalBottom_5g0iB {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+.shoppingcart_ErrorModalCode_34Q7J {
+  color: #3d4450;
+  font-size: 12px;
+  text-align: right;
+}
 body,
 body.shared_common_v6_3r3Le {
   color: #969696;

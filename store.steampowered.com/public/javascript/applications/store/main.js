@@ -570,6 +570,10 @@
         BackgroundImage: "shoppingcart_BackgroundImage_FaiD8",
         HeaderNotices: "shoppingcart_HeaderNotices_3SXN1",
         HeaderNotice: "shoppingcart_HeaderNotice_2zWY-",
+        ErrorModalContent: "shoppingcart_ErrorModalContent_1Fli5",
+        ErrorModalMessage: "shoppingcart_ErrorModalMessage_vNpgP",
+        ErrorModalBottom: "shoppingcart_ErrorModalBottom_5g0iB",
+        ErrorModalCode: "shoppingcart_ErrorModalCode_34Q7J",
       };
     },
     83682: (e, t, n) => {
@@ -5772,6 +5776,7 @@
               return D(n.GetEResult()), n.Body();
             }),
           staleTime: 3e3,
+          enabled: h.L7.logged_in,
         });
       }
       function I(e) {
@@ -20232,49 +20237,58 @@
         }
         OnDrag(e, t, n) {
           const i = this.m_prevClientX || t,
-            r = this.m_prevClientY || n,
-            s = void 0 === i ? 0 : i - this.m_dragGhost.state.clientX,
-            o = void 0 === r ? 0 : r - this.m_dragGhost.state.clientY;
+            r = this.m_prevClientY || n;
           if (
             (e.props.bEnableHTMLDrag &&
               this.m_dragOffWindowTimer &&
               window.clearTimeout(this.m_dragOffWindowTimer),
-            this.m_dragGhost &&
+            this.m_dragGhost)
+          ) {
+            const t = void 0 === i ? 0 : i - this.m_dragGhost.state.clientX,
+              n = void 0 === r ? 0 : r - this.m_dragGhost.state.clientY;
+            if (
               (this.m_dragGhost.setState({
                 clientX: i,
                 clientY: r,
-                clientXDelta: s,
-                clientYDelta: o,
+                clientXDelta: t,
+                clientYDelta: n,
                 bVisible: !0,
               }),
-              e.props.bEnableHTMLDrag && (s || o)))
-          ) {
-            const t = i + s,
-              n = r + o,
-              a = e.GetDragDocument().body.getBoundingClientRect();
-            if (Be(i, r, a) && !Be(t, n, a, !0)) {
-              const i = Ae.r4(t, a.left, a.right, a.left - 200, a.right + 200),
-                r = Ae.r4(n, a.top, a.bottom, a.top - 100, a.bottom + 100),
-                s = 50;
-              this.m_dragOffWindowTimer = window.setTimeout(() => {
-                e == this.m_activeDraggable && this.OnDrag(e, i, r);
-              }, s);
+              e.props.bEnableHTMLDrag && (t || n))
+            ) {
+              const s = i + t,
+                o = r + n,
+                a = e.GetDragDocument().body.getBoundingClientRect();
+              if (Be(i, r, a) && !Be(s, o, a, !0)) {
+                const t = Ae.r4(
+                    s,
+                    a.left,
+                    a.right,
+                    a.left - 200,
+                    a.right + 200,
+                  ),
+                  n = Ae.r4(o, a.top, a.bottom, a.top - 100, a.bottom + 100),
+                  i = 50;
+                this.m_dragOffWindowTimer = window.setTimeout(() => {
+                  e == this.m_activeDraggable && this.OnDrag(e, t, n);
+                }, i);
+              }
             }
           }
-          const a = this.FindBestActiveDropRegionForPoint(i, r);
+          const s = this.FindBestActiveDropRegionForPoint(i, r);
           (this.m_prevClientX = t),
             (this.m_prevClientY = n),
-            !!this.m_activeDropRegion != !!a &&
+            !!this.m_activeDropRegion != !!s &&
               (this.ShowDragGhost(),
               this.m_dropGhost ||
                 (this.m_dropGhost = this.m_activeDraggable.renderDropGhost())),
             this.m_activeDropRegion &&
-              this.m_activeDropRegion != a &&
+              this.m_activeDropRegion != s &&
               this.m_activeDropRegion.OnDragLeave(this.m_activeDraggable),
-            a &&
-              this.m_activeDropRegion != a &&
-              a.OnDragEnter(this.m_activeDraggable, this.m_dropGhost),
-            (this.m_activeDropRegion = a),
+            s &&
+              this.m_activeDropRegion != s &&
+              s.OnDragEnter(this.m_activeDraggable, this.m_dropGhost),
+            (this.m_activeDropRegion = s),
             this.m_activeDropRegion &&
               this.m_activeDropRegion.OnDragMove(i, r, this.m_activeDraggable);
         }
@@ -29305,6 +29319,7 @@
       "use strict";
       n.d(t, {
         HC: () => c,
+        PZ: () => p,
         YR: () => h,
         ZP: () => l,
         bJ: () => d,
@@ -29319,29 +29334,30 @@
       function l(e) {
         const { children: t } = e,
           n = (0, i._T)(e, ["children"]),
-          o = d();
-        return r.createElement(
-          a.Provider,
-          {
-            value: Object.assign(
-              Object.assign(Object.assign({}, s.ZP.GetDefaultParams()), o),
-              n,
-            ),
-          },
-          t,
-        );
+          o = d(),
+          l = g(),
+          c = r.useMemo(
+            () =>
+              Object.assign(
+                Object.assign(Object.assign({}, s.ZP.GetDefaultParams()), o),
+                n,
+              ),
+            [
+              l,
+              o,
+              n.domain,
+              n.controller,
+              n.method,
+              n.submethod,
+              n.feature,
+              n.depth,
+            ],
+          );
+        return r.createElement(a.Provider, { value: c }, t);
       }
       function c(e) {
         const { children: t } = e,
-          n = (function () {
-            const [e, t] = r.useState(s.ZP.BIsLoaded());
-            return (
-              r.useEffect(() => {
-                e || s.ZP.Load().then(() => t(!0));
-              }, [e]),
-              e
-            );
-          })();
+          n = g();
         let i = r.useMemo(() => s.ZP.ParseSNR(o.De.SNR), [n]);
         return r.createElement(
           a.Provider,
@@ -29366,18 +29382,40 @@
         return u(d(), e, t);
       }
       function h(e, t, n) {
-        const i = d(),
-          o = r.useMemo(
-            () =>
-              s.ZP.GetLinkParam(
-                Object.assign(Object.assign({}, i), {
-                  feature: t || i.feature,
+        const i = d();
+        return r.useMemo(
+          () =>
+            (function (e, t, n, i) {
+              const r = s.ZP.GetLinkParam(
+                Object.assign(Object.assign({}, e), {
+                  feature: n || e.feature,
                 }),
-                n,
-              ),
-            [i, t, n],
-          );
-        return r.useMemo(() => s.ZP.AddNavParamToURL(e, o), [e, o]);
+                i,
+              );
+              return s.ZP.AddNavParamToURL(t, r);
+            })(i, e, t, n),
+          [e, i, t, n],
+        );
+      }
+      function p(e, t) {
+        const n = d();
+        return r.useMemo(
+          () =>
+            s.ZP.GetLinkParam(
+              Object.assign(Object.assign({}, n), { feature: e || n.feature }),
+              t,
+            ),
+          [n, e, t],
+        );
+      }
+      function g() {
+        const [e, t] = r.useState(s.ZP.BIsLoaded());
+        return (
+          r.useEffect(() => {
+            e || s.ZP.Load().then(() => t(!0));
+          }, [e]),
+          e
+        );
       }
     },
     23163: (e, t, n) => {
@@ -34242,87 +34280,127 @@
             )
           : null;
       }
-      var je = n(46009);
-      const We = s.lazy(() =>
-        Promise.all([
-          n.e(460),
-          n.e(8112),
-          n.e(9766),
-          n.e(1021),
-          n.e(8973),
-          n.e(3344),
-          n.e(2915),
-          n.e(6882),
-          n.e(7247),
-          n.e(9424),
-          n.e(7695),
-          n.e(3243),
-          n.e(344),
-          n.e(1720),
-          n.e(8427),
-          n.e(6193),
-          n.e(7311),
-        ]).then(n.bind(n, 11001)),
-      );
-      function Ze(e) {
-        const [t, n, i] = (0, B.X9)(),
-          [r, o] = s.useState(),
-          [a, l] = s.useState(null),
-          c = (0, v.bY)(),
-          u = (0, ke.useQueryClient)();
+      var je = n(46009),
+        We = n(43981);
+      const Ze = s.lazy(() =>
+          Promise.all([
+            n.e(460),
+            n.e(8112),
+            n.e(9766),
+            n.e(1021),
+            n.e(8973),
+            n.e(3344),
+            n.e(2915),
+            n.e(6882),
+            n.e(7247),
+            n.e(9424),
+            n.e(7695),
+            n.e(3243),
+            n.e(344),
+            n.e(1720),
+            n.e(8427),
+            n.e(6193),
+            n.e(7311),
+          ]).then(n.bind(n, 11001)),
+        ),
+        ze = s.lazy(() =>
+          Promise.all([
+            n.e(460),
+            n.e(8112),
+            n.e(9766),
+            n.e(1021),
+            n.e(8973),
+            n.e(3344),
+            n.e(2915),
+            n.e(6882),
+            n.e(7247),
+            n.e(9424),
+            n.e(7695),
+            n.e(3243),
+            n.e(344),
+            n.e(1720),
+            n.e(8427),
+            n.e(6193),
+            n.e(7311),
+          ])
+            .then(n.bind(n, 11001))
+            .then((e) => ({ default: e.ShoppingCartErrorModal })),
+        );
+      function Ke(e) {
+        const [t, n] = s.useState(null),
+          [i, r] = s.useState(null),
+          [o, a] = s.useState(),
+          l = (0, v.bY)(),
+          c = (0, ke.useQueryClient)(),
+          [u] = s.useState(() =>
+            Ve.L7.logged_in
+              ? { type: "account" }
+              : { type: "anonymous", gid: (0, je.bG)("shoppingCartGID") },
+          );
         s.useEffect(() => {
-          r || (0, Ne.v)().then(() => o(!0));
-        }, [r]);
+          o || (0, Ne.v)().then(() => a(!0));
+        }, [o]);
         const d = s.useCallback(
           (e, t, i) => {
-            const r = "number" == typeof e ? [e] : e,
-              s = Ve.L7.logged_in
-                ? { type: "account" }
-                : { type: "anonymous", gid: (0, je.bG)("shoppingCartGID") };
-            (0, Oe.mI)(c, u, s, r, t, i, (e) => {
-              r.length > 1
-                ? (window.location.href = `${Ve.De.STORE_BASE_URL}cart`)
-                : (l(e), n());
-            });
+            const s = "number" == typeof e ? [e] : e;
+            (0, Oe.mI)(l, c, u, s, t, i).then(
+              ({ success: e, result: t, items: i }) => {
+                e
+                  ? i.length > 1
+                    ? (window.location.href = `${Ve.De.STORE_BASE_URL}cart`)
+                    : n(i)
+                  : r(t || 2);
+              },
+            );
           },
-          [u, n, c],
+          [c, l, u],
         );
-        s.useEffect(() => {
-          const e = window;
-          return (
-            (e.ShowShoppingCart = n),
-            (e.HideShoppingCart = i),
-            (e.AddItemToCart = d),
-            () => {
-              delete e.ShowShoppingCart,
-                delete e.HideShoppingCart,
-                delete e.AddItemToCart;
-            }
-          );
-        }, [n, i, c, u, d]);
-        return r
-          ? s.createElement(
-              s.Fragment,
-              null,
-              s.createElement(se.d, {
-                config: { "shoppingcart-count-widget": Ue },
-              }),
-              s.createElement(
-                s.Suspense,
-                { fallback: null },
-                t &&
-                  s.createElement(We, {
-                    key: JSON.stringify(a),
-                    lineItemIDs: a,
-                    closeCart: () => {
-                      i(), l(null);
-                    },
-                  }),
-              ),
-            )
-          : null;
+        return (
+          s.useEffect(() => {
+            const e = window;
+            return (
+              (e.ShowShoppingCart = () => n([])),
+              (e.HideShoppingCart = () => n(null)),
+              (e.AddItemToCart = d),
+              () => {
+                delete e.ShowShoppingCart,
+                  delete e.HideShoppingCart,
+                  delete e.AddItemToCart;
+              }
+            );
+          }, [l, c, d]),
+          o
+            ? s.createElement(
+                s.Fragment,
+                null,
+                s.createElement(se.d, {
+                  config: { "shoppingcart-count-widget": Ue },
+                }),
+                s.createElement(
+                  s.Suspense,
+                  { fallback: null },
+                  !!t &&
+                    s.createElement(
+                      We.lh,
+                      { step: "initial", setStep: () => {}, cartID: u },
+                      s.createElement(Ze, {
+                        key: JSON.stringify(t),
+                        lineItemIDs: t,
+                        closeCart: () => n(null),
+                      }),
+                    ),
+                  !!i &&
+                    s.createElement(ze, {
+                      active: !!i,
+                      onDismiss: () => r(null),
+                      result: i,
+                    }),
+                ),
+              )
+            : null
+        );
       }
-      const ze = s.lazy(() =>
+      const qe = s.lazy(() =>
           Promise.all([
             n.e(460),
             n.e(8112),
@@ -34339,7 +34417,7 @@
             n.e(5331),
           ]).then(n.bind(n, 35661)),
         ),
-        Ke = s.lazy(() =>
+        $e = s.lazy(() =>
           Promise.all([
             n.e(460),
             n.e(8112),
@@ -34350,7 +34428,7 @@
             n.e(9682),
           ]).then(n.bind(n, 67938)),
         ),
-        qe = s.lazy(() =>
+        Xe = s.lazy(() =>
           Promise.all([
             n.e(460),
             n.e(3245),
@@ -34364,7 +34442,7 @@
             n.e(8986),
           ]).then(n.bind(n, 61216)),
         ),
-        $e = s.lazy(() =>
+        Ye = s.lazy(() =>
           Promise.all([
             n.e(3245),
             n.e(7400),
@@ -34373,7 +34451,7 @@
             n.e(988),
           ]).then(n.bind(n, 42705)),
         ),
-        Xe = s.lazy(() =>
+        Qe = s.lazy(() =>
           Promise.all([
             n.e(460),
             n.e(8112),
@@ -34392,7 +34470,7 @@
             n.e(4601),
           ]).then(n.bind(n, 71461)),
         ),
-        Ye = s.lazy(() =>
+        Je = s.lazy(() =>
           Promise.all([
             n.e(8112),
             n.e(6099),
@@ -34401,7 +34479,7 @@
             n.e(2814),
           ]).then(n.bind(n, 19952)),
         ),
-        Qe = s.lazy(() =>
+        et = s.lazy(() =>
           Promise.all([
             n.e(460),
             n.e(9766),
@@ -34413,11 +34491,11 @@
             n.e(40),
           ]).then(n.bind(n, 46521)),
         ),
-        Je = s.lazy(() => n.e(5821).then(n.bind(n, 58289))),
-        et = s.lazy(() =>
+        tt = s.lazy(() => n.e(5821).then(n.bind(n, 58289))),
+        nt = s.lazy(() =>
           Promise.all([n.e(477), n.e(1918)]).then(n.bind(n, 85121)),
         ),
-        tt = s.lazy(() =>
+        it = s.lazy(() =>
           Promise.all([
             n.e(460),
             n.e(8112),
@@ -34432,10 +34510,10 @@
             n.e(3207),
           ]).then(n.bind(n, 33955)),
         ),
-        nt = s.lazy(() =>
+        rt = s.lazy(() =>
           Promise.all([n.e(6882), n.e(7695), n.e(1825)]).then(n.bind(n, 1688)),
         ),
-        it = s.lazy(() =>
+        st = s.lazy(() =>
           Promise.all([
             n.e(460),
             n.e(8112),
@@ -34466,7 +34544,7 @@
             n.e(2136),
           ]).then(n.bind(n, 63897)),
         ),
-        rt = s.lazy(() =>
+        ot = s.lazy(() =>
           Promise.all([
             n.e(460),
             n.e(8112),
@@ -34499,7 +34577,7 @@
             n.e(9788),
           ]).then(n.bind(n, 64663)),
         ),
-        st = s.lazy(() =>
+        at = s.lazy(() =>
           Promise.all([
             n.e(460),
             n.e(8112),
@@ -34532,7 +34610,7 @@
             n.e(9788),
           ]).then(n.bind(n, 53553)),
         ),
-        ot = s.lazy(() =>
+        lt = s.lazy(() =>
           Promise.all([
             n.e(460),
             n.e(8112),
@@ -34563,7 +34641,7 @@
             n.e(680),
           ]).then(n.bind(n, 13854)),
         ),
-        at = s.lazy(() =>
+        ct = s.lazy(() =>
           Promise.all([
             n.e(460),
             n.e(8112),
@@ -34594,7 +34672,7 @@
             n.e(680),
           ]).then(n.bind(n, 98079)),
         ),
-        lt = s.lazy(() =>
+        ut = s.lazy(() =>
           Promise.all([
             n.e(460),
             n.e(6882),
@@ -34603,7 +34681,7 @@
             n.e(4535),
           ]).then(n.bind(n, 9084)),
         ),
-        ct = s.lazy(() =>
+        dt = s.lazy(() =>
           Promise.all([
             n.e(460),
             n.e(8112),
@@ -34621,7 +34699,7 @@
             n.e(556),
           ]).then(n.bind(n, 86445)),
         ),
-        ut = s.lazy(() =>
+        mt = s.lazy(() =>
           Promise.all([
             n.e(460),
             n.e(8112),
@@ -34639,7 +34717,7 @@
             n.e(556),
           ]).then(n.bind(n, 78862)),
         ),
-        dt = s.lazy(() =>
+        ht = s.lazy(() =>
           Promise.all([
             n.e(460),
             n.e(8112),
@@ -34655,7 +34733,7 @@
             n.e(4158),
           ]).then(n.bind(n, 52811)),
         ),
-        mt = s.lazy(() =>
+        pt = s.lazy(() =>
           Promise.all([
             n.e(460),
             n.e(8112),
@@ -34677,16 +34755,16 @@
             n.e(8087),
           ]).then(n.bind(n, 83740)),
         ),
-        ht = s.lazy(() =>
+        gt = s.lazy(() =>
           Promise.all([n.e(3243), n.e(3068)]).then(n.bind(n, 14717)),
         ),
-        pt = s.lazy(() =>
+        _t = s.lazy(() =>
           Promise.all([n.e(6882), n.e(7695), n.e(1825)]).then(n.bind(n, 90071)),
         ),
-        gt = s.lazy(() =>
+        ft = s.lazy(() =>
           Promise.all([n.e(6882), n.e(7695), n.e(1825)]).then(n.bind(n, 85401)),
         ),
-        _t = s.lazy(() =>
+        vt = s.lazy(() =>
           Promise.all([
             n.e(460),
             n.e(8112),
@@ -34707,13 +34785,13 @@
             n.e(7311),
           ]).then(n.bind(n, 46193)),
         ),
-        ft = s.lazy(() =>
+        Ct = s.lazy(() =>
           Promise.all([n.e(6882), n.e(1720), n.e(7280)]).then(n.bind(n, 54845)),
         ),
-        vt = s.lazy(() =>
+        St = s.lazy(() =>
           Promise.all([n.e(6882), n.e(1720), n.e(7280)]).then(n.bind(n, 79798)),
         ),
-        Ct = s.lazy(() =>
+        bt = s.lazy(() =>
           Promise.all([
             n.e(460),
             n.e(8112),
@@ -34734,7 +34812,7 @@
             n.e(2469),
           ]).then(n.bind(n, 7809)),
         ),
-        St = s.lazy(() =>
+        wt = s.lazy(() =>
           Promise.all([
             n.e(460),
             n.e(8112),
@@ -34758,7 +34836,7 @@
             n.e(3805),
           ]).then(n.bind(n, 42957)),
         );
-      class bt extends s.Component {
+      class yt extends s.Component {
         componentDidMount() {
           const e = (0, c.CE)();
           e &&
@@ -34773,9 +34851,9 @@
               "div",
               { className: p().App },
               s.createElement(
-                Dt,
+                It,
                 null,
-                s.createElement(Lt, null),
+                s.createElement(Mt, null),
                 s.createElement(
                   s.Suspense,
                   { fallback: null },
@@ -34800,7 +34878,7 @@
                       s.createElement(se.d, {
                         config: {
                           login: (e) =>
-                            s.createElement(lt, Object.assign({}, e)),
+                            s.createElement(ut, Object.assign({}, e)),
                         },
                       }),
                     ),
@@ -34810,7 +34888,7 @@
                       s.createElement(se.d, {
                         config: {
                           login: (e) =>
-                            s.createElement(lt, Object.assign({}, e)),
+                            s.createElement(ut, Object.assign({}, e)),
                         },
                       }),
                     ),
@@ -34831,15 +34909,15 @@
                                 appid: Number.parseInt(t),
                               }),
                             "review-award": () =>
-                              s.createElement($e, { key: `appawardmodal${t}` }),
+                              s.createElement(Ye, { key: `appawardmodal${t}` }),
                             "steamawardsvote-embed": () =>
-                              s.createElement(Qe, {
+                              s.createElement(et, {
                                 key: `steamawardsvote_${t}`,
                                 appID: Number.parseInt(t),
                               }),
                             "broadcast-embed": () =>
                               s.createElement(
-                                Xe,
+                                Qe,
                                 Object.assign(
                                   { key: `appbroadcastcast_${t}` },
                                   e,
@@ -34852,7 +34930,7 @@
                                 appID: Number.parseInt(t),
                               }),
                             "deck-verified-results": () =>
-                              s.createElement(nt, {
+                              s.createElement(rt, {
                                 appID: Number.parseInt(t),
                                 results: (0, l.kQ)(
                                   "deckcompatibility",
@@ -34866,28 +34944,28 @@
                             "gamehighlight-trailer": (e) =>
                               s.createElement(Le, Object.assign({}, e)),
                             "discovery-queue-app-widget": () =>
-                              s.createElement(ct, {
+                              s.createElement(dt, {
                                 key: `discoveryqueue${t}`,
                                 appID: Number.parseInt(t),
                               }),
                             "game-notice-controller-required": () =>
-                              s.createElement(pt, {
+                              s.createElement(_t, {
                                 appid: Number.parseInt(t),
                                 type: oe.EPurchaseNoticeType
                                   .EPurchaseNoticeType_ControllerRequired,
                               }),
                             "game-notice-vr-required": () =>
-                              s.createElement(pt, {
+                              s.createElement(_t, {
                                 type: oe.EPurchaseNoticeType
                                   .EPurchaseNoticeType_VRRequired,
                               }),
                             "game-notice-vr-supported": () =>
-                              s.createElement(pt, {
+                              s.createElement(_t, {
                                 type: oe.EPurchaseNoticeType
                                   .EPurchaseNoticeType_VRSupported,
                               }),
                             "store-sidebar-controller-support-info": (e) =>
-                              s.createElement(gt, Object.assign({}, e)),
+                              s.createElement(ft, Object.assign({}, e)),
                           },
                         });
                       },
@@ -34904,14 +34982,14 @@
                         return s.createElement(se.d, {
                           config: {
                             "sale-display": () =>
-                              s.createElement(ot, {
+                              s.createElement(lt, {
                                 key: `sale_${t}`,
                                 promotionName: `sale_${t}`,
                                 language: (0, u.jM)(l.De.LANGUAGE),
                               }),
                             "broadcast-embed": () =>
                               s.createElement(
-                                Xe,
+                                Qe,
                                 Object.assign(
                                   { key: `broadcastsale_${t}` },
                                   e,
@@ -34928,7 +35006,7 @@
                         s.createElement(se.d, {
                           config: {
                             "curator-admin-rss": () =>
-                              s.createElement(rt, null),
+                              s.createElement(ot, null),
                           },
                         }),
                     }),
@@ -34939,7 +35017,7 @@
                         s.createElement(se.d, {
                           config: {
                             "sale-display": () =>
-                              s.createElement(ot, {
+                              s.createElement(lt, {
                                 key:
                                   "salecreator_" +
                                   e.match.params.creatorPageName +
@@ -34961,7 +35039,7 @@
                         d.Z.SteamDeckDock(),
                         d.Z.SubscriptionPlanLandingPage(),
                       ],
-                      render: (e) => s.createElement(wt, null),
+                      render: (e) => s.createElement(Et, null),
                     }),
                     s.createElement(_.AW, {
                       exact: !0,
@@ -34971,7 +35049,7 @@
                           config: {
                             "broadcast-embed": () =>
                               s.createElement(
-                                Xe,
+                                Qe,
                                 Object.assign(
                                   {
                                     key:
@@ -34994,7 +35072,7 @@
                         s.createElement(se.d, {
                           config: {
                             "list-display": () =>
-                              s.createElement(tt, {
+                              s.createElement(it, {
                                 key: "curator_list",
                                 listid: e.match.params.listid,
                               }),
@@ -35008,7 +35086,7 @@
                         s.createElement(se.d, {
                           config: {
                             "broadcast-embed": () =>
-                              s.createElement(Xe, {
+                              s.createElement(Qe, {
                                 key: "packagebroadcast_" + e.match.params.subid,
                                 subid:
                                   Number.parseInt(e.match.params.subid) || 0,
@@ -35023,7 +35101,7 @@
                         s.createElement(se.d, {
                           config: {
                             "broadcast-embed": () =>
-                              s.createElement(Xe, {
+                              s.createElement(Qe, {
                                 key:
                                   "bundlebroadcast_" + e.match.params.bundleid,
                                 bundleid:
@@ -35037,7 +35115,7 @@
                       render: (e) =>
                         s.createElement(se.d, {
                           config: {
-                            "event-calendar": () => s.createElement(it, null),
+                            "event-calendar": () => s.createElement(st, null),
                           },
                         }),
                     }),
@@ -35046,7 +35124,7 @@
                       render: (e) =>
                         s.createElement(se.d, {
                           config: {
-                            "event-calendar": () => s.createElement(st, null),
+                            "event-calendar": () => s.createElement(at, null),
                           },
                         }),
                     }),
@@ -35056,13 +35134,13 @@
                       render: (e) =>
                         s.createElement(se.d, {
                           config: {
-                            recommender: () => s.createElement(Ke, null),
+                            recommender: () => s.createElement($e, null),
                           },
                         }),
                     }),
                     s.createElement(_.AW, {
                       path: d.Z.LabsSandbox(),
-                      render: (e) => s.createElement(Ye, null),
+                      render: (e) => s.createElement(Je, null),
                     }),
                     s.createElement(_.AW, {
                       path: d.Z.SteamCharts(),
@@ -35070,7 +35148,7 @@
                         s.createElement(se.d, {
                           config: {
                             "react-root": () =>
-                              s.createElement(ze, Object.assign({}, e)),
+                              s.createElement(qe, Object.assign({}, e)),
                           },
                         }),
                     }),
@@ -35079,7 +35157,7 @@
                       render: () =>
                         s.createElement(se.d, {
                           config: {
-                            "points-shop": () => s.createElement(qe, null),
+                            "points-shop": () => s.createElement(Xe, null),
                           },
                         }),
                     }),
@@ -35094,7 +35172,7 @@
                         return s.createElement(se.d, {
                           config: {
                             "sale-display": () =>
-                              s.createElement(ot, {
+                              s.createElement(lt, {
                                 key: "contenthub_" + t,
                                 promotionName: "contenthub_" + t,
                                 language: (0, u.jM)(l.De.LANGUAGE),
@@ -35108,13 +35186,13 @@
                       render: () =>
                         s.createElement(se.d, {
                           config: {
-                            categories: () => s.createElement(at, null),
+                            categories: () => s.createElement(ct, null),
                           },
                         }),
                     }),
                     s.createElement(_.AW, {
                       path: d.Z.AccountPreferences(),
-                      render: (e) => s.createElement(Je, Object.assign({}, e)),
+                      render: (e) => s.createElement(tt, Object.assign({}, e)),
                     }),
                     s.createElement(_.AW, {
                       exact: !0,
@@ -35122,7 +35200,7 @@
                       render: (e) =>
                         s.createElement(se.d, {
                           config: {
-                            "forge-your-fate": () => s.createElement(et, null),
+                            "forge-your-fate": () => s.createElement(nt, null),
                           },
                         }),
                     }),
@@ -35133,17 +35211,17 @@
                         s.createElement(se.d, {
                           config: {
                             "discovery-queue-button": () =>
-                              s.createElement(ut, null),
+                              s.createElement(mt, null),
                           },
                         }),
                     }),
                     s.createElement(_.AW, {
                       path: d.Z.MarketingMessages(),
-                      render: (e) => s.createElement(dt, Object.assign({}, e)),
+                      render: (e) => s.createElement(ht, Object.assign({}, e)),
                     }),
                     s.createElement(_.AW, {
                       path: d.Z.YearInReview(),
-                      render: (e) => s.createElement(mt, Object.assign({}, e)),
+                      render: (e) => s.createElement(pt, Object.assign({}, e)),
                     }),
                     s.createElement(_.AW, {
                       path: d.Z.ShoppingCartRequestPurchase(),
@@ -35152,7 +35230,7 @@
                           config: {
                             "react-root": () =>
                               s.createElement(
-                                ft,
+                                Ct,
                                 Object.assign(
                                   {
                                     shoppingCartGID:
@@ -35169,7 +35247,7 @@
                       render: (e) =>
                         s.createElement(se.d, {
                           config: {
-                            "react-root": () => s.createElement(vt, null),
+                            "react-root": () => s.createElement(St, null),
                           },
                         }),
                     }),
@@ -35179,7 +35257,7 @@
                         s.createElement(se.d, {
                           config: {
                             "react-root": () =>
-                              s.createElement(Ct, {
+                              s.createElement(bt, {
                                 familyGroupID: e.match.params.familygroupid,
                                 requestID: e.match.params.requestid,
                               }),
@@ -35192,7 +35270,7 @@
                         s.createElement(se.d, {
                           config: {
                             "react-root": () =>
-                              s.createElement(_t, { initialStep: "gifts" }),
+                              s.createElement(vt, { initialStep: "gifts" }),
                           },
                         }),
                     }),
@@ -35201,7 +35279,7 @@
                       render: (e) =>
                         s.createElement(se.d, {
                           config: {
-                            "react-root": () => s.createElement(_t, null),
+                            "react-root": () => s.createElement(vt, null),
                           },
                         }),
                     }),
@@ -35210,7 +35288,7 @@
                       render: (e) =>
                         s.createElement(se.d, {
                           config: {
-                            "react-root": () => s.createElement(St, null),
+                            "react-root": () => s.createElement(wt, null),
                           },
                         }),
                     }),
@@ -35223,13 +35301,13 @@
           );
         }
       }
-      function wt(e) {
+      function Et(e) {
         const t = (0, _.TH)().pathname.split("/").filter(Boolean).pop(),
           n = "sale_" + ((null == t ? void 0 : t.split("?")[0]) || "unknown");
         return s.createElement(se.d, {
           config: {
             "sale-display": () =>
-              s.createElement(ot, {
+              s.createElement(lt, {
                 key: n,
                 promotionName: n,
                 language: (0, u.jM)(l.De.LANGUAGE),
@@ -35237,15 +35315,15 @@
           },
         });
       }
-      function yt() {
+      function Dt() {
         const e = (0, m.T)(!0);
         return new S.J(
           l.De.WEBAPI_BASE_URL,
           null == e ? void 0 : e.webapi_token,
         );
       }
-      function Et(e) {
-        const t = (0, B.kD)(yt),
+      function Lt(e) {
+        const t = (0, B.kD)(Dt),
           n = (0, B.kD)(s.useCallback(() => new C.Z(), [])),
           i = (0, s.useMemo)(
             () => ({ useActiveAccount: () => l.L7.steamid }),
@@ -35261,7 +35339,7 @@
           ),
         );
       }
-      function Dt(e) {
+      function It(e) {
         const { children: t } = e;
         return s.createElement(
           ae.ZP,
@@ -35273,7 +35351,7 @@
               l.fI,
               null,
               s.createElement(
-                Et,
+                Lt,
                 null,
                 s.createElement(Ae.R, null, s.createElement($, null, t)),
               ),
@@ -35281,18 +35359,18 @@
           ),
         );
       }
-      const Lt = s.memo(function (e) {
+      const Mt = s.memo(function (e) {
         return s.createElement(
           s.Fragment,
           null,
-          s.createElement(Ze, null),
+          s.createElement(Ke, null),
           s.createElement(
             s.Suspense,
             { fallback: null },
             s.createElement(se.d, {
               config: {
                 "green-envelope": () =>
-                  s.createElement(ht, {
+                  s.createElement(gt, {
                     bResponsiveHeader: !1,
                     notifications: (0, l.kQ)(
                       "steam_notifications",
@@ -35300,7 +35378,7 @@
                     ),
                   }),
                 "green-envelope-responsive": () =>
-                  s.createElement(ht, {
+                  s.createElement(gt, {
                     bResponsiveHeader: !0,
                     notifications: (0, l.kQ)(
                       "steam_notifications",
@@ -35320,17 +35398,17 @@
           ),
         );
       });
-      var It = n(92011),
-        Mt = n(50423);
+      var Rt = n(92011),
+        At = n(50423);
       n(7765);
       (0, le.jQ)({ enforceActions: "never" }),
-        Mt.Dj(function () {
+        At.Dj(function () {
           return (0, i.mG)(this, void 0, void 0, function* () {
             (0, l.Ek)("application_config").userConfig ||
               (yield (0, l.x)(a(), l.De.STORE_BASE_URL + "actions/", {
                 userConfig: !0,
               })),
-              (0, It.Uh)().Init(
+              (0, Rt.Uh)().Init(
                 "Store",
                 CLSTAMP,
                 new S.J(l.De.WEBAPI_BASE_URL).GetServiceTransport(),
@@ -35364,7 +35442,7 @@
               document.getElementById("application_root")
                 ? r
                     .createRoot(document.getElementById("application_root"))
-                    .render(s.createElement(bt))
+                    .render(s.createElement(yt))
                 : console.error('No "application_root" was found to target');
           });
         });
@@ -35451,7 +35529,7 @@
                 return (
                   null === (n = null == t ? void 0 : t.cart) || void 0 === n
                     ? void 0
-                    : n.line_items.length
+                    : n.line_items
                 )
                   ? t.cart
                   : void 0;
@@ -35631,10 +35709,11 @@
       function j(e, t, n) {
         e.setQueryData(k(t), n), H(e, t);
       }
-      function W(e, t, n, r, s, o, l) {
+      function W(e, t, n, r, s, o) {
         if (se(n)) {
-          const c = (r || []).map((e) => ({ packageid: e }));
-          s && c.push({ bundleid: s }),
+          const l = (r || []).map((e) => ({ packageid: e }));
+          return (
+            s && l.push({ bundleid: s }),
             (function (e, t, n) {
               return (0, i.mG)(this, void 0, void 0, function* () {
                 const i = a.gA.Init(d.QJ);
@@ -35667,38 +35746,47 @@
                   [r.GetEResult(), r.Body().toObject()]
                 );
               });
-            })(e, c, o).then(([e, i]) => {
-              1 == e && (j(t, n, i.cart), l && l(i.line_item_ids));
-            });
-        } else
-          Z(e, r, s).then(([e, i]) => {
-            if (e && (j(t, n, P(i)), l)) {
-              const e = (r || []).map((e) =>
-                i.lineitems.find((t) => {
-                  var n;
+            })(e, l, o).then(
+              ([e, i]) => (
+                I.jg.Get().InvalidateCache(),
+                1 == e
+                  ? (j(t, n, i.cart), { success: !0, items: i.line_item_ids })
+                  : { success: !1, result: e }
+              ),
+            )
+          );
+        }
+        return Z(e, r, s).then(([e, i]) => {
+          if ((I.jg.Get().InvalidateCache(), e)) {
+            j(t, n, P(i));
+            const e = (r || []).map((e) =>
+              i.lineitems.find((t) => {
+                var n;
+                return (
+                  (null === (n = t.package_item) || void 0 === n
+                    ? void 0
+                    : n.packageid) === e
+                );
+              }),
+            );
+            s &&
+              e.push(
+                i.lineitems.find((e) => {
+                  var t;
                   return (
-                    (null === (n = t.package_item) || void 0 === n
+                    (null === (t = e.bundle_item) || void 0 === t
                       ? void 0
-                      : n.packageid) === e
+                      : t.bundleid) === s
                   );
                 }),
               );
-              s &&
-                e.push(
-                  i.lineitems.find((e) => {
-                    var t;
-                    return (
-                      (null === (t = e.bundle_item) || void 0 === t
-                        ? void 0
-                        : t.bundleid) === s
-                    );
-                  }),
-                );
-              const t = e.filter(Boolean).map((e) => e.gidlineitem);
-              t.length > 0 && l(t);
-            }
-          });
-        I.jg.Get().InvalidateCache();
+            return {
+              success: !0,
+              items: e.filter(Boolean).map((e) => e.gidlineitem),
+            };
+          }
+          return { success: !1 };
+        });
       }
       function Z(e, t, n, r) {
         var s, o;
@@ -36405,25 +36493,34 @@
     },
     43981: (e, t, n) => {
       "use strict";
-      n.d(t, { lh: () => l, nD: () => s, pf: () => a, tv: () => o });
+      n.d(t, { lh: () => c, nD: () => o, pf: () => l, tv: () => a });
       var i = n(47427);
       const r = i.createContext({
         step: "initial",
         setStep: () => {},
         cartID: { type: "account" },
+        default: !0,
       });
       function s() {
         const e = (0, i.useContext)(r);
-        return [e.step, e.setStep];
+        return (
+          e.default &&
+            console.error("Error: Usage of default ShoppingCartContext!"),
+          e
+        );
       }
       function o() {
-        return (0, i.useContext)(r).cartID;
+        const e = s();
+        return [e.step, e.setStep];
       }
       function a() {
-        const e = (0, i.useContext)(r);
+        return s().cartID;
+      }
+      function l() {
+        const e = s();
         return [e.cartWideGiftInfo, e.onCartWideGiftInfoChange];
       }
-      function l(e) {
+      function c(e) {
         const {
             step: t,
             setStep: n,

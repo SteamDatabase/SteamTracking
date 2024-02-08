@@ -155,25 +155,17 @@
     },
     95082: (e, t, i) => {
       "use strict";
-      i.d(t, { Z: () => l });
-      var a = i(85556),
-        n = i(47427),
-        s = i(8789),
-        o = i(58112),
-        r = i(20417);
-      class l extends n.Component {
-        OnEnter() {
-          s.E.AddImpression(this.props.appID, this.props.snr);
-        }
-        render() {
-          return n.createElement(
-            o.h,
-            { onEnter: this.OnEnter },
-            this.props.children,
-          );
-        }
+      i.d(t, { Z: () => r });
+      var a = i(47427),
+        n = i(58112),
+        s = i(25006),
+        o = i(8789);
+      function r(e) {
+        const { appID: t, children: i } = e,
+          r = (0, s.PZ)(),
+          l = a.useCallback(() => o.E.AddImpression(t, r), [t, r]);
+        return a.createElement(n.h, { onEnter: l }, i);
       }
-      (0, a.gn)([r.ak], l.prototype, "OnEnter", null);
     },
     8789: (e, t, i) => {
       "use strict";
@@ -216,7 +208,7 @@
     },
     67938: (e, t, i) => {
       "use strict";
-      i.r(t), i.d(t, { default: () => b });
+      i.r(t), i.d(t, { default: () => O });
       var a,
         n = i(85556),
         s = i(37563),
@@ -756,12 +748,13 @@
         (0, n.gn)([p.ak], y.prototype, "shouldUseMicrotrailers", null);
       const f = new y();
       window.g_InteractiveRecommender = f;
-      var L = i(80212);
+      var L = i(80212),
+        I = i(25006);
       !(function () {
         let e = (0, s.kQ)("ir_config", "application_config");
         e && (Object.assign(T, e), f.Init());
       })();
-      const A = ({ accountID: e }) => {
+      const N = ({ accountID: e }) => {
           const t = f.getInputApps(),
             i = Object.keys(t).length;
           let a = 0;
@@ -798,7 +791,7 @@
             )
           );
         },
-        I = ({ appID: e, name: t, hours: i, lastPlayed: a, ignored: n }) => {
+        A = ({ appID: e, name: t, hours: i, lastPlayed: a, ignored: n }) => {
           const s = `${T.CDN_URL}apps/${e}/header.jpg`,
             o = Date.now() / 1e3 - a;
           let r = "",
@@ -843,7 +836,7 @@
             )
           );
         };
-      let N = class extends l.Component {
+      let D = class extends l.Component {
         constructor(e) {
           super(e), (this.state = {});
         }
@@ -867,7 +860,7 @@
             Object.keys(i).map((e) => {
               const a = i[e];
               t.push(
-                l.createElement(I, {
+                l.createElement(A, {
                   key: "PlayedGame_" + a.a,
                   appID: a.a,
                   name: a.t,
@@ -885,14 +878,14 @@
                 { className: u.Header },
                 (0, _.Xx)("#PlaytimeList_Header"),
               ),
-              l.createElement(A, { accountID: this.props.accountID }),
+              l.createElement(N, { accountID: this.props.accountID }),
               l.createElement("div", { className: u.List }, t),
             )
           );
         }
       };
-      N = (0, n.gn)([o.Pi], N);
-      const D = ({
+      D = (0, n.gn)([o.Pi], D);
+      const C = ({
           titleLabel: e,
           minLabel: t,
           maxLabel: i,
@@ -927,7 +920,7 @@
             l.createElement("div", { className: u.OptionalLabel }, d),
           );
         },
-        C = ({ className: e, titleLabel: t, checked: i, onChange: a }) =>
+        x = ({ className: e, titleLabel: t, checked: i, onChange: a }) =>
           l.createElement(
             "label",
             { className: (0, m.Z)(u.OptionCheckbox, e && e) },
@@ -939,7 +932,7 @@
             }),
             t,
           );
-      let x = class extends l.Component {
+      let P = class extends l.Component {
         constructor(e) {
           super(e),
             (this.selectedtags = []),
@@ -1047,16 +1040,16 @@
           );
         }
       };
-      (0, n.gn)([r.LO], x.prototype, "selectedtags", void 0),
-        (0, n.gn)([p.ak], x.prototype, "onFetchRequested", null),
-        (0, n.gn)([p.ak], x.prototype, "onClearRequested", null),
-        (0, n.gn)([p.ak], x.prototype, "onChange", null),
-        (0, n.gn)([p.ak], x.prototype, "onKeyDown", null),
-        (0, n.gn)([p.ak], x.prototype, "shouldRenderSuggestions", null),
-        (0, n.gn)([p.ak], x.prototype, "onSuggestionSelected", null),
-        (0, n.gn)([p.ak], x.prototype, "onRemoveSelectedTag", null),
-        (x = (0, n.gn)([o.Pi], x));
-      const P = (0, o.Pi)(() => {
+      (0, n.gn)([r.LO], P.prototype, "selectedtags", void 0),
+        (0, n.gn)([p.ak], P.prototype, "onFetchRequested", null),
+        (0, n.gn)([p.ak], P.prototype, "onClearRequested", null),
+        (0, n.gn)([p.ak], P.prototype, "onChange", null),
+        (0, n.gn)([p.ak], P.prototype, "onKeyDown", null),
+        (0, n.gn)([p.ak], P.prototype, "shouldRenderSuggestions", null),
+        (0, n.gn)([p.ak], P.prototype, "onSuggestionSelected", null),
+        (0, n.gn)([p.ak], P.prototype, "onRemoveSelectedTag", null),
+        (P = (0, n.gn)([o.Pi], P));
+      const U = (0, o.Pi)(() => {
         const e = f.getTags();
         let t = [];
         if (e)
@@ -1077,7 +1070,7 @@
           l.createElement(
             "div",
             { className: (0, m.Z)(u.Row, u.FirstRow) },
-            l.createElement(D, {
+            l.createElement(C, {
               minLabel: (0, _.Xx)("#Popularity_Popular"),
               titleLabel: (0, _.Xx)("#Popularity_Title"),
               maxLabel: (0, _.Xx)("#Popularity_Niche"),
@@ -1086,7 +1079,7 @@
               value: f.m_fQueuedPopularityValue,
               onChange: f.onPopularityChanged,
             }),
-            l.createElement(D, {
+            l.createElement(C, {
               minLabel: (0, _.Xx)("#Recency_Older"),
               titleLabel: (0, _.Xx)("#Recency_Title"),
               maxLabel: (0, _.Xx)("#Recency_Newer"),
@@ -1100,7 +1093,7 @@
           l.createElement(
             "div",
             { className: (0, m.Z)(u.Row, u.SecondRow) },
-            l.createElement(x, {
+            l.createElement(P, {
               title: (0, _.Xx)("#TagFilterMultiple_Title"),
               tagoptions: t,
               selectedtags: n,
@@ -1108,7 +1101,7 @@
               onAddTag: f.onTagFilterAdd,
               onRemoveTag: f.onTagFilterRemove,
             }),
-            l.createElement(x, {
+            l.createElement(P, {
               title: (0, _.Xx)("#TagExcludeMultiple_Title"),
               tagoptions: t,
               selectedtags: a,
@@ -1116,7 +1109,7 @@
               onAddTag: f.onTagExcludeAdd,
               onRemoveTag: f.onTagExcludeRemove,
             }),
-            l.createElement(C, {
+            l.createElement(x, {
               className: u.WishlistCheckbox,
               titleLabel: (0, _.Xx)("#ExcludeWishlisted"),
               checked: f.m_bExcludeWishlisted,
@@ -1134,7 +1127,7 @@
           ),
         );
       });
-      let U = class extends l.Component {
+      let w = class extends l.Component {
         constructor(e) {
           super(e),
             (this.m_videoRef = l.createRef()),
@@ -1235,9 +1228,9 @@
             R = Math.min(Number(t) / 100, 1e3);
           let y = !1,
             L = !1,
-            A = !0,
-            I = "",
+            I = !0,
             N = "",
+            A = "",
             D = "",
             C = "",
             x = "",
@@ -1248,7 +1241,7 @@
             e &&
               ((y = !0),
               (L = e.discount_pct > 0),
-              (A = "0" == e.discount_price),
+              (I = "0" == e.discount_price),
               "probably" ==
               document
                 .createElement("video")
@@ -1259,19 +1252,19 @@
                 : f.shouldUseMicrotrailers() && e.microtrailer_mp4
                 ? ((x = e.microtrailer_mp4), (P = !0), (U = !1))
                 : (x = e.video_mp4),
-              (I = `-${e.discount_pct}%`),
-              (N = e.base_price),
-              (D = A ? (0, _.Xx)("#FreeToPlay") : e.discount_price),
+              (N = `-${e.discount_pct}%`),
+              (A = e.base_price),
+              (D = I ? (0, _.Xx)("#FreeToPlay") : e.discount_price),
               (C = e.description));
           }
           const w = x && x.length > 0;
           return l.createElement(
             c.Z,
-            { appID: e, snr: T.LINK_PARAM },
+            { appID: e },
             l.createElement(
-              "a",
+              b,
               {
-                href: `${T.BASE_URL}app/${e}?snr=${T.LINK_PARAM}`,
+                href: `${T.BASE_URL}app/${e}`,
                 className: (0, m.Z)(
                   u.RecommendationEntry,
                   "ds_flagged",
@@ -1398,7 +1391,7 @@
                               l.createElement(
                                 "div",
                                 { className: "discount_pct" },
-                                I,
+                                N,
                               ),
                               l.createElement(
                                 "div",
@@ -1406,7 +1399,7 @@
                                 l.createElement(
                                   "div",
                                   { className: "discount_original_price" },
-                                  N,
+                                  A,
                                 ),
                                 l.createElement(
                                   "div",
@@ -1427,7 +1420,7 @@
                               },
                               D,
                             ),
-                          !A &&
+                          !I &&
                             l.createElement(
                               "div",
                               {
@@ -1450,7 +1443,7 @@
                         ),
                       ),
                       !this.state.wishlisted &&
-                        !A &&
+                        !I &&
                         l.createElement(
                           "div",
                           {
@@ -1469,7 +1462,7 @@
                           ),
                         ),
                       this.state.wishlisted &&
-                        !A &&
+                        !I &&
                         l.createElement(
                           "div",
                           {
@@ -1500,14 +1493,20 @@
           );
         }
       };
-      (0, n.gn)([p.ak], U.prototype, "OnHover", null),
-        (0, n.gn)([p.ak], U.prototype, "OnUnHover", null),
-        (0, n.gn)([p.ak], U.prototype, "onMuteToggle", null),
-        (0, n.gn)([p.ak], U.prototype, "onAddToWishlist", null),
-        (0, n.gn)([p.ak], U.prototype, "onGoToWishlist", null),
-        (0, n.gn)([p.ak], U.prototype, "onAddToCart", null),
-        (U = (0, n.gn)([o.Pi], U));
-      let w = class extends l.Component {
+      function b(e) {
+        const { href: t } = e,
+          i = (0, n._T)(e, ["href"]),
+          a = (0, I.YR)(t);
+        return l.createElement("a", Object.assign({}, i, { href: a }));
+      }
+      (0, n.gn)([p.ak], w.prototype, "OnHover", null),
+        (0, n.gn)([p.ak], w.prototype, "OnUnHover", null),
+        (0, n.gn)([p.ak], w.prototype, "onMuteToggle", null),
+        (0, n.gn)([p.ak], w.prototype, "onAddToWishlist", null),
+        (0, n.gn)([p.ak], w.prototype, "onGoToWishlist", null),
+        (0, n.gn)([p.ak], w.prototype, "onAddToCart", null),
+        (w = (0, n.gn)([o.Pi], w));
+      let M = class extends l.Component {
         constructor(e) {
           super(e), (this.state = { sortedRecommendedApps: [] });
         }
@@ -1569,7 +1568,7 @@
               for (let t of i) (t.rank = e), e++;
               for (const e of i)
                 E.push(
-                  l.createElement(U, {
+                  l.createElement(w, {
                     key: e.appid,
                     appID: e.appid,
                     score: e.score,
@@ -1603,7 +1602,7 @@
               { className: u.Header },
               (0, _.Xx)("#Recommendations_Header"),
             ),
-            l.createElement(P, null),
+            l.createElement(U, null),
             l.createElement(
               "div",
               {
@@ -1617,8 +1616,8 @@
           );
         }
       };
-      w = (0, n.gn)([o.Pi], w);
-      let M = class extends l.Component {
+      M = (0, n.gn)([o.Pi], M);
+      let k = class extends l.Component {
         constructor() {
           super(...arguments), (this.state = { width: window.innerWidth });
         }
@@ -1634,34 +1633,42 @@
         render() {
           return s.L7.logged_in
             ? l.createElement(
-                "div",
+                I.ZP,
                 {
-                  className: u.App,
-                  style: { height: 3840 + 26 * f.getTagHeight() },
+                  controller: "recommender",
+                  method: "default",
+                  feature: "capsule",
                 },
                 l.createElement(
                   "div",
-                  { className: u.Container },
+                  {
+                    className: u.App,
+                    style: { height: 3840 + 26 * f.getTagHeight() },
+                  },
                   l.createElement(
                     "div",
-                    { className: u.TopSection },
+                    { className: u.Container },
                     l.createElement(
                       "div",
-                      { className: u.Header },
-                      (0, _.Xx)("#HeaderTitle"),
+                      { className: u.TopSection },
+                      l.createElement(
+                        "div",
+                        { className: u.Header },
+                        (0, _.Xx)("#HeaderTitle"),
+                      ),
+                      l.createElement(
+                        "div",
+                        { className: u.Body },
+                        (0, _.Xx)("#HeaderBody1"),
+                      ),
                     ),
                     l.createElement(
                       "div",
-                      { className: u.Body },
-                      (0, _.Xx)("#HeaderBody1"),
+                      { className: u.BottomSection },
+                      l.createElement(D, { accountID: s.L7.accountid }),
+                      l.createElement("div", { className: u.VerticalBar }),
+                      l.createElement(M, { width: this.state.width }),
                     ),
-                  ),
-                  l.createElement(
-                    "div",
-                    { className: u.BottomSection },
-                    l.createElement(N, { accountID: s.L7.accountid }),
-                    l.createElement("div", { className: u.VerticalBar }),
-                    l.createElement(w, { width: this.state.width }),
                   ),
                 ),
               )
@@ -1691,10 +1698,10 @@
               );
         }
       };
-      (0, n.gn)([p.ak], M.prototype, "updateDimensions", null),
-        (0, n.gn)([p.ak], M.prototype, "ShowLoginDialog", null),
-        (M = (0, n.gn)([o.Pi], M));
-      const b = M;
+      (0, n.gn)([p.ak], k.prototype, "updateDimensions", null),
+        (0, n.gn)([p.ak], k.prototype, "ShowLoginDialog", null),
+        (k = (0, n.gn)([o.Pi], k));
+      const O = k;
     },
   },
 ]);
