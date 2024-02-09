@@ -12096,7 +12096,7 @@
         static GetLinkParam(e, t = null) {
           let n, i;
           if (
-            ("string" == typeof e || e.domain || (e = e.feature),
+            ("string" == typeof e || e.domain || (e = e.feature || ""),
             "string" != typeof e && e.domain)
           )
             (n = d.ComputeLinkPrefix(
