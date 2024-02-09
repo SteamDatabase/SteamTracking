@@ -2105,9 +2105,9 @@
               let R = null !== (l = e.tagid()) && void 0 !== l ? l : 0,
                 b = null !== (u = t.tagid()) && void 0 !== u ? u : 0;
               if (R != b) return R - b;
-              let C = null !== (d = e.creatorid()) && void 0 !== d ? d : 0,
-                y = null !== (c = t.creatorid()) && void 0 !== c ? c : 0;
-              if (C != y) return C - y;
+              let y = null !== (d = e.creatorid()) && void 0 !== d ? d : 0,
+                C = null !== (c = t.creatorid()) && void 0 !== c ? c : 0;
+              if (y != C) return y - C;
               let D = null !== (h = e.hubcategoryid()) && void 0 !== h ? h : 0,
                 S = null !== (m = t.hubcategoryid()) && void 0 !== m ? m : 0;
               return D != S ? D - S : 0;
@@ -2594,6 +2594,12 @@
           ? "p" + e.packageid
           : (null == e ? void 0 : e.bundleid)
           ? "b" + e.bundleid
+          : (null == e ? void 0 : e.creatorid)
+          ? "c" + e.creatorid
+          : (null == e ? void 0 : e.hubcategoryid)
+          ? "h" + e.hubcategoryid
+          : (null == e ? void 0 : e.tagid)
+          ? "t" + e.tagid
           : "unknown0";
       }
       function p(e, t) {
@@ -2675,10 +2681,10 @@
           ? "bundle"
           : null;
       }
-      function C(e) {
+      function y(e) {
         return 1 == e ? 0 : 5 == e ? 2 : 2 == e ? 1 : -1;
       }
-      function y(e) {
+      function C(e) {
         return 0 == e ? 1 : 1 == e ? 2 : 2 == e ? 5 : null;
       }
       s.d(t, {
@@ -2688,7 +2694,7 @@
         D3: () => a,
         GV: () => i,
         Hy: () => l,
-        RB: () => y,
+        RB: () => C,
         TM: () => o,
         Uc: () => R,
         Xm: () => d,
@@ -2696,7 +2702,7 @@
         bg: () => b,
         hQ: () => f,
         iV: () => v,
-        mm: () => C,
+        mm: () => y,
         qE: () => n,
         qw: () => p,
         t9: () => h,
