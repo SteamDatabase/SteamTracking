@@ -72348,6 +72348,24 @@ svg.steamtemplates_FriendIndicator_suNJh .Outline {
 .bottombar_AddGameMenu_H2MNn .bottombar_ContextMenuItemDisabled_3jXK1 {
   color: #67707b;
 }
+.bottombar_SteamFamilyJoinClientBeta_3GaHE {
+  display: flex;
+  align-items: center;
+  background-color: #1a9fff;
+  font-size: 12px;
+  color: #fff;
+  padding: 5px;
+}
+.bottombar_SteamFamilyJoinClientBeta_3GaHE a {
+  padding: 3px;
+  text-decoration: underline;
+  font-size: 13px;
+  cursor: pointer;
+  color: #fff;
+}
+.bottombar_SteamFamilyJoinClientBeta_3GaHE a:hover {
+  opacity: 0.8;
+}
 @keyframes gamepadtoasts_BackgroundAnimation_3cxDa {
   from {
     background-position: 0 100%;

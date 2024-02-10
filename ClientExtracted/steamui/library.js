@@ -1,4 +1,4 @@
-var CLSTAMP = "8678618";
+var CLSTAMP = "8688160";
 /* Third-party software licenses can be found at licenses.txt */ (() => {
   var e,
     t,
@@ -2075,9 +2075,9 @@ var CLSTAMP = "8678618";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "Feb 6 2024 : 14:05:06",
-                BUILD_TIME_UTC: "Feb 6 2024 : 22:05:06",
-                BUILD_RTIME_UTC: 1707257106,
+                BUILD_TIME_LOCAL: "Feb 9 2024 : 12:02:29",
+                BUILD_TIME_UTC: "Feb 9 2024 : 20:02:29",
+                BUILD_RTIME_UTC: 1707508949,
               }.MOBILE_BUILD)
             ) {
               window.addEventListener("beforeunload", (e) => {
@@ -11988,50 +11988,59 @@ var CLSTAMP = "8678618";
           }
           OnDrag(e, t, n) {
             const r = this.m_prevClientX || t,
-              i = this.m_prevClientY || n,
-              o = void 0 === r ? 0 : r - this.m_dragGhost.state.clientX,
-              l = void 0 === i ? 0 : i - this.m_dragGhost.state.clientY;
+              i = this.m_prevClientY || n;
             if (
               (e.props.bEnableHTMLDrag &&
                 this.m_dragOffWindowTimer &&
                 window.clearTimeout(this.m_dragOffWindowTimer),
-              this.m_dragGhost &&
+              this.m_dragGhost)
+            ) {
+              const t = void 0 === r ? 0 : r - this.m_dragGhost.state.clientX,
+                n = void 0 === i ? 0 : i - this.m_dragGhost.state.clientY;
+              if (
                 (this.m_dragGhost.setState({
                   clientX: r,
                   clientY: i,
-                  clientXDelta: o,
-                  clientYDelta: l,
+                  clientXDelta: t,
+                  clientYDelta: n,
                   bVisible: !0,
                 }),
-                e.props.bEnableHTMLDrag && (o || l)))
-            ) {
-              const t = r + o,
-                n = i + l,
-                a = e.GetDragDocument().body.getBoundingClientRect();
-              if (g(r, i, a) && !g(t, n, a, !0)) {
-                const r = C.r4(t, a.left, a.right, a.left - 200, a.right + 200),
-                  i = C.r4(n, a.top, a.bottom, a.top - 100, a.bottom + 100),
-                  o = 50;
-                this.m_dragOffWindowTimer = window.setTimeout(() => {
-                  e == this.m_activeDraggable && this.OnDrag(e, r, i);
-                }, o);
+                e.props.bEnableHTMLDrag && (t || n))
+              ) {
+                const o = r + t,
+                  l = i + n,
+                  a = e.GetDragDocument().body.getBoundingClientRect();
+                if (g(r, i, a) && !g(o, l, a, !0)) {
+                  const t = C.r4(
+                      o,
+                      a.left,
+                      a.right,
+                      a.left - 200,
+                      a.right + 200,
+                    ),
+                    n = C.r4(l, a.top, a.bottom, a.top - 100, a.bottom + 100),
+                    r = 50;
+                  this.m_dragOffWindowTimer = window.setTimeout(() => {
+                    e == this.m_activeDraggable && this.OnDrag(e, t, n);
+                  }, r);
+                }
               }
             }
-            const a = this.FindBestActiveDropRegionForPoint(r, i);
+            const o = this.FindBestActiveDropRegionForPoint(r, i);
             (this.m_prevClientX = t),
               (this.m_prevClientY = n),
-              !!this.m_activeDropRegion != !!a &&
+              !!this.m_activeDropRegion != !!o &&
                 (this.ShowDragGhost(),
                 this.m_dropGhost ||
                   (this.m_dropGhost =
                     this.m_activeDraggable.renderDropGhost())),
               this.m_activeDropRegion &&
-                this.m_activeDropRegion != a &&
+                this.m_activeDropRegion != o &&
                 this.m_activeDropRegion.OnDragLeave(this.m_activeDraggable),
-              a &&
-                this.m_activeDropRegion != a &&
-                a.OnDragEnter(this.m_activeDraggable, this.m_dropGhost),
-              (this.m_activeDropRegion = a),
+              o &&
+                this.m_activeDropRegion != o &&
+                o.OnDragEnter(this.m_activeDraggable, this.m_dropGhost),
+              (this.m_activeDropRegion = o),
               this.m_activeDropRegion &&
                 this.m_activeDropRegion.OnDragMove(
                   r,
@@ -44061,9 +44070,9 @@ var CLSTAMP = "8678618";
                 ? {
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Feb 6 2024 : 14:05:06",
-                    BUILD_TIME_UTC: "Feb 6 2024 : 22:05:06",
-                    BUILD_RTIME_UTC: 1707257106,
+                    BUILD_TIME_LOCAL: "Feb 9 2024 : 12:02:29",
+                    BUILD_TIME_UTC: "Feb 9 2024 : 20:02:29",
+                    BUILD_RTIME_UTC: 1707508949,
                   }.MOBILE_BUILD
                   ? null
                   : document.getElementById(t)
@@ -44298,7 +44307,7 @@ var CLSTAMP = "8678618";
             Promise.all([n.e(7962), n.e(58)]).then(n.bind(n, 44496)),
           ),
           y = r.lazy(() =>
-            Promise.all([n.e(7962), n.e(58), n.e(5742)]).then(n.bind(n, 67131)),
+            Promise.all([n.e(7962), n.e(58), n.e(5742)]).then(n.bind(n, 99020)),
           ),
           Z = "is-first-client-load";
         function R() {
@@ -44650,7 +44659,7 @@ var CLSTAMP = "8678618";
       {
         27: "3bf19072b6105b38b002",
         33: "b399dcb3a0f90c2a1315",
-        58: "66fdd1ec1153f4822b36",
+        58: "6821bf3f11bf97de6bc0",
         131: "354de0304f5a2b54d45a",
         146: "0bdd4c82cce0a62935cd",
         200: "afa687f319db8c73d4c5",
@@ -44728,7 +44737,7 @@ var CLSTAMP = "8678618";
         5513: "c1682f371d8784686287",
         5547: "bdb0953764947fce9f5a",
         5590: "fbee6624865dcf0c09f3",
-        5742: "f9b4aee57928945fc403",
+        5742: "91485737d8c3e711a1a6",
         5895: "582d58aa394b25828f59",
         5936: "6627f8623164ff607132",
         5984: "2c7564d173e3aff4b11a",
@@ -44755,7 +44764,7 @@ var CLSTAMP = "8678618";
         7781: "ca49ff9aaf3561450f90",
         7832: "9d6d3d860dea2a65797b",
         7850: "de745d07d1eca8730ab1",
-        7962: "9bba30f510ceaabfaeb0",
+        7962: "a0307277f011c4b430fc",
         8011: "518eb9e88dfcd471c3f2",
         8052: "90ca8df91679205a09bc",
         8085: "8d7f7f8d384387c4ca4f",
