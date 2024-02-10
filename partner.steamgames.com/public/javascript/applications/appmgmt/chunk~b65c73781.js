@@ -59962,39 +59962,41 @@
           [a] = (0, D.Ar)("appidlist", ""),
           [i] = (0, D.Ar)("partneridlist", ""),
           [l] = (0, D.Ar)("saleclaneventgid", ""),
-          o =
+          [o] = (0, D.Ar)("bundleid", ""),
+          s =
             (null == a ? void 0 : a.length) > 0 ||
             (null == i ? void 0 : i.length) > 0 ||
-            (null == l ? void 0 : l.length) > 0,
-          [s, c] = (0, D.Ar)("freetoplay", o),
-          [m, d] = (0, D.Ar)("adultonly", o),
-          [u, p] = (0, D.Ar)("earlyaccess", !0),
-          [_, h] = (0, D.Ar)("recentorupcomingfeaturing", o),
-          [g, v] = (0, D.Ar)("recentorupcomingrelease", o),
-          [E, f] = (0, D.Ar)("vr_required", o),
-          [y, b] = (0, D.Ar)("unfeatured", !1),
-          [C, I] = (0, r.useMemo)(() => {
-            if (m && s && u && _ && g && E && !y)
+            (null == l ? void 0 : l.length) > 0 ||
+            (null == o ? void 0 : o.length) > 0,
+          [c, m] = (0, D.Ar)("freetoplay", s),
+          [d, u] = (0, D.Ar)("adultonly", s),
+          [p, _] = (0, D.Ar)("earlyaccess", !0),
+          [h, g] = (0, D.Ar)("recentorupcomingfeaturing", s),
+          [v, E] = (0, D.Ar)("recentorupcomingrelease", s),
+          [f, y] = (0, D.Ar)("vr_required", s),
+          [b, C] = (0, D.Ar)("unfeatured", !1),
+          [I, k] = (0, r.useMemo)(() => {
+            if (d && c && p && h && v && f && !b)
               return [[...t], t.map((e) => e.appid)];
             const e = Math.floor(Date.now() / 1e3) - zl,
               a = Math.floor(Date.now() / 1e3) - Wl,
               i = t.filter((t) => {
                 var i;
                 if (
-                  !m &&
+                  !d &&
                   (null === (i = t.content_descriptors) || void 0 === i
                     ? void 0
                     : i.includes(3))
                 )
                   return !1;
-                if (!s && t.freetoplay) return !1;
-                if (!u && t.earlyaccess) return !1;
+                if (!c && t.freetoplay) return !1;
+                if (!p && t.earlyaccess) return !1;
                 if (
-                  !g &&
+                  !v &&
                   Math.floor(new Date(t.release_date).getTime() / 1e3) > e
                 )
                   return !1;
-                if (!_ || y) {
+                if (!h || b) {
                   const e = (function (e, t) {
                     var n, a, i;
                     let l = 0;
@@ -60017,22 +60019,25 @@
                           }),
                         l);
                   })(n, t);
-                  if (!_ && e > a) return !1;
-                  if (y && 0 != e) return !1;
+                  if (!h && e > a) return !1;
+                  if (b && 0 != e) return !1;
                 }
-                return !(!E && t.vr_required);
+                return !(!f && t.vr_required);
               });
             return [i, i.map((e) => e.appid)];
-          }, [t, s, m, u, y, g, E, _, n]);
-        "dev" == ja.De.WEB_UNIVERSE && console.log("candidates apps", t, C);
-        const k =
-          (s ? "&freetoplay=1" : "") +
-          (m ? "&adultonly=1" : "") +
-          (u ? "" : "&earlyaccess=0") +
-          (_ ? "&recentorupcomingfeaturing=1" : "") +
-          (g ? "&recentorupcomingrelease=1" : "") +
-          (E ? "&vr_required=1" : "") +
-          (y ? "&unfeatured=1" : "");
+          }, [t, c, d, p, b, v, f, h, n]);
+        "dev" == ja.De.WEB_UNIVERSE && console.log("candidates apps", t, I);
+        const A =
+          (c ? "&freetoplay=1" : "") +
+          (d ? "&adultonly=1" : "") +
+          (p ? "" : "&earlyaccess=0") +
+          (h ? "&recentorupcomingfeaturing=1" : "") +
+          (v ? "&recentorupcomingrelease=1" : "") +
+          (f ? "&vr_required=1" : "") +
+          (b ? "&unfeatured=1" : "") +
+          (l ? "&saleclaneventgid=" + l : "") +
+          (i ? "&partneridlist=" + i : "") +
+          (o ? "&bundleid=" + o : "");
         return r.createElement(
           ee.SV,
           null,
@@ -60046,14 +60051,14 @@
                 label: "EA",
                 className: Xl().Filter,
                 tooltip: "Early Access games",
-                checked: u,
-                onChange: p,
+                checked: p,
+                onChange: _,
               }),
               r.createElement(S.ji, {
                 label: "F2P",
                 className: Xl().Filter,
-                checked: s,
-                onChange: c,
+                checked: c,
+                onChange: m,
               }),
             ),
             r.createElement(
@@ -60062,14 +60067,14 @@
               r.createElement(S.ji, {
                 label: "AO",
                 className: Xl().Filter,
-                checked: m,
-                onChange: d,
+                checked: d,
+                onChange: u,
               }),
               r.createElement(S.ji, {
                 label: "VR",
                 className: Xl().Filter,
-                checked: E,
-                onChange: f,
+                checked: f,
+                onChange: y,
                 tooltip:
                   "Include games that require VR to play? Does not affect desktop games that also have VR support",
               }),
@@ -60082,16 +60087,16 @@
                 className: Xl().Filter,
                 tooltip:
                   "Include games released in the past 3 months or future?",
-                checked: g,
-                onChange: v,
+                checked: v,
+                onChange: E,
               }),
               r.createElement(S.ji, {
                 label: "Recent/Future Featuring",
                 className: Xl().Filter,
                 tooltip:
                   "Include games featured in the future, now, or within the past 6 months?",
-                checked: _,
-                onChange: h,
+                checked: h,
+                onChange: g,
               }),
             ),
             r.createElement(
@@ -60100,8 +60105,8 @@
               r.createElement(S.ji, {
                 label: "Unfeatured Only",
                 className: Xl().Filter,
-                checked: y,
-                onChange: b,
+                checked: b,
+                onChange: C,
                 tooltip:
                   "Only shows game that we do not have any recorded featuring for.",
               }),
@@ -60109,19 +60114,19 @@
             r.createElement($l, null),
           ),
           r.createElement(Yl, {
-            nApps: I.length,
+            nApps: k.length,
             nTotalApps: t.length,
-            strQueryParams: k,
+            strQueryParams: A,
           }),
           r.createElement(Ql, {
-            rgCandidateApps: C,
-            rgAppIDs: I,
+            rgCandidateApps: I,
+            rgAppIDs: k,
             oFeaturingMaps: n,
           }),
           r.createElement(Yl, {
-            nApps: I.length,
+            nApps: k.length,
             nTotalApps: t.length,
-            strQueryParams: k,
+            strQueryParams: A,
           }),
         );
       }
@@ -60149,6 +60154,18 @@
               (0, b.R6)(
                 window,
                 `${ja.De.PARTNER_BASE_URL}promotion/invitationplanner/dashboard?appidlist=${e}`,
+              ),
+          }),
+          r.createElement(Vl.u, {
+            itemType: 2,
+            className: Xl().Filter,
+            strLabel: "Find a Bundle",
+            tooltip:
+              "Loadsthe bundle specified and pulls all of its underlying apps",
+            fnSetItemID: (e) =>
+              (0, b.R6)(
+                window,
+                `${ja.De.PARTNER_BASE_URL}promotion/invitationplanner/dashboard?bundleid=${e}`,
               ),
           }),
           r.createElement(
@@ -60209,11 +60226,21 @@
           [l] = (0, D.Ar)("count", 100),
           [o] = (0, D.Ar)("appidlist", ""),
           [s] = (0, D.Ar)("partneridlist", ""),
-          c = Boolean(o.length > 0 || s.length > 0);
+          [c] = (0, D.Ar)("bundleid", ""),
+          m = Boolean(o.length > 0 || s.length > 0 || c.length > 0),
+          d = (function () {
+            const [e] = (0, r.useState)(
+              () =>
+                Number.parseInt(
+                  (0, xn.kQ)("total_apps_requested", "application_config"),
+                ) || 0,
+            );
+            return e;
+          })();
         return r.createElement(
           "div",
           { className: Xl().PagingRow },
-          Boolean(!c) &&
+          Boolean(!m || d > l) &&
             r.createElement(
               r.Fragment,
               null,
@@ -60251,7 +60278,7 @@
             "Showing ",
             t,
             " Apps",
-            Boolean(!c) &&
+            Boolean(!m) &&
               r.createElement(
                 "span",
                 null,
