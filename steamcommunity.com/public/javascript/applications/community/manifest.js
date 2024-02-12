@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "8684017";
+var CLSTAMP = "8691663";
 (() => {
   "use strict";
   var a,
@@ -234,7 +234,7 @@ var CLSTAMP = "8684017";
         238: "9a634c4a50c1f4b4c36f",
         301: "4c0cc2f9286175a8d7bd",
         312: "1ff9b4a57d6e7868ff39",
-        400: "8e29de907fb23d7d8a29",
+        400: "8b4bf0d1a2e7e487f9c9",
         483: "b7250ac44aa320455baf",
         508: "7711c62099d35cea2a8b",
         543: "ebf99e4fdfb84e55a3a1",
@@ -465,12 +465,12 @@ var CLSTAMP = "8684017";
             l < t.length;
             l++
           ) {
-            var b = t[l];
+            var r = t[l];
             if (
-              b.getAttribute("src") == a ||
-              b.getAttribute("data-webpack") == i + n
+              r.getAttribute("src") == a ||
+              r.getAttribute("data-webpack") == i + n
             ) {
-              d = b;
+              d = r;
               break;
             }
           }
@@ -482,7 +482,7 @@ var CLSTAMP = "8684017";
           d.setAttribute("data-webpack", i + n),
           (d.src = a)),
           (c[a] = [e]);
-        var r = (e, n) => {
+        var b = (e, n) => {
             (d.onerror = d.onload = null), clearTimeout(h);
             var i = c[a];
             if (
@@ -494,11 +494,11 @@ var CLSTAMP = "8684017";
               return e(n);
           },
           h = setTimeout(
-            r.bind(null, void 0, { type: "timeout", target: d }),
+            b.bind(null, void 0, { type: "timeout", target: d }),
             12e4,
           );
-        (d.onerror = r.bind(null, d.onerror)),
-          (d.onload = r.bind(null, d.onload)),
+        (d.onerror = b.bind(null, d.onerror)),
+          (d.onload = b.bind(null, d.onload)),
           f && document.head.appendChild(d);
       }
     }),

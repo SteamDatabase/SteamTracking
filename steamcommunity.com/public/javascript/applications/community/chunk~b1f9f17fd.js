@@ -25450,10 +25450,14 @@
               void 0 === i
                 ? void 0
                 : i.length) || 0,
-            S = ["sale_header", "product_banner", "product_mobile_banner"];
+            S = [
+              "sale_header",
+              "product_banner",
+              "product_mobile_banner",
+              "sale_logo",
+            ];
           return (
-            (0, ve.X)(r.GetClanSteamID(), !0) &&
-              (S.push("sale_overlay"), S.push("sale_logo")),
+            (0, ve.X)(r.GetClanSteamID(), !0) && S.push("sale_overlay"),
             d.createElement(
               "div",
               { className: Ge.SettingCtn },
