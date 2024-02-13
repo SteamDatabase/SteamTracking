@@ -107,8 +107,8 @@ ${CHAT_BASE_URL}comment/recommendation/formattinghelp
 ${CHAT_BASE_URL}miniprofile/${accountid}/json
 ${CHAT_BASE_URL}miniprofile/${m_accountid}/json/?origin=${}
 ${CHAT_BASE_URL}profiles/${steamid64}/ajaxsetpersonaname/
+${CHAT_BASE_URL}public/images/broadcast/cs2_major2024_cph_icon.png
 ${CHAT_BASE_URL}public/images/broadcast/csgo_esl_2019_icon.png
-${CHAT_BASE_URL}public/images/broadcast/csgo_paris_2023_icon.png
 ${CHAT_BASE_URL}public/images/broadcast/yule_30x30.png
 ${CLAN_CDN_ASSET_URL}images/
 ${COMMUNITY_BASE_URL}
