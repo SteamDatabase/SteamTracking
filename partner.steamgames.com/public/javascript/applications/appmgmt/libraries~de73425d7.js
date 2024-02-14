@@ -2,7 +2,7 @@
  ****/
 (self.webpackChunkappmgmt_storeadmin =
   self.webpackChunkappmgmt_storeadmin || []).push([
-  [8195],
+  [8313],
   {
     75436: function (e, t, a) {
       !(function (e) {

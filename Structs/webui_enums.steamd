@@ -8090,6 +8090,17 @@ enum UnnamedEnumeaf70d8cee21d56c
 	DesktopUI = 3;
 }
 
+enum UnnamedEnumec319d06f27559b4
+{
+	BuildReview = 0;
+	StorePageReview = 1;
+	SteamChina_BuildReview = 2;
+	SteamChina_StorePageReview = 3;
+	SteamChinaPlatformOperator_StorePageReview = 4;
+	SteamChinaPlatformOperator_BuildReview = 5;
+	SteamDeckCompatibilityReview = 6;
+}
+
 enum UnnamedEnumed37b551cf653bf6
 {
 	Off = 0;

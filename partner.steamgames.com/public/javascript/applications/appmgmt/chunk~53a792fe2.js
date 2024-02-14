@@ -6,63 +6,57 @@
   {
     55215: (t) => {
       t.exports = {
-        DashboardPage: "discountdashboard_DashboardPage_353rn",
-        DashTitleBar: "discountdashboard_DashTitleBar_2m-_V",
-        DashTitle: "discountdashboard_DashTitle_1FK58",
-        ConfidentialBanner: "discountdashboard_ConfidentialBanner_2H9Kz",
-        Throbber: "discountdashboard_Throbber_21Esx",
-        ErrorMessage: "discountdashboard_ErrorMessage_190ux",
-        ButtonGroup: "discountdashboard_ButtonGroup_2peTi",
+        DashboardPage: "_353rnPLVzyQBQhakxhkl7u",
+        DashTitleBar: "_2m-_VofgoRb-uGQMrewYq3",
+        DashTitle: "_1FK58fndqHlADYEX-58V0C",
+        ConfidentialBanner: "_2H9KzQ8SQGvqGhbWidWzf4",
+        Throbber: "_21EsxksQjCwl-Xz3TNuoPc",
+        ErrorMessage: "_190uxu3FVS6Fx-IbDsfCyd",
+        ButtonGroup: "_2peTiEFo27_zkZA0TzjnD4",
       };
     },
     69727: (t) => {
       t.exports = {
-        EventDetails: "discountgridheaders_EventDetails_3LMXj",
-        Active: "discountgridheaders_Active_2BLec",
-        RestrictedEligibility:
-          "discountgridheaders_RestrictedEligibility_2lxTi",
-        CollisionFreeDiscountEvent:
-          "discountgridheaders_CollisionFreeDiscountEvent_15fBc",
-        EventName: "discountgridheaders_EventName_2bJFF",
-        EditEventLink: "discountgridheaders_EditEventLink_1XHd3",
-        EventDates: "discountgridheaders_EventDates_2kY09",
-        EventDateRange: "discountgridheaders_EventDateRange_312ig",
-        EventNumDays: "discountgridheaders_EventNumDays_OAAVW",
-        EventLink: "discountgridheaders_EventLink_VZ3pV",
-        EventParticipationCtn:
-          "discountgridheaders_EventParticipationCtn_2iuUu",
-        ParticipationDetails: "discountgridheaders_ParticipationDetails_2tr5X",
-        Title: "discountgridheaders_Title_3mO71",
-        Count: "discountgridheaders_Count_1pDZ1",
-        Selected: "discountgridheaders_Selected_36G76",
-        ParticipationToolTip: "discountgridheaders_ParticipationToolTip_36hxa",
-        AppLink: "discountgridheaders_AppLink_3RF-6",
-        DiscountGridDataColumn:
-          "discountgridheaders_DiscountGridDataColumn_1yW70",
-        RelatedDiscount: "discountgridheaders_RelatedDiscount_12zwK",
-        BasePrice: "discountgridheaders_BasePrice_1a_Lw",
-        GridRowLoadingThrobber:
-          "discountgridheaders_GridRowLoadingThrobber_r2FLR",
-        CurrencyPicker: "discountgridheaders_CurrencyPicker_2Z65K",
-        RelatedInfoPicker: "discountgridheaders_RelatedInfoPicker_O-95g",
-        RelatedInfoPickerCtn: "discountgridheaders_RelatedInfoPickerCtn_2nnB1",
-        CurrencyDropDown: "discountgridheaders_CurrencyDropDown_2gGuz",
-        RelatedInfoDropDown: "discountgridheaders_RelatedInfoDropDown_1jj2u",
-        CurrencyDropDownItem: "discountgridheaders_CurrencyDropDownItem_3wPHx",
-        RelatedInfoDropDownItem:
-          "discountgridheaders_RelatedInfoDropDownItem_1ORam",
+        EventDetails: "_3LMXjfy-EuA2ZWoW660vuc",
+        Active: "_2BLece8YI3va6GD9JEUxjL",
+        RestrictedEligibility: "_2lxTisamKtJUowDlNKSrzG",
+        CollisionFreeDiscountEvent: "_15fBcZwmM-nap1QbkpRc2G",
+        EventName: "_2bJFFj7RfHL_P4P-MJlzK4",
+        EditEventLink: "_1XHd3t0XU1SfpsraST5Ovy",
+        EventDates: "_2kY09NU8R-tjOVYmIwZ98B",
+        EventDateRange: "_312igBJXB0MifodN4IBq1i",
+        EventNumDays: "OAAVWKvssJLy0QM6mVcw6",
+        EventLink: "VZ3pVxXbvFNzdGOkOrNGU",
+        EventParticipationCtn: "_2iuUu1K5b1e71DnJKkBtHH",
+        ParticipationDetails: "_2tr5XTQIvHNQiu4IZKMi7Z",
+        Title: "_3mO71T0Q_migmtLfYRFb-6",
+        Count: "_1pDZ1lHiN5RohGZxcDAyCK",
+        Selected: "_36G76FOe3fZ8csab26PcL8",
+        ParticipationToolTip: "_36hxaHrRvc7ct9bb0Aeza3",
+        AppLink: "_3RF-6YnSS_2OpJmOo0BV6_",
+        DiscountGridDataColumn: "_1yW70vcAdwnrMIrVE8y03S",
+        RelatedDiscount: "_12zwKFzckK0AkG-lS95iTK",
+        BasePrice: "_1a_LwvXaB11PNusz9GPz98",
+        GridRowLoadingThrobber: "r2FLR3ukmK3cVbBV-j8Aa",
+        CurrencyPicker: "_2Z65Kc_3FxlP0E15rMFuVC",
+        RelatedInfoPicker: "O-95g3EzyTgFwNJ8ATC-e",
+        RelatedInfoPickerCtn: "_2nnB1eMYflFLLmMAi7_jJV",
+        CurrencyDropDown: "_2gGuz_TA8axLQOqAtwurFU",
+        RelatedInfoDropDown: "_1jj2uEuCns_K_cIfGZcKl6",
+        CurrencyDropDownItem: "_3wPHxQWhohHATqjvN6B2l3",
+        RelatedInfoDropDownItem: "_1ORamDcYtEN8wS1voTsWE",
       };
     },
     9953: (t) => {
       t.exports = {
-        UnknownValue: "gridcomponents_UnknownValue_3ovtf",
-        PackageName: "gridcomponents_PackageName_t8fSj",
-        PackageType: "gridcomponents_PackageType_3LZvj",
-        LastRow: "gridcomponents_LastRow_18dUc",
-        AppCount: "gridcomponents_AppCount_2J3kN",
-        PackageID: "gridcomponents_PackageID_1E3TV",
-        PackageNameColumn: "gridcomponents_PackageNameColumn_2pjx8",
-        PackagePricesBelowMin: "gridcomponents_PackagePricesBelowMin_2x4be",
+        UnknownValue: "_3ovtfYPeggcsA44NZPuTAh",
+        PackageName: "t8fSjo20nSXqky8aCgQwm",
+        PackageType: "_3LZvjdGD8NF2mke6oav-MK",
+        LastRow: "_18dUcjzcI8gjV1xagLSWI6",
+        AppCount: "_2J3kNbz7o9Fd161kGxFARG",
+        PackageID: "_1E3TVBOn6hjLXBLwqCPV4J",
+        PackageNameColumn: "_2pjx8S7EGnMJcmc9CzX9UK",
+        PackagePricesBelowMin: "_2x4be2ySvHHrfL_FaOtZPm",
       };
     },
     28738: (t, e, n) => {
@@ -199,8 +193,8 @@
         vc: () => k,
         K$: () => I,
         BS: () => f,
-        Lr: () => S,
-        z8: () => P,
+        Lr: () => P,
+        z8: () => S,
       });
       var i = n(85556),
         a = n(80751),
@@ -687,10 +681,10 @@
           },
         });
       }
-      function P() {
+      function S() {
         return { fnCreateDiscountEvent: v.Get().CreateDiscountEvent };
       }
-      function S() {
+      function P() {
         return {
           fnUpdateDiscountEventAppAndPublisherList:
             v.Get().UpdateDiscountEventPublisherAndAppList,
@@ -717,11 +711,11 @@
         V7: () => I,
         ZW: () => k,
         _l: () => b,
-        dS: () => R,
-        du: () => L,
+        dS: () => L,
+        du: () => R,
         lQ: () => A,
-        nw: () => P,
-        py: () => S,
+        nw: () => S,
+        py: () => P,
         qh: () => h,
       });
       var i = n(85556),
@@ -1456,7 +1450,7 @@
         );
         return n.isLoading ? null : n.data;
       }
-      function P(t) {
+      function S(t) {
         const e = (0, l.useQuery)({
           queryKey: ["useAllPendingReviewOptInRegistrationByName", t],
           queryFn: () => h.Get().FetchPendingReviewOptInRegistrationn(t),
@@ -1469,7 +1463,7 @@
           bIsInError: e.isError,
         };
       }
-      function S(t, e) {
+      function P(t, e) {
         const n = G(t, !1),
           [i, a] = (0, r.useState)(
             null == n ? void 0 : n.find((t) => t.appid == e),
@@ -1488,12 +1482,12 @@
         );
         return (0, m.Qg)(h.Get().GetSingleAppRegistrationChange(t, e), i), n;
       }
-      function R() {
+      function L() {
         return {
           fnUpdateOptInRegistrationJson: h.Get().UpdateOptInRegistrationJson,
         };
       }
-      function L() {
+      function R() {
         return { fnUpdateAppealState: h.Get().UpdateAppealState };
       }
       function A() {
@@ -1523,24 +1517,24 @@
       "use strict";
       n.d(e, {
         EV: () => N,
-        Fi: () => R,
+        Fi: () => L,
         ID: () => b,
         L1: () => y,
         LT: () => k,
-        Qy: () => O,
-        Su: () => P,
+        Qy: () => B,
+        Su: () => S,
         U8: () => D,
         XM: () => G,
-        Xj: () => M,
+        Xj: () => F,
         _J: () => E,
-        b2: () => L,
+        b2: () => R,
         co: () => I,
         dE: () => v,
-        hd: () => B,
+        hd: () => O,
         k1: () => w,
         kk: () => f,
         ls: () => A,
-        v6: () => S,
+        v6: () => P,
         yI: () => C,
       });
       var i = n(85556),
@@ -2001,10 +1995,10 @@
       function G(t) {
         return h.Get().GetCallbackListForPackage(t);
       }
-      function P() {
+      function S() {
         return h.Get().GetAllDiscountsForAllPackages();
       }
-      function S() {
+      function P() {
         return h.Get().GetGlobalCallbackList();
       }
       function C() {
@@ -2021,12 +2015,12 @@
           [],
         );
       }
-      function R(t) {
+      function L(t) {
         return new Map(
           Array.from(t.map((t) => [t, h.Get().GetDiscountByID(t)])),
         );
       }
-      function L(t) {
+      function R(t) {
         const e = (0, r.zD)(),
           [n, i] = o.useState(h.Get().GetAllDiscountsForPackage(t));
         return (
@@ -2121,11 +2115,11 @@
           }, [e, t, n])
         );
       }
-      function B(t) {
+      function O(t) {
         const [e, n] = o.useState(h.Get().GetAllDiscountsForDiscountEvent(t));
         return (0, u.Qg)(h.Get().GetCallbackListForDiscountEvent(t), n), e;
       }
-      function O(t) {
+      function B(t) {
         return h.Get().GetMaxDiscountPercentage(t);
       }
       function N(t) {
@@ -2133,7 +2127,7 @@
           (t) => t.nDiscountPct > h.Get().GetMaxDiscountPercentage(t.packageID),
         );
       }
-      function M(t) {
+      function F(t) {
         return h.Get().GetMaxDiscountPercentageForGroup(t);
       }
     },
@@ -2142,18 +2136,18 @@
       n.d(e, {
         B6: () => A,
         E5: () => U,
-        E_: () => M,
+        E_: () => F,
         Eh: () => E,
-        HU: () => O,
-        JW: () => F,
+        HU: () => B,
+        JW: () => M,
         LX: () => k,
-        TB: () => B,
+        TB: () => O,
         _9: () => y,
         dy: () => V,
         ho: () => Q,
-        hr: () => R,
+        hr: () => L,
         k: () => x,
-        pl: () => L,
+        pl: () => R,
         s$: () => w,
         yn: () => N,
         z$: () => j,
@@ -2437,7 +2431,7 @@
             } else {
               if (((r.eState = 1), C(a, o))) r.eState = 10;
               else if (a.opt_in_name) {
-                const { ePackageDiscountState: t, optInRegistration: e } = S(
+                const { ePackageDiscountState: t, optInRegistration: e } = P(
                   a.opt_in_name,
                   p,
                   o,
@@ -2447,7 +2441,7 @@
                 (r.eState = t), (r.optInReg = e);
               }
               if (10 != r.eState && 4 != r.eState && 5 != r.eState) {
-                const e = P(t, a, D);
+                const e = S(t, a, D);
                 1 != e.ePackageDiscountState &&
                   ((r.eState = e.ePackageDiscountState),
                   (r.rgConflictDetails = e.rgConflictingDiscounts.map((t) => {
@@ -2582,7 +2576,7 @@
           return r;
         }
       }
-      function P(t, e, n) {
+      function S(t, e, n) {
         let a = 1;
         const s = [];
         let o = !1;
@@ -2624,7 +2618,7 @@
           bChangedLocally: o,
         };
       }
-      function S(t, e, n, i, s) {
+      function P(t, e, n, i, s) {
         let o,
           r = 5;
         if (e)
@@ -2695,12 +2689,12 @@
             : t.rtStartDate - e.rtStartDate;
         }
       }
-      function R() {
+      function L() {
         return c.useCallback(() => {
           G.Get();
         }, []);
       }
-      function L() {
+      function R() {
         const [t, e] = c.useState(G.Get().GetLocalPackageDiscountOverrides());
         return (
           (0, g.Qg)(G.Get().GetLocalPackageDiscountOverrideCallbackList(), e), t
@@ -2729,13 +2723,13 @@
           [],
         );
       }
-      function B() {
+      function O() {
         return c.useCallback(
           (t, e) => G.Get().DiscardLocalPackageDiscountOverride(t, e),
           [],
         );
       }
-      function O(t, e) {
+      function B(t, e) {
         var n, i, a;
         const s =
           null === (n = G.Get().m_mapPackageStateForDiscountEvents.get(t)) ||
@@ -2772,7 +2766,7 @@
           ),
         };
       }
-      function M() {
+      function F() {
         return c.useCallback((t, e, n) => {
           const i = [];
           for (const a of n) {
@@ -2782,7 +2776,7 @@
           return i;
         }, []);
       }
-      function F(t) {
+      function M(t) {
         const e = U(t);
         return c.useMemo(
           () => ({
@@ -3188,8 +3182,8 @@
     23121: (t, e, n) => {
       "use strict";
       n.d(e, {
-        A$: () => P,
-        Eg: () => R,
+        A$: () => S,
+        Eg: () => L,
         Ii: () => C,
         JP: () => b,
         O7: () => G,
@@ -3256,7 +3250,7 @@
                   (0, o.Xx)("#PackageGrid_PackageID", d),
                 );
         return i.createElement(
-          R,
+          L,
           {
             fnBLocalChangesExist: n,
             fnWarnUser: a,
@@ -3345,13 +3339,13 @@
           [],
         );
       }
-      function P(t) {
+      function S(t) {
         const e = t.getCell("packageType"),
           n = e && "function" == typeof e.getValue && e.getValue();
         n && t.getElement().classList.add(n),
           t.getNextRow() || t.getElement().classList.add(l().LastRow);
       }
-      function S(t) {
+      function P(t) {
         var e;
         const { fnBLocalChangesExist: n, fnWarnUser: a, cell: r } = t,
           l = r.getRow().getData().appids,
@@ -3361,7 +3355,7 @@
               : 0,
           u = r.getRow().getData().packageID;
         return i.createElement(
-          R,
+          L,
           {
             fnBLocalChangesExist: n,
             fnWarnUser: a,
@@ -3379,7 +3373,7 @@
             sorter: u.yh,
             headerSort: !1,
             formatter: (0, c.reactFormatter)(
-              i.createElement(S, Object.assign({}, t)),
+              i.createElement(P, Object.assign({}, t)),
             ),
             cssClass: l().AppCount,
             width: 80,
@@ -3402,7 +3396,7 @@
               e,
             )})</span></div>`;
       }
-      function R(t) {
+      function L(t) {
         const {
           fnBLocalChangesExist: e,
           fnWarnUser: n,

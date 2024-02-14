@@ -133,6 +133,7 @@ ${COMMUNITY_BASE_URL}/gid/${}/deleteimage/
 ${COMMUNITY_BASE_URL}/gid/${}/getimages/
 ${COMMUNITY_BASE_URL}/gid/${}/partnerevents/edit/${}
 ${COMMUNITY_BASE_URL}/gid/${}/resizeimage/
+${COMMUNITY_BASE_URL}/ogg/${}/partnerevents
 ${COMMUNITY_BASE_URL}/profiles/${id}
 ${COMMUNITY_BASE_URL}/profiles/${}/ajaxgetbadgeinfo/${}
 ${COMMUNITY_BASE_URL}?subsection=workshop
@@ -1005,6 +1006,7 @@ ${PARTNER_BASE_URL}optin/ajaxuploadasset/${}
 ${PARTNER_BASE_URL}optin/appeal/${pageid}/${_ ? _ : _}
 ${PARTNER_BASE_URL}optin/appreview/${pageid}?tab=appeal
 ${PARTNER_BASE_URL}optin/appreview/${}
+${PARTNER_BASE_URL}optin/sale/${_ ? _ : _}
 ${PARTNER_BASE_URL}optin/sale/${pageid}/${appid}
 ${PARTNER_BASE_URL}optin/sale/${pageid}/${}
 ${PARTNER_BASE_URL}optin/sale/${}
@@ -2264,6 +2266,7 @@ https://en.wikipedia.org/wiki/Main_Page
 https://facebook.com/dota2/
 https://fonts.googleapis.com/css2?family=Noto+Serif&family=Noto+Serif+JP&family=Noto+Serif+KR&family=Noto+Serif+SC:wght@500&family=Noto+Serif+TC&family=Jomhuria&&family=Big+Shoulders+Display:wght@800&display=swap
 https://github.com/ngduc/react-tabulator
+https://grafana.valve.org/steam/d/d03d8518-eccd-4a49-96bc-480f87e6faf5/marketing-message-prioritization
 https://grafana.valve.org/steam/d/d03d8518-eccd-4a49-96bc-480f87e6faf5/marketing-message-prioritization?orgId=2&refresh=1m&from=now-3h&to=now
 https://help.steampowered.com
 https://help.steampowered.com/

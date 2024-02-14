@@ -6,91 +6,90 @@
   {
     60295: (e) => {
       e.exports = {
-        Background: "steamml_Background_msjGf",
-        SteamMLButton: "steamml_SteamMLButton_2yReX",
-        AcceptButton: "steamml_AcceptButton_2tY__",
-        Inner: "steamml_Inner_1Zoc2",
-        CancelButton: "steamml_CancelButton_2BCE0",
-        Disabled: "steamml_Disabled_1W_vx",
-        FullSize: "steamml_FullSize_1-nKc",
-        Header: "steamml_Header_35ajn",
-        HeaderOption: "steamml_HeaderOption_3KFf6",
-        Selected: "steamml_Selected_OilN-",
-        SchemaPage: "steamml_SchemaPage_36OV-",
-        SchemaList: "steamml_SchemaList_3r0tl",
-        SelectAppID: "steamml_SelectAppID_3nezX",
-        Hidden: "steamml_Hidden_1VPtl",
-        SchemaElement: "steamml_SchemaElement_1xjli",
-        Label: "steamml_Label_3uE4k",
-        SchemaName: "steamml_SchemaName_36bwA",
-        AppID: "steamml_AppID_3Uaeb",
-        HorizontalSection: "steamml_HorizontalSection_1rTEk",
-        RowCount: "steamml_RowCount_gPsPX",
-        KeepCount: "steamml_KeepCount_2RxON",
-        SchemaDetails: "steamml_SchemaDetails_1gFQf",
-        Back: "steamml_Back_2m9wk",
-        SchemaDetailsHeader: "steamml_SchemaDetailsHeader_cUNhZ",
-        SchemaDetailsBack: "steamml_SchemaDetailsBack_15COw",
-        SchemaDetailsTitle: "steamml_SchemaDetailsTitle_9IFUR",
-        SchemaDetailsName: "steamml_SchemaDetailsName_CblW8",
-        SchemaDetailsSchemaID: "steamml_SchemaDetailsSchemaID_16qUh",
-        SchemaDetailsElements: "steamml_SchemaDetailsElements_3Dsdf",
-        SchemaDetailsElement: "steamml_SchemaDetailsElement_2_-ub",
-        SchemaDetailsElementBody: "steamml_SchemaDetailsElementBody_1lLqQ",
-        TypeInt32: "steamml_TypeInt32_3q6FZ",
-        TypeName: "steamml_TypeName_11e6z",
-        TypeInt64: "steamml_TypeInt64_1sUna",
-        TypeBool: "steamml_TypeBool_3QiDC",
-        TypeFloat: "steamml_TypeFloat_DfgR3",
-        TypeEnum: "steamml_TypeEnum_3w9sP",
-        TypeTimestamp: "steamml_TypeTimestamp_33yo7",
-        ElementName: "steamml_ElementName_1v_wK",
-        SchemaDetailsStructRow: "steamml_SchemaDetailsStructRow_lWQfK",
-        CollapseIcon: "steamml_CollapseIcon_1vRxM",
-        Collapsed: "steamml_Collapsed_3qRbu",
-        StructIndent: "steamml_StructIndent_1bga0",
-        IndentCollapsed: "steamml_IndentCollapsed_1OU7X",
-        ProblemPage: "steamml_ProblemPage_3F8_L",
-        ProblemListContainer: "steamml_ProblemListContainer_35Ll4",
-        ProblemListHeader: "steamml_ProblemListHeader_21PbN",
-        NoProblems: "steamml_NoProblems_IRyHO",
-        ProblemEntry: "steamml_ProblemEntry_13BKE",
-        ProblemName: "steamml_ProblemName_3Hgxj",
-        Inactive: "steamml_Inactive_TW09g",
-        ProblemDescription: "steamml_ProblemDescription_3qnlN",
-        ProblemID: "steamml_ProblemID_2yjPq",
-        Dates: "steamml_Dates_3jJSR",
-        CreatedDate: "steamml_CreatedDate_3nOnI",
-        UpdatedDate: "steamml_UpdatedDate_3gM54",
-        ProblemSchemaList: "steamml_ProblemSchemaList_2k2xZ",
-        AddNewProblem: "steamml_AddNewProblem_1IaIK",
-        IsPrompt: "steamml_IsPrompt_1F_iV",
-        NewProblemHeader: "steamml_NewProblemHeader_2Uxe1",
-        PlusSymbol: "steamml_PlusSymbol_2zfyC",
-        NewProblemDescription: "steamml_NewProblemDescription_3vIDf",
-        IsHeader: "steamml_IsHeader_1vZgE",
-        AddProblemHeader: "steamml_AddProblemHeader_3dXuk",
-        LabelValue: "steamml_LabelValue_3wqW3",
-        Value: "steamml_Value_3RWed",
-        SchemaListContainer: "steamml_SchemaListContainer_3TzDR",
-        SchemaSelectListTitle: "steamml_SchemaSelectListTitle_37bp6",
-        ButtonContainer: "steamml_ButtonContainer_Sp68r",
-        SchemaSelectList: "steamml_SchemaSelectList_3spVx",
-        SchemaOption: "steamml_SchemaOption_2eV2T",
-        ProblemDetails: "steamml_ProblemDetails_UGqiq",
-        BackButton: "steamml_BackButton_1Sb8R",
-        ProblemDetailsHeaderContainer:
-          "steamml_ProblemDetailsHeaderContainer_28zUx",
-        ProblemNameEditing: "steamml_ProblemNameEditing_2268o",
-        ProblemDescEditing: "steamml_ProblemDescEditing_VSvOs",
-        SchemaListHeader: "steamml_SchemaListHeader_3rvzl",
-        SchemaListEdit: "steamml_SchemaListEdit_1Ch8t",
-        DeleteLink: "steamml_DeleteLink_2lI41",
+        Background: "msjGfUYNm8rJ4bLS19n2g",
+        SteamMLButton: "_2yReXdObU3Ij9YBkzvgYQ7",
+        AcceptButton: "_2tY__PC6O-mUh8jRVOh_S7",
+        Inner: "_1Zoc2tlDWolWjsI-W18Wvf",
+        CancelButton: "_2BCE0thhjq41eNyAVsDAP4",
+        Disabled: "_1W_vxrkrcK4BoMnWdzcIo2",
+        FullSize: "_1-nKcLiXhx0iBBulrD55Xo",
+        Header: "_35ajnHTsONJ6abrtNB0tiG",
+        HeaderOption: "_3KFf6Xq-7-jJ29jn3bW4PL",
+        Selected: "OilN-vRxEfOtVM-aw6H4Y",
+        SchemaPage: "_36OV-RyYj5N9zIaubjlkDo",
+        SchemaList: "_3r0tlX7BEcUjUC0nk5CW8i",
+        SelectAppID: "_3nezXM-f76hluq1iA1sBte",
+        Hidden: "_1VPtlX8LmlSvqpBchxC_7s",
+        SchemaElement: "_1xjli_L5ZMmh-nvw9GnUWQ",
+        Label: "_3uE4kPiSHlhS4R4wHqX-fN",
+        SchemaName: "_36bwAwPhrWLdDlGBGrT1k1",
+        AppID: "_3UaebM6BfC-B0yVyI-eoIJ",
+        HorizontalSection: "_1rTEk-J6WyXu1fqOq9PjzY",
+        RowCount: "gPsPXhyVjxvOBH82Veunm",
+        KeepCount: "_2RxONnczAg5Y1_Xnnd7Grt",
+        SchemaDetails: "_1gFQfWKXhOQbkaNjbGVU16",
+        Back: "_2m9wkgXpcf3-99TaQKL0tE",
+        SchemaDetailsHeader: "cUNhZfaxsGzKaFQAx4vvf",
+        SchemaDetailsBack: "_15COwPUDCRCEDUMsYujCkU",
+        SchemaDetailsTitle: "_9IFURqUFtrCAO5kbHAO_U",
+        SchemaDetailsName: "CblW8QTasV2DO4cRW0prn",
+        SchemaDetailsSchemaID: "_16qUhwW_c8Pbmu5Z6xinEO",
+        SchemaDetailsElements: "_3DsdfooA5ZsBVzHlo0spou",
+        SchemaDetailsElement: "_2_-ubEumKcrrljcqkDz-nd",
+        SchemaDetailsElementBody: "_1lLqQDLnUIIdV6R57346No",
+        TypeInt32: "_3q6FZ-EpaofO1UX84CRKPz",
+        TypeName: "_11e6zJoDlODofUVbR3Lua3",
+        TypeInt64: "_1sUna6-XvlT6BdFU-xDxr_",
+        TypeBool: "_3QiDC_egBPUil1L8Lxw-E6",
+        TypeFloat: "DfgR36rhRvbWATh2rkEU3",
+        TypeEnum: "_3w9sP-z9NZw5JwDMJvGha_",
+        TypeTimestamp: "_33yo73pTOoKCyF87NLP4Io",
+        ElementName: "_1v_wKNlVbQ4nQF8_Zbhiea",
+        SchemaDetailsStructRow: "lWQfKVb7uqk9UKbjyyGIM",
+        CollapseIcon: "_1vRxM4k_iJiVi6F1fzS1e3",
+        Collapsed: "_3qRbu04vYScSY1knrHbExY",
+        StructIndent: "_1bga0T4ksdggWPn8sb1tmQ",
+        IndentCollapsed: "_1OU7XyPtFGtCm92v_LX-be",
+        ProblemPage: "_3F8_Lyio-BwNK1Z5Pbu5vv",
+        ProblemListContainer: "_35Ll4m_-B9fWDt-no-d8xp",
+        ProblemListHeader: "_21PbN-aJWj8YJP-4YCaaVU",
+        NoProblems: "IRyHOENJwvmX3tAY16ZaS",
+        ProblemEntry: "_13BKEPL1RjPkUJgyypi6LX",
+        ProblemName: "_3Hgxj-6wNEi2QJdiNmSEq8",
+        Inactive: "TW09gRIZG46PUd8KEpPJM",
+        ProblemDescription: "_3qnlNmBMwzicL--uJDt0xW",
+        ProblemID: "_2yjPq_vUBe5vX8477Nd6Lb",
+        Dates: "_3jJSRWPIEMmq_zw-n_Vmuj",
+        CreatedDate: "_3nOnI7HpOqBDP7GOYro3RB",
+        UpdatedDate: "_3gM54QZsU-d3rfw7v88yoF",
+        ProblemSchemaList: "_2k2xZ2WqcQSptTfC2u-1WK",
+        AddNewProblem: "_1IaIKe5N5mtG4ReCT5Nfnk",
+        IsPrompt: "_1F_iVaudtZtIBggLz8TgsQ",
+        NewProblemHeader: "_2Uxe1WauLy_WSI8HBMDmpb",
+        PlusSymbol: "_2zfyC9pxT6ynYwfsxjjIcc",
+        NewProblemDescription: "_3vIDf6PJy59Oae8lfCLYRT",
+        IsHeader: "_1vZgEO-rIh1azL1QsqnUkE",
+        AddProblemHeader: "_3dXukBGeFSKrjNRapz-vdw",
+        LabelValue: "_3wqW3cCIDXXgA0L0ry28IN",
+        Value: "_3RWed3mcqH6MmHhBgbkBGD",
+        SchemaListContainer: "_3TzDRcTE7EvonQr-6ImEtT",
+        SchemaSelectListTitle: "_37bp6yYCYbU-Aaxc6idCSh",
+        ButtonContainer: "Sp68rQoQKv4sPj4vE-rm6",
+        SchemaSelectList: "_3spVxRuLYDKpX2IsKvxhXN",
+        SchemaOption: "_2eV2TTGJXmq22-NxPpT3eI",
+        ProblemDetails: "UGqiqHtL23JkoCU_MSnsq",
+        BackButton: "_1Sb8R2jk0DatSLTFo4nULP",
+        ProblemDetailsHeaderContainer: "_28zUxX41jCodxcCCVF55ZH",
+        ProblemNameEditing: "_2268oRWsoMSsQ4JcKBxJlp",
+        ProblemDescEditing: "VSvOsoK438LYv7WiV-r91",
+        SchemaListHeader: "_3rvzlEx7gsz_CuUwlLbLeL",
+        SchemaListEdit: "_1Ch8t8kvrdudLjhmNW6D86",
+        DeleteLink: "_2lI41nfrJhWqIcuoYAfdcC",
       };
     },
     36187: (e, t, a) => {
       "use strict";
-      a.r(t), a.d(t, { SteamMLRoutes: () => A, default: () => B });
+      a.r(t), a.d(t, { SteamMLRoutes: () => B, default: () => R });
       var m,
         l = a(760),
         s = a(47427),
@@ -101,7 +100,7 @@
         o = a(85556),
         d = a(37563),
         p = a(80751),
-        S = a.n(p);
+        h = a.n(p);
       !(function (e) {
         (e[(e.Unrequested = 0)] = "Unrequested"),
           (e[(e.Pending = 1)] = "Pending"),
@@ -109,7 +108,7 @@
           (e[(e.Failed = 3)] = "Failed"),
           (e[(e.Rerequest = 4)] = "Rerequest");
       })(m || (m = {}));
-      class h {
+      class S {
         constructor() {
           (this.data = void 0),
             (this.eState = m.Unrequested),
@@ -172,9 +171,9 @@
           return this.data;
         }
       }
-      (0, o.gn)([c.LO], h.prototype, "data", void 0),
-        (0, o.gn)([c.LO], h.prototype, "nExpirationTime", void 0);
-      class _ {
+      (0, o.gn)([c.LO], S.prototype, "data", void 0),
+        (0, o.gn)([c.LO], S.prototype, "nExpirationTime", void 0);
+      class u {
         constructor() {
           (this.m_mapKeyToDataWrapper = new Map()), (0, c.rC)(this);
         }
@@ -183,7 +182,7 @@
           return (
             this.m_mapKeyToDataWrapper.has(e)
               ? (t = this.m_mapKeyToDataWrapper.get(e))
-              : ((t = new h()), this.m_mapKeyToDataWrapper.set(e, t)),
+              : ((t = new S()), this.m_mapKeyToDataWrapper.set(e, t)),
             t
           );
         }
@@ -207,20 +206,20 @@
           return e;
         }
       }
-      (0, o.gn)([c.LO], _.prototype, "m_mapKeyToDataWrapper", void 0);
-      class u {
+      (0, o.gn)([c.LO], u.prototype, "m_mapKeyToDataWrapper", void 0);
+      class E {
         constructor() {
-          (this.m_asyncSchemaList = new _()),
-            (this.m_asyncSchemaDetails = new _()),
-            (this.m_asyncProblemList = new h()),
-            (this.m_asyncProblemDetails = new _()),
+          (this.m_asyncSchemaList = new u()),
+            (this.m_asyncSchemaDetails = new u()),
+            (this.m_asyncProblemList = new S()),
+            (this.m_asyncProblemDetails = new u()),
             (0, c.rC)(this);
         }
         static Get() {
           return (
-            u.s_SteamMLStore ||
-              ((u.s_SteamMLStore = new u()), u.s_SteamMLStore.Init()),
-            u.s_SteamMLStore
+            E.s_SteamMLStore ||
+              ((E.s_SteamMLStore = new E()), E.s_SteamMLStore.Init()),
+            E.s_SteamMLStore
           );
         }
         Init() {}
@@ -230,7 +229,7 @@
             30,
             () =>
               (0, o.mG)(this, void 0, void 0, function* () {
-                return yield S().get(
+                return yield h().get(
                   `${d.De.PARTNER_BASE_URL}steamml/get_schemas?appid=${e}&includesteammlapp=${t}&sessionid=${d.De.SESSIONID}`,
                 );
               }),
@@ -242,7 +241,7 @@
             30,
             () =>
               (0, o.mG)(this, void 0, void 0, function* () {
-                return yield S().get(
+                return yield h().get(
                   `${d.De.PARTNER_BASE_URL}steamml/get_schema_details?appid=${e}&schemaid=${t}&sessionid=${d.De.SESSIONID}`,
                 );
               }),
@@ -254,7 +253,7 @@
             30,
             () =>
               (0, o.mG)(this, void 0, void 0, function* () {
-                return yield S().get(
+                return yield h().get(
                   `${d.De.PARTNER_BASE_URL}steamml/get_problems?sessionid=${d.De.SESSIONID}`,
                 );
               }),
@@ -266,7 +265,7 @@
             30,
             () =>
               (0, o.mG)(this, void 0, void 0, function* () {
-                return yield S().get(
+                return yield h().get(
                   `${d.De.PARTNER_BASE_URL}steamml/get_problem_details?problemid=${e}&sessionid=${d.De.SESSIONID}`,
                 );
               }),
@@ -280,7 +279,7 @@
             m.append("name", e),
             m.append("description", t),
             m.append("schemaids", a.join(",")),
-            S()
+            h()
               .post(`${d.De.PARTNER_BASE_URL}steamml/create_problem`, m)
               .then(() => {
                 this.m_asyncProblemList.clearData();
@@ -303,7 +302,7 @@
           return (
             t.append("sessionid", d.De.SESSIONID),
             t.append("problemid", e.toString()),
-            S()
+            h()
               .post(`${d.De.PARTNER_BASE_URL}steamml/edit_problem`, t)
               .then(() => {
                 this.m_asyncProblemDetails.getAsyncDataWrapper(e).expireData();
@@ -315,7 +314,7 @@
           return (
             t.append("sessionid", d.De.SESSIONID),
             t.append("problemid", e.toString()),
-            S()
+            h()
               .post(`${d.De.PARTNER_BASE_URL}steamml/delete_problem`, t)
               .then(() => {
                 this.m_asyncProblemList.clearData();
@@ -323,14 +322,14 @@
           );
         }
       }
-      (0, o.gn)([c.LO], u.prototype, "m_asyncSchemaList", void 0),
-        (0, o.gn)([c.LO], u.prototype, "m_asyncSchemaDetails", void 0),
-        (0, o.gn)([c.LO], u.prototype, "m_asyncProblemList", void 0),
-        (0, o.gn)([c.LO], u.prototype, "m_asyncProblemDetails", void 0),
-        (0, o.gn)([c.aD], u.prototype, "Init", null);
-      var E = a(27605),
-        D = a(13129);
-      const N = (0, E.Pi)((e) => {
+      (0, o.gn)([c.LO], E.prototype, "m_asyncSchemaList", void 0),
+        (0, o.gn)([c.LO], E.prototype, "m_asyncSchemaDetails", void 0),
+        (0, o.gn)([c.LO], E.prototype, "m_asyncProblemList", void 0),
+        (0, o.gn)([c.LO], E.prototype, "m_asyncProblemDetails", void 0),
+        (0, o.gn)([c.aD], E.prototype, "Init", null);
+      var D = a(27605),
+        v = a(13129);
+      const N = (0, D.Pi)((e) => {
         const t = "0" == (0, i.UO)().schemaid,
           a = [
             { label: "816 - Dota Beta", value: "816" },
@@ -340,7 +339,7 @@
           ],
           [m, l] = (0, s.useState)(a[0].value);
         if (!t) return null;
-        const c = u.Get().GetSchemaList(parseInt(m), !0);
+        const c = E.Get().GetSchemaList(parseInt(m), !0);
         if (!c) return null;
         let o = [];
         for (const e of c)
@@ -348,7 +347,7 @@
             s.createElement(
               n.rU,
               {
-                to: A.SteamMLSchemas(e.appid, e.schemaid),
+                to: B.SteamMLSchemas(e.appid, e.schemaid),
                 className: r.SchemaElement,
                 key: e.schemaid,
               },
@@ -410,7 +409,7 @@
           o,
         );
       });
-      function b(e) {
+      function _(e) {
         switch (e) {
           case 1:
             return "int32";
@@ -427,7 +426,7 @@
         }
         return "";
       }
-      function v(e) {
+      function b(e) {
         switch (e) {
           case 1:
             return r.TypeInt32;
@@ -444,7 +443,7 @@
         }
         return "";
       }
-      function P(e, t, a) {
+      function y(e, t, a) {
         let m;
         const l = t.indexOf(e.name),
           n = -1 == l && !e.count;
@@ -453,7 +452,7 @@
             ? (m = s.createElement(
                 "div",
                 {
-                  className: (0, D.Z)(
+                  className: (0, v.Z)(
                     r.SchemaDetailsElement,
                     r.SchemaDetailsStruct,
                   ),
@@ -473,7 +472,7 @@
                     },
                     s.createElement(
                       "div",
-                      { className: (0, D.Z)(n && r.Collapsed, r.CollapseIcon) },
+                      { className: (0, v.Z)(n && r.Collapsed, r.CollapseIcon) },
                       "▼",
                     ),
                     s.createElement(
@@ -495,13 +494,13 @@
                   s.createElement(
                     "div",
                     {
-                      className: (0, D.Z)(
+                      className: (0, v.Z)(
                         n && r.IndentCollapsed,
                         r.StructIndent,
                       ),
                       key: e.name,
                     },
-                    P(e, t, a),
+                    y(e, t, a),
                   ),
                 ),
               ))
@@ -509,7 +508,7 @@
             ? (m = s.createElement(
                 "div",
                 {
-                  className: (0, D.Z)(
+                  className: (0, v.Z)(
                     r.SchemaDetailsElement,
                     r.SchemaDetailsArray,
                   ),
@@ -517,16 +516,16 @@
                 s.createElement(
                   "div",
                   {
-                    className: (0, D.Z)(
+                    className: (0, v.Z)(
                       r.SchemaDetailsElementBody,
-                      v(e.array.primitive.type_info.type),
+                      b(e.array.primitive.type_info.type),
                     ),
                   },
                   s.createElement("div", { className: r.ElementName }, e.name),
                   s.createElement(
                     "div",
                     { className: r.TypeName },
-                    b(e.array.primitive.type_info.type),
+                    _(e.array.primitive.type_info.type),
                     " [",
                     e.array.max_length,
                     "]",
@@ -537,7 +536,7 @@
             ? (m = s.createElement(
                 "div",
                 {
-                  className: (0, D.Z)(
+                  className: (0, v.Z)(
                     r.SchemaDetailsElement,
                     r.SchemaDetailsArray,
                   ),
@@ -557,7 +556,7 @@
                     },
                     s.createElement(
                       "div",
-                      { className: (0, D.Z)(n && r.Collapsed, r.CollapseIcon) },
+                      { className: (0, v.Z)(n && r.Collapsed, r.CollapseIcon) },
                       "▼",
                     ),
                     s.createElement(
@@ -581,13 +580,13 @@
                   s.createElement(
                     "div",
                     {
-                      className: (0, D.Z)(
+                      className: (0, v.Z)(
                         n && r.IndentCollapsed,
                         r.StructIndent,
                       ),
                       key: e.name,
                     },
-                    P(e, t, a),
+                    y(e, t, a),
                   ),
                 ),
               ))
@@ -595,7 +594,7 @@
               (m = s.createElement(
                 "div",
                 {
-                  className: (0, D.Z)(
+                  className: (0, v.Z)(
                     r.SchemaDetailsElement,
                     r.SchemaDetailsArray,
                   ),
@@ -603,28 +602,28 @@
                 s.createElement(
                   "div",
                   {
-                    className: (0, D.Z)(
+                    className: (0, v.Z)(
                       r.SchemaDetailsElementBody,
-                      v(e.primitive.type_info.type),
+                      b(e.primitive.type_info.type),
                     ),
                   },
                   s.createElement("div", { className: r.ElementName }, e.name),
                   s.createElement(
                     "div",
                     { className: r.TypeName },
-                    b(e.primitive.type_info.type),
+                    _(e.primitive.type_info.type),
                   ),
                 ),
               )),
           m
         );
       }
-      const y = (0, E.Pi)((e) => {
+      const P = (0, D.Pi)((e) => {
           const t = (0, i.UO)(),
             a = "0" == t.schemaid,
             [m, l] = (0, s.useState)([]);
           if (a) return null;
-          const o = u.Get().GetSchemaDetails(parseInt(t.appid), t.schemaid);
+          const o = E.Get().GetSchemaDetails(parseInt(t.appid), t.schemaid);
           return o
             ? (console.log((0, c.ZN)(o)),
               s.createElement(
@@ -632,7 +631,7 @@
                 { className: r.SchemaDetails },
                 s.createElement(
                   n.rU,
-                  { to: A.SteamMLSchemas("0"), className: r.Back },
+                  { to: B.SteamMLSchemas("0"), className: r.Back },
                   "<< BACK",
                 ),
                 s.createElement(
@@ -657,24 +656,24 @@
                 s.createElement(
                   "div",
                   { className: r.SchemaDetailsElements },
-                  P(o, m, l),
+                  y(o, m, l),
                 ),
               ))
             : null;
         }),
-        L = (0, E.Pi)((e) =>
+        L = (0, D.Pi)((e) =>
           s.createElement(
             "div",
             { className: r.SchemaPage },
             s.createElement(N, null),
-            s.createElement(y, null),
+            s.createElement(P, null),
           ),
         ),
         g = (e) =>
           s.createElement(
             "div",
             {
-              className: (0, D.Z)(
+              className: (0, v.Z)(
                 r.SteamMLButton,
                 e.acceptStyle && r.AcceptButton,
                 e.cancelStyle && r.CancelButton,
@@ -691,7 +690,7 @@
           console.log((0, c.ZN)(e)),
           s.createElement(
             n.rU,
-            { to: A.SteamMLProblems(e.problemid), className: r.ProblemEntry },
+            { to: B.SteamMLProblems(e.problemid), className: r.ProblemEntry },
             s.createElement("div", { className: r.ProblemName }, e.name),
             !e.active &&
               s.createElement("div", { className: r.Inactive }, "Inactive"),
@@ -725,19 +724,19 @@
             [l, n] = (0, s.useState)(""),
             [i, c] = (0, s.useState)(""),
             [o, p] = (0, s.useState)([]),
-            S =
-              null === (t = u.Get().GetSchemaList(0, !0)) || void 0 === t
+            h =
+              null === (t = E.Get().GetSchemaList(0, !0)) || void 0 === t
                 ? void 0
                 : t.sort((e, t) => (e.name < t.name ? -1 : 1)),
-            h =
-              null == S
+            S =
+              null == h
                 ? void 0
-                : S.filter((e, t, a) => 0 == t || e.name != a[t - 1].name),
-            _ = l.length > 0 && i.length > 0 && o.length > 0;
+                : h.filter((e, t, a) => 0 == t || e.name != a[t - 1].name),
+            u = l.length > 0 && i.length > 0 && o.length > 0;
           return s.createElement(
             "div",
             {
-              className: (0, D.Z)(
+              className: (0, v.Z)(
                 r.AddNewProblem,
                 !a && r.IsPrompt,
                 a && r.IsHeader,
@@ -782,7 +781,7 @@
                   onChange: (e) => c(e.target.value),
                 }),
               ),
-              h &&
+              S &&
                 s.createElement(
                   "div",
                   { className: r.SchemaListContainer },
@@ -794,13 +793,13 @@
                   s.createElement(
                     "div",
                     { className: r.SchemaSelectList },
-                    h.map((e) => {
+                    S.map((e) => {
                       const t = -1 != o.indexOf(e.schemaid);
                       return s.createElement(
                         "div",
                         {
                           key: e.schemaid,
-                          className: (0, D.Z)(r.SchemaOption, t && r.Selected),
+                          className: (0, v.Z)(r.SchemaOption, t && r.Selected),
                           onClick: () =>
                             p(
                               t
@@ -821,8 +820,8 @@
                   {
                     acceptStyle: !0,
                     minWidth: 100,
-                    disabled: !_,
-                    onClick: () => _ && void u.Get().CreateProblem(l, i, o),
+                    disabled: !u,
+                    onClick: () => u && void E.Get().CreateProblem(l, i, o),
                   },
                   "Create",
                 ),
@@ -835,8 +834,8 @@
             ),
           );
         },
-        T = (0, E.Pi)(({ schemaid: e }) => {
-          const t = u.Get().GetSchemaList(0, !0);
+        f = (0, D.Pi)(({ schemaid: e }) => {
+          const t = E.Get().GetSchemaList(0, !0);
           let a;
           if (t) {
             const m = t.filter((t) => t.schemaid == e);
@@ -848,20 +847,20 @@
             a && s.createElement("div", { className: r.SchemaName }, a.name),
           );
         }),
-        f = (0, E.Pi)(({ problem: e }) => {
+        T = (0, D.Pi)(({ problem: e }) => {
           var t;
           const [a, m] = (0, s.useState)(!1),
             [l, c] = (0, s.useState)(e.name),
             [o, d] = (0, s.useState)(!1),
-            [p, S] = (0, s.useState)(e.problem_description),
-            [h, _] = (0, s.useState)(!1),
-            [E, N] = (0, s.useState)(e.schemaid),
-            b = (0, i.k6)(),
-            v = (0, s.useRef)(null),
-            P = (0, s.useRef)(null),
-            y = parseInt(e.problemid),
+            [p, h] = (0, s.useState)(e.problem_description),
+            [S, u] = (0, s.useState)(!1),
+            [D, N] = (0, s.useState)(e.schemaid),
+            _ = (0, i.k6)(),
+            b = (0, s.useRef)(null),
+            y = (0, s.useRef)(null),
+            P = parseInt(e.problemid),
             L =
-              null === (t = u.Get().GetSchemaList(0, !0)) || void 0 === t
+              null === (t = E.Get().GetSchemaList(0, !0)) || void 0 === t
                 ? void 0
                 : t.slice().sort((e, t) => (e.name < t.name ? -1 : 1)),
             C =
@@ -870,7 +869,7 @@
                 : L.filter((e, t, a) => 0 == t || e.name != a[t - 1].name);
           var I;
           (I = () => {
-            f(), w(), S(e.problem_description), d(!1);
+            T(), w(), h(e.problem_description), d(!1);
           }),
             (0, s.useEffect)(() => {
               const e = (e) => {
@@ -883,24 +882,24 @@
                 }
               );
             }, [I]);
-          const f = () => {
+          const T = () => {
               c(e.name), m(!1);
             },
             w = () => {
-              S(e.problem_description), d(!1);
+              h(e.problem_description), d(!1);
             },
-            B = () => {
-              N(e.schemaid), _(!1);
+            R = () => {
+              N(e.schemaid), u(!1);
             };
           return (
-            a && v.current.focus(),
-            o && P.current.focus(),
+            a && b.current.focus(),
+            o && y.current.focus(),
             s.createElement(
               "div",
               { className: r.ProblemDetails },
               s.createElement(
                 n.rU,
-                { to: A.SteamMLProblems(0), className: r.BackButton },
+                { to: B.SteamMLProblems(0), className: r.BackButton },
                 "<< BACK ",
               ),
               s.createElement(
@@ -909,8 +908,8 @@
                 s.createElement(
                   "div",
                   {
-                    className: (0, D.Z)(r.ProblemName, a && r.Hidden),
-                    onClick: (e) => (w(), B(), void m(!0)),
+                    className: (0, v.Z)(r.ProblemName, a && r.Hidden),
+                    onClick: (e) => (w(), R(), void m(!0)),
                   },
                   e.name,
                 ),
@@ -919,18 +918,18 @@
                   {
                     className: a ? void 0 : r.Hidden,
                     onSubmit: (t) => {
-                      u.Get().EditProblemName(y, l),
+                      E.Get().EditProblemName(P, l),
                         (e.name = l),
                         m(!1),
                         t.preventDefault();
                     },
                   },
                   s.createElement("input", {
-                    ref: v,
+                    ref: b,
                     className: r.ProblemNameEditing,
                     type: "text",
                     value: l,
-                    onBlur: () => f(),
+                    onBlur: () => T(),
                     onFocus: (e) => e.target.select(),
                     onChange: (e) => c(e.target.value),
                   }),
@@ -938,8 +937,8 @@
                 s.createElement(
                   "div",
                   {
-                    className: (0, D.Z)(r.ProblemDescription, o && r.Hidden),
-                    onClick: (e) => (f(), B(), void d(!0)),
+                    className: (0, v.Z)(r.ProblemDescription, o && r.Hidden),
+                    onClick: (e) => (T(), R(), void d(!0)),
                   },
                   e.problem_description,
                 ),
@@ -948,20 +947,20 @@
                   {
                     className: o ? void 0 : r.Hidden,
                     onSubmit: (t) => {
-                      u.Get().EditProblemDesc(y, p),
+                      E.Get().EditProblemDesc(P, p),
                         (e.problem_description = p),
                         d(!1),
                         t.preventDefault();
                     },
                   },
                   s.createElement("input", {
-                    ref: P,
+                    ref: y,
                     className: r.ProblemDescEditing,
                     type: "text",
                     value: p,
                     onBlur: () => w(),
                     onFocus: (e) => e.target.select(),
-                    onChange: (e) => S(e.target.value),
+                    onChange: (e) => h(e.target.value),
                   }),
                 ),
                 s.createElement("div", { className: r.ProblemID }, e.problemid),
@@ -994,45 +993,45 @@
                   "div",
                   {
                     className: r.SchemaListEdit,
-                    onClick: () => (f(), w(), void _(!0)),
+                    onClick: () => (T(), w(), void u(!0)),
                   },
                   "Edit",
                 ),
                 s.createElement(
                   "div",
-                  { className: (0, D.Z)(r.SchemaList, h && r.Hidden) },
+                  { className: (0, v.Z)(r.SchemaList, S && r.Hidden) },
                   e.schemaid.map((e) =>
-                    s.createElement(T, { key: e, schemaid: e }),
+                    s.createElement(f, { key: e, schemaid: e }),
                   ),
                 ),
                 s.createElement(
                   "div",
                   {
-                    className: (0, D.Z)(
+                    className: (0, v.Z)(
                       r.SchemaSelectList,
-                      (!h || !C) && r.Hidden,
+                      (!S || !C) && r.Hidden,
                     ),
                   },
                   C &&
                     C.map((e) => {
-                      const t = -1 != E.indexOf(e.schemaid);
+                      const t = -1 != D.indexOf(e.schemaid);
                       return s.createElement(
                         "div",
                         {
                           key: e.schemaid,
-                          className: (0, D.Z)(r.SchemaOption, t && r.Selected),
+                          className: (0, v.Z)(r.SchemaOption, t && r.Selected),
                           onClick: () =>
                             N(
                               t
-                                ? E.filter((t) => t != e.schemaid)
-                                : E.concat(e.schemaid),
+                                ? D.filter((t) => t != e.schemaid)
+                                : D.concat(e.schemaid),
                             ),
                         },
                         e.name,
                       );
                     }),
                 ),
-                h &&
+                S &&
                   s.createElement(
                     "div",
                     { className: r.ButtonContainer },
@@ -1041,28 +1040,28 @@
                       {
                         minWidth: 100,
                         acceptStyle: !0,
-                        disabled: 0 == E.length,
+                        disabled: 0 == D.length,
                         onClick: () => (
-                          u.Get().EditProblemSchemas(y, E),
-                          (e.schemaid = E),
-                          void _(!1)
+                          E.Get().EditProblemSchemas(P, D),
+                          (e.schemaid = D),
+                          void u(!1)
                         ),
                       },
                       "Accept",
                     ),
                     s.createElement(
                       g,
-                      { minWidth: 100, cancelStyle: !0, onClick: () => B() },
+                      { minWidth: 100, cancelStyle: !0, onClick: () => R() },
                       "Cancel",
                     ),
                   ),
                 s.createElement(
                   "div",
                   {
-                    className: (0, D.Z)(r.DeleteLink, h && r.Hidden),
+                    className: (0, v.Z)(r.DeleteLink, S && r.Hidden),
                     onClick: () => (
-                      u.Get().DeleteProblem(y),
-                      void b.push(A.SteamMLProblems(0))
+                      E.Get().DeleteProblem(P),
+                      void _.push(B.SteamMLProblems(0))
                     ),
                   },
                   "Delete Problem",
@@ -1071,14 +1070,14 @@
             )
           );
         }),
-        w = (0, E.Pi)((e) => {
+        w = (0, D.Pi)((e) => {
           const t = (0, i.UO)(),
             a = "0" == t.problemid;
           let m, l;
           return (
             a
-              ? (m = u.Get().GetProblemList())
-              : (l = u.Get().GetProblemDetails(parseInt(t.problemid))),
+              ? (m = E.Get().GetProblemList())
+              : (l = E.Get().GetProblemDetails(parseInt(t.problemid))),
             s.createElement(
               "div",
               { className: r.ProblemPage },
@@ -1103,64 +1102,64 @@
                 s.createElement(
                   "div",
                   { className: r.ProblemDetails },
-                  s.createElement(f, { problem: l }),
+                  s.createElement(T, { problem: l }),
                 ),
             )
           );
         }),
-        A = {
+        B = {
           SteamMLBase: () => "steamml",
           SteamMLSchemas: (e, t) =>
             `/schemas/${null != e ? e : "0"}/${null != t ? t : "0"}`,
           SteamMLModels: () => "/models",
           SteamMLProblems: (e) => `/problems/${null != e ? e : "0"}`,
         };
-      class B extends s.Component {
+      class R extends s.Component {
         render() {
           return s.createElement(
             "div",
             { className: r.Background },
             s.createElement(
               n.VK,
-              { basename: (0, l.l)() + A.SteamMLBase() },
-              s.createElement(R, null),
+              { basename: (0, l.l)() + B.SteamMLBase() },
+              s.createElement(k, null),
               s.createElement(
                 i.rs,
                 null,
                 s.createElement(i.AW, {
                   exact: !0,
-                  path: A.SteamMLSchemas(":appid", ":schemaid"),
+                  path: B.SteamMLSchemas(":appid", ":schemaid"),
                   component: L,
                 }),
                 s.createElement(i.AW, {
                   exact: !0,
-                  path: A.SteamMLModels(),
-                  component: k,
+                  path: B.SteamMLModels(),
+                  component: U,
                 }),
                 s.createElement(i.AW, {
                   exact: !0,
-                  path: A.SteamMLProblems(":problemid"),
+                  path: B.SteamMLProblems(":problemid"),
                   component: w,
                 }),
                 s.createElement(
                   i.AW,
                   { exact: !0, path: "/" },
-                  s.createElement(i.l_, { to: A.SteamMLSchemas() }),
+                  s.createElement(i.l_, { to: B.SteamMLSchemas() }),
                 ),
               ),
             ),
           );
         }
       }
-      const R = (e) => {
+      const k = (e) => {
           const t = (0, i.TH)(),
             a = (0, i.LX)(t.pathname, {
-              path: A.SteamMLSchemas(":appid", ":schemaid"),
+              path: B.SteamMLSchemas(":appid", ":schemaid"),
               exact: !0,
             }),
-            m = (0, i.LX)(t.pathname, { path: A.SteamMLModels(), exact: !0 }),
+            m = (0, i.LX)(t.pathname, { path: B.SteamMLModels(), exact: !0 }),
             l = (0, i.LX)(t.pathname, {
-              path: A.SteamMLProblems(":problemid"),
+              path: B.SteamMLProblems(":problemid"),
               exact: !0,
             });
           return s.createElement(
@@ -1169,30 +1168,30 @@
             s.createElement(
               n.rU,
               {
-                to: A.SteamMLSchemas(),
-                className: (0, D.Z)(r.HeaderOption, a && r.Selected),
+                to: B.SteamMLSchemas(),
+                className: (0, v.Z)(r.HeaderOption, a && r.Selected),
               },
               "SCHEMAS",
             ),
             s.createElement(
               n.rU,
               {
-                to: A.SteamMLModels(),
-                className: (0, D.Z)(r.HeaderOption, m && r.Selected),
+                to: B.SteamMLModels(),
+                className: (0, v.Z)(r.HeaderOption, m && r.Selected),
               },
               "MODELS",
             ),
             s.createElement(
               n.rU,
               {
-                to: A.SteamMLProblems(),
-                className: (0, D.Z)(r.HeaderOption, l && r.Selected),
+                to: B.SteamMLProblems(),
+                className: (0, v.Z)(r.HeaderOption, l && r.Selected),
               },
               "PROBLEMS",
             ),
           );
         },
-        k = (e) => s.createElement("div", null, "MODEL PAGE");
+        U = (e) => s.createElement("div", null, "MODEL PAGE");
     },
   },
 ]);
