@@ -117,6 +117,7 @@ message CPublishedFile_GetDetails_Request {
 	optional bool strip_description_bbcode = 15;
 	optional .EPublishedFileRevision desired_revision = 16 [default = k_EPublishedFileRevision_Default];
 	optional bool includereactions = 17 [default = false];
+	optional bool admin_query = 18;
 }
 
 message PublishedFileDetails {
@@ -304,6 +305,7 @@ message CPublishedFile_GetUserFiles_Request {
 	optional int32 language = 29 [default = 0];
 	repeated .CPublishedFile_GetUserFiles_Request.TagGroup taggroups = 34;
 	repeated .EContentDescriptorID excluded_content_descriptors = 37;
+	optional bool admin_query = 38;
 	optional bool totalonly = 17;
 	optional bool ids_only = 18;
 	optional bool return_vote_data = 19 [default = true];
@@ -460,6 +462,7 @@ message CPublishedFile_QueryFiles_Request {
 	optional .CPublishedFile_QueryFiles_Request.DateRange date_range_created = 44;
 	optional .CPublishedFile_QueryFiles_Request.DateRange date_range_updated = 45;
 	repeated .EContentDescriptorID excluded_content_descriptors = 46;
+	optional bool admin_query = 47;
 	optional bool totalonly = 16;
 	optional bool ids_only = 35;
 	optional bool return_vote_data = 17;
