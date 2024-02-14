@@ -1022,8 +1022,9 @@ function ApplyAdultContentPreferencesHelper( e, rgContentDescriptorsToExclude, b
 		return;
 	}
 
-	if ( ( typeof( g_bViewingOwnProfile ) != 'undefined' && g_bViewingOwnProfile ) )
+	if ( ( typeof( g_bViewingOwnProfile ) != 'undefined' ) && g_bViewingOwnProfile )
 	{
+		e.removeClass( 'has_adult_content' );
 		return;
 	}
 

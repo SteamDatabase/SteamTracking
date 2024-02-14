@@ -46429,11 +46429,6 @@
                     br: n.FE.readUint64String,
                     bw: n.Xc.writeUint64String,
                   },
-                  gidshoppingcartcopy: {
-                    n: 3,
-                    br: n.FE.readUint64String,
-                    bw: n.Xc.writeUint64String,
-                  },
                 },
               }),
             j.sm_m
@@ -46542,7 +46537,7 @@
         constructor(e = null) {
           super(),
             A.prototype.requester_steamid || n.aR(A.M()),
-            s.initialize(this, e, 0, -1, void 0, null);
+            s.initialize(this, e, 0, -1, [9, 10], null);
         }
         static M() {
           return (
@@ -46586,10 +46581,21 @@
                     br: n.FE.readUint64String,
                     bw: n.Xc.writeUint64String,
                   },
-                  gidshoppingcartcopy: {
+                  requested_packageids: {
                     n: 9,
-                    br: n.FE.readUint64String,
-                    bw: n.Xc.writeUint64String,
+                    r: !0,
+                    q: !0,
+                    br: n.FE.readUint32,
+                    pbr: n.FE.readPackedUint32,
+                    bw: n.Xc.writeRepeatedUint32,
+                  },
+                  purchased_packageids: {
+                    n: 10,
+                    r: !0,
+                    q: !0,
+                    br: n.FE.readUint32,
+                    pbr: n.FE.readPackedUint32,
+                    bw: n.Xc.writeRepeatedUint32,
                   },
                 },
               }),
@@ -66271,7 +66277,18 @@
               (O.sm_m = {
                 proto: O,
                 fields: {
-                  elanguage: { n: 1, br: n.FE.readInt32, bw: n.Xc.writeInt32 },
+                  elanguage: {
+                    n: 1,
+                    d: -1,
+                    br: n.FE.readInt32,
+                    bw: n.Xc.writeInt32,
+                  },
+                  eadditionallanguage: {
+                    n: 5,
+                    d: -1,
+                    br: n.FE.readInt32,
+                    bw: n.Xc.writeInt32,
+                  },
                   supported: { n: 2, br: n.FE.readBool, bw: n.Xc.writeBool },
                   full_audio: { n: 3, br: n.FE.readBool, bw: n.Xc.writeBool },
                   subtitles: { n: 4, br: n.FE.readBool, bw: n.Xc.writeBool },

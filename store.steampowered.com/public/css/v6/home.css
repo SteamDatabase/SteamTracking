@@ -191,12 +191,12 @@ html.responsive .fullscreen-bg__video_mobile {
     left: -100px;
     width: 400px;
     height: 400px;
-    background: linear-gradient(135deg, #F93822  28%, #d0266f 35%);
+    background: linear-gradient(135deg, #2286f9  28%, #d0266f 35%);
     -webkit-mask: radial-gradient(circle at 48% 19%, black 2%, transparent 20%);
 }
 
 .top_promo:hover .steam_deck_ctn::before {
-    background: linear-gradient(135deg, #F93822  28%, #d0266f 35%);
+    background: linear-gradient(135deg, #2286f9  28%, #d0266f 35%);
     -webkit-mask: radial-gradient(circle at 48% 19%, black 5%, transparent 20%);
 }
 

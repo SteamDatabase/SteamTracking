@@ -8,6 +8,10 @@
 	min-height: calc( 100vh - 409px );
 }
 
+.AdminPageContent.noMinHeight {
+    min-height: unset;
+}
+
 .AdminPageContent.MultiPart {
     min-height: unset;
 }
@@ -21,6 +25,10 @@
 
 .AdminPageContent strong {
 	color: #ddd;
+}
+
+.DashCalendar {
+    margin: 0 46px;
 }
 
 ol {
@@ -317,6 +325,11 @@ textarea.gray {
 	margin-right: 40px;
 }
 
+.formcolumn {
+    display: flex;
+    flex-direction: column;
+}
+
 .formrow {
 	clear: left;
 	padding-bottom: 5px;
@@ -553,10 +566,18 @@ pre.results {
 
 .fancyCheckbox {
 	cursor: default;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
 }
 
 .fancyCheckbox img {
 	border: none;
+    margin-top: 4px;
+}
+
+.fancyCheckboxLabel {
+    margin-left: 8px;
 }
 
 .radioBtnDescText {

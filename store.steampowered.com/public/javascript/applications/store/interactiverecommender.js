@@ -7,144 +7,140 @@
       e.exports = {
         smallentrywidth: "600px",
         optionswrapwidth: "777px",
-        App: "interactiverecommender_App_u3SD8",
-        Login: "interactiverecommender_Login_3wfCR",
-        Text: "interactiverecommender_Text_1PXPv",
-        Container: "interactiverecommender_Container_2g8SX",
-        TopSection: "interactiverecommender_TopSection_fR3i6",
-        Header: "interactiverecommender_Header_2CDNs",
-        Body: "interactiverecommender_Body_174-d",
-        Spacer: "interactiverecommender_Spacer_1f2cz",
-        BottomSection: "interactiverecommender_BottomSection_3A60h",
-        VerticalBar: "interactiverecommender_VerticalBar_2qL2p",
-        PlaytimeList: "interactiverecommender_PlaytimeList_3qtYu",
-        Loading: "interactiverecommender_Loading_3pjYy",
-        IdentityBlock: "interactiverecommender_IdentityBlock_qLWcn",
-        Avatar: "interactiverecommender_Avatar_VmdbP",
-        PersonalInfo: "interactiverecommender_PersonalInfo_2oJXF",
-        Persona: "interactiverecommender_Persona_2vp7F",
-        GameCount: "interactiverecommender_GameCount_1AIEP",
-        TotalTime: "interactiverecommender_TotalTime_1tOWe",
-        PlayedGame: "interactiverecommender_PlayedGame_sNb81",
-        Ignored: "interactiverecommender_Ignored_30mws",
-        PlaytimeInfo: "interactiverecommender_PlaytimeInfo_1UkGo",
-        IgnoreToggle: "interactiverecommender_IgnoreToggle_3hXvg",
-        Logo: "interactiverecommender_Logo_26qua",
-        HoursPlayed: "interactiverecommender_HoursPlayed_3Ye_W",
-        Title: "interactiverecommender_Title_Eucai",
-        LastPlayed: "interactiverecommender_LastPlayed_1DwCl",
-        UpdateSaveBlock: "interactiverecommender_UpdateSaveBlock_iaGmJ",
-        UpdateButton: "interactiverecommender_UpdateButton_wcFtI",
-        Enabled: "interactiverecommender_Enabled_3QyVu",
-        RecommendationList: "interactiverecommender_RecommendationList_1krh3",
-        List: "interactiverecommender_List_C6mYR",
-        Updating: "interactiverecommender_Updating_1m954",
-        NoRecommendationsMessage:
-          "interactiverecommender_NoRecommendationsMessage_1Ps6j",
-        RecommendationOptions:
-          "interactiverecommender_RecommendationOptions_2F61j",
-        Row: "interactiverecommender_Row_1sYIz",
-        SecondRow: "interactiverecommender_SecondRow_K-rzA",
-        OptionCheckbox: "interactiverecommender_OptionCheckbox_2Cb6n",
-        Checkbox: "interactiverecommender_Checkbox_29uP5",
-        WishlistCheckbox: "interactiverecommender_WishlistCheckbox_1cnxU",
-        SaveUserSettingsButton:
-          "interactiverecommender_SaveUserSettingsButton_1VRgd",
-        OptionSlider: "interactiverecommender_OptionSlider_26ek6",
-        Labels: "interactiverecommender_Labels_22UxF",
-        Min: "interactiverecommender_Min_1uiM2",
-        Max: "interactiverecommender_Max_17wCM",
-        OptionalLabel: "interactiverecommender_OptionalLabel_1JIe5",
-        OptionDropdown: "interactiverecommender_OptionDropdown_1dKx5",
-        Label: "interactiverecommender_Label_XPFnC",
-        OptionTagList: "interactiverecommender_OptionTagList_uNxeG",
-        SelectedTag: "interactiverecommender_SelectedTag_2uInW",
-        Close: "interactiverecommender_Close_2bZrr",
-        RecommendationEntry: "interactiverecommender_RecommendationEntry_3opuX",
-        BottomEntrySection: "interactiverecommender_BottomEntrySection_2U08C",
-        WishlistSection: "interactiverecommender_WishlistSection_dS7Rz",
-        Hidden: "interactiverecommender_Hidden_2teee",
-        TopEntrySection: "interactiverecommender_TopEntrySection_1IvHp",
-        LeftSection: "interactiverecommender_LeftSection_1shxg",
-        Video: "interactiverecommender_Video_3oNv9",
-        Revealed: "interactiverecommender_Revealed_3aiFy",
-        UnMute: "interactiverecommender_UnMute_21t3_",
-        RightSection: "interactiverecommender_RightSection_27p3s",
-        CenterSection: "interactiverecommender_CenterSection_M9CWJ",
-        CenterOption: "interactiverecommender_CenterOption_3mXMY",
-        Name: "interactiverecommender_Name_2FQXD",
-        Released: "interactiverecommender_Released_3EvdK",
-        BarContainer: "interactiverecommender_BarContainer_3qWin",
-        Bar: "interactiverecommender_Bar_16q7Q",
-        Score: "interactiverecommender_Score_17yr_",
-        Tags: "interactiverecommender_Tags_3KlI0",
-        Tag: "interactiverecommender_Tag_1rNtz",
-        Hovered: "interactiverecommender_Hovered_3b9wG",
-        Wishlisted: "interactiverecommender_Wishlisted_2uh0O",
-        PurchaseSection: "interactiverecommender_PurchaseSection_mjTZM",
-        PurchaseBG: "interactiverecommender_PurchaseBG_2UHKw",
-        Price: "interactiverecommender_Price_18mm0",
-        WishlistFlag: "interactiverecommender_WishlistFlag_2TuuQ",
-        SelectionBox: "interactiverecommender_SelectionBox_2W7pR",
-        SuggestionInput: "interactiverecommender_SuggestionInput_3OdNp",
-        SuggestionContainerOpen:
-          "interactiverecommender_SuggestionContainerOpen_2NTkL",
-        SuggestionsList: "interactiverecommender_SuggestionsList_2zgal",
-        OptionSuggestion: "interactiverecommender_OptionSuggestion_3VKY5",
+        App: "u3SD8Rv-TF03ytFkNfj-k",
+        Login: "_3wfCRdUF7UCOco6sM64_AI",
+        Text: "_1PXPvIBpTTm3XE80hVL7IL",
+        Container: "_2g8SX1Bqe4yZ0MTC6aHVN2",
+        TopSection: "fR3i6aDCZbxXmO9K7kIql",
+        Header: "_2CDNsxHQYFE7ilXdIEDxn4",
+        Body: "_174-dDkJ3M18FQfPjgqOPh",
+        Spacer: "_1f2czcidfVOcmw30y0_AEg",
+        BottomSection: "_3A60hz6NOwiZuTW-mu76wL",
+        VerticalBar: "_2qL2pDBlf2JEVyn-fvZhHn",
+        PlaytimeList: "_3qtYumEMKc2y3aLeHANlbB",
+        Loading: "_3pjYyLIL8mYZrZiXyxTg17",
+        IdentityBlock: "qLWcn3Zw8Ddzh1V-xEzIw",
+        Avatar: "VmdbPPm4K3OJVzMkAfUCN",
+        PersonalInfo: "_2oJXF8jDfGOyVx6p35GP1L",
+        Persona: "_2vp7FwWUoHhqP9WpDDZia9",
+        GameCount: "_1AIEPwvDJWbF3p-bJC8U-j",
+        TotalTime: "_1tOWe6qfloxaAHA6-XlHC7",
+        PlayedGame: "sNb81BS2VJGadBRs2O1xt",
+        Ignored: "_30mwsSJgrME6Y29S3WOvGr",
+        PlaytimeInfo: "_1UkGoSXAPPleoBdQ1O2GXE",
+        IgnoreToggle: "_3hXvg60h--tm8fpm8-DQp7",
+        Logo: "_26qua-OTdUkpUQjxlCpL4Q",
+        HoursPlayed: "_3Ye_WIURXOIHtbJmWHlZCp",
+        Title: "EucaisdOxQY9whoBWeaI",
+        LastPlayed: "_1DwClAZgoTbNpGuq1KNF1p",
+        UpdateSaveBlock: "iaGmJVCk9eDH_Akyr5tWg",
+        UpdateButton: "wcFtI-6vQaUYVL4Lp-Ki0",
+        Enabled: "_3QyVuToEdGygNUv-F5DPxi",
+        RecommendationList: "_1krh3bRv1rh0DsX9w8vDhc",
+        List: "C6mYROffi1zI6TmcgwZL6",
+        Updating: "_1m9544K4ze2kbr3TBYmrPI",
+        NoRecommendationsMessage: "_1Ps6jdEWE_I0ZZXlsf0Y2n",
+        RecommendationOptions: "_2F61j_DyOK_vhClDnOojy2",
+        Row: "_1sYIzvY8GbsHinG4EF7PQ",
+        SecondRow: "K-rzAjz6UAjL3crM_Okwm",
+        OptionCheckbox: "_2Cb6nc7yZVXFdoETIgJr0",
+        Checkbox: "_29uP5gCUgb-v9HUMn-NO7d",
+        WishlistCheckbox: "_1cnxU3We-vi8YXPPhJAlPd",
+        SaveUserSettingsButton: "_1VRgdaZdZ6-kHL9sW5x8Gy",
+        OptionSlider: "_26ek6rclx7wHt5k9-qjzOZ",
+        Labels: "_22UxF3FJgx-GeuyzV7WJcz",
+        Min: "_1uiM2XyqdiKllPUqufBTNq",
+        Max: "_17wCMu7Xz9xQPWp7-ixvVS",
+        OptionalLabel: "_1JIe5R5KKY8Z1zr6FrTXq2",
+        OptionDropdown: "_1dKx5dA0QebdoYYegaC6Zq",
+        Label: "XPFnCXF0lmm8eTlEuqlo8",
+        OptionTagList: "uNxeGtKCHQ2LZCVL0GMLQ",
+        SelectedTag: "_2uInWyY6DTw3raDLhvCmY4",
+        Close: "_2bZrrxbV56psnL2X3eSSD",
+        RecommendationEntry: "_3opuXcswH86T3In6Whwlow",
+        BottomEntrySection: "_2U08CVVVoNbtCfhW2zc9pd",
+        WishlistSection: "dS7RzJ74cMMAduY73gB23",
+        Hidden: "_2teeesGSQzHl1ROvIWr_mE",
+        TopEntrySection: "_1IvHpJUVsEh41ky41jMICF",
+        LeftSection: "_1shxgz0_oyjYEBhkc1pEq4",
+        Video: "_3oNv9BPrCekjT0mhpcaIBY",
+        Revealed: "_3aiFyqEH2MWmUr5xI6G3Bc",
+        UnMute: "_21t3_w2WXNcpAeWhP3Vm3p",
+        RightSection: "_27p3svIY0rPcF-36Z3TUeB",
+        CenterSection: "M9CWJivhElJusZEsWhpSy",
+        CenterOption: "_3mXMY41gnw5Wwfws9KsmG1",
+        Name: "_2FQXDBjzjIxMRBxEFA2vp3",
+        Released: "_3EvdKPiuwm44TUif2-eMAi",
+        BarContainer: "_3qWinoVFMjKNhlrNudewgX",
+        Bar: "_16q7Q4KJbLAedQn16Vnj2a",
+        Score: "_17yr_e2rt99ye0vUYkx8nA",
+        Tags: "_3KlI0VTwEngVNlDrCw94dG",
+        Tag: "_1rNtzuSQrXdWHtJPUIrRS3",
+        Hovered: "_3b9wGZ4YjBSqVbVI0Ux8Qe",
+        Wishlisted: "_2uh0Ok6-cD_4Zugqxxoe2E",
+        PurchaseSection: "mjTZMxg7qSvnX4pDxJ6m-",
+        PurchaseBG: "_2UHKwc-ZjEsOg2utEQWBQJ",
+        Price: "_18mm05--YNDTjvJophTK1d",
+        WishlistFlag: "_2TuuQBk9cBWsQviAPg4Maa",
+        SelectionBox: "_2W7pRbfZEt2TGsbW0NHVDC",
+        SuggestionInput: "_3OdNpjoAkOeqQmyb5kM9BZ",
+        SuggestionContainerOpen: "_2NTkL4c6rEsrifPSQgef85",
+        SuggestionsList: "_2zgalOGQBibVMa9wUnUadM",
+        OptionSuggestion: "_3VKY5fS_afLCSSA3kAp2t1",
       };
     },
-    80212: (e, t, i) => {
+    80212: (e, t, s) => {
       "use strict";
-      i.d(t, { X: () => m, _: () => _ });
-      var a = i(47427),
-        n = i(90069),
-        s = i(31846),
-        o = i(37563),
-        r = i(99327),
-        l = i(77581),
-        c = i(35791);
-      function d(e) {
-        return a.createElement(
-          n.e1,
+      s.d(t, { X: () => m, _: () => p });
+      var i = s(47427),
+        a = s(90069),
+        n = s(31846),
+        o = s(37563),
+        l = s(99327),
+        r = s(77581),
+        d = s(35791);
+      function c(e) {
+        return i.createElement(
+          a.e1,
           { onEscKeypress: e.closeModal, bDisableBackgroundDismiss: !0 },
-          a.createElement(p, { redirectURL: e.redirectURL }),
+          i.createElement(u, { redirectURL: e.redirectURL }),
         );
       }
       function m() {
-        (0, n.AM)(
-          a.createElement(d, {
+        (0, a.AM)(
+          i.createElement(c, {
             ownerWin: window,
             redirectURL: window.location.href,
           }),
           window,
-          { strTitle: (0, s.Xx)("#Login_SignIn") },
-        );
-      }
-      function _(e) {
-        (0, n.AM)(
-          a.createElement(d, { ownerWin: window, redirectURL: e }),
-          window,
-          { strTitle: (0, s.Xx)("#Login_SignIn") },
+          { strTitle: (0, n.Xx)("#Login_SignIn") },
         );
       }
       function p(e) {
+        (0, a.AM)(
+          i.createElement(c, { ownerWin: window, redirectURL: e }),
+          window,
+          { strTitle: (0, n.Xx)("#Login_SignIn") },
+        );
+      }
+      function u(e) {
         const { redirectURL: t } = e,
-          [i] = (0, a.useState)(
-            new l.J(o.De.WEBAPI_BASE_URL).GetAnonymousServiceTransport(),
+          [s] = (0, i.useState)(
+            new r.J(o.De.WEBAPI_BASE_URL).GetAnonymousServiceTransport(),
           ),
-          [n, s] = (0, a.useState)(!1);
-        return a.createElement(
+          [a, n] = (0, i.useState)(!1);
+        return i.createElement(
           "div",
           null,
-          n
-            ? a.createElement(r.pT, null)
-            : a.createElement(r.wK, {
+          a
+            ? i.createElement(l.pT, null)
+            : i.createElement(l.wK, {
                 autoFocus: !0,
-                transport: i,
+                transport: s,
                 platform: 2,
                 onComplete: (e) => {
-                  e == c.TG.k_PrimaryDomainFail
-                    ? s(!0)
+                  e == d.TG.k_PrimaryDomainFail
+                    ? n(!0)
                     : window.location.assign(t);
                 },
                 redirectUrl: t,
@@ -153,43 +149,43 @@
         );
       }
     },
-    95082: (e, t, i) => {
+    95082: (e, t, s) => {
       "use strict";
-      i.d(t, { Z: () => r });
-      var a = i(47427),
-        n = i(58112),
-        s = i(25006),
-        o = i(8789);
-      function r(e) {
-        const { appID: t, children: i } = e,
-          r = (0, s.PZ)(),
-          l = a.useCallback(() => o.E.AddImpression(t, r), [t, r]);
-        return a.createElement(n.h, { onEnter: l }, i);
+      s.d(t, { Z: () => l });
+      var i = s(47427),
+        a = s(58112),
+        n = s(25006),
+        o = s(8789);
+      function l(e) {
+        const { appID: t, children: s } = e,
+          l = (0, n.PZ)(),
+          r = i.useCallback(() => o.E.AddImpression(t, l), [t, l]);
+        return i.createElement(a.h, { onEnter: r }, s);
       }
     },
-    8789: (e, t, i) => {
+    8789: (e, t, s) => {
       "use strict";
-      i.d(t, { E: () => c });
-      var a = i(85556),
-        n = i(77151),
-        s = i(37563),
-        o = i(46009),
-        r = i(60616);
-      class l {
+      s.d(t, { E: () => d });
+      var i = s(85556),
+        a = s(77151),
+        n = s(37563),
+        o = s(46009),
+        l = s(60616);
+      class r {
         constructor() {
           (this.m_mapAppToSNRs = new Map()), (this.m_rgImpressionsToAdd = []);
         }
         AddImpression(e, t) {
-          let i = !1;
-          n.jg.Get().BAppImpressionsAllowed()
+          let s = !1;
+          a.jg.Get().BAppImpressionsAllowed()
             ? (this.m_mapAppToSNRs.has(e)
                 ? -1 == this.m_mapAppToSNRs.get(e).indexOf(t) &&
-                  (this.m_mapAppToSNRs.get(e).push(t), (i = !0))
-                : (this.m_mapAppToSNRs.set(e, [t]), (i = !0)),
-              i &&
+                  (this.m_mapAppToSNRs.get(e).push(t), (s = !0))
+                : (this.m_mapAppToSNRs.set(e, [t]), (s = !0)),
+              s &&
                 (this.m_rgImpressionsToAdd.push(`${e}@${t}`),
                 this.UpdateCookie()))
-            : "dev" === s.De.WEB_UNIVERSE &&
+            : "dev" === n.De.WEB_UNIVERSE &&
               console.log("Cookie Prefs: Not allowing App Impressions");
         }
         UpdateCookie() {
@@ -202,77 +198,77 @@
             (0, o.I1)("app_impressions", e);
         }
       }
-      (0, a.gn)([(0, r.D)(1e3)], l.prototype, "UpdateCookie", null);
-      const c = new l();
-      window.g_ImpressionTracker = c;
+      (0, i.gn)([(0, l.D)(1e3)], r.prototype, "UpdateCookie", null);
+      const d = new r();
+      window.g_ImpressionTracker = d;
     },
-    67938: (e, t, i) => {
+    67938: (e, t, s) => {
       "use strict";
-      i.r(t), i.d(t, { default: () => O });
-      var a,
-        n = i(85556),
-        s = i(37563),
-        o = i(27605),
-        r = i(54842),
-        l = i(47427),
-        c = i(95082),
-        d = i(62613),
-        m = i(13129),
-        _ = i(31846),
-        p = i(20417),
-        u = i(94261),
-        g = i(93962),
-        h = i.n(g),
-        E = i(80751),
-        v = i.n(E);
+      s.r(t), s.d(t, { default: () => O });
+      var i,
+        a = s(85556),
+        n = s(37563),
+        o = s(27605),
+        l = s(54842),
+        r = s(47427),
+        d = s(95082),
+        c = s(62613),
+        m = s(13129),
+        p = s(31846),
+        u = s(20417),
+        h = s(94261),
+        g = s(93962),
+        _ = s.n(g),
+        E = s(80751),
+        T = s.n(E);
       !(function (e) {
         (e[(e.Unrequested = 0)] = "Unrequested"),
           (e[(e.Pending = 1)] = "Pending"),
           (e[(e.Valid = 2)] = "Valid"),
           (e[(e.Failed = 3)] = "Failed"),
           (e[(e.Rerequest = 4)] = "Rerequest");
-      })(a || (a = {}));
+      })(i || (i = {}));
       class S {
         constructor() {
           (this.data = void 0),
-            (this.eState = a.Unrequested),
+            (this.eState = i.Unrequested),
             (this.nExpirationTime = 0),
-            (0, r.rC)(this);
+            (0, l.rC)(this);
         }
-        getData(e, t, i) {
-          const n = this.eState == a.Pending || this.eState == a.Rerequest;
+        getData(e, t, s) {
+          const a = this.eState == i.Pending || this.eState == i.Rerequest;
           return (
             this.isExpired() &&
-              !n &&
-              ((this.eState = a.Pending),
+              !a &&
+              ((this.eState = i.Pending),
               t()
-                .then((n) => {
-                  if (this.eState == a.Rerequest)
-                    return this.expireData(), void this.getData(e, t, i);
-                  (this.data = i ? i(n) : n),
-                    n
-                      ? (this.delayNewData(e), (this.eState = a.Valid))
-                      : (this.eState = a.Failed);
+                .then((a) => {
+                  if (this.eState == i.Rerequest)
+                    return this.expireData(), void this.getData(e, t, s);
+                  (this.data = s ? s(a) : a),
+                    a
+                      ? (this.delayNewData(e), (this.eState = i.Valid))
+                      : (this.eState = i.Failed);
                 })
                 .catch((e) => {
-                  (this.data = i(void 0)), (this.eState = a.Failed);
+                  (this.data = s(void 0)), (this.eState = i.Failed);
                 })),
             this.data
           );
         }
         clearData() {
-          (this.eState = a.Unrequested),
+          (this.eState = i.Unrequested),
             (this.data = null),
             (this.nExpirationTime = 0);
         }
         setDataPending() {
-          this.eState = a.Pending;
+          this.eState = i.Pending;
         }
         isDataPending() {
-          return this.eState == a.Pending;
+          return this.eState == i.Pending;
         }
         setData(e, t) {
-          (this.data = t), this.delayNewData(e), (this.eState = a.Valid);
+          (this.data = t), this.delayNewData(e), (this.eState = i.Valid);
         }
         expireData() {
           this.nExpirationTime = 0;
@@ -289,19 +285,19 @@
           }
         }
         rerequestDataIfPending() {
-          this.eState == a.Pending && (this.eState = a.Rerequest);
+          this.eState == i.Pending && (this.eState = i.Rerequest);
         }
         getCachedData() {
           return this.data;
         }
       }
-      (0, n.gn)([r.LO], S.prototype, "data", void 0),
-        (0, n.gn)([r.LO], S.prototype, "nExpirationTime", void 0);
-      (0, n.gn)(
-        [r.LO],
+      (0, a.gn)([l.LO], S.prototype, "data", void 0),
+        (0, a.gn)([l.LO], S.prototype, "nExpirationTime", void 0);
+      (0, a.gn)(
+        [l.LO],
         class {
           constructor() {
-            (this.m_mapKeyToDataWrapper = new Map()), (0, r.rC)(this);
+            (this.m_mapKeyToDataWrapper = new Map()), (0, l.rC)(this);
           }
           getAsyncDataWrapper(e) {
             let t;
@@ -325,17 +321,17 @@
           getAllElementsAndKeys() {
             let e = [],
               t = this.m_mapKeyToDataWrapper.entries(),
-              i = t.next();
-            for (; !i.done; )
-              e.push({ key: i.value[0], data: i.value[1].getCachedData() }),
-                (i = t.next());
+              s = t.next();
+            for (; !s.done; )
+              e.push({ key: s.value[0], data: s.value[1].getCachedData() }),
+                (s = t.next());
             return e;
           }
         }.prototype,
         "m_mapKeyToDataWrapper",
         void 0,
       );
-      let T = {
+      let v = {
         EUNIVERSE: 0,
         WEB_UNIVERSE: "",
         LANGUAGE: "english",
@@ -372,13 +368,13 @@
         EXCLUDE_WISHLIST: !1,
         USE_MICROTRAILERS: !1,
       };
-      var R;
+      var y;
       !(function (e) {
         (e[(e.ClickThrough = 1)] = "ClickThrough"),
           (e[(e.AddToWishlist = 2)] = "AddToWishlist"),
           (e[(e.AddToCart = 3)] = "AddToCart");
-      })(R || (R = {}));
-      class y {
+      })(y || (y = {}));
+      class R {
         constructor() {
           (this.m_fPopularityValue = void 0),
             (this.m_fRecencyValue = void 0),
@@ -397,7 +393,7 @@
             (this.m_InputAppsCache = new S()),
             (this.m_TagsCache = new S()),
             (this.m_TagNameMap = new Map()),
-            (0, r.rC)(this),
+            (0, l.rC)(this),
             (this.m_fPopularityValue = window.history.state
               ? window.history.state.popularity
               : 0.25),
@@ -433,18 +429,18 @@
             }, 400);
         }
         Init() {
-          (this.m_fPopularityValue = T.DEFAULT_POPULARITY_SLIDER),
-            (this.m_fRecencyValue = T.DEFAULT_RECENCY_SLIDER),
-            (this.m_rgSavedExcludeTags = [...T.DEFAULT_EXCLUDED_TAGS]),
-            (this.m_rgSavedFilterTags = [...T.DEFAULT_INCLUDED_TAGS]),
+          (this.m_fPopularityValue = v.DEFAULT_POPULARITY_SLIDER),
+            (this.m_fRecencyValue = v.DEFAULT_RECENCY_SLIDER),
+            (this.m_rgSavedExcludeTags = [...v.DEFAULT_EXCLUDED_TAGS]),
+            (this.m_rgSavedFilterTags = [...v.DEFAULT_INCLUDED_TAGS]),
             (this.m_rgExcludeTags = [...this.m_rgSavedExcludeTags]),
             (this.m_rgFilterTags = [...this.m_rgSavedFilterTags]),
             (this.m_fQueuedPopularityValue = this.m_fPopularityValue),
             (this.m_fQueuedRecencyValue = this.m_fRecencyValue),
             (this.m_bExcludeWishlisted = !1),
             (this.m_bStateUpdated = !0),
-            (this.m_bExcludeWishlisted = T.EXCLUDE_WISHLIST),
-            (this.m_bUseMicrotrailers = T.USE_MICROTRAILERS);
+            (this.m_bExcludeWishlisted = v.EXCLUDE_WISHLIST),
+            (this.m_bUseMicrotrailers = v.USE_MICROTRAILERS);
         }
         getDetails(e) {
           return (
@@ -453,35 +449,35 @@
             this.m_mapAppDetailsCache.get(e).getData(
               60,
               () =>
-                (0, n.mG)(this, void 0, void 0, function* () {
-                  return yield v().get(
-                    `${T.BASE_URL}recommender/${T.STEAM_ID}/details?appid=${e}&sessionid=${T.SESSION_ID}`,
+                (0, a.mG)(this, void 0, void 0, function* () {
+                  return yield T().get(
+                    `${v.BASE_URL}recommender/${v.STEAM_ID}/details?appid=${e}&sessionid=${v.SESSION_ID}`,
                   );
                 }),
               (e) => e.data,
             )
           );
         }
-        getResults(e, t, i, a) {
-          const s = e ? "1" : "0",
+        getResults(e, t, s, i) {
+          const n = e ? "1" : "0",
             o = t ? `${t}` : "0",
-            r = i ? "1" : "0",
-            l = a ? `${a}` : "0";
-          let c = "";
-          const d = this.getInputApps();
-          if (!d) return;
+            l = s ? "1" : "0",
+            r = i ? `${i}` : "0";
+          let d = "";
+          const c = this.getInputApps();
+          if (!c) return;
           let m = [];
           return (
-            Object.keys(d).map((e) => {
-              (d[e].i || d[e].ip) && m.push(d[e].a);
+            Object.keys(c).map((e) => {
+              (c[e].i || c[e].ip) && m.push(c[e].a);
             }),
-            m.length > 0 && (c = "&ignored=" + m.join()),
+            m.length > 0 && (d = "&ignored=" + m.join()),
             this.m_ResultDataCache.getData(
               9999999,
               () =>
-                (0, n.mG)(this, void 0, void 0, function* () {
-                  return yield v().get(
-                    `${T.BASE_URL}recommender/${T.STEAM_ID}/results?sessionid=${T.SESSION_ID}&steamid=${T.STEAM_ID}&include_played=${s}&algorithm=${o}&reinference=${r}&model_version=${l}${c}`,
+                (0, a.mG)(this, void 0, void 0, function* () {
+                  return yield T().get(
+                    `${v.BASE_URL}recommender/${v.STEAM_ID}/results?sessionid=${v.SESSION_ID}&steamid=${v.STEAM_ID}&include_played=${n}&algorithm=${o}&reinference=${l}&model_version=${r}${d}`,
                   );
                 }),
               (e) => (
@@ -505,10 +501,10 @@
         }
         getRecommendations() {
           const e = f.getResults(
-            T.INCLUDE_PLAYED,
-            T.ALGORITHM,
-            T.REINFERENCE,
-            T.MODEL_VERSION,
+            v.INCLUDE_PLAYED,
+            v.ALGORITHM,
+            v.REINFERENCE,
+            v.MODEL_VERSION,
           );
           return e ? e.recommendations : void 0;
         }
@@ -516,9 +512,9 @@
           return this.m_InputAppsCache.getData(
             9999999,
             () =>
-              (0, n.mG)(this, void 0, void 0, function* () {
-                return yield v().get(
-                  `${T.BASE_URL}recommender/${T.STEAM_ID}/inputs?sessionid=${T.SESSION_ID}&steamid=${T.STEAM_ID}`,
+              (0, a.mG)(this, void 0, void 0, function* () {
+                return yield T().get(
+                  `${v.BASE_URL}recommender/${v.STEAM_ID}/inputs?sessionid=${v.SESSION_ID}&steamid=${v.STEAM_ID}`,
                 );
               }),
             (e) => e.data,
@@ -526,10 +522,10 @@
         }
         getAppInfo() {
           const e = f.getResults(
-            T.INCLUDE_PLAYED,
-            T.ALGORITHM,
-            T.REINFERENCE,
-            T.MODEL_VERSION,
+            v.INCLUDE_PLAYED,
+            v.ALGORITHM,
+            v.REINFERENCE,
+            v.MODEL_VERSION,
           );
           return e ? e.app_info : void 0;
         }
@@ -537,9 +533,9 @@
           return this.m_TagsCache.getData(
             9999999,
             () =>
-              (0, n.mG)(this, void 0, void 0, function* () {
-                return yield v().get(
-                  `${T.BASE_URL}recommender/${T.STEAM_ID}/tags?sessionid=${T.SESSION_ID}`,
+              (0, a.mG)(this, void 0, void 0, function* () {
+                return yield T().get(
+                  `${v.BASE_URL}recommender/${v.STEAM_ID}/tags?sessionid=${v.SESSION_ID}`,
                 );
               }),
             (e) => {
@@ -601,24 +597,24 @@
             (this.m_bStateUpdated = !0);
         }
         onSaveUserSettings(e) {
-          return (0, n.mG)(this, void 0, void 0, function* () {
+          return (0, a.mG)(this, void 0, void 0, function* () {
             let e = [];
             const t = this.getInputApps();
-            for (let i of t) (i.i || i.ip) && e.push(i.a);
+            for (let s of t) (s.i || s.ip) && e.push(s.a);
             if (
-              this.m_fRecencyValue == T.DEFAULT_RECENCY_SLIDER &&
-              this.m_fPopularityValue == T.DEFAULT_POPULARITY_SLIDER &&
+              this.m_fRecencyValue == v.DEFAULT_RECENCY_SLIDER &&
+              this.m_fPopularityValue == v.DEFAULT_POPULARITY_SLIDER &&
               this.m_rgFilterTags.slice().sort().join(",") ===
                 this.m_rgSavedFilterTags.sort().join(",") &&
               this.m_rgExcludeTags.slice().sort().join(",") ===
                 this.m_rgSavedExcludeTags.sort().join(",") &&
               e.slice().sort().join(",") ===
-                T.DEFAULT_IGNORED_PLAYED_APPS.sort().join(",") &&
-              this.m_bExcludeWishlisted == T.EXCLUDE_WISHLIST
+                v.DEFAULT_IGNORED_PLAYED_APPS.sort().join(",") &&
+              this.m_bExcludeWishlisted == v.EXCLUDE_WISHLIST
             );
             else {
               let t = {
-                session_id: T.SESSION_ID,
+                session_id: v.SESSION_ID,
                 recency_position: this.m_fRecencyValue,
                 popularity_position: this.m_fPopularityValue,
                 included_tags: this.m_rgFilterTags,
@@ -626,27 +622,27 @@
                 ignored_played_apps: e,
                 exclude_wishlist: this.m_bExcludeWishlisted,
               };
-              (T.DEFAULT_RECENCY_SLIDER = this.m_fRecencyValue),
-                (T.DEFAULT_POPULARITY_SLIDER = this.m_fPopularityValue),
-                (T.DEFAULT_INCLUDED_TAGS = [...this.m_rgFilterTags]),
-                (T.DEFAULT_EXCLUDED_TAGS = [...this.m_rgExcludeTags]),
+              (v.DEFAULT_RECENCY_SLIDER = this.m_fRecencyValue),
+                (v.DEFAULT_POPULARITY_SLIDER = this.m_fPopularityValue),
+                (v.DEFAULT_INCLUDED_TAGS = [...this.m_rgFilterTags]),
+                (v.DEFAULT_EXCLUDED_TAGS = [...this.m_rgExcludeTags]),
                 (this.m_rgSavedFilterTags = [...this.m_rgFilterTags]),
                 (this.m_rgSavedExcludeTags = [...this.m_rgExcludeTags]),
-                (T.DEFAULT_IGNORED_PLAYED_APPS = [...e]),
-                (T.EXCLUDE_WISHLIST = this.m_bExcludeWishlisted),
-                yield v().post(
-                  `${T.BASE_URL}recommender/${T.STEAM_ID}/savesettings`,
+                (v.DEFAULT_IGNORED_PLAYED_APPS = [...e]),
+                (v.EXCLUDE_WISHLIST = this.m_bExcludeWishlisted),
+                yield T().post(
+                  `${v.BASE_URL}recommender/${v.STEAM_ID}/savesettings`,
                   t,
                 );
             }
           });
         }
         onToggleIgnore(e) {
-          return (0, n.mG)(this, void 0, void 0, function* () {
+          return (0, a.mG)(this, void 0, void 0, function* () {
             const t = this.getInputApps();
-            for (let i of t)
-              if (i.a == e) {
-                i.i || i.ip ? ((i.i = !1), (i.ip = !1)) : (i.ip = !0);
+            for (let s of t)
+              if (s.a == e) {
+                s.i || s.ip ? ((s.i = !1), (s.ip = !1)) : (s.ip = !0);
                 break;
               }
             this.m_ResultDataCache.expireData(), (this.m_bIgnoredEdited = !0);
@@ -656,51 +652,51 @@
           this.m_ResultDataCache.expireData(), (this.m_bIgnoredEdited = !1);
         }
         onAddToWishlist(e, t) {
-          return (0, n.mG)(this, void 0, void 0, function* () {
+          return (0, a.mG)(this, void 0, void 0, function* () {
             f.getAppInfo()[e].w = !0;
-            let i = { sessionid: T.SESSION_ID, appid: e };
-            const a = yield v().post(
-              `${T.BASE_URL}recommender/${T.STEAM_ID}/wishlist?snr=${T.LINK_PARAM}`,
-              i,
+            let s = { sessionid: v.SESSION_ID, appid: e };
+            const i = yield T().post(
+              `${v.BASE_URL}recommender/${v.STEAM_ID}/wishlist?snr=${v.LINK_PARAM}`,
+              s,
             );
-            let n = {
-              account_id: T.ACCOUNT_ID,
-              session_id: T.SESSION_ID,
+            let a = {
+              account_id: v.ACCOUNT_ID,
+              session_id: v.SESSION_ID,
               app_id: e,
               app_rank: t,
-              action: R.AddToWishlist,
+              action: y.AddToWishlist,
               algorithm: 1,
               setting_1: 100 * this.m_fPopularityValue,
               setting_2: 100 * this.m_fRecencyValue,
             };
             return (
-              yield v().post(`${T.BASE_URL}recommender/${T.STEAM_ID}/stats`, n),
-              a
+              yield T().post(`${v.BASE_URL}recommender/${v.STEAM_ID}/stats`, a),
+              i
             );
           });
         }
         onGoToWishlist() {
-          window.location.href = `${T.COMMUNITY_BASE_URL}profiles/${T.STEAM_ID}/wishlist`;
+          window.location.href = `${v.COMMUNITY_BASE_URL}profiles/${v.STEAM_ID}/wishlist`;
         }
         onAddToCart(e, t) {
-          return (0, n.mG)(this, void 0, void 0, function* () {
-            let i = { sessionid: T.SESSION_ID, appid: e };
-            yield v().post(
-              `${T.BASE_URL}recommender/${T.STEAM_ID}/cart?snr=${T.LINK_PARAM}`,
-              i,
+          return (0, a.mG)(this, void 0, void 0, function* () {
+            let s = { sessionid: v.SESSION_ID, appid: e };
+            yield T().post(
+              `${v.BASE_URL}recommender/${v.STEAM_ID}/cart?snr=${v.LINK_PARAM}`,
+              s,
             );
-            let a = {
-              account_id: T.ACCOUNT_ID,
-              session_id: T.SESSION_ID,
+            let i = {
+              account_id: v.ACCOUNT_ID,
+              session_id: v.SESSION_ID,
               app_id: e,
               app_rank: t,
-              action: R.AddToCart,
+              action: y.AddToCart,
               algorithm: 1,
               setting_1: 100 * this.m_fPopularityValue,
               setting_2: 100 * this.m_fRecencyValue,
             };
-            yield v().post(`${T.BASE_URL}recommender/${T.STEAM_ID}/stats`, a),
-              (window.location.href = `${s.De.STORE_BASE_URL}cart`);
+            yield T().post(`${v.BASE_URL}recommender/${v.STEAM_ID}/stats`, i),
+              (window.location.href = `${n.De.STORE_BASE_URL}cart`);
           });
         }
         onMuteClicked() {
@@ -716,127 +712,127 @@
           return this.m_bUseMicrotrailers;
         }
       }
-      (0, n.gn)([r.LO], y.prototype, "m_fPopularityValue", void 0),
-        (0, n.gn)([r.LO], y.prototype, "m_fRecencyValue", void 0),
-        (0, n.gn)([r.LO], y.prototype, "m_rgFilterTags", void 0),
-        (0, n.gn)([r.LO], y.prototype, "m_rgExcludeTags", void 0),
-        (0, n.gn)([r.LO], y.prototype, "m_fQueuedPopularityValue", void 0),
-        (0, n.gn)([r.LO], y.prototype, "m_fQueuedRecencyValue", void 0),
-        (0, n.gn)([r.LO], y.prototype, "m_bExcludeWishlisted", void 0),
-        (0, n.gn)([r.LO], y.prototype, "m_bShouldMute", void 0),
-        (0, n.gn)([r.LO], y.prototype, "m_bUseMicrotrailers", void 0),
-        (0, n.gn)([r.LO], y.prototype, "m_bIgnoredEdited", void 0),
-        (0, n.gn)([p.ak], y.prototype, "getTagHeight", null),
-        (0, n.gn)([p.ak], y.prototype, "onPopularityChanged", null),
-        (0, n.gn)([p.ak], y.prototype, "onRecencyChanged", null),
-        (0, n.gn)([p.ak], y.prototype, "onTagFilterAdd", null),
-        (0, n.gn)([p.ak], y.prototype, "onTagFilterRemove", null),
-        (0, n.gn)([p.ak], y.prototype, "onTagExcludeAdd", null),
-        (0, n.gn)([p.ak], y.prototype, "onTagExcludeRemove", null),
-        (0, n.gn)([p.ak], y.prototype, "doTagsPassFilter", null),
-        (0, n.gn)([p.ak], y.prototype, "doTagsFailExclusion", null),
-        (0, n.gn)([p.ak], y.prototype, "onExcludeWishlistedToggled", null),
-        (0, n.gn)([p.ak], y.prototype, "onSaveUserSettings", null),
-        (0, n.gn)([p.ak], y.prototype, "onToggleIgnore", null),
-        (0, n.gn)([p.ak], y.prototype, "onUpdateWithIgnored", null),
-        (0, n.gn)([p.ak], y.prototype, "onAddToWishlist", null),
-        (0, n.gn)([p.ak], y.prototype, "onGoToWishlist", null),
-        (0, n.gn)([p.ak], y.prototype, "onAddToCart", null),
-        (0, n.gn)([p.ak], y.prototype, "onMuteClicked", null),
-        (0, n.gn)([p.ak], y.prototype, "onUnMuteClicked", null),
-        (0, n.gn)([p.ak], y.prototype, "shouldMute", null),
-        (0, n.gn)([p.ak], y.prototype, "shouldUseMicrotrailers", null);
-      const f = new y();
+      (0, a.gn)([l.LO], R.prototype, "m_fPopularityValue", void 0),
+        (0, a.gn)([l.LO], R.prototype, "m_fRecencyValue", void 0),
+        (0, a.gn)([l.LO], R.prototype, "m_rgFilterTags", void 0),
+        (0, a.gn)([l.LO], R.prototype, "m_rgExcludeTags", void 0),
+        (0, a.gn)([l.LO], R.prototype, "m_fQueuedPopularityValue", void 0),
+        (0, a.gn)([l.LO], R.prototype, "m_fQueuedRecencyValue", void 0),
+        (0, a.gn)([l.LO], R.prototype, "m_bExcludeWishlisted", void 0),
+        (0, a.gn)([l.LO], R.prototype, "m_bShouldMute", void 0),
+        (0, a.gn)([l.LO], R.prototype, "m_bUseMicrotrailers", void 0),
+        (0, a.gn)([l.LO], R.prototype, "m_bIgnoredEdited", void 0),
+        (0, a.gn)([u.ak], R.prototype, "getTagHeight", null),
+        (0, a.gn)([u.ak], R.prototype, "onPopularityChanged", null),
+        (0, a.gn)([u.ak], R.prototype, "onRecencyChanged", null),
+        (0, a.gn)([u.ak], R.prototype, "onTagFilterAdd", null),
+        (0, a.gn)([u.ak], R.prototype, "onTagFilterRemove", null),
+        (0, a.gn)([u.ak], R.prototype, "onTagExcludeAdd", null),
+        (0, a.gn)([u.ak], R.prototype, "onTagExcludeRemove", null),
+        (0, a.gn)([u.ak], R.prototype, "doTagsPassFilter", null),
+        (0, a.gn)([u.ak], R.prototype, "doTagsFailExclusion", null),
+        (0, a.gn)([u.ak], R.prototype, "onExcludeWishlistedToggled", null),
+        (0, a.gn)([u.ak], R.prototype, "onSaveUserSettings", null),
+        (0, a.gn)([u.ak], R.prototype, "onToggleIgnore", null),
+        (0, a.gn)([u.ak], R.prototype, "onUpdateWithIgnored", null),
+        (0, a.gn)([u.ak], R.prototype, "onAddToWishlist", null),
+        (0, a.gn)([u.ak], R.prototype, "onGoToWishlist", null),
+        (0, a.gn)([u.ak], R.prototype, "onAddToCart", null),
+        (0, a.gn)([u.ak], R.prototype, "onMuteClicked", null),
+        (0, a.gn)([u.ak], R.prototype, "onUnMuteClicked", null),
+        (0, a.gn)([u.ak], R.prototype, "shouldMute", null),
+        (0, a.gn)([u.ak], R.prototype, "shouldUseMicrotrailers", null);
+      const f = new R();
       window.g_InteractiveRecommender = f;
-      var L = i(80212),
-        I = i(25006);
+      var L = s(80212),
+        A = s(25006);
       !(function () {
-        let e = (0, s.kQ)("ir_config", "application_config");
-        e && (Object.assign(T, e), f.Init());
+        let e = (0, n.kQ)("ir_config", "application_config");
+        e && (Object.assign(v, e), f.Init());
       })();
-      const N = ({ accountID: e }) => {
+      const I = ({ accountID: e }) => {
           const t = f.getInputApps(),
-            i = Object.keys(t).length;
-          let a = 0;
+            s = Object.keys(t).length;
+          let i = 0;
           return (
             Object.keys(t).map((e) => {
-              a += t[e].p;
+              i += t[e].p;
             }),
-            l.createElement(
+            r.createElement(
               "div",
-              { className: u.IdentityBlock },
-              l.createElement("img", {
-                className: u.Avatar,
-                src: T.AVATAR_URL,
+              { className: h.IdentityBlock },
+              r.createElement("img", {
+                className: h.Avatar,
+                src: v.AVATAR_URL,
               }),
-              l.createElement(
+              r.createElement(
                 "div",
-                { className: u.PersonalInfo },
-                l.createElement(
+                { className: h.PersonalInfo },
+                r.createElement(
                   "div",
-                  { className: u.Persona },
-                  T.PERSONA_NAME,
+                  { className: h.Persona },
+                  v.PERSONA_NAME,
                 ),
-                l.createElement(
+                r.createElement(
                   "div",
-                  { className: u.GameCount },
-                  (0, _.Xx)("#PlaytimeList_RecentGames", i),
+                  { className: h.GameCount },
+                  (0, p.Xx)("#PlaytimeList_RecentGames", s),
                 ),
-                l.createElement(
+                r.createElement(
                   "div",
-                  { className: u.TotalTime },
-                  (0, _.Xx)("#PlaytimeList_HoursTotal", a),
+                  { className: h.TotalTime },
+                  (0, p.Xx)("#PlaytimeList_HoursTotal", i),
                 ),
               ),
             )
           );
         },
-        A = ({ appID: e, name: t, hours: i, lastPlayed: a, ignored: n }) => {
-          const s = `${T.CDN_URL}apps/${e}/header.jpg`,
-            o = Date.now() / 1e3 - a;
-          let r = "",
-            c = "";
+        N = ({ appID: e, name: t, hours: s, lastPlayed: i, ignored: a }) => {
+          const n = `${v.CDN_URL}apps/${e}/header.jpg`,
+            o = Date.now() / 1e3 - i;
+          let l = "",
+            d = "";
           return (
-            a <= 86400
-              ? (c = (0, _.Xx)("#PlaytimeList_LastPlayedMax"))
+            i <= 86400
+              ? (d = (0, p.Xx)("#PlaytimeList_LastPlayedMax"))
               : o > 31449600
-              ? ((r = (0, _.vX)(a)),
-                (c = (0, _.Xx)("#PlaytimeList_LastPlayed", r)))
-              : ((r = (0, _.yW)(o)),
-                (c = (0, _.Xx)("#PlaytimeList_LastPlayed", r))),
-            l.createElement(
+              ? ((l = (0, p.vX)(i)),
+                (d = (0, p.Xx)("#PlaytimeList_LastPlayed", l)))
+              : ((l = (0, p.yW)(o)),
+                (d = (0, p.Xx)("#PlaytimeList_LastPlayed", l))),
+            r.createElement(
               "div",
-              { className: (0, m.Z)(u.PlayedGame, n && u.Ignored) },
-              l.createElement(
+              { className: (0, m.Z)(h.PlayedGame, a && h.Ignored) },
+              r.createElement(
                 "a",
-                { href: `${T.BASE_URL}app/${e}?snr=${T.LINK_PARAM}` },
-                l.createElement("img", { className: u.Logo, src: s }),
+                { href: `${v.BASE_URL}app/${e}?snr=${v.LINK_PARAM}` },
+                r.createElement("img", { className: h.Logo, src: n }),
               ),
-              l.createElement(
+              r.createElement(
                 "div",
-                { className: u.PlaytimeInfo },
-                l.createElement(
+                { className: h.PlaytimeInfo },
+                r.createElement(
                   "div",
-                  { className: u.HoursPlayed },
-                  (0, _.Xx)("#PlaytimeList_Hours", i),
+                  { className: h.HoursPlayed },
+                  (0, p.Xx)("#PlaytimeList_Hours", s),
                 ),
-                l.createElement("div", { className: u.Title }, t),
-                l.createElement("div", { className: u.LastPlayed }, c),
-                l.createElement(
+                r.createElement("div", { className: h.Title }, t),
+                r.createElement("div", { className: h.LastPlayed }, d),
+                r.createElement(
                   "div",
                   {
-                    className: u.IgnoreToggle,
+                    className: h.IgnoreToggle,
                     onClick: () => f.onToggleIgnore(e),
                   },
-                  (0, _.Xx)(
-                    n ? "#PlaytimeList_UnIgnore" : "#PlaytimeList_Ignore",
+                  (0, p.Xx)(
+                    a ? "#PlaytimeList_UnIgnore" : "#PlaytimeList_Ignore",
                   ),
                 ),
               ),
             )
           );
         };
-      let D = class extends l.Component {
+      let D = class extends r.Component {
         constructor(e) {
           super(e), (this.state = {});
         }
@@ -844,100 +840,100 @@
           const e = f.getInputApps();
           let t = [];
           if (!e)
-            return l.createElement(
+            return r.createElement(
               "div",
-              { className: u.PlaytimeList },
-              l.createElement(
+              { className: h.PlaytimeList },
+              r.createElement(
                 "div",
-                { className: u.Header },
-                (0, _.Xx)("#PlaytimeList_Header"),
+                { className: h.Header },
+                (0, p.Xx)("#PlaytimeList_Header"),
               ),
-              l.createElement("div", { className: u.Loading }),
+              r.createElement("div", { className: h.Loading }),
             );
           f.getAppInfo();
-          const i = e.slice().sort((e, t) => t.l - e.l);
+          const s = e.slice().sort((e, t) => t.l - e.l);
           return (
-            Object.keys(i).map((e) => {
-              const a = i[e];
+            Object.keys(s).map((e) => {
+              const i = s[e];
               t.push(
-                l.createElement(A, {
-                  key: "PlayedGame_" + a.a,
-                  appID: a.a,
-                  name: a.t,
-                  hours: a.p,
-                  lastPlayed: a.l,
-                  ignored: a.i || a.ip,
+                r.createElement(N, {
+                  key: "PlayedGame_" + i.a,
+                  appID: i.a,
+                  name: i.t,
+                  hours: i.p,
+                  lastPlayed: i.l,
+                  ignored: i.i || i.ip,
                 }),
               );
             }),
-            l.createElement(
+            r.createElement(
               "div",
-              { className: u.PlaytimeList },
-              l.createElement(
+              { className: h.PlaytimeList },
+              r.createElement(
                 "div",
-                { className: u.Header },
-                (0, _.Xx)("#PlaytimeList_Header"),
+                { className: h.Header },
+                (0, p.Xx)("#PlaytimeList_Header"),
               ),
-              l.createElement(N, { accountID: this.props.accountID }),
-              l.createElement("div", { className: u.List }, t),
+              r.createElement(I, { accountID: this.props.accountID }),
+              r.createElement("div", { className: h.List }, t),
             )
           );
         }
       };
-      D = (0, n.gn)([o.Pi], D);
+      D = (0, a.gn)([o.Pi], D);
       const C = ({
           titleLabel: e,
           minLabel: t,
-          maxLabel: i,
-          minValue: a,
-          maxValue: n,
-          value: s,
+          maxLabel: s,
+          minValue: i,
+          maxValue: a,
+          value: n,
           onChange: o,
-          sliderLabels: r,
+          sliderLabels: l,
         }) => {
-          const c = r
-              ? Math.round((r.length - 1) * ((s - a) / (n - a)))
+          const d = l
+              ? Math.round((l.length - 1) * ((n - i) / (a - i)))
               : void 0,
-            d = r ? r[c] : "";
-          return l.createElement(
+            c = l ? l[d] : "";
+          return r.createElement(
             "div",
-            { className: u.OptionSlider },
-            l.createElement("div", { className: u.Title }, e),
-            l.createElement(
+            { className: h.OptionSlider },
+            r.createElement("div", { className: h.Title }, e),
+            r.createElement(
               "div",
-              { className: u.Labels },
-              l.createElement("div", { className: u.Min }, t),
-              l.createElement("div", { className: u.Max }, i),
+              { className: h.Labels },
+              r.createElement("div", { className: h.Min }, t),
+              r.createElement("div", { className: h.Max }, s),
             ),
-            l.createElement("input", {
+            r.createElement("input", {
               type: "range",
-              min: a,
-              max: n,
-              step: (n - a) / 100,
-              value: s,
+              min: i,
+              max: a,
+              step: (a - i) / 100,
+              value: n,
               onChange: o,
             }),
-            l.createElement("div", { className: u.OptionalLabel }, d),
+            r.createElement("div", { className: h.OptionalLabel }, c),
           );
         },
-        x = ({ className: e, titleLabel: t, checked: i, onChange: a }) =>
-          l.createElement(
+        x = ({ className: e, titleLabel: t, checked: s, onChange: i }) =>
+          r.createElement(
             "label",
-            { className: (0, m.Z)(u.OptionCheckbox, e && e) },
-            l.createElement("input", {
+            { className: (0, m.Z)(h.OptionCheckbox, e && e) },
+            r.createElement("input", {
               type: "checkbox",
-              className: u.Checkbox,
-              checked: i,
-              onChange: a,
+              className: h.Checkbox,
+              checked: s,
+              onChange: i,
             }),
             t,
           );
-      let P = class extends l.Component {
+      let P = class extends r.Component {
         constructor(e) {
           super(e),
             (this.selectedtags = []),
             (this.rgTags = []),
-            (0, r.rC)(this),
+            (0, l.rC)(this),
             (this.selectedtags = [...e.selectedtags]),
             (this.state = { value: "", suggestions: [] });
         }
@@ -949,14 +945,14 @@
         }
         onFetchRequested(e) {
           const t = e.value.trim().toLowerCase(),
-            i = t.length,
-            a =
-              0 === i
+            s = t.length,
+            i =
+              0 === s
                 ? this.props.tagoptions.slice(0, 10)
                 : this.props.tagoptions.filter(
-                    (e) => e.name.toLowerCase().slice(0, i) === t,
+                    (e) => e.name.toLowerCase().slice(0, s) === t,
                   );
-          this.setState({ suggestions: a });
+          this.setState({ suggestions: i });
         }
         onClearRequested() {}
         onChange(e, t) {
@@ -966,14 +962,14 @@
           if (13 == e.keyCode)
             for (const t of this.props.tagoptions)
               if (t.name.toLowerCase() == this.state.value.toLowerCase()) {
-                const i = {
+                const s = {
                   suggestion: { id: t.id, name: t.name },
                   suggestionValue: t.name,
                   suggestionIndex: 0,
                   sectionIndex: 0,
                   method: "enter",
                 };
-                this.onSuggestionSelected(e, i);
+                this.onSuggestionSelected(e, s);
                 break;
               }
         }
@@ -995,142 +991,142 @@
         }
         render() {
           const e = {
-            placeholder: (0, _.Xx)("#TagSelect"),
+            placeholder: (0, p.Xx)("#TagSelect"),
             value: this.state.value,
             onChange: this.onChange,
             onKeyDown: this.onKeyDown,
           };
           let t = [];
           for (const e of this.selectedtags) {
-            let i = f.m_TagNameMap.get(e);
+            let s = f.m_TagNameMap.get(e);
             t.push(
-              l.createElement(
+              r.createElement(
                 "div",
                 {
                   key: e,
-                  className: u.SelectedTag,
+                  className: h.SelectedTag,
                   onClick: (t) => this.onRemoveSelectedTag(e),
                 },
-                l.createElement("div", null, i),
-                l.createElement("div", { className: u.Close }, "X"),
+                r.createElement("div", null, s),
+                r.createElement("div", { className: h.Close }, "X"),
               ),
             );
           }
-          return l.createElement(
+          return r.createElement(
             "div",
-            { className: u.OptionTagList },
-            l.createElement("div", { className: u.Label }, this.props.title),
-            l.createElement(h(), {
+            { className: h.OptionTagList },
+            r.createElement("div", { className: h.Label }, this.props.title),
+            r.createElement(_(), {
               suggestions: this.state.suggestions,
               onSuggestionsFetchRequested: this.onFetchRequested,
               onSuggestionsClearRequested: this.onClearRequested,
               onSuggestionSelected: this.onSuggestionSelected,
               shouldRenderSuggestions: this.shouldRenderSuggestions,
               getSuggestionValue: (e) => e.name,
-              renderSuggestion: (e) => l.createElement("div", null, e.name),
+              renderSuggestion: (e) => r.createElement("div", null, e.name),
               inputProps: e,
               theme: {
-                input: u.SuggestionInput,
-                suggestion: u.OptionSuggestion,
-                suggestionsList: u.SuggestionsList,
-                suggestionsContainerOpen: u.SuggestionContainerOpen,
+                input: h.SuggestionInput,
+                suggestion: h.OptionSuggestion,
+                suggestionsList: h.SuggestionsList,
+                suggestionsContainerOpen: h.SuggestionContainerOpen,
               },
             }),
             t,
           );
         }
       };
-      (0, n.gn)([r.LO], P.prototype, "selectedtags", void 0),
-        (0, n.gn)([p.ak], P.prototype, "onFetchRequested", null),
-        (0, n.gn)([p.ak], P.prototype, "onClearRequested", null),
-        (0, n.gn)([p.ak], P.prototype, "onChange", null),
-        (0, n.gn)([p.ak], P.prototype, "onKeyDown", null),
-        (0, n.gn)([p.ak], P.prototype, "shouldRenderSuggestions", null),
-        (0, n.gn)([p.ak], P.prototype, "onSuggestionSelected", null),
-        (0, n.gn)([p.ak], P.prototype, "onRemoveSelectedTag", null),
-        (P = (0, n.gn)([o.Pi], P));
+      (0, a.gn)([l.LO], P.prototype, "selectedtags", void 0),
+        (0, a.gn)([u.ak], P.prototype, "onFetchRequested", null),
+        (0, a.gn)([u.ak], P.prototype, "onClearRequested", null),
+        (0, a.gn)([u.ak], P.prototype, "onChange", null),
+        (0, a.gn)([u.ak], P.prototype, "onKeyDown", null),
+        (0, a.gn)([u.ak], P.prototype, "shouldRenderSuggestions", null),
+        (0, a.gn)([u.ak], P.prototype, "onSuggestionSelected", null),
+        (0, a.gn)([u.ak], P.prototype, "onRemoveSelectedTag", null),
+        (P = (0, a.gn)([o.Pi], P));
       const U = (0, o.Pi)(() => {
         const e = f.getTags();
         let t = [];
         if (e)
-          for (const i of e) t.push({ id: parseInt(i.tagid), name: i.name });
-        const i = [
-          (0, _.Xx)("#FilterAge_240"),
-          (0, _.Xx)("#FilterAge_60"),
-          (0, _.Xx)("#FilterAge_36"),
-          (0, _.Xx)("#FilterAge_24"),
-          (0, _.Xx)("#FilterAge_12"),
-          (0, _.Xx)("#FilterAge_6"),
+          for (const s of e) t.push({ id: parseInt(s.tagid), name: s.name });
+        const s = [
+          (0, p.Xx)("#FilterAge_240"),
+          (0, p.Xx)("#FilterAge_60"),
+          (0, p.Xx)("#FilterAge_36"),
+          (0, p.Xx)("#FilterAge_24"),
+          (0, p.Xx)("#FilterAge_12"),
+          (0, p.Xx)("#FilterAge_6"),
         ];
-        let a = f.m_rgSavedExcludeTags,
-          n = f.m_rgSavedFilterTags;
-        return l.createElement(
+        let i = f.m_rgSavedExcludeTags,
+          a = f.m_rgSavedFilterTags;
+        return r.createElement(
           "div",
-          { className: u.RecommendationOptions },
-          l.createElement(
+          { className: h.RecommendationOptions },
+          r.createElement(
             "div",
-            { className: (0, m.Z)(u.Row, u.FirstRow) },
-            l.createElement(C, {
-              minLabel: (0, _.Xx)("#Popularity_Popular"),
-              titleLabel: (0, _.Xx)("#Popularity_Title"),
-              maxLabel: (0, _.Xx)("#Popularity_Niche"),
+            { className: (0, m.Z)(h.Row, h.FirstRow) },
+            r.createElement(C, {
+              minLabel: (0, p.Xx)("#Popularity_Popular"),
+              titleLabel: (0, p.Xx)("#Popularity_Title"),
+              maxLabel: (0, p.Xx)("#Popularity_Niche"),
               minValue: 0,
               maxValue: 1,
               value: f.m_fQueuedPopularityValue,
               onChange: f.onPopularityChanged,
             }),
-            l.createElement(C, {
-              minLabel: (0, _.Xx)("#Recency_Older"),
-              titleLabel: (0, _.Xx)("#Recency_Title"),
-              maxLabel: (0, _.Xx)("#Recency_Newer"),
+            r.createElement(C, {
+              minLabel: (0, p.Xx)("#Recency_Older"),
+              titleLabel: (0, p.Xx)("#Recency_Title"),
+              maxLabel: (0, p.Xx)("#Recency_Newer"),
               minValue: 0,
               maxValue: 1,
               value: f.m_fQueuedRecencyValue,
               onChange: f.onRecencyChanged,
-              sliderLabels: i,
+              sliderLabels: s,
             }),
           ),
-          l.createElement(
+          r.createElement(
             "div",
-            { className: (0, m.Z)(u.Row, u.SecondRow) },
-            l.createElement(P, {
-              title: (0, _.Xx)("#TagFilterMultiple_Title"),
+            { className: (0, m.Z)(h.Row, h.SecondRow) },
+            r.createElement(P, {
+              title: (0, p.Xx)("#TagFilterMultiple_Title"),
               tagoptions: t,
-              selectedtags: n,
-              key: "Filter" + n.toString(),
+              selectedtags: a,
+              key: "Filter" + a.toString(),
               onAddTag: f.onTagFilterAdd,
               onRemoveTag: f.onTagFilterRemove,
             }),
-            l.createElement(P, {
-              title: (0, _.Xx)("#TagExcludeMultiple_Title"),
+            r.createElement(P, {
+              title: (0, p.Xx)("#TagExcludeMultiple_Title"),
               tagoptions: t,
-              selectedtags: a,
-              key: "Exclude" + a.toString(),
+              selectedtags: i,
+              key: "Exclude" + i.toString(),
               onAddTag: f.onTagExcludeAdd,
               onRemoveTag: f.onTagExcludeRemove,
             }),
-            l.createElement(x, {
-              className: u.WishlistCheckbox,
-              titleLabel: (0, _.Xx)("#ExcludeWishlisted"),
+            r.createElement(x, {
+              className: h.WishlistCheckbox,
+              titleLabel: (0, p.Xx)("#ExcludeWishlisted"),
               checked: f.m_bExcludeWishlisted,
               onChange: f.onExcludeWishlistedToggled,
             }),
-            l.createElement(
+            r.createElement(
               "button",
               {
-                className: u.SaveUserSettingsButton,
+                className: h.SaveUserSettingsButton,
                 onClick: f.onSaveUserSettings,
-                title: (0, _.Xx)("#SaveUserSettingsTooltip"),
+                title: (0, p.Xx)("#SaveUserSettingsTooltip"),
               },
-              (0, _.Xx)("#SaveUserSettings"),
+              (0, p.Xx)("#SaveUserSettings"),
             ),
           ),
         );
       });
-      let w = class extends l.Component {
+      let w = class extends r.Component {
         constructor(e) {
           super(e),
-            (this.m_videoRef = l.createRef()),
+            (this.m_videoRef = r.createRef()),
             (this.state = {
               hovered: !1,
               wishlisted: f.getAppInfo()[e.appID].w,
@@ -1192,26 +1188,26 @@
             e.stopPropagation();
         }
         render() {
-          const { appID: e, score: t, rank: i, width: a } = this.props,
-            n =
+          const { appID: e, score: t, rank: s, width: i } = this.props,
+            a =
               "https://steamcdn-a.akamaihd.net/steam/apps/" + e + "/header.jpg",
-            s = f.getAppInfo()[e];
-          if (!s) return l.createElement("div", null);
-          const o = s.n,
-            r =
-              s.r > 0
-                ? (0, _.Xx)("#Recommendation_ReleasedOn", (0, _.vX)(s.r))
+            n = f.getAppInfo()[e];
+          if (!n) return r.createElement("div", null);
+          const o = n.n,
+            l =
+              n.r > 0
+                ? (0, p.Xx)("#Recommendation_ReleasedOn", (0, p.vX)(n.r))
                 : "";
-          let p = [];
-          if (s.t) {
+          let u = [];
+          if (n.t) {
             let t = 0;
-            for (const i of s.t)
+            for (const s of n.t)
               if (
-                (p.push(
-                  l.createElement(
+                (u.push(
+                  r.createElement(
                     "div",
-                    { key: `${e}_${i}`, className: u.Tag },
-                    f.getTagName(i),
+                    { key: `${e}_${s}`, className: h.Tag },
+                    f.getTagName(s),
                   ),
                 ),
                 t++,
@@ -1219,18 +1215,18 @@
               )
                 break;
           }
-          const g = parseInt(u.smallentrywidth),
-            h = parseInt(u.optionswrapwidth);
+          const g = parseInt(h.smallentrywidth),
+            _ = parseInt(h.optionswrapwidth);
           let E = 112,
-            v = !0;
-          a < g ? ((E = 66), (v = !1)) : a < h && ((E = 87), (v = !1));
-          const S = v && this.state.hovered,
-            R = Math.min(Number(t) / 100, 1e3);
-          let y = !1,
+            T = !0;
+          i < g ? ((E = 66), (T = !1)) : i < _ && ((E = 87), (T = !1));
+          const S = T && this.state.hovered,
+            y = Math.min(Number(t) / 100, 1e3);
+          let R = !1,
             L = !1,
-            I = !0,
+            A = !0,
+            I = "",
             N = "",
-            A = "",
             D = "",
             C = "",
             x = "",
@@ -1239,9 +1235,9 @@
           if (S) {
             const e = f.getDetails(this.props.appID);
             e &&
-              ((y = !0),
+              ((R = !0),
               (L = e.discount_pct > 0),
-              (I = "0" == e.discount_price),
+              (A = "0" == e.discount_price),
               "probably" ==
               document
                 .createElement("video")
@@ -1252,47 +1248,47 @@
                 : f.shouldUseMicrotrailers() && e.microtrailer_mp4
                 ? ((x = e.microtrailer_mp4), (P = !0), (U = !1))
                 : (x = e.video_mp4),
-              (N = `-${e.discount_pct}%`),
-              (A = e.base_price),
-              (D = I ? (0, _.Xx)("#FreeToPlay") : e.discount_price),
+              (I = `-${e.discount_pct}%`),
+              (N = e.base_price),
+              (D = A ? (0, p.Xx)("#FreeToPlay") : e.discount_price),
               (C = e.description));
           }
           const w = x && x.length > 0;
-          return l.createElement(
-            c.Z,
+          return r.createElement(
+            d.Z,
             { appID: e },
-            l.createElement(
-              b,
+            r.createElement(
+              M,
               {
-                href: `${T.BASE_URL}app/${e}`,
+                href: `${v.BASE_URL}app/${e}`,
                 className: (0, m.Z)(
-                  u.RecommendationEntry,
+                  h.RecommendationEntry,
                   "ds_flagged",
                   "ds_wishlist",
-                  i > 30 && u.Hidden,
-                  S && u.Hovered,
+                  s > 30 && h.Hidden,
+                  S && h.Hovered,
                 ),
-                style: { top: Math.min(31, i) * E },
+                style: { top: Math.min(31, s) * E },
                 onMouseEnter: this.OnHover,
                 onMouseLeave: this.OnUnHover,
               },
-              l.createElement(
+              r.createElement(
                 "div",
-                { className: u.TopEntrySection },
-                l.createElement(
+                { className: h.TopEntrySection },
+                r.createElement(
                   "div",
-                  { className: u.LeftSection },
-                  l.createElement("img", {
-                    className: (0, m.Z)(u.Logo, (!w || !S) && u.Revealed),
-                    src: n,
+                  { className: h.LeftSection },
+                  r.createElement("img", {
+                    className: (0, m.Z)(h.Logo, (!w || !S) && h.Revealed),
+                    src: a,
                   }),
-                  l.createElement("video", {
+                  r.createElement("video", {
                     ref: this.m_videoRef,
                     className: (0, m.Z)(
                       "highlight_player_item",
                       "highlight_movie",
-                      u.Video,
-                      w && S && u.Revealed,
+                      h.Video,
+                      w && S && h.Revealed,
                     ),
                     playsInline: !0,
                     autoPlay: !0,
@@ -1301,107 +1297,107 @@
                     loop: P,
                   }),
                   U &&
-                    l.createElement(
+                    r.createElement(
                       "div",
                       {
-                        className: (0, m.Z)(u.UnMute, w && u.Revealed),
+                        className: (0, m.Z)(h.UnMute, w && h.Revealed),
                         onClick: (e) => this.onMuteToggle(e),
                       },
-                      l.createElement(d.ffh, { muted: f.shouldMute() }),
+                      r.createElement(c.ffh, { muted: f.shouldMute() }),
                     ),
                   this.state.wishlisted &&
-                    l.createElement(
+                    r.createElement(
                       "div",
                       {
                         className: (0, m.Z)(
                           "ds_flag",
                           "ds_wishlist_flag",
-                          u.WishlistFlag,
+                          h.WishlistFlag,
                         ),
                       },
-                      (0, _.Xx)("#Recommendation_OnWishlist") + "  ",
+                      (0, p.Xx)("#Recommendation_OnWishlist") + "  ",
                     ),
                 ),
-                l.createElement(
+                r.createElement(
                   "div",
-                  { className: u.RightSection },
-                  l.createElement("div", { className: u.Name }, o),
-                  l.createElement(
+                  { className: h.RightSection },
+                  r.createElement("div", { className: h.Name }, o),
+                  r.createElement(
                     "div",
-                    { className: u.CenterSection },
-                    l.createElement(
+                    { className: h.CenterSection },
+                    r.createElement(
                       "div",
                       {
                         className: (0, m.Z)(
-                          u.CenterOption,
-                          u.CenterDefault,
-                          S && u.Hidden,
+                          h.CenterOption,
+                          h.CenterDefault,
+                          S && h.Hidden,
                         ),
                       },
-                      l.createElement("div", { className: u.Released }, r),
-                      l.createElement(
+                      r.createElement("div", { className: h.Released }, l),
+                      r.createElement(
                         "div",
-                        { className: u.BarContainer },
-                        l.createElement("div", {
-                          className: u.Bar,
-                          style: { width: `${R}%` },
+                        { className: h.BarContainer },
+                        r.createElement("div", {
+                          className: h.Bar,
+                          style: { width: `${y}%` },
                         }),
                       ),
-                      l.createElement("div", { className: u.Tags }, p),
+                      r.createElement("div", { className: h.Tags }, u),
                     ),
-                    l.createElement(
+                    r.createElement(
                       "div",
                       {
                         className: (0, m.Z)(
-                          u.CenterOption,
-                          u.CenterHovered,
-                          !S && u.Hidden,
+                          h.CenterOption,
+                          h.CenterHovered,
+                          !S && h.Hidden,
                         ),
                       },
                       C,
                     ),
                   ),
-                  y &&
-                    l.createElement(
+                  R &&
+                    r.createElement(
                       "div",
-                      { className: u.BottomEntrySection },
-                      l.createElement(
+                      { className: h.BottomEntrySection },
+                      r.createElement(
                         "div",
                         {
                           className: (0, m.Z)(
                             "game_purchase_action",
-                            u.PurchaseSection,
+                            h.PurchaseSection,
                           ),
                         },
-                        l.createElement(
+                        r.createElement(
                           "div",
                           {
                             className: (0, m.Z)(
                               "game_purchase_action_bg",
-                              u.PurchaseBG,
+                              h.PurchaseBG,
                             ),
                           },
                           L &&
-                            l.createElement(
+                            r.createElement(
                               "div",
                               {
                                 className:
                                   "discount_block game_purchase_discount",
                               },
-                              l.createElement(
+                              r.createElement(
                                 "div",
                                 { className: "discount_pct" },
-                                N,
+                                I,
                               ),
-                              l.createElement(
+                              r.createElement(
                                 "div",
                                 { className: "discount_prices" },
-                                l.createElement(
+                                r.createElement(
                                   "div",
                                   { className: "discount_original_price" },
-                                  A,
+                                  N,
                                 ),
-                                l.createElement(
+                                r.createElement(
                                   "div",
                                   { className: "discount_final_price" },
                                   D,
@@ -1409,81 +1405,81 @@
                               ),
                             ),
                           !L &&
-                            l.createElement(
+                            r.createElement(
                               "div",
                               {
                                 className: (0, m.Z)(
                                   "game_purchase_price",
                                   "price",
-                                  u.Price,
+                                  h.Price,
                                 ),
                               },
                               D,
                             ),
-                          !I &&
-                            l.createElement(
+                          !A &&
+                            r.createElement(
                               "div",
                               {
                                 className: "btn_addtocart",
                                 onClick: (e) => this.onAddToCart(e),
                               },
-                              l.createElement(
+                              r.createElement(
                                 "span",
                                 {
                                   className:
                                     "btnv6_green_white_innerfade btn_medium",
                                 },
-                                l.createElement(
+                                r.createElement(
                                   "span",
                                   null,
-                                  (0, _.Xx)("#btn_add_to_cart"),
+                                  (0, p.Xx)("#btn_add_to_cart"),
                                 ),
                               ),
                             ),
                         ),
                       ),
                       !this.state.wishlisted &&
-                        !I &&
-                        l.createElement(
+                        !A &&
+                        r.createElement(
                           "div",
                           {
                             id: "add_to_wishlist_area",
-                            className: u.WishlistSection,
+                            className: h.WishlistSection,
                             onClick: (e) => this.onAddToWishlist(e),
                           },
-                          l.createElement(
+                          r.createElement(
                             "div",
                             { className: "btnv6_blue_hoverfade btn_medium" },
-                            l.createElement(
+                            r.createElement(
                               "span",
                               null,
-                              (0, _.Xx)("#wishlist_add_to_wishlist"),
+                              (0, p.Xx)("#wishlist_add_to_wishlist"),
                             ),
                           ),
                         ),
                       this.state.wishlisted &&
-                        !I &&
-                        l.createElement(
+                        !A &&
+                        r.createElement(
                           "div",
                           {
                             className: (0, m.Z)(
                               "btnv6_blue_hoverfade btn_medium",
                               "queue_btn_active",
-                              u.Wishlisted,
-                              u.WishlistSection,
+                              h.Wishlisted,
+                              h.WishlistSection,
                             ),
-                            "data-tooltip-text": (0, _.Xx)(
+                            "data-tooltip-text": (0, p.Xx)(
                               "#OnWishlistTooltip",
                             ),
                             onClick: (e) => this.onGoToWishlist(e),
                           },
-                          l.createElement(
+                          r.createElement(
                             "span",
                             null,
-                            l.createElement("img", {
-                              src: `${T.IMG_URL_BASE}/v6/ico/ico_selected.png`,
+                            r.createElement("img", {
+                              src: `${v.IMG_URL_BASE}/v6/ico/ico_selected.png`,
                             }),
-                            "  " + (0, _.Xx)("#OnWishlist"),
+                            "  " + (0, p.Xx)("#OnWishlist"),
                           ),
                         ),
                     ),
@@ -1493,82 +1489,82 @@
           );
         }
       };
-      function b(e) {
+      function M(e) {
         const { href: t } = e,
-          i = (0, n._T)(e, ["href"]),
-          a = (0, I.YR)(t);
-        return l.createElement("a", Object.assign({}, i, { href: a }));
+          s = (0, a._T)(e, ["href"]),
+          i = (0, A.YR)(t);
+        return r.createElement("a", Object.assign({}, s, { href: i }));
       }
-      (0, n.gn)([p.ak], w.prototype, "OnHover", null),
-        (0, n.gn)([p.ak], w.prototype, "OnUnHover", null),
-        (0, n.gn)([p.ak], w.prototype, "onMuteToggle", null),
-        (0, n.gn)([p.ak], w.prototype, "onAddToWishlist", null),
-        (0, n.gn)([p.ak], w.prototype, "onGoToWishlist", null),
-        (0, n.gn)([p.ak], w.prototype, "onAddToCart", null),
-        (w = (0, n.gn)([o.Pi], w));
-      let M = class extends l.Component {
+      (0, a.gn)([u.ak], w.prototype, "OnHover", null),
+        (0, a.gn)([u.ak], w.prototype, "OnUnHover", null),
+        (0, a.gn)([u.ak], w.prototype, "onMuteToggle", null),
+        (0, a.gn)([u.ak], w.prototype, "onAddToWishlist", null),
+        (0, a.gn)([u.ak], w.prototype, "onGoToWishlist", null),
+        (0, a.gn)([u.ak], w.prototype, "onAddToCart", null),
+        (w = (0, a.gn)([o.Pi], w));
+      let b = class extends r.Component {
         constructor(e) {
           super(e), (this.state = { sortedRecommendedApps: [] });
         }
         render() {
           let e = [];
-          const t = f.m_fRecencyValue * (T.NUM_RECENCY_STEPS - 1 - 0.001),
-            i = Math.floor(t),
-            a = i + 1,
-            n = t - i,
-            s = f.m_fPopularityValue * (T.NUM_POPULARITY_STEPS - 1 - 0.001),
-            o = Math.floor(s),
-            r = o + 1,
-            c = s - o;
+          const t = f.m_fRecencyValue * (v.NUM_RECENCY_STEPS - 1 - 0.001),
+            s = Math.floor(t),
+            i = s + 1,
+            a = t - s,
+            n = f.m_fPopularityValue * (v.NUM_POPULARITY_STEPS - 1 - 0.001),
+            o = Math.floor(n),
+            l = o + 1,
+            d = n - o;
           e.push({
-            index: i * T.NUM_RECENCY_STEPS + o,
-            weight: (1 - n) * (1 - c),
+            index: s * v.NUM_RECENCY_STEPS + o,
+            weight: (1 - a) * (1 - d),
           }),
-            e.push({ index: a * T.NUM_RECENCY_STEPS + o, weight: n * (1 - c) }),
-            e.push({ index: i * T.NUM_RECENCY_STEPS + r, weight: (1 - n) * c }),
-            e.push({ index: a * T.NUM_RECENCY_STEPS + r, weight: n * c });
-          let d = new Map(),
-            p = 0;
+            e.push({ index: i * v.NUM_RECENCY_STEPS + o, weight: a * (1 - d) }),
+            e.push({ index: s * v.NUM_RECENCY_STEPS + l, weight: (1 - a) * d }),
+            e.push({ index: i * v.NUM_RECENCY_STEPS + l, weight: a * d });
+          let c = new Map(),
+            u = 0;
           const g = f.getRecommendations(),
-            h = f.getAppInfo();
+            _ = f.getAppInfo();
           let E = [];
           if (g) {
             for (const t of e) {
               const e = g.request_results[t.index];
               if (e) {
-                p = Math.max(p, e.max_weight);
-                for (const i of e.app_recommendations) {
-                  const e = i.app_id;
+                u = Math.max(u, e.max_weight);
+                for (const s of e.app_recommendations) {
+                  const e = s.app_id;
                   if (
-                    !h[e] ||
-                    h[e].o ||
-                    h[e].i ||
-                    h[e].ti ||
-                    (h[e].w && f.m_bExcludeWishlisted)
+                    !_[e] ||
+                    _[e].o ||
+                    _[e].i ||
+                    _[e].ti ||
+                    (_[e].w && f.m_bExcludeWishlisted)
                   )
                     continue;
-                  const a = (d.get(e) || 0) + i.weight * t.weight;
-                  d.set(e, a);
+                  const i = (c.get(e) || 0) + s.weight * t.weight;
+                  c.set(e, i);
                 }
               }
             }
             let t = [];
-            d.forEach((e, i) => t.push({ appid: i, score: e })),
+            c.forEach((e, s) => t.push({ appid: s, score: e })),
               (t = t.filter(
-                (e) => h[e.appid].t && f.doTagsPassFilter(h[e.appid].t),
+                (e) => _[e.appid].t && f.doTagsPassFilter(_[e.appid].t),
               )),
               (t = t.filter(
-                (e) => h[e.appid].t && !f.doTagsFailExclusion(h[e.appid].t),
+                (e) => _[e.appid].t && !f.doTagsFailExclusion(_[e.appid].t),
               )),
               (t = t.filter((e) => e.score > 0));
-            let i = t.sort((e, t) => t.score - e.score);
-            if (i.length > 0) {
-              i = i.slice(0, 30);
+            let s = t.sort((e, t) => t.score - e.score);
+            if (s.length > 0) {
+              s = s.slice(0, 30);
               let e = 0;
-              for (let t of i) (t.rank = e), e++;
-              for (const e of i)
+              for (let t of s) (t.rank = e), e++;
+              for (const e of s)
                 E.push(
-                  l.createElement(w, {
+                  r.createElement(w, {
                     key: e.appid,
                     appID: e.appid,
                     score: e.score,
@@ -1578,37 +1574,37 @@
                 );
             } else
               E.push(
-                l.createElement(
+                r.createElement(
                   "div",
                   {
                     key: "no_recommedations_due_to_filter",
-                    className: u.NoRecommendationsMessage,
+                    className: h.NoRecommendationsMessage,
                   },
-                  (0, _.Xx)("#NoRecommendationsDueToFilter"),
+                  (0, p.Xx)("#NoRecommendationsDueToFilter"),
                 ),
               );
           } else
             E.push(
-              l.createElement("div", {
+              r.createElement("div", {
                 key: "recommendations_loading",
-                className: u.RecommendationsLoading,
+                className: h.RecommendationsLoading,
               }),
             );
-          return l.createElement(
+          return r.createElement(
             "div",
-            { className: u.RecommendationList },
-            l.createElement(
+            { className: h.RecommendationList },
+            r.createElement(
               "div",
-              { className: u.Header },
-              (0, _.Xx)("#Recommendations_Header"),
+              { className: h.Header },
+              (0, p.Xx)("#Recommendations_Header"),
             ),
-            l.createElement(U, null),
-            l.createElement(
+            r.createElement(U, null),
+            r.createElement(
               "div",
               {
                 className: (0, m.Z)(
-                  u.List,
-                  f.areResultsExpired() && u.Updating,
+                  h.List,
+                  f.areResultsExpired() && h.Updating,
                 ),
               },
               E,
@@ -1616,8 +1612,8 @@
           );
         }
       };
-      M = (0, n.gn)([o.Pi], M);
-      let k = class extends l.Component {
+      b = (0, a.gn)([o.Pi], b);
+      let k = class extends r.Component {
         constructor() {
           super(...arguments), (this.state = { width: window.innerWidth });
         }
@@ -1631,59 +1627,59 @@
           (0, L.X)();
         }
         render() {
-          return s.L7.logged_in
-            ? l.createElement(
-                I.ZP,
+          return n.L7.logged_in
+            ? r.createElement(
+                A.ZP,
                 {
                   controller: "recommender",
                   method: "default",
                   feature: "capsule",
                 },
-                l.createElement(
+                r.createElement(
                   "div",
                   {
-                    className: u.App,
+                    className: h.App,
                     style: { height: 3840 + 26 * f.getTagHeight() },
                   },
-                  l.createElement(
+                  r.createElement(
                     "div",
-                    { className: u.Container },
-                    l.createElement(
+                    { className: h.Container },
+                    r.createElement(
                       "div",
-                      { className: u.TopSection },
-                      l.createElement(
+                      { className: h.TopSection },
+                      r.createElement(
                         "div",
-                        { className: u.Header },
-                        (0, _.Xx)("#HeaderTitle"),
+                        { className: h.Header },
+                        (0, p.Xx)("#HeaderTitle"),
                       ),
-                      l.createElement(
+                      r.createElement(
                         "div",
-                        { className: u.Body },
-                        (0, _.Xx)("#HeaderBody1"),
+                        { className: h.Body },
+                        (0, p.Xx)("#HeaderBody1"),
                       ),
                     ),
-                    l.createElement(
+                    r.createElement(
                       "div",
-                      { className: u.BottomSection },
-                      l.createElement(D, { accountID: s.L7.accountid }),
-                      l.createElement("div", { className: u.VerticalBar }),
-                      l.createElement(M, { width: this.state.width }),
+                      { className: h.BottomSection },
+                      r.createElement(D, { accountID: n.L7.accountid }),
+                      r.createElement("div", { className: h.VerticalBar }),
+                      r.createElement(b, { width: this.state.width }),
                     ),
                   ),
                 ),
               )
-            : l.createElement(
+            : r.createElement(
                 "div",
-                { className: u.App },
-                l.createElement(
+                { className: h.App },
+                r.createElement(
                   "div",
-                  { className: u.Login },
-                  l.createElement(
+                  { className: h.Login },
+                  r.createElement(
                     "div",
-                    { className: u.Text },
-                    (0, _.Xx)("#LoginText"),
+                    { className: h.Text },
+                    (0, p.Xx)("#LoginText"),
                   ),
-                  l.createElement(
+                  r.createElement(
                     "div",
                     {
                       className: (0, m.Z)(
@@ -1692,15 +1688,15 @@
                       ),
                       onClick: this.ShowLoginDialog,
                     },
-                    l.createElement("span", null, (0, _.Xx)("#LoginButton")),
+                    r.createElement("span", null, (0, p.Xx)("#LoginButton")),
                   ),
                 ),
               );
         }
       };
-      (0, n.gn)([p.ak], k.prototype, "updateDimensions", null),
-        (0, n.gn)([p.ak], k.prototype, "ShowLoginDialog", null),
-        (k = (0, n.gn)([o.Pi], k));
+      (0, a.gn)([u.ak], k.prototype, "updateDimensions", null),
+        (0, a.gn)([u.ak], k.prototype, "ShowLoginDialog", null),
+        (k = (0, a.gn)([o.Pi], k));
       const O = k;
     },
   },

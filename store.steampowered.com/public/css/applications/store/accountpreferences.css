@@ -1,4 +1,4 @@
-.cookiesettings_AllButton_24Y_0 {
+._24Y_0sMrz5EywcAsFUstI1 {
   padding: 5px 30px;
   margin-bottom: 10px;
   margin-left: 10px;
@@ -15,36 +15,36 @@
   border-radius: 5px;
   background: linear-gradient(90deg, #5c6166 0%, #737780 100%);
 }
-.cookiesettings_ButtonHighlight_3OVHZ {
+._3OVHZhM_IefZqAOIsPxatj {
   background: linear-gradient(90deg, #3999ec 0%, #2460d0 100%);
 }
-.cookiesettings_CookieSettingsHeader_3R3ii {
+._3R3iiUuAhP-0M-rdtCANeY {
   position: relative;
 }
-.cookiesettings_ButtonGroup_YPn6V {
+.YPn6VOod44mu0w34xdzDC {
   margin-top: 20px;
   white-space: nowrap;
 }
-.cookiesettings_CookieGroup_25H3q {
+._25H3qBQ1Lfsfq8nwc3M0Fk {
   padding: 10px 0px 0px 0px;
 }
-.cookiesettings_CookieGroup_25H3q h1 {
+._25H3qBQ1Lfsfq8nwc3M0Fk h1 {
   padding: 30px 0px 10px 0px;
 }
-.cookiesettings_CookieSection_3IKt4 {
+._3IKt4dLdwzyZtMqAwvawdG {
   position: relative;
 }
-.cookiesettings_SectionDescription_GA-wF {
+.GA-wFr-pPreiaNq3wRump {
   padding: 0px 0px 10px 0px;
 }
-.cookiesettings_NecessaryGroup_24o8c {
+._24o8cEsvGK0bE4hHyUGhfh {
   margin-bottom: 22px;
   background: rgba(59, 63, 72, 0.5);
   box-shadow: inset 0px 0px 0px #0000;
   border-radius: 3px;
   padding: 6px 6px 6px 12px;
 }
-.cookiesettings_NecessaryTitle_3if8Z {
+._3if8ZNUUN7eSTxlCJbdgav {
   display: block;
   margin-right: 10px;
   font-size: 14px;
@@ -52,7 +52,7 @@
   font-weight: 300;
   color: #dfe3e6;
 }
-.cookiesettings_NecessaryDesc_9NmWi {
+._9NmWi9VzZyFLjcu_GW_70 {
   display: block;
   padding-top: 8px;
   font-family: inherit;
@@ -60,19 +60,19 @@
   line-height: 19px;
   color: #999c9f;
 }
-.notificationsettings_NotificationSettingsHeader_2XOzk {
+._2XOzkA8bF8HiEtnoYSLHGC {
   position: relative;
 }
-.notificationsettings_SectionDescription_3K5HB {
+._3K5HBHn_mMUrazI_oUH12q {
   padding: 0px 0px 10px 0px;
 }
-.notificationsettings_NotificationGroup_1_kCY {
+._1_kCY5Jc71QX_9j4Q7brk {
   padding: 20px 0px 0px 0px;
 }
-.notificationsettings_NotificationGroup_1_kCY h1 {
+._1_kCY5Jc71QX_9j4Q7brk h1 {
   padding: 30px 0px 10px 0px;
 }
-.notificationsettings_NotificationSection_3Sbby {
+._3Sbby9pYJeX9b2Dcjx1Gbc {
   position: relative;
   display: flex;
   flex-direction: row;
@@ -80,40 +80,38 @@
   background-color: #2b303a;
   padding: 10px 1ex 10px 1ex;
 }
-.notificationsettings_NotificationSection_3Sbby button.DialogButton {
+._3Sbby9pYJeX9b2Dcjx1Gbc button.DialogButton {
   justify-content: center;
   background-color: rgba(0, 0, 0, 0);
   color: #1a9fff;
   height: 5ex;
   width: 5ex;
 }
-.notificationsettings_NotificationSection_3Sbby
-  .notificationsettings_NotificationFeedToggle_30Nc3 {
+._3Sbby9pYJeX9b2Dcjx1Gbc ._30Nc3G1cpcJeZAQulOQYHB {
   flex-direction: inherit;
   margin-right: 5px;
 }
-.notificationsettings_NotificationDescription_3FSzS {
+._3FSzSTDALgYgSmsyvkISnG {
   flex: 5;
 }
-.notificationsettings_NotificationPrefDetails_152HT {
+._152HTE3xZ88Xk7LEEPFE68 {
   display: flex;
   flex-direction: row;
   background-color: #23262e;
   padding: 1ex 0 0 5ex;
   box-shadow: inset 0px 2px 3px rgba(0, 0, 0, 0.5);
 }
-.notificationsettings_NotificationPrefDetails_152HT .DialogCheckbox_Container {
+._152HTE3xZ88Xk7LEEPFE68 .DialogCheckbox_Container {
   flex: 1;
   align-items: center;
   display: flex;
 }
-.notificationsettings_PrefDetailsToggle_3XAMD svg {
+._3XAMDDm5D1pSZpakvjyRPk svg {
   transition: transform 0.2s ease-in-out;
   height: 18px;
   margin-top: 4px;
 }
-.notificationsettings_PrefDetailsToggle_3XAMD.notificationsettings_Selected_3yrEI
-  svg {
+._3XAMDDm5D1pSZpakvjyRPk._3yrEIJRje6XiWe9BiIGY7P svg {
   transform: rotateZ(180deg);
   transition: transform 0.2s ease-in-out;
 }

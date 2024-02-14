@@ -220,6 +220,12 @@
                     "description": "(Optional) Filter out items that have these content descriptors."
                 },
                 {
+                    "name": "admin_query",
+                    "type": "bool",
+                    "optional": false,
+                    "description": "Admin tool is doing a query, return hidden items"
+                },
+                {
                     "name": "totalonly",
                     "type": "bool",
                     "optional": false,
@@ -602,6 +608,12 @@
                     "type": "bool",
                     "optional": true,
                     "description": "If true, then reactions to items will be returned."
+                },
+                {
+                    "name": "admin_query",
+                    "type": "bool",
+                    "optional": false,
+                    "description": "Admin tool is doing a query, return hidden items"
                 }
             ]
         },
@@ -724,6 +736,12 @@
                     "type": "{enum}",
                     "optional": false,
                     "description": "(Optional) Filter out items that have these content descriptors."
+                },
+                {
+                    "name": "admin_query",
+                    "type": "bool",
+                    "optional": false,
+                    "description": "Admin tool is doing a query, return hidden items"
                 },
                 {
                     "name": "totalonly",
@@ -942,6 +960,12 @@
                     "type": "{enum}",
                     "optional": false,
                     "description": "(Optional) Filter out items that have these content descriptors."
+                },
+                {
+                    "name": "admin_query",
+                    "type": "bool",
+                    "optional": false,
+                    "description": "Admin tool is doing a query, return hidden items"
                 },
                 {
                     "name": "totalonly",

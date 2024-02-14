@@ -5,139 +5,135 @@
   {
     99837: (e) => {
       e.exports = {
-        ReleaseDateInfoCtn: "controllersupportinfo_ReleaseDateInfoCtn_MjesD",
-        GameEditCtn: "controllersupportinfo_GameEditCtn_22e4A",
-        ReleaseDateContent: "controllersupportinfo_ReleaseDateContent_3l1i_",
-        EditButton: "controllersupportinfo_EditButton_2Go5e",
-        Spacer: "controllersupportinfo_Spacer_z4dAW",
-        Top: "controllersupportinfo_Top_2Bw1I",
-        Bottom: "controllersupportinfo_Bottom_3LE9R",
-        EditButtonIcon: "controllersupportinfo_EditButtonIcon_314E_",
-        LabelField: "controllersupportinfo_LabelField_19qBN",
-        Label: "controllersupportinfo_Label_3eHSM",
-        BigField: "controllersupportinfo_BigField_nZkW2",
-        Set: "controllersupportinfo_Set_1oP0w",
-        DescText: "controllersupportinfo_DescText_3-olb",
-        StatusText: "controllersupportinfo_StatusText_3Th0V",
-        StartWizardButton: "controllersupportinfo_StartWizardButton_lKVYB",
-        ControllerSupportLevelString:
-          "controllersupportinfo_ControllerSupportLevelString_x6aCt",
-        InfoRow: "controllersupportinfo_InfoRow_1NUmC",
-        LocSection: "controllersupportinfo_LocSection_38m8D",
-        HighlightText: "controllersupportinfo_HighlightText_3InqR",
-        GamepadRequired: "controllersupportinfo_GamepadRequired_H8PWx",
-        Personalized: "controllersupportinfo_Personalized_3Q8sx",
-        HighlightRow: "controllersupportinfo_HighlightRow_zD5C0",
-        LocString: "controllersupportinfo_LocString_5bHD6",
-        ImgSection: "controllersupportinfo_ImgSection_28V2e",
-        SmallerSVG: "controllersupportinfo_SmallerSVG_BOCK_",
-        BiggerSVG: "controllersupportinfo_BiggerSVG_2xOzF",
-        PreviewContainer: "controllersupportinfo_PreviewContainer_1F4_s",
-        StoreSidebarContainer:
-          "controllersupportinfo_StoreSidebarContainer_2Z38-",
-        PurchaseNoticeContainer:
-          "controllersupportinfo_PurchaseNoticeContainer_3coXq",
-        PurchaseNoticeImage: "controllersupportinfo_PurchaseNoticeImage_3Ci-m",
-        NoticeContainer: "controllersupportinfo_NoticeContainer_3nByi",
-        ControllerRequiredImage:
-          "controllersupportinfo_ControllerRequiredImage_2pO7E",
-        Tilt: "controllersupportinfo_Tilt_11_Ka",
-        ToolTipControl: "controllersupportinfo_ToolTipControl_2TD1t",
-        ToolTipContainer: "controllersupportinfo_ToolTipContainer_11C_j",
+        ReleaseDateInfoCtn: "MjesDaM8ySIdAujGZPACn",
+        GameEditCtn: "_22e4AKyxOJI3L9WZ-500_Z",
+        ReleaseDateContent: "_3l1i_Ji2LHF9uLUsIA-6s2",
+        EditButton: "_2Go5et-asyUXbKbuW0dECU",
+        Spacer: "z4dAWecplX4aV9qPQNIQS",
+        Top: "_2Bw1IVbdzXaD8JNOgVdzVe",
+        Bottom: "_3LE9RI5JpeV3aUS6kkG4Y_",
+        EditButtonIcon: "_314E_Djw7uBgNuk_9y6f5g",
+        LabelField: "_19qBNOVq73zhQhb1wP9w63",
+        Label: "_3eHSMKzTRL-1bzKry-AW_E",
+        BigField: "nZkW2-OtbRBDwVDWS4ei8",
+        Set: "_1oP0wSsWgMaOYbVWCy8eQF",
+        DescText: "_3-olbnxO5LbbL6mSzamhw3",
+        StatusText: "_3Th0VAeLiIAxqsFn74j3EA",
+        StartWizardButton: "lKVYBV_ioKj9Y_FKlMvqu",
+        ControllerSupportLevelString: "x6aCtZFZ3cDnCSJMJI0OB",
+        InfoRow: "_1NUmCql50oyQsRv2rxSvr1",
+        LocSection: "_38m8DGDKcTxyFKbuvEpMIx",
+        HighlightText: "_3InqRBbbAXO4WJ35-ou6cl",
+        GamepadRequired: "H8PWxseAXhM6PapqoU5jP",
+        Personalized: "_3Q8sxkN3baZIWYOXUGEwpZ",
+        HighlightRow: "zD5C0Xyh3lZRY_mRIRpVA",
+        LocString: "_5bHD6q5nDA6TLrWbE5Hvx",
+        ImgSection: "_28V2e4qcBKMUfwPNxuJevO",
+        SmallerSVG: "BOCK_85Q7zCMjhmqqf182",
+        BiggerSVG: "_2xOzFrnkKmDSLNhuD5Ke5e",
+        PreviewContainer: "_1F4_sw07miPTtc8CNasbvN",
+        StoreSidebarContainer: "_2Z38-sqi_66Ock18gKwsUm",
+        PurchaseNoticeContainer: "_3coXqS7LWcc1GxjOIORLPW",
+        PurchaseNoticeImage: "_3Ci-mcHPf9PwcjjvzB0v-2",
+        NoticeContainer: "_3nByihRHvBVf4L5_bEg2dR",
+        ControllerRequiredImage: "_2pO7EB1Gl4_IN2uoWkJ-bM",
+        Tilt: "_11_KaesMs-enCJ0GS0trTR",
+        ToolTipControl: "_2TD1tfeH-GO6CqFXxRd-Rm",
+        ToolTipContainer: "_11C_jcbfitrasoPZxY7vXc",
       };
     },
-    85401: (e, t, o) => {
+    85401: (e, t, r) => {
       "use strict";
-      o.r(t),
-        o.d(t, {
-          ControllerSupportInfoDisplay: () => u,
+      r.r(t),
+        r.d(t, {
+          ControllerSupportInfoDisplay: () => p,
           ControllerSupportInfoDisplayInternal: () => C,
-          ControllerSupportInfoStoreDisplay: () => S,
-          default: () => d,
+          ControllerSupportInfoStoreDisplay: () => u,
+          default: () => b,
         });
-      var r = o(47427),
-        l = o(31846),
-        n = o(99837),
-        a = o(13129),
-        i = o(58538),
-        p = o(59728),
-        s = o(37563);
+      var o = r(47427),
+        l = r(31846),
+        a = r(99837),
+        n = r(13129),
+        i = r(58538),
+        s = r(59728),
+        S = r(37563);
       function c(e) {
-        return r.createElement(
+        return o.createElement(
           "a",
           {
-            href: `${s.De.STORE_BASE_URL}search/?controllersupport=${e.strCategory}`,
-            className: n.InfoRow,
+            href: `${S.De.STORE_BASE_URL}search/?controllersupport=${e.strCategory}`,
+            className: a.InfoRow,
           },
-          r.createElement(
+          o.createElement(
             "div",
             {
-              className: (0, a.Z)(
-                n.ImgSection,
-                e.bHightlightRow && n.HighlightRow,
-                e.bHighlightGPRequired && n.GamepadRequired,
+              className: (0, n.Z)(
+                a.ImgSection,
+                e.bHightlightRow && a.HighlightRow,
+                e.bHighlightGPRequired && a.GamepadRequired,
               ),
             },
             e.tagImage,
           ),
-          r.createElement(
+          o.createElement(
             "div",
             {
-              className: (0, a.Z)(
-                n.LocSection,
-                e.bHighlightText && n.HighlightText,
-                e.bHightlightRow && n.HighlightRow,
-                e.bHighlightGPRequired && n.GamepadRequired,
+              className: (0, n.Z)(
+                a.LocSection,
+                e.bHighlightText && a.HighlightText,
+                e.bHightlightRow && a.HighlightRow,
+                e.bHighlightGPRequired && a.GamepadRequired,
               ),
             },
-            r.createElement(
+            o.createElement(
               "div",
               {
-                className: (0, a.Z)(
-                  n.LocString,
-                  e.bHighlightText && n.HighlightText,
-                  e.bHightlightRow && n.HighlightRow,
-                  e.bHighlightGPRequired && n.GamepadRequired,
-                  e.bPersonalized && n.Personalized,
+                className: (0, n.Z)(
+                  a.LocString,
+                  e.bHighlightText && a.HighlightText,
+                  e.bHightlightRow && a.HighlightRow,
+                  e.bHighlightGPRequired && a.GamepadRequired,
+                  e.bPersonalized && a.Personalized,
                 ),
               },
               (0, l.Xx)(e.strLocalizationToken),
             ),
             e.strTooltipString &&
-              r.createElement(
-                p.HP,
+              o.createElement(
+                s.HP,
                 {
                   toolTipContent: (0, l.Xx)(e.strTooltipString),
-                  className: n.ToolTipContainer,
+                  className: a.ToolTipContainer,
                 },
-                r.createElement("span", { className: n.ToolTipControl }, "?"),
+                o.createElement("span", { className: a.ToolTipControl }, "?"),
               ),
           ),
         );
       }
-      function u(e) {
-        return r.createElement(
+      function p(e) {
+        return o.createElement(
           "div",
-          { className: n.PreviewContainer },
-          r.createElement(C, Object.assign({ bPreview: !0 }, e)),
+          { className: a.PreviewContainer },
+          o.createElement(C, Object.assign({ bPreview: !0 }, e)),
         );
       }
-      function S(e) {
-        return r.createElement(
-          r.Fragment,
+      function u(e) {
+        return o.createElement(
+          o.Fragment,
           null,
           (e.bPartialXboxControllerSupport || e.bFullXboxControllerSupport) &&
-            r.createElement(
+            o.createElement(
               "div",
-              { className: n.StoreSidebarContainer },
-              r.createElement(C, Object.assign({}, e)),
+              { className: a.StoreSidebarContainer },
+              o.createElement(C, Object.assign({}, e)),
             ),
         );
       }
-      function _() {
-        return r.createElement(c, {
-          tagImage: r.createElement(i.by3, {
-            className: (0, a.Z)(n.Tilt, n.SmallerSVG),
+      function m() {
+        return o.createElement(c, {
+          tagImage: o.createElement(i.by3, {
+            className: (0, n.Z)(a.Tilt, a.SmallerSVG),
           }),
           strLocalizationToken: "#Store_ControllerSupport_GamepadRequired",
           bHighlightGPRequired: !0,
@@ -145,55 +141,55 @@
             "#Store_ControllerSupport_Tooltip_ControllerRequired",
         });
       }
-      function m() {
-        return r.createElement(
+      function _() {
+        return o.createElement(
           "div",
-          { className: (0, a.Z)(n.PurchaseNoticeContainer) },
-          r.createElement(i.atL, {
-            className: (0, a.Z)(n.PurchaseNoticeImage),
+          { className: (0, n.Z)(a.PurchaseNoticeContainer) },
+          o.createElement(i.atL, {
+            className: (0, n.Z)(a.PurchaseNoticeImage),
           }),
-          r.createElement(
+          o.createElement(
             "div",
-            { className: (0, a.Z)(n.PurchaseNoticeLabel) },
+            { className: (0, n.Z)(a.PurchaseNoticeLabel) },
             (0, l.Xx)("#Store_ControllerSupport_GamepadPreferred"),
           ),
         );
       }
       function g(e) {
-        const { bNoKeyboardSupport: t, bGamepadPreferred: o } = e;
-        return r.createElement(
+        const { bNoKeyboardSupport: t, bGamepadPreferred: r } = e;
+        return o.createElement(
           "div",
-          { className: (0, a.Z)(n.NoticeContainer) },
-          t && r.createElement(_, null),
-          o && !t && r.createElement(m, null),
+          { className: (0, n.Z)(a.NoticeContainer) },
+          t && o.createElement(m, null),
+          r && !t && o.createElement(_, null),
         );
       }
       function C(e) {
         const {
           bControllerSupportWizardComplete: t,
-          bPS4ControllerSupport: o,
-          bPS5ControllerSupport: a,
-          bPS4ControllerBTSupport: p,
-          bPS5ControllerBTSupport: s,
-          bFullXboxControllerSupport: u,
-          bPartialXboxControllerSupport: S,
-          bSteamInputAPISupport: _,
-          bHasOther: m,
+          bPS4ControllerSupport: r,
+          bPS5ControllerSupport: n,
+          bPS4ControllerBTSupport: s,
+          bPS5ControllerBTSupport: S,
+          bFullXboxControllerSupport: p,
+          bPartialXboxControllerSupport: u,
+          bSteamInputAPISupport: m,
+          bHasOther: _,
           bHasPS4: C,
-          bHasPS5: d,
-          bHasXbox: P,
-          bPreview: b,
+          bHasPS5: b,
+          bHasXbox: d,
+          bPreview: P,
         } = e;
-        let f = [];
-        if (o && a && p && s) {
-          const e = r.createElement(i.CtA, {
-              className: n.SmallerSVG,
+        let h = [];
+        if (r && n && s && S) {
+          const e = o.createElement(i.CtA, {
+              className: a.SmallerSVG,
               controllerType: 34,
-              partial: !u,
+              partial: !p,
             }),
-            t = C || d;
-          f.push(
-            r.createElement(c, {
+            t = C || b;
+          h.push(
+            o.createElement(c, {
               key: "1",
               tagImage: e,
               strLocalizationToken: t
@@ -203,15 +199,15 @@
             }),
           );
         } else {
-          if (o) {
-            const e = r.createElement(i.CtA, {
-              className: n.SmallerSVG,
+          if (r) {
+            const e = o.createElement(i.CtA, {
+              className: a.SmallerSVG,
               controllerType: 34,
-              partial: !u,
+              partial: !p,
             });
-            p
-              ? f.push(
-                  r.createElement(c, {
+            s
+              ? h.push(
+                  o.createElement(c, {
                     key: "2",
                     tagImage: e,
                     strLocalizationToken: C
@@ -221,8 +217,8 @@
                     strCategory: "55",
                   }),
                 )
-              : f.push(
-                  r.createElement(c, {
+              : h.push(
+                  o.createElement(c, {
                     key: "3",
                     tagImage: e,
                     strLocalizationToken: C
@@ -233,95 +229,95 @@
                   }),
                 );
           }
-          if (a) {
-            const e = r.createElement(i.CtA, {
-              className: n.SmallerSVG,
+          if (n) {
+            const e = o.createElement(i.CtA, {
+              className: a.SmallerSVG,
               controllerType: 45,
-              partial: !u,
+              partial: !p,
             });
-            s
-              ? f.push(
-                  r.createElement(c, {
+            S
+              ? h.push(
+                  o.createElement(c, {
                     key: "4",
                     tagImage: e,
-                    strLocalizationToken: d
+                    strLocalizationToken: b
                       ? "#Store_ControllerSupport_PS5_Personalized"
                       : "#Store_ControllerSupport_PS5",
-                    bPersonalized: d,
+                    bPersonalized: b,
                     strCategory: "57",
                   }),
                 )
-              : f.push(
-                  r.createElement(c, {
+              : h.push(
+                  o.createElement(c, {
                     key: "5",
                     tagImage: e,
-                    strLocalizationToken: d
+                    strLocalizationToken: b
                       ? "#Store_ControllerSupport_PS5_USB_Personalized"
                       : "#Store_ControllerSupport_PS5_USB",
-                    bPersonalized: d,
+                    bPersonalized: b,
                     strCategory: "57",
                   }),
                 );
           }
         }
-        return r.createElement(
-          r.Fragment,
+        return o.createElement(
+          o.Fragment,
           null,
-          (S || u) &&
-            r.createElement(
-              r.Fragment,
+          (u || p) &&
+            o.createElement(
+              o.Fragment,
               null,
-              r.createElement(
+              o.createElement(
                 "div",
-                { className: n.ControllerSupportLevelString },
+                { className: a.ControllerSupportLevelString },
                 (0, l.Xx)(
-                  u
+                  p
                     ? "#Store_ControllerSupport_FullController"
                     : "#Store_ControllerSupport_PartialController",
                 ),
               ),
-              r.createElement(c, {
-                tagImage: r.createElement(i.CtA, {
-                  className: n.SmallerSVG,
+              o.createElement(c, {
+                tagImage: o.createElement(i.CtA, {
+                  className: a.SmallerSVG,
                   controllerType: 32,
-                  partial: !u,
+                  partial: !p,
                 }),
-                strLocalizationToken: P
+                strLocalizationToken: d
                   ? "#Store_ControllerSupport_Xbox_Personalized"
                   : "#Store_ControllerSupport_Xbox",
-                bPersonalized: P,
+                bPersonalized: d,
                 strCategory: "18",
               }),
-              f,
-              _ &&
-                r.createElement(c, {
-                  tagImage: r.createElement(i.IRk, {
-                    className: n.BiggerSVG,
-                    bGreyOutRightSide: !u,
+              h,
+              m &&
+                o.createElement(c, {
+                  tagImage: o.createElement(i.IRk, {
+                    className: a.BiggerSVG,
+                    bGreyOutRightSide: !p,
                   }),
                   strLocalizationToken: "#Store_ControllerSupport_SIAPI",
                   strTooltipString: "#Store_ControllerSupport_Tooltip_SIAPI",
                   strCategory: "59",
                 }),
-              ((!b && !t) || (!_ && m && !P)) &&
-                r.createElement(c, {
-                  tagImage: r.createElement(i.uWd, { className: n.BiggerSVG }),
+              ((!P && !t) || (!m && _ && !d)) &&
+                o.createElement(c, {
+                  tagImage: o.createElement(i.uWd, { className: a.BiggerSVG }),
                   strLocalizationToken:
-                    m || C || d
+                    _ || C || b
                       ? "#Store_ControllerSupport_Unknown_Personalized"
                       : "#Store_ControllerSupport_Unknown",
-                  bPersonalized: m || C || d,
+                  bPersonalized: _ || C || b,
                 }),
-              r.createElement(g, Object.assign({}, e)),
+              o.createElement(g, Object.assign({}, e)),
             ),
         );
       }
-      const d = S;
+      const b = u;
     },
-    1688: (e, t, o) => {
+    1688: (e, t, r) => {
       "use strict";
-      o.r(t), o.d(t, { default: () => r });
-      const r = o(97695).$g;
+      r.r(t), r.d(t, { default: () => o });
+      const o = r(97695).$g;
     },
   },
 ]);

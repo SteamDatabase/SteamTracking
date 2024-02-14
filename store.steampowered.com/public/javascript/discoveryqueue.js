@@ -444,8 +444,8 @@ CDiscoveryQueue.prototype.GenerateNewQueue = function()
 		queuetype: this.m_eQueueType,
 	}).done( function ( data ) {
 		window.location = 'https://store.steampowered.com/explore/next';
-	}).fail( function() {
-		ShowAlertDialog( 'Start another queue >>', 'There was a problem saving your preferences.  Please try again later.' );
+	}).fail( function( eResult ) {
+		ShowAlertDialog( 'Start another queue >>', 'There was a problem generating your discovery queue. Either there are no more valid products to view or we encountered an unexpected error. Please try again later. (%s)'.replace( "%s", eResult ) );
 	} );
 };
 

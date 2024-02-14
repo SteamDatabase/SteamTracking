@@ -5,86 +5,82 @@
   {
     3934: (e) => {
       e.exports = {
-        AllButton: "cookiesettings_AllButton_24Y_0",
-        ButtonHighlight: "cookiesettings_ButtonHighlight_3OVHZ",
-        CookieSettingsHeader: "cookiesettings_CookieSettingsHeader_3R3ii",
-        ButtonGroup: "cookiesettings_ButtonGroup_YPn6V",
-        CookieGroup: "cookiesettings_CookieGroup_25H3q",
-        CookieSection: "cookiesettings_CookieSection_3IKt4",
-        SectionDescription: "cookiesettings_SectionDescription_GA-wF",
-        NecessaryGroup: "cookiesettings_NecessaryGroup_24o8c",
-        NecessaryTitle: "cookiesettings_NecessaryTitle_3if8Z",
-        NecessaryDesc: "cookiesettings_NecessaryDesc_9NmWi",
+        AllButton: "_24Y_0sMrz5EywcAsFUstI1",
+        ButtonHighlight: "_3OVHZhM_IefZqAOIsPxatj",
+        CookieSettingsHeader: "_3R3iiUuAhP-0M-rdtCANeY",
+        ButtonGroup: "YPn6VOod44mu0w34xdzDC",
+        CookieGroup: "_25H3qBQ1Lfsfq8nwc3M0Fk",
+        CookieSection: "_3IKt4dLdwzyZtMqAwvawdG",
+        SectionDescription: "GA-wFr-pPreiaNq3wRump",
+        NecessaryGroup: "_24o8cEsvGK0bE4hHyUGhfh",
+        NecessaryTitle: "_3if8ZNUUN7eSTxlCJbdgav",
+        NecessaryDesc: "_9NmWi9VzZyFLjcu_GW_70",
       };
     },
     28890: (e) => {
       e.exports = {
-        NotificationSettingsHeader:
-          "notificationsettings_NotificationSettingsHeader_2XOzk",
-        SectionDescription: "notificationsettings_SectionDescription_3K5HB",
-        NotificationGroup: "notificationsettings_NotificationGroup_1_kCY",
-        NotificationSection: "notificationsettings_NotificationSection_3Sbby",
-        NotificationFeedToggle:
-          "notificationsettings_NotificationFeedToggle_30Nc3",
-        NotificationDescription:
-          "notificationsettings_NotificationDescription_3FSzS",
-        NotificationPrefDetails:
-          "notificationsettings_NotificationPrefDetails_152HT",
-        PrefDetailsToggle: "notificationsettings_PrefDetailsToggle_3XAMD",
-        Selected: "notificationsettings_Selected_3yrEI",
+        NotificationSettingsHeader: "_2XOzkA8bF8HiEtnoYSLHGC",
+        SectionDescription: "_3K5HBHn_mMUrazI_oUH12q",
+        NotificationGroup: "_1_kCY5Jc71QX_9j4Q7brk",
+        NotificationSection: "_3Sbby9pYJeX9b2Dcjx1Gbc",
+        NotificationFeedToggle: "_30Nc3G1cpcJeZAQulOQYHB",
+        NotificationDescription: "_3FSzSTDALgYgSmsyvkISnG",
+        NotificationPrefDetails: "_152HTE3xZ88Xk7LEEPFE68",
+        PrefDetailsToggle: "_3XAMDDm5D1pSZpakvjyRPk",
+        Selected: "_3yrEIJRje6XiWe9BiIGY7P",
       };
     },
-    13043: (e, t, i) => {
+    13043: (e, t, r) => {
       "use strict";
-      i.d(t, { p: () => _ });
-      var n = i(85556),
-        s = i(47427),
-        r = i(82493),
-        o = i(4030),
-        a = i(20417),
-        c = i(37563),
-        l = i(35643);
+      r.d(t, { p: () => _ });
+      var n = r(85556),
+        i = r(47427),
+        s = r(82493),
+        a = r(4030),
+        c = r(20417),
+        o = r(37563),
+        l = r(35643);
       function _(e) {
-        const { children: t, navTreeRef: i } = e,
+        const { children: t, navTreeRef: r } = e,
           _ = (0, n._T)(e, ["children", "navTreeRef"]),
-          m = s.useRef(),
-          f = (0, a.BE)(m, i),
-          g = (0, c.id)(),
+          m = i.useRef(),
+          f = (0, c.BE)(m, r),
+          g = (0, o.id)(),
           p = window.__virtual_keyboard_client;
         if (g) {
           const e = window.__nav_tree_root;
-          return s.createElement(
-            r.Fe,
+          return i.createElement(
+            s.Fe,
             Object.assign({}, _, {
               navTreeRef: f,
               secondary: !0,
               parentEmbeddedNavTree: e,
             }),
-            s.createElement(
+            i.createElement(
               l.o5,
               { factory: p },
-              s.createElement(o.O, null, t),
+              i.createElement(a.O, null, t),
             ),
           );
         }
-        return s.createElement(s.Fragment, null, t);
+        return i.createElement(i.Fragment, null, t);
       }
     },
-    58289: (e, t, i) => {
+    58289: (e, t, r) => {
       "use strict";
-      i.r(t), i.d(t, { AccountPreferencesRoutes: () => H, default: () => R });
-      var n = i(47427),
-        s = i(8285),
-        r = i(85556),
-        o = i(54842),
-        a = (i(16649), i(37563)),
-        c = i(80751),
-        l = i.n(c),
-        _ = i(31846);
+      r.r(t), r.d(t, { AccountPreferencesRoutes: () => U, default: () => M });
+      var n = r(47427),
+        i = r(8285),
+        s = r(85556),
+        a = r(54842),
+        c = (r(16649), r(37563)),
+        o = r(80751),
+        l = r.n(o),
+        _ = r(31846);
       class m {
         constructor(e) {
           (this.m_Preferences = void 0),
-            (0, o.rC)(this),
+            (0, a.rC)(this),
             (this.m_Preferences = e),
             (this.m_Preferences.content_customization &&
               !Array.isArray(this.m_Preferences.content_customization)) ||
@@ -197,17 +193,17 @@
         }
         PostCookieSettings() {
           var e, t;
-          return (0, r.mG)(this, void 0, void 0, function* () {
-            const i = a.De.STORE_BASE_URL + "account/ajaxsetcookiepreferences",
+          return (0, s.mG)(this, void 0, void 0, function* () {
+            const r = c.De.STORE_BASE_URL + "account/ajaxsetcookiepreferences",
               n = new FormData();
-            n.set("sessionid", a.De.SESSIONID),
+            n.set("sessionid", c.De.SESSIONID),
               n.append("cookiepreferences", JSON.stringify(this.m_Preferences));
             try {
-              let s = yield l().post(i, n, { withCredentials: !0 });
+              let i = yield l().post(r, n, { withCredentials: !0 });
               if (
-                200 != s.status ||
+                200 != i.status ||
                 1 !=
-                  (null === (e = null == s ? void 0 : s.data) || void 0 === e
+                  (null === (e = null == i ? void 0 : i.data) || void 0 === e
                     ? void 0
                     : e.success)
               )
@@ -217,12 +213,12 @@
                 );
               else if (
                 1 ==
-                (null === (t = null == s ? void 0 : s.data) || void 0 === t
+                (null === (t = null == i ? void 0 : i.data) || void 0 === t
                   ? void 0
                   : t.success)
               ) {
                 0;
-                const { transfer_urls: e, transfer_params: t } = s.data;
+                const { transfer_urls: e, transfer_params: t } = i.data;
                 e && t && this.TransferCookiePreferencesToSites(e, t);
               }
             } catch (e) {
@@ -235,34 +231,34 @@
           });
         }
         TransferCookiePreferencesToSites(e, t) {
-          const i = new FormData();
-          i.set("transfer_params", t);
-          for (const t of e) l().post(t, i);
+          const r = new FormData();
+          r.set("transfer_params", t);
+          for (const t of e) l().post(t, r);
         }
       }
-      (0, r.gn)([o.LO], m.prototype, "m_Preferences", void 0);
-      var f = i(27605),
-        g = i(1485),
-        p = i(3934),
-        h = i(13129),
-        d = i(91618),
-        u = i(41130),
-        P = i(13043),
-        k = i(82493);
-      let N;
-      const y = (0, f.Pi)(() => {
+      (0, s.gn)([a.LO], m.prototype, "m_Preferences", void 0);
+      var f = r(27605),
+        g = r(1485),
+        p = r(3934),
+        h = r(13129),
+        d = r(91618),
+        u = r(41130),
+        P = r(13043),
+        k = r(82493);
+      let E;
+      const N = (0, f.Pi)(() => {
           let e = (function () {
-            if (!N) {
-              let e = (0, a.kQ)("cookiepreferences", "application_config");
-              N = new m(e);
+            if (!E) {
+              let e = (0, c.kQ)("cookiepreferences", "application_config");
+              E = new m(e);
             }
-            return N;
+            return E;
           })();
           const t = (0, u.L)(),
-            i = (0, n.useCallback)(() => {
+            r = (0, n.useCallback)(() => {
               e.SetPreferenceState(1);
             }, [e]),
-            s = (0, n.useCallback)(() => {
+            i = (0, n.useCallback)(() => {
               e.SetPreferenceState(2);
             }, [e]);
           return n.createElement(
@@ -295,7 +291,7 @@
                       p.AllButton,
                       e.BIsRejectAll() ? p.ButtonHighlight : "",
                     ),
-                    onClick: s,
+                    onClick: i,
                   },
                   (0, _.Xx)("#CookiePref_RejectAll"),
                 ),
@@ -306,12 +302,12 @@
                       p.AllButton,
                       e.BIsAllowAll() ? p.ButtonHighlight : "",
                     ),
-                    onClick: i,
+                    onClick: r,
                   },
                   (0, _.Xx)("#CookiePref_AcceptAll"),
                 ),
               ),
-              n.createElement(E, { settings: e }),
+              n.createElement(y, { settings: e }),
               n.createElement(v, { settings: e }),
               n.createElement(C, { settings: e }),
             ),
@@ -476,9 +472,9 @@
             null,
           );
         }),
-        E = (0, f.Pi)((e) => {
+        y = (0, f.Pi)((e) => {
           const { settings: t } = e,
-            i = (0, n.useCallback)(() => {
+            r = (0, n.useCallback)(() => {
               t.ToggleRecentApps();
             }, [t]);
           return n.createElement(
@@ -498,7 +494,7 @@
                 (0, _.Xx)("#CookiePref_Content_Desc"),
               ),
               n.createElement(g.gE, {
-                onChange: i,
+                onChange: r,
                 label: (0, _.Xx)("#CookiePref_Content_ToggleTitle"),
                 checked: t.GetRecentApps(),
                 description: (0, _.Xx)("#CookiePref_Content_ToggleDesc"),
@@ -508,7 +504,7 @@
         }),
         v = (0, f.Pi)((e) => {
           const { settings: t } = e,
-            i = (0, n.useCallback)(() => {
+            r = (0, n.useCallback)(() => {
               t.ToggleImpressions();
             }, [t]);
           return n.createElement(
@@ -528,7 +524,7 @@
                 (0, _.Xx)("#CookiePref_ValveAnalytics_Desc"),
               ),
               n.createElement(g.gE, {
-                onChange: i,
+                onChange: r,
                 label: (0, _.Xx)("#CookiePref_ValveAnalytics_ToggleTitle"),
                 checked: t.GetImpressions(),
                 description: (0, _.Xx)("#CookiePref_ValveAnalytics_ToggleDesc"),
@@ -538,13 +534,13 @@
         }),
         C = (0, f.Pi)((e) => {
           const { settings: t } = e,
-            i = (0, n.useCallback)(() => {
+            r = (0, n.useCallback)(() => {
               t.ToggleYouTube();
             }, [t]),
-            s = (0, n.useCallback)(() => {
+            i = (0, n.useCallback)(() => {
               t.ToggleVimeo();
             }, [t]),
-            r = (0, n.useCallback)(() => {
+            s = (0, n.useCallback)(() => {
               t.ToggleSketchfab();
             }, [t]);
           return n.createElement(
@@ -564,7 +560,7 @@
                 (0, _.Xx)("#CookiePref_ThirdParty_Desc"),
               ),
               n.createElement(g.gE, {
-                onChange: i,
+                onChange: r,
                 label: (0, _.Xx)("#CookiePref_YouTube_Title"),
                 checked: t.GetYouTube(),
                 description: (0, _.kQ)(
@@ -580,7 +576,7 @@
                 ),
               }),
               n.createElement(g.gE, {
-                onChange: s,
+                onChange: i,
                 label: (0, _.Xx)("#CookiePref_Vimeo_Title"),
                 checked: t.GetVimeo(),
                 description: (0, _.kQ)(
@@ -593,7 +589,7 @@
                 ),
               }),
               n.createElement(g.gE, {
-                onChange: r,
+                onChange: s,
                 label: (0, _.Xx)("#CookiePref_Sketchfab_Title"),
                 checked: t.GetSketchfab(),
                 description: (0, _.kQ)(
@@ -610,7 +606,7 @@
         }),
         S = (0, f.Pi)((e) => {
           const { settings: t } = e,
-            i = (0, n.useCallback)(() => {
+            r = (0, n.useCallback)(() => {
               t.ToggleUTMEnabled();
             }, [t]);
           return n.createElement(
@@ -630,7 +626,7 @@
                 (0, _.Xx)("#PrivacySettings_Marketing_Desc"),
               ),
               n.createElement(g.gE, {
-                onChange: i,
+                onChange: r,
                 label: (0, _.Xx)("#PrivacySettings_UTM_ToggleLabel"),
                 checked: t.GetUTMEnabled(),
                 description: (0, _.Xx)("#PrivacySettings_UTM_ToggleDesc"),
@@ -642,7 +638,7 @@
         constructor(e) {
           (this.m_Preferences = void 0),
             (this.m_bUpdating = !1),
-            (0, o.rC)(this),
+            (0, a.rC)(this),
             (this.m_Preferences = e);
         }
         GetPreferences() {
@@ -653,40 +649,40 @@
         }
         ToggleTargetPreference(e, t) {
           this.m_bUpdating = !0;
-          let i = !1;
+          let r = !1;
           for (let n of this.m_Preferences)
             if (t.notification_type == n.notification_type) {
               (n.notification_targets ^= e),
                 1 != (1 & n.notification_targets) &&
                   (n.notification_targets = 0),
-                (i = !0);
+                (r = !0);
               break;
             }
-          i && this.PostNotificationSettings(), (this.m_bUpdating = !1);
+          r && this.PostNotificationSettings(), (this.m_bUpdating = !1);
         }
         PostNotificationSettings() {
           var e, t;
-          return (0, r.mG)(this, void 0, void 0, function* () {
-            const i =
-                a.De.STORE_BASE_URL + "account/ajaxsetnotificationsettings",
+          return (0, s.mG)(this, void 0, void 0, function* () {
+            const r =
+                c.De.STORE_BASE_URL + "account/ajaxsetnotificationsettings",
               n = new FormData();
-            n.set("sessionid", a.De.SESSIONID),
+            n.set("sessionid", c.De.SESSIONID),
               n.append(
                 "notificationpreferences",
                 JSON.stringify(this.m_Preferences),
               );
             try {
-              let s = yield l().post(i, n, { withCredentials: !0 });
-              200 != s.status ||
+              let i = yield l().post(r, n, { withCredentials: !0 });
+              200 != i.status ||
               1 !=
-                (null === (e = null == s ? void 0 : s.data) || void 0 === e
+                (null === (e = null == i ? void 0 : i.data) || void 0 === e
                   ? void 0
                   : e.success)
                 ? window.ShowAlertDialog(
                     (0, _.Xx)("#NotificationPref_Error"),
                     (0, _.Xx)("#NotificationPref_ErrorNotSaved"),
                   )
-                : null === (t = null == s ? void 0 : s.data) ||
+                : null === (t = null == i ? void 0 : i.data) ||
                   void 0 === t ||
                   t.success;
             } catch (e) {
@@ -699,24 +695,24 @@
           });
         }
       }
-      (0, r.gn)([o.LO], T.prototype, "m_Preferences", void 0),
-        (0, r.gn)([o.LO], T.prototype, "m_bUpdating", void 0);
-      var b = i(28890),
-        D = i(58538);
+      (0, s.gn)([a.LO], T.prototype, "m_Preferences", void 0),
+        (0, s.gn)([a.LO], T.prototype, "m_bUpdating", void 0);
+      var b = r(28890),
+        D = r(58538);
       let x;
       function X() {
         if (!x) {
-          let e = (0, a.kQ)("notificationpreferences", "application_config");
+          let e = (0, c.kQ)("notificationpreferences", "application_config");
           x = new T(e);
         }
         return x;
       }
-      const G = (0, f.Pi)(() => {
+      const A = (0, f.Pi)(() => {
           let e = X();
           const t = (0, u.L)();
-          let i = [];
+          let r = [];
           for (const t of e.GetPreferences())
-            i.push(n.createElement(A, { preferenceSetting: t }));
+            r.push(n.createElement(G, { preferenceSetting: t }));
           return n.createElement(
             P.p,
             { navID: "StoreNotificationSettings", NavigationManager: t },
@@ -755,25 +751,25 @@
                   null,
                   (0, _.Xx)("#NotificationSettings_SendMeWhen"),
                 ),
-                i,
+                r,
               ),
             ),
           );
         }),
-        A = (0, f.Pi)((e) => {
+        G = (0, f.Pi)((e) => {
           const { preferenceSetting: t } = e;
-          let i = X();
-          const s = (0, n.useCallback)(() => {
-              i.ToggleTargetPreference(1, t);
-            }, [t, i]),
-            r = (0, n.useCallback)(() => {
-              i.ToggleTargetPreference(8, t);
-            }, [t, i]),
-            o = (0, n.useCallback)(() => {
-              i.ToggleTargetPreference(2, t);
-            }, [t, i]),
-            [a, c] = (0, n.useState)(!1),
-            l = i.BUpdatingPreferences(),
+          let r = X();
+          const i = (0, n.useCallback)(() => {
+              r.ToggleTargetPreference(1, t);
+            }, [t, r]),
+            s = (0, n.useCallback)(() => {
+              r.ToggleTargetPreference(8, t);
+            }, [t, r]),
+            a = (0, n.useCallback)(() => {
+              r.ToggleTargetPreference(2, t);
+            }, [t, r]),
+            [c, o] = (0, n.useState)(!1),
+            l = r.BUpdatingPreferences(),
             m = 1 == (1 & t.notification_targets),
             f = 2 == (2 & t.notification_targets),
             p = 8 == (8 & t.notification_targets);
@@ -786,7 +782,7 @@
               n.createElement(g.fp, {
                 className: b.NotificationFeedToggle,
                 padding: "compact",
-                onChange: s,
+                onChange: i,
                 disabled: l,
                 bottomSeparator: "none",
                 checked: m,
@@ -802,14 +798,14 @@
                 {
                   className: (0, h.Z)({
                     [b.PrefDetailsToggle]: !0,
-                    [b.Selected]: a,
+                    [b.Selected]: c,
                   }),
-                  onClick: () => c(!a),
+                  onClick: () => o(!c),
                 },
                 n.createElement(D.vVQ, { direction: "down" }),
               ),
             ),
-            a &&
+            c &&
               n.createElement(
                 "div",
                 { className: b.NotificationPrefDetails },
@@ -817,75 +813,75 @@
                   label: (0, _.Xx)("#NotificationSettings_SendToast"),
                   disabled: l || !m,
                   checked: p,
-                  onChange: r,
+                  onChange: s,
                 }),
                 n.createElement(g.ji, {
                   label: (0, _.Xx)("#NotificationSettings_PushNotification"),
                   disabled: l || !m,
                   checked: f,
-                  onChange: o,
+                  onChange: a,
                 }),
               ),
           );
           var d;
         });
-      var w = i(56480);
-      const B = n.lazy(() =>
+      var w = r(56480);
+      const I = n.lazy(() =>
           Promise.all([
-            i.e(460),
-            i.e(8112),
-            i.e(9766),
-            i.e(1021),
-            i.e(3344),
-            i.e(8820),
-            i.e(6882),
-            i.e(7247),
-            i.e(9424),
-            i.e(7695),
-            i.e(3243),
-            i.e(344),
-            i.e(1720),
-            i.e(5800),
-          ]).then(i.bind(i, 94273)),
+            r.e(460),
+            r.e(8112),
+            r.e(9766),
+            r.e(1021),
+            r.e(3344),
+            r.e(8820),
+            r.e(6882),
+            r.e(7247),
+            r.e(9424),
+            r.e(7695),
+            r.e(3243),
+            r.e(344),
+            r.e(1720),
+            r.e(5800),
+          ]).then(r.bind(r, 94273)),
         ),
-        I = { FamilyManagement: () => "/familymanagement" },
-        H = Object.assign(
+        B = { FamilyManagement: () => "/familymanagement" },
+        U = Object.assign(
           {
             CookieSettings: () => "/cookiepreferences",
             NotificationSettings: () => "/notificationsettings",
           },
-          I,
+          B,
         ),
-        R = (e) => {
+        M = (e) => {
           const t = e.match.url,
-            i = H;
+            r = U;
           return n.createElement(
-            s.rs,
+            i.rs,
             null,
-            n.createElement(s.AW, {
-              path: `${t}${i.CookieSettings()}`,
+            n.createElement(i.AW, {
+              path: `${t}${r.CookieSettings()}`,
               render: () =>
                 n.createElement(w.d, {
                   config: {
-                    "cookie-preferences": () => n.createElement(y, null),
+                    "cookie-preferences": () => n.createElement(N, null),
                   },
                 }),
             }),
-            n.createElement(s.AW, {
-              path: `${t}${i.NotificationSettings()}`,
+            n.createElement(i.AW, {
+              path: `${t}${r.NotificationSettings()}`,
               render: () =>
                 n.createElement(w.d, {
                   config: {
-                    "notification-settings": () => n.createElement(G, null),
+                    "notification-settings": () => n.createElement(A, null),
                   },
                 }),
             }),
-            n.createElement(s.AW, {
-              path: `${t}${i.FamilyManagement()}`,
+            n.createElement(i.AW, {
+              path: `${t}${r.FamilyManagement()}`,
               render: () =>
                 n.createElement(w.d, {
                   config: {
-                    "family-management": () => n.createElement(B, null),
+                    "family-management": () => n.createElement(I, null),
                   },
                 }),
             }),
