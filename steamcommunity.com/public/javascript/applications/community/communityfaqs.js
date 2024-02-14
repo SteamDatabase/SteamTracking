@@ -5,153 +5,153 @@
   {
     57855: (e) => {
       e.exports = {
-        FAQViewPage: "faqsharedviewpage_FAQViewPage_2c-Zv",
-        SupportTitle: "faqsharedviewpage_SupportTitle_3nR_5",
-        Columns: "faqsharedviewpage_Columns_3t30O",
-        LeftCol: "faqsharedviewpage_LeftCol_36C-i",
-        TopColorBar: "faqsharedviewpage_TopColorBar_3Ar5o",
-        RightCol: "faqsharedviewpage_RightCol_2J5wY",
-        SectionCtn: "faqsharedviewpage_SectionCtn_19tG9",
-        FAQTopicCtn: "faqsharedviewpage_FAQTopicCtn_2sb3t",
-        FAQTitle: "faqsharedviewpage_FAQTitle_2Q7dv",
-        FAQContent: "faqsharedviewpage_FAQContent_NOvHU",
+        FAQViewPage: "_2c-ZvYlsjPPXuJ8mGCrm4b",
+        SupportTitle: "_3nR_5zDV4zAPIvvU0KiN0I",
+        Columns: "_3t30O2QxkGP9fvRLRDGswB",
+        LeftCol: "_36C-iYFaWFiKRonTzh-HmN",
+        TopColorBar: "_3Ar5ozxp1bt4rjNjuhvn3F",
+        RightCol: "_2J5wYxXT7alqRbrLNH1mix",
+        SectionCtn: "_19tG9inhMAZq_51s-qI90w",
+        FAQTopicCtn: "_2sb3tLnzLRwrqh0PNdD2lF",
+        FAQTitle: "_2Q7dvhXOWECTr3tzB35qET",
+        FAQContent: "NOvHUNQANYp-AIJstDhAd",
       };
     },
     29111: (e) => {
-      e.exports = { InfoRow: "faqviewadmin_InfoRow_2IuXf" };
+      e.exports = { InfoRow: "_2IuXfoahgTxwZfYpytNkLa" };
     },
     14579: (e) => {
       e.exports = {
-        Section: "faqviewsidebar_Section_2GXm0",
-        CommunityHelp: "faqviewsidebar_CommunityHelp_1aSK_",
-        NeedHelp: "faqviewsidebar_NeedHelp_16-27",
-        LeftCol: "faqviewsidebar_LeftCol_yNuYO",
-        TopicHeader: "faqviewsidebar_TopicHeader_38Q4p",
-        CenterButtonCtn: "faqviewsidebar_CenterButtonCtn_aAZul",
+        Section: "_2GXm0D-ofulQO2nXUm0yTS",
+        CommunityHelp: "_1aSK_wN2h0Z8aHistspBZE",
+        NeedHelp: "_16-27M8ldt_ry9tBV515Wo",
+        LeftCol: "yNuYOxp91ACay7sBLPubB",
+        TopicHeader: "_38Q4pJr92P3dYRozQfTEvR",
+        CenterButtonCtn: "aAZulHjD2jQ42SL5OKaWU",
       };
     },
     47955: (e) => {
-      e.exports = { SmallAvatar: "userprofile_SmallAvatar_2cCH3" };
+      e.exports = { SmallAvatar: "_2cCH3yNLHHafG87E2uIfR-" };
     },
     96680: (e) => {
       e.exports = {
-        ImportToolCtn: "bbcodeimporter_ImportToolCtn_TQZns",
-        ToolHeader: "bbcodeimporter_ToolHeader_vr371",
-        StatusMessage: "bbcodeimporter_StatusMessage_3LsT8",
-        FAQRow: "bbcodeimporter_FAQRow_2KnD-",
-        ID: "bbcodeimporter_ID_3amum",
-        ShortCode: "bbcodeimporter_ShortCode_X44e5",
-        Missing: "bbcodeimporter_Missing_x-9o9",
-        Good: "bbcodeimporter_Good_2Tj3Z",
-        Suspicious: "bbcodeimporter_Suspicious_o09Lc",
-        Bad: "bbcodeimporter_Bad_1jrHo",
-        BadImport: "bbcodeimporter_BadImport_2rvOL",
-        Ref: "bbcodeimporter_Ref_29eod",
-        Text: "bbcodeimporter_Text_24IpJ",
-        ImportFAQsButton: "bbcodeimporter_ImportFAQsButton_2CwpZ",
+        ImportToolCtn: "TQZnshq2Qsd3viDy4sJLF",
+        ToolHeader: "vr371b5v4qQyt77GOrmDG",
+        StatusMessage: "_3LsT8l7RdLV1yIs0YWIOFx",
+        FAQRow: "_2KnD-XGr2tQZgxzgnyZLUA",
+        ID: "_3amumi0E41Z5Xj7plFPL5-",
+        ShortCode: "X44e5J8tbN7z5LRUsyZqG",
+        Missing: "x-9o9E7Oh_BVe8Tlmcnh4",
+        Good: "_2Tj3ZfxIXBXW7dG_OuryHf",
+        Suspicious: "o09LcQ1ceI25xuOxL7PJh",
+        Bad: "_1jrHoUuI05tU-BtGagKqYq",
+        BadImport: "_2rvOLnQ6cCBtiqCkZUTFsT",
+        Ref: "_29eodc_GpDadGfM6pAPdXE",
+        Text: "_24IpJtkIKUNnTx52K-LUdK",
+        ImportFAQsButton: "_2CwpZpTd8NeCUka4WwfT9l",
       };
     },
     54057: (e) => {
       e.exports = {
-        FAQDashboardPage: "faqdashboard_FAQDashboardPage_59oO6",
-        FAQDashboard: "faqdashboard_FAQDashboard_tIxuP",
-        DashboardHeader: "faqdashboard_DashboardHeader_1fVLw",
-        DashboardHeaderTitle: "faqdashboard_DashboardHeaderTitle_14k5N",
-        DashboardHeaderButtonCtn: "faqdashboard_DashboardHeaderButtonCtn_MuQkN",
-        DashboardCreateFAQButton: "faqdashboard_DashboardCreateFAQButton_3VW3j",
-        CreateFAQDialog: "faqdashboard_CreateFAQDialog_2053e",
-        NameInput: "faqdashboard_NameInput_3qsK9",
-        ErrorMsg: "faqdashboard_ErrorMsg_1MkpM",
-        DashboardListHeaderRow: "faqdashboard_DashboardListHeaderRow_1m9z-",
-        EntryColumn: "faqdashboard_EntryColumn_29Dif",
-        NameCol: "faqdashboard_NameCol_1fuCl",
-        DataCol: "faqdashboard_DataCol_31hg_",
-        ClickableHeader: "faqdashboard_ClickableHeader_2dUdD",
-        DownArrow: "faqdashboard_DownArrow_30b5I",
-        Selected: "faqdashboard_Selected_3_SL2",
-        BadCount: "faqdashboard_BadCount_1kNWc",
-        Visible: "faqdashboard_Visible_pbhW7",
-        Hidden: "faqdashboard_Hidden_2sNUo",
-        GoodCount: "faqdashboard_GoodCount_M3TAP",
-        DateToolTip: "faqdashboard_DateToolTip_Q8C5p",
-        DashboardEntry: "faqdashboard_DashboardEntry_kcPTy",
-        EntryInternalName: "faqdashboard_EntryInternalName_1sL5y",
+        FAQDashboardPage: "_59oO6wefB3rQ2vFht_b50",
+        FAQDashboard: "tIxuPSrF_izJyj_xSBAu",
+        DashboardHeader: "_1fVLwDLknGBvNqXvbz5ieq",
+        DashboardHeaderTitle: "_14k5Nx2pbJlfrumOKYilwb",
+        DashboardHeaderButtonCtn: "MuQkNExZZvUGyooMU1W63",
+        DashboardCreateFAQButton: "_3VW3jphjSrFsWyh8CQ7qkl",
+        CreateFAQDialog: "_2053etsNH77sMt0UGZ7Gkf",
+        NameInput: "_3qsK9sWwA8-5XRJijxOyAq",
+        ErrorMsg: "_1MkpMd3IngFLh9Lj1YdVaZ",
+        DashboardListHeaderRow: "_1m9z-QOtKB83PPSMvFp2qj",
+        EntryColumn: "_29DifZl5OcFsMPwjVeSKul",
+        NameCol: "_1fuClf4BBhhdkGW2AiR9xz",
+        DataCol: "_31hg_XZCfqD4KpN77UoWpB",
+        ClickableHeader: "_2dUdD5Bxvl5g7AXm74jlY-",
+        DownArrow: "_30b5IzshpNjcRcDjnbiHHV",
+        Selected: "_3_SL2rzskqZJldo0NVDRPy",
+        BadCount: "_1kNWcaTgntfwrNOrNOdLEs",
+        Visible: "pbhW7T1VOciPsM4805I5i",
+        Hidden: "_2sNUoEB66JUcm-Y3kKrdL8",
+        GoodCount: "M3TAP-1MxenvBQsT-eXlR",
+        DateToolTip: "Q8C5pKiJQWiQxpeE9g5A0",
+        DashboardEntry: "kcPTyksATgiPUcmwAwGOe",
+        EntryInternalName: "_1sL5ykMb1b1-WfHxwf8L1K",
       };
     },
     68048: (e) => {
       e.exports = {
-        FAQEditPage: "faqeditor_FAQEditPage_2QALa",
-        FAQMenuCtn: "faqeditor_FAQMenuCtn_1DISv",
-        FAQEditorCtn: "faqeditor_FAQEditorCtn_sjpl-",
-        FAQEditor: "faqeditor_FAQEditor_3YIwj",
-        EditorSaveButton: "faqeditor_EditorSaveButton_22iwd",
-        EditorLabel: "faqeditor_EditorLabel_3jk92",
-        EditorTitleField: "faqeditor_EditorTitleField_37R-2",
-        EditorTitleFieldInput: "faqeditor_EditorTitleFieldInput_2A5OE",
-        EditorPane: "faqeditor_EditorPane_B4ngK",
-        EditorPaneTextArea: "faqeditor_EditorPaneTextArea_1g6vo",
-        ErrorCtn: "faqeditor_ErrorCtn_1l94e",
-        ErrorMsg: "faqeditor_ErrorMsg_1LIvQ",
-        EscapeLink: "faqeditor_EscapeLink_3tlrR",
+        FAQEditPage: "_2QALaQ13bEoS_oLFjL1prx",
+        FAQMenuCtn: "_1DISv1JGZ0pxbGtYHeBsJU",
+        FAQEditorCtn: "sjpl-ow0jbdSysRG8jsFA",
+        FAQEditor: "_3YIwjQZlP_YdCZH2DIj5f7",
+        EditorSaveButton: "_22iwdea7XXbiuZrrLZUU11",
+        EditorLabel: "_3jk92bsX5BdG6dMFNGNNKa",
+        EditorTitleField: "_37R-2WttVdEqucotluEzW_",
+        EditorTitleFieldInput: "_2A5OEhQlo5sJWuhIqlkEJL",
+        EditorPane: "B4ngKzLlL1gvAnj9Vdbt4",
+        EditorPaneTextArea: "_1g6voAO3uBDdj9W9WjBB8z",
+        ErrorCtn: "_1l94et1-5wPLcAMJ3Bx8qq",
+        ErrorMsg: "_1LIvQOeIKBZzearuGAM7FW",
+        EscapeLink: "_3tlrRmfmxrdkbJRk48aZDb",
       };
     },
     26461: (e) => {
       e.exports = {
-        LanguageListDialog: "faqlocalization_LanguageListDialog_vp5PF",
-        ChecklistHeader: "faqlocalization_ChecklistHeader_1Vzmz",
-        ChecklistRows: "faqlocalization_ChecklistRows_3qgdW",
-        CheckAll: "faqlocalization_CheckAll_1I_jA",
-        LanguageCheckbox: "faqlocalization_LanguageCheckbox_1llVI",
-        LanguageCheckboxLabel: "faqlocalization_LanguageCheckboxLabel_2S_PZ",
-        Language: "faqlocalization_Language_13DIW",
-        Warning: "faqlocalization_Warning_hGncG",
-        ImportProgressBar: "faqlocalization_ImportProgressBar_1s2UZ",
-        ProgressMarker: "faqlocalization_ProgressMarker_2q-Td",
-        CurrentFAQ: "faqlocalization_CurrentFAQ_1MsSL",
-        LanguageList: "faqlocalization_LanguageList_28hYl",
-        ImportResults: "faqlocalization_ImportResults_2FKxI",
-        ImportResultLabel: "faqlocalization_ImportResultLabel_1_icU",
-        ImportResult: "faqlocalization_ImportResult_3h1Lk",
-        UrlCode: "faqlocalization_UrlCode_MxoxU",
+        LanguageListDialog: "vp5PFufZdDer7tZRg3jrX",
+        ChecklistHeader: "_1VzmzM94XEt-kbk5N0Xcwm",
+        ChecklistRows: "_3qgdWDwppIPmVUI3_-IoWg",
+        CheckAll: "_1I_jAq3MJfhGnx3-H9fkRc",
+        LanguageCheckbox: "_1llVI6GfKRzbQRSS7bS9sI",
+        LanguageCheckboxLabel: "_2S_PZcuwqHb1BUGrd6Xvnk",
+        Language: "_13DIWnUBOf_d2HSzZWW_72",
+        Warning: "hGncGWqE9kTLXhxQe4SJ2",
+        ImportProgressBar: "_1s2UZCHSCadxdeXsd6fbj6",
+        ProgressMarker: "_2q-TdYLM1Zgn9tPZ3_1wCx",
+        CurrentFAQ: "_1MsSLkJk0mX4ITyxy8mpEJ",
+        LanguageList: "_28hYlCdWipXh9xN8jgf8ZT",
+        ImportResults: "_2FKxIYwCCRBm_BH0BsKyem",
+        ImportResultLabel: "_1_icUC7cNPpNZvq_qgQ33D",
+        ImportResult: "_3h1LkNfeVLc44BAuHSBudK",
+        UrlCode: "MxoxU6nWqZvCxgOlJxTvE",
       };
     },
     40548: (e) => {
       e.exports = {
-        LeftMenu: "faqstatus_LeftMenu_1txme",
-        Section: "faqstatus_Section_2j-hh",
-        SectionContents: "faqstatus_SectionContents_3lz4J",
-        SectionDescription: "faqstatus_SectionDescription_3L68i",
-        SectionTitle: "faqstatus_SectionTitle_23FTZ",
-        VisibilityCtn: "faqstatus_VisibilityCtn_16zch",
-        StatusRow: "faqstatus_StatusRow_272D2",
-        Global: "faqstatus_Global_1DcbV",
-        China: "faqstatus_China_2cUtB",
-        StatusBtnCtn: "faqstatus_StatusBtnCtn_HJUHT",
-        PublishCtn: "faqstatus_PublishCtn_2syC3",
-        PublishStatus: "faqstatus_PublishStatus_uvzu3",
-        PublishBtn: "faqstatus_PublishBtn_3P52v",
-        FaqStatusTable: "faqstatus_FaqStatusTable_pCBfT",
+        LeftMenu: "_1txmemUH3rosQe71mZfr0q",
+        Section: "_2j-hhYTlI8Ntg1JrTWINdL",
+        SectionContents: "_3lz4JUNpNDnahEyzj1eZkK",
+        SectionDescription: "_3L68i4ZAokqaCqqk7yhIau",
+        SectionTitle: "_23FTZuq9MQrukHrWgZMKrp",
+        VisibilityCtn: "_16zchT5YPTg-YRcLmO7T1N",
+        StatusRow: "_272D2JP0YHWH_sY_IP2MJQ",
+        Global: "_1DcbV58-8H0QRtU4wmimaO",
+        China: "_2cUtBQSP-uCM363ee58k-t",
+        StatusBtnCtn: "HJUHTdNtL70vwUqYSh-FD",
+        PublishCtn: "_2syC3PimmI-5viillwUd6d",
+        PublishStatus: "uvzu3hbcsBlAoiPdATNbf",
+        PublishBtn: "_3P52vp7DdW5ZKRbKrEsr64",
+        FaqStatusTable: "pCBfTw19y3z1htRCTD7Sk",
       };
     },
     26334: (e) => {
       e.exports = {
-        Never: "faqtimestamp_Never_8rlUG",
-        Warning: "faqtimestamp_Warning_pZM2L",
+        Never: "_8rlUGGeBnYbuZpSoMtPGY",
+        Warning: "pZM2L30-1FOU9cbzqy1AQ",
       };
     },
     59565: (e) => {
       e.exports = {
-        FAQUnPublished: "faqtoolbar_FAQUnPublished_erZyI",
-        FAQPublished: "faqtoolbar_FAQPublished_13Wz0",
-        EditorInternalNameLabel: "faqtoolbar_EditorInternalNameLabel_3fAcX",
-        EditorInternalName: "faqtoolbar_EditorInternalName_3A9ci",
+        FAQUnPublished: "erZyIOjQA9q0Wv28vQPiN",
+        FAQPublished: "_13Wz0jEDJuyCYIYT-3Nk8X",
+        EditorInternalNameLabel: "_3fAcXrEhyNYZKLFAviS1gi",
+        EditorInternalName: "_3A9ciQBxaVrGEWI6kD4zod",
       };
     },
     10368: (e) => {
       e.exports = {
-        ErrorCtn: "faqviewpage_ErrorCtn_2Dpwh",
-        ErrorMsg: "faqviewpage_ErrorMsg_2dTNx",
-        EscapeLink: "faqviewpage_EscapeLink_19Bjj",
+        ErrorCtn: "_2Dpwh3MWbH9ND0PlNK8G7M",
+        ErrorMsg: "_2dTNxR8PrLvqBwSUnhUVh5",
+        EscapeLink: "_19BjjT3X_AZgLiL1pFYCDG",
       };
     },
     85857: (e, t, a) => {
@@ -7553,10 +7553,10 @@
         M = a(31846),
         z = a(45284),
         E = a(54057),
-        F = a.n(E),
-        W = a(54842),
-        R = a(74736),
-        O = a.n(R),
+        W = a.n(E),
+        F = a(54842),
+        O = a(74736),
+        R = a.n(O),
         N = a(35427),
         L = a(71741),
         H = a.n(L),
@@ -7567,8 +7567,8 @@
         j = a(45070),
         Y = a(26461),
         X = a(51915);
-      const $ = "title",
-        Q = "content";
+      const Q = "title",
+        $ = "content";
       const K = (e) => {
           const { draft: t, eLanguage: a } = e;
           return n.createElement(
@@ -7583,17 +7583,17 @@
                   const o = new Set(),
                     i = t.GetSortedTokenList();
                   return (
-                    (0, W.z)(() => {
+                    (0, F.z)(() => {
                       a.forEach((a) => {
                         let s = !1;
                         i.forEach((o) => {
                           const i = t.GetLocalization(o, a) || "";
-                          if (o === $) {
+                          if (o === Q) {
                             const t = e.GetDraftTitle(a);
                             (i || (t && t.length > 0)) &&
                               (e.SetDraftTitle(a, i), (s = !0));
                           }
-                          if (o === Q) {
+                          if (o === $) {
                             const t = e.GetDraftContent(a);
                             (i || (t && t.length > 0)) &&
                               (e.SetDraftContent(a, i), (s = !0));
@@ -7719,7 +7719,7 @@
                             for (let s = 0; s < 31; ++s)
                               (e.BHasSomeTextForLanguage(s) || 0 == t) &&
                                 (i.SetLocalization(
-                                  $,
+                                  Q,
                                   s,
                                   null !== (a = e.GetDraftTitle(s)) &&
                                     void 0 !== a
@@ -7727,7 +7727,7 @@
                                     : "",
                                 ),
                                 i.SetLocalization(
-                                  Q,
+                                  $,
                                   s,
                                   null !== (o = e.GetDraftContent(s)) &&
                                     void 0 !== o
@@ -8027,7 +8027,7 @@
                   q.HP,
                   {
                     toolTipContent: o.internal_name,
-                    strTooltipClassname: O().HoverAboveModal,
+                    strTooltipClassname: R().HoverAboveModal,
                     nAllowOffscreenPx: 4e4,
                     className: Y.UrlCode,
                   },
@@ -8037,7 +8037,7 @@
                   q.HP,
                   {
                     toolTipContent: i,
-                    strTooltipClassname: O().HoverAboveModal,
+                    strTooltipClassname: R().HoverAboveModal,
                     nAllowOffscreenPx: 4e4,
                     direction: "left",
                     className: Y.LanguageList,
@@ -8117,10 +8117,10 @@
             }, []),
             n.createElement(
               "div",
-              { className: F().FAQDashboardPage },
+              { className: W().FAQDashboardPage },
               n.createElement(
                 "div",
-                { className: F().FAQDashboard },
+                { className: W().FAQDashboard },
                 n.createElement(fe, null),
                 n.createElement(ye, {
                   eCurrentSortColumn: o,
@@ -8129,7 +8129,7 @@
                 0 == t.length &&
                   n.createElement(
                     "div",
-                    { className: F().ErrorMsg },
+                    { className: W().ErrorMsg },
                     (0, M.Xx)("#FAQDashboard_Empty"),
                   ),
                 s.map((e) => n.createElement(Se, { key: e[0], rgColumns: e })),
@@ -8158,15 +8158,15 @@
             );
           return n.createElement(
             "div",
-            { className: F().DashboardHeader },
+            { className: W().DashboardHeader },
             n.createElement(
               "div",
-              { className: F().DashboardHeaderTitle },
+              { className: W().DashboardHeaderTitle },
               (0, M.Xx)("#FAQDashboard_Header"),
             ),
             n.createElement(
               "div",
-              { className: F().DashboardHeaderButtonCtn },
+              { className: W().DashboardHeaderButtonCtn },
               n.createElement(
                 A.zx,
                 { onClick: a },
@@ -8190,7 +8190,7 @@
               },
               bOKDisabled: 0 == t.length,
               closeModal: e.closeModal,
-              className: F().CreateFAQDialog,
+              className: W().CreateFAQDialog,
             },
             n.createElement(
               A.h4,
@@ -8206,7 +8206,7 @@
                 (0, M.Xx)("#FAQDashboard_CreateFAQInstructions"),
                 n.createElement("input", {
                   type: "text",
-                  className: F().NameInput,
+                  className: W().NameInput,
                   value: t,
                   placeholder: (0, M.Xx)("#FAQDashboard_NamePlaceHolder"),
                   onFocus: (e) => e.target.select(),
@@ -8220,7 +8220,7 @@
         ye = (e) =>
           n.createElement(
             "div",
-            { className: F().DashboardListHeaderRow },
+            { className: W().DashboardListHeaderRow },
             n.createElement(
               be,
               Object.assign(
@@ -8312,10 +8312,10 @@
               SetSortColumn: s,
             } = e,
             r = (0, g.Z)(
-              F().EntryColumn,
-              F().ClickableHeader,
-              a ? F().NameCol : F().DataCol,
-              i == o && F().Selected,
+              W().EntryColumn,
+              W().ClickableHeader,
+              a ? W().NameCol : W().DataCol,
+              i == o && W().Selected,
             );
           return n.createElement(
             q.HP,
@@ -8328,7 +8328,7 @@
             (0, M.Xx)(t),
             n.createElement(
               "div",
-              { className: F().DownArrow },
+              { className: W().DownArrow },
               n.createElement(P.$gZ, null),
             ),
           );
@@ -8337,7 +8337,7 @@
           const { nCount: t, nTotal: a, nGoal: o } = e;
           return n.createElement(
             "div",
-            { className: t == o ? F().GoodCount : F().BadCount },
+            { className: t == o ? W().GoodCount : W().BadCount },
             t + " / " + a,
           );
         },
@@ -8345,7 +8345,7 @@
           const { bIsVisible: t } = e;
           return n.createElement(
             "div",
-            { className: t ? F().Visible : F().Hidden },
+            { className: t ? W().Visible : W().Hidden },
             (0, M.Xx)(t ? "#FAQDashboard_Visible" : "#FAQDashboard_Invisible"),
           );
         },
@@ -8358,46 +8358,46 @@
             {
               route: o.k_eCommunityEdit,
               faqid: t,
-              className: F().DashboardEntry,
+              className: W().DashboardEntry,
             },
             n.createElement(
               "div",
-              { className: (0, g.Z)(F().EntryColumn, F().NameCol) },
-              n.createElement("div", { className: F().EntryInternalName }, a),
+              { className: (0, g.Z)(W().EntryColumn, W().NameCol) },
+              n.createElement("div", { className: W().EntryInternalName }, a),
             ),
             n.createElement(
               "div",
-              { className: (0, g.Z)(F().EntryColumn, F().DataCol) },
+              { className: (0, g.Z)(W().EntryColumn, W().DataCol) },
               n.createElement(ue, { rtTimestamp: i }),
             ),
             n.createElement(
               "div",
-              { className: (0, g.Z)(F().EntryColumn, F().DataCol) },
+              { className: (0, g.Z)(W().EntryColumn, W().DataCol) },
               n.createElement(we, { nCount: s, nTotal: u, nGoal: u }),
             ),
             n.createElement(
               "div",
-              { className: (0, g.Z)(F().EntryColumn, F().DataCol) },
+              { className: (0, g.Z)(W().EntryColumn, W().DataCol) },
               n.createElement(we, { nCount: r, nTotal: u, nGoal: 0 }),
             ),
             n.createElement(
               "div",
-              { className: (0, g.Z)(F().EntryColumn, F().DataCol) },
+              { className: (0, g.Z)(W().EntryColumn, W().DataCol) },
               n.createElement(we, { nCount: l, nTotal: c, nGoal: c }),
             ),
             n.createElement(
               "div",
-              { className: (0, g.Z)(F().EntryColumn, F().DataCol) },
+              { className: (0, g.Z)(W().EntryColumn, W().DataCol) },
               n.createElement(we, { nCount: p, nTotal: c, nGoal: 0 }),
             ),
             n.createElement(
               "div",
-              { className: (0, g.Z)(F().EntryColumn, F().DataCol) },
+              { className: (0, g.Z)(W().EntryColumn, W().DataCol) },
               n.createElement(ve, { bIsVisible: d }),
             ),
             n.createElement(
               "div",
-              { className: (0, g.Z)(F().EntryColumn, F().DataCol) },
+              { className: (0, g.Z)(W().EntryColumn, W().DataCol) },
               n.createElement(ve, { bIsVisible: h }),
             ),
           );
@@ -8695,7 +8695,7 @@
                 className: L.EditPreviewButton,
                 onClick: (t) => {
                   (0, T.AM)(
-                    n.createElement(Fe, { draft: e.draft }),
+                    n.createElement(We, { draft: e.draft }),
                     (0, U.RA)(t),
                   );
                 },
@@ -8703,7 +8703,7 @@
               (0, M.Xx)("#FAQEditor_EditVisible"),
             ),
           ),
-        Fe = (e) => {
+        We = (e) => {
           const { draft: t } = e,
             a = () => e.closeModal && e.closeModal(),
             [o, s] = n.useState(!1),
@@ -8807,8 +8807,8 @@
             )
           );
         };
-      var We = a(40548);
-      const Re = (0, s.Pi)((e) => {
+      var Fe = a(40548);
+      const Oe = (0, s.Pi)((e) => {
           var t, a, o, i, s;
           const { draft: r, eLanguage: l } = e,
             p = r.GetFAQID(),
@@ -8842,7 +8842,7 @@
               void 0 === s
                 ? void 0
                 : s.map((e) =>
-                    n.createElement(Oe, {
+                    n.createElement(Re, {
                       key: e.language,
                       info: e,
                       rtEnglishUpdateTime: u,
@@ -8853,25 +8853,25 @@
             null,
             n.createElement(
               "div",
-              { className: We.LeftMenu },
+              { className: Fe.LeftMenu },
               n.createElement(
                 "div",
-                { className: We.Section },
+                { className: Fe.Section },
                 n.createElement(
                   "div",
-                  { className: We.SectionTitle },
+                  { className: Fe.SectionTitle },
                   (0, M.Xx)("#FAQDashboard_VisibilityColumn"),
                   " ",
                 ),
                 n.createElement(
                   "div",
-                  { className: We.SectionContents },
+                  { className: Fe.SectionContents },
                   n.createElement(
                     "div",
-                    { className: We.VisibilityCtn },
+                    { className: Fe.VisibilityCtn },
                     n.createElement(
                       "div",
-                      { className: (0, g.Z)(We.StatusRow, We.Global) },
+                      { className: (0, g.Z)(Fe.StatusRow, Fe.Global) },
                       (0, M.Xx)("#FAQDashboard_VisibleInGlobalRealmLabel"),
                       " ",
                       n.createElement(ve, {
@@ -8880,7 +8880,7 @@
                     ),
                     n.createElement(
                       "div",
-                      { className: (0, g.Z)(We.StatusRow, We.China) },
+                      { className: (0, g.Z)(Fe.StatusRow, Fe.China) },
                       (0, M.Xx)("#FAQDashboard_VisibleInChinaRealmLabel"),
                       " ",
                       n.createElement(ve, {
@@ -8889,27 +8889,27 @@
                     ),
                     n.createElement(
                       "div",
-                      { className: We.StatusBtnCtn },
+                      { className: Fe.StatusBtnCtn },
                       n.createElement(Ee, { draft: r }),
                     ),
                   ),
                   n.createElement(
                     "div",
-                    { className: We.PublishCtn },
+                    { className: Fe.PublishCtn },
                     m
                       ? n.createElement(
                           "div",
-                          { className: We.PublishStatus },
+                          { className: Fe.PublishStatus },
                           (0, M.Xx)("#FAQStatus_DraftVersionsDesc"),
                         )
                       : n.createElement(
                           "div",
-                          { className: We.PublishStatus },
+                          { className: Fe.PublishStatus },
                           (0, M.Xx)("#FAQStatus_NothingToPublish"),
                         ),
                     n.createElement(
                       "div",
-                      { className: We.PublishBtn },
+                      { className: Fe.PublishBtn },
                       n.createElement(Me, { draft: r, bDisabled: !m }),
                     ),
                   ),
@@ -8917,29 +8917,29 @@
               ),
               n.createElement(
                 "div",
-                { className: We.Section },
+                { className: Fe.Section },
                 n.createElement(
                   "div",
-                  { className: We.SectionTitle },
+                  { className: Fe.SectionTitle },
                   (0, M.Xx)("#FAQDashboard_LocalizationSection"),
                   " ",
                 ),
                 n.createElement(
                   "div",
-                  { className: We.SectionContents },
+                  { className: Fe.SectionContents },
                   n.createElement(
                     "div",
-                    { className: We.SectionDescription },
+                    { className: Fe.SectionDescription },
                     (0, M.Xx)("#FAQDashboard_LocalizationSectionDesc"),
                   ),
                   n.createElement(K, { draft: r, eLanguage: l }),
                 ),
                 n.createElement(
                   "div",
-                  { className: We.SectionContents },
+                  { className: Fe.SectionContents },
                   n.createElement(
                     "div",
-                    { className: We.SectionDescription },
+                    { className: Fe.SectionDescription },
                     (0, M.Xx)("#EventEditor_Loc_CrowdinIntegration_Desc"),
                   ),
                   n.createElement(J, { draft: r }),
@@ -8947,15 +8947,15 @@
               ),
               n.createElement(
                 "div",
-                { className: We.Section },
+                { className: Fe.Section },
                 n.createElement(
                   "div",
-                  { className: We.SectionTitle },
+                  { className: Fe.SectionTitle },
                   (0, M.Xx)("#FAQStatus_LocalizedVersionStatusHeader"),
                 ),
                 n.createElement(
                   "table",
-                  { className: We.FaqStatusTable },
+                  { className: Fe.FaqStatusTable },
                   n.createElement(
                     "thead",
                     null,
@@ -8980,13 +8980,13 @@
               ),
               n.createElement(
                 "div",
-                { className: We.Section },
+                { className: Fe.Section },
                 n.createElement(De, { draft: r }),
               ),
             ),
           );
         }),
-        Oe = (0, s.Pi)((e) => {
+        Re = (0, s.Pi)((e) => {
           const { info: t, rtEnglishUpdateTime: a } = e,
             o = !!a && a > t.last_update_timestamp,
             i = t.last_update_timestamp > t.last_publish_timestamp;
@@ -9125,7 +9125,7 @@
         };
       var Ye = a(59565),
         Xe = a.n(Ye);
-      const $e = (0, s.Pi)((e) => {
+      const Qe = (0, s.Pi)((e) => {
           const { draft: t, bPreview: a } = e,
             i = t.BHasPublished();
           return n.createElement(
@@ -9172,7 +9172,7 @@
                     src: He.Z,
                     onClick: (e) =>
                       (0, T.AM)(
-                        n.createElement(Qe, { draft: t }),
+                        n.createElement($e, { draft: t }),
                         (0, U.RA)(e),
                       ),
                   }),
@@ -9203,7 +9203,7 @@
             ),
           );
         }),
-        Qe = (e) => {
+        $e = (e) => {
           const { closeModal: t, draft: a } = e,
             [o, s] = n.useState(a.GetFAQInternalName() || ""),
             [r, l] = n.useState(!1),
@@ -9334,14 +9334,14 @@
           return n.createElement(
             "div",
             null,
-            n.createElement($e, { draft: a }),
+            n.createElement(Qe, { draft: a }),
             n.createElement(
               "div",
               { className: Pe().FAQEditPage },
               n.createElement(
                 "div",
                 { className: Pe().FAQMenuCtn },
-                n.createElement(Re, { draft: a, eLanguage: s }),
+                n.createElement(Oe, { draft: a, eLanguage: s }),
               ),
               n.createElement(
                 "div",
@@ -9850,7 +9850,7 @@
               ? n.createElement(
                   n.Fragment,
                   null,
-                  n.createElement($e, { draft: a, bPreview: !0 }),
+                  n.createElement(Qe, { draft: a, bPreview: !0 }),
                   n.createElement(it, {
                     title: a.GetDraftTitleWithFallback(i, u.De.EREALM),
                     content: a.GetDraftContentWithFallback(i, u.De.EREALM),

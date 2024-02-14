@@ -5,12 +5,12 @@
   {
     21571: (t) => {
       t.exports = {
-        FAQContainer: "faqbbcode_FAQContainer_1BWX4",
-        Section: "faqbbcode_Section_NWJUH",
-        Note: "faqbbcode_Note_1Er-4",
-        Important: "faqbbcode_Important_2LRZH",
-        Warning: "faqbbcode_Warning_3G4C2",
-        FAQImage: "faqbbcode_FAQImage_1sKwB",
+        FAQContainer: "_1BWX4M92aix2fGQpo8Tef9",
+        Section: "NWJUHKxCjy6Vt-eCIimPI",
+        Note: "_1Er-4Hxpk4pCaLFH-pfsWw",
+        Important: "_2LRZHyh5oSKIVVSSbFEj-b",
+        Warning: "_3G4C2HQXXHXqyz5TmBAYM3",
+        FAQImage: "_1sKwBm5oDNIVb9z5t0QrRY",
       };
     },
     19941: (t, e, a) => {
@@ -149,7 +149,7 @@
         wl: () => D,
         SP: () => E,
         EH: () => Q,
-        Ky: () => G,
+        Ky: () => I,
         NV: () => y,
       });
       var r = a(85556),
@@ -947,7 +947,7 @@
         const t = A.Get().GetAllFAQSummaries();
         return l.useRef([t, !0]).current;
       }
-      function G(t, e, a) {
+      function I(t, e, a) {
         const [r, s] = l.useState(null),
           [n, o] = l.useState(!1);
         return (

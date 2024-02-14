@@ -5,48 +5,48 @@
   {
     3524: (e) => {
       e.exports = {
-        AvatarCrop: "avatarcrop_AvatarCrop_UVQKc",
-        AvatarCropBound: "avatarcrop_AvatarCropBound_t4p1E",
-        AvatarCropImg: "avatarcrop_AvatarCropImg_JxmP8",
-        AvatarLoading: "avatarcrop_AvatarLoading_2HcWf",
+        AvatarCrop: "UVQKcPi5M7xfkxGQGiesv",
+        AvatarCropBound: "t4p1Ec6lMuoroo13jMEgH",
+        AvatarCropImg: "JxmP84JNqiT4jGVeYsQti",
+        AvatarLoading: "_2HcWfCd15FR0zxzO3g4QQ9",
       };
     },
-    98682: (e, t, a) => {
+    98682: (e, t, r) => {
       "use strict";
-      a.r(t), a.d(t, { default: () => v });
-      var r = a(85556),
-        n = a(47427),
-        o = a(89868),
-        i = a.n(o),
-        c = a(50423),
-        s = a(31846),
-        l = a(75371),
-        d = a(3524);
+      r.r(t), r.d(t, { default: () => f });
+      var a = r(85556),
+        n = r(47427),
+        o = r(89868),
+        i = r.n(o),
+        c = r(50423),
+        s = r(31846),
+        l = r(75371),
+        d = r(3524);
       const u = 184,
         m = 5,
         g = 1048576,
-        v = n.forwardRef(function (e, t) {
+        f = n.forwardRef(function (e, t) {
           const {
-            isLoading: a,
-            imageRef: r,
+            isLoading: r,
+            imageRef: a,
             loaderRef: o,
             getBlob: c,
           } = (function (e) {
-            const [t, a] = n.useState(!0),
-              r = n.useRef(),
+            const [t, r] = n.useState(!0),
+              a = n.useRef(),
               o = n.useRef(),
               c = n.useRef(null);
             return (
               n.useEffect(() => {
-                a(!0),
+                r(!0),
                   o.current &&
                     o.current.scrollIntoView({
                       behavior: "smooth",
                       block: "center",
                     }),
-                  f(r.current, e).then(() => {
-                    a(!1),
-                      (c.current = new (i())(r.current, {
+                  h(a.current, e).then(() => {
+                    r(!1),
+                      (c.current = new (i())(a.current, {
                         viewMode: 1,
                         background: !1,
                         dragMode: "move",
@@ -58,27 +58,27 @@
                         ready: () => {
                           const e = c.current,
                             t = e.getData(),
-                            a = Math.min(t.x, t.y);
-                          a > 0 &&
+                            r = Math.min(t.x, t.y);
+                          r > 0 &&
                             e.setData({
-                              x: t.x - a,
-                              y: t.y - a,
-                              width: t.width + a + a,
-                              height: t.height + a + a,
+                              x: t.x - r,
+                              y: t.y - r,
+                              width: t.width + r + r,
+                              height: t.height + r + r,
                             });
                         },
                       }));
                   });
-                const t = r.current;
+                const t = a.current;
                 return () => {
                   c.current.destroy(), URL.revokeObjectURL(t.src), (t.src = "");
                 };
               }, [e]),
               {
                 isLoading: t,
-                imageRef: r,
+                imageRef: a,
                 loaderRef: o,
-                getBlob: () => h(c.current, r.current),
+                getBlob: () => v(c.current, a.current),
               }
             );
           })(e.imageData);
@@ -90,13 +90,13 @@
               n.createElement(
                 "div",
                 { className: d.AvatarCropBound },
-                n.createElement("img", { ref: r, className: d.AvatarCropImg }),
+                n.createElement("img", { ref: a, className: d.AvatarCropImg }),
                 n.createElement(
                   "div",
                   {
                     ref: o,
                     className: d.AvatarLoading,
-                    style: { display: a ? "" : "none" },
+                    style: { display: r ? "" : "none" },
                   },
                   (0, s.Xx)("#Loading"),
                 ),
@@ -104,54 +104,54 @@
             )
           );
         });
-      function f(e, t) {
-        return (0, r.mG)(this, void 0, void 0, function* () {
-          const a = new Image(),
-            r = (0, c.f4)(a, "load");
-          (a.src = URL.createObjectURL(t)), yield r;
+      function h(e, t) {
+        return (0, a.mG)(this, void 0, void 0, function* () {
+          const r = new Image(),
+            a = (0, c.f4)(r, "load");
+          (r.src = URL.createObjectURL(t)), yield a;
           const n = document.createElement("canvas");
-          (n.width = a.width), (n.height = a.height);
+          (n.width = r.width), (n.height = r.height);
           const o = n.getContext("2d");
           o.rect(0, 0, n.width, n.height),
             (o.fillStyle = "black"),
             o.fill(),
-            o.drawImage(a, 0, 0),
-            URL.revokeObjectURL(a.src);
+            o.drawImage(r, 0, 0),
+            URL.revokeObjectURL(r.src);
           const i = (0, c.f4)(e, "load");
-          (e.src = URL.createObjectURL(yield w(n))), yield i;
+          (e.src = URL.createObjectURL(yield b(n))), yield i;
         });
       }
-      function h(e, t) {
-        return (0, r.mG)(this, void 0, void 0, function* () {
-          const a = e.getData();
-          let r = m;
+      function v(e, t) {
+        return (0, a.mG)(this, void 0, void 0, function* () {
+          const r = e.getData();
+          let a = m;
           for (;;) {
-            const e = yield w(
-              p(t, { left: a.x, top: a.y, size: a.width, maxSize: u * r }),
+            const e = yield b(
+              w(t, { left: r.x, top: r.y, size: r.width, maxSize: u * a }),
             );
-            if (1 === r || e.size < g) return e;
-            r--;
+            if (1 === a || e.size < g) return e;
+            a--;
           }
         });
       }
-      function p(e, t) {
-        const a = Math.min(Math.max(u, t.size), t.maxSize),
-          r = document.createElement("canvas");
-        (r.width = a), (r.height = a);
-        const n = r.getContext("2d");
+      function w(e, t) {
+        const r = Math.min(Math.max(u, t.size), t.maxSize),
+          a = document.createElement("canvas");
+        (a.width = r), (a.height = r);
+        const n = a.getContext("2d");
         return (
           (n.imageSmoothingEnabled = !0),
           (n.imageSmoothingQuality = "high"),
-          n.rect(0, 0, a, a),
+          n.rect(0, 0, r, r),
           (n.fillStyle = "black"),
           n.fill(),
-          n.drawImage(e, t.left, t.top, t.size, t.size, 0, 0, a, a),
-          r
+          n.drawImage(e, t.left, t.top, t.size, t.size, 0, 0, r, r),
+          a
         );
       }
-      function w(e, t, a) {
-        return (0, r.mG)(this, void 0, void 0, function* () {
-          return new Promise((r) => e.toBlob(r, t, a));
+      function b(e, t, r) {
+        return (0, a.mG)(this, void 0, void 0, function* () {
+          return new Promise((a) => e.toBlob(a, t, r));
         });
       }
     },

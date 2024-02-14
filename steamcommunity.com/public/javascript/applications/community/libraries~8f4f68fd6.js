@@ -2825,11 +2825,6 @@
                     br: a.FE.readUint64String,
                     bw: a.Xc.writeUint64String,
                   },
-                  gidshoppingcartcopy: {
-                    n: 3,
-                    br: a.FE.readUint64String,
-                    bw: a.Xc.writeUint64String,
-                  },
                 },
               }),
             E.sm_m
@@ -2938,7 +2933,7 @@
         constructor(e = null) {
           super(),
             I.prototype.requester_steamid || a.aR(I.M()),
-            s.initialize(this, e, 0, -1, void 0, null);
+            s.initialize(this, e, 0, -1, [9, 10], null);
         }
         static M() {
           return (
@@ -2982,10 +2977,21 @@
                     br: a.FE.readUint64String,
                     bw: a.Xc.writeUint64String,
                   },
-                  gidshoppingcartcopy: {
+                  requested_packageids: {
                     n: 9,
-                    br: a.FE.readUint64String,
-                    bw: a.Xc.writeUint64String,
+                    r: !0,
+                    q: !0,
+                    br: a.FE.readUint32,
+                    pbr: a.FE.readPackedUint32,
+                    bw: a.Xc.writeRepeatedUint32,
+                  },
+                  purchased_packageids: {
+                    n: 10,
+                    r: !0,
+                    q: !0,
+                    br: a.FE.readUint32,
+                    pbr: a.FE.readPackedUint32,
+                    bw: a.Xc.writeRepeatedUint32,
                   },
                 },
               }),

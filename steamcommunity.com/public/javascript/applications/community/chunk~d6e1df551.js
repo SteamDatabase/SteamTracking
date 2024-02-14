@@ -5,56 +5,56 @@
   {
     72869: (e) => {
       e.exports = {
-        Bold: "bbcodes_Bold_1opdq",
-        Italic: "bbcodes_Italic_3PSCE",
-        Paragraph: "bbcodes_Paragraph_3zjkn",
-        Header1: "bbcodes_Header1_38GFQ",
-        Header2: "bbcodes_Header2_2ZqUv",
-        Header3: "bbcodes_Header3_KePJs",
-        Header4: "bbcodes_Header4_12a97",
-        Header5: "bbcodes_Header5_4GmIV",
-        CenterSpan: "bbcodes_CenterSpan_3RAiC",
-        SmallText: "bbcodes_SmallText_UvZC_",
-        Underline: "bbcodes_Underline_3vpZi",
-        Strike: "bbcodes_Strike_3dQvq",
-        Spoiler: "bbcodes_Spoiler_3Caxn",
-        Revealed: "bbcodes_Revealed_35II0",
-        SpoilerText: "bbcodes_SpoilerText_1owPz",
-        DisabledMouseEvents: "bbcodes_DisabledMouseEvents_3QOEi",
-        BlockQuote: "bbcodes_BlockQuote_2sfht",
-        QuoteAuthor: "bbcodes_QuoteAuthor_2CMyS",
-        PullQuote: "bbcodes_PullQuote_3DRIe",
-        Code: "bbcodes_Code_1Aels",
-        CodeBlock: "bbcodes_CodeBlock_1paKw",
-        List: "bbcodes_List_tfM5V",
-        OrderedList: "bbcodes_OrderedList_3Ve1E",
-        ListItem: "bbcodes_ListItem_3DlO0",
-        HR: "bbcodes_HR_26oRB",
-        Table: "bbcodes_Table_2Z51g",
-        NoBorder: "bbcodes_NoBorder_3aoME",
-        TableRow: "bbcodes_TableRow_Ms77J",
-        TableData: "bbcodes_TableData_2t3YC",
-        TableHeader: "bbcodes_TableHeader_1vvfx",
-        EqualCells: "bbcodes_EqualCells_5b-QB",
-        ExpandSectionBlock: "bbcodes_ExpandSectionBlock_YvEQh",
-        ExpandSectionHeader: "bbcodes_ExpandSectionHeader_3OxxM",
-        EmbedArrow: "bbcodes_EmbedArrow_WXJl-",
-        ExpandSectionBody: "bbcodes_ExpandSectionBody_2sCNL",
-        ExpandSection_WithTitle: "bbcodes_ExpandSection_WithTitle_22nl0",
-        LinkButton: "bbcodes_LinkButton_lMVeY",
-        Image: "bbcodes_Image_1CmpC",
+        Bold: "_1opdqAOxXrGF6BBCpWBSwD",
+        Italic: "_3PSCEwXIQOjACd8vcBVCh5",
+        Paragraph: "_3zjknFIbJGBGezHbYjCrVE",
+        Header1: "_38GFQhbMgQS_1y-yV_MAza",
+        Header2: "_2ZqUvIHTeQdmj5n3wCqp5s",
+        Header3: "KePJsJFkRONeGxLE3PKlF",
+        Header4: "_12a97iox1ZnYnQgXLpvafk",
+        Header5: "_4GmIVQlN3tVVTtLvuOhUV",
+        CenterSpan: "_3RAiCNw0-UoPo_4awvb1mA",
+        SmallText: "UvZC_c1WvBWOxlmJu7qCo",
+        Underline: "_3vpZiV7iSLrM6hY_mXk2k2",
+        Strike: "_3dQvq4jSQdWUz4WSgIjESL",
+        Spoiler: "_3CaxnwuIvFNL4Dlz6VYwHm",
+        Revealed: "_35II0clQ4RixPf4ZSRqXPh",
+        SpoilerText: "_1owPz2jY3VWy1TyVCWb7Gs",
+        DisabledMouseEvents: "_3QOEiyJx6JNKSPfGtfeQRO",
+        BlockQuote: "_2sfhtLUZT0Q5XZbbP0ybRr",
+        QuoteAuthor: "_2CMyS9Y6n11x4PMJHri59E",
+        PullQuote: "_3DRIe0jpfxAeqHxvn4iq3m",
+        Code: "_1AelsP7HuMD8QF_8MVP602",
+        CodeBlock: "_1paKwApiKpt_82rqeHdUh2",
+        List: "tfM5VWgPClhy8MTX_pNLF",
+        OrderedList: "_3Ve1EOUy_uAbrn63gbK5U",
+        ListItem: "_3DlO014RzYr_m9lI620soy",
+        HR: "_26oRBOf5CSY0iZsXJ_juPw",
+        Table: "_2Z51g3jeZDA1f76UU-hlG3",
+        NoBorder: "_3aoMET6BC38Vks1LAxB0rO",
+        TableRow: "Ms77JiTbY6cF3X9kDmu_I",
+        TableData: "_2t3YCtmlffdVpfB7Gy7NEW",
+        TableHeader: "_1vvfxMDi4YsoiPx4a-EQpH",
+        EqualCells: "_5b-QB3nK-8ib6IKjTAtyp",
+        ExpandSectionBlock: "YvEQhAIQTyLOKf4OZCW_o",
+        ExpandSectionHeader: "_3OxxMP4ilAfeJHPZJlq-3y",
+        EmbedArrow: "WXJl-z3InzcPSdkJYNQdR",
+        ExpandSectionBody: "_2sCNLKNv2RQrux8JZHAj7W",
+        ExpandSection_WithTitle: "_22nl0JNsidayri6K48VGaW",
+        LinkButton: "lMVeYbREjOZyypw7mp3qS",
+        Image: "_1CmpCOpiyFBd8ePBHSdJZ5",
       };
     },
-    80878: (e, o, t) => {
+    80878: (e, t, i) => {
       "use strict";
-      t.d(o, { Gg: () => _, L4: () => m });
-      var i = t(85556),
-        l = t(80751),
-        a = t.n(l),
-        s = t(54842),
-        r = t(62210),
-        p = t(31846),
-        d = t(37563);
+      i.d(t, { Gg: () => h, L4: () => _ });
+      var o = i(85556),
+        l = i(80751),
+        a = i.n(l),
+        s = i(54842),
+        r = i(62210),
+        p = i(31846),
+        d = i(37563);
       class n {
         constructor() {
           (this.file = void 0),
@@ -68,14 +68,14 @@
             (0, s.rC)(this);
         }
       }
-      (0, i.gn)([s.LO], n.prototype, "file", void 0),
-        (0, i.gn)([s.LO], n.prototype, "dataURL", void 0),
-        (0, i.gn)([s.LO], n.prototype, "imageWidth", void 0),
-        (0, i.gn)([s.LO], n.prototype, "imageHeight", void 0),
-        (0, i.gn)([s.LO], n.prototype, "eUploadState", void 0),
-        (0, i.gn)([s.LO], n.prototype, "uploadProgress", void 0),
-        (0, i.gn)([s.LO], n.prototype, "strErrorDescription", void 0);
-      class _ {
+      (0, o.gn)([s.LO], n.prototype, "file", void 0),
+        (0, o.gn)([s.LO], n.prototype, "dataURL", void 0),
+        (0, o.gn)([s.LO], n.prototype, "imageWidth", void 0),
+        (0, o.gn)([s.LO], n.prototype, "imageHeight", void 0),
+        (0, o.gn)([s.LO], n.prototype, "eUploadState", void 0),
+        (0, o.gn)([s.LO], n.prototype, "uploadProgress", void 0),
+        (0, o.gn)([s.LO], n.prototype, "strErrorDescription", void 0);
+      class h {
         constructor(e) {
           (this.m_fileUploadProps = new n()),
             (0, s.rC)(this),
@@ -94,13 +94,13 @@
           this.m_Callbacks.LogFileUploadMessage &&
             this.m_Callbacks.LogFileUploadMessage(e);
         }
-        SetUploadFileError(e, o) {
+        SetUploadFileError(e, t) {
           (this.m_fileUploadProps.eUploadState = e),
-            (this.m_fileUploadProps.strErrorDescription = o),
+            (this.m_fileUploadProps.strErrorDescription = t),
             (this.m_fileUploadProps.displayFileName = null);
         }
-        SetImageFileToUpload(e, o = h) {
-          return (0, i.mG)(this, void 0, void 0, function* () {
+        SetImageFileToUpload(e, t = m) {
+          return (0, o.mG)(this, void 0, void 0, function* () {
             if (!e) return void this.SetFileToUpload(null);
             if (e.size > 1024 * this.m_Callbacks.GetMaxFileSizeMB() * 1024)
               return void (10 == this.m_Callbacks.GetMaxFileSizeMB()
@@ -116,7 +116,7 @@
                       this.m_Callbacks.GetMaxFileSizeMB(),
                     ),
                   ));
-            let t = e.name.split(".").pop().toLowerCase();
+            let i = e.name.split(".").pop().toLowerCase();
             if (
               -1 ==
               [
@@ -129,7 +129,7 @@
                 "mp4",
                 "mpeg",
                 "ogv",
-              ].indexOf(t)
+              ].indexOf(i)
             )
               return void this.SetUploadFileError(
                 5,
@@ -138,10 +138,10 @@
                   e.name,
                 ),
               );
-            const i = yield o(e);
-            this.SetFileToUpload(i.file),
-              (this.m_fileUploadProps.imageHeight = i.height),
-              (this.m_fileUploadProps.imageWidth = i.width);
+            const o = yield t(e);
+            this.SetFileToUpload(o.file),
+              (this.m_fileUploadProps.imageHeight = o.height),
+              (this.m_fileUploadProps.imageWidth = o.width);
           });
         }
         SetFileToUpload(e) {
@@ -156,32 +156,32 @@
           )
             return void (this.m_fileUploadProps.eUploadState = 0);
           this.m_fileUploadProps.eUploadState = 1;
-          let o = "";
-          for (; o.length < 40; )
-            o += Math.floor(16 * Math.random()).toString(16);
           let t = "";
+          for (; t.length < 40; )
+            t += Math.floor(16 * Math.random()).toString(16);
+          let i = "";
           try {
-            t = URL.createObjectURL(e);
+            i = URL.createObjectURL(e);
           } catch (e) {
             console.error(`Failed to created object URL from file: ${e}`);
           }
-          (this.m_fileUploadProps.dataURL = t),
+          (this.m_fileUploadProps.dataURL = i),
             (this.m_fileUploadProps.displayFileName = e.name),
             (this.m_fileUploadProps.uploadFileName =
               window.performance.now() + "_" + e.name),
-            (this.m_fileUploadProps.sha1 = o),
+            (this.m_fileUploadProps.sha1 = t),
             (this.m_fileUploadProps.hmac = ""),
             (this.m_fileUploadProps.timestamp = 0);
         }
         RetryFileUpload() {
-          return (0, i.mG)(this, void 0, void 0, function* () {
+          return (0, o.mG)(this, void 0, void 0, function* () {
             return this.BeginFileUpload(this.m_fileUploadProps.additionalProps);
           });
         }
         BeginFileUpload(e) {
-          return (0, i.mG)(this, void 0, void 0, function* () {
-            let o = this.m_fileUploadProps.file;
-            if (!o)
+          return (0, o.mG)(this, void 0, void 0, function* () {
+            let t = this.m_fileUploadProps.file;
+            if (!t)
               throw (
                 ((0, r.X)(
                   !1,
@@ -192,34 +192,34 @@
             (this.m_fileUploadProps.eUploadState = 2),
               (this.m_fileUploadProps.uploadProgress = 0),
               (this.m_fileUploadProps.additionalProps = e);
-            let t = new FormData();
-            t.append("sessionid", d.De.SESSIONID),
-              t.append("l", d.De.LANGUAGE),
-              t.append("file_size", o.size.toString()),
-              t.append("file_name", this.m_fileUploadProps.uploadFileName),
-              t.append("file_sha", this.m_fileUploadProps.sha1),
-              t.append(
+            let i = new FormData();
+            i.append("sessionid", d.De.SESSIONID),
+              i.append("l", d.De.LANGUAGE),
+              i.append("file_size", t.size.toString()),
+              i.append("file_name", this.m_fileUploadProps.uploadFileName),
+              i.append("file_sha", this.m_fileUploadProps.sha1),
+              i.append(
                 "file_image_width",
                 this.m_fileUploadProps.imageWidth.toString(),
               ),
-              t.append(
+              i.append(
                 "file_image_height",
                 this.m_fileUploadProps.imageHeight.toString(),
               ),
-              t.append("file_type", o.type),
+              i.append("file_type", t.type),
               this.m_Callbacks.PopulateBeginFileUploadFormData &&
                 this.m_Callbacks.PopulateBeginFileUploadFormData(
-                  t,
+                  i,
                   this.file_upload_props.additionalProps,
                 );
             try {
               let e,
-                o = yield fetch(
+                t = yield fetch(
                   this.m_Callbacks.GetBeginFileUploadURL() +
                     `?l=${d.De.LANGUAGE}`,
-                  { method: "POST", body: t, credentials: "include" },
+                  { method: "POST", body: i, credentials: "include" },
                 );
-              if ((o.ok && (e = yield o.json()), !e || !e.result))
+              if ((t.ok && (e = yield t.json()), !e || !e.result))
                 throw new Error();
               return (
                 (this.m_fileUploadProps.timestamp = e.timestamp),
@@ -227,60 +227,60 @@
                 this.DoFileUpload(e.result)
               );
             } catch (e) {
-              const o = null == e ? void 0 : e.response;
-              let t = null;
+              const t = null == e ? void 0 : e.response;
+              let i = null;
               throw (
                 ((0, s.z)(() => {
                   if (
                     ((this.m_fileUploadProps.eUploadState = 3),
-                    this.LogFileUploadMessage(o),
-                    o)
+                    this.LogFileUploadMessage(t),
+                    t)
                   ) {
-                    let e = o.data;
-                    o.status, e && e.success;
-                    t = (null == e ? void 0 : e.message)
+                    let e = t.data;
+                    t.status, e && e.success;
+                    i = (null == e ? void 0 : e.message)
                       ? null == e
                         ? void 0
                         : e.message
                       : (0, p.Xx)("#Chat_Settings_Error_ServerError");
-                  } else t = (0, p.Xx)("#ConnectionTrouble_FailedToConnect");
+                  } else i = (0, p.Xx)("#ConnectionTrouble_FailedToConnect");
                   this.m_fileUploadProps.strErrorDescription = (0, p.Xx)(
                     "#Chat_Upload_ErrorStart",
-                    t,
+                    i,
                   );
                 }),
-                t)
+                i)
               );
             }
           });
         }
         DoFileUpload(e) {
-          return (0, i.mG)(this, void 0, void 0, function* () {
-            let o = this.m_fileUploadProps.file,
-              t = e.use_https ? "https://" : "http://";
-            t += e.url_host + e.url_path;
-            let i = {
+          return (0, o.mG)(this, void 0, void 0, function* () {
+            let t = this.m_fileUploadProps.file,
+              i = e.use_https ? "https://" : "http://";
+            i += e.url_host + e.url_path;
+            let o = {
               onUploadProgress: (e) => {
-                let o = (e.loaded / e.total) * 100;
-                o > this.m_fileUploadProps.uploadProgress &&
+                let t = (e.loaded / e.total) * 100;
+                t > this.m_fileUploadProps.uploadProgress &&
                   (0, s.z)(() => {
-                    this.m_fileUploadProps.uploadProgress = o;
+                    this.m_fileUploadProps.uploadProgress = t;
                   });
               },
               headers: {},
               transformRequest: [(e) => e],
             };
-            for (let o = 0; o < e.request_headers.length; ++o) {
-              let t = e.request_headers[o];
-              "Content-Length" != t.name &&
-                "Host" != t.name &&
-                (i.headers[t.name] = t.value);
+            for (let t = 0; t < e.request_headers.length; ++t) {
+              let i = e.request_headers[t];
+              "Content-Length" != i.name &&
+                "Host" != i.name &&
+                (o.headers[i.name] = i.value);
             }
             try {
-              return yield a().put(t, o, i), this.CommitFileUpload(!0, e.ugcid);
-            } catch (o) {
+              return yield a().put(i, t, o), this.CommitFileUpload(!0, e.ugcid);
+            } catch (t) {
               throw (
-                (this.LogFileUploadMessage(o.response),
+                (this.LogFileUploadMessage(t.response),
                 (0, s.z)(() => {
                   (this.m_fileUploadProps.strErrorDescription = (0, p.Xx)(
                     "#Chat_Upload_ErrorCloud",
@@ -294,18 +294,18 @@
             }
           });
         }
-        CommitFileUpload(e, o) {
-          return (0, i.mG)(this, void 0, void 0, function* () {
-            let t = this.m_fileUploadProps.file,
-              i = this.m_fileUploadProps.sha1,
+        CommitFileUpload(e, t) {
+          return (0, o.mG)(this, void 0, void 0, function* () {
+            let i = this.m_fileUploadProps.file,
+              o = this.m_fileUploadProps.sha1,
               l = new FormData();
             l.append("sessionid", d.De.SESSIONID),
               l.append("l", d.De.LANGUAGE),
               l.append("file_name", this.m_fileUploadProps.uploadFileName),
-              l.append("file_sha", i),
+              l.append("file_sha", o),
               l.append("success", e ? "1" : "0"),
-              l.append("ugcid", o),
-              l.append("file_type", t.type),
+              l.append("ugcid", t),
+              l.append("file_type", i.type),
               l.append(
                 "file_image_width",
                 this.m_fileUploadProps.imageWidth.toString(),
@@ -324,7 +324,7 @@
                 this.file_upload_props.additionalProps,
               );
             try {
-              let o = yield fetch(this.m_Callbacks.GetCommitFileUploadURL(), {
+              let t = yield fetch(this.m_Callbacks.GetCommitFileUploadURL(), {
                 method: "POST",
                 body: l,
               });
@@ -333,28 +333,28 @@
                   ? ((this.m_fileUploadProps.uploadProgress = 0),
                     (this.m_fileUploadProps.eUploadState = 6))
                   : (this.m_fileUploadProps.eUploadState = 3),
-                o
+                t
               );
-            } catch (o) {
+            } catch (t) {
               if (!e) return null;
-              let t = null;
+              let i = null;
               throw (
                 ((0, s.z)(() => {
                   if (
-                    (this.LogFileUploadMessage(o),
+                    (this.LogFileUploadMessage(t),
                     (this.m_fileUploadProps.uploadProgress = 0),
                     (this.m_fileUploadProps.eUploadState = 3),
-                    o.response)
+                    t.response)
                   ) {
-                    let e = o.response.data;
-                    o.response.status, e && e.success;
-                    t = e.message
+                    let e = t.response.data;
+                    t.response.status, e && e.success;
+                    i = e.message
                       ? e.message
                       : (0, p.Xx)("#Chat_Settings_Error_ServerError");
-                  } else t = (0, p.Xx)("#ConnectionTrouble_FailedToConnect");
-                  this.m_fileUploadProps.strErrorDescription = `Failed to commit upload: ${t}`;
+                  } else i = (0, p.Xx)("#ConnectionTrouble_FailedToConnect");
+                  this.m_fileUploadProps.strErrorDescription = `Failed to commit upload: ${i}`;
                 }),
-                t)
+                i)
               );
             }
           });
@@ -369,48 +369,48 @@
           this.SetFileToUpload(null);
         }
       }
-      function h(e) {
-        return new Promise((o) => {
-          let t = new FileReader();
-          (t.onload = () => {
-            let i = e,
-              l = m(t.result),
+      function m(e) {
+        return new Promise((t) => {
+          let i = new FileReader();
+          (i.onload = () => {
+            let o = e,
+              l = _(i.result),
               a = new Blob([l], { type: e.type });
             if (a) {
-              let o = a;
-              (o.lastModifiedDate = new Date(e.lastModified)),
-                (o.name = e.name),
-                (i = o);
+              let t = a;
+              (t.lastModifiedDate = new Date(e.lastModified)),
+                (t.name = e.name),
+                (o = t);
             }
             if (0 == e.type.indexOf("image")) {
-              let t = new Image();
-              (t.src = URL.createObjectURL(e)),
-                (t.onload = (e) => {
-                  o({ file: i, width: t.width, height: t.height });
+              let i = new Image();
+              (i.src = URL.createObjectURL(e)),
+                (i.onload = (e) => {
+                  t({ file: o, width: i.width, height: i.height });
                 });
-            } else o({ file: i, width: 0, height: 0 });
+            } else t({ file: o, width: 0, height: 0 });
           }),
-            t.readAsArrayBuffer(e);
+            i.readAsArrayBuffer(e);
         });
       }
-      function m(e) {
-        let o = new DataView(e),
-          t = 0,
+      function _(e) {
+        let t = new DataView(e),
           i = 0,
+          o = 0,
           l = [],
           a = 0;
-        if (65496 == o.getUint16(t)) {
-          t += 2;
-          let s = o.getUint16(t);
-          for (t += 2; t < o.byteLength && t < 131072; ) {
+        if (65496 == t.getUint16(i)) {
+          i += 2;
+          let s = t.getUint16(i);
+          for (i += 2; i < t.byteLength && i < 131072; ) {
             if (65505 == s)
-              (l[a] = { recess: i, offset: t - 2 }),
-                (i = t + o.getUint16(t)),
+              (l[a] = { recess: o, offset: i - 2 }),
+                (o = i + t.getUint16(i)),
                 a++;
             else if (65498 == s) break;
-            (t += o.getUint16(t)), (s = o.getUint16(t)), (t += 2);
+            (i += t.getUint16(i)), (s = t.getUint16(i)), (i += 2);
           }
-          let r = e.byteLength - i;
+          let r = e.byteLength - o;
           if (
             (l.forEach((e) => {
               r += e.offset - e.recess;
@@ -420,26 +420,26 @@
             return e;
           const p = new Uint8Array(r);
           if (l.length > 0) {
-            let o = 0;
-            l.forEach((t) => {
-              let i = t.offset - t.recess;
-              p.set(new Uint8Array(e.slice(t.recess, t.offset)), o), (o += i);
+            let t = 0;
+            l.forEach((i) => {
+              let o = i.offset - i.recess;
+              p.set(new Uint8Array(e.slice(i.recess, i.offset)), t), (t += o);
             }),
-              p.set(new Uint8Array(e.slice(i)), o);
+              p.set(new Uint8Array(e.slice(o)), t);
           }
           return p.buffer;
         }
         return e;
       }
-      (0, i.gn)([s.aD], _.prototype, "SetUploadFileError", null),
-        (0, i.gn)([s.aD], _.prototype, "SetImageFileToUpload", null),
-        (0, i.gn)([s.aD], _.prototype, "SetFileToUpload", null),
-        (0, i.gn)([s.aD], _.prototype, "RetryFileUpload", null),
-        (0, i.gn)([s.aD], _.prototype, "BeginFileUpload", null),
-        (0, i.gn)([s.aD], _.prototype, "DoFileUpload", null),
-        (0, i.gn)([s.aD], _.prototype, "CommitFileUpload", null),
-        (0, i.gn)([s.aD], _.prototype, "ClearFileUploadError", null),
-        (0, i.gn)([s.aD], _.prototype, "Reset", null);
+      (0, o.gn)([s.aD], h.prototype, "SetUploadFileError", null),
+        (0, o.gn)([s.aD], h.prototype, "SetImageFileToUpload", null),
+        (0, o.gn)([s.aD], h.prototype, "SetFileToUpload", null),
+        (0, o.gn)([s.aD], h.prototype, "RetryFileUpload", null),
+        (0, o.gn)([s.aD], h.prototype, "BeginFileUpload", null),
+        (0, o.gn)([s.aD], h.prototype, "DoFileUpload", null),
+        (0, o.gn)([s.aD], h.prototype, "CommitFileUpload", null),
+        (0, o.gn)([s.aD], h.prototype, "ClearFileUploadError", null),
+        (0, o.gn)([s.aD], h.prototype, "Reset", null);
     },
   },
 ]);

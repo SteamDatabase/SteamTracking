@@ -1,4 +1,4 @@
-.gameslistapp_Gameslistapp_2nl8H {
+._2nl8HoZ_rxg3AGpYs0N_UD {
   --typography-font-size-small: 0.625rem;
   --typography-font-size-medium: 0.75rem;
   --typography-font-size-body: 0.9375rem;
@@ -11,21 +11,21 @@
   max-width: 936px;
   margin: auto;
 }
-.gameslistapp_Gameslistapp_2nl8H.GamepadMode {
+._2nl8HoZ_rxg3AGpYs0N_UD.GamepadMode {
   padding-left: 24px;
   padding-right: 24px;
 }
-.gameslistapp_DisplayControls_2_BHL {
+._2_BHLBIwWKIyKmoabfDFH- {
   display: grid;
   grid-template-areas: "search bothOwned sort";
   grid-template-rows: 1fr;
   grid-template-columns: auto 1fr auto;
   padding-bottom: 10px;
 }
-.gameslistapp_FilterInput_24EKv {
+._24EKvqXebLSndHLcU0oa9S {
   grid-area: search;
 }
-.gameslistapp_SortOptions_3pgJX {
+._3pgJXGeUvcAyf_Qx8Gviyl {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -36,18 +36,17 @@
   margin: 0;
   grid-area: sort;
 }
-.gameslistapp_SortOptions_3pgJX .gameslistapp_SortOption_YcplN {
+._3pgJXGeUvcAyf_Qx8Gviyl .YcplNXvbAo_QrR2RGHq7A {
   border: none;
   background: transparent;
   color: var(--color-highlight);
   cursor: pointer;
 }
-.gameslistapp_SortOptions_3pgJX
-  .gameslistapp_SortOption_YcplN.gameslistapp_SelectedSort_MA0Ih {
+._3pgJXGeUvcAyf_Qx8Gviyl .YcplNXvbAo_QrR2RGHq7A.MA0IhL4avzBMZsPIv_Onx {
   color: var(--typography-color-primary);
   text-decoration: underline;
 }
-.gameslistapp_BothOwnedFilter_NKeON {
+.NKeON8ijAOy_Uhx4o6-oS {
   grid-area: bothOwned;
   justify-self: center;
   display: inline-flex;
@@ -55,21 +54,21 @@
   padding-left: 8px;
   font-size: var(--typography-font-size-body);
 }
-.gameslistapp_MeasurementContainer_ZmRLu {
+.ZmRLuak1LI0RT7TdSGaSp {
   position: relative;
 }
-.gameslistapp_PrivacySettingsLink_mRoic {
+.mRoicVJ4W3e852Q42-bzU {
   display: flex;
   align-items: center;
   justify-content: center;
   justify-self: end;
   margin: 6px 14px 0 0;
 }
-.gameslistapp_PrivacySettingsLink_mRoic svg {
+.mRoicVJ4W3e852Q42-bzU svg {
   width: 16px;
 }
 @media (max-width: 51rem) {
-  .gameslistapp_DisplayControls_2_BHL {
+  ._2_BHLBIwWKIyKmoabfDFH- {
     grid-template-rows: auto auto;
     grid-template-columns: auto 1fr;
     grid-template-areas: "search search" "bothOwned sort";
@@ -77,19 +76,19 @@
     padding-right: 4px;
     gap: 4px;
   }
-  .gameslistapp_SortOptions_3pgJX {
+  ._3pgJXGeUvcAyf_Qx8Gviyl {
     justify-content: flex-end;
   }
-  .gameslistapp_PrivacySettingsLink_mRoic {
+  .mRoicVJ4W3e852Q42-bzU {
     display: none;
   }
 }
-.gameslistfilter_Filter_ZQQNQ {
+.ZQQNQC6M0Bnh0edYDcm0p {
   position: relative;
   display: flex;
   height: 33px;
 }
-.gameslistfilter_Filter_ZQQNQ input {
+.ZQQNQC6M0Bnh0edYDcm0p input {
   background: rgba(24, 26, 33, 0.5);
   color: var(--typography-color-primary);
   border: none;
@@ -98,10 +97,10 @@
   box-sizing: border-box;
   padding: 7px 8px 7px 14px;
 }
-.gameslistfilter_Filter_ZQQNQ input::placeholder {
+.ZQQNQC6M0Bnh0edYDcm0p input::placeholder {
   font-style: italic;
 }
-.gameslistfilter_Filter_ZQQNQ .gameslistfilter_ClearButton_2iq6O {
+.ZQQNQC6M0Bnh0edYDcm0p ._2iq6O4IihM1DlK3T6MDriW {
   position: absolute;
   background: transparent;
   border: none;
@@ -112,11 +111,11 @@
   right: 4px;
   padding: 0;
 }
-.gameslistfilter_Filter_ZQQNQ .gameslistfilter_ClearButton_2iq6O svg {
+.ZQQNQC6M0Bnh0edYDcm0p ._2iq6O4IihM1DlK3T6MDriW svg {
   color: var(--typography-color-neutral);
   fill: var(--typography-color-neutral);
 }
-.gameslistfilter_Filter_ZQQNQ .gameslistfilter_SearchIcon_QptTj {
+.ZQQNQC6M0Bnh0edYDcm0p .QptTjZmYHOPv7_vqyAhnS {
   position: absolute;
   width: 18px;
   height: 100%;
@@ -125,7 +124,7 @@
   right: 4px;
   pointer-events: none;
 }
-.achievementiconbase_Icon_2bzHb {
+._2bzHb-caO-Nm9nCFXRj7zq {
   width: 100%;
   height: 100%;
   position: relative;
@@ -134,12 +133,12 @@
   box-shadow: 0 0 3px #0005;
   cursor: pointer;
 }
-.achievementiconbase_Icon_2bzHb.achievementiconbase_IconGlow_tH67c {
+._2bzHb-caO-Nm9nCFXRj7zq.tH67cztsTrD9IF2zpG8ep {
   box-shadow:
     0px 0px 2px 1px rgba(255, 184, 78, 0.6),
     0px 0px 16px 1px rgba(255, 184, 78, 0.4);
 }
-.achievementiconbase_Icon_2bzHb:after {
+._2bzHb-caO-Nm9nCFXRj7zq:after {
   background: linear-gradient(to right, #3b414a 0%, #2c3138 95%);
   position: absolute;
   top: 0;
@@ -148,18 +147,18 @@
   right: 0;
   content: "";
 }
-.achievementiconbase_AchievementIconWrapper_373lE {
+._373lENtPG9blrNsyXz0y_J {
   display: inline-block;
   position: relative;
   width: 48px;
   height: 48px;
 }
-.BasicUI .achievementiconbase_AchievementIconWrapper_373lE {
+.BasicUI ._373lENtPG9blrNsyXz0y_J {
   width: 64px;
   height: 64px;
 }
-.achievementiconbase_RareAchievementIconGlowContainerRoot_39Cht,
-.achievementiconbase_RareAchievementIconGlowContainer_leuGO {
+._39Chtmumni5hlYAbFZt-PU,
+.leuGOqykWKVDUuR082MPV {
   position: absolute;
   top: -20%;
   right: -20%;
@@ -173,8 +172,8 @@
   mask-size: 100%;
   overflow: hidden;
 }
-.achievementiconbase_RareAchievementIconGlowContainer_leuGO {
-  animation-name: achievementiconbase_rotate_1Mdch;
+.leuGOqykWKVDUuR082MPV {
+  animation-name: _1Mdch_OwSiwWooFB8LxqbE;
   animation-duration: 18s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
@@ -183,20 +182,19 @@
   -webkit-mask-image: url(../../../images/applications/community/star_mask.png?v=valveisgoodatcaching);
   mask-image: url(../../../images/applications/community/star_mask.png?v=valveisgoodatcaching);
 }
-div.LowPerfMode .achievementiconbase_RareAchievementIconGlowContainer_leuGO {
+div.LowPerfMode .leuGOqykWKVDUuR082MPV {
   animation-duration: 0s;
 }
-.achievementiconbase_RareAchievementNoAnimation_25gJm
-  .achievementiconbase_RareAchievementIconGlowContainer_leuGO {
+._25gJmeIGPjHa2ccPzTntg4 .leuGOqykWKVDUuR082MPV {
   animation-play-state: paused;
 }
-.achievementiconbase_RareAchievementIconGlow_rORbR {
+.rORbR_CuoyBuXGKfa8_2- {
   position: absolute;
   top: -10px;
   right: -10px;
   bottom: -10px;
   left: -10px;
-  animation-name: achievementiconbase_rotate_1Mdch;
+  animation-name: _1Mdch_OwSiwWooFB8LxqbE;
   animation-duration: 6s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
@@ -215,19 +213,18 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlowContainer_leuGO {
   );
   overflow: hidden;
 }
-div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
+div.LowPerfMode .rORbR_CuoyBuXGKfa8_2- {
   animation-duration: 0s;
 }
-.achievementiconbase_RareAchievementNoAnimation_25gJm
-  .achievementiconbase_RareAchievementIconGlow_rORbR {
+._25gJmeIGPjHa2ccPzTntg4 .rORbR_CuoyBuXGKfa8_2- {
   animation-play-state: paused;
 }
-@keyframes achievementiconbase_rotate_1Mdch {
+@keyframes _1Mdch_OwSiwWooFB8LxqbE {
   to {
     transform: rotate(1turn);
   }
 }
-.achievementiconbase_HiddenLabel_2yMyP {
+._2yMyP8POdcTHs9u9CEQIKY {
   width: 48px;
   height: 48px;
   margin-right: 5px;
@@ -239,7 +236,7 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   box-shadow: 0 0 3px #0005;
   background: linear-gradient(to right, #3b414a 0%, #2c3138 95%);
 }
-.BasicUI .achievementiconbase_HiddenLabel_2yMyP {
+.BasicUI ._2yMyP8POdcTHs9u9CEQIKY {
   width: 64px;
   height: 64px;
   background: #acb2c924;
@@ -248,21 +245,21 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   align-items: center;
   justify-content: center;
 }
-.progressbar_ProgressBar_yZ55N {
+.yZ55NhARZGx1Awk2qs8pS {
   width: 100%;
   height: 6px;
   background-color: var(--color-progress-bar-background);
   border-radius: 2px;
   overflow: hidden;
 }
-.progressbar_ProgressBar_yZ55N::after {
+.yZ55NhARZGx1Awk2qs8pS::after {
   content: "";
   display: block;
   width: calc(100% * var(--percent));
   height: 100%;
   background-color: var(--color-progress-bar-foreground);
 }
-.progressbar_ProgressBar_yZ55N.progressbar_AnimateProgress_1Ccdv::after {
+.yZ55NhARZGx1Awk2qs8pS._1CcdviLW6hebdTPh-3a7DC::after {
   background-image: linear-gradient(
     to right,
     transparent,
@@ -273,13 +270,13 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   background-position-x: 0px;
   background-size: 200px 100%;
   background-repeat: no-repeat;
-  animation: progressbar_loadingBarAnim_BX2Tm 2s linear infinite forwards;
+  animation: BX2Tm1w9-ANfTCqXg431i 2s linear infinite forwards;
 }
-.progressbar_ProgressBar_yZ55N.progressbar_AnimateProgress_1Ccdv.progressbar_Indeterminate_1sxT4::after {
+.yZ55NhARZGx1Awk2qs8pS._1CcdviLW6hebdTPh-3a7DC._1sxT4GOX7iqToa-lS_Wx_E::after {
   width: 100%;
   background-color: transparent;
 }
-@keyframes progressbar_loadingBarAnim_BX2Tm {
+@keyframes BX2Tm1w9-ANfTCqXg431i {
   0% {
     background-position-x: calc(0% - 250px);
   }
@@ -288,16 +285,16 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   }
 }
 
-.gameslistitems_List_3tY9v {
+._3tY9vKLCmyG2H2Q4rUJpkr {
   margin: auto;
   position: relative;
 }
-.gameslistitems_GamesListItemContainer_29H3o {
+._29H3o3m-GUmx6UfXhQaDAm {
   margin-bottom: 10px;
   position: absolute;
   width: 100%;
 }
-.gameslistitems_GamesListItem_2-pQF {
+._2-pQFn1G7dZ7667rrakcU3 {
   position: relative;
   --padding: 10px;
   display: grid;
@@ -311,25 +308,22 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   row-gap: 4px;
   background-color: rgba(0, 0, 0, 0.2);
 }
-.gameslistitems_GamesListItem_2-pQF.gameslistitems_Changing_2virZ {
+._2-pQFn1G7dZ7667rrakcU3._2virZnBQZfVnSt_RLteF8d {
   background-color: #3d4450;
 }
-.gameslistitems_GamesListItem_2-pQF.gameslistitems_Changing_2virZ
-  .gameslistitems_NavButton_3aNUl {
+._2-pQFn1G7dZ7667rrakcU3._2virZnBQZfVnSt_RLteF8d ._3aNUlXqnUCLTuW3Aeu2vQ1 {
   background-color: rgba(103, 112, 123, 0.5);
 }
-.gameslistitems_GamesListItem_2-pQF.gameslistitems_Changing_2virZ
-  .gameslistitems_NavButton_3aNUl:hover {
+._2-pQFn1G7dZ7667rrakcU3._2virZnBQZfVnSt_RLteF8d
+  ._3aNUlXqnUCLTuW3Aeu2vQ1:hover {
   background-color: #67707b;
 }
-.gameslistitems_GamesListItem_2-pQF .gameslistitems_GameItemPortrait_1bAC6 {
+._2-pQFn1G7dZ7667rrakcU3 ._1bAC6eBHy0MpRWrwTkgT9o {
   grid-area: image;
   width: 259px;
   height: 121px;
 }
-.gameslistitems_GamesListItem_2-pQF
-  .gameslistitems_GameItemPortrait_1bAC6
-  .gameslistitems_FallbackTitle_MHfYK {
+._2-pQFn1G7dZ7667rrakcU3 ._1bAC6eBHy0MpRWrwTkgT9o .MHfYK1d8GyLy-Pw2Zd0oX {
   position: absolute;
   top: 10%;
   left: 10%;
@@ -347,29 +341,26 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
   z-index: 3;
 }
-.gameslistitems_GamesListItem_2-pQF .gameslistitems_PortraitContainer_1CHM8 {
+._2-pQFn1G7dZ7667rrakcU3 ._1CHM8-0EM9IeDAZ47-cYit {
   position: relative;
   width: 100%;
   height: 100%;
 }
-.gameslistitems_HasAdultContent_2jXu5
-  .gameslistitems_GamesListItem_2-pQF
-  .gameslistitems_GameItemPortrait_1bAC6
-  img {
+._2jXu55ZFxTRANaTIIV7EJ5 ._2-pQFn1G7dZ7667rrakcU3 ._1bAC6eBHy0MpRWrwTkgT9o img {
   filter: blur(30px);
   clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
 }
-.gameslistitems_GamesListItem_2-pQF picture {
+._2-pQFn1G7dZ7667rrakcU3 picture {
   width: 100%;
   height: 100%;
   box-sizing: border-box;
   overflow: hidden;
 }
-.gameslistitems_GamesListItem_2-pQF picture img {
+._2-pQFn1G7dZ7667rrakcU3 picture img {
   width: 100%;
   height: 100%;
 }
-.gameslistitems_GamesListItem_2-pQF .gameslistitems_GameNameContainer_w6q9p {
+._2-pQFn1G7dZ7667rrakcU3 .w6q9piMq3gT16oj_lEvpy {
   grid-area: title;
   display: inline-flex;
   flex-direction: column;
@@ -378,7 +369,7 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   height: calc(2.1 * var(--typography-font-size-large));
   margin-right: 32px;
 }
-.gameslistitems_GamesListItem_2-pQF .gameslistitems_GameName_22awl {
+._2-pQFn1G7dZ7667rrakcU3 ._22awlPiAoaZjQMqxJhp-KP {
   font-weight: 400;
   font-size: var(--typography-font-size-large);
   color: var(--typography-color-primary);
@@ -390,7 +381,7 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   -webkit-box-orient: vertical;
   padding-bottom: 0.14em;
 }
-.gameslistitems_GamesListItem_2-pQF .gameslistitems_Playtime_2Eeyh {
+._2-pQFn1G7dZ7667rrakcU3 ._2EeyhCvW_KhEdtuarguZYh {
   grid-area: playtime;
   display: flex;
   flex-direction: row;
@@ -398,91 +389,70 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   white-space: nowrap;
   color: var(--typography-color-neutral);
 }
-[lang="ru"] .gameslistitems_GamesListItem_2-pQF .gameslistitems_Playtime_2Eeyh,
-[lang="bg"] .gameslistitems_GamesListItem_2-pQF .gameslistitems_Playtime_2Eeyh,
-[lang="de"] .gameslistitems_GamesListItem_2-pQF .gameslistitems_Playtime_2Eeyh,
-[lang="fi"] .gameslistitems_GamesListItem_2-pQF .gameslistitems_Playtime_2Eeyh {
+[lang="ru"] ._2-pQFn1G7dZ7667rrakcU3 ._2EeyhCvW_KhEdtuarguZYh,
+[lang="bg"] ._2-pQFn1G7dZ7667rrakcU3 ._2EeyhCvW_KhEdtuarguZYh,
+[lang="de"] ._2-pQFn1G7dZ7667rrakcU3 ._2EeyhCvW_KhEdtuarguZYh,
+[lang="fi"] ._2-pQFn1G7dZ7667rrakcU3 ._2EeyhCvW_KhEdtuarguZYh {
   gap: 8px;
 }
-.gameslistitems_GamesListItem_2-pQF
-  .gameslistitems_Playtime_2Eeyh
-  .gameslistitems_Hours_26nl3,
-.gameslistitems_GamesListItem_2-pQF
-  .gameslistitems_Playtime_2Eeyh
-  .gameslistitems_Hours2weeks_1_mJZ,
-.gameslistitems_GamesListItem_2-pQF
-  .gameslistitems_Playtime_2Eeyh
-  .gameslistitems_LastPlayed_2jglu {
+._2-pQFn1G7dZ7667rrakcU3 ._2EeyhCvW_KhEdtuarguZYh ._26nl3MClDebGDV7duYjZVn,
+._2-pQFn1G7dZ7667rrakcU3 ._2EeyhCvW_KhEdtuarguZYh ._1_mJZIdFpISpEwLAdgWwHG,
+._2-pQFn1G7dZ7667rrakcU3 ._2EeyhCvW_KhEdtuarguZYh ._2jglu-fYE_XNY6tkn6J99Y {
   display: inline-flex;
   flex-direction: column;
   font-size: var(--typography-font-size-medium);
   color: rgba(184, 188, 191, 0.8);
 }
-.gameslistitems_GamesListItem_2-pQF
-  .gameslistitems_Playtime_2Eeyh
-  .gameslistitems_FactLabel_2L1rk {
+._2-pQFn1G7dZ7667rrakcU3 ._2EeyhCvW_KhEdtuarguZYh ._2L1rk5AZ6FW8trFciJnHSs {
   font-weight: 700;
   letter-spacing: 0.03em;
   color: var(--typography-color-neutral);
 }
-.gameslistitems_GamesListItem_2-pQF .gameslistitems_AchievementContainer_38RhR {
+._2-pQFn1G7dZ7667rrakcU3 ._38RhR5f2dCM0suwMTTCyMk {
   grid-area: achievements;
   align-self: stretch;
 }
-.gameslistitems_GamesListItem_2-pQF
-  .gameslistitems_AchievementContainer_38RhR
-  .gameslistitems_AchievementsProgress_3L-qR {
+._2-pQFn1G7dZ7667rrakcU3 ._38RhR5f2dCM0suwMTTCyMk ._3L-qRrHSjklL-XerpCawLU {
   row-gap: 6px;
 }
-.gameslistitems_GamesListItem_2-pQF .gameslistitems_Buttons_1uRB5 {
+._2-pQFn1G7dZ7667rrakcU3 ._1uRB5he6cj97y-rG3RcI6H {
   grid-area: links;
   display: flex;
   align-items: flex-end;
   gap: 10px;
 }
-.gameslistitems_GamesListItem_2-pQF
-  .gameslistitems_Buttons_1uRB5
-  .gameslistitems_NavButton_3aNUl {
+._2-pQFn1G7dZ7667rrakcU3 ._1uRB5he6cj97y-rG3RcI6H ._3aNUlXqnUCLTuW3Aeu2vQ1 {
   padding: 6px 10px 6px 15px;
 }
-.gameslistitems_GamesListItem_2-pQF .gameslistitems_GameLinks_35fxd {
+._2-pQFn1G7dZ7667rrakcU3 ._35fxd2upwJHRuX_fNyRbbM {
   position: absolute;
   top: 10px;
   right: 10px;
   display: flex;
   flex-direction: row;
 }
-.gameslistitems_GamesListItem_2-pQF
-  .gameslistitems_GameLinks_35fxd
-  .gameslistitems_GameLinksButton_1pXbX {
+._2-pQFn1G7dZ7667rrakcU3 ._35fxd2upwJHRuX_fNyRbbM ._1pXbX5mBA7v__kVWHg0_Ja {
   padding-left: 8px;
   padding-right: 8px;
 }
-.gameslistitems_GamesListItem_2-pQF
-  .gameslistitems_GameLinks_35fxd
-  .gameslistitems_GameLinksButton_1pXbX
-  svg {
+._2-pQFn1G7dZ7667rrakcU3 ._35fxd2upwJHRuX_fNyRbbM ._1pXbX5mBA7v__kVWHg0_Ja svg {
   width: 18px;
 }
-.gameslistitems_GamesListItem_2-pQF
-  .gameslistitems_GameLinks_35fxd
-  .gameslistitems_AppPrivateIndicator_2UkkK {
+._2-pQFn1G7dZ7667rrakcU3 ._35fxd2upwJHRuX_fNyRbbM ._2UkkK2haCjZZi3oNZjrHTt {
   margin-right: 6px;
 }
-.GamepadMode
-  .gameslistitems_GamesListItem_2-pQF
-  .gameslistitems_GameLinks_35fxd {
+.GamepadMode ._2-pQFn1G7dZ7667rrakcU3 ._35fxd2upwJHRuX_fNyRbbM {
   position: unset;
   top: unset;
   left: unset;
 }
-.gameslistitems_GamesListItem_2-pQF .gameslistitems_DownloadStatus_bDhei {
+._2-pQFn1G7dZ7667rrakcU3 .bDheibeyyAaooxTc0G5Bh {
   grid-area: download;
   display: flex;
   align-items: end;
   justify-content: flex-end;
 }
-.gameslistitems_GamesListItem_2-pQF .gameslistitems_PerfectRibbon_1uKlf {
+._2-pQFn1G7dZ7667rrakcU3 ._1uKlfc1_Z49lxRNSctgO7y {
   position: absolute;
   left: -12px;
   bottom: -12px;
@@ -490,17 +460,17 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   height: 40px;
 }
 @media (max-width: 51rem) {
-  .gameslistitems_GamesListItem_2-pQF {
+  ._2-pQFn1G7dZ7667rrakcU3 {
     grid-template-areas: "image title title" "image playtime download" "links playtime download";
     grid-template-columns: 184px 1fr auto;
     grid-template-rows: auto auto 1fr;
     row-gap: 5px;
   }
-  .gameslistitems_GamesListItem_2-pQF .gameslistitems_GameItemPortrait_1bAC6 {
+  ._2-pQFn1G7dZ7667rrakcU3 ._1bAC6eBHy0MpRWrwTkgT9o {
     width: 184px;
     height: 86px;
   }
-  .gameslistitems_GamesListItem_2-pQF .gameslistitems_Playtime_2Eeyh {
+  ._2-pQFn1G7dZ7667rrakcU3 ._2EeyhCvW_KhEdtuarguZYh {
     display: grid;
     grid-template-areas: "total lastPlayed empty" "achievements achievements achievements";
     grid-template-columns: auto auto 1fr;
@@ -508,15 +478,15 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
     align-content: space-between;
     gap: 8px;
   }
-  .gameslistitems_GamesListItem_2-pQF .gameslistitems_ContentLinks_1yvGN {
+  ._2-pQFn1G7dZ7667rrakcU3 ._1yvGN-lhGKwgwFZ0hqNf3 {
     width: 100%;
   }
-  .gameslistitems_GamesListItem_2-pQF .gameslistitems_StatLinks_1sruH {
+  ._2-pQFn1G7dZ7667rrakcU3 ._1sruH2EotKih-5xc1nw_Ak {
     display: none;
   }
 }
 @media (max-width: 30rem) {
-  .gameslistitems_GamesListItem_2-pQF {
+  ._2-pQFn1G7dZ7667rrakcU3 {
     grid-template-areas: "image title" "image playtime";
     grid-template-columns: 93px 1fr;
     grid-template-rows: auto 1fr;
@@ -528,56 +498,48 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
     padding-right: var(--padding);
     background-color: rgba(58, 64, 74, 0.2);
   }
-  .gameslistitems_GamesListItem_2-pQF .gameslistitems_GameItemPortrait_1bAC6 {
+  ._2-pQFn1G7dZ7667rrakcU3 ._1bAC6eBHy0MpRWrwTkgT9o {
     width: 93px;
     height: 140px;
   }
-  .gameslistitems_GamesListItem_2-pQF .gameslistitems_Playtime_2Eeyh {
+  ._2-pQFn1G7dZ7667rrakcU3 ._2EeyhCvW_KhEdtuarguZYh {
     gap: 4px;
     align-content: start;
     display: flex;
     flex-direction: column;
     align-items: stretch;
   }
-  .gameslistitems_GamesListItem_2-pQF
-    .gameslistitems_Playtime_2Eeyh
-    .gameslistitems_Hours_26nl3 {
+  ._2-pQFn1G7dZ7667rrakcU3 ._2EeyhCvW_KhEdtuarguZYh ._26nl3MClDebGDV7duYjZVn {
     flex-direction: row;
     gap: 1ch;
   }
-  .gameslistitems_GamesListItem_2-pQF
-    .gameslistitems_Playtime_2Eeyh
-    .gameslistitems_AchievementContainer_38RhR {
+  ._2-pQFn1G7dZ7667rrakcU3 ._2EeyhCvW_KhEdtuarguZYh ._38RhR5f2dCM0suwMTTCyMk {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr auto;
     gap: 8px;
     padding-bottom: var(--padding);
     align-self: stretch;
   }
-  .gameslistitems_GamesListItem_2-pQF
-    .gameslistitems_Playtime_2Eeyh
-    .gameslistitems_LastPlayed_2jglu {
+  ._2-pQFn1G7dZ7667rrakcU3 ._2EeyhCvW_KhEdtuarguZYh ._2jglu-fYE_XNY6tkn6J99Y {
     display: none;
   }
-  .gameslistitems_GamesListItem_2-pQF
-    .gameslistitems_Playtime_2Eeyh
-    .gameslistitems_Hours2weeks_1_mJZ {
+  ._2-pQFn1G7dZ7667rrakcU3 ._2EeyhCvW_KhEdtuarguZYh ._1_mJZIdFpISpEwLAdgWwHG {
     flex-direction: row;
     gap: 1ch;
   }
-  .gameslistitems_GamesListItem_2-pQF .gameslistitems_Buttons_1uRB5 {
+  ._2-pQFn1G7dZ7667rrakcU3 ._1uRB5he6cj97y-rG3RcI6H {
     display: none;
   }
-  .gameslistitems_GamesListItem_2-pQF .gameslistitems_GameLinks_35fxd {
+  ._2-pQFn1G7dZ7667rrakcU3 ._35fxd2upwJHRuX_fNyRbbM {
     display: none;
   }
-  .gameslistitems_GamesListItem_2-pQF .gameslistitems_PerfectRibbon_1uKlf {
+  ._2-pQFn1G7dZ7667rrakcU3 ._1uKlfc1_Z49lxRNSctgO7y {
     top: 0;
     left: unset;
     right: 0;
   }
 }
-.gameslistitems_BottomSheetContainer_3EfAk {
+._3EfAk-1beaL1stoa1Zphh2 {
   position: fixed;
   bottom: 0;
   left: 0;
@@ -585,8 +547,7 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   height: 100%;
   z-index: 10;
 }
-.gameslistitems_BottomSheetContainer_3EfAk
-  .gameslistitems_BottomSheetOverlay_3M4Jf {
+._3EfAk-1beaL1stoa1Zphh2 ._3M4Jfj5fXzOUlgH9BqKlOq {
   background: rgba(0, 0, 0, 0.6);
   width: 100%;
   height: 100%;
@@ -594,7 +555,7 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   left: 0;
   position: absolute;
 }
-.gameslistitems_BottomSheet_2ywCP {
+._2ywCPkpOvBVojX4Mnn7zuJ {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -603,7 +564,7 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   border-top-left-radius: 20px;
   overflow: hidden;
 }
-.gameslistitems_BottomSheet_2ywCP .gameslistitems_GameInfo_36tJr {
+._2ywCPkpOvBVojX4Mnn7zuJ ._36tJrb1jp0FbroHbjR6K2b {
   position: relative;
   box-sizing: border-box;
   padding: 16px;
@@ -611,98 +572,88 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   display: flex;
   flex-direction: row;
 }
-.gameslistitems_BottomSheet_2ywCP
-  .gameslistitems_GameInfo_36tJr
-  .gameslistitems_Facts_34z3M {
+._2ywCPkpOvBVojX4Mnn7zuJ ._36tJrb1jp0FbroHbjR6K2b ._34z3MVFlA6nkaOvj9p0BXg {
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding-left: 16px;
   flex-grow: 1;
 }
-.gameslistitems_BottomSheet_2ywCP
-  .gameslistitems_GameInfo_36tJr
-  .gameslistitems_Facts_34z3M
-  .gameslistitems_Playtime_2Eeyh {
+._2ywCPkpOvBVojX4Mnn7zuJ
+  ._36tJrb1jp0FbroHbjR6K2b
+  ._34z3MVFlA6nkaOvj9p0BXg
+  ._2EeyhCvW_KhEdtuarguZYh {
   display: grid;
   gap: 8px;
   grid-template-columns: 50% 50%;
   grid-template-rows: 1fr 1fr;
 }
-.gameslistitems_BottomSheet_2ywCP
-  .gameslistitems_GameInfo_36tJr
-  .gameslistitems_Facts_34z3M
-  .gameslistitems_Playtime_2Eeyh
-  .gameslistitems_Hours_26nl3,
-.gameslistitems_BottomSheet_2ywCP
-  .gameslistitems_GameInfo_36tJr
-  .gameslistitems_Facts_34z3M
-  .gameslistitems_Playtime_2Eeyh
-  .gameslistitems_Hours2weeks_1_mJZ,
-.gameslistitems_BottomSheet_2ywCP
-  .gameslistitems_GameInfo_36tJr
-  .gameslistitems_Facts_34z3M
-  .gameslistitems_Playtime_2Eeyh
-  .gameslistitems_LastPlayed_2jglu {
+._2ywCPkpOvBVojX4Mnn7zuJ
+  ._36tJrb1jp0FbroHbjR6K2b
+  ._34z3MVFlA6nkaOvj9p0BXg
+  ._2EeyhCvW_KhEdtuarguZYh
+  ._26nl3MClDebGDV7duYjZVn,
+._2ywCPkpOvBVojX4Mnn7zuJ
+  ._36tJrb1jp0FbroHbjR6K2b
+  ._34z3MVFlA6nkaOvj9p0BXg
+  ._2EeyhCvW_KhEdtuarguZYh
+  ._1_mJZIdFpISpEwLAdgWwHG,
+._2ywCPkpOvBVojX4Mnn7zuJ
+  ._36tJrb1jp0FbroHbjR6K2b
+  ._34z3MVFlA6nkaOvj9p0BXg
+  ._2EeyhCvW_KhEdtuarguZYh
+  ._2jglu-fYE_XNY6tkn6J99Y {
   display: inline-flex;
   flex-direction: column;
   font-size: var(--typography-font-size-large);
   color: var(--typography-color-primary);
 }
-.gameslistitems_BottomSheet_2ywCP
-  .gameslistitems_GameInfo_36tJr
-  .gameslistitems_Facts_34z3M
-  .gameslistitems_Playtime_2Eeyh
-  .gameslistitems_FactLabel_2L1rk {
+._2ywCPkpOvBVojX4Mnn7zuJ
+  ._36tJrb1jp0FbroHbjR6K2b
+  ._34z3MVFlA6nkaOvj9p0BXg
+  ._2EeyhCvW_KhEdtuarguZYh
+  ._2L1rk5AZ6FW8trFciJnHSs {
   font-weight: 700;
   letter-spacing: 0.5px;
   opacity: 70%;
   font-size: var(--typography-font-size-medium);
 }
-.gameslistitems_BottomSheet_2ywCP
-  .gameslistitems_GameInfo_36tJr
-  .gameslistitems_GameTitle_3RUE8 {
+._2ywCPkpOvBVojX4Mnn7zuJ ._36tJrb1jp0FbroHbjR6K2b ._3RUE8mOoeGf8bZ77aurU_I {
   font-size: var(--typography-font-size-large);
   font-weight: 500;
   color: var(--typography-color-primary);
   margin-bottom: 16px;
 }
-.gameslistitems_BottomSheet_2ywCP
-  .gameslistitems_GameInfo_36tJr
-  .gameslistitems_AchievementContainer_38RhR {
+._2ywCPkpOvBVojX4Mnn7zuJ ._36tJrb1jp0FbroHbjR6K2b ._38RhR5f2dCM0suwMTTCyMk {
   margin-top: 16px;
   display: flex;
   grid-column: 1/3;
 }
-.gameslistitems_BottomSheet_2ywCP
-  .gameslistitems_GameInfo_36tJr
-  .gameslistitems_AchievementContainer_38RhR
-  .gameslistitems_AchievementsProgress_3L-qR {
+._2ywCPkpOvBVojX4Mnn7zuJ
+  ._36tJrb1jp0FbroHbjR6K2b
+  ._38RhR5f2dCM0suwMTTCyMk
+  ._3L-qRrHSjklL-XerpCawLU {
   width: 100%;
 }
-.gameslistitems_BottomSheet_2ywCP
-  .gameslistitems_GameInfo_36tJr
-  .gameslistitems_AchievementContainer_38RhR
-  .gameslistitems_AchievementIcons_6o-Nn {
+._2ywCPkpOvBVojX4Mnn7zuJ
+  ._36tJrb1jp0FbroHbjR6K2b
+  ._38RhR5f2dCM0suwMTTCyMk
+  ._6o-Nn_9cs5UP8u0ZSRljj {
   display: none;
 }
-.gameslistitems_BottomSheet_2ywCP
-  .gameslistitems_GameInfo_36tJr
-  .gameslistitems_Portrait_3MzPl {
+._2ywCPkpOvBVojX4Mnn7zuJ ._36tJrb1jp0FbroHbjR6K2b ._3MzPltH_U92rP-soE-XXhZ {
   width: 35%;
   object-fit: contain;
   object-position: top;
 }
-.gameslistitems_HasAdultContent_2jXu5
-  .gameslistitems_BottomSheet_2ywCP
-  .gameslistitems_GameInfo_36tJr
-  .gameslistitems_Portrait_3MzPl {
+._2jXu55ZFxTRANaTIIV7EJ5
+  ._2ywCPkpOvBVojX4Mnn7zuJ
+  ._36tJrb1jp0FbroHbjR6K2b
+  ._3MzPltH_U92rP-soE-XXhZ {
   filter: blur(30px);
   clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
 }
-.gameslistitems_BottomSheet_2ywCP
-  .gameslistitems_GameInfo_36tJr
-  .gameslistitems_BlurredBackground_r1Y-M {
+._2ywCPkpOvBVojX4Mnn7zuJ ._36tJrb1jp0FbroHbjR6K2b .r1Y-M8ZjYRcmI8sTqnnbW {
   position: absolute;
   top: -40px;
   bottom: 0px;
@@ -711,9 +662,9 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   width: 120%;
   z-index: -1;
 }
-.gameslistitems_BottomSheet_2ywCP
-  .gameslistitems_GameInfo_36tJr
-  .gameslistitems_BlurredBackground_r1Y-M::after {
+._2ywCPkpOvBVojX4Mnn7zuJ
+  ._36tJrb1jp0FbroHbjR6K2b
+  .r1Y-M8ZjYRcmI8sTqnnbW::after {
   content: "";
   display: block;
   position: absolute;
@@ -723,21 +674,16 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.65);
 }
-.gameslistitems_BottomSheet_2ywCP
-  .gameslistitems_GameInfo_36tJr
-  .gameslistitems_BlurredBackground_r1Y-M
-  img {
+._2ywCPkpOvBVojX4Mnn7zuJ ._36tJrb1jp0FbroHbjR6K2b .r1Y-M8ZjYRcmI8sTqnnbW img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   filter: blur(10px);
 }
-.gameslistitems_BottomSheet_2ywCP .gameslistitems_BottomSheetSection_NZhfS {
+._2ywCPkpOvBVojX4Mnn7zuJ .NZhfSfVUUKzxiu-j4DLM- {
   background-color: #2a2c34;
 }
-.gameslistitems_BottomSheet_2ywCP
-  .gameslistitems_BottomSheetSection_NZhfS
-  summary {
+._2ywCPkpOvBVojX4Mnn7zuJ .NZhfSfVUUKzxiu-j4DLM- summary {
   font-weight: 700;
   font-size: var(--typography-font-size-body);
   color: var(--typography-color-primary);
@@ -749,41 +695,29 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   width: 100%;
   padding: 16px;
 }
-.gameslistitems_BottomSheet_2ywCP
-  .gameslistitems_BottomSheetSection_NZhfS
-  summary
-  svg {
+._2ywCPkpOvBVojX4Mnn7zuJ .NZhfSfVUUKzxiu-j4DLM- summary svg {
   width: 16px;
   transition: transform 120ms ease-in-out;
 }
-.gameslistitems_BottomSheet_2ywCP
-  .gameslistitems_BottomSheetSection_NZhfS
-  .gameslistitems_SectionContent_1ynpS {
+._2ywCPkpOvBVojX4Mnn7zuJ .NZhfSfVUUKzxiu-j4DLM- ._1ynpS-BFysdDH9UAW-iRDf {
   display: flex;
   flex-direction: column;
 }
-.gameslistitems_BottomSheet_2ywCP
-  .gameslistitems_BottomSheetSection_NZhfS
-  .gameslistitems_SectionContent_1ynpS
-  .gameslistitems_BottomSheetRemoteControls_2gji1 {
+._2ywCPkpOvBVojX4Mnn7zuJ
+  .NZhfSfVUUKzxiu-j4DLM-
+  ._1ynpS-BFysdDH9UAW-iRDf
+  ._2gji1dsQmGsIQfeoZ3ZDLp {
   padding-left: 16px;
   padding-right: 16px;
   padding-bottom: 8px;
 }
-.gameslistitems_BottomSheet_2ywCP
-  .gameslistitems_BottomSheetSection_NZhfS[open]
-  summary {
+._2ywCPkpOvBVojX4Mnn7zuJ .NZhfSfVUUKzxiu-j4DLM-[open] summary {
   background-color: #3d4450;
 }
-.gameslistitems_BottomSheet_2ywCP
-  .gameslistitems_BottomSheetSection_NZhfS[open]
-  summary
-  svg {
+._2ywCPkpOvBVojX4Mnn7zuJ .NZhfSfVUUKzxiu-j4DLM-[open] summary svg {
   transform: scaleY(-1);
 }
-.gameslistitems_BottomSheet_2ywCP
-  .gameslistitems_BottomSheetSection_NZhfS
-  .gameslistitems_BottomSheetLink_34fh9 {
+._2ywCPkpOvBVojX4Mnn7zuJ .NZhfSfVUUKzxiu-j4DLM- ._34fh9Z8MPpZ4_9yScG6sTQ {
   font-size: var(--typography-font-size-body);
   color: var(--typography-color-primary);
   display: inline-flex;
@@ -792,9 +726,7 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   padding-left: 16px;
   padding-right: 16px;
 }
-.gameslistitems_BottomSheet_2ywCP
-  .gameslistitems_BottomSheetSection_NZhfS
-  .gameslistitems_ClientName_1Jcm1 {
+._2ywCPkpOvBVojX4Mnn7zuJ .NZhfSfVUUKzxiu-j4DLM- ._1Jcm1lR6ir2WXkex7RFhNc {
   padding-left: 16px;
   padding-right: 16px;
   padding-top: 8px;
@@ -802,7 +734,7 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   font-size: var(--typography-font-size-body);
   color: var(--typography-color-primary);
 }
-@keyframes gameslistitems_placeholderPulse_3qZsO {
+@keyframes _3qZsOXqZUFEK9ISDZudzlL {
   0% {
     opacity: 0.3;
   }
@@ -813,7 +745,7 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
     opacity: 0.3;
   }
 }
-.gameslistitems_NavButton_3aNUl {
+._3aNUlXqnUCLTuW3Aeu2vQ1 {
   background: rgba(58, 64, 74, 0.5);
   border-radius: 2px;
   font-size: 13px;
@@ -829,30 +761,28 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   cursor: pointer;
   gap: 15px;
 }
-.gameslistitems_NavButton_3aNUl svg {
+._3aNUlXqnUCLTuW3Aeu2vQ1 svg {
   width: 12px;
 }
-.gameslistitems_NavButton_3aNUl:hover {
+._3aNUlXqnUCLTuW3Aeu2vQ1:hover {
   background: #67707b;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
 }
-.GamepadMode .gameslistitems_NavButton_3aNUl {
+.GamepadMode ._3aNUlXqnUCLTuW3Aeu2vQ1 {
   opacity: 0;
   transition: opacity 200ms ease 100ms;
 }
-.GamepadMode
-  .gpfocuswithin.gameslistitems_GamesListItem_2-pQF
-  .gameslistitems_NavButton_3aNUl {
+.GamepadMode .gpfocuswithin._2-pQFn1G7dZ7667rrakcU3 ._3aNUlXqnUCLTuW3Aeu2vQ1 {
   opacity: 1;
 }
-.gameslistitems_NavDropdownMenu_1Hvmx {
+._1HvmxTJCyuUCUtpqb-Jvbm {
   min-width: 124px;
 }
-.gameslistitems_NavDropdownMenu_1Hvmx .contextMenuItem {
+._1HvmxTJCyuUCUtpqb-Jvbm .contextMenuItem {
   padding: 0;
 }
-.gameslistitems_NavDropdownMenu_1Hvmx .contextMenuItem a,
-.gameslistitems_NavDropdownMenu_1Hvmx .contextMenuItem span {
+._1HvmxTJCyuUCUtpqb-Jvbm .contextMenuItem a,
+._1HvmxTJCyuUCUtpqb-Jvbm .contextMenuItem span {
   color: #ebebeb;
   display: inline-block;
   width: 100%;
@@ -860,7 +790,7 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   padding: 4px 6px;
   cursor: pointer;
 }
-.gameslistitems_AchievementContainer_38RhR {
+._38RhR5f2dCM0suwMTTCyMk {
   display: grid;
   grid-template-columns: 1fr minmax(0, 232px);
   grid-template-rows: 1fr;
@@ -868,22 +798,17 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   gap: 16px;
   min-height: 32px;
 }
-.gameslistitems_AchievementContainer_38RhR
-  .gameslistitems_AchievementIcons_6o-Nn {
+._38RhR5f2dCM0suwMTTCyMk ._6o-Nn_9cs5UP8u0ZSRljj {
   height: 32px;
   display: flex;
   gap: 8px;
   flex-wrap: wrap;
 }
-.gameslistitems_AchievementContainer_38RhR
-  .gameslistitems_AchievementIcons_6o-Nn
-  .gameslistitems_AchievementIcon_2J4HY {
+._38RhR5f2dCM0suwMTTCyMk ._6o-Nn_9cs5UP8u0ZSRljj ._2J4HYQJrf2UMRTTLMmtWQY {
   width: 32px;
   height: 32px;
 }
-.gameslistitems_AchievementContainer_38RhR
-  .gameslistitems_AchievementIcons_6o-Nn
-  .gameslistitems_Remainder_fVmXu {
+._38RhR5f2dCM0suwMTTCyMk ._6o-Nn_9cs5UP8u0ZSRljj .fVmXu5fTPTvdMa9Wfl4-t {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -897,12 +822,12 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   text-shadow: 1px 1px 1px #000;
   letter-spacing: 1px;
 }
-@keyframes gameslistitems_rotate_1TDtt {
+@keyframes _1TDttoOdo6-4lnAb7-9v_0 {
   to {
     transform: rotate(1turn);
   }
 }
-.gameslistitems_AchievementHover_1Whe1 {
+._1Whe1Zq6Wp7xVMB3L_kD7z {
   position: relative;
   box-sizing: border-box;
   color: #fff;
@@ -910,7 +835,7 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   width: 400px;
   padding: 0;
 }
-.gameslistitems_AchievementHover_1Whe1 .gameslistitems_Background_OMxTb {
+._1Whe1Zq6Wp7xVMB3L_kD7z .OMxTbLGmt5VsNqE2XXp_z {
   position: absolute;
   top: 0;
   right: 0;
@@ -925,7 +850,7 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
     #282c32 100%
   );
 }
-.gameslistitems_AchievementHover_1Whe1 .gameslistitems_Blur_BPScs {
+._1Whe1Zq6Wp7xVMB3L_kD7z .BPScsrxPEywJlzL3Nps-T {
   width: 380px;
   height: 380px;
   filter: blur(10px) saturate(2);
@@ -949,38 +874,34 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   );
   mix-blend-mode: screen;
 }
-.gameslistitems_AchievementHover_1Whe1 .gameslistitems_TopSection_3OoXT {
+._1Whe1Zq6Wp7xVMB3L_kD7z ._3OoXTDF9l6Vk3NVig_aEs7 {
   display: flex;
   flex-direction: row;
   padding: 0;
   box-sizing: border-box;
 }
-.gameslistitems_AchievementHover_1Whe1
-  .gameslistitems_TopSection_3OoXT
-  .gameslistitems_AchievementIcon_2J4HY {
+._1Whe1Zq6Wp7xVMB3L_kD7z ._3OoXTDF9l6Vk3NVig_aEs7 ._2J4HYQJrf2UMRTTLMmtWQY {
   width: 92px;
   height: 92px;
   flex-shrink: 0;
   margin: 8px;
 }
-.gameslistitems_AchievementHover_1Whe1
-  .gameslistitems_TopSection_3OoXT
-  .gameslistitems_TextSection_3sCHJ {
+._1Whe1Zq6Wp7xVMB3L_kD7z ._3OoXTDF9l6Vk3NVig_aEs7 ._3sCHJt5zL0N6_BEWg0qu-e {
   font-weight: 300;
   flex-grow: 1;
   color: #ffffff80;
   font-size: 13px;
   padding: 16px 16px 16px 4px;
 }
-.gameslistitems_AchievementHover_1Whe1
-  .gameslistitems_TopSection_3OoXT
-  .gameslistitems_TextSection_3sCHJ
-  .gameslistitems_Name_2jbhF {
+._1Whe1Zq6Wp7xVMB3L_kD7z
+  ._3OoXTDF9l6Vk3NVig_aEs7
+  ._3sCHJt5zL0N6_BEWg0qu-e
+  ._2jbhFCR7QFZlm9OjxHKzR4 {
   margin-bottom: 5px;
   font-size: 14px;
   color: #ffffffe0;
 }
-.gameslistitems_AchievementHover_1Whe1 .gameslistitems_Unlocked_1UIA3 {
+._1Whe1Zq6Wp7xVMB3L_kD7z ._1UIA3j5VZhatQINGh2TCP5 {
   padding: 10px 15px;
   box-sizing: border-box;
   background: linear-gradient(
@@ -991,26 +912,22 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   font-size: 13px;
   color: #888;
 }
-.gameslistitems_AchievementHover_1Whe1
-  .gameslistitems_Unlocked_1UIA3
-  .gameslistitems_RareLabel_3g9oI {
+._1Whe1Zq6Wp7xVMB3L_kD7z ._1UIA3j5VZhatQINGh2TCP5 ._3g9oIyfEdZ_IaqN-AdCrUd {
   color: #e4a74a;
 }
-.gameslistitems_AchievementsProgress_3L-qR {
+._3L-qRrHSjklL-XerpCawLU {
   display: grid;
   grid-template-areas: "label fraction" "bar bar";
   gap: 4px;
   align-items: center;
   align-content: start;
 }
-.gameslistitems_AchievementsProgress_3L-qR
-  .gameslistitems_AchievementsProgressBar_3Z3qp {
+._3L-qRrHSjklL-XerpCawLU ._3Z3qpPO7VynFPtiyMoSUOj {
   grid-area: bar;
   --color-progress-bar-background: var(--color-backdrop);
   --color-progress-bar-foreground: var(--color-info);
 }
-.gameslistitems_AchievementsProgress_3L-qR
-  .gameslistitems_AchievementsProgressLabel_3eZML {
+._3L-qRrHSjklL-XerpCawLU ._3eZMLQT-bjZ0EhBSvQlDQ0 {
   grid-area: label;
   font-weight: 700;
   font-size: var(--typography-font-size-medium);
@@ -1018,8 +935,7 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   color: inherit;
   letter-spacing: 0.03em;
 }
-.gameslistitems_AchievementsProgress_3L-qR
-  .gameslistitems_AchievementsFraction_1YRRM {
+._3L-qRrHSjklL-XerpCawLU ._1YRRMk6X7vrOL-02K-q1pf {
   grid-area: fraction;
   font-size: var(--typography-font-size-medium);
   margin-right: 8px;
@@ -1027,29 +943,28 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   text-align: end;
   min-width: 2.5rem;
 }
-.gameslistitems_emptyDescription_3oj8b {
+._3oj8bwi8usJEPiy_cYHLnV {
   background-color: rgba(0, 0, 0, 0.2);
   padding: 32px;
   font-size: var(--typography-font-size-body);
   font-weight: 400;
   text-align: center;
 }
-.gameslistitems_GamesListItem_2-pQF
-  .gameslistitems_GamepadNavigationDropdown_Ml4QU {
+._2-pQFn1G7dZ7667rrakcU3 .Ml4QU2rA5poyzlN6Mpn_V {
   padding-top: 0;
   padding-bottom: 0;
   --field-row-children-spacing: 0;
   --gamepad-field-control-min-width: 150px;
 }
-.gameslistitems_GamesListItem_2-pQF
-  .gameslistitems_GamepadNavigationDropdown_Ml4QU
-  .gameslistitems_GamepadNavigationDropdownButton_2u7K0.DialogButton {
+._2-pQFn1G7dZ7667rrakcU3
+  .Ml4QU2rA5poyzlN6Mpn_V
+  ._2u7K0-MM3a_gPWpWBEUSOb.DialogButton {
   font-size: 13px;
   font-weight: 400;
   padding: 4px 8px;
   white-space: nowrap;
 }
-.gameslistremote_ClientSelectDropdown_2Z6JL {
+._2Z6JLrWwlE-rD6qsK1mpwA {
   background: rgba(255, 255, 255, 0.2);
   border-radius: 2px;
   border: none;
@@ -1059,17 +974,17 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   width: 24px;
   height: 24px;
 }
-.gameslistremote_ClientSelectDropdown_2Z6JL svg {
+._2Z6JLrWwlE-rD6qsK1mpwA svg {
   width: 12px;
   color: #fff;
 }
-.gameslistremote_ClientListDropdownMenu_22iS0 {
+._22iS0ZTKxg-SJsAgi5pqBI {
   background: #373c44;
   box-shadow: 0px 8px 26px 2px rgba(0, 0, 0, 0.2);
   padding: 0;
   margin: 0;
 }
-.gameslistremote_RemoteDownloadClientBar_hQ4Q9 {
+.hQ4Q9MOyzOvVrZauH-tj5 {
   background-color: var(--color-highlight);
   color: var(--typography-color-primary);
   border-radius: 2px;
@@ -1084,8 +999,7 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   top: 0;
   z-index: 1;
 }
-.gameslistremote_RemoteDownloadClientBar_hQ4Q9
-  .gameslistremote_RemoteDownloadHeader_UVZ1r {
+.hQ4Q9MOyzOvVrZauH-tj5 .UVZ1rP5saSNYWAWH3yMTl {
   font-size: 14px;
   font-weight: 700;
   gap: 10px;
@@ -1093,109 +1007,88 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   justify-content: center;
   align-items: center;
 }
-.gameslistremote_RemoteDownloadClientBar_hQ4Q9
-  .gameslistremote_InfoIcon_3TWnE
-  svg {
+.hQ4Q9MOyzOvVrZauH-tj5 ._3TWnE-0Q1fkvhkB9mfdf27 svg {
   color: #fff;
   width: 14px;
   height: 14px;
   opacity: 0.5;
 }
-.gameslistremote_RemoteDownloadClientBar_hQ4Q9
-  .gameslistremote_InfoIcon_3TWnE
-  svg
-  circle {
+.hQ4Q9MOyzOvVrZauH-tj5 ._3TWnE-0Q1fkvhkB9mfdf27 svg circle {
   stroke: #fff;
 }
-.gameslistremote_RemoteDownloadClientBar_hQ4Q9
-  .gameslistremote_ClientIndicator_2XcV9 {
+.hQ4Q9MOyzOvVrZauH-tj5 ._2XcV9fHY60YOpjt36jVCfY {
   display: inline-flex;
   align-items: center;
   gap: 16px;
 }
-.gameslistremote_RemoteDownloadClientBar_hQ4Q9.gameslistremote_NoConnection_E0OMi {
+.hQ4Q9MOyzOvVrZauH-tj5.E0OMiLaKR_MRnFXmJAZmf {
   background-color: rgba(24, 26, 33, 0.5);
   color: var(--typography-color-neutral);
   position: relative;
   top: unset;
 }
-.gameslistremote_RemoteDownloadClientBar_hQ4Q9.gameslistremote_NoConnection_E0OMi
-  .gameslistremote_RemoteDownloadHeader_UVZ1r {
+.hQ4Q9MOyzOvVrZauH-tj5.E0OMiLaKR_MRnFXmJAZmf .UVZ1rP5saSNYWAWH3yMTl {
   display: inline-grid;
   grid-template-columns: 1fr auto;
   grid-template-rows: 1fr;
   cursor: pointer;
 }
-.gameslistremote_RemoteDownloadClientBar_hQ4Q9
-  .gameslistremote_RemoteDownloadStatus_14QBd {
+.hQ4Q9MOyzOvVrZauH-tj5 ._14QBdf-5S88wYLJbazoFrh {
   align-items: center;
   justify-content: center;
   display: inline-flex;
   gap: 0.5rem;
 }
-.gameslistremote_RemoteDownloadClientBar_hQ4Q9
-  .gameslistremote_RemoteDownloadHelp_1pQIr {
+.hQ4Q9MOyzOvVrZauH-tj5 ._1pQIr9TvX9JCZcMmMETHx1 {
   font-size: var(--typography-font-size-body);
   font-weight: 400;
   text-align: center;
   display: none;
 }
-.gameslistremote_RemoteDownloadClientBar_hQ4Q9[open]
-  .gameslistremote_RemoteDownloadHelp_1pQIr {
+.hQ4Q9MOyzOvVrZauH-tj5[open] ._1pQIr9TvX9JCZcMmMETHx1 {
   display: block;
 }
-.gameslistremote_RemoteDownloadClientBar_hQ4Q9
-  .gameslistremote_NoConnectionText_1A0df {
+.hQ4Q9MOyzOvVrZauH-tj5 ._1A0dfMNzS5OX5an6RIFIK- {
   font-weight: 400;
 }
-.gameslistremote_RemoteDownloadClientBar_hQ4Q9
-  .gameslistremote_LearnMoreCta_3XDsb {
+.hQ4Q9MOyzOvVrZauH-tj5 ._3XDsbImB-54v0oQIFtqdJj {
   font-weight: 400;
   display: inline-flex;
   gap: 0.25rem;
   align-items: center;
   color: #fff;
 }
-.gameslistremote_RemoteDownloadClientBar_hQ4Q9
-  .gameslistremote_LearnMoreCta_3XDsb
-  svg {
+.hQ4Q9MOyzOvVrZauH-tj5 ._3XDsbImB-54v0oQIFtqdJj svg {
   width: 12px;
   transition: transform 120ms ease-in-out;
 }
-.gameslistremote_RemoteDownloadClientBar_hQ4Q9[open]
-  .gameslistremote_LearnMoreCta_3XDsb
-  svg {
+.hQ4Q9MOyzOvVrZauH-tj5[open] ._3XDsbImB-54v0oQIFtqdJj svg {
   transform: scaleY(-1);
 }
 @media (max-width: 910px) {
-  .gameslistremote_RemoteDownloadClientBar_hQ4Q9 {
+  .hQ4Q9MOyzOvVrZauH-tj5 {
     position: relative;
   }
 }
 @media (max-width: 30rem) {
-  .gameslistremote_RemoteDownloadClientBar_hQ4Q9
-    .gameslistremote_RemoteDownloadHeader_UVZ1r {
+  .hQ4Q9MOyzOvVrZauH-tj5 .UVZ1rP5saSNYWAWH3yMTl {
     flex-direction: column;
     gap: unset;
   }
-  .gameslistremote_RemoteDownloadClientBar_hQ4Q9
-    .gameslistremote_RemoteDownloadStatus_14QBd {
+  .hQ4Q9MOyzOvVrZauH-tj5 ._14QBdf-5S88wYLJbazoFrh {
     flex-wrap: wrap;
     gap: unset;
   }
-  .gameslistremote_RemoteDownloadClientBar_hQ4Q9
-    .gameslistremote_RemoteDownloadStatus_14QBd
-    .gameslistremote_NoConnectionText_1A0df {
+  .hQ4Q9MOyzOvVrZauH-tj5 ._14QBdf-5S88wYLJbazoFrh ._1A0dfMNzS5OX5an6RIFIK- {
     margin-left: 0.5rem;
   }
-  .gameslistremote_RemoteDownloadClientBar_hQ4Q9.gameslistremote_NoConnection_E0OMi
-    .gameslistremote_RemoteDownloadHeader_UVZ1r {
+  .hQ4Q9MOyzOvVrZauH-tj5.E0OMiLaKR_MRnFXmJAZmf .UVZ1rP5saSNYWAWH3yMTl {
     display: flex;
     gap: 4px;
     text-align: center;
   }
 }
-.gameslistremote_DownloadBarWithLabel_14YOd {
+._14YOdPTduI4LctS9AB_CjI {
   display: grid;
   grid-template-areas: "status estimate" "bar bar" "progress progress";
   grid-template-columns: 1fr 1fr;
@@ -1204,8 +1097,7 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   align-items: center;
   width: 100%;
 }
-.gameslistremote_DownloadBarWithLabel_14YOd
-  .gameslistremote_DownloadStatus_2JtXw {
+._14YOdPTduI4LctS9AB_CjI ._2JtXwjoHHm0U24wGc2CfVV {
   grid-area: status;
   justify-self: start;
   color: var(--color-info);
@@ -1213,30 +1105,26 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   font-weight: 700;
   letter-spacing: 0.03em;
 }
-.gameslistremote_DownloadBarWithLabel_14YOd
-  .gameslistremote_DownloadProgress_2b6Qy {
+._14YOdPTduI4LctS9AB_CjI ._2b6Qyvo_fVAbVShbS2jmJQ {
   grid-area: progress;
   justify-self: start;
   font-size: var(--typography-font-size-small);
 }
-.gameslistremote_DownloadBarWithLabel_14YOd
-  .gameslistremote_DownloadProgress_2b6Qy
-  .gameslistremote_CurrentSpace_3_zPY {
+._14YOdPTduI4LctS9AB_CjI ._2b6Qyvo_fVAbVShbS2jmJQ ._3_zPYGBGckOlSj4oGyYok5 {
   font-weight: 700;
   color: var(--typography-color-primary);
 }
-.gameslistremote_DownloadBarWithLabel_14YOd
-  .gameslistremote_DownloadEstimate_2QWHY {
+._14YOdPTduI4LctS9AB_CjI ._2QWHYy_4BKkdD243QQJWM4 {
   grid-area: estimate;
   justify-self: end;
   font-size: var(--typography-font-size-small);
 }
-.gameslistremote_DownloadBar_4ZW4i {
+._4ZW4ifW1Y2eVWWfugmjfC {
   grid-area: bar;
   --color-progress-bar-background: var(--color-backdrop);
   --color-progress-bar-foreground: var(--color-info);
 }
-.gameslistremote_RemoteControls_1Fput .gameslistremote_ButtonContainer_2mckt {
+._1FputvTUMDlSdMWR6dzBHN ._2mcktnnmYz7Erghm5hxnqS {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -1244,7 +1132,7 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   box-sizing: border-box;
   gap: 16px;
 }
-.gameslistremote_RemoteControls_1Fput .gameslistremote_NoRemoteControl_217Ei {
+._1FputvTUMDlSdMWR6dzBHN ._217EiSw2ETc8OiRB6_XCAN {
   font-weight: 500;
   font-size: var(--typography-font-size-medium);
   letter-spacing: 0.5px;
@@ -1254,12 +1142,12 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   align-items: center;
   text-align: end;
 }
-.gameslistremote_RemoteControls_1Fput .gameslistremote_DownloadSize_2zfId {
+._1FputvTUMDlSdMWR6dzBHN ._2zfId9cfT2zTYc0lGKOhrr {
   font-weight: 700;
   font-size: var(--typography-font-size-medium);
   white-space: nowrap;
 }
-.gameslistremote_RemoteControls_1Fput .gameslistremote_UpdateSchedule__nq0r {
+._1FputvTUMDlSdMWR6dzBHN ._nq0rHACsxcW4OBfu3FB9 {
   font-weight: 700;
   font-size: var(--typography-font-size-medium);
   display: -webkit-inline-box;
@@ -1269,15 +1157,14 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   -webkit-box-orient: vertical;
 }
 @media (max-width: 37rem) {
-  .gameslistremote_RemoteControls_1Fput .gameslistremote_UpdateSchedule__nq0r {
+  ._1FputvTUMDlSdMWR6dzBHN ._nq0rHACsxcW4OBfu3FB9 {
     display: none;
   }
 }
-.gameslistremote_RemoteControls_1Fput
-  .gameslistremote_DownloadIconButton_2P659 {
+._1FputvTUMDlSdMWR6dzBHN ._2P6595PfFeyY96lncv5stz {
   align-self: flex-end;
 }
-.gameslistremote_DownloadBarContainer_2Qx7n {
+._2Qx7nzrAjG0zOX4ZElhETi {
   height: 56px;
   display: flex;
   flex-direction: row;
@@ -1289,12 +1176,11 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   gap: 16px;
   white-space: nowrap;
 }
-.gameslistremote_DownloadBarContainer_2Qx7n
-  .gameslistremote_DownloadSize_2zfId {
+._2Qx7nzrAjG0zOX4ZElhETi ._2zfId9cfT2zTYc0lGKOhrr {
   font-weight: 700;
   font-size: var(--typography-font-size-medium);
 }
-.gameslistremote_DownloadIconButton_2P659 {
+._2P6595PfFeyY96lncv5stz {
   height: 30px;
   display: flex;
   flex-direction: row;
@@ -1308,33 +1194,33 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   border: none;
   border-radius: 2px;
 }
-.gameslistremote_DownloadIconButton_2P659 svg {
+._2P6595PfFeyY96lncv5stz svg {
   width: 1rem;
   color: var(--typography-color-primary);
   fill: var(--typography-color-primary);
 }
-.gameslistremote_DownloadIconButton_2P659:hover {
+._2P6595PfFeyY96lncv5stz:hover {
   background: #0bf;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
   cursor: pointer;
 }
-.sectionTab.gameslisttabs_WishlistTab_1BZR3 {
+.sectionTab._1BZR3-r7Ext8HXYzmdK9zn {
   transform: translateY(-6px);
   margin-left: auto;
 }
-.gameslisttabs_tabList_1sHAC {
+._1sHACvEQL-LRtUYan0JxdB {
   display: flex;
 }
-.gameslisttabs_tabList_1sHAC .sectionTab {
+._1sHACvEQL-LRtUYan0JxdB .sectionTab {
   white-space: nowrap;
 }
-.GamepadMode .gameslisttabs_WishlistTab_1BZR3 {
+.GamepadMode ._1BZR3-r7Ext8HXYzmdK9zn {
   top: unset;
   position: unset;
   margin-bottom: unset;
   right: unset;
 }
-.gameslisttabs_TabBaseline_2gC9I,
-.gameslisttabs_SelectBaseline_1qj0p {
+._2gC9IPFcO2QkemlSXC51zW,
+._1qj0peBs6iRD1XsxTT68xH {
   margin-bottom: 14px;
 }

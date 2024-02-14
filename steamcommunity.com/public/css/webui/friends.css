@@ -10350,7 +10350,9 @@ iframe.youtubeembed_PreviewYouTubeVideo_rUASs.youtubeembed_floatRight_om0Rs {
   color: #222;
   padding: 0px 5px;
   border-radius: 2px;
-  display: table;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   position: relative;
   text-transform: uppercase;
   font-weight: 500;
@@ -10363,7 +10365,6 @@ iframe.youtubeembed_PreviewYouTubeVideo_rUASs.youtubeembed_floatRight_om0Rs {
   color: #b1b4b9;
   text-transform: uppercase;
   letter-spacing: 1px;
-  margin-bottom: 4px;
 }
 .localdateandtime_DateToolTip_2E5LH {
   padding: 3px 8px;

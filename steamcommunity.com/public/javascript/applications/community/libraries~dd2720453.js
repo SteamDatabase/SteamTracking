@@ -3846,6 +3846,7 @@
                     br: n.FE.readBool,
                     bw: n.Xc.writeBool,
                   },
+                  admin_query: { n: 18, br: n.FE.readBool, bw: n.Xc.writeBool },
                 },
               }),
             v.sm_m
@@ -4303,6 +4304,7 @@
                     pbr: n.FE.readPackedEnum,
                     bw: n.Xc.writeRepeatedEnum,
                   },
+                  admin_query: { n: 38, br: n.FE.readBool, bw: n.Xc.writeBool },
                   totalonly: { n: 17, br: n.FE.readBool, bw: n.Xc.writeBool },
                   ids_only: { n: 18, br: n.FE.readBool, bw: n.Xc.writeBool },
                   return_vote_data: {
@@ -5430,6 +5432,7 @@
                     pbr: n.FE.readPackedEnum,
                     bw: n.Xc.writeRepeatedEnum,
                   },
+                  admin_query: { n: 47, br: n.FE.readBool, bw: n.Xc.writeBool },
                   totalonly: { n: 16, br: n.FE.readBool, bw: n.Xc.writeBool },
                   ids_only: { n: 35, br: n.FE.readBool, bw: n.Xc.writeBool },
                   return_vote_data: {

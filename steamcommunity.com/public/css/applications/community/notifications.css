@@ -1,48 +1,46 @@
-.notifications_NotificationPageCtn_2DCeN {
+._2DCeN21MQJGwVpPCXcT2QJ {
   position: relative;
   margin: 0 auto;
   max-width: 980px;
 }
 @media screen and (max-width: 980px) {
-  .notifications_NotificationPageCtn_2DCeN {
+  ._2DCeN21MQJGwVpPCXcT2QJ {
     margin: 0 20px;
   }
 }
-.notifications_NotificationsBody_35hlM {
+._35hlMprL--UdgfHJGuGnJR {
   min-height: 224px;
   display: flex;
   gap: 20px;
 }
-.notifications_NotificationsHeader_1bLYa {
+._1bLYafVT6_4DisbgdimwXc {
   display: block;
   font-size: 18px;
   padding: 5px 0px;
   color: #fff;
 }
-.notifications_NotificationsHeader_1bLYa
-  .notifications_NotificationsHeaderTitle_39iFF {
+._1bLYafVT6_4DisbgdimwXc ._39iFFMnPRQXd5IL6PGoOcn {
   padding-right: 5px;
 }
-.notifications_NotificationsHeader_1bLYa
-  .notifications_NotificationsHeaderUnread_3iXuG {
+._1bLYafVT6_4DisbgdimwXc ._3iXuG9K_6ttnP8gOhOR7Iv {
   font-size: 16px;
 }
-.notifications_NotificationListCtn_1cj-7 {
+._1cj-7JmCC_IQ4ZdxxUo43Q {
   display: block;
   flex-grow: 1;
   flex-shrink: 1;
   flex-basis: 77%;
   min-width: 0;
 }
-.notifications_NotificationsList_KG3qM {
+.KG3qM6Y1DpK-afn15yeaT {
   display: flex;
   flex-direction: column;
   gap: 2px;
 }
-.notifications_AllNotificationsRowCtn_3Y-y3 {
+._3Y-y3pAcXpqgpuUTLQkz86 {
   height: 70px;
 }
-.notifications_NotificationFiltersCtn_1uSw_ {
+._1uSw_aqus0W7yb3vT9_-22 {
   background-color: rgba(0, 0, 0, 0.2);
   padding: 10px;
   position: sticky;
@@ -56,105 +54,99 @@
   max-width: 340px;
 }
 @media screen and (max-width: 910px) {
-  .notifications_NotificationFiltersCtn_1uSw_ {
+  ._1uSw_aqus0W7yb3vT9_-22 {
     top: 80px;
   }
 }
-.notifications_EmptyNotifications_3t24B {
+._3t24BJeKfB-KBIct4_UuX8 {
   font-size: 14px;
   color: #fff;
   background-color: rgba(58, 62, 71, 0.5);
   min-height: 200px;
 }
-.notifications_EmptyNotifications_3t24B
-  .notifications_EmptyNotificationsTitle__uGFL {
+._3t24BJeKfB-KBIct4_UuX8 ._uGFLI7t_2emsn37l93hZ {
   padding-top: 50px;
   font-weight: 500;
   text-align: center;
 }
-.notifications_EmptyNotifications_3t24B
-  .notifications_EmptyNotificationsBody_3Iomc {
+._3t24BJeKfB-KBIct4_UuX8 ._3Iomc0Ep9lyBB_QNlE8p4n {
   padding: 20px;
   font-weight: 200;
   text-align: center;
   color: #dfe3e6;
 }
-.notifications_SettingsButtons_3B7mJ {
+._3B7mJdJw-FhqV6l5q-IFO_ {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   gap: 10px;
 }
-.notifications_SettingsTooltip_3ZlbZ {
+._3ZlbZ5ev0L-hcx-z4JItgd {
   flex-grow: 1;
   flex-shrink: 0;
   min-width: 0;
   white-space: nowrap;
   display: flex;
 }
-button.DialogButton.notifications_MarkAllReadButton_37Ujw,
-button.DialogButton.notifications_SettingsButton_T8q00 {
+button.DialogButton._37UjwIEFODwKdnz3d90mdF,
+button.DialogButton.T8q00Eg6Sx2u-N2ySzMrg {
   padding: 0px 14px;
   width: auto;
   flex-grow: 1;
 }
-button.DialogButton.notifications_MarkAllReadButton_37Ujw
-  .notifications_SettingsImg_1XXJX,
-button.DialogButton.notifications_SettingsButton_T8q00
-  .notifications_SettingsImg_1XXJX {
+button.DialogButton._37UjwIEFODwKdnz3d90mdF ._1XXJX0-wXgz7O3Bd0qimBX,
+button.DialogButton.T8q00Eg6Sx2u-N2ySzMrg ._1XXJX0-wXgz7O3Bd0qimBX {
   height: 16px !important;
   width: 16px !important;
   padding-right: 5px;
 }
-.notifications_MarkAllReadButton_37Ujw {
+._37UjwIEFODwKdnz3d90mdF {
   width: unset !important;
 }
-.notifications_SettingsFiltersTitle_4T-jW {
+._4T-jWhXP-AWt4AatyamIk {
   padding-top: 20px;
   font-size: 14px;
   text-transform: uppercase;
   color: #9298a0;
 }
-.notifications_SettingsFilters_1YDIA {
+._1YDIAzUAWf7ueOLgHLbGeF {
   display: flex;
   flex-direction: column;
   padding-top: 10px;
 }
-.notifications_FilterCheckbox_2C4dM {
+._2C4dM9ELcMmtBLz8SavLK4 {
   padding-left: 10px !important;
   color: #9298a0;
 }
-.notifications_ResetButton_3Z8ot {
+._3Z8otCycVht4XocANv_EPb {
   margin-top: 10px !important;
   width: unset !important;
   padding: 0px 20px !important;
 }
-.notifications_CommentIcon_o_I3v {
+.o_I3vYqgbLhw7c8iXVwb3 {
   fill: #8c8c8c;
   width: 24px;
   height: 24px;
 }
-.notifications_CommentFilterCtn_-GWy_ {
+.-GWy_nsP_d9rJnCNgx8NK {
   position: relative;
   padding-left: 40px;
 }
-.notifications_CommentFilterCtn_-GWy_
-  .notifications_AdvancedCommentFilters_irq6k {
+.-GWy_nsP_d9rJnCNgx8NK .irq6koPKVmtQ5H7U8EAoA {
   max-height: 0px;
   overflow: hidden;
 }
-.notifications_CommentFilterCtn_-GWy_
-  .notifications_AdvancedCommentFilters_irq6k.notifications_Expanded_2hRRl {
+.-GWy_nsP_d9rJnCNgx8NK .irq6koPKVmtQ5H7U8EAoA._2hRRl_cNi9X4Veh7FeK-F4 {
   max-height: none;
 }
-.notifications_CommentFilterCtn_-GWy_ .notifications_CommentRadioGroup_2_xVH {
+.-GWy_nsP_d9rJnCNgx8NK ._2_xVHbSZ7fCv3LUz-THkR5 {
   flex-direction: column !important;
   gap: 4px;
   background: none !important;
   box-shadow: none !important;
   position: relative;
 }
-.notifications_Expander_MjW-I {
+.MjW-ILAVK028V2xI8eCfW {
   transition: height 0.3s ease-in-out;
   overflow: hidden;
 }

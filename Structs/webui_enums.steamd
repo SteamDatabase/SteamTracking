@@ -910,6 +910,7 @@ enum EClanImageFileType
 	k_EClanImageFileType_SRT = 7;
 	k_EClanImageFileType_SVG = 8;
 	k_EClanImageFileType_XML = 9;
+	k_EClanImageFileType_WEBP = 10;
 }
 
 enum EClanImageGroup
@@ -1140,6 +1141,13 @@ enum ECommunityWordFilterType
 	k_ECommunityWordFilterTypeCleanWords = 6;
 	k_ECommunityWordFilterTypeCleanWordsComplete = 7;
 	k_ECommunityWordFilterTypeBadNames = 8;
+}
+
+enum ECompromiseDetectionType
+{
+	k_ECompromiseDetectionType_None = 0;
+	k_ECompromiseDetectionType_TradeEvent = 1;
+	k_ECompromiseDetectionType_ApiCallRate = 2;
 }
 
 enum EComputerActiveState
@@ -2631,7 +2639,6 @@ enum EM
 	k_EMsgBaseAMRange2 = 4000;
 	k_EMsgAMCreateChat = 4001;
 	k_EMsgAMCreateChatResponse = 4002;
-	k_EMsgAMSetProfileURL = 4005;
 	k_EMsgAMGetAccountEmailAddress = 4006;
 	k_EMsgAMGetAccountEmailAddressResponse = 4007;
 	k_EMsgAMRequestClanData = 4008;
@@ -2845,6 +2852,7 @@ enum EM
 	k_EMsgAMGameServerAccountDeleteAccount = 4341;
 	k_EMsgAMRenewAgreement = 4342;
 	k_EMsgAMXsollaPayment = 4344;
+	k_EMsgAMXsollaPaymentResponse = 4345;
 }
 
 enum EMarketingMessage
@@ -3929,6 +3937,15 @@ enum EStoreAppType
 	k_EStoreAppType_Beta = 12;
 	k_EStoreAppType_Tool = 13;
 	k_EStoreAppType_Advertising = 14;
+}
+
+enum EStoreBrowseFilterFailure
+{
+	k_EStoreBrowseFilterFailure_None = 0;
+	k_EStoreBrowseFilterFailure_Redundant = 10;
+	k_EStoreBrowseFilterFailure_NotPreferred = 20;
+	k_EStoreBrowseFilterFailure_NotInterested = 30;
+	k_EStoreBrowseFilterFailure_UnwantedContent = 40;
 }
 
 enum EStoreCategory
@@ -6317,6 +6334,14 @@ enum UnnamedEnum5341f659b7352c78
 	EveryTime = 0;
 	Once = 1;
 	OncePerGame = 2;
+}
+
+enum UnnamedEnum54915c93076f4b25
+{
+	k_eInsertThumbnail = 1;
+	k_eInsertFullImage = 2;
+	k_eShowImageGroup = 3;
+	k_eInsertVideo = 4;
 }
 
 enum UnnamedEnum5492f48161b9f221

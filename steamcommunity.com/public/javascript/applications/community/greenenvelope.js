@@ -5,28 +5,25 @@
   {
     88234: (e) => {
       e.exports = {
-        NotificationsMenu: "greenenvelope_NotificationsMenu_DHpNP",
-        NotificationsMenuEntriesContainer:
-          "greenenvelope_NotificationsMenuEntriesContainer_1UQTO",
-        NotificationsMenuScrollable:
-          "greenenvelope_NotificationsMenuScrollable_3t5NP",
-        MenuScrollbarHidden: "greenenvelope_MenuScrollbarHidden_20aP8",
-        NotificationHeader: "greenenvelope_NotificationHeader_2CF6o",
-        ResponsiveViewAll: "greenenvelope_ResponsiveViewAll_3jVNI",
-        AllNotificationsTitle: "greenenvelope_AllNotificationsTitle_nyDUh",
-        AllNotificationsButton: "greenenvelope_AllNotificationsButton__Oohj",
-        NotificationsButton: "greenenvelope_NotificationsButton_2Z7Ed",
-        SVGNotifications: "greenenvelope_SVGNotifications_D68s6",
-        Grey: "greenenvelope_Grey_2Sj0M",
-        Disabled: "greenenvelope_Disabled_3KMlw",
-        Green: "greenenvelope_Green_1ad8S",
-        AnimateBell: "greenenvelope_AnimateBell_2YD8w",
-        NotificationBellAnimation:
-          "greenenvelope_NotificationBellAnimation_1a4Fd",
-        NotificationBellUvula: "greenenvelope_NotificationBellUvula_21Ilh",
-        EmptyNotificationsCtn: "greenenvelope_EmptyNotificationsCtn_1-M8K",
-        EmptyNotificationsTitle: "greenenvelope_EmptyNotificationsTitle_m0jm4",
-        EmptyNotificationsBody: "greenenvelope_EmptyNotificationsBody_3YAs6",
+        NotificationsMenu: "DHpNPo4VknQQgZ-Endjnr",
+        NotificationsMenuEntriesContainer: "_1UQTO5JHEeKV5-jO0lZLJn",
+        NotificationsMenuScrollable: "_3t5NPou8z4TK-P2_w3zZeG",
+        MenuScrollbarHidden: "_20aP8h5zqDN-E-A9xRuIpj",
+        NotificationHeader: "_2CF6oPHsaCLQ5tLo3ThpA8",
+        ResponsiveViewAll: "_3jVNImLETg7K6nmBlKrr17",
+        AllNotificationsTitle: "nyDUhA2in_idbdfRysxhy",
+        AllNotificationsButton: "_OohjXs6g1bZWWSDjc3sQ",
+        NotificationsButton: "_2Z7EdkE4UF7dnGM4VibIvZ",
+        SVGNotifications: "D68s6aL7C_YAjt1Vw77Sw",
+        Grey: "_2Sj0MS5lHpROEv7qTMLEsn",
+        Disabled: "_3KMlwWjyKj6H0MWpR9jscq",
+        Green: "_1ad8S4q3EoWrectZjRucjc",
+        AnimateBell: "_2YD8wdg8zcTlmlysT-dNWz",
+        NotificationBellAnimation: "_1a4Fd8zgf-zfcy2INky5BM",
+        NotificationBellUvula: "_21Ilh43U_kNoYvs-CnYkU9",
+        EmptyNotificationsCtn: "_1-M8KMwgL_DOmQZBALEpWx",
+        EmptyNotificationsTitle: "m0jm4f6OZD7WSl06uabEs",
+        EmptyNotificationsBody: "_3YAs6zz26YfBaANe6L3uJS",
       };
     },
     38965: (e, t, n) => {
@@ -53,11 +50,11 @@
         p = n(77936),
         N = n(40057),
         h = n(44500),
-        g = n(53923),
+        E = n(53923),
         y = n(75683),
-        E = n(10162);
+        g = n(10162);
       const b = new s.tL(),
-        M = (0, E.AP)(function (e) {
+        M = (0, g.AP)(function (e) {
           const { bResponsiveHeader: t, notifications: n } = e;
           o.useEffect(() => {
             n && !b.m_bLoaded && b.ProcessNewNotificationPayload(n);
@@ -87,7 +84,7 @@
                 o.Fragment,
                 null,
                 o.createElement(S, null),
-                o.createElement(A, null),
+                o.createElement(I, null),
               )
             : o.createElement(U, { nTotalUnviewed: l.nUnviewed });
         });
@@ -99,9 +96,9 @@
           nUnviewed: b.m_nUnviewed,
         }));
       }
-      function B() {
+      function L() {
         const e = T(),
-          t = (0, g.M)(),
+          t = (0, E.M)(),
           { data: n } = (0, y.X1)(t),
           i = (0, y.T8)(),
           o = null == n ? void 0 : n.settings;
@@ -113,12 +110,12 @@
       function U(e) {
         const { nTotalUnviewed: t } = e,
           n = o.useRef(),
-          i = B(),
+          i = L(),
           [r, s] = o.useState(u().AnimateBell);
         o.useEffect(() => {
           n.current ||
             ((n.current = (0, c.yV)(
-              o.createElement(L, { popupRef: n }),
+              o.createElement(B, { popupRef: n }),
               document.getElementById("green_envelope_menu_root"),
               {
                 bPreferPopLeft: !0,
@@ -165,7 +162,7 @@
           ),
         );
       }
-      const L = (e) => {
+      const B = (e) => {
           var t;
           const { popupRef: n } = e,
             i = o.useRef(),
@@ -205,7 +202,7 @@
                 ref: i,
               },
               o.createElement(S, null),
-              o.createElement(C, null),
+              o.createElement(A, null),
               o.createElement(R, null),
             ),
           );
@@ -231,7 +228,7 @@
             ),
           );
         },
-        A = () => {
+        I = () => {
           const e = `${d.De.COMMUNITY_BASE_URL}profiles/${d.L7.steamid}/notifications`;
           return o.createElement(
             "div",
@@ -252,14 +249,14 @@
             ),
           );
         };
-      function I(e, t, n) {
+      function k(e, t, n) {
         t.read ||
           (n && 0 != n.button && 1 != n.button) ||
           b.MarkItemRead(t.notification_id),
           e();
       }
-      function C() {
-        const e = B();
+      function A() {
+        const e = L();
         return 0 == e.length
           ? null
           : o.createElement(
@@ -269,14 +266,14 @@
                 o.createElement(v.RW, {
                   key: t,
                   rollup: e,
-                  onNotificationClick: I,
+                  onNotificationClick: k,
                   uimode: 3,
                   location: 3,
                 }),
               ),
             );
       }
-      const k = [
+      const C = [
         {
           fnUrl: () =>
             `${d.De.COMMUNITY_BASE_URL}profiles/${d.L7.steamid}/inventory/#pending_gifts`,
@@ -350,7 +347,7 @@
         return o.createElement(
           o.Fragment,
           null,
-          k.map((t) =>
+          C.map((t) =>
             o.createElement(v.sz, {
               key: t.countItem,
               url: t.fnUrl(),

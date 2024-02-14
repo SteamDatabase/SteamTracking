@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "8694903";
+var CLSTAMP = "8698021";
 (() => {
   "use strict";
   function e(e) {
@@ -106,11 +106,6 @@ var CLSTAMP = "8694903";
       IS_CURATOR: !1,
       IS_OGG: !1,
       CAN_UPLOAD_IMAGES: !1,
-      APP_NAME: "",
-      HEADER_IMAGE: "",
-      HAS_ADULT_CONTENT: !1,
-      HAS_ADULT_CONTENT_SEX: !1,
-      HAS_ADULT_CONTENT_VIOLENCE: !1,
       IS_VALVE_GROUP: !1,
       IS_ALLOWED_SC: !1,
     },
@@ -486,7 +481,7 @@ var CLSTAMP = "8694903";
       );
     }
   }
-  let A = new (class {
+  let S = new (class {
     constructor() {
       (this.m_connection = new m()),
         (this.m_bAllowAccountMismatch = !1),
@@ -571,8 +566,8 @@ var CLSTAMP = "8694903";
         .catch(() => this.FailureResult());
     }
   })();
-  (window.ClientConnectionAPI = A),
+  (window.ClientConnectionAPI = S),
     document.addEventListener("DOMContentLoaded", function () {
-      c(), (window.ClientConnectionAPI = A);
+      c(), (window.ClientConnectionAPI = S);
     });
 })();

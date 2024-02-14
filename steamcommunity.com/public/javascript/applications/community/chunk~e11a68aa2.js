@@ -149,7 +149,17 @@
       }
       function h(e, t, i, n, s) {
         if (!e.startsWith("#"))
-          return console.log("Token doesn't start with #:", e), "";
+          return (
+            console.log(
+              "Token doesn't start with #:",
+              e,
+              "appid",
+              n,
+              "tokens",
+              t,
+            ),
+            ""
+          );
         let a = e;
         e = e.toLowerCase();
         let r = "";

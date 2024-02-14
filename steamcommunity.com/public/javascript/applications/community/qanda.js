@@ -6,126 +6,110 @@
     71741: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
-        PartnerEventFont: "partnereventshared_PartnerEventFont_22_fG",
-        Clear: "partnereventshared_Clear_2BXhG",
-        Divider: "partnereventshared_Divider_1u63O",
-        EventDefaultRowContainer:
-          "partnereventshared_EventDefaultRowContainer_2pVkY",
-        EventStartPublic: "partnereventshared_EventStartPublic_13cij",
-        EventOptions: "partnereventshared_EventOptions_ShLAX",
-        FlexColumnContainer: "partnereventshared_FlexColumnContainer_WmMRF",
-        FlexRowContainer: "partnereventshared_FlexRowContainer_elLwm",
-        Centered: "partnereventshared_Centered_1HqKt",
-        FlexContainSpaceBetween:
-          "partnereventshared_FlexContainSpaceBetween_2MHtA",
-        FlexRowWrapSpaceBetweenContainer:
-          "partnereventshared_FlexRowWrapSpaceBetweenContainer_Dtr2Q",
-        FlexRowWrapFlexStartContainer:
-          "partnereventshared_FlexRowWrapFlexStartContainer_15EK8",
-        SaveBackground: "partnereventshared_SaveBackground_dpb4w",
-        SupportedGroupLabel: "partnereventshared_SupportedGroupLabel_2YjA1",
-        LanguageWithContent: "partnereventshared_LanguageWithContent_1mZ9r",
-        LargeInput: "partnereventshared_LargeInput_PJvHC",
-        InputBorder: "partnereventshared_InputBorder_udsJY",
-        RadioOption: "partnereventshared_RadioOption_2Ubig",
-        FlexGrow: "partnereventshared_FlexGrow_IQIYv",
-        EventEditorTextTitleCtn:
-          "partnereventshared_EventEditorTextTitleCtn_2Zzv2",
-        doclink: "partnereventshared_doclink_1ge0t",
-        EventEditorUnpaddedTextTitle:
-          "partnereventshared_EventEditorUnpaddedTextTitle_3Byox",
-        EventEditorTextTitle: "partnereventshared_EventEditorTextTitle_1q_7g",
-        EventEditorTextTitleLengthInfo:
-          "partnereventshared_EventEditorTextTitleLengthInfo_1eoiU",
-        CollapsableSectionTitle:
-          "partnereventshared_CollapsableSectionTitle_10FD9",
-        SectionTitle: "partnereventshared_SectionTitle_1Wgh0",
-        EventSectionTitleCtn: "partnereventshared_EventSectionTitleCtn_1qQl6",
-        EventSectionTitle: "partnereventshared_EventSectionTitle_YggHe",
-        EventSectionSpacer: "partnereventshared_EventSectionSpacer_1Z2oL",
-        EventSectionMoreBtn: "partnereventshared_EventSectionMoreBtn_2BYpy",
-        EventEditorSpacerPadding:
-          "partnereventshared_EventEditorSpacerPadding_12MTx",
-        EventEditorVisibilityCtn:
-          "partnereventshared_EventEditorVisibilityCtn_1-veX",
-        EventEditorTextSubTitle:
-          "partnereventshared_EventEditorTextSubTitle_2hvrH",
-        FloatingTitle: "partnereventshared_FloatingTitle_38Zrq",
-        EventEditorEventStatus:
-          "partnereventshared_EventEditorEventStatus_3dxy2",
-        EventHidden: "partnereventshared_EventHidden_3oD7c",
-        EventVisible: "partnereventshared_EventVisible_3sin0",
-        EventBarTitleCtn: "partnereventshared_EventBarTitleCtn_1bUXk",
-        EventBarTitle: "partnereventshared_EventBarTitle_3K6Ro",
-        EventBarBack: "partnereventshared_EventBarBack_BUxe5",
-        EditPreviewButton: "partnereventshared_EditPreviewButton_3NmFF",
-        Delete: "partnereventshared_Delete_2GdGz",
-        Disabled: "partnereventshared_Disabled_v6Qy-",
-        BrowseMoreButton: "partnereventshared_BrowseMoreButton_3GBlO",
-        Button: "partnereventshared_Button_3P0Tm",
-        Icon: "partnereventshared_Icon_3p1Hj",
-        Primary: "partnereventshared_Primary_2chVK",
-        ClearThings: "partnereventshared_ClearThings_3WXyk",
-        OnIndicator: "partnereventshared_OnIndicator_3fA-n",
-        OffIndicator: "partnereventshared_OffIndicator_22oxx",
-        IconImage: "partnereventshared_IconImage_9JzcW",
-        RightColumnContainer: "partnereventshared_RightColumnContainer_3DcKi",
-        EventPublishButton: "partnereventshared_EventPublishButton_1d84F",
-        FloatRight: "partnereventshared_FloatRight_3tfNK",
-        TTip: "partnereventshared_TTip_3OCGy",
-        ValveSupportOnly: "partnereventshared_ValveSupportOnly_3lW3G",
-        ArtworkAgeNotAppropriate:
-          "partnereventshared_ArtworkAgeNotAppropriate_2BmFv",
-        EventDashboardHeader: "partnereventshared_EventDashboardHeader_f16Dd",
-        ContainerSpaceBetween: "partnereventshared_ContainerSpaceBetween_3QHVX",
-        EventDashboardTitles: "partnereventshared_EventDashboardTitles_c1VG5",
-        EventDashboardActions: "partnereventshared_EventDashboardActions_33J6y",
-        EventDashboardStatsCtn:
-          "partnereventshared_EventDashboardStatsCtn_39Giq",
-        EventDashboardAppCtn: "partnereventshared_EventDashboardAppCtn_2to84",
-        maintitle: "partnereventshared_maintitle_2hNVN",
-        AppTitle: "partnereventshared_AppTitle_1XYbE",
-        subtitle: "partnereventshared_subtitle_16zOX",
-        ValveOnlyBackground: "partnereventshared_ValveOnlyBackground_R4o6q",
-        ValveOnlyAdminBackground:
-          "partnereventshared_ValveOnlyAdminBackground_1ZfNJ",
-        Columns: "partnereventshared_Columns_1dQIj",
-        LeftCol: "partnereventshared_LeftCol_PzQ1b",
-        RightCol: "partnereventshared_RightCol_1y0mV",
-        DropDownScroll: "partnereventshared_DropDownScroll_31SMP",
-        DropDownScrollItem: "partnereventshared_DropDownScrollItem_1gJSm",
-        CloseButton: "partnereventshared_CloseButton_1y6UV",
-        CloseSectionTools: "partnereventshared_CloseSectionTools_2rLRq",
-        HalfColumn: "partnereventshared_HalfColumn_1sMNJ",
-        tooltip_Ctn: "partnereventshared_tooltip_Ctn_3tZQl",
-        SaleEditorSpacing: "partnereventshared_SaleEditorSpacing_26P7E",
-        SaleSectionHeader: "partnereventshared_SaleSectionHeader_3FRxV",
-        SaleSectionSubtitle: "partnereventshared_SaleSectionSubtitle_1JRr3",
-        SaleSectionContainer: "partnereventshared_SaleSectionContainer_1UD2h",
-        AddSectionButton: "partnereventshared_AddSectionButton_15e-D",
-        EventElementRequired: "partnereventshared_EventElementRequired_appje",
-        EventElementOptional: "partnereventshared_EventElementOptional_35lj0",
-        HelperTooltip: "partnereventshared_HelperTooltip_3UCPo",
-        PixelOffsetCtn: "partnereventshared_PixelOffsetCtn_3u_zW",
-        PixelOffsetRow: "partnereventshared_PixelOffsetRow_brxQb",
-        PixelOffsetNote: "partnereventshared_PixelOffsetNote_3g0iB",
-        PixelOffsetCallout: "partnereventshared_PixelOffsetCallout_33i_6",
-        Error: "partnereventshared_Error_HSnMS",
-        GamepadOnlyScrollPanel:
-          "partnereventshared_GamepadOnlyScrollPanel_cEBYf",
+        PartnerEventFont: "_22_fGxD1rxLRjTmEs4fpJN",
+        Clear: "_2BXhGeAkEZXReIBs1q6iG3",
+        Divider: "_1u63OZOUO8ejFLl83_aFKQ",
+        EventDefaultRowContainer: "_2pVkYef_JboBRTJDsI5XrR",
+        EventStartPublic: "_13cijqNyra467La1xbDgy0",
+        EventOptions: "ShLAXJyjCB5R_Y81P3-VX",
+        FlexColumnContainer: "WmMRFd2F9FMje__jWs2c4",
+        FlexRowContainer: "elLwmClZ5oSY2aer18vUt",
+        Centered: "_1HqKtO0h5lgj9h0J4mUz51",
+        FlexContainSpaceBetween: "_2MHtA5ZPqa6yMB-WNNys1_",
+        FlexRowWrapSpaceBetweenContainer: "Dtr2QSwAjrR1TzFyE3-BV",
+        FlexRowWrapFlexStartContainer: "_15EK8oKkXXhkYYD1995NeY",
+        SaveBackground: "dpb4wNGbh2HsDaP8sGIsE",
+        SupportedGroupLabel: "_2YjA1EPu2wLxQsG0q0EnBS",
+        LanguageWithContent: "_1mZ9rmSPJoVvf2B3Qug5dZ",
+        LargeInput: "PJvHCWuMfWFNGAnUrc5sL",
+        InputBorder: "udsJYi3FfK7jf9k6x8C_8",
+        RadioOption: "_2UbigK-jBvbAlI2x6ACeW3",
+        FlexGrow: "IQIYvuCEhjK67AX4HhGRO",
+        EventEditorTextTitleCtn: "_2Zzv2Bmql0eJwbvkJBwYuN",
+        doclink: "_1ge0tlUexoy7zjWcyzOfS6",
+        EventEditorUnpaddedTextTitle: "_3ByoxfFwTDbtxfRiZffvVR",
+        EventEditorTextTitle: "_1q_7gkHl0t3O6Xn1mLOo_9",
+        EventEditorTextTitleLengthInfo: "_1eoiU4oJuNicls_w9-G4-K",
+        CollapsableSectionTitle: "_10FD9HmlE20EDXyk60EdA8",
+        SectionTitle: "_1Wgh0WQu1_npRyQP18CK90",
+        EventSectionTitleCtn: "_1qQl6pXbyn0yw4nEKR_vHi",
+        EventSectionTitle: "YggHeJRs5J9pSHeBJ_wMN",
+        EventSectionSpacer: "_1Z2oL2TwXjHwQ1hndP4OiM",
+        EventSectionMoreBtn: "_2BYpybC_CxVL2h2iJaN8Bg",
+        EventEditorSpacerPadding: "_12MTxhWYRd9y6nISAZ_UnW",
+        EventEditorVisibilityCtn: "_1-veXdXA0v95XZhDClOEp4",
+        EventEditorTextSubTitle: "_2hvrHXv-9YJ_HZwdW1Yi6r",
+        FloatingTitle: "_38ZrqpqJnDebtAz3y1TqGT",
+        EventEditorEventStatus: "_3dxy2T8x1pk6OjFgWQSTCE",
+        EventHidden: "_3oD7cGykuzlqnfVXev8JDs",
+        EventVisible: "_3sin0w04DXfKLZH9M923t8",
+        EventBarTitleCtn: "_1bUXkxwlWqoLUkJx4mP5E",
+        EventBarTitle: "_3K6Ror7Nj83ysihgViAvjd",
+        EventBarBack: "BUxe5edxrjnB3sckTkcDh",
+        EditPreviewButton: "_3NmFFZyqnB0ITWJGvJNDqk",
+        Delete: "_2GdGzjX59SeWcOhf9bGYki",
+        Disabled: "v6Qy-glA7sDsXSv321g2_",
+        BrowseMoreButton: "_3GBlO1g_jz3O_-xFJKPo0g",
+        Button: "_3P0Tm2XKLVG_I9wjP3H-Zs",
+        Icon: "_3p1Hj4MxioFD7iM63Z3s6T",
+        Primary: "_2chVKJsutfE3lDkcFAqyeZ",
+        ClearThings: "_3WXykpA6Kzr-GZbs-xNRgY",
+        OnIndicator: "_3fA-n2DjHbEXOjH8yJDjWK",
+        OffIndicator: "_22oxx3ra_nx6U1egpcNMGO",
+        IconImage: "_9JzcWM2TPeeznG62hmrtI",
+        RightColumnContainer: "_3DcKivjvkvNAkDucRLw1w5",
+        EventPublishButton: "_1d84FQy71PnISwXFbOXcPx",
+        FloatRight: "_3tfNK_vyn6tIKWPDii6sff",
+        TTip: "_3OCGyrCeNKFAnuBU9PG2N3",
+        ValveSupportOnly: "_3lW3GgqO6DUN_J99j87rB4",
+        ArtworkAgeNotAppropriate: "_2BmFvku3qsuH4WKQm7A4Mw",
+        EventDashboardHeader: "f16DdpCs9ZpNzhQBCKmfP",
+        ContainerSpaceBetween: "_3QHVXnPxJuRhQFaaOlCjOc",
+        EventDashboardTitles: "c1VG5muvfvFaBAOLAA7C4",
+        EventDashboardActions: "_33J6yVJU13tCn254BqAFAC",
+        EventDashboardStatsCtn: "_39Giqruo6szVXi91aLU32P",
+        EventDashboardAppCtn: "_2to8484gM6Qr2dBlG79lGk",
+        maintitle: "_2hNVNZmo17H17c3Asborfa",
+        AppTitle: "_1XYbE1f9ZGP7nZeehZJYKz",
+        subtitle: "_16zOXVLL9lA_icrO9exNFA",
+        ValveOnlyBackground: "R4o6q5hncc3-NbHrBItgS",
+        ValveOnlyAdminBackground: "_1ZfNJaoQ7gAP_3KRqJdKoJ",
+        Columns: "_1dQIj-HUnAuT0kk8ebCrNB",
+        LeftCol: "PzQ1bZrN0AJNpSpFl790Y",
+        RightCol: "_1y0mVohcDvYGXHf0k4kUQR",
+        DropDownScroll: "_31SMPImMR3WfYsGDJXWLLO",
+        DropDownScrollItem: "_1gJSm4R0tJoIXWyvuVbqpE",
+        CloseButton: "_1y6UVyR2qDh-NxBMscKg4-",
+        CloseSectionTools: "_2rLRqIS4OD6oj9g4HKdLiG",
+        HalfColumn: "_1sMNJGE8oKT5VzFDeWD1AJ",
+        tooltip_Ctn: "_3tZQlq2SCmMhllfgwGUpJ0",
+        SaleEditorSpacing: "_26P7EgY4J1T2grp3VUm3Pn",
+        SaleSectionHeader: "_3FRxVBrTtFQLhmHRstBbC_",
+        SaleSectionSubtitle: "_1JRr347o2bE6JhsAH2xicE",
+        SaleSectionContainer: "_1UD2hUjCkCaT0iG7AlOB7w",
+        AddSectionButton: "_15e-DuEt3rklSszYftj_j_",
+        EventElementRequired: "appjekVsG16gF0TXA7A9z",
+        EventElementOptional: "_35lj0GWfP_YLh7R3N-0E7Y",
+        HelperTooltip: "_3UCPo4bysBaoopie0W_urh",
+        PixelOffsetCtn: "_3u_zWceLsLZ_Sw4hJ_PSrJ",
+        PixelOffsetRow: "brxQbAx9vyoTUNgI9SSuV",
+        PixelOffsetNote: "_3g0iBkQb0HXeD717c2tmaW",
+        PixelOffsetCallout: "_33i_61lSlstJXhjjG5saSS",
+        Error: "HSnMSSY5qFoFUg8EAKdx0",
+        GamepadOnlyScrollPanel: "cEBYfOugpaX6Tk_iRMYnw",
       };
     },
     81602: (e) => {
       e.exports = {
-        DateAndTime: "localdateandtime_DateAndTime_1miMh",
-        DateAndTimeInline: "localdateandtime_DateAndTimeInline_1jG_-",
-        At: "localdateandtime_At_3D4jI",
-        ActiveEvent: "localdateandtime_ActiveEvent_2ZcVE",
-        ActiveEventCallOut: "localdateandtime_ActiveEventCallOut__y2DQ",
-        RightSideTitles: "localdateandtime_RightSideTitles_3sPON",
-        DateToolTip: "localdateandtime_DateToolTip_3zhja",
-        ShortDateAndTime: "localdateandtime_ShortDateAndTime_4K3Bl",
-        ShortDateRange: "localdateandtime_ShortDateRange_3sqcQ",
+        DateAndTime: "_1miMhQTx-6BvBZ1LsOjdgc",
+        DateAndTimeInline: "_1jG_-tTU53X85RGx_FABL2",
+        At: "_3D4jIToP-g1jxP4iLT74dh",
+        ActiveEvent: "_2ZcVE43ISqOFTj9Zbw3msS",
+        ActiveEventCallOut: "_y2DQDJ5toIRanQZFjDCx",
+        RightSideTitles: "_3sPONDb9e2ctNJ23X97Rxx",
+        DateToolTip: "_3zhjahHCGX4slI7ziVhROt",
+        ShortDateAndTime: "_4K3Bl-RZYjH0IHfPO10FC",
+        ShortDateRange: "_3sqcQTW9oCh_HBrotB1Dkw",
       };
     },
     95126: (e, t, n) => {
@@ -405,23 +389,23 @@
         "./zh-tw": 79204,
         "./zh-tw.js": 79204,
       };
-      function a(e) {
-        var t = s(e);
+      function s(e) {
+        var t = a(e);
         return n(t);
       }
-      function s(e) {
+      function a(e) {
         if (!n.o(r, e)) {
           var t = new Error("Cannot find module '" + e + "'");
           throw ((t.code = "MODULE_NOT_FOUND"), t);
         }
         return r[e];
       }
-      (a.keys = function () {
+      (s.keys = function () {
         return Object.keys(r);
       }),
-        (a.resolve = s),
-        (e.exports = a),
-        (a.id = 95126);
+        (s.resolve = a),
+        (e.exports = s),
+        (s.id = 95126);
     },
     73799: (e) => {
       "use strict";
@@ -512,12 +496,12 @@
                     e._batchScheduleFn(function () {
                       !(function (e, t) {
                         if (((t.hasDispatched = !0), 0 === t.keys.length))
-                          return void s(t);
+                          return void a(t);
                         var n;
                         try {
                           n = e._batchLoadFn(t.keys);
                         } catch (n) {
-                          return a(
+                          return s(
                             e,
                             t,
                             new TypeError(
@@ -528,7 +512,7 @@
                           );
                         }
                         if (!n || "function" != typeof n.then)
-                          return a(
+                          return s(
                             e,
                             t,
                             new TypeError(
@@ -551,7 +535,7 @@
                                 "\n\nValues:\n" +
                                 String(e),
                             );
-                          s(t);
+                          a(t);
                           for (var n = 0; n < t.callbacks.length; n++) {
                             var r = e[n];
                             r instanceof Error
@@ -559,7 +543,7 @@
                               : t.callbacks[n].resolve(r);
                           }
                         }).catch(function (n) {
-                          a(e, t, n);
+                          s(e, t, n);
                         });
                       })(e, n);
                     }),
@@ -616,12 +600,12 @@
               var n = this._cacheMap;
               if (n) {
                 var r,
-                  a = this._cacheKeyFn(e);
-                if (void 0 === n.get(a))
+                  s = this._cacheKeyFn(e);
+                if (void 0 === n.get(s))
                   t instanceof Error
                     ? (r = Promise.reject(t)).catch(function () {})
                     : (r = Promise.resolve(t)),
-                    n.set(a, r);
+                    n.set(s, r);
               }
               return this;
             }),
@@ -643,12 +627,12 @@
             : function (e) {
                 setTimeout(e);
               };
-      function a(e, t, n) {
-        s(t);
+      function s(e, t, n) {
+        a(t);
         for (var r = 0; r < t.keys.length; r++)
           e.clear(t.keys[r]), t.callbacks[r].reject(n);
       }
-      function s(e) {
+      function a(e) {
         if (e.cacheHits)
           for (var t = 0; t < e.cacheHits.length; t++) e.cacheHits[t]();
       }
@@ -666,20 +650,20 @@
     },
     64936: (e, t, n) => {
       "use strict";
-      n.d(t, { F_: () => m, JW: () => u, kl: () => _, zD: () => E });
+      n.d(t, { F_: () => m, JW: () => d, kl: () => f, zD: () => g });
       var r = n(85556),
-        a = n(54842),
-        s = n(37485),
-        o = n.n(s),
+        s = n(54842),
+        a = n(37485),
+        o = n.n(a),
         i = n(47427),
         l = n(29480),
         c = n(37563);
-      class d {
+      class u {
         constructor() {
           (this.bOpenEventLandingPage = !1),
             (this.bIncludeFeaturedAsGameSource = !0),
             (this.nOverrideDateNow = void 0),
-            (0, a.rC)(this);
+            (0, s.rC)(this);
         }
         get bRequireAllEventsLoadedInTimeBlock() {
           return !1;
@@ -725,156 +709,156 @@
           }
         }
       }
-      (0, r.gn)([a.LO], d.prototype, "nOverrideDateNow", void 0);
-      const u = new d();
+      (0, r.gn)([s.LO], u.prototype, "nOverrideDateNow", void 0);
+      const d = new u();
       function m(e = 1) {
-        const [t, n] = i.useState(() => h()),
+        const [t, n] = i.useState(() => p()),
           r = (0, l.T)("useTimeNowWithOverride"),
-          a = i.useCallback(() => {
-            r.token.reason || n(h());
+          s = i.useCallback(() => {
+            r.token.reason || n(p());
           }, []);
         return (
           i.useEffect(() => {
             const t = 1e3 * e,
               n = t - (Date.now() % t),
-              r = window.setTimeout(a, n);
+              r = window.setTimeout(s, n);
             return () => {
               window.clearTimeout(r);
             };
-          }, [t, e, a]),
+          }, [t, e, s]),
           t
         );
       }
-      window.g_EventCalendarDevFeatures = u;
-      const v = new Date(),
-        p = Math.floor(v.getTime() / 1e3);
-      function h() {
+      window.g_EventCalendarDevFeatures = d;
+      const h = new Date(),
+        v = Math.floor(h.getTime() / 1e3);
+      function p() {
         const e = Math.floor(Date.now() / 1e3);
-        return u.nOverrideDateNow ? u.nOverrideDateNow + (e - p) : e;
+        return d.nOverrideDateNow ? d.nOverrideDateNow + (e - v) : e;
       }
-      function _() {
+      function f() {
         var e;
-        return null !== (e = u.nOverrideDateNow) && void 0 !== e ? e : p;
+        return null !== (e = d.nOverrideDateNow) && void 0 !== e ? e : v;
       }
-      function E() {
-        return i.useMemo(() => _(), []);
+      function g() {
+        return i.useMemo(() => f(), []);
       }
     },
     51915: (e, t, n) => {
       "use strict";
-      n.d(t, { IE: () => p, p2: () => h, vP: () => _ });
+      n.d(t, { IE: () => v, p2: () => p, vP: () => f });
       var r = n(85556),
-        a = n(73799),
-        s = n.n(a),
+        s = n(73799),
+        a = n.n(s),
         o = n(47427),
         i = n(42718),
         l = n(79545),
         c = n(40057),
-        d = n(90938),
-        u = n(42411),
+        u = n(90938),
+        d = n(42411),
         m = n(35427),
-        v = n(82182);
+        h = n(82182);
       n(2041);
-      function p(e) {
+      function v(e) {
         const t = (0, c.bY)(),
-          n = o.useContext(E);
-        return (0, i.useQuery)(f(n, t, e));
+          n = o.useContext(g);
+        return (0, i.useQuery)(_(n, t, e));
       }
-      function h(e) {
+      function p(e) {
         const t = o.useRef(),
-          n = p(e);
+          n = v(e);
         return n.data
           ? n
           : (t.current ||
-              (t.current = new u.Pv(
+              (t.current = new d.Pv(
                 "string" == typeof e ? new m.K(e) : m.K.InitFromAccountID(e),
               )),
             Object.assign(Object.assign({}, n), { data: t.current }));
       }
-      function _(e) {
+      function f(e) {
         const t = (0, c.bY)(),
-          n = o.useContext(E);
-        return (0, i.useQueries)(e.map((e) => f(n, t, e)));
+          n = o.useContext(g);
+        return (0, i.useQueries)(e.map((e) => _(n, t, e)));
       }
-      const E = o.createContext({
+      const g = o.createContext({
         loadPersonaState: (e, t) =>
           (0, r.mG)(void 0, void 0, void 0, function* () {
             const n = yield (function (e) {
-              g ||
-                (g = new (s())(
+              E ||
+                (E = new (a())(
                   (t) =>
                     (0, r.mG)(this, void 0, void 0, function* () {
-                      const n = l.gA.Init(v.oh);
+                      const n = l.gA.Init(h.oh);
                       n.Body().set_steamids(
                         t.map((e) =>
                           m.K.InitFromAccountID(e).ConvertTo64BitString(),
                         ),
                       );
-                      const r = yield v.lk.GetPlayerLinkDetails(e, n);
+                      const r = yield h.lk.GetPlayerLinkDetails(e, n);
                       if (!r.BSuccess())
                         throw `Failed to load player link details: ${r.GetErrorMessage()}`;
-                      const a = new Map();
+                      const s = new Map();
                       return (
                         r
                           .Body()
                           .accounts()
                           .forEach((e) => {
                             const t = e.toObject();
-                            a.set(
+                            s.set(
                               new m.K(t.public_data.steamid).GetAccountID(),
                               t,
                             );
                           }),
-                        t.map((e) => a.get(e))
+                        t.map((e) => s.get(e))
                       );
                     }),
                   { maxBatchSize: 100 },
                 ));
-              return g;
+              return E;
             })(t).load(e);
             return n
               ? (function (e, t) {
                   var n, r;
-                  let a = new u.Pv(e);
-                  const s = null == t ? void 0 : t.public_data,
+                  let s = new d.Pv(e);
+                  const a = null == t ? void 0 : t.public_data,
                     o = null == t ? void 0 : t.private_data;
-                  (a.m_bInitialized = !0),
-                    (a.m_ePersonaState =
+                  (s.m_bInitialized = !0),
+                    (s.m_ePersonaState =
                       null !== (n = null == o ? void 0 : o.persona_state) &&
                       void 0 !== n
                         ? n
                         : 0),
-                    (a.m_strAvatarHash = (
-                      null == s ? void 0 : s.sha_digest_avatar
+                    (s.m_strAvatarHash = (
+                      null == a ? void 0 : a.sha_digest_avatar
                     )
-                      ? (0, d.BH)(s.sha_digest_avatar)
-                      : u.WV),
-                    (a.m_strPlayerName =
-                      null !== (r = null == s ? void 0 : s.persona_name) &&
+                      ? (0, u.BH)(a.sha_digest_avatar)
+                      : d.WV),
+                    (s.m_strPlayerName =
+                      null !== (r = null == a ? void 0 : a.persona_name) &&
                       void 0 !== r
                         ? r
                         : e.ConvertTo64BitString()),
-                    (a.m_strAccountName = null == o ? void 0 : o.account_name),
+                    (s.m_strAccountName = null == o ? void 0 : o.account_name),
                     (null == o ? void 0 : o.persona_state_flags) &&
-                      (a.m_unPersonaStateFlags =
+                      (s.m_unPersonaStateFlags =
                         t.private_data.persona_state_flags);
                   (null == o ? void 0 : o.game_id) &&
-                    (a.m_gameid = t.private_data.game_id);
+                    (s.m_gameid = t.private_data.game_id);
                   (null == o ? void 0 : o.game_server_ip_address) &&
-                    (a.m_unGameServerIP =
+                    (s.m_unGameServerIP =
                       t.private_data.game_server_ip_address);
                   (null == o ? void 0 : o.lobby_steam_id) &&
-                    (a.m_game_lobby_id = t.private_data.lobby_steam_id);
+                    (s.m_game_lobby_id = t.private_data.lobby_steam_id);
                   (null == o ? void 0 : o.game_extra_info) &&
-                    (a.m_strGameExtraInfo = t.private_data.game_extra_info);
-                  (null == s ? void 0 : s.profile_url) &&
-                    (a.m_strProfileURL = s.profile_url);
-                  return a;
+                    (s.m_strGameExtraInfo = t.private_data.game_extra_info);
+                  (null == a ? void 0 : a.profile_url) &&
+                    (s.m_strProfileURL = a.profile_url);
+                  return s;
                 })(m.K.InitFromAccountID(e), n)
               : null;
           }),
       });
-      function f(e, t, n) {
+      function _(e, t, n) {
         const r = "string" == typeof n ? new m.K(n).GetAccountID() : n;
         return {
           queryKey: ["PlayerSummary", r],
@@ -882,33 +866,33 @@
           enabled: !!r,
         };
       }
-      let g;
+      let E;
     },
     80212: (e, t, n) => {
       "use strict";
-      n.d(t, { X: () => u });
+      n.d(t, { X: () => d });
       var r = n(47427),
-        a = n(90069),
-        s = n(31846),
+        s = n(90069),
+        a = n(31846),
         o = n(37563),
         i = n(99327),
         l = n(77581),
         c = n(35791);
-      function d(e) {
+      function u(e) {
         return r.createElement(
-          a.e1,
+          s.e1,
           { onEscKeypress: e.closeModal, bDisableBackgroundDismiss: !0 },
           r.createElement(m, { redirectURL: e.redirectURL }),
         );
       }
-      function u() {
-        (0, a.AM)(
-          r.createElement(d, {
+      function d() {
+        (0, s.AM)(
+          r.createElement(u, {
             ownerWin: window,
             redirectURL: window.location.href,
           }),
           window,
-          { strTitle: (0, s.Xx)("#Login_SignIn") },
+          { strTitle: (0, a.Xx)("#Login_SignIn") },
         );
       }
       function m(e) {
@@ -916,11 +900,11 @@
           [n] = (0, r.useState)(
             new l.J(o.De.WEBAPI_BASE_URL).GetAnonymousServiceTransport(),
           ),
-          [a, s] = (0, r.useState)(!1);
+          [s, a] = (0, r.useState)(!1);
         return r.createElement(
           "div",
           null,
-          a
+          s
             ? r.createElement(i.pT, null)
             : r.createElement(i.wK, {
                 autoFocus: !0,
@@ -928,7 +912,7 @@
                 platform: 2,
                 onComplete: (e) => {
                   e == c.TG.k_PrimaryDomainFail
-                    ? s(!0)
+                    ? a(!0)
                     : window.location.assign(t);
                 },
                 redirectUrl: t,
@@ -940,43 +924,43 @@
     24827: (e, t, n) => {
       "use strict";
       n.d(t, {
-        Ai: () => f,
-        H6: () => _,
-        Kj: () => p,
-        Sw: () => y,
-        Zg: () => E,
-        uv: () => g,
-        w$: () => h,
+        Ai: () => _,
+        H6: () => f,
+        Kj: () => v,
+        Sw: () => j,
+        Zg: () => g,
+        uv: () => E,
+        w$: () => p,
       });
       var r = n(85556),
-        a = n(47427),
-        s = n(59728),
+        s = n(47427),
+        a = n(59728),
         o = n(31846),
         i = n(27605),
         l = n(13129),
         c = n(46984),
-        d = n(81602),
-        u = n.n(d),
+        u = n(81602),
+        d = n.n(u),
         m = n(64936);
-      const v = n(98973);
-      function p(e) {
-        const t = v.tz.guess(),
-          n = v.unix(e).tz(t),
+      const h = n(98973);
+      function v(e) {
+        const t = h.tz.guess(),
+          n = h.unix(e).tz(t),
           r = (0, o.CE)();
         return r && n.locale(r), n.format("LT");
       }
-      function h(e, t) {
-        const n = v.tz.guess(),
-          r = v.unix(e).tz(n),
-          s = (0, o.CE)();
+      function p(e, t) {
+        const n = h.tz.guess(),
+          r = h.unix(e).tz(n),
+          a = (0, o.CE)();
         return (
-          s && r.locale(s),
-          a.createElement(
-            a.Fragment,
+          a && r.locale(a),
+          s.createElement(
+            s.Fragment,
             null,
             r.format("LT"),
             t
-              ? a.createElement(
+              ? s.createElement(
                   "span",
                   { "data-tooltip-text": r.format("Z") + ", " + n },
                   " ",
@@ -986,57 +970,57 @@
           )
         );
       }
-      const _ = (0, i.Pi)((e) => {
+      const f = (0, i.Pi)((e) => {
           const {
               dateAndTime: t,
               bSingleLine: n,
               bOnlyTime: r,
-              bOnlyDate: s,
+              bOnlyDate: a,
             } = e,
             i = !r && Boolean(t),
-            l = !s && Boolean(t),
+            l = !a && Boolean(t),
             c = i && (0, o.$1)(t),
-            d = e.stylesmodule
-              ? Object.assign(Object.assign({}, u()), e.stylesmodule)
-              : u();
+            u = e.stylesmodule
+              ? Object.assign(Object.assign({}, d()), e.stylesmodule)
+              : d();
           return n
-            ? a.createElement(
+            ? s.createElement(
                 "span",
-                { className: r || s ? d.DateAndTimeInline : d.DateAndTime },
+                { className: r || a ? u.DateAndTimeInline : u.DateAndTime },
                 i && c,
-                a.createElement("span", null, " "),
-                Boolean(t && l) && h(t, !0),
+                s.createElement("span", null, " "),
+                Boolean(t && l) && p(t, !0),
               )
-            : a.createElement(
+            : s.createElement(
                 "div",
-                { className: d.DateAndTime },
+                { className: u.DateAndTime },
                 i &&
-                  a.createElement(
-                    a.Fragment,
+                  s.createElement(
+                    s.Fragment,
                     null,
-                    a.createElement("div", { className: d.LocalizedDate }, c),
+                    s.createElement("div", { className: u.LocalizedDate }, c),
                     " ",
-                    a.createElement("span", { className: d.At }, "@"),
+                    s.createElement("span", { className: u.At }, "@"),
                   ),
-                a.createElement(
+                s.createElement(
                   "div",
-                  { className: d.LocalizedTime },
-                  Boolean(t && l) && h(t, !0),
+                  { className: u.LocalizedTime },
+                  Boolean(t && l) && p(t, !0),
                 ),
               );
         }),
-        E = (e) => {
-          const t = a.createElement(
+        g = (e) => {
+          const t = s.createElement(
             "div",
             { className: e.stylesmodule.DateToolTip },
-            a.createElement(_, {
+            s.createElement(f, {
               dateAndTime: e.rtFullDate,
               bSingleLine: !0,
               stylesmodule: e.stylesmodule,
             }),
           );
-          return a.createElement(
-            s.HP,
+          return s.createElement(
+            a.HP,
             {
               toolTipContent: t,
               direction: "top",
@@ -1046,93 +1030,93 @@
             e.children,
           );
         };
-      let f = class extends a.Component {
+      let _ = class extends s.Component {
         render() {
           const { startDateAndTime: e, endDateAndTime: t } = this.props,
             n = this.props.stylesmodule
-              ? Object.assign(Object.assign({}, u()), this.props.stylesmodule)
-              : u();
+              ? Object.assign(Object.assign({}, d()), this.props.stylesmodule)
+              : d();
           let r =
             this.props.bHideEndTime ||
             null == this.props.endDateAndTime ||
             this.props.endDateAndTime < 1;
           if (null == e || 0 == e)
-            return a.createElement(
+            return s.createElement(
               "div",
               { className: n.DateAndTime },
-              a.createElement(
+              s.createElement(
                 "span",
                 { className: n.RightSideTitles },
                 (0, o.Xx)("#EventDisplay_TimeRange"),
               ),
               (0, o.Xx)("#EventDisplay_TimeDisplayNone"),
             );
-          let s = m.JW.GetTimeNowWithOverride();
+          let a = m.JW.GetTimeNowWithOverride();
           if (r)
-            return a.createElement(
+            return s.createElement(
               "div",
               { className: n.StartDate },
-              a.createElement(
+              s.createElement(
                 "div",
                 { className: n.RightSideTitles },
                 (0, o.Xx)(
-                  e < s
+                  e < a
                     ? "#EventDisplay_TimeInPast"
                     : "#EventDisplay_TimeUpcoming",
                 ),
                 " ",
               ),
-              a.createElement(_, { stylesmodule: n, dateAndTime: e }),
+              s.createElement(f, { stylesmodule: n, dateAndTime: e }),
             );
-          let i = e <= s && s <= t;
-          const d = (0, c.yK)(new Date(1e3 * e), new Date(1e3 * t));
-          return a.createElement(
+          let i = e <= a && a <= t;
+          const u = (0, c.yK)(new Date(1e3 * e), new Date(1e3 * t));
+          return s.createElement(
             "div",
             { className: n.MultiDateAndTime },
-            a.createElement(
+            s.createElement(
               "div",
               { className: n.StartDate },
-              a.createElement(
+              s.createElement(
                 "span",
                 { className: n.RightSideTitles },
                 (0, o.Xx)(
-                  e >= s
+                  e >= a
                     ? "#EventDisplay_TimeBeginsOn"
-                    : t >= s
+                    : t >= a
                     ? "#EventDisplay_TimeBeginsOn_Past"
                     : "#EventDisplay_TimeBeginsOn_StartAndEnd_Past",
                 ),
               ),
-              a.createElement(_, {
+              s.createElement(f, {
                 stylesmodule: n,
                 bSingleLine: !0,
                 dateAndTime: e,
               }),
             ),
-            a.createElement(
+            s.createElement(
               "div",
               { className: n.EndDate },
-              a.createElement(
+              s.createElement(
                 "span",
                 { className: n.RightSideTitles },
                 (0, o.Xx)(
-                  t < s
+                  t < a
                     ? "#EventDisplay_TimeEndsOn_Past"
                     : "#EventDisplay_TimeEndsOn",
                 ),
               ),
-              a.createElement(_, {
+              s.createElement(f, {
                 stylesmodule: n,
                 bSingleLine: !0,
-                bOnlyTime: d,
+                bOnlyTime: u,
                 dateAndTime: t,
               }),
             ),
             i &&
-              a.createElement(
+              s.createElement(
                 "span",
                 { className: n.ActiveEvent },
-                a.createElement(
+                s.createElement(
                   "span",
                   {
                     className: (0, l.Z)(
@@ -1146,8 +1130,8 @@
           );
         }
       };
-      f = (0, r.gn)([i.Pi], f);
-      let g = class extends a.Component {
+      _ = (0, r.gn)([i.Pi], _);
+      let E = class extends s.Component {
         render() {
           const {
               startDateAndTime: e,
@@ -1155,31 +1139,31 @@
               bHideEndTime: n,
             } = this.props,
             r = this.props.stylesmodule
-              ? Object.assign(Object.assign({}, u()), this.props.stylesmodule)
-              : u();
+              ? Object.assign(Object.assign({}, d()), this.props.stylesmodule)
+              : d();
           if (null == e || 0 == e)
-            return a.createElement(
+            return s.createElement(
               "div",
               { className: r.DateAndTime },
-              a.createElement(
+              s.createElement(
                 "span",
                 { className: r.RightSideTitles },
                 (0, o.Xx)("#EventDisplay_TimeRange"),
               ),
               (0, o.Xx)("#EventDisplay_TimeDisplayNone"),
             );
-          const s = m.JW.GetTimeNowWithOverrideAsDate(),
+          const a = m.JW.GetTimeNowWithOverrideAsDate(),
             i = m.JW.GetTimeNowWithOverride(),
-            l = (0, c.U8)(new Date(1e3 * e), s),
-            d = a.createElement(
+            l = (0, c.U8)(new Date(1e3 * e), a),
+            u = s.createElement(
               "div",
               { className: r.ShortDateAndTime },
               (0, o.$1)(e, l),
             );
-          let v = a.createElement(
-            E,
+          let h = s.createElement(
+            g,
             { rtFullDate: e, stylesmodule: r },
-            a.createElement(
+            s.createElement(
               "div",
               { className: r.RightSideTitles },
               (0, o.Xx)(
@@ -1188,24 +1172,24 @@
                   : "#EventDisplay_TimeUpcoming",
               ),
             ),
-            d,
+            u,
           );
           if (
             (i < e &&
               e < i + c._H.PerWeek &&
-              (v = a.createElement(
-                E,
+              (h = s.createElement(
+                g,
                 { rtFullDate: e, stylesmodule: r },
-                a.createElement(
+                s.createElement(
                   "div",
                   { className: r.RightSideTitles },
                   (0, o.kQ)(
                     "#EventDisplay_EventUpcoming_WithDateAndTime",
-                    d,
-                    a.createElement(
+                    u,
+                    s.createElement(
                       "div",
                       { className: r.ShortDateAndTime },
-                      h(e),
+                      p(e),
                       " ",
                     ),
                   ),
@@ -1213,50 +1197,50 @@
               )),
             n || null == t || t < 1)
           )
-            return v;
-          const p = e <= i && i <= t;
-          p &&
-            (v = a.createElement(
-              E,
+            return h;
+          const v = e <= i && i <= t;
+          v &&
+            (h = s.createElement(
+              g,
               { rtFullDate: e, className: r.ActiveEvent, stylesmodule: r },
-              a.createElement(
+              s.createElement(
                 "span",
                 { className: r.ActiveEventCallOut },
                 (0, o.Xx)("#Time_Now"),
               ),
             ));
-          let _ = null;
-          const f = p ? t - i : t - e;
-          if (f <= c._H.PerDay) {
-            const e = a.createElement(
+          let f = null;
+          const _ = v ? t - i : t - e;
+          if (_ <= c._H.PerDay) {
+            const e = s.createElement(
               "div",
               { className: r.ShortDateAndTime },
-              (0, o.yW)(f, !0),
+              (0, o.yW)(_, !0),
             );
-            _ =
+            f =
               t < i
-                ? a.createElement(
+                ? s.createElement(
                     "div",
                     { className: r.RightSideTitles },
                     (0, o.Xx)("#EventDisplay_TimeEndsOn_Ran"),
                     e,
                   )
-                : a.createElement(
+                : s.createElement(
                     "div",
                     { className: r.RightSideTitles },
                     (0, o.kQ)(
-                      p
+                      v
                         ? "#EventDisplay_TimeLeft"
                         : "#EventDisplay_RunsForDuration",
                       e,
                     ),
                   );
           } else {
-            const e = s.getFullYear() == new Date(1e3 * t).getFullYear();
-            _ = a.createElement(
-              a.Fragment,
+            const e = a.getFullYear() == new Date(1e3 * t).getFullYear();
+            f = s.createElement(
+              s.Fragment,
               null,
-              a.createElement(
+              s.createElement(
                 "div",
                 { className: r.RightSideTitles },
                 (0, o.Xx)(
@@ -1265,67 +1249,67 @@
                     : "#EventDisplay_TimeEndsOn",
                 ),
               ),
-              a.createElement(
+              s.createElement(
                 "div",
                 { className: r.ShortDateAndTime },
                 (0, o.$1)(t, e),
               ),
             );
           }
-          const g = a.createElement(E, { rtFullDate: t, stylesmodule: r }, _);
-          return a.createElement("div", { className: r.ShortDateRange }, v, g);
+          const E = s.createElement(g, { rtFullDate: t, stylesmodule: r }, f);
+          return s.createElement("div", { className: r.ShortDateRange }, h, E);
         }
       };
-      function y(e) {
+      function j(e) {
         const {
           rtStartDate: t,
           rtEndDate: n,
           strMonthFormat: r,
-          className: s,
+          className: a,
         } = e;
-        return a.createElement(
+        return s.createElement(
           "div",
-          { className: s },
+          { className: a },
           (function (e, t, n) {
             const r = m.JW.GetTimeNowWithOverrideAsDate(),
-              a = new Date(1e3 * e),
-              s = new Date(1e3 * t),
-              i = r.getFullYear() == a.getFullYear(),
-              l = r.getFullYear() == s.getFullYear(),
-              c = a.getFullYear() == s.getFullYear(),
-              d = c && a.getMonth() == s.getMonth(),
-              u = d && a.getDate() == s.getDate(),
-              v = {
+              s = new Date(1e3 * e),
+              a = new Date(1e3 * t),
+              i = r.getFullYear() == s.getFullYear(),
+              l = r.getFullYear() == a.getFullYear(),
+              c = s.getFullYear() == a.getFullYear(),
+              u = c && s.getMonth() == a.getMonth(),
+              d = u && s.getDate() == a.getDate(),
+              h = {
                 day: "numeric",
                 month: null != n ? n : "long",
                 year: i ? void 0 : "numeric",
               },
-              p = a.toLocaleDateString(o.Yt.GetPreferredLocales(), v);
-            if (u) return p;
+              v = s.toLocaleDateString(o.Yt.GetPreferredLocales(), h);
+            if (d) return v;
             {
               const e = {
                 day: "numeric",
-                month: d && l ? void 0 : null != n ? n : "long",
+                month: u && l ? void 0 : null != n ? n : "long",
                 year: c ? void 0 : "numeric",
               };
               return (
-                p + " - " + s.toLocaleDateString(o.Yt.GetPreferredLocales(), e)
+                v + " - " + a.toLocaleDateString(o.Yt.GetPreferredLocales(), e)
               );
             }
           })(t, n, r),
           " ",
         );
       }
-      g = (0, r.gn)([i.Pi], g);
+      E = (0, r.gn)([i.Pi], E);
     },
     16649: (e, t, n) => {
       "use strict";
       n.d(t, { l: () => o });
       var r = n(80751),
-        a = n.n(r),
-        s = n(79545);
+        s = n.n(r),
+        a = n(79545);
       function o(e) {
-        if (a().isCancel(e))
+        if (s().isCancel(e))
           return { strErrorMsg: "Action Cancelled:" + e, errorCode: 52 };
         if (
           void 0 !== e.response &&
@@ -1378,7 +1362,7 @@
               console.warn(e),
               console.groupEnd();
           else {
-            if ("object" == typeof e && e instanceof s.gA)
+            if ("object" == typeof e && e instanceof a.gA)
               return {
                 strErrorMsg: "" + e.GetErrorMessage(),
                 errorCode: e.GetEResult(),
@@ -1398,8 +1382,8 @@
       "use strict";
       n.r(t), n.d(t, { QAndARoutes: () => l, default: () => c });
       var r = n(97504),
-        a = n(47427),
-        s = n(8285),
+        s = n(47427),
+        a = n(8285),
         o = n(56480),
         i = n(69406);
       const l = {
@@ -1407,34 +1391,34 @@
         FullPageView: (e, t) => `/questions/${e}/view/${t}`,
       };
       const c = function (e) {
-        return a.createElement(
-          s.rs,
+        return s.createElement(
+          a.rs,
           null,
-          a.createElement(s.AW, {
+          s.createElement(a.AW, {
             path: l.Dashboard(":vanity_str"),
             render: (e) =>
-              a.createElement(o.d, {
+              s.createElement(o.d, {
                 config: {
                   "qanda-root": () => {
                     const { vanity_str: t } = e.match.params;
-                    return a.createElement(r.A, { vanity_str: t });
+                    return s.createElement(r.A, { vanity_str: t });
                   },
                 },
               }),
           }),
-          a.createElement(s.AW, {
+          s.createElement(a.AW, {
             path: l.FullPageView(":vanity_str", ":session_gid"),
             render: (e) =>
-              a.createElement(o.d, {
+              s.createElement(o.d, {
                 config: {
                   "qanda-root": () => {
                     const { vanity_str: t, session_gid: n } = e.match.params;
-                    return a.createElement(r.EI, { gidSession: n });
+                    return s.createElement(r.EI, { gidSession: n });
                   },
                 },
               }),
           }),
-          a.createElement(s.AW, { component: i.R }),
+          s.createElement(a.AW, { component: i.R }),
         );
       };
     },

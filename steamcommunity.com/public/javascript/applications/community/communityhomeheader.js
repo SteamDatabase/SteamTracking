@@ -5,68 +5,64 @@
   {
     75399: (e) => {
       e.exports = {
-        CommunityHomeHeader: "communityhomeheader_CommunityHomeHeader_1C-zu",
-        CommunityHomeHeaderTitleSection:
-          "communityhomeheader_CommunityHomeHeaderTitleSection_31q4b",
-        CommunityHomeHeaderTitle:
-          "communityhomeheader_CommunityHomeHeaderTitle_1V0f6",
-        CommunityHomeHeaderSubtitle:
-          "communityhomeheader_CommunityHomeHeaderSubtitle_3QCfE",
-        AddFriendBtn: "communityhomeheader_AddFriendBtn_iT6jD",
-        CommunityHomeHeaderContent:
-          "communityhomeheader_CommunityHomeHeaderContent_2OgY2",
-        AppHubsCtn: "communityhomeheader_AppHubsCtn_O58Nj",
-        Search: "communityhomeheader_Search_r2myG",
-        SearchBar: "communityhomeheader_SearchBar_BhYo9",
-        InputContainer: "communityhomeheader_InputContainer_8AoAY",
-        Input: "communityhomeheader_Input_1WV5g",
-        SearchIcon: "communityhomeheader_SearchIcon_2WLXg",
-        SearchResultsCtn: "communityhomeheader_SearchResultsCtn_23v0A",
-        SearchResult: "communityhomeheader_SearchResult_2f5QM",
-        AppHubShortcutsCtn: "communityhomeheader_AppHubShortcutsCtn_1BQW_",
-        AppHubTitle: "communityhomeheader_AppHubTitle_1cmkh",
-        AppHubShortcutLinks: "communityhomeheader_AppHubShortcutLinks_Xhben",
-        ShortcutLink: "communityhomeheader_ShortcutLink_12bMm",
-        ShortcutImage: "communityhomeheader_ShortcutImage_irepM",
-        Divider: "communityhomeheader_Divider_3sA9t",
-        TabContainer: "communityhomeheader_TabContainer_HY3Yt",
-        Tab: "communityhomeheader_Tab_1oAgo",
-        ActiveTab: "communityhomeheader_ActiveTab_3Jb_4",
-        SortContainer: "communityhomeheader_SortContainer_16Dei",
-        Sort: "communityhomeheader_Sort_1sg_E",
-        ActiveSort: "communityhomeheader_ActiveSort_3whf2",
-        SortIcon: "communityhomeheader_SortIcon_2g7dI",
+        CommunityHomeHeader: "_1C-zu8dsenPxA1G4fPb6xE",
+        CommunityHomeHeaderTitleSection: "_31q4bBxhekoyefz_1Si0p7",
+        CommunityHomeHeaderTitle: "_1V0f6-9bCasXuqDwyWopVL",
+        CommunityHomeHeaderSubtitle: "_3QCfE7HVkS-jXMupL7Yw1g",
+        AddFriendBtn: "iT6jDvjkaGUJBajHTCSwR",
+        CommunityHomeHeaderContent: "_2OgY2oJ3f76jG54YDkv50a",
+        AppHubsCtn: "O58NjOp-mp1C-Lp7kBnIv",
+        Search: "r2myGP0jUBQpGPHfhdmNI",
+        SearchBar: "BhYo9QBvxSZkbL835fMMt",
+        InputContainer: "_8AoAYdWjlmxqtKLBHQhJ3",
+        Input: "_1WV5gMjevy9p73E4rTI8ST",
+        SearchIcon: "_2WLXg04_KtraVN3Oor_0Ab",
+        SearchResultsCtn: "_23v0AdndBTSyI1M0hE-Ych",
+        SearchResult: "_2f5QMmIxd8ttoAZBDPTPbI",
+        AppHubShortcutsCtn: "_1BQW_8CTrPdSDSeREni4z5",
+        AppHubTitle: "_1cmkhczo0dmSXCxOc_o1wi",
+        AppHubShortcutLinks: "XhbenBCaP7IsSqg9LTU0K",
+        ShortcutLink: "_12bMm2vWSzxZwD1nawoCDk",
+        ShortcutImage: "irepMDTcqg6chiv6s2wpU",
+        Divider: "_3sA9tFyrm7NsK9Vq3tR25D",
+        TabContainer: "HY3YtM4tUrRbQjB6vZcZD",
+        Tab: "_1oAgoNzRfQm9XWHkkgq1n5",
+        ActiveTab: "_3Jb_4nYSDCuV7cqWpLbHFP",
+        SortContainer: "_16DeiVTD4vxhf_NU37gQmq",
+        Sort: "_1sg_EWgXdB6V6BWmPMyt1y",
+        ActiveSort: "_3whf2vJwX5vpGwFaOsyA0P",
+        SortIcon: "_2g7dImB7FKkKiEYpVTXCWb",
       };
     },
     13043: (e, t, n) => {
       "use strict";
-      n.d(t, { p: () => l });
+      n.d(t, { p: () => m });
       var a = n(85556),
         r = n(47427),
         o = n(82493),
         i = n(4030),
-        m = n(20417),
-        c = n(37563),
-        s = n(35643);
-      function l(e) {
+        c = n(20417),
+        s = n(37563),
+        l = n(35643);
+      function m(e) {
         const { children: t, navTreeRef: n } = e,
-          l = (0, a._T)(e, ["children", "navTreeRef"]),
+          m = (0, a._T)(e, ["children", "navTreeRef"]),
           u = r.useRef(),
-          d = (0, m.BE)(u, n),
-          _ = (0, c.id)(),
-          h = window.__virtual_keyboard_client;
-        if (_) {
+          d = (0, c.BE)(u, n),
+          p = (0, s.id)(),
+          _ = window.__virtual_keyboard_client;
+        if (p) {
           const e = window.__nav_tree_root;
           return r.createElement(
             o.Fe,
-            Object.assign({}, l, {
+            Object.assign({}, m, {
               navTreeRef: d,
               secondary: !0,
               parentEmbeddedNavTree: e,
             }),
             r.createElement(
-              s.o5,
-              { factory: h },
+              l.o5,
+              { factory: _ },
               r.createElement(i.O, null, t),
             ),
           );
@@ -76,7 +72,7 @@
     },
     71472: (e, t, n) => {
       "use strict";
-      n.d(t, { Ar: () => c, Wo: () => s, i9: () => m, ks: () => o });
+      n.d(t, { Ar: () => s, Wo: () => l, i9: () => c, ks: () => o });
       var a = n(47427),
         r = n(8285);
       function o(e, t) {
@@ -93,7 +89,7 @@
         }
       }
       const i = (e) => null != e;
-      function m(e, t, n, a = !1) {
+      function c(e, t, n, a = !1) {
         const r = new URLSearchParams(e.location.search.substring(1));
         r.delete(t),
           i(n) && r.append(t, n),
@@ -101,11 +97,11 @@
             ? e.replace(`?${r.toString()}`, Object.assign({}, e.location.state))
             : e.push(`?${r.toString()}`);
       }
-      function c(e, t) {
+      function s(e, t) {
         const n = (0, r.k6)(),
-          c = (0, r.TH)(),
-          s = (0, a.useMemo)(() => {
-            const n = o(c.search, e);
+          s = (0, r.TH)(),
+          l = (0, a.useMemo)(() => {
+            const n = o(s.search, e);
             return i(n)
               ? i(t)
                 ? "boolean" == typeof t
@@ -113,16 +109,16 @@
                   : t.constructor(n)
                 : n
               : t;
-          }, [c.search, e, t]),
-          l = (0, a.useCallback)(
+          }, [s.search, e, t]),
+          m = (0, a.useCallback)(
             (t) => {
-              m(n, e, i(t) ? String(t) : null);
+              c(n, e, i(t) ? String(t) : null);
             },
             [n, e],
           );
-        return [s, l];
+        return [l, m];
       }
-      function s(e, t, n = !1) {
+      function l(e, t, n = !1) {
         const a = new URLSearchParams(e.location.search.substring(1));
         for (const e in t)
           if (t.hasOwnProperty(e)) {
@@ -136,28 +132,28 @@
     },
     11134: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { default: () => v });
+      n.r(t), n.d(t, { default: () => E });
       var a = n(85556),
         r = n(47427),
         o = n(31846),
         i = n(75399),
-        m = n.n(i),
-        c = n(82493),
-        s = n(37563),
-        l = n(62613),
+        c = n.n(i),
+        s = n(82493),
+        l = n(37563),
+        m = n(62613),
         u = n(1485),
         d = n(80751),
-        _ = n.n(d),
-        h = n(80886);
-      var p = n(13129),
-        H = n(34310),
-        y = n(71472),
-        S = n(8285),
-        C = n(91618),
+        p = n.n(d),
+        _ = n(80886);
+      var h = n(13129),
+        S = n(34310),
+        H = n(71472),
+        f = n(8285),
+        v = n(91618),
         b = n(13043),
-        f = n(41130);
-      function v() {
-        const e = (0, f.L)(),
+        C = n(41130);
+      function E() {
+        const e = (0, C.L)(),
           t = (0, r.useRef)();
         return (
           (0, r.useEffect)(() => {
@@ -167,57 +163,57 @@
             b.p,
             { navID: "CommunityHomeHeader", NavigationManager: e },
             r.createElement(
-              C.s,
-              { navRef: t, className: m().CommunityHomeHeader },
+              v.s,
+              { navRef: t, className: c().CommunityHomeHeader },
               r.createElement(
                 "div",
-                { className: m().CommunityHomeHeaderTitleSection },
+                { className: c().CommunityHomeHeaderTitleSection },
                 r.createElement(
                   "div",
                   null,
                   r.createElement(
                     "div",
-                    { className: m().CommunityHomeHeaderTitle },
+                    { className: c().CommunityHomeHeaderTitle },
                     (0, o.Xx)("#Community_Home_Header_Title"),
                   ),
                   r.createElement(
                     "div",
-                    { className: m().CommunityHomeHeaderSubtitle },
+                    { className: c().CommunityHomeHeaderSubtitle },
                     (0, o.Xx)("#Community_Home_Header_Subtitle"),
                   ),
                 ),
                 r.createElement(
-                  c.IS,
+                  s.IS,
                   {
-                    className: m().AddFriendBtn,
-                    href: `${s.De.COMMUNITY_BASE_URL}search/users/`,
+                    className: c().AddFriendBtn,
+                    href: `${l.De.COMMUNITY_BASE_URL}search/users/`,
                   },
                   (0, o.Xx)("#Community_Home_Header_AddFriend_Button"),
                 ),
               ),
-              r.createElement(E, null),
-              r.createElement(N, null),
+              r.createElement(y, null),
+              r.createElement(w, null),
             ),
           )
         );
       }
-      function E() {
+      function y() {
         const [e, t] = (0, r.useState)(""),
           [n, i] = (0, r.useState)([]),
-          [d, p] = (0, r.useState)(!1),
-          H = (function () {
+          [d, h] = (0, r.useState)(!1),
+          S = (function () {
             const e = (0, r.useMemo)(
-                () => (0, s.ip)("personalapps", "application_config") || [],
+                () => (0, l.ip)("personalapps", "application_config") || [],
                 [],
               ),
               t = (0, r.useMemo)(
-                () => (0, s.ip)("popularapps", "application_config") || [],
+                () => (0, l.ip)("popularapps", "application_config") || [],
                 [],
               ),
               n = [...e, ...t];
             if (n.length)
               return {
-                isLoading: 1 === (0, h.wZ)(n, { include_assets: !0 }),
+                isLoading: 1 === (0, _.wZ)(n, { include_assets: !0 }),
                 data: { personalAppIds: e, popularAppIds: t },
               };
             return {
@@ -225,54 +221,54 @@
               data: { personalAppIds: e, popularAppIds: t },
             };
           })();
-        if (H.isLoading) return null;
+        if (S.isLoading) return null;
         return r.createElement(
           "div",
-          { className: m().CommunityHomeHeaderContent },
+          { className: c().CommunityHomeHeaderContent },
           r.createElement(
-            C.s,
-            { className: m().AppHubsCtn },
-            r.createElement(A, {
-              appShortcuts: H.data.personalAppIds,
+            v.s,
+            { className: c().AppHubsCtn },
+            r.createElement(g, {
+              appShortcuts: S.data.personalAppIds,
               sectionTitle: (0, o.Xx)("#Community_Home_Header_GameHubs_ForYou"),
-              withDivider: H.data.popularAppIds.length > 0,
+              withDivider: S.data.popularAppIds.length > 0,
             }),
-            r.createElement(A, {
-              appShortcuts: H.data.popularAppIds,
+            r.createElement(g, {
+              appShortcuts: S.data.popularAppIds,
               sectionTitle: (0, o.Xx)(
                 "#Community_Home_Header_GameHubs_Popular",
               ),
             }),
           ),
           r.createElement(
-            C.s,
+            v.s,
             {
-              onFocus: () => p(!0),
+              onFocus: () => h(!0),
               onBlur: (e) => {
-                e.currentTarget.contains(e.relatedTarget) || p(!1);
+                e.currentTarget.contains(e.relatedTarget) || h(!1);
               },
-              className: m().Search,
+              className: c().Search,
             },
             r.createElement(
-              C.s,
-              { className: m().SearchBar },
+              v.s,
+              { className: c().SearchBar },
               r.createElement(
                 "div",
-                { className: m().InputContainer },
+                { className: c().InputContainer },
                 r.createElement(u.II, {
                   onChange: (e) =>
                     (0, a.mG)(this, void 0, void 0, function* () {
                       t(e.target.value);
                       const n = yield (function (e) {
                         return (0, a.mG)(this, void 0, void 0, function* () {
-                          const t = `${s.De.COMMUNITY_BASE_URL}actions/SearchApps/${e}`;
-                          return (yield _().get(t)).data;
+                          const t = `${l.De.COMMUNITY_BASE_URL}actions/SearchApps/${e}`;
+                          return (yield p().get(t)).data;
                         });
                       })(e.target.value);
                       i(n);
                     }),
                   value: e,
-                  className: m().Input,
+                  className: c().Input,
                   placeholder: (0, o.Xx)(
                     "#Community_Home_Header_FindGame_Placeholder",
                   ),
@@ -280,21 +276,21 @@
               ),
               r.createElement(
                 "div",
-                { className: m().SearchIcon },
-                r.createElement(l.YtI, null),
+                { className: c().SearchIcon },
+                r.createElement(m.YtI, null),
               ),
             ),
             d &&
               r.createElement(
-                C.s,
-                { className: m().SearchResultsCtn },
+                v.s,
+                { className: c().SearchResultsCtn },
                 n.map((e) =>
                   r.createElement(
-                    c.IS,
+                    s.IS,
                     {
-                      href: `${s.De.COMMUNITY_BASE_URL}app/${e.appid}`,
+                      href: `${l.De.COMMUNITY_BASE_URL}app/${e.appid}`,
                       key: e.appid,
-                      className: m().SearchResult,
+                      className: c().SearchResult,
                     },
                     e.name,
                   ),
@@ -303,57 +299,57 @@
           ),
         );
       }
-      function A(e) {
+      function g(e) {
         const { appShortcuts: t, sectionTitle: n, withDivider: a } = e;
         return t && t.length
           ? r.createElement(
               "div",
-              { className: m().AppHubShortcutsCtn },
-              r.createElement("div", { className: m().AppHubTitle }, n),
+              { className: c().AppHubShortcutsCtn },
+              r.createElement("div", { className: c().AppHubTitle }, n),
               r.createElement(
                 "div",
                 {
                   "flow-children": "row",
-                  className: (0, p.Z)(
-                    m().AppHubShortcutLinks,
-                    a ? m().Divider : null,
+                  className: (0, h.Z)(
+                    c().AppHubShortcutLinks,
+                    a ? c().Divider : null,
                   ),
                 },
-                t.map((e, t) => r.createElement(g, { key: t, appId: e })),
+                t.map((e, t) => r.createElement(T, { key: t, appId: e })),
               ),
             )
           : null;
       }
-      function g(e) {
-        const t = H.Z.Get().GetApp(e.appId);
+      function T(e) {
+        const t = S.Z.Get().GetApp(e.appId);
         return t
           ? r.createElement(
-              c.IS,
+              s.IS,
               {
-                className: m().ShortcutLink,
-                href: `${s.De.COMMUNITY_BASE_URL}app/${e.appId}`,
+                className: c().ShortcutLink,
+                href: `${l.De.COMMUNITY_BASE_URL}app/${e.appId}`,
               },
               r.createElement("img", {
-                className: m().ShortcutImage,
+                className: c().ShortcutImage,
                 src: t.GetAssets().GetLibraryCapsuleURL(),
               }),
             )
           : null;
       }
-      const I = "subsection",
-        T = "browsefilter";
-      function N() {
-        const e = (0, S.k6)(),
-          t = (0, y.ks)(e, I),
-          n = (0, y.ks)(e, T);
+      const A = "subsection",
+        I = "browsefilter";
+      function w() {
+        const e = (0, f.k6)(),
+          t = (0, H.ks)(e, A),
+          n = (0, H.ks)(e, I);
         return r.createElement(
           "div",
           null,
-          r.createElement(w, { activeTab: t, activeSort: n }),
-          r.createElement($, { activeTab: t, activeSort: n }),
+          r.createElement(N, { activeTab: t, activeSort: n }),
+          r.createElement(k, { activeTab: t, activeSort: n }),
         );
       }
-      function w(e) {
+      function N(e) {
         const { activeTab: t, activeSort: n } = e,
           a = r.useRef();
         r.useEffect(() => {
@@ -365,8 +361,8 @@
           }
         }, [null == a ? void 0 : a.current]);
         return r.createElement(
-          C.s,
-          { "flow-children": "row", className: m().TabContainer, ref: a },
+          v.s,
+          { "flow-children": "row", className: c().TabContainer, ref: a },
           [
             { label: "#Community_Home_Header_Filter_All", id: "" },
             {
@@ -385,33 +381,33 @@
             { label: "#Community_Home_Header_Filter_Reviews", id: "reviews" },
           ].map((e, a) => {
             const i = t ? t === e.id : 0 === a,
-              l = e.id ? `${I}=${e.id}` : "",
-              u = n ? `${T}=${n}` : "",
-              d = `${s.De.COMMUNITY_BASE_URL}${u || l ? "?" : ""}${u}${
-                l ? "&" : ""
-              }${l}`;
+              m = e.id ? `${A}=${e.id}` : "",
+              u = n ? `${I}=${n}` : "",
+              d = `${l.De.COMMUNITY_BASE_URL}${u || m ? "?" : ""}${u}${
+                m ? "&" : ""
+              }${m}`;
             return r.createElement(
-              c.IS,
+              s.IS,
               {
                 id: e.id,
                 href: d,
                 key: e.id,
-                className: (0, p.Z)(m().Tab, i ? m().ActiveTab : null),
+                className: (0, h.Z)(c().Tab, i ? c().ActiveTab : null),
               },
               (0, o.Xx)(e.label),
             );
           }),
         );
       }
-      function $(e) {
+      function k(e) {
         const { activeTab: t, activeSort: n } = e;
         return r.createElement(
-          C.s,
-          { "flow-children": "row", className: m().SortContainer },
+          v.s,
+          { "flow-children": "row", className: c().SortContainer },
           r.createElement(
             "div",
-            { className: m().SortIcon },
-            r.createElement(l.iS8, null),
+            { className: c().SortIcon },
+            r.createElement(m.iS8, null),
           ),
           [
             { label: "#Community_Home_Header_BrowseFilter_Popular", id: "" },
@@ -421,17 +417,17 @@
             },
           ].map((e, a) => {
             const i = n ? n === e.id : 0 === a,
-              l = t ? `${I}=${t}` : "",
-              u = e.id ? `${T}=${e.id}` : "",
-              d = `${s.De.COMMUNITY_BASE_URL}${u || l ? "?" : ""}${u}${
-                l ? "&" : ""
-              }${l}`;
+              m = t ? `${A}=${t}` : "",
+              u = e.id ? `${I}=${e.id}` : "",
+              d = `${l.De.COMMUNITY_BASE_URL}${u || m ? "?" : ""}${u}${
+                m ? "&" : ""
+              }${m}`;
             return r.createElement(
-              c.IS,
+              s.IS,
               {
                 href: d,
                 key: e.id,
-                className: (0, p.Z)(m().Sort, i ? m().ActiveSort : null),
+                className: (0, h.Z)(c().Sort, i ? c().ActiveSort : null),
               },
               (0, o.Xx)(e.label),
             );
