@@ -1129,78 +1129,80 @@
         },
         ie = (0, p.Pi)((e) => {
           const t = v.Get().GetBroadcasterSteamID(),
-            a = t.ConvertTo64BitString(),
+            a = null == t ? void 0 : t.ConvertTo64BitString(),
             [r, l] = (0, y.Ar)("muted", !0),
             o = m.c9.GetBroadcast(a),
             s = m.c9.GetOrCreateBroadcastInfo(a);
-          return n.createElement(
-            n.Fragment,
-            null,
-            n.createElement(
-              "div",
-              { className: (0, k.Z)(H.BroadcastPage) },
-              n.createElement(
-                "div",
-                { className: (0, k.Z)(b().BroadcastAndChat) },
-                Boolean(!v.Get().BShowOnlyChat()) &&
+          return a
+            ? n.createElement(
+                n.Fragment,
+                null,
+                n.createElement(
+                  "div",
+                  { className: (0, k.Z)(H.BroadcastPage) },
                   n.createElement(
-                    I.SV,
-                    null,
-                    n.createElement(
-                      "div",
-                      { className: (0, k.Z)(b().wrapper) },
+                    "div",
+                    { className: (0, k.Z)(b().BroadcastAndChat) },
+                    Boolean(!v.Get().BShowOnlyChat()) &&
                       n.createElement(
-                        "div",
-                        {
-                          className: (0, k.Z)({
-                            [b().video_placeholder]: !0,
-                            video_placeholder_trgt: !0,
-                            [b().NoChat]: v.Get().BShowOnlyVideo(),
-                          }),
-                        },
+                        I.SV,
+                        null,
                         n.createElement(
                           "div",
-                          { className: b().BroadcastPlayerContainer },
+                          { className: (0, k.Z)(b().wrapper) },
+                          n.createElement(
+                            "div",
+                            {
+                              className: (0, k.Z)({
+                                [b().video_placeholder]: !0,
+                                video_placeholder_trgt: !0,
+                                [b().NoChat]: v.Get().BShowOnlyVideo(),
+                              }),
+                            },
+                            n.createElement(
+                              "div",
+                              { className: b().BroadcastPlayerContainer },
+                              n.createElement(
+                                I.SV,
+                                null,
+                                n.createElement(S.default, {
+                                  steamIDBroadcast: a,
+                                  watchLocation: 5,
+                                  bStartMuted: r,
+                                }),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    Boolean(!v.Get().BShowOnlyVideo()) &&
+                      n.createElement(
+                        "div",
+                        { className: b().detail_chat_ctn },
+                        n.createElement(
+                          "div",
+                          { className: b().ChatContainer },
                           n.createElement(
                             I.SV,
                             null,
-                            n.createElement(S.default, {
-                              steamIDBroadcast: a,
-                              watchLocation: 5,
-                              bStartMuted: r,
+                            n.createElement(E.c, {
+                              emoticonStore: g.D$,
+                              watchLocation: 6,
+                              steamID: a,
+                              broadcastID: o ? o.m_ulBroadcastID : void 0,
                             }),
                           ),
                         ),
                       ),
-                    ),
                   ),
-                Boolean(!v.Get().BShowOnlyVideo()) &&
-                  n.createElement(
-                    "div",
-                    { className: b().detail_chat_ctn },
-                    n.createElement(
-                      "div",
-                      { className: b().ChatContainer },
-                      n.createElement(
-                        I.SV,
-                        null,
-                        n.createElement(E.c, {
-                          emoticonStore: g.D$,
-                          watchLocation: 6,
-                          steamID: a,
-                          broadcastID: o ? o.m_ulBroadcastID : void 0,
-                        }),
-                      ),
-                    ),
-                  ),
-              ),
-              Boolean(!v.Get().BShowInIframe()) &&
-                n.createElement(ce, {
-                  broadcasterSteamID: t,
-                  broadcastInfo: s,
-                }),
-            ),
-          );
+                  Boolean(!v.Get().BShowInIframe()) &&
+                    n.createElement(ce, {
+                      broadcasterSteamID: t,
+                      broadcastInfo: s,
+                    }),
+                ),
+              )
+            : null;
         }),
         ce = (0, p.Pi)((e) => {
           const { broadcasterSteamID: t, broadcastInfo: a } = e,
