@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "8695791";
+var CLSTAMP = "8696993";
 (() => {
   "use strict";
   var e,
@@ -22,14 +22,14 @@ var CLSTAMP = "8695791";
       if (!n) {
         var r = 1 / 0;
         for (o = 0; o < e.length; o++) {
-          for (var [n, s, d] = e[o], c = !0, f = 0; f < n.length; f++)
-            (!1 & d || r >= d) && Object.keys(b.O).every((e) => b.O[e](n[f]))
-              ? n.splice(f--, 1)
+          for (var [n, s, d] = e[o], c = !0, i = 0; i < n.length; i++)
+            (!1 & d || r >= d) && Object.keys(b.O).every((e) => b.O[e](n[i]))
+              ? n.splice(i--, 1)
               : ((c = !1), d < r && (r = d));
           if (c) {
             e.splice(o--, 1);
-            var i = s();
-            void 0 !== i && (a = i);
+            var f = s();
+            void 0 !== f && (a = f);
           }
         }
         return a;
@@ -296,7 +296,7 @@ var CLSTAMP = "8695791";
         3786: "024e990ab7086cfdf0a6",
         3863: "500561de8dbc63e67d66",
         3937: "322489b3c57b00b366b2",
-        4033: "818d049ddd97cee37bb1",
+        4033: "da128bd33861c8447bc0",
         4103: "5515c83fdb596d3e8ef8",
         4108: "5caec2c15e654faf3e13",
         4166: "104c6858278065c52533",
@@ -434,7 +434,7 @@ var CLSTAMP = "8695791";
         2529: "4e9111d202b1b6509687",
         3599: "37883bb918433d9a98b6",
         3863: "e0cfb48328bf8247ef3e",
-        4033: "2b0974bcd24d05187219",
+        4033: "769b1dd832cb83f7a50a",
         4309: "d885e31859d50e4d4824",
         4535: "40aa4a6d40097b30a4e7",
         4601: "63576c00f168fd0b8cab",
@@ -460,14 +460,14 @@ var CLSTAMP = "8695791";
     (b.l = (e, a, n, r) => {
       if (s[e]) s[e].push(a);
       else {
-        var c, f;
+        var c, i;
         if (void 0 !== n)
           for (
-            var i = document.getElementsByTagName("script"), o = 0;
-            o < i.length;
+            var f = document.getElementsByTagName("script"), o = 0;
+            o < f.length;
             o++
           ) {
-            var t = i[o];
+            var t = f[o];
             if (
               t.getAttribute("src") == e ||
               t.getAttribute("data-webpack") == d + n
@@ -477,7 +477,7 @@ var CLSTAMP = "8695791";
             }
           }
         c ||
-          ((f = !0),
+          ((i = !0),
           ((c = document.createElement("script")).charset = "utf-8"),
           (c.timeout = 120),
           b.nc && c.setAttribute("nonce", b.nc),
@@ -501,7 +501,7 @@ var CLSTAMP = "8695791";
           );
         (c.onerror = l.bind(null, c.onerror)),
           (c.onload = l.bind(null, c.onload)),
-          f && document.head.appendChild(c);
+          i && document.head.appendChild(c);
       }
     }),
     (b.r = (e) => {
@@ -571,7 +571,7 @@ var CLSTAMP = "8695791";
                       else {
                         var c = n && n.type,
                           b = (n && n.target && n.target.href) || a,
-                          f = new Error(
+                          i = new Error(
                             "Loading CSS chunk " +
                               e +
                               " failed.\n(" +
@@ -580,12 +580,12 @@ var CLSTAMP = "8695791";
                               b +
                               ")",
                           );
-                        (f.name = "ChunkLoadError"),
-                          (f.code = "CSS_CHUNK_LOAD_FAILED"),
-                          (f.type = c),
-                          (f.request = b),
+                        (i.name = "ChunkLoadError"),
+                          (i.code = "CSS_CHUNK_LOAD_FAILED"),
+                          (i.type = c),
+                          (i.request = b),
                           r.parentNode && r.parentNode.removeChild(r),
-                          d(f);
+                          d(i);
                       }
                     }),
                   (r.href = a),
@@ -667,14 +667,14 @@ var CLSTAMP = "8695791";
       var a = (a, n) => {
           var s,
             d,
-            [r, c, f] = n,
-            i = 0;
+            [r, c, i] = n,
+            f = 0;
           if (r.some((a) => 0 !== e[a])) {
             for (s in c) b.o(c, s) && (b.m[s] = c[s]);
-            if (f) var o = f(b);
+            if (i) var o = i(b);
           }
-          for (a && a(n); i < r.length; i++)
-            (d = r[i]), b.o(e, d) && e[d] && e[d][0](), (e[d] = 0);
+          for (a && a(n); f < r.length; f++)
+            (d = r[f]), b.o(e, d) && e[d] && e[d][0](), (e[d] = 0);
           return b.O(o);
         },
         n = (self.webpackChunkappmgmt_storeadmin =

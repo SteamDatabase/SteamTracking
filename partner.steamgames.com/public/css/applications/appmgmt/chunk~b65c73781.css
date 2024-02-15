@@ -10028,7 +10028,7 @@ button.rbc-input::-moz-focus-inner {
   background: #000;
 }
 ._37BtrSI9vJMqi9eqV_c8Ut {
-  color: green;
+  color: green !important;
   font-weight: 700;
 }
 ._2q-e6NDU-wz5TzRzQGkSjm {
@@ -10041,6 +10041,7 @@ button.rbc-input::-moz-focus-inner {
   border: 1px solid #000;
 }
 ._39E0g37VF9zENTy1IM6ffX {
+  align-self: flex-end;
   text-align: right;
   font-size: 14px;
 }
@@ -10479,6 +10480,10 @@ button.rbc-input::-moz-focus-inner {
 }
 .AzROoeBRhQAuBrZNeDxYZ {
   display: inline-block;
+}
+.gBcUE6x7TiYgRRvXKNJ5e {
+  display: inline-flex;
+  justify-content: space-between;
 }
 ._398qzydemboBN-RxXd6iOo {
   margin: 20px;

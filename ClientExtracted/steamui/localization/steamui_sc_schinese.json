@@ -246,6 +246,7 @@
     "Settings_Developer_OpenSteamConsoleTab": "蒸汽平台控制台",
     "Settings_Developer_ShowTimestampsInConsole": "在蒸汽平台控制台中显示时间戳",
     "Settings_System_SteamBeta": "蒸汽平台测试分支",
+    "Developer_SLS_Journal_Enabled_Explainer": "共享关键系统进程日志以及崩溃报告。这些补充信息可以提供必要的背景信息，以帮助识别和解决崩溃的根本原因。\n\n报告包含系统更新服务、启动管理服务、设置管理服务以及蒸汽平台崩溃收集服务的日志。",
     "Settings_SteamRuntimeSystemInformation": "蒸汽平台运行时系统信息",
     "Settings_SteamRuntimeSystemInformation_Desc": "蒸汽平台收集了有关您系统的以下信息：",
     "Settings_SystemReport_Desc": "蒸汽平台收集了有关您系统的以下信息：",

@@ -1100,6 +1100,7 @@
         AppInputCtn: "_1tIVZys0DITEEyIIqsZ997",
         PagingRow: "_3qLRlDyHZJIS4BugMgi7oL",
         Inline: "AzROoeBRhQAuBrZNeDxYZ",
+        PageTitle: "gBcUE6x7TiYgRRvXKNJ5e",
       };
     },
     3928: (e) => {
@@ -60157,8 +60158,8 @@
           },
           r.createElement(
             "div",
-            { className: Ut().PageTitle },
-            r.createElement("div", null, "Promo Invitation Planner (VO) "),
+            { className: (0, B.Z)(Ut().PageTitle, Zl().PageTitle) },
+            r.createElement("div", null, "Promo Invitation Planner (VO)"),
             r.createElement(ba, null),
           ),
           r.createElement("hr", { className: "VO" }),
