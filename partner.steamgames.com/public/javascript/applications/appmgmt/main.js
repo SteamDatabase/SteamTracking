@@ -8463,7 +8463,10 @@
             this.state.ready ||
               (this.props.instance.SetTakeFocus(this.TakeFocus.bind(this)),
               this.setState({ ready: !0 }, () => {
-                this.TakeFocus();
+                var e;
+                (null === (e = this.props.options) || void 0 === e
+                  ? void 0
+                  : e.bSkipFocusWhenReady) || this.TakeFocus();
               }));
         }
         OnMenuMutation(e, t) {

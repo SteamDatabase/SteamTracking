@@ -60328,6 +60328,7 @@
                             bFitToWindow: !0,
                             bDisablePopTop: !0,
                             bNoFocusWhenShown: !0,
+                            bSkipFocusWhenReady: !0,
                           },
                         );
                       } catch (t) {
@@ -60354,17 +60355,7 @@
             className: i,
             placeholder: "Search partner names",
             onChange: d,
-            onBlur: (e) => {
-              const t = e.relatedTarget;
-              let n = !1;
-              null == t ||
-                t.classList.forEach((e) => {
-                  e.includes("ContextMenuFocusContainer") && (n = !0);
-                }),
-                n
-                  ? m.current.element.focus()
-                  : setTimeout(() => o.current && o.current.Hide(), 200);
-            },
+            onBlur: (e) => setTimeout(() => o.current && o.current.Hide(), 200),
             ref: m,
             tooltip: n,
           }),
@@ -68783,6 +68774,7 @@
                   bFitToWindow: !0,
                   bDisablePopTop: !0,
                   bNoFocusWhenShown: !0,
+                  bSkipFocusWhenReady: !0,
                 },
               );
               k(a);
@@ -68985,17 +68977,7 @@
             [I, o, P, h],
           );
         return i.createElement(r.II, {
-          onBlur: (e) => {
-            const t = e.relatedTarget;
-            let n = !1;
-            null == t ||
-              t.classList.forEach((e) => {
-                e.includes("ContextMenuFocusContainer") && (n = !0);
-              }),
-              n
-                ? A.current.element.focus()
-                : setTimeout(() => (null == C ? void 0 : C.Hide()), 200);
-          },
+          onBlur: (e) => setTimeout(() => (null == C ? void 0 : C.Hide()), 200),
           onFocus: (e) => {
             console.log("We are focussed");
           },
@@ -69960,6 +69942,7 @@
                               bFitToWindow: !0,
                               bDisablePopTop: !0,
                               bNoFocusWhenShown: !0,
+                              bSkipFocusWhenReady: !0,
                             },
                           );
                         } catch (t) {
@@ -69984,17 +69967,8 @@
               type: "text",
               label: t,
               onChange: p,
-              onBlur: (e) => {
-                const t = e.relatedTarget;
-                let n = !1;
-                null == t ||
-                  t.classList.forEach((e) => {
-                    e.includes("ContextMenuFocusContainer") && (n = !0);
-                  }),
-                  n
-                    ? d.current.element.focus()
-                    : setTimeout(() => o.current && o.current.Hide(), 200);
-              },
+              onBlur: (e) =>
+                setTimeout(() => o.current && o.current.Hide(), 200),
               ref: d,
               tooltip: n,
             }),
