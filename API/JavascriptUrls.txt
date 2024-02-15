@@ -976,6 +976,7 @@ ${PARTNER_BASE_URL}marketingmessages/messagepreview/${}/?cc=${}&l=${language}
 ${PARTNER_BASE_URL}optin${}
 ${PARTNER_BASE_URL}optin/${pageid}/sale/${}
 ${PARTNER_BASE_URL}optin/admin/analysis/${}
+${PARTNER_BASE_URL}optin/admin/demo_analysis/${}
 ${PARTNER_BASE_URL}optin/admin/edit/${pageid}
 ${PARTNER_BASE_URL}optin/admin/edit/${pageid}?tab=manage
 ${PARTNER_BASE_URL}optin/admin/edit/${}
