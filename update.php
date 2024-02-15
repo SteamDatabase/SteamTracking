@@ -174,7 +174,7 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 
 				if( file_exists( '../update_webapis.sh' ) )
 				{
-					system( 'bash ../update_webapis.sh' );
+					proc_close( proc_open( 'bash ../update_webapis.sh &', [], $pipes ) );
 				}
 			}
 
