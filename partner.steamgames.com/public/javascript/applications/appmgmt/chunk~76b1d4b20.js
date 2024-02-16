@@ -371,7 +371,9 @@
         TopGamesCtn: "_1Ta3Hfqsq1RBzrU1mcMgML",
         ThemeDetails: "_2KbZZ6bPBB-Bk4MTv5bxF2",
         GamesRow: "_1uO2EvuPAL3GIaEHpPWmOA",
+        GamesColumn: "_1Pdhl5fZ9jbDwMpDg_IxT4",
         GameItem: "_3Kk39B7jUhr6BVRn9v4WNF",
+        GameImage: "_1KDJ1W0K9UA9kAgQCL5jfP",
         ThemeTitle: "_2iHxOX8wNwHbuhDCSU2Sfd",
         ThemeTags: "_2PNltetEpoiiz7epQREfdS",
         TagsMustTitle: "_3TtwdJ1FSNAJ0zZMo6okKJ",
@@ -2898,13 +2900,13 @@
           );
         }
       }
-      var J;
+      var K;
       !(function (e) {
         (e[(e.None = 0)] = "None"),
           (e[(e.Append = 1)] = "Append"),
           (e[(e.Remove = 2)] = "Remove");
-      })(J || (J = {}));
-      class K {
+      })(K || (K = {}));
+      class J {
         constructor(e, t, n, a) {
           (this.m_callbacks = null),
             (this.m_mpd = null),
@@ -2913,7 +2915,7 @@
             (this.m_sourceBuffer = null),
             (this.m_nTrackBufferMS = 0),
             (this.m_representation = null),
-            (this.m_eBufferUpdate = J.None),
+            (this.m_eBufferUpdate = K.None),
             (this.m_rgBufferedSegments = []),
             (this.m_bNeedInitSegment = !0),
             (this.m_nNextSegment = 0),
@@ -3060,7 +3062,7 @@
           this.m_listeners.Unregister(),
             (this.m_sourceBuffer = null),
             this.ForceStopDownloads(),
-            (this.m_eBufferUpdate = J.None),
+            (this.m_eBufferUpdate = K.None),
             (this.m_bRemoveBufferState = !1),
             (this.m_callbacks = null),
             (this.m_mpd = null),
@@ -3091,10 +3093,10 @@
             `${this.GetDebugName()} OnSourceBufferUpdateEnd: [playback=${t}][buffered=${n}][start=${this.GetBufferedStart()}][end=${this.GetBufferedEnd()}]`,
           );
           let a = this.m_eBufferUpdate;
-          (this.m_eBufferUpdate = J.None),
-            a == J.Append && this.m_callbacks.OnSegmentDownloaded(this),
+          (this.m_eBufferUpdate = K.None),
+            a == K.Append && this.m_callbacks.OnSegmentDownloaded(this),
             this.m_bSeekInProgress &&
-              a == J.Remove &&
+              a == K.Remove &&
               !this.m_bRemoveBufferState &&
               this.ContinueSeek(),
             this.UpdateBuffer();
@@ -3303,18 +3305,18 @@
         }
         TrimGameDataIfNecessary() {}
         UpdateBuffer() {
-          if (this.m_eBufferUpdate != J.None) return;
+          if (this.m_eBufferUpdate != K.None) return;
           if (this.m_bRemoveBufferState) return void this.RemoveAllBuffers();
           if (!this.m_sourceBuffer) return void (0, u.hB)("No source buffer?");
           if (this.m_rgBufferedSegments.length > 0) {
             try {
-              this.m_eBufferUpdate = J.Append;
+              this.m_eBufferUpdate = K.Append;
               let e = this.m_rgBufferedSegments[0];
               this.m_sourceBuffer.appendBuffer(e.data),
                 this.m_rgBufferedSegments.splice(0, 1);
             } catch (e) {
               "QuotaExceededError" === e.name
-                ? ((this.m_eBufferUpdate = J.None),
+                ? ((this.m_eBufferUpdate = K.None),
                   (0, u.hB)(
                     `${this.GetDebugName()} Buffer - QuotaExceededError`,
                   ))
@@ -3330,7 +3332,7 @@
               let a = Math.min(this.GetBufferedEnd(), n);
               return void (
                 a != t &&
-                ((this.m_eBufferUpdate = J.Remove),
+                ((this.m_eBufferUpdate = K.Remove),
                 this.m_sourceBuffer.remove(t, a),
                 (this.m_tsLastBufferRemove = e))
               );
@@ -3345,7 +3347,7 @@
             for (let n = 0; n < t.length; n++) e < t.end(n) && (e = t.end(n));
           }
           (this.m_bRemoveBufferState = !1),
-            (this.m_eBufferUpdate = J.Remove),
+            (this.m_eBufferUpdate = K.Remove),
             0 != e
               ? this.m_sourceBuffer.remove(0, e + 1)
               : this.OnSourceBufferUpdateEnd(null);
@@ -3413,7 +3415,7 @@
         }
         ContinueSeek() {
           this.m_bSeekInProgress &&
-            (this.m_eBufferUpdate == J.Remove ||
+            (this.m_eBufferUpdate == K.Remove ||
               this.m_bRemoveBufferState ||
               ((this.m_bSeekInProgress = !1), this.ScheduleNextDownload()));
         }
@@ -3458,13 +3460,13 @@
             : 0;
         }
       }
-      (0, a.gn)([v.a], K.prototype, "OnSourceBufferUpdateEnd", null),
-        (0, a.gn)([v.a], K.prototype, "OnSourceBufferError", null),
-        (0, a.gn)([v.a], K.prototype, "OnSourceBufferAbort", null),
-        (0, a.gn)([v.a], K.prototype, "ScheduleNextDownload", null),
-        (0, a.gn)([v.a], K.prototype, "DownloadNextSegment", null),
-        (0, a.gn)([v.a], K.prototype, "DownloadFailed", null),
-        (0, a.gn)([v.a], K.prototype, "DownloadGone", null);
+      (0, a.gn)([v.a], J.prototype, "OnSourceBufferUpdateEnd", null),
+        (0, a.gn)([v.a], J.prototype, "OnSourceBufferError", null),
+        (0, a.gn)([v.a], J.prototype, "OnSourceBufferAbort", null),
+        (0, a.gn)([v.a], J.prototype, "ScheduleNextDownload", null),
+        (0, a.gn)([v.a], J.prototype, "DownloadNextSegment", null),
+        (0, a.gn)([v.a], J.prototype, "DownloadFailed", null),
+        (0, a.gn)([v.a], J.prototype, "DownloadGone", null);
       const Q = "auto";
       var q, $, ee;
       !(function (e) {
@@ -3775,7 +3777,7 @@
                 ((t = e), (this.m_strGameAdaptationID = e.strID)),
               t)
             ) {
-              let e = new K(this, this.m_mpd, t, this.m_stats);
+              let e = new J(this, this.m_mpd, t, this.m_stats);
               this.m_rgLoaders.push(e);
             }
           }
@@ -8925,7 +8927,7 @@
     },
     20613: (e, t, n) => {
       "use strict";
-      n.d(t, { SE: () => K, C4: () => J });
+      n.d(t, { SE: () => J, C4: () => K });
       var a,
         i = n(27605),
         s = n(47427),
@@ -9949,7 +9951,7 @@
               )
             : null;
         },
-        J = (e) => {
+        K = (e) => {
           const [t, n] = s.useState(!1),
             { clanAccountID: a, className: i } = e,
             m = r.K.InitFromClanID(a),
@@ -9995,7 +9997,7 @@
             },
           });
         },
-        K = (e) => {
+        J = (e) => {
           const [t, n] = s.useState(!1),
             { appid: a, className: i } = e,
             r = l.jg.Get().BFollowsApp(a),
@@ -10100,8 +10102,8 @@
       window.SetHoverPresentation = function (e) {
         window.sessionStorage.setItem(Z, e);
       };
-      const J = 2e3;
-      function K(e) {
+      const K = 2e3;
+      function J(e) {
         const { info: t } = e,
           n = (0, l.useRef)({
             include_assets: !0,
@@ -10149,7 +10151,7 @@
                           src: e,
                           alt: "screenshot " + (t + 1),
                         }),
-                        nDurationMs: J,
+                        nDurationMs: K,
                       });
                     });
               }
@@ -10170,7 +10172,7 @@
                         src: i,
                         alt: e.GetName(),
                       }),
-                      nDurationMs: J,
+                      nDurationMs: K,
                     });
                 }
               a.length > 0
@@ -10198,7 +10200,7 @@
                           src: z,
                           alt: "default",
                         }),
-                        nDurationMs: J,
+                        nDurationMs: K,
                       },
                     ])
                   : (null == o ? void 0 : o.length) && h()
@@ -10564,7 +10566,7 @@
                 },
                 Boolean(s && !i && !r) &&
                   l.createElement($, { appID: t.id, snr: e.strSNR }),
-                l.createElement(K, { info: t }),
+                l.createElement(J, { info: t }),
               ),
               l.createElement(
                 te,
@@ -11217,8 +11219,8 @@
         Z = n(13499);
       var X = n(61440),
         Y = n(43301),
-        J = n(83502),
-        K = n(31659);
+        K = n(83502),
+        J = n(31659);
       function Q(e) {
         var t;
         const { info: n, bPreferLibrary: a } = e,
@@ -11291,7 +11293,7 @@
               className: C().FallbackBackground,
               style: { backgroundImage: `url(${e})` },
             }),
-            i.createElement(K.J, {
+            i.createElement(J.J, {
               lazyLoad: !0,
               srcs: d,
               className: C().CapsuleImage,
@@ -11474,7 +11476,7 @@
               bHideContainedApps: O,
               bAllowTwoLinesForHeader: F,
               bShowReviewSummary: Y,
-              bShowDeckCompatibilityDialog: K,
+              bShowDeckCompatibilityDialog: J,
               bAutoFocus: Q,
               fnOnClickOverride: q,
               bIsMarketingMessage: $,
@@ -11668,7 +11670,7 @@
                             bMinimizePlatforms: se,
                           }),
                           Boolean(
-                            K &&
+                            J &&
                               0 ==
                                 (null == u ? void 0 : u.GetStoreItemType()) &&
                               u.GetPlatforms(),
@@ -11711,13 +11713,13 @@
                         i.Fragment,
                         null,
                         Boolean(N && Se)
-                          ? i.createElement(J.r, { appid: v.id, bIsMuted: a })
+                          ? i.createElement(K.r, { appid: v.id, bIsMuted: a })
                           : i.createElement(W.x1, {
                               info: D,
                               bShowDemoButton: L,
                               bHidePrice: M,
                               bHideWishlistButton: ve,
-                              bShowDeckCompatibilityDialog: K,
+                              bShowDeckCompatibilityDialog: J,
                             }),
                       )
                     : i.createElement(
@@ -11828,7 +11830,7 @@
         return i.createElement(
           "div",
           { className: (0, E.Z)(l, "CapsuleImageCtn") },
-          i.createElement(K.J, {
+          i.createElement(J.J, {
             lazyLoad: !0,
             srcs: o,
             className: (0, E.Z)(C().CapsuleImage),
@@ -14775,7 +14777,7 @@
             s.createElement(
               "div",
               { className: D.ThemeDefinitionCtn },
-              s.createElement("h3", null, "Sales Stats:"),
+              "Summary: ",
               s.createElement(f.hW, { nTotalGames: a.total_games }),
               Boolean(r) && s.createElement(G, { category: n }),
             ),
@@ -14785,7 +14787,7 @@
               s.createElement("div", null, "Top 5 Games non-F2P:"),
               s.createElement(
                 "div",
-                { className: D.GamesRow },
+                { className: D.GamesColumn },
                 null === (t = a.top_games) || void 0 === t
                   ? void 0
                   : t
@@ -15168,21 +15170,25 @@
           [a] = (0, l.vs)(t.appid, { include_assets: !0 });
         return a
           ? o.createElement(
-              d.ll,
-              {
-                item: { type: "game", id: t.appid },
-                hoverProps: {
-                  direction: "overlay",
-                  style: { minWidth: "320px", maxWidth: "320px" },
-                },
-                className: S.GameItem,
-              },
+              "div",
+              { className: S.GameItem },
               o.createElement(
-                "a",
-                { href: a.GetStorePageURL() },
-                o.createElement("img", { src: a.GetAssets().GetHeaderURL() }),
+                d.ll,
+                {
+                  item: { type: "game", id: t.appid },
+                  hoverProps: {
+                    direction: "overlay",
+                    style: { minWidth: "320px", maxWidth: "320px" },
+                  },
+                  className: S.GameImage,
+                },
+                o.createElement(
+                  "a",
+                  { href: a.GetStorePageURL() },
+                  o.createElement("img", { src: a.GetAssets().GetHeaderURL() }),
+                ),
               ),
-              o.createElement("span", null, "Rank: ", t.long_term_sale_rank),
+              o.createElement("div", null, " Rank: ", t.long_term_sale_rank),
               Boolean(n) && o.createElement(I, Object.assign({}, e)),
             )
           : o.createElement(
@@ -15203,7 +15209,7 @@
           null,
           Boolean(a) &&
             o.createElement(
-              "span",
+              "div",
               null,
               " ",
               "$",
@@ -15211,7 +15217,7 @@
             ),
           Boolean(a && (null == s ? void 0 : s.gross_sales_usd)) &&
             o.createElement(
-              "span",
+              "div",
               null,
               "( ",
               ((a.gross_sales_usd / s.gross_sales_usd) * 100).toFixed(2),
@@ -15309,7 +15315,6 @@
           ? o.createElement(
               "div",
               { className: S.ThemeRevenueCtn },
-              o.createElement("div", null, "Hub Revenue Summary:"),
               o.createElement(
                 "table",
                 null,
@@ -15319,58 +15324,49 @@
                   o.createElement(
                     "tr",
                     null,
-                    o.createElement("td", null, "Total: "),
                     o.createElement(
                       "td",
                       null,
+                      "Total: ",
+                      o.createElement("br", null),
                       "$",
                       Math.floor(t.gross_sales_usd / 100).toLocaleString(),
                     ),
-                  ),
-                  o.createElement(
-                    "tr",
-                    null,
-                    o.createElement("td", null, "Per Day: "),
                     o.createElement(
                       "td",
                       null,
+                      "Per Day: ",
+                      o.createElement("br", null),
                       "$",
                       Math.floor(
                         t.gross_sales_usd / (100 * i.F7),
                       ).toLocaleString(),
                     ),
-                  ),
-                  o.createElement(
-                    "tr",
-                    null,
-                    o.createElement("td", null, "Total Units: "),
                     o.createElement(
                       "td",
                       null,
+                      "Total Units: ",
+                      o.createElement("br", null),
                       t.gross_units_sold.toLocaleString(),
                     ),
-                  ),
-                  o.createElement(
-                    "tr",
-                    null,
-                    o.createElement("td", null, "Units Per Day: "),
                     o.createElement(
                       "td",
                       null,
+                      "Units Per Day: ",
+                      o.createElement("br", null),
                       Math.floor(t.gross_units_sold / i.F7).toLocaleString(),
                     ),
-                  ),
-                  o.createElement(
-                    "tr",
-                    null,
                     Boolean(t.gross_sales_usd > 0) &&
                       o.createElement(
                         o.Fragment,
                         null,
-                        o.createElement("td", null, "Top ", i.vF, " Apps:"),
                         o.createElement(
                           "td",
                           null,
+                          "Top ",
+                          i.vF,
+                          " Apps: ",
+                          o.createElement("br", null),
                           o.createElement(
                             "span",
                             {

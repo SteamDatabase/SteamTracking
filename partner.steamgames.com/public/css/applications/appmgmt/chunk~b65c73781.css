@@ -6544,10 +6544,18 @@ button.DialogButton.Primary._1SeDTJwMXlTMLLf2zBlrG0 {
 ._298xIUAc2r1LzqBC6YgpJG .RacQWVhlOFswJZjjnxkul {
   flex-grow: 1;
   position: relative;
-  background: #1a75c2;
   margin-bottom: 2px;
-  padding: 5px 6px;
   border-radius: 3px;
+}
+._298xIUAc2r1LzqBC6YgpJG .RacQWVhlOFswJZjjnxkul:not(._2TKFBv2u8j98_U8GUmaer) {
+  padding: 5px 6px;
+  background: #1a75c2;
+}
+._298xIUAc2r1LzqBC6YgpJG .RacQWVhlOFswJZjjnxkul._2TKFBv2u8j98_U8GUmaer {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: #31333a;
+  background-position-y: 7px;
 }
 ._298xIUAc2r1LzqBC6YgpJG .RacQWVhlOFswJZjjnxkul .DialogCheckbox_Container {
   width: fit-content;
@@ -6791,6 +6799,10 @@ textarea.VaLwylBilZSHWeTdxBQQC {
 }
 ._2StVtbEDNO5xhWjjAuvXBT div._3Slqmy9X_4XKVBaosBcqbG:after {
   border-left-color: #5e832d;
+}
+._3ZLpLM_zY-MFBGz76igjDJ {
+  min-height: 360px;
+  margin-top: 16px;
 }
 ._2x-6cuvBy6bHEXSnLoKlYi {
   background: #2e3138;
@@ -8610,6 +8622,11 @@ textarea._2V4yU656RPmLOdVgyglB17 {
   margin-top: 22px;
   color: #fff;
   font-weight: 500;
+}
+._2ZE7VRLkz02vD4UGS2B_dH {
+  width: 231px;
+  height: auto;
+  margin-right: 8px;
 }
 ._1IVr1rWbkO_nsOEdKNnI7X {
   position: relative;
