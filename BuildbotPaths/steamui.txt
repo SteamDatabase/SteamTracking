@@ -61,6 +61,7 @@
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/osxhelpers.mm
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/pipes.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/platform_sockets_posix.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/processkill.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/processpipe_posix.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/processworkitem.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/registry.cpp
