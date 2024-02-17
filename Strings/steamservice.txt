@@ -72,6 +72,7 @@ __LINKEDIT
 0
 @D0
 P
+$
 
 *
 `
@@ -8788,7 +8789,7 @@ Steam Helper
 cefwebhelper
 1.0
 Feb 16 2024
-12:11:39
+15:40:46
 Jan
 Feb
 Mar

@@ -11,8 +11,12 @@ message CTransportAuth_Authenticate_Request {
 message CTransportAuth_Authenticate_Response {
 }
 
+message CTransportAuth_StartShutdown_Notification {
+}
+
 service TransportAuth {
 	option (webui_service_execution_site) = k_EClientExecutionSiteAny;
 
 	rpc Authenticate (.CTransportAuth_Authenticate_Request) returns (.CTransportAuth_Authenticate_Response);
+	rpc NotifyStartShutdown (.CTransportAuth_StartShutdown_Notification) returns (.WebUINoResponse);
 }

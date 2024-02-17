@@ -8000,7 +8000,7 @@
     "FamilyGroup_GameOwnerLocked": "In use by your Steam Family member ",
     "FamilyGroup_ManageFamily": "Manage your Steam Family",
     "FamilyGroup_Offline": "Your Steam Family '%1$s' can't be managed while offline",
-    "FamilyGroup_JoinClientBeta": "You are a member of a Steam Family and need to join the <1>Steam Client Beta</1> to enable library sharing on this device.",
+    "FamilyGroup_JoinClientBeta": "You are a member of a Steam Family and need to participate in the <1>Steam Families Beta</1> to enable library sharing on this device.",
     "AppLaunchError_PlaytimeLimitExceeded_Minutes": "You've used all of your available minutes for today.",
     "AppLaunchError_PlaytimeLimitExceeded_Window": "You've been blocked from playing at the current time.",
     "FamilyView_RequestPlaytime_Title": "Out of Playtime",
