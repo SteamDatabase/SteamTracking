@@ -1242,6 +1242,8 @@
         VisibilityFilterCtn: "hPops4DbAJCvfMUt2K7tu",
         MarketingMessageSearch: "_36QLW88mlNMDXRwcocgctz",
         OtherLinks: "_1ePXECwiPS_VGuhB4uh4Qy",
+        EventContainer: "_2nYdhByvfAdvZPHDFyt_Ku",
+        EventNotesTooltipIndicator: "_3Ab46MTXfA0egFEwYoU0Jr",
       };
     },
     82701: (e) => {
@@ -1284,6 +1286,8 @@
         StatusBtn: "_3btXS661T4IU89cO5eo8XE",
         InputContainer: "JbwjfTH4nnQrsq16Hztqe",
         PromoName: "_2tLRc5NDSTZGzLadmTD8EH",
+        AdminNotesText: "_2EeD_fx7U_0Bcelj9YqNlw",
+        PromotionPlannerText: "_2jOn18K8Q6EDLSqEeNMVfa",
         TypeCtn: "Lw9EhG5HAG-zXYwNwUdl1",
         EventDetailsCtn: "_1UwWTpxA7qhaSOlJpNgwsR",
         AdminNotesCtn: "_3ZkUKKY3MbHhKyVBav_wtN",
@@ -17029,18 +17033,19 @@
       "use strict";
       n.d(t, {
         FF: () => g,
-        Ii: () => f,
-        R7: () => v,
+        Ii: () => y,
+        R7: () => E,
         Rg: () => m,
-        Vd: () => E,
-        b5: () => y,
-        gl: () => S,
+        Vd: () => S,
+        b5: () => b,
+        ex: () => v,
+        gl: () => D,
         hZ: () => u,
         j: () => p,
         kj: () => _,
         nR: () => c,
         pk: () => h,
-        tA: () => D,
+        tA: () => f,
         ti: () => d,
       });
       var a = n(35427),
@@ -17089,7 +17094,7 @@
         p.set("informational", "Informational"),
         p.set("dailydeal", "Daily Deal"),
         p.set("vacation", "Vacation/PTO"),
-        p.set("important", "Takeover / Takeunder"),
+        p.set("important", "Takeover / Takeunder [DON'T USE]"),
         p.set("preload", "Pre-load"),
         p.set("assetrequest", "Asset Request Only");
       const _ = new Set();
@@ -17121,12 +17126,16 @@
         g.set("important", "#discount_desc_limited_time_date"),
         g.set("preload", "#discount_desc_limited_time_date");
       const v = new Map();
-      v.set("none", ""),
-        v.set("takeover", "Takeover"),
-        v.set("takeunder", "Takeunder"),
-        v.set("steamchina_takeover", "SC Takeover"),
-        v.set("steamchina_only", "SC");
-      const E = [
+      v.set("midweek", ["Midweek", "Midweek Deal"]),
+        v.set("weekenddeal", ["Weekend", "Weekend Deal"]);
+      const E = new Map();
+      E.set("none", ""),
+        E.set("takeover", "Takeover"),
+        E.set("takeunder", "Takeunder"),
+        E.set("hub_takeover", "Hub takeover"),
+        E.set("steamchina_takeover", "SC Takeover"),
+        E.set("steamchina_only", "SC");
+      const S = [
         "spotlight_art",
         "marketingmessage_art",
         "marketingmessage_art_2",
@@ -17140,7 +17149,7 @@
         "product_banner",
         "product_mobile_banner",
       ];
-      function S(e) {
+      function D(e) {
         switch (e) {
           case "marketingmessage_art":
             return "Marketing Message Banner";
@@ -17170,7 +17179,7 @@
             return "Unknown Promo Art Request";
         }
       }
-      class D {
+      class f {
         static GetSpotlightEditURL(e) {
           return s.De.PARTNER_BASE_URL + "admin/store/spotlight/" + e;
         }
@@ -17182,11 +17191,11 @@
         static GetClusterEditURL(e, t) {
           switch (e) {
             case o.R6.k_ConfigPage_Takeover:
-              return D.GetTakeoverEditURL(t);
+              return f.GetTakeoverEditURL(t);
             case o.R6.k_ConfigPage_Takeunder:
-              return D.GetTakeunderEditURL(t);
+              return f.GetTakeunderEditURL(t);
             case o.R6.k_ConfigPage_TakeoverSteamChina:
-              return D.GetSteamChinaTakeoverEditURL(t);
+              return f.GetSteamChinaTakeoverEditURL(t);
           }
           return "";
         }
@@ -17244,8 +17253,8 @@
           return s.De.PARTNER_BASE_URL + "apps/landing/" + e;
         }
       }
-      const f = new Map();
-      f.set("midweek", {
+      const y = new Map();
+      y.set("midweek", {
         nMaxSlots: 6,
         rtStartModifier: 10 * r._H.PerHour,
         rtEndModifier: 3 * r._H.PerDay + 10 * r._H.PerHour,
@@ -17266,7 +17275,7 @@
         nDaysDiscountEvent: 7,
         rtDays: 3,
       }),
-        f.set("weekenddeal", {
+        y.set("weekenddeal", {
           nMaxSlots: 6,
           rtStartModifier: 3 * r._H.PerDay + 10 * r._H.PerHour,
           rtEndModifier: 7 * r._H.PerDay + 10 * r._H.PerHour,
@@ -17287,8 +17296,8 @@
           nDaysDiscountEvent: 7,
           rtDays: 4,
         });
-      const y = ["midweek", "weekenddeal"];
-      new Set(y);
+      const b = ["midweek", "weekenddeal"];
+      new Set(b);
     },
     14790: (e, t, n) => {
       "use strict";
@@ -23369,6 +23378,9 @@
         GetAdminNotes() {
           return this.m_oPromotionPlan.admin_notes;
         }
+        GetPromotionPlannerNote() {
+          return this.m_oPromotionPlan.promotion_planner_notes;
+        }
         BOnWatchList(e) {
           var t;
           return null === (t = this.m_oPromotionPlan.watch_list) || void 0 === t
@@ -24197,6 +24209,11 @@
           this.m_oPromotionPlan.admin_notes !== e &&
             ((this.m_oPromotionPlan.admin_notes = e), this.Dispatch());
         }
+        SetPromotionPlannerNote(e) {
+          this.m_oPromotionPlan.promotion_planner_notes !== e &&
+            ((this.m_oPromotionPlan.promotion_planner_notes = e),
+            this.Dispatch());
+        }
         SetAdvertisingAppID(e) {
           this.m_oPromotionPlan.advertising_appid !== e &&
             ((this.m_oPromotionPlan.advertising_appid = e), this.Dispatch());
@@ -24355,6 +24372,7 @@
         (0, a.gn)([l.ak], u.prototype, "SetType", null),
         (0, a.gn)([l.ak], u.prototype, "SetFeaturingIntention", null),
         (0, a.gn)([l.ak], u.prototype, "SetAdminNote", null),
+        (0, a.gn)([l.ak], u.prototype, "SetPromotionPlannerNote", null),
         (0, a.gn)([l.ak], u.prototype, "SetAdvertisingAppID", null),
         (0, a.gn)([l.ak], u.prototype, "SetAdvertisingAppIDReviewed", null),
         (0, a.gn)([l.ak], u.prototype, "SetAdvertisingAppIDFromString", null),
@@ -51422,7 +51440,7 @@
     },
     9071: (e, t, n) => {
       "use strict";
-      n.d(t, { _: () => W, h: () => z });
+      n.d(t, { _: () => Z, h: () => K });
       var a = n(76330),
         i = n(1698),
         l = n(51485),
@@ -51475,14 +51493,15 @@
         B = n(64936),
         x = n(65255),
         M = n(20166),
-        O = n(26475);
-      const F = (0, G.Zt)(R());
-      function U(e) {
+        O = n(26475),
+        F = n(59728);
+      const U = (0, G.Zt)(R());
+      function V(e) {
         const t = Math.floor(e.getTime() / 1e3) + 86400;
         if (B.JW.GetTimeNowWithOverride() > t)
           return { className: "DayInThePast" };
       }
-      function V(e) {
+      function H(e) {
         const {
             viewDate: t,
             fnSetMonthDelta: n,
@@ -51517,20 +51536,28 @@
         }, [r, l]);
         const [_, h] = o.useState(12),
           g = (0, s.l7)(_, i.b5);
-        _ < 6 * X(new Date(), t) && h(6 * X(new Date(), t));
+        _ < 6 * q(new Date(), t) && h(6 * q(new Date(), t));
         const E = (0, o.useMemo)(() => {
           const e = u
             .filter((e) => r.size == i.nR.length || r.has(e.type))
             .map((e) => {
-              let t = Boolean(e.reviewed_by_account) ? "🗹 " : "☐ ";
+              let t,
+                n = e.name;
+              if (
+                (e.intention && "none" != e.intention
+                  ? (t = [i.R7.get(e.intention)])
+                  : e.type && i.ex.has(e.type) && (t = i.ex.get(e.type)),
+                null == t ? void 0 : t.length)
+              ) {
+                for (const e of t)
+                  n = n.replace(new RegExp("^" + e + "\\s*[:-]\\s*", "i"), "");
+                n = t[0] + " - " + n;
+              }
               return (
-                e.intention &&
-                  "none" != e.intention &&
-                  (t += i.R7.get(e.intention) + " "),
-                (t += e.name),
+                (n = (e.reviewed_by_account ? "🗹 " : "☐ ") + n),
                 {
                   allDay: !1,
-                  title: t,
+                  title: n,
                   start: new Date(1e3 * e.start_date),
                   end: new Date(1e3 * (e.end_date - 39600 - 1)),
                   resource: e,
@@ -51589,7 +51616,7 @@
         return o.createElement(
           "div",
           { className: C().CalendarCtn },
-          o.createElement(H, {
+          o.createElement(j, {
             rgVisiblePromotionTypes: r,
             fnSetVisiblePromotionTypes: c,
             rgAvailableTypes: i.nR,
@@ -51598,14 +51625,14 @@
             views: ["month"],
             popup: !0,
             defaultView: "month",
-            localizer: F,
+            localizer: U,
             date: t,
             onNavigate: (e) => {
-              const t = X(new Date(), e);
-              _ < 5 * t && h(5 * t), n(X(new Date(), e));
+              const t = q(new Date(), e);
+              _ < 5 * t && h(5 * t), n(q(new Date(), e));
             },
             events: E,
-            dayPropGetter: U,
+            dayPropGetter: V,
             style: { height: 2400 },
             showMultiDayTimes: !0,
             onSelectEvent: (e, t) => {
@@ -51645,10 +51672,32 @@
               }
             },
             eventPropGetter: (e) => (0, O.Z4)(e.resource),
+            components: { event: X },
           }),
         );
       }
-      function H(e) {
+      const X = (e) => {
+        var t;
+        const n =
+          null === (t = e.event.resource) || void 0 === t
+            ? void 0
+            : t.promotion_planner_notes;
+        return o.createElement(
+          "span",
+          { className: C().EventContainer },
+          e.title,
+          n &&
+            o.createElement(
+              F.HP,
+              {
+                className: C().EventNotesTooltipIndicator,
+                toolTipContent: o.createElement(F.vd, null, n),
+              },
+              "(note)",
+            ),
+        );
+      };
+      function j(e) {
         const {
           rgVisiblePromotionTypes: t,
           fnSetVisiblePromotionTypes: n,
@@ -51679,14 +51728,14 @@
           ),
         );
       }
-      function X(e, t) {
+      function q(e, t) {
         return (
           t.getMonth() - e.getMonth() + 12 * (t.getFullYear() - e.getFullYear())
         );
       }
-      var j = n(31941),
-        q = n(69176);
-      function W(e) {
+      var W = n(31941),
+        z = n(69176);
+      function Z(e) {
         const t = (0, c.Qv)(e);
         return (
           (null == t ? void 0 : t.m_strPlayerName) ||
@@ -51694,7 +51743,7 @@
           "" + e
         );
       }
-      function z(e) {
+      function K(e) {
         const { fnResetDirtyPlan: t } = (0, r.u9)(),
           { fnResetDirtyPlanInputPipeline: n } = (0, l.R0)(),
           [m, h] = (0, _.Ar)("tab", "current"),
@@ -51731,7 +51780,7 @@
                 : B,
             [B, A],
           ),
-          [M, O, F, U, H, X, j, z] = (0, o.useMemo)(() => {
+          [M, O, F, U, V, X, j, q] = (0, o.useMemo)(() => {
             const e = new Array(),
               t = new Array(),
               n = new Array(),
@@ -51753,13 +51802,13 @@
                     (null === (d = c.name) || void 0 === d
                       ? void 0
                       : d.toLocaleLowerCase().indexOf(e)) >= 0 ||
-                    W(c.owner_account_id || c.creator_account_id)
+                    Z(c.owner_account_id || c.creator_account_id)
                       .toLocaleLowerCase()
                       .indexOf(e) >= 0 ||
-                    W(c.artwork_owner_account_id)
+                    Z(c.artwork_owner_account_id)
                       .toLocaleLowerCase()
                       .indexOf(e) >= 0 ||
-                    W(c.operator_account_id).toLocaleLowerCase().indexOf(e) >=
+                    Z(c.operator_account_id).toLocaleLowerCase().indexOf(e) >=
                       0 ||
                     ("" + c.store_item_id).indexOf(e) >= 0),
                     p && o.push(c.id);
@@ -51801,8 +51850,8 @@
               [e, t, n, a, i, l, r, o]
             );
           }, [x, y]),
-          Y = (e) => h(e.key),
-          Q = [
+          W = (e) => h(e.key),
+          K = [
             {
               name: "Calendar",
               key: "current",
@@ -51812,7 +51861,7 @@
                 o.createElement(
                   b.j,
                   { bSkipLoadingPackages: T },
-                  o.createElement(V, {
+                  o.createElement(H, {
                     viewDate: L,
                     fnSetMonthDelta: G,
                     nOwnerAccountToFilter: A,
@@ -51820,7 +51869,7 @@
                   }),
                 ),
               ),
-              onClick: Y,
+              onClick: W,
             },
             {
               name: `Tentative (${(null == M ? void 0 : M.length) || 0})`,
@@ -51829,12 +51878,12 @@
               contents: o.createElement(
                 p.SV,
                 null,
-                o.createElement(q.N, {
+                o.createElement(z.N, {
                   planIDs: M,
                   nUrgentWindowInSeconds: 6 * f._H.PerDay,
                 }),
               ),
-              onClick: Y,
+              onClick: W,
             },
             {
               name: `Awaiting Partner (${
@@ -51846,12 +51895,12 @@
               contents: o.createElement(
                 p.SV,
                 null,
-                o.createElement(q.N, {
+                o.createElement(z.N, {
                   planIDs: O,
                   nUrgentWindowInSeconds: 6 * f._H.PerDay,
                 }),
               ),
-              onClick: Y,
+              onClick: W,
             },
             {
               name: `Delivery Ops Review (${
@@ -51863,13 +51912,13 @@
               contents: o.createElement(
                 p.SV,
                 null,
-                o.createElement(q.N, {
+                o.createElement(z.N, {
                   planIDs: F,
                   bAllowAutoRefresh: !0,
                   sortByUnclaimedField: "operator_account_id",
                 }),
               ),
-              onClick: Y,
+              onClick: W,
             },
             {
               name: `Awaiting Design (${(null == U ? void 0 : U.length) || 0})`,
@@ -51877,18 +51926,18 @@
               contents: o.createElement(
                 p.SV,
                 null,
-                o.createElement(q.N, {
+                o.createElement(z.N, {
                   planIDs: U,
                   sortByUnclaimedField: "artwork_owner_account_id",
                   bAllowAutoRefresh: !0,
                   nUrgentWindowInSeconds: 1 * f._H.PerDay,
                 }),
               ),
-              onClick: Y,
+              onClick: W,
             },
             {
               name: `Awaiting Partner Approvals (${
-                (null == H ? void 0 : H.length) || 0
+                (null == V ? void 0 : V.length) || 0
               })`,
               tooltip:
                 "On case where are required to provide assets for the partner to review prior to launch of the promotion",
@@ -51896,9 +51945,9 @@
               contents: o.createElement(
                 p.SV,
                 null,
-                o.createElement(q.N, { planIDs: H }),
+                o.createElement(z.N, { planIDs: V }),
               ),
-              onClick: Y,
+              onClick: W,
             },
             {
               name: `Waiting on Loc (${(null == X ? void 0 : X.length) || 0})`,
@@ -51906,12 +51955,12 @@
               contents: o.createElement(
                 p.SV,
                 null,
-                o.createElement(q.N, {
+                o.createElement(z.N, {
                   planIDs: X,
                   nUrgentWindowInSeconds: 1 * f._H.PerDay,
                 }),
               ),
-              onClick: Y,
+              onClick: W,
             },
             {
               name: `Awaiting Ops Review (${
@@ -51921,26 +51970,26 @@
               contents: o.createElement(
                 p.SV,
                 null,
-                o.createElement(q.N, {
+                o.createElement(z.N, {
                   planIDs: j,
                   bAllowAutoRefresh: !0,
                   sortByUnclaimedField: "operator_account_id",
                 }),
               ),
-              onClick: Y,
+              onClick: W,
             },
           ];
         return (
           y.trim().length > 0 &&
-            Q.push({
-              name: `Search Results (${(null == z ? void 0 : z.length) || 0})`,
+            K.push({
+              name: `Search Results (${(null == q ? void 0 : q.length) || 0})`,
               key: "search",
               contents: o.createElement(
                 p.SV,
                 null,
-                o.createElement(q.N, { planIDs: z }),
+                o.createElement(z.N, { planIDs: q }),
               ),
-              onClick: Y,
+              onClick: W,
             }),
           o.createElement(
             "div",
@@ -51992,26 +52041,26 @@
                   },
                   "Create New Promotion",
                 ),
-                o.createElement(Z, { nAccountID: A, fnSetAccountFilter: P }),
+                o.createElement(Y, { nAccountID: A, fnSetAccountFilter: P }),
               ),
             ),
             o.createElement("hr", { className: "VO" }),
-            o.createElement(E.n, { tabs: Q }),
+            o.createElement(E.n, { tabs: K }),
             o.createElement("div", { className: g().ClearThings }),
             o.createElement("hr", { className: "VO" }),
-            o.createElement(K, null),
+            o.createElement(Q, null),
           )
         );
       }
-      function Z(e) {
+      function Y(e) {
         return o.createElement(
-          j.$t,
+          W.$t,
           Object.assign({}, e, {
             rgAdditional: [{ data: null, label: "Show All Users Plan" }],
           }),
         );
       }
-      function K(e) {
+      function Q(e) {
         return o.createElement(
           "div",
           { className: C().OtherLinks },
@@ -62830,6 +62879,11 @@
                 tooltip: "Takeunder is the highest possible special visibility",
               }),
               e.push({
+                label: l.R7.get("hub_takeover"),
+                data: "hub_takeover",
+                tooltip: "Takeover on a particular content hub",
+              }),
+              e.push({
                 label: l.R7.get("steamchina_takeover"),
                 data: "steamchina_takeover",
                 tooltip:
@@ -64933,7 +64987,9 @@
               },
               "Promotion Requires an Advertising App or Config App which hasn't been linked yet.",
             ),
-          Boolean((i || E.includes(Je.k_SalePage)) && !l) &&
+          Boolean(
+            (i || E.includes(Je.k_SalePage)) && !l && "seasonalsale" != a,
+          ) &&
             u.createElement(
               "div",
               {
@@ -67192,11 +67248,32 @@
                         { className: G.AdminNotesCtn },
                         u.createElement(v.__, null, "Admin Notes:"),
                         u.createElement("textarea", {
-                          className: "DialogTextInputBase",
+                          className: (0, k.Z)(
+                            "DialogTextInputBase",
+                            G.AdminNotesText,
+                          ),
                           value: t.GetAdminNotes() || "",
                           onChange: (e) => {
                             var n;
                             return t.SetAdminNote(
+                              (null ===
+                                (n = null == e ? void 0 : e.currentTarget) ||
+                              void 0 === n
+                                ? void 0
+                                : n.value) || "",
+                            );
+                          },
+                        }),
+                        u.createElement(v.__, null, "Promotion Planner Notes:"),
+                        u.createElement("textarea", {
+                          className: (0, k.Z)(
+                            "DialogTextInputBase",
+                            G.PromotionPlannerText,
+                          ),
+                          value: t.GetPromotionPlannerNote() || "",
+                          onChange: (e) => {
+                            var n;
+                            return t.SetPromotionPlannerNote(
                               (null ===
                                 (n = null == e ? void 0 : e.currentTarget) ||
                               void 0 === n

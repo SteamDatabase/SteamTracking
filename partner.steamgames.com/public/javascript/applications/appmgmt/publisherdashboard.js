@@ -241,7 +241,7 @@
     },
     35339: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { EAppTestType: () => le, default: () => se });
+      n.r(t), n.d(t, { EAppTestType: () => re, default: () => ce });
       var a = n(47427),
         i = n(37563),
         o = n(15798),
@@ -526,7 +526,7 @@
           })(this.m_plan);
         }
         getElement() {
-          return a.createElement(C, { eventData: this });
+          return a.createElement(k, { eventData: this });
         }
         dataChanged() {
           this.m_mapChangedEvents.forEach((e) => e());
@@ -539,13 +539,13 @@
           );
         }
       }
-      function C(e) {
+      function k(e) {
         const { eventData: t } = e;
         return "nextfest" == t.m_plan.type || "themesale" === t.m_plan.type
-          ? a.createElement(P, { eventData: t })
-          : a.createElement(k, { eventData: t });
+          ? a.createElement(x, { eventData: t })
+          : a.createElement(C, { eventData: t });
       }
-      function k(e) {
+      function C(e) {
         const { eventData: t } = e,
           n = t.m_plan,
           { data: i, isLoading: o } = (0, N.n$)(n.discount_event_id),
@@ -568,7 +568,7 @@
           ),
         );
       }
-      function P(e) {
+      function x(e) {
         var t, n, o, l, r, s, c, m, d;
         const { eventData: p } = e,
           v = (0, I.jM)(i.De.LANGUAGE),
@@ -633,7 +633,7 @@
         return a.createElement(
           a.Fragment,
           null,
-          a.createElement(x, {
+          a.createElement(P, {
             warnings: D,
             eventName: E,
             startTime: h,
@@ -650,7 +650,7 @@
             }),
         );
       }
-      function x(e) {
+      function P(e) {
         const {
           eventName: t,
           eventUrl: n,
@@ -913,19 +913,19 @@
         var h;
       }
       function A(e, t, n, i) {
-        const o = F(),
+        const o = G(),
           r =
             "nextfest" != i.type &&
             "themesale" != i.type &&
             "seasonalsale" != i.type;
-        let s = r ? i.name : "...";
+        let s = r ? B(i.name) : "...";
         return (
           t ||
             ((s = n),
             s ||
               (s =
                 r || o.bShowWarnings
-                  ? i.name
+                  ? B(i.name)
                   : (0, l.Xx)(
                       "#Dashboard_UpcomingEvents_Events_UnknownEventTitle",
                     ))),
@@ -936,6 +936,18 @@
         );
       }
       function B(e) {
+        const t = [
+          "takeover",
+          "takeunder",
+          "midweek",
+          "midweek deal",
+          "weekend deal",
+        ];
+        for (const n of t)
+          e = e.replace(new RegExp("^" + n + "\\s*[:-]\\s*", "i"), "");
+        return e;
+      }
+      function X(e) {
         switch (e) {
           case "deadline":
             return (
@@ -955,11 +967,11 @@
         }
       }
       (0, f.gn)([T.ak], R.prototype, "dataChanged", null);
-      const X = a.createContext({ bShowWarnings: !1 });
-      function F() {
-        return a.useContext(X);
+      const F = a.createContext({ bShowWarnings: !1 });
+      function G() {
+        return a.useContext(F);
       }
-      function G(e) {
+      function M(e) {
         const {
             partnerId: t,
             promotionPlans: n,
@@ -972,8 +984,8 @@
             eventIds: v,
           } = e,
           [u, _] = a.useState(0),
-          E = q(u),
-          D = q(u + 1),
+          E = Y(u),
+          D = Y(u + 1),
           h = a.useMemo(() => {
             const e = new Date();
             e.setHours(0, 0, 0, 0);
@@ -1010,7 +1022,7 @@
               ].map((e) =>
                 Object.assign(Object.assign({}, e), {
                   id: "fake_" + e.title,
-                  getEventTypeName: () => B(e.eventType),
+                  getEventTypeName: () => X(e.eventType),
                   getElement: () => a.createElement("div", null, e.title),
                 }),
               );
@@ -1033,7 +1045,7 @@
                 date: t(i),
                 eventType: o,
                 id: "fake_" + e.toString(),
-                getEventTypeName: () => B(o),
+                getEventTypeName: () => X(o),
                 getElement: () =>
                   a.createElement("div", null, "Generated event" + e),
                 registerForChange: void 0,
@@ -1098,7 +1110,7 @@
           N = a.useRef(),
           w = a.useRef();
         return a.createElement(
-          X.Provider,
+          F.Provider,
           { value: { bShowWarnings: m } },
           a.createElement(
             c,
@@ -1109,7 +1121,7 @@
               a.createElement(
                 "div",
                 { className: d.CalendarContainer },
-                a.createElement(M, {
+                a.createElement(W, {
                   viewDate: E,
                   fnSetMonthDelta: _,
                   fnScrollToTop: () => {
@@ -1117,17 +1129,17 @@
                   },
                   earliestDate: o,
                 }),
-                a.createElement(V, null),
-                a.createElement(W, {
+                a.createElement(H, null),
+                a.createElement(j, {
                   viewDate: E,
                   events: S,
                   bShowPreceedingWeeks: !0,
                   dayRefsToScrollTo: b,
                   refScrollContainer: N,
                 }),
-                a.createElement(M, { viewDate: D }),
-                a.createElement(V, null),
-                a.createElement(W, {
+                a.createElement(W, { viewDate: D }),
+                a.createElement(H, null),
+                a.createElement(j, {
                   viewDate: D,
                   events: S,
                   bShowFollowingWeeks: !0,
@@ -1139,9 +1151,9 @@
                 "div",
                 { className: d.ListArea },
                 a.createElement(
-                  Y,
+                  J,
                   null,
-                  a.createElement(J, {
+                  a.createElement($, {
                     events: S,
                     dayRefsToScrollTo: b,
                     refSection: w,
@@ -1153,7 +1165,7 @@
           ),
         );
       }
-      function M(e) {
+      function W(e) {
         const {
             viewDate: t,
             fnSetMonthDelta: n,
@@ -1202,7 +1214,7 @@
           ),
         );
       }
-      function W(e) {
+      function j(e) {
         var t;
         const {
             viewDate: n,
@@ -1214,8 +1226,8 @@
           } = e,
           c = new Date();
         c.setHours(0, 0, 0, 0);
-        const m = te(i, H),
-          v = Z(n, -n.getDay()),
+        const m = ne(i, Q),
+          v = q(n, -n.getDay()),
           u = new Date(n.getFullYear(), n.getMonth() + 1, 0).getDate();
         let _ = 6;
         _ =
@@ -1231,17 +1243,17 @@
           g = [];
         for (let e = 0; e < _; e++) {
           const i = [],
-            u = Z(v, 7 * e);
+            u = q(v, 7 * e);
           for (let e = 0; e < 7; e++) {
-            const v = Z(u, e),
-              _ = H(v),
+            const v = q(u, e),
+              _ = Q(v),
               g = n.getMonth() === v.getMonth(),
               D = g || (o && v <= n) || (l && v >= n),
               h = _.getTime() === c.getTime(),
               f =
                 null === (t = m.get(_.getTime())) || void 0 === t
                   ? void 0
-                  : t.sort(ae),
+                  : t.sort(ie),
               T = null == f ? void 0 : f.some((e) => "deadline" == e.eventType),
               y = null == f ? void 0 : f.some((e) => "release" == e.eventType),
               I = null == f ? void 0 : f.some((e) => "event" == e.eventType),
@@ -1255,14 +1267,14 @@
                 I && d.Event,
               ),
               b = () => {
-                const e = null == r ? void 0 : r.get(H(v).getTime());
+                const e = null == r ? void 0 : r.get(Q(v).getTime());
                 if (!e) return;
-                const t = ie(s.current, e);
+                const t = oe(s.current, e);
                 s.current.scrollTop = t;
               };
             i.push(
               a.createElement(
-                j,
+                z,
                 { key: e, date: v, daysEvents: f, tooltipDateFormat: E },
                 a.createElement(
                   "div",
@@ -1276,21 +1288,21 @@
         }
         return a.createElement(a.Fragment, null, g);
       }
-      function j(e) {
+      function z(e) {
         const { date: t, daysEvents: n, tooltipDateFormat: i, children: o } = e;
         if (!n) return a.createElement(a.Fragment, null, o);
         const l = a.createElement(
           "div",
           { className: d.DayTooltipContainer },
           a.createElement("div", { className: d.DayTooltipDate }, i.format(t)),
-          n.map((e) => a.createElement(z, { key: e.id, event: e })),
+          n.map((e) => a.createElement(V, { key: e.id, event: e })),
         );
         return a.createElement(S.HP, { toolTipContent: l }, o);
       }
-      function z(e) {
+      function V(e) {
         const { event: t } = e;
         return (
-          oe(t),
+          le(t),
           a.createElement(
             "div",
             {
@@ -1307,7 +1319,7 @@
           )
         );
       }
-      function V(e) {
+      function H(e) {
         const t = new Intl.DateTimeFormat(navigator.language, {
             weekday: "short",
           }),
@@ -1322,35 +1334,35 @@
           ),
         );
       }
-      function H(e) {
+      function Q(e) {
         const t = new Date(e.getTime());
         return t.setHours(0, 0, 0, 0), t;
       }
-      function Q(e) {
+      function Z(e) {
         const t = new Date(e.getTime());
         return t.setDate(1), t.setHours(0, 0, 0, 0), t;
       }
-      function Z(e, t) {
+      function q(e, t) {
         return new Date(e.getTime() + t * v._H.PerDay * 1e3);
       }
-      function q(e) {
+      function Y(e) {
         return a.useMemo(() => {
           const t = new Date();
           return t.setDate(1), t.setMonth(t.getMonth() + e), t;
         }, [e]);
       }
-      function Y(e) {
+      function J(e) {
         const { children: t } = e;
         return a.createElement("div", null, t);
       }
-      function J(e) {
+      function $(e) {
         const {
             events: t,
             dayRefsToScrollTo: n,
             refSection: i,
             refScrollContainer: o,
           } = e,
-          r = Array.from(te(t, Q)).sort(ne),
+          r = Array.from(ne(t, Z)).sort(ae),
           [s, c] = a.useState(!1),
           [m, v] = a.useState(!1);
         return (
@@ -1377,7 +1389,7 @@
                 ref: o,
               },
               r.map(([e, t]) =>
-                a.createElement($, {
+                a.createElement(K, {
                   key: e,
                   date: new Date(e),
                   events: t,
@@ -1406,9 +1418,9 @@
           )
         );
       }
-      function $(e) {
+      function K(e) {
         const { date: t, events: n, dayRefsToScrollTo: i } = e,
-          o = Array.from(te(n, H)).sort(ne),
+          o = Array.from(ne(n, Q)).sort(ae),
           l = a.useRef();
         return a.createElement(
           "div",
@@ -1427,7 +1439,7 @@
                   }).format(e))(new Date(t)),
           ),
           o.map(([e, t]) =>
-            a.createElement(K, {
+            a.createElement(ee, {
               key: e,
               date: new Date(e),
               events: t,
@@ -1436,19 +1448,19 @@
           ),
         );
       }
-      function K(e) {
+      function ee(e) {
         const { date: t, events: n, refScrollTo: i } = e,
-          o = n.sort(ae);
+          o = n.sort(ie);
         return a.createElement(
           "div",
           { ref: i, className: d.ListDay },
-          o.map((e) => a.createElement(ee, { key: e.id, event: e })),
+          o.map((e) => a.createElement(te, { key: e.id, event: e })),
         );
       }
-      function ee(e) {
+      function te(e) {
         const { event: t } = e,
-          n = F();
-        oe(t);
+          n = G();
+        le(t);
         const i = "deadline" == t.eventType,
           o = "release" == t.eventType,
           l = "event" == t.eventType,
@@ -1493,17 +1505,17 @@
           )
         );
       }
-      function te(e, t) {
+      function ne(e, t) {
         return e.reduce((e, n) => {
           const a = t(n.date),
             i = e.get(a.getTime()) || [];
           return e.set(a.getTime(), [...i, n]), e;
         }, new Map());
       }
-      function ne(e, t) {
+      function ae(e, t) {
         return e[0] - t[0];
       }
-      function ae(e, t) {
+      function ie(e, t) {
         return e.date.getTime() < t.date.getTime()
           ? -1
           : e.date.getTime() > t.date.getTime()
@@ -1518,7 +1530,7 @@
           ? 1
           : 0;
       }
-      function ie(e, t) {
+      function oe(e, t) {
         const { element: n, header: a } = t;
         return (
           n.getBoundingClientRect().top -
@@ -1527,7 +1539,7 @@
           e.scrollTop
         );
       }
-      function oe(e) {
+      function le(e) {
         const t = (0, T.NW)();
         a.useEffect(() => {
           var n;
@@ -1538,11 +1550,11 @@
           return () => (null == a ? void 0 : a.unregister());
         });
       }
-      var le,
-        re = n(9781);
-      function se(e) {
+      var re,
+        se = n(9781);
+      function ce(e) {
         var t;
-        const n = (0, re.N)(),
+        const n = (0, se.N)(),
           o = (0, i.kQ)("nPartnerId", "application_config"),
           l = (0, i.kQ)("rgDailyDealInvitations", "application_config"),
           r = (0, i.kQ)("rgPartnerPromotions", "application_config"),
@@ -1560,7 +1572,7 @@
               null == r
                 ? void 0
                 : r.rgPlans
-                    .map((e) => ce(e.partner_readonly_jsondata))
+                    .map((e) => me(e.partner_readonly_jsondata))
                     .filter((e) => !!e),
             [null == r ? void 0 : r.rgPlans],
           ),
@@ -1577,7 +1589,7 @@
           (function (e) {
             for (const t of Object.keys(e)) {
               const n = e[t].description,
-                a = ce(null == n ? void 0 : n.jsondata);
+                a = me(null == n ? void 0 : n.jsondata);
               null == n || delete n.jsondata,
                 a && (e[t].description.definition = a);
             }
@@ -1589,7 +1601,7 @@
                 (null == l ? void 0 : l.length) > 0 && a.createElement(m, null),
                 u &&
                   u.length > 0 &&
-                  a.createElement(G, {
+                  a.createElement(M, {
                     partnerId: o,
                     promotionPlans: u,
                     hiddenPromotionPlanIDs: _,
@@ -1606,7 +1618,7 @@
             : null
         );
       }
-      function ce(e) {
+      function me(e) {
         if (!e || 0 == e.trim().length) return null;
         try {
           return JSON.parse(e);
@@ -1626,7 +1638,7 @@
             "SteamChinaPlatformOperator_BuildReview"),
           (e[(e.SteamDeckCompatibilityReview = 6)] =
             "SteamDeckCompatibilityReview");
-      })(le || (le = {}));
+      })(re || (re = {}));
     },
     4942: (e, t, n) => {
       "use strict";

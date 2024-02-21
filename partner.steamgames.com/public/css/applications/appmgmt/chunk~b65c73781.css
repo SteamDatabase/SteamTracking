@@ -6432,6 +6432,14 @@ button.DialogButton.Primary._1SeDTJwMXlTMLLf2zBlrG0 {
 .DialogInput.DialogTextInputBase._2tLRc5NDSTZGzLadmTD8EH {
   font-size: 30px;
 }
+._2EeD_fx7U_0Bcelj9YqNlw {
+  width: 100%;
+  height: 123px;
+}
+._2jOn18K8Q6EDLSqEeNMVfa {
+  width: 100%;
+  height: 60px;
+}
 .Lw9EhG5HAG-zXYwNwUdl1 {
   width: 60%;
 }
@@ -6441,10 +6449,6 @@ button.DialogButton.Primary._1SeDTJwMXlTMLLf2zBlrG0 {
 ._1UwWTpxA7qhaSOlJpNgwsR ._3ZkUKKY3MbHhKyVBav_wtN {
   width: 40%;
   margin-left: 24px;
-}
-._1UwWTpxA7qhaSOlJpNgwsR ._3ZkUKKY3MbHhKyVBav_wtN textarea {
-  width: 100%;
-  height: 123px;
 }
 ._3SotCt7y4bC9UOPX6G0u1E textarea {
   width: 100%;
@@ -8815,6 +8819,16 @@ textarea._2V4yU656RPmLOdVgyglB17 {
 ._1ePXECwiPS_VGuhB4uh4Qy a {
   width: fit-content;
   display: block;
+}
+._2nYdhByvfAdvZPHDFyt_Ku {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+._3Ab46MTXfA0egFEwYoU0Jr {
+  margin-left: 4px;
+  font-size: 0.8em;
+  background-color: rgba(0, 0, 0, 0.1);
 }
 ._3glD2lGMwlZh3hZb4XH6MW {
   background-color: hotpink;
