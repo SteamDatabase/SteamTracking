@@ -34,6 +34,7 @@ message CContentServerDirectory_ServerInfo {
 	repeated uint32 allowed_app_ids = 13;
 	optional bool preferred_server = 14;
 	optional uint32 priority_class = 15;
+	repeated string bypass_proxies_of_type = 16;
 }
 
 message CContentServerDirectory_GetServersForSteamPipe_Response {

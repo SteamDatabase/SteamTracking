@@ -46,13 +46,19 @@ __DATA
 __cfstring
 __DATA
 __objc_classlist__DATA
-p`B
-p`B
+X`B
+X`B
 __objc_imageinfo__DATA
+h`B
+h`B
 __objc_const
 __DATA
+p`B
+p`B
 __objc_selrefs
 __DATA
+pbB
+pbB
 __objc_classrefs__DATA
 __objc_superrefs__DATA
 __objc_ivar
@@ -61,6 +67,8 @@ __objc_data
 __DATA
 __data
 __DATA
+`hB
+`hB
 __thread_vars
 __DATA
 0
@@ -69,7 +77,6 @@ __DATA
 @
 __thread_bss
 __DATA
-C
 __bss
 __DATA
 __common
@@ -79,12 +86,12 @@ __LINKEDIT
 @C
 "
 @C
-H%
-HeC
-`rC
-PtC
+@%
+@eC
+XrC
+HtC
 x%
-('D
+'D
 P
 /usr/lib/dyld
 
@@ -123,47 +130,47 @@ h
 /usr/lib/libobjc.A.dylib
 &
 )
-24
+14
 0
 *
 *
-f9i)G
+f9))G
+4
+4
+PG
 0
 @
 @
-G
 *
 @
 @
 @
 @
 $
->9
+=9
 Hi
 Hi
 Hi
+9
+9
 9
 B
-9
-~(
+>)
 )
-2)
+)
 
 %
-g;
-)
+c;
 )
 )
 )
 )
 
-(
-r2
+_8
+s(
+;
+-8
 '
-(
-'
-$8
-8
 
 8
 8
@@ -172,9 +179,12 @@ $8
 8
 8
 5
-2
-2
+(
+n:
+^&
 
+Z'
+i&
 0
 0
 0
@@ -186,12 +196,11 @@ AT=
 D
 @
 @
-"1
+w1
 7
 7
 7
 7
-1
 @
 Hc
 Hc
@@ -223,10 +232,8 @@ IcE
 IcE
 @
 @
-+6
-6
-6
-0
+E6
+-6
 0
 NSt3__117bad_function_callE
 15CBaseFileSystem
@@ -2397,7 +2404,7 @@ ReLaunchCmdLine
 ClientLauncherType
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlqueue.h
 IsValidIndex( idx )
-Startup - updater built Feb 16 2024 15:43:01
+Startup - updater built Feb 20 2024 17:09:06
 Startup - Steam Client launched with: %s
 Shutdown
 no hosts found
@@ -2664,6 +2671,7 @@ bootstrap_log
 %s
 
 %s/%s.txt
+%s/%s.previous.txt
 
 !IsAlive()
 steam_osx
@@ -2688,8 +2696,8 @@ m_iRefs >= 0 && m_iRefs < 0x0ffffff
 #SteamBootstrapper_UpdatingSteam
 Updating Steam...
 Tahoma
-Feb 16 2024
-15:43:02
+Feb 20 2024
+17:09:06
 crashhandler004
 steam
 Steam Executable Crash
@@ -2786,7 +2794,7 @@ China
 %s/%s%s
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamexe/updateui.h
 ThreadInMainThread()
-15:43:00
+17:09:04
 [%3d%%] %s
 [----] %s
 [%3d%%] !!! Fatal Error: %s
@@ -10912,7 +10920,7 @@ steamwebhelper
 Steam Helper
 cefwebhelper
 1.0
-15:40:46
+17:06:54
 Jan
 Feb
 Mar
@@ -13363,54 +13371,51 @@ out of memory
 n <= (size_t)INT_MAX
 file_ofs == pFile->GetBytesWritten()
 
-xe:
-4::
-<::
-H=
-~e:
+49:
+<9:
 
 0
-24
+14
 0
 *
 *
-f9i)G
+f9))G
+4
+4
+PG
 0
 @
 @
-G
 *
 @
 @
 @
 @
 $
->9
+=9
 Hi
 Hi
 Hi
+9
+9
 9
 B
-9
-~(
+>)
 )
-2)
+)
 
 %
-g;
-)
+c;
 )
 )
 )
 )
 
-(
-r2
+_8
+s(
+;
+-8
 '
-(
-'
-$8
-8
 
 8
 8
@@ -13419,9 +13424,12 @@ $8
 8
 8
 5
-2
-2
+(
+n:
+^&
 
+Z'
+i&
 0
 0
 0
@@ -13433,12 +13441,11 @@ AT=
 D
 @
 @
-"1
+w1
 7
 7
 7
 7
-1
 @
 Hc
 Hc
@@ -13470,56 +13477,62 @@ IcE
 IcE
 @
 @
-+6
-6
-6
+E6
+-6
 0
-0
+_1
 V
-:
+s/
+s/
 =
-F/
+/
+/
+/
+/
+/
+/
 /
 5
-5
-5
 =
-o.
-+.
-!4
-.
 .
 .
 4
-c"
-8-
+4
+4
+l-
+e-
+K-
 !
 -
 -
--
--
--
-*
-*
-7
-7
+3
 @
+62
+2
+2
 &
-+
+}+
+j1
 1
-P0
-H2
-X)
-o/
+1
++
+,
+o*
++
+2
+4)
+1)
 )
 )
-)
-m1
+/
 @
+/
+/
+/
+/
 M9e
 @
 @
-S(
 ?
 ?
 ?
@@ -13531,7 +13544,6 @@ S(
 ?
 ?
 ?
-(
 (
 :
 ?
@@ -13548,6 +13560,9 @@ AES for Intel AES-NI, CRYPTOGAMS by <appro@openssl.org>
 `
 `
 @
+-
+-
+-
 j
 j
 Pj
@@ -13561,12 +13576,13 @@ j
 0
 IcU
 E;e
+C,
 M)u
+:
 =
 =
 @
 =
-/
 =
 %
 =
@@ -13860,20 +13876,16 @@ OO
 expand 32-byte k
 ChaCha20 for x86_64, CRYPTOGAMS by <appro@openssl.org>
 @
-2
+'
 =
 @
-)#
 
 @
 @
 @
 0
-#
 H=
-)
-)
-)
+^0
 Ic]
 j
 j
@@ -13881,23 +13893,19 @@ j
 j
 j
 j
-,
-$
-$
-$
 
 $
-i+
-3'
+&'
 t$I;M
 '
 '
 '
-H"
+'
+M)
+)
 e
 W
 ,7~5d
-#=d/
 "
 H
 0
@@ -13905,17 +13913,14 @@ H
 
 
 
+!
 
-!
-!
-!
 
 
 
 
 
 Hc
-'
 '
 '
 '
@@ -13933,7 +13938,6 @@ AES-NI GCM module for x86_64, CRYPTOGAMS by <appro@openssl.org>
 Poly1305 for x86_64, CRYPTOGAMS by <appro@openssl.org>
 0
 0
-7&
 N
 N
 N
@@ -14195,8 +14199,10 @@ Ic
 0
 0
 0
-
 0
+
+
+
 
 8
 @
@@ -14212,6 +14218,7 @@ H=
 0
 &
 J
+
 0
 Hi
 E
@@ -14227,22 +14234,20 @@ E
 j
 j
 0
+.
 @
 @
 @
 @
-0
-0
 0
 0
 
 Hc
 0
-q
+c
 @
 @
-q
-h
+}
 &
 %
 @
@@ -14265,9 +14270,10 @@ P
 @
 =a
 0
+0
+0
 Hi
 Ic]
-'
 $
 $
 $

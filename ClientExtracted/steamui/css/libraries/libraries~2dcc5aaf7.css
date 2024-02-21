@@ -23934,90 +23934,6 @@ div:hover > .BBCodeCollapseControl {
   color: #67707b;
   font-size: 16px;
 }
-@keyframes friends-global_BackgroundAnimation_NqdS3 {
-  from {
-    background-position: 0 100%;
-  }
-  to {
-    background-position: 100% 0;
-  }
-}
-@keyframes friends-global_ItemFocusAnim-darkerGrey-nocolor_a1MzS {
-  from {
-    background: #3d4450;
-  }
-  to {
-    background: #23262e;
-  }
-}
-@keyframes friends-global_ItemFocusAnim-darkerGrey_1FUY9 {
-  from {
-    background: #3d4450;
-    color: #8b929a;
-  }
-  to {
-    background: #23262e;
-    color: #fff;
-  }
-}
-@keyframes friends-global_ItemFocusAnim-darkGrey_14Z2G {
-  from {
-    background: rgba(255, 255, 255, 0.25);
-    color: #8b929a;
-  }
-  to {
-    background: rgba(255, 255, 255, 0.15);
-    color: #fff;
-  }
-}
-@keyframes friends-global_ItemFocusAnim-grey_8tMCI {
-  from {
-    background: #8b929a;
-    color: #fff;
-  }
-  to {
-    background: #67707b;
-    color: #fff;
-  }
-}
-@keyframes friends-global_ItemFocusAnim-translucent-white-10_w5CZA {
-  from {
-    background: rgba(255, 255, 255, 0.3);
-    color: #fff;
-  }
-  to {
-    background: rgba(255, 255, 255, 0.1);
-    color: #fff;
-  }
-}
-@keyframes friends-global_ItemFocusAnim-translucent-white-20_2btyu {
-  from {
-    background: rgba(255, 255, 255, 0.5);
-    color: #fff;
-  }
-  to {
-    background: rgba(255, 255, 255, 0.2);
-    color: #fff;
-  }
-}
-@keyframes friends-global_ItemFocusAnimBorder-darkGrey_iojez {
-  from {
-    border-color: #67707b;
-  }
-  to {
-    border-color: #3d4450;
-  }
-}
-@keyframes friends-global_ItemFocusAnim-green_2bet4 {
-  from {
-    background: #c9ffc9;
-    color: #8b929a;
-  }
-  to {
-    background: #59bf40;
-    color: #fff;
-  }
-}
 html.client_chat_frame body,
 html.web_chat_frame body {
   background: #000;
@@ -25635,6 +25551,26 @@ body.in_global_drag .friendlist_titlebar {
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
   transform: scale(1) rotateX(0deg);
+}
+@keyframes ItemFocusAnim-darkerGrey {
+  from {
+    background: #3d4450;
+    color: #8b929a;
+  }
+  to {
+    background: #23262e;
+    color: #fff;
+  }
+}
+@keyframes ItemFocusAnim-darkGrey {
+  from {
+    background: rgba(255, 255, 255, 0.25);
+    color: #8b929a;
+  }
+  to {
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+  }
 }
 .groupHeaderContainer.gpfocuswithin .SortByRecent.GamepadMode,
 .GamepadMode .groupHeaderContainer.gpfocuswithin .SortByRecent {

@@ -4418,7 +4418,6 @@ button.controllerconfiguratormapping_Button_hv-G3.DialogButton:enabled:active:ho
   background-color: #0e141b;
   border: 2px solid #23262e;
   padding: calc(12px + 1.4vw) 2.8vw;
-  min-height: initial;
   width: 660px;
   box-sizing: border-box;
   animation-name: controllerconfiguratormapping_slideInAnimation_3q5Xw;
@@ -4435,6 +4434,18 @@ button.controllerconfiguratormapping_Button_hv-G3.DialogButton:enabled:active:ho
     opacity: 1;
     transform: translateY(0);
   }
+}
+.controllerconfiguratormapping_ModalPosition_1B8RZ.controllerconfiguratormapping_ScrollWithin_497CS
+  > .controllerconfiguratormapping_GamepadDialogContent_31tKG {
+  min-height: 0;
+}
+.controllerconfiguratormapping_ModalPosition_1B8RZ.controllerconfiguratormapping_ScrollWithin_497CS
+  > .controllerconfiguratormapping_GamepadDialogContent_31tKG
+  .DialogBody,
+.controllerconfiguratormapping_ModalPosition_1B8RZ.controllerconfiguratormapping_ScrollWithin_497CS
+  > .controllerconfiguratormapping_GamepadDialogContent_31tKG
+  .controllerconfiguratormapping_GamepadDialogContent_InnerWidth_3NCZH.DialogContent_InnerWidth {
+  min-height: 0;
 }
 .controllerconfiguratormapping_ModalPosition_1B8RZ .DialogContentTransition {
   max-width: 613px;

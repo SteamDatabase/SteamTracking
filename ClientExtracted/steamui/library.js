@@ -1,4 +1,4 @@
-var CLSTAMP = "8704120";
+var CLSTAMP = "8716912";
 /* Third-party software licenses can be found at licenses.txt */ (() => {
   var e,
     t,
@@ -133,6 +133,7 @@ var CLSTAMP = "8704120";
           NoHeaderPadding: "gamepaddialog_NoHeaderPadding_2kAHX",
           ModalClickToDismiss: "gamepaddialog_ModalClickToDismiss_2szdG",
           slideInAnimation: "gamepaddialog_slideInAnimation_17KuO",
+          ScrollWithin: "gamepaddialog_ScrollWithin_2y_Up",
           BasicTextInput: "gamepaddialog_BasicTextInput_3GCBi",
           Toggle: "gamepaddialog_Toggle_24G4g",
           ToggleRail: "gamepaddialog_ToggleRail_2JtC3",
@@ -1590,7 +1591,7 @@ var CLSTAMP = "8704120";
       64656: (e, t, n) => {
         "use strict";
         n.d(t, {
-          AN: () => x,
+          AN: () => b,
           K3: () => H,
           Rt: () => _,
           Wy: () => E,
@@ -1762,7 +1763,7 @@ var CLSTAMP = "8704120";
             let n,
               i,
               o,
-              l = x.GetExistingPopup(this.m_strName);
+              l = b.GetExistingPopup(this.m_strName);
             (l && !this.m_rgParams.replace_existing_popup) ||
               ((this.m_rgParams = this.UpdateParamsBeforeShow(this.m_rgParams)),
               l
@@ -1770,7 +1771,7 @@ var CLSTAMP = "8704120";
                   (n = l.m_popup),
                   l.ReleasePopup(),
                   (o = l.m_renderWhenReady),
-                  x.RemoveTrackedPopup(l),
+                  b.RemoveTrackedPopup(l),
                   n.removeEventListener("beforeunload", l.OnBeforeUnloadEvent),
                   n.removeEventListener("unload", l.OnUnload),
                   n.removeEventListener("resize", l.OnResizeEvent),
@@ -1779,7 +1780,7 @@ var CLSTAMP = "8704120";
                   n.removeEventListener("drop", l.OnDrop),
                   n.removeEventListener("dragover", l.OnDragOver),
                   n.removeEventListener("message", this.OnMessage))
-                : (({ popup: n, element: i } = b.CreatePopup(
+                : (({ popup: n, element: i } = x.CreatePopup(
                     this.m_strName,
                     this.m_rgParams,
                   )),
@@ -1803,7 +1804,7 @@ var CLSTAMP = "8704120";
                 this.m_renderWhenReady.SetTarget(() =>
                   this.RenderInternal(this.m_popup, this.m_element, t),
                 )),
-              x.AddTrackedPopup(this),
+              b.AddTrackedPopup(this),
               l &&
                 (this.OnCreateInternal(),
                 t != u.IF.k_EWindowBringToFrontInvalid && this.Focus(t)));
@@ -1855,7 +1856,7 @@ var CLSTAMP = "8704120";
           }
           OnUnload(e) {
             this.RemoveEventListeners(),
-              x.RemoveTrackedPopup(this),
+              b.RemoveTrackedPopup(this),
               this.OnClose(),
               (this.m_popup = void 0);
           }
@@ -2010,14 +2011,14 @@ var CLSTAMP = "8704120";
                 ? e.strRestoreDetails &&
                   ((this.m_strInitialSavedDimensionsKey =
                     this.GetSavedDimensionsKey()),
-                  x.SetRestoreDetails(
+                  b.SetRestoreDetails(
                     this.m_strInitialSavedDimensionsKey,
                     e.strRestoreDetails,
                     this.m_bExpires,
                   ))
                 : ((this.m_strInitialSavedDimensionsKey =
                     this.GetSavedDimensionsKey()),
-                  (e.strRestoreDetails = x.GetRestoreDetails(
+                  (e.strRestoreDetails = b.GetRestoreDetails(
                     this.m_strInitialSavedDimensionsKey,
                   ))),
               e
@@ -2044,7 +2045,7 @@ var CLSTAMP = "8704120";
                     this.m_strSavedDimensionsKey &&
                     t &&
                     !n &&
-                    (x.SetRestoreDetails(e, t, this.m_bExpires),
+                    (b.SetRestoreDetails(e, t, this.m_bExpires),
                     (this.m_rgParams.strRestoreDetails = t),
                     (this.m_strInitialSavedDimensionsKey = e),
                     this.OnResizeComplete(t));
@@ -2057,12 +2058,12 @@ var CLSTAMP = "8704120";
           }
           OnClose() {}
           SaveWindowPosition(e) {
-            x.SetRestoreDetails(this.GetSavedDimensionsKey(), e, !1),
+            b.SetRestoreDetails(this.GetSavedDimensionsKey(), e, !1),
               (this.m_rgParams.strRestoreDetails = e);
           }
         }
         (0, o.gn)([C.a], k.prototype, "QueryAndStoreWindowPosition", null);
-        class b {
+        class x {
           constructor() {
             if (
               ((this.m_bShuttingDown = !1),
@@ -2075,9 +2076,9 @@ var CLSTAMP = "8704120";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "Feb 16 2024 : 15:44:13",
-                BUILD_TIME_UTC: "Feb 16 2024 : 23:44:13",
-                BUILD_RTIME_UTC: 1708127053,
+                BUILD_TIME_LOCAL: "Feb 20 2024 : 14:39:22",
+                BUILD_TIME_UTC: "Feb 20 2024 : 22:39:22",
+                BUILD_RTIME_UTC: 1708468762,
               }.MOBILE_BUILD)
             ) {
               window.addEventListener("beforeunload", (e) => {
@@ -2315,12 +2316,12 @@ var CLSTAMP = "8704120";
         }
         (0, o.gn)(
           [C.a, (0, c.D)(100)],
-          b.prototype,
+          x.prototype,
           "DebouncedSaveSavedDimensionStore",
           null,
         );
-        let x = (0, f.Yt)("PopupManager", () => new b());
-        window.g_PopupManager = x;
+        let b = (0, f.Yt)("PopupManager", () => new x());
+        window.g_PopupManager = b;
       },
       66101: (e, t, n) => {
         "use strict";
@@ -2598,42 +2599,42 @@ var CLSTAMP = "8704120";
               H = u() || n.GetDefaultContext();
             let k = i.useRef(null);
             k.current || (k.current = n.NewGamepadNavigationTree(H, p));
-            const b = k.current;
+            const x = k.current;
             i.useLayoutEffect(() => {
               const e = (0, l.t)(f);
-              b.Root.SetProperties(
+              x.Root.SetProperties(
                 Object.assign(Object.assign({}, E), { layout: e }),
               );
             });
-            let x = i.useRef();
-            b.SetUseVirtualFocus(m),
-              b.SetParentEmbeddedNavTree(v),
-              b.SetApplyFocusClassesInDesktop(null != L && L),
-              (0, a.Qg)(b.OnActivateCallbacks, c),
-              (0, a.Qg)(b.OnDeactivateCallbacks, C),
-              (0, s.Jd)(_, x, k.current),
+            let b = i.useRef();
+            x.SetUseVirtualFocus(m),
+              x.SetParentEmbeddedNavTree(v),
+              x.SetApplyFocusClassesInDesktop(null != L && L),
+              (0, a.Qg)(x.OnActivateCallbacks, c),
+              (0, a.Qg)(x.OnDeactivateCallbacks, C),
+              (0, s.Jd)(_, b, k.current),
               i.useLayoutEffect(
-                () => b.RegisterNavigationItem(b.Root, x.current),
-                [b, x],
+                () => x.RegisterNavigationItem(x.Root, b.current),
+                [x, b],
               ),
               i.useLayoutEffect(
                 () =>
                   n.RegisterGamepadNavigationTree(
-                    b,
-                    x.current.ownerDocument.defaultView,
+                    x,
+                    b.current.ownerDocument.defaultView,
                     d,
                   ),
-                [n, d, b],
+                [n, d, x],
               ),
               i.useLayoutEffect(
-                () => ((0, a.k$)(h, b), () => (0, a.k$)(h, null)),
-                [h, b],
+                () => ((0, a.k$)(h, x), () => (0, a.k$)(h, null)),
+                [h, x],
               );
-            const V = (0, a.BE)(x, t);
+            const V = (0, a.BE)(b, t);
             return i.createElement(
               "div",
               Object.assign({}, w, { id: p, "data-react-nav-root": p, ref: V }),
-              i.createElement(o.ET.Provider, { value: b.Root }, g),
+              i.createElement(o.ET.Provider, { value: x.Root }, g),
             );
           }),
           C = i.createContext({ focusNavWindow: null, bSupportsFocus: !0 });
@@ -2729,7 +2730,7 @@ var CLSTAMP = "8704120";
           zQ: () => _,
           Iy: () => v,
           lP: () => k,
-          hi: () => b,
+          hi: () => x,
           ET: () => f,
           Pd: () => L,
         });
@@ -2896,7 +2897,7 @@ var CLSTAMP = "8704120";
               "scrollIntoViewType",
               "resetNavOnEntry",
             ]),
-            { gamepadEvents: b, actionDescriptions: x, props: V } = M(k);
+            { gamepadEvents: x, actionDescriptions: b, props: V } = M(k);
           return {
             elemProps: V,
             navOptions: {
@@ -2921,9 +2922,9 @@ var CLSTAMP = "8704120";
               fnScrollIntoViewHandler: E,
               scrollIntoViewType: _,
               resetNavOnEntry: H,
-              actionDescriptionMap: Object.assign(Object.assign({}, m), x),
+              actionDescriptionMap: Object.assign(Object.assign({}, m), b),
             },
-            gamepadEvents: b,
+            gamepadEvents: x,
           };
         }
         function E(e) {
@@ -3031,7 +3032,7 @@ var CLSTAMP = "8704120";
             return H(e, t, n, r);
           });
         }
-        function b(e) {
+        function x(e) {
           const t = E(e);
           return i.forwardRef(function (n, i) {
             const o = (function (e) {
@@ -3381,44 +3382,44 @@ var CLSTAMP = "8704120";
               (E.onOKButton = E.onOKButton || p)),
             E.onOKButton && void 0 === w.focusable && (w.focusable = !0),
             g && (E.onCancelButton = E.onCancelButton || g);
-          const { ref: k, node: b } = (0, o.Pd)(
+          const { ref: k, node: x } = (0, o.Pd)(
               Object.assign(Object.assign({}, _), w),
             ),
-            x = (0, c.K)();
-          (M.className = (0, l.Z)(M.className, "Panel", x && "Focusable")),
+            b = (0, c.K)();
+          (M.className = (0, l.Z)(M.className, "Panel", b && "Focusable")),
             (0, C.pD)(E, k);
           const V = (0, u.F)(),
             S = (0, d.Ze)(
               2,
               () =>
-                "self" == (null == b ? void 0 : b.GetFocusable()) ||
+                "self" == (null == x ? void 0 : x.GetFocusable()) ||
                 null != M.onClick,
             ),
-            y = (0, d.Ze)(1, () => (null == V ? void 0 : V.HasContextMenu(b))),
+            y = (0, d.Ze)(1, () => (null == V ? void 0 : V.HasContextMenu(x))),
             Z = (0, m.M)(M);
           (0, m.B)(M);
           const R = (0, a.BE)(S, y, Z, k, t);
           return (
             (!w.focusable && !w.focusableIfNoChildren) ||
-              (b && b.Tree.BUseVirtualFocus()) ||
+              (x && x.Tree.BUseVirtualFocus()) ||
               (M.tabIndex = M.tabIndex || 0),
             V &&
               (M.onContextMenu = (t) => {
                 var n;
-                V.OnContextMenu(b, t) ||
+                V.OnContextMenu(x, t) ||
                   null === (n = e.onContextMenu) ||
                   void 0 === n ||
                   n.call(e, t);
               }),
             i.createElement(
               o.ET.Provider,
-              { value: b },
-              b
+              { value: x },
+              x
                 ? i.createElement(
                     o.zQ,
                     Object.assign({}, M, {
                       divRef: R,
-                      node: b,
+                      node: x,
                       focusClassName: (0, l.Z)(f, "gpfocus"),
                       focusWithinClassName: (0, l.Z)(v, "gpfocuswithin"),
                     }),
@@ -3616,7 +3617,7 @@ var CLSTAMP = "8704120";
             const { ref: E, navRef: _ } = (0, C.$1)(),
               H = (0, a.BE)(_, L.navRef),
               k = (0, a.BE)(E, t),
-              b =
+              x =
                 null === (n = null == _ ? void 0 : _.current) || void 0 === n
                   ? void 0
                   : n.Node().Tree.Controller;
@@ -3628,7 +3629,7 @@ var CLSTAMP = "8704120";
                 ref: k,
                 navRef: H,
               }),
-              i.createElement(h.O, { NavigationManager: b }, f),
+              i.createElement(h.O, { NavigationManager: x }, f),
             );
           }),
           g = i.forwardRef(function (e, t) {
@@ -6758,7 +6759,7 @@ var CLSTAMP = "8704120";
             r = r.offsetParent;
           }
           for (r = null == e ? void 0 : e.parentElement; r; ) {
-            const { scrollTop: e, scrollLeft: i } = x(r);
+            const { scrollTop: e, scrollLeft: i } = b(r);
             if (((t -= e), (n -= i), "ownerDocument" in r)) {
               if ("fixed" === window.getComputedStyle(r).position) break;
             }
@@ -6848,7 +6849,7 @@ var CLSTAMP = "8704120";
             e || (e = (0, o.kR)(s));
             let t = M(s),
               n = w(e, g(e)),
-              u = b(e),
+              u = x(e),
               d = { element: e, left: 0, top: 0 };
             if (
               (C(
@@ -6905,7 +6906,7 @@ var CLSTAMP = "8704120";
           let u = !1;
           for (let e of a) {
             if (E(e.left) && E(e.top)) continue;
-            let t = b(e.element),
+            let t = x(e.element),
               r = t.scrollTop + e.top,
               o = t.scrollLeft + e.left;
             (o = i.Lh(o, 0, t.MaxScrollLeft())),
@@ -7036,11 +7037,11 @@ var CLSTAMP = "8704120";
         }
         (0, r.gn)([c.a], H.prototype, "ResetScrollState", null);
         const k = new WeakMap();
-        function b(e) {
+        function x(e) {
           let t = k.get(e);
           return t || ((t = new H(e)), k.set(e, t)), t;
         }
-        function x(e) {
+        function b(e) {
           const t = k.get(e);
           return t
             ? { scrollLeft: t.scrollLeft, scrollTop: t.scrollTop }
@@ -8712,8 +8713,8 @@ var CLSTAMP = "8704120";
         var _ = n(60991),
           H = n(56141),
           k = n(63083),
-          b = n(14206),
-          x = n.n(b);
+          x = n(14206),
+          b = n.n(x);
         class V {
           constructor() {
             this.m_CMList = { rgCMList: [], rtLastLoaded: 0 };
@@ -8932,12 +8933,12 @@ var CLSTAMP = "8704120";
             return (0, r.mG)(this, void 0, void 0, function* () {
               let t = "https://" + this.FixDevHost(e.strHost) + "/cmping/",
                 n = performance.now();
-              const r = x().CancelToken.source();
+              const r = b().CancelToken.source();
               let i = window.setTimeout(() => {
                 e.strHost, r.cancel();
               }, 1e3);
               try {
-                let o = yield x().head(t, { cancelToken: r.token });
+                let o = yield b().head(t, { cancelToken: r.token });
                 e.strHost, window.clearTimeout(i);
                 let l = performance.now() - n,
                   a = o.headers["x-steam-cmload"]
@@ -8945,7 +8946,7 @@ var CLSTAMP = "8704120";
                     : void 0;
                 e.strHost, (e.msPing = l), (e.nCMLoad = a);
               } catch (t) {
-                x().isCancel(t) ? e.strHost : window.clearTimeout(i),
+                b().isCancel(t) ? e.strHost : window.clearTimeout(i),
                   (e.msPing = 1e4),
                   (e.nCMLoad = 0);
               }
@@ -8958,7 +8959,7 @@ var CLSTAMP = "8704120";
             const e =
                 o.De.WEBAPI_BASE_URL +
                 "ISteamDirectory/GetCMListForConnect/v1/?cellid=0&cmtype=websockets",
-              t = (yield x().get(e)).data,
+              t = (yield b().get(e)).data,
               n = (t && t.response && t.response.serverlist) || [];
             return (
               n.length, n.map((e, t) => ({ strHost: e.endpoint, nPriority: t }))
@@ -9986,12 +9987,12 @@ var CLSTAMP = "8704120";
           Vc: () => O,
           Wn: () => D,
           Yr: () => k,
-          Zo: () => x,
+          Zo: () => b,
           kl: () => P,
           oD: () => A,
           od: () => B,
           uP: () => y,
-          xV: () => b,
+          xV: () => x,
         });
         var r = n(85556),
           i = n(50649),
@@ -10018,7 +10019,7 @@ var CLSTAMP = "8704120";
         const k = (0, h.Yt)("ContextMenuInstanceContext", () =>
           o.createContext(null),
         );
-        let b = class extends o.Component {
+        let x = class extends o.Component {
           constructor() {
             super(...arguments),
               (this.m_navRef = (0, a.Hy)()),
@@ -10129,7 +10130,7 @@ var CLSTAMP = "8704120";
                     null,
                     o.createElement(y, null),
                     o.createElement(
-                      x,
+                      b,
                       { className: p.Cancel, onSelected: e },
                       (0, M.Xx)(g),
                     ),
@@ -10143,11 +10144,11 @@ var CLSTAMP = "8704120";
             }
           }
         };
-        (b.contextType = k),
-          (0, r.gn)([w.ak], b.prototype, "HideIfSubmenu", null),
-          (0, r.gn)([w.ak], b.prototype, "HideMenu", null),
-          (b = (0, r.gn)([i.Pi], b));
-        class x extends o.PureComponent {
+        (x.contextType = k),
+          (0, r.gn)([w.ak], x.prototype, "HideIfSubmenu", null),
+          (0, r.gn)([w.ak], x.prototype, "HideMenu", null),
+          (x = (0, r.gn)([i.Pi], x));
+        class b extends o.PureComponent {
           constructor() {
             super(...arguments),
               (this.m_ref = o.createRef()),
@@ -10247,18 +10248,18 @@ var CLSTAMP = "8704120";
                 );
           }
         }
-        (x.contextType = k),
-          (0, r.gn)([w.ak], x.prototype, "OnClick", null),
-          (0, r.gn)([w.ak], x.prototype, "OnOKButton", null),
-          (0, r.gn)([w.ak], x.prototype, "OnMouseEnter", null),
-          (0, r.gn)([w.ak], x.prototype, "Focus", null);
+        (b.contextType = k),
+          (0, r.gn)([w.ak], b.prototype, "OnClick", null),
+          (0, r.gn)([w.ak], b.prototype, "OnOKButton", null),
+          (0, r.gn)([w.ak], b.prototype, "OnMouseEnter", null),
+          (0, r.gn)([w.ak], b.prototype, "Focus", null);
         class V extends o.PureComponent {
           render() {
             const e = this.props,
               { bChecked: t, children: n, className: i } = e,
               l = (0, r._T)(e, ["bChecked", "children", "className"]);
             return o.createElement(
-              x,
+              b,
               Object.assign({}, l, {
                 className: (0, f.Z)(i, t && "menuChecked"),
               }),
@@ -10273,7 +10274,7 @@ var CLSTAMP = "8704120";
               { icon: t, children: n } = e,
               i = (0, r._T)(e, ["icon", "children"]);
             return o.createElement(
-              x,
+              b,
               Object.assign({}, i),
               o.createElement("div", { className: H().IconContainer }, t),
               n,
@@ -10321,7 +10322,7 @@ var CLSTAMP = "8704120";
           }
           RenderSubMenu() {
             return o.createElement(
-              b,
+              x,
               {
                 onMouseEnter: this.OnSubMenuMouseEnter,
                 label: this.props.label,
@@ -10359,7 +10360,7 @@ var CLSTAMP = "8704120";
             const C =
               null !== (e = this.context.styles) && void 0 !== e ? e : H();
             return o.createElement(
-              x,
+              b,
               Object.assign({}, c, {
                 ref: this.m_refItem,
                 onClick: this.OnClick,
@@ -10565,12 +10566,12 @@ var CLSTAMP = "8704120";
                 ? (p.menuRight = C - (t.bOverlapHorizontal ? f : g))
                 : (p.menuLeft = t.bOverlapHorizontal ? g : f);
             let k = null != a ? a : d.top,
-              b = null != a ? a : d.bottom,
-              x = n.scrollHeight;
-            t.bMatchHeight && ((x = b - k), (p.menuHeight = x));
-            let V = (t.bOverlapVertical ? b : k) - c - x,
+              x = null != a ? a : d.bottom,
+              b = n.scrollHeight;
+            t.bMatchHeight && ((b = x - k), (p.menuHeight = b));
+            let V = (t.bOverlapVertical ? x : k) - c - b,
               S = V > 0,
-              y = c + h - (t.bOverlapVertical ? k : b) - x,
+              y = c + h - (t.bOverlapVertical ? k : x) - b,
               Z = y > 0,
               R = (t.bPreferPopTop || !Z) && S && !t.bDisablePopTop;
             if (!S && !Z) {
@@ -10581,14 +10582,14 @@ var CLSTAMP = "8704120";
               (R = V > y && !t.bDisablePopTop),
                 e && (R ? (p.menuTop = 4) : (p.menuBottom = 4)),
                 t.bFitToWindow &&
-                  (e ? (x = Math.min(x, h - 8)) : (x += R ? V : y),
-                  (p.menuHeight = x - 8));
+                  (e ? (b = Math.min(b, h - 8)) : (b += R ? V : y),
+                  (p.menuHeight = b - 8));
             }
             void 0 === p.menuBottom &&
               void 0 === p.menuTop &&
               (R
-                ? (p.menuBottom = h - (t.bOverlapVertical ? b : k))
-                : (p.menuTop = t.bOverlapVertical ? k : b)),
+                ? (p.menuBottom = h - (t.bOverlapVertical ? x : k))
+                : (p.menuTop = t.bOverlapVertical ? k : x)),
               i
                 ? (p.menuHeight || (p.menuHeight = m.height),
                   p.menuWidth || (p.menuWidth = m.width),
@@ -10755,7 +10756,7 @@ var CLSTAMP = "8704120";
                 r.forEach((e, r) => {
                   t.push(
                     o.createElement(
-                      x,
+                      b,
                       {
                         key: `spelling_${r}_${e}`,
                         onSelected: () => {
@@ -10779,7 +10780,7 @@ var CLSTAMP = "8704120";
               (e = e.trim()),
                 t.push(
                   o.createElement(
-                    x,
+                    b,
                     {
                       key: `addtodictionary_${e}`,
                       onSelected: () =>
@@ -10797,7 +10798,7 @@ var CLSTAMP = "8704120";
             ((n.document.queryCommandEnabled("cut") || (i && s)) &&
               t.push(
                 o.createElement(
-                  x,
+                  b,
                   {
                     key: "cut",
                     onSelected: () => {
@@ -10810,7 +10811,7 @@ var CLSTAMP = "8704120";
             (n.document.queryCommandEnabled("copy") || i) &&
               t.push(
                 o.createElement(
-                  x,
+                  b,
                   {
                     key: "copy",
                     onSelected: () => {
@@ -10827,7 +10828,7 @@ var CLSTAMP = "8704120";
               n.SteamClient._internal.Paste &&
               t.push(
                 o.createElement(
-                  x,
+                  b,
                   {
                     key: "paste",
                     onSelected: () => {
@@ -10847,7 +10848,7 @@ var CLSTAMP = "8704120";
               (0, u.U5)("Browser.OpenDevTools") &&
                 t.push(
                   o.createElement(
-                    x,
+                    b,
                     {
                       key: "opendevtools",
                       onSelected: () => {
@@ -10861,7 +10862,7 @@ var CLSTAMP = "8704120";
               (0, u.U5)("Browser.InspectElement") &&
                 t.push(
                   o.createElement(
-                    x,
+                    b,
                     {
                       key: "inspectelement",
                       onSelected: () => {
@@ -10874,7 +10875,7 @@ var CLSTAMP = "8704120";
                 )),
             t.length)
           )
-            (0, l.yV)(o.createElement(b, null, t), e, { bRootContextMenu: !0 });
+            (0, l.yV)(o.createElement(x, null, t), e, { bRootContextMenu: !0 });
           else {
             if (e.shiftKey) return;
             e.preventDefault(), e.stopPropagation();
@@ -10898,7 +10899,7 @@ var CLSTAMP = "8704120";
                 "skipConfirm",
               ]);
             return o.createElement(
-              x,
+              b,
               Object.assign({}, l, {
                 onSelected: (t) =>
                   i
@@ -11226,10 +11227,10 @@ var CLSTAMP = "8704120";
           Av: () => N,
           Aw: () => H,
           BQ: () => j,
-          FT: () => x,
+          FT: () => b,
           HV: () => _,
           KM: () => O,
-          Uq: () => b,
+          Uq: () => x,
           V5: () => E,
           VY: () => S,
           Yz: () => I,
@@ -11282,8 +11283,8 @@ var CLSTAMP = "8704120";
           _ = (0, m.Sb)("DialogInnerBody"),
           H = (0, m.Sb)("DialogControlsSection"),
           k = (0, m.Sb)("DialogControlsSectionHeader"),
-          b = p("DialogTwoColLayout _DialogColLayout"),
-          x = p("DialogThreeColLayout _DialogColLayout"),
+          x = p("DialogTwoColLayout _DialogColLayout"),
+          b = p("DialogThreeColLayout _DialogColLayout"),
           V =
             (p("DialogTwoThirdColLayout _DialogColLayout"),
             (0, m.Sb)("DialogColumn _DialogLayout"));
@@ -11448,7 +11449,7 @@ var CLSTAMP = "8704120";
         }
         function G(e) {
           return i.createElement(
-            b,
+            x,
             null,
             i.createElement(
               O,
@@ -11475,7 +11476,7 @@ var CLSTAMP = "8704120";
           const t = e.bOKDisabled ? T : O,
             n = e.bOKDisabled ? O : T;
           return i.createElement(
-            x,
+            b,
             null,
             i.createElement(
               t,
@@ -12511,7 +12512,7 @@ var CLSTAMP = "8704120";
           fp: () => tt,
           tr: () => r.tr,
           h4: () => r.h4,
-          S0: () => xe,
+          S0: () => be,
           HV: () => r.HV,
           II: () => f,
           BW: () => D,
@@ -12526,10 +12527,10 @@ var CLSTAMP = "8704120";
           TI: () => $.TI,
           rR: () => $.rR,
           Kh: () => $.Kh,
-          WU: () => be,
+          WU: () => xe,
           KM: () => r.KM,
-          EU: () => x,
-          SY: () => b,
+          EU: () => b,
+          SY: () => x,
           RW: () => Y.RW,
           BQ: () => r.BQ,
           DS: () => M,
@@ -12728,12 +12729,12 @@ var CLSTAMP = "8704120";
                 "DialogInput DialogInputPlaceholder DialogTextInputBase" +
                 (_.className ? " " + _.className : ""),
               k = "copiedAnimation",
-              b = this.state.m_bCompletedCopiedAnimation;
+              x = this.state.m_bCompletedCopiedAnimation;
             this.m_CopiedAnimation && (k = "copiedAnimation animationPlaying"),
-              b && (k = "copiedAnimation animationComplete");
-            let x = {};
+              x && (k = "copiedAnimation animationComplete");
+            let b = {};
             void 0 !== this.state.m_CopiedYPos &&
-              (x.transform = "translateY(" + this.state.m_CopiedYPos + "px)");
+              (b.transform = "translateY(" + this.state.m_CopiedYPos + "px)");
             let V = o.createElement(
               o.Fragment,
               null,
@@ -12765,7 +12766,7 @@ var CLSTAMP = "8704120";
                     ),
                     o.createElement(
                       "div",
-                      { style: x, className: k },
+                      { style: b, className: k },
                       (0, s.Xx)("#Button_Copied"),
                     ),
                   ),
@@ -13186,7 +13187,7 @@ var CLSTAMP = "8704120";
           _ = n(10402),
           H = n.n(_);
         const k = o.createContext({ setValue: () => {} });
-        function b(e) {
+        function x(e) {
           const { value: t, onChange: n, classNames: r, children: i } = e,
             l = { value: t, setValue: n };
           return o.createElement(
@@ -13206,7 +13207,7 @@ var CLSTAMP = "8704120";
             ),
           );
         }
-        function x(e) {
+        function b(e) {
           const { value: t } = e,
             { value: n, setValue: r } = o.useContext(k);
           let i = r;
@@ -13804,9 +13805,9 @@ var CLSTAMP = "8704120";
               iconLocation: _,
               tooltip: H,
               explainer: k,
-              explainerTitle: b,
+              explainerTitle: x,
             } = e,
-            x = (0, i._T)(e, [
+            b = (0, i._T)(e, [
               "label",
               "description",
               "icon",
@@ -13835,7 +13836,7 @@ var CLSTAMP = "8704120";
             D = "inline" == S && !!c,
             O = "below" == S && !!c,
             T = null != u ? u : V ? "shift-children-below" : "keep-inline",
-            B = !!(x.onClick || x.onActivate || x.focusable),
+            B = !!(b.onClick || b.onActivate || b.focusable),
             I = (null != l && Z) || null != n || (D && null != c),
             N = null != d ? d : "min",
             A = null != m ? m : "standard",
@@ -13857,7 +13858,7 @@ var CLSTAMP = "8704120";
               if (null == t) return {};
               const i = (0, s.Xx)("#Field_MoreInfo_Action");
               return { onOptionsButton: r, onOptionsActionDescription: i };
-            })(null != b ? b : n, k),
+            })(null != x ? x : n, k),
             z = o.useRef(),
             K = (0, a.BE)(z, e.navRef),
             X = o.useCallback(
@@ -13875,11 +13876,11 @@ var CLSTAMP = "8704120";
                 focusable: B,
                 noFocusRing: !0,
                 scrollIntoViewWhenChildFocused: !0,
-                onActivate: x.onClick,
+                onActivate: b.onClick,
                 ref: t,
                 onMouseDown: B ? void 0 : X,
               },
-              x,
+              b,
               j,
               {
                 navRef: K,
@@ -14333,7 +14334,7 @@ var CLSTAMP = "8704120";
           );
         });
         var ke = n(9856);
-        const be = o.forwardRef(function (e, t) {
+        const xe = o.forwardRef(function (e, t) {
           const { className: n } = e,
             l = (0, i._T)(e, ["className"]);
           let c = o.useRef(),
@@ -14375,7 +14376,7 @@ var CLSTAMP = "8704120";
             ),
           );
         });
-        const xe = o.forwardRef(function (e, t) {
+        const be = o.forwardRef(function (e, t) {
           var n;
           const { className: r } = e,
             l = (0, i._T)(e, ["className"]),
@@ -15204,8 +15205,8 @@ var CLSTAMP = "8704120";
               onOptionsActionDescription: _,
               iconLocation: H,
               childrenContainerWidth: k,
-              explainer: b,
-              explainerTitle: x,
+              explainer: x,
+              explainerTitle: b,
             } = e,
             V = (0, i._T)(e, [
               "label",
@@ -15352,8 +15353,8 @@ var CLSTAMP = "8704120";
               onOptionsActionDescription: X,
               icon: S,
               iconLocation: null != H ? H : "before-children",
-              explainer: b,
-              explainerTitle: x,
+              explainer: x,
+              explainerTitle: b,
             },
             o.createElement(
               Ue,
@@ -15432,12 +15433,12 @@ var CLSTAMP = "8704120";
                 ? void 0
                 : e.TakeFocusAndShowKeyboard();
             }, [d]),
-            b = o.useRef(!1);
+            x = o.useRef(!1);
           o.useLayoutEffect(() => {
-            t && !b.current && k(), (b.current = t);
+            t && !x.current && k(), (x.current = t);
           }, [m, t, k]);
-          const x = v || (L && !E && M.length > 0 && "-" != M),
-            V = (0, p.Z)(ye().DescriptionValue, x && ye().RedBorder),
+          const b = v || (L && !E && M.length > 0 && "-" != M),
+            V = (0, p.Z)(ye().DescriptionValue, b && ye().RedBorder),
             [S, y] = o.useState(0),
             [Z, R] = o.useState(0),
             D = o.useRef(),
@@ -15924,7 +15925,7 @@ var CLSTAMP = "8704120";
         "use strict";
         n.d(t, {
           Kh: () => M,
-          TI: () => x,
+          TI: () => b,
           Vh: () => V,
           kH: () => E,
           rR: () => L,
@@ -16021,14 +16022,14 @@ var CLSTAMP = "8704120";
             ),
           );
         }
-        function b(e) {
+        function x(e) {
           return i.createElement("div", {
             className: (0, c.Z)(m().PageListSeparator, {
               [m().Transparent]: e.bTransparent,
             }),
           });
         }
-        function x(e) {
+        function b(e) {
           const t = (0, u.D)();
           return i.createElement(
             h.T,
@@ -16056,7 +16057,7 @@ var CLSTAMP = "8704120";
             (g < 0 || g >= C.length) && (g = 0);
           let v = null;
           "object" == typeof C[g] && (v = C[g]);
-          let x = (function (e) {
+          let b = (function (e) {
             let t = i.useRef(e),
               n = i.useRef("none"),
               r = t.current;
@@ -16079,7 +16080,7 @@ var CLSTAMP = "8704120";
                   { key: n },
                   e.renderPageListSeparator
                     ? e.renderPageListSeparator({})
-                    : i.createElement(b, { bTransparent: t }),
+                    : i.createElement(x, { bTransparent: t }),
                 );
               }
               if (t === M)
@@ -16244,7 +16245,7 @@ var CLSTAMP = "8704120";
                 }),
               i.createElement(
                 G,
-                { activePage: v, direction: x },
+                { activePage: v, direction: b },
                 v &&
                   i.createElement(k, {
                     refForScrollingContainer: U(v.identifier),
@@ -16562,7 +16563,7 @@ var CLSTAMP = "8704120";
             Collapse: () => Hr,
             Color: () => P,
             Comment: () => Tn,
-            CommentHistory: () => bn,
+            CommentHistory: () => xn,
             CommentThread: () => Rn,
             Community: () => Gn,
             CompoundSliderNotch: () => Gi,
@@ -16588,7 +16589,7 @@ var CLSTAMP = "8704120";
             DirectionalButton: () => Bi,
             DisableFrameLimit: () => tl,
             Discord: () => dr,
-            Discussions: () => bo,
+            Discussions: () => xo,
             Display: () => ge,
             DoNotDisturb: () => _t,
             Dots: () => vt,
@@ -16601,14 +16602,14 @@ var CLSTAMP = "8704120";
             EmptyStar: () => N,
             Envelope: () => Lt,
             ExclamationPoint: () => Mi,
-            Exit: () => b,
+            Exit: () => x,
             Expand: () => _r,
             Expand99: () => kr,
             Facebook: () => Cr,
             FamilySharing: () => wn,
             FamilySharingOff: () => En,
             FeatureHidden: () => Vr,
-            FeatureVisible: () => xr,
+            FeatureVisible: () => br,
             Featured: () => er,
             FieldYellowExclamation: () => te,
             Filter: () => Mt,
@@ -16665,7 +16666,7 @@ var CLSTAMP = "8704120";
             KaratDown: () => Ve,
             KaratLeft: () => Se,
             KaratRight: () => ye,
-            KaratUp: () => xe,
+            KaratUp: () => be,
             Keyboard: () => De,
             LAN: () => _o,
             LanPeerContentReceive: () => zi,
@@ -16689,12 +16690,12 @@ var CLSTAMP = "8704120";
             Microphone: () => U,
             Minimize: () => on,
             Minus: () => ln,
-            Mobile: () => bt,
+            Mobile: () => xt,
             ModeratorMessage: () => Bn,
             Mouse: () => Oe,
             Mulitplayer: () => Vt,
             MultiPlayer: () => Pt,
-            Multilingual: () => xt,
+            Multilingual: () => bt,
             Music: () => d,
             Nature: () => jr,
             Network: () => Jr,
@@ -16709,14 +16710,14 @@ var CLSTAMP = "8704120";
             NintendoSwitchProControllerFrontOutline: () => yi,
             NoController: () => qo,
             Notes: () => ko,
-            Notifications: () => br,
+            Notifications: () => xr,
             Objects: () => Xr,
             Opacity: () => Eo,
             OverlayAchievements: () => Vo,
             OverlayMusic: () => So,
             OverlayRestore: () => yo,
-            OverlayWorkshop: () => xo,
-            PS3ControllerFrontOutline: () => xi,
+            OverlayWorkshop: () => bo,
+            PS3ControllerFrontOutline: () => bi,
             PS4ControllerFrontOutline: () => Vi,
             PS4Warning: () => $o,
             PS5ControllerFrontOutline: () => Si,
@@ -16734,7 +16735,7 @@ var CLSTAMP = "8704120";
             Popout: () => Dt,
             Power: () => L,
             PrevTrack: () => Ke,
-            Profile: () => x,
+            Profile: () => b,
             PurchaseHistory: () => Mn,
             QAMPerformance: () => zo,
             Question: () => Ot,
@@ -16802,7 +16803,7 @@ var CLSTAMP = "8704120";
             SteamDeckNeedsUpdate: () => $,
             SteamDeckSetupQR: () => ui,
             SteamDeckTiltedOutline: () => _i,
-            SteamGuard: () => xn,
+            SteamGuard: () => bn,
             SteamInputAPISvg: () => Wi,
             SteamInputTranslationImage: () => Qo,
             SteamLogo: () => vn,
@@ -16871,7 +16872,7 @@ var CLSTAMP = "8704120";
             Volume100: () => _e,
             Volume30: () => ke,
             Volume60: () => He,
-            VolumeMuted: () => be,
+            VolumeMuted: () => xe,
             Wallet: () => k,
             WholeMouseImage: () => Ai,
             WiFi: () => re,
@@ -16886,7 +16887,7 @@ var CLSTAMP = "8704120";
             WriteReview: () => pn,
             X_Line: () => Cn,
             Xbox360ControllerFrontOutline: () => ki,
-            XboxOneControllerFrontOutline: () => bi,
+            XboxOneControllerFrontOutline: () => xi,
             YawAxisOverlay: () => eo,
             YellowExclamation: () => ee,
             YourGroups: () => Sn,
@@ -17279,7 +17280,7 @@ var CLSTAMP = "8704120";
             }),
           );
         }
-        function b(e) {
+        function x(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -17296,7 +17297,7 @@ var CLSTAMP = "8704120";
             }),
           );
         }
-        function x(e) {
+        function b(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -18771,7 +18772,7 @@ var CLSTAMP = "8704120";
         }
         function Ee(e) {
           return e.flVolume < Number.EPSILON
-            ? i.createElement(be, { color: e.color })
+            ? i.createElement(xe, { color: e.color })
             : e.flVolume < 0.3 + Number.EPSILON
             ? i.createElement(ke, { color: e.color })
             : e.flVolume < 0.6 + Number.EPSILON
@@ -18868,7 +18869,7 @@ var CLSTAMP = "8704120";
             }),
           );
         }
-        function be(e) {
+        function xe(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -18889,7 +18890,7 @@ var CLSTAMP = "8704120";
             }),
           );
         }
-        function xe(e) {
+        function be(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -20079,7 +20080,7 @@ var CLSTAMP = "8704120";
             }),
           );
         }
-        function bt(e) {
+        function xt(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -20096,7 +20097,7 @@ var CLSTAMP = "8704120";
             }),
           );
         }
-        function xt(e) {
+        function bt(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -21208,7 +21209,7 @@ var CLSTAMP = "8704120";
             }),
           );
         }
-        function bn(e) {
+        function xn(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -21227,7 +21228,7 @@ var CLSTAMP = "8704120";
             }),
           );
         }
-        function xn(e) {
+        function bn(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -22365,7 +22366,7 @@ var CLSTAMP = "8704120";
             }),
           );
         }
-        function br(e) {
+        function xr(e) {
           const { alert: t, urgent: n } = e,
             o = (0, r._T)(e, ["alert", "urgent"]);
           return n
@@ -22441,7 +22442,7 @@ var CLSTAMP = "8704120";
                 ),
               );
         }
-        function xr(e) {
+        function br(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -24304,8 +24305,8 @@ var CLSTAMP = "8704120";
               "highlightR1Button",
               "highlightR2Trigger",
             ]),
-            b = "#4897D2",
-            [x, V] = (0, s.y)(),
+            x = "#4897D2",
+            [b, V] = (0, s.y)(),
             [S, y] = (0, s.y)(),
             [Z, R] = (0, s.y)(),
             [D, O] = (0, s.y)(),
@@ -24575,133 +24576,133 @@ var CLSTAMP = "8704120";
             }),
             i.createElement("path", {
               stroke: "currentColor",
-              fill: t ? b : null,
+              fill: t ? x : null,
               d: "M133 85.12H109.24C106.66 85.12 104.56 83.03 104.56 80.44C104.56 77.86 106.65 75.76 109.24 75.76H133C135.58 75.76 137.68 77.85 137.68 80.44C137.68 83.03 135.59 85.12 133 85.12Z",
               strokeWidth: "3",
               strokeMiterlimit: "10",
             }),
             i.createElement("path", {
               stroke: "currentColor",
-              fill: n ? b : null,
+              fill: n ? x : null,
               d: "M942.87 85.12H919.11C916.53 85.12 914.43 83.03 914.43 80.44C914.43 77.86 916.52 75.76 919.11 75.76H942.87C945.45 75.76 947.55 77.85 947.55 80.44C947.55 83.03 945.45 85.12 942.87 85.12Z",
               strokeWidth: "3",
               strokeMiterlimit: "10",
             }),
             i.createElement("path", {
               stroke: "currentColor",
-              fill: o ? b : null,
+              fill: o ? x : null,
               d: "M203.15 293.62H162.81C158.02 293.62 154.14 289.74 154.14 284.95C154.14 280.16 158.02 276.28 162.81 276.28H203.15C207.94 276.28 211.82 280.16 211.82 284.95C211.82 289.74 207.94 293.62 203.15 293.62Z",
               strokeWidth: "3",
               strokeMiterlimit: "10",
             }),
             i.createElement("path", {
               stroke: "currentColor",
-              fill: l ? b : null,
+              fill: l ? x : null,
               d: "M850.07 293.62H890.41C895.2 293.62 899.08 289.74 899.08 284.95C899.08 280.16 895.2 276.28 890.41 276.28H850.07C845.28 276.28 841.4 280.16 841.4 284.95C841.4 289.74 845.28 293.62 850.07 293.62Z",
               strokeWidth: "3",
               strokeMiterlimit: "10",
             }),
             i.createElement("path", {
               stroke: "currentColor",
-              fill: m ? b : null,
+              fill: m ? x : null,
               d: "M1021.23 123.79C1029.5 123.79 1036.21 119.093 1036.21 113.3C1036.21 107.506 1029.5 102.81 1021.23 102.81C1012.96 102.81 1006.25 107.506 1006.25 113.3C1006.25 119.093 1012.96 123.79 1021.23 123.79Z",
               strokeWidth: "3",
               strokeMiterlimit: "10",
             }),
             i.createElement("path", {
               stroke: "currentColor",
-              fill: d ? b : null,
+              fill: d ? x : null,
               d: "M989.83 145.6C998.103 145.6 1004.81 140.903 1004.81 135.11C1004.81 129.317 998.103 124.62 989.83 124.62C981.557 124.62 974.85 129.317 974.85 135.11C974.85 140.903 981.557 145.6 989.83 145.6Z",
               strokeWidth: "3",
               strokeMiterlimit: "10",
             }),
             i.createElement("path", {
               stroke: "currentColor",
-              fill: g ? b : null,
+              fill: g ? x : null,
               d: "M989.83 101.65C998.103 101.65 1004.81 96.9534 1004.81 91.16C1004.81 85.3665 998.103 80.67 989.83 80.67C981.557 80.67 974.85 85.3665 974.85 91.16C974.85 96.9534 981.557 101.65 989.83 101.65Z",
               strokeWidth: "3",
               strokeMiterlimit: "10",
             }),
             i.createElement("path", {
               stroke: "currentColor",
-              fill: p ? b : null,
+              fill: p ? x : null,
               d: "M958.43 123.79C966.703 123.79 973.41 119.093 973.41 113.3C973.41 107.506 966.703 102.81 958.43 102.81C950.157 102.81 943.45 107.506 943.45 113.3C943.45 119.093 950.157 123.79 958.43 123.79Z",
               strokeWidth: "3",
               strokeMiterlimit: "10",
             }),
             i.createElement("path", {
               stroke: "currentColor",
-              fill: H ? b : null,
+              fill: H ? x : null,
               d: "M1039.67 56.61C1037.07 51.51 1031.2 47.11 1018.02 41.42C994.29 31.17 965.62 21.91 950.58 19.43C950.14 19.36 949.71 19.29 949.29 19.23C963.45 10.41 971.51 2 986.14 2C1002.08 2 1019.34 12.25 1025.38 17.94C1031.43 23.64 1037.82 40.46 1039.4 52.46C1039.58 53.8 1039.67 55.2 1039.67 56.61Z",
               strokeWidth: "3",
               strokeMiterlimit: "10",
             }),
             i.createElement("path", {
               stroke: "currentColor",
-              fill: _ ? b : null,
+              fill: _ ? x : null,
               d: "M1039.67 56.61C1039.7 58.88 1039.51 61.2 1039.11 63.44C1035.11 60.68 1030.25 58.19 1024.77 55.87C1012.77 50.79 997.14 45.38 960.56 45.04C958.35 45.02 947.64 45.03 936.27 45.06C923.52 45.07 909.96 45.11 906.63 45.14C893.36 45.23 889.57 40.73 888.54 35.58V31.7C888.54 25.21 893.52 23.99 898.51 23.99H915.63C930.08 23.99 931.84 16.72 949.29 19.23C949.71 19.29 950.14 19.36 950.58 19.43C965.62 21.91 994.29 31.17 1018.02 41.42C1031.2 47.11 1037.07 51.51 1039.67 56.61Z",
               strokeWidth: "3",
               strokeMiterlimit: "10",
             }),
             i.createElement("path", {
               stroke: "currentColor",
-              fill: E ? b : null,
+              fill: E ? x : null,
               d: "M103.93 19.23C103.51 19.29 103.08 19.36 102.64 19.43C87.6 21.91 58.93 31.17 35.2 41.42C22.01 47.12 16.14 51.52 13.55 56.63C13.55 55.21 13.64 53.81 13.82 52.46C15.4 40.46 21.8 23.64 27.84 17.94C33.88 12.25 51.14 2 67.08 2C81.71 2 89.77 10.41 103.93 19.23Z",
               strokeWidth: "3",
               strokeMiterlimit: "10",
             }),
             i.createElement("path", {
               stroke: "currentColor",
-              fill: w ? b : null,
+              fill: w ? x : null,
               d: "M164.68 31.7V35.58C163.65 40.73 159.86 45.23 146.59 45.14C143.26 45.11 129.7 45.07 116.95 45.05C105.58 45.03 94.87 45.02 92.66 45.04C56.08 45.38 40.45 50.79 28.45 55.87C22.97 58.19 18.11 60.68 14.11 63.44C13.71 61.21 13.52 58.89 13.55 56.63C16.14 51.52 22.01 47.12 35.2 41.42C58.93 31.17 87.6 21.91 102.64 19.43C103.08 19.36 103.51 19.29 103.93 19.23C121.38 16.72 123.14 23.99 137.59 23.99H154.71C159.7 23.99 164.68 25.21 164.68 31.7Z",
               strokeWidth: "3",
               strokeMiterlimit: "10",
             }),
             i.createElement("path", {
               stroke: "currentColor",
-              fill: h ? b : null,
+              fill: h ? x : null,
               d: "M841.24 249.62V191.63C841.24 185.08 846.85 179.75 853.74 179.75H944.84C951.73 179.75 957.34 185.08 957.34 191.63V249.62C957.34 256.17 951.73 261.5 944.84 261.5H853.74C846.85 261.51 841.24 256.18 841.24 249.62Z",
               strokeWidth: "3",
               strokeMiterlimit: "10",
             }),
             i.createElement("path", {
               stroke: "currentColor",
-              fill: C ? b : null,
+              fill: C ? x : null,
               d: "M199.48 261.51H108.38C101.49 261.51 95.88 256.18 95.88 249.63V191.64C95.88 185.09 101.49 179.76 108.38 179.76H199.48C206.37 179.76 211.98 185.09 211.98 191.64V249.63C211.98 256.18 206.37 261.51 199.48 261.51Z",
               strokeWidth: "3",
               strokeMiterlimit: "10",
             }),
             i.createElement("path", {
               stroke: "currentColor",
-              fill: c ? b : null,
+              fill: c ? x : null,
               d: "M916.77 148.12C916.77 148.37 916.77 148.61 916.76 148.85C916.73 149.72 916.65 150.57 916.53 151.38C914.59 163.92 901.46 169.59 889.09 169.59C876.72 169.59 863.59 163.92 861.65 151.38C861.53 150.57 861.45 149.73 861.42 148.86C861.41 148.61 861.41 148.37 861.41 148.12C861.41 133.29 873.8 126.02 889.09 126.02C904.38 126.02 916.77 133.29 916.77 148.12Z",
               strokeWidth: "3",
               strokeMiterlimit: "10",
             }),
             i.createElement("path", {
               stroke: "currentColor",
-              fill: c ? b : null,
+              fill: c ? x : null,
               d: "M889.09 167.27C901.715 167.27 911.95 160.447 911.95 152.03C911.95 143.613 901.715 136.79 889.09 136.79C876.465 136.79 866.23 143.613 866.23 152.03C866.23 160.447 876.465 167.27 889.09 167.27Z",
               strokeWidth: "3",
               strokeMiterlimit: "10",
             }),
             i.createElement("path", {
               stroke: "currentColor",
-              fill: a ? b : null,
+              fill: a ? x : null,
               d: "M191.81 148.12C191.81 148.37 191.81 148.61 191.8 148.85C191.77 149.72 191.69 150.57 191.57 151.38C189.63 163.92 176.5 169.59 164.13 169.59C151.76 169.59 138.63 163.92 136.69 151.38C136.57 150.57 136.49 149.73 136.46 148.86C136.45 148.61 136.45 148.37 136.45 148.12C136.45 133.29 148.84 126.02 164.13 126.02C179.42 126.02 191.81 133.29 191.81 148.12Z",
               strokeWidth: "3",
               strokeMiterlimit: "10",
             }),
             i.createElement("path", {
               stroke: "currentColor",
-              fill: a ? b : null,
+              fill: a ? x : null,
               d: "M164.13 167.27C176.755 167.27 186.99 160.447 186.99 152.03C186.99 143.613 176.755 136.79 164.13 136.79C151.505 136.79 141.27 143.613 141.27 152.03C141.27 160.447 151.505 167.27 164.13 167.27Z",
               strokeWidth: "3",
               strokeMiterlimit: "10",
             }),
             i.createElement("path", {
               stroke: "currentColor",
-              fill: u ? b : null,
+              fill: u ? x : null,
               d: "M75.38 137.46V122.74H95.3499C97.5599 122.74 99.36 120.95 99.36 118.73V109.34C99.36 107.13 97.5699 105.33 95.3499 105.33H74.53V91.14C74.53 88.93 72.74 87.13 70.52 87.13H54.75C52.54 87.13 50.74 88.92 50.74 91.14V105.33H29.92C27.71 105.33 25.91 107.12 25.91 109.34V118.73C25.91 120.94 27.7 122.74 29.92 122.74H49.89V137.46C49.89 139.67 51.68 141.47 53.9 141.47H71.37C73.59 141.47 75.38 139.67 75.38 137.46Z",
               strokeWidth: "3",
               strokeMiterlimit: "10",
@@ -24712,7 +24713,7 @@ var CLSTAMP = "8704120";
               i.createElement(
                 "pattern",
                 {
-                  id: x,
+                  id: b,
                   patternContentUnits: "objectBoundingBox",
                   width: "0.0577367",
                   height: "0.0820009",
@@ -24795,8 +24796,8 @@ var CLSTAMP = "8704120";
               highlightStart: _,
               highlightSelect: H,
               highlightGuide: k,
-              highlightCapture: b,
-              highlightA: x,
+              highlightCapture: x,
+              highlightA: b,
               highlightB: V,
               highlightX: S,
               highlightY: y,
@@ -24941,7 +24942,7 @@ var CLSTAMP = "8704120";
               strokeMiterlimit: "10",
             }),
             i.createElement("path", {
-              className: x ? a().GenericGamepadHighlight : null,
+              className: b ? a().GenericGamepadHighlight : null,
               stroke: "currentColor",
               d: "M786.151 281.871C804.393 281.871 819.181 267.082 819.181 248.838C819.181 230.595 804.393 215.806 786.151 215.806C767.909 215.806 753.121 230.595 753.121 248.838C753.121 267.082 767.909 281.871 786.151 281.871Z",
               strokeWidth: "4",
@@ -25091,7 +25092,7 @@ var CLSTAMP = "8704120";
               }),
             !T &&
               i.createElement("rect", {
-                className: b ? a().GenericGamepadHighlight : null,
+                className: x ? a().GenericGamepadHighlight : null,
                 stroke: "currentColor",
                 x: "501",
                 y: "222",
@@ -25221,8 +25222,8 @@ var CLSTAMP = "8704120";
               highlightStart: _,
               highlightSelect: H,
               highlightGuide: k,
-              highlightCapture: b,
-              highlightA: x,
+              highlightCapture: x,
+              highlightA: b,
               highlightB: V,
               highlightX: S,
               highlightY: y,
@@ -25461,7 +25462,7 @@ var CLSTAMP = "8704120";
               strokeMiterlimit: "10",
             }),
             i.createElement("path", {
-              className: x ? a().GenericGamepadHighlight : null,
+              className: b ? a().GenericGamepadHighlight : null,
               stroke: "currentColor",
               d: "M767.853 263.084C786.893 263.084 802.328 247.649 802.328 228.609C802.328 209.569 786.893 194.134 767.853 194.134C748.813 194.134 733.378 209.569 733.378 228.609C733.378 247.649 748.813 263.084 767.853 263.084Z",
               strokeWidth: "4",
@@ -25501,7 +25502,7 @@ var CLSTAMP = "8704120";
             }),
           );
         }
-        function bi(e) {
+        function xi(e) {
           const {
               hasCaptureButton: t,
               highlightLeftBumper: n,
@@ -25525,8 +25526,8 @@ var CLSTAMP = "8704120";
               highlightStart: _,
               highlightSelect: H,
               highlightGuide: k,
-              highlightCapture: b,
-              highlightA: x,
+              highlightCapture: x,
+              highlightA: b,
               highlightB: V,
               highlightX: S,
               highlightY: y,
@@ -25692,7 +25693,7 @@ var CLSTAMP = "8704120";
               strokeMiterlimit: "10",
             }),
             i.createElement("path", {
-              className: x ? a().GenericGamepadHighlight : null,
+              className: b ? a().GenericGamepadHighlight : null,
               stroke: "currentColor",
               d: "M759.993 295.975C779.033 295.975 794.468 280.54 794.468 261.5C794.468 242.46 779.033 227.024 759.993 227.024C740.953 227.024 725.518 242.46 725.518 261.5C725.518 280.54 740.953 295.975 759.993 295.975Z",
               strokeWidth: "4",
@@ -25796,7 +25797,7 @@ var CLSTAMP = "8704120";
             }),
             t &&
               i.createElement("rect", {
-                className: b ? a().GenericGamepadHighlight : null,
+                className: x ? a().GenericGamepadHighlight : null,
                 stroke: "currentColor",
                 x: "473.169",
                 y: "231.179",
@@ -25830,7 +25831,7 @@ var CLSTAMP = "8704120";
             }),
           );
         }
-        function xi(e) {
+        function bi(e) {
           const {
               hasCaptureButton: t,
               highlightLeftBumper: n,
@@ -25854,8 +25855,8 @@ var CLSTAMP = "8704120";
               highlightStart: _,
               highlightSelect: H,
               highlightGuide: k,
-              highlightCapture: b,
-              highlightA: x,
+              highlightCapture: x,
+              highlightA: b,
               highlightB: V,
               highlightX: S,
               highlightY: y,
@@ -26084,7 +26085,7 @@ var CLSTAMP = "8704120";
               strokeMiterlimit: "10",
             }),
             i.createElement("path", {
-              className: x ? a().GenericGamepadHighlight : null,
+              className: b ? a().GenericGamepadHighlight : null,
               stroke: "currentColor",
               d: "M797.546 342.716C814.797 342.716 828.782 328.731 828.782 311.48C828.782 294.229 814.797 280.244 797.546 280.244C780.295 280.244 766.31 294.229 766.31 311.48C766.31 328.731 780.295 342.716 797.546 342.716Z",
               strokeWidth: "4",
@@ -26138,8 +26139,8 @@ var CLSTAMP = "8704120";
               highlightStart: _,
               highlightSelect: H,
               highlightGuide: k,
-              highlightCapture: b,
-              highlightA: x,
+              highlightCapture: x,
+              highlightA: b,
               highlightB: V,
               highlightX: S,
               highlightY: y,
@@ -26447,7 +26448,7 @@ var CLSTAMP = "8704120";
               strokeMiterlimit: "10",
             }),
             i.createElement("path", {
-              className: x ? a().GenericGamepadHighlight : null,
+              className: b ? a().GenericGamepadHighlight : null,
               stroke: "currentColor",
               d: "M813.932 291.768C831.357 291.768 845.483 277.643 845.483 260.218C845.483 242.793 831.357 228.667 813.932 228.667C796.508 228.667 782.382 242.793 782.382 260.218C782.382 277.643 796.508 291.768 813.932 291.768Z",
               strokeWidth: "4",
@@ -26554,8 +26555,8 @@ var CLSTAMP = "8704120";
               highlightStart: _,
               highlightSelect: H,
               highlightGuide: k,
-              highlightCapture: b,
-              highlightA: x,
+              highlightCapture: x,
+              highlightA: b,
               highlightB: V,
               highlightX: S,
               highlightY: y,
@@ -26746,7 +26747,7 @@ var CLSTAMP = "8704120";
                 strokeWidth: "4",
               }),
             i.createElement("path", {
-              className: b ? a().GenericGamepadHighlight : null,
+              className: x ? a().GenericGamepadHighlight : null,
               stroke: "currentColor",
               d: "M521.094 371.208H481.978C479.587 371.208 477.648 373.146 477.648 375.538V375.918C477.648 378.309 479.587 380.248 481.978 380.248H521.094C523.485 380.248 525.423 378.309 525.423 375.918V375.538C525.423 373.146 523.485 371.208 521.094 371.208Z",
               strokeWidth: "4",
@@ -26850,7 +26851,7 @@ var CLSTAMP = "8704120";
               strokeMiterlimit: "10",
             }),
             i.createElement("path", {
-              className: x ? a().GenericGamepadHighlight : null,
+              className: b ? a().GenericGamepadHighlight : null,
               stroke: "currentColor",
               d: "M818.162 281.076C835.587 281.076 849.713 266.95 849.713 249.525C849.713 232.1 835.587 217.975 818.162 217.975C800.737 217.975 786.611 232.1 786.611 249.525C786.611 266.95 800.737 281.076 818.162 281.076Z",
               strokeWidth: "4",
@@ -26951,8 +26952,8 @@ var CLSTAMP = "8704120";
               highlightStart: _,
               highlightSelect: H,
               highlightGuide: k,
-              highlightCapture: b,
-              highlightA: x,
+              highlightCapture: x,
+              highlightA: b,
               highlightB: V,
               highlightX: S,
               highlightY: y,
@@ -27125,7 +27126,7 @@ var CLSTAMP = "8704120";
               d: "M537.599 164.843V173.76H541.389V166.648H549.772V173.916H553.562V164.999V156.081H551.711H549.839V163.215H541.456V156.103H537.666L537.599 164.843Z",
             }),
             i.createElement("path", {
-              className: b ? a().GenericGamepadHighlight : null,
+              className: x ? a().GenericGamepadHighlight : null,
               stroke: "currentColor",
               d: "M439.305 192.866H417.01C413.317 192.866 410.322 195.861 410.322 199.554V221.848C410.322 225.542 413.317 228.537 417.01 228.537H439.305C442.998 228.537 445.993 225.542 445.993 221.848V199.554C445.993 195.861 442.998 192.866 439.305 192.866Z",
               strokeWidth: "4",
@@ -27272,7 +27273,7 @@ var CLSTAMP = "8704120";
               strokeMiterlimit: "10",
             }),
             i.createElement("path", {
-              className: x ? a().GenericGamepadHighlight : null,
+              className: b ? a().GenericGamepadHighlight : null,
               stroke: "currentColor",
               d: "M763.371 308.795C782.455 308.795 797.927 293.324 797.927 274.239C797.927 255.155 782.455 239.684 763.371 239.684C744.286 239.684 728.815 255.155 728.815 274.239C728.815 293.324 744.286 308.795 763.371 308.795Z",
               strokeWidth: "4",
@@ -27350,8 +27351,8 @@ var CLSTAMP = "8704120";
               highlightStart: _,
               highlightSelect: H,
               highlightGuide: k,
-              highlightCapture: b,
-              highlightA: x,
+              highlightCapture: x,
+              highlightA: b,
               highlightB: V,
               highlightX: S,
               highlightY: y,
@@ -27483,7 +27484,7 @@ var CLSTAMP = "8704120";
               strokeMiterlimit: "10",
             }),
             i.createElement("path", {
-              className: x ? a().GenericGamepadHighlight : null,
+              className: b ? a().GenericGamepadHighlight : null,
               stroke: "currentColor",
               d: "M374.475 240.751C374.475 228.558 364.591 218.674 352.398 218.674C340.206 218.674 330.321 228.558 330.321 240.751C330.321 252.944 340.206 262.828 352.398 262.828C364.591 262.828 374.475 252.944 374.475 240.751Z",
               strokeWidth: "3.89022",
@@ -27547,8 +27548,8 @@ var CLSTAMP = "8704120";
               highlightStart: _,
               highlightSelect: H,
               highlightGuide: k,
-              highlightCapture: b,
-              highlightA: x,
+              highlightCapture: x,
+              highlightA: b,
               highlightB: V,
               highlightX: S,
               highlightY: y,
@@ -27688,7 +27689,7 @@ var CLSTAMP = "8704120";
               strokeMiterlimit: "10",
             }),
             i.createElement("path", {
-              className: x ? a().GenericGamepadHighlight : null,
+              className: b ? a().GenericGamepadHighlight : null,
               stroke: "currentColor",
               d: "M461.17 244.253C461.17 256.446 471.054 266.33 483.247 266.33C495.44 266.33 505.324 256.446 505.324 244.253C505.324 232.06 495.44 222.176 483.247 222.176C471.054 222.176 461.17 232.06 461.17 244.253Z",
               strokeWidth: "3.89022",
@@ -27752,8 +27753,8 @@ var CLSTAMP = "8704120";
               highlightStart: _,
               highlightSelect: H,
               highlightGuide: k,
-              highlightCapture: b,
-              highlightA: x,
+              highlightCapture: x,
+              highlightA: b,
               highlightB: V,
               highlightX: S,
               highlightY: y,
@@ -27879,7 +27880,7 @@ var CLSTAMP = "8704120";
               strokeMiterlimit: "10",
             }),
             i.createElement("path", {
-              className: b ? a().GenericGamepadHighlight : null,
+              className: x ? a().GenericGamepadHighlight : null,
               stroke: "currentColor",
               d: "M163.297 454.574H138.983C135.761 454.574 133.148 457.187 133.148 460.41V484.723C133.148 487.946 135.761 490.559 138.983 490.559H163.297C166.52 490.559 169.132 487.946 169.132 484.723V460.41C169.132 457.187 166.52 454.574 163.297 454.574Z",
               strokeWidth: "3",
@@ -28000,7 +28001,7 @@ var CLSTAMP = "8704120";
               strokeMiterlimit: "10",
             }),
             i.createElement("path", {
-              className: x ? a().GenericGamepadHighlight : null,
+              className: b ? a().GenericGamepadHighlight : null,
               stroke: "currentColor",
               d: "M567.86 243.296C580.053 243.296 589.937 233.411 589.937 221.219C589.937 209.026 580.053 199.142 567.86 199.142C555.667 199.142 545.783 209.026 545.783 221.219C545.783 233.411 555.667 243.296 567.86 243.296Z",
               strokeWidth: "3.89022",
@@ -29906,7 +29907,7 @@ var CLSTAMP = "8704120";
             }),
           );
         }
-        function bo(e) {
+        function xo(e) {
           return i.createElement(
             "svg",
             {
@@ -29924,7 +29925,7 @@ var CLSTAMP = "8704120";
             }),
           );
         }
-        function xo(e) {
+        function bo(e) {
           const [t, n] = (0, s.y)(),
             [r, o] = (0, s.y)();
           return i.createElement(
@@ -33116,9 +33117,9 @@ var CLSTAMP = "8704120";
           tb: () => C,
           Pv: () => H,
           uH: () => k.uH,
-          RG: () => b.R,
+          RG: () => x.R,
           JX: () => k.JX,
-          BL: () => x.BL,
+          BL: () => b.BL,
           Ev: () => h,
           e1: () => a.e1,
           A: () => a.A,
@@ -33127,8 +33128,8 @@ var CLSTAMP = "8704120";
           RM: () => k.RM,
           jF: () => k.jF,
           Yy: () => l.Y,
-          Zp: () => x.Zp,
-          bs: () => x.bs,
+          Zp: () => b.Zp,
+          bs: () => b.bs,
         });
         var r = n(85556),
           i = n(27378),
@@ -33259,8 +33260,8 @@ var CLSTAMP = "8704120";
             : i.createElement(i.Fragment, null, t);
         }
         var k = n(56894),
-          b = n(6978),
-          x = n(25929);
+          x = n(6978),
+          b = n(25929);
       },
       63426: (e, t, n) => {
         "use strict";
@@ -33882,8 +33883,8 @@ var CLSTAMP = "8704120";
             _ = (0, C.Wy)(),
             H = null == _ ? void 0 : _.ownerWindow,
             k = (0, c.$C)(),
-            b = (0, o.s)(E),
-            x = Object.assign(Object.assign({}, b), { onClose: g });
+            x = (0, o.s)(E),
+            b = Object.assign(Object.assign({}, x), { onClose: g });
           let V = 0;
           e.resizable && (V |= C.eL.Resizable);
           const { popup: S, element: y } = (0, o.B)(
@@ -33902,7 +33903,7 @@ var CLSTAMP = "8704120";
               eCreationFlags: V,
               target_browser: w,
             },
-            x,
+            b,
           );
           if (
             (r.useLayoutEffect(
@@ -34122,7 +34123,7 @@ var CLSTAMP = "8704120";
         n.d(t, {
           $06: () => Fe,
           $gZ: () => M,
-          $nj: () => x,
+          $nj: () => b,
           AlT: () => vt,
           BKy: () => Le,
           BNo: () => Vt,
@@ -34187,7 +34188,7 @@ var CLSTAMP = "8704120";
           Yx0: () => P,
           Yz9: () => ae,
           ZAu: () => W,
-          ZNm: () => xe,
+          ZNm: () => be,
           Zrf: () => g,
           _3P: () => lt,
           _F3: () => $e,
@@ -34198,7 +34199,7 @@ var CLSTAMP = "8704120";
           chI: () => We,
           civ: () => Ct,
           dCe: () => $t,
-          dE8: () => xt,
+          dE8: () => bt,
           dLw: () => Mt,
           daM: () => ct,
           doA: () => Rt,
@@ -34210,7 +34211,7 @@ var CLSTAMP = "8704120";
           foH: () => f,
           gR: () => Ee,
           ge: () => Ce,
-          gf_: () => bt,
+          gf_: () => xt,
           h9: () => L,
           hLd: () => Oe,
           hnm: () => le,
@@ -34219,7 +34220,7 @@ var CLSTAMP = "8704120";
           iz5: () => I,
           j5H: () => yt,
           j7C: () => Pt,
-          k4K: () => b,
+          k4K: () => x,
           k4w: () => ee,
           l9G: () => D,
           lBf: () => m,
@@ -34239,7 +34240,7 @@ var CLSTAMP = "8704120";
           pVO: () => y,
           pkz: () => J,
           r6F: () => _e,
-          rFk: () => be,
+          rFk: () => xe,
           ret: () => w,
           s1S: () => Xe,
           shV: () => ie,
@@ -34785,7 +34786,7 @@ var CLSTAMP = "8704120";
                 }),
               );
         }
-        function b(e) {
+        function x(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -34807,7 +34808,7 @@ var CLSTAMP = "8704120";
             }),
           );
         }
-        function x() {
+        function b() {
           return i.createElement(
             "svg",
             {
@@ -36659,7 +36660,7 @@ var CLSTAMP = "8704120";
             }),
           );
         }
-        function be() {
+        function xe() {
           return i.createElement(
             "svg",
             {
@@ -36736,7 +36737,7 @@ var CLSTAMP = "8704120";
             ),
           );
         }
-        function xe() {
+        function be() {
           return i.createElement(
             "svg",
             {
@@ -38569,7 +38570,7 @@ var CLSTAMP = "8704120";
             }),
           );
         }
-        function bt(e) {
+        function xt(e) {
           return i.createElement(
             "svg",
             {
@@ -38592,7 +38593,7 @@ var CLSTAMP = "8704120";
             }),
           );
         }
-        function xt(e) {
+        function bt(e) {
           return i.createElement(
             "svg",
             {
@@ -40190,7 +40191,7 @@ var CLSTAMP = "8704120";
           k0: () => f,
           mO: () => L,
           ns: () => p,
-          oM: () => b,
+          oM: () => x,
           zW: () => _,
         });
         var r = n(85556),
@@ -40387,7 +40388,7 @@ var CLSTAMP = "8704120";
           let n = Number.parseFloat(e);
           return t && (n *= 1e3), n;
         }
-        function b(e, t = 1) {
+        function x(e, t = 1) {
           for (; e; ) {
             let t = (e.ownerDocument.defaultView || window).getComputedStyle(e),
               n = parseFloat(t.zoom);
@@ -41339,9 +41340,9 @@ var CLSTAMP = "8704120";
           GB: () => r,
           H0: () => i,
           H2: () => s,
-          H8: () => b,
+          H8: () => x,
           J$: () => f,
-          Jk: () => x,
+          Jk: () => b,
           K1: () => p,
           LO: () => R,
           Lh: () => H,
@@ -41397,13 +41398,13 @@ var CLSTAMP = "8704120";
           }
           return n;
         }
-        function b(e, t) {
+        function x(e, t) {
           const n = [];
           let r = e;
           for (; (r = k(r, t)); ) n.push(r);
           return n;
         }
-        function x(e, t) {
+        function b(e, t) {
           let n = e;
           for (; n; ) {
             if (t(n)) return n;
@@ -41790,7 +41791,7 @@ var CLSTAMP = "8704120";
           Kb: () => S,
           LO: () => V,
           Mh: () => k,
-          Np: () => x,
+          Np: () => b,
           Sc: () => u,
           Ti: () => C,
           U$: () => r,
@@ -42003,7 +42004,7 @@ var CLSTAMP = "8704120";
             if (!a.bGranularFutureTime)
               return (
                 i.zO(n.getTime() - r.getTime()),
-                n.getFullYear() == r.getFullYear() ? b(n) : V(n)
+                n.getFullYear() == r.getFullYear() ? x(n) : V(n)
               );
             i.zO(new Date().setHours(24, 0, 0, 0) - r.getTime());
             let e = new Date();
@@ -42059,7 +42060,7 @@ var CLSTAMP = "8704120";
               ? (0, o.Xx)("#TimeSince_1Week")
               : (0, o.Xx)("#TimeSince_XWeeks", e);
           }
-          return n.getFullYear() == r.getFullYear() ? b(n) : V(n);
+          return n.getFullYear() == r.getFullYear() ? x(n) : V(n);
         }
         function v(e) {
           const t = new Date(1e3 * e),
@@ -42072,10 +42073,10 @@ var CLSTAMP = "8704120";
             t >= r
               ? (0, o.Xx)("#Time_Recent")
               : t.getFullYear() == n.getFullYear()
-              ? b(t)
+              ? x(t)
               : n.getMonth() < 6 && t.getFullYear() == n.getFullYear() - 1
               ? V(t)
-              : x(t)
+              : b(t)
           );
         }
         const L = new Map(),
@@ -42110,7 +42111,7 @@ var CLSTAMP = "8704120";
             t)
           );
         }
-        function b(e) {
+        function x(e) {
           let t = M.get(e.getMonth());
           return (
             t ||
@@ -42121,7 +42122,7 @@ var CLSTAMP = "8704120";
             t)
           );
         }
-        function x(e) {
+        function b(e) {
           let t = w.get(e.getFullYear());
           return (
             t ||
@@ -42684,12 +42685,12 @@ var CLSTAMP = "8704120";
           OR: () => w,
           Qg: () => k,
           Sd: () => f,
-          U4: () => x,
+          U4: () => b,
           X9: () => R,
           Yj: () => I,
           Yz: () => d,
           e0: () => G,
-          e1: () => b,
+          e1: () => x,
           eF: () => E,
           fB: () => M,
           fF: () => A,
@@ -42909,7 +42910,7 @@ var CLSTAMP = "8704120";
             return () => n.Unregister();
           }, [e, t]);
         }
-        function b(e) {
+        function x(e) {
           const [t, n] = r.useState(null == e ? void 0 : e.Value);
           return (
             r.useEffect(() => {
@@ -42922,7 +42923,7 @@ var CLSTAMP = "8704120";
             t
           );
         }
-        function x(e, t) {
+        function b(e, t) {
           r.useEffect(() => {
             if (null == e) return () => {};
             const n = e.Subscribe(t);
@@ -44068,9 +44069,9 @@ var CLSTAMP = "8704120";
                 ? {
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Feb 16 2024 : 15:44:13",
-                    BUILD_TIME_UTC: "Feb 16 2024 : 23:44:13",
-                    BUILD_RTIME_UTC: 1708127053,
+                    BUILD_TIME_LOCAL: "Feb 20 2024 : 14:39:22",
+                    BUILD_TIME_UTC: "Feb 20 2024 : 22:39:22",
+                    BUILD_RTIME_UTC: 1708468762,
                   }.MOBILE_BUILD
                   ? null
                   : document.getElementById(t)
@@ -44298,8 +44299,8 @@ var CLSTAMP = "8704120";
           _ = n(50947),
           H = n(58761),
           k = n(9891),
-          b = n(31518),
-          x = n(93749),
+          x = n(31518),
+          b = n(93749),
           V = n(36060);
         const S = r.lazy(() =>
             Promise.all([n.e(7962), n.e(58)]).then(n.bind(n, 44496)),
@@ -44349,7 +44350,7 @@ var CLSTAMP = "8704120";
                         h.fI,
                         { IN_DESKTOPUI: !1, IN_GAMEPADUI: !1, IN_VR: !1 },
                         r.createElement(
-                          b.Y0,
+                          x.Y0,
                           null,
                           r.createElement(S, { cm: t }),
                         ),
@@ -44380,7 +44381,7 @@ var CLSTAMP = "8704120";
             a = (0, o.SZ)(() => t.steamid.ConvertTo64BitString()),
             s = r.useMemo(() => ({ useActiveAccount: () => a }), [a]);
           return r.createElement(
-            x.B,
+            b.B,
             { value: s },
             r.createElement(
               E.Ub,
@@ -44657,7 +44658,7 @@ var CLSTAMP = "8704120";
       {
         27: "3bf19072b6105b38b002",
         33: "f5f1965afdb2c4dba33c",
-        58: "47c8f9873db9e3bef9e4",
+        58: "fc89e86c22362045d2b3",
         131: "354de0304f5a2b54d45a",
         146: "0bdd4c82cce0a62935cd",
         200: "afa687f319db8c73d4c5",
@@ -44773,7 +44774,7 @@ var CLSTAMP = "8704120";
         8282: "59839811ffa08c7b1ef8",
         8319: "763a80e30c38efb2efdc",
         8433: "e8296f460b630443b5d2",
-        8467: "f53e970e465d01d07ca9",
+        8467: "6e075b7160d6b0ea9f73",
         8490: "17fb2306ca0033fc5bc9",
         8778: "8b6564a45316579af738",
         8805: "340d65d13b70b0f9f611",

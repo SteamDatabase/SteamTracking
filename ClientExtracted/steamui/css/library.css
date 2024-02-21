@@ -3981,7 +3981,6 @@ button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover:before {
   background-color: #0e141b;
   border: 2px solid #23262e;
   padding: calc(12px + 1.4vw) 2.8vw;
-  min-height: initial;
   width: 660px;
   box-sizing: border-box;
   animation-name: gamepaddialog_slideInAnimation_17KuO;
@@ -3998,6 +3997,18 @@ button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover:before {
     opacity: 1;
     transform: translateY(0);
   }
+}
+.gamepaddialog_ModalPosition_30VHl.gamepaddialog_ScrollWithin_2y_Up
+  > .gamepaddialog_GamepadDialogContent_3joNk {
+  min-height: 0;
+}
+.gamepaddialog_ModalPosition_30VHl.gamepaddialog_ScrollWithin_2y_Up
+  > .gamepaddialog_GamepadDialogContent_3joNk
+  .DialogBody,
+.gamepaddialog_ModalPosition_30VHl.gamepaddialog_ScrollWithin_2y_Up
+  > .gamepaddialog_GamepadDialogContent_3joNk
+  .gamepaddialog_GamepadDialogContent_InnerWidth_3Xeyd.DialogContent_InnerWidth {
+  min-height: 0;
 }
 .gamepaddialog_ModalPosition_30VHl .DialogContentTransition {
   max-width: 613px;
