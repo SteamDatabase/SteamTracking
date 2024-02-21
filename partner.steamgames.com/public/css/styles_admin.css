@@ -27,10 +27,6 @@
 	color: #ddd;
 }
 
-.DashCalendar {
-    margin: 0 46px;
-}
-
 ol {
 	margin-top: 2px;
 }
@@ -2053,7 +2049,7 @@ html, body { height:100%; }
     cursor: help;
 }
 
-.jsTooltip .SysReqLargeTooltipContent 
+.jsTooltip .SysReqLargeTooltipContent
 {
 	white-space: normal;
 }
