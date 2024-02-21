@@ -63472,36 +63472,51 @@
       function u(e) {
         var t, n, a, i;
         let l = "",
-          s = "";
+          s = "",
+          o = !1;
         if ("string" == typeof e) l = r.pk.get("dailydeal");
         else {
-          const o = e;
-          o.id
-            ? ((l = r.pk.get(o.type)),
-              ((null === (t = o.takeover_ids) || void 0 === t
-                ? void 0
-                : t.length) > 0 &&
-                Boolean(o.takeover_ids[0])) ||
-              ((null === (n = o.steamchina_takeover_ids) || void 0 === n
-                ? void 0
-                : n.length) > 0 &&
-                Boolean(o.steamchina_takeover_ids[0]))
-                ? (l = "#3c7c50")
-                : (null === (a = o.takeunder_ids) || void 0 === a
-                    ? void 0
-                    : a.length) > 0 && Boolean(o.takeunder_ids[0])
-                ? (l = "#993a21")
-                : "weekenddeal" != o.type &&
-                  "midweek" != o.type &&
-                  (null === (i = o.contenthub_takeover_ids) || void 0 === i
-                    ? void 0
-                    : i.length) > 0 &&
-                  Boolean(o.contenthub_takeover_ids[0]) &&
-                  (l = "#A3B367"),
-              o.bgcolor && (l = o.bgcolor))
-            : ((l = "#353840"), (s = "1px dashed #4273bd"));
+          const c = e;
+          if (c.id) {
+            l = r.pk.get(c.type);
+            const e =
+                ((null === (t = c.takeover_ids) || void 0 === t
+                  ? void 0
+                  : t.length) > 0 &&
+                  Boolean(c.takeover_ids[0])) ||
+                ((null === (n = c.steamchina_takeover_ids) || void 0 === n
+                  ? void 0
+                  : n.length) > 0 &&
+                  Boolean(c.steamchina_takeover_ids[0])),
+              s =
+                (null === (a = c.takeunder_ids) || void 0 === a
+                  ? void 0
+                  : a.length) > 0 && Boolean(c.takeunder_ids[0]),
+              m =
+                "weekenddeal" != c.type &&
+                "midweek" != c.type &&
+                (null === (i = c.contenthub_takeover_ids) || void 0 === i
+                  ? void 0
+                  : i.length) > 0 &&
+                Boolean(c.contenthub_takeover_ids[0]);
+            e || "takeover" == c.intention
+              ? ((l = "#3c7c50"), (o = !e))
+              : s || "takeunder" == c.intention
+              ? ((l = "#993a21"), (o = !s))
+              : (m || "hub_takeover" == c.intention) &&
+                ((l = "#A3B367"), (o = !m)),
+              c.bgcolor && ((l = c.bgcolor), (o = !1));
+          } else (l = "#353840"), (s = "1px dashed #4273bd");
         }
-        return { style: { backgroundColor: l, border: s } };
+        return {
+          style: {
+            backgroundColor: l,
+            border: s,
+            backgroundImage: o
+              ? "repeating-linear-gradient(45deg, transparent, transparent 5px, rgba(255,255,255,.1) 5px, rgba(255,255,255,.1) 10px)"
+              : void 0,
+          },
+        };
       }
     },
     86688: (e, t, n) => {
