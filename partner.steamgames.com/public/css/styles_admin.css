@@ -555,6 +555,16 @@ pre.results {
 	margin-right: 80px;
 }
 
+
+.languages>.checkboxGrid:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+/* this is important for the subtitle/full audio/interface row */
+.languages>.checkboxGrid .fancyCheckbox {
+    float: right;
+}
+
 .checkboxGrid a .fancyCheckboxLabel {
 	margin-right: 7px;
 	margin-left: 2px;
