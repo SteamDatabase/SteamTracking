@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "8696413";
+var CLSTAMP = "8717086";
 (() => {
   "use strict";
   var e,
@@ -138,70 +138,70 @@ var CLSTAMP = "8696413";
       }[e] +
       ".js?contenthash=" +
       {
-        27: "d802e07b73d21086bf28",
+        27: "f5745ac89696af322679",
         113: "b5d4caf90f7caf0dee3b",
-        131: "42f6a176be9cf46bfebb",
-        146: "ae7a3db4cc9918fd7f30",
+        131: "d8c447d72c8083857616",
+        146: "9a54e681b1cb42093507",
         301: "ea4c812ec8282d437757",
         617: "4678b8cee7575f7fa84a",
-        755: "39ac180d847724bb36e7",
+        755: "2fc5836567898912c8b4",
         1133: "33d9bf43d15fd73fbf73",
         1195: "4d2f66789f588b62683d",
-        1261: "60f7373253af82437b1c",
+        1261: "338b29196ff630bfa1fe",
         1311: "e26a4bb1bbfb0dc024b8",
-        1579: "7a521a96ad4a4fd930a1",
-        1953: "42ba5634eb6b495ee493",
-        2138: "f12d6059a7620a028eac",
+        1579: "b21f508db1b27a9367af",
+        1953: "1dc2b2a32d5bfa95a381",
+        2138: "c0bb6b39c338073363dd",
         2351: "acbd46339c93c36bf74b",
         2557: "04a0663e0331ad0d65c5",
         2603: "5a8cc9124d7289832f3c",
-        2738: "ef401b71f82b349f59f4",
-        2822: "d1478c6fc7948aa12438",
+        2738: "449767dcd012098848f9",
+        2822: "bf17eab009f44c8087e8",
         3038: "6311b223247f38dbe6cc",
-        3068: "98d14a3c319ba3b14e51",
-        3298: "0755baa3ebe57e168413",
-        3602: "90aecd90274bbe51d717",
-        4097: "2fe6ce3cf3b586762f93",
+        3068: "929924ef22133da340dc",
+        3298: "d5c5f45b1917e53b1f31",
+        3602: "a6dff90de0568b47a302",
+        4097: "9961175baabc9f867085",
         4103: "531763b9b78ce879c9b3",
-        4183: "d3c81ad4bf5f02ae5106",
+        4183: "2a91f9a3823f2042654e",
         4358: "72a16fc22cb26ece5906",
-        4445: "5ca499857aaa2cae5e6b",
-        4469: "b2a6840613ca8c5229f0",
-        4487: "566c13d671e1ba154234",
-        4513: "574429906e3f18db4093",
-        4729: "4115be3d2acdee1dbb2f",
+        4445: "e1257e61c50936eb0f15",
+        4469: "a8587a855ae0ff0c8eed",
+        4487: "2396ba4aabe9b2aaf8d7",
+        4513: "85ac3adc78b6e7b1535f",
+        4729: "829e077a8da918d42cd5",
         5012: "11b95c260960a9af6590",
         5277: "8e70831c6929afa88988",
-        5279: "b4f3efcc9ab25937ad6d",
-        5425: "474de7e30b3fc0d76993",
+        5279: "3c4ec08c05044def44a4",
+        5425: "5b10ae5d0b4453f71113",
         5493: "949cac5aab217e9966a6",
         5757: "84b638c8c296bf52b473",
         6091: "2d2e4607238e1455bd16",
-        6403: "a96539485cfd5341ffb0",
+        6403: "4e7ce9d722ca4010680b",
         6415: "1351821a2bbd22685664",
         6457: "5c75ce3bb435ae00fc75",
-        6844: "f368d644bf842fbe18fb",
+        6844: "e06328b816c977fa4360",
         6962: "e16f5bf8336bcd62fbfa",
         7629: "4a52863903a9e3d15d9a",
-        7660: "f6b166495ca3f9a2940b",
+        7660: "72883da4df15e2147dd7",
         7769: "c8096602e4d0e164f8b2",
-        7781: "a9d830c3d38020063b9d",
+        7781: "7899ad2ec71b7c661c2e",
         7832: "bed76caaf847ceaf2942",
         7901: "5864c68067f747108df8",
-        8085: "6a76bcb11d669adde440",
+        8085: "0e7db680d7111f11f552",
         8274: "84388749081deb350892",
         8282: "0b677400cb632c3cfa80",
         8291: "28f9ab007bda4bfb1683",
         8427: "6f4423620fd93e072168",
-        8433: "59e49b4a21315be51d53",
+        8433: "cc77c5a71e0ce0ae7d7a",
         8525: "e4cd8e1869c63e25464f",
         8592: "e45fe9f89bd7fdbd1e7d",
         9233: "0c32af143443c3f3401f",
         9389: "0dc5fcaf507611027d14",
-        9547: "d8dd39fcbc052b92bf0a",
+        9547: "d2cb3a1c4a74d17258ad",
         9665: "210f1d37285a5dda7678",
-        9854: "a39052bd650fc641b281",
-        9951: "6307dff2d56502dee266",
+        9854: "2cda46976623f8181665",
+        9951: "3bda0295218d4431441d",
       }[e]),
     (c.miniCssF = (e) =>
       "css/applications/help/greenenvelope.css?contenthash=2dba4a369c04ed7ece15"),
@@ -243,8 +243,8 @@ var CLSTAMP = "8696413";
           r.setAttribute("data-webpack", i + n),
           (r.src = e)),
           (o[e] = [a]);
-        var h = (a, n) => {
-            (r.onerror = r.onload = null), clearTimeout(b);
+        var b = (a, n) => {
+            (r.onerror = r.onload = null), clearTimeout(h);
             var i = o[e];
             if (
               (delete o[e],
@@ -254,12 +254,12 @@ var CLSTAMP = "8696413";
             )
               return a(n);
           },
-          b = setTimeout(
-            h.bind(null, void 0, { type: "timeout", target: r }),
+          h = setTimeout(
+            b.bind(null, void 0, { type: "timeout", target: r }),
             12e4,
           );
-        (r.onerror = h.bind(null, r.onerror)),
-          (r.onload = h.bind(null, r.onload)),
+        (r.onerror = b.bind(null, r.onerror)),
+          (r.onload = b.bind(null, r.onload)),
           l && document.head.appendChild(r);
       }
     }),

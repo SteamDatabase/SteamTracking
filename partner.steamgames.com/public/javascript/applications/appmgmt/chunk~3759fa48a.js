@@ -299,129 +299,6 @@
         (e.exports = i),
         (i.id = 95126);
     },
-    22520: (e, t, s) => {
-      "use strict";
-      s.d(t, { Am: () => u, kI: () => n, x3: () => l });
-      var r = s(37563),
-        i = s(48760),
-        a = s(62210);
-      const n = 0,
-        o = "061818254b2c99ac49e6626adb128ed1282a392f",
-        l = 120;
-      class u {
-        constructor(e) {
-          (this.m_bInitialized = !1), (this.m_unAppID = e);
-        }
-        get appid() {
-          return this.m_unAppID;
-        }
-        get is_initialized() {
-          return this.m_bInitialized;
-        }
-        get is_valid() {
-          return this.m_bInitialized && !!this.m_strName;
-        }
-        get name() {
-          return this.m_strName;
-        }
-        get header_image_url() {
-          return r.De.MEDIA_CDN_URL + `steam/apps/${this.m_unAppID}/header.jpg`;
-        }
-        get icon_url_no_default() {
-          return this.m_strIconURL && this.BuildAppURL(this.m_strIconURL, o);
-        }
-        get icon_url() {
-          return this.BuildAppURL(this.m_strIconURL, o);
-        }
-        get logo_url() {
-          return (
-            r.De.MEDIA_CDN_URL +
-            `steam/apps/${this.m_unAppID}/capsule_231x87.jpg`
-          );
-        }
-        get time_updated_from_server() {
-          return this.m_dtUpdatedFromServer;
-        }
-        get apptype() {
-          return this.m_eAppType;
-        }
-        BIsApplicationOrTool() {
-          return 4 == this.apptype || 2 == this.apptype;
-        }
-        BuildAppURL(e, t) {
-          return e
-            ? r.De.MEDIA_CDN_COMMUNITY_URL +
-                "images/apps/" +
-                this.appid +
-                "/" +
-                e +
-                ".jpg"
-            : (0, i.U)(t);
-        }
-        DeserializeFromMessage(e) {
-          (this.m_bInitialized = !0),
-            (this.m_strName = e.name()),
-            (this.m_strIconURL = e.icon()),
-            (this.m_dtUpdatedFromServer = new Date()),
-            (this.m_eAppType = e.app_type());
-        }
-        DeserializeFromAppOverview(e) {
-          e.icon_hash() && 1073741824 != e.app_type()
-            ? ((this.m_bInitialized = !0),
-              (this.m_strName = e.display_name()),
-              (this.m_strIconURL = e.icon_hash()),
-              (this.m_dtUpdatedFromServer = new Date()),
-              (this.m_eAppType = e.app_type()))
-            : (this.m_bInitialized = !1);
-        }
-        DeserializeFromCacheObject(e) {
-          try {
-            (this.m_strName = e.strName),
-              (this.m_strIconURL = e.strIconURL),
-              (this.m_dtUpdatedFromServer = new Date(e.strUpdatedFromServer)),
-              (this.m_eAppType = e.eAppType),
-              (this.m_bInitialized = !0);
-          } catch (e) {}
-        }
-        SerializeToCacheObject() {
-          return (
-            (0, a.X)(
-              this.m_bInitialized,
-              "Attempting to serialize an uninitialized AppInfo object for caching!",
-            ),
-            this.m_bInitialized
-              ? {
-                  strName: this.m_strName,
-                  strIconURL: this.m_strIconURL,
-                  strUpdatedFromServer: this.m_dtUpdatedFromServer.toJSON(),
-                  eAppType: this.m_eAppType,
-                }
-              : null
-          );
-        }
-      }
-    },
-    48760: (e, t, s) => {
-      "use strict";
-      s.d(t, { U: () => a, W: () => i });
-      var r = s(37563);
-      const i = "fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb";
-      function a(e, t) {
-        let s = ".jpg";
-        (e && "0000000000000000000000000000000000000000" !== e) || (e = i),
-          44 == e.length && ((s = e.substr(-4)), (e = e.substr(0, 40)));
-        let a = r.De.AVATAR_BASE_URL;
-        return (
-          a ||
-            ((a = r.De.MEDIA_CDN_COMMUNITY_URL + "images/avatars/"),
-            (a += e.substr(0, 2) + "/")),
-          (a += e),
-          t && "small" != t && (a += "_" + t),
-          (a += s),
-          a
-        );
-      }
-    },
     64936: (e, t, s) => {
       "use strict";
       s.d(t, { F_: () => h, JW: () => c, kl: () => g, zD: () => v });
@@ -1551,6 +1428,7 @@
           include_assets_without_overrides:
             e.include_assets_without_overrides ||
             t.include_assets_without_overrides,
+          apply_user_filters: e.apply_user_filters || t.apply_user_filters,
         };
       }
       function p(e, t) {
@@ -2099,18 +1977,18 @@
               let g = null !== (i = e.packageid()) && void 0 !== i ? i : 0,
                 v = null !== (a = t.packageid()) && void 0 !== a ? a : 0;
               if (g != v) return g - v;
-              let I = null !== (n = e.bundleid()) && void 0 !== n ? n : 0,
-                f = null !== (o = t.bundleid()) && void 0 !== o ? o : 0;
-              if (I != f) return I - f;
+              let f = null !== (n = e.bundleid()) && void 0 !== n ? n : 0,
+                I = null !== (o = t.bundleid()) && void 0 !== o ? o : 0;
+              if (f != I) return f - I;
               let R = null !== (l = e.tagid()) && void 0 !== l ? l : 0,
                 b = null !== (u = t.tagid()) && void 0 !== u ? u : 0;
               if (R != b) return R - b;
-              let y = null !== (d = e.creatorid()) && void 0 !== d ? d : 0,
-                C = null !== (c = t.creatorid()) && void 0 !== c ? c : 0;
-              if (y != C) return y - C;
-              let D = null !== (h = e.hubcategoryid()) && void 0 !== h ? h : 0,
+              let C = null !== (d = e.creatorid()) && void 0 !== d ? d : 0,
+                y = null !== (c = t.creatorid()) && void 0 !== c ? c : 0;
+              if (C != y) return C - y;
+              let k = null !== (h = e.hubcategoryid()) && void 0 !== h ? h : 0,
                 S = null !== (m = t.hubcategoryid()) && void 0 !== m ? m : 0;
-              return D != S ? D - S : 0;
+              return k != S ? k - S : 0;
             }),
             t
           );
@@ -2554,9 +2432,9 @@
         return (null == e ? void 0 : e.appid)
           ? { item_type: "app", id: e.appid }
           : (null == e ? void 0 : e.packageid)
-          ? { item_type: "sub", id: e.appid }
+          ? { item_type: "sub", id: e.packageid }
           : (null == e ? void 0 : e.bundleid)
-          ? { item_type: "bundle", id: e.appid }
+          ? { item_type: "bundle", id: e.bundleid }
           : null;
       }
       function h(e, t) {
@@ -2643,7 +2521,7 @@
           ? 4
           : 0;
       }
-      function I(e) {
+      function f(e) {
         return "app" == (null == e ? void 0 : e.item_type)
           ? 0
           : "sub" == (null == e ? void 0 : e.item_type)
@@ -2652,7 +2530,7 @@
           ? 2
           : -1;
       }
-      function f(e) {
+      function I(e) {
         const t = Number.parseInt(e.substring(1));
         switch (e.charAt(0)) {
           case "a":
@@ -2681,10 +2559,10 @@
           ? "bundle"
           : null;
       }
-      function y(e) {
+      function C(e) {
         return 1 == e ? 0 : 5 == e ? 2 : 2 == e ? 1 : -1;
       }
-      function C(e) {
+      function y(e) {
         return 0 == e ? 1 : 1 == e ? 2 : 2 == e ? 5 : null;
       }
       s.d(t, {
@@ -2694,15 +2572,15 @@
         D3: () => a,
         GV: () => i,
         Hy: () => l,
-        RB: () => C,
+        RB: () => y,
         TM: () => o,
         Uc: () => R,
         Xm: () => d,
-        YF: () => I,
+        YF: () => f,
         bg: () => b,
-        hQ: () => f,
+        hQ: () => I,
         iV: () => v,
-        mm: () => y,
+        mm: () => C,
         qE: () => n,
         qw: () => p,
         t9: () => h,

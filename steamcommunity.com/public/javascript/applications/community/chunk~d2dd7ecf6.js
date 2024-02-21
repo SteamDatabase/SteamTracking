@@ -6282,7 +6282,7 @@
         c = a(27174),
         d = a(12055),
         u = a(20029),
-        m = a(77131),
+        m = a(65650),
         _ = a(1485),
         p = a(75747),
         g = a(71741),
@@ -6621,7 +6621,7 @@
         l = a(47427),
         o = a(37593),
         r = a(20029),
-        s = a(77131),
+        s = a(65650),
         c = a(50898),
         d = a(90069),
         u = a(46882),
@@ -11098,22 +11098,24 @@
             persona: t,
             bParenthesizeNicknames: a,
             strNickname: l,
-            className: o,
+            bIgnorePersonaStatus: o,
+            className: r,
           } = e,
-          r = (0, n._T)(e, [
+          s = (0, n._T)(e, [
             "persona",
             "bParenthesizeNicknames",
             "strNickname",
+            "bIgnorePersonaStatus",
             "className",
           ]);
-        let s = l && !a ? l : t.m_strPlayerName;
+        let c = l && !a ? l : t.m_strPlayerName;
         return i.createElement(
           "span",
-          Object.assign({}, r, { className: (0, h.Z)(o, (0, m.sB)(t)) }),
+          Object.assign({}, s, { className: (0, h.Z)(r, !o && (0, m.sB)(t)) }),
           i.createElement(
             "span",
             { className: v().playerName },
-            s || " ",
+            c || " ",
             a &&
               l &&
               i.createElement(
@@ -12052,9 +12054,12 @@
             }));
         }
         componentDidUpdate(e) {
+          var t;
           this.props.fnGetColumnWidth != e.fnGetColumnWidth &&
             (X("Column width function changes, recalculating sizes"),
-            this.m_refGrid.recomputeGridSize());
+            null === (t = this.m_refGrid) ||
+              void 0 === t ||
+              t.recomputeGridSize());
         }
         componentWillUnmount() {
           var e;
@@ -14522,7 +14527,7 @@
         p = a(35427),
         g = a(68985),
         h = a(93243),
-        S = a(77131),
+        S = a(65650),
         v = a(64936),
         E = a(34310),
         f = a(62210),
@@ -17789,7 +17794,7 @@
         L = a(75747),
         B = a(92303),
         O = a(37593),
-        N = a(77131);
+        N = a(65650);
       let F = (G = class extends s.Component {
         constructor() {
           super(...arguments),
@@ -20142,7 +20147,7 @@
         u = a(35427),
         m = a(37593),
         _ = a(68985),
-        p = a(77131),
+        p = a(65650),
         g = a(1485),
         h = a(36194),
         S = a(5153),
@@ -22371,7 +22376,7 @@
         s = a(77936),
         c = a(27174),
         d = a(68985),
-        u = a(77131),
+        u = a(65650),
         m = a(45167),
         _ = a(80886),
         p = a(1485),
@@ -23936,7 +23941,7 @@
         return e ? e[a] : "";
       }
       var X = a(35427),
-        j = a(77131),
+        j = a(65650),
         H = a(82071),
         V = a(36194),
         z = a(92012),
@@ -24096,6 +24101,7 @@
                   bFitToWindow: !0,
                   bDisablePopTop: !0,
                   bNoFocusWhenShown: !0,
+                  bSkipFocusWhenReady: !0,
                 },
               );
               p(n);
@@ -24298,17 +24304,7 @@
             [c, r, S, s],
           );
         return d.createElement(u.II, {
-          onBlur: (e) => {
-            const t = e.relatedTarget;
-            let a = !1;
-            null == t ||
-              t.classList.forEach((e) => {
-                e.includes("ContextMenuFocusContainer") && (a = !0);
-              }),
-              a
-                ? g.current.element.focus()
-                : setTimeout(() => (null == m ? void 0 : m.Hide()), 200);
-          },
+          onBlur: (e) => setTimeout(() => (null == m ? void 0 : m.Hide()), 200),
           onFocus: (e) => {
             console.log("We are focussed");
           },
@@ -33635,6 +33631,7 @@
                           bFitToWindow: !0,
                           bDisablePopTop: !0,
                           bNoFocusWhenShown: !0,
+                          bSkipFocusWhenReady: !0,
                         },
                       ));
                   }),
@@ -33651,22 +33648,12 @@
               label: (0, j.Xx)("#Sale_SelectApps"),
               onChange: this.UpdateAppSuggestions,
               placeholder: (0, j.Xx)("#Sale_SelectApps_Placeholder"),
-              onBlur: (e) => {
-                const t = e.relatedTarget;
-                let a = !1;
-                null == t ||
-                  t.classList.forEach((e) => {
-                    e.includes("ContextMenuFocusContainer") && (a = !0);
-                  }),
-                  a
-                    ? this.m_refInput.current.element.focus()
-                    : setTimeout(
-                        () =>
-                          this.m_searchResultsMenu &&
-                          this.m_searchResultsMenu.Hide(),
-                        200,
-                      );
-              },
+              onBlur: (e) =>
+                setTimeout(
+                  () =>
+                    this.m_searchResultsMenu && this.m_searchResultsMenu.Hide(),
+                  200,
+                ),
               ref: this.m_refInput,
               tooltip: (0, j.Xx)("#Sale_SelectApps_Tooltip"),
             }),

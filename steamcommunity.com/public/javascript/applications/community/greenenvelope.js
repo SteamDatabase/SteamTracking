@@ -30,9 +30,9 @@
       "use strict";
       n.r(t),
         n.d(t, {
-          GreenEnvelope: () => M,
+          GreenEnvelope: () => T,
           default: () => O,
-          useSteamNotifications: () => T,
+          useSteamNotifications: () => M,
         });
       var i = n(85556),
         o = n(47427),
@@ -48,18 +48,18 @@
         _ = n(30750),
         v = n(19067),
         p = n(77936),
-        N = n(40057),
-        h = n(44500),
+        h = n(40057),
+        N = n(44500),
         E = n(53923),
         y = n(75683),
         g = n(10162);
       const b = new s.tL(),
-        M = (0, g.AP)(function (e) {
+        T = (0, g.AP)(function (e) {
           const { bResponsiveHeader: t, notifications: n } = e;
           o.useEffect(() => {
             n && !b.m_bLoaded && b.ProcessNewNotificationPayload(n);
           }, [n]);
-          const r = (0, N.bY)();
+          const r = (0, h.bY)();
           (0, o.useEffect)(() => {
             b.setTransport(r),
               (window.RefreshSteamNotifications = () =>
@@ -78,17 +78,17 @@
                   });
                 })(r));
           }, [r]);
-          const l = T();
+          const l = M();
           return t
             ? o.createElement(
                 o.Fragment,
                 null,
                 o.createElement(S, null),
-                o.createElement(I, null),
+                o.createElement(k, null),
               )
             : o.createElement(U, { nTotalUnviewed: l.nUnviewed });
         });
-      function T() {
+      function M() {
         return (0, _.SZ)(() => ({
           notifications: b.m_rgNotificationRollups,
           summary: b.m_summary,
@@ -97,7 +97,7 @@
         }));
       }
       function L() {
-        const e = T(),
+        const e = M(),
           t = (0, E.M)(),
           { data: n } = (0, y.X1)(t),
           i = (0, y.T8)(),
@@ -138,7 +138,7 @@
           [n],
         );
         return o.createElement(
-          h.U,
+          N.U,
           { trigger: "repeated", onVisibilityChange: a },
           o.createElement(
             "div",
@@ -228,7 +228,7 @@
             ),
           );
         },
-        I = () => {
+        k = () => {
           const e = `${d.De.COMMUNITY_BASE_URL}profiles/${d.L7.steamid}/notifications`;
           return o.createElement(
             "div",
@@ -249,7 +249,7 @@
             ),
           );
         };
-      function k(e, t, n) {
+      function I(e, t, n) {
         t.read ||
           (n && 0 != n.button && 1 != n.button) ||
           b.MarkItemRead(t.notification_id),
@@ -266,7 +266,7 @@
                 o.createElement(v.RW, {
                   key: t,
                   rollup: e,
-                  onNotificationClick: k,
+                  onNotificationClick: I,
                   uimode: 3,
                   location: 3,
                 }),
@@ -343,7 +343,7 @@
         },
       ];
       function S() {
-        const e = T();
+        const e = M();
         return o.createElement(
           o.Fragment,
           null,
@@ -375,7 +375,7 @@
           ),
         );
       }
-      const O = M;
+      const O = T;
     },
     44500: (e, t, n) => {
       "use strict";
@@ -429,7 +429,7 @@
           if (
             (this.m_observer &&
               t != this.m_elTracked &&
-              (this.m_observer.unobserve(this.m_elTracked),
+              (this.m_elTracked && this.m_observer.unobserve(this.m_elTracked),
               (this.m_elTracked = null)),
             !this.m_observer && t)
           ) {

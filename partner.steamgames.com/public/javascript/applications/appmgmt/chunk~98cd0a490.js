@@ -5,6 +5,107 @@
   self.webpackChunkappmgmt_storeadmin || []).push([
   [7241],
   {
+    22520: (e, t, i) => {
+      i.d(t, { Am: () => l, kI: () => s, x3: () => c });
+      var r = i(37563),
+        a = i(48760),
+        n = i(62210);
+      const s = 0,
+        o = "061818254b2c99ac49e6626adb128ed1282a392f",
+        c = 120;
+      class l {
+        constructor(e) {
+          (this.m_bInitialized = !1), (this.m_unAppID = e);
+        }
+        get appid() {
+          return this.m_unAppID;
+        }
+        get is_initialized() {
+          return this.m_bInitialized;
+        }
+        get is_valid() {
+          return this.m_bInitialized && !!this.m_strName;
+        }
+        get name() {
+          return this.m_strName;
+        }
+        get header_image_url() {
+          return r.De.MEDIA_CDN_URL + `steam/apps/${this.m_unAppID}/header.jpg`;
+        }
+        get icon_url_no_default() {
+          return this.m_strIconURL && this.BuildAppURL(this.m_strIconURL, o);
+        }
+        get icon_url() {
+          return this.BuildAppURL(this.m_strIconURL, o);
+        }
+        get logo_url() {
+          return (
+            r.De.MEDIA_CDN_URL +
+            `steam/apps/${this.m_unAppID}/capsule_231x87.jpg`
+          );
+        }
+        get time_updated_from_server() {
+          return this.m_dtUpdatedFromServer;
+        }
+        get apptype() {
+          return this.m_eAppType;
+        }
+        BIsApplicationOrTool() {
+          return 4 == this.apptype || 2 == this.apptype;
+        }
+        BuildAppURL(e, t) {
+          return e
+            ? r.De.MEDIA_CDN_COMMUNITY_URL +
+                "images/apps/" +
+                this.appid +
+                "/" +
+                e +
+                ".jpg"
+            : (0, a.U)(t);
+        }
+        DeserializeFromMessage(e) {
+          (this.m_bInitialized = !0),
+            (this.m_strName = e.name()),
+            (this.m_strIconURL = e.icon()),
+            (this.m_dtUpdatedFromServer = new Date()),
+            (this.m_eAppType = e.app_type());
+        }
+        DeserializeFromAppOverview(e) {
+          e.icon_hash() && 1073741824 != e.app_type()
+            ? ((this.m_bInitialized = !0),
+              (this.m_strName = e.display_name()),
+              (this.m_strIconURL = e.icon_hash()),
+              (this.m_dtUpdatedFromServer = new Date()),
+              (this.m_eAppType = e.app_type()))
+            : (this.m_bInitialized = !1);
+        }
+        DeserializeFromCacheObject(e) {
+          try {
+            (this.m_strName = e.strName),
+              (this.m_strIconURL = e.strIconURL),
+              (this.m_dtUpdatedFromServer = new Date(e.strUpdatedFromServer)),
+              (this.m_eAppType = e.eAppType),
+              (this.m_bInitialized = !0);
+          } catch (e) {}
+        }
+        SerializeToCacheObject() {
+          return (
+            (0, n.X)(
+              this.m_bInitialized,
+              "Attempting to serialize an uninitialized AppInfo object for caching!",
+            ),
+            this.m_bInitialized
+              ? {
+                  strName: this.m_strName,
+                  strIconURL: this.m_strIconURL,
+                  strUpdatedFromServer: this.m_dtUpdatedFromServer.toJSON(),
+                  eAppType: this.m_eAppType,
+                }
+              : null
+          );
+        }
+      }
+    },
     45944: (e, t, i) => {
       i.d(t, { Q8: () => P });
       var r = i(85556),
@@ -178,23 +279,26 @@
               (this.m_PendingAppInfoResolve = void 0),
               this.m_setPendingAppInfo.clear(),
               yield this.LoadAppInfoBatch(t),
-              e();
+              null == e || e();
           });
         }
         LoadAppInfoBatch(e) {
+          var t;
           return (0, r.mG)(this, void 0, void 0, function* () {
             this.m_cAppInfoRequestsInFlight++;
-            let t = yield this.LoadAppInfoBatchFromLocalCache(e);
-            if (t.length) {
-              console.log("Loading batch of App Info from Steam: ", t),
-                yield this.m_CMInterface.WaitUntilLoggedOn();
+            let i = yield this.LoadAppInfoBatchFromLocalCache(e);
+            if (i.length) {
+              console.log("Loading batch of App Info from Steam: ", i),
+                yield null === (t = this.m_CMInterface) || void 0 === t
+                  ? void 0
+                  : t.WaitUntilLoggedOn();
               let e = s.gA.Init(m.Fi);
               e.Body().set_language((0, n.jM)(c.De.LANGUAGE));
-              const i = 50;
-              for (; t.length > 0; ) {
-                const r = Math.min(i, t.length),
-                  a = t.slice(0, r);
-                (t = t.slice(r)), e.Body().set_appids(a);
+              const r = 50;
+              for (; i.length > 0; ) {
+                const t = Math.min(r, i.length),
+                  a = i.slice(0, t);
+                (i = i.slice(t)), e.Body().set_appids(a);
                 const n = yield m.AE.GetApps(
                   this.m_CMInterface.GetServiceTransport(),
                   e,
@@ -268,26 +372,28 @@
             const t = new Date(new Date().getTime() - 12096e5),
               i = (e) =>
                 (0, r.mG)(this, void 0, void 0, function* () {
-                  const i = yield this.m_CacheStorage.GetObject(
-                    this.GetCacheKeyForAppID(e),
-                  );
-                  if (!i) return e;
-                  let r = this.m_mapAppInfo.get(e);
+                  var i;
+                  const r = yield null === (i = this.m_CacheStorage) ||
+                  void 0 === i
+                    ? void 0
+                    : i.GetObject(this.GetCacheKeyForAppID(e));
+                  if (!r) return e;
+                  let a = this.m_mapAppInfo.get(e);
                   return (
                     (0, h.X)(
-                      r,
+                      a,
                       "Didn't find AppInfo in our map when loading from cache but it should've been there?",
                     ),
-                    r
-                      ? ((r = new o.Am(e)),
-                        r.DeserializeFromCacheObject(i),
-                        r.is_initialized
-                          ? (this.m_mapAppInfo.set(e, r),
-                            r.time_updated_from_server < t ? e : null)
+                    a
+                      ? ((a = new o.Am(e)),
+                        a.DeserializeFromCacheObject(r),
+                        a.is_initialized
+                          ? (this.m_mapAppInfo.set(e, a),
+                            a.time_updated_from_server < t ? e : null)
                           : (console.warn(
                               "Failed to deserialize cached App Info: ",
                               e,
-                              i,
+                              r,
                             ),
                             e))
                       : e
@@ -355,7 +461,8 @@
               ? r.clear()
               : (e.m_mapLanguages.set(t, new Map()),
                 (r = e.m_mapLanguages.get(t)));
-            for (let e of i.tokens()) r.set(e.name().toLowerCase(), e.value());
+            for (let e of i.tokens())
+              null == r || r.set(e.name().toLowerCase(), e.value());
           }
         }
         QueueRichPresenceLocRequest(e) {
@@ -397,8 +504,28 @@
         (0, r.gn)([a.aD], g.prototype, "OnRichPresenceLocUpdate", null);
       const P = new g();
     },
+    48760: (e, t, i) => {
+      i.d(t, { U: () => n, W: () => a });
+      var r = i(37563);
+      const a = "fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb";
+      function n(e, t) {
+        let i = ".jpg";
+        (e && "0000000000000000000000000000000000000000" !== e) || (e = a),
+          44 == e.length && ((i = e.substr(-4)), (e = e.substr(0, 40)));
+        let n = r.De.AVATAR_BASE_URL;
+        return (
+          n ||
+            ((n = r.De.MEDIA_CDN_COMMUNITY_URL + "images/avatars/"),
+            (n += e.substr(0, 2) + "/")),
+          (n += e),
+          t && "small" != t && (n += "_" + t),
+          (n += i),
+          n
+        );
+      }
+    },
     23951: (e, t, i) => {
-      i.d(t, { Qv: () => b, vP: () => I, IE: () => y });
+      i.d(t, { Qv: () => b, vP: () => G, IE: () => y });
       var r = i(85556),
         a = i(73799),
         n = i.n(a),
@@ -484,13 +611,20 @@
           );
         }
         get has_joinable_game_flag() {
-          return 0 != (2 & this.m_unPersonaStateFlags);
+          var e;
+          return (
+            0 !=
+            (2 &
+              (null !== (e = this.m_unPersonaStateFlags) && void 0 !== e
+                ? e
+                : 0))
+          );
         }
         get connect_string() {
           return this.m_mapRichPresence.get("connect");
         }
         get is_in_valid_lobby() {
-          return this.m_game_lobby_id && "0" != this.m_game_lobby_id;
+          return null != this.m_game_lobby_id && "0" != this.m_game_lobby_id;
         }
         get has_server_ip() {
           return 0 != this.m_unGameServerIP;
@@ -499,7 +633,14 @@
           return 3 == this.m_ePersonaState || 4 == this.m_ePersonaState;
         }
         HasStateFlag(e) {
-          return 0 != (this.m_unPersonaStateFlags & e);
+          var t;
+          return (
+            0 !=
+            ((null !== (t = this.m_unPersonaStateFlags) && void 0 !== t
+              ? t
+              : 0) &
+              e)
+          );
         }
         get last_seen_online() {
           return this.m_rtLastSeenOnline;
@@ -686,26 +827,27 @@
         (0, r.gn)([u.LO], P.prototype, "m_bCommunityBanned", void 0);
       var f = i(35427),
         v = i(82182),
-        G = i(2041);
+        I = i(2041);
       function y(e) {
         const t = (0, l.bY)(),
           i = s.useContext(S);
-        return (0, o.useQuery)(k(i, t, e));
+        return (0, o.useQuery)(D(i, t, e));
       }
-      function I(e) {
+      function G(e) {
         const t = (0, l.bY)(),
           i = s.useContext(S);
-        return (0, o.useQueries)(e.map((e) => k(i, t, e)));
+        return (0, o.useQueries)(e.map((e) => D(i, t, e)));
       }
       function b(e) {
-        return G.U.getQueryData(["PlayerSummary", e]);
+        return I.U.getQueryData(["PlayerSummary", e]);
       }
       const S = s.createContext({
         loadPersonaState: (e, t) =>
           (0, r.mG)(void 0, void 0, void 0, function* () {
+            if (null == e) return null;
             const i = yield (function (e) {
-              D ||
-                (D = new (n())(
+              L ||
+                (L = new (n())(
                   (t) =>
                     (0, r.mG)(this, void 0, void 0, function* () {
                       const i = c.gA.Init(v.oh);
@@ -723,10 +865,15 @@
                           .Body()
                           .accounts()
                           .forEach((e) => {
-                            const t = e.toObject();
+                            var t;
+                            const i = e.toObject();
                             a.set(
-                              new f.K(t.public_data.steamid).GetAccountID(),
-                              t,
+                              new f.K(
+                                null === (t = i.public_data) || void 0 === t
+                                  ? void 0
+                                  : t.steamid,
+                              ).GetAccountID(),
+                              i,
                             );
                           }),
                         t.map((e) => a.get(e))
@@ -734,51 +881,64 @@
                     }),
                   { maxBatchSize: 100 },
                 ));
-              return D;
+              return L;
             })(t).load(e);
             return i
               ? (function (e, t) {
-                  var i, r;
-                  let a = new P(e);
-                  const n = null == t ? void 0 : t.public_data,
-                    s = null == t ? void 0 : t.private_data;
-                  (a.m_bInitialized = !0),
-                    (a.m_ePersonaState =
-                      null !== (i = null == s ? void 0 : s.persona_state) &&
+                  var i, r, a, n, s, o, c;
+                  let l = new P(e);
+                  const u = null == t ? void 0 : t.public_data,
+                    d = null == t ? void 0 : t.private_data;
+                  (l.m_bInitialized = !0),
+                    (l.m_ePersonaState =
+                      null !== (i = null == d ? void 0 : d.persona_state) &&
                       void 0 !== i
                         ? i
                         : 0),
-                    (a.m_strAvatarHash = (
-                      null == n ? void 0 : n.sha_digest_avatar
+                    (l.m_strAvatarHash = (
+                      null == u ? void 0 : u.sha_digest_avatar
                     )
-                      ? (0, p.BH)(n.sha_digest_avatar)
+                      ? (0, p.BH)(u.sha_digest_avatar)
                       : g.W),
-                    (a.m_strPlayerName =
-                      null !== (r = null == n ? void 0 : n.persona_name) &&
+                    (l.m_strPlayerName =
+                      null !== (r = null == u ? void 0 : u.persona_name) &&
                       void 0 !== r
                         ? r
                         : e.ConvertTo64BitString()),
-                    (a.m_strAccountName = null == s ? void 0 : s.account_name),
-                    (null == s ? void 0 : s.persona_state_flags) &&
-                      (a.m_unPersonaStateFlags =
-                        t.private_data.persona_state_flags);
-                  (null == s ? void 0 : s.game_id) &&
-                    (a.m_gameid = t.private_data.game_id);
-                  (null == s ? void 0 : s.game_server_ip_address) &&
-                    (a.m_unGameServerIP =
-                      t.private_data.game_server_ip_address);
-                  (null == s ? void 0 : s.lobby_steam_id) &&
-                    (a.m_game_lobby_id = t.private_data.lobby_steam_id);
-                  (null == s ? void 0 : s.game_extra_info) &&
-                    (a.m_strGameExtraInfo = t.private_data.game_extra_info);
-                  (null == n ? void 0 : n.profile_url) &&
-                    (a.m_strProfileURL = n.profile_url);
-                  return a;
+                    (l.m_strAccountName = null == d ? void 0 : d.account_name),
+                    (null == d ? void 0 : d.persona_state_flags) &&
+                      (l.m_unPersonaStateFlags =
+                        null === (a = t.private_data) || void 0 === a
+                          ? void 0
+                          : a.persona_state_flags);
+                  (null == d ? void 0 : d.game_id) &&
+                    (l.m_gameid =
+                      null === (n = t.private_data) || void 0 === n
+                        ? void 0
+                        : n.game_id);
+                  (null == d ? void 0 : d.game_server_ip_address) &&
+                    (l.m_unGameServerIP =
+                      null === (s = t.private_data) || void 0 === s
+                        ? void 0
+                        : s.game_server_ip_address);
+                  (null == d ? void 0 : d.lobby_steam_id) &&
+                    (l.m_game_lobby_id =
+                      null === (o = t.private_data) || void 0 === o
+                        ? void 0
+                        : o.lobby_steam_id);
+                  (null == d ? void 0 : d.game_extra_info) &&
+                    (l.m_strGameExtraInfo =
+                      null === (c = t.private_data) || void 0 === c
+                        ? void 0
+                        : c.game_extra_info);
+                  (null == u ? void 0 : u.profile_url) &&
+                    (l.m_strProfileURL = u.profile_url);
+                  return l;
                 })(f.K.InitFromAccountID(e), i)
               : null;
           }),
       });
-      function k(e, t, i) {
+      function D(e, t, i) {
         const r = "string" == typeof i ? new f.K(i).GetAccountID() : i;
         return {
           queryKey: ["PlayerSummary", r],
@@ -786,7 +946,7 @@
           enabled: !!r,
         };
       }
-      let D;
+      let L;
     },
     9781: (e, t, i) => {
       i.d(t, { N: () => u, a: () => p });
@@ -993,36 +1153,36 @@
     },
     66263: (e, t, i) => {
       i.d(t, {
-        $w: () => U,
+        $w: () => B,
         AN: () => q,
-        FR: () => I,
+        FR: () => G,
         HV: () => v,
         HX: () => W,
-        OB: () => z,
-        OG: () => Q,
-        Ol: () => D,
+        OB: () => T,
+        OG: () => x,
+        Ol: () => L,
         PP: () => S,
-        R2: () => N,
+        R2: () => M,
         Rs: () => F,
         Tj: () => b,
         We: () => j,
         X1: () => E,
         _w: () => f,
-        bS: () => V,
-        dU: () => L,
-        df: () => T,
+        bS: () => z,
+        dU: () => A,
+        df: () => V,
         j_: () => H,
-        ju: () => R,
+        ju: () => w,
         np: () => $,
-        on: () => K,
-        ps: () => w,
-        qH: () => C,
+        on: () => N,
+        ps: () => R,
+        qH: () => k,
         rX: () => O,
         sN: () => X,
-        tu: () => A,
-        uT: () => x,
-        xm: () => Z,
-        yh: () => M,
+        tu: () => C,
+        uT: () => Q,
+        xm: () => Y,
+        yh: () => K,
       });
       var r = i(85556),
         a = i(80751),
@@ -1684,7 +1844,7 @@
       }
       (0, r.gn)([o.LO], g.prototype, "m_mapOverridesPerPriceKey", void 0),
         (0, r.gn)([o.aD], g.prototype, "UpdateOverridesPerPriceKey", null);
-      const G = new Map([
+      const I = new Map([
         ["USD", "@1"],
         ["CNY", "@2"],
         ["EUR", "@3"],
@@ -1696,9 +1856,9 @@
         ["RUB", "@9"],
       ]);
       function y(e) {
-        return G.has(e) ? G.get(e) : e.indexOf("_") > 0 ? "ZZZ" + e : e;
+        return I.has(e) ? I.get(e) : e.indexOf("_") > 0 ? "ZZZ" + e : e;
       }
-      function I(e, t) {
+      function G(e, t) {
         return g.Get().GetPrice(e, t);
       }
       function b(e) {
@@ -1719,7 +1879,7 @@
           })(e, t)
         );
       }
-      function k(e, t) {
+      function D(e, t) {
         const i = g.Get().GetPrice(e, "USD");
         let r = null;
         for (let e of g.Get().m_rgPriceLevels)
@@ -1737,7 +1897,7 @@
         }
         return { nSuggestedPriceInCents: a, nGuidelinesLevel: r };
       }
-      function D() {
+      function L() {
         const e = (0, m.AM)();
         return s.useCallback(
           () =>
@@ -1751,7 +1911,7 @@
                   for (const t of g.Get().m_rgKnownPriceKeys) {
                     if ("USD" == t) continue;
                     const { nSuggestedPriceInCents: a, nGuidelinesLevel: n } =
-                      k(i, t);
+                      D(i, t);
                     null !== n &&
                       g.Get().GetPrice(i, t) != a &&
                       (e.push(t), r.push(a));
@@ -1765,12 +1925,12 @@
           [e],
         );
       }
-      function L(e, t) {
+      function A(e, t) {
         const i = (0, p.NW)();
         (0, p.Qg)(g.Get().GetPriceGridCellCallbackList(e, t), i);
         const r = g.Get().GetPrice(e, t);
         (0, p.Qg)(g.Get().GetPriceGridCellCallbackList(e, "USD"), i);
-        const { nSuggestedPriceInCents: a, nGuidelinesLevel: n } = k(e, t),
+        const { nSuggestedPriceInCents: a, nGuidelinesLevel: n } = D(e, t),
           o = s.useCallback((i) => g.Get().OverridePrice(e, t, i), [e, t]),
           c = g.Get().GetPublishedPrice(e, t),
           l = g.Get().GetProposedPrice(e, t),
@@ -1792,7 +1952,7 @@
           [r, l, c, u, d, _, a, o],
         );
       }
-      function C(e) {
+      function k(e) {
         let [t, i] = s.useState(() => g.Get().BAnyPackagePriceBelowMin(e)),
           r = s.useCallback(() => {
             let t = g.Get().BAnyPackagePriceBelowMin(e);
@@ -1800,7 +1960,7 @@
           }, [e, i]);
         return (0, p.Qg)(g.Get().GetPackageOverridesCallbackList(e), r), t;
       }
-      function A(e) {
+      function C(e) {
         return g.Get().BAnyPackagePriceBelowMin(e);
       }
       function O(e, t) {
@@ -1828,13 +1988,13 @@
           );
         }, []);
       }
-      function w(e) {
-        return g.Get().m_mapPriceProposals.get(e);
-      }
       function R(e) {
         return g.Get().m_mapPriceProposals.get(e);
       }
-      function B(e) {
+      function w(e) {
+        return g.Get().m_mapPriceProposals.get(e);
+      }
+      function U(e) {
         let t = !1;
         for (const i of g.Get().m_rgKnownPriceKeys) {
           let r = g.Get().GetPublishedPrice(e, i);
@@ -1842,8 +2002,8 @@
         }
         return t;
       }
-      function U(e) {
-        const t = w(e),
+      function B(e) {
+        const t = R(e),
           i = [];
         for (const r of g.Get().m_rgKnownPriceKeys) {
           const a = t.prices[r],
@@ -1858,19 +2018,19 @@
         }
         return i;
       }
-      function K() {
+      function N() {
         return g.Get().m_rgKnownPriceKeys;
       }
-      function N(e) {
+      function M(e) {
         let t = g.Get().m_mapPriceKeyDescriptions.get(e);
         return t ? t.strDescription : "";
       }
-      function M(e) {
+      function K(e) {
         return s.useCallback(() => {
           g.Get().DiscardAllLocalPriceOverridesForKey(e);
         }, [e]);
       }
-      function V(e) {
+      function z(e) {
         return s.useCallback(() => {
           g.Get().DiscardLocalPriceOverridesForPackage(e);
         }, [e]);
@@ -1880,7 +2040,7 @@
           g.Get().CancelProposal(e);
         }, [e]);
       }
-      function z() {
+      function T() {
         const [e, t] = s.useState(g.Get().m_strDisplayPriceKey),
           i = g.Get().m_rgKnownPriceKeys,
           r = s.useCallback((e) => {
@@ -1890,7 +2050,7 @@
           }, []);
         return { strPriceKey: e, rgSupportedPriceKeys: i, fnSetPriceKey: r };
       }
-      function T(e) {
+      function V(e) {
         const t = (0, p.NW)();
         return (
           (0, p.Qg)(g.Get().m_allPriceOverridesCallbackList, t),
@@ -1900,11 +2060,11 @@
       function W(e) {
         return g.Get().BHasLocalPriceOverrides(e);
       }
-      function Q() {
+      function x() {
         const [e, t] = s.useState(() => g.Get().GetAllLocalPriceOverrides());
         return (0, p.Qg)(g.Get().m_allPriceOverridesCallbackList, t), e;
       }
-      function x(e) {
+      function Q(e) {
         return (0, h.SZ)(() => g.Get().GetLocalOverrideCountForPriceKey(e));
       }
       function j() {
@@ -1948,11 +2108,11 @@
           [],
         );
       }
-      function Z(e) {
+      function Y(e) {
         let t = [];
         const i = g.Get().m_rgKnownPriceKeys;
         for (let r of e) {
-          if (B(r)) continue;
+          if (U(r)) continue;
           let e = !1;
           for (const t of i) {
             if (!g.Get().BPriceKeyRequired(t)) continue;

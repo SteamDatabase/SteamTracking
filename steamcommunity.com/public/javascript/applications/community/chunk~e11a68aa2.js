@@ -278,23 +278,26 @@
               (this.m_PendingAppInfoResolve = void 0),
               this.m_setPendingAppInfo.clear(),
               yield this.LoadAppInfoBatch(t),
-              e();
+              null == e || e();
           });
         }
         LoadAppInfoBatch(e) {
+          var t;
           return (0, n.mG)(this, void 0, void 0, function* () {
             this.m_cAppInfoRequestsInFlight++;
-            let t = yield this.LoadAppInfoBatchFromLocalCache(e);
-            if (t.length) {
-              console.log("Loading batch of App Info from Steam: ", t),
-                yield this.m_CMInterface.WaitUntilLoggedOn();
+            let i = yield this.LoadAppInfoBatchFromLocalCache(e);
+            if (i.length) {
+              console.log("Loading batch of App Info from Steam: ", i),
+                yield null === (t = this.m_CMInterface) || void 0 === t
+                  ? void 0
+                  : t.WaitUntilLoggedOn();
               let e = r.gA.Init(l.Fi);
               e.Body().set_language((0, a.jM)(p.De.LANGUAGE));
-              const i = 50;
-              for (; t.length > 0; ) {
-                const n = Math.min(i, t.length),
-                  s = t.slice(0, n);
-                (t = t.slice(n)), e.Body().set_appids(s);
+              const n = 50;
+              for (; i.length > 0; ) {
+                const t = Math.min(n, i.length),
+                  s = i.slice(0, t);
+                (i = i.slice(t)), e.Body().set_appids(s);
                 const a = yield l.AE.GetApps(
                   this.m_CMInterface.GetServiceTransport(),
                   e,
@@ -368,26 +371,28 @@
             const t = new Date(new Date().getTime() - 12096e5),
               i = (e) =>
                 (0, n.mG)(this, void 0, void 0, function* () {
-                  const i = yield this.m_CacheStorage.GetObject(
-                    this.GetCacheKeyForAppID(e),
-                  );
-                  if (!i) return e;
-                  let n = this.m_mapAppInfo.get(e);
+                  var i;
+                  const n = yield null === (i = this.m_CacheStorage) ||
+                  void 0 === i
+                    ? void 0
+                    : i.GetObject(this.GetCacheKeyForAppID(e));
+                  if (!n) return e;
+                  let s = this.m_mapAppInfo.get(e);
                   return (
                     (0, u.X)(
-                      n,
+                      s,
                       "Didn't find AppInfo in our map when loading from cache but it should've been there?",
                     ),
-                    n
-                      ? ((n = new o.Am(e)),
-                        n.DeserializeFromCacheObject(i),
-                        n.is_initialized
-                          ? (this.m_mapAppInfo.set(e, n),
-                            n.time_updated_from_server < t ? e : null)
+                    s
+                      ? ((s = new o.Am(e)),
+                        s.DeserializeFromCacheObject(n),
+                        s.is_initialized
+                          ? (this.m_mapAppInfo.set(e, s),
+                            s.time_updated_from_server < t ? e : null)
                           : (console.warn(
                               "Failed to deserialize cached App Info: ",
                               e,
-                              i,
+                              n,
                             ),
                             e))
                       : e
@@ -455,7 +460,8 @@
               ? n.clear()
               : (e.m_mapLanguages.set(t, new Map()),
                 (n = e.m_mapLanguages.get(t)));
-            for (let e of i.tokens()) n.set(e.name().toLowerCase(), e.value());
+            for (let e of i.tokens())
+              null == n || n.set(e.name().toLowerCase(), e.value());
           }
         }
         QueueRichPresenceLocRequest(e) {
@@ -590,13 +596,20 @@
           );
         }
         get has_joinable_game_flag() {
-          return 0 != (2 & this.m_unPersonaStateFlags);
+          var e;
+          return (
+            0 !=
+            (2 &
+              (null !== (e = this.m_unPersonaStateFlags) && void 0 !== e
+                ? e
+                : 0))
+          );
         }
         get connect_string() {
           return this.m_mapRichPresence.get("connect");
         }
         get is_in_valid_lobby() {
-          return this.m_game_lobby_id && "0" != this.m_game_lobby_id;
+          return null != this.m_game_lobby_id && "0" != this.m_game_lobby_id;
         }
         get has_server_ip() {
           return 0 != this.m_unGameServerIP;
@@ -605,7 +618,14 @@
           return 3 == this.m_ePersonaState || 4 == this.m_ePersonaState;
         }
         HasStateFlag(e) {
-          return 0 != (this.m_unPersonaStateFlags & e);
+          var t;
+          return (
+            0 !=
+            ((null !== (t = this.m_unPersonaStateFlags) && void 0 !== t
+              ? t
+              : 0) &
+              e)
+          );
         }
         get last_seen_online() {
           return this.m_rtLastSeenOnline;

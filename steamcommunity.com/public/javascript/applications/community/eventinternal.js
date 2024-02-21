@@ -35,8 +35,8 @@
       var n = a(85556),
         r = a(54842),
         o = a(35427),
-        s = a(64936),
-        i = a(82071);
+        i = a(64936),
+        s = a(82071);
       class l {
         constructor() {
           (this.m_mapBroadcasterSteamIDToEvents = new Map()),
@@ -54,15 +54,15 @@
             const n = t.exec(e);
             if (null === n) break;
             const r = n[1],
-              s = n[2],
-              i = l.GetBBCodeParam(r, "steamid"),
+              i = n[2],
+              s = l.GetBBCodeParam(r, "steamid"),
               c = {
-                steamID: i ? new o.K(i) : void 0,
+                steamID: s ? new o.K(s) : void 0,
                 name: l.GetBBCodeParam(r, "name"),
                 title: l.GetBBCodeParam(r, "title"),
                 company: l.GetBBCodeParam(r, "company"),
                 photo: l.GetBBCodeParam(r, "photo"),
-                bio: s,
+                bio: i,
               };
             a.push(c);
           }
@@ -97,12 +97,12 @@
         }
         BuildBroadcasterSteamIDToActiveEventMap(e) {
           return (0, n.mG)(this, void 0, void 0, function* () {
-            const t = s.JW.GetTimeNowWithOverride(),
+            const t = i.JW.GetTimeNowWithOverride(),
               a = e.GetCalendarItemsInTimeRange(t - 3600, t);
             for (const e of a.rgCalendarItems)
-              i.j1.QueueLoadPartnerEvent(e.clanid, e.unique_id);
+              s.j1.QueueLoadPartnerEvent(e.clanid, e.unique_id);
             const n = a.rgCalendarItems.map((e) =>
-                i.j1.LoadPartnerEventFromClanEventGIDAndClanSteamID(
+                s.j1.LoadPartnerEventFromClanEventGIDAndClanSteamID(
                   o.K.InitFromClanID(e.clanid),
                   e.unique_id,
                   0,
@@ -196,8 +196,8 @@
       var n = a(760),
         r = a(74257),
         o = a(85556),
-        s = a(80751),
-        i = a.n(s),
+        i = a(80751),
+        s = a.n(i),
         l = a(54842),
         c = a(27605),
         d = a(47427),
@@ -218,8 +218,8 @@
         M = a(22042),
         B = a(10162),
         b = a(7765),
-        T = a(45284),
-        w = a(65534);
+        w = a(45284),
+        T = a(65534);
       const G = (e) => {
           const {
               strLabel: t,
@@ -227,14 +227,14 @@
               fnSetCurator: n,
               bLimitToCreatorHome: r,
             } = e,
-            s = (0, d.useRef)(null),
+            i = (0, d.useRef)(null),
             l = (0, d.useRef)(null),
             c = (0, d.useRef)(0),
             m = (0, d.useRef)();
           (0, d.useEffect)(
             () => () => {
               window.clearTimeout(c.current),
-                s.current && s.current("SearchForCurator: unmounting"),
+                i.current && i.current("SearchForCurator: unmounting"),
                 l.current && l.current.Hide();
             },
             [],
@@ -246,12 +246,12 @@
                 t &&
                   0 != t.trim().length &&
                   (window.clearTimeout(c.current),
-                  s.current && s.current("SearchForCurator: new request"),
+                  i.current && i.current("SearchForCurator: new request"),
                   (c.current = window.setTimeout(
                     () =>
                       (0, o.mG)(void 0, void 0, void 0, function* () {
-                        const e = i().CancelToken.source();
-                        s.current = e.cancel;
+                        const e = s().CancelToken.source();
+                        i.current = e.cancel;
                         try {
                           const a = yield A.bq.SearchCreatorHomeStore(t, r, e);
                           if (e.token.reason) return;
@@ -264,6 +264,7 @@
                               bFitToWindow: !0,
                               bDisablePopTop: !0,
                               bNoFocusWhenShown: !0,
+                              bSkipFocusWhenReady: !0,
                             },
                           );
                         } catch (t) {
@@ -288,17 +289,8 @@
               type: "text",
               label: t,
               onChange: u,
-              onBlur: (e) => {
-                const t = e.relatedTarget;
-                let a = !1;
-                null == t ||
-                  t.classList.forEach((e) => {
-                    e.includes("ContextMenuFocusContainer") && (a = !0);
-                  }),
-                  a
-                    ? m.current.element.focus()
-                    : setTimeout(() => l.current && l.current.Hide(), 200);
-              },
+              onBlur: (e) =>
+                setTimeout(() => l.current && l.current.Hide(), 200),
               ref: m,
               tooltip: a,
             }),
@@ -308,7 +300,7 @@
           const { list: t, fnSetCurator: a } = e;
           return d.createElement(
             M.xV,
-            { className: w.SearchResults },
+            { className: T.SearchResults },
             t.map((e) =>
               d.createElement(
                 M.Zo,
@@ -327,14 +319,14 @@
                       className: b.AvatarImage,
                     }),
                   ),
-                  (0, T.HA)(e.GetName()),
+                  (0, w.HA)(e.GetName()),
                 ),
               ),
             ),
           );
         };
-      var L = a(43389);
-      const y = (0, c.Pi)((e) => {
+      var y = a(43389);
+      const L = (0, c.Pi)((e) => {
           const t = (function () {
             const [e, t] = d.useState(!F.Get().BHasLoadCompleted());
             return (
@@ -363,7 +355,7 @@
                 e.display_name.toLocaleLowerCase().indexOf("franchise") < 0,
             ),
             o = t.filter((e) => Boolean(e.gid_clan_event && e.hidden)),
-            s = t.filter((e) => Boolean(e.gid_clan_event && !e.hidden));
+            i = t.filter((e) => Boolean(e.gid_clan_event && !e.hidden));
           return d.createElement(
             "div",
             null,
@@ -385,7 +377,7 @@
             d.createElement(R, { strName: "Migrated but Hidden", records: o }),
             d.createElement(R, {
               strName: "Migrated and Visible",
-              records: s,
+              records: i,
               bHideByDefault: !0,
             }),
           );
@@ -501,8 +493,8 @@
         O = (e) => {
           const { record: t, closeModal: a } = e,
             [n, r] = (0, d.useState)(t.clan_account_id),
-            [o, s] = (0, d.useState)(!1),
-            [i, l] = (0, d.useState)(void 0),
+            [o, i] = (0, d.useState)(!1),
+            [s, l] = (0, d.useState)(void 0),
             [c, u] = (0, d.useState)(!1),
             [g, h] = (0, d.useState)(t.gid_clan_event),
             [v, f] = (0, d.useState)(null);
@@ -513,7 +505,7 @@
               strDescription: `Will migrate the sale page ${t.vanity} to the below clan `,
               bOKDisabled: !n || o,
               onOK: () => {
-                s(!0),
+                i(!0),
                   F.Get()
                     .MigrateOrUpdateSalePage(
                       t.sale_page_id,
@@ -552,9 +544,9 @@
                   }),
                   Boolean(v) && d.createElement(k, { creatorHome: v }),
                 ),
-            Boolean(o && !i) &&
+            Boolean(o && !s) &&
               d.createElement(E.V, { position: "center", size: "medium" }),
-            Boolean(i) && d.createElement("div", null, i),
+            Boolean(s) && d.createElement("div", null, s),
             Boolean(c) &&
               d.createElement(
                 "div",
@@ -634,7 +626,7 @@
                       "Read more about the state here.",
                     ),
                   ),
-                d.createElement(L.oZ, {
+                d.createElement(y.oZ, {
                   creatorID: t.GetCreatorHomeIdentifier(),
                   bHideCreatorType: !0,
                 }),
@@ -666,14 +658,14 @@
                 void 0,
               ];
             try {
-              const s =
+              const i =
                 I.De.COMMUNITY_BASE_URL + "migrate/ajaxcreateupdatesalepage";
               let c = new URLSearchParams();
               c.append("sessionid", I.De.SESSIONID),
                 c.append("salePageID", e),
                 c.append("clanAccountID", "" + t),
                 a && c.append("gidClanEvent", a);
-              const d = yield i().post(s, c, { withCredentials: !0 });
+              const d = yield s().post(i, c, { withCredentials: !0 });
               if (
                 200 == (null == d ? void 0 : d.status) &&
                 1 ==
@@ -734,7 +726,7 @@
               const a =
                   I.De.COMMUNITY_BASE_URL + "migrate/ajaxgetsalepagestomigrate",
                 n = { sessionid: I.De.SESSIONID },
-                r = yield i().get(a, { params: n, withCredentials: !0 });
+                r = yield s().get(a, { params: n, withCredentials: !0 });
               if (
                 ((this.m_bLoadComplete = !0),
                 200 == (null == r ? void 0 : r.status) &&
@@ -846,12 +838,12 @@
 
             ) {
               const t = Math.min(o, 100),
-                s = { offset: e, nBatchSize: t, start_appid: a },
+                i = { offset: e, nBatchSize: t, start_appid: a },
                 c = I.De.COMMUNITY_BASE_URL + "migrate/ajaxgetallapps";
               let d = null;
               try {
-                const a = yield i().get(c, {
-                  params: s,
+                const a = yield s().get(c, {
+                  params: i,
                   withCredentials: !0,
                   cancelToken: null == n ? void 0 : n.token,
                 });
@@ -901,9 +893,9 @@
             this.m_nHighestClanOffsetRequested = e + t;
             const r = { offset: e, count: t },
               o = I.De.COMMUNITY_BASE_URL + "migrate/ajaxgetallclans";
-            let s = null;
+            let i = null;
             try {
-              const e = yield i().get(o, {
+              const e = yield s().get(o, {
                 params: r,
                 withCredentials: !0,
                 cancelToken: null == a ? void 0 : a.token,
@@ -919,13 +911,13 @@
                   this.m_rgClanAccountIDs.concat(
                     e.data.accountids.map(Number),
                   ));
-              s = (0, S.l)(null == e ? void 0 : e.data);
+              i = (0, S.l)(null == e ? void 0 : e.data);
             } catch (e) {
-              s = (0, S.l)(e);
+              i = (0, S.l)(e);
             }
             console.error(
               "FetchClans: ajax request failed with error",
-              s.strErrorMsg,
+              i.strErrorMsg,
             );
           });
         }
@@ -941,7 +933,7 @@
             Promise.all([x.cb.InitGlobal(), r.wk.Init()]).then(() => a(!1));
           }, []);
           const [n, o] = (0, U.Ar)("start", 0),
-            [s, i] = (0, U.Ar)("start_appid", 0),
+            [i, s] = (0, U.Ar)("start_appid", 0),
             [l, c] = (0, U.Ar)("count", 10),
             [m, u] = (0, U.Ar)("autoload", !0),
             [g, p] = (0, U.Ar)("batch_size", 1),
@@ -950,7 +942,7 @@
             [S, I] = (0, U.Ar)("rolling", 0),
             [C, D] = (0, d.useState)(new Set()),
             A = (0, d.useRef)(0),
-            M = z.Get().GetApps(n, l, s),
+            M = z.Get().GetApps(n, l, i),
             B = 0 == S ? M : M.filter((e) => !C.has(Number(e.id))).slice(0, S),
             b = (e, t) => {
               C.has(e) ||
@@ -1019,7 +1011,7 @@
         j = (0, c.Pi)((e) => {
           const t = Number(e.app.id),
             [a, n] = (0, d.useState)(0),
-            [s, i] = (0, d.useState)([]),
+            [i, s] = (0, d.useState)([]),
             [l, c] = (0, d.useState)(!1),
             m = (0, d.useRef)(new Set()),
             u = (0, d.useRef)(0);
@@ -1042,9 +1034,9 @@
             h = `${I.De.COMMUNITY_BASE_URL}games/${
               g ? g.vanity_url : t
             }/partnerevents/`,
-            v = s.length,
+            v = i.length,
             f = a == v,
-            _ = s.filter((e) => e.BIsVisibleEvent()),
+            _ = i.filter((e) => e.BIsVisibleEvent()),
             C = _.length,
             D = _.filter(
               (e) =>
@@ -1071,18 +1063,18 @@
                   e,
                   50,
                 );
-                i(s.concat(o)), c(!1);
+                s(i.concat(o)), c(!1);
               });
           (0, d.useEffect)(() => {
             e.bAutoLoad && f && !l && b();
           });
-          const T = (e, t) => {
+          const w = (e, t) => {
               t ? (u.current += 1) : m.current.add(e);
             },
-            w = () =>
+            T = () =>
               (0, o.mG)(void 0, void 0, void 0, function* () {
                 c(!0),
-                  yield (function (e, t, a, n, s) {
+                  yield (function (e, t, a, n, i) {
                     return (0, o.mG)(this, void 0, void 0, function* () {
                       for (const o of e.slice(0, t)) {
                         console.log(
@@ -1103,7 +1095,7 @@
                               yield r.wk.SaveModel(n),
                               console.log("Successfully migrated the event!"),
                               (o.bOldAnnouncement = !1),
-                              s(o.AnnouncementGID, !0);
+                              i(o.AnnouncementGID, !0);
                           }
                         } catch (e) {
                           const t = (0, S.l)(e);
@@ -1111,16 +1103,16 @@
                             "MigrateEvents: " + t.strErrorMsg.slice(0, 512),
                             t,
                           ),
-                            s(o.AnnouncementGID, !1);
+                            i(o.AnnouncementGID, !1);
                         }
                       }
                     });
-                  })(A, e.nMigrateBatchSize, t, g.clanSteamID, T),
+                  })(A, e.nMigrateBatchSize, t, g.clanSteamID, w),
                   c(!1);
               });
           return (
             (0, d.useEffect)(() => {
-              e.bAutoMigrate && B && !l && w();
+              e.bAutoMigrate && B && !l && T();
             }),
             (0, d.useEffect)(() => {
               f || B || l || e.fnOnCompletion(t, u.current);
@@ -1152,7 +1144,7 @@
                 : B
                 ? d.createElement(
                     "div",
-                    { className: q().MigrateEventsButton, onClick: w },
+                    { className: q().MigrateEventsButton, onClick: T },
                     "MIGRATE EVENTS",
                   )
                 : d.createElement(
@@ -1179,7 +1171,7 @@
                 null,
                 d.createElement($.AW, {
                   path: n.wZ.MigrateSaleEvents(),
-                  component: y,
+                  component: L,
                 }),
                 d.createElement($.AW, {
                   path: n.wZ.MigrateEvents(),

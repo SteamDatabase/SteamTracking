@@ -545,6 +545,9 @@
 .gamepadui_svg_library_GenericGamepadHighlight_3-ZZD {
   fill: #4897d2;
 }
+.gamepadui_svg_library_GenericGamepadEmpty_1toTl {
+  fill: transparent;
+}
 .miniprofile_miniProfile_2QPdq {
   width: fit-content;
   margin: 11px;
@@ -2889,7 +2892,6 @@ button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover:before {
   background-color: #0e141b;
   border: 2px solid #23262e;
   padding: calc(12px + 1.4vw) 2.8vw;
-  min-height: initial;
   width: 660px;
   box-sizing: border-box;
   animation-name: gamepaddialog_slideInAnimation_2JseU;
@@ -2906,6 +2908,18 @@ button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover:before {
     opacity: 1;
     transform: translateY(0);
   }
+}
+.gamepaddialog_ModalPosition_3A5uj.gamepaddialog_ScrollWithin_ze1or
+  > .gamepaddialog_GamepadDialogContent_16sYN {
+  min-height: 0;
+}
+.gamepaddialog_ModalPosition_3A5uj.gamepaddialog_ScrollWithin_ze1or
+  > .gamepaddialog_GamepadDialogContent_16sYN
+  .DialogBody,
+.gamepaddialog_ModalPosition_3A5uj.gamepaddialog_ScrollWithin_ze1or
+  > .gamepaddialog_GamepadDialogContent_16sYN
+  .gamepaddialog_GamepadDialogContent_InnerWidth_2ywyS.DialogContent_InnerWidth {
+  min-height: 0;
 }
 .gamepaddialog_ModalPosition_3A5uj .DialogContentTransition {
   max-width: 613px;
@@ -40885,90 +40899,6 @@ body.in_global_drag .title-area {
   color: #67707b;
   font-size: 16px;
 }
-@keyframes BackgroundAnimation {
-  from {
-    background-position: 0 100%;
-  }
-  to {
-    background-position: 100% 0;
-  }
-}
-@keyframes ItemFocusAnim-darkerGrey-nocolor {
-  from {
-    background: #3d4450;
-  }
-  to {
-    background: #23262e;
-  }
-}
-@keyframes ItemFocusAnim-darkerGrey {
-  from {
-    background: #3d4450;
-    color: #8b929a;
-  }
-  to {
-    background: #23262e;
-    color: #fff;
-  }
-}
-@keyframes ItemFocusAnim-darkGrey {
-  from {
-    background: rgba(255, 255, 255, 0.25);
-    color: #8b929a;
-  }
-  to {
-    background: rgba(255, 255, 255, 0.15);
-    color: #fff;
-  }
-}
-@keyframes ItemFocusAnim-grey {
-  from {
-    background: #8b929a;
-    color: #fff;
-  }
-  to {
-    background: #67707b;
-    color: #fff;
-  }
-}
-@keyframes ItemFocusAnim-translucent-white-10 {
-  from {
-    background: rgba(255, 255, 255, 0.3);
-    color: #fff;
-  }
-  to {
-    background: rgba(255, 255, 255, 0.1);
-    color: #fff;
-  }
-}
-@keyframes ItemFocusAnim-translucent-white-20 {
-  from {
-    background: rgba(255, 255, 255, 0.5);
-    color: #fff;
-  }
-  to {
-    background: rgba(255, 255, 255, 0.2);
-    color: #fff;
-  }
-}
-@keyframes ItemFocusAnimBorder-darkGrey {
-  from {
-    border-color: #67707b;
-  }
-  to {
-    border-color: #3d4450;
-  }
-}
-@keyframes ItemFocusAnim-green {
-  from {
-    background: #c9ffc9;
-    color: #8b929a;
-  }
-  to {
-    background: #59bf40;
-    color: #fff;
-  }
-}
 html.client_chat_frame body,
 html.web_chat_frame body {
   background: #000;
@@ -42586,6 +42516,26 @@ body.in_global_drag .friendlist_titlebar {
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
   transform: scale(1) rotateX(0deg);
+}
+@keyframes ItemFocusAnim-darkerGrey {
+  from {
+    background: #3d4450;
+    color: #8b929a;
+  }
+  to {
+    background: #23262e;
+    color: #fff;
+  }
+}
+@keyframes ItemFocusAnim-darkGrey {
+  from {
+    background: rgba(255, 255, 255, 0.25);
+    color: #8b929a;
+  }
+  to {
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+  }
 }
 .groupHeaderContainer.gpfocuswithin .SortByRecent.GamepadMode,
 .GamepadMode .groupHeaderContainer.gpfocuswithin .SortByRecent {

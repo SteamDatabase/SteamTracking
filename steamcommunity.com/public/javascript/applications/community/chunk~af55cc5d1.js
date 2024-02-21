@@ -374,6 +374,7 @@
             (this.m_clanSteamID = t);
         }
         Initialize(t) {
+          var a;
           (this.m_strName = t.name || ""),
             (this.m_strAvatarURLFullSize =
               t.avatar_url_full_size ||
@@ -384,7 +385,8 @@
             (this.m_strVanity = t.vanity || void 0),
             (this.m_webLink = t.weblink),
             (this.m_bIsHidden = t.hidden || !1),
-            (this.m_clanAccountFlags = t.clan_account_flags),
+            (this.m_clanAccountFlags =
+              null !== (a = t.clan_account_flags) && void 0 !== a ? a : 0),
             t.appids && t.appids.forEach((t) => this.m_appidList.push(t)),
             (this.m_bIsLoaded = !0);
         }
@@ -528,9 +530,10 @@
             let a = (0, m.kQ)("creatorhomeforapp", "application_config");
             this.ValidateStoreDefaultAppList(a) &&
               a.forEach((t) => {
-                this.m_mapAppToCreatorIDList.has(t.appid) ||
-                  this.m_mapAppToCreatorIDList.set(t.appid, new Array()),
-                  this.m_mapAppToCreatorIDList.get(t.appid).push(t);
+                void 0 !== t.appid &&
+                  (this.m_mapAppToCreatorIDList.has(t.appid) ||
+                    this.m_mapAppToCreatorIDList.set(t.appid, new Array()),
+                  this.m_mapAppToCreatorIDList.get(t.appid).push(t));
               }),
               (this.m_bLoadedFromConfig = !0);
           }

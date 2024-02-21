@@ -5,7 +5,7 @@
   [4040],
   {
     80998: (e, t, s) => {
-      s.d(t, { De: () => u, Fq: () => o, pA: () => n });
+      s.d(t, { De: () => l, Fq: () => o, pA: () => n });
       var r = s(80002),
         i = s(37563),
         a = s(38071);
@@ -23,7 +23,7 @@
           t
         );
       }
-      function u(e, t) {
+      function l(e, t) {
         e.Body().set_data_request(r.Qn.fromObject(t));
       }
     },
@@ -34,8 +34,8 @@
         a = s(79545),
         n = s(77581),
         o = s(23309),
-        u = s(80002),
-        l = s(62210),
+        l = s(80002),
+        u = s(62210),
         c = s(16649),
         d = s(37563),
         _ = s(80998),
@@ -186,7 +186,7 @@
         }
         BCheckDataRequestIncluded(e) {
           ("dev" != d.De.WEB_UNIVERSE && "beta" != d.De.WEB_UNIVERSE) ||
-            (0, l.X)(
+            (0, u.X)(
               this.BContainDataRequest(e),
               `Requested data without for ${(0, h.qE)(this.m_eItemType)} @ ${
                 this.m_unID
@@ -1050,6 +1050,7 @@
           include_assets_without_overrides:
             e.include_assets_without_overrides ||
             t.include_assets_without_overrides,
+          apply_user_filters: e.apply_user_filters || t.apply_user_filters,
         };
       }
       function G(e, t) {
@@ -1112,7 +1113,7 @@
         }
         static Initialize(e, t) {
           return (0, r.mG)(this, void 0, void 0, function* () {
-            (0, l.X)(
+            (0, u.X)(
               !y.Get().m_bInitialized,
               "CStoreItemCache was already initialized; initialize it only once.",
             ),
@@ -1280,7 +1281,7 @@
         QueueStoreItemRequest(e, t, s) {
           return (0, r.mG)(this, void 0, void 0, function* () {
             if (
-              ((0, l.X)(
+              ((0, u.X)(
                 y.ValidateDataRequest(s),
                 "Invalid Data Request: " + JSON.stringify(s),
               ),
@@ -1294,7 +1295,7 @@
               );
             if (!e)
               return (
-                (0, l.X)(
+                (0, u.X)(
                   !e,
                   `unexpected id ${e} of zero or undefined for type ${t}`,
                 ),
@@ -1336,7 +1337,7 @@
                 this.m_setPendingHubCategoryInfo.add(e);
                 break;
               default:
-                (0, l.X)(!1, `Unexpected Type ${t}`);
+                (0, u.X)(!1, `Unexpected Type ${t}`);
             }
             const i = this.m_PendingInfoPromise;
             return (
@@ -1446,18 +1447,18 @@
             ? r.promise
             : null;
         }
-        HintLoadStoreItems(e, t, s, i, a, n, o, l) {
+        HintLoadStoreItems(e, t, s, i, a, n, o, u) {
           return (0, r.mG)(this, void 0, void 0, function* () {
             let r = null;
             const c = new Promise((e) => (r = e));
             let d = [],
               _ = [];
             (t || []).forEach((e) => {
-              const t = this.GetPreviousSupersetLoadPromise(e, 0, l);
+              const t = this.GetPreviousSupersetLoadPromise(e, 0, u);
               if (t) _.push(t);
               else {
-                d.push(u.oY.fromObject({ appid: e }));
-                let t = S(this.GetStoreItemDataRequest(e, 0), l);
+                d.push(l.oY.fromObject({ appid: e }));
+                let t = S(this.GetStoreItemDataRequest(e, 0), u);
                 const s = this.m_mapAppsInFlight.get(e);
                 (t = S(null == s ? void 0 : s.dataRequest, t)),
                   s && _.push(s.promise),
@@ -1468,11 +1469,11 @@
               }
             }),
               (s || []).forEach((e) => {
-                const t = this.GetPreviousSupersetLoadPromise(e, 1, l);
+                const t = this.GetPreviousSupersetLoadPromise(e, 1, u);
                 if (t) _.push(t);
                 else {
-                  d.push(u.oY.fromObject({ packageid: e }));
-                  let t = S(this.GetStoreItemDataRequest(e, 1), l);
+                  d.push(l.oY.fromObject({ packageid: e }));
+                  let t = S(this.GetStoreItemDataRequest(e, 1), u);
                   const s = this.m_mapPackageInFlight.get(e);
                   (t = S(null == s ? void 0 : s.dataRequest, t)),
                     s && _.push(s.promise),
@@ -1483,11 +1484,11 @@
                 }
               }),
               (i || []).forEach((e) => {
-                const t = this.GetPreviousSupersetLoadPromise(e, 2, l);
+                const t = this.GetPreviousSupersetLoadPromise(e, 2, u);
                 if (t) _.push(t);
                 else {
-                  d.push(u.oY.fromObject({ bundleid: e }));
-                  let t = S(this.GetStoreItemDataRequest(e, 2), l);
+                  d.push(l.oY.fromObject({ bundleid: e }));
+                  let t = S(this.GetStoreItemDataRequest(e, 2), u);
                   const s = this.m_mapBundleInFlight.get(e);
                   (t = S(null == s ? void 0 : s.dataRequest, t)),
                     s && _.push(s.promise),
@@ -1498,11 +1499,11 @@
                 }
               }),
               (a || []).forEach((e) => {
-                const t = this.GetPreviousSupersetLoadPromise(e, 4, l);
+                const t = this.GetPreviousSupersetLoadPromise(e, 4, u);
                 if (t) _.push(t);
                 else {
-                  d.push(u.oY.fromObject({ tagid: e }));
-                  let t = S(this.GetStoreItemDataRequest(e, 4), l);
+                  d.push(l.oY.fromObject({ tagid: e }));
+                  let t = S(this.GetStoreItemDataRequest(e, 4), u);
                   const s = this.m_mapTagsInFlight.get(e);
                   (t = S(null == s ? void 0 : s.dataRequest, t)),
                     s && _.push(s.promise),
@@ -1513,11 +1514,11 @@
                 }
               }),
               (n || []).forEach((e) => {
-                const t = this.GetPreviousSupersetLoadPromise(e, 5, l);
+                const t = this.GetPreviousSupersetLoadPromise(e, 5, u);
                 if (t) _.push(t);
                 else {
-                  d.push(u.oY.fromObject({ creatorid: e }));
-                  let t = S(this.GetStoreItemDataRequest(e, 5), l);
+                  d.push(l.oY.fromObject({ creatorid: e }));
+                  let t = S(this.GetStoreItemDataRequest(e, 5), u);
                   const s = this.m_mapCreatorsInFlight.get(e);
                   (t = S(null == s ? void 0 : s.dataRequest, t)),
                     s && _.push(s.promise),
@@ -1528,11 +1529,11 @@
                 }
               }),
               (o || []).forEach((e) => {
-                const t = this.GetPreviousSupersetLoadPromise(e, 6, l);
+                const t = this.GetPreviousSupersetLoadPromise(e, 6, u);
                 if (t) _.push(t);
                 else {
-                  d.push(u.oY.fromObject({ hubcategoryid: e }));
-                  let t = S(this.GetStoreItemDataRequest(e, 6), l);
+                  d.push(l.oY.fromObject({ hubcategoryid: e }));
+                  let t = S(this.GetStoreItemDataRequest(e, 6), u);
                   const s = this.m_mapHubCategoriesInFlight.get(e);
                   (t = S(null == s ? void 0 : s.dataRequest, t)),
                     s && _.push(s.promise),
@@ -1545,7 +1546,7 @@
             let h = 1;
             if (
               (d.length > 0 &&
-                (h = yield this.InternalHandleLoadStoreItems(e, d, l)),
+                (h = yield this.InternalHandleLoadStoreItems(e, d, u)),
               r(h),
               _.length > 0)
             ) {
@@ -1591,7 +1592,7 @@
           let t = e.slice();
           return (
             t.sort((e, t) => {
-              var s, r, i, a, n, o, u, l, c, d, _, h;
+              var s, r, i, a, n, o, l, u, c, d, _, h;
               let m = null !== (s = e.appid()) && void 0 !== s ? s : 0,
                 p = null !== (r = t.appid()) && void 0 !== r ? r : 0;
               if (m != p) return m - p;
@@ -1601,8 +1602,8 @@
               let f = null !== (n = e.bundleid()) && void 0 !== n ? n : 0,
                 v = null !== (o = t.bundleid()) && void 0 !== o ? o : 0;
               if (f != v) return f - v;
-              let R = null !== (u = e.tagid()) && void 0 !== u ? u : 0,
-                b = null !== (l = t.tagid()) && void 0 !== l ? l : 0;
+              let R = null !== (l = e.tagid()) && void 0 !== l ? l : 0,
+                b = null !== (u = t.tagid()) && void 0 !== u ? u : 0;
               if (R != b) return R - b;
               let C = null !== (c = e.creatorid()) && void 0 !== c ? c : 0,
                 S = null !== (d = t.creatorid()) && void 0 !== d ? d : 0;
@@ -1629,25 +1630,25 @@
                     { include_included_items: !1 },
                   ),
                 }));
-            const l = new Array();
+            const u = new Array();
             try {
               const n = [];
               for (; t.length > 0; ) {
                 const r = t.splice(0, this.k_nMaxBatchSize);
-                if ((l.push(r), this.m_bUsePartnerAPI)) {
+                if ((u.push(r), this.m_bUsePartnerAPI)) {
                   const t = a.gA.Init(o.z4);
                   t.Body().set_include_unpublished(!1);
                   const i = t.Body().request(!0);
                   i.set_context((0, _.Fq)(this.m_bUsePartnerAPI)),
-                    i.set_data_request(u.Qn.fromObject(s)),
+                    i.set_data_request(l.Qn.fromObject(s)),
                     i.set_ids(r),
                     n.push(o.n7.GetItems(e.GetServiceTransport(), t));
                 } else {
-                  const t = a.gA.Init(u.eK);
+                  const t = a.gA.Init(l.eK);
                   (0, _.pA)(t, this.m_bUsePartnerAPI),
                     (0, _.De)(t, s),
                     t.Body().set_ids(r),
-                    n.push(u.VJ.GetItems(e.GetAnonymousServiceTransport(), t));
+                    n.push(l.VJ.GetItems(e.GetAnonymousServiceTransport(), t));
                 }
               }
               (yield Promise.all(n)).forEach((e, a) => {
@@ -1660,9 +1661,9 @@
                           n = r.item_type();
                         let o =
                             this.m_bReturnUnavailableItems && 15 == r.success(),
-                          u =
+                          l =
                             1 == r.success() && !this.BIsStoreItemMissing(a, n);
-                        if (o || u) this.ReadItem(r, s);
+                        if (o || l) this.ReadItem(r, s);
                         else {
                           switch (
                             ("dev" == d.De.WEB_UNIVERSE &&
@@ -1742,7 +1743,7 @@
                       (0, i.ZN)(t),
                     ),
                     (1 == e.Hdr().transport_error() || d.De.FROM_WEB) &&
-                      this.MarkStoreItemIDUnavailable(l[a]),
+                      this.MarkStoreItemIDUnavailable(u[a]),
                     1 == r && (r = e.GetEResult()));
               });
             } catch (e) {
@@ -1753,7 +1754,7 @@
                     t.strErrorMsg,
                   t,
                 ),
-                l.forEach((e) => this.MarkStoreItemIDUnavailable(e)),
+                u.forEach((e) => this.MarkStoreItemIDUnavailable(e)),
                 79
               );
             }
@@ -2044,7 +2045,7 @@
             }
         }
       }
-      function u(e) {
+      function l(e) {
         switch (e) {
           case 2:
             return "bundle";
@@ -2058,7 +2059,7 @@
         $k: () => r,
         Ds: () => o,
         GV: () => i,
-        Hy: () => u,
+        Hy: () => l,
         TM: () => n,
         qE: () => a,
       }),
@@ -2090,8 +2091,8 @@
       s.d(t, {
         Vm: () => d,
         ie: () => c,
-        jk: () => u,
-        vs: () => l,
+        jk: () => l,
+        vs: () => u,
         wZ: () => h,
       });
       var r = s(80751),
@@ -2099,11 +2100,11 @@
         a = s(47427),
         n = (s(16833), s(20417)),
         o = s(34310);
-      function u(e, t, s, r) {
-        const u = (0, a.useRef)(),
-          l = (0, a.useRef)(void 0),
+      function l(e, t, s, r) {
+        const l = (0, a.useRef)(),
+          u = (0, a.useRef)(void 0),
           c = (0, n.NW)();
-        u.current = e;
+        l.current = e;
         const [d, _] = (0, a.useState)(void 0),
           {
             include_assets: h,
@@ -2120,6 +2121,7 @@
             include_full_description: G,
             include_included_items: y,
             include_assets_without_overrides: B,
+            apply_user_filters: k,
           } = s;
         if (
           ((0, a.useEffect)(() => {
@@ -2138,41 +2140,46 @@
               include_full_description: G,
               include_included_items: y,
               include_assets_without_overrides: B,
+              apply_user_filters: k,
             };
             let a = null;
             return (
               !e ||
                 o.Z.Get().BHasStoreItem(e, t, s) ||
-                (void 0 !== d && r && r == l.current) ||
-                (r !== l.current && (_(void 0), (l.current = r)),
+                (void 0 !== d && r && r == u.current) ||
+                (r !== u.current && (_(void 0), (u.current = r)),
                 (a = i().CancelToken.source()),
                 o.Z.Get()
                   .QueueStoreItemRequest(e, t, s)
                   .then((t) => {
-                    a.token.reason || u.current !== e || _(1 == t), c();
+                    (null == a ? void 0 : a.token.reason) ||
+                      l.current !== e ||
+                      _(1 == t),
+                      c();
                   })),
-              () => a && a.cancel("useStoreItemCache: unmounting")
+              () =>
+                null == a ? void 0 : a.cancel("useStoreItemCache: unmounting")
             );
-          }, [e, t, r, d, h, m, p, g, I, f, v, R, b, C, S, G, y, B, c]),
+          }, [e, t, r, d, h, m, p, g, I, f, v, R, b, C, S, G, y, B, k, c]),
           !e)
         )
           return [null, 2];
         if (!1 === d) return [void 0, 2];
         if (o.Z.Get().BIsStoreItemMissing(e, t)) return [void 0, 2];
         if (!o.Z.Get().BHasStoreItem(e, t, s)) return [void 0, 1];
-        const k = o.Z.Get().GetStoreItemWithLegacyVisibilityCheck(e, t);
-        return k ? [k, 3] : [null, 2];
+        const D = o.Z.Get().GetStoreItemWithLegacyVisibilityCheck(e, t);
+        return D ? [D, 3] : [null, 2];
       }
-      function l(e, t, s) {
-        return u(e, 0, t, s);
+      function u(e, t, s) {
+        return l(e, 0, t, s);
       }
       function c(e, t, s) {
-        return u(e, 1, t, s);
+        return l(e, 1, t, s);
       }
       function d(e, t, s) {
-        const [r, n] = u(e, t, s),
+        const [r, n] = l(e, t, s),
           [o, c] = (0, a.useState)(null),
-          [d, _] = l(o, s);
+          [d, _] = u(o, s);
         return (
           (0, a.useEffect)(() => {
             var e;
@@ -2195,9 +2202,9 @@
         );
       }
       function _(e, t, s, r) {
-        const u = (0, n.NW)(),
+        const l = (0, n.NW)(),
           {
-            include_assets: l,
+            include_assets: u,
             include_release: c,
             include_platforms: d,
             include_all_purchase_options: _,
@@ -2211,12 +2218,13 @@
             include_full_description: R,
             include_included_items: b,
             include_assets_without_overrides: C,
+            apply_user_filters: S,
           } = s;
         if (
           ((0, a.useEffect)(() => {
             if (!e || 0 == e.length) return;
             const s = {
-                include_assets: l,
+                include_assets: u,
                 include_release: c,
                 include_platforms: d,
                 include_all_purchase_options: _,
@@ -2230,6 +2238,7 @@
                 include_full_description: R,
                 include_included_items: b,
                 include_assets_without_overrides: C,
+                apply_user_filters: S,
               },
               r = e.filter(
                 (e) =>
@@ -2243,11 +2252,11 @@
               n = r.map((e) => o.Z.Get().QueueStoreItemRequest(e, t, s));
             return (
               Promise.all(n).then(() => {
-                a.token.reason || u();
+                a.token.reason || l();
               }),
               () => a.cancel("useStoreItemCacheMultiplePackages: unmounting")
             );
-          }, [e, t, r, u, l, c, d, _, h, m, p, g, I, f, v, R, b, C]),
+          }, [e, t, r, l, u, c, d, _, h, m, p, g, I, f, v, R, b, C, S]),
           !e)
         )
           return 2;

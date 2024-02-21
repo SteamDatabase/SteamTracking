@@ -783,6 +783,7 @@
       const g = o.createContext({
         loadPersonaState: (e, t) =>
           (0, r.mG)(void 0, void 0, void 0, function* () {
+            if (null == e) return null;
             const n = yield (function (e) {
               E ||
                 (E = new (a())(
@@ -803,10 +804,15 @@
                           .Body()
                           .accounts()
                           .forEach((e) => {
-                            const t = e.toObject();
+                            var t;
+                            const n = e.toObject();
                             s.set(
-                              new m.K(t.public_data.steamid).GetAccountID(),
-                              t,
+                              new m.K(
+                                null === (t = n.public_data) || void 0 === t
+                                  ? void 0
+                                  : t.steamid,
+                              ).GetAccountID(),
+                              n,
                             );
                           }),
                         t.map((e) => s.get(e))
@@ -818,42 +824,55 @@
             })(t).load(e);
             return n
               ? (function (e, t) {
-                  var n, r;
-                  let s = new d.Pv(e);
-                  const a = null == t ? void 0 : t.public_data,
-                    o = null == t ? void 0 : t.private_data;
-                  (s.m_bInitialized = !0),
-                    (s.m_ePersonaState =
-                      null !== (n = null == o ? void 0 : o.persona_state) &&
+                  var n, r, s, a, o, i, l;
+                  let c = new d.Pv(e);
+                  const m = null == t ? void 0 : t.public_data,
+                    h = null == t ? void 0 : t.private_data;
+                  (c.m_bInitialized = !0),
+                    (c.m_ePersonaState =
+                      null !== (n = null == h ? void 0 : h.persona_state) &&
                       void 0 !== n
                         ? n
                         : 0),
-                    (s.m_strAvatarHash = (
-                      null == a ? void 0 : a.sha_digest_avatar
+                    (c.m_strAvatarHash = (
+                      null == m ? void 0 : m.sha_digest_avatar
                     )
-                      ? (0, u.BH)(a.sha_digest_avatar)
+                      ? (0, u.BH)(m.sha_digest_avatar)
                       : d.WV),
-                    (s.m_strPlayerName =
-                      null !== (r = null == a ? void 0 : a.persona_name) &&
+                    (c.m_strPlayerName =
+                      null !== (r = null == m ? void 0 : m.persona_name) &&
                       void 0 !== r
                         ? r
                         : e.ConvertTo64BitString()),
-                    (s.m_strAccountName = null == o ? void 0 : o.account_name),
-                    (null == o ? void 0 : o.persona_state_flags) &&
-                      (s.m_unPersonaStateFlags =
-                        t.private_data.persona_state_flags);
-                  (null == o ? void 0 : o.game_id) &&
-                    (s.m_gameid = t.private_data.game_id);
-                  (null == o ? void 0 : o.game_server_ip_address) &&
-                    (s.m_unGameServerIP =
-                      t.private_data.game_server_ip_address);
-                  (null == o ? void 0 : o.lobby_steam_id) &&
-                    (s.m_game_lobby_id = t.private_data.lobby_steam_id);
-                  (null == o ? void 0 : o.game_extra_info) &&
-                    (s.m_strGameExtraInfo = t.private_data.game_extra_info);
-                  (null == a ? void 0 : a.profile_url) &&
-                    (s.m_strProfileURL = a.profile_url);
-                  return s;
+                    (c.m_strAccountName = null == h ? void 0 : h.account_name),
+                    (null == h ? void 0 : h.persona_state_flags) &&
+                      (c.m_unPersonaStateFlags =
+                        null === (s = t.private_data) || void 0 === s
+                          ? void 0
+                          : s.persona_state_flags);
+                  (null == h ? void 0 : h.game_id) &&
+                    (c.m_gameid =
+                      null === (a = t.private_data) || void 0 === a
+                        ? void 0
+                        : a.game_id);
+                  (null == h ? void 0 : h.game_server_ip_address) &&
+                    (c.m_unGameServerIP =
+                      null === (o = t.private_data) || void 0 === o
+                        ? void 0
+                        : o.game_server_ip_address);
+                  (null == h ? void 0 : h.lobby_steam_id) &&
+                    (c.m_game_lobby_id =
+                      null === (i = t.private_data) || void 0 === i
+                        ? void 0
+                        : i.lobby_steam_id);
+                  (null == h ? void 0 : h.game_extra_info) &&
+                    (c.m_strGameExtraInfo =
+                      null === (l = t.private_data) || void 0 === l
+                        ? void 0
+                        : l.game_extra_info);
+                  (null == m ? void 0 : m.profile_url) &&
+                    (c.m_strProfileURL = m.profile_url);
+                  return c;
                 })(m.K.InitFromAccountID(e), n)
               : null;
           }),

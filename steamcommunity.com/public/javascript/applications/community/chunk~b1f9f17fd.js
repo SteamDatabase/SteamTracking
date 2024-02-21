@@ -20913,7 +20913,7 @@
       "use strict";
       a.d(t, { Hs: () => c, rv: () => d, th: () => s, zA: () => l });
       var n = a(74257),
-        i = a(77131),
+        i = a(65650),
         o = a(31846);
       function r(e, t) {
         const a = e.filter((e) => Boolean(e)),
@@ -25588,7 +25588,7 @@
             )
           );
         });
-      var Ne = a(77131),
+      var Ne = a(65650),
         ke = a(91494),
         Be = a(50423),
         Le = a(20417),
@@ -36155,7 +36155,7 @@
       var c = a(74257),
         d = a(28017),
         m = a(77936),
-        u = a(77131),
+        u = a(65650),
         _ = a(45167),
         p = a(10162),
         g = a(49513),
@@ -36672,7 +36672,7 @@
             );
           }
           e.BHasLanguageDescription(t) &&
-            Array.from(e.GetDescription(t)).length > 32e3 &&
+            Array.from(e.GetDescription(t)).length > 128e3 &&
             a.push(
               s.createElement(
                 "li",

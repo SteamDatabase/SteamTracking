@@ -245,6 +245,21 @@
         HTMLErrorBoxAppear: "bXT6nAG7o3DqMjoZ_zWJ",
       };
     },
+    19399: (e, r, t) => {
+      "use strict";
+      t.d(r, { HZ: () => c, OL: () => o, pd: () => l });
+      var n = t(83682),
+        a = t(65255);
+      function o() {
+        return `${a.De.CLAN_CDN_ASSET_URL}images/`;
+      }
+      function l(e) {
+        return (e = e.replace(n.A1, o())).replace("http://", "https://");
+      }
+      function c(e) {
+        return e.replace(/{STEAM_CLAN_IMAGE}/g, o());
+      }
+    },
     23665: (e, r, t) => {
       "use strict";
       t.d(r, { n: () => m });

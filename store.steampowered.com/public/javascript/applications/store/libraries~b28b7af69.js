@@ -33258,18 +33258,25 @@
             switch (i) {
               case "I":
                 t.SetFromComponents(l, u, 0, o);
+                break;
               case "g":
                 t.SetFromComponents(l, 0, 7, o);
+                break;
               case "A":
                 t.SetFromComponents(l, u, 4, o);
+                break;
               case "G":
                 t.SetFromComponents(l, u, 3, o);
+                break;
               case "M":
                 t.SetFromComponents(l, u, 2, o);
+                break;
               case "P":
                 t.SetFromComponents(l, u, 5, o);
+                break;
               case "C":
                 t.SetFromComponents(l, u, 6, o);
+                break;
               case "U":
                 t.SetFromComponents(l, u, 1, o);
             }
@@ -46474,7 +46481,7 @@
         constructor(e = null) {
           super(),
             C.prototype.family_groupid || n.aR(C.M()),
-            s.initialize(this, e, 0, -1, void 0, null);
+            s.initialize(this, e, 0, -1, [3], null);
         }
         static M() {
           return (
@@ -46487,10 +46494,18 @@
                     br: n.FE.readUint64String,
                     bw: n.Xc.writeUint64String,
                   },
-                  include_completed: {
-                    n: 2,
-                    br: n.FE.readBool,
-                    bw: n.Xc.writeBool,
+                  request_ids: {
+                    n: 3,
+                    r: !0,
+                    q: !0,
+                    br: n.FE.readUint64String,
+                    pbr: n.FE.readPackedUint64String,
+                    bw: n.Xc.writeRepeatedUint64String,
+                  },
+                  rt_include_completed_since: {
+                    n: 4,
+                    br: n.FE.readUint32,
+                    bw: n.Xc.writeUint32,
                   },
                 },
               }),
@@ -64579,7 +64594,7 @@
       "use strict";
       r.d(t, {
         Qn: () => j,
-        VJ: () => Q,
+        VJ: () => Y,
         VL: () => u,
         WJ: () => C,
         _A: () => V,
@@ -64799,6 +64814,7 @@
                     bw: n.Xc.writeBool,
                   },
                   assets_without_overrides: { n: 60, c: _ },
+                  user_filter_failure: { n: 70, c: Q },
                 },
               }),
             u.sm_m
@@ -66476,6 +66492,11 @@
                     br: n.FE.readBool,
                     bw: n.Xc.writeBool,
                   },
+                  apply_user_filters: {
+                    n: 16,
+                    br: n.FE.readBool,
+                    bw: n.Xc.writeBool,
+                  },
                 },
               }),
             j.sm_m
@@ -67625,7 +67646,114 @@
           return "CStoreBrowse_GetHardwareItems_Response";
         }
       }
-      var Q;
+      class Q extends o {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            Q.prototype.filter_failure || n.aR(Q.M()),
+            o.initialize(this, e, 0, -1, [21, 30], null);
+        }
+        static M() {
+          return (
+            Q.sm_m ||
+              (Q.sm_m = {
+                proto: Q,
+                fields: {
+                  filter_failure: {
+                    n: 1,
+                    d: 0,
+                    br: n.FE.readEnum,
+                    bw: n.Xc.writeEnum,
+                  },
+                  already_owned: {
+                    n: 5,
+                    br: n.FE.readBool,
+                    bw: n.Xc.writeBool,
+                  },
+                  on_wishlist: { n: 6, br: n.FE.readBool, bw: n.Xc.writeBool },
+                  ignored: { n: 7, br: n.FE.readBool, bw: n.Xc.writeBool },
+                  not_in_users_language: {
+                    n: 10,
+                    br: n.FE.readBool,
+                    bw: n.Xc.writeBool,
+                  },
+                  not_on_users_platform: {
+                    n: 11,
+                    br: n.FE.readBool,
+                    bw: n.Xc.writeBool,
+                  },
+                  demo_for_owned_game: {
+                    n: 12,
+                    br: n.FE.readBool,
+                    bw: n.Xc.writeBool,
+                  },
+                  dlc_for_unowned_game: {
+                    n: 13,
+                    br: n.FE.readBool,
+                    bw: n.Xc.writeBool,
+                  },
+                  nonpreferred_product_type: {
+                    n: 20,
+                    br: n.FE.readBool,
+                    bw: n.Xc.writeBool,
+                  },
+                  excluded_tagids: {
+                    n: 21,
+                    r: !0,
+                    q: !0,
+                    br: n.FE.readUint32,
+                    pbr: n.FE.readPackedUint32,
+                    bw: n.Xc.writeRepeatedUint32,
+                  },
+                  excluded_content_descriptorids: {
+                    n: 30,
+                    r: !0,
+                    q: !0,
+                    br: n.FE.readEnum,
+                    pbr: n.FE.readPackedEnum,
+                    bw: n.Xc.writeRepeatedEnum,
+                  },
+                },
+              }),
+            Q.sm_m
+          );
+        }
+        static MBF() {
+          return Q.sm_mbf || (Q.sm_mbf = n.Bh(Q.M())), Q.sm_mbf;
+        }
+        toObject(e = !1) {
+          return Q.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return n.TA(Q.M(), e, t);
+        }
+        static fromObject(e) {
+          return n.aD(Q.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new i.BinaryReader(e),
+            r = new Q();
+          return Q.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return n.F(Q.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new i.BinaryWriter();
+          return Q.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          n.l2(Q.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new i.BinaryWriter();
+          return Q.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "StoreBrowseFilterFailure";
+        }
+      }
+      var Y;
       !(function (e) {
         (e.GetItems = function (e, t) {
           return e.SendMsg("StoreBrowse.GetItems#1", (0, a.MD)(W, t), P, {
@@ -67666,7 +67794,7 @@
               { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 },
             );
           });
-      })(Q || (Q = {}));
+      })(Y || (Y = {}));
     },
     44922: (e, t, r) => {
       "use strict";
@@ -68510,6 +68638,212 @@
           });
       })(B || (B = {}));
     },
+    24701: (e, t, r) => {
+      "use strict";
+      r.d(t, { np: () => l, zw: () => d });
+      var i = r(10059),
+        n = r(39087),
+        a = r(79545),
+        s = r(2260);
+      const o = i.Message;
+      class l extends o {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            l.prototype.auth_key || n.aR(l.M()),
+            o.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            l.sm_m ||
+              (l.sm_m = {
+                proto: l,
+                fields: {
+                  auth_key: { n: 1, br: n.FE.readString, bw: n.Xc.writeString },
+                },
+              }),
+            l.sm_m
+          );
+        }
+        static MBF() {
+          return l.sm_mbf || (l.sm_mbf = n.Bh(l.M())), l.sm_mbf;
+        }
+        toObject(e = !1) {
+          return l.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return n.TA(l.M(), e, t);
+        }
+        static fromObject(e) {
+          return n.aD(l.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new i.BinaryReader(e),
+            r = new l();
+          return l.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return n.F(l.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new i.BinaryWriter();
+          return l.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          n.l2(l.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new i.BinaryWriter();
+          return l.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CTransportAuth_Authenticate_Request";
+        }
+      }
+      class u extends o {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(), o.initialize(this, e, 0, -1, void 0, null);
+        }
+        toObject(e = !1) {
+          return u.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return e ? { $jspbMessageInstance: t } : {};
+        }
+        static fromObject(e) {
+          return new u();
+        }
+        static deserializeBinary(e) {
+          let t = new i.BinaryReader(e),
+            r = new u();
+          return u.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return e;
+        }
+        serializeBinary() {
+          var e = new i.BinaryWriter();
+          return u.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {}
+        serializeBase64String() {
+          var e = new i.BinaryWriter();
+          return u.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CTransportAuth_Authenticate_Response";
+        }
+      }
+      class c extends o {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(), o.initialize(this, e, 0, -1, void 0, null);
+        }
+        toObject(e = !1) {
+          return c.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return e ? { $jspbMessageInstance: t } : {};
+        }
+        static fromObject(e) {
+          return new c();
+        }
+        static deserializeBinary(e) {
+          let t = new i.BinaryReader(e),
+            r = new c();
+          return c.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return e;
+        }
+        serializeBinary() {
+          var e = new i.BinaryWriter();
+          return c.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {}
+        serializeBase64String() {
+          var e = new i.BinaryWriter();
+          return c.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CTransportAuth_StartShutdown_Notification";
+        }
+      }
+      var d;
+      !(function (e) {
+        (e.AuthenticateHandler = {
+          name: "TransportAuth.Authenticate#1",
+          request: l,
+          response: u,
+        }),
+          (e.Authenticate = function (e, t) {
+            return null == (t = t || (0, s.S)().GetDefaultTransport())
+              ? new Promise((e, t) => {
+                  console.error(
+                    "Transport Error: no transport is available for request",
+                  ),
+                    t("Transport Error: no transport is available for request");
+                })
+              : t.SendMsg("TransportAuth.Authenticate#1", (0, a.MD)(l, e), u, {
+                  ePrivilege: 1,
+                  eClientExecutionSite: 3,
+                });
+          }),
+          (e.SendMsgAuthenticate = function (e, t) {
+            return null == (t = t || (0, s.S)().GetDefaultTransport())
+              ? new Promise((e, t) => {
+                  console.error(
+                    "Transport Error: no transport is available for request",
+                  ),
+                    t("Transport Error: no transport is available for request");
+                })
+              : t.SendMsg("TransportAuth.Authenticate#1", (0, a.MD)(l, e), u, {
+                  ePrivilege: 1,
+                  eClientExecutionSite: 3,
+                });
+          }),
+          (e.NotifyStartShutdownHandler = {
+            name: "TransportAuth.NotifyStartShutdown#1",
+            request: c,
+          }),
+          (e.RegisterForNotifyStartShutdown = function (t, r) {
+            return null == (r = r || (0, s.S)().GetDefaultHandlerRegistry())
+              ? (console.error(
+                  "Transport Error: no default registry is available for request",
+                ),
+                null)
+              : r.RegisterServiceNotificationHandler(
+                  e.NotifyStartShutdownHandler,
+                  t,
+                );
+          }),
+          (e.NotifyStartShutdown = function (e, t) {
+            return null == (t = t || (0, s.S)().GetDefaultTransport())
+              ? (console.error(
+                  "Transport Error: no transport is available for request",
+                ),
+                !1)
+              : t.SendNotification(
+                  "TransportAuth.NotifyStartShutdown#1",
+                  (0, a.MD)(c, e),
+                  { ePrivilege: 1, eClientExecutionSite: 3 },
+                );
+          }),
+          (e.SendMsgNotifyStartShutdown = function (e, t) {
+            return null == (t = t || (0, s.S)().GetDefaultTransport())
+              ? (console.error(
+                  "Transport Error: no transport is available for request",
+                ),
+                !1)
+              : t.SendNotification(
+                  "TransportAuth.NotifyStartShutdown#1",
+                  (0, a.MD)(c, e),
+                  { ePrivilege: 1, eClientExecutionSite: 3 },
+                );
+          });
+      })(d || (d = {}));
+    },
     90938: (e, t, r) => {
       "use strict";
       r.d(t, { At: () => i, BH: () => a });
@@ -68604,6 +68938,39 @@
           t += n[i >>> 4] + n[15 & i];
         }
         return t;
+      }
+    },
+    2260: (e, t, r) => {
+      "use strict";
+      r.d(t, { S: () => a });
+      class i {
+        constructor() {
+          (this.m_transport = null), (this.m_registry = null);
+        }
+        SetDefaultTransport(e) {
+          null != this.m_transport &&
+            console.error(
+              "Multiple attempts to set a default WebUI transport: overriding previous",
+            ),
+            (this.m_transport = e);
+        }
+        GetDefaultTransport() {
+          return this.m_transport;
+        }
+        SetDefaultHandlerRegistry(e) {
+          null != this.m_registry &&
+            console.error(
+              "Multiple attempts to set a default WebUI message handler registry: overriding previous",
+            ),
+            (this.m_registry = e);
+        }
+        GetDefaultHandlerRegistry() {
+          return this.m_registry;
+        }
+      }
+      let n = null;
+      function a() {
+        return null == n && (n = new i()), n;
       }
     },
     50491: (e, t, r) => {

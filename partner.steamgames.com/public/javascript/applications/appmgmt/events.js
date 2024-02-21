@@ -2571,7 +2571,7 @@
       }
       var rt = n(45610);
       const it = i.lazy(() =>
-        Promise.all([n.e(2706), n.e(4601)]).then(n.bind(n, 20249)),
+        Promise.all([n.e(2706), n.e(4601)]).then(n.bind(n, 48470)),
       );
       function st(e) {
         var t;

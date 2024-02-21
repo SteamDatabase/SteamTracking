@@ -1994,7 +1994,7 @@
           if (
             (this.m_observer &&
               t != this.m_elTracked &&
-              (this.m_observer.unobserve(this.m_elTracked),
+              (this.m_elTracked && this.m_observer.unobserve(this.m_elTracked),
               (this.m_elTracked = null)),
             !this.m_observer && t)
           ) {
@@ -3730,9 +3730,7 @@
                 },
               ]),
             S = [];
-          (0, I.e7)(m.De.EREALM)
-            ? S.push(n(2640280), n(2459330))
-            : S.push(n(2640280), n(2603600));
+          S.push(n(2818550)), (0, I.e7)(m.De.EREALM), S.push(n(2640280));
           const A = [],
             L = [S, M];
           for (let e = 0; e < Math.max(L[0].length, L[1].length); e++)
