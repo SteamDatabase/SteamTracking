@@ -8823,10 +8823,11 @@ textarea._2V4yU656RPmLOdVgyglB17 {
 ._2nYdhByvfAdvZPHDFyt_Ku {
   display: flex;
   flex-direction: row;
-  align-items: flex-end;
+  align-items: center;
 }
 ._3Ab46MTXfA0egFEwYoU0Jr {
-  margin-left: 4px;
+  margin: 0 2px 0 4px;
+  padding: 0 1px;
   font-size: 0.8em;
   background-color: rgba(0, 0, 0, 0.1);
 }

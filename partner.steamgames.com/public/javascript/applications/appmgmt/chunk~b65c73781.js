@@ -51553,16 +51553,18 @@
                   n = n.replace(new RegExp("^" + e + "\\s*[:-]\\s*", "i"), "");
                 n = t[0] + " - " + n;
               }
-              return (
-                (n = (e.reviewed_by_account ? "🗹 " : "☐ ") + n),
-                {
-                  allDay: !1,
-                  title: n,
-                  start: new Date(1e3 * e.start_date),
-                  end: new Date(1e3 * (e.end_date - 39600 - 1)),
-                  resource: e,
-                }
-              );
+              const a = {
+                promotionPlan: e,
+                bIsChecked: !!e.reviewed_by_account,
+                sTooltip: e.promotion_planner_notes,
+              };
+              return {
+                allDay: !1,
+                title: n,
+                start: new Date(1e3 * e.start_date),
+                end: new Date(1e3 * (e.end_date - 39600 - 1)),
+                resource: a,
+              };
             });
           let t = [];
           r.has("dailydeal") &&
@@ -51570,19 +51572,19 @@
               .filter((e) => !e.cancelled)
               .map((e) => {
                 var t;
-                return {
-                  allDay: !1,
-                  title:
-                    (e.discount_event_id &&
+                const n =
+                    e.discount_event_id &&
                     (null === (t = (0, P.LT)(e.discount_event_id.toString())) ||
                     void 0 === t
                       ? void 0
-                      : t.length) > 0
-                      ? "🗹 "
-                      : "☐ ") + e.store_item_name,
+                      : t.length) > 0,
+                  a = { dailyDealGid: e.gid, bIsChecked: n };
+                return {
+                  allDay: !1,
+                  title: e.store_item_name,
                   start: new Date(1e3 * e.rtime32_start_time),
                   end: new Date(1e3 * (e.rtime32_start_time + 39600)),
-                  resource: e.gid,
+                  resource: a,
                 };
               }));
           const n = [];
@@ -51593,7 +51595,8 @@
               null === (t = null == g ? void 0 : g.get(e)) ||
                 void 0 === t ||
                 t.forEach((t) => {
-                  const l = t.rgPlans.length < a.nMaxSlots;
+                  const l = t.rgPlans.length < a.nMaxSlots,
+                    r = { week: t };
                   n.push({
                     allDay: !1,
                     title:
@@ -51606,7 +51609,7 @@
                     end: new Date(
                       1e3 * (t.rtWeekStart + a.rtEndModifier - 39600 - 1),
                     ),
-                    resource: t,
+                    resource: r,
                   });
                 });
             }),
@@ -51636,7 +51639,8 @@
             style: { height: 2400 },
             showMultiDayTimes: !0,
             onSelectEvent: (e, t) => {
-              if ("string" == typeof e.resource)
+              const n = e.resource;
+              if (n.dailyDealGid)
                 t.ctrlKey || t.metaKey
                   ? window.open(
                       `${
@@ -51647,29 +51651,29 @@
                       "_blank",
                     )
                   : m.push(M.PromotionRoutes.DailyDealEditor(e.resource));
-              else {
-                const n = e.resource;
-                n.id
-                  ? t.ctrlKey || t.metaKey
-                    ? window.open(
-                        `${
-                          x.De.PARTNER_BASE_URL
-                        }/promotion/${M.PromotionRoutes.PromotionPlanEditor(
-                          n.id,
-                        )}`,
-                        "_blank",
-                      )
-                    : m.push(M.PromotionRoutes.PromotionPlanEditor(n.id))
-                  : (0, v.AM)(
-                      o.createElement(k.Vt, {
-                        rtInitialDate: Math.floor(e.start.getTime() / 1e3),
-                        initialType: n.type,
-                        rtInitialEndDate:
-                          Math.floor(e.end.getTime() / 1e3) + 39600 + 1,
-                      }),
-                      window,
-                    );
-              }
+              else if (n.promotionPlan) {
+                const n = e.resource.promotionPlan;
+                t.ctrlKey || t.metaKey
+                  ? window.open(
+                      `${
+                        x.De.PARTNER_BASE_URL
+                      }/promotion/${M.PromotionRoutes.PromotionPlanEditor(
+                        n.id,
+                      )}`,
+                      "_blank",
+                    )
+                  : m.push(M.PromotionRoutes.PromotionPlanEditor(n.id));
+              } else
+                n.week &&
+                  (0, v.AM)(
+                    o.createElement(k.Vt, {
+                      rtInitialDate: Math.floor(e.start.getTime() / 1e3),
+                      initialType: n.week.type,
+                      rtInitialEndDate:
+                        Math.floor(e.end.getTime() / 1e3) + 39600 + 1,
+                    }),
+                    window,
+                  );
             },
             eventPropGetter: (e) => (0, O.Z4)(e.resource),
             components: { event: X },
@@ -51677,24 +51681,21 @@
         );
       }
       const X = (e) => {
-        var t;
-        const n =
-          null === (t = e.event.resource) || void 0 === t
-            ? void 0
-            : t.promotion_planner_notes;
+        const t = e.event.resource;
         return o.createElement(
           "span",
           { className: C().EventContainer },
-          e.title,
-          n &&
+          void 0 !== t.bIsChecked && (t.bIsChecked ? "🗹 " : "☐ "),
+          t.sTooltip &&
             o.createElement(
               F.HP,
               {
                 className: C().EventNotesTooltipIndicator,
-                toolTipContent: o.createElement(F.vd, null, n),
+                toolTipContent: o.createElement(F.vd, null, t.sTooltip),
               },
-              "(note)",
+              "(ℹ️) ",
             ),
+          e.title,
         );
       };
       function j(e) {
@@ -63474,40 +63475,39 @@
         let l = "",
           s = "",
           o = !1;
-        if ("string" == typeof e) l = r.pk.get("dailydeal");
-        else {
-          const c = e;
-          if (c.id) {
-            l = r.pk.get(c.type);
-            const e =
-                ((null === (t = c.takeover_ids) || void 0 === t
-                  ? void 0
-                  : t.length) > 0 &&
-                  Boolean(c.takeover_ids[0])) ||
-                ((null === (n = c.steamchina_takeover_ids) || void 0 === n
-                  ? void 0
-                  : n.length) > 0 &&
-                  Boolean(c.steamchina_takeover_ids[0])),
-              s =
-                (null === (a = c.takeunder_ids) || void 0 === a
-                  ? void 0
-                  : a.length) > 0 && Boolean(c.takeunder_ids[0]),
-              m =
-                "weekenddeal" != c.type &&
-                "midweek" != c.type &&
-                (null === (i = c.contenthub_takeover_ids) || void 0 === i
-                  ? void 0
-                  : i.length) > 0 &&
-                Boolean(c.contenthub_takeover_ids[0]);
-            e || "takeover" == c.intention
-              ? ((l = "#3c7c50"), (o = !e))
-              : s || "takeunder" == c.intention
-              ? ((l = "#993a21"), (o = !s))
-              : (m || "hub_takeover" == c.intention) &&
-                ((l = "#A3B367"), (o = !m)),
-              c.bgcolor && ((l = c.bgcolor), (o = !1));
-          } else (l = "#353840"), (s = "1px dashed #4273bd");
-        }
+        if (e.dailyDealGid) l = r.pk.get("dailydeal");
+        else if (e.promotionPlan) {
+          const s = e.promotionPlan;
+          l = r.pk.get(s.type);
+          const c =
+              ((null === (t = s.takeover_ids) || void 0 === t
+                ? void 0
+                : t.length) > 0 &&
+                Boolean(s.takeover_ids[0])) ||
+              ((null === (n = s.steamchina_takeover_ids) || void 0 === n
+                ? void 0
+                : n.length) > 0 &&
+                Boolean(s.steamchina_takeover_ids[0])),
+            m =
+              (null === (a = s.takeunder_ids) || void 0 === a
+                ? void 0
+                : a.length) > 0 && Boolean(s.takeunder_ids[0]),
+            d =
+              "weekenddeal" != s.type &&
+              "midweek" != s.type &&
+              (null === (i = s.contenthub_takeover_ids) || void 0 === i
+                ? void 0
+                : i.length) > 0 &&
+              Boolean(s.contenthub_takeover_ids[0]);
+          s.bgcolor
+            ? (l = s.bgcolor)
+            : c || "takeover" == s.intention
+            ? ((l = "#3c7c50"), (o = !c))
+            : m || "takeunder" == s.intention
+            ? ((l = "#993a21"), (o = !m))
+            : (d || "hub_takeover" == s.intention) &&
+              ((l = "#A3B367"), (o = !d));
+        } else e.week && ((l = "#353840"), (s = "1px dashed #4273bd"));
         return {
           style: {
             backgroundColor: l,
@@ -69316,7 +69316,7 @@
                   )
                 : c.push(g.PromotionRoutes.PromotionPlanEditor(t));
             },
-            style: (0, v.Z4)(o).style,
+            style: (0, v.Z4)({ promotionPlan: o }).style,
           },
           l.createElement(
             "div",
