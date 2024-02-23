@@ -22351,7 +22351,7 @@ div:hover > .BBCodeCollapseControl {
 .main_SteamPageHeaderTopLink_9i987:hover {
   color: #fff;
 }
-@keyframes friends-global_BackgroundAnimation_NqdS3 {
+@keyframes BackgroundAnimation {
   from {
     background-position: 0 100%;
   }
@@ -22359,7 +22359,7 @@ div:hover > .BBCodeCollapseControl {
     background-position: 100% 0;
   }
 }
-@keyframes friends-global_ItemFocusAnim-darkerGrey-nocolor_a1MzS {
+@keyframes ItemFocusAnim-darkerGrey-nocolor {
   from {
     background: #3d4450;
   }
@@ -22367,7 +22367,7 @@ div:hover > .BBCodeCollapseControl {
     background: #23262e;
   }
 }
-@keyframes friends-global_ItemFocusAnim-darkerGrey_1FUY9 {
+@keyframes ItemFocusAnim-darkerGrey {
   from {
     background: #3d4450;
     color: #8b929a;
@@ -22377,7 +22377,7 @@ div:hover > .BBCodeCollapseControl {
     color: #fff;
   }
 }
-@keyframes friends-global_ItemFocusAnim-darkGrey_14Z2G {
+@keyframes ItemFocusAnim-darkGrey {
   from {
     background: rgba(255, 255, 255, 0.25);
     color: #8b929a;
@@ -22387,7 +22387,7 @@ div:hover > .BBCodeCollapseControl {
     color: #fff;
   }
 }
-@keyframes friends-global_ItemFocusAnim-grey_8tMCI {
+@keyframes ItemFocusAnim-grey {
   from {
     background: #8b929a;
     color: #fff;
@@ -22397,7 +22397,7 @@ div:hover > .BBCodeCollapseControl {
     color: #fff;
   }
 }
-@keyframes friends-global_ItemFocusAnim-translucent-white-10_w5CZA {
+@keyframes ItemFocusAnim-translucent-white-10 {
   from {
     background: rgba(255, 255, 255, 0.3);
     color: #fff;
@@ -22407,7 +22407,7 @@ div:hover > .BBCodeCollapseControl {
     color: #fff;
   }
 }
-@keyframes friends-global_ItemFocusAnim-translucent-white-20_2btyu {
+@keyframes ItemFocusAnim-translucent-white-20 {
   from {
     background: rgba(255, 255, 255, 0.5);
     color: #fff;
@@ -22417,7 +22417,7 @@ div:hover > .BBCodeCollapseControl {
     color: #fff;
   }
 }
-@keyframes friends-global_ItemFocusAnimBorder-darkGrey_iojez {
+@keyframes ItemFocusAnimBorder-darkGrey {
   from {
     border-color: #67707b;
   }
@@ -22425,7 +22425,7 @@ div:hover > .BBCodeCollapseControl {
     border-color: #3d4450;
   }
 }
-@keyframes friends-global_ItemFocusAnim-green_2bet4 {
+@keyframes ItemFocusAnim-green {
   from {
     background: #c9ffc9;
     color: #8b929a;
@@ -22612,8 +22612,8 @@ div:hover > .BBCodeCollapseControl {
   .chatUnreadCircle {
   margin-left: -3px;
 }
-.friends-global_DialogContent_InnerWidth_1p6pq .chatRoomVoiceChannel,
-.friends-global_DialogContent_InnerWidth_1p6pq .chatRoomTextChannel {
+.DialogContent_InnerWidth .chatRoomVoiceChannel,
+.DialogContent_InnerWidth .chatRoomTextChannel {
   transition-property: transform, background-color;
   transition-duration: 0.32s, 0s;
   transition-timing-function: cubic-bezier(0.17, 0.45, 0.14, 0.83);
@@ -22623,8 +22623,8 @@ div:hover > .BBCodeCollapseControl {
   animation-fill-mode: forwards;
   transform: scale(1) rotateX(0deg);
 }
-.friends-global_DialogContent_InnerWidth_1p6pq .chatRoomVoiceChannel.gpfocus,
-.friends-global_DialogContent_InnerWidth_1p6pq .chatRoomTextChannel.gpfocus {
+.DialogContent_InnerWidth .chatRoomVoiceChannel.gpfocus,
+.DialogContent_InnerWidth .chatRoomTextChannel.gpfocus {
   animation-name: ItemFocusAnim-darkerGrey;
   z-index: 1;
 }
@@ -22663,7 +22663,7 @@ div:hover > .BBCodeCollapseControl {
   animation-fill-mode: forwards;
   transform: scale(1) rotateX(0deg);
 }
-.friends-global_FriendPicker_Focus_2zbJP .FriendPicker_SuggestedFriend.Focus {
+.FriendPicker_Focus .FriendPicker_SuggestedFriend.Focus {
   background: linear-gradient(
     to right,
     rgba(59, 63, 72, 0.5) 0% 20%,
@@ -22674,12 +22674,10 @@ div:hover > .BBCodeCollapseControl {
   animation-name: ItemFocusAnim-darkerGrey;
   z-index: 1;
 }
-.friends-global_DialogContent_InnerWidth_1p6pq
-  .chatRoomTextChannel.ActiveTextChannel {
+.DialogContent_InnerWidth .chatRoomTextChannel.ActiveTextChannel {
   background-color: transparent;
 }
-.friends-global_DialogContent_InnerWidth_1p6pq
-  .chatRoomTextChannel.ActiveTextChannel::after {
+.DialogContent_InnerWidth .chatRoomTextChannel.ActiveTextChannel::after {
   content: "";
   height: 75%;
   width: 10px;
@@ -23509,7 +23507,7 @@ div:hover > .BBCodeCollapseControl {
   transform: scale(1) rotateX(0deg);
   display: none;
 }
-.friends-global_FriendRequestViewActive_YFjeU
+.FriendRequestViewActive
   .friendlistListContainer
   button.BackToFriendsListButton {
   display: block;
@@ -23548,9 +23546,7 @@ div:hover > .BBCodeCollapseControl {
   left: -1.8px;
   top: -3px;
 }
-.friends-global_VoiceRequested_36C97
-  .RightSideButtonContainer
-  .oneOnOneVoiceChatButton {
+.VoiceRequested .RightSideButtonContainer .oneOnOneVoiceChatButton {
   color: #9bd98c;
 }
 .SteamDeckChats.gpfocuswithin .RightSideButtonContainer {
@@ -23584,7 +23580,7 @@ div:hover > .BBCodeCollapseControl {
   z-index: 1;
   animation-name: ItemFocusAnim-darkGrey;
 }
-.friends-global_VoiceRequested_36C97
+.VoiceRequested
   .SteamDeckChats.gpfocuswithin
   .RightSideButtonContainer
   .oneOnOneVoiceChatButton.gpfocus {
@@ -23592,7 +23588,7 @@ div:hover > .BBCodeCollapseControl {
   z-index: 1;
   animation-name: ItemFocusAnim-green;
 }
-.friends-global_VoiceRequested_36C97
+.VoiceRequested
   .SteamDeckChats.gpfocuswithin
   .RightSideButtonContainer
   .oneOnOneVoiceChatButton {
@@ -23677,11 +23673,8 @@ div:hover > .BBCodeCollapseControl {
   padding-left: 15px;
   padding-top: 0;
 }
-.friends-global_chatRoomGroupHeader_1rzZe
-  .ChatRoomListGroupItem_header.GamepadMode,
-.friends-global_chatRoomGroupHeader_1rzZe
-  .GamepadMode
-  .ChatRoomListGroupItem_header {
+.chatRoomGroupHeader .ChatRoomListGroupItem_header.GamepadMode,
+.chatRoomGroupHeader .GamepadMode .ChatRoomListGroupItem_header {
   width: 31px;
   height: 31px;
   margin: 0px;
@@ -23933,6 +23926,90 @@ div:hover > .BBCodeCollapseControl {
   font-style: italic;
   color: #67707b;
   font-size: 16px;
+}
+@keyframes BackgroundAnimation {
+  from {
+    background-position: 0 100%;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
+@keyframes ItemFocusAnim-darkerGrey-nocolor {
+  from {
+    background: #3d4450;
+  }
+  to {
+    background: #23262e;
+  }
+}
+@keyframes ItemFocusAnim-darkerGrey {
+  from {
+    background: #3d4450;
+    color: #8b929a;
+  }
+  to {
+    background: #23262e;
+    color: #fff;
+  }
+}
+@keyframes ItemFocusAnim-darkGrey {
+  from {
+    background: rgba(255, 255, 255, 0.25);
+    color: #8b929a;
+  }
+  to {
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+  }
+}
+@keyframes ItemFocusAnim-grey {
+  from {
+    background: #8b929a;
+    color: #fff;
+  }
+  to {
+    background: #67707b;
+    color: #fff;
+  }
+}
+@keyframes ItemFocusAnim-translucent-white-10 {
+  from {
+    background: rgba(255, 255, 255, 0.3);
+    color: #fff;
+  }
+  to {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+  }
+}
+@keyframes ItemFocusAnim-translucent-white-20 {
+  from {
+    background: rgba(255, 255, 255, 0.5);
+    color: #fff;
+  }
+  to {
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+  }
+}
+@keyframes ItemFocusAnimBorder-darkGrey {
+  from {
+    border-color: #67707b;
+  }
+  to {
+    border-color: #3d4450;
+  }
+}
+@keyframes ItemFocusAnim-green {
+  from {
+    background: #c9ffc9;
+    color: #8b929a;
+  }
+  to {
+    background: #59bf40;
+    color: #fff;
+  }
 }
 html.client_chat_frame body,
 html.web_chat_frame body {
@@ -24593,7 +24670,7 @@ body.in_global_drag .friendlist_titlebar {
 .dropConfirmationNotice.Active .avatar {
   animation-name: dropConfirmationAvatar;
 }
-@keyframes friends-global_dropConfirmation_1Y_pj {
+@keyframes dropConfirmation {
   0% {
     opacity: 0;
     filter: brightness(1);
@@ -24607,7 +24684,7 @@ body.in_global_drag .friendlist_titlebar {
     filter: brightness(1);
   }
 }
-@keyframes friends-global_dropConfirmationAvatar_1xftw {
+@keyframes dropConfirmationAvatar {
   0% {
     opacity: 1;
     transform: scale(1.2);
@@ -25552,26 +25629,6 @@ body.in_global_drag .friendlist_titlebar {
   animation-fill-mode: forwards;
   transform: scale(1) rotateX(0deg);
 }
-@keyframes ItemFocusAnim-darkerGrey {
-  from {
-    background: #3d4450;
-    color: #8b929a;
-  }
-  to {
-    background: #23262e;
-    color: #fff;
-  }
-}
-@keyframes ItemFocusAnim-darkGrey {
-  from {
-    background: rgba(255, 255, 255, 0.25);
-    color: #8b929a;
-  }
-  to {
-    background: rgba(255, 255, 255, 0.15);
-    color: #fff;
-  }
-}
 .groupHeaderContainer.gpfocuswithin .SortByRecent.GamepadMode,
 .GamepadMode .groupHeaderContainer.gpfocuswithin .SortByRecent {
   animation-name: ItemFocusAnim-darkerGrey;
@@ -25956,7 +26013,7 @@ body.in_global_drag .friendlist_titlebar {
   animation-iteration-count: infinite;
   animation-name: ConnectingPulse;
 }
-@keyframes friends-global_ConnectingPulse_2Uw-g {
+@keyframes ConnectingPulse {
   0% {
     opacity: 0.65;
     filter: brightness(1);
@@ -26357,7 +26414,7 @@ body.in_global_drag .friendlist_titlebar {
 .chatTabSetContainer.inclient {
   padding-right: 101px;
 }
-.friends-global_OSX_1vdb2 .chatTabSetContainer.inclient {
+.OSX .chatTabSetContainer.inclient {
   padding-left: 101px;
   padding-right: 0px;
 }
@@ -26983,7 +27040,7 @@ body.in_global_drag .friendlist_titlebar {
 .CompactFriendsList .unreadFriend .FriendMessageCount {
   margin-top: 8px;
 }
-@keyframes friends-global_UnreadLabelPulse_1WXx8 {
+@keyframes UnreadLabelPulse {
   0% {
     background: rgba(161, 98, 3, 0.2);
   }
@@ -26994,7 +27051,7 @@ body.in_global_drag .friendlist_titlebar {
     background: rgba(161, 98, 3, 0.2);
   }
 }
-@keyframes friends-global_UnreadLabelPulseAndGlow_3FgBO {
+@keyframes UnreadLabelPulseAndGlow {
   0% {
     background: rgba(161, 98, 3, 0.2);
     box-shadow: 0 0 6px 1px rgba(161, 98, 3, 0.1);
@@ -27171,7 +27228,7 @@ body.in_global_drag .friendlist_titlebar {
   animation: throbberfade 1s linear 2s;
   animation-fill-mode: forwards;
 }
-@keyframes friends-global_throbberfade_3y8XG {
+@keyframes throbberfade {
   from {
     opacity: 0;
   }
@@ -27842,7 +27899,7 @@ body.in_global_drag .chatWindow .chatBody .chatHistoryAndMembers,
   background: #3d4450;
   transition: none;
 }
-@keyframes friends-global_noiseAnim_3qrqw {
+@keyframes noiseAnim {
   0% {
     background-position: 10px 200px;
   }
@@ -28371,7 +28428,7 @@ input.InviteFriendToChatDialog_LinkInput {
   transform-origin: center;
   box-sizing: border-box;
 }
-@keyframes friends-global_SonarPing_1I5RR {
+@keyframes SonarPing {
   0% {
     transform: scale(0.15);
     opacity: 0;
@@ -28384,7 +28441,7 @@ input.InviteFriendToChatDialog_LinkInput {
     opacity: 0;
   }
 }
-@keyframes friends-global_SonarPingGamepadUI_1cM3N {
+@keyframes SonarPingGamepadUI {
   0% {
     transform: scale(0.15);
     opacity: 0;
@@ -28498,7 +28555,7 @@ button.DialogButton.copyVoiceLogsButton {
     )
     100% 1;
 }
-.friends-global_friendListHeaderContainer_1P5eR .activeVoiceControls:before {
+.friendListHeaderContainer .activeVoiceControls:before {
   content: "";
   width: 200px;
   height: 64px;
@@ -28663,9 +28720,7 @@ a.connectionStatus:visited {
 .activeVoiceButtons .SVGIcon_Button {
   fill: #c8f1c2;
 }
-#friends-global_QuickAccess-Menu_2DWNI
-  .activeVoiceButtons
-  .SVGIcon_Button.SVGIcon_ExitIcon {
+#QuickAccess-Menu .activeVoiceButtons .SVGIcon_Button.SVGIcon_ExitIcon {
   stroke: #c8f1c2;
 }
 .chatRoomVoiceChannel.ActiveVoiceChannel
@@ -28836,7 +28891,7 @@ a.connectionStatus:visited {
   transform-origin: 0% bottom;
   margin-right: -180px;
 }
-@keyframes friends-global_TabBounce_Av9Dm {
+@keyframes TabBounce {
   0% {
     margin-right: 0px;
   }
@@ -31121,7 +31176,7 @@ html.web_chat_frame .perf_timing_area {
   animation-timing-function: ease-in;
   transform-origin: 25% 55%;
 }
-@keyframes friends-global_FriendRequestWave_2akl1 {
+@keyframes FriendRequestWave {
   0% {
     transform: rotateZ(0deg);
   }
@@ -31205,7 +31260,7 @@ html.web_chat_frame .perf_timing_area {
 .friendSettingsFakeFriend .fakeFriendAvatar {
   transform: none;
 }
-@keyframes friends-global_SlowSpin_2lIUf {
+@keyframes SlowSpin {
   0% {
     transform: rotateZ(0deg);
   }
@@ -34754,7 +34809,7 @@ img.ChatRoomGroupAvatar_Avatar {
   height: 20px;
   padding-right: 4px;
 }
-.friends-global_ActiveVoiceChannel_3A_rr
+.ActiveVoiceChannel
   .chatRoomVoiceChannelIcon
   .SVGIcon_Button.SVGIcon_VoiceRoom {
   color: #fff;
@@ -35398,7 +35453,7 @@ a.general_btn:hover {
   stroke: #36f;
   stroke-width: 16px;
 }
-@keyframes friends-global_dropGroupInviteLoop_2HNmL {
+@keyframes dropGroupInviteLoop {
   0% {
     transform: translateX(-6px);
   }
@@ -36237,7 +36292,7 @@ button.DialogButton.LocalMicTestButton {
   animation-iteration-count: infinite;
   animation-duration: 1s;
 }
-@keyframes friends-global_WalkDashedOutline_3dozu {
+@keyframes WalkDashedOutline {
   0% {
     outline-color: #14a2ff;
     background: #515d72;

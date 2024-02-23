@@ -2,6 +2,8 @@ __TEXT
 
 __text
 __TEXT
+~
+~
 __stubs
 __TEXT
 __stub_helper
@@ -1120,6 +1122,8 @@ Force enable CEF accessibility features
 -cef-enable-fatal-dcheck
 -cef-disable-touch-focus-workaround
 Disable touch input browser focus workaround
+-cef-disable-d3d11-video-decoder
+Disable the Windows D3D11VideoDecoder
 -dev
 -html-perf-monitor
 Draws html perf data
@@ -1188,6 +1192,7 @@ DcheckIsFatal
 --disable-gpu-compositing
 --disable-gpu
 --disable-accelerated-video-decode
+--disable-d3d11-video-decoder
 -force-opaque-background
 --enable-gpu-debugging
 --disablehighdpi
@@ -2415,18 +2420,17 @@ id
 @
 
 @
+@
+
 
 
 @
-m
-W
-]
-%
+;
+n
 0
 0
 
 Hi
-$
 `
 0
 0
@@ -2472,6 +2476,7 @@ IcE
 @
 V
 =
+O
 =
 !
 @
@@ -2512,3 +2517,4 @@ Ic
 0
 0
 0
+\

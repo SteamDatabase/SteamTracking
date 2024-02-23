@@ -4967,39 +4967,36 @@ svg.controllerconfiguratormapping_DropDownStarSVG_2hQvm {
   margin-top: 24px;
 }
 .controllerconfiguratormapping_PageListColumn_2oua5 {
-  background: #23262e;
-  flex: 0;
+  background: rgba(255, 255, 255, 0.1);
+  flex: 1;
   min-width: 240px;
   max-width: 40%;
   display: flex;
   flex-direction: column;
   position: relative;
-  border-right: 1px solid #0e141b;
-  padding-top: calc(0px + var(--basicui-header-height, 0px));
+  padding-bottom: var(--gamepadui-current-footer-height, 0px);
 }
 .controllerconfiguratormapping_PageList_3Bvxh {
-  min-width: 240px;
-  max-width: 40%;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
   line-height: 32px;
   height: 100%;
   white-space: nowrap;
   overflow-x: hidden;
   overflow-y: auto;
   padding: 16px 0px;
-  flex-shrink: 1;
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
   scroll-snap-type: y mandatory;
   scroll-padding: 36px 0px;
 }
 .controllerconfiguratormapping_RightColumnContainer_3zXJC {
-  flex: 1;
   overflow-y: scroll;
-  padding-left: 4%;
   scroll-margin-top: 200px;
   scroll-margin-bottom: 400px;
   height: calc(100vh - var(--basicui-header-height) - 40px);
+  width: 664px;
+  max-width: calc(100% - 64px);
+  flex: 3.3;
 }
 .controllerconfiguratormapping_PageListItem_3glxw {
   font-family: "Motiva Sans", Helvetica, sans-serif;
@@ -5042,8 +5039,9 @@ svg.controllerconfiguratormapping_DropDownStarSVG_2hQvm {
 .controllerconfiguratormapping_PageListItem_3glxw.controllerconfiguratormapping_Active_38i-4 {
   color: #fff;
   cursor: default;
-  background: #3d4450;
+  background: rgba(255, 255, 255, 0.15);
   transform: scale(1.1) rotateX(1deg);
+  clip-path: inset(5% 0% 5% 0%);
 }
 .controllerconfiguratormapping_PageListItem_3glxw:focus {
   outline: none;
@@ -5053,6 +5051,9 @@ svg.controllerconfiguratormapping_DropDownStarSVG_2hQvm {
   transform: scale(1.1);
   z-index: 1;
   animation-name: controllerconfiguratormapping_ItemFocusAnim-darkGrey_14t35;
+}
+.controllerconfiguratormapping_PageListItem_3glxw:hover {
+  background-color: rgba(255, 255, 255, 0.05);
 }
 .controllerconfiguratormapping_PageListItem_Icon_25GY_ {
   height: 20px;
@@ -5077,6 +5078,7 @@ svg.controllerconfiguratormapping_DropDownStarSVG_2hQvm {
 }
 .controllerconfiguratormapping_PageContainer_3y7Oi {
   margin-top: 16px;
+  margin-left: 4%;
 }
 .controllerconfiguratoractionsetselector_ActionSetNameOverIndicators_1Xyoy {
   padding-top: calc(24px + var(--basicui-header-height, 0px));
@@ -36975,12 +36977,6 @@ p.appactivitydlc_Tooltip_3MRzL:first-child {
 }
 .appactivitydlc_CarouselItem_78Pwy.appactivitydlc_FillParent_-q2cv {
   flex: 0 0 100%;
-}
-.appactivitydlc_CarouselItem_78Pwy:not(:first-child) {
-  margin-left: 10px;
-}
-.appactivitydlc_CarouselItem_78Pwy:last-child {
-  margin-right: 10px;
 }
 .appactivitydlc_CarouselItem_78Pwy .appactivitydlc_CarouselImage_3gB_g {
   width: 222px;
