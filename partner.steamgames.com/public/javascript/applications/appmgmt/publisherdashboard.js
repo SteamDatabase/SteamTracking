@@ -739,17 +739,21 @@
           v =
             r.start_date && r.end_date && m && d
               ? Array.from(m)
-                  .map(([e, t]) => ({
-                    appid: e,
-                    discountsDuring:
-                      null == t
-                        ? void 0
-                        : t.discounts.filter(
-                            (e) =>
-                              r.start_date <= e.rtEndDate &&
-                              e.rtStartDate <= r.end_date,
-                          ),
-                  }))
+                  .map(([e, t]) => {
+                    var n;
+                    return {
+                      appid: e,
+                      discountsDuring:
+                        null === (n = null == t ? void 0 : t.discounts) ||
+                        void 0 === n
+                          ? void 0
+                          : n.filter(
+                              (e) =>
+                                r.start_date <= e.rtEndDate &&
+                                e.rtStartDate <= r.end_date,
+                            ),
+                    };
+                  })
                   .filter((e) => {
                     var t;
                     return null === (t = e.discountsDuring) || void 0 === t
