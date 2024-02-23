@@ -35240,17 +35240,16 @@
               this.UpdateCookie());
         }
         UpdateCookie() {
-          const e = (0, je.bG)("app_impressions") || "";
-          console.log(
-            `Adding impressions "${this.m_rgImpressionsToAdd.join("|")}"`,
-          );
-          const t = [e, ...this.m_rgImpressionsToAdd].join("|");
+          const e = [
+            (0, je.bG)("app_impressions") || "",
+            ...this.m_rgImpressionsToAdd,
+          ].join("|");
           this.m_rgImpressionsToAdd = [];
-          const n = encodeURIComponent(t).length;
-          n <= 3200
-            ? (0, je.I1)("app_impressions", t)
+          const t = encodeURIComponent(e).length;
+          t <= 3200
+            ? (0, je.I1)("app_impressions", e)
             : console.warn(
-                `Cookie max length exceeded ( ${n} > 3200 ), discarding impressions`,
+                `Cookie max length exceeded ( ${t} > 3200 ), discarding impressions`,
               );
         }
       }

@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "8720010";
+var CLSTAMP = "8720227";
 (() => {
   "use strict";
   var e,
@@ -22,14 +22,14 @@ var CLSTAMP = "8720010";
       if (!n) {
         var d = 1 / 0;
         for (i = 0; i < e.length; i++) {
-          for (var [n, s, c] = e[i], r = !0, f = 0; f < n.length; f++)
-            (!1 & c || d >= c) && Object.keys(o.O).every((e) => o.O[e](n[f]))
-              ? n.splice(f--, 1)
+          for (var [n, s, c] = e[i], r = !0, b = 0; b < n.length; b++)
+            (!1 & c || d >= c) && Object.keys(o.O).every((e) => o.O[e](n[b]))
+              ? n.splice(b--, 1)
               : ((r = !1), c < d && (d = c));
           if (r) {
             e.splice(i--, 1);
-            var b = s();
-            void 0 !== b && (a = b);
+            var f = s();
+            void 0 !== f && (a = f);
           }
         }
         return a;
@@ -639,14 +639,14 @@ var CLSTAMP = "8720010";
     (o.l = (e, a, n, d) => {
       if (s[e]) s[e].push(a);
       else {
-        var r, f;
+        var r, b;
         if (void 0 !== n)
           for (
-            var b = document.getElementsByTagName("script"), i = 0;
-            i < b.length;
+            var f = document.getElementsByTagName("script"), i = 0;
+            i < f.length;
             i++
           ) {
-            var t = b[i];
+            var t = f[i];
             if (
               t.getAttribute("src") == e ||
               t.getAttribute("data-webpack") == c + n
@@ -656,7 +656,7 @@ var CLSTAMP = "8720010";
             }
           }
         r ||
-          ((f = !0),
+          ((b = !0),
           ((r = document.createElement("script")).charset = "utf-8"),
           (r.timeout = 120),
           o.nc && r.setAttribute("nonce", o.nc),
@@ -680,7 +680,7 @@ var CLSTAMP = "8720010";
           );
         (r.onerror = l.bind(null, r.onerror)),
           (r.onload = l.bind(null, r.onload)),
-          f && document.head.appendChild(r);
+          b && document.head.appendChild(r);
       }
     }),
     (o.r = (e) => {
@@ -750,7 +750,7 @@ var CLSTAMP = "8720010";
                       else {
                         var r = n && n.type,
                           o = (n && n.target && n.target.href) || a,
-                          f = new Error(
+                          b = new Error(
                             "Loading CSS chunk " +
                               e +
                               " failed.\n(" +
@@ -759,12 +759,12 @@ var CLSTAMP = "8720010";
                               o +
                               ")",
                           );
-                        (f.name = "ChunkLoadError"),
-                          (f.code = "CSS_CHUNK_LOAD_FAILED"),
-                          (f.type = r),
-                          (f.request = o),
+                        (b.name = "ChunkLoadError"),
+                          (b.code = "CSS_CHUNK_LOAD_FAILED"),
+                          (b.type = r),
+                          (b.request = o),
                           d.parentNode && d.parentNode.removeChild(d),
-                          c(f);
+                          c(b);
                       }
                     }),
                   (d.href = a),
@@ -860,14 +860,14 @@ var CLSTAMP = "8720010";
       var a = (a, n) => {
           var s,
             c,
-            [d, r, f] = n,
-            b = 0;
+            [d, r, b] = n,
+            f = 0;
           if (d.some((a) => 0 !== e[a])) {
             for (s in r) o.o(r, s) && (o.m[s] = r[s]);
-            if (f) var i = f(o);
+            if (b) var i = b(o);
           }
-          for (a && a(n); b < d.length; b++)
-            (c = d[b]), o.o(e, c) && e[c] && e[c][0](), (e[c] = 0);
+          for (a && a(n); f < d.length; f++)
+            (c = d[f]), o.o(e, c) && e[c] && e[c][0](), (e[c] = 0);
           return o.O(i);
         },
         n = (self.webpackChunkstore = self.webpackChunkstore || []);

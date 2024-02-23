@@ -139,20 +139,21 @@
     },
     33687: (e, t, n) => {
       "use strict";
-      n.d(t, { Lr: () => p, oC: () => m, og: () => d });
+      n.d(t, { HN: () => v, Lr: () => u, oC: () => d, og: () => p });
       var a = n(85556),
         i = n(80751),
         o = n.n(i),
         l = n(42718),
         r = n(31846),
-        s = n(37563);
-      function c(e, t = !0, n) {
+        s = n(37563),
+        c = n(47427);
+      function m(e, t = !0, n) {
         return (0, a.mG)(this, void 0, void 0, function* () {
           const a = s.De.PARTNER_BASE_URL + "discounts/ajaxgetdiscountbyapp",
             i = new Map();
           if (!e || 0 == e.length) return i;
           const l = [...e],
-            r = (l.length, []);
+            r = [];
           for (; l.length > 0; ) {
             const e = l.splice(0, 250),
               i = new FormData();
@@ -195,23 +196,30 @@
           );
         });
       }
-      function m(e, t, n) {
+      function d(e, t, n) {
         const { isLoading: a, data: i } = (0, l.useQuery)(
           ["useOptedInAppWithDiscounts", e, t.join(","), n],
-          () => c(t),
+          () => m(t),
           { enabled: (null == t ? void 0 : t.length) > 0 },
         );
         return a ? null : i;
       }
-      function d(e, t = !0, n) {
+      function p(e, t = !0, n) {
         const { isLoading: a, data: i } = (0, l.useQuery)(
           ["useAppWithDiscounts", e.join(","), t, n],
-          () => c(e, t, n),
+          () => m(e, t, n),
           { enabled: (null == e ? void 0 : e.length) > 0 },
         );
         return a ? null : i;
       }
-      function p(e, t, n, a, i) {
+      function v() {
+        return (0, c.useMemo)(
+          () =>
+            (0, s.kQ)("bundle_discount_conflict_dates", "application_config"),
+          [],
+        );
+      }
+      function u(e, t, n, a, i) {
         var o, l;
         const s = null == t ? void 0 : t.get(e);
         if (s) {
@@ -453,8 +461,8 @@
         T = n(20417),
         y = n(52631),
         I = n(77936),
-        S = n(59728),
-        b = n(33687),
+        b = n(59728),
+        S = n(33687),
         N = n(81033),
         w = n(4942);
       class R {
@@ -719,7 +727,7 @@
       function O(e) {
         var t, n;
         const { partnerId: o, plan: r, eventUrl: s, optIn: c } = e,
-          m = (0, b.og)(
+          m = (0, S.og)(
             c.apps_in.map((e) => e.appid),
             !0,
             o,
@@ -783,7 +791,7 @@
             "div",
             { className: y.OptInGameStatusContainer },
             a.createElement(
-              S.HP,
+              b.HP,
               { toolTipContent: _(c.apps_eligible) },
               a.createElement(
                 "div",
@@ -803,7 +811,7 @@
               ),
             ),
             a.createElement(
-              S.HP,
+              b.HP,
               { toolTipContent: _(c.apps_in) },
               a.createElement(
                 "div",
@@ -823,7 +831,7 @@
               ),
             ),
             a.createElement(
-              S.HP,
+              b.HP,
               {
                 toolTipContent:
                   ((h = u),
@@ -913,7 +921,7 @@
         var h;
       }
       function A(e, t, n, i) {
-        const o = G(),
+        const o = F(),
           r =
             "nextfest" != i.type &&
             "themesale" != i.type &&
@@ -967,11 +975,11 @@
         }
       }
       (0, f.gn)([T.ak], R.prototype, "dataChanged", null);
-      const F = a.createContext({ bShowWarnings: !1 });
-      function G() {
-        return a.useContext(F);
+      const M = a.createContext({ bShowWarnings: !1 });
+      function F() {
+        return a.useContext(M);
       }
-      function M(e) {
+      function G(e) {
         const {
             partnerId: t,
             promotionPlans: n,
@@ -1099,18 +1107,18 @@
               ? I
               : [];
         var y, I;
-        const S = f
+        const b = f
             .concat(T, p ? h : [])
             .filter(
               (e) =>
                 (!e.valveOnly || m) &&
                 (!v || 0 == v.length || v.includes(e.id)),
             ),
-          b = a.useMemo(() => new Map(), []),
+          S = a.useMemo(() => new Map(), []),
           N = a.useRef(),
           w = a.useRef();
         return a.createElement(
-          F.Provider,
+          M.Provider,
           { value: { bShowWarnings: m } },
           a.createElement(
             c,
@@ -1129,21 +1137,21 @@
                   },
                   earliestDate: o,
                 }),
-                a.createElement(H, null),
+                a.createElement(Q, null),
                 a.createElement(j, {
                   viewDate: E,
-                  events: S,
+                  events: b,
                   bShowPreceedingWeeks: !0,
-                  dayRefsToScrollTo: b,
+                  dayRefsToScrollTo: S,
                   refScrollContainer: N,
                 }),
                 a.createElement(W, { viewDate: D }),
-                a.createElement(H, null),
+                a.createElement(Q, null),
                 a.createElement(j, {
                   viewDate: D,
-                  events: S,
+                  events: b,
                   bShowFollowingWeeks: !0,
-                  dayRefsToScrollTo: b,
+                  dayRefsToScrollTo: S,
                   refScrollContainer: N,
                 }),
               ),
@@ -1154,8 +1162,8 @@
                   J,
                   null,
                   a.createElement($, {
-                    events: S,
-                    dayRefsToScrollTo: b,
+                    events: b,
+                    dayRefsToScrollTo: S,
                     refSection: w,
                     refScrollContainer: N,
                   }),
@@ -1226,7 +1234,7 @@
           } = e,
           c = new Date();
         c.setHours(0, 0, 0, 0);
-        const m = ne(i, Q),
+        const m = ne(i, V),
           v = q(n, -n.getDay()),
           u = new Date(n.getFullYear(), n.getMonth() + 1, 0).getDate();
         let _ = 6;
@@ -1246,7 +1254,7 @@
             u = q(v, 7 * e);
           for (let e = 0; e < 7; e++) {
             const v = q(u, e),
-              _ = Q(v),
+              _ = V(v),
               g = n.getMonth() === v.getMonth(),
               D = g || (o && v <= n) || (l && v >= n),
               h = _.getTime() === c.getTime(),
@@ -1257,7 +1265,7 @@
               T = null == f ? void 0 : f.some((e) => "deadline" == e.eventType),
               y = null == f ? void 0 : f.some((e) => "release" == e.eventType),
               I = null == f ? void 0 : f.some((e) => "event" == e.eventType),
-              S = (0, p.Z)(
+              b = (0, p.Z)(
                 d.Day,
                 !g && d.OtherMonth,
                 !D && d.Inactive,
@@ -1266,8 +1274,8 @@
                 y && d.Release,
                 I && d.Event,
               ),
-              b = () => {
-                const e = null == r ? void 0 : r.get(Q(v).getTime());
+              S = () => {
+                const e = null == r ? void 0 : r.get(V(v).getTime());
                 if (!e) return;
                 const t = oe(s.current, e);
                 s.current.scrollTop = t;
@@ -1278,7 +1286,7 @@
                 { key: e, date: v, daysEvents: f, tooltipDateFormat: E },
                 a.createElement(
                   "div",
-                  { className: S, onClick: b },
+                  { className: b, onClick: S },
                   v.getDate(),
                 ),
               ),
@@ -1295,11 +1303,11 @@
           "div",
           { className: d.DayTooltipContainer },
           a.createElement("div", { className: d.DayTooltipDate }, i.format(t)),
-          n.map((e) => a.createElement(V, { key: e.id, event: e })),
+          n.map((e) => a.createElement(H, { key: e.id, event: e })),
         );
-        return a.createElement(S.HP, { toolTipContent: l }, o);
+        return a.createElement(b.HP, { toolTipContent: l }, o);
       }
-      function V(e) {
+      function H(e) {
         const { event: t } = e;
         return (
           le(t),
@@ -1319,7 +1327,7 @@
           )
         );
       }
-      function H(e) {
+      function Q(e) {
         const t = new Intl.DateTimeFormat(navigator.language, {
             weekday: "short",
           }),
@@ -1334,7 +1342,7 @@
           ),
         );
       }
-      function Q(e) {
+      function V(e) {
         const t = new Date(e.getTime());
         return t.setHours(0, 0, 0, 0), t;
       }
@@ -1420,7 +1428,7 @@
       }
       function K(e) {
         const { date: t, events: n, dayRefsToScrollTo: i } = e,
-          o = Array.from(ne(n, Q)).sort(ae),
+          o = Array.from(ne(n, V)).sort(ae),
           l = a.useRef();
         return a.createElement(
           "div",
@@ -1459,7 +1467,7 @@
       }
       function te(e) {
         const { event: t } = e,
-          n = G();
+          n = F();
         le(t);
         const i = "deadline" == t.eventType,
           o = "release" == t.eventType,
@@ -1601,7 +1609,7 @@
                 (null == l ? void 0 : l.length) > 0 && a.createElement(m, null),
                 u &&
                   u.length > 0 &&
-                  a.createElement(M, {
+                  a.createElement(G, {
                     partnerId: o,
                     promotionPlans: u,
                     hiddenPromotionPlanIDs: _,

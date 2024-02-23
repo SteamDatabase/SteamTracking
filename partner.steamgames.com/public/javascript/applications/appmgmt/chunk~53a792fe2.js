@@ -195,8 +195,8 @@
         ZW: () => I,
         _l: () => b,
         dS: () => R,
-        du: () => y,
-        lQ: () => A,
+        du: () => A,
+        lQ: () => y,
         nw: () => G,
         py: () => S,
         qh: () => v,
@@ -970,10 +970,10 @@
           fnUpdateOptInRegistrationJson: v.Get().UpdateOptInRegistrationJson,
         };
       }
-      function y() {
+      function A() {
         return { fnUpdateAppealState: v.Get().UpdateAppealState };
       }
-      function A() {
+      function y() {
         const [t, e] = (0, r.useState)(v.Get().GetLoadCount());
         return (
           (0, m.Qg)(v.Get().GetLoadCountChange(), e), v.Get().GetLoadCount()
@@ -1004,19 +1004,20 @@
         ID: () => b,
         L1: () => L,
         LT: () => I,
-        Qy: () => B,
+        Qy: () => F,
         Su: () => G,
         U8: () => D,
         XM: () => P,
         Xj: () => N,
         _J: () => k,
-        b2: () => y,
+        b2: () => A,
         co: () => E,
         dE: () => h,
         hd: () => O,
         k1: () => w,
         kk: () => f,
-        ls: () => A,
+        ls: () => y,
+        u3: () => B,
         v6: () => S,
         yI: () => C,
       });
@@ -1503,7 +1504,7 @@
           Array.from(t.map((t) => [t, v.Get().GetDiscountByID(t)])),
         );
       }
-      function y(t) {
+      function A(t) {
         const e = (0, r.zD)(),
           [n, a] = o.useState(v.Get().GetAllDiscountsForPackage(t));
         return (
@@ -1524,7 +1525,7 @@
           }, [t, e, n])
         );
       }
-      function A(t) {
+      function y(t) {
         const e = (0, r.zD)();
         if (!t) return null;
         let n = null;
@@ -1603,6 +1604,24 @@
         return (0, u.Qg)(v.Get().GetCallbackListForDiscountEvent(t), n), e;
       }
       function B(t) {
+        const [e, n] = o.useState(v.Get().GetAllDiscountsForPackage(t));
+        (0, u.Qg)(v.Get().GetCallbackListForPackage(t), n);
+        const [a, i] = o.useState(!1),
+          r = C();
+        return (
+          o.useEffect(() => {
+            if (e) a || i(!0);
+            else if (!a && r) {
+              const e = s().CancelToken.source();
+              r([t]).then(() => {
+                e.token.reason || i(!0);
+              });
+            }
+          }, [e, a, i, t, r]),
+          e
+        );
+      }
+      function F(t) {
         return v.Get().GetMaxDiscountPercentage(t);
       }
       function M(t) {
@@ -1617,12 +1636,12 @@
     95518: (t, e, n) => {
       "use strict";
       n.d(e, {
-        B6: () => A,
+        B6: () => y,
         E5: () => T,
-        E_: () => N,
+        E_: () => M,
         Eh: () => k,
         HU: () => B,
-        JW: () => F,
+        JW: () => N,
         LX: () => I,
         TB: () => O,
         _9: () => L,
@@ -1630,9 +1649,9 @@
         ho: () => H,
         hr: () => R,
         k: () => x,
-        pl: () => y,
+        pl: () => A,
         s$: () => w,
-        yn: () => M,
+        yn: () => F,
         z$: () => j,
       });
       var a = n(81033),
@@ -2178,13 +2197,13 @@
           P.Get();
         }, []);
       }
-      function y() {
+      function A() {
         const [t, e] = l.useState(P.Get().GetLocalPackageDiscountOverrides());
         return (
           (0, g.Qg)(P.Get().GetLocalPackageDiscountOverrideCallbackList(), e), t
         );
       }
-      function A() {
+      function y() {
         return l.useCallback(() => {
           var t;
           return (
@@ -2230,7 +2249,7 @@
             : 0
           : null;
       }
-      function M(t, e) {
+      function F(t, e) {
         const [n, a] = l.useState(() => {
           var n;
           return null ===
@@ -2250,7 +2269,7 @@
           ),
         };
       }
-      function N() {
+      function M() {
         return l.useCallback((t, e, n) => {
           const a = [];
           for (const i of n) {
@@ -2260,7 +2279,7 @@
           return a;
         }, []);
       }
-      function F(t) {
+      function N(t) {
         const e = T(t);
         return l.useMemo(
           () => ({
