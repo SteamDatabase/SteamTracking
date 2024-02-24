@@ -2785,7 +2785,6 @@ https://steamdeck-packages.steamos.cloud/archlinux-mirror/sources
 https://steamdeck.komodo.jp
 https://steamloopback.host
 https://steamloopback.host/
-https://steamloopback.host/${strUrl}
 https://steamloopback.host/${}
 https://steamsupport.valvesoftware.com/account/overview/${}
 https://steamsupport.valvesoftware.com/account_support.php?steamID=${strSteamID}
