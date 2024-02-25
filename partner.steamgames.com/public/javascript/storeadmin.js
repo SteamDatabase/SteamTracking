@@ -332,16 +332,16 @@ function PopulateClusterLists( rgIncludedItems, clusterName, elemAvailableList, 
 {
 	var elemAllApps = $(elemAvailableList);
 	var elemIncludedApps = $(elemIncludedList);
-	
+
 	var rgIncludedItemIds = {};
 	var rgIncludedPackageIds = {};
 	if ( rgIncludedItems )
 	{
-		rgIncludedItems.each( function ( rgItem ) { 
-			if ( rgItem.itemid ) 
-				rgIncludedItemIds[ rgItem.itemid ] = true; 
-			else if ( rgItem.packageid ) 
-				rgIncludedPackageIds[ rgItem.packageid ] = true; 
+		rgIncludedItems.each( function ( rgItem ) {
+			if ( rgItem.itemid )
+				rgIncludedItemIds[ rgItem.itemid ] = true;
+			else if ( rgItem.packageid )
+				rgIncludedPackageIds[ rgItem.packageid ] = true;
 		} );
 	}
 
@@ -350,7 +350,7 @@ function PopulateClusterLists( rgIncludedItems, clusterName, elemAvailableList, 
 	$J(elemIncludedApps).change( UpdateClusterCount.bind( null, elemIncludedApps, clusterName ) );
 
 	Event.observe( elemAllApps.up('form'), 'submit', SerializeClusterToForm.bindAsEventListener( null, elemAllApps.up('form'), 'capsule_lists[' + clusterName + ']', elemIncludedApps ) );
-	
+
 	// is the list of included apps an empty array?
 	if ( !rgIncludedItems || rgIncludedItems.length == 0 )
 		return;
@@ -362,7 +362,7 @@ function PopulateClusterLists( rgIncludedItems, clusterName, elemAvailableList, 
 			var opt = new Element('div', {id: clusterName + '_clusteritem_' + rgItem.itemid, 'class': g_rgReferencedItems[rgItem.itemid]['cssClass'], 'data-appid': rgItem.appid ?? 0 } );
 			opt.innerHTML = g_rgReferencedItems[rgItem.itemid]['name'];
 			elemIncludedApps.appendChild(opt);
-		} 
+		}
 		else if ( rgItem.packageid )
 		{
 			var opt = new Element('div', {id: clusterName + '_clusterpackage_' + rgItem.packageid, 'class': 'app_Package', 'data-packageid': rgItem.packageid ?? 0  } );
@@ -376,7 +376,7 @@ function PopulateClusterLists( rgIncludedItems, clusterName, elemAvailableList, 
 			elemIncludedApps.appendChild(opt);
 		}
 	}
-	
+
 	CreateClusterSortable( elemIncludedApps );
 }
 
@@ -440,9 +440,9 @@ function PreviewCapsules( strSize, elemIncluded )
 {
 	var rgItems = GetClusterItemsAsArray( $(elemIncluded) );
 
-	var url = g_szBaseUrl + '/admin/store/pagecapsulepreview/?'; 
+	var url = g_szBaseUrl + '/admin/store/pagecapsulepreview/?';
 	url += Object.toQueryString( { strCapsuleJSON: Object.toJSON( rgItems ), strCapsuleSize: strSize } );
-	
+
 	var win = window.open(url,'capsule_preview','height=584,width=724,resize=yes,scrollbars=yes');
 	win.focus();
 }
@@ -484,6 +484,18 @@ function MovePackageApp( from, to )
 	return valuesMoved;
 }
 
+
+function UpdateExtendedKV( form, packageid )
+{
+	var $Form = $( form );
+	$J.ajax({ type:'POST',
+			url:'https://partner.steamgames.com/store/updatereleaseoverridekv/' + packageid,
+				data: $Form.serialize(),
+			async: false
+			});
+}
+
+
 function BuildPackageAppList( form )
 {
 	var elemIncludedApps = $('package_included_app_list');
@@ -497,7 +509,7 @@ function BuildPackageAppList( form )
 			bFirst = false;
 		strAppList += elemIncludedApps.options[i].value;
 	}
-	
+
 	form.appendChild( new Element( 'input', {type: 'hidden', name: 'package_included_apps', value: strAppList } ) );
 
 	return true;
@@ -563,7 +575,7 @@ function FilterListFast( target, str )
 	var lastFilter = lastFilters[target];
 	if ( !lastFilter )
 		lastFilter = '';
-	
+
 	str = str.toLowerCase();
 	if ( str == lastFilter )
 		return false;
@@ -580,7 +592,7 @@ function FilterListFast( target, str )
 	var elemTarget = $(target);
 	var elemParent = elemTarget.parentNode;
 	elemParent.removeChild( elemTarget );
-	
+
 	var rgChildren = elemTarget.childNodes;
 	for ( var i = 0; i < rgChildren.length; i++ )
 	{
@@ -591,13 +603,13 @@ function FilterListFast( target, str )
 			continue;
 		if ( !child.lcText )
 			child.lcText = (child.innerText || child.textContent).toLowerCase();
-		
+
 		var text = child.lcText;
 		var show = true;
 		for ( var iPart = 0; show && iPart < strParts.length; iPart++ )
 			if ( !text.include( strParts[iPart] ) )
 				show=false;
-		
+
 		if ( show )
 			child.style.display = '';
 		else
@@ -611,7 +623,7 @@ function FilterListFast( target, str )
 function ImageHoverPreview( event, divHover, url )
 {
 	if (!event) var event = window.event;
-	
+
 	var hover = $(divHover);
 	if ( hover.parentNode != document.documentElement )
 	{
@@ -634,7 +646,7 @@ function HideImageHover( event, divHover, elem )
 	var reltarget = (event.relatedTarget) ? event.relatedTarget : event.toElement;
 	if ( reltarget && ( $(reltarget).up( '#' + elem.identify() ) /* || $(reltarget).up( '#' + divHover.id ) */ ) )
 		return;
-	
+
 	var hover = $(divHover);
 	if ( hover.effect ) hover.effect.cancel();
 	if ( hover.visible() )
@@ -648,9 +660,9 @@ function FlushStoreHome( elemStatus )
 {
 	$(elemStatus).update( 'Flushing the home page now...' );
 
-	new Ajax.Updater( 
-			elemStatus, 
-			g_szBaseUrl + '/admin/store/flushstorehome', 
+	new Ajax.Updater(
+			elemStatus,
+			g_szBaseUrl + '/admin/store/flushstorehome',
 			{ parameters: { sessionid: g_sessionID } } );
 }
 
@@ -662,7 +674,7 @@ function OnGenreSelect( checkbox, id, name )
 		var elemOpt = new Element( 'option', { value: id } );
 		elemOpt.update( name );
 		elemPrimary.appendChild( elemOpt );
-		
+
 		if ( !elemPrimary.value )
 			elemPrimary.value = id;
 	}
@@ -941,7 +953,7 @@ function OnAssociationChangeInternal( sFormName, sInputPrefix )
 		sAssociation = GetFormValueInternal( sFormName, sInputPrefix + '[association]' + sSuffix );
 	}
 
-	var hashParams = { 
+	var hashParams = {
 			associationType: 	sAssociationType,
 			association:  		sAssociation,
 	};
@@ -975,12 +987,12 @@ function ReadAssociationValuesInternal( json, sFormName, sInputPrefix )
 {
 	var hash = $H(json);
 
-	hash.each( ( entry ) => 
+	hash.each( ( entry ) =>
 	{
 		input = $( sFormName )[ sInputPrefix + entry.key];
-		if ( input ) 
+		if ( input )
 		{
-			input.value = entry.value; 
+			input.value = entry.value;
 		}
 	} );
 }
