@@ -2521,6 +2521,7 @@ https://partner.steamgames.com/store/ajaxpackagesave/${packageid}
 https://partner.steamgames.com/store/ajaxupdatef2pstore
 https://partner.steamgames.com/store/packagelanding/${nPackageId}
 https://partner.steamgames.com/store/packagelanding/${packageid}
+https://partner.steamgames.com/store/updatereleaseoverridekv/${packageid}
 https://partner.steamgames.com/tagdata/forcetagranking
 https://partner.steamgames.com/tagdata/simpletagprofile
 https://partner.steamgames.com/tagdata/tagassociations

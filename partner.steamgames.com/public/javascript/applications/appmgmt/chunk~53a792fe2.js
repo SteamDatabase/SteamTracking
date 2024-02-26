@@ -731,7 +731,7 @@
           return (0, a.mG)(this, void 0, void 0, function* () {
             let a = null;
             try {
-              const o = e.jsondata.opt_in_name,
+              const o = e.opt_in_name || e.jsondata.opt_in_name,
                 r = new FormData();
               r.append("sessionid", D.De.SESSIONID),
                 r.append("appid", "" + t),
