@@ -39,8 +39,10 @@ for (const { file, cdn } of files) {
 				if (
 					node.type === Syntax.BinaryExpression &&
 					node.left.type === Syntax.Literal &&
-					node.right.type === Syntax.MemberExpression &&
-					node.right.object.type === Syntax.ObjectExpression
+					((node.right.type === Syntax.MemberExpression && node.right.object.type === Syntax.ObjectExpression) ||
+						(node.right.type === Syntax.LogicalExpression &&
+							node.right.left.type === Syntax.MemberExpression &&
+							node.right.left.object.type === Syntax.ObjectExpression))
 				) {
 					const folder = node.left.value;
 					let suffix;
@@ -54,7 +56,9 @@ for (const { file, cdn } of files) {
 						return;
 					}
 
-					for (const property of node.right.object.properties) {
+					const obj = node.right.type === Syntax.LogicalExpression ? node.right.left.object : node.right.object;
+
+					for (const property of obj.properties) {
 						if (property.value.type === Syntax.Literal) {
 							const name = property.value.value;
 
