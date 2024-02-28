@@ -4,26 +4,6 @@
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
   [8647],
   {
-    48760: (r, s, e) => {
-      e.d(s, { U: () => a, W: () => t });
-      var o = e(37563);
-      const t = "fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb";
-      function a(r, s) {
-        let e = ".jpg";
-        (r && "0000000000000000000000000000000000000000" !== r) || (r = t),
-          44 == r.length && ((e = r.substr(-4)), (r = r.substr(0, 40)));
-        let a = o.De.AVATAR_BASE_URL;
-        return (
-          a ||
-            ((a = o.De.MEDIA_CDN_COMMUNITY_URL + "images/avatars/"),
-            (a += r.substr(0, 2) + "/")),
-          (a += r),
-          s && "small" != s && (a += "_" + s),
-          (a += e),
-          a
-        );
-      }
-    },
     16649: (r, s, e) => {
       e.d(s, { l: () => n });
       var o = e(80751),

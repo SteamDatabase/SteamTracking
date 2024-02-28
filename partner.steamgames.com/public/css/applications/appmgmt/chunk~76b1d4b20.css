@@ -467,6 +467,8 @@ div._1MvXz1iI0KQnsVVZnYxeN7 {
 }
 ._336YAKjWURkatkWeI8exDf {
   padding: 5px 0px;
+  display: flex;
+  flex-direction: column;
 }
 ._2BejwemJWjg_YdRiboYb34 {
   padding-left: 35px;
@@ -1271,6 +1273,7 @@ div._1MvXz1iI0KQnsVVZnYxeN7 {
   padding-left: 8px;
   padding-right: 8px;
   background-color: #3a9bed;
+  color: #fff;
   word-break: keep-all;
 }
 .BasicUI .tqNH01O5etkpJLgUyBPcP {

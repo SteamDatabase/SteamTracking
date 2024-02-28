@@ -556,7 +556,7 @@
           };
         }
       }
-      (f.Log = new p.s("ActionDescription").Debug),
+      (f.Log = new p.sO("ActionDescription").Debug),
         (0, m.gn)([g.ak], f.prototype, "OnFocusNavigationChanged", null),
         (0, m.gn)([g.ak], f.prototype, "SetActionDescriptionsFromMap", null);
       var v,
@@ -625,9 +625,9 @@
           case r.RightBumper:
             return n.createElement(F, { bIsKnockout: l, className: t });
           case r.LeftTrigger:
-            return n.createElement(T, { bIsKnockout: l, className: t });
-          case r.RightTrigger:
             return n.createElement(O, { bIsKnockout: l, className: t });
+          case r.RightTrigger:
+            return n.createElement(T, { bIsKnockout: l, className: t });
           case r.LeftStick:
             return n.createElement(Y, { bIsKnockout: l, className: t });
           case r.RightStick:
@@ -1348,7 +1348,7 @@
               }),
             );
       }
-      function T(e) {
+      function O(e) {
         var { bIsKnockout: t } = e,
           l = (0, m._T)(e, ["bIsKnockout"]);
         return t
@@ -1396,7 +1396,7 @@
               }),
             );
       }
-      function O(e) {
+      function T(e) {
         var { bIsKnockout: t } = e,
           l = (0, m._T)(e, ["bIsKnockout"]);
         return t

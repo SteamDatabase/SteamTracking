@@ -299,6 +299,10 @@ a.game_area_details_specs_ctn:hover .label {
 	font-style: normal;
 }
 
+.details_block i {
+	color: #61686d;
+	font-style: normal;
+}
 
 .block .block_title {
 	font-size: 12px;

@@ -1474,7 +1474,7 @@
       n(80751);
       var r = n(68785);
       const o = n(88765).Z,
-        i = new r.s("Login"),
+        i = new r.sO("Login"),
         s = i.Info,
         a = (i.Debug, i.Warning),
         l = i.Error;

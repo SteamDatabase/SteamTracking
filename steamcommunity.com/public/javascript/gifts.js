@@ -388,6 +388,15 @@ function AcceptRejectGiftCardInternal( gidGiftCardID, bAccept, strState, strCity
 	if ( strZip )
 		mapParams[ 'zip' ] = strZip;
 
+	if ( g_RedemptionID )
+		mapParams[ 'redemptionid' ] = g_RedemptionID;
+	if ( g_WalletCurrency )
+		mapParams[ 'currency' ] = g_WalletCurrency;
+	if ( g_WalletGifter )
+		mapParams[ 'gifter' ] = g_WalletGifter;
+	if ( g_Signature )
+		mapParams[ 'signature' ] = g_Signature;
+
 	new Ajax.Request( 'https://steamcommunity.com/gifts/0/resolvegiftcard', {
 		method: 'post',
 		parameters: mapParams,

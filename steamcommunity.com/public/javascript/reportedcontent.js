@@ -22,20 +22,37 @@ function ModeratorEditContentDescriptors( id )
 	EditContentDescriptors( id, fn );
 }
 
-
 function BanItem( id )
+{
+	UpdateBanState( id, true );
+}
+
+function UnBanItem( id )
+{
+	UpdateBanState( id, false );
+}
+
+function UpdateBanState( id, bBan )
 {
 	var item = gItems[id];
 	var appid = item['consumer_appid'];
 	var title = V_EscapeHTML( item['title'] );
+	var ban = bBan ? 1 : 0;
 	var options = {
 		method: 'post',
-		postBody: 'id=' + id + '&appid=' + appid + '&sessionid=' + g_sessionID + '&IsBanned=1',
+		postBody: 'id=' + id + '&appid=' + appid + '&sessionid=' + g_sessionID + '&IsBanned=' + bBan,
 		onComplete: (function(id){
 			return function(transport)
 			{
-				ShowWithFade( $( 'banned_' + id ) );
-				$J( '#item_' + id ).addClass( 'banned' );
+				if ( bBan )
+				{
+					ShowWithFade($('banned_' + id));
+					$J('#item_' + id).addClass('banned');
+			}
+				else
+				{
+					$J('#item_' + id).removeClass('banned');
+				}
 			}
 		}(id))
 	};
@@ -231,6 +248,11 @@ function SelectedItems_ApplyContentDescriptors()
 function SelectedItems_Ban()
 {
 	ApplyFuncOnSelectedItems( BanItem );
+}
+
+function SelectedItems_UnBan()
+{
+	ApplyFuncOnSelectedItems( UnBanItem );
 }
 
 function SelectedItems_VoteBanUsers()

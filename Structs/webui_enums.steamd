@@ -4018,6 +4018,7 @@ enum EStoreCategory
 	k_EStoreCategorySteamInputAPI = 59;
 	k_EStoreCategoryGamepadPreferred = 60;
 	k_EStoreCategoryHDR = 61;
+	k_EStoreCategoryFamilySharing = 62;
 }
 
 enum EStoreCategoryType

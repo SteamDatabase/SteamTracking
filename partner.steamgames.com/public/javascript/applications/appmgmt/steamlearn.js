@@ -483,7 +483,7 @@
           DoesPathMatch: () => pa,
           IsProjectPath: () => ga,
           SteamLearnPageContainer: () => Sa,
-          SteamLearnProjectTabs: () => fa,
+          SteamLearnProjectTabs: () => Na,
           SteamLearnRoutes: () => ua,
           default: () => va,
         });
@@ -525,8 +525,8 @@
       }
       var g = a(42718),
         S = a(79545),
-        f = a(45681),
-        N = a(2041);
+        N = a(45681),
+        f = a(2041);
       function v(e) {
         return `handle_${e}`;
       }
@@ -558,8 +558,8 @@
           () =>
             (function () {
               return (0, l.mG)(this, void 0, void 0, function* () {
-                let e = S.gA.Init(f.Vy);
-                const t = yield f.NG.ListDataSources(
+                let e = S.gA.Init(N.Vy);
+                const t = yield N.NG.ListDataSources(
                   p.Get().GetServiceTransport(),
                   e,
                 );
@@ -569,7 +569,7 @@
                       .Body()
                       .data_sources()
                       .forEach((e) => {
-                        N.U.setQueryData([C, e.id()], e);
+                        f.U.setQueryData([C, e.id()], e);
                       }),
                     t.Body().data_sources()
                   );
@@ -585,9 +585,9 @@
           () =>
             (function (e) {
               return (0, l.mG)(this, void 0, void 0, function* () {
-                let t = S.gA.Init(f.Oz);
+                let t = S.gA.Init(N.Oz);
                 t.Body().set_data_source_id(e);
-                const a = yield f.NG.GetDataSource(
+                const a = yield N.NG.GetDataSource(
                   p.Get().GetServiceTransport(),
                   t,
                 );
@@ -619,9 +619,9 @@
         return (0, l.mG)(this, void 0, void 0, function* () {
           const t = yield (function (e) {
               return (0, l.mG)(this, void 0, void 0, function* () {
-                let t = S.gA.Init(f.DY);
+                let t = S.gA.Init(N.DY);
                 t.Body().set_project_id(e);
-                const a = yield f.NG.GetProject(
+                const a = yield N.NG.GetProject(
                   p.Get().GetServiceTransport(),
                   t,
                 );
@@ -633,7 +633,7 @@
             a = I(e);
           null === localStorage.getItem(a) &&
             localStorage.setItem(a, t.serializeBase64String());
-          const n = f.mg.deserializeBinary(
+          const n = N.mg.deserializeBinary(
             Uint8Array.from(d.lW.from(localStorage.getItem(a), "base64")),
           );
           for (const e of t.published_configs())
@@ -650,8 +650,8 @@
           () =>
             (function () {
               return (0, l.mG)(this, void 0, void 0, function* () {
-                let e = S.gA.Init(f.W3);
-                const t = yield f.NG.ListProjects(
+                let e = S.gA.Init(N.W3);
+                const t = yield N.NG.ListProjects(
                   p.Get().GetServiceTransport(),
                   e,
                 );
@@ -679,9 +679,9 @@
           () =>
             (function () {
               return (0, l.mG)(this, void 0, void 0, function* () {
-                let e = S.gA.Init(f.Dk);
+                let e = S.gA.Init(N.Dk);
                 e.Body().set_appid(570);
-                const t = yield f.NG.GetAccessTokensWeb(
+                const t = yield N.NG.GetAccessTokensWeb(
                   p.Get().GetServiceTransport(),
                   e,
                 );
@@ -698,9 +698,9 @@
           () =>
             (function (e, t) {
               return (0, l.mG)(this, void 0, void 0, function* () {
-                let a = S.gA.Init(f.wN);
+                let a = S.gA.Init(N.wN);
                 a.Body().set_project_id(e), a.Body().set_published_version(t);
-                const n = yield f.NG.GetFetchStatusVersions(
+                const n = yield N.NG.GetFetchStatusVersions(
                   p.Get().GetServiceTransport(),
                   a,
                 );
@@ -717,9 +717,9 @@
           () =>
             (function (e, t) {
               return (0, l.mG)(this, void 0, void 0, function* () {
-                let a = S.gA.Init(f.yu);
+                let a = S.gA.Init(N.yu);
                 a.Body().set_project_id(e), a.Body().set_published_version(t);
-                const n = yield f.NG.GetTrainStatusVersions(
+                const n = yield N.NG.GetTrainStatusVersions(
                   p.Get().GetServiceTransport(),
                   a,
                 );
@@ -736,9 +736,9 @@
           () =>
             (function (e, t) {
               return (0, l.mG)(this, void 0, void 0, function* () {
-                let a = S.gA.Init(f.kK);
+                let a = S.gA.Init(N.kK);
                 a.Body().set_project_id(e), a.Body().set_fetch_id(t);
-                const n = yield f.NG.GetFetchStatus(
+                const n = yield N.NG.GetFetchStatus(
                   p.Get().GetServiceTransport(),
                   a,
                 );
@@ -755,9 +755,9 @@
           () =>
             (function (e, t) {
               return (0, l.mG)(this, void 0, void 0, function* () {
-                let a = S.gA.Init(f.uK);
+                let a = S.gA.Init(N.uK);
                 a.Body().set_project_id(e), a.Body().set_train_id(t);
-                const n = yield f.NG.GetTrainStatus(
+                const n = yield N.NG.GetTrainStatus(
                   p.Get().GetServiceTransport(),
                   a,
                 );
@@ -774,9 +774,9 @@
           () =>
             (function (e, t) {
               return (0, l.mG)(this, void 0, void 0, function* () {
-                let a = S.gA.Init(f.cJ);
+                let a = S.gA.Init(N.cJ);
                 a.Body().set_start_timestamp(e), a.Body().set_end_timestamp(t);
-                const n = yield f.NG.GetLogEvents(
+                const n = yield N.NG.GetLogEvents(
                   p.Get().GetServiceTransport(),
                   a,
                 );
@@ -788,27 +788,27 @@
         );
       }
       function U(e, t) {
-        N.U.invalidateQueries([y, e, t]);
+        f.U.invalidateQueries([y, e, t]);
       }
       function K(e, t) {
-        N.U.invalidateQueries([k, e, t]);
+        f.U.invalidateQueries([k, e, t]);
       }
       function z(e, t, a) {
         return (0, l.mG)(this, void 0, void 0, function* () {
-          let n = S.gA.Init(f.Cj);
+          let n = S.gA.Init(N.Cj);
           for (const a of t) {
-            let t = new f.kK();
+            let t = new N.kK();
             t.set_project_id(e),
               t.set_fetch_id(a),
               n.Body().add_fetch_requests(t);
           }
           for (const t of a) {
-            let a = new f.uK();
+            let a = new N.uK();
             a.set_project_id(e),
               a.set_train_id(t),
               n.Body().add_train_requests(a);
           }
-          const o = yield f.NG.GetBatchedStatus(
+          const o = yield N.NG.GetBatchedStatus(
             p.Get().GetServiceTransport(),
             n,
           );
@@ -818,40 +818,40 @@
       }
       function Z(e, t) {
         return (0, l.mG)(this, void 0, void 0, function* () {
-          let a = S.gA.Init(f.zu);
+          let a = S.gA.Init(N.zu);
           a.Body().set_project_name(e), a.Body().set_project_description(t);
-          const n = yield f.NG.CreateProject(p.Get().GetServiceTransport(), a);
+          const n = yield N.NG.CreateProject(p.Get().GetServiceTransport(), a);
           return (
             n &&
               1 == n.GetEResult() &&
-              (N.U.setQueryData(
+              (f.U.setQueryData(
                 [D, n.Body().project().project_id()],
                 [n.Body().project(), n.Body().project()],
               ),
-              N.U.invalidateQueries([b])),
+              f.U.invalidateQueries([b])),
             [n.Body().result(), n.Body().project().project_id()]
           );
         });
       }
       function Q(e, t) {
         return (0, l.mG)(this, void 0, void 0, function* () {
-          let a = S.gA.Init(f.S$);
+          let a = S.gA.Init(N.S$);
           a.Body().set_project(e), a.Body().set_published_version(t);
-          const n = yield f.NG.EditProject(p.Get().GetServiceTransport(), a);
+          const n = yield N.NG.EditProject(p.Get().GetServiceTransport(), a);
           return (
             n &&
               1 == n.GetEResult() &&
               (localStorage.removeItem(I(e.project_id())),
-              N.U.invalidateQueries([D, e.project_id()])),
+              f.U.invalidateQueries([D, e.project_id()])),
             n.Body().result()
           );
         });
       }
       function Y(e) {
         localStorage.removeItem(I(e)),
-          N.U.invalidateQueries([D, e]),
-          N.U.removeQueries([T, e]),
-          N.U.removeQueries([P, e]);
+          f.U.invalidateQueries([D, e]),
+          f.U.removeQueries([T, e]),
+          f.U.removeQueries([P, e]);
       }
       function $(e, t) {
         let a;
@@ -1145,9 +1145,9 @@
                 .find((e) => 1 == e.type() && e.input().input_num() == a)
             ) {
               const [t, n] = $(e, 1);
-              let o = new f.UY();
+              let o = new N.UY();
               o.set_connector_id(ee(e)), o.set_is_input_connector(!1);
-              let r = new f._u();
+              let r = new N._u();
               r.set_node_id(J(e)),
                 r.set_type(1),
                 r.set_location_x(t),
@@ -1169,11 +1169,11 @@
           ) {
             const [t, a] = $(e, 6),
               n = q(e, 2);
-            let o = new f.UY();
+            let o = new N.UY();
             o.set_connector_id(n[0]), o.set_is_input_connector(!0);
-            let r = new f.UY();
+            let r = new N.UY();
             r.set_connector_id(n[1]), r.set_is_input_connector(!0);
-            let i = new f._u();
+            let i = new N._u();
             i.set_node_id(J(e)),
               i.set_type(6),
               i.set_location_x(t),
@@ -1190,11 +1190,11 @@
           }
         })(e.unpublished_config()),
           localStorage.setItem(I(e.project_id()), e.serializeBase64String()),
-          N.U.invalidateQueries([D, e.project_id()]);
+          f.U.invalidateQueries([D, e.project_id()]);
       }
       function se(e, t) {
         const a = (function (e) {
-          return N.U.getQueryData([C, e]);
+          return f.U.getQueryData([C, e]);
         })(t);
         if (!a) return !1;
         for (const n of a.structure().elements())
@@ -1207,7 +1207,7 @@
           if (5 == n.data_type())
             for (const t of n.object().elements()) ce(e, r, a, t);
           else {
-            let t = new f.Y0();
+            let t = new N.Y0();
             t.set_data_source_id(a),
               t.set_input(0),
               t.set_data_element_path(r),
@@ -1308,8 +1308,8 @@
               )
             : o.createElement(pe, { steamLearnContext: {} }, e.children);
         };
-      var fe = a(86728),
-        Ne = a(20417);
+      var Ne = a(86728),
+        fe = a(20417);
       const ve = (e) => {
           const t = Math.max(
             0,
@@ -1321,21 +1321,21 @@
             i.rU,
             {
               to: ua.SteamLearnProjectTrainStatus(e.msgProject.project_id(), t),
-              className: (0, s.Z)(fe.ProjectEntry, e.isHidden && fe.Hidden),
+              className: (0, s.Z)(Ne.ProjectEntry, e.isHidden && Ne.Hidden),
             },
             o.createElement(
               "div",
-              { className: fe.ProjectName },
+              { className: Ne.ProjectName },
               e.msgProject.project_name(),
             ),
             o.createElement(
               "div",
-              { className: fe.ProjectDescription },
+              { className: Ne.ProjectDescription },
               e.msgProject.project_description(),
             ),
             o.createElement(
               "div",
-              { className: fe.ProjectID },
+              { className: Ne.ProjectID },
               (0, c.Xx)("#SteamLearn_ProjectID", e.msgProject.project_id()),
             ),
           );
@@ -1346,20 +1346,20 @@
             n = a.data;
           return o.createElement(
             "div",
-            { className: fe.DashboardProjectList },
+            { className: Ne.DashboardProjectList },
             a.isLoading &&
               o.createElement(
                 "div",
-                { className: fe.Loading },
+                { className: Ne.Loading },
                 (0, c.Xx)("#SteamLearn_LoadingProjects"),
               ),
             a.isSuccess &&
               o.createElement(
                 "div",
-                { className: fe.ListContainer },
+                { className: Ne.ListContainer },
                 o.createElement("input", {
                   type: "text",
-                  className: fe.ListFilter,
+                  className: Ne.ListFilter,
                   value: e,
                   onChange: (e) => t(e.target.value),
                   placeholder: (0, c.Xx)("#SteamLearn_FilterProject"),
@@ -1382,7 +1382,7 @@
             n = t.data,
             r = a.data;
           if (
-            ((0, Ne.Yz)(() => {
+            ((0, fe.Yz)(() => {
               if (n)
                 switch (n.status()) {
                   case 0:
@@ -1433,7 +1433,7 @@
                   r.total_epochs(),
                 );
             }
-          return o.createElement("div", { className: fe.ProjectStatusInfo }, i);
+          return o.createElement("div", { className: Ne.ProjectStatusInfo }, i);
         },
         Le = (e) => {
           var t;
@@ -1495,10 +1495,10 @@
           const S = d && d.active() && d.live();
           return o.createElement(
             i.rU,
-            { to: u, className: (0, s.Z)(fe.EventEntry, S && fe.IsLive) },
+            { to: u, className: (0, s.Z)(Ne.EventEntry, S && Ne.IsLive) },
             o.createElement(
               "div",
-              { className: fe.Timestamp },
+              { className: Ne.Timestamp },
               !e.bProjectSpecific &&
                 new Date(1e3 * e.msgEvent.timestamp()).toLocaleString(
                   c.Yt.GetPreferredLocales(),
@@ -1509,10 +1509,10 @@
             ),
             o.createElement(
               "div",
-              { className: fe.Project },
+              { className: Ne.Project },
               o.createElement(
                 "div",
-                { className: fe.Name },
+                { className: Ne.Name },
                 e.bProjectSpecific &&
                   new Date(1e3 * e.msgEvent.timestamp()).toLocaleString(
                     c.Yt.GetPreferredLocales(),
@@ -1523,19 +1523,19 @@
               !e.bProjectSpecific &&
                 o.createElement(
                   "div",
-                  { className: fe.ProjectID },
+                  { className: Ne.ProjectID },
                   l && (0, c.Xx)("#SteamLearn_ProjectID", l.project_id()),
                 ),
             ),
-            o.createElement("div", { className: fe.Title }, _),
+            o.createElement("div", { className: Ne.Title }, _),
             p &&
               o.createElement(
                 "div",
-                { className: fe.Status },
+                { className: Ne.Status },
                 0 == e.nEndTime &&
                   o.createElement(
                     "div",
-                    { className: fe.InProgress },
+                    { className: Ne.InProgress },
                     (0, c.Xx)("#SteamLearn_Event_InProgress"),
                   ),
                 0 == e.nEndTime &&
@@ -1547,7 +1547,7 @@
                 0 != e.nEndTime &&
                   o.createElement(
                     "div",
-                    { className: fe.Completed },
+                    { className: Ne.Completed },
                     (0, c.Xx)(
                       "#SteamLearn_Event_Completed",
                       new Date(1e3 * e.nEndTime).toLocaleString(
@@ -1562,8 +1562,8 @@
                     "div",
                     {
                       className: (0, s.Z)(
-                        fe.CompletedDetails,
-                        e.bProjectSpecific && fe.Gold,
+                        Ne.CompletedDetails,
+                        e.bProjectSpecific && Ne.Gold,
                       ),
                     },
                     (0, c.Xx)(
@@ -1658,21 +1658,21 @@
           const l = i.data;
           return o.createElement(
             "div",
-            { className: fe.DashboardEventList },
+            { className: Ne.DashboardEventList },
             o.createElement(
               "div",
-              { className: fe.EventsListContainer },
+              { className: Ne.EventsListContainer },
               o.createElement(
                 "div",
-                { className: fe.WeekSelector },
+                { className: Ne.WeekSelector },
                 o.createElement(
                   "div",
-                  { className: fe.LeftArrow, onClick: () => t(e - 1) },
+                  { className: Ne.LeftArrow, onClick: () => t(e - 1) },
                   "<",
                 ),
                 o.createElement(
                   "div",
-                  { className: fe.DateRange },
+                  { className: Ne.DateRange },
                   new Date(1e3 * n).toLocaleString(
                     c.Yt.GetPreferredLocales(),
                     s,
@@ -1685,20 +1685,20 @@
                 ),
                 o.createElement(
                   "div",
-                  { className: fe.RightArrow, onClick: () => t(e + 1) },
+                  { className: Ne.RightArrow, onClick: () => t(e + 1) },
                   ">",
                 ),
               ),
               i.isLoading &&
                 o.createElement(
                   "div",
-                  { className: fe.Loading },
+                  { className: Ne.Loading },
                   (0, c.Xx)("#SteamLearn_LoadingEvents"),
                 ),
               i.isSuccess &&
                 o.createElement(
                   "div",
-                  { className: fe.EventList },
+                  { className: Ne.EventList },
                   l
                     .event_list()
                     .map((e, t) =>
@@ -1715,27 +1715,27 @@
         be = () =>
           o.createElement(
             "div",
-            { className: fe.DashboardPage },
+            { className: Ne.DashboardPage },
             o.createElement(
               "div",
-              { className: fe.ProjectListContainer },
+              { className: Ne.ProjectListContainer },
               o.createElement(
                 "div",
-                { className: fe.DashboardHeader },
+                { className: Ne.DashboardHeader },
                 (0, c.Xx)("#SteamLearn_ProjectList"),
               ),
-              o.createElement("div", { className: fe.DashboardUnderline }),
+              o.createElement("div", { className: Ne.DashboardUnderline }),
               o.createElement(Ee, null),
             ),
             o.createElement(
               "div",
-              { className: fe.EventsContainer },
+              { className: Ne.EventsContainer },
               o.createElement(
                 "div",
-                { className: fe.DashboardHeader },
+                { className: Ne.DashboardHeader },
                 (0, c.Xx)("#SteamLearn_Project_Events"),
               ),
-              o.createElement("div", { className: fe.DashboardUnderline }),
+              o.createElement("div", { className: Ne.DashboardUnderline }),
               o.createElement(Ce, null),
             ),
           );
@@ -2077,8 +2077,8 @@
           const [d, m] = o.useState(""),
             [_, u] = o.useState(!1),
             [p, g] = o.useState(!1),
-            [S, f] = o.useState(""),
-            [N, v] = o.useState(!1),
+            [S, N] = o.useState(""),
+            [f, v] = o.useState(!1),
             [E, h] = o.useState(!1),
             [L, x] = o.useState(""),
             [C, b] = o.useState(!1),
@@ -2095,9 +2095,9 @@
                 (u(!0),
                 m(l.min_range().toFixed(2 == r.data_type() ? 2 : 0)),
                 g(!0)),
-              N ||
+              f ||
                 (v(!0),
-                f(l.max_range().toFixed(2 == r.data_type() ? 2 : 0)),
+                N(l.max_range().toFixed(2 == r.data_type() ? 2 : 0)),
                 h(!0)),
               C ||
                 (b(!0),
@@ -2111,7 +2111,7 @@
                     : e.toFixed(0)) || "0",
                 ),
                 j(!0)));
-          }, [_, N, C, k, l, r]);
+          }, [_, f, C, k, l, r]);
           const w = (e, t, a, n) => {
             t(e), /^-?[\d]*\.?[\d]{0,2}$/.test(e) ? (a(!0), z(n)) : a(!1);
           };
@@ -2412,7 +2412,7 @@
                     disabled: !1,
                     value: S,
                     onChange: (e) =>
-                      w(e.target.value, f, h, (t) =>
+                      w(e.target.value, N, h, (t) =>
                         t.set_max_range(parseFloat(e.target.value)),
                       ),
                   }),
@@ -2642,7 +2642,7 @@
           [r, i] = o.useState({}),
           [d, m] = o.useState(o.createElement("div", null)),
           [_, u] = o.useState("10"),
-          [g, N] = o.useState(0),
+          [g, f] = o.useState(0),
           [v, E] = o.useState(""),
           h = o.useMemo(
             () =>
@@ -2670,7 +2670,7 @@
           );
         o.useEffect(() => {
           const e = Math.max(...t.train_infos().map((e) => e.train_id()));
-          N(e);
+          f(e);
         }, [t]),
           o.useEffect(() => {
             for (const e of h)
@@ -2748,7 +2748,7 @@
                   {
                     className: He.TrainDropdown,
                     value: g,
-                    onChange: (e) => N(parseInt(e.target.value)),
+                    onChange: (e) => f(parseInt(e.target.value)),
                   },
                   t
                     .train_infos()
@@ -2768,7 +2768,7 @@
                     onClick: () =>
                       (0, l.mG)(void 0, void 0, void 0, function* () {
                         var a;
-                        let n = S.gA.Init(f.VO);
+                        let n = S.gA.Init(N.VO);
                         n.Body().set_project_id(e.project_id());
                         const i = _.split(",").map((e) => parseInt(e));
                         n.Body().set_additional_data(i);
@@ -2792,14 +2792,14 @@
                           );
                           for (const t of e) {
                             if (0 == t.input()) continue;
-                            const e = new f.dq();
+                            const e = new N.dq();
                             e.set_float_value(
                               parseFloat(r[t.data_element_path()]),
                             ),
                               n.Body().add_data(e);
                           }
                         }
-                        const c = yield f.NG.InferenceBackend(
+                        const c = yield N.NG.InferenceBackend(
                           p.Get().GetServiceTransport(),
                           n,
                         );
@@ -3183,7 +3183,7 @@
                         const t = o - n,
                           r = q(a, t);
                         for (let a = 0; a < t; a++) {
-                          let t = new f.UY();
+                          let t = new N.UY();
                           t.set_connector_id(r[a]),
                             t.set_is_input_connector(!0),
                             e.msgNode.add_connectors(t);
@@ -3429,7 +3429,7 @@
                         const t = o - n,
                           r = q(a, t);
                         for (let a = 0; a < t; a++) {
-                          let t = new f.UY();
+                          let t = new N.UY();
                           t.set_connector_id(r[a]),
                             t.set_is_input_connector(!0),
                             e.msgNode.add_connectors(t);
@@ -3484,14 +3484,14 @@
             p = _.connectors().filter((e) => e.is_input_connector()),
             g = _.connectors().filter((e) => !e.is_input_connector()),
             S = g.filter((e, t) => t % 2 == 0),
-            f = g.filter((e, t) => t % 2 == 1);
+            N = g.filter((e, t) => t % 2 == 1);
           o.useEffect(() => {
             setTimeout(() => {
               for (const e of i.project_nodes())
                 7 == e.type() && u(E(e.node_id()));
             }, 0.1);
           }, [i, u]);
-          const N = Math.max(78, 20 * p.length);
+          const f = Math.max(78, 20 * p.length);
           let h = "";
           switch (_.conditional_extract().extract_filter_type()) {
             case 1:
@@ -3748,8 +3748,8 @@
                 ),
               );
             }),
-            f.map((e, t) => {
-              const a = Math.floor(((t + 1) / (f.length + 1)) * (N - 24)),
+            N.map((e, t) => {
+              const a = Math.floor(((t + 1) / (N.length + 1)) * (f - 24)),
                 n = v(e.connector_id());
               return o.createElement(
                 Me.HH,
@@ -3780,7 +3780,7 @@
             [p, g] = o.useState(
               e.msgNode.conditional_extract().extract_filter_type(),
             ),
-            [S, N] = o.useState(
+            [S, f] = o.useState(
               e.msgNode.conditional_extract().extract_weight_type(),
             ),
             [v, E] = o.useState(
@@ -3830,7 +3830,7 @@
             m(e.msgNode.comment()),
               u(l.toString()),
               g(e.msgNode.conditional_extract().extract_filter_type()),
-              N(e.msgNode.conditional_extract().extract_weight_type()),
+              f(e.msgNode.conditional_extract().extract_weight_type()),
               E(
                 (null ===
                   (t = e.msgNode
@@ -4062,7 +4062,7 @@
                   o.createElement($e, {
                     dontUpdateProject: !0,
                     fnGetValue: () => S,
-                    fnSetValue: (e) => N(parseInt(e)),
+                    fnSetValue: (e) => f(parseInt(e)),
                     options: X,
                   }),
                   O &&
@@ -4178,7 +4178,7 @@
                         n = q(s, a);
                       for (let t = 0; t < a; t++) {
                         const a = t % 3 != 0;
-                        let o = new f.UY();
+                        let o = new N.UY();
                         o.set_connector_id(n[t]),
                           o.set_is_input_connector(!a),
                           e.msgNode.add_connectors(o);
@@ -5321,26 +5321,27 @@
           );
         },
         ut = (e) => {
+          var t;
           const {
-              msgWorkingProject: t,
-              msgWorkingProjectConfig: a,
-              nPublishedVersion: n,
+              msgWorkingProject: a,
+              msgWorkingProjectConfig: n,
+              nPublishedVersion: r,
             } = ue(),
-            [r, i] = o.useState(!1),
-            l = e.data.msgNode,
-            d = l.connectors().filter((e) => e.is_input_connector()),
-            m = l.connectors().filter((e) => !e.is_input_connector()),
-            _ = l.embedding().compact_table().length > 0;
+            [i, l] = o.useState(!1),
+            d = e.data.msgNode,
+            m = d.connectors().filter((e) => e.is_input_connector()),
+            _ = d.connectors().filter((e) => !e.is_input_connector()),
+            u = d.embedding().compact_table().length > 0;
           return o.createElement(
             "div",
             { className: (0, s.Z)(ze.FlowNode, ze.EmbeddingNode, ze.Keras) },
             o.createElement(pt, {
-              bVisible: r,
-              fnSetPopupVisible: i,
-              msgNode: l,
+              bVisible: i,
+              fnSetPopupVisible: l,
+              msgNode: d,
             }),
-            d.map((e, t) => {
-              const a = Math.floor(((t + 1) / (d.length + 1)) * 200),
+            m.map((e, t) => {
+              const a = Math.floor(((t + 1) / (m.length + 1)) * 200),
                 n = v(e.connector_id());
               return o.createElement(
                 Me.HH,
@@ -5366,10 +5367,10 @@
                 { className: ze.TitleText },
                 (0, c.Xx)("#SteamLearn_Config_Node_Title_Embedding"),
               ),
-              o.createElement("div", { className: ze.NodeID }, l.node_id()),
+              o.createElement("div", { className: ze.NodeID }, d.node_id()),
               o.createElement("div", {
                 className: ze.EditGear,
-                onClick: () => i(!0),
+                onClick: () => l(!0),
               }),
               o.createElement("div", {
                 className: ze.Delete,
@@ -5382,7 +5383,7 @@
                       strDescription: (0, c.Xx)(
                         "#SteamLearn_Config_Node_Delete_NodeDetails",
                       ),
-                      onOK: () => oe(t, a, l.node_id()),
+                      onOK: () => oe(a, n, d.node_id()),
                     }),
                     window,
                   ),
@@ -5395,11 +5396,11 @@
               o.createElement(
                 "div",
                 { className: ze.CenterSection },
-                l.comment().length > 0 &&
+                d.comment().length > 0 &&
                   o.createElement(
                     "div",
                     { className: ze.Comment },
-                    l.comment(),
+                    d.comment(),
                   ),
                 o.createElement(
                   "div",
@@ -5412,11 +5413,28 @@
                   o.createElement(
                     "div",
                     { className: ze.Value },
-                    _
-                      ? l.embedding().compact_table()
-                      : l.embedding().max_value(),
+                    u
+                      ? d.embedding().compact_table()
+                      : d.embedding().max_value(),
                   ),
                 ),
+                (null === (t = d.embedding().embed_name()) || void 0 === t
+                  ? void 0
+                  : t.length) > 0 &&
+                  o.createElement(
+                    "div",
+                    { className: ze.LabelValue },
+                    o.createElement(
+                      "div",
+                      { className: ze.Label },
+                      (0, c.Xx)("#SteamLearn_Config_Node_Embedding_Name"),
+                    ),
+                    o.createElement(
+                      "div",
+                      { className: ze.Value },
+                      d.embedding().embed_name(),
+                    ),
+                  ),
                 o.createElement(
                   "div",
                   { className: ze.LabelValue },
@@ -5428,7 +5446,7 @@
                   o.createElement(
                     "div",
                     { className: ze.Value },
-                    l.embedding().embedding_width(),
+                    d.embedding().embedding_width(),
                   ),
                 ),
                 o.createElement(
@@ -5442,15 +5460,15 @@
                   o.createElement(
                     "div",
                     { className: ze.Value },
-                    l.embedding().flatten()
+                    d.embedding().flatten()
                       ? (0, c.Xx)("#SteamLearn_Yes")
                       : (0, c.Xx)("#SteamLearn_No"),
                   ),
                 ),
               ),
             ),
-            m.map((e, t) => {
-              const a = Math.floor(((t + 1) / (m.length + 1)) * 200),
+            _.map((e, t) => {
+              const a = Math.floor(((t + 1) / (_.length + 1)) * 200),
                 n = v(e.connector_id());
               return o.createElement(
                 Me.HH,
@@ -5482,7 +5500,8 @@
               e.msgNode.embedding().embedding_width().toString(),
             ),
             [m, _] = o.useState(e.msgNode.embedding().flatten()),
-            [u, p] = o.useState(e.msgNode.embedding().export_name());
+            [u, p] = o.useState(e.msgNode.embedding().export_name()),
+            [g, S] = o.useState(e.msgNode.embedding().embed_name());
           o.useEffect(() => {
             r(e.msgNode.comment()),
               s(
@@ -5534,6 +5553,28 @@
                   width: 200,
                   fnGetInitialValue: () => n,
                   fnSetValue: (e) => r(e),
+                }),
+              ),
+              o.createElement("div", { className: ze.Separator }),
+              o.createElement(
+                "div",
+                { className: ze.NodeOptionBlock },
+                o.createElement(
+                  "div",
+                  { className: ze.NodeOptionHeader },
+                  (0, c.Xx)("#SteamLearn_Config_Node_Embedding_Name"),
+                ),
+                o.createElement(
+                  "div",
+                  { className: ze.NodeOptionDesc },
+                  (0, c.Xx)("#SteamLearn_Config_Node_Embedding_NameDesc"),
+                ),
+                o.createElement(Qe, {
+                  isText: !0,
+                  dontUpdateProject: !0,
+                  width: 200,
+                  fnGetInitialValue: () => g,
+                  fnSetValue: (e) => S(e),
                 }),
               ),
               o.createElement("div", { className: ze.Separator }),
@@ -5652,6 +5693,7 @@
                       e.msgNode.embedding().set_embedding_width(parseInt(l)),
                       e.msgNode.embedding().set_flatten(m),
                       e.msgNode.embedding().set_export_name(u),
+                      e.msgNode.embedding().set_embed_name(g),
                       e.msgNode.set_comment(n),
                       ie(t),
                       e.fnSetPopupVisible(!1);
@@ -5704,7 +5746,7 @@
               const e = s - i,
                 t = q(a, e);
               for (let a = 0; a < e; a++) {
-                let e = new f.UY();
+                let e = new N.UY();
                 e.set_connector_id(t[a]),
                   e.set_is_input_connector(!1),
                   l.add_connectors(e);
@@ -5908,7 +5950,7 @@
             ),
           );
         },
-        ft = (e) => {
+        Nt = (e) => {
           const { msgWorkingProjectConfig: t } = ue(),
             [a, n] = o.useState(!1),
             r = e.data.msgNode,
@@ -5924,7 +5966,7 @@
             {
               className: (0, s.Z)(ze.FlowNode, ze.InputNode, ze.Preprocessing),
             },
-            o.createElement(Nt, {
+            o.createElement(ft, {
               bVisible: a,
               fnSetPopupVisible: n,
               msgNode: e.data.msgNode,
@@ -6011,7 +6053,7 @@
             }),
           );
         },
-        Nt = (e) => {
+        ft = (e) => {
           const { msgWorkingProject: t } = ue(),
             [a, n] = o.useState(e.msgNode.comment());
           o.useEffect(() => {
@@ -7126,13 +7168,13 @@
                         r = t,
                         i = q(a, t + r);
                       for (let a = 0; a < t; a++) {
-                        let t = new f.UY();
+                        let t = new N.UY();
                         t.set_connector_id(i[a]),
                           t.set_is_input_connector(!0),
                           e.msgNode.add_connectors(t);
                       }
                       for (let a = 0; a < r; a++) {
-                        let n = new f.UY();
+                        let n = new N.UY();
                         n.set_connector_id(i[t + a]),
                           n.set_is_input_connector(!1),
                           e.msgNode.add_connectors(n);
@@ -7432,7 +7474,7 @@
               }
             }
           }
-          const N = 3 == l || (1 == l && S);
+          const f = 3 == l || (1 == l && S);
           return o.createElement(
             je.On,
             {
@@ -7564,8 +7606,8 @@
                     (0, c.Xx)("#SteamLearn_Config_Node_Train_LossDescSub4"),
                   ),
               ),
-              N && o.createElement("div", { className: ze.Separator }),
-              N &&
+              f && o.createElement("div", { className: ze.Separator }),
+              f &&
                 o.createElement(
                   "div",
                   { className: ze.NodeOptionBlock },
@@ -7612,7 +7654,7 @@
                       const t = r - o,
                         n = q(a, t);
                       for (let a = 0; a < t; a++) {
-                        let t = new f.UY();
+                        let t = new N.UY();
                         t.set_connector_id(n[a]),
                           t.set_is_input_connector(!0),
                           e.msgNode.add_connectors(t);
@@ -7699,12 +7741,12 @@
             } = ue(),
             [l, d] = Vt(r),
             [m, _, p] = (0, Me.Rr)(l),
-            [g, S, N] = (0, Me.ll)(d),
+            [g, S, f] = (0, Me.ll)(d),
             [v, E] = o.useState(null),
             [x, C] = o.useState(!1),
             b = o.useMemo(
               () => ({
-                nodeInput: ft,
+                nodeInput: Nt,
                 nodeDenseStack: lt,
                 nodeDense: it,
                 nodeDropout: mt,
@@ -7744,7 +7786,7 @@
                   y: a.clientY - o.top,
                 });
                 !(function (e, t, a, n, o) {
-                  let r = new f._u();
+                  let r = new N._u();
                   r.set_node_id(J(t)),
                     r.set_location_x(Math.floor(n)),
                     r.set_location_y(Math.floor(o)),
@@ -7851,14 +7893,14 @@
                   const c = q(t, i + s);
                   if (i > 0)
                     for (let e = 0; e < i; e++) {
-                      let t = new f.UY();
+                      let t = new N.UY();
                       t.set_connector_id(c[e]),
                         t.set_is_input_connector(!0),
                         r.add_connectors(t);
                     }
                   if (s > 0)
                     for (let e = 0; e < s; e++) {
-                      let t = new f.UY();
+                      let t = new N.UY();
                       t.set_connector_id(c[i + e]),
                         t.set_is_input_connector(!1),
                         r.add_connectors(t);
@@ -7887,9 +7929,9 @@
             ),
             I = o.useCallback(
               (e) => {
-                N(e);
+                f(e);
               },
-              [N],
+              [f],
             ),
             X = o.useCallback(() => {
               E(null);
@@ -8409,13 +8451,13 @@
             [d, m] = o.useState(""),
             [_, u] = o.useState(""),
             [p, g] = o.useState(!0),
-            [S, f] = o.useState(""),
-            N = (0, r.k6)();
+            [S, N] = o.useState(""),
+            f = (0, r.k6)();
           o.useEffect(() => {
             e.eState == Ht.Edit
               ? (m(a.project_name()), u(a.project_description()), g(!0))
               : e.eState == Ht.Create && (m(""), u(""), g(!1)),
-              f("");
+              N("");
           }, [e.eState, a]);
           let v = "",
             E = "",
@@ -8483,13 +8525,13 @@
                         switch (t) {
                           case 1:
                             e.fnSetPopupState(Ht.Hidden),
-                              N.push(ua.SteamLearnProjectDataSources(a, 0));
+                              f.push(ua.SteamLearnProjectDataSources(a, 0));
                             break;
                           case 2:
-                            f((0, c.Xx)("#SteamLearn_Project_Create_BadName"));
+                            N((0, c.Xx)("#SteamLearn_Project_Create_BadName"));
                             break;
                           case 3:
-                            f((0, c.Xx)("#SteamLearn_Project_Create_Error"));
+                            N((0, c.Xx)("#SteamLearn_Project_Create_Error"));
                         }
                       } else {
                         a.set_project_name(d),
@@ -8497,11 +8539,11 @@
                           ie(a);
                         switch (yield Q(a, s)) {
                           case 1:
-                            m(""), u(""), f(""), e.fnSetPopupState(Ht.Hidden);
+                            m(""), u(""), N(""), e.fnSetPopupState(Ht.Hidden);
                             break;
                           case 0:
                           case 4:
-                            f((0, c.Xx)("#SteamLearn_Project_Edit_Error"));
+                            N((0, c.Xx)("#SteamLearn_Project_Edit_Error"));
                         }
                       }
                       g(!0);
@@ -8527,8 +8569,8 @@
             } = ue(),
             d = (0, r.k6)(),
             m = (0, r.TH)(),
-            [_, u, g] = (0, Ne.X9)(),
-            [N, v, E] = (0, Ne.X9)(),
+            [_, u, g] = (0, fe.X9)(),
+            [f, v, E] = (0, fe.X9)(),
             [h, L] = o.useState(Ht.Hidden);
           let x = [];
           for (const t of e.arrMsgProjects)
@@ -8569,9 +8611,9 @@
                           ) + 1,
                         o = yield (function (e) {
                           return (0, l.mG)(this, void 0, void 0, function* () {
-                            let t = S.gA.Init(f.FB);
+                            let t = S.gA.Init(N.FB);
                             t.Body().set_project_id(e);
-                            const a = yield f.NG.PublishProject(
+                            const a = yield N.NG.PublishProject(
                               p.Get().GetServiceTransport(),
                               t,
                             );
@@ -8670,7 +8712,7 @@
                   { disabled: b, onClick: (e) => D() },
                   (0, c.Xx)("#SteamLearn_Project_Publish"),
                 ),
-              o.createElement(Ft, { bVisible: N, fnClosePopup: E }),
+              o.createElement(Ft, { bVisible: f, fnClosePopup: E }),
               b &&
                 o.createElement(
                   Te.h5,
@@ -9518,7 +9560,7 @@
             [i, d] = o.useState(""),
             m = M(e.nProjectID, e.nFetchID),
             _ = m.data;
-          (0, Ne.Yz)(() => {
+          (0, fe.Yz)(() => {
             _ && (_.status(), U(e.nProjectID, e.nFetchID));
           }, 3e3);
           if (0 == t)
@@ -9579,7 +9621,7 @@
                 (u = (0, c.Xx)("#SteamLearn_Status_Fetch_Status_Canceled")),
                   (g = Jt.Error);
             }
-          const N =
+          const f =
               _ && (5 == _.status() || 2 == _.status() || 6 == _.status()),
             v = _ && 8 == _.status();
           m.isLoading &&
@@ -9646,18 +9688,18 @@
                     { className: Jt.OptionHeader },
                     (0, c.Xx)("#SteamLearn_Status_Fetch_Status", e.nFetchID),
                   ),
-                  N &&
+                  f &&
                     o.createElement(
                       Te.KM,
                       {
                         onClick: () => (
                           e.nFetchID,
                           (0, l.mG)(void 0, void 0, void 0, function* () {
-                            let t = S.gA.Init(f.$G);
+                            let t = S.gA.Init(N.$G);
                             t.Body().set_project_config(a),
                               t.Body().fetch().set_fetch_id(e.nFetchID),
                               t.Body().fetch().set_request_cancel(!0),
-                              yield f.NG.Train(
+                              yield N.NG.Train(
                                 p.Get().GetServiceTransport(),
                                 t,
                               );
@@ -9901,7 +9943,7 @@
             [d, m] = o.useState(-1),
             [_, u] = o.useState(""),
             g = i.data;
-          (0, Ne.Yz)(() => {
+          (0, fe.Yz)(() => {
             if (g)
               switch (g.status()) {
                 case 0:
@@ -9927,18 +9969,18 @@
             (e, a) => {
               !(function (e, t, a, n) {
                 (0, l.mG)(this, void 0, void 0, function* () {
-                  let o = S.gA.Init(f.Sj);
+                  let o = S.gA.Init(N.Sj);
                   o.Body().set_project_id(e),
                     o.Body().set_published_version(t),
                     o.Body().set_train_id(a),
                     o.Body().set_from_scheduled(!1),
                     o.Body().set_deactivate(n);
-                  const r = yield f.NG.SetTrainLive(
+                  const r = yield N.NG.SetTrainLive(
                     p.Get().GetServiceTransport(),
                     o,
                   );
                   return (
-                    r && 1 == r.GetEResult() && N.U.invalidateQueries([k, e]),
+                    r && 1 == r.GetEResult() && f.U.invalidateQueries([k, e]),
                     r.Body().result()
                   );
                 });
@@ -10217,11 +10259,11 @@
                           return (
                             (t = e.nTrainID),
                             (0, l.mG)(void 0, void 0, void 0, function* () {
-                              let e = S.gA.Init(f.$G);
+                              let e = S.gA.Init(N.$G);
                               e.Body().set_project_config(n),
                                 e.Body().train().set_train_id(t),
                                 e.Body().train().set_request_cancel(!0),
-                                yield f.NG.Train(
+                                yield N.NG.Train(
                                   p.Get().GetServiceTransport(),
                                   e,
                                 );
@@ -10466,10 +10508,10 @@
           [m, _] = o.useState(0),
           u = (0, r.k6)(),
           g = H(n, i),
-          N = G(n, i),
+          f = G(n, i),
           v = g.data,
-          E = N.data,
-          h = g.isLoading || N.isLoading,
+          E = f.data,
+          h = g.isLoading || f.isLoading,
           L = i > 0,
           x = e && t && t.serializeBase64String() == e.serializeBase64String(),
           C = [
@@ -10633,13 +10675,13 @@
                           );
                         n += 1;
                       }
-                      let o = S.gA.Init(f.$G);
+                      let o = S.gA.Init(N.$G);
                       o.Body().set_project_config(a),
                         o.Body().fetch().set_fetch_id(e),
                         o.Body().fetch().set_request_cancel(!1),
                         o.Body().train().set_train_id(n),
                         o.Body().train().set_request_cancel(!1);
-                      const r = yield f.NG.Train(
+                      const r = yield N.NG.Train(
                         p.Get().GetServiceTransport(),
                         o,
                       );
@@ -10838,11 +10880,11 @@
           console.log(`ACCESS TOKENS ${m}`);
           const [_, u] = o.useState(void 0),
             [p, g] = o.useState([]),
-            [S, f] = o.useState([]),
-            [N, v] = o.useState(!1);
+            [S, N] = o.useState([]),
+            [f, v] = o.useState(!1);
           return (
             o.useEffect(() => {
-              u(void 0), g([]), f([]);
+              u(void 0), g([]), N([]);
             }, [a]),
             o.useEffect(() => {
               d &&
@@ -10918,7 +10960,7 @@
                     }
                     o.push(a);
                   }
-                  u(e), g(n), f(o), v(!1);
+                  u(e), g(n), N(o), v(!1);
                 });
             }, [d, a]),
             o.createElement(
@@ -10945,7 +10987,7 @@
                         { className: da.LiveTrainHeader },
                         (0, c.Xx)("#SteamLearn_Project_Overview_LiveTrain"),
                       ),
-                      !N && o.createElement(ma, { msgEvent: _ }),
+                      !f && o.createElement(ma, { msgEvent: _ }),
                     ),
                     o.createElement("div", { className: da.Separator }),
                     p.length > 0 &&
@@ -10980,13 +11022,13 @@
                         { className: da.AllTrainsHeader },
                         (0, c.Xx)("#SteamLearn_Project_Overview_AllTrains"),
                       ),
-                      N &&
+                      f &&
                         o.createElement(
                           "div",
                           null,
                           (0, c.Xx)("#SteamLearn_Overview_SortingEvents"),
                         ),
-                      !N &&
+                      !f &&
                         o.createElement(
                           "div",
                           { className: da.EventList },
@@ -11169,7 +11211,7 @@
             )
           : null;
       }
-      function fa() {
+      function Na() {
         const e = (0, r.TH)(),
           { nProjectID: t, nPublishedVersion: a } = ue();
         if (!ga(e.pathname)) return null;
@@ -11231,7 +11273,7 @@
           ),
         );
       }
-      const Na = () => {
+      const fa = () => {
         const e = (0, r.TH)();
         return o.createElement(
           "h1",
@@ -11252,10 +11294,10 @@
             o.createElement(
               Se,
               null,
-              o.createElement(Na, null),
+              o.createElement(fa, null),
               o.createElement("hr", null),
               o.createElement(Wt, null),
-              o.createElement(fa, null),
+              o.createElement(Na, null),
               o.createElement(
                 Sa,
                 null,

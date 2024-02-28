@@ -3105,3 +3105,15 @@ html.responsive .gpfocus .ds_steam_deck_compat {
 	display: inline-block;
 	background: url('https://community.cloudflare.steamstatic.com/public/shared/images/ico/ico-deck-logo.svg') left no-repeat, url('https://community.cloudflare.steamstatic.com/public/shared/images/ico/ico-deck-unknown.svg') right no-repeat;
 }
+
+.private_app_indicator {
+	height: 1.25em;
+	width: 1.25em;
+	vertical-align: middle;
+	display: inline-block;
+}
+
+.private_app_indicator svg line,
+.private_app_indicator svg path {
+	stroke: rgb(110, 141, 80);
+}

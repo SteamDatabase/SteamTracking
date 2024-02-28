@@ -18854,6 +18854,12 @@
                     br: n.FE.readUint32,
                     bw: n.Xc.writeUint32,
                   },
+                  start_date: {
+                    n: 5,
+                    br: n.FE.readUint32,
+                    bw: n.Xc.writeUint32,
+                  },
+                  end_date: { n: 6, br: n.FE.readUint32, bw: n.Xc.writeUint32 },
                   show_hidden: { n: 4, br: n.FE.readBool, bw: n.Xc.writeBool },
                 },
               }),

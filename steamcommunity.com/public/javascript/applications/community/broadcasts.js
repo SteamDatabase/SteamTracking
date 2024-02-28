@@ -270,8 +270,8 @@
         E = a(6399),
         S = a(58331),
         h = a(84426),
-        b = a.n(h),
-        g = a(36453),
+        g = a.n(h),
+        b = a(36453),
         B = a(93243),
         C = a(82071),
         f = a(1485),
@@ -282,8 +282,8 @@
         w = a.n(N),
         G = a(85884),
         A = a(50898),
-        T = a(90069),
-        k = a(13129),
+        k = a(90069),
+        T = a(13129),
         O = a(50423),
         x = a(31846),
         R = a(71630),
@@ -305,7 +305,7 @@
               null,
               n.createElement(
                 "div",
-                { className: (0, k.Z)(U.Container) },
+                { className: (0, T.Z)(U.Container) },
                 n.createElement(
                   "div",
                   { className: U.Controls },
@@ -823,11 +823,11 @@
                   "data-tooltip-text": (0, x.Xx)("#Broadcast_User_Report_ttip"),
                   onClick: (e) => {
                     _.L7.logged_in
-                      ? (0, T.AM)(
+                      ? (0, k.AM)(
                           n.createElement(ae, { broadcasterSteamID: t }),
                           (0, O.RA)(e),
                         )
-                      : (0, T.AM)(
+                      : (0, k.AM)(
                           n.createElement(A.uH, {
                             strTitle: (0, x.Xx)(
                               "#EventDisplay_Share_NotLoggedIn",
@@ -886,7 +886,7 @@
       const le = (e) => {
           if (!_.L7.is_support) return null;
           const t = (t, a) => {
-              (0, T.AM)(
+              (0, k.AM)(
                 n.createElement(oe, {
                   broadcastSteamID: e.broadcastSteamID,
                   strAction: a,
@@ -899,7 +899,7 @@
               e.broadcastSteamID.ConvertTo64BitString();
           return n.createElement(
             "div",
-            { className: (0, k.Z)(ne.AdminControls, w().ValveOnlyBackground) },
+            { className: (0, T.Z)(ne.AdminControls, w().ValveOnlyBackground) },
             n.createElement("div", null, "(VO) Support Tools"),
             n.createElement(
               f.zx,
@@ -915,7 +915,7 @@
               f.zx,
               {
                 onClick: (t) => {
-                  (0, T.AM)(
+                  (0, k.AM)(
                     n.createElement(se, { steamid: e.broadcastSteamID }),
                     (0, O.RA)(t),
                   );
@@ -1126,49 +1126,55 @@
               ),
             ),
           );
-        },
-        ie = (0, p.Pi)((e) => {
+        };
+      const ie = (0, p.Pi)((e) => {
           const t = v.Get().GetBroadcasterSteamID(),
             a = null == t ? void 0 : t.ConvertTo64BitString(),
-            [r, l] = (0, y.Ar)("muted", !0),
-            o = m.c9.GetBroadcast(a),
-            s = m.c9.GetOrCreateBroadcastInfo(a);
+            r = (function () {
+              const [e] = (0, n.useState)(
+                () => (0, _.kQ)("ewatchlocation", "application_config") || 5,
+              );
+              return e;
+            })(),
+            [l, o] = (0, y.Ar)("muted", !0),
+            s = m.c9.GetBroadcast(a),
+            i = m.c9.GetOrCreateBroadcastInfo(a);
           return a
             ? n.createElement(
                 n.Fragment,
                 null,
                 n.createElement(
                   "div",
-                  { className: (0, k.Z)(H.BroadcastPage) },
+                  { className: (0, T.Z)(H.BroadcastPage) },
                   n.createElement(
                     "div",
-                    { className: (0, k.Z)(b().BroadcastAndChat) },
+                    { className: (0, T.Z)(g().BroadcastAndChat) },
                     Boolean(!v.Get().BShowOnlyChat()) &&
                       n.createElement(
                         I.SV,
                         null,
                         n.createElement(
                           "div",
-                          { className: (0, k.Z)(b().wrapper) },
+                          { className: (0, T.Z)(g().wrapper) },
                           n.createElement(
                             "div",
                             {
-                              className: (0, k.Z)({
-                                [b().video_placeholder]: !0,
+                              className: (0, T.Z)({
+                                [g().video_placeholder]: !0,
                                 video_placeholder_trgt: !0,
-                                [b().NoChat]: v.Get().BShowOnlyVideo(),
+                                [g().NoChat]: v.Get().BShowOnlyVideo(),
                               }),
                             },
                             n.createElement(
                               "div",
-                              { className: b().BroadcastPlayerContainer },
+                              { className: g().BroadcastPlayerContainer },
                               n.createElement(
                                 I.SV,
                                 null,
                                 n.createElement(S.default, {
                                   steamIDBroadcast: a,
-                                  watchLocation: 5,
-                                  bStartMuted: r,
+                                  watchLocation: r,
+                                  bStartMuted: l,
                                 }),
                               ),
                             ),
@@ -1178,18 +1184,18 @@
                     Boolean(!v.Get().BShowOnlyVideo()) &&
                       n.createElement(
                         "div",
-                        { className: b().detail_chat_ctn },
+                        { className: g().detail_chat_ctn },
                         n.createElement(
                           "div",
-                          { className: b().ChatContainer },
+                          { className: g().ChatContainer },
                           n.createElement(
                             I.SV,
                             null,
                             n.createElement(E.c, {
-                              emoticonStore: g.D$,
+                              emoticonStore: b.D$,
                               watchLocation: 6,
                               steamID: a,
-                              broadcastID: o ? o.m_ulBroadcastID : void 0,
+                              broadcastID: s ? s.m_ulBroadcastID : void 0,
                             }),
                           ),
                         ),
@@ -1198,7 +1204,7 @@
                   Boolean(!v.Get().BShowInIframe()) &&
                     n.createElement(ce, {
                       broadcasterSteamID: t,
-                      broadcastInfo: s,
+                      broadcastInfo: i,
                     }),
                 ),
               )
@@ -1229,7 +1235,7 @@
                   n.createElement(
                     "div",
                     {
-                      className: (0, k.Z)(w().ValveOnlyBackground, H.DebugCtn),
+                      className: (0, T.Z)(w().ValveOnlyBackground, H.DebugCtn),
                     },
                     n.createElement(L, null),
                   ),
@@ -1357,7 +1363,7 @@
                   f.zx,
                   {
                     onClick: (e) => {
-                      (0, T.AM)(
+                      (0, k.AM)(
                         n.createElement(A.uH, {
                           strTitle: (0, x.Xx)(
                             "#Broadcast_Control_StopBroadcast",

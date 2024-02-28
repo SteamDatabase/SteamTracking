@@ -1332,7 +1332,7 @@
     },
     77131: (e, t, n) => {
       "use strict";
-      n.d(t, { R: () => _ });
+      n.d(t, { R: () => C });
       var o = n(85556),
         i = n(77936),
         r = n(20417),
@@ -1530,14 +1530,15 @@
           void 0,
         );
       var m = n(24701),
-        p = n(65255);
-      class g {
+        p = n(65255),
+        g = n(45651);
+      class v {
         constructor(e, t) {
-          var n, o, i, r;
+          var n, o, i, r, s, a;
           (this.m_socket = null),
-            (this.Log = new c.s("CWebSocketConnection", () => this.m_sName)),
+            (this.Log = new c.sO("CWebSocketConnection", () => this.m_sName)),
             (this.m_bDisconnectRequested = !1),
-            (this.m_bReconnecting = !1),
+            (this.m_bConnecting = !1),
             (this.m_sName = e),
             (this.m_fnOnMessageHandler = t.fnOnMessageHandler),
             (this.m_fnOnCloseHandler = t.fnOnCloseHandler),
@@ -1545,45 +1546,73 @@
               null !== (n = t.fnOnReconnectHandler) && void 0 !== n
                 ? n
                 : () => {}),
-            (this.m_nMaximumConnectAttempt =
-              null !== (o = t.nMaximumConnectAttempts) && void 0 !== o
-                ? o
-                : 20),
-            (this.m_nConnectionTimeoutMs =
-              null !== (i = t.nConnectionTimeoutMS) && void 0 !== i ? i : 1e3),
+            (this.m_nConnectAttemptsMax =
+              null !== (o = t.nConnectAttemptsMax) && void 0 !== o ? o : 20),
+            (this.m_nConnectAttemptTimeoutMs =
+              null !== (i = t.nConnectAttemptTimeoutMs) && void 0 !== i
+                ? i
+                : 1e3),
             (this.m_bReconnectOnFailure =
-              null !== (r = t.bReconnectOnFailure) && void 0 !== r && r);
+              null !== (r = t.bReconnectOnFailure) && void 0 !== r && r),
+            (this.m_nReconnectAttemptsMax =
+              null !== (s = t.nReconnectAttemptsMax) && void 0 !== s ? s : 1e3),
+            (this.m_nReconnectAttemptTimeoutMs =
+              null !== (a = t.nReconnectAttemptTimeoutMs) && void 0 !== a
+                ? a
+                : 1e4);
         }
         get name() {
           return this.m_sName;
         }
         Connect(e) {
           return (0, o.mG)(this, void 0, void 0, function* () {
-            this.m_sURL = e;
-            let t = 0;
+            return (
+              (this.m_sURL = e),
+              this.ConnectWithRetry(
+                this.m_sURL,
+                this.m_nConnectAttemptsMax,
+                this.m_nConnectAttemptTimeoutMs,
+              )
+            );
+          });
+        }
+        Reconnect() {
+          return (0, o.mG)(this, void 0, void 0, function* () {
+            return this.ConnectWithRetry(
+              this.m_sURL,
+              this.m_nReconnectAttemptsMax,
+              this.m_nReconnectAttemptTimeoutMs,
+            );
+          });
+        }
+        GetInterAttemptBackoffMs(e) {
+          return 1e3 * (0, g.Lh)(e, 1, 5);
+        }
+        ConnectWithRetry(e, t, n) {
+          return (0, o.mG)(this, void 0, void 0, function* () {
+            this.m_bConnecting = !0;
+            let o = 0;
             do {
               try {
-                const t = yield this.InternalConnect(
-                  e,
-                  this.m_nConnectionTimeoutMs,
-                );
-                if (1 == t.result) return t;
+                const t = yield this.ConnectToSocket(e, n);
+                if (1 == t.result) return (this.m_bConnecting = !1), t;
                 this.Log.Warning(
-                  `failed to connect: ${t.result} - ${t.message}`,
+                  `connect attempt failed: ${t.result} - ${t.message}`,
                 );
               } catch (e) {
                 this.Log.Warning(
-                  `failed to connect: exception ${e.name} - ${e}`,
+                  `connect attempt failed: exception ${e.name} - ${e}`,
                 );
               }
-              this.Log.Warning(
-                `re-try connection ${t}/${this.m_nMaximumConnectAttempt}`,
-              ),
+              const i = this.GetInterAttemptBackoffMs(o);
+              this.Log.Info(`connect retry: attempt:${o}/${t} backoff:${i}`),
+                yield new Promise((e) => setTimeout(e, i)),
                 (this.m_socket = null),
-                (t += 1);
-            } while (t < this.m_nMaximumConnectAttempt);
+                (o += 1);
+            } while (o < t);
             return (
-              this.Log.Error("maximum retry limit exceeeded, bailing"),
+              this.Log.Error("connect retry: limit exceeeded, bailing"),
+              (this.m_bConnecting = !1),
               { result: 2, message: "not ready, exceeded retry count" }
             );
           });
@@ -1598,16 +1627,14 @@
         }
         BShouldReconnect() {
           return (
-            !this.m_bReconnecting &&
+            !this.m_bConnecting &&
             !!this.m_bReconnectOnFailure &&
             !this.m_bDisconnectRequested
           );
         }
         StartReconnect() {
           return (0, o.mG)(this, void 0, void 0, function* () {
-            this.Log.Info("start reconnect"),
-              (this.m_bReconnecting = !0),
-              (this.m_socket = null);
+            this.Log.Info("start reconnect"), (this.m_socket = null);
             if (1 != (yield this.Connect(this.m_sURL)).result)
               return (
                 this.Log.Error("failed to re-connect to websocket after close"),
@@ -1619,11 +1646,10 @@
                 })
               );
             this.Log.Info("reconnect successful"),
-              (this.m_bReconnecting = !1),
               this.m_fnOnReconnectHandler({ connection: this, eResult: 1 });
           });
         }
-        InternalConnect(e, t) {
+        ConnectToSocket(e, t) {
           return (0, o.mG)(this, void 0, void 0, function* () {
             if (null != this.m_socket)
               return this.m_socket.readyState != WebSocket.OPEN
@@ -1651,8 +1677,8 @@
             return (yield this.WaitForSocketOpen(this.m_socket, t))
               ? (this.Log.Info("connection ready"),
                 { result: 1, message: "ready" })
-              : (this.Log.Warning("failed to connect to websocket"),
-                { result: 2, message: "failed to connect to websocket" });
+              : (this.Log.Warning("failed to reach open state"),
+                { result: 2, message: "failed to reach open state" });
           });
         }
         WaitForSocketOpen(e, t) {
@@ -1686,7 +1712,7 @@
                 bIsExpectedToReconnect: !1,
               })
             );
-          if (this.m_bReconnecting) return;
+          if (this.m_bConnecting) return;
           this.Log.Warning("websocket unexpectedly closed");
           const t = this.BShouldReconnect();
           this.m_fnOnCloseHandler({
@@ -1709,28 +1735,28 @@
           }
         }
       }
-      (0, o.gn)([r.ak], g.prototype, "OnSocketError", null),
-        (0, o.gn)([r.ak], g.prototype, "OnSocketOpen", null),
-        (0, o.gn)([r.ak], g.prototype, "OnSocketClose", null),
-        (0, o.gn)([r.ak], g.prototype, "OnSocketMessage", null);
-      const v = "localhost",
-        f = new c.s("WebUITransport");
-      class _ {
+      (0, o.gn)([r.ak], v.prototype, "OnSocketError", null),
+        (0, o.gn)([r.ak], v.prototype, "OnSocketOpen", null),
+        (0, o.gn)([r.ak], v.prototype, "OnSocketClose", null),
+        (0, o.gn)([r.ak], v.prototype, "OnSocketMessage", null);
+      const f = "localhost",
+        _ = new c.sO("WebUITransport");
+      class C {
         static Get() {
           return (
-            null == _.s_Singleton &&
+            null == C.s_Singleton &&
               p.De.IN_CLIENT &&
-              ((_.s_Singleton = new _()),
-              (window.WebUIServiceTransport = _.s_Singleton)),
-            _.s_Singleton
+              ((C.s_Singleton = new C()),
+              (window.WebUIServiceTransport = C.s_Singleton)),
+            C.s_Singleton
           );
         }
         static InstallErrorReportingStore(e) {
           this.sm_ErrorReportingStore = e;
         }
         ReportError(e) {
-          f.Warning(e);
-          const t = _.sm_ErrorReportingStore;
+          _.Warning(e);
+          const t = C.sm_ErrorReportingStore;
           t &&
             t.ReportError(new Error(e), {
               bIncludeMessageInIdentifier: !0,
@@ -1748,8 +1774,8 @@
             fnOnCloseHandler: this.OnWebsocketClose,
             fnOnReconnectHandler: this.OnWebsocketReconnect,
           };
-          (this.m_connectionSteamUI = new g("steamUI", e)),
-            (this.m_connectionClientdll = new g("clientdll", e)),
+          (this.m_connectionSteamUI = new v("steamUI", e)),
+            (this.m_connectionClientdll = new v("clientdll", e)),
             (0, l.S)().SetDefaultTransport(this),
             (0, l.S)().SetDefaultHandlerRegistry(this.m_messageHandlers),
             m.zw.RegisterForNotifyStartShutdown(this.OnStartShutdown);
@@ -1763,7 +1789,7 @@
             const a = o.eClientExecutionSite;
             if (null == a || 0 == a)
               return (
-                f.Error(`SendMsg: Invalid client execution site: ${a}`),
+                _.Error(`SendMsg: Invalid client execution site: ${a}`),
                 void r(`Transport SendMsg: invalid client execution site ${a}`)
               );
             const l =
@@ -1775,10 +1801,10 @@
                   ? s
                   : 1;
               this.m_mapServiceCallErrorCount.set(e, t + 1);
-              const n = `SendMsg: Attempted to send message but socket wasn't ready: ${l.name} - ${e}`;
+              const n = `SendMsg: Attempt to send message but socket wasn't ready: ${l.name} - ${e}`;
               return (
                 1 == t && this.ReportError(n),
-                f.Warning(n + ` error count: ${t}`),
+                _.Warning(n + ` error count: ${t}`),
                 void r("Transport SendMsg: socket not ready")
               );
             }
@@ -1788,7 +1814,7 @@
               t.Hdr().set_jobid_source("" + c);
             if (1 != l.SendSerializedMessage(t.Serialize()))
               return (
-                f.Error("SendMsg: Failed to send message"),
+                _.Error("SendMsg: Failed to send message"),
                 void r("Transport SendMsg: failed to send message")
               );
             this.m_mapPendingMethodRequests.set(c, {
@@ -1800,41 +1826,52 @@
           });
         }
         SendNotification(e, t, n) {
-          const o = n.eClientExecutionSite;
-          if (null == o || 0 == o)
-            return f.Error("SendMsg: Invliad client execution site:", o), !1;
-          const i =
-            2 == o ? this.m_connectionClientdll : this.m_connectionSteamUI;
-          if (!i.BCanSendMessages())
+          var o;
+          const i = n.eClientExecutionSite;
+          if (null == i || 0 == i)
             return (
-              f.Error(
-                "SendMsg: Attempted to send message but socket wasn't ready",
-              ),
+              _.Error(`SendNotification: Invalid client execution site: ${i}`),
               !1
             );
+          const r =
+            2 == i ? this.m_connectionClientdll : this.m_connectionSteamUI;
+          if (!r.BCanSendMessages()) {
+            const t =
+              null !== (o = this.m_mapServiceCallErrorCount.get(e)) &&
+              void 0 !== o
+                ? o
+                : 1;
+            this.m_mapServiceCallErrorCount.set(e, t + 1);
+            const n = `SendNotification: Attempt to send message but socket wasn't ready: ${r.name} - ${e}`;
+            return (
+              1 == t && this.ReportError(n),
+              _.Warning(n + ` error count: ${t}`),
+              !1
+            );
+          }
           t.SetEMsg(146), t.Hdr().set_target_job_name(e);
-          return 1 == i.SendSerializedMessage(t.Serialize());
+          return 1 == r.SendSerializedMessage(t.Serialize());
         }
         MakeReady() {
           return (0, o.mG)(this, void 0, void 0, function* () {
             this.m_transportInfo =
               yield SteamClient.WebUITransport.GetTransportInfo();
-            const e = `ws://${v}:${this.m_transportInfo.portSteamUI}/transportsocket/`,
-              t = `ws://${v}:${this.m_transportInfo.portClientdll}/transportsocket/`;
+            const e = `ws://${f}:${this.m_transportInfo.portSteamUI}/transportsocket/`,
+              t = `ws://${f}:${this.m_transportInfo.portClientdll}/transportsocket/`;
             let n = yield this.m_connectionSteamUI.Connect(e);
             if (1 != n.result)
-              return f.Error("MakeReady: failed to connect to SteamUI"), n;
+              return _.Error("MakeReady: failed to connect to SteamUI"), n;
             let o = yield this.AuthConnection(this.m_connectionSteamUI);
             return 1 != o
-              ? (f.Error("MakeReady: failed to auth to SteamUI"), n)
+              ? (_.Error("MakeReady: failed to auth to SteamUI"), n)
               : ((n = yield this.m_connectionClientdll.Connect(t)),
                 1 != n.result
-                  ? (f.Error("MakeReady: failed to connect to clientdll"), n)
+                  ? (_.Error("MakeReady: failed to connect to clientdll"), n)
                   : ((o = yield this.AuthConnection(
                       this.m_connectionClientdll,
                     )),
                     1 != o
-                      ? (f.Error("MakeReady: failed to auth to clientdll"), n)
+                      ? (_.Error("MakeReady: failed to auth to clientdll"), n)
                       : n));
           });
         }
@@ -1849,7 +1886,7 @@
                 eClientExecutionSite: 1,
                 sAuthKey: this.m_transportInfo.authKeySteamUI,
               }
-            : (f.Error(
+            : (_.Error(
                 "GetAuthInfoForConnection: failed to identify connection",
               ),
               { eClientExecutionSite: 0, sAuthKey: "" });
@@ -1863,7 +1900,7 @@
         OnWebsocketReconnect(e) {
           if (1 != e.eResult)
             return (
-              f.Error("failed to reconnect to steam client"),
+              _.Error("failed to reconnect to steam client"),
               void this.FailAllPendingRequests()
             );
           this.FailAllPendingRequests(), this.AuthConnection(e.connection);
@@ -1934,11 +1971,11 @@
           );
         }
       }
-      (_.s_Singleton = null),
-        (0, o.gn)([r.ak], _.prototype, "OnWebsocketReconnect", null),
-        (0, o.gn)([r.ak], _.prototype, "OnWebsocketClose", null),
-        (0, o.gn)([r.ak], _.prototype, "OnWebsocketMessage", null),
-        (0, o.gn)([r.ak], _.prototype, "OnStartShutdown", null);
+      (C.s_Singleton = null),
+        (0, o.gn)([r.ak], C.prototype, "OnWebsocketReconnect", null),
+        (0, o.gn)([r.ak], C.prototype, "OnWebsocketClose", null),
+        (0, o.gn)([r.ak], C.prototype, "OnWebsocketMessage", null),
+        (0, o.gn)([r.ak], C.prototype, "OnStartShutdown", null);
     },
     95315: (e, t, n) => {
       "use strict";
@@ -2496,8 +2533,8 @@
         s = n(50423),
         a = n(60616),
         l = n(16997),
-        c = n(37066),
-        u = n(77936),
+        c = n(77936),
+        u = n(37066),
         d = n(31846),
         h = n(37563),
         m = n(62210),
@@ -2672,21 +2709,21 @@
           "window_moved" == e.data && this.OnResize(),
             "popup-created" == e.data && this.OnCreateInternal();
         }
-        Show(e = u.IF.k_EWindowBringToFrontAndForceOS) {
+        Show(e = c.IF.k_EWindowBringToFrontAndForceOS) {
           let t;
           (t =
             "boolean" == typeof e
               ? e
-                ? u.IF.k_EWindowBringToFrontAndForceOS
-                : u.IF.k_EWindowBringToFrontInvalid
+                ? c.IF.k_EWindowBringToFrontAndForceOS
+                : c.IF.k_EWindowBringToFrontInvalid
               : e),
             window.SteamClient && (this.m_rgParams.eCreationFlags |= v.Hidden),
             this.m_rgParams.eCreationFlags & v.NotFocusable &&
-              (t = u.IF.k_EWindowBringToFrontInvalid),
+              (t = c.IF.k_EWindowBringToFrontInvalid),
             this.BIsValid() &&
               (this.BIsClosed()
                 ? ((this.m_popup = void 0), (this.m_element = void 0))
-                : t != u.IF.k_EWindowBringToFrontInvalid && this.Focus(t));
+                : t != c.IF.k_EWindowBringToFrontInvalid && this.Focus(t));
           let n,
             o,
             i,
@@ -2734,7 +2771,7 @@
             y.AddTrackedPopup(this),
             r &&
               (this.OnCreateInternal(),
-              t != u.IF.k_EWindowBringToFrontInvalid && this.Focus(t)));
+              t != c.IF.k_EWindowBringToFrontInvalid && this.Focus(t)));
         }
         RemoveEventListeners() {
           this.window.removeEventListener(
@@ -2750,19 +2787,15 @@
             this.window.removeEventListener("message", this.OnMessage);
         }
         RenderInternal(e, t, n) {
-          var o;
           this.m_bCreated
             ? (this.browser_info &&
-                ((o = this.browser_info).m_eBrowserType ==
-                  c.i_.EBrowserType_OpenVROverlay ||
-                  o.m_eBrowserType ==
-                    c.i_.EBrowserType_OpenVROverlay_Dashboard) &&
+                (0, u.Su)(this.browser_info.m_eBrowserType) &&
                 (t.ownerDocument.body.className += " VR"),
               this.Render(e, t),
               this.OnLoad(),
               e.SteamClient &&
                 !this.m_bCreateHidden &&
-                (n != u.IF.k_EWindowBringToFrontInvalid
+                (n != c.IF.k_EWindowBringToFrontInvalid
                   ? e.SteamClient.Window.BringToFront(n)
                   : e.SteamClient.Window.ShowWindow()))
             : (this.m_onCreateRender = () => this.RenderInternal(e, t, n));
@@ -2806,8 +2839,8 @@
         get params() {
           return this.m_rgParams;
         }
-        Focus(e = u.IF.k_EWindowBringToFrontAndForceOS) {
-          e != u.IF.k_EWindowBringToFrontInvalid &&
+        Focus(e = c.IF.k_EWindowBringToFrontAndForceOS) {
+          e != c.IF.k_EWindowBringToFrontInvalid &&
             (this.m_popup &&
             void 0 !== this.m_popup.SteamClient &&
             void 0 !== this.m_popup.SteamClient.Window
@@ -3103,51 +3136,51 @@
             void 0 !== n.top && (a += ",top=" + n.top),
             (a += ",resizeable,status=0,toolbar=0,menubar=0,location=0");
           let l = "about:blank",
-            c = [];
-          c.push("createflags=" + t.eCreationFlags),
-            t.minWidth && c.push("minwidth=" + t.minWidth),
-            t.minHeight && c.push("minheight=" + t.minHeight),
+            u = [];
+          u.push("createflags=" + t.eCreationFlags),
+            t.minWidth && u.push("minwidth=" + t.minWidth),
+            t.minHeight && u.push("minheight=" + t.minHeight),
             t.maxWidth &&
               t.maxWidth != 1 / 0 &&
-              c.push("maxwidth=" + t.maxWidth),
+              u.push("maxwidth=" + t.maxWidth),
             t.maxHeight &&
               t.maxHeight != 1 / 0 &&
-              c.push("maxheight=" + t.maxHeight),
+              u.push("maxheight=" + t.maxHeight),
             t.target_browser
-              ? (c.push("pid=" + t.target_browser.m_unPID),
-                c.push("browser=" + t.target_browser.m_nBrowserID),
+              ? (u.push("pid=" + t.target_browser.m_unPID),
+                u.push("browser=" + t.target_browser.m_nBrowserID),
                 t.target_browser.m_eBrowserType
-                  ? c.push("browserType=" + t.target_browser.m_eBrowserType)
-                  : t.browserType && c.push("browserType=" + t.browserType),
+                  ? u.push("browserType=" + t.target_browser.m_eBrowserType)
+                  : t.browserType && u.push("browserType=" + t.browserType),
                 t.availscreenwidth &&
                   t.availscreenheight &&
-                  (c.push("screenavailwidth=" + t.availscreenwidth),
-                  c.push("screenavailheight=" + t.availscreenheight)))
-              : t.browserType && c.push("browserType=" + t.browserType),
-            t.strVROverlayKey && c.push("vrOverlayKey=" + t.strVROverlayKey),
+                  (u.push("screenavailwidth=" + t.availscreenwidth),
+                  u.push("screenavailheight=" + t.availscreenheight)))
+              : t.browserType && u.push("browserType=" + t.browserType),
+            t.strVROverlayKey && u.push("vrOverlayKey=" + t.strVROverlayKey),
             t.strRestoreDetails &&
-              c.push("restoredetails=" + t.strRestoreDetails),
-            t.window_opener_id && c.push("openerid=" + t.window_opener_id),
+              u.push("restoredetails=" + t.strRestoreDetails),
+            t.window_opener_id && u.push("openerid=" + t.window_opener_id),
             t.parent_container_popup_id &&
-              c.push("parentcontainerpopupid=" + t.parent_container_popup_id),
+              u.push("parentcontainerpopupid=" + t.parent_container_popup_id),
             t.center_on_window &&
               void 0 === n.left &&
               void 0 === n.top &&
-              c.push(
+              u.push(
                 "centerOnBrowserID=" +
                   t.center_on_window.SteamClient.Browser.GetBrowserID(),
               ),
             t.strUserAgent &&
-              c.push(
+              u.push(
                 "useragent=" +
                   t.strUserAgent +
                   "/" +
-                  (0, u.MR)(h.De.LAUNCHER_TYPE),
+                  (0, c.MR)(h.De.LAUNCHER_TYPE),
               ),
-            t.hwndParent && c.push("hwndParent=" + t.hwndParent),
-            t.bPinned && c.push("pinned=true"),
-            t.bModal && c.push("modal=true"),
-            c && (l += "?" + c.join("&"));
+            t.hwndParent && u.push("hwndParent=" + t.hwndParent),
+            t.bPinned && u.push("pinned=true"),
+            t.bModal && u.push("modal=true"),
+            u && (l += "?" + u.join("&"));
           let d = (t.owner_window || window).open(l, e, a);
           if (!d)
             return (
@@ -3829,7 +3862,7 @@
         c = n(20417),
         u = n(37563),
         d = n(82493);
-      const h = new r.s("FocusNavigation").Debug;
+      const h = new r.sO("FocusNavigation").Debug;
       function m(e) {
         const {
             className: t,
@@ -4001,7 +4034,7 @@
         r = n(77262),
         s = n(68785);
       n(28781);
-      const a = new s.s("GamepadEvents").Debug;
+      const a = new s.sO("GamepadEvents").Debug;
       function l(e, t, n) {
         void 0 === n &&
           (n = [
@@ -4769,7 +4802,7 @@
         d = n(68785),
         h = n(77262),
         m = n(78078);
-      const p = new d.s("FocusNavigation").Debug;
+      const p = new d.sO("FocusNavigation").Debug;
       class g {
         constructor(e, t, n) {
           (this.m_bActive = !1),
@@ -4974,8 +5007,8 @@
           }
         }
       }
-      const v = new d.s("FocusNavigation").Debug,
-        f = new d.s("FocusNavigation").Assert,
+      const v = new d.sO("FocusNavigation").Debug,
+        f = new d.sO("FocusNavigation").Assert,
         _ = "focus-nav-show-debug-focus-ring";
       function C(e, t) {
         return (
@@ -5789,7 +5822,7 @@
       }
       var f = n(45651),
         _ = n(48766);
-      const C = new c.s("ScrollSnap").Debug;
+      const C = new c.sO("ScrollSnap").Debug;
       let b = !1;
       let w;
       function E(e) {
@@ -6103,7 +6136,7 @@
           ? { scrollLeft: t.scrollLeft, scrollTop: t.scrollTop }
           : { scrollLeft: e.scrollLeft, scrollTop: e.scrollTop };
       }
-      const N = new c.s("FocusNavigationMovement").Debug;
+      const N = new c.sO("FocusNavigationMovement").Debug;
       var k, B, F, P;
       !(function (e) {
         (e[(e.NONE = 0)] = "NONE"),
@@ -7073,8 +7106,8 @@
         r = n(68785),
         s = n(77262),
         a = n(3783);
-      const l = new r.s("FocusNavigation").Debug,
-        c = new r.s("GamepadEvents").Debug;
+      const l = new r.sO("FocusNavigation").Debug,
+        c = new r.sO("GamepadEvents").Debug;
       class u {
         constructor(e, t, n) {
           (this.m_onActivateCallbacks = new i.pB()),
@@ -7497,15 +7530,14 @@
     },
     35643: (e, t, n) => {
       "use strict";
-      n.d(t, { CJ: () => m, LP: () => p, k$: () => h, o5: () => d });
+      n.d(t, { CJ: () => h, LP: () => m, k$: () => d, o5: () => u });
       var o = n(85556),
-        i = n(37066),
-        r = n(47427),
-        s = n(53087),
-        a = n(77262),
-        l = n(20417),
-        c = n(37563);
-      const u = r.createContext(function (e, t) {
+        i = n(47427),
+        r = n(53087),
+        s = n(77262),
+        a = n(20417),
+        l = n(37563);
+      const c = i.createContext(function (e, t) {
         return {
           ShowVirtualKeyboard: () => {},
           ShowModalKeyboard: () => {},
@@ -7516,106 +7548,109 @@
           BIsElementValidForInput: () => !1,
         };
       });
-      function d(e) {
+      function u(e) {
         const { factory: t, children: n } = e,
-          o = r.useMemo(() => t.CreateVirtualKeyboardRef.bind(t), [t]);
-        return r.createElement(u.Provider, { value: o }, n);
+          o = i.useMemo(() => t.CreateVirtualKeyboardRef.bind(t), [t]);
+        return i.createElement(c.Provider, { value: o }, n);
       }
-      function h(e, t) {
+      function d(e, t) {
         const { onTextEntered: n } = e,
-          u = (0, o._T)(e, ["onTextEntered"]),
-          d = r.useRef(),
-          h = (0, c.qt)({ bSuppressAssert: !0 }),
-          g = r.useRef({ onTextEntered: () => null });
+          c = (0, o._T)(e, ["onTextEntered"]),
+          u = i.useRef(),
+          d = (0, l.qt)({ bSuppressAssert: !0 }),
+          p = i.useRef({ onTextEntered: () => null });
         Object.assign(
-          g.current,
-          Object.assign(Object.assign({}, u), {
-            onTextEntered: n || ((e) => p(e, h.IN_VR)),
+          p.current,
+          Object.assign(Object.assign({}, c), {
+            onTextEntered: n || ((e) => m(e, d.IN_VR)),
             BIsElementValidForInput: () =>
-              d.current && document.activeElement == d.current,
+              u.current && document.activeElement == u.current,
           }),
         );
-        const v = m(g.current, () => {
+        const g = h(p.current, () => {
             var e;
-            return null === (e = d.current) || void 0 === e
+            return null === (e = u.current) || void 0 === e
               ? void 0
               : e.ownerDocument.defaultView;
           }),
-          f = r.useCallback(
+          v = i.useCallback(
             (e) => {
-              var t;
-              if (!document.hasFocus() && document.activeElement == d.current)
+              var t, n;
+              if (!document.hasFocus() && document.activeElement == u.current)
                 return;
-              if (e.currentTarget != d.current)
+              if (e.currentTarget != u.current)
                 return void console.warn(
                   "keyboard got blur event, but it's not the active element",
                 );
-              const n = (0, i.Su)(
-                null ===
-                  (t = s.AN.GetPopupForWindow(
-                    d.current.ownerDocument.defaultView,
-                  )) || void 0 === t
-                  ? void 0
-                  : t.params.browserType,
-              );
-              (v.BIsActive() || n) && v.DelayHideVirtualKeyboard();
+              const o =
+                null !==
+                  (n =
+                    null ===
+                      (t = r.AN.GetPopupForWindow(
+                        u.current.ownerDocument.defaultView,
+                      )) || void 0 === t
+                      ? void 0
+                      : t.params.bUseVRKeyboard) &&
+                void 0 !== n &&
+                n;
+              (g.BIsActive() || o) && g.DelayHideVirtualKeyboard();
             },
-            [v],
+            [g],
           ),
-          _ = (0, l.xK)(
+          f = (0, a.xK)(
             (e) => {
-              d.current = e;
+              u.current = e;
               const t = [];
               return (
                 e &&
                   (e.addEventListener(
                     "focus",
-                    v.SetAsCurrentVirtualKeyboardTarget,
+                    g.SetAsCurrentVirtualKeyboardTarget,
                   ),
                   t.push(() =>
                     e.removeEventListener(
                       "focus",
-                      v.SetAsCurrentVirtualKeyboardTarget,
+                      g.SetAsCurrentVirtualKeyboardTarget,
                     ),
                   ),
-                  e.addEventListener("click", v.ShowVirtualKeyboard),
+                  e.addEventListener("click", g.ShowVirtualKeyboard),
                   t.push(() =>
-                    e.removeEventListener("click", v.ShowVirtualKeyboard),
+                    e.removeEventListener("click", g.ShowVirtualKeyboard),
                   ),
-                  t.push((0, a.x)(d.current, v.ShowVirtualKeyboard)),
-                  t.push((0, a.BG)(d.current, f))),
+                  t.push((0, s.x)(u.current, g.ShowVirtualKeyboard)),
+                  t.push((0, s.BG)(u.current, v))),
                 () => t.forEach((e) => e())
               );
             },
-            [f, v],
+            [v, g],
           );
         return (
-          r.useLayoutEffect(
+          i.useLayoutEffect(
             () => (
-              (0, l.k$)(t, {
+              (0, a.k$)(t, {
                 TakeFocusAndShowKeyboard: () => {
-                  const e = d.current;
+                  const e = u.current;
                   e &&
                     (document.activeElement != e && e.focus(),
-                    v.ShowVirtualKeyboard());
+                    g.ShowVirtualKeyboard());
                 },
                 HideVirtualKeyboard: () => {
-                  v.HideVirtualKeyboard();
+                  g.HideVirtualKeyboard();
                 },
               }),
-              () => (0, l.k$)(t, null)
+              () => (0, a.k$)(t, null)
             ),
-            [v, t],
+            [g, t],
           ),
-          _
+          f
         );
       }
-      function m(e, t) {
-        const n = r.useRef(),
-          o = r.useContext(u);
+      function h(e, t) {
+        const n = i.useRef(),
+          o = i.useContext(c);
         return n.current || (n.current = o(e, t)), n.current;
       }
-      function p(e, t) {
+      function m(e, t) {
         var n;
         if (t) {
           switch (e) {
@@ -7905,6 +7940,108 @@
       (0, o.gn)([a.a], g.prototype, "SendMsgAndAwaitResponse", null),
         (0, o.gn)([a.a], g.prototype, "SendNotification", null),
         (0, o.gn)([a.a], g.prototype, "Send", null);
+    },
+    22520: (e, t, n) => {
+      "use strict";
+      n.d(t, { Am: () => c, kI: () => s, x3: () => l });
+      var o = n(37563),
+        i = n(48760),
+        r = n(62210);
+      const s = 0,
+        a = "061818254b2c99ac49e6626adb128ed1282a392f",
+        l = 120;
+      class c {
+        constructor(e) {
+          (this.m_bInitialized = !1), (this.m_unAppID = e);
+        }
+        get appid() {
+          return this.m_unAppID;
+        }
+        get is_initialized() {
+          return this.m_bInitialized;
+        }
+        get is_valid() {
+          return this.m_bInitialized && !!this.m_strName;
+        }
+        get name() {
+          return this.m_strName;
+        }
+        get header_image_url() {
+          return o.De.MEDIA_CDN_URL + `steam/apps/${this.m_unAppID}/header.jpg`;
+        }
+        get icon_url_no_default() {
+          return this.m_strIconURL && this.BuildAppURL(this.m_strIconURL, a);
+        }
+        get icon_url() {
+          return this.BuildAppURL(this.m_strIconURL, a);
+        }
+        get logo_url() {
+          return (
+            o.De.MEDIA_CDN_URL +
+            `steam/apps/${this.m_unAppID}/capsule_231x87.jpg`
+          );
+        }
+        get time_updated_from_server() {
+          return this.m_dtUpdatedFromServer;
+        }
+        get apptype() {
+          return this.m_eAppType;
+        }
+        BIsApplicationOrTool() {
+          return 4 == this.apptype || 2 == this.apptype;
+        }
+        BuildAppURL(e, t) {
+          return e
+            ? o.De.MEDIA_CDN_COMMUNITY_URL +
+                "images/apps/" +
+                this.appid +
+                "/" +
+                e +
+                ".jpg"
+            : (0, i.U)(t);
+        }
+        DeserializeFromMessage(e) {
+          (this.m_bInitialized = !0),
+            (this.m_strName = e.name()),
+            (this.m_strIconURL = e.icon()),
+            (this.m_dtUpdatedFromServer = new Date()),
+            (this.m_eAppType = e.app_type());
+        }
+        DeserializeFromAppOverview(e) {
+          e.icon_hash() && 1073741824 != e.app_type()
+            ? ((this.m_bInitialized = !0),
+              (this.m_strName = e.display_name()),
+              (this.m_strIconURL = e.icon_hash()),
+              (this.m_dtUpdatedFromServer = new Date()),
+              (this.m_eAppType = e.app_type()))
+            : (this.m_bInitialized = !1);
+        }
+        DeserializeFromCacheObject(e) {
+          try {
+            (this.m_strName = e.strName),
+              (this.m_strIconURL = e.strIconURL),
+              (this.m_dtUpdatedFromServer = new Date(e.strUpdatedFromServer)),
+              (this.m_eAppType = e.eAppType),
+              (this.m_bInitialized = !0);
+          } catch (e) {}
+        }
+        SerializeToCacheObject() {
+          return (
+            (0, r.X)(
+              this.m_bInitialized,
+              "Attempting to serialize an uninitialized AppInfo object for caching!",
+            ),
+            this.m_bInitialized
+              ? {
+                  strName: this.m_strName,
+                  strIconURL: this.m_strIconURL,
+                  strUpdatedFromServer: this.m_dtUpdatedFromServer.toJSON(),
+                  eAppType: this.m_eAppType,
+                }
+              : null
+          );
+        }
+      }
     },
     47692: (e, t, n) => {
       "use strict";
@@ -8217,6 +8354,27 @@
           ),
           n = e.match(t);
         return n && n.length > 5 ? n[6].toString() : e;
+      }
+    },
+    48760: (e, t, n) => {
+      "use strict";
+      n.d(t, { U: () => r, W: () => i });
+      var o = n(37563);
+      const i = "fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb";
+      function r(e, t) {
+        let n = ".jpg";
+        (e && "0000000000000000000000000000000000000000" !== e) || (e = i),
+          44 == e.length && ((n = e.substr(-4)), (e = e.substr(0, 40)));
+        let r = o.De.AVATAR_BASE_URL;
+        return (
+          r ||
+            ((r = o.De.MEDIA_CDN_COMMUNITY_URL + "images/avatars/"),
+            (r += e.substr(0, 2) + "/")),
+          (r += e),
+          t && "small" != t && (r += "_" + t),
+          (r += n),
+          r
+        );
       }
     },
     35427: (e, t, n) => {
@@ -9390,18 +9548,19 @@
     },
     87476: (e, t, n) => {
       "use strict";
-      n.d(t, { Ze: () => u });
+      n.d(t, { Ze: () => h });
       var o = n(85556),
         i = n(47427),
         r = n(54842),
         s = n(52178),
         a = n(19929),
-        l = n(68785);
-      n(20417);
-      new l.s("VR");
-      class c {
+        l = n(68785),
+        c = (n(20417), n(22520));
+      const u = new l.sO("VR");
+      class d {
         constructor() {
-          (this.m_bHMDPresent = void 0),
+          (this.m_rgMutualCapabilities = void 0),
+            (this.m_bHMDPresent = void 0),
             (this.m_bHMDHardwareDetected = void 0),
             (this.m_strHMDName = void 0),
             (this.m_bIsVRRunning = void 0),
@@ -9411,12 +9570,13 @@
             (this.m_bIsKeyboardOpen = void 0),
             (this.m_eKeyboardFlags = void 0),
             (this.m_sInitialKeyboardText = void 0),
+            (this.m_unSceneAppID = c.kI),
             (this.m_bSimulatingVROnDesktop = !1),
             (this.m_mapAffordanceElems = new Map()),
             (0, r.rC)(this);
         }
         Init() {
-          var e, t, n, o, i, r, s, a, l, c, u, d;
+          var e, t, n, o, i, r, s, a, l, c, u, d, h, m;
           null ===
             (t =
               null ===
@@ -9462,25 +9622,36 @@
               void 0 === a ||
               a.call(s, this.OnHMDActivityLevelChanged),
             null ===
-              (l =
+              (c =
+                null ===
+                  (l =
+                    null === SteamClient || void 0 === SteamClient
+                      ? void 0
+                      : SteamClient.OpenVR) || void 0 === l
+                  ? void 0
+                  : l.RegisterForVRSceneAppChange) ||
+              void 0 === c ||
+              c.call(l, this.OnSceneAppChanged),
+            null ===
+              (u =
                 null === SteamClient || void 0 === SteamClient
                   ? void 0
                   : SteamClient.OpenVR) ||
-              void 0 === l ||
-              l.Device.RegisterForVRDeviceSeenRecently(
+              void 0 === u ||
+              u.Device.RegisterForVRDeviceSeenRecently(
                 this.OnVRDeviceSeenRecentlyChanged,
               ),
             null ===
-              (d =
+              (m =
                 null ===
-                  (c =
+                  (d =
                     null === SteamClient || void 0 === SteamClient
                       ? void 0
-                      : SteamClient.OpenVR) || void 0 === c
+                      : SteamClient.OpenVR) || void 0 === d
                   ? void 0
-                  : (u = c.Keyboard).RegisterForStatus) ||
-              void 0 === d ||
-              d.call(u, this.OnKeyboardStatus);
+                  : (h = d.Keyboard).RegisterForStatus) ||
+              void 0 === m ||
+              m.call(h, this.OnKeyboardStatus);
         }
         OnVRHardwareDetected(e, t, n) {
           (this.m_bHMDPresent = e),
@@ -9488,7 +9659,7 @@
             (this.m_strHMDName = n);
         }
         OnVRModeChanged(e) {
-          this.m_bIsVRRunning = e;
+          (this.m_bIsVRRunning = e), this.UpdateMutualCapabilities();
         }
         OnStartupError(e, t, n) {
           let o;
@@ -9498,6 +9669,9 @@
         }
         OnHMDActivityLevelChanged(e) {
           this.m_eHMDActivityLevel = e;
+        }
+        OnSceneAppChanged(e) {
+          this.m_unSceneAppID = e;
         }
         OnVRDeviceSeenRecentlyChanged(e) {
           this.m_bVRDeviceSeenRecently = e;
@@ -9513,6 +9687,9 @@
             this.m_bHMDPresent ||
             this.m_bHMDHardwareDetected
           );
+        }
+        get CurrentSceneAppID() {
+          return this.m_unSceneAppID;
         }
         HasVRHMDBeenSeen() {
           return this.m_bVRDeviceSeenRecently;
@@ -9582,8 +9759,36 @@
               void 0 === i ||
               i.OpenVR.SetOverlayInteractionAffordance(t, a));
         }
+        BHasMutualCapabilities() {
+          return null != this.m_rgMutualCapabilities;
+        }
+        BHasMutualCapability(e) {
+          var t;
+          return null === (t = this.m_rgMutualCapabilities) || void 0 === t
+            ? void 0
+            : t.includes(e);
+        }
+        UpdateMutualCapabilities() {
+          var e;
+          return (0, o.mG)(this, void 0, void 0, function* () {
+            if (this.IsSteamVRRunning)
+              try {
+                this.m_rgMutualCapabilities = yield null ===
+                  (e =
+                    null === SteamClient || void 0 === SteamClient
+                      ? void 0
+                      : SteamClient.OpenVR) || void 0 === e
+                  ? void 0
+                  : e.GetMutualCapabilities();
+              } catch (e) {
+                (this.m_rgMutualCapabilities = void 0),
+                  u.Error("Failed to fetch Mutual Capabilities:", e);
+              }
+            else this.m_rgMutualCapabilities = void 0;
+          });
+        }
       }
-      function u(e, t) {
+      function h(e, t) {
         const [n, o] = i.useState(),
           r = i.useCallback(() => !0, []),
           s = i.useRef();
@@ -9593,7 +9798,7 @@
             const t = () => {
                 var t, o, i;
                 const r = s.current && s.current();
-                d.SetInteractionAffordance(n, e, r),
+                m.SetInteractionAffordance(n, e, r),
                   2 == e &&
                     r &&
                     (null ===
@@ -9615,7 +9820,7 @@
               },
               o = () => {
                 var t, o, i;
-                d.SetInteractionAffordance(n, e, !1),
+                m.SetInteractionAffordance(n, e, !1),
                   2 == e &&
                     s.current &&
                     s.current() &&
@@ -9642,37 +9847,40 @@
               () => {
                 null == n || n.removeEventListener("mouseenter", t),
                   null == n || n.removeEventListener("mouseleave", o),
-                  d.SetInteractionAffordance(n, e, !1);
+                  m.SetInteractionAffordance(n, e, !1);
               }
             );
           }, [n, e]),
           o
         );
       }
-      (0, o.gn)([r.LO], c.prototype, "m_bHMDPresent", void 0),
-        (0, o.gn)([r.LO], c.prototype, "m_bHMDHardwareDetected", void 0),
-        (0, o.gn)([r.LO], c.prototype, "m_strHMDName", void 0),
-        (0, o.gn)([r.LO], c.prototype, "m_bIsVRRunning", void 0),
-        (0, o.gn)([r.LO], c.prototype, "m_error", void 0),
-        (0, o.gn)([r.LO], c.prototype, "m_eHMDActivityLevel", void 0),
-        (0, o.gn)([r.LO], c.prototype, "m_bVRDeviceSeenRecently", void 0),
-        (0, o.gn)([r.LO], c.prototype, "m_bIsKeyboardOpen", void 0),
-        (0, o.gn)([r.LO], c.prototype, "m_eKeyboardFlags", void 0),
-        (0, o.gn)([r.LO], c.prototype, "m_sInitialKeyboardText", void 0),
-        (0, o.gn)([r.LO], c.prototype, "m_bSimulatingVROnDesktop", void 0),
-        (0, o.gn)([r.aD.bound], c.prototype, "OnVRHardwareDetected", null),
-        (0, o.gn)([r.aD.bound], c.prototype, "OnVRModeChanged", null),
-        (0, o.gn)([r.aD.bound], c.prototype, "OnStartupError", null),
-        (0, o.gn)([r.aD.bound], c.prototype, "OnHMDActivityLevelChanged", null),
+      (0, o.gn)([r.LO], d.prototype, "m_rgMutualCapabilities", void 0),
+        (0, o.gn)([r.LO], d.prototype, "m_bHMDPresent", void 0),
+        (0, o.gn)([r.LO], d.prototype, "m_bHMDHardwareDetected", void 0),
+        (0, o.gn)([r.LO], d.prototype, "m_strHMDName", void 0),
+        (0, o.gn)([r.LO], d.prototype, "m_bIsVRRunning", void 0),
+        (0, o.gn)([r.LO], d.prototype, "m_error", void 0),
+        (0, o.gn)([r.LO], d.prototype, "m_eHMDActivityLevel", void 0),
+        (0, o.gn)([r.LO], d.prototype, "m_bVRDeviceSeenRecently", void 0),
+        (0, o.gn)([r.LO], d.prototype, "m_bIsKeyboardOpen", void 0),
+        (0, o.gn)([r.LO], d.prototype, "m_eKeyboardFlags", void 0),
+        (0, o.gn)([r.LO], d.prototype, "m_sInitialKeyboardText", void 0),
+        (0, o.gn)([r.LO], d.prototype, "m_unSceneAppID", void 0),
+        (0, o.gn)([r.LO], d.prototype, "m_bSimulatingVROnDesktop", void 0),
+        (0, o.gn)([r.aD.bound], d.prototype, "OnVRHardwareDetected", null),
+        (0, o.gn)([r.aD.bound], d.prototype, "OnVRModeChanged", null),
+        (0, o.gn)([r.aD.bound], d.prototype, "OnStartupError", null),
+        (0, o.gn)([r.aD.bound], d.prototype, "OnHMDActivityLevelChanged", null),
+        (0, o.gn)([r.aD.bound], d.prototype, "OnSceneAppChanged", null),
         (0, o.gn)(
           [r.aD.bound],
-          c.prototype,
+          d.prototype,
           "OnVRDeviceSeenRecentlyChanged",
           null,
         ),
-        (0, o.gn)([r.aD.bound], c.prototype, "OnKeyboardStatus", null),
-        (0, o.gn)([r.aD.bound], c.prototype, "ClearError", null);
-      const d = new c();
+        (0, o.gn)([r.aD.bound], d.prototype, "OnKeyboardStatus", null),
+        (0, o.gn)([r.aD.bound], d.prototype, "ClearError", null);
+      const m = new d();
     },
     71630: (e, t, n) => {
       "use strict";
@@ -12392,7 +12600,7 @@
         ye = n(83654),
         Re = n(83999),
         Oe = n(45651);
-      const xe = new (n(68785).s)("DragDrop").Debug;
+      const xe = new (n(68785).sO)("DragDrop").Debug;
       class Ie extends i.Component {
         constructor() {
           super(...arguments), (this.m_coordinator = new Ae());
@@ -13865,7 +14073,9 @@
             "div",
             { className: it().DropDownControlButtonContents },
             e.children,
-            i.createElement("div", { className: it().Spacer }),
+            i.createElement("div", {
+              className: (0, l.Z)(it().Spacer, "Spacer"),
+            }),
             i.createElement(Ze.$nC, { direction: "down" }),
           ),
         );
@@ -14445,21 +14655,25 @@
             b = {};
           this.CanResetToDefault &&
             (b[Ve.eV.SECONDARY] = (0, c.Xx)("#ResetToDefault"));
-          let w = St().SliderHandle,
-            E = St().SliderHandleContainer;
+          let w = `${St().SliderHandle} SliderHandle`,
+            E = `${St().SliderHandleContainer} SliderHandleContainer `;
           return (
             "verticalline" == this.props.handleType
-              ? ((w = St().VerticalLineSliderHandle),
-                (E = St().VerticalLineSliderHandleContainer))
+              ? ((w = `${St().VerticalLineSliderHandle} SliderHandle`),
+                (E = `${
+                  St().VerticalLineSliderHandleContainer
+                } SliderHandleContainer `))
               : ("leftparen" != this.props.handleType &&
                   "rightparen" != this.props.handleType) ||
                 ((w = (0, l.Z)(
                   St().ParenSliderHandle,
                   "leftparen" == this.props.handleType ? St().Left : St().Right,
+                  "SliderHandle",
                 )),
                 (E = (0, l.Z)(
                   St().ParenSliderHandleContainer,
                   "leftparen" == this.props.handleType ? St().Left : St().Right,
+                  "SliderHandleContainer",
                 ))),
             i.createElement(
               Mt.eh,
@@ -14535,6 +14749,7 @@
                       {
                         [St().SliderTrackDark]: "dark" === this.props.trackTone,
                       },
+                      "SliderTrack",
                     ),
                   }),
                   v &&
@@ -23515,7 +23730,7 @@
     },
     68785: (e, t, n) => {
       "use strict";
-      n.d(t, { c: () => u, s: () => c });
+      n.d(t, { cH: () => u, sO: () => c });
       var o = n(85556),
         i = n(16997),
         r = n(61134),
@@ -23757,7 +23972,7 @@
                 `%c${u}%c:${d ? " %c" + h : ""}`,
                 `color: ${a ? "black" : "white"}; background: rgb(${s.join(
                   ",",
-                )}); padding: 0 1ch`,
+                )}); padding: 0 1ch; border-radius: 3px;`,
                 "color: transparent; margin-right: -1ch",
                 ...(d ? [""] : []),
                 ...r,
@@ -25005,10 +25220,8 @@
         : console.error(
             "VALVE_PUBLIC_PATH not defined; check for a call to CHTMLHelpers::WebpackConfigScriptlet",
           ),
-        console.assert(
-          123 === Array.from(new Set([123]))[0],
-          "Should not include prototypejs.",
-        );
+        123 !== Array.from(new Set([123]))[0] &&
+          console.error("Should not include prototypejs.");
     },
     41003: (e, t, n) => {
       "use strict";

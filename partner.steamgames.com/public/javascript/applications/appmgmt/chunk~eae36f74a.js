@@ -460,7 +460,7 @@
       }
       function A(t) {
         const [n, e] = (0, a.useState)(E.Get().GetDiscountEvent(t)),
-          [s, o] = a.useState(!0);
+          [s, o] = a.useState(!!t);
         return (
           a.useEffect(() => {
             if ((!n && t) || ((null == n ? void 0 : n.id) != t && t)) {

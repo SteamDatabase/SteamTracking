@@ -1469,10 +1469,10 @@
         wP: () => le,
         dn: () => B,
         QK: () => L,
-        $Y: () => H,
+        $Y: () => V,
         sq: () => R,
         RQ: () => O,
-        _L: () => N,
+        _L: () => H,
         z5: () => j,
         Pg: () => x,
         Vv: () => oe,
@@ -1537,11 +1537,11 @@
         T = [B, 766, 221410],
         R = 39049601,
         O = 41316928,
-        N = 4,
-        H = 20,
-        V = [12, 34];
+        H = 4,
+        V = 20,
+        N = [12, 34];
       function M(e) {
-        return !V.some((t) => t == e.GetEventType()) && !e.BHasTag("curator");
+        return !N.some((t) => t == e.GetEventType()) && !e.BHasTag("curator");
       }
       function P(e) {
         const t = 60 * E._H.PerDay;
@@ -4285,8 +4285,8 @@
         (0, a.gn)([s.LO], R.prototype, "m_strStateDescription", void 0),
         (0, a.gn)([s.aD], R.prototype, "SetState", null);
       class O extends R {}
-      class N extends R {}
-      class H {
+      class H extends R {}
+      class V {
         constructor() {
           (this.m_mapBroadcasts = new Map()),
             (this.m_mapClips = new Map()),
@@ -4333,7 +4333,7 @@
         CreateBroadcastVideo(e, t, n, a) {
           let i = this.GetOrCreateBroadcast(t),
             { nVolume: r, bMuted: s } = this.m_broadcastSettings,
-            o = new V(e, r, s, n);
+            o = new N(e, r, s, n);
           if (
             (o.SetBroadcastSteamID(t),
             i.m_rgVideos.push(o),
@@ -4347,7 +4347,7 @@
         CreateClipVideo(e, t, n) {
           let a = this.GetOrCreateClip(t),
             { nVolume: i, bMuted: r } = this.m_broadcastSettings,
-            s = new V(e, i, r, n);
+            s = new N(e, i, r, n);
           if (
             (s.SetBroadcastClipID(t),
             a.m_rgVideos.push(s),
@@ -4360,7 +4360,7 @@
         CreateVODVideo(e, t, n) {
           let a = this.GetOrCreateVOD(t),
             { nVolume: i, bMuted: r } = this.m_broadcastSettings,
-            s = new V(e, i, r, n);
+            s = new N(e, i, r, n);
           if (
             (s.SetBroadcastAppIDVOD(t),
             a.m_rgVideos.push(s),
@@ -4504,7 +4504,7 @@
           let t = this.m_mapVODs.get(e);
           return (
             t ||
-            ((t = new N()),
+            ((t = new H()),
             (t.m_nAppIDVOD = e),
             (t.m_eWatchState = G.None),
             this.m_mapVODs.set(e, t),
@@ -4804,11 +4804,11 @@
             this.SaveBroadcastSettings());
         }
       }
-      (0, a.gn)([s.LO], H.prototype, "m_mapBroadcasts", void 0),
+      (0, a.gn)([s.LO], V.prototype, "m_mapBroadcasts", void 0),
         (function (e) {
           (e[(e.Timeline = 1)] = "Timeline"), (e[(e.Minimap = 2)] = "Minimap");
         })(k || (k = {}));
-      class V {
+      class N {
         constructor(e, t, n, a) {
           (this.m_elVideo = null),
             (this.m_player = null),
@@ -5260,32 +5260,32 @@
           return this.m_rgSegments.length > 0;
         }
       }
-      (0, a.gn)([s.LO], V.prototype, "m_player", void 0),
-        (0, a.gn)([s.LO], V.prototype, "m_bPaused", void 0),
-        (0, a.gn)([s.LO], V.prototype, "m_nPlaybackTime", void 0),
-        (0, a.gn)([s.LO], V.prototype, "m_bBuffering", void 0),
-        (0, a.gn)([s.LO], V.prototype, "m_bOnLiveEdge", void 0),
-        (0, a.gn)([s.LO], V.prototype, "m_nVolume", void 0),
-        (0, a.gn)([s.LO], V.prototype, "m_bMuted", void 0),
-        (0, a.gn)([s.LO], V.prototype, "m_bUserInputNeeded", void 0),
-        (0, a.gn)([s.LO], V.prototype, "m_bIsReplay", void 0),
-        (0, a.gn)([s.LO], V.prototype, "m_nTimelineDuration", void 0),
-        (0, a.gn)([s.LO], V.prototype, "m_nVideoStartPos", void 0),
-        (0, a.gn)([s.LO], V.prototype, "m_nVideoEndPos", void 0),
-        (0, a.gn)([s.LO], V.prototype, "m_editorStartTime", void 0),
-        (0, a.gn)([s.LO], V.prototype, "m_editorEndTime", void 0),
-        (0, a.gn)([s.aD.bound], V.prototype, "StartBroadcast", null),
-        (0, a.gn)([s.aD.bound], V.prototype, "StartClip", null),
-        (0, a.gn)([s.aD.bound], V.prototype, "StartVOD", null),
-        (0, a.gn)([g.a], V.prototype, "OnVideoPlaying", null),
-        (0, a.gn)([g.a], V.prototype, "OnVideoPause", null),
-        (0, a.gn)([s.aD.bound], V.prototype, "OnVideoTimeUpdate", null),
-        (0, a.gn)([s.aD.bound], V.prototype, "OnGameDataUpdate", null),
-        (0, a.gn)([g.a], V.prototype, "OnDownloadFailed", null),
-        (0, a.gn)([g.a], V.prototype, "OnWebRTCRetry", null),
-        (0, a.gn)([g.a], V.prototype, "OnWebRTCFailed", null),
-        (0, a.gn)([g.a], V.prototype, "OnUserInputNeeded", null);
-      const M = new H();
+      (0, a.gn)([s.LO], N.prototype, "m_player", void 0),
+        (0, a.gn)([s.LO], N.prototype, "m_bPaused", void 0),
+        (0, a.gn)([s.LO], N.prototype, "m_nPlaybackTime", void 0),
+        (0, a.gn)([s.LO], N.prototype, "m_bBuffering", void 0),
+        (0, a.gn)([s.LO], N.prototype, "m_bOnLiveEdge", void 0),
+        (0, a.gn)([s.LO], N.prototype, "m_nVolume", void 0),
+        (0, a.gn)([s.LO], N.prototype, "m_bMuted", void 0),
+        (0, a.gn)([s.LO], N.prototype, "m_bUserInputNeeded", void 0),
+        (0, a.gn)([s.LO], N.prototype, "m_bIsReplay", void 0),
+        (0, a.gn)([s.LO], N.prototype, "m_nTimelineDuration", void 0),
+        (0, a.gn)([s.LO], N.prototype, "m_nVideoStartPos", void 0),
+        (0, a.gn)([s.LO], N.prototype, "m_nVideoEndPos", void 0),
+        (0, a.gn)([s.LO], N.prototype, "m_editorStartTime", void 0),
+        (0, a.gn)([s.LO], N.prototype, "m_editorEndTime", void 0),
+        (0, a.gn)([s.aD.bound], N.prototype, "StartBroadcast", null),
+        (0, a.gn)([s.aD.bound], N.prototype, "StartClip", null),
+        (0, a.gn)([s.aD.bound], N.prototype, "StartVOD", null),
+        (0, a.gn)([g.a], N.prototype, "OnVideoPlaying", null),
+        (0, a.gn)([g.a], N.prototype, "OnVideoPause", null),
+        (0, a.gn)([s.aD.bound], N.prototype, "OnVideoTimeUpdate", null),
+        (0, a.gn)([s.aD.bound], N.prototype, "OnGameDataUpdate", null),
+        (0, a.gn)([g.a], N.prototype, "OnDownloadFailed", null),
+        (0, a.gn)([g.a], N.prototype, "OnWebRTCRetry", null),
+        (0, a.gn)([g.a], N.prototype, "OnWebRTCFailed", null),
+        (0, a.gn)([g.a], N.prototype, "OnUserInputNeeded", null);
+      const M = new V();
       window.uiBroadcastWatchStore = M;
     },
     37593: (e, t, n) => {
@@ -5606,7 +5606,6 @@
             (this.language = t),
             (this.uploadTime = Date.now()),
             (this.status = "pending"),
-            console.log("adil constructo", this.fileType, s, o),
             n)
           ) {
             const e = (0, r.Vy)(this.fileType, n);
@@ -11031,13 +11030,13 @@
           };
         }
       }
-      (c.Log = new s.s("ActionDescription").Debug),
+      (c.Log = new s.sO("ActionDescription").Debug),
         (0, i.gn)([o.ak], c.prototype, "OnFocusNavigationChanged", null),
         (0, i.gn)([o.ak], c.prototype, "SetActionDescriptionsFromMap", null);
     },
     97695: (e, t, n) => {
       "use strict";
-      n.d(t, { Rd: () => O, _R: () => N, Ws: () => T });
+      n.d(t, { Rd: () => O, _R: () => H, Ws: () => T });
       var a = n(47427),
         i = n(82493),
         r = (n(4030), n(91618)),
@@ -11235,7 +11234,7 @@
                     a.createElement(O, { category: i.resolved_category }),
                   ),
                 ),
-                a.createElement(N, {
+                a.createElement(H, {
                   category: i.resolved_category,
                   appName: s,
                 }),
@@ -11326,7 +11325,7 @@
                     a.createElement(O, { category: i.resolved_category }),
                   ),
                 ),
-                a.createElement(N, {
+                a.createElement(H, {
                   category: i.resolved_category,
                   appName: s,
                 }),
@@ -11485,7 +11484,7 @@
             return a.createElement(v.z5E, { className: S().CategoryIcon });
         }
       }
-      function N(e) {
+      function H(e) {
         const { category: t, appName: n, descriptionToken: i } = e;
         if (0 == t)
           return a.createElement(
@@ -11513,7 +11512,7 @@
             (r = "#SteamDeckVerified_DescriptionHeader_Unsupported"),
               (s = S().Unsupported);
         }
-        const o = a.createElement("span", { className: s }, (0, C.Xx)(H(t))),
+        const o = a.createElement("span", { className: s }, (0, C.Xx)(V(t))),
           l = a.createElement(
             "span",
             { className: S().CompatibilityDetailRatingSummary },
@@ -11533,7 +11532,7 @@
           c,
         );
       }
-      function H(e) {
+      function V(e) {
         switch (e) {
           case 3:
             return "#SteamDeckVerified_Category_Verified";
@@ -12316,9 +12315,9 @@
         T = n(45492),
         R = n(13129),
         O = n(31846),
-        N = n(20417),
-        H = n(37563),
-        V = n(25006),
+        H = n(20417),
+        V = n(37563),
+        N = n(25006),
         M = n(99823),
         P = n(35714),
         F = n.n(P),
@@ -12356,7 +12355,7 @@
           r = (0, l.useRef)(a),
           [o, c] = (0, l.useState)([]),
           d = (0, l.useRef)(0),
-          m = (0, N.NW)(),
+          m = (0, H.NW)(),
           [u] = l.useState(new T.Ar()),
           p = (0, l.useCallback)(() => {
             if ((null == o ? void 0 : o.length) > 0) {
@@ -12419,7 +12418,7 @@
                 }
               a.length > 0
                 ? (c(a), (d.current = 0), p())
-                : ("dev" != H.De.WEB_UNIVERSE && "beta" != H.De.WEB_UNIVERSE) ||
+                : ("dev" != V.De.WEB_UNIVERSE && "beta" != V.De.WEB_UNIVERSE) ||
                   console.error(
                     "DEV ONLY OUTPUT: GameHoverImages for id/type no images: (might be not age safe screenshots)",
                     (0, s.ZN)(e),
@@ -12522,7 +12521,7 @@
               : 5 == r.review_score
               ? F().ReviewScoreMixed
               : F().ReviewScoreHigh,
-          o = `${H.De.STORE_BASE_URL}app/${t.id}/#app_reviews_hash`,
+          o = `${V.De.STORE_BASE_URL}app/${t.id}/#app_reviews_hash`,
           c = l.createElement(
             "div",
             { className: (0, R.Z)(F().ReviewScoreValue, s) },
@@ -12615,7 +12614,7 @@
                 (0, a.mG)(void 0, void 0, void 0, function* () {
                   e.preventDefault(),
                     e.stopPropagation(),
-                    H.L7.logged_in
+                    V.L7.logged_in
                       ? (d(!0),
                         yield g.jg.Get().UpdateGameWishlist(t, !s, n),
                         m.current.token.reason || d(!1))
@@ -12690,7 +12689,7 @@
               "a",
               {
                 href: u ? null : a,
-                target: H.De.IN_CLIENT ? void 0 : "_blank",
+                target: V.De.IN_CLIENT ? void 0 : "_blank",
                 className: F().Midline,
               },
               Boolean(v) &&
@@ -12737,7 +12736,7 @@
                   "a",
                   {
                     href: u ? null : a,
-                    target: H.De.IN_CLIENT ? void 0 : "_blank",
+                    target: V.De.IN_CLIENT ? void 0 : "_blank",
                   },
                   l.createElement(
                     "div",
@@ -12803,7 +12802,7 @@
                 "a",
                 {
                   href: s ? null : n,
-                  target: H.De.IN_CLIENT ? void 0 : "_blank",
+                  target: V.De.IN_CLIENT ? void 0 : "_blank",
                   className: F().TrailerAnchorStoreLink,
                 },
                 Boolean(r && !i && !s) &&
@@ -12861,9 +12860,9 @@
             "bShowWishlistButton",
           ]),
           [v] = (0, f.jk)(t.id, (0, C.TM)(t.type), {}),
-          S = (0, V.bJ)(),
+          S = (0, N.bJ)(),
           E = (0, p.mY)(S),
-          I = (0, H.id)();
+          I = (0, V.id)();
         if (!v && !n) return null;
         if (I) return l.createElement(l.Fragment, null, e.children);
         if (!K())
@@ -12948,7 +12947,7 @@
             "children",
             "className",
           ]),
-          d = (0, H.id)(),
+          d = (0, V.id)(),
           [m, u] = l.useState(!d),
           [p, h] = l.useState(!1),
           [_, g] = l.useState(void 0),
@@ -13369,7 +13368,7 @@
         y = n(92797),
         b = n(91552),
         w = n(61440),
-        D = n(83266),
+        D = n(52841),
         A = n(43301),
         G = n(83502),
         k = n(61183),
@@ -13378,9 +13377,9 @@
         T = n(13129),
         R = n(31846),
         O = n(37563),
-        N = n(25006),
-        H = n(46882),
-        V = n(85305),
+        H = n(25006),
+        V = n(46882),
+        N = n(85305),
         M = n(7769),
         P = n.n(M),
         F = n(34913);
@@ -13401,7 +13400,7 @@
             } = (0, I.Q)(e),
             {
               bShowDemoButton: L,
-              bHidePrice: H,
+              bHidePrice: V,
               bUseSubscriptionLayout: M,
               bHidePlatforms: F,
               bHideContainedApps: x,
@@ -13412,7 +13411,7 @@
               fnOnClickOverride: X,
               bIsMarketingMessage: Y,
             } = e,
-            J = (0, N.bJ)(),
+            J = (0, H.bJ)(),
             q = i.useMemo(
               () => (null == u ? void 0 : u.GetIncludedAppIDsOrSelf()),
               [u],
@@ -13510,7 +13509,7 @@
                     ),
                   },
                   Boolean(ce && !X) &&
-                    i.createElement(V.RJ, {
+                    i.createElement(N.RJ, {
                       appID: h.id,
                       classOverride: (0, T.Z)(
                         C().WishlistButtonNotTop,
@@ -13588,7 +13587,7 @@
                             }),
                         ),
                     ),
-                    W && i.createElement(V.Yb, { appInfo: h }),
+                    W && i.createElement(N.Yb, { appInfo: h }),
                   ),
                   oe && i.createElement(j, { info: _ }),
                   Boolean(ce && ie) &&
@@ -13623,7 +13622,7 @@
                           : i.createElement(y.x1, {
                               info: _,
                               bShowDemoButton: L,
-                              bHidePrice: H,
+                              bHidePrice: V,
                               bHideWishlistButton: me,
                               bShowDeckCompatibilityDialog: Z,
                             }),
@@ -13795,7 +13794,7 @@
         const { info: t, imageType: n } = e,
           [a] = (0, g.jk)(t.id, (0, _.TM)(t.type), { include_assets: !0 });
         if (!a)
-          return i.createElement(H.V, {
+          return i.createElement(V.V, {
             size: "small",
             position: "center",
             string: (0, R.Xx)("#Loading"),
@@ -14058,7 +14057,7 @@
         o = n(77151),
         l = n(86437),
         c = n(80886),
-        d = n(83266);
+        d = n(52841);
       class m {}
       function u(e, t) {
         const n = (0, r.useRef)(i().CancelToken.source()),
@@ -14507,7 +14506,7 @@
       "use strict";
       n.d(t, { h: () => c });
       var a = n(31421),
-        i = n(83266),
+        i = n(52841),
         r = n(62210),
         s = n(50423),
         o = n(31846),
@@ -14594,21 +14593,13 @@
         );
       }
     },
-    83266: (e, t, n) => {
+    52841: (e, t, n) => {
       "use strict";
-      n.d(t, { zw: () => m, Dt: () => c, $N: () => d });
+      n.d(t, { $N: () => o, Dt: () => s, zw: () => l });
       var a = n(47427),
         i = n(89631),
-        r = n(58112),
-        s = n(25006),
-        o = n(8789);
-      function l(e) {
-        const { appID: t, children: n } = e,
-          i = (0, s.PZ)(),
-          l = a.useCallback(() => o.E.AddImpression(t, i), [t, i]);
-        return a.createElement(r.h, { onEnter: l }, n);
-      }
-      function c(e) {
+        r = n(95082);
+      function s(e) {
         return "bundle" == e
           ? "bundle"
           : "sub" == e
@@ -14617,17 +14608,17 @@
           ? "app"
           : null;
       }
-      function d(e) {
+      function o(e) {
         return 2 == e ? "bundle" : 1 == e ? "sub" : 0 == e ? "app" : null;
       }
-      const m = (e) => {
+      const l = (e) => {
         const { appid: t } = e,
           n = a.createElement(
             "div",
             { className: "ImpressionTrackedElement" },
             e.children,
           );
-        return t ? a.createElement(l, { appID: t }, n) : n;
+        return t ? a.createElement(r.ZP, { appID: t }, n) : n;
       };
     },
     90362: (e, t, n) => {
@@ -15265,11 +15256,11 @@
           case o.FX.RearLeftUpper:
             return s.createElement(O, { bIsKnockout: n, className: t });
           case o.FX.RearRightUpper:
-            return s.createElement(H, { bIsKnockout: n, className: t });
-          case o.FX.RearLeftLower:
-            return s.createElement(N, { bIsKnockout: n, className: t });
-          case o.FX.RearRightLower:
             return s.createElement(V, { bIsKnockout: n, className: t });
+          case o.FX.RearLeftLower:
+            return s.createElement(H, { bIsKnockout: n, className: t });
+          case o.FX.RearRightLower:
+            return s.createElement(N, { bIsKnockout: n, className: t });
           default:
             return s.createElement(U, { bIsKnockout: n, className: t });
         }
@@ -16358,7 +16349,7 @@
               }),
             );
       }
-      function N(e) {
+      function H(e) {
         var { bIsKnockout: t } = e,
           n = (0, r._T)(e, ["bIsKnockout"]);
         return t
@@ -16406,7 +16397,7 @@
               }),
             );
       }
-      function H(e) {
+      function V(e) {
         var { bIsKnockout: t } = e,
           n = (0, r._T)(e, ["bIsKnockout"]);
         return t
@@ -16454,7 +16445,7 @@
               }),
             );
       }
-      function V(e) {
+      function N(e) {
         var { bIsKnockout: t } = e,
           n = (0, r._T)(e, ["bIsKnockout"]);
         return t
@@ -16929,6 +16920,29 @@
         );
       }
     },
+    95082: (e, t, n) => {
+      "use strict";
+      n.d(t, { BR: () => o, ZP: () => l });
+      var a = n(47427),
+        i = n(58112),
+        r = n(25006);
+      const s = a.createContext({
+        AddImpression: () => {
+          console.log("Impression Tracking not enabled");
+        },
+        BIsValid: () => !1,
+      });
+      function o() {
+        return a.useContext(s);
+      }
+      function l(e) {
+        const { appID: t, feature: n, depth: s, children: l } = e,
+          c = (0, r.PZ)(n, s),
+          d = o(),
+          m = a.useCallback(() => t && d.AddImpression(t, c), [d, t, c]);
+        return a.createElement(i.h, { onEnter: m }, l);
+      }
+    },
     83059: (e, t, n) => {
       "use strict";
       n.d(t, { p: () => r });
@@ -16937,45 +16951,6 @@
       function r() {
         return window.innerWidth < parseInt(i().strMaxMobileWidth);
       }
-    },
-    8789: (e, t, n) => {
-      "use strict";
-      n.d(t, { E: () => c });
-      var a = n(85556),
-        i = n(77151),
-        r = n(37563),
-        s = n(46009),
-        o = n(60616);
-      class l {
-        constructor() {
-          (this.m_mapAppToSNRs = new Map()), (this.m_rgImpressionsToAdd = []);
-        }
-        AddImpression(e, t) {
-          let n = !1;
-          i.jg.Get().BAppImpressionsAllowed()
-            ? (this.m_mapAppToSNRs.has(e)
-                ? -1 == this.m_mapAppToSNRs.get(e).indexOf(t) &&
-                  (this.m_mapAppToSNRs.get(e).push(t), (n = !0))
-                : (this.m_mapAppToSNRs.set(e, [t]), (n = !0)),
-              n &&
-                (this.m_rgImpressionsToAdd.push(`${e}@${t}`),
-                this.UpdateCookie()))
-            : "dev" === r.De.WEB_UNIVERSE &&
-              console.log("Cookie Prefs: Not allowing App Impressions");
-        }
-        UpdateCookie() {
-          const e = [
-            (0, s.bG)("app_impressions") || "",
-            ...this.m_rgImpressionsToAdd,
-          ].join("|");
-          this.m_rgImpressionsToAdd = [];
-          encodeURIComponent(e).length <= 3200 &&
-            (0, s.I1)("app_impressions", e);
-        }
-      }
-      (0, a.gn)([(0, o.D)(1e3)], l.prototype, "UpdateCookie", null);
-      const c = new l();
-      window.g_ImpressionTracker = c;
     },
     80445: (e, t, n) => {
       "use strict";

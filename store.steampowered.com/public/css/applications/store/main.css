@@ -1382,6 +1382,16 @@ button._1kn7017HPxqS3NKx_wnI4e.DialogButton:enabled:active:hover:active.BarButto
   background: #fff;
   color: #000;
 }
+button._1kn7017HPxqS3NKx_wnI4e.DialogButton.gpfocus.Glyph,
+button._1kn7017HPxqS3NKx_wnI4e.DialogButton:active.Glyph,
+button._1kn7017HPxqS3NKx_wnI4e.DialogButton:enabled.gpfocus.Glyph,
+button._1kn7017HPxqS3NKx_wnI4e.DialogButton:enabled:active.Glyph,
+button._1kn7017HPxqS3NKx_wnI4e.DialogButton:active.gpfocus.Glyph,
+button._1kn7017HPxqS3NKx_wnI4e.DialogButton:active:active.Glyph,
+button._1kn7017HPxqS3NKx_wnI4e.DialogButton:enabled:active:hover.gpfocus.Glyph,
+button._1kn7017HPxqS3NKx_wnI4e.DialogButton:enabled:active:hover:active.Glyph {
+  filter: brightness(30%);
+}
 .S-_LaQG5eEOM2HWZ-geJI button._1kn7017HPxqS3NKx_wnI4e.DialogButton.gpfocus,
 .S-_LaQG5eEOM2HWZ-geJI
   button._1kn7017HPxqS3NKx_wnI4e.DialogButton:enabled.gpfocus,

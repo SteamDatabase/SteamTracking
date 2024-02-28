@@ -2611,6 +2611,7 @@
                     br: a.FE.readBool,
                     bw: a.Xc.writeBool,
                   },
+                  computed: { n: 7, br: a.FE.readBool, bw: a.Xc.writeBool },
                 },
               }),
             x.sm_m

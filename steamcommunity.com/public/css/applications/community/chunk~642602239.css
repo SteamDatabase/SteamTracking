@@ -1973,6 +1973,16 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   top: 89px;
   z-index: 1;
 }
+._3p5KOjA4ruC7BQyqMZNe1P.NcOahVPzIJEqCPIb8UE9e {
+  padding: 5px;
+  padding-left: 32px;
+  font-size: 14px;
+  position: absolute;
+  bottom: -5px;
+  background-color: #523d07;
+  z-index: 1;
+  box-shadow: 2px 2px 5px #000;
+}
 ._2Zq0UvVupNHRmv-AcOcE89,
 ._2TYAoWWtHLG3CtVbJF8al0 {
   color: #556b2f;

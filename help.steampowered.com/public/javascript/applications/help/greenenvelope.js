@@ -521,7 +521,7 @@
       })(q || (q = {}));
       const j = 172800,
         Q = 600,
-        z = new f.s("SteamNotificationStore"),
+        z = new f.sO("SteamNotificationStore"),
         X = z.Debug,
         W = z.Error,
         Z = z.Warning;
@@ -2258,7 +2258,7 @@
         lt = i(938),
         ct = i(4289),
         mt = i(7936),
-        dt = i(3724);
+        dt = i(2520);
       class ut {
         constructor(e) {
           (this.m_nLastUpdated = 0),

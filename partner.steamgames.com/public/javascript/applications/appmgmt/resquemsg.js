@@ -504,7 +504,7 @@
       "use strict";
       s.r(t), s.d(t, { default: () => X });
       var r = s(47427),
-        n = s(82756);
+        n = s(37341);
       const o = (0, n.kQ)("physical_goods", "application_config");
       var a = s(85556),
         i = s(79545),

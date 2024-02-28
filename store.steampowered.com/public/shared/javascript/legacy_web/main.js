@@ -1,17 +1,17 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "8720010";
+var CLSTAMP = "8731315";
 (() => {
   "use strict";
   var e,
     t,
     n = {
-      855: (e, t, n) => {
+      985: (e, t, n) => {
         n.d(t, { eV: () => r, Rr: () => a, oH: () => l });
         var i,
           r,
           a,
-          o = n(209);
+          o = n(472);
         class s {
           constructor(e) {
             this.m_config = e;
@@ -224,7 +224,7 @@ var CLSTAMP = "8720010";
           }
         }
       },
-      753: (e, t, n) => {
+      102: (e, t, n) => {
         function i(e, t) {
           return !!e && "object" == typeof e.SteamClient && t in e.SteamClient;
         }
@@ -237,7 +237,7 @@ var CLSTAMP = "8720010";
         }
         n.d(t, { U5: () => r });
       },
-      103: (e, t, n) => {
+      601: (e, t, n) => {
         function i(e, t) {
           return (function (e, t) {
             const n = e.findIndex(t);
@@ -246,7 +246,7 @@ var CLSTAMP = "8720010";
         }
         n.d(t, { Zf: () => i });
       },
-      783: (e, t, n) => {
+      44: (e, t, n) => {
         function i(e, t, n) {
           return {
             get() {
@@ -261,7 +261,7 @@ var CLSTAMP = "8720010";
         }
         n.d(t, { a: () => i });
       },
-      209: (e, t, n) => {
+      472: (e, t, n) => {
         n.d(t, {
           Ar: () => p,
           Hf: () => h,
@@ -270,8 +270,8 @@ var CLSTAMP = "8720010";
           vq: () => c,
         });
         var i = n(556),
-          r = n(103),
-          a = n(783);
+          r = n(601),
+          a = n(44);
         class o {
           constructor() {
             this.m_vecCallbacks = [];
@@ -396,16 +396,14 @@ var CLSTAMP = "8720010";
         }
         (0, i.gn)([a.a], h.prototype, "Unregister", null);
       },
-      286: (e, t, n) => {
+      739: (e, t, n) => {
         "VALVE_PUBLIC_PATH" in window
           ? (n.p = window.VALVE_PUBLIC_PATH)
           : console.error(
               "VALVE_PUBLIC_PATH not defined; check for a call to CHTMLHelpers::WebpackConfigScriptlet",
             ),
-          console.assert(
-            123 === Array.from(new Set([123]))[0],
-            "Should not include prototypejs.",
-          );
+          123 !== Array.from(new Set([123]))[0] &&
+            console.error("Should not include prototypejs.");
       },
       311: (e) => {
         e.exports = jQuery;
@@ -507,7 +505,7 @@ var CLSTAMP = "8720010";
       "javascript/legacy_web/" +
       { 380: "desktop", 511: "gamepad" }[e] +
       ".js?contenthash=" +
-      { 380: "1c84b69a41cf77febaf7", 511: "1908d08a5d752c1e8e9b" }[e]),
+      { 380: "a4d856d0a358288dee64", 511: "cd684a1ddcfce89241f7" }[e]),
     (r.miniCssF = (e) =>
       "css/legacy_web/gamepad.css?contenthash=be44dba8ea7ddd48708c"),
     (r.g = (function () {
@@ -723,10 +721,10 @@ var CLSTAMP = "8720010";
     })(),
     (() => {
       var e = r(556),
-        t = (r(286), r(311)),
+        t = (r(739), r(311)),
         n = r.n(t),
-        i = r(855),
-        a = r(783);
+        i = r(985),
+        a = r(44);
       let o = [
         { index: 0, type: i.eV.OK, category: "action" },
         { index: 1, type: i.eV.CANCEL, category: "action" },
@@ -782,12 +780,12 @@ var CLSTAMP = "8720010";
         }
       }
       (0, e.gn)([a.a], s.prototype, "PollGamepads", null);
-      var c = r(753);
+      var c = r(102);
       function l(t) {
         return (0, e.mG)(this, void 0, void 0, function* () {
           const { InitializeGamepadNavigation: e } = yield r
             .e(511)
-            .then(r.bind(r, 637));
+            .then(r.bind(r, 537));
           e(t);
         });
       }
@@ -803,7 +801,7 @@ var CLSTAMP = "8720010";
                   (0, e.mG)(this, void 0, void 0, function* () {
                     const { InitializeForDesktop: e } = yield r
                       .e(380)
-                      .then(r.bind(r, 54));
+                      .then(r.bind(r, 121));
                     e();
                   });
                 })()

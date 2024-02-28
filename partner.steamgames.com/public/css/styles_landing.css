@@ -781,7 +781,8 @@ p {
 		
 	}
 
-    .landingTable.largeText .td {
+    .landingTable.largeText .td,
+    .landingTable.largeText td {
         font-size: 14px;
     }
 
@@ -3656,4 +3657,16 @@ ul.pub_rights li {
 .launch_discount_length_banner {
 	font-size: 12px;
 	color: #808285;
+}
+
+div#webapi_panel a.webapi_key_secured {
+	color: #1dce68;
+	font-size: 14px;
+	font-family: monospace;
+}
+
+div#webapi_panel a.webapi_key_unsecured {
+	color: #f8cf3d;
+	font-size: 14px;
+	font-family: monospace;
 }

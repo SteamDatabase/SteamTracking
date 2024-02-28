@@ -935,7 +935,7 @@
     68324: (e, t, n) => {
       "use strict";
       n.d(t, { Pw: () => a, c8: () => o, hB: () => r, zB: () => s });
-      const i = new (n(68785).s)("video"),
+      const i = new (n(68785).sO)("video"),
         r = (i.Info, i.Debug);
       i.Error, i.Warning;
       function s(e) {
@@ -1093,10 +1093,10 @@
           r = n + ((1e3 * e.GetStartTime()) % i);
         return Math.floor(r / i) + t.segmentTemplate.nStartNumber;
       }
-      function k(e) {
+      function O(e) {
         return D(e.segmentTemplate.strInitialization, e.strID, 0);
       }
-      class O {
+      class k {
         constructor() {
           (this.m_strType = void 0),
             (this.m_nMinBufferTime = 0),
@@ -1563,7 +1563,7 @@
           return A(this.m_representation);
         }
         GetCurrentSegmentInitializationURL() {
-          return k(this.m_representation);
+          return O(this.m_representation);
         }
         BIsCurrentRepresentation(e) {
           return e && e.strID == this.m_representation.strID;
@@ -1753,7 +1753,7 @@
             t = 0,
             n = !1;
           if (this.m_bNeedInitSegment)
-            (e = k(this.m_representation)), (t = 0), (n = !0);
+            (e = O(this.m_representation)), (t = 0), (n = !0);
           else {
             if (this.m_nNextSegment < 0)
               return void console.error(
@@ -2134,7 +2134,7 @@
               (this.m_strCDNAuthURLParameters = t);
             let i = yield this.DownloadMPD();
             if (i)
-              if (((this.m_mpd = new O()), this.m_mpd.BParse(i.data, e))) {
+              if (((this.m_mpd = new k()), this.m_mpd.BParse(i.data, e))) {
                 if (
                   (this.IsLiveContent() &&
                     (this.m_mpd.GetMinimumUpdatePeriod() > 0 &&
@@ -4259,7 +4259,7 @@
     },
     77131: (e, t, n) => {
       "use strict";
-      n.d(t, { R: () => v });
+      n.d(t, { R: () => C });
       var i = n(85556),
         r = n(77936),
         s = n(20417),
@@ -4457,14 +4457,15 @@
           void 0,
         );
       var h = n(24701),
-        p = n(65255);
-      class g {
+        p = n(65255),
+        g = n(45651);
+      class _ {
         constructor(e, t) {
-          var n, i, r, s;
+          var n, i, r, s, o, a;
           (this.m_socket = null),
-            (this.Log = new c.s("CWebSocketConnection", () => this.m_sName)),
+            (this.Log = new c.sO("CWebSocketConnection", () => this.m_sName)),
             (this.m_bDisconnectRequested = !1),
-            (this.m_bReconnecting = !1),
+            (this.m_bConnecting = !1),
             (this.m_sName = e),
             (this.m_fnOnMessageHandler = t.fnOnMessageHandler),
             (this.m_fnOnCloseHandler = t.fnOnCloseHandler),
@@ -4472,45 +4473,73 @@
               null !== (n = t.fnOnReconnectHandler) && void 0 !== n
                 ? n
                 : () => {}),
-            (this.m_nMaximumConnectAttempt =
-              null !== (i = t.nMaximumConnectAttempts) && void 0 !== i
-                ? i
-                : 20),
-            (this.m_nConnectionTimeoutMs =
-              null !== (r = t.nConnectionTimeoutMS) && void 0 !== r ? r : 1e3),
+            (this.m_nConnectAttemptsMax =
+              null !== (i = t.nConnectAttemptsMax) && void 0 !== i ? i : 20),
+            (this.m_nConnectAttemptTimeoutMs =
+              null !== (r = t.nConnectAttemptTimeoutMs) && void 0 !== r
+                ? r
+                : 1e3),
             (this.m_bReconnectOnFailure =
-              null !== (s = t.bReconnectOnFailure) && void 0 !== s && s);
+              null !== (s = t.bReconnectOnFailure) && void 0 !== s && s),
+            (this.m_nReconnectAttemptsMax =
+              null !== (o = t.nReconnectAttemptsMax) && void 0 !== o ? o : 1e3),
+            (this.m_nReconnectAttemptTimeoutMs =
+              null !== (a = t.nReconnectAttemptTimeoutMs) && void 0 !== a
+                ? a
+                : 1e4);
         }
         get name() {
           return this.m_sName;
         }
         Connect(e) {
           return (0, i.mG)(this, void 0, void 0, function* () {
-            this.m_sURL = e;
-            let t = 0;
+            return (
+              (this.m_sURL = e),
+              this.ConnectWithRetry(
+                this.m_sURL,
+                this.m_nConnectAttemptsMax,
+                this.m_nConnectAttemptTimeoutMs,
+              )
+            );
+          });
+        }
+        Reconnect() {
+          return (0, i.mG)(this, void 0, void 0, function* () {
+            return this.ConnectWithRetry(
+              this.m_sURL,
+              this.m_nReconnectAttemptsMax,
+              this.m_nReconnectAttemptTimeoutMs,
+            );
+          });
+        }
+        GetInterAttemptBackoffMs(e) {
+          return 1e3 * (0, g.Lh)(e, 1, 5);
+        }
+        ConnectWithRetry(e, t, n) {
+          return (0, i.mG)(this, void 0, void 0, function* () {
+            this.m_bConnecting = !0;
+            let i = 0;
             do {
               try {
-                const t = yield this.InternalConnect(
-                  e,
-                  this.m_nConnectionTimeoutMs,
-                );
-                if (1 == t.result) return t;
+                const t = yield this.ConnectToSocket(e, n);
+                if (1 == t.result) return (this.m_bConnecting = !1), t;
                 this.Log.Warning(
-                  `failed to connect: ${t.result} - ${t.message}`,
+                  `connect attempt failed: ${t.result} - ${t.message}`,
                 );
               } catch (e) {
                 this.Log.Warning(
-                  `failed to connect: exception ${e.name} - ${e}`,
+                  `connect attempt failed: exception ${e.name} - ${e}`,
                 );
               }
-              this.Log.Warning(
-                `re-try connection ${t}/${this.m_nMaximumConnectAttempt}`,
-              ),
+              const r = this.GetInterAttemptBackoffMs(i);
+              this.Log.Info(`connect retry: attempt:${i}/${t} backoff:${r}`),
+                yield new Promise((e) => setTimeout(e, r)),
                 (this.m_socket = null),
-                (t += 1);
-            } while (t < this.m_nMaximumConnectAttempt);
+                (i += 1);
+            } while (i < t);
             return (
-              this.Log.Error("maximum retry limit exceeeded, bailing"),
+              this.Log.Error("connect retry: limit exceeeded, bailing"),
+              (this.m_bConnecting = !1),
               { result: 2, message: "not ready, exceeded retry count" }
             );
           });
@@ -4525,16 +4554,14 @@
         }
         BShouldReconnect() {
           return (
-            !this.m_bReconnecting &&
+            !this.m_bConnecting &&
             !!this.m_bReconnectOnFailure &&
             !this.m_bDisconnectRequested
           );
         }
         StartReconnect() {
           return (0, i.mG)(this, void 0, void 0, function* () {
-            this.Log.Info("start reconnect"),
-              (this.m_bReconnecting = !0),
-              (this.m_socket = null);
+            this.Log.Info("start reconnect"), (this.m_socket = null);
             if (1 != (yield this.Connect(this.m_sURL)).result)
               return (
                 this.Log.Error("failed to re-connect to websocket after close"),
@@ -4546,11 +4573,10 @@
                 })
               );
             this.Log.Info("reconnect successful"),
-              (this.m_bReconnecting = !1),
               this.m_fnOnReconnectHandler({ connection: this, eResult: 1 });
           });
         }
-        InternalConnect(e, t) {
+        ConnectToSocket(e, t) {
           return (0, i.mG)(this, void 0, void 0, function* () {
             if (null != this.m_socket)
               return this.m_socket.readyState != WebSocket.OPEN
@@ -4578,8 +4604,8 @@
             return (yield this.WaitForSocketOpen(this.m_socket, t))
               ? (this.Log.Info("connection ready"),
                 { result: 1, message: "ready" })
-              : (this.Log.Warning("failed to connect to websocket"),
-                { result: 2, message: "failed to connect to websocket" });
+              : (this.Log.Warning("failed to reach open state"),
+                { result: 2, message: "failed to reach open state" });
           });
         }
         WaitForSocketOpen(e, t) {
@@ -4613,7 +4639,7 @@
                 bIsExpectedToReconnect: !1,
               })
             );
-          if (this.m_bReconnecting) return;
+          if (this.m_bConnecting) return;
           this.Log.Warning("websocket unexpectedly closed");
           const t = this.BShouldReconnect();
           this.m_fnOnCloseHandler({
@@ -4636,28 +4662,28 @@
           }
         }
       }
-      (0, i.gn)([s.ak], g.prototype, "OnSocketError", null),
-        (0, i.gn)([s.ak], g.prototype, "OnSocketOpen", null),
-        (0, i.gn)([s.ak], g.prototype, "OnSocketClose", null),
-        (0, i.gn)([s.ak], g.prototype, "OnSocketMessage", null);
-      const _ = "localhost",
-        f = new c.s("WebUITransport");
-      class v {
+      (0, i.gn)([s.ak], _.prototype, "OnSocketError", null),
+        (0, i.gn)([s.ak], _.prototype, "OnSocketOpen", null),
+        (0, i.gn)([s.ak], _.prototype, "OnSocketClose", null),
+        (0, i.gn)([s.ak], _.prototype, "OnSocketMessage", null);
+      const f = "localhost",
+        v = new c.sO("WebUITransport");
+      class C {
         static Get() {
           return (
-            null == v.s_Singleton &&
+            null == C.s_Singleton &&
               p.De.IN_CLIENT &&
-              ((v.s_Singleton = new v()),
-              (window.WebUIServiceTransport = v.s_Singleton)),
-            v.s_Singleton
+              ((C.s_Singleton = new C()),
+              (window.WebUIServiceTransport = C.s_Singleton)),
+            C.s_Singleton
           );
         }
         static InstallErrorReportingStore(e) {
           this.sm_ErrorReportingStore = e;
         }
         ReportError(e) {
-          f.Warning(e);
-          const t = v.sm_ErrorReportingStore;
+          v.Warning(e);
+          const t = C.sm_ErrorReportingStore;
           t &&
             t.ReportError(new Error(e), {
               bIncludeMessageInIdentifier: !0,
@@ -4675,8 +4701,8 @@
             fnOnCloseHandler: this.OnWebsocketClose,
             fnOnReconnectHandler: this.OnWebsocketReconnect,
           };
-          (this.m_connectionSteamUI = new g("steamUI", e)),
-            (this.m_connectionClientdll = new g("clientdll", e)),
+          (this.m_connectionSteamUI = new _("steamUI", e)),
+            (this.m_connectionClientdll = new _("clientdll", e)),
             (0, l.S)().SetDefaultTransport(this),
             (0, l.S)().SetDefaultHandlerRegistry(this.m_messageHandlers),
             h.zw.RegisterForNotifyStartShutdown(this.OnStartShutdown);
@@ -4690,7 +4716,7 @@
             const a = i.eClientExecutionSite;
             if (null == a || 0 == a)
               return (
-                f.Error(`SendMsg: Invalid client execution site: ${a}`),
+                v.Error(`SendMsg: Invalid client execution site: ${a}`),
                 void s(`Transport SendMsg: invalid client execution site ${a}`)
               );
             const l =
@@ -4702,10 +4728,10 @@
                   ? o
                   : 1;
               this.m_mapServiceCallErrorCount.set(e, t + 1);
-              const n = `SendMsg: Attempted to send message but socket wasn't ready: ${l.name} - ${e}`;
+              const n = `SendMsg: Attempt to send message but socket wasn't ready: ${l.name} - ${e}`;
               return (
                 1 == t && this.ReportError(n),
-                f.Warning(n + ` error count: ${t}`),
+                v.Warning(n + ` error count: ${t}`),
                 void s("Transport SendMsg: socket not ready")
               );
             }
@@ -4715,7 +4741,7 @@
               t.Hdr().set_jobid_source("" + c);
             if (1 != l.SendSerializedMessage(t.Serialize()))
               return (
-                f.Error("SendMsg: Failed to send message"),
+                v.Error("SendMsg: Failed to send message"),
                 void s("Transport SendMsg: failed to send message")
               );
             this.m_mapPendingMethodRequests.set(c, {
@@ -4727,41 +4753,52 @@
           });
         }
         SendNotification(e, t, n) {
-          const i = n.eClientExecutionSite;
-          if (null == i || 0 == i)
-            return f.Error("SendMsg: Invliad client execution site:", i), !1;
-          const r =
-            2 == i ? this.m_connectionClientdll : this.m_connectionSteamUI;
-          if (!r.BCanSendMessages())
+          var i;
+          const r = n.eClientExecutionSite;
+          if (null == r || 0 == r)
             return (
-              f.Error(
-                "SendMsg: Attempted to send message but socket wasn't ready",
-              ),
+              v.Error(`SendNotification: Invalid client execution site: ${r}`),
               !1
             );
+          const s =
+            2 == r ? this.m_connectionClientdll : this.m_connectionSteamUI;
+          if (!s.BCanSendMessages()) {
+            const t =
+              null !== (i = this.m_mapServiceCallErrorCount.get(e)) &&
+              void 0 !== i
+                ? i
+                : 1;
+            this.m_mapServiceCallErrorCount.set(e, t + 1);
+            const n = `SendNotification: Attempt to send message but socket wasn't ready: ${s.name} - ${e}`;
+            return (
+              1 == t && this.ReportError(n),
+              v.Warning(n + ` error count: ${t}`),
+              !1
+            );
+          }
           t.SetEMsg(146), t.Hdr().set_target_job_name(e);
-          return 1 == r.SendSerializedMessage(t.Serialize());
+          return 1 == s.SendSerializedMessage(t.Serialize());
         }
         MakeReady() {
           return (0, i.mG)(this, void 0, void 0, function* () {
             this.m_transportInfo =
               yield SteamClient.WebUITransport.GetTransportInfo();
-            const e = `ws://${_}:${this.m_transportInfo.portSteamUI}/transportsocket/`,
-              t = `ws://${_}:${this.m_transportInfo.portClientdll}/transportsocket/`;
+            const e = `ws://${f}:${this.m_transportInfo.portSteamUI}/transportsocket/`,
+              t = `ws://${f}:${this.m_transportInfo.portClientdll}/transportsocket/`;
             let n = yield this.m_connectionSteamUI.Connect(e);
             if (1 != n.result)
-              return f.Error("MakeReady: failed to connect to SteamUI"), n;
+              return v.Error("MakeReady: failed to connect to SteamUI"), n;
             let i = yield this.AuthConnection(this.m_connectionSteamUI);
             return 1 != i
-              ? (f.Error("MakeReady: failed to auth to SteamUI"), n)
+              ? (v.Error("MakeReady: failed to auth to SteamUI"), n)
               : ((n = yield this.m_connectionClientdll.Connect(t)),
                 1 != n.result
-                  ? (f.Error("MakeReady: failed to connect to clientdll"), n)
+                  ? (v.Error("MakeReady: failed to connect to clientdll"), n)
                   : ((i = yield this.AuthConnection(
                       this.m_connectionClientdll,
                     )),
                     1 != i
-                      ? (f.Error("MakeReady: failed to auth to clientdll"), n)
+                      ? (v.Error("MakeReady: failed to auth to clientdll"), n)
                       : n));
           });
         }
@@ -4776,7 +4813,7 @@
                 eClientExecutionSite: 1,
                 sAuthKey: this.m_transportInfo.authKeySteamUI,
               }
-            : (f.Error(
+            : (v.Error(
                 "GetAuthInfoForConnection: failed to identify connection",
               ),
               { eClientExecutionSite: 0, sAuthKey: "" });
@@ -4790,7 +4827,7 @@
         OnWebsocketReconnect(e) {
           if (1 != e.eResult)
             return (
-              f.Error("failed to reconnect to steam client"),
+              v.Error("failed to reconnect to steam client"),
               void this.FailAllPendingRequests()
             );
           this.FailAllPendingRequests(), this.AuthConnection(e.connection);
@@ -4861,11 +4898,11 @@
           );
         }
       }
-      (v.s_Singleton = null),
-        (0, i.gn)([s.ak], v.prototype, "OnWebsocketReconnect", null),
-        (0, i.gn)([s.ak], v.prototype, "OnWebsocketClose", null),
-        (0, i.gn)([s.ak], v.prototype, "OnWebsocketMessage", null),
-        (0, i.gn)([s.ak], v.prototype, "OnStartShutdown", null);
+      (C.s_Singleton = null),
+        (0, i.gn)([s.ak], C.prototype, "OnWebsocketReconnect", null),
+        (0, i.gn)([s.ak], C.prototype, "OnWebsocketClose", null),
+        (0, i.gn)([s.ak], C.prototype, "OnWebsocketMessage", null),
+        (0, i.gn)([s.ak], C.prototype, "OnStartShutdown", null);
     },
     95315: (e, t, n) => {
       "use strict";
@@ -5423,8 +5460,8 @@
         o = n(50423),
         a = n(60616),
         l = n(16997),
-        c = n(37066),
-        u = n(77936),
+        c = n(77936),
+        u = n(37066),
         d = n(31846),
         m = n(37563),
         h = n(62210),
@@ -5599,21 +5636,21 @@
           "window_moved" == e.data && this.OnResize(),
             "popup-created" == e.data && this.OnCreateInternal();
         }
-        Show(e = u.IF.k_EWindowBringToFrontAndForceOS) {
+        Show(e = c.IF.k_EWindowBringToFrontAndForceOS) {
           let t;
           (t =
             "boolean" == typeof e
               ? e
-                ? u.IF.k_EWindowBringToFrontAndForceOS
-                : u.IF.k_EWindowBringToFrontInvalid
+                ? c.IF.k_EWindowBringToFrontAndForceOS
+                : c.IF.k_EWindowBringToFrontInvalid
               : e),
             window.SteamClient && (this.m_rgParams.eCreationFlags |= _.Hidden),
             this.m_rgParams.eCreationFlags & _.NotFocusable &&
-              (t = u.IF.k_EWindowBringToFrontInvalid),
+              (t = c.IF.k_EWindowBringToFrontInvalid),
             this.BIsValid() &&
               (this.BIsClosed()
                 ? ((this.m_popup = void 0), (this.m_element = void 0))
-                : t != u.IF.k_EWindowBringToFrontInvalid && this.Focus(t));
+                : t != c.IF.k_EWindowBringToFrontInvalid && this.Focus(t));
           let n,
             i,
             r,
@@ -5661,7 +5698,7 @@
             I.AddTrackedPopup(this),
             s &&
               (this.OnCreateInternal(),
-              t != u.IF.k_EWindowBringToFrontInvalid && this.Focus(t)));
+              t != c.IF.k_EWindowBringToFrontInvalid && this.Focus(t)));
         }
         RemoveEventListeners() {
           this.window.removeEventListener(
@@ -5677,19 +5714,15 @@
             this.window.removeEventListener("message", this.OnMessage);
         }
         RenderInternal(e, t, n) {
-          var i;
           this.m_bCreated
             ? (this.browser_info &&
-                ((i = this.browser_info).m_eBrowserType ==
-                  c.i_.EBrowserType_OpenVROverlay ||
-                  i.m_eBrowserType ==
-                    c.i_.EBrowserType_OpenVROverlay_Dashboard) &&
+                (0, u.Su)(this.browser_info.m_eBrowserType) &&
                 (t.ownerDocument.body.className += " VR"),
               this.Render(e, t),
               this.OnLoad(),
               e.SteamClient &&
                 !this.m_bCreateHidden &&
-                (n != u.IF.k_EWindowBringToFrontInvalid
+                (n != c.IF.k_EWindowBringToFrontInvalid
                   ? e.SteamClient.Window.BringToFront(n)
                   : e.SteamClient.Window.ShowWindow()))
             : (this.m_onCreateRender = () => this.RenderInternal(e, t, n));
@@ -5733,8 +5766,8 @@
         get params() {
           return this.m_rgParams;
         }
-        Focus(e = u.IF.k_EWindowBringToFrontAndForceOS) {
-          e != u.IF.k_EWindowBringToFrontInvalid &&
+        Focus(e = c.IF.k_EWindowBringToFrontAndForceOS) {
+          e != c.IF.k_EWindowBringToFrontInvalid &&
             (this.m_popup &&
             void 0 !== this.m_popup.SteamClient &&
             void 0 !== this.m_popup.SteamClient.Window
@@ -6030,51 +6063,51 @@
             void 0 !== n.top && (a += ",top=" + n.top),
             (a += ",resizeable,status=0,toolbar=0,menubar=0,location=0");
           let l = "about:blank",
-            c = [];
-          c.push("createflags=" + t.eCreationFlags),
-            t.minWidth && c.push("minwidth=" + t.minWidth),
-            t.minHeight && c.push("minheight=" + t.minHeight),
+            u = [];
+          u.push("createflags=" + t.eCreationFlags),
+            t.minWidth && u.push("minwidth=" + t.minWidth),
+            t.minHeight && u.push("minheight=" + t.minHeight),
             t.maxWidth &&
               t.maxWidth != 1 / 0 &&
-              c.push("maxwidth=" + t.maxWidth),
+              u.push("maxwidth=" + t.maxWidth),
             t.maxHeight &&
               t.maxHeight != 1 / 0 &&
-              c.push("maxheight=" + t.maxHeight),
+              u.push("maxheight=" + t.maxHeight),
             t.target_browser
-              ? (c.push("pid=" + t.target_browser.m_unPID),
-                c.push("browser=" + t.target_browser.m_nBrowserID),
+              ? (u.push("pid=" + t.target_browser.m_unPID),
+                u.push("browser=" + t.target_browser.m_nBrowserID),
                 t.target_browser.m_eBrowserType
-                  ? c.push("browserType=" + t.target_browser.m_eBrowserType)
-                  : t.browserType && c.push("browserType=" + t.browserType),
+                  ? u.push("browserType=" + t.target_browser.m_eBrowserType)
+                  : t.browserType && u.push("browserType=" + t.browserType),
                 t.availscreenwidth &&
                   t.availscreenheight &&
-                  (c.push("screenavailwidth=" + t.availscreenwidth),
-                  c.push("screenavailheight=" + t.availscreenheight)))
-              : t.browserType && c.push("browserType=" + t.browserType),
-            t.strVROverlayKey && c.push("vrOverlayKey=" + t.strVROverlayKey),
+                  (u.push("screenavailwidth=" + t.availscreenwidth),
+                  u.push("screenavailheight=" + t.availscreenheight)))
+              : t.browserType && u.push("browserType=" + t.browserType),
+            t.strVROverlayKey && u.push("vrOverlayKey=" + t.strVROverlayKey),
             t.strRestoreDetails &&
-              c.push("restoredetails=" + t.strRestoreDetails),
-            t.window_opener_id && c.push("openerid=" + t.window_opener_id),
+              u.push("restoredetails=" + t.strRestoreDetails),
+            t.window_opener_id && u.push("openerid=" + t.window_opener_id),
             t.parent_container_popup_id &&
-              c.push("parentcontainerpopupid=" + t.parent_container_popup_id),
+              u.push("parentcontainerpopupid=" + t.parent_container_popup_id),
             t.center_on_window &&
               void 0 === n.left &&
               void 0 === n.top &&
-              c.push(
+              u.push(
                 "centerOnBrowserID=" +
                   t.center_on_window.SteamClient.Browser.GetBrowserID(),
               ),
             t.strUserAgent &&
-              c.push(
+              u.push(
                 "useragent=" +
                   t.strUserAgent +
                   "/" +
-                  (0, u.MR)(m.De.LAUNCHER_TYPE),
+                  (0, c.MR)(m.De.LAUNCHER_TYPE),
               ),
-            t.hwndParent && c.push("hwndParent=" + t.hwndParent),
-            t.bPinned && c.push("pinned=true"),
-            t.bModal && c.push("modal=true"),
-            c && (l += "?" + c.join("&"));
+            t.hwndParent && u.push("hwndParent=" + t.hwndParent),
+            t.bPinned && u.push("pinned=true"),
+            t.bModal && u.push("modal=true"),
+            u && (l += "?" + u.join("&"));
           let d = (t.owner_window || window).open(l, e, a);
           if (!d)
             return (
@@ -6283,7 +6316,7 @@
         DC: () => D,
         GY: () => re,
         JM: () => I,
-        MP: () => O,
+        MP: () => k,
         Nu: () => M,
         Nw: () => V,
         P2: () => G,
@@ -6295,7 +6328,7 @@
         Xe: () => H,
         Xn: () => N,
         aF: () => se,
-        bF: () => k,
+        bF: () => O,
         cL: () => W,
         cc: () => K,
         ct: () => Y,
@@ -6443,7 +6476,7 @@
           },
         });
       }
-      function k(e, t = null) {
+      function O(e, t = null) {
         const n = (0, l.bY)(),
           r = (0, a.M)(),
           u = (0, o.useQueryClient)();
@@ -6462,7 +6495,7 @@
           },
         });
       }
-      function O(e, t) {
+      function k(e, t) {
         const n = (0, l.bY)(),
           r = (0, o.useQueryClient)();
         return (0, o.useMutation)({
@@ -7373,7 +7406,7 @@
         c = n(20417),
         u = n(37563),
         d = n(82493);
-      const m = new s.s("FocusNavigation").Debug;
+      const m = new s.sO("FocusNavigation").Debug;
       function h(e) {
         const {
             className: t,
@@ -7545,7 +7578,7 @@
         s = n(77262),
         o = n(68785);
       n(28781);
-      const a = new o.s("GamepadEvents").Debug;
+      const a = new o.sO("GamepadEvents").Debug;
       function l(e, t, n) {
         void 0 === n &&
           (n = [
@@ -7675,7 +7708,7 @@
           A = (0, h.Ze)(1, () => (null == M ? void 0 : M.HasContextMenu(L))),
           T = (0, p.M)(S);
         (0, p.B)(S);
-        const k = (0, a.BE)(R, A, T, D, t);
+        const O = (0, a.BE)(R, A, T, D, t);
         return (
           (!b.focusable && !b.focusableIfNoChildren) ||
             (L && L.Tree.BUseVirtualFocus()) ||
@@ -7695,13 +7728,13 @@
               ? r.createElement(
                   s.zQ,
                   Object.assign({}, S, {
-                    divRef: k,
+                    divRef: O,
                     node: L,
                     focusClassName: (0, o.Z)(f, "gpfocus"),
                     focusWithinClassName: (0, o.Z)(v, "gpfocuswithin"),
                   }),
                 )
-              : r.createElement("div", Object.assign({}, S, { ref: k })),
+              : r.createElement("div", Object.assign({}, S, { ref: O })),
           )
         );
       });
@@ -8418,7 +8451,7 @@
         d = n(68785),
         m = n(77262),
         h = n(78078);
-      const p = new d.s("FocusNavigation").Debug;
+      const p = new d.sO("FocusNavigation").Debug;
       class g {
         constructor(e, t, n) {
           (this.m_bActive = !1),
@@ -8623,8 +8656,8 @@
           }
         }
       }
-      const _ = new d.s("FocusNavigation").Debug,
-        f = new d.s("FocusNavigation").Assert,
+      const _ = new d.sO("FocusNavigation").Debug,
+        f = new d.sO("FocusNavigation").Assert,
         v = "focus-nav-show-debug-focus-ring";
       function C(e, t) {
         return (
@@ -9343,7 +9376,7 @@
       }
       var f = n(45651),
         v = n(48766);
-      const C = new c.s("ScrollSnap").Debug;
+      const C = new c.sO("ScrollSnap").Debug;
       let S = !1;
       let b;
       function w(e) {
@@ -9365,7 +9398,7 @@
           i = i.offsetParent;
         }
         for (i = null == e ? void 0 : e.parentElement; i; ) {
-          const { scrollTop: e, scrollLeft: r } = O(i);
+          const { scrollTop: e, scrollLeft: r } = k(i);
           if (((t -= e), (n -= r), "ownerDocument" in i)) {
             if ("fixed" === window.getComputedStyle(i).position) break;
           }
@@ -9455,7 +9488,7 @@
           e || (e = (0, m.kR)(o));
           let t = L(o),
             n = I(e, w(e)),
-            c = k(e),
+            c = O(e),
             u = { element: e, left: 0, top: 0 };
           if (
             (C(
@@ -9511,7 +9544,7 @@
         let c = !1;
         for (let e of s) {
           if (M(e.left) && M(e.top)) continue;
-          let t = k(e.element),
+          let t = O(e.element),
             i = t.scrollTop + e.top,
             r = t.scrollLeft + e.left;
           (r = f.Lh(r, 0, t.MaxScrollLeft())),
@@ -9647,17 +9680,17 @@
       }
       (0, i.gn)([a.a], A.prototype, "ResetScrollState", null);
       const T = new WeakMap();
-      function k(e) {
+      function O(e) {
         let t = T.get(e);
         return t || ((t = new A(e)), T.set(e, t)), t;
       }
-      function O(e) {
+      function k(e) {
         const t = T.get(e);
         return t
           ? { scrollLeft: t.scrollLeft, scrollTop: t.scrollTop }
           : { scrollLeft: e.scrollLeft, scrollTop: e.scrollTop };
       }
-      const x = new c.s("FocusNavigationMovement").Debug;
+      const x = new c.sO("FocusNavigationMovement").Debug;
       var B, N, P, G;
       !(function (e) {
         (e[(e.NONE = 0)] = "NONE"),
@@ -10627,8 +10660,8 @@
         s = n(68785),
         o = n(77262),
         a = n(3783);
-      const l = new s.s("FocusNavigation").Debug,
-        c = new s.s("GamepadEvents").Debug;
+      const l = new s.sO("FocusNavigation").Debug,
+        c = new s.sO("GamepadEvents").Debug;
       class u {
         constructor(e, t, n) {
           (this.m_onActivateCallbacks = new r.pB()),
@@ -11051,15 +11084,14 @@
     },
     35643: (e, t, n) => {
       "use strict";
-      n.d(t, { k$: () => m, o5: () => d });
+      n.d(t, { k$: () => d, o5: () => u });
       var i = n(85556),
-        r = n(37066),
-        s = n(47427),
-        o = n(53087),
-        a = n(77262),
-        l = n(20417),
-        c = n(37563);
-      const u = s.createContext(function (e, t) {
+        r = n(47427),
+        s = n(53087),
+        o = n(77262),
+        a = n(20417),
+        l = n(37563);
+      const c = r.createContext(function (e, t) {
         return {
           ShowVirtualKeyboard: () => {},
           ShowModalKeyboard: () => {},
@@ -11070,20 +11102,20 @@
           BIsElementValidForInput: () => !1,
         };
       });
-      function d(e) {
+      function u(e) {
         const { factory: t, children: n } = e,
-          i = s.useMemo(() => t.CreateVirtualKeyboardRef.bind(t), [t]);
-        return s.createElement(u.Provider, { value: i }, n);
+          i = r.useMemo(() => t.CreateVirtualKeyboardRef.bind(t), [t]);
+        return r.createElement(c.Provider, { value: i }, n);
       }
-      function m(e, t) {
+      function d(e, t) {
         const { onTextEntered: n } = e,
-          d = (0, i._T)(e, ["onTextEntered"]),
-          m = s.useRef(),
-          h = (0, c.qt)({ bSuppressAssert: !0 }),
-          p = s.useRef({ onTextEntered: () => null });
+          u = (0, i._T)(e, ["onTextEntered"]),
+          d = r.useRef(),
+          m = (0, l.qt)({ bSuppressAssert: !0 }),
+          h = r.useRef({ onTextEntered: () => null });
         Object.assign(
-          p.current,
-          Object.assign(Object.assign({}, d), {
+          h.current,
+          Object.assign(Object.assign({}, u), {
             onTextEntered:
               n ||
               ((e) =>
@@ -11141,89 +11173,92 @@
                     }
                     SteamClient.Input.ControllerKeyboardSendText(e);
                   }
-                })(e, h.IN_VR)),
+                })(e, m.IN_VR)),
             BIsElementValidForInput: () =>
-              m.current && document.activeElement == m.current,
+              d.current && document.activeElement == d.current,
           }),
         );
-        const g = (function (e, t) {
-            const n = s.useRef(),
-              i = s.useContext(u);
+        const p = (function (e, t) {
+            const n = r.useRef(),
+              i = r.useContext(c);
             n.current || (n.current = i(e, t));
             return n.current;
-          })(p.current, () => {
+          })(h.current, () => {
             var e;
-            return null === (e = m.current) || void 0 === e
+            return null === (e = d.current) || void 0 === e
               ? void 0
               : e.ownerDocument.defaultView;
           }),
-          _ = s.useCallback(
+          g = r.useCallback(
             (e) => {
-              var t;
-              if (!document.hasFocus() && document.activeElement == m.current)
+              var t, n;
+              if (!document.hasFocus() && document.activeElement == d.current)
                 return;
-              if (e.currentTarget != m.current)
+              if (e.currentTarget != d.current)
                 return void console.warn(
                   "keyboard got blur event, but it's not the active element",
                 );
-              const n = (0, r.Su)(
-                null ===
-                  (t = o.AN.GetPopupForWindow(
-                    m.current.ownerDocument.defaultView,
-                  )) || void 0 === t
-                  ? void 0
-                  : t.params.browserType,
-              );
-              (g.BIsActive() || n) && g.DelayHideVirtualKeyboard();
+              const i =
+                null !==
+                  (n =
+                    null ===
+                      (t = s.AN.GetPopupForWindow(
+                        d.current.ownerDocument.defaultView,
+                      )) || void 0 === t
+                      ? void 0
+                      : t.params.bUseVRKeyboard) &&
+                void 0 !== n &&
+                n;
+              (p.BIsActive() || i) && p.DelayHideVirtualKeyboard();
             },
-            [g],
+            [p],
           ),
-          f = (0, l.xK)(
+          _ = (0, a.xK)(
             (e) => {
-              m.current = e;
+              d.current = e;
               const t = [];
               return (
                 e &&
                   (e.addEventListener(
                     "focus",
-                    g.SetAsCurrentVirtualKeyboardTarget,
+                    p.SetAsCurrentVirtualKeyboardTarget,
                   ),
                   t.push(() =>
                     e.removeEventListener(
                       "focus",
-                      g.SetAsCurrentVirtualKeyboardTarget,
+                      p.SetAsCurrentVirtualKeyboardTarget,
                     ),
                   ),
-                  e.addEventListener("click", g.ShowVirtualKeyboard),
+                  e.addEventListener("click", p.ShowVirtualKeyboard),
                   t.push(() =>
-                    e.removeEventListener("click", g.ShowVirtualKeyboard),
+                    e.removeEventListener("click", p.ShowVirtualKeyboard),
                   ),
-                  t.push((0, a.x)(m.current, g.ShowVirtualKeyboard)),
-                  t.push((0, a.BG)(m.current, _))),
+                  t.push((0, o.x)(d.current, p.ShowVirtualKeyboard)),
+                  t.push((0, o.BG)(d.current, g))),
                 () => t.forEach((e) => e())
               );
             },
-            [_, g],
+            [g, p],
           );
         return (
-          s.useLayoutEffect(
+          r.useLayoutEffect(
             () => (
-              (0, l.k$)(t, {
+              (0, a.k$)(t, {
                 TakeFocusAndShowKeyboard: () => {
-                  const e = m.current;
+                  const e = d.current;
                   e &&
                     (document.activeElement != e && e.focus(),
-                    g.ShowVirtualKeyboard());
+                    p.ShowVirtualKeyboard());
                 },
                 HideVirtualKeyboard: () => {
-                  g.HideVirtualKeyboard();
+                  p.HideVirtualKeyboard();
                 },
               }),
-              () => (0, l.k$)(t, null)
+              () => (0, a.k$)(t, null)
             ),
-            [g, t],
+            [p, t],
           ),
-          f
+          _
         );
       }
     },
@@ -14827,10 +14862,10 @@
       })(I || (I = {}));
       const M = 172800,
         R = 600,
-        A = new h.s("SteamNotificationStore"),
+        A = new h.sO("SteamNotificationStore"),
         T = A.Debug,
-        k = A.Error,
-        O = A.Warning;
+        O = A.Error,
+        k = A.Warning;
       class x {
         constructor() {
           (this.m_rgNotificationRollups = []),
@@ -14926,12 +14961,12 @@
           if (-1 === i)
             return void (t
               ? this.NotifyServerNotificationsRead([e])
-              : k(
+              : O(
                   "Attempted to mark notification read that is not in the notification store",
                 ));
           let r = this.m_rgNotificationRollups[i];
           if (r.item.read)
-            k("Attempted to mark notification read that is already read");
+            O("Attempted to mark notification read that is already read");
           else if (
             ((r.item.read = !0),
             (null === (n = r.rgunread) || void 0 === n ? void 0 : n.length) > 0)
@@ -14952,7 +14987,7 @@
             (t) => t.item.notification_id == e,
           );
           if (-1 === i)
-            return void k(
+            return void O(
               "Attempted to mark notification hidden that is not in the notification store",
             );
           let r = this.m_rgNotificationRollups[i];
@@ -15299,7 +15334,7 @@
           const a = yield r.ST.GetSteamNotifications(e, i);
           if (1 !== a.GetEResult())
             throw (
-              (O(
+              (k(
                 `Received error from GetSteamNotifications. Result ${a.GetEResult()}. Transport ${a
                   .Hdr()
                   .transport_error()}`,
@@ -15332,7 +15367,7 @@
                 return (0, i.mG)(this, void 0, void 0, function* () {
                   if (!(e && e.steamid && e.contextid && e.appid && e.assetid))
                     return (
-                      k("Item notification missing required attributes"), null
+                      O("Item notification missing required attributes"), null
                     );
                   const n = s.gA.Init(o.IX);
                   n.Body().set_steamid(e.steamid),
@@ -15344,7 +15379,7 @@
                   const r = yield o.$n.GetInventoryItemsWithDescriptions(t, n);
                   if (1 !== r.GetEResult())
                     return (
-                      k(
+                      O(
                         "Request for steam item metadata did not succeed",
                         r.GetEResult(),
                       ),
@@ -15358,7 +15393,7 @@
                   if (1 == l) {
                     const t = u.Z.Get().GetApp(parseInt(e.appid));
                     a = null == t ? void 0 : t.GetName();
-                  } else k("Failed getting app info", l);
+                  } else O("Failed getting app info", l);
                   return {
                     app_name: a,
                     item_data: r.Body().toObject().descriptions[0],
@@ -17883,18 +17918,19 @@
     },
     87476: (e, t, n) => {
       "use strict";
-      n.d(t, { Ze: () => u });
+      n.d(t, { Ze: () => m });
       var i = n(85556),
         r = n(47427),
         s = n(54842),
         o = n(52178),
         a = n(19929),
-        l = n(68785);
-      n(20417);
-      new l.s("VR");
-      class c {
+        l = n(68785),
+        c = (n(20417), n(22520));
+      const u = new l.sO("VR");
+      class d {
         constructor() {
-          (this.m_bHMDPresent = void 0),
+          (this.m_rgMutualCapabilities = void 0),
+            (this.m_bHMDPresent = void 0),
             (this.m_bHMDHardwareDetected = void 0),
             (this.m_strHMDName = void 0),
             (this.m_bIsVRRunning = void 0),
@@ -17904,12 +17940,13 @@
             (this.m_bIsKeyboardOpen = void 0),
             (this.m_eKeyboardFlags = void 0),
             (this.m_sInitialKeyboardText = void 0),
+            (this.m_unSceneAppID = c.kI),
             (this.m_bSimulatingVROnDesktop = !1),
             (this.m_mapAffordanceElems = new Map()),
             (0, s.rC)(this);
         }
         Init() {
-          var e, t, n, i, r, s, o, a, l, c, u, d;
+          var e, t, n, i, r, s, o, a, l, c, u, d, m, h;
           null ===
             (t =
               null ===
@@ -17955,25 +17992,36 @@
               void 0 === a ||
               a.call(o, this.OnHMDActivityLevelChanged),
             null ===
-              (l =
+              (c =
+                null ===
+                  (l =
+                    null === SteamClient || void 0 === SteamClient
+                      ? void 0
+                      : SteamClient.OpenVR) || void 0 === l
+                  ? void 0
+                  : l.RegisterForVRSceneAppChange) ||
+              void 0 === c ||
+              c.call(l, this.OnSceneAppChanged),
+            null ===
+              (u =
                 null === SteamClient || void 0 === SteamClient
                   ? void 0
                   : SteamClient.OpenVR) ||
-              void 0 === l ||
-              l.Device.RegisterForVRDeviceSeenRecently(
+              void 0 === u ||
+              u.Device.RegisterForVRDeviceSeenRecently(
                 this.OnVRDeviceSeenRecentlyChanged,
               ),
             null ===
-              (d =
+              (h =
                 null ===
-                  (c =
+                  (d =
                     null === SteamClient || void 0 === SteamClient
                       ? void 0
-                      : SteamClient.OpenVR) || void 0 === c
+                      : SteamClient.OpenVR) || void 0 === d
                   ? void 0
-                  : (u = c.Keyboard).RegisterForStatus) ||
-              void 0 === d ||
-              d.call(u, this.OnKeyboardStatus);
+                  : (m = d.Keyboard).RegisterForStatus) ||
+              void 0 === h ||
+              h.call(m, this.OnKeyboardStatus);
         }
         OnVRHardwareDetected(e, t, n) {
           (this.m_bHMDPresent = e),
@@ -17981,7 +18029,7 @@
             (this.m_strHMDName = n);
         }
         OnVRModeChanged(e) {
-          this.m_bIsVRRunning = e;
+          (this.m_bIsVRRunning = e), this.UpdateMutualCapabilities();
         }
         OnStartupError(e, t, n) {
           let i;
@@ -17991,6 +18039,9 @@
         }
         OnHMDActivityLevelChanged(e) {
           this.m_eHMDActivityLevel = e;
+        }
+        OnSceneAppChanged(e) {
+          this.m_unSceneAppID = e;
         }
         OnVRDeviceSeenRecentlyChanged(e) {
           this.m_bVRDeviceSeenRecently = e;
@@ -18006,6 +18057,9 @@
             this.m_bHMDPresent ||
             this.m_bHMDHardwareDetected
           );
+        }
+        get CurrentSceneAppID() {
+          return this.m_unSceneAppID;
         }
         HasVRHMDBeenSeen() {
           return this.m_bVRDeviceSeenRecently;
@@ -18075,8 +18129,36 @@
               void 0 === r ||
               r.OpenVR.SetOverlayInteractionAffordance(t, a));
         }
+        BHasMutualCapabilities() {
+          return null != this.m_rgMutualCapabilities;
+        }
+        BHasMutualCapability(e) {
+          var t;
+          return null === (t = this.m_rgMutualCapabilities) || void 0 === t
+            ? void 0
+            : t.includes(e);
+        }
+        UpdateMutualCapabilities() {
+          var e;
+          return (0, i.mG)(this, void 0, void 0, function* () {
+            if (this.IsSteamVRRunning)
+              try {
+                this.m_rgMutualCapabilities = yield null ===
+                  (e =
+                    null === SteamClient || void 0 === SteamClient
+                      ? void 0
+                      : SteamClient.OpenVR) || void 0 === e
+                  ? void 0
+                  : e.GetMutualCapabilities();
+              } catch (e) {
+                (this.m_rgMutualCapabilities = void 0),
+                  u.Error("Failed to fetch Mutual Capabilities:", e);
+              }
+            else this.m_rgMutualCapabilities = void 0;
+          });
+        }
       }
-      function u(e, t) {
+      function m(e, t) {
         const [n, i] = r.useState(),
           s = r.useCallback(() => !0, []),
           o = r.useRef();
@@ -18086,7 +18168,7 @@
             const t = () => {
                 var t, i, r;
                 const s = o.current && o.current();
-                d.SetInteractionAffordance(n, e, s),
+                h.SetInteractionAffordance(n, e, s),
                   2 == e &&
                     s &&
                     (null ===
@@ -18108,7 +18190,7 @@
               },
               i = () => {
                 var t, i, r;
-                d.SetInteractionAffordance(n, e, !1),
+                h.SetInteractionAffordance(n, e, !1),
                   2 == e &&
                     o.current &&
                     o.current() &&
@@ -18135,37 +18217,40 @@
               () => {
                 null == n || n.removeEventListener("mouseenter", t),
                   null == n || n.removeEventListener("mouseleave", i),
-                  d.SetInteractionAffordance(n, e, !1);
+                  h.SetInteractionAffordance(n, e, !1);
               }
             );
           }, [n, e]),
           i
         );
       }
-      (0, i.gn)([s.LO], c.prototype, "m_bHMDPresent", void 0),
-        (0, i.gn)([s.LO], c.prototype, "m_bHMDHardwareDetected", void 0),
-        (0, i.gn)([s.LO], c.prototype, "m_strHMDName", void 0),
-        (0, i.gn)([s.LO], c.prototype, "m_bIsVRRunning", void 0),
-        (0, i.gn)([s.LO], c.prototype, "m_error", void 0),
-        (0, i.gn)([s.LO], c.prototype, "m_eHMDActivityLevel", void 0),
-        (0, i.gn)([s.LO], c.prototype, "m_bVRDeviceSeenRecently", void 0),
-        (0, i.gn)([s.LO], c.prototype, "m_bIsKeyboardOpen", void 0),
-        (0, i.gn)([s.LO], c.prototype, "m_eKeyboardFlags", void 0),
-        (0, i.gn)([s.LO], c.prototype, "m_sInitialKeyboardText", void 0),
-        (0, i.gn)([s.LO], c.prototype, "m_bSimulatingVROnDesktop", void 0),
-        (0, i.gn)([s.aD.bound], c.prototype, "OnVRHardwareDetected", null),
-        (0, i.gn)([s.aD.bound], c.prototype, "OnVRModeChanged", null),
-        (0, i.gn)([s.aD.bound], c.prototype, "OnStartupError", null),
-        (0, i.gn)([s.aD.bound], c.prototype, "OnHMDActivityLevelChanged", null),
+      (0, i.gn)([s.LO], d.prototype, "m_rgMutualCapabilities", void 0),
+        (0, i.gn)([s.LO], d.prototype, "m_bHMDPresent", void 0),
+        (0, i.gn)([s.LO], d.prototype, "m_bHMDHardwareDetected", void 0),
+        (0, i.gn)([s.LO], d.prototype, "m_strHMDName", void 0),
+        (0, i.gn)([s.LO], d.prototype, "m_bIsVRRunning", void 0),
+        (0, i.gn)([s.LO], d.prototype, "m_error", void 0),
+        (0, i.gn)([s.LO], d.prototype, "m_eHMDActivityLevel", void 0),
+        (0, i.gn)([s.LO], d.prototype, "m_bVRDeviceSeenRecently", void 0),
+        (0, i.gn)([s.LO], d.prototype, "m_bIsKeyboardOpen", void 0),
+        (0, i.gn)([s.LO], d.prototype, "m_eKeyboardFlags", void 0),
+        (0, i.gn)([s.LO], d.prototype, "m_sInitialKeyboardText", void 0),
+        (0, i.gn)([s.LO], d.prototype, "m_unSceneAppID", void 0),
+        (0, i.gn)([s.LO], d.prototype, "m_bSimulatingVROnDesktop", void 0),
+        (0, i.gn)([s.aD.bound], d.prototype, "OnVRHardwareDetected", null),
+        (0, i.gn)([s.aD.bound], d.prototype, "OnVRModeChanged", null),
+        (0, i.gn)([s.aD.bound], d.prototype, "OnStartupError", null),
+        (0, i.gn)([s.aD.bound], d.prototype, "OnHMDActivityLevelChanged", null),
+        (0, i.gn)([s.aD.bound], d.prototype, "OnSceneAppChanged", null),
         (0, i.gn)(
           [s.aD.bound],
-          c.prototype,
+          d.prototype,
           "OnVRDeviceSeenRecentlyChanged",
           null,
         ),
-        (0, i.gn)([s.aD.bound], c.prototype, "OnKeyboardStatus", null),
-        (0, i.gn)([s.aD.bound], c.prototype, "ClearError", null);
-      const d = new c();
+        (0, i.gn)([s.aD.bound], d.prototype, "OnKeyboardStatus", null),
+        (0, i.gn)([s.aD.bound], d.prototype, "ClearError", null);
+      const h = new d();
     },
     22042: (e, t, n) => {
       "use strict";
@@ -18175,8 +18260,8 @@
         Yr: () => D,
         Zo: () => I,
         D1: () => A,
-        Vc: () => O,
-        Wn: () => k,
+        Vc: () => k,
+        Wn: () => O,
         T: () => x,
       });
       var i = n(85556),
@@ -18563,7 +18648,7 @@
         (0, i.gn)([b.ak], T.prototype, "RenderSubMenu", null),
         (0, i.gn)([b.ak], T.prototype, "OnMouseEnter", null),
         (0, i.gn)([b.ak], T.prototype, "OnClick", null);
-      let k = class extends s.Component {
+      let O = class extends s.Component {
         constructor(e) {
           super(e),
             (this.m_elMenu = void 0),
@@ -18749,21 +18834,21 @@
             R = M > 0,
             A = c + d - (t.bOverlapVertical ? D : L) - I,
             T = A > 0,
-            k = (t.bPreferPopTop || !T) && R && !t.bDisablePopTop;
+            O = (t.bPreferPopTop || !T) && R && !t.bDisablePopTop;
           if (!R && !T) {
             const e =
               void 0 !== t.bShiftToFitWindow
                 ? t.bShiftToFitWindow
                 : !!t.bFitToWindow && !t.bOverlapHorizontal;
-            (k = M > A && !t.bDisablePopTop),
-              e && (k ? (g.menuTop = 4) : (g.menuBottom = 4)),
+            (O = M > A && !t.bDisablePopTop),
+              e && (O ? (g.menuTop = 4) : (g.menuBottom = 4)),
               t.bFitToWindow &&
-                (e ? (I = Math.min(I, d - 8)) : (I += k ? M : A),
+                (e ? (I = Math.min(I, d - 8)) : (I += O ? M : A),
                 (g.menuHeight = I - 8));
           }
           void 0 === g.menuBottom &&
             void 0 === g.menuTop &&
-            (k
+            (O
               ? (g.menuBottom = d - (t.bOverlapVertical ? L : D))
               : (g.menuTop = t.bOverlapVertical ? D : L)),
             r
@@ -18925,7 +19010,7 @@
           );
         }
       };
-      function O(e) {
+      function k(e) {
         return s.createElement("div", {
           className: E().ContextMenuMouseOverlay,
         });
@@ -19090,12 +19175,12 @@
           e.preventDefault(), e.stopPropagation();
         }
       }
-      (0, i.gn)([b.ak], k.prototype, "BindMenuElement", null),
-        (0, i.gn)([b.ak, (0, v.D)(100)], k.prototype, "OnMenuMutation", null),
-        (0, i.gn)([b.ak], k.prototype, "OnWindowResize", null),
-        (0, i.gn)([b.ak], k.prototype, "OnBlur", null),
-        (0, i.gn)([b.ak], k.prototype, "OnKeyDown", null),
-        (k = (0, i.gn)([r.Pi], k));
+      (0, i.gn)([b.ak], O.prototype, "BindMenuElement", null),
+        (0, i.gn)([b.ak, (0, v.D)(100)], O.prototype, "OnMenuMutation", null),
+        (0, i.gn)([b.ak], O.prototype, "OnWindowResize", null),
+        (0, i.gn)([b.ak], O.prototype, "OnBlur", null),
+        (0, i.gn)([b.ak], O.prototype, "OnKeyDown", null),
+        (O = (0, i.gn)([r.Pi], O));
       const B = "EnableContextMenuBlurDelay3";
       function N() {
         return (
@@ -19151,7 +19236,7 @@
         ji: () => U,
         sg: () => R,
         VY: () => A,
-        oX: () => O,
+        oX: () => k,
         Vh: () => Je,
         RD: () => d,
         TW: () => we,
@@ -19161,7 +19246,7 @@
         ZY: () => xt,
         gB: () => pt,
         Eb: () => _t,
-        fp: () => kt,
+        fp: () => Ot,
         h4: () => S,
         II: () => J,
         BW: () => pe,
@@ -19275,7 +19360,7 @@
           )
         );
       }
-      class k extends r.Component {
+      class O extends r.Component {
         OnSubmit(e) {
           e.preventDefault(), this.props.onSubmit && this.props.onSubmit(e);
         }
@@ -19286,16 +19371,16 @@
           );
         }
       }
-      function O(e) {
+      function k(e) {
         const { classNameContent: t, bCenterVertically: n } = e,
           s = (0, i._T)(e, ["classNameContent", "bCenterVertically"]);
         return r.createElement(
           A,
           { className: t, bCenterVertically: n },
-          r.createElement(k, Object.assign({}, s)),
+          r.createElement(O, Object.assign({}, s)),
         );
       }
-      (0, i.gn)([u.a], k.prototype, "OnSubmit", null);
+      (0, i.gn)([u.a], O.prototype, "OnSubmit", null);
       const x = r.forwardRef(function (e, t) {
           const n = m(),
             { svgicon: o } = e,
@@ -20840,8 +20925,8 @@
         Me = n(83654),
         Re = n(83999),
         Ae = n(45651);
-      const Te = new (n(68785).s)("DragDrop").Debug;
-      class ke extends r.Component {
+      const Te = new (n(68785).sO)("DragDrop").Debug;
+      class Oe extends r.Component {
         constructor() {
           super(...arguments), (this.m_coordinator = new xe());
         }
@@ -20882,12 +20967,12 @@
           );
         }
       }
-      function Oe(e, t, n, i) {
+      function ke(e, t, n, i) {
         return i
           ? n && e > n.left && e < n.right && t > n.top && t < n.bottom
           : n && e >= n.left && e <= n.right && t >= n.top && t <= n.bottom;
       }
-      (0, i.gn)([z.ak], ke.prototype, "OnDrop", null);
+      (0, i.gn)([z.ak], Oe.prototype, "OnDrop", null);
       class xe {
         constructor() {
           (this.m_embeddedElement = new Me.AN("DragGhosts")),
@@ -21028,7 +21113,7 @@
               const s = i + t,
                 o = r + n,
                 a = e.GetDragDocument().body.getBoundingClientRect();
-              if (Oe(i, r, a) && !Oe(s, o, a, !0)) {
+              if (ke(i, r, a) && !ke(s, o, a, !0)) {
                 const t = Ae.r4(
                     s,
                     a.left,
@@ -21407,7 +21492,7 @@
           );
         }
         BDraggableInRegion(e, t, n) {
-          return Oe(e, t, this.GetClientRect());
+          return ke(e, t, this.GetClientRect());
         }
         GetElement() {
           return this.m_divRef.current;
@@ -21945,11 +22030,11 @@
           R = null != w ? w : "front",
           A = "front" == R && !!a,
           T = "before-children" == R && !!a,
-          k = "inline" == M && !!u,
-          O = "below" == M && !!u,
+          O = "inline" == M && !!u,
+          k = "below" == M && !!u,
           x = null != m ? m : I ? "shift-children-below" : "keep-inline",
           B = !!(L.onClick || L.onActivate || L.focusable),
-          N = (null != a && A) || null != n || (k && null != u),
+          N = (null != a && A) || null != n || (O && null != u),
           P = null != h ? h : "min",
           G = null != p ? p : "standard",
           F = null != g ? g : "standard",
@@ -22001,8 +22086,8 @@
                 rt().Field,
                 _ && rt().Disabled,
                 N && rt().WithFirstRow,
-                k && rt().WithChildrenInline,
-                O && rt().WithChildrenBelow,
+                O && rt().WithChildrenInline,
+                k && rt().WithChildrenBelow,
                 "center" == j && rt().VerticalAlignCenter,
                 "shift-children-below" == x &&
                   rt().InlineWrapShiftsChildrenBelow,
@@ -22037,7 +22122,7 @@
                 y &&
                   r.createElement("span", { "data-tooltip-text": y }, " (?)"),
               ),
-              k &&
+              O &&
                 r.createElement(
                   "div",
                   { className: rt().FieldChildrenWithIcon },
@@ -22059,7 +22144,7 @@
                   ),
                 ),
             ),
-          O &&
+          k &&
             r.createElement(
               "div",
               { className: rt().FieldChildrenWithIcon },
@@ -22285,7 +22370,9 @@
             "div",
             { className: rt().DropDownControlButtonContents },
             e.children,
-            r.createElement("div", { className: rt().Spacer }),
+            r.createElement("div", {
+              className: (0, l.Z)(rt().Spacer, "Spacer"),
+            }),
             r.createElement(ze.$nC, { direction: "down" }),
           ),
         );
@@ -22865,21 +22952,25 @@
             S = {};
           this.CanResetToDefault &&
             (S[Ve.eV.SECONDARY] = (0, c.Xx)("#ResetToDefault"));
-          let b = Ct().SliderHandle,
-            w = Ct().SliderHandleContainer;
+          let b = `${Ct().SliderHandle} SliderHandle`,
+            w = `${Ct().SliderHandleContainer} SliderHandleContainer `;
           return (
             "verticalline" == this.props.handleType
-              ? ((b = Ct().VerticalLineSliderHandle),
-                (w = Ct().VerticalLineSliderHandleContainer))
+              ? ((b = `${Ct().VerticalLineSliderHandle} SliderHandle`),
+                (w = `${
+                  Ct().VerticalLineSliderHandleContainer
+                } SliderHandleContainer `))
               : ("leftparen" != this.props.handleType &&
                   "rightparen" != this.props.handleType) ||
                 ((b = (0, l.Z)(
                   Ct().ParenSliderHandle,
                   "leftparen" == this.props.handleType ? Ct().Left : Ct().Right,
+                  "SliderHandle",
                 )),
                 (w = (0, l.Z)(
                   Ct().ParenSliderHandleContainer,
                   "leftparen" == this.props.handleType ? Ct().Left : Ct().Right,
+                  "SliderHandleContainer",
                 ))),
             r.createElement(
               bt.eh,
@@ -22955,6 +23046,7 @@
                       {
                         [Ct().SliderTrackDark]: "dark" === this.props.trackTone,
                       },
+                      "SliderTrack",
                     ),
                   }),
                   _ &&
@@ -23134,7 +23226,7 @@
           r.createElement("div", { className: rt().ToggleSwitch }),
         );
       });
-      class kt extends V {
+      class Ot extends V {
         OnToggleChange(e) {
           this.props.disabled || e === this.checked || this.Toggle();
         }
@@ -23172,8 +23264,8 @@
           );
         }
       }
-      (0, i.gn)([z.ak], kt.prototype, "OnToggleChange", null);
-      var Ot = n(13974);
+      (0, i.gn)([z.ak], Ot.prototype, "OnToggleChange", null);
+      var kt = n(13974);
       function xt(e) {
         const { children: t, bCenterVertically: n, refElem: s } = e,
           a = (0, i._T)(e, ["children", "bCenterVertically", "refElem"]),
@@ -23183,7 +23275,7 @@
             e.className,
             n && " _DialogCenterVertically",
           ),
-          { ref: u, navRef: d } = (0, Ot.$1)(),
+          { ref: u, navRef: d } = (0, kt.$1)(),
           m = (0, z.BE)(s, u);
         return r.createElement(
           o.s,
@@ -23592,13 +23684,13 @@
         aVo: () => v,
         aeH: () => h,
         atL: () => x,
-        by3: () => O,
+        by3: () => k,
         dQJ: () => L,
         dqu: () => y,
         mm_: () => C,
         qTB: () => c,
         tkI: () => w,
-        uWd: () => k,
+        uWd: () => O,
         vVQ: () => f,
       });
       var i = n(85556),
@@ -24659,7 +24751,7 @@
           ),
         );
       }
-      function k(e) {
+      function O(e) {
         return r.createElement(
           "svg",
           Object.assign(
@@ -24705,7 +24797,7 @@
           }),
         );
       }
-      function O(e) {
+      function k(e) {
         return r.createElement(
           "svg",
           Object.assign(
@@ -26416,7 +26508,7 @@
         V7n: () => ee,
         VR: () => he,
         Vgm: () => Ce,
-        WWB: () => ke,
+        WWB: () => Oe,
         Wnw: () => dt,
         X: () => D,
         XBH: () => le,
@@ -26443,7 +26535,7 @@
         j5H: () => Ve,
         j7C: () => nt,
         k4K: () => w,
-        k6n: () => O,
+        k6n: () => k,
         kL2: () => P,
         kqV: () => Ge,
         ktE: () => He,
@@ -26463,10 +26555,10 @@
         r6F: () => K,
         rFk: () => Q,
         ret: () => C,
-        shV: () => k,
+        shV: () => O,
         soM: () => ct,
         sqQ: () => Ke,
-        svY: () => Oe,
+        svY: () => ke,
         t6e: () => m,
         tEX: () => ce,
         tLe: () => _e,
@@ -27081,7 +27173,7 @@
           }),
         );
       }
-      function k() {
+      function O() {
         return r.createElement(
           "svg",
           {
@@ -27101,7 +27193,7 @@
           }),
         );
       }
-      function O() {
+      function k() {
         return r.createElement(
           "svg",
           {
@@ -28847,7 +28939,7 @@
           }),
         );
       }
-      function ke() {
+      function Oe() {
         return r.createElement(
           "svg",
           {
@@ -28870,7 +28962,7 @@
           }),
         );
       }
-      function Oe(e) {
+      function ke(e) {
         return r.createElement(
           "svg",
           Object.assign(
@@ -31839,7 +31931,7 @@
         U$: () => i,
         XG: () => D,
         ds: () => x,
-        jA: () => k,
+        jA: () => O,
         jr: () => v,
         kI: () => M,
         m9: () => f,
@@ -32192,7 +32284,7 @@
             return (0, s.Xx)("#Time_QuarterOfYear_Q4", e.getUTCFullYear());
         }
       }
-      function k(e) {
+      function O(e) {
         const t = Math.floor(e / o._H.PerYear),
           n = Math.floor(e / o._H.PerMonth),
           i = Math.floor((e % o._H.PerMonth) / o._H.PerDay),
@@ -32225,7 +32317,7 @@
               )
         );
       }
-      function O(e) {
+      function k(e) {
         return (
           (void 0 === e || isNaN(e)) && (e = 0),
           {
@@ -32237,7 +32329,7 @@
         );
       }
       function x(e) {
-        const t = O(e),
+        const t = k(e),
           n = 60 * t.hours + t.minutes,
           i = t.hours,
           r = Math.floor(t.hours / 24),
@@ -32325,7 +32417,7 @@
     },
     68785: (e, t, n) => {
       "use strict";
-      n.d(t, { s: () => c });
+      n.d(t, { sO: () => c });
       var i = n(85556),
         r = n(16997),
         s = n(61134),
@@ -32567,7 +32659,7 @@
                 `%c${u}%c:${d ? " %c" + m : ""}`,
                 `color: ${a ? "black" : "white"}; background: rgb(${o.join(
                   ",",
-                )}); padding: 0 1ch`,
+                )}); padding: 0 1ch; border-radius: 3px;`,
                 "color: transparent; margin-right: -1ch",
                 ...(d ? [""] : []),
                 ...s,
@@ -33845,10 +33937,8 @@
         : console.error(
             "VALVE_PUBLIC_PATH not defined; check for a call to CHTMLHelpers::WebpackConfigScriptlet",
           ),
-        console.assert(
-          123 === Array.from(new Set([123]))[0],
-          "Should not include prototypejs.",
-        );
+        123 !== Array.from(new Set([123]))[0] &&
+          console.error("Should not include prototypejs.");
     },
     41003: (e, t, n) => {
       "use strict";
@@ -34243,15 +34333,15 @@
         R = n(22042),
         A = n(10162),
         T = n(27438),
-        k = n(13129),
-        O = n(20417),
+        O = n(13129),
+        k = n(20417),
         x = n(410),
         B = n.n(x);
       function N(e) {
         const { manager: t } = e,
-          n = (0, O.NW)();
+          n = (0, k.NW)();
         return (
-          (0, O.Qg)(t.OnMenusChanged, n),
+          (0, k.Qg)(t.OnMenusChanged, n),
           s.createElement(
             T.Yy,
             { active: !!t.ActiveMenu },
@@ -34285,7 +34375,7 @@
             "div",
             {
               onClick: o,
-              className: (0, k.Z)(
+              className: (0, O.Z)(
                 "BasicUIContextMenu",
                 B().BasicContextMenuModal,
               ),
@@ -34353,7 +34443,7 @@
                   } = t,
                   c = s.useRef(null);
                 (0, V.cp)(c, o, !0);
-                const u = (0, O.BE)(c, i);
+                const u = (0, k.BE)(c, i);
                 return s.createElement(
                   V.Fe,
                   {
@@ -34378,7 +34468,7 @@
             bGamepadUIScrollWithin: r,
             children: o,
           } = e,
-          a = (0, k.Z)(
+          a = (0, O.Z)(
             j().ModalPosition,
             "standard" == i && j().WithStandardPadding,
             r && j().ScrollWithin,
@@ -34530,7 +34620,7 @@
                 o || s.createElement("span", null, " "),
               ),
               s.createElement("input", {
-                className: (0, k.Z)(Q().TextInput),
+                className: (0, O.Z)(Q().TextInput),
                 ref: h,
                 value: d,
                 type: "password",
@@ -34604,7 +34694,7 @@
             { className: Q().ParentalRequest, onSubmit: h },
             s.createElement(
               "div",
-              { className: (0, k.Z)(Q().Body, a && Q().Complete) },
+              { className: (0, O.Z)(Q().Body, a && Q().Complete) },
               s.createElement(
                 "div",
                 { className: Q().Title },
@@ -34790,13 +34880,13 @@
         (0, i.gn)([le.LO], ge.prototype, "m_nPlaybackTime", void 0),
         (0, i.gn)([le.LO], ge.prototype, "m_nVideoStartTime", void 0),
         (0, i.gn)([le.LO], ge.prototype, "m_nVideoDuration", void 0),
-        (0, i.gn)([O.ak], ge.prototype, "OnVideoPlaying", null),
-        (0, i.gn)([O.ak], ge.prototype, "OnVideoPause", null),
-        (0, i.gn)([O.ak], ge.prototype, "OnVideoTimeUpdate", null),
-        (0, i.gn)([O.ak], ge.prototype, "OnVideoEnd", null),
-        (0, i.gn)([O.ak], ge.prototype, "OnDownloadFailed", null),
-        (0, i.gn)([O.ak], ge.prototype, "OnUserInputNeeded", null),
-        (0, i.gn)([O.ak], ge.prototype, "UserInputReceived", null);
+        (0, i.gn)([k.ak], ge.prototype, "OnVideoPlaying", null),
+        (0, i.gn)([k.ak], ge.prototype, "OnVideoPause", null),
+        (0, i.gn)([k.ak], ge.prototype, "OnVideoTimeUpdate", null),
+        (0, i.gn)([k.ak], ge.prototype, "OnVideoEnd", null),
+        (0, i.gn)([k.ak], ge.prototype, "OnDownloadFailed", null),
+        (0, i.gn)([k.ak], ge.prototype, "OnUserInputNeeded", null),
+        (0, i.gn)([k.ak], ge.prototype, "UserInputReceived", null);
       var _e = n(45284);
       const fe = parseInt(me().nTimelineHoverEdgePadding);
       function ve(e) {
@@ -34804,7 +34894,7 @@
           [i, r] = (function (e) {
             let t = s.useRef(new ge());
             return [
-              (0, O.xK)(
+              (0, k.xK)(
                 (n) => {
                   if (n) return t.current.Start(n, e), () => t.current.Stop();
                 },
@@ -34931,19 +35021,19 @@
             onMouseLeave: l,
           },
           s.createElement("div", {
-            className: (0, k.Z)(me().Bar, me().Buffered),
+            className: (0, O.Z)(me().Bar, me().Buffered),
           }),
           s.createElement("div", {
-            className: (0, k.Z)(me().Bar, me().Played),
+            className: (0, O.Z)(me().Bar, me().Played),
             style: _,
           }),
           s.createElement("div", {
-            className: (0, k.Z)(me().HoverTick),
+            className: (0, O.Z)(me().HoverTick),
             style: p,
           }),
           s.createElement(
             "div",
-            { ref: o, className: (0, k.Z)(me().HoverTime), style: g },
+            { ref: o, className: (0, O.Z)(me().HoverTime), style: g },
             (0, _e.I8)(h, !0),
           ),
         );
@@ -35057,8 +35147,8 @@
           );
         };
       }
-      const ke = Te("Events"),
-        Oe = Te("DemoAndQuickPitch");
+      const Oe = Te("Events"),
+        ke = Te("DemoAndQuickPitch");
       var xe = n(45137),
         Be = n(42718),
         Ne = n(5522),
@@ -35752,7 +35842,7 @@
                         return s.createElement(se.d, {
                           config: {
                             "events-row": () =>
-                              s.createElement(ke, {
+                              s.createElement(Oe, {
                                 key: `appeventrow${t}`,
                                 appid: Number.parseInt(t),
                               }),
@@ -35773,7 +35863,7 @@
                                 ),
                               ),
                             "demo-and-quick-pitch": () =>
-                              s.createElement(Oe, {
+                              s.createElement(ke, {
                                 key: `appdemoquickpitch_${t}`,
                                 appID: Number.parseInt(t),
                               }),
@@ -36155,8 +36245,8 @@
         );
       }
       function Rt(e) {
-        const t = (0, O.kD)(Mt),
-          n = (0, O.kD)(s.useCallback(() => new C.Z(), [])),
+        const t = (0, k.kD)(Mt),
+          n = (0, k.kD)(s.useCallback(() => new C.Z(), [])),
           i = (0, s.useMemo)(
             () => ({ useActiveAccount: () => l.L7.steamid }),
             [],
@@ -36238,17 +36328,17 @@
           ),
         );
       });
-      var kt = n(92011),
-        Ot = n(50423);
+      var Ot = n(92011),
+        kt = n(50423);
       n(7765);
       (0, le.jQ)({ enforceActions: "never" }),
-        Ot.Dj(function () {
+        kt.Dj(function () {
           return (0, i.mG)(this, void 0, void 0, function* () {
             (0, l.Ek)("application_config").userConfig ||
               (yield (0, l.x)(a(), l.De.STORE_BASE_URL + "actions/", {
                 userConfig: !0,
               })),
-              (0, kt.Uh)().Init(
+              (0, Ot.Uh)().Init(
                 "Store",
                 CLSTAMP,
                 new S.J(l.De.WEBAPI_BASE_URL).GetServiceTransport(),
@@ -36337,12 +36427,12 @@
         R = n(86437),
         A = n(58501),
         T = n(43981),
-        k = n(92686);
-      function O(e) {
+        O = n(92686);
+      function k(e) {
         return re(e) ? e.type : e.gid;
       }
       function x(e) {
-        return ["shopping_cart", O(e), m.L7.accountid];
+        return ["shopping_cart", k(e), m.L7.accountid];
       }
       function B() {
         const e = (0, l.bY)(),
@@ -36824,7 +36914,7 @@
         );
       }
       function $(e) {
-        return ["validate_checkout", O(e), m.L7.accountid];
+        return ["validate_checkout", k(e), m.L7.accountid];
       }
       function Y() {
         const e = (0, l.bY)(),
@@ -37319,7 +37409,7 @@
       function ce() {
         var e;
         const t = (0, T.tv)(),
-          n = (0, k.Rs)(),
+          n = (0, O.Rs)(),
           i = B(),
           r = n.isSuccess && 2 == n.data.role(),
           s =
@@ -37341,7 +37431,7 @@
       }
       function ue() {
         const e = (0, T.tv)(),
-          t = (0, k.Rs)();
+          t = (0, O.Rs)();
         return t.isSuccess && 1 == t.data.role() && oe(e);
       }
     },

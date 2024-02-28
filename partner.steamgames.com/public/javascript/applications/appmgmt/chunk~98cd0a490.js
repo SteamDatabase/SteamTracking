@@ -5,107 +5,6 @@
   self.webpackChunkappmgmt_storeadmin || []).push([
   [7241],
   {
-    22520: (e, t, i) => {
-      i.d(t, { Am: () => l, kI: () => s, x3: () => c });
-      var r = i(37563),
-        a = i(48760),
-        n = i(62210);
-      const s = 0,
-        o = "061818254b2c99ac49e6626adb128ed1282a392f",
-        c = 120;
-      class l {
-        constructor(e) {
-          (this.m_bInitialized = !1), (this.m_unAppID = e);
-        }
-        get appid() {
-          return this.m_unAppID;
-        }
-        get is_initialized() {
-          return this.m_bInitialized;
-        }
-        get is_valid() {
-          return this.m_bInitialized && !!this.m_strName;
-        }
-        get name() {
-          return this.m_strName;
-        }
-        get header_image_url() {
-          return r.De.MEDIA_CDN_URL + `steam/apps/${this.m_unAppID}/header.jpg`;
-        }
-        get icon_url_no_default() {
-          return this.m_strIconURL && this.BuildAppURL(this.m_strIconURL, o);
-        }
-        get icon_url() {
-          return this.BuildAppURL(this.m_strIconURL, o);
-        }
-        get logo_url() {
-          return (
-            r.De.MEDIA_CDN_URL +
-            `steam/apps/${this.m_unAppID}/capsule_231x87.jpg`
-          );
-        }
-        get time_updated_from_server() {
-          return this.m_dtUpdatedFromServer;
-        }
-        get apptype() {
-          return this.m_eAppType;
-        }
-        BIsApplicationOrTool() {
-          return 4 == this.apptype || 2 == this.apptype;
-        }
-        BuildAppURL(e, t) {
-          return e
-            ? r.De.MEDIA_CDN_COMMUNITY_URL +
-                "images/apps/" +
-                this.appid +
-                "/" +
-                e +
-                ".jpg"
-            : (0, a.U)(t);
-        }
-        DeserializeFromMessage(e) {
-          (this.m_bInitialized = !0),
-            (this.m_strName = e.name()),
-            (this.m_strIconURL = e.icon()),
-            (this.m_dtUpdatedFromServer = new Date()),
-            (this.m_eAppType = e.app_type());
-        }
-        DeserializeFromAppOverview(e) {
-          e.icon_hash() && 1073741824 != e.app_type()
-            ? ((this.m_bInitialized = !0),
-              (this.m_strName = e.display_name()),
-              (this.m_strIconURL = e.icon_hash()),
-              (this.m_dtUpdatedFromServer = new Date()),
-              (this.m_eAppType = e.app_type()))
-            : (this.m_bInitialized = !1);
-        }
-        DeserializeFromCacheObject(e) {
-          try {
-            (this.m_strName = e.strName),
-              (this.m_strIconURL = e.strIconURL),
-              (this.m_dtUpdatedFromServer = new Date(e.strUpdatedFromServer)),
-              (this.m_eAppType = e.eAppType),
-              (this.m_bInitialized = !0);
-          } catch (e) {}
-        }
-        SerializeToCacheObject() {
-          return (
-            (0, n.X)(
-              this.m_bInitialized,
-              "Attempting to serialize an uninitialized AppInfo object for caching!",
-            ),
-            this.m_bInitialized
-              ? {
-                  strName: this.m_strName,
-                  strIconURL: this.m_strIconURL,
-                  strUpdatedFromServer: this.m_dtUpdatedFromServer.toJSON(),
-                  eAppType: this.m_eAppType,
-                }
-              : null
-          );
-        }
-      }
-    },
     45944: (e, t, i) => {
       i.d(t, { Q8: () => P });
       var r = i(85556),
@@ -504,28 +403,8 @@
         (0, r.gn)([a.aD], g.prototype, "OnRichPresenceLocUpdate", null);
       const P = new g();
     },
-    48760: (e, t, i) => {
-      i.d(t, { U: () => n, W: () => a });
-      var r = i(37563);
-      const a = "fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb";
-      function n(e, t) {
-        let i = ".jpg";
-        (e && "0000000000000000000000000000000000000000" !== e) || (e = a),
-          44 == e.length && ((i = e.substr(-4)), (e = e.substr(0, 40)));
-        let n = r.De.AVATAR_BASE_URL;
-        return (
-          n ||
-            ((n = r.De.MEDIA_CDN_COMMUNITY_URL + "images/avatars/"),
-            (n += e.substr(0, 2) + "/")),
-          (n += e),
-          t && "small" != t && (n += "_" + t),
-          (n += i),
-          n
-        );
-      }
-    },
     23951: (e, t, i) => {
-      i.d(t, { Qv: () => b, vP: () => G, IE: () => y });
+      i.d(t, { Qv: () => b, vP: () => I, IE: () => y });
       var r = i(85556),
         a = i(73799),
         n = i.n(a),
@@ -827,27 +706,27 @@
         (0, r.gn)([u.LO], P.prototype, "m_bCommunityBanned", void 0);
       var f = i(35427),
         v = i(82182),
-        I = i(2041);
+        G = i(2041);
       function y(e) {
         const t = (0, l.bY)(),
           i = s.useContext(S);
-        return (0, o.useQuery)(D(i, t, e));
+        return (0, o.useQuery)(k(i, t, e));
       }
-      function G(e) {
+      function I(e) {
         const t = (0, l.bY)(),
           i = s.useContext(S);
-        return (0, o.useQueries)(e.map((e) => D(i, t, e)));
+        return (0, o.useQueries)(e.map((e) => k(i, t, e)));
       }
       function b(e) {
-        return I.U.getQueryData(["PlayerSummary", e]);
+        return G.U.getQueryData(["PlayerSummary", e]);
       }
       const S = s.createContext({
         loadPersonaState: (e, t) =>
           (0, r.mG)(void 0, void 0, void 0, function* () {
             if (null == e) return null;
             const i = yield (function (e) {
-              L ||
-                (L = new (n())(
+              D ||
+                (D = new (n())(
                   (t) =>
                     (0, r.mG)(this, void 0, void 0, function* () {
                       const i = c.gA.Init(v.oh);
@@ -881,7 +760,7 @@
                     }),
                   { maxBatchSize: 100 },
                 ));
-              return L;
+              return D;
             })(t).load(e);
             return i
               ? (function (e, t) {
@@ -938,7 +817,7 @@
               : null;
           }),
       });
-      function D(e, t, i) {
+      function k(e, t, i) {
         const r = "string" == typeof i ? new f.K(i).GetAccountID() : i;
         return {
           queryKey: ["PlayerSummary", r],
@@ -946,7 +825,7 @@
           enabled: !!r,
         };
       }
-      let L;
+      let D;
     },
     9781: (e, t, i) => {
       i.d(t, { N: () => u, a: () => p });
@@ -1153,36 +1032,36 @@
     },
     66263: (e, t, i) => {
       i.d(t, {
-        $w: () => B,
+        $w: () => U,
         AN: () => q,
-        FR: () => G,
+        FR: () => I,
         HV: () => v,
         HX: () => W,
-        OB: () => T,
-        OG: () => x,
-        Ol: () => L,
+        OB: () => z,
+        OG: () => Q,
+        Ol: () => D,
         PP: () => S,
-        R2: () => M,
+        R2: () => N,
         Rs: () => F,
         Tj: () => b,
         We: () => j,
         X1: () => E,
         _w: () => f,
-        bS: () => z,
-        dU: () => A,
-        df: () => V,
+        bS: () => V,
+        dU: () => L,
+        df: () => T,
         j_: () => H,
-        ju: () => w,
+        ju: () => R,
         np: () => $,
-        on: () => N,
-        ps: () => R,
-        qH: () => k,
+        on: () => K,
+        ps: () => w,
+        qH: () => C,
         rX: () => O,
         sN: () => X,
-        tu: () => C,
-        uT: () => Q,
-        xm: () => Y,
-        yh: () => K,
+        tu: () => A,
+        uT: () => x,
+        xm: () => Z,
+        yh: () => M,
       });
       var r = i(85556),
         a = i(80751),
@@ -1844,7 +1723,7 @@
       }
       (0, r.gn)([o.LO], g.prototype, "m_mapOverridesPerPriceKey", void 0),
         (0, r.gn)([o.aD], g.prototype, "UpdateOverridesPerPriceKey", null);
-      const I = new Map([
+      const G = new Map([
         ["USD", "@1"],
         ["CNY", "@2"],
         ["EUR", "@3"],
@@ -1856,9 +1735,9 @@
         ["RUB", "@9"],
       ]);
       function y(e) {
-        return I.has(e) ? I.get(e) : e.indexOf("_") > 0 ? "ZZZ" + e : e;
+        return G.has(e) ? G.get(e) : e.indexOf("_") > 0 ? "ZZZ" + e : e;
       }
-      function G(e, t) {
+      function I(e, t) {
         return g.Get().GetPrice(e, t);
       }
       function b(e) {
@@ -1879,7 +1758,7 @@
           })(e, t)
         );
       }
-      function D(e, t) {
+      function k(e, t) {
         const i = g.Get().GetPrice(e, "USD");
         let r = null;
         for (let e of g.Get().m_rgPriceLevels)
@@ -1897,7 +1776,7 @@
         }
         return { nSuggestedPriceInCents: a, nGuidelinesLevel: r };
       }
-      function L() {
+      function D() {
         const e = (0, m.AM)();
         return s.useCallback(
           () =>
@@ -1911,7 +1790,7 @@
                   for (const t of g.Get().m_rgKnownPriceKeys) {
                     if ("USD" == t) continue;
                     const { nSuggestedPriceInCents: a, nGuidelinesLevel: n } =
-                      D(i, t);
+                      k(i, t);
                     null !== n &&
                       g.Get().GetPrice(i, t) != a &&
                       (e.push(t), r.push(a));
@@ -1925,12 +1804,12 @@
           [e],
         );
       }
-      function A(e, t) {
+      function L(e, t) {
         const i = (0, p.NW)();
         (0, p.Qg)(g.Get().GetPriceGridCellCallbackList(e, t), i);
         const r = g.Get().GetPrice(e, t);
         (0, p.Qg)(g.Get().GetPriceGridCellCallbackList(e, "USD"), i);
-        const { nSuggestedPriceInCents: a, nGuidelinesLevel: n } = D(e, t),
+        const { nSuggestedPriceInCents: a, nGuidelinesLevel: n } = k(e, t),
           o = s.useCallback((i) => g.Get().OverridePrice(e, t, i), [e, t]),
           c = g.Get().GetPublishedPrice(e, t),
           l = g.Get().GetProposedPrice(e, t),
@@ -1952,7 +1831,7 @@
           [r, l, c, u, d, _, a, o],
         );
       }
-      function k(e) {
+      function C(e) {
         let [t, i] = s.useState(() => g.Get().BAnyPackagePriceBelowMin(e)),
           r = s.useCallback(() => {
             let t = g.Get().BAnyPackagePriceBelowMin(e);
@@ -1960,7 +1839,7 @@
           }, [e, i]);
         return (0, p.Qg)(g.Get().GetPackageOverridesCallbackList(e), r), t;
       }
-      function C(e) {
+      function A(e) {
         return g.Get().BAnyPackagePriceBelowMin(e);
       }
       function O(e, t) {
@@ -1988,13 +1867,13 @@
           );
         }, []);
       }
-      function R(e) {
-        return g.Get().m_mapPriceProposals.get(e);
-      }
       function w(e) {
         return g.Get().m_mapPriceProposals.get(e);
       }
-      function U(e) {
+      function R(e) {
+        return g.Get().m_mapPriceProposals.get(e);
+      }
+      function B(e) {
         let t = !1;
         for (const i of g.Get().m_rgKnownPriceKeys) {
           let r = g.Get().GetPublishedPrice(e, i);
@@ -2002,8 +1881,8 @@
         }
         return t;
       }
-      function B(e) {
-        const t = R(e),
+      function U(e) {
+        const t = w(e),
           i = [];
         for (const r of g.Get().m_rgKnownPriceKeys) {
           const a = t.prices[r],
@@ -2018,19 +1897,19 @@
         }
         return i;
       }
-      function N() {
+      function K() {
         return g.Get().m_rgKnownPriceKeys;
       }
-      function M(e) {
+      function N(e) {
         let t = g.Get().m_mapPriceKeyDescriptions.get(e);
         return t ? t.strDescription : "";
       }
-      function K(e) {
+      function M(e) {
         return s.useCallback(() => {
           g.Get().DiscardAllLocalPriceOverridesForKey(e);
         }, [e]);
       }
-      function z(e) {
+      function V(e) {
         return s.useCallback(() => {
           g.Get().DiscardLocalPriceOverridesForPackage(e);
         }, [e]);
@@ -2040,7 +1919,7 @@
           g.Get().CancelProposal(e);
         }, [e]);
       }
-      function T() {
+      function z() {
         const [e, t] = s.useState(g.Get().m_strDisplayPriceKey),
           i = g.Get().m_rgKnownPriceKeys,
           r = s.useCallback((e) => {
@@ -2050,7 +1929,7 @@
           }, []);
         return { strPriceKey: e, rgSupportedPriceKeys: i, fnSetPriceKey: r };
       }
-      function V(e) {
+      function T(e) {
         const t = (0, p.NW)();
         return (
           (0, p.Qg)(g.Get().m_allPriceOverridesCallbackList, t),
@@ -2060,11 +1939,11 @@
       function W(e) {
         return g.Get().BHasLocalPriceOverrides(e);
       }
-      function x() {
+      function Q() {
         const [e, t] = s.useState(() => g.Get().GetAllLocalPriceOverrides());
         return (0, p.Qg)(g.Get().m_allPriceOverridesCallbackList, t), e;
       }
-      function Q(e) {
+      function x(e) {
         return (0, h.SZ)(() => g.Get().GetLocalOverrideCountForPriceKey(e));
       }
       function j() {
@@ -2108,11 +1987,11 @@
           [],
         );
       }
-      function Y(e) {
+      function Z(e) {
         let t = [];
         const i = g.Get().m_rgKnownPriceKeys;
         for (let r of e) {
-          if (U(r)) continue;
+          if (B(r)) continue;
           let e = !1;
           for (const t of i) {
             if (!g.Get().BPriceKeyRequired(t)) continue;

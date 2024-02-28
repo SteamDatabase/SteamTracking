@@ -6,7 +6,7 @@
   {
     68324: (e, t, i) => {
       i.d(t, { Pw: () => o, c8: () => a, hB: () => s, zB: () => r });
-      const n = new (i(68785).s)("video"),
+      const n = new (i(68785).sO)("video"),
         s = (n.Info, n.Debug);
       n.Error, n.Warning;
       function r(e) {

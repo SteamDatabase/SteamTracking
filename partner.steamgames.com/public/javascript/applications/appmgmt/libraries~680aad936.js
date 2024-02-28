@@ -1546,6 +1546,11 @@
                     br: O.FE.readString,
                     bw: O.Xc.writeString,
                   },
+                  game_is_private: {
+                    n: 22,
+                    br: O.FE.readBool,
+                    bw: O.Xc.writeBool,
+                  },
                 },
               }),
             R.sm_m

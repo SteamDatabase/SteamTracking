@@ -240,7 +240,7 @@
         P = n(68785),
         L = n(46984),
         R = n(16997);
-      const H = new P.s("ReactUsageReporting").Debug,
+      const H = new P.sO("ReactUsageReporting").Debug,
         U = 1e3 * L._H.PerMinute;
       class X {
         constructor() {

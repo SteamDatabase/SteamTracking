@@ -213,6 +213,7 @@
         WarningIconLayout: "_3POKG03Bgn3Fofqrijx-tH",
         WarningStylesBackground: "_2MAqlRrFcSDNSdhq-MmyTo",
         Stuck: "_2JqXLwG70-H-cFwcoiLLio",
+        WarningFloatBelow: "NcOahVPzIJEqCPIb8UE9e",
         InfoStyles: "_2Zq0UvVupNHRmv-AcOcE89",
         InfoStylesWithIcon: "_2TYAoWWtHLG3CtVbJF8al0",
         InfoIconLayout: "qgVd4PZiD-jTyQCioKYz4",

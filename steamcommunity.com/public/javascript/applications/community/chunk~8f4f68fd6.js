@@ -586,7 +586,7 @@
       })(L || (L = {}));
       const D = 172800,
         w = 600,
-        R = new _.s("SteamNotificationStore"),
+        R = new _.sO("SteamNotificationStore"),
         B = R.Debug,
         G = R.Error,
         U = R.Warning;

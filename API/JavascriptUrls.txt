@@ -936,6 +936,7 @@ ${PARTNER_BASE_URL}apps/communityitems/${}
 ${PARTNER_BASE_URL}apps/demo/${}
 ${PARTNER_BASE_URL}apps/landing/${appid}
 ${PARTNER_BASE_URL}apps/landing/${}
+${PARTNER_BASE_URL}apps/requestkeys/${}
 ${PARTNER_BASE_URL}apps/suggestapps
 ${PARTNER_BASE_URL}bundles/suggestbundle
 ${PARTNER_BASE_URL}bundles/view/${}
@@ -950,6 +951,8 @@ ${PARTNER_BASE_URL}dailydeals/ajaxremoveappinvite
 ${PARTNER_BASE_URL}dailydeals/ajaxresendinvitationemail
 ${PARTNER_BASE_URL}discounts/ajaxgetdiscountbyapp
 ${PARTNER_BASE_URL}doc/${}
+${PARTNER_BASE_URL}doc/doc/marketing/discounts/seasonalsales
+${PARTNER_BASE_URL}doc/features/playtest#4
 ${PARTNER_BASE_URL}doc/marketing/discounts
 ${PARTNER_BASE_URL}doc/marketing/discounts#limits
 ${PARTNER_BASE_URL}doc/marketing/discounts/dailydeal
@@ -1032,6 +1035,7 @@ ${PARTNER_BASE_URL}pricing/ajaxpublishproposal/${}/${}
 ${PARTNER_BASE_URL}pricing/ajaxsubmitproposal/${}/${}
 ${PARTNER_BASE_URL}promotion${}
 ${PARTNER_BASE_URL}promotion/assetportal/ajaxuploadpreviewasset/${}
+${PARTNER_BASE_URL}promotion/assetportal/request/${id}
 ${PARTNER_BASE_URL}promotion/assetportal/request/${}
 ${PARTNER_BASE_URL}promotion/dailydeals/ajaxadminadddailydeal
 ${PARTNER_BASE_URL}promotion/dailydeals/ajaxadminremovedailydeal
@@ -2997,6 +3001,7 @@ https://www.dota2.com/planetfall
 https://www.dota2.com/primalbeast
 https://www.dota2.com/risinggale
 https://www.dota2.com/theonetrueking
+https://www.dropbox.com/s/h9gjz...
 https://www.example.com
 https://www.facebook.com/Steam/videos
 https://www.facebook.com/dota2/
