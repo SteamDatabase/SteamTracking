@@ -6,117 +6,101 @@
     71741: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
-        PartnerEventFont: "partnereventshared_PartnerEventFont_22_fG",
-        Clear: "partnereventshared_Clear_2BXhG",
-        Divider: "partnereventshared_Divider_1u63O",
-        EventDefaultRowContainer:
-          "partnereventshared_EventDefaultRowContainer_2pVkY",
-        EventStartPublic: "partnereventshared_EventStartPublic_13cij",
-        EventOptions: "partnereventshared_EventOptions_ShLAX",
-        FlexColumnContainer: "partnereventshared_FlexColumnContainer_WmMRF",
-        FlexRowContainer: "partnereventshared_FlexRowContainer_elLwm",
-        Centered: "partnereventshared_Centered_1HqKt",
-        FlexContainSpaceBetween:
-          "partnereventshared_FlexContainSpaceBetween_2MHtA",
-        FlexRowWrapSpaceBetweenContainer:
-          "partnereventshared_FlexRowWrapSpaceBetweenContainer_Dtr2Q",
-        FlexRowWrapFlexStartContainer:
-          "partnereventshared_FlexRowWrapFlexStartContainer_15EK8",
-        SaveBackground: "partnereventshared_SaveBackground_dpb4w",
-        SupportedGroupLabel: "partnereventshared_SupportedGroupLabel_2YjA1",
-        LanguageWithContent: "partnereventshared_LanguageWithContent_1mZ9r",
-        LargeInput: "partnereventshared_LargeInput_PJvHC",
-        InputBorder: "partnereventshared_InputBorder_udsJY",
-        RadioOption: "partnereventshared_RadioOption_2Ubig",
-        FlexGrow: "partnereventshared_FlexGrow_IQIYv",
-        EventEditorTextTitleCtn:
-          "partnereventshared_EventEditorTextTitleCtn_2Zzv2",
-        doclink: "partnereventshared_doclink_1ge0t",
-        EventEditorUnpaddedTextTitle:
-          "partnereventshared_EventEditorUnpaddedTextTitle_3Byox",
-        EventEditorTextTitle: "partnereventshared_EventEditorTextTitle_1q_7g",
-        EventEditorTextTitleLengthInfo:
-          "partnereventshared_EventEditorTextTitleLengthInfo_1eoiU",
-        CollapsableSectionTitle:
-          "partnereventshared_CollapsableSectionTitle_10FD9",
-        SectionTitle: "partnereventshared_SectionTitle_1Wgh0",
-        EventSectionTitleCtn: "partnereventshared_EventSectionTitleCtn_1qQl6",
-        EventSectionTitle: "partnereventshared_EventSectionTitle_YggHe",
-        EventSectionSpacer: "partnereventshared_EventSectionSpacer_1Z2oL",
-        EventSectionMoreBtn: "partnereventshared_EventSectionMoreBtn_2BYpy",
-        EventEditorSpacerPadding:
-          "partnereventshared_EventEditorSpacerPadding_12MTx",
-        EventEditorVisibilityCtn:
-          "partnereventshared_EventEditorVisibilityCtn_1-veX",
-        EventEditorTextSubTitle:
-          "partnereventshared_EventEditorTextSubTitle_2hvrH",
-        FloatingTitle: "partnereventshared_FloatingTitle_38Zrq",
-        EventEditorEventStatus:
-          "partnereventshared_EventEditorEventStatus_3dxy2",
-        EventHidden: "partnereventshared_EventHidden_3oD7c",
-        EventVisible: "partnereventshared_EventVisible_3sin0",
-        EventBarTitleCtn: "partnereventshared_EventBarTitleCtn_1bUXk",
-        EventBarTitle: "partnereventshared_EventBarTitle_3K6Ro",
-        EventBarBack: "partnereventshared_EventBarBack_BUxe5",
-        EditPreviewButton: "partnereventshared_EditPreviewButton_3NmFF",
-        Delete: "partnereventshared_Delete_2GdGz",
-        Disabled: "partnereventshared_Disabled_v6Qy-",
-        BrowseMoreButton: "partnereventshared_BrowseMoreButton_3GBlO",
-        Button: "partnereventshared_Button_3P0Tm",
-        Icon: "partnereventshared_Icon_3p1Hj",
-        Primary: "partnereventshared_Primary_2chVK",
-        ClearThings: "partnereventshared_ClearThings_3WXyk",
-        OnIndicator: "partnereventshared_OnIndicator_3fA-n",
-        OffIndicator: "partnereventshared_OffIndicator_22oxx",
-        IconImage: "partnereventshared_IconImage_9JzcW",
-        RightColumnContainer: "partnereventshared_RightColumnContainer_3DcKi",
-        EventPublishButton: "partnereventshared_EventPublishButton_1d84F",
-        FloatRight: "partnereventshared_FloatRight_3tfNK",
-        TTip: "partnereventshared_TTip_3OCGy",
-        ValveSupportOnly: "partnereventshared_ValveSupportOnly_3lW3G",
-        ArtworkAgeNotAppropriate:
-          "partnereventshared_ArtworkAgeNotAppropriate_2BmFv",
-        EventDashboardHeader: "partnereventshared_EventDashboardHeader_f16Dd",
-        ContainerSpaceBetween: "partnereventshared_ContainerSpaceBetween_3QHVX",
-        EventDashboardTitles: "partnereventshared_EventDashboardTitles_c1VG5",
-        EventDashboardActions: "partnereventshared_EventDashboardActions_33J6y",
-        EventDashboardStatsCtn:
-          "partnereventshared_EventDashboardStatsCtn_39Giq",
-        EventDashboardAppCtn: "partnereventshared_EventDashboardAppCtn_2to84",
-        maintitle: "partnereventshared_maintitle_2hNVN",
-        AppTitle: "partnereventshared_AppTitle_1XYbE",
-        subtitle: "partnereventshared_subtitle_16zOX",
-        ValveOnlyBackground: "partnereventshared_ValveOnlyBackground_R4o6q",
-        ValveOnlyAdminBackground:
-          "partnereventshared_ValveOnlyAdminBackground_1ZfNJ",
-        Columns: "partnereventshared_Columns_1dQIj",
-        LeftCol: "partnereventshared_LeftCol_PzQ1b",
-        RightCol: "partnereventshared_RightCol_1y0mV",
-        DropDownScroll: "partnereventshared_DropDownScroll_31SMP",
-        DropDownScrollItem: "partnereventshared_DropDownScrollItem_1gJSm",
-        CloseButton: "partnereventshared_CloseButton_1y6UV",
-        CloseSectionTools: "partnereventshared_CloseSectionTools_2rLRq",
-        HalfColumn: "partnereventshared_HalfColumn_1sMNJ",
-        tooltip_Ctn: "partnereventshared_tooltip_Ctn_3tZQl",
-        SaleEditorSpacing: "partnereventshared_SaleEditorSpacing_26P7E",
-        SaleSectionHeader: "partnereventshared_SaleSectionHeader_3FRxV",
-        SaleSectionSubtitle: "partnereventshared_SaleSectionSubtitle_1JRr3",
-        SaleSectionContainer: "partnereventshared_SaleSectionContainer_1UD2h",
-        AddSectionButton: "partnereventshared_AddSectionButton_15e-D",
-        EventElementRequired: "partnereventshared_EventElementRequired_appje",
-        EventElementOptional: "partnereventshared_EventElementOptional_35lj0",
-        HelperTooltip: "partnereventshared_HelperTooltip_3UCPo",
-        PixelOffsetCtn: "partnereventshared_PixelOffsetCtn_3u_zW",
-        PixelOffsetRow: "partnereventshared_PixelOffsetRow_brxQb",
-        PixelOffsetNote: "partnereventshared_PixelOffsetNote_3g0iB",
-        PixelOffsetCallout: "partnereventshared_PixelOffsetCallout_33i_6",
-        Error: "partnereventshared_Error_HSnMS",
-        GamepadOnlyScrollPanel:
-          "partnereventshared_GamepadOnlyScrollPanel_cEBYf",
+        PartnerEventFont: "_22_fGxD1rxLRjTmEs4fpJN",
+        Clear: "_2BXhGeAkEZXReIBs1q6iG3",
+        Divider: "_1u63OZOUO8ejFLl83_aFKQ",
+        EventDefaultRowContainer: "_2pVkYef_JboBRTJDsI5XrR",
+        EventStartPublic: "_13cijqNyra467La1xbDgy0",
+        EventOptions: "ShLAXJyjCB5R_Y81P3-VX",
+        FlexColumnContainer: "WmMRFd2F9FMje__jWs2c4",
+        FlexRowContainer: "elLwmClZ5oSY2aer18vUt",
+        Centered: "_1HqKtO0h5lgj9h0J4mUz51",
+        FlexContainSpaceBetween: "_2MHtA5ZPqa6yMB-WNNys1_",
+        FlexRowWrapSpaceBetweenContainer: "Dtr2QSwAjrR1TzFyE3-BV",
+        FlexRowWrapFlexStartContainer: "_15EK8oKkXXhkYYD1995NeY",
+        SaveBackground: "dpb4wNGbh2HsDaP8sGIsE",
+        SupportedGroupLabel: "_2YjA1EPu2wLxQsG0q0EnBS",
+        LanguageWithContent: "_1mZ9rmSPJoVvf2B3Qug5dZ",
+        LargeInput: "PJvHCWuMfWFNGAnUrc5sL",
+        InputBorder: "udsJYi3FfK7jf9k6x8C_8",
+        RadioOption: "_2UbigK-jBvbAlI2x6ACeW3",
+        FlexGrow: "IQIYvuCEhjK67AX4HhGRO",
+        EventEditorTextTitleCtn: "_2Zzv2Bmql0eJwbvkJBwYuN",
+        doclink: "_1ge0tlUexoy7zjWcyzOfS6",
+        EventEditorUnpaddedTextTitle: "_3ByoxfFwTDbtxfRiZffvVR",
+        EventEditorTextTitle: "_1q_7gkHl0t3O6Xn1mLOo_9",
+        EventEditorTextTitleLengthInfo: "_1eoiU4oJuNicls_w9-G4-K",
+        CollapsableSectionTitle: "_10FD9HmlE20EDXyk60EdA8",
+        SectionTitle: "_1Wgh0WQu1_npRyQP18CK90",
+        EventSectionTitleCtn: "_1qQl6pXbyn0yw4nEKR_vHi",
+        EventSectionTitle: "YggHeJRs5J9pSHeBJ_wMN",
+        EventSectionSpacer: "_1Z2oL2TwXjHwQ1hndP4OiM",
+        EventSectionMoreBtn: "_2BYpybC_CxVL2h2iJaN8Bg",
+        EventEditorSpacerPadding: "_12MTxhWYRd9y6nISAZ_UnW",
+        EventEditorVisibilityCtn: "_1-veXdXA0v95XZhDClOEp4",
+        EventEditorTextSubTitle: "_2hvrHXv-9YJ_HZwdW1Yi6r",
+        FloatingTitle: "_38ZrqpqJnDebtAz3y1TqGT",
+        EventEditorEventStatus: "_3dxy2T8x1pk6OjFgWQSTCE",
+        EventHidden: "_3oD7cGykuzlqnfVXev8JDs",
+        EventVisible: "_3sin0w04DXfKLZH9M923t8",
+        EventBarTitleCtn: "_1bUXkxwlWqoLUkJx4mP5E",
+        EventBarTitle: "_3K6Ror7Nj83ysihgViAvjd",
+        EventBarBack: "BUxe5edxrjnB3sckTkcDh",
+        EditPreviewButton: "_3NmFFZyqnB0ITWJGvJNDqk",
+        Delete: "_2GdGzjX59SeWcOhf9bGYki",
+        Disabled: "v6Qy-glA7sDsXSv321g2_",
+        BrowseMoreButton: "_3GBlO1g_jz3O_-xFJKPo0g",
+        Button: "_3P0Tm2XKLVG_I9wjP3H-Zs",
+        Icon: "_3p1Hj4MxioFD7iM63Z3s6T",
+        Primary: "_2chVKJsutfE3lDkcFAqyeZ",
+        ClearThings: "_3WXykpA6Kzr-GZbs-xNRgY",
+        OnIndicator: "_3fA-n2DjHbEXOjH8yJDjWK",
+        OffIndicator: "_22oxx3ra_nx6U1egpcNMGO",
+        IconImage: "_9JzcWM2TPeeznG62hmrtI",
+        RightColumnContainer: "_3DcKivjvkvNAkDucRLw1w5",
+        EventPublishButton: "_1d84FQy71PnISwXFbOXcPx",
+        FloatRight: "_3tfNK_vyn6tIKWPDii6sff",
+        TTip: "_3OCGyrCeNKFAnuBU9PG2N3",
+        ValveSupportOnly: "_3lW3GgqO6DUN_J99j87rB4",
+        ArtworkAgeNotAppropriate: "_2BmFvku3qsuH4WKQm7A4Mw",
+        EventDashboardHeader: "f16DdpCs9ZpNzhQBCKmfP",
+        ContainerSpaceBetween: "_3QHVXnPxJuRhQFaaOlCjOc",
+        EventDashboardTitles: "c1VG5muvfvFaBAOLAA7C4",
+        EventDashboardActions: "_33J6yVJU13tCn254BqAFAC",
+        EventDashboardStatsCtn: "_39Giqruo6szVXi91aLU32P",
+        EventDashboardAppCtn: "_2to8484gM6Qr2dBlG79lGk",
+        maintitle: "_2hNVNZmo17H17c3Asborfa",
+        AppTitle: "_1XYbE1f9ZGP7nZeehZJYKz",
+        subtitle: "_16zOXVLL9lA_icrO9exNFA",
+        ValveOnlyBackground: "R4o6q5hncc3-NbHrBItgS",
+        ValveOnlyAdminBackground: "_1ZfNJaoQ7gAP_3KRqJdKoJ",
+        Columns: "_1dQIj-HUnAuT0kk8ebCrNB",
+        LeftCol: "PzQ1bZrN0AJNpSpFl790Y",
+        RightCol: "_1y0mVohcDvYGXHf0k4kUQR",
+        DropDownScroll: "_31SMPImMR3WfYsGDJXWLLO",
+        DropDownScrollItem: "_1gJSm4R0tJoIXWyvuVbqpE",
+        CloseButton: "_1y6UVyR2qDh-NxBMscKg4-",
+        CloseSectionTools: "_2rLRqIS4OD6oj9g4HKdLiG",
+        HalfColumn: "_1sMNJGE8oKT5VzFDeWD1AJ",
+        tooltip_Ctn: "_3tZQlq2SCmMhllfgwGUpJ0",
+        SaleEditorSpacing: "_26P7EgY4J1T2grp3VUm3Pn",
+        SaleSectionHeader: "_3FRxVBrTtFQLhmHRstBbC_",
+        SaleSectionSubtitle: "_1JRr347o2bE6JhsAH2xicE",
+        SaleSectionContainer: "_1UD2hUjCkCaT0iG7AlOB7w",
+        AddSectionButton: "_15e-DuEt3rklSszYftj_j_",
+        EventElementRequired: "appjekVsG16gF0TXA7A9z",
+        EventElementOptional: "_35lj0GWfP_YLh7R3N-0E7Y",
+        HelperTooltip: "_3UCPo4bysBaoopie0W_urh",
+        PixelOffsetCtn: "_3u_zWceLsLZ_Sw4hJ_PSrJ",
+        PixelOffsetRow: "brxQbAx9vyoTUNgI9SSuV",
+        PixelOffsetNote: "_3g0iBkQb0HXeD717c2tmaW",
+        PixelOffsetCallout: "_33i_61lSlstJXhjjG5saSS",
+        Error: "HSnMSSY5qFoFUg8EAKdx0",
+        GamepadOnlyScrollPanel: "cEBYfOugpaX6Tk_iRMYnw",
       };
     },
     95126: (e, t, n) => {
-      var r = {
+      var s = {
         "./af": 75436,
         "./af.js": 75436,
         "./ar": 27662,
@@ -128,6 +112,8 @@
         "./ar-ly.js": 45801,
         "./ar-ma": 64784,
         "./ar-ma.js": 64784,
+        "./ar-ps": 86701,
+        "./ar-ps.js": 86701,
         "./ar-sa": 59050,
         "./ar-sa.js": 59050,
         "./ar-tn": 62042,
@@ -262,6 +248,8 @@
         "./ko": 65508,
         "./ko.js": 65508,
         "./ku": 18195,
+        "./ku-kmr": 53905,
+        "./ku-kmr.js": 53905,
         "./ku.js": 18195,
         "./ky": 83971,
         "./ky.js": 83971,
@@ -388,39 +376,39 @@
         "./zh-tw": 79204,
         "./zh-tw.js": 79204,
       };
-      function a(e) {
-        var t = s(e);
+      function r(e) {
+        var t = o(e);
         return n(t);
       }
-      function s(e) {
-        if (!n.o(r, e)) {
+      function o(e) {
+        if (!n.o(s, e)) {
           var t = new Error("Cannot find module '" + e + "'");
           throw ((t.code = "MODULE_NOT_FOUND"), t);
         }
-        return r[e];
+        return s[e];
       }
-      (a.keys = function () {
-        return Object.keys(r);
+      (r.keys = function () {
+        return Object.keys(s);
       }),
-        (a.resolve = s),
-        (e.exports = a),
-        (a.id = 95126);
+        (r.resolve = o),
+        (e.exports = r),
+        (r.id = 95126);
     },
     64936: (e, t, n) => {
       "use strict";
-      n.d(t, { JW: () => v, kl: () => h, rw: () => u, zD: () => c });
-      var r = n(85556),
-        a = n(54842),
-        s = n(37485),
-        o = n.n(s),
-        i = n(47427),
+      n.d(t, { JW: () => c, kl: () => _, rw: () => v, zD: () => m });
+      var s = n(85556),
+        r = n(54842),
+        o = n(37485),
+        i = n.n(o),
+        a = n(47427),
         l = (n(29480), n(37563));
-      class d {
+      class j {
         constructor() {
           (this.bOpenEventLandingPage = !1),
             (this.bIncludeFeaturedAsGameSource = !0),
             (this.nOverrideDateNow = void 0),
-            (0, a.rC)(this);
+            (0, r.rC)(this);
         }
         get bRequireAllEventsLoadedInTimeBlock() {
           return !1;
@@ -455,7 +443,7 @@
             ("dev" == l.De.WEB_UNIVERSE || "beta" == l.De.WEB_UNIVERSE)
           ) {
             const e = t.get("t");
-            let n = /^\d+$/.test(e) ? o().unix(Number.parseInt(e)) : o()(e);
+            let n = /^\d+$/.test(e) ? i().unix(Number.parseInt(e)) : i()(e);
             (this.nOverrideDateNow = Math.floor(n.unix())),
               console.log(
                 "CEventCalendarDevFeatures overriding partner event time: " +
@@ -466,48 +454,48 @@
           }
         }
       }
-      (0, r.gn)([a.LO], d.prototype, "nOverrideDateNow", void 0);
-      const v = new d();
-      window.g_EventCalendarDevFeatures = v;
-      const _ = new Date(),
-        p = Math.floor(_.getTime() / 1e3);
-      function h() {
+      (0, s.gn)([r.LO], j.prototype, "nOverrideDateNow", void 0);
+      const c = new j();
+      window.g_EventCalendarDevFeatures = c;
+      const u = new Date(),
+        d = Math.floor(u.getTime() / 1e3);
+      function _() {
         var e;
-        return null !== (e = v.nOverrideDateNow) && void 0 !== e ? e : p;
+        return null !== (e = c.nOverrideDateNow) && void 0 !== e ? e : d;
       }
-      function c() {
-        return i.useMemo(() => h(), []);
+      function m() {
+        return a.useMemo(() => _(), []);
       }
-      function u() {
-        return i.useMemo(() => v.GetTimeNowWithOverrideAsDate(), []);
+      function v() {
+        return a.useMemo(() => c.GetTimeNowWithOverrideAsDate(), []);
       }
     },
     66079: (e, t, n) => {
       "use strict";
-      n.d(t, { r: () => i });
-      var r = n(47427),
-        a = n(50898),
-        s = n(31846),
-        o = n(37563);
-      const i = (e) => {
-        let t = o.De.HELP_BASE_URL + "wizard/HelpWithLimitedAccount";
-        return r.createElement(
-          a.uH,
+      n.d(t, { r: () => a });
+      var s = n(47427),
+        r = n(27438),
+        o = n(31846),
+        i = n(37563);
+      const a = (e) => {
+        let t = i.De.HELP_BASE_URL + "wizard/HelpWithLimitedAccount";
+        return s.createElement(
+          r.uH,
           {
-            strTitle: (0, s.Xx)("#Informational_Message"),
+            strTitle: (0, o.Xx)("#Informational_Message"),
             onCancel: e.closeModal,
             onOK: e.closeModal,
             bAlertDialog: !0,
           },
-          r.createElement(
+          s.createElement(
             "div",
             null,
-            (0, s.kQ)(
+            (0, o.kQ)(
               e.strTokenOverride || "#User_LimitedAccount",
-              r.createElement(
+              s.createElement(
                 "a",
-                { href: t, target: o.De.IN_CLIENT ? void 0 : "_blank" },
-                (0, s.Xx)("#User_LimitedAccount_UrlInfo"),
+                { href: t, target: i.De.IN_CLIENT ? void 0 : "_blank" },
+                (0, o.Xx)("#User_LimitedAccount_UrlInfo"),
               ),
             ),
           ),
@@ -516,56 +504,56 @@
     },
     80212: (e, t, n) => {
       "use strict";
-      n.d(t, { X: () => _, _: () => p });
-      var r = n(47427),
-        a = n(90069),
-        s = n(31846),
-        o = n(37563),
-        i = n(99327),
+      n.d(t, { X: () => u, _: () => d });
+      var s = n(47427),
+        r = n(90069),
+        o = n(31846),
+        i = n(37563),
+        a = n(99327),
         l = n(77581),
-        d = n(35791);
-      function v(e) {
-        return r.createElement(
-          a.e1,
+        j = n(35791);
+      function c(e) {
+        return s.createElement(
+          r.e1,
           { onEscKeypress: e.closeModal, bDisableBackgroundDismiss: !0 },
-          r.createElement(h, { redirectURL: e.redirectURL }),
+          s.createElement(_, { redirectURL: e.redirectURL }),
         );
       }
-      function _() {
-        (0, a.AM)(
-          r.createElement(v, {
+      function u() {
+        (0, r.AM)(
+          s.createElement(c, {
             ownerWin: window,
             redirectURL: window.location.href,
           }),
           window,
-          { strTitle: (0, s.Xx)("#Login_SignIn") },
+          { strTitle: (0, o.Xx)("#Login_SignIn") },
         );
       }
-      function p(e) {
-        (0, a.AM)(
-          r.createElement(v, { ownerWin: window, redirectURL: e }),
+      function d(e) {
+        (0, r.AM)(
+          s.createElement(c, { ownerWin: window, redirectURL: e }),
           window,
-          { strTitle: (0, s.Xx)("#Login_SignIn") },
+          { strTitle: (0, o.Xx)("#Login_SignIn") },
         );
       }
-      function h(e) {
+      function _(e) {
         const { redirectURL: t } = e,
-          [n] = (0, r.useState)(
-            new l.J(o.De.WEBAPI_BASE_URL).GetAnonymousServiceTransport(),
+          [n] = (0, s.useState)(
+            new l.J(i.De.WEBAPI_BASE_URL).GetAnonymousServiceTransport(),
           ),
-          [a, s] = (0, r.useState)(!1);
-        return r.createElement(
+          [r, o] = (0, s.useState)(!1);
+        return s.createElement(
           "div",
           null,
-          a
-            ? r.createElement(i.pT, null)
-            : r.createElement(i.wK, {
+          r
+            ? s.createElement(a.pT, null)
+            : s.createElement(a.wK, {
                 autoFocus: !0,
                 transport: n,
                 platform: 2,
                 onComplete: (e) => {
-                  e == d.TG.k_PrimaryDomainFail
-                    ? s(!0)
+                  e == j.TG.k_PrimaryDomainFail
+                    ? o(!0)
                     : window.location.assign(t);
                 },
                 redirectUrl: t,
@@ -576,14 +564,14 @@
     },
     29480: (e, t, n) => {
       "use strict";
-      n.d(t, { T: () => o });
-      var r = n(80751),
-        a = n.n(r),
-        s = n(47427);
-      function o(e) {
-        const t = s.useRef(a().CancelToken.source());
+      n.d(t, { T: () => i });
+      var s = n(80751),
+        r = n.n(s),
+        o = n(47427);
+      function i(e) {
+        const t = o.useRef(r().CancelToken.source());
         return (
-          s.useEffect(() => {
+          o.useEffect(() => {
             const n = t.current;
             return () => n.cancel(e ? `${e}: unmounting` : "unmounting");
           }, [e]),

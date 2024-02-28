@@ -979,56 +979,6 @@
             }.call(e, r, e, t)) || (t.exports = n);
       })();
     },
-    2610: (t, e, r) => {
-      "use strict";
-      var n = r(32224);
-      (e.__esModule = !0),
-        (e.default = function (t, e) {
-          t.classList
-            ? t.classList.add(e)
-            : (0, o.default)(t, e) ||
-              ("string" == typeof t.className
-                ? (t.className = t.className + " " + e)
-                : t.setAttribute(
-                    "class",
-                    ((t.className && t.className.baseVal) || "") + " " + e,
-                  ));
-        });
-      var o = n(r(2142));
-      t.exports = e.default;
-    },
-    2142: (t, e) => {
-      "use strict";
-      (e.__esModule = !0),
-        (e.default = function (t, e) {
-          return t.classList
-            ? !!e && t.classList.contains(e)
-            : -1 !==
-                (" " + (t.className.baseVal || t.className) + " ").indexOf(
-                  " " + e + " ",
-                );
-        }),
-        (t.exports = e.default);
-    },
-    40441: (t) => {
-      "use strict";
-      function e(t, e) {
-        return t
-          .replace(new RegExp("(^|\\s)" + e + "(?:\\s|$)", "g"), "$1")
-          .replace(/\s+/g, " ")
-          .replace(/^\s*|\s*$/g, "");
-      }
-      t.exports = function (t, r) {
-        t.classList
-          ? t.classList.remove(r)
-          : "string" == typeof t.className
-          ? (t.className = e(t.className, r))
-          : t.setAttribute(
-              "class",
-              e((t.className && t.className.baseVal) || "", r),
-            );
-      };
-    },
     84682: (t) => {
       "use strict";
       var e = Object.prototype.hasOwnProperty,
@@ -5387,6 +5337,56 @@
         (ie.defaultProps = { component: "span" });
       const ae = Ft;
     },
+    39199: (t, e, r) => {
+      "use strict";
+      var n = r(32224);
+      (e.__esModule = !0),
+        (e.default = function (t, e) {
+          t.classList
+            ? t.classList.add(e)
+            : (0, o.default)(t, e) ||
+              ("string" == typeof t.className
+                ? (t.className = t.className + " " + e)
+                : t.setAttribute(
+                    "class",
+                    ((t.className && t.className.baseVal) || "") + " " + e,
+                  ));
+        });
+      var o = n(r(86582));
+      t.exports = e.default;
+    },
+    86582: (t, e) => {
+      "use strict";
+      (e.__esModule = !0),
+        (e.default = function (t, e) {
+          return t.classList
+            ? !!e && t.classList.contains(e)
+            : -1 !==
+                (" " + (t.className.baseVal || t.className) + " ").indexOf(
+                  " " + e + " ",
+                );
+        }),
+        (t.exports = e.default);
+    },
+    68281: (t) => {
+      "use strict";
+      function e(t, e) {
+        return t
+          .replace(new RegExp("(^|\\s)" + e + "(?:\\s|$)", "g"), "$1")
+          .replace(/\s+/g, " ")
+          .replace(/^\s*|\s*$/g, "");
+      }
+      t.exports = function (t, r) {
+        t.classList
+          ? t.classList.remove(r)
+          : "string" == typeof t.className
+          ? (t.className = e(t.className, r))
+          : t.setAttribute(
+              "class",
+              e((t.className && t.className.baseVal) || "", r),
+            );
+      };
+    },
     50268: (t, e, r) => {
       "use strict";
       (e.__esModule = !0), (e.default = void 0);
@@ -5404,8 +5404,8 @@
             }
         e.default = t;
       })(r(25816));
-      var n = u(r(2610)),
-        o = u(r(40441)),
+      var n = u(r(39199)),
+        o = u(r(68281)),
         i = u(r(47427)),
         a = u(r(65403));
       r(1042);
@@ -8751,7 +8751,7 @@
       "use strict";
       r.d(e, { c: () => ht });
       var n,
-        o = r(11914),
+        o = r(6256),
         i = r(47427),
         a = r(84148),
         u = r(15819),
@@ -10160,9 +10160,9 @@
           formatAxisMap: pt.t9,
         });
     },
-    11914: (t, e, r) => {
+    6256: (t, e, r) => {
       "use strict";
-      r.d(e, { z: () => Fe });
+      r.d(e, { z: () => Ge });
       var n = r(47427),
         o = r(38716),
         i = r.n(o),
@@ -10182,27 +10182,11 @@
         g = r.n(b),
         x = r(84148),
         w = r(7716),
-        O = r(53460);
-      function j(t) {
-        var e = t.cx,
-          r = t.cy,
-          n = t.radius,
-          o = t.startAngle,
-          i = t.endAngle;
-        return {
-          points: [(0, O.op)(e, r, n, o), (0, O.op)(e, r, n, i)],
-          cx: e,
-          cy: r,
-          radius: n,
-          startAngle: o,
-          endAngle: i,
-        };
-      }
-      var S = r(76325),
-        A = r(12605),
-        E = r(77125),
-        P = r(52871);
-      function k(t, e, r) {
+        O = r(76325),
+        j = r(12605),
+        S = r(77125),
+        A = r(52871);
+      function E(t, e, r) {
         if (e < 1) return [];
         if (1 === e && void 0 === r) return t;
         for (var n = [], o = 0; o < t.length; o += e) {
@@ -10211,14 +10195,14 @@
         }
         return n;
       }
-      function M(t, e, r, n, o) {
+      function P(t, e, r, n, o) {
         if (t * e < t * n || t * e > t * o) return !1;
         var i = r();
         return t * (e - (t * i) / 2 - n) >= 0 && t * (e + (t * i) / 2 - o) <= 0;
       }
-      function _(t) {
+      function k(t) {
         return (
-          (_ =
+          (k =
             "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
               ? function (t) {
                   return typeof t;
@@ -10231,10 +10215,10 @@
                     ? "symbol"
                     : typeof t;
                 }),
-          _(t)
+          k(t)
         );
       }
-      function T(t, e) {
+      function M(t, e) {
         var r = Object.keys(t);
         if (Object.getOwnPropertySymbols) {
           var n = Object.getOwnPropertySymbols(t);
@@ -10246,16 +10230,16 @@
         }
         return r;
       }
-      function C(t) {
+      function _(t) {
         for (var e = 1; e < arguments.length; e++) {
           var r = null != arguments[e] ? arguments[e] : {};
           e % 2
-            ? T(Object(r), !0).forEach(function (e) {
-                N(t, e, r[e]);
+            ? M(Object(r), !0).forEach(function (e) {
+                T(t, e, r[e]);
               })
             : Object.getOwnPropertyDescriptors
             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
-            : T(Object(r)).forEach(function (e) {
+            : M(Object(r)).forEach(function (e) {
                 Object.defineProperty(
                   t,
                   e,
@@ -10265,22 +10249,22 @@
         }
         return t;
       }
-      function N(t, e, r) {
+      function T(t, e, r) {
         return (
           (e = (function (t) {
             var e = (function (t, e) {
-              if ("object" !== _(t) || null === t) return t;
+              if ("object" !== k(t) || null === t) return t;
               var r = t[Symbol.toPrimitive];
               if (void 0 !== r) {
                 var n = r.call(t, e || "default");
-                if ("object" !== _(n)) return n;
+                if ("object" !== k(n)) return n;
                 throw new TypeError(
                   "@@toPrimitive must return a primitive value.",
                 );
               }
               return ("string" === e ? String : Number)(t);
             })(t, "string");
-            return "symbol" === _(e) ? e : String(e);
+            return "symbol" === k(e) ? e : String(e);
           })(e)) in t
             ? Object.defineProperty(t, e, {
                 value: r,
@@ -10292,7 +10276,7 @@
           t
         );
       }
-      function D(t, e, r) {
+      function C(t, e, r) {
         var n = t.tick,
           o = t.ticks,
           i = t.viewBox,
@@ -10303,15 +10287,15 @@
           f = t.unit,
           p = t.angle;
         if (!o || !o.length || !n) return [];
-        if ((0, S.hj)(l) || E.x.isSsr)
+        if ((0, O.hj)(l) || S.x.isSsr)
           return (function (t, e) {
-            return k(t, e + 1);
-          })(o, "number" == typeof l && (0, S.hj)(l) ? l : 0);
+            return E(t, e + 1);
+          })(o, "number" == typeof l && (0, O.hj)(l) ? l : 0);
         var h = [],
           d = "top" === c || "bottom" === c ? "width" : "height",
           y =
             f && "width" === d
-              ? (0, A.xE)(f, { fontSize: e, letterSpacing: r })
+              ? (0, j.xE)(f, { fontSize: e, letterSpacing: r })
               : { width: 0, height: 0 },
           v = function (t, n) {
             var o = u()(s) ? s(t.value, n) : t.value;
@@ -10321,11 +10305,11 @@
                     width: t.width + e.width,
                     height: t.height + e.height,
                   };
-                  return (0, P.xE)(n, r);
-                })((0, A.xE)(o, { fontSize: e, letterSpacing: r }), y, p)
-              : (0, A.xE)(o, { fontSize: e, letterSpacing: r })[d];
+                  return (0, A.xE)(n, r);
+                })((0, j.xE)(o, { fontSize: e, letterSpacing: r }), y, p)
+              : (0, j.xE)(o, { fontSize: e, letterSpacing: r })[d];
           },
-          m = o.length >= 2 ? (0, S.uY)(o[1].coordinate - o[0].coordinate) : 1,
+          m = o.length >= 2 ? (0, O.uY)(o[1].coordinate - o[0].coordinate) : 1,
           b = (function (t, e, r) {
             var n = "width" === r,
               o = t.x,
@@ -10348,14 +10332,14 @@
                   f = u,
                   p = function () {
                     var e = null == n ? void 0 : n[l];
-                    if (void 0 === e) return { v: k(n, s) };
+                    if (void 0 === e) return { v: E(n, s) };
                     var i,
                       a = l,
                       p = function () {
                         return void 0 === i && (i = r(e, a)), i;
                       },
                       h = e.coordinate,
-                      d = 0 === l || M(t, h, p, f, c);
+                      d = 0 === l || P(t, h, p, f, c);
                     d || ((l = 0), (f = u), (s += 1)),
                       d && ((f = h + t * (p() / 2 + o)), (l += s));
                   };
@@ -10377,15 +10361,15 @@
                         f = r(s, u - 1),
                         p = t * (s.coordinate + (t * f) / 2 - l);
                       (a[u - 1] = s =
-                        C(
-                          C({}, s),
+                        _(
+                          _({}, s),
                           {},
                           {
                             tickCoord:
                               p > 0 ? s.coordinate - p * t : s.coordinate,
                           },
                         )),
-                        M(
+                        P(
                           t,
                           s.tickCoord,
                           function () {
@@ -10395,7 +10379,7 @@
                           l,
                         ) &&
                           ((l = s.tickCoord - t * (f / 2 + o)),
-                          (a[u - 1] = C(C({}, s), {}, { isShow: !0 })));
+                          (a[u - 1] = _(_({}, s), {}, { isShow: !0 })));
                     }
                     for (
                       var h = i ? u - 1 : u,
@@ -10407,8 +10391,8 @@
                             };
                           if (0 === e) {
                             var s = t * (i.coordinate - (t * u()) / 2 - c);
-                            a[e] = i = C(
-                              C({}, i),
+                            a[e] = i = _(
+                              _({}, i),
                               {},
                               {
                                 tickCoord:
@@ -10416,14 +10400,14 @@
                               },
                             );
                           } else
-                            a[e] = i = C(
-                              C({}, i),
+                            a[e] = i = _(
+                              _({}, i),
                               {},
                               { tickCoord: i.coordinate },
                             );
-                          M(t, i.tickCoord, u, c, l) &&
+                          P(t, i.tickCoord, u, c, l) &&
                             ((c = i.tickCoord + t * (u() / 2 + o)),
-                            (a[e] = C(C({}, i), {}, { isShow: !0 })));
+                            (a[e] = _(_({}, i), {}, { isShow: !0 })));
                         },
                         y = 0;
                       y < h;
@@ -10446,8 +10430,8 @@
                             };
                           if (e === a - 1) {
                             var f = t * (l.coordinate + (t * s()) / 2 - c);
-                            i[e] = l = C(
-                              C({}, l),
+                            i[e] = l = _(
+                              _({}, l),
                               {},
                               {
                                 tickCoord:
@@ -10455,14 +10439,14 @@
                               },
                             );
                           } else
-                            i[e] = l = C(
-                              C({}, l),
+                            i[e] = l = _(
+                              _({}, l),
                               {},
                               { tickCoord: l.coordinate },
                             );
-                          M(t, l.tickCoord, s, u, c) &&
+                          P(t, l.tickCoord, s, u, c) &&
                             ((c = l.tickCoord - t * (s() / 2 + o)),
-                            (i[e] = C(C({}, l), {}, { isShow: !0 })));
+                            (i[e] = _(_({}, l), {}, { isShow: !0 })));
                         },
                         s = a - 1;
                       s >= 0;
@@ -10475,15 +10459,23 @@
               return t.isShow;
             }));
       }
-      var I = r(82440),
-        B = r(47430),
-        L = r(72236),
-        R = r(88579),
-        z = r(84223),
-        U = r(94797);
-      function F(t) {
+      var N = r(82440),
+        D = r(47430),
+        I = r(72236),
+        B = r(88579),
+        L = r(14166),
+        R = r(83821),
+        z = r(94797),
+        U = r(31917),
+        F = r(93998),
+        $ = r(47094),
+        W = r(81156),
+        Z = ["viewBox"],
+        q = ["viewBox"],
+        G = ["ticks"];
+      function H(t) {
         return (
-          (F =
+          (H =
             "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
               ? function (t) {
                   return typeof t;
@@ -10496,13 +10488,12 @@
                     ? "symbol"
                     : typeof t;
                 }),
-          F(t)
+          H(t)
         );
       }
-      var $ = ["x", "y", "top", "left", "width", "height", "className"];
-      function W() {
+      function V() {
         return (
-          (W = Object.assign
+          (V = Object.assign
             ? Object.assign.bind()
             : function (t) {
                 for (var e = 1; e < arguments.length; e++) {
@@ -10512,10 +10503,10 @@
                 }
                 return t;
               }),
-          W.apply(this, arguments)
+          V.apply(this, arguments)
         );
       }
-      function Z(t, e) {
+      function X(t, e) {
         var r = Object.keys(t);
         if (Object.getOwnPropertySymbols) {
           var n = Object.getOwnPropertySymbols(t);
@@ -10527,182 +10518,16 @@
         }
         return r;
       }
-      function q(t, e, r) {
-        return (
-          (e = (function (t) {
-            var e = (function (t, e) {
-              if ("object" !== F(t) || null === t) return t;
-              var r = t[Symbol.toPrimitive];
-              if (void 0 !== r) {
-                var n = r.call(t, e || "default");
-                if ("object" !== F(n)) return n;
-                throw new TypeError(
-                  "@@toPrimitive must return a primitive value.",
-                );
-              }
-              return ("string" === e ? String : Number)(t);
-            })(t, "string");
-            return "symbol" === F(e) ? e : String(e);
-          })(e)) in t
-            ? Object.defineProperty(t, e, {
-                value: r,
-                enumerable: !0,
-                configurable: !0,
-                writable: !0,
-              })
-            : (t[e] = r),
-          t
-        );
-      }
-      function G(t, e) {
-        if (null == t) return {};
-        var r,
-          n,
-          o = (function (t, e) {
-            if (null == t) return {};
-            var r,
-              n,
-              o = {},
-              i = Object.keys(t);
-            for (n = 0; n < i.length; n++)
-              (r = i[n]), e.indexOf(r) >= 0 || (o[r] = t[r]);
-            return o;
-          })(t, e);
-        if (Object.getOwnPropertySymbols) {
-          var i = Object.getOwnPropertySymbols(t);
-          for (n = 0; n < i.length; n++)
-            (r = i[n]),
-              e.indexOf(r) >= 0 ||
-                (Object.prototype.propertyIsEnumerable.call(t, r) &&
-                  (o[r] = t[r]));
-        }
-        return o;
-      }
-      var H = function (t, e, r, n, o, i) {
-          return "M"
-            .concat(t, ",")
-            .concat(o, "v")
-            .concat(n, "M")
-            .concat(i, ",")
-            .concat(e, "h")
-            .concat(r);
-        },
-        V = function (t) {
-          var e = t.x,
-            r = void 0 === e ? 0 : e,
-            o = t.y,
-            i = void 0 === o ? 0 : o,
-            a = t.top,
-            u = void 0 === a ? 0 : a,
-            c = t.left,
-            l = void 0 === c ? 0 : c,
-            s = t.width,
-            f = void 0 === s ? 0 : s,
-            p = t.height,
-            h = void 0 === p ? 0 : p,
-            d = t.className,
-            y = (function (t) {
-              for (var e = 1; e < arguments.length; e++) {
-                var r = null != arguments[e] ? arguments[e] : {};
-                e % 2
-                  ? Z(Object(r), !0).forEach(function (e) {
-                      q(t, e, r[e]);
-                    })
-                  : Object.getOwnPropertyDescriptors
-                  ? Object.defineProperties(
-                      t,
-                      Object.getOwnPropertyDescriptors(r),
-                    )
-                  : Z(Object(r)).forEach(function (e) {
-                      Object.defineProperty(
-                        t,
-                        e,
-                        Object.getOwnPropertyDescriptor(r, e),
-                      );
-                    });
-              }
-              return t;
-            })({ x: r, y: i, top: u, left: l, width: f, height: h }, G(t, $));
-          return (0, S.hj)(r) &&
-            (0, S.hj)(i) &&
-            (0, S.hj)(f) &&
-            (0, S.hj)(h) &&
-            (0, S.hj)(u) &&
-            (0, S.hj)(l)
-            ? n.createElement(
-                "path",
-                W({}, (0, U.L6)(y, !0), {
-                  className: (0, x.Z)("recharts-cross", d),
-                  d: H(r, i, f, h, u, l),
-                }),
-              )
-            : null;
-        },
-        X = r(55287),
-        Y = r(14166),
-        K = r(83821),
-        J = r(31917),
-        Q = r(93998),
-        tt = r(47094),
-        et = r(81156),
-        rt = ["viewBox"],
-        nt = ["viewBox"],
-        ot = ["ticks"];
-      function it(t) {
-        return (
-          (it =
-            "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
-              ? function (t) {
-                  return typeof t;
-                }
-              : function (t) {
-                  return t &&
-                    "function" == typeof Symbol &&
-                    t.constructor === Symbol &&
-                    t !== Symbol.prototype
-                    ? "symbol"
-                    : typeof t;
-                }),
-          it(t)
-        );
-      }
-      function at() {
-        return (
-          (at = Object.assign
-            ? Object.assign.bind()
-            : function (t) {
-                for (var e = 1; e < arguments.length; e++) {
-                  var r = arguments[e];
-                  for (var n in r)
-                    Object.prototype.hasOwnProperty.call(r, n) && (t[n] = r[n]);
-                }
-                return t;
-              }),
-          at.apply(this, arguments)
-        );
-      }
-      function ut(t, e) {
-        var r = Object.keys(t);
-        if (Object.getOwnPropertySymbols) {
-          var n = Object.getOwnPropertySymbols(t);
-          e &&
-            (n = n.filter(function (e) {
-              return Object.getOwnPropertyDescriptor(t, e).enumerable;
-            })),
-            r.push.apply(r, n);
-        }
-        return r;
-      }
-      function ct(t) {
+      function Y(t) {
         for (var e = 1; e < arguments.length; e++) {
           var r = null != arguments[e] ? arguments[e] : {};
           e % 2
-            ? ut(Object(r), !0).forEach(function (e) {
-                dt(t, e, r[e]);
+            ? X(Object(r), !0).forEach(function (e) {
+                rt(t, e, r[e]);
               })
             : Object.getOwnPropertyDescriptors
             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
-            : ut(Object(r)).forEach(function (e) {
+            : X(Object(r)).forEach(function (e) {
                 Object.defineProperty(
                   t,
                   e,
@@ -10712,7 +10537,7 @@
         }
         return t;
       }
-      function lt(t, e) {
+      function K(t, e) {
         if (null == t) return {};
         var r,
           n,
@@ -10736,26 +10561,26 @@
         }
         return o;
       }
-      function st(t, e) {
+      function J(t, e) {
         for (var r = 0; r < e.length; r++) {
           var n = e[r];
           (n.enumerable = n.enumerable || !1),
             (n.configurable = !0),
             "value" in n && (n.writable = !0),
-            Object.defineProperty(t, yt(n.key), n);
+            Object.defineProperty(t, nt(n.key), n);
         }
       }
-      function ft(t, e) {
+      function Q(t, e) {
         return (
-          (ft = Object.setPrototypeOf
+          (Q = Object.setPrototypeOf
             ? Object.setPrototypeOf.bind()
             : function (t, e) {
                 return (t.__proto__ = e), t;
               }),
-          ft(t, e)
+          Q(t, e)
         );
       }
-      function pt(t) {
+      function tt(t) {
         var e = (function () {
           if ("undefined" == typeof Reflect || !Reflect.construct) return !1;
           if (Reflect.construct.sham) return !1;
@@ -10773,13 +10598,13 @@
         })();
         return function () {
           var r,
-            n = ht(t);
+            n = et(t);
           if (e) {
-            var o = ht(this).constructor;
+            var o = et(this).constructor;
             r = Reflect.construct(n, arguments, o);
           } else r = n.apply(this, arguments);
           return (function (t, e) {
-            if (e && ("object" === it(e) || "function" == typeof e)) return e;
+            if (e && ("object" === H(e) || "function" == typeof e)) return e;
             if (void 0 !== e)
               throw new TypeError(
                 "Derived constructors may only return object or undefined",
@@ -10794,19 +10619,19 @@
           })(this, r);
         };
       }
-      function ht(t) {
+      function et(t) {
         return (
-          (ht = Object.setPrototypeOf
+          (et = Object.setPrototypeOf
             ? Object.getPrototypeOf.bind()
             : function (t) {
                 return t.__proto__ || Object.getPrototypeOf(t);
               }),
-          ht(t)
+          et(t)
         );
       }
-      function dt(t, e, r) {
+      function rt(t, e, r) {
         return (
-          (e = yt(e)) in t
+          (e = nt(e)) in t
             ? Object.defineProperty(t, e, {
                 value: r,
                 enumerable: !0,
@@ -10817,20 +10642,20 @@
           t
         );
       }
-      function yt(t) {
+      function nt(t) {
         var e = (function (t, e) {
-          if ("object" !== it(t) || null === t) return t;
+          if ("object" !== H(t) || null === t) return t;
           var r = t[Symbol.toPrimitive];
           if (void 0 !== r) {
             var n = r.call(t, e || "default");
-            if ("object" !== it(n)) return n;
+            if ("object" !== H(n)) return n;
             throw new TypeError("@@toPrimitive must return a primitive value.");
           }
           return ("string" === e ? String : Number)(t);
         })(t, "string");
-        return "symbol" === it(e) ? e : String(e);
+        return "symbol" === H(e) ? e : String(e);
       }
-      var vt = (function (t) {
+      var ot = (function (t) {
         !(function (t, e) {
           if ("function" != typeof e && null !== e)
             throw new TypeError(
@@ -10840,12 +10665,12 @@
             constructor: { value: t, writable: !0, configurable: !0 },
           })),
             Object.defineProperty(t, "prototype", { writable: !1 }),
-            e && ft(t, e);
+            e && Q(t, e);
         })(a, t);
         var e,
           r,
           o,
-          i = pt(a);
+          i = tt(a);
         function a(t) {
           var e;
           return (
@@ -10868,8 +10693,8 @@
                   : u()(t)
                   ? t(e)
                   : n.createElement(
-                      Q.x,
-                      at({}, e, {
+                      F.x,
+                      V({}, e, {
                         className: "recharts-cartesian-axis-tick-value",
                       }),
                       r,
@@ -10882,12 +10707,12 @@
               key: "shouldComponentUpdate",
               value: function (t, e) {
                 var r = t.viewBox,
-                  n = lt(t, rt),
+                  n = K(t, Z),
                   o = this.props,
                   i = o.viewBox,
-                  a = lt(o, nt);
+                  a = K(o, q);
                 return (
-                  !(0, J.w)(r, i) || !(0, J.w)(n, a) || !(0, J.w)(e, this.state)
+                  !(0, U.w)(r, i) || !(0, U.w)(n, a) || !(0, U.w)(e, this.state)
                 );
               },
             },
@@ -10927,7 +10752,7 @@
                   y = u.tickMargin,
                   v = d ? -1 : 1,
                   m = t.tickSize || h,
-                  b = (0, S.hj)(t.tickCoord) ? t.tickCoord : t.coordinate;
+                  b = (0, O.hj)(t.tickCoord) ? t.tickCoord : t.coordinate;
                 switch (p) {
                   case "top":
                     (e = r = t.coordinate),
@@ -11007,29 +10832,29 @@
                   a = t.orientation,
                   u = t.mirror,
                   c = t.axisLine,
-                  l = ct(
-                    ct(ct({}, (0, U.L6)(this.props)), (0, U.L6)(c)),
+                  l = Y(
+                    Y(Y({}, (0, z.L6)(this.props)), (0, z.L6)(c)),
                     {},
                     { fill: "none" },
                   );
                 if ("top" === a || "bottom" === a) {
                   var s = +(("top" === a && !u) || ("bottom" === a && u));
-                  l = ct(
-                    ct({}, l),
+                  l = Y(
+                    Y({}, l),
                     {},
                     { x1: e, y1: r + s * i, x2: e + o, y2: r + s * i },
                   );
                 } else {
                   var p = +(("left" === a && !u) || ("right" === a && u));
-                  l = ct(
-                    ct({}, l),
+                  l = Y(
+                    Y({}, l),
                     {},
                     { x1: e + p * o, y1: r, x2: e + p * o, y2: r + i },
                   );
                 }
                 return n.createElement(
                   "line",
-                  at({}, l, {
+                  V({}, l, {
                     className: (0, x.Z)(
                       "recharts-cartesian-axis-line",
                       f()(c, "className"),
@@ -11048,20 +10873,20 @@
                   s = i.tick,
                   p = i.tickFormatter,
                   h = i.unit,
-                  d = D(ct(ct({}, this.props), {}, { ticks: t }), e, r),
+                  d = C(Y(Y({}, this.props), {}, { ticks: t }), e, r),
                   y = this.getTickTextAnchor(),
                   v = this.getTickVerticalAnchor(),
-                  m = (0, U.L6)(this.props),
-                  b = (0, U.L6)(s),
-                  g = ct(ct({}, m), {}, { fill: "none" }, (0, U.L6)(c)),
+                  m = (0, z.L6)(this.props),
+                  b = (0, z.L6)(s),
+                  g = Y(Y({}, m), {}, { fill: "none" }, (0, z.L6)(c)),
                   w = d.map(function (t, e) {
                     var r = o.getTickLineCoord(t),
                       i = r.line,
                       w = r.tick,
-                      O = ct(
-                        ct(
-                          ct(
-                            ct({ textAnchor: y, verticalAnchor: v }, m),
+                      O = Y(
+                        Y(
+                          Y(
+                            Y({ textAnchor: y, verticalAnchor: v }, m),
                             {},
                             { stroke: "none", fill: l },
                             b,
@@ -11077,8 +10902,8 @@
                         },
                       );
                     return n.createElement(
-                      B.m,
-                      at(
+                      D.m,
+                      V(
                         {
                           className: "recharts-cartesian-axis-tick",
                           key: "tick-"
@@ -11086,12 +10911,12 @@
                             .concat(t.coordinate, "-")
                             .concat(t.tickCoord),
                         },
-                        (0, et.bw)(o.props, t, e),
+                        (0, W.bw)(o.props, t, e),
                       ),
                       c &&
                         n.createElement(
                           "line",
-                          at({}, g, i, {
+                          V({}, g, i, {
                             className: (0, x.Z)(
                               "recharts-cartesian-axis-tick-line",
                               f()(c, "className"),
@@ -11128,14 +10953,14 @@
                 if (e.hide) return null;
                 var l = this.props,
                   s = l.ticks,
-                  f = lt(l, ot),
+                  f = K(l, G),
                   p = s;
                 return (
                   u()(a) && (p = s && s.length > 0 ? a(this.props) : a(f)),
                   o <= 0 || i <= 0 || !p || !p.length
                     ? null
                     : n.createElement(
-                        B.m,
+                        D.m,
                         {
                           className: (0, x.Z)("recharts-cartesian-axis", c),
                           ref: function (e) {
@@ -11148,19 +10973,19 @@
                           this.state.fontSize,
                           this.state.letterSpacing,
                         ),
-                        tt._.renderCallByParent(this.props),
+                        $._.renderCallByParent(this.props),
                       )
                 );
               },
             },
-          ]) && st(e.prototype, r),
-          o && st(e, o),
+          ]) && J(e.prototype, r),
+          o && J(e, o),
           Object.defineProperty(e, "prototype", { writable: !1 }),
           a
         );
       })(n.Component);
-      dt(vt, "displayName", "CartesianAxis"),
-        dt(vt, "defaultProps", {
+      rt(ot, "displayName", "CartesianAxis"),
+        rt(ot, "defaultProps", {
           x: 0,
           y: 0,
           width: 0,
@@ -11178,11 +11003,11 @@
           tickMargin: 2,
           interval: "preserveEnd",
         });
-      var mt = r(9756),
-        bt = r(70416);
-      function gt(t) {
+      var it = r(9756),
+        at = r(70416);
+      function ut(t) {
         return (
-          (gt =
+          (ut =
             "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
               ? function (t) {
                   return typeof t;
@@ -11195,10 +11020,10 @@
                     ? "symbol"
                     : typeof t;
                 }),
-          gt(t)
+          ut(t)
         );
       }
-      function xt(t, e) {
+      function ct(t, e) {
         var r = Object.keys(t);
         if (Object.getOwnPropertySymbols) {
           var n = Object.getOwnPropertySymbols(t);
@@ -11210,16 +11035,16 @@
         }
         return r;
       }
-      function wt(t) {
+      function lt(t) {
         for (var e = 1; e < arguments.length; e++) {
           var r = null != arguments[e] ? arguments[e] : {};
           e % 2
-            ? xt(Object(r), !0).forEach(function (e) {
-                Ot(t, e, r[e]);
+            ? ct(Object(r), !0).forEach(function (e) {
+                st(t, e, r[e]);
               })
             : Object.getOwnPropertyDescriptors
             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
-            : xt(Object(r)).forEach(function (e) {
+            : ct(Object(r)).forEach(function (e) {
                 Object.defineProperty(
                   t,
                   e,
@@ -11229,22 +11054,22 @@
         }
         return t;
       }
-      function Ot(t, e, r) {
+      function st(t, e, r) {
         return (
           (e = (function (t) {
             var e = (function (t, e) {
-              if ("object" !== gt(t) || null === t) return t;
+              if ("object" !== ut(t) || null === t) return t;
               var r = t[Symbol.toPrimitive];
               if (void 0 !== r) {
                 var n = r.call(t, e || "default");
-                if ("object" !== gt(n)) return n;
+                if ("object" !== ut(n)) return n;
                 throw new TypeError(
                   "@@toPrimitive must return a primitive value.",
                 );
               }
               return ("string" === e ? String : Number)(t);
             })(t, "string");
-            return "symbol" === gt(e) ? e : String(e);
+            return "symbol" === ut(e) ? e : String(e);
           })(e)) in t
             ? Object.defineProperty(t, e, {
                 value: r,
@@ -11256,10 +11081,10 @@
           t
         );
       }
-      var jt = ["Webkit", "Moz", "O", "ms"];
-      function St(t) {
+      var ft = ["Webkit", "Moz", "O", "ms"];
+      function pt(t) {
         return (
-          (St =
+          (pt =
             "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
               ? function (t) {
                   return typeof t;
@@ -11272,12 +11097,12 @@
                     ? "symbol"
                     : typeof t;
                 }),
-          St(t)
+          pt(t)
         );
       }
-      function At() {
+      function ht() {
         return (
-          (At = Object.assign
+          (ht = Object.assign
             ? Object.assign.bind()
             : function (t) {
                 for (var e = 1; e < arguments.length; e++) {
@@ -11287,10 +11112,10 @@
                 }
                 return t;
               }),
-          At.apply(this, arguments)
+          ht.apply(this, arguments)
         );
       }
-      function Et(t, e) {
+      function dt(t, e) {
         var r = Object.keys(t);
         if (Object.getOwnPropertySymbols) {
           var n = Object.getOwnPropertySymbols(t);
@@ -11302,16 +11127,16 @@
         }
         return r;
       }
-      function Pt(t) {
+      function yt(t) {
         for (var e = 1; e < arguments.length; e++) {
           var r = null != arguments[e] ? arguments[e] : {};
           e % 2
-            ? Et(Object(r), !0).forEach(function (e) {
-                Nt(t, e, r[e]);
+            ? dt(Object(r), !0).forEach(function (e) {
+                wt(t, e, r[e]);
               })
             : Object.getOwnPropertyDescriptors
             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
-            : Et(Object(r)).forEach(function (e) {
+            : dt(Object(r)).forEach(function (e) {
                 Object.defineProperty(
                   t,
                   e,
@@ -11321,26 +11146,26 @@
         }
         return t;
       }
-      function kt(t, e) {
+      function vt(t, e) {
         for (var r = 0; r < e.length; r++) {
           var n = e[r];
           (n.enumerable = n.enumerable || !1),
             (n.configurable = !0),
             "value" in n && (n.writable = !0),
-            Object.defineProperty(t, Dt(n.key), n);
+            Object.defineProperty(t, Ot(n.key), n);
         }
       }
-      function Mt(t, e) {
+      function mt(t, e) {
         return (
-          (Mt = Object.setPrototypeOf
+          (mt = Object.setPrototypeOf
             ? Object.setPrototypeOf.bind()
             : function (t, e) {
                 return (t.__proto__ = e), t;
               }),
-          Mt(t, e)
+          mt(t, e)
         );
       }
-      function _t(t) {
+      function bt(t) {
         var e = (function () {
           if ("undefined" == typeof Reflect || !Reflect.construct) return !1;
           if (Reflect.construct.sham) return !1;
@@ -11358,41 +11183,41 @@
         })();
         return function () {
           var r,
-            n = Ct(t);
+            n = xt(t);
           if (e) {
-            var o = Ct(this).constructor;
+            var o = xt(this).constructor;
             r = Reflect.construct(n, arguments, o);
           } else r = n.apply(this, arguments);
           return (function (t, e) {
-            if (e && ("object" === St(e) || "function" == typeof e)) return e;
+            if (e && ("object" === pt(e) || "function" == typeof e)) return e;
             if (void 0 !== e)
               throw new TypeError(
                 "Derived constructors may only return object or undefined",
               );
-            return Tt(t);
+            return gt(t);
           })(this, r);
         };
       }
-      function Tt(t) {
+      function gt(t) {
         if (void 0 === t)
           throw new ReferenceError(
             "this hasn't been initialised - super() hasn't been called",
           );
         return t;
       }
-      function Ct(t) {
+      function xt(t) {
         return (
-          (Ct = Object.setPrototypeOf
+          (xt = Object.setPrototypeOf
             ? Object.getPrototypeOf.bind()
             : function (t) {
                 return t.__proto__ || Object.getPrototypeOf(t);
               }),
-          Ct(t)
+          xt(t)
         );
       }
-      function Nt(t, e, r) {
+      function wt(t, e, r) {
         return (
-          (e = Dt(e)) in t
+          (e = Ot(e)) in t
             ? Object.defineProperty(t, e, {
                 value: r,
                 enumerable: !0,
@@ -11403,23 +11228,23 @@
           t
         );
       }
-      function Dt(t) {
+      function Ot(t) {
         var e = (function (t, e) {
-          if ("object" !== St(t) || null === t) return t;
+          if ("object" !== pt(t) || null === t) return t;
           var r = t[Symbol.toPrimitive];
           if (void 0 !== r) {
             var n = r.call(t, e || "default");
-            if ("object" !== St(n)) return n;
+            if ("object" !== pt(n)) return n;
             throw new TypeError("@@toPrimitive must return a primitive value.");
           }
           return ("string" === e ? String : Number)(t);
         })(t, "string");
-        return "symbol" === St(e) ? e : String(e);
+        return "symbol" === pt(e) ? e : String(e);
       }
-      var It = function (t) {
+      var jt = function (t) {
           return t.changedTouches && !!t.changedTouches.length;
         },
-        Bt = (function (t) {
+        St = (function (t) {
           !(function (t, e) {
             if ("function" != typeof e && null !== e)
               throw new TypeError(
@@ -11429,12 +11254,12 @@
               constructor: { value: t, writable: !0, configurable: !0 },
             })),
               Object.defineProperty(t, "prototype", { writable: !1 }),
-              e && Mt(t, e);
+              e && mt(t, e);
           })(a, t);
           var e,
             r,
             o,
-            i = _t(a);
+            i = bt(a);
           function a(t) {
             var e;
             return (
@@ -11442,19 +11267,19 @@
                 if (!(t instanceof e))
                   throw new TypeError("Cannot call a class as a function");
               })(this, a),
-              Nt(Tt((e = i.call(this, t))), "handleDrag", function (t) {
+              wt(gt((e = i.call(this, t))), "handleDrag", function (t) {
                 e.leaveTimer &&
                   (clearTimeout(e.leaveTimer), (e.leaveTimer = null)),
                   e.state.isTravellerMoving
                     ? e.handleTravellerMove(t)
                     : e.state.isSlideMoving && e.handleSlideDrag(t);
               }),
-              Nt(Tt(e), "handleTouchMove", function (t) {
+              wt(gt(e), "handleTouchMove", function (t) {
                 null != t.changedTouches &&
                   t.changedTouches.length > 0 &&
                   e.handleDrag(t.changedTouches[0]);
               }),
-              Nt(Tt(e), "handleDragEnd", function () {
+              wt(gt(e), "handleDragEnd", function () {
                 e.setState(
                   { isTravellerMoving: !1, isSlideMoving: !1 },
                   function () {
@@ -11467,21 +11292,21 @@
                 ),
                   e.detachDragEndListener();
               }),
-              Nt(Tt(e), "handleLeaveWrapper", function () {
+              wt(gt(e), "handleLeaveWrapper", function () {
                 (e.state.isTravellerMoving || e.state.isSlideMoving) &&
                   (e.leaveTimer = window.setTimeout(
                     e.handleDragEnd,
                     e.props.leaveTimeOut,
                   ));
               }),
-              Nt(Tt(e), "handleEnterSlideOrTraveller", function () {
+              wt(gt(e), "handleEnterSlideOrTraveller", function () {
                 e.setState({ isTextActive: !0 });
               }),
-              Nt(Tt(e), "handleLeaveSlideOrTraveller", function () {
+              wt(gt(e), "handleLeaveSlideOrTraveller", function () {
                 e.setState({ isTextActive: !1 });
               }),
-              Nt(Tt(e), "handleSlideDragStart", function (t) {
-                var r = It(t) ? t.changedTouches[0] : t;
+              wt(gt(e), "handleSlideDragStart", function (t) {
+                var r = jt(t) ? t.changedTouches[0] : t;
                 e.setState({
                   isTravellerMoving: !1,
                   isSlideMoving: !0,
@@ -11490,8 +11315,8 @@
                   e.attachDragEndListener();
               }),
               (e.travellerDragStartHandlers = {
-                startX: e.handleTravellerDragStart.bind(Tt(e), "startX"),
-                endX: e.handleTravellerDragStart.bind(Tt(e), "endX"),
+                startX: e.handleTravellerDragStart.bind(gt(e), "startX"),
+                endX: e.handleTravellerDragStart.bind(gt(e), "endX"),
               }),
               (e.state = {}),
               e
@@ -11560,7 +11385,7 @@
                     u = t.startIndex,
                     c = t.endIndex;
                   if (r !== e.prevData || a !== e.prevUpdateId)
-                    return Pt(
+                    return yt(
                       {
                         prevData: r,
                         prevTravellerWidth: i,
@@ -11578,7 +11403,7 @@
                               a = t.travellerWidth;
                             if (!e || !e.length) return {};
                             var u = e.length,
-                              c = (0, mt.x)()
+                              c = (0, it.x)()
                                 .domain(l()(0, u))
                                 .range([o, o + i - a]),
                               s = c.domain().map(function (t) {
@@ -11674,7 +11499,7 @@
                     r = e.data,
                     n = e.tickFormatter,
                     o = e.dataKey,
-                    i = (0, bt.F$)(r[t], o, t);
+                    i = (0, at.F$)(r[t], o, t);
                   return u()(n) ? n(i, t) : i;
                 },
               },
@@ -11732,7 +11557,7 @@
               {
                 key: "handleTravellerDragStart",
                 value: function (t, e) {
-                  var r = It(e) ? e.changedTouches[0] : e;
+                  var r = jt(e) ? e.changedTouches[0] : e;
                   this.setState({
                     isSlideMoving: !1,
                     isTravellerMoving: !0,
@@ -11769,8 +11594,8 @@
                     b = m.startIndex,
                     g = m.endIndex;
                   this.setState(
-                    (Nt((e = {}), o, u + v),
-                    Nt(e, "brushMoveStartX", t.pageX),
+                    (wt((e = {}), o, u + v),
+                    wt(e, "brushMoveStartX", t.pageX),
                     e),
                     function () {
                       var t;
@@ -11802,7 +11627,7 @@
                       var s = o[l];
                       ("startX" === e && s >= a) ||
                         ("endX" === e && s <= i) ||
-                        this.setState(Nt({}, e, s), function () {
+                        this.setState(wt({}, e, s), function () {
                           r.props.onChange(
                             r.getIndex({
                               startX: r.state.startX,
@@ -11873,8 +11698,8 @@
                     p = o.startIndex,
                     h = o.endIndex,
                     d = Math.max(t, this.props.x),
-                    y = Pt(
-                      Pt({}, (0, U.L6)(this.props)),
+                    y = yt(
+                      yt({}, (0, z.L6)(this.props)),
                       {},
                       { x: d, y: i, width: u, height: c },
                     ),
@@ -11884,7 +11709,7 @@
                         .concat(f[p].name, ", Max value: ")
                         .concat(f[h].name);
                   return n.createElement(
-                    B.m,
+                    D.m,
                     {
                       tabIndex: 0,
                       role: "slider",
@@ -11958,11 +11783,11 @@
                     s = c.endX,
                     f = { pointerEvents: "none", fill: u };
                   return n.createElement(
-                    B.m,
+                    D.m,
                     { className: "recharts-brush-texts" },
                     n.createElement(
-                      Q.x,
-                      At(
+                      F.x,
+                      ht(
                         {
                           textAnchor: "end",
                           verticalAnchor: "middle",
@@ -11974,8 +11799,8 @@
                       this.getTextOfTick(e),
                     ),
                     n.createElement(
-                      Q.x,
-                      At(
+                      F.x,
+                      ht(
                         {
                           textAnchor: "start",
                           verticalAnchor: "middle",
@@ -12011,10 +11836,10 @@
                   if (
                     !e ||
                     !e.length ||
-                    !(0, S.hj)(i) ||
-                    !(0, S.hj)(a) ||
-                    !(0, S.hj)(u) ||
-                    !(0, S.hj)(c) ||
+                    !(0, O.hj)(i) ||
+                    !(0, O.hj)(a) ||
+                    !(0, O.hj)(u) ||
+                    !(0, O.hj)(c) ||
                     u <= 0 ||
                     c <= 0
                   )
@@ -12026,13 +11851,13 @@
                       var r = t.replace(/(\w)/, function (t) {
                           return t.toUpperCase();
                         }),
-                        n = jt.reduce(function (t, n) {
-                          return wt(wt({}, t), {}, Ot({}, n + r, e));
+                        n = ft.reduce(function (t, n) {
+                          return lt(lt({}, t), {}, st({}, n + r, e));
                         }, {});
                       return (n[t] = e), n;
                     })("userSelect", "none");
                   return n.createElement(
-                    B.m,
+                    D.m,
                     {
                       className: m,
                       onMouseLeave: this.handleLeaveWrapper,
@@ -12048,14 +11873,14 @@
                   );
                 },
               },
-            ]) && kt(e.prototype, r),
-            o && kt(e, o),
+            ]) && vt(e.prototype, r),
+            o && vt(e, o),
             Object.defineProperty(e, "prototype", { writable: !1 }),
             a
           );
         })(n.PureComponent);
-      Nt(Bt, "displayName", "Brush"),
-        Nt(Bt, "defaultProps", {
+      wt(St, "displayName", "Brush"),
+        wt(St, "defaultProps", {
           height: 40,
           travellerWidth: 5,
           gap: 1,
@@ -12065,12 +11890,12 @@
           leaveTimeOut: 1e3,
           alwaysShowText: !1,
         });
-      var Lt = r(52255),
-        Rt = r(75658),
-        zt = r(90481);
-      function Ut(t) {
+      var At = r(52255),
+        Et = r(75658),
+        Pt = r(90481);
+      function kt(t) {
         return (
-          (Ut =
+          (kt =
             "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
               ? function (t) {
                   return typeof t;
@@ -12083,12 +11908,12 @@
                     ? "symbol"
                     : typeof t;
                 }),
-          Ut(t)
+          kt(t)
         );
       }
-      function Ft() {
+      function Mt() {
         return (
-          (Ft = Object.assign
+          (Mt = Object.assign
             ? Object.assign.bind()
             : function (t) {
                 for (var e = 1; e < arguments.length; e++) {
@@ -12098,10 +11923,10 @@
                 }
                 return t;
               }),
-          Ft.apply(this, arguments)
+          Mt.apply(this, arguments)
         );
       }
-      function $t(t, e) {
+      function _t(t, e) {
         var r = Object.keys(t);
         if (Object.getOwnPropertySymbols) {
           var n = Object.getOwnPropertySymbols(t);
@@ -12113,16 +11938,16 @@
         }
         return r;
       }
-      function Wt(t) {
+      function Tt(t) {
         for (var e = 1; e < arguments.length; e++) {
           var r = null != arguments[e] ? arguments[e] : {};
           e % 2
-            ? $t(Object(r), !0).forEach(function (e) {
-                Zt(t, e, r[e]);
+            ? _t(Object(r), !0).forEach(function (e) {
+                Ct(t, e, r[e]);
               })
             : Object.getOwnPropertyDescriptors
             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
-            : $t(Object(r)).forEach(function (e) {
+            : _t(Object(r)).forEach(function (e) {
                 Object.defineProperty(
                   t,
                   e,
@@ -12132,22 +11957,22 @@
         }
         return t;
       }
-      function Zt(t, e, r) {
+      function Ct(t, e, r) {
         return (
           (e = (function (t) {
             var e = (function (t, e) {
-              if ("object" !== Ut(t) || null === t) return t;
+              if ("object" !== kt(t) || null === t) return t;
               var r = t[Symbol.toPrimitive];
               if (void 0 !== r) {
                 var n = r.call(t, e || "default");
-                if ("object" !== Ut(n)) return n;
+                if ("object" !== kt(n)) return n;
                 throw new TypeError(
                   "@@toPrimitive must return a primitive value.",
                 );
               }
               return ("string" === e ? String : Number)(t);
             })(t, "string");
-            return "symbol" === Ut(e) ? e : String(e);
+            return "symbol" === kt(e) ? e : String(e);
           })(e)) in t
             ? Object.defineProperty(t, e, {
                 value: r,
@@ -12159,16 +11984,16 @@
           t
         );
       }
-      function qt(t) {
+      function Nt(t) {
         var e = t.x,
           r = t.y,
           o = t.r,
           i = t.alwaysShow,
           a = t.clipPathId,
-          u = (0, S.P2)(e),
-          c = (0, S.P2)(r);
+          u = (0, O.P2)(e),
+          c = (0, O.P2)(r);
         if (
-          ((0, zt.Z)(
+          ((0, Pt.Z)(
             void 0 === i,
             'The alwaysShow prop is deprecated. Please use ifOverflow="extendDomain" instead.',
           ),
@@ -12180,32 +12005,32 @@
             r = t.y,
             n = t.xAxis,
             o = t.yAxis,
-            i = (0, P.Ky)({ x: n.scale, y: o.scale }),
+            i = (0, A.Ky)({ x: n.scale, y: o.scale }),
             a = i.apply({ x: e, y: r }, { bandAware: !0 });
-          return (0, Rt.B)(t, "discard") && !i.isInRange(a) ? null : a;
+          return (0, Et.B)(t, "discard") && !i.isInRange(a) ? null : a;
         })(t);
         if (!l) return null;
         var s = l.x,
           f = l.y,
           p = t.shape,
           h = t.className,
-          d = Wt(
-            Wt(
+          d = Tt(
+            Tt(
               {
-                clipPath: (0, Rt.B)(t, "hidden")
+                clipPath: (0, Et.B)(t, "hidden")
                   ? "url(#".concat(a, ")")
                   : void 0,
               },
-              (0, U.L6)(t, !0),
+              (0, z.L6)(t, !0),
             ),
             {},
             { cx: s, cy: f },
           );
         return n.createElement(
-          B.m,
+          D.m,
           { className: (0, x.Z)("recharts-reference-dot", h) },
-          qt.renderDot(p, d),
-          tt._.renderCallByParent(t, {
+          Nt.renderDot(p, d),
+          $._.renderCallByParent(t, {
             x: s - o,
             y: f - o,
             width: 2 * o,
@@ -12213,8 +12038,8 @@
           }),
         );
       }
-      (qt.displayName = "ReferenceDot"),
-        (qt.defaultProps = {
+      (Nt.displayName = "ReferenceDot"),
+        (Nt.defaultProps = {
           isFront: !1,
           ifOverflow: "discard",
           xAxisId: 0,
@@ -12225,24 +12050,24 @@
           fillOpacity: 1,
           strokeWidth: 1,
         }),
-        (qt.renderDot = function (t, e) {
+        (Nt.renderDot = function (t, e) {
           return n.isValidElement(t)
             ? n.cloneElement(t, e)
             : u()(t)
             ? t(e)
             : n.createElement(
-                Y.o,
-                Ft({}, e, {
+                L.o,
+                Mt({}, e, {
                   cx: e.cx,
                   cy: e.cy,
                   className: "recharts-reference-dot-dot",
                 }),
               );
         });
-      var Gt = r(84965);
-      function Ht(t) {
+      var Dt = r(84965);
+      function It(t) {
         return (
-          (Ht =
+          (It =
             "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
               ? function (t) {
                   return typeof t;
@@ -12255,12 +12080,12 @@
                     ? "symbol"
                     : typeof t;
                 }),
-          Ht(t)
+          It(t)
         );
       }
-      function Vt() {
+      function Bt() {
         return (
-          (Vt = Object.assign
+          (Bt = Object.assign
             ? Object.assign.bind()
             : function (t) {
                 for (var e = 1; e < arguments.length; e++) {
@@ -12270,10 +12095,10 @@
                 }
                 return t;
               }),
-          Vt.apply(this, arguments)
+          Bt.apply(this, arguments)
         );
       }
-      function Xt(t, e) {
+      function Lt(t, e) {
         var r = Object.keys(t);
         if (Object.getOwnPropertySymbols) {
           var n = Object.getOwnPropertySymbols(t);
@@ -12285,16 +12110,16 @@
         }
         return r;
       }
-      function Yt(t) {
+      function Rt(t) {
         for (var e = 1; e < arguments.length; e++) {
           var r = null != arguments[e] ? arguments[e] : {};
           e % 2
-            ? Xt(Object(r), !0).forEach(function (e) {
-                Kt(t, e, r[e]);
+            ? Lt(Object(r), !0).forEach(function (e) {
+                zt(t, e, r[e]);
               })
             : Object.getOwnPropertyDescriptors
             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
-            : Xt(Object(r)).forEach(function (e) {
+            : Lt(Object(r)).forEach(function (e) {
                 Object.defineProperty(
                   t,
                   e,
@@ -12304,22 +12129,22 @@
         }
         return t;
       }
-      function Kt(t, e, r) {
+      function zt(t, e, r) {
         return (
           (e = (function (t) {
             var e = (function (t, e) {
-              if ("object" !== Ht(t) || null === t) return t;
+              if ("object" !== It(t) || null === t) return t;
               var r = t[Symbol.toPrimitive];
               if (void 0 !== r) {
                 var n = r.call(t, e || "default");
-                if ("object" !== Ht(n)) return n;
+                if ("object" !== It(n)) return n;
                 throw new TypeError(
                   "@@toPrimitive must return a primitive value.",
                 );
               }
               return ("string" === e ? String : Number)(t);
             })(t, "string");
-            return "symbol" === Ht(e) ? e : String(e);
+            return "symbol" === It(e) ? e : String(e);
           })(e)) in t
             ? Object.defineProperty(t, e, {
                 value: r,
@@ -12331,7 +12156,7 @@
           t
         );
       }
-      function Jt(t) {
+      function Ut(t) {
         var e = t.x1,
           r = t.x2,
           o = t.y1,
@@ -12339,14 +12164,14 @@
           a = t.className,
           u = t.alwaysShow,
           c = t.clipPathId;
-        (0, zt.Z)(
+        (0, Pt.Z)(
           void 0 === u,
           'The alwaysShow prop is deprecated. Please use ifOverflow="extendDomain" instead.',
         );
-        var l = (0, S.P2)(e),
-          s = (0, S.P2)(r),
-          f = (0, S.P2)(o),
-          p = (0, S.P2)(i),
+        var l = (0, O.P2)(e),
+          s = (0, O.P2)(r),
+          f = (0, O.P2)(o),
+          p = (0, O.P2)(i),
           h = t.shape;
         if (!(l || s || f || p || h)) return null;
         var d = (function (t, e, r, n, o) {
@@ -12357,7 +12182,7 @@
             l = o.xAxis,
             s = o.yAxis;
           if (!l || !s) return null;
-          var f = (0, P.Ky)({ x: l.scale, y: s.scale }),
+          var f = (0, A.Ky)({ x: l.scale, y: s.scale }),
             p = {
               x: t ? f.x.apply(i, { position: "start" }) : f.x.rangeMin,
               y: r ? f.y.apply(u, { position: "start" }) : f.y.rangeMin,
@@ -12366,23 +12191,23 @@
               x: e ? f.x.apply(a, { position: "end" }) : f.x.rangeMax,
               y: n ? f.y.apply(c, { position: "end" }) : f.y.rangeMax,
             };
-          return !(0, Rt.B)(o, "discard") || (f.isInRange(p) && f.isInRange(h))
-            ? (0, P.O1)(p, h)
+          return !(0, Et.B)(o, "discard") || (f.isInRange(p) && f.isInRange(h))
+            ? (0, A.O1)(p, h)
             : null;
         })(l, s, f, p, t);
         if (!d && !h) return null;
-        var y = (0, Rt.B)(t, "hidden") ? "url(#".concat(c, ")") : void 0;
+        var y = (0, Et.B)(t, "hidden") ? "url(#".concat(c, ")") : void 0;
         return n.createElement(
-          B.m,
+          D.m,
           { className: (0, x.Z)("recharts-reference-area", a) },
-          Jt.renderRect(h, Yt(Yt({ clipPath: y }, (0, U.L6)(t, !0)), d)),
-          tt._.renderCallByParent(t, d),
+          Ut.renderRect(h, Rt(Rt({ clipPath: y }, (0, z.L6)(t, !0)), d)),
+          $._.renderCallByParent(t, d),
         );
       }
-      function Qt(t) {
+      function Ft(t) {
         return (
           (function (t) {
-            if (Array.isArray(t)) return te(t);
+            if (Array.isArray(t)) return $t(t);
           })(t) ||
           (function (t) {
             if (
@@ -12393,7 +12218,7 @@
           })(t) ||
           (function (t, e) {
             if (!t) return;
-            if ("string" == typeof t) return te(t, e);
+            if ("string" == typeof t) return $t(t, e);
             var r = Object.prototype.toString.call(t).slice(8, -1);
             "Object" === r && t.constructor && (r = t.constructor.name);
             if ("Map" === r || "Set" === r) return Array.from(t);
@@ -12401,7 +12226,7 @@
               "Arguments" === r ||
               /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(r)
             )
-              return te(t, e);
+              return $t(t, e);
           })(t) ||
           (function () {
             throw new TypeError(
@@ -12410,13 +12235,13 @@
           })()
         );
       }
-      function te(t, e) {
+      function $t(t, e) {
         (null == e || e > t.length) && (e = t.length);
         for (var r = 0, n = new Array(e); r < e; r++) n[r] = t[r];
         return n;
       }
-      (Jt.displayName = "ReferenceArea"),
-        (Jt.defaultProps = {
+      (Ut.displayName = "ReferenceArea"),
+        (Ut.defaultProps = {
           isFront: !1,
           ifOverflow: "discard",
           xAxisId: 0,
@@ -12427,21 +12252,21 @@
           stroke: "none",
           strokeWidth: 1,
         }),
-        (Jt.renderRect = function (t, e) {
+        (Ut.renderRect = function (t, e) {
           return n.isValidElement(t)
             ? n.cloneElement(t, e)
             : u()(t)
             ? t(e)
             : n.createElement(
-                K.A,
-                Vt({}, e, { className: "recharts-reference-area-rect" }),
+                R.A,
+                Bt({}, e, { className: "recharts-reference-area-rect" }),
               );
         });
-      var ee = function (t, e, r, n, o) {
-          var i = (0, U.NN)(t, Gt.d),
-            a = (0, U.NN)(t, qt),
-            u = [].concat(Qt(i), Qt(a)),
-            c = (0, U.NN)(t, Jt),
+      var Wt = function (t, e, r, n, o) {
+          var i = (0, z.NN)(t, Dt.d),
+            a = (0, z.NN)(t, Nt),
+            u = [].concat(Ft(i), Ft(a)),
+            c = (0, z.NN)(t, Ut),
             l = "".concat(n, "Id"),
             s = n[0],
             f = e;
@@ -12450,8 +12275,8 @@
               (f = u.reduce(function (t, e) {
                 if (
                   e.props[l] === r &&
-                  (0, Rt.B)(e.props, "extendDomain") &&
-                  (0, S.hj)(e.props[s])
+                  (0, Et.B)(e.props, "extendDomain") &&
+                  (0, O.hj)(e.props[s])
                 ) {
                   var n = e.props[s];
                   return [Math.min(t[0], n), Math.max(t[1], n)];
@@ -12465,9 +12290,9 @@
             f = c.reduce(function (t, e) {
               if (
                 e.props[l] === r &&
-                (0, Rt.B)(e.props, "extendDomain") &&
-                (0, S.hj)(e.props[p]) &&
-                (0, S.hj)(e.props[h])
+                (0, Et.B)(e.props, "extendDomain") &&
+                (0, O.hj)(e.props[p]) &&
+                (0, O.hj)(e.props[h])
               ) {
                 var n = e.props[p],
                   o = e.props[h];
@@ -12480,19 +12305,20 @@
             o &&
               o.length &&
               (f = o.reduce(function (t, e) {
-                return (0, S.hj)(e)
+                return (0, O.hj)(e)
                   ? [Math.min(t[0], e), Math.max(t[1], e)]
                   : t;
               }, f)),
             f
           );
         },
-        re = r(84682),
-        ne = new (r.n(re)())(),
-        oe = "recharts.syncMouseEvents";
-      function ie(t) {
+        Zt = r(53460),
+        qt = r(84682),
+        Gt = new (r.n(qt)())(),
+        Ht = "recharts.syncMouseEvents";
+      function Vt(t) {
         return (
-          (ie =
+          (Vt =
             "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
               ? function (t) {
                   return typeof t;
@@ -12505,21 +12331,21 @@
                     ? "symbol"
                     : typeof t;
                 }),
-          ie(t)
+          Vt(t)
         );
       }
-      function ae(t, e) {
+      function Xt(t, e) {
         for (var r = 0; r < e.length; r++) {
           var n = e[r];
           (n.enumerable = n.enumerable || !1),
             (n.configurable = !0),
             "value" in n && (n.writable = !0),
-            Object.defineProperty(t, ce(n.key), n);
+            Object.defineProperty(t, Kt(n.key), n);
         }
       }
-      function ue(t, e, r) {
+      function Yt(t, e, r) {
         return (
-          (e = ce(e)) in t
+          (e = Kt(e)) in t
             ? Object.defineProperty(t, e, {
                 value: r,
                 enumerable: !0,
@@ -12530,28 +12356,28 @@
           t
         );
       }
-      function ce(t) {
+      function Kt(t) {
         var e = (function (t, e) {
-          if ("object" !== ie(t) || null === t) return t;
+          if ("object" !== Vt(t) || null === t) return t;
           var r = t[Symbol.toPrimitive];
           if (void 0 !== r) {
             var n = r.call(t, e || "default");
-            if ("object" !== ie(n)) return n;
+            if ("object" !== Vt(n)) return n;
             throw new TypeError("@@toPrimitive must return a primitive value.");
           }
           return ("string" === e ? String : Number)(t);
         })(t, "string");
-        return "symbol" === ie(e) ? e : String(e);
+        return "symbol" === Vt(e) ? e : String(e);
       }
-      var le = (function () {
+      var Jt = (function () {
         function t() {
           !(function (t, e) {
             if (!(t instanceof e))
               throw new TypeError("Cannot call a class as a function");
           })(this, t),
-            ue(this, "activeIndex", 0),
-            ue(this, "coordinateList", []),
-            ue(this, "layout", "horizontal");
+            Yt(this, "activeIndex", 0),
+            Yt(this, "coordinateList", []),
+            Yt(this, "layout", "horizontal");
         }
         var e, r, n;
         return (
@@ -12635,49 +12461,17 @@
                 }
               },
             },
-          ]) && ae(e.prototype, r),
-          n && ae(e, n),
+          ]) && Xt(e.prototype, r),
+          n && Xt(e, n),
           Object.defineProperty(e, "prototype", { writable: !1 }),
           t
         );
       })();
-      var se = r(37350);
-      function fe(t, e, r) {
-        var n, o, i, a;
-        if ("horizontal" === t)
-          (i = n = e.x), (o = r.top), (a = r.top + r.height);
-        else if ("vertical" === t)
-          (a = o = e.y), (n = r.left), (i = r.left + r.width);
-        else if (null != e.cx && null != e.cy) {
-          if ("centric" !== t) return j(e);
-          var u = e.cx,
-            c = e.cy,
-            l = e.innerRadius,
-            s = e.outerRadius,
-            f = e.angle,
-            p = (0, O.op)(u, c, l, f),
-            h = (0, O.op)(u, c, s, f);
-          (n = p.x), (o = p.y), (i = h.x), (a = h.y);
-        }
-        return [
-          { x: n, y: o },
-          { x: i, y: a },
-        ];
-      }
-      var pe = ["item"],
-        he = [
-          "children",
-          "className",
-          "width",
-          "height",
-          "style",
-          "compact",
-          "title",
-          "desc",
-        ];
-      function de(t) {
+      var Qt = r(37350),
+        te = r(84223);
+      function ee(t) {
         return (
-          (de =
+          (ee =
             "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
               ? function (t) {
                   return typeof t;
@@ -12690,10 +12484,354 @@
                     ? "symbol"
                     : typeof t;
                 }),
-          de(t)
+          ee(t)
         );
       }
-      function ye(t, e) {
+      var re = ["x", "y", "top", "left", "width", "height", "className"];
+      function ne() {
+        return (
+          (ne = Object.assign
+            ? Object.assign.bind()
+            : function (t) {
+                for (var e = 1; e < arguments.length; e++) {
+                  var r = arguments[e];
+                  for (var n in r)
+                    Object.prototype.hasOwnProperty.call(r, n) && (t[n] = r[n]);
+                }
+                return t;
+              }),
+          ne.apply(this, arguments)
+        );
+      }
+      function oe(t, e) {
+        var r = Object.keys(t);
+        if (Object.getOwnPropertySymbols) {
+          var n = Object.getOwnPropertySymbols(t);
+          e &&
+            (n = n.filter(function (e) {
+              return Object.getOwnPropertyDescriptor(t, e).enumerable;
+            })),
+            r.push.apply(r, n);
+        }
+        return r;
+      }
+      function ie(t, e, r) {
+        return (
+          (e = (function (t) {
+            var e = (function (t, e) {
+              if ("object" !== ee(t) || null === t) return t;
+              var r = t[Symbol.toPrimitive];
+              if (void 0 !== r) {
+                var n = r.call(t, e || "default");
+                if ("object" !== ee(n)) return n;
+                throw new TypeError(
+                  "@@toPrimitive must return a primitive value.",
+                );
+              }
+              return ("string" === e ? String : Number)(t);
+            })(t, "string");
+            return "symbol" === ee(e) ? e : String(e);
+          })(e)) in t
+            ? Object.defineProperty(t, e, {
+                value: r,
+                enumerable: !0,
+                configurable: !0,
+                writable: !0,
+              })
+            : (t[e] = r),
+          t
+        );
+      }
+      function ae(t, e) {
+        if (null == t) return {};
+        var r,
+          n,
+          o = (function (t, e) {
+            if (null == t) return {};
+            var r,
+              n,
+              o = {},
+              i = Object.keys(t);
+            for (n = 0; n < i.length; n++)
+              (r = i[n]), e.indexOf(r) >= 0 || (o[r] = t[r]);
+            return o;
+          })(t, e);
+        if (Object.getOwnPropertySymbols) {
+          var i = Object.getOwnPropertySymbols(t);
+          for (n = 0; n < i.length; n++)
+            (r = i[n]),
+              e.indexOf(r) >= 0 ||
+                (Object.prototype.propertyIsEnumerable.call(t, r) &&
+                  (o[r] = t[r]));
+        }
+        return o;
+      }
+      var ue = function (t, e, r, n, o, i) {
+          return "M"
+            .concat(t, ",")
+            .concat(o, "v")
+            .concat(n, "M")
+            .concat(i, ",")
+            .concat(e, "h")
+            .concat(r);
+        },
+        ce = function (t) {
+          var e = t.x,
+            r = void 0 === e ? 0 : e,
+            o = t.y,
+            i = void 0 === o ? 0 : o,
+            a = t.top,
+            u = void 0 === a ? 0 : a,
+            c = t.left,
+            l = void 0 === c ? 0 : c,
+            s = t.width,
+            f = void 0 === s ? 0 : s,
+            p = t.height,
+            h = void 0 === p ? 0 : p,
+            d = t.className,
+            y = (function (t) {
+              for (var e = 1; e < arguments.length; e++) {
+                var r = null != arguments[e] ? arguments[e] : {};
+                e % 2
+                  ? oe(Object(r), !0).forEach(function (e) {
+                      ie(t, e, r[e]);
+                    })
+                  : Object.getOwnPropertyDescriptors
+                  ? Object.defineProperties(
+                      t,
+                      Object.getOwnPropertyDescriptors(r),
+                    )
+                  : oe(Object(r)).forEach(function (e) {
+                      Object.defineProperty(
+                        t,
+                        e,
+                        Object.getOwnPropertyDescriptor(r, e),
+                      );
+                    });
+              }
+              return t;
+            })({ x: r, y: i, top: u, left: l, width: f, height: h }, ae(t, re));
+          return (0, O.hj)(r) &&
+            (0, O.hj)(i) &&
+            (0, O.hj)(f) &&
+            (0, O.hj)(h) &&
+            (0, O.hj)(u) &&
+            (0, O.hj)(l)
+            ? n.createElement(
+                "path",
+                ne({}, (0, z.L6)(y, !0), {
+                  className: (0, x.Z)("recharts-cross", d),
+                  d: ue(r, i, f, h, u, l),
+                }),
+              )
+            : null;
+        };
+      function le(t) {
+        var e = t.cx,
+          r = t.cy,
+          n = t.radius,
+          o = t.startAngle,
+          i = t.endAngle;
+        return {
+          points: [(0, Zt.op)(e, r, n, o), (0, Zt.op)(e, r, n, i)],
+          cx: e,
+          cy: r,
+          radius: n,
+          startAngle: o,
+          endAngle: i,
+        };
+      }
+      var se = r(55287);
+      function fe(t, e, r) {
+        var n, o, i, a;
+        if ("horizontal" === t)
+          (i = n = e.x), (o = r.top), (a = r.top + r.height);
+        else if ("vertical" === t)
+          (a = o = e.y), (n = r.left), (i = r.left + r.width);
+        else if (null != e.cx && null != e.cy) {
+          if ("centric" !== t) return le(e);
+          var u = e.cx,
+            c = e.cy,
+            l = e.innerRadius,
+            s = e.outerRadius,
+            f = e.angle,
+            p = (0, Zt.op)(u, c, l, f),
+            h = (0, Zt.op)(u, c, s, f);
+          (n = p.x), (o = p.y), (i = h.x), (a = h.y);
+        }
+        return [
+          { x: n, y: o },
+          { x: i, y: a },
+        ];
+      }
+      function pe(t) {
+        return (
+          (pe =
+            "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
+              ? function (t) {
+                  return typeof t;
+                }
+              : function (t) {
+                  return t &&
+                    "function" == typeof Symbol &&
+                    t.constructor === Symbol &&
+                    t !== Symbol.prototype
+                    ? "symbol"
+                    : typeof t;
+                }),
+          pe(t)
+        );
+      }
+      function he(t, e) {
+        var r = Object.keys(t);
+        if (Object.getOwnPropertySymbols) {
+          var n = Object.getOwnPropertySymbols(t);
+          e &&
+            (n = n.filter(function (e) {
+              return Object.getOwnPropertyDescriptor(t, e).enumerable;
+            })),
+            r.push.apply(r, n);
+        }
+        return r;
+      }
+      function de(t) {
+        for (var e = 1; e < arguments.length; e++) {
+          var r = null != arguments[e] ? arguments[e] : {};
+          e % 2
+            ? he(Object(r), !0).forEach(function (e) {
+                ye(t, e, r[e]);
+              })
+            : Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+            : he(Object(r)).forEach(function (e) {
+                Object.defineProperty(
+                  t,
+                  e,
+                  Object.getOwnPropertyDescriptor(r, e),
+                );
+              });
+        }
+        return t;
+      }
+      function ye(t, e, r) {
+        return (
+          (e = (function (t) {
+            var e = (function (t, e) {
+              if ("object" !== pe(t) || null === t) return t;
+              var r = t[Symbol.toPrimitive];
+              if (void 0 !== r) {
+                var n = r.call(t, e || "default");
+                if ("object" !== pe(n)) return n;
+                throw new TypeError(
+                  "@@toPrimitive must return a primitive value.",
+                );
+              }
+              return ("string" === e ? String : Number)(t);
+            })(t, "string");
+            return "symbol" === pe(e) ? e : String(e);
+          })(e)) in t
+            ? Object.defineProperty(t, e, {
+                value: r,
+                enumerable: !0,
+                configurable: !0,
+                writable: !0,
+              })
+            : (t[e] = r),
+          t
+        );
+      }
+      function ve(t) {
+        var e,
+          r = t.element,
+          o = t.tooltipEventType,
+          i = t.isActive,
+          a = t.activeCoordinate,
+          u = t.activePayload,
+          c = t.offset,
+          l = t.activeTooltipIndex,
+          s = t.tooltipAxisBandSize,
+          f = t.layout,
+          p = t.chartName;
+        if (
+          !r ||
+          !r.props.cursor ||
+          !i ||
+          !a ||
+          ("ScatterChart" !== p && "axis" !== o)
+        )
+          return null;
+        var h = te.H;
+        if ("ScatterChart" === p) (e = a), (h = ce);
+        else if ("BarChart" === p)
+          (e = (function (t, e, r, n) {
+            var o = n / 2;
+            return {
+              stroke: "none",
+              fill: "#ccc",
+              x: "horizontal" === t ? e.x - o : r.left + 0.5,
+              y: "horizontal" === t ? r.top + 0.5 : e.y - o,
+              width: "horizontal" === t ? n : r.width - 1,
+              height: "horizontal" === t ? r.height - 1 : n,
+            };
+          })(f, a, c, s)),
+            (h = R.A);
+        else if ("radial" === f) {
+          var d = le(a),
+            y = d.cx,
+            v = d.cy,
+            m = d.radius;
+          (e = {
+            cx: y,
+            cy: v,
+            startAngle: d.startAngle,
+            endAngle: d.endAngle,
+            innerRadius: m,
+            outerRadius: m,
+          }),
+            (h = se.L);
+        } else (e = { points: fe(f, a, c) }), (h = te.H);
+        var b = de(
+          de(
+            de(de({ stroke: "#ccc", pointerEvents: "none" }, c), e),
+            (0, z.L6)(r.props.cursor),
+          ),
+          {},
+          { payload: u, payloadIndex: l, className: "recharts-tooltip-cursor" },
+        );
+        return (0, n.isValidElement)(r.props.cursor)
+          ? (0, n.cloneElement)(r.props.cursor, b)
+          : (0, n.createElement)(h, b);
+      }
+      var me = ["item"],
+        be = [
+          "children",
+          "className",
+          "width",
+          "height",
+          "style",
+          "compact",
+          "title",
+          "desc",
+        ];
+      function ge(t) {
+        return (
+          (ge =
+            "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
+              ? function (t) {
+                  return typeof t;
+                }
+              : function (t) {
+                  return t &&
+                    "function" == typeof Symbol &&
+                    t.constructor === Symbol &&
+                    t !== Symbol.prototype
+                    ? "symbol"
+                    : typeof t;
+                }),
+          ge(t)
+        );
+      }
+      function xe(t, e) {
         return (
           (function (t) {
             if (Array.isArray(t)) return t;
@@ -12740,7 +12878,7 @@
               return u;
             }
           })(t, e) ||
-          Se(t, e) ||
+          Me(t, e) ||
           (function () {
             throw new TypeError(
               "Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.",
@@ -12748,9 +12886,9 @@
           })()
         );
       }
-      function ve() {
+      function we() {
         return (
-          (ve = Object.assign
+          (we = Object.assign
             ? Object.assign.bind()
             : function (t) {
                 for (var e = 1; e < arguments.length; e++) {
@@ -12760,10 +12898,10 @@
                 }
                 return t;
               }),
-          ve.apply(this, arguments)
+          we.apply(this, arguments)
         );
       }
-      function me(t, e) {
+      function Oe(t, e) {
         if (null == t) return {};
         var r,
           n,
@@ -12787,26 +12925,26 @@
         }
         return o;
       }
-      function be(t, e) {
+      function je(t, e) {
         for (var r = 0; r < e.length; r++) {
           var n = e[r];
           (n.enumerable = n.enumerable || !1),
             (n.configurable = !0),
             "value" in n && (n.writable = !0),
-            Object.defineProperty(t, Me(n.key), n);
+            Object.defineProperty(t, De(n.key), n);
         }
       }
-      function ge(t, e) {
+      function Se(t, e) {
         return (
-          (ge = Object.setPrototypeOf
+          (Se = Object.setPrototypeOf
             ? Object.setPrototypeOf.bind()
             : function (t, e) {
                 return (t.__proto__ = e), t;
               }),
-          ge(t, e)
+          Se(t, e)
         );
       }
-      function xe(t) {
+      function Ae(t) {
         var e = (function () {
           if ("undefined" == typeof Reflect || !Reflect.construct) return !1;
           if (Reflect.construct.sham) return !1;
@@ -12824,42 +12962,42 @@
         })();
         return function () {
           var r,
-            n = Oe(t);
+            n = Pe(t);
           if (e) {
-            var o = Oe(this).constructor;
+            var o = Pe(this).constructor;
             r = Reflect.construct(n, arguments, o);
           } else r = n.apply(this, arguments);
           return (function (t, e) {
-            if (e && ("object" === de(e) || "function" == typeof e)) return e;
+            if (e && ("object" === ge(e) || "function" == typeof e)) return e;
             if (void 0 !== e)
               throw new TypeError(
                 "Derived constructors may only return object or undefined",
               );
-            return we(t);
+            return Ee(t);
           })(this, r);
         };
       }
-      function we(t) {
+      function Ee(t) {
         if (void 0 === t)
           throw new ReferenceError(
             "this hasn't been initialised - super() hasn't been called",
           );
         return t;
       }
-      function Oe(t) {
+      function Pe(t) {
         return (
-          (Oe = Object.setPrototypeOf
+          (Pe = Object.setPrototypeOf
             ? Object.getPrototypeOf.bind()
             : function (t) {
                 return t.__proto__ || Object.getPrototypeOf(t);
               }),
-          Oe(t)
+          Pe(t)
         );
       }
-      function je(t) {
+      function ke(t) {
         return (
           (function (t) {
-            if (Array.isArray(t)) return Ae(t);
+            if (Array.isArray(t)) return _e(t);
           })(t) ||
           (function (t) {
             if (
@@ -12868,7 +13006,7 @@
             )
               return Array.from(t);
           })(t) ||
-          Se(t) ||
+          Me(t) ||
           (function () {
             throw new TypeError(
               "Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.",
@@ -12876,9 +13014,9 @@
           })()
         );
       }
-      function Se(t, e) {
+      function Me(t, e) {
         if (t) {
-          if ("string" == typeof t) return Ae(t, e);
+          if ("string" == typeof t) return _e(t, e);
           var r = Object.prototype.toString.call(t).slice(8, -1);
           return (
             "Object" === r && t.constructor && (r = t.constructor.name),
@@ -12886,17 +13024,17 @@
               ? Array.from(t)
               : "Arguments" === r ||
                 /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(r)
-              ? Ae(t, e)
+              ? _e(t, e)
               : void 0
           );
         }
       }
-      function Ae(t, e) {
+      function _e(t, e) {
         (null == e || e > t.length) && (e = t.length);
         for (var r = 0, n = new Array(e); r < e; r++) n[r] = t[r];
         return n;
       }
-      function Ee(t, e) {
+      function Te(t, e) {
         var r = Object.keys(t);
         if (Object.getOwnPropertySymbols) {
           var n = Object.getOwnPropertySymbols(t);
@@ -12908,16 +13046,16 @@
         }
         return r;
       }
-      function Pe(t) {
+      function Ce(t) {
         for (var e = 1; e < arguments.length; e++) {
           var r = null != arguments[e] ? arguments[e] : {};
           e % 2
-            ? Ee(Object(r), !0).forEach(function (e) {
-                ke(t, e, r[e]);
+            ? Te(Object(r), !0).forEach(function (e) {
+                Ne(t, e, r[e]);
               })
             : Object.getOwnPropertyDescriptors
             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
-            : Ee(Object(r)).forEach(function (e) {
+            : Te(Object(r)).forEach(function (e) {
                 Object.defineProperty(
                   t,
                   e,
@@ -12927,9 +13065,9 @@
         }
         return t;
       }
-      function ke(t, e, r) {
+      function Ne(t, e, r) {
         return (
-          (e = Me(e)) in t
+          (e = De(e)) in t
             ? Object.defineProperty(t, e, {
                 value: r,
                 enumerable: !0,
@@ -12940,43 +13078,43 @@
           t
         );
       }
-      function Me(t) {
+      function De(t) {
         var e = (function (t, e) {
-          if ("object" !== de(t) || null === t) return t;
+          if ("object" !== ge(t) || null === t) return t;
           var r = t[Symbol.toPrimitive];
           if (void 0 !== r) {
             var n = r.call(t, e || "default");
-            if ("object" !== de(n)) return n;
+            if ("object" !== ge(n)) return n;
             throw new TypeError("@@toPrimitive must return a primitive value.");
           }
           return ("string" === e ? String : Number)(t);
         })(t, "string");
-        return "symbol" === de(e) ? e : String(e);
+        return "symbol" === ge(e) ? e : String(e);
       }
-      var _e = { xAxis: ["bottom", "top"], yAxis: ["left", "right"] },
-        Te = { width: "100%", height: "100%" },
-        Ce = { x: 0, y: 0 },
-        Ne = function (t, e) {
+      var Ie = { xAxis: ["bottom", "top"], yAxis: ["left", "right"] },
+        Be = { width: "100%", height: "100%" },
+        Le = { x: 0, y: 0 },
+        Re = function (t, e) {
           var r = e.graphicalItems,
             n = e.dataStartIndex,
             o = e.dataEndIndex,
             i = (null != r ? r : []).reduce(function (t, e) {
               var r = e.props.data;
-              return r && r.length ? [].concat(je(t), je(r)) : t;
+              return r && r.length ? [].concat(ke(t), ke(r)) : t;
             }, []);
           return i.length > 0
             ? i
-            : t && t.length && (0, S.hj)(n) && (0, S.hj)(o)
+            : t && t.length && (0, O.hj)(n) && (0, O.hj)(o)
             ? t.slice(n, o + 1)
             : [];
         };
-      function De(t) {
+      function ze(t) {
         return "number" === t ? [0, "auto"] : void 0;
       }
-      var Ie = function (t, e, r, n) {
+      var Ue = function (t, e, r, n) {
           var o = t.graphicalItems,
             i = t.tooltipAxis,
-            a = Ne(e, t);
+            a = Re(e, t);
           return r < 0 || !o || !o.length || r >= a.length
             ? null
             : o.reduce(function (o, u) {
@@ -12991,12 +13129,12 @@
                   i.dataKey && !i.allowDuplicatedCategory)
                 ) {
                   var f = void 0 === s ? a : s;
-                  l = (0, S.Ap)(f, i.dataKey, n);
+                  l = (0, O.Ap)(f, i.dataKey, n);
                 } else l = (s && s[r]) || a[r];
-                return l ? [].concat(je(o), [(0, bt.Qo)(u, l)]) : o;
+                return l ? [].concat(ke(o), [(0, at.Qo)(u, l)]) : o;
               }, []);
         },
-        Be = function (t, e, r, n) {
+        Fe = function (t, e, r, n) {
           var o = n || { x: t.chartX, y: t.chartY },
             i = (function (t, e) {
               return "horizontal" === e
@@ -13010,10 +13148,10 @@
             a = t.orderedTooltipTicks,
             u = t.tooltipAxis,
             c = t.tooltipTicks,
-            l = (0, bt.VO)(i, a, c, u);
+            l = (0, at.VO)(i, a, c, u);
           if (l >= 0 && c) {
             var s = c[l] && c[l].value,
-              f = Ie(t, e, l, s),
+              f = Ue(t, e, l, s),
               p = (function (t, e, r, n) {
                 var o = e.find(function (t) {
                   return t && t.index === r;
@@ -13024,21 +13162,21 @@
                   if ("centric" === t) {
                     var i = o.coordinate,
                       a = n.radius;
-                    return Pe(
-                      Pe(Pe({}, n), (0, O.op)(n.cx, n.cy, a, i)),
+                    return Ce(
+                      Ce(Ce({}, n), (0, Zt.op)(n.cx, n.cy, a, i)),
                       {},
                       { angle: i, radius: a },
                     );
                   }
                   var u = o.coordinate,
                     c = n.angle;
-                  return Pe(
-                    Pe(Pe({}, n), (0, O.op)(n.cx, n.cy, u, c)),
+                  return Ce(
+                    Ce(Ce({}, n), (0, Zt.op)(n.cx, n.cy, u, c)),
                     {},
                     { angle: c, radius: u },
                   );
                 }
-                return Ce;
+                return Le;
               })(r, a, l, o);
             return {
               activeTooltipIndex: l,
@@ -13049,7 +13187,7 @@
           }
           return null;
         },
-        Le = function (t, e) {
+        $e = function (t, e) {
           var r = e.axes,
             n = e.graphicalItems,
             o = e.axisType,
@@ -13060,7 +13198,7 @@
             f = t.layout,
             p = t.children,
             h = t.stackOffset,
-            d = (0, bt.NA)(f, o);
+            d = (0, at.NA)(f, o);
           return r.reduce(function (e, r) {
             var y,
               v = r.props,
@@ -13069,14 +13207,14 @@
               g = v.allowDataOverflow,
               x = v.allowDuplicatedCategory,
               w = v.scale,
-              O = v.ticks,
-              j = v.includeHidden,
+              j = v.ticks,
+              S = v.includeHidden,
               A = r.props[a];
             if (e[A]) return e;
             var E,
               P,
               k,
-              M = Ne(t.data, {
+              M = Re(t.data, {
                 graphicalItems: n.filter(function (t) {
                   return t.props[a] === A;
                 }),
@@ -13088,42 +13226,42 @@
               if ("number" === r && !0 === e && Array.isArray(t)) {
                 var n = null == t ? void 0 : t[0],
                   o = null == t ? void 0 : t[1];
-                if (n && o && (0, S.hj)(n) && (0, S.hj)(o)) return !0;
+                if (n && o && (0, O.hj)(n) && (0, O.hj)(o)) return !0;
               }
               return !1;
             })(r.props.domain, g, m) &&
-              ((E = (0, bt.LG)(r.props.domain, null, g)),
+              ((E = (0, at.LG)(r.props.domain, null, g)),
               !d ||
                 ("number" !== m && "auto" === w) ||
-                (k = (0, bt.gF)(M, b, "category")));
-            var T = De(m);
+                (k = (0, at.gF)(M, b, "category")));
+            var T = ze(m);
             if (!E || 0 === E.length) {
               var C,
                 N = null !== (C = r.props.domain) && void 0 !== C ? C : T;
               if (b) {
-                if (((E = (0, bt.gF)(M, b, m)), "category" === m && d)) {
-                  var D = (0, S.bv)(E);
+                if (((E = (0, at.gF)(M, b, m)), "category" === m && d)) {
+                  var D = (0, O.bv)(E);
                   x && D
                     ? ((P = E), (E = l()(0, _)))
                     : x ||
-                      (E = (0, bt.ko)(N, E, r).reduce(function (t, e) {
-                        return t.indexOf(e) >= 0 ? t : [].concat(je(t), [e]);
+                      (E = (0, at.ko)(N, E, r).reduce(function (t, e) {
+                        return t.indexOf(e) >= 0 ? t : [].concat(ke(t), [e]);
                       }, []));
                 } else if ("category" === m)
                   E = x
                     ? E.filter(function (t) {
                         return "" !== t && !i()(t);
                       })
-                    : (0, bt.ko)(N, E, r).reduce(function (t, e) {
+                    : (0, at.ko)(N, E, r).reduce(function (t, e) {
                         return t.indexOf(e) >= 0 || "" === e || i()(e)
                           ? t
-                          : [].concat(je(t), [e]);
+                          : [].concat(ke(t), [e]);
                       }, []);
                 else if ("number" === m) {
-                  var I = (0, bt.ZI)(
+                  var I = (0, at.ZI)(
                     M,
                     n.filter(function (t) {
-                      return t.props[a] === A && (j || !t.props.hide);
+                      return t.props[a] === A && (S || !t.props.hide);
                     }),
                     b,
                     o,
@@ -13133,25 +13271,25 @@
                 }
                 !d ||
                   ("number" !== m && "auto" === w) ||
-                  (k = (0, bt.gF)(M, b, "category"));
+                  (k = (0, at.gF)(M, b, "category"));
               } else
                 E = d
                   ? l()(0, _)
                   : u && u[A] && u[A].hasStack && "number" === m
                   ? "expand" === h
                     ? [0, 1]
-                    : (0, bt.EB)(u[A].stackGroups, c, s)
-                  : (0, bt.s6)(
+                    : (0, at.EB)(u[A].stackGroups, c, s)
+                  : (0, at.s6)(
                       M,
                       n.filter(function (t) {
-                        return t.props[a] === A && (j || !t.props.hide);
+                        return t.props[a] === A && (S || !t.props.hide);
                       }),
                       m,
                       f,
                       !0,
                     );
               if ("number" === m)
-                (E = ee(p, E, A, o, O)), N && (E = (0, bt.LG)(N, E, g));
+                (E = Wt(p, E, A, o, j)), N && (E = (0, at.LG)(N, E, g));
               else if ("category" === m && N) {
                 var B = N;
                 E.every(function (t) {
@@ -13159,14 +13297,14 @@
                 }) && (E = B);
               }
             }
-            return Pe(
-              Pe({}, e),
+            return Ce(
+              Ce({}, e),
               {},
-              ke(
+              Ne(
                 {},
                 A,
-                Pe(
-                  Pe({}, r.props),
+                Ce(
+                  Ce({}, r.props),
                   {},
                   {
                     axisType: o,
@@ -13183,7 +13321,7 @@
             );
           }, {});
         },
-        Re = function (t, e) {
+        We = function (t, e) {
           var r = e.axisType,
             n = void 0 === r ? "xAxis" : r,
             o = e.AxisComp,
@@ -13193,11 +13331,11 @@
             c = e.dataEndIndex,
             s = t.children,
             p = "".concat(n, "Id"),
-            h = (0, U.NN)(s, o),
+            h = (0, z.NN)(s, o),
             d = {};
           return (
             h && h.length
-              ? (d = Le(t, {
+              ? (d = $e(t, {
                   axes: h,
                   graphicalItems: i,
                   axisType: n,
@@ -13218,29 +13356,29 @@
                     c = e.dataEndIndex,
                     s = t.layout,
                     p = t.children,
-                    h = Ne(t.data, {
+                    h = Re(t.data, {
                       graphicalItems: r,
                       dataStartIndex: u,
                       dataEndIndex: c,
                     }),
                     d = h.length,
-                    y = (0, bt.NA)(s, o),
+                    y = (0, at.NA)(s, o),
                     v = -1;
                   return r.reduce(function (t, e) {
                     var m,
                       b = e.props[i],
-                      g = De("number");
+                      g = ze("number");
                     return t[b]
                       ? t
                       : (v++,
                         y
                           ? (m = l()(0, d))
                           : a && a[b] && a[b].hasStack
-                          ? ((m = (0, bt.EB)(a[b].stackGroups, u, c)),
-                            (m = ee(p, m, b, o)))
-                          : ((m = (0, bt.LG)(
+                          ? ((m = (0, at.EB)(a[b].stackGroups, u, c)),
+                            (m = Wt(p, m, b, o)))
+                          : ((m = (0, at.LG)(
                               g,
-                              (0, bt.s6)(
+                              (0, at.s6)(
                                 h,
                                 r.filter(function (t) {
                                   return t.props[i] === b && !t.props.hide;
@@ -13250,20 +13388,20 @@
                               ),
                               n.defaultProps.allowDataOverflow,
                             )),
-                            (m = ee(p, m, b, o))),
-                        Pe(
-                          Pe({}, t),
+                            (m = Wt(p, m, b, o))),
+                        Ce(
+                          Ce({}, t),
                           {},
-                          ke(
+                          Ne(
                             {},
                             b,
-                            Pe(
-                              Pe({ axisType: o }, n.defaultProps),
+                            Ce(
+                              Ce({ axisType: o }, n.defaultProps),
                               {},
                               {
                                 hide: !0,
                                 orientation: f()(
-                                  _e,
+                                  Ie,
                                   "".concat(o, ".").concat(v % 2),
                                   null,
                                 ),
@@ -13288,10 +13426,10 @@
             d
           );
         },
-        ze = function (t) {
+        Ze = function (t) {
           var e = t.children,
             r = t.defaultShowTooltip,
-            n = (0, U.sP)(e, Bt),
+            n = (0, z.sP)(e, St),
             o = 0,
             i = 0;
           return (
@@ -13310,7 +13448,7 @@
             }
           );
         },
-        Ue = function (t) {
+        qe = function (t) {
           return "horizontal" === t
             ? { numericAxisName: "yAxis", cateAxisName: "xAxis" }
             : "vertical" === t
@@ -13319,7 +13457,7 @@
             ? { numericAxisName: "radiusAxis", cateAxisName: "angleAxis" }
             : { numericAxisName: "angleAxis", cateAxisName: "radiusAxis" };
         },
-        Fe = function (t) {
+        Ge = function (t) {
           var e,
             r = t.chartName,
             o = t.GraphicalChild,
@@ -13331,7 +13469,7 @@
             d = t.legendContent,
             v = t.formatAxisMap,
             b = t.defaultProps,
-            E = function (t, e) {
+            S = function (t, e) {
               var r = e.graphicalItems,
                 n = e.stackGroups,
                 o = e.offset,
@@ -13343,23 +13481,23 @@
                 f = t.barGap,
                 h = t.barCategoryGap,
                 d = t.maxBarSize,
-                y = Ue(s),
+                y = qe(s),
                 v = y.numericAxisName,
                 m = y.cateAxisName,
                 b = (function (t) {
                   return (
                     !(!t || !t.length) &&
                     t.some(function (t) {
-                      var e = (0, U.Gf)(t && t.type);
+                      var e = (0, z.Gf)(t && t.type);
                       return e && e.indexOf("Bar") >= 0;
                     })
                   );
                 })(r),
-                g = b && (0, bt.pt)({ barSize: l, stackGroups: n }),
+                g = b && (0, at.pt)({ barSize: l, stackGroups: n }),
                 x = [];
               return (
                 r.forEach(function (r, l) {
-                  var y = Ne(t.data, {
+                  var y = Re(t.data, {
                       graphicalItems: [r],
                       dataStartIndex: u,
                       dataEndIndex: c,
@@ -13375,11 +13513,11 @@
                         a = r.props["".concat(n.axisType, "Id")];
                       (i && i[a]) || "zAxis" === n.axisType || (0, w.Z)(!1);
                       var u = i[a];
-                      return Pe(
-                        Pe({}, t),
+                      return Ce(
+                        Ce({}, t),
                         {},
-                        (ke((o = {}), n.axisType, u),
-                        ke(o, "".concat(n.axisType, "Ticks"), (0, bt.uY)(u)),
+                        (Ne((o = {}), n.axisType, u),
+                        Ne(o, "".concat(n.axisType, "Ticks"), (0, at.uY)(u)),
                         o),
                       );
                     }, {}),
@@ -13389,9 +13527,9 @@
                       n &&
                       n[S] &&
                       n[S].hasStack &&
-                      (0, bt.O3)(r, n[S].stackGroups),
-                    _ = (0, U.Gf)(r.type).indexOf("Bar") >= 0,
-                    T = (0, bt.zT)(P, k),
+                      (0, at.O3)(r, n[S].stackGroups),
+                    _ = (0, z.Gf)(r.type).indexOf("Bar") >= 0,
+                    T = (0, at.zT)(P, k),
                     C = [];
                   if (_) {
                     var N,
@@ -13400,12 +13538,12 @@
                       B =
                         null !==
                           (N =
-                            null !== (D = (0, bt.zT)(P, k, !0)) && void 0 !== D
+                            null !== (D = (0, at.zT)(P, k, !0)) && void 0 !== D
                               ? D
                               : I) && void 0 !== N
                           ? N
                           : 0;
-                    (C = (0, bt.qz)({
+                    (C = (0, at.qz)({
                       barGap: f,
                       barCategoryGap: h,
                       bandSize: B !== T ? B : T,
@@ -13414,12 +13552,12 @@
                     })),
                       B !== T &&
                         (C = C.map(function (t) {
-                          return Pe(
-                            Pe({}, t),
+                          return Ce(
+                            Ce({}, t),
                             {},
                             {
-                              position: Pe(
-                                Pe({}, t.position),
+                              position: Ce(
+                                Ce({}, t.position),
                                 {},
                                 { offset: t.position.offset - B / 2 },
                               ),
@@ -13431,12 +13569,12 @@
                     R = r && r.type && r.type.getComposedData;
                   R &&
                     x.push({
-                      props: Pe(
-                        Pe(
+                      props: Ce(
+                        Ce(
                           {},
                           R(
-                            Pe(
-                              Pe({}, E),
+                            Ce(
+                              Ce({}, E),
                               {},
                               {
                                 displayedData: y,
@@ -13456,34 +13594,34 @@
                         ),
                         {},
                         ((L = { key: r.key || "item-".concat(l) }),
-                        ke(L, v, E[v]),
-                        ke(L, m, E[m]),
-                        ke(L, "animationId", a),
+                        Ne(L, v, E[v]),
+                        Ne(L, m, E[m]),
+                        Ne(L, "animationId", a),
                         L),
                       ),
-                      childIndex: (0, U.$R)(r, t.children),
+                      childIndex: (0, z.$R)(r, t.children),
                       item: r,
                     });
                 }),
                 x
               );
             },
-            P = function (t, e) {
+            A = function (t, e) {
               var n = t.props,
                 i = t.dataStartIndex,
                 a = t.dataEndIndex,
                 u = t.updateId;
-              if (!(0, U.TT)({ props: n })) return null;
+              if (!(0, z.TT)({ props: n })) return null;
               var c = n.children,
                 l = n.layout,
                 s = n.stackOffset,
                 d = n.data,
                 y = n.reverseStackOrder,
-                m = Ue(l),
+                m = qe(l),
                 b = m.numericAxisName,
                 g = m.cateAxisName,
-                x = (0, U.NN)(c, o),
-                w = (0, bt.wh)(
+                x = (0, z.NN)(c, o),
+                w = (0, at.wh)(
                   d,
                   x,
                   "".concat(b, "Id"),
@@ -13491,18 +13629,18 @@
                   s,
                   y,
                 ),
-                O = p.reduce(function (t, e) {
+                j = p.reduce(function (t, e) {
                   var r = "".concat(e.axisType, "Map");
-                  return Pe(
-                    Pe({}, t),
+                  return Ce(
+                    Ce({}, t),
                     {},
-                    ke(
+                    Ne(
                       {},
                       r,
-                      Re(
+                      We(
                         n,
-                        Pe(
-                          Pe({}, e),
+                        Ce(
+                          Ce({}, e),
                           {},
                           {
                             graphicalItems: x,
@@ -13515,7 +13653,7 @@
                     ),
                   );
                 }, {}),
-                j = (function (t, e) {
+                A = (function (t, e) {
                   var r = t.props,
                     n = t.graphicalItems,
                     o = t.xAxisMap,
@@ -13526,15 +13664,15 @@
                     l = r.height,
                     s = r.children,
                     p = r.margin || {},
-                    h = (0, U.sP)(s, Bt),
-                    d = (0, U.sP)(s, R.D),
+                    h = (0, z.sP)(s, St),
+                    d = (0, z.sP)(s, B.D),
                     y = Object.keys(u).reduce(
                       function (t, e) {
                         var r = u[e],
                           n = r.orientation;
                         return r.mirror || r.hide
                           ? t
-                          : Pe(Pe({}, t), {}, ke({}, n, t[n] + r.width));
+                          : Ce(Ce({}, t), {}, Ne({}, n, t[n] + r.width));
                       },
                       { left: p.left || 0, right: p.right || 0 },
                     ),
@@ -13544,51 +13682,51 @@
                           n = r.orientation;
                         return r.mirror || r.hide
                           ? t
-                          : Pe(
-                              Pe({}, t),
+                          : Ce(
+                              Ce({}, t),
                               {},
-                              ke({}, n, f()(t, "".concat(n)) + r.height),
+                              Ne({}, n, f()(t, "".concat(n)) + r.height),
                             );
                       },
                       { top: p.top || 0, bottom: p.bottom || 0 },
                     ),
-                    m = Pe(Pe({}, v), y),
+                    m = Ce(Ce({}, v), y),
                     b = m.bottom;
-                  h && (m.bottom += h.props.height || Bt.defaultProps.height),
-                    d && e && (m = (0, bt.By)(m, n, r, e));
+                  h && (m.bottom += h.props.height || St.defaultProps.height),
+                    d && e && (m = (0, at.By)(m, n, r, e));
                   var g = c - m.left - m.right,
                     x = l - m.top - m.bottom;
-                  return Pe(
-                    Pe({ brushBottom: b }, m),
+                  return Ce(
+                    Ce({ brushBottom: b }, m),
                     {},
                     { width: Math.max(g, 0), height: Math.max(x, 0) },
                   );
                 })(
-                  Pe(Pe({}, O), {}, { props: n, graphicalItems: x }),
+                  Ce(Ce({}, j), {}, { props: n, graphicalItems: x }),
                   null == e ? void 0 : e.legendBBox,
                 );
-              Object.keys(O).forEach(function (t) {
-                O[t] = v(n, O[t], j, t.replace("Map", ""), r);
+              Object.keys(j).forEach(function (t) {
+                j[t] = v(n, j[t], A, t.replace("Map", ""), r);
               });
-              var A,
+              var E,
                 P,
                 k,
-                M = O["".concat(g, "Map")],
+                M = j["".concat(g, "Map")],
                 _ =
-                  ((A = M),
-                  (P = (0, S.Kt)(A)),
+                  ((E = M),
+                  (P = (0, O.Kt)(E)),
                   {
-                    tooltipTicks: (k = (0, bt.uY)(P, !1, !0)),
+                    tooltipTicks: (k = (0, at.uY)(P, !1, !0)),
                     orderedTooltipTicks: h()(k, function (t) {
                       return t.coordinate;
                     }),
                     tooltipAxis: P,
-                    tooltipAxisBandSize: (0, bt.zT)(P, k),
+                    tooltipAxisBandSize: (0, at.zT)(P, k),
                   }),
-                T = E(
+                T = S(
                   n,
-                  Pe(
-                    Pe({}, O),
+                  Ce(
+                    Ce({}, j),
                     {},
                     {
                       dataStartIndex: i,
@@ -13596,21 +13734,21 @@
                       updateId: u,
                       graphicalItems: x,
                       stackGroups: w,
-                      offset: j,
+                      offset: A,
                     },
                   ),
                 );
-              return Pe(
-                Pe(
+              return Ce(
+                Ce(
                   {
                     formattedGraphicalItems: T,
                     graphicalItems: x,
-                    offset: j,
+                    offset: A,
                     stackGroups: w,
                   },
                   _,
                 ),
-                O,
+                j,
               );
             };
           return (
@@ -13624,12 +13762,12 @@
                   constructor: { value: t, writable: !0, configurable: !0 },
                 })),
                   Object.defineProperty(t, "prototype", { writable: !1 }),
-                  e && ge(t, e);
+                  e && Se(t, e);
               })(p, t);
               var e,
                 o,
                 a,
-                l = xe(p);
+                l = Ae(p);
               function p(t) {
                 var e, o, a;
                 return (
@@ -13637,35 +13775,35 @@
                     if (!(t instanceof e))
                       throw new TypeError("Cannot call a class as a function");
                   })(this, p),
-                  ke(
-                    we((a = l.call(this, t))),
+                  Ne(
+                    Ee((a = l.call(this, t))),
                     "eventEmitterSymbol",
                     Symbol("rechartsEventEmitter"),
                   ),
-                  ke(we(a), "accessibilityManager", new le()),
-                  ke(we(a), "handleLegendBBoxUpdate", function (t) {
+                  Ne(Ee(a), "accessibilityManager", new Jt()),
+                  Ne(Ee(a), "handleLegendBBoxUpdate", function (t) {
                     if (t) {
                       var e = a.state,
                         r = e.dataStartIndex,
                         n = e.dataEndIndex,
                         o = e.updateId;
                       a.setState(
-                        Pe(
+                        Ce(
                           { legendBBox: t },
-                          P(
+                          A(
                             {
                               props: a.props,
                               dataStartIndex: r,
                               dataEndIndex: n,
                               updateId: o,
                             },
-                            Pe(Pe({}, a.state), {}, { legendBBox: t }),
+                            Ce(Ce({}, a.state), {}, { legendBBox: t }),
                           ),
                         ),
                       );
                     }
                   }),
-                  ke(we(a), "handleReceiveSyncEvent", function (t, e, r) {
+                  Ne(Ee(a), "handleReceiveSyncEvent", function (t, e, r) {
                     if (a.props.syncId === t) {
                       if (
                         r === a.eventEmitterSymbol &&
@@ -13675,7 +13813,7 @@
                       a.applySyncEvent(e);
                     }
                   }),
-                  ke(we(a), "handleBrushChange", function (t) {
+                  Ne(Ee(a), "handleBrushChange", function (t) {
                     var e = t.startIndex,
                       r = t.endIndex;
                     if (
@@ -13684,9 +13822,9 @@
                     ) {
                       var n = a.state.updateId;
                       a.setState(function () {
-                        return Pe(
+                        return Ce(
                           { dataStartIndex: e, dataEndIndex: r },
-                          P(
+                          A(
                             {
                               props: a.props,
                               dataStartIndex: e,
@@ -13703,25 +13841,25 @@
                         });
                     }
                   }),
-                  ke(we(a), "handleMouseEnter", function (t) {
+                  Ne(Ee(a), "handleMouseEnter", function (t) {
                     var e = a.getMouseInfo(t);
                     if (e) {
-                      var r = Pe(Pe({}, e), {}, { isTooltipActive: !0 });
+                      var r = Ce(Ce({}, e), {}, { isTooltipActive: !0 });
                       a.setState(r), a.triggerSyncEvent(r);
                       var n = a.props.onMouseEnter;
                       u()(n) && n(r, t);
                     }
                   }),
-                  ke(we(a), "triggeredAfterMouseMove", function (t) {
+                  Ne(Ee(a), "triggeredAfterMouseMove", function (t) {
                     var e = a.getMouseInfo(t),
                       r = e
-                        ? Pe(Pe({}, e), {}, { isTooltipActive: !0 })
+                        ? Ce(Ce({}, e), {}, { isTooltipActive: !0 })
                         : { isTooltipActive: !1 };
                     a.setState(r), a.triggerSyncEvent(r);
                     var n = a.props.onMouseMove;
                     u()(n) && n(r, t);
                   }),
-                  ke(we(a), "handleItemMouseEnter", function (t) {
+                  Ne(Ee(a), "handleItemMouseEnter", function (t) {
                     a.setState(function () {
                       return {
                         isTooltipActive: !0,
@@ -13734,23 +13872,23 @@
                       };
                     });
                   }),
-                  ke(we(a), "handleItemMouseLeave", function () {
+                  Ne(Ee(a), "handleItemMouseLeave", function () {
                     a.setState(function () {
                       return { isTooltipActive: !1 };
                     });
                   }),
-                  ke(we(a), "handleMouseMove", function (t) {
+                  Ne(Ee(a), "handleMouseMove", function (t) {
                     t.persist(), a.throttleTriggeredAfterMouseMove(t);
                   }),
-                  ke(we(a), "handleMouseLeave", function (t) {
+                  Ne(Ee(a), "handleMouseLeave", function (t) {
                     var e = { isTooltipActive: !1 };
                     a.setState(e), a.triggerSyncEvent(e);
                     var r = a.props.onMouseLeave;
                     u()(r) && r(e, t);
                   }),
-                  ke(we(a), "handleOuterEvent", function (t) {
+                  Ne(Ee(a), "handleOuterEvent", function (t) {
                     var e,
-                      r = (0, U.Bh)(t),
+                      r = (0, z.Bh)(t),
                       n = f()(a.props, "".concat(r));
                     r &&
                       u()(n) &&
@@ -13764,43 +13902,43 @@
                         t,
                       );
                   }),
-                  ke(we(a), "handleClick", function (t) {
+                  Ne(Ee(a), "handleClick", function (t) {
                     var e = a.getMouseInfo(t);
                     if (e) {
-                      var r = Pe(Pe({}, e), {}, { isTooltipActive: !0 });
+                      var r = Ce(Ce({}, e), {}, { isTooltipActive: !0 });
                       a.setState(r), a.triggerSyncEvent(r);
                       var n = a.props.onClick;
                       u()(n) && n(r, t);
                     }
                   }),
-                  ke(we(a), "handleMouseDown", function (t) {
+                  Ne(Ee(a), "handleMouseDown", function (t) {
                     var e = a.props.onMouseDown;
                     u()(e) && e(a.getMouseInfo(t), t);
                   }),
-                  ke(we(a), "handleMouseUp", function (t) {
+                  Ne(Ee(a), "handleMouseUp", function (t) {
                     var e = a.props.onMouseUp;
                     u()(e) && e(a.getMouseInfo(t), t);
                   }),
-                  ke(we(a), "handleTouchMove", function (t) {
+                  Ne(Ee(a), "handleTouchMove", function (t) {
                     null != t.changedTouches &&
                       t.changedTouches.length > 0 &&
                       a.throttleTriggeredAfterMouseMove(t.changedTouches[0]);
                   }),
-                  ke(we(a), "handleTouchStart", function (t) {
+                  Ne(Ee(a), "handleTouchStart", function (t) {
                     null != t.changedTouches &&
                       t.changedTouches.length > 0 &&
                       a.handleMouseDown(t.changedTouches[0]);
                   }),
-                  ke(we(a), "handleTouchEnd", function (t) {
+                  Ne(Ee(a), "handleTouchEnd", function (t) {
                     null != t.changedTouches &&
                       t.changedTouches.length > 0 &&
                       a.handleMouseUp(t.changedTouches[0]);
                   }),
-                  ke(we(a), "triggerSyncEvent", function (t) {
+                  Ne(Ee(a), "triggerSyncEvent", function (t) {
                     void 0 !== a.props.syncId &&
-                      ne.emit(oe, a.props.syncId, t, a.eventEmitterSymbol);
+                      Gt.emit(Ht, a.props.syncId, t, a.eventEmitterSymbol);
                   }),
-                  ke(we(a), "applySyncEvent", function (t) {
+                  Ne(Ee(a), "applySyncEvent", function (t) {
                     var e = a.props,
                       r = e.layout,
                       n = e.syncMethod,
@@ -13812,9 +13950,9 @@
                       void 0 !== t.dataEndIndex
                     )
                       a.setState(
-                        Pe(
+                        Ce(
                           { dataStartIndex: i, dataEndIndex: u },
-                          P(
+                          A(
                             {
                               props: a.props,
                               dataStartIndex: i,
@@ -13842,20 +13980,20 @@
                             break;
                           }
                       }
-                      var y = Pe(Pe({}, p), {}, { x: p.left, y: p.top }),
+                      var y = Ce(Ce({}, p), {}, { x: p.left, y: p.top }),
                         v = Math.min(c, y.x + y.width),
                         m = Math.min(l, y.y + y.height),
                         b = h[s] && h[s].value,
-                        g = Ie(a.state, a.props.data, s),
+                        g = Ue(a.state, a.props.data, s),
                         x = h[s]
                           ? {
                               x: "horizontal" === r ? h[s].coordinate : v,
                               y: "horizontal" === r ? m : h[s].coordinate,
                             }
-                          : Ce;
+                          : Le;
                       a.setState(
-                        Pe(
-                          Pe({}, t),
+                        Ce(
+                          Ce({}, t),
                           {},
                           {
                             activeLabel: b,
@@ -13867,18 +14005,18 @@
                       );
                     } else a.setState(t);
                   }),
-                  ke(we(a), "verticalCoordinatesGenerator", function (t, e) {
+                  Ne(Ee(a), "verticalCoordinatesGenerator", function (t, e) {
                     var r = t.xAxis,
                       n = t.width,
                       o = t.height,
                       i = t.offset;
-                    return (0, bt.Rf)(
-                      D(
-                        Pe(
-                          Pe(Pe({}, vt.defaultProps), r),
+                    return (0, at.Rf)(
+                      C(
+                        Ce(
+                          Ce(Ce({}, ot.defaultProps), r),
                           {},
                           {
-                            ticks: (0, bt.uY)(r, !0),
+                            ticks: (0, at.uY)(r, !0),
                             viewBox: { x: 0, y: 0, width: n, height: o },
                           },
                         ),
@@ -13888,18 +14026,18 @@
                       e,
                     );
                   }),
-                  ke(we(a), "horizontalCoordinatesGenerator", function (t, e) {
+                  Ne(Ee(a), "horizontalCoordinatesGenerator", function (t, e) {
                     var r = t.yAxis,
                       n = t.width,
                       o = t.height,
                       i = t.offset;
-                    return (0, bt.Rf)(
-                      D(
-                        Pe(
-                          Pe(Pe({}, vt.defaultProps), r),
+                    return (0, at.Rf)(
+                      C(
+                        Ce(
+                          Ce(Ce({}, ot.defaultProps), r),
                           {},
                           {
-                            ticks: (0, bt.uY)(r, !0),
+                            ticks: (0, at.uY)(r, !0),
                             viewBox: { x: 0, y: 0, width: n, height: o },
                           },
                         ),
@@ -13909,10 +14047,10 @@
                       e,
                     );
                   }),
-                  ke(we(a), "axesTicksGenerator", function (t) {
-                    return (0, bt.uY)(t, !0);
+                  Ne(Ee(a), "axesTicksGenerator", function (t) {
+                    return (0, at.uY)(t, !0);
                   }),
-                  ke(we(a), "renderCursor", function (t) {
+                  Ne(Ee(a), "renderCursor", function (t) {
                     var e,
                       o = a.state,
                       i = o.isTooltipActive,
@@ -13922,94 +14060,49 @@
                       s = o.activeTooltipIndex,
                       f = o.tooltipAxisBandSize,
                       p = a.getTooltipEventType(),
-                      h = null !== (e = t.props.active) && void 0 !== e ? e : i;
-                    if (
-                      !t ||
-                      !t.props.cursor ||
-                      !h ||
-                      !u ||
-                      ("ScatterChart" !== r && "axis" !== p)
-                    )
-                      return null;
-                    var d,
-                      y = a.props.layout,
-                      v = z.H;
-                    if ("ScatterChart" === r) (d = u), (v = V);
-                    else if ("BarChart" === r)
-                      (d = (function (t, e, r, n) {
-                        var o = n / 2;
-                        return {
-                          stroke: "none",
-                          fill: "#ccc",
-                          x: "horizontal" === t ? e.x - o : r.left + 0.5,
-                          y: "horizontal" === t ? r.top + 0.5 : e.y - o,
-                          width: "horizontal" === t ? n : r.width - 1,
-                          height: "horizontal" === t ? r.height - 1 : n,
-                        };
-                      })(y, u, l, f)),
-                        (v = K.A);
-                    else if ("radial" === y) {
-                      var m = j(u),
-                        b = m.cx,
-                        g = m.cy,
-                        x = m.radius;
-                      (d = {
-                        cx: b,
-                        cy: g,
-                        startAngle: m.startAngle,
-                        endAngle: m.endAngle,
-                        innerRadius: x,
-                        outerRadius: x,
-                      }),
-                        (v = X.L);
-                    } else (d = { points: fe(y, u, l) }), (v = z.H);
-                    var w = t.key || "_recharts-cursor",
-                      O = Pe(
-                        Pe(
-                          Pe(
-                            Pe({ stroke: "#ccc", pointerEvents: "none" }, l),
-                            d,
-                          ),
-                          (0, U.L6)(t.props.cursor),
-                        ),
-                        {},
-                        {
-                          payload: c,
-                          payloadIndex: s,
-                          key: w,
-                          className: "recharts-tooltip-cursor",
-                        },
-                      );
-                    return (0, n.isValidElement)(t.props.cursor)
-                      ? (0, n.cloneElement)(t.props.cursor, O)
-                      : (0, n.createElement)(v, O);
+                      h = null !== (e = t.props.active) && void 0 !== e ? e : i,
+                      d = a.props.layout,
+                      y = t.key || "_recharts-cursor";
+                    return n.createElement(ve, {
+                      key: y,
+                      activeCoordinate: u,
+                      activePayload: c,
+                      activeTooltipIndex: s,
+                      chartName: r,
+                      element: t,
+                      isActive: h,
+                      layout: d,
+                      offset: l,
+                      tooltipAxisBandSize: f,
+                      tooltipEventType: p,
+                    });
                   }),
-                  ke(we(a), "renderPolarAxis", function (t, e, r) {
+                  Ne(Ee(a), "renderPolarAxis", function (t, e, r) {
                     var o = f()(t, "type.axisType"),
                       i = f()(a.state, "".concat(o, "Map")),
                       u = i && i[t.props["".concat(o, "Id")]];
                     return (0, n.cloneElement)(
                       t,
-                      Pe(
-                        Pe({}, u),
+                      Ce(
+                        Ce({}, u),
                         {},
                         {
                           className: o,
                           key: t.key || "".concat(e, "-").concat(r),
-                          ticks: (0, bt.uY)(u, !0),
+                          ticks: (0, at.uY)(u, !0),
                         },
                       ),
                     );
                   }),
-                  ke(we(a), "renderXAxis", function (t, e, r) {
+                  Ne(Ee(a), "renderXAxis", function (t, e, r) {
                     var n = a.state.xAxisMap[t.props.xAxisId];
                     return a.renderAxis(n, t, e, r);
                   }),
-                  ke(we(a), "renderYAxis", function (t, e, r) {
+                  Ne(Ee(a), "renderYAxis", function (t, e, r) {
                     var n = a.state.yAxisMap[t.props.yAxisId];
                     return a.renderAxis(n, t, e, r);
                   }),
-                  ke(we(a), "renderGrid", function (t) {
+                  Ne(Ee(a), "renderGrid", function (t) {
                     var e = a.state,
                       r = e.xAxisMap,
                       o = e.yAxisMap,
@@ -14017,18 +14110,18 @@
                       u = a.props,
                       c = u.width,
                       l = u.height,
-                      s = (0, S.Kt)(r),
+                      s = (0, O.Kt)(r),
                       f =
                         m()(o, function (t) {
                           return g()(t.domain, Number.isFinite);
-                        }) || (0, S.Kt)(o),
+                        }) || (0, O.Kt)(o),
                       p = t.props || {};
                     return (0, n.cloneElement)(t, {
                       key: t.key || "grid",
-                      x: (0, S.hj)(p.x) ? p.x : i.left,
-                      y: (0, S.hj)(p.y) ? p.y : i.top,
-                      width: (0, S.hj)(p.width) ? p.width : i.width,
-                      height: (0, S.hj)(p.height) ? p.height : i.height,
+                      x: (0, O.hj)(p.x) ? p.x : i.left,
+                      y: (0, O.hj)(p.y) ? p.y : i.top,
+                      width: (0, O.hj)(p.width) ? p.width : i.width,
+                      height: (0, O.hj)(p.height) ? p.height : i.height,
                       xAxis: s,
                       yAxis: f,
                       offset: i,
@@ -14042,7 +14135,7 @@
                         a.horizontalCoordinatesGenerator,
                     });
                   }),
-                  ke(we(a), "renderPolarGrid", function (t) {
+                  Ne(Ee(a), "renderPolarGrid", function (t) {
                     var e = t.props,
                       r = e.radialLines,
                       o = e.polarAngles,
@@ -14050,8 +14143,8 @@
                       u = a.state,
                       c = u.radiusAxisMap,
                       l = u.angleAxisMap,
-                      s = (0, S.Kt)(c),
-                      f = (0, S.Kt)(l),
+                      s = (0, O.Kt)(c),
+                      f = (0, O.Kt)(l),
                       p = f.cx,
                       h = f.cy,
                       d = f.innerRadius,
@@ -14059,12 +14152,12 @@
                     return (0, n.cloneElement)(t, {
                       polarAngles: Array.isArray(o)
                         ? o
-                        : (0, bt.uY)(f, !0).map(function (t) {
+                        : (0, at.uY)(f, !0).map(function (t) {
                             return t.coordinate;
                           }),
                       polarRadius: Array.isArray(i)
                         ? i
-                        : (0, bt.uY)(s, !0).map(function (t) {
+                        : (0, at.uY)(s, !0).map(function (t) {
                             return t.coordinate;
                           }),
                       cx: p,
@@ -14075,7 +14168,7 @@
                       radialLines: r,
                     });
                   }),
-                  ke(we(a), "renderLegend", function () {
+                  Ne(Ee(a), "renderLegend", function () {
                     var t = a.state.formattedGraphicalItems,
                       e = a.props,
                       r = e.children,
@@ -14083,7 +14176,7 @@
                       i = e.height,
                       u = a.props.margin || {},
                       c = o - (u.left || 0) - (u.right || 0),
-                      l = (0, Lt.z)({
+                      l = (0, At.z)({
                         children: r,
                         formattedGraphicalItems: t,
                         legendWidth: c,
@@ -14091,11 +14184,11 @@
                       });
                     if (!l) return null;
                     var s = l.item,
-                      f = me(l, pe);
+                      f = Oe(l, me);
                     return (0, n.cloneElement)(
                       s,
-                      Pe(
-                        Pe({}, f),
+                      Ce(
+                        Ce({}, f),
                         {},
                         {
                           chartWidth: o,
@@ -14106,10 +14199,10 @@
                       ),
                     );
                   }),
-                  ke(we(a), "renderTooltip", function () {
+                  Ne(Ee(a), "renderTooltip", function () {
                     var t,
                       e = a.props.children,
-                      r = (0, U.sP)(e, L.u);
+                      r = (0, z.sP)(e, I.u);
                     if (!r) return null;
                     var o = a.state,
                       i = o.isTooltipActive,
@@ -14119,14 +14212,14 @@
                       s = o.offset,
                       f = null !== (t = r.props.active) && void 0 !== t ? t : i;
                     return (0, n.cloneElement)(r, {
-                      viewBox: Pe(Pe({}, s), {}, { x: s.left, y: s.top }),
+                      viewBox: Ce(Ce({}, s), {}, { x: s.left, y: s.top }),
                       active: f,
                       label: l,
                       payload: f ? c : [],
                       coordinate: u,
                     });
                   }),
-                  ke(we(a), "renderBrush", function (t) {
+                  Ne(Ee(a), "renderBrush", function (t) {
                     var e = a.props,
                       r = e.margin,
                       o = e.data,
@@ -14137,24 +14230,24 @@
                       s = i.updateId;
                     return (0, n.cloneElement)(t, {
                       key: t.key || "_recharts-brush",
-                      onChange: (0, bt.DO)(
+                      onChange: (0, at.DO)(
                         a.handleBrushChange,
                         t.props.onChange,
                       ),
                       data: o,
-                      x: (0, S.hj)(t.props.x) ? t.props.x : u.left,
-                      y: (0, S.hj)(t.props.y)
+                      x: (0, O.hj)(t.props.x) ? t.props.x : u.left,
+                      y: (0, O.hj)(t.props.y)
                         ? t.props.y
                         : u.top + u.height + u.brushBottom - (r.bottom || 0),
-                      width: (0, S.hj)(t.props.width) ? t.props.width : u.width,
+                      width: (0, O.hj)(t.props.width) ? t.props.width : u.width,
                       startIndex: c,
                       endIndex: l,
                       updateId: "brush-".concat(s),
                     });
                   }),
-                  ke(we(a), "renderReferenceElement", function (t, e, r) {
+                  Ne(Ee(a), "renderReferenceElement", function (t, e, r) {
                     if (!t) return null;
-                    var o = we(a).clipPathId,
+                    var o = Ee(a).clipPathId,
                       i = a.state,
                       u = i.xAxisMap,
                       c = i.yAxisMap,
@@ -14175,7 +14268,7 @@
                       clipPathId: o,
                     });
                   }),
-                  ke(we(a), "renderActivePoints", function (t) {
+                  Ne(Ee(a), "renderActivePoints", function (t) {
                     var e = t.item,
                       r = t.activePoint,
                       n = t.basePoint,
@@ -14185,24 +14278,24 @@
                       u = e.props.key,
                       c = e.item.props,
                       l = c.activeDot,
-                      s = Pe(
-                        Pe(
+                      s = Ce(
+                        Ce(
                           {
                             index: o,
                             dataKey: c.dataKey,
                             cx: r.x,
                             cy: r.y,
                             r: 4,
-                            fill: (0, bt.fk)(e.item),
+                            fill: (0, at.fk)(e.item),
                             strokeWidth: 2,
                             stroke: "#fff",
                             payload: r.payload,
                             value: r.value,
                             key: "".concat(u, "-activePoint-").concat(o),
                           },
-                          (0, U.L6)(l),
+                          (0, z.L6)(l),
                         ),
-                        (0, et.Ym)(l),
+                        (0, W.Ym)(l),
                       );
                     return (
                       a.push(p.renderActiveDot(l, s)),
@@ -14210,8 +14303,8 @@
                         ? a.push(
                             p.renderActiveDot(
                               l,
-                              Pe(
-                                Pe({}, s),
+                              Ce(
+                                Ce({}, s),
                                 {},
                                 {
                                   cx: n.x,
@@ -14225,7 +14318,7 @@
                       a
                     );
                   }),
-                  ke(we(a), "renderGraphicChild", function (t, e, r) {
+                  Ne(Ee(a), "renderGraphicChild", function (t, e, r) {
                     var o = a.filterFormatItem(t, e, r);
                     if (!o) return null;
                     var u = a.getTooltipEventType(),
@@ -14235,7 +14328,7 @@
                       f = c.activeTooltipIndex,
                       p = c.activeLabel,
                       h = a.props.children,
-                      d = (0, U.sP)(h, L.u),
+                      d = (0, z.sP)(h, I.u),
                       y = o.props,
                       v = y.points,
                       m = y.isRange,
@@ -14243,29 +14336,29 @@
                       g = o.item.props,
                       x = g.activeDot,
                       w = g.hide,
-                      O = g.activeBar,
-                      j = g.activeShape,
-                      A = Boolean(!w && l && d && (x || O || j)),
+                      j = g.activeBar,
+                      S = g.activeShape,
+                      A = Boolean(!w && l && d && (x || j || S)),
                       E = {};
                     "axis" !== u && d && "click" === d.props.trigger
                       ? (E = {
-                          onClick: (0, bt.DO)(
+                          onClick: (0, at.DO)(
                             a.handleItemMouseEnter,
                             t.props.onClick,
                           ),
                         })
                       : "axis" !== u &&
                         (E = {
-                          onMouseLeave: (0, bt.DO)(
+                          onMouseLeave: (0, at.DO)(
                             a.handleItemMouseLeave,
                             t.props.onMouseLeave,
                           ),
-                          onMouseEnter: (0, bt.DO)(
+                          onMouseEnter: (0, at.DO)(
                             a.handleItemMouseEnter,
                             t.props.onMouseEnter,
                           ),
                         });
-                    var P = (0, n.cloneElement)(t, Pe(Pe({}, o.props), E));
+                    var P = (0, n.cloneElement)(t, Ce(Ce({}, o.props), E));
                     if (A) {
                       if (!(f >= 0)) {
                         var k,
@@ -14279,16 +14372,16 @@
                           _ = M.item,
                           T = void 0 === _ ? t : _,
                           C = M.childIndex,
-                          N = Pe(
-                            Pe(Pe({}, o.props), E),
+                          N = Ce(
+                            Ce(Ce({}, o.props), E),
                             {},
                             { activeIndex: C },
                           );
                         return [(0, n.cloneElement)(T, N), null, null];
                       }
-                      var D, I;
+                      var D, B;
                       if (s.dataKey && !s.allowDuplicatedCategory) {
-                        var B =
+                        var L =
                           "function" == typeof s.dataKey
                             ? function (t) {
                                 return "function" == typeof s.dataKey
@@ -14296,11 +14389,11 @@
                                   : null;
                               }
                             : "payload.".concat(s.dataKey.toString());
-                        (D = (0, S.Ap)(v, B, p)),
-                          (I = m && b && (0, S.Ap)(b, B, p));
+                        (D = (0, O.Ap)(v, L, p)),
+                          (B = m && b && (0, O.Ap)(b, L, p));
                       } else
-                        (D = null == v ? void 0 : v[f]), (I = m && b && b[f]);
-                      if (j || O) {
+                        (D = null == v ? void 0 : v[f]), (B = m && b && b[f]);
+                      if (S || j) {
                         var R =
                           void 0 !== t.props.activeIndex
                             ? t.props.activeIndex
@@ -14308,7 +14401,7 @@
                         return [
                           (0, n.cloneElement)(
                             t,
-                            Pe(Pe(Pe({}, o.props), E), {}, { activeIndex: R }),
+                            Ce(Ce(Ce({}, o.props), E), {}, { activeIndex: R }),
                           ),
                           null,
                           null,
@@ -14316,11 +14409,11 @@
                       }
                       if (!i()(D))
                         return [P].concat(
-                          je(
+                          ke(
                             a.renderActivePoints({
                               item: o,
                               activePoint: D,
-                              basePoint: I,
+                              basePoint: B,
                               childIndex: f,
                               isRange: m,
                             }),
@@ -14329,16 +14422,16 @@
                     }
                     return m ? [P, null, null] : [P, null];
                   }),
-                  ke(we(a), "renderCustomized", function (t, e, r) {
+                  Ne(Ee(a), "renderCustomized", function (t, e, r) {
                     return (0, n.cloneElement)(
                       t,
-                      Pe(
-                        Pe({ key: "recharts-customized-".concat(r) }, a.props),
+                      Ce(
+                        Ce({ key: "recharts-customized-".concat(r) }, a.props),
                         a.state,
                       ),
                     );
                   }),
-                  ke(we(a), "renderMap", {
+                  Ne(Ee(a), "renderMap", {
                     CartesianGrid: { handler: a.renderGrid, once: !0 },
                     ReferenceArea: { handler: a.renderReferenceElement },
                     ReferenceLine: { handler: a.renderReferenceElement },
@@ -14363,7 +14456,7 @@
                   (a.clipPathId = "".concat(
                     null !== (e = t.id) && void 0 !== e
                       ? e
-                      : (0, S.EL)("recharts"),
+                      : (0, O.EL)("recharts"),
                     "-clip",
                   )),
                   (a.throttleTriggeredAfterMouseMove = y()(
@@ -14447,7 +14540,7 @@
                   {
                     key: "getTooltipEventType",
                     value: function () {
-                      var t = (0, U.sP)(this.props.children, L.u);
+                      var t = (0, z.sP)(this.props.children, I.u);
                       if (t && "boolean" == typeof t.props.shared) {
                         var e = t.props.shared ? "axis" : "item";
                         return s.indexOf(e) >= 0 ? e : c;
@@ -14461,7 +14554,7 @@
                       if (!this.container) return null;
                       var e = this.container,
                         r = e.getBoundingClientRect(),
-                        n = (0, A.os)(r),
+                        n = (0, j.os)(r),
                         o = {
                           chartX: Math.round(t.pageX - n.left),
                           chartY: Math.round(t.pageY - n.top),
@@ -14473,19 +14566,19 @@
                         c = u.xAxisMap,
                         l = u.yAxisMap;
                       if ("axis" !== this.getTooltipEventType() && c && l) {
-                        var s = (0, S.Kt)(c).scale,
-                          f = (0, S.Kt)(l).scale,
+                        var s = (0, O.Kt)(c).scale,
+                          f = (0, O.Kt)(l).scale,
                           p = s && s.invert ? s.invert(o.chartX) : null,
                           h = f && f.invert ? f.invert(o.chartY) : null;
-                        return Pe(Pe({}, o), {}, { xValue: p, yValue: h });
+                        return Ce(Ce({}, o), {}, { xValue: p, yValue: h });
                       }
-                      var d = Be(
+                      var d = Fe(
                         this.state,
                         this.props.data,
                         this.props.layout,
                         a,
                       );
-                      return d ? Pe(Pe({}, o), d) : null;
+                      return d ? Ce(Ce({}, o), d) : null;
                     },
                   },
                   {
@@ -14511,8 +14604,8 @@
                         c = u.angleAxisMap,
                         l = u.radiusAxisMap;
                       if (c && l) {
-                        var s = (0, S.Kt)(c);
-                        return (0, O.z3)({ x: o, y: i }, s);
+                        var s = (0, O.Kt)(c);
+                        return (0, Zt.z3)({ x: o, y: i }, s);
                       }
                       return null;
                     },
@@ -14522,7 +14615,7 @@
                     value: function () {
                       var t = this.props.children,
                         e = this.getTooltipEventType(),
-                        r = (0, U.sP)(t, L.u),
+                        r = (0, z.sP)(t, I.u),
                         n = {};
                       return (
                         r &&
@@ -14538,8 +14631,8 @@
                                   onTouchStart: this.handleTouchStart,
                                   onTouchEnd: this.handleTouchEnd,
                                 }),
-                        Pe(
-                          Pe({}, (0, et.Ym)(this.props, this.handleOuterEvent)),
+                        Ce(
+                          Ce({}, (0, W.Ym)(this.props, this.handleOuterEvent)),
                           n,
                         )
                       );
@@ -14548,13 +14641,13 @@
                   {
                     key: "addListener",
                     value: function () {
-                      ne.on(oe, this.handleReceiveSyncEvent);
+                      Gt.on(Ht, this.handleReceiveSyncEvent);
                     },
                   },
                   {
                     key: "removeListener",
                     value: function () {
-                      ne.removeListener(oe, this.handleReceiveSyncEvent);
+                      Gt.removeListener(Ht, this.handleReceiveSyncEvent);
                     },
                   },
                   {
@@ -14571,7 +14664,7 @@
                         if (
                           a.item === t ||
                           a.props.key === t.key ||
-                          (e === (0, U.Gf)(a.item.type) && r === a.childIndex)
+                          (e === (0, z.Gf)(a.item.type) && r === a.childIndex)
                         )
                           return a;
                       }
@@ -14585,8 +14678,8 @@
                         a = i.width,
                         u = i.height;
                       return n.createElement(
-                        vt,
-                        ve({}, t, {
+                        ot,
+                        we({}, t, {
                           className: (0, x.Z)(
                             "recharts-"
                               .concat(t.axisType, " ")
@@ -14631,10 +14724,10 @@
                       var t = this.state.xAxisMap;
                       return t
                         ? Object.entries(t).reduce(function (t, e) {
-                            var r = ye(e, 2),
+                            var r = xe(e, 2),
                               n = r[0],
                               o = r[1];
-                            return Pe(Pe({}, t), {}, ke({}, n, o.scale));
+                            return Ce(Ce({}, t), {}, Ne({}, n, o.scale));
                           }, {})
                         : null;
                     },
@@ -14645,10 +14738,10 @@
                       var t = this.state.yAxisMap;
                       return t
                         ? Object.entries(t).reduce(function (t, e) {
-                            var r = ye(e, 2),
+                            var r = xe(e, 2),
                               n = r[0],
                               o = r[1];
-                            return Pe(Pe({}, t), {}, ke({}, n, o.scale));
+                            return Ce(Ce({}, t), {}, Ne({}, n, o.scale));
                           }, {})
                         : null;
                     },
@@ -14688,23 +14781,23 @@
                           var a = r[o],
                             u = a.props,
                             c = a.item,
-                            l = (0, U.Gf)(c.type);
+                            l = (0, z.Gf)(c.type);
                           if ("Bar" === l) {
                             var s = (u.data || []).find(function (e) {
-                              return (0, K.X)(t, e);
+                              return (0, R.X)(t, e);
                             });
                             if (s) return { graphicalItem: a, payload: s };
                           } else if ("RadialBar" === l) {
                             var f = (u.data || []).find(function (e) {
-                              return (0, O.z3)(t, e);
+                              return (0, Zt.z3)(t, e);
                             });
                             if (f) return { graphicalItem: a, payload: f };
                           } else if (
-                            (0, se.lT)(a, n) ||
-                            (0, se.V$)(a, n) ||
-                            (0, se.w7)(a, n)
+                            (0, Qt.lT)(a, n) ||
+                            (0, Qt.V$)(a, n) ||
+                            (0, Qt.w7)(a, n)
                           ) {
-                            var p = (0, se.a3)({
+                            var p = (0, Qt.a3)({
                                 graphicalItem: a,
                                 activeTooltipItem: n,
                                 itemData: c.props.data,
@@ -14714,12 +14807,12 @@
                                   ? p
                                   : c.props.activeIndex;
                             return {
-                              graphicalItem: Pe(
-                                Pe({}, a),
+                              graphicalItem: Ce(
+                                Ce({}, a),
                                 {},
                                 { childIndex: h },
                               ),
-                              payload: (0, se.w7)(a, n)
+                              payload: (0, Qt.w7)(a, n)
                                 ? c.props.data[p]
                                 : a.props.data[p],
                             };
@@ -14732,7 +14825,7 @@
                     key: "render",
                     value: function () {
                       var t = this;
-                      if (!(0, U.TT)(this)) return null;
+                      if (!(0, z.TT)(this)) return null;
                       var e,
                         r,
                         o = this.props,
@@ -14744,14 +14837,14 @@
                         s = o.compact,
                         f = o.title,
                         p = o.desc,
-                        h = me(o, he),
-                        d = (0, U.L6)(h);
+                        h = Oe(o, be),
+                        d = (0, z.L6)(h);
                       if (s)
                         return n.createElement(
-                          I.T,
-                          ve({}, d, { width: u, height: c, title: f, desc: p }),
+                          N.T,
+                          we({}, d, { width: u, height: c, title: f, desc: p }),
                           this.renderClipPath(),
-                          (0, U.eu)(i, this.renderMap),
+                          (0, z.eu)(i, this.renderMap),
                         );
                       this.props.accessibilityLayer &&
                         ((d.tabIndex =
@@ -14771,10 +14864,10 @@
                       var y = this.parseEventsOfWrapper();
                       return n.createElement(
                         "div",
-                        ve(
+                        we(
                           {
                             className: (0, x.Z)("recharts-wrapper", a),
-                            style: Pe(
+                            style: Ce(
                               {
                                 position: "relative",
                                 cursor: "default",
@@ -14793,16 +14886,16 @@
                           },
                         ),
                         n.createElement(
-                          I.T,
-                          ve({}, d, {
+                          N.T,
+                          we({}, d, {
                             width: u,
                             height: c,
                             title: f,
                             desc: p,
-                            style: Te,
+                            style: Be,
                           }),
                           this.renderClipPath(),
-                          (0, U.eu)(i, this.renderMap),
+                          (0, z.eu)(i, this.renderMap),
                         ),
                         this.renderLegend(),
                         this.renderTooltip(),
@@ -14810,17 +14903,17 @@
                     },
                   },
                 ]),
-                o && be(e.prototype, o),
-                a && be(e, a),
+                o && je(e.prototype, o),
+                a && je(e, a),
                 Object.defineProperty(e, "prototype", { writable: !1 }),
                 p
               );
             })(n.Component)),
-            ke(e, "displayName", r),
-            ke(
+            Ne(e, "displayName", r),
+            Ne(
               e,
               "defaultProps",
-              Pe(
+              Ce(
                 {
                   layout: "horizontal",
                   stackOffset: "none",
@@ -14833,7 +14926,7 @@
                 b,
               ),
             ),
-            ke(e, "getDerivedStateFromProps", function (t, e) {
+            Ne(e, "getDerivedStateFromProps", function (t, e) {
               var r = t.dataKey,
                 n = t.data,
                 o = t.children,
@@ -14841,15 +14934,17 @@
                 u = t.height,
                 c = t.layout,
                 l = t.stackOffset,
-                s = t.margin;
+                s = t.margin,
+                f = e.dataStartIndex,
+                p = e.dataEndIndex;
               if (void 0 === e.updateId) {
-                var f = ze(t);
-                return Pe(
-                  Pe(
-                    Pe({}, f),
+                var h = Ze(t);
+                return Ce(
+                  Ce(
+                    Ce({}, h),
                     {},
                     { updateId: 0 },
-                    P(Pe(Pe({ props: t }, f), {}, { updateId: 0 }), e),
+                    A(Ce(Ce({ props: t }, h), {}, { updateId: 0 }), e),
                   ),
                   {},
                   {
@@ -14871,18 +14966,18 @@
                 u !== e.prevHeight ||
                 c !== e.prevLayout ||
                 l !== e.prevStackOffset ||
-                !(0, J.w)(s, e.prevMargin)
+                !(0, U.w)(s, e.prevMargin)
               ) {
-                var p = ze(t),
-                  h = {
+                var d = Ze(t),
+                  y = {
                     chartX: e.chartX,
                     chartY: e.chartY,
                     isTooltipActive: e.isTooltipActive,
                   },
-                  d = Pe(Pe({}, Be(e, n, c)), {}, { updateId: e.updateId + 1 }),
-                  y = Pe(Pe(Pe({}, p), h), d);
-                return Pe(
-                  Pe(Pe({}, y), P(Pe({ props: t }, y), e)),
+                  v = Ce(Ce({}, Fe(e, n, c)), {}, { updateId: e.updateId + 1 }),
+                  m = Ce(Ce(Ce({}, d), y), v);
+                return Ce(
+                  Ce(Ce({}, m), A(Ce({ props: t }, m), e)),
                   {},
                   {
                     prevDataKey: r,
@@ -14896,29 +14991,62 @@
                   },
                 );
               }
-              if (!(0, U.rL)(o, e.prevChildren)) {
-                var v = !i()(n) ? e.updateId : e.updateId + 1;
-                return Pe(
-                  Pe(
-                    { updateId: v },
-                    P(Pe(Pe({ props: t }, e), {}, { updateId: v }), e),
+              if (!(0, z.rL)(o, e.prevChildren)) {
+                var b,
+                  g,
+                  x,
+                  w,
+                  O = (0, z.sP)(o, St),
+                  j =
+                    O &&
+                    null !==
+                      (b =
+                        null === (g = O.props) || void 0 === g
+                          ? void 0
+                          : g.startIndex) &&
+                    void 0 !== b
+                      ? b
+                      : f,
+                  S =
+                    O &&
+                    null !==
+                      (x =
+                        null === (w = O.props) || void 0 === w
+                          ? void 0
+                          : w.endIndex) &&
+                    void 0 !== x
+                      ? x
+                      : p,
+                  E = j !== f || S !== p,
+                  P = !i()(n) && !E ? e.updateId : e.updateId + 1;
+                return Ce(
+                  Ce(
+                    { updateId: P },
+                    A(
+                      Ce(
+                        Ce({ props: t }, e),
+                        {},
+                        { updateId: P, dataStartIndex: j, dataEndIndex: S },
+                      ),
+                      e,
+                    ),
                   ),
                   {},
-                  { prevChildren: o },
+                  { prevChildren: o, dataStartIndex: j, dataEndIndex: S },
                 );
               }
               return null;
             }),
-            ke(e, "renderActiveDot", function (t, e) {
+            Ne(e, "renderActiveDot", function (t, e) {
               var r;
               return (
                 (r = (0, n.isValidElement)(t)
                   ? (0, n.cloneElement)(t, e)
                   : u()(t)
                   ? t(e)
-                  : n.createElement(Y.o, e)),
+                  : n.createElement(L.o, e)),
                 n.createElement(
-                  B.m,
+                  D.m,
                   { className: "recharts-active-dot", key: e.key },
                   r,
                 )
@@ -16648,7 +16776,16 @@
           T = (0, o.useRef)();
         (T.current = P),
           (0, o.useImperativeHandle)(e, function () {
-            return _;
+            return Object.assign(_.current, {
+              get current() {
+                return (
+                  console.warn(
+                    "The usage of ref.current.current is deprecated and will no longer be supported.",
+                  ),
+                  _.current
+                );
+              },
+            });
           });
         var C = y(
             (0, o.useState)({
@@ -27668,16 +27805,17 @@
           o = "";
         if ("string" == typeof t || "number" == typeof t) o += t;
         else if ("object" == typeof t)
-          if (Array.isArray(t))
-            for (e = 0; e < t.length; e++)
+          if (Array.isArray(t)) {
+            var i = t.length;
+            for (e = 0; e < i; e++)
               t[e] && (r = n(t[e])) && (o && (o += " "), (o += r));
-          else for (e in t) t[e] && (o && (o += " "), (o += e));
+          } else for (r in t) t[r] && (o && (o += " "), (o += r));
         return o;
       }
       r.d(e, { Z: () => o });
       const o = function () {
-        for (var t, e, r = 0, o = ""; r < arguments.length; )
-          (t = arguments[r++]) && (e = n(t)) && (o && (o += " "), (o += e));
+        for (var t, e, r = 0, o = "", i = arguments.length; r < i; r++)
+          (t = arguments[r]) && (e = n(t)) && (o && (o += " "), (o += e));
         return o;
       };
     },

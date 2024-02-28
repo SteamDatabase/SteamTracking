@@ -378,6 +378,7 @@ ${COMMUNITY_URL}oauth/login?client_id=${CLIENT_ID}&response_type=token&state=${}
 ${COMMUNITY_URL}oauth/login?client_id=${CLIENT_ID}&response_type=token&state=filmcontest/
 ${HELP_BASE_URL}
 ${HELP_BASE_URL}${}/
+${HELP_BASE_URL}en/faqs/view/054C-3167-DD7F-49D4
 ${HELP_BASE_URL}en/ticketmaster/ticket/${help_requestid}
 ${HELP_BASE_URL}en/wizard/HelpWithPublishing?issueid=919
 ${HELP_BASE_URL}en/wizard/HelpWithPublishing?issueid=933
@@ -847,6 +848,7 @@ ${MEDIA_CDN_COMMUNITY_URL}images/${image_small}
 ${MEDIA_CDN_COMMUNITY_URL}images/${}
 ${MEDIA_CDN_COMMUNITY_URL}images/apps/${appid}/${}.jpg
 ${MEDIA_CDN_COMMUNITY_URL}images/apps/${}/${icon}
+${MEDIA_CDN_COMMUNITY_URL}images/apps/${}/${img_icon_url}.jpg
 ${MEDIA_CDN_COMMUNITY_URL}images/apps/${}/${}
 ${MEDIA_CDN_COMMUNITY_URL}images/apps/${}/${}.jpg
 ${MEDIA_CDN_COMMUNITY_URL}images/avatars/
@@ -872,7 +874,6 @@ ${MEDIA_CDN_COMMUNITY_URL}images/items/${}/${}
 ${MEDIA_CDN_COMMUNITY_URL}images/items/1658760/${item_image_small}
 ${MEDIA_CDN_COMMUNITY_URL}images/steamworks_docs/${LANGUAGE}/${}
 ${MEDIA_CDN_COMMUNITY_URL}images/steamworks_docs/english/${}
-${MEDIA_CDN_URL}${asset_url}
 ${MEDIA_CDN_URL}${}
 ${MEDIA_CDN_URL}steam/
 ${MEDIA_CDN_URL}steam/apps/${m_unAppID}/capsule_231x87.jpg
@@ -1162,7 +1163,6 @@ ${STORE_BASE_URL}${image_url}
 ${STORE_BASE_URL}${logged_in ? "reservation/ajaxgetuserstate" : "reservation/ajaxgetdefaultstate"}
 ${STORE_BASE_URL}${m_strStoreURLPath}
 ${STORE_BASE_URL}${newshubUrl}
-${STORE_BASE_URL}${store_url_path}
 ${STORE_BASE_URL}${url}
 ${STORE_BASE_URL}${}
 ${STORE_BASE_URL}${}/${id}${_ ? `?${}` : ""}
@@ -1370,7 +1370,6 @@ ${STORE_BASE_URL}prizes/nextdraw/${}
 ${STORE_BASE_URL}prizes/view/${giveaway_id}${SNR ? _ : ""}
 ${STORE_BASE_URL}promotion/ajaxclaimstickerforgenre
 ${STORE_BASE_URL}promotion/ajaxhasclaimedgenresticker
-${STORE_BASE_URL}public/images/checkout/Cart_generic_header_logo.png
 ${STORE_BASE_URL}publisher/${m_strVanity}/
 ${STORE_BASE_URL}recommended/ignorerecommendation
 ${STORE_BASE_URL}remoteplay#anywhere_how
@@ -1455,7 +1454,6 @@ ${STORE_CDN_URL}public/images/loyalty/reactions/${_ ? "animated" : "still"}/${}.
 ${STORE_CDN_URL}public/images/v6/ico/ico_selected.png
 ${STORE_CDN_URL}public/shared/images/header/logo_steamchina.svg?t=962016
 ${STORE_CHECKOUT_BASE_URL}checkout/
-${STORE_CHECKOUT_BASE_URL}checkout/?accountcart=1
 ${STORE_CHECKOUT_BASE_URL}parental/ajaxunlock/
 ${STORE_ICON_BASE_URL}${appid}/${}
 ${STORE_ICON_BASE_URL}${appid}/header.jpg
@@ -2646,7 +2644,6 @@ https://steamcommunity.com/groups/${groupid}/deleterecommendation/
 https://steamcommunity.com/groups/${groupid}/followcurator/
 https://steamcommunity.com/groups/${groupid}/setcuratordetails/
 https://steamcommunity.com/groups/${url}
-https://steamcommunity.com/groups/SteamClientBeta/discussions/3/4038104598693698820/
 https://steamcommunity.com/groups/steamworks/discussions/24/
 https://steamcommunity.com/groups/steamworks/discussions/29/
 https://steamcommunity.com/inventory/${m_steamid}/${m_appid}/${m_contextid}

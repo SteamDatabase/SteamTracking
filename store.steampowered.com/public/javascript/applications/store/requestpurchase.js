@@ -1,378 +1,529 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
-  [7280],
+  [7280, 6957],
   {
     9496: (e) => {
       e.exports = {
-        RoleIcon: "familysharedcomponents_RoleIcon_2OqP3",
-        ProfileLink: "familysharedcomponents_ProfileLink_iKwt8",
-        MeBadge: "familysharedcomponents_MeBadge_qeLJ_",
-        PlayerName: "familysharedcomponents_PlayerName_3YHL9",
-        RoleAndIcon: "familysharedcomponents_RoleAndIcon_1VP1W",
-        RoleName: "familysharedcomponents_RoleName_3rvHm",
-        FamilyErrorDisplay: "familysharedcomponents_FamilyErrorDisplay_3EgCv",
-        FamilyMemberRow: "familysharedcomponents_FamilyMemberRow_3QkkY",
-        FamilyMemberRowTop: "familysharedcomponents_FamilyMemberRowTop_3kaLZ",
-        Left: "familysharedcomponents_Left_3KlqU",
-        InvitePending: "familysharedcomponents_InvitePending_2xtN_",
-        ExpandRowButton: "familysharedcomponents_ExpandRowButton_2a0Yy",
-        Selected: "familysharedcomponents_Selected_2DsLI",
+        RoleIcon: "_2OqP3U4Xva0slDya7T_h9z",
+        ProfileLink: "iKwt8JWlzzFgS6UsereGW",
+        MeBadge: "qeLJ_1Yz0fl7HhQaPUSeZ",
+        PlayerName: "_3YHL9yHTQbTTevVp9b8gOD",
+        RoleAndIcon: "_1VP1WperM9AtlP6cNIYFHK",
+        RoleName: "_3rvHmUp522O41nzDaN_nH8",
+        FamilyErrorDisplay: "_3EgCvTO7-C5-UcwS6d9q_u",
+        FamilyMemberRow: "_3QkkYqYUNkuL-1EOrIbEhB",
+        FamilyMemberRowTop: "_3kaLZDbhALcwTVAvXAkUM3",
+        Left: "_3KlqUdasBjes1Yug5vDtAA",
+        InvitePending: "_2xtN_GSWHByJwYYB8notwd",
+        ExpandRowButton: "_2a0YydnHd-iRihjZCXFH2t",
+        Selected: "_2DsLII3ICyyAkenN6BZmnl",
       };
     },
-    96271: (e) => {
+    97418: (e) => {
       e.exports = {
-        RequestPurchasePage: "requestpurchasepage_RequestPurchasePage_3F6rI",
-        Header: "requestpurchasepage_Header_1JteR",
-        ThrobberContainer: "requestpurchasepage_ThrobberContainer_1mHKl",
-        ButtonContainer: "requestpurchasepage_ButtonContainer_2H4GY",
-        RequestButton: "requestpurchasepage_RequestButton_3thyo",
-        RequestPurchaseButton:
-          "requestpurchasepage_RequestPurchaseButton_18U0s",
+        CartCard: "_1xIt8XUBQEbK-xSRQhbtW0",
+        PurchaseRequestBanner: "_-0ewDwG8C2PYKGJDqSP40",
       };
     },
-    10847: (e, t, a) => {
+    83090: (e) => {
+      e.exports = {
+        PurchaseRequestInfoPage: "_2vUK2Ij_I2rOkqw9wZ2Diy",
+        Header: "kw7cBqn_8NJ4l9R4nkZXE",
+        ButtonContainer: "_2TQ_WuHwPbieu3aZfxn2TN",
+        PrimaryButton: "_2-7r0qbPMo9ML9sGFiKwq6",
+      };
+    },
+    10847: (e, t, n) => {
       "use strict";
-      a.d(t, { In: () => v, L4: () => g, Mm: () => y });
-      var r = a(47427),
-        n = a(9496),
-        s = a(62613),
-        l = a(1485),
-        o = a(31846),
-        c = a(13129),
-        i = a(38605),
-        m = a(35427),
-        u = a(92686),
-        d = a(51915),
-        E = a(53923),
-        _ = a(88619),
-        h = a(70548),
-        R = a(18434);
-      function p(e) {
-        return r.createElement(s.LpF, null);
-      }
-      function f(e) {
-        return r.createElement(s.soM, null);
-      }
+      n.d(t, { In: () => R, L4: () => _, Mm: () => I, bk: () => q });
+      var a = n(47427),
+        r = n(9496),
+        s = n(62613),
+        o = n(1485),
+        i = n(31846),
+        c = n(13129),
+        l = n(38605),
+        u = n(35427),
+        m = n(92686),
+        d = n(51915),
+        f = n(53923),
+        E = n(88619),
+        p = n(70548),
+        v = n(18434),
+        g = n(91618);
       function y(e) {
-        return r.createElement(
+        return a.createElement(s.LpF, null);
+      }
+      function h(e) {
+        return a.createElement(s.soM, null);
+      }
+      function I(e) {
+        return a.createElement(
           "div",
-          { className: (0, c.Z)(n.RoleIcon, e.className) },
-          2 == e.role ? r.createElement(f, null) : r.createElement(p, null),
+          { className: (0, c.Z)(r.RoleIcon, e.className) },
+          2 == e.role ? a.createElement(h, null) : a.createElement(y, null),
         );
       }
       function P(e) {
-        var t, a;
-        const { strSteamID: s, role: l, persona: c, isSelf: u } = e,
-          d = new m.K(s);
-        let E = e.size || "Large";
-        const p = (0, _.N5)(),
-          f = (0, R.h)(),
-          P =
-            null === (t = p.data) || void 0 === t
+        var t, n;
+        const { strSteamID: s, role: o, persona: c, isSelf: m } = e,
+          d = new u.K(s);
+        let f = e.size || "Large";
+        const g = (0, E.N5)(),
+          y = (0, v.h)(),
+          h =
+            null === (t = g.data) || void 0 === t
               ? void 0
               : t.get(d.GetAccountID()),
-          g =
-            null === (a = f.data) || void 0 === a
+          P =
+            null === (n = y.data) || void 0 === n
               ? void 0
-              : a.preferences().parenthesize_nicknames();
-        return r.createElement(
-          r.Fragment,
+              : n.preferences().parenthesize_nicknames();
+        return a.createElement(
+          a.Fragment,
           null,
-          r.createElement(
+          a.createElement(
             "a",
-            { className: n.ProfileLink, href: c.GetCommunityProfileURL() },
-            r.createElement(i.vV, {
-              className: n.Avatar,
+            {
+              className: r.ProfileLink,
+              href: c.GetCommunityProfileURL(),
+              onClick: (e) => {
+                e.stopPropagation();
+              },
+            },
+            a.createElement(l.vV, {
+              className: r.Avatar,
               persona: c,
-              size: E,
+              size: f,
               statusPosition: "right",
             }),
-            r.createElement(h.o, {
-              className: n.PlayerName,
-              bIsSelf: u,
+            a.createElement(p.o, {
+              className: r.PlayerName,
+              bIsSelf: m,
               bHideStatus: !1,
               bHidePersona: !1,
-              bParenthesizeNicknames: g,
+              bParenthesizeNicknames: P,
               bCompactView: !1,
               persona: c,
-              strNickname: P,
+              strNickname: h,
               eFriendRelationship: 3,
             }),
           ),
-          r.createElement(
+          a.createElement(
             "div",
-            { className: n.RoleAndIcon },
-            r.createElement(y, { className: n.ProfileRoleIcon, role: l }),
-            r.createElement(
+            { className: r.RoleAndIcon },
+            a.createElement(I, { className: r.ProfileRoleIcon, role: o }),
+            a.createElement(
               "div",
-              { className: n.RoleName },
-              (0, o.Xx)(`#FamilyManagement_Role_${l}`),
+              { className: r.RoleName },
+              (0, i.Xx)(`#FamilyManagement_Role_${o}`),
             ),
           ),
         );
       }
-      function g(e) {
-        const t = (0, r.useContext)(u.Xe);
+      function _(e) {
+        const t = (0, a.useContext)(m.Xe);
         return t.errorMessage
-          ? r.createElement(
+          ? a.createElement(
               "div",
-              { className: n.FamilyErrorDisplay },
+              { className: r.FamilyErrorDisplay },
               t.errorMessage,
             )
           : null;
       }
-      function v(e) {
-        const { strSteamID: t, role: a, bInvitePending: i, children: m } = e,
-          _ = (0, E.M)(),
-          [h, R] = (0, r.useState)(!1),
-          p = _ == t,
-          f = (0, d.IE)(t);
+      function R(e) {
+        const { strSteamID: t, role: n, bInvitePending: s, children: o } = e,
+          l = (0, f.M)(),
+          [u, E] = (0, a.useState)(!1),
+          p = l == t,
+          v = (0, d.IE)(t);
         if (
-          ((0, u.sT)(f, "#FamilyManagement_ErrorLoadFamilyGeneric"),
-          !f.isSuccess)
+          ((0, m.sT)(v, "#FamilyManagement_ErrorLoadFamilyGeneric"),
+          !v.isSuccess)
         )
           return null;
-        const y = f.data;
-        return r.createElement(
-          "div",
+        const y = v.data;
+        return a.createElement(
+          g.s,
           {
             className: (0, c.Z)(
-              n.FamilyMemberRow,
-              p && n.ActiveFamilyMemberRow,
+              r.FamilyMemberRow,
+              p && r.ActiveFamilyMemberRow,
             ),
           },
-          r.createElement(
-            "div",
-            { className: n.FamilyMemberRowTop },
-            r.createElement(
+          a.createElement(
+            g.s,
+            {
+              className: r.FamilyMemberRowTop,
+              onActivate: o ? () => E(!u) : void 0,
+            },
+            a.createElement(
               "div",
-              { className: n.Left },
-              r.createElement(P, {
+              { className: r.Left },
+              a.createElement(P, {
                 strSteamID: t,
-                role: a,
+                role: n,
                 persona: y,
                 isSelf: p,
               }),
-              i &&
-                r.createElement(
+              s &&
+                a.createElement(
                   "div",
-                  { className: n.InvitePending },
-                  (0, o.Xx)("#FamilyManagement_InvitePending"),
+                  { className: r.InvitePending },
+                  (0, i.Xx)("#FamilyManagement_InvitePending"),
                 ),
               p &&
-                r.createElement(
+                a.createElement(
                   "span",
-                  { className: n.MeBadge },
-                  (0, o.Xx)("#FamilyManagement_Me"),
+                  { className: r.MeBadge },
+                  (0, i.Xx)("#FamilyManagement_Me"),
                 ),
             ),
-            m &&
-              r.createElement(
-                l.Yz,
-                {
-                  className: (0, c.Z)(n.ExpandRowButton, h && n.Selected),
-                  onClick: () => R(!h),
-                },
-                r.createElement(s.vVQ, { direction: "down" }),
-              ),
+            o && a.createElement(q, { bExpanded: u, setExpanded: E }),
           ),
-          h && m,
+          u && o,
+        );
+      }
+      function q(e) {
+        const { bExpanded: t, setExpanded: n } = e;
+        return a.createElement(
+          o.Yz,
+          {
+            className: (0, c.Z)(r.ExpandRowButton, t && r.Selected),
+            onClick: () => n(!t),
+          },
+          a.createElement(s.vVQ, { direction: "down" }),
         );
       }
     },
-    18434: (e, t, a) => {
+    85948: (e, t, n) => {
       "use strict";
-      a.d(t, { h: () => c });
-      var r = a(85556),
-        n = a(35750),
-        s = a(82182),
-        l = a(42718),
-        o = a(40057);
+      n.d(t, { Fz: () => I, TQ: () => g, tE: () => P });
+      var a = n(85556),
+        r = n(80751),
+        s = n.n(r),
+        o = n(73799),
+        i = n.n(o),
+        c = n(47427),
+        l = n(42718),
+        u = n(35427),
+        m = n(16649),
+        d = n(37563),
+        f = n(79545),
+        E = n(82182),
+        p = n(40057);
+      const v = "nicknames";
+      function g(e) {
+        const t = (0, p.bY)(),
+          { data: n, isLoading: r } = (0, l.useQuery)([v], () =>
+            (0, a.mG)(this, void 0, void 0, function* () {
+              const e = new Map();
+              if (d.L7.logged_in) {
+                const n = f.gA.Init(E.bM),
+                  a = (yield E.lk.GetNicknameList(t, n)).Body().toObject();
+                (null == a ? void 0 : a.nicknames) &&
+                  a.nicknames.length > 0 &&
+                  a.nicknames.forEach((t) => {
+                    e.set(t.accountid, t.nickname);
+                  });
+              }
+              return e;
+            }),
+          );
+        return n ? n.get(e) : null;
+      }
+      const y = new (i())(
+          (e) =>
+            (function (e) {
+              var t, n, r, o;
+              return (0, a.mG)(this, void 0, void 0, function* () {
+                if (!e || 0 == e.length) return [];
+                const a =
+                  "community" == (0, d.Zv)()
+                    ? d.De.COMMUNITY_BASE_URL
+                    : d.De.STORE_BASE_URL;
+                if (1 == e.length) {
+                  const r = { accountid: e[0], origin: self.origin },
+                    o = yield s().get(`${a}actions/ajaxgetavatarpersona`, {
+                      params: r,
+                    });
+                  if (
+                    !o ||
+                    200 != o.status ||
+                    1 !=
+                      (null === (t = o.data) || void 0 === t
+                        ? void 0
+                        : t.success) ||
+                    !(null === (n = o.data) || void 0 === n
+                      ? void 0
+                      : n.userinfo)
+                  )
+                    throw `Load single avatar/persona failed ${
+                      (0, m.l)(o).strErrorMsg
+                    }`;
+                  return [o.data.userinfo];
+                }
+                {
+                  const t = { accountids: e.join(","), origin: self.origin },
+                    n = yield s().get(`${a}actions/ajaxgetmultiavatarpersona`, {
+                      params: t,
+                    });
+                  if (
+                    !n ||
+                    200 != n.status ||
+                    1 !=
+                      (null === (r = n.data) || void 0 === r
+                        ? void 0
+                        : r.success) ||
+                    !(null === (o = n.data) || void 0 === o
+                      ? void 0
+                      : o.userinfos)
+                  )
+                    throw `Load single avatar/persona failed ${
+                      (0, m.l)(n).strErrorMsg
+                    }`;
+                  const i = new Map();
+                  return (
+                    n.data.userinfos.forEach((e) =>
+                      i.set(new u.K(e.steamid).GetAccountID(), e),
+                    ),
+                    e.map((e) => i.get(e))
+                  );
+                }
+              });
+            })(e),
+          { cache: !1 },
+        ),
+        h = "avatarandpersonas";
+      function I(e) {
+        const { data: t, isLoading: n } = (0, l.useQuery)([h, e], () =>
+          y.load(e),
+        );
+        return [t, n];
+      }
+      function P(e) {
+        const t = (0, l.useQueryClient)(),
+          { data: n, isLoading: a } = (0, l.useQuery)({
+            queryKey: [h, e],
+            queryFn: () => y.loadMany(e),
+            onSuccess(e) {
+              e.forEach((e) => {
+                const n = [h, new u.K(e.steamid).GetAccountID()];
+                t.setQueryData(n, e);
+              });
+            },
+            enabled: (null == e ? void 0 : e.length) > 0,
+          }),
+          r = (0, c.useMemo)(() => {
+            const e = new Array();
+            return (
+              null == n ||
+                n.forEach((t) => {
+                  t instanceof Error || e.push(t);
+                }),
+              e
+            );
+          }, [n]);
+        return a ? null : r;
+      }
+    },
+    18434: (e, t, n) => {
+      "use strict";
+      n.d(t, { h: () => c });
+      var a = n(85556),
+        r = n(79545),
+        s = n(82182),
+        o = n(42718),
+        i = n(40057);
       function c() {
-        const e = (0, o.bY)();
-        return (0, l.useQuery)(["communitypreferences"], () =>
-          (0, r.mG)(this, void 0, void 0, function* () {
-            const t = n.gA.Init(s.AP),
-              a = yield s.lk.GetCommunityPreferences(e, t);
-            if (1 != a.GetEResult())
+        const e = (0, i.bY)();
+        return (0, o.useQuery)(["communitypreferences"], () =>
+          (0, a.mG)(this, void 0, void 0, function* () {
+            const t = r.gA.Init(s.AP),
+              n = yield s.lk.GetCommunityPreferences(e, t);
+            if (1 != n.GetEResult())
               throw new Error(
-                `Error from GetCommunityPreferences: ${a.GetEResult()} ${a.GetErrorMessage()}`,
+                `Error from GetCommunityPreferences: ${n.GetEResult()} ${n.GetErrorMessage()}`,
               );
-            return a.Body();
+            return n.Body();
           }),
         );
       }
     },
-    79798: (e, t, a) => {
+    79798: (e, t, n) => {
       "use strict";
-      a.r(t), a.d(t, { default: () => u });
-      var r = a(47427),
-        n = a(96271),
-        s = a.n(n),
-        l = a(31846),
-        o = a(92686),
-        c = a(10847),
-        i = a(65255),
-        m = a(1485);
-      function u(e) {
-        const [t, a] = r.useState(null);
-        return r.createElement(
+      n.r(t), n.d(t, { default: () => s });
+      var a = n(47427),
+        r = n(76957);
+      function s(e) {
+        const { familyGroupID: t } = e;
+        return a.createElement(r.PurchaseRequestSimpleInfoPage, {
+          familyGroupID: t,
+          headerLocToken: "#PurchaseRequested_Header",
+          infoLocToken: "#PurchaseRequested_Info",
+        });
+      }
+    },
+    76957: (e, t, n) => {
+      "use strict";
+      n.r(t),
+        n.d(t, { PurchaseRequestSimpleInfoPage: () => q, default: () => y });
+      var a = n(47427),
+        r = n(83090),
+        s = n.n(r),
+        o = n(1485),
+        i = n(92686),
+        c = n(46193),
+        l = n(31846),
+        u = n(85948),
+        m = n(35427),
+        d = n(65255),
+        f = n(97418);
+      function E(e) {
+        var t, n, r;
+        const { familyGroupID: s } = e,
+          o = (0, i.JM)(s),
+          c =
+            null ===
+              (n =
+                null === (t = (0, i.P2)(s).data) || void 0 === t
+                  ? void 0
+                  : t.requests()) || void 0 === n
+              ? void 0
+              : n.length;
+        if (!c) return null;
+        const u = (0, l.kb)("#PurchaseRequestBanner_PendingRequest", c);
+        return a.createElement(
           "div",
-          { className: s().RequestPurchasePage },
-          r.createElement(
-            o.Xe.Provider,
-            { value: { errorMessage: t, setErrorMessage: a } },
-            r.createElement(
-              "div",
-              { className: s().Header },
-              (0, l.Xx)("#PurchaseRequested_Header"),
+          { className: f.PurchaseRequestBanner },
+          (0, l.kQ)(
+            "#PurchaseRequestBanner_YouHavePendingRequestsForFamilyName",
+            a.createElement(
+              "a",
+              {
+                href:
+                  d.De.STORE_BASE_URL + "account/familymanagement?tab=requests",
+              },
+              u,
             ),
-            r.createElement(c.L4, null),
-            r.createElement(
-              "div",
-              { className: s().Info },
-              (0, l.Xx)("#PurchaseRequested_Info"),
+            a.createElement(
+              "span",
+              null,
+              null === (r = o.data) || void 0 === r ? void 0 : r.name(),
             ),
-            r.createElement(
+          ),
+        );
+      }
+      var p = n(46882),
+        v = n(10847),
+        g = n(53923);
+      function y(e) {
+        const { familyGroupID: t, requestID: n } = e,
+          r = (0, i.jo)(t, n),
+          s = (0, c.useInitCartLocalization)(),
+          o = (0, g.M)();
+        if (r.isError) return a.createElement(h, { familyGroupID: t });
+        if (r.isLoading || !s) return a.createElement(I, null);
+        const { requests: l } = r.data.toObject(),
+          u = l.find(({ request_id: e }) => e === n);
+        return u
+          ? u.is_completed
+            ? a.createElement(_, { familyGroupID: t })
+            : u.requester_steamid === o
+            ? a.createElement(R, { familyGroupID: t })
+            : a.createElement(D, { request: u })
+          : a.createElement(P, { familyGroupID: t });
+      }
+      function h(e) {
+        const { familyGroupID: t } = e;
+        return a.createElement(q, {
+          familyGroupID: t,
+          headerLocToken: "#PurchaseRequest_RequestErrorHeader",
+        });
+      }
+      function I() {
+        return a.createElement(
+          "div",
+          { className: s().PurchaseRequestInfoPage },
+          a.createElement(p.V, { size: "medium", msDelayAppear: 300 }),
+        );
+      }
+      function P(e) {
+        const { familyGroupID: t } = e;
+        return a.createElement(q, {
+          familyGroupID: t,
+          headerLocToken: "#PurchaseRequest_RequestNotFoundHeader",
+        });
+      }
+      function _(e) {
+        const { familyGroupID: t } = e;
+        return a.createElement(q, {
+          familyGroupID: t,
+          headerLocToken: "#PurchaseRequest_RequestCompletedHeader",
+        });
+      }
+      function R(e) {
+        const { familyGroupID: t } = e;
+        return a.createElement(q, {
+          familyGroupID: t,
+          headerLocToken: "#PurchaseRequest_RequestPendingHeader",
+          infoLocToken: "#PurchaseRequest_RequestPendingInfo",
+        });
+      }
+      function q(e) {
+        const { familyGroupID: t, headerLocToken: n, infoLocToken: r } = e,
+          [c, u] = a.useState(null);
+        return a.createElement(
+          "div",
+          { className: s().PurchaseRequestInfoPage },
+          a.createElement(
+            i.Xe.Provider,
+            { value: { errorMessage: c, setErrorMessage: u } },
+            a.createElement("div", { className: s().Header }, (0, l.Xx)(n)),
+            a.createElement(v.L4, null),
+            a.createElement(E, { familyGroupID: t }),
+            !!r &&
+              a.createElement("div", { className: s().Info }, (0, l.Xx)(r)),
+            a.createElement(
               "div",
               { className: s().ButtonContainer },
-              r.createElement(
-                m.KM,
+              a.createElement(
+                o.KM,
                 {
                   className: s().PrimaryButton,
                   onClick: () => {
-                    window.location.assign(i.De.STORE_BASE_URL);
+                    window.location.assign(d.De.STORE_BASE_URL);
                   },
                 },
                 (0, l.Xx)("#PurchaseRequested_ReturnToStore"),
-              ),
-              r.createElement(
-                m.zx,
-                {
-                  className: s().Button,
-                  onClick: () => {
-                    window.location.assign(
-                      i.De.STORE_BASE_URL +
-                        "account/familymanagement?tab=requests",
-                    );
-                  },
-                },
-                (0, l.Xx)("#PurchaseRequested_ViewRequests"),
               ),
             ),
           ),
         );
       }
-    },
-    54845: (e, t, a) => {
-      "use strict";
-      a.r(t), a.d(t, { default: () => E });
-      var r = a(47427),
-        n = a(96271),
-        s = a.n(n),
-        l = a(31846),
-        o = a(92686),
-        c = a(46882),
-        i = a(10847),
-        m = a(65255),
-        u = a(1485),
-        d = a(13129);
-      function E(e) {
-        const { shoppingCartGID: t } = e,
-          a = (0, o.Rs)(),
-          [n, m] = r.useState(null),
-          u = r.useMemo(() => (0, l.Xx)("#RequestPurchase_PageTitle"), []);
-        return a.isLoading
-          ? r.createElement(
-              "div",
-              { className: s().RequestPurchasePage },
-              r.createElement(
-                "div",
-                { className: s().ThrobberContainer },
-                r.createElement(c.V, null),
-              ),
-            )
-          : a.isError
-          ? null
-          : r.createElement(
-              "div",
-              { className: s().RequestPurchasePage },
-              r.createElement(
-                o.Xe.Provider,
-                { value: { errorMessage: n, setErrorMessage: m } },
-                r.createElement("div", { className: s().Header }, u),
-                r.createElement(i.L4, null),
-                r.createElement(_, {
-                  familyGroupID: a.data.family_groupid(),
-                  shoppingCartGID: t,
-                }),
-              ),
-            );
-      }
-      function _(e) {
-        const { familyGroupID: t, shoppingCartGID: a } = e,
-          n = (0, o.BU)(t, a, m.L7.country_code),
-          { setErrorMessage: i } = (0, o.cL)();
-        (0, o.zj)(
-          n,
-          "#RequestPurchase_GenericError",
-          o.zs.k_EFamilyQueryPurchaseRequest,
-        );
-        const E = `${m.De.STORE_BASE_URL}cart`;
-        return n.isLoading
-          ? r.createElement(
-              "div",
-              { className: s().ThrobberContainer },
-              r.createElement(c.V, null),
-            )
-          : n.isError
-          ? null
-          : r.createElement(
-              "div",
-              null,
-              r.createElement(
-                "div",
-                null,
-                (0, l.Xx)(
-                  n.isSuccess
-                    ? "#RequestPurchase_PurchaseRequested"
-                    : "#RequestPurchase_WillNotifyAllAdults",
-                ),
-              ),
-              !n.isSuccess &&
-                r.createElement(
-                  "div",
-                  { className: s().ButtonContainer },
-                  r.createElement(
-                    u.zx,
-                    {
-                      className: (0, d.Z)(
-                        s().RequestPurchaseButton,
-                        s().RequestButton,
-                      ),
-                      onClick: () => {
-                        i(null), n.mutate();
-                      },
-                    },
-                    (0, l.Xx)("#RequestPurchase_RequestPurchase"),
-                  ),
-                  r.createElement(
-                    "a",
-                    { href: E },
-                    r.createElement(
-                      u.zx,
-                      {
-                        className: (0, d.Z)(
-                          s().BackToCartButton,
-                          s().RequestButton,
-                        ),
-                      },
-                      (0, l.Xx)("#RequestPurchase_BackToCart"),
-                    ),
-                  ),
-                ),
-            );
+      function D(e) {
+        const { request: t } = e,
+          n = new m.K(t.requester_steamid).GetAccountID(),
+          [r] = (0, u.Fz)(n),
+          [s, o] = a.useState({ accountid_giftee: n }),
+          i = a.useRef(() => {}).current,
+          d = (0, l.Xx)(
+            "#Cart_PurchaseRequestTitle",
+            null == r ? void 0 : r.persona_name,
+          );
+        return a.createElement(c.BaseCartPage, {
+          cartID: {
+            type: "request",
+            gid: t.gidshoppingcart,
+            requestID: t.request_id,
+          },
+          step: "gifts",
+          onStepChange: i,
+          title: d,
+          cartWideGiftInfo: s,
+          onCartWideGiftInfoChange: o,
+        });
       }
     },
   },

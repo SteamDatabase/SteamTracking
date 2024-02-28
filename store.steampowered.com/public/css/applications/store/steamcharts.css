@@ -1,8 +1,8 @@
-.onlineuserchart_ChartContainerPlaceholder_2XkUV {
+._2XkUVIIrP51qhPwOneciZ7 {
   height: 210px;
   width: 940px;
 }
-.onlineuserchart_ChartContainer_FpMH3 {
+.FpMH38j765H86InvUXI5T {
   background-image: linear-gradient(
     180deg,
     rgba(144, 153, 161, 0.1) 0%,
@@ -14,20 +14,20 @@
   padding: 16px 16px 0px 0px;
 }
 @media all and (max-width: 700px) {
-  .onlineuserchart_ChartContainer_FpMH3 {
+  .FpMH38j765H86InvUXI5T {
     flex-direction: column-reverse;
   }
 }
-.onlineuserchart_ChartContainer_FpMH3 .onlineuserchart_Chart_Rv-Tn {
+.FpMH38j765H86InvUXI5T .Rv-Tnx--KwCDgFsmHA7Zz {
   flex: 1;
 }
-.onlineuserchart_ChartContainer_FpMH3
-  .onlineuserchart_Chart_Rv-Tn
+.FpMH38j765H86InvUXI5T
+  .Rv-Tnx--KwCDgFsmHA7Zz
   .recharts-cartesian-grid-horizontal
   line {
   stroke: #4c5661;
 }
-.onlineuserchart_ChartContainer_FpMH3 .onlineuserchart_Stats_3ZiPu {
+.FpMH38j765H86InvUXI5T ._3ZiPuQhQ0Lw1S4fNC5ARyq {
   min-width: 25%;
   margin-left: 34px;
   display: flex;
@@ -35,77 +35,67 @@
   justify-content: space-around;
 }
 @media all and (max-width: 700px) {
-  .onlineuserchart_ChartContainer_FpMH3 .onlineuserchart_Stats_3ZiPu {
+  .FpMH38j765H86InvUXI5T ._3ZiPuQhQ0Lw1S4fNC5ARyq {
     flex-direction: row;
   }
 }
-.onlineuserchart_ChartContainer_FpMH3
-  .onlineuserchart_Stats_3ZiPu
-  .onlineuserchart_StatsTitle_TY7Qb {
+.FpMH38j765H86InvUXI5T ._3ZiPuQhQ0Lw1S4fNC5ARyq .TY7Qbq7FuibkQDpXGPxsj {
   color: #fff;
   letter-spacing: 0px;
   font-size: 27px;
   font-weight: 300;
 }
 @media all and (max-width: 700px) {
-  .onlineuserchart_ChartContainer_FpMH3
-    .onlineuserchart_Stats_3ZiPu
-    .onlineuserchart_StatsTitle_TY7Qb {
+  .FpMH38j765H86InvUXI5T ._3ZiPuQhQ0Lw1S4fNC5ARyq .TY7Qbq7FuibkQDpXGPxsj {
     font-size: 21px;
   }
 }
-.onlineuserchart_ChartContainer_FpMH3
-  .onlineuserchart_Stats_3ZiPu
-  .onlineuserchart_StatSubtitle_20FBR {
+.FpMH38j765H86InvUXI5T ._3ZiPuQhQ0Lw1S4fNC5ARyq ._20FBRckrXi0EjrMvjWq5HF {
   font-size: 10px;
   color: #b6b6b6;
   font-weight: 500;
   letter-spacing: 1px;
 }
-.onlineuserchart_ChartContainer_FpMH3
-  .onlineuserchart_Stats_3ZiPu
-  .onlineuserchart_StatSubtitle_20FBR
-  .onlineuserchart_Concurrent_1kVRt {
+.FpMH38j765H86InvUXI5T
+  ._3ZiPuQhQ0Lw1S4fNC5ARyq
+  ._20FBRckrXi0EjrMvjWq5HF
+  ._1kVRthVYe6HB6ezBCivTmn {
   color: #82ff01;
 }
-.onlineuserchart_ChartContainer_FpMH3
-  .onlineuserchart_Stats_3ZiPu
-  .onlineuserchart_StatSubtitle_20FBR
-  .onlineuserchart_Now_2j4oL {
+.FpMH38j765H86InvUXI5T
+  ._3ZiPuQhQ0Lw1S4fNC5ARyq
+  ._20FBRckrXi0EjrMvjWq5HF
+  ._2j4oL1dtp5TAyU6zyFilbm {
   color: #70c3ff;
 }
-.onlineuserchart_ChartContainer_FpMH3
-  .onlineuserchart_Stats_3ZiPu
-  .onlineuserchart_CurrentStats_3uEBR {
+.FpMH38j765H86InvUXI5T ._3ZiPuQhQ0Lw1S4fNC5ARyq ._3uEBRDFiG3dxKoRzhAmwWt {
   padding-bottom: 30px;
 }
 @media all and (max-width: 700px) {
-  .onlineuserchart_ChartContainer_FpMH3
-    .onlineuserchart_Stats_3ZiPu
-    .onlineuserchart_CurrentStats_3uEBR {
+  .FpMH38j765H86InvUXI5T ._3ZiPuQhQ0Lw1S4fNC5ARyq ._3uEBRDFiG3dxKoRzhAmwWt {
     padding-bottom: 0px;
   }
 }
-.chartscommon_PageSection_3JAzR {
+._3JAzRcSUiSPCKW2Jiexp_E {
   margin-bottom: 48px;
 }
-.chartscommon_PageSection_3JAzR .chartscommon_SectionTitle_f7CCw {
+._3JAzRcSUiSPCKW2Jiexp_E .f7CCwSS2I4NYoGB4wG2TA {
   font-size: 16px;
   color: #c5cbd8;
   font-weight: 200;
   letter-spacing: 1px;
   margin-bottom: 6px;
 }
-.chartscommon_PageSection_3JAzR .chartscommon_SectionTitle_f7CCw b {
+._3JAzRcSUiSPCKW2Jiexp_E .f7CCwSS2I4NYoGB4wG2TA b {
   color: #fff;
   font-weight: 500;
 }
-.chartscommon_ChartPage_1A7Na {
+._1A7NagdRz58_o8HPHMa3eE {
   max-width: 940px;
   margin: 0 auto;
   padding: 0 2%;
 }
-.chartscommon_Placeholder_3XI-C {
+._3XI-CAps_XOBY4D5L-KYLK {
   background: linear-gradient(
     to bottom right,
     rgba(255, 255, 255, 0.1) 40%,
@@ -114,10 +104,10 @@
   );
   background-size: 400% 400%;
   border-radius: 5px;
-  animation: chartscommon_GhostShine_1NHk0 3.2s ease;
+  animation: _1NHk0m80j5yOZhsPNvNh2t 3.2s ease;
   animation-iteration-count: infinite;
 }
-@keyframes chartscommon_GhostShine_1NHk0 {
+@keyframes _1NHk0m80j5yOZhsPNvNh2t {
   0% {
     background-position: 100% 100%;
   }
@@ -128,108 +118,90 @@
     background-position: 0% 0%;
   }
 }
-.chartscommon_ChartTable_37mz_ {
+._37mz_pxwuHG8BN4GUhxjz_ {
   width: 100%;
   color: #fff;
   border-spacing: 0 3px;
   border-collapse: separate;
   border: none;
 }
-.chartscommon_ChartTable_37mz_ .chartscommon_ColumnHeaders_WgKS9 {
+._37mz_pxwuHG8BN4GUhxjz_ .WgKS9JzWbUHUdUaxAkVyq {
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 1px;
   text-align: left;
 }
-.chartscommon_ChartTable_37mz_ .chartscommon_ColumnHeaders_WgKS9 th {
+._37mz_pxwuHG8BN4GUhxjz_ .WgKS9JzWbUHUdUaxAkVyq th {
   font-weight: 300;
 }
-.chartscommon_ChartTable_37mz_
-  .chartscommon_ColumnHeaders_WgKS9
-  th.chartscommon_HoverCell_2-85m {
+._37mz_pxwuHG8BN4GUhxjz_ .WgKS9JzWbUHUdUaxAkVyq th._2-85msRUZlh9lpwsunR7GZ {
   width: 0%;
 }
-.chartscommon_ChartTable_37mz_ .chartscommon_ColumnHeaders_WgKS9 th svg {
+._37mz_pxwuHG8BN4GUhxjz_ .WgKS9JzWbUHUdUaxAkVyq th svg {
   width: 15px;
   fill: #8890a0;
   margin-left: 3px;
 }
 @media all and (max-width: 700px) {
-  .chartscommon_ChartTable_37mz_ .chartscommon_ColumnHeaders_WgKS9 th svg {
+  ._37mz_pxwuHG8BN4GUhxjz_ .WgKS9JzWbUHUdUaxAkVyq th svg {
     display: none;
   }
 }
-.chartscommon_ChartTable_37mz_
-  .chartscommon_ColumnHeaders_WgKS9
-  th.chartscommon_Rank_2-OCR {
+._37mz_pxwuHG8BN4GUhxjz_ .WgKS9JzWbUHUdUaxAkVyq th._2-OCRGbF9FZtfD3sGgLVh4 {
   width: 5%;
 }
 @media all and (max-width: 700px) {
-  .chartscommon_ChartTable_37mz_
-    .chartscommon_ColumnHeaders_WgKS9
-    th.chartscommon_Rank_2-OCR
+  ._37mz_pxwuHG8BN4GUhxjz_
+    .WgKS9JzWbUHUdUaxAkVyq
+    th._2-OCRGbF9FZtfD3sGgLVh4
     span {
     display: none;
   }
 }
-.chartscommon_ChartTable_37mz_
-  .chartscommon_ColumnHeaders_WgKS9
-  th.chartscommon_Game_1qyeH {
+._37mz_pxwuHG8BN4GUhxjz_ .WgKS9JzWbUHUdUaxAkVyq th._1qyeHZiM3mmbo0imr68dMz {
   width: 50%;
 }
 @media all and (max-width: 700px) {
-  .chartscommon_ChartTable_37mz_
-    .chartscommon_ColumnHeaders_WgKS9
-    th.chartscommon_Game_1qyeH
+  ._37mz_pxwuHG8BN4GUhxjz_
+    .WgKS9JzWbUHUdUaxAkVyq
+    th._1qyeHZiM3mmbo0imr68dMz
     span {
     display: none;
   }
 }
-.chartscommon_ChartTable_37mz_
-  .chartscommon_ColumnHeaders_WgKS9
-  th.chartscommon_Price_1JgiW {
+._37mz_pxwuHG8BN4GUhxjz_ .WgKS9JzWbUHUdUaxAkVyq th._1JgiWYMTfTwaQ2HJEMyY-Y {
   width: 15%;
 }
 @media all and (max-width: 700px) {
-  .chartscommon_ChartTable_37mz_
-    .chartscommon_ColumnHeaders_WgKS9
-    th.chartscommon_Price_1JgiW {
+  ._37mz_pxwuHG8BN4GUhxjz_ .WgKS9JzWbUHUdUaxAkVyq th._1JgiWYMTfTwaQ2HJEMyY-Y {
     display: none;
   }
 }
-.chartscommon_ChartTable_37mz_
-  .chartscommon_ColumnHeaders_WgKS9
-  th.chartscommon_Change_3hclD {
+._37mz_pxwuHG8BN4GUhxjz_ .WgKS9JzWbUHUdUaxAkVyq th._3hclDX7-WLUsWJuYR_oXUr {
   width: 9%;
 }
 @media all and (max-width: 700px) {
-  .chartscommon_ChartTable_37mz_
-    .chartscommon_ColumnHeaders_WgKS9
-    th.chartscommon_Change_3hclD
+  ._37mz_pxwuHG8BN4GUhxjz_
+    .WgKS9JzWbUHUdUaxAkVyq
+    th._3hclDX7-WLUsWJuYR_oXUr
     span {
     display: none;
   }
 }
-.chartscommon_ChartTable_37mz_
-  .chartscommon_ColumnHeaders_WgKS9
-  th.chartscommon_Concurrent_2k9G_ {
+._37mz_pxwuHG8BN4GUhxjz_ .WgKS9JzWbUHUdUaxAkVyq th._2k9G_tjU3m_yCndUPB8Vxs {
   width: 18%;
 }
-.chartscommon_ChartTable_37mz_
-  .chartscommon_ColumnHeaders_WgKS9
-  th.chartscommon_Weeks_UuiGa {
+._37mz_pxwuHG8BN4GUhxjz_ .WgKS9JzWbUHUdUaxAkVyq th.UuiGaH84yY06Q47lU9lp9 {
   width: 7%;
 }
-.chartscommon_ChartTable_37mz_
-  .chartscommon_ColumnHeaders_WgKS9
-  th.chartscommon_PeakInGame_1self {
+._37mz_pxwuHG8BN4GUhxjz_ .WgKS9JzWbUHUdUaxAkVyq th._1selfCx1P9F5HDvT0uOwLw {
   width: 12%;
 }
-.chartscommon_ChartTable_37mz_ .chartscommon_RightCell_3eIfq {
+._37mz_pxwuHG8BN4GUhxjz_ ._3eIfqcXQHr4FKPcN1v2v6k {
   text-align: right;
   padding-right: 16px;
 }
-.chartscommon_ChartTable_37mz_ .chartscommon_TableRow_1e_nc {
+._37mz_pxwuHG8BN4GUhxjz_ ._1e_ncYHkPNaZ3hco_QyRuD {
   background: linear-gradient(
     90deg,
     rgba(86, 92, 103, 0.3),
@@ -242,40 +214,38 @@
   -webkit-backdrop-filter: blur(8px);
   cursor: pointer;
 }
-.chartscommon_ChartTable_37mz_ .chartscommon_TableRow_1e_nc:hover {
+._37mz_pxwuHG8BN4GUhxjz_ ._1e_ncYHkPNaZ3hco_QyRuD:hover {
   background: linear-gradient(
     90deg,
     rgba(130, 137, 151, 0.3),
     rgba(163, 170, 178, 0.3)
   );
 }
-.chartscommon_ChartTable_37mz_
-  .chartscommon_TableRow_1e_nc:hover
-  .chartscommon_CapsuleCell_GdWJO
-  .chartscommon_Banner_1y4IQ
-  .chartscommon_BannerText_2xCtg {
+._37mz_pxwuHG8BN4GUhxjz_
+  ._1e_ncYHkPNaZ3hco_QyRuD:hover
+  .GdWJO09fEv96lffYqSCTD
+  ._1y4IQJgl-Jm3fy9XW-WGfi
+  ._2xCtgVHxn4YjOvd45SCa-9 {
   display: block;
 }
-.chartscommon_ChartTable_37mz_
-  .chartscommon_TableRow_1e_nc
-  .chartscommon_HoverCell_2-85m {
+._37mz_pxwuHG8BN4GUhxjz_ ._1e_ncYHkPNaZ3hco_QyRuD ._2-85msRUZlh9lpwsunR7GZ {
   width: 0px;
 }
-.chartscommon_ChartTable_37mz_
-  .chartscommon_TableRow_1e_nc
-  .chartscommon_HoverCell_2-85m
-  .chartscommon_HoverSource_ueQE3 {
+._37mz_pxwuHG8BN4GUhxjz_
+  ._1e_ncYHkPNaZ3hco_QyRuD
+  ._2-85msRUZlh9lpwsunR7GZ
+  .ueQE3FBjRAzpAC3w7ctAa {
   width: 100%;
   height: 100%;
   position: absolute;
   top: 0;
   left: 0;
 }
-.chartscommon_ChartTable_37mz_
-  .chartscommon_TableRow_1e_nc
-  .chartscommon_HoverCell_2-85m
-  .chartscommon_HoverSource_ueQE3
-  .chartscommon_HoverMask_23Aj1 {
+._37mz_pxwuHG8BN4GUhxjz_
+  ._1e_ncYHkPNaZ3hco_QyRuD
+  ._2-85msRUZlh9lpwsunR7GZ
+  .ueQE3FBjRAzpAC3w7ctAa
+  ._23Aj18GeEMdrEFmQn56P6b {
   width: 100%;
   height: 100%;
   cursor: pointer;
@@ -284,32 +254,28 @@
   z-index: 6;
 }
 @media screen and (max-width: 1750px) {
-  .chartscommon_ChartTable_37mz_
-    .chartscommon_TableRow_1e_nc
-    .chartscommon_HoverCell_2-85m
-    .chartscommon_HoverSource_ueQE3 {
+  ._37mz_pxwuHG8BN4GUhxjz_
+    ._1e_ncYHkPNaZ3hco_QyRuD
+    ._2-85msRUZlh9lpwsunR7GZ
+    .ueQE3FBjRAzpAC3w7ctAa {
     width: 25%;
   }
 }
 @media screen and (max-width: 550px) {
-  .chartscommon_ChartTable_37mz_
-    .chartscommon_TableRow_1e_nc
-    .chartscommon_HoverCell_2-85m
-    .chartscommon_HoverSource_ueQE3 {
+  ._37mz_pxwuHG8BN4GUhxjz_
+    ._1e_ncYHkPNaZ3hco_QyRuD
+    ._2-85msRUZlh9lpwsunR7GZ
+    .ueQE3FBjRAzpAC3w7ctAa {
     width: 0%;
   }
 }
-.chartscommon_ChartTable_37mz_
-  .chartscommon_TableRow_1e_nc
-  .chartscommon_RankCell_22FqH {
+._37mz_pxwuHG8BN4GUhxjz_ ._1e_ncYHkPNaZ3hco_QyRuD ._22FqHiBtqazXeqPBBGNE3t {
   font-size: 17px;
   font-weight: 800;
   text-align: center;
   width: 5%;
 }
-.chartscommon_ChartTable_37mz_
-  .chartscommon_TableRow_1e_nc
-  .chartscommon_PriceCell_vqWZa {
+._37mz_pxwuHG8BN4GUhxjz_ ._1e_ncYHkPNaZ3hco_QyRuD .vqWZah9F9q2fxDWpRc09q {
   text-align: right;
   padding-right: 16px;
   color: #c6d4df;
@@ -317,58 +283,50 @@
   min-width: 15%;
 }
 @media all and (max-width: 700px) {
-  .chartscommon_ChartTable_37mz_
-    .chartscommon_TableRow_1e_nc
-    .chartscommon_PriceCell_vqWZa {
+  ._37mz_pxwuHG8BN4GUhxjz_ ._1e_ncYHkPNaZ3hco_QyRuD .vqWZah9F9q2fxDWpRc09q {
     display: none;
   }
 }
-.chartscommon_ChartTable_37mz_
-  .chartscommon_TableRow_1e_nc
-  .chartscommon_ChangeCell_5XCIf {
+._37mz_pxwuHG8BN4GUhxjz_ ._1e_ncYHkPNaZ3hco_QyRuD ._5XCIfYrMrb9F-9RyAd5HC {
   color: transparent;
   text-align: right;
   padding-right: 16px;
   width: 7%;
 }
-.chartscommon_ChartTable_37mz_
-  .chartscommon_TableRow_1e_nc
-  .chartscommon_ChangeCell_5XCIf
-  .chartscommon_Tooltip_21PHm {
+._37mz_pxwuHG8BN4GUhxjz_
+  ._1e_ncYHkPNaZ3hco_QyRuD
+  ._5XCIfYrMrb9F-9RyAd5HC
+  ._21PHmTWxuLnZX8sNtfCGhJ {
   width: 100%;
   text-align: right;
   display: unset;
 }
-.chartscommon_ChartTable_37mz_
-  .chartscommon_TableRow_1e_nc
-  .chartscommon_ChangeCell_5XCIf.Up {
+._37mz_pxwuHG8BN4GUhxjz_ ._1e_ncYHkPNaZ3hco_QyRuD ._5XCIfYrMrb9F-9RyAd5HC.Up {
   color: #68bb28;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
 }
-.chartscommon_ChartTable_37mz_
-  .chartscommon_TableRow_1e_nc
-  .chartscommon_ChangeCell_5XCIf.Up:hover {
+._37mz_pxwuHG8BN4GUhxjz_
+  ._1e_ncYHkPNaZ3hco_QyRuD
+  ._5XCIfYrMrb9F-9RyAd5HC.Up:hover {
   cursor: help;
 }
-.chartscommon_ChartTable_37mz_
-  .chartscommon_TableRow_1e_nc
-  .chartscommon_ChangeCell_5XCIf.Down {
+._37mz_pxwuHG8BN4GUhxjz_ ._1e_ncYHkPNaZ3hco_QyRuD ._5XCIfYrMrb9F-9RyAd5HC.Down {
   color: #ec9d0c;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
 }
-.chartscommon_ChartTable_37mz_
-  .chartscommon_TableRow_1e_nc
-  .chartscommon_ChangeCell_5XCIf.Down:hover {
+._37mz_pxwuHG8BN4GUhxjz_
+  ._1e_ncYHkPNaZ3hco_QyRuD
+  ._5XCIfYrMrb9F-9RyAd5HC.Down:hover {
   cursor: help;
 }
-.chartscommon_ChartTable_37mz_
-  .chartscommon_TableRow_1e_nc
-  .chartscommon_ChangeCell_5XCIf
-  .chartscommon_ListWeeksDebut_2MncB,
-.chartscommon_ChartTable_37mz_
-  .chartscommon_TableRow_1e_nc
-  .chartscommon_ChangeCell_5XCIf
-  .chartscommon_ListWeeksReturning_1aZmr {
+._37mz_pxwuHG8BN4GUhxjz_
+  ._1e_ncYHkPNaZ3hco_QyRuD
+  ._5XCIfYrMrb9F-9RyAd5HC
+  ._2MncBw552vxKbkM9arCywZ,
+._37mz_pxwuHG8BN4GUhxjz_
+  ._1e_ncYHkPNaZ3hco_QyRuD
+  ._5XCIfYrMrb9F-9RyAd5HC
+  ._1aZmrNWUBvB33x3h8za9bF {
   color: #202327;
   font-size: 11px;
   font-weight: 600;
@@ -376,141 +334,130 @@
   border-radius: 2px;
   padding: 2px 6px;
 }
-.chartscommon_ChartTable_37mz_
-  .chartscommon_TableRow_1e_nc
-  .chartscommon_ChangeCell_5XCIf
-  .chartscommon_ListWeeksDebut_2MncB {
+._37mz_pxwuHG8BN4GUhxjz_
+  ._1e_ncYHkPNaZ3hco_QyRuD
+  ._5XCIfYrMrb9F-9RyAd5HC
+  ._2MncBw552vxKbkM9arCywZ {
   background-color: #76dbfb;
 }
-.chartscommon_ChartTable_37mz_
-  .chartscommon_TableRow_1e_nc
-  .chartscommon_ChangeCell_5XCIf
-  .chartscommon_ListWeeksReturning_1aZmr {
+._37mz_pxwuHG8BN4GUhxjz_
+  ._1e_ncYHkPNaZ3hco_QyRuD
+  ._5XCIfYrMrb9F-9RyAd5HC
+  ._1aZmrNWUBvB33x3h8za9bF {
   background-color: #41ffcb;
 }
-.chartscommon_ChartTable_37mz_
-  .chartscommon_TableRow_1e_nc
-  .chartscommon_ConcurrentCell_23DBG {
+._37mz_pxwuHG8BN4GUhxjz_ ._1e_ncYHkPNaZ3hco_QyRuD ._23DBGybtilOiZO0CaLvzi {
   text-align: right;
   padding-right: 16px;
   color: #c6d4df;
   width: 15%;
 }
-.chartscommon_ChartTable_37mz_
-  .chartscommon_TableRow_1e_nc
-  .chartscommon_WeeksCell_1yNbV {
+._37mz_pxwuHG8BN4GUhxjz_ ._1e_ncYHkPNaZ3hco_QyRuD ._1yNbVdpUyYd6KdwaudPdZV {
   text-align: right;
   padding-right: 16px;
   color: #c6d4df;
   width: 5%;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
 }
-.chartscommon_ChartTable_37mz_
-  .chartscommon_TableRow_1e_nc
-  .chartscommon_WeeksCell_1yNbV
-  .chartscommon_Tooltip_21PHm {
+._37mz_pxwuHG8BN4GUhxjz_
+  ._1e_ncYHkPNaZ3hco_QyRuD
+  ._1yNbVdpUyYd6KdwaudPdZV
+  ._21PHmTWxuLnZX8sNtfCGhJ {
   width: 100%;
   text-align: right;
   display: unset;
 }
-.chartscommon_ChartTable_37mz_
-  .chartscommon_TableRow_1e_nc
-  .chartscommon_PeakInGameCell_1cfHF {
+._37mz_pxwuHG8BN4GUhxjz_ ._1e_ncYHkPNaZ3hco_QyRuD ._1cfHFhTt_LjOgNdWvDg2oF {
   text-align: right;
   padding-right: 16px;
   color: #c6d4df;
   width: 12%;
 }
-.chartscommon_ChartTable_37mz_
-  .chartscommon_TableRow_1e_nc
-  .chartscommon_CapsuleCell_GdWJO {
+._37mz_pxwuHG8BN4GUhxjz_ ._1e_ncYHkPNaZ3hco_QyRuD .GdWJO09fEv96lffYqSCTD {
   padding: 6px 16px 6px 0px;
   min-width: 50%;
 }
-.chartscommon_ChartTable_37mz_
-  .chartscommon_TableRow_1e_nc
-  .chartscommon_CapsuleCell_GdWJO.chartscommon_Unavailable_2GDqa
-  .chartscommon_TopChartItem_1Ijc9 {
+._37mz_pxwuHG8BN4GUhxjz_
+  ._1e_ncYHkPNaZ3hco_QyRuD
+  .GdWJO09fEv96lffYqSCTD._2GDqaPnDNWFIHQ9JQjeSle
+  ._1Ijc93oftWwc5TP2IX5e5Z {
   line-height: normal;
 }
-.chartscommon_ChartTable_37mz_
-  .chartscommon_TableRow_1e_nc
-  .chartscommon_CapsuleCell_GdWJO.chartscommon_Unavailable_2GDqa
-  .chartscommon_GameName_2_W75 {
+._37mz_pxwuHG8BN4GUhxjz_
+  ._1e_ncYHkPNaZ3hco_QyRuD
+  .GdWJO09fEv96lffYqSCTD._2GDqaPnDNWFIHQ9JQjeSle
+  ._2_W75fRP5diDoCLTI8lVUZ {
   margin-left: 0;
 }
-.chartscommon_ChartTable_37mz_
-  .chartscommon_TableRow_1e_nc
-  .chartscommon_CapsuleCell_GdWJO
-  a {
+._37mz_pxwuHG8BN4GUhxjz_ ._1e_ncYHkPNaZ3hco_QyRuD .GdWJO09fEv96lffYqSCTD a {
   display: flex;
   flex-direction: row;
 }
-.chartscommon_ChartTable_37mz_
-  .chartscommon_TableRow_1e_nc
-  .chartscommon_CapsuleCell_GdWJO
+._37mz_pxwuHG8BN4GUhxjz_
+  ._1e_ncYHkPNaZ3hco_QyRuD
+  .GdWJO09fEv96lffYqSCTD
   a:hover {
   text-decoration: none;
   color: #fff;
 }
-.chartscommon_ChartTable_37mz_
-  .chartscommon_TableRow_1e_nc
-  .chartscommon_CapsuleCell_GdWJO
-  .chartscommon_CapsuleArt_10KmY {
+._37mz_pxwuHG8BN4GUhxjz_
+  ._1e_ncYHkPNaZ3hco_QyRuD
+  .GdWJO09fEv96lffYqSCTD
+  ._10KmYuzW6Xl9aHSW-PwtEO {
   display: inline-block;
   height: 52px;
   vertical-align: middle;
 }
 @media all and (max-width: 530px) {
-  .chartscommon_ChartTable_37mz_
-    .chartscommon_TableRow_1e_nc
-    .chartscommon_CapsuleCell_GdWJO
-    .chartscommon_CapsuleArt_10KmY {
+  ._37mz_pxwuHG8BN4GUhxjz_
+    ._1e_ncYHkPNaZ3hco_QyRuD
+    .GdWJO09fEv96lffYqSCTD
+    ._10KmYuzW6Xl9aHSW-PwtEO {
     height: auto;
     width: 46%;
   }
 }
-.chartscommon_ChartTable_37mz_
-  .chartscommon_TableRow_1e_nc
-  .chartscommon_CapsuleCell_GdWJO
-  .chartscommon_ExpandedImage_30CvP {
+._37mz_pxwuHG8BN4GUhxjz_
+  ._1e_ncYHkPNaZ3hco_QyRuD
+  .GdWJO09fEv96lffYqSCTD
+  ._30CvPRiOtj-wBKvttJwqxp {
   height: 70px;
 }
-.chartscommon_ChartTable_37mz_
-  .chartscommon_TableRow_1e_nc
-  .chartscommon_CapsuleCell_GdWJO
-  .chartscommon_ExpandedMedia_1TFZa {
+._37mz_pxwuHG8BN4GUhxjz_
+  ._1e_ncYHkPNaZ3hco_QyRuD
+  .GdWJO09fEv96lffYqSCTD
+  ._1TFZaRvl265bi1fRQH6mZ5 {
   height: 110px;
 }
-.chartscommon_ChartTable_37mz_
-  .chartscommon_TableRow_1e_nc
-  .chartscommon_CapsuleCell_GdWJO
-  .chartscommon_ExpandedButtons_24pnI {
+._37mz_pxwuHG8BN4GUhxjz_
+  ._1e_ncYHkPNaZ3hco_QyRuD
+  .GdWJO09fEv96lffYqSCTD
+  ._24pnIohScWPZiQmmQhS7t6 {
   margin-top: 8px;
   display: flex;
   flex-direction: row;
 }
-.chartscommon_ChartTable_37mz_
-  .chartscommon_TableRow_1e_nc
-  .chartscommon_CapsuleCell_GdWJO
-  .chartscommon_CartButton_29c7H {
+._37mz_pxwuHG8BN4GUhxjz_
+  ._1e_ncYHkPNaZ3hco_QyRuD
+  .GdWJO09fEv96lffYqSCTD
+  ._29c7H2hUjzfNTWZHDAB3mI {
   margin: 4px;
   font-size: 14px;
   padding: 8px 18px;
 }
-.chartscommon_ChartTable_37mz_
-  .chartscommon_TableRow_1e_nc
-  .chartscommon_CapsuleCell_GdWJO
-  .chartscommon_GameInfo_7ffoO {
+._37mz_pxwuHG8BN4GUhxjz_
+  ._1e_ncYHkPNaZ3hco_QyRuD
+  .GdWJO09fEv96lffYqSCTD
+  ._7ffoOUacbrw7ISIwHkv95 {
   padding: 8px;
   justify-content: center;
   display: flex;
   flex-direction: column;
 }
-.chartscommon_ChartTable_37mz_
-  .chartscommon_TableRow_1e_nc
-  .chartscommon_CapsuleCell_GdWJO
-  .chartscommon_GameName_2_W75 {
+._37mz_pxwuHG8BN4GUhxjz_
+  ._1e_ncYHkPNaZ3hco_QyRuD
+  .GdWJO09fEv96lffYqSCTD
+  ._2_W75fRP5diDoCLTI8lVUZ {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -523,10 +470,10 @@
   min-width: 0;
 }
 @media all and (max-width: 500px) {
-  .chartscommon_ChartTable_37mz_
-    .chartscommon_TableRow_1e_nc
-    .chartscommon_CapsuleCell_GdWJO
-    .chartscommon_GameName_2_W75 {
+  ._37mz_pxwuHG8BN4GUhxjz_
+    ._1e_ncYHkPNaZ3hco_QyRuD
+    .GdWJO09fEv96lffYqSCTD
+    ._2_W75fRP5diDoCLTI8lVUZ {
     font-size: 13px;
     display: -webkit-box;
     -webkit-line-clamp: 2;
@@ -534,19 +481,19 @@
     overflow: hidden;
   }
 }
-.chartscommon_ChartTable_37mz_
-  .chartscommon_TableRow_1e_nc
-  .chartscommon_CapsuleCell_GdWJO
-  .chartscommon_GameName_2_W75
-  .chartscommon_GameUnavailable_eEqFi {
+._37mz_pxwuHG8BN4GUhxjz_
+  ._1e_ncYHkPNaZ3hco_QyRuD
+  .GdWJO09fEv96lffYqSCTD
+  ._2_W75fRP5diDoCLTI8lVUZ
+  .eEqFiN9LU_ZeLVOFeD08m {
   font-size: 12px;
   color: #a6a6a6;
   margin-left: 19px;
 }
-body.steamchartsshell_SteamChartsPage_2aYDM .responsive_page_frame {
+body._2aYDMWWN9bAVaHmPfFHXWA .responsive_page_frame {
   background: #0e1014;
 }
-.steamchartsshell_SteamChartsShell_2rArj {
+._2rArjHHk-sJxtm0AQK-ifY {
   position: relative;
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
   min-height: 80vh;
@@ -555,15 +502,13 @@ body.steamchartsshell_SteamChartsPage_2aYDM .responsive_page_frame {
   z-index: 0;
 }
 @media all and (max-width: 910px) {
-  .steamchartsshell_SteamChartsShell_2rArj {
+  ._2rArjHHk-sJxtm0AQK-ifY {
     padding-left: 0px;
     top: 20px;
     margin-bottom: 20px;
   }
 }
-.steamchartsshell_SteamChartsShell_2rArj
-  .steamchartsshell_SteamChartsContent_2uKyX
-  .steamchartsshell_HeaderCtn_1kLTg {
+._2rArjHHk-sJxtm0AQK-ifY ._2uKyXTgmlwRhfDB9pAKD76 ._1kLTg9HHfMgVo8gDstT8uR {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -571,23 +516,18 @@ body.steamchartsshell_SteamChartsPage_2aYDM .responsive_page_frame {
   margin-bottom: 24px;
 }
 @media all and (max-width: 910px) {
-  .steamchartsshell_SteamChartsShell_2rArj
-    .steamchartsshell_SteamChartsContent_2uKyX
-    .steamchartsshell_HeaderCtn_1kLTg {
+  ._2rArjHHk-sJxtm0AQK-ifY ._2uKyXTgmlwRhfDB9pAKD76 ._1kLTg9HHfMgVo8gDstT8uR {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 }
-.steamchartsshell_SteamChartsShell_2rArj
-  .steamchartsshell_SteamChartsContent_2uKyX
-  .steamchartsshell_HeaderCtn_1kLTg.steamchartsshell_WithSubtitle__kbFJ {
+._2rArjHHk-sJxtm0AQK-ifY
+  ._2uKyXTgmlwRhfDB9pAKD76
+  ._1kLTg9HHfMgVo8gDstT8uR._kbFJdSwEh7bc98Yq_gZ2 {
   margin-bottom: 0px;
 }
-.steamchartsshell_SteamChartsShell_2rArj
-  .steamchartsshell_SteamChartsContent_2uKyX
-  .steamchartsshell_HeaderCtn_1kLTg
-  h1 {
+._2rArjHHk-sJxtm0AQK-ifY ._2uKyXTgmlwRhfDB9pAKD76 ._1kLTg9HHfMgVo8gDstT8uR h1 {
   display: block;
   font-size: 36px;
   font-weight: 600;
@@ -596,23 +536,19 @@ body.steamchartsshell_SteamChartsPage_2aYDM .responsive_page_frame {
   text-transform: uppercase;
 }
 @media all and (max-width: 910px) {
-  .steamchartsshell_SteamChartsShell_2rArj
-    .steamchartsshell_SteamChartsContent_2uKyX
-    .steamchartsshell_HeaderCtn_1kLTg
+  ._2rArjHHk-sJxtm0AQK-ifY
+    ._2uKyXTgmlwRhfDB9pAKD76
+    ._1kLTg9HHfMgVo8gDstT8uR
     h1 {
     font-size: 29px;
   }
 }
-.steamchartsshell_SteamChartsShell_2rArj
-  .steamchartsshell_SteamChartsContent_2uKyX
-  h3 {
+._2rArjHHk-sJxtm0AQK-ifY ._2uKyXTgmlwRhfDB9pAKD76 h3 {
   font-size: 23px;
   font-weight: 300;
   text-align: center;
 }
-.steamchartsshell_SteamChartsShell_2rArj
-  .steamchartsshell_SteamChartsContent_2uKyX
-  .steamchartsshell_PageSubtitle_3wxTK {
+._2rArjHHk-sJxtm0AQK-ifY ._2uKyXTgmlwRhfDB9pAKD76 ._3wxTKWJdN8vIdXKlu-ZHZX {
   font-size: 18px;
   font-weight: 200;
   margin-bottom: 30px;
@@ -620,28 +556,26 @@ body.steamchartsshell_SteamChartsPage_2aYDM .responsive_page_frame {
   color: #fff;
 }
 @media all and (max-width: 910px) {
-  .steamchartsshell_SteamChartsShell_2rArj
-    .steamchartsshell_SteamChartsContent_2uKyX
-    .steamchartsshell_PageSubtitle_3wxTK {
+  ._2rArjHHk-sJxtm0AQK-ifY ._2uKyXTgmlwRhfDB9pAKD76 ._3wxTKWJdN8vIdXKlu-ZHZX {
     text-align: center;
     margin-top: 6px;
   }
-  .steamchartsshell_SteamChartsShell_2rArj
-    .steamchartsshell_SteamChartsContent_2uKyX
-    .steamchartsshell_PageSubtitle_3wxTK
+  ._2rArjHHk-sJxtm0AQK-ifY
+    ._2uKyXTgmlwRhfDB9pAKD76
+    ._3wxTKWJdN8vIdXKlu-ZHZX
     span {
     display: none;
   }
 }
-.steamchartsshell_SteamChartsShell_2rArj
-  .steamchartsshell_SteamChartsContent_2uKyX
-  .steamchartsshell_PageSubtitle_3wxTK
+._2rArjHHk-sJxtm0AQK-ifY
+  ._2uKyXTgmlwRhfDB9pAKD76
+  ._3wxTKWJdN8vIdXKlu-ZHZX
   span {
   color: #85939d;
 }
-.steamchartsshell_SteamChartsShell_2rArj
-  .steamchartsshell_SteamChartsContent_2uKyX
-  .steamchartsshell_PageSubtitle_3wxTK
+._2rArjHHk-sJxtm0AQK-ifY
+  ._2uKyXTgmlwRhfDB9pAKD76
+  ._3wxTKWJdN8vIdXKlu-ZHZX
   > div {
   margin-left: 6px;
   display: inline-block;
@@ -665,7 +599,7 @@ div#global_header .content {
   div#global_header .content {
     left: 90px;
   }
-  .steamchartsshell_SteamChartsShell_2rArj {
+  ._2rArjHHk-sJxtm0AQK-ifY {
     padding-left: 0;
   }
 }
@@ -677,7 +611,7 @@ div#global_header .content {
     left: 0;
   }
 }
-.steamchartsshell_SteamChartsRootPosition_2tAk2 {
+._2tAk2uCRwLsaOcFMF0VAr9 {
   position: absolute;
   top: 0;
   left: 0;
@@ -686,11 +620,11 @@ div#global_header .content {
   flex-direction: row;
   z-index: 1;
 }
-.steamchartsshell_AlignWithMenu_2-hIB {
+._2-hIBICcMkAAkFzWEvp5uM {
   position: relative;
   width: 100vw;
 }
-.steamchartsshell_SteamChartsMenu_KSZ9h {
+.KSZ9hmL_XbHI_tlSUQylO {
   position: absolute;
   top: 0;
   left: 0;
@@ -703,7 +637,7 @@ div#global_header .content {
   background: linear-gradient(180deg, #0e1014 50%, #0e101400 100%);
   transition: padding-top 0.2s;
 }
-.steamchartsshell_SteamChartsMenu_KSZ9h svg.steamchartsshell_SteamLogo_3qWYY {
+.KSZ9hmL_XbHI_tlSUQylO svg._3qWYYrOe1bQhTJwm0zc4E3 {
   position: absolute;
   width: 110%;
   top: -90px;
@@ -713,22 +647,22 @@ div#global_header .content {
   mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, black 100%);
 }
 @media screen and (max-width: 1190px) {
-  .steamchartsshell_SteamChartsMenu_KSZ9h svg.steamchartsshell_SteamLogo_3qWYY {
+  .KSZ9hmL_XbHI_tlSUQylO svg._3qWYYrOe1bQhTJwm0zc4E3 {
     top: 40px;
   }
 }
-.steamchartsshell_SteamChartsMenu_KSZ9h > :not(svg) {
+.KSZ9hmL_XbHI_tlSUQylO > :not(svg) {
   position: relative;
 }
 @media screen and (max-width: 1190px) {
-  .steamchartsshell_SteamChartsMenu_KSZ9h {
+  .KSZ9hmL_XbHI_tlSUQylO {
     padding-top: 96px;
     box-shadow: unset;
     background: unset;
   }
 }
 @media screen and (max-width: 910px) {
-  .steamchartsshell_SteamChartsMenu_KSZ9h {
+  .KSZ9hmL_XbHI_tlSUQylO {
     position: relative;
     padding-top: 0;
     margin-right: 0;
@@ -739,26 +673,24 @@ div#global_header .content {
     flex-direction: row;
     background: #25282e;
   }
-  .steamchartsshell_SteamChartsMenu_KSZ9h::-webkit-scrollbar {
+  .KSZ9hmL_XbHI_tlSUQylO::-webkit-scrollbar {
     height: 0;
     background: transparent;
   }
 }
 @media all and (max-width: 910px) {
-  .steamchartsshell_SteamChartsMenu_KSZ9h
-    .steamchartsshell_MenuGroup_2X7eT.steamchartsshell_Weekly_jC5Vq
-    .steamchartsshell_MenuLinks_Lj-O1
+  .KSZ9hmL_XbHI_tlSUQylO
+    ._2X7eT07iC6SQRu_uj4Web3.jC5Vq_nM-w0wUMREt340Y
+    .Lj-O1sumeRPMtyePxydGf
     a:not(:first-child),
-  .steamchartsshell_SteamChartsMenu_KSZ9h
-    .steamchartsshell_MenuGroup_2X7eT.steamchartsshell_Monthly_2mbn0
-    .steamchartsshell_MenuLinks_Lj-O1
+  .KSZ9hmL_XbHI_tlSUQylO
+    ._2X7eT07iC6SQRu_uj4Web3._2mbn0MybOi1zQDV9iYg5X-
+    .Lj-O1sumeRPMtyePxydGf
     a:not(:first-child) {
     display: none;
   }
 }
-.steamchartsshell_SteamChartsMenu_KSZ9h
-  .steamchartsshell_MenuGroup_2X7eT
-  .steamchartsshell_MenuHeader_19boj {
+.KSZ9hmL_XbHI_tlSUQylO ._2X7eT07iC6SQRu_uj4Web3 ._19bojcj07vGvbhrAJ4T55c {
   font-size: 12px;
   text-transform: uppercase;
   padding: 12px 0px 0px 18px;
@@ -769,16 +701,11 @@ div#global_header .content {
   border-top: 1px solid #2e3033;
 }
 @media all and (max-width: 910px) {
-  .steamchartsshell_SteamChartsMenu_KSZ9h
-    .steamchartsshell_MenuGroup_2X7eT
-    .steamchartsshell_MenuHeader_19boj {
+  .KSZ9hmL_XbHI_tlSUQylO ._2X7eT07iC6SQRu_uj4Web3 ._19bojcj07vGvbhrAJ4T55c {
     display: none;
   }
 }
-.steamchartsshell_SteamChartsMenu_KSZ9h
-  .steamchartsshell_MenuGroup_2X7eT
-  .steamchartsshell_MenuLinks_Lj-O1
-  a {
+.KSZ9hmL_XbHI_tlSUQylO ._2X7eT07iC6SQRu_uj4Web3 .Lj-O1sumeRPMtyePxydGf a {
   font-size: 13px;
   display: flex;
   flex-direction: row;
@@ -787,58 +714,42 @@ div#global_header .content {
   margin: 4px 0px;
   color: #c3d3d8;
 }
-.steamchartsshell_SteamChartsMenu_KSZ9h
-  .steamchartsshell_MenuGroup_2X7eT
-  .steamchartsshell_MenuLinks_Lj-O1
-  a:hover {
+.KSZ9hmL_XbHI_tlSUQylO ._2X7eT07iC6SQRu_uj4Web3 .Lj-O1sumeRPMtyePxydGf a:hover {
   background-color: #414653;
 }
-.steamchartsshell_SteamChartsMenu_KSZ9h
-  .steamchartsshell_MenuGroup_2X7eT
-  .steamchartsshell_MenuLinks_Lj-O1
-  a.steamchartsshell_ActiveLink_3kEWJ {
+.KSZ9hmL_XbHI_tlSUQylO
+  ._2X7eT07iC6SQRu_uj4Web3
+  .Lj-O1sumeRPMtyePxydGf
+  a._3kEWJGuSEOp09T1ZND24zk {
   background-color: #414653;
 }
-.steamchartsshell_SteamChartsMenu_KSZ9h
-  .steamchartsshell_MenuGroup_2X7eT
-  .steamchartsshell_MenuLinks_Lj-O1
-  a
-  svg {
+.KSZ9hmL_XbHI_tlSUQylO ._2X7eT07iC6SQRu_uj4Web3 .Lj-O1sumeRPMtyePxydGf a svg {
   width: 26px;
   height: 26px;
   margin-right: 14px;
 }
 @media all and (max-width: 910px) {
-  .steamchartsshell_SteamChartsMenu_KSZ9h
-    .steamchartsshell_MenuGroup_2X7eT
-    .steamchartsshell_MenuLinks_Lj-O1 {
+  .KSZ9hmL_XbHI_tlSUQylO ._2X7eT07iC6SQRu_uj4Web3 .Lj-O1sumeRPMtyePxydGf {
     display: flex;
     flex-direction: row;
   }
-  .steamchartsshell_SteamChartsMenu_KSZ9h
-    .steamchartsshell_MenuGroup_2X7eT
-    .steamchartsshell_MenuLinks_Lj-O1
-    a {
+  .KSZ9hmL_XbHI_tlSUQylO ._2X7eT07iC6SQRu_uj4Web3 .Lj-O1sumeRPMtyePxydGf a {
     white-space: nowrap;
   }
-  .steamchartsshell_SteamChartsMenu_KSZ9h
-    .steamchartsshell_MenuGroup_2X7eT
-    .steamchartsshell_MenuLinks_Lj-O1
+  .KSZ9hmL_XbHI_tlSUQylO
+    ._2X7eT07iC6SQRu_uj4Web3
+    .Lj-O1sumeRPMtyePxydGf
     a
     span {
     display: flex;
   }
-  .steamchartsshell_SteamChartsMenu_KSZ9h
-    .steamchartsshell_MenuGroup_2X7eT
-    .steamchartsshell_MenuLinks_Lj-O1
-    a
-    svg {
+  .KSZ9hmL_XbHI_tlSUQylO ._2X7eT07iC6SQRu_uj4Web3 .Lj-O1sumeRPMtyePxydGf a svg {
     width: 19px;
     height: 19px;
     margin-right: 7px;
   }
 }
-.steamchartsshell_ChartRangeCtn_wLFBO {
+.wLFBOAfa7yijnxFGxj9xs {
   font-family: "Motiva Sans", Sans-serif;
   display: flex;
   flex-direction: row;
@@ -849,31 +760,28 @@ div#global_header .content {
   font-weight: 300;
   margin-bottom: 30px;
 }
-.steamchartsshell_ChartRangeCtn_wLFBO .steamchartsshell_ChartRangeText_vlHd8 {
+.wLFBOAfa7yijnxFGxj9xs .vlHd8EhkUPvzcN2Xn4Y0j {
   margin-left: 16px;
 }
-.steamchartsshell_ChartRangeCtn_wLFBO
-  .steamchartsshell_ChartRangeText_vlHd8.steamchartsshell_ShortDate_2AQqw {
+.wLFBOAfa7yijnxFGxj9xs .vlHd8EhkUPvzcN2Xn4Y0j._2AQqwf9WZKu7d8zUGYJ5VR {
   display: none;
 }
 @media all and (max-width: 910px) {
-  .steamchartsshell_ChartRangeCtn_wLFBO .steamchartsshell_ChartRangeText_vlHd8 {
+  .wLFBOAfa7yijnxFGxj9xs .vlHd8EhkUPvzcN2Xn4Y0j {
     font-size: 14px;
   }
-  .steamchartsshell_ChartRangeCtn_wLFBO
-    .steamchartsshell_ChartRangeText_vlHd8.steamchartsshell_ShortDate_2AQqw {
+  .wLFBOAfa7yijnxFGxj9xs .vlHd8EhkUPvzcN2Xn4Y0j._2AQqwf9WZKu7d8zUGYJ5VR {
     display: block;
   }
-  .steamchartsshell_ChartRangeCtn_wLFBO
-    .steamchartsshell_ChartRangeText_vlHd8.steamchartsshell_LongDate_1V5zB {
+  .wLFBOAfa7yijnxFGxj9xs .vlHd8EhkUPvzcN2Xn4Y0j._1V5zBbE55eaOW2YYdG-bDd {
     display: none;
   }
 }
-.steamchartsshell_ChartRangeCtn_wLFBO .steamchartsshell_ChartNavCtn_1tUsA {
+.wLFBOAfa7yijnxFGxj9xs ._1tUsAmcZXj8lDhFYLPtWSX {
   display: flex;
   flex-grow: 1;
 }
-.steamchartsshell_ChartRangeCtn_wLFBO .steamchartsshell_ChartNavCtn_1tUsA a {
+.wLFBOAfa7yijnxFGxj9xs ._1tUsAmcZXj8lDhFYLPtWSX a {
   display: flex;
   background: linear-gradient(
     to right,
@@ -888,8 +796,8 @@ div#global_header .content {
   flex-direction: row;
   align-items: center;
 }
-.steamchartsshell_ChartRangeCtn_wLFBO
-  .steamchartsshell_ChartNavCtn_1tUsA:not(.steamchartsshell_Disabled_2VVBw)
+.wLFBOAfa7yijnxFGxj9xs
+  ._1tUsAmcZXj8lDhFYLPtWSX:not(._2VVBwS-S1js1QLzT90jv1S)
   a:hover {
   background: linear-gradient(
     to right,
@@ -898,7 +806,7 @@ div#global_header .content {
   );
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
-.steamchartsshell_ChartRangeCtn_wLFBO .steamchartsshell_ChartNavPrev_PFs4U {
+.wLFBOAfa7yijnxFGxj9xs .PFs4U4cBAxm-GI1zMSV7q {
   display: inline-block;
   width: 0;
   height: 0;
@@ -906,7 +814,7 @@ div#global_header .content {
   border-width: 7px 9px 7px 0;
   border-color: transparent #fff transparent transparent;
 }
-.steamchartsshell_ChartRangeCtn_wLFBO .steamchartsshell_ChartNavNext_27ASB {
+.wLFBOAfa7yijnxFGxj9xs ._27ASBphHd61RCZhLfsKIZ5 {
   display: inline-block;
   width: 0;
   height: 0;
@@ -914,20 +822,20 @@ div#global_header .content {
   border-width: 7px 0 7px 9px;
   border-color: transparent transparent transparent #fff;
 }
-.steamchartsshell_ChartRangeCtn_wLFBO
-  .steamchartsshell_ChartNavCtn_1tUsA.steamchartsshell_Disabled_2VVBw
-  .steamchartsshell_ChartNavNext_27ASB,
-.steamchartsshell_ChartRangeCtn_wLFBO
-  .steamchartsshell_ChartNavCtn_1tUsA.steamchartsshell_Disabled_2VVBw
-  .steamchartsshell_ChartNavPrev_PFs4U {
+.wLFBOAfa7yijnxFGxj9xs
+  ._1tUsAmcZXj8lDhFYLPtWSX._2VVBwS-S1js1QLzT90jv1S
+  ._27ASBphHd61RCZhLfsKIZ5,
+.wLFBOAfa7yijnxFGxj9xs
+  ._1tUsAmcZXj8lDhFYLPtWSX._2VVBwS-S1js1QLzT90jv1S
+  .PFs4U4cBAxm-GI1zMSV7q {
   border-color: transparent transparent transparent #545c67;
 }
-.overviewpage_PageContainer_ACgX0 {
+.ACgX0o9I42_zqWZHyiIhX {
   max-width: 940px;
   margin: 0 auto;
   padding: 0 2%;
 }
-.overviewpage_ChartItemsCtn_3BNYF {
+._3BNYFDMfEzv1suZ5vOElzP {
   background: linear-gradient(
     135deg,
     rgba(144, 153, 161, 0.1) 0%,
@@ -936,7 +844,7 @@ div#global_header .content {
   border-radius: 3px;
   padding: 6px;
 }
-.overviewpage_ChartItemsCtn_3BNYF .overviewpage_ChartMoreBtn_2HZLN {
+._3BNYFDMfEzv1suZ5vOElzP ._2HZLNwzzD55tTBYgo1DBPf {
   width: 100%;
   display: block;
   box-sizing: border-box;
@@ -946,66 +854,62 @@ div#global_header .content {
   font-weight: 400;
   text-align: center;
 }
-.overviewpage_ChartItemsCtn_3BNYF .overviewpage_ChartMoreBtn_2HZLN:hover {
+._3BNYFDMfEzv1suZ5vOElzP ._2HZLNwzzD55tTBYgo1DBPf:hover {
   background-color: #3a4d64;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   color: #fff;
 }
-.overviewpage_PageSubtitle_PEIn3 {
+.PEIn3GTol3TSEIpsId62R {
   font-size: 18px;
   font-weight: 200;
   color: #fff;
   margin-bottom: 50px;
 }
-.overviewpage_SideBySideCharts_2nroV {
+._2nroVb7AfBh6rPGe_2rL7c {
   display: flex;
   flex-direction: row;
 }
-.overviewpage_SideBySideCharts_2nroV .overviewpage_OverviewChart_13C_Z {
+._2nroVb7AfBh6rPGe_2rL7c ._13C_Z85ObQf8U0_-3euyjs {
   flex: 1;
   min-width: 0;
   min-height: 570px;
 }
-.overviewpage_SideBySideCharts_2nroV
-  .overviewpage_OverviewChart_13C_Z:first-child {
+._2nroVb7AfBh6rPGe_2rL7c ._13C_Z85ObQf8U0_-3euyjs:first-child {
   margin-right: 30px;
 }
-.overviewpage_SideBySideCharts_2nroV .overviewpage_Chart_3r75h {
+._2nroVb7AfBh6rPGe_2rL7c ._3r75ht9iFN1q6tgtUsm9tT {
   flex: 1;
   min-width: 0;
 }
-.overviewpage_SideBySideCharts_2nroV .overviewpage_Chart_3r75h:first-child {
+._2nroVb7AfBh6rPGe_2rL7c ._3r75ht9iFN1q6tgtUsm9tT:first-child {
   margin-right: 30px;
 }
 @media all and (max-width: 550px) {
-  .overviewpage_SideBySideCharts_2nroV {
+  ._2nroVb7AfBh6rPGe_2rL7c {
     flex-direction: column;
   }
-  .overviewpage_SideBySideCharts_2nroV .overviewpage_Chart_3r75h:first-child,
-  .overviewpage_SideBySideCharts_2nroV
-    .overviewpage_OverviewChart_13C_Z:first-child {
+  ._2nroVb7AfBh6rPGe_2rL7c ._3r75ht9iFN1q6tgtUsm9tT:first-child,
+  ._2nroVb7AfBh6rPGe_2rL7c ._13C_Z85ObQf8U0_-3euyjs:first-child {
     margin-right: 0px;
     margin-bottom: 20px;
   }
 }
-.overviewpage_TopItem_3rNNl {
+._3rNNliu33MNHlKu6Qb2gzl {
   border-bottom: 1px solid #1a9fff;
 }
-.overviewpage_TopItem_3rNNl img.overviewpage_Capsule_1hnd3 {
+._3rNNliu33MNHlKu6Qb2gzl img._1hnd3zhzDjsO5OvWyMyHAb {
   max-width: 100%;
 }
-.overviewpage_TopItem_3rNNl .overviewpage_ItemRow_WAvlE {
+._3rNNliu33MNHlKu6Qb2gzl .WAvlEQBfIc3xcH69uozUp {
   padding: 14px 6px;
   border-top: none;
 }
-.overviewpage_TopItem_3rNNl
-  .overviewpage_ItemRow_WAvlE
-  .overviewpage_Rank_2Y06I {
+._3rNNliu33MNHlKu6Qb2gzl .WAvlEQBfIc3xcH69uozUp ._2Y06IOh6M8eYD74smDwmFc {
   font-size: 21px;
   color: #fff;
   line-height: 25px;
 }
-.overviewpage_ItemRow_WAvlE {
+.WAvlEQBfIc3xcH69uozUp {
   display: flex;
   flex-direction: row;
   text-decoration: none;
@@ -1015,24 +919,22 @@ div#global_header .content {
   padding: 12px 4px;
   border-top: 1px solid #4c5661;
 }
-.overviewpage_ItemRow_WAvlE .overviewpage_Rank_2Y06I {
+.WAvlEQBfIc3xcH69uozUp ._2Y06IOh6M8eYD74smDwmFc {
   color: #a7a7a7;
   margin-right: 5px;
   width: 18px;
   text-align: center;
 }
-.overviewpage_ItemRow_WAvlE:hover {
+.WAvlEQBfIc3xcH69uozUp:hover {
   background-color: rgba(255, 255, 255, 0.1);
   color: #fff;
 }
-.overviewpage_ItemRow_WAvlE .overviewpage_ItemNameCtn_33Kj2 {
+.WAvlEQBfIc3xcH69uozUp ._33Kj2Qx_9z4VyvlKulpay8 {
   flex: 1;
   display: flex;
   flex-direction: column;
 }
-.overviewpage_ItemRow_WAvlE
-  .overviewpage_ItemNameCtn_33Kj2
-  .overviewpage_ItemDesc_27Ohq {
+.WAvlEQBfIc3xcH69uozUp ._33Kj2Qx_9z4VyvlKulpay8 ._27OhqiS6skOPPWCddDkw1n {
   text-transform: uppercase;
   line-height: 12px;
   font-size: 10px;
@@ -1041,10 +943,10 @@ div#global_header .content {
   color: #a0aab6;
   margin-top: 2px;
 }
-.overviewpage_ItemRow_WAvlE .overviewpage_AddDataCtn_3hcZi {
+.WAvlEQBfIc3xcH69uozUp ._3hcZip826q0Brc4izWaCHq {
   text-align: right;
 }
-.overviewpage_ItemRow_WAvlE .overviewpage_AddDataDesc_2AWpr {
+.WAvlEQBfIc3xcH69uozUp ._2AWprPMkYtG9qA05X_PnBi {
   text-transform: uppercase;
   line-height: 12px;
   font-size: 10px;
@@ -1053,14 +955,14 @@ div#global_header .content {
   color: #a0aab6;
   margin-top: 2px;
 }
-.overviewpage_ImageButtonCtn_11u1M {
+._11u1MRqFV4IB3t8XVzUnNv {
   position: relative;
   overflow: hidden;
   width: 100%;
   height: 192px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
-.overviewpage_ImageButtonCtn_11u1M .overviewpage_ImageButtonLink_9BzHA {
+._11u1MRqFV4IB3t8XVzUnNv ._9BzHAji4VzoMjs7kR24hE {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -1079,11 +981,11 @@ div#global_header .content {
   text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.8);
   box-shadow: inset 0 0 50px #2d333b;
 }
-.overviewpage_ImageButtonCtn_11u1M .overviewpage_ImageButtonLink_9BzHA:hover {
+._11u1MRqFV4IB3t8XVzUnNv ._9BzHAji4VzoMjs7kR24hE:hover {
   box-shadow: inset 0 0 50px rgba(255, 255, 255, 0.3);
   color: #fff;
 }
-.overviewpage_ImageButtonCtn_11u1M .overviewpage_ImageGridCtn_tSK7M {
+._11u1MRqFV4IB3t8XVzUnNv .tSK7MWoDk93B4YlVKwROO {
   position: absolute;
   padding: 0px;
   overflow: visible;
@@ -1099,29 +1001,25 @@ div#global_header .content {
   filter: saturate(0.8) contrast(0.8) brightness(0.6) sepia(0.3)
     hue-rotate(0deg) saturate(1) blur(4px);
 }
-.overviewpage_Monthly_3N9ub
-  .overviewpage_ImageButtonCtn_11u1M
-  .overviewpage_ImageGridCtn_tSK7M {
+._3N9ubTzZmbUOJXz1YxzF9P ._11u1MRqFV4IB3t8XVzUnNv .tSK7MWoDk93B4YlVKwROO {
   transform: scale(0.45) rotate(337deg) translateX(-31%) translateY(1%);
   filter: saturate(0.8) contrast(0.8) brightness(0.6) sepia(0.3)
     hue-rotate(0deg) saturate(1) blur(4px);
 }
-.overviewpage_ImageButtonCtn_11u1M .overviewpage_ImageGridCtn_tSK7M img {
+._11u1MRqFV4IB3t8XVzUnNv .tSK7MWoDk93B4YlVKwROO img {
   width: 33%;
   height: auto;
 }
-.overviewpage_ImageButtonCtn_11u1M:hover .overviewpage_ImageGridCtn_tSK7M {
+._11u1MRqFV4IB3t8XVzUnNv:hover .tSK7MWoDk93B4YlVKwROO {
   transform: scale(0.58) rotate(337deg) translateX(-45%) translateY(-2%);
 }
-.overviewpage_Monthly_3N9ub
-  .overviewpage_ImageButtonCtn_11u1M:hover
-  .overviewpage_ImageGridCtn_tSK7M {
+._3N9ubTzZmbUOJXz1YxzF9P ._11u1MRqFV4IB3t8XVzUnNv:hover .tSK7MWoDk93B4YlVKwROO {
   transform: scale(0.48) rotate(337deg) translateX(-32%) translateY(-3%);
 }
-.overviewpage_MoreLinksCtn_2ZaAF {
+._2ZaAF6Kb40APdlPG6f13LH {
   position: relative;
 }
-.overviewpage_MoreLinksCtn_2ZaAF a {
+._2ZaAF6Kb40APdlPG6f13LH a {
   width: 100%;
   display: block;
   padding: 12px;
@@ -1133,64 +1031,64 @@ div#global_header .content {
     rgba(144, 153, 161, 0.06)
   );
 }
-.overviewpage_OverviewChartPlaceholder_rGp5A {
+.rGp5AAoogQGX2-mxkhg4F {
   min-height: 494px;
 }
-.overviewpage_BestOfYearButton_3Qf-X {
+._3Qf-XadcjXMDgnu95-quHx {
   background-color: #1e2834;
   width: auto;
   text-align: center;
   display: block;
   padding: 16px;
 }
-.overviewpage_BestOfYearButton_3Qf-X:hover {
+._3Qf-XadcjXMDgnu95-quHx:hover {
   background-color: #3a4d64;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   color: #fff;
 }
-.overviewpage_BestOfYearButton_3Qf-X .overviewpage_BackupBestOfYearText_12TR9 {
+._3Qf-XadcjXMDgnu95-quHx ._12TR9KpkEdkyOdJ5bNUWai {
   font-size: 32px;
   color: #fff;
 }
-.overviewpage_BestOfYearBanner_1ad0u {
+._1ad0ufTklxts-mhxP1tqA4 {
   max-width: 940px;
   width: 100%;
   object-fit: contain;
 }
-.overviewpage_BestOfYearBanner_1ad0u.overviewpage_Big_2bwzB {
+._1ad0ufTklxts-mhxP1tqA4._2bwzBYg8JbKN0RW_dYUK7r {
   display: block;
 }
-.overviewpage_BestOfYearBanner_1ad0u.overviewpage_Mobile_1cKll {
+._1ad0ufTklxts-mhxP1tqA4._1cKllvp03o1kmFqH_uQa58 {
   display: none;
 }
 @media screen and (max-width: 550px) {
-  .overviewpage_BestOfYearBanner_1ad0u.overviewpage_Big_2bwzB {
+  ._1ad0ufTklxts-mhxP1tqA4._2bwzBYg8JbKN0RW_dYUK7r {
     display: none;
   }
-  .overviewpage_BestOfYearBanner_1ad0u.overviewpage_Mobile_1cKll {
+  ._1ad0ufTklxts-mhxP1tqA4._1cKllvp03o1kmFqH_uQa58 {
     display: block;
   }
 }
-.weeklytopsellers_PageSection_2zGFB {
+._2zGFBNA2sjyPFRzONZhG5T {
   margin-bottom: 48px;
 }
-.weeklytopsellers_PageSection_2zGFB .weeklytopsellers_SectionTitle_1tl1E {
+._2zGFBNA2sjyPFRzONZhG5T ._1tl1EVPXDe0Ga87Od2OapL {
   font-size: 16px;
   color: #c5cbd8;
   font-weight: 200;
   letter-spacing: 1px;
   margin-bottom: 6px;
 }
-.weeklytopsellers_PageSection_2zGFB .weeklytopsellers_SectionTitle_1tl1E b {
+._2zGFBNA2sjyPFRzONZhG5T ._1tl1EVPXDe0Ga87Od2OapL b {
   color: #fff;
   font-weight: 500;
 }
-.weeklytopsellers_ChartPage_2txZN {
+._2txZN03Rksb3SHqYeOt75B {
   max-width: 940px;
   margin: 0 auto;
   padding: 0 2%;
 }
-.weeklytopsellers_Placeholder_13Wag {
+._13Wagx1HQxyCivWU2ZGU5o {
   background: linear-gradient(
     to bottom right,
     rgba(255, 255, 255, 0.1) 40%,
@@ -1199,10 +1097,10 @@ div#global_header .content {
   );
   background-size: 400% 400%;
   border-radius: 5px;
-  animation: weeklytopsellers_GhostShine_3n0N_ 3.2s ease;
+  animation: _3n0N_c3fIHBhVJ2Cye5zs9 3.2s ease;
   animation-iteration-count: infinite;
 }
-@keyframes weeklytopsellers_GhostShine_3n0N_ {
+@keyframes _3n0N_c3fIHBhVJ2Cye5zs9 {
   0% {
     background-position: 100% 100%;
   }
@@ -1213,114 +1111,90 @@ div#global_header .content {
     background-position: 0% 0%;
   }
 }
-.weeklytopsellers_ChartTable_3arZn {
+._3arZn0BMPzyhcYNADe193m {
   width: 100%;
   color: #fff;
   border-spacing: 0 3px;
   border-collapse: separate;
   border: none;
 }
-.weeklytopsellers_ChartTable_3arZn .weeklytopsellers_ColumnHeaders_3eKiI {
+._3arZn0BMPzyhcYNADe193m ._3eKiI5Uhn6pLBSBqg3LbBz {
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 1px;
   text-align: left;
 }
-.weeklytopsellers_ChartTable_3arZn .weeklytopsellers_ColumnHeaders_3eKiI th {
+._3arZn0BMPzyhcYNADe193m ._3eKiI5Uhn6pLBSBqg3LbBz th {
   font-weight: 300;
 }
-.weeklytopsellers_ChartTable_3arZn
-  .weeklytopsellers_ColumnHeaders_3eKiI
-  th.weeklytopsellers_HoverCell_3Jiuz {
+._3arZn0BMPzyhcYNADe193m ._3eKiI5Uhn6pLBSBqg3LbBz th._3JiuzqNZfzcK2EB06XAMv8 {
   width: 0%;
 }
-.weeklytopsellers_ChartTable_3arZn
-  .weeklytopsellers_ColumnHeaders_3eKiI
-  th
-  svg {
+._3arZn0BMPzyhcYNADe193m ._3eKiI5Uhn6pLBSBqg3LbBz th svg {
   width: 15px;
   fill: #8890a0;
   margin-left: 3px;
 }
 @media all and (max-width: 700px) {
-  .weeklytopsellers_ChartTable_3arZn
-    .weeklytopsellers_ColumnHeaders_3eKiI
-    th
-    svg {
+  ._3arZn0BMPzyhcYNADe193m ._3eKiI5Uhn6pLBSBqg3LbBz th svg {
     display: none;
   }
 }
-.weeklytopsellers_ChartTable_3arZn
-  .weeklytopsellers_ColumnHeaders_3eKiI
-  th.weeklytopsellers_Rank_2BuNW {
+._3arZn0BMPzyhcYNADe193m ._3eKiI5Uhn6pLBSBqg3LbBz th._2BuNWG4dJy40ZhU9u51gYq {
   width: 5%;
 }
 @media all and (max-width: 700px) {
-  .weeklytopsellers_ChartTable_3arZn
-    .weeklytopsellers_ColumnHeaders_3eKiI
-    th.weeklytopsellers_Rank_2BuNW
+  ._3arZn0BMPzyhcYNADe193m
+    ._3eKiI5Uhn6pLBSBqg3LbBz
+    th._2BuNWG4dJy40ZhU9u51gYq
     span {
     display: none;
   }
 }
-.weeklytopsellers_ChartTable_3arZn
-  .weeklytopsellers_ColumnHeaders_3eKiI
-  th.weeklytopsellers_Game_3fOO4 {
+._3arZn0BMPzyhcYNADe193m ._3eKiI5Uhn6pLBSBqg3LbBz th._3fOO4LOvNmuF5xvR0NTfzI {
   width: 50%;
 }
 @media all and (max-width: 700px) {
-  .weeklytopsellers_ChartTable_3arZn
-    .weeklytopsellers_ColumnHeaders_3eKiI
-    th.weeklytopsellers_Game_3fOO4
+  ._3arZn0BMPzyhcYNADe193m
+    ._3eKiI5Uhn6pLBSBqg3LbBz
+    th._3fOO4LOvNmuF5xvR0NTfzI
     span {
     display: none;
   }
 }
-.weeklytopsellers_ChartTable_3arZn
-  .weeklytopsellers_ColumnHeaders_3eKiI
-  th.weeklytopsellers_Price_amGaR {
+._3arZn0BMPzyhcYNADe193m ._3eKiI5Uhn6pLBSBqg3LbBz th.amGaROSLVVh48h1bqp40a {
   width: 15%;
 }
 @media all and (max-width: 700px) {
-  .weeklytopsellers_ChartTable_3arZn
-    .weeklytopsellers_ColumnHeaders_3eKiI
-    th.weeklytopsellers_Price_amGaR {
+  ._3arZn0BMPzyhcYNADe193m ._3eKiI5Uhn6pLBSBqg3LbBz th.amGaROSLVVh48h1bqp40a {
     display: none;
   }
 }
-.weeklytopsellers_ChartTable_3arZn
-  .weeklytopsellers_ColumnHeaders_3eKiI
-  th.weeklytopsellers_Change_150QP {
+._3arZn0BMPzyhcYNADe193m ._3eKiI5Uhn6pLBSBqg3LbBz th._150QPa7Ul5lH8rPbsAMn-8 {
   width: 9%;
 }
 @media all and (max-width: 700px) {
-  .weeklytopsellers_ChartTable_3arZn
-    .weeklytopsellers_ColumnHeaders_3eKiI
-    th.weeklytopsellers_Change_150QP
+  ._3arZn0BMPzyhcYNADe193m
+    ._3eKiI5Uhn6pLBSBqg3LbBz
+    th._150QPa7Ul5lH8rPbsAMn-8
     span {
     display: none;
   }
 }
-.weeklytopsellers_ChartTable_3arZn
-  .weeklytopsellers_ColumnHeaders_3eKiI
-  th.weeklytopsellers_Concurrent_grXsM {
+._3arZn0BMPzyhcYNADe193m ._3eKiI5Uhn6pLBSBqg3LbBz th.grXsMMqaVa6d2XxKiu5zU {
   width: 18%;
 }
-.weeklytopsellers_ChartTable_3arZn
-  .weeklytopsellers_ColumnHeaders_3eKiI
-  th.weeklytopsellers_Weeks_1ODme {
+._3arZn0BMPzyhcYNADe193m ._3eKiI5Uhn6pLBSBqg3LbBz th._1ODmeBQGexjb68QaWkQay2 {
   width: 7%;
 }
-.weeklytopsellers_ChartTable_3arZn
-  .weeklytopsellers_ColumnHeaders_3eKiI
-  th.weeklytopsellers_PeakInGame_1zxLz {
+._3arZn0BMPzyhcYNADe193m ._3eKiI5Uhn6pLBSBqg3LbBz th._1zxLzk_ggCuBLTlQW5HB7S {
   width: 12%;
 }
-.weeklytopsellers_ChartTable_3arZn .weeklytopsellers_RightCell__iRXB {
+._3arZn0BMPzyhcYNADe193m ._iRXB-jnm1HdyuH-mHN_h {
   text-align: right;
   padding-right: 16px;
 }
-.weeklytopsellers_ChartTable_3arZn .weeklytopsellers_TableRow_2-RN6 {
+._3arZn0BMPzyhcYNADe193m ._2-RN6nWOY56sNmcDHu069P {
   background: linear-gradient(
     90deg,
     rgba(86, 92, 103, 0.3),
@@ -1333,40 +1207,38 @@ div#global_header .content {
   -webkit-backdrop-filter: blur(8px);
   cursor: pointer;
 }
-.weeklytopsellers_ChartTable_3arZn .weeklytopsellers_TableRow_2-RN6:hover {
+._3arZn0BMPzyhcYNADe193m ._2-RN6nWOY56sNmcDHu069P:hover {
   background: linear-gradient(
     90deg,
     rgba(130, 137, 151, 0.3),
     rgba(163, 170, 178, 0.3)
   );
 }
-.weeklytopsellers_ChartTable_3arZn
-  .weeklytopsellers_TableRow_2-RN6:hover
-  .weeklytopsellers_CapsuleCell_18kGH
-  .weeklytopsellers_Banner_24xXq
-  .weeklytopsellers_BannerText_UFtgo {
+._3arZn0BMPzyhcYNADe193m
+  ._2-RN6nWOY56sNmcDHu069P:hover
+  ._18kGHKeOavDDdJVs9FVhpo
+  ._24xXqJoM1vk2jNIc6fU-LD
+  .UFtgo0Nvdp450rdx5uGU1 {
   display: block;
 }
-.weeklytopsellers_ChartTable_3arZn
-  .weeklytopsellers_TableRow_2-RN6
-  .weeklytopsellers_HoverCell_3Jiuz {
+._3arZn0BMPzyhcYNADe193m ._2-RN6nWOY56sNmcDHu069P ._3JiuzqNZfzcK2EB06XAMv8 {
   width: 0px;
 }
-.weeklytopsellers_ChartTable_3arZn
-  .weeklytopsellers_TableRow_2-RN6
-  .weeklytopsellers_HoverCell_3Jiuz
-  .weeklytopsellers_HoverSource_1oW6Q {
+._3arZn0BMPzyhcYNADe193m
+  ._2-RN6nWOY56sNmcDHu069P
+  ._3JiuzqNZfzcK2EB06XAMv8
+  ._1oW6QnWPKl-KPfufAnKapF {
   width: 100%;
   height: 100%;
   position: absolute;
   top: 0;
   left: 0;
 }
-.weeklytopsellers_ChartTable_3arZn
-  .weeklytopsellers_TableRow_2-RN6
-  .weeklytopsellers_HoverCell_3Jiuz
-  .weeklytopsellers_HoverSource_1oW6Q
-  .weeklytopsellers_HoverMask_N8w56 {
+._3arZn0BMPzyhcYNADe193m
+  ._2-RN6nWOY56sNmcDHu069P
+  ._3JiuzqNZfzcK2EB06XAMv8
+  ._1oW6QnWPKl-KPfufAnKapF
+  .N8w56WjrQPSB3M6hVSXDx {
   width: 100%;
   height: 100%;
   cursor: pointer;
@@ -1375,32 +1247,28 @@ div#global_header .content {
   z-index: 6;
 }
 @media screen and (max-width: 1750px) {
-  .weeklytopsellers_ChartTable_3arZn
-    .weeklytopsellers_TableRow_2-RN6
-    .weeklytopsellers_HoverCell_3Jiuz
-    .weeklytopsellers_HoverSource_1oW6Q {
+  ._3arZn0BMPzyhcYNADe193m
+    ._2-RN6nWOY56sNmcDHu069P
+    ._3JiuzqNZfzcK2EB06XAMv8
+    ._1oW6QnWPKl-KPfufAnKapF {
     width: 25%;
   }
 }
 @media screen and (max-width: 550px) {
-  .weeklytopsellers_ChartTable_3arZn
-    .weeklytopsellers_TableRow_2-RN6
-    .weeklytopsellers_HoverCell_3Jiuz
-    .weeklytopsellers_HoverSource_1oW6Q {
+  ._3arZn0BMPzyhcYNADe193m
+    ._2-RN6nWOY56sNmcDHu069P
+    ._3JiuzqNZfzcK2EB06XAMv8
+    ._1oW6QnWPKl-KPfufAnKapF {
     width: 0%;
   }
 }
-.weeklytopsellers_ChartTable_3arZn
-  .weeklytopsellers_TableRow_2-RN6
-  .weeklytopsellers_RankCell_34h48 {
+._3arZn0BMPzyhcYNADe193m ._2-RN6nWOY56sNmcDHu069P ._34h48M_x9S-9Q2FFPX_CcU {
   font-size: 17px;
   font-weight: 800;
   text-align: center;
   width: 5%;
 }
-.weeklytopsellers_ChartTable_3arZn
-  .weeklytopsellers_TableRow_2-RN6
-  .weeklytopsellers_PriceCell_3IyfU {
+._3arZn0BMPzyhcYNADe193m ._2-RN6nWOY56sNmcDHu069P ._3IyfUchPbsYMEaGjJU3GOP {
   text-align: right;
   padding-right: 16px;
   color: #c6d4df;
@@ -1408,58 +1276,52 @@ div#global_header .content {
   min-width: 15%;
 }
 @media all and (max-width: 700px) {
-  .weeklytopsellers_ChartTable_3arZn
-    .weeklytopsellers_TableRow_2-RN6
-    .weeklytopsellers_PriceCell_3IyfU {
+  ._3arZn0BMPzyhcYNADe193m ._2-RN6nWOY56sNmcDHu069P ._3IyfUchPbsYMEaGjJU3GOP {
     display: none;
   }
 }
-.weeklytopsellers_ChartTable_3arZn
-  .weeklytopsellers_TableRow_2-RN6
-  .weeklytopsellers_ChangeCell_1ZdIh {
+._3arZn0BMPzyhcYNADe193m ._2-RN6nWOY56sNmcDHu069P ._1ZdIh_OWh9DUr5O4OCypQn {
   color: transparent;
   text-align: right;
   padding-right: 16px;
   width: 7%;
 }
-.weeklytopsellers_ChartTable_3arZn
-  .weeklytopsellers_TableRow_2-RN6
-  .weeklytopsellers_ChangeCell_1ZdIh
-  .weeklytopsellers_Tooltip_2OA1J {
+._3arZn0BMPzyhcYNADe193m
+  ._2-RN6nWOY56sNmcDHu069P
+  ._1ZdIh_OWh9DUr5O4OCypQn
+  ._2OA1JW-4H-f01kM7myTUuu {
   width: 100%;
   text-align: right;
   display: unset;
 }
-.weeklytopsellers_ChartTable_3arZn
-  .weeklytopsellers_TableRow_2-RN6
-  .weeklytopsellers_ChangeCell_1ZdIh.Up {
+._3arZn0BMPzyhcYNADe193m ._2-RN6nWOY56sNmcDHu069P ._1ZdIh_OWh9DUr5O4OCypQn.Up {
   color: #68bb28;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
 }
-.weeklytopsellers_ChartTable_3arZn
-  .weeklytopsellers_TableRow_2-RN6
-  .weeklytopsellers_ChangeCell_1ZdIh.Up:hover {
+._3arZn0BMPzyhcYNADe193m
+  ._2-RN6nWOY56sNmcDHu069P
+  ._1ZdIh_OWh9DUr5O4OCypQn.Up:hover {
   cursor: help;
 }
-.weeklytopsellers_ChartTable_3arZn
-  .weeklytopsellers_TableRow_2-RN6
-  .weeklytopsellers_ChangeCell_1ZdIh.Down {
+._3arZn0BMPzyhcYNADe193m
+  ._2-RN6nWOY56sNmcDHu069P
+  ._1ZdIh_OWh9DUr5O4OCypQn.Down {
   color: #ec9d0c;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
 }
-.weeklytopsellers_ChartTable_3arZn
-  .weeklytopsellers_TableRow_2-RN6
-  .weeklytopsellers_ChangeCell_1ZdIh.Down:hover {
+._3arZn0BMPzyhcYNADe193m
+  ._2-RN6nWOY56sNmcDHu069P
+  ._1ZdIh_OWh9DUr5O4OCypQn.Down:hover {
   cursor: help;
 }
-.weeklytopsellers_ChartTable_3arZn
-  .weeklytopsellers_TableRow_2-RN6
-  .weeklytopsellers_ChangeCell_1ZdIh
-  .weeklytopsellers_ListWeeksDebut_3VOg1,
-.weeklytopsellers_ChartTable_3arZn
-  .weeklytopsellers_TableRow_2-RN6
-  .weeklytopsellers_ChangeCell_1ZdIh
-  .weeklytopsellers_ListWeeksReturning_CQijl {
+._3arZn0BMPzyhcYNADe193m
+  ._2-RN6nWOY56sNmcDHu069P
+  ._1ZdIh_OWh9DUr5O4OCypQn
+  ._3VOg1Au8rs5wnnu2fXny0M,
+._3arZn0BMPzyhcYNADe193m
+  ._2-RN6nWOY56sNmcDHu069P
+  ._1ZdIh_OWh9DUr5O4OCypQn
+  .CQijl-dgrfQHKUydm9c2F {
   color: #202327;
   font-size: 11px;
   font-weight: 600;
@@ -1467,141 +1329,130 @@ div#global_header .content {
   border-radius: 2px;
   padding: 2px 6px;
 }
-.weeklytopsellers_ChartTable_3arZn
-  .weeklytopsellers_TableRow_2-RN6
-  .weeklytopsellers_ChangeCell_1ZdIh
-  .weeklytopsellers_ListWeeksDebut_3VOg1 {
+._3arZn0BMPzyhcYNADe193m
+  ._2-RN6nWOY56sNmcDHu069P
+  ._1ZdIh_OWh9DUr5O4OCypQn
+  ._3VOg1Au8rs5wnnu2fXny0M {
   background-color: #76dbfb;
 }
-.weeklytopsellers_ChartTable_3arZn
-  .weeklytopsellers_TableRow_2-RN6
-  .weeklytopsellers_ChangeCell_1ZdIh
-  .weeklytopsellers_ListWeeksReturning_CQijl {
+._3arZn0BMPzyhcYNADe193m
+  ._2-RN6nWOY56sNmcDHu069P
+  ._1ZdIh_OWh9DUr5O4OCypQn
+  .CQijl-dgrfQHKUydm9c2F {
   background-color: #41ffcb;
 }
-.weeklytopsellers_ChartTable_3arZn
-  .weeklytopsellers_TableRow_2-RN6
-  .weeklytopsellers_ConcurrentCell_3L0CD {
+._3arZn0BMPzyhcYNADe193m ._2-RN6nWOY56sNmcDHu069P ._3L0CDDIUaOKTGfqdpqmjcy {
   text-align: right;
   padding-right: 16px;
   color: #c6d4df;
   width: 15%;
 }
-.weeklytopsellers_ChartTable_3arZn
-  .weeklytopsellers_TableRow_2-RN6
-  .weeklytopsellers_WeeksCell_xm7Jp {
+._3arZn0BMPzyhcYNADe193m ._2-RN6nWOY56sNmcDHu069P .xm7JpnZElM9XGF4ruu0Z- {
   text-align: right;
   padding-right: 16px;
   color: #c6d4df;
   width: 5%;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
 }
-.weeklytopsellers_ChartTable_3arZn
-  .weeklytopsellers_TableRow_2-RN6
-  .weeklytopsellers_WeeksCell_xm7Jp
-  .weeklytopsellers_Tooltip_2OA1J {
+._3arZn0BMPzyhcYNADe193m
+  ._2-RN6nWOY56sNmcDHu069P
+  .xm7JpnZElM9XGF4ruu0Z-
+  ._2OA1JW-4H-f01kM7myTUuu {
   width: 100%;
   text-align: right;
   display: unset;
 }
-.weeklytopsellers_ChartTable_3arZn
-  .weeklytopsellers_TableRow_2-RN6
-  .weeklytopsellers_PeakInGameCell_yJB7D {
+._3arZn0BMPzyhcYNADe193m ._2-RN6nWOY56sNmcDHu069P .yJB7DYKsuTG2AYhJdWTIk {
   text-align: right;
   padding-right: 16px;
   color: #c6d4df;
   width: 12%;
 }
-.weeklytopsellers_ChartTable_3arZn
-  .weeklytopsellers_TableRow_2-RN6
-  .weeklytopsellers_CapsuleCell_18kGH {
+._3arZn0BMPzyhcYNADe193m ._2-RN6nWOY56sNmcDHu069P ._18kGHKeOavDDdJVs9FVhpo {
   padding: 6px 16px 6px 0px;
   min-width: 50%;
 }
-.weeklytopsellers_ChartTable_3arZn
-  .weeklytopsellers_TableRow_2-RN6
-  .weeklytopsellers_CapsuleCell_18kGH.weeklytopsellers_Unavailable_mqJv4
-  .weeklytopsellers_TopChartItem_2C5PJ {
+._3arZn0BMPzyhcYNADe193m
+  ._2-RN6nWOY56sNmcDHu069P
+  ._18kGHKeOavDDdJVs9FVhpo.mqJv4GSlMIBGszsRy4Hjo
+  ._2C5PJOUH6RqyuBNEwaCE9X {
   line-height: normal;
 }
-.weeklytopsellers_ChartTable_3arZn
-  .weeklytopsellers_TableRow_2-RN6
-  .weeklytopsellers_CapsuleCell_18kGH.weeklytopsellers_Unavailable_mqJv4
-  .weeklytopsellers_GameName_1n_4- {
+._3arZn0BMPzyhcYNADe193m
+  ._2-RN6nWOY56sNmcDHu069P
+  ._18kGHKeOavDDdJVs9FVhpo.mqJv4GSlMIBGszsRy4Hjo
+  ._1n_4-zvf0n4aqGEksbgW9N {
   margin-left: 0;
 }
-.weeklytopsellers_ChartTable_3arZn
-  .weeklytopsellers_TableRow_2-RN6
-  .weeklytopsellers_CapsuleCell_18kGH
-  a {
+._3arZn0BMPzyhcYNADe193m ._2-RN6nWOY56sNmcDHu069P ._18kGHKeOavDDdJVs9FVhpo a {
   display: flex;
   flex-direction: row;
 }
-.weeklytopsellers_ChartTable_3arZn
-  .weeklytopsellers_TableRow_2-RN6
-  .weeklytopsellers_CapsuleCell_18kGH
+._3arZn0BMPzyhcYNADe193m
+  ._2-RN6nWOY56sNmcDHu069P
+  ._18kGHKeOavDDdJVs9FVhpo
   a:hover {
   text-decoration: none;
   color: #fff;
 }
-.weeklytopsellers_ChartTable_3arZn
-  .weeklytopsellers_TableRow_2-RN6
-  .weeklytopsellers_CapsuleCell_18kGH
-  .weeklytopsellers_CapsuleArt_2dODJ {
+._3arZn0BMPzyhcYNADe193m
+  ._2-RN6nWOY56sNmcDHu069P
+  ._18kGHKeOavDDdJVs9FVhpo
+  ._2dODJrHKWs6F9v9QpgzihO {
   display: inline-block;
   height: 52px;
   vertical-align: middle;
 }
 @media all and (max-width: 530px) {
-  .weeklytopsellers_ChartTable_3arZn
-    .weeklytopsellers_TableRow_2-RN6
-    .weeklytopsellers_CapsuleCell_18kGH
-    .weeklytopsellers_CapsuleArt_2dODJ {
+  ._3arZn0BMPzyhcYNADe193m
+    ._2-RN6nWOY56sNmcDHu069P
+    ._18kGHKeOavDDdJVs9FVhpo
+    ._2dODJrHKWs6F9v9QpgzihO {
     height: auto;
     width: 46%;
   }
 }
-.weeklytopsellers_ChartTable_3arZn
-  .weeklytopsellers_TableRow_2-RN6
-  .weeklytopsellers_CapsuleCell_18kGH
-  .weeklytopsellers_ExpandedImage_3gRec {
+._3arZn0BMPzyhcYNADe193m
+  ._2-RN6nWOY56sNmcDHu069P
+  ._18kGHKeOavDDdJVs9FVhpo
+  ._3gRecW1JhKNGlsPfQ6wKdX {
   height: 70px;
 }
-.weeklytopsellers_ChartTable_3arZn
-  .weeklytopsellers_TableRow_2-RN6
-  .weeklytopsellers_CapsuleCell_18kGH
-  .weeklytopsellers_ExpandedMedia_3WcY4 {
+._3arZn0BMPzyhcYNADe193m
+  ._2-RN6nWOY56sNmcDHu069P
+  ._18kGHKeOavDDdJVs9FVhpo
+  ._3WcY4_82ul4e5YnaMs4yzH {
   height: 110px;
 }
-.weeklytopsellers_ChartTable_3arZn
-  .weeklytopsellers_TableRow_2-RN6
-  .weeklytopsellers_CapsuleCell_18kGH
-  .weeklytopsellers_ExpandedButtons_3-yfb {
+._3arZn0BMPzyhcYNADe193m
+  ._2-RN6nWOY56sNmcDHu069P
+  ._18kGHKeOavDDdJVs9FVhpo
+  ._3-yfbNsFBZ0lZMgB3XZeDH {
   margin-top: 8px;
   display: flex;
   flex-direction: row;
 }
-.weeklytopsellers_ChartTable_3arZn
-  .weeklytopsellers_TableRow_2-RN6
-  .weeklytopsellers_CapsuleCell_18kGH
-  .weeklytopsellers_CartButton_HYru8 {
+._3arZn0BMPzyhcYNADe193m
+  ._2-RN6nWOY56sNmcDHu069P
+  ._18kGHKeOavDDdJVs9FVhpo
+  .HYru8hN_4hAuafLhM5W7i {
   margin: 4px;
   font-size: 14px;
   padding: 8px 18px;
 }
-.weeklytopsellers_ChartTable_3arZn
-  .weeklytopsellers_TableRow_2-RN6
-  .weeklytopsellers_CapsuleCell_18kGH
-  .weeklytopsellers_GameInfo_3fbEr {
+._3arZn0BMPzyhcYNADe193m
+  ._2-RN6nWOY56sNmcDHu069P
+  ._18kGHKeOavDDdJVs9FVhpo
+  ._3fbErup_8zjbknEuj8QEOd {
   padding: 8px;
   justify-content: center;
   display: flex;
   flex-direction: column;
 }
-.weeklytopsellers_ChartTable_3arZn
-  .weeklytopsellers_TableRow_2-RN6
-  .weeklytopsellers_CapsuleCell_18kGH
-  .weeklytopsellers_GameName_1n_4- {
+._3arZn0BMPzyhcYNADe193m
+  ._2-RN6nWOY56sNmcDHu069P
+  ._18kGHKeOavDDdJVs9FVhpo
+  ._1n_4-zvf0n4aqGEksbgW9N {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -1614,10 +1465,10 @@ div#global_header .content {
   min-width: 0;
 }
 @media all and (max-width: 500px) {
-  .weeklytopsellers_ChartTable_3arZn
-    .weeklytopsellers_TableRow_2-RN6
-    .weeklytopsellers_CapsuleCell_18kGH
-    .weeklytopsellers_GameName_1n_4- {
+  ._3arZn0BMPzyhcYNADe193m
+    ._2-RN6nWOY56sNmcDHu069P
+    ._18kGHKeOavDDdJVs9FVhpo
+    ._1n_4-zvf0n4aqGEksbgW9N {
     font-size: 13px;
     display: -webkit-box;
     -webkit-line-clamp: 2;
@@ -1625,32 +1476,30 @@ div#global_header .content {
     overflow: hidden;
   }
 }
-.weeklytopsellers_ChartTable_3arZn
-  .weeklytopsellers_TableRow_2-RN6
-  .weeklytopsellers_CapsuleCell_18kGH
-  .weeklytopsellers_GameName_1n_4-
-  .weeklytopsellers_GameUnavailable_1VpmU {
+._3arZn0BMPzyhcYNADe193m
+  ._2-RN6nWOY56sNmcDHu069P
+  ._18kGHKeOavDDdJVs9FVhpo
+  ._1n_4-zvf0n4aqGEksbgW9N
+  ._1VpmUWOpL8QFhgJE9-wTWg {
   font-size: 12px;
   color: #a6a6a6;
   margin-left: 19px;
 }
-.weeklytopsellers_WeekBrowseLink_DOEXq {
+.DOEXqWm8o_z-orpDgJhRO {
   cursor: pointer;
 }
-.weeklytopsellers_CountryControl_14L3r {
+._14L3rO6n7CWRUvU7kGlWdr {
   margin-top: 4px;
 }
-.weeklytopsellers_CountryControl_14L3r
-  .weeklytopsellers_DropDownContainer_cuSpV {
+._14L3rO6n7CWRUvU7kGlWdr .cuSpV3QmWAyfy5jEL_lAD {
   width: 33%;
   min-width: 250px;
 }
-.weeklytopsellers_MostPlayedOptionsControl_JNIDk
-  .weeklytopsellers_DropDownContainer_cuSpV {
+.JNIDkAylV2PzV6WgyGipX .cuSpV3QmWAyfy5jEL_lAD {
   width: 33%;
   min-width: 250px;
 }
-.weeklytopsellers_TopGameBackground_39Yky {
+._39YkypnuGbVjgQOa7CR5Uw {
   filter: saturate(0.4) opacity(0.4) blur(0px);
   position: absolute;
   top: -95px;
@@ -1688,29 +1537,29 @@ div#global_header .content {
   z-index: -1;
 }
 @media screen and (max-width: 910px) {
-  .weeklytopsellers_TopGameBackground_39Yky {
+  ._39YkypnuGbVjgQOa7CR5Uw {
     top: -20px;
     width: 100vw;
     transform: scale(1.5);
   }
 }
-.weeklytopsellers_BrowseTopSellersButton_2S1tS {
+._2S1tSckzLEd0oOcVZVwSn1 {
   margin-top: 12px;
 }
-.weeklytopsellers_TopChartItem_2C5PJ {
+._2C5PJOUH6RqyuBNEwaCE9X {
   display: flex;
   line-height: 52px;
   align-items: center;
   position: relative;
 }
-.weeklytopsellers_CapsuleDecorator_1zTJh {
+._1zTJhHtTtlupkl5JAkDjkj {
   position: absolute;
   left: 0px;
   top: 14px;
   display: grid;
   row-gap: 5px;
 }
-.weeklytopsellers_Banner_24xXq {
+._24xXqJoM1vk2jNIc6fU-LD {
   font-size: 11px;
   color: #111;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
@@ -1724,42 +1573,42 @@ div#global_header .content {
   text-transform: uppercase;
   background-color: #66c0f4;
 }
-.weeklytopsellers_LinesImg_3Lfjg {
+._3LfjgYqtcKMR_OPGPuSINb {
   height: 10px;
 }
-.weeklytopsellers_BannerText_UFtgo {
+.UFtgo0Nvdp450rdx5uGU1 {
   display: none;
 }
-.weeklytopsellers_ChartPlaceholder_3sJkw {
+._3sJkwsBQuiAc_i3VOWX4tv {
   min-height: 100vh;
 }
-.weeklytopsellers_WeeklyFooterControls_3qtwd {
+._3qtwdu9UZOm9MR75OdIDhh {
   margin: 12px auto 0 auto;
   max-width: 50vw;
   text-align: center;
   display: flex;
   flex-direction: column;
 }
-.weeklytopsellers_Tooltip_2OA1J {
+._2OA1JW-4H-f01kM7myTUuu {
   display: inline-flex;
 }
-.weeklytopsellers_PriceWidget_30rPO {
+._30rPOgtyETKSFTmKGlL7LD {
   display: inline-block;
   background-color: rgba(0, 0, 0, 0.1);
   margin-top: 8px;
   margin-bottom: 8px;
 }
-.weeklytopsellers_PriceWidget_30rPO .StoreSalePriceWidgetContainer {
+._30rPOgtyETKSFTmKGlL7LD .StoreSalePriceWidgetContainer {
   margin-top: 0px;
 }
-.weeklytopsellers_TopReleasesContainer_HVGCL {
+.HVGCLhckX_TdvWBLa5LW5 {
   margin-top: -95px;
   width: 100%;
 }
-.topreleasespage_TopReleasesContainer_2ZjmC {
+._2ZjmCUAiuueaaa50xot0EU {
   width: 100%;
 }
-.supportstats_HelpRequestChartContainer_1dbAl {
+._1dbAlGjgeRG0IF7LxVGlNU {
   height: 300px;
   background-image: linear-gradient(
     180deg,
@@ -1767,33 +1616,33 @@ div#global_header .content {
     rgba(0, 0, 0, 0.06) 100%
   );
 }
-.supportstats_CategoryBlock_34D_U.supportstats_Placeholder_3r4Y8 {
+._34D_U3jAxOl1YKYVkhrnEo._3r4Y8_eL-4yZQdCwm0BJtN {
   min-height: 300px;
 }
-.supportstats_CategoryBlock_34D_U thead th {
+._34D_U3jAxOl1YKYVkhrnEo thead th {
   padding: 4px 12px;
 }
-.supportstats_CategoryBlock_34D_U thead th.supportstats_Category_1hxGI {
+._34D_U3jAxOl1YKYVkhrnEo thead th._1hxGIZRl9M4O881-LMqI-j {
   width: 45%;
 }
-.supportstats_CategoryBlock_34D_U thead th.supportstats_Submitted24h_N_TWx {
+._34D_U3jAxOl1YKYVkhrnEo thead th.N_TWxHk1W6om7IZLwZXNY {
   width: 25%;
 }
-.supportstats_CategoryBlock_34D_U thead th.supportstats_ResponseTimes_34kNE {
+._34D_U3jAxOl1YKYVkhrnEo thead th._34kNEqvIhwIMhrIwHUUrM0 {
   width: 30%;
 }
-.supportstats_CategoryBlock_34D_U tbody tr.supportstats_TableRow_1tiKS {
+._34D_U3jAxOl1YKYVkhrnEo tbody tr._1tiKSf64fh09TzalIvs_v {
   font-size: 16px;
   line-height: 24px;
   cursor: default;
 }
-.supportstats_CategoryBlock_34D_U tbody tr.supportstats_TableRow_1tiKS td {
+._34D_U3jAxOl1YKYVkhrnEo tbody tr._1tiKSf64fh09TzalIvs_v td {
   padding: 4px 12px;
 }
-.supportstats_CategoryBlock_34D_U tbody td.supportstats_Submitted24h_N_TWx,
-.supportstats_CategoryBlock_34D_U tbody td.supportstats_ResponseTimes_34kNE {
+._34D_U3jAxOl1YKYVkhrnEo tbody td.N_TWxHk1W6om7IZLwZXNY,
+._34D_U3jAxOl1YKYVkhrnEo tbody td._34kNEqvIhwIMhrIwHUUrM0 {
   color: #c5cbd8;
 }
-.supportstats_CategoryBlock_34D_U .supportstats_NumberCol_1GPA- {
+._34D_U3jAxOl1YKYVkhrnEo ._1GPA-utJD48wTHb18r7rg2 {
   text-align: right;
 }

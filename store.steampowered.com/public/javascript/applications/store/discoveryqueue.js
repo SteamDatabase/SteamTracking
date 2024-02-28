@@ -6,12 +6,11 @@
     54423: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
-        DiscoveryQueueWidgetCtn:
-          "discoveryqueueappwidget_DiscoveryQueueWidgetCtn_1LXqx",
-        WidgetText: "discoveryqueueappwidget_WidgetText_co4IP",
-        WidgetCapsule: "discoveryqueueappwidget_WidgetCapsule_ZyOLs",
-        CloseButton: "discoveryqueueappwidget_CloseButton_bfN8k",
-        Y: "discoveryqueueappwidget_Y_1FD7r",
+        DiscoveryQueueWidgetCtn: "_1LXqxVtAL8Lmy7J7rLSVit",
+        WidgetText: "co4IP1iV1813n9UgG3h5f",
+        WidgetCapsule: "ZyOLslFdmnVjR1OGpRaue",
+        CloseButton: "bfN8kdqVDI58Ly1qiSuT_",
+        Y: "_1FD7rgQVEqkzjDjzYa-1BC",
       };
     },
     13043: (e, t, n) => {
@@ -28,21 +27,21 @@
         const { children: t, navTreeRef: n } = e,
           u = (0, i._T)(e, ["children", "navTreeRef"]),
           d = r.useRef(),
-          g = (0, s.BE)(d, n),
-          p = (0, a.id)(),
-          A = window.__virtual_keyboard_client;
-        if (p) {
+          A = (0, s.BE)(d, n),
+          g = (0, a.id)(),
+          E = window.__virtual_keyboard_client;
+        if (g) {
           const e = window.__nav_tree_root;
           return r.createElement(
             o.Fe,
             Object.assign({}, u, {
-              navTreeRef: g,
+              navTreeRef: A,
               secondary: !0,
               parentEmbeddedNavTree: e,
             }),
             r.createElement(
               l.o5,
-              { factory: A },
+              { factory: E },
               r.createElement(c.O, null, t),
             ),
           );
@@ -125,7 +124,7 @@
     },
     86445: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { default: () => m });
+      n.r(t), n.d(t, { default: () => v });
       var i = n(47427),
         r = n(13043),
         o = n(91618),
@@ -135,19 +134,19 @@
         l = n(71472),
         u = n(62613),
         d = n(3613),
-        g = n(40735),
-        p = n(31846),
-        A = n(54423),
-        v = n.n(A),
-        E = n(37563);
-      function m(e) {
+        A = n(40735),
+        g = n(31846),
+        E = n(54423),
+        p = n.n(E),
+        m = n(37563);
+      function v(e) {
         const { appID: t } = e,
-          n = (0, g.g)(),
-          [A] = (0, l.Ar)("inqueue", "0"),
-          [m, D] = (0, i.useState)(!1),
-          [y, b] = (0, i.useState)(!1),
-          [R] = (0, a.vs)(t, { include_assets: !0 }),
-          h = (0, c.L)(),
+          n = (0, A.g)(),
+          [E] = (0, l.Ar)("inqueue", "0"),
+          [v, D] = (0, i.useState)(!1),
+          [b, R] = (0, i.useState)(!1),
+          [h] = (0, a.vs)(t, { include_assets: !0 }),
+          y = (0, c.L)(),
           N = i.useRef();
         i.useEffect(() => {
           var e;
@@ -155,11 +154,11 @@
             ? void 0
             : e.Activate(!0);
         }, []);
-        const S = (0, E.id)(),
-          { eStoreDiscoveryQueueType: w, storePageFilter: M } =
+        const S = (0, m.id)(),
+          { eStoreDiscoveryQueueType: M, storePageFilter: Q } =
             i.useMemo(() => {
-              if ((null == A ? void 0 : A.length) > 0) {
-                const e = A.split("_"),
+              if ((null == E ? void 0 : E.length) > 0) {
+                const e = E.split("_"),
                   t = Number(e[0]);
                 let n;
                 return (
@@ -168,21 +167,21 @@
                 );
               }
               return { eStoreDiscoveryQueueType: 0, storePageFilter: void 0 };
-            }, [A]),
-          Q = i.useCallback(() => {
-            b(!0);
-          }, []),
+            }, [E]),
           Z = i.useCallback(() => {
+            R(!0);
+          }, []),
+          f = i.useCallback(() => {
             D(!0);
           }, []),
-          C = (0, s.ZP)(w, M);
-        return n && R
-          ? y
+          T = (0, s.ZP)(M, Q);
+        return n && h
+          ? b
             ? null
             : i.createElement(
                 r.p,
                 {
-                  NavigationManager: h,
+                  NavigationManager: y,
                   navTreeRef: N,
                   navID: "DiscoveryQueueAppWidget",
                 },
@@ -190,38 +189,38 @@
                   o.s,
                   {
                     focusable: !0,
-                    className: v().DiscoveryQueueWidgetCtn,
-                    onSecondaryButton: Q,
-                    onOKButton: Z,
-                    onOKActionDescription: (0, p.Xx)(
+                    className: p().DiscoveryQueueWidgetCtn,
+                    onSecondaryButton: Z,
+                    onOKButton: f,
+                    onOKActionDescription: (0, g.Xx)(
                       "#DiscoveryQueue_ResumeWizard",
                     ),
-                    onSecondaryActionDescription: (0, p.Xx)("#Button_Close"),
+                    onSecondaryActionDescription: (0, g.Xx)("#Button_Close"),
                   },
                   i.createElement("img", {
-                    className: v().WidgetCapsule,
+                    className: p().WidgetCapsule,
                     src:
-                      null == R ? void 0 : R.GetAssets().GetSmallCapsuleURL(),
+                      null == h ? void 0 : h.GetAssets().GetSmallCapsuleURL(),
                   }),
                   i.createElement(
                     "div",
-                    { onClick: Z, className: v().WidgetText },
-                    (0, p.Xx)("#DiscoveryQueue_ResumeWizard"),
-                    (null == C ? void 0 : C.length) > 0 && ": " + C,
+                    { onClick: f, className: p().WidgetText },
+                    (0, g.Xx)("#DiscoveryQueue_ResumeWizard"),
+                    (null == T ? void 0 : T.length) > 0 && ": " + T,
                   ),
                   !S &&
                     i.createElement(
                       "div",
-                      { className: v().CloseButton, onClick: Q },
+                      { className: p().CloseButton, onClick: Z },
                       i.createElement(u.X, null),
                     ),
-                  m &&
+                  v &&
                     i.createElement(d.MS, {
                       includeAppID: t,
-                      bWizardVisible: m,
+                      bWizardVisible: v,
                       fnCloseModal: () => D(!1),
-                      eStoreDiscoveryQueueType: w,
-                      storePageFilter: M,
+                      eStoreDiscoveryQueueType: M,
+                      storePageFilter: Q,
                     }),
                 ),
               )
@@ -237,12 +236,12 @@
         c = n(40735),
         s = n(91618),
         a = n(37563),
-        l = n(50898),
+        l = n(27438),
         u = n(90069);
       function d(e) {
         const t = (0, c.g)(),
           [n, d] = (0, i.useState)(!1),
-          g = i.useCallback(() => {
+          A = i.useCallback(() => {
             a.L7.logged_in
               ? d(!0)
               : (0, u.AM)(
@@ -269,7 +268,7 @@
               null,
               i.createElement(
                 "a",
-                { onClick: g, className: "experiment-button" },
+                { onClick: A, className: "experiment-button" },
                 (0, r.Xx)("#DiscoveryQueue_OpenWizard"),
               ),
               n &&

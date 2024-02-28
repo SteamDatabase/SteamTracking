@@ -30,7 +30,7 @@
     74436: (e, t, r) => {
       "use strict";
       r.d(t, { u: () => c });
-      var i = r(11914),
+      var i = r(6256),
         n = r(71068),
         a = r(63501),
         s = r(53460),
@@ -60,7 +60,7 @@
     588: (e, t, r) => {
       "use strict";
       r.d(t, { H: () => c });
-      var i = r(11914),
+      var i = r(6256),
         n = r(50524),
         a = r(71068),
         s = r(63501),
@@ -186,17 +186,17 @@
             Object.defineProperty(e, X(i.key), i);
         }
       }
-      function W(e, t) {
+      function A(e, t) {
         return (
-          (W = Object.setPrototypeOf
+          (A = Object.setPrototypeOf
             ? Object.setPrototypeOf.bind()
             : function (e, t) {
                 return (e.__proto__ = t), e;
               }),
-          W(e, t)
+          A(e, t)
         );
       }
-      function A(e) {
+      function W(e) {
         var t = (function () {
           if ("undefined" == typeof Reflect || !Reflect.construct) return !1;
           if (Reflect.construct.sham) return !1;
@@ -282,12 +282,12 @@
             constructor: { value: e, writable: !0, configurable: !0 },
           })),
             Object.defineProperty(e, "prototype", { writable: !1 }),
-            t && W(e, t);
+            t && A(e, t);
         })(c, e);
         var t,
           r,
           i,
-          s = A(c);
+          s = W(c);
         function c(e) {
           var t;
           return (
@@ -466,14 +466,20 @@
                   i = r.activeShape,
                   a = r.blendStroke,
                   s = r.inactiveShape;
-                return e.map(function (e, r) {
-                  var o = t.isActiveIndex(r),
-                    c = s && t.hasActiveIndex() ? s : null,
-                    l = o ? i : c,
-                    u = x(
-                      x({}, e),
+                return e.map(function (r, o) {
+                  if (
+                    0 === (null == r ? void 0 : r.startAngle) &&
+                    0 === (null == r ? void 0 : r.endAngle) &&
+                    1 !== e.length
+                  )
+                    return null;
+                  var c = t.isActiveIndex(o),
+                    l = s && t.hasActiveIndex() ? s : null,
+                    u = c ? i : l,
+                    m = x(
+                      x({}, r),
                       {},
-                      { stroke: a ? e.fill : e.stroke, tabIndex: -1 },
+                      { stroke: a ? r.fill : r.stroke, tabIndex: -1 },
                     );
                   return n.createElement(
                     p.m,
@@ -487,12 +493,17 @@
                         tabIndex: -1,
                         className: "recharts-pie-sector",
                       },
-                      (0, S.bw)(t.props, e, r),
-                      { key: "sector-".concat(r) },
+                      (0, S.bw)(t.props, r, o),
+                      {
+                        key: "sector-"
+                          .concat(null == r ? void 0 : r.startAngle, "-")
+                          .concat(null == r ? void 0 : r.endAngle, "-")
+                          .concat(r.midAngle),
+                      },
                     ),
                     n.createElement(
                       O.bn,
-                      E({ option: l, isActive: o, shapeType: "sector" }, u),
+                      E({ option: u, isActive: c, shapeType: "sector" }, m),
                     ),
                   );
                 });
@@ -1961,7 +1972,7 @@
           var r = null != arguments[t] ? arguments[t] : {};
           t % 2
             ? S(Object(r), !0).forEach(function (t) {
-                W(e, t, r[t]);
+                A(e, t, r[t]);
               })
             : Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
@@ -1981,7 +1992,7 @@
           (i.enumerable = i.enumerable || !1),
             (i.configurable = !0),
             "value" in i && (i.writable = !0),
-            Object.defineProperty(e, A(i.key), i);
+            Object.defineProperty(e, W(i.key), i);
         }
       }
       function E(e, t) {
@@ -2044,9 +2055,9 @@
           T(e)
         );
       }
-      function W(e, t, r) {
+      function A(e, t, r) {
         return (
-          (t = A(t)) in e
+          (t = W(t)) in e
             ? Object.defineProperty(e, t, {
                 value: r,
                 enumerable: !0,
@@ -2057,7 +2068,7 @@
           e
         );
       }
-      function A(e) {
+      function W(e) {
         var t = (function (e, t) {
           if ("object" !== M(e) || null === e) return e;
           var r = e[Symbol.toPrimitive];
@@ -2095,22 +2106,22 @@
           for (var t = arguments.length, r = new Array(t), i = 0; i < t; i++)
             r[i] = arguments[i];
           return (
-            W(x((e = s.call.apply(s, [this].concat(r)))), "state", {
+            A(x((e = s.call.apply(s, [this].concat(r)))), "state", {
               isAnimationFinished: !1,
             }),
-            W(x(e), "handleAnimationEnd", function () {
+            A(x(e), "handleAnimationEnd", function () {
               var t = e.props.onAnimationEnd;
               e.setState({ isAnimationFinished: !0 }), b()(t) && t();
             }),
-            W(x(e), "handleAnimationStart", function () {
+            A(x(e), "handleAnimationStart", function () {
               var t = e.props.onAnimationStart;
               e.setState({ isAnimationFinished: !1 }), b()(t) && t();
             }),
-            W(x(e), "handleMouseEnter", function (t) {
+            A(x(e), "handleMouseEnter", function (t) {
               var r = e.props.onMouseEnter;
               r && r(e.props, t);
             }),
-            W(x(e), "handleMouseLeave", function (t) {
+            A(x(e), "handleMouseLeave", function (t) {
               var r = e.props.onMouseLeave;
               r && r(e.props, t);
             }),
@@ -2288,8 +2299,8 @@
           o
         );
       })(i.PureComponent);
-      W(P, "displayName", "Radar"),
-        W(P, "defaultProps", {
+      A(P, "displayName", "Radar"),
+        A(P, "defaultProps", {
           angleAxisId: 0,
           radiusAxisId: 0,
           hide: !1,
@@ -2301,7 +2312,7 @@
           animationDuration: 1500,
           animationEasing: "ease",
         }),
-        W(P, "getComposedData", function (e) {
+        A(P, "getComposedData", function (e) {
           var t = e.radiusAxis,
             r = e.angleAxis,
             i = e.displayedData,
@@ -2533,12 +2544,12 @@
         f5: () => q,
         rB: () => j,
         rj: () => k,
-        z1: () => A,
+        z1: () => W,
         zm: () => U,
       });
       var i = r(10059),
         n = r(39087),
-        a = r(35750);
+        a = r(79545);
       const s = i.Message;
       class o extends s {
         static ImplementsStaticInterface() {}
@@ -4453,18 +4464,18 @@
           return "CSaleFeature_GetUserSharingPermissions_Request";
         }
       }
-      class W extends s {
+      class A extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            W.prototype.privacy_state || n.aR(W.M()),
+            A.prototype.privacy_state || n.aR(A.M()),
             s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
-            W.sm_m ||
-              (W.sm_m = {
-                proto: W,
+            A.sm_m ||
+              (A.sm_m = {
+                proto: A,
                 fields: {
                   privacy_state: {
                     n: 1,
@@ -4486,74 +4497,6 @@
                     br: n.FE.readUint32,
                     bw: n.Xc.writeUint32,
                   },
-                },
-              }),
-            W.sm_m
-          );
-        }
-        static MBF() {
-          return W.sm_mbf || (W.sm_mbf = n.Bh(W.M())), W.sm_mbf;
-        }
-        toObject(e = !1) {
-          return W.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return n.TA(W.M(), e, t);
-        }
-        static fromObject(e) {
-          return n.aD(W.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            r = new W();
-          return W.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return n.F(W.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return W.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          n.l2(W.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return W.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CSaleFeature_GetUserSharingPermissions_Response";
-        }
-      }
-      class A extends s {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            A.prototype.steamid || n.aR(A.M()),
-            s.initialize(this, e, 0, -1, [3], null);
-        }
-        static M() {
-          return (
-            A.sm_m ||
-              (A.sm_m = {
-                proto: A,
-                fields: {
-                  steamid: {
-                    n: 1,
-                    br: n.FE.readFixed64String,
-                    bw: n.Xc.writeFixed64String,
-                  },
-                  year: { n: 2, br: n.FE.readUint32, bw: n.Xc.writeUint32 },
-                  appids: {
-                    n: 3,
-                    r: !0,
-                    q: !0,
-                    br: n.FE.readUint32,
-                    pbr: n.FE.readPackedUint32,
-                    bw: n.Xc.writeRepeatedUint32,
-                  },
-                  total_only: { n: 4, br: n.FE.readBool, bw: n.Xc.writeBool },
                 },
               }),
             A.sm_m
@@ -4589,6 +4532,74 @@
         serializeBase64String() {
           var e = new i.BinaryWriter();
           return A.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CSaleFeature_GetUserSharingPermissions_Response";
+        }
+      }
+      class W extends s {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            W.prototype.steamid || n.aR(W.M()),
+            s.initialize(this, e, 0, -1, [3], null);
+        }
+        static M() {
+          return (
+            W.sm_m ||
+              (W.sm_m = {
+                proto: W,
+                fields: {
+                  steamid: {
+                    n: 1,
+                    br: n.FE.readFixed64String,
+                    bw: n.Xc.writeFixed64String,
+                  },
+                  year: { n: 2, br: n.FE.readUint32, bw: n.Xc.writeUint32 },
+                  appids: {
+                    n: 3,
+                    r: !0,
+                    q: !0,
+                    br: n.FE.readUint32,
+                    pbr: n.FE.readPackedUint32,
+                    bw: n.Xc.writeRepeatedUint32,
+                  },
+                  total_only: { n: 4, br: n.FE.readBool, bw: n.Xc.writeBool },
+                },
+              }),
+            W.sm_m
+          );
+        }
+        static MBF() {
+          return W.sm_mbf || (W.sm_mbf = n.Bh(W.M())), W.sm_mbf;
+        }
+        toObject(e = !1) {
+          return W.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return n.TA(W.M(), e, t);
+        }
+        static fromObject(e) {
+          return n.aD(W.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new i.BinaryReader(e),
+            r = new W();
+          return W.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return n.F(W.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new i.BinaryWriter();
+          return W.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          n.l2(W.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new i.BinaryWriter();
+          return W.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CSaleFeature_GetUserYearAchievements_Request";
@@ -5703,7 +5714,7 @@
             return e.SendMsg(
               "SaleFeature.GetUserSharingPermissions#1",
               (0, a.MD)(T, t),
-              W,
+              A,
               { ePrivilege: 1, eWebAPIKeyRequirement: 2 },
             );
           }),
@@ -5718,7 +5729,7 @@
           (e.GetUserYearAchievements = function (e, t) {
             return e.SendMsg(
               "SaleFeature.GetUserYearAchievements#1",
-              (0, a.MD)(A, t),
+              (0, a.MD)(W, t),
               P,
               { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 },
             );
