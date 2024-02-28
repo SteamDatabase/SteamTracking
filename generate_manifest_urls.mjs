@@ -30,6 +30,8 @@ const files = [
 const urls = new Set();
 
 for (const { file, cdn } of files) {
+	let found = false;
+
 	try {
 		const code = await readFile(file);
 		const ast = parse(code, { ecmaVersion: latestEcmaVersion, loc: true });
@@ -69,6 +71,8 @@ for (const { file, cdn } of files) {
 							const fullUrl = cdn + folder + name + suffix;
 
 							urls.add(fullUrl);
+
+							found = true;
 						}
 					}
 
@@ -79,6 +83,10 @@ for (const { file, cdn } of files) {
 	} catch (e) {
 		console.error(`Unable to parse "${file}": ${e}`);
 		continue;
+	}
+
+	if (!found) {
+		console.error(`Did not find any files in "${file}"`);
 	}
 }
 
