@@ -28,6 +28,15 @@ const files = [
 ];
 
 const urls = new Set();
+const oldUrls = (await readFile(".support/urls_from_manifests.txt", { encoding: "utf8" })).trim().split("\n");
+
+for (const url of oldUrls) {
+	if (!url.includes("~")) {
+		urls.add(url);
+	}
+}
+
+console.log("Remembered", urls.size, "urls");
 
 for (const { file, cdn } of files) {
 	let found = false;
