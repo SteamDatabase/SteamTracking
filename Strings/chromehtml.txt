@@ -2,8 +2,6 @@ __TEXT
 
 __text
 __TEXT
-~
-~
 __stubs
 __TEXT
 __stub_helper
@@ -21,7 +19,7 @@ __TEXT
 __gcc_except_tab__TEXT
 __unwind_info
 __TEXT
-Lf
+Tf
 __DATA
 __nl_symbol_ptr
 __DATA
@@ -1097,6 +1095,10 @@ Enable GPU debugging in Chromium, costs a glGetError() call after every command
 Disable GPU usage in CEF (force software rendering/compositing)
 -cef-force-gpu
 Force enable GPU acceleration
+-cef-force-hw-video-decode
+Force enable HW accelerated video decoding
+-cef-force-gpu-blocklist
+Force enable GPU blocklist
 -cef-delaypageload
 Enable early-out for known page loads
 -cef-disable-delaypageload
@@ -2420,15 +2422,23 @@ id
 @
 
 @
+
+}
+T
+>
+
+
+
+
 @
-
-
-
-@
-;
-n
+G
+B
+?
+_
 0
 0
+
+
 
 Hi
 `
@@ -2442,6 +2452,7 @@ AT=
 D
 @
 @
+
 
 @
 Hc
@@ -2476,7 +2487,6 @@ IcE
 @
 V
 =
-O
 =
 !
 @
@@ -2498,7 +2508,6 @@ M9e
 ?
 ?
 :
-P
 ?
 ?
 ?
@@ -2517,4 +2526,3 @@ Ic
 0
 0
 0
-\
