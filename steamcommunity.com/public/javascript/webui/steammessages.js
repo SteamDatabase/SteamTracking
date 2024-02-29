@@ -1,14 +1,14 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "8731355";
+var CLSTAMP = "8735148";
 (self.webpackChunk_steam_friendsui =
   self.webpackChunk_steam_friendsui || []).push([
   [5140],
   {
-    75168: (e, t, r) => {
+    72237: (e, t, r) => {
       r.d(t, { _v: () => o });
       var i = r(2260),
-        a = r(26513);
+        a = r(4093);
       const n = i.Message;
       var s;
       !(function (e) {
@@ -332,7 +332,7 @@ var CLSTAMP = "8731355";
         }
       }
     },
-    35268: (e, t, r) => {
+    1037: (e, t, r) => {
       r.d(t, { B8: () => n, KV: () => a, SR: () => u, i$: () => s });
       var i = r(2260);
       i.Message;
@@ -2871,7 +2871,7 @@ var CLSTAMP = "8731355";
               "k_ECodecUsageReasonGameVideo");
         })(c || (c = {}));
     },
-    7182: (e, t, r) => {
+    11217: (e, t, r) => {
       r.d(t, { Fp: () => o, Xh: () => D, fq: () => K, g2: () => X });
       var i = r(2260);
       i.Message;
@@ -3667,11 +3667,11 @@ var CLSTAMP = "8731355";
               "k_EAsyncGameSessionUserVisibilityDismissed");
         })(ie || (ie = {}));
     },
-    43573: (e, t, r) => {
+    5857: (e, t, r) => {
       r.d(t, { Ao: () => l, Lj: () => c, nH: () => o, nS: () => g });
       var i = r(2260),
-        a = r(26513),
-        n = r(42366);
+        a = r(4093),
+        n = r(29928);
       const s = i.Message;
       var o, l, c;
       !(function (e) {
@@ -4085,11 +4085,11 @@ var CLSTAMP = "8731355";
         };
       })(c || (c = {}));
     },
-    14286: (e, t, r) => {
+    86201: (e, t, r) => {
       r.d(t, { XR: () => u, kk: () => _, oD: () => B });
       var i = r(2260),
-        a = r(26513),
-        n = r(42366);
+        a = r(4093),
+        n = r(29928);
       const s = i.Message;
       class o extends s {
         static ImplementsStaticInterface() {}
@@ -4408,10 +4408,10 @@ var CLSTAMP = "8731355";
           };
         })(B || (B = {}));
     },
-    41032: (e, t, r) => {
+    8551: (e, t, r) => {
       r.d(t, { mB: () => s });
       var i = r(2260);
-      r(26513);
+      r(4093);
       i.Message;
       var a, n, s, o, l, c, u;
       !(function (e) {
@@ -4566,7 +4566,7 @@ var CLSTAMP = "8731355";
               "k_EHDRSupport_HDR_RequiresUserAction");
         })(u || (u = {}));
     },
-    1512: (e, t, r) => {
+    8913: (e, t, r) => {
       r.d(t, {
         $h: () => M,
         Am: () => P,
@@ -4579,10 +4579,10 @@ var CLSTAMP = "8731355";
         up: () => E,
       });
       var i = r(2260),
-        a = r(26513),
-        n = r(42366),
-        s = r(7182),
-        o = r(30076);
+        a = r(4093),
+        n = r(29928),
+        s = r(11217),
+        o = r(15588);
       const l = i.Message;
       var c, u, m, d, _, B, g, y, b, M, p, S;
       !(function (e) {
@@ -7713,7 +7713,7 @@ var CLSTAMP = "8731355";
             });
         })(S || (S = {}));
     },
-    30076: (e, t, r) => {
+    15588: (e, t, r) => {
       r.d(t, {
         Cu: () => d,
         VJ: () => B,
@@ -7724,7 +7724,7 @@ var CLSTAMP = "8731355";
         vL: () => b,
       });
       var i = r(2260),
-        a = r(26513);
+        a = r(4093);
       const n = i.Message;
       var s, o, l, c;
       !(function (e) {
@@ -8686,7 +8686,7 @@ var CLSTAMP = "8731355";
         }
       }
     },
-    86519: (e, t, r) => {
+    51058: (e, t, r) => {
       r.d(t, {
         $m: () => $,
         Mr: () => _,
@@ -8699,8 +8699,8 @@ var CLSTAMP = "8731355";
         qZ: () => F,
       });
       var i = r(2260),
-        a = r(26513),
-        n = r(42366);
+        a = r(4093),
+        n = r(29928);
       const s = i.Message;
       var o, l, c, u, m, d, _, B;
       !(function (e) {
@@ -14304,7 +14304,7 @@ var CLSTAMP = "8731355";
             });
         })(B || (B = {}));
     },
-    64875: (e, t, r) => {
+    47969: (e, t, r) => {
       r.d(t, {
         $nc: () => pe,
         $rh: () => Ot,
@@ -14371,9 +14371,9 @@ var CLSTAMP = "8731355";
         zw1: () => tt,
       });
       var i = r(2260),
-        a = r(26513),
-        n = r(42366),
-        s = r(22355);
+        a = r(4093),
+        n = r(29928),
+        s = r(73239);
       const o = i.Message;
       var l, c, u, m, d, _, B, g, y, b, M, p, S, w, R, E;
       function F(e) {
@@ -24357,11 +24357,11 @@ var CLSTAMP = "8731355";
           };
         })(E || (E = {}));
     },
-    23347: (e, t, r) => {
+    10566: (e, t, r) => {
       r.d(t, { NA: () => c, Zh: () => l, jI: () => o });
       var i = r(2260),
-        a = r(26513),
-        n = r(42366);
+        a = r(4093),
+        n = r(29928);
       const s = i.Message;
       var o, l;
       !(function (e) {
@@ -24747,7 +24747,7 @@ var CLSTAMP = "8731355";
           });
       })(l || (l = {}));
     },
-    24176: (e, t, r) => {
+    3529: (e, t, r) => {
       r.d(t, {
         $4: () => f,
         kb: () => z,
@@ -24758,8 +24758,8 @@ var CLSTAMP = "8731355";
         TF: () => g,
       });
       var i = r(2260),
-        a = r(26513),
-        n = r(42366);
+        a = r(4093),
+        n = r(29928);
       const s = i.Message;
       class o extends s {
         static ImplementsStaticInterface() {}
@@ -26644,7 +26644,7 @@ var CLSTAMP = "8731355";
           });
       })(g || (g = {}));
     },
-    34621: (e, t, r) => {
+    1299: (e, t, r) => {
       r.d(t, {
         $Z: () => s,
         RI: () => o,
@@ -26653,7 +26653,7 @@ var CLSTAMP = "8731355";
         tj: () => m,
       });
       var i = r(2260),
-        a = r(26513);
+        a = r(4093);
       const n = i.Message;
       class s extends n {
         static ImplementsStaticInterface() {}
@@ -27064,7 +27064,7 @@ var CLSTAMP = "8731355";
         }
       }
     },
-    22355: (e, t, r) => {
+    73239: (e, t, r) => {
       r.d(t, {
         $K: () => u,
         Ek: () => S,
@@ -27085,7 +27085,7 @@ var CLSTAMP = "8731355";
         wr: () => g,
       });
       var i = r(2260),
-        a = r(26513);
+        a = r(4093);
       const n = i.Message;
       class s extends n {
         static ImplementsStaticInterface() {}
@@ -28647,7 +28647,7 @@ var CLSTAMP = "8731355";
         }
       }
     },
-    5635: (e, t, r) => {
+    60191: (e, t, r) => {
       r.d(t, {
         Cm: () => d,
         Rt: () => B,
@@ -28658,8 +28658,8 @@ var CLSTAMP = "8731355";
         p$: () => m,
       });
       var i = r(2260),
-        a = r(26513),
-        n = r(30076);
+        a = r(4093),
+        n = r(15588);
       const s = i.Message;
       class o extends (267 == r.j ? s : null) {
         static ImplementsStaticInterface() {}
@@ -29567,11 +29567,11 @@ var CLSTAMP = "8731355";
         }
       }
     },
-    95239: (e, t, r) => {
+    18390: (e, t, r) => {
       r.d(t, { BQ: () => o });
       var i = r(2260),
-        a = r(26513);
-      r(30076);
+        a = r(4093);
+      r(15588);
       const n = i.Message;
       var s;
       !(function (e) {
@@ -29647,7 +29647,7 @@ var CLSTAMP = "8731355";
         }
       }
     },
-    48565: (e, t, r) => {
+    93019: (e, t, r) => {
       r.d(t, {
         x0: () => c,
         Km: () => m,
@@ -29656,8 +29656,8 @@ var CLSTAMP = "8731355";
         f9: () => o,
       });
       var i = r(2260),
-        a = r(26513);
-      r(30076);
+        a = r(4093);
+      r(15588);
       i.Message;
       const n = i.Message;
       class s extends n {
@@ -30400,7 +30400,7 @@ var CLSTAMP = "8731355";
         }
       }
     },
-    81997: (e, t, r) => {
+    67900: (e, t, r) => {
       r.d(t, {
         AE: () => F,
         DI: () => _e,
@@ -30412,9 +30412,9 @@ var CLSTAMP = "8731355";
         ur: () => m,
       });
       var i = r(2260),
-        a = r(26513),
-        n = r(42366),
-        s = r(30076);
+        a = r(4093),
+        n = r(29928),
+        s = r(15588);
       const o = i.Message;
       var l, c, u, m, d, _, B, g, y, b, M, p, S, w, R, E, F;
       !(function (e) {
@@ -33734,11 +33734,11 @@ var CLSTAMP = "8731355";
           });
       })(F || (F = {}));
     },
-    62670: (e, t, r) => {
+    50479: (e, t, r) => {
       r.d(t, { $n: () => c, OE: () => M, T4: () => R });
       var i = r(2260),
-        a = r(26513),
-        n = r(42366);
+        a = r(4093),
+        n = r(29928);
       const s = i.Message;
       var o, l, c;
       !(function (e) {
@@ -34848,11 +34848,11 @@ var CLSTAMP = "8731355";
           });
       })(c || (c = {}));
     },
-    42750: (e, t, r) => {
+    74672: (e, t, r) => {
       r.d(t, { KZ: () => _, XX: () => B, d2: () => o, d3: () => c });
       var i = r(2260),
-        a = r(26513),
-        n = r(42366);
+        a = r(4093),
+        n = r(29928);
       const s = i.Message;
       var o, l, c, u, m, d, _;
       !(function (e) {
@@ -35068,7 +35068,7 @@ var CLSTAMP = "8731355";
         };
       })(_ || (_ = {}));
     },
-    19184: (e, t, r) => {
+    47765: (e, t, r) => {
       r.d(t, {
         Av: () => o,
         F5: () => S,
@@ -35080,8 +35080,8 @@ var CLSTAMP = "8731355";
         yq: () => u,
       });
       var i = r(2260),
-        a = r(26513),
-        n = r(42366);
+        a = r(4093),
+        n = r(29928);
       const s = i.Message;
       var o, l, c;
       !(function (e) {
@@ -36260,7 +36260,7 @@ var CLSTAMP = "8731355";
             });
         })(c || (c = {}));
     },
-    60093: (e, t, r) => {
+    70983: (e, t, r) => {
       r.d(t, {
         Fi: () => b,
         Zi: () => d,
@@ -36270,9 +36270,9 @@ var CLSTAMP = "8731355";
         u: () => c,
       });
       var i = r(2260),
-        a = r(26513),
-        n = r(42366),
-        s = r(22355);
+        a = r(4093),
+        n = r(29928),
+        s = r(73239);
       const o = i.Message;
       class l extends o {
         static ImplementsStaticInterface() {}
@@ -36836,11 +36836,11 @@ var CLSTAMP = "8731355";
           };
         })(S || (S = {}));
     },
-    28670: (e, t, r) => {
+    28485: (e, t, r) => {
       var i = r(2260),
-        a = r(26513),
-        n = r(42366),
-        s = r(35239);
+        a = r(4093),
+        n = r(29928),
+        s = r(70064);
       const o = i.Message;
       var l, c, u, m, d, _, B, g;
       !(function (e) {
@@ -39206,7 +39206,7 @@ var CLSTAMP = "8731355";
           });
       })(g || (g = {}));
     },
-    98854: (e, t, r) => {
+    9601: (e, t, r) => {
       r.d(t, {
         DB: () => F,
         LD: () => R,
@@ -39215,8 +39215,8 @@ var CLSTAMP = "8731355";
         pR: () => $,
       });
       var i = r(2260),
-        a = r(26513),
-        n = r(42366);
+        a = r(4093),
+        n = r(29928);
       const s = i.Message;
       class o extends s {
         static ImplementsStaticInterface() {}
@@ -41769,12 +41769,12 @@ var CLSTAMP = "8731355";
             });
         })(J || (J = {}));
     },
-    36799: (e, t, r) => {
+    933: (e, t, r) => {
       r.d(t, { n7: () => d, z4: () => l });
       var i = r(2260),
-        a = r(26513),
-        n = r(42366),
-        s = r(35239);
+        a = r(4093),
+        n = r(29928),
+        s = r(70064);
       const o = i.Message;
       class l extends o {
         static ImplementsStaticInterface() {}
@@ -42035,11 +42035,11 @@ var CLSTAMP = "8731355";
           });
       })(d || (d = {}));
     },
-    93108: (e, t, r) => {
+    72862: (e, t, r) => {
       r.d(t, { I3: () => c, yl: () => o });
       var i = r(2260),
-        a = r(26513),
-        n = r(42366);
+        a = r(4093),
+        n = r(29928);
       const s = i.Message;
       class o extends s {
         static ImplementsStaticInterface() {}
@@ -42175,7 +42175,7 @@ var CLSTAMP = "8731355";
         };
       })(c || (c = {}));
     },
-    11760: (e, t, r) => {
+    43446: (e, t, r) => {
       r.d(t, {
         AP: () => Ot,
         B: () => T,
@@ -42196,9 +42196,9 @@ var CLSTAMP = "8731355";
         pl: () => zt,
       });
       var i = r(2260),
-        a = r(26513),
-        n = r(42366),
-        s = r(30076);
+        a = r(4093),
+        n = r(29928),
+        s = r(15588);
       const o = i.Message;
       var l, c, u, m, d, _, B, g, y, b, M;
       !(function (e) {
@@ -51367,10 +51367,10 @@ var CLSTAMP = "8731355";
             });
         })(M || (M = {}));
     },
-    47829: (e, t, r) => {
+    87081: (e, t, r) => {
       r.d(t, { YN: () => m });
       var i = r(2260);
-      r(26513);
+      r(4093);
       i.Message;
       var a, n, s, o, l, c, u, m, d;
       !(function (e) {
@@ -51524,10 +51524,10 @@ var CLSTAMP = "8731355";
           "k_EKeyEscrowUsageStreamingDevice";
       })(d || (d = {}));
     },
-    56493: (e, t, r) => {
+    63143: (e, t, r) => {
       r.d(t, { Pn: () => u });
       var i = r(2260);
-      r(26513);
+      r(4093);
       i.Message;
       var a,
         n,
@@ -52016,11 +52016,11 @@ var CLSTAMP = "8731355";
         (e[(e.SUCCEEDED = 0)] = "SUCCEEDED"), (e[(e.FAILED = 1)] = "FAILED");
       })(C || (C = {}));
     },
-    56708: (e, t, r) => {
+    44055: (e, t, r) => {
       r.d(t, { Ly: () => m, kX: () => oe, mm: () => te, q5: () => Be });
       var i = r(2260),
-        a = r(26513),
-        n = r(42366);
+        a = r(4093),
+        n = r(29928);
       const s = i.Message;
       var o, l, c, u, m;
       !(function (e) {
@@ -57155,13 +57155,13 @@ var CLSTAMP = "8731355";
           });
       })(m || (m = {}));
     },
-    2293: (e, t, r) => {
+    66718: (e, t, r) => {
       r.d(t, { GJ: () => P, Ug: () => te, d6: () => f });
       var i = r(2260),
-        a = r(26513),
-        n = r(42366),
-        s = r(75168),
-        o = r(30076);
+        a = r(4093),
+        n = r(29928),
+        s = r(72237),
+        o = r(15588);
       const l = i.Message;
       var c, u, m, d, _, B, g, y, b, M, p, S, w, R, E, F, f, z;
       !(function (e) {
@@ -60701,7 +60701,7 @@ var CLSTAMP = "8731355";
           };
         })(z || (z = {}));
     },
-    35239: (e, t, r) => {
+    70064: (e, t, r) => {
       r.d(t, {
         Ac: () => c,
         Qn: () => U,
@@ -60714,9 +60714,9 @@ var CLSTAMP = "8731355";
         vn: () => l,
       });
       var i = r(2260),
-        a = r(26513),
-        n = r(42366),
-        s = r(75168);
+        a = r(4093),
+        n = r(29928),
+        s = r(72237);
       const o = i.Message;
       var l, c, u, m, d, _;
       !(function (e) {
@@ -63981,12 +63981,12 @@ var CLSTAMP = "8731355";
           });
       })(_ || (_ = {}));
     },
-    44009: (e, t, r) => {
+    30923: (e, t, r) => {
       var i = r(2260),
-        a = r(26513),
-        n = r(42366),
-        s = r(75168),
-        o = r(35239);
+        a = r(4093),
+        n = r(29928),
+        s = r(72237),
+        o = r(70064);
       const l = i.Message;
       var c, u;
       !(function (e) {
@@ -64850,11 +64850,11 @@ var CLSTAMP = "8731355";
           });
       })(u || (u = {}));
     },
-    83272: (e, t, r) => {
+    98154: (e, t, r) => {
       r.d(t, { AX: () => w, Sz: () => z, _w: () => p });
       var i = r(2260),
-        a = r(26513),
-        n = r(42366);
+        a = r(4093),
+        n = r(29928);
       const s = i.Message;
       class o extends s {
         static ImplementsStaticInterface() {}
@@ -66235,7 +66235,7 @@ var CLSTAMP = "8731355";
           });
       })(z || (z = {}));
     },
-    13486: (e, t, r) => {
+    88073: (e, t, r) => {
       r.d(t, { qI: () => s, yX: () => n });
       var i = r(2260);
       i.Message;
@@ -66449,11 +66449,11 @@ var CLSTAMP = "8731355";
             ] = "k_EWebAPIPartnerGroupPermission_Support_HardwareRMAInfo");
         })(d || (d = {}));
     },
-    43303: (e, t, r) => {
+    55810: (e, t, r) => {
       r.d(t, { A_: () => S, Q_: () => p, kI: () => m });
       var i = r(2260),
-        a = r(26513),
-        n = r(42366);
+        a = r(4093),
+        n = r(29928);
       const s = i.Message;
       var o, l, c, u, m, d, _;
       !(function (e) {
@@ -67102,7 +67102,7 @@ var CLSTAMP = "8731355";
           };
         })(_ || (_ = {}));
     },
-    34099: (e, t, r) => {
+    74512: (e, t, r) => {
       r.d(t, {
         Jv: () => M,
         Ky: () => g,
@@ -67115,8 +67115,8 @@ var CLSTAMP = "8731355";
         zQ: () => o,
       });
       var i = r(2260),
-        a = r(26513),
-        n = r(42366);
+        a = r(4093),
+        n = r(29928);
       const s = i.Message;
       class o extends s {
         static ImplementsStaticInterface() {}
@@ -68496,11 +68496,11 @@ var CLSTAMP = "8731355";
             });
         })(C || (C = {}));
     },
-    65517: (e, t, r) => {
+    2974: (e, t, r) => {
       r.d(t, { Kp: () => B, Mm: () => o, VG: () => d, dF: () => g });
       var i = r(2260),
-        a = r(26513),
-        n = r(42366);
+        a = r(4093),
+        n = r(29928);
       const s = i.Message;
       class o extends s {
         static ImplementsStaticInterface() {}
@@ -68964,7 +68964,7 @@ var CLSTAMP = "8731355";
             });
         })(g || (g = {}));
     },
-    2507: (e, t, r) => {
+    83279: (e, t, r) => {
       r.d(t, {
         $2: () => B,
         $J: () => M,
@@ -68988,7 +68988,7 @@ var CLSTAMP = "8731355";
         s7: () => F,
       });
       var i = r(2260),
-        a = r(26513);
+        a = r(4093);
       const n = i.Message;
       var s;
       !(function (e) {
@@ -69977,10 +69977,10 @@ var CLSTAMP = "8731355";
         }
       }
     },
-    83213: (e, t, r) => {
+    77615: (e, t, r) => {
       r.d(t, { AZ: () => s, _5: () => o });
       var i = r(2260),
-        a = r(26513);
+        a = r(4093);
       const n = i.Message;
       var s;
       !(function (e) {
@@ -70110,7 +70110,7 @@ var CLSTAMP = "8731355";
         }
       }
     },
-    39110: (e, t, r) => {
+    89778: (e, t, r) => {
       r.d(t, {
         CO: () => o,
         Fy: () => s,
@@ -70125,7 +70125,7 @@ var CLSTAMP = "8731355";
         tV: () => g,
       });
       var i = r(2260),
-        a = r(26513);
+        a = r(4093);
       const n = i.Message;
       class s extends n {
         static ImplementsStaticInterface() {}
@@ -70712,7 +70712,7 @@ var CLSTAMP = "8731355";
         }
       }
     },
-    91464: (e, t, r) => {
+    99942: (e, t, r) => {
       r.d(t, { Np: () => a });
       var i = r(2260);
       i.Message;
@@ -70727,12 +70727,12 @@ var CLSTAMP = "8731355";
           (e[(e.k_EClientExecutionSiteAny = 3)] = "k_EClientExecutionSiteAny");
       })(a || (a = {}));
     },
-    73428: (e, t, r) => {
+    10527: (e, t, r) => {
       r.d(t, { du: () => c, gi: () => B, iR: () => l });
       var i = r(2260),
-        a = r(26513),
-        n = r(42366),
-        s = r(70201);
+        a = r(4093),
+        n = r(29928),
+        s = r(53400);
       const o = i.Message;
       class l extends o {
         static ImplementsStaticInterface() {}
@@ -71247,12 +71247,12 @@ var CLSTAMP = "8731355";
           });
       })(B || (B = {}));
     },
-    23111: (e, t, r) => {
+    97466: (e, t, r) => {
       r.d(t, { np: () => l, zw: () => m });
       var i = r(2260),
-        a = r(26513),
-        n = r(42366),
-        s = r(70201);
+        a = r(4093),
+        n = r(29928),
+        s = r(53400);
       const o = i.Message;
       class l extends o {
         static ImplementsStaticInterface() {}

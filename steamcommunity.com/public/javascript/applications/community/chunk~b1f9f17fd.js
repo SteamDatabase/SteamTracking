@@ -25767,11 +25767,11 @@
               "div",
               { className: Re.Right },
               d.createElement(
-                "a",
+                J.ns,
                 {
                   href: h.De.PARTNER_BASE_URL + "doc/store/promo",
                   className: (0, H.Z)(F.EditPreviewButton),
-                  target: "_blank",
+                  bForceExternal: !0,
                 },
                 (0, E.Xx)("#ViewDocumentation"),
               ),
@@ -25781,7 +25781,7 @@
                   : t.strSalePageApprovalHelpTicketReferenceCode
               )
                 ? d.createElement(
-                    "a",
+                    J.ns,
                     {
                       href: `${h.De.HELP_BASE_URL}ticketmaster/ticket/${
                         null === (a = null == p ? void 0 : p.jsonData) ||
@@ -25794,7 +25794,7 @@
                         F.Button,
                         F.Primary,
                       ),
-                      target: "_blank",
+                      bForceExternal: !0,
                     },
                     (0, E.Xx)("#EventEditor_SaleValveApproval_Request_Link"),
                   )
@@ -26009,8 +26009,8 @@
                                     ),
                                   ),
                                   d.createElement(
-                                    "a",
-                                    { href: e.help_url, target: "_blank" },
+                                    J.ns,
+                                    { href: e.help_url, bForceExternal: !0 },
                                     (0, E.Xx)(
                                       "#EventEditor_SaleValveApproval_Request_Link",
                                     ),
