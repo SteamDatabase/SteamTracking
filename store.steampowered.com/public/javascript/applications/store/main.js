@@ -36944,7 +36944,7 @@
                 });
               })(e, t, n);
             }),
-          { staleTime: 1 / 0, enabled: m.L7.logged_in },
+          { staleTime: 1 / 0, enabled: m.L7.logged_in || !re(t) },
         );
       }
       function Q() {
