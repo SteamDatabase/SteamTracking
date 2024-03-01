@@ -367,7 +367,7 @@
         Zz: () => K,
         nM: () => ee,
         a8: () => A,
-        d2: () => Z,
+        d2: () => z,
         RY: () => V,
         UN: () => te,
         NR: () => O,
@@ -574,7 +574,7 @@
         return (
           !e.hidden &&
           (S((t = e.notification_type)) || b(t) || k(t)) &&
-          Z(e.body_data)
+          z(e.body_data)
         );
         var t;
       }
@@ -945,7 +945,7 @@
           switch (l) {
             case 3:
               {
-                const a = z(t);
+                const a = Z(t);
                 if (!a) return;
                 const o =
                   "comment_" +
@@ -990,7 +990,7 @@
               }
               break;
             case 4:
-              const s = z(t);
+              const s = Z(t);
               if (s) {
                 const i = "item_" + s.appid;
                 this.AddNotificationToRollupByAppID(e, t, i, l, r, s.appid);
@@ -998,7 +998,7 @@
               break;
             case 12:
               const c =
-                null === (a = z(t)) || void 0 === a
+                null === (a = Z(t)) || void 0 === a
                   ? void 0
                   : a.appid.toString();
               if (c) {
@@ -1007,7 +1007,7 @@
               }
               break;
             case 8:
-              const d = null === (o = z(t)) || void 0 === o ? void 0 : o.appid;
+              const d = null === (o = Z(t)) || void 0 === o ? void 0 : o.appid;
               d && m.Z.Get().QueueAppRequest(d, { include_assets: !0 });
             default:
               e.push({
@@ -1178,7 +1178,7 @@
       function W(e) {
         return j(e);
       }
-      function Z(e) {
+      function z(e) {
         try {
           return JSON.parse(e);
         } catch (t) {
@@ -1186,7 +1186,7 @@
         }
         return null;
       }
-      function z(e) {
+      function Z(e) {
         return Y(e.notification_type, e.body_data);
       }
       function K(e) {
@@ -1198,7 +1198,7 @@
       }
       function Y(e, t) {
         var i, n, a, o;
-        let r = Z(t);
+        let r = z(t);
         if (!r) return null;
         switch (e) {
           case 2:
@@ -1296,7 +1296,7 @@
       const $ = {
         0: { rollup_field: void 0, eFeature: void 0 },
         1: { rollup_field: void 0, eFeature: void 0 },
-        2: { rollup_field: "gifts", eFeature: 1 },
+        2: { rollup_field: "gifts", eFeature: d.zE },
         3: { rollup_field: "comments", eFeature: 2 },
         4: { rollup_field: "inventory_items", eFeature: 3 },
         5: { rollup_field: "invites", eFeature: 4 },
@@ -2080,7 +2080,7 @@
               ),
             );
       }
-      function Z(e) {
+      function z(e) {
         var t, i, a, o;
         let {
             currentUserSteamID: r,
@@ -2220,7 +2220,7 @@
               ),
             );
       }
-      function z(e) {
+      function Z(e) {
         let {
           app: t,
           fallbackLogo: i,
@@ -2419,7 +2419,7 @@
                 m(() => {}, r.item, e);
               },
             },
-            n.createElement(Z, {
+            n.createElement(z, {
               fallbackLogo: n.createElement(g.ui7, null),
               icon: n.createElement(g.svY, null),
               onActivate: () => m(() => window.location.assign(y), r.item),
@@ -2469,7 +2469,7 @@
           return n.createElement(
             "a",
             { href: _, onMouseDown: (e) => i(() => {}, t.item, e) },
-            n.createElement(z, {
+            n.createElement(Z, {
               fallbackLogo: n.createElement(g.ui7, null),
               icon: n.createElement(g.yh4, null),
               onActivate: () => i(() => window.location.assign(_), t.item),
