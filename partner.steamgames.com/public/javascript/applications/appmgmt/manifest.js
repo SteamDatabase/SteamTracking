@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "8735504";
+var CLSTAMP = "8736450";
 (() => {
   "use strict";
   var e,
@@ -298,7 +298,7 @@ var CLSTAMP = "8735504";
         3685: "417adc7a0da962b77143",
         3768: "f88b2190aaf269642b29",
         3786: "024e990ab7086cfdf0a6",
-        3863: "4c4cb96793b9ad4cdf3f",
+        3863: "d43cfd671b4427786f37",
         4033: "d19b5657b1f3b9e79466",
         4103: "5515c83fdb596d3e8ef8",
         4108: "73d40ab034e648dc4176",
