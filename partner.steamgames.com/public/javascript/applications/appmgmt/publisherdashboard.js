@@ -1404,12 +1404,12 @@
                 T.getTime() <= K(u.endDate).getTime(),
               C = (0, p.Z)(
                 d.Day,
-                (!f || (!N && !k)) && d.OtherMonth,
+                !f && !k && d.OtherMonth,
                 !y && d.Inactive,
                 I && d.Today,
-                S && d.Deadline,
-                w && d.Release,
-                R && d.Event,
+                S && N && d.Deadline,
+                w && N && d.Release,
+                R && N && d.Event,
                 k && y && d.Hovered,
               ),
               x = () => {
