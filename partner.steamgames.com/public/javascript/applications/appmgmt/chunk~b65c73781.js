@@ -65243,7 +65243,7 @@
                     if (!a) return null;
                     const i = n ? "?t=" + n : "",
                       l = (0, Fe.j_)(t);
-                    return `${Pe.De.MEDIA_CDN_URL}steam/spotlights/${e}/${a[l]}${i}`;
+                    return `${Pe.De.MEDIA_CDN_URL}steam/clusters/spotlights/${e}/${a[l]}${i}`;
                   })(a, e, i, n)
                 : null;
             },
@@ -65308,11 +65308,8 @@
           fnOnRevert: () => t.RevertChanges(),
           fnOnSave: () =>
             (0, T.mG)(this, void 0, void 0, function* () {
-              return (
-                (yield n(a.R6.k_ConfigPage_Spotlight, r)) &&
-                  t.Reset(Ne(a.R6.k_ConfigPage_Spotlight, l)),
-                !0
-              );
+              const e = yield n(a.R6.k_ConfigPage_Spotlight, r);
+              return e && t.Reset(Ne(a.R6.k_ConfigPage_Spotlight, l)), e;
             }),
         });
       }
@@ -65818,7 +65815,8 @@
           bSaveDisabled: 0 == s,
           fnOnSave: () =>
             (0, T.mG)(this, void 0, void 0, function* () {
-              return (yield n(i, r)) && t.Reset(Ne(i, l), i), !0;
+              const e = yield n(i, r);
+              return e && t.Reset(Ne(i, l), i), e;
             }),
         });
       }
