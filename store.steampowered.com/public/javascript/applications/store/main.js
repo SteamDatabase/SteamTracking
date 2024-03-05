@@ -12820,12 +12820,13 @@
         Hf: () => c,
         OL: () => a,
         ZP: () => m,
+        bP: () => h,
         mY: () => u,
       });
       var i = n(85556),
         r = n(62210),
         s = n(13499),
-        o = n(37563);
+        o = n(65255);
       function a(e, t = "", n = null) {
         return d.InstrumentLink(e, t, n);
       }
@@ -12975,11 +12976,24 @@
           if (t && d.sm_rgNavEventDictionary)
             for (const e in d.sm_rgNavEventDictionary)
               if (d.sm_rgNavEventDictionary[e] == t) return e;
-          return e && e.match(/^[a-zA-Z0-9\- ]*$/) ? e : "";
+          return d.SanitizeEventComponent(e);
+        }
+        static SanitizeEventComponent(e) {
+          return e && e.match(/^[a-zA-Z0-9\-.]*$/) ? e : "";
         }
       }
       d.sm_bIsLoaded = !1;
       const m = d;
+      function h(e) {
+        return Object.assign(Object.assign({}, e), {
+          domain: d.SanitizeEventComponent(e.domain),
+          controller: d.SanitizeEventComponent(e.controller),
+          method: d.SanitizeEventComponent(e.method),
+          submethod: d.SanitizeEventComponent(e.submethod),
+          feature: d.SanitizeEventComponent(e.feature),
+          depth: e.depth || 0,
+        });
+      }
     },
     43235: (e, t, n) => {
       "use strict";
@@ -36380,23 +36394,23 @@
     45137: (e, t, n) => {
       "use strict";
       n.d(t, {
-        AL: () => ie,
-        G1: () => q,
-        IW: () => Z,
-        bn: () => ne,
-        dW: () => Q,
-        fn: () => G,
-        g1: () => B,
-        i2: () => F,
-        jy: () => K,
-        mI: () => j,
-        n$: () => ue,
-        nt: () => le,
-        tI: () => z,
-        tM: () => ae,
-        td: () => te,
-        wN: () => ce,
-        z5: () => J,
+        AL: () => re,
+        G1: () => K,
+        IW: () => z,
+        bn: () => ie,
+        dW: () => J,
+        fn: () => F,
+        g1: () => N,
+        i2: () => V,
+        jy: () => X,
+        mI: () => W,
+        n$: () => de,
+        nt: () => ce,
+        tI: () => q,
+        tM: () => le,
+        td: () => ne,
+        wN: () => ue,
+        z5: () => ee,
       });
       var i = n(85556),
         r = n(47427),
@@ -36427,27 +36441,28 @@
         R = n(86437),
         A = n(58501),
         T = n(43981),
-        O = n(92686);
-      function k(e) {
-        return re(e) ? e.type : e.gid;
-      }
+        O = n(92686),
+        k = n(31421);
       function x(e) {
-        return ["shopping_cart", k(e), m.L7.accountid];
+        return se(e) ? e.type : e.gid;
       }
-      function B() {
+      function B(e) {
+        return ["shopping_cart", x(e), m.L7.accountid];
+      }
+      function N() {
         const e = (0, l.bY)(),
           t = (0, T.tv)();
         return (0, o.useQuery)(
-          x(t),
+          B(t),
           () =>
             (0, i.mG)(this, void 0, void 0, function* () {
-              return P(e, t);
+              return G(e, t);
             }),
           {
             enabled: !!t,
             initialData: () => {
               var e, n;
-              if (re(t)) {
+              if (se(t)) {
                 const t =
                   null === (e = (0, s.T)(!0)) || void 0 === e
                     ? void 0
@@ -36471,14 +36486,14 @@
                       : null == n
                       ? void 0
                       : n.shoppingcart),
-                  N(i)
+                  P(i)
                 );
               }
             },
           },
         );
       }
-      function N(e) {
+      function P(e) {
         var t;
         let n = { line_items: [] };
         return (
@@ -36533,10 +36548,10 @@
           n
         );
       }
-      function P(e, t) {
+      function G(e, t) {
         var n;
         return (0, i.mG)(this, void 0, void 0, function* () {
-          if (re(t)) {
+          if (se(t)) {
             const t = a.gA.Init(d.rm);
             t.Body().set_user_country(m.L7.country_code);
             const i = yield d.Wr.GetCart(e, t);
@@ -36547,14 +36562,14 @@
           {
             const n = a.gA.Init(u.AC);
             n.Body().set_gidshoppingcart(t.gid);
-            return N(
+            return P(
               (yield u.FP.GetShoppingCartContents(e, n)).Body().toObject()
                 .contents,
             );
           }
         });
       }
-      function G(e) {
+      function F(e) {
         const t = (0, l.bY)(),
           n = (0, o.useQueryClient)(),
           r = (0, T.tv)();
@@ -36563,7 +36578,7 @@
             (0, i.mG)(this, void 0, void 0, function* () {
               return yield (function (e, t, n) {
                 return (0, i.mG)(this, void 0, void 0, function* () {
-                  if (re(t)) {
+                  if (se(t)) {
                     const t = a.gA.Init(d.CQ);
                     t.Body().set_line_item_id(n),
                       t.Body().set_user_country(m.L7.country_code);
@@ -36582,12 +36597,12 @@
             }),
           {
             onSuccess() {
-              H(n, r);
+              U(n, r);
             },
           },
         );
       }
-      function F() {
+      function V() {
         const e = (0, l.bY)(),
           t = (0, o.useQueryClient)(),
           n = (0, T.tv)();
@@ -36596,12 +36611,12 @@
             (0, i.mG)(this, void 0, void 0, function* () {
               return yield (function (e, t) {
                 return (0, i.mG)(this, void 0, void 0, function* () {
-                  if (re(t)) {
+                  if (se(t)) {
                     const t = a.gA.Init(d.AQ);
                     return (yield d.Wr.DeleteCart(e, t)).BSuccess();
                   }
                   {
-                    const n = yield P(e, t);
+                    const n = yield G(e, t);
                     if (n && n.line_items && n.line_items.length) {
                       const i = a.gA.Init(u.Rg);
                       return (
@@ -36621,22 +36636,22 @@
             }),
           {
             onSuccess() {
-              H(t, n);
+              U(t, n);
             },
           },
         );
       }
-      function V(e, t) {
-        e.invalidateQueries($(t));
-      }
       function H(e, t) {
-        e.invalidateQueries(x(t)), V(e, t);
+        e.invalidateQueries(Y(t));
       }
-      function U(e, t, n) {
-        e.setQueryData(x(t), n), V(e, t);
+      function U(e, t) {
+        e.invalidateQueries(B(t)), H(e, t);
       }
-      function j(e, t, n, r, s, o) {
-        if (re(n)) {
+      function j(e, t, n) {
+        e.setQueryData(B(t), n), H(e, t);
+      }
+      function W(e, t, n, r, s, o) {
+        if (se(n)) {
           const l = (r || []).map((e) => ({ packageid: e }));
           return (
             s && l.push({ bundleid: s }),
@@ -36661,7 +36676,7 @@
                       ),
                     e.bIsGift && t.flags().set_is_gift(!0);
                 }),
-                  n && i.Body().set_navdata(A.K.fromObject(n)),
+                  n && i.Body().set_navdata(A.K.fromObject((0, k.bP)(n))),
                   i.Body().set_user_country(m.L7.country_code);
                 const r = yield d.Wr.AddItemsToCart(e, i);
                 return (
@@ -36676,15 +36691,15 @@
               ([e, i]) => (
                 I.jg.Get().InvalidateCache(),
                 1 == e
-                  ? (U(t, n, i.cart), { success: !0, items: i.line_item_ids })
+                  ? (j(t, n, i.cart), { success: !0, items: i.line_item_ids })
                   : { success: !1, result: e }
               ),
             )
           );
         }
-        return W(e, r, s).then(([e, i]) => {
+        return Z(e, r, s).then(([e, i]) => {
           if ((I.jg.Get().InvalidateCache(), e)) {
-            U(t, n, N(i));
+            j(t, n, P(i));
             const e = (r || []).map((e) =>
               i.lineitems.find((t) => {
                 var n;
@@ -36714,7 +36729,7 @@
           return { success: !1 };
         });
       }
-      function W(e, t, n, r) {
+      function Z(e, t, n, r) {
         var s, o;
         return (0, i.mG)(this, void 0, void 0, function* () {
           const e = new FormData();
@@ -36732,17 +36747,17 @@
           ];
         });
       }
-      function Z() {
-        return !oe((0, T.tv)());
+      function z() {
+        return !ae((0, T.tv)());
       }
-      function z(e, t, n) {
+      function q(e, t, n) {
         const r = (0, T.tv)(),
           s = (0, l.bY)(),
           c = (0, o.useQueryClient)();
         return (0, o.useMutation)({
           mutationFn: () =>
             (0, i.mG)(this, void 0, void 0, function* () {
-              if (re(r))
+              if (se(r))
                 return (function (e, t, n, r, s) {
                   return (0, i.mG)(this, void 0, void 0, function* () {
                     const i = a.gA.Init(d.ll);
@@ -36756,7 +36771,7 @@
                     t && i.Body().set_packageid(t),
                       n && i.Body().set_bundleid(n),
                       i.Body().flags().set_is_gift(r),
-                      s && i.Body().set_navdata(A.K.fromObject(s)),
+                      s && i.Body().set_navdata(A.K.fromObject((0, k.bP)(s))),
                       i.Body().set_user_country(m.L7.country_code);
                     const o = yield d.Wr.AddItemToCart(e, i);
                     return (
@@ -36768,19 +36783,19 @@
                     );
                   });
                 })(s, e, t, n);
-              if (se(r)) return W(0, e ? [e] : void 0, t);
+              if (oe(r)) return Z(0, e ? [e] : void 0, t);
               throw "Invalid cart type";
             }),
           onSuccess: ([e, t]) => {
-            1 == e && U(c, r, t.cart);
+            1 == e && j(c, r, t.cart);
           },
         });
       }
-      function q(e) {
+      function K(e) {
         const t = (0, T.tv)(),
           n = (0, l.bY)(),
           r = (0, o.useQueryClient)(),
-          s = x(t);
+          s = B(t);
         return (0, o.useMutation)({
           mutationFn: (e) =>
             (function (e, t, n, r, s) {
@@ -36822,14 +36837,14 @@
               );
             }),
           onSuccess: ([n, i], o, { previousCart: a }) => {
-            1 == n ? (U(r, t, i.cart), e && e()) : r.setQueryData(s, a);
+            1 == n ? (j(r, t, i.cart), e && e()) : r.setQueryData(s, a);
           },
           onError: (e, t, { previousCart: n }) => {
             r.setQueryData(s, n);
           },
         });
       }
-      function K(e) {
+      function X(e) {
         var t, n;
         const s = (function (e) {
             const t = (0, l.bY)(),
@@ -36904,7 +36919,7 @@
           { rgFriendsForGifting: b, mapNicknames: m.data }
         );
       }
-      function X() {
+      function $() {
         const e = new h.WJ();
         return (
           e.set_country_code(m.L7.country_code),
@@ -36913,24 +36928,24 @@
           e
         );
       }
-      function $(e) {
-        return ["validate_checkout", k(e), m.L7.accountid];
+      function Y(e) {
+        return ["validate_checkout", x(e), m.L7.accountid];
       }
-      function Y() {
+      function Q() {
         const e = (0, l.bY)(),
           t = (0, T.tv)(),
           [n] = (0, T.pf)();
         return (0, o.useQuery)(
-          $(t),
+          Y(t),
           () =>
             (0, i.mG)(this, void 0, void 0, function* () {
               return (function (e, t, n) {
                 return (0, i.mG)(this, void 0, void 0, function* () {
                   const i = a.gA.Init(c.vE);
-                  (se(t) || oe(t)) &&
+                  (oe(t) || ae(t)) &&
                     (i.Body().set_gidshoppingcart(t.gid),
                     n && i.Body().set_gift_info(v.nI.fromObject(n))),
-                    i.Body().set_context(X()),
+                    i.Body().set_context($()),
                     i.Body().data_request().set_include_basic_info(!0),
                     i.Body().data_request().set_include_release(!0);
                   const r = yield c.ZY.ValidateCart(e, i);
@@ -36944,11 +36959,11 @@
                 });
               })(e, t, n);
             }),
-          { staleTime: 1 / 0, enabled: m.L7.logged_in || !re(t) },
+          { staleTime: 1 / 0, enabled: m.L7.logged_in || !se(t) },
         );
       }
-      function Q() {
-        const e = Y();
+      function J() {
+        const e = Q();
         return r.useMemo(() => {
           var t, n;
           let i = new Map(),
@@ -37172,12 +37187,12 @@
           );
         }, [e]);
       }
-      function J(e) {
+      function ee(e) {
         const { mapLineItemToNotices: t, mapValidateNoticesToFootnote: n } =
-          Q();
+          J();
         return [t.get(e) || [], n];
       }
-      function ee(e, t) {
+      function te(e, t) {
         let n = "#Package";
         const i = e.GetSelfPurchaseOption(),
           r = null == i ? void 0 : i.recurrence_info;
@@ -37205,10 +37220,10 @@
           s.discount_pct,
         );
       }
-      function te() {
+      function ne() {
         var e, t;
-        const n = B(),
-          s = Y(),
+        const n = N(),
+          s = Q(),
           c = (function (e) {
             const t = (0, l.bY)(),
               n = e.map(({ packageid: e }) => e).filter(Boolean),
@@ -37229,7 +37244,7 @@
               () =>
                 (0, i.mG)(this, void 0, void 0, function* () {
                   const e = a.gA.Init(h.lj);
-                  e.Body().set_context(X()), e.Body().set_packageid(c);
+                  e.Body().set_context($()), e.Body().set_packageid(c);
                   const n = yield h.VJ.GetHardwareItems(t, e);
                   return (
                     n.BSuccess() ||
@@ -37292,7 +37307,7 @@
                   return (
                     (e[t] = [
                       {
-                        strNotice: ee(
+                        strNotice: te(
                           n,
                           i.GetPackage(
                             n.GetSelfPurchaseOption().recurrence_info.packageid,
@@ -37333,7 +37348,7 @@
           bValidForCheckout: !m,
         };
       }
-      function ne() {
+      function ie() {
         const e = (0, l.bY)();
         return (0, o.useQuery)(
           ["shopping_cart", "relevant_coupons"],
@@ -37357,7 +37372,7 @@
           { enabled: m.L7.logged_in, placeholderData: () => ({}) },
         );
       }
-      function ie() {
+      function re() {
         return (0, o.useQuery)(
           ["shopping_cart", "sale_drop_progress"],
           () =>
@@ -37375,20 +37390,20 @@
           { enabled: m.L7.logged_in && M.C.Get().BIsSaleActive() },
         );
       }
-      function re(e) {
+      function se(e) {
         return "account" === e.type;
       }
-      function se(e) {
+      function oe(e) {
         return "anonymous" === e.type;
       }
-      function oe(e) {
+      function ae(e) {
         return "request" === e.type;
       }
-      function ae() {
+      function le() {
         const e = (0, T.tv)(),
           [t] = (0, T.pf)(),
           n = `${m.De.STORE_CHECKOUT_BASE_URL}checkout/`;
-        if (re(e)) return `${n}?accountcart=1`;
+        if (se(e)) return `${n}?accountcart=1`;
         {
           const i = new URLSearchParams();
           return (
@@ -37402,15 +37417,15 @@
           );
         }
       }
-      function le() {
-        const e = (0, T.tv)();
-        return oe(e) ? e.requestID : null;
-      }
       function ce() {
+        const e = (0, T.tv)();
+        return ae(e) ? e.requestID : null;
+      }
+      function ue() {
         var e;
         const t = (0, T.tv)(),
           n = (0, O.Rs)(),
-          i = B(),
+          i = N(),
           r = n.isSuccess && 2 == n.data.role(),
           s =
             (null === (e = i.data) || void 0 === e ? void 0 : e.line_items) ||
@@ -37427,12 +37442,12 @@
                   : t.user_can_purchase_as_gift);
               })
             : null;
-        return !(!r || oe(t) || !s || !a) && 0 === c.length;
+        return !(!r || ae(t) || !s || !a) && 0 === c.length;
       }
-      function ue() {
+      function de() {
         const e = (0, T.tv)(),
           t = (0, O.Rs)();
-        return t.isSuccess && 1 == t.data.role() && oe(e);
+        return t.isSuccess && 1 == t.data.role() && ae(e);
       }
     },
     43981: (e, t, n) => {

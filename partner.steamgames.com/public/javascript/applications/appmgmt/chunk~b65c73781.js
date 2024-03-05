@@ -2193,7 +2193,7 @@
     },
     2026: (e, t, n) => {
       "use strict";
-      n.d(t, { Y: () => i, e: () => l });
+      n.d(t, { Y8: () => i, eJ: () => l, rP: () => r });
       var a = n(77936);
       function i(e, t) {
         const n = (0, a.j_)(t);
@@ -2202,6 +2202,14 @@
       function l(e, t, n) {
         const i = (0, a.j_)(t);
         return e[i] != n && ((e[i] = n), !0);
+      }
+      function r(e) {
+        if (!e) return 0;
+        let t = 0;
+        for (let n = 0; n < 31; ++n) {
+          e[(0, a.j_)(n)] && (t += 1);
+        }
+        return t;
       }
     },
     90286: (e, t, n) => {
@@ -17945,10 +17953,10 @@
           );
         }
         SetKVLang(e, t, n) {
-          (0, E.e)(e, t, n) && this.SetDirty(!0);
+          (0, E.eJ)(e, t, n) && this.SetDirty(!0);
         }
         GetKVLang(e, t) {
-          return (0, E.Y)(e, t);
+          return (0, E.Y8)(e, t);
         }
         AddDynamicSection() {
           this.m_model.dynamic_sections || (this.m_model.dynamic_sections = []),
@@ -64899,6 +64907,9 @@
         GetTitle() {
           return this.m_oSpotlight.title;
         }
+        GetAssetCount() {
+          return (0, ht.rP)(this.m_oSpotlight.image);
+        }
         GetAssetUpdateTime() {
           return this.m_oSpotlight.asset_mtime;
         }
@@ -64943,7 +64954,9 @@
           this.SetImage(Ve.U.Get().GetCurEditLanguage(), e), this.Dispatch();
         }
         SetImage(e, t) {
-          this.SetKVLang(this.m_oSpotlight.image, e, t), this.Dispatch();
+          this.m_oSpotlight.image || (this.m_oSpotlight.image = {}),
+            this.SetKVLang(this.m_oSpotlight.image, e, t),
+            this.Dispatch();
         }
         ClearAllAssetObjects() {
           (this.m_oSpotlight.image = {}), this.Dispatch();
@@ -64956,10 +64969,10 @@
             : t[n]) && (delete this.m_oSpotlight.image[n], this.Dispatch());
         }
         SetKVLang(e, t, n) {
-          (0, ht.e)(e, t, n) && this.SetDirty(!0);
+          (0, ht.eJ)(e, t, n) && this.SetDirty(!0);
         }
         GetKVLang(e, t) {
-          return (0, ht.Y)(e, t);
+          return (0, ht.Y8)(e, t);
         }
         Dispatch() {
           (this.m_bDirty = !0), this.m_callback.Dispatch(this);
@@ -65049,7 +65062,7 @@
         ft = n(8897),
         yt = n(62210);
       function bt(e) {
-        const { bIsDirty: t, fnOnRevert: n, fnOnSave: a } = e;
+        const { bIsDirty: t, fnOnRevert: n, fnOnSave: a, bSaveDisabled: i } = e;
         return u.createElement(
           "div",
           { className: (0, k.Z)(g().SectionCtn, g().ActionBar) },
@@ -65059,6 +65072,7 @@
             u.createElement(
               v.KM,
               {
+                disabled: i,
                 onClick: (e) =>
                   (0, f.AM)(u.createElement(It, { fnOnSave: a }), (0, A.RA)(e)),
               },
@@ -65282,9 +65296,15 @@
       function Pt(e) {
         const { oEditableSpotlight: t } = e,
           { fnSaveClusterAssets: n } = Ge(),
-          [i, l, r] = (0, d.SZ)(() => [t.BIsDirty(), t.GetID(), t.GetModel()]);
+          [i, l, r, s] = (0, d.SZ)(() => [
+            t.BIsDirty(),
+            t.GetID(),
+            t.GetModel(),
+            t.GetAssetCount(),
+          ]);
         return u.createElement(bt, {
           bIsDirty: i,
+          bSaveDisabled: 0 == s,
           fnOnRevert: () => t.RevertChanges(),
           fnOnSave: () =>
             (0, T.mG)(this, void 0, void 0, function* () {
@@ -65364,6 +65384,12 @@
         GetPromoModifyTime() {
           return this.m_oTakeover.promo_mtime;
         }
+        GetAssetCount() {
+          let e = 0;
+          return (
+            Ie.forEach((t) => (e += (0, ht.rP)(this.GetAssetsObject(t)))), e
+          );
+        }
         GetAssetUpdateTime() {
           return this.m_oTakeover.promo_mtime;
         }
@@ -65389,7 +65415,9 @@
           this.SetImage(e, Ve.U.Get().GetCurEditLanguage(), t), this.Dispatch();
         }
         SetImage(e, t, n) {
-          this.SetKVLang(this.m_oTakeover[e], t, n), this.Dispatch();
+          this.m_oTakeover[e] || (this.m_oTakeover[e] = {}),
+            this.SetKVLang(this.m_oTakeover[e], t, n),
+            this.Dispatch();
         }
         ClearAllAssetObjects(e) {
           (this.m_oTakeover[e] = {}), this.Dispatch();
@@ -65402,10 +65430,10 @@
             : n[a]) && (delete this.m_oTakeover[e][a], this.Dispatch());
         }
         SetKVLang(e, t, n) {
-          (0, ht.e)(e, t, n) && this.SetDirty(!0);
+          (0, ht.eJ)(e, t, n) && this.SetDirty(!0);
         }
         GetKVLang(e, t) {
-          return (0, ht.Y)(e, t);
+          return (0, ht.Y8)(e, t);
         }
         Dispatch() {
           (this.m_bDirty = !0), this.m_callback.Dispatch(this);
@@ -65777,15 +65805,17 @@
       function Ft(e) {
         const { oEditableTakeover: t } = e,
           { fnSaveClusterAssets: n } = Ge(),
-          [a, i, l, r] = (0, d.SZ)(() => [
+          [a, i, l, r, s] = (0, d.SZ)(() => [
             t.BIsDirty(),
             t.GetType(),
             t.GetID(),
             t.GetModel(),
+            t.GetAssetCount(),
           ]);
         return u.createElement(bt, {
           bIsDirty: a,
           fnOnRevert: () => t.RevertChanges(),
+          bSaveDisabled: 0 == s,
           fnOnSave: () =>
             (0, T.mG)(this, void 0, void 0, function* () {
               return (yield n(i, r)) && t.Reset(Ne(i, l), i), !0;
@@ -65860,6 +65890,12 @@
         GetPromoModifyTime() {
           return this.m_oTakeunder.promo_mtime;
         }
+        GetAssetCount() {
+          let e = 0;
+          return (
+            xe.forEach((t) => (e += (0, ht.rP)(this.GetAssetsObject(t)))), e
+          );
+        }
         GetAssetUpdateTime() {
           return this.m_oTakeunder.promo_mtime;
         }
@@ -65885,7 +65921,9 @@
           this.SetImage(e, Ve.U.Get().GetCurEditLanguage(), t), this.Dispatch();
         }
         SetImage(e, t, n) {
-          this.SetKVLang(this.m_oTakeunder[e], t, n), this.Dispatch();
+          this.m_oTakeunder[e] || (this.m_oTakeunder[e] = {}),
+            this.SetKVLang(this.m_oTakeunder[e], t, n),
+            this.Dispatch();
         }
         ClearAllAssetObjects(e) {
           (this.m_oTakeunder[e] = {}), this.Dispatch();
@@ -65898,10 +65936,10 @@
             : n[a]) && (delete this.m_oTakeunder[e][a], this.Dispatch());
         }
         SetKVLang(e, t, n) {
-          (0, ht.e)(e, t, n) && this.SetDirty(!0);
+          (0, ht.eJ)(e, t, n) && this.SetDirty(!0);
         }
         GetKVLang(e, t) {
-          return (0, ht.Y)(e, t);
+          return (0, ht.Y8)(e, t);
         }
         Dispatch() {
           (this.m_bDirty = !0), this.m_callback.Dispatch(this);
@@ -66202,17 +66240,20 @@
       function zt(e) {
         const { oEditableTakeunder: t } = e,
           { fnSaveClusterAssets: n } = Ge(),
-          [i, l, r] = (0, d.SZ)(() => [t.BIsDirty(), t.GetID(), t.GetModel()]);
+          [i, l, r, s] = (0, d.SZ)(() => [
+            t.BIsDirty(),
+            t.GetID(),
+            t.GetModel(),
+            t.GetAssetCount(),
+          ]);
         return u.createElement(bt, {
           bIsDirty: i,
+          bSaveDisabled: 0 == s,
           fnOnRevert: () => t.RevertChanges(),
           fnOnSave: () =>
             (0, T.mG)(this, void 0, void 0, function* () {
-              return (
-                (yield n(a.R6.k_ConfigPage_Takeunder, r)) &&
-                  t.Reset(Ne(a.R6.k_ConfigPage_Takeunder, l)),
-                !0
-              );
+              const e = yield n(a.R6.k_ConfigPage_Takeunder, r);
+              return e && t.Reset(Ne(a.R6.k_ConfigPage_Takeunder, l)), e;
             }),
         });
       }
