@@ -65198,6 +65198,12 @@
             { className: g().SectionCtn },
             u.createElement("h2", { className: "inline" }, "SPOTLIGHT ASSETS"),
             u.createElement("hr", null),
+            Boolean("dev" == Pe.De.WEB_UNIVERSE) &&
+              u.createElement(
+                "div",
+                { className: nt.WarningStylesWithIcon },
+                "Remember: To be able to upload assets in DEV you need to be VPN'ed into the RACK.",
+              ),
             u.createElement(Dt.j, {
               rgSupportArtwork: n,
               rgRealmList: a,
@@ -65243,7 +65249,7 @@
                     if (!a) return null;
                     const i = n ? "?t=" + n : "",
                       l = (0, Fe.j_)(t);
-                    return `${Pe.De.MEDIA_CDN_URL}steam/clusters/spotlights/${e}/${a[l]}${i}`;
+                    return `${Pe.De.MEDIA_CDN_URL}steam/spotlights/${e}/${a[l]}${i}`;
                   })(a, e, i, n)
                 : null;
             },
