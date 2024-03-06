@@ -35347,10 +35347,14 @@
         return (
           s.useEffect(() => {
             const e = window;
-            return (
-              (e.ShowShoppingCart = () => n([])),
+            (e.ShowShoppingCart = () => n([])),
               (e.HideShoppingCart = () => n(null)),
-              (e.AddItemToCart = d),
+              (e.AddItemToCart = d);
+            let t = window.rgOnAccountCartReadyCallbacks;
+            return (
+              t &&
+                (t.forEach((e) => e()),
+                delete window.rgOnAccountCartReadyCallbacks),
               () => {
                 delete e.ShowShoppingCart,
                   delete e.HideShoppingCart,

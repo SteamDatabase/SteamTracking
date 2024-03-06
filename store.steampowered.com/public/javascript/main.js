@@ -1534,6 +1534,19 @@ function getBestAvailNavData()
 	return  navData;
 }
 
+function AddToAccountCart( subid )
+{
+	let fnAddToCart = function() { addToCart( subid ); };
+	if ( typeof window.AddItemToCart !== 'undefined' )
+	{
+		fnAddToCart();
+	}
+	else
+	{
+		window.rgOnAccountCartReadyCallbacks = ( window.rgOnAccountCartReadyCallbacks || [] ).concat( fnAddToCart );
+	}
+}
+
 // Function to add a package to a cart, assumes form setup on the page
 function addToCart( subid, dedupe )
 {
