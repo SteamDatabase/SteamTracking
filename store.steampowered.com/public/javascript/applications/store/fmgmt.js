@@ -1964,85 +1964,88 @@
             null === (t = (0, G.h)().data) || void 0 === t
               ? void 0
               : t.preferences().parenthesize_nicknames();
-        let d, _;
+        let d,
+          _ = null;
         switch (a.exclude_reason) {
+          case 0:
+            break;
           case 2:
-            d = "#FamilyGame_Excluded_License";
+            _ = "#FamilyGame_Excluded_License";
             break;
           case 3:
           case 29:
-            d = "#FamilyGame_Excluded_FreeApp";
+            _ = "#FamilyGame_Excluded_FreeApp";
             break;
           case 4:
-            d = "#FamilyGame_Excluded_Private";
+            _ = "#FamilyGame_Excluded_Private";
             break;
           case 1:
           case 10:
-            d = "#FamilyGame_Excluded_OptedOut";
+            _ = "#FamilyGame_Excluded_OptedOut";
             break;
           case 7:
-            d = "#FamilyGame_Excluded_Nonrefundable_DLC";
+            _ = "#FamilyGame_Excluded_Nonrefundable_DLC";
             break;
           case 9:
-            d = "#FamilyGame_Excluded_ParentAppExcluded";
+            _ = "#FamilyGame_Excluded_ParentAppExcluded";
             break;
           case 8:
-            d = "#FamilyGame_Excuded_UnreleasedApp";
+            _ = "#FamilyGame_Excuded_UnreleasedApp";
             break;
           case 6:
-            d = "#FamilyGame_Excluded_WrongAppType";
+            _ = "#FamilyGame_Excluded_WrongAppType";
             break;
           case 12:
           case 23:
           case 27:
-            d = "#FamilyGame_Excluded_DevPackage";
+            _ = "#FamilyGame_Excluded_DevPackage";
             break;
           case 14:
-            d = "#FamilyGame_Excluded_FreePromotion";
+            _ = "#FamilyGame_Excluded_FreePromotion";
             break;
           case 13:
-            d = "#FamilyGame_Excluded_FreeWeekend";
+            _ = "#FamilyGame_Excluded_FreeWeekend";
             break;
           case 15:
-            d = "#FamilyGame_Excluded_InvalidPackage";
+            _ = "#FamilyGame_Excluded_InvalidPackage";
             break;
           case 18:
           case 16:
           case 20:
-            d = "#FamilyGame_Excluded_Subscription";
+            _ = "#FamilyGame_Excluded_Subscription";
             break;
           case 11:
-            d = "#FamilyGame_Excluded_SpecialPackage";
+            _ = "#FamilyGame_Excluded_SpecialPackage";
             break;
           case 17:
-            d = "#FamilyGame_Excluded_WrongLicenseType";
+            _ = "#FamilyGame_Excluded_WrongLicenseType";
             break;
           case 19:
-            d = "#FamilyGame_Excluded_NoShareableApps";
+            _ = "#FamilyGame_Excluded_NoShareableApps";
             break;
           case 21:
           case 22:
           case 26:
-            d = "#FamilyGame_Excluded_Borrowed";
+            _ = "#FamilyGame_Excluded_Borrowed";
             break;
           case 24:
-            d = "#FamilyGame_Excluded_LicensePending";
+            _ = "#FamilyGame_Excluded_LicensePending";
             break;
           case 25:
-            d = "#FamilyGame_Excluded_RefundPending";
+            _ = "#FamilyGame_Excluded_RefundPending";
             break;
           case 28:
-            d = "#FamilyGame_Excluded_TimedTrial";
+            _ = "#FamilyGame_Excluded_TimedTrial";
             break;
           case 30:
-            d = "#FamilyGame_Excluded_LicenseInactive";
+            _ = "#FamilyGame_Excluded_LicenseInactive";
             break;
           default:
-            d = "#FamilyGame_Excluded_Unknown";
+            _ = "#FamilyGame_Excluded_Unknown";
         }
         ("date_acquired-asc" != i && "date_acquired-desc" != i) ||
           !a.rt_time_acquired ||
-          (_ = n.createElement(
+          (d = n.createElement(
             "div",
             { className: Ee.Acquired },
             (0, p.Xx)(
@@ -2067,11 +2070,11 @@
         };
         let g, E;
         if (
-          (d &&
+          (_ &&
             (g = n.createElement(
               "div",
               { className: Ee.Excluded },
-              (0, p.Xx)(d) + "",
+              (0, p.Xx)(_) + "",
             )),
           3 != a.exclude_reason)
         )
@@ -2130,7 +2133,7 @@
           { className: Ee.AdditionalHoverCtn },
           g,
           E,
-          _,
+          d,
         );
       }
       function Pe(e) {
