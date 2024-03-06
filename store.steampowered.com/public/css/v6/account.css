@@ -152,21 +152,19 @@
 }
 
 .accountRow.accountBalance {
+	margin-top: 15px;
 	height: 22px;
 	line-height: 22px;
 	margin-bottom: 7px;
+	color: #66c0f4;
 }
 
-
 .accountBalance .price {
-	color: #ffffff;
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: 300; /* light */
 
 			font-size: 24px;
 }
-
-
 
 .account_row .account_data, .account_row a.item_action {
 	float: right;
@@ -181,10 +179,11 @@
 	height: 30px;
 	line-height: 22px;
 	margin-bottom: 7px;
+	color: #66c0f4;
 }
 
 .account_balance .price {
-	color: #ffffff;
+	color: 66c0f4;
 	font-size: 18px;
 }
 
@@ -996,20 +995,22 @@ td.wht_total {
 .account_header_line {
 	background-color: #223D5A;
 	padding: 0 0 0px 4px;
+    font-size: 14px;
+
+    line-height: 31px;
+
+
 	color: #ffffff;
-	font-size: 17px;
-	line-height: 31px;
-	text-transform: uppercase;
-	letter-spacing: 2px;
 }
+
 .account_header_line.noicon {
-	padding-left: 8px;
+	padding-left: 12px;
 }
 
 .account_header_line img {
-	height: 100%;
-	vertical-align: top;
-	padding: 0 6px 0 0;
+	height: 24px;
+	vertical-align: middle;
+	padding: 0 6px 2px 0;
 }
 
 .account_header_title {
@@ -1040,7 +1041,6 @@ td.wht_total {
 
 .account_setting_sub_block_long {
 	padding: 1em;
-	float: left;
 	color: #808891;
 	box-sizing: border-box;
 }
@@ -1078,12 +1078,15 @@ td.wht_total {
 .account_manage_link {
 	margin: 5px 0;
 	display: inline-block;
-	color: #67c1f5;
+	color: #ffffff;
+	padding: 4px 10px;
+	border-radius: 2px;
+	background-color: #f0f8ff12;
 }
 
 .account_manage_link:hover{
-
 	color: #ffffff;
+	background-color: rgba(240, 248, 255, 0.151);
 }
 
 .account_manage_label {
@@ -1092,11 +1095,11 @@ td.wht_total {
 }
 
 .accountData.price a {
-	color: #ffffff;
+	color: #66c0f4;
 }
 
 .accountData.price a:hover {
-	color: #ffffff;
+	color: #66c0f4;
 	text-decoration: underline;
 }
 
@@ -1192,6 +1195,8 @@ td.wht_total {
 	html.responsive td.license_acquisition_col {
 		width: 8em;
 	}
+
+
 }
 
 @media screen and (max-width: 724px )
@@ -1215,7 +1220,6 @@ td.wht_total {
 	html.responsive .account_table td.license_acquisition_col {
 		display: none;
 	}
-
 }
 
 
@@ -1282,7 +1286,6 @@ td.wht_total {
 	color: #b8b6b4;
 	cursor: pointer;
 	font-size: 16px;
-
 }
 
 .account_preferences input[type=checkbox]:disabled+label {

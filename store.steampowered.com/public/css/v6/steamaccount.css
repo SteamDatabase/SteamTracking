@@ -265,8 +265,8 @@ p.currency_change_confirm_dialog_footer {
 		}
 
 		html.responsive.mobile_client .two_column .nav_item.active {
-			background-color: transparent;
 			font-weight: 600;
+			background: linear-gradient(to top, #223D5A, transparent);
 		}
 
 		html.responsive.mobile_client .two_column .nav_item:hover {
@@ -278,19 +278,29 @@ p.currency_change_confirm_dialog_footer {
 		}
 
 		html.responsive.mobile_client .nav_item {
-			text-transform: uppercase;
-			letter-spacing: 1px;
 			font-size: 12px;
 			font-weight: 400;
-			padding: 10px 0px;
+			padding: 10px;
 			margin: 15px 10px;
 			flex: auto;
     		flex-shrink: 0;
 		}
 
 		html.responsive.mobile_client .nav_item.active {
-			border-bottom: 3px solid #07bfff;
 			color: #07bfff;
+			padding-left: 10px;
+			padding-right: 10px;
+			background: linear-gradient(to top, #223D5A, transparent);
+			color: #67c1f5;
+			font-weight: 600;
+		}
+
+		html.responsive.mobile_client .account_settings_container {
+			padding: 4px 8px;
+		}
+
+		html.responsive.mobile_client .account_preferences input[type=checkbox], .account_preferences label {
+			display: contents;
 		}
 }
 
@@ -322,7 +332,7 @@ p.currency_change_confirm_dialog_footer {
 	background: linear-gradient(to right, #223D5A, transparent);
 	position: relative;
 
-	&::after { 
+	&::after {
 		content: '';
 		position: absolute;
 		background: #1a9fff;
@@ -330,14 +340,14 @@ p.currency_change_confirm_dialog_footer {
 		height: 100%;
 		left: 0;
 		top: 0;
-		}
+	}
 }
 
 .two_column .nav_item:hover {
 	background: linear-gradient(to right, #315780, transparent);
 	position: relative;
 
-	&::after { 
+	&::after {
 		content: '';
 		position: absolute;
 		background: #1a9fff;
@@ -345,30 +355,31 @@ p.currency_change_confirm_dialog_footer {
 		height: 100%;
 		left: 0;
 		top: 0;
-		}
+	}
 }
 
 @media screen and (max-width: 910px)
 {
-	.two_column.left {
+	html.responsive .two_column.left {
 		width: auto;
 		margin-bottom: 25px;
 	}
 
-	.two_column .nav_item {
+	html.responsive .two_column .nav_item {
 		display: inline-block;
 
 		&::after {
 			content: none;
 		}
 	}
-	.two_column .nav_item.active {
+
+	html.responsive .two_column .nav_item.active {
 		&::after {
 			content: none;
 		}
 	}
 
-	.two_column .nav_item:hover {
+	html.responsive .two_column .nav_item:hover {
 		&::after {
 			content: none;
 		}
@@ -424,15 +435,44 @@ p.currency_change_confirm_dialog_footer {
 	margin-bottom: 15px;
 	padding: 8px 25px 25px 25px;
 	font-size: 14px;
-	/* line-height: 18px; */
+}
+
+.account_settings_container .dselect_container {
+	width: max-content;
+	min-width: 200px;
+	background-color: rgba(59, 63, 72, 0.5);
+	color: white;
+}
+
+.account_settings_container .dselect_container a.trigger, .dselect_container a.activetrigger {
+	color: white;
+}
+
+.account_settings_container .dselect_container a.trigger {
+	background: rgba( 103, 193, 245, 0.1 );
+}
+
+.account_settings_container .dselect_container a.activetrigger,
+.account_settings_container .dselect_container a.trigger:hover,
+.account_settings_container .dselect_container a.activetrigger:hover {
+	background-color: #464d58;
+}
+
+#primary_language_droplist li .highlighted_selection {
+	background: #dcdedf;
+	color: #3D4450;
+}
+
+#primary_language_droplist {
+	background-color: #464d58;
 }
 
 body.v6 .account_settings_container h2 {
-	text-transform: uppercase;
 	color: #fff;
 	margin: 5px 0 0px;
 	font-size: 17px;
-	letter-spacing: 2px;
+	text-transform: capitalize;
+	font-weight: 500;
 }
 
 body.v6 .account_settings_container h3 {
@@ -448,7 +488,7 @@ body.v6 .account_settings_container .h3_content {
 }
 
 .account_settings_container p {
-	padding: 10px 0;
+	padding: 6px 0;
 }
 
 .account_settings_container .hspacer {
@@ -523,7 +563,7 @@ body.v6 .account_settings_container .h3_content {
 	height: 0;
 	border-top: 0px solid rgba(0, 0, 0, 0.1);
 	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-	margin-top: 4px;
+	margin-top: 16px;
 }
 
 .account_preferences input.gray_bevel,
@@ -599,21 +639,29 @@ body.v6 .account_settings_container .h3_content {
 	margin: -4px -8px 0 -8px;
 	padding: 4px 8px 8px 8px;
 }
+
 #text_filter_lab_experiment {
 	background: linear-gradient(180deg, #0a3963 0%, #16202D 100%);
 	margin: -16px -8px 0 -8px;
 	padding: 0 8px 0 8px;
 }
+
 .text_filter_action_link,
 .text_filter_action_link a {
 	color: #c0f3ff;
 	font-size: 14px;
 	cursor: pointer;
+	border-radius: 2px;
+    background-color: #f0f8ff12;
+    padding: 10px;
 }
+
 .text_filter_action_link:hover,
 .text_filter_action_link:hover a {
 	color: #ffffff;
+	background-color: rgba(240, 248, 255, 0.151);
 }
+
 #text_filter_custom_banned_words_ctn .tag_downvoted,
 #text_filter_custom_clean_words_ctn .tag_downvoted {
 	display: inline-block;
@@ -657,12 +705,12 @@ body.v6 .account_settings_container .h3_content {
 	background-position: 0px 1px;
 }
 .text_filter_toggle_icon.down {
-	background-position: 0px -10px;
+	background-position: 0px -9px;
 }
 
 .queue_customize,
 .preferences_link {
-	padding: 5px 0;
+	padding: 10px;
 	color: #63c1f5;
 	cursor: pointer;
 }
@@ -797,6 +845,8 @@ input[type=date] {
 body.v6 h2.pageheader.youraccount_pageheader {
 	margin-top: 0;
 	margin-bottom: 0;
+	font-weight: 700;
+	text-transform: capitalize;
 }
 
 .youraccount_steamid {
@@ -1056,6 +1106,10 @@ body.v6 h2.pageheader.youraccount_pageheader {
     "desc store_col community_col";
 	border-bottom: 1px solid #324a67;
 	margin-bottom: 4px;
+}
+
+.preference_row:first-of-type {
+	margin-top: 14px;
 }
 
 .account_setting_not_customer_facing {

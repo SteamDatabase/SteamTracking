@@ -397,6 +397,7 @@
 	html.tablet #module_special_offers {
 		padding-top: 4px;
 		overflow: unset;
+        padding-bottom: 0;
 	}
 
 	html.tablet #spotlight_carousel .home_special_offers_group {
@@ -413,6 +414,7 @@
 
 	html.tablet .dailydeal_desc {
 		padding-right: unset;
+        height: unset;
 	}
 
 	html.tablet .specials_target:first-child {
@@ -472,6 +474,7 @@
 		padding: 8px;
 		box-sizing: border-box;
 		width: 100%;
+        min-height: 113px;
 	}
 
 	html.tablet .home_area_spotlight.ds_flagged .ds_steam_deck_compat {

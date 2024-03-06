@@ -3,6 +3,7 @@
 
 body.v6.sale_spring2024 {
 	background: url('https://cdn.cloudflare.steamstatic.com/store/promo/spring2024/sale_spring2024_tiled_bg.png') repeat center top, #202531;
+    font-family: "Motiva Sans", Sans-serif;
 }
 
 body.v6.sale_spring2024 .responsive_page_template_content {
@@ -50,7 +51,7 @@ body.v6.sale_spring2024 .home_ctn.discovery_queue_ctn, body.v6.sale_spring2024 .
 
 
 .fullscreen-bg__video {
-    max-width: 1800px;
+    width: 2000px;
 }
 
 body.v6.sale_spring2024.infinite_scrolling #footer.small_footer {
@@ -1260,7 +1261,7 @@ p.home_subtitle_ctn a {
 @media screen and (max-width: 1800px )
 {
     body .responsive_page_frame .fullscreen-bg__video {
-        width: 78vw;
+        /* width: 178vw; */
     }
 }
 
@@ -1571,14 +1572,22 @@ p.home_subtitle_ctn a {
 
 }
 
+@media screen and (max-width: 852px )
+{
+    html.responsive .fullscreen-bg__video {
+        width: 115vw;
+    }
+}
+
 @media screen and (max-width: 800px )
 {
     html.responsive .fullscreen-bg__video {
-        width: 95vw;
+        width: 150vw;
     }
 
     html.responsive  body.v6.sale_spring2024 .page_background_holder {
         margin: 0;
+        background-size: 150% !important;
     }
 
     html.responsive body.v6.sale_spring2024 .bookmark_stickers {
@@ -1718,11 +1727,11 @@ p.home_subtitle_ctn a {
 
     body.v6.sale_spring2024 .home_page_takeover_sizer {
         min-height: unset;
-        height: 71vw !important;
+        height: 79vw !important;
     }
 
     .page_background_holder_mobile {
-		display: block;
+		display: none;
 		width: 100%;
 		height: 86vw;
 		max-height: 400px;
@@ -2624,6 +2633,7 @@ body.v6 .sale_capsule .discount_block_inline
 .hero_capsule:hover .hero_discount
 {
     bottom: 6%;
+    background-color: #0c0f11;
 }
 
 .hero_data
@@ -3305,7 +3315,7 @@ html.tablet body.v6.sale_spring2024 .home_page_takeover_sizer {
 }
 
 html.tablet body.v6.sale_spring2024 .page_background_holder {
-	background-size: 150% !important;
+	background-size: 115% !important;
     height: 85vw !important;
     margin: 0;
     top: -22px;

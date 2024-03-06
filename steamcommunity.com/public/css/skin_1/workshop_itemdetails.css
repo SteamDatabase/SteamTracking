@@ -1322,7 +1322,7 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 .parentCollectionTitle
 {
 	float: left;
-	color: white;	
+	color: white;
 	font-size: 14px;
 	font-weight: bold;
 	padding-left: 5px;
@@ -1498,7 +1498,7 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 
 .workshopCollectionNumChildren
 {
-	
+
 }
 
 .collectionItem .subscriptionControls
@@ -2066,6 +2066,7 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 .general_btn.panel_btn {
 	background-color: transparent;
 	color: #EBEBEB;
+	display: block;
 }
 
 .general_btn.panel_btn:hover {
@@ -3678,7 +3679,7 @@ h2.stats {
 			display: inline-block;
 			padding: 0 5px;
 		}
-		
+
 	.statsBox #revenueChart {
 		margin: 10px 10px 15px 20px;
 		padding-bottom: 10px;

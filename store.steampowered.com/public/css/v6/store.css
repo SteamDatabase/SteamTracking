@@ -1265,6 +1265,13 @@ body.v6 .store_nav .popup_block_new .popup_body.search_v2 {
 	text-decoration: none;
 	color: #b0aeac;
 	border-right: 1px solid #626366;
+    display: inline-block;
+    height: 32px;
+    line-height: 32px;
+    font-size: 25px;
+    text-align: center;
+    overflow: hidden;
+    padding: 0 6px;
 }
 
 .home_tabs_content .discount_block .discount_prices, .tab_content_ctn .discount_block .discount_prices  {
@@ -2469,9 +2476,15 @@ body.v6 .store_nav .popup_block_new .popup_body.search_v2 {
 /* spotlight styles */
 .spotlight_img {
     width: 306px;
+    height: 100%;
     overflow: hidden;
     padding-left: 1px;
     padding-top: 1px;
+}
+
+.spotlight_img a {
+    display: block;
+    height: 100%;
 }
 .home_area_spotlight {
 	position: relative;
@@ -2495,6 +2508,7 @@ body.v6 .store_nav .popup_block_new .popup_body.search_v2 {
 	margin: 1px;
 
 	background: url( '/public/images/v6/spotlight_background.jpg?v=1' ) bottom center no-repeat;
+    pointer-events: none;
 }
 
 
@@ -4567,6 +4581,13 @@ a.cluster_capsule:hover {
 
 .store_capsule .discount_block:not(.discount_block_large) .discount_pct {
 	font-size: 11px;
+}
+
+@media screen and (max-width: 940px) {
+}
+    html.responsive .store_capsule .discount_block {
+        padding: 2px;
+    }
 }
 
 

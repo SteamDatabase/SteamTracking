@@ -27,6 +27,35 @@ html.tablet .tab_item {
 	/* height: fit-content; */
 }
 
+html.tablet .spotlight_img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+html.tablet .spotlight_content {
+    position: absolute;
+    bottom: 0;
+}
+
+html.tablet .spotlight_img img {
+    height: auto;
+}
+
+html.tablet .spotlight_col {
+    height: 334px;
+}
+
+html.tablet .spotlight_col .store_capsule .discount_block {
+    padding: 2px;
+}
+html.tablet .spotlight_col .store_capsule .discount_block .discount_prices {
+    gap: 0;
+}
+
+html.tablet .home_area_spotlight {
+    height: calc((2 * ( var(--gpWidth-3colcap) * (215/460) ) ) + 44px + 44px + 4px);
+}
+
 @media screen and (min-width:  1280px) {
 	/* Show 4 */
 	html.tablet .store_capsule,

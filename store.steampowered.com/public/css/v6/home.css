@@ -4873,7 +4873,6 @@ body.v6 .home_rightcol.recommended h2, body.v6 .home_leftcol h2 {
 
 .dailydeal_desc {
 	visibility: hidden;
-    height: 44px;
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
@@ -4918,9 +4917,11 @@ body.v6 h2 .header_inline {
 }
 
 .spotlight_content {
+    width: 100%;
 	background-image: url( '/public/images/v6/home/background_spotlight.jpg' );
 	margin: 0px;
-	min-height: 23px;
+	min-height: 130px;
+    box-sizing: border-box;
 	background-size: cover;
 }
 
