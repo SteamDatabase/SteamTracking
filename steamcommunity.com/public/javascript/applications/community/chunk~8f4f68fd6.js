@@ -1312,7 +1312,7 @@
         15: { rollup_field: "parental_feature_requests", eFeature: d.zE },
         16: { rollup_field: "family_invites", eFeature: d.zE },
         17: { rollup_field: "family_purchase_requests", eFeature: d.zE },
-        18: { rollup_field: "family_purchase_requests", eFeature: 1 },
+        18: { rollup_field: "parental_playtime_requests", eFeature: d.zE },
         19: {
           rollup_field: "family_purchase_request_responses",
           eFeature: d.zE,

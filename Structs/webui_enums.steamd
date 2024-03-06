@@ -1456,6 +1456,8 @@ enum EDisplayStatus
 	k_EDisplayStatusCloudOutOfDate = 35;
 	k_EDisplayStatusTerminating = 36;
 	k_EDisplayStatusOwnerLocked = 37;
+	k_EDisplayStatusDownloadFailed = 38;
+	k_EDisplayStatusUpdateFailed = 39;
 }
 
 enum EDown
@@ -2952,6 +2954,13 @@ enum EMenu
 	k_EMenuButtonRelease = 1;
 	k_EMenuTouchRelease = 2;
 	k_EMenuTouchAlways = 3;
+}
+
+enum EMessageQueueAlertPolicy
+{
+	k_EMessageQueueAlertPolicy_Default = 0;
+	k_EMessageQueueAlertPolicy_BusinessHoursOnly = 1;
+	k_EMessageQueueAlertPolicy_NoAlerts = 2;
 }
 
 enum EMessageReactionType
@@ -7668,6 +7677,39 @@ enum UnnamedEnumbe1bad91be08ca41
 	None = 0;
 	Append = 1;
 	Remove = 2;
+}
+
+enum UnnamedEnumbe2a77cba3b075e7
+{
+	LaunchGame = 0;
+	FriendMessage = 1;
+	ChatMention = 2;
+	ChatMessage = 3;
+	ToastMessage = 4;
+	ToastAchievement = 5;
+	ToastMisc = 6;
+	ToastMiscShort = 7;
+	FriendOnline = 8;
+	FriendInGame = 9;
+	VolSound = 10;
+	ShowModal = 11;
+	HideModal = 12;
+	IntoGameDetail = 13;
+	OutOfGameDetail = 14;
+	PagedNavigation = 15;
+	ToggleOn = 16;
+	ToggleOff = 17;
+	SliderUp = 18;
+	SliderDown = 19;
+	ChangeTabs = 20;
+	DefaultOk = 21;
+	OpenSideMenu = 22;
+	CloseSideMenu = 23;
+	BasicNav = 24;
+	FailedNav = 25;
+	Typing = 26;
+	TimerExpired = 27;
+	Screenshot = 28;
 }
 
 enum UnnamedEnumbeac8bc198152282

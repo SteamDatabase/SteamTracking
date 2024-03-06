@@ -236,7 +236,7 @@
         }
         Init(e = 0, t = null, s = null) {
           return (0, a.mG)(this, void 0, void 0, function* () {
-            (this.m_WebUIServiceTransport = B.R.Get()),
+            (this.m_WebUIServiceTransport = B.N),
               (this.m_unAccountID = e),
               (this.m_Transport = t),
               (this.m_Storage = s),
@@ -253,7 +253,7 @@
           });
         }
         InitSteamEngineLanguages() {
-          null != this.m_WebUIServiceTransport &&
+          this.m_WebUIServiceTransport.BIsValid() &&
             (this.m_WebUIServiceTransport.messageHandlers.RegisterServiceNotificationHandler(
               w.gi.NotifyTextFilterDictionaryChangedHandler,
               this.OnTextFilterDictionaryChanged,
@@ -458,7 +458,7 @@
           return (0, a.mG)(this, void 0, void 0, function* () {
             let t = "",
               s = !1;
-            if (null != this.m_WebUIServiceTransport)
+            if (this.m_WebUIServiceTransport.BIsValid())
               try {
                 {
                   const t = yield this.GetSteamEngineTextFilterDictionary(

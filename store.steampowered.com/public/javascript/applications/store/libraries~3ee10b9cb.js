@@ -24,8 +24,8 @@
       var r = n(85556),
         i = n(47427),
         s = n(37563),
-        a = n(13129);
-      const o =
+        o = n(13129);
+      const a =
         n.p +
         "images/applications/store/defaultappimage.png?v=valveisgoodatcaching";
       var l = n(78534),
@@ -39,31 +39,31 @@
             idxEnd: n,
             renderItem: r,
             height: s,
-            itemWidth: a,
-            columnGap: o,
+            itemWidth: o,
+            columnGap: a,
           } = e,
           l = [];
-        for (let e = t; e < n; e++) l.push(r(e, a));
+        for (let e = t; e < n; e++) l.push(r(e, o));
         return i.createElement(
           u.s,
-          { className: m.VirtualizedGridRow, style: { height: s, gap: o } },
+          { className: m.VirtualizedGridRow, style: { height: s, gap: a } },
           l,
         );
       }
-      function h(e) {
+      function p(e) {
         const {
             nItems: t,
             renderItem: n,
             nAspectRatio: r,
             nColumns: s = 7,
-            nColumnGap: a = 10,
-            nRowGap: o = 10,
+            nColumnGap: o = 10,
+            nRowGap: a = 10,
             onWidthChanged: l,
           } = e,
           [u, m] = i.useState(0),
-          h = Math.ceil(t / s),
-          p = Math.max(0, Math.floor((u - (s - 1) * a) / s)),
-          g = Math.floor(p / r),
+          p = Math.ceil(t / s),
+          h = Math.max(0, Math.floor((u - (s - 1) * o) / s)),
+          g = Math.floor(h / r),
           v = i.useCallback(
             (e) => {
               var t;
@@ -82,56 +82,56 @@
           b = (0, c.yU)(v);
         return i.createElement(d.J, {
           ref: b,
-          nRows: h,
+          nRows: p,
           nItemHeight: g,
-          nRowGap: o,
+          nRowGap: a,
           renderItem: (e) =>
             i.createElement(f, {
               key: e,
               idxStart: e * s,
               idxEnd: Math.min(t, (e + 1) * s),
               height: g,
-              itemWidth: p,
-              columnGap: a,
+              itemWidth: h,
+              columnGap: o,
               renderItem: n,
             }),
         });
       }
-      function p(e) {
+      function h(e) {
         const { app: t, width: n, index: r, renderItem: c } = e,
           [u, d] = i.useState(0),
           [m, f] = i.useState(!1),
-          h = s.De.STORE_ICON_BASE_URL;
-        let p = [
-          `${h}${t.appid}/library_600x900.jpg`,
-          `${h}${t.appid}/portrait.png`,
-          o,
+          p = s.De.STORE_ICON_BASE_URL;
+        let h = [
+          `${p}${t.appid}/library_600x900.jpg`,
+          `${p}${t.appid}/portrait.png`,
+          a,
         ];
         e.app.localized_capsule_filename &&
-          (p = [`${h}${t.appid}/${e.app.localized_capsule_filename}`, ...p]);
+          (h = [`${p}${t.appid}/${e.app.localized_capsule_filename}`, ...h]);
         const g = i.createElement(
           i.Fragment,
           null,
-          u < p.length &&
+          u < h.length &&
             i.createElement("img", {
               className: l.Capsule,
               onLoad: () => {
                 f(!0);
               },
               onError: () => {
-                u < p.length && d((e) => e + 1);
+                u < h.length && d((e) => e + 1);
               },
-              src: p[u],
+              src: h[u],
               alt: t.name,
               loading: "lazy",
             }),
-          u == p.length - 1 &&
+          u == h.length - 1 &&
             i.createElement("div", { className: l.Label }, t.name),
         );
         return c(t, r, {
-          className: (0, a.Z)(
+          className: (0, o.Z)(
             l.AppGridItem,
-            u == p.length && l.NoImage,
+            u == h.length && l.NoImage,
             m && l.Loaded,
           ),
           style: { width: n },
@@ -142,10 +142,10 @@
       function g(e) {
         const { rgApps: t, renderItem: n } = e,
           s = (0, r._T)(e, ["rgApps", "renderItem"]),
-          a = i.useCallback(
+          o = i.useCallback(
             (e, r) => {
               const s = t[e];
-              return i.createElement(p, {
+              return i.createElement(h, {
                 key: s.appid,
                 app: s,
                 width: r,
@@ -156,9 +156,9 @@
             [t, n],
           );
         return i.createElement(
-          h,
+          p,
           Object.assign(
-            { nItems: t.length, renderItem: a, nAspectRatio: 600 / 900 },
+            { nItems: t.length, renderItem: o, nAspectRatio: 600 / 900 },
             s,
           ),
         );
@@ -166,7 +166,7 @@
     },
     49557: (e, t, n) => {
       "use strict";
-      n.d(t, { J: () => T });
+      n.d(t, { J: () => R });
       var r = n(85556),
         i = n(47427);
       /**
@@ -194,7 +194,7 @@
           s.apply(this, arguments)
         );
       }
-      var a = n(42287);
+      var o = n(42287);
       /**
        * virtual-core
        *
@@ -205,9 +205,9 @@
        *
        * @license MIT
        */
-      function o() {
+      function a() {
         return (
-          (o = Object.assign
+          (a = Object.assign
             ? Object.assign.bind()
             : function (e) {
                 for (var t = 1; t < arguments.length; t++) {
@@ -217,7 +217,7 @@
                 }
                 return e;
               }),
-          o.apply(this, arguments)
+          a.apply(this, arguments)
         );
       }
       /**
@@ -237,25 +237,25 @@
         return function () {
           var r;
           n.key && null != n.debug && n.debug() && (r = Date.now());
-          var a,
-            o = e();
+          var o,
+            a = e();
           if (
             !(
-              o.length !== s.length ||
-              o.some(function (e, t) {
+              a.length !== s.length ||
+              a.some(function (e, t) {
                 return s[t] !== e;
               })
             )
           )
             return i;
           if (
-            ((s = o),
-            n.key && null != n.debug && n.debug() && (a = Date.now()),
-            (i = t.apply(void 0, o)),
+            ((s = a),
+            n.key && null != n.debug && n.debug() && (o = Date.now()),
+            (i = t.apply(void 0, a)),
             n.key && null != n.debug && n.debug())
           ) {
             var l = Math.round(100 * (Date.now() - r)) / 100,
-              c = Math.round(100 * (Date.now() - a)) / 100,
+              c = Math.round(100 * (Date.now() - o)) / 100,
               u = c / 16,
               d = function (e, t) {
                 for (e = String(e); e.length < t; ) e = " " + e;
@@ -333,7 +333,7 @@
             );
           }
         },
-        h = function (e, t) {
+        p = function (e, t) {
           var n = e.scrollElement;
           if (n) {
             var r = function () {
@@ -348,7 +348,7 @@
             );
           }
         },
-        p = function (e, t) {
+        h = function (e, t) {
           var n = e.scrollElement;
           if (n) {
             var r = function () {
@@ -381,14 +381,14 @@
           var r,
             i,
             s = t.adjustments,
-            a = void 0 === s ? 0 : s,
-            o = t.behavior,
-            l = e + a;
+            o = void 0 === s ? 0 : s,
+            a = t.behavior,
+            l = e + o;
           null == (r = n.scrollElement) ||
             null == r.scrollTo ||
             r.scrollTo(
               (((i = {})[n.options.horizontal ? "left" : "top"] = l),
-              (i.behavior = o),
+              (i.behavior = a),
               i),
             );
         },
@@ -396,14 +396,14 @@
           var r,
             i,
             s = t.adjustments,
-            a = void 0 === s ? 0 : s,
-            o = t.behavior,
-            l = e + a;
+            o = void 0 === s ? 0 : s,
+            a = t.behavior,
+            l = e + o;
           null == (r = n.scrollElement) ||
             null == r.scrollTo ||
             r.scrollTo(
               (((i = {})[n.options.horizontal ? "left" : "top"] = l),
-              (i.behavior = o),
+              (i.behavior = a),
               i),
             );
         },
@@ -458,7 +458,7 @@
                 var n = t[0];
                 void 0 === t[1] && delete e[n];
               }),
-                (r.options = o(
+                (r.options = a(
                   {
                     debug: !1,
                     initialOffset: 0,
@@ -583,13 +583,13 @@
             )),
             (this.getFurthestMeasurement = function (e, t) {
               for (var n = new Map(), i = new Map(), s = t - 1; s >= 0; s--) {
-                var a = e[s];
-                if (!n.has(a.lane)) {
-                  var o = i.get(a.lane);
+                var o = e[s];
+                if (!n.has(o.lane)) {
+                  var a = i.get(o.lane);
                   if (
-                    (null == o || a.end > o.end
-                      ? i.set(a.lane, a)
-                      : a.end < o.end && n.set(a.lane, !0),
+                    (null == a || o.end > a.end
+                      ? i.set(o.lane, o)
+                      : o.end < a.end && n.set(o.lane, !0),
                     n.size === r.options.lanes)
                   )
                     break;
@@ -609,32 +609,32 @@
                 var n = e.count,
                   i = e.paddingStart,
                   s = e.scrollMargin,
-                  a = e.getItemKey,
-                  o =
+                  o = e.getItemKey,
+                  a =
                     r.pendingMeasuredCacheIndexes.length > 0
                       ? Math.min.apply(Math, r.pendingMeasuredCacheIndexes)
                       : 0;
                 r.pendingMeasuredCacheIndexes = [];
                 for (
-                  var l = r.measurementsCache.slice(0, o), c = o;
+                  var l = r.measurementsCache.slice(0, a), c = a;
                   c < n;
                   c++
                 ) {
-                  var u = a(c),
+                  var u = o(c),
                     d =
                       1 === r.options.lanes
                         ? l[c - 1]
                         : r.getFurthestMeasurement(l, c),
                     m = d ? d.end : i + s,
                     f = t.get(u),
-                    h = "number" == typeof f ? f : r.options.estimateSize(c),
-                    p = m + h,
+                    p = "number" == typeof f ? f : r.options.estimateSize(c),
+                    h = m + p,
                     g = d ? d.lane : c % r.options.lanes;
                   l[c] = {
                     index: c,
                     start: m,
-                    size: h,
-                    end: p,
+                    size: p,
+                    end: h,
                     key: u,
                     lane: g,
                   };
@@ -663,10 +663,10 @@
                           s = function (e) {
                             return t[e].start;
                           },
-                          a = z(0, i, s, r),
-                          o = a;
-                        for (; o < i && t[o].end < r + n; ) o++;
-                        return { startIndex: a, endIndex: o };
+                          o = z(0, i, s, r),
+                          a = o;
+                        for (; a < i && t[a].end < r + n; ) a++;
+                        return { startIndex: o, endIndex: a };
                       })({ measurements: e, outerSize: t, scrollOffset: n })
                     : null);
               },
@@ -687,7 +687,7 @@
                 ];
               },
               function (e, t, n, r) {
-                return null === t ? [] : e(o({}, t, { overscan: n, count: r }));
+                return null === t ? [] : e(a({}, t, { overscan: n, count: r }));
               },
               {
                 key: !1,
@@ -828,35 +828,35 @@
               var n = void 0 === t ? {} : t,
                 i = n.align,
                 s = void 0 === i ? "start" : i,
-                a = n.behavior;
+                o = n.behavior;
               r.cancelScrollToIndex(),
-                "smooth" === a &&
+                "smooth" === o &&
                   r.isDynamicMode() &&
                   console.warn(
                     "The `smooth` scroll behavior is not fully supported with dynamic size.",
                   ),
                 r._scrollToOffset(r.getOffsetForAlignment(e, s), {
                   adjustments: void 0,
-                  behavior: a,
+                  behavior: o,
                 });
             }),
             (this.scrollToIndex = function (e, t) {
               var n = void 0 === t ? {} : t,
                 i = n.align,
                 s = void 0 === i ? "auto" : i,
-                a = n.behavior;
+                o = n.behavior;
               (e = Math.max(0, Math.min(e, r.options.count - 1))),
                 r.cancelScrollToIndex(),
-                "smooth" === a &&
+                "smooth" === o &&
                   r.isDynamicMode() &&
                   console.warn(
                     "The `smooth` scroll behavior is not fully supported with dynamic size.",
                   );
-              var o = r.getOffsetForIndex(e, s),
-                l = o[0],
-                c = o[1];
-              r._scrollToOffset(l, { adjustments: void 0, behavior: a }),
-                "smooth" !== a &&
+              var a = r.getOffsetForIndex(e, s),
+                l = a[0],
+                c = a[1];
+              r._scrollToOffset(l, { adjustments: void 0, behavior: o }),
+                "smooth" !== o &&
                   r.isDynamicMode() &&
                   (r.scrollToIndexTimeoutId = setTimeout(function () {
                     var t, n;
@@ -868,8 +868,8 @@
                       (t = i),
                         (n = r.scrollOffset),
                         Math.abs(t - n) < 1 ||
-                          r.scrollToIndex(e, { align: c, behavior: a });
-                    } else r.scrollToIndex(e, { align: c, behavior: a });
+                          r.scrollToIndex(e, { align: c, behavior: o });
+                    } else r.scrollToIndex(e, { align: c, behavior: o });
                   }));
             }),
             (this.scrollBy = function (e, t) {
@@ -941,7 +941,7 @@
           }, {})[1],
           n = s({}, e, {
             onChange: function (n, r) {
-              r ? (0, a.flushSync)(t) : t(),
+              r ? (0, o.flushSync)(t) : t(),
                 null == e.onChange || e.onChange(n, r);
             },
           }),
@@ -964,16 +964,16 @@
         E = n(91618),
         S = n(3783),
         O = n(20417),
-        x = n(13129);
-      function R(e) {
+        T = n(13129);
+      function x(e) {
         const {
             virtualizer: t,
             bDynamic: n,
             idx: r,
             rowGap: s,
-            renderItem: a,
+            renderItem: o,
           } = e,
-          o = i.useCallback(
+          a = i.useCallback(
             (e, n, i) => (t.scrollToIndex(r, { align: "center" }), !0),
             [t, r],
           );
@@ -983,19 +983,19 @@
             className: B.VirtualizedListRow,
             ref: n ? t.measureElement : void 0,
             "data-index": r,
-            fnScrollIntoViewHandler: o,
+            fnScrollIntoViewHandler: a,
             scrollIntoViewWhenChildFocused: !0,
             style: { width: "100%", paddingBottom: s },
           },
-          i.cloneElement(a(r), { fnScrollIntoViewHandler: () => !0 }),
+          i.cloneElement(o(r), { fnScrollIntoViewHandler: () => !0 }),
         );
       }
-      const T = i.forwardRef(function (e, t) {
+      const R = i.forwardRef(function (e, t) {
         const {
             nRows: n,
             nItemHeight: s,
-            nRowGap: a,
-            renderItem: o,
+            nRowGap: o,
+            renderItem: a,
             bDynamic: l,
             className: c,
           } = e,
@@ -1009,27 +1009,31 @@
           ]),
           [d, m] = i.useState(),
           f = d && (0, M.Et)(d, "y"),
-          h = (0, O.BE)(m, t);
+          p = (0, O.BE)(m, t);
         return i.createElement(
           E.s,
           Object.assign(
-            { className: (0, x.Z)(B.VirtualizedListOuter, c), ref: h },
+            { className: (0, T.Z)(B.VirtualizedListOuter, c), ref: p },
             u,
           ),
-          f && i.createElement(_, Object.assign({}, e, { elScrollable: f })),
+          f &&
+            i.createElement(
+              _,
+              Object.assign({}, e, { elContainer: d, elScrollable: f }),
+            ),
           d &&
             !f &&
             i.createElement(C, Object.assign({}, e, { elContainer: d })),
         );
       });
       function C(e) {
-        const { elContainer: t, nRows: n, nItemHeight: r, nRowGap: a = 10 } = e,
-          o = r + a,
+        const { elContainer: t, nRows: n, nItemHeight: r, nRowGap: o = 10 } = e,
+          a = r + o,
           l =
             ((c = {
               count: n,
               scrollMargin: null == t ? void 0 : t.offsetTop,
-              estimateSize: i.useCallback(() => o, [o]),
+              estimateSize: i.useCallback(() => a, [a]),
               overscan: 6,
             }),
             w(
@@ -1039,7 +1043,7 @@
                     return "undefined" != typeof document ? window : null;
                   },
                   observeElementRect: f,
-                  observeElementOffset: p,
+                  observeElementOffset: h,
                   scrollToFn: v,
                   initialOffset:
                     "undefined" != typeof document ? window.scrollY : void 0,
@@ -1051,46 +1055,50 @@
         return (
           i.useEffect(() => {
             l.measure();
-          }, [l, o]),
+          }, [l, a]),
           i.createElement(j, Object.assign({}, e, { virtualizer: l }))
         );
       }
       function _(e) {
         const {
             nRows: t,
-            elScrollable: n,
-            nItemHeight: r,
+            elContainer: n,
+            elScrollable: r,
+            nItemHeight: o,
             nRowGap: a = 10,
           } = e,
-          o = r + a,
-          l =
-            ((c = {
+          l = o + a,
+          c =
+            ((u = {
               count: t,
-              getScrollElement: () => n,
-              estimateSize: i.useCallback(() => o, [o]),
+              scrollMargin:
+                (null == n ? void 0 : n.offsetTop) -
+                (null == r ? void 0 : r.offsetTop),
+              getScrollElement: () => r,
+              estimateSize: i.useCallback(() => l, [l]),
               overscan: 5,
             }),
             w(
               s(
                 {
                   observeElementRect: m,
-                  observeElementOffset: h,
+                  observeElementOffset: p,
                   scrollToFn: b,
                 },
-                c,
+                u,
               ),
             ));
-        var c;
+        var u;
         return (
           i.useEffect(() => {
-            l.measure();
-          }, [l, o]),
-          i.createElement(j, Object.assign({}, e, { virtualizer: l }))
+            c.measure();
+          }, [c, l]),
+          i.createElement(j, Object.assign({}, e, { virtualizer: c }))
         );
       }
       function j(e) {
         var t, n;
-        const { virtualizer: r, nRowGap: s, renderItem: a, bDynamic: o } = e,
+        const { virtualizer: r, nRowGap: s, renderItem: o, bDynamic: a } = e,
           l =
             (null !==
               (n =
@@ -1125,13 +1133,13 @@
             r
               .getVirtualItems()
               .map((e) =>
-                i.createElement(R, {
+                i.createElement(x, {
                   key: e.key,
                   virtualizer: r,
-                  bDynamic: o,
+                  bDynamic: a,
                   idx: e.index,
                   rowGap: s,
-                  renderItem: a,
+                  renderItem: o,
                 }),
               ),
           ),
@@ -1144,19 +1152,19 @@
       var r = n(10059),
         i = n(39087),
         s = n(79545);
-      const a = r.Message;
-      class o extends a {
+      const o = r.Message;
+      class a extends o {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            o.prototype.appids || i.aR(o.M()),
-            a.initialize(this, e, 0, -1, [1], null);
+            a.prototype.appids || i.aR(a.M()),
+            o.initialize(this, e, 0, -1, [1], null);
         }
         static M() {
           return (
-            o.sm_m ||
-              (o.sm_m = {
-                proto: o,
+            a.sm_m ||
+              (a.sm_m = {
+                proto: a,
                 fields: {
                   appids: {
                     n: 1,
@@ -1168,50 +1176,50 @@
                   },
                 },
               }),
-            o.sm_m
+            a.sm_m
           );
         }
         static MBF() {
-          return o.sm_mbf || (o.sm_mbf = i.Bh(o.M())), o.sm_mbf;
+          return a.sm_mbf || (a.sm_mbf = i.Bh(a.M())), a.sm_mbf;
         }
         toObject(e = !1) {
-          return o.toObject(e, this);
+          return a.toObject(e, this);
         }
         static toObject(e, t) {
-          return i.TA(o.M(), e, t);
+          return i.TA(a.M(), e, t);
         }
         static fromObject(e) {
-          return i.aD(o.M(), e);
+          return i.aD(a.M(), e);
         }
         static deserializeBinary(e) {
           let t = new r.BinaryReader(e),
-            n = new o();
-          return o.deserializeBinaryFromReader(n, t);
+            n = new a();
+          return a.deserializeBinaryFromReader(n, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return i.F(o.MBF(), e, t);
+          return i.F(a.MBF(), e, t);
         }
         serializeBinary() {
           var e = new r.BinaryWriter();
-          return o.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return a.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          i.l2(o.M(), e, t);
+          i.l2(a.M(), e, t);
         }
         serializeBase64String() {
           var e = new r.BinaryWriter();
-          return o.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return a.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CAccountPrivateAppList";
         }
       }
-      class l extends a {
+      class l extends o {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             l.prototype.appids || i.aR(l.M()),
-            a.initialize(this, e, 0, -1, [1], null);
+            o.initialize(this, e, 0, -1, [1], null);
         }
         static M() {
           return (
@@ -1268,10 +1276,10 @@
           return "CAccountPrivateApps_ToggleAppPrivacy_Request";
         }
       }
-      class c extends a {
+      class c extends o {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
-          super(), a.initialize(this, e, 0, -1, void 0, null);
+          super(), o.initialize(this, e, 0, -1, void 0, null);
         }
         toObject(e = !1) {
           return c.toObject(e, this);
@@ -1303,10 +1311,10 @@
           return "CAccountPrivateApps_ToggleAppPrivacy_Response";
         }
       }
-      class u extends a {
+      class u extends o {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
-          super(), a.initialize(this, e, 0, -1, void 0, null);
+          super(), o.initialize(this, e, 0, -1, void 0, null);
         }
         toObject(e = !1) {
           return u.toObject(e, this);
@@ -1338,17 +1346,17 @@
           return "CAccountPrivateApps_GetPrivateAppList_Request";
         }
       }
-      class d extends a {
+      class d extends o {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             d.prototype.private_apps || i.aR(d.M()),
-            a.initialize(this, e, 0, -1, void 0, null);
+            o.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
             d.sm_m ||
-              (d.sm_m = { proto: d, fields: { private_apps: { n: 1, c: o } } }),
+              (d.sm_m = { proto: d, fields: { private_apps: { n: 1, c: a } } }),
             d.sm_m
           );
         }
@@ -1387,17 +1395,17 @@
           return "CAccountPrivateApps_GetPrivateAppList_Response";
         }
       }
-      class m extends a {
+      class m extends o {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             m.prototype.private_apps || i.aR(m.M()),
-            a.initialize(this, e, 0, -1, void 0, null);
+            o.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
             m.sm_m ||
-              (m.sm_m = { proto: m, fields: { private_apps: { n: 1, c: o } } }),
+              (m.sm_m = { proto: m, fields: { private_apps: { n: 1, c: a } } }),
             m.sm_m
           );
         }
@@ -1436,7 +1444,7 @@
           return "CAccountPrivateApsClient_NotifyPrivateAppListChanged_Notification";
         }
       }
-      var f, h;
+      var f, p;
       !(function (e) {
         (e.ToggleAppPrivacy = function (e, t) {
           return e.SendMsg(
@@ -1460,7 +1468,7 @@
             name: "AccountPrivateAppsClient.NotifyPrivateAppListChanged#1",
             request: m,
           };
-        })(h || (h = {}));
+        })(p || (p = {}));
     },
   },
 ]);

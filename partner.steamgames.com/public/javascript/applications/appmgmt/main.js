@@ -827,7 +827,12 @@
       };
     },
     31614: (e) => {
-      e.exports = { Ctn: "_3HM7UDaTcnbVuiUGV5Cb-T" };
+      e.exports = {
+        Ctn: "_3HM7UDaTcnbVuiUGV5Cb-T",
+        ButtonCtn: "_1lGy6Uo8cGRWkKIcUwrq5r",
+        KeyCountCtn: "_180lH229-J7IaiKXqwCzr3",
+        KeyUseCtn: "_34mIXlTVCMvtke6ZE4o0mo",
+      };
     },
     21401: (e) => {
       e.exports = {
@@ -943,7 +948,7 @@
     },
     77131: (e, t, n) => {
       "use strict";
-      n.d(t, { R: () => f });
+      n.d(t, { R: () => C, N: () => f });
       var o = n(85556),
         i = n(77936),
         r = n(20417),
@@ -1145,7 +1150,7 @@
         g = n(45651);
       class _ {
         constructor(e, t) {
-          var n, o, i, r, s, a;
+          var n, o, i, r, s, a, l;
           (this.m_socket = null),
             (this.Log = new c.sO("CWebSocketConnection", () => this.m_sName)),
             (this.m_bDisconnectRequested = !1),
@@ -1153,23 +1158,27 @@
             (this.m_sName = e),
             (this.m_fnOnMessageHandler = t.fnOnMessageHandler),
             (this.m_fnOnCloseHandler = t.fnOnCloseHandler),
-            (this.m_fnOnReconnectHandler =
-              null !== (n = t.fnOnReconnectHandler) && void 0 !== n
+            (this.m_fnOnReconnectStartHandler =
+              null !== (n = t.fnOnReconnectStartHandler) && void 0 !== n
                 ? n
                 : () => {}),
+            (this.m_fnOnReconnectFinishHandler =
+              null !== (o = t.fnOnReconnectFinishHandler) && void 0 !== o
+                ? o
+                : () => {}),
             (this.m_nConnectAttemptsMax =
-              null !== (o = t.nConnectAttemptsMax) && void 0 !== o ? o : 20),
+              null !== (i = t.nConnectAttemptsMax) && void 0 !== i ? i : 8),
             (this.m_nConnectAttemptTimeoutMs =
-              null !== (i = t.nConnectAttemptTimeoutMs) && void 0 !== i
-                ? i
+              null !== (r = t.nConnectAttemptTimeoutMs) && void 0 !== r
+                ? r
                 : 1e3),
             (this.m_bReconnectOnFailure =
-              null !== (r = t.bReconnectOnFailure) && void 0 !== r && r),
+              null !== (s = t.bReconnectOnFailure) && void 0 !== s && s),
             (this.m_nReconnectAttemptsMax =
-              null !== (s = t.nReconnectAttemptsMax) && void 0 !== s ? s : 1e3),
+              null !== (a = t.nReconnectAttemptsMax) && void 0 !== a ? a : 3e4),
             (this.m_nReconnectAttemptTimeoutMs =
-              null !== (a = t.nReconnectAttemptTimeoutMs) && void 0 !== a
-                ? a
+              null !== (l = t.nReconnectAttemptTimeoutMs) && void 0 !== l
+                ? l
                 : 1e4);
         }
         get name() {
@@ -1222,8 +1231,11 @@
                 (o += 1);
             } while (o < t);
             return (
-              this.Log.Error("connect retry: limit exceeeded, bailing"),
+              this.Log.Warning(
+                `websocket connect retry: limit exceeeded, bailing - ${this.name}`,
+              ),
               (this.m_bConnecting = !1),
+              this.BShouldReconnect() && this.StartReconnect(),
               { result: 2, message: "not ready, exceeded retry count" }
             );
           });
@@ -1245,11 +1257,16 @@
         }
         StartReconnect() {
           return (0, o.mG)(this, void 0, void 0, function* () {
-            this.Log.Info("start reconnect"), (this.m_socket = null);
-            if (1 != (yield this.Connect(this.m_sURL)).result)
+            this.Log.Info("start reconnect"),
+              (this.m_socket = null),
+              this.m_fnOnReconnectStartHandler({ connection: this });
+            if (1 != (yield this.Reconnect()).result)
               return (
                 this.Log.Error("failed to re-connect to websocket after close"),
-                this.m_fnOnReconnectHandler({ connection: this, eResult: 2 }),
+                this.m_fnOnReconnectFinishHandler({
+                  connection: this,
+                  eResult: 2,
+                }),
                 void this.m_fnOnCloseHandler({
                   connection: this,
                   bError: !0,
@@ -1257,7 +1274,10 @@
                 })
               );
             this.Log.Info("reconnect successful"),
-              this.m_fnOnReconnectHandler({ connection: this, eResult: 1 });
+              this.m_fnOnReconnectFinishHandler({
+                connection: this,
+                eResult: 1,
+              });
           });
         }
         ConnectToSocket(e, t) {
@@ -1350,49 +1370,73 @@
         (0, o.gn)([r.ak], _.prototype, "OnSocketOpen", null),
         (0, o.gn)([r.ak], _.prototype, "OnSocketClose", null),
         (0, o.gn)([r.ak], _.prototype, "OnSocketMessage", null);
-      const v = "localhost",
-        C = new c.sO("WebUITransport");
-      class f {
-        static Get() {
-          return (
-            null == f.s_Singleton &&
-              p.De.IN_CLIENT &&
-              ((f.s_Singleton = new f()),
-              (window.WebUIServiceTransport = f.s_Singleton)),
-            f.s_Singleton
-          );
+      const v = new c.sO("WebUITransport");
+      class C {
+        constructor() {
+          (this.m_iMsgSeq = 1),
+            (this.m_mapPendingMethodRequests = new Map()),
+            (this.m_messageHandlers = new h()),
+            (this.m_mapServiceCallErrorCount = new Map()),
+            (this.m_mapConnectionDetails = new Map()),
+            (this.m_bInitialized = !1);
         }
         static InstallErrorReportingStore(e) {
           this.sm_ErrorReportingStore = e;
         }
+        BIsValid() {
+          return this.m_bInitialized;
+        }
         ReportError(e) {
-          C.Warning(e);
-          const t = f.sm_ErrorReportingStore;
+          v.Warning(e);
+          const t = C.sm_ErrorReportingStore;
           t &&
             t.ReportError(new Error(e), {
               bIncludeMessageInIdentifier: !0,
               cCallsitesToIgnore: 1,
             });
         }
-        constructor() {
-          (this.m_iMsgSeq = 1),
-            (this.m_mapPendingMethodRequests = new Map()),
-            (this.m_messageHandlers = new h()),
-            (this.m_mapServiceCallErrorCount = new Map());
-          const e = {
-            bReconnectOnFailure: !0,
-            fnOnMessageHandler: this.OnWebsocketMessage,
-            fnOnCloseHandler: this.OnWebsocketClose,
-            fnOnReconnectHandler: this.OnWebsocketReconnect,
-          };
-          (this.m_connectionSteamUI = new _("steamUI", e)),
-            (this.m_connectionClientdll = new _("clientdll", e)),
-            (0, l.S)().SetDefaultTransport(this),
-            (0, l.S)().SetDefaultHandlerRegistry(this.m_messageHandlers),
-            m.zw.RegisterForNotifyStartShutdown(this.OnStartShutdown);
+        Init() {
+          return (0, o.mG)(this, void 0, void 0, function* () {
+            if (!p.De.IN_CLIENT) return;
+            const e = yield SteamClient.WebUITransport.GetTransportInfo();
+            this.CreateConnection(
+              1,
+              "steamUI",
+              e.portSteamUI,
+              e.authKeySteamUI,
+            ),
+              this.CreateConnection(
+                2,
+                "clientdll",
+                e.portClientdll,
+                e.authKeyClientdll,
+              ),
+              (0, l.S)().SetDefaultTransport(this),
+              (0, l.S)().SetDefaultHandlerRegistry(this.m_messageHandlers),
+              m.zw.RegisterForNotifyStartShutdown(this.OnStartShutdown);
+          });
         }
         get messageHandlers() {
           return this.m_messageHandlers;
+        }
+        SetStatusEventHandler(e) {
+          this.m_fnOnStatusEventHandler = e;
+        }
+        CreateConnection(e, t, n, o) {
+          const i = {
+              bReconnectOnFailure: !0,
+              fnOnMessageHandler: this.OnWebsocketMessage,
+              fnOnCloseHandler: this.OnWebsocketClose,
+              fnOnReconnectStartHandler: this.OnWebsocketReconnectStart,
+              fnOnReconnectFinishHandler: this.OnWebsocketReconnectFinish,
+            },
+            r = {
+              connection: new _(t, i),
+              sUrl: `ws://localhost:${n}/transportsocket/`,
+              sAuthKey: o,
+              eClientExecutionSite: e,
+            };
+          this.m_mapConnectionDetails.set(e, r);
         }
         SendMsg(e, t, n, o) {
           return new Promise((i, r) => {
@@ -1400,36 +1444,45 @@
             const a = o.eClientExecutionSite;
             if (null == a || 0 == a)
               return (
-                C.Error(`SendMsg: Invalid client execution site: ${a}`),
+                v.Error(`SendMsg: Invalid client execution site: ${a}`),
                 void r(`Transport SendMsg: invalid client execution site ${a}`)
               );
-            const l =
-              2 == a ? this.m_connectionClientdll : this.m_connectionSteamUI;
-            if (!l.BCanSendMessages()) {
+            const l = this.m_mapConnectionDetails.get(a);
+            if (null == l)
+              return (
+                v.Error(
+                  `SendMsg: could not find connection for execution site: ${a}`,
+                ),
+                void r(
+                  `Transport SendMsg: could not find connection for execution site ${a}`,
+                )
+              );
+            const c = l.connection;
+            if (!c.BCanSendMessages()) {
               const t =
                 null !== (s = this.m_mapServiceCallErrorCount.get(e)) &&
                 void 0 !== s
                   ? s
                   : 1;
               this.m_mapServiceCallErrorCount.set(e, t + 1);
-              const n = `SendMsg: Attempt to send message but socket wasn't ready: ${l.name} - ${e}`;
+              const n = `SendMsg: Attempt to send message but socket wasn't ready: ${c.name} - ${e}`;
               return (
                 1 == t && this.ReportError(n),
-                C.Warning(n + ` error count: ${t}`),
+                v.Warning(n + ` error count: ${t}`),
                 void r("Transport SendMsg: socket not ready")
               );
             }
-            const c = this.m_iMsgSeq++;
+            const u = this.m_iMsgSeq++;
             t.SetEMsg(146),
               t.Hdr().set_target_job_name(e),
-              t.Hdr().set_jobid_source("" + c);
-            if (1 != l.SendSerializedMessage(t.Serialize()))
+              t.Hdr().set_jobid_source("" + u);
+            if (1 != c.SendSerializedMessage(t.Serialize()))
               return (
-                C.Error("SendMsg: Failed to send message"),
+                v.Error("SendMsg: Failed to send message"),
                 void r("Transport SendMsg: failed to send message")
               );
-            this.m_mapPendingMethodRequests.set(c, {
-              m_iSeq: c,
+            this.m_mapPendingMethodRequests.set(u, {
+              m_iSeq: u,
               m_responseClass: n,
               m_fnCallback: i,
               m_fnError: r,
@@ -1441,80 +1494,84 @@
           const i = n.eClientExecutionSite;
           if (null == i || 0 == i)
             return (
-              C.Error(`SendNotification: Invalid client execution site: ${i}`),
+              v.Error(`SendNotification: Invalid client execution site: ${i}`),
               !1
             );
-          const r =
-            2 == i ? this.m_connectionClientdll : this.m_connectionSteamUI;
-          if (!r.BCanSendMessages()) {
+          const r = this.m_mapConnectionDetails.get(i);
+          if (null == r)
+            return (
+              v.Error(
+                `SendNotification: could not find connection for execution site: ${i}`,
+              ),
+              !1
+            );
+          const s = r.connection;
+          if (!s.BCanSendMessages()) {
             const t =
               null !== (o = this.m_mapServiceCallErrorCount.get(e)) &&
               void 0 !== o
                 ? o
                 : 1;
             this.m_mapServiceCallErrorCount.set(e, t + 1);
-            const n = `SendNotification: Attempt to send message but socket wasn't ready: ${r.name} - ${e}`;
+            const n = `SendNotification: Attempt to send message but socket wasn't ready: ${s.name} - ${e}`;
             return (
               1 == t && this.ReportError(n),
-              C.Warning(n + ` error count: ${t}`),
+              v.Warning(n + ` error count: ${t}`),
               !1
             );
           }
           t.SetEMsg(146), t.Hdr().set_target_job_name(e);
-          return 1 == r.SendSerializedMessage(t.Serialize());
+          return 1 == s.SendSerializedMessage(t.Serialize());
+        }
+        ConnectToSite(e) {
+          return (0, o.mG)(this, void 0, void 0, function* () {
+            const t = e.connection,
+              n = yield t.Connect(e.sUrl);
+            if (1 != n.result) return n;
+            return (yield this.SendAuthMessage(e)).BSuccess()
+              ? { result: 1, message: "connected" }
+              : { result: 2, message: "client auth failed" };
+          });
         }
         MakeReady() {
           return (0, o.mG)(this, void 0, void 0, function* () {
-            this.m_transportInfo =
-              yield SteamClient.WebUITransport.GetTransportInfo();
-            const e = `ws://${v}:${this.m_transportInfo.portSteamUI}/transportsocket/`,
-              t = `ws://${v}:${this.m_transportInfo.portClientdll}/transportsocket/`;
-            let n = yield this.m_connectionSteamUI.Connect(e);
-            if (1 != n.result)
-              return C.Error("MakeReady: failed to connect to SteamUI"), n;
-            let o = yield this.AuthConnection(this.m_connectionSteamUI);
-            return 1 != o
-              ? (C.Error("MakeReady: failed to auth to SteamUI"), n)
-              : ((n = yield this.m_connectionClientdll.Connect(t)),
-                1 != n.result
-                  ? (C.Error("MakeReady: failed to connect to clientdll"), n)
-                  : ((o = yield this.AuthConnection(
-                      this.m_connectionClientdll,
-                    )),
-                    1 != o
-                      ? (C.Error("MakeReady: failed to auth to clientdll"), n)
-                      : n));
+            const e = [];
+            for (const [t, n] of this.m_mapConnectionDetails)
+              e.push(this.ConnectToSite(n));
+            const t = yield Promise.all(e);
+            (this.m_bInitialized = !0), this.DispatchTransportStatusUpdate();
+            for (const e of t) if (1 != e.result) return e;
+            return { result: 1, message: "ready" };
           });
         }
-        GetAuthInfoForConnection(e) {
-          return e == this.m_connectionClientdll
-            ? {
-                eClientExecutionSite: 2,
-                sAuthKey: this.m_transportInfo.authKeyClientdll,
-              }
-            : e == this.m_connectionSteamUI
-            ? {
-                eClientExecutionSite: 1,
-                sAuthKey: this.m_transportInfo.authKeySteamUI,
-              }
-            : (C.Error(
-                "GetAuthInfoForConnection: failed to identify connection",
-              ),
-              { eClientExecutionSite: 0, sAuthKey: "" });
+        GetConnectionDetails(e) {
+          for (const [t, n] of this.m_mapConnectionDetails)
+            if (n.connection === e) return n;
+          return (
+            v.Error("GetConnectionDetails: failed to identify connection"), null
+          );
         }
-        AuthConnection(e) {
-          return (0, o.mG)(this, void 0, void 0, function* () {
-            const t = this.GetAuthInfoForConnection(e);
-            return (yield this.SendAuthMessage(t)).GetEResult();
-          });
+        DispatchTransportStatusUpdate() {
+          if (!this.m_fnOnStatusEventHandler) return;
+          let e = !0;
+          for (const [t, n] of this.m_mapConnectionDetails)
+            n.connection.BCanSendMessages() || (e = !1);
+          this.m_fnOnStatusEventHandler({ bConnected: e });
         }
-        OnWebsocketReconnect(e) {
-          if (1 != e.eResult)
+        OnWebsocketReconnectStart(e) {
+          this.DispatchTransportStatusUpdate();
+        }
+        OnWebsocketReconnectFinish(e) {
+          if ((this.DispatchTransportStatusUpdate(), 1 != e.eResult))
             return (
-              C.Error("failed to reconnect to steam client"),
+              v.Error(
+                "OnWebsocketReconnect: Failed to reconnect to steam client",
+              ),
               void this.FailAllPendingRequests()
             );
-          this.FailAllPendingRequests(), this.AuthConnection(e.connection);
+          this.FailAllPendingRequests();
+          const t = this.GetConnectionDetails(e.connection);
+          this.SendAuthMessage(t);
         }
         OnWebsocketClose(e) {
           e.bIsExpectedToReconnect || this.FailAllPendingRequests();
@@ -1575,18 +1632,17 @@
           });
         }
         OnStartShutdown(e) {
-          return (
-            this.m_connectionSteamUI.PrepareForShutdown(),
-            this.m_connectionClientdll.PrepareForShutdown(),
-            1
-          );
+          for (const [e, t] of this.m_mapConnectionDetails)
+            t.connection.PrepareForShutdown();
+          return 1;
         }
       }
-      (f.s_Singleton = null),
-        (0, o.gn)([r.ak], f.prototype, "OnWebsocketReconnect", null),
-        (0, o.gn)([r.ak], f.prototype, "OnWebsocketClose", null),
-        (0, o.gn)([r.ak], f.prototype, "OnWebsocketMessage", null),
-        (0, o.gn)([r.ak], f.prototype, "OnStartShutdown", null);
+      (0, o.gn)([r.ak], C.prototype, "OnWebsocketReconnectStart", null),
+        (0, o.gn)([r.ak], C.prototype, "OnWebsocketReconnectFinish", null),
+        (0, o.gn)([r.ak], C.prototype, "OnWebsocketClose", null),
+        (0, o.gn)([r.ak], C.prototype, "OnWebsocketMessage", null),
+        (0, o.gn)([r.ak], C.prototype, "OnStartShutdown", null);
+      const f = new C();
     },
     95315: (e, t, n) => {
       "use strict";
@@ -8090,7 +8146,8 @@
           (e[(e.BasicNav = 24)] = "BasicNav"),
           (e[(e.FailedNav = 25)] = "FailedNav"),
           (e[(e.Typing = 26)] = "Typing"),
-          (e[(e.TimerExpired = 27)] = "TimerExpired");
+          (e[(e.TimerExpired = 27)] = "TimerExpired"),
+          (e[(e.Screenshot = 28)] = "Screenshot");
       })(o || (o = {}));
       const r = new (class {
         constructor() {
@@ -10566,12 +10623,12 @@
         return i.createElement(
           m.T,
           Object.assign(
-            { component: n.ToggleField, fallback: Z, componentRef: t },
+            { component: n.ToggleField, fallback: K, componentRef: t },
             e,
           ),
         );
       });
-      class Z extends G {
+      class K extends G {
         OnOffKeyDown(e) {
           (37 == e.keyCode && this.checked) ||
           (39 == e.keyCode && !this.checked)
@@ -10661,9 +10718,9 @@
           );
         }
       }
-      (0, o.gn)([u.a], Z.prototype, "OnOffKeyDown", null),
-        (0, o.gn)([u.a], Z.prototype, "OnNewUIToggle", null);
-      var K = n(20417),
+      (0, o.gn)([u.a], K.prototype, "OnOffKeyDown", null),
+        (0, o.gn)([u.a], K.prototype, "OnNewUIToggle", null);
+      var Z = n(20417),
         X = n(42287),
         Y = n(50423),
         q = n(48766);
@@ -11035,10 +11092,10 @@
             : y;
         }
       }
-      (0, o.gn)([K.ak], ee.prototype, "OnInputRef", null),
-        (0, o.gn)([K.ak], ee.prototype, "OnChanged", null),
-        (0, o.gn)([K.ak], ee.prototype, "OnCopyClick", null),
-        (0, o.gn)([K.ak], ee.prototype, "OnClearClick", null);
+      (0, o.gn)([Z.ak], ee.prototype, "OnInputRef", null),
+        (0, o.gn)([Z.ak], ee.prototype, "OnChanged", null),
+        (0, o.gn)([Z.ak], ee.prototype, "OnCopyClick", null),
+        (0, o.gn)([Z.ak], ee.prototype, "OnClearClick", null);
       class te extends ee {
         constructor() {
           super(...arguments), (this.m_bFocused = !1);
@@ -11150,9 +11207,9 @@
           );
         }
       }
-      (0, o.gn)([K.ak], te.prototype, "OnBackgroundClick", null),
-        (0, o.gn)([K.ak], te.prototype, "OnInputFocus", null),
-        (0, o.gn)([K.ak], te.prototype, "OnInputBlur", null);
+      (0, o.gn)([Z.ak], te.prototype, "OnBackgroundClick", null),
+        (0, o.gn)([Z.ak], te.prototype, "OnInputFocus", null),
+        (0, o.gn)([Z.ak], te.prototype, "OnInputBlur", null);
       const ne = (e, t) =>
           "" +
           (null != e ? Number.parseFloat(e.toFixed(3)) : null) +
@@ -11331,13 +11388,13 @@
           );
         }
       }
-      (0, o.gn)([K.ak], ie.prototype, "OnMouseDown", null),
-        (0, o.gn)([K.ak], ie.prototype, "OnMouseMove", null),
-        (0, o.gn)([K.ak], ie.prototype, "OnMouseUp", null),
-        (0, o.gn)([K.ak], ie.prototype, "OnTouchStart", null),
-        (0, o.gn)([K.ak], ie.prototype, "OnTouchMove", null),
-        (0, o.gn)([K.ak], ie.prototype, "OnTouchEnd", null),
-        (0, o.gn)([K.ak], ie.prototype, "OnKeyDown", null);
+      (0, o.gn)([Z.ak], ie.prototype, "OnMouseDown", null),
+        (0, o.gn)([Z.ak], ie.prototype, "OnMouseMove", null),
+        (0, o.gn)([Z.ak], ie.prototype, "OnMouseUp", null),
+        (0, o.gn)([Z.ak], ie.prototype, "OnTouchStart", null),
+        (0, o.gn)([Z.ak], ie.prototype, "OnTouchMove", null),
+        (0, o.gn)([Z.ak], ie.prototype, "OnTouchEnd", null),
+        (0, o.gn)([Z.ak], ie.prototype, "OnKeyDown", null);
       var re = n(27363),
         se = n.n(re);
       const ae = i.createContext({ setValue: () => {} });
@@ -11643,11 +11700,11 @@
         }
       }
       (we.contextType = d),
-        (0, o.gn)([K.ak], we.prototype, "OnInputRef", null),
-        (0, o.gn)([K.ak], we.prototype, "ToggleMenu", null),
-        (0, o.gn)([K.ak], we.prototype, "OnValueSelected", null),
-        (0, o.gn)([K.ak], we.prototype, "ShowMenu", null),
-        (0, o.gn)([K.ak], we.prototype, "HideMenu", null);
+        (0, o.gn)([Z.ak], we.prototype, "OnInputRef", null),
+        (0, o.gn)([Z.ak], we.prototype, "ToggleMenu", null),
+        (0, o.gn)([Z.ak], we.prototype, "OnValueSelected", null),
+        (0, o.gn)([Z.ak], we.prototype, "ShowMenu", null),
+        (0, o.gn)([Z.ak], we.prototype, "HideMenu", null);
       const De = i.createContext(null);
       function Me(e) {
         const t = h();
@@ -11746,7 +11803,7 @@
           );
         }
       }
-      (0, o.gn)([K.ak], Le.prototype, "OnMenuOpened", null);
+      (0, o.gn)([Z.ak], Le.prototype, "OnMenuOpened", null);
       n(64012);
       var Te = n(54842),
         Re = n(83654),
@@ -11799,7 +11856,7 @@
           ? n && e > n.left && e < n.right && t > n.top && t < n.bottom
           : n && e >= n.left && e <= n.right && t >= n.top && t <= n.bottom;
       }
-      (0, o.gn)([K.ak], ke.prototype, "OnDrop", null);
+      (0, o.gn)([Z.ak], ke.prototype, "OnDrop", null);
       class xe {
         constructor() {
           (this.m_embeddedElement = new Re.AN("DragGhosts")),
@@ -11974,7 +12031,7 @@
               this.m_activeDropRegion.OnDragMove(o, i, this.m_activeDraggable);
         }
       }
-      (0, o.gn)([K.ak], xe.prototype, "OnDragGhostRef", null);
+      (0, o.gn)([Z.ak], xe.prototype, "OnDragGhostRef", null);
       class Be extends i.Component {
         constructor(e) {
           super(e),
@@ -12207,15 +12264,15 @@
           return t;
         }
       }
-      (0, o.gn)([K.ak], Be.prototype, "ProcessDragMove", null),
-        (0, o.gn)([K.ak], Be.prototype, "OnMouseDown", null),
-        (0, o.gn)([K.ak], Be.prototype, "OnMouseUp", null),
-        (0, o.gn)([K.ak], Be.prototype, "OnTouchStart", null),
-        (0, o.gn)([K.ak], Be.prototype, "OnTouchEnd", null),
+      (0, o.gn)([Z.ak], Be.prototype, "ProcessDragMove", null),
+        (0, o.gn)([Z.ak], Be.prototype, "OnMouseDown", null),
+        (0, o.gn)([Z.ak], Be.prototype, "OnMouseUp", null),
+        (0, o.gn)([Z.ak], Be.prototype, "OnTouchStart", null),
+        (0, o.gn)([Z.ak], Be.prototype, "OnTouchEnd", null),
         (0, o.gn)([Te.aD], Be.prototype, "ResetDragState", null),
-        (0, o.gn)([K.ak], Be.prototype, "OnHTMLDragStart", null),
-        (0, o.gn)([K.ak], Be.prototype, "OnHTMLDrag", null),
-        (0, o.gn)([K.ak], Be.prototype, "OnHTMLDragEnd", null);
+        (0, o.gn)([Z.ak], Be.prototype, "OnHTMLDragStart", null),
+        (0, o.gn)([Z.ak], Be.prototype, "OnHTMLDrag", null),
+        (0, o.gn)([Z.ak], Be.prototype, "OnHTMLDragEnd", null);
       class Pe extends i.Component {
         OnRef(e) {
           e && e.appendChild(this.props.elContent);
@@ -12227,7 +12284,7 @@
           });
         }
       }
-      (0, o.gn)([K.ak], Pe.prototype, "OnRef", null);
+      (0, o.gn)([Z.ak], Pe.prototype, "OnRef", null);
       class Fe extends i.Component {
         constructor() {
           super(...arguments),
@@ -12284,7 +12341,7 @@
           );
         }
       }
-      (0, o.gn)([K.ak], Fe.prototype, "OnRef", null);
+      (0, o.gn)([Z.ak], Fe.prototype, "OnRef", null);
       class He extends i.Component {
         constructor(e) {
           super(e), (this.m_divRef = i.createRef()), (this.state = {});
@@ -12385,8 +12442,8 @@
         Ue = n(10162),
         je = n(40093),
         ze = n.n(je),
-        Ze = n(3783),
-        Ke = n(58538);
+        Ke = n(3783),
+        Ze = n(58538);
       class Xe {
         constructor() {
           (this.m_flPageListScrollTop = 0),
@@ -12409,7 +12466,7 @@
         return i.createElement(
           s.s,
           Object.assign(
-            { ref: t, navEntryPreferPosition: Ze.c4.PREFERRED_CHILD },
+            { ref: t, navEntryPreferPosition: Ke.c4.PREFERRED_CHILD },
             e,
           ),
         );
@@ -12569,8 +12626,8 @@
                 (t) => (e.m_flPageScrollTop = t.currentTarget.scrollTop),
                 [e],
               ),
-              o = (0, K.eF)("scroll", t),
-              r = (0, K.eF)("scroll", n),
+              o = (0, Z.eF)("scroll", t),
+              r = (0, Z.eF)("scroll", n),
               s = i.useCallback(
                 (t) => {
                   var n;
@@ -12593,8 +12650,8 @@
                 },
                 [e],
               ),
-              l = (0, K.BE)(o, s),
-              c = (0, K.BE)(r, a);
+              l = (0, Z.BE)(o, s),
+              c = (0, Z.BE)(r, a);
             return { refForPageList: l, refForPage: c };
           })(L),
           O = (function (e, t) {
@@ -12605,13 +12662,13 @@
             r.current = t;
             const s = i.useCallback(
               (e) => (t) => {
-                n.set(e, t), e === o.current && (0, K.k$)(r.current, t);
+                n.set(e, t), e === o.current && (0, Z.k$)(r.current, t);
               },
               [n],
             );
             return (
               i.useEffect(
-                () => ((0, K.k$)(t, e && n.get(e)), () => (0, K.k$)(t, void 0)),
+                () => ((0, Z.k$)(t, e && n.get(e)), () => (0, Z.k$)(t, void 0)),
                 [n, e, t],
               ),
               s
@@ -12695,8 +12752,8 @@
             onClick: n,
           },
           t
-            ? i.createElement(Ke.vVQ, { direction: "right" })
-            : i.createElement(Ke.vVQ, { direction: "left" }),
+            ? i.createElement(Ze.vVQ, { direction: "right" })
+            : i.createElement(Ze.vVQ, { direction: "left" }),
         );
       }
       function nt(e) {
@@ -12798,12 +12855,12 @@
           );
         }
       }
-      (0, o.gn)([K.ak], ot.prototype, "InternalOnInput", null),
-        (0, o.gn)([K.ak], ot.prototype, "OnKeyUp", null),
-        (0, o.gn)([K.ak], ot.prototype, "OnBlur", null),
-        (0, o.gn)([K.ak], ot.prototype, "OnClick", null),
-        (0, o.gn)([K.ak], ot.prototype, "OnPaste", null),
-        (0, o.gn)([K.ak], ot.prototype, "OnCut", null);
+      (0, o.gn)([Z.ak], ot.prototype, "InternalOnInput", null),
+        (0, o.gn)([Z.ak], ot.prototype, "OnKeyUp", null),
+        (0, o.gn)([Z.ak], ot.prototype, "OnBlur", null),
+        (0, o.gn)([Z.ak], ot.prototype, "OnClick", null),
+        (0, o.gn)([Z.ak], ot.prototype, "OnPaste", null),
+        (0, o.gn)([Z.ak], ot.prototype, "OnCut", null);
       var it = n(99967),
         rt = n.n(it),
         st = n(37563),
@@ -12884,7 +12941,7 @@
             return { onOptionsButton: o, onOptionsActionDescription: r };
           })(null != M ? M : n, D),
           z = i.useRef(),
-          Z = (0, K.BE)(z, e.navRef),
+          K = (0, Z.BE)(z, e.navRef),
           X = i.useCallback(
             (e) => {
               var t;
@@ -12907,7 +12964,7 @@
             y,
             j,
             {
-              navRef: Z,
+              navRef: K,
               className: (0, l.Z)(
                 C,
                 rt().Field,
@@ -13013,7 +13070,7 @@
             "inlineWrap",
             "fieldClassName",
           ]),
-          { refWithValue: _, refForElement: v } = (0, K.ww)(t);
+          { refWithValue: _, refForElement: v } = (0, Z.ww)(t);
         return i.createElement(
           ct,
           {
@@ -13054,7 +13111,7 @@
             "bottomSeparator",
             "highlightOnFocus",
           ]),
-          { refWithValue: d, refForElement: h } = (0, K.ww)(t);
+          { refWithValue: d, refForElement: h } = (0, Z.ww)(t);
         return i.createElement(
           ct,
           {
@@ -13112,7 +13169,7 @@
             i.createElement("div", {
               className: (0, l.Z)(rt().Spacer, "Spacer"),
             }),
-            i.createElement(Ke.$nC, { direction: "down" }),
+            i.createElement(Ze.$nC, { direction: "down" }),
           ),
         );
       });
@@ -13121,7 +13178,7 @@
         const { className: n } = e,
           r = (0, o._T)(e, ["className"]);
         let a = i.useRef(),
-          l = (0, K.BE)(t, a);
+          l = (0, Z.BE)(t, a);
         const [u, d] = i.useState(!1),
           h = i.useCallback(() => {
             d((e) => !e), window.setTimeout(() => a.current.Focus(), 1);
@@ -13149,8 +13206,8 @@
                     onOKButton: h,
                   },
                   u
-                    ? i.createElement(Ke.Hz5, null)
-                    : i.createElement(Ke.dQJ, null),
+                    ? i.createElement(Ze.Hz5, null)
+                    : i.createElement(Ze.dQJ, null),
                 ),
               },
               r,
@@ -13224,7 +13281,7 @@
             onCancelButton: a,
             onExplicitFocusLevelChanged: n,
           }),
-          p = (0, K.BE)(l, d);
+          p = (0, Z.BE)(l, d);
         return i.createElement(
           s.s,
           Object.assign({}, u, {
@@ -13253,8 +13310,8 @@
             onCancelButton: r,
             fnFocusChildren: d,
           }),
-          p = (0, K.BE)(u, t),
-          g = (0, K.BE)(s, c);
+          p = (0, Z.BE)(u, t),
+          g = (0, Z.BE)(s, c);
         return i.createElement(
           ft.TN,
           Object.assign({}, l, {
@@ -13714,7 +13771,7 @@
               a.removeEventListener("touchend", this.OnWindowTouchEnd);
         }
         componentDidMount() {
-          this.m_fZoom = (0, K.KM)(this.m_refSlider.current);
+          this.m_fZoom = (0, Z.KM)(this.m_refSlider.current);
         }
         componentWillUnmount() {
           this.RemoveDocumentEventListeners();
@@ -13861,7 +13918,7 @@
                       ? v.trackForegroundColor
                       : void 0,
                   },
-                  ref: (0, K.dn)(this.m_refSlider, this.props.innerRef),
+                  ref: (0, Z.dn)(this.m_refSlider, this.props.innerRef),
                   navRef: this.m_navRefSlider,
                   onGamepadDirection: this.OnGamepadDirection,
                   onOKButton: this.BlurInnerSlider,
@@ -13873,7 +13930,7 @@
                 },
                 i.createElement(
                   "div",
-                  { className: vt().SliderControl },
+                  { className: (0, l.Z)(vt().SliderControl, "SliderControl") },
                   i.createElement("div", {
                     className: (0, l.Z)(
                       vt().SliderTrack,
@@ -13894,7 +13951,7 @@
                       i.createElement(
                         "div",
                         { className: vt().DefaultValueTick },
-                        i.createElement(Ke.$nC, { direction: "down" }),
+                        i.createElement(Ze.$nC, { direction: "down" }),
                       ),
                     ),
                   this.validRange &&
@@ -13908,9 +13965,9 @@
                         "div",
                         { className: S, ref: this.m_refHandle },
                         "leftparen" == this.props.handleType &&
-                          i.createElement(Ke.Tvf, null),
+                          i.createElement(Ze.Tvf, null),
                         "rightparen" == this.props.handleType &&
-                          i.createElement(Ke.RCC, null),
+                          i.createElement(Ze.RCC, null),
                       ),
                     ),
                 ),
@@ -13988,22 +14045,22 @@
             ),
         );
       }
-      (0, o.gn)([K.ak], Rt.prototype, "RecomputeSliderBounds", null),
-        (0, o.gn)([K.ak], Rt.prototype, "SetDragMode", null),
-        (0, o.gn)([K.ak], Rt.prototype, "OnGamepadDirection", null),
-        (0, o.gn)([K.ak], Rt.prototype, "UpdateSliderValueForPosition", null),
-        (0, o.gn)([K.ak], Rt.prototype, "OnWindowMouseMove", null),
-        (0, o.gn)([K.ak], Rt.prototype, "OnWindowMouseUp", null),
-        (0, o.gn)([K.ak], Rt.prototype, "OnMouseDown", null),
-        (0, o.gn)([K.ak], Rt.prototype, "OnTouchStart", null),
-        (0, o.gn)([K.ak], Rt.prototype, "OnWindowTouchMove", null),
-        (0, o.gn)([K.ak], Rt.prototype, "OnWindowTouchEnd", null),
-        (0, o.gn)([K.ak], Rt.prototype, "Complete", null),
-        (0, o.gn)([K.ak], Rt.prototype, "BlurInnerSlider", null),
-        (0, o.gn)([K.ak], Rt.prototype, "OnInnerSliderFocus", null),
-        (0, o.gn)([K.ak], Rt.prototype, "OnInnerSliderBlur", null),
-        (0, o.gn)([K.ak], Rt.prototype, "ResetToDefault", null),
-        (0, o.gn)([K.ak], Rt.prototype, "OnContextMenu", null);
+      (0, o.gn)([Z.ak], Rt.prototype, "RecomputeSliderBounds", null),
+        (0, o.gn)([Z.ak], Rt.prototype, "SetDragMode", null),
+        (0, o.gn)([Z.ak], Rt.prototype, "OnGamepadDirection", null),
+        (0, o.gn)([Z.ak], Rt.prototype, "UpdateSliderValueForPosition", null),
+        (0, o.gn)([Z.ak], Rt.prototype, "OnWindowMouseMove", null),
+        (0, o.gn)([Z.ak], Rt.prototype, "OnWindowMouseUp", null),
+        (0, o.gn)([Z.ak], Rt.prototype, "OnMouseDown", null),
+        (0, o.gn)([Z.ak], Rt.prototype, "OnTouchStart", null),
+        (0, o.gn)([Z.ak], Rt.prototype, "OnWindowTouchMove", null),
+        (0, o.gn)([Z.ak], Rt.prototype, "OnWindowTouchEnd", null),
+        (0, o.gn)([Z.ak], Rt.prototype, "Complete", null),
+        (0, o.gn)([Z.ak], Rt.prototype, "BlurInnerSlider", null),
+        (0, o.gn)([Z.ak], Rt.prototype, "OnInnerSliderFocus", null),
+        (0, o.gn)([Z.ak], Rt.prototype, "OnInnerSliderBlur", null),
+        (0, o.gn)([Z.ak], Rt.prototype, "ResetToDefault", null),
+        (0, o.gn)([Z.ak], Rt.prototype, "OnContextMenu", null);
       i.forwardRef(function (e, t) {
         const {
           label: n,
@@ -14022,8 +14079,8 @@
             },
             [s, o],
           ),
-          u = (0, K.yU)(c),
-          d = (0, K.BE)(u, t);
+          u = (0, Z.yU)(c),
+          d = (0, Z.BE)(u, t);
         return i.createElement(
           "div",
           {
@@ -14064,7 +14121,7 @@
         );
       });
       (0, o.gn)(
-        [K.ak],
+        [Z.ak],
         class extends G {
           OnToggleChange(e) {
             this.props.disabled || e === this.checked || this.Toggle();
@@ -14279,12 +14336,12 @@
               showTitle: s,
               renderPageListItem: jt,
               renderPageListSeparator: zt,
-              renderPageAnimation: Zt,
+              renderPageAnimation: Kt,
             }),
           ),
         );
       });
-      function Zt(e) {
+      function Kt(e) {
         let t = kt.None;
         "up" == e.direction
           ? (t = kt.Up)
@@ -17396,7 +17453,7 @@
         KJh: () => re,
         KKY: () => Ce,
         Lao: () => B,
-        Lk$: () => K,
+        Lk$: () => Z,
         P9w: () => F,
         SUY: () => _,
         Uos: () => R,
@@ -17438,7 +17495,7 @@
         shV: () => w,
         sqQ: () => ce,
         tEX: () => U,
-        tLe: () => Z,
+        tLe: () => K,
         thP: () => I,
         uZu: () => ee,
         ui7: () => H,
@@ -18504,7 +18561,7 @@
           }),
         );
       }
-      function Z() {
+      function K() {
         return i.createElement(
           "svg",
           {
@@ -18523,7 +18580,7 @@
           }),
         );
       }
-      function K() {
+      function Z() {
         return i.createElement(
           "svg",
           {
@@ -20836,7 +20893,7 @@
           }
           n = n.parentElement;
         }
-        return n;
+        return o(n) ? n : null;
       }
       function C(e, t) {
         const n = [];
@@ -20919,7 +20976,7 @@
     },
     34345: (e, t, n) => {
       "use strict";
-      n(80751);
+      n(80751), n(33557);
     },
     31846: (e, t, n) => {
       "use strict";
@@ -22030,16 +22087,16 @@
       function r(e, t, n) {
         return [e, t, n];
       }
-      function s(e, t, n = []) {
-        const i = o.useRef(e);
-        (i.current = e),
+      function s(e, t, n = [], i = !0) {
+        const r = o.useRef(e);
+        (r.current = e),
           o.useEffect(() => {
-            if (!i.current) return;
+            if (!r.current || !i) return;
             const e = setInterval(() => {
-              i.current && i.current();
+              r.current && r.current();
             }, t);
             return () => clearInterval(e);
-          }, [t, ...n]);
+          }, [t, i, ...n]);
       }
       function a() {
         const [, e] = o.useState(0);
@@ -23281,7 +23338,7 @@
           },
         );
       }
-      function Z(e) {
+      function K(e) {
         const t = (0, c.useMemo)(() => Number.parseInt(e.appId), [e.appId]),
           n = (function () {
             const [e] = (0, c.useState)(() =>
@@ -23293,11 +23350,15 @@
           [r, s] = (0, c.useState)("");
         return c.createElement(
           "div",
-          { className: G().ctn },
+          { className: G().Ctn },
           c.createElement(
             "div",
-            null,
+            { className: "title2" },
             (0, m.Xx)("#KeyWizard_Title"),
+          ),
+          c.createElement(
+            "div",
+            { className: "titleHelper" },
             c.createElement(
               "a",
               {
@@ -23307,52 +23368,63 @@
               (0, m.Xx)("#ViewDocumentation"),
             ),
           ),
-          c.createElement("hr", null),
-          c.createElement("p", null, (0, m.Xx)("#KeyWizard_Playtest_Desc")),
-          c.createElement(P.II, {
-            type: "number",
-            label: (0, m.Xx)("#KeyWizard_NumKeys", n.name),
-            min: 1,
-            max: 1e8,
-            value: o,
-            onChange: (e) => i(Number.parseInt(e.currentTarget.value)),
-          }),
-          c.createElement(P.__, null, (0, m.Xx)("#KeyWizard_Request_notes")),
-          c.createElement("textarea", {
-            className: "DialogTextInputBase",
-            value: r || "",
-            onChange: (e) => {
-              var t;
-              return s(
-                (null === (t = null == e ? void 0 : e.currentTarget) ||
-                void 0 === t
-                  ? void 0
-                  : t.value) || "",
-              );
-            },
-          }),
+          c.createElement("br", { style: { clear: "left" } }),
           c.createElement(
-            P.zx,
-            {
-              onClick: (e) =>
-                (0, W.AM)(
-                  c.createElement(K, {
-                    unAppID: t,
-                    oPackage: n,
-                    nKeys: o,
-                    strNotes: r,
-                  }),
-                  (0, U.RA)(e),
-                ),
-              disabled: o <= 0,
-            },
-            (0, m.Xx)("#Button_Submit"),
+            "div",
+            { className: "instructions" },
+            c.createElement("p", null, (0, m.Xx)("#KeyWizard_Playtest_Desc")),
+            c.createElement("p", null, (0, m.Xx)("#KeyWizard_Request_notes")),
+            c.createElement(
+              "div",
+              { className: G().KeyCountCtn },
+              c.createElement(P.II, {
+                type: "number",
+                label: (0, m.Xx)("#KeyWizard_NumKeys", n.name),
+                min: 1,
+                max: 1e8,
+                value: o,
+                onChange: (e) => i(Number.parseInt(e.currentTarget.value)),
+              }),
+            ),
+            c.createElement(P.__, null, (0, m.Xx)("#KeyWizard_KeyUsage")),
+            c.createElement("textarea", {
+              className: (0, u.Z)("DialogTextInputBase", G().KeyUseCtn),
+              value: r || "",
+              onChange: (e) => {
+                var t;
+                return s(
+                  (null === (t = null == e ? void 0 : e.currentTarget) ||
+                  void 0 === t
+                    ? void 0
+                    : t.value) || "",
+                );
+              },
+            }),
+            c.createElement(
+              "div",
+              { className: G().ButtonCtn },
+              c.createElement(
+                P.KM,
+                {
+                  onClick: (e) =>
+                    (0, W.AM)(
+                      c.createElement(Z, {
+                        unAppID: t,
+                        oPackage: n,
+                        nKeys: o,
+                        strNotes: r,
+                      }),
+                      (0, U.RA)(e),
+                    ),
+                  disabled: o <= 0,
+                },
+                (0, m.Xx)("#Button_Submit"),
+              ),
+            ),
           ),
-          c.createElement("br", null),
-          c.createElement("br", null),
         );
       }
-      function K(e) {
+      function Z(e) {
         const {
             unAppID: t,
             oPackage: n,
@@ -23536,7 +23608,7 @@
         ),
         oe = c.lazy(() =>
           Promise.all([n.e(9584), n.e(744), n.e(5117), n.e(5676)]).then(
-            n.bind(n, 87028),
+            n.bind(n, 31514),
           ),
         ),
         ie = c.lazy(() =>
@@ -23867,7 +23939,7 @@
                       c.createElement(L.d, {
                         config: {
                           "key-wizard": () =>
-                            c.createElement(Z, { appId: e.match.params.appid }),
+                            c.createElement(K, { appId: e.match.params.appid }),
                         },
                       }),
                   }),

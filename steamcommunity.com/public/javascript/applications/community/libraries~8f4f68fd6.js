@@ -1850,6 +1850,11 @@
                     br: a.FE.readUint64String,
                     bw: a.Xc.writeUint64String,
                   },
+                  include_family_group_response: {
+                    n: 2,
+                    br: a.FE.readBool,
+                    bw: a.Xc.writeBool,
+                  },
                 },
               }),
             b.sm_m
@@ -1930,6 +1935,7 @@
                     br: a.FE.readUint32,
                     bw: a.Xc.writeUint32,
                   },
+                  family_group: { n: 8, c: B },
                 },
               }),
             g.sm_m
@@ -4067,7 +4073,7 @@
                     br: a.FE.readString,
                     bw: a.Xc.writeString,
                   },
-                  img_icon_url: {
+                  img_icon_hash: {
                     n: 9,
                     br: a.FE.readString,
                     bw: a.Xc.writeString,

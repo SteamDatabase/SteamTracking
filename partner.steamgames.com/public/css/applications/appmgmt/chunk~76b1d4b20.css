@@ -1471,6 +1471,7 @@ div._1MvXz1iI0KQnsVVZnYxeN7 {
   display: flex;
   align-items: center;
   background: #344654;
+  justify-self: end;
 }
 @media screen and (max-width: 910px) {
   ._35-UbCInUAiUv7UIRWnV5a {
@@ -4116,7 +4117,7 @@ html.responsive.touch .ContentHubSalePage {
   max-width: 100%;
 }
 ._2NfLqUpH_h0Ba0jlv9M9ZE._3ez1rppRxfu1tsVkwYGRYe {
-  max-width: 940px;
+  max-width: 950px;
 }
 .BasicUI ._2NfLqUpH_h0Ba0jlv9M9ZE._3ez1rppRxfu1tsVkwYGRYe {
   max-width: unset;

@@ -9748,7 +9748,7 @@
           s = t.internal_section_data.reservation_options.map(
             (e) => e.reservation_package,
           ),
-          l = (0, C.bJ)(),
+          l = (0, C.ef)(),
           c = (0, m.mY)(l),
           d = N.LJ.GetELanguageFallback(a),
           u = t.localized_description
@@ -20703,7 +20703,7 @@
       }
       function F(e) {
         const { hardwareDetail: t } = e,
-          a = (0, E.bJ)();
+          a = (0, E.ef)();
         return n.createElement(
           "div",
           { className: (0, g.Z)(C.reserverowReserved, "ReservationAddToCart") },

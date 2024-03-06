@@ -6933,14 +6933,16 @@
             ),
             n = o.K.InitFromClanID(e.clanAccountID);
           const r = s.cb.Get().GetPartnerEventPermissions(n);
-          let d = this.state.bDeleting,
-            _ = !d && this.ShowInsertAction(l.f.k_eInsertFullImage),
-            p = !d && this.ShowInsertAction(l.f.k_eInsertThumbnail),
-            h = !d && this.ShowInsertAction(l.f.k_eInsertVideo);
-          const v = 4 == e.file_type || 5 == e.file_type;
-          let f = Boolean(
-            !d && r.valve_admin && this.ShowInsertAction(l.f.k_eShowImageGroup),
-          );
+          let d = this.state.bDeleting;
+          const _ = 4 == e.file_type || 5 == e.file_type;
+          let p = !d && !_ && this.ShowInsertAction(l.f.k_eInsertFullImage),
+            h = !d && !_ && this.ShowInsertAction(l.f.k_eInsertThumbnail),
+            v = !d && _ && this.ShowInsertAction(l.f.k_eInsertVideo),
+            f = Boolean(
+              !d &&
+                r.valve_admin &&
+                this.ShowInsertAction(l.f.k_eShowImageGroup),
+            );
           return i.createElement(
             m.Y,
             {
@@ -6956,7 +6958,7 @@
                 {
                   className: y().ImageWrapper,
                   style: {
-                    backgroundImage: v
+                    backgroundImage: _
                       ? ""
                       : `url( '${this.props.clanImage.thumb_url}' )`,
                   },
@@ -6966,7 +6968,7 @@
                   onDoubleClick: this.onHandleFullSize,
                   onClick: this.OnImageClick,
                 },
-                Boolean(v) &&
+                Boolean(_) &&
                   i.createElement(
                     "video",
                     {
@@ -6981,7 +6983,7 @@
                     }),
                   ),
               ),
-              _ &&
+              p &&
                 i.createElement(
                   "span",
                   { className: y().Full, onClick: this.onHandleFullSize },
@@ -6992,7 +6994,7 @@
                   size: "medium",
                   className: y().FloatingThrobber,
                 }),
-              p &&
+              h &&
                 i.createElement(
                   "span",
                   { className: y().Thumb, onClick: this.onHandleThumbnail },
@@ -7007,7 +7009,7 @@
                   },
                   "(VO) " + (0, E.Xx)("#ImagePicker_Localized"),
                 ),
-              h &&
+              v &&
                 i.createElement(
                   "span",
                   { className: y().Full, onClick: this.onHandleVideo },

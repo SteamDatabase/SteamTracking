@@ -4259,7 +4259,7 @@
     },
     77131: (e, t, n) => {
       "use strict";
-      n.d(t, { R: () => C });
+      n.d(t, { R: () => v, N: () => C });
       var i = n(85556),
         r = n(77936),
         s = n(20417),
@@ -4461,7 +4461,7 @@
         g = n(45651);
       class _ {
         constructor(e, t) {
-          var n, i, r, s, o, a;
+          var n, i, r, s, o, a, l;
           (this.m_socket = null),
             (this.Log = new c.sO("CWebSocketConnection", () => this.m_sName)),
             (this.m_bDisconnectRequested = !1),
@@ -4469,23 +4469,27 @@
             (this.m_sName = e),
             (this.m_fnOnMessageHandler = t.fnOnMessageHandler),
             (this.m_fnOnCloseHandler = t.fnOnCloseHandler),
-            (this.m_fnOnReconnectHandler =
-              null !== (n = t.fnOnReconnectHandler) && void 0 !== n
+            (this.m_fnOnReconnectStartHandler =
+              null !== (n = t.fnOnReconnectStartHandler) && void 0 !== n
                 ? n
                 : () => {}),
+            (this.m_fnOnReconnectFinishHandler =
+              null !== (i = t.fnOnReconnectFinishHandler) && void 0 !== i
+                ? i
+                : () => {}),
             (this.m_nConnectAttemptsMax =
-              null !== (i = t.nConnectAttemptsMax) && void 0 !== i ? i : 20),
+              null !== (r = t.nConnectAttemptsMax) && void 0 !== r ? r : 8),
             (this.m_nConnectAttemptTimeoutMs =
-              null !== (r = t.nConnectAttemptTimeoutMs) && void 0 !== r
-                ? r
+              null !== (s = t.nConnectAttemptTimeoutMs) && void 0 !== s
+                ? s
                 : 1e3),
             (this.m_bReconnectOnFailure =
-              null !== (s = t.bReconnectOnFailure) && void 0 !== s && s),
+              null !== (o = t.bReconnectOnFailure) && void 0 !== o && o),
             (this.m_nReconnectAttemptsMax =
-              null !== (o = t.nReconnectAttemptsMax) && void 0 !== o ? o : 1e3),
+              null !== (a = t.nReconnectAttemptsMax) && void 0 !== a ? a : 3e4),
             (this.m_nReconnectAttemptTimeoutMs =
-              null !== (a = t.nReconnectAttemptTimeoutMs) && void 0 !== a
-                ? a
+              null !== (l = t.nReconnectAttemptTimeoutMs) && void 0 !== l
+                ? l
                 : 1e4);
         }
         get name() {
@@ -4538,8 +4542,11 @@
                 (i += 1);
             } while (i < t);
             return (
-              this.Log.Error("connect retry: limit exceeeded, bailing"),
+              this.Log.Warning(
+                `websocket connect retry: limit exceeeded, bailing - ${this.name}`,
+              ),
               (this.m_bConnecting = !1),
+              this.BShouldReconnect() && this.StartReconnect(),
               { result: 2, message: "not ready, exceeded retry count" }
             );
           });
@@ -4561,11 +4568,16 @@
         }
         StartReconnect() {
           return (0, i.mG)(this, void 0, void 0, function* () {
-            this.Log.Info("start reconnect"), (this.m_socket = null);
-            if (1 != (yield this.Connect(this.m_sURL)).result)
+            this.Log.Info("start reconnect"),
+              (this.m_socket = null),
+              this.m_fnOnReconnectStartHandler({ connection: this });
+            if (1 != (yield this.Reconnect()).result)
               return (
                 this.Log.Error("failed to re-connect to websocket after close"),
-                this.m_fnOnReconnectHandler({ connection: this, eResult: 2 }),
+                this.m_fnOnReconnectFinishHandler({
+                  connection: this,
+                  eResult: 2,
+                }),
                 void this.m_fnOnCloseHandler({
                   connection: this,
                   bError: !0,
@@ -4573,7 +4585,10 @@
                 })
               );
             this.Log.Info("reconnect successful"),
-              this.m_fnOnReconnectHandler({ connection: this, eResult: 1 });
+              this.m_fnOnReconnectFinishHandler({
+                connection: this,
+                eResult: 1,
+              });
           });
         }
         ConnectToSocket(e, t) {
@@ -4666,49 +4681,73 @@
         (0, i.gn)([s.ak], _.prototype, "OnSocketOpen", null),
         (0, i.gn)([s.ak], _.prototype, "OnSocketClose", null),
         (0, i.gn)([s.ak], _.prototype, "OnSocketMessage", null);
-      const f = "localhost",
-        v = new c.sO("WebUITransport");
-      class C {
-        static Get() {
-          return (
-            null == C.s_Singleton &&
-              p.De.IN_CLIENT &&
-              ((C.s_Singleton = new C()),
-              (window.WebUIServiceTransport = C.s_Singleton)),
-            C.s_Singleton
-          );
+      const f = new c.sO("WebUITransport");
+      class v {
+        constructor() {
+          (this.m_iMsgSeq = 1),
+            (this.m_mapPendingMethodRequests = new Map()),
+            (this.m_messageHandlers = new m()),
+            (this.m_mapServiceCallErrorCount = new Map()),
+            (this.m_mapConnectionDetails = new Map()),
+            (this.m_bInitialized = !1);
         }
         static InstallErrorReportingStore(e) {
           this.sm_ErrorReportingStore = e;
         }
+        BIsValid() {
+          return this.m_bInitialized;
+        }
         ReportError(e) {
-          v.Warning(e);
-          const t = C.sm_ErrorReportingStore;
+          f.Warning(e);
+          const t = v.sm_ErrorReportingStore;
           t &&
             t.ReportError(new Error(e), {
               bIncludeMessageInIdentifier: !0,
               cCallsitesToIgnore: 1,
             });
         }
-        constructor() {
-          (this.m_iMsgSeq = 1),
-            (this.m_mapPendingMethodRequests = new Map()),
-            (this.m_messageHandlers = new m()),
-            (this.m_mapServiceCallErrorCount = new Map());
-          const e = {
-            bReconnectOnFailure: !0,
-            fnOnMessageHandler: this.OnWebsocketMessage,
-            fnOnCloseHandler: this.OnWebsocketClose,
-            fnOnReconnectHandler: this.OnWebsocketReconnect,
-          };
-          (this.m_connectionSteamUI = new _("steamUI", e)),
-            (this.m_connectionClientdll = new _("clientdll", e)),
-            (0, l.S)().SetDefaultTransport(this),
-            (0, l.S)().SetDefaultHandlerRegistry(this.m_messageHandlers),
-            h.zw.RegisterForNotifyStartShutdown(this.OnStartShutdown);
+        Init() {
+          return (0, i.mG)(this, void 0, void 0, function* () {
+            if (!p.De.IN_CLIENT) return;
+            const e = yield SteamClient.WebUITransport.GetTransportInfo();
+            this.CreateConnection(
+              1,
+              "steamUI",
+              e.portSteamUI,
+              e.authKeySteamUI,
+            ),
+              this.CreateConnection(
+                2,
+                "clientdll",
+                e.portClientdll,
+                e.authKeyClientdll,
+              ),
+              (0, l.S)().SetDefaultTransport(this),
+              (0, l.S)().SetDefaultHandlerRegistry(this.m_messageHandlers),
+              h.zw.RegisterForNotifyStartShutdown(this.OnStartShutdown);
+          });
         }
         get messageHandlers() {
           return this.m_messageHandlers;
+        }
+        SetStatusEventHandler(e) {
+          this.m_fnOnStatusEventHandler = e;
+        }
+        CreateConnection(e, t, n, i) {
+          const r = {
+              bReconnectOnFailure: !0,
+              fnOnMessageHandler: this.OnWebsocketMessage,
+              fnOnCloseHandler: this.OnWebsocketClose,
+              fnOnReconnectStartHandler: this.OnWebsocketReconnectStart,
+              fnOnReconnectFinishHandler: this.OnWebsocketReconnectFinish,
+            },
+            s = {
+              connection: new _(t, r),
+              sUrl: `ws://localhost:${n}/transportsocket/`,
+              sAuthKey: i,
+              eClientExecutionSite: e,
+            };
+          this.m_mapConnectionDetails.set(e, s);
         }
         SendMsg(e, t, n, i) {
           return new Promise((r, s) => {
@@ -4716,36 +4755,45 @@
             const a = i.eClientExecutionSite;
             if (null == a || 0 == a)
               return (
-                v.Error(`SendMsg: Invalid client execution site: ${a}`),
+                f.Error(`SendMsg: Invalid client execution site: ${a}`),
                 void s(`Transport SendMsg: invalid client execution site ${a}`)
               );
-            const l =
-              2 == a ? this.m_connectionClientdll : this.m_connectionSteamUI;
-            if (!l.BCanSendMessages()) {
+            const l = this.m_mapConnectionDetails.get(a);
+            if (null == l)
+              return (
+                f.Error(
+                  `SendMsg: could not find connection for execution site: ${a}`,
+                ),
+                void s(
+                  `Transport SendMsg: could not find connection for execution site ${a}`,
+                )
+              );
+            const c = l.connection;
+            if (!c.BCanSendMessages()) {
               const t =
                 null !== (o = this.m_mapServiceCallErrorCount.get(e)) &&
                 void 0 !== o
                   ? o
                   : 1;
               this.m_mapServiceCallErrorCount.set(e, t + 1);
-              const n = `SendMsg: Attempt to send message but socket wasn't ready: ${l.name} - ${e}`;
+              const n = `SendMsg: Attempt to send message but socket wasn't ready: ${c.name} - ${e}`;
               return (
                 1 == t && this.ReportError(n),
-                v.Warning(n + ` error count: ${t}`),
+                f.Warning(n + ` error count: ${t}`),
                 void s("Transport SendMsg: socket not ready")
               );
             }
-            const c = this.m_iMsgSeq++;
+            const u = this.m_iMsgSeq++;
             t.SetEMsg(146),
               t.Hdr().set_target_job_name(e),
-              t.Hdr().set_jobid_source("" + c);
-            if (1 != l.SendSerializedMessage(t.Serialize()))
+              t.Hdr().set_jobid_source("" + u);
+            if (1 != c.SendSerializedMessage(t.Serialize()))
               return (
-                v.Error("SendMsg: Failed to send message"),
+                f.Error("SendMsg: Failed to send message"),
                 void s("Transport SendMsg: failed to send message")
               );
-            this.m_mapPendingMethodRequests.set(c, {
-              m_iSeq: c,
+            this.m_mapPendingMethodRequests.set(u, {
+              m_iSeq: u,
               m_responseClass: n,
               m_fnCallback: r,
               m_fnError: s,
@@ -4757,80 +4805,84 @@
           const r = n.eClientExecutionSite;
           if (null == r || 0 == r)
             return (
-              v.Error(`SendNotification: Invalid client execution site: ${r}`),
+              f.Error(`SendNotification: Invalid client execution site: ${r}`),
               !1
             );
-          const s =
-            2 == r ? this.m_connectionClientdll : this.m_connectionSteamUI;
-          if (!s.BCanSendMessages()) {
+          const s = this.m_mapConnectionDetails.get(r);
+          if (null == s)
+            return (
+              f.Error(
+                `SendNotification: could not find connection for execution site: ${r}`,
+              ),
+              !1
+            );
+          const o = s.connection;
+          if (!o.BCanSendMessages()) {
             const t =
               null !== (i = this.m_mapServiceCallErrorCount.get(e)) &&
               void 0 !== i
                 ? i
                 : 1;
             this.m_mapServiceCallErrorCount.set(e, t + 1);
-            const n = `SendNotification: Attempt to send message but socket wasn't ready: ${s.name} - ${e}`;
+            const n = `SendNotification: Attempt to send message but socket wasn't ready: ${o.name} - ${e}`;
             return (
               1 == t && this.ReportError(n),
-              v.Warning(n + ` error count: ${t}`),
+              f.Warning(n + ` error count: ${t}`),
               !1
             );
           }
           t.SetEMsg(146), t.Hdr().set_target_job_name(e);
-          return 1 == s.SendSerializedMessage(t.Serialize());
+          return 1 == o.SendSerializedMessage(t.Serialize());
+        }
+        ConnectToSite(e) {
+          return (0, i.mG)(this, void 0, void 0, function* () {
+            const t = e.connection,
+              n = yield t.Connect(e.sUrl);
+            if (1 != n.result) return n;
+            return (yield this.SendAuthMessage(e)).BSuccess()
+              ? { result: 1, message: "connected" }
+              : { result: 2, message: "client auth failed" };
+          });
         }
         MakeReady() {
           return (0, i.mG)(this, void 0, void 0, function* () {
-            this.m_transportInfo =
-              yield SteamClient.WebUITransport.GetTransportInfo();
-            const e = `ws://${f}:${this.m_transportInfo.portSteamUI}/transportsocket/`,
-              t = `ws://${f}:${this.m_transportInfo.portClientdll}/transportsocket/`;
-            let n = yield this.m_connectionSteamUI.Connect(e);
-            if (1 != n.result)
-              return v.Error("MakeReady: failed to connect to SteamUI"), n;
-            let i = yield this.AuthConnection(this.m_connectionSteamUI);
-            return 1 != i
-              ? (v.Error("MakeReady: failed to auth to SteamUI"), n)
-              : ((n = yield this.m_connectionClientdll.Connect(t)),
-                1 != n.result
-                  ? (v.Error("MakeReady: failed to connect to clientdll"), n)
-                  : ((i = yield this.AuthConnection(
-                      this.m_connectionClientdll,
-                    )),
-                    1 != i
-                      ? (v.Error("MakeReady: failed to auth to clientdll"), n)
-                      : n));
+            const e = [];
+            for (const [t, n] of this.m_mapConnectionDetails)
+              e.push(this.ConnectToSite(n));
+            const t = yield Promise.all(e);
+            (this.m_bInitialized = !0), this.DispatchTransportStatusUpdate();
+            for (const e of t) if (1 != e.result) return e;
+            return { result: 1, message: "ready" };
           });
         }
-        GetAuthInfoForConnection(e) {
-          return e == this.m_connectionClientdll
-            ? {
-                eClientExecutionSite: 2,
-                sAuthKey: this.m_transportInfo.authKeyClientdll,
-              }
-            : e == this.m_connectionSteamUI
-            ? {
-                eClientExecutionSite: 1,
-                sAuthKey: this.m_transportInfo.authKeySteamUI,
-              }
-            : (v.Error(
-                "GetAuthInfoForConnection: failed to identify connection",
-              ),
-              { eClientExecutionSite: 0, sAuthKey: "" });
+        GetConnectionDetails(e) {
+          for (const [t, n] of this.m_mapConnectionDetails)
+            if (n.connection === e) return n;
+          return (
+            f.Error("GetConnectionDetails: failed to identify connection"), null
+          );
         }
-        AuthConnection(e) {
-          return (0, i.mG)(this, void 0, void 0, function* () {
-            const t = this.GetAuthInfoForConnection(e);
-            return (yield this.SendAuthMessage(t)).GetEResult();
-          });
+        DispatchTransportStatusUpdate() {
+          if (!this.m_fnOnStatusEventHandler) return;
+          let e = !0;
+          for (const [t, n] of this.m_mapConnectionDetails)
+            n.connection.BCanSendMessages() || (e = !1);
+          this.m_fnOnStatusEventHandler({ bConnected: e });
         }
-        OnWebsocketReconnect(e) {
-          if (1 != e.eResult)
+        OnWebsocketReconnectStart(e) {
+          this.DispatchTransportStatusUpdate();
+        }
+        OnWebsocketReconnectFinish(e) {
+          if ((this.DispatchTransportStatusUpdate(), 1 != e.eResult))
             return (
-              v.Error("failed to reconnect to steam client"),
+              f.Error(
+                "OnWebsocketReconnect: Failed to reconnect to steam client",
+              ),
               void this.FailAllPendingRequests()
             );
-          this.FailAllPendingRequests(), this.AuthConnection(e.connection);
+          this.FailAllPendingRequests();
+          const t = this.GetConnectionDetails(e.connection);
+          this.SendAuthMessage(t);
         }
         OnWebsocketClose(e) {
           e.bIsExpectedToReconnect || this.FailAllPendingRequests();
@@ -4891,18 +4943,17 @@
           });
         }
         OnStartShutdown(e) {
-          return (
-            this.m_connectionSteamUI.PrepareForShutdown(),
-            this.m_connectionClientdll.PrepareForShutdown(),
-            1
-          );
+          for (const [e, t] of this.m_mapConnectionDetails)
+            t.connection.PrepareForShutdown();
+          return 1;
         }
       }
-      (C.s_Singleton = null),
-        (0, i.gn)([s.ak], C.prototype, "OnWebsocketReconnect", null),
-        (0, i.gn)([s.ak], C.prototype, "OnWebsocketClose", null),
-        (0, i.gn)([s.ak], C.prototype, "OnWebsocketMessage", null),
-        (0, i.gn)([s.ak], C.prototype, "OnStartShutdown", null);
+      (0, i.gn)([s.ak], v.prototype, "OnWebsocketReconnectStart", null),
+        (0, i.gn)([s.ak], v.prototype, "OnWebsocketReconnectFinish", null),
+        (0, i.gn)([s.ak], v.prototype, "OnWebsocketClose", null),
+        (0, i.gn)([s.ak], v.prototype, "OnWebsocketMessage", null),
+        (0, i.gn)([s.ak], v.prototype, "OnStartShutdown", null);
+      const C = new v();
     },
     95315: (e, t, n) => {
       "use strict";
@@ -13043,7 +13094,8 @@
           (e[(e.BasicNav = 24)] = "BasicNav"),
           (e[(e.FailedNav = 25)] = "FailedNav"),
           (e[(e.Typing = 26)] = "Typing"),
-          (e[(e.TimerExpired = 27)] = "TimerExpired");
+          (e[(e.TimerExpired = 27)] = "TimerExpired"),
+          (e[(e.Screenshot = 28)] = "Screenshot");
       })(i || (i = {}));
       const s = new (class {
         constructor() {
@@ -13501,7 +13553,7 @@
     },
     77151: (e, t, n) => {
       "use strict";
-      n.d(t, { LA: () => g, jg: () => p });
+      n.d(t, { LA: () => _, jg: () => g });
       var i,
         r = n(85556),
         s = n(80751),
@@ -13510,7 +13562,8 @@
         l = n(16649),
         c = n(37563),
         u = n(47427),
-        d = n(50423);
+        d = n(50423),
+        m = n(31421);
       !(function (e) {
         (e[(e.AnyController = 0)] = "AnyController"),
           (e[(e.XboxController = 1)] = "XboxController"),
@@ -13522,7 +13575,7 @@
           (e[(e.SteamDeckNeptune = 7)] = "SteamDeckNeptune"),
           (e[(e.SteamDeckGalileo = 8)] = "SteamDeckGalileo");
       })(i || (i = {}));
-      const m = {
+      const h = {
           any_controller: i.AnyController,
           xbox_controller: i.XboxController,
           ps3_controller: i.Ps3Controller,
@@ -13533,8 +13586,8 @@
           steam_deck_neptune: i.SteamDeckNeptune,
           steam_deck_galileo: i.SteamDeckGalileo,
         },
-        h = "unUserdataVersion";
-      class p {
+        p = "unUserdataVersion";
+      class g {
         BIsLoaded() {
           return this.m_bIsLoaded;
         }
@@ -13678,7 +13731,7 @@
         }
         InternalLoad() {
           return (0, r.mG)(this, void 0, void 0, function* () {
-            let e = window.localStorage.getItem(h) || "0",
+            let e = window.localStorage.getItem(p) || "0",
               t = {
                 v: "0" == e ? void 0 : e,
                 id: "" + c.L7.accountid,
@@ -13788,7 +13841,7 @@
                     }
                   if (e.data.rgHardwareUsed)
                     for (const t of e.data.rgHardwareUsed) {
-                      const e = m[t];
+                      const e = h[t];
                       e && this.m_rgHardwareUsed.add(e);
                     }
                 });
@@ -13892,8 +13945,14 @@
               void 0 !== window.g_bUseNewCartAPI &&
               window.g_bUseNewCartAPI &&
               "function" == typeof window.AddItemToCart
-            )
-              return window.AddItemToCart(t, a), !0;
+            ) {
+              let e;
+              return (
+                s && (yield m.ZP.Load(), (e = m.ZP.ParseSNR(s))),
+                window.AddItemToCart(t, a, e),
+                !0
+              );
+            }
             const r = new FormData();
             r.append("action", "add_to_cart"),
               a
@@ -13974,17 +14033,17 @@
         InvalidateCache(e) {
           const t = e || window;
           t.localStorage.setItem(
-            h,
-            (Number.parseInt(t.localStorage.getItem(h) || "0") + 1).toString(),
+            p,
+            (Number.parseInt(t.localStorage.getItem(p) || "0") + 1).toString(),
           );
         }
         static Get() {
           return (
-            p.s_globalSingletonStore ||
-              ((p.s_globalSingletonStore = new p()),
+            g.s_globalSingletonStore ||
+              ((g.s_globalSingletonStore = new g()),
               "dev" == c.De.WEB_UNIVERSE &&
-                (window.DUS = p.s_globalSingletonStore)),
-            p.s_globalSingletonStore
+                (window.DUS = g.s_globalSingletonStore)),
+            g.s_globalSingletonStore
           );
         }
         constructor() {
@@ -14017,57 +14076,57 @@
             (0, a.rC)(this);
         }
       }
-      function g() {
-        const [e, t] = (0, u.useState)(!p.Get().BIsLoaded());
+      function _() {
+        const [e, t] = (0, u.useState)(!g.Get().BIsLoaded());
         return (
           (0, u.useEffect)(() => {
             e &&
-              p
+              g
                 .Get()
                 .HintLoad()
-                .finally(() => t(!p.Get().BIsLoaded()));
+                .finally(() => t(!g.Get().BIsLoaded()));
           }, [e]),
-          [e, p.Get()]
+          [e, g.Get()]
         );
       }
-      (0, r.gn)([a.LO], p.prototype, "m_setWishList", void 0),
-        (0, r.gn)([a.LO], p.prototype, "m_setOwnedPackages", void 0),
-        (0, r.gn)([a.LO], p.prototype, "m_setOwnedApps", void 0),
-        (0, r.gn)([a.LO], p.prototype, "m_setFollowedApps", void 0),
-        (0, r.gn)([a.LO], p.prototype, "m_setExcludedTagsIds", void 0),
+      (0, r.gn)([a.LO], g.prototype, "m_setWishList", void 0),
+        (0, r.gn)([a.LO], g.prototype, "m_setOwnedPackages", void 0),
+        (0, r.gn)([a.LO], g.prototype, "m_setOwnedApps", void 0),
+        (0, r.gn)([a.LO], g.prototype, "m_setFollowedApps", void 0),
+        (0, r.gn)([a.LO], g.prototype, "m_setExcludedTagsIds", void 0),
         (0, r.gn)(
           [a.LO],
-          p.prototype,
+          g.prototype,
           "m_setExcludedContentDescriptors",
           void 0,
         ),
-        (0, r.gn)([a.LO], p.prototype, "m_setRecommendedApps", void 0),
-        (0, r.gn)([a.LO], p.prototype, "m_mapIgnoredApps", void 0),
-        (0, r.gn)([a.LO], p.prototype, "m_mapIgnoredPackages", void 0),
-        (0, r.gn)([a.LO], p.prototype, "m_setCuratorsFollowed", void 0),
-        (0, r.gn)([a.LO], p.prototype, "m_setCuratorsIgnored", void 0),
+        (0, r.gn)([a.LO], g.prototype, "m_setRecommendedApps", void 0),
+        (0, r.gn)([a.LO], g.prototype, "m_mapIgnoredApps", void 0),
+        (0, r.gn)([a.LO], g.prototype, "m_mapIgnoredPackages", void 0),
+        (0, r.gn)([a.LO], g.prototype, "m_setCuratorsFollowed", void 0),
+        (0, r.gn)([a.LO], g.prototype, "m_setCuratorsIgnored", void 0),
         (0, r.gn)(
           [a.LO],
-          p.prototype,
+          g.prototype,
           "m_bShowFilteredUserReviewScores",
           void 0,
         ),
-        (0, r.gn)([a.LO], p.prototype, "m_primaryLanguage", void 0),
-        (0, r.gn)([a.LO], p.prototype, "m_secondaryLanguages", void 0),
-        (0, r.gn)([a.LO], p.prototype, "m_setRecommendedTags", void 0),
+        (0, r.gn)([a.LO], g.prototype, "m_primaryLanguage", void 0),
+        (0, r.gn)([a.LO], g.prototype, "m_secondaryLanguages", void 0),
+        (0, r.gn)([a.LO], g.prototype, "m_setRecommendedTags", void 0),
         (0, r.gn)(
           [a.LO],
-          p.prototype,
+          g.prototype,
           "m_mapRecommendingCuratorsForApp",
           void 0,
         ),
-        (0, r.gn)([a.LO], p.prototype, "m_setPackagesInCart", void 0),
-        (0, r.gn)([a.LO], p.prototype, "m_setAppsInCart", void 0),
-        (0, r.gn)([a.LO], p.prototype, "m_nCartLineItemCount", void 0),
-        (0, r.gn)([a.LO], p.prototype, "m_rgHardwareUsed", void 0),
-        (0, r.gn)([a.LO], p.prototype, "m_bAjaxInFlight", void 0),
-        (0, r.gn)([a.Fl], p.prototype, "ExcludedContentDescriptor", null),
-        (0, r.gn)([a.aD], p.prototype, "UpdateAppIgnore", null);
+        (0, r.gn)([a.LO], g.prototype, "m_setPackagesInCart", void 0),
+        (0, r.gn)([a.LO], g.prototype, "m_setAppsInCart", void 0),
+        (0, r.gn)([a.LO], g.prototype, "m_nCartLineItemCount", void 0),
+        (0, r.gn)([a.LO], g.prototype, "m_rgHardwareUsed", void 0),
+        (0, r.gn)([a.LO], g.prototype, "m_bAjaxInFlight", void 0),
+        (0, r.gn)([a.Fl], g.prototype, "ExcludedContentDescriptor", null),
+        (0, r.gn)([a.aD], g.prototype, "UpdateAppIgnore", null);
     },
     92011: (e, t, n) => {
       "use strict";
@@ -15566,7 +15625,7 @@
         15: { rollup_field: "parental_feature_requests", eFeature: d.zE },
         16: { rollup_field: "family_invites", eFeature: d.zE },
         17: { rollup_field: "family_purchase_requests", eFeature: d.zE },
-        18: { rollup_field: "family_purchase_requests", eFeature: 1 },
+        18: { rollup_field: "parental_playtime_requests", eFeature: d.zE },
         19: {
           rollup_field: "family_purchase_request_responses",
           eFeature: d.zE,
@@ -23050,7 +23109,7 @@
                 },
                 r.createElement(
                   "div",
-                  { className: Ct().SliderControl },
+                  { className: (0, l.Z)(Ct().SliderControl, "SliderControl") },
                   r.createElement("div", {
                     className: (0, l.Z)(
                       Ct().SliderTrack,
@@ -23681,30 +23740,28 @@
     58538: (e, t, n) => {
       "use strict";
       n.d(t, {
-        $jN: () => S,
+        $jN: () => C,
         $nC: () => _,
         CtA: () => m,
         Ehc: () => g,
-        Hz5: () => D,
-        IRk: () => R,
+        Hz5: () => y,
+        IRk: () => I,
         MCw: () => p,
         Qrh: () => d,
-        RCC: () => M,
-        Tvf: () => I,
-        Tx5: () => E,
-        V7L: () => A,
-        WF_: () => b,
-        YbX: () => T,
+        RCC: () => L,
+        Tvf: () => D,
+        Tx5: () => w,
+        V7L: () => M,
+        YbX: () => R,
         aVo: () => v,
         aeH: () => h,
-        atL: () => x,
-        by3: () => k,
-        dQJ: () => L,
-        dqu: () => y,
-        mm_: () => C,
+        atL: () => O,
+        by3: () => T,
+        dQJ: () => E,
+        dqu: () => b,
         qTB: () => c,
-        tkI: () => w,
-        uWd: () => O,
+        tkI: () => S,
+        uWd: () => A,
         vVQ: () => f,
       });
       var i = n(85556),
@@ -24390,23 +24447,6 @@
               fill: "none",
             },
             e,
-          ),
-          r.createElement("path", {
-            d: "M16 34V21H3V16H16V3H21V16H34V21H21V34H16Z",
-            fill: "currentColor",
-          }),
-        );
-      }
-      function S(e) {
-        return r.createElement(
-          "svg",
-          Object.assign(
-            {
-              xmlns: "http://www.w3.org/2000/svg",
-              viewBox: "0 0 36 36",
-              fill: "none",
-            },
-            e,
             { className: (0, l.Z)(e.className, o().Spinner) },
           ),
           r.createElement("path", {
@@ -24443,24 +24483,7 @@
           }),
         );
       }
-      function b(e) {
-        return r.createElement(
-          "svg",
-          Object.assign(
-            {
-              xmlns: "http://www.w3.org/2000/svg",
-              viewBox: "0 0 36 36",
-              fill: "none",
-            },
-            e,
-          ),
-          r.createElement("path", {
-            d: "M33 16H3V21H33V16Z",
-            fill: "currentColor",
-          }),
-        );
-      }
-      function w(e) {
+      function S(e) {
         return r.createElement(
           "svg",
           Object.assign(
@@ -24479,7 +24502,7 @@
           }),
         );
       }
-      function y(e) {
+      function b(e) {
         return r.createElement(
           "svg",
           Object.assign(
@@ -24500,7 +24523,7 @@
           }),
         );
       }
-      function E(e) {
+      function w(e) {
         const { alert: t, urgent: n } = e,
           s = (0, i._T)(e, ["alert", "urgent"]);
         return n
@@ -24576,7 +24599,7 @@
               ),
             );
       }
-      function D(e) {
+      function y(e) {
         return r.createElement(
           "svg",
           Object.assign(
@@ -24595,7 +24618,7 @@
           }),
         );
       }
-      function L(e) {
+      function E(e) {
         return r.createElement(
           "svg",
           Object.assign(
@@ -24616,7 +24639,7 @@
           }),
         );
       }
-      function I(e) {
+      function D(e) {
         return r.createElement(
           "svg",
           {
@@ -24632,7 +24655,7 @@
           }),
         );
       }
-      function M(e) {
+      function L(e) {
         return r.createElement(
           "svg",
           {
@@ -24648,7 +24671,7 @@
           }),
         );
       }
-      function R(e) {
+      function I(e) {
         const { bGreyOutRightSide: t } = e,
           n = (0, i._T)(e, ["bGreyOutRightSide"]);
         return t
@@ -24699,7 +24722,7 @@
               }),
             );
       }
-      function A(e) {
+      function M(e) {
         return r.createElement(
           "svg",
           Object.assign(
@@ -24716,7 +24739,7 @@
           }),
         );
       }
-      function T(e) {
+      function R(e) {
         const [t, n] = (0, a.y)();
         return r.createElement(
           "svg",
@@ -24765,7 +24788,7 @@
           ),
         );
       }
-      function O(e) {
+      function A(e) {
         return r.createElement(
           "svg",
           Object.assign(
@@ -24811,7 +24834,7 @@
           }),
         );
       }
-      function k(e) {
+      function T(e) {
         return r.createElement(
           "svg",
           Object.assign(
@@ -24831,7 +24854,7 @@
           }),
         );
       }
-      function x(e) {
+      function O(e) {
         return r.createElement(
           "svg",
           Object.assign(
@@ -26583,6 +26606,7 @@
         vJ$: () => Ae,
         vT2: () => pe,
         vVQ: () => gt,
+        vwM: () => _t,
         vyu: () => st,
         wn$: () => ye,
         wr9: () => ge,
@@ -30217,6 +30241,40 @@
             );
         }
       }
+      function _t(e) {
+        return r.createElement(
+          "svg",
+          {
+            width: "48",
+            height: "24",
+            viewBox: "0 0 48 24",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+          },
+          r.createElement("rect", {
+            width: "48",
+            height: "24",
+            rx: "3",
+            fill: "#1A9FFF",
+          }),
+          r.createElement("path", {
+            d: "M14.3799 11.712C14.9399 11.896 15.3359 12.16 15.5679 12.504C15.8079 12.848 15.9279 13.264 15.9279 13.752C15.9279 14.248 15.7999 14.68 15.5439 15.048C15.2959 15.416 14.9359 15.7 14.4639 15.9C13.9999 16.1 13.4559 16.2 12.8319 16.2H9.17188V7.79999H12.4959C13.5119 7.79999 14.2559 7.98799 14.7279 8.36399C15.2079 8.73199 15.4479 9.25599 15.4479 9.93599C15.4479 10.744 15.0919 11.336 14.3799 11.712ZM11.2839 9.51599V11.22H12.3879C12.7159 11.22 12.9639 11.144 13.1319 10.992C13.3079 10.84 13.3959 10.62 13.3959 10.332C13.3959 9.78799 13.0479 9.51599 12.3519 9.51599H11.2839ZM12.6159 14.496C12.9759 14.496 13.2439 14.412 13.4199 14.244C13.6039 14.068 13.6959 13.84 13.6959 13.56C13.6959 12.984 13.3519 12.696 12.6639 12.696H11.2839V14.496H12.6159Z",
+            fill: "white",
+          }),
+          r.createElement("path", {
+            d: "M17.1992 7.79999H23.0192V9.57599H19.2752V11.088H22.4552V12.852H19.2752V14.424H23.0192V16.2H17.1992V7.79999Z",
+            fill: "white",
+          }),
+          r.createElement("path", {
+            d: "M28.5072 16.2H26.4312V9.57599H23.9832V7.79999H30.9552V9.57599H28.5072V16.2Z",
+            fill: "white",
+          }),
+          r.createElement("path", {
+            d: "M38.8285 16.2H36.5845L36.0925 14.76H33.0325L32.5525 16.2H30.3805L33.5365 7.79999H35.5525L38.8285 16.2ZM34.5325 10.236L33.5725 13.128H35.5285L34.5325 10.236Z",
+            fill: "white",
+          }),
+        );
+      }
     },
     2324: (e, t, n) => {
       "use strict";
@@ -30233,24 +30291,27 @@
     25006: (e, t, n) => {
       "use strict";
       n.d(t, {
-        HC: () => c,
-        PZ: () => p,
-        YR: () => h,
-        ZP: () => l,
-        bJ: () => d,
-        xp: () => m,
-        zv: () => u,
+        HC: () => u,
+        PZ: () => g,
+        YR: () => p,
+        ZP: () => c,
+        bJ: () => m,
+        ef: () => v,
+        uX: () => f,
+        xp: () => h,
+        zv: () => d,
       });
       var i = n(85556),
         r = n(47427),
         s = n(31421),
         o = n(37563);
-      const a = r.createContext({});
-      function l(e) {
+      const a = r.createContext({}),
+        l = r.createContext(void 0);
+      function c(e) {
         const { children: t } = e,
           n = (0, i._T)(e, ["children"]),
-          o = d(),
-          l = g(),
+          o = m(),
+          l = _(),
           c = r.useMemo(
             () =>
               Object.assign(
@@ -30270,9 +30331,9 @@
           );
         return r.createElement(a.Provider, { value: c }, t);
       }
-      function c(e) {
+      function u(e) {
         const { children: t } = e,
-          n = g();
+          n = _();
         let i = r.useMemo(() => s.ZP.ParseSNR(o.De.SNR), [n]);
         return r.createElement(
           a.Provider,
@@ -30282,22 +30343,22 @@
           t,
         );
       }
-      function u(e, t, n) {
+      function d(e, t, n) {
         return Object.assign(Object.assign({}, e), {
-          feature: t,
-          depth: n,
+          feature: t || e.feature,
+          depth: n || e.depth,
           countrycode: o.De.COUNTRY,
           is_client: o.De.IN_CLIENT,
         });
       }
-      function d() {
+      function m() {
         return r.useContext(a);
       }
-      function m(e, t) {
-        return u(d(), e, t);
+      function h(e, t) {
+        return d(m(), e, t);
       }
-      function h(e, t, n) {
-        const i = d();
+      function p(e, t, n) {
+        const i = m();
         return r.useMemo(
           () =>
             (function (e, t, n, i) {
@@ -30312,8 +30373,8 @@
           [e, i, t, n],
         );
       }
-      function p(e, t) {
-        const n = d();
+      function g(e, t) {
+        const n = m();
         return r.useMemo(
           () =>
             s.ZP.GetLinkParam(
@@ -30323,7 +30384,7 @@
           [n, e, t],
         );
       }
-      function g() {
+      function _() {
         const [e, t] = r.useState(s.ZP.BIsLoaded());
         return (
           r.useEffect(() => {
@@ -30331,6 +30392,26 @@
           }, [e]),
           e
         );
+      }
+      function f(e) {
+        const { uiData: t, children: n } = e,
+          i = r.useMemo(
+            () => ({
+              domain: t.domain,
+              controller: t.controller,
+              method: t.method,
+              submethod: t.submethod,
+              feature: t.feature,
+              depth: t.depth,
+            }),
+            [t.domain, t.controller, t.method, t.submethod, t.feature, t.depth],
+          );
+        return r.createElement(l.Provider, { value: i, children: n });
+      }
+      function v() {
+        const e = r.useContext(l),
+          t = m();
+        return e || t;
       }
     },
     23163: (e, t, n) => {
@@ -31537,7 +31618,7 @@
           }
           n = n.parentElement;
         }
-        return n;
+        return i(n) ? n : null;
       }
       function v(e, t) {
         const n = [];
@@ -36251,51 +36332,71 @@
           },
         });
       }
-      function Mt() {
-        const e = (0, m.T)(!0);
-        return new S.J(
-          l.De.WEBAPI_BASE_URL,
-          null == e ? void 0 : e.webapi_token,
-        );
-      }
-      function Rt(e) {
-        const t = (0, k.kD)(Mt),
-          n = (0, k.kD)(s.useCallback(() => new C.Z(), [])),
-          i = (0, s.useMemo)(
+      function Mt(e) {
+        const { storeUserConfig: t, children: n } = e,
+          i = s.useCallback(
+            () =>
+              new S.J(
+                l.De.WEBAPI_BASE_URL,
+                null == t ? void 0 : t.webapi_token,
+              ),
+            [null == t ? void 0 : t.webapi_token],
+          ),
+          r = (0, k.kD)(i),
+          o = (0, k.kD)(s.useCallback(() => new C.Z(), [])),
+          a = (0, s.useMemo)(
             () => ({ useActiveAccount: () => l.L7.steamid }),
             [],
           );
         return s.createElement(
           f.B,
-          { value: i },
+          { value: a },
           s.createElement(
             v.Ub,
-            { useActiveSteamInterface: t, useStorage: n },
-            e.children,
+            { useActiveSteamInterface: r, useStorage: o },
+            n,
           ),
         );
       }
+      function Rt(e) {
+        var t;
+        return (
+          null === (t = e.storeUserConfig) || void 0 === t
+            ? void 0
+            : t.originating_navdata
+        )
+          ? s.createElement(ae.uX, {
+              uiData: e.storeUserConfig.originating_navdata,
+              children: e.children,
+            })
+          : e.children;
+      }
       function At(e) {
         const { children: t } = e,
-          n = s.useRef();
+          [n] = s.useState(() => (0, m.T)(!0)),
+          i = s.useRef();
         return (
-          n.current || (n.current = new Ye()),
+          i.current || (i.current = new Ye()),
           s.createElement(
             ae.ZP,
             { domain: "store.steampowered.com" },
             s.createElement(
-              Ke.Ff,
-              { ImpressionTracker: n.current },
+              Rt,
+              { storeUserConfig: n },
               s.createElement(
-                y.u.Provider,
-                { value: { bCanUseLink: !0 } },
+                Ke.Ff,
+                { ImpressionTracker: i.current },
                 s.createElement(
-                  l.fI,
-                  null,
+                  y.u.Provider,
+                  { value: { bCanUseLink: !0 } },
                   s.createElement(
-                    Rt,
+                    l.fI,
                     null,
-                    s.createElement(Ae.R, null, s.createElement(X, null, t)),
+                    s.createElement(
+                      Mt,
+                      { storeUserConfig: n },
+                      s.createElement(Ae.R, null, s.createElement(X, null, t)),
+                    ),
                   ),
                 ),
               ),
@@ -36344,6 +36445,7 @@
       });
       var Ot = n(92011),
         kt = n(50423);
+      n(33557);
       n(7765);
       (0, le.jQ)({ enforceActions: "never" }),
         kt.Dj(function () {

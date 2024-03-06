@@ -848,7 +848,7 @@ ${MEDIA_CDN_COMMUNITY_URL}images/${image_small}
 ${MEDIA_CDN_COMMUNITY_URL}images/${}
 ${MEDIA_CDN_COMMUNITY_URL}images/apps/${appid}/${}.jpg
 ${MEDIA_CDN_COMMUNITY_URL}images/apps/${}/${icon}
-${MEDIA_CDN_COMMUNITY_URL}images/apps/${}/${img_icon_url}.jpg
+${MEDIA_CDN_COMMUNITY_URL}images/apps/${}/${img_icon_hash}.jpg
 ${MEDIA_CDN_COMMUNITY_URL}images/apps/${}/${}
 ${MEDIA_CDN_COMMUNITY_URL}images/apps/${}/${}.jpg
 ${MEDIA_CDN_COMMUNITY_URL}images/avatars/
@@ -2564,7 +2564,7 @@ https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/fe/fef49e7f
 https://steamcdn-a.akamaihd.net/steamcommunity/public/images/items/${appid}/${}
 https://steamcdn-a.akamaihd.net/steamcommunity/public/images/items/646570/85b510e2e164070a59947395ff91d250c010a5c9.jpg
 https://steamcdn-a.akamaihd.net/steamcommunity/public/images/steamworks_docs/english/DailyDealVisibilityExample.jpg
-https://steamcdn-a.akamaihd.net/steamcommunity/public/images/steamworks_docs/english/PromoAssets.zip
+https://steamcdn-a.akamaihd.net/steamcommunity/public/images/steamworks_docs/english/PromoAssets_Mar_2024.zip
 https://steamcdn-a.akamaihd.net/steamcommunity/public/images/steamworks_docs/english/SalePageTemplates.zip
 https://steamcdn-a.akamaihd.net/steamcommunity/public/images/steamworks_docs/english/spotlight_example_3.jpg
 https://steamcdn-a.akamaihd.net/steamcommunity/public/images/steamworks_docs/english/spotlight_example_4.jpg

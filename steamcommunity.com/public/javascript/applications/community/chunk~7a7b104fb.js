@@ -129,7 +129,7 @@
     },
     6399: (e, t, s) => {
       "use strict";
-      s.d(t, { c: () => R });
+      s.d(t, { c: () => A });
       var n = s(85556),
         a = s(54842),
         i = s(27605),
@@ -165,8 +165,8 @@
           );
       var M = s(62613),
         w = s(13129),
-        D = s(31846),
-        B = s(20417),
+        B = s(31846),
+        D = s(20417),
         T = s(37563),
         I = s(44488),
         k = s.n(I),
@@ -235,7 +235,7 @@
                 "span",
                 {
                   className: k().RoleFlairContainer,
-                  "data-tooltip-text": (0, D.Xx)(
+                  "data-tooltip-text": (0, B.Xx)(
                     "#BroadcastChat_Role_Presenter_ttip",
                   ),
                 },
@@ -246,7 +246,7 @@
                 "span",
                 {
                   className: k().RoleFlairContainer,
-                  "data-tooltip-text": (0, D.Xx)(
+                  "data-tooltip-text": (0, B.Xx)(
                     "#BroadcastChat_Role_Moderatorr_ttip",
                   ),
                 },
@@ -257,7 +257,7 @@
                 "span",
                 {
                   className: k().RoleFlairContainer,
-                  "data-tooltip-text": (0, D.Xx)(
+                  "data-tooltip-text": (0, B.Xx)(
                     "#BroadcastChat_Role_Broadcaster_ttip",
                   ),
                 },
@@ -267,7 +267,7 @@
               return null;
           }
         };
-      let R = class extends o.Component {
+      let A = class extends o.Component {
         constructor(e) {
           super(e),
             (this.m_chat = null),
@@ -364,7 +364,7 @@
                           t.persona_name,
                         ),
                     },
-                    (0, D.Xx)("#BroadcastChat_RemoveMessages"),
+                    (0, B.Xx)("#BroadcastChat_RemoveMessages"),
                   ),
                   o.createElement(
                     p.Zo,
@@ -379,7 +379,7 @@
                           t.persona_name,
                         ),
                     },
-                    (0, D.Xx)("#BroadcastChat_half_Mute"),
+                    (0, B.Xx)("#BroadcastChat_half_Mute"),
                   ),
                   o.createElement(
                     p.Zo,
@@ -394,7 +394,7 @@
                           t.persona_name,
                         ),
                     },
-                    (0, D.Xx)("#BroadcastChat_day_Mute"),
+                    (0, B.Xx)("#BroadcastChat_day_Mute"),
                   ),
                   o.createElement(
                     p.Zo,
@@ -409,7 +409,7 @@
                           t.persona_name,
                         ),
                     },
-                    (0, D.Xx)("#BroadcastChat_week_Mute"),
+                    (0, B.Xx)("#BroadcastChat_week_Mute"),
                   ),
                   o.createElement(
                     p.Zo,
@@ -424,7 +424,7 @@
                           t.persona_name,
                         ),
                     },
-                    (0, D.Xx)("#BroadcastChat_perm_Mute"),
+                    (0, B.Xx)("#BroadcastChat_perm_Mute"),
                   ),
                   o.createElement(
                     p.Zo,
@@ -440,7 +440,7 @@
                           !0,
                         ),
                     },
-                    (0, D.Xx)("#BroadcastChat_Unmute"),
+                    (0, B.Xx)("#BroadcastChat_Unmute"),
                   ),
                 )
               : this.m_chat.IsUserMutedLocally(t.steamid)
@@ -455,7 +455,7 @@
                           t.persona_name,
                         ),
                     },
-                    (0, D.Xx)("#BroadcastChat_UnmuteLocal"),
+                    (0, B.Xx)("#BroadcastChat_UnmuteLocal"),
                   ),
                 )
               : s.push(
@@ -469,7 +469,7 @@
                           t.persona_name,
                         ),
                     },
-                    (0, D.Xx)("#BroadcastChat_MuteLocal"),
+                    (0, B.Xx)("#BroadcastChat_MuteLocal"),
                   ),
                 ),
             ((T.L7 && T.L7.is_support) ||
@@ -489,7 +489,7 @@
                           t.persona_name,
                         ),
                     },
-                    (0, D.Xx)("#BroadcastChat_Remove_Moderator"),
+                    (0, B.Xx)("#BroadcastChat_Remove_Moderator"),
                   ),
                 )
               : s.push(
@@ -504,7 +504,7 @@
                           t.persona_name,
                         ),
                     },
-                    (0, D.Xx)("#BroadcastChat_Add_Moderator"),
+                    (0, B.Xx)("#BroadcastChat_Add_Moderator"),
                   ),
                 );
           }
@@ -516,7 +516,7 @@
                   o.createElement(
                     "div",
                     { className: k().SelectedUserNameCtn },
-                    (0, D.Xx)("#BroadcastChat_User"),
+                    (0, B.Xx)("#BroadcastChat_User"),
                     o.createElement("br", null),
                     o.createElement(
                       "span",
@@ -583,7 +583,7 @@
                     k().MessageContents
                   }`,
                 },
-                ` (${(0, D.Xx)("#BroadcastChat_Broadcaster")})`,
+                ` (${(0, B.Xx)("#BroadcastChat_Broadcaster")})`,
               ),
             e.type === L.gK.Chat &&
               this.m_chat.m_mapChannelModeratorUsers.get(e.steamid) &&
@@ -594,7 +594,7 @@
                     k().MessageContents
                   }`,
                 },
-                ` (${(0, D.Xx)("#BroadcastChat_Moderator")})`,
+                ` (${(0, B.Xx)("#BroadcastChat_Moderator")})`,
               ),
             o.createElement(
               "span",
@@ -635,7 +635,7 @@
             o.createElement(x.E, { latestAnnouncement: r }),
             s &&
               !!this.m_chat &&
-              o.createElement(A, {
+              o.createElement(R, {
                 oChat: this.m_chat,
                 emoticonStore: this.props.emoticonStore,
                 bPartnerMemberOnlyChat: t,
@@ -656,7 +656,7 @@
             o.createElement(E, null),
             !s &&
               !!this.m_chat &&
-              o.createElement(A, {
+              o.createElement(R, {
                 oChat: this.m_chat,
                 emoticonStore: this.props.emoticonStore,
                 bPartnerMemberOnlyChat: t,
@@ -664,7 +664,7 @@
           );
         }
       };
-      function A(e) {
+      function R(e) {
         const { oChat: t, emoticonStore: s, bPartnerMemberOnlyChat: n } = e;
         return !n ||
           ((null === T.L7 || void 0 === T.L7 ? void 0 : T.L7.logged_in) &&
@@ -710,7 +710,7 @@
               { className: `${u().chatEntryControls}` },
               o.createElement("textarea", {
                 className: u().chatTextarea,
-                placeholder: (0, D.Xx)("#BroadcastChat_EnterResponse"),
+                placeholder: (0, B.Xx)("#BroadcastChat_EnterResponse"),
                 onKeyPress: d,
                 onChange: (e) => a(e.target.value),
                 value: n,
@@ -725,7 +725,7 @@
                 "button",
                 {
                   className: p,
-                  title: (0, D.Xx)("#ChatEntryButton_Submit"),
+                  title: (0, B.Xx)("#ChatEntryButton_Submit"),
                   disabled: h,
                   onClick: () => {
                     t.SendMessage(n), a("");
@@ -775,17 +775,17 @@
               emoticonStore: n,
               emoticonHoverStore: c.$,
               strFlairGroupID: s.m_strFlairGroupID,
-              title: (0, D.Xx)("#ChatEntryButton_Flair"),
+              title: (0, B.Xx)("#ChatEntryButton_Flair"),
               buttonIcon: o.createElement(M.yVt, null),
             })
           : null;
       }
-      (0, n.gn)([a.LO], R.prototype, "m_chat", void 0),
-        (0, n.gn)([B.ak], R.prototype, "StartChat", null),
-        (0, n.gn)([B.ak], R.prototype, "HandleScroll", null),
-        (0, n.gn)([B.ak], R.prototype, "OnContextMenu", null),
-        (0, n.gn)([B.ak], R.prototype, "RenderUserChatLine", null),
-        (R = (0, n.gn)([i.Pi], R));
+      (0, n.gn)([a.LO], A.prototype, "m_chat", void 0),
+        (0, n.gn)([D.ak], A.prototype, "StartChat", null),
+        (0, n.gn)([D.ak], A.prototype, "HandleScroll", null),
+        (0, n.gn)([D.ak], A.prototype, "OnContextMenu", null),
+        (0, n.gn)([D.ak], A.prototype, "RenderUserChatLine", null),
+        (A = (0, n.gn)([i.Pi], A));
       class V extends o.Component {
         render() {
           return o.createElement(
@@ -817,13 +817,13 @@
           o.createElement(
             "div",
             { className: k().LogInPrompt },
-            (0, D.Xx)("#Broadcast_PartnerChat_Login"),
+            (0, B.Xx)("#Broadcast_PartnerChat_Login"),
           ),
           !T.L7.logged_in &&
             o.createElement(
               _.zx,
               { onClick: v.X, className: (0, w.Z)(k().SignInButton) },
-              (0, D.Xx)("#Login_SignIn"),
+              (0, B.Xx)("#Login_SignIn"),
             ),
         );
       }
@@ -1146,8 +1146,8 @@
         E = s(45610),
         M = s(50727),
         w = s(62613),
-        D = s(14609),
-        B = s(50423),
+        B = s(14609),
+        D = s(50423),
         T = s(31846),
         I = s(24549),
         k = s(45651),
@@ -1157,14 +1157,14 @@
         O = s(20006),
         F = s.n(O),
         N = s(46882);
-      function R() {
+      function A() {
         return l.createElement(
           "div",
           { className: "STV_ReplayBanner" },
           (0, T.Xx)("#DASHPlayerControls_IsReplay"),
         );
       }
-      const A = (0, o.Pi)((e) => {
+      const R = (0, o.Pi)((e) => {
         let t = e.video;
         if (t && (t.IsBroadcastClip() || t.IsBroadcastVOD())) return null;
         let s = c._d.Loading,
@@ -1555,9 +1555,9 @@
             this.OnMouseUp,
             !0,
           ),
-            (0, B.ni)(this.m_elSettingsPanel, e.target) ||
+            (0, D.ni)(this.m_elSettingsPanel, e.target) ||
               this.setState({ bSettingsOpen: !1 }),
-            (0, B.ni)(this.m_elSubtitlesPanel.current, e.target) ||
+            (0, D.ni)(this.m_elSubtitlesPanel.current, e.target) ||
               this.setState({ bSubtitlesOpen: !1 });
         }
         bindSettingsButton(e) {
@@ -2140,13 +2140,13 @@
         }
         OnToggleFullscreen() {
           this.m_elBroadcastPlayer &&
-            ((0, B.h9)(this.m_elBroadcastPlayer)
-              ? (0, B.mQ)(this.m_elBroadcastPlayer)
-              : (0, B.RD)(this.m_elBroadcastPlayer, this.m_elVideo));
+            ((0, D.h9)(this.m_elBroadcastPlayer)
+              ? (0, D.mQ)(this.m_elBroadcastPlayer)
+              : (0, D.RD)(this.m_elBroadcastPlayer, this.m_elVideo));
         }
         OnFullscreenChange(e) {
           if (!this.m_elBroadcastPlayer) return;
-          let t = (0, B.h9)(this.m_elBroadcastPlayer);
+          let t = (0, D.h9)(this.m_elBroadcastPlayer);
           this.setState({ bFullscreen: t });
         }
         BHideVideoControls() {
@@ -2213,7 +2213,7 @@
               onMouseDown: this.OnMouseDown,
             },
             u && l.createElement("div", { className: F().BroadcastContext }, u),
-            n && l.createElement(R, null),
+            n && l.createElement(A, null),
             this.props.showVideoBackgroundBlur &&
               l.createElement(_, {
                 className: "videoBlur",
@@ -2263,7 +2263,7 @@
                 stats: e.GetDASHPlayerStats(),
                 closeStats: this.CloseStats,
               }),
-            l.createElement(A, { video: e }),
+            l.createElement(R, { video: e }),
             r && l.createElement(U, { video: e }),
           );
         }
@@ -3108,7 +3108,7 @@
                 ? this.props.linkRegions.map((e) => {
                     const t = (0, j.A)(e.url);
                     return l.createElement(
-                      D.ns,
+                      B.ns,
                       {
                         key: e.link_index,
                         href: e.url,
@@ -3179,7 +3179,7 @@
     },
     22925: (e, t, s) => {
       "use strict";
-      s.d(t, { Z: () => B });
+      s.d(t, { Z: () => D });
       var n = s(85556),
         a = s(80751),
         i = s.n(a),
@@ -3226,7 +3226,7 @@
         }
         Init(e = 0, t = null, s = null) {
           return (0, n.mG)(this, void 0, void 0, function* () {
-            (this.m_WebUIServiceTransport = E.R.Get()),
+            (this.m_WebUIServiceTransport = E.N),
               (this.m_unAccountID = e),
               (this.m_Transport = t),
               (this.m_Storage = s),
@@ -3243,7 +3243,7 @@
           });
         }
         InitSteamEngineLanguages() {
-          null != this.m_WebUIServiceTransport &&
+          this.m_WebUIServiceTransport.BIsValid() &&
             (this.m_WebUIServiceTransport.messageHandlers.RegisterServiceNotificationHandler(
               b.gi.NotifyTextFilterDictionaryChangedHandler,
               this.OnTextFilterDictionaryChanged,
@@ -3448,7 +3448,7 @@
           return (0, n.mG)(this, void 0, void 0, function* () {
             let t = "",
               s = !1;
-            if (null != this.m_WebUIServiceTransport)
+            if (this.m_WebUIServiceTransport.BIsValid())
               try {
                 {
                   const t = yield this.GetSteamEngineTextFilterDictionary(
@@ -3597,7 +3597,7 @@
         }
       }
       let w;
-      function D() {
+      function B() {
         if (!w) {
           const e = new Set();
           let t = { sessionid: S.De.SESSIONID, origin: (0, S.Kc)() };
@@ -3622,7 +3622,7 @@
         (0, n.gn)([p.a], M.prototype, "OnTextFilterDictionaryChanged", null),
         (0, n.gn)([r.aD], M.prototype, "UpdateCommunityPreferences", null),
         (0, n.gn)([r.aD], M.prototype, "BRebuildFilter", null);
-      class B {
+      class D {
         GetChat(e, t) {
           return this.m_mapChats.get(e) || this.m_mapChats.get(t);
         }
@@ -3632,18 +3632,18 @@
         }
         static Get() {
           return (
-            B.s_Singleton ||
-              ((B.s_Singleton = new B()),
+            D.s_Singleton ||
+              ((D.s_Singleton = new D()),
               "dev" == S.De.WEB_UNIVERSE &&
-                (window.g_BroadcastChatStore = B.s_Singleton)),
-            B.s_Singleton
+                (window.g_BroadcastChatStore = D.s_Singleton)),
+            D.s_Singleton
           );
         }
         constructor() {
           (this.m_mapChats = new Map()), (0, r.rC)(this);
         }
       }
-      (0, n.gn)([r.LO], B.prototype, "m_mapChats", void 0);
+      (0, n.gn)([r.LO], D.prototype, "m_mapChats", void 0);
       class T {
         constructor() {
           (this.m_ulBroadcastChannelID = ""),
@@ -3681,7 +3681,7 @@
             ));
         }
         InitTextFilter() {
-          this.m_textFilterStore = new M({ BIsFriend: D() });
+          this.m_textFilterStore = new M({ BIsFriend: B() });
           let e = 0;
           if ("" !== S.L7.steamid) {
             e = new c.K(S.L7.steamid).GetAccountID();

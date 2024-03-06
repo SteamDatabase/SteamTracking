@@ -26,6 +26,7 @@
         RightCol: "p8nGmITwaheftXwwyY6XG",
         NoSticky: "_1sSkEwdvPphzJ9sd0RpdF3",
         SmallText: "_1YUYdQKh7vPLQlJ8EuMiZS",
+        Button: "_3T0UPaCRvzoXTiTW9F8yrB",
         TitleSmall: "oEKkskdGlFwuZAA2TPJfo",
         DefaultSectionCtn: "_2Cn7rbcVY7f3AyvqhIM5hg",
         Indent: "_225jnmgDXqpJkfUMzBRt_u",
@@ -1027,13 +1028,13 @@ License: MIT
                   A = [],
                   b = {},
                   x = !1;
-                for (var O in R) {
-                  var T = R[O];
-                  E(e.transformHeader) && (T = e.transformHeader(T, O));
-                  var D = T,
-                    I = b[T] || 0;
+                for (var T in R) {
+                  var O = R[T];
+                  E(e.transformHeader) && (O = e.transformHeader(O, T));
+                  var D = O,
+                    I = b[O] || 0;
                   for (
-                    0 < I && ((x = !0), (D = T + "_" + I)), b[T] = I + 1;
+                    0 < I && ((x = !0), (D = O + "_" + I)), b[O] = I + 1;
                     A.includes(D);
 
                   )

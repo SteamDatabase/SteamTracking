@@ -1332,7 +1332,7 @@
     },
     77131: (e, t, n) => {
       "use strict";
-      n.d(t, { R: () => C });
+      n.d(t, { R: () => _, N: () => C });
       var o = n(85556),
         i = n(77936),
         r = n(20417),
@@ -1534,7 +1534,7 @@
         g = n(45651);
       class v {
         constructor(e, t) {
-          var n, o, i, r, s, a;
+          var n, o, i, r, s, a, l;
           (this.m_socket = null),
             (this.Log = new c.sO("CWebSocketConnection", () => this.m_sName)),
             (this.m_bDisconnectRequested = !1),
@@ -1542,23 +1542,27 @@
             (this.m_sName = e),
             (this.m_fnOnMessageHandler = t.fnOnMessageHandler),
             (this.m_fnOnCloseHandler = t.fnOnCloseHandler),
-            (this.m_fnOnReconnectHandler =
-              null !== (n = t.fnOnReconnectHandler) && void 0 !== n
+            (this.m_fnOnReconnectStartHandler =
+              null !== (n = t.fnOnReconnectStartHandler) && void 0 !== n
                 ? n
                 : () => {}),
+            (this.m_fnOnReconnectFinishHandler =
+              null !== (o = t.fnOnReconnectFinishHandler) && void 0 !== o
+                ? o
+                : () => {}),
             (this.m_nConnectAttemptsMax =
-              null !== (o = t.nConnectAttemptsMax) && void 0 !== o ? o : 20),
+              null !== (i = t.nConnectAttemptsMax) && void 0 !== i ? i : 8),
             (this.m_nConnectAttemptTimeoutMs =
-              null !== (i = t.nConnectAttemptTimeoutMs) && void 0 !== i
-                ? i
+              null !== (r = t.nConnectAttemptTimeoutMs) && void 0 !== r
+                ? r
                 : 1e3),
             (this.m_bReconnectOnFailure =
-              null !== (r = t.bReconnectOnFailure) && void 0 !== r && r),
+              null !== (s = t.bReconnectOnFailure) && void 0 !== s && s),
             (this.m_nReconnectAttemptsMax =
-              null !== (s = t.nReconnectAttemptsMax) && void 0 !== s ? s : 1e3),
+              null !== (a = t.nReconnectAttemptsMax) && void 0 !== a ? a : 3e4),
             (this.m_nReconnectAttemptTimeoutMs =
-              null !== (a = t.nReconnectAttemptTimeoutMs) && void 0 !== a
-                ? a
+              null !== (l = t.nReconnectAttemptTimeoutMs) && void 0 !== l
+                ? l
                 : 1e4);
         }
         get name() {
@@ -1611,8 +1615,11 @@
                 (o += 1);
             } while (o < t);
             return (
-              this.Log.Error("connect retry: limit exceeeded, bailing"),
+              this.Log.Warning(
+                `websocket connect retry: limit exceeeded, bailing - ${this.name}`,
+              ),
               (this.m_bConnecting = !1),
+              this.BShouldReconnect() && this.StartReconnect(),
               { result: 2, message: "not ready, exceeded retry count" }
             );
           });
@@ -1634,11 +1641,16 @@
         }
         StartReconnect() {
           return (0, o.mG)(this, void 0, void 0, function* () {
-            this.Log.Info("start reconnect"), (this.m_socket = null);
-            if (1 != (yield this.Connect(this.m_sURL)).result)
+            this.Log.Info("start reconnect"),
+              (this.m_socket = null),
+              this.m_fnOnReconnectStartHandler({ connection: this });
+            if (1 != (yield this.Reconnect()).result)
               return (
                 this.Log.Error("failed to re-connect to websocket after close"),
-                this.m_fnOnReconnectHandler({ connection: this, eResult: 2 }),
+                this.m_fnOnReconnectFinishHandler({
+                  connection: this,
+                  eResult: 2,
+                }),
                 void this.m_fnOnCloseHandler({
                   connection: this,
                   bError: !0,
@@ -1646,7 +1658,10 @@
                 })
               );
             this.Log.Info("reconnect successful"),
-              this.m_fnOnReconnectHandler({ connection: this, eResult: 1 });
+              this.m_fnOnReconnectFinishHandler({
+                connection: this,
+                eResult: 1,
+              });
           });
         }
         ConnectToSocket(e, t) {
@@ -1739,49 +1754,73 @@
         (0, o.gn)([r.ak], v.prototype, "OnSocketOpen", null),
         (0, o.gn)([r.ak], v.prototype, "OnSocketClose", null),
         (0, o.gn)([r.ak], v.prototype, "OnSocketMessage", null);
-      const f = "localhost",
-        _ = new c.sO("WebUITransport");
-      class C {
-        static Get() {
-          return (
-            null == C.s_Singleton &&
-              p.De.IN_CLIENT &&
-              ((C.s_Singleton = new C()),
-              (window.WebUIServiceTransport = C.s_Singleton)),
-            C.s_Singleton
-          );
+      const f = new c.sO("WebUITransport");
+      class _ {
+        constructor() {
+          (this.m_iMsgSeq = 1),
+            (this.m_mapPendingMethodRequests = new Map()),
+            (this.m_messageHandlers = new h()),
+            (this.m_mapServiceCallErrorCount = new Map()),
+            (this.m_mapConnectionDetails = new Map()),
+            (this.m_bInitialized = !1);
         }
         static InstallErrorReportingStore(e) {
           this.sm_ErrorReportingStore = e;
         }
+        BIsValid() {
+          return this.m_bInitialized;
+        }
         ReportError(e) {
-          _.Warning(e);
-          const t = C.sm_ErrorReportingStore;
+          f.Warning(e);
+          const t = _.sm_ErrorReportingStore;
           t &&
             t.ReportError(new Error(e), {
               bIncludeMessageInIdentifier: !0,
               cCallsitesToIgnore: 1,
             });
         }
-        constructor() {
-          (this.m_iMsgSeq = 1),
-            (this.m_mapPendingMethodRequests = new Map()),
-            (this.m_messageHandlers = new h()),
-            (this.m_mapServiceCallErrorCount = new Map());
-          const e = {
-            bReconnectOnFailure: !0,
-            fnOnMessageHandler: this.OnWebsocketMessage,
-            fnOnCloseHandler: this.OnWebsocketClose,
-            fnOnReconnectHandler: this.OnWebsocketReconnect,
-          };
-          (this.m_connectionSteamUI = new v("steamUI", e)),
-            (this.m_connectionClientdll = new v("clientdll", e)),
-            (0, l.S)().SetDefaultTransport(this),
-            (0, l.S)().SetDefaultHandlerRegistry(this.m_messageHandlers),
-            m.zw.RegisterForNotifyStartShutdown(this.OnStartShutdown);
+        Init() {
+          return (0, o.mG)(this, void 0, void 0, function* () {
+            if (!p.De.IN_CLIENT) return;
+            const e = yield SteamClient.WebUITransport.GetTransportInfo();
+            this.CreateConnection(
+              1,
+              "steamUI",
+              e.portSteamUI,
+              e.authKeySteamUI,
+            ),
+              this.CreateConnection(
+                2,
+                "clientdll",
+                e.portClientdll,
+                e.authKeyClientdll,
+              ),
+              (0, l.S)().SetDefaultTransport(this),
+              (0, l.S)().SetDefaultHandlerRegistry(this.m_messageHandlers),
+              m.zw.RegisterForNotifyStartShutdown(this.OnStartShutdown);
+          });
         }
         get messageHandlers() {
           return this.m_messageHandlers;
+        }
+        SetStatusEventHandler(e) {
+          this.m_fnOnStatusEventHandler = e;
+        }
+        CreateConnection(e, t, n, o) {
+          const i = {
+              bReconnectOnFailure: !0,
+              fnOnMessageHandler: this.OnWebsocketMessage,
+              fnOnCloseHandler: this.OnWebsocketClose,
+              fnOnReconnectStartHandler: this.OnWebsocketReconnectStart,
+              fnOnReconnectFinishHandler: this.OnWebsocketReconnectFinish,
+            },
+            r = {
+              connection: new v(t, i),
+              sUrl: `ws://localhost:${n}/transportsocket/`,
+              sAuthKey: o,
+              eClientExecutionSite: e,
+            };
+          this.m_mapConnectionDetails.set(e, r);
         }
         SendMsg(e, t, n, o) {
           return new Promise((i, r) => {
@@ -1789,36 +1828,45 @@
             const a = o.eClientExecutionSite;
             if (null == a || 0 == a)
               return (
-                _.Error(`SendMsg: Invalid client execution site: ${a}`),
+                f.Error(`SendMsg: Invalid client execution site: ${a}`),
                 void r(`Transport SendMsg: invalid client execution site ${a}`)
               );
-            const l =
-              2 == a ? this.m_connectionClientdll : this.m_connectionSteamUI;
-            if (!l.BCanSendMessages()) {
+            const l = this.m_mapConnectionDetails.get(a);
+            if (null == l)
+              return (
+                f.Error(
+                  `SendMsg: could not find connection for execution site: ${a}`,
+                ),
+                void r(
+                  `Transport SendMsg: could not find connection for execution site ${a}`,
+                )
+              );
+            const c = l.connection;
+            if (!c.BCanSendMessages()) {
               const t =
                 null !== (s = this.m_mapServiceCallErrorCount.get(e)) &&
                 void 0 !== s
                   ? s
                   : 1;
               this.m_mapServiceCallErrorCount.set(e, t + 1);
-              const n = `SendMsg: Attempt to send message but socket wasn't ready: ${l.name} - ${e}`;
+              const n = `SendMsg: Attempt to send message but socket wasn't ready: ${c.name} - ${e}`;
               return (
                 1 == t && this.ReportError(n),
-                _.Warning(n + ` error count: ${t}`),
+                f.Warning(n + ` error count: ${t}`),
                 void r("Transport SendMsg: socket not ready")
               );
             }
-            const c = this.m_iMsgSeq++;
+            const u = this.m_iMsgSeq++;
             t.SetEMsg(146),
               t.Hdr().set_target_job_name(e),
-              t.Hdr().set_jobid_source("" + c);
-            if (1 != l.SendSerializedMessage(t.Serialize()))
+              t.Hdr().set_jobid_source("" + u);
+            if (1 != c.SendSerializedMessage(t.Serialize()))
               return (
-                _.Error("SendMsg: Failed to send message"),
+                f.Error("SendMsg: Failed to send message"),
                 void r("Transport SendMsg: failed to send message")
               );
-            this.m_mapPendingMethodRequests.set(c, {
-              m_iSeq: c,
+            this.m_mapPendingMethodRequests.set(u, {
+              m_iSeq: u,
               m_responseClass: n,
               m_fnCallback: i,
               m_fnError: r,
@@ -1830,80 +1878,84 @@
           const i = n.eClientExecutionSite;
           if (null == i || 0 == i)
             return (
-              _.Error(`SendNotification: Invalid client execution site: ${i}`),
+              f.Error(`SendNotification: Invalid client execution site: ${i}`),
               !1
             );
-          const r =
-            2 == i ? this.m_connectionClientdll : this.m_connectionSteamUI;
-          if (!r.BCanSendMessages()) {
+          const r = this.m_mapConnectionDetails.get(i);
+          if (null == r)
+            return (
+              f.Error(
+                `SendNotification: could not find connection for execution site: ${i}`,
+              ),
+              !1
+            );
+          const s = r.connection;
+          if (!s.BCanSendMessages()) {
             const t =
               null !== (o = this.m_mapServiceCallErrorCount.get(e)) &&
               void 0 !== o
                 ? o
                 : 1;
             this.m_mapServiceCallErrorCount.set(e, t + 1);
-            const n = `SendNotification: Attempt to send message but socket wasn't ready: ${r.name} - ${e}`;
+            const n = `SendNotification: Attempt to send message but socket wasn't ready: ${s.name} - ${e}`;
             return (
               1 == t && this.ReportError(n),
-              _.Warning(n + ` error count: ${t}`),
+              f.Warning(n + ` error count: ${t}`),
               !1
             );
           }
           t.SetEMsg(146), t.Hdr().set_target_job_name(e);
-          return 1 == r.SendSerializedMessage(t.Serialize());
+          return 1 == s.SendSerializedMessage(t.Serialize());
+        }
+        ConnectToSite(e) {
+          return (0, o.mG)(this, void 0, void 0, function* () {
+            const t = e.connection,
+              n = yield t.Connect(e.sUrl);
+            if (1 != n.result) return n;
+            return (yield this.SendAuthMessage(e)).BSuccess()
+              ? { result: 1, message: "connected" }
+              : { result: 2, message: "client auth failed" };
+          });
         }
         MakeReady() {
           return (0, o.mG)(this, void 0, void 0, function* () {
-            this.m_transportInfo =
-              yield SteamClient.WebUITransport.GetTransportInfo();
-            const e = `ws://${f}:${this.m_transportInfo.portSteamUI}/transportsocket/`,
-              t = `ws://${f}:${this.m_transportInfo.portClientdll}/transportsocket/`;
-            let n = yield this.m_connectionSteamUI.Connect(e);
-            if (1 != n.result)
-              return _.Error("MakeReady: failed to connect to SteamUI"), n;
-            let o = yield this.AuthConnection(this.m_connectionSteamUI);
-            return 1 != o
-              ? (_.Error("MakeReady: failed to auth to SteamUI"), n)
-              : ((n = yield this.m_connectionClientdll.Connect(t)),
-                1 != n.result
-                  ? (_.Error("MakeReady: failed to connect to clientdll"), n)
-                  : ((o = yield this.AuthConnection(
-                      this.m_connectionClientdll,
-                    )),
-                    1 != o
-                      ? (_.Error("MakeReady: failed to auth to clientdll"), n)
-                      : n));
+            const e = [];
+            for (const [t, n] of this.m_mapConnectionDetails)
+              e.push(this.ConnectToSite(n));
+            const t = yield Promise.all(e);
+            (this.m_bInitialized = !0), this.DispatchTransportStatusUpdate();
+            for (const e of t) if (1 != e.result) return e;
+            return { result: 1, message: "ready" };
           });
         }
-        GetAuthInfoForConnection(e) {
-          return e == this.m_connectionClientdll
-            ? {
-                eClientExecutionSite: 2,
-                sAuthKey: this.m_transportInfo.authKeyClientdll,
-              }
-            : e == this.m_connectionSteamUI
-            ? {
-                eClientExecutionSite: 1,
-                sAuthKey: this.m_transportInfo.authKeySteamUI,
-              }
-            : (_.Error(
-                "GetAuthInfoForConnection: failed to identify connection",
-              ),
-              { eClientExecutionSite: 0, sAuthKey: "" });
+        GetConnectionDetails(e) {
+          for (const [t, n] of this.m_mapConnectionDetails)
+            if (n.connection === e) return n;
+          return (
+            f.Error("GetConnectionDetails: failed to identify connection"), null
+          );
         }
-        AuthConnection(e) {
-          return (0, o.mG)(this, void 0, void 0, function* () {
-            const t = this.GetAuthInfoForConnection(e);
-            return (yield this.SendAuthMessage(t)).GetEResult();
-          });
+        DispatchTransportStatusUpdate() {
+          if (!this.m_fnOnStatusEventHandler) return;
+          let e = !0;
+          for (const [t, n] of this.m_mapConnectionDetails)
+            n.connection.BCanSendMessages() || (e = !1);
+          this.m_fnOnStatusEventHandler({ bConnected: e });
         }
-        OnWebsocketReconnect(e) {
-          if (1 != e.eResult)
+        OnWebsocketReconnectStart(e) {
+          this.DispatchTransportStatusUpdate();
+        }
+        OnWebsocketReconnectFinish(e) {
+          if ((this.DispatchTransportStatusUpdate(), 1 != e.eResult))
             return (
-              _.Error("failed to reconnect to steam client"),
+              f.Error(
+                "OnWebsocketReconnect: Failed to reconnect to steam client",
+              ),
               void this.FailAllPendingRequests()
             );
-          this.FailAllPendingRequests(), this.AuthConnection(e.connection);
+          this.FailAllPendingRequests();
+          const t = this.GetConnectionDetails(e.connection);
+          this.SendAuthMessage(t);
         }
         OnWebsocketClose(e) {
           e.bIsExpectedToReconnect || this.FailAllPendingRequests();
@@ -1964,18 +2016,17 @@
           });
         }
         OnStartShutdown(e) {
-          return (
-            this.m_connectionSteamUI.PrepareForShutdown(),
-            this.m_connectionClientdll.PrepareForShutdown(),
-            1
-          );
+          for (const [e, t] of this.m_mapConnectionDetails)
+            t.connection.PrepareForShutdown();
+          return 1;
         }
       }
-      (C.s_Singleton = null),
-        (0, o.gn)([r.ak], C.prototype, "OnWebsocketReconnect", null),
-        (0, o.gn)([r.ak], C.prototype, "OnWebsocketClose", null),
-        (0, o.gn)([r.ak], C.prototype, "OnWebsocketMessage", null),
-        (0, o.gn)([r.ak], C.prototype, "OnStartShutdown", null);
+      (0, o.gn)([r.ak], _.prototype, "OnWebsocketReconnectStart", null),
+        (0, o.gn)([r.ak], _.prototype, "OnWebsocketReconnectFinish", null),
+        (0, o.gn)([r.ak], _.prototype, "OnWebsocketClose", null),
+        (0, o.gn)([r.ak], _.prototype, "OnWebsocketMessage", null),
+        (0, o.gn)([r.ak], _.prototype, "OnStartShutdown", null);
+      const C = new _();
     },
     95315: (e, t, n) => {
       "use strict";
@@ -8560,7 +8611,7 @@
       var o = n(85556),
         i = n(62210),
         r = n(13499),
-        s = n(37563);
+        s = n(65255);
       function a(e, t = "", n = null) {
         return d.InstrumentLink(e, t, n);
       }
@@ -8710,7 +8761,10 @@
           if (t && d.sm_rgNavEventDictionary)
             for (const e in d.sm_rgNavEventDictionary)
               if (d.sm_rgNavEventDictionary[e] == t) return e;
-          return e && e.match(/^[a-zA-Z0-9\- ]*$/) ? e : "";
+          return d.SanitizeEventComponent(e);
+        }
+        static SanitizeEventComponent(e) {
+          return e && e.match(/^[a-zA-Z0-9\-.]*$/) ? e : "";
         }
       }
       d.sm_bIsLoaded = !1;
@@ -8764,7 +8818,8 @@
           (e[(e.BasicNav = 24)] = "BasicNav"),
           (e[(e.FailedNav = 25)] = "FailedNav"),
           (e[(e.Typing = 26)] = "Typing"),
-          (e[(e.TimerExpired = 27)] = "TimerExpired");
+          (e[(e.TimerExpired = 27)] = "TimerExpired"),
+          (e[(e.Screenshot = 28)] = "Screenshot");
       })(o || (o = {}));
       const r = new (class {
         constructor() {
@@ -14739,7 +14794,7 @@
                 },
                 i.createElement(
                   "div",
-                  { className: St().SliderControl },
+                  { className: (0, l.Z)(St().SliderControl, "SliderControl") },
                   i.createElement("div", {
                     className: (0, l.Z)(
                       St().SliderTrack,
@@ -21673,24 +21728,26 @@
     25006: (e, t, n) => {
       "use strict";
       n.d(t, {
-        HC: () => c,
-        PZ: () => p,
-        YR: () => m,
-        ZP: () => l,
-        bJ: () => d,
-        xp: () => h,
-        zv: () => u,
+        HC: () => u,
+        PZ: () => g,
+        YR: () => p,
+        ZP: () => c,
+        bJ: () => h,
+        ef: () => f,
+        xp: () => m,
+        zv: () => d,
       });
       var o = n(85556),
         i = n(47427),
         r = n(31421),
         s = n(37563);
-      const a = i.createContext({});
-      function l(e) {
+      const a = i.createContext({}),
+        l = i.createContext(void 0);
+      function c(e) {
         const { children: t } = e,
           n = (0, o._T)(e, ["children"]),
-          s = d(),
-          l = g(),
+          s = h(),
+          l = v(),
           c = i.useMemo(
             () =>
               Object.assign(
@@ -21710,9 +21767,9 @@
           );
         return i.createElement(a.Provider, { value: c }, t);
       }
-      function c(e) {
+      function u(e) {
         const { children: t } = e,
-          n = g();
+          n = v();
         let o = i.useMemo(() => r.ZP.ParseSNR(s.De.SNR), [n]);
         return i.createElement(
           a.Provider,
@@ -21722,22 +21779,22 @@
           t,
         );
       }
-      function u(e, t, n) {
+      function d(e, t, n) {
         return Object.assign(Object.assign({}, e), {
-          feature: t,
-          depth: n,
+          feature: t || e.feature,
+          depth: n || e.depth,
           countrycode: s.De.COUNTRY,
           is_client: s.De.IN_CLIENT,
         });
       }
-      function d() {
+      function h() {
         return i.useContext(a);
       }
-      function h(e, t) {
-        return u(d(), e, t);
+      function m(e, t) {
+        return d(h(), e, t);
       }
-      function m(e, t, n) {
-        const o = d();
+      function p(e, t, n) {
+        const o = h();
         return i.useMemo(
           () =>
             (function (e, t, n, o) {
@@ -21752,8 +21809,8 @@
           [e, o, t, n],
         );
       }
-      function p(e, t) {
-        const n = d();
+      function g(e, t) {
+        const n = h();
         return i.useMemo(
           () =>
             r.ZP.GetLinkParam(
@@ -21763,7 +21820,7 @@
           [n, e, t],
         );
       }
-      function g() {
+      function v() {
         const [e, t] = i.useState(r.ZP.BIsLoaded());
         return (
           i.useEffect(() => {
@@ -21771,6 +21828,11 @@
           }, [e]),
           e
         );
+      }
+      function f() {
+        const e = i.useContext(l),
+          t = h();
+        return e || t;
       }
     },
     23163: (e, t, n) => {
@@ -22934,7 +22996,7 @@
           }
           n = n.parentElement;
         }
-        return n;
+        return i(n) ? n : null;
       }
       function b(e, t) {
         const n = [];
@@ -23027,7 +23089,7 @@
     },
     34345: (e, t, n) => {
       "use strict";
-      n(80751);
+      n(80751), n(33557);
     },
     31846: (e, t, n) => {
       "use strict";

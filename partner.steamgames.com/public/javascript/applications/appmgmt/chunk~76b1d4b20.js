@@ -799,7 +799,7 @@
       var a = n(85556),
         i = n(62210),
         s = n(13499),
-        r = n(37563);
+        r = n(65255);
       function o(e, t = "", n = null) {
         return c.InstrumentLink(e, t, n);
       }
@@ -949,7 +949,10 @@
           if (t && c.sm_rgNavEventDictionary)
             for (const e in c.sm_rgNavEventDictionary)
               if (c.sm_rgNavEventDictionary[e] == t) return e;
-          return e && e.match(/^[a-zA-Z0-9\- ]*$/) ? e : "";
+          return c.SanitizeEventComponent(e);
+        }
+        static SanitizeEventComponent(e) {
+          return e && e.match(/^[a-zA-Z0-9\-.]*$/) ? e : "";
         }
       }
       c.sm_bIsLoaded = !1;
@@ -6318,7 +6321,7 @@
     },
     77151: (e, t, n) => {
       "use strict";
-      n.d(t, { LA: () => _, jg: () => p });
+      n.d(t, { LA: () => g, jg: () => _ });
       var a,
         i = n(85556),
         s = n(80751),
@@ -6327,7 +6330,8 @@
         l = n(16649),
         m = n(37563),
         d = n(47427),
-        c = n(50423);
+        c = n(50423),
+        u = n(31421);
       !(function (e) {
         (e[(e.AnyController = 0)] = "AnyController"),
           (e[(e.XboxController = 1)] = "XboxController"),
@@ -6339,7 +6343,7 @@
           (e[(e.SteamDeckNeptune = 7)] = "SteamDeckNeptune"),
           (e[(e.SteamDeckGalileo = 8)] = "SteamDeckGalileo");
       })(a || (a = {}));
-      const u = {
+      const h = {
           any_controller: a.AnyController,
           xbox_controller: a.XboxController,
           ps3_controller: a.Ps3Controller,
@@ -6350,8 +6354,8 @@
           steam_deck_neptune: a.SteamDeckNeptune,
           steam_deck_galileo: a.SteamDeckGalileo,
         },
-        h = "unUserdataVersion";
-      class p {
+        p = "unUserdataVersion";
+      class _ {
         BIsLoaded() {
           return this.m_bIsLoaded;
         }
@@ -6495,7 +6499,7 @@
         }
         InternalLoad() {
           return (0, i.mG)(this, void 0, void 0, function* () {
-            let e = window.localStorage.getItem(h) || "0",
+            let e = window.localStorage.getItem(p) || "0",
               t = {
                 v: "0" == e ? void 0 : e,
                 id: "" + m.L7.accountid,
@@ -6605,7 +6609,7 @@
                     }
                   if (e.data.rgHardwareUsed)
                     for (const t of e.data.rgHardwareUsed) {
-                      const e = u[t];
+                      const e = h[t];
                       e && this.m_rgHardwareUsed.add(e);
                     }
                 });
@@ -6709,8 +6713,14 @@
               void 0 !== window.g_bUseNewCartAPI &&
               window.g_bUseNewCartAPI &&
               "function" == typeof window.AddItemToCart
-            )
-              return window.AddItemToCart(t, o), !0;
+            ) {
+              let e;
+              return (
+                s && (yield u.ZP.Load(), (e = u.ZP.ParseSNR(s))),
+                window.AddItemToCart(t, o, e),
+                !0
+              );
+            }
             const i = new FormData();
             i.append("action", "add_to_cart"),
               o
@@ -6791,17 +6801,17 @@
         InvalidateCache(e) {
           const t = e || window;
           t.localStorage.setItem(
-            h,
-            (Number.parseInt(t.localStorage.getItem(h) || "0") + 1).toString(),
+            p,
+            (Number.parseInt(t.localStorage.getItem(p) || "0") + 1).toString(),
           );
         }
         static Get() {
           return (
-            p.s_globalSingletonStore ||
-              ((p.s_globalSingletonStore = new p()),
+            _.s_globalSingletonStore ||
+              ((_.s_globalSingletonStore = new _()),
               "dev" == m.De.WEB_UNIVERSE &&
-                (window.DUS = p.s_globalSingletonStore)),
-            p.s_globalSingletonStore
+                (window.DUS = _.s_globalSingletonStore)),
+            _.s_globalSingletonStore
           );
         }
         constructor() {
@@ -6834,57 +6844,56 @@
             (0, o.rC)(this);
         }
       }
-      function _() {
-        const [e, t] = (0, d.useState)(!p.Get().BIsLoaded());
+      function g() {
+        const [e, t] = (0, d.useState)(!_.Get().BIsLoaded());
         return (
           (0, d.useEffect)(() => {
             e &&
-              p
-                .Get()
+              _.Get()
                 .HintLoad()
-                .finally(() => t(!p.Get().BIsLoaded()));
+                .finally(() => t(!_.Get().BIsLoaded()));
           }, [e]),
-          [e, p.Get()]
+          [e, _.Get()]
         );
       }
-      (0, i.gn)([o.LO], p.prototype, "m_setWishList", void 0),
-        (0, i.gn)([o.LO], p.prototype, "m_setOwnedPackages", void 0),
-        (0, i.gn)([o.LO], p.prototype, "m_setOwnedApps", void 0),
-        (0, i.gn)([o.LO], p.prototype, "m_setFollowedApps", void 0),
-        (0, i.gn)([o.LO], p.prototype, "m_setExcludedTagsIds", void 0),
+      (0, i.gn)([o.LO], _.prototype, "m_setWishList", void 0),
+        (0, i.gn)([o.LO], _.prototype, "m_setOwnedPackages", void 0),
+        (0, i.gn)([o.LO], _.prototype, "m_setOwnedApps", void 0),
+        (0, i.gn)([o.LO], _.prototype, "m_setFollowedApps", void 0),
+        (0, i.gn)([o.LO], _.prototype, "m_setExcludedTagsIds", void 0),
         (0, i.gn)(
           [o.LO],
-          p.prototype,
+          _.prototype,
           "m_setExcludedContentDescriptors",
           void 0,
         ),
-        (0, i.gn)([o.LO], p.prototype, "m_setRecommendedApps", void 0),
-        (0, i.gn)([o.LO], p.prototype, "m_mapIgnoredApps", void 0),
-        (0, i.gn)([o.LO], p.prototype, "m_mapIgnoredPackages", void 0),
-        (0, i.gn)([o.LO], p.prototype, "m_setCuratorsFollowed", void 0),
-        (0, i.gn)([o.LO], p.prototype, "m_setCuratorsIgnored", void 0),
+        (0, i.gn)([o.LO], _.prototype, "m_setRecommendedApps", void 0),
+        (0, i.gn)([o.LO], _.prototype, "m_mapIgnoredApps", void 0),
+        (0, i.gn)([o.LO], _.prototype, "m_mapIgnoredPackages", void 0),
+        (0, i.gn)([o.LO], _.prototype, "m_setCuratorsFollowed", void 0),
+        (0, i.gn)([o.LO], _.prototype, "m_setCuratorsIgnored", void 0),
         (0, i.gn)(
           [o.LO],
-          p.prototype,
+          _.prototype,
           "m_bShowFilteredUserReviewScores",
           void 0,
         ),
-        (0, i.gn)([o.LO], p.prototype, "m_primaryLanguage", void 0),
-        (0, i.gn)([o.LO], p.prototype, "m_secondaryLanguages", void 0),
-        (0, i.gn)([o.LO], p.prototype, "m_setRecommendedTags", void 0),
+        (0, i.gn)([o.LO], _.prototype, "m_primaryLanguage", void 0),
+        (0, i.gn)([o.LO], _.prototype, "m_secondaryLanguages", void 0),
+        (0, i.gn)([o.LO], _.prototype, "m_setRecommendedTags", void 0),
         (0, i.gn)(
           [o.LO],
-          p.prototype,
+          _.prototype,
           "m_mapRecommendingCuratorsForApp",
           void 0,
         ),
-        (0, i.gn)([o.LO], p.prototype, "m_setPackagesInCart", void 0),
-        (0, i.gn)([o.LO], p.prototype, "m_setAppsInCart", void 0),
-        (0, i.gn)([o.LO], p.prototype, "m_nCartLineItemCount", void 0),
-        (0, i.gn)([o.LO], p.prototype, "m_rgHardwareUsed", void 0),
-        (0, i.gn)([o.LO], p.prototype, "m_bAjaxInFlight", void 0),
-        (0, i.gn)([o.Fl], p.prototype, "ExcludedContentDescriptor", null),
-        (0, i.gn)([o.aD], p.prototype, "UpdateAppIgnore", null);
+        (0, i.gn)([o.LO], _.prototype, "m_setPackagesInCart", void 0),
+        (0, i.gn)([o.LO], _.prototype, "m_setAppsInCart", void 0),
+        (0, i.gn)([o.LO], _.prototype, "m_nCartLineItemCount", void 0),
+        (0, i.gn)([o.LO], _.prototype, "m_rgHardwareUsed", void 0),
+        (0, i.gn)([o.LO], _.prototype, "m_bAjaxInFlight", void 0),
+        (0, i.gn)([o.Fl], _.prototype, "ExcludedContentDescriptor", null),
+        (0, i.gn)([o.aD], _.prototype, "UpdateAppIgnore", null);
     },
     48371: (e, t, n) => {
       "use strict";
@@ -12992,6 +13001,7 @@
         s = n(31421),
         r = n(37563);
       const o = i.createContext({});
+      i.createContext(void 0);
       function l(e) {
         const { children: t } = e,
           n = (0, a._T)(e, ["children"]),
@@ -13018,8 +13028,8 @@
       }
       function m(e, t, n) {
         return Object.assign(Object.assign({}, e), {
-          feature: t,
-          depth: n,
+          feature: t || e.feature,
+          depth: n || e.depth,
           countrycode: r.De.COUNTRY,
           is_client: r.De.IN_CLIENT,
         });

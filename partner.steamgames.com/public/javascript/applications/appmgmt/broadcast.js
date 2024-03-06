@@ -237,7 +237,7 @@
         }
         Init(e = 0, t = null, s = null) {
           return (0, a.mG)(this, void 0, void 0, function* () {
-            (this.m_WebUIServiceTransport = M.R.Get()),
+            (this.m_WebUIServiceTransport = M.N),
               (this.m_unAccountID = e),
               (this.m_Transport = t),
               (this.m_Storage = s),
@@ -254,7 +254,7 @@
           });
         }
         InitSteamEngineLanguages() {
-          null != this.m_WebUIServiceTransport &&
+          this.m_WebUIServiceTransport.BIsValid() &&
             (this.m_WebUIServiceTransport.messageHandlers.RegisterServiceNotificationHandler(
               I.gi.NotifyTextFilterDictionaryChangedHandler,
               this.OnTextFilterDictionaryChanged,
@@ -459,7 +459,7 @@
           return (0, a.mG)(this, void 0, void 0, function* () {
             let t = "",
               s = !1;
-            if (null != this.m_WebUIServiceTransport)
+            if (this.m_WebUIServiceTransport.BIsValid())
               try {
                 {
                   const t = yield this.GetSteamEngineTextFilterDictionary(
@@ -607,9 +607,9 @@
               );
         }
       }
-      let T;
-      function N() {
-        if (!T) {
+      let N;
+      function T() {
+        if (!N) {
           const e = new Set();
           let t = { sessionid: y.De.SESSIONID, origin: (0, y.Kc)() };
           r()
@@ -622,9 +622,9 @@
                 (0, E.my)(s.efriendrelationship) &&
                   e.add(new _.K(s.ulfriendid).GetAccountID());
             }),
-            (T = (t) => e.has(t));
+            (N = (t) => e.has(t));
         }
-        return T;
+        return N;
       }
       (0, a.gn)([c.LO], B.prototype, "m_TextFilterPreferences", void 0),
         (0, a.gn)([c.LO], B.prototype, "m_mapPlayerCache", void 0),
@@ -692,7 +692,7 @@
             ));
         }
         InitTextFilter() {
-          this.m_textFilterStore = new B({ BIsFriend: N() });
+          this.m_textFilterStore = new B({ BIsFriend: T() });
           let e = 0;
           if ("" !== y.L7.steamid) {
             e = new _.K(y.L7.steamid).GetAccountID();
@@ -2579,8 +2579,8 @@
       var Ie = s(65682),
         Me = s(31421),
         Be = s(80886),
-        Te = s(7769),
-        Ne = s(11619),
+        Ne = s(7769),
+        Te = s(11619),
         xe = s(34913),
         ke = s(25006),
         Le = s(46882),
@@ -2605,7 +2605,7 @@
           );
         if (2 == r || !n.GetName())
           return l.createElement("div", {
-            className: Te.StoreSaleWidgetEmptyContainer,
+            className: Ne.StoreSaleWidgetEmptyContainer,
           });
         const d = 8 != n.GetAppType(),
           m = (0, Me.Hf)(n.GetStorePageURL(), s);
@@ -2614,7 +2614,7 @@
           { className: i },
           l.createElement(
             "div",
-            { className: Te.Actions },
+            { className: Ne.Actions },
             l.createElement(
               "a",
               { href: m, target: y.De.IN_CLIENT ? void 0 : "_blank" },
@@ -2634,10 +2634,10 @@
           ),
           l.createElement(
             "div",
-            { className: Te.StoreSaleBroadcastWidgetRight },
+            { className: Ne.StoreSaleBroadcastWidgetRight },
             l.createElement(
               "div",
-              { className: Te.Actions },
+              { className: Ne.Actions },
               l.createElement(
                 "a",
                 { href: m, target: y.De.IN_CLIENT ? void 0 : "_blank" },
@@ -2648,7 +2648,7 @@
                     "div",
                     {
                       className: (0, J.Z)(
-                        Te.StoreSaleWidgetTitle,
+                        Ne.StoreSaleWidgetTitle,
                         "StoreSaleWidgetTitle",
                       ),
                     },
@@ -2659,11 +2659,11 @@
             ),
             l.createElement(
               "div",
-              { className: Te.StoreSaleWidgetRelease },
+              { className: Ne.StoreSaleWidgetRelease },
               n.GetFormattedSteamReleaseDate(),
             ),
             Boolean(d) &&
-              l.createElement(Ne.x1, {
+              l.createElement(Te.x1, {
                 info: { id: t, type: "game" },
                 bShowDemoButton: !0,
               }),
@@ -3818,8 +3818,8 @@
         I = s(50423),
         M = s(31846),
         B = s(24549),
-        T = s(45651),
-        N = s(20417),
+        N = s(45651),
+        T = s(20417),
         x = s(37563),
         k = s(87534),
         L = s(68324),
@@ -3882,7 +3882,7 @@
           );
         }
       }
-      (0, a.gn)([N.ak], F.prototype, "OnClick", null);
+      (0, a.gn)([T.ak], F.prototype, "OnClick", null);
       let U = class extends l.Component {
         constructor(e) {
           super(e);
@@ -3992,7 +3992,7 @@
           );
         }
       };
-      (0, a.gn)([N.ak], U.prototype, "HideStats", null),
+      (0, a.gn)([T.ak], U.prototype, "HideStats", null),
         (U = (0, a.gn)([o.Pi], U));
       let V = class extends l.Component {
         constructor(e) {
@@ -4401,12 +4401,12 @@
           );
         }
       }
-      (0, a.gn)([N.ak], H.prototype, "OnVideoControlClick", null),
-        (0, a.gn)([N.ak], H.prototype, "OnSubtitlesClick", null),
-        (0, a.gn)([N.ak], H.prototype, "OnMouseUp", null),
-        (0, a.gn)([N.ak], H.prototype, "bindSettingsButton", null),
-        (0, a.gn)([N.ak], H.prototype, "BindSettingsPanel", null),
-        (0, a.gn)([N.ak], H.prototype, "OnShowStats", null);
+      (0, a.gn)([T.ak], H.prototype, "OnVideoControlClick", null),
+        (0, a.gn)([T.ak], H.prototype, "OnSubtitlesClick", null),
+        (0, a.gn)([T.ak], H.prototype, "OnMouseUp", null),
+        (0, a.gn)([T.ak], H.prototype, "bindSettingsButton", null),
+        (0, a.gn)([T.ak], H.prototype, "BindSettingsPanel", null),
+        (0, a.gn)([T.ak], H.prototype, "OnShowStats", null);
       let j = class extends l.Component {
         constructor(e) {
           super(e),
@@ -4482,10 +4482,10 @@
         }
       };
       (0, a.gn)([i.LO], j.prototype, "m_bShowSlider", void 0),
-        (0, a.gn)([N.ak], j.prototype, "ToggleMute", null),
-        (0, a.gn)([N.ak], j.prototype, "OnMouseEnter", null),
-        (0, a.gn)([N.ak], j.prototype, "OnMouseLeave", null),
-        (0, a.gn)([N.ak], j.prototype, "OnChildDrag", null),
+        (0, a.gn)([T.ak], j.prototype, "ToggleMute", null),
+        (0, a.gn)([T.ak], j.prototype, "OnMouseEnter", null),
+        (0, a.gn)([T.ak], j.prototype, "OnMouseLeave", null),
+        (0, a.gn)([T.ak], j.prototype, "OnChildDrag", null),
         (j = (0, a.gn)([o.Pi], j));
       let X = class extends l.Component {
         constructor(e) {
@@ -4532,8 +4532,8 @@
         }
         SetVolumeWithCoord(e, t) {
           let s = e.getBoundingClientRect(),
-            a = T.r4(t, s.left, s.right, 0, 1),
-            n = T.Lh(a, 0, 1),
+            a = N.r4(t, s.left, s.right, 0, 1),
+            n = N.Lh(a, 0, 1),
             r = this.props.video;
           r.SetMute(a < 0.01), r.SetVolume(n);
         }
@@ -4563,9 +4563,9 @@
           );
         }
       };
-      (0, a.gn)([N.ak], X.prototype, "OnMouseDown", null),
-        (0, a.gn)([N.ak], X.prototype, "OnMouseMove", null),
-        (0, a.gn)([N.ak], X.prototype, "OnMouseUp", null),
+      (0, a.gn)([T.ak], X.prototype, "OnMouseDown", null),
+        (0, a.gn)([T.ak], X.prototype, "OnMouseMove", null),
+        (0, a.gn)([T.ak], X.prototype, "OnMouseUp", null),
         (0, a.gn)([i.aD], X.prototype, "SetVolumeWithCoord", null),
         (X = (0, a.gn)([o.Pi], X));
       var z = s(43090);
@@ -4937,21 +4937,21 @@
           );
         }
       };
-      (0, a.gn)([N.ak], K.prototype, "BindBroadcastPlayerRef", null),
-        (0, a.gn)([N.ak], K.prototype, "BindVideoRef", null),
-        (0, a.gn)([N.ak], K.prototype, "OnMouseDown", null),
-        (0, a.gn)([N.ak], K.prototype, "OnMouseUp", null),
-        (0, a.gn)([N.ak], K.prototype, "OnMouseMove", null),
-        (0, a.gn)([N.ak], K.prototype, "OnMouseLeave", null),
-        (0, a.gn)([N.ak], K.prototype, "HideControls", null),
-        (0, a.gn)([N.ak], K.prototype, "UmountControls", null),
-        (0, a.gn)([N.ak], K.prototype, "ShowStatsView", null),
-        (0, a.gn)([N.ak], K.prototype, "OnContextMenu", null),
-        (0, a.gn)([N.ak], K.prototype, "ToggleStatsView", null),
-        (0, a.gn)([N.ak], K.prototype, "ShowStorePage", null),
-        (0, a.gn)([N.ak], K.prototype, "CloseStats", null),
-        (0, a.gn)([N.ak], K.prototype, "OnToggleFullscreen", null),
-        (0, a.gn)([N.ak], K.prototype, "OnFullscreenChange", null),
+      (0, a.gn)([T.ak], K.prototype, "BindBroadcastPlayerRef", null),
+        (0, a.gn)([T.ak], K.prototype, "BindVideoRef", null),
+        (0, a.gn)([T.ak], K.prototype, "OnMouseDown", null),
+        (0, a.gn)([T.ak], K.prototype, "OnMouseUp", null),
+        (0, a.gn)([T.ak], K.prototype, "OnMouseMove", null),
+        (0, a.gn)([T.ak], K.prototype, "OnMouseLeave", null),
+        (0, a.gn)([T.ak], K.prototype, "HideControls", null),
+        (0, a.gn)([T.ak], K.prototype, "UmountControls", null),
+        (0, a.gn)([T.ak], K.prototype, "ShowStatsView", null),
+        (0, a.gn)([T.ak], K.prototype, "OnContextMenu", null),
+        (0, a.gn)([T.ak], K.prototype, "ToggleStatsView", null),
+        (0, a.gn)([T.ak], K.prototype, "ShowStorePage", null),
+        (0, a.gn)([T.ak], K.prototype, "CloseStats", null),
+        (0, a.gn)([T.ak], K.prototype, "OnToggleFullscreen", null),
+        (0, a.gn)([T.ak], K.prototype, "OnFullscreenChange", null),
         (K = (0, a.gn)([o.Pi], K));
       const Q = K;
       let q = class extends l.Component {
@@ -5057,8 +5057,8 @@
           );
         }
       }
-      (0, a.gn)([N.ak], Y.prototype, "OnJumpBackward", null),
-        (0, a.gn)([N.ak], Y.prototype, "OnJumpForward", null);
+      (0, a.gn)([T.ak], Y.prototype, "OnJumpBackward", null),
+        (0, a.gn)([T.ak], Y.prototype, "OnJumpForward", null);
       const $ = (0, o.Pi)((e) => {
         if (e.video.IsBroadcastClip() || e.video.IsBroadcastVOD()) return null;
         let t = e.video.IsOnLiveEdge();
@@ -5108,7 +5108,7 @@
           );
         }
       };
-      (0, a.gn)([N.ak], ee.prototype, "OnTogglePlayPause", null),
+      (0, a.gn)([T.ak], ee.prototype, "OnTogglePlayPause", null),
         (ee = (0, a.gn)([o.Pi], ee));
       let te = class extends l.Component {
         constructor(e) {
@@ -5151,7 +5151,7 @@
       };
       (0, a.gn)([i.LO], te.prototype, "video", void 0),
         (0, a.gn)([i.Fl], te.prototype, "has_previous_marker", null),
-        (0, a.gn)([N.ak], te.prototype, "OnJumpToPreviousMarkerClicked", null),
+        (0, a.gn)([T.ak], te.prototype, "OnJumpToPreviousMarkerClicked", null),
         (te = (0, a.gn)([o.Pi], te));
       let se = class extends l.Component {
         constructor(e) {
@@ -5194,7 +5194,7 @@
       };
       (0, a.gn)([i.LO], se.prototype, "video", void 0),
         (0, a.gn)([i.Fl], se.prototype, "has_next_marker", null),
-        (0, a.gn)([N.ak], se.prototype, "OnJumpToNextMarkerClicked", null),
+        (0, a.gn)([T.ak], se.prototype, "OnJumpToNextMarkerClicked", null),
         (se = (0, a.gn)([o.Pi], se));
       const ae = (e) =>
         l.createElement(
@@ -5319,10 +5319,10 @@
             a = t.GetTimelineStartPos() + t.GetTimelineDuration(),
             n = t.GetTimeAtMousePosition(e, this.m_rectSlider, s, a);
           if (this.state.bStartMouseDown) {
-            const e = T.Lh(n, s, t.m_editorEndTime - 5);
+            const e = N.Lh(n, s, t.m_editorEndTime - 5);
             t.m_editorStartTime = e;
           } else if (this.state.bEndMouseDown) {
-            const e = T.Lh(n, t.m_editorStartTime + 5, a);
+            const e = N.Lh(n, t.m_editorStartTime + 5, a);
             t.m_editorEndTime = e;
           } else
             n != this.state.nGrabberMouseDownTime &&
@@ -5365,9 +5365,9 @@
               m.QO.Timeline,
             );
           n < 0.05 && (n = 0);
-          let r = T.Lh(s, 0, 100).toFixed(1) + "%",
-            i = T.Lh(a, 0, 100).toFixed(1) + "%",
-            o = T.Lh(n, 0, 100).toFixed(1) + "%",
+          let r = N.Lh(s, 0, 100).toFixed(1) + "%",
+            i = N.Lh(a, 0, 100).toFixed(1) + "%",
+            o = N.Lh(n, 0, 100).toFixed(1) + "%",
             c = {},
             d = {},
             h = {},
@@ -5537,16 +5537,16 @@
           );
         }
       };
-      (0, a.gn)([N.ak], re.prototype, "OnMouseDown", null),
-        (0, a.gn)([N.ak], re.prototype, "OnMouseMove", null),
-        (0, a.gn)([N.ak], re.prototype, "OnMouseUp", null),
-        (0, a.gn)([N.ak], re.prototype, "OnKeyDown", null),
-        (0, a.gn)([N.ak], re.prototype, "OnMouseHoverMove", null),
-        (0, a.gn)([N.ak], re.prototype, "OnMouseHoverLeave", null),
-        (0, a.gn)([N.ak], re.prototype, "AdjustHoverForClientX", null),
-        (0, a.gn)([N.ak], re.prototype, "OnSegmentClick", null),
-        (0, a.gn)([N.ak], re.prototype, "OnMarkerMouseEnter", null),
-        (0, a.gn)([N.ak], re.prototype, "OnMarkerMouseLeave", null),
+      (0, a.gn)([T.ak], re.prototype, "OnMouseDown", null),
+        (0, a.gn)([T.ak], re.prototype, "OnMouseMove", null),
+        (0, a.gn)([T.ak], re.prototype, "OnMouseUp", null),
+        (0, a.gn)([T.ak], re.prototype, "OnKeyDown", null),
+        (0, a.gn)([T.ak], re.prototype, "OnMouseHoverMove", null),
+        (0, a.gn)([T.ak], re.prototype, "OnMouseHoverLeave", null),
+        (0, a.gn)([T.ak], re.prototype, "AdjustHoverForClientX", null),
+        (0, a.gn)([T.ak], re.prototype, "OnSegmentClick", null),
+        (0, a.gn)([T.ak], re.prototype, "OnMarkerMouseEnter", null),
+        (0, a.gn)([T.ak], re.prototype, "OnMarkerMouseLeave", null),
         (re = (0, a.gn)([o.Pi], re));
       let ie = class extends l.Component {
         constructor() {
@@ -5692,7 +5692,7 @@
           );
         }
       }
-      (0, a.gn)([N.ak], oe.prototype, "showContextMenu", null);
+      (0, a.gn)([T.ak], oe.prototype, "showContextMenu", null);
       let le = class extends l.Component {
         constructor(e) {
           super(e), (this.state = { sizableRegion: [] });
@@ -5839,11 +5839,11 @@
           );
         }
       };
-      (0, a.gn)([N.ak], le.prototype, "AddLinkRegion", null),
-        (0, a.gn)([N.ak], le.prototype, "LoadLinkRegion", null),
-        (0, a.gn)([N.ak], le.prototype, "OnSaveRegions", null),
-        (0, a.gn)([N.ak], le.prototype, "DeleteRegion", null),
-        (0, a.gn)([N.ak], le.prototype, "UpdatePanel", null),
+      (0, a.gn)([T.ak], le.prototype, "AddLinkRegion", null),
+        (0, a.gn)([T.ak], le.prototype, "LoadLinkRegion", null),
+        (0, a.gn)([T.ak], le.prototype, "OnSaveRegions", null),
+        (0, a.gn)([T.ak], le.prototype, "DeleteRegion", null),
+        (0, a.gn)([T.ak], le.prototype, "UpdatePanel", null),
         (le = (0, a.gn)([o.Pi], le));
     },
     54357: (e, t, s) => {

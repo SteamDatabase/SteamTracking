@@ -9021,7 +9021,7 @@
       var i = n(5556),
         r = n(2210),
         o = n(3499),
-        s = n(6948);
+        s = n(5255);
       function a(e, t, n = null) {
         const i = (0, o.FM)(e).toLowerCase(),
           r = (0, o.FM)(s.De.COMMUNITY_BASE_URL).toLowerCase(),
@@ -9167,7 +9167,10 @@
           if (t && l.sm_rgNavEventDictionary)
             for (const e in l.sm_rgNavEventDictionary)
               if (l.sm_rgNavEventDictionary[e] == t) return e;
-          return e && e.match(/^[a-zA-Z0-9\- ]*$/) ? e : "";
+          return l.SanitizeEventComponent(e);
+        }
+        static SanitizeEventComponent(e) {
+          return e && e.match(/^[a-zA-Z0-9\-.]*$/) ? e : "";
         }
       }
       l.sm_bIsLoaded = !1;
@@ -9221,7 +9224,8 @@
           (e[(e.BasicNav = 24)] = "BasicNav"),
           (e[(e.FailedNav = 25)] = "FailedNav"),
           (e[(e.Typing = 26)] = "Typing"),
-          (e[(e.TimerExpired = 27)] = "TimerExpired");
+          (e[(e.TimerExpired = 27)] = "TimerExpired"),
+          (e[(e.Screenshot = 28)] = "Screenshot");
       })(i || (i = {}));
       const o = new (class {
         constructor() {
@@ -17329,7 +17333,7 @@
                 },
                 r.createElement(
                   "div",
-                  { className: st().SliderControl },
+                  { className: (0, l.Z)(st().SliderControl, "SliderControl") },
                   r.createElement("div", {
                     className: (0, l.Z)(
                       st().SliderTrack,
@@ -20898,6 +20902,7 @@
         o = n(1421);
       n(6948);
       const s = r.createContext({});
+      r.createContext(void 0);
       function a(e) {
         const { children: t } = e,
           n = (0, i._T)(e, ["children"]),
@@ -22051,7 +22056,7 @@
           }
           n = n.parentElement;
         }
-        return n;
+        return i(n) ? n : null;
       }
       function _(e, t) {
         const n = [];
@@ -37670,7 +37675,7 @@
         Gs = n(5255);
       class xs {
         constructor(e, t) {
-          var n, i, r, o, s, a;
+          var n, i, r, o, s, a, l;
           (this.m_socket = null),
             (this.Log = new On.sO("CWebSocketConnection", () => this.m_sName)),
             (this.m_bDisconnectRequested = !1),
@@ -37678,23 +37683,27 @@
             (this.m_sName = e),
             (this.m_fnOnMessageHandler = t.fnOnMessageHandler),
             (this.m_fnOnCloseHandler = t.fnOnCloseHandler),
-            (this.m_fnOnReconnectHandler =
-              null !== (n = t.fnOnReconnectHandler) && void 0 !== n
+            (this.m_fnOnReconnectStartHandler =
+              null !== (n = t.fnOnReconnectStartHandler) && void 0 !== n
                 ? n
                 : () => {}),
+            (this.m_fnOnReconnectFinishHandler =
+              null !== (i = t.fnOnReconnectFinishHandler) && void 0 !== i
+                ? i
+                : () => {}),
             (this.m_nConnectAttemptsMax =
-              null !== (i = t.nConnectAttemptsMax) && void 0 !== i ? i : 20),
+              null !== (r = t.nConnectAttemptsMax) && void 0 !== r ? r : 8),
             (this.m_nConnectAttemptTimeoutMs =
-              null !== (r = t.nConnectAttemptTimeoutMs) && void 0 !== r
-                ? r
+              null !== (o = t.nConnectAttemptTimeoutMs) && void 0 !== o
+                ? o
                 : 1e3),
             (this.m_bReconnectOnFailure =
-              null !== (o = t.bReconnectOnFailure) && void 0 !== o && o),
+              null !== (s = t.bReconnectOnFailure) && void 0 !== s && s),
             (this.m_nReconnectAttemptsMax =
-              null !== (s = t.nReconnectAttemptsMax) && void 0 !== s ? s : 1e3),
+              null !== (a = t.nReconnectAttemptsMax) && void 0 !== a ? a : 3e4),
             (this.m_nReconnectAttemptTimeoutMs =
-              null !== (a = t.nReconnectAttemptTimeoutMs) && void 0 !== a
-                ? a
+              null !== (l = t.nReconnectAttemptTimeoutMs) && void 0 !== l
+                ? l
                 : 1e4);
         }
         get name() {
@@ -37747,8 +37756,11 @@
                 (i += 1);
             } while (i < t);
             return (
-              this.Log.Error("connect retry: limit exceeeded, bailing"),
+              this.Log.Warning(
+                `websocket connect retry: limit exceeeded, bailing - ${this.name}`,
+              ),
               (this.m_bConnecting = !1),
+              this.BShouldReconnect() && this.StartReconnect(),
               { result: 2, message: "not ready, exceeded retry count" }
             );
           });
@@ -37770,11 +37782,16 @@
         }
         StartReconnect() {
           return (0, i.mG)(this, void 0, void 0, function* () {
-            this.Log.Info("start reconnect"), (this.m_socket = null);
-            if (1 != (yield this.Connect(this.m_sURL)).result)
+            this.Log.Info("start reconnect"),
+              (this.m_socket = null),
+              this.m_fnOnReconnectStartHandler({ connection: this });
+            if (1 != (yield this.Reconnect()).result)
               return (
                 this.Log.Error("failed to re-connect to websocket after close"),
-                this.m_fnOnReconnectHandler({ connection: this, eResult: 2 }),
+                this.m_fnOnReconnectFinishHandler({
+                  connection: this,
+                  eResult: 2,
+                }),
                 void this.m_fnOnCloseHandler({
                   connection: this,
                   bError: !0,
@@ -37782,7 +37799,10 @@
                 })
               );
             this.Log.Info("reconnect successful"),
-              this.m_fnOnReconnectHandler({ connection: this, eResult: 1 });
+              this.m_fnOnReconnectFinishHandler({
+                connection: this,
+                eResult: 1,
+              });
           });
         }
         ConnectToSocket(e, t) {
@@ -37875,49 +37895,73 @@
         (0, i.gn)([ce.ak], xs.prototype, "OnSocketOpen", null),
         (0, i.gn)([ce.ak], xs.prototype, "OnSocketClose", null),
         (0, i.gn)([ce.ak], xs.prototype, "OnSocketMessage", null);
-      const Fs = "localhost",
-        Ps = new On.sO("WebUITransport");
-      class Us {
-        static Get() {
-          return (
-            null == Us.s_Singleton &&
-              Gs.De.IN_CLIENT &&
-              ((Us.s_Singleton = new Us()),
-              (window.WebUIServiceTransport = Us.s_Singleton)),
-            Us.s_Singleton
-          );
+      const Fs = new On.sO("WebUITransport");
+      class Ps {
+        constructor() {
+          (this.m_iMsgSeq = 1),
+            (this.m_mapPendingMethodRequests = new Map()),
+            (this.m_messageHandlers = new Ns()),
+            (this.m_mapServiceCallErrorCount = new Map()),
+            (this.m_mapConnectionDetails = new Map()),
+            (this.m_bInitialized = !1);
         }
         static InstallErrorReportingStore(e) {
           this.sm_ErrorReportingStore = e;
         }
+        BIsValid() {
+          return this.m_bInitialized;
+        }
         ReportError(e) {
-          Ps.Warning(e);
-          const t = Us.sm_ErrorReportingStore;
+          Fs.Warning(e);
+          const t = Ps.sm_ErrorReportingStore;
           t &&
             t.ReportError(new Error(e), {
               bIncludeMessageInIdentifier: !0,
               cCallsitesToIgnore: 1,
             });
         }
-        constructor() {
-          (this.m_iMsgSeq = 1),
-            (this.m_mapPendingMethodRequests = new Map()),
-            (this.m_messageHandlers = new Ns()),
-            (this.m_mapServiceCallErrorCount = new Map());
-          const e = {
-            bReconnectOnFailure: !0,
-            fnOnMessageHandler: this.OnWebsocketMessage,
-            fnOnCloseHandler: this.OnWebsocketClose,
-            fnOnReconnectHandler: this.OnWebsocketReconnect,
-          };
-          (this.m_connectionSteamUI = new xs("steamUI", e)),
-            (this.m_connectionClientdll = new xs("clientdll", e)),
-            (0, Os.S)().SetDefaultTransport(this),
-            (0, Os.S)().SetDefaultHandlerRegistry(this.m_messageHandlers),
-            Bs.zw.RegisterForNotifyStartShutdown(this.OnStartShutdown);
+        Init() {
+          return (0, i.mG)(this, void 0, void 0, function* () {
+            if (!Gs.De.IN_CLIENT) return;
+            const e = yield SteamClient.WebUITransport.GetTransportInfo();
+            this.CreateConnection(
+              1,
+              "steamUI",
+              e.portSteamUI,
+              e.authKeySteamUI,
+            ),
+              this.CreateConnection(
+                2,
+                "clientdll",
+                e.portClientdll,
+                e.authKeyClientdll,
+              ),
+              (0, Os.S)().SetDefaultTransport(this),
+              (0, Os.S)().SetDefaultHandlerRegistry(this.m_messageHandlers),
+              Bs.zw.RegisterForNotifyStartShutdown(this.OnStartShutdown);
+          });
         }
         get messageHandlers() {
           return this.m_messageHandlers;
+        }
+        SetStatusEventHandler(e) {
+          this.m_fnOnStatusEventHandler = e;
+        }
+        CreateConnection(e, t, n, i) {
+          const r = {
+              bReconnectOnFailure: !0,
+              fnOnMessageHandler: this.OnWebsocketMessage,
+              fnOnCloseHandler: this.OnWebsocketClose,
+              fnOnReconnectStartHandler: this.OnWebsocketReconnectStart,
+              fnOnReconnectFinishHandler: this.OnWebsocketReconnectFinish,
+            },
+            o = {
+              connection: new xs(t, r),
+              sUrl: `ws://localhost:${n}/transportsocket/`,
+              sAuthKey: i,
+              eClientExecutionSite: e,
+            };
+          this.m_mapConnectionDetails.set(e, o);
         }
         SendMsg(e, t, n, i) {
           return new Promise((r, o) => {
@@ -37925,36 +37969,45 @@
             const a = i.eClientExecutionSite;
             if (null == a || 0 == a)
               return (
-                Ps.Error(`SendMsg: Invalid client execution site: ${a}`),
+                Fs.Error(`SendMsg: Invalid client execution site: ${a}`),
                 void o(`Transport SendMsg: invalid client execution site ${a}`)
               );
-            const l =
-              2 == a ? this.m_connectionClientdll : this.m_connectionSteamUI;
-            if (!l.BCanSendMessages()) {
+            const l = this.m_mapConnectionDetails.get(a);
+            if (null == l)
+              return (
+                Fs.Error(
+                  `SendMsg: could not find connection for execution site: ${a}`,
+                ),
+                void o(
+                  `Transport SendMsg: could not find connection for execution site ${a}`,
+                )
+              );
+            const c = l.connection;
+            if (!c.BCanSendMessages()) {
               const t =
                 null !== (s = this.m_mapServiceCallErrorCount.get(e)) &&
                 void 0 !== s
                   ? s
                   : 1;
               this.m_mapServiceCallErrorCount.set(e, t + 1);
-              const n = `SendMsg: Attempt to send message but socket wasn't ready: ${l.name} - ${e}`;
+              const n = `SendMsg: Attempt to send message but socket wasn't ready: ${c.name} - ${e}`;
               return (
                 1 == t && this.ReportError(n),
-                Ps.Warning(n + ` error count: ${t}`),
+                Fs.Warning(n + ` error count: ${t}`),
                 void o("Transport SendMsg: socket not ready")
               );
             }
-            const c = this.m_iMsgSeq++;
+            const u = this.m_iMsgSeq++;
             t.SetEMsg(146),
               t.Hdr().set_target_job_name(e),
-              t.Hdr().set_jobid_source("" + c);
-            if (1 != l.SendSerializedMessage(t.Serialize()))
+              t.Hdr().set_jobid_source("" + u);
+            if (1 != c.SendSerializedMessage(t.Serialize()))
               return (
-                Ps.Error("SendMsg: Failed to send message"),
+                Fs.Error("SendMsg: Failed to send message"),
                 void o("Transport SendMsg: failed to send message")
               );
-            this.m_mapPendingMethodRequests.set(c, {
-              m_iSeq: c,
+            this.m_mapPendingMethodRequests.set(u, {
+              m_iSeq: u,
               m_responseClass: n,
               m_fnCallback: r,
               m_fnError: o,
@@ -37966,80 +38019,85 @@
           const r = n.eClientExecutionSite;
           if (null == r || 0 == r)
             return (
-              Ps.Error(`SendNotification: Invalid client execution site: ${r}`),
+              Fs.Error(`SendNotification: Invalid client execution site: ${r}`),
               !1
             );
-          const o =
-            2 == r ? this.m_connectionClientdll : this.m_connectionSteamUI;
-          if (!o.BCanSendMessages()) {
+          const o = this.m_mapConnectionDetails.get(r);
+          if (null == o)
+            return (
+              Fs.Error(
+                `SendNotification: could not find connection for execution site: ${r}`,
+              ),
+              !1
+            );
+          const s = o.connection;
+          if (!s.BCanSendMessages()) {
             const t =
               null !== (i = this.m_mapServiceCallErrorCount.get(e)) &&
               void 0 !== i
                 ? i
                 : 1;
             this.m_mapServiceCallErrorCount.set(e, t + 1);
-            const n = `SendNotification: Attempt to send message but socket wasn't ready: ${o.name} - ${e}`;
+            const n = `SendNotification: Attempt to send message but socket wasn't ready: ${s.name} - ${e}`;
             return (
               1 == t && this.ReportError(n),
-              Ps.Warning(n + ` error count: ${t}`),
+              Fs.Warning(n + ` error count: ${t}`),
               !1
             );
           }
           t.SetEMsg(146), t.Hdr().set_target_job_name(e);
-          return 1 == o.SendSerializedMessage(t.Serialize());
+          return 1 == s.SendSerializedMessage(t.Serialize());
+        }
+        ConnectToSite(e) {
+          return (0, i.mG)(this, void 0, void 0, function* () {
+            const t = e.connection,
+              n = yield t.Connect(e.sUrl);
+            if (1 != n.result) return n;
+            return (yield this.SendAuthMessage(e)).BSuccess()
+              ? { result: 1, message: "connected" }
+              : { result: 2, message: "client auth failed" };
+          });
         }
         MakeReady() {
           return (0, i.mG)(this, void 0, void 0, function* () {
-            this.m_transportInfo =
-              yield SteamClient.WebUITransport.GetTransportInfo();
-            const e = `ws://${Fs}:${this.m_transportInfo.portSteamUI}/transportsocket/`,
-              t = `ws://${Fs}:${this.m_transportInfo.portClientdll}/transportsocket/`;
-            let n = yield this.m_connectionSteamUI.Connect(e);
-            if (1 != n.result)
-              return Ps.Error("MakeReady: failed to connect to SteamUI"), n;
-            let i = yield this.AuthConnection(this.m_connectionSteamUI);
-            return 1 != i
-              ? (Ps.Error("MakeReady: failed to auth to SteamUI"), n)
-              : ((n = yield this.m_connectionClientdll.Connect(t)),
-                1 != n.result
-                  ? (Ps.Error("MakeReady: failed to connect to clientdll"), n)
-                  : ((i = yield this.AuthConnection(
-                      this.m_connectionClientdll,
-                    )),
-                    1 != i
-                      ? (Ps.Error("MakeReady: failed to auth to clientdll"), n)
-                      : n));
+            const e = [];
+            for (const [t, n] of this.m_mapConnectionDetails)
+              e.push(this.ConnectToSite(n));
+            const t = yield Promise.all(e);
+            (this.m_bInitialized = !0), this.DispatchTransportStatusUpdate();
+            for (const e of t) if (1 != e.result) return e;
+            return { result: 1, message: "ready" };
           });
         }
-        GetAuthInfoForConnection(e) {
-          return e == this.m_connectionClientdll
-            ? {
-                eClientExecutionSite: 2,
-                sAuthKey: this.m_transportInfo.authKeyClientdll,
-              }
-            : e == this.m_connectionSteamUI
-            ? {
-                eClientExecutionSite: 1,
-                sAuthKey: this.m_transportInfo.authKeySteamUI,
-              }
-            : (Ps.Error(
-                "GetAuthInfoForConnection: failed to identify connection",
-              ),
-              { eClientExecutionSite: 0, sAuthKey: "" });
+        GetConnectionDetails(e) {
+          for (const [t, n] of this.m_mapConnectionDetails)
+            if (n.connection === e) return n;
+          return (
+            Fs.Error("GetConnectionDetails: failed to identify connection"),
+            null
+          );
         }
-        AuthConnection(e) {
-          return (0, i.mG)(this, void 0, void 0, function* () {
-            const t = this.GetAuthInfoForConnection(e);
-            return (yield this.SendAuthMessage(t)).GetEResult();
-          });
+        DispatchTransportStatusUpdate() {
+          if (!this.m_fnOnStatusEventHandler) return;
+          let e = !0;
+          for (const [t, n] of this.m_mapConnectionDetails)
+            n.connection.BCanSendMessages() || (e = !1);
+          this.m_fnOnStatusEventHandler({ bConnected: e });
         }
-        OnWebsocketReconnect(e) {
-          if (1 != e.eResult)
+        OnWebsocketReconnectStart(e) {
+          this.DispatchTransportStatusUpdate();
+        }
+        OnWebsocketReconnectFinish(e) {
+          if ((this.DispatchTransportStatusUpdate(), 1 != e.eResult))
             return (
-              Ps.Error("failed to reconnect to steam client"),
+              Fs.Error(
+                "OnWebsocketReconnect: Failed to reconnect to steam client",
+              ),
               void this.FailAllPendingRequests()
             );
-          this.FailAllPendingRequests(), this.AuthConnection(e.connection);
+          this.FailAllPendingRequests();
+          const t = this.GetConnectionDetails(e.connection);
+          this.SendAuthMessage(t);
         }
         OnWebsocketClose(e) {
           e.bIsExpectedToReconnect || this.FailAllPendingRequests();
@@ -38100,46 +38158,45 @@
           });
         }
         OnStartShutdown(e) {
-          return (
-            this.m_connectionSteamUI.PrepareForShutdown(),
-            this.m_connectionClientdll.PrepareForShutdown(),
-            1
-          );
+          for (const [e, t] of this.m_mapConnectionDetails)
+            t.connection.PrepareForShutdown();
+          return 1;
         }
       }
-      (Us.s_Singleton = null),
-        (0, i.gn)([ce.ak], Us.prototype, "OnWebsocketReconnect", null),
-        (0, i.gn)([ce.ak], Us.prototype, "OnWebsocketClose", null),
-        (0, i.gn)([ce.ak], Us.prototype, "OnWebsocketMessage", null),
-        (0, i.gn)([ce.ak], Us.prototype, "OnStartShutdown", null);
-      const Hs =
+      (0, i.gn)([ce.ak], Ps.prototype, "OnWebsocketReconnectStart", null),
+        (0, i.gn)([ce.ak], Ps.prototype, "OnWebsocketReconnectFinish", null),
+        (0, i.gn)([ce.ak], Ps.prototype, "OnWebsocketClose", null),
+        (0, i.gn)([ce.ak], Ps.prototype, "OnWebsocketMessage", null),
+        (0, i.gn)([ce.ak], Ps.prototype, "OnStartShutdown", null);
+      new Ps();
+      const Us =
         window.addEventListener || (n.g && n.g.addEventListener) || (() => {});
-      let Vs,
-        js = [],
-        Ws = (e, t) => js.push({ error: e, cCallsitesToIgnore: t });
-      const zs = !0;
+      let Hs,
+        Vs = [],
+        js = (e, t) => Vs.push({ error: e, cCallsitesToIgnore: t });
+      const Ws = !0;
       {
         const e = console.assert;
         console.assert = (t, n, ...i) => {
-          t || Ws(new Error(Zs(n, ...i)), 2), e.apply(console, [t, n, ...i]);
+          t || js(new Error(Xs(n, ...i)), 2), e.apply(console, [t, n, ...i]);
         };
         const t = console.error;
         (console.error = (e, ...n) => {
-          Ws(new Error(Zs(e, ...n)), 1), t.apply(console, [e, ...n]);
+          js(new Error(Xs(e, ...n)), 1), t.apply(console, [e, ...n]);
         }),
           (console.clogerror = (e, n, ...i) => {
-            Ws(new Error(Zs(n, ...i)), e + 1), t.apply(console, [n, ...i]);
+            js(new Error(Xs(n, ...i)), e + 1), t.apply(console, [n, ...i]);
           }),
-          Hs("error", (e) => {
-            Ws(e.error, 0);
+          Us("error", (e) => {
+            js(e.error, 0);
           }),
-          (Vs = window.setTimeout(() => {
-            (js = []), (Ws = () => {});
+          (Hs = window.setTimeout(() => {
+            (Vs = []), (js = () => {});
           }, 3e4));
       }
-      const Ks = { cCallsitesToIgnore: 0, bIncludeMessageInIdentifier: !1 },
-        qs = ["/localhost:1337/"];
-      class Xs {
+      const zs = { cCallsitesToIgnore: 0, bIncludeMessageInIdentifier: !1 },
+        Ks = ["/localhost:1337/"];
+      class qs {
         constructor(e = !0) {
           (this.m_transport = null),
             (this.m_rgErrorQueue = []),
@@ -38147,13 +38204,13 @@
             (this.m_bEnabled = !0),
             (this.m_bInitialized = !1),
             e
-              ? (js.forEach(({ error: e, cCallsitesToIgnore: t }) =>
+              ? (Vs.forEach(({ error: e, cCallsitesToIgnore: t }) =>
                   this.ReportError(e, { cCallsitesToIgnore: t }),
                 ),
-                (Ws = (e, t) => this.ReportError(e, { cCallsitesToIgnore: t })))
-              : (Ws = () => {}),
-            (js = []),
-            clearTimeout(Vs),
+                (js = (e, t) => this.ReportError(e, { cCallsitesToIgnore: t })))
+              : (js = () => {}),
+            (Vs = []),
+            clearTimeout(Hs),
             window.setTimeout(() => {
               this.m_bInitialized ||
                 ((this.m_bEnabled = !1), (this.m_rgErrorQueue = []));
@@ -38183,12 +38240,12 @@
                 null
               );
             try {
-              const n = Object.assign(Object.assign({}, Ks), t);
+              const n = Object.assign(Object.assign({}, zs), t);
               if (!this.m_bEnabled) return null;
               0;
               const r = yield (function (e, t) {
                 try {
-                  return e.stack && e.stack.match(Qs)
+                  return e.stack && e.stack.match(Zs)
                     ? (function (e, t) {
                         return (0, i.mG)(this, void 0, void 0, function* () {
                           const {
@@ -38196,7 +38253,7 @@
                               bIncludeMessageInIdentifier: i,
                             } = t,
                             r = e.stack.split("\n");
-                          let o = ta(r.filter((e) => !!e.match(Qs))[n]);
+                          let o = ea(r.filter((e) => !!e.match(Zs))[n]);
                           i && (o = `${o} ${e.message}`);
                           const s = r
                             .map((e) => {
@@ -38213,12 +38270,12 @@
                             .filter((e) => !!e);
                           return {
                             identifier: o,
-                            identifierHash: yield ia(o),
+                            identifierHash: yield na(o),
                             message: s,
                           };
                         });
                       })(e, t)
-                    : e.stack && e.stack.match(Ys)
+                    : e.stack && e.stack.match(Qs)
                     ? (function (e, t) {
                         return (0, i.mG)(this, void 0, void 0, function* () {
                           const {
@@ -38226,7 +38283,7 @@
                               bIncludeMessageInIdentifier: i,
                             } = t,
                             r = e.stack.split("\n");
-                          let o = ta(r.filter((e) => !!e.match(Ys))[n]);
+                          let o = ea(r.filter((e) => !!e.match(Qs))[n]);
                           i && (o = `${o} ${e.message}`);
                           const s = r
                             .map((e) => {
@@ -38243,12 +38300,12 @@
                             .filter((e) => !!e);
                           return {
                             identifier: o,
-                            identifierHash: yield ia(o),
+                            identifierHash: yield na(o),
                             message: [e.message, ...s],
                           };
                         });
                       })(e, t)
-                    : e.stack && e.stack.match(Js)
+                    : e.stack && e.stack.match(Ys)
                     ? (function (e, t) {
                         return (0, i.mG)(this, void 0, void 0, function* () {
                           const {
@@ -38277,17 +38334,17 @@
                             .filter((e) => !!e);
                           return {
                             identifier: a,
-                            identifierHash: yield ia(a),
+                            identifierHash: yield na(a),
                             message: [e.message, ...l],
                           };
                         });
                       })(e, t)
-                    : (ea ||
+                    : ($s ||
                         (console.warn(
                           "Error reporter does not know how to parse generated stack:",
                         ),
                         console.warn(e.stack),
-                        (ea = !0)),
+                        ($s = !0)),
                       null);
                 } catch (e) {
                   return (
@@ -38304,7 +38361,7 @@
         BIsBlacklisted(e) {
           for (let t of e.message) {
             let n = JSON.stringify(t);
-            for (let t of qs) {
+            for (let t of Ks) {
               const i = new RegExp(t);
               if (n.match(i))
                 return console.warn("Report", e, "matched regex", t), !0;
@@ -38361,10 +38418,10 @@
           return this.m_strProduct;
         }
         get reporting_enabled() {
-          return zs;
+          return Ws;
         }
       }
-      function Zs(e, ...t) {
+      function Xs(e, ...t) {
         if ("string" == typeof e && 0 === t.length) return e;
         return [e, ...t]
           .map((e) => {
@@ -38376,12 +38433,12 @@
           })
           .join(", ");
       }
-      const Qs = /^\s*at .*(\S+:\d+|\(native\))/m,
-        Ys = /(^|@)\S+:\d+/,
-        Js = /.*\/bundle-[a-zA-Z0-9]+:\d+:\d+/;
-      let $s,
-        ea = !1;
-      function ta(e) {
+      const Zs = /^\s*at .*(\S+:\d+|\(native\))/m,
+        Qs = /(^|@)\S+:\d+/,
+        Ys = /.*\/bundle-[a-zA-Z0-9]+:\d+:\d+/;
+      let Js,
+        $s = !1;
+      function ea(e) {
         return (function (e) {
           const t = "https://",
             n = e.indexOf(t);
@@ -38397,14 +38454,14 @@
           })(e),
         );
       }
-      const na = (e) => {
-        ($s = e),
-          gi.SV.InstallErrorReportingStore($s),
-          v.lq.InstallErrorReportingStore($s),
-          j.LJ.InstallErrorReportingStore($s),
-          Us.InstallErrorReportingStore($s);
+      const ta = (e) => {
+        (Js = e),
+          gi.SV.InstallErrorReportingStore(Js),
+          v.lq.InstallErrorReportingStore(Js),
+          j.LJ.InstallErrorReportingStore(Js),
+          Ps.InstallErrorReportingStore(Js);
       };
-      function ia(e) {
+      function na(e) {
         return (0, i.mG)(this, void 0, void 0, function* () {
           try {
             const n = yield window.crypto.subtle.digest(
@@ -38434,7 +38491,7 @@
             document.getElementById("application_config")
               ? (0, s.Ek)("application_config")
               : (0, s.Ek)(),
-              ($s || na(new Xs()), $s).Init(
+              (Js || ta(new qs()), Js).Init(
                 "Help",
                 CLSTAMP,
                 new I.J(s.De.WEBAPI_BASE_URL).GetServiceTransport(),
@@ -38458,8 +38515,8 @@
                       ]);
                     j.Yt.InitFromObjects(o, a, r, s);
                   }
-                  for (const e of ra) j.Yt.AddTokens(e);
-                  ra = void 0;
+                  for (const e of ia) j.Yt.AddTokens(e);
+                  ia = void 0;
                 });
               })(s.De.LANGUAGE),
               document.getElementById("application_root") &&
@@ -38468,7 +38525,7 @@
                   .render(r.createElement(As, {}));
           }),
         );
-      let ra = [];
+      let ia = [];
     },
   },
   (e) => {
