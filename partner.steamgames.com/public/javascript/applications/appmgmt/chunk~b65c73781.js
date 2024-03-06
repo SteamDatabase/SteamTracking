@@ -43117,7 +43117,7 @@
                 o.createElement(
                   "div",
                   { className: b().BigNumber },
-                  n.data.accepted_appeals,
+                  n.data.reject_appeals,
                 ),
                 o.createElement(
                   "span",
