@@ -25308,7 +25308,7 @@
         h = n.n(_),
         g = n(61553),
         v = n(28017),
-        E = n(85590),
+        E = n(74895),
         S = n(23665),
         D = n(71741),
         f = n.n(D);
@@ -25928,7 +25928,7 @@
         y = n.n(f),
         b = n(59850),
         I = n.n(b),
-        C = n(85590);
+        C = n(74895);
       function k(e) {
         var t;
         const { bShowOnlySummary: n } = e,
@@ -26482,9 +26482,9 @@
         );
       }
     },
-    85590: (e, t, n) => {
+    74895: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { OptInRoutes: () => ar, default: () => rr });
+      n.r(t), n.d(t, { OptInRoutes: () => mr, default: () => pr });
       var a = n(760),
         i = n(69406),
         l = n(86236),
@@ -27512,7 +27512,7 @@
               o.createElement(
                 s.rU,
                 {
-                  to: ar.OptinAdminEdit(d.pageid),
+                  to: mr.OptinAdminEdit(d.pageid),
                   className: (0, S.Z)(_().Button, _().Primary),
                 },
                 "Edit Opt-In Definition",
@@ -27524,7 +27524,7 @@
                     href:
                       f.De.PARTNER_BASE_URL +
                       "optin" +
-                      ar.OptInAppReview(d.pageid),
+                      mr.OptInAppReview(d.pageid),
                     className: (0, S.Z)(_().Button),
                     target: "_blank",
                   },
@@ -27534,7 +27534,7 @@
                 o.createElement(
                   s.rU,
                   {
-                    to: ar.OptinAdminAnalysis(d.pageid),
+                    to: mr.OptinAdminAnalysis(d.pageid),
                     className: (0, S.Z)(_().Button, _().Primary),
                   },
                   "Post OptIn Stats",
@@ -38743,7 +38743,7 @@
               { className: ue().BasicButtonSize },
               o.createElement(
                 s.rU,
-                { to: ar.OptinAdminDashboard() },
+                { to: mr.OptinAdminDashboard() },
                 "Dashboard",
               ),
             ),
@@ -40201,7 +40201,7 @@
           o.createElement(Rn.NL, {
             message: (e) =>
               !l.On.Get().BIsDirty() ||
-              e.pathname != ar.OptinAdminDashboard() ||
+              e.pathname != mr.OptinAdminDashboard() ||
               "Do you want to discard unsaved changes?",
           });
       class Wi {
@@ -42803,8 +42803,50 @@
         );
       }
       var Ql = n(86984),
-        Jl = n(22896);
-      function $l(e) {
+        Jl = n(22896),
+        $l = n(73799),
+        er = n.n($l),
+        tr = n(79270);
+      const nr = o.createContext({
+        loadOptInAppealsSummaryStats: (e, t) =>
+          (0, I.mG)(void 0, void 0, void 0, function* () {
+            return yield (function (e) {
+              ir ||
+                (ir = new (er())(
+                  (t) =>
+                    (0, I.mG)(this, void 0, void 0, function* () {
+                      const n = U.gA.Init(H.Hj);
+                      n.Body().set_opt_in_names([...t]);
+                      const a = yield H.u2.GetOptInAppealsSummaryStats(e, n);
+                      if (!a.BSuccess())
+                        throw `Failed to call GetOptInAppealsSummaryStats with details: ${a.GetErrorMessage()}`;
+                      const i = new Map();
+                      return (
+                        a
+                          .Body()
+                          .summary()
+                          .forEach((e) => {
+                            const t = e.toObject();
+                            i.set(t.opt_in_name, t);
+                          }),
+                        t.map((e) => i.get(e))
+                      );
+                    }),
+                  { maxBatchSize: 100 },
+                ));
+              return ir;
+            })(t).load(e);
+          }),
+      });
+      function ar(e, t, n) {
+        return {
+          queryKey: ["OptInAppealsSummaryStats", n],
+          queryFn: () => e.loadOptInAppealsSummaryStats(n, t),
+          enabled: !!n,
+        };
+      }
+      let ir;
+      function lr(e) {
         var t, n;
         (0, o.useEffect)(() => {
           r.v.Get();
@@ -42822,7 +42864,7 @@
               contents: o.createElement(
                 d.SV,
                 null,
-                o.createElement(er, { list: r.v.Get().GetAppReviewOptIn() }),
+                o.createElement(rr, { list: r.v.Get().GetAppReviewOptIn() }),
               ),
               onClick: l,
             },
@@ -42836,9 +42878,9 @@
               contents: o.createElement(
                 d.SV,
                 null,
-                o.createElement(er, {
+                o.createElement(rr, {
                   list: r.v.Get().GetAppealReviewOptIn(),
-                  bAppeals: null,
+                  bAppeals: !0,
                 }),
               ),
               onClick: l,
@@ -42870,7 +42912,7 @@
           ),
         );
       }
-      function er(e) {
+      function rr(e) {
         const { list: t, bReverseOrder: n, bAppeals: a } = e,
           [i, l] = (0, u.Ar)("query", ""),
           r = (0, o.useMemo)(() => {
@@ -42922,11 +42964,11 @@
             placeholder: "type here...",
           }),
           r.map((e) =>
-            o.createElement(tr, { key: e.pageid, def: e, bAppeals: a }),
+            o.createElement(or, { key: e.pageid, def: e, bAppeals: a }),
           ),
         );
       }
-      function tr(e) {
+      function or(e) {
         var t;
         const { def: n, bAppeals: a } = e,
           i =
@@ -42985,20 +43027,7 @@
               "div",
               { className: x().StatsCtn },
               a
-                ? o.createElement(
-                    "div",
-                    { className: b().FeaturedApps },
-                    o.createElement("div", { className: b().BigNumber }, "??"),
-                    o.createElement(
-                      "span",
-                      {
-                        "data-tooltip-text":
-                          "Number of appeals that are open requiring review",
-                        className: _().HelperTooltip,
-                      },
-                      "Open Appeals to Review (?)",
-                    ),
-                  )
+                ? o.createElement(sr, { def: n })
                 : o.createElement(
                     "div",
                     { className: b().FeaturedApps },
@@ -43030,8 +43059,79 @@
           ),
         );
       }
-      var nr = n(58166);
-      const ar = {
+      function sr(e) {
+        const { def: t } = e,
+          n = (function (e) {
+            const t = (0, tr.i)(),
+              n = o.useContext(nr);
+            return (0, F.useQuery)(ar(n, t, e));
+          })(t.pageid);
+        return !n || n.isLoading
+          ? o.createElement(T.V, {
+              size: "medium",
+              string: (0, G.Xx)("#Loading"),
+            })
+          : n.isError || n.isLoadingError
+          ? o.createElement("div", null, "Failed to load appeals summary")
+          : o.createElement(
+              o.Fragment,
+              null,
+              o.createElement(
+                "div",
+                { className: b().FeaturedApps },
+                o.createElement(
+                  "div",
+                  { className: b().BigNumber },
+                  n.data.open_appeals,
+                ),
+                o.createElement(
+                  "span",
+                  {
+                    "data-tooltip-text":
+                      "Number of appeals that are open requiring review",
+                    className: _().HelperTooltip,
+                  },
+                  "Open Appeals to Review (?)",
+                ),
+              ),
+              o.createElement(
+                "div",
+                { className: b().FeaturedApps },
+                o.createElement(
+                  "div",
+                  { className: b().BigNumber },
+                  n.data.accepted_appeals,
+                ),
+                o.createElement(
+                  "span",
+                  {
+                    "data-tooltip-text": "Numbers appeals we accepted",
+                    className: _().HelperTooltip,
+                  },
+                  "Accepted Appeals (?)",
+                ),
+              ),
+              o.createElement(
+                "div",
+                { className: b().FeaturedApps },
+                o.createElement(
+                  "div",
+                  { className: b().BigNumber },
+                  n.data.accepted_appeals,
+                ),
+                o.createElement(
+                  "span",
+                  {
+                    "data-tooltip-text": "Numbers appeals we rejected",
+                    className: _().HelperTooltip,
+                  },
+                  "Rejected Appeals (?)",
+                ),
+              ),
+            );
+      }
+      var cr = n(58166);
+      const mr = {
           OptinAdminDashboard: () => "/admin/",
           OptinAdminEdit: (e) => `/admin/edit/${e}`,
           OptinAdminAnalysis: (e) => `/admin/analysis/${e}`,
@@ -43043,11 +43143,11 @@
           OptInAppReview: (e) => `/appreview/${e}`,
           OptInAppReviewDashboard: () => "/appreview_dashboard",
         },
-        ir = "sale_";
-      function lr(e) {
-        return (null == e ? void 0 : e.startsWith(ir)) ? e : ir + e;
+        dr = "sale_";
+      function ur(e) {
+        return (null == e ? void 0 : e.startsWith(dr)) ? e : dr + e;
       }
-      function rr(e) {
+      function pr(e) {
         return (0, Zi.N)()
           ? o.createElement(
               s.VK,
@@ -43069,12 +43169,12 @@
                 }),
                 o.createElement(Rn.AW, {
                   exact: !0,
-                  path: ar.OptinAdminDashboard(),
+                  path: mr.OptinAdminDashboard(),
                   component: Y,
                 }),
                 o.createElement(Rn.AW, {
                   exact: !0,
-                  path: ar.OptinAdminEdit(":pageid"),
+                  path: mr.OptinAdminEdit(":pageid"),
                   render: (e) =>
                     o.createElement(
                       Jl.F,
@@ -43084,7 +43184,7 @@
                 }),
                 o.createElement(Rn.AW, {
                   exact: !0,
-                  path: ar.OptinAdminAnalysis(":pageid"),
+                  path: mr.OptinAdminAnalysis(":pageid"),
                   render: (e) =>
                     o.createElement(
                       Jl.F,
@@ -43094,52 +43194,52 @@
                 }),
                 o.createElement(Rn.AW, {
                   exact: !0,
-                  path: ar.OptinAdminDemoAnalysis(":pageid"),
+                  path: mr.OptinAdminDemoAnalysis(":pageid"),
                   render: (e) =>
                     o.createElement(
                       Jl.i,
                       { pageid: e.match.params.pageid },
-                      o.createElement(nr.k, { bShowOnlySummary: !1 }),
+                      o.createElement(cr.k, { bShowOnlySummary: !1 }),
                     ),
                 }),
                 o.createElement(Rn.AW, {
                   exact: !0,
-                  path: ar.OptinAdminSupport(":appid"),
+                  path: mr.OptinAdminSupport(":appid"),
                   render: (e) =>
                     o.createElement(Si, {
                       appid: Number.parseInt(e.match.params.appid),
                     }),
                 }),
                 o.createElement(Rn.AW, {
-                  path: ar.OptInApp(":partialpageid", ":appid"),
+                  path: mr.OptInApp(":partialpageid", ":appid"),
                   render: (e) =>
                     o.createElement(ji, {
                       appid: e.match.params.appid,
-                      pageid: lr(e.match.params.partialpageid),
+                      pageid: ur(e.match.params.partialpageid),
                     }),
                 }),
                 o.createElement(Rn.AW, {
-                  path: ar.OptInAppReviewDashboard(),
-                  component: $l,
+                  path: mr.OptInAppReviewDashboard(),
+                  component: lr,
                 }),
                 o.createElement(Rn.AW, {
-                  path: ar.OptInAppReview(":pageid"),
+                  path: mr.OptInAppReview(":pageid"),
                   render: (e) =>
                     o.createElement(_l, { pageid: e.match.params.pageid }),
                 }),
                 o.createElement(Rn.AW, {
-                  path: ar.OptInAppAppeal(":partialpageid", ":appid"),
+                  path: mr.OptInAppAppeal(":partialpageid", ":appid"),
                   render: (e) =>
                     o.createElement(Tl, {
                       appid: Number.parseInt(e.match.params.appid),
-                      pageid: lr(e.match.params.partialpageid),
+                      pageid: ur(e.match.params.partialpageid),
                     }),
                 }),
                 o.createElement(Rn.AW, {
-                  path: ar.OptInPartnerDashboard(":partialpageid"),
+                  path: mr.OptInPartnerDashboard(":partialpageid"),
                   render: (e) =>
                     o.createElement(Ul, {
-                      pageid: lr(e.match.params.partialpageid),
+                      pageid: ur(e.match.params.partialpageid),
                     }),
                 }),
                 o.createElement(Rn.AW, { component: i.R }),
