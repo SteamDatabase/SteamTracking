@@ -951,6 +951,7 @@ ${PARTNER_BASE_URL}dailydeals/ajaxinviteapptopromo
 ${PARTNER_BASE_URL}dailydeals/ajaxremoveappinvite
 ${PARTNER_BASE_URL}dailydeals/ajaxresendinvitationemail
 ${PARTNER_BASE_URL}discounts/ajaxgetdiscountbyapp
+${PARTNER_BASE_URL}discounts/ajaxgetdiscountbybundle
 ${PARTNER_BASE_URL}doc/${}
 ${PARTNER_BASE_URL}doc/doc/marketing/discounts/seasonalsales
 ${PARTNER_BASE_URL}doc/features/playtest#4

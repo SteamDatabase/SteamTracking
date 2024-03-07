@@ -20583,12 +20583,20 @@
       }
       function M(e, t) {
         var n;
-        if (e && t && 0 == e.store_item_type) {
+        if (e) {
           const a = e.rtime32_start_time,
             i = e.rtime32_start_time + 82800,
-            l = t.get(e.store_item_id),
-            r =
-              null === (n = null == l ? void 0 : l.discounts) || void 0 === n
+            l =
+              0 == e.store_item_type
+                ? null == t
+                  ? void 0
+                  : t.mapAppDiscounts
+                : null == t
+                ? void 0
+                : t.mapBundleDiscounts,
+            r = null == l ? void 0 : l.get(e.store_item_id),
+            o =
+              null === (n = null == r ? void 0 : r.discounts) || void 0 === n
                 ? void 0
                 : n.filter(
                     (e) =>
@@ -20596,18 +20604,29 @@
                       i <= e.rtEndDate &&
                       e.nDiscountPct > 0,
                   );
-          if ((null == r ? void 0 : r.length) > 0) {
-            const e = r.reduce((e, t) =>
+          if ((null == o ? void 0 : o.length) > 0) {
+            let e, t;
+            o.forEach((n) => {
+              (null == e || e > n.nDiscountPct) && (e = n.nDiscountPct),
+                (null == t || t < n.nDiscountPct) && (t = n.nDiscountPct);
+            });
+            const n = o.reduce((e, t) =>
               e.nDiscountPct > t.nDiscountPct ? e : t,
             );
             return {
-              nDiscountPercent: e.nDiscountPct,
-              dtDiscountStart: e.rtStartDate,
-              dtDiscountEnd: e.rtEndDate,
+              nDiscountPercentHigh: t,
+              nDiscountPercentLow: e,
+              dtDiscountStart: n.rtStartDate,
+              dtDiscountEnd: n.rtEndDate,
             };
           }
         }
-        return { nDiscountPercent: 0, dtDiscountStart: 0, dtDiscountEnd: 0 };
+        return {
+          nDiscountPercentHigh: 0,
+          nDiscountPercentLow: 0,
+          dtDiscountStart: 0,
+          dtDiscountEnd: 0,
+        };
       }
       (0, a.gn)([o.ak], k.prototype, "SetDailyDeal", null),
         (0, a.gn)([o.ak], k.prototype, "LoadDailyDealByID", null),
@@ -46199,11 +46218,12 @@
     95666: (e, t, n) => {
       "use strict";
       n.d(t, {
-        B9: () => A,
-        KP: () => y,
-        Ll: () => k,
-        SG: () => D,
-        bG: () => C,
+        B9: () => w,
+        Jv: () => D,
+        KP: () => b,
+        Ll: () => A,
+        SG: () => f,
+        bG: () => k,
       });
       var a = n(81033),
         i = n(7073),
@@ -46222,7 +46242,10 @@
         v = n(15282),
         E = n(14790),
         S = n(93727);
-      function D(e) {
+      function D(e, t) {
+        return e == t ? e + "%" : e + "% - " + t + "%";
+      }
+      function f(e) {
         var t, n;
         const { oDailyDeal: l } = e,
           o = (0, i.hd)(
@@ -46237,13 +46260,14 @@
           ),
           d = (0, E.ns)(),
           {
-            nDiscountPercent: u,
-            dtDiscountStart: _,
-            dtDiscountEnd: v,
+            nDiscountPercentHigh: u,
+            nDiscountPercentLow: _,
+            dtDiscountStart: v,
+            dtDiscountEnd: f,
           } = r.useMemo(() => (0, S.lI)(l, d), [l, d]);
-        let D = "?? %",
-          b = null,
-          I = null;
+        let I = "?? %",
+          C = null,
+          k = null;
         if (s && (null == o ? void 0 : o.length) > 0) {
           const e = l.rtime32_start_time + 86400;
           let t, n;
@@ -46253,26 +46277,24 @@
               ((null == t || t > a.nDiscountPct) && (t = a.nDiscountPct),
               (null == n || n < a.nDiscountPct) && (n = a.nDiscountPct));
           }),
-            null != t &&
-              null != n &&
-              (D = t == n ? t + "%" : t + "% - " + n + "%"),
-            (b = r.createElement(y, {
+            null != t && null != n && (I = D(t, n)),
+            (C = r.createElement(b, {
               rgPackagesDiscounts: o,
               oDiscountEvent: s,
             }));
         } else
-          u
-            ? ((D = u + "%"),
-              (b = r.createElement(f, { nDiscountStart: _, nDiscountEnd: v })))
-            : (b = s
-                ? r.createElement(y, {
+          u && _
+            ? ((I = D(_, u)),
+              (C = r.createElement(y, { nDiscountStart: v, nDiscountEnd: f })))
+            : (C = s
+                ? r.createElement(b, {
                     rgPackagesDiscounts: o,
                     oDiscountEvent: s,
                   })
-                : r.createElement(f, { nDiscountStart: _, nDiscountEnd: v }));
+                : r.createElement(y, { nDiscountStart: v, nDiscountEnd: f }));
         return (
           (null == s ? void 0 : s.id) &&
-            (I = `${h.De.PARTNER_BASE_URL}admin/editdiscountevent/${
+            (k = `${h.De.PARTNER_BASE_URL}admin/editdiscountevent/${
               null == s ? void 0 : s.id
             }`),
           r.createElement(
@@ -46282,25 +46304,25 @@
               m.tl,
               {
                 hoverProps: { direction: "left", style: { minWidth: "350px" } },
-                hoverContent: b,
+                hoverContent: C,
                 className: g.HoverCtn,
-                strClickUrl: I,
+                strClickUrl: k,
               },
               r.createElement(
                 "div",
                 {
                   className: (0, p.Z)(
                     g.Pct,
-                    "?? %" == D ? g.MissingDiscount : "",
+                    "?? %" == I ? g.MissingDiscount : "",
                   ),
                 },
-                D,
+                I,
               ),
             ),
           )
         );
       }
-      function f(e) {
+      function y(e) {
         const { nDiscountStart: t, nDiscountEnd: n } = e,
           a =
             t && n
@@ -46316,7 +46338,7 @@
           r.createElement("div", null, a),
         );
       }
-      function y(e) {
+      function b(e) {
         var t;
         const { rgPackagesDiscounts: n, oDiscountEvent: a, nBundleID: i } = e;
         return (
@@ -46369,7 +46391,7 @@
                       null == n
                         ? void 0
                         : n.map((e) =>
-                            r.createElement(I, {
+                            r.createElement(C, {
                               key: "dis_" + e.nDiscountID + "_" + e.nDiscountID,
                               oDiscount: e,
                             }),
@@ -46382,11 +46404,11 @@
                     ),
               ),
             Boolean(i) &&
-              r.createElement(b, { oDiscountEvent: a, bundleid: i }),
+              r.createElement(I, { oDiscountEvent: a, bundleid: i }),
           )
         );
       }
-      function b(e) {
+      function I(e) {
         const { oDiscountEvent: t, bundleid: n } = e,
           [i] = (0, o.yo)(n, { include_basic_info: !0 }),
           { fnUpdateDiscountEventAppAndPublisherList: l } = (0, a.Lr)();
@@ -46402,7 +46424,7 @@
             )
           : null;
       }
-      function I(e) {
+      function C(e) {
         const { oDiscount: t } = e,
           [n] = (0, o.ie)(t.packageID, {});
         return n
@@ -46426,24 +46448,24 @@
               "%",
             );
       }
-      function C(e) {
+      function k(e) {
         const { strDiscountEventID: t, nBundleID: n } = e,
           l = (0, i.hd)(t),
           o = (0, a.vc)(t);
-        return r.createElement(y, {
+        return r.createElement(b, {
           rgPackagesDiscounts: l,
           oDiscountEvent: o,
           nBundleID: n,
         });
       }
-      function k(e) {
+      function A(e) {
         const { oAppInfo: t } = e,
           n = (0, l.q_)(null == t ? void 0 : t.GetAppID());
         return t && (null == n ? void 0 : n.length) > 0
           ? r.createElement(
               v.V,
               { rgPackagesToLoad: n, size: "small" },
-              r.createElement(A, { rgPackageIDs: n }),
+              r.createElement(w, { rgPackageIDs: n }),
             )
           : r.createElement(
               "div",
@@ -46451,7 +46473,7 @@
               (0, _.Xx)("#DailyDeals_New_NoLastDiscount"),
             );
       }
-      function A(e) {
+      function w(e) {
         const {
             rgPackageIDs: t,
             bHidePackage: n,
@@ -46517,10 +46539,10 @@
             d,
           ),
           Boolean(a && (null == l ? void 0 : l.discountEventID)) &&
-            r.createElement(w, { strDiscountEventID: l.discountEventID }),
+            r.createElement(P, { strDiscountEventID: l.discountEventID }),
         );
       }
-      function w(e) {
+      function P(e) {
         const { strDiscountEventID: t } = e,
           n = (0, a.vc)(t);
         return n ? r.createElement("div", null, n.name) : null;
@@ -55876,23 +55898,26 @@
         return (0, T.jk)(t.id, (0, Ot.YF)(t), un);
       }
       function _n(e, t) {
-        const [n] = (0, r.useMemo)(() => {
-          let n = new Set();
+        const [n, a] = (0, r.useMemo)(() => {
+          let n = new Set(),
+            a = new Set();
           return (
             (null == e ? void 0 : e.length) > 0 &&
               e.forEach((e) => {
-                (null == e ? void 0 : e.store_item_id) &&
-                  0 == e.store_item_type &&
-                  n.add(e.store_item_id);
+                (null == e ? void 0 : e.store_item_id) && 0 == e.store_item_type
+                  ? n.add(e.store_item_id)
+                  : (null == e ? void 0 : e.store_item_id) &&
+                    2 == e.store_item_type &&
+                    a.add(e.store_item_id);
               }),
             (null == t ? void 0 : t.length) > 0 &&
               t.forEach((e) => {
-                e.appid && n.add(e.appid);
+                e.appid ? n.add(e.appid) : e.bundleid && a.add(e.bundleid);
               }),
-            [n]
+            [n, a]
           );
         }, [e, t]);
-        return Array.from(n);
+        return { rgAppIDs: Array.from(n), rgBundleIDs: Array.from(a) };
       }
       var hn = n(36876),
         gn = n(45492),
@@ -55965,12 +55990,14 @@
       var yn = n(14790);
       const bn = 4;
       function In(e) {
-        const t = _n((0, Gt.Mg)()),
-          n = (0, mn.og)(t);
+        const t = (0, Gt.Mg)(),
+          { rgAppIDs: n, rgBundleIDs: a } = _n(t),
+          i = (0, mn.og)(n),
+          l = (0, mn.o6)(a);
         return A.L7.is_support
           ? r.createElement(
               yn.LG,
-              { value: n },
+              { value: { mapAppDiscounts: i, mapBundleDiscounts: l } },
               r.createElement(Dn, {
                 nMaxWeeksToDisplay: 1e3,
                 fnCreateCalendarEntries: (e) => {
@@ -56293,11 +56320,12 @@
             },
             [a, c],
           ),
-          d = _n(i),
-          u = (0, mn.og)(d, !1);
+          { rgAppIDs: d, rgBundleIDs: u } = _n(i),
+          p = (0, mn.og)(d, !1),
+          _ = (0, mn.o6)(u, !1);
         return r.createElement(
           yn.LG,
-          { value: u },
+          { value: { mapAppDiscounts: p, mapBundleDiscounts: _ } },
           r.createElement(
             "div",
             { className: vn.SearchCtn },
@@ -56339,7 +56367,7 @@
         const { deal: t } = e,
           n = (0, yn.ns)(),
           {
-            nDiscountPercent: a,
+            nDiscountPercentHigh: a,
             dtDiscountStart: i,
             dtDiscountEnd: l,
           } = r.useMemo(() => (0, Gt.lI)(t, n), [t, n]);
@@ -56730,15 +56758,21 @@
             !0,
           ),
           c = r.useMemo(() => {
-            let e = [];
+            var e;
+            let t = [];
             return (
               (null == n ? void 0 : n.appid)
-                ? (e = na(null == a ? void 0 : a.get(n.appid), o))
+                ? (t = na(
+                    null === (e = a.mapAppDiscounts) || void 0 === e
+                      ? void 0
+                      : e.get(n.appid),
+                    o,
+                  ))
                 : (null == n ? void 0 : n.packageid) &&
                   (null == l ? void 0 : l.length) > 0
-                ? (e = na({ discounts: l }, o))
-                : (null == n ? void 0 : n.bundleid) && i && (e = i),
-              e
+                ? (t = na({ discounts: l }, o))
+                : (null == n ? void 0 : n.bundleid) && i && (t = i),
+              t
             );
           }, [
             n.appid,
@@ -56751,7 +56785,7 @@
           ]);
         return !n ||
           null == s ||
-          (n.appid && !a) ||
+          (n.appid && !(null == a ? void 0 : a.mapAppDiscounts)) ||
           (n.packageid && !l) ||
           (n.bundleid && !i)
           ? r.createElement(y.V, {
@@ -57317,7 +57351,7 @@
         const t = (0, hn.F)(),
           [n, a] = (0, r.useState)(""),
           [i, l] = (0, r.useState)(0),
-          o = _n(null, t);
+          { rgAppIDs: o } = _n(null, t);
         (0, T.wZ)(o, un);
         const s = r.useMemo(() => {
             let e = new Set(t.map((e) => e.invite_account));
@@ -57418,8 +57452,9 @@
       function va(e) {
         const { strInviteID: t } = e,
           n = (0, hn.Nt)(t),
-          a = _n((0, Gt.Mg)(), [n]),
-          i = (0, mn.og)(a, !1, null == n ? void 0 : n.primary_partnerid);
+          a = (0, Gt.Mg)(),
+          { rgAppIDs: i } = _n(a, [n]),
+          l = (0, mn.og)(i, !1, null == n ? void 0 : n.primary_partnerid);
         return n
           ? 0 != n.rtdatechosen
             ? r.createElement(Ea, {
@@ -57434,7 +57469,7 @@
               })
             : r.createElement(
                 yn.LG,
-                { value: i },
+                { value: { mapAppDiscounts: l } },
                 r.createElement(
                   "div",
                   { className: xn()(Ut().AdminPageCtn, "Partner") },
@@ -57787,9 +57822,14 @@
           a = Number.parseInt(t),
           [i] = (0, dn.DV)(a),
           l = (0, Gt.Mg)(),
-          o = _n(l),
-          s = (0, mn.og)(o, !1, a),
-          [c, d] = (0, r.useMemo)(() => {
+          { rgAppIDs: o, rgBundleIDs: s } = _n(l),
+          c = (0, mn.og)(o, !1, a),
+          d = (0, mn.o6)(s, !1, a),
+          u = (0, r.useMemo)(
+            () => ({ mapAppDiscounts: c, mapBundleDiscounts: d }),
+            [c, d],
+          ),
+          [p, _] = (0, r.useMemo)(() => {
             let e = new Array(),
               t = new Array();
             const a = Date.now() / 1e3;
@@ -57802,7 +57842,7 @@
               [e, t]
             );
           }, [n]),
-          [u, p, _] = (0, r.useMemo)(() => {
+          [h, g, v] = (0, r.useMemo)(() => {
             let e = new Array(),
               t = new Array(),
               n = new Array();
@@ -57810,7 +57850,7 @@
             return (
               l.forEach((i) => {
                 if (i.store_item_id) {
-                  const { nDiscountPercent: l } = (0, Gt.lI)(i, s),
+                  const { nDiscountPercentHigh: l } = (0, Gt.lI)(i, u),
                     r = (0, m.fH)(i.discount_event_id.toString());
                   !i.cancelled && 0 == l && i.rtime32_start_time > a
                     ? t.push(i)
@@ -57823,9 +57863,10 @@
               }),
               [t, e, n]
             );
-          }, [l, s]);
+          }, [l, u]);
         return a
-          ? !s && (null == o ? void 0 : o.length) > 0
+          ? (!c && (null == o ? void 0 : o.length) > 0) ||
+            (!d && (null == s ? void 0 : s.length) > 0)
             ? r.createElement(y.V, {
                 string: (0, k.Xx)("#DailyDeals_LoadingDiscountInfo"),
                 size: "medium",
@@ -57833,7 +57874,7 @@
               })
             : r.createElement(
                 yn.LG,
-                { value: s },
+                { value: u },
                 r.createElement(
                   "div",
                   { className: (0, B.Z)(Ut().AdminPageCtn, "Partner") },
@@ -57855,14 +57896,14 @@
                   ),
                   r.createElement("hr", null),
                   r.createElement(Na, {
-                    rgInvites: c,
-                    rgIncompleteDeals: u,
+                    rgInvites: p,
+                    rgIncompleteDeals: h,
                     strPublisherID: t,
                   }),
-                  r.createElement(Ra, { rgDeals: p, strPublisherID: t }),
+                  r.createElement(Ra, { rgDeals: g, strPublisherID: t }),
                   r.createElement(Ga, {
-                    rgInvites: d,
-                    rgDeals: _,
+                    rgInvites: _,
+                    rgDeals: v,
                     strPublisherID: t,
                   }),
                   r.createElement(pa, null),
@@ -58108,39 +58149,40 @@
         const { deal: t, strPublisherID: n, children: a } = e,
           i = (0, yn.ns)(),
           {
-            nDiscountPercent: l,
-            dtDiscountStart: o,
-            dtDiscountEnd: s,
+            nDiscountPercentLow: l,
+            nDiscountPercentHigh: o,
+            dtDiscountStart: s,
+            dtDiscountEnd: c,
           } = r.useMemo(() => (0, Gt.lI)(t, i), [t, i]);
-        let c = r.useMemo(() => (0, Gt.sm)(t, l), [t, l]);
+        let m = r.useMemo(() => (0, Gt.sm)(t, o), [t, o]);
         if (!t) return null;
-        if (c == Gt.O7.DealFailed)
+        if (m == Gt.O7.DealFailed)
           return r.createElement(Fa, {
             strMessage: (0, k.Xx)("#DailyDeals_DealFailed"),
           });
-        if (c == Gt.O7.DealCompleted)
+        if (m == Gt.O7.DealCompleted)
           return r.createElement(
             Fa,
             null,
             r.createElement(Ua, {
               deal: t,
-              eDealState: c,
-              dtDiscountStart: o,
-              dtDiscountEnd: s,
+              eDealState: m,
+              dtDiscountStart: s,
+              dtDiscountEnd: c,
             }),
           );
-        if (c == Gt.O7.Cancelled)
+        if (m == Gt.O7.Cancelled)
           return r.createElement(Fa, {
             strMessage: (0, k.Xx)("#DailyDeals_DealCancelled"),
           });
-        let m = null,
-          d = null;
-        const u = `${
+        let d = null,
+          u = null;
+        const p = `${
           A.De.PARTNER_BASE_URL
         }promotion/discounts${It.DiscountDashboard(null != n ? n : "")}?de=${
           t.discount_event_id
         }&dd=1`;
-        switch (c) {
+        switch (m) {
           case Gt.O7.InviteAccepted: {
             const e = "America/Los_Angeles",
               n = {
@@ -58149,7 +58191,7 @@
                 hour: "numeric",
               },
               a = e != Intl.DateTimeFormat().resolvedOptions().timeZone;
-            (m = r.createElement(
+            (d = r.createElement(
               "div",
               { className: wa.FeaturedDate },
               r.createElement("div", null, (0, k.$1)(t.rtime32_start_time, n)),
@@ -58163,49 +58205,49 @@
                   ),
                 ),
             )),
-              (d = r.createElement(
+              (u = r.createElement(
                 S.zx,
                 {
                   className: wa.DailyDealButton,
-                  onClick: () => window.location.assign(u),
+                  onClick: () => window.location.assign(p),
                 },
                 (0, k.Xx)("#DailyDeals_Button_EnterDiscounts"),
               ));
             break;
           }
           case Gt.O7.DealReady:
-            (m = r.createElement(Ua, {
+            (d = r.createElement(Ua, {
               deal: t,
-              eDealState: c,
-              dtDiscountStart: o,
-              dtDiscountEnd: s,
+              eDealState: m,
+              dtDiscountStart: s,
+              dtDiscountEnd: c,
             })),
-              (d = r.createElement(
+              (u = r.createElement(
                 "div",
                 { className: wa.DiscountButtonRow },
                 r.createElement(
                   "div",
                   { className: (0, B.Z)(wa.DiscountPercentage) },
-                  l + "%",
+                  (0, Kt.Jv)(l, o),
                 ),
                 r.createElement(
                   S.zx,
                   {
                     className: (0, B.Z)(wa.DailyDealButton, wa.EditDiscounts),
-                    onClick: () => window.location.assign(u),
+                    onClick: () => window.location.assign(p),
                   },
                   (0, k.Xx)("#DailyDeals_Button_EditDiscounts"),
                 ),
               ));
             break;
           case Gt.O7.DealLive:
-            (m = r.createElement(Ua, {
+            (d = r.createElement(Ua, {
               deal: t,
-              eDealState: c,
-              dtDiscountStart: o,
-              dtDiscountEnd: s,
+              eDealState: m,
+              dtDiscountStart: s,
+              dtDiscountEnd: c,
             })),
-              (d = r.createElement(
+              (u = r.createElement(
                 S.zx,
                 {
                   className: (0, B.Z)(
@@ -58214,12 +58256,12 @@
                   ),
                   disabled: !0,
                 },
-                l + "%",
+                (0, Kt.Jv)(l, o),
               ));
         }
         return r.createElement(
           Oa,
-          { inviteBody: m, discountBody: d, displayState: c, deal: t },
+          { inviteBody: d, discountBody: u, displayState: m, deal: t },
           a,
         );
       }
