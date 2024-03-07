@@ -581,6 +581,8 @@
     "Dashboard_UpcomingEvents_Events_FilterEmpty": "Search",
     "Dashboard_UpcomingEvents_Events_UnknownEventTitle": "Unknown Event",
     "Dashboard_UpcomingEvents_Events_TimeRange": "%1$s - %2$s",
+    "Dashboard_UpcomingEvents_Events_OptIn_GameRegistered": "%1$s %2$s",
+    "Dashboard_UpcomingEvents_Events_OptIn_GameRegisteredText": "(registered)",
     "Dashboard_UpcomingEvents_Events_OptIn_EligibleGames": "Eligible games",
     "Dashboard_UpcomingEvents_Events_OptIn_RegisteredGames": "Registered",
     "Dashboard_UpcomingEvents_Events_OptIn_Discounted": "Discounted",
