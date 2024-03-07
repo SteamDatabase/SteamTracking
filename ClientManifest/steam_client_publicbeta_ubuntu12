@@ -1,6 +1,6 @@
 "ubuntu12"
 {
-	"version"		"1709757778"
+	"version"		"1709846872"
 	"tenfoot_images_all"
 	{
 		"file"		"tenfoot_images_all.zip.86419c7a56c12dd107b5e0d46f50c8a9b121f3cc"
@@ -11,11 +11,11 @@
 	}
 	"steamui_websrc_all"
 	{
-		"file"		"steamui_websrc_all.zip.4cd823631a2696a4605bff3d3503b3215090f154"
-		"size"		"28453155"
-		"sha2"		"cc6645d627e383345d9c882652515dd980ea7c834a065c1df54984bc2e218239"
-		"zipvz"		"steamui_websrc_all.zip.vz.7d555a1c9a602afe24dec7373acf4f91198b793e_23791996"
-		"sha2vz"		"ab7c9c71ccc9cf66eccecd66df89485b76413cb1ebc39a049ff6770207dd6bf7"
+		"file"		"steamui_websrc_all.zip.54f9cfc17ea0fe884597662d9614917ef846740b"
+		"size"		"28453228"
+		"sha2"		"ff76937eaf4474ef7dff9994c045bf24c9f0ee919af4c8bdcc148b4ba3c957b4"
+		"zipvz"		"steamui_websrc_all.zip.vz.4d1122df29e9f3c1809ea2120f668a0ab4c1d74b_23792526"
+		"sha2vz"		"e724ab64b9adadc1e317fc0063b51c73b3473a292cdb231646c2faaef9f78d13"
 	}
 	"resources_misc_all"
 	{
@@ -156,16 +156,16 @@
 	}
 	"runtime_sniper_ubuntu12"
 	{
-		"file"		"runtime_sniper_ubuntu12.zip.835f7e028bd8e669be6ef52533bb4d291795c7d5"
-		"size"		"168007117"
-		"sha2"		"b4b82fc2912ff861f8bddd1d407874b6c4db41edf161cd2a47302a7d99c4d7e1"
+		"file"		"runtime_sniper_ubuntu12.zip.f239be682754ba3a6a13cda6932035f24b580292"
+		"size"		"167936230"
+		"sha2"		"19dbd18030828fe7dcd260be1eb329409c04905e10cb093c1dd91ff847142aa4"
 	}
 }
 "kvsign2"
 {
-	"ubuntu12"		"0b4e99939203f4ed079aa6c1fdceb25dba5f715bc5f6faf04cfc100e7aab6d935ba35ebafb4c03b9264a2517f44f884a9afa7a4f3242045204ebfcf63f906b02"
+	"ubuntu12"		"438372c73ff9dae4661f4ba9467a088fda8d905e6d8647abf89c0669e3afbb71545e54a1c5d0335674f78e53ec66caeb01a3b206e1b7cd1a95ee57ec93db9c01"
 }
 "kvsignatures"
 {
-	"ubuntu12"		"48ae00814f805bea1e5adec1e4503a89c1bef8cf0c01b2fcde1fee47486705d19d8e6936c55f0a1c6056c2b1261f4b754e1c6fe6bbc52bfed19c9dcb2ea52483478a2ee8a27591e78159e9d015f81be24306eaec9351400b000e96ec13a933eb741dac63da6d8e589c6eb910ca99a7ed6010feabd780e8f4a3da67e36b7dc179"
+	"ubuntu12"		"3081094c56a5c4799e5fe4372ffe5205252df7737f24d177dceeb3ab331e8d4536dfc34743effbeba904b7c0f513c11d04c31b0cbc63adde1685c9ed08e88ce5aad1ad419f127899badcdc60965b6b52604f1f7a5abe796781255cad84bd379f97f3d9e6d00f1ba1e29ab3b39fbd8a753ea1b05704adf86cea6909006079f66f"
 }
