@@ -1028,6 +1028,12 @@ function ApplyAdultContentPreferencesHelper( e, rgContentDescriptorsToExclude, b
 		return;
 	}
 
+	if ( ( typeof( g_bIsAppHubModerator ) != 'undefined' ) && g_bIsAppHubModerator )
+	{
+		e.removeClass( 'has_adult_content' );
+		return;
+	}
+
 	e.data( 'processed_adult_content', true );
 
 	var bIsAnchor = e.is('a');
