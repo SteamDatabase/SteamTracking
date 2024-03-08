@@ -248,6 +248,7 @@
  _objc_empty_cache
  abort
  accept
+ adler32
  atoi
  bind
  close
@@ -275,8 +276,10 @@
  getuid
  inflate
  inflateEnd
- inflateInit_
+ inflateInit2_
  inflateReset
+ inflateReset2
+ inflateValidate
  ioctl
  kCFAbsoluteTimeIntervalSince1970
  kCFAllocatorDefault

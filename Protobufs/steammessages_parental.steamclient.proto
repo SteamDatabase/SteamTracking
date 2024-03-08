@@ -40,6 +40,8 @@ message ParentalSettings {
 	optional uint32 rtime_temporary_feature_expiration = 14;
 	optional .ParentalPlaytimeRestrictions playtime_restrictions = 15;
 	optional .ParentalTemporaryPlaytimeRestrictions temporary_playtime_restrictions = 16;
+	repeated uint32 excluded_store_content_descriptors = 17;
+	repeated uint32 excluded_community_content_descriptors = 18;
 }
 
 message CParental_EnableParentalSettings_Request {

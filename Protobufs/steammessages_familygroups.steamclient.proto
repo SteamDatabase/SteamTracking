@@ -52,11 +52,35 @@ enum EFamilyGroupChangeLogType {
 
 enum ESharedLibraryExcludeReason {
 	k_ESharedLibrary_Included = 0;
-	k_ESharedLibrary_AppExcluded = 1;
+	k_ESharedLibrary_AppExcluded_ByPartner = 1;
 	k_ESharedLibrary_LicenseExcluded = 2;
 	k_ESharedLibrary_FreeGame = 3;
 	k_ESharedLibrary_LicensePrivate = 4;
-	k_ESharedLibrary_OptedOut = 5;
+	k_ESharedLibrary_AppExcluded_WrongAppType = 6;
+	k_ESharedLibrary_AppExcluded_NonrefundableDLC = 7;
+	k_ESharedLibrary_AppExcluded_UnreleasedApp = 8;
+	k_ESharedLibrary_AppExcluded_ParentAppExcluded = 9;
+	k_ESharedLibrary_PackageExcluded_ByPartner = 10;
+	k_ESharedLibrary_PackageExcluded_Special = 11;
+	k_ESharedLibrary_PackageExcluded_Dev = 12;
+	k_ESharedLibrary_PackageExcluded_FreeWeekend = 13;
+	k_ESharedLibrary_PackageExcluded_FreePromotion = 14;
+	k_ESharedLibrary_PackageExcluded_Invalid = 15;
+	k_ESharedLibrary_PackageExcluded_RecurringLicense = 16;
+	k_ESharedLibrary_PackageExcluded_WrongLicenseType = 17;
+	k_ESharedLibrary_PackageExcluded_MasterSub = 18;
+	k_ESharedLibrary_PackageExcluded_NoShareableApps = 19;
+	k_ESharedLibrary_LicenseExcluded_PaymentMasterSub = 20;
+	k_ESharedLibrary_LicenseExcluded_PaymentFamilyGroup = 21;
+	k_ESharedLibrary_LicenseExcluded_PaymentAuthorizedDevice = 22;
+	k_ESharedLibrary_LicenseExcluded_PaymentAutoGrant = 23;
+	k_ESharedLibrary_LicenseExcluded_FlagPending = 24;
+	k_ESharedLibrary_LicenseExcluded_FlagPendingRefund = 25;
+	k_ESharedLibrary_LicenseExcluded_FlagBorrowed = 26;
+	k_ESharedLibrary_LicenseExcluded_FlagAutoGrant = 27;
+	k_ESharedLibrary_LicenseExcluded_FlagTimedTrial = 28;
+	k_ESharedLibrary_LicenseExcluded_FreeSub = 29;
+	k_ESharedLibrary_LicenseExcluded_Inactive = 30;
 }
 
 message CFamilyGroups_CreateFamilyGroup_Request {
@@ -101,6 +125,7 @@ message CFamilyGroups_GetFamilyGroup_Response {
 
 message CFamilyGroups_GetFamilyGroupForUser_Request {
 	optional uint64 steamid = 1;
+	optional bool include_family_group_response = 2;
 }
 
 message FamilyGroupPendingInviteForUser {
@@ -117,6 +142,7 @@ message CFamilyGroups_GetFamilyGroupForUser_Response {
 	repeated .FamilyGroupPendingInviteForUser pending_group_invites = 5;
 	optional uint32 role = 6;
 	optional uint32 cooldown_seconds_remaining = 7;
+	optional .CFamilyGroups_GetFamilyGroup_Response family_group = 8;
 }
 
 message CFamilyGroups_ModifyFamilyGroupDetails_Request {
@@ -235,7 +261,8 @@ message CFamilyGroups_RequestPurchase_Response {
 
 message CFamilyGroups_GetPurchaseRequests_Request {
 	optional uint64 family_groupid = 1;
-	optional bool include_completed = 2;
+	repeated uint64 request_ids = 3;
+	optional uint32 rt_include_completed_since = 4;
 }
 
 message PurchaseRequest {
@@ -247,6 +274,8 @@ message PurchaseRequest {
 	optional .EPurchaseRequestAction response_action = 6 [default = k_EPurchaseRequestAction_None];
 	optional bool is_completed = 7;
 	optional uint64 request_id = 8;
+	repeated uint32 requested_packageids = 9;
+	repeated uint32 purchased_packageids = 10;
 }
 
 message CFamilyGroups_GetPurchaseRequests_Response {
@@ -301,9 +330,11 @@ message CFamilyGroups_GetSharedLibraryApps_Response {
 		optional string name = 6;
 		optional string sort_as = 7;
 		optional string capsule_filename = 8;
-		optional string img_icon_url = 9;
+		optional string img_icon_hash = 9;
 		optional .ESharedLibraryExcludeReason exclude_reason = 10 [default = k_ESharedLibrary_Included];
 		optional uint32 rt_time_acquired = 11;
+		optional uint32 rt_last_played = 12;
+		optional uint32 rt_playtime = 13;
 	}
 
 	repeated .CFamilyGroups_GetSharedLibraryApps_Response.SharedApp apps = 1;
@@ -329,6 +360,25 @@ message CFamilyGroups_GetPreferredLenders_Response {
 	}
 
 	repeated .CFamilyGroups_GetPreferredLenders_Response.FamilyMember members = 1;
+}
+
+message CFamilyGroups_GetDispersionForFamily_Request {
+	optional uint64 family_groupid = 1;
+}
+
+message CFamilyGroups_FamilyDispersionGraph {
+	message Edge {
+		optional uint32 accountid1 = 1;
+		optional uint32 accountid2 = 2;
+		optional double distance = 3;
+	}
+
+	repeated .CFamilyGroups_FamilyDispersionGraph.Edge edges = 1;
+}
+
+message CFamilyGroups_GetDispersionForFamily_Response {
+	optional double total_dispersion = 1;
+	optional .CFamilyGroups_FamilyDispersionGraph graph = 2;
 }
 
 message CFamilyGroupsClient_NotifyRunningApps_Notification {
@@ -376,6 +426,7 @@ service FamilyGroups {
 	rpc GetSharedLibraryApps (.CFamilyGroups_GetSharedLibraryApps_Request) returns (.CFamilyGroups_GetSharedLibraryApps_Response);
 	rpc SetPreferredLender (.CFamilyGroups_SetPreferredLender_Request) returns (.CFamilyGroups_SetPreferredLender_Response);
 	rpc GetPreferredLenders (.CFamilyGroups_GetPreferredLenders_Request) returns (.CFamilyGroups_GetPreferredLenders_Response);
+	rpc GetDispersionForFamily (.CFamilyGroups_GetDispersionForFamily_Request) returns (.CFamilyGroups_GetDispersionForFamily_Response);
 }
 
 service FamilyGroupsClient {

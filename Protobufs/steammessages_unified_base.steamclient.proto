@@ -3,6 +3,11 @@ import "google/protobuf/descriptor.proto";
 option optimize_for = SPEED;
 option cc_generic_services = false;
 
+extend .google.protobuf.MessageOptions {
+	optional string message_description = 51000;
+	optional bool force_emit_message = 50026 [default = false];
+}
+
 extend .google.protobuf.FieldOptions {
 	optional string description = 50000;
 }
@@ -10,6 +15,8 @@ extend .google.protobuf.FieldOptions {
 extend .google.protobuf.ServiceOptions {
 	optional string service_description = 50000;
 	optional .EProtoExecutionSite service_execution_site = 50008 [default = k_EProtoExecutionSiteUnknown];
+	optional .EProtoServiceType service_type = 50025 [default = k_EProtoServiceTypeSteamMessages];
+	optional bool force_emit_service = 50026 [default = false];
 }
 
 extend .google.protobuf.MethodOptions {
@@ -27,6 +34,11 @@ extend .google.protobuf.EnumValueOptions {
 enum EProtoExecutionSite {
 	k_EProtoExecutionSiteUnknown = 0;
 	k_EProtoExecutionSiteSteamClient = 2;
+}
+
+enum EProtoServiceType {
+	k_EProtoServiceTypeSteamMessages = 0;
+	k_EProtoServiceTypeVRGamepadUIMessages = 1;
 }
 
 message NoResponse {

@@ -1,6 +1,8 @@
 __TEXT
 __text
 __TEXT
+p`
+p`
 __stubs
 __TEXT
 __stub_helper
@@ -42,7 +44,7 @@ __bss
 __DATA
 __common
 __DATA
-XE
+@E
 H
 __LINKEDIT
 
@@ -212,7 +214,7 @@ ClientAPI_Init(GlobalInstance): GetIClientInventory returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientBluetoothManager returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientParties returned NULL.
 ClientAPI_RunCallbacks
-IVRSteamPrivate_021
+IVRSteamPrivate_022
 com.valvesoftware.steam.ipctool
 ipcserver restart: expected: %d, got: %d
 pid %d != %d, clearing client_port = %d, server_port = %d
@@ -1525,19 +1527,18 @@ j
 @
 @
 0
-0
+Ic]
+Hc
+Ic
 
 =
 =
 @
 =*.*
-r
-Hc
-Ic
+_
 @
 @
 0
-#
 @
 @
 @
@@ -1549,7 +1550,7 @@ Ic
 0
 0
 0
-g
-\
 0
-Ic]
+^
+0
+C

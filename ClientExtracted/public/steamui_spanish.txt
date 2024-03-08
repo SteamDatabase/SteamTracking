@@ -651,15 +651,15 @@
 "Steam_ChangeCred_ForgotPassword"	"¿Olvidaste la contraseña?"
 "Steam_ChangeCred_LostEmail"		"¿Has perdido el acceso a tu email?"
 "Steam_ChangeCred_LostPhone"		"¿Ya no tienes acceso a tu teléfono?"
-"Steam_ChangeCred_LostTwoFactor"	"¿Has perdido el acceso a tu Autenticador Móvil de Steam Guard?"
+"Steam_ChangeCred_LostTwoFactor"	"¿Has perdido el acceso a tu autenticador móvil de Steam Guard?"
 "Steam_ChangeCred_EnterCode"		"Introduce el código de confirmación enviado a: %s1"
-"Steam_ChangeCred_EnterTwoFactorCode"		"Introduce el código de tu Autenticador Móvil de Steam Guard"
+"Steam_ChangeCred_EnterTwoFactorCode"		"Introduce el código de tu autenticador móvil de Steam Guard"
 "Steam_ChangeCred_EnterPassword"		"Introduce tu contraseña actual"
 "Steam_ChangeCred_IncorrectPassword"		"La contraseña era incorrecta. Por favor, introduce tu contraseña."
 "Steam_ChangeCred_IncorrectVerificationCode"			"Error al cambiar la contraseña.\nComprueba que el código de verificación introducido es el correcto."
 
 "Steam_ChangeEmail_IncorrectVerificationCode"		"Error al cambiar el correo electrónico de contacto.\nComprueba que el código de verificación introducido es el correcto."
-"Steam_ChangeEmail_IncorrectTwoFactorCode"		"No se ha podido cambiar el email de contacto.\nPor favor, comprueba que has introducido correctamente el código del Autenticador Móvil de Steam Guard."
+"Steam_ChangeEmail_IncorrectTwoFactorCode"		"No se ha podido cambiar el email de contacto.\nPor favor, comprueba que has introducido correctamente el código del autenticador móvil de Steam Guard."
 "Steam_ChangeEmail_EnterSMSCode"	"Como medida de seguridad adicional, hemos enviado un mensaje de texto por SMS al teléfono asociado a tu cuenta. Por favor, introduce el código aquí:"
 
 "Steam_ChangeContactEmailError_Title"			"Error de validación de dirección de correo electrónico"
@@ -3511,9 +3511,9 @@ Haz nuevos amigos en Steam enviando un regalo por correo electrónico a alguien 
 "SteamUI_Settings_Security_Status_State_4" "Steam Guard no activado"
 "SteamUI_Settings_Security_Status_State_1_WithTime" "Protegido por Steam Guard desde el %s1"
 
-"SteamUI_Settings_Security_Status_TwoFactor" "Protegido por el Autenticador Móvil de Steam Guard"
-"SteamUI_Settings_Security_ManageTwoFactor_Title" "Administrar el Autenticador Móvil de Steam Guard"
-"SteamUI_Settings_Security_ManageTwoFactor" "Estás utilizando el Autenticador Móvil de Steam Guard. Para administrar tu configuración de Steam Guard, por favor, abre la aplicación Steam Mobile en tu smartphone."
+"SteamUI_Settings_Security_Status_TwoFactor" "Protegido por el autenticador móvil de Steam Guard"
+"SteamUI_Settings_Security_ManageTwoFactor_Title" "Administrar el autenticador móvil de Steam Guard"
+"SteamUI_Settings_Security_ManageTwoFactor" "Estás utilizando el autenticador móvil de Steam Guard. Para administrar tu configuración de Steam Guard, por favor, abre la aplicación Steam Mobile en tu smartphone."
 "SteamUI_Settings_Security_ManageTwoFactor_2" "Si tu teléfono no está disponible de forma permanente, contacta con el Soporte de Steam para recibir asistencia."
 
 "SteamUI_ManageSecurity_ChooseName" "Elige un nombre descriptivo para este equipo:"
@@ -3611,7 +3611,7 @@ Haz nuevos amigos en Steam enviando un regalo por correo electrónico a alguien 
 
 "Steam_GetTwoFactorCode_Title" "Steam Guard - Autorización del equipo requerida"
 "Steam_GetTwoFactorCode_EnterCode" "Mi código de Steam Guard es:"
-"Steam_GetTwoFactorCode_EnterCodeDetails" "Como medida de seguridad adicional, necesitarás introducir el código de Steam Guard actual del Autenticador Móvil de Steam Guard de tu teléfono."
+"Steam_GetTwoFactorCode_EnterCodeDetails" "Como medida de seguridad adicional, necesitarás introducir el código de Steam Guard actual del autenticador móvil de Steam Guard de tu teléfono."
 "Steam_GetTwoFactorCode_WrongCode" "Lo sentimos, eso no es correcto."
 "Steam_GetTwoFactorCode_WrongCodeDetails" "Por favor, introduce un código actualizado de tu aplicación para móviles."
 "Steam_GetTwoFactorCode_ResultFailure" "Error al contactar con los servidores de Steam."

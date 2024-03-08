@@ -480,3 +480,22 @@ enum ECloudGamingPlatform {
 	k_ECloudGamingPlatformValve = 1;
 	k_ECloudGamingPlatformNVIDIA = 2;
 }
+
+enum ECompromiseDetectionType {
+	k_ECompromiseDetectionType_None = 0;
+	k_ECompromiseDetectionType_TradeEvent = 1;
+	k_ECompromiseDetectionType_ApiCallRate = 2;
+}
+
+enum EAsyncGameSessionUserState {
+	k_EAsyncGameSessionUserStateUnknown = -1;
+	k_EAsyncGameSessionUserStateWaitingForOthers = 0;
+	k_EAsyncGameSessionUserStateReadyForAction = 1;
+	k_EAsyncGameSessionUserStateDone = 2;
+}
+
+enum EAsyncGameSessionUserVisibility {
+	k_EAsyncGameSessionUserVisibilityEnvelopeAndSessionList = 0;
+	k_EAsyncGameSessionUserVisibilitySessionListOnly = 1;
+	k_EAsyncGameSessionUserVisibilityDismissed = 2;
+}

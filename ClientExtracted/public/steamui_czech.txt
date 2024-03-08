@@ -716,7 +716,7 @@ Tato operace zabere jenom okamžik."
 "Steam_PurchaseEmail_Code" "Zadaný ověřovací kód:"
 
 "Steam_Logout_Exit" 	"Ukončit klienta a odhlásit se"
-"Steam_Logout_DontShowAgain" "Tuto zprávu již nezobrazovat"
+"Steam_Logout_DontShowAgain" "Znovu nezobrazovat"
 "Steam_Logout_ExitOff" "Pokud ukončíte klienta služby Steam tímto způsobem,\nbudete moci při jeho příštím spuštění použít režim Offline."
 "Steam_Logout_PersonalInfo" "Některé z Vašich osobních údajů budou uloženy\nna tomto počítači. Pokud používáte veřejný\npočítač, je vhodné vybrat bezpečnější možnost\n„Ukončit klienta a odhlásit se“."
 "Steam_Logout_Secure" "Možnost „Ukončit klienta a odhlásit se“ je\nnejbezpečnější způsob, jak ukončit klienta\nslužby Steam (doporučuje se pro veřejné\npočítače). Po jejím použití však nebudete\nmoci přejít do režimu Offline, dokud se znovu\nnepřihlásíte do služby Steam."
@@ -4221,7 +4221,7 @@ Udělejte si nového přítele tím, že svému známému pošlete e-mailem dár
 
 "steam_subnav_featured"		"Hlavní stránka"
 "steam_subnav_news"			"Novinky"
-"steam_subnav_recommended"	"Doporučené"
+"steam_subnav_recommended"	"Doporučení"
 "steam_subnav_discovery_queue"		"Fronta doporučení"
 "steam_subnav_points_shop"		"Věrnostní obchod"
 "steam_subnav_wishlist"		"Seznam přání"

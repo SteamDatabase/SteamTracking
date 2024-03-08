@@ -1,4 +1,4 @@
-var CLSTAMP = "8751487";
+var CLSTAMP = "8751946";
 /* Third-party software licenses can be found at licenses.txt */ (self.webpackChunksteamui =
   self.webpackChunksteamui || []).push([
   [9394],
@@ -34562,18 +34562,25 @@ var CLSTAMP = "8751487";
             switch (n) {
               case "I":
                 t.SetFromComponents(l, u, 0, s);
+                break;
               case "g":
                 t.SetFromComponents(l, 0, 7, s);
+                break;
               case "A":
                 t.SetFromComponents(l, u, 4, s);
+                break;
               case "G":
                 t.SetFromComponents(l, u, 3, s);
+                break;
               case "M":
                 t.SetFromComponents(l, u, 2, s);
+                break;
               case "P":
                 t.SetFromComponents(l, u, 5, s);
+                break;
               case "C":
                 t.SetFromComponents(l, u, 6, s);
+                break;
               case "U":
                 t.SetFromComponents(l, u, 1, s);
             }

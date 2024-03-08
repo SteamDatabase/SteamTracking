@@ -360,6 +360,7 @@
  T ChaCha20_ssse3
  T ChaCha20_xop
  T ClampFloatToZero_SSE2
+ T ClearVideoSpewCallback
  T ComputeCumulativeSumRow_C
  T ComputeCumulativeSumRow_SSE2
  T Convert16To8Plane
@@ -418,6 +419,7 @@
  T DivideRow_16_AVX2
  T DivideRow_16_Any_AVX2
  T DivideRow_16_C
+ T EConvertMPDToMP4
  T EGetFramesFromVideo
  T FixedDiv1_C
  T FixedDiv1_X86
@@ -1077,6 +1079,7 @@
  T SetRow_C
  T SetRow_ERMS
  T SetRow_X86
+ T SetVideoSpewCallback
  T SobelRow_Any_SSE2
  T SobelRow_C
  T SobelRow_SSE2
@@ -1507,6 +1510,7 @@
  av_frame_alloc
  av_frame_free
  av_frame_get_buffer
+ av_frame_unref
  av_free
  av_free_packet
  av_get_bytes_per_sample
@@ -1523,17 +1527,18 @@
  av_opt_set_int
  av_packet_unref
  av_read_frame
+ av_register_all
  av_register_malloc
  av_rescale
  av_rescale_q
  av_sample_fmt_is_planar
  av_samples_get_buffer_size
  av_seek_frame
- av_strdup
  av_write_frame
  av_write_trailer
  avcodec_alloc_context3
  avcodec_close
+ avcodec_copy_context
  avcodec_decode_audio4
  avcodec_decode_video2
  avcodec_encode_audio2
@@ -1558,6 +1563,7 @@
  avio_alloc_context
  avio_close
  avio_closep
+ avio_flush
  avio_open
  avio_open2
  avresample_alloc_context

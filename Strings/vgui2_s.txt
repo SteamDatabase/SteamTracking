@@ -11,7 +11,6 @@ __gcc_except_tab__TEXT
 44
 __const
 __TEXT
-SB
 __objc_methname
 __TEXT
 >$
@@ -112,7 +111,7 @@ h
 8
 /usr/lib/libobjc.A.dylib
 &
-8
+@
 )
 NSt3__117bad_function_callE
 10CUtlVectorIN12CFontAmalgam10TFontRangeE10CUtlMemoryIS1_EE
@@ -750,9 +749,12 @@ _
 ?
 13VPanelWrapper
 N4vgui6IPanelE
-&z
+0C
+0C
 0u
-UUUUUUUUUUUUUUUU0123456789ABCDEF
+&z
+UUUUUUUUUUUUUUUUUUUUUUUU
+0123456789ABCDEF
 11CPathString
 14CUtlLinkedListI10CUtlStringiE
 10CUtlVectorI13ModuleCount_t10CUtlMemoryIS0_EE
@@ -783,15 +785,15 @@ r
 ../Info.plist
 ../..
 Unknown
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlvector.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlvector.h
 (&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
-1.5.26
+1.6.37
 PNG load error %s
 PNG load warning %s
 LoadTGA: Only type 2 and 10 targa RGB images supported
 Texture_LoadTGA: Only 32 or 24 bit images supported (no colormaps)
 0
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/vgui_surfacelib/FontAmalgam.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/vgui_surfacelib/FontAmalgam.cpp
 m_Fonts[i].font->IsValid()
 CFontAmalgam
 m_Fonts
@@ -799,7 +801,7 @@ m_strName
 m_Memory
 deferredFontName
 en_US.UTF-8
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/vgui_surfacelib/FontManager.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/vgui_surfacelib/FontManager.cpp
 font != vgui::INVALID_FONT
 descs.Count() >= 1
 m_FontAmalgams.IsValidIndex( font )
@@ -826,7 +828,7 @@ name
 CFontDataFile
 !pArray || (Base() >= (pArray + size)) || (pArray >= (Base() + Count()) )
 count >= 0
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlsymbol.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlsymbol.h
 pPool->m_SpaceUsed < 0xFFFF
 Symbol table grew beyond unsigned short.  Time to upgrade UtlSymId_t for the symbol type or look for unnecessary spam in the tables.
 !pToCopy || (pToCopy + num <= Base()) || (pToCopy >= (Base() + Count()) )
@@ -836,7 +838,7 @@ CUtlSymbolTable
 m_StringPools
 m_Lookup
 bold
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/vgui_surfacelib/osxfont.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/vgui_surfacelib/osxfont.cpp
 !"Context ref not setup to allow GetStringRGBA"
 !"Unable to convert string"
 !"Unable to set layout"
@@ -866,9 +868,9 @@ ATSFontFindFromPostScriptName
 ATSFontGetHorizontalMetrics
 Helvetica Bold
 vgui::Bitmap
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/vector2d.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/vector2d.h
 vOther.IsValid()
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/src/fonttexturecache.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/src/fonttexturecache.cpp
 texCoords
 No valid page for string texture of %dx%d size
 Invalid width or height to AllocatePageForString()
@@ -876,12 +878,12 @@ m_rgPageLists[pagetype].IsValidIndex( pageIndex )
 drawY >= 0
 drawY < page.tall
 false
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utllinkedlist.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utllinkedlist.h
 IsValidIndex(elem)
 IsInList(before)
 m_TotalElements != InvalidIndex()
 %s overflow!
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlrbtree.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlrbtree.h
 IsValidIndex( elem )
 _IsValidIndex( elem, unNodeSize, pMemBase )
 _IsValidIndex( y, unNodeSize, pMemBase )
@@ -938,7 +940,7 @@ zZKEY_Z
 -_KEY_MINUS
 =+KEY_EQUAL, L
 KEY_SPACE
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/src/inputbase.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/src/inputbase.cpp
 context != DEFAULT_INPUT_CONTEXT
 (context == DEFAULT_INPUT_CONTEXT) || m_Contexts.IsValidIndex(context)
 -vguifocus
@@ -1003,13 +1005,13 @@ inputContext.m_mapKeyCodeHooks
 g_pInputBase
 VGUI_Input005
 VGUI_InputInternal001
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/src/inputosx.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/src/inputosx.cpp
 CInputOSX SetCursorPos not implemented
 LayoutFile
 render
 render_bg
 style
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/src/layoutfile.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/src/layoutfile.cpp
 !style->IsDirty()
 parsing of file '%s' failed
 error loading file '%s', %s
@@ -1154,14 +1156,14 @@ m_dictColors
 m_vecBaseStyleSets
 m_mapStyleLists
 m_kvSettings
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlstring.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlstring.h
 font-outerglow-filtersize
 textcolor
 bgcolor
 shadowtextcolor
 selectedtextcolor
 selectedbgcolor
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/bitstring.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/bitstring.h
 bitNum >= 0 && bitNum < this->Size()
 m_pkv
 Element( i )
@@ -1176,7 +1178,7 @@ m_pRef->m_pT
 m_vecHashBuckets
 m_memNodes
 m_bitsMigratedBuckets
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utldict.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utldict.h
 m_vecParentNames
 -ccsyntax
 Spew details about the localized strings we load
@@ -1203,7 +1205,7 @@ wb
 "lang"{"Language" "English""Tokens"{
 }}
 reloading localization file %s
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/src/LocalizedStringTable.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/src/LocalizedStringTable.cpp
 s_pTable
 Bad format string in CLocalizeStringTable::ConstructString
 !("CLocalizedStringTable::ConstructString - Found a %s# escape sequence who's index was more than the number of args.")
@@ -1234,7 +1236,7 @@ Horizontal
 None
 Vertical
 SetAlpha
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/src/NotificationManager.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/src/NotificationManager.cpp
 flFrameTime < panel.m_flLastEventTime + m_flFadeOutTime
 Invalid m_Position for NotificationManager!
 VGUI_NotificationManager002
@@ -1243,7 +1245,7 @@ m_vecPanelsToDelete
 m_vecPanelList
 g_NotificationManager
 VGUI_Scheme010
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/src/Scheme.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/src/Scheme.cpp
 !"Invalid scheme requested."
 Scheme
 SKIN
@@ -1303,7 +1305,7 @@ elem + num <= Count()
 CUtlDict
 -pid
 Pid that we should be watching for
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/src/SerializedSurface.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/src/SerializedSurface.cpp
 m_fdShMemFDSender >= 0
 /tmp/steam_chrome_overlay_uid%d_spid%s
 top >= 0
@@ -1351,14 +1353,14 @@ oldwide
 oldtall
 Valve Steam GameOverlay
 ATSFontActivateFromFileReference
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlbuffer.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlbuffer.h
 nBytes
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/src/surface_base.h
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlhashmap.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/src/surface_base.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlhashmap.h
 CUtlHashMap::RemoveAt - Invalid index
 CUtlHashMap::RemoveAt - couldn't find bucket for item
 ChromeHTML_Controller_003
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/src/surface_base.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/src/surface_base.cpp
 CBaseSurface::PushMakeCurrent
 !"Warning: VPanel with no drawing context"
 font != INVALID_FONT
@@ -1420,14 +1422,14 @@ m_VPanelScreenSizes
 g_pInternalSurface
 FontManager()
 !pszString || pszString[nChars] == '\0'
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/vgui/ISurface.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/vgui/ISurface.h
 m_iStart <= m_iEnd
 (unsigned)elem <= (unsigned)m_Size
 IsInList(after)
 !"Current texture not set"
 id
 wide && tall
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/src/surface_osx.mm
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/src/surface_osx.mm
 unmarkText was called, this is unexpected
 ApplyBlurAndTransparencyToTextBitmap
 MainMenu
@@ -1486,7 +1488,7 @@ template <class T> CBaseOSXSurface<T>::PushMakeCurrent
 plat->m_pNSWindow == window
 IsPointInCaptureRegion
 !"Failed to create CGLayer"
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/src/surface_osx.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/src/surface_osx.h
 !"Implement me"
 DeviceChange
 com.valvesoftware.steam.ActivateSteam
@@ -1514,7 +1516,7 @@ VGUI_System010
 com.apple.pasteboard.clipboard
 /usr/bin/open
 public.utf8-plain-text
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/src/system_posix.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/src/system_posix.cpp
 dialogName && *dialogName
 %s_%d
 UserConfigData
@@ -1524,7 +1526,7 @@ UserConfigData
 /Applications
 m_pUserConfigData
 g_System
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/src/timeutils.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/src/timeutils.cpp
 maxUnitCount == 1 || maxUnitCount == 2
 secondsInterval >= 0
 #vgui_TimeLeft
@@ -1536,7 +1538,7 @@ Num %5u, Size %4u, Total Kb %2u, Class %s
 Total Panels %u, total size in Kb %u
 -vguimessages
 set to see debug vgiui2 messages
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/src/vgui.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/src/vgui.cpp
 context != DEFAULT_VGUI_CONTEXT
 (context == DEFAULT_VGUI_CONTEXT) || m_Contexts.IsValidIndex(context)
 INotificationManager()->RunFrame()
@@ -1579,7 +1581,7 @@ VGUI Globals
 g_VGui
 CUtlSymbol::ValidateGlobals
 VGUI_Surface039
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/src/vguisetup.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/src/vguisetup.cpp
 opengl vgui not supported on mac
 VGUISetup
 m_Factories
@@ -1587,7 +1589,7 @@ m_GraphicsOptions
 VGUI_Setup001
 g_VGuiSetup
 VGuiModuleLoader004
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/src/vguisystemmoduleloader.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/src/vguisystemmoduleloader.cpp
 Platform Error: module '%s' failed to initialize
 Platform
 steam/games/PlatformMenu.vdf
@@ -1608,7 +1610,7 @@ m_pPlatformModuleData
 VFileSystem014
 VGUI_Panel010
 VGUI_Application_001
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/src/vgui_key_translation.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/src/vgui_key_translation.cpp
 Keycode not in range of s_pVirtualKeyToVGUI
 pDesc->macKeyCode == -1 || s_pVirtualKeyToVGUI[ pDesc->macKeyCode ] == 0
 s_pVGUIToVirtualKey[ keyMap[i].vguiKeyCode ] == 0
@@ -1616,18 +1618,48 @@ s_pCharToVGUI[ (size_t)charForLayoutResolution ] == 0
 s_pVGUIToScanCode[ keyMap[i].vguiKeyCode ] == 0
 vgui::VPanel
 _childDar
-Potential overflow in png_zalloc()
 Application built with libpng-
 but running with
 Ignoring invalid time value
-Ignoring attempt to set negative chromaticity value
-Invalid cHRM white point
-Invalid cHRM red point
-Invalid cHRM green point
-Invalid cHRM blue point
-Ignoring attempt to set cHRM RGB triangle with zero area
-extreme cHRM chunk cannot be converted to tristimulus values
-internal error in png_XYZ_from_xy
+unexpected zlib return code
+unexpected end of LZ stream
+missing LZ dictionary
+zlib IO error
+bad parameters to zlib
+damaged LZ stream
+insufficient memory
+truncated
+unsupported zlib version
+unexpected zlib return
+gamma value out of range
+duplicate
+invalid chromaticities
+internal error checking chromaticities
+sRGB
+invalid sRGB rendering intent
+inconsistent rendering intents
+duplicate sRGB information ignored
+cHRM chunk does not match sRGB
+exceeds application limits
+length does not match profile
+invalid length
+tag count too large
+invalid rendering intent
+intent outside defined range
+invalid signature
+PCS illuminant is not D50
+RGB color space not permitted on grayscale PNG
+Gray color space not permitted on RGB PNG
+invalid ICC profile color space
+invalid embedded Abstract ICC profile
+unexpected DeviceLink ICC profile class
+unexpected NamedColor ICC profile class
+unrecognized ICC profile class
+unexpected ICC PCS encoding
+ICC profile tag outside profile
+ICC profile tag start not a multiple of 4
+internal error handling cHRM coefficients
+internal error handling cHRM->XYZ
 Image width is zero in IHDR
 Invalid image width in IHDR
 Image width exceeds user limit in IHDR
@@ -1644,11 +1676,21 @@ Unknown filter method in IHDR
 Invalid filter method in IHDR
 Invalid IHDR data
 gamma table being rebuilt
-Out of range gamma value ignored
+gamma value does not match sRGB
+gamma value does not match libpng estimate
+inconsistent chromaticities
+profile '
+':
+h:
+too short
+known incorrect sRGB profile
+out-of-date sRGB profile with no signature
+Not recognizing known sRGB profile that has been edited
+Insufficient memory for eXIf chunk data
 Invalid palette size, hIST allocation skipped
 Insufficient memory for hIST chunk data
-pCAL: invalid purpose keyword
 Invalid pCAL equation type
+Invalid pCAL parameter count
 Invalid format for pCAL parameter
 Insufficient memory for pCAL purpose
 Insufficient memory for pCAL units
@@ -1659,179 +1701,91 @@ Invalid sCAL width
 Invalid sCAL height
 Memory allocation failed while processing sCAL
 Invalid palette length
-iCCP: invalid keyword
-Insufficient memory to process iCCP chunk
-Insufficient memory to process iCCP profile
+Invalid palette
 too many text chunks
 text compression mode is out of range
-invalid text keyword
-Ignoring invalid num_trans value
+text chunk: out of memory
 tRNS chunk has out-of-range samples for bit_depth
-No memory for sPLT palettes
-sPLT: invalid keyword
-Out of memory while processing sPLT chunk
-Out of memory while processing unknown chunk
+too many sPLT chunks
+png_set_sPLT: invalid sPLT
+sPLT out of memory
+too many unknown chunks
+unknown chunk: out of memory
+png_set_unknown_chunks now expects a valid location
+invalid location in png_set_unknown_chunks
 PNG unsigned integer out of range
 Not a PNG file
 PNG file corrupted by ASCII conversion
 CRC error
-invalid chunklength
-Exceeded size limit while expanding chunk
-png_inflate logic error
-Not enough memory to decompress chunk
-Unknown compression type @1
-Out of place IHDR
-Invalid IHDR chunk
-Missing IHDR before PLTE
-Invalid PLTE after IDAT
-Duplicate PLTE chunk
-Ignoring PLTE chunk in grayscale PNG
-Invalid palette chunk
-Truncating incorrect tRNS chunk length
-Truncating incorrect info tRNS chunk length
-No image in file
-Incorrect IEND chunk length
-Missing IHDR before gAMA
-Invalid gAMA after IDAT
-Out of place gAMA chunk
-Duplicate gAMA chunk
-Incorrect gAMA chunk length
-Ignoring gAMA chunk with out of range gamma
-Ignoring incorrect gAMA value @1 when sRGB is also present
-Missing IHDR before sBIT
-Invalid sBIT after IDAT
-Out of place sBIT chunk
-Duplicate sBIT chunk
-Incorrect sBIT chunk length
-Missing IHDR before cHRM
-Invalid cHRM after IDAT
-Out of place cHRM chunk
-Duplicate cHRM chunk
-Incorrect cHRM chunk length
-Ignoring cHRM chunk with negative chromaticities
-Ignoring incorrect cHRM white(@1,@2) r(@3,@4)g(@5,@6)b(@7,@8) when sRGB is also present
-internal error handling cHRM coefficients
-internal error handling cHRM->XYZ
-Missing IHDR before sRGB
-Invalid sRGB after IDAT
-Out of place sRGB chunk
-Duplicate sRGB chunk
-Incorrect sRGB chunk length
-Unknown sRGB intent
-Ignoring incorrect cHRM value when sRGB is also present
-Missing IHDR before iCCP
-Invalid iCCP after IDAT
-Out of place iCCP chunk
-Duplicate iCCP chunk
-Malformed iCCP chunk
-Ignoring nonzero compression type in iCCP chunk
-Profile size field missing from iCCP chunk
-Ignoring iCCP chunk with declared size = @1 and actual length = @2
+invalid window size (libpng)
+out of place
+missing IHDR
+ignored in grayscale PNG
+tRNS must be after
+hIST must be after
+bKGD must be after
+invalid values
+too many profiles
+extra compressed data
+out of memory
+bad compression method
+bad keyword
 No space in chunk cache for sPLT
-Missing IHDR before sPLT
-Invalid sPLT after IDAT
 malformed sPLT chunk
 sPLT chunk has bad length
 sPLT chunk requires too much memory
-Missing IHDR before tRNS
-Invalid tRNS after IDAT
-Duplicate tRNS chunk
-Incorrect tRNS chunk length
-Missing PLTE before tRNS
-Zero length tRNS chunk
-tRNS chunk not allowed with alpha channel
-Missing IHDR before bKGD
-Invalid bKGD after IDAT
-Missing PLTE before bKGD
-Duplicate bKGD chunk
-Incorrect bKGD chunk length
-Incorrect bKGD chunk index value
-Missing IHDR before hIST
-Invalid hIST after IDAT
-Missing PLTE before hIST
-Duplicate hIST chunk
-Incorrect hIST chunk length
-Missing IHDR before pHYs
-Invalid pHYs after IDAT
-Duplicate pHYs chunk
-Incorrect pHYs chunk length
-Missing IHDR before oFFs
-Invalid oFFs after IDAT
-Duplicate oFFs chunk
-Incorrect oFFs chunk length
-Missing IHDR before pCAL
-Invalid pCAL after IDAT
-Duplicate pCAL chunk
-No memory for pCAL purpose
-Invalid pCAL data
-Invalid pCAL parameters for equation type
-Unrecognized equation type for pCAL chunk
-No memory for pCAL params
-Missing IHDR before sCAL
-Invalid sCAL after IDAT
-Duplicate sCAL chunk
-sCAL chunk too short
-Out of memory while processing sCAL chunk
-Invalid sCAL ignored: invalid unit
-Invalid sCAL chunk ignored: bad width format
-Invalid sCAL chunk ignored: non-positive width
-Invalid sCAL chunk ignored: bad height format
-Invalid sCAL chunk ignored: non-positive height
-Out of place tIME chunk
-Duplicate tIME chunk
-Incorrect tIME chunk length
-No space in chunk cache for tEXt
-Missing IHDR before tEXt
-No memory to process text chunk
-Not enough memory to process text chunk
+invalid with alpha channel
+invalid index
+invalid gray level
+invalid color
+incorrect byte-order specifier
+invalid parameter count
+unrecognized equation type
+invalid data
+invalid unit
+bad width format
+non-positive width
+bad height format
+non-positive height
+no space in chunk cache
 Insufficient memory to process text chunk
-No space in chunk cache for zTXt
-Missing IHDR before zTXt
-Out of memory processing zTXt chunk
-Truncated zTXt chunk
-Unknown compression type in zTXt chunk
-Not enough memory to process zTXt chunk
-Insufficient memory to store zTXt chunk
-No space in chunk cache for iTXt
-Missing IHDR before iTXt
-No memory to process iTXt chunk
-Truncated iTXt chunk
-invalid iTXt compression flag
-unknown iTXt compression type
-Malformed iTXt chunk
-Not enough memory to process iTXt chunk
-Insufficient memory to store iTXt chunk
-No space in chunk cache for unknown chunk
-unknown critical chunk
+unknown compression type
+Read failure in png_handle_zTXt
+bad compression info
 error in user chunk
+Saving unknown chunk:
+forcing save of an unhandled chunk; please call png_set_keep_unknown_chunks
+unhandled critical chunk
 invalid chunk type
+chunk data is too large
 internal row logic error
 internal row size calculation error
 internal row width error
 invalid user transform pixel depth
-Decompression Error
-Extra compression data
-Row has too many bytes to allocate in memory
-Buffer error in compressed datastream
-Data error in compressed datastream
-Incomplete compressed datastream
-1.2.5
-zlib memory error
-zlib stream error
-zlib version error
-Unknown zlib error
-Missing IHDR before IDAT
-Missing PLTE before IDAT
-Invalid attempt to read row data
 Not enough image data
 Extra compressed data
-Decompression error
+Too much image data
+Row has too many bytes to allocate in memory
+using zstream
+1.2.11
+zstream unclaimed
+insufficient memory to read chunk
+unknown chunk exceeds memory limits
+png_set_filler is invalid for low bit depth gray output
+png_set_filler: inappropriate color type
+Missing IHDR before IDAT
+Missing PLTE before IDAT
+Too many IDATs found
+png_read_update_info/png_start_read_image: duplicate call
+png_start_read_image/png_read_update_info: duplicate call
+Invalid attempt to read row data
 bad adaptive filter value
 sequential row overflow
 internal sequential row size calculation error
 Interlace handling should be turned on when using png_read_image
 Read palette index exceeding num_palette
-Too many IDATs found
+.Too many IDATs found
+..Too many IDATs found
 Call to NULL read function
 Read Error
 Can't set both read_data_fn and write_data_fn in the same structure
@@ -1842,14 +1796,18 @@ NULL row buffer
 Uninitialized row
 png_do_rgb_to_gray found nongray pixel
 png_do_quantize returned rowbytes=0
+invalid after png_start_read_image or png_read_update_info
 png_do_encode_alpha: unexpected call
-Out of Memory
+internal error: array alloc
+internal error: array realloc
+Out of memory
 0123456789ABCDEF
-123456789
+Libpng jmp_buf still allocated
+Application jmp_buf size changed
 libpng error: %s
 undefined
 libpng warning: %s
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/bitstring.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/bitstring.cpp
 resizeNumBits >= 0
 !m_pInt
 GetInts()
@@ -1860,7 +1818,7 @@ Convars
 Bad expression token: %c at %d in %s
 Bad expression token: %c %c
 .
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/fileio.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/fileio.cpp
 V_RemoveDotSlashes failed for "%s".
 flock LOCK_SH requested but file is not opened for reading, ignoring: %s
 flock %s %s failed. errno = %d
@@ -1882,12 +1840,12 @@ m_listChangedFiles
 cbActual < (uint32)nBufSizeWithTerminator
 CPathString
 %s/%s%s
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/interface.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/interface.cpp
 g_VecLoadedModules
 g_VecLoadedModules[ iLoadedModules ].m_cRef > 0
 CreateInterface
 ReadToken overflow
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/KeyValues.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/KeyValues.cpp
 filesystem
 You should clear the KeyValues instance before calling this function or call MergeFromFile instead.
 "
@@ -1944,7 +1902,7 @@ KeyValues Error: %s in file %s [offset: %d]
 *),
 %.18g
 %u
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/utlbuffer.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlbuffer.cpp
 info.m_pReplacementString == 0
 nSize != 0
 Expected %lld but got %lld!
@@ -1963,7 +1921,7 @@ a
 \
 ?
 '
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/utlmemory.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlmemory.cpp
 nSizeOfType > 0
 nGrowSize >= 0
 m_nAllocationCount >= 0
@@ -1975,7 +1933,7 @@ num >= 0
 numElements <= m_nAllocationCount
 m_pMemory
 CUtlString::SetValue
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/utlstring.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlstring.cpp
 CUtlString::VFormat
 Assertion failed: length > k_cchMaxString
 CUtlStringBuilder::InternalPrepareBuffer
@@ -1984,14 +1942,14 @@ nMinCapacity >= nChars
 nMinCapacity <= k_nMaxStringSize
 Error State on string being set.
 CUtlStringBuilder::Data::MoveToHeap
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/utlsymbol.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlsymbol.cpp
 s_bAllowStaticSymbolTable
 s_pSymbolTable
 %02d:%02d:%02d
 %02d/%02d/%02d
 00:00:00
 01/01/00
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/enum_names.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/enum_names.cpp
 Missing String for %s (%d)
 EUniverse
 Invalid
@@ -1999,10 +1957,11 @@ Public
 Beta
 Internal
 Dev
+invalid
 SaveBufferToFile: couldn't open file "%s" in path "%s".
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/filesystem_helpers.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/filesystem_helpers.cpp
 LoadFileIntoBuffer: NULL parameters
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/language.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/language.cpp
 !"enum ELanguage order mismatched from Language_t s_LanguageNames, fix it!"
 zh_CN
 none
@@ -2211,7 +2170,7 @@ SteamBootstrapper_GetEUniverse
 /registry.vdf
 Registry
 registry
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/registry.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/registry.cpp
 Failed loading registry KV.
 Could not read existing registry file.
 %s/%s/%s
@@ -2228,12 +2187,12 @@ HKLM32
 HKEY_LOCAL_MACHINE_WOW64_64
 HKLM64
 Library/Application Support/Steam
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/clientdirectories.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/clientdirectories.h
 Unable to get home directory
 SteamUniverse
 SteamRealm
 China
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/timeutils.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/timeutils.cpp
 vars
 days
 hours
@@ -2265,6 +2224,8 @@ Seconds
 @
 @
 Ic]
+Hc
+Ic
 0
 0
 
@@ -2274,46 +2235,57 @@ A;E
 
 PPj
 1
+@
 `
 `
 !
 A
+`
 @
 @
 @
-P
 @
 `
 `
 `
+`
+@
+`
+=
+@
+%
+=
+`
+@
+@
+@
 `
 =
 @
 `
-`
+=
 @
+6
 `
-`
-,
-@
-@
 @
 |
 |
+@
+@
 
 =
 @
-Hc
-Ic
+q
+@
+@
+P
+0
+@
+@
+@
+@
 @
 @
 0
-G
-@
-@
-@
-@
-@
-@
 0
-0
+

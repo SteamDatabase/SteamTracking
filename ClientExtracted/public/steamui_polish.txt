@@ -4002,7 +4002,7 @@ zaktualizować system do wersji Mac OS X 10.7 lub wyższej."
 
 "SteamUI_ValveSurvey_Summary_Software"	"Zainstalowane programy:"
 "steam_systeminfo_info"			"Steam wykrył w twoim systemie następujące urządzenia i oprogramowanie:"
-"SteamUI_ValveSurvey_OverviewTitle" 	"Poświęć chwilę na przeprowadzenie tego krótkiego badania. Steam zbiera informacje o sprzęcie i oprogramowaniu używanym przez naszych klientów co miesiąc. Uzyskane dane są dla nas niezwykle pomocne – dzięki nim możemy się upewnić, że podejmujemy dobre decyzje dotyczące podjęcia określonego rodzaju inwestycji technologicznych czy też oferowanych przez nas produktów.\nZebrane dane są anonimowe i nie zostaną skojarzone w żaden sposób z twoim kontem."
+"SteamUI_ValveSurvey_OverviewTitle" 	"Poświęć chwilę na przeprowadzenie tego krótkiego badania. Steam zbiera informacje o sprzęcie i oprogramowaniu używanym przez naszych klientów co miesiąc. Uzyskane dane są dla nas niezwykle pomocne, ponieważ dzięki nim możemy się upewnić, że podejmujemy dobre decyzje dotyczące podjęcia określonego rodzaju inwestycji technologicznych czy też oferowanych przez nas produktów.\nZebrane dane są anonimowe i nie zostaną skojarzone w żaden sposób z twoim kontem."
 
 "steam_statuslabel"	"Status"
 

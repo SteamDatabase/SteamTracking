@@ -1,227 +1,184 @@
-.prosemirror_Container_3lEt5 {
+._3lEt5gxDF4ACrtnP4U7Z-D {
   white-space: pre-wrap;
   word-wrap: break-word;
 }
-.prosemirror_Container_3lEt5 > .ProseMirror {
+._3lEt5gxDF4ACrtnP4U7Z-D > .ProseMirror {
   padding: 12px;
   user-select: auto;
 }
-.prosemirror_ToolbarRow_2H40R {
+._2H40REphoCtny5VfHm5Ad9 {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   margin-top: 4px;
 }
-.prosemirror_ToolbarRow_2H40R .prosemirror_CommandButton_1-R1U {
+._2H40REphoCtny5VfHm5Ad9 ._1-R1Ud0bImFcswoqa8FbU {
   margin-right: 4px;
   width: 30px;
   height: 30px;
 }
-.BasicUI .prosemirror_ToolbarRow_2H40R .prosemirror_CommandButton_1-R1U {
+.BasicUI ._2H40REphoCtny5VfHm5Ad9 ._1-R1Ud0bImFcswoqa8FbU {
   padding: unset;
   margin-right: 4px;
   min-width: unset;
 }
-.BasicUI
-  .prosemirror_ToolbarRow_2H40R
-  .prosemirror_CommandButton_1-R1U.gpfocus {
+.BasicUI ._2H40REphoCtny5VfHm5Ad9 ._1-R1Ud0bImFcswoqa8FbU.gpfocus {
   color: #0e141b;
 }
-.BasicUI
-  .prosemirror_ToolbarRow_2H40R
-  .prosemirror_CommandButton_1-R1U.gpfocus
-  svg {
+.BasicUI ._2H40REphoCtny5VfHm5Ad9 ._1-R1Ud0bImFcswoqa8FbU.gpfocus svg {
   fill: currentColor;
   stroke: currentColor;
   color: inherit;
 }
-.BasicUI
-  .prosemirror_ToolbarRow_2H40R
-  .prosemirror_CommandButton_1-R1U.gpfocus
-  svg
-  path {
+.BasicUI ._2H40REphoCtny5VfHm5Ad9 ._1-R1Ud0bImFcswoqa8FbU.gpfocus svg path {
   stroke: currentColor;
 }
-.BasicUI
-  .prosemirror_ToolbarRow_2H40R
-  .prosemirror_CommandButton_1-R1U.gpfocus
-  svg
-  line,
-.BasicUI
-  .prosemirror_ToolbarRow_2H40R
-  .prosemirror_CommandButton_1-R1U.gpfocus
-  svg
-  polygon {
+.BasicUI ._2H40REphoCtny5VfHm5Ad9 ._1-R1Ud0bImFcswoqa8FbU.gpfocus svg line,
+.BasicUI ._2H40REphoCtny5VfHm5Ad9 ._1-R1Ud0bImFcswoqa8FbU.gpfocus svg polygon {
   stroke: currentColor;
   fill: currentColor;
 }
-.prosemirror_ToolbarRow_2H40R
-  .prosemirror_CommandButton_1-R1U.DialogButton
-  .SVGIcon_Button {
+._2H40REphoCtny5VfHm5Ad9 ._1-R1Ud0bImFcswoqa8FbU.DialogButton .SVGIcon_Button {
   width: 20px;
   height: 20px;
   padding-bottom: 4px;
   padding-left: 1px;
 }
-.prosemirror_ToolbarRow_2H40R
-  .prosemirror_CommandButton_1-R1U.DialogButton
+._2H40REphoCtny5VfHm5Ad9
+  ._1-R1Ud0bImFcswoqa8FbU.DialogButton
   .SVGIcon_Button.SVGIcon_TextBold,
-.prosemirror_ToolbarRow_2H40R
-  .prosemirror_CommandButton_1-R1U.DialogButton
+._2H40REphoCtny5VfHm5Ad9
+  ._1-R1Ud0bImFcswoqa8FbU.DialogButton
   .SVGIcon_Button.SVGIcon_TextItalic,
-.prosemirror_ToolbarRow_2H40R
-  .prosemirror_CommandButton_1-R1U.DialogButton
+._2H40REphoCtny5VfHm5Ad9
+  ._1-R1Ud0bImFcswoqa8FbU.DialogButton
   .SVGIcon_Button.SVGIcon_TextUnderline,
-.prosemirror_ToolbarRow_2H40R
-  .prosemirror_CommandButton_1-R1U.DialogButton
+._2H40REphoCtny5VfHm5Ad9
+  ._1-R1Ud0bImFcswoqa8FbU.DialogButton
   .SVGIcon_Button.SVGIcon_TextStrikethrough {
   width: 18px;
   height: 18px;
 }
-.prosemirror_ToolbarRow_2H40R
-  .prosemirror_CommandButton_1-R1U.DialogButton
+._2H40REphoCtny5VfHm5Ad9
+  ._1-R1Ud0bImFcswoqa8FbU.DialogButton
   .SVGIcon_Button.SVGIcon_SpellCheck {
   width: 20px;
   height: 20px;
   margin-left: 1px;
   margin-top: 1px;
 }
-.prosemirror_ToolbarRow_2H40R
-  .prosemirror_CommandButton_1-R1U.DialogButton
+._2H40REphoCtny5VfHm5Ad9
+  ._1-R1Ud0bImFcswoqa8FbU.DialogButton
   .SVGIcon_Button.SVGIcon_TextUnderline {
   padding-bottom: 5px;
 }
-.prosemirror_ToolbarRow_2H40R
-  .prosemirror_CommandButton_1-R1U.prosemirror_Toggled_41y1p {
+._2H40REphoCtny5VfHm5Ad9 ._1-R1Ud0bImFcswoqa8FbU._41y1pGJEo9TqrhjUqDK2h {
   background: #626c7f;
   color: #fff;
 }
-.prosemirror_ToolbarRow_2H40R .prosemirror_Gap_2BPaP {
+._2H40REphoCtny5VfHm5Ad9 ._2BPaPn42NspKTF-dGx6Il1 {
   width: 12px;
 }
-.prosemirror_ToolbarRow_2H40R .prosemirror_Spacer_2Zt31 {
+._2H40REphoCtny5VfHm5Ad9 ._2Zt31S-3IT7JYy5IswjnFf {
   flex: 1;
 }
-.prosemirror_ExpandButton_3454x svg {
+._3454x5BD8OL9OyBzYOvsv8 svg {
   width: 21px;
   height: 21px;
   padding-top: 6px;
 }
-.prosemirror_ExpandButton_3454x.prosemirror_Toggled_41y1p svg {
+._3454x5BD8OL9OyBzYOvsv8._41y1pGJEo9TqrhjUqDK2h svg {
   transform: rotate(180deg);
   margin-top: 3px;
   margin-right: 1px;
 }
-.pmhover_Hover_3tNcT {
+._3tNcTScSfJlcy37nRZQjPq {
   position: absolute;
   background: #ccc;
   color: #000;
   padding: 4px;
 }
-.pmhover_Link_ovQsF {
+.ovQsFIS2bmQSO6q9lpMcl {
   font-size: 12px;
 }
-.pmhover_LinkHelp_2Az4l {
+._2Az4l-ByEoCD6T4yVffGuV {
   font-size: 10px;
   font-weight: italic;
 }
-.gamenotes_Page_ZUB8z {
+.ZUB8zp36DGzB2Ge1HGlBi {
   display: flex;
   flex-direction: row;
   margin: 12px 2%;
   min-height: 50vh;
   max-height: 90vh;
 }
-.gamenotes_Page_ZUB8z .gamenotes_Content_1aZdz {
+.ZUB8zp36DGzB2Ge1HGlBi ._1aZdz4QMkvBwHD48GvZNIn {
   flex: 1;
   display: flex;
   min-width: 0;
 }
-.gamenotes_NotesPagedSettings_1dBCP {
+._1dBCPkyWYRX7FwOcOEDrOo {
   flex: 1;
   height: auto;
 }
-.gamenotes_NotesPagedSettings_1dBCP .DialogContentTransition {
+._1dBCPkyWYRX7FwOcOEDrOo .DialogContentTransition {
   width: auto;
   max-width: none;
 }
-.gamenotes_NotesPagedSettings_1dBCP
-  .gamenotes_NotePage_2r0iB
-  > .DialogContent_InnerWidth {
+._1dBCPkyWYRX7FwOcOEDrOo ._2r0iBG84H79jitflfzloHL > .DialogContent_InnerWidth {
   max-width: none;
   min-height: 0;
 }
-.gamenotes_NotesPagedSettings_1dBCP.gamenotes_PinnedView_3mIft
-  .DialogContentTransition {
+._1dBCPkyWYRX7FwOcOEDrOo._3mIftPW9bArr_wJxHwxTnq .DialogContentTransition {
   background: none;
 }
-.gamenotes_NotesPagedSettings_1dBCP.gamenotes_PinnedView_3mIft .PageListColumn {
+._1dBCPkyWYRX7FwOcOEDrOo._3mIftPW9bArr_wJxHwxTnq .PageListColumn {
   visibility: hidden;
 }
-.gamenotes_NotesPagedSettings_1dBCP.gamenotes_PinnedView_3mIft
-  .gamenotes_NotePage_2r0iB {
+._1dBCPkyWYRX7FwOcOEDrOo._3mIftPW9bArr_wJxHwxTnq ._2r0iBG84H79jitflfzloHL {
   background: none;
 }
-.gamenotes_NotesPagedSettings_1dBCP.gamenotes_PinnedView_3mIft
-  .gamenotes_Toolbar_A6mhR,
-.gamenotes_NotesPagedSettings_1dBCP.gamenotes_PinnedView_3mIft
-  .gamenotes_NoteActions_3uGOy {
+._1dBCPkyWYRX7FwOcOEDrOo._3mIftPW9bArr_wJxHwxTnq .A6mhRr1dqvr5OHl9MX6_3,
+._1dBCPkyWYRX7FwOcOEDrOo._3mIftPW9bArr_wJxHwxTnq ._3uGOyXFBdLEV_F6dICiSwx {
   visibility: hidden;
 }
-.gamenotes_NotesPagedSettings_1dBCP.gamenotes_PinnedView_3mIft
-  .gamenotes_NoteEditorArea_3WOF4
-  .gamenotes_EditorInput_3zWun {
+._1dBCPkyWYRX7FwOcOEDrOo._3mIftPW9bArr_wJxHwxTnq
+  ._3WOF4kDR1RbjelZgS8Qd-H
+  ._3zWunJFZU6u89fIABN9Gkf {
   overflow: hidden;
 }
-.gamenotes_NotesPagedSettings_1dBCP .gamenotes_NewNoteButton_2J6kv {
+._1dBCPkyWYRX7FwOcOEDrOo ._2J6kvK4A5CTbr_o4ZYqycZ {
   width: 36px;
   height: 36px;
   margin: 0px 0px 10px 10px;
   padding: 0px;
 }
-.BasicUI .gamenotes_NotesPagedSettings_1dBCP .gamenotes_NewNoteButton_2J6kv {
+.BasicUI ._1dBCPkyWYRX7FwOcOEDrOo ._2J6kvK4A5CTbr_o4ZYqycZ {
   padding: 0px;
   min-width: unset;
   box-sizing: unset;
   position: absolute !important;
 }
-.BasicUI
-  .gamenotes_NotesPagedSettings_1dBCP
-  .gamenotes_NewNoteButton_2J6kv.gpfocus {
+.BasicUI ._1dBCPkyWYRX7FwOcOEDrOo ._2J6kvK4A5CTbr_o4ZYqycZ.gpfocus {
   color: #0e141b;
 }
-.BasicUI
-  .gamenotes_NotesPagedSettings_1dBCP
-  .gamenotes_NewNoteButton_2J6kv.gpfocus
-  svg {
+.BasicUI ._1dBCPkyWYRX7FwOcOEDrOo ._2J6kvK4A5CTbr_o4ZYqycZ.gpfocus svg {
   fill: currentColor;
   stroke: currentColor;
   color: inherit;
 }
-.BasicUI
-  .gamenotes_NotesPagedSettings_1dBCP
-  .gamenotes_NewNoteButton_2J6kv.gpfocus
-  svg
-  path {
+.BasicUI ._1dBCPkyWYRX7FwOcOEDrOo ._2J6kvK4A5CTbr_o4ZYqycZ.gpfocus svg path {
   stroke: currentColor;
 }
-.BasicUI
-  .gamenotes_NotesPagedSettings_1dBCP
-  .gamenotes_NewNoteButton_2J6kv.gpfocus
-  svg
-  line,
-.BasicUI
-  .gamenotes_NotesPagedSettings_1dBCP
-  .gamenotes_NewNoteButton_2J6kv.gpfocus
-  svg
-  polygon {
+.BasicUI ._1dBCPkyWYRX7FwOcOEDrOo ._2J6kvK4A5CTbr_o4ZYqycZ.gpfocus svg line,
+.BasicUI ._1dBCPkyWYRX7FwOcOEDrOo ._2J6kvK4A5CTbr_o4ZYqycZ.gpfocus svg polygon {
   stroke: currentColor;
   fill: currentColor;
 }
-.gamenotes_NotesPagedSettings_1dBCP .gamenotes_NewNoteButton_2J6kv svg {
+._1dBCPkyWYRX7FwOcOEDrOo ._2J6kvK4A5CTbr_o4ZYqycZ svg {
   margin-bottom: 4px;
 }
-.gamenotes_NoteEditorArea_3WOF4 {
+._3WOF4kDR1RbjelZgS8Qd-H {
   display: flex;
   flex: 1;
   flex-direction: column;
@@ -231,50 +188,45 @@
   position: relative;
   color: #c1c6cf;
 }
-.BasicUI .gamenotes_NoteEditorArea_3WOF4 {
+.BasicUI ._3WOF4kDR1RbjelZgS8Qd-H {
   min-height: 75vh;
   max-height: 75vh;
 }
-.gamenotes_NoteEditorArea_3WOF4 .gamenotes_EditorInput_3zWun {
+._3WOF4kDR1RbjelZgS8Qd-H ._3zWunJFZU6u89fIABN9Gkf {
   flex: 1;
   overflow: auto;
   min-height: 0;
 }
-.gamenotes_NoteEditorArea_3WOF4 .gamenotes_NoteActions_3uGOy {
+._3WOF4kDR1RbjelZgS8Qd-H ._3uGOyXFBdLEV_F6dICiSwx {
   position: absolute;
   right: 8px;
   bottom: 8px;
   display: flex;
   flex-direction: row;
 }
-.gamenotes_NoteEditorArea_3WOF4 .gamenotes_NoteActions_3uGOy .DialogButton {
+._3WOF4kDR1RbjelZgS8Qd-H ._3uGOyXFBdLEV_F6dICiSwx .DialogButton {
   width: 22px;
   height: 30px;
   padding: 8px 8px 0px 8px;
   opacity: 0.5;
 }
-.gamenotes_NoteEditorArea_3WOF4
-  .gamenotes_NoteActions_3uGOy
-  .DialogButton:hover {
+._3WOF4kDR1RbjelZgS8Qd-H ._3uGOyXFBdLEV_F6dICiSwx .DialogButton:hover {
   opacity: 0.8;
 }
-.BasicUI
-  .gamenotes_NoteEditorArea_3WOF4
-  .gamenotes_NoteActions_3uGOy
-  .DialogButton {
+.BasicUI ._3WOF4kDR1RbjelZgS8Qd-H ._3uGOyXFBdLEV_F6dICiSwx .DialogButton {
   padding: 8px 8px 0px 8px;
   min-width: unset;
   box-sizing: unset;
 }
 .BasicUI
-  .gamenotes_NoteEditorArea_3WOF4
-  .gamenotes_NoteActions_3uGOy
+  ._3WOF4kDR1RbjelZgS8Qd-H
+  ._3uGOyXFBdLEV_F6dICiSwx
   .DialogButton.gpfocus {
   color: #0e141b;
 }
 .BasicUI
-  .gamenotes_NoteEditorArea_3WOF4
-  .gamenotes_NoteActions_3uGOy
+  ._3WOF4kDR1RbjelZgS8Qd-H
+  ._3uGOyXFBdLEV_F6dICiSwx
   .DialogButton.gpfocus
   svg {
   fill: currentColor;
@@ -282,82 +234,78 @@
   color: inherit;
 }
 .BasicUI
-  .gamenotes_NoteEditorArea_3WOF4
-  .gamenotes_NoteActions_3uGOy
+  ._3WOF4kDR1RbjelZgS8Qd-H
+  ._3uGOyXFBdLEV_F6dICiSwx
   .DialogButton.gpfocus
   svg
   path {
   stroke: currentColor;
 }
 .BasicUI
-  .gamenotes_NoteEditorArea_3WOF4
-  .gamenotes_NoteActions_3uGOy
+  ._3WOF4kDR1RbjelZgS8Qd-H
+  ._3uGOyXFBdLEV_F6dICiSwx
   .DialogButton.gpfocus
   svg
   line,
 .BasicUI
-  .gamenotes_NoteEditorArea_3WOF4
-  .gamenotes_NoteActions_3uGOy
+  ._3WOF4kDR1RbjelZgS8Qd-H
+  ._3uGOyXFBdLEV_F6dICiSwx
   .DialogButton.gpfocus
   svg
   polygon {
   stroke: currentColor;
   fill: currentColor;
 }
-.gamenotes_NoteEditorArea_3WOF4
-  .gamenotes_NoteActions_3uGOy
-  .gamenotes_CloseWindowButton_G0Fgh {
+._3WOF4kDR1RbjelZgS8Qd-H ._3uGOyXFBdLEV_F6dICiSwx .G0FghhaByLIrcEuYSV6qh {
   margin-left: 8px;
   width: fit-content;
   padding: 0px 8px;
   height: 38px;
 }
-.gamenotes_Toolbar_A6mhR {
+.A6mhRr1dqvr5OHl9MX6_3 {
   padding: 12px 0;
   -webkit-app-region: no-drag;
   position: relative;
   z-index: 3;
 }
-.gamenotes_EditorInput_3zWun {
+._3zWunJFZU6u89fIABN9Gkf {
   background: #111;
   box-shadow: inset 0 8px 6px -6px #000;
   display: flex;
   flex-direction: column;
 }
-.gamenotes_EditorInput_3zWun > .ProseMirror {
+._3zWunJFZU6u89fIABN9Gkf > .ProseMirror {
   flex: 1;
   min-height: 0;
 }
-.gamenotes_EditorInput_3zWun > .ProseMirror:focus-visible {
+._3zWunJFZU6u89fIABN9Gkf > .ProseMirror:focus-visible {
   outline: none;
 }
-.gamenotes_EditorInput_3zWun a {
+._3zWunJFZU6u89fIABN9Gkf a {
   color: #aad8ec;
   text-decoration: none;
   border-bottom: 1px dotted rgba(109, 207, 246, 0.6);
 }
-.gamenotes_EditorInput_3zWun a:hover {
+._3zWunJFZU6u89fIABN9Gkf a:hover {
   color: #fff;
   text-decoration: none;
   border-bottom: 1px dotted rgba(176, 233, 255, 0.5);
 }
-.gamenotes_EditorInput_3zWun h1,
-.gamenotes_EditorInput_3zWun h2,
-.gamenotes_EditorInput_3zWun h3,
-.gamenotes_EditorInput_3zWun h4,
-.gamenotes_EditorInput_3zWun h5 {
+._3zWunJFZU6u89fIABN9Gkf h1,
+._3zWunJFZU6u89fIABN9Gkf h2,
+._3zWunJFZU6u89fIABN9Gkf h3,
+._3zWunJFZU6u89fIABN9Gkf h4,
+._3zWunJFZU6u89fIABN9Gkf h5 {
   margin: 0.5em 0;
 }
-.gamenotes_EditorInput_3zWun ul,
-.gamenotes_EditorInput_3zWun ol {
+._3zWunJFZU6u89fIABN9Gkf ul,
+._3zWunJFZU6u89fIABN9Gkf ol {
   margin: 0.5em 0;
 }
-.gamenotes_EditorInput_3zWun li > p:first-of-type {
+._3zWunJFZU6u89fIABN9Gkf li > p:first-of-type {
   margin: 0;
 }
-.ModalDialogPopup
-  .gamenotespopups_GameNotesPopup_3hIt9.ModalDialogBody
-  .title-area {
+.ModalDialogPopup ._3hIt9g_59KauEV2uSNK6Ct.ModalDialogBody .title-area {
   height: 58px;
 }
 

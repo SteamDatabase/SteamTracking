@@ -69,7 +69,7 @@
 "Friends_Ignore"			"Blokir Semua Komunikasi..."
 "Friends_UnIgnore"			"Buka Blokiran"
 "Friends_InviteFriendToGame"		"Undang ke Game"
-"Friends_JoinGame"				"Bergabung ke Game"
+"Friends_JoinGame"				"Ikut Bermain"
 "Friends_LaunchGame"				"Luncurkan Game"
 "Friends_ViewGameInfo"			"Lihat Info Game"
 "Friends_UserDetails"				"Lihat Info Pengguna"
@@ -352,7 +352,7 @@
 
 "Friends_ViewGroupSteamID"			"Lihat profil grup"
 "Friends_JoinGroupChatRoom"			"Bergabung ke ruang obrolan grup"
-"Friends_OpenAdministerGroupPage"		"Jadi administrator di grup ini"
+"Friends_OpenAdministerGroupPage"		"Jadi admin di grup ini"
 "Friends_LeaveThisGroup"				"Keluar dari grup ini"
 
 "Friends_SteamIDLink"					"Lihat profil"

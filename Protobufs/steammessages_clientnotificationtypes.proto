@@ -52,6 +52,9 @@ enum EClientNotificationType {
 	k_EClientNotificationType_FamilyPurchaseRequestResponse = 47;
 	k_EClientNotificationType_ParentalFeatureRequest = 48;
 	k_EClientNotificationType_ParentalPlaytimeRequest = 49;
+	k_EClientNotificationType_GRE = 50;
+	k_EClientNotificationType_ParentalFeatureResponse = 51;
+	k_EClientNotificationType_ParentalPlaytimeResponse = 52;
 }
 
 enum ESystemUpdateNotificationType {
@@ -239,4 +242,8 @@ message CClientNotificationStreamingClientConnection {
 message CClientNotificationPlaytimeWarning {
 	optional string type = 1;
 	optional uint32 playtime_remaining = 2;
+}
+
+message CClientNotificationGRE {
+	optional fixed64 game_id = 1;
 }

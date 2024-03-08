@@ -1,58 +1,58 @@
 (self.webpackChunksteamui = self.webpackChunksteamui || []).push([
   [6109],
   {
-    68277: (n) => {
-      n.exports = {
-        IconContainer: "awardicon_IconContainer_6TbQg",
-        ButtonContainer: "awardicon_ButtonContainer_kaquA",
-        InfoContainer: "awardicon_InfoContainer_2ydoR",
-        IconImg: "awardicon_IconImg_2xJ_L",
-        ReactionCount: "awardicon_ReactionCount_22PNg",
-        IconList: "awardicon_IconList_1NEGw",
+    68277: (e) => {
+      e.exports = {
+        IconContainer: "_6TbQgZuwNMr5374_y7IIT",
+        ButtonContainer: "kaquAx4n5hv2_VCVYmDId",
+        InfoContainer: "_2ydoRKFVIxw7ZQ2k73pC27",
+        IconImg: "_2xJ_LSjLIQ-XLrZqZiOK0o",
+        ReactionCount: "_22PNg3cCBQ6SytI8Vz6pyT",
+        IconList: "_1NEGw6cerEqhcblDvEalvd",
       };
     },
-    31149: (n, e, t) => {
+    31149: (e, t, n) => {
       "use strict";
-      t.r(e), t.d(e, { AwardIcon: () => u, AwardIconList: () => d });
-      var o = t(27378),
-        a = t(91055),
-        r = t(94256),
-        c = t(68277),
-        i = t.n(c),
-        s = t(86064),
-        p = t(35484);
+      n.r(t), n.d(t, { AwardIcon: () => u, AwardIconList: () => l });
+      var o = n(27378),
+        r = n(91055),
+        c = n(94256),
+        a = n(68277),
+        s = n.n(a),
+        i = n(86064),
+        p = n(35484);
       class u extends o.PureComponent {
         render() {
-          const n = (0, s.kb)(
+          const e = (0, i.kb)(
             "#RewardsReaction_Tooltip",
             this.props.reaction.count || 0,
-            (0, a.C)(this.props.reaction.reaction_type),
+            (0, r.C)(this.props.reaction.reaction_type),
           );
           return o.createElement(
-            r.HP,
+            c.HP,
             {
-              className: (0, p.Z)(i().InfoContainer, i().IconContainer),
-              toolTipContent: n,
+              className: (0, p.Z)(s().InfoContainer, s().IconContainer),
+              toolTipContent: e,
             },
             o.createElement("img", {
-              className: i().IconImg,
-              src: (0, a.w)(this.props.reaction.reaction_type, !1),
+              className: s().IconImg,
+              src: (0, r.w)(this.props.reaction.reaction_type, !1),
             }),
             this.props.reaction.count &&
               o.createElement(
                 "div",
-                { className: i().ReactionCount },
+                { className: s().ReactionCount },
                 this.props.reaction.count,
               ),
           );
         }
       }
-      class d extends o.PureComponent {
+      class l extends o.PureComponent {
         render() {
-          let n = [];
-          for (const e of this.props.reactions)
-            n.push(o.createElement(u, { key: e.reaction_type, reaction: e }));
-          return o.createElement("div", { className: i().IconList }, n);
+          let e = [];
+          for (const t of this.props.reactions)
+            e.push(o.createElement(u, { key: t.reaction_type, reaction: t }));
+          return o.createElement("div", { className: s().IconList }, e);
         }
       }
     },

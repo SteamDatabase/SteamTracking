@@ -28,6 +28,7 @@ message CMsgClientUCMAddScreenshot {
 message CMsgClientUCMAddScreenshotResponse {
 	optional int32 eresult = 1 [default = 2];
 	optional fixed64 screenshotid = 2 [default = 18446744073709551615];
+	optional uint64 publishedfileid = 3;
 }
 
 message CMsgClientUCMDeleteScreenshot {

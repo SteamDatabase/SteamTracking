@@ -159,8 +159,7 @@ enum EStreamColorspace {
 	k_EStreamColorspace_BT601_Full = 2;
 	k_EStreamColorspace_BT709 = 3;
 	k_EStreamColorspace_BT709_Full = 4;
-	k_EStreamColorspace_BT2020 = 5;
-	k_EStreamColorspace_BT2020_Full = 6;
+	k_EStreamColorspace_HDR10 = 5;
 }
 
 enum EStreamP2PScope {

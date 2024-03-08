@@ -169,6 +169,7 @@ message CMsgClientSettings {
 	optional .CMsgHotkey g_background_mk = 18207 [(setting_store) = k_EClientSettingStore_CustomFunc];
 	optional .CMsgHotkey g_background_tg = 18208 [(setting_store) = k_EClientSettingStore_CustomFunc];
 	optional bool g_background_a_m = 18209 [(setting_store) = k_EClientSettingStore_CustomFunc];
+	optional int32 g_background_br = 18210 [(setting_store) = k_EClientSettingStore_CustomFunc];
 	optional bool show_timestamps_in_console = 20000 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Developer\\ShowTimestampsInConsole"];
 	optional bool force_oobe = 20001 [(setting_store) = k_EClientSettingStore_Registry, (setting_name) = "HKEY_CURRENT_USER\\Software\\Valve\\Steam\\ForceOOBE"];
 	optional int32 override_browser_composer_mode = 20002 [(setting_store) = k_EClientSettingStore_CustomFunc];
@@ -176,11 +177,14 @@ message CMsgClientSettings {
 	optional bool force_deck_perf_tab = 20004 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "Developer/ForceDeckPerfTab"];
 	optional bool force_fake_mandatory_update = 20005 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "Developer/FakeMandatoryUpdate"];
 	optional bool hdr_compat_testing = 20006 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "Developer/HDRCompatTesting"];
+	optional bool developer_dummy_setting = 20007 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Developer/DummySetting"];
 	optional .EHDRVisualization gamescope_hdr_visualization = 21001 [default = k_EHDRVisualization_None, (setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Gamescope/HDRVisualization2"];
 	optional int32 gamescope_app_target_framerate = 21002 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Gamescope/AppTargetFrameRate", (setting_default_int) = 0, (setting_profile_mode) = k_ESettingProfileMode_PerGamePerDisplay];
 	optional bool gamescope_enable_app_target_framerate = 21003 [(setting_store) = k_EClientSettingStore_Registry, (setting_name) = "HKEY_CURRENT_USER\\Software\\Valve\\Steam\\GamescopeEnableAppTargetRefreshRate2", (setting_default_bool) = true];
 	optional bool gamescope_disable_framelimit = 21004 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Gamescope/DisableFrameLimit", (setting_default_bool) = false, (setting_profile_mode) = k_ESettingProfileMode_PerGamePerDisplay];
 	optional int32 gamescope_display_refresh_rate = 21005 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Gamescope/RefreshRate", (setting_default_int) = 0, (setting_profile_mode) = k_ESettingProfileMode_PerGamePerDisplay];
 	optional bool gamescope_use_game_refresh_rate_in_steam = 21006 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Developer/DynamicRefreshRateInSteam", (setting_default_bool) = true];
+	optional bool gamescope_disable_mura_correction = 21007 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Gamescope/MuraCorrectionDisabled", (setting_default_bool) = false];
+	optional bool gamescope_include_steamui_in_screenshots = 21008 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Gamescope/IncludeSteamUIInScreenshots", (setting_default_bool) = true];
 	optional int32 steamos_status_led_brightness = 22000 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "SteamOS/StatusLEDBrightness", (setting_default_int) = 100];
 }

@@ -408,7 +408,7 @@
 
 "Friends_PlayersDialog_Title"				"Pelaajat - Steam"
 "Friends_CurrentPlayers_TabTitle"			"Nykyinen peli"
-"Friends_RecentPlayers_TabTitle"			"Aiemmat pelit"
+"Friends_RecentPlayers_TabTitle"			"Viimeisimmät pelit"
 "Friends_AddPlayerAsFriend"				"Lisää kaverilistaan"
 "Friends_NoRecentlyPlayedWithUsers"		"Et ole äskettäin pelannut Steam-pelejä kavereidesi kanssa."
 "Friends_NoCurrentlyPlayedWithUsers"		"Ei pelipalvelimen ilmoittamia Steam-käyttäjiä."

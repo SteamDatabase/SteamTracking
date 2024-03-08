@@ -1137,6 +1137,7 @@
     "NotificationSetting_Inherit": "No reemplazar",
     "NotificationSetting_Indicator": "Mostrar un indicador cuando hay mensajes no leídos",
     "NotificationSetting_Footer_Desc": "Editar tipos de alertas de notificación de %1$s",
+    "NotificationSetting_Footer_Desc2": "Editar más tipos de notificaciones en %1$s",
     "NotificationSetting_ChannelOverrides": "Reemplazo de canal:",
     "NotificationBrowserWarning": "Te damos la bienvenida al chat de Steam. Permite que te enviemos notificaciones para obtener la mejor experiencia.",
     "InviteLanding_ExpiredOrInvalid": "El enlace de invitación que has abierto ya no es válido.",

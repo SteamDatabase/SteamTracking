@@ -99,6 +99,8 @@
  CGAcquireDisplayFadeReservation
  CGAssociateMouseAndMouseCursorPosition
  CGColorGetConstantColor
+ CGColorSpaceCreateWithName
+ CGColorSpaceRelease
  CGDisplayBounds
  CGDisplayCopyAllDisplayModes
  CGDisplayCopyDisplayMode
@@ -130,6 +132,7 @@
  CVDisplayLinkSetCurrentCGDisplayFromOpenGLContext
  CVDisplayLinkSetOutputCallback
  CVDisplayLinkStart
+ CVPixelBufferGetIOSurface
  D .objc_class_name_Cocoa_PasteboardDataProvider
  D .objc_class_name_Cocoa_WindowListener
  D .objc_class_name_SDLAppDelegate
@@ -218,6 +221,7 @@
  NSApp
  NSAppKitVersionNumber
  NSApplicationDidBecomeActiveNotification
+ NSApplicationDidChangeScreenParametersNotification
  NSBackingPropertyOldScaleFactorKey
  NSClassFromString
  NSCurrentLocaleDidChangeNotification
@@ -301,7 +305,7 @@
  OBJC_METACLASS_$_NSResponder
  OBJC_METACLASS_$_NSView
  OBJC_METACLASS_$_NSWindow
- T SDL_AcquireVideoCaptureFrame
+ T SDL_AcquireCameraFrame
  T SDL_AddEventWatch
  T SDL_AddGamepadMapping
  T SDL_AddGamepadMappingsFromFile
@@ -332,20 +336,22 @@
  T SDL_ClearClipboardData
  T SDL_ClearComposition
  T SDL_ClearError
- T SDL_ClearHints
  T SDL_ClearProperty
  T SDL_CloseAudioDevice
+ T SDL_CloseCamera
  T SDL_CloseGamepad
  T SDL_CloseHaptic
  T SDL_CloseJoystick
  T SDL_CloseSensor
- T SDL_CloseVideoCapture
  T SDL_ComposeCustomBlendMode
  T SDL_ConvertAudioSamples
  T SDL_ConvertEventToRenderCoordinates
  T SDL_ConvertPixels
+ T SDL_ConvertPixelsAndColorspace
  T SDL_ConvertSurface
  T SDL_ConvertSurfaceFormat
+ T SDL_ConvertSurfaceFormatAndColorspace
+ T SDL_CopyProperties
  T SDL_CreateAudioStream
  T SDL_CreateColorCursor
  T SDL_CreateCondition
@@ -460,10 +466,20 @@
  T SDL_GetBooleanProperty
  T SDL_GetCPUCacheLineSize
  T SDL_GetCPUCount
+ T SDL_GetCameraDeviceName
+ T SDL_GetCameraDevicePosition
+ T SDL_GetCameraDeviceSupportedFormats
+ T SDL_GetCameraDevices
+ T SDL_GetCameraDriver
+ T SDL_GetCameraFormat
+ T SDL_GetCameraInstanceID
+ T SDL_GetCameraPermissionState
+ T SDL_GetCameraProperties
  T SDL_GetClipboardData
  T SDL_GetClipboardText
  T SDL_GetClosestFullscreenDisplayMode
  T SDL_GetCurrentAudioDriver
+ T SDL_GetCurrentCameraDriver
  T SDL_GetCurrentDisplayMode
  T SDL_GetCurrentDisplayOrientation
  T SDL_GetCurrentRenderOutputSize
@@ -495,7 +511,6 @@
  T SDL_GetGamepadButtonFromString
  T SDL_GetGamepadButtonLabel
  T SDL_GetGamepadButtonLabelForType
- T SDL_GetGamepadCaps
  T SDL_GetGamepadFirmwareVersion
  T SDL_GetGamepadFromInstanceID
  T SDL_GetGamepadFromPlayerIndex
@@ -547,7 +562,6 @@
  T SDL_GetJoystickAxis
  T SDL_GetJoystickAxisInitialState
  T SDL_GetJoystickButton
- T SDL_GetJoystickCaps
  T SDL_GetJoystickFirmwareVersion
  T SDL_GetJoystickFromInstanceID
  T SDL_GetJoystickFromPlayerIndex
@@ -591,6 +605,7 @@
  T SDL_GetNaturalDisplayOrientation
  T SDL_GetNumAllocations
  T SDL_GetNumAudioDrivers
+ T SDL_GetNumCameraDrivers
  T SDL_GetNumGamepadTouchpadFingers
  T SDL_GetNumGamepadTouchpads
  T SDL_GetNumHapticAxes
@@ -599,8 +614,6 @@
  T SDL_GetNumJoystickHats
  T SDL_GetNumRenderDrivers
  T SDL_GetNumTouchFingers
- T SDL_GetNumVideoCaptureFormats
- T SDL_GetNumVideoCaptureFrameSizes
  T SDL_GetNumVideoDrivers
  T SDL_GetNumberProperty
  T SDL_GetOriginalMemoryFunctions
@@ -639,8 +652,10 @@
  T SDL_GetRelativeMouseMode
  T SDL_GetRelativeMouseState
  T SDL_GetRenderClipRect
+ T SDL_GetRenderColorScale
  T SDL_GetRenderDrawBlendMode
  T SDL_GetRenderDrawColor
+ T SDL_GetRenderDrawColorFloat
  T SDL_GetRenderDriver
  T SDL_GetRenderLogicalPresentation
  T SDL_GetRenderMetalCommandEncoder
@@ -678,13 +693,16 @@
  T SDL_GetSurfaceClipRect
  T SDL_GetSurfaceColorKey
  T SDL_GetSurfaceColorMod
+ T SDL_GetSurfaceColorspace
  T SDL_GetSurfaceProperties
  T SDL_GetSystemRAM
  T SDL_GetSystemTheme
  T SDL_GetTLS
  T SDL_GetTextureAlphaMod
+ T SDL_GetTextureAlphaModFloat
  T SDL_GetTextureBlendMode
  T SDL_GetTextureColorMod
+ T SDL_GetTextureColorModFloat
  T SDL_GetTextureProperties
  T SDL_GetTextureScaleMode
  T SDL_GetThreadID
@@ -697,12 +715,6 @@
  T SDL_GetTouchFinger
  T SDL_GetUserFolder
  T SDL_GetVersion
- T SDL_GetVideoCaptureDeviceName
- T SDL_GetVideoCaptureDevices
- T SDL_GetVideoCaptureFormat
- T SDL_GetVideoCaptureFrameSize
- T SDL_GetVideoCaptureSpec
- T SDL_GetVideoCaptureStatus
  T SDL_GetVideoDriver
  T SDL_GetWindowBordersSize
  T SDL_GetWindowDisplayScale
@@ -727,8 +739,6 @@
  T SDL_GetWindowSizeInPixels
  T SDL_GetWindowSurface
  T SDL_GetWindowTitle
- T SDL_GetYUVConversionMode
- T SDL_GetYUVConversionModeForResolution
  T SDL_HapticEffectSupported
  T SDL_HapticRumbleSupported
  T SDL_HasARMSIMD
@@ -745,6 +755,7 @@
  T SDL_HasMMX
  T SDL_HasNEON
  T SDL_HasPrimarySelectionText
+ T SDL_HasProperty
  T SDL_HasRectIntersection
  T SDL_HasRectIntersectionFloat
  T SDL_HasSSE
@@ -753,7 +764,6 @@
  T SDL_HasSSE41
  T SDL_HasSSE42
  T SDL_HasScreenKeyboardSupport
- T SDL_HasWindowSurface
  T SDL_HideCursor
  T SDL_HideWindow
  T SDL_Init
@@ -817,6 +827,7 @@
  T SDL_OnApplicationWillTerminate
  T SDL_OpenAudioDevice
  T SDL_OpenAudioDeviceStream
+ T SDL_OpenCameraDevice
  T SDL_OpenGamepad
  T SDL_OpenHaptic
  T SDL_OpenHapticFromJoystick
@@ -824,8 +835,6 @@
  T SDL_OpenJoystick
  T SDL_OpenSensor
  T SDL_OpenURL
- T SDL_OpenVideoCapture
- T SDL_OpenVideoCaptureWithSpec
  T SDL_PauseAudioDevice
  T SDL_PauseHaptic
  T SDL_PeepEvents
@@ -867,7 +876,7 @@
  T SDL_ReadU64LE
  T SDL_ReadU8
  T SDL_RegisterEvents
- T SDL_ReleaseVideoCaptureFrame
+ T SDL_ReleaseCameraFrame
  T SDL_ReloadGamepadMappings
  T SDL_RemoveTimer
  T SDL_RenderClear
@@ -878,6 +887,7 @@
  T SDL_RenderFillRects
  T SDL_RenderGeometry
  T SDL_RenderGeometryRaw
+ T SDL_RenderGeometryRawFloat
  T SDL_RenderLine
  T SDL_RenderLines
  T SDL_RenderPoint
@@ -888,6 +898,7 @@
  T SDL_RenderRects
  T SDL_RenderTexture
  T SDL_RenderTextureRotated
+ T SDL_RenderViewportSet
  T SDL_ReportAssertion
  T SDL_ResetAssertionReport
  T SDL_ResetHint
@@ -949,8 +960,10 @@
  T SDL_SetPropertyWithCleanup
  T SDL_SetRelativeMouseMode
  T SDL_SetRenderClipRect
+ T SDL_SetRenderColorScale
  T SDL_SetRenderDrawBlendMode
  T SDL_SetRenderDrawColor
+ T SDL_SetRenderDrawColorFloat
  T SDL_SetRenderLogicalPresentation
  T SDL_SetRenderScale
  T SDL_SetRenderTarget
@@ -962,16 +975,18 @@
  T SDL_SetSurfaceClipRect
  T SDL_SetSurfaceColorKey
  T SDL_SetSurfaceColorMod
+ T SDL_SetSurfaceColorspace
  T SDL_SetSurfacePalette
  T SDL_SetSurfaceRLE
  T SDL_SetTLS
  T SDL_SetTextInputRect
  T SDL_SetTextureAlphaMod
+ T SDL_SetTextureAlphaModFloat
  T SDL_SetTextureBlendMode
  T SDL_SetTextureColorMod
+ T SDL_SetTextureColorModFloat
  T SDL_SetTextureScaleMode
  T SDL_SetThreadPriority
- T SDL_SetVideoCaptureSpec
  T SDL_SetWindowAlwaysOnTop
  T SDL_SetWindowBordered
  T SDL_SetWindowFocusable
@@ -990,10 +1005,10 @@
  T SDL_SetWindowOpacity
  T SDL_SetWindowPosition
  T SDL_SetWindowResizable
+ T SDL_SetWindowShape
  T SDL_SetWindowSize
  T SDL_SetWindowTitle
  T SDL_SetX11EventHook
- T SDL_SetYUVConversionMode
  T SDL_ShowCursor
  T SDL_ShowMessageBox
  T SDL_ShowSimpleMessageBox
@@ -1002,12 +1017,10 @@
  T SDL_SignalCondition
  T SDL_SoftStretch
  T SDL_StartTextInput
- T SDL_StartVideoCapture
  T SDL_StopHapticEffect
  T SDL_StopHapticEffects
  T SDL_StopHapticRumble
  T SDL_StopTextInput
- T SDL_StopVideoCapture
  T SDL_SurfaceHasColorKey
  T SDL_SurfaceHasRLE
  T SDL_SyncWindow
@@ -1053,6 +1066,7 @@
  T SDL_WarpMouseGlobal
  T SDL_WarpMouseInWindow
  T SDL_WasInit
+ T SDL_WindowHasSurface
  T SDL_WriteS16BE
  T SDL_WriteS16LE
  T SDL_WriteS32BE
@@ -1283,6 +1297,7 @@
  ferror
  fflush
  fgets
+ fileno
  fmod
  fmodf
  fopen
@@ -1292,6 +1307,7 @@
  free
  fseek
  fseeko
+ fstat$INODE64
  ftell
  ftello
  fwrite
@@ -1312,6 +1328,7 @@
  kCFTypeDictionaryValueCallBacks
  kCGColorBlack
  kCGColorClear
+ kCGColorSpaceExtendedLinearSRGB
  kCGDisplayShowDuplicateLowResolutionModes
  kIOMasterPortDefault
  kTISPropertyUnicodeKeyLayoutData

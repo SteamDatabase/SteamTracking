@@ -184,7 +184,7 @@
 "Friends_FriendList_Pendings"			"초대"
 "Friends_FriendList_InvitesReceived"	"초대"
 "Friends_Friendlist_Members"			"회원"
-"Friends_Friendlist_Guests"			"손님"
+"Friends_Friendlist_Guests"			"게스트"
 "Friends_Friendlist_Chat"				"채팅"
 "Friends_ViewSteamIDPage"				"SteamID 페이지 보기"
 "Friends_ViewFacebookIDPage"			"Facebook 페이지 보기"
@@ -408,7 +408,7 @@
 
 "Friends_PlayersDialog_Title"				"플레이어 - Steam"
 "Friends_CurrentPlayers_TabTitle"			"현재 게임"
-"Friends_RecentPlayers_TabTitle"			"이전 게임"
+"Friends_RecentPlayers_TabTitle"			"최근 게임"
 "Friends_AddPlayerAsFriend"				"친구 목록에 추가"
 "Friends_NoRecentlyPlayedWithUsers"		"최근에 친구와 함께 플레이한 Steam 게임이 없습니다."
 "Friends_NoCurrentlyPlayedWithUsers"		"게임 서버에 보고된 Steam 사용자가 없습니다."

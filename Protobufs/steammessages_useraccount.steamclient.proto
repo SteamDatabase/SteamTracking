@@ -64,6 +64,10 @@ message CUserAccount_GetWalletDetails_Response {
 	optional bool has_wallet_in_other_regions = 12;
 	repeated int32 other_regions = 13;
 	optional string formatted_balance = 14;
+	optional string formatted_delayed_balance = 15;
+	optional int32 delayed_balance_available_min_time = 16;
+	optional int32 delayed_balance_available_max_time = 17;
+	optional int32 delayed_balance_newest_source = 18;
 }
 
 message CUserAccount_GetAccountLinkStatus_Request {

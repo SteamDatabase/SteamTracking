@@ -994,6 +994,7 @@
     "FriendSettings_Mobile_SaveImageCaptures_Desc": "Bilder du tar i appen, lagres i enhetens galleri.",
     "Friend_JoinGameWait_Title": "Blir med i spill",
     "Friend_JoinGameWait_Desc": "Venter på tilkoblingsinformasjon …",
+    "Friend_JoinGameWait_Cancel": "Avbryt",
     "Mobile_SaveImageCaptures_AlertTitle": "Bilde lagret",
     "Mobile_SaveImageCaptures_AlertBody": "Vi har lagret bildet i enhetens galleri.\n\nDu kan slå av denne funksjonen i Innstillinger > Grensesnitt.",
     "AboutSettings_Title": "Om",

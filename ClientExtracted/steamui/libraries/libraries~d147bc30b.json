@@ -1145,7 +1145,7 @@
     "InviteLanding_SentToSteam_Desc": "Bạn có thể tiếp tục quy trình mời ở đây. Nếu bạn muốn mở lời mời này trong công cụ trò chuyện ở web, %1$s.",
     "InviteLanding_SentToSteam_Desc_LaunchWebChat": "nhấp vào đây",
     "InviteLanding_OpenInSteam": "Mở trong Steam",
-    "InviteLanding_OpenInWebChat": "Mở trò truyện trình duyệt",
+    "InviteLanding_OpenInWebChat": "Mở trò chuyện trong trình duyệt",
     "InviteLanding_OpenInSteam_Help": "Chúng tôi đã thử mở một liên kết mời từ trình Steam. Bạn có thể nhận thông báo từ trình duyệt web của mình để cho phép khởi chạy trình Steam.",
     "MobileDisconnect_Reconnecting": "Đang kết nối lại",
     "MobileDisconnect_Loading": "Đang tải mạng lưới bạn bè",

@@ -185,6 +185,7 @@
  CanBreakBetween
  CatchAndWriteMiniDumpForVoidPtrFn
  ChaCha20_ctr32
+ ClearVideoSpewCallback
  CompareAndSwap
  CopyPlane
  Coroutine_Continue
@@ -540,6 +541,7 @@
  SetMiniDumpBuildID
  SetMiniDumpSteamID
  SetPlane
+ SetVideoSpewCallback
  SpewAndLogActivate
  SpewOutputFunc
  SteamInput_Available
@@ -1532,6 +1534,7 @@
  _tlv_bootstrap
  abort
  accept
+ adler32
  aesni_cbc_encrypt
  aesni_cbc_sha1_enc
  aesni_cbc_sha256_enc
@@ -1719,8 +1722,10 @@
  host_info
  inflate
  inflateEnd
- inflateInit_
+ inflateInit2_
  inflateReset
+ inflateReset2
+ inflateValidate
  ioctl
  kBgrF709Constants
  kBgrH709Constants
@@ -1769,12 +1774,10 @@
  kRgbH709Constants
  kRgbI601Constants
  kRgbJPEGConstants
- kYuv2020Constants
  kYuvF709Constants
  kYuvH709Constants
  kYuvI601Constants
  kYuvJPEGConstants
- kYuvV2020Constants
  kevent
  kill
  kqueue

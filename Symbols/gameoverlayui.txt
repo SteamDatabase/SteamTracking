@@ -144,6 +144,10 @@
  SteamThreadTools::CThreadLocalBase::~CThreadLocalBase()
  SteamThreadTools::CThreadMutex::CThreadMutex()
  SteamThreadTools::CThreadMutex::~CThreadMutex()
+ SteamThreadTools::CThreadSemaphore::CThreadSemaphore(long, long)
+ SteamThreadTools::CThreadSemaphore::Release(long)
+ SteamThreadTools::CThreadSyncObject::Wait(unsigned int)
+ SteamThreadTools::CThreadSyncObject::~CThreadSyncObject()
  SteamVProf::CVProfManager::CleanupUnusedProfiles()
  SteamVProf::CVProfManager::DumpAllThreadProfiles(int)
  SteamVProf::CVProfManager::StartProfilingAllThreads(float, int)
@@ -226,6 +230,7 @@
  ThreadInterlockedCompareExchange
  ThreadInterlockedDecrement
  ThreadInterlockedExchange
+ ThreadInterlockedIncrement
  ThreadIsProcessIdActive
  ThreadShellExecute
  ThreadSleep

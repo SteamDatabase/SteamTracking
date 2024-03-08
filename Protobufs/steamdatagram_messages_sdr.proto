@@ -63,7 +63,6 @@ message CMsgSteamDatagramRouterPingReply {
 	message AltAddress {
 		enum Protocol {
 			DefaultProtocol = 0;
-			NetworkNext = 1;
 		}
 
 		optional fixed32 ipv4 = 1;

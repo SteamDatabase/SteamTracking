@@ -89,6 +89,7 @@ message CPlayer_GetPlayerLinkDetails_Response {
 			optional int32 game_os_type = 19;
 			optional int32 game_device_type = 20;
 			optional string game_device_name = 21;
+			optional bool game_is_private = 22;
 		}
 
 		optional .CPlayer_GetPlayerLinkDetails_Response.PlayerLinkDetails.AccountPublicData public_data = 1;

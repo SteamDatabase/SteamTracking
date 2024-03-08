@@ -34,7 +34,7 @@ message CMsgRemoteClientAppStatus {
 		optional uint32 app_state = 2;
 		optional .CMsgRemoteClientAppStatus.AppUpdateInfo update_info = 3;
 		optional .CMsgRemoteClientAppStatus.ShortcutInfo shortcut_info = 4;
-		optional bool launch_available = 5 [default = true];
+		optional bool vr_not_required = 5 [default = true];
 	}
 
 	repeated .CMsgRemoteClientAppStatus.AppStatus status_updates = 1;
@@ -70,6 +70,7 @@ message CMsgRemoteClientStartStreamResponse {
 	optional string launch_task_detail = 8;
 	optional int32 launch_tasks_done = 9;
 	optional int32 launch_tasks_total = 10;
+	optional string vr_connection_params = 11;
 }
 
 message CMsgRemoteClientPing {

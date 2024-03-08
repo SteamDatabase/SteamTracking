@@ -1780,7 +1780,7 @@ iframe.steamTVLogin {
     display: none;
   }
 }
-.broadcastplayer_BroadcastPlayerLite_3YmNP {
+._3YmNPMB10Tv4CjVnehBIfl {
   max-width: 100%;
   width: 100%;
   height: 100%;
@@ -1796,14 +1796,14 @@ iframe.steamTVLogin {
   overflow: hidden;
   box-sizing: border-box;
 }
-.broadcastplayer_BroadcastPlayerLiteVideo_2NLpd {
+._2NLpdhGrdMKocp_QqP1Lmu {
   max-width: 100%;
   height: 100%;
   object-fit: contain;
   background-color: #18191d;
   background-color: #000;
 }
-.broadcastplayer_BroadcastContext_IlTJG {
+.IlTJGBtavoHsP8gE3mfGj {
   position: absolute;
   top: 0;
   left: 0;
@@ -1822,11 +1822,11 @@ iframe.steamTVLogin {
   transform: translateY(0%);
   opacity: 1;
 }
-.HidePlayerControls .broadcastplayer_BroadcastContext_IlTJG {
+.HidePlayerControls .IlTJGBtavoHsP8gE3mfGj {
   transform: translateY(-50%);
   opacity: 0;
 }
-img.broadcastplayer_BroadcastPlaceholderImg_3Hcqn {
+img._3HcqngpMsV-cAfN4HuLiXi {
   z-index: 2;
   height: 100%;
   max-width: unset;

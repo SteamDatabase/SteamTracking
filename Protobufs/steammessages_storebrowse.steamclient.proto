@@ -48,6 +48,14 @@ enum EUserReviewScore {
 	k_EUserReviewScore_OverwhelminglyPositive = 9;
 }
 
+enum EStoreBrowseFilterFailure {
+	k_EStoreBrowseFilterFailure_None = 0;
+	k_EStoreBrowseFilterFailure_Redundant = 10;
+	k_EStoreBrowseFilterFailure_NotPreferred = 20;
+	k_EStoreBrowseFilterFailure_NotInterested = 30;
+	k_EStoreBrowseFilterFailure_UnwantedContent = 40;
+}
+
 enum EStoreCategoryType {
 	k_EStoreCategoryType_Category = 0;
 	k_EStoreCategoryType_SupportedPlayers = 1;
@@ -89,6 +97,7 @@ message StoreBrowseItemDataRequest {
 	optional bool include_included_items = 13;
 	optional .StoreBrowseItemDataRequest included_item_data_request = 14;
 	optional bool include_assets_without_overrides = 15;
+	optional bool apply_user_filters = 16;
 }
 
 message CStoreBrowse_GetItems_Request {
@@ -262,7 +271,8 @@ message StoreItem {
 	}
 
 	message SupportedLanguage {
-		optional int32 elanguage = 1;
+		optional int32 elanguage = 1 [default = -1];
+		optional int32 eadditionallanguage = 5 [default = -1];
 		optional bool supported = 2;
 		optional bool full_audio = 3;
 		optional bool subtitles = 4;
@@ -313,6 +323,7 @@ message StoreItem {
 	optional string full_description = 58;
 	optional bool is_free_temporarily = 59;
 	optional .StoreItem.Assets assets_without_overrides = 60;
+	optional .StoreBrowseFilterFailure user_filter_failure = 70;
 }
 
 message StoreGameRating {
@@ -324,6 +335,20 @@ message StoreGameRating {
 	optional bool use_age_gate = 11;
 	optional string image_url = 20;
 	optional string image_target = 21;
+}
+
+message StoreBrowseFilterFailure {
+	optional .EStoreBrowseFilterFailure filter_failure = 1 [default = k_EStoreBrowseFilterFailure_None];
+	optional bool already_owned = 5;
+	optional bool on_wishlist = 6;
+	optional bool ignored = 7;
+	optional bool not_in_users_language = 10;
+	optional bool not_on_users_platform = 11;
+	optional bool demo_for_owned_game = 12;
+	optional bool dlc_for_unowned_game = 13;
+	optional bool nonpreferred_product_type = 20;
+	repeated uint32 excluded_tagids = 21;
+	repeated .EContentDescriptorID excluded_content_descriptorids = 30;
 }
 
 message CStoreBrowse_GetItems_Response {
@@ -343,6 +368,7 @@ message CStoreBrowse_GetStoreCategories_Response {
 		optional string display_name = 4;
 		optional string image_url = 5;
 		optional bool show_in_search = 6;
+		optional bool computed = 7;
 	}
 
 	repeated .CStoreBrowse_GetStoreCategories_Response.Category categories = 1;

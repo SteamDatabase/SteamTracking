@@ -519,6 +519,7 @@
  accept$UNIX2003
  access
  acosf
+ adler32
  alcCaptureCloseDevice
  alcCaptureOpenDevice
  alcCaptureSamples
@@ -666,8 +667,10 @@
  inet_aton
  inflate
  inflateEnd
- inflateInit_
+ inflateInit2_
  inflateReset
+ inflateReset2
+ inflateValidate
  ioctl
  kCFAllocatorDefault
  kCFAllocatorNull

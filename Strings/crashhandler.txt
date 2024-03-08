@@ -149,7 +149,7 @@ x,tQ
 ^_[]
 ^_[]
 6SPQ
-SSh)
+SSh2
 ^_[]
 ^_[]
  ^_]
@@ -405,13 +405,13 @@ pid %d != %d, clearing client_port = %d, server_port = %d
 pid %d != %d, re-initing before send; client_port = %d, server_port = %d
 StopJob
 pid %d != %d, skipping dealloc of client_port = %d, server_port = %d
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlvector.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlvector.h
 (&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
 crashhandler001
 crashhandler002
 crashhandler003
 crashhandler004
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vstdlib/osversion.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/osversion.cpp
 Invalid macOS version %d.%d.%d
 unknown
 /System/Library/Frameworks/OpenGL.framework/OpenGL
@@ -428,7 +428,7 @@ processInfo
 operatingSystemVersion
 respondsToSelector:
 defaults read /System/Library/CoreServices/SystemVersion.plist ProductVersion
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vstdlib/strtools.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/strtools.cpp
 pStr != NULL
 pSearch != NULL
 maxLen == 0 || pDest != NULL
@@ -447,9 +447,9 @@ false
 maxLen <= INT_MAX
 checkLen >= 0
 argLen < 0x10000000u
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlstring.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlstring.h
 !pszString || pszString[nChars] == '\0'
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/fileio.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/fileio.cpp
 %s%c.temp_write_%x
 %s%c%s
 CPathString
@@ -476,16 +476,16 @@ countByEnumeratingWithState:objects:count:
 getRelationship:ofDirectoryAtURL:toItemAtURL:error:
 hasPrefix:
 length
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/utlbuffer.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlbuffer.cpp
 info.m_pReplacementString == 0
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/utlmemory.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlmemory.cpp
 nSizeOfType > 0
 nGrowSize >= 0
 m_nAllocationCount >= 0
 nBytesItem is %zu in UtlMemory_CalcNewAllocationCount
 num > 0
 CUtlString::SetValue
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/utlstring.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlstring.cpp
 CUtlString::VFormat
 Assertion failed: length > k_cchMaxString
 CUtlStringBuilder::InternalPrepareBuffer
@@ -509,7 +509,7 @@ Fatal assert; application exiting
 Fatal assert
 _ExitOnFatalAssert
 Failed to capture callstack
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/memblockhdr.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/memblockhdr.cpp
 ppFrames[iFrame] != NULL
 Assertion Failed: stack%2d: %s (%d): %s
 Stack:%2d    %s (%d): %s
@@ -517,7 +517,7 @@ Assertion Failed: stack%2d: %s
 Stack%2d: %s
 Assertion Failed: stack%2d: 0x%llX
 Stack%2d: 0x%llX
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/memstd.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/memstd.cpp
 ((size_t)(m_nLogicalBytesAllocated) % 8) == 0
 No tracked allocs currently in use. Total %d
 Tracked allocs currently in use. %d Total %d
@@ -529,9 +529,9 @@ DumpMemTrackingStats %d %d
 OUT OF MEMORY
 (iub & (m_nSizeWithStack-1)) == 0
 pAllocTracker->m_uSentinel == 0xaa110ced
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier0/memblockhdr.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/memblockhdr.h
 pLeft->m_iStackPC <= V_ARRAYSIZE(pLeft->m_StackPC)
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/minidump.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/minidump.cpp
 Someone called SetWritingMinidump without holding the minidump lock.
 Someone called ClearWritingMinidump without holding the minidump lock.
 !g_pCrashMemoryReserve
@@ -543,29 +543,29 @@ CreateInterface
 steamwebhelper
 Steam Helper
 cefwebhelper
-Mar  6 2024
-12:26:39
+Mar  7 2024
+09:28:05
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 MainThrd
 pthread_setname_np
 exec 
 /bin/sh
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/threadtools.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/threadtools.cpp
 tid(%u) pthread_key_create failed: %s
 tid(%u) burning pthread_key_t == 0 so we never use it
 Bad thread local: Get
 Failed to set thread local value
 Bad thread local: Set
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/validator.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/validator.cpp
 CValidator : too many memory nodes to store, try again with a higher threshold value
 NULL != m_pValObjectCur
  GiB
  MiB
  KiB
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/valobject.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/valobject.cpp
 NULL == pValObjectPrev->m_pValObjectNext
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/vprof.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/vprof.cpp
 !g_VProfile
 pszName
 Root
@@ -594,7 +594,7 @@ m_vecNodeMemBlocks.size() == 1 && block.m_iCurIndexToUse == 1
 m_pBudgetGroups
 eGroup < VPROF_BUDGETGROUP_MAX
 No room for new profile in vprof thread profile list, grow MAX_THREADS_TO_VPROF_AT_ONCE
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier0/vprof.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/vprof.h
 m_nRecursions > 0
 allocator<T>::allocate(size_t n) 'n' exceeds maximum supported size
 16CBreakpadFactory
@@ -946,11 +946,19 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-#Ud|
-#dSW_
-TAHu
-v'/*
-9C]Y
+Y9*E
+:WHC
+Hh}6
+GI"qF!
+4fn1
+N*Vx.
+;b@4
+\il\
+YIjb
+.xutK
+uJiu
+I:LJ
+"9:G
 1T{B
 subject.OU
 MXGJJ98X76
@@ -1009,12 +1017,12 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240306202700Z0/
-nF_z
-{f7C
+240307172829Z0/
+ 8Ol
+RAci
 1/0-
-nF_z
-{f7C
+ 8Ol
+RAci
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -1022,14 +1030,18 @@ nF_z
 	<key>cdhashes</key>
 	<array>
 		<data>
-		OwrDbkZfesfczw7kp8AD00dr+pM=
+		OE9s2eFijUDIxdmFpG3todpyXvU=
 		</data>
 	</array>
 </dict>
 </plist>
-%	#r
-UR)h
-20240306202707Z0
+P^KCEc&
+Lt S
+6piD
+N&LBW
+5a/p
+J	+|
+20240307172841Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
@@ -1089,10 +1101,11 @@ uu!1
 Apple Certification Authority1
 Apple Inc.1
 _+0	
-240306202707Z0#
-7M+8\W0+
-O5>AA
-RZ0d
+240307172841Z0#
+>V6!
+-Om	o
+d;#tp
+MR;S
 __TEXT
 __text
 __TEXT
@@ -1717,7 +1730,6 @@ Config-*
 Uploading pending dumps
 %s/%s
 Uploaded %d pending dumps
-%lld
 SteamID:  %s, universe %s
 breakpadUtilities.dylib
 /../Frameworks/Breakpad.framework/Resources
@@ -1740,12 +1752,13 @@ pid %d != %d, clearing client_port = %d, server_port = %d
 pid %d != %d, re-initing before send; client_port = %d, server_port = %d
 StopJob
 pid %d != %d, skipping dealloc of client_port = %d, server_port = %d
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlvector.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlvector.h
+(&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
 crashhandler001
 crashhandler002
 crashhandler003
 crashhandler004
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vstdlib/osversion.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/osversion.cpp
 Invalid macOS version %d.%d.%d
 unknown
 /System/Library/Frameworks/OpenGL.framework/OpenGL
@@ -1758,7 +1771,7 @@ CGLCreateContext
 CGLDestroyContext
 CGLGetParameter
 defaults read /System/Library/CoreServices/SystemVersion.plist ProductVersion
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vstdlib/strtools.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/strtools.cpp
 pStr != NULL
 pSearch != NULL
 maxLen == 0 || pDest != NULL
@@ -1769,29 +1782,29 @@ pFormat != NULL
 destCapacity != 0
  bytes
 %i%s
+%lld
 ppath
 V_RemoveDotSlashes failed for "%s".
 false
 maxLen <= INT_MAX
 checkLen >= 0
 argLen < 0x10000000u
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlstring.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlstring.h
 !pszString || pszString[nChars] == '\0'
-(&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/fileio.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/fileio.cpp
 %s%c.temp_write_%x
 %s%c%s
 CPathString
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/utlbuffer.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlbuffer.cpp
 info.m_pReplacementString == 0
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/utlmemory.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlmemory.cpp
 nSizeOfType > 0
 nGrowSize >= 0
 m_nAllocationCount >= 0
 nBytesItem is %zu in UtlMemory_CalcNewAllocationCount
 num > 0
 CUtlString::SetValue
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/utlstring.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlstring.cpp
 CUtlString::VFormat
 Assertion failed: length > k_cchMaxString
 CUtlStringBuilder::InternalPrepareBuffer
@@ -1814,7 +1827,7 @@ Fatal assert; application exiting
 Fatal assert
 _ExitOnFatalAssert
 Failed to capture callstack
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/memblockhdr.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/memblockhdr.cpp
 ppFrames[iFrame] != NULL
 Assertion Failed: stack%2d: %s (%d): %s
 Stack:%2d    %s (%d): %s
@@ -1822,7 +1835,7 @@ Assertion Failed: stack%2d: %s
 Stack%2d: %s
 Assertion Failed: stack%2d: 0x%llX
 Stack%2d: 0x%llX
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/memstd.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/memstd.cpp
 ((size_t)(m_nLogicalBytesAllocated) % 8) == 0
 No tracked allocs currently in use. Total %d
 Tracked allocs currently in use. %d Total %d
@@ -1834,9 +1847,9 @@ DumpMemTrackingStats %d %d
 OUT OF MEMORY
 (iub & (m_nSizeWithStack-1)) == 0
 pAllocTracker->m_uSentinel == 0xaa110ced
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier0/memblockhdr.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/memblockhdr.h
 pLeft->m_iStackPC <= V_ARRAYSIZE(pLeft->m_StackPC)
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/minidump.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/minidump.cpp
 Someone called SetWritingMinidump without holding the minidump lock.
 Someone called ClearWritingMinidump without holding the minidump lock.
 !g_pCrashMemoryReserve
@@ -1848,21 +1861,21 @@ CreateInterface
 steamwebhelper
 Steam Helper
 cefwebhelper
-Mar  6 2024
-12:26:41
+Mar  7 2024
+09:28:05
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 MainThrd
 pthread_setname_np
 exec 
 /bin/sh
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/threadtools.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/threadtools.cpp
 tid(%u) pthread_key_create failed: %s
 tid(%u) burning pthread_key_t == 0 so we never use it
 Bad thread local: Get
 Failed to set thread local value
 Bad thread local: Set
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/validator.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/validator.cpp
 CValidator : too many memory nodes to store, try again with a higher threshold value
 NULL != m_pValObjectCur
 console
@@ -1870,9 +1883,9 @@ console
  MiB
  KiB
 %%.%if%s
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/valobject.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/valobject.cpp
 NULL == pValObjectPrev->m_pValObjectNext
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/vprof.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/vprof.cpp
 !g_VProfile
 pszName
 Root
@@ -1901,7 +1914,7 @@ m_vecNodeMemBlocks.size() == 1 && block.m_iCurIndexToUse == 1
 m_pBudgetGroups
 eGroup < VPROF_BUDGETGROUP_MAX
 No room for new profile in vprof thread profile list, grow MAX_THREADS_TO_VPROF_AT_ONCE
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier0/vprof.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/vprof.h
 m_nRecursions > 0
 allocator<T>::allocate(size_t n) 'n' exceeds maximum supported size
 init
@@ -2290,20 +2303,18 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-4f<G
-#$"h
-bg0{
-y>J&
->Cz1
-tvLKJu
-WXg!
-0)M~
-S-|N
-`=t(C
-*;@=W
-NU$"
-)VKR
->z1"
+/q/w
+0SAL
+ef%pN
+7!&[
+$E&)R
+^zi`
+]g,o`
+ZA,w
+RJ3k6Ev)T
+&ekf
+O9[6
+7l38
 subject.OU
 MXGJJ98X76
 Apple Inc.1&0$
@@ -2361,7 +2372,7 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240306202700Z0/
+240307172829Z0/
 1/0-
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
@@ -2370,12 +2381,14 @@ Apple Inc.1
 	<key>cdhashes</key>
 	<array>
 		<data>
-		g2MXMjOrOI3810SYGOoEp5NLzyo=
+		tH5/AXBP3jI/kU5HZpOmEhRoiV8=
 		</data>
 	</array>
 </dict>
 </plist>
-20240306202707Z0
+Ki^V
+ u'@
+20240307172841Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
@@ -2435,9 +2448,12 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240306202707Z0#
-cA.?h
-=#dh
+240307172841Z0#
+gD:9VT
+_1b@)i
+ymnv
+NK/f
+bBwR
 __TEXT
 __text
 __TEXT
@@ -2502,8 +2518,8 @@ cS9@
 h&B)
 (	.9
 T@SE
-@9e-
-@9X-
+@9p-
+@9c-
 Thjv8H
 h(8*
 QiJh8?
@@ -2550,7 +2566,6 @@ ii8J
 <l9@
 +ih8J	
 T+	@
-<9@~
 @9_q
 jt8 
 	5V9i
@@ -2630,13 +2645,13 @@ pid %d != %d, clearing client_port = %d, server_port = %d
 pid %d != %d, re-initing before send; client_port = %d, server_port = %d
 StopJob
 pid %d != %d, skipping dealloc of client_port = %d, server_port = %d
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlvector.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlvector.h
 (&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
 crashhandler001
 crashhandler002
 crashhandler003
 crashhandler004
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vstdlib/osversion.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/osversion.cpp
 Invalid macOS version %d.%d.%d
 unknown
 /System/Library/Frameworks/OpenGL.framework/OpenGL
@@ -2649,7 +2664,7 @@ CGLCreateContext
 CGLDestroyContext
 CGLGetParameter
 defaults read /System/Library/CoreServices/SystemVersion.plist ProductVersion
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vstdlib/strtools.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/strtools.cpp
 pStr != NULL
 pSearch != NULL
 maxLen == 0 || pDest != NULL
@@ -2667,22 +2682,22 @@ false
 maxLen <= INT_MAX
 checkLen >= 0
 argLen < 0x10000000u
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlstring.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlstring.h
 !pszString || pszString[nChars] == '\0'
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/fileio.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/fileio.cpp
 %s%c.temp_write_%x
 %s%c%s
 CPathString
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/utlbuffer.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlbuffer.cpp
 info.m_pReplacementString == 0
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/utlmemory.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlmemory.cpp
 nSizeOfType > 0
 nGrowSize >= 0
 m_nAllocationCount >= 0
 nBytesItem is %zu in UtlMemory_CalcNewAllocationCount
 num > 0
 CUtlString::SetValue
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/utlstring.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlstring.cpp
 CUtlString::VFormat
 Assertion failed: length > k_cchMaxString
 CUtlStringBuilder::InternalPrepareBuffer
@@ -2706,7 +2721,7 @@ Fatal assert; application exiting
 Fatal assert
 _ExitOnFatalAssert
 Failed to capture callstack
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/memblockhdr.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/memblockhdr.cpp
 ppFrames[iFrame] != NULL
 Assertion Failed: stack%2d: %s (%d): %s
 Stack:%2d    %s (%d): %s
@@ -2714,7 +2729,7 @@ Assertion Failed: stack%2d: %s
 Stack%2d: %s
 Assertion Failed: stack%2d: 0x%llX
 Stack%2d: 0x%llX
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/memstd.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/memstd.cpp
 ((size_t)(m_nLogicalBytesAllocated) % 8) == 0
 No tracked allocs currently in use. Total %d
 Tracked allocs currently in use. %d Total %d
@@ -2726,9 +2741,9 @@ DumpMemTrackingStats %d %d
 OUT OF MEMORY
 (iub & (m_nSizeWithStack-1)) == 0
 pAllocTracker->m_uSentinel == 0xaa110ced
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier0/memblockhdr.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/memblockhdr.h
 pLeft->m_iStackPC <= V_ARRAYSIZE(pLeft->m_StackPC)
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/minidump.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/minidump.cpp
 Someone called SetWritingMinidump without holding the minidump lock.
 Someone called ClearWritingMinidump without holding the minidump lock.
 !g_pCrashMemoryReserve
@@ -2740,29 +2755,29 @@ CreateInterface
 steamwebhelper
 Steam Helper
 cefwebhelper
-Mar  6 2024
-12:26:43
+Mar  7 2024
+09:28:06
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 MainThrd
 pthread_setname_np
 exec 
 /bin/sh
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/threadtools.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/threadtools.cpp
 tid(%u) pthread_key_create failed: %s
 tid(%u) burning pthread_key_t == 0 so we never use it
 Bad thread local: Get
 Failed to set thread local value
 Bad thread local: Set
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/validator.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/validator.cpp
 CValidator : too many memory nodes to store, try again with a higher threshold value
 NULL != m_pValObjectCur
  GiB
  MiB
  KiB
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/valobject.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/valobject.cpp
 NULL == pValObjectPrev->m_pValObjectNext
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/vprof.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/vprof.cpp
 !g_VProfile
 pszName
 Root
@@ -2791,7 +2806,7 @@ m_vecNodeMemBlocks.size() == 1 && block.m_iCurIndexToUse == 1
 m_pBudgetGroups
 eGroup < VPROF_BUDGETGROUP_MAX
 No room for new profile in vprof thread profile list, grow MAX_THREADS_TO_VPROF_AT_ONCE
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier0/vprof.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/vprof.h
 m_nRecursions > 0
 allocator<T>::allocate(size_t n) 'n' exceeds maximum supported size
 stringWithCString:encoding:
@@ -3174,14 +3189,19 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-%M#;1
-ZBy/
-{*m3
-?"&H
-No5wqn+L
-\M#J<
-LNW|
-gYRm
+xkWZW
+(A^]
+2{D!;
+P%n,]
+#L e43
+N;=g
+R,.~q
+jXcS
+$Cr1
+_ZJ 
+ab2O7
+w,Z~
+T}(7
 dW~in
 subject.OU
 MXGJJ98X76
@@ -3240,10 +3260,8 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240306202700Z0/
-9U(dh
+240307172829Z0/
 1/0-
-9U(dh
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -3251,34 +3269,37 @@ Apple Inc.1
 	<key>cdhashes</key>
 	<array>
 		<data>
-		AIiNrDra3hH3az/xLFQfyjlVKGQ=
+		+yXs1bEziB8YVyqZmlUKcyx5to4=
 		</data>
 	</array>
 </dict>
 </plist>
-{%LW
-!x@]PR
-20240306202707Z0
+m>F/
+[_NoP
+)nzE
+Q.%	
+20240307172841Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240208210517Z
-240321210516Z0B1
-Timestamp Signer NWK11
+240208205042Z
+240321205041Z0B1
+Timestamp Signer NWK21
 Apple Inc.1
-k,)y
-4Wqy
-.mK\c
-JyvjS
+ "Rj
+^GW*
+C.Kh
+V&(4[
+;CvC
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-Yr	jO
-q!'pI	
-}Qv_Ne
-=_Gp
+gJa.]
+U;*gP
+	kYz
+";2;j0
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -3317,8 +3338,8 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-_+0	
-240306202707Z0#
-Wr)7
-67x5r
-\7Pk
+240307172841Z0#
+ce{=l*
+|-	M
+xsAd
+Ax!h

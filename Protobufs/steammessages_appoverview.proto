@@ -41,6 +41,8 @@ enum EDisplayStatus {
 	k_EDisplayStatusCloudOutOfDate = 35;
 	k_EDisplayStatusTerminating = 36;
 	k_EDisplayStatusOwnerLocked = 37;
+	k_EDisplayStatusDownloadFailed = 38;
+	k_EDisplayStatusUpdateFailed = 39;
 }
 
 enum EAppCloudStatus {

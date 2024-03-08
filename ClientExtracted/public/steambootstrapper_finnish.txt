@@ -26,7 +26,7 @@
 "SteamBootstrapper_UpdateDownloading"			"Ladataan päivitystä (%bytes% / %size% kt)..."
 "SteamBootstrapper_UpdateExtractingPackage"	"Puretaan pakettia..."
 "SteamBootstrapper_UpdateInstalling"			"Asennetaan päivitystä..."
-"SteamBootstrapper_InstallVerify"				"Varmennetaan asennusta..."
+"SteamBootstrapper_InstallVerify"				"Vahvistetaan asennusta"
 "SteamBootstrapper_DownloadComplete"			"Lataaminen suoritettu."
 "SteamBootstrapper_PercentComplete"			"%percent% %% valmis"
 "SteamBootstrapper_NoNetwork"					"%appname%in täytyy olla online-tilassa päivitystä varten. Varmista verkkoyhteys ja yritä uudelleen."
@@ -39,7 +39,7 @@
 "SteamBootstrapper_OK"				"OK"
 "SteamBootstrapper_Cancel"			"Peruuta"
 "SteamBootstrapper_WindowTitle"			"%appname%"
-"SteamBootstrapper_Error_Title"			"%appname% - Vakava virhe"
+"SteamBootstrapper_Error_Title"			"%appname% – Vakava virhe"
 "SteamBootstrapper_Warning_Title"			"%appname% - Varoitus"
 "SteamBootstrapper_OperatingSystemNoLongerSupported" "%appname% ei ole enää tuettu käyttöjärjestelmäversiossasi."
 }

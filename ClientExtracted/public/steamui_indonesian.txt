@@ -158,7 +158,7 @@ Mohon tunggu sebentar."
 "SteamUI_CreatingAccount"	"Membuat akun..."
 
 "SteamUI_InstallServiceTitle" "Layanan Steam Bermasalah"
-"SteamUI_InstallServiceText" "Layanan Steam di perangkatmu membutuhkan perawatan.\nLayanan ini membantu Steam menginstal atau memperbarui game, mengaktifkan pendeteksi anti-cheat pada beberapa game dan mendukung layanan sistem lainnya.\nAkses administrator dibutuhkan untuk menginstal ulang layanan Steam."
+"SteamUI_InstallServiceText" "Layanan Steam di perangkatmu membutuhkan perawatan.\nLayanan ini membantu Steam menginstal atau memperbarui game, mengaktifkan pendeteksi anti-cheat pada beberapa game dan mendukung layanan sistem lainnya.\nAkses admin dibutuhkan untuk menginstal ulang layanan Steam."
 "SteamUI_InstallServiceOk" "Instal Layanan"
 "SteamUI_InstallServiceCancel" "Batal"
 
@@ -3162,7 +3162,7 @@ Agar %game% tetap dapat dimainkan, kamu harus menggunakan komputer lain atau men
 
 "SteamUI_InstallScript_Failed_Title" "Steam - Pengaturan Gagal"
 "SteamUI_InstallScript_Failed_Text" "Komponen sistem tidak dapat diinstal. Ketika menjalankan game ini 
-untuk pertama kalinya, kamu harus masuk ke Windows sebagai administrator. 
+untuk pertama kalinya, kamu harus masuk ke Windows sebagai admin. 
 Jika kamu melanjutkan, kamu mungkin akan mengalami eror saat menjalankan game."
 "SteamUI_InstallScript_Continue" "Tetap lanjutkan"
 
@@ -3491,7 +3491,7 @@ Buat Teman baru di Steam dengan mengirimkan hadiah ke kenalanmu."
 "SteamUI_GameRequires_NTFS_Detail"	"Game yang kamu instal membutuhkan drive dengan sistem file NFTS dan\ntidak dapat di instal dengan sistem file FAT32. Untuk informasi lebih lanjut, kunjungi\nartikel bantuan di bawah ini."
 "SteamUI_GameRequires_64BitOS_Detail"	"Game yang kamu instal membutuhkan versi Windows 64bit. Jika kamu tidak\nmemiliki PC seperti itu, silakan klik tautan di bawah ini untuk mempelajari cara meminta pengembalian dana."
 
-"SteamUI_SiteLicense_LockedDetail"	"Saat ini tidak ada lisensi yang tersedia untuk produk ini. Silakan kembali lagi nanti\nuntuk memeriksa ketersediaan atau memberi tahu administrator lokal."
+"SteamUI_SiteLicense_LockedDetail"	"Saat ini tidak ada lisensi yang tersedia untuk produk ini. Silakan kembali lagi nanti\nuntuk memeriksa ketersediaan atau memberi tahu admin lokal."
 
 "SteamUI_ValveSurvey_Summary_SteamHDUsedMB"	"Penggunaan Hard Disk Steam: %s1 MB"
 "SteamUI_ValveSurvey_GatheringSystemInformation"	"Mengumpulkan informasi sistem..."
@@ -3637,7 +3637,7 @@ Buat Teman baru di Steam dengan mengirimkan hadiah ke kenalanmu."
 "Steam_CannotInstallApp_Info"	"Steam gagal menginstal %game% (%error%)."
 
 "SteamUI_VideoPlayer_Title"	"Steam - Pemutar Video"
-"SteamUI_VideoPlayer_LaunchError"	"Terjadi kesalahan saat meluncurkan Steam Video Player"
+"SteamUI_VideoPlayer_LaunchError"	"Terjadi kesalahan saat meluncurkan Pemutar Video Steam"
 
 "SteamUI_Video360Player_Title"	"Eror - Steam 360 Video Player"
 "SteamUI_Video360Player_LaunchError"	"Steam 360 Video Player dibutuhkan untuk memutar video 360.\n\nKlik dua kali pada Steam 360 Video Player dalam kategori \"Alat\" di Perpustakaan Steam-mu untuk mulai menginstal."

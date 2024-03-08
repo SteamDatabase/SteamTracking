@@ -26,7 +26,7 @@
 "SteamBootstrapper_UpdateDownloading"			"Téléchargement : (%bytes% sur %size% Ko)"
 "SteamBootstrapper_UpdateExtractingPackage"	"Extraction du package..."
 "SteamBootstrapper_UpdateInstalling"			"Installation de la mise à jour..."
-"SteamBootstrapper_InstallVerify"				"Vérification de l'installation..."
+"SteamBootstrapper_InstallVerify"				"Vérification de l'installation…"
 "SteamBootstrapper_DownloadComplete"			"Téléchargement terminé."
 "SteamBootstrapper_PercentComplete"			"Progression : %percent% %%"
 "SteamBootstrapper_NoNetwork"					"%appname% doit être en ligne pour effectuer la mise à jour. Vérifiez votre connexion réseau puis réessayez."

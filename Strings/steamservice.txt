@@ -7,9 +7,15 @@ __TEXT
 @
 __stubs
 __TEXT
+~%%
+~%%
 __stub_helper
 __TEXT
+h+%
+h+%
 __gcc_except_tab__TEXT
+5%
+5%
 __const
 __TEXT
 __cstring
@@ -90,26 +96,26 @@ h
 8
 /usr/lib/libobjc.A.dylib
 &
+x*
 )
 0
 0
 ,
+a!
 Hi
 H=
-7!
-M%
-')
-;%
+<%
 )
 )
 )
-]
-$
+a
 Ic]
+9
 Hc
 $
 Hc
 Hc
+!
 0
 0
 AT=
@@ -120,6 +126,10 @@ AT=
 D
 @
 @
+o(
+;(
+(
+(
 (
 @
 Hc
@@ -153,15 +163,33 @@ IcE
 @
 @
 ]
-m'
+=#
+'
+'
 V
-&"
+'
+'
+'
+'
+'
+'
+'
+'
+'
+'
+'
+'
+'
+'
+'
 "
 "
 "
 =
-@!
-%&
+G!
+5!
+)
+&)
 =
 10CIPCServer
 10IIPCServer
@@ -1620,7 +1648,7 @@ m_Elements
 Force Steam to run on your primary CPU only
 IPC:%s
 Terminating m_ThreadClient, likely to crash down the line... but avoiding hang on exit
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/ipcserver.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/ipcserver.cpp
 Illegal character (\) in IPC name.
 error: InitIPC called on an initialized IPCServer with conflicting cross-process/session flag.
 error: IPCServer can't be cross user session but not cross process.
@@ -1648,29 +1676,31 @@ m_nEpollSet >= 0
 adding pipe event to the same waiter twice
 m_count > 0
 CPipeWaiter::BRemove(%d) -- not present
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/scheduledfunction.h
+!pszString || pszString[nChars] == '\0'
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/scheduledfunction.h
 m_pObj
 m_Func
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utllinkedlist.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utllinkedlist.h
 m_TotalElements != InvalidIndex()
 %s overflow!
 IsValidIndex(elem)
 IsInList(before)
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlrbtree.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlrbtree.h
 _IsValidIndex( elem, unNodeSize, pMemBase )
 _IsValidIndex( y, unNodeSize, pMemBase )
 Invalid index %u
 m_Memory
 %s-%x
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/pipes.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/pipes.cpp
 m_dwProcessID
 m_pSingleProcessPipe == NULL
 Accept returned true but returned a NULL pipe
 m_dwThreadID == ThreadGetCurrentId()
 CServerPipe::SerializeCallbacks()
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlvector.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlvector.h
 !pToCopy || (pToCopy + num <= Base()) || (pToCopy >= (Base() + Count()) )
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/processpipe_posix.cpp
+(&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/processpipe_posix.cpp
 bManualReset
 m_fds[1] != k_SOCKET_WRAPPER
 invalid name/address:port string provided to BSetIpPortFromName %s
@@ -1699,16 +1729,16 @@ Steam3Master
 SteamClientService
 127.0.0.1:57344
 m_Tree
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier0/tslist.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/tslist.h
 m_Count == 0
 pNode && pNode->Next == QueueEnd()
 Missing String for %s (%d)
 Unknown
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/SteamServiceClient/serviceengine.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/SteamServiceClient/serviceengine.cpp
 hSteamUser == 0
 !"Interface type not found"
 CServiceEngine
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/interfacemap_service.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/interfacemap_service.h
 Fencepost deserialize mismatch in %s::%s
 )
 ) =
@@ -1716,17 +1746,17 @@ Unknown IPC call %s::0x%x /+/ %s
 %u,
 0x%llX,
 ClientModuleManagerPool
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/SteamServiceClient/servicemodulemanagerasync.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/SteamServiceClient/servicemodulemanagerasync.cpp
 m_pWorkThread == NULL
 ClientModuleManagerThread
 eCallResult != k_ECallResultNone
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/cumulativetimer.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/cumulativetimer.h
 IsRunning()
 CWorkItemFunctionCall
 CWorkItemFunctionCall::ThreadProcess
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/refcount.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/refcount.h
 m_iRefs > 0 && m_iRefs < 0x1000000
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/SteamServiceClient/servicemodulemanagerbase.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/SteamServiceClient/servicemodulemanagerbase.cpp
 pModule->m_nLastResult != k_ECallResultNone
 %s/legacycompat/servicecall_%u.dll
 %s/legacycompat/servicecall_%u.in
@@ -1739,19 +1769,19 @@ pModule->m_hModule == NULL
 _runfunc
 vsrvmodule
 IsValidIndex( elem )
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/SteamServiceClient/serviceprocessmonitor.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/SteamServiceClient/serviceprocessmonitor.cpp
 m_activeProcessIdToImagePath.NextInorder( nNewIndex ) == nMapIndex
 !m_bIsInCallback
 !GetRefCount()
 pEventHeaders
 static_cast<int>( nStartEventIndex ) <= m_eventHeaders.Count()
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/bitstring.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/bitstring.h
 bitNum >= 0 && bitNum < this->Size()
 m_iRefs >= 0 && m_iRefs < 0x0ffffff
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlhashmap.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlhashmap.h
 CUtlHashMap::RemoveAt - Invalid index
 CUtlHashMap::RemoveAt - couldn't find bucket for item
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlpriorityqueue.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlpriorityqueue.h
 m_heap.IsValidIndex(index)
 SOFTWARE\Khronos\Vulkan
 resource\registrykeys.vdf
@@ -7293,7 +7323,6 @@ idx < ringbuf->len
 304
 400
 404
-500
 gzip, deflate
 accept-language
 accept-ranges
@@ -8443,7 +8472,7 @@ SHA1
 RSA-SHA1-2
 RSA-SHA1
 RSA-PSS
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vstdlib/commandline.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/commandline.cpp
 (int)(intp)m_hParam != -1
 m_bInitialized
 Parameter file '%s' not found, skipping...
@@ -8461,7 +8490,7 @@ m_vecParms[i]
 m_listCommandLineOption
 (elem == Count()) || IsValidIndex(elem)
 Not continuing coroutine due to g_bPreventCoroutineContinue, %s
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vstdlib/coroutine.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/coroutine.cpp
 GCoroutineMgr().IsValidCoroutine(hCoroutine)
 Coroutine_IsActive()
 (main)
@@ -8470,7 +8499,7 @@ m_cubSavedStack < k_cubMaxCoroutineStackSize
 m_pStackHigh
 m_pSavedStack
 m_VecCoroutineStack.Count() > 1
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vstdlib/debugstatssystem.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/debugstatssystem.cpp
 String pool bytes used %u, max %u, %u pools
 Total number of strings %u, longest string size %u, avg size %u
 Total of %u buckets with %u hash collisions
@@ -8479,12 +8508,12 @@ Bucket size : count
 nTotal number of strings %u, longest string size %u, avg size %u
 Leaked KeyValues (%u):
 %s (%u)
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vstdlib/keyvaluessystem.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/keyvaluessystem.cpp
 size < INT_MAX
 CKeyValuesSystem::AddStringToPool: key name too long (%u chars)
 CKeyValuesSystem::AddStringToPool: out of memory
 CKeyValuesSystem::AddStringToPool: running out of memory (%u bytes left)
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vstdlib/osversion.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/osversion.cpp
 Invalid macOS version %d.%d.%d
 /System/Library/Frameworks/OpenGL.framework/OpenGL
 Failed to load opengl framework!!!
@@ -8496,7 +8525,7 @@ CGLCreateContext
 CGLDestroyContext
 CGLGetParameter
 defaults read /System/Library/CoreServices/SystemVersion.plist ProductVersion
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vstdlib/strtools.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/strtools.cpp
 dest != NULL
 src != NULL
 count == 0 || s1 != NULL
@@ -8517,7 +8546,6 @@ destCapacity != 0
 .
 bytes
 GB
-MB
 KB
 %i%s
 %lld
@@ -8540,20 +8568,17 @@ p
 0123456789ABCDEF
 str != NULL
 prefix != NULL
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlstring.h
-!pszString || pszString[nChars] == '\0'
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlbuffer.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlstring.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlbuffer.h
 nBytes
-(&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
-%u
 %llu
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vstdlib/strtools_unicode.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/strtools_unicode.cpp
 invalid input pointer
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/bitstring.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/bitstring.cpp
 resizeNumBits >= 0
 !m_pInt
 GetInts()
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/convar.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/convar.cpp
 pName
 m_vecCallbacks.Count() == 0 || !callback
 m_pParent == this
@@ -8574,7 +8599,7 @@ m_p
 Key( i )
 Bad expression token: %c at %d in %s
 Bad expression token: %c %c
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/fileio.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/fileio.cpp
 flock LOCK_SH requested but file is not opened for reading, ignoring: %s
 flock %s %s failed. errno = %d
 LOCK_EX
@@ -8608,7 +8633,7 @@ cbActual < (uint32)nBufSizeWithTerminator
 CPathString
 .dylib
 %s/%s%s
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/interface.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/interface.cpp
 strlen(pchModuleName) + V_strlen(pModuleExtension) < MAX_UNICODE_PATH_IN_UTF8
 .cpl
 %s%s
@@ -8617,7 +8642,7 @@ strlen(pchModuleName) + V_strlen(pModuleExtension) < MAX_UNICODE_PATH_IN_UTF8
 ]:%u
 port
 ReadToken overflow
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/KeyValues.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/KeyValues.cpp
 "
 {
 KeyValues::RecursiveSaveToFile: TODO, missing code for TYPE_COLOR.
@@ -8666,7 +8691,7 @@ KeyValues Error: %s in file %s [offset: %d]
 (*
 *),
 Memory leak: mempool blocks left in memory: %d
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/mempool.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/mempool.cpp
 CMemoryPool::AddNewBlob: mode == GROW_NONE
 blobSize <= nMaxBlobSize
 pBlob
@@ -8674,14 +8699,14 @@ CMemoryPool::Alloc: ran out of memory
 k_nMemPoolMagic_Free == *(( (int *) returnBlock) - 1)
 k_nMemPoolMagic_InUse == *(( (int *) pMem) - 1)
 CMemoryPool
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/netadr.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/netadr.cpp
 loopback
 broadcast
 %i.%i.%i.%i
 %i.%i.%i.%i:%i
 Address too small!
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/netadr.h
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/utlbuffer.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/netadr.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlbuffer.cpp
 info.m_pReplacementString == 0
 Expected %lld but got %lld!
 pConv && pConv->GetDelimiterLength() > 0
@@ -8700,7 +8725,7 @@ a
 \
 '
 %.18g
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/utlmemory.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlmemory.cpp
 nSizeOfType > 0
 nGrowSize >= 0
 m_nAllocationCount >= 0
@@ -8709,12 +8734,12 @@ numElements >= 0
 nBytesItem is %zu in UtlMemory_CalcNewAllocationCount
 num > 0
 num >= 0
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/utlqueue.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlqueue.cpp
 IsPowerOfTwo( nNewCapacity )
 nPreSplit > 0 && nPreSplit + nPostSplit == nCount
 ( m_iHead & nNewCapacityMask ) == nNewCapacity - nPreSplit
 CUtlString::SetValue
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/utlstring.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlstring.cpp
 CUtlString::VFormat
 CUtlString::VAppendFormat
 Assertion failed: length > k_cchMaxString
@@ -8740,7 +8765,7 @@ Fatal assert; application exiting
 Fatal assert
 _ExitOnFatalAssert
 Failed to capture callstack
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/memblockhdr.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/memblockhdr.cpp
 ppFrames[iFrame] != NULL
 Assertion Failed: stack%2d: %s (%d): %s
 Stack:%2d    %s (%d): %s
@@ -8748,7 +8773,7 @@ Assertion Failed: stack%2d: %s
 Stack%2d: %s
 Assertion Failed: stack%2d: 0x%llX
 Stack%2d: 0x%llX
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/memstd.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/memstd.cpp
 ((size_t)(m_nLogicalBytesAllocated) % 8) == 0
 No tracked allocs currently in use. Total %d
 Tracked allocs currently in use. %d Total %d
@@ -8759,9 +8784,9 @@ DumpMemTrackingStats %d %d
 OUT OF MEMORY
 (iub & (m_nSizeWithStack-1)) == 0
 pAllocTracker->m_uSentinel == 0xaa110ced
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier0/memblockhdr.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/memblockhdr.h
 pLeft->m_iStackPC <= V_ARRAYSIZE(pLeft->m_StackPC)
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/minidump.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/minidump.cpp
 Someone called SetWritingMinidump without holding the minidump lock.
 Someone called ClearWritingMinidump without holding the minidump lock.
 !g_pCrashMemoryReserve
@@ -8773,12 +8798,13 @@ crashhandler003
 crashhandler002
 crashhandler.dylib
 CreateInterface
+%u
 steamwebhelper
 Steam Helper
 cefwebhelper
 1.0
-Mar  6 2024
-12:26:41
+Mar  7 2024
+09:28:05
 Jan
 Feb
 Mar
@@ -8798,12 +8824,12 @@ CatchAndWriteContext_t::Invoke with bogus void *ptr
 CatchAndWriteContext_t::Set w/o a function pointer!
 -chromeos
 /dev/urandom
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/platform_posix.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/platform_posix.cpp
 s_dev_urandom_fd >= 0
 urandom_result > 0 || ( urandom_result < 0 && errno == EINTR )
 MainThrd
 pthread_setname_np
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/threadtools.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/threadtools.cpp
 r
 Thread synchronization object is unuseable
 Semaphore name (%s) is longer than POSIX can handle, truncating.
@@ -8829,18 +8855,19 @@ Thread cannot be joined with self
 Probably deadlock or failure waiting for thread to initialize.
 CTSListBase: Misaligned list
 %d.%d.%d.%d:%d
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/validator.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/validator.cpp
 CValidator : too many memory nodes to store, try again with a higher threshold value
 NULL != m_pValObjectCur
 s
 console
 GiB
 MiB
+MB
 KiB
 %%.%if%s
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/valobject.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/valobject.cpp
 NULL == pValObjectPrev->m_pValObjectNext
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/vprof.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/vprof.cpp
 !g_VProfile
 pszName
 Avg Time/Frame (ms)
@@ -8900,20 +8927,20 @@ m_pBudgetGroups
 eGroup < VPROF_BUDGETGROUP_MAX
 No room for new profile in vprof thread profile list, grow MAX_THREADS_TO_VPROF_AT_ONCE
 WARNING: Disabling vprof spike dumping and stopping profile for thread %d - %s because of exceeded rate limit, try a higher threshold.
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier0/vprof.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/vprof.h
 m_nRecursions > 0
 m_pszName
 allocator<T>::allocate(size_t n) 'n' exceeds maximum supported size
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/crypto_digest_openssl.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/crypto_digest_openssl.cpp
 CCrypto::GenerateSHA1Digest
 pOutDigest
 SHA1_Init( &c )
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/crypto_rsa_openssl.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/crypto_rsa_openssl.cpp
 pubData
 rsaKey.IsValid()
 pubSignature
 CCrypto::RSAVerifySignature
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/crypto_textencode.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/crypto_textencode.cpp
 CCrypto::HexDecode
 pchData
 pDecodedData
@@ -8930,7 +8957,7 @@ NULL output buffer with non-zero size passed to Base64Decode
 CCrypto::Base64Decode: insufficient output buffer (up to n*3/4+2 bytes required)
 BEGIN
 END
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/keypair.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/keypair.cpp
 Key type %d doesn't know how to load from buffer
 PRIVATE KEY
 eKeyType == k_ECryptoKeyTypeRSAPublic
@@ -8938,17 +8965,17 @@ PUBLIC KEY
 %02d/%02d/%02d
 00:00:00
 01/01/00
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/stat.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/stat.cpp
 CStatT<T>::Update: called on class that was not initialized.
 m_iSampleBucketCurrent < m_cSampleBuckets
 m_iSampleBucketLast < m_cSampleBuckets
 @nIOCPThreadCount
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/completionportmanager.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/completionportmanager.cpp
 DispatchCompletedItem
 DispatchCompletedItem - error
 ulResult != 0
 CCompletionPortManager::IOCPWorkerThread: got 100 consecutive errors, last error %d (%s), IOCP thread aborting and exiting
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/completionportmanager_posix.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/completionportmanager_posix.cpp
 BStarted()
 !m_bDispatchStopped
 pCompletionData->pNext == NULL && pCompletionData->nPollFlags != 0
@@ -8962,7 +8989,7 @@ Pipe write failed
 domain
 version
 enums_clientserver.proto
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/enum_names.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/enum_names.cpp
 EUniverse
 china
 Invalid
@@ -8995,7 +9022,7 @@ optional
 cloud
 @bEnableFrameFuncOverageWarnings
 This turns on the spew in SPEW_MISC at level 4, still need to adjust spew levels to see it.
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/framefunction.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/framefunction.cpp
 eFrameType < k_EFrameTypeMax
 pchName
 V_strlen( pchName ) < V_ARRAYSIZE( m_rgchName )
@@ -9093,7 +9120,7 @@ trailers
 cache-control
 etag
 last-modified
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/iopollinghelpers_osx.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/iopollinghelpers_osx.cpp
 Unexpected thread race for CIOPollingHelper construction
 nStateFlags != 0
 m_watchTable.InvalidIndex() == m_watchTable.Find( socket )
@@ -9107,9 +9134,11 @@ m_vecIPFilterRangesV6
 120
 @nJobInteryieldMillisecondsLogThreshold
 80
+@nJobInteryieldMillisecondsSpewThreshold
+500
 @nJobNetSendsInsaneThreshold
 15000
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/job.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/job.cpp
 undefined
 this != g_pJobCur
 (unspecified)
@@ -9124,7 +9153,7 @@ CJobMgr::BFrameFuncRunNewJobsFromNetMessages
 CJobMgr::BFrameFuncDispatchCompletedWorkItems
 CJobMgr::m_WorkThreadPool
 CJobMgr::BFrameFuncRunSleepingJobs
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/jobmgr.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/jobmgr.cpp
 m_stackDoNotYieldGuards.Count() == 0
 CJobMgr -- Process Wait Detail Updates
 CJobMgr::BResumeYieldingJobs
@@ -9147,7 +9176,7 @@ http
 [
 @bEnableSpewThrottle
 @bEnableLogTearOff
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/logger.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/logger.cpp
 pLogInstance == sm_pLogInstance
 sm_cRef > 0
 sm_bShuttingDown
@@ -9265,9 +9294,9 @@ VALVE_CRYPTO_dbg_realloc
 VALVE_CRYPTO_dbg_free
 COpenSSLContext
 COpenSSLConnection
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/opensslwrapper.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/opensslwrapper.cpp
 OpenSSL random number system reports not enough entropy
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/platform_sockets_posix.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/platform_sockets_posix.cpp
 nBufferCount > %d not supported in %s
 AsyncSocketWrite
 pCompletion->type == IOTYPE_SEND || pCompletion->type == IOTYPE_UNBUFFEREDSEND
@@ -9276,7 +9305,7 @@ SteamBootstrapper_GetEUniverse
 GetClientLauncherType
 /registry.vdf
 registry
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/registry.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/registry.cpp
 Failed loading registry KV.
 Could not read existing registry file.
 Overwriting on-disk registry with newly created registry.
@@ -9298,13 +9327,13 @@ HKEY_LOCAL_MACHINE_WOW64_64
 HKLM64
 Library/Application Support/Steam
 HOME
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/clientdirectories.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/clientdirectories.h
 Unable to get home directory
 SteamUniverse
 SteamRealm
 China
 CBaseScheduledFunction
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/scheduledfunction.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/scheduledfunction.cpp
 Attempt to schedule '%s' %lldusec in the past
 CScheduledFunctionMgr::BFrameFuncRun
 pBaseScheduledFunction->m_iScheduledItem == scheduledItem.m_iScheduledFunction
@@ -9355,7 +9384,7 @@ client/UDPSocket/SentPacket
 client/UDPSocket/RecvPacket
 Internal error
 CWorkThread -- Sleep
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/workthreadpool.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/workthreadpool.cpp
 pszThreadName != NULL
 CWorkThreadPool::~CWorkThreadPool(): Thread pool %s shutdown incorrectly.
 0 == m_WorkThreads.Count()
@@ -9389,22 +9418,21 @@ m_cCurrentDepth > 0
 0
 0
 ,
+a!
 Hi
 H=
-7!
-M%
-')
-;%
+<%
 )
 )
 )
-]
-$
+a
 Ic]
+9
 Hc
 $
 Hc
 Hc
+!
 0
 0
 AT=
@@ -9415,6 +9443,10 @@ AT=
 D
 @
 @
+o(
+;(
+(
+(
 (
 @
 Hc
@@ -9448,33 +9480,56 @@ IcE
 @
 @
 ]
-m'
+=#
+'
+'
 V
-&"
+'
+'
+'
+'
+'
+'
+'
+'
+'
+'
+'
+'
+'
+'
+'
 "
 "
 "
 =
-@!
-%&
+G!
+5!
+)
+&)
 =
 +
-%
+Q%
+(
 !
+u#
 @
-*&
+Q&
 &
-9"
-1"
-"
-"
-"
-"
-"
-2$
-E!
-?!
+L%
 Q"
+"
+"
+"
+($
+!
+!
+!
+!
+!
+!
+!
+#
 @
 M9e
 @
@@ -9500,7 +9555,6 @@ AESNI-CBC+SHA256 stitch for x86_64, CRYPTOGAMS by <appro@openssl.org>
 @
 @
 AES for Intel AES-NI, CRYPTOGAMS by <appro@openssl.org>
-
 Pj
 ARj
 j
@@ -9811,6 +9865,7 @@ ChaCha20 for x86_64, CRYPTOGAMS by <appro@openssl.org>
 @
 @
 0
+"
 H=
 Ic]
 j
@@ -9829,7 +9884,7 @@ H
 
 
 
-d
+
 
 
 
@@ -9870,6 +9925,7 @@ SHA1 block transform for x86_64, CRYPTOGAMS by <appro@openssl.org>
 0
 @
 @
+q
 @
 d
 @
@@ -9897,14 +9953,14 @@ H=
 @
 @
 @
+Hc
+Ic
 0
 H=
 
 =
 @
 =*.*
-Hc
-Ic
 @
 @
 0
@@ -9929,7 +9985,6 @@ Ic
 0
 H=
 0
-2
 &
 @
 @
@@ -9937,17 +9992,16 @@ H=
 @
 0
 
-
 Hi
 E
-0
-0
-t
 
 Hc
 Hc
 Hc
 0
+0
+0
+!
 @
 @
 @
@@ -9961,5 +10015,4 @@ Hc
 @
 @
 @
-<
 Hi
