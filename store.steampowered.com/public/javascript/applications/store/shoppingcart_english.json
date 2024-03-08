@@ -165,5 +165,6 @@
     "Cart_GiftForNotice": "Purchase as a gift: %1$s",
     "Cart_LineItem_Add_Tooltip": "Add another copy of this item to your cart",
     "Cart_ErrorUpdating": "There was a problem updating your cart.",
-    "Cart_ErrorCode": "Error code: %1$s"
+    "Cart_ErrorCode": "Error code: %1$s",
+    "Cart_UserCountrySelector": "Country"
 }
