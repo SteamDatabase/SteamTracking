@@ -28124,6 +28124,8 @@
                             bMatchWidth: !0,
                             bFitToWindow: !0,
                             bDisablePopTop: !0,
+                            bNoFocusWhenShown: !0,
+                            bSkipFocusWhenReady: !0,
                           },
                         );
                       }
