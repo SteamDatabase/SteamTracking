@@ -46997,39 +46997,63 @@
       function P(e) {
         const { bAssetUploadOnly: t } = e,
           n = (0, a.fL)();
-        return l.createElement(
-          "div",
-          null,
+        return (
+          console.log("adil;", t),
           l.createElement(
             "div",
-            { className: w.EditCtn },
+            null,
             l.createElement(
               "div",
-              { className: d().PageTitle },
-              "Marketing Message - Asset Management",
-            ),
-            l.createElement("hr", null),
-            l.createElement(
-              "div",
-              { className: d().ColumnCtn },
+              { className: w.EditCtn },
               l.createElement(
                 "div",
-                { className: d().LeftCol },
-                Boolean(!t) && l.createElement(T, { oEditableMessage: n }),
-                l.createElement(G, { oEditableMessage: n }),
+                { className: d().PageTitle },
+                "Marketing Message - Asset Management",
               ),
-              l.createElement(k.C, {
-                oEditableMessage: n,
-                bAssetUploadOnly: t,
-              }),
+              l.createElement("hr", null),
+              l.createElement(
+                "div",
+                { className: d().ColumnCtn },
+                l.createElement(
+                  "div",
+                  { className: d().LeftCol },
+                  Boolean(!t) && l.createElement(T, { oEditableMessage: n }),
+                  l.createElement(L, { oEditableMessage: n }),
+                ),
+                l.createElement(k.C, {
+                  oEditableMessage: n,
+                  bAssetUploadOnly: t,
+                }),
+              ),
+              l.createElement("br", null),
             ),
-            l.createElement("br", null),
-          ),
+          )
         );
       }
       function T(e) {
         const t = (0, a.fL)(),
-          [n, r] = (0, l.useState)(
+          [n] = (0, i.SZ)(() => [t.GetInternalAssetURL()]);
+        return l.createElement(
+          "div",
+          { className: d().SectionCtn },
+          l.createElement(_.__, null, "Internal Assets Location"),
+          l.createElement(_.II, {
+            type: "text",
+            value: n,
+            placeholder: "enter fileserver location",
+            onChange: (e) => t.SetInternalAssetURL(e.currentTarget.value),
+            tooltip:
+              "Valve Only: Lets us refer to a folder on \\fileserver for communicating where we are keeping the assets for the event or a similar part event",
+          }),
+          l.createElement("br", null),
+          l.createElement("br", null),
+          l.createElement(N, { oEditableMessage: t }),
+          l.createElement(R, { oEditableMessage: t }),
+        );
+      }
+      function N(e) {
+        const t = (0, a.fL)(),
+          [n, i] = (0, l.useState)(
             (function (e) {
               if (e.BHasAnimatedAssets()) return "mm_animated_image";
               if ("featured_video" === e.GetCustomTemplate())
@@ -47037,8 +47061,7 @@
               return "mm_image";
             })(t),
           ),
-          [o] = (0, i.SZ)(() => [t.GetInternalAssetURL()]),
-          s = (0, l.useMemo)(
+          r = (0, l.useMemo)(
             () => [
               {
                 label: "Static Image",
@@ -47060,44 +47083,28 @@
             ],
             [],
           );
-        return l.createElement(
-          "div",
-          { className: d().SectionCtn },
-          l.createElement(_.__, null, "Internal Assets Location"),
-          l.createElement(_.II, {
-            type: "text",
-            value: o,
-            placeholder: "enter fileserver location",
-            onChange: (e) => t.SetInternalAssetURL(e.currentTarget.value),
-            tooltip:
-              "Valve Only: Lets us refer to a folder on \\fileserver for communicating where we are keeping the assets for the event or a similar part event",
-          }),
-          l.createElement("br", null),
-          l.createElement("br", null),
-          l.createElement(_.ry, {
-            label: "Maketing Message Display",
-            strClassName: (0, b.Z)(E().DropDownScroll),
-            rgOptions: s,
-            selectedOption: n,
-            onChange: (e) => {
-              switch (e.data) {
-                case "mm_image":
-                  t.SetAnimatedAssetsEnabled(!1), t.ClearCustomTemplate();
-                  break;
-                case "mm_animated_image":
-                  t.SetAnimatedAssetsEnabled(!0), t.ClearCustomTemplate();
-                  break;
-                case "mm_featured_video":
-                  t.SetAnimatedAssetsEnabled(!1),
-                    t.SetCustomTemplate("featured_video");
-              }
-              r(e.data);
-            },
-          }),
-          l.createElement(N, { oEditableMessage: t }),
-        );
+        return l.createElement(_.ry, {
+          label: "Maketing Message Display",
+          strClassName: (0, b.Z)(E().DropDownScroll),
+          rgOptions: r,
+          selectedOption: n,
+          onChange: (e) => {
+            switch (e.data) {
+              case "mm_image":
+                t.SetAnimatedAssetsEnabled(!1), t.ClearCustomTemplate();
+                break;
+              case "mm_animated_image":
+                t.SetAnimatedAssetsEnabled(!0), t.ClearCustomTemplate();
+                break;
+              case "mm_featured_video":
+                t.SetAnimatedAssetsEnabled(!1),
+                  t.SetCustomTemplate("featured_video");
+            }
+            i(e.data);
+          },
+        });
       }
-      function N(e) {
+      function R(e) {
         const { oEditableMessage: t } = e,
           [n, a, r] = (0, i.SZ)(() => [
             t.GetCustomTemplate(),
@@ -47137,7 +47144,7 @@
                 onChange: (e) =>
                   t.SetFeaturedVideoMP4Url(e.currentTarget.value),
               }),
-              l.createElement(R, {
+              l.createElement(G, {
                 strURL: a,
                 mimetype: "video/mp4",
                 extension: ".mp4",
@@ -47149,14 +47156,14 @@
                 onChange: (e) =>
                   t.SetFeaturedVideoWebMUrl(e.currentTarget.value),
               }),
-              l.createElement(R, {
+              l.createElement(G, {
                 strURL: r,
                 mimetype: "video/webm",
                 extension: ".webm",
               }),
             );
       }
-      function R(e) {
+      function G(e) {
         const { strURL: t, extension: n, mimetype: i } = e;
         if (!t || 0 == t.trim().length) return null;
         const r = !(0, a.V4)(t, n);
@@ -47192,7 +47199,7 @@
               ),
         );
       }
-      function G(e) {
+      function L(e) {
         const { oEditableMessage: t } = e,
           [n, a, o, m] = (0, i.SZ)(() => [
             t.GetRealm(),
@@ -47329,18 +47336,18 @@
                 l.createElement("span", null, "570px by 600px"),
                 " (.jpg,.png,.gif)",
               ),
-              l.createElement(x, {
+              l.createElement(M, {
                 oEditableMessage: t,
                 assetType: "ll_image",
               }),
-              l.createElement(L, { oEditableMessage: t }),
               l.createElement(B, { oEditableMessage: t }),
+              l.createElement(x, { oEditableMessage: t }),
             ),
           ),
           l.createElement(A.p, { oEditableMessage: t }),
         );
       }
-      function L(e) {
+      function B(e) {
         const { oEditableMessage: t } = e,
           [n] = (0, i.SZ)(() => [t.BHasAnimatedAssets()]);
         return n
@@ -47361,7 +47368,7 @@
                 null,
                 ".Webm 570px by 600px (required for Steam Client)",
               ),
-              l.createElement(x, { oEditableMessage: t, assetType: "webm" }),
+              l.createElement(M, { oEditableMessage: t, assetType: "webm" }),
               l.createElement("br", null),
               l.createElement(_.__, null, "MP4"),
               l.createElement(
@@ -47369,11 +47376,11 @@
                 null,
                 ".Mp4 570px by 600px (required for iOS)",
               ),
-              l.createElement(x, { oEditableMessage: t, assetType: "mp4" }),
+              l.createElement(M, { oEditableMessage: t, assetType: "mp4" }),
             )
           : null;
       }
-      function B(e) {
+      function x(e) {
         const { oEditableMessage: t } = e,
           [n] = (0, i.SZ)(() => [t.GetCustomTemplate()]);
         return "featured_video" != n
@@ -47395,7 +47402,7 @@
                 l.createElement("span", null, "570px by 600px"),
                 " (Video sits on top of this asset; .png/.jpg) ",
               ),
-              l.createElement(x, {
+              l.createElement(M, {
                 oEditableMessage: t,
                 assetType: "background",
               }),
@@ -47407,7 +47414,7 @@
                 l.createElement("span", null, "528px by 297px"),
                 " (localized video poster image; shown on top of video prior to play; .png/.jpg)",
               ),
-              l.createElement(x, { oEditableMessage: t, assetType: "poster" }),
+              l.createElement(M, { oEditableMessage: t, assetType: "poster" }),
               l.createElement("br", null),
               l.createElement(_.__, null, "Subtitles"),
               l.createElement(
@@ -47415,13 +47422,13 @@
                 null,
                 ".vtt/.srt format (include extension or mapping will fail)",
               ),
-              l.createElement(x, {
+              l.createElement(M, {
                 oEditableMessage: t,
                 assetType: "subtitles",
               }),
             );
       }
-      function x(e) {
+      function M(e) {
         const { oEditableMessage: t, assetType: n } = e,
           [a, r, s] = (0, i.SZ)(() => [
             t.GetAssetsObject(n),
