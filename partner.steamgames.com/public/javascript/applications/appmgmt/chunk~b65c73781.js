@@ -65557,7 +65557,7 @@
       }
       function At(e) {
         const { oEditableSpotlight: t } = e,
-          n = (0, u.useMemo)(() => ["spotlight_art"], []),
+          n = (0, u.useMemo)(() => ["spotlight_art", "old_spotlight_art"], []),
           a = (0, u.useMemo)(() => [Dt.IN.k_ESteamRealmGlobal], []),
           i = (0, u.useCallback)(
             (e, n, a, i, l, r, o) => {
@@ -65614,7 +65614,7 @@
               u.createElement(
                 "div",
                 null,
-                u.createElement("span", null, "306px x 350px"),
+                u.createElement("span", null, "306px x 260px"),
                 " (.jpg,.png,.gif)",
               ),
               u.createElement(wt, { oEditableSpotlight: t }),

@@ -140,7 +140,8 @@
             height: 600,
             rgAcceptableTypes: i,
           },
-          spotlight_art: { width: 306, height: 350, rgAcceptableTypes: n },
+          spotlight_art: { width: 306, height: 260, rgAcceptableTypes: n },
+          old_spotlight_art: { width: 306, height: 350, rgAcceptableTypes: n },
           marketingmessage_art: {
             width: 570,
             height: 600,
@@ -223,9 +224,9 @@
         bH: () => M,
         B3: () => U,
         wP: () => H,
-        dn: () => G,
+        dn: () => A,
         $Y: () => D,
-        sq: () => A,
+        sq: () => G,
         RQ: () => b,
         _L: () => C,
         z5: () => L,
@@ -275,8 +276,8 @@
         null,
       );
       new Set([9, 11, 20, 21, 22, 23, 24, 25, 26, 27, 31, 35]);
-      const G = 593110,
-        A = 39049601,
+      const A = 593110,
+        G = 39049601,
         b = 41316928,
         C = 4,
         D = 20;
@@ -2003,9 +2004,9 @@
       a.d(t, {
         FN: () => E,
         Fm: () => C,
-        S6: () => G,
+        S6: () => A,
         U8: () => b,
-        aN: () => A,
+        aN: () => G,
       });
       var n = a(85556),
         i = a(77936),
@@ -2026,7 +2027,7 @@
         f = a(19399),
         y = a(908);
       var E;
-      function G(e, t, a, n = !1) {
+      function A(e, t, a, n = !1) {
         if (a)
           for (let i of a) {
             if (n ? (0, d.$N)(e, t, i) : (0, d.FR)(e, t, i)) return i;
@@ -2039,7 +2040,7 @@
           (e.capsule_main = "_400x225"),
           (e.spotlight_main = "_1054x230");
       })(E || (E = {}));
-      class A {
+      class G {
         constructor() {
           (this.m_mapClanToImages = new Map()),
             (this.m_mapClanImageLoadPromises = new Map()),
@@ -2086,16 +2087,16 @@
           }
         }
         static GetExtensionString(e) {
-          return A.GetExtensionStringForFileType(e.file_type) || ".jpg";
+          return G.GetExtensionStringForFileType(e.file_type) || ".jpg";
         }
         static GetExtensionTypeFromURL(e) {
           return (0, y.qn)(e);
         }
         static GetHashAndExt(e) {
-          return e.image_hash + A.GetExtensionString(e);
+          return e.image_hash + G.GetExtensionString(e);
         }
         static GetThumbHashAndExt(e) {
-          return e.thumbnail_hash + A.GetExtensionString(e);
+          return e.thumbnail_hash + G.GetExtensionString(e);
         }
         AddClanImageDragListener(e) {
           -1 == this.m_vecClanImageDragListener.indexOf(e) &&
@@ -2274,8 +2275,8 @@
         }
         AsyncGetImageResolution(e, t, a, i, o) {
           return (0, n.mG)(this, void 0, void 0, function* () {
-            const n = t + A.GetExtensionString({ file_type: a }),
-              s = A.GenerateEditableArtworkURLFromHashAndExtension(e, n);
+            const n = t + G.GetExtensionString({ file_type: a }),
+              s = G.GenerateEditableArtworkURLFromHashAndExtension(e, n);
             return yield this.AsyncGetImageResolutionInternal(s, i, o);
           });
         }
@@ -2379,7 +2380,7 @@
                 width: s,
                 height: s,
               });
-            return u.image_hash + A.GetExtensionString(u);
+            return u.image_hash + G.GetExtensionString(u);
           });
         }
         BDoesClanImageFileExistsOnCDNOrOrigin(e, t, a, i) {
@@ -2423,7 +2424,7 @@
           let a = this.m_curLocImageGroup.primaryImage;
           return this.m_curLocImageGroup.localized_images[t]
             ? this.m_curLocImageGroup.localized_images[t]
-            : A.GenerateArtworkURLFromHashAndExtensions(e, A.GetHashAndExt(a));
+            : G.GenerateArtworkURLFromHashAndExtensions(e, G.GetHashAndExt(a));
         }
         GetLocalizedImageGroupForEditAsImgArray(e) {
           return this.GetAllLocalizedGroupImages();
@@ -2432,7 +2433,7 @@
           return (0, n.mG)(this, void 0, void 0, function* () {
             let t = this.m_curLocImageGroup.primaryImage,
               a = m.K.InitFromClanID(t.clanAccountID),
-              n = A.GetHashAndExt(t),
+              n = G.GetHashAndExt(t),
               i = [];
             for (let t = 0; t < 31; ++t)
               i.push(this.BDoesClanImageFileExistsOnCDNOrOrigin(e, a, n, t));
@@ -2441,7 +2442,7 @@
               for (let e = 0; e < 31; ++e)
                 o[e] &&
                   (this.m_curLocImageGroup.localized_images[e] =
-                    A.GenerateArtworkURLFromHashAndExtensions(
+                    G.GenerateArtworkURLFromHashAndExtensions(
                       a,
                       n,
                       E.full,
@@ -2454,7 +2455,7 @@
         SetLocalizedImageGroupAtLang(e, t, a) {
           this.m_curLocImageGroup &&
             (this.m_curLocImageGroup.localized_images[e] = a
-              ? A.GenerateArtworkURLFromHashAndExtensions(
+              ? G.GenerateArtworkURLFromHashAndExtensions(
                   t,
                   a,
                   E.full,
@@ -2467,9 +2468,9 @@
           let a = this.m_curLocImageGroup.primaryImage;
           if (a.image_hash == e) {
             let e = m.K.InitFromClanID(a.clanAccountID),
-              n = A.GetHashAndExt(a);
+              n = G.GetHashAndExt(a);
             this.m_curLocImageGroup.localized_images[t] =
-              A.GenerateArtworkURLFromHashAndExtensions(
+              G.GenerateArtworkURLFromHashAndExtensions(
                 e,
                 n,
                 E.full,
@@ -2486,10 +2487,10 @@
           );
         }
       }
-      (0, n.gn)([r.LO], A.prototype, "m_mapClanToImages", void 0),
-        (0, n.gn)([r.LO], A.prototype, "m_mapClanImageLoadState", void 0),
-        (0, n.gn)([r.LO], A.prototype, "m_curLocImageGroup", void 0);
-      const b = new A();
+      (0, n.gn)([r.LO], G.prototype, "m_mapClanToImages", void 0),
+        (0, n.gn)([r.LO], G.prototype, "m_mapClanImageLoadState", void 0),
+        (0, n.gn)([r.LO], G.prototype, "m_curLocImageGroup", void 0);
+      const b = new G();
       function C(e) {
         const t = m.K.InitFromClanID(e),
           a = (0, u.T)("useLoadClanImages"),
@@ -3210,7 +3211,7 @@
       window.g_CreatorHomeStore = h;
     },
     44174: (e, t, a) => {
-      a.d(t, { cA: () => E, j1: () => G, Jn: () => A });
+      a.d(t, { cA: () => E, j1: () => A, Jn: () => G });
       var n = a(85556),
         i = a(80751),
         o = a.n(i),
@@ -4347,15 +4348,15 @@
         (0, n.gn)([s.aD], E.prototype, "DeleteClanEvent", null),
         (0, n.gn)([s.aD], E.prototype, "RemoveGIDFromList", null),
         (0, n.gn)([s.aD], E.prototype, "FlushEventFromCache", null);
-      const G = new E();
-      function A(e, t) {
-        const [a, n] = (0, I.useState)(() => G.GetClanEventModel(t)),
+      const A = new E();
+      function G(e, t) {
+        const [a, n] = (0, I.useState)(() => A.GetClanEventModel(t)),
           i = (0, I.useMemo)(() => m.K.InitFromClanID(e), [e]);
         return (
           (0, I.useEffect)(() => {
             a ||
-              (G.Init(),
-              G.LoadPartnerEventFromClanEventGIDAndClanSteamID(
+              (A.Init(),
+              A.LoadPartnerEventFromClanEventGIDAndClanSteamID(
                 i,
                 t,
                 0,
@@ -4365,7 +4366,7 @@
           a
         );
       }
-      window.g_PartnerEventStore = G;
+      window.g_PartnerEventStore = A;
     },
     80445: (e, t, a) => {
       a.d(t, { G1: () => i, Sq: () => o });
