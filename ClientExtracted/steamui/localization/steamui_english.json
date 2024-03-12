@@ -4399,7 +4399,7 @@
     "ControllerBinding_CameraHorizonReset": "Reset Camera Horizon",
     "ControllerBinding_CameraHorizonReset_Title": "Reset Camera Horizon",
     "ControllerBinding_CameraHorizonReset_Desc": "Reset the camera to the Horizon by maxing out the pitch of the camera, wait for a frame, and then return the camera to the horizon. This action requires the Dots Per 360° setting to be calibrated in either Gyro to Mouse, or FlickStick modes. If the camera looks directly at the floor/ceiling, increase the Delay.",
-    "ControllerBinding_CameraHorizonReset_Desc2": "Send -%1$s°, then wait %2$sms, then send %3$s°",
+    "ControllerBinding_CameraHorizonReset_Desc2": "Send -%1$s°, then wait %2$sms (equivalent to %3$sfps), then send %4$s°",
     "ControllerBinding_CameraHorizonReset_DelayMS": "Delay",
     "ControllerBinding_CameraHorizonReset_ResetAngles": "Horizon Reset Angle",
     "ControllerBinding_SetLED_Color": "Pick Color",

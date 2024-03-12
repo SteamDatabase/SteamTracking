@@ -2,6 +2,8 @@ __TEXT
 
 __text
 __TEXT
+y
+y
 __stubs
 __TEXT
 __stub_helper
@@ -19,7 +21,7 @@ __TEXT
 __gcc_except_tab__TEXT
 __unwind_info
 __TEXT
-Xf
+Tf
 __DATA
 __nl_symbol_ptr
 __DATA
@@ -1126,6 +1128,8 @@ Force enable CEF accessibility features
 Disable touch input browser focus workaround
 -cef-disable-d3d11-video-decoder
 Disable the Windows D3D11VideoDecoder
+-cef-disable-site-isolation
+disables per-process site-isolation
 -dev
 -html-perf-monitor
 Draws html perf data
@@ -1178,6 +1182,7 @@ GetClientActualLauncherType
 --force-renderer-accessibility
 -disablejslogging
 -verbosejslogging
+--valve-enable-site-isolation
 "
 --proxy-server="%s"
 --proxy-bypass-list="localhost;127.0.0.1"
@@ -2424,25 +2429,28 @@ id
 @
 
 @
+6
 
+Q
+
+^
+-
 
 @
 Ic]
 Hc
 Ic
-v
-W
+s
+C
+`
 
-%
-;
-
-
-0
+(
 
 0
 
+0
 
-;
+
 Hi
 `
 0
@@ -2455,6 +2463,8 @@ AT=
 D
 @
 @
+
+
 
 @
 Hc
@@ -2525,3 +2535,4 @@ M9e
 0
 0
 0
+]

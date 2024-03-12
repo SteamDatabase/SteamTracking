@@ -312,6 +312,7 @@
  T SDL_AddGamepadMappingsFromRW
  T SDL_AddHintCallback
  T SDL_AddTimer
+ T SDL_AddVulkanRenderSemaphores
  T SDL_AllocateEventMemory
  T SDL_AtomicAdd
  T SDL_AtomicCompareAndSwap
@@ -1095,6 +1096,7 @@
  T SDL_atof
  T SDL_atoi
  T SDL_bsearch
+ T SDL_bsearch_r
  T SDL_calloc
  T SDL_ceil
  T SDL_ceilf
@@ -1172,6 +1174,7 @@
  T SDL_pow
  T SDL_powf
  T SDL_qsort
+ T SDL_qsort_r
  T SDL_realloc
  T SDL_round
  T SDL_roundf
@@ -1277,7 +1280,6 @@
  atanf
  atof
  atoi
- bsearch
  calloc
  cos
  cosf
@@ -1433,7 +1435,6 @@
  pthread_setspecific
  pthread_sigmask
  pthread_sigmask$UNIX2003
- qsort
  realloc
  rewind
  scalbn

@@ -17,10 +17,8 @@ __const
 __TEXT
 __objc_methname
 __TEXT
-@
 :
 T
-@
 :
 __objc_classname__TEXT
 __objc_methtype
@@ -30,8 +28,8 @@ __cstring
 __TEXT
 __unwind_info
 __TEXT
-XO>
-XO>
+hO>
+hO>
 __DATA
 ?
 ?
@@ -144,10 +142,12 @@ NG
 0
 @
 @
+P9
 @
 @
 @
 @
+E9
 $
 Hi
 Hi
@@ -160,7 +160,7 @@ _)
 %
 
 (
-y8
+<8
 ;
 '
 '
@@ -191,7 +191,6 @@ D
 @
 @
 :1
-7
 7
 7
 7
@@ -1673,6 +1672,8 @@ J
 45CClientMetrics_ContentDownloadResponse_Counts
 49CClientMetrics_ContentDownloadResponse_HostCounts
 44CClientMetrics_ContentDownloadResponse_Hosts
+steamdeck_stable
+chromeos_public_88ac3843c888c7adb9cd406fbac4ff7a7d2cde9b
 Unknown
 N16CCookieContainer11CCookieInfoE
 7CUtlMapI10CUtlStringP10CUtlVectorIN16CCookieContainer11CCookieInfoE10CUtlMemoryIS3_EEi22CDefCaselessStringLessE
@@ -2396,7 +2397,7 @@ ReLaunchCmdLine
 ClientLauncherType
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlqueue.h
 IsValidIndex( idx )
-Startup - updater built Mar  7 2024 09:30:18
+Startup - updater built Mar 11 2024 15:52:39
 Startup - Steam Client launched with: %s
 Shutdown
 no hosts found
@@ -2441,8 +2442,6 @@ steamdeck_
 steampal_
 steampal_stable_9a24a2bf68596b860cb6710d9ea307a76c29a04d
 chromeos_
-steamdeck_stable
-chromeos_public_88ac3843c888c7adb9cd406fbac4ff7a7d2cde9b
 Beta changed from %s to %s
 nMegaBytes
 #SteamBootstrapper_InsufficientDiskSpace
@@ -2688,8 +2687,8 @@ m_iRefs >= 0 && m_iRefs < 0x0ffffff
 #SteamBootstrapper_UpdatingSteam
 Updating Steam...
 Tahoma
-Mar  7 2024
-09:30:18
+Mar 11 2024
+15:52:39
 crashhandler004
 steam
 Steam Executable Crash
@@ -2786,7 +2785,7 @@ China
 %s/%s%s
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamexe/updateui.h
 ThreadInMainThread()
-09:30:16
+15:52:37
 [%3d%%] %s
 [----] %s
 [%3d%%] !!! Fatal Error: %s
@@ -10911,7 +10910,7 @@ steamwebhelper
 Steam Helper
 cefwebhelper
 1.0
-09:28:05
+15:50:26
 Jan
 Feb
 Mar
@@ -13349,14 +13348,18 @@ out of memory
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/zip_helpers.cpp
 n <= (size_t)INT_MAX
 file_ofs == pFile->GetBytesWritten()
+13:
 
-t3:
-|3:
+L3:
+^3:
+*_:
+|-:
 
-$_:
--_:
+_:
+4_:
+=_:
 0
-Q=
+a=
 /4
 0
 f9)'G
@@ -13365,10 +13368,12 @@ NG
 0
 @
 @
+P9
 @
 @
 @
 @
+E9
 $
 Hi
 Hi
@@ -13381,7 +13386,7 @@ _)
 %
 
 (
-y8
+<8
 ;
 '
 '
@@ -13412,7 +13417,6 @@ D
 @
 @
 :1
-7
 7
 7
 7
@@ -13472,7 +13476,6 @@ w.
 4
 4
 4
-@6
 !-
 !
 -
@@ -13486,10 +13489,11 @@ w.
 1
 1
 1
+1
 ,
 Y*
+a0
 *
-*0
 @
 M9e
 @
@@ -13535,8 +13539,10 @@ j
 1
 0
 0
+_.
 IcU
 E;e
+5,
 M)u
 =
 =
@@ -13861,10 +13867,6 @@ j
 $
 
 i+
-='
-3'
-$'
-!'
 '
 '
 '
@@ -13889,7 +13891,6 @@ H
 
 
 Hc
->
 (
 (
 (
@@ -14232,6 +14233,7 @@ Hc
 @
 @
 1
+a
 &
 %
 
@@ -14256,7 +14258,6 @@ P
 =a
 0
 Hi
-N
 Ic]
 $
 $

@@ -245,14 +245,12 @@ G$=XUY2~H=HYUV
 [=YUY2t
 =YVYU
 ^_[]
-=NV21t>=NV12t7=YV12t0
-=IYUVt$=UYVYuz
-XVYU
-P010
+=NV21tB=NV12t;=YV12t4
+=IYUVt(=UYVY
 YUY2
 YVYU
 UYVY
-P016
+P010
 ^_[]
 ^_[]
 ^_[]
@@ -938,10 +936,11 @@ NV12
 NV21
 UYVY
 ^_[]
-A=O016~R=P016tY=UYVYtR=YVYUtK
+A=XVYU
+K=P010tR=YUY2tK
 \^_[]
-=P010t
-=YUY2u
+=UYVYt
+=YVYUu
 =IYUVt
 =YV12u
 Z=NV12t
@@ -952,18 +951,14 @@ NV12t
 NV21
 RVQPRVS
 NV12
-O016~J
-P016tR
-UYVYtJ
-YVYUtB
-P010t
-YUY2u
-=XVYU
-U=P010tg=YUY2t`
-=YVYUt
-=UYVYt
-=P016
-09~8
+XVYU
+P010tG
+YUY2t?
+UYVYt
+YVYUu
+=YUY2t^=YVYUtW=UYVYtP1
+=P010
+09^8
 YV121
 VRQP1
 YV129Q
@@ -975,20 +970,16 @@ VRQP1
 ^_[]
 VRQP1
 ^_[]
-XVYU
-P010t
-YUY2t
+YUY2t!
+YVYUt
+UYVYt
+P010
 ^_[]
+YUY2t!
 YVYUt
 UYVYt
-P016
-XVYU
-P010t
-YUY2t
+P010
 ,^_[]
-YVYUt
-UYVYt
-P016
 =IYUVt
 =YV12ug
 =NV12t
@@ -1002,19 +993,15 @@ u'z%
 u#z!
 9A u
 ,^_[]
-XVYU
-P010
-YUY2t
-^_[]
-YVYU
-UYVY
-P016
-XVYU
-P010
 YUY2
 YVYU
+UYVYt
+P010
+^_[]
+YUY2t#
+YVYUt
 UYVY
-P016
+P010
 ^_[]
 ^_[]
 ^_[]
@@ -1041,19 +1028,18 @@ NV21
 OES 
 <^_[]
 ^_[]
-=NES ~
-=MV12~5=NV12t<=IYUVt5=YV12t.
-%=OES t,=NV21u
+=NES ~!=MV12~?=NV12tN=IYUVtG=YV12t@
+=OES 
+=NV21
 =OES 
 =IYUV
 =YV12
 =NV12
 =NV21
-A=O016~
-=P016t#=UYVYt
-=YVYUt
-=P010t
-=YUY2u
+A=XVYU
+Q=P010tX=YUY2tQ
+=UYVYt
+=YVYUu
 =YV12
 =IYUV
 =NV21
@@ -1067,24 +1053,20 @@ VRQPVR
 PPQV
 OES tE
 <^_[]
-XVYU
+YUY2t.
+YVYU
+UYVYt
 P010
-YUY2t
 YV121
 YV129Q
 <^_[]
-YVYU
-UYVY
-P016
 ^_[]
 ^_[]
-XVYU
-P010t
-YUY2t
-^_[]
+YUY2t!
 YVYUt
 UYVYt
-P016
+P010
+^_[]
 0^_]
 ^_[]
 ^_[]
@@ -1108,13 +1090,11 @@ NV21ta
 OES t
 NV21u
 L^_[]
-XVYU
-P010
-YUY2t 
-^_[]
+YUY2t;
 YVYU
-UYVY
-P016
+UYVYt)1
+P010
+^_[]
 ^_[]
 ^_[]
 t7PW
@@ -1134,42 +1114,35 @@ L^_[]
 H^_]
 ^_[]
 ^_[]
-vtPW
-vtPj
+vxPW
+vxPj
 ^_[]
 ^_[]
 ^_[]
 ^_[]
 <^_[]
-XVYU
+YUY2t
+YVYUt
+UYVYt
 P010
-YUY2
-YVYU
-UYVY
-P016
 ^_[]
 ,^_[]
-tOA9
+tRA9
 SSPV
 QPRV
 QPRV
 PQVW
 RQPS
 <^_[]
-QPRW
-XVYU
-P010
 YUY2
+YVYU
+UYVY
+P010
 WPSV
-XVYU
-P010
 YUY2
-YVYUt
+YVYU
 UYVY
-P016
-YVYUt
-UYVY
-P016
+P010
 tD93u@
 ^_[]
 H^[]
@@ -1179,41 +1152,33 @@ YV12t
 IYUV
 <^_[]
 WPSV
-=XVYU
-=P010t
 =YUY2t
 =YVYUt
 =UYVYt
-=P016
+=P010
 NV21t
 NV12
 <^_[]
 WPSV
-=XVYU
-=P010t
 =YUY2t
 =YVYUt
 =UYVYt
-=P016
+=P010
 ^_[]
-XVYU
-P010tD
-YUY2t<
-YVYUt
-UYVYt
-P016
+YUY2tX
+YVYUtP
+UYVYtH1
+P010
 PQRW
 ^_[]
 ~ptT1
 RQSW
-XVYU
-P010t
-YUY2t
+YUY2t.
+YVYUt&
+UYVYt
+P010
 QRPW
 ,^_[]
-YVYUt
-UYVY
-P016
 9rlt
 ^_[]
 ^_[]
@@ -1290,15 +1255,14 @@ NV12tm
 YV12t
 UYVYtA
 IYUVu
-XUY2~(
-HYUV
-YUY2
-YVYU
-NV21
-NV12
-YV12t
-UYVY
-IYUV
+=XUY2~%=HYUV
+@=YUY2
+=YVYU
+=NV21
+=NV12
+=YV12t
+=UYVY
+=IYUV
 ^_[]
 IYUVu
 YV12u
@@ -1308,7 +1272,7 @@ XV12
 NV21t
 NV12t
 IYUVt
-YV12u=
+YV12u>
 ^_[]
 0^_[]
 4^_[]
@@ -1469,6 +1433,12 @@ SWVP
 ^_[]
 ^_[]
 ^_[]
+^_[]
+x-VS
+x*VW
+^_[]
+^_[]
+^_[]
 @<5r_
 ^_[]
 ^_[]
@@ -1579,12 +1549,11 @@ l^_[]
 ^_[]
 @^_]
 ^_[]
-O016~
-P016t'
-UYVYt
-YVYUt
+XVYU
 P010t
-YUY2u
+YUY2t
+UYVYt
+YVYUu
 ^_[]
 ^_[]
 ^_[]
@@ -2047,19 +2016,17 @@ Wh"0
 ^_[]
 ^_[]
 ^_[]
-MV21
-O016
-XV12
-NV21
-NV12
-NES 
-HYUV
-P016
-YVYU
-YV12
-YUY2
-OES 
+O010
+XUY2
+MV12
 P010
+NV21
+HYUV
+YUY2
+YVYU
+NV12
+YV12
+OES 
 IYUV
 UYVY
 YUY2t
@@ -2148,7 +2115,6 @@ xY9E
 ^_[]
 QQRP
 ^_[]
-^_[]
 91vG
 ^_[]
 xX;z
@@ -2169,22 +2135,16 @@ uDB9
 ^_[]
 PVSW
 ^_[]
-XVYU
-P010t
-YUY2t
-^_[]
+YUY2t!
 YVYUt
 UYVYt
-P016
-^_[]
-v;U$
-XVYU
 P010
+^_[]
+^_[]
 YUY2
-u,WQ
-YVYUt
-UYVYt
-P016
+YVYU
+UYVY
+P010
 ^_[]
 u PP
 ^_[]
@@ -2218,10 +2178,10 @@ u+z)
 ,^_[]
  ^_]
 ,^_[]
-9wHtX@9
+9wHtS@9
 9VHu:
 9NHu
-tfy$
+tky$
 ,^_[]
 ^_[]
 K<@1
@@ -2274,9 +2234,11 @@ c<?1
 92t&
 91t#
 ^_[]
-tI;U
 ^_[]
 ^_[]
+^_[]
+^_[]
+#H8	H<
 ^_[]
 ^_[]
 ^_[]
@@ -2289,19 +2251,18 @@ tI;U
 ^_[]
 C;@u
 92t#
-XVYU
-P010t
-YUY2t
+YUY2t!
 YVYUt
 UYVYt
-P016
+P010
 ^_[]
  ^_]
-XV12
-NV21t
-NV12t
+MV12~
+NV12t"
 IYUVt
-YV12u 
+YV12t
+P010t
+NV21u 
 ^_[]
 XUY2~
 HYUV
@@ -2312,59 +2273,68 @@ NV12t&
 YV12t
 UYVYt'
 IYUVu
-=XUY2~%=HYUV
-@=YUY2
-=YVYU
-=NV21
-=NV12
-=YV12t
-=UYVY
-=IYUV
-=XVYU
-=YV12
-=YUY2
-=XUY2~%=HYUV
-@=YUY2
-=YVYU
-=NV21
-=NV12
-=YV12t
-=UYVY
-=IYUV
-=YVYUt
-=YUY2u[
-<^_[]
-=IYUV
+P010
+SVhP010
+WSVh
 XUY2
 HYUV
 YUY2
 YVYU
-NV21tm
-NV12te
-YV12t4
-UYVYtP
-IYUVu
-XUY2~7
-HYUV
-YUY2
-YVYU
-NV21t|
-NV12
-YV12
-IYUVtU
-UYVYua
-^_[]
-u$WS
-^_[]
-XUY2
-HYUV
-YUY2
-YVYUt}
 NV21
-NV12t2
-YV12t*
+NV12
+YV12t
+UYVYtg
+IYUV
+XUY2
+HYUV
+YUY2
+YVYU
 UYVY
+IYUV
+XUY2~"
+HYUV
+IYUVt.
+UYVY
+NV21
+NV12
+YV12u[
+P010
+YVYUt
+YUY2
+<^_[]
+=XUY2
+=MV12
+C=P010
+=NV21
+=HYUV
+J=YUY2
+=YVYU
+=NV12tf=YV12t6
+=UYVY
+=IYUVu
+=XUY2~:=HYUV
+p=YUY2
+=YVYU
+=NV21
+=NV12
+=YV12
+=IYUVty=UYVY
+^_[]
+}$P010t+
+}$P010
+u,Wh
+u,Wh
+^_[]
+XUY2
+HYUV
+YUY2
+YVYUt{
+NV21t6
+NV12t.
+YV12t&
+UYVYtC
 IYUVu
+1F9u
 =IYUVt
 =YV12
 YUY2
@@ -2372,27 +2342,34 @@ UYVY
 YVYU
 NV12
 |^_[]
-;E(u^
+T^_[]
+;E(uX
+;}$uM1
 =XUY2
+=MV12
+=P010
+=NV21
+XUY2
+MV12
+P010
+NV21
+HYUV
+YUY2
+YVYU
 =HYUV
 =YUY2
 =YVYU
-=XUY2~"=HYUV
-5=YUY2
-=YVYU
-=NV21t)=NV12t"=YV12t
-=UYVY
-=IYUV
-XV12
-NV21
-NV12tU
-=NV21
-=NV12
-=YV12
+NV12
+E$t(
+YV12t 
+UYVY
 IYUV
-YV12
-M4t/
-;E0t'
+=MV12~
+=NV12
+t(=IYUVt!=YV12t
+=P010
+=NV21
+;E0t%
 =XV12
 Q=NV21
 NV12
@@ -2404,57 +2381,62 @@ YV12
 NV21
 NV12
 IYUV
-=UYVYt0=IYUV
+=NV12t4=YV12t-
+=UYVY
+=IYUVu
 u4Ou
-u4Ju
-XV12
-NV21
-NV12
-IYUV
-YV12
-=XUY2
-=NV21
+=MV12
 =NV12
+=IYUVt
 =YV12
+u4Ou
+=P010
+=NV21
+XV12
+XVYU
+YV12
+YUY2
+=YUY2t
+=UYVYt
+=YVYU
+UYVY
+YVYU
+YUY2
+=YVYU
+=UYVY
 NV12
 IYUV
 YV12u=
 NV21
 NV12
 YV12u
+HYUV
+YUY2
+YVYU
+=YVYU
+=YUY2
+=UYVY
+=YUY2
+UYVY
+IYUVt.
+P010t!
+NV21t
+NV12t
+IYUV
 =YUY2t
-=IYUV
-YUY2t
-UYVYt
-YVYU
-=UYVY
+=UYVYt
 =YVYU
-=YUY2
-YVYU
-UYVY
-=HYUV
-=YUY2
-=YVYU
-YVYU
-YUY2
-UYVY
-YUY2
-=UYVY
-=IYUV
-YUY2t
-UYVYt
-YVYU
+PVWS
 NV12t
 NV21
-=YVYUt
-=YUY2
-XV12
-NV21t!
-NV12t
-IYUVt
-YV12
+YVYUt
+YUY2
+=MV12~
+=NV12
+t(=IYUVt!=YV12t
+=P010
+=NV21
 PVWS
-U$PS
 NV12t
 NV21
 |^_[]
@@ -2547,19 +2529,19 @@ u VQRWj
 u VQRWj
 ^_[]
 4X+u
-4X+u
-t^_[]
+<p+}
+p^_[]
 `^_[]
 4x+u
-4H+u
+4x+u
 t^_[]
-<G+}
-p^_[]
+<P+}
+t^_[]
 4x+u
 4H+u
+x^_[]
+<P+}
 t^_[]
-<X+}
-p^_[]
 U(;M
 D^_[]
 D^_[]
@@ -2579,6 +2561,7 @@ p^_[]
 h^_[]
 t^_[]
 d^_[]
+t^_[]
 USWV
 ^_[]
 USWV
@@ -3500,7 +3483,7 @@ fileExistsAtPath:
 fileSystemRepresentation
 SDL_RWFromFile(): No file or no mode specified
 Couldn't open %s
-%s is not a regular file
+%s is not a regular file or pipe
 size
 context
 Unknown value for 'whence'
@@ -3914,9 +3897,11 @@ misc5
 misc6
 mappingString
 hint:
+SDL_GAMECONTROLLER_USE_BUTTON_LABELS
 Couldn't parse GUID from %s
 default
 xinput
+hint:SDL_GAMECONTROLLER_USE_BUTTON_LABELS
 000000000000
 crc:
 none,*,
@@ -3925,7 +3910,7 @@ a:b0,b:b1,back:b4,dpdown:h0.4,dpleft:h0.8,dpright:h0.2,dpup:h0.1,leftshoulder:b9
 a:b0,b:b1,dpdown:h0.4,dpleft:h0.8,dpright:h0.2,dpup:h0.1,leftshoulder:b9,rightshoulder:b10,
 a:b0,b:b1,back:b4,dpdown:h0.4,dpleft:h0.8,dpright:h0.2,dpup:h0.1,leftshoulder:b9,lefttrigger:a4,rightshoulder:b10,righttrigger:a5,start:b6,x:b2,y:b3,
 a:b0,b:b1,back:b4,dpdown:h0.4,dpleft:h0.8,dpright:h0.2,dpup:h0.1,guide:b5,leftshoulder:b9,leftstick:b7,lefttrigger:a4,leftx:a0,lefty:a1,rightshoulder:b10,righttrigger:a5,start:b6,x:b2,y:b3,misc1:b11,
-a:b0,b:b1,dpdown:h0.4,dpleft:h0.8,dpright:h0.2,dpup:h0.1,guide:b5,rightshoulder:b10,righttrigger:a5,start:b6,misc1:b11,
+a:b0,b:b1,dpdown:h0.4,dpleft:h0.8,dpright:h0.2,dpup:h0.1,guide:b5,leftshoulder:b9,rightshoulder:b10,righttrigger:a5,start:b6,x:b2,y:b3,misc1:b11,
 a:b0,b:b1,back:b4,dpdown:h0.4,dpleft:h0.8,dpright:h0.2,dpup:h0.1,guide:b5,start:b6,x:b2,y:b3,
 a:b0,b:b1,back:b4,dpdown:b12,dpleft:b13,dpright:b14,dpup:b11,guide:b5,leftshoulder:b9,lefttrigger:a4,leftx:a0,lefty:a1,start:b6,x:b2,y:b3,
 back:b4,dpdown:h0.4,dpleft:h0.8,dpright:h0.2,dpup:h0.1,leftshoulder:b9,leftstick:b7,lefttrigger:a4,leftx:a0,lefty:a1,misc1:b11,paddle2:b13,paddle4:b15,
@@ -4090,7 +4075,6 @@ none,%s,
 %sa%u%s
 h%i.%i
 face:
-SDL_GAMECONTROLLER_USE_BUTTON_LABELS
 abxy
 bayx
 sony
@@ -4578,6 +4562,7 @@ Texture dimensions are limited to %dx%d
 colorspace
 SDR_white_point
 HDR_headroom
+SDL.internal.texture.parent
 SDL.texture.colorspace
 SDL.texture.SDR_white_point
 SDL.texture.HDR_headroom
@@ -4651,7 +4636,7 @@ w1_row
 w2_row
 SDL not built with camera support
 SDL_LEGACY_VERSION
-SDL-prerelease-3.0.0-3761-gfbe7301ab
+SDL-prerelease-3.0.0-3903-g16e0806ce
 macOS
 SDL assertion report.
 All SDL assertions between last init/quit:
@@ -5071,7 +5056,7 @@ SDLMessageBoxPresenter
 clicked
 @"NSWindow"
 initWithParentWindow:
-@12@0:4^{SDL_Window=^vI*^{SDL_Surface}iiiiiiiiiiIIfiiII{SDL_Rect=iiii}{SDL_Rect=iiii}iii{?=IIiiff^v}{?=IIiiff^v}f^{SDL_Surface}iiiiii{SDL_Rect=iiii}^?^vI^{SDL_WindowData}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}}8
+@12@0:4^{SDL_Window=^vI*^{SDL_Surface}iiiiiiiiiiIIfiiII{SDL_Rect=iiii}{SDL_Rect=iiii}iii{?=Iiiiff^v}{?=Iiiiff^v}f^{SDL_Surface}iiiiii{SDL_Rect=iiii}^?^vI^{SDL_WindowData}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}}8
 showAlert:
 NSThread
 isMainThread
@@ -5185,7 +5170,7 @@ setWindow:
 SDLOpenGLContext
 dirty
 {?="value"i}
-^{SDL_Window=^vI*^{SDL_Surface}iiiiiiiiiiIIfiiII{SDL_Rect=iiii}{SDL_Rect=iiii}iii{?=IIiiff^v}{?=IIiiff^v}f^{SDL_Surface}iiiiii{SDL_Rect=iiii}^?^vI^{SDL_WindowData}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}}
+^{SDL_Window=^vI*^{SDL_Surface}iiiiiiiiiiIIfiiII{SDL_Rect=iiii}{SDL_Rect=iiii}iii{?=Iiiiff^v}{?=Iiiiff^v}f^{SDL_Surface}iiiiii{SDL_Rect=iiii}^?^vI^{SDL_WindowData}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}}
 displayLink
 ^{__CVDisplayLink=}
 swapIntervalMutex
@@ -5195,8 +5180,8 @@ swapIntervalCond
 swapIntervalSetting
 swapIntervalsPassed
 movedToNewScreen
-v12@0:4^{SDL_Window=^vI*^{SDL_Surface}iiiiiiiiiiIIfiiII{SDL_Rect=iiii}{SDL_Rect=iiii}iii{?=IIiiff^v}{?=IIiiff^v}f^{SDL_Surface}iiiiii{SDL_Rect=iiii}^?^vI^{SDL_WindowData}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}}8
-^{SDL_Window=^vI*^{SDL_Surface}iiiiiiiiiiIIfiiII{SDL_Rect=iiii}{SDL_Rect=iiii}iii{?=IIiiff^v}{?=IIiiff^v}f^{SDL_Surface}iiiiii{SDL_Rect=iiii}^?^vI^{SDL_WindowData}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}}8@0:4
+v12@0:4^{SDL_Window=^vI*^{SDL_Surface}iiiiiiiiiiIIfiiII{SDL_Rect=iiii}{SDL_Rect=iiii}iii{?=Iiiiff^v}{?=Iiiiff^v}f^{SDL_Surface}iiiiii{SDL_Rect=iiii}^?^vI^{SDL_WindowData}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}}8
+^{SDL_Window=^vI*^{SDL_Surface}iiiiiiiiiiIIfiiII{SDL_Rect=iiii}{SDL_Rect=iiii}iii{?=Iiiiff^v}{?=Iiiiff^v}f^{SDL_Surface}iiiiii{SDL_Rect=iiii}^?^vI^{SDL_WindowData}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}}8@0:4
 cleanup
 T@"NSOpenGLPixelFormat",&,N
 SDL_OPENGL_LIBRARY
@@ -5244,7 +5229,7 @@ SDL_TRACKPAD_IS_TOUCH_ONLY
 setTrackpad_is_touch_only:
 setSwaplock:
 SDL_CocoaWindowData
-T^{SDL_Window=^vI*^{SDL_Surface}iiiiiiiiiiIIfiiII{SDL_Rect=iiii}{SDL_Rect=iiii}iii{?=IIiiff^v}{?=IIiiff^v}f^{SDL_Surface}iiiiii{SDL_Rect=iiii}^?^vI^{SDL_WindowData}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}},N
+T^{SDL_Window=^vI*^{SDL_Surface}iiiiiiiiiiIIfiiII{SDL_Rect=iiii}{SDL_Rect=iiii}iii{?=Iiiiff^v}{?=Iiiiff^v}f^{SDL_Surface}iiiiii{SDL_Rect=iiii}^?^vI^{SDL_WindowData}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}},N
 T@"NSWindow",&,N
 T@"NSView",&,N
 T@"NSMutableArray",&,N
@@ -5766,7 +5751,6 @@ SDL_PIXELFORMAT_YVYU
 SDL_PIXELFORMAT_NV12
 SDL_PIXELFORMAT_NV21
 SDL_PIXELFORMAT_P010
-SDL_PIXELFORMAT_P016
 SDL_PIXELFORMAT_EXTERNAL_OES
 SDL_PIXELFORMAT_UNKNOWN
 Unknown pixel format
@@ -5789,7 +5773,6 @@ Unable to lock destination surface
 Unable to lock source surface
 Surface has userdata, incompatible with properties
 SDL.surface.colorspace
-SDL.surface.maxCLL
 Surface doesn't have a colorkey
 Surfaces must not be locked during blit
 SDL_BlitSurfaceScaled(): src/dst
@@ -5935,6 +5918,8 @@ ProductVersion
 %","
 %",.
 "", 
+$*Tx
+$:Tx
 SDL_app
 GIF87a
  !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
@@ -5944,7 +5929,7 @@ GIF87a
 "3DUfw
 SBSAUAp(p
 `@0h`
-ASBXAXAXAXAXAXAXA`
+BXAXAXAXAXAXAXA`
 A`%B`/B
 RBSA\BSCSBTATATATATATATAXH
 SDRCYA
@@ -6228,7 +6213,6 @@ TBUAQ
 @_atanf
 @_atof
 @_atoi
-@_bsearch
 @_calloc
 @_cos
 @_cosf
@@ -6345,7 +6329,6 @@ A_dispatch_once_f
 @_pthread_setschedparam
 @_pthread_setspecific
 @_pthread_sigmask$UNIX2003
-@_qsort
 @_realloc
 @_rewind
 @_scalbn
@@ -6405,12 +6388,12 @@ _SDL_
 KJoystick
 TVulkan_
 lbsearch
-mexp
-ngetenv
+nexp
+ogetenv
 ohid_
-upow
-vqsort
-{wcs
+vpow
+wqsort
+|wcs
 reate
 aptureMouse
 ursorVisible
@@ -6428,6 +6411,7 @@ EventWatch
 GamepadMapping
 HintCallback
 Timer
+VulkanRenderSemaphores
 sFrom
 File
 omic
@@ -6447,7 +6431,7 @@ Lock
 WaitSemaphore
 Spinlock
 Mutex
-gRWLockFor
+hRWLockFor
 pdate
 bindAudioStream
 adObject
@@ -6460,7 +6444,7 @@ Properties
 pinlock
 urface
 litSurface
-roadcastCondition
+	roadcastCondition
 	indAudioStream
 Scaled
 	Unchecked
@@ -6597,7 +6581,7 @@ Display
 RenderOutputSize
 VideoDriver
 ThreadID
-gAudioDriver
+hAudioDriver
 CameraDriver
 Mode
 Orientation
@@ -6609,25 +6593,25 @@ Cursor
 Bounds
 ContentScale
 Name
-UsableBounds
+ UsableBounds
  Properties
 Point
-Rect
-Window
+ Rect
+ Window
 rror
  ventFilter
 ullscreenDisplayModes
  loatProperty
 amepad
 !lobal
-&rabbedWindow
+'rabbedWindow
 "Instance
 #Joystick
 $Mapping
 $Name
 &Vendor
 ppleSFSymbolsNameFor
-!xis
+"xis
 Axis
 "Button
 FromString
@@ -6636,13 +6620,13 @@ indings
 FromString
 "Label
 irmwareVersion
-"rom
+#rom
 InstanceID
 #PlayerIndex
 GUID
 #Mapping
 #Name
-#Type
+$Type
 $Vendor
 $layerIndex
 $roduct
@@ -6681,27 +6665,27 @@ InitialState
 irmwareVersion
 (rom
 InstanceID
-(PlayerIndex
+)PlayerIndex
 FromString
 )Info
 )String
 GUID
-)Name
-)Type
+*Name
+*Type
 *Vendor
 *layerIndex
 *roduct
 Version
-*layerIndex
-*owerLevel
++layerIndex
++owerLevel
 duct
 +perties
 Version
 From
 +Name
-+board
+,board
 Name
-+Scancode
+,Scancode
 Focus
 ,State
 ,emoryFunctions
@@ -6713,7 +6697,7 @@ Focus
 -State
 aturalDisplayOrientation
 .GamepadTouchpad
-.Joystick
+/Joystick
 /RenderDrivers
 /TouchFingers
 /VideoDrivers
@@ -6721,7 +6705,7 @@ aturalDisplayOrientation
 @berProperty
 CameraDrivers
 llocations
-.udioDrivers
+/udioDrivers
 Fingers
 Axes
 /Buttons
@@ -6740,14 +6724,14 @@ Path
 1erredLocales
 Display
 1SelectionText
-1WProperties
+2WProperties
 2lativeMouse
 3nder
 3vision
 6alGamepad
 AndLineIntersection
-2EnclosingPoints
-2Intersection
+3EnclosingPoints
+3Intersection
 3Union
 Float
 Float
@@ -6765,7 +6749,7 @@ lipRect
 4olorScale
 4iver
 BlendMode
-4Color
+5Color
 Float
 CommandEncoder
 5Layer
@@ -6777,7 +6761,7 @@ FromTexture
 cancode
 7urface
 9ystem
-9ilenceValueForFormat
+:ilenceValueForFormat
 tringProperty
 From
 7Name
@@ -6788,24 +6772,24 @@ Data
 8FromInstanceID
 8Instance
 8Type
-8Properties
+9Properties
 8Type
 8onPortableType
-8onPortableType
+9onPortableType
 AlphaMod
 9BlendMode
 9Properties
 lipRect
 9olor
-9Mod
-9space
+:Mod
+:space
 :Theme
 :exture
 :hread
 ;icks
 ;ouch
 AlphaMod
-:BlendMode
+;BlendMode
 ;ColorMod
 ;ScaleMode
 ;Properties
@@ -6822,7 +6806,7 @@ BordersSize
 =DisplayScale
 =Grab
 =KeyboardGrab
-=Opacity
+>Opacity
 ?Title
 lags
 =romID
@@ -6834,8 +6818,8 @@ aximumSize
 Grab
 >Rect
 arent
->ixel
->osition
+?ixel
+?osition
 ?roperties
 Density
 ?Format
@@ -6859,19 +6843,19 @@ SAudioDevice
 CameraDevice
 From
 Joystick
-AMouse
+BMouse
 ause
 BlayHapticRumble
 SremultiplyAlpha
 Haptic
 BAudioDevice
 eatures
-BromInstanceID
+CromInstanceID
 HapticRumble
 EIMDGetAlignment
 ZaveBMP
 Zcreen
-Zhow
+[how
 fignalCondition
 goftStretch
 gurfaceHas
@@ -6897,22 +6881,22 @@ Fint
 Autocenter
 FGain
 VgisterEvents
-VmoveTimer
-Vnder
+WmoveTimer
+Wnder
 WportAssertion
 YtoreWindow
 Haptic
-GAudioDevice
+HAudioDevice
 HapticEffect
 HGamepads
 hJoysticks
 hNVTexture
 hSensors
 hTexture
-hWindowSurface
-hYUVTexture
+iWindowSurface
+iYUVTexture
 IClipboard
-IEvent
+JEvent
 JMMX
 JNEON
 JRectIntersection
@@ -6932,15 +6916,15 @@ LWindow
 SubSystem
 Gamepad
 LJoystick
-LTablet
+MTablet
 MMouseHaptic
 Virtual
-LHaptic
+MHaptic
 Connected
 MEventsEnabled
 MObject
 NWAV
-Munction
+Nunction
 Reading
 NWriting
 ToSurface
@@ -6950,7 +6934,7 @@ OSet
 OutputFunction
 OPriority
 AllPriority
-OOutputFunction
+POutputFunction
 PPriority
 pRGB
 PximizeWindow
@@ -6962,7 +6946,7 @@ CreateView
 QDestroyView
 QGetLayer
 nimizeWindow
-QxAudioFormat
+RxAudioFormat
 RWill
 BecomeActive
 REnterBackground
@@ -6973,7 +6957,7 @@ STerminate
 epEvents
 SnConnected
 llEvent
-SstSemaphore
+TstSemaphore
 mpEvents
 TshEvent
 TtAudioStreamData
@@ -6983,30 +6967,30 @@ From
 Uclose
 Uread
 Utell
-Uwrite
-Uvprintf
+Vwrite
+Vvprintf
 printf
 ConstMem
 UFile
 UMem
-Uize
+Vize
 WFillRect
 XGeometry
 XLine
 YTexture
 YViewportSet
 Woordinates
-WipEnabled
+XipEnabled
 FromWindow
 XToWindow
 Float
 oint
-Xresent
+Yresent
 adPixels
 Rotated
 AssertionReport
-YHint
-YKeyboard
+ZHint
+ZKeyboard
 Gamepad
 ZJoystick
 Triggers
@@ -7016,7 +7000,7 @@ KeyboardShown
 GamepadEffect
 [JoystickEffect
 ssertionHandler
-[udio
+\udio
 lipboard
 \ursor
 Data
@@ -7032,7 +7016,7 @@ EventsEnabled
 ]Mapping
 WithPriority
 EventsEnabled
-]LED
+^LED
 ^PlayerIndex
 ^Virtual
 Axis
@@ -7046,11 +7030,11 @@ _ixelFormatPalette
 imarySelectionText
 _operty
 lativeMouseMode
-_nder
+`nder
 `Draw
 `LogicalPresentation
-`Scale
-`Target
+aScale
+aTarget
 lipRect
 `olorScale
 BlendMode
@@ -7061,8 +7045,8 @@ aiewport
 urface
 atringProperty
 AlphaMod
-aBlendMode
-aPalette
+bBlendMode
+bPalette
 bRLE
 lipRect
 bolor
@@ -7071,7 +7055,7 @@ bspace
 bext
 bhreadPriority
 InputRect
-bure
+cure
 AlphaMod
 cBlendMode
 cColorMod
@@ -7088,40 +7072,40 @@ fPosition
 fResizable
 fTitle
 ullscreen
-docusable
+eocusable
 Mode
 enputFocus
 aximumSize
 einimumSize
 dalFor
-euse
+fuse
 Grab
 fRect
 fhape
 Cursor
-fMessageBox
+gMessageBox
 gSimpleMessageBox
 gWindow
 SystemMenu
 ColorKey
 gRLE
 Active
-gShown
+hShown
 Reading
 hWriting
 Rects
 CreateSurface
 iGet
 iLoadLibrary
-iUnloadLibrary
+jUnloadLibrary
 InstanceExtensions
-iVkGetInstanceProcAddr
+jVkGetInstanceProcAddr
 jrpMouse
 ksInit
 Condition
 jEvent
 jSemaphore
-jThread
+kThread
 Timeout
 Timeout
 Timeout
@@ -7130,7 +7114,7 @@ kInWindow
 lcos
 lligned_
 alloc
-lfree
+mfree
 mprintf
 alloc
 neil
@@ -7142,16 +7126,16 @@ ble_scan
 pclose
 pdevice_change_count
 pfree_enumeration
-pget_
-pinit
+qget_
+qinit
 ropen
 rread
-rwrite
+swrite
 numerate
 pxit
 device_info
-qfeature_report
-qmanufacturer_string
+rfeature_report
+rmanufacturer_string
 rproduct_string
 rreport_descriptor
 rserial_number_string
@@ -7162,7 +7146,7 @@ _timeout
 nd_feature_report
 st_nonblocking
 conv
-stoa
+ttoa
 close
 sopen
 sstring
@@ -7171,15 +7155,15 @@ tcntrl
 tdigit
 tgraph
 tlower
-tspace
+uspace
 uupper
 uxdigit
 tpha
 rint
-tunct
+uunct
 ltoa
 uround
-utoa
+vtoa
 alloc
 vodf
 vmove
@@ -7187,35 +7171,35 @@ vset
 ealloc
 wound
 calbn
-wetenv
-wqrt
+xetenv
+xqrt
 xscanf
 nprintf
 wprintf
 xdup
-ystr
+zstr
 zupr
-xstr
+ystr
 ydup
 ~len
 ~str
 asecmp
 zk_r
-zrunc
+{runc
 lower
 {upper
 itoa
 {tf8str
 ltoa
 {toa
-{nlen
+|nlen
 asprintf
 nprintf
 |scanf
 |wprintf
-|dup
+}dup
 }str
-}tol
+~tol
 asecmp
 }len
 ~str
@@ -7223,7 +7207,7 @@ asecmp
 InstanceType
 ~Type
 oadGamepadMappings
-~easeCameraFrame
+easeCameraFrame
 OutputDevices
 CaptureDevices
 Stream
@@ -7287,16 +7271,16 @@ EGl#l
 {DZZ>>
 167:BB5:;>FFUfzEPPPb
 )..))&.((((((
-Y/3333433
+Z/3333433
 44444
-i1/t
-''S&}
+i1.t
+''S&z
 ,@'Nt
 **OO!!B=!n
 -$H6H
 '('Q
 W2DP
-~SL9==A	<<>	CCI	)1155//1133;;{FFM
+~SL9==A	<<>	CCI	)1155//1133;;{FFN
 KDnQRWHHH
 t*BB
 l)CCBCQ
@@ -7331,7 +7315,6 @@ gg`b
 (g/H
 EVze
 dS\NNfN
-	2 f
 |a1-%25-Y
 !!!!!!#+
 &gDeJ&
@@ -7341,7 +7324,7 @@ BuCC
 VbN=
 I				I
 Uih6		"'
-									
+								
 32				$#
 										C>						
 DD((DDDDDDD		Dc
@@ -7355,6 +7338,7 @@ ulkZ
 0I"3"
 z}]O
 4ZWa
+k>Wa
 Qr`aD
 ;]@:
 =Rx:: 
@@ -7380,6 +7364,7 @@ _SDL_AddGamepadMappingsFromFile
 _SDL_AddGamepadMappingsFromRW
 _SDL_AddHintCallback
 _SDL_AddTimer
+_SDL_AddVulkanRenderSemaphores
 _SDL_AllocateEventMemory
 _SDL_AtomicAdd
 _SDL_AtomicCompareAndSwap
@@ -8163,6 +8148,7 @@ _SDL_atanf
 _SDL_atof
 _SDL_atoi
 _SDL_bsearch
+_SDL_bsearch_r
 _SDL_calloc
 _SDL_ceil
 _SDL_ceilf
@@ -8240,6 +8226,7 @@ _SDL_modff
 _SDL_pow
 _SDL_powf
 _SDL_qsort
+_SDL_qsort_r
 _SDL_realloc
 _SDL_round
 _SDL_roundf
@@ -8580,7 +8567,6 @@ _atan2f
 _atanf
 _atof
 _atoi
-_bsearch
 _calloc
 _cos
 _cosf
@@ -8713,7 +8699,6 @@ _pthread_setcanceltype$UNIX2003
 _pthread_setschedparam
 _pthread_setspecific
 _pthread_sigmask$UNIX2003
-_qsort
 _realloc
 _rewind
 _scalbn
@@ -8772,143 +8757,125 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-Ej(.
-&qu=
-J>j9x
-Rr>-
-Wu/$
-BumW
- H58Q
-@|^H
-%\}/Z
-^'v'
-F,n-D
-F MLQ
- sv!
-HQcz2
-6s#g
-Vc+ibZ
-}YmA
-11BH
-O:|?l1
-&<>sT)
-=*^	y
-fB:r
-nvSn
-KmTz
-	:MJ
-(^"@
-q4Cx
-5W2l
-Y47m9
-cmoU
-{U"i[
-t3=.V"h
-.Z'Z
-'Gh@4
-Qh}%X
-tV8ju
-bbkm_
-Hk~T
-\n1{
-NNCy
-_Z;O
-.hY${
-&$et
-m2w5
-{(@T
-nJU2
-QlXm.
-0&w2^
-LG3$
-	uM`
-=4G0
-j;4Z
-z00d
-iT5qQ 
-dDj/p:
- WUJ
-j=\^E
-/Ow]
-<ELZu6[
-,QT	
-V1InH
-`ZQC
-uX1t&
-<,8+
-\?V;
-U	OJ
-MGb)
-j-7i
-1\w(
-Mm;n
-<D#my
-	JBjm
-).@[
-h5~jU
-PX2t
-poE5d!.M
-0r.r
-`>@L
-S_KoL
-R'T!
-$T5x8
->Xz3
-vJC// 
-UjR"I
-xpo2fY
-Z`Z>XA
-1$aK[;
-u{DB
-2K7L5
-RWt!
-v		 H
-dna.[^
-79	F
-{ME1U
-]Kz^
-+(IDL
-wie@
-@)P 
-P4?n
-iwb,
-Lsi"
-4{PDD
-iOKM1
-brn3H
-!	Dm
-HTtGfr
-QB@,
-)%p{
-;(p>
-P6)H6
-8hOV
-4Nhr
-QMN9yj
+10m:
+]I!T^
+PBWV	
+$WJjY
+Kg}Y+
+Z4@|
+SIMh
+#*WQ
+z$KRP"
+KM~6
+A*"*sj,^
+N;MYX
+@/+A
+|(u#_
+/ds[[
+@AUXA
+Ul)"
+!_e='
+4B)-F
+f${=
+ZbgP
+q7P6Ce
+[	bp
+m]T"
+0v9\]0
+*nWU!
+`LT{
+u=%.
+g&$tUM
+TlwX
+<w3@
+<e%O
+/^qu
+3&P>/nj
+e$'E
+>*2X
+"'Fm
+;\3A
+g){E%A
+z].pl
+-^]c[
+9NU5Q.c
+B2~L
+JM#|
+TCSt
+=?&2
+,gLN
+Q]KNt
+yUH3uD%
+`J:+
+&+b|
+XBzS`
+]D4#m
+GB/S
+PeI$C
+)Sbt
+h]u/
+c<@&V
+05|`k
+nbNe
+=z+p
+yKDH=
+r	E9o
+.U(F
+K[S&
+Cv){
+="#	*
+yCXW
+z$: 
+r^-^^fBkZ
+u-wU"}
+zvx"}
+>VLuX7
+BEo4
+UWa*
+1(R2
+HVI{
+4bPuW
+q8};
++'a$
+;qV6
+c4/0
+?I)2
+^h;_
+Szb=
+d[OU
+Osm+
+ eFw
+i(jSyX
+yQBuTx
+[;dEM
+b}$c
+v.<s
+G=d*
+4<yA
+I%ta
+Xlr6
+Om(i
+HVUi
+@`2#lu
+H(H$]
+&qn2U
+_7(7
+j\uwL
+O ,MN9yj
 d{++
-oJmG3K
-~S3c
-xrRt
-n~xJ
-qhM2T
-R3#3
-iD{4
-5Z	>
-H^7?
-<g18
-SU 	
-`}^f=
-5[ogb
-#TVt
-X-<l|E
-f/|~
-b-_BD
-bHQ6
-D?{b2
-RPnl
-+8W:X&
-WC9f
-E(|6
+HTCn
+)Qy#j
+yX%D`
+iEcIj)
+'^8o=H
+Q\`	{7
+izog_
+$}],
+Y-T7
+(MC)
+{w2,
+/4.9
+9HGt
 subject.OU
 MXGJJ98X76
 Apple Inc.1&0$
@@ -8966,8 +8933,10 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240307172823Z0/
+240311225039Z0/
+2-BbQ
 1/0-
+2-BbQ
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -8975,35 +8944,33 @@ Apple Inc.1
 	<key>cdhashes</key>
 	<array>
 		<data>
-		e/Y1wLj4TQfZ0IHaYm5vzZf6Mfw=
+		ThnPFSJhjkp284itAuINQv0yLUI=
 		</data>
 	</array>
 </dict>
 </plist>
-?Zqv
-3EzyG
-20240307172835Z0
+}F++
+20240311225101Z0
+:O\M>
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240208205042Z
-240321205041Z0B1
-Timestamp Signer NWK21
+240307210017Z
+240418210016Z0B1
+Timestamp Signer NWK11
 Apple Inc.1
- "Rj
-^GW*
-C.Kh
-V&(4[
-;CvC
+EQ'B
+~%nX
+e/f3
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-gJa.]
-U;*gP
-	kYz
-";2;j0
++~T5WHh
+y0<7f,H
+p>7,
+2[OU`
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -9042,9 +9009,12 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240307172835Z0#
-dhjW
-%vt!B
+:O\M>
+240311225101Z0#
+I!yW
+Z9p,^
+-]j2
+O,t~
 __TEXT
 __text
 __TEXT
@@ -9360,7 +9330,7 @@ AVSI
 }GHc
 AWAVAUATSH
 [A\A]A^A_]
-o%R$
+o%RX
 o$FD
 o,Ff
 AWAVAUATSH
@@ -9401,24 +9371,22 @@ AWAVAUATSH
 C(E1
 [A\A]A^A_]
 AWAVAUATSPI
-IcE@MceDL
-E<=MV12~ =NV12t
+HcC@LccDL
+C<=MV12~ =NV12t
 =IYUVt
 =YV12u
 =NV21t
-E<=XUY2~Q=HYUV
-d=YUY2t
+C<=XUY2~S=HYUV
+f=YUY2t
 =YVYU
 [A\A]A^A_]
-=NV21tA=NV12t:=YV12t3
-=IYUVt'=UYVYu~M
-E@Lc
-=XVYU
-(=P010
+=NV21tG=NV12t@=YV12t9
+=IYUVt-=UYVY
+C@Lc
 =YUY2
 =YVYU
 =UYVY
-=P016
+=P010
 F H;
 AVSI
 [A^]
@@ -10323,6 +10291,12 @@ AVSI
 [A^]
 AVSI
 [A^]
+AWAVAUATSPM
+[A\A]A^A_]
+AWAVAUATSPL
+[A\A]A^A_]
+AWAVATSI
+[A\A^A_]
 AWAVAUATSPH
 [A\A]A^A_]
 	H;M
@@ -10386,7 +10360,7 @@ AVSH
 AWAVAUATSH
 [A\A]A^A_]
 AWAVATSI
-uvLc=? 
+uvLc=
 t.Hc
 [A\A^A_]
 AVSI
@@ -10427,7 +10401,7 @@ AWAVSPH
 AWAVSPE1
 [A^A_]
 x Hc@
-twH9=
+twH9=AB
 t0H9
 AWAVSPH
 u<E1
@@ -10446,12 +10420,12 @@ udzb1
 [A\A]A^A_]
 AWAVAUATSH
 *J(A
-D95<
 [A\A]A^A_]
 AWAVATSH
 [A\A^A_]
 AWAVSPH
-t,E1
+thE1
+tiE1
 OI@L
 KI@M
 [A^A_]
@@ -10487,12 +10461,13 @@ AWAVAUATSPI
 L9!t
 [A\A]A^A_]
 AWAVAUATSH
-yL95[
-uGL9-N
+yL95
+uGL9-
 L9.t
 L9.t
 [A\A]A^A_]
 AWAVAUATSH
+L9=A
 [A\A]A^A_]
 u$z"
 [A\A]A^A_]
@@ -10550,8 +10525,8 @@ AWAVAUATSH
 [A\A]A^A_]
 AWAVATSA
 [A\A^A_]
-x*9=w=
-x#9=A=
+x*9=
+x#9=
 AWAVATSH
 D$0H
 D$0L
@@ -11247,7 +11222,7 @@ AWAVSPI
 AWAVSH
 [A^A_]
 AWAVAUATSH
- udI
+ ubI
 00000000H
 0000A
 03000000I
@@ -11550,12 +11525,11 @@ AWAVAUATSH
 [A\A]A^A_]
 [A^]
 AWAVAUATSPI
+D9-'
 [A\A]A^A_]
 AWAVATSH
 [A\A^A_]
 [A\A^A_]
-o%D?
-o-L?
 ~O0A
 [A\A^A_]
 tCH9
@@ -11627,7 +11601,6 @@ AWAVSPI
 [A^A_]
 AWAVAUATSPD
 [A\A]A^A_]
-	wuH
 AWAVAUATSH
 )C0H
 L98t
@@ -11676,27 +11649,22 @@ AWAVAUATSH
 AWAVAUATSH
 8[A\A]A^A_]
 AWAVAUATSH
-XVYU
-P010t&
-YUY2t
+YUY2t8
+YVYUt0
+UYVYt(1
+P010
 ([A\A]A^A_]
-YVYU
-UYVY
-P016
 AWAVAUATSH
-=XVYU
-=P010I
-=YUY2t
+=YUY2t*=YVYUI
+t#=UYVYt
+=P010
 PPAVATAWL
-YV12
+YV12@
 AWPARA
-AVASAT
+ATASAV
 AVASAWL
 PPSAWAR
 [A\A]A^A_]
-=YVYUI
-=UYVY
-=P016
 AWAVAUATSPA
 [A\A]A^A_]
 AWAVAUATSPH
@@ -11762,21 +11730,22 @@ D$`H
 D$hH
 D$pH
 FHE1
-YV12
+|@Ic
+YV12Ic
 IYUV
-NV12
-NV21A
+u>Ic
+NV12Ic
+NV21Ic
 UYVY
 8[A\A]A^A_]
 AWAVAUATSP
 [A\A]A^A_]
 AWAVAUATSH
-O016~Q
-P016tY
-UYVYtQ
-YVYUtI
-P010t
-YUY2u
+XVYU
+P010tQ
+YUY2tI
+UYVYt
+YVYUu
 D$0IcW Hc
 IYUVt
 YV12u#
@@ -11793,26 +11762,23 @@ NV12t
 NV21
 NV12
 x[A\A]A^A_]
-O016~J
-P016tR
-UYVYtJ
-YVYUtB
-P010t
-YUY2u
-AWAVAUATSH
 XVYU
-P010
-YUY2
-YVYUt
+P010tJ
+YUY2tB
 UYVYt
-P016A
-AVPARA
-IcD$
+YVYUu
+AWAVAUATSH
+YUY2t{
+YVYUts
+UYVYtkE1
+P010A
+AWPARA
 YV121
-AWSPL
+T$PM
+ATSPL
 YV129Q
-AWSASM
-IcD$
+ATSASM
+T$PA
 H[A\A]A^A_]
 AWAVAUATSH
 |$0L
@@ -11823,19 +11789,15 @@ AWAVAUATSH
 PARA
 ([A\A]A^A_]
 _(HcB
-XVYU
-P010t
-YUY2t
+YUY2t#
 YVYUt
 UYVYt
-P016@
+P010@
 H(LcX8Lc@0D
-=XVYU
-'=P010t
 =YUY2t
 =YVYUt
 =UYVYt
-=P016
+=P010
 AWAVAUATSPI
 =IYUVt
 =YV12u\A
@@ -11869,20 +11831,16 @@ D$,H
 d$8M
 X[A\A]A^A_]
 AWAVAUATSH
-XVYU
-P010t
 YUY2t
+YVYUt
+UYVYt
+P010@
 g Ic^
 [A\A]A^A_]
+YUY2t
 YVYU
 UYVY
-P016@
-XVYU
 P010
-YUY2
-YVYU
-UYVY
-P016
 AWAVSPI
 [A^A_]
 AWAVAUATSPI
@@ -11923,9 +11881,9 @@ T$0H
 	H;M
 [A\A]A^A_]
 AWAVAUATSH
-YV12
-IYUV
-NV12
+YV12Ic
+IYUVIc
+NV12Ic
 NV21H
 OES 
 ([A\A]A^A_]
@@ -11940,9 +11898,10 @@ AWAVAUATSH
 =YV12
 U$=NV12
 =NV21
-=O016~U=P016t\=UYVYtU=YVYUtN
-=P010t
-=YUY2u
+=XVYU
+N=P010tU=YUY2tN
+=UYVYt
+=YVYUu
 =YV12@
 =IYUV
 M IcW Hc
@@ -11954,21 +11913,20 @@ t)D9#u
 ([A\A]A^A_]
 ([A\A]A^A_]
 AWAVAUATSH
-XVYU
-P010t"
-YUY2t
+YUY2t4
+YVYUt,
+UYVYt$1
+P010
 ([A\A]A^A_]
-PAWL
-AWASAR
-IcD$
+PAWH
+PASAR
 YV121
-SAUAWPAR
-YV129Q
-IcD$
+SATH
+SPAR
+YV12H
+T$(A
+PAWh
 ([A\A]A^A_]
-YVYU
-UYVY
-P016
 AWAVAUATSH
 AVPAR
 ([A\A]A^A_]
@@ -11977,12 +11935,10 @@ AWAVAUATSH
 [A\A]A^A_]
 [A\A]A^A_]
 @ Lc
-XVYU
-P010t
-YUY2t
+YUY2t#
 YVYUt
 UYVYt
-P016@
+P010@
 AWAVSPL
 [A^A_]
 AVSH
@@ -12027,14 +11983,12 @@ NV21u
 X[A\A]A^A_]
 AWAVAUATSH
 A+t$
-XVYU
-P010tCA
-YUY2t:
+YUY2tWA
+YVYUtNA
+UYVYtE1
+P010
 [A\A]A^A_]
 Mcd$
-YVYU
-UYVY
-P016
 AWAVSPI
 [A^A_]
 AWAVAUATSPI
@@ -12084,14 +12038,12 @@ AWAVSPH
 AWAVSPI
 [A^A_]
 AWAVAUATSH
-8[A\A]A^A_]
+([A\A]A^A_]
 HcS H
-XVYU
+YUY2t 
+YVYUt
+UYVYt
 P010
-YUY2
-YVYU
-UYVY
-P016
 AVSH
 [A^]
 AWAVAUATSPE
@@ -12102,19 +12054,15 @@ D;0u
 AWAVAUATSH
 8[A\A]A^A_]
 HcC 
-XVYU
-P010
 YUY2
-XVYU
-P010
+YVYU
+UYVY
+P010A
 YUY2
+YVYU
+UYVY
+P010A
 AWPH
-YVYU
-UYVY
-P016A
-YVYU
-UYVY
-P016A
 t!H9
 AWAVATSA
 tHL9;uCH
@@ -12125,43 +12073,33 @@ AWAVAUATSH
 =YV12t
 =IYUV
 8[A\A]A^A_]
-XVYU
-P010t
-YUY2t	
+YUY2t&
 YVYUt
-UYVY
-P016A
+UYVYt
+P010A
 AWAVAUATSH
 =NV21t
 =NV12
 H[A\A]A^A_]
-XVYU
-P010t
-YUY2t	
+YUY2t&
 YVYUt
 UYVYt
-P016A
+P010A
 AWAVAUATSH
 [A\A]A^A_]
 IcT$
-XVYU
-P010tK
-YUY2tC
-YVYUt
-UYVYt
-P016@
+YUY2ta
+YVYUtY
+UYVYtQ1
+P010@
 AWAVSH
 ([A^A_]
 AWAVAUATSH
 ([A\A]A^A_]
 sxtb1
-=XVYU
-=P010t
-=YUY2t
+=YUY2t2=YVYUt+=UYVYt$E1
+=P010A
 ([A\A]A^A_]
-=YVYUt
-=UYVY
-=P016A
 AWAVSPH
 [A^A_]
 H9^pt	H
@@ -12305,23 +12243,18 @@ D$0D
 D$(E
 t2UH
 AWAVAUATSH
-=XUY2H
-=HYUV
-J=YUY2L
+=XUY2~"=HYUV
+==YUY2
 =YVYU
 =NV21
 =NV12
-=YV12I
-=UYVYL
+=YV12t
+=UYVY
 =IYUV
-IcD$
-IcT$
-W(Ic
-,BHc
-A;\$
-Ic\$
-IcT$
-8[A\A]A^A_]
+V(Hc
+,BLc
+([A\A]A^A_]
+([A\A]A^A_]
 AWAVAUATSH
 IYUVt!
 YV12t"
@@ -12333,9 +12266,8 @@ Lc#I
 =XV12
 =NV21t
 =NV12t
-O=IYUVt
-=YV12uAH
-W(E1
+G=IYUVt
+=YV12u9H
 AWAVAUATSH
 [A\A]A^A_]
 AWAVAUATS
@@ -12554,6 +12486,7 @@ P E
 0[A\A]A^A_]
 AWAVSPH
 [A^A_]
+=oi	
 [A^A_]
 WDA9
 WLA9
@@ -12637,6 +12570,7 @@ z IcR
 B Icr
 B Icr
 ([A\A]A^A_]
+=m>	
 O@A9
 GDA9
 OHA9
@@ -12694,6 +12628,7 @@ d$8M
 [A\A]A^A_]
 t4Lc
 AWAVSPA
+5U>	
 [A^A_]
 AWAVAUATSH
 ([A\A]A^A_]
@@ -12742,50 +12677,51 @@ r D
 r D	
 AWAVAUATSH
 [A\A]A^A_]
+YV12Hc
+IYUVHc
+NV12Hc
+NV21Hc
+P010
 AWAVAUATSP
 [A\A]A^A_]
 AWAVAUATSH
-MV21
-XV12
-NV21t<
-NV12t4
+MV21~1
+XUY2
+NV21
+NV12
+YV12
+P010uk
+YUY2tU
+IYUVt?
+UYVYuL
+t$ I
+MV12~B
+NV12tN
+IYUVtF
+YV12t>
+P010t
+NV21
+P010u/
 YV12t
-IYUV
-P010L
-NV12t
-NV21u&f
-~@tf
-AWPAR
-=MV12
-=NV12
-=IYUVt
-=YV12
-ARPAS
-ARPS
-X[A\A]A^A_]
-=P010t
-=NV21t
-ARPS
-X[A\A]A^A_]
+NV21u
+[A\A]A^A_]
+)F@H
+T$ I
+AWAVAUATSH
+AVASAR
+ASPS
+([A\A]A^A_]
 P010
-tkE1
-X[A\A]A^A_]
-AWAVAUATSH
-PAWAR
-YV12
-PAWAR
-YV12
-PARAWAS
-([A\A]A^A_]
-AUARAWAS
+SASPAR
 ([A\A]A^A_]
 AWAVAUATSH
-PARASAT
-[A\A]A^A_]
-[A\A]A^A_]
-AWAVAUATSPL
-l$ L
-AUARASP
+AVARATPAS
+8[A\A]A^A_]
+8[A\A]A^A_]
+AWAVAUATSH
+T$$D
+l$ H
+AUARPAVAS
 [A\A]A^A_]
 [A\A]A^A_]
 AWAVAUATSH
@@ -12805,20 +12741,18 @@ Lc#L
  L9e
 X[A\A]A^A_]
 AWAVAUATSH
-MV12~R
-NV12tf
-IYUVt
-YV12u~
-P010t(
-NV21u4
-t$ H
-T$|H
-T$|H
-T$|I
-	H;M
+=MV12~q
+=NV12
+=YV12
+=IYUV
+=P010t<
+=NV21t5A
+PATA
 [A\A]A^A_]
 AWAVAUATSH
 x[A\A]A^A_]
+AWAVAUATSPI
+[A\A]A^A_]
 AWAVSH
 [A^A_]
 AWAVAUATSPL
@@ -12829,35 +12763,30 @@ AVSI
 [A^]
 AWAVAUATSH
 [A\A]A^A_]
-AWAVAUATSH
-[A\A]A^A_]
-%x|	
-5@|	
-%B|	
+t|E1
+tuE1
+t9E1
+AWAVATSH
+[A\A^A_]
 AWAVAUATSH
 )F H
-5`{	
 [A\A]A^A_]
-5mz	
 AVSH
 [A^]
-=7y	
 AWAVAUATSH
-HcM I9
-}(AWL
+Hcu(I9
+}0AWL
 AWAV
 x[A\A]A^A_]
 AWAVAUATSH
 )F H
 [A\A]A^A_]
-5Wu	
 AWAVAUATSH
 )@ E1
 )@0A
 PASARj
 X[A\A]A^A_]
 AWAVATSH
-)B0L
 P[A\A^A_]
 AWAVSH
 ~9E1
@@ -12867,59 +12796,51 @@ AVSH
 AWAVATSH
 [A\A^A_]
 AWAVAUATSH
-D9 u
-D9xdu
-D9hhu
-E9&u
-E9~du
-E9nhu
-A9Vl
+t4D90u/D9h$u)D9x(u#9p,u
+H9H0u
+H9H8
+E94$u5E9l$$u.E9|$(u'A9t$,u H
+I9T$0u
+I9T$8
 )C A
 )F H
-5&m	
+T$,H
+T$@H
+T$8H
+T$0H
+T$@1
 RVAPAQP
-ATAR
-=Wi	
-)GPA
-)G@A
-)G0A
-)G A
-==f	
+ATAUL
 [A\A]A^A_]
 AWAVSPI
 [A^A_]
 [A^A_]
 AWAVSH
 X[A^A_]
-5dc	
+AWAVAUATSH
+[A\A]A^A_]
 AWAVAUATSPH
+twE1
 tpE1
 ~4E1
+tuE1
+t9E1
+[A\A]A^A_]
+AWAVAUATSPI
+5Y}	
 [A\A]A^A_]
 [A^]
 t#UH
-5Jw	
-=9w	
 AWAVATSA
 [A\A^A_]
 AWAVAUATSPH
-%?v	
-->v	
-=3v	
 ASAR
 [A\A]A^A_]
 AWAVAUATSH
-=Yt	
-=Ot	
-5.t	
 )G H
-=@s	
 [A\A]A^A_]
 AWAVAUATSH
 [A\A]A^A_]
-=~o	
-5jo	
-5bo	
 AVSH
 [A^]
 AWAVAUATSH
@@ -12951,7 +12872,6 @@ t[<0t\H
 [A^A_]
 AWAVAUATSPH
 [A\A]A^A_]
-56f	
 D$ L
 [A\A]A^A_]
 AWAVATSH
@@ -12966,7 +12886,6 @@ H97u
 AVSA
 [A^]
 AVSH
-=7c	
 [A^]
 AWAVAUATSH
 [A\A]A^A_]
@@ -12974,23 +12893,21 @@ AWAVAUATSH
 ([A\A]A^A_]
 ([A\A]A^A_]
 AWAVAUATSPI
-5qZ	
+51x	
 [A\A]A^A_]
 tAUH
 t4UH
 AWAVSPH
 [A^A_]
 AWAVAUATSH
-58V	
 ([A\A]A^A_]
 AVSH
 [A^]
-5ZU	
 AWAVAUATSPI
 [A\A]A^A_]
 [A\A]A^A_]
 AWAVATSH
-5mS	
+5-q	
 [A\A^A_]
 AWAVSPI
 [A^A_]
@@ -13012,6 +12929,7 @@ AWAVSH
 AWAVSH
 [A^A_]
 AWAVSH
+5yl	
 [A^A_]
 AWAVSH
 [A^A_]
@@ -13020,7 +12938,7 @@ AVSH
 AWAVSH
 [A^A_]
 AWAVAUATSH
-5:J	
+5tg	
 ([A\A]A^A_]
 AVSH
 [A^]
@@ -13034,12 +12952,12 @@ AWAVSH
 AVSA
 [A^]
 AVSH
+5vb	
 [A^]
-5\D	
-5yC	
+59a	
 AWAVSPA
-5&C	
 [A^A_]
+5x`	
 t3H9
 tKE1
 t@E1
@@ -13052,6 +12970,14 @@ wfIc
 tTUH
 AVSH
 [A^]
+AWAVAUATSH
+[A\A]A^A_]
+AWAVAUATSH
+[A\A]A^A_]
+AWAVAUATSH
+[A\A]A^A_]
+AWAVAUATSH
+([A\A]A^A_]
 AWAVSPI
 [A^A_]
 AWAVATSH
@@ -13086,14 +13012,11 @@ AWAVAUATSPI
 AWAVAUATSH
 x+E9
 8[A\A]A^A_]
+=>6	
 ]t#H
-=K,	
-51,	
 ]t#H
-=/,	
 AWAVATSH
 ;|QL
-=	+	
  [A\A^A_]
 AVSH
  [A^]
@@ -13102,20 +13025,24 @@ AVSA
 t]UH
 t^UH
 AWAVSPI
-5g(	
+5#2	
 [A^A_]
 AVSH
 [A^]
 t5UH
-=t'	
-=W'	
+5x1	
+5K1	
+=01	
 	H;M
 AWAVAUATSH
-=4&	
+5|0	
+5o0	
+5_0	
 [A\A]A^A_]
 t.UH
 AWAVAUATSPI
 4$A9
+5;.	
 [A\A]A^A_]
 AWAVSP
 [A^A_]
@@ -13141,6 +13068,7 @@ AVSH
 [A^]
 [A^]
 [A^]
+5T'	
 AWAVAUATSH
 H9q w
 H9q v
@@ -13318,67 +13246,60 @@ AWAVAUATSH
 tZE1
 ~K(f
 [A\A]A^A_]
--t~	
 AWAVATSH
 [A\A^A_]
 AWAVAUATSH
 PQVR
 L$ A
 PQVR
-%$y	
 h[A\A]A^A_]
 AWAVAUATSH
--0x	
 ([A\A]A^A_]
-%@w	
 AWAVAUATSH
-5Jv	
 AQQPAPAQQPAPA
 X[A\A]A^A_]
 AWAVAUATSH
-%4r	
+-@|	
 [A\A]A^A_]
 AWAVATSH
-%Lq	
 [A\A^A_]
 [A\A^A_]
+%Tz	
 AVSH
+55z	
 [A^]
 AWAVAUATSH
--Jp	
-%So	
+-yy	
+%Uy	
 h[A\A]A^A_]
-%<n	
+%[x	
 h[A\A]A^A_]
 h[A\A]A^A_]
-%[m	
 AVSH
-5Vm	
 [A^]
 AVSH
-5)m	
 [A^]
-=sk	
+=bu	
+=#u	
 AVSH
 [A^]
 AVSI
 [A^]
 AWAVAUATSH
-O016~
-P016t'
-UYVYt
-YVYUt
+XVYU
 P010t
-YUY2u
+YUY2t
+UYVYt
+YVYUu
 [A\A]A^A_]
 AWAVATSH
+%Ln	
 [A\A^A_]
 AWAVATSA
 [A\A^A_]
 AWAVSPI
 [A^A_]
 AWAVAUATSPI
--1b	
 [A\A]A^A_]
 AWAVSPH
 [A^A_]
@@ -13400,13 +13321,11 @@ AVSH
 [A^]
 AWAVAUATSH
 sWE1
-=_\	
-=>\	
 [A\A]A^A_]
 AWAVSP
 [A^A_]
 AWAVAUATSPH
-%yU	
+%1_	
 [A\A]A^A_]
 AWAVATSI
 IcL$
@@ -13428,98 +13347,108 @@ AWAVAUATSH
 ([A\A]A^A_]
 AWAVAUATSH
 X[A\A]A^A_]
-5MM	
-=FL	
 AWAVSH
 [A^A_]
 AWAVATSH
+=RQ	
 [A\A^A_]
 AWAVATSI
 [A\A^A_]
 AWAVAUATSH
--0F	
-=QD	
+=	N	
 [A\A]A^A_]
 AWAVAUATSPI
 [A\A]A^A_]
 AWAVAUATSPI
+-9J	
 [A\A]A^A_]
 AWAVAUATSH
--J<	
--t;	
+=bE	
+-,E	
 [A\A]A^A_]
 AWAVATSI
-%;:	
 [A\A^A_]
 AWAVAUATSPI
+=yC	
 [A\A]A^A_]
 AWAVAUATSH
-%v8	
-=n8	
+%.B	
+=&B	
 t.E1
 [A\A]A^A_]
 AWAVAUATSPI
+-R@	
 [A\A]A^A_]
 AWAVAUATSH
--h2	
+- <	
 PQVR
+5d:	
 X[A\A]A^A_]
-%A0	
 AWAVAUATSH
 ([A\A]A^A_]
 ([A\A]A^A_]
-%9/	
 *@$H
 AWAVATSH
+%k6	
 PQSR
 [A\A^A_]
 AWAVSPI
+=^5	
 [A^A_]
-%k+	
+%#5	
 AWAVAUATSPI
 [A\A]A^A_]
 AWAVAUATSPI
-%}*	
--I*	
+%54	
 [A\A]A^A_]
 AWAVAUATSH
+5z3	
+%q3	
 PQSAP
 X[A\A]A^A_]
 AWAVAUATSH
+=z1	
 )D$ A
 )D$0L
 L98t
+5Q0	
 [A\A]A^A_]
 AWAVAUATSH
-%p%	
+%(/	
+%l.	
 ([A\A]A^A_]
 AWAVAUATSH
-%s#	
+%+-	
 AQQPAP
 CH D
 x[A\A]A^A_]
 AWAVAUATSPH
 [A\A]A^A_]
-%X 	
 AWAVAUATSPH
-%- 	
 [A\A]A^A_]
 AVSH
 [A^]
 AWAVAUATSPI
 @H tnL
+=0(	
 [A\A]A^A_]
 [A\A]A^A_]
 AWAVAUATSH
+=;'	
+=$&	
+%^%	
 ([A\A]A^A_]
 AWAVAUATSPI
 [A\A]A^A_]
+%i#	
 [A\A]A^A_]
 AWAVAUATSH
+-,#	
 [A\A]A^A_]
 AWAVAUATSH
 )E0A
 )E A
+5;!	
 L9(t
 [A\A]A^A_]
 AWAVAUATSPI
@@ -13565,6 +13494,7 @@ AWAVAUATSH
 GK@t
 8[A\A]A^A_]
 AWAVAUATSPI
+-Y		
 	s#A
 [A\A]A^A_]
 AVSH
@@ -13606,16 +13536,13 @@ AWAVAUATSH
 )C0H
 L9(t
 PQVR
-5	~	
 )C0f
 )C f
-5W}	
 L90t
 [A\A]A^A_]
 AWAVAUATSH
 )G0A
 )G A
-5Jy	
 L9(t
 [A\A]A^A_]
 AWAVATSH
@@ -13628,17 +13555,13 @@ AQQPAP
 AWAVAUATSH
 [A\A]A^A_]
 AWAVAUATSH
-5zx	
 AQQPAP
-5s{	
-5y~	
 PQSAP
 PQSAP
 x[A\A]A^A_]
 AWAVAUATSH
 [A\A]A^A_]
 AWAVAUATSH
-=xu	
 [A\A]A^A_]
 AWAVAUATSH
 FI twI
@@ -13646,91 +13569,79 @@ AQQPAP
 FI t0I
 X[A\A]A^A_]
 AWAVATSH
-5k|	
-5L|	
 [A\A^A_]
 AWAVAUATSH
-54v	
-5%{	
 [A\A]A^A_]
-5oz	
-5>z	
+5Zz	
 AWAVAUATSH
-5	q	
+=b~	
 [A\A]A^A_]
 AWAVAUATSH
-5|o	
-52u	
+5Ty	
 [A\A]A^A_]
 AWAVAUATSH
-5Tq	
-5dt	
-5?u	
-5Ts	
-5Gu	
+5,{	
+5<~	
+5,}	
 D$H 
 l$xH
 tnfH
 ([A\A]A^A_]
 AWAVAUATSPA
-5Zs	
+5}x	
+52}	
 [A\A]A^A_]
 AWAVAUATSH
-51p	
-5(r	
+5	z	
+5Yz	
 [A\A]A^A_]
 AWAVAUATSPA
-5Jl	
+5"v	
+5}y	
 [A\A]A^A_]
 AWAVAUATSH
-5"n	
-52k	
-5`m	
-5dn	
-5sm	
+5du	
+58w	
+5<x	
+5Kw	
 PQSAPA
 PQSAPA
-5:g	
-5Ti	
-5=h	
-56e	
-5G`	
+5bp	
+5,s	
+5bo	
+5br	
 [A\A]A^A_]
 AWAVAUATSH
-5Ki	
+5Wj	
+5#s	
 [A\A]A^A_]
 AWAVAUATSH
-5%a	
+5ma	
 D97tAH
 [A\A]A^A_]
 AWAVAUATSPH
-5*d	
 [A\A]A^A_]
+5zf	
 AWAVAUATSPH
 [A\A]A^A_]
 AWAVAUATSH
-5<_	
--\c	
-5f^	
--*^	
-5Ea	
-5+c	
+5gl	
+-.m	
+58h	
 ([A\A]A^A_]
 AWAVATSH
-5?]	
 [A\A^A_]
 AWAVAUATSPA
-5|Z	
-5(b	
+=gm	
+5Nd	
 [A\A]A^A_]
 AWAVAUATSPA
-5^a	
-5Aa	
-5+a	
+5^k	
+5Vk	
+50k	
 [A\A]A^A_]
 AWAVAUATSP
-=(W	
-5}`	
+5Oj	
 [A\A]A^A_]
 AWAVAUATSH
 [A\A]A^A_]
@@ -13863,17 +13774,18 @@ tIMc
 AWAVAUATSH
 HcO<H
 _(HcO
-5b]	
-5(Z	
-5zP	
+5|j	
+5Bg	
+5ZZ	
  [A\A]A^A_]
 AWAVAUATS
 Hcw<H
 w(Hc
-5\K	
+5<U	
 A#@ A
-5|H	
+5\R	
 A#@ A
+5nO	
 A#@ A
 A#@ A
 [A\A]A^A_]
@@ -14868,19 +14780,17 @@ t	Ic
 [A\A]A^A_]
 AWAVAUATSPE
 [A\A]A^A_]
-MV21
-O016
-XV12
-NV21
-NV12
-NES 
-HYUV
-P016
-YVYU
-YV12
-YUY2
-OES 
+O010
+XUY2
+MV12
 P010
+NV21
+HYUV
+YUY2
+YVYU
+NV12
+YV12
+OES 
 IYUV
 UYVY
 YUY2t
@@ -14894,7 +14804,6 @@ D93tOH
 AVSH
  [A^]
 P010
-	wuH
 sDHc
 AWAVSP
 [A^A_]
@@ -15036,10 +14945,6 @@ AVSH
 tHUH
 AVSI
 [A^]
-AWAVATSH
-uuE1
-[A\A^A_]
-[A\A^A_]
 t/UH
 AWAVSPH
 D90vNA
@@ -15089,26 +14994,22 @@ AWAVSPH
 AWAVATSA
 [A\A^A_]
 AWAVAUATSH
-XVYU
-P010t
-YUY2t
-[A\A]A^A_]
+YUY2t&A
 YVYUt
 UYVYt
-P016
+P010
+[A\A]A^A_]
 AWAVAUATSH
 ASAWAVP
 [A\A]A^A_]
 ASAWAVP
-XVYU
-P010
 YUY2
+YVYU
+UYVY
+P010
 ASAWAVP
 PASAR
 PASAR
-YVYUt
-UYVYt
-P016
 AWAVAUATSPM
 [A\A]A^A_]
 SSPAR
@@ -15182,10 +15083,11 @@ t,Hc
 M9u`tVH
 M9w`u7L
 M9w`u
-t`y"H
+tay"H
 ]`E1
 A9V(u
 A9N,u
+t;E1
 ([A\A]A^A_]
 AVSI
 [A^]
@@ -15260,11 +15162,15 @@ AVSH
 AWAVSPH
 tAH9
 [A^A_]
-[A^A_]
 AWAVSPH
 [A^A_]
+AVSH
+[A^]
+AVSH
 [A^]
 [A^]
+[A^]
+#GH	GL1
 AVSI
 [A^]
 AWAVSPH
@@ -15287,162 +15193,170 @@ CK@u
 [A\A^A_]
 AWAVAUATSH
 <0tzH
-XVYU
-P010t
-YUY2t
+YUY2t"
 YVYUt
 UYVYt
-P016
+P010
 [A\A]A^A_]
 AWAVSH
 Hc>HcS
 [A^A_]
 AWAVATSH
 [A\A^A_]
-XV12
-NV21t
-NV12t
+MV12~
+NV12t"
 IYUVt
-YV12u*Lc
+YV12t
+P010t
+NV21u-Hc
 XUY2~
 HYUV
-YUY2t^
-YVYUtV
+YUY2t[
+YVYUtS
 NV21t+
 NV12t#
 YV12t
-UYVYt)
+UYVYt&
 IYUVu
-t>Hc
 AWAVAUATSH
-AVASAR
-XUY2~+A
-HYUVI
-YUY2
-YVYU
-NV21I
-NV12
-YV12t
-UYVY
-IYUV
-XVYU
-YV12
-YUY2
-XUY2~+A
-HYUVI
-YUY2
-YVYU
-NV21I
-NV12
-YV12t
-UYVY
-IYUV
-YVYUt	A
-YUY2ukA
-u0PARAW
-x[A\A]A^A_]
-IYUV
-AWAVATSL
-XUY2~01
-HYUV
-YUY2
-YVYU
-NV21tq
-NV12ti
-YV12t/
-UYVYt]
-IYUVu
-XUY2~1
-HYUV
-YUY2tw
-YVYU
-NV21ti
-NV12
-YV12uqI
-IYUVtJ
-UYVYuPH
-[A\A^A_]
-[A\A^A_]
-AWAVAUATSH
-[A\A]A^A_]
-AWAVAUATSH
-XUY2H
-HYUV
-YUY2
-YVYU
-NV21tI
-NV12tA
-YV12t9
-[A\A]A^A_]
-UYVYtU
-IYUVu
-ATARAS
-[A\A]A^A_]
-YUY2
-UYVY
-YVYU
-IYUVD
-YV12
-NV12
-[A\A]A^A_]
-AWAVAUATSH
-;M uZM
+SAVASAR
+P010
+P010D
+PATAWh
 XUY2
 HYUV
 YUY2
 YVYU
-[A\A]A^A_]
-XUY2~%
+AWPj
+NV21
+NV12
+YV12t
+UYVYttA
+IYUV
+XUY2
 HYUV
 YUY2
 YVYU
-NV21t-
+UYVY
+IYUV
+XUY2~(A
+HYUV
+IYUVt5A
+UYVY
+NV21
+NV12
+YV12ugA
+P010
+YVYUt
+YUY2
+x[A\A]A^A_]
+AWAVSPL
+XUY2
+MV12
+P010
+NV21
+HYUV
+YUY2
+YVYU
+NV12tk
+YV12t1
+UYVY
+IYUVu
+XUY2~1
+HYUV
+YUY2tt
+YVYU
+NV21tf
+NV12tl
+YV12
+IYUVt[
+UYVYuoH
+[A^A_]
+[A^A_]
+AWAVAUATSH
+E D1
+P010t,
+P010
+E D1
+E Ph
+E Ph
+[A\A]A^A_]
+AWAVAUATSH
+XUY2L
+HYUV
+YUY2
+YVYU
+NV21tNA
+NV12tEA
+YV12t<D
+[A\A]A^A_]
+UYVYtZA
+IYUVu
+ATARASAW
+[A\A]A^A_]
+YUY2
+UYVY
+YVYU
+IYUV
+YV12
+NV12
+[A\A]A^A_]
+AWAVAUATSD
+[A\A]A^A_]
+AWAVAUATSH
+;M u[M
+XUY2
+MV12
+P010
+NV21
+[A\A]A^A_]
+XUY2
+MV12
+P010
+NV21
+HYUV
+YUY2
+YVYU
+HYUV
+YUY2
+YVYU
 NV12t%
 YV12t
 UYVY
 IYUV
+=MV12~
+=NV12t%=IYUVt
+=YV12t
+=P010t
+=NV21
+tRM9
+tMHcE
 =XV12
-`=NV21tk=NV12td
+Q=NV21H
+=NV12
+NV21
+IYUV
+YV12
+=IYUVH
+=YV12
 NV21
 NV12
-YV12
+IYUV
+NV12tE
+YV12t=
 [A\A]A^A_]
+UYVY
+IYUVu
+=MV12
+=NV12H
 =IYUVt
 =YV12
-tUM9
-tPHcE
-=XV12
-T=NV21H
-=NV12
-NV21
-IYUV
-YV12
-=IYUVH
-=YV12
-NV21
-NV12
-IYUV
-UYVY
-IYUV
-t-Ic
-=XV12
-=NV21H
-=NV12
-=IYUVH
-=YV12
-XUY2
-NV21H
-NV12
-YV12
-NV12
-IYUV
-YV12uL
-NV21
-NV12
-YV12u L
-[A\A]A^A_]
-YUY2H
-IYUV
+=P010H
+=NV21
+XV12
+XVYU
+YV12L
+YUY2
 =YUY2t
 =UYVYt
 =YVYU
@@ -15451,6 +15365,13 @@ YVYU
 YUY2
 =YVYU
 =UYVY
+NV12
+IYUV
+YV12uUH
+NV21
+NV12
+YV12u L
+[A\A]A^A_]
 HYUV
 YUY2
 YVYU
@@ -15458,24 +15379,32 @@ YVYU
 =YUY2
 =UYVY
 =YUY2
+[A\A]A^A_]
 UYVY
-IYUV
+IYUVt6
+P010L
+NV21t
+NV12t
+IYUVL
 =YUY2t
 =UYVYt
 =YVYU
-=NV12t
+PSARAS
+=NV12
 =NV21
-[A\A]A^A_]
 YVYUt
 YUY2
-=XV12
-=NV21t
-=NV12t
-=IYUVt
-=YV12
+=MV12~
+=NV12t%=IYUVt
+=YV12t
+=P010t
+=NV21
+PSARAS
+PARASH
 =NV12t
 =NV21
 [A\A]A^A_]
+PARASAV
 AWAVAUATSH
 ~THc
 [A\A]A^A_]
@@ -15486,26 +15415,25 @@ AWAVAUATSH
 AWAVAUATSPE
 [A\A]A^A_]
 AWAVAUATSH
-h-RB
-h=~@
+h-pJ
+h%-J
+h-WI
 ATAWSP
 ATAWS
 [A\A]A^A_]
 AWAVAUATSH
 o,'fE
-h-b;
+o%:4
 D8PI
 AUATARP
 AUATAR
 [A\A]A^A_]
 AWAVAUATSH
-h5Z/
+h=#;
 ATAWSP
 ATAWS
 [A\A]A^A_]
 AWAVAUATSH
-h5q*
-h=:(
 ATAWSP
 ATAWS
 [A\A]A^A_]
@@ -15606,16 +15534,20 @@ ATAWSP
 ATAWS
 [A\A]A^A_]
 AWAVAUATSH
-@[A\A]A^A_]
+8[A\A]A^A_]
 AWAVAUATSH
  [A\A]A^A_]
 AWAVAUATSH
+4YD)
 H[A\A]A^A_]
 AWAVAUATSH
+4YD)
 8[A\A]A^A_]
 AWAVAUATSH
-@[A\A]A^A_]
+4YD)
+8[A\A]A^A_]
 AWAVAUATSH
+4YD)
 @[A\A]A^A_]
 AWAVAUATSL
 [A\A]A^A_]
@@ -15641,11 +15573,13 @@ AWAVAUATSH
 8[A\A]A^A_]
 AWAVAUATSH
 0[A\A]A^A_]
+AWAVAUATSH
+<8+}
+`[A\A]A^A_]
 UAWAVATSH
 }%E1
 H;D$
 [A\A^A_]
-D957
 UAWAVAUATSH
 D$`H
 D$8H
@@ -16256,17 +16190,13 @@ main
 main
 Constants
 scRGB_output
-texture_type
 input_type
 color_scale
+unused_pad0
 tonemap_method
 tonemap_factor1
 tonemap_factor2
 sdr_white_point
-Yoffset
-Rcoeff
-Gcoeff
-Bcoeff
 input.color
 @entryPointOutput
 GLSL.std.450
@@ -16274,19 +16204,14 @@ main
 main
 Constants
 scRGB_output
-texture_type
 input_type
 color_scale
+unused_pad0
 tonemap_method
 tonemap_factor1
 tonemap_factor2
 sdr_white_point
-Yoffset
-Rcoeff
-Gcoeff
-Bcoeff
 texture0
-sampler0
 input.tex
 input.color
 @entryPointOutput
@@ -16295,21 +16220,14 @@ main
 main
 Constants
 scRGB_output
-texture_type
 input_type
 color_scale
+unused_pad0
 tonemap_method
 tonemap_factor1
 tonemap_factor2
 sdr_white_point
-Yoffset
-Rcoeff
-Gcoeff
-Bcoeff
 texture0
-sampler0
-texture1
-texture2
 input.tex
 input.color
 @entryPointOutput
@@ -16332,6 +16250,7 @@ input.color
 @entryPointOutput.pos
 @entryPointOutput.tex
 @entryPointOutput.color
+@entryPointOutput.pointSize
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ
 <6>w?
 c=Ac
@@ -16846,7 +16765,7 @@ Unknown touch finger
 SDL_QUIT_ON_LAST_WINDOW_CLOSE
 SDL_RWFromFile(): No file or no mode specified
 Couldn't open %s
-%s is not a regular file
+%s is not a regular file or pipe
 size
 context
 Unknown value for 'whence'
@@ -17253,9 +17172,11 @@ misc5
 misc6
 mappingString
 hint:
+SDL_GAMECONTROLLER_USE_BUTTON_LABELS
 Couldn't parse GUID from %s
 default
 xinput
+hint:SDL_GAMECONTROLLER_USE_BUTTON_LABELS
 000000000000
 crc:
 none,*,
@@ -17264,7 +17185,7 @@ a:b0,b:b1,back:b4,dpdown:h0.4,dpleft:h0.8,dpright:h0.2,dpup:h0.1,leftshoulder:b9
 a:b0,b:b1,dpdown:h0.4,dpleft:h0.8,dpright:h0.2,dpup:h0.1,leftshoulder:b9,rightshoulder:b10,
 a:b0,b:b1,back:b4,dpdown:h0.4,dpleft:h0.8,dpright:h0.2,dpup:h0.1,leftshoulder:b9,lefttrigger:a4,rightshoulder:b10,righttrigger:a5,start:b6,x:b2,y:b3,
 a:b0,b:b1,back:b4,dpdown:h0.4,dpleft:h0.8,dpright:h0.2,dpup:h0.1,guide:b5,leftshoulder:b9,leftstick:b7,lefttrigger:a4,leftx:a0,lefty:a1,rightshoulder:b10,righttrigger:a5,start:b6,x:b2,y:b3,misc1:b11,
-a:b0,b:b1,dpdown:h0.4,dpleft:h0.8,dpright:h0.2,dpup:h0.1,guide:b5,rightshoulder:b10,righttrigger:a5,start:b6,misc1:b11,
+a:b0,b:b1,dpdown:h0.4,dpleft:h0.8,dpright:h0.2,dpup:h0.1,guide:b5,leftshoulder:b9,rightshoulder:b10,righttrigger:a5,start:b6,x:b2,y:b3,misc1:b11,
 a:b0,b:b1,back:b4,dpdown:h0.4,dpleft:h0.8,dpright:h0.2,dpup:h0.1,guide:b5,start:b6,x:b2,y:b3,
 a:b0,b:b1,back:b4,dpdown:b12,dpleft:b13,dpright:b14,dpup:b11,guide:b5,leftshoulder:b9,lefttrigger:a4,leftx:a0,lefty:a1,start:b6,x:b2,y:b3,
 back:b4,dpdown:h0.4,dpleft:h0.8,dpright:h0.2,dpup:h0.1,leftshoulder:b9,leftstick:b7,lefttrigger:a4,leftx:a0,lefty:a1,misc1:b11,paddle2:b13,paddle4:b15,
@@ -17429,7 +17350,6 @@ none,%s,
 %sa%u%s
 h%i.%i
 face:
-SDL_GAMECONTROLLER_USE_BUTTON_LABELS
 abxy
 bayx
 sony
@@ -17951,6 +17871,7 @@ Texture dimensions are limited to %dx%d
 colorspace
 SDR_white_point
 HDR_headroom
+SDL.internal.texture.parent
 SDL.texture.colorspace
 SDL.texture.SDR_white_point
 SDL.texture.HDR_headroom
@@ -18025,21 +17946,22 @@ w2_row
 vulkan
 %s, An unsupported SDL pixel format (0x%x) was specified
 VULKAN_CreateTexture
-vulkan.texture
+[Vulkan] YUV textures require a Vulkan device that supports VK_KHR_sampler_ycbcr_conversion
+[Vulkan] Unsupported Ycbcr colorspace: %d
+[Vulkan] vkCreateSamplerYcbcrConversionKHR %s
+[Vulkan] vkCreateSampler %s
+[Vulkan] VULKAN_CreateDescriptorSetAndPipelineLayout %s
 VULKAN_AllocateImage(): %s
-SDL.texture.vulkan.texture
-vulkan.texture_u
-SDL.texture.vulkan.texture_u
-vulkan.texture_v
-SDL.texture.vulkan.texture_v
-SDL.texture.vulkan.texture_uv
+vulkan.texture
 VULKAN_CreateFramebuffersAndRenderPasses(): %s
+vkCreateDescriptorSetLayout(): %s
+vkCreatePipelineLayout(): %s
 vkCreateImage(): %s
 VULKAN_FindMemoryTypeIndex failed.
 vkAllocateMemory(): %s
 vkBindImageMemory(): %s
 vkCreateImageView(): %s
-[Vulkan] Unable to find memory type for allocation.
+[Vulkan] Unable to find memory type for allocation
 vkCreateRenderPass(): %s
 vkCreateFramebuffer(): %s
 Texture is not currently available
@@ -18052,31 +17974,49 @@ specified texture is not a render target
 Failed to issue intermediate batch
 VULKAN_AllocateBuffer(): %s
 [Vulkan] Unable to create required pipeline state
-[Vulkan] Unable to allocate descriptor set.
+[Vulkan] Could not allocate new memory for constant buffer
 main
 vkCreateGraphicsPipelines(): %s
+[Vulkan] Unable to allocate descriptor set
+[Vulkan] Unable to allocate descriptor pool vkCreateDescrptorPool: %s
 Unknown scale mode: %d
-[Vulkan] Failed to allocate buffer for readback.
+[Vulkan] Failed to allocate buffer for readback
 vkResetFences(): %s
 vkQueueSubmit(): %s
 vkQueuePresentKHR(): %s
 vkWaitForFences(): %s
 vkAcquireNextImageKHR(): %s
+VK_KHR_swapchain
+VK_KHR_sampler_ycbcr_conversion
+VK_KHR_maintenance1
+VK_KHR_bind_memory2
+VK_KHR_get_memory_requirements2
 SDL_RENDER_VULKAN_DEBUG
 VK_LAYER_KHRONOS_validation
 SDL_Vulkan_LoadLibrary failed.
 vkGetInstanceProcAddr is NULL
 VK_EXT_swapchain_colorspace
-[Vulkan] Using HDR output but %s not supported.
+[Vulkan] Using HDR output but %s not supported
+VK_KHR_get_physical_device_properties2
+vulkan.instance
 vkCreateInstance(): %s
+vulkan.surface
 Vulkan_CreateSurface() failed.
-VK_KHR_swapchain
+vulkan.physical_device
+vulkan.graphics_queue_family_index
+vulkan.present_queue_family_index
+vulkan.device
 vkCreateDevice(): %s
 vkCreateCommandPool(): %s
 vkCreateShaderModule(): %s
-vkCreateDescriptorSetLayout(): %s
-vkCreatePipelineLayout(): %s
+VULKAN_CreateDescriptorSetAndPipelineLayout(): %s
 vkCreateSampler(): %s
+SDL.renderer.vulkan.instance
+SDL.renderer.vulkan.surface
+SDL.renderer.vulkan.physical_device
+SDL.renderer.vulkan.device
+SDL.renderer.vulkan.graphics_queue_family_index
+SDL.renderer.vulkan.present_queue_family_index
 vkCreateInstance
 vkGetInstanceProcAddr(VK_NULL_HANDLE, "vkCreateInstance") failed
 vkEnumerateInstanceExtensionProperties
@@ -18114,11 +18054,18 @@ vkGetPhysicalDeviceSurfaceSupportKHR
 vkGetInstanceProcAddr(instance, "vkGetPhysicalDeviceSurfaceSupportKHR") failed
 vkQueueWaitIdle
 vkGetInstanceProcAddr(instance, "vkQueueWaitIdle") failed
+vkGetPhysicalDeviceFeatures2KHR
+vkGetPhysicalDeviceFormatProperties2KHR
+vkGetPhysicalDeviceImageFormatProperties2KHR
+vkGetPhysicalDeviceMemoryProperties2KHR
+vkGetPhysicalDeviceProperties2KHR
 vkEnumeratePhysicalDevices(): %s
 vkEnumeratePhysicalDevices(): no physical devices
 vkGetPhysicalDeviceSurfaceSupportKHR(): %s
 vkEnumerateDeviceExtensionProperties(): %s
 Vulkan: no viable physical devices found
+vkEnumerateDeviceExtensionProperties(): %s.
+vkEnumerateDeviceExtensionProperties): %s.
 vkAcquireNextImageKHR
 vkGetDeviceProcAddr(device, "vkAcquireNextImageKHR") failed
 vkAllocateCommandBuffers
@@ -18259,6 +18206,8 @@ vkUpdateDescriptorSets
 vkGetDeviceProcAddr(device, "vkUpdateDescriptorSets") failed
 vkWaitForFences
 vkGetDeviceProcAddr(device, "vkWaitForFences") failed
+vkCreateSamplerYcbcrConversionKHR
+vkDestroySamplerYcbcrConversionKHR
 vkGetPhysicalDeviceSurfaceFormatsKHR(): %s
 vkGetPhysicalDeviceSurfaceCapabilitiesKHR(): %s
 vkGetPhysicalDeviceSurfacePresentModesKHR(): %s
@@ -18266,11 +18215,11 @@ vkCreateSwapchainKHR(): %s
 vkGetSwapchainImagesKHR(): %s
 vkAllocateCommandBuffers(): %s
 vkCreateFence(): %s
-vkCreateDescriptorPool(): %s
+SDL.renderer.vulkan.swapchain_image_count
 vkCreateSemaphore(): %s
 SDL not built with camera support
 SDL_LEGACY_VERSION
-SDL-prerelease-3.0.0-3761-gfbe7301ab
+SDL-prerelease-3.0.0-3903-g16e0806ce
 macOS
 SDL assertion report.
 All SDL assertions between last init/quit:
@@ -18685,7 +18634,6 @@ SDL_PIXELFORMAT_YVYU
 SDL_PIXELFORMAT_NV12
 SDL_PIXELFORMAT_NV21
 SDL_PIXELFORMAT_P010
-SDL_PIXELFORMAT_P016
 SDL_PIXELFORMAT_EXTERNAL_OES
 SDL_PIXELFORMAT_UNKNOWN
 Unknown pixel format
@@ -18709,7 +18657,6 @@ Unable to lock destination surface
 Unable to lock source surface
 Surface has userdata, incompatible with properties
 SDL.surface.colorspace
-SDL.surface.maxCLL
 Surface doesn't have a colorkey
 Surfaces must not be locked during blit
 SDL_BlitSurfaceScaled(): src/dst
@@ -19490,7 +19437,7 @@ _keyboard_focus
 _listener
 _videodata
 _egl_surface
-T^{SDL_Window=^vI*^{SDL_Surface}iiiiiiiiiiIIfiiII{SDL_Rect=iiii}{SDL_Rect=iiii}iii{?=IIiiff^v}{?=IIiiff^v}f^{SDL_Surface}iiiiii{SDL_Rect=iiii}^?^vI^{SDL_WindowData}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}},N,V_window
+T^{SDL_Window=^vI*^{SDL_Surface}iiiiiiiiiiIIfiiII{SDL_Rect=iiii}{SDL_Rect=iiii}iii{?=Iiiiff^v}{?=Iiiiff^v}f^{SDL_Surface}iiiiii{SDL_Rect=iiii}^?^vI^{SDL_WindowData}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}},N,V_window
 T@"NSWindow",&,N,V_nswindow
 T@"NSView",&,N,V_sdlContentView
 T@"NSMutableArray",&,N,V_nscontexts
@@ -19499,7 +19446,7 @@ Tc,N,V_in_blocking_transition
 Tc,N,V_was_zoomed
 Tq,N,V_window_number
 Tq,N,V_flash_request
-T^{SDL_Window=^vI*^{SDL_Surface}iiiiiiiiiiIIfiiII{SDL_Rect=iiii}{SDL_Rect=iiii}iii{?=IIiiff^v}{?=IIiiff^v}f^{SDL_Surface}iiiiii{SDL_Rect=iiii}^?^vI^{SDL_WindowData}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}},N,V_keyboard_focus
+T^{SDL_Window=^vI*^{SDL_Surface}iiiiiiiiiiIIfiiII{SDL_Rect=iiii}{SDL_Rect=iiii}iii{?=Iiiiff^v}{?=Iiiiff^v}f^{SDL_Surface}iiiiii{SDL_Rect=iiii}^?^vI^{SDL_WindowData}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}},N,V_keyboard_focus
 T@"Cocoa_WindowListener",&,N,V_listener
 T@"SDL_CocoaVideoData",&,N,V_videodata
 Ti,N,V_send_floating_size
@@ -19821,16 +19768,16 @@ c24@0:8Q16
 v24@0:8r^{SDL_Rect=iiii}16
 @"NSString"
 {_NSRange="location"Q"length"Q}
-@24@0:8^{SDL_Window=^vI*^{SDL_Surface}iiiiiiiiiiIIfiiII{SDL_Rect=iiii}{SDL_Rect=iiii}iii{?=IIiiff^v}{?=IIiiff^v}f^{SDL_Surface}iiiiii{SDL_Rect=iiii}^?^vI^{SDL_WindowData}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}}16
+@24@0:8^{SDL_Window=^vI*^{SDL_Surface}iiiiiiiiiiIIfiiII{SDL_Rect=iiii}{SDL_Rect=iiii}iii{?=Iiiiff^v}{?=Iiiiff^v}f^{SDL_Surface}iiiiii{SDL_Rect=iiii}^?^vI^{SDL_WindowData}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}}16
 @"NSWindow"
 @60@0:8{CGRect={CGPoint=dd}{CGSize=dd}}16c48I52c56
 @32@0:8{CGPoint=dd}16
 I16@0:8
 v20@0:8I16
-v24@0:8^{SDL_Window=^vI*^{SDL_Surface}iiiiiiiiiiIIfiiII{SDL_Rect=iiii}{SDL_Rect=iiii}iii{?=IIiiff^v}{?=IIiiff^v}f^{SDL_Surface}iiiiii{SDL_Rect=iiii}^?^vI^{SDL_WindowData}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}}16
-^{SDL_Window=^vI*^{SDL_Surface}iiiiiiiiiiIIfiiII{SDL_Rect=iiii}{SDL_Rect=iiii}iii{?=IIiiff^v}{?=IIiiff^v}f^{SDL_Surface}iiiiii{SDL_Rect=iiii}^?^vI^{SDL_WindowData}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}}16@0:8
+v24@0:8^{SDL_Window=^vI*^{SDL_Surface}iiiiiiiiiiIIfiiII{SDL_Rect=iiii}{SDL_Rect=iiii}iii{?=Iiiiff^v}{?=Iiiiff^v}f^{SDL_Surface}iiiiii{SDL_Rect=iiii}^?^vI^{SDL_WindowData}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}}16
+^{SDL_Window=^vI*^{SDL_Surface}iiiiiiiiiiIIfiiII{SDL_Rect=iiii}{SDL_Rect=iiii}iii{?=Iiiiff^v}{?=Iiiiff^v}f^{SDL_Surface}iiiiii{SDL_Rect=iiii}^?^vI^{SDL_WindowData}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}}16@0:8
 {?="value"i}
-^{SDL_Window=^vI*^{SDL_Surface}iiiiiiiiiiIIfiiII{SDL_Rect=iiii}{SDL_Rect=iiii}iii{?=IIiiff^v}{?=IIiiff^v}f^{SDL_Surface}iiiiii{SDL_Rect=iiii}^?^vI^{SDL_WindowData}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}}
+^{SDL_Window=^vI*^{SDL_Surface}iiiiiiiiiiIIfiiII{SDL_Rect=iiii}{SDL_Rect=iiii}iii{?=Iiiiff^v}{?=Iiiiff^v}f^{SDL_Surface}iiiiii{SDL_Rect=iiii}^?^vI^{SDL_WindowData}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}}
 ^{__CVDisplayLink=}
 ^{SDL_Mutex=}
 ^{SDL_Condition=}
@@ -19889,7 +19836,6 @@ v48@0:8{CGRect={CGPoint=dd}{CGSize=dd}}16
 "", 
 SDL_app
 YV12IYUVNV12NV21P010
-YV12IYUVNV12NV21P010
 GIF87a
  !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
  "$&(*,.02468:<>@BDFHJLNPRTVXZ\^`bdfhjlnprtvxz|~
@@ -19898,7 +19844,7 @@ GIF87a
 "3DUfw
 ASBXAXAXAXAXAXAXA`
 A`%Bp
-RC`3A
+RC`1AUA
 VAYBp
 RBSA\BSCSBRATBTBTBTBTBTBTBTATD
 SDRCRAWA
@@ -19929,7 +19875,7 @@ p p@RGp
 p Z0
 RCp RCRCp RCp RCp p RCRCp RCp RCp p RCp RCRCRCp p RCp p
 SASAS0xSCp
-G``A`
+F``A`
 \K`.BX0
 `?Ap
 Hp@p
@@ -20249,7 +20195,6 @@ A_MTLCreateSystemDefaultDevice
 @_atanf
 @_atof
 @_atoi
-@_bsearch
 @_calloc
 @_cos
 @_cosf
@@ -20362,7 +20307,6 @@ A_dispatch_once_f
 @_pthread_setschedparam
 @_pthread_setspecific
 @_pthread_sigmask
-@_qsort
 @_realloc
 @_rewind
 @_scalbn
@@ -20424,9 +20368,9 @@ lbsearch
 mexp
 ngetenv
 ohid_
-upow
+vpow
 vqsort
-{wcs
+|wcs
 reate
 aptureMouse
 ursorVisible
@@ -20444,6 +20388,7 @@ EventWatch
 GamepadMapping
 HintCallback
 Timer
+VulkanRenderSemaphores
 sFrom
 File
 omic
@@ -20451,7 +20396,7 @@ tachVirtualJoystick
 CompareAndSwap
 Pointer
 Joysticks
-MMutex
+NMutex
 NRWLockFor
 NTexture
 NAudioStream
@@ -20463,7 +20408,7 @@ Lock
 WaitSemaphore
 Spinlock
 Mutex
-gRWLockFor
+hRWLockFor
 pdate
 bindAudioStream
 adObject
@@ -20479,11 +20424,11 @@ litSurface
 roadcastCondition
 	indAudioStream
 Scaled
-Unchecked
+	Unchecked
 Scaled
 	ose
 nupTLS
-	Error
+Error
 AudioStream
 Property
 omposition
@@ -20594,7 +20539,7 @@ Sensor
 'Key
 -OriginalMemoryFunctions
 /UserFolder
-;Window
+<Window
 ssertion
 udio
 Handler
@@ -20625,8 +20570,8 @@ Cursor
 Bounds
 ContentScale
 Name
-UsableBounds
-Properties
+ UsableBounds
+ Properties
 Point
 Rect
 Window
@@ -20635,7 +20580,7 @@ rror
 ullscreenDisplayModes
  loatProperty
 amepad
- lobal
+!lobal
 &rabbedWindow
 "Instance
 #Joystick
@@ -20645,14 +20590,14 @@ $Name
 ppleSFSymbolsNameFor
 !xis
 Axis
-!Button
+"Button
 FromString
 indings
 "utton
 FromString
 "Label
 irmwareVersion
-"rom
+#rom
 InstanceID
 #PlayerIndex
 GUID
@@ -20660,12 +20605,12 @@ GUID
 #Name
 #Type
 $Vendor
-#layerIndex
-#roduct
+$layerIndex
+$roduct
 Version
 ForGUID
-$layerIndex
-$owerLevel
+%layerIndex
+%owerLevel
 duct
 %perties
 Version
@@ -20673,7 +20618,7 @@ nsorData
 %rial
 Rate
 ringFor
-%eamHandle
+&eamHandle
 Axis
 &Button
 &Type
@@ -20681,13 +20626,13 @@ ouchpadFinger
 &ype
 FromString
 MouseState
-&Properties
+'Properties
 'aptic
 Boolean
 Axis
 (Button
 (GUID
-(Hat
+)Hat
 )Instance
 )Name
 *Serial
@@ -20705,13 +20650,13 @@ GUID
 )Name
 )Type
 *Vendor
-)layerIndex
+*layerIndex
 *roduct
 Version
 *layerIndex
 *owerLevel
 duct
-*perties
++perties
 Version
 From
 +Name
@@ -20719,18 +20664,18 @@ From
 Name
 +Scancode
 Focus
-+State
+,State
 ,emoryFunctions
 sksForPixelFormatEnum
 ,xHapticEffects
 dState
-,use
+-use
 Focus
 -State
 aturalDisplayOrientation
 .GamepadTouchpad
 .Joystick
-.RenderDrivers
+/RenderDrivers
 /TouchFingers
 /VideoDrivers
 /HapticAxes
@@ -20742,7 +20687,7 @@ Fingers
 Axes
 /Buttons
 /Hats
-/ixelFormat
+0ixelFormat
 0latform
 0owerInfo
 rformance
@@ -20750,7 +20695,7 @@ Counter
 0Frequency
 EnumForMasks
 0Name
-0imary
+1imary
 1operty
 Path
 1erredLocales
@@ -20763,8 +20708,8 @@ Display
 6alGamepad
 AndLineIntersection
 2EnclosingPoints
-2Intersection
-2Union
+3Intersection
+3Union
 Float
 Float
 Float
@@ -20772,8 +20717,8 @@ Float
 Mode
 3State
 4LogicalPresentation
-4Metal
-4OutputSize
+5Metal
+5OutputSize
 5Scale
 5Target
 5Window
@@ -20792,19 +20737,19 @@ Info
 FromTexture
 cancode
 7urface
-8ystem
+9ystem
 9ilenceValueForFormat
 tringProperty
 From
-6Name
-6Name
+7Name
+7Name
 maphoreValue
 7nsor
 Data
-7FromInstanceID
-7Instance
+8FromInstanceID
+8Instance
 8Type
-8Properties
+9Properties
 8Type
 8onPortableType
 8onPortableType
@@ -20815,15 +20760,15 @@ lipRect
 9olor
 9Mod
 9space
-9Theme
+:Theme
 :exture
 :hread
 ;icks
 ;ouch
 AlphaMod
 :BlendMode
-:ColorMod
-:ScaleMode
+;ColorMod
+;ScaleMode
 ;Properties
 Float
 Float
@@ -20835,40 +20780,40 @@ Name
 ersion
 <ideoDriver
 BordersSize
-<DisplayScale
-<Grab
+=DisplayScale
+=Grab
 =KeyboardGrab
 =Opacity
->Title
+?Title
 lags
 =romID
 =ullscreenMode
 CCProfile
 aximumSize
-=inimumSize
-=ouse
+>inimumSize
+>ouse
 Grab
 >Rect
 arent
 >ixel
 >osition
->roperties
+?roperties
 Density
->Format
+?Format
 ?urface
 InPixels
 ?ide
 ptic
 EffectSupported
-?RumbleSupported
+@RumbleSupported
 EffectStatus
 Instance
 Name
 Playing
-@nApplication
+AnApplication
 Haptic
 AGamepad
-RJoystick
+SJoystick
 SSensor
 SURL
 SAudioDevice
@@ -20898,7 +20843,7 @@ DTextInput
 Rumble
 DEffect
 TaiseWindow
-Dmble
+Emble
 HapticEffect
 EApp
 \Gamepad
@@ -20912,10 +20857,10 @@ aptic
 Fint
 Autocenter
 FGain
-UgisterEvents
+VgisterEvents
 VmoveTimer
-Vnder
-VportAssertion
+Wnder
+WportAssertion
 YtoreWindow
 Haptic
 GAudioDevice
@@ -20936,56 +20881,56 @@ RMSIMD
 IltiVec
 I512F
 Data
-IText
+JText
 imarySelectionText
 Joperty
 Float
 KcreenKeyboardSupport
 indowHasSurface
-irite
+jrite
 Cursor
-KWindow
+LWindow
 SubSystem
 Gamepad
 LJoystick
 LTablet
-LMouseHaptic
+MMouseHaptic
 Virtual
-LHaptic
+MHaptic
 Connected
 MEventsEnabled
 MObject
-MWAV
+NWAV
 Munction
 Reading
 NWriting
 ToSurface
-NMessage
+OMessage
 OResetPriorities
 OSet
 OutputFunction
 OPriority
 AllPriority
-OOutputFunction
-OPriority
+POutputFunction
+PPriority
 pRGB
 PximizeWindow
 moryBarrier
 Ptal_
 AcquireFunction
-PReleaseFunction
+QReleaseFunction
 CreateView
 QDestroyView
 QGetLayer
 nimizeWindow
 QxAudioFormat
-QWill
+RWill
 BecomeActive
 REnterBackground
 RReceiveMemoryWarning
 EnterForeground
-RResignActive
-RTerminate
+SResignActive
+STerminate
 epEvents
 SnConnected
 llEvent
@@ -21000,7 +20945,7 @@ Uclose
 Uread
 Utell
 Uwrite
-Uvprintf
+Vvprintf
 printf
 ConstMem
 UFile
@@ -21009,12 +20954,12 @@ Uize
 WFillRect
 XGeometry
 XLine
-XTexture
+YTexture
 YViewportSet
 Woordinates
 WipEnabled
 FromWindow
-WToWindow
+XToWindow
 Float
 oint
 Xresent
@@ -21028,15 +20973,15 @@ ZJoystick
 Triggers
 Triggers
 KeyboardShown
-ZSaverEnabled
+[SaverEnabled
 GamepadEffect
 [JoystickEffect
 ssertionHandler
 [udio
 lipboard
-[ursor
+\ursor
 Data
-[Text
+\Text
 vent
 \rror
 Enabled
@@ -21048,9 +20993,9 @@ EventsEnabled
 ]Mapping
 WithPriority
 EventsEnabled
-]LED
-]PlayerIndex
-]Virtual
+^LED
+^PlayerIndex
+^Virtual
 Axis
 ^Button
 ^Hat
@@ -21073,7 +21018,7 @@ BlendMode
 `Color
 Float
 Sync
-`iewport
+aiewport
 urface
 atringProperty
 AlphaMod
@@ -21081,7 +21026,7 @@ aBlendMode
 aPalette
 bRLE
 lipRect
-aolor
+bolor
 bMod
 bspace
 bext
@@ -21097,8 +21042,8 @@ Float
 AlwaysOnTop
 dBordered
 dGrab
-dHitTest
-dKeyboardGrab
+eHitTest
+eKeyboardGrab
 eOpacity
 fPosition
 fResizable
@@ -21112,12 +21057,12 @@ einimumSize
 dalFor
 euse
 Grab
-eRect
+fRect
 fhape
 Cursor
-fMessageBox
-fSimpleMessageBox
-fWindow
+gMessageBox
+gSimpleMessageBox
+gWindow
 SystemMenu
 ColorKey
 gRLE
@@ -21129,11 +21074,11 @@ Rects
 CreateSurface
 iGet
 iLoadLibrary
-iUnloadLibrary
+jUnloadLibrary
 InstanceExtensions
 iVkGetInstanceProcAddr
 jrpMouse
-jsInit
+ksInit
 Condition
 jEvent
 jSemaphore
@@ -21147,11 +21092,11 @@ lcos
 lligned_
 alloc
 lfree
-lprintf
+mprintf
 alloc
-meil
+neil
 pysign
-nloor
+oloor
 omod
 oree
 ble_scan
@@ -21168,15 +21113,15 @@ pxit
 device_info
 qfeature_report
 qmanufacturer_string
-qproduct_string
+rproduct_string
 rreport_descriptor
 rserial_number_string
 dexed_string
-qput_report
+rput_report
 _path
 _timeout
 nd_feature_report
-rt_nonblocking
+st_nonblocking
 conv
 stoa
 close
@@ -21188,38 +21133,38 @@ tdigit
 tgraph
 tlower
 tspace
-tupper
-txdigit
+uupper
+uxdigit
 tpha
 rint
-tunct
+uunct
 ltoa
 uround
 utoa
 alloc
-uodf
+vodf
 vmove
 vset
 ealloc
-vound
+wound
 calbn
 wetenv
-wqrt
-wscanf
+xqrt
+xscanf
 nprintf
 wprintf
 xdup
 ystr
-yupr
+zupr
 xstr
 ydup
-}len
+~len
 ~str
 asecmp
 zk_r
-zrunc
+{runc
 lower
-zupper
+{upper
 itoa
 {tf8str
 ltoa
@@ -21239,7 +21184,7 @@ asecmp
 InstanceType
 ~Type
 oadGamepadMappings
-~easeCameraFrame
+easeCameraFrame
 OutputDevices
 CaptureDevices
 Stream
@@ -21333,14 +21278,14 @@ H%""//""22""""""//
 4%%%%%%%%%%%%
 225#225222%
 N%A9*%KHN%%9#*%P%
-a2'}
+a2$}
  @%Gk
 --LL #?8 h
 FbYWq
 L~W.
 V+E:
 >6::>
----11,,..--00UEEF
+---11,,..--00UEEG
 51`EHL666
 ^"<>
 66<6M
@@ -21368,7 +21313,7 @@ AN^V
 >^M}UCM??S?
 HC}WbU
 mEN{=y%
-VVz++!++$
+VVKz++!++$
 h#"	
 '+(T
 dGW9
@@ -21385,6 +21330,7 @@ gSqd
 						
  {(O
 :X9:
+f/AI
 F]UM3
 ._E0
 99{0
@@ -21401,6 +21347,7 @@ _SDL_AddGamepadMappingsFromFile
 _SDL_AddGamepadMappingsFromRW
 _SDL_AddHintCallback
 _SDL_AddTimer
+_SDL_AddVulkanRenderSemaphores
 _SDL_AllocateEventMemory
 _SDL_AtomicAdd
 _SDL_AtomicCompareAndSwap
@@ -22184,6 +22131,7 @@ _SDL_atanf
 _SDL_atof
 _SDL_atoi
 _SDL_bsearch
+_SDL_bsearch_r
 _SDL_calloc
 _SDL_ceil
 _SDL_ceilf
@@ -22261,6 +22209,7 @@ _SDL_modff
 _SDL_pow
 _SDL_powf
 _SDL_qsort
+_SDL_qsort_r
 _SDL_realloc
 _SDL_round
 _SDL_roundf
@@ -22618,7 +22567,6 @@ _atan2f
 _atanf
 _atof
 _atoi
-_bsearch
 _calloc
 _cos
 _cosf
@@ -22751,7 +22699,6 @@ _pthread_setcanceltype
 _pthread_setschedparam
 _pthread_setspecific
 _pthread_sigmask
-_qsort
 _realloc
 _rewind
 _scalbn
@@ -22810,125 +22757,154 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-?hch:
-C23:b}
-{GKV
-y9<O
- TF}S
-/"np
-bhxv
-`%=*
-pl,2M
-ZBNA
-X.!&
-5B t
-{pE*a
-J8SMWEQ
-tWr;
-&q_)
-xJ|u{
-AeaX
-`SkD9
-{M}u
-mJZT
-w'hgP8
-,`^Z]~
-7FR6L
-I|k.
-&3oj
-#B})
-	g/N
-],=?
-AY.e
-~rac
-l/FH
-*V+hg
-,a"2
-B"C{K
-U+y`
-;UQ8
-<e8j
-[?xD	
-*_3?`
-<p@g
-i-`[
-k-yn
-y#zZD
-OK	QS
-/Wu(
-ho)HO
-3vY<
-Bc&~H
-E$[x
-m~8e7*$W
-w8Xc
-Ac@^
- m-L
-E+c3W;w
-1m4e
-^M0b[
-@2Q^
-,"#j
-}~t^
-`c q
-U=:.
-2>g|
-f3_]
-9/o%6)
-:O>9|
--Isb
-pcI3>
-4?a~X
-HUiC
-RPO(
-ZXR@
-4.vz=o
-0V85
-zBq3
-"j]I
-N4i0!
-#\Cnd
-	"A3
-iDxY
-R[bDM
-Yvb{/b1/
-d2-C
-SzK1
-Y5'G
-x8?Pn
-#mLYy
-7h`S
-JBnZ
-Sd-l$
-w.rD\
-BFsOH
-Bu&X
-ye'i
-zX=w
-wSDDw/-
-6Tkx
-K!l5
-K9-k
-`vEU
-wDjJ
-I&wS
-QDq?
- Eh/w	
-+PL#
-=xHj]
-MTp(
-	@Yb
-(bHW
-ZelcVN
-t~= 
-*IX6
-<Cp7
-t!#oJ
-TJ~t
-|nQj*
-{/%~
-A%UK
-=q9s
+RtjV
+*3rN
+Un[m
+5_LpX
+}I?lP{
+@]+h+;y
+J]~'
+v|m0
+C">Y1
+nWj*
+qf%m
+=kO?
+dH@3
+e~Sv
+wn\5
+3^m8e
+LM_5I
+2O"M
+20%SM
+p?OK	q
+@0@Y3
+nQ%*
+q.vx
+2^K+
+n?\/
++".Aa
+N	s%
+	Y1	
+MYg3
+j<GI a+
+C8[#jV[Mn4
+4m6J
+:$E>
+lz!yB)
+<02- 
+B}1q%%
+>6n$lm
+54RP
+Folb
+=bFt
+Y5>l
+u@y$
+t_4Y
+kNp9Q
+pZGd
+F0HwN
+Qo$(.
+U6WwL	
+t\B<
+f+/w
+cl"UM
+;1x1H
+&bcG
+u)K!Zi
+Q<p0
+u	d+S
++]d)
+)ys*H
+Trl.
+cAO"u
+a=RD
+wJJ1
+y7MG
+cl^mM]
+~v=):
+*l75
+1>D]
+A4qdO6
+KZoA
+ 5[#
+d (N
+Cy~l
+8CiOn
+|&{!
+y3Y"
+hW+p
+lD	q
+fbq:H
+ q{!
+xRL|
+N\Z<Ez
+NygZ^
+oqCB
+)^@%
+7oU>j
+a#Ia
+Dtkt
+h+p{
+Oy%-
+Cx0d6
+uSUT!?
+ZSEHBC B
+hf)`
+GvWC^
+gNWn
+o|UDIS
+nFF*E
+rZpM
+<35[
+QJ].
+<O/a7Y
+rZ(-6
+xTEZ
+cA9<
+'67j
+JDV5tRW%I
+	Ung
+Id7&
+^.lc	
+t1(}
+NSFP1
+R$UL
+t^B	xvh
+I?^L
+jq+L
+	c)]
+}[FLR
+@!;%
+]P3e
+}f/_g
+dG--
+}e,(
+SZzv
+1\3tq
+:_tJ
+:@[wOk
+I $R
++_Swy
+5n,Ist
+a9wKe
+d4U|
+0 @[
+>xxr
++jLL
+)H@:
+dU+gSr
+<2m.
+d<2c!
+m.cw]
+'?l?[
+*/~V
+Fp(@N
+\GSs
+>nklb
+ XxZ
+WxadZ
+Zk_0N
+CTNs>
 subject.OU
 MXGJJ98X76
 Apple Inc.1&0$
@@ -22986,7 +22962,7 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240307172823Z0/
+240311225039Z0/
 1/0-
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
@@ -22995,35 +22971,35 @@ Apple Inc.1
 	<key>cdhashes</key>
 	<array>
 		<data>
-		b1TbAtPbeGKRFenHsDokOMxb7hU=
+		iuHLcsdSceFWjGiQ6sS16F/66OY=
 		</data>
 	</array>
 </dict>
 </plist>
-0!IM
-n,+[
- k42
-20240307172835Z0
++lD9
+CWrJ
+338&D.\{
+g"?7
+/ySw
+20240311225101Z0
+-%xp
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240208210517Z
-240321210516Z0B1
-Timestamp Signer NWK11
+240307204517Z
+240418204516Z0B1
+Timestamp Signer NWK21
 Apple Inc.1
-k,)y
-4Wqy
-.mK\c
-JyvjS
+;bp,
+yHN 
+8$0K
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-Yr	jO
-q!'pI	
-}Qv_Ne
-=_Gp
+c,,N
+4*nr
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -23062,11 +23038,15 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-_+0	
-240307172835Z0#
-d':S|
-9e~d
-	WJ5
+240311225101Z0#
+U00+
+Q}x/
+'DI{I
+zM8A
+]r?fe=p
+Yw\y
+sF `*
+-a>E
 __TEXT
 __text
 __TEXT
@@ -23125,7 +23105,6 @@ __common
 __DATA
 __LINKEDIT
 @loader_path/libSDL3.dylib
-	3L5
 /usr/lib/libiconv.2.dylib
 /System/Library/Frameworks/AudioToolbox.framework/Versions/A/AudioToolbox
 /System/Library/Frameworks/Carbon.framework/Versions/A/Carbon
@@ -23146,20 +23125,18 @@ __LINKEDIT
 /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
 /usr/lib/libobjc.A.dylib
 Rhf@
-4Hz{p
+4(m|p
 +ih8J	
-4hn{0
+4Ha|0
 7hf@
-h	r\
 Rhf@
 Tan@
-4he{P
+4HX|P
 5hf@
-H={P
-4T6{
-T5{0
-!+{p
-!+{P
+(0|P
+i0|P
+44)|
+4(|0
 RhR@
 5k"M)i
 Sjf@
@@ -23172,18 +23149,18 @@ yiBF
 Tcf@
 4xj@
 y`BF
-`QzP
-4@LzP
-5 Tzp
-@Szp
-4aRzP
-4aQzp
-4!Oz0
-4ANz0
+`_{P
+@D{P
+4 ?{P
+ F{p
+4AE{P
+4AD{p
+4aC{0
+4!A{0
 Sif@
 Sjf@
 @y	$
-b/z0
+B"{0
 *vzu
 TLU@
 Kiix
@@ -23191,20 +23168,24 @@ Kiix
 *)$@x)	
 *)D@
 ?))!
+@zzP
 4hR@
-@yyP
-`qyP
-`lyP
-(uy0
-``yP
-T }yP
-hxyP
-(xyP
+ lzP
+({z0
+`fzP
+@dzP
+@_zP
+hkz0
+@SzP
+haz0
+HkzP
+`hzP
 R`*@
 5h.@
+hRz0
 hz@y
-hVy0
-H`yP
+HIz0
+(SzP
 hz@y
 SiB@
 !^aJ@
@@ -23229,6 +23210,8 @@ _%*%
 S	g@
 T		@
 Rh*@
+	1s9
+R	139
 o"jg
 Tax'
 *hh8J
@@ -23252,7 +23235,7 @@ R,A*
 By_E
 By_!
 ByK!
-J/oP
+T@yx
 Lyixk	
 {#xM
 ynx:hb8)
@@ -23266,25 +23249,26 @@ i(x0ihx
 i(x{
 Jih8
 -{+x
+T`Tx0
+T`Rx0
 By?a
- owP
+T	Op
 ,ij8k	
 By	!
 Bylq
-`Owp
+@Bxp
+T`Qx
 Hkyx
 iy8K
- ;wp
-4`8wp
-T 8w0
+T`6xP
+4@+xp
 By_	
 J%@y
-T 4w0
-`Iwp
-T@0w
+T`;xp
+@<xp
+T #x
 TNy)x)
-T@.wp
-@,wp
+T !xp
 H@y	
 `@y.
 )CzA
@@ -23294,57 +23278,47 @@ Rhf@
 5h&I)
 &H)6}
 =hb@
+`gwP
 Thr@
 4vJ@
 TxJ@
 B)!|@
 5hf@
-	Av9i
-R	A69 	
-Afvp
-*Av9j
-R*A69
+`	wP
+@|wp
+69@	
+a[wp
+aZwP
 *	yK
-OB)`
-Rv9H
-7 Qm
-ISmp
+7@:n
+6(:nP
+i<np
 4hN@
-qv9h
-R	q69
- 0mP
 +ih8J	
 (6)y
 06)y
 @6)y
 kB#Xz
-RU	mP
 ?!@q
 !@q	
-+^dP
 jyix
 jyix
-aGmp
-T+]dP
 jyhx)	
+!UnP
 jyix
 jyix
+!Gn0
 jii8
-RB3m0
-T+OdP
 jyix
 jyhx)	
 jyhx)	
+!Dn0
 jyhx)	
 	k`O
-AAmp
+a*np
 	k!	
-aYm0
-RBWm0
-a"m0
-RB!mp
-!2m0
-!3mP
+Rb@n0
+R"<n
 Q@9_
 Q@9_
 	D-!
@@ -23352,17 +23326,14 @@ Q@9_
 TiB@
 r)|)
  	Az+
-(z|X
 I)H9)
-t|X)
 Lii8k	
-4`"C
-[|X)
-)R|X)
-T(4l0
-@Ul0
+4`*C
+o}X)
+)f}X)
+`>m0
 Bi!}
-@8lP
+`!mP
 h&A9
 07(! 
 T`*@
@@ -23376,17 +23347,19 @@ T(!
 	*J!
 ) A9i
 /A)*
-(;{X
-)6{X)
+I|X)
 R3yh
-@`kP
- RkP
-4 	kP
-4 	k
-`Mk0
-@Ik0
+ IlP
+@6l0
+`2lP
+ 2l0
+`2l0
 T@yi
+(CO9
+(CO9	
+(CO9H
 TYyi
+)AO9
 $	@zd
 Th&E)
 THyi
@@ -23401,20 +23374,12 @@ ThF@
 4hb@
 iw8)	
 !@q!
-`'iP
- "iP
+@%jP
+hyk0
 ?@9h
 4`"@
 R`2@
-!Cj0
-(2jp
-"1j0
- .j0
-T@"j0
-`"jp
-!,jP
-A+jP
-4 %j0
+!,k0
 +ih8J	
  @q!
 (!@9
@@ -23457,65 +23422,55 @@ h2@y
 5iN@y
 hN@y
 +ih8J	
-I@`0
 +ih8J	
-T)>`
 +ih8J	
-`ji0
+`Sj0
 +ih8J	
-@oiP
+@XjP
+`mjp
 TsF@
-T`mip
-7@iip
-T@jip
-T(Wi0
-4`Nip
- Mi0
-`Iip
+T`Vjp
+7@Rjp
+T@Sjp
+T(@j0
+4`7jp
+ 6j0
+`2jp
 Th"@
 T+E@
-@NiP
-TH2i0
-Th*i0
+@7jP
+@whP
+`ohP
 =i"@
+`bhP
 =i"@
- .iP
-`(iP
-`$iP
-@ iP
-``gP
- ]gP
-`ZgP
+@	jP
+ IhP
+ ChP
 P@yI
- WgP
-@OgP
 7a>@
-HexX
-(_xX
-b]xX
-c]xX
-h5xX
-(1xX
-I)xX)
-H!xX
-x]\h
+@0hP
+h{yX
+<yX)
+2yX)
 h&N)
-bihp
-`ehp
-A^hP
-T`3h0
-T 1h0
-T`*h0
-T (h0
-T`#h0
+ vg0
+ tg0
+`kg0
+bRip
+`Nip
+AGiP
 2@yh2
 b@yhb
 f@yhf
-	KwX)
-H9wX
-C^\`:
-('wX
-$wX)
+hhxX
+T!>z
+^xX)
+4` h
+_\`:
+8xX)
+u_\`
+ w_\`
 r	})
 R	aA
 Ri~	
@@ -23524,11 +23479,10 @@ Ri~
 +ih8J	
 @9cZ@yd
 T`J@
-!*g0
-SA*gp
-S!*g
-T`(gp
+"R9H
+2R9T
 5s^@
+@y3]
 4s^@
 4s^@
 RhR@
@@ -23548,14 +23502,14 @@ TiV@y
 5hR@y
 cR@ydV@yeZ@yf
 I)i*J)
-h8uX
+@og0
+aogp
 hR@y
 5`B@
 Hj(Q
 T`B@
-T`Hf
-i*uX)
-(%uX
+T`1g
+	>vX)
 @9KY@9
 @9K]@9
 @9ijz8
@@ -23584,7 +23538,6 @@ hR@y
 5`B@
 7`B@
 5`B@
-IntX)
 C@9?
 G@9?
 ;@9?
@@ -23593,12 +23546,15 @@ G@9?
 C@9?
 (kh8
 6hJ@
-9tX)
+MuX)
+(EuX
 9h|@
--tX)
-I%tX)
+iAuX)
+(=uX
+8uX)
 hR@y
 ThV@y)Z
+h2uX
 #@9?
 '@9?
 	Q@y?
@@ -23609,12 +23565,13 @@ G@9?
 +@9?
 (kh8
 6hJ@
-`	e0
+ie\0
 iixL
 9hR@y
 ThV@y
 hR@y
 S@ym
+TMT\
 hR@yI
 iR@y?
 TiV@y?Y4q!
@@ -23633,7 +23590,6 @@ ThJ@
 hR@y
 ThV@y
 y`B@
-|sX)
 @9)]
 +A9)]
 3A9J]
@@ -23644,15 +23600,13 @@ y`B@
 /F)h
 R@y_1
 R@y_1
-^sX)
-(YsX
-SsX)
+irtX)
+igtX)
 r	}	
 	%@x
-ILsX)
-hJsX
+_tX)
 4h2@
-	@sX)
+StX)
 _	Hj)
 "@9?
 ThJ@
@@ -23660,8 +23614,8 @@ ThJ@
 4h6@
 @xiRAy	
 	KjR@
- 8dp
-@6dp
+	#tX)
+ !ep
 iixL
 9`B@
 hR@y
@@ -23685,7 +23639,6 @@ ThJ@
 hbB9
 5hfB9
 {@91^
-H|rX
 `B9h
 5	dB9I
 S	dB9*}
@@ -23693,9 +23646,9 @@ dB9I
 y)	@9
  6	$@
 IIi8)
-mrX)
 4h2@
-^rX)
+rsX)
+hgsX
 "@9I
 "@9)
 v@9(
@@ -23706,10 +23659,7 @@ R@9J]
 Z@9)]
 b@9J]
 j@9J]
-	(rX)
-~XHA
-~X#A
-`.cp
+;sX)
 Tb~@
 /@9?
 '@9?
@@ -23723,20 +23673,22 @@ g@9?
 6hJ@
 hV@y	B
 T@y	B
-h|qX
 '@9?
 +@9?
 /@9?
 6hJ@
-i^qX)
-(MqX
+	rrX)
+`zcp
+`ycp
+Axc0
 Ti#@y?
 !N`C
 |G@9
 !N`C
 @yJ	@9*
 =`B@
- AbP
+"rX)
+ *cP
 &@yk
 @yj>
 _!@1J
@@ -23745,11 +23697,10 @@ _!@1J
 B@9	
 }	SJ
 &@)#
-	ypX)
 `R@y
 iV@y
 4t:@
-4`R@yaV@y
+4`R@yaV@yV=
 	A@9
 TIU@y*
 Lii8k	
@@ -23757,14 +23708,14 @@ U@y)
 IU@y
 TII@
 	U@y
-SpX)
+IgqX)
 Kih8+
 vC9?
 @y(/
 4 ?@
 4 ?@
 V@yv*@
-V\`r
+3X\`r
 	M@9?
 T	Q@9?
 	y@9?
@@ -23782,7 +23733,7 @@ mh*@
 QBxh?
 5	]@
 4h*@
-V\`J
+W\`J
 5(]@
 )Q@y?
 4h*@
@@ -23790,10 +23741,11 @@ A@9h
 5	U@y
 U@y)
 	U@y
-h6oX
-i-oX)
-h*oX
-#oX)
+@xa0
+`va0
+	ApX)
+I7pX)
+/pX)
 *	L!
 =Byh
 T@hA
@@ -23804,10 +23756,10 @@ iijx?
 (Q@y)U@y*
 5<qa
 T	(@
-`H`0
-`G`0
+`1a0
+`0a0
 hR@y
-	<`P
+	%aP
 {@y	m
 ii8J	
 ikh8?
@@ -23820,12 +23772,11 @@ Ikh8?
 )	@y
 4hJ@
 @y	m
-	anX)
+toX)
 4	$@
-HYnX
 #kw8
 >@9	
-RnX)
+)foX)
 *@9I,
 &@9I 
 *@9H
@@ -23836,30 +23787,32 @@ RnX)
 *@9*}
 "@9)u
 &@9Ju
-	9nX)
-I1nX)
-i/nX)
+LoX)
+DoX)
+	CoX)
 @9)}
 @9K}
 @9J}
-!|U\
-i$nX)
-"nX)
+	8oX)
+i6oX)
 R	4@
 j{8_
+`r`0
+@p`0
 #@9(
 	k@9
 +@9?
 	o@9
 /@9?
 6hJ@
-5a_P
-P@yaV@yz)
- K_0
-`H_0
- I_P
-`E_0
-`F_P
+5J`P
+P@yaV@y
+ 4`0
+`1`0
+ 2`P
+`.`0
+`/`P
+At_P
 ThJ@
 ?}Hk`
 ThJ@
@@ -23870,6 +23823,7 @@ q@	@z
 ThJ@
 hR@y
 yhV@y
+@yM&
 hR@yiV@y?
 Rh^@
 ?A9?
@@ -23882,14 +23836,16 @@ kh8)
 b@9	
 b@9	
 6hJ@
-+mX)
+?nX)
 )}	S	
 )}	S	
+H1nX
+).nX)
+	-nX)
+H(nX
 Th*@
 4hJ@
-9HfT0
-(cTp
-T@1^
+I$nX)
 Th6@
 ivA9
 ii8J	
@@ -23910,15 +23866,18 @@ jy8_
 jy8h
 r@9X
 N@9\
-olX)
+41zX
 -ih8
 _i(8*ih8_
-YlX)
-	=lX)
-H7lX
+`-\P
+	omX)
+FmX)
+(AmX
 ii8J	
 #@yJ
 #@y2
+ d^P
+)'mX)
 #@y	B
 #@yM
 #@yM
@@ -23926,116 +23885,108 @@ ii8J
 #@yI
 #@yO
 #@y(
-I?S0
+hs^0
 +ih8J	
 Ts.@
 Ts.@
 Ts.@
-	~xX
 T)-@
 V@9c
 		B)?	
 Th&@
 i68%
-hVxX
-!C]p
-!A]P
-a@]P
-!@]0
-A?]0
-a>]p
-!>]p
-A=]p
-!:]0
-a9]0
-a1]P
-!1]P
+a"^p
+A!^p
+a ^P
 Ts.@
-hzkX
 4`"@
 9`"@
 9`&@
-ickX)
- 5ZP
+ImlX)
 (+A)I
 	!C)
 4h2@
 T	iu
 *A)I
+!^]P
+THY]0
 Ts.@
 T+-@
-VwXS
+3axXS
 Ts.@
-5BwX
 ! k`
 @9	}
+ag[P
+2S\6
+>@8;
+)AT9i
 RH+@
-vXKyi
+wXKyi
 Ti*@
 Ti2@
 Ti:@
 4hJ@
 Ti*@
 ThFA
+!ga0
 R7G@
 T`BA
 4`v@
 4`~@
 RhB@
 T`B@
-TH.`P
-T(&`P
 Rh")
 ijxj
-sUvX
-KAvXlyi
-H9vX
+@xYP
+s\wX
+KwXlyi
+)@wX
 *+yh
-	4vX?Y(
-I1vX*y`
+i>wX?Y(
+;wX*y`
 h2Ay
 Th6Ay
-`bXP
+`AYP
 hbAy
 ThfAy
-@SXP
-kiX)
-uX*y`
-)WiX)
+@2YP
+ujX)
+wX*y`
+	ajX)
 Rj*@
 Thj@
 ThZ@
 Thz@
 RiB@
 Thz@
-?iX)
-H8iX
-I5iX)
-(1iX
-.iX)
+hSjX
+iIjX)
+(BjX
+)?jX)
+8jX)
 T(  
 N(  
 oH  
+i&jX)
+h!jX
 a2Ayb6Ay
 *?<p
 )kx8
- kx8x
+ kx8
 *ijh8?
-TiEP
 +ih8J	
-4!:_
-4Bjq
+4btr
 +ih8J	
 4<qa
- TWP
+ 3XP
 sr@y
- DWP
-@@WP
-`<WP
-YhX)
+ #XP
+ciX)
 @9?)
-tX y(
+uX y(
 hF@y
+Hf_0
+tk_p
 hF@y
 Ti2@
 5iN@y
@@ -24048,8 +23999,10 @@ X5x`N@y
 `R@y
 T+Q@
 7	I@y?
+@P_0
 7	M@y?
 7	Q@y?
+@I_0
 H@yhJ
 L@yhj
 P@yhZ
@@ -24057,112 +24010,91 @@ L@yh
 H@yh
 i"	9)
 ir	9 
-armX
-!qmX
-zgX)
-h	tX
-H_gX
-)\gX)
+`IuX
+{nXci
+znX]i
+ZznX
+(ihX
+	fhX)
 R	}	
 'D))
 +B)_
-T)sN
 +ih8J	
-TIeQ
-H	gX
-`ZmX
-lXrY
-`BmX
-=))@
-lX~W
-W}lX
-aulX
-aolX"
-8mlX
-|hlX
-a]lX
-![lX"
-|ZlX
-9TlX
-ADlX
-ABlX
-!AlX
-A@lX
-a?lX
-A;lX
-A:lX
-a9lX
-4:lX
-qlX|R
+``^0
+cnXVd
+nX`a
+a~mXla
+A{mX
+ymX"
+VxmX
+ytmX
+shmX
+dmX"
+8`mX
+ANmX
+!LmX
+!HmX
+AGmX
+aFmX
+aEmX~_
+ABmX
+aCmX
+!:mX
+A9mX
+@{mX
 &A))}@
 &A))}@
 Rh'@)
 i#A)*
 RH'@)
 I#A)*
-kX^O
-kX?O
-rkXXN
-a{kX
-AekX
-!lkX
+lXdZ
+a~lX
+A{lX
 4LC)
-*geXJ
+JsfXJ
 T` !
 T@  
--kXB<g
-3kXrL
-x=kX
-!<kX
-!2kX
-!:kX
-<;kX*
-k?kX
-m?kX
--3kX
-jX:J
-jX-J
-jXdI
-jX?I
-jX{H
-jXbH
-u%kX
-jX!G
-zojX
-tjXoF
-!~jX
-z{jX
-zjX.F
-aajX
-AwjX
-AjjX
-a\jX
-AbjX
-AajX
-;jXBMf
-TAc@
-HCdX
-=))@
-avZP
-T ~ZP
-h|ZP
-i|ZP
-r	Y*
- +N\
-@vZp
-`vZ0
-@wZ0
-`sZ0
+a;lX
+AAlX
+A9lXbIh
+a?lX
+A?lX
+FlX*
+(KlX
+H@lX
+iJlX
+(ElX
+kXVS
+kXjR
+kXTR
+kX)R
+Y}kX
+azkX
+A_kX
+aIkX
+AOkX
+AGkXbZg
+aMkX
+TA[@
+aXkX
+!XkX
+hOeX
+=()@
+4@g[
+4`g[
+5 b[p
+4@a[
+A_[p
+ Z[0
+@Z[P
+ W[0
+`fS0
 Th?@
-`_ZP
+@E[0
 RI}	
 C)w#@
-WXZp
-AUZp
-aUZ0
-CHZp
-A<Z0
-4`1ZP
+A:[p
 *@)?
 *A)+
 *@)?
@@ -24175,20 +24107,20 @@ A<Z0
 *A)+
 *@)?
 *A)+
-K0@)
+L,@)k}@
 TM{j
 Mkj8
 M{jx
 {hx)	
 Ti/@
 Ti.@
-4@BY
-vhYP
-:3YP
-W@Yp
+ RZ0
+a<R0
+4W(ZP
 jkh8)	
-h=Yp
-(<YP
+k()Z
+H&Z0
+H'Z0
 4hv@
 Kc"B
 4i"B
@@ -24202,56 +24134,35 @@ KbfB
 Th&A
 4hj@
 Thj@
-4 1Yp
-`1Yp
- 2Y0
- 2Yp
- 2Yp
-)/YP
 7h.@
 Th:@
-i8bX)
+)JcX)
 D-b*@
 F-b:@
-0%bX
-!bX)
-	kAI
-=))@
-8|YP
-XvYp
-xuYP
-XuY0
-XrYP
-0L\`
-cCYp
+i3cX)
+7XqZ
+8fZP
+X`Zp
+x_ZP
+X_Z0
+X\ZP
 	k))
-IzA	
 ;)wC
 *k3?)
-@8YP
+4 #Zp
 SI}	
-c3Yp
-4!3Yp
-4a5YP
- 0Yp
-a)YP
-C%Yp
-`JXp
- 5Xp
-#	Yp
-TvnA
+TvrA
 L,@)k}@
 @-B	@
 j{hx)	
 T(/@
 T(/@
 	k@	
-`tX0
-CcXP
+@wXp
+65Yp
 4hJ4
-48RWP
-vQWP
-7snA
+`%Y0
+7srA
 4hf@
 KcFB
 KbBB
@@ -24270,122 +24181,117 @@ T9?@
 T(?@
 Th6@
 4hN@
-@`X)
+UaX)
 @M)p
 Th6@
-T`RA
-A:PP
+T`VA
 'A)?
-!.hR
+!.hr
+T(rXP
+T	-L
 +ih8J	
-THzWP
-=()@
-`qWp
-ThoWP
-AmW0
-!lWp
-aaWP
+Th`XP
+ ^Xp
+T(\XP
+aXX0
+`PX0
 TM_T
-aNWp
-!CWP
-T!CWP
-ThBWp
-A4Wp
-(5Wp
+a:Xp
+A0XP
+TA0XP
+ismP
+*A!X0
+! X0
+)jm0
+@FOP
+H"Xp
 RVyi
-^))}@
+_))}@
 T(!@
-@-NP
 7`B@
-@%NP
 2I-	
 	 F)a
 4`B@
 7`B@
 4`B@
 7`B@
-THpVp
 7`B@
-T(aVp
+T`XWP
 T(<@
- xMP
-WuMP
-T(IVp
-IUk0
-Th/VP
-)Ok0
-TH)VP
-`XMP
+ADWp
+7cNP
+Ipl0
+`LNP
+T(*Wp
+)jl0
+@FNP
 !^c8$
 T`NA
 T`NB
-)&k0
-`/MP
+IAl0
+	%l0
+*!l0
+I	_X)
 -&)"
 T` !
 T` !
 T  #
 5  #
 R ) 
-THaUP
+@~MP
 ($@)
-)~j0
-THXUP
-irj0
-~]X)
-|]X)
-jOjP
+@uMP
+T(=VP
+(MV0
+jjkP
+T@/VP
 H-B(&
 E-e(%
-i]X)
-*=j0
-`FLP
- hH\
-e]X)
-*8jP
-`$U0
+*Xk0
+@4MP
+I~^X)
+*SkP
 H-c(&
 GD-c(0
 -!82
-)H]X)
-E]X)
-A]X)
-)?]X)
+`^X)
+I^^X)
+IZ^X)
+W^X)
 r	+	
-)9]X)
+Q^X)
 -@  
 T(  
 TH  
-7iRB
-.]X)
-(]X)
+7iZB
+G^X)
+	A^X)
 /m@):	@
-@9:	@9+
-@y:	@y&
+@9:	@9*
+@y:	@y%
 @-  #
 T  "
 o-(  
 T"@!
 #D)j
 4hZ@
-Tt2B
-UsTP
+Tt:B
+vcUP
 !^ 8 
 !^ 8 
-TH\TP
-aUTp
-)zi0
-THTTP
-)vi0
-THPTP
-iei0
+THLUP
+ThDUP
+Th@UP
+i|j0
+T(,UP
 4hj@
-i^i0
-R	LA
+iuj0
+T(%UP
+R	TA
 	!@)?
-0n\X
-g\X)
- 'Tp
+`1UP
+I|]X)
+S)}@
 @iI%
 .@)m
 Si}	
@@ -24394,12 +24300,9 @@ S)}@
 RJ}A
 &@)?
 &@)?
-*$@)Jy
-SJ}@
 T`&@
 Lyixk	
 kE@9K
--=eX
 i`8!|
 @*@%
 i`8!|
@@ -24409,7 +24312,7 @@ i`8!|
 i`8!|
 @*@%
 JE@9*
-l+eX
+L>fX
 ik81
 @y :J
 i`8!&E
@@ -24527,6 +24430,7 @@ JE@9*
 ,,@)
 JE@9*
 kE@9K
+T,#G
 @9Wym
 @9[yn
 @9Lyg
@@ -24637,7 +24541,6 @@ ii8k
 @95yq
 @98ym
 @9:yk
-@9Ixb
 @95ya
 @95ya
 Chc8
@@ -24716,11 +24619,10 @@ hu8s
 hs8T}
 RT|@
 hu8X}
-Tm-C
 i`8!*E
 ia81
 iq8`}
-Toba
+TOub
 i`8a}
 zox1
 i`8a}
@@ -24729,7 +24631,7 @@ E@9k
 ip8Q
 P*p%
 E@9k
-TnHa
+TN[b
 ip8Q}
 i`8C}
 E@9k
@@ -24753,7 +24655,6 @@ E@9k
 i`8!*E
 ia81
 iq8@}
-4.	a
 ib8#(E
 ic8!
 ia8D}
@@ -24777,7 +24678,6 @@ jw8x
 qE@9
 @9s~
 iw8x
-T/mB
 nE@9
 iu8V
 hv8t
@@ -24813,7 +24713,6 @@ oE@9
 @9)%
 @9)!
 pE@9
-4$d`
 iv8W
 7jw8
 hu8V
@@ -24822,7 +24721,6 @@ iv8W
 7jw8
 hu8V}
 qE@9
-@9&Q`
 @9s~
 ix8y
 9hy8
@@ -24866,6 +24764,7 @@ E@9k
 E@9k
 E@9k
 F@9k
+T0}B
 zox1
 yox1
 E@9k
@@ -24936,7 +24835,7 @@ hw8{}
 7jw8
 xhx85
 hu8v
-4fc^
+4Fv_
 7jw8
 xhx85
 hu8v}
@@ -24965,6 +24864,7 @@ jo80&
 hp8o}
 jp80}
 Nkn8
+@9p,_
 eke8
 hc8c$
 @9k%
@@ -25025,6 +24925,7 @@ ht8w}
 @9)!
 jl8|
 jo8/
+@9wj^
 jl8|}
 jo8/}
 hp81
@@ -25038,7 +24939,7 @@ kn8c}
 A@9_
 T	D@
 Lii8k	
-*+]X+
+>^X+
 axl9J
 Lil8m%E
 Mim8k
@@ -25051,10 +24952,12 @@ axK9J
 +ik8L%E
 ,il8J
 )ij8j}
+0^X+
 axl9J
 Lil8m%E
 Mim8k
 Jik8
+R*9@
 Lii8k	
 il8n)E
 Jin8k
@@ -25143,22 +25046,18 @@ JE@9)
 4J}~
 TI#@
 	A@9?
+@{BP
 T	D@
 +ih8J	
 ,I)J
 1F@91
 iq8!
-(x_0
-@tAP
-ThJ(
-ThJ(
-r*Y(
-r*Y(
-r(Y*
-rKY(
-rIY(
-5`^@
-@OJP
+=()@
+r(y*
+ \BP
+r*y(
+r*y(
+r*y(
 @i6}
 L,@iI%
 K1@-
@@ -25178,8 +25077,8 @@ Tj~@
 T*/@)I
 Ti~@
 lE@9$)
-`ZI0
-!BHP
+UAJ0
+T !IP
 5P@96T@98X@94\@9
 ) Aa
 	A@9@
@@ -25196,26 +25095,25 @@ Bi"}
 m8-k.8
 	Ki%
 h$@i*,@iL4@i
-t)-Z
 k+@)
 KP?@)Q
 +yhxJ	
 +yhxJ	
 `j48
 `z4x
-@q?P
+ X@P
 '@)(/@)
 O+@)
 *@),
 K;C@i.y
 Sh} 
 Lyixk	
- RHp
-THMH
-WPX)
+H8Ip
+Th6IP
+`4IP
+iQX)
 is8p
 qhl8
-T"?;
 Qhl8
 @91&
 @91&
@@ -25229,7 +25127,7 @@ qjq8
 @91&
 iq8n
 ujn8
-@9gfY
+@9gxZ
 @91&
 @9c$
 @91&
@@ -25238,7 +25136,7 @@ ujn8
 @9l 
 |jg8
 Thn8s
-T"$;
+Tb|<
 Shn8
 @9s&
 @9s&
@@ -25247,11 +25145,13 @@ kn8g
 @9s&
 kn8g
 |jg8
-@9MKY
+@9M]Z
 @9s&
-@9mGY
+@9mYZ
 @9s&
+TBg<
 Shd8
+TSV<0
 gjq8c
 @9q'
 @91"
@@ -25277,524 +25177,502 @@ i18M
 @9q'
 @91"
 @9c 
-=))@
- /FP
-(&\X
-(%\X
-h!\X
-AzGp
-A#H0
-azGP
-!|Gp
-	k))
-rh~@
+Iz!.
+=()@
+A.GP
+2]XA
+h-]X
+H,]X
+(+]X
+h$]X
+H#]X
+("]X
+h	]X
+a$Ip
+A'Ip
+a*I0
+!-I0
+!/Ip
+!0IP
+A4Ip
+A5IP
+A6I0
+!	HP
+!zHP
+A|H0
+`K;\
+HI\X
+4svGP
+HB\X
+!oGP
+aiGP
+AhGP
+afG0
+h4\X
+:gGp
 &A))}@
-4h~@
-&A))}@
-"@))
-7!O@
-7!c@
-@}FP
-[X`BC
-ZX`"C
-zhx)	
-TH{C
-ZX@CC
-4fO@
-4f{@
-ZX`BC
-`?5\
-ZX`BC
-ZX`"C
-8\`A
-hmZX
-h&ZXcB
-!yEP
-UuEp
-asEp
-usEp
-afEp
-YX`BC
-4jzF
-Ti*T
-YXw 
-a<E0
-YX`"C
-YX`"C
-YX`*C
-YX`BC
-T	e@
-T	i@
-Qz*8
-YX`BC
-YX CC
-YX`BC
-ThFA
-(uYX`*C
-tYX`BC
-)gYX
-`YX`*C
-T`FC
-T`.T
-T`nC
-7a6T
-PYX`*C
-OYX`*C
-h>YX`
-ba9	
-b!9h
-v!9s
-r!9s
-va9H
-v!9?
-r!91
+ ^G0
+*@)?
+ CG0
+@@G0
+[X`NC
+[X`*C
+jyhx)	
+Iz))
+[X`NC
+[X`NC
+RKy)
+(~[X
+Hn[X`*C
+!:\`A
+(P[X
+a[F0
+aEFp
+A-F0
+IPNX)
+ZX`NC
+Ti6T
+ZXw 
+ZX`*C
+ZX`*C
+ZX`NC
+T	%@
+T	)@
+T	-@
+Q7B9
+HvZX
+ipZX
+h09\
+jZX OC
+heZX`NC
+HRZX
+h=ZX
+4@~Ep
+H2ZX
+	,ZX
+apE0
+H%ZX`2C
+T`RC
+T`:T
+T`zC
+7`BT
+T`BT
+T`FT
+ZX`2C
+ZX`2C
+ZX`2C
+ZX`2C
 *ih8
 *i(8 
-ra9h
-r!93
-va9h
-ba9h
 ij8n!
-@.;P
-`jEP
- kEp
-`^EP
-s^Ep
-`C=p
-5LX)
-"[Ep
-bXEp
-4!QE
-4!1;0
-\%LX
-%LXw
-9LEp
- 7Ep
+	!c9
+R	!#9@
+AX;0
 +ih8J	
-@4Ep
-@5Ep
 Lih8
 mim8M
 mil8L
-H2EP
-(2EP
+`g;P
 lji8
-4~XXt
-T!];P
-hNXX
+t2YXt
+5-YX
+R	!$9
 Jh8?)
 Jh8?5
-j(8 [D
-@?XX
-1XX(
-HvDP
-HnDP
-h_DP
+j(8 
+	2LX)
+@}XX
+@wXX
+Lii8k	
+i(;0
+J(;P
+@lXX
 Lii8k	
 Lii8k	
+`[XX
 Lii8k	
-Lii8k	
+@SXX
+Q(A	
+(ITX
+HHTX
 Ts>@
 Ts>@
- {9P
 T`r@
 T+=@
-SJWX
 R+hh8k
 @!KJ
 +hh8J
 jh8)	
-h8SX
-(8SX(
-7SXH
-7SXh
-`G9P
-(,SX
-hKJX
-(JJX
-(HJX
-(FJX
-(DJX
-(BJX
-(@JX
-(>JX
+HOD0
+HOD0
+HOD0
+HODP
+HqJX
 ju8I
 jk8L	
+JH70
 Lil8
-j;70
 Lil8
-4`(CP
-(%C0
+4`ZC
 h&@)*
-Bd9(
-wVXH
-@v8P
+be9(
+4@-C
+4@,Cp
+ 'C0
+4`'C
+4!&Cp
+4A%C
 R	}|
-(MVX
-i2e9
-Rh2%9 @V
+iRf9
+RhR&9
 4`"@
 6`"@
 r(|(
 rH|(
-`pBp
+JVX(
+ 6VX
+Th*V
 )@)I}	
- wOX
-@oOX
-nOXXj
-OXqj
-[	OX(
- JOX
-NXUi
- HOX
-`5OX
-@1OX
-NX~h
-NX*h
-h&OX
+ATOX
+WGOX
+H:IX
+@OXln
+OXrn
+OXnn
+OX@n
+?OXYn
+;>OX(
+!;OX
+!9OX
+(IX)
+a$OX
+OX=m
+@jOX
+ fOX
+OXfl
+`TOX
+H[OX
 "@9H
 	!A9i
-(vHX
-NXVf
-I}HX)
-NX<f
-a\NX1f
-SmHXh
-ASNX
-NXBuJ
-\~NX
-NX@e
-!qNX
-#lNXD`J
-CfNX
-CeNXb\J
-#dNX
-bNXB\J
-aQNXGd
-!KNXCd
-ANNX:d
-GNX)d
-aFNX
-CKNX
+ &OX
+ "OX
+NX>j
+NX$j
+OX(i
+NX/h
+NX+h
+NX"h
+A{NX
+(\HX
+YHXZ
+!_5\
+mNX`g
+alNXTg
+iNX:g
+aiNX
+hGHX
+AgNX
+vdNX
+T%NX
 AKNX
-!JNX
-6DNX
-y$HXZ
-AV5\
-9NXxc
-7NXlc
-4NXRc
-a2NX
--NX"(J
-@{NX
-5wNX
-nNXTb
-MX b
+a]NX
+NXgf
+aVNX
+NX<f
+APNX
+AFNX
+!FNX
 h)@)k%A)T
-a>Ap
-`VNX
-`BNX
-MXz`
-MXx`
-@!NX
+apA0
+ApAP
+!<NX
+a;NX
+@wNX
+A#NX
+!"NX
+NXbd
+NX`d
+ VNX
 +ih8J	
-MXf_
-MXE_
-MX0_
-MXR^
-MXl^
-MX/^
-AeMX
-!`MX
-!UMX
-!xMXa]
-!TMX[]
-MX.]
-ayMX
-hQGX
-PNGX
-IKGX)
-h2MX
-9*MX
-(sMX
-(*MX
-UAMX
-`wMX
-@EMX
- 7MX
-7MXhX
-@-MX
+HNNX
+MXNc
+MX-c
+`5NX
+ (NX:b
+MXTb
+($NX
+MXIa
+MXCa
+HgMX
+BaGX
+5vMX
+fMXs^
+!$MX
+/GX)
+(0GX
+(-GX
+$GX)
+`uMX
+a7MX
+ zMX
+A5MX
+kMXP\
+#MX 
+A"MX
+a MX@
+ bMX
 !^@( 
 !^A(!
-LXzW
+MXb[
 !^A(!
 !^ 9 
 .D)H
-LX;V
-AmLX$V
+LXpZ
+LXjZ
+LX#Z
 7H!`
 N(!`
-U;LX 
-NbvH
+5pLX
+LXRW
+!]LX
+wLX/W
+AvLX#W
+HMFX
+`3\H	
+`Z3\(
+A~LX
+!{LX
 axLX
-AuLX
-AwLX
-pLX,T
-ApLX&T
-!aLX
-ZLXjS
-A(LX
-BLXGS
-!VLX
-aALX;S
-W3\H	
-Q3\(
-aILX
-AFLX
- {LX
-!0LX
-`F3\
-@D3\
-A;LX
-!:LX
- k?p
-Hk?P
+@O3\
+ M3\
+!pLX
+h(FX
 )	 @
 RKY)
 RKY)
-PLX2Q
-@NLX
+'3\@
 R(yh
-aN?p
-`N?p
- I?p
-`;LX
+`{?P
+@|?p
+A:LX
+a9LX
+a&LX
+a"LX
 Th&C
-KXFO
-KX-O
+LX1S
+@??0
 ^(  
 !^  "
-HLEX
+`"LX
 JA@9
 Bi"}
 i"B)(}
 r+	@9,
 h&B)
-V2KX
-ayKX
-AU=p
-!RKX
-8KX'J
-A4KX
-a2KX
-A,KX
-a(KX
-A'KX
-KX_I
+!mKX
+T0KX
+!aKX
+A_KX
+!XKX
+!9KXJM
+!VKX
+aSKX
+ASKX
+aQKX
 !^(  
 Rij(8
 `j(8
+c(KX
+c'KX
+c&KX
+c%KX
+c$KX
+c#KX
+c"KX
+c!KX
+c KX
 jh8H
-AmJX"
-JXvF
-JXpF
+!	KX
+JXwJ
+JXaJ
+JX[J
 `j(8
-JXOF
+JX:J
 Rij(8
 hjy8
-JX2F
 tj98
 jh8)
 *	h(
 hh8h
-anJXoE
-hXDX
-hXDX
-hQDX
-(SDX
-hODX
-(NDX
-(NDX
-(KDX
-(GDX
+JXkI
+JXZI
 hh8h
 **J}@
-JXkD
-]JXTD
-/JX6D
-YJX0D
+JXVH
+JX?H
+dJX!H
 ?@9?
-uJJX
 	hh8
-axJX
 5{.@
+AfJX
 &A9(
-AxJX
-!.JX
-!$JX
-JXnB
-uJXnB
+acJX
+ATJX
+JX}F
+aYJXrF
+OJXYF
+JXYF
 Rij(8
-JX>B
-JX5B
+APJX)F
+GJX F
+aNJX
+!NJX
 q 	@z
-`bJX
-JXjA
-!,JXaA
-4+JX
-IXMA
-a)JXGA
-(JX@A
-A%JX"A
+5_JX
+5JXUE
+aaJXLE
+t`JX
+*JX8E
+^JX2E
+^JX+E
 q 	@z
+!RJX
 "A9h
-JXb@
+aLJX
+!GJX
+CJXpD
+BJXMD
 R	h(8
-IXE@
-IX8@
-IXW?
-IXQ?
+JX0D
+JX#D
+ATJX"
+!.JX
+IX}C
+a8JX
+IXBC
+!"JX<C
 !^(  
 jh8(
+`;JX
 hjh8h
-ahIX
-IX}>
-IXw>
-IXW>
-qCX)
+`/JX
+IX~B
+IXhB
+JXbB
+IXBB
 Rij(8
 ij(8
-!{IX?=
-asIX
-!iIX
+IX*A
 Rij(8
-bIX|<
+IXg@
 Rij(8
-ATIXB<
-IX"<
-A~IX"
-8{IX
-AsIX
-!hIX
-AfIX
-6PIX
-awIX5;
-	CX 
-W%IX
-anIX
-A.IX
-a-IX
+IX-@
+IX ?
+?CX 
 ijh8?
 Tvj(8
-IXo:
-aSIX
-IXK:
+!OIXZ>
+QIX6>
 jh8i
-IX*:
-JIX"
-a>IX
+!}IX
+aCIX
 j(8w
 j(87
-AEIX`9
-HXQ9
-a)IX
+zIXK=
+a+IX<=
+!2IX
+A^IX
+A\IX
+v=IX
 jh8i
 j(8v
+ATIX
+!OIX
+!)IX
 !^!)!
 /@m@
-HXC8
+a&IX.<
 T`  
-HXX7
-AuHX
-xBX)
-T\HX
-IqBX
-JlBX
-HXW5
-!FHX
+!7IX
+HXC;
+HXB9
+3+<0
+A'<p
+a{HX
 "A9H
-apHX
-NaZG
-aRHX
-A@HX
-A|HX
+NaRG
+AgHX
 &A9H
-GX(3
-z0HX
 TD)h
 TB8c
-dHX@
-!cHX
-aRHX
-!&HX
-zHXk2
-AVHXP2
-GXI2
+a[HX
+HXV6
+A[HX
+HX;6
+HX46
 N !`
 T!(c
-.HXb1
-*HXD1
- KHX
-a*HX"
-a:HX
-a1HX
-A"HX
- e;0
-GXY0
-	HXb
-HX00
-GXy/
-GXY/
+dHXM5
+!tHX
+WGHX
+A_HX/5
+_HX"
+AoHX
+x%HX
+!CHX
+@gHXq4
+HXD4
+>HXb
+A7HX
+6CHX
+GXj3
+GXd3
+#HXb
+/HXD3
+a-HX
 h&F)
-GX)/
 h&G)
+a"HX
 *A9H
-GXP.
-hoAX
+HX;2
 "A9h
-GXy-
-qGX,-
-azGX
-sGXT,
-agGX
-aDGX
-A^GX
+GXd1
+GXs0
+GX?0
 #D)	
-Ab.\
-@GXi+
-a_GX
-a]GX
+HOAX
+uGXT/
+GXe.
+GXU.
+GX(.
+z7GX
+!6GX
 AOGX
-RGX"
-`GXz*
-A_GXj*
-UGX=*
-AYGX&*
-aHGX
-A0GXv)
-!2GXv
-a0GX"
-GXX)
-(GX:)
-H/GX
-:!GX
-A)GX
-FXx(
-`V:P
-aN:p
-Az/P
-a=:p
-B>:P
-T =:0
-`+:0
+dGX\-
+a.GX
+fGXv
+eGX"
+SEGX<-
+!]GX
+UmGX
+[aGX
+S1GX
+]GX~,
+GXh,
+@dGX
+GX\,
+!XGX
+VUGX
+aRGXB
+`t:P
+Ah:0
 	A@9?
 	E@9?
 KE@9
-jj@XJ
 4kz@
 A@9_
-ah/p
- =IX
+ar/p
+@rIX
 TK	@
 Tj*@
 @yN=F
@@ -25825,104 +25703,7 @@ Vi&8
 @9s&
 @9s"
 40~@
-Vht8
-@94xt
-@95xu
-@99xy
-6kv8
-Tit8
-Uiu8
-Viv8
-@94xt
-@95xu
-@99xy
-6kv8
-@98xx
-@9s&
-@9s"
-@9s&
-@9s"
-Yi&8
-Ui&8
-Vi&8
-@9s&
-@9s"
-DF)	
-ra>-
-whu8
-@9Uxu
-@9Vxv
-@9Zxz
-Wkw88
-Uiu8
-Viv8
-Wiw8
-@9Uxu
-@9Vxv
-@9Zxz
-Wkw88
-@9Yxy
-8kx8
-;hy8
-@9s&
-@9s"
-@9s&
-@9s"
-Zi'8
-Vi'8
-Wi'8P
-@9s&
-@9s"
-r!"-
-whu8
-@9Uxu
-@9Vxv
-@9Zxz
-Wkw88
-Uiu8
-Viv8
-Wiw8
-@9Uxu
-@9Vxv
-@9Zxz
-Wkw88
-@9Yxy
-8kx8
-;hy8
-@9s&
-@9s"
-@9s&
-@9s"
-Zi'8
-Vi'8
-Wi'8P
-@9s&
-@9s"
-@F)	
-40~@
-Vht8
-@94xt
-@95xu
-@99xy
-6kv8
-Tit8
-Uiu8
-Viv8
-@94xt
-@95xu
-@99xy
-6kv8
-@98xx
-@9s&
-@9s"
-@9s&
-@9s"
-Yi&8
-Ui&8
-Vi&8
-@9s&
-@9s"
-40~@
+r`e-
 Vht8
 @94xt
 @95xu
@@ -26042,7 +25823,6 @@ Vi&8
 @9s&
 @9s"
 DF)	
-raS,
 whu8
 @9Uxu
 @9Vxv
@@ -26067,7 +25847,103 @@ Vi'8
 Wi'8P
 @9s&
 @9s"
-rA7,
+whu8
+@9Uxu
+@9Vxv
+@9Zxz
+Wkw88
+Uiu8
+Viv8
+Wiw8
+@9Uxu
+@9Vxv
+@9Zxz
+Wkw88
+@9Yxy
+8kx8
+;hy8
+@9s&
+@9s"
+@9s&
+@9s"
+Zi'8
+Vi'8
+Wi'8P
+@9s&
+@9s"
+@F)	
+40~@
+Vht8
+@94xt
+@95xu
+@99xy
+6kv8
+Tit8
+Uiu8
+Viv8
+@94xt
+@95xu
+@99xy
+6kv8
+@98xx
+@9s&
+@9s"
+@9s&
+@9s"
+Yi&8
+Ui&8
+Vi&8
+@9s&
+@9s"
+40~@
+r@z,
+Vht8
+@94xt
+@95xu
+@99xy
+6kv8
+Tit8
+Uiu8
+Viv8
+@94xt
+@95xu
+@99xy
+6kv8
+@98xx
+@9s&
+@9s"
+@9s&
+@9s"
+Yi&8
+Ui&8
+Vi&8
+@9s&
+@9s"
+DF)	
+whu8
+@9Uxu
+@9Vxv
+@9Zxz
+Wkw88
+Uiu8
+Viv8
+Wiw8
+@9Uxu
+@9Vxv
+@9Zxz
+Wkw88
+@9Yxy
+8kx8
+;hy8
+@9s&
+@9s"
+@9s&
+@9s"
+Zi'8
+Vi'8
+Wi'8P
+@9s&
+@9s"
 whu8
 @9Uxu
 @9Vxv
@@ -26342,8 +26218,9 @@ j(8S
 @9J%
 @9J!
 A9.E@9
+r%~F
+QdD*
 xkx!
-Td:*
 hg8!
 @9c$
 @9c$
@@ -26377,6 +26254,7 @@ j!8!
 @9c 
 @9!$
 @9! 
+TD)*
 hg8!
 @9c$
 >hc8!
@@ -26566,7 +26444,6 @@ T(E@9
 T(!@
 T(E@9
 LE@9
-r$a)
 4x`x
 jv8V
 jw8W
@@ -26610,14 +26487,12 @@ Wkw88
 8kx8y
 5iu8
 nE@9
-Qq*E
-QP!)
-Tp )
 @9-zm
 @9-zm
 @9-zm
 @95zu
 @9B$
+TP")
 @97zw
 @98zx
 @9Z'
@@ -26691,6 +26566,7 @@ jm8;
 |	S!
 @@*A
 LE@9
+red(
 Uxax
 @99'
 @99'
@@ -26705,8 +26581,8 @@ xjv8
 @99'
 @99'
 6iv8
+Qb*(
 Pxkx
-T"!(
 Pha8
 @9nxn
 @9pxp
@@ -26852,7 +26728,6 @@ K!|
 4	0@
 1E@9!a
 izjx
-Tjq'
 Ziv8
 @96{v
 @96{v
@@ -26866,35 +26741,7 @@ Ziv8
 @9J%
 @9J	
 @9J	@9
-jv8J	
-@9*{j
-@9s&
-@9*{j
-@9s&
-@97{v
-@9*{j
-@9s&
-@9*{j
-@9s&
-@97{v
-@9J%
-@9J	
-@9J	@9
-TWS'
-jv8J	
-@9*{j
-@9s&
-@9*{j
-@9s&
-@97{v
-@9*{j
-@9s&
-@9*{j
-@9s&
-@97{v
-@9J%
-@9J	
-@9J	@9
+Twi'
 jv8J	
 @9*{j
 @9s&
@@ -26923,6 +26770,36 @@ jv8J
 @9J%
 @9J	
 @9J	@9
+jv8J	
+@9*{j
+@9s&
+@9*{j
+@9s&
+@97{v
+@9*{j
+@9s&
+@9*{j
+@9s&
+@97{v
+@9J%
+@9J	
+@9J	@9
+T7@'
+jv8J	
+@9*{j
+@9s&
+@9*{j
+@9s&
+@97{v
+@9*{j
+@9s&
+@9*{j
+@9s&
+@97{v
+@9J%
+@9J	
+@9J	@9
+Tw2'
 jv8J	
 @9*{j
 @9s&
@@ -27022,8 +26899,8 @@ TbD@
 gih8
 	 Bi
 (FiA
-SMb&
 6!|	
+rcO&
 yho8
 	 Bi
 (FiN
@@ -27046,13 +26923,14 @@ gih8
 	 Bi
 (FiA
 6B|	
-rcU%
 yho8
+rfJ%
 	 Bi
 (FiM
 gih8
 	 Bi
 (FiA
+SM*%
 6c|	
 yho8
 	 Bi
@@ -27068,10 +26946,13 @@ ii8s
 	 Bi
 (FiB
 6!|	
+r!`$
 9hn8
+rCL$
 pha8
 	 Bi
 (FiN
+r-4$
 ii8s
 	 Bi
 (FiB
@@ -27090,13 +26971,13 @@ Sv~
 mha8
 	 Bi
 (FiM
-rMk#
 ii8s
 	 Bi
 (FiB
+rob#
 6!|	
+raB#
 9hn8
-r#&#
 pha8
 	 Bi
 (FiN
@@ -27113,13 +26994,17 @@ pha8
 im89
 4"F@
 :hn8
+rcn"
 mha8
 	 Bi
 (FiN
+rmU"
 ii8s
 	 Bi
 (FiB
+r/D"
 6B|	
+r!$"
 9hn8
 pha8
 	 Bi
@@ -27136,14 +27021,16 @@ pha8
 (FiB
 im89
 4"F@
+rae!
 :hn89
-r#H!
 mha8
 	 Bi
 (FiN
+rm7!
 ii8s
 	 Bi
 (FiB
+r/&!
 6B|	
 9hn8
 pha8
@@ -27161,9 +27048,7 @@ pha8
 (FiB
 im89
 4"F@
-rA? 
 :hn89
-rc* 
 mha8
 E@9	XF))}@
 B@9?!
@@ -27171,7 +27056,6 @@ ThF@9
 iF@9?	
 4h"@
 RhF@9	
-Q	24
 iF@9?
 F@9?
 Th"@
@@ -27236,7 +27120,6 @@ Iu8u
 @99'
 @99'
 Iu8u
-Q5g;
 4ks8
 Tks8
 tks8
@@ -27369,7 +27252,11 @@ j(8H
 @9k!
 @9k!
 Kii8
-j~8YH
+8ks8
+5j68
+4j58T
+%j48
+jx8YE
 8ks8
 5j68
 4j58T
@@ -27382,16 +27269,11 @@ j~8YH
 5j68
 4j58T
 %j48
-jx89&
+jx89#
 8ks8
 5j68
 4j58T
 %j48
-8ks8
-5j68
-4j58T
-%j48
-jx8y
 8ks8
 5j68
 4j58T
@@ -27550,7 +27432,6 @@ kia8a
 @9A{a
 !hg8
 jk8K
-@9:O8
 @9!$
 ~ia8
 @9K{k
@@ -27580,7 +27461,6 @@ k{8s
 @9! 
 @9! 
 hu8k	
-@9z78
 @9!$
 ~ia8
 @9K{k
@@ -27639,6 +27519,7 @@ kia8a
 @9A{a
 !hg8
 jk8K
+@9:H8
 @9!$
 ~ia8
 @9K{k
@@ -27656,6 +27537,7 @@ z{xs
 @9!$
 @9! 
 @9! 
+@9Z=8
 @9!$
 ~ia8
 @9K{k
@@ -27664,6 +27546,7 @@ kia8a
 @9A{a
 !hg8
 jk8K
+@9z88
 @9!$
 ~ia8
 @9K{k
@@ -27850,13 +27733,14 @@ Kii8
 Mii8
 Kii8
 Mii8
+QeH7
 xkxc
 hd8c
 @9k'
 chk8
 @9{'
 {i{8
-~i|8&3
+~i|8
 hg8k	
 @9k$
 @9k!
@@ -27886,7 +27770,7 @@ id8k
 cic8
 @9{'
 {i{8
-~i|8("
+~i|8
 ygxk	
 @9k$
 @9k!
@@ -27900,7 +27784,7 @@ id8k
 cic8
 @9{'
 {i{8
-~i|8H
+~i|8
 ygxk	
 @9k$
 @9k!
@@ -27914,7 +27798,7 @@ id8k
 cic8
 @9{'
 {i{8
-~i|8h
+~i|8
 ygxk	
 @9k$
 @9k!
@@ -27969,7 +27853,7 @@ ygxk
 cic8
 @9{'
 {i{8
-~i|8(
+~i|8
 ygxk	
 @9k$
 @9k!
@@ -28170,6 +28054,7 @@ xQE@
  ~	S
 xQE@
  ~	S
+@9M76
 @9J%
 @9J%
 kin8
@@ -28180,6 +28065,7 @@ kin8
 @9k!
 4( @
 @9(%
+Sy!6
 eji8c
 eji8c
 je8c
@@ -28338,11 +28224,9 @@ ii8I
 @9J%
 @9k%
 5L*)1
-TaE%0
- 4%p
+4 v%P
+@d%P
 w@y?
-T@*%
-T`)%P
 ;i:8
 @9(}
 @9)}
@@ -28351,35 +28235,27 @@ w@y?!
 jk8?
 T	}@
 	A@9?!
-I'+X)
+4@&%P
+ $%0
+)\+X)
 ThBA
 j58hBA
-TIx,
 	)E)UA	*
 T	-@
 T	-@
-AU$P
-4AW$P
 Rh&C
- S$p
 4(!@
-9 N$P
-9@Q$0
-T R$
+`|$P
 Th&C
-T F$p
- H$0
-`J$P
-_*X)
+ ~$P
+`{$P
 Rh&C
 4h&C
-@J$P
 RhnC
 RKY4
 RKY4
 )hzC
 R*Y4
-Tb<$
 R*Y5
 R	y5
 R*Y4
@@ -28392,25 +28268,54 @@ Th&C
 Th&C
 Th&C
 ThbC
-1*X)
-(/*X
+f*X)
+`K$P
 RKY7
 R*Y7
 7	)@
+TbH$
+T@H$
+9`@$0
+K*X)
 4h&C
 5h&C
+@.$P
+ ($P
+ %$P
+@5$0
+h7*X
+4b4$p
 RKY6
-H-$p
+`3$P
+a4$0
++*X)
+I'*X)
 jA@9_
 hE@9
 +ih8J	
-@'$P
+ Z$p
 'Bi( 	
 )E@9@!	
 Q9|@
 Q9|@
 4(|@
-T ,$P
+T`Q$
+T@U$
+T@_$P
+T`<$
+T`3$p
+T@H$P
+T 7$p
+T "$
+T`*$P
+T`@$
+T@1$P
+T $$0
+T @$
+T@7$p
+@7$p
+@0$P
+`*$0
 +yhxJ	
 <qa"
 <@qa
@@ -28418,7 +28323,9 @@ T ,$P
 <@qA
 T@AG
 T@AK
+T J6
 +ih8J	
+T		+
 B@9*
 *!N'T#O
 T#OuT#OVT#O
@@ -28474,8 +28381,7 @@ i180
 @91&
 @91"
 C@9)C@9
-hN p
-HN 0
+(=#0
 O@A)
 RM8@)
 %@)?
@@ -28518,7 +28424,6 @@ hs89'
 hx8{
 +yhxJ	
 SB|@
-@9i{0
 @95Yg
 @9:Yx
 @9\!@
@@ -28550,7 +28455,6 @@ ipx!<
 ipx!<
 !@A*
 S }@
-@9	50
 @9%Yd
 @95Yg
 @9X!@
@@ -28575,13 +28479,13 @@ Wiw8
 @9'D@
 @9'D@
 @9%D@
-hP@9l
+hP@9,
 i`@9jT@9
 kd@9mX@9
 mh@9
 @93$@xt
 Uiu8v
-ThP@9
+ThP@9L
 i`@9jT@9
 kd@9mX@9
 mh@9
@@ -28613,17 +28517,20 @@ jax!%
 ja8!
 T)}@
 _AHk
-T k P
 tV	)
 T	@@9
 7iZ@
  6`*@
 7`*@
 Lii8k	
-TA$ 
+*ab P
+A` P
+7`K 0
 	*	x
 	B9h
 +ih8J	
+(, 0
+4`. 0
 5h2@
 *@)$
 )(@)'
@@ -28636,10 +28543,14 @@ A@qk
 	E@9?
 	E@9?
 TbC@Q
-h#%X
+H\%X
 	A@9?
-I"%X)
+)[%X)
 E@9z
+PW%X
+Q%X)
+G%X)
+<%X)
 Rkij8kk)8
 li*8)
 @8*E
@@ -28648,15 +28559,19 @@ li*8)
 )A@y)=
 oynx/
 Tjy.x
-	k`	
 :E@9i
 *X#	
-G1XH
-T(7&
-!1X`
-	9$X)
+^1X`
+X1Xh
+@W1X
+U1Xh
+s$X)
+(D1X
+>1X+
 T6yh
+&1X(
  A9h
+H#1X
 hZB)
 N@9,
 	)D)!
@@ -28664,28 +28579,25 @@ N@9,
  A9h
 D)i*A9?
 *-D)H
-{0XH
-u0X(
-hh0X(
 4h^@
 5hZ@
 4hZ@
 T	3@
 h"A9
-h"A9
-QM9H	
+h"A9h
 5h.@
 Rh"A9
 h"A9
 QM9h
 h"A9
 6hZ@
-H>0X(
- :0X 
+z0X(
+v0X 
 RhN@
 h.A9H
-H.0XH
+j0XH
 h*A9
+Y0X(
 #B)H'
 7HK@
 h&A9h
@@ -28695,63 +28607,75 @@ h*A9
 5i6@
 5i>@
 $I) 
-~/X(
 AUkA
 Tuf@
 ATkA
 Ttj@
-hf/X(
  A9(
 R	$@
-_/X 
-T/X 
-`O/X 
 Th&F)
 j.G)
-D/X 
-A/X 
+}/X 
 7h:@
 Th>@
-8/X(
-5/X 
+hu/X(
+q/X 
 7h2@
 Th6@
-(-/X(
-`)/X 
+i/X(
+e/X 
 h"A9h
 5h"A9h
-!/X 
+`^/X 
 ( A9
+Z/X 
 RhN@
+T/X 
 RhN@
+N/XH
+F/X 
+C/X(
 4`n@
 7`n@
+h2/XH
+-/X 
+*/X 
+	%/XI
+!/X 
 T((A9
 TH(A9
 ((A9
 )*_|Jk 
 T(H@
+6hJ@
+6hJ@
+4h&A9
+4h*A9
 ((A9
+R	(I)(
 T-@ !
 =hJ@
  A9H
  A9H
 h"A9h
 QM9H
-hr.X
 Lii8k	
-e.X(
 Lii8k	
 #C)(
 h"A9
-HA.X
-H=.X
+Hx.X
+Ht.X
 h"A9
- &.X
-@%.X
+ ].X
+@\.X
+@K.X 
 4zk|
+7.X(
 	(A9?
+h3.X(
 h.A9
+07  
+(".X
 (,A9
 Hzn!
 C@9(
@@ -28759,8 +28683,10 @@ C@9(
 +ih8J	
 +ih8J	
 T)|@
-	k 	
+	k!	
 S`~4
+	k@#
+	k!	
 SkZk
 ScZb
 |	SB
@@ -28777,6 +28703,9 @@ ScZb
 6hzh
 	B-!
 6hzh
+Rp|@
+STXs
+6Kxk
 4z~@
 Oii8oE
 tF@8
@@ -29153,9 +29082,20 @@ $kd8
 l	@yn
 jm8)-
 	ji8)]
-p	 X
-P	 X
-0	 X
+RWD0
+Mi`x
+:/16
+:/16
+@y)}
+@yJ}
+?A@q
+A@q,
+3_A@q
+ilx!|
+ilx!
+:/16
+@yk}
+S?A@q
 mcpl
 bolg
 #vedbolg
@@ -29769,17 +29709,13 @@ main
 main
 Constants
 scRGB_output
-texture_type
 input_type
 color_scale
+unused_pad0
 tonemap_method
 tonemap_factor1
 tonemap_factor2
 sdr_white_point
-Yoffset
-Rcoeff
-Gcoeff
-Bcoeff
 input.color
 @entryPointOutput
 GLSL.std.450
@@ -29787,19 +29723,14 @@ main
 main
 Constants
 scRGB_output
-texture_type
 input_type
 color_scale
+unused_pad0
 tonemap_method
 tonemap_factor1
 tonemap_factor2
 sdr_white_point
-Yoffset
-Rcoeff
-Gcoeff
-Bcoeff
 texture0
-sampler0
 input.tex
 input.color
 @entryPointOutput
@@ -29808,21 +29739,14 @@ main
 main
 Constants
 scRGB_output
-texture_type
 input_type
 color_scale
+unused_pad0
 tonemap_method
 tonemap_factor1
 tonemap_factor2
 sdr_white_point
-Yoffset
-Rcoeff
-Gcoeff
-Bcoeff
 texture0
-sampler0
-texture1
-texture2
 input.tex
 input.color
 @entryPointOutput
@@ -29845,6 +29769,7 @@ input.color
 @entryPointOutput.pos
 @entryPointOutput.tex
 @entryPointOutput.color
+@entryPointOutput.pointSize
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ
 TH<0$
 iZK<-
@@ -30444,7 +30369,7 @@ Unknown touch finger
 SDL_QUIT_ON_LAST_WINDOW_CLOSE
 SDL_RWFromFile(): No file or no mode specified
 Couldn't open %s
-%s is not a regular file
+%s is not a regular file or pipe
 size
 context
 Unknown value for 'whence'
@@ -30851,9 +30776,11 @@ misc5
 misc6
 mappingString
 hint:
+SDL_GAMECONTROLLER_USE_BUTTON_LABELS
 Couldn't parse GUID from %s
 default
 xinput
+hint:SDL_GAMECONTROLLER_USE_BUTTON_LABELS
 000000000000
 crc:
 none,*,
@@ -30862,7 +30789,7 @@ a:b0,b:b1,back:b4,dpdown:h0.4,dpleft:h0.8,dpright:h0.2,dpup:h0.1,leftshoulder:b9
 a:b0,b:b1,dpdown:h0.4,dpleft:h0.8,dpright:h0.2,dpup:h0.1,leftshoulder:b9,rightshoulder:b10,
 a:b0,b:b1,back:b4,dpdown:h0.4,dpleft:h0.8,dpright:h0.2,dpup:h0.1,leftshoulder:b9,lefttrigger:a4,rightshoulder:b10,righttrigger:a5,start:b6,x:b2,y:b3,
 a:b0,b:b1,back:b4,dpdown:h0.4,dpleft:h0.8,dpright:h0.2,dpup:h0.1,guide:b5,leftshoulder:b9,leftstick:b7,lefttrigger:a4,leftx:a0,lefty:a1,rightshoulder:b10,righttrigger:a5,start:b6,x:b2,y:b3,misc1:b11,
-a:b0,b:b1,dpdown:h0.4,dpleft:h0.8,dpright:h0.2,dpup:h0.1,guide:b5,rightshoulder:b10,righttrigger:a5,start:b6,misc1:b11,
+a:b0,b:b1,dpdown:h0.4,dpleft:h0.8,dpright:h0.2,dpup:h0.1,guide:b5,leftshoulder:b9,rightshoulder:b10,righttrigger:a5,start:b6,x:b2,y:b3,misc1:b11,
 a:b0,b:b1,back:b4,dpdown:h0.4,dpleft:h0.8,dpright:h0.2,dpup:h0.1,guide:b5,start:b6,x:b2,y:b3,
 a:b0,b:b1,back:b4,dpdown:b12,dpleft:b13,dpright:b14,dpup:b11,guide:b5,leftshoulder:b9,lefttrigger:a4,leftx:a0,lefty:a1,start:b6,x:b2,y:b3,
 back:b4,dpdown:h0.4,dpleft:h0.8,dpright:h0.2,dpup:h0.1,leftshoulder:b9,leftstick:b7,lefttrigger:a4,leftx:a0,lefty:a1,misc1:b11,paddle2:b13,paddle4:b15,
@@ -31027,7 +30954,6 @@ none,%s,
 %sa%u%s
 h%i.%i
 face:
-SDL_GAMECONTROLLER_USE_BUTTON_LABELS
 abxy
 bayx
 sony
@@ -31549,6 +31475,7 @@ Texture dimensions are limited to %dx%d
 colorspace
 SDR_white_point
 HDR_headroom
+SDL.internal.texture.parent
 SDL.texture.colorspace
 SDL.texture.SDR_white_point
 SDL.texture.HDR_headroom
@@ -31623,21 +31550,22 @@ w2_row
 vulkan
 %s, An unsupported SDL pixel format (0x%x) was specified
 VULKAN_CreateTexture
-vulkan.texture
+[Vulkan] YUV textures require a Vulkan device that supports VK_KHR_sampler_ycbcr_conversion
+[Vulkan] Unsupported Ycbcr colorspace: %d
+[Vulkan] vkCreateSamplerYcbcrConversionKHR %s
+[Vulkan] vkCreateSampler %s
+[Vulkan] VULKAN_CreateDescriptorSetAndPipelineLayout %s
 VULKAN_AllocateImage(): %s
-SDL.texture.vulkan.texture
-vulkan.texture_u
-SDL.texture.vulkan.texture_u
-vulkan.texture_v
-SDL.texture.vulkan.texture_v
-SDL.texture.vulkan.texture_uv
+vulkan.texture
 VULKAN_CreateFramebuffersAndRenderPasses(): %s
+vkCreateDescriptorSetLayout(): %s
+vkCreatePipelineLayout(): %s
 vkCreateImage(): %s
 VULKAN_FindMemoryTypeIndex failed.
 vkAllocateMemory(): %s
 vkBindImageMemory(): %s
 vkCreateImageView(): %s
-[Vulkan] Unable to find memory type for allocation.
+[Vulkan] Unable to find memory type for allocation
 vkCreateRenderPass(): %s
 vkCreateFramebuffer(): %s
 Texture is not currently available
@@ -31650,31 +31578,49 @@ specified texture is not a render target
 Failed to issue intermediate batch
 VULKAN_AllocateBuffer(): %s
 [Vulkan] Unable to create required pipeline state
-[Vulkan] Unable to allocate descriptor set.
+[Vulkan] Could not allocate new memory for constant buffer
 main
 vkCreateGraphicsPipelines(): %s
+[Vulkan] Unable to allocate descriptor set
+[Vulkan] Unable to allocate descriptor pool vkCreateDescrptorPool: %s
 Unknown scale mode: %d
-[Vulkan] Failed to allocate buffer for readback.
+[Vulkan] Failed to allocate buffer for readback
 vkResetFences(): %s
 vkQueueSubmit(): %s
 vkQueuePresentKHR(): %s
 vkWaitForFences(): %s
 vkAcquireNextImageKHR(): %s
+VK_KHR_swapchain
+VK_KHR_sampler_ycbcr_conversion
+VK_KHR_maintenance1
+VK_KHR_bind_memory2
+VK_KHR_get_memory_requirements2
 SDL_RENDER_VULKAN_DEBUG
 VK_LAYER_KHRONOS_validation
 SDL_Vulkan_LoadLibrary failed.
 vkGetInstanceProcAddr is NULL
 VK_EXT_swapchain_colorspace
-[Vulkan] Using HDR output but %s not supported.
+[Vulkan] Using HDR output but %s not supported
+VK_KHR_get_physical_device_properties2
+vulkan.instance
 vkCreateInstance(): %s
+vulkan.surface
 Vulkan_CreateSurface() failed.
-VK_KHR_swapchain
+vulkan.physical_device
+vulkan.graphics_queue_family_index
+vulkan.present_queue_family_index
+vulkan.device
 vkCreateDevice(): %s
 vkCreateCommandPool(): %s
 vkCreateShaderModule(): %s
-vkCreateDescriptorSetLayout(): %s
-vkCreatePipelineLayout(): %s
+VULKAN_CreateDescriptorSetAndPipelineLayout(): %s
 vkCreateSampler(): %s
+SDL.renderer.vulkan.instance
+SDL.renderer.vulkan.surface
+SDL.renderer.vulkan.physical_device
+SDL.renderer.vulkan.device
+SDL.renderer.vulkan.graphics_queue_family_index
+SDL.renderer.vulkan.present_queue_family_index
 vkCreateInstance
 vkGetInstanceProcAddr(VK_NULL_HANDLE, "vkCreateInstance") failed
 vkEnumerateInstanceExtensionProperties
@@ -31712,11 +31658,18 @@ vkGetPhysicalDeviceSurfaceSupportKHR
 vkGetInstanceProcAddr(instance, "vkGetPhysicalDeviceSurfaceSupportKHR") failed
 vkQueueWaitIdle
 vkGetInstanceProcAddr(instance, "vkQueueWaitIdle") failed
+vkGetPhysicalDeviceFeatures2KHR
+vkGetPhysicalDeviceFormatProperties2KHR
+vkGetPhysicalDeviceImageFormatProperties2KHR
+vkGetPhysicalDeviceMemoryProperties2KHR
+vkGetPhysicalDeviceProperties2KHR
 vkEnumeratePhysicalDevices(): %s
 vkEnumeratePhysicalDevices(): no physical devices
 vkGetPhysicalDeviceSurfaceSupportKHR(): %s
 vkEnumerateDeviceExtensionProperties(): %s
 Vulkan: no viable physical devices found
+vkEnumerateDeviceExtensionProperties(): %s.
+vkEnumerateDeviceExtensionProperties): %s.
 vkAcquireNextImageKHR
 vkGetDeviceProcAddr(device, "vkAcquireNextImageKHR") failed
 vkAllocateCommandBuffers
@@ -31857,6 +31810,8 @@ vkUpdateDescriptorSets
 vkGetDeviceProcAddr(device, "vkUpdateDescriptorSets") failed
 vkWaitForFences
 vkGetDeviceProcAddr(device, "vkWaitForFences") failed
+vkCreateSamplerYcbcrConversionKHR
+vkDestroySamplerYcbcrConversionKHR
 vkGetPhysicalDeviceSurfaceFormatsKHR(): %s
 vkGetPhysicalDeviceSurfaceCapabilitiesKHR(): %s
 vkGetPhysicalDeviceSurfacePresentModesKHR(): %s
@@ -31864,11 +31819,11 @@ vkCreateSwapchainKHR(): %s
 vkGetSwapchainImagesKHR(): %s
 vkAllocateCommandBuffers(): %s
 vkCreateFence(): %s
-vkCreateDescriptorPool(): %s
+SDL.renderer.vulkan.swapchain_image_count
 vkCreateSemaphore(): %s
 SDL not built with camera support
 SDL_LEGACY_VERSION
-SDL-prerelease-3.0.0-3761-gfbe7301ab
+SDL-prerelease-3.0.0-3903-g16e0806ce
 macOS
 SDL assertion report.
 All SDL assertions between last init/quit:
@@ -32284,7 +32239,6 @@ SDL_PIXELFORMAT_YVYU
 SDL_PIXELFORMAT_NV12
 SDL_PIXELFORMAT_NV21
 SDL_PIXELFORMAT_P010
-SDL_PIXELFORMAT_P016
 SDL_PIXELFORMAT_EXTERNAL_OES
 SDL_PIXELFORMAT_UNKNOWN
 Unknown pixel format
@@ -32308,7 +32262,6 @@ Unable to lock destination surface
 Unable to lock source surface
 Surface has userdata, incompatible with properties
 SDL.surface.colorspace
-SDL.surface.maxCLL
 Surface doesn't have a colorkey
 Surfaces must not be locked during blit
 SDL_BlitSurfaceScaled(): src/dst
@@ -33089,7 +33042,7 @@ _keyboard_focus
 _listener
 _videodata
 _egl_surface
-T^{SDL_Window=^vI*^{SDL_Surface}iiiiiiiiiiIIfiiII{SDL_Rect=iiii}{SDL_Rect=iiii}iii{?=IIiiff^v}{?=IIiiff^v}f^{SDL_Surface}iiiiii{SDL_Rect=iiii}^?^vI^{SDL_WindowData}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}},N,V_window
+T^{SDL_Window=^vI*^{SDL_Surface}iiiiiiiiiiIIfiiII{SDL_Rect=iiii}{SDL_Rect=iiii}iii{?=Iiiiff^v}{?=Iiiiff^v}f^{SDL_Surface}iiiiii{SDL_Rect=iiii}^?^vI^{SDL_WindowData}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}},N,V_window
 T@"NSWindow",&,N,V_nswindow
 T@"NSView",&,N,V_sdlContentView
 T@"NSMutableArray",&,N,V_nscontexts
@@ -33098,7 +33051,7 @@ TB,N,V_in_blocking_transition
 TB,N,V_was_zoomed
 Tq,N,V_window_number
 Tq,N,V_flash_request
-T^{SDL_Window=^vI*^{SDL_Surface}iiiiiiiiiiIIfiiII{SDL_Rect=iiii}{SDL_Rect=iiii}iii{?=IIiiff^v}{?=IIiiff^v}f^{SDL_Surface}iiiiii{SDL_Rect=iiii}^?^vI^{SDL_WindowData}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}},N,V_keyboard_focus
+T^{SDL_Window=^vI*^{SDL_Surface}iiiiiiiiiiIIfiiII{SDL_Rect=iiii}{SDL_Rect=iiii}iii{?=Iiiiff^v}{?=Iiiiff^v}f^{SDL_Surface}iiiiii{SDL_Rect=iiii}^?^vI^{SDL_WindowData}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}},N,V_keyboard_focus
 T@"Cocoa_WindowListener",&,N,V_listener
 T@"SDL_CocoaVideoData",&,N,V_videodata
 Ti,N,V_send_floating_size
@@ -33420,16 +33373,16 @@ B24@0:8Q16
 v24@0:8r^{SDL_Rect=iiii}16
 @"NSString"
 {_NSRange="location"Q"length"Q}
-@24@0:8^{SDL_Window=^vI*^{SDL_Surface}iiiiiiiiiiIIfiiII{SDL_Rect=iiii}{SDL_Rect=iiii}iii{?=IIiiff^v}{?=IIiiff^v}f^{SDL_Surface}iiiiii{SDL_Rect=iiii}^?^vI^{SDL_WindowData}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}}16
+@24@0:8^{SDL_Window=^vI*^{SDL_Surface}iiiiiiiiiiIIfiiII{SDL_Rect=iiii}{SDL_Rect=iiii}iii{?=Iiiiff^v}{?=Iiiiff^v}f^{SDL_Surface}iiiiii{SDL_Rect=iiii}^?^vI^{SDL_WindowData}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}}16
 @"NSWindow"
 @60@0:8{CGRect={CGPoint=dd}{CGSize=dd}}16B48I52B56
 @32@0:8{CGPoint=dd}16
 I16@0:8
 v20@0:8I16
-v24@0:8^{SDL_Window=^vI*^{SDL_Surface}iiiiiiiiiiIIfiiII{SDL_Rect=iiii}{SDL_Rect=iiii}iii{?=IIiiff^v}{?=IIiiff^v}f^{SDL_Surface}iiiiii{SDL_Rect=iiii}^?^vI^{SDL_WindowData}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}}16
-^{SDL_Window=^vI*^{SDL_Surface}iiiiiiiiiiIIfiiII{SDL_Rect=iiii}{SDL_Rect=iiii}iii{?=IIiiff^v}{?=IIiiff^v}f^{SDL_Surface}iiiiii{SDL_Rect=iiii}^?^vI^{SDL_WindowData}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}}16@0:8
+v24@0:8^{SDL_Window=^vI*^{SDL_Surface}iiiiiiiiiiIIfiiII{SDL_Rect=iiii}{SDL_Rect=iiii}iii{?=Iiiiff^v}{?=Iiiiff^v}f^{SDL_Surface}iiiiii{SDL_Rect=iiii}^?^vI^{SDL_WindowData}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}}16
+^{SDL_Window=^vI*^{SDL_Surface}iiiiiiiiiiIIfiiII{SDL_Rect=iiii}{SDL_Rect=iiii}iii{?=Iiiiff^v}{?=Iiiiff^v}f^{SDL_Surface}iiiiii{SDL_Rect=iiii}^?^vI^{SDL_WindowData}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}}16@0:8
 {?="value"i}
-^{SDL_Window=^vI*^{SDL_Surface}iiiiiiiiiiIIfiiII{SDL_Rect=iiii}{SDL_Rect=iiii}iii{?=IIiiff^v}{?=IIiiff^v}f^{SDL_Surface}iiiiii{SDL_Rect=iiii}^?^vI^{SDL_WindowData}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}}
+^{SDL_Window=^vI*^{SDL_Surface}iiiiiiiiiiIIfiiII{SDL_Rect=iiii}{SDL_Rect=iiii}iii{?=Iiiiff^v}{?=Iiiiff^v}f^{SDL_Surface}iiiiii{SDL_Rect=iiii}^?^vI^{SDL_WindowData}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}^{SDL_Window}}
 ^{__CVDisplayLink=}
 ^{SDL_Mutex=}
 ^{SDL_Condition=}
@@ -33488,7 +33441,6 @@ v48@0:8{CGRect={CGPoint=dd}{CGSize=dd}}16
 "", 
 SDL_app
 YV12IYUVNV12NV21P010
-YV12IYUVNV12NV21P010
 GIF87a
  !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
  "$&(*,.02468:<>@BDFHJLNPRTVXZ\^`bdfhjlnprtvxz|~
@@ -33497,7 +33449,7 @@ GIF87a
 "3DUfw
 SBXAXAXAXAXAXAXA`
 A`%Bp
-RB`3A
+RB`7A
 RBSA\BSCSARATATATATATATATAXD
 SDRCYA
 Cp0SASASASASASASASASASASASASASASASB` BSAp
@@ -33842,7 +33794,6 @@ A_MTLCreateSystemDefaultDevice
 @_atanf
 @_atof
 @_atoi
-@_bsearch
 @_bzero
 @_calloc
 @_cos
@@ -33961,7 +33912,6 @@ A_dispatch_once_f
 @_pthread_setschedparam
 @_pthread_setspecific
 @_pthread_sigmask
-@_qsort
 @_realloc
 @_rewind
 @_scalbn
@@ -34023,9 +33973,9 @@ lbsearch
 mexp
 ngetenv
 ohid_
-upow
+vpow
 vqsort
-{wcs
+|wcs
 reate
 aptureMouse
 ursorVisible
@@ -34043,6 +33993,7 @@ EventWatch
 GamepadMapping
 HintCallback
 Timer
+VulkanRenderSemaphores
 sFrom
 File
 omic
@@ -34050,7 +34001,7 @@ tachVirtualJoystick
 CompareAndSwap
 Pointer
 Joysticks
-MMutex
+NMutex
 NRWLockFor
 NTexture
 NAudioStream
@@ -34062,7 +34013,7 @@ Lock
 WaitSemaphore
 Spinlock
 Mutex
-gRWLockFor
+hRWLockFor
 pdate
 bindAudioStream
 adObject
@@ -34078,11 +34029,11 @@ litSurface
 roadcastCondition
 	indAudioStream
 Scaled
-Unchecked
+	Unchecked
 Scaled
 	ose
 nupTLS
-	Error
+Error
 AudioStream
 Property
 omposition
@@ -34193,7 +34144,7 @@ Sensor
 'Key
 -OriginalMemoryFunctions
 /UserFolder
-;Window
+<Window
 ssertion
 udio
 Handler
@@ -34224,8 +34175,8 @@ Cursor
 Bounds
 ContentScale
 Name
-UsableBounds
-Properties
+ UsableBounds
+ Properties
 Point
 Rect
 Window
@@ -34234,7 +34185,7 @@ rror
 ullscreenDisplayModes
  loatProperty
 amepad
- lobal
+!lobal
 &rabbedWindow
 "Instance
 #Joystick
@@ -34244,14 +34195,14 @@ $Name
 ppleSFSymbolsNameFor
 !xis
 Axis
-!Button
+"Button
 FromString
 indings
 "utton
 FromString
 "Label
 irmwareVersion
-"rom
+#rom
 InstanceID
 #PlayerIndex
 GUID
@@ -34259,12 +34210,12 @@ GUID
 #Name
 #Type
 $Vendor
-#layerIndex
-#roduct
+$layerIndex
+$roduct
 Version
 ForGUID
-$layerIndex
-$owerLevel
+%layerIndex
+%owerLevel
 duct
 %perties
 Version
@@ -34272,7 +34223,7 @@ nsorData
 %rial
 Rate
 ringFor
-%eamHandle
+&eamHandle
 Axis
 &Button
 &Type
@@ -34280,13 +34231,13 @@ ouchpadFinger
 &ype
 FromString
 MouseState
-&Properties
+'Properties
 'aptic
 Boolean
 Axis
 (Button
 (GUID
-(Hat
+)Hat
 )Instance
 )Name
 *Serial
@@ -34304,13 +34255,13 @@ GUID
 )Name
 )Type
 *Vendor
-)layerIndex
+*layerIndex
 *roduct
 Version
 *layerIndex
 *owerLevel
 duct
-*perties
++perties
 Version
 From
 +Name
@@ -34318,18 +34269,18 @@ From
 Name
 +Scancode
 Focus
-+State
+,State
 ,emoryFunctions
 sksForPixelFormatEnum
 ,xHapticEffects
 dState
-,use
+-use
 Focus
 -State
 aturalDisplayOrientation
 .GamepadTouchpad
 .Joystick
-.RenderDrivers
+/RenderDrivers
 /TouchFingers
 /VideoDrivers
 /HapticAxes
@@ -34341,7 +34292,7 @@ Fingers
 Axes
 /Buttons
 /Hats
-/ixelFormat
+0ixelFormat
 0latform
 0owerInfo
 rformance
@@ -34349,7 +34300,7 @@ Counter
 0Frequency
 EnumForMasks
 0Name
-0imary
+1imary
 1operty
 Path
 1erredLocales
@@ -34362,8 +34313,8 @@ Display
 6alGamepad
 AndLineIntersection
 2EnclosingPoints
-2Intersection
-2Union
+3Intersection
+3Union
 Float
 Float
 Float
@@ -34371,8 +34322,8 @@ Float
 Mode
 3State
 4LogicalPresentation
-4Metal
-4OutputSize
+5Metal
+5OutputSize
 5Scale
 5Target
 5Window
@@ -34391,19 +34342,19 @@ Info
 FromTexture
 cancode
 7urface
-8ystem
+9ystem
 9ilenceValueForFormat
 tringProperty
 From
-6Name
-6Name
+7Name
+7Name
 maphoreValue
 7nsor
 Data
-7FromInstanceID
-7Instance
+8FromInstanceID
+8Instance
 8Type
-8Properties
+9Properties
 8Type
 8onPortableType
 8onPortableType
@@ -34414,15 +34365,15 @@ lipRect
 9olor
 9Mod
 9space
-9Theme
+:Theme
 :exture
 :hread
 ;icks
 ;ouch
 AlphaMod
 :BlendMode
-:ColorMod
-:ScaleMode
+;ColorMod
+;ScaleMode
 ;Properties
 Float
 Float
@@ -34434,40 +34385,40 @@ Name
 ersion
 <ideoDriver
 BordersSize
-<DisplayScale
-<Grab
+=DisplayScale
+=Grab
 =KeyboardGrab
 =Opacity
->Title
+?Title
 lags
 =romID
 =ullscreenMode
 CCProfile
 aximumSize
-=inimumSize
-=ouse
+>inimumSize
+>ouse
 Grab
 >Rect
 arent
 >ixel
 >osition
->roperties
+?roperties
 Density
->Format
+?Format
 ?urface
 InPixels
 ?ide
 ptic
 EffectSupported
-?RumbleSupported
+@RumbleSupported
 EffectStatus
 Instance
 Name
 Playing
-@nApplication
+AnApplication
 Haptic
 AGamepad
-RJoystick
+SJoystick
 SSensor
 SURL
 SAudioDevice
@@ -34497,7 +34448,7 @@ DTextInput
 Rumble
 DEffect
 TaiseWindow
-Dmble
+Emble
 HapticEffect
 EApp
 \Gamepad
@@ -34511,10 +34462,10 @@ aptic
 Fint
 Autocenter
 FGain
-UgisterEvents
+VgisterEvents
 VmoveTimer
-Vnder
-VportAssertion
+Wnder
+WportAssertion
 YtoreWindow
 Haptic
 GAudioDevice
@@ -34535,56 +34486,56 @@ RMSIMD
 IltiVec
 I512F
 Data
-IText
+JText
 imarySelectionText
 Joperty
 Float
 KcreenKeyboardSupport
 indowHasSurface
-irite
+jrite
 Cursor
-KWindow
+LWindow
 SubSystem
 Gamepad
 LJoystick
 LTablet
-LMouseHaptic
+MMouseHaptic
 Virtual
-LHaptic
+MHaptic
 Connected
 MEventsEnabled
 MObject
-MWAV
+NWAV
 Munction
 Reading
 NWriting
 ToSurface
-NMessage
+OMessage
 OResetPriorities
 OSet
 OutputFunction
 OPriority
 AllPriority
-OOutputFunction
-OPriority
+POutputFunction
+PPriority
 pRGB
 PximizeWindow
 moryBarrier
 Ptal_
 AcquireFunction
-PReleaseFunction
+QReleaseFunction
 CreateView
 QDestroyView
 QGetLayer
 nimizeWindow
 QxAudioFormat
-QWill
+RWill
 BecomeActive
 REnterBackground
 RReceiveMemoryWarning
 EnterForeground
-RResignActive
-RTerminate
+SResignActive
+STerminate
 epEvents
 SnConnected
 llEvent
@@ -34599,7 +34550,7 @@ Uclose
 Uread
 Utell
 Uwrite
-Uvprintf
+Vvprintf
 printf
 ConstMem
 UFile
@@ -34608,12 +34559,12 @@ Uize
 WFillRect
 XGeometry
 XLine
-XTexture
+YTexture
 YViewportSet
 Woordinates
 WipEnabled
 FromWindow
-WToWindow
+XToWindow
 Float
 oint
 Xresent
@@ -34627,15 +34578,15 @@ ZJoystick
 Triggers
 Triggers
 KeyboardShown
-ZSaverEnabled
+[SaverEnabled
 GamepadEffect
 [JoystickEffect
 ssertionHandler
 [udio
 lipboard
-[ursor
+\ursor
 Data
-[Text
+\Text
 vent
 \rror
 Enabled
@@ -34647,9 +34598,9 @@ EventsEnabled
 ]Mapping
 WithPriority
 EventsEnabled
-]LED
-]PlayerIndex
-]Virtual
+^LED
+^PlayerIndex
+^Virtual
 Axis
 ^Button
 ^Hat
@@ -34672,7 +34623,7 @@ BlendMode
 `Color
 Float
 Sync
-`iewport
+aiewport
 urface
 atringProperty
 AlphaMod
@@ -34680,7 +34631,7 @@ aBlendMode
 aPalette
 bRLE
 lipRect
-aolor
+bolor
 bMod
 bspace
 bext
@@ -34696,8 +34647,8 @@ Float
 AlwaysOnTop
 dBordered
 dGrab
-dHitTest
-dKeyboardGrab
+eHitTest
+eKeyboardGrab
 eOpacity
 fPosition
 fResizable
@@ -34711,12 +34662,12 @@ einimumSize
 dalFor
 euse
 Grab
-eRect
+fRect
 fhape
 Cursor
-fMessageBox
-fSimpleMessageBox
-fWindow
+gMessageBox
+gSimpleMessageBox
+gWindow
 SystemMenu
 ColorKey
 gRLE
@@ -34728,11 +34679,11 @@ Rects
 CreateSurface
 iGet
 iLoadLibrary
-iUnloadLibrary
+jUnloadLibrary
 InstanceExtensions
 iVkGetInstanceProcAddr
 jrpMouse
-jsInit
+ksInit
 Condition
 jEvent
 jSemaphore
@@ -34746,11 +34697,11 @@ lcos
 lligned_
 alloc
 lfree
-lprintf
+mprintf
 alloc
-meil
+neil
 pysign
-nloor
+oloor
 omod
 oree
 ble_scan
@@ -34767,15 +34718,15 @@ pxit
 device_info
 qfeature_report
 qmanufacturer_string
-qproduct_string
+rproduct_string
 rreport_descriptor
 rserial_number_string
 dexed_string
-qput_report
+rput_report
 _path
 _timeout
 nd_feature_report
-rt_nonblocking
+st_nonblocking
 conv
 stoa
 close
@@ -34787,38 +34738,38 @@ tdigit
 tgraph
 tlower
 tspace
-tupper
-txdigit
+uupper
+uxdigit
 tpha
 rint
-tunct
+uunct
 ltoa
 uround
 utoa
 alloc
-uodf
+vodf
 vmove
 vset
 ealloc
-vound
+wound
 calbn
 wetenv
-wqrt
-wscanf
+xqrt
+xscanf
 nprintf
 wprintf
 xdup
 ystr
-yupr
+zupr
 xstr
 ydup
-}len
+~len
 ~str
 asecmp
 zk_r
-zrunc
+{runc
 lower
-zupper
+{upper
 itoa
 {tf8str
 ltoa
@@ -34838,7 +34789,7 @@ asecmp
 InstanceType
 ~Type
 oadGamepadMappings
-~easeCameraFrame
+easeCameraFrame
 OutputDevices
 CaptureDevices
 Stream
@@ -34934,7 +34885,7 @@ D,DLD4D\,4L,,,,,,,,,,,,DD,,,,,,D,DDDDD<<44L4,,<<D,,,,4444,DD,,DD4,44DDDDD,,,,,,,
 ,,DD,,,,,,,,,,4dD,,\4
 44,\4,,,4,DDD4DDDDDD4,,,,DD,,,,,,,,t4TL<4\\
 44L4<4
-,4,4,,444,,,
+,4,4,,444,,,\dL
 $$d$t
  P4`
 <<LL,,LH,l
@@ -34979,6 +34930,7 @@ Pdd8
 PTP@@
 T,PP
 H|DT
+l,Ld
 hxlhL
 4hD8
 <<$T8TXh
@@ -34993,6 +34945,7 @@ _SDL_AddGamepadMappingsFromFile
 _SDL_AddGamepadMappingsFromRW
 _SDL_AddHintCallback
 _SDL_AddTimer
+_SDL_AddVulkanRenderSemaphores
 _SDL_AllocateEventMemory
 _SDL_AtomicAdd
 _SDL_AtomicCompareAndSwap
@@ -35776,6 +35729,7 @@ _SDL_atanf
 _SDL_atof
 _SDL_atoi
 _SDL_bsearch
+_SDL_bsearch_r
 _SDL_calloc
 _SDL_ceil
 _SDL_ceilf
@@ -35853,6 +35807,7 @@ _SDL_modff
 _SDL_pow
 _SDL_powf
 _SDL_qsort
+_SDL_qsort_r
 _SDL_realloc
 _SDL_round
 _SDL_roundf
@@ -36210,7 +36165,6 @@ _atan2f
 _atanf
 _atof
 _atoi
-_bsearch
 _bzero
 _calloc
 _cos
@@ -36346,7 +36300,6 @@ _pthread_setcanceltype
 _pthread_setschedparam
 _pthread_setspecific
 _pthread_sigmask
-_qsort
 _realloc
 _rewind
 _scalbn
@@ -36405,130 +36358,112 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-T/,8
-3b}\
-B#ah
-6 >8H"
-Yq*{
-"FIy
-EJ.R
-"72H
-Q$V+
-AC4D
-K;_<
-t#'z
-6`Wsw*
-w{PK
-|^)1a
-V)?T
-Em:/
-u(A&1
-02.W
-RTt.
-Ne1Xw
-;B$!}
-1Fpx*
-[|xA
-_Ka,
-X-7,
-z%d8o
-	},)
-@Qu,S`udO
-xZCT
-zXl5
-P9:B
-{;^x
-XAB4
-U&AHV
-6P^{Yy
-46'^v\
-*&,c
-JEUBi
-Ao$H
-d[X>
-P;XGh
-p=Fr8p#
-mEP)
-|$;x{t
-4*Dw
-ttF^Q
-L_Tc
-k(zc
-Y|bG
-3	xi9
--$FX
-HF.4
-F+fBZL[X
-x ei
-LYAn
-S`Oy
-B-$8_t
-<'`[
-C;~/
-9H)i
-BL#"
-P;{h
-^sh .R
-pt4IC
-PV.r
-%|v:
-t\v3v
-xf(y
-`'=BI]
-:.-h+>
-+W%/
-H=;y
-{cJXs!(
-7.2A
-ktVlk
-(pN@
-f9Gw
-l%uA
-+f]Mj
-gg$TQ
-&e&,?
-R&lJ
-4<:.Z#,\
-\`!*
-FCTE:
-A{E>*
-R8wp
-DPlp
-VU"z
-zQjN
-Ye=M
-]D>(x
-pYl{
- |0"
-I{2#
-a$<q
-r,"a
-sbU#
-Yza$5
-uui?
-b~|s~&
-(um5
-? 'x4
-!}=#
-u$	w"
-?B/N
-v!.J
-r6Z<
-?T@i
-[26P
-{O?6`
-5N-%
-Ix)	J
-W_>$
-x@%]
-$umsF
-W3HR
-p<ia<
-P[TC
-+5I~z#(
-d:	M
-7B]Z
-6H"`
+0Qt 
+uz=|
+mN`)
+'YwC
+{l,O=
+Vcg[
+4aEs
+*5X: 
+N75|l
+RgM;
+j]$4A
+{)=xiT'a
+ Cb\tZE
+f#.?
+l?~C
+^GO"
+%%)N
+0%S@
+ ,I'
+(5/P
+i9x`
+dIkL
+.nCB
+vYF&)|
+Gh!WY%
+aJq+x
+}pwn
+M#B^
+h_>G
+kIL%4
+>N{.
++<kQ_
+,!jT
+M+&W
+e3lI%
+_#-A
+RK3%0
+HB']
+RZc\N
+W.*5
+*x|Z
+[9($
+y$V{F
+}ql{
+M2|N	
+		!CS
+'kE!
+u^E W
+p52c8
+BzQE/
+;gN&1
+j9#F
+w/s8
+p@nIwE
+]0ZE
+|h(*W|
+S2")P
+0rix
+?@RD
+!`@#
+O#p	Y
+u:7A
+oj'f
+%q6*	;`k
+DNkt
+K/1+j
+ &kF
+{~	K
+ROg,O
+-\(	
+6B"w"
+i&._
+2-D[6^,R
+A;YcW
+\X{Heo
+DzLv
+/7uK6N
+m5M`%	
+7Cff
+X03	
+P01a
+!4)Leb
+]>,6#v
+{_<r
+69JI
+"[8%
+#F;R|u
+%t*bpy
+2agC
+F[IF4
+\g5wf
+}1` 
+29r=
+QXiX%9
+	4@9
+JZ.4/
+T+	i
+iaM^Z
+^ghCd7)
+GY=G
+sS{[
+{6*M%
+nP-8
+n<:[x\
+z#?Q
+t|pP
 subject.OU
 MXGJJ98X76
 Apple Inc.1&0$
@@ -36586,7 +36521,7 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240307172823Z0/
+240311225039Z0/
 1/0-
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
@@ -36595,34 +36530,32 @@ Apple Inc.1
 	<key>cdhashes</key>
 	<array>
 		<data>
-		nqSIWBYPnmlJpYPT3EujqLqK/RY=
+		h0uKHdTkEvqmUfig3y8GJDL3qNY=
 		</data>
 	</array>
 </dict>
 </plist>
-20240307172835Z0
-gzM7y'
+x0!n
+}fB@
+rF+G
+20240311225101Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240208205042Z
-240321205041Z0B1
+240307204517Z
+240418204516Z0B1
 Timestamp Signer NWK21
 Apple Inc.1
- "Rj
-^GW*
-C.Kh
-V&(4[
-;CvC
+;bp,
+yHN 
+8$0K
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-gJa.]
-U;*gP
-	kYz
-";2;j0
+c,,N
+4*nr
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -36661,7 +36594,6 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240307172835Z0#
-3+j*j
-h{zP
-5.QE`
+240311225101Z0#
+#GU(
+Q}x/
