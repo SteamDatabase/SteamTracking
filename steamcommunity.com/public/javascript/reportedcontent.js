@@ -301,6 +301,18 @@ function UnbanReview( id )
 	);
 }
 
+function SetReviewQualities( id, qualities )
+{
+	UserReview_Moderate_SetQualities( id, qualities, 'https://steamcommunity.com',
+		function( results ) {
+			if ( qualities.length != 0)
+				ShowWithFade( $( 'qualities_' + id ) );
+			else
+				$( 'qualities_' + id ).hide();
+		}
+	);
+}
+
 function BanReviewVoters( id )
 {
 	UserReview_Moderate_VoteBanUsers( id, 'https://steamcommunity.com',
@@ -382,6 +394,59 @@ function SelectedReviews_ClearContentCheckResult()
 function SelectedReviews_MarkAsSuspicious()
 {
 	ApplyFuncOnSelectedItems( MarkAsSuspicious );
+}
+
+function SelectedReviews_SetQualities()
+{
+	var content = $J( "<div/>" );
+			var container0 = $J( "<div/>" );
+		var label0 = $J( "<label/>" );
+		label0.append( $J( "<input/>", { type: 'checkbox', value: 0 } ) );
+		label0.append( 'Uninformative' );
+		container0.append( label0 );
+		content.append( container0 );
+				var container1 = $J( "<div/>" );
+		var label1 = $J( "<label/>" );
+		label1.append( $J( "<input/>", { type: 'checkbox', value: 1 } ) );
+		label1.append( 'Meme' );
+		container1.append( label1 );
+		content.append( container1 );
+				var container2 = $J( "<div/>" );
+		var label2 = $J( "<label/>" );
+		label2.append( $J( "<input/>", { type: 'checkbox', value: 2 } ) );
+		label2.append( 'ASCII' );
+		container2.append( label2 );
+		content.append( container2 );
+				var container3 = $J( "<div/>" );
+		var label3 = $J( "<label/>" );
+		label3.append( $J( "<input/>", { type: 'checkbox', value: 3 } ) );
+		label3.append( 'OffTopic' );
+		container3.append( label3 );
+		content.append( container3 );
+				var container4 = $J( "<div/>" );
+		var label4 = $J( "<label/>" );
+		label4.append( $J( "<input/>", { type: 'checkbox', value: 4 } ) );
+		label4.append( 'VoteOrAwardFarming' );
+		container4.append( label4 );
+		content.append( container4 );
+			var dialog = ShowConfirmDialog( 'Set Qualities for Selected Reviews', content );
+	dialog.done( function()
+	{
+		var qualities = [];
+		var checkboxes = $J( content ).find( "input[type=checkbox]:checked" );
+		for ( var i = 0; i < checkboxes.length; ++i )
+		{
+			var checkbox = $J( checkboxes[i] );
+			qualities.push( checkbox.val() );
+		}
+
+		function fn( id )
+		{
+			SetReviewQualities( id, qualities );
+		}
+
+		ApplyFuncOnSelectedItems( fn );
+	} );
 }
 
 function ResetProfileAndGroupContent( steamID )

@@ -73,7 +73,11 @@ CDiscoveryQueue.prototype.BuildQueue = function( rgDiscoveryQueue )
 
 		$Item.data( 'appid', unAppID );
 		$Item.data( 'name', rgApp['name'] );
-		$Item.data( 'href', GStoreItemData.GetAppURL( unAppID, this.m_strNavFeature, i ) );
+
+		let appURL = new URL( GStoreItemData.GetAppURL( unAppID, this.m_strNavFeature, i ) );
+		appURL.searchParams.append( 'queue', 1 );
+
+		$Item.data( 'href', appURL.toString() );
 
 		$Item.data( 'hoverparams', rgApp['hoverparams'] );
 

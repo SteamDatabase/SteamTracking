@@ -1097,7 +1097,7 @@ background: -webkit-linear-gradient( 30deg, rgba(117, 176, 34, 0.7) 5%,rgba(88, 
 }
 
 .game_purchase_price_history tbody {
-    color: rgb(161,204,8);	
+    color: rgb(161,204,8);
 }
 
 .game_purchase_discount_quantity {
@@ -3161,6 +3161,44 @@ img.agegate_img_package {
 		margin-bottom: 10px;
 		margin-top: 5px;
 	}
+}
+
+.forbiddenbyfamily_container {
+	text-align: center;
+	max-width: 550px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+h2.forbiddenbyfamily_header {
+	font-size: 24px;
+}
+
+.forbiddenbyfamily_capsule_img {
+	width: 50%;
+	background-color: rgba( 255, 255, 255, 0.1 );
+	box-shadow: 0 0 5px 0 #000000;
+	padding: 12px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 12px;
+	margin-bottom: 12px;
+}
+
+.forbiddenbyfamily_capsule_img > img {
+
+}
+
+.forbiddenbyfamily_text {
+	text-align: left;
+	font-size: 14px;
+	max-width: 400px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.content_descriptor {
+	border-bottom: 1px dotted;
 }
 
 .prepurchase_rewards_title {

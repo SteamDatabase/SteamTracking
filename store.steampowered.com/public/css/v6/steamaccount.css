@@ -471,7 +471,7 @@ body.v6 .account_settings_container h2 {
 	color: #fff;
 	margin: 5px 0 0px;
 	font-size: 17px;
-	text-transform: capitalize;
+	text-transform: none;
 	font-weight: 500;
 }
 

@@ -1,15 +1,15 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "8745921";
+var CLSTAMP = "8756062";
 (() => {
   var e,
     t,
     n,
-    r,
-    o,
-    a = {
+    s,
+    i,
+    r = {
       3119: (e, t, n) => {
-        var r = {
+        var s = {
           "./friendsui_arabic.json": [58480, 6992],
           "./friendsui_brazilian.json": [33109, 2862],
           "./friendsui_bulgarian.json": [5242, 8518],
@@ -42,20 +42,20 @@ var CLSTAMP = "8745921";
           "./friendsui_ukrainian.json": [83292, 2822],
           "./friendsui_vietnamese.json": [39248, 1635],
         };
-        function o(e) {
-          if (!n.o(r, e))
+        function i(e) {
+          if (!n.o(s, e))
             return Promise.resolve().then(() => {
               var t = new Error("Cannot find module '" + e + "'");
               throw ((t.code = "MODULE_NOT_FOUND"), t);
             });
-          var t = r[e],
-            o = t[0];
-          return n.e(t[1]).then(() => n.t(o, 19));
+          var t = s[e],
+            i = t[0];
+          return n.e(t[1]).then(() => n.t(i, 19));
         }
-        (o.keys = () => Object.keys(r)), (o.id = 3119), (e.exports = o);
+        (i.keys = () => Object.keys(s)), (i.id = 3119), (e.exports = i);
       },
       9014: (e, t, n) => {
-        var r = {
+        var s = {
           "./friendsui_arabic.json": [58480, 6992],
           "./friendsui_brazilian.json": [33109, 2862],
           "./friendsui_bulgarian.json": [5242, 8518],
@@ -88,90 +88,90 @@ var CLSTAMP = "8745921";
           "./friendsui_ukrainian.json": [83292, 2822],
           "./friendsui_vietnamese.json": [39248, 1635],
         };
-        function o(e) {
-          if (!n.o(r, e))
+        function i(e) {
+          if (!n.o(s, e))
             return Promise.resolve().then(() => {
               var t = new Error("Cannot find module '" + e + "'");
               throw ((t.code = "MODULE_NOT_FOUND"), t);
             });
-          var t = r[e],
-            o = t[0];
-          return n.e(t[1]).then(() => n.t(o, 19));
+          var t = s[e],
+            i = t[0];
+          return n.e(t[1]).then(() => n.t(i, 19));
         }
-        (o.keys = () => Object.keys(r)), (o.id = 9014), (e.exports = o);
+        (i.keys = () => Object.keys(s)), (i.id = 9014), (e.exports = i);
       },
-      75220: (e, t, n) => {
+      16379: (e, t, n) => {
         "use strict";
-        function r(e, t, n, r) {
-          var o,
-            a = arguments.length,
-            i =
-              a < 3
+        function s(e, t, n, s) {
+          var i,
+            r = arguments.length,
+            a =
+              r < 3
                 ? t
-                : null === r
-                ? (r = Object.getOwnPropertyDescriptor(t, n))
-                : r;
+                : null === s
+                ? (s = Object.getOwnPropertyDescriptor(t, n))
+                : s;
           if (
             "object" == typeof Reflect &&
             "function" == typeof Reflect.decorate
           )
-            i = Reflect.decorate(e, t, n, r);
+            a = Reflect.decorate(e, t, n, s);
           else
-            for (var s = e.length - 1; s >= 0; s--)
-              (o = e[s]) &&
-                (i = (a < 3 ? o(i) : a > 3 ? o(t, n, i) : o(t, n)) || i);
-          return a > 3 && i && Object.defineProperty(t, n, i), i;
+            for (var o = e.length - 1; o >= 0; o--)
+              (i = e[o]) &&
+                (a = (r < 3 ? i(a) : r > 3 ? i(t, n, a) : i(t, n)) || a);
+          return r > 3 && a && Object.defineProperty(t, n, a), a;
         }
-        function o(e, t, n, r) {
-          return new (n || (n = Promise))(function (o, a) {
-            function i(e) {
+        function i(e, t, n, s) {
+          return new (n || (n = Promise))(function (i, r) {
+            function a(e) {
               try {
-                _(r.next(e));
+                c(s.next(e));
               } catch (e) {
-                a(e);
+                r(e);
               }
             }
-            function s(e) {
+            function o(e) {
               try {
-                _(r.throw(e));
+                c(s.throw(e));
               } catch (e) {
-                a(e);
+                r(e);
               }
             }
-            function _(e) {
+            function c(e) {
               var t;
               e.done
-                ? o(e.value)
+                ? i(e.value)
                 : ((t = e.value),
                   t instanceof n
                     ? t
                     : new n(function (e) {
                         e(t);
-                      })).then(i, s);
+                      })).then(a, o);
             }
-            _((r = r.apply(e, t || [])).next());
+            c((s = s.apply(e, t || [])).next());
           });
         }
         Object.create;
         Object.create;
         "function" == typeof SuppressedError && SuppressedError;
-        n(27684);
-        var a = n(27378),
-          i = n(37634);
-        function s(e) {
-          if (!_() || !window.document.cookie) return null;
+        n(86416);
+        var r = n(27378),
+          a = n(37634);
+        function o(e) {
+          if (!c() || !window.document.cookie) return null;
           const t = document.cookie.match("(^|; )" + e + "=([^;]*)");
           return t && t[2] ? decodeURIComponent(t[2]) : null;
         }
-        function _() {
+        function c() {
           return !!window.document;
         }
-        const E = "webui_config";
-        let k;
-        function l() {
+        const l = "webui_config";
+        let _;
+        function u() {
           const e = (function () {
             let e = "";
-            for (let r = 0; r < 24; r++)
+            for (let s = 0; s < 24; s++)
               e += ((t = 0),
               (n = 35),
               (t = Math.ceil(t)),
@@ -181,55 +181,55 @@ var CLSTAMP = "8745921";
             return e;
           })();
           return (
-            (function (e, t, n, r) {
-              if (!_()) return;
-              r || (r = "/");
-              let o = "";
+            (function (e, t, n, s) {
+              if (!c()) return;
+              s || (s = "/");
+              let i = "";
               if (void 0 !== n && n) {
                 const e = new Date();
                 e.setTime(e.getTime() + 864e5 * n),
-                  (o = "; expires=" + e.toUTCString());
+                  (i = "; expires=" + e.toUTCString());
               }
               document.cookie =
                 encodeURIComponent(e) +
                 "=" +
                 encodeURIComponent(t) +
-                o +
+                i +
                 ";path=" +
-                r;
+                s;
             })("sessionid", e, 0),
             e
           );
         }
-        function c(e = E) {
+        function d(e = l) {
           const t = {},
-            n = u("config", e);
-          n && (delete n.SESSIONID, Object.assign(S, n), (t.config = !0));
-          const r = u("userinfo", e);
-          r &&
-            (Object.assign(h, r),
+            n = h("config", e);
+          n && (delete n.SESSIONID, Object.assign(f, n), (t.config = !0));
+          const s = h("userinfo", e);
+          s &&
+            (Object.assign(g, s),
             (t.userConfig = !0),
-            h.is_support &&
+            g.is_support &&
               (function () {
                 let e = null;
-                _() && (e = s(d));
+                c() && (e = o(p));
                 return Boolean(e && 1 === Number.parseInt(e));
               })() &&
-              (h.is_support = !1));
-          const o = u("broadcast", e);
-          o && (Object.assign(m, o), (t.broadcastConfig = !0));
-          const a = u("community", e);
-          a && (Object.assign(y, a), (t.communityConfig = !0));
-          const i = u("event", e);
-          return i && (Object.assign(g, i), (t.eventConfig = !0)), t;
+              (g.is_support = !1));
+          const i = h("broadcast", e);
+          i && (Object.assign(E, i), (t.broadcastConfig = !0));
+          const r = h("community", e);
+          r && (Object.assign(S, r), (t.communityConfig = !0));
+          const a = h("event", e);
+          return a && (Object.assign(I, a), (t.eventConfig = !0)), t;
         }
-        function u(e, t = E) {
-          return p(e, t, !0);
+        function h(e, t = l) {
+          return m(e, t, !0);
         }
-        function p(e, t = E, n) {
-          let r;
+        function m(e, t = l, n) {
+          let s;
           if (
-            ((r =
+            ((s =
               "string" == typeof t
                 ? {
                     NODE_ENV: "production",
@@ -239,17 +239,17 @@ var CLSTAMP = "8745921";
                   ? null
                   : document.getElementById(t)
                 : t),
-            r)
+            s)
           )
             try {
-              if (r.hasAttribute("data-" + e)) {
-                return JSON.parse(r.getAttribute("data-" + e));
+              if (s.hasAttribute("data-" + e)) {
+                return JSON.parse(s.getAttribute("data-" + e));
               }
               return null;
             } catch (e) {
               console.error(
                 "Failed to parse config for " +
-                  h.steamid +
+                  g.steamid +
                   " (" +
                   window.location.href +
                   ")",
@@ -258,8 +258,8 @@ var CLSTAMP = "8745921";
             }
           else n && console.error("Missing config element #", t);
         }
-        const d = "presentation_mode";
-        const S = {
+        const p = "presentation_mode";
+        const f = {
           EUNIVERSE: 0,
           WEB_UNIVERSE: "",
           LANGUAGE: "english",
@@ -308,9 +308,9 @@ var CLSTAMP = "8745921";
           WEBSITE_ID: "Unknown",
           get SESSIONID() {
             return (function () {
-              if (!_()) return k || (k = l()), k;
-              let e = s("sessionid");
-              return e || (e = l()), e;
+              if (!c()) return _ || (_ = u()), _;
+              let e = o("sessionid");
+              return e || (e = u()), e;
             })();
           },
           FRIENDSUI_BETA: !1,
@@ -328,7 +328,7 @@ var CLSTAMP = "8745921";
           USE_LONGEST_LOC_STRING: !1,
           SILENT_STARTUP: !1,
         };
-        const h = {
+        const g = {
             logged_in: !1,
             steamid: "",
             accountid: 0,
@@ -343,8 +343,8 @@ var CLSTAMP = "8745921";
             short_url: "",
             country_code: "",
           },
-          m = { steamid: "", clanid: 0, listid: 0 },
-          y = {
+          E = { steamid: "", clanid: 0, listid: 0 },
+          S = {
             CLANSTEAMID: "",
             CLANACCOUNTID: 0,
             APPID: 0,
@@ -356,207 +356,16 @@ var CLSTAMP = "8745921";
             IS_VALVE_GROUP: !1,
             IS_ALLOWED_SC: !1,
           },
-          g = { ANNOUNCEMENT_GID: "", TAKEOVER_ANNOUNCEMENT_GID: "" };
-        a.createContext({});
-        var T;
-        !(function (e) {
-          (e[(e.k_EResultOK = 1)] = "k_EResultOK"),
-            (e[(e.k_EResultFail = 2)] = "k_EResultFail"),
-            (e[(e.k_EResultNoConnection = 3)] = "k_EResultNoConnection"),
-            (e[(e.k_EResultInvalidPassword = 5)] = "k_EResultInvalidPassword"),
-            (e[(e.k_EResultLoggedInElsewhere = 6)] =
-              "k_EResultLoggedInElsewhere"),
-            (e[(e.k_EResultInvalidProtocolVer = 7)] =
-              "k_EResultInvalidProtocolVer"),
-            (e[(e.k_EResultInvalidParam = 8)] = "k_EResultInvalidParam"),
-            (e[(e.k_EResultFileNotFound = 9)] = "k_EResultFileNotFound"),
-            (e[(e.k_EResultBusy = 10)] = "k_EResultBusy"),
-            (e[(e.k_EResultInvalidState = 11)] = "k_EResultInvalidState"),
-            (e[(e.k_EResultInvalidName = 12)] = "k_EResultInvalidName"),
-            (e[(e.k_EResultInvalidEmail = 13)] = "k_EResultInvalidEmail"),
-            (e[(e.k_EResultDuplicateName = 14)] = "k_EResultDuplicateName"),
-            (e[(e.k_EResultAccessDenied = 15)] = "k_EResultAccessDenied"),
-            (e[(e.k_EResultTimeout = 16)] = "k_EResultTimeout"),
-            (e[(e.k_EResultBanned = 17)] = "k_EResultBanned"),
-            (e[(e.k_EResultAccountNotFound = 18)] = "k_EResultAccountNotFound"),
-            (e[(e.k_EResultInvalidSteamID = 19)] = "k_EResultInvalidSteamID"),
-            (e[(e.k_EResultServiceUnavailable = 20)] =
-              "k_EResultServiceUnavailable"),
-            (e[(e.k_EResultNotLoggedOn = 21)] = "k_EResultNotLoggedOn"),
-            (e[(e.k_EResultPending = 22)] = "k_EResultPending"),
-            (e[(e.k_EResultEncryptionFailure = 23)] =
-              "k_EResultEncryptionFailure"),
-            (e[(e.k_EResultInsufficientPrivilege = 24)] =
-              "k_EResultInsufficientPrivilege"),
-            (e[(e.k_EResultLimitExceeded = 25)] = "k_EResultLimitExceeded"),
-            (e[(e.k_EResultRevoked = 26)] = "k_EResultRevoked"),
-            (e[(e.k_EResultExpired = 27)] = "k_EResultExpired"),
-            (e[(e.k_EResultAlreadyRedeemed = 28)] = "k_EResultAlreadyRedeemed"),
-            (e[(e.k_EResultDuplicateRequest = 29)] =
-              "k_EResultDuplicateRequest"),
-            (e[(e.k_EResultAlreadyOwned = 30)] = "k_EResultAlreadyOwned"),
-            (e[(e.k_EResultIPNotFound = 31)] = "k_EResultIPNotFound"),
-            (e[(e.k_EResultPersistFailed = 32)] = "k_EResultPersistFailed"),
-            (e[(e.k_EResultLockingFailed = 33)] = "k_EResultLockingFailed"),
-            (e[(e.k_EResultLogonSessionReplaced = 34)] =
-              "k_EResultLogonSessionReplaced"),
-            (e[(e.k_EResultConnectFailed = 35)] = "k_EResultConnectFailed"),
-            (e[(e.k_EResultHandshakeFailed = 36)] = "k_EResultHandshakeFailed"),
-            (e[(e.k_EResultIOFailure = 37)] = "k_EResultIOFailure"),
-            (e[(e.k_EResultRemoteDisconnect = 38)] =
-              "k_EResultRemoteDisconnect"),
-            (e[(e.k_EResultShoppingCartNotFound = 39)] =
-              "k_EResultShoppingCartNotFound"),
-            (e[(e.k_EResultBlocked = 40)] = "k_EResultBlocked"),
-            (e[(e.k_EResultIgnored = 41)] = "k_EResultIgnored"),
-            (e[(e.k_EResultNoMatch = 42)] = "k_EResultNoMatch"),
-            (e[(e.k_EResultAccountDisabled = 43)] = "k_EResultAccountDisabled"),
-            (e[(e.k_EResultServiceReadOnly = 44)] = "k_EResultServiceReadOnly"),
-            (e[(e.k_EResultAccountNotFeatured = 45)] =
-              "k_EResultAccountNotFeatured"),
-            (e[(e.k_EResultAdministratorOK = 46)] = "k_EResultAdministratorOK"),
-            (e[(e.k_EResultContentVersion = 47)] = "k_EResultContentVersion"),
-            (e[(e.k_EResultTryAnotherCM = 48)] = "k_EResultTryAnotherCM"),
-            (e[(e.k_EResultPasswordRequiredToKickSession = 49)] =
-              "k_EResultPasswordRequiredToKickSession"),
-            (e[(e.k_EResultAlreadyLoggedInElsewhere = 50)] =
-              "k_EResultAlreadyLoggedInElsewhere"),
-            (e[(e.k_EResultSuspended = 51)] = "k_EResultSuspended"),
-            (e[(e.k_EResultCancelled = 52)] = "k_EResultCancelled"),
-            (e[(e.k_EResultDataCorruption = 53)] = "k_EResultDataCorruption"),
-            (e[(e.k_EResultDiskFull = 54)] = "k_EResultDiskFull"),
-            (e[(e.k_EResultRemoteCallFailed = 55)] =
-              "k_EResultRemoteCallFailed"),
-            (e[(e.k_EResultPasswordUnset = 56)] = "k_EResultPasswordUnset"),
-            (e[(e.k_EResultExternalAccountUnlinked = 57)] =
-              "k_EResultExternalAccountUnlinked"),
-            (e[(e.k_EResultPSNTicketInvalid = 58)] =
-              "k_EResultPSNTicketInvalid"),
-            (e[(e.k_EResultExternalAccountAlreadyLinked = 59)] =
-              "k_EResultExternalAccountAlreadyLinked"),
-            (e[(e.k_EResultRemoteFileConflict = 60)] =
-              "k_EResultRemoteFileConflict"),
-            (e[(e.k_EResultIllegalPassword = 61)] = "k_EResultIllegalPassword"),
-            (e[(e.k_EResultSameAsPreviousValue = 62)] =
-              "k_EResultSameAsPreviousValue"),
-            (e[(e.k_EResultAccountLogonDenied = 63)] =
-              "k_EResultAccountLogonDenied"),
-            (e[(e.k_EResultCannotUseOldPassword = 64)] =
-              "k_EResultCannotUseOldPassword"),
-            (e[(e.k_EResultInvalidLoginAuthCode = 65)] =
-              "k_EResultInvalidLoginAuthCode"),
-            (e[(e.k_EResultAccountLogonDeniedNoMail = 66)] =
-              "k_EResultAccountLogonDeniedNoMail"),
-            (e[(e.k_EResultHardwareNotCapableOfIPT = 67)] =
-              "k_EResultHardwareNotCapableOfIPT"),
-            (e[(e.k_EResultIPTInitError = 68)] = "k_EResultIPTInitError"),
-            (e[(e.k_EResultParentalControlRestricted = 69)] =
-              "k_EResultParentalControlRestricted"),
-            (e[(e.k_EResultFacebookQueryError = 70)] =
-              "k_EResultFacebookQueryError"),
-            (e[(e.k_EResultExpiredLoginAuthCode = 71)] =
-              "k_EResultExpiredLoginAuthCode"),
-            (e[(e.k_EResultIPLoginRestrictionFailed = 72)] =
-              "k_EResultIPLoginRestrictionFailed"),
-            (e[(e.k_EResultAccountLockedDown = 73)] =
-              "k_EResultAccountLockedDown"),
-            (e[(e.k_EResultAccountLogonDeniedVerifiedEmailRequired = 74)] =
-              "k_EResultAccountLogonDeniedVerifiedEmailRequired"),
-            (e[(e.k_EResultNoMatchingURL = 75)] = "k_EResultNoMatchingURL"),
-            (e[(e.k_EResultBadResponse = 76)] = "k_EResultBadResponse"),
-            (e[(e.k_EResultRequirePasswordReEntry = 77)] =
-              "k_EResultRequirePasswordReEntry"),
-            (e[(e.k_EResultValueOutOfRange = 78)] = "k_EResultValueOutOfRange"),
-            (e[(e.k_EResultUnexpectedError = 79)] = "k_EResultUnexpectedError"),
-            (e[(e.k_EResultDisabled = 80)] = "k_EResultDisabled"),
-            (e[(e.k_EResultInvalidCEGSubmission = 81)] =
-              "k_EResultInvalidCEGSubmission"),
-            (e[(e.k_EResultRestrictedDevice = 82)] =
-              "k_EResultRestrictedDevice"),
-            (e[(e.k_EResultRegionLocked = 83)] = "k_EResultRegionLocked"),
-            (e[(e.k_EResultRateLimitExceeded = 84)] =
-              "k_EResultRateLimitExceeded"),
-            (e[(e.k_EResultAccountLoginDeniedNeedTwoFactor = 85)] =
-              "k_EResultAccountLoginDeniedNeedTwoFactor"),
-            (e[(e.k_EResultItemDeleted = 86)] = "k_EResultItemDeleted"),
-            (e[(e.k_EResultAccountLoginDeniedThrottle = 87)] =
-              "k_EResultAccountLoginDeniedThrottle"),
-            (e[(e.k_EResultTwoFactorCodeMismatch = 88)] =
-              "k_EResultTwoFactorCodeMismatch"),
-            (e[(e.k_EResultTwoFactorActivationCodeMismatch = 89)] =
-              "k_EResultTwoFactorActivationCodeMismatch"),
-            (e[(e.k_EResultAccountAssociatedToMultiplePartners = 90)] =
-              "k_EResultAccountAssociatedToMultiplePartners"),
-            (e[(e.k_EResultNotModified = 91)] = "k_EResultNotModified"),
-            (e[(e.k_EResultNoMobileDevice = 92)] = "k_EResultNoMobileDevice"),
-            (e[(e.k_EResultTimeNotSynced = 93)] = "k_EResultTimeNotSynced"),
-            (e[(e.k_EResultSmsCodeFailed = 94)] = "k_EResultSmsCodeFailed"),
-            (e[(e.k_EResultAccountLimitExceeded = 95)] =
-              "k_EResultAccountLimitExceeded"),
-            (e[(e.k_EResultAccountActivityLimitExceeded = 96)] =
-              "k_EResultAccountActivityLimitExceeded"),
-            (e[(e.k_EResultPhoneActivityLimitExceeded = 97)] =
-              "k_EResultPhoneActivityLimitExceeded"),
-            (e[(e.k_EResultRefundToWallet = 98)] = "k_EResultRefundToWallet"),
-            (e[(e.k_EResultEmailSendFailure = 99)] =
-              "k_EResultEmailSendFailure"),
-            (e[(e.k_EResultNotSettled = 100)] = "k_EResultNotSettled"),
-            (e[(e.k_EResultNeedCaptcha = 101)] = "k_EResultNeedCaptcha"),
-            (e[(e.k_EResultGSLTDenied = 102)] = "k_EResultGSLTDenied"),
-            (e[(e.k_EResultGSOwnerDenied = 103)] = "k_EResultGSOwnerDenied"),
-            (e[(e.k_EResultInvalidItemType = 104)] =
-              "k_EResultInvalidItemType"),
-            (e[(e.k_EResultIPBanned = 105)] = "k_EResultIPBanned"),
-            (e[(e.k_EResultGSLTExpired = 106)] = "k_EResultGSLTExpired"),
-            (e[(e.k_EResultInsufficientFunds = 107)] =
-              "k_EResultInsufficientFunds"),
-            (e[(e.k_EResultTooManyPending = 108)] = "k_EResultTooManyPending"),
-            (e[(e.k_EResultNoSiteLicensesFound = 109)] =
-              "k_EResultNoSiteLicensesFound"),
-            (e[(e.k_EResultWGNetworkSendExceeded = 110)] =
-              "k_EResultWGNetworkSendExceeded"),
-            (e[(e.k_EResultAccountNotFriends = 111)] =
-              "k_EResultAccountNotFriends"),
-            (e[(e.k_EResultLimitedUserAccount = 112)] =
-              "k_EResultLimitedUserAccount"),
-            (e[(e.k_EResultCantRemoveItem = 113)] = "k_EResultCantRemoveItem"),
-            (e[(e.k_EResultAccountDeleted = 114)] = "k_EResultAccountDeleted"),
-            (e[(e.k_EResultExistingUserCancelledLicense = 115)] =
-              "k_EResultExistingUserCancelledLicense"),
-            (e[(e.k_EResultCommunityCooldown = 116)] =
-              "k_EResultCommunityCooldown"),
-            (e[(e.k_EResultNoLauncherSpecified = 117)] =
-              "k_EResultNoLauncherSpecified"),
-            (e[(e.k_EResultMustAgreeToSSA = 118)] = "k_EResultMustAgreeToSSA"),
-            (e[(e.k_EResultLauncherMigrated = 119)] =
-              "k_EResultLauncherMigrated"),
-            (e[(e.k_EResultSteamRealmMismatch = 120)] =
-              "k_EResultSteamRealmMismatch"),
-            (e[(e.k_EResultInvalidSignature = 121)] =
-              "k_EResultInvalidSignature"),
-            (e[(e.k_EResultParseFailure = 122)] = "k_EResultParseFailure"),
-            (e[(e.k_EResultNoVerifiedPhone = 123)] =
-              "k_EResultNoVerifiedPhone"),
-            (e[(e.k_EResultInsufficientBattery = 124)] =
-              "k_EResultInsufficientBattery"),
-            (e[(e.k_EResultChargerRequired = 125)] =
-              "k_EResultChargerRequired"),
-            (e[(e.k_EResultCachedCredentialInvalid = 126)] =
-              "k_EResultCachedCredentialInvalid"),
-            (e[(e.K_EResultPhoneNumberIsVOIP = 127)] =
-              "K_EResultPhoneNumberIsVOIP"),
-            (e[(e.k_EResultNotSupported = 128)] = "k_EResultNotSupported"),
-            (e[(e.k_EResultFamilySizeLimitExceeded = 129)] =
-              "k_EResultFamilySizeLimitExceeded");
-        })(T || (T = {}));
-        let C = { success: !0, result: T.k_EResultOK };
-        class v {
+          I = { ANNOUNCEMENT_GID: "", TAKEOVER_ANNOUNCEMENT_GID: "" };
+        r.createContext({});
+        let k = { success: !0, result: 1 };
+        class C {
           constructor() {
-            (this.m_connection = new R()),
+            (this.m_connection = new b()),
               (this.m_bAllowAccountMismatch = !1),
               (this.m_mapCacheSubscribedApp = new Map());
           }
-          FailureResult(e = T.k_EResultFail) {
+          FailureResult(e = 2) {
             let t = { success: !1, result: e };
             return (
               this.m_connection &&
@@ -565,7 +374,7 @@ var CLSTAMP = "8745921";
               this.m_connection &&
                 !this.m_connection.connected_to_client &&
                 (t.connect_failed = !0),
-              e == T.k_EResultInvalidProtocolVer && (t.call_unsupported = !0),
+              7 == e && (t.call_unsupported = !0),
               t
             );
           }
@@ -574,7 +383,7 @@ var CLSTAMP = "8745921";
           }
           BClientConnected() {
             return this.m_connection.Connect().then(
-              () => C,
+              () => k,
               () => this.FailureResult(),
             );
           }
@@ -605,7 +414,7 @@ var CLSTAMP = "8745921";
             let t = { message: "IsSubscribedApp", appid: e };
             return this.GenericEResultCall(t).then((t) => {
               if (t.connect_failed) return;
-              let n = t.result == T.k_EResultOK;
+              let n = 1 == t.result;
               return this.m_mapCacheSubscribedApp.set(e, n), n;
             });
           }
@@ -614,8 +423,8 @@ var CLSTAMP = "8745921";
           }
           BClientAccountMatches() {
             return (
-              !h.logged_in ||
-              h.accountid == this.m_connection.ClientInfo.unAccountID
+              !g.logged_in ||
+              g.accountid == this.m_connection.ClientInfo.unAccountID
             );
           }
           GenericEResultCall(e) {
@@ -626,20 +435,14 @@ var CLSTAMP = "8745921";
                   ? this.m_connection
                       .SendMsgAndAwaitResponse(e)
                       .then((e) =>
-                        e.success === T.k_EResultOK
-                          ? C
-                          : this.FailureResult(e.success),
+                        1 === e.success ? k : this.FailureResult(e.success),
                       )
-                  : {
-                      success: !1,
-                      result: T.k_EResultInvalidSteamID,
-                      account_mismatch: !0,
-                    },
+                  : { success: !1, result: 19, account_mismatch: !0 },
               )
               .catch(() => this.FailureResult());
           }
         }
-        class R {
+        class b {
           constructor() {
             (this.m_mapWaitingCallbacks = new Map()),
               (this.m_iCallSeq = 1),
@@ -667,10 +470,10 @@ var CLSTAMP = "8745921";
           }
           SendMsgAndAwaitResponse(e) {
             return new Promise((t, n) => {
-              let r = this.m_iCallSeq++;
-              this.BSendMsg(e, r)
-                ? this.m_mapWaitingCallbacks.set(r, {
-                    iSeq: r,
+              let s = this.m_iCallSeq++;
+              this.BSendMsg(e, s)
+                ? this.m_mapWaitingCallbacks.set(s, {
+                    iSeq: s,
                     fnCallback: t,
                     fnError: n,
                   })
@@ -681,8 +484,8 @@ var CLSTAMP = "8745921";
             if (!this.m_socket || this.m_socket.readyState != WebSocket.OPEN)
               return !1;
             let n = Object.assign({}, e, {
-              universe: S.EUNIVERSE,
-              accountid: h.accountid,
+              universe: f.EUNIVERSE,
+              accountid: g.accountid,
             });
             void 0 !== t && (n.sequenceid = t);
             try {
@@ -725,7 +528,7 @@ var CLSTAMP = "8745921";
                 (this.m_socket.onopen = () => {
                   this.SendMsgAndAwaitResponse({ message: "GetClientInfo" })
                     .then((n) => {
-                      n.success == T.k_EResultOK
+                      1 == n.success
                         ? ((this.m_ClientInfo.ulVersion = n.clientversion),
                           (this.m_ClientInfo.bFriendsUIEnabled = !!n.friendsui),
                           (this.m_ClientInfo.unAccountID = n.accountid),
@@ -752,1129 +555,96 @@ var CLSTAMP = "8745921";
             );
           }
         }
-        let I = new v();
-        window.ClientConnectionAPI = I;
+        let v = new C();
+        window.ClientConnectionAPI = v;
         n(14206), n(19744);
-        var L, f, A, P, b, M, F, D, N, G, U, w, O, j;
-        !(function (e) {
-          (e[(e.k_ETransportOK = 1)] = "k_ETransportOK"),
-            (e[(e.k_ETransportRequestNotSent = 2)] =
-              "k_ETransportRequestNotSent"),
-            (e[(e.k_ETransportResponseNotReceived = 3)] =
-              "k_ETransportResponseNotReceived"),
-            (e[(e.k_ETransportIncorrectParameter = 4)] =
-              "k_ETransportIncorrectParameter"),
-            (e[(e.k_ETransportMethodNotFound = 100)] =
-              "k_ETransportMethodNotFound"),
-            (e[(e.k_ETransportCallMismatch = 101)] =
-              "k_ETransportCallMismatch"),
-            (e[(e.k_ETransportSetupError = 102)] = "k_ETransportSetupError"),
-            (e[(e.k_ETransportInternalError = 103)] =
-              "k_ETransportInternalError"),
-            (e[(e.k_ETransportNotSupported = 104)] =
-              "k_ETransportNotSupported");
-        })(L || (L = {})),
-          (function (e) {
-            (e[(e.k_EAppErrorNone = 0)] = "k_EAppErrorNone"),
-              (e[(e.k_EAppErrorUnspecified = 1)] = "k_EAppErrorUnspecified"),
-              (e[(e.k_EAppErrorPaused = 2)] = "k_EAppErrorPaused"),
-              (e[(e.k_EAppErrorCanceled = 3)] = "k_EAppErrorCanceled"),
-              (e[(e.k_EAppErrorSuspended = 4)] = "k_EAppErrorSuspended"),
-              (e[(e.k_EAppErrorNoSubscription = 5)] =
-                "k_EAppErrorNoSubscription"),
-              (e[(e.k_EAppErrorNoConnection = 6)] = "k_EAppErrorNoConnection"),
-              (e[(e.k_EAppErrorTimeout = 7)] = "k_EAppErrorTimeout"),
-              (e[(e.k_EAppErrorMissingKey = 8)] = "k_EAppErrorMissingKey"),
-              (e[(e.k_EAppErrorMissingConfig = 9)] =
-                "k_EAppErrorMissingConfig"),
-              (e[(e.k_EAppErrorDiskReadFailure = 10)] =
-                "k_EAppErrorDiskReadFailure"),
-              (e[(e.k_EAppErrorDiskWriteFailure = 11)] =
-                "k_EAppErrorDiskWriteFailure"),
-              (e[(e.k_EAppErrorNotEnoughDiskSpace = 12)] =
-                "k_EAppErrorNotEnoughDiskSpace"),
-              (e[(e.k_EAppErrorCorruptGameFiles = 13)] =
-                "k_EAppErrorCorruptGameFiles"),
-              (e[(e.k_EAppErrorWaitingForNextDisk = 14)] =
-                "k_EAppErrorWaitingForNextDisk"),
-              (e[(e.k_EAppErrorInvalidInstallPath = 15)] =
-                "k_EAppErrorInvalidInstallPath"),
-              (e[(e.k_EAppErrorAppRunning = 16)] = "k_EAppErrorAppRunning"),
-              (e[(e.k_EAppErrorDependencyFailure = 17)] =
-                "k_EAppErrorDependencyFailure"),
-              (e[(e.k_EAppErrorNotInstalled = 18)] = "k_EAppErrorNotInstalled"),
-              (e[(e.k_EAppErrorUpdateRequired = 19)] =
-                "k_EAppErrorUpdateRequired"),
-              (e[(e.k_EAppErrorBusy = 20)] = "k_EAppErrorBusy"),
-              (e[(e.k_EAppErrorNoDownloadSources = 21)] =
-                "k_EAppErrorNoDownloadSources"),
-              (e[(e.k_EAppErrorInvalidAppConfig = 22)] =
-                "k_EAppErrorInvalidAppConfig"),
-              (e[(e.k_EAppErrorInvalidDepotConfig = 23)] =
-                "k_EAppErrorInvalidDepotConfig"),
-              (e[(e.k_EAppErrorMissingManifest = 24)] =
-                "k_EAppErrorMissingManifest"),
-              (e[(e.k_EAppErrorNotReleased = 25)] = "k_EAppErrorNotReleased"),
-              (e[(e.k_EAppErrorRegionRestricted = 26)] =
-                "k_EAppErrorRegionRestricted"),
-              (e[(e.k_EAppErrorCorruptDepotCache = 27)] =
-                "k_EAppErrorCorruptDepotCache"),
-              (e[(e.k_EAppErrorMissingExecutable = 28)] =
-                "k_EAppErrorMissingExecutable"),
-              (e[(e.k_EAppErrorInvalidPlatform = 29)] =
-                "k_EAppErrorInvalidPlatform"),
-              (e[(e.k_EAppErrorInvalidFileSystem = 30)] =
-                "k_EAppErrorInvalidFileSystem"),
-              (e[(e.k_EAppErrorCorruptUpdateFiles = 31)] =
-                "k_EAppErrorCorruptUpdateFiles"),
-              (e[(e.k_EAppErrorDownloadDisabled = 32)] =
-                "k_EAppErrorDownloadDisabled"),
-              (e[(e.k_EAppErrorSharedLibraryLocked = 33)] =
-                "k_EAppErrorSharedLibraryLocked"),
-              (e[(e.k_EAppErrorPendingLicense = 34)] =
-                "k_EAppErrorPendingLicense"),
-              (e[(e.k_EAppErrorOtherSessionPlaying = 35)] =
-                "k_EAppErrorOtherSessionPlaying"),
-              (e[(e.k_EAppErrorCorruptDownload = 36)] =
-                "k_EAppErrorCorruptDownload"),
-              (e[(e.k_EAppErrorCorruptDisk = 37)] = "k_EAppErrorCorruptDisk"),
-              (e[(e.k_EAppErrorFilePermissions = 38)] =
-                "k_EAppErrorFilePermissions"),
-              (e[(e.k_EAppErrorFileLocked = 39)] = "k_EAppErrorFileLocked"),
-              (e[(e.k_EAppErrorMissingContent = 40)] =
-                "k_EAppErrorMissingContent"),
-              (e[(e.k_EAppErrorRequires64BitOS = 41)] =
-                "k_EAppErrorRequires64BitOS"),
-              (e[(e.k_EAppErrorMissingUpdateFiles = 42)] =
-                "k_EAppErrorMissingUpdateFiles"),
-              (e[(e.k_EAppErrorNotEnoughDiskQuota = 43)] =
-                "k_EAppErrorNotEnoughDiskQuota"),
-              (e[(e.k_EAppErrorLockedSiteLicense = 44)] =
-                "k_EAppErrorLockedSiteLicense"),
-              (e[(e.k_EAppErrorParentalBlocked = 45)] =
-                "k_EAppErrorParentalBlocked"),
-              (e[(e.k_EAppErrorSpawnProcess = 46)] = "k_EAppErrorSpawnProcess"),
-              (e[(e.k_EAppErrorClientOutOfDate = 47)] =
-                "k_EAppErrorClientOutOfDate"),
-              (e[(e.k_EAppErrorPlaytimeExceeded = 48)] =
-                "k_EAppErrorPlaytimeExceeded"),
-              (e[(e.k_EAppErrorCorruptFileSignature = 49)] =
-                "k_EAppErrorCorruptFileSignature"),
-              (e[(e.k_EAppErrorMissingGameFiles = 50)] =
-                "k_EAppErrorMissingGameFiles"),
-              (e[(e.k_EAppErrorCompatToolFailed = 51)] =
-                "k_EAppErrorCompatToolFailed"),
-              (e[(e.k_EAppErrorRemovedInstallPath = 52)] =
-                "k_EAppErrorRemovedInstallPath"),
-              (e[(e.k_EAppErrorInvalidBackupPath = 53)] =
-                "k_EAppErrorInvalidBackupPath"),
-              (e[(e.k_EAppErrorInvalidPasscode = 54)] =
-                "k_EAppErrorInvalidPasscode"),
-              (e[(e.k_EAppErrorSelfUpdating = 55)] = "k_EAppErrorSelfUpdating"),
-              (e[(e.k_EAppErrorParentalPlaytimeExceeded = 56)] =
-                "k_EAppErrorParentalPlaytimeExceeded"),
-              (e[(e.k_EAppErrorMax = 57)] = "k_EAppErrorMax");
-          })(f || (f = {})),
-          (function (e) {
-            (e[(e.k_EAvatarFriendStateOffline = 0)] =
-              "k_EAvatarFriendStateOffline"),
-              (e[(e.k_EAvatarFriendStateOnline = 1)] =
-                "k_EAvatarFriendStateOnline"),
-              (e[(e.k_EAvatarFriendStateInGame = 2)] =
-                "k_EAvatarFriendStateInGame");
-          })(A || (A = {})),
-          (function (e) {
-            (e[(e.k_EScreenshot = 0)] = "k_EScreenshot"),
-              (e[(e.k_ETradingCard = 1)] = "k_ETradingCard"),
-              (e[(e.k_EAchievement = 2)] = "k_EAchievement");
-          })(P || (P = {})),
-          (function (e) {
-            (e[(e.k_EPersonaStateOffline = 0)] = "k_EPersonaStateOffline"),
-              (e[(e.k_EPersonaStateOnline = 1)] = "k_EPersonaStateOnline"),
-              (e[(e.k_EPersonaStateBusy = 2)] = "k_EPersonaStateBusy"),
-              (e[(e.k_EPersonaStateAway = 3)] = "k_EPersonaStateAway"),
-              (e[(e.k_EPersonaStateSnooze = 4)] = "k_EPersonaStateSnooze"),
-              (e[(e.k_EPersonaStateLookingToTrade = 5)] =
-                "k_EPersonaStateLookingToTrade"),
-              (e[(e.k_EPersonaStateLookingToPlay = 6)] =
-                "k_EPersonaStateLookingToPlay"),
-              (e[(e.k_EPersonaStateInvisible = 7)] =
-                "k_EPersonaStateInvisible"),
-              (e[(e.k_EPersonaStateMax = 8)] = "k_EPersonaStateMax");
-          })(b || (b = {})),
-          (function (e) {
-            (e[(e.k_EWorkshopFileTypeInvalid = -1)] =
-              "k_EWorkshopFileTypeInvalid"),
-              (e[(e.k_EWorkshopFileTypeCommunity = 0)] =
-                "k_EWorkshopFileTypeCommunity"),
-              (e[(e.k_EWorkshopFileTypeMicrotransaction = 1)] =
-                "k_EWorkshopFileTypeMicrotransaction"),
-              (e[(e.k_EWorkshopFileTypeCollection = 2)] =
-                "k_EWorkshopFileTypeCollection"),
-              (e[(e.k_EWorkshopFileTypeArt = 3)] = "k_EWorkshopFileTypeArt"),
-              (e[(e.k_EWorkshopFileTypeVideo = 4)] =
-                "k_EWorkshopFileTypeVideo"),
-              (e[(e.k_EWorkshopFileTypeScreenshot = 5)] =
-                "k_EWorkshopFileTypeScreenshot"),
-              (e[(e.k_EWorkshopFileTypeGame = 6)] = "k_EWorkshopFileTypeGame"),
-              (e[(e.k_EWorkshopFileTypeSoftware = 7)] =
-                "k_EWorkshopFileTypeSoftware"),
-              (e[(e.k_EWorkshopFileTypeConcept = 8)] =
-                "k_EWorkshopFileTypeConcept"),
-              (e[(e.k_EWorkshopFileTypeWebGuide = 9)] =
-                "k_EWorkshopFileTypeWebGuide"),
-              (e[(e.k_EWorkshopFileTypeIntegratedGuide = 10)] =
-                "k_EWorkshopFileTypeIntegratedGuide"),
-              (e[(e.k_EWorkshopFileTypeMerch = 11)] =
-                "k_EWorkshopFileTypeMerch"),
-              (e[(e.k_EWorkshopFileTypeControllerBinding = 12)] =
-                "k_EWorkshopFileTypeControllerBinding"),
-              (e[(e.k_EWorkshopFileTypeSteamworksAccessInvite = 13)] =
-                "k_EWorkshopFileTypeSteamworksAccessInvite"),
-              (e[(e.k_EWorkshopFileTypeSteamVideo = 14)] =
-                "k_EWorkshopFileTypeSteamVideo"),
-              (e[(e.k_EWorkshopFileTypeGameManagedItem = 15)] =
-                "k_EWorkshopFileTypeGameManagedItem"),
-              (e[(e.k_EWorkshopFileTypeFirst = 0)] =
-                "k_EWorkshopFileTypeFirst"),
-              (e[(e.k_EWorkshopFileTypeMax = 16)] = "k_EWorkshopFileTypeMax");
-          })(M || (M = {})),
-          (function (e) {
-            (e[(e.k_ELoginState_None = 0)] = "k_ELoginState_None"),
-              (e[(e.k_ELoginState_WelcomeDialog = 1)] =
-                "k_ELoginState_WelcomeDialog"),
-              (e[(e.k_ELoginState_WaitingForCreateUser = 2)] =
-                "k_ELoginState_WaitingForCreateUser"),
-              (e[(e.k_ELoginState_WaitingForCredentials = 3)] =
-                "k_ELoginState_WaitingForCredentials"),
-              (e[(e.k_ELoginState_WaitingForNetwork = 4)] =
-                "k_ELoginState_WaitingForNetwork"),
-              (e[(e.k_ELoginState_WaitingForServerResponse = 5)] =
-                "k_ELoginState_WaitingForServerResponse"),
-              (e[(e.k_ELoginState_WaitingForLibraryReady = 6)] =
-                "k_ELoginState_WaitingForLibraryReady"),
-              (e[(e.k_ELoginState_Success = 7)] = "k_ELoginState_Success"),
-              (e[(e.k_ELoginState_Quit = 8)] = "k_ELoginState_Quit");
-          })(F || (F = {})),
-          (function (e) {
-            (e[(e.k_EProgressType_None = 0)] = "k_EProgressType_None"),
-              (e[(e.k_EProgressType_UpdatingSteamInformation = 1)] =
-                "k_EProgressType_UpdatingSteamInformation"),
-              (e[(e.k_EProgressType_UpdatingUserConfiguration = 2)] =
-                "k_EProgressType_UpdatingUserConfiguration"),
-              (e[(e.k_EProgressType_LoggingIn = 3)] =
-                "k_EProgressType_LoggingIn");
-          })(D || (D = {})),
-          (function (e) {
-            (e[(e.k_EShutdownStep_None = 0)] = "k_EShutdownStep_None"),
-              (e[(e.k_EShutdownStep_Start = 1)] = "k_EShutdownStep_Start"),
-              (e[(e.k_EShutdownStep_WaitingForGames = 2)] =
-                "k_EShutdownStep_WaitingForGames"),
-              (e[(e.k_EShutdownStep_SynchronizingCloud = 3)] =
-                "k_EShutdownStep_SynchronizingCloud"),
-              (e[(e.k_EShutdownStep_FinishingDownload = 4)] =
-                "k_EShutdownStep_FinishingDownload"),
-              (e[(e.k_EShutdownStep_StoppingDownload = 5)] =
-                "k_EShutdownStep_StoppingDownload"),
-              (e[(e.k_EShutdownStep_StoppingServiceApps = 6)] =
-                "k_EShutdownStep_StoppingServiceApps"),
-              (e[(e.k_EShutdownStep_LogginOff = 7)] =
-                "k_EShutdownStep_LogginOff"),
-              (e[(e.k_EShutdownStep_Done = 8)] = "k_EShutdownStep_Done");
-          })(N || (N = {})),
-          (function (e) {
-            (e[(e.k_EIteratorTypeNone = 0)] = "k_EIteratorTypeNone"),
-              (e[(e.k_EIteratorTypeFolder = 1)] = "k_EIteratorTypeFolder"),
-              (e[(e.k_EIteratorTypeExecutables = 2)] =
-                "k_EIteratorTypeExecutables"),
-              (e[(e.k_EIteratorTypeImages = 3)] = "k_EIteratorTypeImages");
-          })(G || (G = {})),
-          (function (e) {
-            (e[(e.k_EUniverseInvalid = 0)] = "k_EUniverseInvalid"),
-              (e[(e.k_EUniversePublic = 1)] = "k_EUniversePublic"),
-              (e[(e.k_EUniverseBeta = 2)] = "k_EUniverseBeta"),
-              (e[(e.k_EUniverseInternal = 3)] = "k_EUniverseInternal"),
-              (e[(e.k_EUniverseDev = 4)] = "k_EUniverseDev"),
-              (e[(e.k_EUniverseMax = 5)] = "k_EUniverseMax");
-          })(U || (U = {})),
-          (function (e) {
-            (e[(e.k_EAccountTypeInvalid = 0)] = "k_EAccountTypeInvalid"),
-              (e[(e.k_EAccountTypeIndividual = 1)] =
-                "k_EAccountTypeIndividual"),
-              (e[(e.k_EAccountTypeMultiseat = 2)] = "k_EAccountTypeMultiseat"),
-              (e[(e.k_EAccountTypeGameServer = 3)] =
-                "k_EAccountTypeGameServer"),
-              (e[(e.k_EAccountTypeAnonGameServer = 4)] =
-                "k_EAccountTypeAnonGameServer"),
-              (e[(e.k_EAccountTypePending = 5)] = "k_EAccountTypePending"),
-              (e[(e.k_EAccountTypeContentServer = 6)] =
-                "k_EAccountTypeContentServer"),
-              (e[(e.k_EAccountTypeClan = 7)] = "k_EAccountTypeClan"),
-              (e[(e.k_EAccountTypeChat = 8)] = "k_EAccountTypeChat"),
-              (e[(e.k_EAccountTypeConsoleUser = 9)] =
-                "k_EAccountTypeConsoleUser"),
-              (e[(e.k_EAccountTypeAnonUser = 10)] = "k_EAccountTypeAnonUser"),
-              (e[(e.k_EAccountTypeMax = 11)] = "k_EAccountTypeMax");
-          })(w || (w = {})),
-          (function (e) {
-            (e[(e.k_EFriendRelationshipNone = 0)] =
-              "k_EFriendRelationshipNone"),
-              (e[(e.k_EFriendRelationshipBlocked = 1)] =
-                "k_EFriendRelationshipBlocked"),
-              (e[(e.k_EFriendRelationshipRequestRecipient = 2)] =
-                "k_EFriendRelationshipRequestRecipient"),
-              (e[(e.k_EFriendRelationshipFriend = 3)] =
-                "k_EFriendRelationshipFriend"),
-              (e[(e.k_EFriendRelationshipRequestInitiator = 4)] =
-                "k_EFriendRelationshipRequestInitiator"),
-              (e[(e.k_EFriendRelationshipIgnored = 5)] =
-                "k_EFriendRelationshipIgnored"),
-              (e[(e.k_EFriendRelationshipIgnoredFriend = 6)] =
-                "k_EFriendRelationshipIgnoredFriend"),
-              (e[(e.k_EFriendRelationshipSuggested_DEPRECATED = 7)] =
-                "k_EFriendRelationshipSuggested_DEPRECATED"),
-              (e[(e.k_EFriendRelationshipMax = 8)] =
-                "k_EFriendRelationshipMax");
-          })(O || (O = {})),
-          (function (e) {
-            (e[(e.k_EClanRelationshipNone = 0)] = "k_EClanRelationshipNone"),
-              (e[(e.k_EClanRelationshipBlocked = 1)] =
-                "k_EClanRelationshipBlocked"),
-              (e[(e.k_EClanRelationshipInvited = 2)] =
-                "k_EClanRelationshipInvited"),
-              (e[(e.k_EClanRelationshipMember = 3)] =
-                "k_EClanRelationshipMember"),
-              (e[(e.k_EClanRelationshipKicked = 4)] =
-                "k_EClanRelationshipKicked"),
-              (e[(e.k_EClanRelationshipKickAcknowledged = 5)] =
-                "k_EClanRelationshipKickAcknowledged"),
-              (e[(e.k_EClanRelationshipPendingApproval = 6)] =
-                "k_EClanRelationshipPendingApproval"),
-              (e[(e.k_EClanRelationshipRequestDenied = 7)] =
-                "k_EClanRelationshipRequestDenied");
-          })(j || (j = {}));
-        var B, W, x;
-        !(function (e) {
-          (e[(e.k_EChatEntryTypeInvalid = 0)] = "k_EChatEntryTypeInvalid"),
-            (e[(e.k_EChatEntryTypeChatMsg = 1)] = "k_EChatEntryTypeChatMsg"),
-            (e[(e.k_EChatEntryTypeTyping = 2)] = "k_EChatEntryTypeTyping"),
-            (e[(e.k_EChatEntryTypeInviteGame = 3)] =
-              "k_EChatEntryTypeInviteGame"),
-            (e[(e.k_EChatEntryTypeEmote = 4)] = "k_EChatEntryTypeEmote"),
-            (e[(e.k_EChatEntryTypeLeftConversation = 6)] =
-              "k_EChatEntryTypeLeftConversation"),
-            (e[(e.k_EChatEntryTypeEntered = 7)] = "k_EChatEntryTypeEntered"),
-            (e[(e.k_EChatEntryTypeWasKicked = 8)] =
-              "k_EChatEntryTypeWasKicked"),
-            (e[(e.k_EChatEntryTypeWasBanned = 9)] =
-              "k_EChatEntryTypeWasBanned"),
-            (e[(e.k_EChatEntryTypeDisconnected = 10)] =
-              "k_EChatEntryTypeDisconnected"),
-            (e[(e.k_EChatEntryTypeHistoricalChat = 11)] =
-              "k_EChatEntryTypeHistoricalChat"),
-            (e[(e.k_EChatEntryTypeLinkBlocked = 14)] =
-              "k_EChatEntryTypeLinkBlocked");
-        })(B || (B = {})),
-          (function (e) {
-            (e[(e.k_EEconTradeResponse_Accepted = 0)] =
-              "k_EEconTradeResponse_Accepted"),
-              (e[(e.k_EEconTradeResponse_Declined = 1)] =
-                "k_EEconTradeResponse_Declined"),
-              (e[(e.k_EEconTradeResponse_TradeBanned_Initiator = 2)] =
-                "k_EEconTradeResponse_TradeBanned_Initiator"),
-              (e[(e.k_EEconTradeResponse_TradeBanned_Target = 3)] =
-                "k_EEconTradeResponse_TradeBanned_Target"),
-              (e[(e.k_EEconTradeResponse_Target_Already_Trading = 4)] =
-                "k_EEconTradeResponse_Target_Already_Trading"),
-              (e[(e.k_EEconTradeResponse_Disabled = 5)] =
-                "k_EEconTradeResponse_Disabled"),
-              (e[(e.k_EEconTradeResponse_NotLoggedIn = 6)] =
-                "k_EEconTradeResponse_NotLoggedIn"),
-              (e[(e.k_EEconTradeResponse_Cancel = 7)] =
-                "k_EEconTradeResponse_Cancel"),
-              (e[(e.k_EEconTradeResponse_TooSoon = 8)] =
-                "k_EEconTradeResponse_TooSoon"),
-              (e[(e.k_EEconTradeResponse_TooSoonPenalty = 9)] =
-                "k_EEconTradeResponse_TooSoonPenalty"),
-              (e[(e.k_EEconTradeResponse_ConnectionFailed = 10)] =
-                "k_EEconTradeResponse_ConnectionFailed"),
-              (e[(e.k_EEconTradeResponse_Already_Trading = 11)] =
-                "k_EEconTradeResponse_Already_Trading"),
-              (e[(e.k_EEconTradeResponse_Already_Has_Trade_Request = 12)] =
-                "k_EEconTradeResponse_Already_Has_Trade_Request"),
-              (e[(e.k_EEconTradeResponse_NoResponse = 13)] =
-                "k_EEconTradeResponse_NoResponse"),
-              (e[(e.k_EEconTradeResponse_CyberCafe_Initiator = 14)] =
-                "k_EEconTradeResponse_CyberCafe_Initiator"),
-              (e[(e.k_EEconTradeResponse_CyberCafe_Target = 15)] =
-                "k_EEconTradeResponse_CyberCafe_Target"),
-              (e[(e.k_EEconTradeResponse_SchoolLab_Initiator = 16)] =
-                "k_EEconTradeResponse_SchoolLab_Initiator"),
-              (e[(e.k_EEconTradeResponse_SchoolLab_Target = 17)] =
-                "k_EEconTradeResponse_SchoolLab_Target"),
-              (e[(e.k_EEconTradeResponse_Initiator_Blocked_Target = 18)] =
-                "k_EEconTradeResponse_Initiator_Blocked_Target"),
-              (e[(e.k_EEconTradeResponse_Initiator_Needs_Verified_Email = 20)] =
-                "k_EEconTradeResponse_Initiator_Needs_Verified_Email"),
-              (e[(e.k_EEconTradeResponse_Initiator_Needs_Steam_Guard = 21)] =
-                "k_EEconTradeResponse_Initiator_Needs_Steam_Guard"),
-              (e[(e.k_EEconTradeResponse_Target_Account_Cannot_Trade = 22)] =
-                "k_EEconTradeResponse_Target_Account_Cannot_Trade"),
-              (e[(e.k_EEconTradeResponse_Initiator_Steam_Guard_Duration = 23)] =
-                "k_EEconTradeResponse_Initiator_Steam_Guard_Duration"),
-              (e[
-                (e.k_EEconTradeResponse_Initiator_Recent_Password_Reset = 24)
-              ] = "k_EEconTradeResponse_Initiator_Recent_Password_Reset"),
-              (e[(e.k_EEconTradeResponse_Initiator_Using_New_Device = 25)] =
-                "k_EEconTradeResponse_Initiator_Using_New_Device"),
-              (e[(e.k_EEconTradeResponse_Initiator_Sent_Invalid_Cookie = 26)] =
-                "k_EEconTradeResponse_Initiator_Sent_Invalid_Cookie"),
-              (e[(e.k_EEconTradeResponse_NeedsEmailConfirmation = 27)] =
-                "k_EEconTradeResponse_NeedsEmailConfirmation"),
-              (e[(e.k_EEconTradeResponse_Initiator_Recent_Email_Change = 28)] =
-                "k_EEconTradeResponse_Initiator_Recent_Email_Change"),
-              (e[(e.k_EEconTradeResponse_NeedsMobileConfirmation = 29)] =
-                "k_EEconTradeResponse_NeedsMobileConfirmation"),
-              (e[
-                (e.k_EEconTradeResponse_TradingHoldForClearedTradeOffers_Initiator = 30)
-              ] =
-                "k_EEconTradeResponse_TradingHoldForClearedTradeOffers_Initiator"),
-              (e[(e.k_EEconTradeResponse_WouldExceedMaxAssetCount = 31)] =
-                "k_EEconTradeResponse_WouldExceedMaxAssetCount"),
-              (e[(e.k_EEconTradeResponse_DisabledInRegion = 32)] =
-                "k_EEconTradeResponse_DisabledInRegion"),
-              (e[(e.k_EEconTradeResponse_DisabledInPartnerRegion = 33)] =
-                "k_EEconTradeResponse_DisabledInPartnerRegion"),
-              (e[(e.k_EEconTradeResponse_OKToDeliver = 50)] =
-                "k_EEconTradeResponse_OKToDeliver");
-          })(W || (W = {})),
-          (function (e) {
-            (e[(e.k_EServerTypeOther_Util = -2)] = "k_EServerTypeOther_Util"),
-              (e[(e.k_EServerTypeOther_Client = -3)] =
-                "k_EServerTypeOther_Client"),
-              (e[(e.k_EServerTypeOther_CServer = -4)] =
-                "k_EServerTypeOther_CServer"),
-              (e[(e.k_EServerTypeOther_CEconBase = -5)] =
-                "k_EServerTypeOther_CEconBase"),
-              (e[(e.k_EServerTypeInvalid = -1)] = "k_EServerTypeInvalid"),
-              (e[(e.k_EServerTypeShell = 0)] = "k_EServerTypeShell"),
-              (e[(e.k_EServerTypeGM = 1)] = "k_EServerTypeGM"),
-              (e[(e.k_EServerTypeAM = 3)] = "k_EServerTypeAM"),
-              (e[(e.k_EServerTypeBS = 4)] = "k_EServerTypeBS"),
-              (e[(e.k_EServerTypeVS = 5)] = "k_EServerTypeVS"),
-              (e[(e.k_EServerTypeATS = 6)] = "k_EServerTypeATS"),
-              (e[(e.k_EServerTypeCM = 7)] = "k_EServerTypeCM"),
-              (e[(e.k_EServerTypeFBS = 8)] = "k_EServerTypeFBS"),
-              (e[(e.k_EServerTypeBoxMonitor = 9)] = "k_EServerTypeBoxMonitor"),
-              (e[(e.k_EServerTypeSS = 10)] = "k_EServerTypeSS"),
-              (e[(e.k_EServerTypeDRMS = 11)] = "k_EServerTypeDRMS"),
-              (e[(e.k_EServerTypeConsole = 13)] = "k_EServerTypeConsole"),
-              (e[(e.k_EServerTypePICS = 14)] = "k_EServerTypePICS"),
-              (e[(e.k_EServerTypeContentStats = 16)] =
-                "k_EServerTypeContentStats"),
-              (e[(e.k_EServerTypeDP = 17)] = "k_EServerTypeDP"),
-              (e[(e.k_EServerTypeWG = 18)] = "k_EServerTypeWG"),
-              (e[(e.k_EServerTypeSM = 19)] = "k_EServerTypeSM"),
-              (e[(e.k_EServerTypeSLC = 20)] = "k_EServerTypeSLC"),
-              (e[(e.k_EServerTypeUFS = 21)] = "k_EServerTypeUFS"),
-              (e[(e.k_EServerTypeCommunity = 24)] = "k_EServerTypeCommunity"),
-              (e[(e.k_EServerTypeP2PRelayOBSOLETE = 25)] =
-                "k_EServerTypeP2PRelayOBSOLETE"),
-              (e[(e.k_EServerTypeAppInformation = 26)] =
-                "k_EServerTypeAppInformation"),
-              (e[(e.k_EServerTypeSpare = 27)] = "k_EServerTypeSpare"),
-              (e[(e.k_EServerTypeFTS = 28)] = "k_EServerTypeFTS"),
-              (e[(e.k_EServerTypeSiteLicense = 29)] =
-                "k_EServerTypeSiteLicense"),
-              (e[(e.k_EServerTypePS = 30)] = "k_EServerTypePS"),
-              (e[(e.k_EServerTypeIS = 31)] = "k_EServerTypeIS"),
-              (e[(e.k_EServerTypeCCS = 32)] = "k_EServerTypeCCS"),
-              (e[(e.k_EServerTypeDFS = 33)] = "k_EServerTypeDFS"),
-              (e[(e.k_EServerTypeLBS = 34)] = "k_EServerTypeLBS"),
-              (e[(e.k_EServerTypeMDS = 35)] = "k_EServerTypeMDS"),
-              (e[(e.k_EServerTypeCS = 36)] = "k_EServerTypeCS"),
-              (e[(e.k_EServerTypeGC = 37)] = "k_EServerTypeGC"),
-              (e[(e.k_EServerTypeNS = 38)] = "k_EServerTypeNS"),
-              (e[(e.k_EServerTypeOGS = 39)] = "k_EServerTypeOGS"),
-              (e[(e.k_EServerTypeWebAPI = 40)] = "k_EServerTypeWebAPI"),
-              (e[(e.k_EServerTypeUDS = 41)] = "k_EServerTypeUDS"),
-              (e[(e.k_EServerTypeMMS = 42)] = "k_EServerTypeMMS"),
-              (e[(e.k_EServerTypeGMS = 43)] = "k_EServerTypeGMS"),
-              (e[(e.k_EServerTypeKGS = 44)] = "k_EServerTypeKGS"),
-              (e[(e.k_EServerTypeUCM = 45)] = "k_EServerTypeUCM"),
-              (e[(e.k_EServerTypeRM = 46)] = "k_EServerTypeRM"),
-              (e[(e.k_EServerTypeFS = 47)] = "k_EServerTypeFS"),
-              (e[(e.k_EServerTypeEcon = 48)] = "k_EServerTypeEcon"),
-              (e[(e.k_EServerTypeBackpack = 49)] = "k_EServerTypeBackpack"),
-              (e[(e.k_EServerTypeUGS = 50)] = "k_EServerTypeUGS"),
-              (e[(e.k_EServerTypeStoreFeature = 51)] =
-                "k_EServerTypeStoreFeature"),
-              (e[(e.k_EServerTypeMoneyStats = 52)] = "k_EServerTypeMoneyStats"),
-              (e[(e.k_EServerTypeCRE = 53)] = "k_EServerTypeCRE"),
-              (e[(e.k_EServerTypeUMQ = 54)] = "k_EServerTypeUMQ"),
-              (e[(e.k_EServerTypeWorkshop = 55)] = "k_EServerTypeWorkshop"),
-              (e[(e.k_EServerTypeBRP = 56)] = "k_EServerTypeBRP"),
-              (e[(e.k_EServerTypeGCH = 57)] = "k_EServerTypeGCH"),
-              (e[(e.k_EServerTypeMPAS = 58)] = "k_EServerTypeMPAS"),
-              (e[(e.k_EServerTypeTrade = 59)] = "k_EServerTypeTrade"),
-              (e[(e.k_EServerTypeSecrets = 60)] = "k_EServerTypeSecrets"),
-              (e[(e.k_EServerTypeLogsink = 61)] = "k_EServerTypeLogsink"),
-              (e[(e.k_EServerTypeMarket = 62)] = "k_EServerTypeMarket"),
-              (e[(e.k_EServerTypeQuest = 63)] = "k_EServerTypeQuest"),
-              (e[(e.k_EServerTypeWDS = 64)] = "k_EServerTypeWDS"),
-              (e[(e.k_EServerTypeACS = 65)] = "k_EServerTypeACS"),
-              (e[(e.k_EServerTypePNP = 66)] = "k_EServerTypePNP"),
-              (e[(e.k_EServerTypeTaxForm = 67)] = "k_EServerTypeTaxForm"),
-              (e[(e.k_EServerTypeExternalMonitor = 68)] =
-                "k_EServerTypeExternalMonitor"),
-              (e[(e.k_EServerTypeParental = 69)] = "k_EServerTypeParental"),
-              (e[(e.k_EServerTypePartnerUpload = 70)] =
-                "k_EServerTypePartnerUpload"),
-              (e[(e.k_EServerTypePartner = 71)] = "k_EServerTypePartner"),
-              (e[(e.k_EServerTypeES = 72)] = "k_EServerTypeES"),
-              (e[(e.k_EServerTypeDepotWebContent = 73)] =
-                "k_EServerTypeDepotWebContent"),
-              (e[(e.k_EServerTypeExternalConfig = 74)] =
-                "k_EServerTypeExternalConfig"),
-              (e[(e.k_EServerTypeGameNotifications = 75)] =
-                "k_EServerTypeGameNotifications"),
-              (e[(e.k_EServerTypeMarketRepl = 76)] = "k_EServerTypeMarketRepl"),
-              (e[(e.k_EServerTypeMarketSearch = 77)] =
-                "k_EServerTypeMarketSearch"),
-              (e[(e.k_EServerTypeLocalization = 78)] =
-                "k_EServerTypeLocalization"),
-              (e[(e.k_EServerTypeSteam2Emulator = 79)] =
-                "k_EServerTypeSteam2Emulator"),
-              (e[(e.k_EServerTypePublicTest = 80)] = "k_EServerTypePublicTest"),
-              (e[(e.k_EServerTypeSolrMgr = 81)] = "k_EServerTypeSolrMgr"),
-              (e[(e.k_EServerTypeBroadcastIngester = 82)] =
-                "k_EServerTypeBroadcastIngester"),
-              (e[(e.k_EServerTypeBroadcastDirectory = 83)] =
-                "k_EServerTypeBroadcastDirectory"),
-              (e[(e.k_EServerTypeVideoManager = 84)] =
-                "k_EServerTypeVideoManager"),
-              (e[(e.k_EServerTypeTradeOffer = 85)] = "k_EServerTypeTradeOffer"),
-              (e[(e.k_EServerTypeBroadcastChat = 86)] =
-                "k_EServerTypeBroadcastChat"),
-              (e[(e.k_EServerTypePhone = 87)] = "k_EServerTypePhone"),
-              (e[(e.k_EServerTypeAccountScore = 88)] =
-                "k_EServerTypeAccountScore"),
-              (e[(e.k_EServerTypeSupport = 89)] = "k_EServerTypeSupport"),
-              (e[(e.k_EServerTypeLogRequest = 90)] = "k_EServerTypeLogRequest"),
-              (e[(e.k_EServerTypeLogWorker = 91)] = "k_EServerTypeLogWorker"),
-              (e[(e.k_EServerTypeEmailDelivery = 92)] =
-                "k_EServerTypeEmailDelivery"),
-              (e[(e.k_EServerTypeInventoryManagement = 93)] =
-                "k_EServerTypeInventoryManagement"),
-              (e[(e.k_EServerTypeAuth = 94)] = "k_EServerTypeAuth"),
-              (e[(e.k_EServerTypeStoreCatalog = 95)] =
-                "k_EServerTypeStoreCatalog"),
-              (e[(e.k_EServerTypeHLTVRelay = 96)] = "k_EServerTypeHLTVRelay"),
-              (e[(e.k_EServerTypeIDLS = 97)] = "k_EServerTypeIDLS"),
-              (e[(e.k_EServerTypePerf = 98)] = "k_EServerTypePerf"),
-              (e[(e.k_EServerTypeItemInventory = 99)] =
-                "k_EServerTypeItemInventory"),
-              (e[(e.k_EServerTypeWatchdog = 100)] = "k_EServerTypeWatchdog"),
-              (e[(e.k_EServerTypeAccountHistory = 101)] =
-                "k_EServerTypeAccountHistory"),
-              (e[(e.k_EServerTypeChat = 102)] = "k_EServerTypeChat"),
-              (e[(e.k_EServerTypeShader = 103)] = "k_EServerTypeShader"),
-              (e[(e.k_EServerTypeAccountHardware = 104)] =
-                "k_EServerTypeAccountHardware"),
-              (e[(e.k_EServerTypeWebRTC = 105)] = "k_EServerTypeWebRTC"),
-              (e[(e.k_EServerTypeGiveaway = 106)] = "k_EServerTypeGiveaway"),
-              (e[(e.k_EServerTypeChatRoom = 107)] = "k_EServerTypeChatRoom"),
-              (e[(e.k_EServerTypeVoiceChat = 108)] = "k_EServerTypeVoiceChat"),
-              (e[(e.k_EServerTypeQMS = 109)] = "k_EServerTypeQMS"),
-              (e[(e.k_EServerTypeTrust = 110)] = "k_EServerTypeTrust"),
-              (e[(e.k_EServerTypeTimeMachine = 111)] =
-                "k_EServerTypeTimeMachine"),
-              (e[(e.k_EServerTypeVACDBMaster = 112)] =
-                "k_EServerTypeVACDBMaster"),
-              (e[(e.k_EServerTypeContentServerConfig = 113)] =
-                "k_EServerTypeContentServerConfig"),
-              (e[(e.k_EServerTypeMinigame = 114)] = "k_EServerTypeMinigame"),
-              (e[(e.k_EServerTypeMLTrain = 115)] = "k_EServerTypeMLTrain"),
-              (e[(e.k_EServerTypeVACTest = 116)] = "k_EServerTypeVACTest"),
-              (e[(e.k_EServerTypeTaxService = 117)] =
-                "k_EServerTypeTaxService"),
-              (e[(e.k_EServerTypeMLInference = 118)] =
-                "k_EServerTypeMLInference"),
-              (e[(e.k_EServerTypeUGSAggregate = 119)] =
-                "k_EServerTypeUGSAggregate"),
-              (e[(e.k_EServerTypeTURN = 120)] = "k_EServerTypeTURN"),
-              (e[(e.k_EServerTypeRemoteClient = 121)] =
-                "k_EServerTypeRemoteClient"),
-              (e[(e.k_EServerTypeBroadcastOrigin = 122)] =
-                "k_EServerTypeBroadcastOrigin"),
-              (e[(e.k_EServerTypeBroadcastChannel = 123)] =
-                "k_EServerTypeBroadcastChannel"),
-              (e[(e.k_EServerTypeSteamAR = 124)] = "k_EServerTypeSteamAR"),
-              (e[(e.k_EServerTypeChina = 125)] = "k_EServerTypeChina"),
-              (e[(e.k_EServerTypeCrashDump = 126)] = "k_EServerTypeCrashDump"),
-              (e[(e.k_EServerTypeMax = 127)] = "k_EServerTypeMax");
-          })(x || (x = {}));
-        const V = 2147483647;
-        var H;
-        !(function (e) {
-          (e[(e.k_Lang_None = -1)] = "k_Lang_None"),
-            (e[(e.k_Lang_English = 0)] = "k_Lang_English"),
-            (e[(e.k_Lang_German = 1)] = "k_Lang_German"),
-            (e[(e.k_Lang_French = 2)] = "k_Lang_French"),
-            (e[(e.k_Lang_Italian = 3)] = "k_Lang_Italian"),
-            (e[(e.k_Lang_Korean = 4)] = "k_Lang_Korean"),
-            (e[(e.k_Lang_Spanish = 5)] = "k_Lang_Spanish"),
-            (e[(e.k_Lang_Simplified_Chinese = 6)] =
-              "k_Lang_Simplified_Chinese"),
-            (e[(e.k_Lang_Traditional_Chinese = 7)] =
-              "k_Lang_Traditional_Chinese"),
-            (e[(e.k_Lang_Russian = 8)] = "k_Lang_Russian"),
-            (e[(e.k_Lang_Thai = 9)] = "k_Lang_Thai"),
-            (e[(e.k_Lang_Japanese = 10)] = "k_Lang_Japanese"),
-            (e[(e.k_Lang_Portuguese = 11)] = "k_Lang_Portuguese"),
-            (e[(e.k_Lang_Polish = 12)] = "k_Lang_Polish"),
-            (e[(e.k_Lang_Danish = 13)] = "k_Lang_Danish"),
-            (e[(e.k_Lang_Dutch = 14)] = "k_Lang_Dutch"),
-            (e[(e.k_Lang_Finnish = 15)] = "k_Lang_Finnish"),
-            (e[(e.k_Lang_Norwegian = 16)] = "k_Lang_Norwegian"),
-            (e[(e.k_Lang_Swedish = 17)] = "k_Lang_Swedish"),
-            (e[(e.k_Lang_Hungarian = 18)] = "k_Lang_Hungarian"),
-            (e[(e.k_Lang_Czech = 19)] = "k_Lang_Czech"),
-            (e[(e.k_Lang_Romanian = 20)] = "k_Lang_Romanian"),
-            (e[(e.k_Lang_Turkish = 21)] = "k_Lang_Turkish"),
-            (e[(e.k_Lang_Brazilian = 22)] = "k_Lang_Brazilian"),
-            (e[(e.k_Lang_Bulgarian = 23)] = "k_Lang_Bulgarian"),
-            (e[(e.k_Lang_Greek = 24)] = "k_Lang_Greek"),
-            (e[(e.k_Lang_Arabic = 25)] = "k_Lang_Arabic"),
-            (e[(e.k_Lang_Ukrainian = 26)] = "k_Lang_Ukrainian"),
-            (e[(e.k_Lang_Latam_Spanish = 27)] = "k_Lang_Latam_Spanish"),
-            (e[(e.k_Lang_Vietnamese = 28)] = "k_Lang_Vietnamese"),
-            (e[(e.k_Lang_SteamChina_SChinese = 29)] =
-              "k_Lang_SteamChina_SChinese"),
-            (e[(e.k_Lang_Indonesian = 30)] = "k_Lang_Indonesian"),
-            (e[(e.k_Lang_MAX = 31)] = "k_Lang_MAX");
-        })(H || (H = {}));
-        function K(e, t = H.k_Lang_English) {
+        const T = 2147483647;
+        function y(e, t = 0) {
           switch (e) {
             case "english":
-              return H.k_Lang_English;
+              return 0;
             case "german":
-              return H.k_Lang_German;
+              return 1;
             case "french":
-              return H.k_Lang_French;
+              return 2;
             case "italian":
-              return H.k_Lang_Italian;
+              return 3;
             case "korean":
             case "koreana":
-              return H.k_Lang_Korean;
+              return 4;
             case "spanish":
-              return H.k_Lang_Spanish;
+              return 5;
             case "schinese":
-              return H.k_Lang_Simplified_Chinese;
+              return 6;
             case "tchinese":
-              return H.k_Lang_Traditional_Chinese;
+              return 7;
             case "russian":
-              return H.k_Lang_Russian;
+              return 8;
             case "thai":
-              return H.k_Lang_Thai;
+              return 9;
             case "japanese":
-              return H.k_Lang_Japanese;
+              return 10;
             case "portuguese":
-              return H.k_Lang_Portuguese;
+              return 11;
             case "polish":
-              return H.k_Lang_Polish;
+              return 12;
             case "danish":
-              return H.k_Lang_Danish;
+              return 13;
             case "dutch":
-              return H.k_Lang_Dutch;
+              return 14;
             case "finnish":
-              return H.k_Lang_Finnish;
+              return 15;
             case "norwegian":
-              return H.k_Lang_Norwegian;
+              return 16;
             case "swedish":
-              return H.k_Lang_Swedish;
+              return 17;
             case "hungarian":
-              return H.k_Lang_Hungarian;
+              return 18;
             case "czech":
-              return H.k_Lang_Czech;
+              return 19;
             case "romanian":
-              return H.k_Lang_Romanian;
+              return 20;
             case "turkish":
-              return H.k_Lang_Turkish;
+              return 21;
             case "arabic":
-              return H.k_Lang_Arabic;
+              return 25;
             case "brazilian":
-              return H.k_Lang_Brazilian;
+              return 22;
             case "bulgarian":
-              return H.k_Lang_Bulgarian;
+              return 23;
             case "greek":
-              return H.k_Lang_Greek;
+              return 24;
             case "ukrainian":
-              return H.k_Lang_Ukrainian;
+              return 26;
             case "latam":
-              return H.k_Lang_Latam_Spanish;
+              return 27;
             case "vietnamese":
-              return H.k_Lang_Vietnamese;
+              return 28;
             case "sc_schinese":
-              return H.k_Lang_SteamChina_SChinese;
+              return 29;
             case "indonesian":
-              return H.k_Lang_Indonesian;
+              return 30;
             default:
               return t;
           }
         }
-        var z;
+        var j, A, L, R, M, P, N, w, O, G, U, D, F, B, W, x, V;
         !(function (e) {
-          (e[(e.k_EOtherEvent = 1)] = "k_EOtherEvent"),
-            (e[(e.k_EGameEvent = 2)] = "k_EGameEvent"),
-            (e[(e.k_EPartyEvent = 3)] = "k_EPartyEvent"),
-            (e[(e.k_EMeetingEvent = 4)] = "k_EMeetingEvent"),
-            (e[(e.k_ESpecialCauseEvent = 5)] = "k_ESpecialCauseEvent"),
-            (e[(e.k_EMusicAndArtsEvent = 6)] = "k_EMusicAndArtsEvent"),
-            (e[(e.k_ESportsEvent = 7)] = "k_ESportsEvent"),
-            (e[(e.k_ETripEvent = 8)] = "k_ETripEvent"),
-            (e[(e.k_EChatEvent = 9)] = "k_EChatEvent"),
-            (e[(e.k_EGameReleaseEvent = 10)] = "k_EGameReleaseEvent"),
-            (e[(e.k_EBroadcastEvent = 11)] = "k_EBroadcastEvent"),
-            (e[(e.k_ESmallUpdateEvent = 12)] = "k_ESmallUpdateEvent"),
-            (e[(e.k_ERegularUpdateEvent = 13)] = "k_ERegularUpdateEvent"),
-            (e[(e.k_EMajorUpdateEvent = 14)] = "k_EMajorUpdateEvent"),
-            (e[(e.k_EDLCReleaseEvent = 15)] = "k_EDLCReleaseEvent"),
-            (e[(e.k_EFutureReleaseEvent = 16)] = "k_EFutureReleaseEvent"),
-            (e[(e.k_EESportTournamentStreamEvent = 17)] =
-              "k_EESportTournamentStreamEvent"),
-            (e[(e.k_EDevStreamEvent = 18)] = "k_EDevStreamEvent"),
-            (e[(e.k_EFamousStreamEvent = 19)] = "k_EFamousStreamEvent"),
-            (e[(e.k_EGameSalesEvent = 20)] = "k_EGameSalesEvent"),
-            (e[(e.k_EGameItemSalesEvent = 21)] = "k_EGameItemSalesEvent"),
-            (e[(e.k_EInGameBonusXPEvent = 22)] = "k_EInGameBonusXPEvent"),
-            (e[(e.k_EInGameLootEvent = 23)] = "k_EInGameLootEvent"),
-            (e[(e.k_EInGamePerksEvent = 24)] = "k_EInGamePerksEvent"),
-            (e[(e.k_EInGameChallengeEvent = 25)] = "k_EInGameChallengeEvent"),
-            (e[(e.k_EInGameContestEvent = 26)] = "k_EInGameContestEvent"),
-            (e[(e.k_EIRLEvent = 27)] = "k_EIRLEvent"),
-            (e[(e.k_ENewsEvent = 28)] = "k_ENewsEvent"),
-            (e[(e.k_EBetaReleaseEvent = 29)] = "k_EBetaReleaseEvent"),
-            (e[(e.k_EFreeTrial = 31)] = "k_EFreeTrial"),
-            (e[(e.k_ESeasonRelease = 32)] = "k_ESeasonRelease"),
-            (e[(e.k_ECrosspostEvent = 34)] = "k_ECrosspostEvent"),
-            (e[(e.k_EInGameEventGeneral = 35)] = "k_EInGameEventGeneral");
-        })(z || (z = {}));
-        z.k_EOtherEvent,
-          z.k_EGameEvent,
-          z.k_EPartyEvent,
-          z.k_EMeetingEvent,
-          z.k_ESpecialCauseEvent,
-          z.k_EMusicAndArtsEvent,
-          z.k_ESportsEvent,
-          z.k_ETripEvent,
-          z.k_EChatEvent,
-          z.k_EGameReleaseEvent,
-          z.k_EBroadcastEvent,
-          z.k_ESmallUpdateEvent,
-          z.k_ERegularUpdateEvent,
-          z.k_EMajorUpdateEvent,
-          z.k_EDLCReleaseEvent,
-          z.k_EFutureReleaseEvent,
-          z.k_EESportTournamentStreamEvent,
-          z.k_EDevStreamEvent,
-          z.k_EFamousStreamEvent,
-          z.k_EGameSalesEvent,
-          z.k_EGameItemSalesEvent,
-          z.k_EInGameBonusXPEvent,
-          z.k_EInGameLootEvent,
-          z.k_EInGamePerksEvent,
-          z.k_EInGameChallengeEvent,
-          z.k_EInGameContestEvent,
-          z.k_EIRLEvent,
-          z.k_ENewsEvent,
-          z.k_EBetaReleaseEvent,
-          z.k_EFreeTrial,
-          z.k_ESeasonRelease,
-          z.k_ECrosspostEvent,
-          z.k_EInGameEventGeneral;
-        var q,
-          $,
-          J,
-          Q,
-          Y,
-          X,
-          Z,
-          ee,
-          te,
-          ne,
-          re,
-          oe,
-          ae,
-          ie,
-          se,
-          _e,
-          Ee,
-          ke,
-          le,
-          ce,
-          ue,
-          pe,
-          de,
-          Se,
-          he,
-          me,
-          ye,
-          ge,
-          Te,
-          Ce,
-          ve;
-        !(function (e) {
-          (e[(e.k_ELaunchSource_None = 0)] = "k_ELaunchSource_None"),
-            (e[(e.k_ELaunchSource_2ftLibraryDetails = 100)] =
-              "k_ELaunchSource_2ftLibraryDetails"),
-            (e[(e.k_ELaunchSource_2ftLibraryListView = 101)] =
-              "k_ELaunchSource_2ftLibraryListView"),
-            (e[(e.k_ELaunchSource_2ftLibraryGrid = 103)] =
-              "k_ELaunchSource_2ftLibraryGrid"),
-            (e[(e.k_ELaunchSource_InstallSubComplete = 104)] =
-              "k_ELaunchSource_InstallSubComplete"),
-            (e[(e.k_ELaunchSource_DownloadsPage = 105)] =
-              "k_ELaunchSource_DownloadsPage"),
-            (e[(e.k_ELaunchSource_RemoteClientStartStreaming = 106)] =
-              "k_ELaunchSource_RemoteClientStartStreaming"),
-            (e[(e.k_ELaunchSource_2ftMiniModeList = 107)] =
-              "k_ELaunchSource_2ftMiniModeList"),
-            (e[(e.k_ELaunchSource_10ft = 200)] = "k_ELaunchSource_10ft"),
-            (e[(e.k_ELaunchSource_DashAppLaunchCmdLine = 300)] =
-              "k_ELaunchSource_DashAppLaunchCmdLine"),
-            (e[(e.k_ELaunchSource_DashGameIdLaunchCmdLine = 301)] =
-              "k_ELaunchSource_DashGameIdLaunchCmdLine"),
-            (e[(e.k_ELaunchSource_RunByGameDir = 302)] =
-              "k_ELaunchSource_RunByGameDir"),
-            (e[(e.k_ELaunchSource_SubCmdRunDashGame = 303)] =
-              "k_ELaunchSource_SubCmdRunDashGame"),
-            (e[(e.k_ELaunchSource_SteamURL_Launch = 400)] =
-              "k_ELaunchSource_SteamURL_Launch"),
-            (e[(e.k_ELaunchSource_SteamURL_Run = 401)] =
-              "k_ELaunchSource_SteamURL_Run"),
-            (e[(e.k_ELaunchSource_SteamURL_JoinLobby = 402)] =
-              "k_ELaunchSource_SteamURL_JoinLobby"),
-            (e[(e.k_ELaunchSource_SteamURL_RunGame = 403)] =
-              "k_ELaunchSource_SteamURL_RunGame"),
-            (e[(e.k_ELaunchSource_SteamURL_RunGameIdOrJumplist = 404)] =
-              "k_ELaunchSource_SteamURL_RunGameIdOrJumplist"),
-            (e[(e.k_ELaunchSource_SteamURL_RunSafe = 405)] =
-              "k_ELaunchSource_SteamURL_RunSafe"),
-            (e[(e.k_ELaunchSource_TrayIcon = 500)] =
-              "k_ELaunchSource_TrayIcon"),
-            (e[(e.k_ELaunchSource_LibraryLeftColumnContextMenu = 600)] =
-              "k_ELaunchSource_LibraryLeftColumnContextMenu"),
-            (e[(e.k_ELaunchSource_LibraryLeftColumnDoubleClick = 601)] =
-              "k_ELaunchSource_LibraryLeftColumnDoubleClick"),
-            (e[(e.k_ELaunchSource_Dota2Launcher = 700)] =
-              "k_ELaunchSource_Dota2Launcher"),
-            (e[(e.k_ELaunchSource_IRunGameEngine = 800)] =
-              "k_ELaunchSource_IRunGameEngine"),
-            (e[(e.k_ELaunchSource_DRMFailureResponse = 801)] =
-              "k_ELaunchSource_DRMFailureResponse"),
-            (e[(e.k_ELaunchSource_DRMDataRequest = 802)] =
-              "k_ELaunchSource_DRMDataRequest"),
-            (e[(e.k_ELaunchSource_CloudFilePanel = 803)] =
-              "k_ELaunchSource_CloudFilePanel"),
-            (e[(e.k_ELaunchSource_DiscoveredAlreadyRunning = 804)] =
-              "k_ELaunchSource_DiscoveredAlreadyRunning"),
-            (e[(e.k_ELaunchSource_GameActionJoinParty = 900)] =
-              "k_ELaunchSource_GameActionJoinParty"),
-            (e[(e.k_ELaunchSource_AppPortraitContextMenu = 1e3)] =
-              "k_ELaunchSource_AppPortraitContextMenu"),
-            (e[(e.k_ELaunchSource_DownloadItem = 1001)] =
-              "k_ELaunchSource_DownloadItem");
-        })(q || (q = {})),
-          (function (e) {
-            (e[(e.k_ECommunityPrivacyInvalid = 0)] =
-              "k_ECommunityPrivacyInvalid"),
-              (e[(e.k_ECommunityPrivacyPrivate = 1)] =
-                "k_ECommunityPrivacyPrivate"),
-              (e[(e.k_ECommunityPrivacyFriendsOnly = 2)] =
-                "k_ECommunityPrivacyFriendsOnly"),
-              (e[(e.k_ECommunityPrivacyPublic = 3)] =
-                "k_ECommunityPrivacyPublic"),
-              (e[(e.k_ECommunityPrivacyUsersOnly_DEPRECATED = 4)] =
-                "k_ECommunityPrivacyUsersOnly_DEPRECATED"),
-              (e[(e.k_ECommunityPrivacyFriendsFriendsOnly_DEPRECATED = 5)] =
-                "k_ECommunityPrivacyFriendsFriendsOnly_DEPRECATED");
-          })($ || ($ = {})),
-          (function (e) {
-            (e[(e.k_EEconContextRoot = 0)] = "k_EEconContextRoot"),
-              (e[(e.k_EBackpackContextGiftPasses = 1)] =
-                "k_EBackpackContextGiftPasses"),
-              (e[(e.k_EBackpackContextProfile = 2)] =
-                "k_EBackpackContextProfile"),
-              (e[(e.k_EBackpackContextCoupons = 3)] =
-                "k_EBackpackContextCoupons"),
-              (e[(e.k_EBackpackContextWallet = 4)] =
-                "k_EBackpackContextWallet"),
-              (e[(e.k_EBackpackContextCommunity = 6)] =
-                "k_EBackpackContextCommunity"),
-              (e[(e.k_EBackpackContextItemRewards = 7)] =
-                "k_EBackpackContextItemRewards"),
-              (e[(e.k_EEConContextMax = 999)] = "k_EEConContextMax");
-          })(J || (J = {})),
-          (function (e) {
-            (e[(e.k_ERemoteStoragePublishedFileVisibilityPublic = 0)] =
-              "k_ERemoteStoragePublishedFileVisibilityPublic"),
-              (e[(e.k_ERemoteStoragePublishedFileVisibilityFriendsOnly = 1)] =
-                "k_ERemoteStoragePublishedFileVisibilityFriendsOnly"),
-              (e[(e.k_ERemoteStoragePublishedFileVisibilityPrivate = 2)] =
-                "k_ERemoteStoragePublishedFileVisibilityPrivate"),
-              (e[(e.k_ERemoteStoragePublishedFileVisibilityUnlisted = 3)] =
-                "k_ERemoteStoragePublishedFileVisibilityUnlisted");
-          })(Q || (Q = {})),
-          (function (e) {
-            (e[(e.k_EUCMListTypeSubscribed = 1)] = "k_EUCMListTypeSubscribed"),
-              (e[(e.k_EUCMListTypeFavorites = 2)] = "k_EUCMListTypeFavorites"),
-              (e[(e.k_EUCMListTypePlayed = 3)] = "k_EUCMListTypePlayed"),
-              (e[(e.k_EUCMListTypeCompleted = 4)] = "k_EUCMListTypeCompleted"),
-              (e[(e.k_EUCMListTypeShortcutFavorites = 5)] =
-                "k_EUCMListTypeShortcutFavorites"),
-              (e[(e.k_EUCMListTypeFollowed = 6)] = "k_EUCMListTypeFollowed");
-          })(Y || (Y = {})),
-          (function (e) {
-            (e[(e.k_ELibraryAssetType_Capsule = 0)] =
-              "k_ELibraryAssetType_Capsule"),
-              (e[(e.k_ELibraryAssetType_Hero = 1)] =
-                "k_ELibraryAssetType_Hero"),
-              (e[(e.k_ELibraryAssetType_Logo = 2)] =
-                "k_ELibraryAssetType_Logo"),
-              (e[(e.k_ELibraryAssetType_Header = 3)] =
-                "k_ELibraryAssetType_Header"),
-              (e[(e.k_ELibraryAssetType_Icon = 4)] =
-                "k_ELibraryAssetType_Icon"),
-              (e[(e.k_ELibaryAssetType_HeroBlur = 5)] =
-                "k_ELibaryAssetType_HeroBlur"),
-              (e[(e.k_ELibaryAssetType_PublicTimelineIcons = 6)] =
-                "k_ELibaryAssetType_PublicTimelineIcons");
-          })(X || (X = {})),
-          (function (e) {
-            (e[(e.k_ERecommendationIgnoreReasonNotInterested = 0)] =
-              "k_ERecommendationIgnoreReasonNotInterested"),
-              (e[(e.k_ERecommendationIgnoreReasonBlocked = 1)] =
-                "k_ERecommendationIgnoreReasonBlocked"),
-              (e[(e.k_ERecommendationIgnoreReasonOwnedElsewhere = 2)] =
-                "k_ERecommendationIgnoreReasonOwnedElsewhere");
-          })(Z || (Z = {})),
-          (function (e) {
-            (e[(e.k_ELauncherTypeDefault = 0)] = "k_ELauncherTypeDefault"),
-              (e[(e.k_ELauncherTypePerfectWorld = 1)] =
-                "k_ELauncherTypePerfectWorld"),
-              (e[(e.k_ELauncherTypeNexon = 2)] = "k_ELauncherTypeNexon"),
-              (e[(e.k_ELauncherTypeCmdLine = 3)] = "k_ELauncherTypeCmdLine"),
-              (e[(e.k_ELauncherTypeCSGO = 4)] = "k_ELauncherTypeCSGO"),
-              (e[(e.k_ELauncherTypeClientUI = 5)] = "k_ELauncherTypeClientUI"),
-              (e[(e.k_ELauncherTypeHeadless = 6)] = "k_ELauncherTypeHeadless"),
-              (e[(e.k_ELauncherTypeSteamChina = 7)] =
-                "k_ELauncherTypeSteamChina"),
-              (e[(e.k_ELauncherTypeSingleApp = 8)] =
-                "k_ELauncherTypeSingleApp"),
-              (e[(e.k_ELauncherTypeGameServer = 9)] =
-                "k_ELauncherTypeGameServer"),
-              (e[(e.k_ELauncherTypeMax = 10)] = "k_ELauncherTypeMax");
-          })(ee || (ee = {})),
-          (function (e) {
-            (e[(e.k_EStoreCuratorRecommendationState_Recommended = 0)] =
-              "k_EStoreCuratorRecommendationState_Recommended"),
-              (e[(e.k_EStoreCuratorRecommendationState_NotRecommended = 1)] =
-                "k_EStoreCuratorRecommendationState_NotRecommended"),
-              (e[(e.k_EStoreCuratorRecommendationState_Informative = 2)] =
-                "k_EStoreCuratorRecommendationState_Informative"),
-              (e[(e.k_EStoreCuratorRecommendationState_CreatedApp = 3)] =
-                "k_EStoreCuratorRecommendationState_CreatedApp");
-          })(te || (te = {})),
-          (function (e) {
-            (e[(e.k_EUCMFilePrivacyStateInvalid = -1)] =
-              "k_EUCMFilePrivacyStateInvalid"),
-              (e[(e.k_EUCMFilePrivacyStatePrivate = 2)] =
-                "k_EUCMFilePrivacyStatePrivate"),
-              (e[(e.k_EUCMFilePrivacyStateFriendsOnly = 4)] =
-                "k_EUCMFilePrivacyStateFriendsOnly"),
-              (e[(e.k_EUCMFilePrivacyStatePublic = 8)] =
-                "k_EUCMFilePrivacyStatePublic"),
-              (e[(e.k_EUCMFilePrivacyStateUnlisted = 16)] =
-                "k_EUCMFilePrivacyStateUnlisted"),
-              (e[(e.k_EUCMFilePrivacyStateAll = 30)] =
-                "k_EUCMFilePrivacyStateAll");
-          })(ne || (ne = {})),
-          (function (e) {
-            (e[(e.Invalid = 0)] = "Invalid"),
-              (e[(e.GamepadToast = 1)] = "GamepadToast"),
-              (e[(e.DesktopToast = 2)] = "DesktopToast"),
-              (e[(e.Tray = 3)] = "Tray"),
-              (e[(e.AllNotificationsTray = 4)] = "AllNotificationsTray"),
-              (e[(e.MobilePush = 5)] = "MobilePush");
-          })(re || (re = {})),
-          (function (e) {
-            (e[(e.k_EUIMode_Unknown = -1)] = "k_EUIMode_Unknown"),
-              (e[(e.k_EUIMode_VGUI = 0)] = "k_EUIMode_VGUI"),
-              (e[(e.k_EUIMode_Tenfoot = 1)] = "k_EUIMode_Tenfoot"),
-              (e[(e.k_EUIMode_Mobile = 2)] = "k_EUIMode_Mobile"),
-              (e[(e.k_EUIMode_Web = 3)] = "k_EUIMode_Web"),
-              (e[(e.k_EUIMode_GamePadUI = 4)] = "k_EUIMode_GamePadUI"),
-              (e[(e.k_EUIMode_MobileChat = 5)] = "k_EUIMode_MobileChat"),
-              (e[(e.k_EUIMode_EmbeddedClient = 6)] =
-                "k_EUIMode_EmbeddedClient"),
-              (e[(e.k_EUIMode_DesktopUI = 7)] = "k_EUIMode_DesktopUI"),
-              (e[(e.k_EUIMode_MAX = 8)] = "k_EUIMode_MAX");
-          })(oe || (oe = {})),
-          (function (e) {
-            (e[(e.k_EStoreCategoryMultiplayer = 1)] =
-              "k_EStoreCategoryMultiplayer"),
-              (e[(e.k_EStoreCategorySingleplayer = 2)] =
-                "k_EStoreCategorySingleplayer"),
-              (e[(e.k_EStoreCategoryModHL2 = 6)] = "k_EStoreCategoryModHL2"),
-              (e[(e.k_EStoreCategoryModHL = 7)] = "k_EStoreCategoryModHL"),
-              (e[(e.k_EStoreCategoryVAC = 8)] = "k_EStoreCategoryVAC"),
-              (e[(e.k_EStoreCategoryCoop = 9)] = "k_EStoreCategoryCoop"),
-              (e[(e.k_EStoreCategoryDemo = 10)] = "k_EStoreCategoryDemo"),
-              (e[(e.k_EStoreCategoryFriends = 11)] = "k_EStoreCategoryFriends"),
-              (e[(e.k_EStoreCategoryCC = 13)] = "k_EStoreCategoryCC"),
-              (e[(e.k_EStoreCategoryCommentary = 14)] =
-                "k_EStoreCategoryCommentary"),
-              (e[(e.k_EStoreCategoryStats = 15)] = "k_EStoreCategoryStats"),
-              (e[(e.k_EStoreCategorySDK = 16)] = "k_EStoreCategorySDK"),
-              (e[(e.k_EStoreCategoryEditor = 17)] = "k_EStoreCategoryEditor"),
-              (e[(e.k_EStoreCategoryPartialController = 18)] =
-                "k_EStoreCategoryPartialController"),
-              (e[(e.k_EStoreCategoryMod = 19)] = "k_EStoreCategoryMod"),
-              (e[(e.k_EStoreCategoryMMO = 20)] = "k_EStoreCategoryMMO"),
-              (e[(e.k_EStoreCategoryDLC = 21)] = "k_EStoreCategoryDLC"),
-              (e[(e.k_EStoreCategoryAchievements = 22)] =
-                "k_EStoreCategoryAchievements"),
-              (e[(e.k_EStoreCategoryCloud = 23)] = "k_EStoreCategoryCloud"),
-              (e[(e.k_EStoreCategorySharedSplitscreen = 24)] =
-                "k_EStoreCategorySharedSplitscreen"),
-              (e[(e.k_EStoreCategoryLeaderboards = 25)] =
-                "k_EStoreCategoryLeaderboards"),
-              (e[(e.k_EStoreCategoryGuide = 26)] = "k_EStoreCategoryGuide"),
-              (e[(e.k_EStoreCategoryCrossPlatMultiplayer = 27)] =
-                "k_EStoreCategoryCrossPlatMultiplayer"),
-              (e[(e.k_EStoreCategoryFullController = 28)] =
-                "k_EStoreCategoryFullController"),
-              (e[(e.k_EStoreCategoryTradingCard = 29)] =
-                "k_EStoreCategoryTradingCard"),
-              (e[(e.k_EStoreCategoryWorkshop = 30)] =
-                "k_EStoreCategoryWorkshop"),
-              (e[(e.k_EStoreCategoryVRThirdParty = 31)] =
-                "k_EStoreCategoryVRThirdParty"),
-              (e[(e.k_EStoreCategoryAsyncGameNotifications = 32)] =
-                "k_EStoreCategoryAsyncGameNotifications"),
-              (e[(e.k_EStoreCategorySteamController = 33)] =
-                "k_EStoreCategorySteamController"),
-              (e[(e.k_EStoreCategoryVRSteam = 34)] = "k_EStoreCategoryVRSteam"),
-              (e[(e.k_EStoreCategoryInAppPurchases = 35)] =
-                "k_EStoreCategoryInAppPurchases"),
-              (e[(e.k_EStoreCategoryOnlinePvP = 36)] =
-                "k_EStoreCategoryOnlinePvP"),
-              (e[(e.k_EStoreCategoryLocalPvP = 37)] =
-                "k_EStoreCategoryLocalPvP"),
-              (e[(e.k_EStoreCategoryOnlineCoop = 38)] =
-                "k_EStoreCategoryOnlineCoop"),
-              (e[(e.k_EStoreCategoryLocalCoop = 39)] =
-                "k_EStoreCategoryLocalCoop"),
-              (e[(e.k_EStoreCategorySteamVRCollectibles = 40)] =
-                "k_EStoreCategorySteamVRCollectibles"),
-              (e[(e.k_EStoreCategoryRemotePlayToPhone = 41)] =
-                "k_EStoreCategoryRemotePlayToPhone"),
-              (e[(e.k_EStoreCategoryRemotePlayToTablet = 42)] =
-                "k_EStoreCategoryRemotePlayToTablet"),
-              (e[(e.k_EStoreCategoryRemotePlayToTV = 43)] =
-                "k_EStoreCategoryRemotePlayToTV"),
-              (e[(e.k_EStoreCategoryRemotePlayTogether = 44)] =
-                "k_EStoreCategoryRemotePlayTogether"),
-              (e[(e.k_EStoreCategoryCloudGaming = 45)] =
-                "k_EStoreCategoryCloudGaming"),
-              (e[(e.k_EStoreCategoryCloudGamingNVIDIA = 46)] =
-                "k_EStoreCategoryCloudGamingNVIDIA"),
-              (e[(e.k_EStoreCategoryLANPvP = 47)] = "k_EStoreCategoryLANPvP"),
-              (e[(e.k_EStoreCategoryLANCoop = 48)] = "k_EStoreCategoryLANCoop"),
-              (e[(e.k_EStoreCategoryPvP = 49)] = "k_EStoreCategoryPvP"),
-              (e[(e.k_EStoreCategoryHighQualitySoundtrackAudio = 50)] =
-                "k_EStoreCategoryHighQualitySoundtrackAudio"),
-              (e[(e.k_EStoreCategorySteamChinaWorkshop = 51)] =
-                "k_EStoreCategorySteamChinaWorkshop"),
-              (e[(e.k_EStoreCategoryPS4Controller = 55)] =
-                "k_EStoreCategoryPS4Controller"),
-              (e[(e.k_EStoreCategoryPS4ControllerBT = 56)] =
-                "k_EStoreCategoryPS4ControllerBT"),
-              (e[(e.k_EStoreCategoryPS5Controller = 57)] =
-                "k_EStoreCategoryPS5Controller"),
-              (e[(e.k_EStoreCategoryPS5ControllerBT = 58)] =
-                "k_EStoreCategoryPS5ControllerBT"),
-              (e[(e.k_EStoreCategorySteamInputAPI = 59)] =
-                "k_EStoreCategorySteamInputAPI"),
-              (e[(e.k_EStoreCategoryGamepadPreferred = 60)] =
-                "k_EStoreCategoryGamepadPreferred"),
-              (e[(e.k_EStoreCategoryHDR = 61)] = "k_EStoreCategoryHDR"),
-              (e[(e.k_EStoreCategoryFamilySharing = 62)] =
-                "k_EStoreCategoryFamilySharing");
-          })(ae || (ae = {})),
-          (function (e) {
-            (e[(e.k_PFI_MatchingFileType_Items = 0)] =
-              "k_PFI_MatchingFileType_Items"),
-              (e[(e.k_PFI_MatchingFileType_Collections = 1)] =
-                "k_PFI_MatchingFileType_Collections"),
-              (e[(e.k_PFI_MatchingFileType_Art = 2)] =
-                "k_PFI_MatchingFileType_Art"),
-              (e[(e.k_PFI_MatchingFileType_Videos = 3)] =
-                "k_PFI_MatchingFileType_Videos"),
-              (e[(e.k_PFI_MatchingFileType_Screenshots = 4)] =
-                "k_PFI_MatchingFileType_Screenshots"),
-              (e[(e.k_PFI_MatchingFileType_CollectionEligible = 5)] =
-                "k_PFI_MatchingFileType_CollectionEligible"),
-              (e[(e.k_PFI_MatchingFileType_Games = 6)] =
-                "k_PFI_MatchingFileType_Games"),
-              (e[(e.k_PFI_MatchingFileType_Software = 7)] =
-                "k_PFI_MatchingFileType_Software"),
-              (e[(e.k_PFI_MatchingFileType_Concepts = 8)] =
-                "k_PFI_MatchingFileType_Concepts"),
-              (e[(e.k_PFI_MatchingFileType_GreenlightItems = 9)] =
-                "k_PFI_MatchingFileType_GreenlightItems"),
-              (e[(e.k_PFI_MatchingFileType_AllGuides = 10)] =
-                "k_PFI_MatchingFileType_AllGuides"),
-              (e[(e.k_PFI_MatchingFileType_WebGuides = 11)] =
-                "k_PFI_MatchingFileType_WebGuides"),
-              (e[(e.k_PFI_MatchingFileType_IntegratedGuides = 12)] =
-                "k_PFI_MatchingFileType_IntegratedGuides"),
-              (e[(e.k_PFI_MatchingFileType_UsableInGame = 13)] =
-                "k_PFI_MatchingFileType_UsableInGame"),
-              (e[(e.k_PFI_MatchingFileType_Merch = 14)] =
-                "k_PFI_MatchingFileType_Merch"),
-              (e[(e.k_PFI_MatchingFileType_ControllerBindings = 15)] =
-                "k_PFI_MatchingFileType_ControllerBindings"),
-              (e[(e.k_PFI_MatchingFileType_SteamworksAccessInvites = 16)] =
-                "k_PFI_MatchingFileType_SteamworksAccessInvites"),
-              (e[(e.k_PFI_MatchingFileType_Items_Mtx = 17)] =
-                "k_PFI_MatchingFileType_Items_Mtx"),
-              (e[(e.k_PFI_MatchingFileType_Items_ReadyToUse = 18)] =
-                "k_PFI_MatchingFileType_Items_ReadyToUse"),
-              (e[(e.k_PFI_MatchingFileType_WorkshopShowcase = 19)] =
-                "k_PFI_MatchingFileType_WorkshopShowcase"),
-              (e[(e.k_PFI_MatchingFileType_GameManagedItems = 20)] =
-                "k_PFI_MatchingFileType_GameManagedItems"),
-              (e[(e.k_PFI_MatchingFileType_All = -1)] =
-                "k_PFI_MatchingFileType_All");
-          })(ie || (ie = {})),
-          (function (e) {
-            (e[(e.k_EConnectivityTestResult_Unknown = 0)] =
-              "k_EConnectivityTestResult_Unknown"),
-              (e[(e.k_EConnectivityTestResult_Connected = 1)] =
-                "k_EConnectivityTestResult_Connected"),
-              (e[(e.k_EConnectivityTestResult_CaptivePortal = 2)] =
-                "k_EConnectivityTestResult_CaptivePortal"),
-              (e[(e.k_EConnectivityTestResult_TimedOut = 3)] =
-                "k_EConnectivityTestResult_TimedOut"),
-              (e[(e.k_EConnectivityTestResult_Failed = 4)] =
-                "k_EConnectivityTestResult_Failed"),
-              (e[(e.k_EConnectivityTestResult_WifiDisabled = 5)] =
-                "k_EConnectivityTestResult_WifiDisabled"),
-              (e[(e.k_EConnectivityTestResult_NoLAN = 6)] =
-                "k_EConnectivityTestResult_NoLAN");
-          })(se || (se = {})),
+          (e[(e.k_EConnectivityTestResult_Unknown = 0)] =
+            "k_EConnectivityTestResult_Unknown"),
+            (e[(e.k_EConnectivityTestResult_Connected = 1)] =
+              "k_EConnectivityTestResult_Connected"),
+            (e[(e.k_EConnectivityTestResult_CaptivePortal = 2)] =
+              "k_EConnectivityTestResult_CaptivePortal"),
+            (e[(e.k_EConnectivityTestResult_TimedOut = 3)] =
+              "k_EConnectivityTestResult_TimedOut"),
+            (e[(e.k_EConnectivityTestResult_Failed = 4)] =
+              "k_EConnectivityTestResult_Failed"),
+            (e[(e.k_EConnectivityTestResult_WifiDisabled = 5)] =
+              "k_EConnectivityTestResult_WifiDisabled"),
+            (e[(e.k_EConnectivityTestResult_NoLAN = 6)] =
+              "k_EConnectivityTestResult_NoLAN");
+        })(j || (j = {})),
           (function (e) {
             (e[(e.k_ENetFakeLocalSystemState_Normal = 0)] =
               "k_ENetFakeLocalSystemState_Normal"),
@@ -1888,7 +658,7 @@ var CLSTAMP = "8745921";
                 "k_ENetFakeLocalSystemState_NoInternet"),
               (e[(e.k_ENetFakeLocalSystemState_NoSteam = 5)] =
                 "k_ENetFakeLocalSystemState_NoSteam");
-          })(_e || (_e = {})),
+          })(A || (A = {})),
           (function (e) {
             (e[(e.k_ESuspendResumeProgressState_Invalid = 0)] =
               "k_ESuspendResumeProgressState_Invalid"),
@@ -1902,7 +672,7 @@ var CLSTAMP = "8745921";
                 "k_ESuspendResumeProgressState_WaitingForApp"),
               (e[(e.k_ESuspendResumeProgressState_Working = 5)] =
                 "k_ESuspendResumeProgressState_Working");
-          })(Ee || (Ee = {})),
+          })(L || (L = {})),
           (function (e) {
             (e[(e.k_EFloatingGamepadTextInputModeModeSingleLine = 0)] =
               "k_EFloatingGamepadTextInputModeModeSingleLine"),
@@ -1912,7 +682,7 @@ var CLSTAMP = "8745921";
                 "k_EFloatingGamepadTextInputModeModeEmail"),
               (e[(e.k_EFloatingGamepadTextInputModeModeNumeric = 3)] =
                 "k_EFloatingGamepadTextInputModeModeNumeric");
-          })(ke || (ke = {})),
+          })(R || (R = {})),
           (function (e) {
             (e[(e.k_EAppUpdateContentType_Content = 0)] =
               "k_EAppUpdateContentType_Content"),
@@ -1922,7 +692,7 @@ var CLSTAMP = "8745921";
                 "k_EAppUpdateContentType_Shader"),
               (e[(e.k_EAppUpdateContentType_Max = 3)] =
                 "k_EAppUpdateContentType_Max");
-          })(le || (le = {})),
+          })(M || (M = {})),
           (function (e) {
             (e[(e.k_EOverlayToStoreFlag_None = 0)] =
               "k_EOverlayToStoreFlag_None"),
@@ -1930,13 +700,13 @@ var CLSTAMP = "8745921";
                 "k_EOverlayToStoreFlag_AddToCart"),
               (e[(e.k_EOverlayToStoreFlag_AddToCartAndShow = 2)] =
                 "k_EOverlayToStoreFlag_AddToCartAndShow");
-          })(ce || (ce = {})),
+          })(P || (P = {})),
           (function (e) {
             (e[(e.k_EActivateGameOverlayToWebPageMode_Default = 0)] =
               "k_EActivateGameOverlayToWebPageMode_Default"),
               (e[(e.k_EActivateGameOverlayToWebPageMode_Modal = 1)] =
                 "k_EActivateGameOverlayToWebPageMode_Modal");
-          })(ue || (ue = {})),
+          })(N || (N = {})),
           (function (e) {
             (e[(e.k_EGamingDeviceType_Unknown = 0)] =
               "k_EGamingDeviceType_Unknown"),
@@ -1954,13 +724,13 @@ var CLSTAMP = "8745921";
                 "k_EGamingDeviceType_Phone"),
               (e[(e.k_EGamingDeviceType_SteamDeck = 544)] =
                 "k_EGamingDeviceType_SteamDeck");
-          })(pe || (pe = {})),
+          })(w || (w = {})),
           (function (e) {
             (e[(e.k_ELoginUIStyleOld = 0)] = "k_ELoginUIStyleOld"),
               (e[(e.k_ELoginUIStyleNewWithoutQRCode = 1)] =
                 "k_ELoginUIStyleNewWithoutQRCode"),
               (e[(e.k_ELoginUIStyleNew = 2)] = "k_ELoginUIStyleNew");
-          })(de || (de = {})),
+          })(O || (O = {})),
           (function (e) {
             (e[(e.k_ECommunityProfileItemProperty_ImageSmall = 0)] =
               "k_ECommunityProfileItemProperty_ImageSmall"),
@@ -1986,7 +756,7 @@ var CLSTAMP = "8745921";
                 "k_ECommunityProfileItemProperty_MovieWebMSmall"),
               (e[(e.k_ECommunityProfileItemProperty_MovieMP4Small = 11)] =
                 "k_ECommunityProfileItemProperty_MovieMP4Small");
-          })(Se || (Se = {})),
+          })(G || (G = {})),
           (function (e) {
             (e[(e.k_ERaiseGameWindowResult_NotRunning = 1)] =
               "k_ERaiseGameWindowResult_NotRunning"),
@@ -1994,14 +764,14 @@ var CLSTAMP = "8745921";
                 "k_ERaiseGameWindowResult_Success"),
               (e[(e.k_ERaiseGameWindowResult_Failure = 3)] =
                 "k_ERaiseGameWindowResult_Failure");
-          })(he || (he = {})),
+          })(U || (U = {})),
           (function (e) {
             (e[(e.k_EPositionInvalid = -1)] = "k_EPositionInvalid"),
               (e[(e.k_EPositionTopLeft = 0)] = "k_EPositionTopLeft"),
               (e[(e.k_EPositionTopRight = 1)] = "k_EPositionTopRight"),
               (e[(e.k_EPositionBottomLeft = 2)] = "k_EPositionBottomLeft"),
               (e[(e.k_EPositionBottomRight = 3)] = "k_EPositionBottomRight");
-          })(me || (me = {})),
+          })(D || (D = {})),
           (function (e) {
             (e[(e.k_EAppReleaseState_Unknown = 0)] =
               "k_EAppReleaseState_Unknown"),
@@ -2015,13 +785,13 @@ var CLSTAMP = "8745921";
                 "k_EAppReleaseState_Released"),
               (e[(e.k_EAppReleaseState_Disabled = 5)] =
                 "k_EAppReleaseState_Disabled");
-          })(ye || (ye = {})),
+          })(F || (F = {})),
           (function (e) {
             (e[(e.k_EGameIDTypeApp = 0)] = "k_EGameIDTypeApp"),
               (e[(e.k_EGameIDTypeGameMod = 1)] = "k_EGameIDTypeGameMod"),
               (e[(e.k_EGameIDTypeShortcut = 2)] = "k_EGameIDTypeShortcut"),
               (e[(e.k_EGameIDTypeP2P = 3)] = "k_EGameIDTypeP2P");
-          })(ge || (ge = {})),
+          })(B || (B = {})),
           (function (e) {
             (e[(e.k_EInstallMgrStateNone = 0)] = "k_EInstallMgrStateNone"),
               (e[(e.k_EInstallMgrStateSetup = 1)] = "k_EInstallMgrStateSetup"),
@@ -2055,7 +825,7 @@ var CLSTAMP = "8745921";
                 "k_EInstallMgrStateFailed"),
               (e[(e.k_EInstallMgrStateCanceled = 16)] =
                 "k_EInstallMgrStateCanceled");
-          })(Te || (Te = {})),
+          })(W || (W = {})),
           (function (e) {
             (e[(e.k_EWindowBringToFrontInvalid = 0)] =
               "k_EWindowBringToFrontInvalid"),
@@ -2063,19 +833,19 @@ var CLSTAMP = "8745921";
                 "k_EWindowBringToFrontAndForceOS"),
               (e[(e.k_EWindowBringToFrontWithoutForcingOS = 2)] =
                 "k_EWindowBringToFrontWithoutForcingOS");
-          })(Ce || (Ce = {})),
+          })(x || (x = {})),
           (function (e) {
             (e[(e.k_ESteamRealmUnknown = 0)] = "k_ESteamRealmUnknown"),
               (e[(e.k_ESteamRealmGlobal = 1)] = "k_ESteamRealmGlobal"),
               (e[(e.k_ESteamRealmChina = 2)] = "k_ESteamRealmChina");
-          })(ve || (ve = {}));
-        function Re(e, t) {
+          })(V || (V = {}));
+        function H(e, t) {
           return (function (e, t) {
             const n = e.findIndex(t);
             return n >= 0 && (e.splice(n, 1), !0);
           })(e, (e) => t == e);
         }
-        function Ie(e, t, n) {
+        function z(e, t, n) {
           return {
             get() {
               let e = n.value.bind(this);
@@ -2087,7 +857,7 @@ var CLSTAMP = "8745921";
             },
           };
         }
-        class Le {
+        class $ {
           constructor() {
             this.m_vecCallbacks = [];
           }
@@ -2095,7 +865,7 @@ var CLSTAMP = "8745921";
             this.m_vecCallbacks.push(e);
             return {
               Unregister: () => {
-                Re(this.m_vecCallbacks, e);
+                H(this.m_vecCallbacks, e);
               },
             };
           }
@@ -2109,8 +879,8 @@ var CLSTAMP = "8745921";
             return this.m_vecCallbacks.length;
           }
         }
-        r(
-          [Ie],
+        s(
+          [z],
           class {
             Schedule(e, t) {
               this.IsScheduled() && this.Cancel(),
@@ -2136,8 +906,8 @@ var CLSTAMP = "8745921";
           "ScheduledInternal",
           null,
         );
-        r(
-          [Ie],
+        s(
+          [z],
           class {
             constructor() {
               this.m_vecCallbacks = [];
@@ -2146,7 +916,7 @@ var CLSTAMP = "8745921";
               this.m_vecCallbacks.push(e);
             }
             PushArrayRemove(e, t) {
-              this.m_vecCallbacks.push(() => Re(e, t));
+              this.m_vecCallbacks.push(() => H(e, t));
             }
             Unregister() {
               for (const e of this.m_vecCallbacks) e();
@@ -2159,20 +929,20 @@ var CLSTAMP = "8745921";
           "Unregister",
           null,
         );
-        var fe;
+        var Y;
         !(function (e) {
           (e[(e.None = 0)] = "None"),
             (e[(e.Ago = 1)] = "Ago"),
             (e[(e.Remaining = 2)] = "Remaining");
-        })(fe || (fe = {}));
+        })(Y || (Y = {}));
         new Map();
         new Map(), new Map();
         new Map(), new Map(), new Map(), new Map(), new Map(), new Map();
-        class Ae {
+        class K {
           constructor() {
             (this.m_mapTokens = new Map()),
               (this.m_mapFallbackTokens = new Map()),
-              (this.m_cbkTokensChanged = new Le());
+              (this.m_cbkTokensChanged = new $());
           }
           static InstallErrorReportingStore(e) {
             this.sm_ErrorReportingStore = e;
@@ -2181,33 +951,28 @@ var CLSTAMP = "8745921";
             return "sc_schinese" === e ? "schinese" : "english";
           }
           static GetELanguageFallback(e) {
-            return e === H.k_Lang_SteamChina_SChinese
-              ? H.k_Lang_Simplified_Chinese
-              : H.k_Lang_English;
+            return 29 === e ? 6 : 0;
           }
           static IsELanguageValidInRealm(e, t) {
             return (
-              t ===
-              (e === H.k_Lang_SteamChina_SChinese
-                ? ve.k_ESteamRealmChina
-                : ve.k_ESteamRealmGlobal)
+              t === (29 === e ? V.k_ESteamRealmChina : V.k_ESteamRealmGlobal)
             );
           }
           static GetLanguageListForRealms(e) {
             const t = new Array();
-            for (let n = H.k_Lang_English; n < H.k_Lang_MAX; n++)
-              for (const r of e)
-                if (this.IsELanguageValidInRealm(n, r)) {
+            for (let n = 0; n < 31; n++)
+              for (const s of e)
+                if (this.IsELanguageValidInRealm(n, s)) {
                   t.push(n);
                   break;
                 }
             return t;
           }
-          InitFromObjects(e, t, n, r, o) {
-            o || this.m_mapTokens.clear();
-            const a = Object.assign(Object.assign({}, n || {}), e),
-              i = Object.assign(Object.assign({}, r || {}), t || {});
-            this.AddTokens(a, i), this.m_cbkTokensChanged.Dispatch();
+          InitFromObjects(e, t, n, s, i) {
+            i || this.m_mapTokens.clear();
+            const r = Object.assign(Object.assign({}, n || {}), e),
+              a = Object.assign(Object.assign({}, s || {}), t || {});
+            this.AddTokens(r, a), this.m_cbkTokensChanged.Dispatch();
           }
           InitDirect(e, t) {
             this.m_mapTokens.clear(),
@@ -2238,13 +1003,13 @@ var CLSTAMP = "8745921";
           GetELanguageFallbackOrder(e = null) {
             let t = new Array();
             if (
-              (t.push(K(S.LANGUAGE)),
-              (S.SUPPORTED_LANGUAGES || []).forEach((e) => {
-                e.value != S.LANGUAGE && t.push(K(e.value));
+              (t.push(y(f.LANGUAGE)),
+              (f.SUPPORTED_LANGUAGES || []).forEach((e) => {
+                e.value != f.LANGUAGE && t.push(y(e.value));
               }),
               e)
             ) {
-              Ae.GetLanguageListForRealms(e).forEach((e) => {
+              K.GetLanguageListForRealms(e).forEach((e) => {
                 -1 == t.indexOf(e) && t.push(e);
               });
             }
@@ -2264,10 +1029,10 @@ var CLSTAMP = "8745921";
             let n = this.m_mapTokens.get(e.substring(1));
             if (void 0 !== n) return n;
             !t &&
-              Ae.sm_ErrorReportingStore &&
-              Ae.sm_ErrorReportingStore.ReportError(
+              K.sm_ErrorReportingStore &&
+              K.sm_ErrorReportingStore.ReportError(
                 new Error(
-                  `Unable to find localization token '${e}' for language '${S.LANGUAGE}', ${this.m_mapTokens.size} tokens in map`,
+                  `Unable to find localization token '${e}' for language '${f.LANGUAGE}', ${this.m_mapTokens.size} tokens in map`,
                 ),
                 { bIncludeMessageInIdentifier: !0 },
               );
@@ -2278,25 +1043,25 @@ var CLSTAMP = "8745921";
             return void 0 !== t ? t : void 0;
           }
         }
-        function Pe(e, ...t) {
-          let n = Fe.LocalizeString(e);
-          return void 0 === n ? e : Me(n, ...t);
+        function q(e, ...t) {
+          let n = Q.LocalizeString(e);
+          return void 0 === n ? e : Z(n, ...t);
         }
-        function be(e, ...t) {
-          let n = Fe.LocalizeString(e);
+        function J(e, ...t) {
+          let n = Q.LocalizeString(e);
           if (void 0 === n) return e;
-          let r,
-            o = [],
-            i = /(.*?)%(\d+)\$s/g,
-            s = 0;
-          for (; (r = i.exec(n)); ) {
-            (s += r[0].length), o.push(r[1]);
-            let e = parseInt(r[2]);
-            e >= 1 && e <= t.length && o.push(t[e - 1]);
+          let s,
+            i = [],
+            a = /(.*?)%(\d+)\$s/g,
+            o = 0;
+          for (; (s = a.exec(n)); ) {
+            (o += s[0].length), i.push(s[1]);
+            let e = parseInt(s[2]);
+            e >= 1 && e <= t.length && i.push(t[e - 1]);
           }
-          return o.push(n.substr(s)), a.createElement(a.Fragment, null, ...o);
+          return i.push(n.substr(o)), r.createElement(r.Fragment, null, ...i);
         }
-        function Me(e, ...t) {
+        function Z(e, ...t) {
           return 0 == t.length
             ? e
             : (e = e.replace(/%(?:(\d+)\$)?s/g, function (e, n) {
@@ -2307,52 +1072,22 @@ var CLSTAMP = "8745921";
                 return e;
               }));
         }
-        H.k_Lang_English,
-          H.k_Lang_German,
-          H.k_Lang_French,
-          H.k_Lang_Italian,
-          H.k_Lang_Korean,
-          H.k_Lang_Spanish,
-          H.k_Lang_Simplified_Chinese,
-          H.k_Lang_Traditional_Chinese,
-          H.k_Lang_Russian,
-          H.k_Lang_Thai,
-          H.k_Lang_Japanese,
-          H.k_Lang_Portuguese,
-          H.k_Lang_Polish,
-          H.k_Lang_Danish,
-          H.k_Lang_Dutch,
-          H.k_Lang_Finnish,
-          H.k_Lang_Norwegian,
-          H.k_Lang_Swedish,
-          H.k_Lang_Hungarian,
-          H.k_Lang_Czech,
-          H.k_Lang_Romanian,
-          H.k_Lang_Turkish,
-          H.k_Lang_Brazilian,
-          H.k_Lang_Bulgarian,
-          H.k_Lang_Greek,
-          H.k_Lang_Arabic,
-          H.k_Lang_Ukrainian,
-          H.k_Lang_Latam_Spanish,
-          H.k_Lang_Vietnamese,
-          H.k_Lang_Indonesian;
-        const Fe = new Ae();
-        function De(e, t, ...n) {
+        const Q = new K();
+        function X(e, t, ...n) {
           console.assert
             ? 0 == n.length
               ? console.assert(!!e, t)
               : console.assert(!!e, t, ...n)
             : e || console.warn(t, ...n);
         }
-        window.LocalizationManager = Fe;
-        var Ne = n(79588),
-          Ge = n(50649);
-        class Ue {
+        window.LocalizationManager = Q;
+        var ee = n(79588),
+          te = n(50649);
+        class ne {
           constructor(e) {
             (this.m_bReady = !1),
               (this.m_bValid = !1),
-              (0, Ne.rC)(this),
+              (0, ee.rC)(this),
               (this.m_strInviteCode = e);
           }
           BIsReady() {
@@ -2368,7 +1103,7 @@ var CLSTAMP = "8745921";
             return this.m_strInviteCode;
           }
           BNeverExpires() {
-            return this.m_rtTimeExpires == V;
+            return this.m_rtTimeExpires == T;
           }
           GetChatRoomGroupID() {
             return this.m_ulChatRoomGroupID;
@@ -2382,9 +1117,9 @@ var CLSTAMP = "8745921";
           GetURL() {
             return this.m_strInviteCode
               ? ((e = this.m_strInviteCode),
-                "public" == S.WEB_UNIVERSE
+                "public" == f.WEB_UNIVERSE
                   ? `https://s.team/chat/${e}`
-                  : `${S.COMMUNITY_BASE_URL}chat/invite/${e}`)
+                  : `${f.COMMUNITY_BASE_URL}chat/invite/${e}`)
               : null;
             var e;
           }
@@ -2400,40 +1135,35 @@ var CLSTAMP = "8745921";
           InitInvalid() {
             (this.m_bValid = !1), (this.m_bReady = !0);
           }
-          InitDirectInvite(e, t, n = !1, r = void 0) {
+          InitDirectInvite(e, t, n = !1, s = void 0) {
             (this.m_ulChatRoomGroupID = e),
               (this.m_ulChatID = t),
               (this.m_bIsBanned = n),
-              (this.m_rtKickExpires = r),
-              (this.m_rtTimeExpires = V),
+              (this.m_rtKickExpires = s),
+              (this.m_rtTimeExpires = T),
               (this.m_bValid = !0),
               (this.m_bReady = !0);
           }
         }
-        r([Ne.LO], Ue.prototype, "m_bReady", void 0),
-          r([Ne.aD], Ue.prototype, "InitInvalid", null),
-          r([Ne.aD], Ue.prototype, "InitDirectInvite", null);
-        var we = n(72080);
-        class Oe {
-          constructor(e = 0, t, n, r) {
-            e instanceof Oe
+        s([ee.LO], ne.prototype, "m_bReady", void 0),
+          s([ee.aD], ne.prototype, "InitInvalid", null),
+          s([ee.aD], ne.prototype, "InitDirectInvite", null);
+        var se = n(72080);
+        class ie {
+          constructor(e = 0, t, n, s) {
+            e instanceof ie
               ? (this.m_ulSteamID = e.m_ulSteamID)
               : "string" == typeof e
-              ? (this.m_ulSteamID = we.Z.fromString(e, !0))
-              : t && n && void 0 !== r
-              ? this.SetFromComponents(null != e ? e : 0, r, n, t)
-              : (this.m_ulSteamID = e ? we.Z.fromNumber(e, !0) : we.Z.UZERO);
+              ? (this.m_ulSteamID = se.Z.fromString(e, !0))
+              : t && n && void 0 !== s
+              ? this.SetFromComponents(null != e ? e : 0, s, n, t)
+              : (this.m_ulSteamID = e ? se.Z.fromNumber(e, !0) : se.Z.UZERO);
           }
           static InitFromAccountID(e) {
-            return new Oe(
-              Number(e),
-              S.EUNIVERSE,
-              w.k_EAccountTypeIndividual,
-              1,
-            );
+            return new ie(Number(e), f.EUNIVERSE, 1, 1);
           }
           static InitFromClanID(e) {
-            return new Oe(Number(e), S.EUNIVERSE, w.k_EAccountTypeClan, 0);
+            return new ie(Number(e), f.EUNIVERSE, 7, 0);
           }
           GetAccountID() {
             return this.m_ulSteamID.getLowBitsUnsigned();
@@ -2452,15 +1182,15 @@ var CLSTAMP = "8745921";
           }
           Render() {
             switch (this.GetAccountType()) {
-              case w.k_EAccountTypeInvalid:
+              case 0:
                 return (
                   "[I:" + this.GetUniverse() + ":" + this.GetAccountID() + "]"
                 );
-              case w.k_EAccountTypeClan:
+              case 7:
                 return (
                   "[g:" + this.GetUniverse() + ":" + this.GetAccountID() + "]"
                 );
-              case w.k_EAccountTypeAnonGameServer:
+              case 4:
                 return (
                   "[A:" +
                   this.GetUniverse() +
@@ -2470,11 +1200,11 @@ var CLSTAMP = "8745921";
                   this.GetInstance() +
                   "]"
                 );
-              case w.k_EAccountTypeGameServer:
+              case 3:
                 return (
                   "[G:" + this.GetUniverse() + ":" + this.GetAccountID() + "]"
                 );
-              case w.k_EAccountTypeMultiseat:
+              case 2:
                 return (
                   "[M:" +
                   this.GetUniverse() +
@@ -2484,11 +1214,11 @@ var CLSTAMP = "8745921";
                   this.GetInstance() +
                   "]"
                 );
-              case w.k_EAccountTypePending:
+              case 5:
                 return (
                   "[P:" + this.GetUniverse() + ":" + this.GetAccountID() + "]"
                 );
-              case w.k_EAccountTypeContentServer:
+              case 6:
                 return (
                   "[C:" + this.GetUniverse() + ":" + this.GetAccountID() + "]"
                 );
@@ -2499,60 +1229,55 @@ var CLSTAMP = "8745921";
             }
           }
           static InitFromString(e) {
-            let t = new Oe();
+            let t = new ie();
             try {
-              let [n, r, o, a, i] =
+              let [n, s, i, r, a] =
                   e.match(/\[([I|g|A|G|M|P|C|U]):(\d+):(\d+):?(\d+)?\]/) || [],
-                s = Number(o),
-                _ = Number(a),
-                E = i ? Number(i) : 1;
-              switch (r) {
+                o = Number(i),
+                c = Number(r),
+                l = a ? Number(a) : 1;
+              switch (s) {
                 case "I":
-                  t.SetFromComponents(_, E, w.k_EAccountTypeInvalid, s);
+                  t.SetFromComponents(c, l, 0, o);
                 case "g":
-                  t.SetFromComponents(_, 0, w.k_EAccountTypeClan, s);
+                  t.SetFromComponents(c, 0, 7, o);
                 case "A":
-                  t.SetFromComponents(_, E, w.k_EAccountTypeAnonGameServer, s);
+                  t.SetFromComponents(c, l, 4, o);
                 case "G":
-                  t.SetFromComponents(_, E, w.k_EAccountTypeGameServer, s);
+                  t.SetFromComponents(c, l, 3, o);
                 case "M":
-                  t.SetFromComponents(_, E, w.k_EAccountTypeMultiseat, s);
+                  t.SetFromComponents(c, l, 2, o);
                 case "P":
-                  t.SetFromComponents(_, E, w.k_EAccountTypePending, s);
+                  t.SetFromComponents(c, l, 5, o);
                 case "C":
-                  t.SetFromComponents(_, E, w.k_EAccountTypeContentServer, s);
+                  t.SetFromComponents(c, l, 6, o);
                 case "U":
-                  t.SetFromComponents(_, E, w.k_EAccountTypeIndividual, s);
+                  t.SetFromComponents(c, l, 1, o);
               }
             } catch (e) {}
             return t;
           }
           BIsValid() {
             let e = this.GetAccountType();
-            if (e <= w.k_EAccountTypeInvalid || e >= w.k_EAccountTypeMax)
-              return !1;
+            if (e <= 0 || e >= 11) return !1;
             let t = this.GetUniverse();
-            if (t <= U.k_EUniverseInvalid || t >= U.k_EUniverseMax) return !1;
-            if (e == w.k_EAccountTypeIndividual) {
+            if (t <= 0 || t >= 5) return !1;
+            if (1 == e) {
               if (0 == this.GetAccountID() || this.GetInstance() > 4) return !1;
-            } else if (e == w.k_EAccountTypeClan) {
+            } else if (7 == e) {
               if (0 == this.GetAccountID() || 0 != this.GetInstance())
                 return !1;
-            } else if (
-              e == w.k_EAccountTypeGameServer &&
-              0 == this.GetAccountID()
-            )
-              return !1;
+            } else if (3 == e && 0 == this.GetAccountID()) return !1;
             return !0;
           }
           BIsIndividualAccount() {
-            return this.GetAccountType() == w.k_EAccountTypeIndividual;
+            return 1 == this.GetAccountType();
           }
           BIsClanAccount() {
-            return this.GetAccountType() == w.k_EAccountTypeClan;
+            return 7 == this.GetAccountType();
           }
           SetAccountID(e) {
-            this.m_ulSteamID = new we.Z(
+            this.m_ulSteamID = new se.Z(
               e,
               this.m_ulSteamID.getHighBitsUnsigned(),
               !0,
@@ -2582,23 +1307,23 @@ var CLSTAMP = "8745921";
               e,
             );
           }
-          SetFromComponents(e, t, n, r) {
-            let o = ((255 & r) << 24) + ((15 & n) << 20) + (1048575 & t),
-              a = 4294967295 & e;
-            this.m_ulSteamID = new we.Z(a, o, !0);
+          SetFromComponents(e, t, n, s) {
+            let i = ((255 & s) << 24) + ((15 & n) << 20) + (1048575 & t),
+              r = 4294967295 & e;
+            this.m_ulSteamID = new se.Z(r, i, !0);
           }
         }
-        var je = n(82989);
-        class Be extends Ue {
+        var re = n(82989);
+        class ae extends ne {
           constructor(e) {
-            super(e), (0, Ne.rC)(this);
+            super(e), (0, ee.rC)(this);
           }
           BIsExpired() {
-            return We.sm_rtTimeCur >= this.m_rtTimeExpires;
+            return oe.sm_rtTimeCur >= this.m_rtTimeExpires;
           }
           InitFromPHPInviteLinkInfo(e) {
             this.m_ulChatID = e.chat_id;
-            let t = new Oe(e.steamid_sender);
+            let t = new ie(e.steamid_sender);
             t.BIsIndividualAccount() &&
               (this.m_unAccountIDInviter = t.GetAccountID()),
               (this.m_rtTimeExpires = e.time_expires),
@@ -2610,13 +1335,13 @@ var CLSTAMP = "8745921";
               (this.m_bReady = !0);
           }
         }
-        r([Ne.aD], Be.prototype, "InitFromPHPInviteLinkInfo", null);
-        class We {
+        s([ee.aD], ae.prototype, "InitFromPHPInviteLinkInfo", null);
+        class oe {
           constructor(e) {
             (this.m_bConnectingToClient = !1),
               (this.m_connectResult = void 0),
-              (0, Ne.rC)(this),
-              (this.m_invite = new Be(e.strInviteCode)),
+              (0, ee.rC)(this),
+              (this.m_invite = new ae(e.strInviteCode)),
               e.Invite
                 ? this.m_invite.InitFromPHPInviteLinkInfo(e.Invite)
                 : this.m_invite.InitInvalid(),
@@ -2643,29 +1368,29 @@ var CLSTAMP = "8745921";
               let t = window.open("", "SteamWebChat", "");
               if (!t) return;
               let n = !1,
-                r = !1;
+                s = !1;
               try {
                 n = "about:blank" == t.location.href;
               } catch (e) {
-                r = !0;
+                s = !0;
               }
               if (n) {
                 if (e) {
-                  let n = function (r) {
-                    let o = S.COMMUNITY_BASE_URL.replace(
+                  let n = function (s) {
+                    let i = f.COMMUNITY_BASE_URL.replace(
                       /(https?:\/\/[^/]*).*$/,
                       "$1",
                     );
-                    r.source == t &&
-                      "FriendsUIReady" == r.data &&
-                      r.origin == o &&
-                      (t.postMessage(e, S.COMMUNITY_BASE_URL),
+                    s.source == t &&
+                      "FriendsUIReady" == s.data &&
+                      s.origin == i &&
+                      (t.postMessage(e, f.COMMUNITY_BASE_URL),
                       window.removeEventListener("message", n));
                   };
                   window.addEventListener("message", n);
                 }
-                t.location.href = S.COMMUNITY_BASE_URL + "chat/";
-              } else e && t.postMessage(e, S.COMMUNITY_BASE_URL);
+                t.location.href = f.COMMUNITY_BASE_URL + "chat/";
+              } else e && t.postMessage(e, f.COMMUNITY_BASE_URL);
               t.focus();
             })({
               command: "ShowChatRoomGroupInvite",
@@ -2673,7 +1398,7 @@ var CLSTAMP = "8745921";
             });
           }
           LaunchSteamIgnoreAccount() {
-            I.SetAllowAccountMismatch(!0), this.SendInviteToClient();
+            v.SetAllowAccountMismatch(!0), this.SendInviteToClient();
           }
           ForceLaunchSteamClient() {
             window.location.href = `steam://friends/ShowChatRoomGroupInvite/${this.m_invite.GetInviteCode()}`;
@@ -2682,34 +1407,34 @@ var CLSTAMP = "8745921";
             this.m_invite.BIsValid() &&
               !this.m_invite.BIsExpired() &&
               ((this.m_bConnectingToClient = !0),
-              I.ShowChatRoomGroupInvite(this.m_invite.GetInviteCode()).then(
-                (e) => {
-                  (0, Ne.z)(() => {
+              v
+                .ShowChatRoomGroupInvite(this.m_invite.GetInviteCode())
+                .then((e) => {
+                  (0, ee.z)(() => {
                     (this.m_bConnectingToClient = !1),
                       (this.m_connectResult = e),
                       console.log(e);
                   });
-                },
-              ));
+                }));
           }
         }
-        r([Ne.LO], We.prototype, "m_bConnectingToClient", void 0),
-          r([Ne.LO], We.prototype, "m_connectResult", void 0);
-        let xe = class extends a.Component {
+        s([ee.LO], oe.prototype, "m_bConnectingToClient", void 0),
+          s([ee.LO], oe.prototype, "m_connectResult", void 0);
+        let ce = class extends r.Component {
           render() {
-            return a.createElement(
+            return r.createElement(
               "div",
               { className: "InviteLandingRoot" },
               this.props.controller.BIsInviteValid()
-                ? a.createElement(Ve, { controller: this.props.controller })
-                : a.createElement(He, { controller: this.props.controller }),
+                ? r.createElement(le, { controller: this.props.controller })
+                : r.createElement(_e, { controller: this.props.controller }),
             );
           }
         };
-        xe = r([Ge.Pi], xe);
-        let Ve = class extends a.Component {
+        ce = s([te.Pi], ce);
+        let le = class extends r.Component {
           constructor(e) {
-            super(e), (this.m_bTriedToLaunchSteam = !1), (0, Ne.rC)(this);
+            super(e), (this.m_bTriedToLaunchSteam = !1), (0, ee.rC)(this);
           }
           LaunchWebChat() {
             this.props.controller.LaunchWebChat();
@@ -2724,7 +1449,7 @@ var CLSTAMP = "8745921";
               }, 1e3);
           }
           IsMobileDevice() {
-            switch (new je.UAParser(navigator.userAgent).getResult().os.name) {
+            switch (new re.UAParser(navigator.userAgent).getResult().os.name) {
               case "iOS":
               case "Android":
               case "BlackBerry":
@@ -2734,175 +1459,175 @@ var CLSTAMP = "8745921";
           }
           render() {
             if (this.props.controller.BIsConnectingToClient())
-              return a.createElement(
+              return r.createElement(
                 "div",
                 { className: "ChatMessageInvite RequestingInfo NoColumns" },
-                a.createElement(
+                r.createElement(
                   "div",
                   { className: "postedExpiredInvite" },
-                  Pe("#bbcode_invite_requesting_info"),
+                  q("#bbcode_invite_requesting_info"),
                 ),
               );
             let e = this.props.controller.GetConnectResults(),
               t = this.props.controller.GetInvite(),
-              n = (S.COMMUNITY_BASE_URL, this.IsMobileDevice()),
-              r = "inviteButton inviteButtonJoinChat";
+              n = (f.COMMUNITY_BASE_URL, this.IsMobileDevice()),
+              s = "inviteButton inviteButtonJoinChat";
             return (
-              t.BIsVoiceChatInvite() && (r += " inviteButtonJoinVoice"),
+              t.BIsVoiceChatInvite() && (s += " inviteButtonJoinVoice"),
               e.success
-                ? a.createElement(
+                ? r.createElement(
                     "div",
                     { className: "ChatMessageInvite NoColumns" },
-                    a.createElement(
+                    r.createElement(
                       "div",
                       { className: "groupName" },
-                      Pe("#InviteLanding_SentToSteam"),
+                      q("#InviteLanding_SentToSteam"),
                     ),
-                    a.createElement(
+                    r.createElement(
                       "div",
                       { className: "inviteLabel" },
-                      be(
+                      J(
                         "#InviteLanding_SentToSteam_Desc",
-                        a.createElement(
+                        r.createElement(
                           "a",
                           { href: "#", onClick: this.LaunchWebChat },
-                          Pe("#InviteLanding_SentToSteam_Desc_LaunchWebChat"),
+                          q("#InviteLanding_SentToSteam_Desc_LaunchWebChat"),
                         ),
                       ),
                     ),
                   )
                 : e.account_mismatch
-                ? a.createElement(
-                    Ke,
+                ? r.createElement(
+                    ue,
                     { render: this.props.controller.GetPreRenderedHTML() },
-                    a.createElement(
+                    r.createElement(
                       "div",
                       { className: "inviteLabel" },
-                      Pe("#InviteLanding_AccountMismatch"),
+                      q("#InviteLanding_AccountMismatch"),
                     ),
-                    a.createElement(
+                    r.createElement(
                       "div",
                       { className: "inviteLabel" },
-                      a.createElement(
+                      r.createElement(
                         "button",
                         {
-                          className: r,
+                          className: s,
                           type: "button",
                           onClick: this.OpenInSteamIgnoreAccount,
                         },
-                        Pe("#InviteLanding_OpenInSteam"),
+                        q("#InviteLanding_OpenInSteam"),
                       ),
-                      a.createElement(
+                      r.createElement(
                         "button",
                         {
-                          className: r,
+                          className: s,
                           type: "button",
                           onClick: this.LaunchWebChat,
                         },
-                        Pe("#InviteLanding_OpenInWebChat"),
+                        q("#InviteLanding_OpenInWebChat"),
                       ),
                     ),
                   )
                 : e.call_unsupported
-                ? a.createElement(
+                ? r.createElement(
                     "div",
                     { className: "ChatMessageInvite" },
-                    a.createElement(
+                    r.createElement(
                       "div",
                       { className: "groupName" },
-                      Pe("#InviteLanding_SentToSteam"),
+                      q("#InviteLanding_SentToSteam"),
                     ),
-                    a.createElement(
+                    r.createElement(
                       "div",
                       { className: "inviteLabel" },
-                      be(
+                      J(
                         "#InviteLanding_SentToSteam_Desc",
-                        a.createElement(
+                        r.createElement(
                           "a",
                           { href: "#", onClick: this.LaunchWebChat },
-                          Pe("#InviteLanding_SentToSteam_Desc_LaunchWebChat"),
+                          q("#InviteLanding_SentToSteam_Desc_LaunchWebChat"),
                         ),
                       ),
                     ),
                   )
-                : a.createElement(
-                    Ke,
+                : r.createElement(
+                    ue,
                     { render: this.props.controller.GetPreRenderedHTML() },
-                    a.createElement(
+                    r.createElement(
                       "div",
                       { className: "inviteLabel inviteLabelButtons" },
                       !n &&
-                        a.createElement(
+                        r.createElement(
                           "button",
                           {
-                            className: r,
+                            className: s,
                             type: "button",
                             onClick: this.LaunchSteamClient,
                           },
-                          Pe("#InviteLanding_OpenInSteam"),
+                          q("#InviteLanding_OpenInSteam"),
                         ),
-                      a.createElement(
+                      r.createElement(
                         "button",
                         {
-                          className: r,
+                          className: s,
                           type: "button",
                           onClick: this.LaunchWebChat,
                         },
-                        Pe("#InviteLanding_OpenInWebChat"),
+                        q("#InviteLanding_OpenInWebChat"),
                       ),
                     ),
                     this.m_bTriedToLaunchSteam &&
-                      a.createElement(
+                      r.createElement(
                         "div",
                         { className: "inviteLabel inviteLabelLaunchPrompt" },
-                        Pe("#InviteLanding_OpenInSteam_Help"),
+                        q("#InviteLanding_OpenInSteam_Help"),
                       ),
                   )
             );
           }
         };
-        r([Ne.LO], Ve.prototype, "m_bTriedToLaunchSteam", void 0),
-          r([Ie], Ve.prototype, "LaunchWebChat", null),
-          r([Ie], Ve.prototype, "OpenInSteamIgnoreAccount", null),
-          r([Ie], Ve.prototype, "LaunchSteamClient", null),
-          (Ve = r([Ge.Pi], Ve));
-        class He extends a.Component {
+        s([ee.LO], le.prototype, "m_bTriedToLaunchSteam", void 0),
+          s([z], le.prototype, "LaunchWebChat", null),
+          s([z], le.prototype, "OpenInSteamIgnoreAccount", null),
+          s([z], le.prototype, "LaunchSteamClient", null),
+          (le = s([te.Pi], le));
+        class _e extends r.Component {
           render() {
-            return a.createElement(
+            return r.createElement(
               "div",
               { className: "ChatMessageInvite" },
-              a.createElement(
+              r.createElement(
                 "div",
                 { className: "postedExpiredInvite" },
-                Pe("#InviteLanding_ExpiredOrInvalid"),
+                q("#InviteLanding_ExpiredOrInvalid"),
               ),
             );
           }
         }
-        function Ke(e) {
-          return a.createElement(
+        function ue(e) {
+          return r.createElement(
             "div",
             { className: "ChatMessageInvite" },
-            a.createElement("div", {
+            r.createElement("div", {
               className: "leftInviteContainer",
               dangerouslySetInnerHTML: { __html: e.render.strAvatarHTML },
             }),
-            a.createElement(
+            r.createElement(
               "div",
               { className: "rightInviteContainer" },
-              a.createElement(
+              r.createElement(
                 "div",
                 { className: "inviteLabel" },
-                be(
+                J(
                   "#bbcode_invite_description",
-                  a.createElement("span", {
+                  r.createElement("span", {
                     dangerouslySetInnerHTML: {
                       __html: e.render.strInviterNameLinkHTML,
                     },
                   }),
                 ),
               ),
-              a.createElement(
+              r.createElement(
                 "div",
                 { className: "groupName" },
                 e.render.strChatRoomGroupName,
@@ -2911,51 +1636,51 @@ var CLSTAMP = "8745921";
             ),
           );
         }
-        window.AssertMsg = De;
-        let ze = new v();
-        function qe(e) {
+        window.AssertMsg = X;
+        let de = new C();
+        function he(e) {
           let t;
           try {
             t = JSON.parse(e.getAttribute("data-inviteinfo"));
           } catch (e) {}
-          We.sm_rtTimeCur = t.rtTimeCur;
-          let n = new We(t);
-          i.s(e).render(a.createElement(xe, { controller: n }));
+          oe.sm_rtTimeCur = t.rtTimeCur;
+          let n = new oe(t);
+          a.s(e).render(r.createElement(ce, { controller: n }));
         }
-        (window.ClientConnectionAPI = ze),
+        (window.ClientConnectionAPI = de),
           document.addEventListener("DOMContentLoaded", function () {
-            return o(this, void 0, void 0, function* () {
-              c(),
+            return i(this, void 0, void 0, function* () {
+              d(),
                 yield (function (e) {
-                  return o(this, void 0, void 0, function* () {
-                    const t = Ae.GetLanguageFallback(e),
-                      r = e === t,
-                      [o, a, i, s] = yield Promise.all([
+                  return i(this, void 0, void 0, function* () {
+                    const t = K.GetLanguageFallback(e),
+                      s = e === t,
+                      [i, r, a, o] = yield Promise.all([
                         n(41171)(`./shared_${e}.json`),
                         n(3119)(`./friendsui_${e}.json`),
-                        r ? {} : n(91090)(`./shared_${t}.json`),
-                        r ? {} : n(9014)(`./friendsui_${t}.json`),
+                        s ? {} : n(91090)(`./shared_${t}.json`),
+                        s ? {} : n(9014)(`./friendsui_${t}.json`),
                       ]);
-                    Fe.AddTokens(
-                      Object.assign(Object.assign({}, o), a),
-                      Object.assign(Object.assign({}, i), s),
+                    Q.AddTokens(
+                      Object.assign(Object.assign({}, i), r),
+                      Object.assign(Object.assign({}, a), o),
                     );
                   });
-                })(S.LANGUAGE),
+                })(f.LANGUAGE),
                 (function () {
                   let e = document.querySelectorAll(".ChatReactRoot");
                   for (let t = 0; t < e.length; t++) {
                     let n = e[t],
-                      r = n.getAttribute("data-component");
-                    "ChatInvite" === r
-                      ? qe(n)
-                      : De(!1, `unknown component: "${r}"`);
+                      s = n.getAttribute("data-component");
+                    "ChatInvite" === s
+                      ? he(n)
+                      : X(!1, `unknown component: "${s}"`);
                   }
                 })();
             });
           });
       },
-      27684: (e, t, n) => {
+      86416: (e, t, n) => {
         "use strict";
         "VALVE_PUBLIC_PATH" in window
           ? (n.p = window.VALVE_PUBLIC_PATH)
@@ -2966,7 +1691,7 @@ var CLSTAMP = "8745921";
             console.error("Should not include prototypejs.");
       },
       41171: (e, t, n) => {
-        var r = {
+        var s = {
           "./shared_arabic.json": [78501, 2431],
           "./shared_brazilian.json": [55106, 8385],
           "./shared_bulgarian.json": [34469, 1313],
@@ -2999,20 +1724,20 @@ var CLSTAMP = "8745921";
           "./shared_ukrainian.json": [32110, 7781],
           "./shared_vietnamese.json": [59201, 4964],
         };
-        function o(e) {
-          if (!n.o(r, e))
+        function i(e) {
+          if (!n.o(s, e))
             return Promise.resolve().then(() => {
               var t = new Error("Cannot find module '" + e + "'");
               throw ((t.code = "MODULE_NOT_FOUND"), t);
             });
-          var t = r[e],
-            o = t[0];
-          return n.e(t[1]).then(() => n.t(o, 19));
+          var t = s[e],
+            i = t[0];
+          return n.e(t[1]).then(() => n.t(i, 19));
         }
-        (o.keys = () => Object.keys(r)), (o.id = 41171), (e.exports = o);
+        (i.keys = () => Object.keys(s)), (i.id = 41171), (e.exports = i);
       },
       91090: (e, t, n) => {
-        var r = {
+        var s = {
           "./shared_arabic.json": [78501, 2431],
           "./shared_brazilian.json": [55106, 8385],
           "./shared_bulgarian.json": [34469, 1313],
@@ -3045,80 +1770,80 @@ var CLSTAMP = "8745921";
           "./shared_ukrainian.json": [32110, 7781],
           "./shared_vietnamese.json": [59201, 4964],
         };
-        function o(e) {
-          if (!n.o(r, e))
+        function i(e) {
+          if (!n.o(s, e))
             return Promise.resolve().then(() => {
               var t = new Error("Cannot find module '" + e + "'");
               throw ((t.code = "MODULE_NOT_FOUND"), t);
             });
-          var t = r[e],
-            o = t[0];
-          return n.e(t[1]).then(() => n.t(o, 19));
+          var t = s[e],
+            i = t[0];
+          return n.e(t[1]).then(() => n.t(i, 19));
         }
-        (o.keys = () => Object.keys(r)), (o.id = 91090), (e.exports = o);
+        (i.keys = () => Object.keys(s)), (i.id = 91090), (e.exports = i);
       },
     },
-    i = {};
-  function s(e) {
-    var t = i[e];
+    a = {};
+  function o(e) {
+    var t = a[e];
     if (void 0 !== t) return t.exports;
-    var n = (i[e] = { id: e, loaded: !1, exports: {} });
-    return a[e].call(n.exports, n, n.exports, s), (n.loaded = !0), n.exports;
+    var n = (a[e] = { id: e, loaded: !1, exports: {} });
+    return r[e].call(n.exports, n, n.exports, o), (n.loaded = !0), n.exports;
   }
-  (s.m = a),
-    (s.amdO = {}),
+  (o.m = r),
+    (o.amdO = {}),
     (e = []),
-    (s.O = (t, n, r, o) => {
+    (o.O = (t, n, s, i) => {
       if (!n) {
-        var a = 1 / 0;
-        for (k = 0; k < e.length; k++) {
-          for (var [n, r, o] = e[k], i = !0, _ = 0; _ < n.length; _++)
-            (!1 & o || a >= o) && Object.keys(s.O).every((e) => s.O[e](n[_]))
-              ? n.splice(_--, 1)
-              : ((i = !1), o < a && (a = o));
-          if (i) {
-            e.splice(k--, 1);
-            var E = r();
-            void 0 !== E && (t = E);
+        var r = 1 / 0;
+        for (_ = 0; _ < e.length; _++) {
+          for (var [n, s, i] = e[_], a = !0, c = 0; c < n.length; c++)
+            (!1 & i || r >= i) && Object.keys(o.O).every((e) => o.O[e](n[c]))
+              ? n.splice(c--, 1)
+              : ((a = !1), i < r && (r = i));
+          if (a) {
+            e.splice(_--, 1);
+            var l = s();
+            void 0 !== l && (t = l);
           }
         }
         return t;
       }
-      o = o || 0;
-      for (var k = e.length; k > 0 && e[k - 1][2] > o; k--) e[k] = e[k - 1];
-      e[k] = [n, r, o];
+      i = i || 0;
+      for (var _ = e.length; _ > 0 && e[_ - 1][2] > i; _--) e[_] = e[_ - 1];
+      e[_] = [n, s, i];
     }),
-    (s.n = (e) => {
+    (o.n = (e) => {
       var t = e && e.__esModule ? () => e.default : () => e;
-      return s.d(t, { a: t }), t;
+      return o.d(t, { a: t }), t;
     }),
     (n = Object.getPrototypeOf
       ? (e) => Object.getPrototypeOf(e)
       : (e) => e.__proto__),
-    (s.t = function (e, r) {
-      if ((1 & r && (e = this(e)), 8 & r)) return e;
+    (o.t = function (e, s) {
+      if ((1 & s && (e = this(e)), 8 & s)) return e;
       if ("object" == typeof e && e) {
-        if (4 & r && e.__esModule) return e;
-        if (16 & r && "function" == typeof e.then) return e;
+        if (4 & s && e.__esModule) return e;
+        if (16 & s && "function" == typeof e.then) return e;
       }
-      var o = Object.create(null);
-      s.r(o);
-      var a = {};
+      var i = Object.create(null);
+      o.r(i);
+      var r = {};
       t = t || [null, n({}), n([]), n(n)];
-      for (var i = 2 & r && e; "object" == typeof i && !~t.indexOf(i); i = n(i))
-        Object.getOwnPropertyNames(i).forEach((t) => (a[t] = () => e[t]));
-      return (a.default = () => e), s.d(o, a), o;
+      for (var a = 2 & s && e; "object" == typeof a && !~t.indexOf(a); a = n(a))
+        Object.getOwnPropertyNames(a).forEach((t) => (r[t] = () => e[t]));
+      return (r.default = () => e), o.d(i, r), i;
     }),
-    (s.d = (e, t) => {
+    (o.d = (e, t) => {
       for (var n in t)
-        s.o(t, n) &&
-          !s.o(e, n) &&
+        o.o(t, n) &&
+          !o.o(e, n) &&
           Object.defineProperty(e, n, { enumerable: !0, get: t[n] });
     }),
-    (s.f = {}),
-    (s.e = (e) =>
-      Promise.all(Object.keys(s.f).reduce((t, n) => (s.f[n](e, t), t), []))),
-    (s.u = (e) =>
+    (o.f = {}),
+    (o.e = (e) =>
+      Promise.all(Object.keys(o.f).reduce((t, n) => (o.f[n](e, t), t), []))),
+    (o.u = (e) =>
       "javascript/webui/" +
       {
         699: "friendsui_polish-json",
@@ -3249,8 +1974,8 @@ var CLSTAMP = "8745921";
         9775: "7f0e8f13b0ef51741526",
         9818: "47b2f0a64053c24d7596",
       }[e]),
-    (s.miniCssF = (e) => {}),
-    (s.g = (function () {
+    (o.miniCssF = (e) => {}),
+    (o.g = (function () {
       if ("object" == typeof globalThis) return globalThis;
       try {
         return this || new Function("return this")();
@@ -3258,71 +1983,71 @@ var CLSTAMP = "8745921";
         if ("object" == typeof window) return window;
       }
     })()),
-    (s.o = (e, t) => Object.prototype.hasOwnProperty.call(e, t)),
-    (r = {}),
-    (o = "@steam/friendsui:"),
-    (s.l = (e, t, n, a) => {
-      if (r[e]) r[e].push(t);
+    (o.o = (e, t) => Object.prototype.hasOwnProperty.call(e, t)),
+    (s = {}),
+    (i = "@steam/friendsui:"),
+    (o.l = (e, t, n, r) => {
+      if (s[e]) s[e].push(t);
       else {
-        var i, _;
+        var a, c;
         if (void 0 !== n)
           for (
-            var E = document.getElementsByTagName("script"), k = 0;
-            k < E.length;
-            k++
+            var l = document.getElementsByTagName("script"), _ = 0;
+            _ < l.length;
+            _++
           ) {
-            var l = E[k];
+            var u = l[_];
             if (
-              l.getAttribute("src") == e ||
-              l.getAttribute("data-webpack") == o + n
+              u.getAttribute("src") == e ||
+              u.getAttribute("data-webpack") == i + n
             ) {
-              i = l;
+              a = u;
               break;
             }
           }
-        i ||
-          ((_ = !0),
-          ((i = document.createElement("script")).charset = "utf-8"),
-          (i.timeout = 120),
-          s.nc && i.setAttribute("nonce", s.nc),
-          i.setAttribute("data-webpack", o + n),
-          (i.src = e)),
-          (r[e] = [t]);
-        var c = (t, n) => {
-            (i.onerror = i.onload = null), clearTimeout(u);
-            var o = r[e];
+        a ||
+          ((c = !0),
+          ((a = document.createElement("script")).charset = "utf-8"),
+          (a.timeout = 120),
+          o.nc && a.setAttribute("nonce", o.nc),
+          a.setAttribute("data-webpack", i + n),
+          (a.src = e)),
+          (s[e] = [t]);
+        var d = (t, n) => {
+            (a.onerror = a.onload = null), clearTimeout(h);
+            var i = s[e];
             if (
-              (delete r[e],
-              i.parentNode && i.parentNode.removeChild(i),
-              o && o.forEach((e) => e(n)),
+              (delete s[e],
+              a.parentNode && a.parentNode.removeChild(a),
+              i && i.forEach((e) => e(n)),
               t)
             )
               return t(n);
           },
-          u = setTimeout(
-            c.bind(null, void 0, { type: "timeout", target: i }),
+          h = setTimeout(
+            d.bind(null, void 0, { type: "timeout", target: a }),
             12e4,
           );
-        (i.onerror = c.bind(null, i.onerror)),
-          (i.onload = c.bind(null, i.onload)),
-          _ && document.head.appendChild(i);
+        (a.onerror = d.bind(null, a.onerror)),
+          (a.onload = d.bind(null, a.onload)),
+          c && document.head.appendChild(a);
       }
     }),
-    (s.r = (e) => {
+    (o.r = (e) => {
       "undefined" != typeof Symbol &&
         Symbol.toStringTag &&
         Object.defineProperty(e, Symbol.toStringTag, { value: "Module" }),
         Object.defineProperty(e, "__esModule", { value: !0 });
     }),
-    (s.nmd = (e) => ((e.paths = []), e.children || (e.children = []), e)),
-    (s.j = 1856),
+    (o.nmd = (e) => ((e.paths = []), e.children || (e.children = []), e)),
+    (o.j = 1856),
     (() => {
       var e;
-      s.g.importScripts && (e = s.g.location + "");
-      var t = s.g.document;
+      o.g.importScripts && (e = o.g.location + "");
+      var t = o.g.document;
       if (!e && t && (t.currentScript && (e = t.currentScript.src), !e)) {
         var n = t.getElementsByTagName("script");
-        if (n.length) for (var r = n.length - 1; r > -1 && !e; ) e = n[r--].src;
+        if (n.length) for (var s = n.length - 1; s > -1 && !e; ) e = n[s--].src;
       }
       if (!e)
         throw new Error(
@@ -3332,31 +2057,31 @@ var CLSTAMP = "8745921";
         .replace(/#.*$/, "")
         .replace(/\?.*$/, "")
         .replace(/\/[^\/]+$/, "/")),
-        (s.p = e + "../../");
+        (o.p = e + "../../");
     })(),
     (() => {
       var e = { 1856: 0 };
-      (s.f.j = (t, n) => {
-        var r = s.o(e, t) ? e[t] : void 0;
-        if (0 !== r)
-          if (r) n.push(r[2]);
+      (o.f.j = (t, n) => {
+        var s = o.o(e, t) ? e[t] : void 0;
+        if (0 !== s)
+          if (s) n.push(s[2]);
           else {
-            var o = new Promise((n, o) => (r = e[t] = [n, o]));
-            n.push((r[2] = o));
-            var a = s.p + s.u(t),
-              i = new Error();
-            s.l(
-              a,
+            var i = new Promise((n, i) => (s = e[t] = [n, i]));
+            n.push((s[2] = i));
+            var r = o.p + o.u(t),
+              a = new Error();
+            o.l(
+              r,
               (n) => {
-                if (s.o(e, t) && (0 !== (r = e[t]) && (e[t] = void 0), r)) {
-                  var o = n && ("load" === n.type ? "missing" : n.type),
-                    a = n && n.target && n.target.src;
-                  (i.message =
-                    "Loading chunk " + t + " failed.\n(" + o + ": " + a + ")"),
-                    (i.name = "ChunkLoadError"),
-                    (i.type = o),
-                    (i.request = a),
-                    r[1](i);
+                if (o.o(e, t) && (0 !== (s = e[t]) && (e[t] = void 0), s)) {
+                  var i = n && ("load" === n.type ? "missing" : n.type),
+                    r = n && n.target && n.target.src;
+                  (a.message =
+                    "Loading chunk " + t + " failed.\n(" + i + ": " + r + ")"),
+                    (a.name = "ChunkLoadError"),
+                    (a.type = i),
+                    (a.request = r),
+                    s[1](a);
                 }
               },
               "chunk-" + t,
@@ -3364,24 +2089,24 @@ var CLSTAMP = "8745921";
             );
           }
       }),
-        (s.O.j = (t) => 0 === e[t]);
+        (o.O.j = (t) => 0 === e[t]);
       var t = (t, n) => {
-          var r,
-            o,
-            [a, i, _] = n,
-            E = 0;
-          if (a.some((t) => 0 !== e[t])) {
-            for (r in i) s.o(i, r) && (s.m[r] = i[r]);
-            if (_) var k = _(s);
+          var s,
+            i,
+            [r, a, c] = n,
+            l = 0;
+          if (r.some((t) => 0 !== e[t])) {
+            for (s in a) o.o(a, s) && (o.m[s] = a[s]);
+            if (c) var _ = c(o);
           }
-          for (t && t(n); E < a.length; E++)
-            (o = a[E]), s.o(e, o) && e[o] && e[o][0](), (e[o] = 0);
-          return s.O(k);
+          for (t && t(n); l < r.length; l++)
+            (i = r[l]), o.o(e, i) && e[i] && e[i][0](), (e[i] = 0);
+          return o.O(_);
         },
         n = (self.webpackChunk_steam_friendsui =
           self.webpackChunk_steam_friendsui || []);
       n.forEach(t.bind(null, 0)), (n.push = t.bind(null, n.push.bind(n)));
     })();
-  var _ = s.O(void 0, [5968], () => s(75220));
-  _ = s.O(_);
+  var c = o.O(void 0, [5968], () => o(16379));
+  c = o.O(c);
 })();

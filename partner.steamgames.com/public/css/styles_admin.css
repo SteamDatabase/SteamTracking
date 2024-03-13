@@ -571,6 +571,7 @@ pre.results {
 }
 
 .fancyCheckbox {
+    width: fit-content;
 	cursor: default;
     display: flex;
     flex-direction: row;

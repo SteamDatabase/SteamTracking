@@ -45,7 +45,7 @@ function PositionCouponSuggestions( elRow, elDialog, elBackground )
 	elBackground.style.left = 0 + 'px';
 	elBackground.style.width = $(document.body).getWidth() + 'px';
 	elBackground.style.height = $(document.body).getHeight() + 'px';
-	
+
 	elDialog.clonePosition( elRow, {setWidth: false, setHeight: false} );
 	elDialog.style.left = ( parseInt( elDialog.style.left ) - 5 ) + 'px';
 	elDialog.style.top = ( parseInt( elDialog.style.top ) - 1 ) + 'px';
@@ -109,12 +109,9 @@ function SaveCouponSelections( gid )
 		DismissCouponSuggestions( gid );
 }
 
-function ForgetCart()
+function ForgetCart( cookieName )
 {
-	var date = new Date();
-	date.setTime(date.getTime()+(-10*24*60*60*1000));
-	var expires = "expires="+date.toGMTString();
-	document.cookie = 'shoppingCartGID'+"=-1; "+expires+"; path=/";
+	V_SetCookie( cookieName ? cookieName : 'shoppingCartGID', -1, -10 );
 	window.location = window.location;
 }
 

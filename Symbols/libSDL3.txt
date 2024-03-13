@@ -562,6 +562,7 @@
  T SDL_GetHintBoolean
  T SDL_GetJoystickAxis
  T SDL_GetJoystickAxisInitialState
+ T SDL_GetJoystickBall
  T SDL_GetJoystickButton
  T SDL_GetJoystickFirmwareVersion
  T SDL_GetJoystickFromInstanceID
@@ -611,6 +612,7 @@
  T SDL_GetNumGamepadTouchpads
  T SDL_GetNumHapticAxes
  T SDL_GetNumJoystickAxes
+ T SDL_GetNumJoystickBalls
  T SDL_GetNumJoystickButtons
  T SDL_GetNumJoystickHats
  T SDL_GetNumRenderDrivers

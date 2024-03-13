@@ -18,7 +18,7 @@ function updateArticleSummary( articleSummary ) {
 		$J( '#articleSummaryCapabilityList input' ).prop( 'checked', false );
 		$J( '#articleSummaryCapabilityList' ).slideUp( 250 );
 	}
-	else 
+	else
 	{
 		$J( '#articleSummaryCapabilitiesRequiredYes' ).prop( 'checked', true );
 		$J( '#articleSummaryCapabilityList input' ).prop( 'checked', false );
@@ -33,7 +33,7 @@ function updateArticleSummary( articleSummary ) {
 	$J( '#articleSummaryArticleId' ).text( articleSummary.articleid );
 	var $liveVersions = $J( '#articleSummaryLiveVersions' );
 	var $betaVersions = $J( '#articleSummaryBetaVersions' );
-	
+
 	$liveVersions.children( 'tbody' ).empty();
 	$betaVersions.children( 'tbody' ).empty();
 
@@ -71,9 +71,12 @@ function updateArticleSummary( articleSummary ) {
 		$liveVersions.hide();
 	}
 
+	$J( '#articleSummaryPublishAllLang' ).hide();
 	if ( articleSummary.beta_content.length > 0 )
 	{
 		$betaVersions.show();
+		$J( '#articleSummaryPublishAllLang' ).show();
+		let rgAllLanguages = [];
 		for ( i = 0 ; i < articleSummary.beta_content.length; ++i )
 		{
 			version = articleSummary.beta_content[ i ];
@@ -91,7 +94,12 @@ function updateArticleSummary( articleSummary ) {
 			});
 			$row.append( $J( '<td></td>' ).append( $link ) );
 			$betaVersions.append( $row );
+			rgAllLanguages.push( version[ 'language' ] );
 		}
+		$J( '#articleSummaryPublishAll' ).click( function() {
+			articleSummaryAjax( 'publish', { 'languages': rgAllLanguages.join( ',' ) } );
+			return false;
+		});
 	}
 	else
 	{

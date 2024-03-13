@@ -305,10 +305,10 @@ function RenderRecommendBlock( rgRecommendedAppIDs, strAppURL, elTarget, fnRecSc
 {
 	var rgRecommendationsToShow = [];
 	var fnScore = fnRecScore || DefaultRecScoreFactory( 3 );
-	var bUseTabletScreenMode = window.UseTabletScreenMode && window.UseTabletScreenMode(); 
+	var bUseTabletScreenMode = window.UseTabletScreenMode && window.UseTabletScreenMode();
 	var strViewAllLink = "";
 
-	if ( bUseTabletScreenMode ) 
+	if ( bUseTabletScreenMode )
 	{
 		var $elBlock = elTarget.closest( 'div.block' );
 		var $elAnchor = $elBlock ? $J( 'a.deck_view_all_action_link', $elBlock ) : null;
@@ -342,7 +342,7 @@ function RenderRecommendBlock( rgRecommendedAppIDs, strAppURL, elTarget, fnRecSc
 			'href': GStoreItemData.GetAppURL( unAppID, strAppURL )
 		};
 
-				if ( bUseTabletScreenMode && strViewAllLink !== "" ) 
+				if ( bUseTabletScreenMode && strViewAllLink !== "" )
 		{
 			const panelString = '{"onOptionsActionDescription":"View all","onOptionsButton":"window.location=\'%1$s\'"}';
 			params['data-panel'] = panelString.replace( '%1$s', strViewAllLink );
@@ -378,7 +378,7 @@ function RenderMoreLikeThisBlock( rgRecommendedAppIDs, bUseShuffle )
 
 	RenderRecommendBlock( rgRecommendedAppIDs, 'recommended', $J('#recommended_block_content'), bUseShuffle ? ShuffleRecScore : DefaultRecScoreFactory( 15 ) );
 }
-					
+
 function RenderAccessoriesBlock( rgAccessoryAppIDs )
 {
 	if ( !rgAccessoryAppIDs || !rgAccessoryAppIDs.length > 0 || !$J('#accessory_block_content').length )
@@ -442,7 +442,7 @@ function ShowEULA( elLink )
 		// it's a better user experience on Deck if we navigate to the EULA instead of opening a new window
 		window.location = elLink.href;
 	}
-	else 
+	else
 	{
 		var win = window.open( elLink.href,'eula','height=584,width=475,resize=yes,scrollbars=yes');
 		win && win.focus();
@@ -629,15 +629,6 @@ function UserReviewVoteTag( bLoggedIn, strLoginURL, id, tagID, elemID )
 	);
 }
 
-function UserReviewSetQuality( id )
-{
-	var quality = $J( "#ReviewQuality" + id ).val();
-	UserReview_Moderate_SetQuality( id, quality, 'https://store.steampowered.com/',
-		function( rgResults ) {
-		}
-	);
-}
-
 function UserReviewShowMore( id, context )
 {
 	$J('#ReviewContent'+context+id).parent().removeClass('partial');
@@ -666,7 +657,7 @@ function LoadMoreReviews( appid, cursor, dayRange, startDate, endDate, context )
 	filteredReviewScore.removeClass( "visible" );
 
 	$J.get( 'https://store.steampowered.com/appreviews/' + appid,{
-		'cursor' : cursor,
+				'cursor' : cursor,
 		'day_range' : dayRange,
 		'start_date' : startDate,
 		'end_date' : endDate,
@@ -743,7 +734,7 @@ function LoadMoreReviews( appid, cursor, dayRange, startDate, endDate, context )
 				RequestCurrentUserRecommendationVotes( recommendationIDs );
 			}
 
-			// if customer is on a mobile size screen make content changes in the reviews section  
+			// if customer is on a mobile size screen make content changes in the reviews section
 			ReparentReviewsForSmallScreens();
 		}
 		else
@@ -866,7 +857,7 @@ function EditUserReviewScorePreference()
 		ShowAlertDialog( 'Error', 'You must be logged in to perform that action.' );
 		return;
 	}
-	
+
 	$J.post(
 		'https://store.steampowered.com/account/edituserreviewscorepreference/', { sessionid: g_sessionID }
 	).done( function( response ) {
@@ -1366,7 +1357,7 @@ function BuildReviewHistogram()
 		};
 
 		var funcUnSelected = function ( event ) {
-			
+
 		};
 
 		graphRollup.bind("plothover", funcTooltip);
@@ -1550,7 +1541,7 @@ function UpdateActiveFilters()
 	{
 		$J( "#reviews_filter_graph" ).hide();
 	}
-	
+
 	// off-topic review activity
 	if ( $J( "#user_reviews_offtopic_activity_menu" ).is( ":visible" ) && $J( "#reviews_offtopic_activity_checkbox" ).attr( "checked" ) )
 	{
@@ -1829,7 +1820,7 @@ function ChangeSeason( el, season )
 	// switch active season indicator
 	$J( '.series_seasons .season_selector .season_name' ).removeClass( 'active' );
 	$J( el ).addClass( 'active' );
-	
+
 	// switch which episodes are shown
 	$J( '.season_episode_list_wrapper .season_episode_list' ).removeClass( 'active' );
 	$J( '.season_episode_list_wrapper .season_episode_list[data-season="' + season + '"]' ).addClass( 'active' );
@@ -1897,10 +1888,10 @@ function ToggleBannerContentVisibility( divContentID, divIconID )
 };
 
 // The review detail section is simplified for mobile screens
-// which requires some section moves here, and formatting changes in .css 
+// which requires some section moves here, and formatting changes in .css
 function ReparentReviewsForSmallScreens()
 {
-	var bUseTabletScreenMode = window.UseTabletScreenMode && window.UseTabletScreenMode(); 
+	var bUseTabletScreenMode = window.UseTabletScreenMode && window.UseTabletScreenMode();
 	var fn_reparent = bUseTabletScreenMode ? Responsive_ReparentItemsInTabletMode : Responsive_ReparentItemsInMobileMode;
 
 	var $MoveReviewSections = $J('.user_reviews_container');
@@ -1957,7 +1948,7 @@ function ScrollElement( elementID, nAmount )
 		element.scrollBy( 0, nAmount );
 	else if ( nAmount < 0 && element.scrollTop > 0 )
 		element.scrollBy( 0, nAmount );
-	else 
+	else
 		return false;
 
 	return true;
@@ -2027,7 +2018,7 @@ function ReparentAppLandingPageForSmallScreens()
 	fn_reparent( '#queueBtnFollow', $J('#rowBtnActions') );
 	fn_reparent( '#ignoreBtn', $J('#rowBtnActions') );
 	fn_reparent( '#rowBtnActions', $J('#queueActionsCtn') );
-			
+
 	// place discovery queue below the action buttons
 	fn_reparent( '#nextInDiscoveryQueue', $J('#queueCtn') );
 
@@ -2047,8 +2038,8 @@ function ReparentAppLandingPageForSmallScreens()
 	fn_reparent( '#review_histograms_container', $J( '#reviewSettingsPopupContent' ) );
 	fn_reparent( '#reviews_filter_options', $J( '#reviewSettingsPopupContent' ) );
 
-	// move some of the links and info content to the bottom 
-	// testing this - we may need to move this again  
+	// move some of the links and info content to the bottom
+	// testing this - we may need to move this again
 	fn_reparent( '#genresAndManufacturer', $J( '#appLinksAndInfo' ) );
 
 	// the window resize message handler is for layout adjustements that require more logic than reparenting based on screen size
@@ -2063,13 +2054,13 @@ function ReparentAppLandingPageForSmallScreens()
 		var bUseNewUX = ( bUseTabletScreenMode || ( window.UseMobileScreenMode && window.UseMobileScreenMode() ) );
 
 		// if one of the wishlist buttons are visible make the action buttons flex grow so the two rows of buttons match width.
-		if ( bUseNewUX && ( $J('#add_to_wishlist_area').is(':visible') 
-			|| $J('#add_to_wishlist_area_success').is(':visible') 
+		if ( bUseNewUX && ( $J('#add_to_wishlist_area').is(':visible')
+			|| $J('#add_to_wishlist_area_success').is(':visible')
 			|| $J('#add_to_wishlist_area_fail').is(':visible') ) )
 		{
 			$J('#shareBtn').css('flex-grow', '1');
 			$J('#queueBtnFollow').css('flex-grow', '1');
-			$J('#reportBtn').css('flex-grow', '1'); 
+			$J('#reportBtn').css('flex-grow', '1');
 		}
 		else
 		{
@@ -2092,9 +2083,9 @@ function ReparentAppLandingPageForSmallScreens()
 		}
 
 		// hide the language table on small screens since a banner is clicked to reveal it
-		// 
-		// putting a display:none in CSS for small screen sizes doesn't work well because the 
-		// CSS values don't override the display state set by the language banner click handler 
+		//
+		// putting a display:none in CSS for small screen sizes doesn't work well because the
+		// CSS values don't override the display state set by the language banner click handler
 		$J('#languageTable').css('display', bUseNewUX ? 'none' : defaultLanguageTableDisplay );
 	});
 	$J(window).trigger( msgWatch );
@@ -2133,7 +2124,7 @@ function ReparentPurchaseOptionsForTablet( idPurchaseOptions )
 }
 
 
-// Popup for customers to optin/out of the new mobile UX 
+// Popup for customers to optin/out of the new mobile UX
 var g_newMobileUXPopup = null;
 function ShowUseNewMobileUXPopup()
 {
@@ -2255,7 +2246,7 @@ function GamepadVideoOnDirection( event /* GamepadEvent */, videoID )
 	// only handle the navigation if we're in fullscreen
 	if ( video && ( document.webkitFullscreenElement || document.fullscreenElement || document.mozFullScreenElement || document.msFullscreenElement ) )
 	{
-		/* TODO: figure out how to display media volume 
+		/* TODO: figure out how to display media volume
 		   We considered adding this but it's an odd user experience without a visual indicator of media volume
 
 			const fVolumeStep = 0.05;
@@ -2271,7 +2262,7 @@ function GamepadVideoOnDirection( event /* GamepadEvent */, videoID )
 		else if ( event.detail.button == 12 && video.currentTime < video.duration ) // right
 			video.currentTime = Math.min( video.currentTime + nPositionStep, video.duration );
 
-		return true; // return true for moveup, movedown to prevent dpad navigation out of the video  
+		return true; // return true for moveup, movedown to prevent dpad navigation out of the video
 	}
 
 	return false; // allow event to propogate
@@ -2279,12 +2270,12 @@ function GamepadVideoOnDirection( event /* GamepadEvent */, videoID )
 
 function GamepadVideoOnCancel( videoID )
 {
-	// if we're in fullscreen pause the video and exit fullscreen 
+	// if we're in fullscreen pause the video and exit fullscreen
 	if ( document.webkitFullscreenElement || document.fullscreenElement || document.mozFullScreenElement || document.msFullscreenElement )
 	{
 		GamepadVideoPause( videoID );
 		GamepadVideoSetFullscreen( videoID, false );
-		return true; 
+		return true;
 	}
 
 	return false; // allow event to propagate
@@ -2303,29 +2294,29 @@ function GamepadVideoSetFullscreen( videoID, bFullscreen )
 		{
 			if ( video.requestFullscreen ) {
 				video.requestFullscreen().catch( ( e ) => { console.error( "requestFullscreen exception:", e ); } );
-			} else if ( video.webkitRequestFullscreen ) { 
+			} else if ( video.webkitRequestFullscreen ) {
 				video.webkitRequestFullscreen().catch( ( e ) => { console.error( "webkitRequestFullscreen exception", e ); } );
-			} else if ( video.mozRequestFullScreen ) { 
+			} else if ( video.mozRequestFullScreen ) {
 				video.mozRequestFullScreen().catch( ( e ) => { console.error( "mozRequestFullScreen exception", e ); } );
-			} else if ( video.msRequestFullscreen ) { 
+			} else if ( video.msRequestFullscreen ) {
 				video.msRequestFullscreen().catch( ( e ) => { console.error( "msRequestFullscreen exception", e ); } );
 			}
 		}
-	} 
+	}
 	else if ( document.webkitFullscreenElement || document.fullscreenElement || document.mozFullScreenElement || document.msFullscreenElement )
 	{
 		if ( document.exitFullscreen ) {
 			document.exitFullscreen().catch( ( e ) => { console.error( "exitFullscreen exception:", e ); } );
-		} else if ( document.webkitExitFullscreen ) { 
+		} else if ( document.webkitExitFullscreen ) {
 			document.webkitExitFullscreen().catch( ( e ) => { console.error( "webkitExitFullscreen exception", e ); } );
-		} else if ( document.mozCancelFullScreen ) { 
+		} else if ( document.mozCancelFullScreen ) {
 			document.mozCancelFullScreen().catch( ( e ) => { console.error( "mozCancelFullScreen exception", e ); } );
-		} else if ( document.msExitFullscreen ) { 
+		} else if ( document.msExitFullscreen ) {
 			document.msExitFullscreen().catch( ( e ) => { console.error( "msRequestFullscreen exception", e ); } );
 		}
 
 		// make sure we scroll to the currently selected video
-		setTimeout( function () { video.scrollIntoView() }, 0 ); 
+		setTimeout( function () { video.scrollIntoView() }, 0 );
 	}
 }
 
@@ -2333,7 +2324,7 @@ function GamepadVideoPause( videoID )
 {
 	var video = $J( '#' + GamepadVideoGetID( videoID ) )[0];
 	if ( video && !video.paused )
-		video.pause(); 
+		video.pause();
 }
 
 function GamepadVideoTogglePlay( videoID )
@@ -2343,13 +2334,13 @@ function GamepadVideoTogglePlay( videoID )
 		return;
 
 	if ( video.paused )
-	{ 
+	{
 		video.play();
 		GamepadVideoSetFullscreen( videoID, true );
 	}
-	else 
+	else
 	{
-		video.pause(); 
+		video.pause();
 	}
 }
 function GamepadVideoToggleMute( videoID )

@@ -162,6 +162,7 @@ message CMsgRemoteDeviceAuthorizationRequest {
 	optional string device_name = 2;
 	required bytes encrypted_request = 3;
 	optional bytes auth_key = 4;
+	optional uint32 request_id = 5;
 }
 
 message CMsgRemoteDeviceAuthorizationCancelRequest {

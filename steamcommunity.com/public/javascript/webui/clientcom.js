@@ -1,17 +1,17 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "8745921";
+var CLSTAMP = "8756062";
 (() => {
   "use strict";
   function e(e) {
     if (!t() || !window.document.cookie) return null;
-    const s = document.cookie.match("(^|; )" + e + "=([^;]*)");
-    return s && s[2] ? decodeURIComponent(s[2]) : null;
+    const n = document.cookie.match("(^|; )" + e + "=([^;]*)");
+    return n && n[2] ? decodeURIComponent(n[2]) : null;
   }
   function t() {
     return !!window.document;
   }
-  const s = {
+  const n = {
     EUNIVERSE: 0,
     WEB_UNIVERSE: "",
     LANGUAGE: "english",
@@ -60,10 +60,10 @@ var CLSTAMP = "8745921";
     WEBSITE_ID: "Unknown",
     get SESSIONID() {
       return (function () {
-        if (!t()) return _ || (_ = E()), _;
-        let s = e("sessionid");
-        s || (s = E());
-        return s;
+        if (!t()) return _ || (_ = a()), _;
+        let n = e("sessionid");
+        n || (n = a());
+        return n;
       })();
     },
     FRIENDSUI_BETA: !1,
@@ -81,7 +81,7 @@ var CLSTAMP = "8745921";
     USE_LONGEST_LOC_STRING: !1,
     SILENT_STARTUP: !1,
   };
-  const n = {
+  const i = {
       logged_in: !1,
       steamid: "",
       accountid: 0,
@@ -96,8 +96,8 @@ var CLSTAMP = "8745921";
       short_url: "",
       country_code: "",
     },
-    i = { steamid: "", clanid: 0, listid: 0 },
-    l = {
+    s = { steamid: "", clanid: 0, listid: 0 },
+    o = {
       CLANSTEAMID: "",
       CLANACCOUNTID: 0,
       APPID: 0,
@@ -109,71 +109,71 @@ var CLSTAMP = "8745921";
       IS_VALVE_GROUP: !1,
       IS_ALLOWED_SC: !1,
     },
-    o = { ANNOUNCEMENT_GID: "", TAKEOVER_ANNOUNCEMENT_GID: "" },
-    u = "webui_config";
+    c = { ANNOUNCEMENT_GID: "", TAKEOVER_ANNOUNCEMENT_GID: "" },
+    r = "webui_config";
   let _;
-  function E() {
+  function a() {
     const e = (function () {
       let e = "";
-      for (let n = 0; n < 24; n++)
+      for (let i = 0; i < 24; i++)
         e += ((t = 0),
-        (s = 35),
+        (n = 35),
         (t = Math.ceil(t)),
-        (s = Math.floor(s)),
-        Math.floor(Math.random() * (s - t + 1)) + t).toString(36);
-      var t, s;
+        (n = Math.floor(n)),
+        Math.floor(Math.random() * (n - t + 1)) + t).toString(36);
+      var t, n;
       return e;
     })();
     return (
-      (function (e, s, n, i) {
+      (function (e, n, i, s) {
         if (!t()) return;
-        i || (i = "/");
-        let l = "";
-        if (void 0 !== n && n) {
+        s || (s = "/");
+        let o = "";
+        if (void 0 !== i && i) {
           const e = new Date();
-          e.setTime(e.getTime() + 864e5 * n),
-            (l = "; expires=" + e.toUTCString());
+          e.setTime(e.getTime() + 864e5 * i),
+            (o = "; expires=" + e.toUTCString());
         }
         document.cookie =
           encodeURIComponent(e) +
           "=" +
-          encodeURIComponent(s) +
-          l +
+          encodeURIComponent(n) +
+          o +
           ";path=" +
-          i;
+          s;
       })("sessionid", e, 0),
       e
     );
   }
-  function c(_ = u) {
-    const E = {},
-      c = r("config", _);
-    c && (delete c.SESSIONID, Object.assign(s, c), (E.config = !0));
-    const R = r("userinfo", _);
-    R &&
-      (Object.assign(n, R),
-      (E.userConfig = !0),
-      n.is_support &&
+  function u(_ = r) {
+    const a = {},
+      u = l("config", _);
+    u && (delete u.SESSIONID, Object.assign(n, u), (a.config = !0));
+    const m = l("userinfo", _);
+    m &&
+      (Object.assign(i, m),
+      (a.userConfig = !0),
+      i.is_support &&
         (function () {
-          let s = null;
-          t() && (s = e(a));
-          return Boolean(s && 1 === Number.parseInt(s));
+          let n = null;
+          t() && (n = e(E));
+          return Boolean(n && 1 === Number.parseInt(n));
         })() &&
-        (n.is_support = !1));
-    const d = r("broadcast", _);
-    d && (Object.assign(i, d), (E.broadcastConfig = !0));
-    const k = r("community", _);
-    k && (Object.assign(l, k), (E.communityConfig = !0));
-    const m = r("event", _);
-    return m && (Object.assign(o, m), (E.eventConfig = !0)), E;
+        (i.is_support = !1));
+    const S = l("broadcast", _);
+    S && (Object.assign(s, S), (a.broadcastConfig = !0));
+    const d = l("community", _);
+    d && (Object.assign(o, d), (a.communityConfig = !0));
+    const h = l("event", _);
+    return h && (Object.assign(c, h), (a.eventConfig = !0)), a;
   }
-  function r(e, t = u) {
-    return R(e, t, !0);
+  function l(e, t = r) {
+    return m(e, t, !0);
   }
-  function R(e, t = u, s) {
-    let i;
+  function m(e, t = r, n) {
+    let s;
     if (
-      ((i =
+      ((s =
         "string" == typeof t
           ? {
               NODE_ENV: "production",
@@ -183,194 +183,28 @@ var CLSTAMP = "8745921";
             ? null
             : document.getElementById(t)
           : t),
-      i)
+      s)
     )
       try {
-        if (i.hasAttribute("data-" + e)) {
-          return JSON.parse(i.getAttribute("data-" + e));
+        if (s.hasAttribute("data-" + e)) {
+          return JSON.parse(s.getAttribute("data-" + e));
         }
         return null;
       } catch (e) {
         console.error(
           "Failed to parse config for " +
-            n.steamid +
+            i.steamid +
             " (" +
             window.location.href +
             ")",
           e,
         );
       }
-    else s && console.error("Missing config element #", t);
+    else n && console.error("Missing config element #", t);
   }
-  const a = "presentation_mode";
-  var d;
-  !(function (e) {
-    (e[(e.k_EResultOK = 1)] = "k_EResultOK"),
-      (e[(e.k_EResultFail = 2)] = "k_EResultFail"),
-      (e[(e.k_EResultNoConnection = 3)] = "k_EResultNoConnection"),
-      (e[(e.k_EResultInvalidPassword = 5)] = "k_EResultInvalidPassword"),
-      (e[(e.k_EResultLoggedInElsewhere = 6)] = "k_EResultLoggedInElsewhere"),
-      (e[(e.k_EResultInvalidProtocolVer = 7)] = "k_EResultInvalidProtocolVer"),
-      (e[(e.k_EResultInvalidParam = 8)] = "k_EResultInvalidParam"),
-      (e[(e.k_EResultFileNotFound = 9)] = "k_EResultFileNotFound"),
-      (e[(e.k_EResultBusy = 10)] = "k_EResultBusy"),
-      (e[(e.k_EResultInvalidState = 11)] = "k_EResultInvalidState"),
-      (e[(e.k_EResultInvalidName = 12)] = "k_EResultInvalidName"),
-      (e[(e.k_EResultInvalidEmail = 13)] = "k_EResultInvalidEmail"),
-      (e[(e.k_EResultDuplicateName = 14)] = "k_EResultDuplicateName"),
-      (e[(e.k_EResultAccessDenied = 15)] = "k_EResultAccessDenied"),
-      (e[(e.k_EResultTimeout = 16)] = "k_EResultTimeout"),
-      (e[(e.k_EResultBanned = 17)] = "k_EResultBanned"),
-      (e[(e.k_EResultAccountNotFound = 18)] = "k_EResultAccountNotFound"),
-      (e[(e.k_EResultInvalidSteamID = 19)] = "k_EResultInvalidSteamID"),
-      (e[(e.k_EResultServiceUnavailable = 20)] = "k_EResultServiceUnavailable"),
-      (e[(e.k_EResultNotLoggedOn = 21)] = "k_EResultNotLoggedOn"),
-      (e[(e.k_EResultPending = 22)] = "k_EResultPending"),
-      (e[(e.k_EResultEncryptionFailure = 23)] = "k_EResultEncryptionFailure"),
-      (e[(e.k_EResultInsufficientPrivilege = 24)] =
-        "k_EResultInsufficientPrivilege"),
-      (e[(e.k_EResultLimitExceeded = 25)] = "k_EResultLimitExceeded"),
-      (e[(e.k_EResultRevoked = 26)] = "k_EResultRevoked"),
-      (e[(e.k_EResultExpired = 27)] = "k_EResultExpired"),
-      (e[(e.k_EResultAlreadyRedeemed = 28)] = "k_EResultAlreadyRedeemed"),
-      (e[(e.k_EResultDuplicateRequest = 29)] = "k_EResultDuplicateRequest"),
-      (e[(e.k_EResultAlreadyOwned = 30)] = "k_EResultAlreadyOwned"),
-      (e[(e.k_EResultIPNotFound = 31)] = "k_EResultIPNotFound"),
-      (e[(e.k_EResultPersistFailed = 32)] = "k_EResultPersistFailed"),
-      (e[(e.k_EResultLockingFailed = 33)] = "k_EResultLockingFailed"),
-      (e[(e.k_EResultLogonSessionReplaced = 34)] =
-        "k_EResultLogonSessionReplaced"),
-      (e[(e.k_EResultConnectFailed = 35)] = "k_EResultConnectFailed"),
-      (e[(e.k_EResultHandshakeFailed = 36)] = "k_EResultHandshakeFailed"),
-      (e[(e.k_EResultIOFailure = 37)] = "k_EResultIOFailure"),
-      (e[(e.k_EResultRemoteDisconnect = 38)] = "k_EResultRemoteDisconnect"),
-      (e[(e.k_EResultShoppingCartNotFound = 39)] =
-        "k_EResultShoppingCartNotFound"),
-      (e[(e.k_EResultBlocked = 40)] = "k_EResultBlocked"),
-      (e[(e.k_EResultIgnored = 41)] = "k_EResultIgnored"),
-      (e[(e.k_EResultNoMatch = 42)] = "k_EResultNoMatch"),
-      (e[(e.k_EResultAccountDisabled = 43)] = "k_EResultAccountDisabled"),
-      (e[(e.k_EResultServiceReadOnly = 44)] = "k_EResultServiceReadOnly"),
-      (e[(e.k_EResultAccountNotFeatured = 45)] = "k_EResultAccountNotFeatured"),
-      (e[(e.k_EResultAdministratorOK = 46)] = "k_EResultAdministratorOK"),
-      (e[(e.k_EResultContentVersion = 47)] = "k_EResultContentVersion"),
-      (e[(e.k_EResultTryAnotherCM = 48)] = "k_EResultTryAnotherCM"),
-      (e[(e.k_EResultPasswordRequiredToKickSession = 49)] =
-        "k_EResultPasswordRequiredToKickSession"),
-      (e[(e.k_EResultAlreadyLoggedInElsewhere = 50)] =
-        "k_EResultAlreadyLoggedInElsewhere"),
-      (e[(e.k_EResultSuspended = 51)] = "k_EResultSuspended"),
-      (e[(e.k_EResultCancelled = 52)] = "k_EResultCancelled"),
-      (e[(e.k_EResultDataCorruption = 53)] = "k_EResultDataCorruption"),
-      (e[(e.k_EResultDiskFull = 54)] = "k_EResultDiskFull"),
-      (e[(e.k_EResultRemoteCallFailed = 55)] = "k_EResultRemoteCallFailed"),
-      (e[(e.k_EResultPasswordUnset = 56)] = "k_EResultPasswordUnset"),
-      (e[(e.k_EResultExternalAccountUnlinked = 57)] =
-        "k_EResultExternalAccountUnlinked"),
-      (e[(e.k_EResultPSNTicketInvalid = 58)] = "k_EResultPSNTicketInvalid"),
-      (e[(e.k_EResultExternalAccountAlreadyLinked = 59)] =
-        "k_EResultExternalAccountAlreadyLinked"),
-      (e[(e.k_EResultRemoteFileConflict = 60)] = "k_EResultRemoteFileConflict"),
-      (e[(e.k_EResultIllegalPassword = 61)] = "k_EResultIllegalPassword"),
-      (e[(e.k_EResultSameAsPreviousValue = 62)] =
-        "k_EResultSameAsPreviousValue"),
-      (e[(e.k_EResultAccountLogonDenied = 63)] = "k_EResultAccountLogonDenied"),
-      (e[(e.k_EResultCannotUseOldPassword = 64)] =
-        "k_EResultCannotUseOldPassword"),
-      (e[(e.k_EResultInvalidLoginAuthCode = 65)] =
-        "k_EResultInvalidLoginAuthCode"),
-      (e[(e.k_EResultAccountLogonDeniedNoMail = 66)] =
-        "k_EResultAccountLogonDeniedNoMail"),
-      (e[(e.k_EResultHardwareNotCapableOfIPT = 67)] =
-        "k_EResultHardwareNotCapableOfIPT"),
-      (e[(e.k_EResultIPTInitError = 68)] = "k_EResultIPTInitError"),
-      (e[(e.k_EResultParentalControlRestricted = 69)] =
-        "k_EResultParentalControlRestricted"),
-      (e[(e.k_EResultFacebookQueryError = 70)] = "k_EResultFacebookQueryError"),
-      (e[(e.k_EResultExpiredLoginAuthCode = 71)] =
-        "k_EResultExpiredLoginAuthCode"),
-      (e[(e.k_EResultIPLoginRestrictionFailed = 72)] =
-        "k_EResultIPLoginRestrictionFailed"),
-      (e[(e.k_EResultAccountLockedDown = 73)] = "k_EResultAccountLockedDown"),
-      (e[(e.k_EResultAccountLogonDeniedVerifiedEmailRequired = 74)] =
-        "k_EResultAccountLogonDeniedVerifiedEmailRequired"),
-      (e[(e.k_EResultNoMatchingURL = 75)] = "k_EResultNoMatchingURL"),
-      (e[(e.k_EResultBadResponse = 76)] = "k_EResultBadResponse"),
-      (e[(e.k_EResultRequirePasswordReEntry = 77)] =
-        "k_EResultRequirePasswordReEntry"),
-      (e[(e.k_EResultValueOutOfRange = 78)] = "k_EResultValueOutOfRange"),
-      (e[(e.k_EResultUnexpectedError = 79)] = "k_EResultUnexpectedError"),
-      (e[(e.k_EResultDisabled = 80)] = "k_EResultDisabled"),
-      (e[(e.k_EResultInvalidCEGSubmission = 81)] =
-        "k_EResultInvalidCEGSubmission"),
-      (e[(e.k_EResultRestrictedDevice = 82)] = "k_EResultRestrictedDevice"),
-      (e[(e.k_EResultRegionLocked = 83)] = "k_EResultRegionLocked"),
-      (e[(e.k_EResultRateLimitExceeded = 84)] = "k_EResultRateLimitExceeded"),
-      (e[(e.k_EResultAccountLoginDeniedNeedTwoFactor = 85)] =
-        "k_EResultAccountLoginDeniedNeedTwoFactor"),
-      (e[(e.k_EResultItemDeleted = 86)] = "k_EResultItemDeleted"),
-      (e[(e.k_EResultAccountLoginDeniedThrottle = 87)] =
-        "k_EResultAccountLoginDeniedThrottle"),
-      (e[(e.k_EResultTwoFactorCodeMismatch = 88)] =
-        "k_EResultTwoFactorCodeMismatch"),
-      (e[(e.k_EResultTwoFactorActivationCodeMismatch = 89)] =
-        "k_EResultTwoFactorActivationCodeMismatch"),
-      (e[(e.k_EResultAccountAssociatedToMultiplePartners = 90)] =
-        "k_EResultAccountAssociatedToMultiplePartners"),
-      (e[(e.k_EResultNotModified = 91)] = "k_EResultNotModified"),
-      (e[(e.k_EResultNoMobileDevice = 92)] = "k_EResultNoMobileDevice"),
-      (e[(e.k_EResultTimeNotSynced = 93)] = "k_EResultTimeNotSynced"),
-      (e[(e.k_EResultSmsCodeFailed = 94)] = "k_EResultSmsCodeFailed"),
-      (e[(e.k_EResultAccountLimitExceeded = 95)] =
-        "k_EResultAccountLimitExceeded"),
-      (e[(e.k_EResultAccountActivityLimitExceeded = 96)] =
-        "k_EResultAccountActivityLimitExceeded"),
-      (e[(e.k_EResultPhoneActivityLimitExceeded = 97)] =
-        "k_EResultPhoneActivityLimitExceeded"),
-      (e[(e.k_EResultRefundToWallet = 98)] = "k_EResultRefundToWallet"),
-      (e[(e.k_EResultEmailSendFailure = 99)] = "k_EResultEmailSendFailure"),
-      (e[(e.k_EResultNotSettled = 100)] = "k_EResultNotSettled"),
-      (e[(e.k_EResultNeedCaptcha = 101)] = "k_EResultNeedCaptcha"),
-      (e[(e.k_EResultGSLTDenied = 102)] = "k_EResultGSLTDenied"),
-      (e[(e.k_EResultGSOwnerDenied = 103)] = "k_EResultGSOwnerDenied"),
-      (e[(e.k_EResultInvalidItemType = 104)] = "k_EResultInvalidItemType"),
-      (e[(e.k_EResultIPBanned = 105)] = "k_EResultIPBanned"),
-      (e[(e.k_EResultGSLTExpired = 106)] = "k_EResultGSLTExpired"),
-      (e[(e.k_EResultInsufficientFunds = 107)] = "k_EResultInsufficientFunds"),
-      (e[(e.k_EResultTooManyPending = 108)] = "k_EResultTooManyPending"),
-      (e[(e.k_EResultNoSiteLicensesFound = 109)] =
-        "k_EResultNoSiteLicensesFound"),
-      (e[(e.k_EResultWGNetworkSendExceeded = 110)] =
-        "k_EResultWGNetworkSendExceeded"),
-      (e[(e.k_EResultAccountNotFriends = 111)] = "k_EResultAccountNotFriends"),
-      (e[(e.k_EResultLimitedUserAccount = 112)] =
-        "k_EResultLimitedUserAccount"),
-      (e[(e.k_EResultCantRemoveItem = 113)] = "k_EResultCantRemoveItem"),
-      (e[(e.k_EResultAccountDeleted = 114)] = "k_EResultAccountDeleted"),
-      (e[(e.k_EResultExistingUserCancelledLicense = 115)] =
-        "k_EResultExistingUserCancelledLicense"),
-      (e[(e.k_EResultCommunityCooldown = 116)] = "k_EResultCommunityCooldown"),
-      (e[(e.k_EResultNoLauncherSpecified = 117)] =
-        "k_EResultNoLauncherSpecified"),
-      (e[(e.k_EResultMustAgreeToSSA = 118)] = "k_EResultMustAgreeToSSA"),
-      (e[(e.k_EResultLauncherMigrated = 119)] = "k_EResultLauncherMigrated"),
-      (e[(e.k_EResultSteamRealmMismatch = 120)] =
-        "k_EResultSteamRealmMismatch"),
-      (e[(e.k_EResultInvalidSignature = 121)] = "k_EResultInvalidSignature"),
-      (e[(e.k_EResultParseFailure = 122)] = "k_EResultParseFailure"),
-      (e[(e.k_EResultNoVerifiedPhone = 123)] = "k_EResultNoVerifiedPhone"),
-      (e[(e.k_EResultInsufficientBattery = 124)] =
-        "k_EResultInsufficientBattery"),
-      (e[(e.k_EResultChargerRequired = 125)] = "k_EResultChargerRequired"),
-      (e[(e.k_EResultCachedCredentialInvalid = 126)] =
-        "k_EResultCachedCredentialInvalid"),
-      (e[(e.K_EResultPhoneNumberIsVOIP = 127)] = "K_EResultPhoneNumberIsVOIP"),
-      (e[(e.k_EResultNotSupported = 128)] = "k_EResultNotSupported"),
-      (e[(e.k_EResultFamilySizeLimitExceeded = 129)] =
-        "k_EResultFamilySizeLimitExceeded");
-  })(d || (d = {}));
-  let k = { success: !0, result: d.k_EResultOK };
-  class m {
+  const E = "presentation_mode";
+  let S = { success: !0, result: 1 };
+  class d {
     constructor() {
       (this.m_mapWaitingCallbacks = new Map()),
         (this.m_iCallSeq = 1),
@@ -397,27 +231,27 @@ var CLSTAMP = "8745921";
       return this.m_socket && this.m_socket.readyState == WebSocket.OPEN;
     }
     SendMsgAndAwaitResponse(e) {
-      return new Promise((t, s) => {
-        let n = this.m_iCallSeq++;
-        this.BSendMsg(e, n)
-          ? this.m_mapWaitingCallbacks.set(n, {
-              iSeq: n,
+      return new Promise((t, n) => {
+        let i = this.m_iCallSeq++;
+        this.BSendMsg(e, i)
+          ? this.m_mapWaitingCallbacks.set(i, {
+              iSeq: i,
               fnCallback: t,
-              fnError: s,
+              fnError: n,
             })
-          : s();
+          : n();
       });
     }
     BSendMsg(e, t) {
       if (!this.m_socket || this.m_socket.readyState != WebSocket.OPEN)
         return !1;
-      let i = Object.assign({}, e, {
-        universe: s.EUNIVERSE,
-        accountid: n.accountid,
+      let s = Object.assign({}, e, {
+        universe: n.EUNIVERSE,
+        accountid: i.accountid,
       });
-      void 0 !== t && (i.sequenceid = t);
+      void 0 !== t && (s.sequenceid = t);
       try {
-        return this.m_socket.send(JSON.stringify(i)), !0;
+        return this.m_socket.send(JSON.stringify(s)), !0;
       } catch (e) {
         return !1;
       }
@@ -453,14 +287,14 @@ var CLSTAMP = "8745921";
           (this.m_socket.onmessage = this.OnSocketMessage.bind(this)),
           (this.m_socket.onopen = () => {
             this.SendMsgAndAwaitResponse({ message: "GetClientInfo" })
-              .then((s) => {
-                s.success == d.k_EResultOK
-                  ? ((this.m_ClientInfo.ulVersion = s.clientversion),
-                    (this.m_ClientInfo.bFriendsUIEnabled = !!s.friendsui),
-                    (this.m_ClientInfo.unAccountID = s.accountid),
-                    s.supported_messages &&
+              .then((n) => {
+                1 == n.success
+                  ? ((this.m_ClientInfo.ulVersion = n.clientversion),
+                    (this.m_ClientInfo.bFriendsUIEnabled = !!n.friendsui),
+                    (this.m_ClientInfo.unAccountID = n.accountid),
+                    n.supported_messages &&
                       (this.m_ClientInfo.rgSupportedMessages =
-                        s.supported_messages),
+                        n.supported_messages),
                     e())
                   : t();
               })
@@ -481,13 +315,13 @@ var CLSTAMP = "8745921";
       );
     }
   }
-  let S = new (class {
+  let h = new (class {
     constructor() {
-      (this.m_connection = new m()),
+      (this.m_connection = new d()),
         (this.m_bAllowAccountMismatch = !1),
         (this.m_mapCacheSubscribedApp = new Map());
     }
-    FailureResult(e = d.k_EResultFail) {
+    FailureResult(e = 2) {
       let t = { success: !1, result: e };
       return (
         this.m_connection &&
@@ -496,7 +330,7 @@ var CLSTAMP = "8745921";
         this.m_connection &&
           !this.m_connection.connected_to_client &&
           (t.connect_failed = !0),
-        e == d.k_EResultInvalidProtocolVer && (t.call_unsupported = !0),
+        7 == e && (t.call_unsupported = !0),
         t
       );
     }
@@ -505,7 +339,7 @@ var CLSTAMP = "8745921";
     }
     BClientConnected() {
       return this.m_connection.Connect().then(
-        () => k,
+        () => S,
         () => this.FailureResult(),
       );
     }
@@ -520,8 +354,8 @@ var CLSTAMP = "8745921";
       return this.GenericEResultCall(t);
     }
     OpenChatRoomGroupDialog(e, t) {
-      let s = { message: "ShowChatRoomGroupDialog", chat_group_id: e };
-      return t && (s.chat_room_id = t), this.GenericEResultCall(s);
+      let n = { message: "ShowChatRoomGroupDialog", chat_group_id: e };
+      return t && (n.chat_room_id = t), this.GenericEResultCall(n);
     }
     ShowChatRoomGroupInvite(e) {
       let t = { message: "ShowChatRoomGroupInvite", invite_code: e };
@@ -533,8 +367,8 @@ var CLSTAMP = "8745921";
       let t = { message: "IsSubscribedApp", appid: e };
       return this.GenericEResultCall(t).then((t) => {
         if (t.connect_failed) return;
-        let s = t.result == d.k_EResultOK;
-        return this.m_mapCacheSubscribedApp.set(e, s), s;
+        let n = 1 == t.result;
+        return this.m_mapCacheSubscribedApp.set(e, n), n;
       });
     }
     OpenFriendsDialog() {
@@ -542,7 +376,7 @@ var CLSTAMP = "8745921";
     }
     BClientAccountMatches() {
       return (
-        !n.logged_in || n.accountid == this.m_connection.ClientInfo.unAccountID
+        !i.logged_in || i.accountid == this.m_connection.ClientInfo.unAccountID
       );
     }
     GenericEResultCall(e) {
@@ -553,21 +387,15 @@ var CLSTAMP = "8745921";
             ? this.m_connection
                 .SendMsgAndAwaitResponse(e)
                 .then((e) =>
-                  e.success === d.k_EResultOK
-                    ? k
-                    : this.FailureResult(e.success),
+                  1 === e.success ? S : this.FailureResult(e.success),
                 )
-            : {
-                success: !1,
-                result: d.k_EResultInvalidSteamID,
-                account_mismatch: !0,
-              },
+            : { success: !1, result: 19, account_mismatch: !0 },
         )
         .catch(() => this.FailureResult());
     }
   })();
-  (window.ClientConnectionAPI = S),
+  (window.ClientConnectionAPI = h),
     document.addEventListener("DOMContentLoaded", function () {
-      c(), (window.ClientConnectionAPI = S);
+      u(), (window.ClientConnectionAPI = h);
     });
 })();
