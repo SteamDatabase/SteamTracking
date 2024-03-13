@@ -1053,12 +1053,8 @@
           _ = !(!s || (l && s == l)),
           E = (0, n.ps)(r),
           g = E && N(E.rtSubmitted),
-          S = (0, c.IE)(null == E ? void 0 : E.submitterID),
-          P = (null == S ? void 0 : S.data)
-            ? S.data.m_strPlayerName
-            : null == E
-            ? void 0
-            : E.submitterID;
+          S = (0, c.Qv)(null == E ? void 0 : E.submitterID),
+          P = S ? S.m_strPlayerName : null == E ? void 0 : E.submitterID;
         return o.createElement(
           "div",
           { className: h().PricePopout },

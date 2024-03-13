@@ -973,36 +973,37 @@
     },
     66263: (e, t, i) => {
       i.d(t, {
-        $w: () => U,
-        AN: () => q,
+        $w: () => K,
+        AN: () => X,
         FR: () => I,
         HV: () => v,
-        HX: () => W,
-        OB: () => z,
-        OG: () => Q,
+        HX: () => Q,
+        OB: () => T,
+        OG: () => x,
         Ol: () => D,
         PP: () => S,
-        R2: () => N,
-        Rs: () => F,
+        R2: () => M,
+        Rs: () => z,
         Tj: () => b,
-        We: () => j,
+        We: () => H,
         X1: () => E,
         _w: () => f,
-        bS: () => V,
+        bS: () => F,
         dU: () => L,
-        df: () => T,
-        j_: () => H,
-        ju: () => w,
-        np: () => $,
-        on: () => K,
+        df: () => W,
+        h3: () => w,
+        j_: () => q,
+        ju: () => B,
+        np: () => Z,
+        on: () => N,
         ps: () => R,
         qH: () => C,
         rX: () => O,
-        sN: () => X,
+        sN: () => $,
         tu: () => A,
-        uT: () => x,
-        xm: () => Z,
-        yh: () => M,
+        uT: () => j,
+        xm: () => Y,
+        yh: () => V,
       });
       var r = i(85556),
         a = i(80751),
@@ -1811,10 +1812,13 @@
       function R(e) {
         return g.Get().m_mapPriceProposals.get(e);
       }
-      function w(e) {
-        return g.Get().m_mapPriceProposals.get(e);
+      function w() {
+        return Array.from(g.Get().m_mapPriceProposals.values());
       }
       function B(e) {
+        return g.Get().m_mapPriceProposals.get(e);
+      }
+      function U(e) {
         let t = !1;
         for (const i of g.Get().m_rgKnownPriceKeys) {
           let r = g.Get().GetPublishedPrice(e, i);
@@ -1822,7 +1826,7 @@
         }
         return t;
       }
-      function U(e) {
+      function K(e) {
         const t = R(e),
           i = [];
         for (const r of g.Get().m_rgKnownPriceKeys) {
@@ -1838,29 +1842,29 @@
         }
         return i;
       }
-      function K() {
+      function N() {
         return g.Get().m_rgKnownPriceKeys;
       }
-      function N(e) {
+      function M(e) {
         let t = g.Get().m_mapPriceKeyDescriptions.get(e);
         return t ? t.strDescription : "";
       }
-      function M(e) {
+      function V(e) {
         return s.useCallback(() => {
           g.Get().DiscardAllLocalPriceOverridesForKey(e);
         }, [e]);
       }
-      function V(e) {
+      function F(e) {
         return s.useCallback(() => {
           g.Get().DiscardLocalPriceOverridesForPackage(e);
         }, [e]);
       }
-      function F(e) {
+      function z(e) {
         return s.useCallback(() => {
           g.Get().CancelProposal(e);
         }, [e]);
       }
-      function z() {
+      function T() {
         const [e, t] = s.useState(g.Get().m_strDisplayPriceKey),
           i = g.Get().m_rgKnownPriceKeys,
           r = s.useCallback((e) => {
@@ -1870,24 +1874,24 @@
           }, []);
         return { strPriceKey: e, rgSupportedPriceKeys: i, fnSetPriceKey: r };
       }
-      function T(e) {
+      function W(e) {
         const t = (0, p.NW)();
         return (
           (0, p.Qg)(g.Get().m_allPriceOverridesCallbackList, t),
           g.Get().BHasLocalPriceOverrides(e)
         );
       }
-      function W(e) {
+      function Q(e) {
         return g.Get().BHasLocalPriceOverrides(e);
       }
-      function Q() {
+      function x() {
         const [e, t] = s.useState(() => g.Get().GetAllLocalPriceOverrides());
         return (0, p.Qg)(g.Get().m_allPriceOverridesCallbackList, t), e;
       }
-      function x(e) {
+      function j(e) {
         return (0, h.SZ)(() => g.Get().GetLocalOverrideCountForPriceKey(e));
       }
-      function j() {
+      function H() {
         return s.useCallback(() => {
           var e;
           return (
@@ -1897,10 +1901,10 @@
           );
         }, []);
       }
-      function H() {
+      function q() {
         return s.useCallback(() => g.Get().DiscardAllLocalPriceOverrides(), []);
       }
-      function q() {
+      function X() {
         const e = [],
           t = s.useRef(new Map());
         g.Get().m_mapPriceGuidelines.forEach((i, r) => {
@@ -1916,23 +1920,23 @@
         }, []);
         return { rgUSDPricesInCents: e, fnApplyGuidelines: i };
       }
-      function X() {
+      function $() {
         return s.useCallback(
           (e, t, i) => g.Get().SubmitProposalToServer(e, t, i),
           [],
         );
       }
-      function $() {
+      function Z() {
         return s.useCallback(
           (e, t) => g.Get().PublishApprovedProposal(e, t, 6e4),
           [],
         );
       }
-      function Z(e) {
+      function Y(e) {
         let t = [];
         const i = g.Get().m_rgKnownPriceKeys;
         for (let r of e) {
-          if (B(r)) continue;
+          if (U(r)) continue;
           let e = !1;
           for (const t of i) {
             if (!g.Get().BPriceKeyRequired(t)) continue;

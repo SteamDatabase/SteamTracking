@@ -204,7 +204,7 @@
     },
     22331: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { PricingRoutes: () => Se, default: () => Ie });
+      n.r(t), n.d(t, { PricingRoutes: () => Ie, default: () => we });
       var r = n(760),
         a = n(69406),
         i = n(47427),
@@ -236,9 +236,9 @@
         X = n(82e3),
         B = n(18500),
         y = n(85556),
-        O = n(62613),
-        A = n(71031),
-        R = n.n(A),
+        A = n(62613),
+        O = n(71031),
+        R = n.n(O),
         G = n(7073),
         M = n(95518),
         F = n(64936),
@@ -365,7 +365,7 @@
           i.createElement(
             "span",
             { className: R().ChangeArrow },
-            i.createElement(O.Ehc, { angle: 90 }),
+            i.createElement(A.Ehc, { angle: 90 }),
           ),
           i.createElement(
             "div",
@@ -576,7 +576,7 @@
               i.createElement(
                 "div",
                 { className: R().PriceChangeSaveWarningArrow },
-                i.createElement(O.Ehc, { angle: 0 }),
+                i.createElement(A.Ehc, { angle: 0 }),
               ),
               i.createElement(
                 "div",
@@ -1539,11 +1539,18 @@
             ),
         );
       }
-      function xe(e) {
+      var xe = n(23951);
+      function fe(e) {
         (0, g.j)((0, P.We)());
         const t = (0, m.NR)(),
           n = D.De.PARTNER_BASE_URL + "doc/store/pricing",
-          r = D.De.HELP_BASE_URL + "wizard/HelpWithPublishing?issueid=920";
+          r = D.De.HELP_BASE_URL + "wizard/HelpWithPublishing?issueid=920",
+          a = (0, P.h3)(),
+          l = (0, i.useMemo)(
+            () => Array.from(new Set(a.map((e) => e.submitterID))),
+            [a],
+          );
+        (0, xe.vP)(l);
         return i.createElement(
           "div",
           { className: u().DashboardPage },
@@ -1559,7 +1566,7 @@
                 s.KM,
                 {
                   onClick: (e) =>
-                    (0, _.AM)(i.createElement(fe, null), (0, b.RA)(e)),
+                    (0, _.AM)(i.createElement(Ne, null), (0, b.RA)(e)),
                 },
                 (0, E.Xx)("#PricingDashboard_ApplyGuidelinesDialog_Button"),
               ),
@@ -1598,7 +1605,7 @@
             ),
         );
       }
-      function fe(e) {
+      function Ne(e) {
         const { closeModal: t } = e,
           n = (0, P.Ol)();
         return i.createElement(
@@ -1639,10 +1646,10 @@
           ),
         );
       }
-      var Ne = n(9781);
-      const Se = { PricingDashboard: () => "/dashboard/:publisherid(\\d*)" };
-      function Ie(e) {
-        return (0, Ne.N)()
+      var Se = n(9781);
+      const Ie = { PricingDashboard: () => "/dashboard/:publisherid(\\d*)" };
+      function we(e) {
+        return (0, Se.N)()
           ? i.createElement(
               l.VK,
               { basename: (0, r.l)() + "pricing/" },
@@ -1661,8 +1668,8 @@
                     ),
                 }),
                 i.createElement(o.AW, {
-                  path: Se.PricingDashboard(),
-                  render: (e) => i.createElement(xe, null),
+                  path: Ie.PricingDashboard(),
+                  render: (e) => i.createElement(fe, null),
                 }),
                 i.createElement(o.AW, { component: a.R }),
               ),
@@ -2020,12 +2027,8 @@
           p = !(!c || (l && c == l)),
           _ = (0, r.ps)(t),
           h = _ && w(_.rtSubmitted),
-          b = (0, o.IE)(null == _ ? void 0 : _.submitterID),
-          E = (null == b ? void 0 : b.data)
-            ? b.data.m_strPlayerName
-            : null == _
-            ? void 0
-            : _.submitterID;
+          b = (0, o.Qv)(null == _ ? void 0 : _.submitterID),
+          E = b ? b.m_strPlayerName : null == _ ? void 0 : _.submitterID;
         return i.createElement(
           "div",
           { className: C().PricePopout },

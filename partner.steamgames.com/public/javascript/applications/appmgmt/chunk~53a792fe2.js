@@ -195,8 +195,8 @@
         ZW: () => I,
         _l: () => b,
         dS: () => R,
-        du: () => A,
-        lQ: () => y,
+        du: () => y,
+        lQ: () => A,
         nw: () => G,
         py: () => S,
         qh: () => v,
@@ -970,10 +970,10 @@
           fnUpdateOptInRegistrationJson: v.Get().UpdateOptInRegistrationJson,
         };
       }
-      function A() {
+      function y() {
         return { fnUpdateAppealState: v.Get().UpdateAppealState };
       }
-      function y() {
+      function A() {
         const [t, e] = (0, r.useState)(v.Get().GetLoadCount());
         return (
           (0, m.Qg)(v.Get().GetLoadCountChange(), e), v.Get().GetLoadCount()
@@ -1010,13 +1010,13 @@
         XM: () => P,
         Xj: () => N,
         _J: () => k,
-        b2: () => A,
+        b2: () => y,
         co: () => E,
         dE: () => h,
         hd: () => O,
         k1: () => w,
         kk: () => f,
-        ls: () => y,
+        ls: () => A,
         u3: () => B,
         v6: () => S,
         yI: () => C,
@@ -1504,7 +1504,7 @@
           Array.from(t.map((t) => [t, v.Get().GetDiscountByID(t)])),
         );
       }
-      function A(t) {
+      function y(t) {
         const e = (0, r.zD)(),
           [n, a] = o.useState(v.Get().GetAllDiscountsForPackage(t));
         return (
@@ -1525,7 +1525,7 @@
           }, [t, e, n])
         );
       }
-      function y(t) {
+      function A(t) {
         const e = (0, r.zD)();
         if (!t) return null;
         let n = null;
@@ -1636,7 +1636,7 @@
     95518: (t, e, n) => {
       "use strict";
       n.d(e, {
-        B6: () => y,
+        B6: () => A,
         E5: () => T,
         E_: () => M,
         Eh: () => k,
@@ -1649,7 +1649,7 @@
         ho: () => H,
         hr: () => R,
         k: () => x,
-        pl: () => A,
+        pl: () => y,
         s$: () => w,
         yn: () => F,
         z$: () => j,
@@ -1980,6 +1980,22 @@
             )
             .map((t) => t.id);
         }
+        GetFurthestCooldownFromPastDiscounts(t) {
+          const e = (0, u.kl)();
+          let n = e;
+          return (
+            t
+              .filter((t) => t.rtStartDate < e)
+              .filter((t) => {
+                const e = (0, a.fH)(t.discountEventID);
+                return "unique" != (null == e ? void 0 : e.collision_type);
+              })
+              .forEach((t) => {
+                t.rtEndDate + I < n && (n = t.rtEndDate + I);
+              }),
+            n
+          );
+        }
         GetFutureDiscountRanges(t) {
           const e = d.Z.Get().GetPackage(t),
             n = this.GetPackageDiscountsIncludingOverrides(t);
@@ -1988,7 +2004,12 @@
               (t, e) => t.rtStartDate - e.rtStartDate,
             ),
             s = (0, u.kl)(),
-            o = Math.max(s, e.GetReleaseDateRTime() + I, (0, v.QM)(t) + I),
+            o = Math.max(
+              s,
+              e.GetReleaseDateRTime() + I,
+              (0, v.QM)(t) + I,
+              this.GetFurthestCooldownFromPastDiscounts(i),
+            ),
             r = [],
             l = new Set();
           let p = o;
@@ -2197,13 +2218,13 @@
           P.Get();
         }, []);
       }
-      function A() {
+      function y() {
         const [t, e] = l.useState(P.Get().GetLocalPackageDiscountOverrides());
         return (
           (0, g.Qg)(P.Get().GetLocalPackageDiscountOverrideCallbackList(), e), t
         );
       }
-      function y() {
+      function A() {
         return l.useCallback(() => {
           var t;
           return (
