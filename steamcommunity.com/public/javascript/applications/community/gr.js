@@ -107,7 +107,7 @@
     },
     50928: (e, t, r) => {
       "use strict";
-      r.d(t, { JZ: () => L });
+      r.d(t, { JZ: () => u });
       var n = r(85556),
         C = r(47427),
         i = r(65255),
@@ -197,10 +197,10 @@
       function c(e) {
         return (0, a.SZ)(() => s.Get().BIsLoaded(e));
       }
-      function L(e, t) {
+      function u(e, t) {
         const r = s.Get(),
           n = c(e),
-          i = u(e),
+          i = d(e),
           [l, o] = (0, C.useState)(null);
         return (
           (0, C.useEffect)(() => {
@@ -209,7 +209,7 @@
           l
         );
       }
-      function u(e) {
+      function d(e) {
         const t = s.Get();
         return (0, a.SZ)(() => {
           const r = t.GetTimelineMarkerURLFunction();
@@ -230,7 +230,7 @@
       r.d(t, {
         Mv: () => a,
         Q2: () => w,
-        XT: () => d,
+        XT: () => L,
         cY: () => m,
         iv: () => s,
         jq: () => g,
@@ -285,8 +285,8 @@
           (e[(e.Brown = 7)] = "Brown"),
           (e[(e.Gray = 8)] = "Gray");
       })(o || (o = {}));
-      const L = c(o).map((e) => o[e]);
-      class u {
+      const u = c(o).map((e) => o[e]);
+      class d {
         constructor() {
           this.m_mapSteamTimelineMarkers = new Map();
         }
@@ -305,18 +305,18 @@
         }
         static Get() {
           return (
-            u.s_Singleton ||
-              ((u.s_Singleton = new u()),
-              u.s_Singleton.Init(),
+            d.s_Singleton ||
+              ((d.s_Singleton = new d()),
+              d.s_Singleton.Init(),
               "dev" == n.De.WEB_UNIVERSE &&
-                (window.g_SteamTimelineMarker = u.s_Singleton)),
-            u.s_Singleton
+                (window.g_SteamTimelineMarker = d.s_Singleton)),
+            d.s_Singleton
           );
         }
         AddMarker(e, t, r) {
           const n = null != r ? r : o.White;
           this.m_mapSteamTimelineMarkers.set(e, { func: t, color: n });
-          for (const r of L) {
+          for (const r of u) {
             const n = `${e}_${o[r]}`.toLowerCase();
             this.m_mapSteamTimelineMarkers.set(n, { func: t, color: r });
           }
@@ -368,8 +368,8 @@
             this.AddMarker("screenshot", C.w_, o.Gray);
         }
       }
-      function d(e) {
-        return u.Get().GetMarkerByID(e);
+      function L(e) {
+        return d.Get().GetMarkerByID(e);
       }
       function h() {
         return { func: C.Jx, color: o.Blue };
@@ -398,8 +398,8 @@
           [i, l] = (0, n.useState)(!1),
           [o, a] = (0, n.useState)(null),
           [s, c] = (0, n.useState)(null),
-          [L, u] = (0, n.useState)(null),
-          [d, h] = (0, n.useState)(null),
+          [u, d] = (0, n.useState)(null),
+          [L, h] = (0, n.useState)(null),
           [m, w] = (0, n.useState)(null);
         return {
           bLoading: e,
@@ -407,8 +407,8 @@
           bSuccess: i,
           strError: o,
           strSuccess: s,
-          elSuccess: d,
-          elError: L,
+          elSuccess: L,
+          elError: u,
           strThrobber: m,
           fnSetLoading: t,
           fnSetError: C,
@@ -416,7 +416,7 @@
           fnSetStrError: a,
           fnSetStrSuccess: c,
           fnSetElSuccess: h,
-          fnSetElError: u,
+          fnSetElError: d,
           fnSetThrobber: w,
         };
       }
@@ -432,27 +432,27 @@
           } = e,
           {
             bLoading: c,
-            bError: L,
-            bSuccess: u,
-            strError: d,
+            bError: u,
+            bSuccess: d,
+            strError: L,
             strSuccess: h,
             elSuccess: m,
             elError: w,
             strThrobber: g,
           } = r;
-        return L || d || w
+        return u || L || w
           ? n.createElement(
               C.uH,
               { strTitle: t, bAlertDialog: !0, closeModal: a },
-              Boolean(d) &&
+              Boolean(L) &&
                 n.createElement(
                   "div",
                   { className: i.ErrorStylesWithIcon },
-                  d || (0, l.Xx)("#Error_ErrorCommunicatingWithNetwork"),
+                  L || (0, l.Xx)("#Error_ErrorCommunicatingWithNetwork"),
                 ),
               Boolean(w) && w,
             )
-          : u || h || m
+          : d || h || m
           ? n.createElement(
               C.uH,
               {
@@ -485,18 +485,18 @@
         Cd: () => B,
         Eq: () => Q,
         FE: () => _,
-        FG: () => L,
+        FG: () => u,
         G7: () => O,
         Gu: () => a,
-        I8: () => Z,
+        I8: () => y,
         Io: () => G,
         Jx: () => o,
         KT: () => J,
-        MC: () => u,
+        MC: () => d,
         OQ: () => T,
-        Q0: () => k,
-        Qm: () => d,
-        Ux: () => x,
+        Q0: () => x,
+        Qm: () => L,
+        Ux: () => Z,
         Vy: () => m,
         W4: () => R,
         WF: () => X,
@@ -518,7 +518,7 @@
         kI: () => s,
         n5: () => b,
         rZ: () => c,
-        rp: () => y,
+        rp: () => k,
         sO: () => D,
         u4: () => V,
         v3: () => j,
@@ -651,7 +651,7 @@
           }),
         );
       }
-      function L(e) {
+      function u(e) {
         return C.createElement(
           "svg",
           {
@@ -669,7 +669,7 @@
           }),
         );
       }
-      function u(e) {
+      function d(e) {
         return C.createElement(
           "svg",
           {
@@ -685,7 +685,7 @@
           }),
         );
       }
-      function d(e) {
+      function L(e) {
         return C.createElement(
           "svg",
           {
@@ -901,7 +901,7 @@
           }),
         );
       }
-      function Z(e) {
+      function y(e) {
         return C.createElement(
           "svg",
           {
@@ -921,7 +921,7 @@
           }),
         );
       }
-      function y(e) {
+      function k(e) {
         return C.createElement(
           "svg",
           {
@@ -937,7 +937,7 @@
           }),
         );
       }
-      function k(e) {
+      function x(e) {
         return C.createElement(
           "svg",
           {
@@ -953,7 +953,7 @@
           }),
         );
       }
-      function x(e) {
+      function Z(e) {
         return C.createElement(
           "svg",
           {
@@ -1320,19 +1320,46 @@
             },
             e,
           ),
-          C.createElement("path", {
+          C.createElement("rect", {
             fill: "currentColor",
-            d: "M5 9.32133C6.51731 7.36721 9.36227 6.96168 11.3727 8.3996L21.8042 15.9209L25.0285 13.5981C25.3699 13.34 25.5596 12.8975 25.4457 12.492C25.2561 11.7178 25.2182 10.9066 25.4078 10.0587C25.863 8.03088 27.608 6.40865 29.7322 6.07683C33.0703 5.52379 35.9911 8.03094 35.9911 11.2016C35.9911 14.0775 33.6012 16.4001 30.6426 16.4001C29.6184 16.4001 28.708 16.1421 27.8734 15.6628C27.4941 15.4416 27.0009 15.4784 26.6596 15.7364L23.5492 17.9854L26.6596 20.2344C27.001 20.4924 27.4941 20.5294 27.8734 20.3081C28.9356 19.6814 30.2252 19.4232 31.5908 19.6444C33.8668 20.0499 35.6496 21.8565 35.9531 24.1055C36.4082 27.4975 33.4875 30.3364 29.9976 29.9677C27.6459 29.7097 25.7112 27.9031 25.3319 25.6172C25.2181 24.8798 25.2561 24.1424 25.4458 23.4787C25.5596 23.0732 25.3699 22.6306 25.0285 22.3726L21.8042 20.0498L11.3727 27.5711C9.36222 29.0458 6.51732 28.6403 5.00001 26.6494L17.0247 17.9852L5 9.32133ZM30.6426 13.3769C31.8563 13.3769 32.8806 12.4183 32.8806 11.2016C32.8806 10.0219 31.8944 9.02631 30.6426 9.02631C29.4288 9.02631 28.4045 9.98488 28.4045 11.2016C28.4045 12.3815 29.3907 13.3769 30.6426 13.3769ZM30.6426 26.9447C31.8563 26.9447 32.8806 25.9861 32.8806 24.7694C32.8806 23.5896 31.8944 22.5941 30.6426 22.5941C29.4288 22.5941 28.4045 23.5527 28.4045 24.7694C28.4045 25.9491 29.3907 26.9447 30.6426 26.9447ZM19.9076 19.0179C20.4766 19.0179 20.9698 18.5385 20.9698 17.9855C20.9698 17.4324 20.4766 16.9531 19.9076 16.9531C19.3386 16.9531 18.8454 17.4324 18.8454 17.9855C18.8455 18.5385 19.3007 19.0179 19.9076 19.0179Z",
+            x: "3.82617",
+            y: "2",
+            width: "3",
+            height: "4",
+          }),
+          C.createElement("rect", {
+            fill: "currentColor",
+            x: "3.82617",
+            y: "9",
+            width: "3",
+            height: "4",
+          }),
+          C.createElement("rect", {
+            fill: "currentColor",
+            x: "3.82617",
+            y: "16",
+            width: "3",
+            height: "4",
+          }),
+          C.createElement("rect", {
+            fill: "currentColor",
+            x: "3.82617",
+            y: "23",
+            width: "3",
+            height: "4",
+          }),
+          C.createElement("rect", {
+            fill: "currentColor",
+            x: "3.82617",
+            y: "30",
+            width: "3",
+            height: "4",
           }),
           C.createElement("path", {
             fill: "currentColor",
             fillRule: "evenodd",
             clipRule: "evenodd",
-            d: "M3 13.8L3 11L2.62268e-07 11L3.8466e-07 13.8L3 13.8ZM3 19.4L3 16.6L5.07052e-07 16.6L6.29444e-07 19.4L3 19.4ZM3 25L3 22.2L7.51836e-07 22.2L8.74228e-07 25L3 25ZM3 30.6L3 27.8L9.9662e-07 27.8L1.11901e-06 30.6L3 30.6Z",
-          }),
-          C.createElement("path", {
-            fill: "currentColor",
-            d: "M3 7.8L3 5L2.62268e-07 5L3.8466e-07 7.8L3 7.8Z",
+            d: "M10.0001 22.0989V17.8189L16.2074 15.869L16.2459 12.2486C16.2407 11.8588 16.0085 11.482 15.6333 11.3488C14.9327 11.0739 14.2894 10.6674 13.7463 10.0736C12.4484 8.65217 12.1894 6.49723 13.1336 4.75391C14.5932 1.99742 18.1636 1.18729 20.5946 2.88529C22.7995 4.4254 23.2317 7.43069 21.5622 9.61139C20.9843 10.3662 20.2727 10.8991 19.4342 11.2575C19.0506 11.4186 18.8005 11.8019 18.8058 12.1916L18.7749 15.6885L22.2544 14.6004C22.6449 14.4869 22.9514 14.1433 22.9958 13.7452C23.1147 12.6267 23.6444 11.538 24.5846 10.6499C26.1799 9.18956 28.571 8.84302 30.4666 9.82377C33.324 11.3048 33.8524 14.9779 31.6005 17.3526C30.0756 18.9478 27.5988 19.4062 25.6321 18.4616C25.0025 18.1506 24.4586 17.7277 24.0568 17.2325C23.8101 16.9314 23.3638 16.8342 22.9733 16.9477L19.373 18.0802L19.2532 29.7966C19.2494 32.0682 17.3331 33.9479 14.9505 34L15.093 20.4972L10.0001 22.0989ZM18.8394 5.17784C19.7723 5.82945 19.9292 7.09773 19.2443 7.99235C18.5379 8.91502 17.2182 9.10883 16.3136 8.47697C15.3807 7.82537 15.2238 6.55708 15.9087 5.66246C16.6151 4.73979 17.9349 4.54605 18.8394 5.17784ZM29.2418 12.4438C30.1747 13.0954 30.3316 14.3637 29.6467 15.2584C28.9403 16.181 27.6205 16.3748 26.716 15.743C25.7831 15.0914 25.6262 13.8231 26.3111 12.9285C27.0175 12.0058 28.3373 11.812 29.2418 12.4438ZM17.3194 17.5897C17.7434 17.8859 17.8326 18.5061 17.5116 18.9255C17.1691 19.3728 16.5447 19.4515 16.1207 19.1555C15.6967 18.8593 15.6074 18.2391 15.9285 17.8197C16.2496 17.4003 16.8954 17.2935 17.3194 17.5897Z",
           }),
         );
       }
@@ -1386,9 +1413,9 @@
         a = r(6279),
         s = r(91707),
         c = r(12015),
-        L = r(86357),
-        u = r(14592),
-        d = r(74196),
+        u = r(86357),
+        d = r(14592),
+        L = r(88282),
         h = r(48081);
       function m(e) {
         const [t, r] = C.useState(!1);
@@ -1476,17 +1503,17 @@
           C.Fragment,
           null,
           C.createElement(
-            L.dF,
-            { loader: r, fnGetManifest: n, mode: L.tP.CommunityClip },
+            u.dF,
+            { loader: r, fnGetManifest: n, mode: u.tP.CommunityClip },
             C.createElement(
               "div",
               { className: h.ClipDetails },
               C.createElement(
                 "div",
                 { className: h.VideoContainer },
-                C.createElement(u.i, { positionAbsolute: !1, autoPlay: !0 }),
+                C.createElement(d.i, { positionAbsolute: !1, autoPlay: !0 }),
               ),
-              C.createElement(d.k9, { loader: r }),
+              C.createElement(L.k9, { loader: r }),
             ),
           ),
         );

@@ -5431,7 +5431,7 @@
         if (!v.L7.logged_in)
           return i.createElement(
             ke.zx,
-            { onClick: nt.X, className: "CSSClaimItemLoginButton" },
+            { onClick: nt.Xt, className: "CSSClaimItemLoginButton" },
             (0, f.Xx)("#Sale_ClaimableReward_Login"),
           );
         const n = (0, s.im)(e.args, "type");
@@ -5534,7 +5534,7 @@
             )
           : i.createElement(
               ke.zx,
-              { className: "CSSActionDialogButton", onClick: nt.X },
+              { className: "CSSActionDialogButton", onClick: nt.Xt },
               (0, f.Xx)("#Login_SignIn"),
             );
       }
@@ -5899,7 +5899,7 @@
                     "#EventDisplay_Share_NotLoggedIn_Description",
                   ),
                   strOKButtonText: (0, N.Xx)("#MobileLogin_SignIn"),
-                  onOK: () => (0, M.X)(),
+                  onOK: () => (0, M.Xt)(),
                 }),
                 window,
               );

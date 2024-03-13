@@ -8,19 +8,19 @@
     29292: (e, a, t) => {
       t.d(a, { Mx: () => u, XC: () => _ });
       var n = t(85556),
-        o = t(47427),
-        r = t(44174),
+        r = t(47427),
+        o = t(44174),
         i = t(29480),
         s = t(35427);
       t(37563), t(22520);
       function _(e) {
-        const [a, t] = (0, o.useState)(r.j1.GetClanEventModel(e)),
+        const [a, t] = (0, r.useState)(o.j1.GetClanEventModel(e)),
           n = (0, i.T)("usePartnerEventByEventGID");
         return (
-          (0, o.useEffect)(() => {
+          (0, r.useEffect)(() => {
             (null == a ? void 0 : a.GID) != e &&
-              (r.j1.Init(),
-              r.j1
+              (o.j1.Init(),
+              o.j1
                 .LoadBatchPartnerEventsByEventGIDsOrAnnouncementGIDs([e], [], n)
                 .then((a) => {
                   1 != (null == a ? void 0 : a.length) ||
@@ -33,23 +33,23 @@
         );
       }
       function u(e, a, t) {
-        const [_, u] = (0, o.useState)(r.j1.GetClanEventModel(a)),
-          [l, c] = (0, o.useState)(!!e && !!a),
-          [d, g] = (0, o.useState)(),
+        const [_, u] = (0, r.useState)(o.j1.GetClanEventModel(a)),
+          [l, c] = (0, r.useState)(!!e && !!a),
+          [d, g] = (0, r.useState)(),
           k = (0, i.T)("usePartnerEventByClanAccountAndEventGID");
         return (
-          (0, o.useEffect)(() => {
+          (0, r.useEffect)(() => {
             (() => {
               (0, n.mG)(this, void 0, void 0, function* () {
-                var n, o;
+                var n, r;
                 try {
                   if ((null == _ ? void 0 : _.GID) != a) {
-                    r.j1.Init();
+                    o.j1.Init();
                     const i = s.K.InitFromClanID(e);
                     let _;
                     try {
                       _ =
-                        yield r.j1.LoadPartnerEventFromClanEventGIDAndClanSteamID(
+                        yield o.j1.LoadPartnerEventFromClanEventGIDAndClanSteamID(
                           i,
                           a,
                           0,
@@ -58,13 +58,13 @@
                     } catch (e) {
                       g(
                         null ===
-                          (o =
+                          (r =
                             null === (n = null == e ? void 0 : e.response) ||
                             void 0 === n
                               ? void 0
-                              : n.data) || void 0 === o
+                              : n.data) || void 0 === r
                           ? void 0
-                          : o.err_msg,
+                          : r.err_msg,
                       );
                     }
                     k.token.reason || u(_);
@@ -81,7 +81,7 @@
     },
     4618: (e, a, t) => {
       var n;
-      function o(e) {
+      function r(e) {
         switch (e) {
           case n.k_ConfigPage_Takeover:
             return "frontpage";
@@ -113,7 +113,7 @@
             return "content_hub_tags_599";
         }
       }
-      function r(e) {
+      function o(e) {
         switch (e) {
           case n.k_ConfigPage_Takeover:
             return "Front Page Takeover";
@@ -170,12 +170,12 @@
         return null;
       }
       function s(e) {
-        return `/admin/store/pageclusteredit/${o(e)}/<grab this ID>`;
+        return `/admin/store/pageclusteredit/${r(e)}/<grab this ID>`;
       }
       t.d(a, {
-        D9: () => o,
+        D9: () => r,
         He: () => i,
-        II: () => r,
+        II: () => o,
         R6: () => n,
         bG: () => s,
       }),
@@ -210,24 +210,25 @@
     1698: (e, a, t) => {
       t.d(a, {
         FF: () => f,
-        Ii: () => R,
-        R7: () => p,
+        Ii: () => E,
+        R7: () => T,
         Rg: () => l,
-        Vd: () => C,
-        b5: () => D,
-        ex: () => T,
+        Vd: () => m,
+        _S: () => C,
+        b5: () => R,
+        ex: () => p,
         gl: () => P,
         hZ: () => d,
         j: () => g,
         kj: () => k,
         nR: () => u,
         pk: () => v,
-        tA: () => m,
+        tA: () => b,
         ti: () => c,
       });
       var n = t(35427),
-        o = t(31846),
-        r = t(12251),
+        r = t(31846),
+        o = t(12251),
         i = t(46984),
         s = t(37563),
         _ = t(4618);
@@ -302,30 +303,40 @@
         f.set("vacation", "#discount_desc_limited_time_date"),
         f.set("important", "#discount_desc_limited_time_date"),
         f.set("preload", "#discount_desc_limited_time_date");
-      const T = new Map();
-      T.set("midweek", ["Midweek", "Midweek Deal"]),
-        T.set("weekenddeal", ["Weekend", "Weekend Deal"]);
       const p = new Map();
-      p.set("none", ""),
-        p.set("takeover", "Takeover"),
-        p.set("takeunder", "Takeunder"),
-        p.set("hub_takeover", "Hub takeover"),
-        p.set("steamchina_takeover", "SC Takeover"),
-        p.set("steamchina_only", "SC");
-      const C = [
-        "spotlight_art",
-        "marketingmessage_art",
-        "marketingmessage_art_2",
-        "takeover_art",
-        "takeover_mobile_art",
-        "takeunder_art",
-        "takeunder_mobile_art",
-        "sale_header",
-        "sale_logo",
-        "capsule",
-        "product_banner",
-        "product_mobile_banner",
-      ];
+      p.set("midweek", ["Midweek", "Midweek Deal"]),
+        p.set("weekenddeal", ["Weekend", "Weekend Deal"]);
+      const T = new Map();
+      T.set("none", ""),
+        T.set("takeover", "Takeover"),
+        T.set("takeunder", "Takeunder"),
+        T.set("hub_takeover", "Hub takeover"),
+        T.set("steamchina_takeover", "SC Takeover"),
+        T.set("steamchina_only", "SC");
+      const m = [
+          "spotlight_art",
+          "marketingmessage_art",
+          "marketingmessage_art_2",
+          "takeover_art",
+          "takeover_mobile_art",
+          "takeover_webm_art",
+          "takeover_mp4_art",
+          "takeover_webm_mobile_art",
+          "takeover_mp4_mobile_art",
+          "takeunder_art",
+          "takeunder_mobile_art",
+          "sale_header",
+          "sale_logo",
+          "capsule",
+          "product_banner",
+          "product_mobile_banner",
+        ],
+        C = [
+          "takeover_webm_art",
+          "takeover_mp4_art",
+          "takeover_webm_mobile_art",
+          "takeover_mp4_mobile_art",
+        ];
       function P(e) {
         switch (e) {
           case "marketingmessage_art":
@@ -336,6 +347,14 @@
             return "Spotlight Banner";
           case "takeover_art":
             return "Takeover Banner";
+          case "takeover_webm_art":
+            return "Takeover Animated WEBM";
+          case "takeover_mp4_art":
+            return "Takoever Animated MP4";
+          case "takeover_webm_mobile_art":
+            return "Takoever Animated Mobile (WEBM)";
+          case "takeover_mp4_mobile_art":
+            return "Takoever Animated Mobile (MP4)";
           case "takeunder_art":
             return "Takeunder Banner";
           case "takeover_mobile_art":
@@ -356,7 +375,7 @@
             return "Unknown Promo Art Request";
         }
       }
-      class m {
+      class b {
         static GetSpotlightEditURL(e) {
           return s.De.PARTNER_BASE_URL + "admin/store/spotlight/" + e;
         }
@@ -368,13 +387,13 @@
         static GetClusterEditURL(e, a) {
           switch (e) {
             case _.R6.k_ConfigPage_Takeover:
-              return m.GetTakeoverEditURL(a);
+              return b.GetTakeoverEditURL(a);
             case _.R6.k_ConfigPage_Takeunder:
-              return m.GetTakeunderEditURL(a);
+              return b.GetTakeunderEditURL(a);
             case _.R6.k_ConfigPage_TakeoverSteamChina:
-              return m.GetSteamChinaTakeoverEditURL(a);
+              return b.GetSteamChinaTakeoverEditURL(a);
             default:
-              return m.GetContentHubTakeoverEditURL(e, a);
+              return b.GetContentHubTakeoverEditURL(e, a);
           }
         }
         static GetTakeoverEditURL(e) {
@@ -432,8 +451,8 @@
           return s.De.PARTNER_BASE_URL + "apps/landing/" + e;
         }
       }
-      const R = new Map();
-      R.set("midweek", {
+      const E = new Map();
+      E.set("midweek", {
         nMaxSlots: 6,
         rtStartModifier: 10 * i._H.PerHour,
         rtEndModifier: 3 * i._H.PerDay + 10 * i._H.PerHour,
@@ -443,9 +462,9 @@
           const n = Math.floor(t.getTime() / 1e3);
           return (
             "Starting " +
-            (0, o.$1)(n) +
+            (0, r.$1)(n) +
             " @ " +
-            (0, r.Sc)(n) +
+            (0, o.Sc)(n) +
             ": " +
             a +
             (1 == a ? " slot" : " slots")
@@ -454,7 +473,7 @@
         nDaysDiscountEvent: 7,
         rtDays: 3,
       }),
-        R.set("weekenddeal", {
+        E.set("weekenddeal", {
           nMaxSlots: 6,
           rtStartModifier: 3 * i._H.PerDay + 10 * i._H.PerHour,
           rtEndModifier: 7 * i._H.PerDay + 10 * i._H.PerHour,
@@ -464,9 +483,9 @@
             const n = Math.floor(t.getTime() / 1e3);
             return (
               "Starting " +
-              (0, o.$1)(n) +
+              (0, r.$1)(n) +
               " @ " +
-              (0, r.Sc)(n) +
+              (0, o.Sc)(n) +
               ": " +
               a +
               (1 == a ? " slot" : " slots")
@@ -475,8 +494,8 @@
           nDaysDiscountEvent: 7,
           rtDays: 4,
         });
-      const D = ["midweek", "weekenddeal"];
-      new Set(D);
+      const R = ["midweek", "weekenddeal"];
+      new Set(R);
     },
     33687: (e, a, t) => {
       t.d(a, {
@@ -487,8 +506,8 @@
         og: () => d,
       });
       var n = t(85556),
-        o = t(80751),
-        r = t.n(o),
+        r = t(80751),
+        o = t.n(r),
         i = t(42718),
         s = t(31846),
         _ = t(37563),
@@ -496,18 +515,18 @@
       function l(e, a = !0, t) {
         return (0, n.mG)(this, void 0, void 0, function* () {
           const n = _.De.PARTNER_BASE_URL + "discounts/ajaxgetdiscountbyapp",
-            o = new Map();
-          if (!e || 0 == e.length) return o;
+            r = new Map();
+          if (!e || 0 == e.length) return r;
           const i = [...e],
             s = [];
           for (; i.length > 0; ) {
             const e = i.splice(0, 250),
-              o = new FormData();
-            o.append("sessionid", _.De.SESSIONID),
-              o.append("rgAppIDs", e.join(",")),
-              o.append("bExcludeExpired", a ? "1" : "0"),
-              t && o.append("publisherid", t.toString()),
-              s.push(r().post(n, o, { withCredentials: !0 }));
+              r = new FormData();
+            r.append("sessionid", _.De.SESSIONID),
+              r.append("rgAppIDs", e.join(",")),
+              r.append("bExcludeExpired", a ? "1" : "0"),
+              t && r.append("publisherid", t.toString()),
+              s.push(o().post(n, r, { withCredentials: !0 }));
           }
           return (
             (yield Promise.all(s)).forEach((e) => {
@@ -524,7 +543,7 @@
               )
                 for (let a in e.data.map) {
                   const t = Number.parseInt(a);
-                  t && o.set(t, e.data.map[t]);
+                  t && r.set(t, e.data.map[t]);
                 }
               else
                 console.log(
@@ -538,46 +557,46 @@
                       : n.success),
                 );
             }),
-            o
+            r
           );
         });
       }
       function c(e, a, t) {
-        const { isLoading: n, data: o } = (0, i.useQuery)(
+        const { isLoading: n, data: r } = (0, i.useQuery)(
           ["useOptedInAppWithDiscounts", e, a.join(","), t],
           () => l(a),
           { enabled: (null == a ? void 0 : a.length) > 0 },
         );
-        return n ? null : o;
+        return n ? null : r;
       }
       function d(e, a = !0, t) {
-        const { isLoading: n, data: o } = (0, i.useQuery)(
+        const { isLoading: n, data: r } = (0, i.useQuery)(
           ["useAppWithDiscounts", e.join(","), a, t],
           () => l(e, a, t),
           { enabled: (null == e ? void 0 : e.length) > 0 },
         );
-        return n ? null : o;
+        return n ? null : r;
       }
       function g(e, a = !0, t) {
-        const { isLoading: o, data: s } = (0, i.useQuery)(
+        const { isLoading: r, data: s } = (0, i.useQuery)(
           ["useBundleWithDiscounts", e.join(","), a, t],
           () =>
             (function (e, a = !0, t) {
               return (0, n.mG)(this, void 0, void 0, function* () {
                 const n =
                     _.De.PARTNER_BASE_URL + "discounts/ajaxgetdiscountbybundle",
-                  o = new Map();
-                if (!e || 0 == e.length) return o;
+                  r = new Map();
+                if (!e || 0 == e.length) return r;
                 const i = [...e],
                   s = [];
                 for (; i.length > 0; ) {
                   const e = i.splice(0, 100),
-                    o = new FormData();
-                  o.append("sessionid", _.De.SESSIONID),
-                    o.append("rgBundleIDs", e.join(",")),
-                    o.append("bExcludeExpired", a ? "1" : "0"),
-                    t && o.append("publisherid", t.toString()),
-                    s.push(r().post(n, o, { withCredentials: !0 }));
+                    r = new FormData();
+                  r.append("sessionid", _.De.SESSIONID),
+                    r.append("rgBundleIDs", e.join(",")),
+                    r.append("bExcludeExpired", a ? "1" : "0"),
+                    t && r.append("publisherid", t.toString()),
+                    s.push(o().post(n, r, { withCredentials: !0 }));
                 }
                 return (
                   (yield Promise.all(s)).forEach((e) => {
@@ -596,7 +615,7 @@
                     )
                       for (let a in e.data.map) {
                         const t = Number.parseInt(a);
-                        t && o.set(t, e.data.map[t]);
+                        t && r.set(t, e.data.map[t]);
                       }
                     else
                       console.log(
@@ -611,13 +630,13 @@
                             : n.success),
                       );
                   }),
-                  o
+                  r
                 );
               });
             })(e, a, t),
           { enabled: (null == e ? void 0 : e.length) > 0 },
         );
-        return o ? null : s;
+        return r ? null : s;
       }
       function k() {
         return (0, u.useMemo)(
@@ -626,16 +645,16 @@
           [],
         );
       }
-      function v(e, a, t, n, o) {
-        var r, i;
+      function v(e, a, t, n, r) {
+        var o, i;
         const _ = null == a ? void 0 : a.get(e);
         if (_) {
           if (_.is_coming_soon) return (0, s.Xx)("#DiscountEvent_ComingSoon");
           if (_.is_free) return (0, s.Xx)("#DiscountEvent_Free");
           if (
-            null === (r = _.discounts) || void 0 === r
+            null === (o = _.discounts) || void 0 === o
               ? void 0
-              : r.some((e) => e.discountEventID == o)
+              : o.some((e) => e.discountEventID == r)
           )
             return (0, s.Xx)("#DiscountEvent_Official");
           const e =
@@ -655,27 +674,27 @@
       }
     },
     4942: (e, a, t) => {
-      t.d(a, { I: () => r, f: () => i });
+      t.d(a, { I: () => o, f: () => i });
       var n = t(77936),
-        o = t(65255);
-      function r(e, a, t) {
-        return `${o.De.BASE_URL_SHARED_CDN}store_item_assets/optin/${e}/${a}/${t}`;
+        r = t(65255);
+      function o(e, a, t) {
+        return `${r.De.BASE_URL_SHARED_CDN}store_item_assets/optin/${e}/${a}/${t}`;
       }
       function i(e) {
         var a, t;
-        const i = o.De.LANGUAGE;
+        const i = r.De.LANGUAGE;
         return (
           null === (a = e.localized_optin_banner) || void 0 === a
             ? void 0
             : a[i]
         )
-          ? r(e.pageid, (0, n.jM)(i), e.localized_optin_banner[i])
+          ? o(e.pageid, (0, n.jM)(i), e.localized_optin_banner[i])
           : (
               null === (t = e.localized_optin_banner) || void 0 === t
                 ? void 0
                 : t.english
             )
-          ? r(e.pageid, 0, e.localized_optin_banner.english)
+          ? o(e.pageid, 0, e.localized_optin_banner.english)
           : null;
       }
     },

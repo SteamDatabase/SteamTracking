@@ -19,9 +19,9 @@
             ? Symbol.for("nodejs.util.inspect.custom")
             : null;
       (t.lW = l), (t.h2 = 50);
-      const o = 2147483647;
-      function s(e) {
-        if (e > o)
+      const s = 2147483647;
+      function o(e) {
+        if (e > s)
           throw new RangeError(
             'The value "' + e + '" is invalid for option "size"',
           );
@@ -44,7 +44,7 @@
             ("string" == typeof t && "" !== t) || (t = "utf8");
             if (!l.isEncoding(t)) throw new TypeError("Unknown encoding: " + t);
             const r = 0 | p(e, t);
-            let n = s(r);
+            let n = o(r);
             const i = n.write(e, t);
             i !== r && (n = n.slice(0, i));
             return n;
@@ -78,11 +78,11 @@
         const i = (function (e) {
           if (l.isBuffer(e)) {
             const t = 0 | h(e.length),
-              r = s(t);
+              r = o(t);
             return 0 === r.length || e.copy(r, 0, 0, t), r;
           }
           if (void 0 !== e.length)
-            return "number" != typeof e.length || G(e.length) ? s(0) : f(e);
+            return "number" != typeof e.length || G(e.length) ? o(0) : f(e);
           if ("Buffer" === e.type && Array.isArray(e.data)) return f(e.data);
         })(e);
         if (i) return i;
@@ -106,11 +106,11 @@
           );
       }
       function d(e) {
-        return u(e), s(e < 0 ? 0 : 0 | h(e));
+        return u(e), o(e < 0 ? 0 : 0 | h(e));
       }
       function f(e) {
         const t = e.length < 0 ? 0 : 0 | h(e.length),
-          r = s(t);
+          r = o(t);
         for (let n = 0; n < t; n += 1) r[n] = 255 & e[n];
         return r;
       }
@@ -132,10 +132,10 @@
         );
       }
       function h(e) {
-        if (e >= o)
+        if (e >= s)
           throw new RangeError(
             "Attempt to allocate Buffer larger than maximum size: 0x" +
-              o.toString(16) +
+              s.toString(16) +
               " bytes",
           );
         return 0 | e;
@@ -187,7 +187,7 @@
               return j(this, t, r);
             case "utf8":
             case "utf-8":
-              return E(this, t, r);
+              return F(this, t, r);
             case "ascii":
               return O(this, t, r);
             case "latin1":
@@ -242,8 +242,8 @@
       }
       function B(e, t, r, n, i) {
         let a,
-          o = 1,
-          s = e.length,
+          s = 1,
+          o = e.length,
           l = t.length;
         if (
           void 0 !== n &&
@@ -253,19 +253,19 @@
             "utf-16le" === n)
         ) {
           if (e.length < 2 || t.length < 2) return -1;
-          (o = 2), (s /= 2), (l /= 2), (r /= 2);
+          (s = 2), (o /= 2), (l /= 2), (r /= 2);
         }
         function c(e, t) {
-          return 1 === o ? e[t] : e.readUInt16BE(t * o);
+          return 1 === s ? e[t] : e.readUInt16BE(t * s);
         }
         if (i) {
           let n = -1;
-          for (a = r; a < s; a++)
+          for (a = r; a < o; a++)
             if (c(e, a) === c(t, -1 === n ? 0 : a - n)) {
-              if ((-1 === n && (n = a), a - n + 1 === l)) return n * o;
+              if ((-1 === n && (n = a), a - n + 1 === l)) return n * s;
             } else -1 !== n && (a -= a - n), (n = -1);
         } else
-          for (r + l > s && (r = s - l), a = r; a >= 0; a--) {
+          for (r + l > o && (r = o - l), a = r; a >= 0; a--) {
             let r = !0;
             for (let n = 0; n < l; n++)
               if (c(e, a + n) !== c(t, n)) {
@@ -281,13 +281,13 @@
         const i = e.length - r;
         n ? (n = Number(n)) > i && (n = i) : (n = i);
         const a = t.length;
-        let o;
-        for (n > a / 2 && (n = a / 2), o = 0; o < n; ++o) {
-          const n = parseInt(t.substr(2 * o, 2), 16);
-          if (G(n)) return o;
-          e[r + o] = n;
+        let s;
+        for (n > a / 2 && (n = a / 2), s = 0; s < n; ++s) {
+          const n = parseInt(t.substr(2 * s, 2), 16);
+          if (G(n)) return s;
+          e[r + s] = n;
         }
-        return o;
+        return s;
       }
       function w(e, t, r, n) {
         return Y($(t, e.length - r), e, r, n);
@@ -312,8 +312,8 @@
           (function (e, t) {
             let r, n, i;
             const a = [];
-            for (let o = 0; o < e.length && !((t -= 2) < 0); ++o)
-              (r = e.charCodeAt(o)),
+            for (let s = 0; s < e.length && !((t -= 2) < 0); ++s)
+              (r = e.charCodeAt(s)),
                 (n = r >> 8),
                 (i = r % 256),
                 a.push(i),
@@ -330,17 +330,17 @@
           ? n.fromByteArray(e)
           : n.fromByteArray(e.slice(t, r));
       }
-      function E(e, t, r) {
+      function F(e, t, r) {
         r = Math.min(e.length, r);
         const n = [];
         let i = t;
         for (; i < r; ) {
           const t = e[i];
           let a = null,
-            o = t > 239 ? 4 : t > 223 ? 3 : t > 191 ? 2 : 1;
-          if (i + o <= r) {
-            let r, n, s, l;
-            switch (o) {
+            s = t > 239 ? 4 : t > 223 ? 3 : t > 191 ? 2 : 1;
+          if (i + s <= r) {
+            let r, n, o, l;
+            switch (s) {
               case 1:
                 t < 128 && (a = t);
                 break;
@@ -360,34 +360,34 @@
               case 4:
                 (r = e[i + 1]),
                   (n = e[i + 2]),
-                  (s = e[i + 3]),
+                  (o = e[i + 3]),
                   128 == (192 & r) &&
                     128 == (192 & n) &&
-                    128 == (192 & s) &&
+                    128 == (192 & o) &&
                     ((l =
                       ((15 & t) << 18) |
                       ((63 & r) << 12) |
                       ((63 & n) << 6) |
-                      (63 & s)),
+                      (63 & o)),
                     l > 65535 && l < 1114112 && (a = l));
             }
           }
           null === a
-            ? ((a = 65533), (o = 1))
+            ? ((a = 65533), (s = 1))
             : a > 65535 &&
               ((a -= 65536),
               n.push(((a >>> 10) & 1023) | 55296),
               (a = 56320 | (1023 & a))),
             n.push(a),
-            (i += o);
+            (i += s);
         }
         return (function (e) {
           const t = e.length;
-          if (t <= F) return String.fromCharCode.apply(String, e);
+          if (t <= E) return String.fromCharCode.apply(String, e);
           let r = "",
             n = 0;
           for (; n < t; )
-            r += String.fromCharCode.apply(String, e.slice(n, (n += F)));
+            r += String.fromCharCode.apply(String, e.slice(n, (n += E)));
           return r;
         })(n);
       }
@@ -437,12 +437,12 @@
             return (
               u(e),
               e <= 0
-                ? s(e)
+                ? o(e)
                 : void 0 !== t
                 ? "string" == typeof r
-                  ? s(e).fill(t, r)
-                  : s(e).fill(t)
-                : s(e)
+                  ? o(e).fill(t, r)
+                  : o(e).fill(t)
+                : o(e)
             );
           })(e, t, r);
         }),
@@ -551,7 +551,7 @@
           return 0 === e
             ? ""
             : 0 === arguments.length
-            ? E(this, 0, e)
+            ? F(this, 0, e)
             : y.apply(this, arguments);
         }),
         (l.prototype.toLocaleString = l.prototype.toString),
@@ -593,16 +593,16 @@
           if (t >= r) return 1;
           if (this === e) return 0;
           let a = (i >>>= 0) - (n >>>= 0),
-            o = (r >>>= 0) - (t >>>= 0);
-          const s = Math.min(a, o),
+            s = (r >>>= 0) - (t >>>= 0);
+          const o = Math.min(a, s),
             c = this.slice(n, i),
             u = e.slice(t, r);
-          for (let e = 0; e < s; ++e)
+          for (let e = 0; e < o; ++e)
             if (c[e] !== u[e]) {
-              (a = c[e]), (o = u[e]);
+              (a = c[e]), (s = u[e]);
               break;
             }
-          return a < o ? -1 : o < a ? 1 : 0;
+          return a < s ? -1 : s < a ? 1 : 0;
         }),
         (l.prototype.includes = function (e, t, r) {
           return -1 !== this.indexOf(e, t, r);
@@ -664,7 +664,7 @@
             data: Array.prototype.slice.call(this._arr || this, 0),
           };
         });
-      const F = 4096;
+      const E = 4096;
       function O(e, t, r) {
         let n = "";
         r = Math.min(e.length, r);
@@ -713,15 +713,15 @@
           (e[r++] = a),
           (a >>= 8),
           (e[r++] = a);
-        let o = Number((t >> BigInt(32)) & BigInt(4294967295));
+        let s = Number((t >> BigInt(32)) & BigInt(4294967295));
         return (
-          (e[r++] = o),
-          (o >>= 8),
-          (e[r++] = o),
-          (o >>= 8),
-          (e[r++] = o),
-          (o >>= 8),
-          (e[r++] = o),
+          (e[r++] = s),
+          (s >>= 8),
+          (e[r++] = s),
+          (s >>= 8),
+          (e[r++] = s),
+          (s >>= 8),
+          (e[r++] = s),
           r
         );
       }
@@ -735,15 +735,15 @@
           (e[r + 5] = a),
           (a >>= 8),
           (e[r + 4] = a);
-        let o = Number((t >> BigInt(32)) & BigInt(4294967295));
+        let s = Number((t >> BigInt(32)) & BigInt(4294967295));
         return (
-          (e[r + 3] = o),
-          (o >>= 8),
-          (e[r + 2] = o),
-          (o >>= 8),
-          (e[r + 1] = o),
-          (o >>= 8),
-          (e[r] = o),
+          (e[r + 3] = s),
+          (s >>= 8),
+          (e[r + 2] = s),
+          (s >>= 8),
+          (e[r + 1] = s),
+          (s >>= 8),
+          (e[r] = s),
           r + 8
         );
       }
@@ -1047,10 +1047,10 @@
           }
           let i = 0,
             a = 1,
-            o = 0;
+            s = 0;
           for (this[t] = 255 & e; ++i < r && (a *= 256); )
-            e < 0 && 0 === o && 0 !== this[t + i - 1] && (o = 1),
-              (this[t + i] = (((e / a) >> 0) - o) & 255);
+            e < 0 && 0 === s && 0 !== this[t + i - 1] && (s = 1),
+              (this[t + i] = (((e / a) >> 0) - s) & 255);
           return t + r;
         }),
         (l.prototype.writeIntBE = function (e, t, r, n) {
@@ -1060,10 +1060,10 @@
           }
           let i = r - 1,
             a = 1,
-            o = 0;
+            s = 0;
           for (this[t + i] = 255 & e; --i >= 0 && (a *= 256); )
-            e < 0 && 0 === o && 0 !== this[t + i + 1] && (o = 1),
-              (this[t + i] = (((e / a) >> 0) - o) & 255);
+            e < 0 && 0 === s && 0 !== this[t + i + 1] && (s = 1),
+              (this[t + i] = (((e / a) >> 0) - s) & 255);
           return t + r;
         }),
         (l.prototype.writeInt8 = function (e, t, r) {
@@ -1210,12 +1210,12 @@
             for (i = t; i < r; ++i) this[i] = e;
           else {
             const a = l.isBuffer(e) ? e : l.from(e, n),
-              o = a.length;
-            if (0 === o)
+              s = a.length;
+            if (0 === s)
               throw new TypeError(
                 'The value "' + e + '" is invalid for argument "value"',
               );
-            for (i = 0; i < r - t; ++i) this[i + t] = a[i % o];
+            for (i = 0; i < r - t; ++i) this[i + t] = a[i % s];
           }
           return this;
         });
@@ -1337,14 +1337,14 @@
         const n = e.length;
         let i = null;
         const a = [];
-        for (let o = 0; o < n; ++o) {
-          if (((r = e.charCodeAt(o)), r > 55295 && r < 57344)) {
+        for (let s = 0; s < n; ++s) {
+          if (((r = e.charCodeAt(s)), r > 55295 && r < 57344)) {
             if (!i) {
               if (r > 56319) {
                 (t -= 3) > -1 && a.push(239, 191, 189);
                 continue;
               }
-              if (o + 1 === n) {
+              if (s + 1 === n) {
                 (t -= 3) > -1 && a.push(239, 191, 189);
                 continue;
               }
@@ -1426,7 +1426,7 @@
     29098: (e, t) => {
       "use strict";
       (t.byteLength = function (e) {
-        var t = s(e),
+        var t = o(e),
           r = t[0],
           n = t[1];
         return (3 * (r + n)) / 4 - n;
@@ -1434,16 +1434,16 @@
         (t.toByteArray = function (e) {
           var t,
             r,
-            a = s(e),
-            o = a[0],
+            a = o(e),
+            s = a[0],
             l = a[1],
             c = new i(
               (function (e, t, r) {
                 return (3 * (t + r)) / 4 - r;
-              })(0, o, l),
+              })(0, s, l),
             ),
             u = 0,
-            d = l > 0 ? o - 4 : o;
+            d = l > 0 ? s - 4 : s;
           for (r = 0; r < d; r += 4)
             (t =
               (n[e.charCodeAt(r)] << 18) |
@@ -1467,11 +1467,11 @@
         }),
         (t.fromByteArray = function (e) {
           for (
-            var t, n = e.length, i = n % 3, a = [], o = 16383, s = 0, c = n - i;
-            s < c;
-            s += o
+            var t, n = e.length, i = n % 3, a = [], s = 16383, o = 0, c = n - i;
+            o < c;
+            o += s
           )
-            a.push(l(e, s, s + o > c ? c : s + o));
+            a.push(l(e, o, o + s > c ? c : o + s));
           1 === i
             ? ((t = e[n - 1]), a.push(r[t >> 2] + r[(t << 4) & 63] + "=="))
             : 2 === i &&
@@ -1485,12 +1485,12 @@
           i = "undefined" != typeof Uint8Array ? Uint8Array : Array,
           a =
             "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/",
-          o = 0;
-        o < 64;
-        ++o
+          s = 0;
+        s < 64;
+        ++s
       )
-        (r[o] = a[o]), (n[a.charCodeAt(o)] = o);
-      function s(e) {
+        (r[s] = a[s]), (n[a.charCodeAt(s)] = s);
+      function o(e) {
         var t = e.length;
         if (t % 4 > 0)
           throw new Error("Invalid string. Length must be a multiple of 4");
@@ -1498,18 +1498,18 @@
         return -1 === r && (r = t), [r, r === t ? 0 : 4 - (r % 4)];
       }
       function l(e, t, n) {
-        for (var i, a, o = [], s = t; s < n; s += 3)
+        for (var i, a, s = [], o = t; o < n; o += 3)
           (i =
-            ((e[s] << 16) & 16711680) +
-            ((e[s + 1] << 8) & 65280) +
-            (255 & e[s + 2])),
-            o.push(
+            ((e[o] << 16) & 16711680) +
+            ((e[o + 1] << 8) & 65280) +
+            (255 & e[o + 2])),
+            s.push(
               r[((a = i) >> 18) & 63] +
                 r[(a >> 12) & 63] +
                 r[(a >> 6) & 63] +
                 r[63 & a],
             );
-        return o.join("");
+        return s.join("");
       }
       (n["-".charCodeAt(0)] = 62), (n["_".charCodeAt(0)] = 63);
     },
@@ -1517,34 +1517,34 @@
       /*! ieee754. BSD-3-Clause License. Feross Aboukhadijeh <https://feross.org/opensource> */
       (t.read = function (e, t, r, n, i) {
         var a,
-          o,
-          s = 8 * i - n - 1,
-          l = (1 << s) - 1,
+          s,
+          o = 8 * i - n - 1,
+          l = (1 << o) - 1,
           c = l >> 1,
           u = -7,
           d = r ? i - 1 : 0,
           f = r ? -1 : 1,
           m = e[t + d];
         for (
-          d += f, a = m & ((1 << -u) - 1), m >>= -u, u += s;
+          d += f, a = m & ((1 << -u) - 1), m >>= -u, u += o;
           u > 0;
           a = 256 * a + e[t + d], d += f, u -= 8
         );
         for (
-          o = a & ((1 << -u) - 1), a >>= -u, u += n;
+          s = a & ((1 << -u) - 1), a >>= -u, u += n;
           u > 0;
-          o = 256 * o + e[t + d], d += f, u -= 8
+          s = 256 * s + e[t + d], d += f, u -= 8
         );
         if (0 === a) a = 1 - c;
         else {
-          if (a === l) return o ? NaN : (1 / 0) * (m ? -1 : 1);
-          (o += Math.pow(2, n)), (a -= c);
+          if (a === l) return s ? NaN : (1 / 0) * (m ? -1 : 1);
+          (s += Math.pow(2, n)), (a -= c);
         }
-        return (m ? -1 : 1) * o * Math.pow(2, a - n);
+        return (m ? -1 : 1) * s * Math.pow(2, a - n);
       }),
         (t.write = function (e, t, r, n, i, a) {
-          var o,
-            s,
+          var s,
+            o,
             l,
             c = 8 * a - i - 1,
             u = (1 << c) - 1,
@@ -1556,30 +1556,30 @@
           for (
             t = Math.abs(t),
               isNaN(t) || t === 1 / 0
-                ? ((s = isNaN(t) ? 1 : 0), (o = u))
-                : ((o = Math.floor(Math.log(t) / Math.LN2)),
-                  t * (l = Math.pow(2, -o)) < 1 && (o--, (l *= 2)),
-                  (t += o + d >= 1 ? f / l : f * Math.pow(2, 1 - d)) * l >= 2 &&
-                    (o++, (l /= 2)),
-                  o + d >= u
-                    ? ((s = 0), (o = u))
-                    : o + d >= 1
-                    ? ((s = (t * l - 1) * Math.pow(2, i)), (o += d))
-                    : ((s = t * Math.pow(2, d - 1) * Math.pow(2, i)), (o = 0)));
+                ? ((o = isNaN(t) ? 1 : 0), (s = u))
+                : ((s = Math.floor(Math.log(t) / Math.LN2)),
+                  t * (l = Math.pow(2, -s)) < 1 && (s--, (l *= 2)),
+                  (t += s + d >= 1 ? f / l : f * Math.pow(2, 1 - d)) * l >= 2 &&
+                    (s++, (l /= 2)),
+                  s + d >= u
+                    ? ((o = 0), (s = u))
+                    : s + d >= 1
+                    ? ((o = (t * l - 1) * Math.pow(2, i)), (s += d))
+                    : ((o = t * Math.pow(2, d - 1) * Math.pow(2, i)), (s = 0)));
             i >= 8;
-            e[r + m] = 255 & s, m += h, s /= 256, i -= 8
+            e[r + m] = 255 & o, m += h, o /= 256, i -= 8
           );
           for (
-            o = (o << i) | s, c += i;
+            s = (s << i) | o, c += i;
             c > 0;
-            e[r + m] = 255 & o, m += h, o /= 256, c -= 8
+            e[r + m] = 255 & s, m += h, s /= 256, c -= 8
           );
           e[r + m - h] |= 128 * p;
         });
     },
     76711: (e, t, r) => {
       "use strict";
-      r.d(t, { H: () => En, A: () => qn });
+      r.d(t, { H: () => Fn, A: () => qn });
       const n = (e, t, r = !1) => {
           if (!Array.isArray(e) || !Array.isArray(t))
             throw new Error("Both arguments should be arrays.");
@@ -1617,13 +1617,13 @@
                   .join(", ")}}`;
           return JSON.stringify(JSON.parse(i), t, r);
         },
-        o = (e, t = 1 / 0, r = !1) =>
+        s = (e, t = 1 / 0, r = !1) =>
           Number.isNaN(e) || null === e
             ? "null"
             : Array.isArray(e) || "object" == typeof e
             ? a(e, void 0, r ? 1 : void 0, t)
             : a(e),
-        s = (e) =>
+        o = (e) =>
           "boolean" == typeof e
             ? 0
             : "number" == typeof e
@@ -1638,8 +1638,8 @@
             ? 5
             : -1,
         l = (e, t, r) => {
-          const n = s(e),
-            i = s(t);
+          const n = o(e),
+            i = o(t);
           if (n !== i) return n - i;
           if (
             (null === e && null === t) ||
@@ -1663,17 +1663,17 @@
         },
         c = (e) =>
           Array.isArray(e) ? "array" : null === e ? "null" : typeof e,
-        u = (e, t, r, n, i, a, s, c) => {
+        u = (e, t, r, n, i, a, o, c) => {
           const u = { ignoreCase: c.ignoreCase },
-            d = o(i, c.maxDepth, !0).split("\n"),
-            f = o(a, c.maxDepth, !0).split("\n");
+            d = s(i, c.maxDepth, !0).split("\n"),
+            f = s(a, c.maxDepth, !0).split("\n");
           if (0 !== l(i, a, u))
             if (c.showModifications) {
               const i = Math.max(d.length, f.length);
               for (let e = d.length; e < i; e++) d.push("");
               for (let e = f.length; e < i; e++) f.push("");
               e.push({
-                level: s,
+                level: o,
                 type: "modify",
                 text: r ? `"${r}": ${d[0]}` : d[0],
               });
@@ -1681,7 +1681,7 @@
                 var m, h;
                 e.push({
                   level:
-                    s +
+                    o +
                     ((null == (m = d[t].match(/^\s+/)) || null == (h = m[0])
                       ? void 0
                       : h.length) || 0),
@@ -1690,9 +1690,9 @@
                 });
               }
               for (let t = d.length; t < i; t++)
-                e.push({ level: s, type: "equal", text: "" });
+                e.push({ level: o, type: "equal", text: "" });
               t.push({
-                level: s,
+                level: o,
                 type: "modify",
                 text: n ? `"${n}": ${f[0]}` : f[0],
               });
@@ -1700,7 +1700,7 @@
                 var p, y;
                 t.push({
                   level:
-                    s +
+                    o +
                     ((null == (p = f[e].match(/^\s+/)) || null == (y = p[0])
                       ? void 0
                       : y.length) || 0),
@@ -1709,10 +1709,10 @@
                 });
               }
               for (let e = f.length; e < i; e++)
-                t.push({ level: s, type: "equal", text: "" });
+                t.push({ level: o, type: "equal", text: "" });
             } else {
               e.push({
-                level: s,
+                level: o,
                 type: "remove",
                 text: r ? `"${r}": ${d[0]}` : d[0],
               });
@@ -1720,7 +1720,7 @@
                 var g, b;
                 e.push({
                   level:
-                    s +
+                    o +
                     ((null == (g = d[t].match(/^\s+/)) || null == (b = g[0])
                       ? void 0
                       : b.length) || 0),
@@ -1729,11 +1729,11 @@
                 });
               }
               for (let t = 0; t < f.length; t++)
-                e.push({ level: s, type: "equal", text: "" });
+                e.push({ level: o, type: "equal", text: "" });
               for (let e = 0; e < d.length; e++)
-                t.push({ level: s, type: "equal", text: "" });
+                t.push({ level: o, type: "equal", text: "" });
               t.push({
-                level: s,
+                level: o,
                 type: "add",
                 text: n ? `"${n}": ${f[0]}` : f[0],
               });
@@ -1741,7 +1741,7 @@
                 var B, v;
                 t.push({
                   level:
-                    s +
+                    o +
                     ((null == (B = f[e].match(/^\s+/)) || null == (v = B[0])
                       ? void 0
                       : v.length) || 0),
@@ -1755,7 +1755,7 @@
             for (let e = d.length; e < i; e++) d.push("");
             for (let e = f.length; e < i; e++) f.push("");
             e.push({
-              level: s,
+              level: o,
               type: "equal",
               text: r ? `"${r}": ${d[0]}` : d[0],
             });
@@ -1763,7 +1763,7 @@
               var w, _;
               e.push({
                 level:
-                  s +
+                  o +
                   ((null == (w = d[t].match(/^\s+/)) || null == (_ = w[0])
                     ? void 0
                     : _.length) || 0),
@@ -1772,7 +1772,7 @@
               });
             }
             t.push({
-              level: s,
+              level: o,
               type: "equal",
               text: n ? `"${n}": ${f[0]}` : f[0],
             });
@@ -1780,7 +1780,7 @@
               var M, z;
               t.push({
                 level:
-                  s +
+                  o +
                   ((null == (M = f[e].match(/^\s+/)) || null == (z = M[0])
                     ? void 0
                     : z.length) || 0),
@@ -1792,21 +1792,21 @@
         },
         d = (e, t) =>
           e.sort((e, r) => l(e, r, { ignoreCase: t.ignoreCaseForKey })),
-        f = (e, t, r = 1, i, o) => {
+        f = (e, t, r = 1, i, s) => {
           if (r > (i.maxDepth || 1 / 0))
             return [
               [{ level: r, type: "equal", text: "..." }],
               [{ level: r, type: "equal", text: "..." }],
             ];
-          let s = [],
+          let o = [],
             m = [];
           if ((null === e && null === t) || (void 0 === e && void 0 === t))
-            return [s, m];
+            return [o, m];
           if (null == e) {
             const e = a(t, void 0, 1).split("\n");
             for (let t = 0; t < e.length; t++) {
               var h, p;
-              s.push({ level: r, type: "equal", text: "" }),
+              o.push({ level: r, type: "equal", text: "" }),
                 m.push({
                   level:
                     r +
@@ -1817,13 +1817,13 @@
                   text: e[t].replace(/^\s+/, "").replace(/,$/g, ""),
                 });
             }
-            return [s, m];
+            return [o, m];
           }
           if (null == t) {
             const t = a(e, void 0, 1).split("\n");
             for (let e = 0; e < t.length; e++) {
               var y, g;
-              s.push({
+              o.push({
                 level:
                   r +
                   ((null == (y = t[e].match(/^\s+/)) || null == (g = y[0])
@@ -1834,7 +1834,7 @@
               }),
                 m.push({ level: r, type: "equal", text: "" });
             }
-            return [s, m];
+            return [o, m];
           }
           const b = Object.keys(e),
             B = Object.keys(t);
@@ -1845,31 +1845,31 @@
               h = B[0],
               p = l(d, h, v);
             if (0 === p)
-              if (c(e[d]) !== c(t[h])) u(s, m, d, h, e[d], t[h], r, i);
+              if (c(e[d]) !== c(t[h])) u(o, m, d, h, e[d], t[h], r, i);
               else if (Array.isArray(e[d])) {
                 const a = [...e[d]],
                   l = [...t[h]],
-                  [c, u] = o(a, l, d, h, r, i, [], []);
-                (s = n(s, c)), (m = n(m, u));
+                  [c, u] = s(a, l, d, h, r, i, [], []);
+                (o = n(o, c)), (m = n(m, u));
               } else if (null === e[d])
-                s.push({ level: r, type: "equal", text: `"${d}": null` }),
+                o.push({ level: r, type: "equal", text: `"${d}": null` }),
                   m.push({ level: r, type: "equal", text: `"${h}": null` });
               else if ("object" == typeof e[d]) {
-                const a = f(e[d], t[h], r + 1, i, o);
-                s.push({ level: r, type: "equal", text: `"${d}": {` }),
-                  (s = n(s, a[0])),
-                  s.push({ level: r, type: "equal", text: "}" }),
+                const a = f(e[d], t[h], r + 1, i, s);
+                o.push({ level: r, type: "equal", text: `"${d}": {` }),
+                  (o = n(o, a[0])),
+                  o.push({ level: r, type: "equal", text: "}" }),
                   m.push({ level: r, type: "equal", text: `"${h}": {` }),
                   (m = n(m, a[1])),
                   m.push({ level: r, type: "equal", text: "}" });
-              } else u(s, m, d, h, e[d], t[h], r, i);
+              } else u(o, m, d, h, e[d], t[h], r, i);
             else if (b.length && B.length)
               if (d < h) {
                 const t = a(e[d], void 0, 1).split("\n");
                 for (let e = 0; e < t.length; e++) {
                   var w, _;
                   const n = t[e].replace(/^\s+/, "").replace(/,$/g, "");
-                  s.push({
+                  o.push({
                     level:
                       r +
                       ((null == (w = t[e].match(/^\s+/)) || null == (_ = w[0])
@@ -1885,7 +1885,7 @@
                 for (let t = 0; t < e.length; t++) {
                   var M, z;
                   const n = e[t].replace(/^\s+/, "").replace(/,$/g, "");
-                  s.push({ level: r, type: "equal", text: "" }),
+                  o.push({ level: r, type: "equal", text: "" }),
                     m.push({
                       level:
                         r +
@@ -1900,14 +1900,14 @@
             else if (b.length) {
               const t = a(e[d], void 0, 1).split("\n");
               for (let e = 0; e < t.length; e++) {
-                var S, E;
+                var S, F;
                 const n = t[e].replace(/^\s+/, "").replace(/,$/g, "");
-                s.push({
+                o.push({
                   level:
                     r +
-                    ((null == (S = t[e].match(/^\s+/)) || null == (E = S[0])
+                    ((null == (S = t[e].match(/^\s+/)) || null == (F = S[0])
                       ? void 0
-                      : E.length) || 0),
+                      : F.length) || 0),
                   type: "remove",
                   text: e ? n : `"${d}": ${n}`,
                 }),
@@ -1916,13 +1916,13 @@
             } else if (B.length) {
               const e = a(t[h], void 0, 1).split("\n");
               for (let t = 0; t < e.length; t++) {
-                var F, O;
+                var E, O;
                 const n = e[t].replace(/^\s+/, "").replace(/,$/g, "");
-                s.push({ level: r, type: "equal", text: "" }),
+                o.push({ level: r, type: "equal", text: "" }),
                   m.push({
                     level:
                       r +
-                      ((null == (F = e[t].match(/^\s+/)) || null == (O = F[0])
+                      ((null == (E = e[t].match(/^\s+/)) || null == (O = E[0])
                         ? void 0
                         : O.length) || 0),
                     type: "add",
@@ -1940,11 +1940,11 @@
                 : b.shift()
               : B.shift();
           }
-          if (s.length !== m.length)
+          if (o.length !== m.length)
             throw new Error(
               "Diff error: length not match for left & right, please report a bug with your data.",
             );
-          return [s, m];
+          return [o, m];
         };
       var m = function () {
         (this.__data__ = []), (this.size = 0);
@@ -1979,12 +1979,12 @@
         S = function (e) {
           return v(this.__data__, e) > -1;
         },
-        E = function (e, t) {
+        F = function (e, t) {
           var r = this.__data__,
             n = w(r, e);
           return n < 0 ? (++this.size, r.push([e, t])) : (r[n][1] = t), this;
         };
-      function F(e) {
+      function E(e) {
         var t = -1,
           r = null == e ? 0 : e.length;
         for (this.clear(); ++t < r; ) {
@@ -1992,12 +1992,12 @@
           this.set(n[0], n[1]);
         }
       }
-      (F.prototype.clear = _),
-        (F.prototype.delete = M),
-        (F.prototype.get = z),
-        (F.prototype.has = S),
-        (F.prototype.set = E);
-      var O = F,
+      (E.prototype.clear = _),
+        (E.prototype.delete = M),
+        (E.prototype.get = z),
+        (E.prototype.has = S),
+        (E.prototype.set = F);
+      var O = E,
         R = O;
       var j = function () {
         (this.__data__ = new R()), (this.size = 0);
@@ -2083,7 +2083,7 @@
           return !!ne && ne in e;
         },
         ae = Function.prototype.toString;
-      var oe = function (e) {
+      var se = function (e) {
           if (null != e) {
             try {
               return ae.call(e);
@@ -2094,10 +2094,10 @@
           }
           return "";
         },
-        se = te,
+        oe = te,
         le = ie,
         ce = K,
-        ue = oe,
+        ue = se,
         de = /^\[object .+?Constructor\]$/,
         fe = Function.prototype,
         me = Object.prototype,
@@ -2115,7 +2115,7 @@
             "$",
         );
       var ge = function (e) {
-          return !(!ce(e) || le(e)) && (se(e) ? ye : de).test(ue(e));
+          return !(!ce(e) || le(e)) && (oe(e) ? ye : de).test(ue(e));
         },
         be = function (e, t) {
           return null == e ? void 0 : e[t];
@@ -2135,21 +2135,21 @@
           return (this.size -= t ? 1 : 0), t;
         },
         Se = we,
-        Ee = Object.prototype.hasOwnProperty;
-      var Fe = function (e) {
+        Fe = Object.prototype.hasOwnProperty;
+      var Ee = function (e) {
           var t = this.__data__;
           if (Se) {
             var r = t[e];
             return "__lodash_hash_undefined__" === r ? void 0 : r;
           }
-          return Ee.call(t, e) ? t[e] : void 0;
+          return Fe.call(t, e) ? t[e] : void 0;
         },
         Oe = we,
         Re = Object.prototype.hasOwnProperty;
       var je = we;
       var xe = Me,
         Ce = ze,
-        Te = Fe,
+        Te = Ee,
         We = function (e) {
           var t = this.__data__;
           return Oe ? void 0 !== t[e] : Re.call(t, e);
@@ -2236,8 +2236,8 @@
         nt = j,
         it = x,
         at = C,
-        ot = T,
-        st = function (e, t) {
+        st = T,
+        ot = function (e, t) {
           var r = this.__data__;
           if (r instanceof Je) {
             var n = r.__data__;
@@ -2254,8 +2254,8 @@
       (lt.prototype.clear = nt),
         (lt.prototype.delete = it),
         (lt.prototype.get = at),
-        (lt.prototype.has = ot),
-        (lt.prototype.set = st);
+        (lt.prototype.has = st),
+        (lt.prototype.set = ot);
       var ct = lt;
       var ut = Qe,
         dt = function (e) {
@@ -2280,20 +2280,20 @@
           return e.has(t);
         };
       var gt = function (e, t, r, n, i, a) {
-        var o = 1 & r,
-          s = e.length,
+        var s = 1 & r,
+          o = e.length,
           l = t.length;
-        if (s != l && !(o && l > s)) return !1;
+        if (o != l && !(s && l > o)) return !1;
         var c = a.get(e),
           u = a.get(t);
         if (c && u) return c == t && u == e;
         var d = -1,
           f = !0,
           m = 2 & r ? new ht() : void 0;
-        for (a.set(e, t), a.set(t, e); ++d < s; ) {
+        for (a.set(e, t), a.set(t, e); ++d < o; ) {
           var h = e[d],
             p = t[d];
-          if (n) var y = o ? n(p, h, d, t, e, a) : n(h, p, d, e, t, a);
+          if (n) var y = s ? n(p, h, d, t, e, a) : n(h, p, d, e, t, a);
           if (void 0 !== y) {
             if (y) continue;
             f = !1;
@@ -2341,7 +2341,7 @@
         },
         Mt = D ? D.prototype : void 0,
         zt = Mt ? Mt.valueOf : void 0;
-      var St = function (e, t, r, n, i, a, o) {
+      var St = function (e, t, r, n, i, a, s) {
         switch (r) {
           case "[object DataView]":
             if (e.byteLength != t.byteLength || e.byteOffset != t.byteOffset)
@@ -2359,28 +2359,28 @@
           case "[object String]":
             return e == t + "";
           case "[object Map]":
-            var s = wt;
+            var o = wt;
           case "[object Set]":
             var l = 1 & n;
-            if ((s || (s = _t), e.size != t.size && !l)) return !1;
-            var c = o.get(e);
+            if ((o || (o = _t), e.size != t.size && !l)) return !1;
+            var c = s.get(e);
             if (c) return c == t;
-            (n |= 2), o.set(e, t);
-            var u = vt(s(e), s(t), n, i, a, o);
-            return o.delete(e), u;
+            (n |= 2), s.set(e, t);
+            var u = vt(o(e), o(t), n, i, a, s);
+            return s.delete(e), u;
           case "[object Symbol]":
             if (zt) return zt.call(e) == zt.call(t);
         }
         return !1;
       };
-      var Et = function (e, t) {
+      var Ft = function (e, t) {
           for (var r = -1, n = t.length, i = e.length; ++r < n; )
             e[i + r] = t[r];
           return e;
         },
-        Ft = Array.isArray,
-        Ot = Et,
-        Rt = Ft;
+        Et = Array.isArray,
+        Ot = Ft,
+        Rt = Et;
       var jt = function (e, t, r) {
         var n = t(e);
         return Rt(e) ? n : Ot(n, r(e));
@@ -2391,8 +2391,8 @@
             ++r < n;
 
           ) {
-            var o = e[r];
-            t(o, r, e) && (a[i++] = o);
+            var s = e[r];
+            t(s, r, e) && (a[i++] = s);
           }
           return a;
         },
@@ -2445,9 +2445,9 @@
           n = Vt,
           i = t && !t.nodeType && t,
           a = i && e && !e.nodeType && e,
-          o = a && a.exports === i ? r.Buffer : void 0,
-          s = (o ? o.isBuffer : void 0) || n;
-        e.exports = s;
+          s = a && a.exports === i ? r.Buffer : void 0,
+          o = (s ? s.isBuffer : void 0) || n;
+        e.exports = o;
       })($t, $t.exports);
       var Yt = /^(?:0|[1-9]\d*)$/;
       var Ht = function (e, t) {
@@ -2512,22 +2512,22 @@
           n = t && !t.nodeType && t,
           i = n && e && !e.nodeType && e,
           a = i && i.exports === n && r.process,
-          o = (function () {
+          s = (function () {
             try {
               var e = i && i.require && i.require("util").types;
               return e || (a && a.binding && a.binding("util"));
             } catch (e) {}
           })();
-        e.exports = o;
+        e.exports = s;
       })(nr, nr.exports);
       var ir = tr,
         ar = rr,
-        or = nr.exports,
-        sr = or && or.isTypedArray,
-        lr = sr ? ar(sr) : ir,
+        sr = nr.exports,
+        or = sr && sr.isTypedArray,
+        lr = or ? ar(or) : ir,
         cr = It,
         ur = Zt,
-        dr = Ft,
+        dr = Et,
         fr = $t.exports,
         mr = Ht,
         hr = lr,
@@ -2537,12 +2537,12 @@
             n = !r && ur(e),
             i = !r && !n && fr(e),
             a = !r && !n && !i && hr(e),
-            o = r || n || i || a,
-            s = o ? cr(e.length, String) : [],
-            l = s.length;
+            s = r || n || i || a,
+            o = s ? cr(e.length, String) : [],
+            l = o.length;
           for (var c in e)
             (!t && !pr.call(e, c)) ||
-              (o &&
+              (s &&
                 ("length" == c ||
                   (i && ("offset" == c || "parent" == c)) ||
                   (a &&
@@ -2550,8 +2550,8 @@
                       "byteLength" == c ||
                       "byteOffset" == c)) ||
                   mr(c, l))) ||
-              s.push(c);
-          return s;
+              o.push(c);
+          return o;
         },
         gr = Object.prototype;
       var br = function (e) {
@@ -2569,43 +2569,43 @@
       var Mr = te,
         zr = Gt;
       var Sr = yr,
-        Er = function (e) {
+        Fr = function (e) {
           if (!vr(e)) return wr(e);
           var t = [];
           for (var r in Object(e))
             _r.call(e, r) && "constructor" != r && t.push(r);
           return t;
         },
-        Fr = function (e) {
+        Er = function (e) {
           return null != e && zr(e.length) && !Mr(e);
         };
       var Or = jt,
         Rr = Pt,
         jr = function (e) {
-          return Fr(e) ? Sr(e) : Er(e);
+          return Er(e) ? Sr(e) : Fr(e);
         };
       var xr = function (e) {
           return Or(e, jr, Rr);
         },
         Cr = Object.prototype.hasOwnProperty;
       var Tr = function (e, t, r, n, i, a) {
-          var o = 1 & r,
-            s = xr(e),
-            l = s.length;
-          if (l != xr(t).length && !o) return !1;
+          var s = 1 & r,
+            o = xr(e),
+            l = o.length;
+          if (l != xr(t).length && !s) return !1;
           for (var c = l; c--; ) {
-            var u = s[c];
-            if (!(o ? u in t : Cr.call(t, u))) return !1;
+            var u = o[c];
+            if (!(s ? u in t : Cr.call(t, u))) return !1;
           }
           var d = a.get(e),
             f = a.get(t);
           if (d && f) return d == t && f == e;
           var m = !0;
           a.set(e, t), a.set(t, e);
-          for (var h = o; ++c < l; ) {
-            var p = e[(u = s[c])],
+          for (var h = s; ++c < l; ) {
+            var p = e[(u = o[c])],
               y = t[u];
-            if (n) var g = o ? n(y, p, u, t, e, a) : n(p, y, u, e, t, a);
+            if (n) var g = s ? n(y, p, u, t, e, a) : n(p, y, u, e, t, a);
             if (!(void 0 === g ? p === y || i(p, y, r, n, a) : g)) {
               m = !1;
               break;
@@ -2632,7 +2632,7 @@
         Nr = Be(A, "Set"),
         Ar = Be(A, "WeakMap"),
         Dr = G,
-        Ur = oe,
+        Ur = se,
         kr = "[object Map]",
         Xr = "[object Promise]",
         Lr = "[object Set]",
@@ -2673,29 +2673,29 @@
         en = St,
         tn = Tr,
         rn = Kr,
-        nn = Ft,
+        nn = Et,
         an = $t.exports,
-        on = lr,
-        sn = "[object Arguments]",
+        sn = lr,
+        on = "[object Arguments]",
         ln = "[object Array]",
         cn = "[object Object]",
         un = Object.prototype.hasOwnProperty;
       var dn = function (e, t, r, n, i, a) {
-          var o = nn(e),
-            s = nn(t),
-            l = o ? ln : rn(e),
-            c = s ? ln : rn(t),
-            u = (l = l == sn ? cn : l) == cn,
-            d = (c = c == sn ? cn : c) == cn,
+          var s = nn(e),
+            o = nn(t),
+            l = s ? ln : rn(e),
+            c = o ? ln : rn(t),
+            u = (l = l == on ? cn : l) == cn,
+            d = (c = c == on ? cn : c) == cn,
             f = l == c;
           if (f && an(e)) {
             if (!an(t)) return !1;
-            (o = !0), (u = !1);
+            (s = !0), (u = !1);
           }
           if (f && !u)
             return (
               a || (a = new Qr()),
-              o || on(e) ? Jr(e, t, r, n, i, a) : en(e, t, l, r, n, i, a)
+              s || sn(e) ? Jr(e, t, r, n, i, a) : en(e, t, l, r, n, i, a)
             );
           if (!(1 & r)) {
             var m = u && un.call(e, "__wrapped__"),
@@ -2743,28 +2743,28 @@
             i = r.length,
             a = n.length;
           if (0 === i || 0 === a) return 0;
-          const o = new Set(r),
-            s = new Set(n),
-            l = new Set([...o].filter((e) => s.has(e)));
+          const s = new Set(r),
+            o = new Set(n),
+            l = new Set([...s].filter((e) => o.has(e)));
           return 0 === l.size
             ? 0
             : 1 !== l.size || (1 !== i && 1 !== a) || e[r[0]] === t[n[0]]
             ? Math.max(l.size / i, l.size / a)
             : 0;
         },
-        bn = (e, t, r, i, s, l, d = [], m = []) => {
+        bn = (e, t, r, i, o, l, d = [], m = []) => {
           if (
             (r && i
-              ? (d.push({ level: s, type: "equal", text: `"${r}": [` }),
-                m.push({ level: s, type: "equal", text: `"${i}": [` }))
-              : (d.push({ level: s, type: "equal", text: "[" }),
-                m.push({ level: s, type: "equal", text: "[" })),
-            s >= (l.maxDepth || 1 / 0))
+              ? (d.push({ level: o, type: "equal", text: `"${r}": [` }),
+                m.push({ level: o, type: "equal", text: `"${i}": [` }))
+              : (d.push({ level: o, type: "equal", text: "[" }),
+                m.push({ level: o, type: "equal", text: "[" })),
+            o >= (l.maxDepth || 1 / 0))
           )
-            d.push({ level: s + 1, type: "equal", text: "..." }),
-              m.push({ level: s + 1, type: "equal", text: "..." });
+            d.push({ level: o + 1, type: "equal", text: "..." }),
+              m.push({ level: o + 1, type: "equal", text: "..." });
           else {
-            const [h, p] = ((e, t, r, i, s, l) => {
+            const [h, p] = ((e, t, r, i, o, l) => {
               const d = Array(e.length + 1)
                   .fill(0)
                   .map(() => Array(t.length + 1).fill(0)),
@@ -2804,24 +2804,24 @@
                   ) {
                     const r = [],
                       i = [];
-                    u(r, i, "", "", e[h - 1], t[p - 1], s + 1, l),
+                    u(r, i, "", "", e[h - 1], t[p - 1], o + 1, l),
                       (y = n(y, r.reverse(), !0)),
                       (g = n(g, i.reverse(), !0));
                   } else if ("array" === a) {
-                    const [a, o] = bn(e[h - 1], t[p - 1], r, i, s + 1, l);
-                    (y = n(y, a.reverse(), !0)), (g = n(g, o.reverse(), !0));
+                    const [a, s] = bn(e[h - 1], t[p - 1], r, i, o + 1, l);
+                    (y = n(y, a.reverse(), !0)), (g = n(g, s.reverse(), !0));
                   } else if ("object" === a) {
-                    const [r, i] = f(e[h - 1], t[p - 1], s + 2, l, bn);
-                    y.unshift({ level: s + 1, type: "equal", text: "}" }),
-                      g.unshift({ level: s + 1, type: "equal", text: "}" }),
+                    const [r, i] = f(e[h - 1], t[p - 1], o + 2, l, bn);
+                    y.unshift({ level: o + 1, type: "equal", text: "}" }),
+                      g.unshift({ level: o + 1, type: "equal", text: "}" }),
                       (y = n(y, r.reverse(), !0)),
                       (g = n(g, i.reverse(), !0)),
-                      y.unshift({ level: s + 1, type: "equal", text: "{" }),
-                      g.unshift({ level: s + 1, type: "equal", text: "{" });
+                      y.unshift({ level: o + 1, type: "equal", text: "{" }),
+                      g.unshift({ level: o + 1, type: "equal", text: "{" });
                   } else {
                     const r = [],
                       i = [];
-                    u(r, i, "", "", e[h - 1], t[p - 1], s + 1, l),
+                    u(r, i, "", "", e[h - 1], t[p - 1], o + 1, l),
                       (y = n(y, r.reverse(), !0)),
                       (g = n(g, i.reverse(), !0));
                   }
@@ -2831,32 +2831,32 @@
                     const a = c(e[h - 1]);
                     if (a === c(t[p - 1]))
                       if ("array" === a) {
-                        const [a, o] = bn(e[h - 1], t[p - 1], r, i, s + 1, l);
+                        const [a, s] = bn(e[h - 1], t[p - 1], r, i, o + 1, l);
                         (y = n(y, a.reverse(), !0)),
-                          (g = n(g, o.reverse(), !0));
+                          (g = n(g, s.reverse(), !0));
                       } else if ("object" === a) {
-                        const [r, i] = f(e[h - 1], t[p - 1], s + 2, l, bn);
-                        y.unshift({ level: s + 1, type: "equal", text: "}" }),
-                          g.unshift({ level: s + 1, type: "equal", text: "}" }),
+                        const [r, i] = f(e[h - 1], t[p - 1], o + 2, l, bn);
+                        y.unshift({ level: o + 1, type: "equal", text: "}" }),
+                          g.unshift({ level: o + 1, type: "equal", text: "}" }),
                           (y = n(y, r.reverse(), !0)),
                           (g = n(g, i.reverse(), !0)),
-                          y.unshift({ level: s + 1, type: "equal", text: "{" }),
-                          g.unshift({ level: s + 1, type: "equal", text: "{" });
+                          y.unshift({ level: o + 1, type: "equal", text: "{" }),
+                          g.unshift({ level: o + 1, type: "equal", text: "{" });
                       } else
                         y.unshift({
-                          level: s + 1,
+                          level: o + 1,
                           type: "modify",
-                          text: o(e[h - 1]),
+                          text: s(e[h - 1]),
                         }),
                           g.unshift({
-                            level: s + 1,
+                            level: o + 1,
                             type: "modify",
-                            text: o(t[p - 1]),
+                            text: s(t[p - 1]),
                           });
                     else {
                       const r = [],
                         i = [];
-                      u(r, i, "", "", e[h - 1], t[p - 1], s + 1, l),
+                      u(r, i, "", "", e[h - 1], t[p - 1], o + 1, l),
                         (y = n(y, r.reverse(), !0)),
                         (g = n(g, i.reverse(), !0));
                     }
@@ -2867,7 +2867,7 @@
                       var b, B;
                       y.unshift({
                         level:
-                          s +
+                          o +
                           1 +
                           ((null == (b = t[e].match(/^\s+/)) ||
                           null == (B = b[0])
@@ -2876,7 +2876,7 @@
                         type: "remove",
                         text: t[e].replace(/^\s+/, "").replace(/,$/g, ""),
                       }),
-                        g.unshift({ level: s + 1, type: "equal", text: "" });
+                        g.unshift({ level: o + 1, type: "equal", text: "" });
                     }
                     h--;
                   }
@@ -2884,10 +2884,10 @@
                   const e = a(t[p - 1], void 0, 1).split("\n");
                   for (let t = e.length - 1; t >= 0; t--) {
                     var v, w;
-                    y.unshift({ level: s + 1, type: "equal", text: "" }),
+                    y.unshift({ level: o + 1, type: "equal", text: "" }),
                       g.unshift({
                         level:
-                          s +
+                          o +
                           1 +
                           ((null == (v = e[t].match(/^\s+/)) ||
                           null == (w = v[0])
@@ -2900,16 +2900,16 @@
                   p--;
                 }
               return [y, g];
-            })(e, t, r, i, s, l);
+            })(e, t, r, i, o, l);
             (d = n(d, h)), (m = n(m, p));
           }
           return (
-            d.push({ level: s, type: "equal", text: "]" }),
-            m.push({ level: s, type: "equal", text: "]" }),
+            d.push({ level: o, type: "equal", text: "]" }),
+            m.push({ level: o, type: "equal", text: "]" }),
             [d, m]
           );
         },
-        Bn = (e, t, r, i, a, s, l = [], d = []) => {
+        Bn = (e, t, r, i, a, o, l = [], d = []) => {
           if (
             ((e = [...e]),
             (t = [...t]),
@@ -2918,7 +2918,7 @@
                 d.push({ level: a, type: "equal", text: `"${i}": [` }))
               : (l.push({ level: a, type: "equal", text: "[" }),
                 d.push({ level: a, type: "equal", text: "[" })),
-            a >= (s.maxDepth || 1 / 0))
+            a >= (o.maxDepth || 1 / 0))
           )
             l.push({ level: a + 1, type: "equal", text: "..." }),
               d.push({ level: a + 1, type: "equal", text: "..." });
@@ -2929,38 +2929,38 @@
                 g = c(r),
                 b = c(i);
               if (e.length && t.length) {
-                if (g !== b) u(l, d, "", "", r, i, a + 1, s);
+                if (g !== b) u(l, d, "", "", r, i, a + 1, o);
                 else if (
-                  s.recursiveEqual &&
+                  o.recursiveEqual &&
                   ["object", "array"].includes(g) &&
-                  yn(r, i, s)
+                  yn(r, i, o)
                 )
-                  u(l, d, "", "", r, i, a + 1, s);
+                  u(l, d, "", "", r, i, a + 1, o);
                 else if ("object" === g) {
                   l.push({ level: a + 1, type: "equal", text: "{" }),
                     d.push({ level: a + 1, type: "equal", text: "{" });
-                  const [e, t] = f(r, i, a + 2, s, Bn);
+                  const [e, t] = f(r, i, a + 2, o, Bn);
                   (l = n(l, e)),
                     (d = n(d, t)),
                     l.push({ level: a + 1, type: "equal", text: "}" }),
                     d.push({ level: a + 1, type: "equal", text: "}" });
                 } else if ("array" === g) {
-                  const [e, t] = Bn(r, i, "", "", a + 1, s, [], []);
+                  const [e, t] = Bn(r, i, "", "", a + 1, o, [], []);
                   (l = n(l, e)), (d = n(d, t));
                 } else
                   r === i
-                    ? (l.push({ level: a + 1, type: "equal", text: o(r) }),
-                      d.push({ level: a + 1, type: "equal", text: o(i) }))
-                    : s.showModifications
-                    ? (l.push({ level: a + 1, type: "modify", text: o(r) }),
-                      d.push({ level: a + 1, type: "modify", text: o(i) }))
-                    : (l.push({ level: a + 1, type: "remove", text: o(r) }),
+                    ? (l.push({ level: a + 1, type: "equal", text: s(r) }),
+                      d.push({ level: a + 1, type: "equal", text: s(i) }))
+                    : o.showModifications
+                    ? (l.push({ level: a + 1, type: "modify", text: s(r) }),
+                      d.push({ level: a + 1, type: "modify", text: s(i) }))
+                    : (l.push({ level: a + 1, type: "remove", text: s(r) }),
                       l.push({ level: a + 1, type: "equal", text: "" }),
                       d.push({ level: a + 1, type: "equal", text: "" }),
-                      d.push({ level: a + 1, type: "add", text: o(i) }));
+                      d.push({ level: a + 1, type: "add", text: s(i) }));
                 e.shift(), t.shift();
               } else if (e.length) {
-                const t = o(r, void 0, !0).split("\n");
+                const t = s(r, void 0, !0).split("\n");
                 for (let e = 0; e < t.length; e++) {
                   var m, h;
                   l.push({
@@ -2977,7 +2977,7 @@
                 }
                 e.shift();
               } else if (t.length) {
-                const e = o(i, void 0, !0).split("\n");
+                const e = s(i, void 0, !0).split("\n");
                 for (let t = 0; t < e.length; t++) {
                   var p, y;
                   l.push({ level: a + 1, type: "equal", text: "" }),
@@ -3049,7 +3049,7 @@
       const Mn = { level: 0, type: "equal", text: "" },
         zn = { level: 0, type: "equal", text: "{" },
         Sn = { level: 0, type: "equal", text: "}" };
-      let En = class {
+      let Fn = class {
         detectCircular(e) {
           if (this.options.detectCircular && i(e))
             throw new Error(
@@ -3100,8 +3100,8 @@
               ((e = wn(e, this.options)), (t = wn(t, this.options)));
           let r = [],
             i = [];
-          const o = c(e);
-          if (o !== c(t)) {
+          const s = c(e);
+          if (s !== c(t)) {
             (r = a(e, void 0, 1, this.options.maxDepth)
               .split("\n")
               .map((e) => {
@@ -3130,29 +3130,29 @@
                     comma: e.endsWith(","),
                   };
                 }));
-            const o = r.length,
-              s = i.length;
+            const s = r.length,
+              o = i.length;
             (r = n(
               r,
-              Array(s)
+              Array(o)
                 .fill(0)
                 .map(() => _n({}, Mn)),
             )),
               (i = n(
                 i,
-                Array(o)
+                Array(s)
                   .fill(0)
                   .map(() => _n({}, Mn)),
                 !0,
               ));
           } else
-            "object" === o
+            "object" === s
               ? (([r, i] = f(e, t, 1, this.options, this.arrayDiffFunc)),
                 r.unshift(_n({}, zn)),
                 r.push(_n({}, Sn)),
                 i.unshift(_n({}, zn)),
                 i.push(_n({}, Sn)))
-              : "array" === o
+              : "array" === s
               ? ([r, i] = this.arrayDiffFunc(e, t, "", "", 0, this.options))
               : e !== t
               ? this.options.ignoreCase
@@ -3222,7 +3222,7 @@
           arrayDiffMethod: n = "normal",
           ignoreCase: i = !1,
           ignoreCaseForKey: a = !1,
-          recursiveEqual: o = !1,
+          recursiveEqual: s = !1,
         } = {}) {
           (this.options = {
             detectCircular: e,
@@ -3231,12 +3231,12 @@
             arrayDiffMethod: n,
             ignoreCase: i,
             ignoreCaseForKey: a,
-            recursiveEqual: o,
+            recursiveEqual: s,
           }),
             (this.arrayDiffFunc = "lcs" === n || "unorder-lcs" === n ? bn : Bn);
         }
       };
-      var Fn = r(47427);
+      var En = r(47427);
       function On() {
         return (
           (On =
@@ -3305,22 +3305,22 @@
           if (this.c > 1) return (t.done = !0), (t.value = void 0), t;
           const r = (function (e, t) {
             const { b: r, eq: n, stack_base: i } = e;
-            let { i: a, N: o, j: s, M: l, Z: c, stack_top: u } = e;
+            let { i: a, N: s, j: o, M: l, Z: c, stack_top: u } = e;
             for (;;)
               switch (t) {
                 case 0:
-                  e: for (; o > 0 && l > 0; ) {
+                  e: for (; s > 0 && l > 0; ) {
                     r.fill(0, 0, 2 * c);
-                    const e = o - l,
-                      t = o + l,
+                    const e = s - l,
+                      t = s + l,
                       d = 1 & t,
-                      f = a + o - 1,
-                      m = s + l - 1,
+                      f = a + s - 1,
+                      m = o + l - 1,
                       h = (t + d) / 2;
                     let p;
                     t: for (let t = 0; t <= h; t++) {
                       const h = 2 * Math.max(0, t - l) - t,
-                        y = t - 2 * Math.max(0, t - o);
+                        y = t - 2 * Math.max(0, t - s);
                       for (let f = h; f <= y; f += 2) {
                         const m = r[f - 1 - c * Math.floor((f - 1) / c)],
                           h = r[f + 1 - c * Math.floor((f + 1) / c)],
@@ -3328,22 +3328,22 @@
                           g = y - f;
                         let b = y,
                           B = g;
-                        for (; b < o && B < l && n(a + b, s + B); ) b++, B++;
+                        for (; b < s && B < l && n(a + b, o + B); ) b++, B++;
                         if (
                           ((r[f - c * Math.floor(f / c)] = b),
                           1 === d &&
                             (p = e - f) >= 1 - t &&
                             p < t &&
-                            b + r[c + p - c * Math.floor(p / c)] >= o)
+                            b + r[c + p - c * Math.floor(p / c)] >= s)
                         ) {
                           if (t > 1 || b !== y) {
                             (i[u++] = a + b),
-                              (i[u++] = o - b),
-                              (i[u++] = s + B),
+                              (i[u++] = s - b),
+                              (i[u++] = o + B),
                               (i[u++] = l - B),
-                              (o = y),
+                              (s = y),
                               (l = g),
-                              (c = 2 * (Math.min(o, l) + 1));
+                              (c = 2 * (Math.min(s, l) + 1));
                             continue e;
                           }
                           break t;
@@ -3356,38 +3356,38 @@
                           B = b - g;
                         let v = b,
                           w = B;
-                        for (; v < o && w < l && n(f - v, m - w); ) v++, w++;
+                        for (; v < s && w < l && n(f - v, m - w); ) v++, w++;
                         if (
                           ((r[c + g - c * Math.floor(g / c)] = v),
                           0 === d &&
                             (p = e - g) >= -t &&
                             p <= t &&
-                            v + r[p - c * Math.floor(p / c)] >= o)
+                            v + r[p - c * Math.floor(p / c)] >= s)
                         ) {
                           if (t > 0 || v !== b) {
-                            (i[u++] = a + o - b),
+                            (i[u++] = a + s - b),
                               (i[u++] = b),
-                              (i[u++] = s + l - B),
+                              (i[u++] = o + l - B),
                               (i[u++] = B),
-                              (o -= v),
+                              (s -= v),
                               (l -= w),
-                              (c = 2 * (Math.min(o, l) + 1));
+                              (c = 2 * (Math.min(s, l) + 1));
                             continue e;
                           }
                           break t;
                         }
                       }
                     }
-                    if (o !== l) {
-                      l > o
-                        ? ((a += o), (s += o), (l -= o), (o = 0))
-                        : ((a += l), (s += l), (o -= l), (l = 0));
+                    if (s !== l) {
+                      l > s
+                        ? ((a += s), (o += s), (l -= s), (s = 0))
+                        : ((a += l), (o += l), (s -= l), (l = 0));
                       break;
                     }
                   }
-                  if (o + l !== 0)
-                    if (e.pxe === a || e.pye === s)
-                      (e.pxe = a + o), (e.pye = s + l);
+                  if (s + l !== 0)
+                    if (e.pxe === a || e.pye === o)
+                      (e.pxe = a + s), (e.pye = o + l);
                     else {
                       const t = e.pxs;
                       if (
@@ -3396,15 +3396,15 @@
                         (e.oys = e.pys),
                         (e.oye = e.pye),
                         (e.pxs = a),
-                        (e.pxe = a + o),
-                        (e.pys = s),
-                        (e.pye = s + l),
+                        (e.pxe = a + s),
+                        (e.pys = o),
+                        (e.pye = o + l),
                         t >= 0)
                       )
                         return (
                           (e.i = a),
-                          (e.N = o),
-                          (e.j = s),
+                          (e.N = s),
+                          (e.j = o),
                           (e.M = l),
                           (e.Z = c),
                           (e.stack_top = u),
@@ -3414,10 +3414,10 @@
                 case 1:
                   if (0 === u) return 2;
                   (l = i[--u]),
-                    (s = i[--u]),
                     (o = i[--u]),
+                    (s = i[--u]),
                     (a = i[--u]),
-                    (c = 2 * (Math.min(o, l) + 1)),
+                    (c = 2 * (Math.min(s, l) + 1)),
                     (t = 0);
               }
           })(e, this.c);
@@ -3438,9 +3438,9 @@
       };
       function Wn(e, t, r, n, i) {
         const a = 2 * (Math.min(t, n) + 1),
-          o = t + n,
-          s = new (
-            o < 256 ? Uint8Array : o < 65536 ? Uint16Array : Uint32Array
+          s = t + n,
+          o = new (
+            s < 256 ? Uint8Array : s < 65536 ? Uint16Array : Uint32Array
           )(2 * a);
         return new Tn({
           i: e,
@@ -3448,7 +3448,7 @@
           j: r,
           M: n,
           Z: a,
-          b: s,
+          b: o,
           eq: i,
           pxs: -1,
           pxe: -1,
@@ -3487,9 +3487,9 @@
             r = t[0],
             n = t[1],
             i = t[3],
-            { i: a, j: o } = this;
+            { i: a, j: s } = this;
           return (
-            a !== r && (t.length--, (t[0] = a), (t[1] = o), (t[2] = r - a)),
+            a !== r && (t.length--, (t[0] = a), (t[1] = s), (t[2] = r - a)),
             (this.i = n),
             (this.j = i),
             e
@@ -3513,9 +3513,9 @@
           const n = ArrayBuffer.isView(e)
             ? Uint8Array.prototype.subarray
             : e.slice;
-          for (const [i, a, o] of t)
+          for (const [i, a, s] of t)
             r < i && (yield n.call(e, r, i)),
-              o.length > 0 && (yield o),
+              s.length > 0 && (yield s),
               (r = a);
           r < e.length && (yield n.call(e, r));
         });
@@ -3578,47 +3578,47 @@
               ? n[n.length - 1].end++
               : n.push({ start: r, end: r + 1, isEqual: !1 });
           const i = !0 === r ? kn : r,
-            { threshold: a, margin: o } = i;
-          a < 2 * o + 1 &&
+            { threshold: a, margin: s } = i;
+          a < 2 * s + 1 &&
             console.warn(
-              `Threshold (${a}) is no more than 2 margins + 1 "expand" line (${o} * 2 + 1), it's not necessary to hide unchanged areas which have less than ${
-                2 * o + 1
+              `Threshold (${a}) is no more than 2 margins + 1 "expand" line (${s} * 2 + 1), it's not necessary to hide unchanged areas which have less than ${
+                2 * s + 1
               } lines.`,
             );
-          const s = [];
+          const o = [];
           for (let t = 0; t < n.length; t++) {
             const r = n[t];
-            !r.isEqual || r.end - r.start < a || r.end - r.start <= 2 * o + 1
-              ? s.push(r)
+            !r.isEqual || r.end - r.start < a || r.end - r.start <= 2 * s + 1
+              ? o.push(r)
               : t
               ? t === n.length - 1
-                ? (s.push({ start: r.start, end: r.start + o, isEqual: !0 }),
-                  s.push({
+                ? (o.push({ start: r.start, end: r.start + s, isEqual: !0 }),
+                  o.push({
                     hasLinesBefore: !1,
                     hasLinesAfter: !0,
-                    start: r.start + o,
+                    start: r.start + s,
                     end: e.length,
                     isEqual: !0,
                   }))
-                : (s.push({ start: r.start, end: r.start + o, isEqual: !0 }),
-                  s.push({
+                : (o.push({ start: r.start, end: r.start + s, isEqual: !0 }),
+                  o.push({
                     hasLinesBefore: !0,
                     hasLinesAfter: !0,
-                    start: r.start + o,
-                    end: r.end - o,
+                    start: r.start + s,
+                    end: r.end - s,
                     isEqual: !0,
                   }),
-                  s.push({ start: r.end - o, end: r.end, isEqual: !0 }))
-              : (s.push({
+                  o.push({ start: r.end - s, end: r.end, isEqual: !0 }))
+              : (o.push({
                   hasLinesBefore: !0,
                   hasLinesAfter: !1,
                   start: 0,
-                  end: r.end - o,
+                  end: r.end - s,
                   isEqual: !0,
                 }),
-                s.push({ start: r.end - o, end: r.end, isEqual: !0 }));
+                o.push({ start: r.end - s, end: r.end, isEqual: !0 }));
           }
-          return s;
+          return o;
         };
       function Ln() {
         return (
@@ -3639,10 +3639,10 @@
         var t, r;
         const [n, i] = e.diff,
           a = e.lineNumbers ? `calc(${String(n.length).length}ch + 16px)` : 0;
-        var o;
-        const s = null != (o = e.indent) ? o : 2,
-          l = "tab" === s ? "\t" : " ",
-          c = "tab" === s ? 1 : s,
+        var s;
+        const o = null != (s = e.indent) ? s : 2,
+          l = "tab" === o ? "\t" : " ",
+          c = "tab" === o ? 1 : o,
           u = {
             mode:
               (null == (t = e.inlineDiffOptions) ? void 0 : t.mode) || "char",
@@ -3658,13 +3658,13 @@
             expandLineHeight: p = 26,
           } = e.virtual && !0 !== e.virtual ? e.virtual : {},
           y = "body" === m ? document.body : document.querySelector(m),
-          g = Fn.useRef(n),
-          b = Fn.useRef(i),
-          B = Fn.useRef(Xn(n, i, f)),
-          v = Fn.useRef([]),
-          w = Fn.useRef(0),
-          _ = Fn.useRef(null),
-          [, M] = Fn.useState({}),
+          g = En.useRef(n),
+          b = En.useRef(i),
+          B = En.useRef(Xn(n, i, f)),
+          v = En.useRef([]),
+          w = En.useRef(0),
+          _ = En.useRef(null),
+          [, M] = En.useState({}),
           z = () => {
             if (((v.current = []), e.virtual)) {
               let e = 0;
@@ -3679,10 +3679,10 @@
             }
             M({});
           };
-        Fn.useEffect(() => {
+        En.useEffect(() => {
           (g.current = n), (b.current = i), (B.current = Xn(n, i, f)), z();
         }, [f, n, i]),
-          Fn.useEffect(() => {
+          En.useEffect(() => {
             if (!e.virtual || !y) return;
             const t = () => M({});
             return (
@@ -3703,7 +3703,7 @@
               (B.current = r),
               z();
           },
-          E = (e) => (t) => {
+          F = (e) => (t) => {
             const r = [...B.current],
               n = r[e];
             (r[e] = Ln({}, n, { start: Math.min(n.start + t, n.end) })),
@@ -3714,7 +3714,7 @@
               (B.current = r),
               z();
           },
-          F = (e) => () => {
+          E = (e) => () => {
             const t = [...B.current],
               r = t[e];
             (t[e] = Ln({}, r, { start: r.start, end: r.start })),
@@ -3725,8 +3725,8 @@
               z();
           },
           O = (e, t = [], r = !1, n = !1) =>
-            Fn.createElement(
-              Fn.Fragment,
+            En.createElement(
+              En.Fragment,
               null,
               t.map((t, r) => {
                 const n = e.slice(t.start, t.end);
@@ -3737,7 +3737,7 @@
                 ]
                   .filter(Boolean)
                   .join(" ");
-                return Fn.createElement(
+                return En.createElement(
                   "span",
                   { key: `${r}-${t.type}-${n}`, className: i },
                   n,
@@ -3745,7 +3745,7 @@
               }),
               r &&
                 (n
-                  ? Fn.createElement(
+                  ? En.createElement(
                       "span",
                       { className: "token punctuation" },
                       ",",
@@ -3755,33 +3755,33 @@
           R = (t, r) => {
             var n, i;
             const a = g.current[t],
-              o = b.current[t],
-              [s, d] =
+              s = b.current[t],
+              [o, d] =
                 e.highlightInlineDiff &&
                 "modify" === a.type &&
-                "modify" === o.type
+                "modify" === s.type
                   ? ((e, t, r) => {
                       let n = [],
                         i = [],
                         a = 0,
-                        o = 0;
+                        s = 0;
                       if ("word" === r.mode) {
-                        const s = r.wordSeparator || " ",
-                          l = e.split(s),
-                          c = t.split(s),
+                        const o = r.wordSeparator || " ",
+                          l = e.split(o),
+                          c = t.split(o),
                           u = [...Nn(l, c)],
-                          d = s.length,
+                          d = o.length,
                           f = An(l, d),
                           m = An(c, d);
                         for (const [e, t, r] of u)
                           e > a &&
                             n.push({ type: "remove", start: f[a], end: f[e] }),
-                            t > o &&
-                              i.push({ type: "add", start: m[o], end: m[t] }),
+                            t > s &&
+                              i.push({ type: "add", start: m[s], end: m[t] }),
                             (a = e + r),
-                            (o = t + r),
+                            (s = t + r),
                             n.push({ start: f[e], end: f[a] }),
-                            i.push({ start: m[t], end: m[o] });
+                            i.push({ start: m[t], end: m[s] });
                         return (
                           e.length > a &&
                             n.push({
@@ -3789,35 +3789,35 @@
                               start: f[a],
                               end: e.length,
                             }),
-                          t.length > o &&
-                            i.push({ type: "add", start: m[o], end: t.length }),
+                          t.length > s &&
+                            i.push({ type: "add", start: m[s], end: t.length }),
                           (n = Dn(n)),
                           (i = Dn(i)),
                           [n, i]
                         );
                       }
-                      const s = Nn(e, t);
-                      for (const [e, t, r] of s)
+                      const o = Nn(e, t);
+                      for (const [e, t, r] of o)
                         e > a && n.push({ type: "remove", start: a, end: e }),
-                          t > o && i.push({ type: "add", start: o, end: t }),
+                          t > s && i.push({ type: "add", start: s, end: t }),
                           (a = e + r),
-                          (o = t + r),
+                          (s = t + r),
                           n.push({ start: e, end: a }),
-                          i.push({ start: t, end: o });
+                          i.push({ start: t, end: s });
                       return (
                         e.length > a &&
                           n.push({ type: "remove", start: a, end: e.length }),
-                        t.length > o &&
-                          i.push({ type: "add", start: o, end: t.length }),
+                        t.length > s &&
+                          i.push({ type: "add", start: s, end: t.length }),
                         (n = Dn(n)),
                         (i = Dn(i)),
                         [n, i]
                       );
-                    })(a.text, o.text, u)
+                    })(a.text, s.text, u)
                   : [[], []],
               f = Un(r, a.text, 0),
-              m = Un(r, o.text, 0),
-              h = xn(f, s),
+              m = Un(r, s.text, 0),
+              h = xn(f, o),
               p = xn(m, d);
             var y;
             const B =
@@ -3827,15 +3827,15 @@
                 : "";
             var v;
             const w =
-              "equal" !== o.type &&
-              null != (v = null == (i = e.bgColour) ? void 0 : i[o.type])
+              "equal" !== s.type &&
+              null != (v = null == (i = e.bgColour) ? void 0 : i[s.type])
                 ? v
                 : "";
-            return Fn.createElement(
+            return En.createElement(
               "tr",
               { key: t },
               e.lineNumbers &&
-                Fn.createElement(
+                En.createElement(
                   "td",
                   {
                     className: `line-${a.type} line-number`,
@@ -3843,10 +3843,10 @@
                   },
                   a.lineNumber,
                 ),
-              Fn.createElement(
+              En.createElement(
                 "td",
                 { className: `line-${a.type}`, style: { backgroundColor: B } },
-                Fn.createElement(
+                En.createElement(
                   "pre",
                   null,
                   a.text && l.repeat(a.level * c),
@@ -3854,83 +3854,83 @@
                 ),
               ),
               e.lineNumbers &&
-                Fn.createElement(
+                En.createElement(
                   "td",
                   {
-                    className: `line-${o.type} line-number`,
+                    className: `line-${s.type} line-number`,
                     style: { backgroundColor: w },
                   },
-                  o.lineNumber,
+                  s.lineNumber,
                 ),
-              Fn.createElement(
+              En.createElement(
                 "td",
-                { className: `line-${o.type}`, style: { backgroundColor: w } },
-                Fn.createElement(
+                { className: `line-${s.type}`, style: { backgroundColor: w } },
+                En.createElement(
                   "pre",
                   null,
-                  o.text && l.repeat(o.level * c),
-                  O(o.text, p, o.comma, r),
+                  s.text && l.repeat(s.level * c),
+                  O(s.text, p, s.comma, r),
                 ),
               ),
             );
           },
           j = (e, t, r, n) =>
-            Fn.createElement(
-              Fn.Fragment,
+            En.createElement(
+              En.Fragment,
               null,
               e &&
-                Fn.createElement(
+                En.createElement(
                   "button",
                   { onClick: () => S(n)(r) },
                   "⬆️ Show ",
                   r,
                   " lines before",
                 ),
-              Fn.createElement(
+              En.createElement(
                 "button",
-                { onClick: () => F(n)() },
+                { onClick: () => E(n)() },
                 "↕️ Show all unchanged lines",
               ),
               t &&
-                Fn.createElement(
+                En.createElement(
                   "button",
-                  { onClick: () => E(n)(r) },
+                  { onClick: () => F(n)(r) },
                   "⬇️ Show ",
                   r,
                   " lines after",
                 ),
             ),
           x = (e, t, r, n, i) => {
-            let { start: a, end: o } = e;
-            if (((a = Math.max(a, r)), (o = Math.min(o, n)), a === o))
+            let { start: a, end: s } = e;
+            if (((a = Math.max(a, r)), (s = Math.min(s, n)), a === s))
               return null;
             if (!Rn(e))
-              return Array(o - a)
+              return Array(s - a)
                 .fill(0)
                 .map((e, t) => R(a + t, i));
-            const { hasLinesBefore: s, hasLinesAfter: l } = e,
+            const { hasLinesBefore: o, hasLinesAfter: l } = e,
               c = "boolean" == typeof f ? 20 : f.expandMoreLinesLimit || 20;
             return [
-              Fn.createElement(
+              En.createElement(
                 "tr",
                 { key: `expand-line-${t}`, className: "expand-line" },
-                Fn.createElement(
+                En.createElement(
                   "td",
                   {
                     colSpan: 4,
-                    className: `${s ? "has-lines-before" : ""} ${
+                    className: `${o ? "has-lines-before" : ""} ${
                       l ? "has-lines-after" : ""
                     }`,
                   },
                   "boolean" != typeof f && f.expandLineRenderer
                     ? f.expandLineRenderer({
-                        hasLinesBefore: s,
+                        hasLinesBefore: o,
                         hasLinesAfter: l,
                         onExpandBefore: S(t),
-                        onExpandAfter: E(t),
-                        onExpandAll: F(t),
+                        onExpandAfter: F(t),
+                        onExpandAll: E(t),
                       })
-                    : j(s, l, c, t),
+                    : j(o, l, c, t),
                 ),
               ),
             ];
@@ -3945,18 +3945,18 @@
             .filter(Boolean)
             .join(" "),
           T = !!e.syntaxHighlight;
-        return Fn.createElement(
+        return En.createElement(
           "table",
           { className: C, style: e.style },
-          Fn.createElement(
+          En.createElement(
             "colgroup",
             { className: "measure-line" },
-            e.lineNumbers && Fn.createElement("col", { style: { width: a } }),
-            Fn.createElement("col", null),
-            e.lineNumbers && Fn.createElement("col", { style: { width: a } }),
-            Fn.createElement("col", null),
+            e.lineNumbers && En.createElement("col", { style: { width: a } }),
+            En.createElement("col", null),
+            e.lineNumbers && En.createElement("col", { style: { width: a } }),
+            En.createElement("col", null),
           ),
-          Fn.createElement(
+          En.createElement(
             "tbody",
             { ref: _ },
             ((t) => {
@@ -3967,32 +3967,32 @@
                 null != (r = null == y ? void 0 : y.clientHeight) ? r : 0;
               var i;
               const a = null != (i = null == y ? void 0 : y.scrollTop) ? i : 0,
-                o = a + n;
-              let s = _.current;
+                s = a + n;
+              let o = _.current;
               var l;
-              let c = null != (l = null == s ? void 0 : s.offsetTop) ? l : 0;
+              let c = null != (l = null == o ? void 0 : o.offsetTop) ? l : 0;
               for (
                 ;
-                (null == s ? void 0 : s.offsetParent) &&
-                (null == s ? void 0 : s.offsetParent) !== y;
+                (null == o ? void 0 : o.offsetParent) &&
+                (null == o ? void 0 : o.offsetParent) !== y;
 
               )
-                (s = s.offsetParent), (c += s.offsetTop);
-              if (c > o || c + w.current < a)
-                return Fn.createElement(
+                (o = o.offsetParent), (c += o.offsetTop);
+              if (c > s || c + w.current < a)
+                return En.createElement(
                   "tr",
                   null,
-                  Fn.createElement("td", {
+                  En.createElement("td", {
                     colSpan: 4,
                     style: { height: `${w.current}px` },
                   }),
                 );
               const u = a - c,
-                d = o - c,
+                d = s - c,
                 [f, m, b, M] = ((e, t, r, n, i, a) => {
                   if (!t.length) return [0, 0, 0, 0];
-                  let o = 0,
-                    s = 0,
+                  let s = 0,
+                    o = 0,
                     l = 0,
                     c = 0,
                     u = 0,
@@ -4003,13 +4003,13 @@
                       (t[n] + jn(e[n], i, a) <= r ? (u = n + 1) : (d = n),
                       u === d)
                     ) {
-                      o = u;
+                      s = u;
                       break;
                     }
                   }
-                  const f = e[o];
+                  const f = e[s];
                   for (
-                    l = Rn(f) ? f.start : f.start + Math.floor((r - t[o]) / i),
+                    l = Rn(f) ? f.start : f.start + Math.floor((r - t[s]) / i),
                       u = 0,
                       d = e.length - 1;
                     ;
@@ -4017,55 +4017,55 @@
                   ) {
                     let e = Math.floor((u + d + 1) / 2);
                     if ((t[e] >= n ? (d = e - 1) : (u = e), u === d)) {
-                      s = u;
+                      o = u;
                       break;
                     }
                   }
-                  const m = e[s];
+                  const m = e[o];
                   return (
-                    (c = Rn(m) ? m.end : m.start + Math.ceil((n - t[s]) / i)),
-                    [o, l, s, c]
+                    (c = Rn(m) ? m.end : m.start + Math.ceil((n - t[o]) / i)),
+                    [s, l, o, c]
                   );
                 })(B.current, v.current, u, d, h, p),
-                [z, S] = ((e, t, r, n, i, a, o, s, l) => {
+                [z, S] = ((e, t, r, n, i, a, s, o, l) => {
                   if (!t.length) return [0, 0];
                   let c = 0,
                     u = 0;
                   const d = e[r];
-                  c = Rn(d) ? t[r] : t[r] + (n - d.start) * o;
+                  c = Rn(d) ? t[r] : t[r] + (n - d.start) * s;
                   const f = e[i];
                   return (
-                    (u = Rn(f) ? l - t[i] - s : l - t[i] - (a - f.start) * o),
+                    (u = Rn(f) ? l - t[i] - o : l - t[i] - (a - f.start) * s),
                     [c, u]
                   );
                 })(B.current, v.current, f, m, b, M, h, p, w.current),
-                E = B.current.slice(f, b + 1);
-              return E.length
-                ? Fn.createElement(
-                    Fn.Fragment,
+                F = B.current.slice(f, b + 1);
+              return F.length
+                ? En.createElement(
+                    En.Fragment,
                     null,
-                    Fn.createElement(
+                    En.createElement(
                       "tr",
                       null,
-                      Fn.createElement("td", {
+                      En.createElement("td", {
                         colSpan: 4,
                         style: { height: z, padding: 0 },
                       }),
                     ),
-                    E.map((e, r) => x(e, r, m, M, t)),
-                    Fn.createElement(
+                    F.map((e, r) => x(e, r, m, M, t)),
+                    En.createElement(
                       "tr",
                       null,
-                      Fn.createElement("td", {
+                      En.createElement("td", {
                         colSpan: 4,
                         style: { height: S, padding: 0 },
                       }),
                     ),
                   )
-                : Fn.createElement(
+                : En.createElement(
                     "tr",
                     null,
-                    Fn.createElement("td", {
+                    En.createElement("td", {
                       colSpan: 4,
                       style: { height: `${w.current}px` },
                     }),
@@ -4079,7 +4079,7 @@
     39234: (e, t, r) => {
       "use strict";
       r.d(t, {
-        C: () => s,
+        C: () => o,
         G: () => H,
         J: () => p,
         K: () => y,
@@ -4096,7 +4096,7 @@
         f: () => b,
         g: () => w,
         h: () => c,
-        i: () => E,
+        i: () => F,
         j: () => B,
         k: () => V,
         l: () => W,
@@ -4136,15 +4136,15 @@
                     console.warn(
                       "[DEPRECATED] Please use `subscribeWithSelector` middleware",
                     );
-                    let o = n(t);
-                    function s() {
+                    let s = n(t);
+                    function o() {
                       const r = n(t);
-                      if (!a(o, r)) {
-                        const t = o;
-                        e((o = r), t);
+                      if (!a(s, r)) {
+                        const t = s;
+                        e((s = r), t);
                       }
                     }
-                    return r.add(s), () => r.delete(s);
+                    return r.add(o), () => r.delete(o);
                   })(e, n, a)
                 : (r.add(e), () => r.delete(e)),
             destroy: () => r.clear(),
@@ -4157,39 +4157,39 @@
         /ServerSideRendering|^Deno\//.test(window.navigator.userAgent)
           ? n.useEffect
           : n.useLayoutEffect;
-      function o(e) {
+      function s(e) {
         const t = "function" == typeof e ? i(e) : e,
           r = (e = t.getState, r = Object.is) => {
             const [, i] = (0, n.useReducer)((e) => e + 1, 0),
-              o = t.getState(),
-              s = (0, n.useRef)(o),
+              s = t.getState(),
+              o = (0, n.useRef)(s),
               l = (0, n.useRef)(e),
               c = (0, n.useRef)(r),
               u = (0, n.useRef)(!1),
               d = (0, n.useRef)();
             let f;
-            void 0 === d.current && (d.current = e(o));
+            void 0 === d.current && (d.current = e(s));
             let m = !1;
-            (s.current !== o ||
+            (o.current !== s ||
               l.current !== e ||
               c.current !== r ||
               u.current) &&
-              ((f = e(o)), (m = !r(d.current, f))),
+              ((f = e(s)), (m = !r(d.current, f))),
               a(() => {
                 m && (d.current = f),
-                  (s.current = o),
+                  (o.current = s),
                   (l.current = e),
                   (c.current = r),
                   (u.current = !1);
               });
-            const h = (0, n.useRef)(o);
+            const h = (0, n.useRef)(s);
             a(() => {
               const e = () => {
                   try {
                     const e = t.getState(),
                       r = l.current(e);
                     c.current(d.current, r) ||
-                      ((s.current = e), (d.current = r), i());
+                      ((o.current = e), (d.current = r), i());
                   } catch (e) {
                     (u.current = !0), i();
                   }
@@ -4217,7 +4217,7 @@
           r
         );
       }
-      var s,
+      var o,
         l,
         c,
         u,
@@ -4272,22 +4272,22 @@
               var n,
                 i,
                 a = [],
-                o = !0,
-                s = !1;
+                s = !0,
+                o = !1;
               try {
                 for (
                   r = r.call(e);
-                  !(o = (n = r.next()).done) &&
+                  !(s = (n = r.next()).done) &&
                   (a.push(n.value), !t || a.length !== t);
-                  o = !0
+                  s = !0
                 );
               } catch (e) {
-                (s = !0), (i = e);
+                (o = !0), (i = e);
               } finally {
                 try {
-                  o || null == r.return || r.return();
+                  s || null == r.return || r.return();
                 } finally {
-                  if (s) throw i;
+                  if (o) throw i;
                 }
               }
               return a;
@@ -4303,7 +4303,7 @@
       }
       !(function (e) {
         (e.Strict = "strict"), (e.Loose = "loose");
-      })(s || (s = {})),
+      })(o || (o = {})),
         (function (e) {
           (e.Lines = "lines"), (e.Dots = "dots");
         })(l || (l = {})),
@@ -4375,8 +4375,8 @@
         S = function (e) {
           return !isNaN(e) && isFinite(e);
         },
-        E = Symbol("internals");
-      function F(e, t) {
+        F = Symbol("internals");
+      function E(e, t) {
         var r = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
           var n = Object.getOwnPropertySymbols(e);
@@ -4392,12 +4392,12 @@
         for (var t = 1; t < arguments.length; t++) {
           var r = null != arguments[t] ? arguments[t] : {};
           t % 2
-            ? F(Object(r), !0).forEach(function (t) {
+            ? E(Object(r), !0).forEach(function (t) {
                 h(e, t, r[t]);
               })
             : Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
-            : F(Object(r)).forEach(function (t) {
+            : E(Object(r)).forEach(function (t) {
                 Object.defineProperty(
                   e,
                   t,
@@ -4415,20 +4415,20 @@
           var n = t.position.x + t.width - r.width,
             i = t.position.y + t.height - r.height;
           if (n > 0 || i > 0 || t.position.x < 0 || t.position.y < 0) {
-            var a, o;
+            var a, s;
             if (
               ((r.style = O({}, r.style) || {}),
               (r.style.width =
                 null !== (a = r.style.width) && void 0 !== a ? a : r.width),
               (r.style.height =
-                null !== (o = r.style.height) && void 0 !== o ? o : r.height),
+                null !== (s = r.style.height) && void 0 !== s ? s : r.height),
               n > 0 && (r.style.width += n),
               i > 0 && (r.style.height += i),
               t.position.x < 0)
             ) {
-              var s = Math.abs(t.position.x);
-              (r.position.x = r.position.x - s),
-                (r.style.width += s),
+              var o = Math.abs(t.position.x);
+              (r.position.x = r.position.x - o),
+                (r.style.width += o),
                 (t.position.x = 0);
             }
             if (t.position.y < 0) {
@@ -4579,10 +4579,10 @@
           n = r.getState(),
           i = n.addSelectedNodes,
           a = n.unselectNodesAndEdges,
-          o = n.multiSelectionActive,
-          s = n.nodeInternals.get(t);
+          s = n.multiSelectionActive,
+          o = n.nodeInternals.get(t);
         r.setState({ nodesSelectionActive: !1 }),
-          s.selected ? s.selected && o && a({ nodes: [s] }) : i([t]);
+          o.selected ? o.selected && s && a({ nodes: [o] }) : i([t]);
       }
       function U(e, t) {
         var r = Object.keys(e);
@@ -4667,14 +4667,14 @@
         Z = function (e, t, r, n) {
           var i = e.x,
             a = e.y,
-            o = g(t, 3),
-            s = o[0],
-            l = o[1],
-            c = o[2],
+            s = g(t, 3),
+            o = s[0],
+            l = s[1],
+            c = s[2],
             u = g(n, 2),
             d = u[0],
             f = u[1],
-            m = { x: (i - s) / c, y: (a - l) / c };
+            m = { x: (i - o) / c, y: (a - l) / c };
           return r
             ? { x: d * Math.round(m.x / d), y: f * Math.round(m.y / f) }
             : m;
@@ -4711,8 +4711,8 @@
             n = r[0],
             i = r[1],
             a = r[2],
-            o = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-            s = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
+            s = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+            o = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
             l = M({
               x: (t.x - n) / a,
               y: (t.y - i) / a,
@@ -4726,7 +4726,7 @@
                 r = e.width,
                 n = e.height,
                 i = e.selectable;
-              if (s && !(void 0 === i || i)) return !1;
+              if (o && !(void 0 === i || i)) return !1;
               var a = M(k(k({}, t), {}, { width: r || 0, height: n || 0 })),
                 u = Math.max(0, Math.min(l.x2, a.x2) - Math.max(l.x, a.x)),
                 d = Math.max(0, Math.min(l.y2, a.y2) - Math.max(l.y, a.y)),
@@ -4735,7 +4735,7 @@
                 void 0 === n ||
                 null === r ||
                 null === n ||
-                (o && f > 0) ||
+                (s && f > 0) ||
                 f >= (r || 0) * (n || 0)) &&
                 c.push(e);
             }),
@@ -4755,9 +4755,9 @@
               arguments.length > 5 && void 0 !== arguments[5]
                 ? arguments[5]
                 : 0.1,
-            o = t / (e.width * (1 + a)),
-            s = r / (e.height * (1 + a)),
-            l = Math.min(o, s),
+            s = t / (e.width * (1 + a)),
+            o = r / (e.height * (1 + a)),
+            l = Math.min(s, o),
             c = B(l, n, i);
           return [
             t / 2 - (e.x + e.width / 2) * c,
@@ -4802,19 +4802,19 @@
         return e;
       }
       function J(e, t, r, n) {
-        var i, a, o, s, l, c, u, d, f, m, h, p;
+        var i, a, s, o, l, c, u, d, f, m, h, p;
         if (!e.parentNode) return n;
         var y = t.get(e.parentNode);
         return J(y, t, r, {
           x:
             (null !== (i = n.x) && void 0 !== i ? i : 0) +
             (null !==
-              (a = null === (o = y.position) || void 0 === o ? void 0 : o.x) &&
+              (a = null === (s = y.position) || void 0 === s ? void 0 : s.x) &&
             void 0 !== a
               ? a
               : 0),
           y:
-            (null !== (s = n.y) && void 0 !== s ? s : 0) +
+            (null !== (o = n.y) && void 0 !== o ? o : 0) +
             (null !==
               (l = null === (c = y.position) || void 0 === c ? void 0 : c.y) &&
             void 0 !== l
@@ -4822,12 +4822,12 @@
               : 0),
           z:
             (null !==
-              (u = null === (d = y[E]) || void 0 === d ? void 0 : d.z) &&
+              (u = null === (d = y[F]) || void 0 === d ? void 0 : d.z) &&
             void 0 !== u
               ? u
               : 0) > (null !== (f = n.z) && void 0 !== f ? f : 0)
               ? null !==
-                  (m = null === (h = y[E]) || void 0 === h ? void 0 : h.z) &&
+                  (m = null === (h = y[F]) || void 0 === h ? void 0 : h.z) &&
                 void 0 !== m
                 ? m
                 : 0
@@ -4843,12 +4843,12 @@
           e.forEach(function (e) {
             var i,
               a = S(e.zIndex) ? e.zIndex : e.selected ? 1e3 : 0,
-              o = t.get(e.id),
-              s = Q(
+              s = t.get(e.id),
+              o = Q(
                 Q(
                   {
-                    width: null == o ? void 0 : o.width,
-                    height: null == o ? void 0 : o.height,
+                    width: null == s ? void 0 : s.width,
+                    height: null == s ? void 0 : s.height,
                   },
                   e,
                 ),
@@ -4856,18 +4856,18 @@
                 { positionAbsolute: { x: e.position.x, y: e.position.y } },
               );
             e.parentNode &&
-              ((s.parentNode = e.parentNode), (n[e.parentNode] = !0)),
-              Object.defineProperty(s, E, {
+              ((o.parentNode = e.parentNode), (n[e.parentNode] = !0)),
+              Object.defineProperty(o, F, {
                 enumerable: !1,
                 value: {
                   handleBounds:
-                    null == o || null === (i = o[E]) || void 0 === i
+                    null == s || null === (i = s[F]) || void 0 === i
                       ? void 0
                       : i.handleBounds,
                   z: a,
                 },
               }),
-              r.set(e.id, s);
+              r.set(e.id, o);
           }),
           r.forEach(function (e) {
             if (e.parentNode && !r.has(e.parentNode))
@@ -4888,7 +4888,7 @@
                       z:
                         null !==
                           (t =
-                            null === (i = e[E]) || void 0 === i
+                            null === (i = e[F]) || void 0 === i
                               ? void 0
                               : i.z) && void 0 !== t
                           ? t
@@ -4896,12 +4896,12 @@
                     },
                   ),
                 ),
-                o = a.x,
-                s = a.y,
+                s = a.x,
+                o = a.y,
                 l = a.z;
-              (e.positionAbsolute = { x: o, y: s }),
-                (e[E].z = l),
-                n[e.id] && (e[E].isParent = !0);
+              (e.positionAbsolute = { x: s, y: o }),
+                (e[F].z = l),
+                n[e.id] && (e[F].isParent = !0);
             }
           }),
           r
@@ -4914,8 +4914,8 @@
           n = r.nodeInternals,
           i = r.width,
           a = r.height,
-          o = r.minZoom,
-          s = r.maxZoom,
+          s = r.minZoom,
+          o = r.maxZoom,
           l = r.d3Zoom,
           c = r.d3Selection,
           u = r.fitViewOnInitDone,
@@ -4937,8 +4937,8 @@
                   B,
                   i,
                   a,
-                  null !== (p = t.minZoom) && void 0 !== p ? p : o,
-                  null !== (y = t.maxZoom) && void 0 !== y ? y : s,
+                  null !== (p = t.minZoom) && void 0 !== p ? p : s,
+                  null !== (y = t.maxZoom) && void 0 !== y ? y : o,
                   null !== (b = t.padding) && void 0 !== b ? b : 0.1,
                 ),
                 3,
@@ -4968,7 +4968,7 @@
                 Q(
                   Q({}, n),
                   {},
-                  (h((r = {}), E, n[E]), h(r, "selected", e.selected), r),
+                  (h((r = {}), F, n[F]), h(r, "selected", e.selected), r),
                 ),
               );
           }),
@@ -4989,24 +4989,24 @@
           n = e.get,
           i = e.set,
           a = n(),
-          o = a.nodeInternals,
-          s = a.edges,
+          s = a.nodeInternals,
+          o = a.edges,
           l = a.onNodesChange,
           c = a.onEdgesChange,
           u = a.hasDefaultNodes,
           d = a.hasDefaultEdges;
         null != t &&
           t.length &&
-          (u && i({ nodeInternals: re(t, o) }), null == l || l(t)),
+          (u && i({ nodeInternals: re(t, s) }), null == l || l(t)),
           null != r &&
             r.length &&
-            (d && i({ edges: ne(r, s) }), null == c || c(r));
+            (d && i({ edges: ne(r, o) }), null == c || c(r));
       }
       var ae = [
           [Number.NEGATIVE_INFINITY, Number.NEGATIVE_INFINITY],
           [Number.POSITIVE_INFINITY, Number.POSITIVE_INFINITY],
         ],
-        oe = {
+        se = {
           width: 0,
           height: 0,
           transform: [0, 0, 1],
@@ -5029,7 +5029,7 @@
           connectionHandleId: null,
           connectionHandleType: "source",
           connectionPosition: { x: 0, y: 0 },
-          connectionMode: s.Strict,
+          connectionMode: o.Strict,
           domNode: null,
           snapGrid: [15, 15],
           snapToGrid: !1,
@@ -5044,7 +5044,7 @@
           connectionStartHandle: null,
           connectOnClick: !0,
         };
-      function se(e, t) {
+      function oe(e, t) {
         var r = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
           var n = Object.getOwnPropertySymbols(e);
@@ -5060,12 +5060,12 @@
         for (var t = 1; t < arguments.length; t++) {
           var r = null != arguments[t] ? arguments[t] : {};
           t % 2
-            ? se(Object(r), !0).forEach(function (t) {
+            ? oe(Object(r), !0).forEach(function (t) {
                 h(e, t, r[t]);
               })
             : Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
-            : se(Object(r)).forEach(function (t) {
+            : oe(Object(r)).forEach(function (t) {
                 Object.defineProperty(
                   e,
                   t,
@@ -5121,9 +5121,9 @@
         de = ce.useStore,
         fe = ce.useStoreApi,
         me = function () {
-          return o(function (e, t) {
+          return s(function (e, t) {
             return le(
-              le({}, oe),
+              le({}, se),
               {},
               {
                 setNodes: function (r) {
@@ -5153,8 +5153,8 @@
                   var n = t(),
                     i = n.onNodesChange,
                     a = n.nodeInternals,
-                    o = n.fitViewOnInit,
-                    s = n.fitViewOnInitDone,
+                    s = n.fitViewOnInit,
+                    o = n.fitViewOnInitDone,
                     l = n.fitViewOnInitOptions,
                     c = n.domNode,
                     u =
@@ -5182,9 +5182,9 @@
                                 {},
                                 h(
                                   {},
-                                  E,
+                                  F,
                                   le(
-                                    le({}, r[E]),
+                                    le({}, r[F]),
                                     {},
                                     {
                                       handleBounds: {
@@ -5205,7 +5205,7 @@
                         }
                         return e;
                       }, []),
-                      p = s || (o && !s && te(t, le({ initial: !0 }, l)));
+                      p = o || (s && !o && te(t, le({ initial: !0 }, l)));
                     e({ nodeInternals: new Map(a), fitViewOnInitDone: p }),
                       (null == m ? void 0 : m.length) > 0 &&
                         (null == i || i(m));
@@ -5220,10 +5220,10 @@
                       void 0 !== arguments[2] &&
                       arguments[2],
                     a = t(),
-                    o = a.onNodesChange,
-                    s = a.nodeInternals,
+                    s = a.onNodesChange,
+                    o = a.nodeInternals,
                     l = a.hasDefaultNodes;
-                  if (l || o) {
+                  if (l || s) {
                     var c = r.map(function (e) {
                       var t = { id: e.id, type: "position", dragging: i };
                       return (
@@ -5235,10 +5235,10 @@
                     });
                     if (null != c && c.length) {
                       if (l) {
-                        var u = ee(x(c, Array.from(s.values())), s);
+                        var u = ee(x(c, Array.from(o.values())), o);
                         e({ nodeInternals: u });
                       }
-                      null == o || o(c);
+                      null == s || s(c);
                     }
                   }
                 },
@@ -5246,28 +5246,28 @@
                   var n,
                     i = t(),
                     a = i.multiSelectionActive,
-                    o = i.nodeInternals,
-                    s = i.edges,
+                    s = i.nodeInternals,
+                    o = i.edges,
                     l = null;
                   a
                     ? (n = r.map(function (e) {
                         return T(e, !0);
                       }))
-                    : ((n = W(Array.from(o.values()), r)), (l = W(s, []))),
+                    : ((n = W(Array.from(s.values()), r)), (l = W(o, []))),
                     ie({ changedNodes: n, changedEdges: l, get: t, set: e });
                 },
                 addSelectedEdges: function (r) {
                   var n,
                     i = t(),
                     a = i.multiSelectionActive,
-                    o = i.edges,
-                    s = i.nodeInternals,
+                    s = i.edges,
+                    o = i.nodeInternals,
                     l = null;
                   a
                     ? (n = r.map(function (e) {
                         return T(e, !0);
                       }))
-                    : ((n = W(o, r)), (l = W(Array.from(s.values()), []))),
+                    : ((n = W(s, r)), (l = W(Array.from(o.values()), []))),
                     ie({ changedNodes: l, changedEdges: n, get: t, set: e });
                 },
                 unselectNodesAndEdges: function () {
@@ -5278,11 +5278,11 @@
                     n = r.nodes,
                     i = r.edges,
                     a = t(),
-                    o = a.nodeInternals,
-                    s = a.edges,
-                    l = i || s;
+                    s = a.nodeInternals,
+                    o = a.edges,
+                    l = i || o;
                   ie({
-                    changedNodes: (n || Array.from(o.values())).map(
+                    changedNodes: (n || Array.from(s.values())).map(
                       function (e) {
                         return (e.selected = !1), T(e.id, !1);
                       },
@@ -5341,7 +5341,7 @@
                     e({ nodeExtent: r, nodeInternals: new Map(n) });
                 },
                 reset: function () {
-                  return e(le({}, oe));
+                  return e(le({}, se));
                 },
               },
             );
@@ -5351,7 +5351,7 @@
     95791: (e, t, r) => {
       "use strict";
       r.d(t, {
-        HH: () => Ee,
+        HH: () => Fe,
         tV: () => br,
         ZP: () => gr,
         ll: () => wr,
@@ -5368,8 +5368,8 @@
         else for (let r in e) e[r] && (t += (t && " ") + r);
         return t;
       }
-      var o = r(96295);
-      function s(e, t) {
+      var s = r(96295);
+      function o(e, t) {
         if (Object.is(e, t)) return !0;
         if (
           "object" != typeof e ||
@@ -5432,7 +5432,7 @@
         },
         d = function () {
           var e = (0, n.u)(),
-            t = (0, n.b)(u, s),
+            t = (0, n.b)(u, o),
             r = t.d3Zoom,
             a = t.d3Selection;
           return (0, i.useMemo)(
@@ -5461,15 +5461,15 @@
                       return e.getState().transform[2];
                     },
                     setViewport: function (t, i) {
-                      var s,
+                      var o,
                         l,
                         c,
                         u = (0, n._)(e.getState().transform, 3),
                         d = u[0],
                         f = u[1],
                         m = u[2],
-                        h = o.CR.translate(
-                          null !== (s = t.x) && void 0 !== s ? s : d,
+                        h = s.CR.translate(
+                          null !== (o = t.x) && void 0 !== o ? o : d,
                           null !== (l = t.y) && void 0 !== l ? l : f,
                         ).scale(null !== (c = t.zoom) && void 0 !== c ? c : m);
                       r.transform(
@@ -5484,23 +5484,23 @@
                     fitView: function (t) {
                       return (0, n.N)(e.getState, t);
                     },
-                    setCenter: function (t, i, s) {
+                    setCenter: function (t, i, o) {
                       var l = e.getState(),
                         c = l.width,
                         u = l.height,
                         d = l.maxZoom,
                         f =
-                          void 0 !== (null == s ? void 0 : s.zoom) ? s.zoom : d,
+                          void 0 !== (null == o ? void 0 : o.zoom) ? o.zoom : d,
                         m = c / 2 - t * f,
                         h = u / 2 - i * f,
-                        p = o.CR.translate(m, h).scale(f);
+                        p = s.CR.translate(m, h).scale(f);
                       r.transform(
-                        (0, n.L)(a, null == s ? void 0 : s.duration),
+                        (0, n.L)(a, null == o ? void 0 : o.duration),
                         p,
                       );
                     },
                     fitBounds: function (t, i) {
-                      var s,
+                      var o,
                         l = e.getState(),
                         c = l.width,
                         u = l.height,
@@ -5512,16 +5512,16 @@
                           u,
                           d,
                           f,
-                          null !== (s = null == i ? void 0 : i.padding) &&
-                            void 0 !== s
-                            ? s
+                          null !== (o = null == i ? void 0 : i.padding) &&
+                            void 0 !== o
+                            ? o
                             : 0.1,
                         ),
                         h = (0, n._)(m, 3),
                         p = h[0],
                         y = h[1],
                         g = h[2],
-                        b = o.CR.translate(p, y).scale(g);
+                        b = s.CR.translate(p, y).scale(g);
                       r.transform(
                         (0, n.L)(a, null == i ? void 0 : i.duration),
                         b,
@@ -5531,8 +5531,8 @@
                       var r = e.getState(),
                         i = r.transform,
                         a = r.snapToGrid,
-                        o = r.snapGrid;
-                      return (0, n.p)(t, i, a, o);
+                        s = r.snapGrid;
+                      return (0, n.p)(t, i, a, s);
                     },
                     viewportInitialized: !0,
                   }
@@ -5584,13 +5584,13 @@
           a = (0, i.useCallback)(function (e) {
             return t.getState().nodeInternals.get(e);
           }, []),
-          o = (0, i.useCallback)(function () {
+          s = (0, i.useCallback)(function () {
             var e = t.getState().edges;
             return (void 0 === e ? [] : e).map(function (e) {
               return m({}, e);
             });
           }, []),
-          s = (0, i.useCallback)(function (e) {
+          o = (0, i.useCallback)(function (e) {
             var r = t.getState().edges;
             return (void 0 === r ? [] : r).find(function (t) {
               return t.id === e;
@@ -5601,14 +5601,14 @@
               n = r.nodeInternals,
               i = r.setNodes,
               a = r.hasDefaultNodes,
-              o = r.onNodesChange,
-              s = Array.from(n.values()),
-              l = "function" == typeof e ? e(s) : e;
+              s = r.onNodesChange,
+              o = Array.from(n.values()),
+              l = "function" == typeof e ? e(o) : e;
             if (a) i(l);
-            else if (o) {
-              o(
+            else if (s) {
+              s(
                 0 === l.length
-                  ? s.map(function (e) {
+                  ? o.map(function (e) {
                       return { type: "remove", id: e.id };
                     })
                   : l.map(function (e) {
@@ -5622,12 +5622,12 @@
               n = r.edges,
               i = void 0 === n ? [] : n,
               a = r.setEdges,
-              o = r.hasDefaultEdges,
-              s = r.onEdgesChange,
+              s = r.hasDefaultEdges,
+              o = r.onEdgesChange,
               l = "function" == typeof e ? e(i) : e;
-            if (o) a(l);
-            else if (s) {
-              s(
+            if (s) a(l);
+            else if (o) {
+              o(
                 0 === l.length
                   ? i.map(function (e) {
                       return { type: "remove", id: e.id };
@@ -5643,13 +5643,13 @@
               n = t.getState(),
               i = n.nodeInternals,
               a = n.setNodes,
-              o = n.hasDefaultNodes,
-              s = n.onNodesChange;
-            if (o) {
+              s = n.hasDefaultNodes,
+              o = n.onNodesChange;
+            if (s) {
               var c = Array.from(i.values());
               a([].concat(c, l(r)));
-            } else if (s) {
-              s(
+            } else if (o) {
+              o(
                 r.map(function (e) {
                   return { item: e, type: "add" };
                 }),
@@ -5661,10 +5661,10 @@
               n = t.getState(),
               i = n.edges,
               a = void 0 === i ? [] : i,
-              o = n.setEdges,
-              s = n.hasDefaultEdges,
+              s = n.setEdges,
+              o = n.hasDefaultEdges,
               c = n.onEdgesChange;
-            if (s) o([].concat(l(a), l(r)));
+            if (o) s([].concat(l(a), l(r)));
             else if (c) {
               c(
                 r.map(function (e) {
@@ -5678,14 +5678,14 @@
               r = e.nodeInternals,
               i = e.edges,
               a = void 0 === i ? [] : i,
-              o = e.transform,
-              s = Array.from(r.values()),
-              l = (0, n._)(o, 3),
+              s = e.transform,
+              o = Array.from(r.values()),
+              l = (0, n._)(s, 3),
               c = l[0],
               u = l[1],
               d = l[2];
             return {
-              nodes: s.map(function (e) {
+              nodes: o.map(function (e) {
                 return m({}, e);
               }),
               edges: a.map(function (e) {
@@ -5702,8 +5702,8 @@
               {
                 getNodes: r,
                 getNode: a,
-                getEdges: o,
-                getEdge: s,
+                getEdges: s,
+                getEdge: o,
                 setNodes: c,
                 setEdges: u,
                 addNodes: f,
@@ -5712,7 +5712,7 @@
               },
             );
           },
-          [e, r, a, o, s, c, u, f, h, p],
+          [e, r, a, s, o, c, u, f, h, p],
         );
       }
       function p(e, t) {
@@ -5798,7 +5798,7 @@
       var M = function (e) {
           var t = e.children,
             r = e.className,
-            o = p(e, w);
+            s = p(e, w);
           return i.createElement(
             "button",
             (function (e) {
@@ -5827,7 +5827,7 @@
                 type: "button",
                 className: a(["react-flow__controls-button", r]),
               },
-              o,
+              s,
             ),
             t,
           );
@@ -5838,9 +5838,9 @@
         S = function (e) {
           var t = e.style,
             r = e.showZoom,
-            o = void 0 === r || r,
-            s = e.showFitView,
-            l = void 0 === s || s,
+            s = void 0 === r || r,
+            o = e.showFitView,
+            l = void 0 === o || o,
             c = e.showInteractive,
             u = void 0 === c || c,
             d = e.fitViewOptions,
@@ -5850,9 +5850,9 @@
             w = e.onInteractiveChange,
             _ = e.className,
             S = e.children,
-            E = (0, n.u)(),
-            F = (0, i.useState)(!1),
-            O = (0, n._)(F, 2),
+            F = (0, n.u)(),
+            E = (0, i.useState)(!1),
+            O = (0, n._)(E, 2),
             R = O[0],
             j = O[1],
             x = (0, n.b)(z),
@@ -5870,7 +5870,7 @@
           return i.createElement(
             "div",
             { className: a(["react-flow__controls", _]), style: t },
-            o &&
+            s &&
               i.createElement(
                 i.Fragment,
                 null,
@@ -5918,7 +5918,7 @@
                 {
                   className: "react-flow__controls-interactive",
                   onClick: function () {
-                    E.setState({
+                    F.setState({
                       nodesDraggable: !x,
                       nodesConnectable: !x,
                       elementsSelectable: !x,
@@ -5934,8 +5934,8 @@
           );
         };
       S.displayName = "Controls";
-      var E = r(37788),
-        F = r(65683),
+      var F = r(37788),
+        E = r(65683),
         O = r(7785),
         R = r(12466),
         j = r(70393);
@@ -5948,8 +5948,8 @@
           target: n,
           identifier: i,
           active: a,
-          x: o,
-          y: s,
+          x: s,
+          y: o,
           dx: l,
           dy: c,
           dispatch: u,
@@ -5962,8 +5962,8 @@
           target: { value: n, enumerable: !0, configurable: !0 },
           identifier: { value: i, enumerable: !0, configurable: !0 },
           active: { value: a, enumerable: !0, configurable: !0 },
-          x: { value: o, enumerable: !0, configurable: !0 },
-          y: { value: s, enumerable: !0, configurable: !0 },
+          x: { value: s, enumerable: !0, configurable: !0 },
+          y: { value: o, enumerable: !0, configurable: !0 },
           dx: { value: l, enumerable: !0, configurable: !0 },
           dy: { value: c, enumerable: !0, configurable: !0 },
           _: { value: u },
@@ -5998,11 +5998,11 @@
           t.hideAttribution
         )
           return null;
-        var o = "".concat(n).split("-");
+        var s = "".concat(n).split("-");
         return i.createElement(
           "div",
           {
-            className: a(["react-flow__attribution"].concat(l(o))),
+            className: a(["react-flow__attribution"].concat(l(s))),
             "data-message":
               "Please only hide this attribution when you are subscribed to React Flow Pro: https://pro.reactflow.dev/pricing",
           },
@@ -6044,9 +6044,9 @@
       var k = function (e) {
           var t = e.x,
             r = e.y,
-            o = e.label,
-            s = e.labelStyle,
-            l = void 0 === s ? {} : s,
+            s = e.label,
+            o = e.labelStyle,
+            l = void 0 === o ? {} : o,
             c = e.labelShowBg,
             u = void 0 === c || c,
             d = e.labelBgStyle,
@@ -6063,7 +6063,7 @@
             M = (0, n._)(_, 2),
             z = M[0],
             S = M[1],
-            E = a(["react-flow__edge-textwrapper", B]);
+            F = a(["react-flow__edge-textwrapper", B]);
           return (
             (0, i.useEffect)(
               function () {
@@ -6072,9 +6072,9 @@
                   S({ x: e.x, y: e.y, width: e.width, height: e.height });
                 }
               },
-              [o],
+              [s],
             ),
-            void 0 !== o && o
+            void 0 !== s && s
               ? i.createElement(
                   "g",
                   (function (e) {
@@ -6103,7 +6103,7 @@
                       transform: "translate("
                         .concat(t - z.width / 2, " ")
                         .concat(r - z.height / 2, ")"),
-                      className: E,
+                      className: F,
                     },
                     v,
                   ),
@@ -6127,7 +6127,7 @@
                       ref: w,
                       style: l,
                     },
-                    o,
+                    s,
                   ),
                   b,
                 )
@@ -6140,8 +6140,8 @@
             r = e.centerX,
             n = e.centerY,
             a = e.label,
-            o = e.labelStyle,
-            s = e.labelShowBg,
+            s = e.labelStyle,
+            o = e.labelShowBg,
             l = e.labelBgStyle,
             c = e.labelBgPadding,
             u = e.labelBgBorderRadius,
@@ -6153,8 +6153,8 @@
                   x: r,
                   y: n,
                   label: a,
-                  labelStyle: o,
-                  labelShowBg: s,
+                  labelStyle: s,
+                  labelShowBg: o,
                   labelBgStyle: l,
                   labelBgPadding: c,
                   labelBgBorderRadius: u,
@@ -6178,17 +6178,17 @@
           r,
           i = e.pos,
           a = e.x1,
-          o = e.y1,
-          s = e.x2,
+          s = e.y1,
+          o = e.x2,
           l = e.y2;
         switch (i) {
           case n.P.Left:
           case n.P.Right:
-            (t = 0.5 * (a + s)), (r = o);
+            (t = 0.5 * (a + o)), (r = s);
             break;
           case n.P.Top:
           case n.P.Bottom:
-            (t = a), (r = 0.5 * (o + l));
+            (t = a), (r = 0.5 * (s + l));
         }
         return [t, r];
       }
@@ -6197,15 +6197,15 @@
           r = e.sourceY,
           i = e.sourcePosition,
           a = void 0 === i ? n.P.Bottom : i,
-          o = e.targetX,
-          s = e.targetY,
+          s = e.targetX,
+          o = e.targetY,
           l = e.targetPosition,
           c = void 0 === l ? n.P.Top : l,
-          u = q({ pos: a, x1: t, y1: r, x2: o, y2: s }),
+          u = q({ pos: a, x1: t, y1: r, x2: s, y2: o }),
           d = (0, n._)(u, 2),
           f = d[0],
           m = d[1],
-          h = q({ pos: c, x1: o, y1: s, x2: t, y2: r }),
+          h = q({ pos: c, x1: s, y1: o, x2: t, y2: r }),
           p = (0, n._)(h, 2),
           y = p[0],
           g = p[1];
@@ -6216,16 +6216,16 @@
           .concat(m, " ")
           .concat(y, ",")
           .concat(g, " ")
-          .concat(o, ",")
-          .concat(s);
+          .concat(s, ",")
+          .concat(o);
       }
       var $ = (0, i.memo)(function (e) {
         var t = e.sourceX,
           r = e.sourceY,
           a = e.targetX,
-          o = e.targetY,
-          s = e.sourcePosition,
-          l = void 0 === s ? n.P.Bottom : s,
+          s = e.targetY,
+          o = e.sourcePosition,
+          l = void 0 === o ? n.P.Bottom : o,
           c = e.targetPosition,
           u = void 0 === c ? n.P.Top : c,
           d = e.label,
@@ -6242,7 +6242,7 @@
             sourceY: r,
             sourcePosition: l,
             targetX: a,
-            targetY: o,
+            targetY: s,
             targetPosition: u,
           },
           w = Z(v),
@@ -6251,18 +6251,18 @@
               r = e.sourceY,
               i = e.sourcePosition,
               a = void 0 === i ? n.P.Bottom : i,
-              o = e.targetX,
-              s = e.targetY,
+              s = e.targetX,
+              o = e.targetY,
               l = e.targetPosition,
               c = void 0 === l ? n.P.Top : l,
-              u = q({ pos: a, x1: t, y1: r, x2: o, y2: s }),
+              u = q({ pos: a, x1: t, y1: r, x2: s, y2: o }),
               d = (0, n._)(u, 2),
               f = d[0],
               m = d[1],
-              h = q({ pos: c, x1: o, y1: s, x2: t, y2: r }),
+              h = q({ pos: c, x1: s, y1: o, x2: t, y2: r }),
               p = (0, n._)(h, 2),
-              y = 0.125 * t + 0.375 * f + 0.375 * p[0] + 0.125 * o,
-              g = 0.125 * r + 0.375 * m + 0.375 * p[1] + 0.125 * s;
+              y = 0.125 * t + 0.375 * f + 0.375 * p[0] + 0.125 * s,
+              g = 0.125 * r + 0.375 * m + 0.375 * p[1] + 0.125 * o;
             return [y, g, Math.abs(y - t), Math.abs(g - r)];
           })(v),
           M = (0, n._)(_, 2),
@@ -6301,11 +6301,11 @@
             r = e.sourceY,
             i = e.targetX,
             a = e.targetY,
-            o = e.sourcePosition,
-            s = void 0 === o ? n.P.Bottom : o,
+            s = e.sourcePosition,
+            o = void 0 === s ? n.P.Bottom : s,
             l = e.targetPosition,
             c = void 0 === l ? n.P.Top : l,
-            u = Y.includes(s),
+            u = Y.includes(o),
             d = Y.includes(c);
           if ((u && !d) || (d && !u)) {
             var f = u ? Math.abs(i - t) : 0,
@@ -6429,79 +6429,79 @@
           r = e.sourceY,
           i = e.sourcePosition,
           a = void 0 === i ? n.P.Bottom : i,
-          o = e.targetX,
-          s = e.targetY,
+          s = e.targetX,
+          o = e.targetY,
           l = e.targetPosition,
           c = void 0 === l ? n.P.Top : l,
           u = e.borderRadius,
           d = void 0 === u ? 5 : u,
           f = e.centerX,
           m = e.centerY,
-          h = H({ sourceX: t, sourceY: r, targetX: o, targetY: s }),
+          h = H({ sourceX: t, sourceY: r, targetX: s, targetY: o }),
           p = (0, n._)(h, 4),
           y = p[0],
           g = p[1],
           b = p[2],
           B = p[3],
-          v = Math.min(d, Math.abs(o - t)),
-          w = Math.min(d, Math.abs(s - r)),
+          v = Math.min(d, Math.abs(s - t)),
+          w = Math.min(d, Math.abs(o - r)),
           _ = Math.min(v, w, b, B),
           M = [n.P.Left, n.P.Right],
           z = void 0 !== f ? f : y,
           S = void 0 !== m ? m : g,
-          E = null,
-          F = null;
+          F = null,
+          E = null;
         return (
-          t <= o
-            ? ((E = r <= s ? K(t, S, _) : re(t, S, _)),
-              (F = r <= s ? ie(o, S, _) : ee(o, S, _)))
-            : ((E = r < s ? J(t, S, _) : ne(t, S, _)),
-              (F = r < s ? te(o, S, _) : Q(o, S, _))),
+          t <= s
+            ? ((F = r <= o ? K(t, S, _) : re(t, S, _)),
+              (E = r <= o ? ie(s, S, _) : ee(s, S, _)))
+            : ((F = r < o ? J(t, S, _) : ne(t, S, _)),
+              (E = r < o ? te(s, S, _) : Q(s, S, _))),
           M.includes(a) && M.includes(c)
-            ? t <= o
-              ? ((E = r <= s ? ie(z, r, _) : ee(z, r, _)),
-                (F = r <= s ? K(z, s, _) : re(z, s, _)))
+            ? t <= s
+              ? ((F = r <= o ? ie(z, r, _) : ee(z, r, _)),
+                (E = r <= o ? K(z, o, _) : re(z, o, _)))
               : ((a === n.P.Right && c === n.P.Left) ||
                   (a === n.P.Left && c === n.P.Right) ||
                   (a === n.P.Left && c === n.P.Left)) &&
-                ((E = r <= s ? te(z, r, _) : Q(z, r, _)),
-                (F = r <= s ? J(z, s, _) : ne(z, s, _)))
+                ((F = r <= o ? te(z, r, _) : Q(z, r, _)),
+                (E = r <= o ? J(z, o, _) : ne(z, o, _)))
             : M.includes(a) && !M.includes(c)
-            ? ((E =
-                t <= o
-                  ? r <= s
-                    ? ie(o, r, _)
-                    : ee(o, r, _)
-                  : r <= s
-                  ? te(o, r, _)
-                  : Q(o, r, _)),
-              (F = ""))
+            ? ((F =
+                t <= s
+                  ? r <= o
+                    ? ie(s, r, _)
+                    : ee(s, r, _)
+                  : r <= o
+                  ? te(s, r, _)
+                  : Q(s, r, _)),
+              (E = ""))
             : !M.includes(a) &&
               M.includes(c) &&
-              ((E =
-                t <= o
-                  ? r <= s
-                    ? K(t, s, _)
-                    : re(t, s, _)
-                  : r <= s
-                  ? J(t, s, _)
-                  : ne(t, s, _)),
-              (F = "")),
+              ((F =
+                t <= s
+                  ? r <= o
+                    ? K(t, o, _)
+                    : re(t, o, _)
+                  : r <= o
+                  ? J(t, o, _)
+                  : ne(t, o, _)),
+              (E = "")),
           "M "
             .concat(t, ",")
             .concat(r)
-            .concat(E)
-            .concat(F, "L ")
-            .concat(o, ",")
-            .concat(s)
+            .concat(F)
+            .concat(E, "L ")
+            .concat(s, ",")
+            .concat(o)
         );
       }
-      var oe = (0, i.memo)(function (e) {
+      var se = (0, i.memo)(function (e) {
         var t = e.sourceX,
           r = e.sourceY,
           a = e.targetX,
-          o = e.targetY,
-          s = e.label,
+          s = e.targetY,
+          o = e.label,
           l = e.labelStyle,
           c = e.labelShowBg,
           u = e.labelBgStyle,
@@ -6520,27 +6520,27 @@
             sourceX: t,
             sourceY: r,
             targetX: a,
-            targetY: o,
+            targetY: s,
             sourcePosition: p,
             targetPosition: g,
           }),
           M = (0, n._)(_, 2),
           z = M[0],
           S = M[1],
-          E = ae({
+          F = ae({
             sourceX: t,
             sourceY: r,
             sourcePosition: p,
             targetX: a,
-            targetY: o,
+            targetY: s,
             targetPosition: g,
             borderRadius: w,
           });
         return i.createElement(L, {
-          path: E,
+          path: F,
           centerX: z,
           centerY: S,
-          label: s,
+          label: o,
           labelStyle: l,
           labelShowBg: c,
           labelBgStyle: u,
@@ -6551,7 +6551,7 @@
           markerStart: B,
         });
       });
-      function se(e, t) {
+      function oe(e, t) {
         var r = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
           var n = Object.getOwnPropertySymbols(e);
@@ -6567,12 +6567,12 @@
         for (var t = 1; t < arguments.length; t++) {
           var r = null != arguments[t] ? arguments[t] : {};
           t % 2
-            ? se(Object(r), !0).forEach(function (t) {
+            ? oe(Object(r), !0).forEach(function (t) {
                 (0, n.a)(e, t, r[t]);
               })
             : Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
-            : se(Object(r)).forEach(function (t) {
+            : oe(Object(r)).forEach(function (t) {
                 Object.defineProperty(
                   e,
                   t,
@@ -6583,15 +6583,15 @@
         return e;
       }
       var ce = (0, i.memo)(function (e) {
-          return i.createElement(oe, le(le({}, e), {}, { borderRadius: 0 }));
+          return i.createElement(se, le(le({}, e), {}, { borderRadius: 0 }));
         }),
         ue = (0, i.memo)(function (e) {
           var t = e.sourceX,
             r = e.sourceY,
             n = e.targetX,
             a = e.targetY,
-            o = e.label,
-            s = e.labelStyle,
+            s = e.label,
+            o = e.labelStyle,
             l = e.labelShowBg,
             c = e.labelBgStyle,
             u = e.labelBgPadding,
@@ -6608,8 +6608,8 @@
             path: B,
             centerX: b,
             centerY: y,
-            label: o,
-            labelStyle: s,
+            label: s,
+            labelStyle: o,
             labelShowBg: l,
             labelBgStyle: c,
             labelBgPadding: u,
@@ -6627,22 +6627,22 @@
           r,
           i = e.pos,
           a = e.x1,
-          o = e.y1,
-          s = e.x2,
+          s = e.y1,
+          o = e.x2,
           l = e.y2,
           c = e.c;
         switch (i) {
           case n.P.Left:
-            (t = a - de(a - s, c)), (r = o);
+            (t = a - de(a - o, c)), (r = s);
             break;
           case n.P.Right:
-            (t = a + de(s - a, c)), (r = o);
+            (t = a + de(o - a, c)), (r = s);
             break;
           case n.P.Top:
-            (t = a), (r = o - de(o - l, c));
+            (t = a), (r = s - de(s - l, c));
             break;
           case n.P.Bottom:
-            (t = a), (r = o + de(l - o, c));
+            (t = a), (r = s + de(l - s, c));
         }
         return [t, r];
       }
@@ -6651,17 +6651,17 @@
           r = e.sourceY,
           i = e.sourcePosition,
           a = void 0 === i ? n.P.Bottom : i,
-          o = e.targetX,
-          s = e.targetY,
+          s = e.targetX,
+          o = e.targetY,
           l = e.targetPosition,
           c = void 0 === l ? n.P.Top : l,
           u = e.curvature,
           d = void 0 === u ? 0.25 : u,
-          f = fe({ pos: a, x1: t, y1: r, x2: o, y2: s, c: d }),
+          f = fe({ pos: a, x1: t, y1: r, x2: s, y2: o, c: d }),
           m = (0, n._)(f, 2),
           h = m[0],
           p = m[1],
-          y = fe({ pos: c, x1: o, y1: s, x2: t, y2: r, c: d }),
+          y = fe({ pos: c, x1: s, y1: o, x2: t, y2: r, c: d }),
           g = (0, n._)(y, 2),
           b = g[0],
           B = g[1];
@@ -6672,16 +6672,16 @@
           .concat(p, " ")
           .concat(b, ",")
           .concat(B, " ")
-          .concat(o, ",")
-          .concat(s);
+          .concat(s, ",")
+          .concat(o);
       }
       var he = (0, i.memo)(function (e) {
           var t = e.sourceX,
             r = e.sourceY,
             a = e.targetX,
-            o = e.targetY,
-            s = e.sourcePosition,
-            l = void 0 === s ? n.P.Bottom : s,
+            s = e.targetY,
+            o = e.sourcePosition,
+            l = void 0 === o ? n.P.Bottom : o,
             c = e.targetPosition,
             u = void 0 === c ? n.P.Top : c,
             d = e.label,
@@ -6698,7 +6698,7 @@
               sourceY: r,
               sourcePosition: l,
               targetX: a,
-              targetY: o,
+              targetY: s,
               targetPosition: u,
               curvature: e.curvature,
             },
@@ -6708,20 +6708,20 @@
                 r = e.sourceY,
                 i = e.sourcePosition,
                 a = void 0 === i ? n.P.Bottom : i,
-                o = e.targetX,
-                s = e.targetY,
+                s = e.targetX,
+                o = e.targetY,
                 l = e.targetPosition,
                 c = void 0 === l ? n.P.Top : l,
                 u = e.curvature,
                 d = void 0 === u ? 0.25 : u,
-                f = fe({ pos: a, x1: t, y1: r, x2: o, y2: s, c: d }),
+                f = fe({ pos: a, x1: t, y1: r, x2: s, y2: o, c: d }),
                 m = (0, n._)(f, 2),
                 h = m[0],
                 p = m[1],
-                y = fe({ pos: c, x1: o, y1: s, x2: t, y2: r, c: d }),
+                y = fe({ pos: c, x1: s, y1: o, x2: t, y2: r, c: d }),
                 g = (0, n._)(y, 2),
-                b = 0.125 * t + 0.375 * h + 0.375 * g[0] + 0.125 * o,
-                B = 0.125 * r + 0.375 * p + 0.375 * g[1] + 0.125 * s;
+                b = 0.125 * t + 0.375 * h + 0.375 * g[0] + 0.125 * s,
+                B = 0.125 * r + 0.375 * p + 0.375 * g[1] + 0.125 * o;
               return [b, B, Math.abs(b - t), Math.abs(B - r)];
             })(v),
             M = (0, n._)(_, 2),
@@ -6744,8 +6744,8 @@
         }),
         pe = (0, i.createContext)(null),
         ye = pe.Provider;
-      function ge(e, t, r, i, a, o, s) {
-        var l = s.elementFromPoint(e.clientX, e.clientY),
+      function ge(e, t, r, i, a, s, o) {
+        var l = o.elementFromPoint(e.clientX, e.clientY),
           c = (null == l ? void 0 : l.classList.contains("target")) || !1,
           u = (null == l ? void 0 : l.classList.contains("source")) || !1,
           d = {
@@ -6767,7 +6767,7 @@
               ? { source: f, sourceHandle: m, target: i, targetHandle: a }
               : { source: i, sourceHandle: a, target: f, targetHandle: m };
           (d.connection = h),
-            (t !== n.C.Strict || (r && u) || (!r && c)) && (d.isValid = o(h));
+            (t !== n.C.Strict || (r && u) || (!r && c)) && (d.isValid = s(h));
         }
         return d;
       }
@@ -6780,8 +6780,8 @@
           r = e.handleId,
           i = e.nodeId,
           a = e.onConnect,
-          o = e.isTarget,
-          s = e.getState,
+          s = e.isTarget,
+          o = e.getState,
           l = e.setState,
           c = e.isValidConnection,
           u = e.elementEdgeUpdaterType,
@@ -6794,7 +6794,7 @@
             y = null == h ? void 0 : h.classList.contains("source");
           if (f && (p || y || u)) {
             var g,
-              b = s(),
+              b = o(),
               B = b.onConnectStart,
               v = b.connectionMode,
               w = u || (p ? "target" : "source"),
@@ -6811,10 +6811,10 @@
               null == B || B(t, { nodeId: i, handleId: r, handleType: w }),
               m.addEventListener("mousemove", M),
               m.addEventListener("mouseup", function e(t) {
-                var n = s(),
+                var n = o(),
                   f = n.onConnectStop,
                   h = n.onConnectEnd,
-                  p = ge(t, v, o, i, r, c, m),
+                  p = ge(t, v, s, i, r, c, m),
                   y = p.connection,
                   b = p.isValid;
                 null == f || f(t),
@@ -6836,17 +6836,17 @@
           l({
             connectionPosition: { x: e.clientX - _.left, y: e.clientY - _.top },
           });
-          var t = ge(e, v, o, i, r, c, m),
+          var t = ge(e, v, s, i, r, c, m),
             n = t.connection,
             a = t.elementBelow,
-            s = t.isValid;
+            o = t.isValid;
           if (!t.isHoveringHandle) return be(g);
           n.source !== n.target &&
             a &&
             (be(g),
             (g = a),
             a.classList.add("react-flow__handle-connecting"),
-            a.classList.toggle("react-flow__handle-valid", s));
+            a.classList.toggle("react-flow__handle-valid", o));
         }
       }
       pe.Consumer;
@@ -6903,7 +6903,7 @@
         },
         Se = (0, i.forwardRef)(function (e, t) {
           var r = e.type,
-            o = void 0 === r ? "source" : r,
+            s = void 0 === r ? "source" : r,
             l = e.position,
             c = void 0 === l ? n.P.Top : l,
             u = e.isValidConnection,
@@ -6918,28 +6918,28 @@
             v = p(e, ve),
             w = (0, n.u)(),
             _ = (0, i.useContext)(pe),
-            M = (0, n.b)(ze, s),
+            M = (0, n.b)(ze, o),
             z = M.connectionStartHandle,
             S = M.connectOnClick,
-            E = h || null,
-            F = "target" === o,
+            F = h || null,
+            E = "target" === s,
             O = function (e) {
               var t = w.getState(),
                 r = t.defaultEdgeOptions,
                 i = t.onConnect,
                 a = t.hasDefaultEdges,
-                o = _e(_e({}, r), e);
+                s = _e(_e({}, r), e);
               if (a) {
-                var s = w.getState().edges;
-                w.setState({ edges: (0, n.c)(o, s) });
+                var o = w.getState().edges;
+                w.setState({ edges: (0, n.c)(s, o) });
               }
-              null == i || i(o), null == y || y(o);
+              null == i || i(s), null == y || y(s);
             };
           return i.createElement(
             "div",
             _e(
               {
-                "data-handleid": E,
+                "data-handleid": F,
                 "data-nodeid": _,
                 "data-handlepos": c,
                 className: a([
@@ -6948,23 +6948,23 @@
                   "nodrag",
                   b,
                   {
-                    source: !F,
-                    target: F,
+                    source: !E,
+                    target: E,
                     connectable: m,
                     connecting:
                       (null == z ? void 0 : z.nodeId) === _ &&
-                      (null == z ? void 0 : z.handleId) === E &&
-                      (null == z ? void 0 : z.type) === o,
+                      (null == z ? void 0 : z.handleId) === F &&
+                      (null == z ? void 0 : z.type) === s,
                   },
                 ]),
                 onMouseDown: function (e) {
                   0 === e.button &&
                     Be({
                       event: e,
-                      handleId: E,
+                      handleId: F,
                       nodeId: _,
                       onConnect: O,
-                      isTarget: F,
+                      isTarget: E,
                       getState: w.getState,
                       setState: w.setState,
                       isValidConnection: d,
@@ -6977,23 +6977,23 @@
                         r = t.onClickConnectStart,
                         i = t.onClickConnectStop,
                         a = t.onClickConnectEnd,
-                        s = t.connectionMode;
+                        o = t.connectionMode;
                       if (!z)
                         return (
                           null == r ||
-                            r(e, { nodeId: _, handleId: E, handleType: o }),
+                            r(e, { nodeId: _, handleId: F, handleType: s }),
                           void w.setState({
                             connectionStartHandle: {
                               nodeId: _,
-                              type: o,
-                              handleId: E,
+                              type: s,
+                              handleId: F,
                             },
                           })
                         );
                       var l = (0, n.g)(e.target),
                         c = ge(
                           e,
-                          s,
+                          o,
                           "target" === z.type,
                           z.nodeId,
                           z.handleId || null,
@@ -7016,44 +7016,44 @@
           );
         });
       Se.displayName = "Handle";
-      var Ee = (0, i.memo)(Se),
-        Fe = function (e) {
+      var Fe = (0, i.memo)(Se),
+        Ee = function (e) {
           var t = e.data,
             r = e.isConnectable,
             a = e.targetPosition,
-            o = void 0 === a ? n.P.Top : a,
-            s = e.sourcePosition,
-            l = void 0 === s ? n.P.Bottom : s;
+            s = void 0 === a ? n.P.Top : a,
+            o = e.sourcePosition,
+            l = void 0 === o ? n.P.Bottom : o;
           return i.createElement(
             i.Fragment,
             null,
-            i.createElement(Ee, {
+            i.createElement(Fe, {
               type: "target",
-              position: o,
+              position: s,
               isConnectable: r,
             }),
             null == t ? void 0 : t.label,
-            i.createElement(Ee, {
+            i.createElement(Fe, {
               type: "source",
               position: l,
               isConnectable: r,
             }),
           );
         };
-      Fe.displayName = "DefaultNode";
-      var Oe = (0, i.memo)(Fe),
+      Ee.displayName = "DefaultNode";
+      var Oe = (0, i.memo)(Ee),
         Re = function (e) {
           var t = e.data,
             r = e.isConnectable,
             a = e.sourcePosition,
-            o = void 0 === a ? n.P.Bottom : a;
+            s = void 0 === a ? n.P.Bottom : a;
           return i.createElement(
             i.Fragment,
             null,
             null == t ? void 0 : t.label,
-            i.createElement(Ee, {
+            i.createElement(Fe, {
               type: "source",
-              position: o,
+              position: s,
               isConnectable: r,
             }),
           );
@@ -7064,13 +7064,13 @@
           var t = e.data,
             r = e.isConnectable,
             a = e.targetPosition,
-            o = void 0 === a ? n.P.Top : a;
+            s = void 0 === a ? n.P.Top : a;
           return i.createElement(
             i.Fragment,
             null,
-            i.createElement(Ee, {
+            i.createElement(Fe, {
               type: "target",
-              position: o,
+              position: s,
               isConnectable: r,
             }),
             null == t ? void 0 : t.label,
@@ -7103,19 +7103,19 @@
             a = t.selectedEdges.map(function (e) {
               return e.id;
             });
-          return s(r, n) && s(i, a);
+          return o(r, n) && o(i, a);
         };
       function Pe(e) {
         var t = e.onSelectionChange,
           r = (0, n.b)(Te, We),
           a = r.selectedNodes,
-          o = r.selectedEdges;
+          s = r.selectedEdges;
         return (
           (0, i.useEffect)(
             function () {
-              t({ nodes: a, edges: o });
+              t({ nodes: a, edges: s });
             },
-            [a, o],
+            [a, s],
           ),
           null
         );
@@ -7153,7 +7153,7 @@
           var t = e.nodes,
             r = e.edges,
             a = e.defaultNodes,
-            o = e.defaultEdges,
+            s = e.defaultEdges,
             l = e.onConnect,
             c = e.onConnectStart,
             u = e.onConnectStop,
@@ -7172,8 +7172,8 @@
             M = e.connectionMode,
             z = e.snapGrid,
             S = e.snapToGrid,
-            E = e.translateExtent,
-            F = e.connectOnClick,
+            F = e.translateExtent,
+            E = e.connectOnClick,
             O = e.defaultEdgeOptions,
             R = e.fitView,
             j = e.fitViewOptions,
@@ -7185,7 +7185,7 @@
             I = e.onSelectionDrag,
             N = e.onSelectionDragStart,
             A = e.onSelectionDragStop,
-            D = (0, n.b)(Ne, s),
+            D = (0, n.b)(Ne, o),
             U = D.setNodes,
             k = D.setEdges,
             X = D.setDefaultNodesAndEdges,
@@ -7198,7 +7198,7 @@
           return (
             (0, i.useEffect)(function () {
               return (
-                X(a, o),
+                X(a, s),
                 function () {
                   V();
                 }
@@ -7220,7 +7220,7 @@
             De("snapGrid", z, Y.setState),
             De("onNodesChange", v, Y.setState),
             De("onEdgesChange", w, Y.setState),
-            De("connectOnClick", F, Y.setState),
+            De("connectOnClick", E, Y.setState),
             De("fitViewOnInit", R, Y.setState),
             De("fitViewOnInitOptions", j, Y.setState),
             De("onNodesDelete", x, Y.setState),
@@ -7234,10 +7234,10 @@
             Ae(t, U),
             Ae(r, k),
             Ae(a, U),
-            Ae(o, k),
+            Ae(s, k),
             Ae(g, L),
             Ae(b, q),
-            Ae(E, Z),
+            Ae(F, Z),
             Ae(B, $),
             null
           );
@@ -7252,13 +7252,13 @@
           var t = e.className,
             r = e.position,
             n = e.centerX,
-            o = e.centerY,
-            s = e.radius,
-            l = void 0 === s ? 10 : s;
+            s = e.centerY,
+            o = e.radius,
+            l = void 0 === o ? 10 : o;
           return i.createElement("circle", {
             className: a(["react-flow__edgeupdater", t]),
             cx: ke(n, l, r),
-            cy: Xe(o, l, r),
+            cy: Xe(s, l, r),
             r: l,
             stroke: "transparent",
             fill: "transparent",
@@ -7267,8 +7267,8 @@
         qe = function (e) {
           var t = function (t) {
             var r = t.id,
-              o = t.className,
-              s = t.type,
+              s = t.className,
+              o = t.type,
               l = t.data,
               c = t.onClick,
               u = t.onEdgeDoubleClick,
@@ -7287,8 +7287,8 @@
               M = t.sourceY,
               z = t.targetX,
               S = t.targetY,
-              E = t.sourcePosition,
-              F = t.targetPosition,
+              F = t.sourcePosition,
+              E = t.targetPosition,
               O = t.elementsSelectable,
               R = t.hidden,
               j = t.sourceHandleId,
@@ -7318,14 +7318,14 @@
                 var n = t ? w : v,
                   i = (t ? x : j) || null,
                   a = t ? "target" : "source",
-                  o = t,
-                  s = V.getState().edges.find(function (e) {
+                  s = t,
+                  o = V.getState().edges.find(function (e) {
                     return e.id === r;
                   });
-                null == A || A(e, s, a);
+                null == A || A(e, o, a);
                 var l = D
                   ? function (e) {
-                      return D(e, s, a);
+                      return D(e, o, a);
                     }
                   : void 0;
                 Be({
@@ -7333,9 +7333,9 @@
                   handleId: i,
                   nodeId: n,
                   onConnect: function (e) {
-                    return null == N ? void 0 : N(s, e);
+                    return null == N ? void 0 : N(o, e);
                   },
-                  isTarget: o,
+                  isTarget: s,
                   getState: V.getState,
                   setState: V.setState,
                   isValidConnection: function () {
@@ -7365,17 +7365,17 @@
               );
             if (R) return null;
             var ae = !O && !c,
-              oe = void 0 !== N,
-              se = a([
+              se = void 0 !== N,
+              oe = a([
                 "react-flow__edge",
-                "react-flow__edge-".concat(s),
-                o,
+                "react-flow__edge-".concat(o),
+                s,
                 { selected: d, animated: f, inactive: ae, updating: Z },
               ]);
             return i.createElement(
               "g",
               {
-                className: se,
+                className: oe,
                 onClick: function (e) {
                   var t = V.getState(),
                     n = t.edges,
@@ -7410,15 +7410,15 @@
                 sourceY: M,
                 targetX: z,
                 targetY: S,
-                sourcePosition: E,
-                targetPosition: F,
+                sourcePosition: F,
+                targetPosition: E,
                 sourceHandleId: j,
                 targetHandleId: x,
                 markerStart: ne,
                 markerEnd: ie,
                 "data-testid": "rf__edge-".concat(r),
               }),
-              oe &&
+              se &&
                 i.createElement(
                   "g",
                   {
@@ -7429,13 +7429,13 @@
                     onMouseOut: re,
                   },
                   i.createElement(Le, {
-                    position: E,
+                    position: F,
                     centerX: _,
                     centerY: M,
                     radius: I,
                   }),
                 ),
-              oe &&
+              se &&
                 i.createElement(
                   "g",
                   {
@@ -7446,7 +7446,7 @@
                     onMouseOut: re,
                   },
                   i.createElement(Le, {
-                    position: F,
+                    position: E,
                     centerX: z,
                     centerY: S,
                     radius: I,
@@ -7492,7 +7492,7 @@
             default: qe(e.default || he),
             straight: qe(e.bezier || ue),
             step: qe(e.step || ce),
-            smoothstep: qe(e.step || oe),
+            smoothstep: qe(e.step || se),
             simplebezier: qe(e.simplebezier || $),
           },
           r = Object.keys(e)
@@ -7511,17 +7511,17 @@
               : null,
           i = ((null == r ? void 0 : r.x) || 0) + t.x,
           a = ((null == r ? void 0 : r.y) || 0) + t.y,
-          o = (null == r ? void 0 : r.width) || t.width,
-          s = (null == r ? void 0 : r.height) || t.height;
+          s = (null == r ? void 0 : r.width) || t.width,
+          o = (null == r ? void 0 : r.height) || t.height;
         switch (e) {
           case n.P.Top:
-            return { x: i + o / 2, y: a };
+            return { x: i + s / 2, y: a };
           case n.P.Right:
-            return { x: i + o, y: a + s / 2 };
+            return { x: i + s, y: a + o / 2 };
           case n.P.Bottom:
-            return { x: i + o / 2, y: a + s };
+            return { x: i + s / 2, y: a + o };
           case n.P.Left:
-            return { x: i, y: a + s / 2 };
+            return { x: i, y: a + o / 2 };
         }
       }
       function He(e, t) {
@@ -7541,8 +7541,8 @@
         var r,
           i,
           a,
-          o,
           s,
+          o,
           l = e.get(t),
           c =
             (null == l || null === (r = l[n.i]) || void 0 === r
@@ -7563,13 +7563,13 @@
         return [
           {
             x:
-              (null == l || null === (o = l.positionAbsolute) || void 0 === o
-                ? void 0
-                : o.x) || 0,
-            y:
               (null == l || null === (s = l.positionAbsolute) || void 0 === s
                 ? void 0
-                : s.y) || 0,
+                : s.x) || 0,
+            y:
+              (null == l || null === (o = l.positionAbsolute) || void 0 === o
+                ? void 0
+                : o.y) || 0,
             width: (null == l ? void 0 : l.width) || 0,
             height: (null == l ? void 0 : l.height) || 0,
           },
@@ -7589,8 +7589,8 @@
                 : { target: Ke },
             r = (0, i.useState)(!1),
             a = (0, n._)(r, 2),
-            o = a[0],
-            s = a[1],
+            s = a[0],
+            o = a[1],
             c = (0, i.useRef)(new Set([])),
             u = (0, i.useMemo)(
               function () {
@@ -7624,17 +7624,17 @@
                       if (tt(e)) return !1;
                       var t = et(e.code, m);
                       c.current.add(e[t]),
-                        Je(f, c.current, !1) && (e.preventDefault(), s(!0));
+                        Je(f, c.current, !1) && (e.preventDefault(), o(!0));
                     },
                     a = function (e) {
                       if (tt(e)) return !1;
                       var t = et(e.code, m);
                       Je(f, c.current, !0)
-                        ? (s(!1), c.current.clear())
+                        ? (o(!1), c.current.clear())
                         : c.current.delete(e[t]);
                     },
-                    o = function () {
-                      c.current.clear(), s(!1);
+                    s = function () {
+                      c.current.clear(), o(!1);
                     };
                   return (
                     null == t ||
@@ -7645,7 +7645,7 @@
                       null === (n = t.target) ||
                       void 0 === n ||
                       n.addEventListener("keyup", a),
-                    window.addEventListener("blur", o),
+                    window.addEventListener("blur", s),
                     function () {
                       var e, r;
                       null == t ||
@@ -7656,14 +7656,14 @@
                           null === (r = t.target) ||
                           void 0 === r ||
                           r.removeEventListener("keyup", a),
-                        window.removeEventListener("blur", o);
+                        window.removeEventListener("blur", s);
                     }
                   );
                 }
               },
-              [e, s],
+              [e, o],
             ),
-            o
+            s
           );
         };
       function Je(e, t, r) {
@@ -7711,7 +7711,7 @@
             d3ZoomHandler: e.d3ZoomHandler,
           };
         },
-        ot = function (e) {
+        st = function (e) {
           var t = e.onMove,
             r = e.onMoveStart,
             a = e.onMoveEnd,
@@ -7748,7 +7748,7 @@
             U = (0, i.useRef)(!1),
             k = (0, i.useRef)(null),
             X = (0, i.useRef)({ x: 0, y: 0, zoom: 0 }),
-            L = (0, n.b)(at, s),
+            L = (0, n.b)(at, o),
             q = L.d3Zoom,
             Z = L.d3Selection,
             $ = L.d3ZoomHandler,
@@ -7784,18 +7784,18 @@
             (0, i.useEffect)(function () {
               if (k.current) {
                 var e,
-                  t = (0, o.sP)().scaleExtent([S, O]).translateExtent(z),
-                  r = (0, E.Z)(k.current).call(t),
+                  t = (0, s.sP)().scaleExtent([S, O]).translateExtent(z),
+                  r = (0, F.Z)(k.current).call(t),
                   i = (0, n.j)(C[0], z[0][0], z[1][0]),
                   a = (0, n.j)(C[1], z[0][1], z[1][1]),
-                  s = (0, n.j)(j, S, O),
-                  l = o.CR.translate(i, a).scale(s);
+                  o = (0, n.j)(j, S, O),
+                  l = s.CR.translate(i, a).scale(o);
                 t.transform(r, l),
                   D.setState({
                     d3Zoom: t,
                     d3Selection: r,
                     d3ZoomHandler: r.on("wheel.zoom"),
-                    transform: [i, a, s],
+                    transform: [i, a, o],
                     domNode:
                       null === (e = r.node()) || void 0 === e
                         ? void 0
@@ -7813,7 +7813,7 @@
                         e.preventDefault(), e.stopImmediatePropagation();
                         var t = Z.property("__zoom").k || 1;
                         if (e.ctrlKey && d) {
-                          var r = (0, F.Z)(e),
+                          var r = (0, E.Z)(e),
                             i =
                               -e.deltaY *
                               (1 === e.deltaMode
@@ -7825,10 +7825,10 @@
                             a = t * Math.pow(2, i);
                           q.scaleTo(Z, a, r);
                         } else {
-                          var o = 1 === e.deltaMode ? 20 : 1,
-                            s = g === n.h.Vertical ? 0 : e.deltaX * o,
-                            l = g === n.h.Horizontal ? 0 : e.deltaY * o;
-                          q.translateBy(Z, (-s / t) * p, (-l / t) * p);
+                          var s = 1 === e.deltaMode ? 20 : 1,
+                            o = g === n.h.Vertical ? 0 : e.deltaX * s,
+                            l = g === n.h.Horizontal ? 0 : e.deltaY * s;
+                          q.translateBy(Z, (-o / t) * p, (-l / t) * p);
                         }
                       }).on("wheel.zoom", null)
                     : void 0 !== $ &&
@@ -7928,7 +7928,7 @@
             )
           );
         };
-      function st(e, t) {
+      function ot(e, t) {
         var r = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
           var n = Object.getOwnPropertySymbols(e);
@@ -7944,12 +7944,12 @@
         for (var t = 1; t < arguments.length; t++) {
           var r = null != arguments[t] ? arguments[t] : {};
           t % 2
-            ? st(Object(r), !0).forEach(function (t) {
+            ? ot(Object(r), !0).forEach(function (t) {
                 (0, n.a)(e, t, r[t]);
               })
             : Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
-            : st(Object(r)).forEach(function (t) {
+            : ot(Object(r)).forEach(function (t) {
                 Object.defineProperty(
                   e,
                   t,
@@ -7981,20 +7981,20 @@
           var t = e.selectionKeyPressed,
             r = (0, n.u)(),
             a = (0, i.useRef)(0),
-            o = (0, i.useRef)(0),
+            s = (0, i.useRef)(0),
             l = (0, i.useRef)(),
             c = (0, i.useState)(dt),
             u = (0, n._)(c, 2),
             d = u[0],
             f = u[1],
-            m = (0, n.b)(ut, s),
+            m = (0, n.b)(ut, o),
             h = m.userSelectionActive;
           if (!m.elementsSelectable || !(h || t)) return null;
           var p = function () {
             f(dt),
               r.setState({ userSelectionActive: !1 }),
               (a.current = 0),
-              (o.current = 0);
+              (s.current = 0);
           };
           return i.createElement(
             "div",
@@ -8019,11 +8019,11 @@
                   });
               },
               onMouseMove: function (e) {
-                var i, s;
+                var i, o;
                 if (t && d.draw && l.current) {
                   var c = ct(e, l.current),
                     u = null !== (i = d.startX) && void 0 !== i ? i : 0,
-                    m = null !== (s = d.startY) && void 0 !== s ? s : 0,
+                    m = null !== (o = d.startY) && void 0 !== o ? o : 0,
                     h = lt(
                       lt({}, d),
                       {},
@@ -8053,10 +8053,10 @@
                     var S = (0, n.l)(w, z);
                     S.length && (null == B || B(S));
                   }
-                  if (o.current !== M.length) {
-                    o.current = M.length;
-                    var E = (0, n.l)(g, M);
-                    E.length && (null == v || v(E));
+                  if (s.current !== M.length) {
+                    s.current = M.length;
+                    var F = (0, n.l)(g, M);
+                    F.length && (null == v || v(F));
                   }
                   f(h);
                 }
@@ -8195,8 +8195,8 @@
         var t = e.nodeRef,
           r = e.disabled,
           a = void 0 !== r && r,
-          o = e.noDragClassName,
-          s = e.handleSelector,
+          s = e.noDragClassName,
+          o = e.handleSelector,
           l = e.nodeId,
           c = e.isSelectable,
           u = e.selectNodesOnDrag,
@@ -8212,16 +8212,16 @@
               r = p.getState(),
               i = r.transform,
               a = r.snapGrid,
-              o = r.snapToGrid,
-              s = t.touches ? t.touches[0].clientX : t.clientX,
+              s = r.snapToGrid,
+              o = t.touches ? t.touches[0].clientX : t.clientX,
               l = t.touches ? t.touches[0].clientY : t.clientY;
-            return (0, n.p)({ x: s, y: l }, i, o, a);
+            return (0, n.p)({ x: o, y: l }, i, s, a);
           }, []);
         return (
           (0, i.useEffect)(
             function () {
               if (null != t && t.current) {
-                var e = (0, E.Z)(t.current);
+                var e = (0, F.Z)(t.current);
                 if (!a) {
                   var r = (function () {
                     var e,
@@ -8230,34 +8230,34 @@
                       n,
                       i = T,
                       a = W,
-                      o = P,
-                      s = I,
+                      s = P,
+                      o = I,
                       l = {},
                       c = (0, O.Z)("start", "drag", "end"),
                       u = 0,
                       d = 0;
                     function f(e) {
                       e.on("mousedown.drag", m)
-                        .filter(s)
+                        .filter(o)
                         .on("touchstart.drag", y)
                         .on("touchmove.drag", g, j.Q7)
                         .on("touchend.drag touchcancel.drag", b)
                         .style("touch-action", "none")
                         .style("-webkit-tap-highlight-color", "rgba(0,0,0,0)");
                     }
-                    function m(o, s) {
-                      if (!n && i.call(this, o, s)) {
-                        var l = B(this, a.call(this, o, s), o, s, "mouse");
+                    function m(s, o) {
+                      if (!n && i.call(this, s, o)) {
+                        var l = B(this, a.call(this, s, o), s, o, "mouse");
                         l &&
-                          ((0, E.Z)(o.view)
+                          ((0, F.Z)(s.view)
                             .on("mousemove.drag", h, j.Dd)
                             .on("mouseup.drag", p, j.Dd),
-                          (0, R.Z)(o.view),
-                          (0, j.rG)(o),
+                          (0, R.Z)(s.view),
+                          (0, j.rG)(s),
                           (r = !1),
-                          (e = o.clientX),
-                          (t = o.clientY),
-                          l("start", o));
+                          (e = s.clientX),
+                          (t = s.clientY),
+                          l("start", s));
                       }
                     }
                     function h(n) {
@@ -8269,7 +8269,7 @@
                       l.mouse("drag", n);
                     }
                     function p(e) {
-                      (0, E.Z)(e.view).on("mousemove.drag mouseup.drag", null),
+                      (0, F.Z)(e.view).on("mousemove.drag mouseup.drag", null),
                         (0, R.D)(e.view, r),
                         (0, j.ZP)(e),
                         l.mouse("end", e);
@@ -8278,12 +8278,12 @@
                       if (i.call(this, e, t)) {
                         var r,
                           n,
-                          o = e.changedTouches,
-                          s = a.call(this, e, t),
-                          l = o.length;
+                          s = e.changedTouches,
+                          o = a.call(this, e, t),
+                          l = s.length;
                         for (r = 0; r < l; ++r)
-                          (n = B(this, s, e, t, o[r].identifier, o[r])) &&
-                            ((0, j.rG)(e), n("start", e, o[r]));
+                          (n = B(this, o, e, t, s[r].identifier, s[r])) &&
+                            ((0, j.rG)(e), n("start", e, s[r]));
                       }
                     }
                     function g(e) {
@@ -8313,14 +8313,14 @@
                           ((0, j.rG)(e), r("end", e, i[t]));
                     }
                     function B(e, t, r, n, i, a) {
-                      var s,
+                      var o,
                         d,
                         m,
                         h = c.copy(),
-                        p = (0, F.Z)(a || r, t);
+                        p = (0, E.Z)(a || r, t);
                       if (
                         null !=
-                        (m = o.call(
+                        (m = s.call(
                           e,
                           new C("beforestart", {
                             sourceEvent: r,
@@ -8337,9 +8337,9 @@
                         ))
                       )
                         return (
-                          (s = m.x - p[0] || 0),
+                          (o = m.x - p[0] || 0),
                           (d = m.y - p[1] || 0),
-                          function r(a, o, c) {
+                          function r(a, s, c) {
                             var y,
                               g = p;
                             switch (a) {
@@ -8349,18 +8349,18 @@
                               case "end":
                                 delete l[i], --u;
                               case "drag":
-                                (p = (0, F.Z)(c || o, t)), (y = u);
+                                (p = (0, E.Z)(c || s, t)), (y = u);
                             }
                             h.call(
                               a,
                               e,
                               new C(a, {
-                                sourceEvent: o,
+                                sourceEvent: s,
                                 subject: m,
                                 target: f,
                                 identifier: i,
                                 active: y,
-                                x: p[0] + s,
+                                x: p[0] + o,
                                 y: p[1] + d,
                                 dx: p[0] - g[0],
                                 dy: p[1] - g[1],
@@ -8384,13 +8384,13 @@
                       }),
                       (f.subject = function (e) {
                         return arguments.length
-                          ? ((o = "function" == typeof e ? e : x(e)), f)
-                          : o;
+                          ? ((s = "function" == typeof e ? e : x(e)), f)
+                          : s;
                       }),
                       (f.touchable = function (e) {
                         return arguments.length
-                          ? ((s = "function" == typeof e ? e : x(!!e)), f)
-                          : s;
+                          ? ((o = "function" == typeof e ? e : x(!!e)), f)
+                          : o;
                       }),
                       (f.on = function () {
                         var e = c.on.apply(c, arguments);
@@ -8409,17 +8409,17 @@
                         r = p.getState(),
                         i = r.nodeInternals,
                         a = r.multiSelectionActive,
-                        o = r.unselectNodesAndEdges,
-                        s = r.onNodeDragStart,
+                        s = r.unselectNodesAndEdges,
+                        o = r.onNodeDragStart,
                         d = r.onSelectionDragStart,
-                        f = l ? s : Bt(d);
+                        f = l ? o : Bt(d);
                       u ||
                         a ||
                         !l ||
                         (null !== (t = i.get(l)) &&
                           void 0 !== t &&
                           t.selected) ||
-                        o();
+                        s();
                       l && c && u && (0, n.n)({ id: l, store: p });
                       var m = b(e);
                       if (
@@ -8443,8 +8443,8 @@
                         r = t.updateNodePositions,
                         i = t.snapToGrid,
                         a = t.snapGrid,
-                        o = t.nodeInternals,
-                        s = t.nodeExtent,
+                        s = t.nodeInternals,
+                        o = t.nodeExtent,
                         c = t.onNodeDrag,
                         u = t.onSelectionDrag,
                         d = b(e);
@@ -8454,11 +8454,11 @@
                       ) {
                         (g.current = d),
                           (y.current = y.current.map(function (e) {
-                            return (function (e, t, r, i, a, o) {
-                              var s = (0, n._)(i, 2),
-                                l = s[0],
-                                c = s[1],
-                                u = e.extent || o,
+                            return (function (e, t, r, i, a, s) {
+                              var o = (0, n._)(i, 2),
+                                l = o[0],
+                                c = o[1],
+                                u = e.extent || s,
                                 d = {
                                   x: t.x - e.distance.x,
                                   y: t.y - e.distance.y,
@@ -8493,7 +8493,7 @@
                                           ],
                                         ]
                                       : u;
-                                } else u = o;
+                                } else u = s;
                               else if (e.extent && e.parentNode) {
                                 var m,
                                   h,
@@ -8563,14 +8563,14 @@
                                 }),
                                 e
                               );
-                            })(e, d, i, a, o, s);
+                            })(e, d, i, a, s, o);
                           }));
                         var f = l ? c : Bt(u);
                         if ((r(y.current, !0, !0), h(!0), f)) {
                           var m = bt({
                               nodeId: l,
                               dragItems: y.current,
-                              nodeInternals: o,
+                              nodeInternals: s,
                             }),
                             B = (0, n._)(m, 2),
                             v = B[0],
@@ -8584,9 +8584,9 @@
                             r = t.updateNodePositions,
                             i = t.nodeInternals,
                             a = t.onNodeDragStop,
-                            o = t.onSelectionDragStop,
-                            s = l ? a : Bt(o);
-                          if ((r(y.current, !1, !1), s)) {
+                            s = t.onSelectionDragStop,
+                            o = l ? a : Bt(s);
+                          if ((r(y.current, !1, !1), o)) {
                             var c = bt({
                                 nodeId: l,
                                 dragItems: y.current,
@@ -8595,7 +8595,7 @@
                               u = (0, n._)(c, 2),
                               d = u[0],
                               f = u[1];
-                            s(e.sourceEvent, d, f);
+                            o(e.sourceEvent, d, f);
                           }
                         }
                       });
@@ -8604,8 +8604,8 @@
                       var r = e.target;
                       return (
                         !e.button &&
-                        (!o || !yt(r, ".".concat(o), t)) &&
-                        (!s || yt(r, s, t))
+                        (!s || !yt(r, ".".concat(s), t)) &&
+                        (!o || yt(r, o, t))
                       );
                     });
                   return (
@@ -8618,7 +8618,7 @@
                 e.on(".drag", null);
               }
             },
-            [t, a, o, s, c, p, l, u, b],
+            [t, a, s, o, c, p, l, u, b],
           ),
           m
         );
@@ -8681,11 +8681,11 @@
       function zt(e) {
         var t = e.onSelectionContextMenu,
           r = e.noPanClassName,
-          o = (0, n.u)(),
-          l = (0, n.b)(_t, s),
+          s = (0, n.u)(),
+          l = (0, n.b)(_t, o),
           c = l.transformString,
           u = l.userSelectionActive,
-          d = (0, n.b)(Mt, s),
+          d = (0, n.b)(Mt, o),
           f = d.width,
           m = d.height,
           h = d.x,
@@ -8694,7 +8694,7 @@
         if ((vt({ nodeRef: y }), u || !f || !m)) return null;
         var g = t
           ? function (e) {
-              var r = Array.from(o.getState().nodeInternals.values()).filter(
+              var r = Array.from(s.getState().nodeInternals.values()).filter(
                 function (e) {
                   return e.selected;
                 },
@@ -8721,14 +8721,14 @@
         );
       }
       var St = (0, i.memo)(zt),
-        Et = function (e) {
+        Ft = function (e) {
           return e.nodesSelectionActive;
         },
-        Ft = function (e) {
+        Et = function (e) {
           var t = e.children,
             r = e.onPaneClick,
             a = e.onPaneContextMenu,
-            o = e.onPaneScroll,
+            s = e.onPaneScroll,
             c = e.deleteKeyCode,
             u = e.onMove,
             d = e.onMoveStart,
@@ -8746,23 +8746,23 @@
             M = e.panOnDrag,
             z = e.translateExtent,
             S = e.minZoom,
-            E = e.maxZoom,
-            F = e.defaultZoom,
+            F = e.maxZoom,
+            E = e.defaultZoom,
             O = e.defaultPosition,
             R = e.preventScrolling,
             j = e.onSelectionContextMenu,
             x = e.noWheelClassName,
             C = e.noPanClassName,
             T = (0, n.u)(),
-            W = (0, n.b)(Et),
+            W = (0, n.b)(Ft),
             P = Qe(m);
           !(function (e) {
             var t = e.deleteKeyCode,
               r = e.multiSelectionKeyCode,
               a = (0, n.u)(),
-              o = (0, n.b)(rt, s),
-              c = o.onNodesChange,
-              u = o.onEdgesChange,
+              s = (0, n.b)(rt, o),
+              c = s.onNodesChange,
+              u = s.onEdgesChange,
               d = Qe(t),
               f = Qe(r);
             (0, i.useEffect)(
@@ -8771,8 +8771,8 @@
                   t = e.nodeInternals,
                   r = e.edges,
                   i = e.hasDefaultNodes,
-                  o = e.hasDefaultEdges,
-                  s = e.onNodesDelete,
+                  s = e.hasDefaultEdges,
+                  o = e.onNodesDelete,
                   f = e.onEdgesDelete,
                   m = Array.from(t.values()).reduce(function (e, t) {
                     return (
@@ -8796,8 +8796,8 @@
                       return e.includes(t.id) || e.push(t.id), e;
                     }, []);
                   if (
-                    ((o || i) &&
-                      (o &&
+                    ((s || i) &&
+                      (s &&
                         a.setState({
                           edges: r.filter(function (e) {
                             return !g.includes(e.id);
@@ -8815,7 +8815,7 @@
                     });
                     u(b);
                   }
-                  if (m.length > 0 && (null == s || s(m), c)) {
+                  if (m.length > 0 && (null == o || o(m), c)) {
                     var B = m.map(function (e) {
                       return { id: e.id, type: "remove" };
                     });
@@ -8838,13 +8838,13 @@
                   return a(e);
                 }
               : void 0,
-            N = o
+            N = s
               ? function (e) {
-                  return o(e);
+                  return s(e);
                 }
               : void 0;
           return i.createElement(
-            ot,
+            st,
             {
               onMove: u,
               onMoveStart: d,
@@ -8860,8 +8860,8 @@
               panOnDrag: M,
               translateExtent: z,
               minZoom: S,
-              maxZoom: E,
-              defaultZoom: F,
+              maxZoom: F,
+              defaultZoom: E,
               defaultPosition: O,
               zoomActivationKeyCode: p,
               preventScrolling: R,
@@ -8887,8 +8887,8 @@
             }),
           );
         };
-      Ft.displayName = "FlowRenderer";
-      var Ot = (0, i.memo)(Ft);
+      Et.displayName = "FlowRenderer";
+      var Ot = (0, i.memo)(Et);
       var Rt = function (e) {
           return {
             nodesDraggable: e.nodesDraggable,
@@ -8899,9 +8899,9 @@
         },
         jt = function (e) {
           var t,
-            r = (0, n.b)(Rt, s),
+            r = (0, n.b)(Rt, o),
             a = r.nodesDraggable,
-            o = r.nodesConnectable,
+            s = r.nodesConnectable,
             l = r.elementsSelectable,
             c = r.updateNodeDimensions,
             u =
@@ -8951,7 +8951,7 @@
               { className: "react-flow__nodes react-flow__container" },
               u.map(function (t) {
                 var r,
-                  s,
+                  o,
                   c,
                   u,
                   d,
@@ -8962,7 +8962,7 @@
                 var y = e.nodeTypes[p] || e.nodeTypes.default,
                   g = !!(t.draggable || (a && void 0 === t.draggable)),
                   b = !!(t.selectable || (l && void 0 === t.selectable)),
-                  B = !!(t.connectable || (o && void 0 === t.connectable));
+                  B = !!(t.connectable || (s && void 0 === t.connectable));
                 return i.createElement(y, {
                   key: t.id,
                   id: t.id,
@@ -8976,9 +8976,9 @@
                   xPos:
                     null !==
                       (r =
-                        null === (s = t.positionAbsolute) || void 0 === s
+                        null === (o = t.positionAbsolute) || void 0 === o
                           ? void 0
-                          : s.x) && void 0 !== r
+                          : o.x) && void 0 !== r
                       ? r
                       : 0,
                   yPos:
@@ -9068,7 +9068,7 @@
           var t,
             r,
             a,
-            o,
+            s,
             l,
             c = e.connectionNodeId,
             u = e.connectionHandleType,
@@ -9093,7 +9093,7 @@
                 },
                 [c],
               ),
-              s,
+              o,
             ),
             g = y.fromNode,
             b = y.handleId,
@@ -9120,11 +9120,11 @@
               : null !== (a = null == g ? void 0 : g.height) && void 0 !== a
               ? a
               : 0,
-            E =
-              ((null == g || null === (o = g.positionAbsolute) || void 0 === o
-                ? void 0
-                : o.x) || 0) + z,
             F =
+              ((null == g || null === (s = g.positionAbsolute) || void 0 === s
+                ? void 0
+                : s.x) || 0) + z,
+            E =
               ((null == g || null === (l = g.positionAbsolute) || void 0 === l
                 ? void 0
                 : l.y) || 0) + S,
@@ -9139,10 +9139,10 @@
             P = It[O];
           switch (u) {
             case "source":
-              (R = E), (j = F), (x = O), (C = B), (T = v), (W = P);
+              (R = F), (j = E), (x = O), (C = B), (T = v), (W = P);
               break;
             case "target":
-              (R = B), (j = v), (x = P), (C = E), (T = F), (W = O);
+              (R = B), (j = v), (x = P), (C = F), (T = E), (W = O);
           }
           if (p)
             return i.createElement(
@@ -9153,8 +9153,8 @@
                 connectionLineStyle: d,
                 fromNode: g,
                 fromHandle: M,
-                fromX: E,
-                fromY: F,
+                fromX: F,
+                fromY: E,
                 toX: B,
                 toY: v,
                 fromPosition: O,
@@ -9266,9 +9266,9 @@
             r = e.type,
             n = e.color,
             a = e.width,
-            o = void 0 === a ? 12.5 : a,
-            s = e.height,
-            l = void 0 === s ? 12.5 : s,
+            s = void 0 === a ? 12.5 : a,
+            o = e.height,
+            l = void 0 === o ? 12.5 : o,
             c = e.markerUnits,
             u = void 0 === c ? "strokeWidth" : c,
             d = e.strokeWidth,
@@ -9291,7 +9291,7 @@
             {
               className: "react-flow__arrowhead",
               id: t,
-              markerWidth: "".concat(o),
+              markerWidth: "".concat(s),
               markerHeight: "".concat(l),
               viewBox: "-10 -10 20 20",
               markerUnits: u,
@@ -9312,8 +9312,8 @@
                 return (
                   [a.markerStart, a.markerEnd].forEach(function (a) {
                     if (a && "object" === At(a)) {
-                      var o = (0, n.d)(a, r);
-                      i.includes(o) ||
+                      var s = (0, n.d)(a, r);
+                      i.includes(s) ||
                         (e.push(
                           (function (e) {
                             for (var t = 1; t < arguments.length; t++) {
@@ -9336,9 +9336,9 @@
                                   });
                             }
                             return e;
-                          })({ id: o, color: a.color || t }, a),
+                          })({ id: s, color: a.color || t }, a),
                         ),
-                        i.push(o));
+                        i.push(s));
                     }
                   }),
                   e
@@ -9390,8 +9390,8 @@
               arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
             i = -1,
             a = e.reduce(function (e, a) {
-              var o,
-                s,
+              var s,
+                o,
                 l,
                 c,
                 u = (0, n.s)(a.zIndex),
@@ -9401,12 +9401,12 @@
                   (d = u
                     ? a.zIndex
                     : Math.max(
-                        (null === (o = t.get(a.source)) ||
-                        void 0 === o ||
-                        null === (s = o[n.i]) ||
-                        void 0 === s
+                        (null === (s = t.get(a.source)) ||
+                        void 0 === s ||
+                        null === (o = s[n.i]) ||
+                        void 0 === o
                           ? void 0
-                          : s.z) || 0,
+                          : o.z) || 0,
                         (null === (l = t.get(a.target)) ||
                         void 0 === l ||
                         null === (c = l[n.i]) ||
@@ -9419,12 +9419,12 @@
                 e
               );
             }, {}),
-            o = Object.entries(a).map(function (e) {
+            s = Object.entries(a).map(function (e) {
               var t = (0, n._)(e, 2),
                 r = +t[0];
               return { edges: t[1], level: r, isMaxLevel: r === i };
             });
-          return 0 === o.length ? Zt : o;
+          return 0 === s.length ? Zt : s;
         })(
           (0, n.b)(
             (0, i.useCallback)(
@@ -9443,16 +9443,16 @@
                             r = e.targetPos,
                             i = e.sourceWidth,
                             a = e.sourceHeight,
-                            o = e.targetWidth,
-                            s = e.targetHeight,
+                            s = e.targetWidth,
+                            o = e.targetHeight,
                             l = e.width,
                             c = e.height,
                             u = e.transform,
                             d = {
                               x: Math.min(t.x, r.x),
                               y: Math.min(t.y, r.y),
-                              x2: Math.max(t.x + i, r.x + o),
-                              y2: Math.max(t.y + a, r.y + s),
+                              x2: Math.max(t.x + i, r.x + s),
+                              y2: Math.max(t.y + a, r.y + o),
                             };
                           d.x === d.x2 && (d.x2 += 1),
                             d.y === d.y2 && (d.y2 += 1);
@@ -9506,9 +9506,9 @@
           };
         },
         Yt = function (e) {
-          var t = (0, n.b)(Vt, s),
+          var t = (0, n.b)(Vt, o),
             r = t.connectionNodeId,
-            o = t.connectionHandleType,
+            s = t.connectionHandleType,
             l = t.nodesConnectable,
             c = t.elementsSelectable,
             u = t.width,
@@ -9522,14 +9522,14 @@
             g = e.connectionLineStyle,
             b = e.connectionLineComponent,
             B = e.connectionLineContainerStyle,
-            v = r && o;
+            v = r && s;
           return i.createElement(
             i.Fragment,
             null,
             h.map(function (t) {
               var r = t.level,
-                o = t.edges,
-                s = t.isMaxLevel;
+                s = t.edges,
+                o = t.isMaxLevel;
               return i.createElement(
                 "svg",
                 {
@@ -9539,16 +9539,16 @@
                   height: d,
                   className: "react-flow__edges react-flow__container",
                 },
-                s && i.createElement(qt, { defaultColor: y, rfId: e.rfId }),
+                o && i.createElement(qt, { defaultColor: y, rfId: e.rfId }),
                 i.createElement(
                   "g",
                   null,
-                  o.map(function (t) {
+                  s.map(function (t) {
                     var r = Ge(m, t.source),
-                      o = (0, n._)(r, 3),
-                      s = o[0],
-                      l = o[1],
-                      u = o[2],
+                      s = (0, n._)(r, 3),
+                      o = s[0],
+                      l = s[1],
+                      u = s[2],
                       d = Ge(m, t.target),
                       h = (0, n._)(d, 3),
                       p = h[0],
@@ -9573,17 +9573,17 @@
                     if (!w) return null;
                     if (!_) return null;
                     var S = (function (e, t, r, n, i, a) {
-                        var o = Ye(r, e, t),
-                          s = Ye(a, n, i);
+                        var s = Ye(r, e, t),
+                          o = Ye(a, n, i);
                         return {
-                          sourceX: o.x,
-                          sourceY: o.y,
-                          targetX: s.x,
-                          targetY: s.y,
+                          sourceX: s.x,
+                          sourceY: s.y,
+                          targetX: o.x,
+                          targetY: o.y,
                         };
-                      })(s, w, M, p, _, z),
-                      E = S.sourceX,
-                      F = S.sourceY,
+                      })(o, w, M, p, _, z),
+                      F = S.sourceX,
+                      E = S.sourceY,
                       O = S.targetX,
                       R = S.targetY;
                     return i.createElement(B, {
@@ -9608,8 +9608,8 @@
                       targetHandleId: t.targetHandle,
                       markerEnd: t.markerEnd,
                       markerStart: t.markerStart,
-                      sourceX: E,
-                      sourceY: F,
+                      sourceX: F,
+                      sourceY: E,
                       targetX: O,
                       targetY: R,
                       sourcePosition: M,
@@ -9643,7 +9643,7 @@
                 },
                 i.createElement(Nt, {
                   connectionNodeId: r,
-                  connectionHandleType: o,
+                  connectionHandleType: s,
                   connectionLineStyle: g,
                   connectionLineType: p,
                   isConnectable: l,
@@ -9677,8 +9677,8 @@
           r = e.edgeTypes,
           n = e.onMove,
           a = e.onMoveStart,
-          o = e.onMoveEnd,
-          s = e.onInit,
+          s = e.onMoveEnd,
+          o = e.onInit,
           l = e.onNodeClick,
           c = e.onEdgeClick,
           u = e.onNodeDoubleClick,
@@ -9696,8 +9696,8 @@
           M = e.multiSelectionKeyCode,
           z = e.zoomActivationKeyCode,
           S = e.deleteKeyCode,
-          E = e.onlyRenderVisibleElements,
-          F = e.elementsSelectable,
+          F = e.onlyRenderVisibleElements,
+          E = e.elementsSelectable,
           O = e.selectNodesOnDrag,
           R = e.translateExtent,
           j = e.minZoom,
@@ -9745,7 +9745,7 @@
               },
               [e, t.viewportInitialized],
             );
-          })(s),
+          })(o),
           i.createElement(
             Ot,
             {
@@ -9756,10 +9756,10 @@
               selectionKeyCode: _,
               multiSelectionKeyCode: M,
               zoomActivationKeyCode: z,
-              elementsSelectable: F,
+              elementsSelectable: E,
               onMove: n,
               onMoveStart: a,
-              onMoveEnd: o,
+              onMoveEnd: s,
               zoomOnScroll: I,
               zoomOnPinch: N,
               zoomOnDoubleClick: k,
@@ -9790,7 +9790,7 @@
                 connectionLineComponent: v,
                 connectionLineContainerStyle: w,
                 onEdgeUpdate: $,
-                onlyRenderVisibleElements: E,
+                onlyRenderVisibleElements: F,
                 onEdgeContextMenu: V,
                 onEdgeMouseEnter: Y,
                 onEdgeMouseMove: H,
@@ -9812,7 +9812,7 @@
                 onNodeMouseLeave: p,
                 onNodeContextMenu: y,
                 selectNodesOnDrag: O,
-                onlyRenderVisibleElements: E,
+                onlyRenderVisibleElements: F,
                 noPanClassName: re,
                 noDragClassName: ee,
               }),
@@ -9860,8 +9860,8 @@
       var nr = function (e) {
         var t = function (t) {
           var r = t.id,
-            o = t.type,
-            s = t.data,
+            s = t.type,
+            o = t.data,
             l = t.xPos,
             c = t.yPos,
             u = t.selected,
@@ -9880,8 +9880,8 @@
             M = t.sourcePosition,
             z = t.targetPosition,
             S = t.hidden,
-            E = t.resizeObserver,
-            F = t.dragHandle,
+            F = t.resizeObserver,
+            E = t.dragHandle,
             O = t.zIndex,
             R = t.isParent,
             j = t.noPanClassName,
@@ -9891,7 +9891,7 @@
             W = (0, i.useRef)(null),
             P = (0, i.useRef)(M),
             I = (0, i.useRef)(z),
-            N = (0, i.useRef)(o),
+            N = (0, i.useRef)(s),
             A = v || B || d || f || m || h,
             D = (0, n.t)(r, T.getState, f),
             U = (0, n.t)(r, T.getState, m),
@@ -9903,9 +9903,9 @@
               if (W.current && !S) {
                 var e = W.current;
                 return (
-                  null == E || E.observe(e),
+                  null == F || F.observe(e),
                   function () {
-                    return null == E ? void 0 : E.unobserve(e);
+                    return null == F ? void 0 : F.unobserve(e);
                   }
                 );
               }
@@ -9914,25 +9914,25 @@
           ),
             (0, i.useEffect)(
               function () {
-                var e = N.current !== o,
+                var e = N.current !== s,
                   t = P.current !== M,
                   n = I.current !== z;
                 W.current &&
                   (e || t || n) &&
-                  (e && (N.current = o),
+                  (e && (N.current = s),
                   t && (P.current = M),
                   n && (I.current = z),
                   T.getState().updateNodeDimensions([
                     { id: r, nodeElement: W.current, forceUpdate: !0 },
                   ]));
               },
-              [r, o, M, z],
+              [r, s, M, z],
             );
           var q = vt({
             nodeRef: W,
             disabled: S || !B,
             noDragClassName: x,
-            handleSelector: F,
+            handleSelector: E,
             nodeId: r,
             isSelectable: v,
             selectNodesOnDrag: _,
@@ -9944,7 +9944,7 @@
                 {
                   className: a([
                     "react-flow__node",
-                    "react-flow__node-".concat(o),
+                    "react-flow__node-".concat(s),
                     j,
                     b,
                     { selected: u, selectable: v, parent: R },
@@ -9978,8 +9978,8 @@
                   { value: r },
                   i.createElement(e, {
                     id: r,
-                    data: s,
-                    type: o,
+                    data: o,
+                    type: s,
                     xPos: l,
                     yPos: c,
                     selected: u,
@@ -9987,7 +9987,7 @@
                     sourcePosition: M,
                     targetPosition: z,
                     dragging: q,
-                    dragHandle: F,
+                    dragHandle: E,
                     zIndex: O,
                   }),
                 ),
@@ -10026,7 +10026,7 @@
         }
         return e;
       }
-      function or(e) {
+      function sr(e) {
         var t = {
             input: nr(e.input || je),
             default: nr(e.default || Oe),
@@ -10042,7 +10042,7 @@
             }, {});
         return ar(ar({}, t), r);
       }
-      function sr(e, t) {
+      function or(e, t) {
         (0, i.useRef)(null);
         return (0, i.useMemo)(
           function () {
@@ -10206,15 +10206,15 @@
           default: he,
           straight: ue,
           step: ce,
-          smoothstep: oe,
+          smoothstep: se,
           simplebezier: $,
         },
         pr = [15, 15],
         yr = [0, 0],
         gr = (0, i.forwardRef)(function (e, t) {
           var r = e.nodes,
-            o = e.edges,
-            s = e.defaultNodes,
+            s = e.edges,
+            o = e.defaultNodes,
             l = e.defaultEdges,
             c = e.className,
             u = e.nodeTypes,
@@ -10232,8 +10232,8 @@
             M = e.onConnectStop,
             z = e.onConnectEnd,
             S = e.onClickConnectStart,
-            E = e.onClickConnectStop,
-            F = e.onClickConnectEnd,
+            F = e.onClickConnectStop,
+            E = e.onClickConnectEnd,
             O = e.onNodeMouseEnter,
             R = e.onNodeMouseMove,
             j = e.onNodeMouseLeave,
@@ -10265,9 +10265,9 @@
             ne = e.zoomActivationKeyCode,
             ie = void 0 === ne ? "Meta" : ne,
             ae = e.snapToGrid,
-            oe = void 0 !== ae && ae,
-            se = e.snapGrid,
-            le = void 0 === se ? pr : se,
+            se = void 0 !== ae && ae,
+            oe = e.snapGrid,
+            le = void 0 === oe ? pr : oe,
             ce = e.onlyRenderVisibleElements,
             ue = void 0 !== ce && ce,
             de = e.selectNodesOnDrag,
@@ -10285,8 +10285,8 @@
             Me = void 0 === _e ? yr : _e,
             ze = e.translateExtent,
             Se = void 0 === ze ? n.x : ze,
-            Ee = e.preventScrolling,
-            Fe = void 0 === Ee || Ee,
+            Fe = e.preventScrolling,
+            Ee = void 0 === Fe || Fe,
             Oe = e.nodeExtent,
             Re = e.defaultMarkerColor,
             je = void 0 === Re ? "#b1b1b7" : Re,
@@ -10316,8 +10316,8 @@
             nt = e.onEdgeMouseLeave,
             it = e.onEdgeUpdateStart,
             at = e.onEdgeUpdateEnd,
-            ot = e.edgeUpdaterRadius,
-            st = void 0 === ot ? 10 : ot,
+            st = e.edgeUpdaterRadius,
+            ot = void 0 === st ? 10 : st,
             lt = e.onNodesChange,
             ct = e.onEdgesChange,
             ut = e.noDragClassName,
@@ -10336,12 +10336,12 @@
             Mt = e.defaultEdgeOptions,
             zt = e.elevateEdgesOnSelect,
             St = void 0 !== zt && zt,
-            Et = p(e, ur),
-            Ft = sr(d, or),
-            Ot = sr(m, Ve);
+            Ft = p(e, ur),
+            Et = or(d, sr),
+            Ot = or(m, Ve);
           return i.createElement(
             "div",
-            fr(fr({}, Et), {}, { ref: t, className: a(["react-flow", c]) }),
+            fr(fr({}, Ft), {}, { ref: t, className: a(["react-flow", c]) }),
             i.createElement(
               cr,
               null,
@@ -10357,7 +10357,7 @@
                 onNodeMouseLeave: j,
                 onNodeContextMenu: x,
                 onNodeDoubleClick: C,
-                nodeTypes: Ft,
+                nodeTypes: Et,
                 edgeTypes: Ot,
                 connectionLineType: V,
                 connectionLineStyle: Y,
@@ -10374,7 +10374,7 @@
                 maxZoom: Be,
                 defaultZoom: we,
                 defaultPosition: Me,
-                preventScrolling: Fe,
+                preventScrolling: Ee,
                 zoomOnScroll: Ce,
                 zoomOnPinch: We,
                 zoomOnDoubleClick: qe,
@@ -10394,26 +10394,26 @@
                 onEdgeMouseLeave: nt,
                 onEdgeUpdateStart: it,
                 onEdgeUpdateEnd: at,
-                edgeUpdaterRadius: st,
+                edgeUpdaterRadius: ot,
                 defaultMarkerColor: je,
                 noDragClassName: dt,
                 noWheelClassName: mt,
                 noPanClassName: pt,
                 elevateEdgesOnSelect: St,
-                id: null == Et ? void 0 : Et.id,
+                id: null == Ft ? void 0 : Ft.id,
               }),
               i.createElement(Ue, {
                 nodes: r,
-                edges: o,
-                defaultNodes: s,
+                edges: s,
+                defaultNodes: o,
                 defaultEdges: l,
                 onConnect: w,
                 onConnectStart: _,
                 onConnectStop: M,
                 onConnectEnd: z,
                 onClickConnectStart: S,
-                onClickConnectStop: E,
-                onClickConnectEnd: F,
+                onClickConnectStop: F,
+                onClickConnectEnd: E,
                 nodesDraggable: me,
                 nodesConnectable: he,
                 elementsSelectable: pe,
@@ -10422,7 +10422,7 @@
                 nodeExtent: Oe,
                 onNodesChange: lt,
                 onEdgesChange: ct,
-                snapToGrid: oe,
+                snapToGrid: se,
                 snapGrid: le,
                 connectionMode: Z,
                 translateExtent: Se,
@@ -10454,14 +10454,14 @@
         return function (t) {
           var r = (0, i.useState)(t),
             a = (0, n._)(r, 2),
-            o = a[0],
-            s = a[1],
+            s = a[0],
+            o = a[1],
             l = (0, i.useCallback)(function (t) {
-              return s(function (r) {
+              return o(function (r) {
                 return e(t, r);
               });
             }, []);
-          return [o, s, l];
+          return [s, o, l];
         };
       }
       br.displayName = "ReactFlowProvider";
@@ -10470,7 +10470,7 @@
     },
     77826: (e, t, r) => {
       "use strict";
-      r.d(t, { Z: () => o });
+      r.d(t, { Z: () => s });
       var n = r(47427),
         i = r(39234),
         a =
@@ -10478,7 +10478,7 @@
           function (e) {
             return e.updateNodeDimensions;
           });
-      function o() {
+      function s() {
         var e = (0, i.u)(),
           t = (0, i.b)(a);
         return (0, n.useCallback)(function (r) {
@@ -10502,107 +10502,107 @@
       var n = r(6256),
         i = r(52942),
         a = r(90291),
-        o = r(56886),
-        s = r(52871),
+        s = r(56886),
+        o = r(52871),
         l = (0, n.z)({
           chartName: "LineChart",
           GraphicalChild: i.x,
           axisComponents: [
             { axisType: "xAxis", AxisComp: a.K },
-            { axisType: "yAxis", AxisComp: o.B },
+            { axisType: "yAxis", AxisComp: s.B },
           ],
-          formatAxisMap: s.t9,
+          formatAxisMap: o.t9,
         });
     },
     45681: (e, t, r) => {
       "use strict";
       r.d(t, {
-        $G: () => ke,
-        Cj: () => He,
-        DY: () => Se,
-        Dk: () => De,
-        FB: () => Te,
-        NG: () => Ft,
-        Oz: () => Re,
-        S$: () => xe,
-        Sj: () => it,
-        UY: () => j,
-        VO: () => st,
-        Vy: () => Fe,
-        W3: () => Me,
-        Y0: () => h,
-        _u: () => R,
-        cJ: () => Bt,
-        dq: () => ot,
-        kK: () => Ke,
-        mg: () => p,
-        uK: () => et,
-        wN: () => Ze,
-        yu: () => Ve,
-        zu: () => we,
+        $GS: () => qe,
+        CjN: () => Qe,
+        DYT: () => Oe,
+        DkI: () => Xe,
+        FBh: () => Ie,
+        NG: () => Ct,
+        OzA: () => Ce,
+        S$J: () => We,
+        SjT: () => ct,
+        UYo: () => j,
+        VO_: () => ft,
+        Vyd: () => je,
+        W3l: () => Fe,
+        Y0T: () => h,
+        _ur: () => R,
+        cJ3: () => zt,
+        dqE: () => dt,
+        kKo: () => et,
+        mgi: () => p,
+        uKj: () => nt,
+        wN3: () => Ye,
+        yuy: () => Ge,
+        zuF: () => ze,
       });
       var n = r(10059),
         i = r(39087),
         a = r(79545);
-      const o = n.Message;
-      class s extends o {
+      const s = n.Message;
+      class o extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            s.prototype.elements || i.aR(s.M()),
-            o.initialize(this, e, 0, -1, [1], null);
+            o.prototype.elements || i.aR(o.M()),
+            s.initialize(this, e, 0, -1, [1], null);
         }
         static M() {
           return (
-            s.sm_m ||
-              (s.sm_m = {
-                proto: s,
+            o.sm_m ||
+              (o.sm_m = {
+                proto: o,
                 fields: { elements: { n: 1, c: l, r: !0, q: !0 } },
               }),
-            s.sm_m
+            o.sm_m
           );
         }
         static MBF() {
-          return s.sm_mbf || (s.sm_mbf = i.Bh(s.M())), s.sm_mbf;
+          return o.sm_mbf || (o.sm_mbf = i.Bh(o.M())), o.sm_mbf;
         }
         toObject(e = !1) {
-          return s.toObject(e, this);
+          return o.toObject(e, this);
         }
         static toObject(e, t) {
-          return i.TA(s.M(), e, t);
+          return i.TA(o.M(), e, t);
         }
         static fromObject(e) {
-          return i.aD(s.M(), e);
+          return i.aD(o.M(), e);
         }
         static deserializeBinary(e) {
           let t = new n.BinaryReader(e),
-            r = new s();
-          return s.deserializeBinaryFromReader(r, t);
+            r = new o();
+          return o.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return i.F(s.MBF(), e, t);
+          return i.F(o.MBF(), e, t);
         }
         serializeBinary() {
           var e = new n.BinaryWriter();
-          return s.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return o.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          i.l2(s.M(), e, t);
+          i.l2(o.M(), e, t);
         }
         serializeBase64String() {
           var e = new n.BinaryWriter();
-          return s.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return o.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CMsgSteamLearnDataSourceDescObject";
         }
       }
-      class l extends o {
+      class l extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             l.prototype.name || i.aR(l.M()),
-            o.initialize(this, e, 0, -1, void 0, null);
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -10612,7 +10612,7 @@
                 fields: {
                   name: { n: 1, br: i.FE.readString, bw: i.Xc.writeString },
                   data_type: { n: 2, br: i.FE.readEnum, bw: i.Xc.writeEnum },
-                  object: { n: 3, c: s },
+                  object: { n: 3, c: o },
                   count: { n: 4, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
                 },
               }),
@@ -10654,12 +10654,12 @@
           return "CMsgSteamLearnDataSourceDescElement";
         }
       }
-      class c extends o {
+      class c extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             c.prototype.id || i.aR(c.M()),
-            o.initialize(this, e, 0, -1, void 0, null);
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -10675,7 +10675,7 @@
                     br: i.FE.readString,
                     bw: i.Xc.writeString,
                   },
-                  structure: { n: 5, c: s },
+                  structure: { n: 5, c: o },
                   structure_crc: {
                     n: 6,
                     br: i.FE.readUint32,
@@ -10726,12 +10726,12 @@
           return "CMsgSteamLearnDataSource";
         }
       }
-      class u extends o {
+      class u extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             u.prototype.elements || i.aR(u.M()),
-            o.initialize(this, e, 0, -1, [1], null);
+            s.initialize(this, e, 0, -1, [1], null);
         }
         static M() {
           return (
@@ -10778,12 +10778,12 @@
           return "CMsgSteamLearnDataObject";
         }
       }
-      class d extends o {
+      class d extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             d.prototype.name || i.aR(d.M()),
-            o.initialize(this, e, 0, -1, [20, 21, 22, 23, 24], null);
+            s.initialize(this, e, 0, -1, [20, 21, 22, 23, 24], null);
         }
         static M() {
           return (
@@ -10864,12 +10864,12 @@
           return "CMsgSteamLearnDataElement";
         }
       }
-      class f extends o {
+      class f extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             f.prototype.data_source_id || i.aR(f.M()),
-            o.initialize(this, e, 0, -1, [2], null);
+            s.initialize(this, e, 0, -1, [2], null);
         }
         static M() {
           return (
@@ -10931,12 +10931,12 @@
           return "CMsgSteamLearnData";
         }
       }
-      class m extends o {
+      class m extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             m.prototype.data || i.aR(m.M()),
-            o.initialize(this, e, 0, -1, [1], null);
+            s.initialize(this, e, 0, -1, [1], null);
         }
         static M() {
           return (
@@ -10983,12 +10983,12 @@
           return "CMsgSteamLearnDataList";
         }
       }
-      class h extends o {
+      class h extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             h.prototype.data_source_id || i.aR(h.M()),
-            o.initialize(this, e, 0, -1, void 0, null);
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -11071,12 +11071,12 @@
           return "CMsgSteamLearnDataSourceElementUsage";
         }
       }
-      class p extends o {
+      class p extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             p.prototype.project_id || i.aR(p.M()),
-            o.initialize(this, e, 0, -1, [7], null);
+            s.initialize(this, e, 0, -1, [7], null);
         }
         static M() {
           return (
@@ -11151,12 +11151,12 @@
           return "CMsgSteamLearnProject";
         }
       }
-      class y extends o {
+      class y extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             y.prototype.fetch_id || i.aR(y.M()),
-            o.initialize(this, e, 0, -1, void 0, null);
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -11205,12 +11205,12 @@
           return "CMsgSteamLearnFetchInfo";
         }
       }
-      class g extends o {
+      class g extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             g.prototype.fetch_id || i.aR(g.M()),
-            o.initialize(this, e, 0, -1, void 0, null);
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -11270,12 +11270,12 @@
           return "CMsgSteamLearnTrainInfo";
         }
       }
-      class b extends o {
+      class b extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             b.prototype.project_id || i.aR(b.M()),
-            o.initialize(this, e, 0, -1, [4, 5, 6, 17, 18, 12], null);
+            s.initialize(this, e, 0, -1, [4, 5, 6, 17, 18, 12], null);
         }
         static M() {
           return (
@@ -11310,8 +11310,8 @@
                   project_nodes: { n: 6, c: R, r: !0, q: !0 },
                   snapshot_filter: { n: 11, c: w },
                   snapshot_config: { n: 7, c: _ },
-                  train_config: { n: 8, c: E },
-                  scheduled_train_config: { n: 16, c: F },
+                  train_config: { n: 8, c: F },
+                  scheduled_train_config: { n: 16, c: E },
                   data_retention_config: { n: 14, c: O },
                   fetch_infos: { n: 17, c: y, r: !0, q: !0 },
                   train_infos: { n: 18, c: g, r: !0, q: !0 },
@@ -11361,12 +11361,12 @@
           return "CMsgSteamLearnProjectConfig";
         }
       }
-      class B extends o {
+      class B extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             B.prototype.key || i.aR(B.M()),
-            o.initialize(this, e, 0, -1, void 0, null);
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -11416,12 +11416,12 @@
           return "CMsgSteamLearnProjectConfig_MapDataElementSqlColumnEntry";
         }
       }
-      class v extends o {
+      class v extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             v.prototype.data_element_path || i.aR(v.M()),
-            o.initialize(this, e, 0, -1, void 0, null);
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -11481,12 +11481,12 @@
           return "CMsgSteamLearnProjectSnapshotFilterHistogram";
         }
       }
-      class w extends o {
+      class w extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             w.prototype.sample_reduce_percent || i.aR(w.M()),
-            o.initialize(this, e, 0, -1, void 0, null);
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -11540,12 +11540,12 @@
           return "CMsgSteamLearnProjectSnapshotFilter";
         }
       }
-      class _ extends o {
+      class _ extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             _.prototype.snapshot_type || i.aR(_.M()),
-            o.initialize(this, e, 0, -1, void 0, null);
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -11616,12 +11616,12 @@
           return "CMsgSteamLearnProjectSnapshotConfig";
         }
       }
-      class M extends o {
+      class M extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             M.prototype.percent || i.aR(M.M()),
-            o.initialize(this, e, 0, -1, void 0, null);
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -11675,12 +11675,12 @@
           return "CMsgSteamLearnProjectSnapshotConfigAccountIDs";
         }
       }
-      class z extends o {
+      class z extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             z.prototype.percent || i.aR(z.M()),
-            o.initialize(this, e, 0, -1, void 0, null);
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -11734,12 +11734,12 @@
           return "CMsgSteamLearnProjectSnapshotConfigAppIDs";
         }
       }
-      class S extends o {
+      class S extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             S.prototype.project_id || i.aR(S.M()),
-            o.initialize(this, e, 0, -1, void 0, null);
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -11797,18 +11797,18 @@
           return "CMsgSteamLearnProjectSnapshotConfigOtherProject";
         }
       }
-      class E extends o {
+      class F extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            E.prototype.fetch_workers || i.aR(E.M()),
-            o.initialize(this, e, 0, -1, void 0, null);
+            F.prototype.fetch_workers || i.aR(F.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
-            E.sm_m ||
-              (E.sm_m = {
-                proto: E,
+            F.sm_m ||
+              (F.sm_m = {
+                proto: F,
                 fields: {
                   fetch_workers: {
                     n: 1,
@@ -11852,89 +11852,6 @@
                   },
                 },
               }),
-            E.sm_m
-          );
-        }
-        static MBF() {
-          return E.sm_mbf || (E.sm_mbf = i.Bh(E.M())), E.sm_mbf;
-        }
-        toObject(e = !1) {
-          return E.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return i.TA(E.M(), e, t);
-        }
-        static fromObject(e) {
-          return i.aD(E.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new n.BinaryReader(e),
-            r = new E();
-          return E.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return i.F(E.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new n.BinaryWriter();
-          return E.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          i.l2(E.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new n.BinaryWriter();
-          return E.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CMsgSteamLearnTrainConfig";
-        }
-      }
-      class F extends o {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            F.prototype.scheduled_type || i.aR(F.M()),
-            o.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            F.sm_m ||
-              (F.sm_m = {
-                proto: F,
-                fields: {
-                  scheduled_type: {
-                    n: 1,
-                    br: i.FE.readEnum,
-                    bw: i.Xc.writeEnum,
-                  },
-                  scheduled_minute: {
-                    n: 2,
-                    br: i.FE.readUint32,
-                    bw: i.Xc.writeUint32,
-                  },
-                  scheduled_hour: {
-                    n: 3,
-                    br: i.FE.readUint32,
-                    bw: i.Xc.writeUint32,
-                  },
-                  scheduled_day_of_week: {
-                    n: 4,
-                    br: i.FE.readUint32,
-                    bw: i.Xc.writeUint32,
-                  },
-                  scheduled_day_of_month: {
-                    n: 5,
-                    br: i.FE.readUint32,
-                    bw: i.Xc.writeUint32,
-                  },
-                  auto_activate_accuracy_threshold: {
-                    n: 6,
-                    br: i.FE.readFloat,
-                    bw: i.Xc.writeFloat,
-                  },
-                },
-              }),
             F.sm_m
           );
         }
@@ -11970,15 +11887,98 @@
           return F.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
+          return "CMsgSteamLearnTrainConfig";
+        }
+      }
+      class E extends s {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            E.prototype.scheduled_type || i.aR(E.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            E.sm_m ||
+              (E.sm_m = {
+                proto: E,
+                fields: {
+                  scheduled_type: {
+                    n: 1,
+                    br: i.FE.readEnum,
+                    bw: i.Xc.writeEnum,
+                  },
+                  scheduled_minute: {
+                    n: 2,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
+                  },
+                  scheduled_hour: {
+                    n: 3,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
+                  },
+                  scheduled_day_of_week: {
+                    n: 4,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
+                  },
+                  scheduled_day_of_month: {
+                    n: 5,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
+                  },
+                  auto_activate_accuracy_threshold: {
+                    n: 6,
+                    br: i.FE.readFloat,
+                    bw: i.Xc.writeFloat,
+                  },
+                },
+              }),
+            E.sm_m
+          );
+        }
+        static MBF() {
+          return E.sm_mbf || (E.sm_mbf = i.Bh(E.M())), E.sm_mbf;
+        }
+        toObject(e = !1) {
+          return E.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return i.TA(E.M(), e, t);
+        }
+        static fromObject(e) {
+          return i.aD(E.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new n.BinaryReader(e),
+            r = new E();
+          return E.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return i.F(E.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new n.BinaryWriter();
+          return E.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          i.l2(E.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new n.BinaryWriter();
+          return E.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
           return "CMsgSteamLearnScheduledTrainConfig";
         }
       }
-      class O extends o {
+      class O extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             O.prototype.snapshot_keep_duration_days || i.aR(O.M()),
-            o.initialize(this, e, 0, -1, void 0, null);
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -12036,12 +12036,12 @@
           return "CMsgSteamLearnDataRetentionConfig";
         }
       }
-      class R extends o {
+      class R extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             R.prototype.node_id || i.aR(R.M()),
-            o.initialize(this, e, 0, -1, [6], null);
+            s.initialize(this, e, 0, -1, [6], null);
         }
         static M() {
           return (
@@ -12063,16 +12063,19 @@
                   train: { n: 15, c: I },
                   conditional_extract: { n: 16, c: N },
                   concatenate: { n: 17, c: U },
-                  shuffle: { n: 18, c: Z },
-                  synced_shuffle: { n: 19, c: $ },
-                  onehot: { n: 20, c: V },
-                  explode: { n: 21, c: Y },
-                  conditional_swap: { n: 22, c: H },
-                  kmeans: { n: 23, c: G },
+                  shuffle: { n: 18, c: $ },
+                  synced_shuffle: { n: 19, c: V },
+                  onehot: { n: 20, c: Y },
+                  explode: { n: 21, c: H },
+                  conditional_swap: { n: 22, c: G },
+                  kmeans: { n: 23, c: K },
                   combine: { n: 24, c: k },
                   text_vectorization: { n: 25, c: X },
                   batch_normalization: { n: 26, c: L },
                   normalize: { n: 27, c: q },
+                  named_inference: { n: 28, c: Z },
+                  dot: { n: 29, c: Q },
+                  extract: { n: 30, c: J },
                 },
               }),
             R.sm_m
@@ -12113,12 +12116,12 @@
           return "CMsgSteamLearnProjectNode";
         }
       }
-      class j extends o {
+      class j extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             j.prototype.connector_id || i.aR(j.M()),
-            o.initialize(this, e, 0, -1, [2], null);
+            s.initialize(this, e, 0, -1, [2], null);
         }
         static M() {
           return (
@@ -12184,12 +12187,12 @@
           return "CMsgSteamLearnProjectNodeConnector";
         }
       }
-      class x extends o {
+      class x extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             x.prototype.input_num || i.aR(x.M()),
-            o.initialize(this, e, 0, -1, void 0, null);
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -12242,12 +12245,12 @@
           return "CMsgSteamLearnModelNodeInput";
         }
       }
-      class C extends o {
+      class C extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             C.prototype.activation || i.aR(C.M()),
-            o.initialize(this, e, 0, -1, void 0, null);
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -12297,12 +12300,12 @@
           return "CMsgSteamLearnModelNodeDense";
         }
       }
-      class T extends o {
+      class T extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             T.prototype.activation || i.aR(T.M()),
-            o.initialize(this, e, 0, -1, [2], null);
+            s.initialize(this, e, 0, -1, [2], null);
         }
         static M() {
           return (
@@ -12364,12 +12367,12 @@
           return "CMsgSteamLearnModelNodeDenseStack";
         }
       }
-      class W extends o {
+      class W extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             W.prototype.dropout_pct || i.aR(W.M()),
-            o.initialize(this, e, 0, -1, void 0, null);
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -12422,12 +12425,12 @@
           return "CMsgSteamLearnModelNodeDropout";
         }
       }
-      class P extends o {
+      class P extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             P.prototype.max_value || i.aR(P.M()),
-            o.initialize(this, e, 0, -1, void 0, null);
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -12501,12 +12504,12 @@
           return "CMsgSteamLearnModelNodeEmbedding";
         }
       }
-      class I extends o {
+      class I extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             I.prototype.input_count || i.aR(I.M()),
-            o.initialize(this, e, 0, -1, void 0, null);
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -12572,12 +12575,12 @@
           return "CMsgSteamLearnModelNodeTrain";
         }
       }
-      class N extends o {
+      class N extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             N.prototype.extract_filter_type || i.aR(N.M()),
-            o.initialize(this, e, 0, -1, void 0, null);
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -12647,12 +12650,12 @@
           return "CMsgSteamLearnModelNodeConditionalExtract";
         }
       }
-      class A extends o {
+      class A extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             A.prototype.appid_release_recency_months || i.aR(A.M()),
-            o.initialize(this, e, 0, -1, void 0, null);
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -12720,12 +12723,12 @@
           return "CMsgSteamLearnModelNodeConditionalExtract_FilterInfo";
         }
       }
-      class D extends o {
+      class D extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             D.prototype.appid_release_recency_bias || i.aR(D.M()),
-            o.initialize(this, e, 0, -1, void 0, null);
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -12788,10 +12791,10 @@
           return "CMsgSteamLearnModelNodeConditionalExtract_WeightInfo";
         }
       }
-      class U extends o {
+      class U extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
-          super(), o.initialize(this, e, 0, -1, void 0, null);
+          super(), s.initialize(this, e, 0, -1, void 0, null);
         }
         toObject(e = !1) {
           return U.toObject(e, this);
@@ -12823,10 +12826,10 @@
           return "CMsgSteamLearnModelNodeConcatenate";
         }
       }
-      class k extends o {
+      class k extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
-          super(), o.initialize(this, e, 0, -1, void 0, null);
+          super(), s.initialize(this, e, 0, -1, void 0, null);
         }
         toObject(e = !1) {
           return k.toObject(e, this);
@@ -12858,12 +12861,12 @@
           return "CMsgSteamLearnModelNodeCombine";
         }
       }
-      class X extends o {
+      class X extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             X.prototype.vocabulary_size || i.aR(X.M()),
-            o.initialize(this, e, 0, -1, void 0, null);
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -12923,10 +12926,10 @@
           return "CMsgSteamLearnModelNodeTextVectorization";
         }
       }
-      class L extends o {
+      class L extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
-          super(), o.initialize(this, e, 0, -1, void 0, null);
+          super(), s.initialize(this, e, 0, -1, void 0, null);
         }
         toObject(e = !1) {
           return L.toObject(e, this);
@@ -12958,10 +12961,10 @@
           return "CMsgSteamLearnModelNodeBatchNormalization";
         }
       }
-      class q extends o {
+      class q extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
-          super(), o.initialize(this, e, 0, -1, void 0, null);
+          super(), s.initialize(this, e, 0, -1, void 0, null);
         }
         toObject(e = !1) {
           return q.toObject(e, this);
@@ -12993,12 +12996,12 @@
           return "CMsgSteamLearnModelNodeNormalize";
         }
       }
-      class Z extends o {
+      class Z extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Z.prototype.exclude_zeroes || i.aR(Z.M()),
-            o.initialize(this, e, 0, -1, void 0, null);
+            Z.prototype.name || i.aR(Z.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -13006,11 +13009,7 @@
               (Z.sm_m = {
                 proto: Z,
                 fields: {
-                  exclude_zeroes: {
-                    n: 1,
-                    br: i.FE.readBool,
-                    bw: i.Xc.writeBool,
-                  },
+                  name: { n: 1, br: i.FE.readString, bw: i.Xc.writeString },
                 },
               }),
             Z.sm_m
@@ -13048,15 +13047,15 @@
           return Z.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearnModelNodeShuffle";
+          return "CMsgSteamLearnModelNodeNamedInference";
         }
       }
-      class $ extends o {
+      class $ extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             $.prototype.exclude_zeroes || i.aR($.M()),
-            o.initialize(this, e, 0, -1, void 0, null);
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -13106,15 +13105,15 @@
           return $.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearnModelNodeSyncedShuffle";
+          return "CMsgSteamLearnModelNodeShuffle";
         }
       }
-      class V extends o {
+      class V extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            V.prototype.width || i.aR(V.M()),
-            o.initialize(this, e, 0, -1, void 0, null);
+            V.prototype.exclude_zeroes || i.aR(V.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -13122,11 +13121,10 @@
               (V.sm_m = {
                 proto: V,
                 fields: {
-                  width: { n: 1, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
-                  compact_table: {
-                    n: 2,
-                    br: i.FE.readString,
-                    bw: i.Xc.writeString,
+                  exclude_zeroes: {
+                    n: 1,
+                    br: i.FE.readBool,
+                    bw: i.Xc.writeBool,
                   },
                 },
               }),
@@ -13165,22 +13163,44 @@
           return V.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearnModelNodeOnehot";
+          return "CMsgSteamLearnModelNodeSyncedShuffle";
         }
       }
-      class Y extends o {
+      class Y extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
-          super(), o.initialize(this, e, 0, -1, void 0, null);
+          super(),
+            Y.prototype.width || i.aR(Y.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            Y.sm_m ||
+              (Y.sm_m = {
+                proto: Y,
+                fields: {
+                  width: { n: 1, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
+                  compact_table: {
+                    n: 2,
+                    br: i.FE.readString,
+                    bw: i.Xc.writeString,
+                  },
+                },
+              }),
+            Y.sm_m
+          );
+        }
+        static MBF() {
+          return Y.sm_mbf || (Y.sm_mbf = i.Bh(Y.M())), Y.sm_mbf;
         }
         toObject(e = !1) {
           return Y.toObject(e, this);
         }
         static toObject(e, t) {
-          return e ? { $jspbMessageInstance: t } : {};
+          return i.TA(Y.M(), e, t);
         }
         static fromObject(e) {
-          return new Y();
+          return i.aD(Y.M(), e);
         }
         static deserializeBinary(e) {
           let t = new n.BinaryReader(e),
@@ -13188,25 +13208,27 @@
           return Y.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return e;
+          return i.F(Y.MBF(), e, t);
         }
         serializeBinary() {
           var e = new n.BinaryWriter();
           return Y.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
-        static serializeBinaryToWriter(e, t) {}
+        static serializeBinaryToWriter(e, t) {
+          i.l2(Y.M(), e, t);
+        }
         serializeBase64String() {
           var e = new n.BinaryWriter();
           return Y.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearnModelNodeExplode";
+          return "CMsgSteamLearnModelNodeOnehot";
         }
       }
-      class H extends o {
+      class H extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
-          super(), o.initialize(this, e, 0, -1, void 0, null);
+          super(), s.initialize(this, e, 0, -1, void 0, null);
         }
         toObject(e = !1) {
           return H.toObject(e, this);
@@ -13235,21 +13257,56 @@
           return H.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
+          return "CMsgSteamLearnModelNodeExplode";
+        }
+      }
+      class G extends s {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(), s.initialize(this, e, 0, -1, void 0, null);
+        }
+        toObject(e = !1) {
+          return G.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return e ? { $jspbMessageInstance: t } : {};
+        }
+        static fromObject(e) {
+          return new G();
+        }
+        static deserializeBinary(e) {
+          let t = new n.BinaryReader(e),
+            r = new G();
+          return G.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return e;
+        }
+        serializeBinary() {
+          var e = new n.BinaryWriter();
+          return G.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {}
+        serializeBase64String() {
+          var e = new n.BinaryWriter();
+          return G.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
           return "CMsgSteamLearnModelNodeConditionalSwap";
         }
       }
-      class G extends o {
+      class K extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            G.prototype.num_clusters || i.aR(G.M()),
-            o.initialize(this, e, 0, -1, void 0, null);
+            K.prototype.num_clusters || i.aR(K.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
-            G.sm_m ||
-              (G.sm_m = {
-                proto: G,
+            K.sm_m ||
+              (K.sm_m = {
+                proto: K,
                 fields: {
                   num_clusters: {
                     n: 1,
@@ -13262,65 +13319,6 @@
                     br: i.FE.readBool,
                     bw: i.Xc.writeBool,
                   },
-                },
-              }),
-            G.sm_m
-          );
-        }
-        static MBF() {
-          return G.sm_mbf || (G.sm_mbf = i.Bh(G.M())), G.sm_mbf;
-        }
-        toObject(e = !1) {
-          return G.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return i.TA(G.M(), e, t);
-        }
-        static fromObject(e) {
-          return i.aD(G.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new n.BinaryReader(e),
-            r = new G();
-          return G.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return i.F(G.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new n.BinaryWriter();
-          return G.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          i.l2(G.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new n.BinaryWriter();
-          return G.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CMsgSteamLearnModelNodeKMeansCluster";
-        }
-      }
-      class K extends o {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            K.prototype.access_token || i.aR(K.M()),
-            o.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            K.sm_m ||
-              (K.sm_m = {
-                proto: K,
-                fields: {
-                  access_token: {
-                    n: 1,
-                    br: i.FE.readString,
-                    bw: i.Xc.writeString,
-                  },
-                  data_source: { n: 3, c },
                 },
               }),
             K.sm_m
@@ -13358,15 +13356,15 @@
           return K.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_RegisterDataSource_Request";
+          return "CMsgSteamLearnModelNodeKMeansCluster";
         }
       }
-      class Q extends o {
+      class Q extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Q.prototype.result || i.aR(Q.M()),
-            o.initialize(this, e, 0, -1, void 0, null);
+            Q.prototype.normalize || i.aR(Q.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -13374,8 +13372,7 @@
               (Q.sm_m = {
                 proto: Q,
                 fields: {
-                  result: { n: 1, br: i.FE.readEnum, bw: i.Xc.writeEnum },
-                  data_source: { n: 2, c },
+                  normalize: { n: 1, br: i.FE.readBool, bw: i.Xc.writeBool },
                 },
               }),
             Q.sm_m
@@ -13413,15 +13410,15 @@
           return Q.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_RegisterDataSource_Response";
+          return "CMsgSteamLearnModelNodeDot";
         }
       }
-      class J extends o {
+      class J extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            J.prototype.access_token || i.aR(J.M()),
-            o.initialize(this, e, 0, -1, void 0, null);
+            J.prototype.input_type || i.aR(J.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -13429,12 +13426,42 @@
               (J.sm_m = {
                 proto: J,
                 fields: {
-                  access_token: {
-                    n: 1,
+                  input_type: { n: 1, br: i.FE.readEnum, bw: i.Xc.writeEnum },
+                  mode: { n: 2, br: i.FE.readEnum, bw: i.Xc.writeEnum },
+                  exclusion: { n: 3, br: i.FE.readEnum, bw: i.Xc.writeEnum },
+                  selection: { n: 4, br: i.FE.readEnum, bw: i.Xc.writeEnum },
+                  bias_start: { n: 5, br: i.FE.readFloat, bw: i.Xc.writeFloat },
+                  bias_end: { n: 6, br: i.FE.readFloat, bw: i.Xc.writeFloat },
+                  recency_months: {
+                    n: 12,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
+                  },
+                  input_bias_input_number: {
+                    n: 7,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
+                  },
+                  input_bias_strength: {
+                    n: 8,
+                    br: i.FE.readFloat,
+                    bw: i.Xc.writeFloat,
+                  },
+                  positive_sample_percent: {
+                    n: 9,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
+                  },
+                  compact_table: {
+                    n: 10,
                     br: i.FE.readString,
                     bw: i.Xc.writeString,
                   },
-                  data: { n: 3, c: f },
+                  extracted_compact_table: {
+                    n: 11,
+                    br: i.FE.readString,
+                    bw: i.Xc.writeString,
+                  },
                 },
               }),
             J.sm_m
@@ -13472,15 +13499,15 @@
           return J.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_CacheData_Request";
+          return "CMsgSteamLearnModelNodeExtract";
         }
       }
-      class ee extends o {
+      class ee extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            ee.prototype.cache_data_result || i.aR(ee.M()),
-            o.initialize(this, e, 0, -1, void 0, null);
+            ee.prototype.access_token || i.aR(ee.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -13488,11 +13515,12 @@
               (ee.sm_m = {
                 proto: ee,
                 fields: {
-                  cache_data_result: {
+                  access_token: {
                     n: 1,
-                    br: i.FE.readEnum,
-                    bw: i.Xc.writeEnum,
+                    br: i.FE.readString,
+                    bw: i.Xc.writeString,
                   },
+                  data_source: { n: 3, c },
                 },
               }),
             ee.sm_m
@@ -13530,15 +13558,15 @@
           return ee.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_CacheData_Response";
+          return "CMsgSteamLearn_RegisterDataSource_Request";
         }
       }
-      class te extends o {
+      class te extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            te.prototype.access_token || i.aR(te.M()),
-            o.initialize(this, e, 0, -1, [4, 5], null);
+            te.prototype.result || i.aR(te.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -13546,35 +13574,8 @@
               (te.sm_m = {
                 proto: te,
                 fields: {
-                  access_token: {
-                    n: 1,
-                    br: i.FE.readString,
-                    bw: i.Xc.writeString,
-                  },
-                  project_id: {
-                    n: 3,
-                    br: i.FE.readUint32,
-                    bw: i.Xc.writeUint32,
-                  },
-                  published_version: {
-                    n: 7,
-                    br: i.FE.readUint32,
-                    bw: i.Xc.writeUint32,
-                  },
-                  keys: {
-                    n: 4,
-                    r: !0,
-                    q: !0,
-                    br: i.FE.readUint64String,
-                    pbr: i.FE.readPackedUint64String,
-                    bw: i.Xc.writeRepeatedUint64String,
-                  },
-                  data: { n: 5, c: f, r: !0, q: !0 },
-                  pending_data_limit_seconds: {
-                    n: 6,
-                    br: i.FE.readUint32,
-                    bw: i.Xc.writeUint32,
-                  },
+                  result: { n: 1, br: i.FE.readEnum, bw: i.Xc.writeEnum },
+                  data_source: { n: 2, c },
                 },
               }),
             te.sm_m
@@ -13612,15 +13613,15 @@
           return te.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_SnapshotProject_Request";
+          return "CMsgSteamLearn_RegisterDataSource_Response";
         }
       }
-      class re extends o {
+      class re extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            re.prototype.snapshot_result || i.aR(re.M()),
-            o.initialize(this, e, 0, -1, void 0, null);
+            re.prototype.access_token || i.aR(re.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -13628,11 +13629,12 @@
               (re.sm_m = {
                 proto: re,
                 fields: {
-                  snapshot_result: {
+                  access_token: {
                     n: 1,
-                    br: i.FE.readEnum,
-                    bw: i.Xc.writeEnum,
+                    br: i.FE.readString,
+                    bw: i.Xc.writeString,
                   },
+                  data: { n: 3, c: f },
                 },
               }),
             re.sm_m
@@ -13670,15 +13672,15 @@
           return re.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_SnapshotProject_Response";
+          return "CMsgSteamLearn_CacheData_Request";
         }
       }
-      class ne extends o {
+      class ne extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            ne.prototype.access_token || i.aR(ne.M()),
-            o.initialize(this, e, 0, -1, [7, 8], null);
+            ne.prototype.cache_data_result || i.aR(ne.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -13686,42 +13688,10 @@
               (ne.sm_m = {
                 proto: ne,
                 fields: {
-                  access_token: {
+                  cache_data_result: {
                     n: 1,
-                    br: i.FE.readString,
-                    bw: i.Xc.writeString,
-                  },
-                  project_id: {
-                    n: 3,
-                    br: i.FE.readUint32,
-                    bw: i.Xc.writeUint32,
-                  },
-                  published_version: {
-                    n: 4,
-                    br: i.FE.readUint32,
-                    bw: i.Xc.writeUint32,
-                  },
-                  override_train_id: {
-                    n: 5,
-                    br: i.FE.readUint32,
-                    bw: i.Xc.writeUint32,
-                  },
-                  data: { n: 6, c: m },
-                  additional_data: {
-                    n: 7,
-                    r: !0,
-                    q: !0,
-                    br: i.FE.readFloat,
-                    pbr: i.FE.readPackedFloat,
-                    bw: i.Xc.writeRepeatedFloat,
-                  },
-                  keys: {
-                    n: 8,
-                    r: !0,
-                    q: !0,
-                    br: i.FE.readUint64String,
-                    pbr: i.FE.readPackedUint64String,
-                    bw: i.Xc.writeRepeatedUint64String,
+                    br: i.FE.readEnum,
+                    bw: i.Xc.writeEnum,
                   },
                 },
               }),
@@ -13760,15 +13730,15 @@
           return ne.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_Inference_Request";
+          return "CMsgSteamLearn_CacheData_Response";
         }
       }
-      class ie extends o {
+      class ie extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            ie.prototype.inference_result || i.aR(ie.M()),
-            o.initialize(this, e, 0, -1, [3], null);
+            ie.prototype.access_token || i.aR(ie.M()),
+            s.initialize(this, e, 0, -1, [4, 5], null);
         }
         static M() {
           return (
@@ -13776,19 +13746,34 @@
               (ie.sm_m = {
                 proto: ie,
                 fields: {
-                  inference_result: {
+                  access_token: {
                     n: 1,
-                    br: i.FE.readEnum,
-                    bw: i.Xc.writeEnum,
+                    br: i.FE.readString,
+                    bw: i.Xc.writeString,
                   },
-                  backend_response: { n: 2, c: lt },
-                  keys: {
+                  project_id: {
                     n: 3,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
+                  },
+                  published_version: {
+                    n: 7,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
+                  },
+                  keys: {
+                    n: 4,
                     r: !0,
                     q: !0,
                     br: i.FE.readUint64String,
                     pbr: i.FE.readPackedUint64String,
                     bw: i.Xc.writeRepeatedUint64String,
+                  },
+                  data: { n: 5, c: f, r: !0, q: !0 },
+                  pending_data_limit_seconds: {
+                    n: 6,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
                   },
                 },
               }),
@@ -13827,15 +13812,15 @@
           return ie.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_Inference_Response";
+          return "CMsgSteamLearn_SnapshotProject_Request";
         }
       }
-      class ae extends o {
+      class ae extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            ae.prototype.access_token || i.aR(ae.M()),
-            o.initialize(this, e, 0, -1, void 0, null);
+            ae.prototype.snapshot_result || i.aR(ae.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -13843,25 +13828,10 @@
               (ae.sm_m = {
                 proto: ae,
                 fields: {
-                  access_token: {
+                  snapshot_result: {
                     n: 1,
-                    br: i.FE.readString,
-                    bw: i.Xc.writeString,
-                  },
-                  project_id: {
-                    n: 3,
-                    br: i.FE.readUint32,
-                    bw: i.Xc.writeUint32,
-                  },
-                  published_version: {
-                    n: 4,
-                    br: i.FE.readUint32,
-                    bw: i.Xc.writeUint32,
-                  },
-                  override_train_id: {
-                    n: 5,
-                    br: i.FE.readUint32,
-                    bw: i.Xc.writeUint32,
+                    br: i.FE.readEnum,
+                    bw: i.Xc.writeEnum,
                   },
                 },
               }),
@@ -13900,80 +13870,15 @@
           return ae.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_InferenceMetadata_Request";
+          return "CMsgSteamLearn_SnapshotProject_Response";
         }
       }
-      class oe extends o {
+      class se extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            oe.prototype.inference_metadata_result || i.aR(oe.M()),
-            o.initialize(this, e, 0, -1, [3, 4, 5, 6, 8], null);
-        }
-        static M() {
-          return (
-            oe.sm_m ||
-              (oe.sm_m = {
-                proto: oe,
-                fields: {
-                  inference_metadata_result: {
-                    n: 1,
-                    br: i.FE.readEnum,
-                    bw: i.Xc.writeEnum,
-                  },
-                  row_range: { n: 2, c: se },
-                  ranges: { n: 3, c: le, r: !0, q: !0 },
-                  std_devs: { n: 4, c: ce, r: !0, q: !0 },
-                  compact_tables: { n: 5, c: ue, r: !0, q: !0 },
-                  kmeans: { n: 6, c: he, r: !0, q: !0 },
-                  app_info: { n: 8, c: be, r: !0, q: !0 },
-                  snapshot_histogram: { n: 7, c: ye },
-                },
-              }),
-            oe.sm_m
-          );
-        }
-        static MBF() {
-          return oe.sm_mbf || (oe.sm_mbf = i.Bh(oe.M())), oe.sm_mbf;
-        }
-        toObject(e = !1) {
-          return oe.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return i.TA(oe.M(), e, t);
-        }
-        static fromObject(e) {
-          return i.aD(oe.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new n.BinaryReader(e),
-            r = new oe();
-          return oe.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return i.F(oe.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new n.BinaryWriter();
-          return oe.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          i.l2(oe.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new n.BinaryWriter();
-          return oe.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CMsgSteamLearn_InferenceMetadata_Response";
-        }
-      }
-      class se extends o {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            se.prototype.min_row || i.aR(se.M()),
-            o.initialize(this, e, 0, -1, void 0, null);
+            se.prototype.access_token || i.aR(se.M()),
+            s.initialize(this, e, 0, -1, [7, 8], null);
         }
         static M() {
           return (
@@ -13981,15 +13886,47 @@
               (se.sm_m = {
                 proto: se,
                 fields: {
-                  min_row: {
+                  access_token: {
                     n: 1,
-                    br: i.FE.readUint64String,
-                    bw: i.Xc.writeUint64String,
+                    br: i.FE.readString,
+                    bw: i.Xc.writeString,
                   },
-                  max_row: {
-                    n: 2,
+                  project_id: {
+                    n: 3,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
+                  },
+                  published_version: {
+                    n: 4,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
+                  },
+                  override_train_id: {
+                    n: 5,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
+                  },
+                  data: { n: 6, c: m },
+                  additional_data: {
+                    n: 7,
+                    r: !0,
+                    q: !0,
+                    br: i.FE.readFloat,
+                    pbr: i.FE.readPackedFloat,
+                    bw: i.Xc.writeRepeatedFloat,
+                  },
+                  keys: {
+                    n: 8,
+                    r: !0,
+                    q: !0,
                     br: i.FE.readUint64String,
-                    bw: i.Xc.writeUint64String,
+                    pbr: i.FE.readPackedUint64String,
+                    bw: i.Xc.writeRepeatedUint64String,
+                  },
+                  named_inference: {
+                    n: 9,
+                    br: i.FE.readString,
+                    bw: i.Xc.writeString,
                   },
                 },
               }),
@@ -14028,15 +13965,82 @@
           return se.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_InferenceMetadata_Response_RowRange";
+          return "CMsgSteamLearn_Inference_Request";
         }
       }
-      class le extends o {
+      class oe extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            le.prototype.data_element_path || i.aR(le.M()),
-            o.initialize(this, e, 0, -1, void 0, null);
+            oe.prototype.inference_result || i.aR(oe.M()),
+            s.initialize(this, e, 0, -1, [3], null);
+        }
+        static M() {
+          return (
+            oe.sm_m ||
+              (oe.sm_m = {
+                proto: oe,
+                fields: {
+                  inference_result: {
+                    n: 1,
+                    br: i.FE.readEnum,
+                    bw: i.Xc.writeEnum,
+                  },
+                  backend_response: { n: 2, c: mt },
+                  keys: {
+                    n: 3,
+                    r: !0,
+                    q: !0,
+                    br: i.FE.readUint64String,
+                    pbr: i.FE.readPackedUint64String,
+                    bw: i.Xc.writeRepeatedUint64String,
+                  },
+                },
+              }),
+            oe.sm_m
+          );
+        }
+        static MBF() {
+          return oe.sm_mbf || (oe.sm_mbf = i.Bh(oe.M())), oe.sm_mbf;
+        }
+        toObject(e = !1) {
+          return oe.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return i.TA(oe.M(), e, t);
+        }
+        static fromObject(e) {
+          return i.aD(oe.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new n.BinaryReader(e),
+            r = new oe();
+          return oe.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return i.F(oe.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new n.BinaryWriter();
+          return oe.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          i.l2(oe.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new n.BinaryWriter();
+          return oe.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CMsgSteamLearn_Inference_Response";
+        }
+      }
+      class le extends s {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            le.prototype.access_token || i.aR(le.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -14044,13 +14048,26 @@
               (le.sm_m = {
                 proto: le,
                 fields: {
-                  data_element_path: {
+                  access_token: {
                     n: 1,
                     br: i.FE.readString,
                     bw: i.Xc.writeString,
                   },
-                  min_value: { n: 2, br: i.FE.readFloat, bw: i.Xc.writeFloat },
-                  max_value: { n: 3, br: i.FE.readFloat, bw: i.Xc.writeFloat },
+                  project_id: {
+                    n: 3,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
+                  },
+                  published_version: {
+                    n: 4,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
+                  },
+                  override_train_id: {
+                    n: 5,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
+                  },
                 },
               }),
             le.sm_m
@@ -14088,15 +14105,15 @@
           return le.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_InferenceMetadata_Response_Range";
+          return "CMsgSteamLearn_InferenceMetadata_Request";
         }
       }
-      class ce extends o {
+      class ce extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            ce.prototype.data_element_path || i.aR(ce.M()),
-            o.initialize(this, e, 0, -1, void 0, null);
+            ce.prototype.inference_metadata_result || i.aR(ce.M()),
+            s.initialize(this, e, 0, -1, [3, 4, 5, 6, 8], null);
         }
         static M() {
           return (
@@ -14104,13 +14121,18 @@
               (ce.sm_m = {
                 proto: ce,
                 fields: {
-                  data_element_path: {
+                  inference_metadata_result: {
                     n: 1,
-                    br: i.FE.readString,
-                    bw: i.Xc.writeString,
+                    br: i.FE.readEnum,
+                    bw: i.Xc.writeEnum,
                   },
-                  mean: { n: 2, br: i.FE.readFloat, bw: i.Xc.writeFloat },
-                  std_dev: { n: 3, br: i.FE.readFloat, bw: i.Xc.writeFloat },
+                  row_range: { n: 2, c: ue },
+                  ranges: { n: 3, c: de, r: !0, q: !0 },
+                  std_devs: { n: 4, c: fe, r: !0, q: !0 },
+                  compact_tables: { n: 5, c: me, r: !0, q: !0 },
+                  kmeans: { n: 6, c: ge, r: !0, q: !0 },
+                  app_info: { n: 8, c: we, r: !0, q: !0 },
+                  snapshot_histogram: { n: 7, c: Be },
                 },
               }),
             ce.sm_m
@@ -14148,15 +14170,15 @@
           return ce.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_InferenceMetadata_Response_StdDev";
+          return "CMsgSteamLearn_InferenceMetadata_Response";
         }
       }
-      class ue extends o {
+      class ue extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            ue.prototype.name || i.aR(ue.M()),
-            o.initialize(this, e, 0, -1, [2, 3], null);
+            ue.prototype.min_row || i.aR(ue.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -14164,11 +14186,13 @@
               (ue.sm_m = {
                 proto: ue,
                 fields: {
-                  name: { n: 1, br: i.FE.readString, bw: i.Xc.writeString },
-                  map_values: { n: 2, c: fe, r: !0, q: !0 },
-                  map_mappings: { n: 3, c: me, r: !0, q: !0 },
-                  total_count: {
-                    n: 4,
+                  min_row: {
+                    n: 1,
+                    br: i.FE.readUint64String,
+                    bw: i.Xc.writeUint64String,
+                  },
+                  max_row: {
+                    n: 2,
                     br: i.FE.readUint64String,
                     bw: i.Xc.writeUint64String,
                   },
@@ -14209,15 +14233,15 @@
           return ue.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_InferenceMetadata_Response_CompactTable";
+          return "CMsgSteamLearn_InferenceMetadata_Response_RowRange";
         }
       }
-      class de extends o {
+      class de extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            de.prototype.value || i.aR(de.M()),
-            o.initialize(this, e, 0, -1, void 0, null);
+            de.prototype.data_element_path || i.aR(de.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -14225,13 +14249,13 @@
               (de.sm_m = {
                 proto: de,
                 fields: {
-                  value: { n: 1, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
-                  mapping: { n: 2, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
-                  count: {
-                    n: 3,
-                    br: i.FE.readUint64String,
-                    bw: i.Xc.writeUint64String,
+                  data_element_path: {
+                    n: 1,
+                    br: i.FE.readString,
+                    bw: i.Xc.writeString,
                   },
+                  min_value: { n: 2, br: i.FE.readFloat, bw: i.Xc.writeFloat },
+                  max_value: { n: 3, br: i.FE.readFloat, bw: i.Xc.writeFloat },
                 },
               }),
             de.sm_m
@@ -14269,15 +14293,15 @@
           return de.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_InferenceMetadata_Response_CompactTable_Entry";
+          return "CMsgSteamLearn_InferenceMetadata_Response_Range";
         }
       }
-      class fe extends o {
+      class fe extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            fe.prototype.key || i.aR(fe.M()),
-            o.initialize(this, e, 0, -1, void 0, null);
+            fe.prototype.data_element_path || i.aR(fe.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -14285,8 +14309,13 @@
               (fe.sm_m = {
                 proto: fe,
                 fields: {
-                  key: { n: 1, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
-                  value: { n: 2, c: de },
+                  data_element_path: {
+                    n: 1,
+                    br: i.FE.readString,
+                    bw: i.Xc.writeString,
+                  },
+                  mean: { n: 2, br: i.FE.readFloat, bw: i.Xc.writeFloat },
+                  std_dev: { n: 3, br: i.FE.readFloat, bw: i.Xc.writeFloat },
                 },
               }),
             fe.sm_m
@@ -14324,15 +14353,15 @@
           return fe.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_InferenceMetadata_Response_CompactTable_MapValuesEntry";
+          return "CMsgSteamLearn_InferenceMetadata_Response_StdDev";
         }
       }
-      class me extends o {
+      class me extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            me.prototype.key || i.aR(me.M()),
-            o.initialize(this, e, 0, -1, void 0, null);
+            me.prototype.name || i.aR(me.M()),
+            s.initialize(this, e, 0, -1, [2, 3], null);
         }
         static M() {
           return (
@@ -14340,8 +14369,14 @@
               (me.sm_m = {
                 proto: me,
                 fields: {
-                  key: { n: 1, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
-                  value: { n: 2, c: de },
+                  name: { n: 1, br: i.FE.readString, bw: i.Xc.writeString },
+                  map_values: { n: 2, c: pe, r: !0, q: !0 },
+                  map_mappings: { n: 3, c: ye, r: !0, q: !0 },
+                  total_count: {
+                    n: 4,
+                    br: i.FE.readUint64String,
+                    bw: i.Xc.writeUint64String,
+                  },
                 },
               }),
             me.sm_m
@@ -14379,15 +14414,15 @@
           return me.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_InferenceMetadata_Response_CompactTable_MapMappingsEntry";
+          return "CMsgSteamLearn_InferenceMetadata_Response_CompactTable";
         }
       }
-      class he extends o {
+      class he extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            he.prototype.name || i.aR(he.M()),
-            o.initialize(this, e, 0, -1, [2], null);
+            he.prototype.value || i.aR(he.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -14395,8 +14430,13 @@
               (he.sm_m = {
                 proto: he,
                 fields: {
-                  name: { n: 1, br: i.FE.readString, bw: i.Xc.writeString },
-                  clusters: { n: 2, c: pe, r: !0, q: !0 },
+                  value: { n: 1, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
+                  mapping: { n: 2, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
+                  count: {
+                    n: 3,
+                    br: i.FE.readUint64String,
+                    bw: i.Xc.writeUint64String,
+                  },
                 },
               }),
             he.sm_m
@@ -14434,15 +14474,15 @@
           return he.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_InferenceMetadata_Response_KMeans";
+          return "CMsgSteamLearn_InferenceMetadata_Response_CompactTable_Entry";
         }
       }
-      class pe extends o {
+      class pe extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            pe.prototype.x || i.aR(pe.M()),
-            o.initialize(this, e, 0, -1, void 0, null);
+            pe.prototype.key || i.aR(pe.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -14450,24 +14490,8 @@
               (pe.sm_m = {
                 proto: pe,
                 fields: {
-                  x: { n: 1, br: i.FE.readFloat, bw: i.Xc.writeFloat },
-                  y: { n: 2, br: i.FE.readFloat, bw: i.Xc.writeFloat },
-                  radius: { n: 3, br: i.FE.readFloat, bw: i.Xc.writeFloat },
-                  radius_75pct: {
-                    n: 4,
-                    br: i.FE.readFloat,
-                    bw: i.Xc.writeFloat,
-                  },
-                  radius_50pct: {
-                    n: 5,
-                    br: i.FE.readFloat,
-                    bw: i.Xc.writeFloat,
-                  },
-                  radius_25pct: {
-                    n: 6,
-                    br: i.FE.readFloat,
-                    bw: i.Xc.writeFloat,
-                  },
+                  key: { n: 1, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
+                  value: { n: 2, c: he },
                 },
               }),
             pe.sm_m
@@ -14505,15 +14529,15 @@
           return pe.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_InferenceMetadata_Response_KMeans_Cluster";
+          return "CMsgSteamLearn_InferenceMetadata_Response_CompactTable_MapValuesEntry";
         }
       }
-      class ye extends o {
+      class ye extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            ye.prototype.min_value || i.aR(ye.M()),
-            o.initialize(this, e, 0, -1, [4], null);
+            ye.prototype.key || i.aR(ye.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -14521,21 +14545,8 @@
               (ye.sm_m = {
                 proto: ye,
                 fields: {
-                  min_value: { n: 1, br: i.FE.readFloat, bw: i.Xc.writeFloat },
-                  max_value: { n: 2, br: i.FE.readFloat, bw: i.Xc.writeFloat },
-                  num_buckets: {
-                    n: 3,
-                    br: i.FE.readUint32,
-                    bw: i.Xc.writeUint32,
-                  },
-                  bucket_counts: {
-                    n: 4,
-                    r: !0,
-                    q: !0,
-                    br: i.FE.readUint32,
-                    pbr: i.FE.readPackedUint32,
-                    bw: i.Xc.writeRepeatedUint32,
-                  },
+                  key: { n: 1, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
+                  value: { n: 2, c: he },
                 },
               }),
             ye.sm_m
@@ -14573,15 +14584,15 @@
           return ye.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_InferenceMetadata_Response_SnapshotHistogram";
+          return "CMsgSteamLearn_InferenceMetadata_Response_CompactTable_MapMappingsEntry";
         }
       }
-      class ge extends o {
+      class ge extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            ge.prototype.country_allow || i.aR(ge.M()),
-            o.initialize(this, e, 0, -1, void 0, null);
+            ge.prototype.name || i.aR(ge.M()),
+            s.initialize(this, e, 0, -1, [2], null);
         }
         static M() {
           return (
@@ -14589,29 +14600,8 @@
               (ge.sm_m = {
                 proto: ge,
                 fields: {
-                  country_allow: {
-                    n: 1,
-                    br: i.FE.readString,
-                    bw: i.Xc.writeString,
-                  },
-                  country_deny: {
-                    n: 2,
-                    br: i.FE.readString,
-                    bw: i.Xc.writeString,
-                  },
-                  platform_win: { n: 3, br: i.FE.readBool, bw: i.Xc.writeBool },
-                  platform_mac: { n: 4, br: i.FE.readBool, bw: i.Xc.writeBool },
-                  platform_linux: {
-                    n: 5,
-                    br: i.FE.readBool,
-                    bw: i.Xc.writeBool,
-                  },
-                  adult_violence: {
-                    n: 6,
-                    br: i.FE.readBool,
-                    bw: i.Xc.writeBool,
-                  },
-                  adult_sex: { n: 7, br: i.FE.readBool, bw: i.Xc.writeBool },
+                  name: { n: 1, br: i.FE.readString, bw: i.Xc.writeString },
+                  clusters: { n: 2, c: be, r: !0, q: !0 },
                 },
               }),
             ge.sm_m
@@ -14649,15 +14639,15 @@
           return ge.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_InferenceMetadata_Response_AppInfo";
+          return "CMsgSteamLearn_InferenceMetadata_Response_KMeans";
         }
       }
-      class be extends o {
+      class be extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            be.prototype.key || i.aR(be.M()),
-            o.initialize(this, e, 0, -1, void 0, null);
+            be.prototype.x || i.aR(be.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -14665,8 +14655,24 @@
               (be.sm_m = {
                 proto: be,
                 fields: {
-                  key: { n: 1, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
-                  value: { n: 2, c: ge },
+                  x: { n: 1, br: i.FE.readFloat, bw: i.Xc.writeFloat },
+                  y: { n: 2, br: i.FE.readFloat, bw: i.Xc.writeFloat },
+                  radius: { n: 3, br: i.FE.readFloat, bw: i.Xc.writeFloat },
+                  radius_75pct: {
+                    n: 4,
+                    br: i.FE.readFloat,
+                    bw: i.Xc.writeFloat,
+                  },
+                  radius_50pct: {
+                    n: 5,
+                    br: i.FE.readFloat,
+                    bw: i.Xc.writeFloat,
+                  },
+                  radius_25pct: {
+                    n: 6,
+                    br: i.FE.readFloat,
+                    bw: i.Xc.writeFloat,
+                  },
                 },
               }),
             be.sm_m
@@ -14704,15 +14710,15 @@
           return be.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_InferenceMetadata_Response_AppInfoEntry";
+          return "CMsgSteamLearn_InferenceMetadata_Response_KMeans_Cluster";
         }
       }
-      class Be extends o {
+      class Be extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Be.prototype.cache_data_requests || i.aR(Be.M()),
-            o.initialize(this, e, 0, -1, [1, 2, 3], null);
+            Be.prototype.min_value || i.aR(Be.M()),
+            s.initialize(this, e, 0, -1, [4], null);
         }
         static M() {
           return (
@@ -14720,9 +14726,21 @@
               (Be.sm_m = {
                 proto: Be,
                 fields: {
-                  cache_data_requests: { n: 1, c: J, r: !0, q: !0 },
-                  snapshot_requests: { n: 2, c: te, r: !0, q: !0 },
-                  inference_requests: { n: 3, c: ne, r: !0, q: !0 },
+                  min_value: { n: 1, br: i.FE.readFloat, bw: i.Xc.writeFloat },
+                  max_value: { n: 2, br: i.FE.readFloat, bw: i.Xc.writeFloat },
+                  num_buckets: {
+                    n: 3,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
+                  },
+                  bucket_counts: {
+                    n: 4,
+                    r: !0,
+                    q: !0,
+                    br: i.FE.readUint32,
+                    pbr: i.FE.readPackedUint32,
+                    bw: i.Xc.writeRepeatedUint32,
+                  },
                 },
               }),
             Be.sm_m
@@ -14760,15 +14778,15 @@
           return Be.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_BatchOperation_Request";
+          return "CMsgSteamLearn_InferenceMetadata_Response_SnapshotHistogram";
         }
       }
-      class ve extends o {
+      class ve extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            ve.prototype.cache_data_responses || i.aR(ve.M()),
-            o.initialize(this, e, 0, -1, [1, 2, 3], null);
+            ve.prototype.country_allow || i.aR(ve.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -14776,9 +14794,29 @@
               (ve.sm_m = {
                 proto: ve,
                 fields: {
-                  cache_data_responses: { n: 1, c: ee, r: !0, q: !0 },
-                  snapshot_responses: { n: 2, c: re, r: !0, q: !0 },
-                  inference_responses: { n: 3, c: ie, r: !0, q: !0 },
+                  country_allow: {
+                    n: 1,
+                    br: i.FE.readString,
+                    bw: i.Xc.writeString,
+                  },
+                  country_deny: {
+                    n: 2,
+                    br: i.FE.readString,
+                    bw: i.Xc.writeString,
+                  },
+                  platform_win: { n: 3, br: i.FE.readBool, bw: i.Xc.writeBool },
+                  platform_mac: { n: 4, br: i.FE.readBool, bw: i.Xc.writeBool },
+                  platform_linux: {
+                    n: 5,
+                    br: i.FE.readBool,
+                    bw: i.Xc.writeBool,
+                  },
+                  adult_violence: {
+                    n: 6,
+                    br: i.FE.readBool,
+                    bw: i.Xc.writeBool,
+                  },
+                  adult_sex: { n: 7, br: i.FE.readBool, bw: i.Xc.writeBool },
                 },
               }),
             ve.sm_m
@@ -14816,15 +14854,15 @@
           return ve.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_BatchOperation_Response";
+          return "CMsgSteamLearn_InferenceMetadata_Response_AppInfo";
         }
       }
-      class we extends o {
+      class we extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            we.prototype.project_name || i.aR(we.M()),
-            o.initialize(this, e, 0, -1, void 0, null);
+            we.prototype.key || i.aR(we.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -14832,16 +14870,8 @@
               (we.sm_m = {
                 proto: we,
                 fields: {
-                  project_name: {
-                    n: 1,
-                    br: i.FE.readString,
-                    bw: i.Xc.writeString,
-                  },
-                  project_description: {
-                    n: 2,
-                    br: i.FE.readString,
-                    bw: i.Xc.writeString,
-                  },
+                  key: { n: 1, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
+                  value: { n: 2, c: ve },
                 },
               }),
             we.sm_m
@@ -14879,15 +14909,15 @@
           return we.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_CreateProject_Request";
+          return "CMsgSteamLearn_InferenceMetadata_Response_AppInfoEntry";
         }
       }
-      class _e extends o {
+      class _e extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            _e.prototype.result || i.aR(_e.M()),
-            o.initialize(this, e, 0, -1, void 0, null);
+            _e.prototype.cache_data_requests || i.aR(_e.M()),
+            s.initialize(this, e, 0, -1, [1, 2, 3], null);
         }
         static M() {
           return (
@@ -14895,8 +14925,9 @@
               (_e.sm_m = {
                 proto: _e,
                 fields: {
-                  result: { n: 1, br: i.FE.readEnum, bw: i.Xc.writeEnum },
-                  project: { n: 2, c: p },
+                  cache_data_requests: { n: 1, c: re, r: !0, q: !0 },
+                  snapshot_requests: { n: 2, c: ie, r: !0, q: !0 },
+                  inference_requests: { n: 3, c: se, r: !0, q: !0 },
                 },
               }),
             _e.sm_m
@@ -14934,15 +14965,15 @@
           return _e.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_CreateProject_Response";
+          return "CMsgSteamLearn_BatchOperation_Request";
         }
       }
-      class Me extends o {
+      class Me extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Me.prototype.appid || i.aR(Me.M()),
-            o.initialize(this, e, 0, -1, void 0, null);
+            Me.prototype.cache_data_responses || i.aR(Me.M()),
+            s.initialize(this, e, 0, -1, [1, 2, 3], null);
         }
         static M() {
           return (
@@ -14950,7 +14981,9 @@
               (Me.sm_m = {
                 proto: Me,
                 fields: {
-                  appid: { n: 1, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
+                  cache_data_responses: { n: 1, c: ne, r: !0, q: !0 },
+                  snapshot_responses: { n: 2, c: ae, r: !0, q: !0 },
+                  inference_responses: { n: 3, c: oe, r: !0, q: !0 },
                 },
               }),
             Me.sm_m
@@ -14988,22 +15021,33 @@
           return Me.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_ListProjects_Request";
+          return "CMsgSteamLearn_BatchOperation_Response";
         }
       }
-      class ze extends o {
+      class ze extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            ze.prototype.projects || i.aR(ze.M()),
-            o.initialize(this, e, 0, -1, [1], null);
+            ze.prototype.project_name || i.aR(ze.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
             ze.sm_m ||
               (ze.sm_m = {
                 proto: ze,
-                fields: { projects: { n: 1, c: p, r: !0, q: !0 } },
+                fields: {
+                  project_name: {
+                    n: 1,
+                    br: i.FE.readString,
+                    bw: i.Xc.writeString,
+                  },
+                  project_description: {
+                    n: 2,
+                    br: i.FE.readString,
+                    bw: i.Xc.writeString,
+                  },
+                },
               }),
             ze.sm_m
           );
@@ -15040,15 +15084,15 @@
           return ze.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_ListProjects_Response";
+          return "CMsgSteamLearn_CreateProject_Request";
         }
       }
-      class Se extends o {
+      class Se extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Se.prototype.project_id || i.aR(Se.M()),
-            o.initialize(this, e, 0, -1, void 0, null);
+            Se.prototype.result || i.aR(Se.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -15056,11 +15100,8 @@
               (Se.sm_m = {
                 proto: Se,
                 fields: {
-                  project_id: {
-                    n: 1,
-                    br: i.FE.readUint32,
-                    bw: i.Xc.writeUint32,
-                  },
+                  result: { n: 1, br: i.FE.readEnum, bw: i.Xc.writeEnum },
+                  project: { n: 2, c: p },
                 },
               }),
             Se.sm_m
@@ -15098,20 +15139,77 @@
           return Se.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_GetProject_Request";
+          return "CMsgSteamLearn_CreateProject_Response";
         }
       }
-      class Ee extends o {
+      class Fe extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Ee.prototype.project || i.aR(Ee.M()),
-            o.initialize(this, e, 0, -1, void 0, null);
+            Fe.prototype.appid || i.aR(Fe.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            Fe.sm_m ||
+              (Fe.sm_m = {
+                proto: Fe,
+                fields: {
+                  appid: { n: 1, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
+                },
+              }),
+            Fe.sm_m
+          );
+        }
+        static MBF() {
+          return Fe.sm_mbf || (Fe.sm_mbf = i.Bh(Fe.M())), Fe.sm_mbf;
+        }
+        toObject(e = !1) {
+          return Fe.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return i.TA(Fe.M(), e, t);
+        }
+        static fromObject(e) {
+          return i.aD(Fe.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new n.BinaryReader(e),
+            r = new Fe();
+          return Fe.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return i.F(Fe.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new n.BinaryWriter();
+          return Fe.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          i.l2(Fe.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new n.BinaryWriter();
+          return Fe.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CMsgSteamLearn_ListProjects_Request";
+        }
+      }
+      class Ee extends s {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            Ee.prototype.projects || i.aR(Ee.M()),
+            s.initialize(this, e, 0, -1, [1], null);
         }
         static M() {
           return (
             Ee.sm_m ||
-              (Ee.sm_m = { proto: Ee, fields: { project: { n: 1, c: p } } }),
+              (Ee.sm_m = {
+                proto: Ee,
+                fields: { projects: { n: 1, c: p, r: !0, q: !0 } },
+              }),
             Ee.sm_m
           );
         }
@@ -15147,57 +15245,28 @@
           return Ee.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_GetProject_Response";
+          return "CMsgSteamLearn_ListProjects_Response";
         }
       }
-      class Fe extends o {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(), o.initialize(this, e, 0, -1, void 0, null);
-        }
-        toObject(e = !1) {
-          return Fe.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return e ? { $jspbMessageInstance: t } : {};
-        }
-        static fromObject(e) {
-          return new Fe();
-        }
-        static deserializeBinary(e) {
-          let t = new n.BinaryReader(e),
-            r = new Fe();
-          return Fe.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return e;
-        }
-        serializeBinary() {
-          var e = new n.BinaryWriter();
-          return Fe.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {}
-        serializeBase64String() {
-          var e = new n.BinaryWriter();
-          return Fe.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CMsgSteamLearn_ListDataSources_Request";
-        }
-      }
-      class Oe extends o {
+      class Oe extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Oe.prototype.data_sources || i.aR(Oe.M()),
-            o.initialize(this, e, 0, -1, [1], null);
+            Oe.prototype.project_id || i.aR(Oe.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
             Oe.sm_m ||
               (Oe.sm_m = {
                 proto: Oe,
-                fields: { data_sources: { n: 1, c, r: !0, q: !0 } },
+                fields: {
+                  project_id: {
+                    n: 1,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
+                  },
+                },
               }),
             Oe.sm_m
           );
@@ -15234,29 +15303,20 @@
           return Oe.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_ListDataSources_Response";
+          return "CMsgSteamLearn_GetProject_Request";
         }
       }
-      class Re extends o {
+      class Re extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Re.prototype.data_source_id || i.aR(Re.M()),
-            o.initialize(this, e, 0, -1, void 0, null);
+            Re.prototype.project || i.aR(Re.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
             Re.sm_m ||
-              (Re.sm_m = {
-                proto: Re,
-                fields: {
-                  data_source_id: {
-                    n: 1,
-                    br: i.FE.readUint32,
-                    bw: i.Xc.writeUint32,
-                  },
-                },
-              }),
+              (Re.sm_m = { proto: Re, fields: { project: { n: 1, c: p } } }),
             Re.sm_m
           );
         }
@@ -15292,34 +15352,22 @@
           return Re.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_GetDataSource_Request";
+          return "CMsgSteamLearn_GetProject_Response";
         }
       }
-      class je extends o {
+      class je extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
-          super(),
-            je.prototype.data_source || i.aR(je.M()),
-            o.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            je.sm_m ||
-              (je.sm_m = { proto: je, fields: { data_source: { n: 1, c } } }),
-            je.sm_m
-          );
-        }
-        static MBF() {
-          return je.sm_mbf || (je.sm_mbf = i.Bh(je.M())), je.sm_mbf;
+          super(), s.initialize(this, e, 0, -1, void 0, null);
         }
         toObject(e = !1) {
           return je.toObject(e, this);
         }
         static toObject(e, t) {
-          return i.TA(je.M(), e, t);
+          return e ? { $jspbMessageInstance: t } : {};
         }
         static fromObject(e) {
-          return i.aD(je.M(), e);
+          return new je();
         }
         static deserializeBinary(e) {
           let t = new n.BinaryReader(e),
@@ -15327,43 +15375,34 @@
           return je.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return i.F(je.MBF(), e, t);
+          return e;
         }
         serializeBinary() {
           var e = new n.BinaryWriter();
           return je.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
-        static serializeBinaryToWriter(e, t) {
-          i.l2(je.M(), e, t);
-        }
+        static serializeBinaryToWriter(e, t) {}
         serializeBase64String() {
           var e = new n.BinaryWriter();
           return je.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_GetDataSource_Response";
+          return "CMsgSteamLearn_ListDataSources_Request";
         }
       }
-      class xe extends o {
+      class xe extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            xe.prototype.project || i.aR(xe.M()),
-            o.initialize(this, e, 0, -1, void 0, null);
+            xe.prototype.data_sources || i.aR(xe.M()),
+            s.initialize(this, e, 0, -1, [1], null);
         }
         static M() {
           return (
             xe.sm_m ||
               (xe.sm_m = {
                 proto: xe,
-                fields: {
-                  project: { n: 1, c: p },
-                  published_version: {
-                    n: 2,
-                    br: i.FE.readUint32,
-                    bw: i.Xc.writeUint32,
-                  },
-                },
+                fields: { data_sources: { n: 1, c, r: !0, q: !0 } },
               }),
             xe.sm_m
           );
@@ -15400,15 +15439,15 @@
           return xe.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_EditProject_Request";
+          return "CMsgSteamLearn_ListDataSources_Response";
         }
       }
-      class Ce extends o {
+      class Ce extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Ce.prototype.result || i.aR(Ce.M()),
-            o.initialize(this, e, 0, -1, void 0, null);
+            Ce.prototype.data_source_id || i.aR(Ce.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -15416,7 +15455,11 @@
               (Ce.sm_m = {
                 proto: Ce,
                 fields: {
-                  result: { n: 1, br: i.FE.readEnum, bw: i.Xc.writeEnum },
+                  data_source_id: {
+                    n: 1,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
+                  },
                 },
               }),
             Ce.sm_m
@@ -15454,29 +15497,20 @@
           return Ce.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_EditProject_Response";
+          return "CMsgSteamLearn_GetDataSource_Request";
         }
       }
-      class Te extends o {
+      class Te extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Te.prototype.project_id || i.aR(Te.M()),
-            o.initialize(this, e, 0, -1, void 0, null);
+            Te.prototype.data_source || i.aR(Te.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
             Te.sm_m ||
-              (Te.sm_m = {
-                proto: Te,
-                fields: {
-                  project_id: {
-                    n: 1,
-                    br: i.FE.readUint32,
-                    bw: i.Xc.writeUint32,
-                  },
-                },
-              }),
+              (Te.sm_m = { proto: Te, fields: { data_source: { n: 1, c } } }),
             Te.sm_m
           );
         }
@@ -15512,15 +15546,15 @@
           return Te.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_PublishProject_Request";
+          return "CMsgSteamLearn_GetDataSource_Response";
         }
       }
-      class We extends o {
+      class We extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            We.prototype.result || i.aR(We.M()),
-            o.initialize(this, e, 0, -1, void 0, null);
+            We.prototype.project || i.aR(We.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -15528,7 +15562,12 @@
               (We.sm_m = {
                 proto: We,
                 fields: {
-                  result: { n: 1, br: i.FE.readEnum, bw: i.Xc.writeEnum },
+                  project: { n: 1, c: p },
+                  published_version: {
+                    n: 2,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
+                  },
                 },
               }),
             We.sm_m
@@ -15566,15 +15605,15 @@
           return We.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_PublishProject_Response";
+          return "CMsgSteamLearn_EditProject_Request";
         }
       }
-      class Pe extends o {
+      class Pe extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Pe.prototype.register_data_source_access_token || i.aR(Pe.M()),
-            o.initialize(this, e, 0, -1, [2, 3, 4], null);
+            Pe.prototype.result || i.aR(Pe.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -15582,14 +15621,7 @@
               (Pe.sm_m = {
                 proto: Pe,
                 fields: {
-                  register_data_source_access_token: {
-                    n: 1,
-                    br: i.FE.readString,
-                    bw: i.Xc.writeString,
-                  },
-                  cache_data_access_tokens: { n: 2, c: Ie, r: !0, q: !0 },
-                  snapshot_project_access_tokens: { n: 3, c: Ne, r: !0, q: !0 },
-                  inference_access_tokens: { n: 4, c: Ae, r: !0, q: !0 },
+                  result: { n: 1, br: i.FE.readEnum, bw: i.Xc.writeEnum },
                 },
               }),
             Pe.sm_m
@@ -15627,15 +15659,15 @@
           return Pe.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearnAccessTokens";
+          return "CMsgSteamLearn_EditProject_Response";
         }
       }
-      class Ie extends o {
+      class Ie extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Ie.prototype.data_source_id || i.aR(Ie.M()),
-            o.initialize(this, e, 0, -1, void 0, null);
+            Ie.prototype.project_id || i.aR(Ie.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -15643,15 +15675,10 @@
               (Ie.sm_m = {
                 proto: Ie,
                 fields: {
-                  data_source_id: {
+                  project_id: {
                     n: 1,
                     br: i.FE.readUint32,
                     bw: i.Xc.writeUint32,
-                  },
-                  access_token: {
-                    n: 2,
-                    br: i.FE.readString,
-                    bw: i.Xc.writeString,
                   },
                 },
               }),
@@ -15690,15 +15717,15 @@
           return Ie.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearnAccessTokens_CacheDataAccessToken";
+          return "CMsgSteamLearn_PublishProject_Request";
         }
       }
-      class Ne extends o {
+      class Ne extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Ne.prototype.project_id || i.aR(Ne.M()),
-            o.initialize(this, e, 0, -1, void 0, null);
+            Ne.prototype.result || i.aR(Ne.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -15706,16 +15733,7 @@
               (Ne.sm_m = {
                 proto: Ne,
                 fields: {
-                  project_id: {
-                    n: 1,
-                    br: i.FE.readUint32,
-                    bw: i.Xc.writeUint32,
-                  },
-                  access_token: {
-                    n: 2,
-                    br: i.FE.readString,
-                    bw: i.Xc.writeString,
-                  },
+                  result: { n: 1, br: i.FE.readEnum, bw: i.Xc.writeEnum },
                 },
               }),
             Ne.sm_m
@@ -15753,15 +15771,15 @@
           return Ne.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearnAccessTokens_SnapshotProjectAccessToken";
+          return "CMsgSteamLearn_PublishProject_Response";
         }
       }
-      class Ae extends o {
+      class Ae extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Ae.prototype.project_id || i.aR(Ae.M()),
-            o.initialize(this, e, 0, -1, void 0, null);
+            Ae.prototype.register_data_source_access_token || i.aR(Ae.M()),
+            s.initialize(this, e, 0, -1, [2, 3, 4], null);
         }
         static M() {
           return (
@@ -15769,16 +15787,14 @@
               (Ae.sm_m = {
                 proto: Ae,
                 fields: {
-                  project_id: {
+                  register_data_source_access_token: {
                     n: 1,
-                    br: i.FE.readUint32,
-                    bw: i.Xc.writeUint32,
-                  },
-                  access_token: {
-                    n: 2,
                     br: i.FE.readString,
                     bw: i.Xc.writeString,
                   },
+                  cache_data_access_tokens: { n: 2, c: De, r: !0, q: !0 },
+                  snapshot_project_access_tokens: { n: 3, c: Ue, r: !0, q: !0 },
+                  inference_access_tokens: { n: 4, c: ke, r: !0, q: !0 },
                 },
               }),
             Ae.sm_m
@@ -15816,15 +15832,15 @@
           return Ae.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearnAccessTokens_InferenceAccessToken";
+          return "CMsgSteamLearnAccessTokens";
         }
       }
-      class De extends o {
+      class De extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            De.prototype.appid || i.aR(De.M()),
-            o.initialize(this, e, 0, -1, void 0, null);
+            De.prototype.data_source_id || i.aR(De.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -15832,7 +15848,16 @@
               (De.sm_m = {
                 proto: De,
                 fields: {
-                  appid: { n: 1, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
+                  data_source_id: {
+                    n: 1,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
+                  },
+                  access_token: {
+                    n: 2,
+                    br: i.FE.readString,
+                    bw: i.Xc.writeString,
+                  },
                 },
               }),
             De.sm_m
@@ -15870,15 +15895,15 @@
           return De.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_GetAccessTokens_Request";
+          return "CMsgSteamLearnAccessTokens_CacheDataAccessToken";
         }
       }
-      class Ue extends o {
+      class Ue extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Ue.prototype.result || i.aR(Ue.M()),
-            o.initialize(this, e, 0, -1, void 0, null);
+            Ue.prototype.project_id || i.aR(Ue.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -15886,8 +15911,16 @@
               (Ue.sm_m = {
                 proto: Ue,
                 fields: {
-                  result: { n: 1, br: i.FE.readEnum, bw: i.Xc.writeEnum },
-                  access_tokens: { n: 2, c: Pe },
+                  project_id: {
+                    n: 1,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
+                  },
+                  access_token: {
+                    n: 2,
+                    br: i.FE.readString,
+                    bw: i.Xc.writeString,
+                  },
                 },
               }),
             Ue.sm_m
@@ -15925,15 +15958,15 @@
           return Ue.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_GetAccessTokens_Response";
+          return "CMsgSteamLearnAccessTokens_SnapshotProjectAccessToken";
         }
       }
-      class ke extends o {
+      class ke extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            ke.prototype.project_config || i.aR(ke.M()),
-            o.initialize(this, e, 0, -1, void 0, null);
+            ke.prototype.project_id || i.aR(ke.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -15941,9 +15974,16 @@
               (ke.sm_m = {
                 proto: ke,
                 fields: {
-                  project_config: { n: 1, c: b },
-                  fetch: { n: 2, c: Xe },
-                  train: { n: 3, c: Le },
+                  project_id: {
+                    n: 1,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
+                  },
+                  access_token: {
+                    n: 2,
+                    br: i.FE.readString,
+                    bw: i.Xc.writeString,
+                  },
                 },
               }),
             ke.sm_m
@@ -15981,15 +16021,15 @@
           return ke.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_Train_Request";
+          return "CMsgSteamLearnAccessTokens_InferenceAccessToken";
         }
       }
-      class Xe extends o {
+      class Xe extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Xe.prototype.fetch_id || i.aR(Xe.M()),
-            o.initialize(this, e, 0, -1, void 0, null);
+            Xe.prototype.appid || i.aR(Xe.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -15997,12 +16037,7 @@
               (Xe.sm_m = {
                 proto: Xe,
                 fields: {
-                  fetch_id: { n: 1, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
-                  request_cancel: {
-                    n: 2,
-                    br: i.FE.readBool,
-                    bw: i.Xc.writeBool,
-                  },
+                  appid: { n: 1, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
                 },
               }),
             Xe.sm_m
@@ -16040,15 +16075,15 @@
           return Xe.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_Train_Request_Fetch";
+          return "CMsgSteamLearn_GetAccessTokens_Request";
         }
       }
-      class Le extends o {
+      class Le extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Le.prototype.train_id || i.aR(Le.M()),
-            o.initialize(this, e, 0, -1, void 0, null);
+            Le.prototype.result || i.aR(Le.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -16056,17 +16091,8 @@
               (Le.sm_m = {
                 proto: Le,
                 fields: {
-                  train_id: { n: 1, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
-                  request_cancel: {
-                    n: 2,
-                    br: i.FE.readBool,
-                    bw: i.Xc.writeBool,
-                  },
-                  scheduled_train: {
-                    n: 3,
-                    br: i.FE.readBool,
-                    bw: i.Xc.writeBool,
-                  },
+                  result: { n: 1, br: i.FE.readEnum, bw: i.Xc.writeEnum },
+                  access_tokens: { n: 2, c: Ae },
                 },
               }),
             Le.sm_m
@@ -16104,15 +16130,15 @@
           return Le.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_Train_Request_Train";
+          return "CMsgSteamLearn_GetAccessTokens_Response";
         }
       }
-      class qe extends o {
+      class qe extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            qe.prototype.result || i.aR(qe.M()),
-            o.initialize(this, e, 0, -1, void 0, null);
+            qe.prototype.project_config || i.aR(qe.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -16120,7 +16146,9 @@
               (qe.sm_m = {
                 proto: qe,
                 fields: {
-                  result: { n: 1, br: i.FE.readEnum, bw: i.Xc.writeEnum },
+                  project_config: { n: 1, c: b },
+                  fetch: { n: 2, c: Ze },
+                  train: { n: 3, c: $e },
                 },
               }),
             qe.sm_m
@@ -16158,15 +16186,15 @@
           return qe.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_Train_Response";
+          return "CMsgSteamLearn_Train_Request";
         }
       }
-      class Ze extends o {
+      class Ze extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Ze.prototype.project_id || i.aR(Ze.M()),
-            o.initialize(this, e, 0, -1, void 0, null);
+            Ze.prototype.fetch_id || i.aR(Ze.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -16174,15 +16202,11 @@
               (Ze.sm_m = {
                 proto: Ze,
                 fields: {
-                  project_id: {
-                    n: 1,
-                    br: i.FE.readUint32,
-                    bw: i.Xc.writeUint32,
-                  },
-                  published_version: {
+                  fetch_id: { n: 1, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
+                  request_cancel: {
                     n: 2,
-                    br: i.FE.readUint32,
-                    bw: i.Xc.writeUint32,
+                    br: i.FE.readBool,
+                    bw: i.Xc.writeBool,
                   },
                 },
               }),
@@ -16221,15 +16245,15 @@
           return Ze.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_GetFetchStatusVersions_Request";
+          return "CMsgSteamLearn_Train_Request_Fetch";
         }
       }
-      class $e extends o {
+      class $e extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            $e.prototype.versions || i.aR($e.M()),
-            o.initialize(this, e, 0, -1, [1], null);
+            $e.prototype.train_id || i.aR($e.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -16237,13 +16261,16 @@
               ($e.sm_m = {
                 proto: $e,
                 fields: {
-                  versions: {
-                    n: 1,
-                    r: !0,
-                    q: !0,
-                    br: i.FE.readUint32,
-                    pbr: i.FE.readPackedUint32,
-                    bw: i.Xc.writeRepeatedUint32,
+                  train_id: { n: 1, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
+                  request_cancel: {
+                    n: 2,
+                    br: i.FE.readBool,
+                    bw: i.Xc.writeBool,
+                  },
+                  scheduled_train: {
+                    n: 3,
+                    br: i.FE.readBool,
+                    bw: i.Xc.writeBool,
                   },
                 },
               }),
@@ -16282,15 +16309,15 @@
           return $e.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_GetFetchStatusVersions_Response";
+          return "CMsgSteamLearn_Train_Request_Train";
         }
       }
-      class Ve extends o {
+      class Ve extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Ve.prototype.project_id || i.aR(Ve.M()),
-            o.initialize(this, e, 0, -1, void 0, null);
+            Ve.prototype.result || i.aR(Ve.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -16298,16 +16325,7 @@
               (Ve.sm_m = {
                 proto: Ve,
                 fields: {
-                  project_id: {
-                    n: 1,
-                    br: i.FE.readUint32,
-                    bw: i.Xc.writeUint32,
-                  },
-                  published_version: {
-                    n: 2,
-                    br: i.FE.readUint32,
-                    bw: i.Xc.writeUint32,
-                  },
+                  result: { n: 1, br: i.FE.readEnum, bw: i.Xc.writeEnum },
                 },
               }),
             Ve.sm_m
@@ -16345,15 +16363,15 @@
           return Ve.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_GetTrainStatusVersions_Request";
+          return "CMsgSteamLearn_Train_Response";
         }
       }
-      class Ye extends o {
+      class Ye extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Ye.prototype.versions || i.aR(Ye.M()),
-            o.initialize(this, e, 0, -1, [1], null);
+            Ye.prototype.project_id || i.aR(Ye.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -16361,13 +16379,15 @@
               (Ye.sm_m = {
                 proto: Ye,
                 fields: {
-                  versions: {
+                  project_id: {
                     n: 1,
-                    r: !0,
-                    q: !0,
                     br: i.FE.readUint32,
-                    pbr: i.FE.readPackedUint32,
-                    bw: i.Xc.writeRepeatedUint32,
+                    bw: i.Xc.writeUint32,
+                  },
+                  published_version: {
+                    n: 2,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
                   },
                 },
               }),
@@ -16406,15 +16426,15 @@
           return Ye.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_GetTrainStatusVersions_Response";
+          return "CMsgSteamLearn_GetFetchStatusVersions_Request";
         }
       }
-      class He extends o {
+      class He extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            He.prototype.fetch_requests || i.aR(He.M()),
-            o.initialize(this, e, 0, -1, [1, 2], null);
+            He.prototype.versions || i.aR(He.M()),
+            s.initialize(this, e, 0, -1, [1], null);
         }
         static M() {
           return (
@@ -16422,8 +16442,14 @@
               (He.sm_m = {
                 proto: He,
                 fields: {
-                  fetch_requests: { n: 1, c: Ke, r: !0, q: !0 },
-                  train_requests: { n: 2, c: et, r: !0, q: !0 },
+                  versions: {
+                    n: 1,
+                    r: !0,
+                    q: !0,
+                    br: i.FE.readUint32,
+                    pbr: i.FE.readPackedUint32,
+                    bw: i.Xc.writeRepeatedUint32,
+                  },
                 },
               }),
             He.sm_m
@@ -16461,15 +16487,15 @@
           return He.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_GetBatchedStatus_Request";
+          return "CMsgSteamLearn_GetFetchStatusVersions_Response";
         }
       }
-      class Ge extends o {
+      class Ge extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Ge.prototype.result || i.aR(Ge.M()),
-            o.initialize(this, e, 0, -1, [2, 3], null);
+            Ge.prototype.project_id || i.aR(Ge.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -16477,9 +16503,16 @@
               (Ge.sm_m = {
                 proto: Ge,
                 fields: {
-                  result: { n: 1, br: i.FE.readEnum, bw: i.Xc.writeEnum },
-                  fetch_responses: { n: 2, c: Qe, r: !0, q: !0 },
-                  train_responses: { n: 3, c: tt, r: !0, q: !0 },
+                  project_id: {
+                    n: 1,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
+                  },
+                  published_version: {
+                    n: 2,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
+                  },
                 },
               }),
             Ge.sm_m
@@ -16517,15 +16550,15 @@
           return Ge.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_GetBatchedStatus_Response";
+          return "CMsgSteamLearn_GetTrainStatusVersions_Request";
         }
       }
-      class Ke extends o {
+      class Ke extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Ke.prototype.project_id || i.aR(Ke.M()),
-            o.initialize(this, e, 0, -1, void 0, null);
+            Ke.prototype.versions || i.aR(Ke.M()),
+            s.initialize(this, e, 0, -1, [1], null);
         }
         static M() {
           return (
@@ -16533,12 +16566,14 @@
               (Ke.sm_m = {
                 proto: Ke,
                 fields: {
-                  project_id: {
+                  versions: {
                     n: 1,
+                    r: !0,
+                    q: !0,
                     br: i.FE.readUint32,
-                    bw: i.Xc.writeUint32,
+                    pbr: i.FE.readPackedUint32,
+                    bw: i.Xc.writeRepeatedUint32,
                   },
-                  fetch_id: { n: 2, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
                 },
               }),
             Ke.sm_m
@@ -16576,15 +16611,15 @@
           return Ke.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_GetFetchStatus_Request";
+          return "CMsgSteamLearn_GetTrainStatusVersions_Response";
         }
       }
-      class Qe extends o {
+      class Qe extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Qe.prototype.result || i.aR(Qe.M()),
-            o.initialize(this, e, 0, -1, [4], null);
+            Qe.prototype.fetch_requests || i.aR(Qe.M()),
+            s.initialize(this, e, 0, -1, [1, 2], null);
         }
         static M() {
           return (
@@ -16592,41 +16627,8 @@
               (Qe.sm_m = {
                 proto: Qe,
                 fields: {
-                  result: { n: 1, br: i.FE.readEnum, bw: i.Xc.writeEnum },
-                  project_id: {
-                    n: 11,
-                    br: i.FE.readUint32,
-                    bw: i.Xc.writeUint32,
-                  },
-                  fetch_id: { n: 2, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
-                  status: { n: 3, br: i.FE.readEnum, bw: i.Xc.writeEnum },
-                  workers: { n: 4, c: Je, r: !0, q: !0 },
-                  total_rows_written: {
-                    n: 5,
-                    br: i.FE.readUint32,
-                    bw: i.Xc.writeUint32,
-                  },
-                  total_rows_processed: {
-                    n: 9,
-                    br: i.FE.readUint32,
-                    bw: i.Xc.writeUint32,
-                  },
-                  total_rows: {
-                    n: 6,
-                    br: i.FE.readUint32,
-                    bw: i.Xc.writeUint32,
-                  },
-                  start_time: {
-                    n: 7,
-                    br: i.FE.readUint32,
-                    bw: i.Xc.writeUint32,
-                  },
-                  end_time: { n: 8, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
-                  error_string: {
-                    n: 10,
-                    br: i.FE.readString,
-                    bw: i.Xc.writeString,
-                  },
+                  fetch_requests: { n: 1, c: et, r: !0, q: !0 },
+                  train_requests: { n: 2, c: nt, r: !0, q: !0 },
                 },
               }),
             Qe.sm_m
@@ -16664,15 +16666,15 @@
           return Qe.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_GetFetchStatus_Response";
+          return "CMsgSteamLearn_GetBatchedStatus_Request";
         }
       }
-      class Je extends o {
+      class Je extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Je.prototype.rows_written || i.aR(Je.M()),
-            o.initialize(this, e, 0, -1, void 0, null);
+            Je.prototype.result || i.aR(Je.M()),
+            s.initialize(this, e, 0, -1, [2, 3], null);
         }
         static M() {
           return (
@@ -16680,17 +16682,9 @@
               (Je.sm_m = {
                 proto: Je,
                 fields: {
-                  rows_written: {
-                    n: 1,
-                    br: i.FE.readUint32,
-                    bw: i.Xc.writeUint32,
-                  },
-                  rows_processed: {
-                    n: 3,
-                    br: i.FE.readUint32,
-                    bw: i.Xc.writeUint32,
-                  },
-                  complete: { n: 2, br: i.FE.readBool, bw: i.Xc.writeBool },
+                  result: { n: 1, br: i.FE.readEnum, bw: i.Xc.writeEnum },
+                  fetch_responses: { n: 2, c: tt, r: !0, q: !0 },
+                  train_responses: { n: 3, c: it, r: !0, q: !0 },
                 },
               }),
             Je.sm_m
@@ -16728,15 +16722,15 @@
           return Je.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_GetFetchStatus_Response_Worker";
+          return "CMsgSteamLearn_GetBatchedStatus_Response";
         }
       }
-      class et extends o {
+      class et extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             et.prototype.project_id || i.aR(et.M()),
-            o.initialize(this, e, 0, -1, void 0, null);
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -16749,7 +16743,7 @@
                     br: i.FE.readUint32,
                     bw: i.Xc.writeUint32,
                   },
-                  train_id: { n: 2, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
+                  fetch_id: { n: 2, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
                 },
               }),
             et.sm_m
@@ -16787,15 +16781,15 @@
           return et.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_GetTrainStatus_Request";
+          return "CMsgSteamLearn_GetFetchStatus_Request";
         }
       }
-      class tt extends o {
+      class tt extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             tt.prototype.result || i.aR(tt.M()),
-            o.initialize(this, e, 0, -1, [5, 10, 12], null);
+            s.initialize(this, e, 0, -1, [4], null);
         }
         static M() {
           return (
@@ -16805,61 +16799,39 @@
                 fields: {
                   result: { n: 1, br: i.FE.readEnum, bw: i.Xc.writeEnum },
                   project_id: {
-                    n: 18,
+                    n: 11,
                     br: i.FE.readUint32,
                     bw: i.Xc.writeUint32,
                   },
-                  train_id: { n: 2, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
-                  fetch_id: { n: 3, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
-                  status: { n: 4, br: i.FE.readEnum, bw: i.Xc.writeEnum },
-                  epochs: { n: 5, c: nt, r: !0, q: !0 },
-                  total_epochs: {
-                    n: 6,
+                  fetch_id: { n: 2, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
+                  status: { n: 3, br: i.FE.readEnum, bw: i.Xc.writeEnum },
+                  workers: { n: 4, c: rt, r: !0, q: !0 },
+                  total_rows_written: {
+                    n: 5,
                     br: i.FE.readUint32,
                     bw: i.Xc.writeUint32,
                   },
-                  train_batch_count: {
-                    n: 7,
-                    br: i.FE.readUint32,
-                    bw: i.Xc.writeUint32,
-                  },
-                  validate_batch_count: {
-                    n: 8,
-                    br: i.FE.readUint32,
-                    bw: i.Xc.writeUint32,
-                  },
-                  test_batch_count: {
+                  total_rows_processed: {
                     n: 9,
                     br: i.FE.readUint32,
                     bw: i.Xc.writeUint32,
                   },
-                  test_batches: { n: 10, c: rt, r: !0, q: !0 },
-                  test_loss: { n: 11, br: i.FE.readFloat, bw: i.Xc.writeFloat },
-                  test_accuracy: {
-                    n: 12,
-                    r: !0,
-                    q: !0,
-                    br: i.FE.readFloat,
-                    pbr: i.FE.readPackedFloat,
-                    bw: i.Xc.writeRepeatedFloat,
+                  total_rows: {
+                    n: 6,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
                   },
                   start_time: {
-                    n: 13,
+                    n: 7,
                     br: i.FE.readUint32,
                     bw: i.Xc.writeUint32,
                   },
-                  end_time: {
-                    n: 14,
-                    br: i.FE.readUint32,
-                    bw: i.Xc.writeUint32,
+                  end_time: { n: 8, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
+                  error_string: {
+                    n: 10,
+                    br: i.FE.readString,
+                    bw: i.Xc.writeString,
                   },
-                  scheduled_train: {
-                    n: 15,
-                    br: i.FE.readBool,
-                    bw: i.Xc.writeBool,
-                  },
-                  live: { n: 16, br: i.FE.readBool, bw: i.Xc.writeBool },
-                  active: { n: 17, br: i.FE.readBool, bw: i.Xc.writeBool },
                 },
               }),
             tt.sm_m
@@ -16897,15 +16869,15 @@
           return tt.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_GetTrainStatus_Response";
+          return "CMsgSteamLearn_GetFetchStatus_Response";
         }
       }
-      class rt extends o {
+      class rt extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            rt.prototype.loss || i.aR(rt.M()),
-            o.initialize(this, e, 0, -1, [2], null);
+            rt.prototype.rows_written || i.aR(rt.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -16913,15 +16885,17 @@
               (rt.sm_m = {
                 proto: rt,
                 fields: {
-                  loss: { n: 1, br: i.FE.readFloat, bw: i.Xc.writeFloat },
-                  accuracy: {
-                    n: 2,
-                    r: !0,
-                    q: !0,
-                    br: i.FE.readFloat,
-                    pbr: i.FE.readPackedFloat,
-                    bw: i.Xc.writeRepeatedFloat,
+                  rows_written: {
+                    n: 1,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
                   },
+                  rows_processed: {
+                    n: 3,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
+                  },
+                  complete: { n: 2, br: i.FE.readBool, bw: i.Xc.writeBool },
                 },
               }),
             rt.sm_m
@@ -16959,15 +16933,15 @@
           return rt.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_GetTrainStatus_Response_Batch";
+          return "CMsgSteamLearn_GetFetchStatus_Response_Worker";
         }
       }
-      class nt extends o {
+      class nt extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            nt.prototype.epoch_number || i.aR(nt.M()),
-            o.initialize(this, e, 0, -1, [3, 5, 6, 7], null);
+            nt.prototype.project_id || i.aR(nt.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -16975,45 +16949,12 @@
               (nt.sm_m = {
                 proto: nt,
                 fields: {
-                  epoch_number: {
+                  project_id: {
                     n: 1,
                     br: i.FE.readUint32,
                     bw: i.Xc.writeUint32,
                   },
-                  epoch_train_loss: {
-                    n: 2,
-                    br: i.FE.readFloat,
-                    bw: i.Xc.writeFloat,
-                  },
-                  epoch_train_accuracy: {
-                    n: 3,
-                    r: !0,
-                    q: !0,
-                    br: i.FE.readFloat,
-                    pbr: i.FE.readPackedFloat,
-                    bw: i.Xc.writeRepeatedFloat,
-                  },
-                  epoch_validate_loss: {
-                    n: 4,
-                    br: i.FE.readFloat,
-                    bw: i.Xc.writeFloat,
-                  },
-                  epoch_validate_accuracy: {
-                    n: 5,
-                    r: !0,
-                    q: !0,
-                    br: i.FE.readFloat,
-                    pbr: i.FE.readPackedFloat,
-                    bw: i.Xc.writeRepeatedFloat,
-                  },
-                  train_batches: { n: 6, c: rt, r: !0, q: !0 },
-                  validate_batches: { n: 7, c: rt, r: !0, q: !0 },
-                  start_time: {
-                    n: 8,
-                    br: i.FE.readUint32,
-                    bw: i.Xc.writeUint32,
-                  },
-                  end_time: { n: 9, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
+                  train_id: { n: 2, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
                 },
               }),
             nt.sm_m
@@ -17051,15 +16992,15 @@
           return nt.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_GetTrainStatus_Response_Epoch";
+          return "CMsgSteamLearn_GetTrainStatus_Request";
         }
       }
-      class it extends o {
+      class it extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            it.prototype.project_id || i.aR(it.M()),
-            o.initialize(this, e, 0, -1, void 0, null);
+            it.prototype.result || i.aR(it.M()),
+            s.initialize(this, e, 0, -1, [5, 10, 12], null);
         }
         static M() {
           return (
@@ -17067,23 +17008,63 @@
               (it.sm_m = {
                 proto: it,
                 fields: {
+                  result: { n: 1, br: i.FE.readEnum, bw: i.Xc.writeEnum },
                   project_id: {
-                    n: 1,
+                    n: 18,
                     br: i.FE.readUint32,
                     bw: i.Xc.writeUint32,
                   },
-                  published_version: {
-                    n: 2,
+                  train_id: { n: 2, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
+                  fetch_id: { n: 3, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
+                  status: { n: 4, br: i.FE.readEnum, bw: i.Xc.writeEnum },
+                  epochs: { n: 5, c: st, r: !0, q: !0 },
+                  total_epochs: {
+                    n: 6,
                     br: i.FE.readUint32,
                     bw: i.Xc.writeUint32,
                   },
-                  train_id: { n: 3, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
-                  from_scheduled: {
-                    n: 4,
+                  train_batch_count: {
+                    n: 7,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
+                  },
+                  validate_batch_count: {
+                    n: 8,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
+                  },
+                  test_batch_count: {
+                    n: 9,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
+                  },
+                  test_batches: { n: 10, c: at, r: !0, q: !0 },
+                  test_loss: { n: 11, br: i.FE.readFloat, bw: i.Xc.writeFloat },
+                  test_accuracy: {
+                    n: 12,
+                    r: !0,
+                    q: !0,
+                    br: i.FE.readFloat,
+                    pbr: i.FE.readPackedFloat,
+                    bw: i.Xc.writeRepeatedFloat,
+                  },
+                  start_time: {
+                    n: 13,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
+                  },
+                  end_time: {
+                    n: 14,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
+                  },
+                  scheduled_train: {
+                    n: 15,
                     br: i.FE.readBool,
                     bw: i.Xc.writeBool,
                   },
-                  deactivate: { n: 5, br: i.FE.readBool, bw: i.Xc.writeBool },
+                  live: { n: 16, br: i.FE.readBool, bw: i.Xc.writeBool },
+                  active: { n: 17, br: i.FE.readBool, bw: i.Xc.writeBool },
                 },
               }),
             it.sm_m
@@ -17121,15 +17102,15 @@
           return it.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_SetTrainLive_Request";
+          return "CMsgSteamLearn_GetTrainStatus_Response";
         }
       }
-      class at extends o {
+      class at extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            at.prototype.result || i.aR(at.M()),
-            o.initialize(this, e, 0, -1, void 0, null);
+            at.prototype.loss || i.aR(at.M()),
+            s.initialize(this, e, 0, -1, [2], null);
         }
         static M() {
           return (
@@ -17137,7 +17118,15 @@
               (at.sm_m = {
                 proto: at,
                 fields: {
-                  result: { n: 1, br: i.FE.readEnum, bw: i.Xc.writeEnum },
+                  loss: { n: 1, br: i.FE.readFloat, bw: i.Xc.writeFloat },
+                  accuracy: {
+                    n: 2,
+                    r: !0,
+                    q: !0,
+                    br: i.FE.readFloat,
+                    pbr: i.FE.readPackedFloat,
+                    bw: i.Xc.writeRepeatedFloat,
+                  },
                 },
               }),
             at.sm_m
@@ -17175,78 +17164,15 @@
           return at.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_SetTrainLive_Response";
+          return "CMsgSteamLearn_GetTrainStatus_Response_Batch";
         }
       }
-      class ot extends o {
+      class st extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            ot.prototype.float_value || i.aR(ot.M()),
-            o.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            ot.sm_m ||
-              (ot.sm_m = {
-                proto: ot,
-                fields: {
-                  float_value: {
-                    n: 1,
-                    br: i.FE.readFloat,
-                    bw: i.Xc.writeFloat,
-                  },
-                  string_value: {
-                    n: 2,
-                    br: i.FE.readString,
-                    bw: i.Xc.writeString,
-                  },
-                },
-              }),
-            ot.sm_m
-          );
-        }
-        static MBF() {
-          return ot.sm_mbf || (ot.sm_mbf = i.Bh(ot.M())), ot.sm_mbf;
-        }
-        toObject(e = !1) {
-          return ot.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return i.TA(ot.M(), e, t);
-        }
-        static fromObject(e) {
-          return i.aD(ot.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new n.BinaryReader(e),
-            r = new ot();
-          return ot.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return i.F(ot.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new n.BinaryWriter();
-          return ot.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          i.l2(ot.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new n.BinaryWriter();
-          return ot.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CMsgSteamLearnRawDataElement";
-        }
-      }
-      class st extends o {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            st.prototype.project_id || i.aR(st.M()),
-            o.initialize(this, e, 0, -1, [4, 7, 6], null);
+            st.prototype.epoch_number || i.aR(st.M()),
+            s.initialize(this, e, 0, -1, [3, 5, 6, 7], null);
         }
         static M() {
           return (
@@ -17254,30 +17180,45 @@
               (st.sm_m = {
                 proto: st,
                 fields: {
-                  project_id: {
+                  epoch_number: {
                     n: 1,
                     br: i.FE.readUint32,
                     bw: i.Xc.writeUint32,
                   },
-                  fetch_id: { n: 2, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
-                  train_id: { n: 3, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
-                  data: { n: 4, c: ot, r: !0, q: !0 },
-                  additional_data: {
-                    n: 7,
+                  epoch_train_loss: {
+                    n: 2,
+                    br: i.FE.readFloat,
+                    bw: i.Xc.writeFloat,
+                  },
+                  epoch_train_accuracy: {
+                    n: 3,
                     r: !0,
                     q: !0,
                     br: i.FE.readFloat,
                     pbr: i.FE.readPackedFloat,
                     bw: i.Xc.writeRepeatedFloat,
                   },
-                  keys: {
-                    n: 6,
+                  epoch_validate_loss: {
+                    n: 4,
+                    br: i.FE.readFloat,
+                    bw: i.Xc.writeFloat,
+                  },
+                  epoch_validate_accuracy: {
+                    n: 5,
                     r: !0,
                     q: !0,
-                    br: i.FE.readUint64String,
-                    pbr: i.FE.readPackedUint64String,
-                    bw: i.Xc.writeRepeatedUint64String,
+                    br: i.FE.readFloat,
+                    pbr: i.FE.readPackedFloat,
+                    bw: i.Xc.writeRepeatedFloat,
                   },
+                  train_batches: { n: 6, c: at, r: !0, q: !0 },
+                  validate_batches: { n: 7, c: at, r: !0, q: !0 },
+                  start_time: {
+                    n: 8,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
+                  },
+                  end_time: { n: 9, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
                 },
               }),
             st.sm_m
@@ -17315,22 +17256,93 @@
           return st.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_InferenceBackend_Request";
+          return "CMsgSteamLearn_GetTrainStatus_Response_Epoch";
         }
       }
-      class lt extends o {
+      class ot extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            lt.prototype.outputs || i.aR(lt.M()),
-            o.initialize(this, e, 0, -1, [1], null);
+            ot.prototype.project_id || i.aR(ot.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            ot.sm_m ||
+              (ot.sm_m = {
+                proto: ot,
+                fields: {
+                  project_id: {
+                    n: 1,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
+                  },
+                  fetch_id: { n: 2, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
+                  train_id: { n: 3, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
+                },
+              }),
+            ot.sm_m
+          );
+        }
+        static MBF() {
+          return ot.sm_mbf || (ot.sm_mbf = i.Bh(ot.M())), ot.sm_mbf;
+        }
+        toObject(e = !1) {
+          return ot.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return i.TA(ot.M(), e, t);
+        }
+        static fromObject(e) {
+          return i.aD(ot.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new n.BinaryReader(e),
+            r = new ot();
+          return ot.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return i.F(ot.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new n.BinaryWriter();
+          return ot.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          i.l2(ot.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new n.BinaryWriter();
+          return ot.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CMsgSteamLearn_GetTrainLogs_Request";
+        }
+      }
+      class lt extends s {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            lt.prototype.result || i.aR(lt.M()),
+            s.initialize(this, e, 0, -1, [3], null);
         }
         static M() {
           return (
             lt.sm_m ||
               (lt.sm_m = {
                 proto: lt,
-                fields: { outputs: { n: 1, c: mt, r: !0, q: !0 } },
+                fields: {
+                  result: { n: 1, br: i.FE.readEnum, bw: i.Xc.writeEnum },
+                  main_log: { n: 2, br: i.FE.readString, bw: i.Xc.writeString },
+                  fetch_worker_logs: {
+                    n: 3,
+                    r: !0,
+                    q: !0,
+                    br: i.FE.readString,
+                    bw: i.Xc.writeRepeatedString,
+                  },
+                  gpu_log: { n: 4, br: i.FE.readString, bw: i.Xc.writeString },
+                },
               }),
             lt.sm_m
           );
@@ -17367,15 +17379,15 @@
           return lt.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_InferenceBackend_Response";
+          return "CMsgSteamLearn_GetTrainLogs_Response";
         }
       }
-      class ct extends o {
+      class ct extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            ct.prototype.value || i.aR(ct.M()),
-            o.initialize(this, e, 0, -1, void 0, null);
+            ct.prototype.project_id || i.aR(ct.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -17383,7 +17395,23 @@
               (ct.sm_m = {
                 proto: ct,
                 fields: {
-                  value: { n: 1, br: i.FE.readFloat, bw: i.Xc.writeFloat },
+                  project_id: {
+                    n: 1,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
+                  },
+                  published_version: {
+                    n: 2,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
+                  },
+                  train_id: { n: 3, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
+                  from_scheduled: {
+                    n: 4,
+                    br: i.FE.readBool,
+                    bw: i.Xc.writeBool,
+                  },
+                  deactivate: { n: 5, br: i.FE.readBool, bw: i.Xc.writeBool },
                 },
               }),
             ct.sm_m
@@ -17421,15 +17449,15 @@
           return ct.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_InferenceBackend_Response_RegressionOutput";
+          return "CMsgSteamLearn_SetTrainLive_Request";
         }
       }
-      class ut extends o {
+      class ut extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            ut.prototype.value || i.aR(ut.M()),
-            o.initialize(this, e, 0, -1, void 0, null);
+            ut.prototype.result || i.aR(ut.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -17437,7 +17465,7 @@
               (ut.sm_m = {
                 proto: ut,
                 fields: {
-                  value: { n: 1, br: i.FE.readFloat, bw: i.Xc.writeFloat },
+                  result: { n: 1, br: i.FE.readEnum, bw: i.Xc.writeEnum },
                 },
               }),
             ut.sm_m
@@ -17475,15 +17503,15 @@
           return ut.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_InferenceBackend_Response_BinaryCrossEntropyOutput";
+          return "CMsgSteamLearn_SetTrainLive_Response";
         }
       }
-      class dt extends o {
+      class dt extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            dt.prototype.weight || i.aR(dt.M()),
-            o.initialize(this, e, 0, -1, [1, 2], null);
+            dt.prototype.float_value || i.aR(dt.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -17491,21 +17519,15 @@
               (dt.sm_m = {
                 proto: dt,
                 fields: {
-                  weight: {
+                  float_value: {
                     n: 1,
-                    r: !0,
-                    q: !0,
                     br: i.FE.readFloat,
-                    pbr: i.FE.readPackedFloat,
-                    bw: i.Xc.writeRepeatedFloat,
+                    bw: i.Xc.writeFloat,
                   },
-                  value: {
+                  string_value: {
                     n: 2,
-                    r: !0,
-                    q: !0,
-                    br: i.FE.readFloat,
-                    pbr: i.FE.readPackedFloat,
-                    bw: i.Xc.writeRepeatedFloat,
+                    br: i.FE.readString,
+                    bw: i.Xc.writeString,
                   },
                 },
               }),
@@ -17544,15 +17566,15 @@
           return dt.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_InferenceBackend_Response_MutliBinaryCrossEntropyOutput";
+          return "CMsgSteamLearnRawDataElement";
         }
       }
-      class ft extends o {
+      class ft extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            ft.prototype.weight || i.aR(ft.M()),
-            o.initialize(this, e, 0, -1, [1, 2], null);
+            ft.prototype.project_id || i.aR(ft.M()),
+            s.initialize(this, e, 0, -1, [4, 7, 6], null);
         }
         static M() {
           return (
@@ -17560,21 +17582,34 @@
               (ft.sm_m = {
                 proto: ft,
                 fields: {
-                  weight: {
+                  project_id: {
                     n: 1,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
+                  },
+                  fetch_id: { n: 2, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
+                  train_id: { n: 3, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
+                  data: { n: 4, c: dt, r: !0, q: !0 },
+                  additional_data: {
+                    n: 7,
                     r: !0,
                     q: !0,
                     br: i.FE.readFloat,
                     pbr: i.FE.readPackedFloat,
                     bw: i.Xc.writeRepeatedFloat,
                   },
-                  value: {
-                    n: 2,
+                  keys: {
+                    n: 6,
                     r: !0,
                     q: !0,
-                    br: i.FE.readFloat,
-                    pbr: i.FE.readPackedFloat,
-                    bw: i.Xc.writeRepeatedFloat,
+                    br: i.FE.readUint64String,
+                    pbr: i.FE.readPackedUint64String,
+                    bw: i.Xc.writeRepeatedUint64String,
+                  },
+                  named_inference: {
+                    n: 8,
+                    br: i.FE.readString,
+                    bw: i.Xc.writeString,
                   },
                 },
               }),
@@ -17613,27 +17648,22 @@
           return ft.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_InferenceBackend_Response_CategoricalCrossEntropyOutput";
+          return "CMsgSteamLearn_InferenceBackend_Request";
         }
       }
-      class mt extends o {
+      class mt extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            mt.prototype.binary_crossentropy || i.aR(mt.M()),
-            o.initialize(this, e, 0, -1, void 0, null);
+            mt.prototype.outputs || i.aR(mt.M()),
+            s.initialize(this, e, 0, -1, [1], null);
         }
         static M() {
           return (
             mt.sm_m ||
               (mt.sm_m = {
                 proto: mt,
-                fields: {
-                  binary_crossentropy: { n: 1, c: ut },
-                  categorical_crossentropy: { n: 2, c: ft },
-                  multi_binary_crossentropy: { n: 3, c: dt },
-                  regression: { n: 4, c: ct },
-                },
+                fields: { outputs: { n: 1, c: bt, r: !0, q: !0 } },
               }),
             mt.sm_m
           );
@@ -17670,15 +17700,15 @@
           return mt.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_InferenceBackend_Response_Output";
+          return "CMsgSteamLearn_InferenceBackend_Response";
         }
       }
-      class ht extends o {
+      class ht extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            ht.prototype.project_id || i.aR(ht.M()),
-            o.initialize(this, e, 0, -1, void 0, null);
+            ht.prototype.value || i.aR(ht.M()),
+            s.initialize(this, e, 0, -1, [2], null);
         }
         static M() {
           return (
@@ -17686,13 +17716,14 @@
               (ht.sm_m = {
                 proto: ht,
                 fields: {
-                  project_id: {
-                    n: 1,
-                    br: i.FE.readUint32,
-                    bw: i.Xc.writeUint32,
+                  value: {
+                    n: 2,
+                    r: !0,
+                    q: !0,
+                    br: i.FE.readFloat,
+                    pbr: i.FE.readPackedFloat,
+                    bw: i.Xc.writeRepeatedFloat,
                   },
-                  fetch_id: { n: 2, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
-                  train_id: { n: 3, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
                 },
               }),
             ht.sm_m
@@ -17730,15 +17761,15 @@
           return ht.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_LogEvent_TrainStarted";
+          return "CMsgSteamLearn_InferenceBackend_Response_RegressionOutput";
         }
       }
-      class pt extends o {
+      class pt extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            pt.prototype.project_id || i.aR(pt.M()),
-            o.initialize(this, e, 0, -1, void 0, null);
+            pt.prototype.value || i.aR(pt.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -17746,15 +17777,7 @@
               (pt.sm_m = {
                 proto: pt,
                 fields: {
-                  project_id: {
-                    n: 1,
-                    br: i.FE.readUint32,
-                    bw: i.Xc.writeUint32,
-                  },
-                  fetch_id: { n: 2, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
-                  train_id: { n: 3, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
-                  loss: { n: 4, br: i.FE.readFloat, bw: i.Xc.writeFloat },
-                  accuracy: { n: 5, br: i.FE.readFloat, bw: i.Xc.writeFloat },
+                  value: { n: 1, br: i.FE.readFloat, bw: i.Xc.writeFloat },
                 },
               }),
             pt.sm_m
@@ -17792,15 +17815,15 @@
           return pt.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_LogEvent_TrainEnded";
+          return "CMsgSteamLearn_InferenceBackend_Response_BinaryCrossEntropyOutput";
         }
       }
-      class yt extends o {
+      class yt extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            yt.prototype.project_id || i.aR(yt.M()),
-            o.initialize(this, e, 0, -1, void 0, null);
+            yt.prototype.weight || i.aR(yt.M()),
+            s.initialize(this, e, 0, -1, [1, 2], null);
         }
         static M() {
           return (
@@ -17808,27 +17831,21 @@
               (yt.sm_m = {
                 proto: yt,
                 fields: {
-                  project_id: {
+                  weight: {
                     n: 1,
-                    br: i.FE.readUint32,
-                    bw: i.Xc.writeUint32,
-                  },
-                  fetch_id: { n: 2, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
-                  train_id: { n: 3, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
-                  manual_set_live: {
-                    n: 4,
-                    br: i.FE.readBool,
-                    bw: i.Xc.writeBool,
-                  },
-                  accuracy_difference: {
-                    n: 5,
+                    r: !0,
+                    q: !0,
                     br: i.FE.readFloat,
-                    bw: i.Xc.writeFloat,
+                    pbr: i.FE.readPackedFloat,
+                    bw: i.Xc.writeRepeatedFloat,
                   },
-                  accuracy_threshold: {
-                    n: 6,
+                  value: {
+                    n: 2,
+                    r: !0,
+                    q: !0,
                     br: i.FE.readFloat,
-                    bw: i.Xc.writeFloat,
+                    pbr: i.FE.readPackedFloat,
+                    bw: i.Xc.writeRepeatedFloat,
                   },
                 },
               }),
@@ -17867,15 +17884,15 @@
           return yt.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_LogEvent_TrainSetLive";
+          return "CMsgSteamLearn_InferenceBackend_Response_MutliBinaryCrossEntropyOutput";
         }
       }
-      class gt extends o {
+      class gt extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            gt.prototype.project_id || i.aR(gt.M()),
-            o.initialize(this, e, 0, -1, void 0, null);
+            gt.prototype.weight || i.aR(gt.M()),
+            s.initialize(this, e, 0, -1, [1, 2], null);
         }
         static M() {
           return (
@@ -17883,13 +17900,22 @@
               (gt.sm_m = {
                 proto: gt,
                 fields: {
-                  project_id: {
+                  weight: {
                     n: 1,
-                    br: i.FE.readUint32,
-                    bw: i.Xc.writeUint32,
+                    r: !0,
+                    q: !0,
+                    br: i.FE.readFloat,
+                    pbr: i.FE.readPackedFloat,
+                    bw: i.Xc.writeRepeatedFloat,
                   },
-                  fetch_id: { n: 2, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
-                  train_id: { n: 3, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
+                  value: {
+                    n: 2,
+                    r: !0,
+                    q: !0,
+                    br: i.FE.readFloat,
+                    pbr: i.FE.readPackedFloat,
+                    bw: i.Xc.writeRepeatedFloat,
+                  },
                 },
               }),
             gt.sm_m
@@ -17927,15 +17953,15 @@
           return gt.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_LogEvent_ScheduledTrain";
+          return "CMsgSteamLearn_InferenceBackend_Response_CategoricalCrossEntropyOutput";
         }
       }
-      class bt extends o {
+      class bt extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            bt.prototype.event_type || i.aR(bt.M()),
-            o.initialize(this, e, 0, -1, void 0, null);
+            bt.prototype.binary_crossentropy || i.aR(bt.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -17943,16 +17969,10 @@
               (bt.sm_m = {
                 proto: bt,
                 fields: {
-                  event_type: { n: 1, br: i.FE.readEnum, bw: i.Xc.writeEnum },
-                  timestamp: {
-                    n: 2,
-                    br: i.FE.readUint32,
-                    bw: i.Xc.writeUint32,
-                  },
-                  train_started: { n: 3, c: ht },
-                  train_ended: { n: 4, c: pt },
-                  train_set_live: { n: 5, c: yt },
-                  scheduled_train: { n: 6, c: gt },
+                  binary_crossentropy: { n: 1, c: pt },
+                  categorical_crossentropy: { n: 2, c: gt },
+                  multi_binary_crossentropy: { n: 3, c: yt },
+                  regression: { n: 4, c: ht },
                 },
               }),
             bt.sm_m
@@ -17990,15 +18010,15 @@
           return bt.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_LogEvent";
+          return "CMsgSteamLearn_InferenceBackend_Response_Output";
         }
       }
-      class Bt extends o {
+      class Bt extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Bt.prototype.start_timestamp || i.aR(Bt.M()),
-            o.initialize(this, e, 0, -1, void 0, null);
+            Bt.prototype.project_id || i.aR(Bt.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -18006,16 +18026,13 @@
               (Bt.sm_m = {
                 proto: Bt,
                 fields: {
-                  start_timestamp: {
+                  project_id: {
                     n: 1,
                     br: i.FE.readUint32,
                     bw: i.Xc.writeUint32,
                   },
-                  end_timestamp: {
-                    n: 2,
-                    br: i.FE.readUint32,
-                    bw: i.Xc.writeUint32,
-                  },
+                  fetch_id: { n: 2, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
+                  train_id: { n: 3, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
                 },
               }),
             Bt.sm_m
@@ -18053,15 +18070,15 @@
           return Bt.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_GetLogEvents_Request";
+          return "CMsgSteamLearn_LogEvent_TrainStarted";
         }
       }
-      class vt extends o {
+      class vt extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            vt.prototype.result || i.aR(vt.M()),
-            o.initialize(this, e, 0, -1, [2], null);
+            vt.prototype.project_id || i.aR(vt.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -18069,8 +18086,15 @@
               (vt.sm_m = {
                 proto: vt,
                 fields: {
-                  result: { n: 1, br: i.FE.readEnum, bw: i.Xc.writeEnum },
-                  event_list: { n: 2, c: bt, r: !0, q: !0 },
+                  project_id: {
+                    n: 1,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
+                  },
+                  fetch_id: { n: 2, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
+                  train_id: { n: 3, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
+                  loss: { n: 4, br: i.FE.readFloat, bw: i.Xc.writeFloat },
+                  accuracy: { n: 5, br: i.FE.readFloat, bw: i.Xc.writeFloat },
                 },
               }),
             vt.sm_m
@@ -18108,15 +18132,15 @@
           return vt.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_GetLogEvents_Response";
+          return "CMsgSteamLearn_LogEvent_TrainEnded";
         }
       }
-      class wt extends o {
+      class wt extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             wt.prototype.project_id || i.aR(wt.M()),
-            o.initialize(this, e, 0, -1, [5], null);
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -18129,25 +18153,22 @@
                     br: i.FE.readUint32,
                     bw: i.Xc.writeUint32,
                   },
-                  published_version: {
-                    n: 2,
-                    br: i.FE.readUint32,
-                    bw: i.Xc.writeUint32,
-                  },
+                  fetch_id: { n: 2, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
                   train_id: { n: 3, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
-                  fetch_id: { n: 6, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
-                  export_name: {
+                  manual_set_live: {
                     n: 4,
-                    br: i.FE.readString,
-                    bw: i.Xc.writeString,
+                    br: i.FE.readBool,
+                    bw: i.Xc.writeBool,
                   },
-                  numerical_values: {
+                  accuracy_difference: {
                     n: 5,
-                    r: !0,
-                    q: !0,
-                    br: i.FE.readUint32,
-                    pbr: i.FE.readPackedUint32,
-                    bw: i.Xc.writeRepeatedUint32,
+                    br: i.FE.readFloat,
+                    bw: i.Xc.writeFloat,
+                  },
+                  accuracy_threshold: {
+                    n: 6,
+                    br: i.FE.readFloat,
+                    bw: i.Xc.writeFloat,
                   },
                 },
               }),
@@ -18186,15 +18207,15 @@
           return wt.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_GetEmbeddingValues_Request";
+          return "CMsgSteamLearn_LogEvent_TrainSetLive";
         }
       }
-      class _t extends o {
+      class _t extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            _t.prototype.result || i.aR(_t.M()),
-            o.initialize(this, e, 0, -1, [2], null);
+            _t.prototype.project_id || i.aR(_t.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -18202,8 +18223,13 @@
               (_t.sm_m = {
                 proto: _t,
                 fields: {
-                  result: { n: 1, br: i.FE.readEnum, bw: i.Xc.writeEnum },
-                  embedding_data: { n: 2, c: Mt, r: !0, q: !0 },
+                  project_id: {
+                    n: 1,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
+                  },
+                  fetch_id: { n: 2, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
+                  train_id: { n: 3, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
                 },
               }),
             _t.sm_m
@@ -18241,15 +18267,15 @@
           return _t.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_GetEmbeddingValues_Response";
+          return "CMsgSteamLearn_LogEvent_ScheduledTrain";
         }
       }
-      class Mt extends o {
+      class Mt extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Mt.prototype.numerical_value || i.aR(Mt.M()),
-            o.initialize(this, e, 0, -1, [2], null);
+            Mt.prototype.event_type || i.aR(Mt.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -18257,19 +18283,16 @@
               (Mt.sm_m = {
                 proto: Mt,
                 fields: {
-                  numerical_value: {
-                    n: 1,
+                  event_type: { n: 1, br: i.FE.readEnum, bw: i.Xc.writeEnum },
+                  timestamp: {
+                    n: 2,
                     br: i.FE.readUint32,
                     bw: i.Xc.writeUint32,
                   },
-                  embedding_values: {
-                    n: 2,
-                    r: !0,
-                    q: !0,
-                    br: i.FE.readFloat,
-                    pbr: i.FE.readPackedFloat,
-                    bw: i.Xc.writeRepeatedFloat,
-                  },
+                  train_started: { n: 3, c: Bt },
+                  train_ended: { n: 4, c: vt },
+                  train_set_live: { n: 5, c: wt },
+                  scheduled_train: { n: 6, c: _t },
                 },
               }),
             Mt.sm_m
@@ -18307,15 +18330,15 @@
           return Mt.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_GetEmbeddingValues_Response_EmbeddingData";
+          return "CMsgSteamLearn_LogEvent";
         }
       }
-      class zt extends o {
+      class zt extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            zt.prototype.project_id || i.aR(zt.M()),
-            o.initialize(this, e, 0, -1, [6], null);
+            zt.prototype.start_timestamp || i.aR(zt.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -18323,36 +18346,16 @@
               (zt.sm_m = {
                 proto: zt,
                 fields: {
-                  project_id: {
+                  start_timestamp: {
                     n: 1,
                     br: i.FE.readUint32,
                     bw: i.Xc.writeUint32,
                   },
-                  published_version: {
+                  end_timestamp: {
                     n: 2,
                     br: i.FE.readUint32,
                     bw: i.Xc.writeUint32,
                   },
-                  train_id: { n: 3, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
-                  export_name: {
-                    n: 4,
-                    br: i.FE.readString,
-                    bw: i.Xc.writeString,
-                  },
-                  result_count: {
-                    n: 5,
-                    br: i.FE.readUint32,
-                    bw: i.Xc.writeUint32,
-                  },
-                  values: {
-                    n: 6,
-                    r: !0,
-                    q: !0,
-                    br: i.FE.readFloat,
-                    pbr: i.FE.readPackedFloat,
-                    bw: i.Xc.writeRepeatedFloat,
-                  },
-                  fetch_id: { n: 7, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
                 },
               }),
             zt.sm_m
@@ -18390,15 +18393,15 @@
           return zt.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_GetNearestEmbedding_Request";
+          return "CMsgSteamLearn_GetLogEvents_Request";
         }
       }
-      class St extends o {
+      class St extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             St.prototype.result || i.aR(St.M()),
-            o.initialize(this, e, 0, -1, [2], null);
+            s.initialize(this, e, 0, -1, [2], null);
         }
         static M() {
           return (
@@ -18407,7 +18410,7 @@
                 proto: St,
                 fields: {
                   result: { n: 1, br: i.FE.readEnum, bw: i.Xc.writeEnum },
-                  near_embeddings: { n: 2, c: Et, r: !0, q: !0 },
+                  event_list: { n: 2, c: Mt, r: !0, q: !0 },
                 },
               }),
             St.sm_m
@@ -18445,15 +18448,93 @@
           return St.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_GetNearestEmbedding_Response";
+          return "CMsgSteamLearn_GetLogEvents_Response";
         }
       }
-      class Et extends o {
+      class Ft extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Et.prototype.value || i.aR(Et.M()),
-            o.initialize(this, e, 0, -1, [3], null);
+            Ft.prototype.project_id || i.aR(Ft.M()),
+            s.initialize(this, e, 0, -1, [5], null);
+        }
+        static M() {
+          return (
+            Ft.sm_m ||
+              (Ft.sm_m = {
+                proto: Ft,
+                fields: {
+                  project_id: {
+                    n: 1,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
+                  },
+                  published_version: {
+                    n: 2,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
+                  },
+                  train_id: { n: 3, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
+                  fetch_id: { n: 6, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
+                  export_name: {
+                    n: 4,
+                    br: i.FE.readString,
+                    bw: i.Xc.writeString,
+                  },
+                  numerical_values: {
+                    n: 5,
+                    r: !0,
+                    q: !0,
+                    br: i.FE.readUint32,
+                    pbr: i.FE.readPackedUint32,
+                    bw: i.Xc.writeRepeatedUint32,
+                  },
+                },
+              }),
+            Ft.sm_m
+          );
+        }
+        static MBF() {
+          return Ft.sm_mbf || (Ft.sm_mbf = i.Bh(Ft.M())), Ft.sm_mbf;
+        }
+        toObject(e = !1) {
+          return Ft.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return i.TA(Ft.M(), e, t);
+        }
+        static fromObject(e) {
+          return i.aD(Ft.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new n.BinaryReader(e),
+            r = new Ft();
+          return Ft.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return i.F(Ft.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new n.BinaryWriter();
+          return Ft.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          i.l2(Ft.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new n.BinaryWriter();
+          return Ft.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CMsgSteamLearn_GetEmbeddingValues_Request";
+        }
+      }
+      class Et extends s {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            Et.prototype.result || i.aR(Et.M()),
+            s.initialize(this, e, 0, -1, [2], null);
         }
         static M() {
           return (
@@ -18461,16 +18542,8 @@
               (Et.sm_m = {
                 proto: Et,
                 fields: {
-                  value: { n: 1, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
-                  distance: { n: 2, br: i.FE.readFloat, bw: i.Xc.writeFloat },
-                  embedding_values: {
-                    n: 3,
-                    r: !0,
-                    q: !0,
-                    br: i.FE.readFloat,
-                    pbr: i.FE.readPackedFloat,
-                    bw: i.Xc.writeRepeatedFloat,
-                  },
+                  result: { n: 1, br: i.FE.readEnum, bw: i.Xc.writeEnum },
+                  embedding_data: { n: 2, c: Ot, r: !0, q: !0 },
                 },
               }),
             Et.sm_m
@@ -18508,31 +18581,298 @@
           return Et.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
+          return "CMsgSteamLearn_GetEmbeddingValues_Response";
+        }
+      }
+      class Ot extends s {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            Ot.prototype.numerical_value || i.aR(Ot.M()),
+            s.initialize(this, e, 0, -1, [2], null);
+        }
+        static M() {
+          return (
+            Ot.sm_m ||
+              (Ot.sm_m = {
+                proto: Ot,
+                fields: {
+                  numerical_value: {
+                    n: 1,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
+                  },
+                  embedding_values: {
+                    n: 2,
+                    r: !0,
+                    q: !0,
+                    br: i.FE.readFloat,
+                    pbr: i.FE.readPackedFloat,
+                    bw: i.Xc.writeRepeatedFloat,
+                  },
+                },
+              }),
+            Ot.sm_m
+          );
+        }
+        static MBF() {
+          return Ot.sm_mbf || (Ot.sm_mbf = i.Bh(Ot.M())), Ot.sm_mbf;
+        }
+        toObject(e = !1) {
+          return Ot.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return i.TA(Ot.M(), e, t);
+        }
+        static fromObject(e) {
+          return i.aD(Ot.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new n.BinaryReader(e),
+            r = new Ot();
+          return Ot.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return i.F(Ot.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new n.BinaryWriter();
+          return Ot.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          i.l2(Ot.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new n.BinaryWriter();
+          return Ot.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CMsgSteamLearn_GetEmbeddingValues_Response_EmbeddingData";
+        }
+      }
+      class Rt extends s {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            Rt.prototype.project_id || i.aR(Rt.M()),
+            s.initialize(this, e, 0, -1, [6], null);
+        }
+        static M() {
+          return (
+            Rt.sm_m ||
+              (Rt.sm_m = {
+                proto: Rt,
+                fields: {
+                  project_id: {
+                    n: 1,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
+                  },
+                  published_version: {
+                    n: 2,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
+                  },
+                  train_id: { n: 3, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
+                  export_name: {
+                    n: 4,
+                    br: i.FE.readString,
+                    bw: i.Xc.writeString,
+                  },
+                  result_count: {
+                    n: 5,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
+                  },
+                  values: {
+                    n: 6,
+                    r: !0,
+                    q: !0,
+                    br: i.FE.readFloat,
+                    pbr: i.FE.readPackedFloat,
+                    bw: i.Xc.writeRepeatedFloat,
+                  },
+                  fetch_id: { n: 7, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
+                },
+              }),
+            Rt.sm_m
+          );
+        }
+        static MBF() {
+          return Rt.sm_mbf || (Rt.sm_mbf = i.Bh(Rt.M())), Rt.sm_mbf;
+        }
+        toObject(e = !1) {
+          return Rt.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return i.TA(Rt.M(), e, t);
+        }
+        static fromObject(e) {
+          return i.aD(Rt.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new n.BinaryReader(e),
+            r = new Rt();
+          return Rt.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return i.F(Rt.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new n.BinaryWriter();
+          return Rt.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          i.l2(Rt.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new n.BinaryWriter();
+          return Rt.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CMsgSteamLearn_GetNearestEmbedding_Request";
+        }
+      }
+      class jt extends s {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            jt.prototype.result || i.aR(jt.M()),
+            s.initialize(this, e, 0, -1, [2], null);
+        }
+        static M() {
+          return (
+            jt.sm_m ||
+              (jt.sm_m = {
+                proto: jt,
+                fields: {
+                  result: { n: 1, br: i.FE.readEnum, bw: i.Xc.writeEnum },
+                  near_embeddings: { n: 2, c: xt, r: !0, q: !0 },
+                },
+              }),
+            jt.sm_m
+          );
+        }
+        static MBF() {
+          return jt.sm_mbf || (jt.sm_mbf = i.Bh(jt.M())), jt.sm_mbf;
+        }
+        toObject(e = !1) {
+          return jt.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return i.TA(jt.M(), e, t);
+        }
+        static fromObject(e) {
+          return i.aD(jt.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new n.BinaryReader(e),
+            r = new jt();
+          return jt.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return i.F(jt.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new n.BinaryWriter();
+          return jt.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          i.l2(jt.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new n.BinaryWriter();
+          return jt.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CMsgSteamLearn_GetNearestEmbedding_Response";
+        }
+      }
+      class xt extends s {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            xt.prototype.value || i.aR(xt.M()),
+            s.initialize(this, e, 0, -1, [3], null);
+        }
+        static M() {
+          return (
+            xt.sm_m ||
+              (xt.sm_m = {
+                proto: xt,
+                fields: {
+                  value: { n: 1, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
+                  distance: { n: 2, br: i.FE.readFloat, bw: i.Xc.writeFloat },
+                  embedding_values: {
+                    n: 3,
+                    r: !0,
+                    q: !0,
+                    br: i.FE.readFloat,
+                    pbr: i.FE.readPackedFloat,
+                    bw: i.Xc.writeRepeatedFloat,
+                  },
+                },
+              }),
+            xt.sm_m
+          );
+        }
+        static MBF() {
+          return xt.sm_mbf || (xt.sm_mbf = i.Bh(xt.M())), xt.sm_mbf;
+        }
+        toObject(e = !1) {
+          return xt.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return i.TA(xt.M(), e, t);
+        }
+        static fromObject(e) {
+          return i.aD(xt.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new n.BinaryReader(e),
+            r = new xt();
+          return xt.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return i.F(xt.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new n.BinaryWriter();
+          return xt.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          i.l2(xt.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new n.BinaryWriter();
+          return xt.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
           return "CMsgSteamLearn_GetNearestEmbedding_Response_NearEmbedding";
         }
       }
-      var Ft;
+      var Ct;
       !(function (e) {
         (e.CreateProject = function (e, t) {
-          return e.SendMsg("SteamLearn.CreateProject#1", (0, a.MD)(we, t), _e, {
+          return e.SendMsg("SteamLearn.CreateProject#1", (0, a.MD)(ze, t), Se, {
             ePrivilege: 1,
           });
         }),
           (e.EditProject = function (e, t) {
-            return e.SendMsg("SteamLearn.EditProject#1", (0, a.MD)(xe, t), Ce, {
+            return e.SendMsg("SteamLearn.EditProject#1", (0, a.MD)(We, t), Pe, {
               ePrivilege: 1,
             });
           }),
           (e.ListProjects = function (e, t) {
             return e.SendMsg(
               "SteamLearn.ListProjects#1",
-              (0, a.MD)(Me, t),
-              ze,
+              (0, a.MD)(Fe, t),
+              Ee,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
           (e.GetProject = function (e, t) {
-            return e.SendMsg("SteamLearn.GetProject#1", (0, a.MD)(Se, t), Ee, {
+            return e.SendMsg("SteamLearn.GetProject#1", (0, a.MD)(Oe, t), Re, {
               bConstMethod: !0,
               ePrivilege: 1,
             });
@@ -18540,37 +18880,37 @@
           (e.PublishProject = function (e, t) {
             return e.SendMsg(
               "SteamLearn.PublishProject#1",
-              (0, a.MD)(Te, t),
-              We,
+              (0, a.MD)(Ie, t),
+              Ne,
               { ePrivilege: 1 },
             );
           }),
           (e.RegisterDataSource = function (e, t) {
             return e.SendMsg(
               "SteamLearn.RegisterDataSource#1",
-              (0, a.MD)(K, t),
-              Q,
+              (0, a.MD)(ee, t),
+              te,
               { ePrivilege: 0, eWebAPIKeyRequirement: 1 },
             );
           }),
           (e.ListDataSources = function (e, t) {
             return e.SendMsg(
               "SteamLearn.ListDataSources#1",
-              (0, a.MD)(Fe, t),
-              Oe,
+              (0, a.MD)(je, t),
+              xe,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
           (e.GetDataSource = function (e, t) {
             return e.SendMsg(
               "SteamLearn.GetDataSource#1",
-              (0, a.MD)(Re, t),
-              je,
+              (0, a.MD)(Ce, t),
+              Te,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
           (e.CacheData = function (e, t) {
-            return e.SendMsg("SteamLearn.CacheData#1", (0, a.MD)(J, t), ee, {
+            return e.SendMsg("SteamLearn.CacheData#1", (0, a.MD)(re, t), ne, {
               ePrivilege: 0,
               eWebAPIKeyRequirement: 1,
             });
@@ -18578,13 +18918,13 @@
           (e.SnapshotProject = function (e, t) {
             return e.SendMsg(
               "SteamLearn.SnapshotProject#1",
-              (0, a.MD)(te, t),
-              re,
+              (0, a.MD)(ie, t),
+              ae,
               { ePrivilege: 0, eWebAPIKeyRequirement: 1 },
             );
           }),
           (e.Inference = function (e, t) {
-            return e.SendMsg("SteamLearn.Inference#1", (0, a.MD)(ne, t), ie, {
+            return e.SendMsg("SteamLearn.Inference#1", (0, a.MD)(se, t), oe, {
               ePrivilege: 0,
               eWebAPIKeyRequirement: 1,
             });
@@ -18592,113 +18932,121 @@
           (e.InferenceMetadata = function (e, t) {
             return e.SendMsg(
               "SteamLearn.InferenceMetadata#1",
-              (0, a.MD)(ae, t),
-              oe,
+              (0, a.MD)(le, t),
+              ce,
               { ePrivilege: 0, eWebAPIKeyRequirement: 1 },
             );
           }),
           (e.InferenceBackend = function (e, t) {
             return e.SendMsg(
               "SteamLearn.InferenceBackend#1",
-              (0, a.MD)(st, t),
-              lt,
+              (0, a.MD)(ft, t),
+              mt,
               { ePrivilege: 1 },
             );
           }),
           (e.BatchOperation = function (e, t) {
             return e.SendMsg(
               "SteamLearn.BatchOperation#1",
-              (0, a.MD)(Be, t),
-              ve,
+              (0, a.MD)(_e, t),
+              Me,
               { ePrivilege: 0, eWebAPIKeyRequirement: 1 },
             );
           }),
           (e.GetAccessTokensWeb = function (e, t) {
             return e.SendMsg(
               "SteamLearn.GetAccessTokensWeb#1",
-              (0, a.MD)(De, t),
-              Ue,
+              (0, a.MD)(Xe, t),
+              Le,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
           (e.Train = function (e, t) {
-            return e.SendMsg("SteamLearn.Train#1", (0, a.MD)(ke, t), qe, {
+            return e.SendMsg("SteamLearn.Train#1", (0, a.MD)(qe, t), Ve, {
               ePrivilege: 1,
             });
           }),
           (e.GetFetchStatusVersions = function (e, t) {
             return e.SendMsg(
               "SteamLearn.GetFetchStatusVersions#1",
-              (0, a.MD)(Ze, t),
-              $e,
+              (0, a.MD)(Ye, t),
+              He,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
           (e.GetTrainStatusVersions = function (e, t) {
             return e.SendMsg(
               "SteamLearn.GetTrainStatusVersions#1",
-              (0, a.MD)(Ve, t),
-              Ye,
+              (0, a.MD)(Ge, t),
+              Ke,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
           (e.GetBatchedStatus = function (e, t) {
             return e.SendMsg(
               "SteamLearn.GetBatchedStatus#1",
-              (0, a.MD)(He, t),
-              Ge,
+              (0, a.MD)(Qe, t),
+              Je,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
           (e.GetFetchStatus = function (e, t) {
             return e.SendMsg(
               "SteamLearn.GetFetchStatus#1",
-              (0, a.MD)(Ke, t),
-              Qe,
+              (0, a.MD)(et, t),
+              tt,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
           (e.GetTrainStatus = function (e, t) {
             return e.SendMsg(
               "SteamLearn.GetTrainStatus#1",
-              (0, a.MD)(et, t),
-              tt,
+              (0, a.MD)(nt, t),
+              it,
+              { bConstMethod: !0, ePrivilege: 1 },
+            );
+          }),
+          (e.GetTrainLogs = function (e, t) {
+            return e.SendMsg(
+              "SteamLearn.GetTrainLogs#1",
+              (0, a.MD)(ot, t),
+              lt,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
           (e.SetTrainLive = function (e, t) {
             return e.SendMsg(
               "SteamLearn.SetTrainLive#1",
-              (0, a.MD)(it, t),
-              at,
+              (0, a.MD)(ct, t),
+              ut,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
           (e.GetLogEvents = function (e, t) {
             return e.SendMsg(
               "SteamLearn.GetLogEvents#1",
-              (0, a.MD)(Bt, t),
-              vt,
+              (0, a.MD)(zt, t),
+              St,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
           (e.GetEmbeddingValues = function (e, t) {
             return e.SendMsg(
               "SteamLearn.GetEmbeddingValues#1",
-              (0, a.MD)(wt, t),
-              _t,
+              (0, a.MD)(Ft, t),
+              Et,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
           (e.GetNearestEmbedding = function (e, t) {
             return e.SendMsg(
               "SteamLearn.GetNearestEmbedding#1",
-              (0, a.MD)(zt, t),
-              St,
+              (0, a.MD)(Rt, t),
+              jt,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           });
-      })(Ft || (Ft = {}));
+      })(Ct || (Ct = {}));
     },
     7785: (e, t, r) => {
       "use strict";
@@ -18715,11 +19063,11 @@
       function a(e) {
         this._ = e;
       }
-      function o(e, t) {
+      function s(e, t) {
         for (var r, n = 0, i = e.length; n < i; ++n)
           if ((r = e[n]).name === t) return r.value;
       }
-      function s(e, t, r) {
+      function o(e, t, r) {
         for (var i = 0, a = e.length; i < a; ++i)
           if (e[i].name === t) {
             (e[i] = n), (e = e.slice(0, i).concat(e.slice(i + 1)));
@@ -18754,12 +19102,12 @@
             if (null != t && "function" != typeof t)
               throw new Error("invalid callback: " + t);
             for (; ++l < c; )
-              if ((r = (e = a[l]).type)) i[r] = s(i[r], e.name, t);
-              else if (null == t) for (r in i) i[r] = s(i[r], e.name, null);
+              if ((r = (e = a[l]).type)) i[r] = o(i[r], e.name, t);
+              else if (null == t) for (r in i) i[r] = o(i[r], e.name, null);
             return this;
           }
           for (; ++l < c; )
-            if ((r = (e = a[l]).type) && (r = o(i[r], e.name))) return r;
+            if ((r = (e = a[l]).type) && (r = s(i[r], e.name))) return r;
         },
         copy: function () {
           var e = {},
@@ -18785,7 +19133,7 @@
     },
     12466: (e, t, r) => {
       "use strict";
-      r.d(t, { D: () => o, Z: () => a });
+      r.d(t, { D: () => s, Z: () => a });
       var n = r(37788),
         i = r(70393);
       function a(e) {
@@ -18796,7 +19144,7 @@
           : ((t.__noselect = t.style.MozUserSelect),
             (t.style.MozUserSelect = "none"));
       }
-      function o(e, t) {
+      function s(e, t) {
         var r = e.document.documentElement,
           a = (0, n.Z)(e).on("dragstart.drag", null);
         t &&
@@ -18811,13 +19159,13 @@
     },
     70393: (e, t, r) => {
       "use strict";
-      r.d(t, { Dd: () => i, Q7: () => n, ZP: () => o, rG: () => a });
+      r.d(t, { Dd: () => i, Q7: () => n, ZP: () => s, rG: () => a });
       const n = { passive: !1 },
         i = { capture: !0, passive: !1 };
       function a(e) {
         e.stopImmediatePropagation();
       }
-      function o(e) {
+      function s(e) {
         e.preventDefault(), e.stopImmediatePropagation();
       }
     },
@@ -18905,7 +19253,7 @@
     },
     46926: (e, t, r) => {
       "use strict";
-      r.d(t, { Y1: () => oe, ZP: () => le, Jz: () => ae });
+      r.d(t, { Y1: () => se, ZP: () => le, Jz: () => ae });
       var n = r(81944);
       var i = r(85163);
       function a(e) {
@@ -18918,8 +19266,8 @@
           var t;
         };
       }
-      var o = r(36749),
-        s = Array.prototype.find;
+      var s = r(36749),
+        o = Array.prototype.find;
       function l() {
         return this.firstElementChild;
       }
@@ -18938,30 +19286,30 @@
           (this.__data__ = t);
       }
       function m(e, t, r, n, i, a) {
-        for (var o, s = 0, l = t.length, c = a.length; s < c; ++s)
-          (o = t[s])
-            ? ((o.__data__ = a[s]), (n[s] = o))
-            : (r[s] = new f(e, a[s]));
-        for (; s < l; ++s) (o = t[s]) && (i[s] = o);
+        for (var s, o = 0, l = t.length, c = a.length; o < c; ++o)
+          (s = t[o])
+            ? ((s.__data__ = a[o]), (n[o] = s))
+            : (r[o] = new f(e, a[o]));
+        for (; o < l; ++o) (s = t[o]) && (i[o] = s);
       }
-      function h(e, t, r, n, i, a, o) {
-        var s,
+      function h(e, t, r, n, i, a, s) {
+        var o,
           l,
           c,
           u = new Map(),
           d = t.length,
           m = a.length,
           h = new Array(d);
-        for (s = 0; s < d; ++s)
-          (l = t[s]) &&
-            ((h[s] = c = o.call(l, l.__data__, s, t) + ""),
-            u.has(c) ? (i[s] = l) : u.set(c, l));
-        for (s = 0; s < m; ++s)
-          (c = o.call(e, a[s], s, a) + ""),
+        for (o = 0; o < d; ++o)
+          (l = t[o]) &&
+            ((h[o] = c = s.call(l, l.__data__, o, t) + ""),
+            u.has(c) ? (i[o] = l) : u.set(c, l));
+        for (o = 0; o < m; ++o)
+          (c = s.call(e, a[o], o, a) + ""),
             (l = u.get(c))
-              ? ((n[s] = l), (l.__data__ = a[s]), u.delete(c))
-              : (r[s] = new f(e, a[s]));
-        for (s = 0; s < d; ++s) (l = t[s]) && u.get(h[s]) === l && (i[s] = l);
+              ? ((n[o] = l), (l.__data__ = a[o]), u.delete(c))
+              : (r[o] = new f(e, a[o]));
+        for (o = 0; o < d; ++o) (l = t[o]) && u.get(h[o]) === l && (i[o] = l);
       }
       function p(e) {
         return e.__data__;
@@ -19023,12 +19371,12 @@
         };
       }
       var S = r(7843);
-      function E(e) {
+      function F(e) {
         return function () {
           delete this[e];
         };
       }
-      function F(e, t) {
+      function E(e, t) {
         return function () {
           this[e] = t;
         };
@@ -19179,8 +19527,8 @@
               };
             })(t);
           if (i)
-            for (var o = 0, s = i.length; o < s; ++o)
-              if ((n = i[o]).type === e.type && n.name === e.name)
+            for (var s = 0, o = i.length; s < o; ++s)
+              if ((n = i[s]).type === e.type && n.name === e.name)
                 return (
                   this.removeEventListener(n.type, n.listener, n.options),
                   this.addEventListener(
@@ -19224,14 +19572,14 @@
         };
       }
       var ae = [null];
-      function oe(e, t) {
+      function se(e, t) {
         (this._groups = e), (this._parents = t);
       }
-      function se() {
-        return new oe([[document.documentElement]], ae);
+      function oe() {
+        return new se([[document.documentElement]], ae);
       }
-      oe.prototype = se.prototype = {
-        constructor: oe,
+      se.prototype = oe.prototype = {
+        constructor: se,
         select: function (e) {
           "function" != typeof e && (e = (0, n.Z)(e));
           for (
@@ -19240,8 +19588,8 @@
             ++a
           )
             for (
-              var o,
-                s,
+              var s,
+                o,
                 l = t[a],
                 c = l.length,
                 u = (i[a] = new Array(c)),
@@ -19249,21 +19597,21 @@
               d < c;
               ++d
             )
-              (o = l[d]) &&
-                (s = e.call(o, o.__data__, d, l)) &&
-                ("__data__" in o && (s.__data__ = o.__data__), (u[d] = s));
-          return new oe(i, this._parents);
+              (s = l[d]) &&
+                (o = e.call(s, s.__data__, d, l)) &&
+                ("__data__" in s && (o.__data__ = s.__data__), (u[d] = o));
+          return new se(i, this._parents);
         },
         selectAll: function (e) {
           e = "function" == typeof e ? a(e) : (0, i.Z)(e);
           for (
-            var t = this._groups, r = t.length, n = [], o = [], s = 0;
-            s < r;
-            ++s
+            var t = this._groups, r = t.length, n = [], s = [], o = 0;
+            o < r;
+            ++o
           )
-            for (var l, c = t[s], u = c.length, d = 0; d < u; ++d)
-              (l = c[d]) && (n.push(e.call(l, l.__data__, d, c)), o.push(l));
-          return new oe(n, o);
+            for (var l, c = t[o], u = c.length, d = 0; d < u; ++d)
+              (l = c[d]) && (n.push(e.call(l, l.__data__, d, c)), s.push(l));
+          return new se(n, s);
         },
         selectChild: function (e) {
           return this.select(
@@ -19271,9 +19619,9 @@
               ? l
               : (function (e) {
                   return function () {
-                    return s.call(this.children, e);
+                    return o.call(this.children, e);
                   };
-                })("function" == typeof e ? e : (0, o.P)(e)),
+                })("function" == typeof e ? e : (0, s.P)(e)),
           );
         },
         selectChildren: function (e) {
@@ -19284,23 +19632,23 @@
                   return function () {
                     return c.call(this.children, e);
                   };
-                })("function" == typeof e ? e : (0, o.P)(e)),
+                })("function" == typeof e ? e : (0, s.P)(e)),
           );
         },
         filter: function (e) {
-          "function" != typeof e && (e = (0, o.Z)(e));
+          "function" != typeof e && (e = (0, s.Z)(e));
           for (
             var t = this._groups, r = t.length, n = new Array(r), i = 0;
             i < r;
             ++i
           )
             for (
-              var a, s = t[i], l = s.length, c = (n[i] = []), u = 0;
+              var a, o = t[i], l = o.length, c = (n[i] = []), u = 0;
               u < l;
               ++u
             )
-              (a = s[u]) && e.call(a, a.__data__, u, s) && c.push(a);
-          return new oe(n, this._parents);
+              (a = o[u]) && e.call(a, a.__data__, u, o) && c.push(a);
+          return new se(n, this._parents);
         },
         data: function (e, t) {
           if (!arguments.length) return Array.from(this, p);
@@ -19314,12 +19662,12 @@
               return r;
             }));
           for (
-            var o = a.length,
-              s = new Array(o),
-              l = new Array(o),
-              c = new Array(o),
+            var s = a.length,
+              o = new Array(s),
+              l = new Array(s),
+              c = new Array(s),
               u = 0;
-            u < o;
+            u < s;
             ++u
           ) {
             var d = i[u],
@@ -19328,7 +19676,7 @@
               b = y(e.call(d, d && d.__data__, u, i)),
               B = b.length,
               v = (l[u] = new Array(B)),
-              w = (s[u] = new Array(B));
+              w = (o[u] = new Array(B));
             n(d, f, v, w, (c[u] = new Array(g)), b, t);
             for (var _, M, z = 0, S = 0; z < B; ++z)
               if ((_ = v[z])) {
@@ -19336,13 +19684,13 @@
                 _._next = M || null;
               }
           }
-          return ((s = new oe(s, i))._enter = l), (s._exit = c), s;
+          return ((o = new se(o, i))._enter = l), (o._exit = c), o;
         },
         enter: function () {
-          return new oe(this._enter || this._groups.map(d), this._parents);
+          return new se(this._enter || this._groups.map(d), this._parents);
         },
         exit: function () {
-          return new oe(this._exit || this._groups.map(d), this._parents);
+          return new se(this._exit || this._groups.map(d), this._parents);
         },
         join: function (e, t, r) {
           var n = this.enter(),
@@ -19364,10 +19712,10 @@
               n = t._groups,
               i = r.length,
               a = n.length,
-              o = Math.min(i, a),
-              s = new Array(i),
+              s = Math.min(i, a),
+              o = new Array(i),
               l = 0;
-            l < o;
+            l < s;
             ++l
           )
             for (
@@ -19375,26 +19723,26 @@
                 u = r[l],
                 d = n[l],
                 f = u.length,
-                m = (s[l] = new Array(f)),
+                m = (o[l] = new Array(f)),
                 h = 0;
               h < f;
               ++h
             )
               (c = u[h] || d[h]) && (m[h] = c);
-          for (; l < i; ++l) s[l] = r[l];
-          return new oe(s, this._parents);
+          for (; l < i; ++l) o[l] = r[l];
+          return new se(o, this._parents);
         },
         selection: function () {
           return this;
         },
         order: function () {
           for (var e = this._groups, t = -1, r = e.length; ++t < r; )
-            for (var n, i = e[t], a = i.length - 1, o = i[a]; --a >= 0; )
+            for (var n, i = e[t], a = i.length - 1, s = i[a]; --a >= 0; )
               (n = i[a]) &&
-                (o &&
-                  4 ^ n.compareDocumentPosition(o) &&
-                  o.parentNode.insertBefore(n, o),
-                (o = n));
+                (s &&
+                  4 ^ n.compareDocumentPosition(s) &&
+                  s.parentNode.insertBefore(n, s),
+                (s = n));
           return this;
         },
         sort: function (e) {
@@ -19408,14 +19756,14 @@
             ++a
           ) {
             for (
-              var o, s = r[a], l = s.length, c = (i[a] = new Array(l)), u = 0;
+              var s, o = r[a], l = o.length, c = (i[a] = new Array(l)), u = 0;
               u < l;
               ++u
             )
-              (o = s[u]) && (c[u] = o);
+              (s = o[u]) && (c[u] = s);
             c.sort(t);
           }
-          return new oe(i, this._parents).order();
+          return new se(i, this._parents).order();
         },
         call: function () {
           var e = arguments[0];
@@ -19427,8 +19775,8 @@
         node: function () {
           for (var e = this._groups, t = 0, r = e.length; t < r; ++t)
             for (var n = e[t], i = 0, a = n.length; i < a; ++i) {
-              var o = n[i];
-              if (o) return o;
+              var s = n[i];
+              if (s) return s;
             }
           return null;
         },
@@ -19442,8 +19790,8 @@
         },
         each: function (e) {
           for (var t = this._groups, r = 0, n = t.length; r < n; ++r)
-            for (var i, a = t[r], o = 0, s = a.length; o < s; ++o)
-              (i = a[o]) && e.call(i, i.__data__, o, a);
+            for (var i, a = t[r], s = 0, o = a.length; s < o; ++s)
+              (i = a[s]) && e.call(i, i.__data__, s, a);
           return this;
         },
         attr: function (e, t) {
@@ -19471,7 +19819,7 @@
         style: S.Z,
         property: function (e, t) {
           return arguments.length > 1
-            ? this.each((null == t ? E : "function" == typeof t ? O : F)(e, t))
+            ? this.each((null == t ? F : "function" == typeof t ? O : E)(e, t))
             : this.node()[e];
         },
         classed: function (e, t) {
@@ -19542,15 +19890,15 @@
                   );
                 });
             })(e + ""),
-            o = a.length;
+            s = a.length;
           if (!(arguments.length < 2)) {
-            for (s = t ? ee : J, n = 0; n < o; ++n) this.each(s(a[n], t, r));
+            for (o = t ? ee : J, n = 0; n < s; ++n) this.each(o(a[n], t, r));
             return this;
           }
-          var s = this.node().__on;
-          if (s)
-            for (var l, c = 0, u = s.length; c < u; ++c)
-              for (n = 0, l = s[c]; n < o; ++n)
+          var o = this.node().__on;
+          if (o)
+            for (var l, c = 0, u = o.length; c < u; ++c)
+              for (n = 0, l = o[c]; n < s; ++n)
                 if ((i = a[n]).type === l.type && i.name === l.name)
                   return l.value;
         },
@@ -19559,15 +19907,15 @@
         },
         [Symbol.iterator]: function* () {
           for (var e = this._groups, t = 0, r = e.length; t < r; ++t)
-            for (var n, i = e[t], a = 0, o = i.length; a < o; ++a)
+            for (var n, i = e[t], a = 0, s = i.length; a < s; ++a)
               (n = i[a]) && (yield n);
         },
       };
-      const le = se;
+      const le = oe;
     },
     7843: (e, t, r) => {
       "use strict";
-      r.d(t, { S: () => l, Z: () => s });
+      r.d(t, { S: () => l, Z: () => o });
       var n = r(90523);
       function i(e) {
         return function () {
@@ -19579,7 +19927,7 @@
           this.style.setProperty(e, t, r);
         };
       }
-      function o(e, t, r) {
+      function s(e, t, r) {
         return function () {
           var n = t.apply(this, arguments);
           null == n
@@ -19587,10 +19935,10 @@
             : this.style.setProperty(e, n, r);
         };
       }
-      function s(e, t, r) {
+      function o(e, t, r) {
         return arguments.length > 1
           ? this.each(
-              (null == t ? i : "function" == typeof t ? o : a)(
+              (null == t ? i : "function" == typeof t ? s : a)(
                 e,
                 t,
                 null == r ? "" : r,
@@ -19650,10 +19998,10 @@
       function a(e) {
         return ((e = Math.exp(e)) + 1 / e) / 2;
       }
-      const o = (function e(t, r, n) {
+      const s = (function e(t, r, n) {
         function i(e, i) {
-          var o,
-            s,
+          var s,
+            o,
             l = e[0],
             c = e[1],
             u = e[2],
@@ -19664,9 +20012,9 @@
             p = f - c,
             y = h * h + p * p;
           if (y < 1e-12)
-            (s = Math.log(m / u) / t),
-              (o = function (e) {
-                return [l + e * h, c + e * p, u * Math.exp(t * e * s)];
+            (o = Math.log(m / u) / t),
+              (s = function (e) {
+                return [l + e * h, c + e * p, u * Math.exp(t * e * o)];
               });
           else {
             var g = Math.sqrt(y),
@@ -19674,22 +20022,22 @@
               B = (m * m - u * u - n * y) / (2 * m * r * g),
               v = Math.log(Math.sqrt(b * b + 1) - b),
               w = Math.log(Math.sqrt(B * B + 1) - B);
-            (s = (w - v) / t),
-              (o = function (e) {
+            (o = (w - v) / t),
+              (s = function (e) {
                 var n,
-                  i = e * s,
-                  o = a(v),
+                  i = e * o,
+                  s = a(v),
                   d =
                     (u / (r * g)) *
-                    (o *
+                    (s *
                       ((n = t * i + v), ((n = Math.exp(2 * n)) - 1) / (n + 1)) -
                       (function (e) {
                         return ((e = Math.exp(e)) - 1 / e) / 2;
                       })(v));
-                return [l + d * h, c + d * p, (u * o) / a(t * i + v)];
+                return [l + d * h, c + d * p, (u * s) / a(t * i + v)];
               });
           }
-          return (o.duration = (1e3 * s * t) / Math.SQRT2), o;
+          return (s.duration = (1e3 * o * t) / Math.SQRT2), s;
         }
         return (
           (i.rho = function (t) {
@@ -19700,7 +20048,7 @@
           i
         );
       })(Math.SQRT2, 2, 4);
-      var s,
+      var o,
         l,
         c = r(37788),
         u = r(65683),
@@ -19740,7 +20088,7 @@
         try {
           !(function () {
             w(), ++f;
-            for (var e, t = s; t; )
+            for (var e, t = o; t; )
               (e = g - t._time) >= 0 && t._call.call(void 0, e), (t = t._next);
             --f;
           })();
@@ -19749,31 +20097,31 @@
             (function () {
               var e,
                 t,
-                r = s,
+                r = o,
                 n = 1 / 0;
               for (; r; )
                 r._call
                   ? (n > r._time && (n = r._time), (e = r), (r = r._next))
                   : ((t = r._next),
                     (r._next = null),
-                    (r = e ? (e._next = t) : (s = t)));
-              (l = e), F(n);
+                    (r = e ? (e._next = t) : (o = t)));
+              (l = e), E(n);
             })(),
             (g = 0);
         }
       }
-      function E() {
+      function F() {
         var e = B.now(),
           t = e - y;
         t > p && ((b -= t), (y = e));
       }
-      function F(e) {
+      function E(e) {
         f ||
           (m && (m = clearTimeout(m)),
           e - g > 24
             ? (e < 1 / 0 && (m = setTimeout(S, e - B.now() - b)),
               h && (h = clearInterval(h)))
-            : (h || ((y = B.now()), (h = setInterval(E, p))), (f = 1), v(S)));
+            : (h || ((y = B.now()), (h = setInterval(F, p))), (f = 1), v(S)));
       }
       function O(e, t, r) {
         var n = new M();
@@ -19797,13 +20145,13 @@
           (r = (null == r ? w() : +r) + (null == t ? 0 : +t)),
             this._next ||
               l === this ||
-              (l ? (l._next = this) : (s = this), (l = this)),
+              (l ? (l._next = this) : (o = this), (l = this)),
             (this._call = e),
             (this._time = r),
-            F();
+            E();
         },
         stop: function () {
-          this._call && ((this._call = null), (this._time = 1 / 0), F());
+          this._call && ((this._call = null), (this._time = 1 / 0), E());
         },
       };
       var R = (0, n.Z)("start", "end", "cancel", "interrupt"),
@@ -19816,24 +20164,24 @@
         I = 5,
         N = 6;
       function A(e, t, r, n, i, a) {
-        var o = e.__transition;
-        if (o) {
-          if (r in o) return;
+        var s = e.__transition;
+        if (s) {
+          if (r in s) return;
         } else e.__transition = {};
         !(function (e, t, r) {
           var n,
             i = e.__transition;
           function a(e) {
             (r.state = C),
-              r.timer.restart(o, r.delay, r.time),
-              r.delay <= e && o(e - r.delay);
+              r.timer.restart(s, r.delay, r.time),
+              r.delay <= e && s(e - r.delay);
           }
-          function o(a) {
+          function s(a) {
             var c, u, d, f;
             if (r.state !== C) return l();
             for (c in i)
               if ((f = i[c]).name === r.name) {
-                if (f.state === W) return O(o);
+                if (f.state === W) return O(s);
                 f.state === P
                   ? ((f.state = N),
                     f.timer.stop(),
@@ -19848,7 +20196,7 @@
             if (
               (O(function () {
                 r.state === W &&
-                  ((r.state = P), r.timer.restart(s, r.delay, r.time), s(a));
+                  ((r.state = P), r.timer.restart(o, r.delay, r.time), o(a));
               }),
               (r.state = T),
               r.on.call("start", e, e.__data__, r.index, r.group),
@@ -19864,15 +20212,15 @@
               n.length = u + 1;
             }
           }
-          function s(t) {
+          function o(t) {
             for (
               var i =
                   t < r.duration
                     ? r.ease.call(null, t / r.duration)
                     : (r.timer.restart(l), (r.state = I), 1),
                 a = -1,
-                o = n.length;
-              ++a < o;
+                s = n.length;
+              ++a < s;
 
             )
               n[a].call(e, i);
@@ -19919,7 +20267,7 @@
           n,
           i,
           a = e.__transition,
-          o = !0;
+          s = !0;
         if (a) {
           for (i in ((t = null == t ? null : t + ""), a))
             (r = a[i]).name === t
@@ -19934,8 +20282,8 @@
                   r.group,
                 ),
                 delete a[i])
-              : (o = !1);
-          o && delete e.__transition;
+              : (s = !1);
+          s && delete e.__transition;
         }
       }
       var L,
@@ -19950,19 +20298,19 @@
           scaleY: 1,
         };
       function V(e, t, r, n, i, a) {
-        var o, s, l;
+        var s, o, l;
         return (
-          (o = Math.sqrt(e * e + t * t)) && ((e /= o), (t /= o)),
+          (s = Math.sqrt(e * e + t * t)) && ((e /= s), (t /= s)),
           (l = e * r + t * n) && ((r -= e * l), (n -= t * l)),
-          (s = Math.sqrt(r * r + n * n)) && ((r /= s), (n /= s), (l /= s)),
-          e * n < t * r && ((e = -e), (t = -t), (l = -l), (o = -o)),
+          (o = Math.sqrt(r * r + n * n)) && ((r /= o), (n /= o), (l /= o)),
+          e * n < t * r && ((e = -e), (t = -t), (l = -l), (s = -s)),
           {
             translateX: i,
             translateY: a,
             rotate: Math.atan2(t, e) * Z,
             skewX: Math.atan(l) * Z,
-            scaleX: o,
-            scaleY: s,
+            scaleX: s,
+            scaleY: o,
           }
         );
       }
@@ -19970,21 +20318,21 @@
         function i(e) {
           return e.length ? e.pop() + " " : "";
         }
-        return function (a, o) {
-          var s = [],
+        return function (a, s) {
+          var o = [],
             l = [];
           return (
             (a = e(a)),
-            (o = e(o)),
-            (function (e, n, i, a, o, s) {
+            (s = e(s)),
+            (function (e, n, i, a, s, o) {
               if (e !== i || n !== a) {
-                var l = o.push("translate(", null, t, null, r);
-                s.push(
+                var l = s.push("translate(", null, t, null, r);
+                o.push(
                   { i: l - 4, x: (0, q.Z)(e, i) },
                   { i: l - 2, x: (0, q.Z)(n, a) },
                 );
-              } else (i || a) && o.push("translate(" + i + t + a + r);
-            })(a.translateX, a.translateY, o.translateX, o.translateY, s, l),
+              } else (i || a) && s.push("translate(" + i + t + a + r);
+            })(a.translateX, a.translateY, s.translateX, s.translateY, o, l),
             (function (e, t, r, a) {
               e !== t
                 ? (e - t > 180 ? (t += 360) : t - e > 180 && (e += 360),
@@ -19993,7 +20341,7 @@
                     x: (0, q.Z)(e, t),
                   }))
                 : t && r.push(i(r) + "rotate(" + t + n);
-            })(a.rotate, o.rotate, s, l),
+            })(a.rotate, s.rotate, o, l),
             (function (e, t, r, a) {
               e !== t
                 ? a.push({
@@ -20001,23 +20349,23 @@
                     x: (0, q.Z)(e, t),
                   })
                 : t && r.push(i(r) + "skewX(" + t + n);
-            })(a.skewX, o.skewX, s, l),
-            (function (e, t, r, n, a, o) {
+            })(a.skewX, s.skewX, o, l),
+            (function (e, t, r, n, a, s) {
               if (e !== r || t !== n) {
-                var s = a.push(i(a) + "scale(", null, ",", null, ")");
-                o.push(
-                  { i: s - 4, x: (0, q.Z)(e, r) },
-                  { i: s - 2, x: (0, q.Z)(t, n) },
+                var o = a.push(i(a) + "scale(", null, ",", null, ")");
+                s.push(
+                  { i: o - 4, x: (0, q.Z)(e, r) },
+                  { i: o - 2, x: (0, q.Z)(t, n) },
                 );
               } else
                 (1 === r && 1 === n) ||
                   a.push(i(a) + "scale(" + r + "," + n + ")");
-            })(a.scaleX, a.scaleY, o.scaleX, o.scaleY, s, l),
-            (a = o = null),
+            })(a.scaleX, a.scaleY, s.scaleX, s.scaleY, o, l),
+            (a = s = null),
             function (e) {
               for (var t, r = -1, n = l.length; ++r < n; )
-                s[(t = l[r]).i] = t.x(e);
-              return s.join("");
+                o[(t = l[r]).i] = t.x(e);
+              return o.join("");
             }
           );
         };
@@ -20058,9 +20406,9 @@
           var i = U(this, e),
             a = i.tween;
           if (a !== r)
-            for (var o = 0, s = (n = r = a).length; o < s; ++o)
-              if (n[o].name === t) {
-                (n = n.slice()).splice(o, 1);
+            for (var s = 0, o = (n = r = a).length; s < o; ++s)
+              if (n[s].name === t) {
+                (n = n.slice()).splice(s, 1);
                 break;
               }
           i.tween = n;
@@ -20071,15 +20419,15 @@
         if ("function" != typeof r) throw new Error();
         return function () {
           var a = U(this, e),
-            o = a.tween;
-          if (o !== n) {
-            i = (n = o).slice();
-            for (var s = { name: t, value: r }, l = 0, c = i.length; l < c; ++l)
+            s = a.tween;
+          if (s !== n) {
+            i = (n = s).slice();
+            for (var o = { name: t, value: r }, l = 0, c = i.length; l < c; ++l)
               if (i[l].name === t) {
-                i[l] = s;
+                i[l] = o;
                 break;
               }
-            l === c && i.push(s);
+            l === c && i.push(o);
           }
           a.tween = i;
         };
@@ -20116,18 +20464,18 @@
           this.removeAttribute(e);
         };
       }
-      function oe(e) {
+      function se(e) {
         return function () {
           this.removeAttributeNS(e.space, e.local);
         };
       }
-      function se(e, t, r) {
+      function oe(e, t, r) {
         var n,
           i,
           a = r + "";
         return function () {
-          var o = this.getAttribute(e);
-          return o === a ? null : o === n ? i : (i = t((n = o), r));
+          var s = this.getAttribute(e);
+          return s === a ? null : s === n ? i : (i = t((n = s), r));
         };
       }
       function le(e, t, r) {
@@ -20135,37 +20483,37 @@
           i,
           a = r + "";
         return function () {
-          var o = this.getAttributeNS(e.space, e.local);
-          return o === a ? null : o === n ? i : (i = t((n = o), r));
+          var s = this.getAttributeNS(e.space, e.local);
+          return s === a ? null : s === n ? i : (i = t((n = s), r));
         };
       }
       function ce(e, t, r) {
         var n, i, a;
         return function () {
-          var o,
-            s,
+          var s,
+            o,
             l = r(this);
           if (null != l)
-            return (o = this.getAttribute(e)) === (s = l + "")
+            return (s = this.getAttribute(e)) === (o = l + "")
               ? null
-              : o === n && s === i
+              : s === n && o === i
               ? a
-              : ((i = s), (a = t((n = o), l)));
+              : ((i = o), (a = t((n = s), l)));
           this.removeAttribute(e);
         };
       }
       function ue(e, t, r) {
         var n, i, a;
         return function () {
-          var o,
-            s,
+          var s,
+            o,
             l = r(this);
           if (null != l)
-            return (o = this.getAttributeNS(e.space, e.local)) === (s = l + "")
+            return (s = this.getAttributeNS(e.space, e.local)) === (o = l + "")
               ? null
-              : o === n && s === i
+              : s === n && o === i
               ? a
-              : ((i = s), (a = t((n = o), l)));
+              : ((i = o), (a = t((n = s), l)));
           this.removeAttributeNS(e.space, e.local);
         };
       }
@@ -20251,7 +20599,7 @@
       function Se() {
         return ++Me;
       }
-      var Ee = d.ZP.prototype;
+      var Fe = d.ZP.prototype;
       ze.prototype = function (e) {
         return (0, d.ZP)().transition(e);
       }.prototype = {
@@ -20261,25 +20609,25 @@
             r = this._id;
           "function" != typeof e && (e = (0, be.Z)(e));
           for (
-            var n = this._groups, i = n.length, a = new Array(i), o = 0;
-            o < i;
-            ++o
+            var n = this._groups, i = n.length, a = new Array(i), s = 0;
+            s < i;
+            ++s
           )
             for (
-              var s,
+              var o,
                 l,
-                c = n[o],
+                c = n[s],
                 u = c.length,
-                d = (a[o] = new Array(u)),
+                d = (a[s] = new Array(u)),
                 f = 0;
               f < u;
               ++f
             )
-              (s = c[f]) &&
-                (l = e.call(s, s.__data__, f, c)) &&
-                ("__data__" in s && (l.__data__ = s.__data__),
+              (o = c[f]) &&
+                (l = e.call(o, o.__data__, f, c)) &&
+                ("__data__" in o && (l.__data__ = o.__data__),
                 (d[f] = l),
-                A(d[f], t, r, f, d, k(s, r)));
+                A(d[f], t, r, f, d, k(o, r)));
           return new ze(a, this._parents, t, r);
         },
         selectAll: function (e) {
@@ -20287,11 +20635,11 @@
             r = this._id;
           "function" != typeof e && (e = (0, Be.Z)(e));
           for (
-            var n = this._groups, i = n.length, a = [], o = [], s = 0;
-            s < i;
-            ++s
+            var n = this._groups, i = n.length, a = [], s = [], o = 0;
+            o < i;
+            ++o
           )
-            for (var l, c = n[s], u = c.length, d = 0; d < u; ++d)
+            for (var l, c = n[o], u = c.length, d = 0; d < u; ++d)
               if ((l = c[d])) {
                 for (
                   var f,
@@ -20303,12 +20651,12 @@
                   ++p
                 )
                   (f = m[p]) && A(f, t, r, p, m, h);
-                a.push(m), o.push(l);
+                a.push(m), s.push(l);
               }
-          return new ze(a, o, t, r);
+          return new ze(a, s, t, r);
         },
-        selectChild: Ee.selectChild,
-        selectChildren: Ee.selectChildren,
+        selectChild: Fe.selectChild,
+        selectChildren: Fe.selectChildren,
         filter: function (e) {
           "function" != typeof e && (e = (0, ge.Z)(e));
           for (
@@ -20317,11 +20665,11 @@
             ++i
           )
             for (
-              var a, o = t[i], s = o.length, l = (n[i] = []), c = 0;
-              c < s;
+              var a, s = t[i], o = s.length, l = (n[i] = []), c = 0;
+              c < o;
               ++c
             )
-              (a = o[c]) && e.call(a, a.__data__, c, o) && l.push(a);
+              (a = s[c]) && e.call(a, a.__data__, c, s) && l.push(a);
           return new ze(n, this._parents, this._name, this._id);
         },
         merge: function (e) {
@@ -20332,24 +20680,24 @@
               n = t.length,
               i = r.length,
               a = Math.min(n, i),
-              o = new Array(n),
-              s = 0;
-            s < a;
-            ++s
+              s = new Array(n),
+              o = 0;
+            o < a;
+            ++o
           )
             for (
               var l,
-                c = t[s],
-                u = r[s],
+                c = t[o],
+                u = r[o],
                 d = c.length,
-                f = (o[s] = new Array(d)),
+                f = (s[o] = new Array(d)),
                 m = 0;
               m < d;
               ++m
             )
               (l = c[m] || u[m]) && (f[m] = l);
-          for (; s < n; ++s) o[s] = t[s];
-          return new ze(o, this._parents, this._name, this._id);
+          for (; o < n; ++o) s[o] = t[o];
+          return new ze(s, this._parents, this._name, this._id);
         },
         selection: function () {
           return new ve(this._groups, this._parents);
@@ -20365,10 +20713,10 @@
             a < i;
             ++a
           )
-            for (var o, s = n[a], l = s.length, c = 0; c < l; ++c)
-              if ((o = s[c])) {
-                var u = k(o, t);
-                A(o, e, r, c, s, {
+            for (var s, o = n[a], l = o.length, c = 0; c < l; ++c)
+              if ((s = o[c])) {
+                var u = k(s, t);
+                A(s, e, r, c, o, {
                   time: u.time + u.delay + u.duration,
                   delay: 0,
                   duration: u.duration,
@@ -20377,12 +20725,12 @@
               }
           return new ze(n, this._parents, e, r);
         },
-        call: Ee.call,
-        nodes: Ee.nodes,
-        node: Ee.node,
-        size: Ee.size,
-        empty: Ee.empty,
-        each: Ee.each,
+        call: Fe.call,
+        nodes: Fe.nodes,
+        node: Fe.node,
+        size: Fe.size,
+        empty: Fe.empty,
+        each: Fe.each,
         on: function (e, t) {
           var r = this._id;
           return arguments.length < 2
@@ -20405,9 +20753,9 @@
                       ? D
                       : U;
                   return function () {
-                    var o = a(this, e),
-                      s = o.on;
-                    s !== n && (i = (n = s).copy()).on(t, r), (o.on = i);
+                    var s = a(this, e),
+                      o = s.on;
+                    o !== n && (i = (n = o).copy()).on(t, r), (s.on = i);
                   };
                 })(r, e, t),
               );
@@ -20420,8 +20768,8 @@
             "function" == typeof t
               ? (r.local ? ue : ce)(r, n, ee(this, "attr." + e, t))
               : null == t
-              ? (r.local ? oe : ae)(r)
-              : (r.local ? le : se)(r, n, t),
+              ? (r.local ? se : ae)(r)
+              : (r.local ? le : oe)(r, n, t),
           );
         },
         attrTween: function (e, t) {
@@ -20441,12 +20789,12 @@
                   var r, n, i;
                   return function () {
                     var a = (0, we.S)(this, e),
-                      o = (this.style.removeProperty(e), (0, we.S)(this, e));
-                    return a === o
+                      s = (this.style.removeProperty(e), (0, we.S)(this, e));
+                    return a === s
                       ? null
-                      : a === r && o === n
+                      : a === r && s === n
                       ? i
-                      : (i = t((r = a), (n = o)));
+                      : (i = t((r = a), (n = s)));
                   };
                 })(e, n),
               ).on("end.style." + e, _e(e))
@@ -20456,18 +20804,18 @@
                 (function (e, t, r) {
                   var n, i, a;
                   return function () {
-                    var o = (0, we.S)(this, e),
-                      s = r(this),
-                      l = s + "";
+                    var s = (0, we.S)(this, e),
+                      o = r(this),
+                      l = o + "";
                     return (
-                      null == s &&
+                      null == o &&
                         (this.style.removeProperty(e),
-                        (l = s = (0, we.S)(this, e))),
-                      o === l
+                        (l = o = (0, we.S)(this, e))),
+                      s === l
                         ? null
-                        : o === n && l === i
+                        : s === n && l === i
                         ? a
-                        : ((i = l), (a = t((n = o), s)))
+                        : ((i = l), (a = t((n = s), o)))
                     );
                   };
                 })(e, n, ee(this, "style." + e, t)),
@@ -20477,13 +20825,13 @@
                     n,
                     i,
                     a,
-                    o = "style." + t,
-                    s = "end." + o;
+                    s = "style." + t,
+                    o = "end." + s;
                   return function () {
                     var l = U(this, e),
                       c = l.on,
-                      u = null == l.value[o] ? a || (a = _e(t)) : void 0;
-                    (c === r && i === u) || (n = (r = c).copy()).on(s, (i = u)),
+                      u = null == l.value[s] ? a || (a = _e(t)) : void 0;
+                    (c === r && i === u) || (n = (r = c).copy()).on(o, (i = u)),
                       (l.on = n);
                   };
                 })(this._id, e),
@@ -20495,8 +20843,8 @@
                     i,
                     a = r + "";
                   return function () {
-                    var o = (0, we.S)(this, e);
-                    return o === a ? null : o === n ? i : (i = t((n = o), r));
+                    var s = (0, we.S)(this, e);
+                    return s === a ? null : s === n ? i : (i = t((n = s), r));
                   };
                 })(e, n, t),
                 r,
@@ -20589,8 +20937,8 @@
           var r = this._id;
           if (((e += ""), arguments.length < 2)) {
             for (
-              var n, i = k(this.node(), r).tween, a = 0, o = i.length;
-              a < o;
+              var n, i = k(this.node(), r).tween, a = 0, s = i.length;
+              a < s;
               ++a
             )
               if ((n = i[a]).name === e) return n.value;
@@ -20641,8 +20989,8 @@
             r = this,
             n = r._id,
             i = r.size();
-          return new Promise(function (a, o) {
-            var s = { value: o },
+          return new Promise(function (a, s) {
+            var o = { value: s },
               l = {
                 value: function () {
                   0 == --i && a();
@@ -20652,17 +21000,17 @@
               var r = U(this, n),
                 i = r.on;
               i !== e &&
-                ((t = (e = i).copy())._.cancel.push(s),
-                t._.interrupt.push(s),
+                ((t = (e = i).copy())._.cancel.push(o),
+                t._.interrupt.push(o),
                 t._.end.push(l)),
                 (r.on = t);
             }),
               0 === i && a();
           });
         },
-        [Symbol.iterator]: Ee[Symbol.iterator],
+        [Symbol.iterator]: Fe[Symbol.iterator],
       };
-      var Fe = {
+      var Ee = {
         time: null,
         delay: 0,
         duration: 250,
@@ -20685,11 +21033,11 @@
           e instanceof ze
             ? ((t = e._id), (e = e._name))
             : ((t = Se()),
-              ((r = Fe).time = w()),
+              ((r = Ee).time = w()),
               (e = null == e ? null : e + ""));
           for (var n = this._groups, i = n.length, a = 0; a < i; ++a)
-            for (var o, s = n[a], l = s.length, c = 0; c < l; ++c)
-              (o = s[c]) && A(o, e, t, c, s, r || Oe(o, t));
+            for (var s, o = n[a], l = o.length, c = 0; c < l; ++c)
+              (s = o[c]) && A(s, e, t, c, o, r || Oe(s, t));
           return new ze(n, this._parents, e, t);
         });
       const Re = (e) => () => e;
@@ -20793,10 +21141,10 @@
         var n = e.invertX(t[0][0]) - r[0][0],
           i = e.invertX(t[1][0]) - r[1][0],
           a = e.invertY(t[0][1]) - r[0][1],
-          o = e.invertY(t[1][1]) - r[1][1];
+          s = e.invertY(t[1][1]) - r[1][1];
         return e.translate(
           i > n ? (n + i) / 2 : Math.min(0, n) || Math.max(0, i),
-          o > a ? (a + o) / 2 : Math.min(0, a) || Math.max(0, o),
+          s > a ? (a + s) / 2 : Math.min(0, a) || Math.max(0, s),
         );
       }
       function ke() {
@@ -20804,7 +21152,7 @@
           t,
           r,
           a = Pe,
-          s = Ie,
+          o = Ie,
           l = Ue,
           d = Ae,
           f = De,
@@ -20814,7 +21162,7 @@
             [1 / 0, 1 / 0],
           ],
           p = 250,
-          y = o,
+          y = s,
           g = (0, n.Z)("start", "zoom", "end"),
           b = 500,
           B = 150,
@@ -20844,21 +21192,21 @@
         function S(e) {
           return [(+e[0][0] + +e[1][0]) / 2, (+e[0][1] + +e[1][1]) / 2];
         }
-        function E(e, t, r, n) {
+        function F(e, t, r, n) {
           e.on("start.zoom", function () {
-            F(this, arguments).event(n).start();
+            E(this, arguments).event(n).start();
           })
             .on("interrupt.zoom end.zoom", function () {
-              F(this, arguments).event(n).end();
+              E(this, arguments).event(n).end();
             })
             .tween("zoom", function () {
               var e = this,
                 i = arguments,
-                a = F(e, i).event(n),
-                o = s.apply(e, i),
+                a = E(e, i).event(n),
+                s = o.apply(e, i),
                 l =
-                  null == r ? S(o) : "function" == typeof r ? r.apply(e, i) : r,
-                c = Math.max(o[1][0] - o[0][0], o[1][1] - o[0][1]),
+                  null == r ? S(s) : "function" == typeof r ? r.apply(e, i) : r,
+                c = Math.max(s[1][0] - s[0][0], s[1][1] - s[0][1]),
                 u = e.__zoom,
                 d = "function" == typeof t ? t.apply(e, i) : t,
                 f = y(u.invert(l).concat(c / u.k), d.invert(l).concat(c / d.k));
@@ -20873,7 +21221,7 @@
               };
             });
         }
-        function F(e, t, r) {
+        function E(e, t, r) {
           return (!r && e.__zooming) || new O(e, t);
         }
         function O(e, t) {
@@ -20881,25 +21229,25 @@
             (this.args = t),
             (this.active = 0),
             (this.sourceEvent = null),
-            (this.extent = s.apply(e, t)),
+            (this.extent = o.apply(e, t)),
             (this.taps = 0);
         }
         function R(e, ...t) {
           if (a.apply(this, arguments)) {
-            var r = F(this, t).event(e),
+            var r = E(this, t).event(e),
               n = this.__zoom,
               i = Math.max(
                 m[0],
                 Math.min(m[1], n.k * Math.pow(2, d.apply(this, arguments))),
               ),
-              o = (0, u.Z)(e);
+              s = (0, u.Z)(e);
             if (r.wheel)
-              (r.mouse[0][0] === o[0] && r.mouse[0][1] === o[1]) ||
-                (r.mouse[1] = n.invert((r.mouse[0] = o))),
+              (r.mouse[0][0] === s[0] && r.mouse[0][1] === s[1]) ||
+                (r.mouse[1] = n.invert((r.mouse[0] = s))),
                 clearTimeout(r.wheel);
             else {
               if (n.k === i) return;
-              (r.mouse = [o, n.invert(o)]), X(this), r.start();
+              (r.mouse = [s, n.invert(s)]), X(this), r.start();
             }
             We(e),
               (r.wheel = setTimeout(function () {
@@ -20914,25 +21262,25 @@
         function j(e, ...t) {
           if (!r && a.apply(this, arguments)) {
             var n = e.currentTarget,
-              o = F(this, t, !0).event(e),
-              s = (0, c.Z)(e.view)
+              s = E(this, t, !0).event(e),
+              o = (0, c.Z)(e.view)
                 .on(
                   "mousemove.zoom",
                   function (e) {
-                    if ((We(e), !o.moved)) {
+                    if ((We(e), !s.moved)) {
                       var t = e.clientX - f,
                         r = e.clientY - m;
-                      o.moved = t * t + r * r > v;
+                      s.moved = t * t + r * r > v;
                     }
-                    o.event(e).zoom(
+                    s.event(e).zoom(
                       "mouse",
                       l(
                         z(
-                          o.that.__zoom,
-                          (o.mouse[0] = (0, u.Z)(e, n)),
-                          o.mouse[1],
+                          s.that.__zoom,
+                          (s.mouse[0] = (0, u.Z)(e, n)),
+                          s.mouse[1],
                         ),
-                        o.extent,
+                        s.extent,
                         h,
                       ),
                     );
@@ -20942,10 +21290,10 @@
                 .on(
                   "mouseup.zoom",
                   function (e) {
-                    s.on("mousemove.zoom mouseup.zoom", null),
-                      (0, i.D)(e.view, o.moved),
+                    o.on("mousemove.zoom mouseup.zoom", null),
+                      (0, i.D)(e.view, s.moved),
                       We(e),
-                      o.event(e).end();
+                      s.event(e).end();
                   },
                   !0,
                 ),
@@ -20954,9 +21302,9 @@
               m = e.clientY;
             (0, i.Z)(e.view),
               Te(e),
-              (o.mouse = [d, this.__zoom.invert(d)]),
+              (s.mouse = [d, this.__zoom.invert(d)]),
               X(this),
-              o.start();
+              s.start();
           }
         }
         function x(e, ...t) {
@@ -20964,29 +21312,29 @@
             var r = this.__zoom,
               n = (0, u.Z)(e.changedTouches ? e.changedTouches[0] : e, this),
               i = r.invert(n),
-              o = r.k * (e.shiftKey ? 0.5 : 2),
-              d = l(z(M(r, o), n, i), s.apply(this, t), h);
+              s = r.k * (e.shiftKey ? 0.5 : 2),
+              d = l(z(M(r, s), n, i), o.apply(this, t), h);
             We(e),
               p > 0
-                ? (0, c.Z)(this).transition().duration(p).call(E, d, n, e)
+                ? (0, c.Z)(this).transition().duration(p).call(F, d, n, e)
                 : (0, c.Z)(this).call(_.transform, d, n, e);
           }
         }
         function C(r, ...n) {
           if (a.apply(this, arguments)) {
             var i,
-              o,
               s,
+              o,
               l,
               c = r.touches,
               d = c.length,
-              f = F(this, n, r.changedTouches.length === d).event(r);
-            for (Te(r), o = 0; o < d; ++o)
-              (s = c[o]),
+              f = E(this, n, r.changedTouches.length === d).event(r);
+            for (Te(r), s = 0; s < d; ++s)
+              (o = c[s]),
                 (l = [
-                  (l = (0, u.Z)(s, this)),
+                  (l = (0, u.Z)(o, this)),
                   this.__zoom.invert(l),
-                  s.identifier,
+                  o.identifier,
                 ]),
                 f.touch0
                   ? f.touch1 ||
@@ -21010,41 +21358,41 @@
               n,
               i,
               a,
-              o = F(this, t).event(e),
-              s = e.changedTouches,
-              c = s.length;
+              s = E(this, t).event(e),
+              o = e.changedTouches,
+              c = o.length;
             for (We(e), r = 0; r < c; ++r)
-              (n = s[r]),
+              (n = o[r]),
                 (i = (0, u.Z)(n, this)),
-                o.touch0 && o.touch0[2] === n.identifier
-                  ? (o.touch0[0] = i)
-                  : o.touch1 &&
-                    o.touch1[2] === n.identifier &&
-                    (o.touch1[0] = i);
-            if (((n = o.that.__zoom), o.touch1)) {
-              var d = o.touch0[0],
-                f = o.touch0[1],
-                m = o.touch1[0],
-                p = o.touch1[1],
+                s.touch0 && s.touch0[2] === n.identifier
+                  ? (s.touch0[0] = i)
+                  : s.touch1 &&
+                    s.touch1[2] === n.identifier &&
+                    (s.touch1[0] = i);
+            if (((n = s.that.__zoom), s.touch1)) {
+              var d = s.touch0[0],
+                f = s.touch0[1],
+                m = s.touch1[0],
+                p = s.touch1[1],
                 y = (y = m[0] - d[0]) * y + (y = m[1] - d[1]) * y,
                 g = (g = p[0] - f[0]) * g + (g = p[1] - f[1]) * g;
               (n = M(n, Math.sqrt(y / g))),
                 (i = [(d[0] + m[0]) / 2, (d[1] + m[1]) / 2]),
                 (a = [(f[0] + p[0]) / 2, (f[1] + p[1]) / 2]);
             } else {
-              if (!o.touch0) return;
-              (i = o.touch0[0]), (a = o.touch0[1]);
+              if (!s.touch0) return;
+              (i = s.touch0[0]), (a = s.touch0[1]);
             }
-            o.zoom("touch", l(z(n, i, a), o.extent, h));
+            s.zoom("touch", l(z(n, i, a), s.extent, h));
           }
         }
         function W(e, ...n) {
           if (this.__zooming) {
             var i,
               a,
-              o = F(this, n).event(e),
-              s = e.changedTouches,
-              l = s.length;
+              s = E(this, n).event(e),
+              o = e.changedTouches,
+              l = o.length;
             for (
               Te(e),
                 r && clearTimeout(r),
@@ -21055,20 +21403,20 @@
               i < l;
               ++i
             )
-              (a = s[i]),
-                o.touch0 && o.touch0[2] === a.identifier
-                  ? delete o.touch0
-                  : o.touch1 && o.touch1[2] === a.identifier && delete o.touch1;
+              (a = o[i]),
+                s.touch0 && s.touch0[2] === a.identifier
+                  ? delete s.touch0
+                  : s.touch1 && s.touch1[2] === a.identifier && delete s.touch1;
             if (
-              (o.touch1 &&
-                !o.touch0 &&
-                ((o.touch0 = o.touch1), delete o.touch1),
-              o.touch0)
+              (s.touch1 &&
+                !s.touch0 &&
+                ((s.touch0 = s.touch1), delete s.touch1),
+              s.touch0)
             )
-              o.touch0[1] = this.__zoom.invert(o.touch0[0]);
+              s.touch0[1] = this.__zoom.invert(s.touch0[0]);
             else if (
-              (o.end(),
-              2 === o.taps &&
+              (s.end(),
+              2 === s.taps &&
                 ((a = (0, u.Z)(a, this)),
                 Math.hypot(t[0] - a[0], t[1] - a[1]) < w))
             ) {
@@ -21082,9 +21430,9 @@
             var i = e.selection ? e.selection() : e;
             i.property("__zoom", Ne),
               e !== i
-                ? E(e, t, r, n)
+                ? F(e, t, r, n)
                 : i.interrupt().each(function () {
-                    F(this, arguments)
+                    E(this, arguments)
                       .event(n)
                       .start()
                       .zoom(
@@ -21111,7 +21459,7 @@
             _.transform(
               e,
               function () {
-                var e = s.apply(this, arguments),
+                var e = o.apply(this, arguments),
                   n = this.__zoom,
                   i =
                     null == r
@@ -21120,8 +21468,8 @@
                       ? r.apply(this, arguments)
                       : r,
                   a = n.invert(i),
-                  o = "function" == typeof t ? t.apply(this, arguments) : t;
-                return l(z(M(n, o), i, a), e, h);
+                  s = "function" == typeof t ? t.apply(this, arguments) : t;
+                return l(z(M(n, s), i, a), e, h);
               },
               r,
               n,
@@ -21136,7 +21484,7 @@
                     "function" == typeof t ? t.apply(this, arguments) : t,
                     "function" == typeof r ? r.apply(this, arguments) : r,
                   ),
-                  s.apply(this, arguments),
+                  o.apply(this, arguments),
                   h,
                 );
               },
@@ -21148,7 +21496,7 @@
             _.transform(
               e,
               function () {
-                var e = s.apply(this, arguments),
+                var e = o.apply(this, arguments),
                   i = this.__zoom,
                   a =
                     null == n
@@ -21238,7 +21586,7 @@
           }),
           (_.extent = function (e) {
             return arguments.length
-              ? ((s =
+              ? ((o =
                   "function" == typeof e
                     ? e
                     : Re([
@@ -21246,7 +21594,7 @@
                         [+e[1][0], +e[1][1]],
                       ])),
                 _)
-              : s;
+              : o;
           }),
           (_.scaleExtent = function (e) {
             return arguments.length

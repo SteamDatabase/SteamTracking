@@ -785,6 +785,7 @@
         EventDefaultRowContainer: "_2pVkYef_JboBRTJDsI5XrR",
         EventStartPublic: "_13cijqNyra467La1xbDgy0",
         EventOptions: "ShLAXJyjCB5R_Y81P3-VX",
+        EventStatusContainer: "_1dNhj3aKodzkwfU16oYND",
         FlexColumnContainer: "WmMRFd2F9FMje__jWs2c4",
         FlexRowContainer: "elLwmClZ5oSY2aer18vUt",
         Centered: "_1HqKtO0h5lgj9h0J4mUz51",
@@ -816,8 +817,11 @@
         EventEditorEventStatus: "_3dxy2T8x1pk6OjFgWQSTCE",
         EventHidden: "_3oD7cGykuzlqnfVXev8JDs",
         EventVisible: "_3sin0w04DXfKLZH9M923t8",
+        EventBarBackAndTitle: "_1rQbs6JYrj8dcI7ulhqAHq",
         EventBarTitleCtn: "_1bUXkxwlWqoLUkJx4mP5E",
         EventBarTitle: "_3K6Ror7Nj83ysihgViAvjd",
+        EventEditButtons: "_3N6fzJF2V9mi47EHYuAEiK",
+        EventStatus: "_3uDnLpoGwbP-lVipnNwJTm",
         EventBarBack: "BUxe5edxrjnB3sckTkcDh",
         EditPreviewButton: "_3NmFFZyqnB0ITWJGvJNDqk",
         Delete: "_2GdGzjX59SeWcOhf9bGYki",
@@ -3755,40 +3759,21 @@
           return this.m_bFocused;
         }
         GetWindowRestoreDetails() {
-          return this.m_popup &&
-            !this.m_popup.closed &&
-            this.m_popup.SteamClient
-            ? new Promise((e, t) => {
-                this.m_popup.SteamClient.Window.GetWindowRestoreDetails((t) => {
-                  e(t);
-                });
-              })
+          return (0, C.w3)(this.m_popup, "Window.GetWindowRestoreDetails") &&
+            !this.m_popup.closed
+            ? this.m_popup.SteamClient.Window.GetWindowRestoreDetails()
             : Promise.resolve("");
         }
         IsMinimized() {
-          return this.m_popup &&
-            !this.m_popup.closed &&
-            this.m_popup.SteamClient &&
-            this.m_popup.SteamClient.Window &&
-            this.m_popup.SteamClient.Window.IsWindowMinimized
-            ? new Promise((e, t) => {
-                this.m_popup.SteamClient.Window.IsWindowMinimized((t) => {
-                  e(t);
-                });
-              })
+          return (0, C.w3)(this.m_popup, "Window.IsWindowMinimized") &&
+            !this.m_popup.closed
+            ? this.m_popup.SteamClient.Window.IsWindowMinimized()
             : Promise.resolve(!1);
         }
         IsMaximized() {
-          return this.m_popup &&
-            !this.m_popup.closed &&
-            this.m_popup.SteamClient &&
-            this.m_popup.SteamClient.Window &&
-            this.m_popup.SteamClient.Window.IsWindowMinimized
-            ? new Promise((e, t) => {
-                this.m_popup.SteamClient.Window.IsWindowMaximized((t) => {
-                  e(t);
-                });
-              })
+          return (0, C.w3)(this.m_popup, "Window.IsWindowMaximized") &&
+            !this.m_popup.closed
+            ? this.m_popup.SteamClient.Window.IsWindowMaximized()
             : Promise.resolve(!1);
         }
         ReleasePopup() {
@@ -11215,6 +11200,7 @@
                 T.ValidateDataRequest(n),
                 "Invalid Data Request: " + JSON.stringify(n),
               ),
+              "string" == typeof e && (e = parseInt(e)),
               this.m_bActivelyResettingCache)
             )
               return (
@@ -11912,7 +11898,7 @@
     },
     886: (e, t, n) => {
       "use strict";
-      n.d(t, { vs: () => c });
+      n.d(t, { Vm: () => u, vs: () => c });
       var i = n(751),
         r = n.n(i),
         o = n(7427),
@@ -11990,6 +11976,31 @@
       }
       function c(e, t, n) {
         return l(e, 0, t, n);
+      }
+      function u(e, t, n) {
+        const [i, s] = l(e, t, n),
+          [a, u] = (0, o.useState)(null),
+          [d, m] = c(a, n);
+        return (
+          (0, o.useEffect)(() => {
+            var e;
+            const t = r().CancelToken.source();
+            if (
+              1 == (null == i ? void 0 : i.GetStoreItemType()) &&
+              1 == (null == i ? void 0 : i.GetIncludedAppIDs().length)
+            ) {
+              const n = i.GetIncludedAppIDs()[0];
+              a != n &&
+                ((null === (e = null == t ? void 0 : t.token) || void 0 === e
+                  ? void 0
+                  : e.reason) ||
+                  u(n));
+            }
+            return () =>
+              t.cancel("useStoreItemCacheOrPackageSingleApp: unmounting");
+          }, [a, i]),
+          a ? [d, m] : [i, s]
+        );
       }
     },
     7476: (e, t, n) => {
@@ -12999,7 +13010,7 @@
           }
           null === (i = this.parentWin) ||
             void 0 === i ||
-            i.SteamClient.Window.GetWindowRestoreDetails((e) => {
+            i.SteamClient.Window.GetWindowRestoreDetails().then((e) => {
               const t = this.state.menuLeft - this.parentWin.screenX,
                 n = this.state.menuTop - this.parentWin.screenY;
               try {
@@ -13101,13 +13112,9 @@
           (a &&
             "tagName" in a &&
             (("INPUT" != a.tagName && "TEXTAREA" != a.tagName) || (l = !0)),
-          I.De.IN_CLIENT &&
-            l &&
-            n.SteamClient._internal &&
-            n.SteamClient._internal.GetSpellingSuggestions &&
-            n.SteamClient._internal.AddWordToDictionary)
+          I.De.IN_CLIENT && l && (0, p.w3)(n, "Browser.GetSpellingSuggestions"))
         ) {
-          let [e, ...i] = n.SteamClient._internal.GetSpellingSuggestions(),
+          let [e, ...i] = n.SteamClient.Browser.GetSpellingSuggestions(),
             r = a;
           if (
             (r &&
@@ -13132,7 +13139,7 @@
                   ),
                 );
               }),
-            e)
+            e && (0, p.w3)(n, "Browser.AddWordToDictionary"))
           ) {
             const i = 30;
             (e = e.trim()),
@@ -13141,13 +13148,8 @@
                   A,
                   {
                     key: `addtodictionary_${e}`,
-                    onSelected: () => {
-                      var t;
-                      return null === (t = n.SteamClient._internal) ||
-                        void 0 === t
-                        ? void 0
-                        : t.AddWordToDictionary(e);
-                    },
+                    onSelected: () =>
+                      n.SteamClient.Browser.AddWordToDictionary(e),
                   },
                   (0, S.Xx)(
                     "#ContextMenu_AddToDictionary",
@@ -13187,19 +13189,14 @@
             ),
           I.De.IN_CLIENT &&
             l &&
-            n.SteamClient._internal &&
-            n.SteamClient._internal.Paste &&
+            (0, p.w3)(n, "Browser.Paste") &&
             t.push(
               o.createElement(
                 A,
                 {
                   key: "paste",
                   onSelected: () => {
-                    var e;
-                    a.focus(),
-                      null === (e = n.SteamClient._internal) ||
-                        void 0 === e ||
-                        e.Paste();
+                    a.focus(), n.SteamClient.Browser.Paste();
                   },
                   className: f().NoSeparation,
                 },
@@ -23379,16 +23376,15 @@
       function s(e) {
         const [t, n] = i.useState(!1),
           s = i.useCallback(() => {
-            e &&
-              ((0, r.w3)(e, "Window.IsWindowMaximized")
-                ? e.SteamClient.Window.IsWindowMaximized((e) => {
-                    n(e);
-                  })
-                : e.screen &&
-                  n(
-                    e.screen.availWidth == e.innerWidth &&
-                      e.screen.availHeight == e.innerHeight,
-                  ));
+            (0, r.w3)(e, "Window.IsWindowMaximized")
+              ? e.SteamClient.Window.IsWindowMaximized().then((e) => {
+                  n(e);
+                })
+              : (null == e ? void 0 : e.screen) &&
+                n(
+                  e.screen.availWidth == e.innerWidth &&
+                    e.screen.availHeight == e.innerHeight,
+                );
           }, [e]);
         return (
           i.useEffect(s, [s, e]),
@@ -25293,7 +25289,8 @@
             height: 600,
             rgAcceptableTypes: we,
           },
-          spotlight_art: { width: 306, height: 350, rgAcceptableTypes: De },
+          spotlight_art: { width: 306, height: 260, rgAcceptableTypes: De },
+          old_spotlight_art: { width: 306, height: 350, rgAcceptableTypes: De },
           marketingmessage_art: {
             width: 570,
             height: 600,

@@ -260,8 +260,8 @@
         return ["parentalsettings", e];
       }
       function b(e) {
-        const t = e.applist_base().concat(e.applist_custom());
-        return new Map(t.map((e) => [e.appid(), e.is_allowed()]));
+        const t = e.applist_base.concat(e.applist_custom);
+        return new Map(t.map((e) => [e.appid, e.is_allowed]));
       }
       function L(e, t) {
         return (0, n.mG)(this, void 0, void 0, function* () {
@@ -272,8 +272,11 @@
             throw new Error(
               `Error from GetParentalSettings: ${n.GetEResult()}`,
             );
-          const o = b(n.Body().settings());
-          return { settings: n.Body().settings(), mapAppsAllowed: o };
+          const o = b(n.Body().settings().toObject());
+          return {
+            settings: n.Body().settings().toObject(),
+            mapAppsAllowed: o,
+          };
         });
       }
       function R(e) {
@@ -315,11 +318,11 @@
       }
       function P(e, t, i) {
         if (!e) return !0;
-        if (!e.is_enabled()) return !1;
+        if (!e.is_enabled) return !1;
         if (t == _.zE || null == t) return !1;
         if (!i) return !1;
         if (t == _.JY) return !0;
-        const n = e.enabled_features();
+        const n = e.enabled_features;
         return !n || 0 == (n & (1 << t));
       }
       const w = (e) => (t, i, n) =>
@@ -501,7 +504,7 @@
       function U(e) {
         return !!O(e);
       }
-      const M = [3, 5, 2, 4, 8, 9, 12];
+      const M = [3, 5, 2, 4, 8, 9, 12, 22];
       function x(e) {
         return null != M.findIndex((t) => t == e);
       }
@@ -551,6 +554,7 @@
               parental_playtime_requests: 0,
               parental_feature_access_responses: 0,
               parental_playtime_responses: 0,
+              requested_game_added: 0,
             }),
             (this.m_bLoaded = !1),
             (this.m_nUnviewed = 0),
@@ -704,6 +708,7 @@
                   parental_playtime_requests: 0,
                   parental_feature_access_responses: 0,
                   parental_playtime_responses: 0,
+                  requested_game_added: 0,
                 },
                 {
                   pending_gifts: this.m_summary.pending_gifts,
@@ -788,6 +793,7 @@
               parental_playtime_requests: 0,
               parental_feature_access_responses: 0,
               parental_playtime_responses: 0,
+              requested_game_added: 0,
             },
             m = 0;
           null ===
@@ -1079,6 +1085,12 @@
         switch (e) {
           case 2:
             return r.gifter_account;
+          case 22:
+            return {
+              responder_steamid: r.responder_steamid,
+              package_id: r.package_id,
+              bundle_id: r.bundle_id,
+            };
           case 9:
             return parseInt(r.sender);
           case 8:
@@ -1115,7 +1127,7 @@
             return (
               r.json_data &&
                 (s.json_data = {
-                  app_id: r.json_data.app_id,
+                  app_id: parseInt(r.json_data.app_id),
                   file_type: parseInt(r.json_data.file_type),
                   title: r.json_data.title,
                 }),
@@ -1188,6 +1200,7 @@
           eFeature: _.zE,
         },
         21: { rollup_field: "parental_playtime_responses", eFeature: _.zE },
+        22: { rollup_field: "requested_game_added", eFeature: _.zE },
       };
       function se(e) {
         const t = re[e];
@@ -3304,6 +3317,46 @@
             }),
           );
         },
+        22: function (e) {
+          const {
+              rollup: t,
+              onNotificationClick: i,
+              location: n,
+              uimode: r,
+              onHide: s,
+            } = e,
+            l = `${g.De.STORE_BASE_URL}account/familymanagement?tab=requests`,
+            c = ot(t),
+            m = d.K.InitFromAccountID(c.responder_steamid),
+            { data: u } = Et(m.GetAccountID()),
+            _ = c.package_id > 0 ? c.package_id : c.bundle_id,
+            p = c.package_id > 0 ? 1 : 2,
+            [f] = (0, he.Vm)(_, p, {}),
+            h = !u || !f,
+            y = (0, S.Xx)("#SteamNotifications_RequestedGameAddedTitle"),
+            v = (0, S.Xx)(
+              "#SteamNotifications_RequestedGameAddedBody",
+              null == f ? void 0 : f.GetName(),
+            );
+          return o.createElement(
+            "a",
+            { href: l, onMouseDown: (e) => i(() => {}, t.item, e) },
+            o.createElement(Ke, {
+              title: y,
+              body: v,
+              bDataLoading: h,
+              logoUrl: null == u ? void 0 : u.avatar_url_medium,
+              icon: o.createElement(a.ui7, null),
+              onActivate: () => i(() => window.location.assign(l), t.item),
+              location: n,
+              eUIMode: r,
+              timestamp: t.timestamp,
+              nUnread: t.rgunread.length,
+              bNewIndicator: ce(t.item),
+              onHide: s,
+            }),
+          );
+        },
       };
       function Rt(e) {
         const { rollup: t, uimode: i, location: n } = e,
@@ -3610,7 +3663,7 @@
                   return (0, n.mG)(this, void 0, void 0, function* () {
                     let t = null;
                     try {
-                      t = yield (function (e, t, i, o = !0) {
+                      t = yield (function (e, t, i, o, a, l = !0) {
                         return (0, n.mG)(this, void 0, void 0, function* () {
                           if (!t)
                             throw new Error(
@@ -3618,23 +3671,37 @@
                             );
                           const n = s.gA.Init(r.BX);
                           n.Body().set_language(i),
-                            n.Body().set_include_read(o),
+                            n.Body().set_include_read(l),
                             n.Body().set_include_pinned_counts(!0);
-                          const a = yield r.ST.GetSteamNotifications(e, n);
-                          if (1 !== a.GetEResult())
+                          const c = yield r.ST.GetSteamNotifications(e, n);
+                          if (1 !== c.GetEResult())
                             throw (
                               (Z(
-                                `Received error from GetSteamNotifications. Result ${a.GetEResult()}. Transport ${a
+                                `Received error from GetSteamNotifications. Result ${c.GetEResult()}. Transport ${c
                                   .Hdr()
                                   .transport_error()}`,
                               ),
                               new Error(
-                                `Error from GetSteamNotifications: ${a.GetEResult()}`,
+                                `Error from GetSteamNotifications: ${c.GetEResult()}`,
                               ))
                             );
-                          return a.Body().toObject();
+                          const m = c.Body().toObject();
+                          return (
+                            (m.notifications = m.notifications.filter((e) => {
+                              const t = se(e.notification_type);
+                              return !P(o, t.eFeature, a);
+                            })),
+                            m
+                          );
                         });
-                      })(e, g.L7.steamid, (0, mt.jM)(g.De.LANGUAGE), !1);
+                      })(
+                        e,
+                        g.L7.steamid,
+                        (0, mt.jM)(g.De.LANGUAGE),
+                        void 0,
+                        !1,
+                        !1,
+                      );
                     } catch (e) {}
                     t && Ct.ProcessNewNotificationPayload(t);
                   });

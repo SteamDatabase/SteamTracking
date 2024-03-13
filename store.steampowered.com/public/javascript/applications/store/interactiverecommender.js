@@ -91,24 +91,33 @@
     },
     80212: (e, t, i) => {
       "use strict";
-      i.d(t, { X: () => m, _: () => u });
+      i.d(t, { Xt: () => p, _I: () => h, hx: () => u });
       var a = i(47427),
         s = i(90069),
         n = i(31846),
         o = i(37563),
         l = i(99327),
         r = i(77581),
-        d = i(35791);
-      function c(e) {
+        d = i(35791),
+        c = i(27438);
+      function m(e) {
         return a.createElement(
           s.e1,
           { onEscKeypress: e.closeModal, bDisableBackgroundDismiss: !0 },
-          a.createElement(p, { redirectURL: e.redirectURL }),
+          a.createElement(g, { redirectURL: e.redirectURL }),
         );
       }
-      function m() {
+      function u(e) {
+        const { redirectURL: t = window.location.href } = e;
+        return a.createElement(
+          c.Yy,
+          { active: !0 },
+          a.createElement(m, { redirectURL: t }),
+        );
+      }
+      function p() {
         (0, s.AM)(
-          a.createElement(c, {
+          a.createElement(m, {
             ownerWin: window,
             redirectURL: window.location.href,
           }),
@@ -116,14 +125,14 @@
           { strTitle: (0, n.Xx)("#Login_SignIn") },
         );
       }
-      function u(e) {
+      function h(e) {
         (0, s.AM)(
-          a.createElement(c, { ownerWin: window, redirectURL: e }),
+          a.createElement(m, { ownerWin: window, redirectURL: e }),
           window,
           { strTitle: (0, n.Xx)("#Login_SignIn") },
         );
       }
-      function p(e) {
+      function g(e) {
         const { redirectURL: t } = e,
           [i] = (0, a.useState)(
             new r.J(o.De.WEBAPI_BASE_URL).GetAnonymousServiceTransport(),
@@ -734,7 +743,7 @@
             )
           );
         },
-        A = ({ appID: e, name: t, hours: i, lastPlayed: a, ignored: s }) => {
+        I = ({ appID: e, name: t, hours: i, lastPlayed: a, ignored: s }) => {
           const n = `${v.CDN_URL}apps/${e}/header.jpg`,
             o = Date.now() / 1e3 - a;
           let l = "",
@@ -779,7 +788,7 @@
             )
           );
         };
-      let I = class extends r.Component {
+      let A = class extends r.Component {
         constructor(e) {
           super(e), (this.state = {});
         }
@@ -803,7 +812,7 @@
             Object.keys(i).map((e) => {
               const a = i[e];
               t.push(
-                r.createElement(A, {
+                r.createElement(I, {
                   key: "PlayedGame_" + a.a,
                   appID: a.a,
                   name: a.t,
@@ -827,7 +836,7 @@
           );
         }
       };
-      I = (0, s.gn)([o.Pi], I);
+      A = (0, s.gn)([o.Pi], A);
       const x = ({
           titleLabel: e,
           minLabel: t,
@@ -1173,8 +1182,8 @@
             L = !1,
             D = !0,
             N = "",
-            A = "",
             I = "",
+            A = "",
             x = "",
             C = "",
             P = !1,
@@ -1196,8 +1205,8 @@
                 ? ((C = e.microtrailer_mp4), (P = !0), (U = !1))
                 : (C = e.video_mp4),
               (N = `-${e.discount_pct}%`),
-              (A = e.base_price),
-              (I = D ? (0, u.Xx)("#FreeToPlay") : e.discount_price),
+              (I = e.base_price),
+              (A = D ? (0, u.Xx)("#FreeToPlay") : e.discount_price),
               (x = e.description));
           }
           const w = C && C.length > 0;
@@ -1212,10 +1221,10 @@
                   h.RecommendationEntry,
                   "ds_flagged",
                   "ds_wishlist",
-                  i > 30 && h.Hidden,
+                  i > 32 && h.Hidden,
                   S && h.Hovered,
                 ),
-                style: { top: Math.min(31, i) * E },
+                style: { top: Math.min(33, i) * E },
                 onMouseEnter: this.OnHover,
                 onMouseLeave: this.OnUnHover,
               },
@@ -1342,12 +1351,12 @@
                                 r.createElement(
                                   "div",
                                   { className: "discount_original_price" },
-                                  A,
+                                  I,
                                 ),
                                 r.createElement(
                                   "div",
                                   { className: "discount_final_price" },
-                                  I,
+                                  A,
                                 ),
                               ),
                             ),
@@ -1361,7 +1370,7 @@
                                   h.Price,
                                 ),
                               },
-                              I,
+                              A,
                             ),
                           !D &&
                             r.createElement(
@@ -1506,7 +1515,7 @@
               (t = t.filter((e) => e.score > 0));
             let i = t.sort((e, t) => t.score - e.score);
             if (i.length > 0) {
-              i = i.slice(0, 30);
+              i = i.slice(0, 32);
               let e = 0;
               for (let t of i) (t.rank = e), e++;
               for (const e of i)
@@ -1571,7 +1580,7 @@
           window.addEventListener("resize", this.updateDimensions);
         }
         ShowLoginDialog() {
-          (0, L.X)();
+          (0, L.Xt)();
         }
         render() {
           return n.L7.logged_in
@@ -1608,7 +1617,7 @@
                     r.createElement(
                       "div",
                       { className: h.BottomSection },
-                      r.createElement(I, { accountID: n.L7.accountid }),
+                      r.createElement(A, { accountID: n.L7.accountid }),
                       r.createElement("div", { className: h.VerticalBar }),
                       r.createElement(b, { width: this.state.width }),
                     ),

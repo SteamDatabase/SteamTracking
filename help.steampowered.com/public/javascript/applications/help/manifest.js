@@ -1,74 +1,74 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "8745821";
+var CLSTAMP = "8760940";
 (() => {
   "use strict";
-  var a,
-    e,
+  var e,
+    a,
     n,
     o,
     i,
     t = {},
     r = {};
-  function l(a) {
-    var e = r[a];
-    if (void 0 !== e) return e.exports;
-    var n = (r[a] = { id: a, loaded: !1, exports: {} });
-    return t[a].call(n.exports, n, n.exports, l), (n.loaded = !0), n.exports;
+  function l(e) {
+    var a = r[e];
+    if (void 0 !== a) return a.exports;
+    var n = (r[e] = { id: e, loaded: !1, exports: {} });
+    return t[e].call(n.exports, n, n.exports, l), (n.loaded = !0), n.exports;
   }
   (l.m = t),
-    (a = []),
-    (l.O = (e, n, o, i) => {
+    (e = []),
+    (l.O = (a, n, o, i) => {
       if (!n) {
         var t = 1 / 0;
-        for (d = 0; d < a.length; d++) {
-          for (var [n, o, i] = a[d], r = !0, c = 0; c < n.length; c++)
-            (!1 & i || t >= i) && Object.keys(l.O).every((a) => l.O[a](n[c]))
+        for (d = 0; d < e.length; d++) {
+          for (var [n, o, i] = e[d], r = !0, c = 0; c < n.length; c++)
+            (!1 & i || t >= i) && Object.keys(l.O).every((e) => l.O[e](n[c]))
               ? n.splice(c--, 1)
               : ((r = !1), i < t && (t = i));
           if (r) {
-            a.splice(d--, 1);
+            e.splice(d--, 1);
             var s = o();
-            void 0 !== s && (e = s);
+            void 0 !== s && (a = s);
           }
         }
-        return e;
+        return a;
       }
       i = i || 0;
-      for (var d = a.length; d > 0 && a[d - 1][2] > i; d--) a[d] = a[d - 1];
-      a[d] = [n, o, i];
+      for (var d = e.length; d > 0 && e[d - 1][2] > i; d--) e[d] = e[d - 1];
+      e[d] = [n, o, i];
     }),
-    (l.n = (a) => {
-      var e = a && a.__esModule ? () => a.default : () => a;
-      return l.d(e, { a: e }), e;
+    (l.n = (e) => {
+      var a = e && e.__esModule ? () => e.default : () => e;
+      return l.d(a, { a }), a;
     }),
     (n = Object.getPrototypeOf
-      ? (a) => Object.getPrototypeOf(a)
-      : (a) => a.__proto__),
-    (l.t = function (a, o) {
-      if ((1 & o && (a = this(a)), 8 & o)) return a;
-      if ("object" == typeof a && a) {
-        if (4 & o && a.__esModule) return a;
-        if (16 & o && "function" == typeof a.then) return a;
+      ? (e) => Object.getPrototypeOf(e)
+      : (e) => e.__proto__),
+    (l.t = function (e, o) {
+      if ((1 & o && (e = this(e)), 8 & o)) return e;
+      if ("object" == typeof e && e) {
+        if (4 & o && e.__esModule) return e;
+        if (16 & o && "function" == typeof e.then) return e;
       }
       var i = Object.create(null);
       l.r(i);
       var t = {};
-      e = e || [null, n({}), n([]), n(n)];
-      for (var r = 2 & o && a; "object" == typeof r && !~e.indexOf(r); r = n(r))
-        Object.getOwnPropertyNames(r).forEach((e) => (t[e] = () => a[e]));
-      return (t.default = () => a), l.d(i, t), i;
+      a = a || [null, n({}), n([]), n(n)];
+      for (var r = 2 & o && e; "object" == typeof r && !~a.indexOf(r); r = n(r))
+        Object.getOwnPropertyNames(r).forEach((a) => (t[a] = () => e[a]));
+      return (t.default = () => e), l.d(i, t), i;
     }),
-    (l.d = (a, e) => {
-      for (var n in e)
-        l.o(e, n) &&
-          !l.o(a, n) &&
-          Object.defineProperty(a, n, { enumerable: !0, get: e[n] });
+    (l.d = (e, a) => {
+      for (var n in a)
+        l.o(a, n) &&
+          !l.o(e, n) &&
+          Object.defineProperty(e, n, { enumerable: !0, get: a[n] });
     }),
     (l.f = {}),
-    (l.e = (a) =>
-      Promise.all(Object.keys(l.f).reduce((e, n) => (l.f[n](a, e), e), []))),
-    (l.u = (a) =>
+    (l.e = (e) =>
+      Promise.all(Object.keys(l.f).reduce((a, n) => (l.f[n](e, a), a), []))),
+    (l.u = (e) =>
       "javascript/applications/help/" +
       {
         27: "localization/shared_japanese-json",
@@ -135,89 +135,89 @@ var CLSTAMP = "8745821";
         9665: "localization/main_english-json",
         9854: "localization/shared_portuguese-json",
         9951: "localization/shared_latam-json",
-      }[a] +
+      }[e] +
       ".js?contenthash=" +
       {
-        27: "655e82928f1cdfcea6e4",
+        27: "75250379213566e11b98",
         113: "b5d4caf90f7caf0dee3b",
-        131: "dabc982955b254cfb41c",
-        146: "0b1de084b2dff78f49d7",
+        131: "d40a1c15bd4c71d71cc8",
+        146: "58989310086fc3d7f21d",
         301: "ea4c812ec8282d437757",
         617: "4678b8cee7575f7fa84a",
-        755: "128b9733ddf785141cdb",
+        755: "075a86f922a7e407bd67",
         1133: "33d9bf43d15fd73fbf73",
         1195: "4d2f66789f588b62683d",
-        1261: "1462c5a1b4e27b4fdb12",
+        1261: "3ca78210f68af4530893",
         1311: "e26a4bb1bbfb0dc024b8",
-        1579: "c829be8d22acef496375",
-        1953: "bad46d3d186df154d308",
-        2138: "d03921f1ea7737700d1f",
+        1579: "c1a50388046fb00d1a92",
+        1953: "3aa281196dce0a320be3",
+        2138: "3faa09b01e7f8d7af7ed",
         2351: "acbd46339c93c36bf74b",
         2557: "04a0663e0331ad0d65c5",
         2603: "5a8cc9124d7289832f3c",
-        2738: "97456e21019054d8eb6f",
-        2822: "c8727abc2e18f3979698",
+        2738: "ef70ab71adc3ce8e2084",
+        2822: "e2089f9f661a02aaa03d",
         3038: "6311b223247f38dbe6cc",
-        3068: "05cd765a15e9a3158461",
-        3298: "72981103a2dafdd32ff6",
-        3602: "3525664e8213a66d65ee",
-        4097: "a41ee3410acdac53b629",
+        3068: "1479c591b84efe8cf48c",
+        3298: "b5957037549fa509669c",
+        3602: "f63eed86b26de5d347cc",
+        4097: "3fa46fcd67185ec55d0a",
         4103: "531763b9b78ce879c9b3",
-        4183: "2b2542da3f777cb2cd96",
+        4183: "4cd8e2a65a7d7cb9417f",
         4358: "72a16fc22cb26ece5906",
-        4445: "db697ae9c945b1c94027",
-        4469: "faeb5a84fdf9a54393e6",
-        4487: "09cdb789b18167e2299a",
-        4513: "3d0cfad9b371f522159a",
-        4729: "bdfb953f8918feb9aa35",
+        4445: "133f97264851713ed962",
+        4469: "0e7ac359652e502cfd2f",
+        4487: "c1cb782b168025adde8b",
+        4513: "66f409ea1e539d2f7833",
+        4729: "8656d14ed0cf92da21dc",
         5012: "11b95c260960a9af6590",
         5277: "8e70831c6929afa88988",
-        5279: "6b3fa332698f605f95f4",
-        5425: "0280c1b7048ff0e9f39c",
+        5279: "db6373530c2a16c01841",
+        5425: "b99ed47cf49fadb4800a",
         5493: "949cac5aab217e9966a6",
         5757: "84b638c8c296bf52b473",
         6091: "2d2e4607238e1455bd16",
-        6403: "1c539211f323b9cca3f8",
+        6403: "db3bbf1e3a5bd0dd9988",
         6415: "1351821a2bbd22685664",
         6457: "5c75ce3bb435ae00fc75",
-        6844: "ebe4b0c2462b71bdb90a",
+        6844: "a5d6401dd74639458341",
         6962: "e16f5bf8336bcd62fbfa",
         7629: "4a52863903a9e3d15d9a",
-        7660: "bdf36ea478a17b65ba26",
+        7660: "70c17f405caba5639432",
         7769: "c8096602e4d0e164f8b2",
-        7781: "b828e8b7f3261591a51d",
+        7781: "49165bb330dea01c1aab",
         7832: "bed76caaf847ceaf2942",
         7901: "5864c68067f747108df8",
-        8085: "ce72df1d1c57bd9bf8b9",
+        8085: "fe12d06cb449b28e4555",
         8274: "84388749081deb350892",
         8282: "0b677400cb632c3cfa80",
         8291: "28f9ab007bda4bfb1683",
         8427: "6f4423620fd93e072168",
-        8433: "b1c4234e8ca9f92b3145",
+        8433: "df05c6ab25b9aafba6db",
         8525: "e4cd8e1869c63e25464f",
         8592: "e45fe9f89bd7fdbd1e7d",
         9233: "0c32af143443c3f3401f",
         9389: "0dc5fcaf507611027d14",
-        9547: "d420ec3ee128d791a115",
+        9547: "f339cf58c31cc3ca4b2b",
         9665: "210f1d37285a5dda7678",
-        9854: "6fbd824983dbc1cf8c3c",
-        9951: "6ca99246abe4f6de64fa",
-      }[a]),
-    (l.miniCssF = (a) =>
+        9854: "2634baabd0dbed6ae780",
+        9951: "bbd63d058cd5c7197e26",
+      }[e]),
+    (l.miniCssF = (e) =>
       "css/applications/help/greenenvelope.css?contenthash=2dba4a369c04ed7ece15"),
     (l.g = (function () {
       if ("object" == typeof globalThis) return globalThis;
       try {
         return this || new Function("return this")();
-      } catch (a) {
+      } catch (e) {
         if ("object" == typeof window) return window;
       }
     })()),
-    (l.o = (a, e) => Object.prototype.hasOwnProperty.call(a, e)),
+    (l.o = (e, a) => Object.prototype.hasOwnProperty.call(e, a)),
     (o = {}),
     (i = "Help:"),
-    (l.l = (a, e, n, t) => {
-      if (o[a]) o[a].push(e);
+    (l.l = (e, a, n, t) => {
+      if (o[e]) o[e].push(a);
       else {
         var r, c;
         if (void 0 !== n)
@@ -228,7 +228,7 @@ var CLSTAMP = "8745821";
           ) {
             var f = s[d];
             if (
-              f.getAttribute("src") == a ||
+              f.getAttribute("src") == e ||
               f.getAttribute("data-webpack") == i + n
             ) {
               r = f;
@@ -241,44 +241,44 @@ var CLSTAMP = "8745821";
           (r.timeout = 120),
           l.nc && r.setAttribute("nonce", l.nc),
           r.setAttribute("data-webpack", i + n),
-          (r.src = a)),
-          (o[a] = [e]);
-        var b = (e, n) => {
-            (r.onerror = r.onload = null), clearTimeout(h);
-            var i = o[a];
+          (r.src = e)),
+          (o[e] = [a]);
+        var h = (a, n) => {
+            (r.onerror = r.onload = null), clearTimeout(b);
+            var i = o[e];
             if (
-              (delete o[a],
+              (delete o[e],
               r.parentNode && r.parentNode.removeChild(r),
-              i && i.forEach((a) => a(n)),
-              e)
+              i && i.forEach((e) => e(n)),
+              a)
             )
-              return e(n);
+              return a(n);
           },
-          h = setTimeout(
-            b.bind(null, void 0, { type: "timeout", target: r }),
+          b = setTimeout(
+            h.bind(null, void 0, { type: "timeout", target: r }),
             12e4,
           );
-        (r.onerror = b.bind(null, r.onerror)),
-          (r.onload = b.bind(null, r.onload)),
+        (r.onerror = h.bind(null, r.onerror)),
+          (r.onload = h.bind(null, r.onload)),
           c && document.head.appendChild(r);
       }
     }),
-    (l.r = (a) => {
+    (l.r = (e) => {
       "undefined" != typeof Symbol &&
         Symbol.toStringTag &&
-        Object.defineProperty(a, Symbol.toStringTag, { value: "Module" }),
-        Object.defineProperty(a, "__esModule", { value: !0 });
+        Object.defineProperty(e, Symbol.toStringTag, { value: "Module" }),
+        Object.defineProperty(e, "__esModule", { value: !0 });
     }),
-    (l.nmd = (a) => ((a.paths = []), a.children || (a.children = []), a)),
+    (l.nmd = (e) => ((e.paths = []), e.children || (e.children = []), e)),
     (l.p = ""),
     (() => {
       if ("undefined" != typeof document) {
-        var a = (a) =>
-            new Promise((e, n) => {
-              var o = l.miniCssF(a),
+        var e = (e) =>
+            new Promise((a, n) => {
+              var o = l.miniCssF(e),
                 i = l.p + o;
               if (
-                ((a, e) => {
+                ((e, a) => {
                   for (
                     var n = document.getElementsByTagName("link"), o = 0;
                     o < n.length;
@@ -287,22 +287,22 @@ var CLSTAMP = "8745821";
                     var i =
                       (r = n[o]).getAttribute("data-href") ||
                       r.getAttribute("href");
-                    if ("stylesheet" === r.rel && (i === a || i === e))
+                    if ("stylesheet" === r.rel && (i === e || i === a))
                       return r;
                   }
                   var t = document.getElementsByTagName("style");
                   for (o = 0; o < t.length; o++) {
                     var r;
                     if (
-                      (i = (r = t[o]).getAttribute("data-href")) === a ||
-                      i === e
+                      (i = (r = t[o]).getAttribute("data-href")) === e ||
+                      i === a
                     )
                       return r;
                   }
                 })(o, i)
               )
-                return e();
-              ((a, e, n, o, i) => {
+                return a();
+              ((e, a, n, o, i) => {
                 var t = document.createElement("link");
                 (t.rel = "stylesheet"),
                   (t.type = "text/css"),
@@ -312,10 +312,10 @@ var CLSTAMP = "8745821";
                         o();
                       else {
                         var r = n && n.type,
-                          l = (n && n.target && n.target.href) || e,
+                          l = (n && n.target && n.target.href) || a,
                           c = new Error(
                             "Loading CSS chunk " +
-                              a +
+                              e +
                               " failed.\n(" +
                               r +
                               ": " +
@@ -330,25 +330,25 @@ var CLSTAMP = "8745821";
                           i(c);
                       }
                     }),
-                  (t.href = e),
+                  (t.href = a),
                   n
                     ? n.parentNode.insertBefore(t, n.nextSibling)
                     : document.head.appendChild(t);
-              })(a, i, null, e, n);
+              })(e, i, null, a, n);
             }),
-          e = { 6700: 0 };
+          a = { 6700: 0 };
         l.f.miniCss = (n, o) => {
-          e[n]
-            ? o.push(e[n])
-            : 0 !== e[n] &&
+          a[n]
+            ? o.push(a[n])
+            : 0 !== a[n] &&
               { 3068: 1 }[n] &&
               o.push(
-                (e[n] = a(n).then(
+                (a[n] = e(n).then(
                   () => {
-                    e[n] = 0;
+                    a[n] = 0;
                   },
-                  (a) => {
-                    throw (delete e[n], a);
+                  (e) => {
+                    throw (delete a[n], e);
                   },
                 )),
               );
@@ -356,50 +356,50 @@ var CLSTAMP = "8745821";
       }
     })(),
     (() => {
-      var a = { 6700: 0 };
-      (l.f.j = (e, n) => {
-        var o = l.o(a, e) ? a[e] : void 0;
+      var e = { 6700: 0 };
+      (l.f.j = (a, n) => {
+        var o = l.o(e, a) ? e[a] : void 0;
         if (0 !== o)
           if (o) n.push(o[2]);
-          else if (6700 != e) {
-            var i = new Promise((n, i) => (o = a[e] = [n, i]));
+          else if (6700 != a) {
+            var i = new Promise((n, i) => (o = e[a] = [n, i]));
             n.push((o[2] = i));
-            var t = l.p + l.u(e),
+            var t = l.p + l.u(a),
               r = new Error();
             l.l(
               t,
               (n) => {
-                if (l.o(a, e) && (0 !== (o = a[e]) && (a[e] = void 0), o)) {
+                if (l.o(e, a) && (0 !== (o = e[a]) && (e[a] = void 0), o)) {
                   var i = n && ("load" === n.type ? "missing" : n.type),
                     t = n && n.target && n.target.src;
                   (r.message =
-                    "Loading chunk " + e + " failed.\n(" + i + ": " + t + ")"),
+                    "Loading chunk " + a + " failed.\n(" + i + ": " + t + ")"),
                     (r.name = "ChunkLoadError"),
                     (r.type = i),
                     (r.request = t),
                     o[1](r);
                 }
               },
-              "chunk-" + e,
-              e,
+              "chunk-" + a,
+              a,
             );
-          } else a[e] = 0;
+          } else e[a] = 0;
       }),
-        (l.O.j = (e) => 0 === a[e]);
-      var e = (e, n) => {
+        (l.O.j = (a) => 0 === e[a]);
+      var a = (a, n) => {
           var o,
             i,
             [t, r, c] = n,
             s = 0;
-          if (t.some((e) => 0 !== a[e])) {
+          if (t.some((a) => 0 !== e[a])) {
             for (o in r) l.o(r, o) && (l.m[o] = r[o]);
             if (c) var d = c(l);
           }
-          for (e && e(n); s < t.length; s++)
-            (i = t[s]), l.o(a, i) && a[i] && a[i][0](), (a[i] = 0);
+          for (a && a(n); s < t.length; s++)
+            (i = t[s]), l.o(e, i) && e[i] && e[i][0](), (e[i] = 0);
           return l.O(d);
         },
         n = (self.webpackChunkHelp = self.webpackChunkHelp || []);
-      n.forEach(e.bind(null, 0)), (n.push = e.bind(null, n.push.bind(n)));
+      n.forEach(a.bind(null, 0)), (n.push = a.bind(null, n.push.bind(n)));
     })();
 })();

@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "8756062";
+var CLSTAMP = "8761104";
 (() => {
   var e,
     t,
@@ -100,7 +100,7 @@ var CLSTAMP = "8756062";
         }
         (i.keys = () => Object.keys(s)), (i.id = 9014), (e.exports = i);
       },
-      16379: (e, t, n) => {
+      48114: (e, t, n) => {
         "use strict";
         function s(e, t, n, s) {
           var i,
@@ -155,7 +155,7 @@ var CLSTAMP = "8756062";
         Object.create;
         Object.create;
         "function" == typeof SuppressedError && SuppressedError;
-        n(86416);
+        n(23058);
         var r = n(27378),
           a = n(37634);
         function o(e) {
@@ -359,9 +359,9 @@ var CLSTAMP = "8756062";
           I = { ANNOUNCEMENT_GID: "", TAKEOVER_ANNOUNCEMENT_GID: "" };
         r.createContext({});
         let k = { success: !0, result: 1 };
-        class C {
+        class b {
           constructor() {
-            (this.m_connection = new b()),
+            (this.m_connection = new C()),
               (this.m_bAllowAccountMismatch = !1),
               (this.m_mapCacheSubscribedApp = new Map());
           }
@@ -442,7 +442,7 @@ var CLSTAMP = "8756062";
               .catch(() => this.FailureResult());
           }
         }
-        class b {
+        class C {
           constructor() {
             (this.m_mapWaitingCallbacks = new Map()),
               (this.m_iCallSeq = 1),
@@ -555,7 +555,7 @@ var CLSTAMP = "8756062";
             );
           }
         }
-        let v = new C();
+        let v = new b();
         window.ClientConnectionAPI = v;
         n(14206), n(19744);
         const T = 2147483647;
@@ -1637,7 +1637,7 @@ var CLSTAMP = "8756062";
           );
         }
         window.AssertMsg = X;
-        let de = new C();
+        let de = new b();
         function he(e) {
           let t;
           try {
@@ -1680,7 +1680,7 @@ var CLSTAMP = "8756062";
             });
           });
       },
-      86416: (e, t, n) => {
+      23058: (e, t, n) => {
         "use strict";
         "VALVE_PUBLIC_PATH" in window
           ? (n.p = window.VALVE_PUBLIC_PATH)
@@ -1912,65 +1912,65 @@ var CLSTAMP = "8756062";
       ".js?contenthash=" +
       {
         699: "d287362394c66301f6a5",
-        1162: "3906f76e0459297d196b",
-        1313: "7107e45bdd8f596b97f5",
+        1162: "ce87c90f39c9d87592f0",
+        1313: "beaa8a39130794d9fa41",
         1471: "32d2e1addd119c9a70d4",
         1635: "7fb5be12f6f106e555ae",
         2029: "4fdcd884a906cc678e8f",
         2431: "423f5ac04b6d9e2e0940",
-        2443: "5b6a6651a44eac48b335",
-        2537: "379ad1dff15b185dfb14",
+        2443: "89ecf2e7069782684352",
+        2537: "945f6687344fbb3315a2",
         2822: "499d328e9322732c7f24",
-        2844: "04df005abb4ff260bd4b",
+        2844: "1af1c9ec74f414ecfabf",
         2862: "70b5a10f55a9dbdc4089",
         2913: "565378b821b0f60d7f9e",
-        3112: "8721284dda340760b56a",
+        3112: "6a14ccd94bac413afdcf",
         3140: "e2daae18faf0f0c9eae9",
         3182: "c118628204fbab7d0494",
-        3252: "6928d1040942c207e69d",
+        3252: "7ade274d3a297474af53",
         3471: "1fa97f49b537a5fe3dc5",
         3500: "d1e224fca60b25b5aa2b",
-        3557: "1f26ff384659d45a8a2d",
-        4108: "d1d492ddfe10c5cc45fd",
-        4189: "efce3060d9854bb77598",
+        3557: "84dc10627f5fe61b64a1",
+        4108: "0cc57d874f9e93d935b1",
+        4189: "b931e078dcc06a00f008",
         4264: "28117007a2a71c0de1f3",
-        4297: "f9b81df75a17745aaa2f",
+        4297: "5f1f0c54a64f60c51097",
         4448: "3e213de66fdb4e0ad545",
         4596: "2959bbbbf75e4d2f7018",
         4716: "98123150e52e2a64b3f9",
-        4823: "8f16639b7af173d76f32",
-        4964: "dfb3b383fb4484cb8141",
+        4823: "3f066a831243fdadf21e",
+        4964: "cab3e57ddb6241021242",
         4989: "0e8c27f0588379f5b0d7",
-        5438: "d0cce016acd2cb6ef2ed",
-        5625: "6572633a8af3f70e8a0e",
+        5438: "511f20e3150072270f65",
+        5625: "97d9982b423ea1e0cda7",
         5632: "05176cb3768918b0b14c",
         5802: "9126f152932543539600",
-        5849: "72ad14236e9c39bde65a",
-        5925: "af6c1b942a21671a07ef",
-        5933: "a96ee787afccb6731891",
-        5948: "bab26357849bd545850c",
-        6007: "edf6559e0471aaf7470c",
-        6492: "672f6d49e09953f9a8d7",
-        6542: "1b97c2c871ec92692457",
+        5849: "b750d12845cbb7100871",
+        5925: "a23c7ec9382ea1e0154e",
+        5933: "ced50b7a1d39012e4316",
+        5948: "2dfd72f950b0e643518a",
+        6007: "ce164a182657320a64e1",
+        6492: "febbbfe165a27faa0439",
+        6542: "a7d93796c06fc3d83247",
         6646: "ead86708f0d676cd4c89",
         6727: "3398c84fd8a865364e2e",
         6986: "27f1b00b2abcb9e4e660",
         6992: "4ad80ddfef0256c67745",
         7340: "8eb3f934cdeab7467244",
         7575: "46fb161b176766f7c039",
-        7602: "6a6a6538bc05f65c99f2",
+        7602: "86bcd122bfaa3f47d409",
         7651: "ed21e68f4dc1763c7246",
         7706: "91b62cba38767f3b7a23",
-        7781: "0aae0ee93dd106c21441",
-        7975: "7b9aa1b653e12a670311",
+        7781: "278d5efa9ace17efc105",
+        7975: "f6f0da74cf7d386a0c73",
         8247: "d0562c540f1faa49f914",
-        8385: "73ecd34d14007f969156",
+        8385: "da3670897e4f73c98354",
         8518: "426f9ec21d5e84056226",
-        8754: "d9d91207149718dbb95b",
+        8754: "1650c01fe329be3e8c80",
         8815: "e149c4b04f53fd7ac7c5",
-        9062: "6230f9a130fb4bf44cf0",
+        9062: "88c9371007fe7da9fd4e",
         9263: "079af19a372abc43f518",
-        9753: "554911aadb81ca2d03e7",
+        9753: "2e290be25fe11f4de471",
         9775: "7f0e8f13b0ef51741526",
         9818: "47b2f0a64053c24d7596",
       }[e]),
@@ -2107,6 +2107,6 @@ var CLSTAMP = "8756062";
           self.webpackChunk_steam_friendsui || []);
       n.forEach(t.bind(null, 0)), (n.push = t.bind(null, n.push.bind(n)));
     })();
-  var c = o.O(void 0, [5968], () => o(16379));
+  var c = o.O(void 0, [5968], () => o(48114));
   c = o.O(c);
 })();

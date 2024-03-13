@@ -1193,7 +1193,7 @@
                 ),
                 strOKButtonText: (0, x.Xx)("#MobileLogin_SignIn"),
                 onCancel: this.props.closeModal,
-                onOK: () => (0, K.X)(),
+                onOK: () => (0, K.Xt)(),
               })
             : this.state.bShareOnSteamDialog
             ? i.createElement(Se, {
@@ -1484,7 +1484,7 @@
                           "#EventDisplay_Share_NotLoggedIn_Description",
                         ),
                         strOKButtonText: (0, x.Xx)("#MobileLogin_SignIn"),
-                        onOK: () => (0, K.X)(),
+                        onOK: () => (0, K.Xt)(),
                       }),
                       window,
                     ),
@@ -1744,7 +1744,7 @@
                   "#EventDisplay_Share_NotLoggedIn_Description",
                 ),
                 strOKButtonText: (0, x.Xx)("#MobileLogin_SignIn"),
-                onOK: K.X,
+                onOK: K.Xt,
               }),
               window,
             ),

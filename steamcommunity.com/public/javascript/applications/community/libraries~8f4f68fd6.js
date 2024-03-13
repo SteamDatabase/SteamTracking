@@ -1538,6 +1538,11 @@
                     br: a.FE.readUint32,
                     bw: a.Xc.writeUint32,
                   },
+                  cooldown_seconds_remaining: {
+                    n: 4,
+                    br: a.FE.readUint32,
+                    bw: a.Xc.writeUint32,
+                  },
                 },
               }),
             u.sm_m

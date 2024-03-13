@@ -1239,6 +1239,10 @@ button.DialogButton {
   background: radial-gradient(circle at top left, #736548 0%, #574b32 60%),
     #2c2f34;
 }
+._3Eq1xKY1WwNcrWb8SNq8tc._1-nxqgklmKGuYo-Bi5zbk9 .meAbe3Sy_IJ4PngdGme2- {
+  background: radial-gradient(circle at top left, #5d7348 0%, #415732 60%),
+    #2c2f34;
+}
 ._3Eq1xKY1WwNcrWb8SNq8tc ._3Rx6PQCCOXnDRoU__IULtr {
   width: 100%;
   height: 1px;
@@ -1342,7 +1346,7 @@ button.DialogButton {
 .NodeEditDialog ._1QBSM3805Z2GHFzssBcKQ6 {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 6px;
 }
 .NodeEditDialog ._1QBSM3805Z2GHFzssBcKQ6 ._9wvW1ljbcfIlj0ufibnHP {
   width: 100%;

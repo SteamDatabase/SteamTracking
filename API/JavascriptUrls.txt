@@ -939,6 +939,7 @@ ${PARTNER_BASE_URL}apps/landing/${appid}
 ${PARTNER_BASE_URL}apps/landing/${}
 ${PARTNER_BASE_URL}apps/requestkeys/${}
 ${PARTNER_BASE_URL}apps/suggestapps
+${PARTNER_BASE_URL}assetportal/localization/${}
 ${PARTNER_BASE_URL}bundles/suggestbundle
 ${PARTNER_BASE_URL}bundles/view/${}
 ${PARTNER_BASE_URL}cluster/ajaxcreatecluster
@@ -953,12 +954,12 @@ ${PARTNER_BASE_URL}dailydeals/ajaxresendinvitationemail
 ${PARTNER_BASE_URL}discounts/ajaxgetdiscountbyapp
 ${PARTNER_BASE_URL}discounts/ajaxgetdiscountbybundle
 ${PARTNER_BASE_URL}doc/${}
-${PARTNER_BASE_URL}doc/doc/marketing/discounts/seasonalsales
 ${PARTNER_BASE_URL}doc/features/playtest#4
 ${PARTNER_BASE_URL}doc/marketing/discounts
 ${PARTNER_BASE_URL}doc/marketing/discounts#limits
 ${PARTNER_BASE_URL}doc/marketing/discounts/dailydeal
 ${PARTNER_BASE_URL}doc/marketing/discounts/dailydeal/
+${PARTNER_BASE_URL}doc/marketing/discounts/seasonalsales
 ${PARTNER_BASE_URL}doc/marketing/event_tools/moderation
 ${PARTNER_BASE_URL}doc/marketing/event_tools/sales/livestream
 ${PARTNER_BASE_URL}doc/marketing/event_tools/steamawards
@@ -1234,7 +1235,6 @@ ${STORE_BASE_URL}cart
 ${STORE_BASE_URL}cart/
 ${STORE_BASE_URL}cart/addtocart
 ${STORE_BASE_URL}cart/ajaxredeemtokensforcartdiscount
-${STORE_BASE_URL}cart/ajaxsaledropprogress
 ${STORE_BASE_URL}cart/purchaserequest/${}/${}
 ${STORE_BASE_URL}cart/purchaserequested/${}
 ${STORE_BASE_URL}category/${category}
@@ -1454,7 +1454,6 @@ ${STORE_CDN_URL}public/images/footerLogo_valve_new.png
 ${STORE_CDN_URL}public/images/loyalty/reactions/${_ ? "animated" : "still"}/${}.png
 ${STORE_CDN_URL}public/images/v6/ico/ico_selected.png
 ${STORE_CDN_URL}public/shared/images/header/logo_steamchina.svg?t=962016
-${STORE_CHECKOUT_BASE_URL}checkout/
 ${STORE_CHECKOUT_BASE_URL}parental/ajaxunlock/
 ${STORE_ICON_BASE_URL}${appid}/${}
 ${STORE_ICON_BASE_URL}${appid}/header.jpg

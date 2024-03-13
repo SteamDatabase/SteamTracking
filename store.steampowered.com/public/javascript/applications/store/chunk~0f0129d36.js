@@ -2602,6 +2602,7 @@
       const ze = i.lazy(() =>
           Promise.all([
             n.e(460),
+            n.e(8015),
             n.e(9766),
             n.e(1021),
             n.e(8973),
@@ -2610,10 +2611,9 @@
             n.e(7247),
             n.e(9424),
             n.e(7695),
-            n.e(3243),
+            n.e(5164),
             n.e(344),
             n.e(259),
-            n.e(1979),
             n.e(4601),
           ]).then(n.bind(n, 58331)),
         ),
@@ -3033,7 +3033,7 @@
         if (!D.L7.logged_in)
           return i.createElement(
             Ue.zx,
-            { onClick: ct.X, className: "CSSClaimItemLoginButton" },
+            { onClick: ct.Xt, className: "CSSClaimItemLoginButton" },
             (0, x.Xx)("#Sale_ClaimableReward_Login"),
           );
         const n = (0, s.im)(e.args, "type");
@@ -3136,7 +3136,7 @@
             )
           : i.createElement(
               Ue.zx,
-              { className: "CSSActionDialogButton", onClick: ct.X },
+              { className: "CSSActionDialogButton", onClick: ct.Xt },
               (0, x.Xx)("#Login_SignIn"),
             );
       }

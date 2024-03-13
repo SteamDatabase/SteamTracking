@@ -3363,17 +3363,20 @@ html:not(.touch)
   fill: #fff;
 }
 ._2uAxshZfAc49_ynBLr-SML {
+  width: 240px;
+  height: 125px;
+  padding: 16px;
+  box-sizing: border-box;
   font-size: 15px;
   font-weight: 300;
   cursor: pointer;
   margin: 4px;
   background-color: #5d6675;
-  width: 240px;
-  height: 125px;
   border-radius: 3px;
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
 ._2uAxshZfAc49_ynBLr-SML:hover {
   background-color: #98a7bf;

@@ -1285,6 +1285,7 @@
                 y.ValidateDataRequest(s),
                 "Invalid Data Request: " + JSON.stringify(s),
               ),
+              "string" == typeof e && (e = parseInt(e)),
               this.m_bActivelyResettingCache)
             )
               return (

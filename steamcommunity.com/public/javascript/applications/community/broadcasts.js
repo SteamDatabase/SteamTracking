@@ -836,7 +836,7 @@
                               "#EventDisplay_Share_NotLoggedIn_Description",
                             ),
                             strOKButtonText: (0, x.Xx)("#MobileLogin_SignIn"),
-                            onOK: () => (0, K.X)(),
+                            onOK: () => (0, K.Xt)(),
                           }),
                           (0, O.RA)(e),
                         );

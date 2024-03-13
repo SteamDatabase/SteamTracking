@@ -21107,7 +21107,7 @@
               "PromotionPlanning.GetAllPlansForPartner#1",
               (0, a.MD)(R, t),
               F,
-              { bConstMethod: !0, ePrivilege: 1 },
+              { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 },
             );
           }),
           (e.GetPlanByInputAccessKey = function (e, t) {

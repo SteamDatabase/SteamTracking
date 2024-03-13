@@ -195,7 +195,7 @@
         constructor(e = null) {
           super(),
             d.prototype.recommendationid || n.aR(d.M()),
-            s.initialize(this, e, 0, -1, [40], null);
+            s.initialize(this, e, 0, -1, [27, 40], null);
         }
         static M() {
           return (
@@ -309,10 +309,13 @@
                     br: n.FE.readBool,
                     bw: n.Xc.writeBool,
                   },
-                  review_quality: {
+                  review_qualities: {
                     n: 27,
+                    r: !0,
+                    q: !0,
                     br: n.FE.readEnum,
-                    bw: n.Xc.writeEnum,
+                    pbr: n.FE.readPackedEnum,
+                    bw: n.Xc.writeRepeatedEnum,
                   },
                   weighted_vote_score: {
                     n: 28,

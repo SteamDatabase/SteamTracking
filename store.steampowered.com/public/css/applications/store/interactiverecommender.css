@@ -91,7 +91,6 @@ a:link {
   flex-grow: 1;
   display: flex;
   flex-direction: row;
-  overflow-y: clip;
   overflow-x: visible;
 }
 @media (max-width: 1000px) {

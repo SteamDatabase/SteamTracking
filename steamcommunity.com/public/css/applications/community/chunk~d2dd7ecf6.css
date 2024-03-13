@@ -14,7 +14,7 @@ select {
   color: #fff;
   background: #32373f;
   border: 1px solid rgba(50, 55, 63, 0);
-  padding: 4px;
+  padding: 8px;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
   border-radius: 3px;
   outline: 0;
@@ -7120,8 +7120,7 @@ td.rdtYear:hover {
   background-color: #51545d;
   color: var(--main-text-on-light-blue);
   box-shadow: 0 0 10px #000;
-  padding: 15px;
-  height: 60px;
+  padding: 4px 20px 4px 4px;
   position: -webkit-sticky;
   position: sticky;
   top: 0px;

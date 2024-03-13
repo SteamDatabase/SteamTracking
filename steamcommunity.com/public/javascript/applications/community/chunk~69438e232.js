@@ -346,7 +346,7 @@
     },
     88619: (e, t, n) => {
       "use strict";
-      n.d(t, { co: () => m, m6: () => u });
+      n.d(t, { co: () => m, m6: () => h });
       var a = n(85556),
         o = n(53923),
         r = n(40057),
@@ -355,34 +355,42 @@
         l = n(35427),
         c = n(3172),
         d = n(82182);
+      n(51915);
       function m() {
         const e = (0, r.bY)(),
           t = (0, o.M)();
-        return (0, s.useQuery)(["GetFriendsList", t], () =>
-          (0, a.mG)(this, void 0, void 0, function* () {
-            var t, n;
-            const a = i.gA.Init(c.Fi);
-            return null ===
-              (n =
-                null ===
-                  (t = (yield c.qW.GetFriendsList(e, a))
-                    .Body()
-                    .friendslist()) || void 0 === t
-                  ? void 0
-                  : t.friends()) || void 0 === n
-              ? void 0
-              : n
-                  .filter((e) => {
-                    const t = new l.K(e.ulfriendid());
-                    return (
-                      3 == e.efriendrelationship() && t.BIsIndividualAccount()
-                    );
-                  })
-                  .map((e) => e.ulfriendid());
-          }),
-        );
+        return (0, s.useQuery)(p(e, t));
       }
       function p(e, t) {
+        return {
+          queryKey: ["GetFriendsList", t],
+          queryFn: () =>
+            (0, a.mG)(this, void 0, void 0, function* () {
+              var t, n;
+              const a = i.gA.Init(c.Fi);
+              return null ===
+                (n =
+                  null ===
+                    (t = (yield c.qW.GetFriendsList(e, a))
+                      .Body()
+                      .friendslist()) || void 0 === t
+                    ? void 0
+                    : t.friends()) || void 0 === n
+                ? void 0
+                : n
+                    .filter((e) => {
+                      const t = new l.K(e.ulfriendid());
+                      return (
+                        (3 == e.efriendrelationship() ||
+                          6 == e.efriendrelationship()) &&
+                        t.BIsIndividualAccount()
+                      );
+                    })
+                    .map((e) => e.ulfriendid());
+            }),
+        };
+      }
+      function u(e, t) {
         return (0, a.mG)(this, void 0, void 0, function* () {
           const n = i.gA.Init(d.$_);
           n.Body().set_appid(t);
@@ -394,7 +402,7 @@
           );
         });
       }
-      function u(e, t = {}) {
+      function h(e, t = {}) {
         const n = (0, r.bY)(),
           i = (0, o.M)();
         return (0, s.useQuery)(
@@ -403,7 +411,7 @@
               queryKey: `GameplayInfo_${i}_${e}`,
               queryFn: () =>
                 (0, a.mG)(this, void 0, void 0, function* () {
-                  return yield p(n, e);
+                  return yield u(n, e);
                 }),
             },
             t,
@@ -4400,7 +4408,7 @@
                       "#EventDisplay_Share_NotLoggedIn_Description",
                     ),
                     strOKButtonText: (0, i.Xx)("#MobileLogin_SignIn"),
-                    onOK: () => (0, f.X)(),
+                    onOK: () => (0, f.Xt)(),
                   }),
                   window,
                 ),
@@ -5086,7 +5094,7 @@
                   "#EventDisplay_Share_NotLoggedIn_Description",
                 ),
                 strOKButtonText: (0, C.Xx)("#MobileLogin_SignIn"),
-                onOK: N.X,
+                onOK: N.Xt,
               }),
               window,
             ),
@@ -6292,7 +6300,7 @@
                 ),
                 strOKButtonText: (0, m.Xx)("#MobileLogin_SignIn"),
                 onCancel: this.props.closeModal,
-                onOK: () => (0, c.X)(),
+                onOK: () => (0, c.Xt)(),
               })
             : this.state.bShareOnSteamDialog
             ? o.createElement(P, {

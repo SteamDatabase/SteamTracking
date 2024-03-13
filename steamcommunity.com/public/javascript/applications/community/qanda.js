@@ -12,6 +12,7 @@
         EventDefaultRowContainer: "_2pVkYef_JboBRTJDsI5XrR",
         EventStartPublic: "_13cijqNyra467La1xbDgy0",
         EventOptions: "ShLAXJyjCB5R_Y81P3-VX",
+        EventStatusContainer: "_1dNhj3aKodzkwfU16oYND",
         FlexColumnContainer: "WmMRFd2F9FMje__jWs2c4",
         FlexRowContainer: "elLwmClZ5oSY2aer18vUt",
         Centered: "_1HqKtO0h5lgj9h0J4mUz51",
@@ -43,8 +44,11 @@
         EventEditorEventStatus: "_3dxy2T8x1pk6OjFgWQSTCE",
         EventHidden: "_3oD7cGykuzlqnfVXev8JDs",
         EventVisible: "_3sin0w04DXfKLZH9M923t8",
+        EventBarBackAndTitle: "_1rQbs6JYrj8dcI7ulhqAHq",
         EventBarTitleCtn: "_1bUXkxwlWqoLUkJx4mP5E",
         EventBarTitle: "_3K6Ror7Nj83ysihgViAvjd",
+        EventEditButtons: "_3N6fzJF2V9mi47EHYuAEiK",
+        EventStatus: "_3uDnLpoGwbP-lVipnNwJTm",
         EventBarBack: "BUxe5edxrjnB3sckTkcDh",
         EditPreviewButton: "_3NmFFZyqnB0ITWJGvJNDqk",
         Delete: "_2GdGzjX59SeWcOhf9bGYki",
@@ -650,7 +654,7 @@
     },
     64936: (e, t, n) => {
       "use strict";
-      n.d(t, { F_: () => m, JW: () => d, kl: () => f, zD: () => g });
+      n.d(t, { F_: () => m, JW: () => d, kl: () => f, zD: () => _ });
       var r = n(85556),
         s = n(54842),
         a = n(37485),
@@ -740,7 +744,7 @@
         var e;
         return null !== (e = d.nOverrideDateNow) && void 0 !== e ? e : v;
       }
-      function g() {
+      function _() {
         return i.useMemo(() => f(), []);
       }
     },
@@ -761,8 +765,8 @@
       n(2041);
       function v(e) {
         const t = (0, c.bY)(),
-          n = o.useContext(g);
-        return (0, i.useQuery)(_(n, t, e));
+          n = o.useContext(_);
+        return (0, i.useQuery)(g(n, t, e));
       }
       function p(e) {
         const t = o.useRef(),
@@ -777,10 +781,10 @@
       }
       function f(e) {
         const t = (0, c.bY)(),
-          n = o.useContext(g);
-        return (0, i.useQueries)(e.map((e) => _(n, t, e)));
+          n = o.useContext(_);
+        return (0, i.useQueries)(e.map((e) => g(n, t, e)));
       }
-      const g = o.createContext({
+      const _ = o.createContext({
         loadPersonaState: (e, t) =>
           (0, r.mG)(void 0, void 0, void 0, function* () {
             if (null == e) return null;
@@ -877,7 +881,7 @@
               : null;
           }),
       });
-      function _(e, t, n) {
+      function g(e, t, n) {
         const r = "string" == typeof n ? new m.K(n).GetAccountID() : n;
         return {
           queryKey: ["PlayerSummary", r],
@@ -889,7 +893,7 @@
     },
     80212: (e, t, n) => {
       "use strict";
-      n.d(t, { X: () => d });
+      n.d(t, { Xt: () => d });
       var r = n(47427),
         s = n(90069),
         a = n(31846),
@@ -897,6 +901,7 @@
         i = n(99327),
         l = n(77581),
         c = n(35791);
+      n(50898);
       function u(e) {
         return r.createElement(
           s.e1,
@@ -943,11 +948,11 @@
     24827: (e, t, n) => {
       "use strict";
       n.d(t, {
-        Ai: () => _,
+        Ai: () => g,
         H6: () => f,
         Kj: () => v,
         Sw: () => j,
-        Zg: () => g,
+        Zg: () => _,
         uv: () => E,
         w$: () => p,
       });
@@ -1028,7 +1033,7 @@
                 ),
               );
         }),
-        g = (e) => {
+        _ = (e) => {
           const t = s.createElement(
             "div",
             { className: e.stylesmodule.DateToolTip },
@@ -1049,7 +1054,7 @@
             e.children,
           );
         };
-      let _ = class extends s.Component {
+      let g = class extends s.Component {
         render() {
           const { startDateAndTime: e, endDateAndTime: t } = this.props,
             n = this.props.stylesmodule
@@ -1149,7 +1154,7 @@
           );
         }
       };
-      _ = (0, r.gn)([i.Pi], _);
+      g = (0, r.gn)([i.Pi], g);
       let E = class extends s.Component {
         render() {
           const {
@@ -1180,7 +1185,7 @@
               (0, o.$1)(e, l),
             );
           let h = s.createElement(
-            g,
+            _,
             { rtFullDate: e, stylesmodule: r },
             s.createElement(
               "div",
@@ -1197,7 +1202,7 @@
             (i < e &&
               e < i + c._H.PerWeek &&
               (h = s.createElement(
-                g,
+                _,
                 { rtFullDate: e, stylesmodule: r },
                 s.createElement(
                   "div",
@@ -1220,7 +1225,7 @@
           const v = e <= i && i <= t;
           v &&
             (h = s.createElement(
-              g,
+              _,
               { rtFullDate: e, className: r.ActiveEvent, stylesmodule: r },
               s.createElement(
                 "span",
@@ -1229,12 +1234,12 @@
               ),
             ));
           let f = null;
-          const _ = v ? t - i : t - e;
-          if (_ <= c._H.PerDay) {
+          const g = v ? t - i : t - e;
+          if (g <= c._H.PerDay) {
             const e = s.createElement(
               "div",
               { className: r.ShortDateAndTime },
-              (0, o.yW)(_, !0),
+              (0, o.yW)(g, !0),
             );
             f =
               t < i
@@ -1275,7 +1280,7 @@
               ),
             );
           }
-          const E = s.createElement(g, { rtFullDate: t, stylesmodule: r }, f);
+          const E = s.createElement(_, { rtFullDate: t, stylesmodule: r }, f);
           return s.createElement("div", { className: r.ShortDateRange }, h, E);
         }
       };

@@ -1812,7 +1812,7 @@
             o.createElement(
               N.zx,
               {
-                onClick: b.X,
+                onClick: b.Xt,
                 className: (0, M.Z)(q().SignInButton, q().InputButton),
               },
               (0, L.Xx)("#Login_SignIn"),

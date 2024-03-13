@@ -197,52 +197,293 @@
         OtherYearLink: "_1AcAxWWu9yo7s4gOpoGGn0",
       };
     },
-    85948: (e, a, t) => {
+    73799: (e) => {
       "use strict";
-      t.d(a, { Fz: () => M, TQ: () => v, tE: () => k });
-      var n = t(85556),
-        r = t(80751),
-        o = t.n(r),
-        c = t(73799),
-        l = t.n(c),
-        s = t(47427),
-        i = t(42718),
-        _ = t(35427),
-        m = t(16649),
-        C = t(37563),
-        d = t(79545),
-        p = t(82182),
-        u = t(40057);
-      const g = "nicknames";
-      function v(e) {
-        const a = (0, u.bY)(),
-          { data: t, isLoading: r } = (0, i.useQuery)([g], () =>
+      var t,
+        a = (function () {
+          function e(e, t) {
+            if ("function" != typeof e)
+              throw new TypeError(
+                "DataLoader must be constructed with a function which accepts Array<key> and returns Promise<Array<value>>, but got: " +
+                  e +
+                  ".",
+              );
+            (this._batchLoadFn = e),
+              (this._maxBatchSize = (function (e) {
+                var t = !e || !1 !== e.batch;
+                if (!t) return 1;
+                var a = e && e.maxBatchSize;
+                if (void 0 === a) return 1 / 0;
+                if ("number" != typeof a || a < 1)
+                  throw new TypeError(
+                    "maxBatchSize must be a positive number: " + a,
+                  );
+                return a;
+              })(t)),
+              (this._batchScheduleFn = (function (e) {
+                var t = e && e.batchScheduleFn;
+                if (void 0 === t) return n;
+                if ("function" != typeof t)
+                  throw new TypeError(
+                    "batchScheduleFn must be a function: " + t,
+                  );
+                return t;
+              })(t)),
+              (this._cacheKeyFn = (function (e) {
+                var t = e && e.cacheKeyFn;
+                if (void 0 === t)
+                  return function (e) {
+                    return e;
+                  };
+                if ("function" != typeof t)
+                  throw new TypeError("cacheKeyFn must be a function: " + t);
+                return t;
+              })(t)),
+              (this._cacheMap = (function (e) {
+                var t = !e || !1 !== e.cache;
+                if (!t) return null;
+                var a = e && e.cacheMap;
+                if (void 0 === a) return new Map();
+                if (null !== a) {
+                  var n = ["get", "set", "delete", "clear"].filter(
+                    function (e) {
+                      return a && "function" != typeof a[e];
+                    },
+                  );
+                  if (0 !== n.length)
+                    throw new TypeError(
+                      "Custom cacheMap missing methods: " + n.join(", "),
+                    );
+                }
+                return a;
+              })(t)),
+              (this._batch = null),
+              (this.name = (function (e) {
+                if (e && e.name) return e.name;
+                return null;
+              })(t));
+          }
+          var t = e.prototype;
+          return (
+            (t.load = function (e) {
+              if (null == e)
+                throw new TypeError(
+                  "The loader.load() function must be called with a value, but got: " +
+                    String(e) +
+                    ".",
+                );
+              var t = (function (e) {
+                  var t = e._batch;
+                  if (
+                    null !== t &&
+                    !t.hasDispatched &&
+                    t.keys.length < e._maxBatchSize
+                  )
+                    return t;
+                  var a = { hasDispatched: !1, keys: [], callbacks: [] };
+                  return (
+                    (e._batch = a),
+                    e._batchScheduleFn(function () {
+                      !(function (e, t) {
+                        if (((t.hasDispatched = !0), 0 === t.keys.length))
+                          return void o(t);
+                        var a;
+                        try {
+                          a = e._batchLoadFn(t.keys);
+                        } catch (a) {
+                          return r(
+                            e,
+                            t,
+                            new TypeError(
+                              "DataLoader must be constructed with a function which accepts Array<key> and returns Promise<Array<value>>, but the function errored synchronously: " +
+                                String(a) +
+                                ".",
+                            ),
+                          );
+                        }
+                        if (!a || "function" != typeof a.then)
+                          return r(
+                            e,
+                            t,
+                            new TypeError(
+                              "DataLoader must be constructed with a function which accepts Array<key> and returns Promise<Array<value>>, but the function did not return a Promise: " +
+                                String(a) +
+                                ".",
+                            ),
+                          );
+                        a.then(function (e) {
+                          if (!c(e))
+                            throw new TypeError(
+                              "DataLoader must be constructed with a function which accepts Array<key> and returns Promise<Array<value>>, but the function did not return a Promise of an Array: " +
+                                String(e) +
+                                ".",
+                            );
+                          if (e.length !== t.keys.length)
+                            throw new TypeError(
+                              "DataLoader must be constructed with a function which accepts Array<key> and returns Promise<Array<value>>, but the function did not return a Promise of an Array of the same length as the Array of keys.\n\nKeys:\n" +
+                                String(t.keys) +
+                                "\n\nValues:\n" +
+                                String(e),
+                            );
+                          o(t);
+                          for (var a = 0; a < t.callbacks.length; a++) {
+                            var n = e[a];
+                            n instanceof Error
+                              ? t.callbacks[a].reject(n)
+                              : t.callbacks[a].resolve(n);
+                          }
+                        }).catch(function (a) {
+                          r(e, t, a);
+                        });
+                      })(e, a);
+                    }),
+                    a
+                  );
+                })(this),
+                a = this._cacheMap,
+                n = this._cacheKeyFn(e);
+              if (a) {
+                var i = a.get(n);
+                if (i) {
+                  var s = t.cacheHits || (t.cacheHits = []);
+                  return new Promise(function (e) {
+                    s.push(function () {
+                      e(i);
+                    });
+                  });
+                }
+              }
+              t.keys.push(e);
+              var l = new Promise(function (e, a) {
+                t.callbacks.push({ resolve: e, reject: a });
+              });
+              return a && a.set(n, l), l;
+            }),
+            (t.loadMany = function (e) {
+              if (!c(e))
+                throw new TypeError(
+                  "The loader.loadMany() function must be called with Array<key> but got: " +
+                    e +
+                    ".",
+                );
+              for (var t = [], a = 0; a < e.length; a++)
+                t.push(
+                  this.load(e[a]).catch(function (e) {
+                    return e;
+                  }),
+                );
+              return Promise.all(t);
+            }),
+            (t.clear = function (e) {
+              var t = this._cacheMap;
+              if (t) {
+                var a = this._cacheKeyFn(e);
+                t.delete(a);
+              }
+              return this;
+            }),
+            (t.clearAll = function () {
+              var e = this._cacheMap;
+              return e && e.clear(), this;
+            }),
+            (t.prime = function (e, t) {
+              var a = this._cacheMap;
+              if (a) {
+                var n,
+                  r = this._cacheKeyFn(e);
+                if (void 0 === a.get(r))
+                  t instanceof Error
+                    ? (n = Promise.reject(t)).catch(function () {})
+                    : (n = Promise.resolve(t)),
+                    a.set(r, n);
+              }
+              return this;
+            }),
+            e
+          );
+        })(),
+        n =
+          "object" == typeof process && "function" == typeof process.nextTick
+            ? function (e) {
+                t || (t = Promise.resolve()),
+                  t.then(function () {
+                    process.nextTick(e);
+                  });
+              }
+            : "function" == typeof setImmediate
+            ? function (e) {
+                setImmediate(e);
+              }
+            : function (e) {
+                setTimeout(e);
+              };
+      function r(e, t, a) {
+        o(t);
+        for (var n = 0; n < t.keys.length; n++)
+          e.clear(t.keys[n]), t.callbacks[n].reject(a);
+      }
+      function o(e) {
+        if (e.cacheHits)
+          for (var t = 0; t < e.cacheHits.length; t++) e.cacheHits[t]();
+      }
+      function c(e) {
+        return (
+          "object" == typeof e &&
+          null !== e &&
+          "number" == typeof e.length &&
+          (0 === e.length ||
+            (e.length > 0 &&
+              Object.prototype.hasOwnProperty.call(e, e.length - 1)))
+        );
+      }
+      e.exports = a;
+    },
+    85948: (e, t, a) => {
+      "use strict";
+      a.d(t, { Fz: () => y, TQ: () => C, tE: () => b });
+      var n = a(85556),
+        r = a(80751),
+        o = a.n(r),
+        c = a(73799),
+        i = a.n(c),
+        s = a(47427),
+        l = a(42718),
+        u = a(35427),
+        m = a(16649),
+        _ = a(37563),
+        d = a(79545),
+        h = a(82182),
+        p = a(40057);
+      const f = "nicknames";
+      function C(e) {
+        const t = (0, p.bY)(),
+          { data: a, isLoading: r } = (0, l.useQuery)([f], () =>
             (0, n.mG)(this, void 0, void 0, function* () {
               const e = new Map();
-              if (C.L7.logged_in) {
-                const t = d.gA.Init(p.bM),
-                  n = (yield p.lk.GetNicknameList(a, t)).Body().toObject();
+              if (_.L7.logged_in) {
+                const a = d.gA.Init(h.bM),
+                  n = (yield h.lk.GetNicknameList(t, a)).Body().toObject();
                 (null == n ? void 0 : n.nicknames) &&
                   n.nicknames.length > 0 &&
-                  n.nicknames.forEach((a) => {
-                    e.set(a.accountid, a.nickname);
+                  n.nicknames.forEach((t) => {
+                    e.set(t.accountid, t.nickname);
                   });
               }
               return e;
             }),
           );
-        return t ? t.get(e) : null;
+        return a ? a.get(e) : null;
       }
-      const f = new (l())(
+      const g = new (i())(
           (e) =>
             (function (e) {
-              var a, t, r, c;
+              var t, a, r, c;
               return (0, n.mG)(this, void 0, void 0, function* () {
                 if (!e || 0 == e.length) return [];
                 const n =
-                  "community" == (0, C.Zv)()
-                    ? C.De.COMMUNITY_BASE_URL
-                    : C.De.STORE_BASE_URL;
+                  "community" == (0, _.Zv)()
+                    ? _.De.COMMUNITY_BASE_URL
+                    : _.De.STORE_BASE_URL;
                 if (1 == e.length) {
                   const r = { accountid: e[0], origin: self.origin },
                     c = yield o().get(`${n}actions/ajaxgetavatarpersona`, {
@@ -252,12 +493,12 @@
                     !c ||
                     200 != c.status ||
                     1 !=
-                      (null === (a = c.data) || void 0 === a
+                      (null === (t = c.data) || void 0 === t
                         ? void 0
-                        : a.success) ||
-                    !(null === (t = c.data) || void 0 === t
+                        : t.success) ||
+                    !(null === (a = c.data) || void 0 === a
                       ? void 0
-                      : t.userinfo)
+                      : a.userinfo)
                   )
                     throw `Load single avatar/persona failed ${
                       (0, m.l)(c).strErrorMsg
@@ -265,52 +506,52 @@
                   return [c.data.userinfo];
                 }
                 {
-                  const a = { accountids: e.join(","), origin: self.origin },
-                    t = yield o().get(`${n}actions/ajaxgetmultiavatarpersona`, {
-                      params: a,
+                  const t = { accountids: e.join(","), origin: self.origin },
+                    a = yield o().get(`${n}actions/ajaxgetmultiavatarpersona`, {
+                      params: t,
                     });
                   if (
-                    !t ||
-                    200 != t.status ||
+                    !a ||
+                    200 != a.status ||
                     1 !=
-                      (null === (r = t.data) || void 0 === r
+                      (null === (r = a.data) || void 0 === r
                         ? void 0
                         : r.success) ||
-                    !(null === (c = t.data) || void 0 === c
+                    !(null === (c = a.data) || void 0 === c
                       ? void 0
                       : c.userinfos)
                   )
                     throw `Load single avatar/persona failed ${
-                      (0, m.l)(t).strErrorMsg
+                      (0, m.l)(a).strErrorMsg
                     }`;
-                  const l = new Map();
+                  const i = new Map();
                   return (
-                    t.data.userinfos.forEach((e) =>
-                      l.set(new _.K(e.steamid).GetAccountID(), e),
+                    a.data.userinfos.forEach((e) =>
+                      i.set(new u.K(e.steamid).GetAccountID(), e),
                     ),
-                    e.map((e) => l.get(e))
+                    e.map((e) => i.get(e))
                   );
                 }
               });
             })(e),
           { cache: !1 },
         ),
-        h = "avatarandpersonas";
-      function M(e) {
-        const { data: a, isLoading: t } = (0, i.useQuery)([h, e], () =>
-          f.load(e),
+        v = "avatarandpersonas";
+      function y(e) {
+        const { data: t, isLoading: a } = (0, l.useQuery)([v, e], () =>
+          g.load(e),
         );
-        return [a, t];
+        return [t, a];
       }
-      function k(e) {
-        const a = (0, i.useQueryClient)(),
-          { data: t, isLoading: n } = (0, i.useQuery)({
-            queryKey: [h, e],
-            queryFn: () => f.loadMany(e),
+      function b(e) {
+        const t = (0, l.useQueryClient)(),
+          { data: a, isLoading: n } = (0, l.useQuery)({
+            queryKey: [v, e],
+            queryFn: () => g.loadMany(e),
             onSuccess(e) {
               e.forEach((e) => {
-                const t = [h, new _.K(e.steamid).GetAccountID()];
-                a.setQueryData(t, e);
+                const a = [v, new u.K(e.steamid).GetAccountID()];
+                t.setQueryData(a, e);
               });
             },
             enabled: (null == e ? void 0 : e.length) > 0,
@@ -318,93 +559,93 @@
           r = (0, s.useMemo)(() => {
             const e = new Array();
             return (
-              null == t ||
-                t.forEach((a) => {
-                  a instanceof Error || e.push(a);
+              null == a ||
+                a.forEach((t) => {
+                  t instanceof Error || e.push(t);
                 }),
               e
             );
-          }, [t]);
+          }, [a]);
         return n ? null : r;
       }
     },
-    21400: (e, a, t) => {
+    21400: (e, t, a) => {
       "use strict";
-      t.r(a), t.d(a, { default: () => d });
-      var n = t(16305),
-        r = t(70267),
-        o = t(47427),
-        c = t(91618),
-        l = t(85948),
-        s = t(31846),
-        i = t(37563),
-        _ = t(81519),
-        m = t(37588),
-        C = t(13129);
+      a.r(t), a.d(t, { default: () => d });
+      var n = a(16305),
+        r = a(70267),
+        o = a(47427),
+        c = a(91618),
+        i = a(85948),
+        s = a(31846),
+        l = a(37563),
+        u = a(81519),
+        m = a(37588),
+        _ = a(13129);
       function d(e) {
-        const a = (0, m.N)(e.year),
-          t = M();
+        const t = (0, m.N)(e.year),
+          a = y();
         return o.createElement(
           "div",
           {
-            className: (0, C.Z)(_.MMFrame, a.MMFrame, a.MMOverride),
-            onClick: t,
+            className: (0, _.Z)(u.MMFrame, t.MMFrame, t.MMOverride),
+            onClick: a,
           },
           o.createElement(
             "div",
-            { className: _.HeaderCtn },
-            o.createElement(v, {
-              baseClass: (0, C.Z)(_.ReplayLogo, a.ReplayLogo),
-              accentClass: (0, C.Z)(_.ReplayLogoAccent, a.ReplayLogoAccent),
+            { className: u.HeaderCtn },
+            o.createElement(C, {
+              baseClass: (0, _.Z)(u.ReplayLogo, t.ReplayLogo),
+              accentClass: (0, _.Z)(u.ReplayLogoAccent, t.ReplayLogoAccent),
             }),
-            o.createElement(f, { year: e.year, theme: a }),
+            o.createElement(g, { year: e.year, theme: t }),
           ),
-          o.createElement(g, { className: (0, C.Z)(_.SteamLogo, a.SteamLogo) }),
-          o.createElement(h, { theme: a }),
+          o.createElement(f, { className: (0, _.Z)(u.SteamLogo, t.SteamLogo) }),
+          o.createElement(v, { theme: t }),
           o.createElement(
             "div",
-            { className: (0, C.Z)(_.Content, a.Content) },
-            o.createElement(p, { theme: a }),
-            o.createElement(u, { theme: a }),
+            { className: (0, _.Z)(u.Content, t.Content) },
+            o.createElement(h, { theme: t }),
+            o.createElement(p, { theme: t }),
             o.createElement(
               "div",
-              { className: (0, C.Z)(_.Description, a.Description) },
+              { className: (0, _.Z)(u.Description, t.Description) },
               (0, s.Xx)("#YIR_MM_Generic_Desc"),
             ),
           ),
         );
       }
-      function p(e) {
-        const { theme: a } = e,
-          [t] = (0, l.Fz)(i.L7.accountid);
-        return t
+      function h(e) {
+        const { theme: t } = e,
+          [a] = (0, i.Fz)(l.L7.accountid);
+        return a
           ? o.createElement(
               o.Fragment,
               null,
               o.createElement(
                 "div",
-                { className: (0, C.Z)(_.Avatar, a.Avatar) },
-                t &&
-                  t.avatar_url &&
+                { className: (0, _.Z)(u.Avatar, t.Avatar) },
+                a &&
+                  a.avatar_url &&
                   o.createElement("img", {
-                    src: t.avatar_url.replace(/\.jpg$/, "_full.jpg"),
+                    src: a.avatar_url.replace(/\.jpg$/, "_full.jpg"),
                   }),
               ),
               o.createElement(
                 "div",
-                { className: (0, C.Z)(_.DataBlock, a.DataBlock) },
+                { className: (0, _.Z)(u.DataBlock, t.DataBlock) },
                 o.createElement(
                   "div",
-                  { className: (0, C.Z)(_.PersonaName, a.PersonaName) },
-                  t ? t.persona_name : "",
+                  { className: (0, _.Z)(u.PersonaName, t.PersonaName) },
+                  a ? a.persona_name : "",
                 ),
                 o.createElement(
                   "div",
-                  { className: _.GenericTitleBlock },
+                  { className: u.GenericTitleBlock },
                   (0, s.yu)(
                     "#YIR_MM_Generic_Title",
                     o.createElement("span", {
-                      className: (0, C.Z)(_.ReplayHighlight, a.ReplayHighlight),
+                      className: (0, _.Z)(u.ReplayHighlight, t.ReplayHighlight),
                     }),
                   ),
                 ),
@@ -412,19 +653,19 @@
             )
           : null;
       }
-      function u(e) {
-        const { theme: a } = e,
-          t = M();
+      function p(e) {
+        const { theme: t } = e,
+          a = y();
         return o.createElement(
           c.s,
           {
-            className: (0, C.Z)(_.ViewPageButton, a.ViewPageButton),
-            onActivate: t,
+            className: (0, _.Z)(u.ViewPageButton, t.ViewPageButton),
+            onActivate: a,
           },
           (0, s.Xx)("#YIR_MM_Generic_Action"),
         );
       }
-      function g(e) {
+      function f(e) {
         return o.createElement(
           "svg",
           Object.assign(
@@ -452,15 +693,15 @@
           }),
         );
       }
-      function v(e) {
-        const { baseClass: a, accentClass: t } = e;
+      function C(e) {
+        const { baseClass: t, accentClass: a } = e;
         return o.createElement(
           "svg",
           {
             xmlns: "http://www.w3.org/2000/svg",
             viewBox: "0 0 80 50",
             fill: "none",
-            className: a,
+            className: t,
           },
           o.createElement("path", {
             fill: "currentColor",
@@ -470,62 +711,62 @@
           }),
           o.createElement("path", {
             fill: "#4AD4FF",
-            className: t,
+            className: a,
             d: "M31.635 45.874C31.5218 45.874 31.4969 45.716 31.6033 45.6773C40.8922 42.2999 47.5266 33.3932 47.5266 22.937C47.5266 12.4808 40.8922 3.57411 31.6033 0.196722C31.4969 0.15803 31.5218 0 31.635 0C44.3028 0 54.5721 10.2692 54.5721 22.937C54.5721 35.6048 44.3028 45.874 31.635 45.874Z",
           }),
           o.createElement("path", {
             fill: "#4AD4FF",
-            className: t,
+            className: a,
             d: "M39.9974 45.874C39.8841 45.874 39.8592 45.716 39.9656 45.6773C49.2545 42.2999 55.8889 33.3932 55.8889 22.937C55.8889 12.4808 49.2545 3.57411 39.9656 0.196722C39.8592 0.15803 39.8841 0 39.9974 0C52.6651 0 62.9344 10.2692 62.9344 22.937C62.9344 35.6048 52.6651 45.874 39.9974 45.874Z",
           }),
         );
       }
-      function f(e) {
-        const { year: a, theme: t } = e;
+      function g(e) {
+        const { year: t, theme: a } = e;
         return o.createElement(
           "div",
-          { className: (0, C.Z)(_.Header, t.Header) },
+          { className: (0, _.Z)(u.Header, a.Header) },
           (0, s.kQ)(
             "#YIR_MM_Header",
             o.createElement("br", null),
             o.createElement(
               "div",
-              { className: (0, C.Z)(_.YearSubtitle, t.YearSubtitle) },
-              (0, s.Xx)("#date_year", a),
+              { className: (0, _.Z)(u.YearSubtitle, a.YearSubtitle) },
+              (0, s.Xx)("#date_year", t),
             ),
           ),
         );
       }
-      function h(e) {
+      function v(e) {
         return o.createElement(
           "div",
-          { className: (0, C.Z)(_.Hashtag, e.theme.Hashtag) },
+          { className: (0, _.Z)(u.Hashtag, e.theme.Hashtag) },
           (0, s.Xx)("#YIR_MM_HashTag"),
         );
       }
-      function M() {
+      function y() {
         const e = (0, r.U)().GetTemplateVars();
         return (0, n.pT)(e.linkurl);
       }
     },
-    37588: (e, a, t) => {
+    37588: (e, t, a) => {
       "use strict";
-      t.d(a, { N: () => l });
-      var n = t(47427);
-      const r = { 2022: t(16173), 2023: t(61450) },
+      a.d(t, { N: () => i });
+      var n = a(47427);
+      const r = { 2022: a(16173), 2023: a(61450) },
         o = Object.values(r).reduce(
-          (e, a) => Object.assign(Object.assign({}, e), a),
+          (e, t) => Object.assign(Object.assign({}, e), t),
           {},
         ),
         c = 2022;
-      function l(e) {
-        const [a, t] = (0, n.useState)({});
+      function i(e) {
+        const [t, a] = (0, n.useState)({});
         return (
           (0, n.useEffect)(() => {
-            let a = r[e];
-            a || (a = r[c]), t(Object.assign(Object.assign({}, o), a));
+            let t = r[e];
+            t || (t = r[c]), a(Object.assign(Object.assign({}, o), t));
           }, [e]),
-          a
+          t
         );
       }
     },

@@ -834,6 +834,40 @@
         KeyUseCtn: "_34mIXlTVCMvtke6ZE4o0mo",
       };
     },
+    74585: (e) => {
+      e.exports = {
+        DashboardCtn: "_24FuteyacLifWpBsZKxDKk",
+        OptInAdminRow: "_39siHgrKe_bMqDw1Npeunw",
+        OptinEnabled: "_2yTnlmMrLU_afWQjzgYed7",
+        StatsCtn: "_3ZKx3ZUUzD_GzI3nxZ-P5k",
+        Button: "_27cO9LuyRn14uOlKmuUypa",
+        ButtonCtn: "_2oOF5W0Wk8tgpYAhGXGSFa",
+        StatRefresh: "_2EDoVby2MXKJoxd3cAQtRP",
+      };
+    },
+    98255: (e) => {
+      e.exports = {
+        DashboardCtn: "_3Hft6_aVQC_9aDBtAQz5Dh",
+        DashboardSectionActive: "_3SCtU0kxoIjx1i_bYUWtsN",
+        DashboardSectionFeatured: "_1AHSBytFbaHkaZyzZb2a3c",
+        DashboardDesc: "UO4nh6TbtvAHMicVES2TS",
+        CreateNewSaleButton: "_1KX99pKIfyHmyb3tpxKw0P",
+        DateToolTip: "_2qNeWJuQFSxNYWLaIOkQNp",
+        TopStatsCtn: "_3pX36TAbgRahY69EH4U7TH",
+        EventDetailsCtn: "_2Pt6g4xcFVgkT466W-WMHp",
+        EventName: "_2ud6oVc8q1r8ObjdpY5yhV",
+        FeaturedApps: "_2k6vvxF4IbOEj8HdeBIvrJ",
+        BigNumber: "_2akdcoPrjy6IJzVt1dNbfP",
+        Highlight: "_1XloLQ7PVUjMO1SbllWQgP",
+        StatText: "_3pruEfaV4qukjw1C5HdA39",
+        StatusCtn: "_1tIk2SKk_LjOADk_8419A8",
+        PendingChanges: "_3idx4qmXE_x05TZ-TBvH1j",
+        DatesCtn: "_2ElSwvkrMqnJwnoUhq_sL4",
+        ComparisonRichTable: "_2w_R3Bo-RtRevFBLLm7YiP",
+        VisualBar: "_1wyrgeD5xB4NDh_j0XcbRe",
+        QuickViewCtn: "_12r1vgRWsvnLlqz1vk7yTj",
+      };
+    },
     21401: (e) => {
       e.exports = {
         Container: "_2BtrRFP7bri8foMeMC5-jM",
@@ -2554,40 +2588,21 @@
           return this.m_bFocused;
         }
         GetWindowRestoreDetails() {
-          return this.m_popup &&
-            !this.m_popup.closed &&
-            this.m_popup.SteamClient
-            ? new Promise((e, t) => {
-                this.m_popup.SteamClient.Window.GetWindowRestoreDetails((t) => {
-                  e(t);
-                });
-              })
+          return (0, f.w3)(this.m_popup, "Window.GetWindowRestoreDetails") &&
+            !this.m_popup.closed
+            ? this.m_popup.SteamClient.Window.GetWindowRestoreDetails()
             : Promise.resolve("");
         }
         IsMinimized() {
-          return this.m_popup &&
-            !this.m_popup.closed &&
-            this.m_popup.SteamClient &&
-            this.m_popup.SteamClient.Window &&
-            this.m_popup.SteamClient.Window.IsWindowMinimized
-            ? new Promise((e, t) => {
-                this.m_popup.SteamClient.Window.IsWindowMinimized((t) => {
-                  e(t);
-                });
-              })
+          return (0, f.w3)(this.m_popup, "Window.IsWindowMinimized") &&
+            !this.m_popup.closed
+            ? this.m_popup.SteamClient.Window.IsWindowMinimized()
             : Promise.resolve(!1);
         }
         IsMaximized() {
-          return this.m_popup &&
-            !this.m_popup.closed &&
-            this.m_popup.SteamClient &&
-            this.m_popup.SteamClient.Window &&
-            this.m_popup.SteamClient.Window.IsWindowMinimized
-            ? new Promise((e, t) => {
-                this.m_popup.SteamClient.Window.IsWindowMaximized((t) => {
-                  e(t);
-                });
-              })
+          return (0, f.w3)(this.m_popup, "Window.IsWindowMaximized") &&
+            !this.m_popup.closed
+            ? this.m_popup.SteamClient.Window.IsWindowMaximized()
             : Promise.resolve(!1);
         }
         ReleasePopup() {
@@ -9818,7 +9833,7 @@
           }
           null === (o = this.parentWin) ||
             void 0 === o ||
-            o.SteamClient.Window.GetWindowRestoreDetails((e) => {
+            o.SteamClient.Window.GetWindowRestoreDetails().then((e) => {
               const t = this.state.menuLeft - this.parentWin.screenX,
                 n = this.state.menuTop - this.parentWin.screenY;
               try {
@@ -9920,13 +9935,9 @@
           (a &&
             "tagName" in a &&
             (("INPUT" != a.tagName && "TEXTAREA" != a.tagName) || (l = !0)),
-          E.De.IN_CLIENT &&
-            l &&
-            n.SteamClient._internal &&
-            n.SteamClient._internal.GetSpellingSuggestions &&
-            n.SteamClient._internal.AddWordToDictionary)
+          E.De.IN_CLIENT && l && (0, p.w3)(n, "Browser.GetSpellingSuggestions"))
         ) {
-          let [e, ...o] = n.SteamClient._internal.GetSpellingSuggestions(),
+          let [e, ...o] = n.SteamClient.Browser.GetSpellingSuggestions(),
             i = a;
           if (
             (i &&
@@ -9951,7 +9962,7 @@
                   ),
                 );
               }),
-            e)
+            e && (0, p.w3)(n, "Browser.AddWordToDictionary"))
           ) {
             const o = 30;
             (e = e.trim()),
@@ -9960,13 +9971,8 @@
                   L,
                   {
                     key: `addtodictionary_${e}`,
-                    onSelected: () => {
-                      var t;
-                      return null === (t = n.SteamClient._internal) ||
-                        void 0 === t
-                        ? void 0
-                        : t.AddWordToDictionary(e);
-                    },
+                    onSelected: () =>
+                      n.SteamClient.Browser.AddWordToDictionary(e),
                   },
                   (0, b.Xx)(
                     "#ContextMenu_AddToDictionary",
@@ -10006,19 +10012,14 @@
             ),
           E.De.IN_CLIENT &&
             l &&
-            n.SteamClient._internal &&
-            n.SteamClient._internal.Paste &&
+            (0, p.w3)(n, "Browser.Paste") &&
             t.push(
               r.createElement(
                 L,
                 {
                   key: "paste",
                   onSelected: () => {
-                    var e;
-                    a.focus(),
-                      null === (e = n.SteamClient._internal) ||
-                        void 0 === e ||
-                        e.Paste();
+                    a.focus(), n.SteamClient.Browser.Paste();
                   },
                   className: D().NoSeparation,
                 },
@@ -14608,6 +14609,66 @@
             { style: { marginTop: "15px", opacity: 0.7, userSelect: "auto" } },
             e,
           );
+    },
+    71472: (e, t, n) => {
+      "use strict";
+      n.d(t, { Ar: () => l, Wo: () => c, i9: () => a, ks: () => r });
+      var o = n(47427),
+        i = n(8285);
+      function r(e, t) {
+        let n;
+        "string" == typeof e
+          ? (n = e)
+          : "location" in e
+          ? (n = e.location.search)
+          : "search" in e && (n = e.search);
+        const o = new URLSearchParams(n.substring(1));
+        if (o.has(t)) {
+          const e = o.getAll(t);
+          return e[e.length - 1];
+        }
+      }
+      const s = (e) => null != e;
+      function a(e, t, n, o = !1) {
+        const i = new URLSearchParams(e.location.search.substring(1));
+        i.delete(t),
+          s(n) && i.append(t, n),
+          o
+            ? e.replace(`?${i.toString()}`, Object.assign({}, e.location.state))
+            : e.push(`?${i.toString()}`);
+      }
+      function l(e, t) {
+        const n = (0, i.k6)(),
+          l = (0, i.TH)(),
+          c = (0, o.useMemo)(() => {
+            const n = r(l.search, e);
+            return s(n)
+              ? s(t)
+                ? "boolean" == typeof t
+                  ? t.constructor("false" !== n)
+                  : t.constructor(n)
+                : n
+              : t;
+          }, [l.search, e, t]),
+          u = (0, o.useCallback)(
+            (t) => {
+              a(n, e, s(t) ? String(t) : null);
+            },
+            [n, e],
+          );
+        return [c, u];
+      }
+      function c(e, t, n = !1) {
+        const o = new URLSearchParams(e.location.search.substring(1));
+        for (const e in t)
+          if (t.hasOwnProperty(e)) {
+            const n = t[e];
+            o.delete(e), s(n) && o.append(e, n);
+          }
+        n
+          ? e.replace(`?${o.toString()}`, Object.assign({}, e.location.state))
+          : e.push(`?${o.toString()}`);
+      }
     },
     58538: (e, t, n) => {
       "use strict";
@@ -22437,16 +22498,15 @@
       function s(e) {
         const [t, n] = o.useState(!1),
           s = o.useCallback(() => {
-            e &&
-              ((0, i.w3)(e, "Window.IsWindowMaximized")
-                ? e.SteamClient.Window.IsWindowMaximized((e) => {
-                    n(e);
-                  })
-                : e.screen &&
-                  n(
-                    e.screen.availWidth == e.innerWidth &&
-                      e.screen.availHeight == e.innerHeight,
-                  ));
+            (0, i.w3)(e, "Window.IsWindowMaximized")
+              ? e.SteamClient.Window.IsWindowMaximized().then((e) => {
+                  n(e);
+                })
+              : (null == e ? void 0 : e.screen) &&
+                n(
+                  e.screen.availWidth == e.innerWidth &&
+                    e.screen.availHeight == e.innerHeight,
+                );
           }, [e]);
         return (
           o.useEffect(s, [s, e]),
@@ -23050,6 +23110,7 @@
         TimelineMarkerEditor: () => "/apps/timelinemarkers/:appid(\\d+)",
         KeyWizardPackagePage: () => "/apps/packages/:appid(\\d+)",
         HardwareReservationQueueMessaging: () => "/hardware/reservationqueue",
+        YearInReviewProgressMonitor: () => "/yearinreview/dashboard",
       };
       function r() {
         let e = document.createElement("a");
@@ -23058,7 +23119,7 @@
         return t.endsWith("/") || (t += "/"), t;
       }
     },
-    78666: (e, t, n) => {
+    23828: (e, t, n) => {
       "use strict";
       var o = n(85556),
         i = (n(316), n(47316)),
@@ -23449,17 +23510,182 @@
           })
         );
       }
-      const X = c.lazy(() =>
+      var X = n(98255),
+        Y = n.n(X),
+        q = n(74585),
+        Q = n.n(q),
+        $ = n(10162),
+        J = n(71472),
+        ee = n(12251);
+      function te(e) {
+        const t = (function () {
+            const [e] = (0, c.useState)(() =>
+              (0, H.kQ)("year_in_review_proress", "application_config"),
+            );
+            return e;
+          })(),
+          [n] = (0, J.Ar)("year", new Date().getFullYear());
+        new Date().getMonth();
+        return c.createElement(
+          $.SV,
+          null,
+          c.createElement(
+            "div",
+            { className: Q().DashboardCtn },
+            c.createElement(
+              "h1",
+              null,
+              "Year in Review Progress Monitoring: ",
+              n,
+            ),
+            c.createElement("hr", null),
+            c.createElement(
+              "p",
+              null,
+              "We are running batches in ",
+              t.queue_batch_size.toLocaleString(),
+              " accounts at a time. Active phase 2 queue size is ",
+              t.monthly_active_queue_size.toLocaleString(),
+            ),
+            t.progress.map((e) =>
+              c.createElement(ne, {
+                key: e.month,
+                oMonth: e,
+                nActiveQueue: t.monthly_active_queue_size,
+              }),
+            ),
+          ),
+        );
+      }
+      function ne(e) {
+        const { oMonth: t, nActiveQueue: n } = e;
+        return c.createElement(
+          "div",
+          { className: (0, u.Z)(Q().OptInAdminRow, Y().TileContainer) },
+          c.createElement(
+            "h3",
+            null,
+            "Month: ",
+            [
+              "January",
+              "February",
+              "March",
+              "April",
+              "May",
+              "June",
+              "July",
+              "August",
+              "September",
+              "October",
+              "November",
+              "December",
+            ][t.month - 1],
+          ),
+          c.createElement(
+            "div",
+            null,
+            "Phase 1: Pre-Fetching Accounts to Process ",
+            Boolean(!t.rt_start_processing) &&
+              c.createElement("span", null, "- In Progress"),
+          ),
+          c.createElement(
+            "div",
+            null,
+            "Started: ",
+            c.createElement(oe, { rtTime: t.rt_start_finding_accounts }),
+          ),
+          Boolean(t.rt_end_finding_accounts)
+            ? c.createElement(
+                "div",
+                null,
+                "Completed ",
+                c.createElement(oe, { rtTime: t.rt_end_finding_accounts }),
+                " prefetched upto accountid ",
+                t.largest_account_id_prefetched.toLocaleString(),
+              )
+            : c.createElement(
+                "div",
+                null,
+                "Pre-fetched upto Account ID ",
+                t.largest_account_id_prefetched.toLocaleString(),
+              ),
+          Boolean(t.rt_start_processing) &&
+            c.createElement(
+              "div",
+              null,
+              c.createElement(
+                "div",
+                null,
+                "Phase 2: Processing Monthly Playtime Summary ",
+                Boolean(!t.rt_end_processing) &&
+                  c.createElement("span", null, "- In Progress"),
+              ),
+              c.createElement(
+                "div",
+                null,
+                "Started:",
+                c.createElement(oe, { rtTime: t.rt_start_processing }),
+              ),
+              Boolean(t.rt_end_processing)
+                ? c.createElement(
+                    "div",
+                    null,
+                    "Completed ",
+                    c.createElement(oe, { rtTime: t.rt_end_processing }),
+                    "  queue'ed upto account ID ",
+                    t.largest_account_queued.toLocaleString(),
+                    "total accounts queued ",
+                    t.queued_accounts.toLocaleString(),
+                  )
+                : c.createElement(
+                    "div",
+                    null,
+                    "Queue'ed upto Account ID ",
+                    t.largest_account_queued.toLocaleString(),
+                    "total accounts queued ",
+                    t.queued_accounts.toLocaleString(),
+                  ),
+            ),
+          Boolean((t.rt_end_processing && 0 == n) || t.rt_platform_summary) &&
+            c.createElement(
+              "div",
+              null,
+              Boolean(t.rt_platform_summary)
+                ? c.createElement(
+                    "div",
+                    null,
+                    "Phase 3: Global Playtime Distribution In progress",
+                  )
+                : c.createElement(
+                    "div",
+                    null,
+                    "Phase 3: Global Playtime Distribution Completed at ",
+                    c.createElement(oe, { rtTime: t.rt_platform_summary }),
+                  ),
+            ),
+        );
+      }
+      function oe(e) {
+        const { rtTime: t } = e;
+        return c.createElement(
+          "span",
+          null,
+          (0, m.$1)(t),
+          " as ",
+          (0, ee.Sc)(t),
+        );
+      }
+      const ie = c.lazy(() =>
           Promise.all([n.e(9749), n.e(2268), n.e(4535)]).then(n.bind(n, 81515)),
         ),
-        Y = c.lazy(() => n.e(7762).then(n.bind(n, 36187))),
-        q = c.lazy(() =>
+        re = c.lazy(() => n.e(7762).then(n.bind(n, 36187))),
+        se = c.lazy(() =>
           Promise.all([n.e(7510), n.e(6699)]).then(n.bind(n, 76756)),
         ),
-        Q = c.lazy(() =>
+        ae = c.lazy(() =>
           Promise.all([n.e(7510), n.e(6699)]).then(n.bind(n, 2157)),
         ),
-        $ = c.lazy(() =>
+        le = c.lazy(() =>
           Promise.all([
             n.e(8313),
             n.e(7439),
@@ -23474,7 +23700,7 @@
             n.e(2529),
           ]).then(n.bind(n, 22331)),
         ),
-        J = c.lazy(() =>
+        ce = c.lazy(() =>
           Promise.all([
             n.e(8313),
             n.e(7439),
@@ -23507,7 +23733,7 @@
             n.e(2136),
           ]).then(n.bind(n, 82625)),
         ),
-        ee = c.lazy(() =>
+        ue = c.lazy(() =>
           Promise.all([
             n.e(8313),
             n.e(7439),
@@ -23538,9 +23764,9 @@
             n.e(7485),
             n.e(4033),
             n.e(2136),
-          ]).then(n.bind(n, 20166)),
+          ]).then(n.bind(n, 50694)),
         ),
-        te = c.lazy(() =>
+        de = c.lazy(() =>
           Promise.all([
             n.e(8313),
             n.e(7439),
@@ -23573,7 +23799,7 @@
             n.e(2136),
           ]).then(n.bind(n, 59997)),
         ),
-        ne = c.lazy(() =>
+        he = c.lazy(() =>
           Promise.all([
             n.e(8313),
             n.e(7439),
@@ -23606,12 +23832,12 @@
             n.e(2136),
           ]).then(n.bind(n, 74895)),
         ),
-        oe = c.lazy(() =>
+        me = c.lazy(() =>
           Promise.all([n.e(9584), n.e(744), n.e(5117), n.e(5676)]).then(
-            n.bind(n, 31514),
+            n.bind(n, 64911),
           ),
         ),
-        ie = c.lazy(() =>
+        pe = c.lazy(() =>
           Promise.all([
             n.e(8313),
             n.e(7439),
@@ -23629,7 +23855,7 @@
             n.e(8974),
           ]).then(n.bind(n, 21747)),
         ),
-        re = c.lazy(() =>
+        ge = c.lazy(() =>
           Promise.all([
             n.e(8313),
             n.e(7439),
@@ -23647,8 +23873,8 @@
             n.e(9035),
           ]).then(n.bind(n, 89721)),
         ),
-        se = c.lazy(() => n.e(4935).then(n.bind(n, 21452))),
-        ae = c.lazy(() =>
+        _e = c.lazy(() => n.e(4935).then(n.bind(n, 21452))),
+        ve = c.lazy(() =>
           Promise.all([
             n.e(8313),
             n.e(7439),
@@ -23661,8 +23887,8 @@
             n.e(3863),
           ]).then(n.bind(n, 35339)),
         ),
-        le = () => c.createElement("div", null),
-        ce = c.lazy(() =>
+        Ce = () => c.createElement("div", null),
+        fe = c.lazy(() =>
           Promise.all([
             n.e(8313),
             n.e(7439),
@@ -23694,7 +23920,7 @@
             n.e(3599),
           ]).then(n.bind(n, 75907)),
         ),
-        ue = c.lazy(() =>
+        be = c.lazy(() =>
           Promise.all([
             n.e(8313),
             n.e(8794),
@@ -23705,7 +23931,7 @@
             n.e(6808),
           ]).then(n.bind(n, 84877)),
         );
-      function de(e) {
+      function Se(e) {
         const t = (0, p.kQ)("publisherid", "application_config");
         return c.createElement(
           p.fI,
@@ -23717,7 +23943,7 @@
               O.R,
               null,
               c.createElement(
-                ge,
+                Me,
                 null,
                 c.createElement(y.Y0, null, e.children),
               ),
@@ -23725,7 +23951,7 @@
           ),
         );
       }
-      function he(e) {
+      function Ee(e) {
         let { children: t } = e,
           n = (0, I.H7)([s.Z.PricingTools(), s.Z.PromotionTools()]);
         return c.createElement(
@@ -23734,15 +23960,15 @@
           t,
         );
       }
-      function me(e) {
+      function we(e) {
         return c.createElement(
           b.VK,
           { basename: (0, s.l)() },
           c.createElement(
-            de,
+            Se,
             null,
             c.createElement(
-              he,
+              Ee,
               null,
               c.createElement(
                 c.Suspense,
@@ -23750,7 +23976,11 @@
                 c.createElement(
                   S.rs,
                   null,
-                  c.createElement(S.AW, { exact: !0, path: "/", component: X }),
+                  c.createElement(S.AW, {
+                    exact: !0,
+                    path: "/",
+                    component: ie,
+                  }),
                   c.createElement(S.AW, {
                     exact: !0,
                     path: s.Z.DiagData(),
@@ -23765,45 +23995,45 @@
                   }),
                   c.createElement(S.AW, {
                     path: s.Z.SalePages(),
-                    component: te,
+                    component: de,
                   }),
                   c.createElement(S.AW, {
                     path: s.Z.OptInPages(),
-                    component: ne,
+                    component: he,
                   }),
                   c.createElement(S.AW, {
                     exact: !0,
                     path: s.Z.ContentHubCategories(),
-                    render: () => c.createElement(re, null),
+                    render: () => c.createElement(ge, null),
                   }),
                   c.createElement(S.AW, {
                     path: s.Z.StoreGameAdminRoot(),
-                    component: ie,
+                    component: pe,
                   }),
                   c.createElement(S.AW, {
                     path: s.Z.AppLandingPage(),
-                    component: ie,
+                    component: pe,
                   }),
                   c.createElement(S.AW, {
                     path: s.Z.AppCommunityItems(),
-                    component: ie,
+                    component: pe,
                   }),
                   c.createElement(S.AW, {
                     path: s.Z.StoreAdminReviewPriceProposals(),
-                    component: ie,
+                    component: pe,
                   }),
                   c.createElement(S.AW, {
                     path: s.Z.SteamML(),
-                    render: () => c.createElement(Y, null),
+                    render: () => c.createElement(re, null),
                   }),
                   c.createElement(S.AW, {
                     path: s.Z.SteamLearn(),
-                    render: () => c.createElement(oe, null),
+                    render: () => c.createElement(me, null),
                   }),
                   c.createElement(S.AW, {
                     path: s.Z.BuildPatchNotes(),
                     render: (e) =>
-                      c.createElement(J, { appId: e.match.params.appid }),
+                      c.createElement(ce, { appId: e.match.params.appid }),
                   }),
                   c.createElement(S.AW, {
                     path: s.Z.SteamworksEvents(),
@@ -23811,11 +24041,11 @@
                   }),
                   c.createElement(S.AW, {
                     path: s.Z.PromotionTools(),
-                    component: ee,
+                    component: ue,
                   }),
                   c.createElement(S.AW, {
                     path: s.Z.PricingTools(),
-                    component: $,
+                    component: le,
                   }),
                   c.createElement(S.AW, {
                     path: s.Z.BundlesEditor(),
@@ -23827,7 +24057,7 @@
                       c.createElement(L.d, {
                         config: {
                           "deck-verified-results": (e) =>
-                            c.createElement(Q, {
+                            c.createElement(ae, {
                               dataprops: e,
                               results: (0, p.kQ)(
                                 "deckcompatibility",
@@ -23843,7 +24073,7 @@
                       c.createElement(L.d, {
                         config: {
                           "deck-verified-results-inflight": (e) =>
-                            c.createElement(Q, {
+                            c.createElement(ae, {
                               dataprops: e,
                               results: (0, p.kQ)(
                                 "deckcompatibility_inflight",
@@ -23851,7 +24081,7 @@
                               ),
                             }),
                           "deck-verified-results-submitted": (e) =>
-                            c.createElement(Q, {
+                            c.createElement(ae, {
                               dataprops: e,
                               results: (0, p.kQ)(
                                 "deckcompatibility_submitted",
@@ -23859,7 +24089,7 @@
                               ),
                             }),
                           "deck-verified-results-published": (e) =>
-                            c.createElement(Q, {
+                            c.createElement(ae, {
                               dataprops: e,
                               results: (0, p.kQ)(
                                 "deckcompatibility_published",
@@ -23875,7 +24105,7 @@
                       c.createElement(L.d, {
                         config: {
                           "deck-verified-results-reports": (e) =>
-                            c.createElement(Q, {
+                            c.createElement(ae, {
                               dataprops: e,
                               results: (0, p.kQ)(
                                 "deckcompatibility_reports",
@@ -23891,7 +24121,7 @@
                       c.createElement(L.d, {
                         config: {
                           "deck-verified-results": () =>
-                            c.createElement(q, {
+                            c.createElement(se, {
                               results: (0, p.kQ)(
                                 "deckcompatibility",
                                 "application_config",
@@ -23903,7 +24133,7 @@
                   c.createElement(S.AW, {
                     path: s.Z.SDRConnections(),
                     render: (e) =>
-                      c.createElement(se, { appId: e.match.params.appid }),
+                      c.createElement(_e, { appId: e.match.params.appid }),
                   }),
                   c.createElement(S.AW, {
                     path: s.Z.PublisherDashboard(),
@@ -23911,9 +24141,9 @@
                       c.createElement(L.d, {
                         config: {
                           "publisher-dashboard": () =>
-                            c.createElement(ae, null),
+                            c.createElement(ve, null),
                           "promotion-review-dashboard": () =>
-                            c.createElement(ce, null),
+                            c.createElement(fe, null),
                         },
                       }),
                   }),
@@ -23923,7 +24153,7 @@
                       c.createElement(L.d, {
                         config: {
                           "timeline-marker-editor": () =>
-                            c.createElement(le, {
+                            c.createElement(Ce, {
                               appId: e.match.params.appid,
                             }),
                         },
@@ -23931,7 +24161,7 @@
                   }),
                   c.createElement(S.AW, {
                     path: s.Z.HardwareReservationQueueMessaging(),
-                    component: ue,
+                    component: be,
                   }),
                   c.createElement(S.AW, {
                     path: s.Z.KeyWizardPackagePage(),
@@ -23943,6 +24173,10 @@
                         },
                       }),
                   }),
+                  c.createElement(S.AW, {
+                    path: s.Z.YearInReviewProgressMonitor(),
+                    component: te,
+                  }),
                   c.createElement(S.AW, null, c.createElement(T.R, null)),
                 ),
               ),
@@ -23950,12 +24184,12 @@
           ),
         );
       }
-      function pe() {
+      function De() {
         const e = (0, p.ip)("loyalty_webapi_token", "application_config");
         return new D.J(p.De.WEBAPI_BASE_URL, e);
       }
-      function ge(e) {
-        const t = (0, R.kD)(pe),
+      function Me(e) {
+        const t = (0, R.kD)(De),
           n = (0, R.kD)(c.useCallback(() => new w.Z(), []));
         return c.createElement(
           E.Ub,
@@ -23963,10 +24197,10 @@
           e.children,
         );
       }
-      var _e = n(24522),
-        ve = n(62210),
-        Ce = (n(34345), n(92011));
-      function fe(e) {
+      var ye = n(24522),
+        Le = n(62210),
+        Te = (n(34345), n(92011));
+      function Re(e) {
         return (0, o.mG)(this, void 0, void 0, function* () {
           const [t, o, i, r] = yield Promise.all([
               n(11580)(`./shared_${e}.json`),
@@ -23999,22 +24233,22 @@
           return (0, o.mG)(this, void 0, void 0, function* () {
             document.getElementById("application_root")
               ? ((0, p.Ek)("application_config"),
-                (0, Ce.Uh)().Init(
+                (0, Te.Uh)().Init(
                   "Partner",
                   CLSTAMP,
                   new D.J(p.De.WEBAPI_BASE_URL).GetServiceTransport(),
                 ),
-                yield fe(p.De.LANGUAGE),
-                _e
+                yield Re(p.De.LANGUAGE),
+                ye
                   .s(document.getElementById("application_root"))
-                  .render(c.createElement(me, {})))
+                  .render(c.createElement(we, {})))
               : ((0, p.Ek)(),
-                (0, Ce.Uh)().Init(
+                (0, Te.Uh)().Init(
                   "Partner",
                   CLSTAMP,
                   new D.J(p.De.WEBAPI_BASE_URL).GetServiceTransport(),
                 ),
-                yield fe(p.De.LANGUAGE),
+                yield Re(p.De.LANGUAGE),
                 (function () {
                   let e = document.querySelectorAll(".StoreAdminReactRoot");
                   for (let t = 0; t < e.length; t++) {
@@ -24030,14 +24264,14 @@
                           );
                         break;
                       default:
-                        (0, ve.X)(!1, `unknown component: "${i}"`);
+                        (0, Le.X)(!1, `unknown component: "${i}"`);
                     }
                   }
                 })());
           });
         }),
         (window.LocalizationManifestReady = function (e, t, n) {
-          (0, ve.X)("manifest" === t, `Expected manifest not "${t}"`),
+          (0, Le.X)("manifest" === t, `Expected manifest not "${t}"`),
             m.Yt.InitDirect(n);
         });
     },
@@ -24051,7 +24285,7 @@
   },
   (e) => {
     e.O(0, [3250], () => {
-      return (t = 78666), e((e.s = t));
+      return (t = 23828), e((e.s = t));
       var t;
     });
     e.O();

@@ -672,7 +672,7 @@
         }
         return r;
       }
-      function G(e) {
+      function E(e) {
         for (var t = 1; t < arguments.length; t++) {
           var r = null != arguments[t] ? arguments[t] : {};
           t % 2
@@ -691,7 +691,7 @@
         }
         return e;
       }
-      var E = "observed",
+      var G = "observed",
         B = "requested",
         F =
           ((T = z =
@@ -838,7 +838,7 @@
                           o = void 0 === i ? this.props.scrollToColumn : i,
                           n = e.rowIndex,
                           l = void 0 === n ? this.props.scrollToRow : n,
-                          s = G({}, this.props, {
+                          s = E({}, this.props, {
                             scrollToAlignment: r,
                             scrollToColumn: o,
                             scrollToRow: l,
@@ -899,7 +899,7 @@
                                     ? 1
                                     : -1
                                   : this.state.scrollDirectionVertical,
-                              scrollPositionChangeReason: E,
+                              scrollPositionChangeReason: G,
                             };
                             l || (g.scrollTop = m),
                               s || (g.scrollLeft = p),
@@ -987,11 +987,11 @@
                         i > 1 &&
                           void 0 !== t &&
                           this._updateScrollLeftForScrollToColumn(
-                            G({}, o, { scrollToColumn: t }),
+                            E({}, o, { scrollToColumn: t }),
                           ),
                           void 0 !== r &&
                             this._updateScrollTopForScrollToRow(
-                              G({}, o, { scrollToRow: r }),
+                              E({}, o, { scrollToRow: r }),
                             );
                       },
                     },
@@ -1013,7 +1013,7 @@
                           this._handleInvalidatedGridSize(),
                           c.scrollbarSizeMeasured ||
                             this.setState(function (e) {
-                              var t = G({}, e, { needToResetStyleCache: !1 });
+                              var t = E({}, e, { needToResetStyleCache: !1 });
                               return (
                                 (t.instanceProps.scrollbarSize = r()),
                                 (t.instanceProps.scrollbarSizeMeasured = !0),
@@ -1219,7 +1219,7 @@
                             id: c,
                             onScroll: this._onScroll,
                             role: f,
-                            style: G({}, C, {}, m),
+                            style: E({}, C, {}, m),
                             tabIndex: g,
                           }),
                           T.length > 0 &&
@@ -1229,7 +1229,7 @@
                                 className:
                                   "ReactVirtualized__Grid__innerScrollContainer",
                                 role: l,
-                                style: G(
+                                style: E(
                                   {
                                     width: t ? "auto" : b,
                                     height: R,
@@ -1662,7 +1662,7 @@
                               (l.scrollbarSize = 0))
                             : (l.scrollbarSizeMeasured = !0),
                           (i.instanceProps = l),
-                          G({}, i, {}, o, {}, n)
+                          E({}, i, {}, o, {}, n)
                         );
                       },
                     },
@@ -4289,7 +4289,7 @@
         });
       var ke,
         Le,
-        Ge = (function () {
+        Ee = (function () {
           function e() {
             var t;
             (0, i.Z)(this, e),
@@ -4366,7 +4366,7 @@
             e
           );
         })();
-      function Ee(e, t) {
+      function Ge(e, t) {
         var r = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
           var i = Object.getOwnPropertySymbols(e);
@@ -4382,12 +4382,12 @@
         for (var t = 1; t < arguments.length; t++) {
           var r = null != arguments[t] ? arguments[t] : {};
           t % 2
-            ? Ee(r, !0).forEach(function (t) {
+            ? Ge(r, !0).forEach(function (t) {
                 (0, c.Z)(e, t, r[t]);
               })
             : Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
-            : Ee(r).forEach(function (t) {
+            : Ge(r).forEach(function (t) {
                 Object.defineProperty(
                   e,
                   t,
@@ -4421,7 +4421,7 @@
                 (0, c.Z)((0, s.Z)(r), "_debounceResetIsScrollingId", void 0),
                 (0, c.Z)((0, s.Z)(r), "_invalidateOnUpdateStartIndex", null),
                 (0, c.Z)((0, s.Z)(r), "_invalidateOnUpdateStopIndex", null),
-                (0, c.Z)((0, s.Z)(r), "_positionCache", new Ge()),
+                (0, c.Z)((0, s.Z)(r), "_positionCache", new Ee()),
                 (0, c.Z)((0, s.Z)(r), "_startIndex", null),
                 (0, c.Z)((0, s.Z)(r), "_startIndexMemoized", null),
                 (0, c.Z)((0, s.Z)(r), "_stopIndex", null),
@@ -4463,7 +4463,7 @@
                   {
                     key: "clearCellPositions",
                     value: function () {
-                      (this._positionCache = new Ge()), this.forceUpdate();
+                      (this._positionCache = new Ee()), this.forceUpdate();
                     },
                   },
                   {
@@ -4487,7 +4487,7 @@
                     key: "recomputeCellPositions",
                     value: function () {
                       var e = this._positionCache.count - 1;
-                      (this._positionCache = new Ge()),
+                      (this._positionCache = new Ee()),
                         this._populatePositionCache(0, e),
                         this.forceUpdate();
                     },
@@ -6922,7 +6922,7 @@
         constructor(e = null) {
           super(),
             d.prototype.recommendationid || o.aR(d.M()),
-            l.initialize(this, e, 0, -1, [40], null);
+            l.initialize(this, e, 0, -1, [27, 40], null);
         }
         static M() {
           return (
@@ -7036,10 +7036,13 @@
                     br: o.FE.readBool,
                     bw: o.Xc.writeBool,
                   },
-                  review_quality: {
+                  review_qualities: {
                     n: 27,
+                    r: !0,
+                    q: !0,
                     br: o.FE.readEnum,
-                    bw: o.Xc.writeEnum,
+                    pbr: o.FE.readPackedEnum,
+                    bw: o.Xc.writeRepeatedEnum,
                   },
                   weighted_vote_score: {
                     n: 28,

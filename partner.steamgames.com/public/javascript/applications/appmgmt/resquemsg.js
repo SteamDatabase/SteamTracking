@@ -508,7 +508,7 @@
       const o = (0, n.kQ)("physical_goods", "application_config");
       var a = s(85556),
         i = s(79545),
-        l = s(98255),
+        l = s(75375),
         c = s(77581),
         u = s(62210),
         d = s(16649),

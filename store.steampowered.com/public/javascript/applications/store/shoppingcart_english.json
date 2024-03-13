@@ -166,5 +166,7 @@
     "Cart_LineItem_Add_Tooltip": "Add another copy of this item to your cart",
     "Cart_ErrorUpdating": "There was a problem updating your cart.",
     "Cart_ErrorCode": "Error code: %1$s",
-    "Cart_UserCountrySelector": "Country"
+    "Cart_UserCountrySelector": "Country",
+    "Cart_Replay_SavedCart": "Saved Cart",
+    "Cart_Replay_Instructions": "This is a saved shopping cart.  Last time you attempted to purchase this cart there was an error, so we saved your cart (including discounts) for %1$s hours so you can attempt your purchase again."
 }

@@ -1160,8 +1160,8 @@
         return ["parentalsettings", e];
       }
       function h(e) {
-        const t = e.applist_base().concat(e.applist_custom());
-        return new Map(t.map((e) => [e.appid(), e.is_allowed()]));
+        const t = e.applist_base.concat(e.applist_custom);
+        return new Map(t.map((e) => [e.appid, e.is_allowed]));
       }
       function m(e, t) {
         return (0, o.mG)(this, void 0, void 0, function* () {
@@ -1172,8 +1172,11 @@
             throw new Error(
               `Error from GetParentalSettings: ${o.GetEResult()}`,
             );
-          const i = h(o.Body().settings());
-          return { settings: o.Body().settings(), mapAppsAllowed: i };
+          const i = h(o.Body().settings().toObject());
+          return {
+            settings: o.Body().settings().toObject(),
+            mapAppsAllowed: i,
+          };
         });
       }
       function p(e) {
@@ -1215,11 +1218,11 @@
       }
       function v(e, t, n) {
         if (!e) return !0;
-        if (!e.is_enabled()) return !1;
+        if (!e.is_enabled) return !1;
         if (t == l.zE || null == t) return !1;
         if (!n) return !1;
         if (t == l.JY) return !0;
-        const o = e.enabled_features();
+        const o = e.enabled_features;
         return !o || 0 == (o & (1 << t));
       }
       function f(e) {
@@ -2939,40 +2942,21 @@
           return this.m_bFocused;
         }
         GetWindowRestoreDetails() {
-          return this.m_popup &&
-            !this.m_popup.closed &&
-            this.m_popup.SteamClient
-            ? new Promise((e, t) => {
-                this.m_popup.SteamClient.Window.GetWindowRestoreDetails((t) => {
-                  e(t);
-                });
-              })
+          return (0, C.w3)(this.m_popup, "Window.GetWindowRestoreDetails") &&
+            !this.m_popup.closed
+            ? this.m_popup.SteamClient.Window.GetWindowRestoreDetails()
             : Promise.resolve("");
         }
         IsMinimized() {
-          return this.m_popup &&
-            !this.m_popup.closed &&
-            this.m_popup.SteamClient &&
-            this.m_popup.SteamClient.Window &&
-            this.m_popup.SteamClient.Window.IsWindowMinimized
-            ? new Promise((e, t) => {
-                this.m_popup.SteamClient.Window.IsWindowMinimized((t) => {
-                  e(t);
-                });
-              })
+          return (0, C.w3)(this.m_popup, "Window.IsWindowMinimized") &&
+            !this.m_popup.closed
+            ? this.m_popup.SteamClient.Window.IsWindowMinimized()
             : Promise.resolve(!1);
         }
         IsMaximized() {
-          return this.m_popup &&
-            !this.m_popup.closed &&
-            this.m_popup.SteamClient &&
-            this.m_popup.SteamClient.Window &&
-            this.m_popup.SteamClient.Window.IsWindowMinimized
-            ? new Promise((e, t) => {
-                this.m_popup.SteamClient.Window.IsWindowMaximized((t) => {
-                  e(t);
-                });
-              })
+          return (0, C.w3)(this.m_popup, "Window.IsWindowMaximized") &&
+            !this.m_popup.closed
+            ? this.m_popup.SteamClient.Window.IsWindowMaximized()
             : Promise.resolve(!1);
         }
         ReleasePopup() {
@@ -10651,7 +10635,7 @@
           }
           null === (o = this.parentWin) ||
             void 0 === o ||
-            o.SteamClient.Window.GetWindowRestoreDetails((e) => {
+            o.SteamClient.Window.GetWindowRestoreDetails().then((e) => {
               const t = this.state.menuLeft - this.parentWin.screenX,
                 n = this.state.menuTop - this.parentWin.screenY;
               try {
@@ -10753,13 +10737,9 @@
           (a &&
             "tagName" in a &&
             (("INPUT" != a.tagName && "TEXTAREA" != a.tagName) || (l = !0)),
-          E.De.IN_CLIENT &&
-            l &&
-            n.SteamClient._internal &&
-            n.SteamClient._internal.GetSpellingSuggestions &&
-            n.SteamClient._internal.AddWordToDictionary)
+          E.De.IN_CLIENT && l && (0, p.w3)(n, "Browser.GetSpellingSuggestions"))
         ) {
-          let [e, ...o] = n.SteamClient._internal.GetSpellingSuggestions(),
+          let [e, ...o] = n.SteamClient.Browser.GetSpellingSuggestions(),
             i = a;
           if (
             (i &&
@@ -10784,7 +10764,7 @@
                   ),
                 );
               }),
-            e)
+            e && (0, p.w3)(n, "Browser.AddWordToDictionary"))
           ) {
             const o = 30;
             (e = e.trim()),
@@ -10793,13 +10773,8 @@
                   y,
                   {
                     key: `addtodictionary_${e}`,
-                    onSelected: () => {
-                      var t;
-                      return null === (t = n.SteamClient._internal) ||
-                        void 0 === t
-                        ? void 0
-                        : t.AddWordToDictionary(e);
-                    },
+                    onSelected: () =>
+                      n.SteamClient.Browser.AddWordToDictionary(e),
                   },
                   (0, b.Xx)(
                     "#ContextMenu_AddToDictionary",
@@ -10839,19 +10814,14 @@
             ),
           E.De.IN_CLIENT &&
             l &&
-            n.SteamClient._internal &&
-            n.SteamClient._internal.Paste &&
+            (0, p.w3)(n, "Browser.Paste") &&
             t.push(
               r.createElement(
                 y,
                 {
                   key: "paste",
                   onSelected: () => {
-                    var e;
-                    a.focus(),
-                      null === (e = n.SteamClient._internal) ||
-                        void 0 === e ||
-                        e.Paste();
+                    a.focus(), n.SteamClient.Browser.Paste();
                   },
                   className: D().NoSeparation,
                 },
@@ -15737,38 +15707,39 @@
         $jN: () => _,
         $nC: () => g,
         CtA: () => m,
-        DUs: () => O,
-        DeA: () => y,
-        Dos: () => W,
-        FYd: () => P,
-        Hz5: () => S,
-        Jwt: () => R,
-        Lb: () => F,
-        LcB: () => U,
-        N4L: () => T,
-        P2P: () => B,
-        RAD: () => x,
-        RCC: () => L,
+        DUs: () => x,
+        DeA: () => R,
+        Dos: () => j,
+        FYd: () => V,
+        Hz5: () => D,
+        Jwt: () => O,
+        Lb: () => P,
+        LcB: () => W,
+        N4L: () => A,
+        P2P: () => F,
+        RAD: () => I,
+        RCC: () => y,
         Tt3: () => c,
-        Tvf: () => M,
-        Tx5: () => E,
-        Zhu: () => k,
+        Tvf: () => L,
+        Tx5: () => S,
+        Zhu: () => B,
         bbz: () => f,
-        cSC: () => z,
-        dQJ: () => D,
+        cSC: () => K,
+        dQJ: () => M,
         dqu: () => w,
-        ex9: () => G,
-        geY: () => A,
-        hhG: () => H,
-        l2k: () => I,
-        nC9: () => Z,
+        ex9: () => U,
+        geY: () => N,
+        hhG: () => G,
+        l2k: () => T,
+        nC9: () => z,
+        nkn: () => E,
         olm: () => u,
         rFk: () => C,
         tkI: () => b,
-        tzG: () => V,
+        tzG: () => H,
         vVQ: () => v,
-        y3S: () => N,
-        z$U: () => j,
+        y3S: () => k,
+        z$U: () => Z,
       });
       var o = n(85556),
         i = n(47427),
@@ -16467,6 +16438,23 @@
         );
       }
       function E(e) {
+        return i.createElement(
+          "svg",
+          Object.assign(
+            {
+              xmlns: "http://www.w3.org/2000/svg",
+              viewBox: "0 0 36 36",
+              fill: "none",
+            },
+            e,
+          ),
+          i.createElement("path", {
+            d: "M2 6.05005V30.05H34V6.05005H2ZM8 27.05H5V23.05H8V27.05ZM8 20.05H5V16.05H8V20.05ZM8 13.05H5V9.05005H8V13.05ZM14 23.82V12.28L24 18.05L14 23.82ZM31 27.05H28V23.05H31V27.05ZM31 20.05H28V16.05H31V20.05ZM31 13.05H28V9.05005H31V13.05Z",
+            fill: "currentColor",
+          }),
+        );
+      }
+      function S(e) {
         const { alert: t, urgent: n } = e,
           r = (0, o._T)(e, ["alert", "urgent"]);
         return n
@@ -16542,7 +16530,7 @@
               ),
             );
       }
-      function S(e) {
+      function D(e) {
         return i.createElement(
           "svg",
           Object.assign(
@@ -16561,7 +16549,7 @@
           }),
         );
       }
-      function D(e) {
+      function M(e) {
         return i.createElement(
           "svg",
           Object.assign(
@@ -16582,7 +16570,7 @@
           }),
         );
       }
-      function M(e) {
+      function L(e) {
         return i.createElement(
           "svg",
           {
@@ -16598,7 +16586,7 @@
           }),
         );
       }
-      function L(e) {
+      function y(e) {
         return i.createElement(
           "svg",
           {
@@ -16614,7 +16602,7 @@
           }),
         );
       }
-      function y() {
+      function R() {
         return i.createElement(
           "svg",
           {
@@ -16634,7 +16622,7 @@
           ),
         );
       }
-      function R() {
+      function O() {
         return i.createElement(
           "svg",
           {
@@ -16653,7 +16641,7 @@
           ),
         );
       }
-      function O() {
+      function x() {
         return i.createElement(
           "svg",
           {
@@ -16672,7 +16660,7 @@
           ),
         );
       }
-      function x() {
+      function I() {
         return i.createElement(
           "svg",
           {
@@ -16691,7 +16679,7 @@
           ),
         );
       }
-      function I() {
+      function T() {
         return i.createElement(
           "svg",
           {
@@ -16710,7 +16698,7 @@
           ),
         );
       }
-      function T() {
+      function A() {
         const [e, t] = (0, a.y)();
         return i.createElement(
           "svg",
@@ -16772,7 +16760,7 @@
           ),
         );
       }
-      function A() {
+      function N() {
         return i.createElement(
           "svg",
           {
@@ -16791,7 +16779,7 @@
           ),
         );
       }
-      function N() {
+      function k() {
         return i.createElement(
           "svg",
           {
@@ -16810,7 +16798,7 @@
           ),
         );
       }
-      function k() {
+      function B() {
         return i.createElement(
           "svg",
           {
@@ -16829,7 +16817,7 @@
           ),
         );
       }
-      function B() {
+      function F() {
         return i.createElement(
           "svg",
           {
@@ -16848,7 +16836,7 @@
           ),
         );
       }
-      function F() {
+      function P() {
         return i.createElement(
           "svg",
           {
@@ -16867,7 +16855,7 @@
           ),
         );
       }
-      function P() {
+      function V() {
         const [e, t] = (0, a.y)();
         return i.createElement(
           "svg",
@@ -16908,7 +16896,7 @@
           ),
         );
       }
-      function V() {
+      function H() {
         return i.createElement(
           "svg",
           {
@@ -16927,7 +16915,7 @@
           ),
         );
       }
-      function H() {
+      function G() {
         return i.createElement(
           "svg",
           {
@@ -16946,7 +16934,7 @@
           ),
         );
       }
-      function G() {
+      function U() {
         const [e, t] = (0, a.y)();
         return i.createElement(
           "svg",
@@ -16985,7 +16973,7 @@
           ),
         );
       }
-      function U() {
+      function W() {
         return i.createElement(
           "svg",
           {
@@ -17014,7 +17002,7 @@
           ),
         );
       }
-      function W() {
+      function j() {
         const [e, t] = (0, a.y)();
         return i.createElement(
           "svg",
@@ -17046,7 +17034,7 @@
           ),
         );
       }
-      function j() {
+      function Z() {
         const [e, t] = (0, a.y)();
         return i.createElement(
           "svg",
@@ -17080,7 +17068,7 @@
           ),
         );
       }
-      function Z() {
+      function z() {
         const [e, t] = (0, a.y)();
         return i.createElement(
           "svg",
@@ -17116,7 +17104,7 @@
           ),
         );
       }
-      function z(e) {
+      function K(e) {
         return i.createElement(
           "svg",
           {
@@ -24771,16 +24759,15 @@
       function s(e) {
         const [t, n] = o.useState(!1),
           s = o.useCallback(() => {
-            e &&
-              ((0, i.w3)(e, "Window.IsWindowMaximized")
-                ? e.SteamClient.Window.IsWindowMaximized((e) => {
-                    n(e);
-                  })
-                : e.screen &&
-                  n(
-                    e.screen.availWidth == e.innerWidth &&
-                      e.screen.availHeight == e.innerHeight,
-                  ));
+            (0, i.w3)(e, "Window.IsWindowMaximized")
+              ? e.SteamClient.Window.IsWindowMaximized().then((e) => {
+                  n(e);
+                })
+              : (null == e ? void 0 : e.screen) &&
+                n(
+                  e.screen.availWidth == e.innerWidth &&
+                    e.screen.availHeight == e.innerHeight,
+                );
           }, [e]);
         return (
           o.useEffect(s, [s, e]),

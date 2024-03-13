@@ -71,6 +71,8 @@
                         e,
                         d.L7.steamid,
                         (0, p.jM)(d.De.LANGUAGE),
+                        void 0,
+                        !1,
                         !1,
                       );
                     } catch (e) {}

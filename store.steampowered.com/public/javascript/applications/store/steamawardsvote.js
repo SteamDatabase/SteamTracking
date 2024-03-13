@@ -12,6 +12,7 @@
         EventDefaultRowContainer: "_2pVkYef_JboBRTJDsI5XrR",
         EventStartPublic: "_13cijqNyra467La1xbDgy0",
         EventOptions: "ShLAXJyjCB5R_Y81P3-VX",
+        EventStatusContainer: "_1dNhj3aKodzkwfU16oYND",
         FlexColumnContainer: "WmMRFd2F9FMje__jWs2c4",
         FlexRowContainer: "elLwmClZ5oSY2aer18vUt",
         Centered: "_1HqKtO0h5lgj9h0J4mUz51",
@@ -43,8 +44,11 @@
         EventEditorEventStatus: "_3dxy2T8x1pk6OjFgWQSTCE",
         EventHidden: "_3oD7cGykuzlqnfVXev8JDs",
         EventVisible: "_3sin0w04DXfKLZH9M923t8",
+        EventBarBackAndTitle: "_1rQbs6JYrj8dcI7ulhqAHq",
         EventBarTitleCtn: "_1bUXkxwlWqoLUkJx4mP5E",
         EventBarTitle: "_3K6Ror7Nj83ysihgViAvjd",
+        EventEditButtons: "_3N6fzJF2V9mi47EHYuAEiK",
+        EventStatus: "_3uDnLpoGwbP-lVipnNwJTm",
         EventBarBack: "BUxe5edxrjnB3sckTkcDh",
         EditPreviewButton: "_3NmFFZyqnB0ITWJGvJNDqk",
         Delete: "_2GdGzjX59SeWcOhf9bGYki",
@@ -377,10 +381,10 @@
         "./zh-tw.js": 79204,
       };
       function r(e) {
-        var t = o(e);
+        var t = i(e);
         return n(t);
       }
-      function o(e) {
+      function i(e) {
         if (!n.o(s, e)) {
           var t = new Error("Cannot find module '" + e + "'");
           throw ((t.code = "MODULE_NOT_FOUND"), t);
@@ -390,20 +394,20 @@
       (r.keys = function () {
         return Object.keys(s);
       }),
-        (r.resolve = o),
+        (r.resolve = i),
         (e.exports = r),
         (r.id = 95126);
     },
     64936: (e, t, n) => {
       "use strict";
-      n.d(t, { JW: () => c, kl: () => _, rw: () => v, zD: () => m });
+      n.d(t, { JW: () => c, kl: () => j, rw: () => v, zD: () => m });
       var s = n(85556),
         r = n(54842),
-        o = n(37485),
-        i = n.n(o),
-        a = n(47427),
-        l = (n(29480), n(37563));
-      class j {
+        i = n(37485),
+        o = n.n(i),
+        l = n(47427),
+        a = (n(29480), n(37563));
+      class u {
         constructor() {
           (this.bOpenEventLandingPage = !1),
             (this.bIncludeFeaturedAsGameSource = !0),
@@ -414,10 +418,10 @@
           return !1;
         }
         get bIsFollowingEnabled() {
-          return !(0, l.h4)();
+          return !(0, a.h4)();
         }
         get bIsCuratorsEnabled() {
-          return !(0, l.h4)();
+          return !(0, a.h4)();
         }
         get bIncludeCurators() {
           return !0;
@@ -440,10 +444,10 @@
           const t = new URLSearchParams("?" == e[0] ? e.substring(1) : e);
           if (
             t.has("t") &&
-            ("dev" == l.De.WEB_UNIVERSE || "beta" == l.De.WEB_UNIVERSE)
+            ("dev" == a.De.WEB_UNIVERSE || "beta" == a.De.WEB_UNIVERSE)
           ) {
             const e = t.get("t");
-            let n = /^\d+$/.test(e) ? i().unix(Number.parseInt(e)) : i()(e);
+            let n = /^\d+$/.test(e) ? o().unix(Number.parseInt(e)) : o()(e);
             (this.nOverrideDateNow = Math.floor(n.unix())),
               console.log(
                 "CEventCalendarDevFeatures overriding partner event time: " +
@@ -454,35 +458,241 @@
           }
         }
       }
-      (0, s.gn)([r.LO], j.prototype, "nOverrideDateNow", void 0);
-      const c = new j();
+      (0, s.gn)([r.LO], u.prototype, "nOverrideDateNow", void 0);
+      const c = new u();
       window.g_EventCalendarDevFeatures = c;
-      const u = new Date(),
-        d = Math.floor(u.getTime() / 1e3);
-      function _() {
+      const d = new Date(),
+        _ = Math.floor(d.getTime() / 1e3);
+      function j() {
         var e;
-        return null !== (e = c.nOverrideDateNow) && void 0 !== e ? e : d;
+        return null !== (e = c.nOverrideDateNow) && void 0 !== e ? e : _;
       }
       function m() {
-        return a.useMemo(() => _(), []);
+        return l.useMemo(() => j(), []);
       }
       function v() {
-        return a.useMemo(() => c.GetTimeNowWithOverrideAsDate(), []);
+        return l.useMemo(() => c.GetTimeNowWithOverrideAsDate(), []);
+      }
+    },
+    80886: (e, t, n) => {
+      "use strict";
+      n.d(t, {
+        Vm: () => d,
+        dY: () => m,
+        ie: () => c,
+        jk: () => a,
+        oA: () => v,
+        vs: () => u,
+        wZ: () => j,
+      });
+      var s = n(80751),
+        r = n.n(s),
+        i = n(47427),
+        o = (n(83682), n(20417)),
+        l = n(15690);
+      function a(e, t, n, s) {
+        const a = (0, i.useRef)(),
+          u = (0, i.useRef)(void 0),
+          c = (0, o.NW)();
+        a.current = e;
+        const [d, _] = (0, i.useState)(void 0),
+          {
+            include_assets: j,
+            include_release: m,
+            include_platforms: v,
+            include_all_purchase_options: f,
+            include_screenshots: h,
+            include_trailers: p,
+            include_ratings: g,
+            include_tag_count: E,
+            include_reviews: w,
+            include_basic_info: b,
+            include_supported_languages: k,
+            include_full_description: S,
+            include_included_items: D,
+            include_assets_without_overrides: C,
+            apply_user_filters: y,
+          } = n;
+        if (
+          ((0, i.useEffect)(() => {
+            const n = {
+              include_assets: j,
+              include_release: m,
+              include_platforms: v,
+              include_all_purchase_options: f,
+              include_screenshots: h,
+              include_trailers: p,
+              include_ratings: g,
+              include_tag_count: E,
+              include_reviews: w,
+              include_basic_info: b,
+              include_supported_languages: k,
+              include_full_description: S,
+              include_included_items: D,
+              include_assets_without_overrides: C,
+              apply_user_filters: y,
+            };
+            let i = null;
+            return (
+              !e ||
+                l.Z.Get().BHasStoreItem(e, t, n) ||
+                (void 0 !== d && s && s == u.current) ||
+                (s !== u.current && (_(void 0), (u.current = s)),
+                (i = r().CancelToken.source()),
+                l.Z.Get()
+                  .QueueStoreItemRequest(e, t, n)
+                  .then((t) => {
+                    (null == i ? void 0 : i.token.reason) ||
+                      a.current !== e ||
+                      _(1 == t),
+                      c();
+                  })),
+              () =>
+                null == i ? void 0 : i.cancel("useStoreItemCache: unmounting")
+            );
+          }, [e, t, s, d, j, m, v, f, h, p, g, E, w, b, k, S, D, C, y, c]),
+          !e)
+        )
+          return [null, 2];
+        if (!1 === d) return [void 0, 2];
+        if (l.Z.Get().BIsStoreItemMissing(e, t)) return [void 0, 2];
+        if (!l.Z.Get().BHasStoreItem(e, t, n)) return [void 0, 1];
+        const B = l.Z.Get().GetStoreItemWithLegacyVisibilityCheck(e, t);
+        return B ? [B, 3] : [null, 2];
+      }
+      function u(e, t, n) {
+        return a(e, 0, t, n);
+      }
+      function c(e, t, n) {
+        return a(e, 1, t, n);
+      }
+      function d(e, t, n) {
+        const [s, o] = a(e, t, n),
+          [l, c] = (0, i.useState)(null),
+          [d, _] = u(l, n);
+        return (
+          (0, i.useEffect)(() => {
+            var e;
+            const t = r().CancelToken.source();
+            if (
+              1 == (null == s ? void 0 : s.GetStoreItemType()) &&
+              1 == (null == s ? void 0 : s.GetIncludedAppIDs().length)
+            ) {
+              const n = s.GetIncludedAppIDs()[0];
+              l != n &&
+                ((null === (e = null == t ? void 0 : t.token) || void 0 === e
+                  ? void 0
+                  : e.reason) ||
+                  c(n));
+            }
+            return () =>
+              t.cancel("useStoreItemCacheOrPackageSingleApp: unmounting");
+          }, [l, s]),
+          l ? [d, _] : [s, o]
+        );
+      }
+      function _(e, t, n, s) {
+        const a = (0, o.NW)(),
+          {
+            include_assets: u,
+            include_release: c,
+            include_platforms: d,
+            include_all_purchase_options: _,
+            include_screenshots: j,
+            include_trailers: m,
+            include_ratings: v,
+            include_tag_count: f,
+            include_reviews: h,
+            include_basic_info: p,
+            include_supported_languages: g,
+            include_full_description: E,
+            include_included_items: w,
+            include_assets_without_overrides: b,
+            apply_user_filters: k,
+          } = n;
+        if (
+          ((0, i.useEffect)(() => {
+            if (!e || 0 == e.length) return;
+            const n = {
+                include_assets: u,
+                include_release: c,
+                include_platforms: d,
+                include_all_purchase_options: _,
+                include_screenshots: j,
+                include_trailers: m,
+                include_ratings: v,
+                include_tag_count: f,
+                include_reviews: h,
+                include_basic_info: p,
+                include_supported_languages: g,
+                include_full_description: E,
+                include_included_items: w,
+                include_assets_without_overrides: b,
+                apply_user_filters: k,
+              },
+              s = e.filter(
+                (e) =>
+                  !(
+                    l.Z.Get().BHasStoreItem(e, t, n) ||
+                    l.Z.Get().BIsStoreItemMissing(e, t)
+                  ),
+              );
+            if (0 == s.length) return;
+            const i = r().CancelToken.source(),
+              o = s.map((e) => l.Z.Get().QueueStoreItemRequest(e, t, n));
+            return (
+              Promise.all(o).then(() => {
+                i.token.reason || a();
+              }),
+              () => i.cancel("useStoreItemCacheMultiplePackages: unmounting")
+            );
+          }, [e, t, s, a, u, c, d, _, j, m, v, f, h, p, g, E, w, b, k]),
+          !e)
+        )
+          return 2;
+        if (
+          !e.every(
+            (e) =>
+              l.Z.Get().BHasStoreItem(e, t, n) ||
+              l.Z.Get().BIsStoreItemMissing(e, t),
+          )
+        )
+          return 1;
+        return e.every((e) =>
+          l.Z.Get().GetStoreItemWithLegacyVisibilityCheck(e, t),
+        )
+          ? 3
+          : 2;
+      }
+      function j(e, t, n) {
+        return _(e, 0, t, n);
+      }
+      function m(e, t, n) {
+        return _(e, 1, t, n);
+      }
+      function v() {
+        i.useEffect(
+          () => (
+            l.Z.Get().SetReturnUnavailableItems(!0),
+            () => l.Z.Get().SetReturnUnavailableItems(!1)
+          ),
+          [],
+        );
       }
     },
     66079: (e, t, n) => {
       "use strict";
-      n.d(t, { r: () => a });
+      n.d(t, { r: () => l });
       var s = n(47427),
         r = n(27438),
-        o = n(31846),
-        i = n(37563);
-      const a = (e) => {
-        let t = i.De.HELP_BASE_URL + "wizard/HelpWithLimitedAccount";
+        i = n(31846),
+        o = n(37563);
+      const l = (e) => {
+        let t = o.De.HELP_BASE_URL + "wizard/HelpWithLimitedAccount";
         return s.createElement(
           r.uH,
           {
-            strTitle: (0, o.Xx)("#Informational_Message"),
+            strTitle: (0, i.Xx)("#Informational_Message"),
             onCancel: e.closeModal,
             onOK: e.closeModal,
             bAlertDialog: !0,
@@ -490,12 +700,12 @@
           s.createElement(
             "div",
             null,
-            (0, o.kQ)(
+            (0, i.kQ)(
               e.strTokenOverride || "#User_LimitedAccount",
               s.createElement(
                 "a",
-                { href: t, target: i.De.IN_CLIENT ? void 0 : "_blank" },
-                (0, o.Xx)("#User_LimitedAccount_UrlInfo"),
+                { href: t, target: o.De.IN_CLIENT ? void 0 : "_blank" },
+                (0, i.Xx)("#User_LimitedAccount_UrlInfo"),
               ),
             ),
           ),
@@ -504,56 +714,65 @@
     },
     80212: (e, t, n) => {
       "use strict";
-      n.d(t, { X: () => u, _: () => d });
+      n.d(t, { Xt: () => j, _I: () => m, hx: () => _ });
       var s = n(47427),
         r = n(90069),
-        o = n(31846),
-        i = n(37563),
-        a = n(99327),
-        l = n(77581),
-        j = n(35791);
-      function c(e) {
+        i = n(31846),
+        o = n(37563),
+        l = n(99327),
+        a = n(77581),
+        u = n(35791),
+        c = n(27438);
+      function d(e) {
         return s.createElement(
           r.e1,
           { onEscKeypress: e.closeModal, bDisableBackgroundDismiss: !0 },
-          s.createElement(_, { redirectURL: e.redirectURL }),
+          s.createElement(v, { redirectURL: e.redirectURL }),
         );
       }
-      function u() {
+      function _(e) {
+        const { redirectURL: t = window.location.href } = e;
+        return s.createElement(
+          c.Yy,
+          { active: !0 },
+          s.createElement(d, { redirectURL: t }),
+        );
+      }
+      function j() {
         (0, r.AM)(
-          s.createElement(c, {
+          s.createElement(d, {
             ownerWin: window,
             redirectURL: window.location.href,
           }),
           window,
-          { strTitle: (0, o.Xx)("#Login_SignIn") },
+          { strTitle: (0, i.Xx)("#Login_SignIn") },
         );
       }
-      function d(e) {
+      function m(e) {
         (0, r.AM)(
-          s.createElement(c, { ownerWin: window, redirectURL: e }),
+          s.createElement(d, { ownerWin: window, redirectURL: e }),
           window,
-          { strTitle: (0, o.Xx)("#Login_SignIn") },
+          { strTitle: (0, i.Xx)("#Login_SignIn") },
         );
       }
-      function _(e) {
+      function v(e) {
         const { redirectURL: t } = e,
           [n] = (0, s.useState)(
-            new l.J(i.De.WEBAPI_BASE_URL).GetAnonymousServiceTransport(),
+            new a.J(o.De.WEBAPI_BASE_URL).GetAnonymousServiceTransport(),
           ),
-          [r, o] = (0, s.useState)(!1);
+          [r, i] = (0, s.useState)(!1);
         return s.createElement(
           "div",
           null,
           r
-            ? s.createElement(a.pT, null)
-            : s.createElement(a.wK, {
+            ? s.createElement(l.pT, null)
+            : s.createElement(l.wK, {
                 autoFocus: !0,
                 transport: n,
                 platform: 2,
                 onComplete: (e) => {
-                  e == j.TG.k_PrimaryDomainFail
-                    ? o(!0)
+                  e == u.TG.k_PrimaryDomainFail
+                    ? i(!0)
                     : window.location.assign(t);
                 },
                 redirectUrl: t,
@@ -564,14 +783,14 @@
     },
     29480: (e, t, n) => {
       "use strict";
-      n.d(t, { T: () => i });
+      n.d(t, { T: () => o });
       var s = n(80751),
         r = n.n(s),
-        o = n(47427);
-      function i(e) {
-        const t = o.useRef(r().CancelToken.source());
+        i = n(47427);
+      function o(e) {
+        const t = i.useRef(r().CancelToken.source());
         return (
-          o.useEffect(() => {
+          i.useEffect(() => {
             const n = t.current;
             return () => n.cancel(e ? `${e}: unmounting` : "unmounting");
           }, [e]),

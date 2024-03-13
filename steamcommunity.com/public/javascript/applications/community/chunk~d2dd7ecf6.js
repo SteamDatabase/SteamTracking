@@ -9208,6 +9208,7 @@
       "use strict";
       a.d(t, {
         AO: () => E,
+        F3: () => f,
         YK: () => S,
         _U: () => v,
         iM: () => y,
@@ -13235,9 +13236,7 @@
         Ce = a.n(ye),
         De = a(58538);
       function Te(e) {
-        const t = (0, fe.g)(),
-          a = (0, D.id)();
-        return t || a
+        return (0, fe.g)()
           ? l.createElement(Ie, null, l.createElement(xe, Object.assign({}, e)))
           : null;
       }
@@ -31506,8 +31505,16 @@
         ].includes(e);
       }
       let Cn = class extends d.Component {
-        constructor() {
-          super(...arguments), (this.state = { bIsExiting: !1 });
+        constructor(e) {
+          super(e),
+            (this.uniqueId = 0),
+            (this.state = { bIsExiting: !1 }),
+            (0, N.rC)(this),
+            (this.uniqueId = this.props.saleSection.unique_id);
+        }
+        componentDidUpdate(e) {
+          this.props.saleSection.unique_id !== e.saleSection.unique_id &&
+            (this.uniqueId = this.props.saleSection.unique_id);
         }
         componentDidMount() {
           var e;
@@ -31572,7 +31579,7 @@
             this.props.editModel.SetDirty(o.jB.jsondata_sales);
         }
         GetMinimizedTag(e) {
-          let t = "SaleSection_" + this.props.saleSection.unique_id;
+          let t = "SaleSection_" + this.uniqueId;
           return e && (t += "_" + e), t;
         }
         GetMinimized(e, t) {
@@ -31957,7 +31964,8 @@
           var m;
         }
       };
-      (0, n.gn)([y.ak], Cn.prototype, "RemoveSection", null),
+      (0, n.gn)([N.LO], Cn.prototype, "uniqueId", void 0),
+        (0, n.gn)([y.ak], Cn.prototype, "RemoveSection", null),
         (0, n.gn)([y.ak], Cn.prototype, "DoRemoveSection", null),
         (0, n.gn)([y.ak], Cn.prototype, "OnSaleSectionTypeChange", null),
         (0, n.gn)([y.ak], Cn.prototype, "MoveSection", null),
@@ -36469,10 +36477,10 @@
           if (t == d.ac.k_EEventStateVisible)
             return s.createElement(
               "div",
-              { className: (0, S.Z)(g().FlexColumnContainer, "visible") },
+              { className: (0, S.Z)(g().EventStatusContainer, "visible") },
               s.createElement(
                 "span",
-                { className: g().FlexRowContainer },
+                { className: g().EventStatus },
                 (0, v.Xx)("#EventEditor_Status"),
                 ":  ",
                 s.createElement(
@@ -36511,7 +36519,7 @@
               a = t == e.GetEventStartTime();
             return s.createElement(
               "div",
-              { className: g().FlexColumnContainer },
+              { className: g().EventStatusContainer },
               (0, v.Xx)("#EventEditor_Status") + ": ",
               (0, v.kQ)(
                 a
@@ -36519,7 +36527,7 @@
                   : "#EventEditor_Status_Staged",
                 s.createElement(
                   "span",
-                  { className: g().FlexRowContainer },
+                  { className: g().EventStatus },
                   s.createElement(h.H6, { bSingleLine: !0, dateAndTime: t }),
                   s.createElement(E.bC, {
                     tooltip: (0, v.Xx)("#EventEditor_Status_Staged_ttip"),
@@ -36530,10 +36538,10 @@
           }
           return s.createElement(
             "div",
-            { className: g().FlexColumnContainer },
+            { className: g().EventStatusContainer },
             s.createElement(
               "span",
-              { className: g().FlexRowContainer },
+              { className: g().EventStatus },
               (0, v.Xx)("#EventEditor_Status") +
                 ": " +
                 (0, v.Xx)("#EventEditor_Status_Draft"),

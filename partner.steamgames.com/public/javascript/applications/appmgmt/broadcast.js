@@ -510,12 +510,21 @@
             }
           });
         }
-        AppendPattern(e, t) {
-          return "" !== t && ("" !== e && (e += "|"), (e += t)), e;
-        }
         CreatePattern(e) {
           let t = e.filter(function (e) {
-            return "" !== e;
+            return (function (e) {
+              if ("" === e) return !1;
+              try {
+                return new RegExp("\\b(" + e + ")\\b", "ugi"), !0;
+              } catch (t) {
+                return (
+                  console.log(
+                    `'${e}' is an invalid expression, removing from text filter`,
+                  ),
+                  !1
+                );
+              }
+            })(e);
           });
           return t.length > 0 ? "\\b(" + t.join("|") + ")\\b" : "";
         }
@@ -551,7 +560,11 @@
         BRebuildFilter(e, t) {
           if (e === this.m_strBannedPattern && t === this.m_strCleanPattern)
             return !1;
-          if (((this.m_regexBannedWords = null), "" !== e))
+          if (
+            ((this.m_regexBannedWords = null),
+            (this.m_strBannedPattern = e),
+            "" !== e)
+          )
             try {
               this.m_regexBannedWords = new RegExp(e, "ugi");
             } catch (e) {
@@ -560,9 +573,14 @@
                   new Error(
                     `Couldn't compile textfilter bannedwords regex: ${e}`,
                   ),
-                );
+                ),
+                (this.m_strBannedPattern = "");
             }
-          if (((this.m_regexCleanWords = null), "" !== t))
+          if (
+            ((this.m_regexCleanWords = null),
+            (this.m_strCleanPattern = t),
+            "" !== t)
+          )
             try {
               this.m_regexCleanWords = new RegExp(t, "ugi");
             } catch (e) {
@@ -571,11 +589,10 @@
                   new Error(
                     `Couldn't compile textfilter cleanwords regex: ${e}`,
                   ),
-                );
+                ),
+                (this.m_strCleanPattern = "");
             }
-          return (
-            (this.m_strBannedPattern = e), (this.m_strCleanPattern = t), !0
-          );
+          return !0;
         }
         CreateProfanityReplacement(e) {
           return "♥".repeat(e);
@@ -2571,7 +2588,7 @@
           !y.L7.logged_in &&
             l.createElement(
               V.zx,
-              { onClick: j.X, className: (0, J.Z)(ee().SignInButton) },
+              { onClick: j.Xt, className: (0, J.Z)(ee().SignInButton) },
               (0, b.Xx)("#Login_SignIn"),
             ),
         );

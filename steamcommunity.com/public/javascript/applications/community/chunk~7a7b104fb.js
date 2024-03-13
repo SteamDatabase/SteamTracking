@@ -129,7 +129,7 @@
     },
     6399: (e, t, s) => {
       "use strict";
-      s.d(t, { c: () => A });
+      s.d(t, { c: () => R });
       var n = s(85556),
         a = s(54842),
         i = s(27605),
@@ -267,7 +267,7 @@
               return null;
           }
         };
-      let A = class extends o.Component {
+      let R = class extends o.Component {
         constructor(e) {
           super(e),
             (this.m_chat = null),
@@ -635,7 +635,7 @@
             o.createElement(x.E, { latestAnnouncement: r }),
             s &&
               !!this.m_chat &&
-              o.createElement(R, {
+              o.createElement(A, {
                 oChat: this.m_chat,
                 emoticonStore: this.props.emoticonStore,
                 bPartnerMemberOnlyChat: t,
@@ -656,7 +656,7 @@
             o.createElement(E, null),
             !s &&
               !!this.m_chat &&
-              o.createElement(R, {
+              o.createElement(A, {
                 oChat: this.m_chat,
                 emoticonStore: this.props.emoticonStore,
                 bPartnerMemberOnlyChat: t,
@@ -664,7 +664,7 @@
           );
         }
       };
-      function R(e) {
+      function A(e) {
         const { oChat: t, emoticonStore: s, bPartnerMemberOnlyChat: n } = e;
         return !n ||
           ((null === T.L7 || void 0 === T.L7 ? void 0 : T.L7.logged_in) &&
@@ -780,12 +780,12 @@
             })
           : null;
       }
-      (0, n.gn)([a.LO], A.prototype, "m_chat", void 0),
-        (0, n.gn)([D.ak], A.prototype, "StartChat", null),
-        (0, n.gn)([D.ak], A.prototype, "HandleScroll", null),
-        (0, n.gn)([D.ak], A.prototype, "OnContextMenu", null),
-        (0, n.gn)([D.ak], A.prototype, "RenderUserChatLine", null),
-        (A = (0, n.gn)([i.Pi], A));
+      (0, n.gn)([a.LO], R.prototype, "m_chat", void 0),
+        (0, n.gn)([D.ak], R.prototype, "StartChat", null),
+        (0, n.gn)([D.ak], R.prototype, "HandleScroll", null),
+        (0, n.gn)([D.ak], R.prototype, "OnContextMenu", null),
+        (0, n.gn)([D.ak], R.prototype, "RenderUserChatLine", null),
+        (R = (0, n.gn)([i.Pi], R));
       class V extends o.Component {
         render() {
           return o.createElement(
@@ -822,7 +822,7 @@
           !T.L7.logged_in &&
             o.createElement(
               _.zx,
-              { onClick: v.X, className: (0, w.Z)(k().SignInButton) },
+              { onClick: v.Xt, className: (0, w.Z)(k().SignInButton) },
               (0, B.Xx)("#Login_SignIn"),
             ),
         );
@@ -1157,14 +1157,14 @@
         O = s(20006),
         F = s.n(O),
         N = s(46882);
-      function A() {
+      function R() {
         return l.createElement(
           "div",
           { className: "STV_ReplayBanner" },
           (0, T.Xx)("#DASHPlayerControls_IsReplay"),
         );
       }
-      const R = (0, o.Pi)((e) => {
+      const A = (0, o.Pi)((e) => {
         let t = e.video;
         if (t && (t.IsBroadcastClip() || t.IsBroadcastVOD())) return null;
         let s = c._d.Loading,
@@ -2213,7 +2213,7 @@
               onMouseDown: this.OnMouseDown,
             },
             u && l.createElement("div", { className: F().BroadcastContext }, u),
-            n && l.createElement(A, null),
+            n && l.createElement(R, null),
             this.props.showVideoBackgroundBlur &&
               l.createElement(_, {
                 className: "videoBlur",
@@ -2263,7 +2263,7 @@
                 stats: e.GetDASHPlayerStats(),
                 closeStats: this.CloseStats,
               }),
-            l.createElement(R, { video: e }),
+            l.createElement(A, { video: e }),
             r && l.createElement(U, { video: e }),
           );
         }
@@ -3499,12 +3499,21 @@
             }
           });
         }
-        AppendPattern(e, t) {
-          return "" !== t && ("" !== e && (e += "|"), (e += t)), e;
-        }
         CreatePattern(e) {
           let t = e.filter(function (e) {
-            return "" !== e;
+            return (function (e) {
+              if ("" === e) return !1;
+              try {
+                return new RegExp("\\b(" + e + ")\\b", "ugi"), !0;
+              } catch (t) {
+                return (
+                  console.log(
+                    `'${e}' is an invalid expression, removing from text filter`,
+                  ),
+                  !1
+                );
+              }
+            })(e);
           });
           return t.length > 0 ? "\\b(" + t.join("|") + ")\\b" : "";
         }
@@ -3540,7 +3549,11 @@
         BRebuildFilter(e, t) {
           if (e === this.m_strBannedPattern && t === this.m_strCleanPattern)
             return !1;
-          if (((this.m_regexBannedWords = null), "" !== e))
+          if (
+            ((this.m_regexBannedWords = null),
+            (this.m_strBannedPattern = e),
+            "" !== e)
+          )
             try {
               this.m_regexBannedWords = new RegExp(e, "ugi");
             } catch (e) {
@@ -3549,9 +3562,14 @@
                   new Error(
                     `Couldn't compile textfilter bannedwords regex: ${e}`,
                   ),
-                );
+                ),
+                (this.m_strBannedPattern = "");
             }
-          if (((this.m_regexCleanWords = null), "" !== t))
+          if (
+            ((this.m_regexCleanWords = null),
+            (this.m_strCleanPattern = t),
+            "" !== t)
+          )
             try {
               this.m_regexCleanWords = new RegExp(t, "ugi");
             } catch (e) {
@@ -3560,11 +3578,10 @@
                   new Error(
                     `Couldn't compile textfilter cleanwords regex: ${e}`,
                   ),
-                );
+                ),
+                (this.m_strCleanPattern = "");
             }
-          return (
-            (this.m_strBannedPattern = e), (this.m_strCleanPattern = t), !0
-          );
+          return !0;
         }
         CreateProfanityReplacement(e) {
           return "♥".repeat(e);

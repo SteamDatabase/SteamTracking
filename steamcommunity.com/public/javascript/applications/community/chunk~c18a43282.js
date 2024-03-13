@@ -151,6 +151,7 @@
         EventDefaultRowContainer: "_2pVkYef_JboBRTJDsI5XrR",
         EventStartPublic: "_13cijqNyra467La1xbDgy0",
         EventOptions: "ShLAXJyjCB5R_Y81P3-VX",
+        EventStatusContainer: "_1dNhj3aKodzkwfU16oYND",
         FlexColumnContainer: "WmMRFd2F9FMje__jWs2c4",
         FlexRowContainer: "elLwmClZ5oSY2aer18vUt",
         Centered: "_1HqKtO0h5lgj9h0J4mUz51",
@@ -182,8 +183,11 @@
         EventEditorEventStatus: "_3dxy2T8x1pk6OjFgWQSTCE",
         EventHidden: "_3oD7cGykuzlqnfVXev8JDs",
         EventVisible: "_3sin0w04DXfKLZH9M923t8",
+        EventBarBackAndTitle: "_1rQbs6JYrj8dcI7ulhqAHq",
         EventBarTitleCtn: "_1bUXkxwlWqoLUkJx4mP5E",
         EventBarTitle: "_3K6Ror7Nj83ysihgViAvjd",
+        EventEditButtons: "_3N6fzJF2V9mi47EHYuAEiK",
+        EventStatus: "_3uDnLpoGwbP-lVipnNwJTm",
         EventBarBack: "BUxe5edxrjnB3sckTkcDh",
         EditPreviewButton: "_3NmFFZyqnB0ITWJGvJNDqk",
         Delete: "_2GdGzjX59SeWcOhf9bGYki",
@@ -1266,7 +1270,8 @@
             height: 600,
             rgAcceptableTypes: i,
           },
-          spotlight_art: { width: 306, height: 350, rgAcceptableTypes: a },
+          spotlight_art: { width: 306, height: 260, rgAcceptableTypes: a },
+          old_spotlight_art: { width: 306, height: 350, rgAcceptableTypes: a },
           marketingmessage_art: {
             width: 570,
             height: 600,
@@ -1469,7 +1474,7 @@
         wP: () => le,
         dn: () => B,
         QK: () => L,
-        $Y: () => V,
+        $Y: () => N,
         sq: () => R,
         RQ: () => O,
         _L: () => H,
@@ -1538,10 +1543,10 @@
         R = 39049601,
         O = 41316928,
         H = 4,
-        V = 20,
-        N = [12, 34];
+        N = 20,
+        V = [12, 34];
       function M(e) {
-        return !N.some((t) => t == e.GetEventType()) && !e.BHasTag("curator");
+        return !V.some((t) => t == e.GetEventType()) && !e.BHasTag("curator");
       }
       function P(e) {
         const t = 60 * E._H.PerDay;
@@ -4286,7 +4291,7 @@
         (0, a.gn)([s.aD], R.prototype, "SetState", null);
       class O extends R {}
       class H extends R {}
-      class V {
+      class N {
         constructor() {
           (this.m_mapBroadcasts = new Map()),
             (this.m_mapClips = new Map()),
@@ -4333,7 +4338,7 @@
         CreateBroadcastVideo(e, t, n, a) {
           let i = this.GetOrCreateBroadcast(t),
             { nVolume: r, bMuted: s } = this.m_broadcastSettings,
-            o = new N(e, r, s, n);
+            o = new V(e, r, s, n);
           if (
             (o.SetBroadcastSteamID(t),
             i.m_rgVideos.push(o),
@@ -4347,7 +4352,7 @@
         CreateClipVideo(e, t, n) {
           let a = this.GetOrCreateClip(t),
             { nVolume: i, bMuted: r } = this.m_broadcastSettings,
-            s = new N(e, i, r, n);
+            s = new V(e, i, r, n);
           if (
             (s.SetBroadcastClipID(t),
             a.m_rgVideos.push(s),
@@ -4360,7 +4365,7 @@
         CreateVODVideo(e, t, n) {
           let a = this.GetOrCreateVOD(t),
             { nVolume: i, bMuted: r } = this.m_broadcastSettings,
-            s = new N(e, i, r, n);
+            s = new V(e, i, r, n);
           if (
             (s.SetBroadcastAppIDVOD(t),
             a.m_rgVideos.push(s),
@@ -4804,11 +4809,11 @@
             this.SaveBroadcastSettings());
         }
       }
-      (0, a.gn)([s.LO], V.prototype, "m_mapBroadcasts", void 0),
+      (0, a.gn)([s.LO], N.prototype, "m_mapBroadcasts", void 0),
         (function (e) {
           (e[(e.Timeline = 1)] = "Timeline"), (e[(e.Minimap = 2)] = "Minimap");
         })(k || (k = {}));
-      class N {
+      class V {
         constructor(e, t, n, a) {
           (this.m_elVideo = null),
             (this.m_player = null),
@@ -5260,32 +5265,32 @@
           return this.m_rgSegments.length > 0;
         }
       }
-      (0, a.gn)([s.LO], N.prototype, "m_player", void 0),
-        (0, a.gn)([s.LO], N.prototype, "m_bPaused", void 0),
-        (0, a.gn)([s.LO], N.prototype, "m_nPlaybackTime", void 0),
-        (0, a.gn)([s.LO], N.prototype, "m_bBuffering", void 0),
-        (0, a.gn)([s.LO], N.prototype, "m_bOnLiveEdge", void 0),
-        (0, a.gn)([s.LO], N.prototype, "m_nVolume", void 0),
-        (0, a.gn)([s.LO], N.prototype, "m_bMuted", void 0),
-        (0, a.gn)([s.LO], N.prototype, "m_bUserInputNeeded", void 0),
-        (0, a.gn)([s.LO], N.prototype, "m_bIsReplay", void 0),
-        (0, a.gn)([s.LO], N.prototype, "m_nTimelineDuration", void 0),
-        (0, a.gn)([s.LO], N.prototype, "m_nVideoStartPos", void 0),
-        (0, a.gn)([s.LO], N.prototype, "m_nVideoEndPos", void 0),
-        (0, a.gn)([s.LO], N.prototype, "m_editorStartTime", void 0),
-        (0, a.gn)([s.LO], N.prototype, "m_editorEndTime", void 0),
-        (0, a.gn)([s.aD.bound], N.prototype, "StartBroadcast", null),
-        (0, a.gn)([s.aD.bound], N.prototype, "StartClip", null),
-        (0, a.gn)([s.aD.bound], N.prototype, "StartVOD", null),
-        (0, a.gn)([g.a], N.prototype, "OnVideoPlaying", null),
-        (0, a.gn)([g.a], N.prototype, "OnVideoPause", null),
-        (0, a.gn)([s.aD.bound], N.prototype, "OnVideoTimeUpdate", null),
-        (0, a.gn)([s.aD.bound], N.prototype, "OnGameDataUpdate", null),
-        (0, a.gn)([g.a], N.prototype, "OnDownloadFailed", null),
-        (0, a.gn)([g.a], N.prototype, "OnWebRTCRetry", null),
-        (0, a.gn)([g.a], N.prototype, "OnWebRTCFailed", null),
-        (0, a.gn)([g.a], N.prototype, "OnUserInputNeeded", null);
-      const M = new V();
+      (0, a.gn)([s.LO], V.prototype, "m_player", void 0),
+        (0, a.gn)([s.LO], V.prototype, "m_bPaused", void 0),
+        (0, a.gn)([s.LO], V.prototype, "m_nPlaybackTime", void 0),
+        (0, a.gn)([s.LO], V.prototype, "m_bBuffering", void 0),
+        (0, a.gn)([s.LO], V.prototype, "m_bOnLiveEdge", void 0),
+        (0, a.gn)([s.LO], V.prototype, "m_nVolume", void 0),
+        (0, a.gn)([s.LO], V.prototype, "m_bMuted", void 0),
+        (0, a.gn)([s.LO], V.prototype, "m_bUserInputNeeded", void 0),
+        (0, a.gn)([s.LO], V.prototype, "m_bIsReplay", void 0),
+        (0, a.gn)([s.LO], V.prototype, "m_nTimelineDuration", void 0),
+        (0, a.gn)([s.LO], V.prototype, "m_nVideoStartPos", void 0),
+        (0, a.gn)([s.LO], V.prototype, "m_nVideoEndPos", void 0),
+        (0, a.gn)([s.LO], V.prototype, "m_editorStartTime", void 0),
+        (0, a.gn)([s.LO], V.prototype, "m_editorEndTime", void 0),
+        (0, a.gn)([s.aD.bound], V.prototype, "StartBroadcast", null),
+        (0, a.gn)([s.aD.bound], V.prototype, "StartClip", null),
+        (0, a.gn)([s.aD.bound], V.prototype, "StartVOD", null),
+        (0, a.gn)([g.a], V.prototype, "OnVideoPlaying", null),
+        (0, a.gn)([g.a], V.prototype, "OnVideoPause", null),
+        (0, a.gn)([s.aD.bound], V.prototype, "OnVideoTimeUpdate", null),
+        (0, a.gn)([s.aD.bound], V.prototype, "OnGameDataUpdate", null),
+        (0, a.gn)([g.a], V.prototype, "OnDownloadFailed", null),
+        (0, a.gn)([g.a], V.prototype, "OnWebRTCRetry", null),
+        (0, a.gn)([g.a], V.prototype, "OnWebRTCFailed", null),
+        (0, a.gn)([g.a], V.prototype, "OnUserInputNeeded", null);
+      const M = new N();
       window.uiBroadcastWatchStore = M;
     },
     37593: (e, t, n) => {
@@ -11518,7 +11523,7 @@
             (r = "#SteamDeckVerified_DescriptionHeader_Unsupported"),
               (s = S().Unsupported);
         }
-        const o = a.createElement("span", { className: s }, (0, C.Xx)(V(t))),
+        const o = a.createElement("span", { className: s }, (0, C.Xx)(N(t))),
           l = a.createElement(
             "span",
             { className: S().CompatibilityDetailRatingSummary },
@@ -11538,7 +11543,7 @@
           c,
         );
       }
-      function V(e) {
+      function N(e) {
         switch (e) {
           case 3:
             return "#SteamDeckVerified_Category_Verified";
@@ -12131,7 +12136,7 @@
                 "#EventDisplay_Share_NotLoggedIn_Description",
               ),
               strOKButtonText: (0, h.Xx)("#MobileLogin_SignIn"),
-              onOK: () => (0, y.X)(),
+              onOK: () => (0, y.Xt)(),
             }),
             window,
           ),
@@ -12322,8 +12327,8 @@
         R = n(13129),
         O = n(31846),
         H = n(20417),
-        V = n(37563),
-        N = n(25006),
+        N = n(37563),
+        V = n(25006),
         M = n(99823),
         P = n(35714),
         F = n.n(P),
@@ -12424,7 +12429,7 @@
                 }
               a.length > 0
                 ? (c(a), (d.current = 0), p())
-                : ("dev" != V.De.WEB_UNIVERSE && "beta" != V.De.WEB_UNIVERSE) ||
+                : ("dev" != N.De.WEB_UNIVERSE && "beta" != N.De.WEB_UNIVERSE) ||
                   console.error(
                     "DEV ONLY OUTPUT: GameHoverImages for id/type no images: (might be not age safe screenshots)",
                     (0, s.ZN)(e),
@@ -12527,7 +12532,7 @@
               : 5 == r.review_score
               ? F().ReviewScoreMixed
               : F().ReviewScoreHigh,
-          o = `${V.De.STORE_BASE_URL}app/${t.id}/#app_reviews_hash`,
+          o = `${N.De.STORE_BASE_URL}app/${t.id}/#app_reviews_hash`,
           c = l.createElement(
             "div",
             { className: (0, R.Z)(F().ReviewScoreValue, s) },
@@ -12620,11 +12625,11 @@
                 (0, a.mG)(void 0, void 0, void 0, function* () {
                   e.preventDefault(),
                     e.stopPropagation(),
-                    V.L7.logged_in
+                    N.L7.logged_in
                       ? (d(!0),
                         yield g.jg.Get().UpdateGameWishlist(t, !s, n),
                         m.current.token.reason || d(!1))
-                      : (0, x.X)();
+                      : (0, x.Xt)();
                 }),
             },
             l.createElement(k.sqQ, null),
@@ -12695,7 +12700,7 @@
               "a",
               {
                 href: u ? null : a,
-                target: V.De.IN_CLIENT ? void 0 : "_blank",
+                target: N.De.IN_CLIENT ? void 0 : "_blank",
                 className: F().Midline,
               },
               Boolean(v) &&
@@ -12742,7 +12747,7 @@
                   "a",
                   {
                     href: u ? null : a,
-                    target: V.De.IN_CLIENT ? void 0 : "_blank",
+                    target: N.De.IN_CLIENT ? void 0 : "_blank",
                   },
                   l.createElement(
                     "div",
@@ -12808,7 +12813,7 @@
                 "a",
                 {
                   href: s ? null : n,
-                  target: V.De.IN_CLIENT ? void 0 : "_blank",
+                  target: N.De.IN_CLIENT ? void 0 : "_blank",
                   className: F().TrailerAnchorStoreLink,
                 },
                 Boolean(r && !i && !s) &&
@@ -12866,9 +12871,9 @@
             "bShowWishlistButton",
           ]),
           [v] = (0, f.jk)(t.id, (0, C.TM)(t.type), {}),
-          S = (0, N.bJ)(),
+          S = (0, V.bJ)(),
           E = (0, p.mY)(S),
-          I = (0, V.id)();
+          I = (0, N.id)();
         if (!v && !n) return null;
         if (I) return l.createElement(l.Fragment, null, e.children);
         if (!K())
@@ -12953,7 +12958,7 @@
             "children",
             "className",
           ]),
-          d = (0, V.id)(),
+          d = (0, N.id)(),
           [m, u] = l.useState(!d),
           [p, h] = l.useState(!1),
           [_, g] = l.useState(void 0),
@@ -13098,7 +13103,7 @@
     },
     80212: (e, t, n) => {
       "use strict";
-      n.d(t, { X: () => m });
+      n.d(t, { Xt: () => m });
       var a = n(47427),
         i = n(90069),
         r = n(31846),
@@ -13106,6 +13111,7 @@
         o = n(99327),
         l = n(77581),
         c = n(35791);
+      n(50898);
       function d(e) {
         return a.createElement(
           i.e1,
@@ -13384,8 +13390,8 @@
         R = n(31846),
         O = n(37563),
         H = n(25006),
-        V = n(46882),
-        N = n(85305),
+        N = n(46882),
+        V = n(85305),
         M = n(7769),
         P = n.n(M),
         F = n(34913);
@@ -13406,7 +13412,7 @@
             } = (0, I.Q)(e),
             {
               bShowDemoButton: L,
-              bHidePrice: V,
+              bHidePrice: N,
               bUseSubscriptionLayout: M,
               bHidePlatforms: F,
               bHideContainedApps: x,
@@ -13515,7 +13521,7 @@
                     ),
                   },
                   Boolean(ce && !X) &&
-                    i.createElement(N.RJ, {
+                    i.createElement(V.RJ, {
                       appID: h.id,
                       classOverride: (0, T.Z)(
                         C().WishlistButtonNotTop,
@@ -13593,7 +13599,7 @@
                             }),
                         ),
                     ),
-                    W && i.createElement(N.Yb, { appInfo: h }),
+                    W && i.createElement(V.Yb, { appInfo: h }),
                   ),
                   oe && i.createElement(j, { info: _ }),
                   Boolean(ce && ie) &&
@@ -13628,7 +13634,7 @@
                           : i.createElement(y.x1, {
                               info: _,
                               bShowDemoButton: L,
-                              bHidePrice: V,
+                              bHidePrice: N,
                               bHideWishlistButton: me,
                               bShowDeckCompatibilityDialog: Z,
                             }),
@@ -13800,7 +13806,7 @@
         const { info: t, imageType: n } = e,
           [a] = (0, g.jk)(t.id, (0, _.TM)(t.type), { include_assets: !0 });
         if (!a)
-          return i.createElement(V.V, {
+          return i.createElement(N.V, {
             size: "small",
             position: "center",
             string: (0, R.Xx)("#Loading"),
@@ -14704,7 +14710,7 @@
                           n(!1), y((0, f.l)(e).strErrorMsg);
                         }
                       }
-                    } else (0, p.X)();
+                    } else (0, p.Xt)();
                   }),
                 "data-tooltip-text": (0, E.Xx)("#AddToWishlist_ttip"),
               },
@@ -15262,11 +15268,11 @@
           case o.FX.RearLeftUpper:
             return s.createElement(O, { bIsKnockout: n, className: t });
           case o.FX.RearRightUpper:
-            return s.createElement(V, { bIsKnockout: n, className: t });
+            return s.createElement(N, { bIsKnockout: n, className: t });
           case o.FX.RearLeftLower:
             return s.createElement(H, { bIsKnockout: n, className: t });
           case o.FX.RearRightLower:
-            return s.createElement(N, { bIsKnockout: n, className: t });
+            return s.createElement(V, { bIsKnockout: n, className: t });
           default:
             return s.createElement(U, { bIsKnockout: n, className: t });
         }
@@ -16403,7 +16409,7 @@
               }),
             );
       }
-      function V(e) {
+      function N(e) {
         var { bIsKnockout: t } = e,
           n = (0, r._T)(e, ["bIsKnockout"]);
         return t
@@ -16451,7 +16457,7 @@
               }),
             );
       }
-      function N(e) {
+      function V(e) {
         var { bIsKnockout: t } = e,
           n = (0, r._T)(e, ["bIsKnockout"]);
         return t
