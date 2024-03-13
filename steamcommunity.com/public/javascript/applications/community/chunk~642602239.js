@@ -954,12 +954,14 @@
         const r = x(e.args, "autoplay"),
           o = "0" !== r && "off" !== r && "false" !== r,
           a = x(e.args, "controls"),
-          s = "0" !== a && "off" !== a && "false" !== a;
+          s = "0" !== a && "off" !== a && "false" !== a,
+          l = x(e.args, "loop"),
+          c = "0" !== a && "off" !== a && "false" !== a;
         return i.createElement(_.Y, {
           video: t,
           bAutoPlay: o,
           bControls: s,
-          bLoop: o,
+          bLoop: l ? c : o,
         });
       }
       function W(e) {

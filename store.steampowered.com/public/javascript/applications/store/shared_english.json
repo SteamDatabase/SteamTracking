@@ -2661,6 +2661,7 @@
     "SteamNotificationTypeDesc_19": "An adult in my family responds to my purchase request",
     "SteamNotificationTypeDesc_20": "An adult in my family responds to my Steam feature request",
     "SteamNotificationTypeDesc_21": "An adult in my family responds to my playtime request",
+    "SteamNotificationTypeDesc_22": "I receive a game I requested",
     "NotificationSettings_SendToast": "Toast notification in the Steam Client",
     "NotificationSettings_PushNotification": "Push notification in the Mobile App",
     "NotificationsMenu_Title": "Notifications",

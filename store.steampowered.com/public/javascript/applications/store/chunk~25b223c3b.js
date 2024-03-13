@@ -273,8 +273,8 @@
         u = n(14411),
         h = n(26293),
         p = n(84478),
-        E = n(62613),
-        g = n(25006),
+        g = n(62613),
+        E = n(25006),
         _ = n(13129),
         v = n(31846),
         f = n(13499),
@@ -639,7 +639,7 @@
                   i.createElement(
                     "div",
                     { className: y().EmbedArrow },
-                    i.createElement(E.ret, { angle: n ? 180 : 0 }),
+                    i.createElement(g.ret, { angle: n ? 180 : 0 }),
                   ),
                 ),
                 n &&
@@ -765,7 +765,7 @@
       const x = (e) => {
         const { href: t } = e,
           n = (0, o._T)(e, ["href"]),
-          r = (0, g.bJ)();
+          r = (0, E.bJ)();
         let a,
           c = (0, l.B1)(t, r);
         (0, b.A)(c)
@@ -908,12 +908,14 @@
         const o = A(e.args, "autoplay"),
           r = "0" !== o && "off" !== o && "false" !== o,
           s = A(e.args, "controls"),
-          a = "0" !== s && "off" !== s && "false" !== s;
+          a = "0" !== s && "off" !== s && "false" !== s,
+          l = A(e.args, "loop"),
+          c = "0" !== s && "off" !== s && "false" !== s;
         return i.createElement(p.Y, {
           video: t,
           bAutoPlay: r,
           bControls: a,
-          bLoop: r,
+          bLoop: l ? c : r,
         });
       }
       function U(e) {
@@ -1358,7 +1360,7 @@
     },
     64561: (e, t, n) => {
       "use strict";
-      n.d(t, { O: () => E });
+      n.d(t, { O: () => g });
       var o = n(47427),
         i = n(90286),
         r = n(46882),
@@ -1371,13 +1373,13 @@
         u = n(61582),
         h = n(14411),
         p = n.n(h);
-      function E(e) {
+      function g(e) {
         const {
             videoID: t,
             bShowVideoImmediately: n,
             bAutoPlay: h,
-            nStartSeconds: E,
-            classNameSize: g,
+            nStartSeconds: g,
+            classNameSize: E,
             classNameAlign: _,
           } = e,
           [v, f] = (0, o.useState)(!n),
@@ -1445,7 +1447,7 @@
         }
         return o.createElement(
           "div",
-          { className: (0, l.Z)(p().PreviewYouTubeVideo, g, _), id: t },
+          { className: (0, l.Z)(p().PreviewYouTubeVideo, E, _), id: t },
           o.createElement("img", {
             src:
               d.De.COMMUNITY_CDN_URL +
@@ -1454,7 +1456,7 @@
           o.createElement(u.e, {
             video: t,
             autoplay: null != h && h,
-            startSeconds: E,
+            startSeconds: g,
             controls: !0,
             playsInline: !0,
             autopause: !0,
@@ -1516,8 +1518,8 @@
       var u = n(22042),
         h = n(13129),
         p = n(31846),
-        E = n(20417);
-      function g(e, t) {
+        g = n(20417);
+      function E(e, t) {
         return e + "economy/sticker/" + t;
       }
       var _ = n(37563),
@@ -1741,8 +1743,8 @@
           );
         }
       }
-      (0, o.gn)([E.ak], B.prototype, "OnMouseEnter", null),
-        (0, o.gn)([E.ak], B.prototype, "OnMouseLeave", null);
+      (0, o.gn)([g.ak], B.prototype, "OnMouseEnter", null),
+        (0, o.gn)([g.ak], B.prototype, "OnMouseLeave", null);
       const O = (0, r.Pi)((e) => {
           const { target: t, store: n, emoticon: o } = e,
             i = n.Get(o);
@@ -2436,7 +2438,7 @@
           const e = this.props,
             { sticker: t, className: n } = e,
             i = (0, o._T)(e, ["sticker", "className"]),
-            r = g(_.De.COMMUNITY_CDN_URL, t.name);
+            r = E(_.De.COMMUNITY_CDN_URL, t.name);
           return s.createElement(
             "div",
             Object.assign(
@@ -2466,7 +2468,7 @@
           M,
           { target: t, title: n, subtitle: null == i ? void 0 : i.GetName() },
           s.createElement("img", {
-            src: g(_.De.COMMUNITY_CDN_URL, n),
+            src: E(_.De.COMMUNITY_CDN_URL, n),
             className: x().StickerHoverSticker,
           }),
         );
@@ -2687,7 +2689,7 @@
           }),
         );
       }
-      (0, o.gn)([E.ak], ie.prototype, "SetVisible", null);
+      (0, o.gn)([g.ak], ie.prototype, "SetVisible", null);
     },
     63109: (e, t, n) => {
       "use strict";
@@ -2704,8 +2706,8 @@
         u = n(13129),
         h = n(87368),
         p = n.n(h),
-        E = n(7686);
-      const g = 1576780700;
+        g = n(7686);
+      const E = 1576780700;
       let _ = class extends i.Component {
         OnEmoticonClick(e) {
           var t;
@@ -2758,7 +2760,7 @@
             this.BHaveUnseenEmoticons() && r)
           ) {
             let e = this.GetNewestIndicatorTime();
-            (!e || e < g) && (e = g), r("rtLastAckedNewEmoticons", e);
+            (!e || e < E) && (e = E), r("rtLastAckedNewEmoticons", e);
           }
         }
         GetNewestIndicatorTime() {
@@ -2772,7 +2774,7 @@
         BHaveUnseenEmoticons() {
           const { rtLastAckedNewEmoticons: e } = this.props;
           let t = this.GetNewestIndicatorTime();
-          return !e || e < g || (t && (!e || e < t));
+          return !e || e < E || (t && (!e || e < t));
         }
         render() {
           const { disabled: e, className: t, ttip: n, useImg: o } = this.props;
@@ -2816,7 +2818,7 @@
                     disabled: e,
                     "data-tooltip-text": n,
                   },
-                  this.props.buttonIcon || i.createElement(E.tk, null),
+                  this.props.buttonIcon || i.createElement(g.tk, null),
                   s && i.createElement(m.D3, null),
                 ))
           );
@@ -2841,8 +2843,8 @@
         u = n(73229),
         h = n(64936),
         p = n(42855),
-        E = n(54842),
-        g = n(37563),
+        g = n(54842),
+        E = n(37563),
         _ = n(80751),
         v = n.n(_);
       class f {
@@ -2851,13 +2853,13 @@
             (this.m_nMobileDeviceCount = 0),
             (this.m_bIsLoaded = !1),
             (this.m_bLoadedFromConfig = !1),
-            (0, E.rC)(this);
+            (0, g.rC)(this);
         }
         LazyInit() {
           if (!this.m_bLoadedFromConfig) {
-            let e = (0, g.ip)("notificationstore", "application_config");
+            let e = (0, E.ip)("notificationstore", "application_config");
             this.ValidateStoreDefault(e) &&
-              (0, E.z)(() => {
+              (0, g.z)(() => {
                 (this.m_bIsLoaded = !0),
                   (this.m_bValidatedEmail = e.email_validated),
                   (this.m_nMobileDeviceCount = e.mobile_device_count);
@@ -2887,7 +2889,7 @@
               this.LazyInit(),
               this.m_bIsLoaded
                 ? 1
-                : g.L7.logged_in
+                : E.L7.logged_in
                 ? (this.m_promise || (this.m_promise = this.InternalLoad()),
                   this.m_promise)
                 : 1
@@ -2896,11 +2898,11 @@
         }
         InternalLoad() {
           return (0, o.mG)(this, void 0, void 0, function* () {
-            const e = g.De.STORE_BASE_URL + "notification/ajaxusersettings",
+            const e = E.De.STORE_BASE_URL + "notification/ajaxusersettings",
               t = yield v().get(e, { withCredentials: !0 });
             return (
               1 == t.data.success &&
-                (0, E.z)(() => {
+                (0, g.z)(() => {
                   (this.m_bIsLoaded = !0),
                     (this.m_bValidatedEmail = t.data.email_validated),
                     (this.m_nMobileDeviceCount = t.data.mobile_device_count);
@@ -2910,8 +2912,8 @@
           });
         }
       }
-      (0, o.gn)([E.LO], f.prototype, "m_bValidatedEmail", void 0),
-        (0, o.gn)([E.LO], f.prototype, "m_nMobileDeviceCount", void 0);
+      (0, o.gn)([g.LO], f.prototype, "m_bValidatedEmail", void 0),
+        (0, o.gn)([g.LO], f.prototype, "m_nMobileDeviceCount", void 0);
       let S = new f();
       var C = n(27241),
         k = n(1485),
@@ -2971,9 +2973,9 @@
         }
         ToggleMenu(e) {
           const t = p.cb.Get().BIsUserLoggedIn();
-          t || g.De.IN_CLIENT
+          t || E.De.IN_CLIENT
             ? (!t &&
-                g.De.IN_CLIENT &&
+                E.De.IN_CLIENT &&
                 console.log(
                   "EventReminderWidget: In Client: Cannot use login widget. We expect to be already logged in.",
                 ),
@@ -3102,7 +3104,7 @@
                 (0, I.Xx)("#EventDidplay_Reminder_EventNotVisible", n),
               )
             : null;
-        const l = (0, a.jM)(g.De.LANGUAGE);
+        const l = (0, a.jM)(E.De.LANGUAGE);
         return s.createElement(
           U,
           Object.assign({ lang: l }, i, { eventModel: r }),
@@ -3198,7 +3200,7 @@
             i = Z(o),
             r = Z(e.GetEndTimeAndDateUnixSeconds() || o + x._H.PerHour),
             s =
-              (g.De.IN_CLIENT ? "steam://openurl_external/" : "") +
+              (E.De.IN_CLIENT ? "steam://openurl_external/" : "") +
               `https://calendar.google.com/calendar/r/eventedit?text=${t}&details=${n}&dates=${i}/${r}`;
           return (0, T.OL)(s);
         }
@@ -3208,7 +3210,7 @@
               ? "app/" + t.appid
               : "group/" + t.clanSteamID.GetAccountID(),
             i = "l=" + (0, a.j_)(n);
-          return `${g.De.STORE_BASE_URL}${(0, M.x3)()}/download/${o}/${e}/${
+          return `${E.De.STORE_BASE_URL}${(0, M.x3)()}/download/${o}/${e}/${
             t.GID
           }?${i}`;
         }
@@ -3326,8 +3328,8 @@
                     s.createElement(
                       "a",
                       {
-                        href: g.De.STORE_BASE_URL + "account/",
-                        target: g.De.IN_CLIENT ? void 0 : "_blank",
+                        href: E.De.STORE_BASE_URL + "account/",
+                        target: E.De.IN_CLIENT ? void 0 : "_blank",
                         onClick: () =>
                           this.TrackEventAction(
                             u.g.k_eReminder_EmailUnverified,
@@ -3371,8 +3373,8 @@
                     s.createElement(
                       "a",
                       {
-                        href: g.De.STORE_BASE_URL + "mobile/?show=steamapp",
-                        target: g.De.IN_CLIENT ? void 0 : "_blank",
+                        href: E.De.STORE_BASE_URL + "mobile/?show=steamapp",
+                        target: E.De.IN_CLIENT ? void 0 : "_blank",
                         onClick: () =>
                           this.TrackEventAction(
                             u.g.k_eReminder_MobilePushMissing,
@@ -3407,7 +3409,7 @@
                     "a",
                     {
                       className: H.ReminderOption,
-                      target: g.De.IN_CLIENT ? void 0 : "_blank",
+                      target: E.De.IN_CLIENT ? void 0 : "_blank",
                       href: this.GetGoogleCalendarLink(),
                       onClick: () =>
                         this.TrackEventAction(u.g.k_eReminder_CalendarGoogle),
@@ -3438,7 +3440,7 @@
     },
     63489: (e, t, n) => {
       "use strict";
-      n.d(t, { G$: () => _, pj: () => g, qs: () => E });
+      n.d(t, { G$: () => _, pj: () => E, qs: () => g });
       var o = n(85556),
         i = n(27605),
         r = n(47427),
@@ -3451,7 +3453,7 @@
         u = n(4684),
         h = n(16003),
         p = n.n(h);
-      const E = (0, i.Pi)((e) => {
+      const g = (0, i.Pi)((e) => {
         const t = e.photo ? (0, s.vZ)(e.photo, (0, a.jM)(d.De.LANGUAGE)) : null,
           n = e.photo ? ("string" == typeof t ? t : t[1]) : null,
           o = Boolean(e.title),
@@ -3491,7 +3493,7 @@
             ),
         );
       });
-      class g extends r.Component {
+      class E extends r.Component {
         constructor() {
           super(...arguments), (this.m_refAnchor = r.createRef());
         }
@@ -3519,17 +3521,17 @@
             },
             o = "presenter-hover-" + Math.floor(1e8 * Math.random());
           (this.m_fnHidePopup = () =>
-            g.sm_embeddedElements.HideElement(t.ownerDocument, o)),
+            E.sm_embeddedElements.HideElement(t.ownerDocument, o)),
             window.addEventListener("scroll", this.OnScroll),
             (this.m_nScrollPosAtHoverStart = window.scrollY);
-          g.sm_embeddedElements.ShowElementDelayed(
+          E.sm_embeddedElements.ShowElementDelayed(
             t.ownerDocument,
             150,
             r.createElement(
               c.T,
               Object.assign({}, n),
               r.createElement(
-                E,
+                g,
                 Object.assign({}, this.props, { fnClose: this.OnLeave }),
               ),
             ),
@@ -3554,11 +3556,11 @@
           );
         }
       }
-      (g.sm_embeddedElements = new l.AN("presenter-hover-source-elements")),
-        (0, o.gn)([m.ak], g.prototype, "ClosePopup", null),
-        (0, o.gn)([m.ak], g.prototype, "OnScroll", null),
-        (0, o.gn)([m.ak], g.prototype, "OnHover", null),
-        (0, o.gn)([m.ak], g.prototype, "OnLeave", null);
+      (E.sm_embeddedElements = new l.AN("presenter-hover-source-elements")),
+        (0, o.gn)([m.ak], E.prototype, "ClosePopup", null),
+        (0, o.gn)([m.ak], E.prototype, "OnScroll", null),
+        (0, o.gn)([m.ak], E.prototype, "OnHover", null),
+        (0, o.gn)([m.ak], E.prototype, "OnLeave", null);
       class _ extends r.Component {
         render() {
           const e = this.props.photo
@@ -3576,7 +3578,7 @@
             "div",
             { className: p().SpeakerOuter },
             r.createElement(
-              g,
+              E,
               Object.assign({}, this.props),
               r.createElement(
                 "div",
@@ -3657,9 +3659,9 @@
                   ),
             );
           }, [t.rgVideoTracks]),
-          [p, E] = i.useState(!1);
+          [p, g] = i.useState(!1);
         if (!t.rgVideoSources || !t.rgVideoSources.length) return null;
-        const g = (e) => {
+        const E = (e) => {
             const t = new URL(e);
             return (
               (t.search =
@@ -3672,7 +3674,7 @@
             .map((e) =>
               i.createElement("source", {
                 key: e.sURL,
-                src: g(e.sURL),
+                src: E(e.sURL),
                 type: e.sFormat,
               }),
             ),
@@ -3697,7 +3699,7 @@
                   return null;
                 return i.createElement("track", {
                   key: e.sURL + n,
-                  src: g(e.sURL),
+                  src: E(e.sURL),
                   kind: e.sKind,
                   default: e.bDefault,
                   srcLang: (0, r.dt)(n),
@@ -3717,7 +3719,7 @@
         let S;
         (!f || (h && "public" == c.De.WEB_UNIVERSE)) && (S = "anonymous");
         const C = u || (n && d.Get().BVolumePreferenceMuted()),
-          k = t.sPoster ? g(t.sPoster) : "";
+          k = t.sPoster ? E(t.sPoster) : "";
         return i.createElement(
           "video",
           {
@@ -3739,7 +3741,7 @@
               const t = e.target,
                 o = 0 == t.currentTime,
                 i = d.Get().BUserHasVolumePreference();
-              if ((E(!0), o))
+              if ((g(!0), o))
                 if (i || n)
                   i &&
                     ((t.volume = d.Get().GetVolumePreference()),
@@ -3834,7 +3836,7 @@
     },
     50727: (e, t, n) => {
       "use strict";
-      n.d(t, { l: () => E });
+      n.d(t, { l: () => g });
       var o,
         i = n(85556),
         r = n(47427),
@@ -3858,7 +3860,7 @@
           (e.bottom = "bottom"),
           (e.bottomright = "bottomright");
       })(o || (o = {}));
-      let E = class extends r.Component {
+      let g = class extends r.Component {
         componentWillUnmount() {
           this.m_listeners.Unregister();
         }
@@ -4301,26 +4303,26 @@
           );
         }
       };
-      (0, i.gn)([s.ak], E.prototype, "LinkRegionBoxRef", null),
-        (0, i.gn)([s.ak], E.prototype, "OnMouseDown", null),
-        (0, i.gn)([s.ak], E.prototype, "OnMouseMove", null),
-        (0, i.gn)([s.ak], E.prototype, "OnMouseUp", null),
-        (0, i.gn)([s.ak], E.prototype, "HandleDelete", null),
-        (0, i.gn)([s.ak], E.prototype, "OnSetLinkURLChange", null),
-        (0, i.gn)([s.ak], E.prototype, "OnSetLinkDescriptionChange", null),
-        (0, i.gn)([s.ak], E.prototype, "OnSaveLink", null),
-        (0, i.gn)([s.ak], E.prototype, "OnEditLink", null),
-        (E = (0, i.gn)([a.Pi], E));
+      (0, i.gn)([s.ak], g.prototype, "LinkRegionBoxRef", null),
+        (0, i.gn)([s.ak], g.prototype, "OnMouseDown", null),
+        (0, i.gn)([s.ak], g.prototype, "OnMouseMove", null),
+        (0, i.gn)([s.ak], g.prototype, "OnMouseUp", null),
+        (0, i.gn)([s.ak], g.prototype, "HandleDelete", null),
+        (0, i.gn)([s.ak], g.prototype, "OnSetLinkURLChange", null),
+        (0, i.gn)([s.ak], g.prototype, "OnSetLinkDescriptionChange", null),
+        (0, i.gn)([s.ak], g.prototype, "OnSaveLink", null),
+        (0, i.gn)([s.ak], g.prototype, "OnEditLink", null),
+        (g = (0, i.gn)([a.Pi], g));
     },
     24827: (e, t, n) => {
       "use strict";
       n.d(t, {
         Ai: () => v,
-        H6: () => g,
+        H6: () => E,
         Kj: () => p,
         Zg: () => _,
         uv: () => f,
-        w$: () => E,
+        w$: () => g,
       });
       var o = n(85556),
         i = n(47427),
@@ -4339,7 +4341,7 @@
           o = (0, s.CE)();
         return o && n.locale(o), n.format("LT");
       }
-      function E(e, t) {
+      function g(e, t) {
         const n = h.tz.guess(),
           o = h.unix(e).tz(n),
           r = (0, s.CE)();
@@ -4360,7 +4362,7 @@
           )
         );
       }
-      const g = (0, a.Pi)((e) => {
+      const E = (0, a.Pi)((e) => {
           const {
               dateAndTime: t,
               bSingleLine: n,
@@ -4379,7 +4381,7 @@
                 { className: o || r ? m.DateAndTimeInline : m.DateAndTime },
                 a && c,
                 i.createElement("span", null, " "),
-                Boolean(t && l) && E(t, !0),
+                Boolean(t && l) && g(t, !0),
               )
             : i.createElement(
                 "div",
@@ -4395,7 +4397,7 @@
                 i.createElement(
                   "div",
                   { className: m.LocalizedTime },
-                  Boolean(t && l) && E(t, !0),
+                  Boolean(t && l) && g(t, !0),
                 ),
               );
         }),
@@ -4403,7 +4405,7 @@
           const t = i.createElement(
             "div",
             { className: e.stylesmodule.DateToolTip },
-            i.createElement(g, {
+            i.createElement(E, {
               dateAndTime: e.rtFullDate,
               bSingleLine: !0,
               stylesmodule: e.stylesmodule,
@@ -4456,7 +4458,7 @@
                 ),
                 " ",
               ),
-              i.createElement(g, { stylesmodule: n, dateAndTime: e }),
+              i.createElement(E, { stylesmodule: n, dateAndTime: e }),
             );
           let a = e <= r && r <= t;
           const m = (0, c.yK)(new Date(1e3 * e), new Date(1e3 * t));
@@ -4477,7 +4479,7 @@
                     : "#EventDisplay_TimeBeginsOn_StartAndEnd_Past",
                 ),
               ),
-              i.createElement(g, {
+              i.createElement(E, {
                 stylesmodule: n,
                 bSingleLine: !0,
                 dateAndTime: e,
@@ -4495,7 +4497,7 @@
                     : "#EventDisplay_TimeEndsOn",
                 ),
               ),
-              i.createElement(g, {
+              i.createElement(E, {
                 stylesmodule: n,
                 bSingleLine: !0,
                 bOnlyTime: m,
@@ -4579,7 +4581,7 @@
                     i.createElement(
                       "div",
                       { className: o.ShortDateAndTime },
-                      E(e),
+                      g(e),
                       " ",
                     ),
                   ),
@@ -4599,7 +4601,7 @@
                 (0, s.Xx)("#Time_Now"),
               ),
             ));
-          let g = null;
+          let E = null;
           const v = p ? t - a : t - e;
           if (v <= c._H.PerDay) {
             const e = i.createElement(
@@ -4607,7 +4609,7 @@
               { className: o.ShortDateAndTime },
               (0, s.yW)(v, !0),
             );
-            g =
+            E =
               t < a
                 ? i.createElement(
                     "div",
@@ -4627,7 +4629,7 @@
                   );
           } else {
             const e = r.getFullYear() == new Date(1e3 * t).getFullYear();
-            g = i.createElement(
+            E = i.createElement(
               i.Fragment,
               null,
               i.createElement(
@@ -4646,7 +4648,7 @@
               ),
             );
           }
-          const f = i.createElement(_, { rtFullDate: t, stylesmodule: o }, g);
+          const f = i.createElement(_, { rtFullDate: t, stylesmodule: o }, E);
           return i.createElement("div", { className: o.ShortDateRange }, h, f);
         }
       };
@@ -4767,7 +4769,7 @@
     },
     61582: (e, t, n) => {
       "use strict";
-      n.d(t, { e: () => E, m: () => h });
+      n.d(t, { e: () => g, m: () => h });
       var o,
         i = n(85556),
         r = n(47427),
@@ -4798,14 +4800,14 @@
         for (let e of u) e();
         u = [];
       }
-      class E extends r.Component {
+      class g extends r.Component {
         constructor(e) {
           super(e),
             (this.m_strPlayerID = ""),
             (this.m_player = null),
             (this.m_playerContainer = null),
             (this.m_bPlayerReady = !1),
-            (this.m_strPlayerID = "YoutubePlayer_" + E.s_nPlayerIndex++),
+            (this.m_strPlayerID = "YoutubePlayer_" + g.s_nPlayerIndex++),
             (this.state = { bYoutubeLoaded: !1 });
         }
         componentWillUnmount() {
@@ -4946,15 +4948,15 @@
             : e;
         }
       }
-      (E.s_nPlayerIndex = 0),
-        (0, i.gn)([l.ak], E.prototype, "BindPlayerContainer", null),
-        (0, i.gn)([l.ak], E.prototype, "OnYoutubeScriptsReady", null),
-        (0, i.gn)([l.ak], E.prototype, "CreatePlayer", null),
-        (0, i.gn)([l.ak], E.prototype, "OnPlayerReady", null),
-        (0, i.gn)([l.ak], E.prototype, "OnPlayerStateChange", null),
-        (0, i.gn)([l.ak], E.prototype, "OnError", null),
-        (0, i.gn)([l.ak], E.prototype, "OnPlayerLeftView", null),
-        (0, i.gn)([l.ak], E.prototype, "PlayVideo", null);
+      (g.s_nPlayerIndex = 0),
+        (0, i.gn)([l.ak], g.prototype, "BindPlayerContainer", null),
+        (0, i.gn)([l.ak], g.prototype, "OnYoutubeScriptsReady", null),
+        (0, i.gn)([l.ak], g.prototype, "CreatePlayer", null),
+        (0, i.gn)([l.ak], g.prototype, "OnPlayerReady", null),
+        (0, i.gn)([l.ak], g.prototype, "OnPlayerStateChange", null),
+        (0, i.gn)([l.ak], g.prototype, "OnError", null),
+        (0, i.gn)([l.ak], g.prototype, "OnPlayerLeftView", null),
+        (0, i.gn)([l.ak], g.prototype, "PlayVideo", null);
     },
     71738: (e, t, n) => {
       "use strict";
