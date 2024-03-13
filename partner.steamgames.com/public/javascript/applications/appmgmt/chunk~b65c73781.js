@@ -49828,12 +49828,14 @@
             p.push({
               artworkType: "marketingmessage_art",
               id: m.GetMarketingMessageID(0),
+              bShowInternalControls: t,
             }),
           !m.BHasMarketingMessages(1) ||
             (n && !n.includes("marketingmessage_art_2")) ||
             p.push({
               artworkType: "marketingmessage_art_2",
               id: m.GetMarketingMessageID(1),
+              bShowInternalControls: t,
             }),
           !m.BHasSpotlightIDs(0) ||
             (n && !n.includes("spotlight_art")) ||
@@ -49933,7 +49935,7 @@
             return o.createElement(
               F.R,
               { gid: n },
-              o.createElement(O.H, { bAssetUploadOnly: !0 }),
+              o.createElement(O.H, { bAssetUploadOnly: !r }),
             );
           case "spotlight_art":
             return o.createElement(Ae, { gid: n }, o.createElement(De, null));

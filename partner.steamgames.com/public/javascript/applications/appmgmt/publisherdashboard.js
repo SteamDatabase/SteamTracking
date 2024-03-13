@@ -499,7 +499,7 @@
           ]);
         let D =
             "seasonalsale" == l.type
-              ? `${i.De.PARTNER_BASE_URL}doc/marketing/discounts/seasonalsales`
+              ? `${i.De.PARTNER_BASE_URL}doc/doc/marketing/discounts/seasonalsales`
               : void 0,
           h = null == v ? void 0 : v.GetAssets().GetHeaderURL();
         null != D || (D = null == v ? void 0 : v.GetStorePageURL());
