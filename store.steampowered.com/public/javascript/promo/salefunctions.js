@@ -1370,3 +1370,25 @@ CVideoScrollController.prototype.update = function()
 	}
 };
 
+function EnableAltHeader()
+{
+	if ( g_rgAltBackgroundSrc )
+	{
+		V_SetCookie( 'enable_alt_sale_header', 1 );
+
+		if ( window.innerWidth <= 500 )
+		{
+			$J( '.page_background_holder' ).css( 'background-image', 'url(' +  g_rgAltBackgroundSrc.strPageBackgroundMobileURL + ')' );
+		}
+		else
+		{
+			$J( '.page_background_holder' ).css( 'background-image', 'url(' +  g_rgAltBackgroundSrc.strPageBackgroundURL + ')' );
+		}
+
+		$J('.fullscreen-bg__video' ).attr('src', g_rgAltBackgroundSrc.strPageBackgroundWebM );
+		$J('.fullscreen-bg__video_mobile' ).attr('src', g_rgAltBackgroundSrc.strPageBackgroundMobileWebM );
+
+		$J( '.page_background_overlay' ).hide();
+	}
+}
+

@@ -62,6 +62,35 @@ body.v6.sale_spring2024 .home_sticker_ctn.mobile {
     width: 100%;
 }
 
+.page_background_overlay {
+	width: 100%;
+	max-width: 1450px;
+	height: 100%;
+	position: absolute;
+	margin-left: 50%;
+	transform: translateX(-50%);
+	pointer-events: none;
+	z-index: 1;
+}
+
+.spring_more_cats {
+	width: 18vw;
+	height: 18vw;
+	max-height: 170px;
+	max-width: 170px;
+	position: absolute;
+	top: 6vh;
+	right: 0;
+	cursor: pointer;
+	pointer-events: auto;
+}
+
+.home_sticker_ctn video {
+	margin-left: 50%;
+	transform: translateX(-50%);
+	max-width: 100%;
+}
+
 .hero_parent_ctn .home_section_title {
     display: none;
     text-align: center;
@@ -1344,6 +1373,15 @@ p.home_subtitle_ctn a {
         width: calc(100vw - 5%);
     }
 
+	body.responsive_page .page_background_holder, body.responsive_page .fullscreen-bg__video {
+		height: 45vw !important;
+		background-size: cover !important;
+	}
+
+	body.responsive_page .home_page_body_ctn .home_page_takeover_sizer {
+		height: 32vw;
+	}
+
 }
 
 @media screen and (max-width: 1100px ) {
@@ -1378,15 +1416,6 @@ p.home_subtitle_ctn a {
     html.responsive .home_category_games_ctn .salerow3 .sale_capsule {
         max-width: 450px;
     }
-
-	body.responsive_page .page_background_holder, body.responsive_page .fullscreen-bg__video {
-		height: 50vw !important;
-		background-size: cover !important;
-	}
-
-	body.responsive_page .home_page_body_ctn .home_page_takeover_sizer {
-		height: 40vw;
-	}
 }
 
 @media screen and (max-width: 910px )
@@ -2377,13 +2406,11 @@ body.v6 .sale_capsule .discount_block_inline
 @media screen and (max-width: 500px )
 {
     html.responsive div.mobile_video_set .fullscreen-bg__video_mobile {
-        height: 350px !important;
-		margin-left: 50%;
-		transform: translateX(-50%);
+        height: 70vw !important;
     }
 
 	body.responsive_page .home_page_body_ctn .home_page_takeover_sizer {
-		height: 77vw;
+		height: 55vw;
 	}
 
     body .responsive_page_frame .summer_encore_ctn {
