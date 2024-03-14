@@ -291,12 +291,12 @@ function HomeSaleFilterHeroes( $Parent, rgHeroItems )
 		$J(this).find('.hero_screenshot_load').each( function() { $J(this).css( 'backgroundImage', $J(this).data('background') ); } );
 	} );
 
-	$J('.hero_capsule:not(.valveindex)').on( 'mouseenter vgp_onfocus touchstart', function() {
+	$J('.hero_capsule:not(.valveindex)').on( 'mouseenter vgp_onfocus', function() {
 		if ( $J(this).find('video.hero_video').length )
 			$J(this).find('video.hero_video')[0].play();
 	} );
 
-	$J('.hero_capsule:not(.valveindex)').on( 'mouseleave vgp_onblur touchend', function() {
+	$J('.hero_capsule:not(.valveindex)').on( 'mouseleave vgp_onblur', function() {
 		if ( $J(this).find('video.hero_video').length )
 			$J(this).find('video.hero_video')[0].pause();
 	} );

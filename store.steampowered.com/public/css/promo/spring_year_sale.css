@@ -3337,3 +3337,8 @@ html.tablet body.v6.sale_spring2024 .carousel_container .carousel_items .hero_na
 html.tablet body.v6.sale_spring2024 .hero_capsule img.hero_capsule_img {
 	height: auto;
 }
+
+html.tablet body.v6.sale_spring2024 .franchise_capsule.active .franchise_games {
+	top: 10%;
+}
+						
