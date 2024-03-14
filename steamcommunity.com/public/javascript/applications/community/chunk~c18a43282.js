@@ -988,9 +988,9 @@
               ? ((i.rejected = s.$k.k_NotRejected),
                 l.push(Object.assign(Object.assign({}, i), { priority: 1 })))
               : h.includes(m)
-              ? ((i.rejected = s.$k.k_NotRejected), c.push(i))
-              : ((i.rejected = m),
-                m == s.$k.k_RejectIgnoredGame ? d.push(i) : u.push(i)),
+                ? ((i.rejected = s.$k.k_NotRejected), c.push(i))
+                : ((i.rejected = m),
+                  m == s.$k.k_RejectIgnoredGame ? d.push(i) : u.push(i)),
             l.length > a)
           )
             break;
@@ -1033,17 +1033,17 @@
         return !t.prepurchase && e.BIsComingSoon()
           ? s.$k.k_RejectNoComingSoon
           : !t.virtual_reality &&
-            (null === (o = e.GetPlatforms()) || void 0 === o
-              ? void 0
-              : o.vr_support.vrhmd_only)
-          ? s.$k.k_RejectNoVR
-          : (
-              null === (l = e.GetAllCreatorClanIDs()) || void 0 === l
+              (null === (o = e.GetPlatforms()) || void 0 === o
                 ? void 0
-                : l.some((e) => c.BIsIgnoringCurator(e))
-            )
-          ? s.$k.k_RejectCreatorClan
-          : s.$k.k_NotRejected;
+                : o.vr_support.vrhmd_only)
+            ? s.$k.k_RejectNoVR
+            : (
+                  null === (l = e.GetAllCreatorClanIDs()) || void 0 === l
+                    ? void 0
+                    : l.some((e) => c.BIsIgnoringCurator(e))
+                )
+              ? s.$k.k_RejectCreatorClan
+              : s.$k.k_NotRejected;
       }
       function _(e, t) {
         var n;
@@ -1075,20 +1075,21 @@
           ? t.games_already_in_library && c.BIsGameOwned(e)
             ? s.$k.k_RejectInLibrary
             : t.games_not_in_library && !c.BIsGameOwned(e)
-            ? s.$k.k_RejectNotInLibrary
-            : !t.video && [7, 8, 9].includes(d)
-            ? s.$k.k_RejectVideo
-            : t.has_discount && !o.GetBestPurchaseOption().discount_pct
-            ? s.$k.k_RejectNoDiscount
-            : 1 == d &&
-              t.games_already_in_library &&
-              c.BIsGameOwned(o.GetParentAppID())
-            ? s.$k.k_RejectInLibrary
-            : a
-            ? (1 == d && n.BHasAppID(o.GetParentAppID())) || n.BHasAppID(e)
-              ? s.$k.k_RejectAlreadyDisplayed
-              : _(o, t)
-            : s.$k.k_NotRejected
+              ? s.$k.k_RejectNotInLibrary
+              : !t.video && [7, 8, 9].includes(d)
+                ? s.$k.k_RejectVideo
+                : t.has_discount && !o.GetBestPurchaseOption().discount_pct
+                  ? s.$k.k_RejectNoDiscount
+                  : 1 == d &&
+                      t.games_already_in_library &&
+                      c.BIsGameOwned(o.GetParentAppID())
+                    ? s.$k.k_RejectInLibrary
+                    : a
+                      ? (1 == d && n.BHasAppID(o.GetParentAppID())) ||
+                        n.BHasAppID(e)
+                        ? s.$k.k_RejectAlreadyDisplayed
+                        : _(o, t)
+                      : s.$k.k_NotRejected
           : s.$k.k_RejectSoftware;
       }
       function v(e, t) {
@@ -1101,8 +1102,8 @@
         return t.games_not_in_library && a
           ? s.$k.k_RejectInLibrary
           : t.games_not_in_library && !a
-          ? s.$k.k_RejectNotInLibrary
-          : s.$k.k_NotRejected;
+            ? s.$k.k_RejectNotInLibrary
+            : s.$k.k_NotRejected;
       }
       function C(e, t, n, a) {
         const o = r.Z.Get().GetPackage(e);
@@ -1115,12 +1116,12 @@
         return t.games_already_in_library && d.BOwnsPackage(e)
           ? s.$k.k_RejectInLibrary
           : d.BIsPackageIgnored(e)
-          ? s.$k.k_RejectIgnoredGame
-          : a
-          ? n.BHasPackageID(e)
-            ? s.$k.k_RejectAlreadyDisplayed
-            : _(o, t)
-          : s.$k.k_NotRejected;
+            ? s.$k.k_RejectIgnoredGame
+            : a
+              ? n.BHasPackageID(e)
+                ? s.$k.k_RejectAlreadyDisplayed
+                : _(o, t)
+              : s.$k.k_NotRejected;
       }
       function f(e, t, n, a) {
         const i = r.Z.Get().GetBundle(e);
@@ -1131,10 +1132,10 @@
         return l != s.$k.k_NotRejected
           ? l
           : a
-          ? n.BHasBundleID(e)
-            ? s.$k.k_RejectAlreadyDisplayed
-            : _(i, t)
-          : s.$k.k_NotRejected;
+            ? n.BHasBundleID(e)
+              ? s.$k.k_RejectAlreadyDisplayed
+              : _(i, t)
+            : s.$k.k_NotRejected;
       }
     },
     27174: (e, t, n) => {
@@ -1705,8 +1706,8 @@
         return e.cap_section_row_count && e.cap_section_row_count > 0
           ? e.cap_section_row_count
           : e.cap_section_content
-          ? 4
-          : 0;
+            ? 4
+            : 0;
       }
       function te(e) {
         return Boolean(null == e ? void 0 : e.store_filter)
@@ -2093,28 +2094,31 @@
             "sale_logo" === e
               ? (t = this.jsondata.localized_sale_logo)
               : "sale_overlay" === e
-              ? (t = this.jsondata.localized_sale_overlay)
-              : "localized_image_group" === e ||
-                "link_capsule" === e ||
-                "product_banner_override" === e ||
-                "product_mobile_banner_override" === e ||
-                "sale_section_title" === e ||
-                "schedule_track_art" === e
-              ? (t = d.U8.GetLocalizedImageGroupForEditAsImgArray(
-                  this.clanSteamID,
-                ))
-              : "product_banner" === e
-              ? (t = this.jsondata.localized_sale_product_banner)
-              : "product_mobile_banner" === e
-              ? (t = this.jsondata.localized_sale_product_mobile_banner)
-              : "bestofyear_banner" === e
-              ? (t = this.jsondata.localized_bestofyear_banner)
-              : "bestofyear_banner_mobile" === e
-              ? (t = this.jsondata.localized_bestofyear_banner_mobile)
-              : "localized_store_app_spotlight" === e
-              ? (t = this.jsondata.localized_store_app_spotlight)
-              : "localized_store_app_spotlight_mobile" === e &&
-                (t = this.jsondata.localized_store_app_spotlight_mobile);
+                ? (t = this.jsondata.localized_sale_overlay)
+                : "localized_image_group" === e ||
+                    "link_capsule" === e ||
+                    "product_banner_override" === e ||
+                    "product_mobile_banner_override" === e ||
+                    "sale_section_title" === e ||
+                    "schedule_track_art" === e
+                  ? (t = d.U8.GetLocalizedImageGroupForEditAsImgArray(
+                      this.clanSteamID,
+                    ))
+                  : "product_banner" === e
+                    ? (t = this.jsondata.localized_sale_product_banner)
+                    : "product_mobile_banner" === e
+                      ? (t = this.jsondata.localized_sale_product_mobile_banner)
+                      : "bestofyear_banner" === e
+                        ? (t = this.jsondata.localized_bestofyear_banner)
+                        : "bestofyear_banner_mobile" === e
+                          ? (t =
+                              this.jsondata.localized_bestofyear_banner_mobile)
+                          : "localized_store_app_spotlight" === e
+                            ? (t = this.jsondata.localized_store_app_spotlight)
+                            : "localized_store_app_spotlight_mobile" === e &&
+                              (t =
+                                this.jsondata
+                                  .localized_store_app_spotlight_mobile);
           return t;
         }
         GetImageURL(e, t = 0, n = d.FN.full) {
@@ -2123,12 +2127,12 @@
           return i && a[t].startsWith("http")
             ? a[t]
             : i
-            ? d.aN.GenerateArtworkURLFromHashAndExtensions(
-                this.clanSteamID,
-                a[t],
-                n,
-              )
-            : void 0;
+              ? d.aN.GenerateArtworkURLFromHashAndExtensions(
+                  this.clanSteamID,
+                  a[t],
+                  n,
+                )
+              : void 0;
         }
         GetImageHash(e, t = 0) {
           let n = this.GetImgArray(e);
@@ -2279,8 +2283,8 @@
               this.bOldAnnouncement
                 ? this.AnnouncementGID
                 : null == this.GID
-                ? 0
-                : this.GID,
+                  ? 0
+                  : this.GID,
             );
             return (null == t
               ? void 0
@@ -2288,16 +2292,16 @@
               ? ((n %= t.GetOnlyAllAgesSafeScreenshots().length),
                 t.GetOnlyAllAgesSafeScreenshots()[n])
               : (null ===
-                  (e =
-                    null == t
-                      ? void 0
-                      : t.GetBothAllAgesSafeAndMatureScreenshots()) ||
-                void 0 === e
-                  ? void 0
-                  : e.length) > 0
-              ? ((n %= t.GetBothAllAgesSafeAndMatureScreenshots().length),
-                t.GetBothAllAgesSafeAndMatureScreenshots()[n])
-              : "";
+                    (e =
+                      null == t
+                        ? void 0
+                        : t.GetBothAllAgesSafeAndMatureScreenshots()) ||
+                  void 0 === e
+                    ? void 0
+                    : e.length) > 0
+                ? ((n %= t.GetBothAllAgesSafeAndMatureScreenshots().length),
+                  t.GetBothAllAgesSafeAndMatureScreenshots()[n])
+                : "";
           }
           if (this.clanSteamID) {
             const e = m.sV.GetClanInfoByClanAccountID(
@@ -2559,18 +2563,18 @@
               ? "string" == typeof e
                 ? I.De.STORE_BASE_URL + "category/" + e
                 : "category" == e.type
-                ? I.De.STORE_BASE_URL + "category/" + e.category
-                : "tags" == e.type
-                ? I.De.STORE_BASE_URL +
-                  "tags/" +
-                  ((0, g.CE)() || "en") +
-                  "/" +
-                  e.tagid
-                : "freetoplay" == e.type
-                ? I.De.STORE_BASE_URL + "genre/Free%20to%20Play/"
-                : "earlyaccess" == e.type
-                ? I.De.STORE_BASE_URL + "genre/Early%20Access/"
-                : I.De.STATS_BASE_URL + e.type
+                  ? I.De.STORE_BASE_URL + "category/" + e.category
+                  : "tags" == e.type
+                    ? I.De.STORE_BASE_URL +
+                      "tags/" +
+                      ((0, g.CE)() || "en") +
+                      "/" +
+                      e.tagid
+                    : "freetoplay" == e.type
+                      ? I.De.STORE_BASE_URL + "genre/Free%20to%20Play/"
+                      : "earlyaccess" == e.type
+                        ? I.De.STORE_BASE_URL + "genre/Early%20Access/"
+                        : I.De.STATS_BASE_URL + e.type
               : I.De.STORE_BASE_URL + "sale/" + this.jsondata.sale_vanity_id;
           }
           if (!this.jsondata.sale_vanity_id_valve_approved_for_sale_subpath) {
@@ -2710,15 +2714,16 @@
           return this.BHasTag("steam_award_nomination_request")
             ? (0, g.Xx)("#PartnerEvent_SteamAwardNominations")
             : this.BHasTag("steam_award_vote_request")
-            ? (0, g.Xx)("#PartnerEvent_SteamAwardVoteRequest")
-            : this.BHasTag("steam_game_festival_artist_statement")
-            ? (0, g.Xx)("#PartnerEvent_SteamGameFestival_ArtistState")
-            : this.BHasTag("steam_game_festival_office_hour")
-            ? (0, g.Xx)("#PartnerEvent_SteamGameFestival_OfficeHour")
-            : this.BHasTag("steam_game_festival_broadcast") ||
-              (this.BHasTagStartingWith("sale_nextfest_") && 11 == this.type)
-            ? (0, g.Xx)("#PartnerEvent_SteamGameFestival_Broadcast")
-            : this.GetEventTypeAsString();
+              ? (0, g.Xx)("#PartnerEvent_SteamAwardVoteRequest")
+              : this.BHasTag("steam_game_festival_artist_statement")
+                ? (0, g.Xx)("#PartnerEvent_SteamGameFestival_ArtistState")
+                : this.BHasTag("steam_game_festival_office_hour")
+                  ? (0, g.Xx)("#PartnerEvent_SteamGameFestival_OfficeHour")
+                  : this.BHasTag("steam_game_festival_broadcast") ||
+                      (this.BHasTagStartingWith("sale_nextfest_") &&
+                        11 == this.type)
+                    ? (0, g.Xx)("#PartnerEvent_SteamGameFestival_Broadcast")
+                    : this.GetEventTypeAsString();
         }
         GetAllTags() {
           return this.vecTags;
@@ -2802,23 +2807,23 @@
             ? null == this.jsondata.source_content_hub
               ? "games"
               : "string" == typeof this.jsondata.source_content_hub
-              ? "category"
-              : this.jsondata.source_content_hub.type
+                ? "category"
+                : this.jsondata.source_content_hub.type
             : void 0;
         }
         GetContentHubCategory() {
           return null == this.jsondata.source_content_hub
             ? void 0
             : "string" == typeof this.jsondata.source_content_hub
-            ? this.jsondata.source_content_hub
-            : this.jsondata.source_content_hub.category;
+              ? this.jsondata.source_content_hub
+              : this.jsondata.source_content_hub.category;
         }
         GetContentHubTag() {
           return null == this.jsondata.source_content_hub
             ? void 0
             : "string" == typeof this.jsondata.source_content_hub
-            ? 0
-            : this.jsondata.source_content_hub.tagid;
+              ? 0
+              : this.jsondata.source_content_hub.tagid;
         }
         GetContentHub() {
           return "string" == typeof this.jsondata.source_content_hub
@@ -3123,15 +3128,15 @@
             "remove" === this.m_streamChatStatus
             ? "remove"
             : void 0 !== this.m_bUserChatExpanded
-            ? this.m_bUserChatExpanded
-              ? "show"
-              : "hide"
-            : "show" === this.m_pageChatStatus
-            ? "show"
-            : "hide" === this.m_pageChatStatus ||
-              "hide" === this.m_streamChatStatus
-            ? "hide"
-            : "show";
+              ? this.m_bUserChatExpanded
+                ? "show"
+                : "hide"
+              : "show" === this.m_pageChatStatus
+                ? "show"
+                : "hide" === this.m_pageChatStatus ||
+                    "hide" === this.m_streamChatStatus
+                  ? "hide"
+                  : "show";
         }
         ToggleChatVisibility() {
           const e = this.GetChatVisibility();
@@ -3504,8 +3509,8 @@
             clanid: e.clanid
               ? e.clanid
               : e.event
-              ? e.event.clanSteamID.GetAccountID()
-              : void 0,
+                ? e.event.clanSteamID.GetAccountID()
+                : void 0,
             listid: e.listid,
             subid: e.subid,
             bundleid: e.bundleid,
@@ -3563,8 +3568,8 @@
           v(e) != v(t)
             ? v(t) - v(e)
             : e.viewer_count != t.viewer_count
-            ? t.viewer_count - e.viewer_count
-            : t.accountid - e.accountid,
+              ? t.viewer_count - e.viewer_count
+              : t.accountid - e.accountid,
         );
       }
       function f(e, t, n) {
@@ -4186,22 +4191,22 @@
           return (0, D.U5)("RemotePlay.UnlockH264")
             ? (console.log("Client supports direct H.264 unlock"), !0)
             : (0, D.U5)("BrowserView.PostMessageToParent")
-            ? (console.log("Client supports browserview H.264 unlock"), !0)
-            : (console.log("Client does not support H.264 unlock"), !1);
+              ? (console.log("Client supports browserview H.264 unlock"), !0)
+              : (console.log("Client does not support H.264 unlock"), !1);
         }
         RequestUnlockH264() {
           (0, D.U5)("RemotePlay.UnlockH264")
             ? (console.log("Requesting direct H.264 unlock"),
               SteamClient.RemotePlay.UnlockH264())
             : (0, D.U5)("BrowserView.PostMessageToParent")
-            ? (console.log("Requesting browserview unlock"),
-              SteamClient.BrowserView.PostMessageToParent(
-                "UnlockH264Request",
-                "CUnlockH264Helper",
-              ))
-            : console.log(
-                "Failed to request H.264 unlock: no method supported",
-              );
+              ? (console.log("Requesting browserview unlock"),
+                SteamClient.BrowserView.PostMessageToParent(
+                  "UnlockH264Request",
+                  "CUnlockH264Helper",
+                ))
+              : console.log(
+                  "Failed to request H.264 unlock: no method supported",
+                );
         }
         CheckUnlockState() {
           if (this.m_broadcast.m_eWatchState != G.Unlocking) return;
@@ -4639,49 +4644,52 @@
                     this.GetBroadcastManifest(e, t, n),
                   ))
                 : "waiting_for_reconnect" == o
-                ? (e.SetState(
-                    G.Loading,
-                    (0, I.Xx)("#BroadcastWatch_WaitingForReconnect"),
-                  ),
-                  e.m_schManifestTimeout.Schedule(s.retry, () =>
-                    this.GetBroadcastManifest(e, t, n),
-                  ))
-                : "end" == o
-                ? e.SetState(G.Error, (0, I.Xx)("#BroadcastWatch_NotAvailable"))
-                : "too_many_broadcasts" == o
-                ? e.SetState(
-                    G.Error,
-                    (0, I.Xx)("#BroadcastWatch_TooManyBroadcasts"),
-                  )
-                : "system_not_supported" == o
-                ? e.SetState(
-                    G.Error,
-                    (0, I.Xx)("#BroadcastWatch_SystemNotSupported"),
-                  )
-                : "user_restricted" == o
-                ? e.SetState(
-                    G.Error,
-                    (0, I.Xx)("#BroadcastWatch_UserRestricted"),
-                  )
-                : "poor_upload_quality" == o
-                ? e.SetState(
-                    G.Error,
-                    (0, I.Xx)("#BroadcastWatch_PoorUploadQuality"),
-                  )
-                : "request_failed" == o
-                ? e.SetState(
-                    G.Error,
-                    (0, I.Xx)("#BroadcastWatch_RequestFailed"),
-                  )
-                : "too_many_viewers" == o
-                ? e.SetState(
-                    G.Error,
-                    (0, I.Xx)("#BroadcastWatch_TooManyViewers"),
-                  )
-                : e.SetState(
-                    G.Error,
-                    (0, I.Xx)("#BroadcastWatch_NotAvailable"),
-                  );
+                  ? (e.SetState(
+                      G.Loading,
+                      (0, I.Xx)("#BroadcastWatch_WaitingForReconnect"),
+                    ),
+                    e.m_schManifestTimeout.Schedule(s.retry, () =>
+                      this.GetBroadcastManifest(e, t, n),
+                    ))
+                  : "end" == o
+                    ? e.SetState(
+                        G.Error,
+                        (0, I.Xx)("#BroadcastWatch_NotAvailable"),
+                      )
+                    : "too_many_broadcasts" == o
+                      ? e.SetState(
+                          G.Error,
+                          (0, I.Xx)("#BroadcastWatch_TooManyBroadcasts"),
+                        )
+                      : "system_not_supported" == o
+                        ? e.SetState(
+                            G.Error,
+                            (0, I.Xx)("#BroadcastWatch_SystemNotSupported"),
+                          )
+                        : "user_restricted" == o
+                          ? e.SetState(
+                              G.Error,
+                              (0, I.Xx)("#BroadcastWatch_UserRestricted"),
+                            )
+                          : "poor_upload_quality" == o
+                            ? e.SetState(
+                                G.Error,
+                                (0, I.Xx)("#BroadcastWatch_PoorUploadQuality"),
+                              )
+                            : "request_failed" == o
+                              ? e.SetState(
+                                  G.Error,
+                                  (0, I.Xx)("#BroadcastWatch_RequestFailed"),
+                                )
+                              : "too_many_viewers" == o
+                                ? e.SetState(
+                                    G.Error,
+                                    (0, I.Xx)("#BroadcastWatch_TooManyViewers"),
+                                  )
+                                : e.SetState(
+                                    G.Error,
+                                    (0, I.Xx)("#BroadcastWatch_NotAvailable"),
+                                  );
           });
         }
         GetClipManifest(e, t) {
@@ -5090,8 +5098,10 @@
               this.m_player
                 ? this.m_player.Play()
                 : this.IsBroadcastVOD()
-                ? this.StartVOD(M.GetBroadcastVOD(this.m_nBroadcastAppIDVOD))
-                : this.StartBroadcast(M.GetBroadcast(this.m_steamIDBroadcast)));
+                  ? this.StartVOD(M.GetBroadcastVOD(this.m_nBroadcastAppIDVOD))
+                  : this.StartBroadcast(
+                      M.GetBroadcast(this.m_steamIDBroadcast),
+                    ));
         }
         Pause() {
           console.log(
@@ -5647,18 +5657,22 @@
               ? h
                 ? (g = (0, o.Xx)("#ImageUpload_InvalidFileType"))
                 : p
-                ? (g = (0, o.Xx)(
-                    "#ImageUpload_InvalidFormat",
-                    l.aN.GetExtensionStringForFileType(n),
-                  ))
-                : m || _
-                ? d
-                  ? !m &&
-                    _ &&
-                    ((g = (0, o.Xx)("#ImageUpload_InvalidDimensions", a, i)),
-                    (v = !0))
-                  : (g = (0, o.Xx)("#ImageUpload_TooSmall", a, i))
-                : (g = (0, o.Xx)("#ImageUpload_InvalidResolution", a, i))
+                  ? (g = (0, o.Xx)(
+                      "#ImageUpload_InvalidFormat",
+                      l.aN.GetExtensionStringForFileType(n),
+                    ))
+                  : m || _
+                    ? d
+                      ? !m &&
+                        _ &&
+                        ((g = (0, o.Xx)(
+                          "#ImageUpload_InvalidDimensions",
+                          a,
+                          i,
+                        )),
+                        (v = !0))
+                      : (g = (0, o.Xx)("#ImageUpload_TooSmall", a, i))
+                    : (g = (0, o.Xx)("#ImageUpload_InvalidResolution", a, i))
               : (g = (0, o.Xx)("#ImageUpload_InvalidFormatSelected")),
             { error: g, needsCrop: v, match: this.type }
           );
@@ -5869,20 +5883,20 @@
               e.endsWith(".jpg")
                 ? 1
                 : e.endsWith(".png")
-                ? 3
-                : e.endsWith(".gif")
-                ? 2
-                : e.endsWith(".mp4")
-                ? 4
-                : e.endsWith(".webm")
-                ? 5
-                : e.endsWith(".vtt")
-                ? 6
-                : e.endsWith(".srt")
-                ? 7
-                : e.endsWith(".webp")
-                ? 10
-                : void 0
+                  ? 3
+                  : e.endsWith(".gif")
+                    ? 2
+                    : e.endsWith(".mp4")
+                      ? 4
+                      : e.endsWith(".webm")
+                        ? 5
+                        : e.endsWith(".vtt")
+                          ? 6
+                          : e.endsWith(".srt")
+                            ? 7
+                            : e.endsWith(".webp")
+                              ? 10
+                              : void 0
             );
           })(e);
         }
@@ -7781,10 +7795,10 @@
               ? this.m_rgSortedCalendarEvents[0].start_time
               : t
             : this.m_rgSortedCalendarEvents.length > 0
-            ? this.m_rgSortedCalendarEvents[
-                this.m_rgSortedCalendarEvents.length - 1
-              ].start_time
-            : t;
+              ? this.m_rgSortedCalendarEvents[
+                  this.m_rgSortedCalendarEvents.length - 1
+                ].start_time
+              : t;
         }
         UpdateStuckCounters(e, t) {
           const n =
@@ -8296,8 +8310,8 @@
               (/Macintosh/i.test(e) && /Safari/i.test(e))
                 ? (this.m_sBrowserID = "ios")
                 : /Android/i.test(e)
-                ? (this.m_sBrowserID = "android")
-                : (this.m_sBrowserID = "");
+                  ? (this.m_sBrowserID = "android")
+                  : (this.m_sBrowserID = "");
             }
         }
       })();
@@ -9108,12 +9122,12 @@
                 ? ((a = t ? e.result.event_ignored : e.result.event_followed),
                   (s = t ? null : e.result.event_followed_flags))
                 : t
-                ? ((a = e.result.event_followed),
-                  (s = e.result.event_followed_flags),
-                  (r = e.result.event_ignored))
-                : ((a = e.result.event_ignored),
-                  (r = e.result.event_followed),
-                  (l = e.result.event_followed_flags));
+                  ? ((a = e.result.event_followed),
+                    (s = e.result.event_followed_flags),
+                    (r = e.result.event_ignored))
+                  : ((a = e.result.event_ignored),
+                    (r = e.result.event_followed),
+                    (l = e.result.event_followed_flags));
               let c = a.indexOf(i);
               if ((c > -1 && (a.splice(c, 1), s && s.splice(c, 1)), r)) {
                 let e = r.indexOf(i);
@@ -11704,8 +11718,8 @@
                       2 == (null == n ? void 0 : n.GetStoreItemType())
                         ? s.id
                         : null == n
-                        ? void 0
-                        : n.GetBestPurchaseOption().bundleid)
+                          ? void 0
+                          : n.GetBestPurchaseOption().bundleid)
                   : (a =
                       null == n ? void 0 : n.GetBestPurchaseOption().packageid),
                 void 0 !== window.g_bUseNewCartAPI &&
@@ -11762,11 +11776,11 @@
                 null == h ? void 0 : h.GetName(),
               )
             : _
-            ? (0, d.Xx)(
-                "#Sale_CannotInstallDemo_ttip",
-                null == h ? void 0 : h.GetName(),
-              )
-            : (0, d.Xx)("#Loading");
+              ? (0, d.Xx)(
+                  "#Sale_CannotInstallDemo_ttip",
+                  null == h ? void 0 : h.GetName(),
+                )
+              : (0, d.Xx)("#Loading");
         return !g && _ && (null == h ? void 0 : h.BIsFree())
           ? a.createElement(m.a, { info: t, className: n })
           : a.createElement(
@@ -11967,11 +11981,7 @@
           case c.k_eStoreNewsHub:
             return (
               r +
-              `news/${
-                e.appid
-                  ? `app/${e.appid}`
-                  : `group/${e.clanSteamID.GetAccountID()}`
-              }`
+              `news/${e.appid ? `app/${e.appid}` : `group/${e.clanSteamID.GetAccountID()}`}`
             );
           case c.k_eStoreOwnerPage:
             return (
@@ -11991,11 +12001,7 @@
           case c.k_eCommunityView:
             return l + "announcements/detail/" + m;
           case c.k_eStoreView:
-            return `${r}news/${
-              e.appid
-                ? `app/${e.appid}`
-                : `group/${e.clanSteamID.GetAccountID()}`
-            }/${e.bOldAnnouncement ? `old_view/${m}` : `view/${d}`}`;
+            return `${r}news/${e.appid ? `app/${e.appid}` : `group/${e.clanSteamID.GetAccountID()}`}/${e.bOldAnnouncement ? `old_view/${m}` : `view/${d}`}`;
           case c.k_eStoreUsersNewsHub:
             return `${r}news/`;
           default:
@@ -12197,8 +12203,8 @@
                     (i
                       ? (0, h.Xx)("#Button_Followed")
                       : n
-                      ? (0, h.Xx)("#Button_Ignored")
-                      : (0, h.Xx)("#Button_Follow")),
+                        ? (0, h.Xx)("#Button_Ignored")
+                        : (0, h.Xx)("#Button_Follow")),
                 ),
               )
             : null;
@@ -12530,8 +12536,8 @@
             r.review_score < 5
               ? F().ReviewScoreLow
               : 5 == r.review_score
-              ? F().ReviewScoreMixed
-              : F().ReviewScoreHigh,
+                ? F().ReviewScoreMixed
+                : F().ReviewScoreHigh,
           o = `${N.De.STORE_BASE_URL}app/${t.id}/#app_reviews_hash`,
           c = l.createElement(
             "div",
@@ -12735,9 +12741,7 @@
                 className: F().BottomShelfOffScreen,
                 ref: (e) =>
                   g(
-                    `translateY( -${
-                      (null == e ? void 0 : e.clientHeight) || 0
-                    }px )`,
+                    `translateY( -${(null == e ? void 0 : e.clientHeight) || 0}px )`,
                   ),
               },
               l.createElement(
@@ -12893,9 +12897,7 @@
             i || !v
               ? null
               : (0, p.Hf)(
-                  `${null == v ? void 0 : v.GetStorePageURL()}${
-                    d ? `?${d}` : ""
-                  }`,
+                  `${null == v ? void 0 : v.GetStorePageURL()}${d ? `?${d}` : ""}`,
                   S,
                 ),
           w = l.createElement(ne, {
@@ -13451,8 +13453,8 @@
             le = u.BHasTags()
               ? u.GetTagIDs()
               : (null == p ? void 0 : p.BHasTags())
-              ? p.GetTagIDs()
-              : [],
+                ? p.GetTagIDs()
+                : [],
             ce = 0 == u.GetStoreItemType(),
             de = (0, m.Hf)(se, J),
             me = te || u.BIsReleased() || u.BIsPrePurchase();
@@ -14615,10 +14617,10 @@
         return "bundle" == e
           ? "bundle"
           : "sub" == e
-          ? "sub"
-          : (0, i.m)(e)
-          ? "app"
-          : null;
+            ? "sub"
+            : (0, i.m)(e)
+              ? "app"
+              : null;
       }
       function o(e) {
         return 2 == e ? "bundle" : 1 == e ? "sub" : 0 == e ? "app" : null;
@@ -14727,10 +14729,10 @@
                   t
                     ? "#Updating"
                     : l
-                    ? "#Loading"
-                    : A
-                    ? "#Wishlisted_short"
-                    : "#AddToWishlist_short",
+                      ? "#Loading"
+                      : A
+                        ? "#Wishlisted_short"
+                        : "#AddToWishlist_short",
                 ),
               ),
             );

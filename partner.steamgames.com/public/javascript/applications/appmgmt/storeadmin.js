@@ -306,8 +306,8 @@
                     "success" === r.statusType
                       ? (t = i().StatusSuccess)
                       : "danger" === r.statusType
-                      ? (t = i().StatusDanger)
-                      : "caution" === r.statusType && (t = i().StatusCaution),
+                        ? (t = i().StatusDanger)
+                        : "caution" === r.statusType && (t = i().StatusCaution),
                     n.createElement(
                       d.M2,
                       {
@@ -325,11 +325,7 @@
                         {
                           key: r.key,
                           className: (0, o.Z)(
-                            `${i().GraphicalAssetsTab} ${
-                              r.key === e.key
-                                ? (0, o.Z)(i().Active, "ActiveTab")
-                                : ""
-                            }`,
+                            `${i().GraphicalAssetsTab} ${r.key === e.key ? (0, o.Z)(i().Active, "ActiveTab") : ""}`,
                             this.props.classNameTab,
                           ),
                           onActivate: () => this.OnTabClick(r),
@@ -562,17 +558,7 @@
                     this.m_mapOptInToPartners.set(e.publisherid, r), n.push(r);
                   })
                 : console.log(
-                    `CPartnerInfoStore.FindPartnerByName failed with status ${
-                      null == i ? void 0 : i.status
-                    } eresult ${
-                      null === (t = null == i ? void 0 : i.data) || void 0 === t
-                        ? void 0
-                        : t.success
-                    } and msg ${
-                      null === (a = null == i ? void 0 : i.data) || void 0 === a
-                        ? void 0
-                        : a.msg
-                    }`,
+                    `CPartnerInfoStore.FindPartnerByName failed with status ${null == i ? void 0 : i.status} eresult ${null === (t = null == i ? void 0 : i.data) || void 0 === t ? void 0 : t.success} and msg ${null === (a = null == i ? void 0 : i.data) || void 0 === a ? void 0 : a.msg}`,
                   );
             } catch (e) {
               const r = (0, c.l)(e);
@@ -1412,16 +1398,16 @@
                 (0, i.Xx)("#App_Landing_Release_EarliestDate", (0, i.vX)(a)),
               )
           : n
-          ? o.createElement(
-              U,
-              null,
-              (0, i.Xx)("#App_Landing_Release_EarliestDate_TwoWeeks30Days"),
-            )
-          : o.createElement(
-              U,
-              null,
-              (0, i.Xx)("#App_Landing_Release_EarliestDate_TwoWeeks"),
-            );
+            ? o.createElement(
+                U,
+                null,
+                (0, i.Xx)("#App_Landing_Release_EarliestDate_TwoWeeks30Days"),
+              )
+            : o.createElement(
+                U,
+                null,
+                (0, i.Xx)("#App_Landing_Release_EarliestDate_TwoWeeks"),
+              );
       }
       function w(e) {
         const { fnCloseModal: r, fnSubmit: t, children: n } = e,
@@ -1965,10 +1951,11 @@
             t.bNoKeyboardSupport
               ? ee.k_eGamepadRequired
               : t.bGamepadPreferred
-              ? ee.k_eGamepadPreferred
-              : t.bFullXboxControllerSupport || t.bPartialXboxControllerSupport
-              ? ee.k_eGamepadAndMouse
-              : ee.k_eMouseKBOnly,
+                ? ee.k_eGamepadPreferred
+                : t.bFullXboxControllerSupport ||
+                    t.bPartialXboxControllerSupport
+                  ? ee.k_eGamepadAndMouse
+                  : ee.k_eMouseKBOnly,
           s = c();
         o.useEffect(() => {
           s == ee.k_eMouseKBOnly && a(!0);
@@ -3271,12 +3258,12 @@
             return r == Oe.k_ERegionCodeCIS
               ? "usd_cis"
               : r == Oe.k_ERegionCodeSAsia
-              ? "usd_sasia"
-              : r == Oe.k_ERegionCodeLATAM
-              ? "usd_latam"
-              : r == Oe.k_ERegionCodeMENA
-              ? "usd_mena"
-              : "usd";
+                ? "usd_sasia"
+                : r == Oe.k_ERegionCodeLATAM
+                  ? "usd_latam"
+                  : r == Oe.k_ERegionCodeMENA
+                    ? "usd_mena"
+                    : "usd";
         }
       }
       function Le(e) {
@@ -4046,9 +4033,7 @@
               k.uH,
               {
                 strTitle: "Create Ticket for Partner",
-                strDescription: `Create a pricing ticket for partner ${
-                  null == l ? void 0 : l.name
-                } (${r}) for Package ${t}. Please update ticket title and body`,
+                strDescription: `Create a pricing ticket for partner ${null == l ? void 0 : l.name} (${r}) for Package ${t}. Please update ticket title and body`,
                 bOKDisabled: !i || 0 == d.trim().length || 0 == m.trim().length,
                 onOK: () =>
                   y.mutate({ appid: i, strRequestTitle: d, strRequestBody: m }),
@@ -4291,14 +4276,10 @@
         if (r)
           if (n && n.price > r.amount.amount) {
             a = ze.outofmatrixlower;
-            l = `Suggested price ${br(n.price)} - ${Math.floor(
-              100 - (r.amount.amount / n.price) * 100,
-            )}% ▼`;
+            l = `Suggested price ${br(n.price)} - ${Math.floor(100 - (r.amount.amount / n.price) * 100)}% ▼`;
           } else if (n && n.price < r.amount.amount) {
             a = ze.outofmatrix;
-            l = `Suggested price ${br(n.price)} - ${Math.floor(
-              (r.amount.amount / n.price) * 100 - 100,
-            )}% ▲`;
+            l = `Suggested price ${br(n.price)} - ${Math.floor((r.amount.amount / n.price) * 100 - 100)}% ▲`;
           } else
             t
               ? t.amount > r.amount.amount

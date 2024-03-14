@@ -100,8 +100,8 @@
                   ? b.join("")
                   : void 0
                 : (b = z.match(/[A-Z]{3,5}/g))
-                ? b[0]
-                : void 0) && (b = void 0),
+                  ? b[0]
+                  : void 0) && (b = void 0),
             (this.at = +M),
             (this.abbr = b),
             (this.offset = M.getTimezoneOffset());
@@ -120,10 +120,10 @@
           return M.offsetScore !== z.offsetScore
             ? M.offsetScore - z.offsetScore
             : M.abbrScore !== z.abbrScore
-            ? M.abbrScore - z.abbrScore
-            : M.zone.population !== z.zone.population
-            ? z.zone.population - M.zone.population
-            : z.zone.name.localeCompare(M.zone.name);
+              ? M.abbrScore - z.abbrScore
+              : M.zone.population !== z.zone.population
+                ? z.zone.population - M.zone.population
+                : z.zone.name.localeCompare(M.zone.name);
         }
         function e(M, z) {
           var b, p;
@@ -212,10 +212,10 @@
           return c instanceof f
             ? c
             : "string" == typeof c
-            ? ((c = new f(c)), (b[M] = c), c)
-            : p[M] && z !== s && (O = s(p[M], s))
-            ? ((c = b[M] = new f())._set(O), (c.name = A[M]), c)
-            : null;
+              ? ((c = new f(c)), (b[M] = c), c)
+              : p[M] && z !== s && (O = s(p[M], s))
+                ? ((c = b[M] = new f())._set(O), (c.name = A[M]), c)
+                : null;
         }
         function m(M) {
           var z, b, O, c;

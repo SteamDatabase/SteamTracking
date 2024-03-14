@@ -835,10 +835,10 @@
               return r && o
                 ? o.postTime - r.postTime
                 : r
-                ? -1
-                : o
-                ? 1
-                : n.post.rtime_date - t.post.rtime_date;
+                  ? -1
+                  : o
+                    ? 1
+                    : n.post.rtime_date - t.post.rtime_date;
             })),
               n.forEach((n) => {
                 t.push(
@@ -1442,10 +1442,10 @@
               ? "update_post"
               : "create_post"
             : e.bActivatePooling
-            ? "activate_feed"
-            : e.admin.BHasSavedRSSURL()
-            ? "update_feed"
-            : "feed_missing";
+              ? "activate_feed"
+              : e.admin.BHasSavedRSSURL()
+                ? "update_feed"
+                : "feed_missing";
         }
         OnCreateNewsFeed() {
           this.setState({ step: "creating_feed" }, this.DoCreateNewsFeed);
@@ -1951,30 +1951,30 @@
                 size: "medium",
               })
             : void 0 !== a
-            ? Boolean(a.length > 0)
-              ? p.createElement(P, {
-                  rgClanIDs: a,
-                  strTitle: (0, b.Xx)("#RSSModeration_InactiveAutomation"),
-                })
+              ? Boolean(a.length > 0)
+                ? p.createElement(P, {
+                    rgClanIDs: a,
+                    strTitle: (0, b.Xx)("#RSSModeration_InactiveAutomation"),
+                  })
+                : p.createElement(
+                    "div",
+                    null,
+                    (0, b.Xx)("#RSSModreation_AllAutomationEnabled"),
+                  )
               : p.createElement(
-                  "div",
-                  null,
-                  (0, b.Xx)("#RSSModreation_AllAutomationEnabled"),
-                )
-            : p.createElement(
-                g.zx,
-                {
-                  onClick: () =>
-                    (0, s.mG)(void 0, void 0, void 0, function* () {
-                      n(!0),
-                        yield c.Get().LoadKnownAllRSSInfo(),
-                        r(c.Get().ExtractWithoutRSSAutomation()),
-                        n(!1);
-                    }),
-                },
-                (0, b.Xx)("#RSSModeration_FindInActive"),
-                " ",
-              );
+                  g.zx,
+                  {
+                    onClick: () =>
+                      (0, s.mG)(void 0, void 0, void 0, function* () {
+                        n(!0),
+                          yield c.Get().LoadKnownAllRSSInfo(),
+                          r(c.Get().ExtractWithoutRSSAutomation()),
+                          n(!1);
+                      }),
+                  },
+                  (0, b.Xx)("#RSSModeration_FindInActive"),
+                  " ",
+                );
         }),
         P = (e) => {
           const { rgClanIDs: t, strTitle: n } = e,
@@ -2457,8 +2457,8 @@
             t.bAlreadyProcessed || t.bSkipped
               ? (this.m_nSkipped += 1)
               : t.bSucceeded
-              ? (this.m_nSuccesses += 1)
-              : t.bFailed && (this.m_nFailures += 1),
+                ? (this.m_nSuccesses += 1)
+                : t.bFailed && (this.m_nFailures += 1),
             t.bWarning && (this.m_nWarning += 1),
             this.m_mapEventGIDProcessed.set(e, t);
         }
@@ -4450,13 +4450,13 @@
                 i
                   ? ""
                   : o
-                  ? (0, b.Xx)(
-                      "#EventModTime_Hidden_EventType",
-                      e.GetEventTypeAsString(),
-                    )
-                  : e.BHasTag("hide_store")
-                  ? (0, b.Xx)("#EventModTime_Hidden_OptOut")
-                  : (0, b.Xx)("#EventModTime_Hidden_Moderator"),
+                    ? (0, b.Xx)(
+                        "#EventModTime_Hidden_EventType",
+                        e.GetEventTypeAsString(),
+                      )
+                    : e.BHasTag("hide_store")
+                      ? (0, b.Xx)("#EventModTime_Hidden_OptOut")
+                      : (0, b.Xx)("#EventModTime_Hidden_Moderator"),
               ),
             ),
             p.createElement(
@@ -4470,13 +4470,13 @@
                 l
                   ? ""
                   : o
-                  ? (0, b.Xx)(
-                      "#EventModTime_Hidden_EventType",
-                      e.GetEventTypeAsString(),
-                    )
-                  : e.BHasTag("hide_library_overview")
-                  ? (0, b.Xx)("#EventModTime_Hidden_OptOut")
-                  : (0, b.Xx)("#EventModTime_Hidden_Moderator"),
+                    ? (0, b.Xx)(
+                        "#EventModTime_Hidden_EventType",
+                        e.GetEventTypeAsString(),
+                      )
+                    : e.BHasTag("hide_library_overview")
+                      ? (0, b.Xx)("#EventModTime_Hidden_OptOut")
+                      : (0, b.Xx)("#EventModTime_Hidden_Moderator"),
               ),
             ),
             p.createElement(
@@ -4490,13 +4490,13 @@
                 d
                   ? ""
                   : o
-                  ? (0, b.Xx)(
-                      "#EventModTime_Hidden_EventType",
-                      e.GetEventTypeAsString(),
-                    )
-                  : e.BHasTag("hide_library_detail")
-                  ? (0, b.Xx)("#EventModTime_Hidden_OptOut")
-                  : (0, b.Xx)("#EventModTime_Hidden_Moderator"),
+                    ? (0, b.Xx)(
+                        "#EventModTime_Hidden_EventType",
+                        e.GetEventTypeAsString(),
+                      )
+                    : e.BHasTag("hide_library_detail")
+                      ? (0, b.Xx)("#EventModTime_Hidden_OptOut")
+                      : (0, b.Xx)("#EventModTime_Hidden_Moderator"),
               ),
             ),
             e.BHasTag("enable_steam_china") &&
@@ -4890,12 +4890,12 @@
                 (this.state.bLoadingEvent
                   ? " Events"
                   : this.state.bLoadingApps
-                  ? " Apps"
-                  : this.state.bLoadingAssociatedDemoInfo
-                  ? " Associated Demo Info"
-                  : this.state.bLoadingDemos
-                  ? " Demos"
-                  : "done"),
+                    ? " Apps"
+                    : this.state.bLoadingAssociatedDemoInfo
+                      ? " Associated Demo Info"
+                      : this.state.bLoadingDemos
+                        ? " Demos"
+                        : "done"),
               position: "center",
             });
           if (!this.state.event)

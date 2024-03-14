@@ -1015,60 +1015,60 @@
                 ),
               })
             : t.data
-            ? g.createElement(
-                "div",
-                { className: ee().ChartContainer },
-                g.createElement(
+              ? g.createElement(
                   "div",
-                  { className: ee().Chart },
-                  g.createElement(
-                    ie.SV,
-                    null,
-                    g.createElement(pe, { Data: t.data }),
-                  ),
-                ),
-                g.createElement(
-                  "div",
-                  { className: ee().Stats },
+                  { className: ee().ChartContainer },
                   g.createElement(
                     "div",
-                    { className: ee().PeakStats },
+                    { className: ee().Chart },
                     g.createElement(
-                      "div",
-                      { className: ee().StatsTitle },
-                      (0, $.AV)(t.data.peak),
-                    ),
-                    g.createElement(
-                      "div",
-                      { className: ee().StatSubtitle },
-                      g.createElement(
-                        "span",
-                        { className: ee().Concurrent },
-                        (0, L.Xx)("#SteamCharts_Graph_PeakConcurrent"),
-                      ),
+                      ie.SV,
+                      null,
+                      g.createElement(pe, { Data: t.data }),
                     ),
                   ),
                   g.createElement(
                     "div",
-                    { className: ee().CurrentStats },
+                    { className: ee().Stats },
                     g.createElement(
                       "div",
-                      { className: ee().StatsTitle },
-                      (0, $.AV)(t.data.current),
+                      { className: ee().PeakStats },
+                      g.createElement(
+                        "div",
+                        { className: ee().StatsTitle },
+                        (0, $.AV)(t.data.peak),
+                      ),
+                      g.createElement(
+                        "div",
+                        { className: ee().StatSubtitle },
+                        g.createElement(
+                          "span",
+                          { className: ee().Concurrent },
+                          (0, L.Xx)("#SteamCharts_Graph_PeakConcurrent"),
+                        ),
+                      ),
                     ),
                     g.createElement(
                       "div",
-                      { className: ee().StatSubtitle },
+                      { className: ee().CurrentStats },
                       g.createElement(
-                        "span",
-                        { className: ee().Now },
-                        (0, L.Xx)("#SteamCharts_Graph_OnlineNow"),
+                        "div",
+                        { className: ee().StatsTitle },
+                        (0, $.AV)(t.data.current),
+                      ),
+                      g.createElement(
+                        "div",
+                        { className: ee().StatSubtitle },
+                        g.createElement(
+                          "span",
+                          { className: ee().Now },
+                          (0, L.Xx)("#SteamCharts_Graph_OnlineNow"),
+                        ),
                       ),
                     ),
                   ),
-                ),
-              )
-            : null;
+                )
+              : null;
         }),
         pe = g.memo((e) => {
           const { Data: t } = e;
@@ -2503,16 +2503,16 @@
             r && r <= 100
               ? `${s} ${Math.abs(r - a)}`
               : n
-              ? g.createElement(
-                  "span",
-                  { className: Ye().ListWeeksDebut },
-                  (0, L.Xx)("#SteamCharts_TopSellers_TableNew"),
-                )
-              : g.createElement(
-                  "span",
-                  { className: Ye().ListWeeksReturning },
-                  (0, L.Xx)("#SteamCharts_TopSellers_TableReturning"),
-                )),
+                ? g.createElement(
+                    "span",
+                    { className: Ye().ListWeeksDebut },
+                    (0, L.Xx)("#SteamCharts_TopSellers_TableNew"),
+                  )
+                : g.createElement(
+                    "span",
+                    { className: Ye().ListWeeksReturning },
+                    (0, L.Xx)("#SteamCharts_TopSellers_TableReturning"),
+                  )),
           g.createElement(
             "td",
             { className: (0, K.Z)(Ye().ChangeCell, l) },
@@ -2692,9 +2692,7 @@
                 st.KM,
                 {
                   onClick: () => {
-                    window.location.href = `${
-                      k.De.STORE_BASE_URL
-                    }search/?filter=${n ? "topsellers" : "globaltopsellers"}`;
+                    window.location.href = `${k.De.STORE_BASE_URL}search/?filter=${n ? "topsellers" : "globaltopsellers"}`;
                   },
                 },
                 (0, L.Xx)("#SteamCharts_TopSellers_Browse"),

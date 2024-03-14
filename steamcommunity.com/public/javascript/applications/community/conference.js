@@ -395,8 +395,8 @@
                     "success" === t.statusType
                       ? (n = c().StatusSuccess)
                       : "danger" === t.statusType
-                      ? (n = c().StatusDanger)
-                      : "caution" === t.statusType && (n = c().StatusCaution),
+                        ? (n = c().StatusDanger)
+                        : "caution" === t.statusType && (n = c().StatusCaution),
                     a.createElement(
                       d.M2,
                       {
@@ -414,11 +414,7 @@
                         {
                           key: t.key,
                           className: (0, l.Z)(
-                            `${c().GraphicalAssetsTab} ${
-                              t.key === e.key
-                                ? (0, l.Z)(c().Active, "ActiveTab")
-                                : ""
-                            }`,
+                            `${c().GraphicalAssetsTab} ${t.key === e.key ? (0, l.Z)(c().Active, "ActiveTab") : ""}`,
                             this.props.classNameTab,
                           ),
                           onActivate: () => this.OnTabClick(t),
@@ -1446,28 +1442,28 @@
                 styles: de().LibrarySource,
               })
             : t & j.ZT.k_eWishlist && o.BIsGameSourceAllowed(J.Gf.k_EWishlist)
-            ? n.push({
-                id: j.ZT.k_eWishlist,
-                name: "#EventCalendar_GameSource_onWishlist",
-                ttip: "#EventCalendar_GameSource_EventExplanation_ttip_wishlist",
-                styles: de().WishlistSource,
-              })
-            : t & j.ZT.k_eRecommended &&
-              o.BIsGameSourceAllowed(J.Gf.k_ERecommended)
-            ? n.push({
-                id: j.ZT.k_eRecommended,
-                name: "#EventCalendar_GameSource_recommended_Verbose",
-                ttip: "#EventCalendar_GameSource_EventExplanation_ttip_recommended",
-                styles: de().RecommendedSource,
-              })
-            : t & j.ZT.k_eFeatured &&
-              o.BIsGameSourceAllowed(J.Gf.k_EFeatured) &&
-              n.push({
-                id: j.ZT.k_eFeatured,
-                name: "#EventCalendar_GameSource_featured",
-                ttip: "#EventCalendar_GameSource_ttip_featured",
-                styles: de().FeaturedSource,
-              }),
+              ? n.push({
+                  id: j.ZT.k_eWishlist,
+                  name: "#EventCalendar_GameSource_onWishlist",
+                  ttip: "#EventCalendar_GameSource_EventExplanation_ttip_wishlist",
+                  styles: de().WishlistSource,
+                })
+              : t & j.ZT.k_eRecommended &&
+                  o.BIsGameSourceAllowed(J.Gf.k_ERecommended)
+                ? n.push({
+                    id: j.ZT.k_eRecommended,
+                    name: "#EventCalendar_GameSource_recommended_Verbose",
+                    ttip: "#EventCalendar_GameSource_EventExplanation_ttip_recommended",
+                    styles: de().RecommendedSource,
+                  })
+                : t & j.ZT.k_eFeatured &&
+                  o.BIsGameSourceAllowed(J.Gf.k_EFeatured) &&
+                  n.push({
+                    id: j.ZT.k_eFeatured,
+                    name: "#EventCalendar_GameSource_featured",
+                    ttip: "#EventCalendar_GameSource_ttip_featured",
+                    styles: de().FeaturedSource,
+                  }),
             t & j.ZT.k_eFollowing &&
               o.BIsGameSourceAllowed(J.Gf.k_EFollowing) &&
               n.push({
@@ -1521,10 +1517,10 @@
                 ? m.L7.is_limited
                   ? de().Vote_LimitedUser
                   : !0 === t
-                  ? de().Vote_Positive
-                  : !1 === t
-                  ? de().Vote_Negative
-                  : de().Vote_Ready
+                    ? de().Vote_Positive
+                    : !1 === t
+                      ? de().Vote_Negative
+                      : de().Vote_Ready
                 : de().Vote_NotLoggedIn;
             })(e, o),
             r = t.GetForumTopicURL(),

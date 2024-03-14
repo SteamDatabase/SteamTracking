@@ -441,12 +441,12 @@
                   });
               }
             : "function" == typeof setImmediate
-            ? function (e) {
-                setImmediate(e);
-              }
-            : function (e) {
-                setTimeout(e);
-              };
+              ? function (e) {
+                  setImmediate(e);
+                }
+              : function (e) {
+                  setTimeout(e);
+                };
       function o(e, t, n) {
         a(t);
         for (var i = 0; i < t.keys.length; i++)
@@ -589,8 +589,8 @@
         4 == n
           ? (f = b().AllNotificationsTemplate)
           : 2 == n
-          ? (f = b().DesktopToastTemplate)
-          : (7 != i && 3 != i) || (f = b().StandardTemplateDesktop);
+            ? (f = b().DesktopToastTemplate)
+            : (7 != i && 3 != i) || (f = b().StandardTemplateDesktop);
         let p = null;
         if (s != I.none && 2 != n && 1 != n) {
           let e = s == I.loadingComplete ? b().Hide : null;
@@ -946,11 +946,11 @@
               "#SteamNotifications_FriendInvite_Description_AwaitingResponse",
             ))
           : t && 3 == r.state
-          ? (f = (0, c.Xx)(
-              "#SteamNotifications_FriendInvite_Description_Friends",
-            ))
-          : t &&
-            (f = (0, c.Xx)("#SteamNotifications_FriendInvite_Description"));
+            ? (f = (0, c.Xx)(
+                "#SteamNotifications_FriendInvite_Description_Friends",
+              ))
+            : t &&
+              (f = (0, c.Xx)("#SteamNotifications_FriendInvite_Description"));
         const [p, g] = o.useState(!1),
           h = () => g(!0);
         let v = i;
@@ -1042,8 +1042,12 @@
           N = E
             ? (0, c.Xx)("#Notification_Item_RollupMore_Steam", e)
             : (null == i ? void 0 : i.app_name)
-            ? (0, c.Xx)("#Notification_Item_RollupMore_GameName", e, i.app_name)
-            : (0, c.Xx)("#Notification_Item_RollupMore", e);
+              ? (0, c.Xx)(
+                  "#Notification_Item_RollupMore_GameName",
+                  e,
+                  i.app_name,
+                )
+              : (0, c.Xx)("#Notification_Item_RollupMore", e);
         } else
           (null == i ? void 0 : i.app_name) &&
             (N = E
@@ -1253,38 +1257,38 @@
                   ? (0, c.Xx)("#SteamNotifications_Comment_Your_Profile_By", D)
                   : (0, c.Xx)("#SteamNotifications_Comment_Your_Profile")
                 : B
-                ? 4 == p && D
-                  ? (0, c.Xx)(
-                      "#SteamNotifications_Comment_Player_Profile_By",
-                      D,
-                      B,
-                    )
-                  : (0, c.Xx)("#SteamNotifications_Comment_Player_Profile", B)
-                : (0, c.Xx)("#SteamNotifications_Comment_Profile"))
+                  ? 4 == p && D
+                    ? (0, c.Xx)(
+                        "#SteamNotifications_Comment_Player_Profile_By",
+                        D,
+                        B,
+                      )
+                    : (0, c.Xx)("#SteamNotifications_Comment_Player_Profile", B)
+                  : (0, c.Xx)("#SteamNotifications_Comment_Profile"))
           : 5 == f.comment_type &&
-            5 ==
-              (null === (n = f.json_data) || void 0 === n
-                ? void 0
-                : n.file_type)
-          ? (S =
-              (null === (i = f.owner_steam_id) || void 0 === i
-                ? void 0
-                : i.ConvertTo64BitString()) == s
-                ? E
-                  ? (0, c.Xx)(
-                      "#SteamNotifications_Comment_Your_Screenshot_Game",
-                      E.GetName(),
-                    )
-                  : (0, c.Xx)("#SteamNotifications_Comment_Your_Screenshot")
-                : E
-                ? (0, c.Xx)(
-                    "#SteamNotifications_Comment_Screenshot_Game",
-                    E.GetName(),
-                  )
-                : (0, c.Xx)("#SteamNotifications_Comment_Screenshot"))
-          : !S &&
-            (null === (l = f.json_data) || void 0 === l ? void 0 : l.title) &&
-            (S = f.json_data.title);
+              5 ==
+                (null === (n = f.json_data) || void 0 === n
+                  ? void 0
+                  : n.file_type)
+            ? (S =
+                (null === (i = f.owner_steam_id) || void 0 === i
+                  ? void 0
+                  : i.ConvertTo64BitString()) == s
+                  ? E
+                    ? (0, c.Xx)(
+                        "#SteamNotifications_Comment_Your_Screenshot_Game",
+                        E.GetName(),
+                      )
+                    : (0, c.Xx)("#SteamNotifications_Comment_Your_Screenshot")
+                  : E
+                    ? (0, c.Xx)(
+                        "#SteamNotifications_Comment_Screenshot_Game",
+                        E.GetName(),
+                      )
+                    : (0, c.Xx)("#SteamNotifications_Comment_Screenshot"))
+            : !S &&
+              (null === (l = f.json_data) || void 0 === l ? void 0 : l.title) &&
+              (S = f.json_data.title);
         let G = null;
         G =
           7 == f.comment_type && f.bis_forum && f.comment
@@ -1397,24 +1401,24 @@
                       ),
                     ))
                 : 2 == i.count
-                ? u
-                  ? (f = (0, c.Xx)(
-                      "#SteamNotifications_Wishlist_OnSale_PlusOne_Short",
-                      t.GetName(),
-                    ))
-                  : (p = (0, c.Xx)(
-                      "#SteamNotifications_Wishlist_OnSale_PlusOne",
-                    ))
-                : u
-                ? (f = (0, c.Xx)(
-                    "#SteamNotifications_Wishlist_OnSale_PlusMany_Short",
-                    t.GetName(),
-                    i.count - 1,
-                  ))
-                : (p = (0, c.Xx)(
-                    "#SteamNotifications_Wishlist_OnSale_PlusMany",
-                    i.count - 1,
-                  )))
+                  ? u
+                    ? (f = (0, c.Xx)(
+                        "#SteamNotifications_Wishlist_OnSale_PlusOne_Short",
+                        t.GetName(),
+                      ))
+                    : (p = (0, c.Xx)(
+                        "#SteamNotifications_Wishlist_OnSale_PlusOne",
+                      ))
+                  : u
+                    ? (f = (0, c.Xx)(
+                        "#SteamNotifications_Wishlist_OnSale_PlusMany_Short",
+                        t.GetName(),
+                        i.count - 1,
+                      ))
+                    : (p = (0, c.Xx)(
+                        "#SteamNotifications_Wishlist_OnSale_PlusMany",
+                        i.count - 1,
+                      )))
             : (f = (0, c.Xx)("#SteamNotifications_Wishlist_Generic")),
           u
             ? o.createElement(
@@ -1452,35 +1456,35 @@
         return !e || i
           ? o.createElement(y.s, { style: { position: "relative" } }, t)
           : n
-          ? o.createElement(
-              y.s,
-              { style: { position: "relative" } },
-              o.createElement("img", {
-                src: null == e ? void 0 : e.GetAssets().GetCommunityIconURL(),
-                className: X().ShortLogoDimensions,
-                onError: r,
-              }),
-            )
-          : o.createElement(
-              y.s,
-              { style: { position: "relative" } },
-              o.createElement("img", {
-                className: (0, l.Z)(X().WishlistBlurImage),
-                src: null == e ? void 0 : e.GetAssets().GetCommunityIconURL(),
-                onError: r,
-              }),
-              o.createElement("img", {
-                src: null == e ? void 0 : e.GetAssets().GetCommunityIconURL(),
-                onError: r,
-                style: {
-                  position: "absolute",
-                  left: 7,
-                  top: 7,
-                  height: 32,
-                  width: 32,
-                },
-              }),
-            );
+            ? o.createElement(
+                y.s,
+                { style: { position: "relative" } },
+                o.createElement("img", {
+                  src: null == e ? void 0 : e.GetAssets().GetCommunityIconURL(),
+                  className: X().ShortLogoDimensions,
+                  onError: r,
+                }),
+              )
+            : o.createElement(
+                y.s,
+                { style: { position: "relative" } },
+                o.createElement("img", {
+                  className: (0, l.Z)(X().WishlistBlurImage),
+                  src: null == e ? void 0 : e.GetAssets().GetCommunityIconURL(),
+                  onError: r,
+                }),
+                o.createElement("img", {
+                  src: null == e ? void 0 : e.GetAssets().GetCommunityIconURL(),
+                  onError: r,
+                  style: {
+                    position: "absolute",
+                    left: 7,
+                    top: 7,
+                    height: 32,
+                    width: 32,
+                  },
+                }),
+              );
       }
       function ne(e) {
         return o.createElement(
@@ -1822,8 +1826,8 @@
               (0, r.FY)(e)
                 ? (t = pe)
                 : (0, r.PU)(e)
-                ? (t = _e)
-                : ue[e] && (t = ue[e]),
+                  ? (t = _e)
+                  : ue[e] && (t = ue[e]),
               t
             );
           })(t.type);

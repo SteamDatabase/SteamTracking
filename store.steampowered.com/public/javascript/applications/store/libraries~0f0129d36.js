@@ -36,14 +36,14 @@
                 c(e, t, i[t]);
               })
             : Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(i))
-            : r(Object(i)).forEach(function (t) {
-                Object.defineProperty(
-                  e,
-                  t,
-                  Object.getOwnPropertyDescriptor(i, t),
-                );
-              });
+              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(i))
+              : r(Object(i)).forEach(function (t) {
+                  Object.defineProperty(
+                    e,
+                    t,
+                    Object.getOwnPropertyDescriptor(i, t),
+                  );
+                });
         }
         return e;
       }
@@ -203,9 +203,9 @@
                 "Map" === i || "Set" === i
                   ? Array.from(e)
                   : "Arguments" === i ||
-                    /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(i)
-                  ? v(e, t)
-                  : void 0
+                      /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(i)
+                    ? v(e, t)
+                    : void 0
               );
             }
           })(e) ||
@@ -605,8 +605,8 @@
               return e instanceof Map
                 ? "map"
                 : e instanceof Set
-                ? "set"
-                : "object";
+                  ? "set"
+                  : "object";
             if (t) return t;
             if (e instanceof n)
               switch (e.nodeType) {

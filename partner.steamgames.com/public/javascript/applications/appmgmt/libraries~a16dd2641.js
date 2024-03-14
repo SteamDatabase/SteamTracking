@@ -384,8 +384,8 @@
             ? "[object Undefined]"
             : "[object Null]"
           : l && l in Object(t)
-          ? i(t)
-          : f(t);
+            ? i(t)
+            : f(t);
       };
     },
     39931: (t, n, r) => {
@@ -704,12 +704,12 @@
         return "function" == typeof t
           ? t
           : null == t
-          ? A.Z
-          : "object" == typeof t
-          ? (0, y.Z)(t)
-            ? m(t[0], t[1])
-            : l(t)
-          : S(t);
+            ? A.Z
+            : "object" == typeof t
+              ? (0, y.Z)(t)
+                ? m(t[0], t[1])
+                : l(t)
+              : S(t);
       };
     },
     76529: (t, n, r) => {

@@ -1062,8 +1062,8 @@
                       c < 0
                         ? 359
                         : c > o
-                        ? 0
-                        : (360 * ((-100 * c) / o + 100)) / 100),
+                          ? 0
+                          : (360 * ((-100 * c) / o + 100)) / 100),
                     r.h !== p)
                   )
                     return { h: p, s: r.s, l: r.l, a: r.a, source: "hsl" };
@@ -1260,18 +1260,18 @@
                 ? (0, B.Z)(l)
                   ? (p = l)
                   : H(l)
-                  ? (p = (0, j.Z)(l))
-                  : f
-                  ? ((u = !1), (p = (0, M.Z)(s, !0)))
-                  : d
-                  ? ((u = !1), (p = (0, R.Z)(s, !0)))
-                  : (p = [])
+                    ? (p = (0, j.Z)(l))
+                    : f
+                      ? ((u = !1), (p = (0, M.Z)(s, !0)))
+                      : d
+                        ? ((u = !1), (p = (0, R.Z)(s, !0)))
+                        : (p = [])
                 : (0, z.Z)(s) || (0, A.Z)(s)
-                ? ((p = l),
-                  (0, A.Z)(l)
-                    ? (p = X(l))
-                    : ((0, Z.Z)(l) && !(0, D.Z)(l)) || (p = (0, F.Z)(s)))
-                : (u = !1);
+                  ? ((p = l),
+                    (0, A.Z)(l)
+                      ? (p = X(l))
+                      : ((0, Z.Z)(l) && !(0, D.Z)(l)) || (p = (0, F.Z)(s)))
+                  : (u = !1);
           }
           u && (i.set(s, p), a(p, s, n, o, i), i.delete(s)), _(e, r, p);
         }
@@ -1790,61 +1790,61 @@
                 (i = !0),
                 (l = "%" === String(e.r).substr(-1) ? "prgb" : "rgb"))
               : Ye(e.h) && Ye(e.s) && Ye(e.v)
-              ? ((n = Ne(e.s)),
-                (a = Ne(e.v)),
-                (t = (function (e, t, r) {
-                  (e = 6 * Le(e, 360)), (t = Le(t, 100)), (r = Le(r, 100));
-                  var n = Math.floor(e),
-                    a = e - n,
-                    o = r * (1 - t),
-                    i = r * (1 - a * t),
-                    l = r * (1 - (1 - a) * t),
-                    s = n % 6,
-                    c = [r, i, o, o, l, r][s],
-                    p = [l, r, r, i, o, o][s],
-                    u = [o, o, l, r, r, i][s];
-                  return { r: 255 * c, g: 255 * p, b: 255 * u };
-                })(e.h, n, a)),
-                (i = !0),
-                (l = "hsv"))
-              : Ye(e.h) &&
-                Ye(e.s) &&
-                Ye(e.l) &&
-                ((n = Ne(e.s)),
-                (o = Ne(e.l)),
-                (t = (function (e, t, r) {
-                  var n, a, o;
-                  function i(e, t, r) {
-                    return (
-                      r < 0 && (r += 1),
-                      r > 1 && (r -= 1),
-                      r < 1 / 6
-                        ? e + 6 * (t - e) * r
-                        : r < 0.5
-                        ? t
-                        : r < 2 / 3
-                        ? e + (t - e) * (2 / 3 - r) * 6
-                        : e
-                    );
-                  }
-                  if (
-                    ((e = Le(e, 360)),
-                    (t = Le(t, 100)),
-                    (r = Le(r, 100)),
-                    0 === t)
-                  )
-                    n = a = o = r;
-                  else {
-                    var l = r < 0.5 ? r * (1 + t) : r + t - r * t,
-                      s = 2 * r - l;
-                    (n = i(s, l, e + 1 / 3)),
-                      (a = i(s, l, e)),
-                      (o = i(s, l, e - 1 / 3));
-                  }
-                  return { r: 255 * n, g: 255 * a, b: 255 * o };
-                })(e.h, n, o)),
-                (i = !0),
-                (l = "hsl")),
+                ? ((n = Ne(e.s)),
+                  (a = Ne(e.v)),
+                  (t = (function (e, t, r) {
+                    (e = 6 * Le(e, 360)), (t = Le(t, 100)), (r = Le(r, 100));
+                    var n = Math.floor(e),
+                      a = e - n,
+                      o = r * (1 - t),
+                      i = r * (1 - a * t),
+                      l = r * (1 - (1 - a) * t),
+                      s = n % 6,
+                      c = [r, i, o, o, l, r][s],
+                      p = [l, r, r, i, o, o][s],
+                      u = [o, o, l, r, r, i][s];
+                    return { r: 255 * c, g: 255 * p, b: 255 * u };
+                  })(e.h, n, a)),
+                  (i = !0),
+                  (l = "hsv"))
+                : Ye(e.h) &&
+                  Ye(e.s) &&
+                  Ye(e.l) &&
+                  ((n = Ne(e.s)),
+                  (o = Ne(e.l)),
+                  (t = (function (e, t, r) {
+                    var n, a, o;
+                    function i(e, t, r) {
+                      return (
+                        r < 0 && (r += 1),
+                        r > 1 && (r -= 1),
+                        r < 1 / 6
+                          ? e + 6 * (t - e) * r
+                          : r < 0.5
+                            ? t
+                            : r < 2 / 3
+                              ? e + (t - e) * (2 / 3 - r) * 6
+                              : e
+                      );
+                    }
+                    if (
+                      ((e = Le(e, 360)),
+                      (t = Le(t, 100)),
+                      (r = Le(r, 100)),
+                      0 === t)
+                    )
+                      n = a = o = r;
+                    else {
+                      var l = r < 0.5 ? r * (1 + t) : r + t - r * t,
+                        s = 2 * r - l;
+                      (n = i(s, l, e + 1 / 3)),
+                        (a = i(s, l, e)),
+                        (o = i(s, l, e - 1 / 3));
+                    }
+                    return { r: 255 * n, g: 255 * a, b: 255 * o };
+                  })(e.h, n, o)),
+                  (i = !0),
+                  (l = "hsl")),
             e.hasOwnProperty("a") && (r = e.a));
           var s, c, p;
           return (
@@ -2236,8 +2236,8 @@
               "hsv" === e && (r = this.toHsvString()),
               r || this.toHexString())
             : "name" === e && 0 === this._a
-            ? this.toName()
-            : this.toRgbString();
+              ? this.toName()
+              : this.toRgbString();
         },
         clone: function () {
           return ve(this.toString());
@@ -2654,8 +2654,8 @@
           return "transparent" === t.hex
             ? "rgba(0,0,0,0.4)"
             : (299 * t.rgb.r + 587 * t.rgb.g + 114 * t.rgb.b) / 1e3 >= 128
-            ? "#000"
-            : "#fff";
+              ? "#000"
+              : "#fff";
         },
         Qe = function (e, t) {
           return ve(t + " (" + e.replace("°", "") + ")")._ok;
@@ -3627,55 +3627,55 @@
               "hex" === r.state.view
                 ? r.setState({ view: "rgb" })
                 : "rgb" === r.state.view
-                ? r.setState({ view: "hsl" })
-                : "hsl" === r.state.view &&
-                  (1 === r.props.hsl.a
-                    ? r.setState({ view: "hex" })
-                    : r.setState({ view: "rgb" }));
+                  ? r.setState({ view: "hsl" })
+                  : "hsl" === r.state.view &&
+                    (1 === r.props.hsl.a
+                      ? r.setState({ view: "hex" })
+                      : r.setState({ view: "rgb" }));
             }),
             (r.handleChange = function (e, t) {
               e.hex
                 ? Ke(e.hex) &&
                   r.props.onChange({ hex: e.hex, source: "hex" }, t)
                 : e.r || e.g || e.b
-                ? r.props.onChange(
-                    {
-                      r: e.r || r.props.rgb.r,
-                      g: e.g || r.props.rgb.g,
-                      b: e.b || r.props.rgb.b,
-                      source: "rgb",
-                    },
-                    t,
-                  )
-                : e.a
-                ? (e.a < 0 ? (e.a = 0) : e.a > 1 && (e.a = 1),
-                  r.props.onChange(
-                    {
-                      h: r.props.hsl.h,
-                      s: r.props.hsl.s,
-                      l: r.props.hsl.l,
-                      a: Math.round(100 * e.a) / 100,
-                      source: "rgb",
-                    },
-                    t,
-                  ))
-                : (e.h || e.s || e.l) &&
-                  ("string" == typeof e.s &&
-                    e.s.includes("%") &&
-                    (e.s = e.s.replace("%", "")),
-                  "string" == typeof e.l &&
-                    e.l.includes("%") &&
-                    (e.l = e.l.replace("%", "")),
-                  1 == e.s ? (e.s = 0.01) : 1 == e.l && (e.l = 0.01),
-                  r.props.onChange(
-                    {
-                      h: e.h || r.props.hsl.h,
-                      s: Number(Dt(e.s) ? r.props.hsl.s : e.s),
-                      l: Number(Dt(e.l) ? r.props.hsl.l : e.l),
-                      source: "hsl",
-                    },
-                    t,
-                  ));
+                  ? r.props.onChange(
+                      {
+                        r: e.r || r.props.rgb.r,
+                        g: e.g || r.props.rgb.g,
+                        b: e.b || r.props.rgb.b,
+                        source: "rgb",
+                      },
+                      t,
+                    )
+                  : e.a
+                    ? (e.a < 0 ? (e.a = 0) : e.a > 1 && (e.a = 1),
+                      r.props.onChange(
+                        {
+                          h: r.props.hsl.h,
+                          s: r.props.hsl.s,
+                          l: r.props.hsl.l,
+                          a: Math.round(100 * e.a) / 100,
+                          source: "rgb",
+                        },
+                        t,
+                      ))
+                    : (e.h || e.s || e.l) &&
+                      ("string" == typeof e.s &&
+                        e.s.includes("%") &&
+                        (e.s = e.s.replace("%", "")),
+                      "string" == typeof e.l &&
+                        e.l.includes("%") &&
+                        (e.l = e.l.replace("%", "")),
+                      1 == e.s ? (e.s = 0.01) : 1 == e.l && (e.l = 0.01),
+                      r.props.onChange(
+                        {
+                          h: e.h || r.props.hsl.h,
+                          s: Number(Dt(e.s) ? r.props.hsl.s : e.s),
+                          l: Number(Dt(e.l) ? r.props.hsl.l : e.l),
+                          source: "hsl",
+                        },
+                        t,
+                      ));
             }),
             (r.showHighlight = function (e) {
               e.currentTarget.style.background = "#eee";
@@ -3798,97 +3798,97 @@
                           ),
                         ))
                       : "rgb" === this.state.view
-                      ? (r = n.createElement(
-                          "div",
-                          { style: t.fields, className: "flexbox-fix" },
-                          n.createElement(
+                        ? (r = n.createElement(
                             "div",
-                            { style: t.field },
-                            n.createElement(v, {
-                              style: { input: t.input, label: t.label },
-                              label: "r",
-                              value: this.props.rgb.r,
-                              onChange: this.handleChange,
-                            }),
-                          ),
-                          n.createElement(
+                            { style: t.fields, className: "flexbox-fix" },
+                            n.createElement(
+                              "div",
+                              { style: t.field },
+                              n.createElement(v, {
+                                style: { input: t.input, label: t.label },
+                                label: "r",
+                                value: this.props.rgb.r,
+                                onChange: this.handleChange,
+                              }),
+                            ),
+                            n.createElement(
+                              "div",
+                              { style: t.field },
+                              n.createElement(v, {
+                                style: { input: t.input, label: t.label },
+                                label: "g",
+                                value: this.props.rgb.g,
+                                onChange: this.handleChange,
+                              }),
+                            ),
+                            n.createElement(
+                              "div",
+                              { style: t.field },
+                              n.createElement(v, {
+                                style: { input: t.input, label: t.label },
+                                label: "b",
+                                value: this.props.rgb.b,
+                                onChange: this.handleChange,
+                              }),
+                            ),
+                            n.createElement(
+                              "div",
+                              { style: t.alpha },
+                              n.createElement(v, {
+                                style: { input: t.input, label: t.label },
+                                label: "a",
+                                value: this.props.rgb.a,
+                                arrowOffset: 0.01,
+                                onChange: this.handleChange,
+                              }),
+                            ),
+                          ))
+                        : "hsl" === this.state.view &&
+                          (r = n.createElement(
                             "div",
-                            { style: t.field },
-                            n.createElement(v, {
-                              style: { input: t.input, label: t.label },
-                              label: "g",
-                              value: this.props.rgb.g,
-                              onChange: this.handleChange,
-                            }),
-                          ),
-                          n.createElement(
-                            "div",
-                            { style: t.field },
-                            n.createElement(v, {
-                              style: { input: t.input, label: t.label },
-                              label: "b",
-                              value: this.props.rgb.b,
-                              onChange: this.handleChange,
-                            }),
-                          ),
-                          n.createElement(
-                            "div",
-                            { style: t.alpha },
-                            n.createElement(v, {
-                              style: { input: t.input, label: t.label },
-                              label: "a",
-                              value: this.props.rgb.a,
-                              arrowOffset: 0.01,
-                              onChange: this.handleChange,
-                            }),
-                          ),
-                        ))
-                      : "hsl" === this.state.view &&
-                        (r = n.createElement(
-                          "div",
-                          { style: t.fields, className: "flexbox-fix" },
-                          n.createElement(
-                            "div",
-                            { style: t.field },
-                            n.createElement(v, {
-                              style: { input: t.input, label: t.label },
-                              label: "h",
-                              value: Math.round(this.props.hsl.h),
-                              onChange: this.handleChange,
-                            }),
-                          ),
-                          n.createElement(
-                            "div",
-                            { style: t.field },
-                            n.createElement(v, {
-                              style: { input: t.input, label: t.label },
-                              label: "s",
-                              value: Math.round(100 * this.props.hsl.s) + "%",
-                              onChange: this.handleChange,
-                            }),
-                          ),
-                          n.createElement(
-                            "div",
-                            { style: t.field },
-                            n.createElement(v, {
-                              style: { input: t.input, label: t.label },
-                              label: "l",
-                              value: Math.round(100 * this.props.hsl.l) + "%",
-                              onChange: this.handleChange,
-                            }),
-                          ),
-                          n.createElement(
-                            "div",
-                            { style: t.alpha },
-                            n.createElement(v, {
-                              style: { input: t.input, label: t.label },
-                              label: "a",
-                              value: this.props.hsl.a,
-                              arrowOffset: 0.01,
-                              onChange: this.handleChange,
-                            }),
-                          ),
-                        )),
+                            { style: t.fields, className: "flexbox-fix" },
+                            n.createElement(
+                              "div",
+                              { style: t.field },
+                              n.createElement(v, {
+                                style: { input: t.input, label: t.label },
+                                label: "h",
+                                value: Math.round(this.props.hsl.h),
+                                onChange: this.handleChange,
+                              }),
+                            ),
+                            n.createElement(
+                              "div",
+                              { style: t.field },
+                              n.createElement(v, {
+                                style: { input: t.input, label: t.label },
+                                label: "s",
+                                value: Math.round(100 * this.props.hsl.s) + "%",
+                                onChange: this.handleChange,
+                              }),
+                            ),
+                            n.createElement(
+                              "div",
+                              { style: t.field },
+                              n.createElement(v, {
+                                style: { input: t.input, label: t.label },
+                                label: "l",
+                                value: Math.round(100 * this.props.hsl.l) + "%",
+                                onChange: this.handleChange,
+                              }),
+                            ),
+                            n.createElement(
+                              "div",
+                              { style: t.alpha },
+                              n.createElement(v, {
+                                style: { input: t.input, label: t.label },
+                                label: "a",
+                                value: this.props.hsl.a,
+                                arrowOffset: 0.01,
+                                onChange: this.handleChange,
+                              }),
+                            ),
+                          )),
                     n.createElement(
                       "div",
                       { style: t.wrap, className: "flexbox-fix" },
@@ -4833,25 +4833,25 @@
             e["#"]
               ? Ke(e["#"]) && t({ hex: e["#"], source: "hex" }, n)
               : e.r || e.g || e.b
-              ? t(
-                  {
-                    r: e.r || r.r,
-                    g: e.g || r.g,
-                    b: e.b || r.b,
-                    source: "rgb",
-                  },
-                  n,
-                )
-              : (e.h || e.s || e.v) &&
-                t(
-                  {
-                    h: e.h || o.h,
-                    s: e.s || o.s,
-                    v: e.v || o.v,
-                    source: "hsv",
-                  },
-                  n,
-                );
+                ? t(
+                    {
+                      r: e.r || r.r,
+                      g: e.g || r.g,
+                      b: e.b || r.b,
+                      source: "rgb",
+                    },
+                    n,
+                  )
+                : (e.h || e.s || e.v) &&
+                  t(
+                    {
+                      h: e.h || o.h,
+                      s: e.s || o.s,
+                      v: e.v || o.v,
+                      source: "hsv",
+                    },
+                    n,
+                  );
           };
         return n.createElement(
           "div",
@@ -5273,20 +5273,20 @@
             e.hex
               ? Ke(e.hex) && t({ hex: e.hex, source: "hex" }, n)
               : e.r || e.g || e.b
-              ? t(
-                  {
-                    r: e.r || r.r,
-                    g: e.g || r.g,
-                    b: e.b || r.b,
-                    a: r.a,
-                    source: "rgb",
-                  },
-                  n,
-                )
-              : e.a &&
-                (e.a < 0 ? (e.a = 0) : e.a > 100 && (e.a = 100),
-                (e.a /= 100),
-                t({ h: o.h, s: o.s, l: o.l, a: e.a, source: "rgb" }, n));
+                ? t(
+                    {
+                      r: e.r || r.r,
+                      g: e.g || r.g,
+                      b: e.b || r.b,
+                      a: r.a,
+                      source: "rgb",
+                    },
+                    n,
+                  )
+                : e.a &&
+                  (e.a < 0 ? (e.a = 0) : e.a > 100 && (e.a = 100),
+                  (e.a /= 100),
+                  t({ h: o.h, s: o.s, l: o.l, a: e.a, source: "rgb" }, n));
           };
         return n.createElement(
           "div",
@@ -6780,10 +6780,10 @@
                   return r.push(e);
                 })
               : (0, o.default)(t)
-              ? (0, a.default)(t, function (e, t) {
-                  !0 === e && r.push(t), r.push(t + "-" + e);
-                })
-              : (0, n.default)(t) && r.push(t);
+                ? (0, a.default)(t, function (e, t) {
+                    !0 === e && r.push(t), r.push(t + "-" + e);
+                  })
+                : (0, n.default)(t) && r.push(t);
           }),
           r
         );

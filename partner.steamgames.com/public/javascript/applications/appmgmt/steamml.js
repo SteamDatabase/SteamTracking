@@ -505,63 +505,117 @@
                 ),
               ))
             : e.array && e.array.primitive
-            ? (m = s.createElement(
-                "div",
-                {
-                  className: (0, v.Z)(
-                    r.SchemaDetailsElement,
-                    r.SchemaDetailsArray,
-                  ),
-                },
-                s.createElement(
+              ? (m = s.createElement(
                   "div",
                   {
                     className: (0, v.Z)(
-                      r.SchemaDetailsElementBody,
-                      b(e.array.primitive.type_info.type),
+                      r.SchemaDetailsElement,
+                      r.SchemaDetailsArray,
                     ),
                   },
-                  s.createElement("div", { className: r.ElementName }, e.name),
-                  s.createElement(
-                    "div",
-                    { className: r.TypeName },
-                    _(e.array.primitive.type_info.type),
-                    " [",
-                    e.array.max_length,
-                    "]",
-                  ),
-                ),
-              ))
-            : e.array && e.array.structure
-            ? (m = s.createElement(
-                "div",
-                {
-                  className: (0, v.Z)(
-                    r.SchemaDetailsElement,
-                    r.SchemaDetailsArray,
-                  ),
-                },
-                !e.count &&
                   s.createElement(
                     "div",
                     {
-                      className: r.SchemaDetailsStructRow,
-                      onClick: () => {
-                        a(
-                          n
-                            ? [...t, e.name]
-                            : t.slice(0, l).concat(t.slice(l + 1)),
-                        );
-                      },
+                      className: (0, v.Z)(
+                        r.SchemaDetailsElementBody,
+                        b(e.array.primitive.type_info.type),
+                      ),
                     },
                     s.createElement(
                       "div",
-                      { className: (0, v.Z)(n && r.Collapsed, r.CollapseIcon) },
-                      "▼",
+                      { className: r.ElementName },
+                      e.name,
                     ),
                     s.createElement(
                       "div",
-                      { className: r.SchemaDetailsElementBody },
+                      { className: r.TypeName },
+                      _(e.array.primitive.type_info.type),
+                      " [",
+                      e.array.max_length,
+                      "]",
+                    ),
+                  ),
+                ))
+              : e.array && e.array.structure
+                ? (m = s.createElement(
+                    "div",
+                    {
+                      className: (0, v.Z)(
+                        r.SchemaDetailsElement,
+                        r.SchemaDetailsArray,
+                      ),
+                    },
+                    !e.count &&
+                      s.createElement(
+                        "div",
+                        {
+                          className: r.SchemaDetailsStructRow,
+                          onClick: () => {
+                            a(
+                              n
+                                ? [...t, e.name]
+                                : t.slice(0, l).concat(t.slice(l + 1)),
+                            );
+                          },
+                        },
+                        s.createElement(
+                          "div",
+                          {
+                            className: (0, v.Z)(
+                              n && r.Collapsed,
+                              r.CollapseIcon,
+                            ),
+                          },
+                          "▼",
+                        ),
+                        s.createElement(
+                          "div",
+                          { className: r.SchemaDetailsElementBody },
+                          s.createElement(
+                            "div",
+                            { className: r.ElementName },
+                            e.name,
+                          ),
+                          s.createElement(
+                            "div",
+                            { className: r.TypeName },
+                            "STRUCT [",
+                            e.array.max_length,
+                            "]",
+                          ),
+                        ),
+                      ),
+                    e.array.structure.member.map((e) =>
+                      s.createElement(
+                        "div",
+                        {
+                          className: (0, v.Z)(
+                            n && r.IndentCollapsed,
+                            r.StructIndent,
+                          ),
+                          key: e.name,
+                        },
+                        y(e, t, a),
+                      ),
+                    ),
+                  ))
+                : e.primitive &&
+                  (m = s.createElement(
+                    "div",
+                    {
+                      className: (0, v.Z)(
+                        r.SchemaDetailsElement,
+                        r.SchemaDetailsArray,
+                      ),
+                    },
+                    s.createElement(
+                      "div",
+                      {
+                        className: (0, v.Z)(
+                          r.SchemaDetailsElementBody,
+                          b(e.primitive.type_info.type),
+                        ),
+                      },
                       s.createElement(
                         "div",
                         { className: r.ElementName },
@@ -570,51 +624,10 @@
                       s.createElement(
                         "div",
                         { className: r.TypeName },
-                        "STRUCT [",
-                        e.array.max_length,
-                        "]",
+                        _(e.primitive.type_info.type),
                       ),
                     ),
-                  ),
-                e.array.structure.member.map((e) =>
-                  s.createElement(
-                    "div",
-                    {
-                      className: (0, v.Z)(
-                        n && r.IndentCollapsed,
-                        r.StructIndent,
-                      ),
-                      key: e.name,
-                    },
-                    y(e, t, a),
-                  ),
-                ),
-              ))
-            : e.primitive &&
-              (m = s.createElement(
-                "div",
-                {
-                  className: (0, v.Z)(
-                    r.SchemaDetailsElement,
-                    r.SchemaDetailsArray,
-                  ),
-                },
-                s.createElement(
-                  "div",
-                  {
-                    className: (0, v.Z)(
-                      r.SchemaDetailsElementBody,
-                      b(e.primitive.type_info.type),
-                    ),
-                  },
-                  s.createElement("div", { className: r.ElementName }, e.name),
-                  s.createElement(
-                    "div",
-                    { className: r.TypeName },
-                    _(e.primitive.type_info.type),
-                  ),
-                ),
-              )),
+                  )),
           m
         );
       }

@@ -411,12 +411,12 @@
                   });
               }
             : "function" == typeof setImmediate
-            ? function (e) {
-                setImmediate(e);
-              }
-            : function (e) {
-                setTimeout(e);
-              };
+              ? function (e) {
+                  setImmediate(e);
+                }
+              : function (e) {
+                  setTimeout(e);
+                };
       function r(e, t, a) {
         o(t);
         for (var n = 0; n < t.keys.length; n++)
@@ -500,9 +500,7 @@
                       ? void 0
                       : a.userinfo)
                   )
-                    throw `Load single avatar/persona failed ${
-                      (0, m.l)(c).strErrorMsg
-                    }`;
+                    throw `Load single avatar/persona failed ${(0, m.l)(c).strErrorMsg}`;
                   return [c.data.userinfo];
                 }
                 {
@@ -521,9 +519,7 @@
                       ? void 0
                       : c.userinfos)
                   )
-                    throw `Load single avatar/persona failed ${
-                      (0, m.l)(a).strErrorMsg
-                    }`;
+                    throw `Load single avatar/persona failed ${(0, m.l)(a).strErrorMsg}`;
                   const i = new Map();
                   return (
                     a.data.userinfos.forEach((e) =>

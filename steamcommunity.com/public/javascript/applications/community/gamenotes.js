@@ -645,8 +645,8 @@
                       (n = []),
                       e || t.push(o))
                     : e
-                    ? t.push(ne.nodes.paragraph.create())
-                    : t.push(o);
+                      ? t.push(ne.nodes.paragraph.create())
+                      : t.push(o);
                 }
               return t;
             })(t),
@@ -696,8 +696,8 @@
               t.type.isText
                 ? (o += (0, W.bU)(t.text))
                 : t.type == ne.nodes.hard_break
-                ? (o += "\n")
-                : (o += ue(e, t));
+                  ? (o += "\n")
+                  : (o += ue(e, t));
           }),
           ([o] = me(e, n, [], o)),
           s && (o += (0, W.Ec)(s)),
@@ -894,8 +894,8 @@
                       c.current.element.select();
                     }, 0))
                   : 0 == e.length
-                  ? c.current.Focus()
-                  : d.current.Focus();
+                    ? c.current.Focus()
+                    : d.current.Focus();
             }
           }, [t, r]),
           o.createElement(

@@ -870,15 +870,15 @@
                   : a > 1 && (i = i.charAt(0) + "." + i.slice(1)),
                 (i = i + (o < 0 ? "e" : "e+") + o))
               : o < 0
-              ? ((i = "0." + P(-o - 1) + i),
-                r && (n = r - a) > 0 && (i += P(n)))
-              : o >= a
-              ? ((i += P(o + 1 - a)),
-                r && (n = r - o - 1) > 0 && (i = i + "." + P(n)))
-              : ((n = o + 1) < a && (i = i.slice(0, n) + "." + i.slice(n)),
-                r &&
-                  (n = r - a) > 0 &&
-                  (o + 1 === a && (i += "."), (i += P(n)))),
+                ? ((i = "0." + P(-o - 1) + i),
+                  r && (n = r - a) > 0 && (i += P(n)))
+                : o >= a
+                  ? ((i += P(o + 1 - a)),
+                    r && (n = r - o - 1) > 0 && (i = i + "." + P(n)))
+                  : ((n = o + 1) < a && (i = i.slice(0, n) + "." + i.slice(n)),
+                    r &&
+                      (n = r - a) > 0 &&
+                      (o + 1 === a && (i += "."), (i += P(n)))),
             t.s < 0 ? "-" + i : i
           );
         }
@@ -1466,8 +1466,8 @@
             ? "[object Undefined]"
             : "[object Null]"
           : a && a in Object(t)
-          ? o(t)
-          : i(t);
+            ? o(t)
+            : i(t);
       };
     },
     6515: (t) => {
@@ -1651,12 +1651,12 @@
         return "function" == typeof t
           ? t
           : null == t
-          ? i
-          : "object" == typeof t
-          ? a(t)
-            ? o(t[0], t[1])
-            : n(t)
-          : u(t);
+            ? i
+            : "object" == typeof t
+              ? a(t)
+                ? o(t[0], t[1])
+                : n(t)
+              : u(t);
       };
     },
     95571: (t, e, r) => {
@@ -3246,11 +3246,11 @@
           ? (t = n(t)) === o || t === -1 / 0
             ? 17976931348623157e292 * (t < 0 ? -1 : 1)
             : t == t
-            ? t
-            : 0
+              ? t
+              : 0
           : 0 === t
-          ? t
-          : 0;
+            ? t
+            : 0;
       };
     },
     41151: (t, e, r) => {
@@ -3662,18 +3662,18 @@
               return p === k
                 ? r(t, l, s)
                 : p === C
-                ? a(t, l, s)
-                : p === M
-                ? n(t, l, s)
-                : p === N
-                ? u(t, l, s)
-                : p === T
-                ? "function" != typeof t.then &&
-                  "function" != typeof l.then &&
-                  o(t, l, s)
-                : p === E
-                ? o(t, l, s)
-                : (p === P || p === _ || p === D) && i(t, l, s);
+                  ? a(t, l, s)
+                  : p === M
+                    ? n(t, l, s)
+                    : p === N
+                      ? u(t, l, s)
+                      : p === T
+                        ? "function" != typeof t.then &&
+                          "function" != typeof l.then &&
+                          o(t, l, s)
+                        : p === E
+                          ? o(t, l, s)
+                          : (p === P || p === _ || p === D) && i(t, l, s);
             };
           })(c);
         return (function (t) {
@@ -3860,14 +3860,14 @@
                 X(t, e, r[e]);
               })
             : Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
-            : H(Object(r)).forEach(function (e) {
-                Object.defineProperty(
-                  t,
-                  e,
-                  Object.getOwnPropertyDescriptor(r, e),
-                );
-              });
+              ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+              : H(Object(r)).forEach(function (e) {
+                  Object.defineProperty(
+                    t,
+                    e,
+                    Object.getOwnPropertyDescriptor(r, e),
+                  );
+                });
         }
         return t;
       }
@@ -4036,9 +4036,9 @@
             "Map" === r || "Set" === r
               ? Array.from(t)
               : "Arguments" === r ||
-                /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(r)
-              ? at(t, e)
-              : void 0
+                  /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(r)
+                ? at(t, e)
+                : void 0
           );
         }
       }
@@ -4239,14 +4239,14 @@
                 mt(t, e, r[e]);
               })
             : Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
-            : yt(Object(r)).forEach(function (e) {
-                Object.defineProperty(
-                  t,
-                  e,
-                  Object.getOwnPropertyDescriptor(r, e),
-                );
-              });
+              ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+              : yt(Object(r)).forEach(function (e) {
+                  Object.defineProperty(
+                    t,
+                    e,
+                    Object.getOwnPropertyDescriptor(r, e),
+                  );
+                });
         }
         return t;
       }
@@ -4341,9 +4341,9 @@
             "Map" === r || "Set" === r
               ? Array.from(t)
               : "Arguments" === r ||
-                /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(r)
-              ? xt(t, e)
-              : void 0
+                  /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(r)
+                ? xt(t, e)
+                : void 0
           );
         }
       }
@@ -4566,14 +4566,14 @@
                 Ct(t, e, r[e]);
               })
             : Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
-            : _t(Object(r)).forEach(function (e) {
-                Object.defineProperty(
-                  t,
-                  e,
-                  Object.getOwnPropertyDescriptor(r, e),
-                );
-              });
+              ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+              : _t(Object(r)).forEach(function (e) {
+                  Object.defineProperty(
+                    t,
+                    e,
+                    Object.getOwnPropertyDescriptor(r, e),
+                  );
+                });
         }
         return t;
       }
@@ -5072,14 +5072,14 @@
                 te(t, e, r[e]);
               })
             : Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
-            : Ht(Object(r)).forEach(function (e) {
-                Object.defineProperty(
-                  t,
-                  e,
-                  Object.getOwnPropertyDescriptor(r, e),
-                );
-              });
+              ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+              : Ht(Object(r)).forEach(function (e) {
+                  Object.defineProperty(
+                    t,
+                    e,
+                    Object.getOwnPropertyDescriptor(r, e),
+                  );
+                });
         }
         return t;
       }
@@ -5199,8 +5199,8 @@
                 );
               }, 0)
             : Number.isFinite(r)
-            ? r
-            : 0;
+              ? r
+              : 0;
         },
         ne = (function (t) {
           !(function (t, e) {
@@ -5380,11 +5380,11 @@
         t.classList
           ? t.classList.remove(r)
           : "string" == typeof t.className
-          ? (t.className = e(t.className, r))
-          : t.setAttribute(
-              "class",
-              e((t.className && t.className.baseVal) || "", r),
-            );
+            ? (t.className = e(t.className, r))
+            : t.setAttribute(
+                "class",
+                e((t.className && t.className.baseVal) || "", r),
+              );
       };
     },
     50268: (t, e, r) => {
@@ -6237,14 +6237,14 @@
                 A(t, e, r[e]);
               })
             : Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
-            : j(Object(r)).forEach(function (e) {
-                Object.defineProperty(
-                  t,
-                  e,
-                  Object.getOwnPropertyDescriptor(r, e),
-                );
-              });
+              ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+              : j(Object(r)).forEach(function (e) {
+                  Object.defineProperty(
+                    t,
+                    e,
+                    Object.getOwnPropertyDescriptor(r, e),
+                  );
+                });
         }
         return t;
       }
@@ -6408,14 +6408,14 @@
                 U(t, e, r[e]);
               })
             : Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
-            : N(Object(r)).forEach(function (e) {
-                Object.defineProperty(
-                  t,
-                  e,
-                  Object.getOwnPropertyDescriptor(r, e),
-                );
-              });
+              ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+              : N(Object(r)).forEach(function (e) {
+                  Object.defineProperty(
+                    t,
+                    e,
+                    Object.getOwnPropertyDescriptor(r, e),
+                  );
+                });
         }
         return t;
       }
@@ -6567,8 +6567,8 @@
                       prevData: e.curData,
                     }
                   : t.data !== e.curData
-                  ? { curData: t.data }
-                  : null;
+                    ? { curData: t.data }
+                    : null;
               },
             },
           ]),
@@ -7039,14 +7039,14 @@
                 g(t, e, r[e]);
               })
             : Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
-            : h(Object(r)).forEach(function (e) {
-                Object.defineProperty(
-                  t,
-                  e,
-                  Object.getOwnPropertyDescriptor(r, e),
-                );
-              });
+              ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+              : h(Object(r)).forEach(function (e) {
+                  Object.defineProperty(
+                    t,
+                    e,
+                    Object.getOwnPropertyDescriptor(r, e),
+                  );
+                });
         }
         return t;
       }
@@ -7777,14 +7777,14 @@
                 D(t, e, r[e]);
               })
             : Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
-            : A(Object(r)).forEach(function (e) {
-                Object.defineProperty(
-                  t,
-                  e,
-                  Object.getOwnPropertyDescriptor(r, e),
-                );
-              });
+              ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+              : A(Object(r)).forEach(function (e) {
+                  Object.defineProperty(
+                    t,
+                    e,
+                    Object.getOwnPropertyDescriptor(r, e),
+                  );
+                });
         }
         return t;
       }
@@ -8006,8 +8006,8 @@
                       prevPoints: e.curPoints,
                     }
                   : t.points !== e.curPoints
-                  ? { curPoints: t.points }
-                  : null;
+                    ? { curPoints: t.points }
+                    : null;
               },
             },
             {
@@ -8464,14 +8464,14 @@
                 g(t, e, r[e]);
               })
             : Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
-            : m(Object(r)).forEach(function (e) {
-                Object.defineProperty(
-                  t,
-                  e,
-                  Object.getOwnPropertyDescriptor(r, e),
-                );
-              });
+              ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+              : m(Object(r)).forEach(function (e) {
+                  Object.defineProperty(
+                    t,
+                    e,
+                    Object.getOwnPropertyDescriptor(r, e),
+                  );
+                });
         }
         return t;
       }
@@ -8592,11 +8592,11 @@
           return n.isValidElement(t)
             ? n.cloneElement(t, e)
             : i()(t)
-            ? t(e)
-            : n.createElement(
-                "line",
-                O({}, e, { className: "recharts-reference-line-line" }),
-              );
+              ? t(e)
+              : n.createElement(
+                  "line",
+                  O({}, e, { className: "recharts-reference-line-line" }),
+                );
         },
         S = function (t, e, r, n, o) {
           var i = o.viewBox,
@@ -8851,14 +8851,14 @@
                 L(t, e, r[e]);
               })
             : Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
-            : _(Object(r)).forEach(function (e) {
-                Object.defineProperty(
-                  t,
-                  e,
-                  Object.getOwnPropertyDescriptor(r, e),
-                );
-              });
+              ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+              : _(Object(r)).forEach(function (e) {
+                  Object.defineProperty(
+                    t,
+                    e,
+                    Object.getOwnPropertyDescriptor(r, e),
+                  );
+                });
         }
         return t;
       }
@@ -9012,8 +9012,8 @@
                       prevBaseLine: e.curBaseLine,
                     }
                   : t.points !== e.curPoints || t.baseLine !== e.curBaseLine
-                  ? { curPoints: t.points, curBaseLine: t.baseLine }
-                  : null;
+                    ? { curPoints: t.points, curBaseLine: t.baseLine }
+                    : null;
               },
             },
           ]),
@@ -9248,17 +9248,21 @@
                           (0, j.hj)(a) && "number" == typeof a
                             ? (0, j.k4)(m, a)(u)
                             : h()(a) || y()(a)
-                            ? (0, j.k4)(m, 0)(u)
-                            : a.map(function (t, e) {
-                                var r = Math.floor(e * l);
-                                if (m[r]) {
-                                  var n = m[r],
-                                    o = (0, j.k4)(n.x, t.x),
-                                    i = (0, j.k4)(n.y, t.y);
-                                  return T(T({}, t), {}, { x: o(u), y: i(u) });
-                                }
-                                return t;
-                              })),
+                              ? (0, j.k4)(m, 0)(u)
+                              : a.map(function (t, e) {
+                                  var r = Math.floor(e * l);
+                                  if (m[r]) {
+                                    var n = m[r],
+                                      o = (0, j.k4)(n.x, t.x),
+                                      i = (0, j.k4)(n.y, t.y);
+                                    return T(
+                                      T({}, t),
+                                      {},
+                                      { x: o(u), y: i(u) },
+                                    );
+                                  }
+                                  return t;
+                                })),
                         r.renderAreaStatically(s, c, t, e)
                       );
                     }
@@ -9414,8 +9418,8 @@
             return "dataMin" === u
               ? f
               : "dataMax" === u || s < 0
-              ? s
-              : Math.max(Math.min(l[0], l[1]), 0);
+                ? s
+                : Math.max(Math.min(l[0], l[1]), 0);
           }
           return "dataMin" === u ? l[0] : "dataMax" === u ? l[1] : l[0];
         }),
@@ -9484,8 +9488,8 @@
                       : { x: null != e ? i.scale(e) : null, y: t.y };
                   })
                 : b
-                ? a.scale(m)
-                : i.scale(m)),
+                  ? a.scale(m)
+                  : i.scale(m)),
             T({ points: x, baseLine: e, layout: y, isRange: g }, d)
           );
         }),
@@ -9493,11 +9497,11 @@
           return i.isValidElement(t)
             ? i.cloneElement(t, e)
             : l()(t)
-            ? t(e)
-            : i.createElement(
-                g.o,
-                M({}, e, { className: "recharts-area-dot" }),
-              );
+              ? t(e)
+              : i.createElement(
+                  g.o,
+                  M({}, e, { className: "recharts-area-dot" }),
+                );
         });
       var U = r(28531),
         F = r(52942),
@@ -9630,14 +9634,14 @@
                 ut(t, e, r[e]);
               })
             : Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
-            : tt(Object(r)).forEach(function (e) {
-                Object.defineProperty(
-                  t,
-                  e,
-                  Object.getOwnPropertyDescriptor(r, e),
-                );
-              });
+              ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+              : tt(Object(r)).forEach(function (e) {
+                  Object.defineProperty(
+                    t,
+                    e,
+                    Object.getOwnPropertyDescriptor(r, e),
+                  );
+                });
         }
         return t;
       }
@@ -9787,8 +9791,8 @@
                       prevPoints: e.curPoints,
                     }
                   : t.points !== e.curPoints
-                  ? { curPoints: t.points }
-                  : null;
+                    ? { curPoints: t.points }
+                    : null;
               },
             },
           ]),
@@ -9964,8 +9968,8 @@
                   (e = i.isValidElement(o)
                     ? i.cloneElement(o, m)
                     : l()(o)
-                    ? o(m)
-                    : i.createElement(b.H, Q({}, m, { type: u }))),
+                      ? o(m)
+                      : i.createElement(b.H, Q({}, m, { type: u }))),
                   i.createElement(
                     x.m,
                     {
@@ -10238,14 +10242,14 @@
                 T(t, e, r[e]);
               })
             : Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
-            : M(Object(r)).forEach(function (e) {
-                Object.defineProperty(
-                  t,
-                  e,
-                  Object.getOwnPropertyDescriptor(r, e),
-                );
-              });
+              ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+              : M(Object(r)).forEach(function (e) {
+                  Object.defineProperty(
+                    t,
+                    e,
+                    Object.getOwnPropertyDescriptor(r, e),
+                  );
+                });
         }
         return t;
       }
@@ -10526,14 +10530,14 @@
                 rt(t, e, r[e]);
               })
             : Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
-            : X(Object(r)).forEach(function (e) {
-                Object.defineProperty(
-                  t,
-                  e,
-                  Object.getOwnPropertyDescriptor(r, e),
-                );
-              });
+              ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+              : X(Object(r)).forEach(function (e) {
+                  Object.defineProperty(
+                    t,
+                    e,
+                    Object.getOwnPropertyDescriptor(r, e),
+                  );
+                });
         }
         return t;
       }
@@ -10691,14 +10695,14 @@
                 return n.isValidElement(t)
                   ? n.cloneElement(t, e)
                   : u()(t)
-                  ? t(e)
-                  : n.createElement(
-                      F.x,
-                      V({}, e, {
-                        className: "recharts-cartesian-axis-tick-value",
-                      }),
-                      r,
-                    );
+                    ? t(e)
+                    : n.createElement(
+                        F.x,
+                        V({}, e, {
+                          className: "recharts-cartesian-axis-tick-value",
+                        }),
+                        r,
+                      );
               },
             },
           ]),
@@ -11043,14 +11047,14 @@
                 st(t, e, r[e]);
               })
             : Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
-            : ct(Object(r)).forEach(function (e) {
-                Object.defineProperty(
-                  t,
-                  e,
-                  Object.getOwnPropertyDescriptor(r, e),
-                );
-              });
+              ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+              : ct(Object(r)).forEach(function (e) {
+                  Object.defineProperty(
+                    t,
+                    e,
+                    Object.getOwnPropertyDescriptor(r, e),
+                  );
+                });
         }
         return t;
       }
@@ -11135,14 +11139,14 @@
                 wt(t, e, r[e]);
               })
             : Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
-            : dt(Object(r)).forEach(function (e) {
-                Object.defineProperty(
-                  t,
-                  e,
-                  Object.getOwnPropertyDescriptor(r, e),
-                );
-              });
+              ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+              : dt(Object(r)).forEach(function (e) {
+                  Object.defineProperty(
+                    t,
+                    e,
+                    Object.getOwnPropertyDescriptor(r, e),
+                  );
+                });
         }
         return t;
       }
@@ -11370,8 +11374,8 @@
                   return n.isValidElement(t)
                     ? n.cloneElement(t, e)
                     : u()(t)
-                    ? t(e)
-                    : a.renderDefaultTraveller(e);
+                      ? t(e)
+                      : a.renderDefaultTraveller(e);
                 },
               },
               {
@@ -11946,14 +11950,14 @@
                 Ct(t, e, r[e]);
               })
             : Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
-            : _t(Object(r)).forEach(function (e) {
-                Object.defineProperty(
-                  t,
-                  e,
-                  Object.getOwnPropertyDescriptor(r, e),
-                );
-              });
+              ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+              : _t(Object(r)).forEach(function (e) {
+                  Object.defineProperty(
+                    t,
+                    e,
+                    Object.getOwnPropertyDescriptor(r, e),
+                  );
+                });
         }
         return t;
       }
@@ -12054,15 +12058,15 @@
           return n.isValidElement(t)
             ? n.cloneElement(t, e)
             : u()(t)
-            ? t(e)
-            : n.createElement(
-                L.o,
-                Mt({}, e, {
-                  cx: e.cx,
-                  cy: e.cy,
-                  className: "recharts-reference-dot-dot",
-                }),
-              );
+              ? t(e)
+              : n.createElement(
+                  L.o,
+                  Mt({}, e, {
+                    cx: e.cx,
+                    cy: e.cy,
+                    className: "recharts-reference-dot-dot",
+                  }),
+                );
         });
       var Dt = r(84965);
       function It(t) {
@@ -12118,14 +12122,14 @@
                 zt(t, e, r[e]);
               })
             : Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
-            : Lt(Object(r)).forEach(function (e) {
-                Object.defineProperty(
-                  t,
-                  e,
-                  Object.getOwnPropertyDescriptor(r, e),
-                );
-              });
+              ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+              : Lt(Object(r)).forEach(function (e) {
+                  Object.defineProperty(
+                    t,
+                    e,
+                    Object.getOwnPropertyDescriptor(r, e),
+                  );
+                });
         }
         return t;
       }
@@ -12256,11 +12260,11 @@
           return n.isValidElement(t)
             ? n.cloneElement(t, e)
             : u()(t)
-            ? t(e)
-            : n.createElement(
-                R.A,
-                Bt({}, e, { className: "recharts-reference-area-rect" }),
-              );
+              ? t(e)
+              : n.createElement(
+                  R.A,
+                  Bt({}, e, { className: "recharts-reference-area-rect" }),
+                );
         });
       var Wt = function (t, e, r, n, o) {
           var i = (0, z.NN)(t, Dt.d),
@@ -12597,17 +12601,17 @@
                       ie(t, e, r[e]);
                     })
                   : Object.getOwnPropertyDescriptors
-                  ? Object.defineProperties(
-                      t,
-                      Object.getOwnPropertyDescriptors(r),
-                    )
-                  : oe(Object(r)).forEach(function (e) {
-                      Object.defineProperty(
+                    ? Object.defineProperties(
                         t,
-                        e,
-                        Object.getOwnPropertyDescriptor(r, e),
-                      );
-                    });
+                        Object.getOwnPropertyDescriptors(r),
+                      )
+                    : oe(Object(r)).forEach(function (e) {
+                        Object.defineProperty(
+                          t,
+                          e,
+                          Object.getOwnPropertyDescriptor(r, e),
+                        );
+                      });
               }
               return t;
             })({ x: r, y: i, top: u, left: l, width: f, height: h }, ae(t, re));
@@ -12702,14 +12706,14 @@
                 ye(t, e, r[e]);
               })
             : Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
-            : he(Object(r)).forEach(function (e) {
-                Object.defineProperty(
-                  t,
-                  e,
-                  Object.getOwnPropertyDescriptor(r, e),
-                );
-              });
+              ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+              : he(Object(r)).forEach(function (e) {
+                  Object.defineProperty(
+                    t,
+                    e,
+                    Object.getOwnPropertyDescriptor(r, e),
+                  );
+                });
         }
         return t;
       }
@@ -13023,9 +13027,9 @@
             "Map" === r || "Set" === r
               ? Array.from(t)
               : "Arguments" === r ||
-                /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(r)
-              ? _e(t, e)
-              : void 0
+                  /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(r)
+                ? _e(t, e)
+                : void 0
           );
         }
       }
@@ -13054,14 +13058,14 @@
                 Ne(t, e, r[e]);
               })
             : Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
-            : Te(Object(r)).forEach(function (e) {
-                Object.defineProperty(
-                  t,
-                  e,
-                  Object.getOwnPropertyDescriptor(r, e),
-                );
-              });
+              ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+              : Te(Object(r)).forEach(function (e) {
+                  Object.defineProperty(
+                    t,
+                    e,
+                    Object.getOwnPropertyDescriptor(r, e),
+                  );
+                });
         }
         return t;
       }
@@ -13105,8 +13109,8 @@
           return i.length > 0
             ? i
             : t && t.length && (0, O.hj)(n) && (0, O.hj)(o)
-            ? t.slice(n, o + 1)
-            : [];
+              ? t.slice(n, o + 1)
+              : [];
         };
       function ze(t) {
         return "number" === t ? [0, "auto"] : void 0;
@@ -13140,10 +13144,10 @@
               return "horizontal" === e
                 ? t.x
                 : "vertical" === e
-                ? t.y
-                : "centric" === e
-                ? t.angle
-                : t.radius;
+                  ? t.y
+                  : "centric" === e
+                    ? t.angle
+                    : t.radius;
             })(o, r),
             a = t.orderedTooltipTicks,
             u = t.tooltipAxis,
@@ -13276,18 +13280,18 @@
                 E = d
                   ? l()(0, _)
                   : u && u[A] && u[A].hasStack && "number" === m
-                  ? "expand" === h
-                    ? [0, 1]
-                    : (0, at.EB)(u[A].stackGroups, c, s)
-                  : (0, at.s6)(
-                      M,
-                      n.filter(function (t) {
-                        return t.props[a] === A && (S || !t.props.hide);
-                      }),
-                      m,
-                      f,
-                      !0,
-                    );
+                    ? "expand" === h
+                      ? [0, 1]
+                      : (0, at.EB)(u[A].stackGroups, c, s)
+                    : (0, at.s6)(
+                        M,
+                        n.filter(function (t) {
+                          return t.props[a] === A && (S || !t.props.hide);
+                        }),
+                        m,
+                        f,
+                        !0,
+                      );
               if ("number" === m)
                 (E = Wt(p, E, A, o, j)), N && (E = (0, at.LG)(N, E, g));
               else if ("category" === m && N) {
@@ -13374,21 +13378,21 @@
                         y
                           ? (m = l()(0, d))
                           : a && a[b] && a[b].hasStack
-                          ? ((m = (0, at.EB)(a[b].stackGroups, u, c)),
-                            (m = Wt(p, m, b, o)))
-                          : ((m = (0, at.LG)(
-                              g,
-                              (0, at.s6)(
-                                h,
-                                r.filter(function (t) {
-                                  return t.props[i] === b && !t.props.hide;
-                                }),
-                                "number",
-                                s,
-                              ),
-                              n.defaultProps.allowDataOverflow,
-                            )),
-                            (m = Wt(p, m, b, o))),
+                            ? ((m = (0, at.EB)(a[b].stackGroups, u, c)),
+                              (m = Wt(p, m, b, o)))
+                            : ((m = (0, at.LG)(
+                                g,
+                                (0, at.s6)(
+                                  h,
+                                  r.filter(function (t) {
+                                    return t.props[i] === b && !t.props.hide;
+                                  }),
+                                  "number",
+                                  s,
+                                ),
+                                n.defaultProps.allowDataOverflow,
+                              )),
+                              (m = Wt(p, m, b, o))),
                         Ce(
                           Ce({}, t),
                           {},
@@ -13452,10 +13456,10 @@
           return "horizontal" === t
             ? { numericAxisName: "yAxis", cateAxisName: "xAxis" }
             : "vertical" === t
-            ? { numericAxisName: "xAxis", cateAxisName: "yAxis" }
-            : "centric" === t
-            ? { numericAxisName: "radiusAxis", cateAxisName: "angleAxis" }
-            : { numericAxisName: "angleAxis", cateAxisName: "radiusAxis" };
+              ? { numericAxisName: "xAxis", cateAxisName: "yAxis" }
+              : "centric" === t
+                ? { numericAxisName: "radiusAxis", cateAxisName: "angleAxis" }
+                : { numericAxisName: "angleAxis", cateAxisName: "radiusAxis" };
         },
         Ge = function (t) {
           var e,
@@ -15043,8 +15047,8 @@
                 (r = (0, n.isValidElement)(t)
                   ? (0, n.cloneElement)(t, e)
                   : u()(t)
-                  ? t(e)
-                  : n.createElement(L.o, e)),
+                    ? t(e)
+                    : n.createElement(L.o, e)),
                 n.createElement(
                   D.m,
                   { className: "recharts-active-dot", key: e.key },
@@ -15178,14 +15182,14 @@
                 O(t, e, r[e]);
               })
             : Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
-            : x(Object(r)).forEach(function (e) {
-                Object.defineProperty(
-                  t,
-                  e,
-                  Object.getOwnPropertyDescriptor(r, e),
-                );
-              });
+              ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+              : x(Object(r)).forEach(function (e) {
+                  Object.defineProperty(
+                    t,
+                    e,
+                    Object.getOwnPropertyDescriptor(r, e),
+                  );
+                });
         }
         return t;
       }
@@ -15260,8 +15264,8 @@
           "insideStart" === u
             ? ((o = g + A * l), (a = w))
             : "insideEnd" === u
-            ? ((o = x - A * l), (a = !w))
-            : "end" === u && ((o = x + A * l), (a = w)),
+              ? ((o = x - A * l), (a = !w))
+              : "end" === u && ((o = x + A * l), (a = w)),
             (a = S <= 0 ? a : !a);
           var E = (0, d.op)(y, v, O, o),
             P = (0, d.op)(y, v, O, o + 359 * (a ? 1 : -1)),
@@ -15415,72 +15419,96 @@
                 j,
               )
             : "insideRight" === o
-            ? w(
-                {
-                  x: a + c - m,
-                  y: u + s / 2,
-                  textAnchor: b,
-                  verticalAnchor: "middle",
-                },
-                j,
-              )
-            : "insideTop" === o
-            ? w(
-                {
-                  x: a + c / 2,
-                  y: u + p,
-                  textAnchor: "middle",
-                  verticalAnchor: y,
-                },
-                j,
-              )
-            : "insideBottom" === o
-            ? w(
-                {
-                  x: a + c / 2,
-                  y: u + s - p,
-                  textAnchor: "middle",
-                  verticalAnchor: d,
-                },
-                j,
-              )
-            : "insideTopLeft" === o
-            ? w({ x: a + m, y: u + p, textAnchor: g, verticalAnchor: y }, j)
-            : "insideTopRight" === o
-            ? w({ x: a + c - m, y: u + p, textAnchor: b, verticalAnchor: y }, j)
-            : "insideBottomLeft" === o
-            ? w({ x: a + m, y: u + s - p, textAnchor: g, verticalAnchor: d }, j)
-            : "insideBottomRight" === o
-            ? w(
-                {
-                  x: a + c - m,
-                  y: u + s - p,
-                  textAnchor: b,
-                  verticalAnchor: d,
-                },
-                j,
-              )
-            : l()(o) &&
-              ((0, h.hj)(o.x) || (0, h.hU)(o.x)) &&
-              ((0, h.hj)(o.y) || (0, h.hU)(o.y))
-            ? w(
-                {
-                  x: a + (0, h.h1)(o.x, c),
-                  y: u + (0, h.h1)(o.y, s),
-                  textAnchor: "end",
-                  verticalAnchor: "end",
-                },
-                j,
-              )
-            : w(
-                {
-                  x: a + c / 2,
-                  y: u + s / 2,
-                  textAnchor: "middle",
-                  verticalAnchor: "middle",
-                },
-                j,
-              );
+              ? w(
+                  {
+                    x: a + c - m,
+                    y: u + s / 2,
+                    textAnchor: b,
+                    verticalAnchor: "middle",
+                  },
+                  j,
+                )
+              : "insideTop" === o
+                ? w(
+                    {
+                      x: a + c / 2,
+                      y: u + p,
+                      textAnchor: "middle",
+                      verticalAnchor: y,
+                    },
+                    j,
+                  )
+                : "insideBottom" === o
+                  ? w(
+                      {
+                        x: a + c / 2,
+                        y: u + s - p,
+                        textAnchor: "middle",
+                        verticalAnchor: d,
+                      },
+                      j,
+                    )
+                  : "insideTopLeft" === o
+                    ? w(
+                        {
+                          x: a + m,
+                          y: u + p,
+                          textAnchor: g,
+                          verticalAnchor: y,
+                        },
+                        j,
+                      )
+                    : "insideTopRight" === o
+                      ? w(
+                          {
+                            x: a + c - m,
+                            y: u + p,
+                            textAnchor: b,
+                            verticalAnchor: y,
+                          },
+                          j,
+                        )
+                      : "insideBottomLeft" === o
+                        ? w(
+                            {
+                              x: a + m,
+                              y: u + s - p,
+                              textAnchor: g,
+                              verticalAnchor: d,
+                            },
+                            j,
+                          )
+                        : "insideBottomRight" === o
+                          ? w(
+                              {
+                                x: a + c - m,
+                                y: u + s - p,
+                                textAnchor: b,
+                                verticalAnchor: d,
+                              },
+                              j,
+                            )
+                          : l()(o) &&
+                              ((0, h.hj)(o.x) || (0, h.hU)(o.x)) &&
+                              ((0, h.hj)(o.y) || (0, h.hU)(o.y))
+                            ? w(
+                                {
+                                  x: a + (0, h.h1)(o.x, c),
+                                  y: u + (0, h.h1)(o.y, s),
+                                  textAnchor: "end",
+                                  verticalAnchor: "end",
+                                },
+                                j,
+                              )
+                            : w(
+                                {
+                                  x: a + c / 2,
+                                  y: u + s / 2,
+                                  textAnchor: "middle",
+                                  verticalAnchor: "middle",
+                                },
+                                j,
+                              );
         },
         k = function (t) {
           return "cx" in t && (0, h.hj)(t.cx);
@@ -15546,18 +15574,18 @@
         return (0, h.hj)(s) && (0, h.hj)(f)
           ? { x: s, y: f, width: 0, height: 0 }
           : (0, h.hj)(e) && (0, h.hj)(r)
-          ? {
-              cx: e,
-              cy: r,
-              startAngle: o || n || 0,
-              endAngle: i || n || 0,
-              innerRadius: c || 0,
-              outerRadius: l || u || a || 0,
-              clockWise: m,
-            }
-          : t.viewBox
-          ? t.viewBox
-          : {};
+            ? {
+                cx: e,
+                cy: r,
+                startAngle: o || n || 0,
+                endAngle: i || n || 0,
+                innerRadius: c || 0,
+                outerRadius: l || u || a || 0,
+                clockWise: m,
+              }
+            : t.viewBox
+              ? t.viewBox
+              : {};
       };
       (M.parseViewBox = _),
         (M.renderCallByParent = function (t, e) {
@@ -15578,34 +15606,34 @@
               ? !0 === t
                 ? n.createElement(M, { key: "label-implicit", viewBox: e })
                 : (0, h.P2)(t)
-                ? n.createElement(M, {
-                    key: "label-implicit",
-                    viewBox: e,
-                    value: t,
-                  })
-                : (0, n.isValidElement)(t)
-                ? t.type === M
-                  ? (0, n.cloneElement)(t, {
+                  ? n.createElement(M, {
                       key: "label-implicit",
                       viewBox: e,
+                      value: t,
                     })
-                  : n.createElement(M, {
-                      key: "label-implicit",
-                      content: t,
-                      viewBox: e,
-                    })
-                : u()(t)
-                ? n.createElement(M, {
-                    key: "label-implicit",
-                    content: t,
-                    viewBox: e,
-                  })
-                : l()(t)
-                ? n.createElement(
-                    M,
-                    j({ viewBox: e }, t, { key: "label-implicit" }),
-                  )
-                : null
+                  : (0, n.isValidElement)(t)
+                    ? t.type === M
+                      ? (0, n.cloneElement)(t, {
+                          key: "label-implicit",
+                          viewBox: e,
+                        })
+                      : n.createElement(M, {
+                          key: "label-implicit",
+                          content: t,
+                          viewBox: e,
+                        })
+                    : u()(t)
+                      ? n.createElement(M, {
+                          key: "label-implicit",
+                          content: t,
+                          viewBox: e,
+                        })
+                      : l()(t)
+                        ? n.createElement(
+                            M,
+                            j({ viewBox: e }, t, { key: "label-implicit" }),
+                          )
+                        : null
               : null;
           })(t.label, e || i);
           return [c].concat(m(a));
@@ -15718,14 +15746,14 @@
                 S(t, e, r[e]);
               })
             : Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
-            : O(Object(r)).forEach(function (e) {
-                Object.defineProperty(
-                  t,
-                  e,
-                  Object.getOwnPropertyDescriptor(r, e),
-                );
-              });
+              ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+              : O(Object(r)).forEach(function (e) {
+                  Object.defineProperty(
+                    t,
+                    e,
+                    Object.getOwnPropertyDescriptor(r, e),
+                  );
+                });
         }
         return t;
       }
@@ -15839,17 +15867,17 @@
                           data: e,
                         })
                       : n.isValidElement(t) || l()(t)
-                      ? n.createElement(P, {
-                          key: "labelList-implicit",
-                          data: e,
-                          content: t,
-                        })
-                      : u()(t)
-                      ? n.createElement(
-                          P,
-                          w({ data: e }, t, { key: "labelList-implicit" }),
-                        )
-                      : null
+                        ? n.createElement(P, {
+                            key: "labelList-implicit",
+                            data: e,
+                            content: t,
+                          })
+                        : u()(t)
+                          ? n.createElement(
+                              P,
+                              w({ data: e }, t, { key: "labelList-implicit" }),
+                            )
+                          : null
                     : null;
                 })(t.label, e),
               ].concat(g(i))
@@ -16096,17 +16124,17 @@
                               b(t, e, r[e]);
                             })
                           : Object.getOwnPropertyDescriptors
-                          ? Object.defineProperties(
-                              t,
-                              Object.getOwnPropertyDescriptors(r),
-                            )
-                          : h(Object(r)).forEach(function (e) {
-                              Object.defineProperty(
+                            ? Object.defineProperties(
                                 t,
-                                e,
-                                Object.getOwnPropertyDescriptor(r, e),
-                              );
-                            });
+                                Object.getOwnPropertyDescriptors(r),
+                              )
+                            : h(Object(r)).forEach(function (e) {
+                                Object.defineProperty(
+                                  t,
+                                  e,
+                                  Object.getOwnPropertyDescriptor(r, e),
+                                );
+                              });
                       }
                       return t;
                     })({}, t);
@@ -16264,14 +16292,14 @@
                 N(t, e, r[e]);
               })
             : Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
-            : E(Object(r)).forEach(function (e) {
-                Object.defineProperty(
-                  t,
-                  e,
-                  Object.getOwnPropertyDescriptor(r, e),
-                );
-              });
+              ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+              : E(Object(r)).forEach(function (e) {
+                  Object.defineProperty(
+                    t,
+                    e,
+                    Object.getOwnPropertyDescriptor(r, e),
+                  );
+                });
         }
         return t;
       }
@@ -16439,8 +16467,8 @@
                 return "vertical" === r && (0, O.hj)(t.props.height)
                   ? { height: t.props.height }
                   : "horizontal" === r
-                  ? { width: t.props.width || e }
-                  : null;
+                    ? { width: t.props.width || e }
+                    : null;
               },
             },
           ]),
@@ -16519,8 +16547,8 @@
                             left: ((c || 0) - this.getBBoxSnapshot().width) / 2,
                           }
                         : "right" === i
-                        ? { right: (u && u.right) || 0 }
-                        : { left: (u && u.left) || 0 }),
+                          ? { right: (u && u.right) || 0 }
+                          : { left: (u && u.left) || 0 }),
                   (t &&
                     ((void 0 !== t.top && null !== t.top) ||
                       (void 0 !== t.bottom && null !== t.bottom))) ||
@@ -16530,8 +16558,8 @@
                             top: ((l || 0) - this.getBBoxSnapshot().height) / 2,
                           }
                         : "bottom" === a
-                        ? { bottom: (u && u.bottom) || 0 }
-                        : { top: (u && u.top) || 0 }),
+                          ? { bottom: (u && u.bottom) || 0 }
+                          : { top: (u && u.top) || 0 }),
                   P(P({}, e), r)
                 );
               },
@@ -16643,14 +16671,14 @@
                 d(t, e, r[e]);
               })
             : Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
-            : p(Object(r)).forEach(function (e) {
-                Object.defineProperty(
-                  t,
-                  e,
-                  Object.getOwnPropertyDescriptor(r, e),
-                );
-              });
+              ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+              : p(Object(r)).forEach(function (e) {
+                  Object.defineProperty(
+                    t,
+                    e,
+                    Object.getOwnPropertyDescriptor(r, e),
+                  );
+                });
         }
         return t;
       }
@@ -17629,14 +17657,14 @@
                 y(t, e, r[e]);
               })
             : Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
-            : h(Object(r)).forEach(function (e) {
-                Object.defineProperty(
-                  t,
-                  e,
-                  Object.getOwnPropertyDescriptor(r, e),
-                );
-              });
+              ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+              : h(Object(r)).forEach(function (e) {
+                  Object.defineProperty(
+                    t,
+                    e,
+                    Object.getOwnPropertyDescriptor(r, e),
+                  );
+                });
         }
         return t;
       }
@@ -17881,12 +17909,12 @@
             ? f
             : p
           : a[n]
-          ? f < c[n]
-            ? Math.max(p, c[n])
-            : Math.max(f, c[n])
-          : p + u > c[n] + s
-          ? Math.max(f, c[n])
-          : Math.max(p, c[n]);
+            ? f < c[n]
+              ? Math.max(p, c[n])
+              : Math.max(f, c[n])
+            : p + u > c[n] + s
+              ? Math.max(f, c[n])
+              : Math.max(p, c[n]);
       }
       function A(t) {
         var e,
@@ -17982,14 +18010,14 @@
                 D(t, e, r[e]);
               })
             : Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
-            : P(Object(r)).forEach(function (e) {
-                Object.defineProperty(
-                  t,
-                  e,
-                  Object.getOwnPropertyDescriptor(r, e),
-                );
-              });
+              ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+              : P(Object(r)).forEach(function (e) {
+                  Object.defineProperty(
+                    t,
+                    e,
+                    Object.getOwnPropertyDescriptor(r, e),
+                  );
+                });
         }
         return t;
       }
@@ -18318,14 +18346,14 @@
                 G(t, e, r[e]);
               })
             : Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
-            : U(Object(r)).forEach(function (e) {
-                Object.defineProperty(
-                  t,
-                  e,
-                  Object.getOwnPropertyDescriptor(r, e),
-                );
-              });
+              ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+              : U(Object(r)).forEach(function (e) {
+                  Object.defineProperty(
+                    t,
+                    e,
+                    Object.getOwnPropertyDescriptor(r, e),
+                  );
+                });
         }
         return t;
       }
@@ -18506,8 +18534,8 @@
                     return n.isValidElement(t)
                       ? n.cloneElement(t, e)
                       : "function" == typeof t
-                      ? n.createElement(t, e)
-                      : n.createElement(m, e);
+                        ? n.createElement(t, e)
+                        : n.createElement(m, e);
                   })(a, F(F({}, this.props), {}, { payload: g })),
                 );
               },
@@ -19278,8 +19306,8 @@
             "function" == typeof e
               ? e
               : void 0 === e
-              ? (0, S.Z)(0)
-              : (0, S.Z)(+e)),
+                ? (0, S.Z)(0)
+                : (0, S.Z)(+e)),
           (r = "function" == typeof r ? r : void 0 === r ? P : (0, S.Z)(+r)),
           (l.x = function (e) {
             return arguments.length
@@ -19402,14 +19430,14 @@
                 $(t, e, r[e]);
               })
             : Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
-            : U(Object(r)).forEach(function (e) {
-                Object.defineProperty(
-                  t,
-                  e,
-                  Object.getOwnPropertyDescriptor(r, e),
-                );
-              });
+              ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+              : U(Object(r)).forEach(function (e) {
+                  Object.defineProperty(
+                    t,
+                    e,
+                    Object.getOwnPropertyDescriptor(r, e),
+                  );
+                });
         }
         return t;
       }
@@ -19544,8 +19572,8 @@
               "vertical" === u && (0, L.hj)(a)
                 ? M().y(G).x1(q).x0(a)
                 : (0, L.hj)(a)
-                ? M().x(q).y1(G).y0(a)
-                : k().x(q).y(G))
+                  ? M().x(q).y1(G).y0(a)
+                  : k().x(q).y(G))
               .defined(Z)
               .curve(s),
             e(f)
@@ -19740,14 +19768,14 @@
                 h(t, e, r[e]);
               })
             : Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
-            : f(Object(r)).forEach(function (e) {
-                Object.defineProperty(
-                  t,
-                  e,
-                  Object.getOwnPropertyDescriptor(r, e),
-                );
-              });
+              ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+              : f(Object(r)).forEach(function (e) {
+                  Object.defineProperty(
+                    t,
+                    e,
+                    Object.getOwnPropertyDescriptor(r, e),
+                  );
+                });
         }
         return t;
       }
@@ -20029,14 +20057,14 @@
                 p(t, e, r[e]);
               })
             : Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
-            : s(Object(r)).forEach(function (e) {
-                Object.defineProperty(
-                  t,
-                  e,
-                  Object.getOwnPropertyDescriptor(r, e),
-                );
-              });
+              ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+              : s(Object(r)).forEach(function (e) {
+                  Object.defineProperty(
+                    t,
+                    e,
+                    Object.getOwnPropertyDescriptor(r, e),
+                  );
+                });
         }
         return t;
       }
@@ -20473,14 +20501,14 @@
                 L(t, e, r[e]);
               })
             : Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
-            : I(Object(r)).forEach(function (e) {
-                Object.defineProperty(
-                  t,
-                  e,
-                  Object.getOwnPropertyDescriptor(r, e),
-                );
-              });
+              ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+              : I(Object(r)).forEach(function (e) {
+                  Object.defineProperty(
+                    t,
+                    e,
+                    Object.getOwnPropertyDescriptor(r, e),
+                  );
+                });
         }
         return t;
       }
@@ -20794,14 +20822,14 @@
                 O(t, e, r[e]);
               })
             : Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
-            : x(Object(r)).forEach(function (e) {
-                Object.defineProperty(
-                  t,
-                  e,
-                  Object.getOwnPropertyDescriptor(r, e),
-                );
-              });
+              ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+              : x(Object(r)).forEach(function (e) {
+                  Object.defineProperty(
+                    t,
+                    e,
+                    Object.getOwnPropertyDescriptor(r, e),
+                  );
+                });
         }
         return t;
       }
@@ -21011,14 +21039,14 @@
                 D(t, e, r[e]);
               })
             : Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
-            : C(Object(r)).forEach(function (e) {
-                Object.defineProperty(
-                  t,
-                  e,
-                  Object.getOwnPropertyDescriptor(r, e),
-                );
-              });
+              ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+              : C(Object(r)).forEach(function (e) {
+                  Object.defineProperty(
+                    t,
+                    e,
+                    Object.getOwnPropertyDescriptor(r, e),
+                  );
+                });
         }
         return t;
       }
@@ -21149,8 +21177,8 @@
               R(t, e)
                 ? (r = "trapezoids")
                 : z(t, e)
-                ? (r = "sectors")
-                : U(t, e) && (r = "points"),
+                  ? (r = "sectors")
+                  : U(t, e) && (r = "points"),
               r
             );
           })(r, e),
@@ -21166,17 +21194,17 @@
                 ? void 0
                 : r.payload
               : z(t, e)
-              ? null === (n = e.tooltipPayload) ||
-                void 0 === n ||
-                null === (n = n[0]) ||
-                void 0 === n ||
-                null === (n = n.payload) ||
-                void 0 === n
-                ? void 0
-                : n.payload
-              : U(t, e)
-              ? e.payload
-              : {};
+                ? null === (n = e.tooltipPayload) ||
+                  void 0 === n ||
+                  null === (n = n[0]) ||
+                  void 0 === n ||
+                  null === (n = n.payload) ||
+                  void 0 === n
+                  ? void 0
+                  : n.payload
+                : U(t, e)
+                  ? e.payload
+                  : {};
           })(r, e),
           a = n.filter(function (t, n) {
             var a = f()(i, t),
@@ -21260,14 +21288,14 @@
                 y(t, e, r[e]);
               })
             : Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
-            : h(Object(r)).forEach(function (e) {
-                Object.defineProperty(
-                  t,
-                  e,
-                  Object.getOwnPropertyDescriptor(r, e),
-                );
-              });
+              ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+              : h(Object(r)).forEach(function (e) {
+                  Object.defineProperty(
+                    t,
+                    e,
+                    Object.getOwnPropertyDescriptor(r, e),
+                  );
+                });
         }
         return t;
       }
@@ -21356,13 +21384,13 @@
                     r.left + r.width - (j.right || 0) - (c || 0),
                   ]
                 : "yAxis" === n
-                ? "horizontal" === f
-                  ? [r.top + r.height - (j.bottom || 0), r.top + (j.top || 0)]
-                  : [
-                      r.top + (j.top || 0) + (c || 0),
-                      r.top + r.height - (j.bottom || 0) - (c || 0),
-                    ]
-                : g.range),
+                  ? "horizontal" === f
+                    ? [r.top + r.height - (j.bottom || 0), r.top + (j.top || 0)]
+                    : [
+                        r.top + (j.top || 0) + (c || 0),
+                        r.top + r.height - (j.bottom || 0) - (c || 0),
+                      ]
+                  : g.range),
               A && (s = [s[1], s[0]]);
             var D = (0, u.Hq)(g, o, m),
               I = D.scale,
@@ -21673,23 +21701,23 @@
         return null == t || null == e
           ? NaN
           : t < e
-          ? -1
-          : t > e
-          ? 1
-          : t >= e
-          ? 0
-          : NaN;
+            ? -1
+            : t > e
+              ? 1
+              : t >= e
+                ? 0
+                : NaN;
       }
       function h(t, e) {
         return null == t || null == e
           ? NaN
           : e < t
-          ? -1
-          : e > t
-          ? 1
-          : e >= t
-          ? 0
-          : NaN;
+            ? -1
+            : e > t
+              ? 1
+              : e >= t
+                ? 0
+                : NaN;
       }
       function d(t) {
         let e, r, n;
@@ -21922,54 +21950,54 @@
               6 === r
                 ? z(e)
                 : 3 === r
+                  ? new $(
+                      ((e >> 8) & 15) | ((e >> 4) & 240),
+                      ((e >> 4) & 15) | (240 & e),
+                      ((15 & e) << 4) | (15 & e),
+                      1,
+                    )
+                  : 8 === r
+                    ? U(
+                        (e >> 24) & 255,
+                        (e >> 16) & 255,
+                        (e >> 8) & 255,
+                        (255 & e) / 255,
+                      )
+                    : 4 === r
+                      ? U(
+                          ((e >> 12) & 15) | ((e >> 8) & 240),
+                          ((e >> 8) & 15) | ((e >> 4) & 240),
+                          ((e >> 4) & 15) | (240 & e),
+                          (((15 & e) << 4) | (15 & e)) / 255,
+                        )
+                      : null)
+            : (e = M.exec(t))
+              ? new $(e[1], e[2], e[3], 1)
+              : (e = _.exec(t))
                 ? new $(
-                    ((e >> 8) & 15) | ((e >> 4) & 240),
-                    ((e >> 4) & 15) | (240 & e),
-                    ((15 & e) << 4) | (15 & e),
+                    (255 * e[1]) / 100,
+                    (255 * e[2]) / 100,
+                    (255 * e[3]) / 100,
                     1,
                   )
-                : 8 === r
-                ? U(
-                    (e >> 24) & 255,
-                    (e >> 16) & 255,
-                    (e >> 8) & 255,
-                    (255 & e) / 255,
-                  )
-                : 4 === r
-                ? U(
-                    ((e >> 12) & 15) | ((e >> 8) & 240),
-                    ((e >> 8) & 15) | ((e >> 4) & 240),
-                    ((e >> 4) & 15) | (240 & e),
-                    (((15 & e) << 4) | (15 & e)) / 255,
-                  )
-                : null)
-            : (e = M.exec(t))
-            ? new $(e[1], e[2], e[3], 1)
-            : (e = _.exec(t))
-            ? new $(
-                (255 * e[1]) / 100,
-                (255 * e[2]) / 100,
-                (255 * e[3]) / 100,
-                1,
-              )
-            : (e = T.exec(t))
-            ? U(e[1], e[2], e[3], e[4])
-            : (e = C.exec(t))
-            ? U(
-                (255 * e[1]) / 100,
-                (255 * e[2]) / 100,
-                (255 * e[3]) / 100,
-                e[4],
-              )
-            : (e = N.exec(t))
-            ? V(e[1], e[2] / 100, e[3] / 100, 1)
-            : (e = D.exec(t))
-            ? V(e[1], e[2] / 100, e[3] / 100, e[4])
-            : I.hasOwnProperty(t)
-            ? z(I[t])
-            : "transparent" === t
-            ? new $(NaN, NaN, NaN, 0)
-            : null
+                : (e = T.exec(t))
+                  ? U(e[1], e[2], e[3], e[4])
+                  : (e = C.exec(t))
+                    ? U(
+                        (255 * e[1]) / 100,
+                        (255 * e[2]) / 100,
+                        (255 * e[3]) / 100,
+                        e[4],
+                      )
+                    : (e = N.exec(t))
+                      ? V(e[1], e[2] / 100, e[3] / 100, 1)
+                      : (e = D.exec(t))
+                        ? V(e[1], e[2] / 100, e[3] / 100, e[4])
+                        : I.hasOwnProperty(t)
+                          ? z(I[t])
+                          : "transparent" === t
+                            ? new $(NaN, NaN, NaN, 0)
+                            : null
         );
       }
       function z(t) {
@@ -21993,9 +22021,7 @@
       }
       function Z() {
         const t = q(this.opacity);
-        return `${1 === t ? "rgb(" : "rgba("}${G(this.r)}, ${G(this.g)}, ${G(
-          this.b,
-        )}${1 === t ? ")" : `, ${t})`}`;
+        return `${1 === t ? "rgb(" : "rgba("}${G(this.r)}, ${G(this.g)}, ${G(this.b)}${1 === t ? ")" : `, ${t})`}`;
       }
       function q(t) {
         return isNaN(t) ? 1 : Math.max(0, Math.min(1, t));
@@ -22011,8 +22037,8 @@
           n <= 0
             ? (t = e = r = NaN)
             : r <= 0 || r >= 1
-            ? (t = e = NaN)
-            : e <= 0 && (t = NaN),
+              ? (t = e = NaN)
+              : e <= 0 && (t = NaN),
           new Y(t, e, r, n)
         );
       }
@@ -22034,8 +22060,8 @@
                 e === i
                   ? (r - n) / u + 6 * (r < n)
                   : r === i
-                  ? (n - e) / u + 2
-                  : (e - r) / u + 4),
+                    ? (n - e) / u + 2
+                    : (e - r) / u + 4),
               (u /= c < 0.5 ? i + o : 2 - i - o),
               (a *= 60))
             : (u = c > 0 && c < 1 ? 0 : a),
@@ -22057,10 +22083,10 @@
           (t < 60
             ? e + ((r - e) * t) / 60
             : t < 180
-            ? r
-            : t < 240
-            ? e + ((r - e) * (240 - t)) / 60
-            : e)
+              ? r
+              : t < 240
+                ? e + ((r - e) * (240 - t)) / 60
+                : e)
         );
       }
       function tt(t, e, r, n, o) {
@@ -22129,9 +22155,7 @@
             hex: W,
             formatHex: W,
             formatHex8: function () {
-              return `#${H(this.r)}${H(this.g)}${H(this.b)}${H(
-                255 * (isNaN(this.opacity) ? 1 : this.opacity),
-              )}`;
+              return `#${H(this.r)}${H(this.g)}${H(this.b)}${H(255 * (isNaN(this.opacity) ? 1 : this.opacity))}`;
             },
             formatRgb: Z,
             toString: Z,
@@ -22184,9 +22208,7 @@
             },
             formatHsl() {
               const t = q(this.opacity);
-              return `${1 === t ? "hsl(" : "hsla("}${K(this.h)}, ${
-                100 * J(this.s)
-              }%, ${100 * J(this.l)}%${1 === t ? ")" : `, ${t})`}`;
+              return `${1 === t ? "hsl(" : "hsla("}${K(this.h)}, ${100 * J(this.s)}%, ${100 * J(this.l)}%${1 === t ? ")" : `, ${t})`}`;
             },
           }),
         );
@@ -22388,23 +22410,23 @@
           : ("number" === o
               ? lt
               : "string" === o
-              ? (r = R(e))
-                ? ((e = r), it)
-                : ht
-              : e instanceof R
-              ? it
-              : e instanceof Date
-              ? ct
-              : ((n = e),
-                !ArrayBuffer.isView(n) || n instanceof DataView
-                  ? Array.isArray(e)
-                    ? ut
-                    : ("function" != typeof e.valueOf &&
-                        "function" != typeof e.toString) ||
-                      isNaN(e)
-                    ? st
-                    : lt
-                  : dt))(t, e);
+                ? (r = R(e))
+                  ? ((e = r), it)
+                  : ht
+                : e instanceof R
+                  ? it
+                  : e instanceof Date
+                    ? ct
+                    : ((n = e),
+                      !ArrayBuffer.isView(n) || n instanceof DataView
+                        ? Array.isArray(e)
+                          ? ut
+                          : ("function" != typeof e.valueOf &&
+                                "function" != typeof e.toString) ||
+                              isNaN(e)
+                            ? st
+                            : lt
+                        : dt))(t, e);
       }
       function vt(t, e) {
         return (
@@ -22591,8 +22613,8 @@
         return o < 0
           ? "0." + new Array(-o).join("0") + n
           : n.length > o + 1
-          ? n.slice(0, o + 1) + "." + n.slice(o + 1)
-          : n + new Array(o - n.length + 2).join("0");
+            ? n.slice(0, o + 1) + "." + n.slice(o + 1)
+            : n + new Array(o - n.length + 2).join("0");
       }
       (Mt.prototype = _t.prototype),
         (_t.prototype.toString = function () {
@@ -22636,12 +22658,12 @@
           return i === a
             ? n
             : i > a
-            ? n + new Array(i - a + 1).join("0")
-            : i > 0
-            ? n.slice(0, i) + "." + n.slice(i)
-            : "0." +
-              new Array(1 - i).join("0") +
-              Tt(t, Math.max(0, e + i - 1))[0];
+              ? n + new Array(i - a + 1).join("0")
+              : i > 0
+                ? n.slice(0, i) + "." + n.slice(i)
+                : "0." +
+                  new Array(1 - i).join("0") +
+                  Tt(t, Math.max(0, e + i - 1))[0];
         },
         X: (t) => Math.round(t).toString(16).toUpperCase(),
         x: (t) => Math.round(t).toString(16),
@@ -22728,8 +22750,8 @@
               "$" === p
                 ? o
                 : "#" === p && /[boxX]/.test(b)
-                ? "0" + b.toLowerCase()
-                : "",
+                  ? "0" + b.toLowerCase()
+                  : "",
             x = "$" === p ? i : /[%p]/.test(b) ? c : "",
             w = Dt[b],
             O = /[defgprs%]/.test(b);
@@ -22805,8 +22827,8 @@
               void 0 === v
                 ? 6
                 : /[gprs]/.test(b)
-                ? Math.max(1, Math.min(21, v))
-                : Math.max(0, Math.min(20, v))),
+                  ? Math.max(1, Math.min(21, v))
+                  : Math.max(0, Math.min(20, v))),
             (j.toString = function () {
               return t + "";
             }),
@@ -22998,8 +23020,8 @@
               return 10 === t
                 ? Kt
                 : t === Math.E
-                ? Math.exp
-                : (e) => Math.pow(t, e);
+                  ? Math.exp
+                  : (e) => Math.pow(t, e);
             })(i)),
             r()[0] < 0 ? ((n = Jt(n)), (o = Jt(o)), t(Xt, Yt)) : t(Ht, Vt),
             e
@@ -23130,8 +23152,8 @@
               ? 1 === (r = +e)
                 ? t(gt, gt)
                 : 0.5 === r
-                ? t(ue, ce)
-                : t(ae(r), ae(1 / r))
+                  ? t(ue, ce)
+                  : t(ae(r), ae(1 / r))
               : r;
           }),
           Wt(e)
@@ -23393,10 +23415,10 @@
             return a < 0
               ? [NaN, NaN]
               : a < 1
-              ? [e, o[0]]
-              : a >= n
-              ? [o[n - 1], r]
-              : [o[a - 1], o[a]];
+                ? [e, o[0]]
+                : a >= n
+                  ? [o[n - 1], r]
+                  : [o[a - 1], o[a]];
           }),
           (a.unknown = function (e) {
             return arguments.length ? ((t = e), a) : a;
@@ -24100,18 +24122,18 @@
             c(t) < t
               ? h
               : u(t) < t
-              ? d
-              : a(t) < t
-              ? y
-              : i(t) < t
-              ? v
-              : n(t) < t
-              ? o(t) < t
-                ? m
-                : b
-              : r(t) < t
-              ? g
-              : x
+                ? d
+                : a(t) < t
+                  ? y
+                  : i(t) < t
+                    ? v
+                    : n(t) < t
+                      ? o(t) < t
+                        ? m
+                        : b
+                      : r(t) < t
+                        ? g
+                        : x
           )(t);
         }
         return (
@@ -25029,9 +25051,9 @@
             "Map" === r || "Set" === r
               ? Array.from(t)
               : "Arguments" === r ||
-                /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(r)
-              ? Jo(t, e)
-              : void 0
+                  /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(r)
+                ? Jo(t, e)
+                : void 0
           );
         }
       }
@@ -25246,14 +25268,14 @@
                 pi(t, e, r[e]);
               })
             : Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
-            : si(Object(r)).forEach(function (e) {
-                Object.defineProperty(
-                  t,
-                  e,
-                  Object.getOwnPropertyDescriptor(r, e),
-                );
-              });
+              ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+              : si(Object(r)).forEach(function (e) {
+                  Object.defineProperty(
+                    t,
+                    e,
+                    Object.getOwnPropertyDescriptor(r, e),
+                  );
+                });
         }
         return t;
       }
@@ -25324,10 +25346,10 @@
         return vo()(t) || vo()(e)
           ? r
           : (0, ai.P2)(e)
-          ? Oo()(t, e, r)
-          : bo()(e)
-          ? e(t)
-          : r;
+            ? Oo()(t, e, r)
+            : bo()(e)
+              ? e(t)
+              : r;
       }
       function vi(t, e, r, n) {
         var o = So()(t, function (t) {
@@ -25569,8 +25591,8 @@
                   ("horizontal" === t
                     ? "yAxis" === e
                     : "vertical" === t || "x" === r
-                    ? "xAxis" === e
-                    : "y" !== r || "yAxis" === e)
+                      ? "xAxis" === e
+                      : "y" !== r || "yAxis" === e)
                 );
               })(n, o, t.props.direction);
             });
@@ -25684,26 +25706,26 @@
                     return !Eo()(t.coordinate);
                   })
               : t.isCategorical && t.categoricalDomain
-              ? t.categoricalDomain.map(function (t, e) {
-                  return {
-                    coordinate: n(t) + c,
-                    value: t,
-                    index: e,
-                    offset: c,
-                  };
-                })
-              : n.ticks && !r
-              ? n.ticks(t.tickCount).map(function (t) {
-                  return { coordinate: n(t) + c, value: t, offset: c };
-                })
-              : n.domain().map(function (t, e) {
-                  return {
-                    coordinate: n(t) + c,
-                    value: o ? o[t] : t,
-                    index: e,
-                    offset: c,
-                  };
-                })
+                ? t.categoricalDomain.map(function (t, e) {
+                    return {
+                      coordinate: n(t) + c,
+                      value: t,
+                      index: e,
+                      offset: c,
+                    };
+                  })
+                : n.ticks && !r
+                  ? n.ticks(t.tickCount).map(function (t) {
+                      return { coordinate: n(t) + c, value: t, offset: c };
+                    })
+                  : n.domain().map(function (t, e) {
+                      return {
+                        coordinate: n(t) + c,
+                        value: o ? o[t] : t,
+                        index: e,
+                        offset: c,
+                      };
+                    })
           );
         },
         ki = new WeakMap(),
@@ -25726,16 +25748,16 @@
             return "radial" === u && "radiusAxis" === c
               ? { scale: o.Z(), realScaleType: "band" }
               : "radial" === u && "angleAxis" === c
-              ? { scale: Zt(), realScaleType: "linear" }
-              : "category" === a &&
-                e &&
-                (e.indexOf("LineChart") >= 0 ||
-                  e.indexOf("AreaChart") >= 0 ||
-                  (e.indexOf("ComposedChart") >= 0 && !r))
-              ? { scale: o.x(), realScaleType: "point" }
-              : "category" === a
-              ? { scale: o.Z(), realScaleType: "band" }
-              : { scale: Zt(), realScaleType: "linear" };
+                ? { scale: Zt(), realScaleType: "linear" }
+                : "category" === a &&
+                    e &&
+                    (e.indexOf("LineChart") >= 0 ||
+                      e.indexOf("AreaChart") >= 0 ||
+                      (e.indexOf("ComposedChart") >= 0 && !r))
+                  ? { scale: o.x(), realScaleType: "point" }
+                  : "category" === a
+                    ? { scale: o.Z(), realScaleType: "band" }
+                    : { scale: Zt(), realScaleType: "linear" };
           if (xo()(i)) {
             var l = "scale".concat(ko()(i));
             return {
@@ -25888,8 +25910,8 @@
                         null == t
                           ? uo
                           : "function" == typeof t
-                          ? t
-                          : (0, ao.Z)(Array.from(t))),
+                            ? t
+                            : (0, ao.Z)(Array.from(t))),
                       o)
                     : e;
                 }),
@@ -26174,14 +26196,14 @@
                 u(t, e, r[e]);
               })
             : Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
-            : i(Object(r)).forEach(function (e) {
-                Object.defineProperty(
-                  t,
-                  e,
-                  Object.getOwnPropertyDescriptor(r, e),
-                );
-              });
+              ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+              : i(Object(r)).forEach(function (e) {
+                  Object.defineProperty(
+                    t,
+                    e,
+                    Object.getOwnPropertyDescriptor(r, e),
+                  );
+                });
         }
         return t;
       }
@@ -26469,14 +26491,14 @@
                 s(t, e, r[e]);
               })
             : Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
-            : c(Object(r)).forEach(function (e) {
-                Object.defineProperty(
-                  t,
-                  e,
-                  Object.getOwnPropertyDescriptor(r, e),
-                );
-              });
+              ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+              : c(Object(r)).forEach(function (e) {
+                  Object.defineProperty(
+                    t,
+                    e,
+                    Object.getOwnPropertyDescriptor(r, e),
+                  );
+                });
         }
         return t;
       }
@@ -26803,8 +26825,8 @@
           return "string" == typeof t
             ? t
             : t
-            ? t.displayName || t.name || "Component"
-            : "";
+              ? t.displayName || t.name || "Component"
+              : "";
         },
         S = null,
         A = null,
@@ -27084,14 +27106,14 @@
                 l(t, e, r[e]);
               })
             : Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
-            : u(Object(r)).forEach(function (e) {
-                Object.defineProperty(
-                  t,
-                  e,
-                  Object.getOwnPropertyDescriptor(r, e),
-                );
-              });
+              ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+              : u(Object(r)).forEach(function (e) {
+                  Object.defineProperty(
+                    t,
+                    e,
+                    Object.getOwnPropertyDescriptor(r, e),
+                  );
+                });
         }
         return t;
       }
@@ -27134,36 +27156,36 @@
               s.props && s.props.payload
                 ? s.props && s.props.payload
                 : "children" === l
-                ? (a || []).reduce(function (t, e) {
-                    var r = e.item,
-                      n = e.props,
-                      o = n.sectors || n.data || [];
-                    return t.concat(
-                      o.map(function (t) {
-                        return {
-                          type: s.props.iconType || r.props.legendType,
-                          value: t.name,
-                          color: t.fill,
-                          payload: t,
-                        };
-                      }),
-                    );
-                  }, [])
-                : (a || []).map(function (t) {
-                    var e = t.item,
-                      r = e.props,
-                      n = r.dataKey,
-                      i = r.name,
-                      a = r.legendType;
-                    return {
-                      inactive: r.hide,
-                      dataKey: n,
-                      type: s.props.iconType || a || "square",
-                      color: (0, o.fk)(e),
-                      value: i || n,
-                      payload: e.props,
-                    };
-                  })),
+                  ? (a || []).reduce(function (t, e) {
+                      var r = e.item,
+                        n = e.props,
+                        o = n.sectors || n.data || [];
+                      return t.concat(
+                        o.map(function (t) {
+                          return {
+                            type: s.props.iconType || r.props.legendType,
+                            value: t.name,
+                            color: t.fill,
+                            payload: t,
+                          };
+                        }),
+                      );
+                    }, [])
+                  : (a || []).map(function (t) {
+                      var e = t.item,
+                        r = e.props,
+                        n = r.dataKey,
+                        i = r.name,
+                        a = r.legendType;
+                      return {
+                        inactive: r.hide,
+                        dataKey: n,
+                        type: s.props.iconType || a || "square",
+                        color: (0, o.fk)(e),
+                        value: i || n,
+                        payload: e.props,
+                      };
+                    })),
             c(
               c(c({}, s.props), n.D.getWithHeight(s, u)),
               {},
@@ -27853,8 +27875,8 @@
                 (o = arguments.length) < 2
                   ? ((e = t), (t = 0), 1)
                   : o < 3
-                  ? 1
-                  : +r);
+                    ? 1
+                    : +r);
             for (
               var n = -1,
                 o = 0 | Math.max(0, Math.ceil((e - t) / r)),
@@ -28087,8 +28109,8 @@
                   })(t));
         }
         moveTo(t, e) {
-          this._append`M${(this._x0 = this._x1 = +t)},${(this._y0 = this._y1 =
-            +e)}`;
+          this
+            ._append`M${(this._x0 = this._x1 = +t)},${(this._y0 = this._y1 = +e)}`;
         }
         closePath() {
           null !== this._x1 &&
@@ -28101,8 +28123,8 @@
           this._append`Q${+t},${+e},${(this._x1 = +r)},${(this._y1 = +n)}`;
         }
         bezierCurveTo(t, e, r, n, o, i) {
-          this._append`C${+t},${+e},${+r},${+n},${(this._x1 = +o)},${(this._y1 =
-            +i)}`;
+          this
+            ._append`C${+t},${+e},${+r},${+n},${(this._x1 = +o)},${(this._y1 = +i)}`;
         }
         arcTo(t, e, r, o, a) {
           if (((t = +t), (e = +e), (r = +r), (o = +o), (a = +a) < 0))
@@ -28129,8 +28151,8 @@
                 w = x / g,
                 O = x / b;
               Math.abs(w - 1) > i && this._append`L${t + w * f},${e + w * p}`,
-                this._append`A${a},${a},0,0,${+(p * d > f * y)},${(this._x1 =
-                  t + O * l)},${(this._y1 = e + O * s)}`;
+                this
+                  ._append`A${a},${a},0,0,${+(p * d > f * y)},${(this._x1 = t + O * l)},${(this._y1 = e + O * s)}`;
             } else this._append`L${(this._x1 = t)},${(this._y1 = e)}`;
           else;
         }
@@ -28150,16 +28172,15 @@
             r &&
               (y < 0 && (y = (y % o) + o),
               y > a
-                ? this._append`A${r},${r},0,1,${d},${t - s},${
-                    e - f
-                  }A${r},${r},0,1,${d},${(this._x1 = p)},${(this._y1 = h)}`
+                ? this
+                    ._append`A${r},${r},0,1,${d},${t - s},${e - f}A${r},${r},0,1,${d},${(this._x1 = p)},${(this._y1 = h)}`
                 : y > i &&
-                  this._append`A${r},${r},0,${+(y >= n)},${d},${(this._x1 =
-                    t + r * Math.cos(c))},${(this._y1 = e + r * Math.sin(c))}`);
+                  this
+                    ._append`A${r},${r},0,${+(y >= n)},${d},${(this._x1 = t + r * Math.cos(c))},${(this._y1 = e + r * Math.sin(c))}`);
         }
         rect(t, e, r, n) {
-          this._append`M${(this._x0 = this._x1 = +t)},${(this._y0 = this._y1 =
-            +e)}h${(r = +r)}v${+n}h${-r}Z`;
+          this
+            ._append`M${(this._x0 = this._x1 = +t)},${(this._y0 = this._y1 = +e)}h${(r = +r)}v${+n}h${-r}Z`;
         }
         toString() {
           return this._;

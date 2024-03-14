@@ -115,9 +115,7 @@
                           c = e * l * n,
                           i = e * l * s,
                           h = e * (o[1] - o[0]) + o[0];
-                        return `translate(${
-                          e * (r[1] - r[0]) + r[0]
-                        }px, ${h}px) rotateY(${t}rad) rotateX(${c}rad) rotateZ(${i}rad) scale(${C})`;
+                        return `translate(${e * (r[1] - r[0]) + r[0]}px, ${h}px) rotateY(${t}rad) rotateX(${c}rad) rotateZ(${i}rad) scale(${C})`;
                       }),
                     };
                   })(e, c),
@@ -143,9 +141,7 @@
                         transform: t.interpolate((e) => {
                           const t = ((e * l) / 4) * a,
                             c = e * (n[1] - n[0]) + n[0];
-                          return `translate(${
-                            e * (s[1] - s[0]) + s[0]
-                          }px, ${c}px) rotateZ(${t}rad) scale(${i})`;
+                          return `translate(${e * (s[1] - s[0]) + s[0]}px, ${c}px) rotateZ(${t}rad) scale(${i})`;
                         }),
                       };
                     })(e, c),

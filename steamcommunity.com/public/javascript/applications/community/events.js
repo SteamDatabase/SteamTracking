@@ -371,8 +371,8 @@
                 bPrimaryPageFeature: e,
               })
             : this.state.bLoadedLandingState
-            ? s.createElement(_.V, { string: (0, f.Xx)("#Loading") })
-            : s.createElement("div", null);
+              ? s.createElement(_.V, { string: (0, f.Xx)("#Loading") })
+              : s.createElement("div", null);
         }
       };
       (0, E.gn)([S.ak], G.prototype, "HideModal", null),

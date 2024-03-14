@@ -270,11 +270,7 @@
                     "span",
                     { className: u.ReleaseDateText },
                     (c = t.releaserequest.release_date)
-                      ? `${(0, o.vX)(c)} ${(0, E.Sc)(
-                          c,
-                          {},
-                          { timeZoneName: "short" },
-                        )}`
+                      ? `${(0, o.vX)(c)} ${(0, E.Sc)(c, {}, { timeZoneName: "short" })}`
                       : (0, o.Xx)("#App_Landing_UnsetReleaseDate"),
                   ),
                 ),
@@ -499,7 +495,7 @@
           ]);
         let D =
             "seasonalsale" == l.type
-              ? `${i.De.PARTNER_BASE_URL}doc/doc/marketing/discounts/seasonalsales`
+              ? `${i.De.PARTNER_BASE_URL}doc/marketing/discounts/seasonalsales`
               : void 0,
           h = null == v ? void 0 : v.GetAssets().GetHeaderURL();
         null != D || (D = null == v ? void 0 : v.GetStorePageURL());
@@ -601,11 +597,7 @@
             g,
           ]),
           h = _.opt_in_id
-            ? `${i.De.PARTNER_BASE_URL}optin/sale/${
-                null === (o = _.opt_in_id) || void 0 === o
-                  ? void 0
-                  : o.replace("sale_", "")
-              }`
+            ? `${i.De.PARTNER_BASE_URL}optin/sale/${null === (o = _.opt_in_id) || void 0 === o ? void 0 : o.replace("sale_", "")}`
             : void 0,
           T = [];
         v.valveOnly &&
@@ -871,9 +863,7 @@
                       })(e, (e) => `${e.rtStartDate}_${e.rtEndDate}`)
                         .map(
                           (e) =>
-                            `${t.format(
-                              new Date(1e3 * e.rtStartDate),
-                            )} - ${t.format(new Date(1e3 * e.rtEndDate))}`,
+                            `${t.format(new Date(1e3 * e.rtStartDate))} - ${t.format(new Date(1e3 * e.rtEndDate))}`,
                         )
                         .join(", ");
                     })(e.discountsDuring)})`,
@@ -1804,16 +1794,16 @@
         return e.startDate.getTime() < t.startDate.getTime()
           ? -1
           : e.startDate.getTime() > t.startDate.getTime()
-          ? 1
-          : e.eventType < t.eventType
-          ? -1
-          : e.eventType > t.eventType
-          ? 1
-          : (null == e ? void 0 : e.id) < (null == t ? void 0 : t.id)
-          ? -1
-          : (null == e ? void 0 : e.id) > (null == t ? void 0 : t.id)
-          ? 1
-          : 0;
+            ? 1
+            : e.eventType < t.eventType
+              ? -1
+              : e.eventType > t.eventType
+                ? 1
+                : (null == e ? void 0 : e.id) < (null == t ? void 0 : t.id)
+                  ? -1
+                  : (null == e ? void 0 : e.id) > (null == t ? void 0 : t.id)
+                    ? 1
+                    : 0;
       }
       function ve(e) {
         const t = (0, f.NW)();

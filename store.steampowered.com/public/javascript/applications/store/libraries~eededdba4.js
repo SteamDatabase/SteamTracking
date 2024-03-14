@@ -27,14 +27,14 @@
                 (0, r.Z)(e, t, n[t]);
               })
             : Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
-            : i(Object(n)).forEach(function (t) {
-                Object.defineProperty(
-                  e,
-                  t,
-                  Object.getOwnPropertyDescriptor(n, t),
-                );
-              });
+              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
+              : i(Object(n)).forEach(function (t) {
+                  Object.defineProperty(
+                    e,
+                    t,
+                    Object.getOwnPropertyDescriptor(n, t),
+                  );
+                });
         }
         return e;
       }
@@ -81,8 +81,8 @@
                   ? t.insertionPoint
                     ? t.insertionPoint.nextSibling
                     : t.prepend
-                    ? t.container.firstChild
-                    : t.before
+                      ? t.container.firstChild
+                      : t.before
                   : t.tags[t.tags.length - 1].nextSibling),
                 t.container.insertBefore(e, n),
                 t.tags.push(e);
@@ -1238,8 +1238,8 @@
             ? e.ownerDocument.body
             : e.body
           : ot(t) && st(t)
-          ? t
-          : pt(t);
+            ? t
+            : pt(t);
       }
       function ft(e, t, n) {
         var r;
@@ -1489,8 +1489,8 @@
             Array.isArray(t)
               ? e.filter(Boolean)
               : "object" === (0, Xe.Z)(e) && null !== e
-              ? [e]
-              : []
+                ? [e]
+                : []
           );
           var t;
         },
@@ -1621,8 +1621,8 @@
           g = a
             ? window.innerHeight
             : Rt((c = u))
-            ? window.innerHeight
-            : c.clientHeight,
+              ? window.innerHeight
+              : c.clientHeight,
           b = It(u),
           y = parseInt(getComputedStyle(n).marginBottom, 10),
           w = parseInt(getComputedStyle(n).marginTop, 10),
@@ -3364,8 +3364,8 @@
                   backgroundColor: i
                     ? u.primary
                     : r
-                    ? u.primary25
-                    : "transparent",
+                      ? u.primary25
+                      : "transparent",
                   color: n ? u.neutral20 : i ? u.neutral0 : "inherit",
                   padding: ""
                     .concat(2 * s.baseUnit, "px ")
@@ -4301,12 +4301,13 @@
                         "up" === e
                           ? (i = o > 0 ? o - 1 : r.length - 1)
                           : "down" === e
-                          ? (i = (o + 1) % r.length)
-                          : "pageup" === e
-                          ? (i = o - t) < 0 && (i = 0)
-                          : "pagedown" === e
-                          ? (i = o + t) > r.length - 1 && (i = r.length - 1)
-                          : "last" === e && (i = r.length - 1),
+                            ? (i = (o + 1) % r.length)
+                            : "pageup" === e
+                              ? (i = o - t) < 0 && (i = 0)
+                              : "pagedown" === e
+                                ? (i = o + t) > r.length - 1 &&
+                                  (i = r.length - 1)
+                                : "last" === e && (i = r.length - 1),
                         (this.scrollToFocusedOptionOnUpdate = !0),
                         this.setState({
                           focusedOption: r[i],

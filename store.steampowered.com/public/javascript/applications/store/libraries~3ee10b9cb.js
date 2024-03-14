@@ -780,8 +780,8 @@
                   e <= r.scrollOffset
                     ? "start"
                     : e >= r.scrollOffset + n
-                    ? "end"
-                    : "start"),
+                      ? "end"
+                      : "start"),
                 "start" === t ||
                   ("end" === t ? (e -= n) : "center" === t && (e -= n / 2));
               var i = r.options.horizontal ? "scrollWidth" : "scrollHeight",

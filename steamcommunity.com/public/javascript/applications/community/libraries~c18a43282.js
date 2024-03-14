@@ -172,8 +172,8 @@
             !isNaN(parseFloat(t)) && isFinite(t)
               ? parseFloat(t)
               : "px" === t.slice(-2)
-              ? parseFloat(t.slice(0, -2))
-              : void 0);
+                ? parseFloat(t.slice(0, -2))
+                : void 0);
         if ("number" == typeof i) return i;
         var n = (function (e) {
           if ("%" === e.slice(-1)) return parseFloat(e.slice(0, -1)) / 100;
@@ -307,17 +307,17 @@
                     return e.viewportBottom - e.viewportTop == 0
                       ? f
                       : (e.viewportTop <= e.waypointTop &&
-                          e.waypointTop <= e.viewportBottom) ||
-                        (e.viewportTop <= e.waypointBottom &&
-                          e.waypointBottom <= e.viewportBottom) ||
-                        (e.waypointTop <= e.viewportTop &&
-                          e.viewportBottom <= e.waypointBottom)
-                      ? y
-                      : e.viewportBottom < e.waypointTop
-                      ? p
-                      : e.waypointTop < e.viewportTop
-                      ? b
-                      : f;
+                            e.waypointTop <= e.viewportBottom) ||
+                          (e.viewportTop <= e.waypointBottom &&
+                            e.waypointBottom <= e.viewportBottom) ||
+                          (e.waypointTop <= e.viewportTop &&
+                            e.viewportBottom <= e.waypointBottom)
+                        ? y
+                        : e.viewportBottom < e.waypointTop
+                          ? p
+                          : e.waypointTop < e.viewportTop
+                            ? b
+                            : f;
                   })(r),
                   i = this._previousPosition,
                   n = this.props,

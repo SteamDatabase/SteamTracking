@@ -280,8 +280,8 @@
             void 0 !== this.m_mapLocalUpdates.get(t).strTitle
             ? this.m_mapLocalUpdates.get(t).strTitle
             : null === (e = this.m_mapStoredDrafts.get(t)) || void 0 === e
-            ? void 0
-            : e.title;
+              ? void 0
+              : e.title;
         }
         GetDraftContent(t) {
           var e;
@@ -289,8 +289,8 @@
             void 0 !== this.m_mapLocalUpdates.get(t).strContent
             ? this.m_mapLocalUpdates.get(t).strContent
             : null === (e = this.m_mapStoredDrafts.get(t)) || void 0 === e
-            ? void 0
-            : e.content;
+              ? void 0
+              : e.content;
         }
         GetDraftTitleWithFallback(t, e = d.IN.k_ESteamRealmGlobal) {
           var a, r, s, n, o, i;
@@ -308,13 +308,13 @@
                   void 0 !== r
                     ? r
                     : null === (s = this.m_mapStoredDrafts.get(t)) ||
-                      void 0 === s
-                    ? void 0
-                    : s.title) && void 0 !== n
+                        void 0 === s
+                      ? void 0
+                      : s.title) && void 0 !== n
                 ? n
                 : null === (o = this.m_mapStoredDrafts.get(l)) || void 0 === o
-                ? void 0
-                : o.title) && void 0 !== i
+                  ? void 0
+                  : o.title) && void 0 !== i
             ? i
             : "";
         }
@@ -334,13 +334,13 @@
                   void 0 !== r
                     ? r
                     : null === (s = this.m_mapStoredDrafts.get(t)) ||
-                      void 0 === s
-                    ? void 0
-                    : s.content) && void 0 !== n
+                        void 0 === s
+                      ? void 0
+                      : s.content) && void 0 !== n
                 ? n
                 : null === (o = this.m_mapStoredDrafts.get(l)) || void 0 === o
-                ? void 0
-                : o.content) && void 0 !== i
+                  ? void 0
+                  : o.content) && void 0 !== i
             ? i
             : "";
         }
@@ -919,10 +919,7 @@
         const e = ("0000000000000000" + o.Z.fromString(t, !0, 10).toString(16))
           .slice(-16)
           .toUpperCase();
-        return `${e.slice(0, 4)}-${e.slice(4, 8)}-${e.slice(8, 12)}-${e.slice(
-          12,
-          16,
-        )}`;
+        return `${e.slice(0, 4)}-${e.slice(4, 8)}-${e.slice(8, 12)}-${e.slice(12, 16)}`;
       }
       function y(t, e) {
         return [t && A.Get().GetFAQPublishedContent(t, e), !0];

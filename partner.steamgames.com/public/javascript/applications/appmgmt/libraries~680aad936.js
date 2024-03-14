@@ -218,12 +218,12 @@
                   });
               }
             : "function" == typeof setImmediate
-            ? function (M) {
-                setImmediate(M);
-              }
-            : function (M) {
-                setTimeout(M);
-              };
+              ? function (M) {
+                  setImmediate(M);
+                }
+              : function (M) {
+                  setTimeout(M);
+                };
       function O(M, z, b) {
         c(z);
         for (var p = 0; p < z.keys.length; p++)
@@ -342,8 +342,8 @@
                   ? b.join("")
                   : void 0
                 : (b = z.match(/[A-Z]{3,5}/g))
-                ? b[0]
-                : void 0) && (b = void 0),
+                  ? b[0]
+                  : void 0) && (b = void 0),
             (this.at = +M),
             (this.abbr = b),
             (this.offset = M.getTimezoneOffset());
@@ -362,10 +362,10 @@
           return M.offsetScore !== z.offsetScore
             ? M.offsetScore - z.offsetScore
             : M.abbrScore !== z.abbrScore
-            ? M.abbrScore - z.abbrScore
-            : M.zone.population !== z.zone.population
-            ? z.zone.population - M.zone.population
-            : z.zone.name.localeCompare(M.zone.name);
+              ? M.abbrScore - z.abbrScore
+              : M.zone.population !== z.zone.population
+                ? z.zone.population - M.zone.population
+                : z.zone.name.localeCompare(M.zone.name);
         }
         function l(M, z) {
           var b, p;
@@ -454,10 +454,10 @@
           return A instanceof W
             ? A
             : "string" == typeof A
-            ? ((A = new W(A)), (b[M] = A), A)
-            : p[M] && z !== X && (O = X(p[M], X))
-            ? ((A = b[M] = new W())._set(O), (A.name = c[M]), A)
-            : null;
+              ? ((A = new W(A)), (b[M] = A), A)
+              : p[M] && z !== X && (O = X(p[M], X))
+                ? ((A = b[M] = new W())._set(O), (A.name = c[M]), A)
+                : null;
         }
         function y(M) {
           var z, b, O, A;

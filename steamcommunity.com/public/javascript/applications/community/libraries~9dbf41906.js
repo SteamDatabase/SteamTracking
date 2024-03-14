@@ -752,12 +752,12 @@
           (null === t
             ? ae(e)
             : null === e
-            ? oe(t)
-            : t.depth === e.depth
-            ? re(t, e)
-            : t.depth > e.depth
-            ? le(t, e)
-            : ue(t, e),
+              ? oe(t)
+              : t.depth === e.depth
+                ? re(t, e)
+                : t.depth > e.depth
+                  ? le(t, e)
+                  : ue(t, e),
           (ne = e));
       }
       var se = {
@@ -875,8 +875,8 @@
               ? ((xe = !1), (ve = Se = Te()))
               : ((xe = !0), (Se = ve))
             : null === Se.next
-            ? ((xe = !1), (Se = Se.next = Te()))
-            : ((xe = !0), (Se = Se.next)),
+              ? ((xe = !1), (Se = Se.next = Te()))
+              : ((xe = !0), (Se = Se.next)),
           Se
         );
       }
@@ -905,8 +905,8 @@
                 ? t()
                 : t
               : void 0 !== n
-              ? n(t)
-              : t),
+                ? n(t)
+                : t),
           (Se.memoizedState = e),
           (e = (e = Se.queue = { last: null, dispatch: null }).dispatch =
             Be.bind(null, be, e)),
@@ -2844,12 +2844,12 @@
           (null === t
             ? Tt(e)
             : null === e
-            ? Ft(t)
-            : t.depth === e.depth
-            ? Et(t, e)
-            : t.depth > e.depth
-            ? Rt(t, e)
-            : _t(t, e),
+              ? Ft(t)
+              : t.depth === e.depth
+                ? Et(t, e)
+                : t.depth > e.depth
+                  ? Rt(t, e)
+                  : _t(t, e),
           (Ct = e));
       }
       var It = {
@@ -2967,8 +2967,8 @@
               ? ((qt = !1), (At = jt = Gt()))
               : ((qt = !0), (jt = At))
             : null === jt.next
-            ? ((qt = !1), (jt = jt.next = Gt()))
-            : ((qt = !0), (jt = jt.next)),
+              ? ((qt = !1), (jt = jt.next = Gt()))
+              : ((qt = !0), (jt = jt.next)),
           jt
         );
       }
@@ -2997,8 +2997,8 @@
                 ? t()
                 : t
               : void 0 !== n
-              ? n(t)
-              : t),
+                ? n(t)
+                : t),
           (jt.memoizedState = e),
           (e = (e = jt.queue = { last: null, dispatch: null }).dispatch =
             tn.bind(null, Lt, e)),
@@ -3989,8 +3989,8 @@
                   "http://www.w3.org/2000/svg" === e
                     ? 2
                     : "http://www.w3.org/1998/Math/MathML" === e
-                    ? 3
-                    : 0,
+                      ? 3
+                      : 0,
                   null,
                 );
               })(t ? t.namespaceURI : void 0),

@@ -100,7 +100,7 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 
 			foreach( $this->URLsToFetch as $Url )
 			{
-				$KnownUrls[] = $Url[ 'URL' ];
+				$KnownUrls[ $Url[ 'URL' ] ] = true;
 			}
 
 			$Tries = 5;
@@ -744,7 +744,7 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 		}
 
 		/**
-		 * @param string[] $KnownUrls
+		 * @param array<string, true> $KnownUrls
 		 *
 		 * @return array<int, array{URL: string, File: string}>
 		 */
@@ -753,6 +753,7 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 			system( 'node generate_manifest_urls.mjs' );
 
 			$URLsToFetch = [];
+			$KnownFilenames = [];
 			$ManifestUrlsPath = __DIR__ . '/.support/urls_from_manifests.txt';
 
 			if( !file_exists( $ManifestUrlsPath ) )
@@ -761,7 +762,17 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 			}
 
 			$ManifestUrls = file( $ManifestUrlsPath, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES );
-			$ManifestUrls = array_diff( $ManifestUrls, $KnownUrls );
+
+			foreach( $KnownUrls as $Url => $Trash )
+			{
+				$QuestionMark = strrpos( $Url, '?' );
+
+				if( $QuestionMark !== false && str_starts_with( $Url, 'https://' ) )
+				{
+					$Filename = substr( $Url, 8, $QuestionMark - 8 );
+					$KnownFilenames[] = $Filename;
+				}
+			}
 
 			foreach( $ManifestUrls as $Url )
 			{
@@ -777,10 +788,18 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 					throw new Exception( $Url . ' does not contain a question mark' );
 				}
 
+				$Filename = substr( $Url, 8, $QuestionMark - 8 );
+
+				if( isset( $KnownUrls[ $Url ] ) )
+				{
+					continue;
+				}
+
+				$KnownFilenames[] = $Filename;
 				$URLsToFetch[] =
 				[
 					'URL'  => $Url,
-					'File' => substr( $Url, 8, $QuestionMark - 8 ),
+					'File' => $Filename,
 				];
 			}
 
@@ -789,13 +808,13 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 
 			$IsChunkFile = static fn( string $Filename ) : bool => preg_match( '/^(chunk~|libraries~|[0-9]+\.)/', $Filename, $Matches ) === 1;
 
-			foreach( $URLsToFetch as $Url )
+			foreach( $KnownFilenames as $Filepath )
 			{
-				$Filename = basename( $Url[ 'File' ] );
+				$Filename = basename( $Filepath );
 
 				if( $IsChunkFile( $Filename ) )
 				{
-					$Folder = __DIR__ . '/' . dirname( $Url[ 'File' ] ) . '/';
+					$Folder = __DIR__ . '/' . dirname( $Filepath ) . '/';
 
 					if( !isset( $Folders[ $Folder ] ) )
 					{
@@ -824,16 +843,6 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 						$this->Log( 'Chunk ' . $FilepathOnDisk . ' no longer exists in manifest' );
 
 						unlink( $FilepathOnDisk );
-					}
-				}
-
-				foreach( [ 'chunk~*', 'libraries~*' ] as $Glob )
-				{
-					foreach( glob( $Folder . $Glob ) as $FilepathOnDisk )
-					{
-						$Filename = basename( $FilepathOnDisk );
-
-						
 					}
 				}
 			}

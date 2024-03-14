@@ -103,17 +103,17 @@
               return null == e.children
                 ? { current: null }
                 : t.status === c.d0 && e.mode === l
-                ? { status: c.d0 }
-                : !t.current ||
-                  ((r = t.current),
-                  (i = e.children),
-                  r === i ||
-                    (s.isValidElement(r) &&
-                      s.isValidElement(i) &&
-                      null != r.key &&
-                      r.key === i.key))
-                ? { current: s.cloneElement(e.children, { in: !0 }) }
-                : { status: c.Ix };
+                  ? { status: c.d0 }
+                  : !t.current ||
+                      ((r = t.current),
+                      (i = e.children),
+                      r === i ||
+                        (s.isValidElement(r) &&
+                          s.isValidElement(i) &&
+                          null != r.key &&
+                          r.key === i.key))
+                    ? { current: s.cloneElement(e.children, { in: !0 }) }
+                    : { status: c.Ix };
               var r, i;
             }),
             (r.render = function () {

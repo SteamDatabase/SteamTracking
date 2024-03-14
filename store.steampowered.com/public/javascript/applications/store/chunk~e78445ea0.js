@@ -2086,8 +2086,8 @@
               m[e] == ne
                 ? "Summary" + e
                 : m[e] == oe
-                ? "Placeholder" + e
-                : m[e].toString(),
+                  ? "Placeholder" + e
+                  : m[e].toString(),
             [m],
           ),
           ce = r.useCallback((e) => g, [g]),
@@ -2583,8 +2583,8 @@
                 h.jg.Get().GetRecommendedTags().has(t.tagid)
                   ? 0
                   : h.jg.Get().GetRecommendedTags().has(e.tagid)
-                  ? 1
-                  : -1,
+                    ? 1
+                    : -1,
               ),
             [t],
           );

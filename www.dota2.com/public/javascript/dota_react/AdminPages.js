@@ -358,11 +358,7 @@
             displayName: "Guild",
             formatFunction: (e = {}, t = "") => {
               var a, n;
-              const l = `${t}${
-                  null === (a = null == e ? void 0 : e.guild) || void 0 === a
-                    ? void 0
-                    : a.guild_id
-                }`,
+              const l = `${t}${null === (a = null == e ? void 0 : e.guild) || void 0 === a ? void 0 : a.guild_id}`,
                 r =
                   (null === (n = null == e ? void 0 : e.guild) || void 0 === n
                     ? void 0
@@ -398,11 +394,7 @@
                   `+/- ${t}`,
                   i.createElement("img", {
                     className: P().RankedBadgeIcon,
-                    src: `${
-                      A.Y.CDN_URL
-                    }/apps/dota2/images/small_ranks/ranked_icons_emoticon_${Math.floor(
-                      a / 10,
-                    )}.png`,
+                    src: `${A.Y.CDN_URL}/apps/dota2/images/small_ranks/ranked_icons_emoticon_${Math.floor(a / 10)}.png`,
                   }),
                 ),
               ),
@@ -470,19 +462,19 @@
               e < 0
                 ? (n = K)
                 : e <= 2e3
-                ? (n = U)
-                : e <= 4e3
-                ? (n = Y)
-                : e <= 6e3 && (n = x);
+                  ? (n = U)
+                  : e <= 4e3
+                    ? (n = Y)
+                    : e <= 6e3 && (n = x);
               let l = K;
               return (
                 t < 0
                   ? (l = K)
                   : t <= 2e3
-                  ? (l = U)
-                  : t <= 4e3
-                  ? (l = Y)
-                  : t <= 6e3 && (l = x),
+                    ? (l = U)
+                    : t <= 4e3
+                      ? (l = Y)
+                      : t <= 6e3 && (l = x),
                 i.createElement(
                   "div",
                   null,
@@ -1058,14 +1050,14 @@
                 t
                   ? "Permanent"
                   : (a = e.duration)
-                  ? a < 60
-                    ? `${m().duration(a, "seconds").asSeconds()} seconds`
-                    : a < 3600
-                    ? `${m().duration(a, "seconds").asMinutes()} min`
-                    : a < 864e3
-                    ? `${m().duration(a, "seconds").asHours()} hours`
-                    : `${m().duration(a, "seconds").asDays()} days`
-                  : "",
+                    ? a < 60
+                      ? `${m().duration(a, "seconds").asSeconds()} seconds`
+                      : a < 3600
+                        ? `${m().duration(a, "seconds").asMinutes()} min`
+                        : a < 864e3
+                          ? `${m().duration(a, "seconds").asHours()} hours`
+                          : `${m().duration(a, "seconds").asDays()} days`
+                    : "",
               ),
               i.createElement("td", null, e.admin ? "ADMIN" : "Automated"),
               i.createElement("td", null, e.comment),
@@ -1224,9 +1216,7 @@
                     "a",
                     {
                       key: e,
-                      href: `${A.Y.BASE_URL}matches/match/${e}?u=${D(
-                        A.Y.DOTA_APP_ID,
-                      )}&appid=${A.Y.DOTA_APP_ID}&highlight=${t}`,
+                      href: `${A.Y.BASE_URL}matches/match/${e}?u=${D(A.Y.DOTA_APP_ID)}&appid=${A.Y.DOTA_APP_ID}&highlight=${t}`,
                     },
                     a || e,
                   ))(e.cellData, e.columnData.strAccountId),
@@ -1312,20 +1302,20 @@
                           ),
                         )
                       : o < 0
-                      ? a.push(
-                          i.createElement(
-                            "span",
-                            { key: "rankChange", style: { color: c } },
-                            ` (${o})`,
+                        ? a.push(
+                            i.createElement(
+                              "span",
+                              { key: "rankChange", style: { color: c } },
+                              ` (${o})`,
+                            ),
+                          )
+                        : a.push(
+                            i.createElement(
+                              "span",
+                              { key: "rankChange", style: { color: c } },
+                              ` (-${o})`,
+                            ),
                           ),
-                        )
-                      : a.push(
-                          i.createElement(
-                            "span",
-                            { key: "rankChange", style: { color: c } },
-                            ` (-${o})`,
-                          ),
-                        ),
                     a
                   );
                 }
@@ -1529,17 +1519,7 @@
                       : a.assists,
                   )
                   ? " - / - / - "
-                  : `${e.cellData}/${
-                      null === (n = null == e ? void 0 : e.rowData) ||
-                      void 0 === n
-                        ? void 0
-                        : n.deaths
-                    }/${
-                      null === (l = null == e ? void 0 : e.rowData) ||
-                      void 0 === l
-                        ? void 0
-                        : l.assists
-                    }`;
+                  : `${e.cellData}/${null === (n = null == e ? void 0 : e.rowData) || void 0 === n ? void 0 : n.deaths}/${null === (l = null == e ? void 0 : e.rowData) || void 0 === l ? void 0 : l.assists}`;
               },
             },
             {
@@ -2616,9 +2596,7 @@
                             {
                               target: "_blank",
                               rel: "noopener noreferrer",
-                              href: `${A.Y.BASE_URL}${N._.personadetails(
-                                je,
-                              ).substr(1)}`,
+                              href: `${A.Y.BASE_URL}${N._.personadetails(je).substr(1)}`,
                             },
                             je,
                           ),
@@ -3476,10 +3454,10 @@
                       ("Win" === e
                         ? "green"
                         : "Loss" === e
-                        ? "red"
-                        : "Tie" === e
-                        ? "yellow"
-                        : "skyblue"),
+                          ? "red"
+                          : "Tie" === e
+                            ? "yellow"
+                            : "skyblue"),
                   },
                 },
                 e,
@@ -3628,17 +3606,17 @@
                   e.is_pro && !t.is_pro
                     ? -1
                     : !e.is_pro && t.is_pro
-                    ? 1
-                    : e.admin && !t.admin
-                    ? -1
-                    : (!e.admin && t.admin) ||
-                      (null == e ? void 0 : e.pro_name.toLowerCase()) >
-                        (null == t ? void 0 : t.pro_name.toLowerCase())
-                    ? 1
-                    : (null == e ? void 0 : e.pro_name.toLowerCase()) <
-                      (null == t ? void 0 : t.pro_name.toLowerCase())
-                    ? -1
-                    : 0;
+                      ? 1
+                      : e.admin && !t.admin
+                        ? -1
+                        : (!e.admin && t.admin) ||
+                            (null == e ? void 0 : e.pro_name.toLowerCase()) >
+                              (null == t ? void 0 : t.pro_name.toLowerCase())
+                          ? 1
+                          : (null == e ? void 0 : e.pro_name.toLowerCase()) <
+                              (null == t ? void 0 : t.pro_name.toLowerCase())
+                            ? -1
+                            : 0;
                 i.sort(a);
               } catch (e) {
                 console.log("Error fetching individual player info.");
@@ -3779,15 +3757,15 @@
                                   a.team_1_wins > a.team_2_wins
                                     ? (a.outcome = "Win")
                                     : a.team_1_wins === a.team_2_wins
-                                    ? (a.outcome = "Tie")
-                                    : (a.outcome = "Loss"),
+                                      ? (a.outcome = "Tie")
+                                      : (a.outcome = "Loss"),
                                   (a.score = `${a.team_1_wins} - ${a.team_2_wins}`))
                                 : ((a.opponent_team_id = a.team_id_1),
                                   a.team_2_wins > a.team_1_wins
                                     ? (a.outcome = "Win")
                                     : a.team_2_wins === a.team_1_wins
-                                    ? (a.outcome = "Tie")
-                                    : (a.outcome = "Loss"),
+                                      ? (a.outcome = "Tie")
+                                      : (a.outcome = "Loss"),
                                   (a.score = `${a.team_2_wins} - ${a.team_1_wins}`)),
                               0 === a.team_1_wins &&
                                 0 === a.team_2_wins &&
@@ -3800,8 +3778,8 @@
                       e.scheduled_time > t.scheduled_time
                         ? -1
                         : e.scheduled_time < t.scheduled_time
-                        ? 1
-                        : 0,
+                          ? 1
+                          : 0,
                     ),
                       c.length &&
                         U(
@@ -3880,9 +3858,7 @@
               c.createElement(
                 "h1",
                 { className: y().Header },
-                `Team Details for ${null == k ? void 0 : k.name} (${
-                  k.team_id
-                })`,
+                `Team Details for ${null == k ? void 0 : k.name} (${k.team_id})`,
               ),
               c.createElement(
                 "div",

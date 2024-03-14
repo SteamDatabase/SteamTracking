@@ -1071,17 +1071,17 @@
                     Z(e, t, n[t]);
                   })
                 : Object.getOwnPropertyDescriptors
-                ? Object.defineProperties(
-                    e,
-                    Object.getOwnPropertyDescriptors(n),
-                  )
-                : H(Object(n)).forEach(function (t) {
-                    Object.defineProperty(
+                  ? Object.defineProperties(
                       e,
-                      t,
-                      Object.getOwnPropertyDescriptor(n, t),
-                    );
-                  });
+                      Object.getOwnPropertyDescriptors(n),
+                    )
+                  : H(Object(n)).forEach(function (t) {
+                      Object.defineProperty(
+                        e,
+                        t,
+                        Object.getOwnPropertyDescriptor(n, t),
+                      );
+                    });
             }
             return e;
           }
@@ -1475,17 +1475,17 @@
                     me(e, t, n[t]);
                   })
                 : Object.getOwnPropertyDescriptors
-                ? Object.defineProperties(
-                    e,
-                    Object.getOwnPropertyDescriptors(n),
-                  )
-                : ie(Object(n)).forEach(function (t) {
-                    Object.defineProperty(
+                  ? Object.defineProperties(
                       e,
-                      t,
-                      Object.getOwnPropertyDescriptor(n, t),
-                    );
-                  });
+                      Object.getOwnPropertyDescriptors(n),
+                    )
+                  : ie(Object(n)).forEach(function (t) {
+                      Object.defineProperty(
+                        e,
+                        t,
+                        Object.getOwnPropertyDescriptor(n, t),
+                      );
+                    });
             }
             return e;
           }
@@ -1927,12 +1927,12 @@
                       return this.props.updateOnView
                         ? this.props.updateOnView
                         : e.match(/[lLD]/)
-                        ? Oe
-                        : -1 !== e.indexOf("M")
-                        ? be
-                        : -1 !== e.indexOf("Y")
-                        ? ve
-                        : Oe;
+                          ? Oe
+                          : -1 !== e.indexOf("M")
+                            ? be
+                            : -1 !== e.indexOf("Y")
+                              ? ve
+                              : Oe;
                     },
                   },
                   {
@@ -1986,8 +1986,8 @@
                         (r = (n = n || this.props).utc
                           ? i.a.utc(e, t, n.strictParsing)
                           : n.displayTimeZone
-                          ? i.a.tz(e, t, n.displayTimeZone)
-                          : i()(e, t, n.strictParsing)),
+                            ? i.a.tz(e, t, n.displayTimeZone)
+                            : i()(e, t, n.strictParsing)),
                         n.locale && r.locale(n.locale),
                         r
                       );
@@ -2044,9 +2044,9 @@
                         e.utc
                           ? (t.utc(), n && n.utc())
                           : e.displayTimeZone
-                          ? (t.tz(e.displayTimeZone),
-                            n && n.tz(e.displayTimeZone))
-                          : (t.locale(), n && n.locale());
+                            ? (t.tz(e.displayTimeZone),
+                              n && n.tz(e.displayTimeZone))
+                            : (t.locale(), n && n.locale());
                       var r = { viewDate: t, selectedDate: n };
                       n &&
                         n.isValid() &&
@@ -2073,12 +2073,13 @@
                       return t.inputProps.value
                         ? t.inputProps.value
                         : e && e.isValid()
-                        ? e.format(this.getFormat("datetime"))
-                        : t.value && "string" == typeof t.value
-                        ? t.value
-                        : t.initialValue && "string" == typeof t.initialValue
-                        ? t.initialValue
-                        : "";
+                          ? e.format(this.getFormat("datetime"))
+                          : t.value && "string" == typeof t.value
+                            ? t.value
+                            : t.initialValue &&
+                                "string" == typeof t.initialValue
+                              ? t.initialValue
+                              : "";
                     },
                   },
                   {
@@ -2225,8 +2226,8 @@
                         return t && "function" == typeof t.setClickOutsideRef
                           ? t.setClickOutsideRef()(e)
                           : "function" == typeof e.setClickOutsideRef
-                          ? e.setClickOutsideRef()
-                          : Object(q.findDOMNode)(e);
+                            ? e.setClickOutsideRef()
+                            : Object(q.findDOMNode)(e);
                       }),
                       (r.enableOnClickOutside = function () {
                         if ("undefined" != typeof document && !ne[r._uid]) {

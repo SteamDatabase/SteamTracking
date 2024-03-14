@@ -493,9 +493,7 @@
                       { className: m().Body },
                       t.real_name,
                       a.createElement("br", null),
-                      `${t.city}${t.city ? "," : ""} ${t.state}${
-                        t.state ? "," : ""
-                      } ${t.country}`,
+                      `${t.city}${t.city ? "," : ""} ${t.state}${t.state ? "," : ""} ${t.country}`,
                     ),
                   ),
                 ),

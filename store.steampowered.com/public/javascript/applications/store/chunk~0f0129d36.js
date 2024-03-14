@@ -465,11 +465,7 @@
                     (null === (n = r.Body().definitions()) || void 0 === n
                       ? void 0
                       : n.length),
-                  `Requested definition ID ${e} and receive # ${
-                    null === (i = r.Body().definitions()) || void 0 === i
-                      ? void 0
-                      : i.length
-                  }, expecting exactly one.`,
+                  `Requested definition ID ${e} and receive # ${null === (i = r.Body().definitions()) || void 0 === i ? void 0 : i.length}, expecting exactly one.`,
                 );
                 const t = r.Body().definitions()[0].toObject();
                 return (
@@ -1407,25 +1403,25 @@
               Boolean(_) && _,
             )
           : p || h || g
-          ? a.createElement(
-              i.uH,
-              {
-                strTitle: t,
-                strDescription: h || (0, o.Xx)("#EventDisplay_Share_Success"),
-                bAlertDialog: !0,
-                closeModal: l,
-              },
-              a.createElement(a.Fragment, null, Boolean(g) && g),
-            )
-          : a.createElement(
-              i.uH,
-              { strTitle: t, closeModal: () => {} },
-              a.createElement(s.V, {
-                string: c || S || (0, o.Xx)("#Loading"),
-                size: "medium",
-                position: "center",
-              }),
-            );
+            ? a.createElement(
+                i.uH,
+                {
+                  strTitle: t,
+                  strDescription: h || (0, o.Xx)("#EventDisplay_Share_Success"),
+                  bAlertDialog: !0,
+                  closeModal: l,
+                },
+                a.createElement(a.Fragment, null, Boolean(g) && g),
+              )
+            : a.createElement(
+                i.uH,
+                { strTitle: t, closeModal: () => {} },
+                a.createElement(s.V, {
+                  string: c || S || (0, o.Xx)("#Loading"),
+                  size: "medium",
+                  position: "center",
+                }),
+              );
       }
     },
     25979: (e, t, n) => {
@@ -1828,63 +1824,63 @@
                 ),
               )
             : this.state.bSummaryMode
-            ? i.createElement(
-                "div",
-                {
-                  className: Y().dynamiclink_box,
-                  onClick: this.OnSketchFabClick,
-                },
-                Boolean(this.state.bLoadedMetaData)
-                  ? i.createElement(
-                      i.Fragment,
-                      null,
-                      i.createElement("img", {
-                        className: Y().dynamiclink_preview,
-                        src: this.state.data.thumbnail_url,
-                      }),
-                      i.createElement("img", {
-                        className: Y().sketchfab_play_overlay_image,
-                      }),
-                      i.createElement(
-                        "div",
-                        { className: Y().dynamiclink_content },
+              ? i.createElement(
+                  "div",
+                  {
+                    className: Y().dynamiclink_box,
+                    onClick: this.OnSketchFabClick,
+                  },
+                  Boolean(this.state.bLoadedMetaData)
+                    ? i.createElement(
+                        i.Fragment,
+                        null,
+                        i.createElement("img", {
+                          className: Y().dynamiclink_preview,
+                          src: this.state.data.thumbnail_url,
+                        }),
+                        i.createElement("img", {
+                          className: Y().sketchfab_play_overlay_image,
+                        }),
                         i.createElement(
                           "div",
-                          { className: Y().dynamiclink_name },
+                          { className: Y().dynamiclink_content },
                           i.createElement(
-                            "span",
-                            { className: Y().dynamiclink_type },
-                            (0, x.Xx)("#EventDisplay_Sketchfab"),
+                            "div",
+                            { className: Y().dynamiclink_name },
+                            i.createElement(
+                              "span",
+                              { className: Y().dynamiclink_type },
+                              (0, x.Xx)("#EventDisplay_Sketchfab"),
+                            ),
+                            i.createElement(
+                              "div",
+                              null,
+                              this.state.data.title,
+                              " ",
+                            ),
                           ),
                           i.createElement(
                             "div",
-                            null,
-                            this.state.data.title,
-                            " ",
+                            { className: Y().dynamiclink_author },
+                            this.state.data.author_name,
                           ),
                         ),
-                        i.createElement(
-                          "div",
-                          { className: Y().dynamiclink_author },
-                          this.state.data.author_name,
-                        ),
-                      ),
-                    )
-                  : i.createElement(F.V, { size: "medium" }),
-              )
-            : i.createElement(
-                "div",
-                { className: Y().sketchfabmodelembedded },
-                i.createElement("iframe", {
-                  className: Y().sketchfabmodelembedded,
-                  src:
-                    "https://sketchfab.com/models/" +
-                    this.props.modelID +
-                    "/embed?autostart=1",
-                  frameBorder: 0,
-                  allowFullScreen: !0,
-                }),
-              );
+                      )
+                    : i.createElement(F.V, { size: "medium" }),
+                )
+              : i.createElement(
+                  "div",
+                  { className: Y().sketchfabmodelembedded },
+                  i.createElement("iframe", {
+                    className: Y().sketchfabmodelembedded,
+                    src:
+                      "https://sketchfab.com/models/" +
+                      this.props.modelID +
+                      "/embed?autostart=1",
+                    frameBorder: 0,
+                    allowFullScreen: !0,
+                  }),
+                );
         }
       };
       (0, a.gn)([g.ak], Z.prototype, "OnSketchFabClick", null),
@@ -2040,10 +2036,10 @@
             "gid" == t[1]
               ? (a = new S.K(t[2]))
               : "groups" == t[1]
-              ? (o = t[2])
-              : isNaN(+t[2])
-              ? (r = t[2])
-              : (n = Number(t[2]));
+                ? (o = t[2])
+                : isNaN(+t[2])
+                  ? (r = t[2])
+                  : (n = Number(t[2]));
             let s = t[3];
             if (
               ((void 0 !== n && n > 0) ||
@@ -2107,12 +2103,12 @@
             "gid" == n[1]
               ? (a = new S.K(n[2]))
               : "group" == n[1]
-              ? (a = S.K.InitFromClanID(Number.parseInt(n[2])))
-              : "groups" == n[1]
-              ? (o = n[2])
-              : isNaN(+n[2])
-              ? (r = n[2])
-              : (e = Number(n[2]));
+                ? (a = S.K.InitFromClanID(Number.parseInt(n[2])))
+                : "groups" == n[1]
+                  ? (o = n[2])
+                  : isNaN(+n[2])
+                    ? (r = n[2])
+                    : (e = Number(n[2]));
             const s = n[3];
             if (
               ((void 0 !== e && e > 0) ||
@@ -2747,10 +2743,10 @@
         return 1 == n
           ? i.createElement(it, { fileUploadManager: t })
           : 3 == n || 5 == n || 4 == n
-          ? i.createElement(ot, { fileUploadManager: t })
-          : 0 != n
-          ? i.createElement(rt, { fileUploadManager: t })
-          : null;
+            ? i.createElement(ot, { fileUploadManager: t })
+            : 0 != n
+              ? i.createElement(rt, { fileUploadManager: t })
+              : null;
       }
       function it(e) {
         const { fileUploadManager: t } = e,
@@ -2908,16 +2904,16 @@
           "string" == typeof a && a.length > 0 && "#" == a[0]
             ? i.createElement("a", { className: l, href: a }, e.children)
             : "steam://settings/account" == a
-            ? i.createElement(
-                Ve.ns,
-                { className: l, href: "steam://settings/account" },
-                e.children,
-              )
-            : i.createElement(
-                d.z,
-                { className: l, url: a, event: e.context.event, id: o },
-                e.children,
-              )
+              ? i.createElement(
+                  Ve.ns,
+                  { className: l, href: "steam://settings/account" },
+                  e.children,
+                )
+              : i.createElement(
+                  d.z,
+                  { className: l, url: a, event: e.context.event, id: o },
+                  e.children,
+                )
         );
       }
       function ht(e) {
@@ -3225,8 +3221,8 @@
               i.createElement(at, { fileUploadManager: r }),
             )
           : t
-          ? i.createElement("div", null, (0, x.Xx)("#CloudUpload_NotSupport"))
-          : null;
+            ? i.createElement("div", null, (0, x.Xx)("#CloudUpload_NotSupport"))
+            : null;
       }
       class Lt extends i.Component {
         constructor(e) {
@@ -3427,8 +3423,8 @@
         "string" == typeof e
           ? (n = e)
           : "location" in e
-          ? (n = e.location.search)
-          : "search" in e && (n = e.search);
+            ? (n = e.location.search)
+            : "search" in e && (n = e.search);
         const a = new URLSearchParams(n.substring(1));
         if (a.has(t)) {
           const e = a.getAll(t);
@@ -3959,15 +3955,9 @@
           (null == r ? void 0 : r.item_movie_mp4) &&
           (null == r ? void 0 : r.item_movie_webm)
         ) {
-          const e = `${d.De.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${
-              null == r ? void 0 : r.item_image_large
-            }`,
-            n = `${d.De.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${
-              null == r ? void 0 : r.item_movie_webm
-            }`,
-            a = `${d.De.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${
-              null == r ? void 0 : r.item_movie_mp4
-            }`;
+          const e = `${d.De.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${null == r ? void 0 : r.item_image_large}`,
+            n = `${d.De.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${null == r ? void 0 : r.item_movie_webm}`,
+            a = `${d.De.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${null == r ? void 0 : r.item_movie_mp4}`;
           return i.createElement(
             "video",
             { muted: !0, controls: !1, autoPlay: !0, loop: !0, poster: e },
@@ -3977,10 +3967,7 @@
           );
         }
         if (r) {
-          const n = `${d.De.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${
-            (null == r ? void 0 : r.item_image_small) ||
-            (null == r ? void 0 : r.item_image_large)
-          }`;
+          const n = `${d.De.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${(null == r ? void 0 : r.item_image_small) || (null == r ? void 0 : r.item_image_large)}`;
           return i.createElement("img", {
             className: e.className,
             src: n,
@@ -4651,9 +4638,7 @@
           return {
             width: n,
             height: a,
-            backgroundPosition: `${
-              -o * ((n * i) / this.props.uploadFile.width)
-            }px ${-s * ((a * r) / this.props.uploadFile.height)}px`,
+            backgroundPosition: `${-o * ((n * i) / this.props.uploadFile.width)}px ${-s * ((a * r) / this.props.uploadFile.height)}px`,
             backgroundSize: `${100 * i}% ${100 * r}%`,
             backgroundImage: `url(${this.props.uploadFile.dataUrl})`,
           };
@@ -4790,25 +4775,27 @@
                             string: (0, M.Xx)("#Loading"),
                           })
                         : Boolean(l.length > 0)
-                        ? l.map((e) =>
-                            s.createElement(ce, {
-                              key: "ci" + e.image_hash,
-                              clanImage: e,
-                              searchStringHilight: a,
-                              fnImageClick: c,
-                            }),
-                          )
-                        : Boolean(0 == a.trim().length)
-                        ? s.createElement(
-                            "div",
-                            null,
-                            (0, M.Xx)("#ClanImageChooser_None"),
-                          )
-                        : s.createElement(
-                            "div",
-                            null,
-                            (0, M.Xx)("#EventCalendar_GameSearch_NoneFound"),
-                          ),
+                          ? l.map((e) =>
+                              s.createElement(ce, {
+                                key: "ci" + e.image_hash,
+                                clanImage: e,
+                                searchStringHilight: a,
+                                fnImageClick: c,
+                              }),
+                            )
+                          : Boolean(0 == a.trim().length)
+                            ? s.createElement(
+                                "div",
+                                null,
+                                (0, M.Xx)("#ClanImageChooser_None"),
+                              )
+                            : s.createElement(
+                                "div",
+                                null,
+                                (0, M.Xx)(
+                                  "#EventCalendar_GameSearch_NoneFound",
+                                ),
+                              ),
                     ),
                   ),
                 ),
@@ -5114,24 +5101,24 @@
                 this.state.errorCode,
               )
             : "" == this.state.formattingHelp.__html
-            ? s.createElement(K.V, null)
-            : s.createElement(
-                P.uH,
-                {
-                  strTitle: (0, M.Xx)(
-                    "#EventEditor_FormattingHelp_GetHelpLink",
-                  ),
-                  strDescription: "",
-                  closeModal: this.props.closeModal,
-                  onOK: this.props.closeModal,
-                  onCancel: this.props.closeModal,
-                  bAlertDialog: !0,
-                  className: "ModernBBStyles",
-                },
-                s.createElement("div", {
-                  dangerouslySetInnerHTML: this.state.formattingHelp,
-                }),
-              );
+              ? s.createElement(K.V, null)
+              : s.createElement(
+                  P.uH,
+                  {
+                    strTitle: (0, M.Xx)(
+                      "#EventEditor_FormattingHelp_GetHelpLink",
+                    ),
+                    strDescription: "",
+                    closeModal: this.props.closeModal,
+                    onOK: this.props.closeModal,
+                    onCancel: this.props.closeModal,
+                    bAlertDialog: !0,
+                    className: "ModernBBStyles",
+                  },
+                  s.createElement("div", {
+                    dangerouslySetInnerHTML: this.state.formattingHelp,
+                  }),
+                );
         }
       });
       var Ee;
@@ -6100,9 +6087,7 @@
                 r.trim().length > 0 && (n += ` company="${r}"`),
                 p)
               ) {
-                n += ` photo="${
-                  l.A1 + "/" + p.clanAccountID + "/" + _.aN.GetHashAndExt(p)
-                }"`;
+                n += ` photo="${l.A1 + "/" + p.clanAccountID + "/" + _.aN.GetHashAndExt(p)}"`;
               }
               g && (n += ` steamid="${g.ConvertTo64BitString()}"`),
                 (n += `]${c}[/speaker]`),
@@ -6373,118 +6358,118 @@
                 s.createElement(K.V, null),
               )
             : this.state.bFinishedConverting
-            ? s.createElement(P.uH, {
-                strTitle: (0, M.Xx)("#EventEditor_ImportFromHTML"),
-                strDescription: (0, M.Xx)(
-                  "#EventEditor_ImportFromHTML_ConvertFinished",
-                ),
-                closeModal: e,
-                bAlertDialog: !0,
-                onOK: e,
-                onCancel: e,
-              })
-            : s.createElement(
-                P.RG,
-                {
-                  onOK: this.OnConvertAndOverriteHTML,
+              ? s.createElement(P.uH, {
+                  strTitle: (0, M.Xx)("#EventEditor_ImportFromHTML"),
+                  strDescription: (0, M.Xx)(
+                    "#EventEditor_ImportFromHTML_ConvertFinished",
+                  ),
+                  closeModal: e,
+                  bAlertDialog: !0,
+                  onOK: e,
                   onCancel: e,
-                  className: q().BBCodeEditorInputStyles,
-                },
-                s.createElement(
-                  R.h4,
-                  null,
-                  " ",
-                  (0, M.Xx)("#EventEditor_ImportFromHTML"),
-                  " ",
-                ),
-                s.createElement(
-                  R.uT,
-                  null,
+                })
+              : s.createElement(
+                  P.RG,
+                  {
+                    onOK: this.OnConvertAndOverriteHTML,
+                    onCancel: e,
+                    className: q().BBCodeEditorInputStyles,
+                  },
                   s.createElement(
-                    R.Ac,
+                    R.h4,
+                    null,
+                    " ",
+                    (0, M.Xx)("#EventEditor_ImportFromHTML"),
+                    " ",
+                  ),
+                  s.createElement(
+                    R.uT,
                     null,
                     s.createElement(
-                      "div",
-                      {
-                        className: (0, x.Z)(
-                          O().FlexColumnContainer,
-                          q().ImportHTMLCtn,
-                        ),
-                      },
+                      R.Ac,
+                      null,
                       s.createElement(
                         "div",
-                        { className: O().FlexColumnContainer },
-                        (0, M.kQ)(
-                          "#EventEditor_ImportFromHTML_ConvertDescription",
-                          s.createElement(
-                            "a",
-                            {
-                              target: Y.De.IN_CLIENT ? void 0 : "_blank",
-                              href: "https://partner.steamgames.com/doc/marketing/event_tools/import",
-                            },
-                            (0, M.Xx)(
-                              "#EventEditor_ImportFromHTML_ConvertLearn",
+                        {
+                          className: (0, x.Z)(
+                            O().FlexColumnContainer,
+                            q().ImportHTMLCtn,
+                          ),
+                        },
+                        s.createElement(
+                          "div",
+                          { className: O().FlexColumnContainer },
+                          (0, M.kQ)(
+                            "#EventEditor_ImportFromHTML_ConvertDescription",
+                            s.createElement(
+                              "a",
+                              {
+                                target: Y.De.IN_CLIENT ? void 0 : "_blank",
+                                href: "https://partner.steamgames.com/doc/marketing/event_tools/import",
+                              },
+                              (0, M.Xx)(
+                                "#EventEditor_ImportFromHTML_ConvertLearn",
+                              ),
                             ),
                           ),
                         ),
-                      ),
-                      s.createElement("textarea", {
-                        value: this.state.strHTMLData,
-                        placeholder: (0, M.Xx)(
-                          "#EventEditor_ImportFromHTML_Instruction",
-                        ),
-                        className: q().ImportHTMLTextArea,
-                        onChange: this.OnTextAreaChange,
-                        ref: (e) => e && e.focus(),
-                      }),
-                      s.createElement(
-                        "div",
-                        { className: q().ImportHTMLCheckBoxLine },
-                        s.createElement("input", {
-                          id: "ImportFromHTMLNewLines",
-                          type: "checkbox",
-                          checked: this.state.bPreserveNewLines,
-                          onChange: this.OnCheckboxChange,
+                        s.createElement("textarea", {
+                          value: this.state.strHTMLData,
+                          placeholder: (0, M.Xx)(
+                            "#EventEditor_ImportFromHTML_Instruction",
+                          ),
+                          className: q().ImportHTMLTextArea,
+                          onChange: this.OnTextAreaChange,
+                          ref: (e) => e && e.focus(),
                         }),
                         s.createElement(
-                          "label",
-                          { htmlFor: "ImportFromHTMLNewLines" },
-                          (0, M.Xx)(
-                            "#EventEditor_ImportFromHTML_PreserveNewlines",
-                          ),
+                          "div",
+                          { className: q().ImportHTMLCheckBoxLine },
+                          s.createElement("input", {
+                            id: "ImportFromHTMLNewLines",
+                            type: "checkbox",
+                            checked: this.state.bPreserveNewLines,
+                            onChange: this.OnCheckboxChange,
+                          }),
                           s.createElement(
-                            "span",
-                            {
-                              className: "ttip",
-                              "data-tooltip-text": (0, M.Xx)(
-                                "#EventEditor_ImportFromHTML_PreserveNewlines_Hint",
-                              ),
-                            },
-                            "(?)",
+                            "label",
+                            { htmlFor: "ImportFromHTMLNewLines" },
+                            (0, M.Xx)(
+                              "#EventEditor_ImportFromHTML_PreserveNewlines",
+                            ),
+                            s.createElement(
+                              "span",
+                              {
+                                className: "ttip",
+                                "data-tooltip-text": (0, M.Xx)(
+                                  "#EventEditor_ImportFromHTML_PreserveNewlines_Hint",
+                                ),
+                              },
+                              "(?)",
+                            ),
                           ),
                         ),
-                      ),
-                      s.createElement(
-                        "div",
-                        null,
-                        (0, M.Xx)(
-                          "#EventEditor_ImportFromHTML_ConvertToBBCode",
+                        s.createElement(
+                          "div",
+                          null,
+                          (0, M.Xx)(
+                            "#EventEditor_ImportFromHTML_ConvertToBBCode",
+                          ),
                         ),
                       ),
                     ),
+                    s.createElement(
+                      R.$_,
+                      null,
+                      s.createElement(R.$0, {
+                        onCancel: e,
+                        strOKText: (0, M.Xx)("#Button_Overwrite"),
+                        onUpdate: this.OnConvertAndAppendHTML,
+                        strUpdateText: (0, M.Xx)("#Button_Append"),
+                      }),
+                    ),
                   ),
-                  s.createElement(
-                    R.$_,
-                    null,
-                    s.createElement(R.$0, {
-                      onCancel: e,
-                      strOKText: (0, M.Xx)("#Button_Overwrite"),
-                      onUpdate: this.OnConvertAndAppendHTML,
-                      strUpdateText: (0, M.Xx)("#Button_Append"),
-                    }),
-                  ),
-                ),
-              );
+                );
         }
       };
       (0, a.gn)([E.ak], Te.prototype, "OnConvertAndOverriteHTML", null),

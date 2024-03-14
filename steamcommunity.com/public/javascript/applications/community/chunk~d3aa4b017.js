@@ -191,9 +191,9 @@
                   ? "#SalePage_WatchForDrop_Hours_CreatorNamed"
                   : "#SalePage_WatchForDrop_Minutes_CreatorNamed"
                 : t.jsondata.broadcast_item_drops_min_watch_time_minutes % 60 ==
-                  0
-                ? "#SalePage_WatchForDrop_Hours_Developer"
-                : "#SalePage_WatchForDrop_Minutes_Developer",
+                    0
+                  ? "#SalePage_WatchForDrop_Hours_Developer"
+                  : "#SalePage_WatchForDrop_Minutes_Developer",
               t.jsondata.broadcast_item_drops_min_watch_time_minutes % 60 == 0
                 ? t.jsondata.broadcast_item_drops_min_watch_time_minutes / 60
                 : t.jsondata.broadcast_item_drops_min_watch_time_minutes,
@@ -540,13 +540,13 @@
                 })),
                 (a.rightPanel = s))
               : t
-              ? ((a.leftPanel = l.createElement("div", null)),
-                (a.rightPanel = l.createElement(Se, {
-                  stream: e,
-                  orientation: "rightside",
-                })),
-                (a.bRightPanelArtworkOrEmpty = !1))
-              : ((a.leftPanel = o), (a.rightPanel = s)),
+                ? ((a.leftPanel = l.createElement("div", null)),
+                  (a.rightPanel = l.createElement(Se, {
+                    stream: e,
+                    orientation: "rightside",
+                  })),
+                  (a.bRightPanelArtworkOrEmpty = !1))
+                : ((a.leftPanel = o), (a.rightPanel = s)),
             a
           );
         }

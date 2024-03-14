@@ -76,14 +76,14 @@
             return 0 === e
               ? 0
               : 1 === e
-              ? 1
-              : 2 === e
-              ? 2
-              : e % 100 >= 3 && e % 100 <= 10
-              ? 3
-              : e % 100 >= 11
-              ? 4
-              : 5;
+                ? 1
+                : 2 === e
+                  ? 2
+                  : e % 100 >= 3 && e % 100 <= 10
+                    ? 3
+                    : e % 100 >= 11
+                      ? 4
+                      : 5;
           },
           t = {
             s: [
@@ -286,14 +286,14 @@
             return 0 === e
               ? 0
               : 1 === e
-              ? 1
-              : 2 === e
-              ? 2
-              : e % 100 >= 3 && e % 100 <= 10
-              ? 3
-              : e % 100 >= 11
-              ? 4
-              : 5;
+                ? 1
+                : 2 === e
+                  ? 2
+                  : e % 100 >= 3 && e % 100 <= 10
+                    ? 3
+                    : e % 100 >= 11
+                      ? 4
+                      : 5;
           },
           n = {
             s: [
@@ -779,14 +779,14 @@
             return 0 === e
               ? 0
               : 1 === e
-              ? 1
-              : 2 === e
-              ? 2
-              : e % 100 >= 3 && e % 100 <= 10
-              ? 3
-              : e % 100 >= 11
-              ? 4
-              : 5;
+                ? 1
+                : 2 === e
+                  ? 2
+                  : e % 100 >= 3 && e % 100 <= 10
+                    ? 3
+                    : e % 100 >= 11
+                      ? 4
+                      : 5;
           },
           s = {
             s: [
@@ -1004,10 +1004,10 @@
             return e < 4
               ? "gecə"
               : e < 12
-              ? "səhər"
-              : e < 17
-              ? "gündüz"
-              : "axşam";
+                ? "səhər"
+                : e < 17
+                  ? "gündüz"
+                  : "axşam";
           },
           dayOfMonthOrdinalParse: /\d{1,2}-(ıncı|inci|nci|üncü|ncı|uncu)/,
           ordinal: function (e) {
@@ -1030,8 +1030,8 @@
           return a % 10 == 1 && a % 100 != 11
             ? t[0]
             : a % 10 >= 2 && a % 10 <= 4 && (a % 100 < 10 || a % 100 >= 20)
-            ? t[1]
-            : t[2];
+              ? t[1]
+              : t[2];
         }
         function t(e, t, n) {
           return "m" === n
@@ -1039,22 +1039,22 @@
               ? "хвіліна"
               : "хвіліну"
             : "h" === n
-            ? t
-              ? "гадзіна"
-              : "гадзіну"
-            : e +
-              " " +
-              a(
-                {
-                  ss: t ? "секунда_секунды_секунд" : "секунду_секунды_секунд",
-                  mm: t ? "хвіліна_хвіліны_хвілін" : "хвіліну_хвіліны_хвілін",
-                  hh: t ? "гадзіна_гадзіны_гадзін" : "гадзіну_гадзіны_гадзін",
-                  dd: "дзень_дні_дзён",
-                  MM: "месяц_месяцы_месяцаў",
-                  yy: "год_гады_гадоў",
-                }[n],
-                +e,
-              );
+              ? t
+                ? "гадзіна"
+                : "гадзіну"
+              : e +
+                " " +
+                a(
+                  {
+                    ss: t ? "секунда_секунды_секунд" : "секунду_секунды_секунд",
+                    mm: t ? "хвіліна_хвіліны_хвілін" : "хвіліну_хвіліны_хвілін",
+                    hh: t ? "гадзіна_гадзіны_гадзін" : "гадзіну_гадзіны_гадзін",
+                    dd: "дзень_дні_дзён",
+                    MM: "месяц_месяцы_месяцаў",
+                    yy: "год_гады_гадоў",
+                  }[n],
+                  +e,
+                );
         }
         e.defineLocale("be", {
           months: {
@@ -1137,10 +1137,10 @@
             return e < 4
               ? "ночы"
               : e < 12
-              ? "раніцы"
-              : e < 17
-              ? "дня"
-              : "вечара";
+                ? "раніцы"
+                : e < 17
+                  ? "дня"
+                  : "вечара";
           },
           dayOfMonthOrdinalParse: /\d{1,2}-(і|ы|га)/,
           ordinal: function (e, a) {
@@ -1234,16 +1234,16 @@
             return 0 === e
               ? e + "-ев"
               : 0 === t
-              ? e + "-ен"
-              : t > 10 && t < 20
-              ? e + "-ти"
-              : 1 === a
-              ? e + "-ви"
-              : 2 === a
-              ? e + "-ри"
-              : 7 === a || 8 === a
-              ? e + "-ми"
-              : e + "-ти";
+                ? e + "-ен"
+                : t > 10 && t < 20
+                  ? e + "-ти"
+                  : 1 === a
+                    ? e + "-ви"
+                    : 2 === a
+                      ? e + "-ри"
+                      : 7 === a || 8 === a
+                        ? e + "-ми"
+                        : e + "-ти";
           },
           week: { dow: 1, doy: 7 },
         });
@@ -1394,30 +1394,30 @@
                   ? e
                   : e + 12
                 : "ভোর" === a || "সকাল" === a
-                ? e
-                : "দুপুর" === a
-                ? e >= 3
                   ? e
-                  : e + 12
-                : "বিকাল" === a || "সন্ধ্যা" === a
-                ? e + 12
-                : void 0
+                  : "দুপুর" === a
+                    ? e >= 3
+                      ? e
+                      : e + 12
+                    : "বিকাল" === a || "সন্ধ্যা" === a
+                      ? e + 12
+                      : void 0
             );
           },
           meridiem: function (e, a, t) {
             return e < 4
               ? "রাত"
               : e < 6
-              ? "ভোর"
-              : e < 12
-              ? "সকাল"
-              : e < 15
-              ? "দুপুর"
-              : e < 18
-              ? "বিকাল"
-              : e < 20
-              ? "সন্ধ্যা"
-              : "রাত";
+                ? "ভোর"
+                : e < 12
+                  ? "সকাল"
+                  : e < 15
+                    ? "দুপুর"
+                    : e < 18
+                      ? "বিকাল"
+                      : e < 20
+                        ? "সন্ধ্যা"
+                        : "রাত";
           },
           week: { dow: 0, doy: 6 },
         });
@@ -1523,12 +1523,12 @@
             return e < 4
               ? "রাত"
               : e < 10
-              ? "সকাল"
-              : e < 17
-              ? "দুপুর"
-              : e < 20
-              ? "বিকাল"
-              : "রাত";
+                ? "সকাল"
+                : e < 17
+                  ? "দুপুর"
+                  : e < 20
+                    ? "বিকাল"
+                    : "রাত";
           },
           week: { dow: 0, doy: 6 },
         });
@@ -1637,12 +1637,12 @@
             return e < 4
               ? "མཚན་མོ"
               : e < 10
-              ? "ཞོགས་ཀས"
-              : e < 17
-              ? "ཉིན་གུང"
-              : e < 20
-              ? "དགོང་དག"
-              : "མཚན་མོ";
+                ? "ཞོགས་ཀས"
+                : e < 17
+                  ? "ཉིན་གུང"
+                  : e < 20
+                    ? "དགོང་དག"
+                    : "མཚན་མོ";
           },
           week: { dow: 0, doy: 6 },
         });
@@ -1794,15 +1794,15 @@
                 1 === e
                   ? "sekunda"
                   : 2 === e || 3 === e || 4 === e
-                  ? "sekunde"
-                  : "sekundi");
+                    ? "sekunde"
+                    : "sekundi");
             case "mm":
               return (n +=
                 1 === e
                   ? "minuta"
                   : 2 === e || 3 === e || 4 === e
-                  ? "minute"
-                  : "minuta");
+                    ? "minute"
+                    : "minuta");
             case "h":
               return "jedan sat";
             case "hh":
@@ -1810,8 +1810,8 @@
                 1 === e
                   ? "sat"
                   : 2 === e || 3 === e || 4 === e
-                  ? "sata"
-                  : "sati");
+                    ? "sata"
+                    : "sati");
             case "dd":
               return (n += 1 === e ? "dan" : "dana");
             case "MM":
@@ -1819,15 +1819,15 @@
                 1 === e
                   ? "mjesec"
                   : 2 === e || 3 === e || 4 === e
-                  ? "mjeseca"
-                  : "mjeseci");
+                    ? "mjeseca"
+                    : "mjeseci");
             case "yy":
               return (n +=
                 1 === e
                   ? "godina"
                   : 2 === e || 3 === e || 4 === e
-                  ? "godine"
-                  : "godina");
+                    ? "godine"
+                    : "godina");
           }
         }
         e.defineLocale("bs", {
@@ -1995,12 +1995,12 @@
               1 === e
                 ? "r"
                 : 2 === e
-                ? "n"
-                : 3 === e
-                ? "r"
-                : 4 === e
-                ? "t"
-                : "è";
+                  ? "n"
+                  : 3 === e
+                    ? "r"
+                    : 4 === e
+                      ? "t"
+                      : "è";
             return ("w" !== a && "W" !== a) || (t = "a"), e + t;
           },
           week: { dow: 1, doy: 4 },
@@ -2821,12 +2821,12 @@
               (1 == ~~((e % 100) / 10)
                 ? "th"
                 : 1 === a
-                ? "st"
-                : 2 === a
-                ? "nd"
-                : 3 === a
-                ? "rd"
-                : "th")
+                  ? "st"
+                  : 2 === a
+                    ? "nd"
+                    : 3 === a
+                      ? "rd"
+                      : "th")
             );
           },
           week: { dow: 0, doy: 4 },
@@ -2891,12 +2891,12 @@
               (1 == ~~((e % 100) / 10)
                 ? "th"
                 : 1 === a
-                ? "st"
-                : 2 === a
-                ? "nd"
-                : 3 === a
-                ? "rd"
-                : "th")
+                  ? "st"
+                  : 2 === a
+                    ? "nd"
+                    : 3 === a
+                      ? "rd"
+                      : "th")
             );
           },
         });
@@ -2960,12 +2960,12 @@
               (1 == ~~((e % 100) / 10)
                 ? "th"
                 : 1 === a
-                ? "st"
-                : 2 === a
-                ? "nd"
-                : 3 === a
-                ? "rd"
-                : "th")
+                  ? "st"
+                  : 2 === a
+                    ? "nd"
+                    : 3 === a
+                      ? "rd"
+                      : "th")
             );
           },
           week: { dow: 1, doy: 4 },
@@ -3030,12 +3030,12 @@
               (1 == ~~((e % 100) / 10)
                 ? "th"
                 : 1 === a
-                ? "st"
-                : 2 === a
-                ? "nd"
-                : 3 === a
-                ? "rd"
-                : "th")
+                  ? "st"
+                  : 2 === a
+                    ? "nd"
+                    : 3 === a
+                      ? "rd"
+                      : "th")
             );
           },
           week: { dow: 1, doy: 4 },
@@ -3100,12 +3100,12 @@
               (1 == ~~((e % 100) / 10)
                 ? "th"
                 : 1 === a
-                ? "st"
-                : 2 === a
-                ? "nd"
-                : 3 === a
-                ? "rd"
-                : "th")
+                  ? "st"
+                  : 2 === a
+                    ? "nd"
+                    : 3 === a
+                      ? "rd"
+                      : "th")
             );
           },
         });
@@ -3169,12 +3169,12 @@
               (1 == ~~((e % 100) / 10)
                 ? "th"
                 : 1 === a
-                ? "st"
-                : 2 === a
-                ? "nd"
-                : 3 === a
-                ? "rd"
-                : "th")
+                  ? "st"
+                  : 2 === a
+                    ? "nd"
+                    : 3 === a
+                      ? "rd"
+                      : "th")
             );
           },
           week: { dow: 0, doy: 6 },
@@ -3239,12 +3239,12 @@
               (1 == ~~((e % 100) / 10)
                 ? "th"
                 : 1 === a
-                ? "st"
-                : 2 === a
-                ? "nd"
-                : 3 === a
-                ? "rd"
-                : "th")
+                  ? "st"
+                  : 2 === a
+                    ? "nd"
+                    : 3 === a
+                      ? "rd"
+                      : "th")
             );
           },
           week: { dow: 1, doy: 4 },
@@ -3309,12 +3309,12 @@
               (1 == ~~((e % 100) / 10)
                 ? "th"
                 : 1 === a
-                ? "st"
-                : 2 === a
-                ? "nd"
-                : 3 === a
-                ? "rd"
-                : "th")
+                  ? "st"
+                  : 2 === a
+                    ? "nd"
+                    : 3 === a
+                      ? "rd"
+                      : "th")
             );
           },
           week: { dow: 1, doy: 4 },
@@ -4902,26 +4902,26 @@
                   ? e
                   : e + 12
                 : "सकाळीं" === a
-                ? e
-                : "दनपारां" === a
-                ? e > 12
                   ? e
-                  : e + 12
-                : "सांजे" === a
-                ? e + 12
-                : void 0
+                  : "दनपारां" === a
+                    ? e > 12
+                      ? e
+                      : e + 12
+                    : "सांजे" === a
+                      ? e + 12
+                      : void 0
             );
           },
           meridiem: function (e, a, t) {
             return e < 4
               ? "राती"
               : e < 12
-              ? "सकाळीं"
-              : e < 16
-              ? "दनपारां"
-              : e < 20
-              ? "सांजे"
-              : "राती";
+                ? "सकाळीं"
+                : e < 16
+                  ? "दनपारां"
+                  : e < 20
+                    ? "सांजे"
+                    : "राती";
           },
         });
       })(t(37485));
@@ -5016,26 +5016,26 @@
                   ? e
                   : e + 12
                 : "sokallim" === a
-                ? e
-                : "donparam" === a
-                ? e > 12
                   ? e
-                  : e + 12
-                : "sanje" === a
-                ? e + 12
-                : void 0
+                  : "donparam" === a
+                    ? e > 12
+                      ? e
+                      : e + 12
+                    : "sanje" === a
+                      ? e + 12
+                      : void 0
             );
           },
           meridiem: function (e, a, t) {
             return e < 4
               ? "rati"
               : e < 12
-              ? "sokallim"
-              : e < 16
-              ? "donparam"
-              : e < 20
-              ? "sanje"
-              : "rati";
+                ? "sokallim"
+                : e < 16
+                  ? "donparam"
+                  : e < 20
+                    ? "sanje"
+                    : "rati";
           },
         });
       })(t(37485));
@@ -5133,26 +5133,26 @@
                   ? e
                   : e + 12
                 : "સવાર" === a
-                ? e
-                : "બપોર" === a
-                ? e >= 10
                   ? e
-                  : e + 12
-                : "સાંજ" === a
-                ? e + 12
-                : void 0
+                  : "બપોર" === a
+                    ? e >= 10
+                      ? e
+                      : e + 12
+                    : "સાંજ" === a
+                      ? e + 12
+                      : void 0
             );
           },
           meridiem: function (e, a, t) {
             return e < 4
               ? "રાત"
               : e < 10
-              ? "સવાર"
-              : e < 17
-              ? "બપોર"
-              : e < 20
-              ? "સાંજ"
-              : "રાત";
+                ? "સવાર"
+                : e < 17
+                  ? "બપોર"
+                  : e < 20
+                    ? "સાંજ"
+                    : "રાત";
           },
           week: { dow: 0, doy: 6 },
         });
@@ -5218,8 +5218,8 @@
               return 2 === e
                 ? "שנתיים"
                 : e % 10 == 0 && 10 !== e
-                ? e + " שנה"
-                : e + " שנים";
+                  ? e + " שנה"
+                  : e + " שנים";
             },
           },
           meridiemParse:
@@ -5231,16 +5231,16 @@
             return e < 5
               ? "לפנות בוקר"
               : e < 10
-              ? "בבוקר"
-              : e < 12
-              ? t
-                ? 'לפנה"צ'
-                : "לפני הצהריים"
-              : e < 18
-              ? t
-                ? 'אחה"צ'
-                : "אחרי הצהריים"
-              : "בערב";
+                ? "בבוקר"
+                : e < 12
+                  ? t
+                    ? 'לפנה"צ'
+                    : "לפני הצהריים"
+                  : e < 18
+                    ? t
+                      ? 'אחה"צ'
+                      : "אחרי הצהריים"
+                    : "בערב";
           },
         });
       })(t(37485));
@@ -5382,26 +5382,26 @@
                   ? e
                   : e + 12
                 : "सुबह" === a
-                ? e
-                : "दोपहर" === a
-                ? e >= 10
                   ? e
-                  : e + 12
-                : "शाम" === a
-                ? e + 12
-                : void 0
+                  : "दोपहर" === a
+                    ? e >= 10
+                      ? e
+                      : e + 12
+                    : "शाम" === a
+                      ? e + 12
+                      : void 0
             );
           },
           meridiem: function (e, a, t) {
             return e < 4
               ? "रात"
               : e < 10
-              ? "सुबह"
-              : e < 17
-              ? "दोपहर"
-              : e < 20
-              ? "शाम"
-              : "रात";
+                ? "सुबह"
+                : e < 17
+                  ? "दोपहर"
+                  : e < 20
+                    ? "शाम"
+                    : "रात";
           },
           week: { dow: 0, doy: 6 },
         });
@@ -5419,8 +5419,8 @@
                 1 === e
                   ? "sekunda"
                   : 2 === e || 3 === e || 4 === e
-                  ? "sekunde"
-                  : "sekundi");
+                    ? "sekunde"
+                    : "sekundi");
             case "m":
               return a ? "jedna minuta" : "jedne minute";
             case "mm":
@@ -5428,8 +5428,8 @@
                 1 === e
                   ? "minuta"
                   : 2 === e || 3 === e || 4 === e
-                  ? "minute"
-                  : "minuta");
+                    ? "minute"
+                    : "minuta");
             case "h":
               return a ? "jedan sat" : "jednog sata";
             case "hh":
@@ -5437,8 +5437,8 @@
                 1 === e
                   ? "sat"
                   : 2 === e || 3 === e || 4 === e
-                  ? "sata"
-                  : "sati");
+                    ? "sata"
+                    : "sati");
             case "dd":
               return (n += 1 === e ? "dan" : "dana");
             case "MM":
@@ -5446,15 +5446,15 @@
                 1 === e
                   ? "mjesec"
                   : 2 === e || 3 === e || 4 === e
-                  ? "mjeseca"
-                  : "mjeseci");
+                    ? "mjeseca"
+                    : "mjeseci");
             case "yy":
               return (n +=
                 1 === e
                   ? "godina"
                   : 2 === e || 3 === e || 4 === e
-                  ? "godine"
-                  : "godina");
+                    ? "godine"
+                    : "godina");
           }
         }
         e.defineLocale("hr", {
@@ -5719,10 +5719,10 @@
             return e < 4
               ? "գիշերվա"
               : e < 12
-              ? "առավոտվա"
-              : e < 17
-              ? "ցերեկվա"
-              : "երեկոյան";
+                ? "առավոտվա"
+                : e < 17
+                  ? "ցերեկվա"
+                  : "երեկոյան";
           },
           dayOfMonthOrdinalParse: /\d{1,2}|\d{1,2}-(ին|րդ)/,
           ordinal: function (e, a) {
@@ -5770,22 +5770,22 @@
               "pagi" === a
                 ? e
                 : "siang" === a
-                ? e >= 11
-                  ? e
-                  : e + 12
-                : "sore" === a || "malam" === a
-                ? e + 12
-                : void 0
+                  ? e >= 11
+                    ? e
+                    : e + 12
+                  : "sore" === a || "malam" === a
+                    ? e + 12
+                    : void 0
             );
           },
           meridiem: function (e, a, t) {
             return e < 11
               ? "pagi"
               : e < 15
-              ? "siang"
-              : e < 19
-              ? "sore"
-              : "malam";
+                ? "siang"
+                : e < 19
+                  ? "sore"
+                  : "malam";
           },
           calendar: {
             sameDay: "[Hari ini pukul] LT",
@@ -5837,8 +5837,8 @@
               return a(e)
                 ? r + (t || s ? "mínútur" : "mínútum")
                 : t
-                ? r + "mínúta"
-                : r + "mínútu";
+                  ? r + "mínúta"
+                  : r + "mínútu";
             case "hh":
               return a(e)
                 ? r + (t || s ? "klukkustundir" : "klukkustundum")
@@ -5851,8 +5851,8 @@
                   ? r + "dagar"
                   : r + (s ? "daga" : "dögum")
                 : t
-                ? r + "dagur"
-                : r + (s ? "dag" : "degi");
+                  ? r + "dagur"
+                  : r + (s ? "dag" : "degi");
             case "M":
               return t ? "mánuður" : s ? "mánuð" : "mánuði";
             case "MM":
@@ -5861,8 +5861,8 @@
                   ? r + "mánuðir"
                   : r + (s ? "mánuði" : "mánuðum")
                 : t
-                ? r + "mánuður"
-                : r + (s ? "mánuð" : "mánuði");
+                  ? r + "mánuður"
+                  : r + (s ? "mánuð" : "mánuði");
             case "y":
               return t || s ? "ár" : "ári";
             case "yy":
@@ -6046,15 +6046,15 @@
                     (this.hours() > 1
                       ? "lle "
                       : 0 === this.hours()
-                      ? " "
-                      : "ll'") +
+                        ? " "
+                        : "ll'") +
                     "]LT"
                 : "[Lo scorso] dddd [a" +
                     (this.hours() > 1
                       ? "lle "
                       : 0 === this.hours()
-                      ? " "
-                      : "ll'") +
+                        ? " "
+                        : "ll'") +
                     "]LT";
             },
             sameElse: "L",
@@ -6252,22 +6252,22 @@
               "enjing" === a
                 ? e
                 : "siyang" === a
-                ? e >= 11
-                  ? e
-                  : e + 12
-                : "sonten" === a || "ndalu" === a
-                ? e + 12
-                : void 0
+                  ? e >= 11
+                    ? e
+                    : e + 12
+                  : "sonten" === a || "ndalu" === a
+                    ? e + 12
+                    : void 0
             );
           },
           meridiem: function (e, a, t) {
             return e < 11
               ? "enjing"
               : e < 15
-              ? "siyang"
-              : e < 19
-              ? "sonten"
-              : "ndalu";
+                ? "siyang"
+                : e < 19
+                  ? "sonten"
+                  : "ndalu";
           },
           calendar: {
             sameDay: "[Dinten puniko pukul] LT",
@@ -6351,8 +6351,8 @@
               return /(წამი|წუთი|საათი|დღე|თვე)/.test(e)
                 ? e.replace(/(ი|ე)$/, "ის წინ")
                 : /წელი/.test(e)
-                ? e.replace(/წელი$/, "წლის წინ")
-                : e;
+                  ? e.replace(/წელი$/, "წლის წინ")
+                  : e;
             },
             s: "რამდენიმე წამი",
             ss: "%d წამი",
@@ -6372,10 +6372,10 @@
             return 0 === e
               ? e
               : 1 === e
-              ? e + "-ლი"
-              : e < 20 || (e <= 100 && e % 20 == 0) || e % 100 == 0
-              ? "მე-" + e
-              : e + "-ე";
+                ? e + "-ლი"
+                : e < 20 || (e <= 100 && e % 20 == 0) || e % 100 == 0
+                  ? "მე-" + e
+                  : e + "-ე";
           },
           week: { dow: 1, doy: 7 },
         });
@@ -6654,26 +6654,26 @@
                   ? e
                   : e + 12
                 : "ಬೆಳಿಗ್ಗೆ" === a
-                ? e
-                : "ಮಧ್ಯಾಹ್ನ" === a
-                ? e >= 10
                   ? e
-                  : e + 12
-                : "ಸಂಜೆ" === a
-                ? e + 12
-                : void 0
+                  : "ಮಧ್ಯಾಹ್ನ" === a
+                    ? e >= 10
+                      ? e
+                      : e + 12
+                    : "ಸಂಜೆ" === a
+                      ? e + 12
+                      : void 0
             );
           },
           meridiem: function (e, a, t) {
             return e < 4
               ? "ರಾತ್ರಿ"
               : e < 10
-              ? "ಬೆಳಿಗ್ಗೆ"
-              : e < 17
-              ? "ಮಧ್ಯಾಹ್ನ"
-              : e < 20
-              ? "ಸಂಜೆ"
-              : "ರಾತ್ರಿ";
+                ? "ಬೆಳಿಗ್ಗೆ"
+                : e < 17
+                  ? "ಮಧ್ಯಾಹ್ನ"
+                  : e < 20
+                    ? "ಸಂಜೆ"
+                    : "ರಾತ್ರಿ";
           },
           dayOfMonthOrdinalParse: /\d{1,2}(ನೇ)/,
           ordinal: function (e) {
@@ -7228,8 +7228,8 @@
           return a
             ? "kelios sekundės"
             : n
-            ? "kelių sekundžių"
-            : "kelias sekundes";
+              ? "kelių sekundžių"
+              : "kelias sekundes";
         }
         function n(e, a, t, n) {
           return a ? r(t)[0] : n ? r(t)[1] : r(t)[2];
@@ -7245,10 +7245,10 @@
           return 1 === e
             ? d + n(e, a, t[0], i)
             : a
-            ? d + (s(e) ? r(t)[1] : r(t)[0])
-            : i
-            ? d + r(t)[1]
-            : d + (s(e) ? r(t)[1] : r(t)[2]);
+              ? d + (s(e) ? r(t)[1] : r(t)[0])
+              : i
+                ? d + r(t)[1]
+                : d + (s(e) ? r(t)[1] : r(t)[2]);
         }
         e.defineLocale("lt", {
           months: {
@@ -7347,8 +7347,8 @@
               ? e[2]
               : e[3]
             : a % 10 == 1 && a % 100 != 11
-            ? e[0]
-            : e[1];
+              ? e[0]
+              : e[1];
         }
         function n(e, n, s) {
           return e + " " + t(a[s], e, n);
@@ -7645,16 +7645,16 @@
             return 0 === e
               ? e + "-ев"
               : 0 === t
-              ? e + "-ен"
-              : t > 10 && t < 20
-              ? e + "-ти"
-              : 1 === a
-              ? e + "-ви"
-              : 2 === a
-              ? e + "-ри"
-              : 7 === a || 8 === a
-              ? e + "-ми"
-              : e + "-ти";
+                ? e + "-ен"
+                : t > 10 && t < 20
+                  ? e + "-ти"
+                  : 1 === a
+                    ? e + "-ви"
+                    : 2 === a
+                      ? e + "-ри"
+                      : 7 === a || 8 === a
+                        ? e + "-ми"
+                        : e + "-ти";
           },
           week: { dow: 1, doy: 7 },
         });
@@ -7727,12 +7727,12 @@
             return e < 4
               ? "രാത്രി"
               : e < 12
-              ? "രാവിലെ"
-              : e < 17
-              ? "ഉച്ച കഴിഞ്ഞ്"
-              : e < 20
-              ? "വൈകുന്നേരം"
-              : "രാത്രി";
+                ? "രാവിലെ"
+                : e < 17
+                  ? "ഉച്ച കഴിഞ്ഞ്"
+                  : e < 20
+                    ? "വൈകുന്നേരം"
+                    : "രാത്രി";
           },
         });
       })(t(37485));
@@ -8004,22 +8004,22 @@
               "पहाटे" === a || "सकाळी" === a
                 ? e
                 : "दुपारी" === a || "सायंकाळी" === a || "रात्री" === a
-                ? e >= 12
-                  ? e
-                  : e + 12
-                : void 0
+                  ? e >= 12
+                    ? e
+                    : e + 12
+                  : void 0
             );
           },
           meridiem: function (e, a, t) {
             return e >= 0 && e < 6
               ? "पहाटे"
               : e < 12
-              ? "सकाळी"
-              : e < 17
-              ? "दुपारी"
-              : e < 20
-              ? "सायंकाळी"
-              : "रात्री";
+                ? "सकाळी"
+                : e < 17
+                  ? "दुपारी"
+                  : e < 20
+                    ? "सायंकाळी"
+                    : "रात्री";
           },
           week: { dow: 0, doy: 6 },
         });
@@ -8055,22 +8055,22 @@
               "pagi" === a
                 ? e
                 : "tengahari" === a
-                ? e >= 11
-                  ? e
-                  : e + 12
-                : "petang" === a || "malam" === a
-                ? e + 12
-                : void 0
+                  ? e >= 11
+                    ? e
+                    : e + 12
+                  : "petang" === a || "malam" === a
+                    ? e + 12
+                    : void 0
             );
           },
           meridiem: function (e, a, t) {
             return e < 11
               ? "pagi"
               : e < 15
-              ? "tengahari"
-              : e < 19
-              ? "petang"
-              : "malam";
+                ? "tengahari"
+                : e < 19
+                  ? "petang"
+                  : "malam";
           },
           calendar: {
             sameDay: "[Hari ini pukul] LT",
@@ -8130,22 +8130,22 @@
               "pagi" === a
                 ? e
                 : "tengahari" === a
-                ? e >= 11
-                  ? e
-                  : e + 12
-                : "petang" === a || "malam" === a
-                ? e + 12
-                : void 0
+                  ? e >= 11
+                    ? e
+                    : e + 12
+                  : "petang" === a || "malam" === a
+                    ? e + 12
+                    : void 0
             );
           },
           meridiem: function (e, a, t) {
             return e < 11
               ? "pagi"
               : e < 15
-              ? "tengahari"
-              : e < 19
-              ? "petang"
-              : "malam";
+                ? "tengahari"
+                : e < 19
+                  ? "petang"
+                  : "malam";
           },
           calendar: {
             sameDay: "[Hari ini pukul] LT",
@@ -8447,26 +8447,26 @@
                   ? e
                   : e + 12
                 : "बिहान" === a
-                ? e
-                : "दिउँसो" === a
-                ? e >= 10
                   ? e
-                  : e + 12
-                : "साँझ" === a
-                ? e + 12
-                : void 0
+                  : "दिउँसो" === a
+                    ? e >= 10
+                      ? e
+                      : e + 12
+                    : "साँझ" === a
+                      ? e + 12
+                      : void 0
             );
           },
           meridiem: function (e, a, t) {
             return e < 3
               ? "राति"
               : e < 12
-              ? "बिहान"
-              : e < 16
-              ? "दिउँसो"
-              : e < 20
-              ? "साँझ"
-              : "राति";
+                ? "बिहान"
+                : e < 16
+                  ? "दिउँसो"
+                  : e < 20
+                    ? "साँझ"
+                    : "राति";
           },
           calendar: {
             sameDay: "[आज] LT",
@@ -8805,12 +8805,12 @@
               1 === e
                 ? "r"
                 : 2 === e
-                ? "n"
-                : 3 === e
-                ? "r"
-                : 4 === e
-                ? "t"
-                : "è";
+                  ? "n"
+                  : 3 === e
+                    ? "r"
+                    : 4 === e
+                      ? "t"
+                      : "è";
             return ("w" !== a && "W" !== a) || (t = "a"), e + t;
           },
           week: { dow: 1, doy: 4 },
@@ -8909,26 +8909,26 @@
                   ? e
                   : e + 12
                 : "ਸਵੇਰ" === a
-                ? e
-                : "ਦੁਪਹਿਰ" === a
-                ? e >= 10
                   ? e
-                  : e + 12
-                : "ਸ਼ਾਮ" === a
-                ? e + 12
-                : void 0
+                  : "ਦੁਪਹਿਰ" === a
+                    ? e >= 10
+                      ? e
+                      : e + 12
+                    : "ਸ਼ਾਮ" === a
+                      ? e + 12
+                      : void 0
             );
           },
           meridiem: function (e, a, t) {
             return e < 4
               ? "ਰਾਤ"
               : e < 10
-              ? "ਸਵੇਰ"
-              : e < 17
-              ? "ਦੁਪਹਿਰ"
-              : e < 20
-              ? "ਸ਼ਾਮ"
-              : "ਰਾਤ";
+                ? "ਸਵੇਰ"
+                : e < 17
+                  ? "ਦੁਪਹਿਰ"
+                  : e < 20
+                    ? "ਸ਼ਾਮ"
+                    : "ਰਾਤ";
           },
           week: { dow: 0, doy: 6 },
         });
@@ -9271,8 +9271,8 @@
           return a % 10 == 1 && a % 100 != 11
             ? t[0]
             : a % 10 >= 2 && a % 10 <= 4 && (a % 100 < 10 || a % 100 >= 20)
-            ? t[1]
-            : t[2];
+              ? t[1]
+              : t[2];
         }
         function t(e, t, n) {
           return "m" === n
@@ -9780,14 +9780,14 @@
                     ? "sekundo"
                     : "sekundi"
                   : 2 === e
-                  ? a || n
-                    ? "sekundi"
-                    : "sekundah"
-                  : e < 5
-                  ? a || n
-                    ? "sekunde"
-                    : "sekundah"
-                  : "sekund");
+                    ? a || n
+                      ? "sekundi"
+                      : "sekundah"
+                    : e < 5
+                      ? a || n
+                        ? "sekunde"
+                        : "sekundah"
+                      : "sekund");
             case "m":
               return a ? "ena minuta" : "eno minuto";
             case "mm":
@@ -9797,16 +9797,16 @@
                     ? "minuta"
                     : "minuto"
                   : 2 === e
-                  ? a || n
-                    ? "minuti"
-                    : "minutama"
-                  : e < 5
-                  ? a || n
-                    ? "minute"
-                    : "minutami"
-                  : a || n
-                  ? "minut"
-                  : "minutami");
+                    ? a || n
+                      ? "minuti"
+                      : "minutama"
+                    : e < 5
+                      ? a || n
+                        ? "minute"
+                        : "minutami"
+                      : a || n
+                        ? "minut"
+                        : "minutami");
             case "h":
               return a ? "ena ura" : "eno uro";
             case "hh":
@@ -9816,16 +9816,16 @@
                     ? "ura"
                     : "uro"
                   : 2 === e
-                  ? a || n
-                    ? "uri"
-                    : "urama"
-                  : e < 5
-                  ? a || n
-                    ? "ure"
-                    : "urami"
-                  : a || n
-                  ? "ur"
-                  : "urami");
+                    ? a || n
+                      ? "uri"
+                      : "urama"
+                    : e < 5
+                      ? a || n
+                        ? "ure"
+                        : "urami"
+                      : a || n
+                        ? "ur"
+                        : "urami");
             case "d":
               return a || n ? "en dan" : "enim dnem";
             case "dd":
@@ -9835,12 +9835,12 @@
                     ? "dan"
                     : "dnem"
                   : 2 === e
-                  ? a || n
-                    ? "dni"
-                    : "dnevoma"
-                  : a || n
-                  ? "dni"
-                  : "dnevi");
+                    ? a || n
+                      ? "dni"
+                      : "dnevoma"
+                    : a || n
+                      ? "dni"
+                      : "dnevi");
             case "M":
               return a || n ? "en mesec" : "enim mesecem";
             case "MM":
@@ -9850,16 +9850,16 @@
                     ? "mesec"
                     : "mesecem"
                   : 2 === e
-                  ? a || n
-                    ? "meseca"
-                    : "mesecema"
-                  : e < 5
-                  ? a || n
-                    ? "mesece"
-                    : "meseci"
-                  : a || n
-                  ? "mesecev"
-                  : "meseci");
+                    ? a || n
+                      ? "meseca"
+                      : "mesecema"
+                    : e < 5
+                      ? a || n
+                        ? "mesece"
+                        : "meseci"
+                      : a || n
+                        ? "mesecev"
+                        : "meseci");
             case "y":
               return a || n ? "eno leto" : "enim letom";
             case "yy":
@@ -9869,16 +9869,16 @@
                     ? "leto"
                     : "letom"
                   : 2 === e
-                  ? a || n
-                    ? "leti"
-                    : "letoma"
-                  : e < 5
-                  ? a || n
-                    ? "leta"
-                    : "leti"
-                  : a || n
-                  ? "let"
-                  : "leti");
+                    ? a || n
+                      ? "leti"
+                      : "letoma"
+                    : e < 5
+                      ? a || n
+                        ? "leta"
+                        : "leti"
+                      : a || n
+                        ? "let"
+                        : "leti");
           }
         }
         e.defineLocale("sl", {
@@ -10059,8 +10059,8 @@
               ? "y" === n && t
                 ? "једна година"
                 : s || t
-                ? i[0]
-                : i[1]
+                  ? i[0]
+                  : i[1]
               : ((r = a.correctGrammaticalCase(e, i)),
                 "yy" === n && t && "годину" === r
                   ? e + " година"
@@ -10177,8 +10177,8 @@
               ? "y" === n && t
                 ? "jedna godina"
                 : s || t
-                ? i[0]
-                : i[1]
+                  ? i[0]
+                  : i[1]
               : ((r = a.correctGrammaticalCase(e, i)),
                 "yy" === n && t && "godinu" === r
                   ? e + " godina"
@@ -10318,10 +10318,10 @@
             return e < 11
               ? "ekuseni"
               : e < 15
-              ? "emini"
-              : e < 19
-              ? "entsambama"
-              : "ebusuku";
+                ? "emini"
+                : e < 19
+                  ? "entsambama"
+                  : "ebusuku";
           },
           meridiemHour: function (e, a) {
             return (
@@ -10329,14 +10329,14 @@
               "ekuseni" === a
                 ? e
                 : "emini" === a
-                ? e >= 11
-                  ? e
-                  : e + 12
-                : "entsambama" === a || "ebusuku" === a
-                ? 0 === e
-                  ? 0
-                  : e + 12
-                : void 0
+                  ? e >= 11
+                    ? e
+                    : e + 12
+                  : "entsambama" === a || "ebusuku" === a
+                    ? 0 === e
+                      ? 0
+                      : e + 12
+                    : void 0
             );
           },
           dayOfMonthOrdinalParse: /\d{1,2}/,
@@ -10404,8 +10404,8 @@
               (1 == ~~((e % 100) / 10)
                 ? ":e"
                 : 1 === a || 2 === a
-                ? ":a"
-                : ":e")
+                  ? ":a"
+                  : ":e")
             );
           },
           week: { dow: 1, doy: 4 },
@@ -10562,16 +10562,16 @@
             return e < 2
               ? " யாமம்"
               : e < 6
-              ? " வைகறை"
-              : e < 10
-              ? " காலை"
-              : e < 14
-              ? " நண்பகல்"
-              : e < 18
-              ? " எற்பாடு"
-              : e < 22
-              ? " மாலை"
-              : " யாமம்";
+                ? " வைகறை"
+                : e < 10
+                  ? " காலை"
+                  : e < 14
+                    ? " நண்பகல்"
+                    : e < 18
+                      ? " எற்பாடு"
+                      : e < 22
+                        ? " மாலை"
+                        : " யாமம்";
           },
           meridiemHour: function (e, a) {
             return (
@@ -10581,8 +10581,8 @@
                   ? e
                   : e + 12
                 : "வைகறை" === a || "காலை" === a || ("நண்பகல்" === a && e >= 10)
-                ? e
-                : e + 12
+                  ? e
+                  : e + 12
             );
           },
           week: { dow: 0, doy: 6 },
@@ -10652,26 +10652,26 @@
                   ? e
                   : e + 12
                 : "ఉదయం" === a
-                ? e
-                : "మధ్యాహ్నం" === a
-                ? e >= 10
                   ? e
-                  : e + 12
-                : "సాయంత్రం" === a
-                ? e + 12
-                : void 0
+                  : "మధ్యాహ్నం" === a
+                    ? e >= 10
+                      ? e
+                      : e + 12
+                    : "సాయంత్రం" === a
+                      ? e + 12
+                      : void 0
             );
           },
           meridiem: function (e, a, t) {
             return e < 4
               ? "రాత్రి"
               : e < 10
-              ? "ఉదయం"
-              : e < 17
-              ? "మధ్యాహ్నం"
-              : e < 20
-              ? "సాయంత్రం"
-              : "రాత్రి";
+                ? "ఉదయం"
+                : e < 17
+                  ? "మధ్యాహ్నం"
+                  : e < 20
+                    ? "సాయంత్రం"
+                    : "రాత్రి";
           },
           week: { dow: 0, doy: 6 },
         });
@@ -10734,12 +10734,12 @@
               (1 == ~~((e % 100) / 10)
                 ? "th"
                 : 1 === a
-                ? "st"
-                : 2 === a
-                ? "nd"
-                : 3 === a
-                ? "rd"
-                : "th")
+                  ? "st"
+                  : 2 === a
+                    ? "nd"
+                    : 3 === a
+                      ? "rd"
+                      : "th")
             );
           },
           week: { dow: 1, doy: 4 },
@@ -10832,26 +10832,26 @@
                   ? e
                   : e + 12
                 : "субҳ" === a
-                ? e
-                : "рӯз" === a
-                ? e >= 11
                   ? e
-                  : e + 12
-                : "бегоҳ" === a
-                ? e + 12
-                : void 0
+                  : "рӯз" === a
+                    ? e >= 11
+                      ? e
+                      : e + 12
+                    : "бегоҳ" === a
+                      ? e + 12
+                      : void 0
             );
           },
           meridiem: function (e, a, t) {
             return e < 4
               ? "шаб"
               : e < 11
-              ? "субҳ"
-              : e < 16
-              ? "рӯз"
-              : e < 19
-              ? "бегоҳ"
-              : "шаб";
+                ? "субҳ"
+                : e < 16
+                  ? "рӯз"
+                  : e < 19
+                    ? "бегоҳ"
+                    : "шаб";
           },
           dayOfMonthOrdinalParse: /\d{1,2}-(ум|юм)/,
           ordinal: function (e) {
@@ -11080,10 +11080,10 @@
             -1 !== e.indexOf("jaj")
               ? a.slice(0, -3) + "leS"
               : -1 !== e.indexOf("jar")
-              ? a.slice(0, -3) + "waQ"
-              : -1 !== e.indexOf("DIS")
-              ? a.slice(0, -3) + "nem"
-              : a + " pIq");
+                ? a.slice(0, -3) + "waQ"
+                : -1 !== e.indexOf("DIS")
+                  ? a.slice(0, -3) + "nem"
+                  : a + " pIq");
         }
         function n(e) {
           var a = e;
@@ -11091,10 +11091,10 @@
             -1 !== e.indexOf("jaj")
               ? a.slice(0, -3) + "Hu’"
               : -1 !== e.indexOf("jar")
-              ? a.slice(0, -3) + "wen"
-              : -1 !== e.indexOf("DIS")
-              ? a.slice(0, -3) + "ben"
-              : a + " ret");
+                ? a.slice(0, -3) + "wen"
+                : -1 !== e.indexOf("DIS")
+                  ? a.slice(0, -3) + "ben"
+                  : a + " ret");
         }
         function s(e, a, t, n) {
           var s = r(e);
@@ -11506,10 +11506,10 @@
               "يېرىم كېچە" === a || "سەھەر" === a || "چۈشتىن بۇرۇن" === a
                 ? e
                 : "چۈشتىن كېيىن" === a || "كەچ" === a
-                ? e + 12
-                : e >= 11
-                ? e
-                : e + 12
+                  ? e + 12
+                  : e >= 11
+                    ? e
+                    : e + 12
             );
           },
           meridiem: function (e, a, t) {
@@ -11517,14 +11517,14 @@
             return n < 600
               ? "يېرىم كېچە"
               : n < 900
-              ? "سەھەر"
-              : n < 1130
-              ? "چۈشتىن بۇرۇن"
-              : n < 1230
-              ? "چۈش"
-              : n < 1800
-              ? "چۈشتىن كېيىن"
-              : "كەچ";
+                ? "سەھەر"
+                : n < 1130
+                  ? "چۈشتىن بۇرۇن"
+                  : n < 1230
+                    ? "چۈش"
+                    : n < 1800
+                      ? "چۈشتىن كېيىن"
+                      : "كەچ";
           },
           calendar: {
             sameDay: "[بۈگۈن سائەت] LT",
@@ -11583,8 +11583,8 @@
           return a % 10 == 1 && a % 100 != 11
             ? t[0]
             : a % 10 >= 2 && a % 10 <= 4 && (a % 100 < 10 || a % 100 >= 20)
-            ? t[1]
-            : t[2];
+              ? t[1]
+              : t[2];
         }
         function t(e, t, n) {
           return "m" === n
@@ -11592,22 +11592,22 @@
               ? "хвилина"
               : "хвилину"
             : "h" === n
-            ? t
-              ? "година"
-              : "годину"
-            : e +
-              " " +
-              a(
-                {
-                  ss: t ? "секунда_секунди_секунд" : "секунду_секунди_секунд",
-                  mm: t ? "хвилина_хвилини_хвилин" : "хвилину_хвилини_хвилин",
-                  hh: t ? "година_години_годин" : "годину_години_годин",
-                  dd: "день_дні_днів",
-                  MM: "місяць_місяці_місяців",
-                  yy: "рік_роки_років",
-                }[n],
-                +e,
-              );
+              ? t
+                ? "година"
+                : "годину"
+              : e +
+                " " +
+                a(
+                  {
+                    ss: t ? "секунда_секунди_секунд" : "секунду_секунди_секунд",
+                    mm: t ? "хвилина_хвилини_хвилин" : "хвилину_хвилини_хвилин",
+                    hh: t ? "година_години_годин" : "годину_години_годин",
+                    dd: "день_дні_днів",
+                    MM: "місяць_місяці_місяців",
+                    yy: "рік_роки_років",
+                  }[n],
+                  +e,
+                );
         }
         function n(e, a) {
           var t = {
@@ -11627,14 +11627,14 @@
           return !0 === e
             ? t.nominative.slice(1, 7).concat(t.nominative.slice(0, 1))
             : e
-            ? t[
-                /(\[[ВвУу]\]) ?dddd/.test(a)
-                  ? "accusative"
-                  : /\[?(?:минулої|наступної)? ?\] ?dddd/.test(a)
-                  ? "genitive"
-                  : "nominative"
-              ][e.day()]
-            : t.nominative;
+              ? t[
+                  /(\[[ВвУу]\]) ?dddd/.test(a)
+                    ? "accusative"
+                    : /\[?(?:минулої|наступної)? ?\] ?dddd/.test(a)
+                      ? "genitive"
+                      : "nominative"
+                ][e.day()]
+              : t.nominative;
         }
         function s(e) {
           return function () {
@@ -11709,10 +11709,10 @@
             return e < 4
               ? "ночі"
               : e < 12
-              ? "ранку"
-              : e < 17
-              ? "дня"
-              : "вечора";
+                ? "ранку"
+                : e < 17
+                  ? "дня"
+                  : "вечора";
           },
           dayOfMonthOrdinalParse: /\d{1,2}-(й|го)/,
           ordinal: function (e, a) {
@@ -12044,12 +12044,12 @@
               (1 == ~~((e % 100) / 10)
                 ? "th"
                 : 1 === a
-                ? "st"
-                : 2 === a
-                ? "nd"
-                : 3 === a
-                ? "rd"
-                : "th")
+                  ? "st"
+                  : 2 === a
+                    ? "nd"
+                    : 3 === a
+                      ? "rd"
+                      : "th")
             );
           },
           week: { dow: 1, doy: 4 },
@@ -12144,10 +12144,10 @@
               "凌晨" === a || "早上" === a || "上午" === a
                 ? e
                 : "下午" === a || "晚上" === a
-                ? e + 12
-                : e >= 11
-                ? e
-                : e + 12
+                  ? e + 12
+                  : e >= 11
+                    ? e
+                    : e + 12
             );
           },
           meridiem: function (e, a, t) {
@@ -12155,14 +12155,14 @@
             return n < 600
               ? "凌晨"
               : n < 900
-              ? "早上"
-              : n < 1130
-              ? "上午"
-              : n < 1230
-              ? "中午"
-              : n < 1800
-              ? "下午"
-              : "晚上";
+                ? "早上"
+                : n < 1130
+                  ? "上午"
+                  : n < 1230
+                    ? "中午"
+                    : n < 1800
+                      ? "下午"
+                      : "晚上";
           },
           calendar: {
             sameDay: "[今天]LT",
@@ -12249,12 +12249,12 @@
               "凌晨" === a || "早上" === a || "上午" === a
                 ? e
                 : "中午" === a
-                ? e >= 11
-                  ? e
-                  : e + 12
-                : "下午" === a || "晚上" === a
-                ? e + 12
-                : void 0
+                  ? e >= 11
+                    ? e
+                    : e + 12
+                  : "下午" === a || "晚上" === a
+                    ? e + 12
+                    : void 0
             );
           },
           meridiem: function (e, a, t) {
@@ -12262,14 +12262,14 @@
             return n < 600
               ? "凌晨"
               : n < 900
-              ? "早上"
-              : n < 1200
-              ? "上午"
-              : 1200 === n
-              ? "中午"
-              : n < 1800
-              ? "下午"
-              : "晚上";
+                ? "早上"
+                : n < 1200
+                  ? "上午"
+                  : 1200 === n
+                    ? "中午"
+                    : n < 1800
+                      ? "下午"
+                      : "晚上";
           },
           calendar: {
             sameDay: "[今天]LT",
@@ -12349,12 +12349,12 @@
               "凌晨" === a || "早上" === a || "上午" === a
                 ? e
                 : "中午" === a
-                ? e >= 11
-                  ? e
-                  : e + 12
-                : "下午" === a || "晚上" === a
-                ? e + 12
-                : void 0
+                  ? e >= 11
+                    ? e
+                    : e + 12
+                  : "下午" === a || "晚上" === a
+                    ? e + 12
+                    : void 0
             );
           },
           meridiem: function (e, a, t) {
@@ -12362,14 +12362,14 @@
             return n < 600
               ? "凌晨"
               : n < 900
-              ? "早上"
-              : n < 1130
-              ? "上午"
-              : n < 1230
-              ? "中午"
-              : n < 1800
-              ? "下午"
-              : "晚上";
+                ? "早上"
+                : n < 1130
+                  ? "上午"
+                  : n < 1230
+                    ? "中午"
+                    : n < 1800
+                      ? "下午"
+                      : "晚上";
           },
           calendar: {
             sameDay: "[今天] LT",
@@ -12449,12 +12449,12 @@
               "凌晨" === a || "早上" === a || "上午" === a
                 ? e
                 : "中午" === a
-                ? e >= 11
-                  ? e
-                  : e + 12
-                : "下午" === a || "晚上" === a
-                ? e + 12
-                : void 0
+                  ? e >= 11
+                    ? e
+                    : e + 12
+                  : "下午" === a || "晚上" === a
+                    ? e + 12
+                    : void 0
             );
           },
           meridiem: function (e, a, t) {
@@ -12462,14 +12462,14 @@
             return n < 600
               ? "凌晨"
               : n < 900
-              ? "早上"
-              : n < 1130
-              ? "上午"
-              : n < 1230
-              ? "中午"
-              : n < 1800
-              ? "下午"
-              : "晚上";
+                ? "早上"
+                : n < 1130
+                  ? "上午"
+                  : n < 1230
+                    ? "中午"
+                    : n < 1800
+                      ? "下午"
+                      : "晚上";
           },
           calendar: {
             sameDay: "[今天] LT",
@@ -12749,8 +12749,8 @@
               (d(e[t]) && d(a[t])
                 ? ((n[t] = {}), h(n[t], e[t]), h(n[t], a[t]))
                 : null != a[t]
-                ? (n[t] = a[t])
-                : delete n[t]);
+                  ? (n[t] = a[t])
+                  : delete n[t]);
           for (t in e) _(e, t) && !_(a, t) && d(e[t]) && (n[t] = h({}, n[t]));
           return n;
         }
@@ -13251,8 +13251,8 @@
                     : "standalone"
                 ][e.month()]
             : i(this._months)
-            ? this._months
-            : this._months.standalone;
+              ? this._months
+              : this._months.standalone;
         }
         function ua(e, a) {
           return e
@@ -13262,8 +13262,8 @@
                   e.month()
                 ]
             : i(this._monthsShort)
-            ? this._monthsShort
-            : this._monthsShort.standalone;
+              ? this._monthsShort
+              : this._monthsShort.standalone;
         }
         function ma(e, a, t) {
           var n,
@@ -13294,17 +13294,17 @@
                 ? s
                 : null
               : -1 !== (s = Be.call(this._longMonthsParse, i))
-              ? s
-              : null
+                ? s
+                : null
             : "MMM" === a
-            ? -1 !== (s = Be.call(this._shortMonthsParse, i)) ||
-              -1 !== (s = Be.call(this._longMonthsParse, i))
-              ? s
-              : null
-            : -1 !== (s = Be.call(this._longMonthsParse, i)) ||
-              -1 !== (s = Be.call(this._shortMonthsParse, i))
-            ? s
-            : null;
+              ? -1 !== (s = Be.call(this._shortMonthsParse, i)) ||
+                -1 !== (s = Be.call(this._longMonthsParse, i))
+                ? s
+                : null
+              : -1 !== (s = Be.call(this._longMonthsParse, i)) ||
+                  -1 !== (s = Be.call(this._shortMonthsParse, i))
+                ? s
+                : null;
         }
         function la(e, a, t) {
           var n, s, r;
@@ -13447,8 +13447,8 @@
             d <= 0
               ? (i = qe((r = e - 1)) + d)
               : d > qe(e)
-              ? ((r = e + 1), (i = d - qe(e)))
-              : ((r = e), (i = d)),
+                ? ((r = e + 1), (i = d - qe(e)))
+                : ((r = e), (i = d)),
             { year: r, dayOfYear: i }
           );
         }
@@ -13461,8 +13461,8 @@
             i < 1
               ? (n = i + ga((s = e.year() - 1), a, t))
               : i > ga(e.year(), a, t)
-              ? ((n = i - ga(e.year(), a, t)), (s = e.year() + 1))
-              : ((s = e.year()), (n = i)),
+                ? ((n = i - ga(e.year(), a, t)), (s = e.year() + 1))
+                : ((s = e.year()), (n = i)),
             { week: n, year: s }
           );
         }
@@ -13502,17 +13502,17 @@
           return "string" != typeof e
             ? e
             : isNaN(e)
-            ? "number" == typeof (e = a.weekdaysParse(e))
-              ? e
-              : null
-            : parseInt(e, 10);
+              ? "number" == typeof (e = a.weekdaysParse(e))
+                ? e
+                : null
+              : parseInt(e, 10);
         }
         function Pa(e, a) {
           return "string" == typeof e
             ? a.weekdaysParse(e) % 7 || 7
             : isNaN(e)
-            ? null
-            : e;
+              ? null
+              : e;
         }
         function Oa(e, a) {
           return e.slice(a, 7).concat(e.slice(0, a));
@@ -13571,15 +13571,15 @@
           return !0 === e
             ? Oa(this._weekdaysShort, this._week.dow)
             : e
-            ? this._weekdaysShort[e.day()]
-            : this._weekdaysShort;
+              ? this._weekdaysShort[e.day()]
+              : this._weekdaysShort;
         }
         function Ca(e) {
           return !0 === e
             ? Oa(this._weekdaysMin, this._week.dow)
             : e
-            ? this._weekdaysMin[e.day()]
-            : this._weekdaysMin;
+              ? this._weekdaysMin[e.day()]
+              : this._weekdaysMin;
         }
         function Ia(e, a, t) {
           var n,
@@ -13614,29 +13614,29 @@
                 ? s
                 : null
               : "ddd" === a
-              ? -1 !== (s = Be.call(this._shortWeekdaysParse, i))
+                ? -1 !== (s = Be.call(this._shortWeekdaysParse, i))
+                  ? s
+                  : null
+                : -1 !== (s = Be.call(this._minWeekdaysParse, i))
+                  ? s
+                  : null
+            : "dddd" === a
+              ? -1 !== (s = Be.call(this._weekdaysParse, i)) ||
+                -1 !== (s = Be.call(this._shortWeekdaysParse, i)) ||
+                -1 !== (s = Be.call(this._minWeekdaysParse, i))
                 ? s
                 : null
-              : -1 !== (s = Be.call(this._minWeekdaysParse, i))
-              ? s
-              : null
-            : "dddd" === a
-            ? -1 !== (s = Be.call(this._weekdaysParse, i)) ||
-              -1 !== (s = Be.call(this._shortWeekdaysParse, i)) ||
-              -1 !== (s = Be.call(this._minWeekdaysParse, i))
-              ? s
-              : null
-            : "ddd" === a
-            ? -1 !== (s = Be.call(this._shortWeekdaysParse, i)) ||
-              -1 !== (s = Be.call(this._weekdaysParse, i)) ||
-              -1 !== (s = Be.call(this._minWeekdaysParse, i))
-              ? s
-              : null
-            : -1 !== (s = Be.call(this._minWeekdaysParse, i)) ||
-              -1 !== (s = Be.call(this._weekdaysParse, i)) ||
-              -1 !== (s = Be.call(this._shortWeekdaysParse, i))
-            ? s
-            : null;
+              : "ddd" === a
+                ? -1 !== (s = Be.call(this._shortWeekdaysParse, i)) ||
+                  -1 !== (s = Be.call(this._weekdaysParse, i)) ||
+                  -1 !== (s = Be.call(this._minWeekdaysParse, i))
+                  ? s
+                  : null
+                : -1 !== (s = Be.call(this._minWeekdaysParse, i)) ||
+                    -1 !== (s = Be.call(this._weekdaysParse, i)) ||
+                    -1 !== (s = Be.call(this._shortWeekdaysParse, i))
+                  ? s
+                  : null;
         }
         function Ua(e, a, t) {
           var n, s, r;
@@ -14014,19 +14014,19 @@
                 t[Ne] < 0 || t[Ne] > 11
                   ? Ne
                   : t[Je] < 1 || t[Je] > na(t[ze], t[Ne])
-                  ? Je
-                  : t[Re] < 0 ||
-                    t[Re] > 24 ||
-                    (24 === t[Re] &&
-                      (0 !== t[Ce] || 0 !== t[Ie] || 0 !== t[Ue]))
-                  ? Re
-                  : t[Ce] < 0 || t[Ce] > 59
-                  ? Ce
-                  : t[Ie] < 0 || t[Ie] > 59
-                  ? Ie
-                  : t[Ue] < 0 || t[Ue] > 999
-                  ? Ue
-                  : -1),
+                    ? Je
+                    : t[Re] < 0 ||
+                        t[Re] > 24 ||
+                        (24 === t[Re] &&
+                          (0 !== t[Ce] || 0 !== t[Ie] || 0 !== t[Ue]))
+                      ? Re
+                      : t[Ce] < 0 || t[Ce] > 59
+                        ? Ce
+                        : t[Ie] < 0 || t[Ie] > 59
+                          ? Ie
+                          : t[Ue] < 0 || t[Ue] > 999
+                            ? Ue
+                            : -1),
               Y(e)._overflowDayOfYear && (a < ze || a > Je) && (a = Je),
               Y(e)._overflowWeeks && -1 === a && (a = Ge),
               Y(e)._overflowWeekday && -1 === a && (a = Ve),
@@ -14242,15 +14242,15 @@
               null != a.d
                 ? ((s = a.d) < 0 || s > 6) && (_ = !0)
                 : null != a.e
-                ? ((s = a.e + r), (a.e < 0 || a.e > 6) && (_ = !0))
-                : (s = r)),
+                  ? ((s = a.e + r), (a.e < 0 || a.e > 6) && (_ = !0))
+                  : (s = r)),
             n < 1 || n > ga(t, r, i)
               ? (Y(e)._overflowWeeks = !0)
               : null != _
-              ? (Y(e)._overflowWeekday = !0)
-              : ((d = Da(t, n, s, r, i)),
-                (e._a[ze] = d.year),
-                (e._dayOfYear = d.dayOfYear));
+                ? (Y(e)._overflowWeekday = !0)
+                : ((d = Da(t, n, s, r, i)),
+                  (e._a[ze] = d.year),
+                  (e._dayOfYear = d.dayOfYear));
         }
         function Rt(e) {
           if (e._f !== s.ISO_8601)
@@ -14302,12 +14302,12 @@
           return null == t
             ? a
             : null != e.meridiemHour
-            ? e.meridiemHour(a, t)
-            : null != e.isPM
-            ? ((n = e.isPM(t)) && a < 12 && (a += 12),
-              n || 12 !== a || (a = 0),
-              a)
-            : a;
+              ? e.meridiemHour(a, t)
+              : null != e.isPM
+                ? ((n = e.isPM(t)) && a < 12 && (a += 12),
+                  n || 12 !== a || (a = 0),
+                  a)
+                : a;
         }
         function It(e) {
           var a,
@@ -14374,19 +14374,19 @@
           u(a)
             ? (e._d = new Date(s.now()))
             : l(a)
-            ? (e._d = new Date(a.valueOf()))
-            : "string" == typeof a
-            ? Et(e)
-            : i(a)
-            ? ((e._a = M(a.slice(0), function (e) {
-                return parseInt(e, 10);
-              })),
-              Nt(e))
-            : d(a)
-            ? Ut(e)
-            : m(a)
-            ? (e._d = new Date(a))
-            : s.createFromInputFallback(e);
+              ? (e._d = new Date(a.valueOf()))
+              : "string" == typeof a
+                ? Et(e)
+                : i(a)
+                  ? ((e._a = M(a.slice(0), function (e) {
+                      return parseInt(e, 10);
+                    })),
+                    Nt(e))
+                  : d(a)
+                    ? Ut(e)
+                    : m(a)
+                      ? (e._d = new Date(a))
+                      : s.createFromInputFallback(e);
         }
         function Bt(e, a, t, n, s) {
           var r = {};
@@ -14546,18 +14546,18 @@
           return null === s
             ? null
             : 0 ===
-              (n =
-                60 *
-                  (t = ((s[s.length - 1] || []) + "").match(ln) || [
-                    "-",
-                    0,
-                    0,
-                  ])[1] +
-                Pe(t[2]))
-            ? 0
-            : "+" === t[0]
-            ? n
-            : -n;
+                (n =
+                  60 *
+                    (t = ((s[s.length - 1] || []) + "").match(ln) || [
+                      "-",
+                      0,
+                      0,
+                    ])[1] +
+                  Pe(t[2]))
+              ? 0
+              : "+" === t[0]
+                ? n
+                : -n;
         }
         function hn(e, a) {
           var t, n;
@@ -14672,35 +14672,35 @@
             _n(e)
               ? (r = { ms: e._milliseconds, d: e._days, M: e._months })
               : m(e) || !isNaN(+e)
-              ? ((r = {}), a ? (r[a] = +e) : (r.milliseconds = +e))
-              : (i = bn.exec(e))
-              ? ((t = "-" === i[1] ? -1 : 1),
-                (r = {
-                  y: 0,
-                  d: Pe(i[Je]) * t,
-                  h: Pe(i[Re]) * t,
-                  m: Pe(i[Ce]) * t,
-                  s: Pe(i[Ie]) * t,
-                  ms: Pe(on(1e3 * i[Ue])) * t,
-                }))
-              : (i = Hn.exec(e))
-              ? ((t = "-" === i[1] ? -1 : 1),
-                (r = {
-                  y: jn(i[2], t),
-                  M: jn(i[3], t),
-                  w: jn(i[4], t),
-                  d: jn(i[5], t),
-                  h: jn(i[6], t),
-                  m: jn(i[7], t),
-                  s: jn(i[8], t),
-                }))
-              : null == r
-              ? (r = {})
-              : "object" == typeof r &&
-                ("from" in r || "to" in r) &&
-                ((s = Pn(Kt(r.from), Kt(r.to))),
-                ((r = {}).ms = s.milliseconds),
-                (r.M = s.months)),
+                ? ((r = {}), a ? (r[a] = +e) : (r.milliseconds = +e))
+                : (i = bn.exec(e))
+                  ? ((t = "-" === i[1] ? -1 : 1),
+                    (r = {
+                      y: 0,
+                      d: Pe(i[Je]) * t,
+                      h: Pe(i[Re]) * t,
+                      m: Pe(i[Ce]) * t,
+                      s: Pe(i[Ie]) * t,
+                      ms: Pe(on(1e3 * i[Ue])) * t,
+                    }))
+                  : (i = Hn.exec(e))
+                    ? ((t = "-" === i[1] ? -1 : 1),
+                      (r = {
+                        y: jn(i[2], t),
+                        M: jn(i[3], t),
+                        w: jn(i[4], t),
+                        d: jn(i[5], t),
+                        h: jn(i[6], t),
+                        m: jn(i[7], t),
+                        s: jn(i[8], t),
+                      }))
+                    : null == r
+                      ? (r = {})
+                      : "object" == typeof r &&
+                        ("from" in r || "to" in r) &&
+                        ((s = Pn(Kt(r.from), Kt(r.to))),
+                        ((r = {}).ms = s.milliseconds),
+                        (r.M = s.months)),
             (n = new dn(r)),
             _n(e) && _(e, "_locale") && (n._locale = e._locale),
             _n(e) && _(e, "_isValid") && (n._isValid = e._isValid),
@@ -14842,16 +14842,16 @@
           return t < -6
             ? "sameElse"
             : t < -1
-            ? "lastWeek"
-            : t < 0
-            ? "lastDay"
-            : t < 1
-            ? "sameDay"
-            : t < 2
-            ? "nextDay"
-            : t < 7
-            ? "nextWeek"
-            : "sameElse";
+              ? "lastWeek"
+              : t < 0
+                ? "lastDay"
+                : t < 1
+                  ? "sameDay"
+                  : t < 2
+                    ? "nextDay"
+                    : t < 7
+                      ? "nextWeek"
+                      : "sameElse";
         }
         function In(e, a) {
           1 === arguments.length &&
@@ -14982,17 +14982,17 @@
                   : "YYYYYY-MM-DD[T]HH:mm:ss.SSSZ",
               )
             : j(Date.prototype.toISOString)
-            ? a
-              ? this.toDate().toISOString()
-              : new Date(this.valueOf() + 60 * this.utcOffset() * 1e3)
-                  .toISOString()
-                  .replace("Z", U(t, "Z"))
-            : U(
-                t,
-                a
-                  ? "YYYY-MM-DD[T]HH:mm:ss.SSS[Z]"
-                  : "YYYY-MM-DD[T]HH:mm:ss.SSSZ",
-              );
+              ? a
+                ? this.toDate().toISOString()
+                : new Date(this.valueOf() + 60 * this.utcOffset() * 1e3)
+                    .toISOString()
+                    .replace("Z", U(t, "Z"))
+              : U(
+                  t,
+                  a
+                    ? "YYYY-MM-DD[T]HH:mm:ss.SSS[Z]"
+                    : "YYYY-MM-DD[T]HH:mm:ss.SSSZ",
+                );
         }
         function as() {
           if (!this.isValid()) return "moment.invalid(/* " + this._i + " */)";
@@ -15786,12 +15786,12 @@
                 (1 === Pe((e % 100) / 10)
                   ? "th"
                   : 1 === a
-                  ? "st"
-                  : 2 === a
-                  ? "nd"
-                  : 3 === a
-                  ? "rd"
-                  : "th")
+                    ? "st"
+                    : 2 === a
+                      ? "nd"
+                      : 3 === a
+                        ? "rd"
+                        : "th")
               );
             },
           }),

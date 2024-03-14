@@ -1038,15 +1038,15 @@
             "remove" === this.m_streamChatStatus
             ? "remove"
             : void 0 !== this.m_bUserChatExpanded
-            ? this.m_bUserChatExpanded
-              ? "show"
-              : "hide"
-            : "show" === this.m_pageChatStatus
-            ? "show"
-            : "hide" === this.m_pageChatStatus ||
-              "hide" === this.m_streamChatStatus
-            ? "hide"
-            : "show";
+              ? this.m_bUserChatExpanded
+                ? "show"
+                : "hide"
+              : "show" === this.m_pageChatStatus
+                ? "show"
+                : "hide" === this.m_pageChatStatus ||
+                    "hide" === this.m_streamChatStatus
+                  ? "hide"
+                  : "show";
         }
         ToggleChatVisibility() {
           const e = this.GetChatVisibility();
@@ -1419,8 +1419,8 @@
             clanid: e.clanid
               ? e.clanid
               : e.event
-              ? e.event.clanSteamID.GetAccountID()
-              : void 0,
+                ? e.event.clanSteamID.GetAccountID()
+                : void 0,
             listid: e.listid,
             subid: e.subid,
             bundleid: e.bundleid,
@@ -1478,8 +1478,8 @@
           S(e) != S(t)
             ? S(t) - S(e)
             : e.viewer_count != t.viewer_count
-            ? t.viewer_count - e.viewer_count
-            : t.accountid - e.accountid,
+              ? t.viewer_count - e.viewer_count
+              : t.accountid - e.accountid,
         );
       }
       function v(e, t, n) {
@@ -2042,9 +2042,8 @@
               "DASHStats: Did not find any audio or video loaders",
             );
           (this.m_allTimeSnapshot.m_nStallEvents += 1),
-            (this.m_rgSnapShots[
-              this.m_rgSnapShots.length - 1
-            ].m_nStallEvents += 1);
+            (this.m_rgSnapShots[this.m_rgSnapShots.length - 1].m_nStallEvents +=
+              1);
           let a = new A();
           this.GatherCommonStats(
             a,
@@ -2998,8 +2997,8 @@
             this.ContainsVideo()
               ? e.push("Video")
               : this.ContainsAudio()
-              ? e.push("Audio")
-              : this.ContainsGame() && e.push("Game"),
+                ? e.push("Audio")
+                : this.ContainsGame() && e.push("Game"),
             e.join(" & ") +
               ":" +
               this.m_callbacks.GetCurrentPlayTime().toFixed(3).toString()
@@ -3031,11 +3030,7 @@
           if (
             (this.ContainsVideo() &&
               (0, u.hB)(
-                `${this.GetDebugName()} changing representation to ${
-                  e.nHeight || 0
-                }p at ${Math.ceil(e.nBandwidth / 1e3)}KB for segment ${
-                  this.m_nNextSegment
-                }`,
+                `${this.GetDebugName()} changing representation to ${e.nHeight || 0}p at ${Math.ceil(e.nBandwidth / 1e3)}KB for segment ${this.m_nNextSegment}`,
               ),
             (this.m_representation = e),
             (this.m_bNeedInitSegment = !this.ContainsGame()),
@@ -3243,22 +3238,18 @@
                   ),
                   c - r > 9e3
                     ? ((0, u.hB)(
-                        `${this.GetDebugName()} HTTP download failed.. stopping loader: ${
-                          c - r
-                        }ms`,
+                        `${this.GetDebugName()} HTTP download failed.. stopping loader: ${c - r}ms`,
                       ),
                       void this.DownloadFailed())
                     : 410 == p
-                    ? ((this.m_nNumConsecutiveDownloadGones += 1),
-                      (0, u.hB)(
-                        `${this.GetDebugName()} HTTP download gone.. informing the player: ${
-                          c - r
-                        }ms`,
-                      ),
-                      void this.DownloadGone())
-                    : void this.m_schNextDownload.Schedule(500, () =>
-                        this.DownloadSegment(e, t, n, i, r),
-                      ));
+                      ? ((this.m_nNumConsecutiveDownloadGones += 1),
+                        (0, u.hB)(
+                          `${this.GetDebugName()} HTTP download gone.. informing the player: ${c - r}ms`,
+                        ),
+                        void this.DownloadGone())
+                      : void this.m_schNextDownload.Schedule(500, () =>
+                          this.DownloadSegment(e, t, n, i, r),
+                        ));
             if (
               ((this.m_nNumConsecutiveDownloadGones = 0),
               t && (this.m_bNeedInitSegment = !1),
@@ -3388,9 +3379,7 @@
           if (
             (0 == t && 0 == n && (a = !0),
             (0, u.hB)(
-              `${this.GetDebugName()} making an ${
-                a ? "unbuffered" : "buffered"
-              } seek to ${e}`,
+              `${this.GetDebugName()} making an ${a ? "unbuffered" : "buffered"} seek to ${e}`,
             ),
             !this.m_bSeekInProgress && !a && !this.m_bNeedInitSegment)
           )
@@ -4965,22 +4954,22 @@
           return (0, oe.U5)("RemotePlay.UnlockH264")
             ? (console.log("Client supports direct H.264 unlock"), !0)
             : (0, oe.U5)("BrowserView.PostMessageToParent")
-            ? (console.log("Client supports browserview H.264 unlock"), !0)
-            : (console.log("Client does not support H.264 unlock"), !1);
+              ? (console.log("Client supports browserview H.264 unlock"), !0)
+              : (console.log("Client does not support H.264 unlock"), !1);
         }
         RequestUnlockH264() {
           (0, oe.U5)("RemotePlay.UnlockH264")
             ? (console.log("Requesting direct H.264 unlock"),
               SteamClient.RemotePlay.UnlockH264())
             : (0, oe.U5)("BrowserView.PostMessageToParent")
-            ? (console.log("Requesting browserview unlock"),
-              SteamClient.BrowserView.PostMessageToParent(
-                "UnlockH264Request",
-                "CUnlockH264Helper",
-              ))
-            : console.log(
-                "Failed to request H.264 unlock: no method supported",
-              );
+              ? (console.log("Requesting browserview unlock"),
+                SteamClient.BrowserView.PostMessageToParent(
+                  "UnlockH264Request",
+                  "CUnlockH264Helper",
+                ))
+              : console.log(
+                  "Failed to request H.264 unlock: no method supported",
+                );
         }
         CheckUnlockState() {
           if (this.m_broadcast.m_eWatchState != me.Unlocking) return;
@@ -5418,52 +5407,52 @@
                     this.GetBroadcastManifest(e, t, n),
                   ))
                 : "waiting_for_reconnect" == o
-                ? (e.SetState(
-                    me.Loading,
-                    (0, S.Xx)("#BroadcastWatch_WaitingForReconnect"),
-                  ),
-                  e.m_schManifestTimeout.Schedule(r.retry, () =>
-                    this.GetBroadcastManifest(e, t, n),
-                  ))
-                : "end" == o
-                ? e.SetState(
-                    me.Error,
-                    (0, S.Xx)("#BroadcastWatch_NotAvailable"),
-                  )
-                : "too_many_broadcasts" == o
-                ? e.SetState(
-                    me.Error,
-                    (0, S.Xx)("#BroadcastWatch_TooManyBroadcasts"),
-                  )
-                : "system_not_supported" == o
-                ? e.SetState(
-                    me.Error,
-                    (0, S.Xx)("#BroadcastWatch_SystemNotSupported"),
-                  )
-                : "user_restricted" == o
-                ? e.SetState(
-                    me.Error,
-                    (0, S.Xx)("#BroadcastWatch_UserRestricted"),
-                  )
-                : "poor_upload_quality" == o
-                ? e.SetState(
-                    me.Error,
-                    (0, S.Xx)("#BroadcastWatch_PoorUploadQuality"),
-                  )
-                : "request_failed" == o
-                ? e.SetState(
-                    me.Error,
-                    (0, S.Xx)("#BroadcastWatch_RequestFailed"),
-                  )
-                : "too_many_viewers" == o
-                ? e.SetState(
-                    me.Error,
-                    (0, S.Xx)("#BroadcastWatch_TooManyViewers"),
-                  )
-                : e.SetState(
-                    me.Error,
-                    (0, S.Xx)("#BroadcastWatch_NotAvailable"),
-                  );
+                  ? (e.SetState(
+                      me.Loading,
+                      (0, S.Xx)("#BroadcastWatch_WaitingForReconnect"),
+                    ),
+                    e.m_schManifestTimeout.Schedule(r.retry, () =>
+                      this.GetBroadcastManifest(e, t, n),
+                    ))
+                  : "end" == o
+                    ? e.SetState(
+                        me.Error,
+                        (0, S.Xx)("#BroadcastWatch_NotAvailable"),
+                      )
+                    : "too_many_broadcasts" == o
+                      ? e.SetState(
+                          me.Error,
+                          (0, S.Xx)("#BroadcastWatch_TooManyBroadcasts"),
+                        )
+                      : "system_not_supported" == o
+                        ? e.SetState(
+                            me.Error,
+                            (0, S.Xx)("#BroadcastWatch_SystemNotSupported"),
+                          )
+                        : "user_restricted" == o
+                          ? e.SetState(
+                              me.Error,
+                              (0, S.Xx)("#BroadcastWatch_UserRestricted"),
+                            )
+                          : "poor_upload_quality" == o
+                            ? e.SetState(
+                                me.Error,
+                                (0, S.Xx)("#BroadcastWatch_PoorUploadQuality"),
+                              )
+                            : "request_failed" == o
+                              ? e.SetState(
+                                  me.Error,
+                                  (0, S.Xx)("#BroadcastWatch_RequestFailed"),
+                                )
+                              : "too_many_viewers" == o
+                                ? e.SetState(
+                                    me.Error,
+                                    (0, S.Xx)("#BroadcastWatch_TooManyViewers"),
+                                  )
+                                : e.SetState(
+                                    me.Error,
+                                    (0, S.Xx)("#BroadcastWatch_NotAvailable"),
+                                  );
           });
         }
         GetClipManifest(e, t) {
@@ -5879,10 +5868,10 @@
               this.m_player
                 ? this.m_player.Play()
                 : this.IsBroadcastVOD()
-                ? this.StartVOD(ve.GetBroadcastVOD(this.m_nBroadcastAppIDVOD))
-                : this.StartBroadcast(
-                    ve.GetBroadcast(this.m_steamIDBroadcast),
-                  ));
+                  ? this.StartVOD(ve.GetBroadcastVOD(this.m_nBroadcastAppIDVOD))
+                  : this.StartBroadcast(
+                      ve.GetBroadcast(this.m_steamIDBroadcast),
+                    ));
         }
         Pause() {
           console.log(
@@ -7259,8 +7248,8 @@
               (/Macintosh/i.test(e) && /Safari/i.test(e))
                 ? (this.m_sBrowserID = "ios")
                 : /Android/i.test(e)
-                ? (this.m_sBrowserID = "android")
-                : (this.m_sBrowserID = "");
+                  ? (this.m_sBrowserID = "android")
+                  : (this.m_sBrowserID = "");
             }
         }
       })();
@@ -7975,12 +7964,12 @@
                 ? ((a = t ? e.result.event_ignored : e.result.event_followed),
                   (r = t ? null : e.result.event_followed_flags))
                 : t
-                ? ((a = e.result.event_followed),
-                  (r = e.result.event_followed_flags),
-                  (s = e.result.event_ignored))
-                : ((a = e.result.event_ignored),
-                  (s = e.result.event_followed),
-                  (l = e.result.event_followed_flags));
+                  ? ((a = e.result.event_followed),
+                    (r = e.result.event_followed_flags),
+                    (s = e.result.event_ignored))
+                  : ((a = e.result.event_ignored),
+                    (s = e.result.event_followed),
+                    (l = e.result.event_followed_flags));
               let m = a.indexOf(i);
               if ((m > -1 && (a.splice(m, 1), r && r.splice(m, 1)), s)) {
                 let e = s.indexOf(i);
@@ -8595,8 +8584,8 @@
                       2 == (null == n ? void 0 : n.GetStoreItemType())
                         ? r.id
                         : null == n
-                        ? void 0
-                        : n.GetBestPurchaseOption().bundleid)
+                          ? void 0
+                          : n.GetBestPurchaseOption().bundleid)
                   : (a =
                       null == n ? void 0 : n.GetBestPurchaseOption().packageid),
                 void 0 !== window.g_bUseNewCartAPI &&
@@ -8653,11 +8642,11 @@
                 null == p ? void 0 : p.GetName(),
               )
             : _
-            ? (0, d.Xx)(
-                "#Sale_CannotInstallDemo_ttip",
-                null == p ? void 0 : p.GetName(),
-              )
-            : (0, d.Xx)("#Loading");
+              ? (0, d.Xx)(
+                  "#Sale_CannotInstallDemo_ttip",
+                  null == p ? void 0 : p.GetName(),
+                )
+              : (0, d.Xx)("#Loading");
         return !g && _ && (null == p ? void 0 : p.BIsFree())
           ? a.createElement(c.a, { info: t, className: n })
           : a.createElement(
@@ -8852,11 +8841,7 @@
           case m.k_eStoreNewsHub:
             return (
               s +
-              `news/${
-                e.appid
-                  ? `app/${e.appid}`
-                  : `group/${e.clanSteamID.GetAccountID()}`
-              }`
+              `news/${e.appid ? `app/${e.appid}` : `group/${e.clanSteamID.GetAccountID()}`}`
             );
           case m.k_eStoreOwnerPage:
             return (
@@ -8876,11 +8861,7 @@
           case m.k_eCommunityView:
             return l + "announcements/detail/" + c;
           case m.k_eStoreView:
-            return `${s}news/${
-              e.appid
-                ? `app/${e.appid}`
-                : `group/${e.clanSteamID.GetAccountID()}`
-            }/${e.bOldAnnouncement ? `old_view/${c}` : `view/${d}`}`;
+            return `${s}news/${e.appid ? `app/${e.appid}` : `group/${e.clanSteamID.GetAccountID()}`}/${e.bOldAnnouncement ? `old_view/${c}` : `view/${d}`}`;
           case m.k_eStoreUsersNewsHub:
             return `${s}news/`;
           default:
@@ -9480,10 +9461,10 @@
               ? this.m_rgSortedCalendarEvents[0].start_time
               : t
             : this.m_rgSortedCalendarEvents.length > 0
-            ? this.m_rgSortedCalendarEvents[
-                this.m_rgSortedCalendarEvents.length - 1
-              ].start_time
-            : t;
+              ? this.m_rgSortedCalendarEvents[
+                  this.m_rgSortedCalendarEvents.length - 1
+                ].start_time
+              : t;
         }
         UpdateStuckCounters(e, t) {
           const n =
@@ -9958,8 +9939,8 @@
                     (i
                       ? (0, E.Xx)("#Button_Followed")
                       : n
-                      ? (0, E.Xx)("#Button_Ignored")
-                      : (0, E.Xx)("#Button_Follow")),
+                        ? (0, E.Xx)("#Button_Ignored")
+                        : (0, E.Xx)("#Button_Follow")),
                 ),
               )
             : null;
@@ -10291,8 +10272,8 @@
             s.review_score < 5
               ? U().ReviewScoreLow
               : 5 == s.review_score
-              ? U().ReviewScoreMixed
-              : U().ReviewScoreHigh,
+                ? U().ReviewScoreMixed
+                : U().ReviewScoreHigh,
           o = `${N.De.STORE_BASE_URL}app/${t.id}/#app_reviews_hash`,
           m = l.createElement(
             "div",
@@ -10496,9 +10477,7 @@
                 className: U().BottomShelfOffScreen,
                 ref: (e) =>
                   g(
-                    `translateY( -${
-                      (null == e ? void 0 : e.clientHeight) || 0
-                    }px )`,
+                    `translateY( -${(null == e ? void 0 : e.clientHeight) || 0}px )`,
                   ),
               },
               l.createElement(
@@ -10654,9 +10633,7 @@
             i || !S
               ? null
               : (0, h.Hf)(
-                  `${null == S ? void 0 : S.GetStorePageURL()}${
-                    d ? `?${d}` : ""
-                  }`,
+                  `${null == S ? void 0 : S.GetStorePageURL()}${d ? `?${d}` : ""}`,
                   y,
                 ),
           w = l.createElement(ne, {
@@ -11184,10 +11161,10 @@
         return "bundle" == e
           ? "bundle"
           : "sub" == e
-          ? "sub"
-          : (0, B.m)(e)
-          ? "app"
-          : null;
+            ? "sub"
+            : (0, B.m)(e)
+              ? "app"
+              : null;
       }
       const N = (e) => {
         const { appid: t } = e,
@@ -11497,8 +11474,8 @@
             ge = u.BHasTags()
               ? u.GetTagIDs()
               : (null == _ ? void 0 : _.BHasTags())
-              ? _.GetTagIDs()
-              : [],
+                ? _.GetTagIDs()
+                : [],
             Se = 0 == u.GetStoreItemType(),
             fe = (0, d.Hf)(pe, ae),
             ve = me || u.BIsReleased() || u.BIsPrePurchase();
@@ -12098,10 +12075,10 @@
                   t
                     ? "#Updating"
                     : i
-                    ? "#Loading"
-                    : u
-                    ? "#Wishlisted_short"
-                    : "#AddToWishlist_short",
+                      ? "#Loading"
+                      : u
+                        ? "#Wishlisted_short"
+                        : "#AddToWishlist_short",
                 ),
               ),
             );
@@ -12950,9 +12927,7 @@
                     : {},
                 },
                 i.createElement("img", {
-                  className: `${d().WhitelistAvatar} ${d().Grabbable} ${
-                    this.state.bGrabbing ? d().Grabbing : ""
-                  } ${this.props.bDisabled ? d().DisabledGrab : ""}`,
+                  className: `${d().WhitelistAvatar} ${d().Grabbable} ${this.state.bGrabbing ? d().Grabbing : ""} ${this.props.bDisabled ? d().DisabledGrab : ""}`,
                   src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAeCAYAAAAo5+5WAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4gEEFRg0nBijuQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAw0lEQVRIx+2WMQqDMBSG/xedEnCp3kFzh56gN+iN7SrFLsEDmElwDHGyFNEYlQyF/FPgvXx5fMsL3R9P+CRJEgsAxhjy6We+UClLSFl+H7gMnqGcC3AuvOHMFzrHF86OQI/A062CMYaa5o2zYQiUNMsyGwRcVWWQicOpaNsPooqoIqqIKvYmrusX/dXE4VS4lqkQwnl5HMfND4xzmRbFzeZ5sVrXuscwDHRKhVIdad2vQpXq6JLjJdwH6lSxhAOwP+fdTHcfVDuVWnTzAAAAAElFTkSuQmCC",
                   onMouseDown: Boolean(this.props.bDisabled)
                     ? void 0
@@ -13155,12 +13130,12 @@
         e > m
           ? ((d = e / m), (c = "Tera"))
           : e > l
-          ? ((d = e / l), (c = "Giga"))
-          : e > o
-          ? ((d = e / o), (c = "Mega"))
-          : e > r
-          ? ((d = e / r), (c = "Kilo"))
-          : (d = e);
+            ? ((d = e / l), (c = "Giga"))
+            : e > o
+              ? ((d = e / o), (c = "Mega"))
+              : e > r
+                ? ((d = e / r), (c = "Kilo"))
+                : (d = e);
         const u =
           "#" +
           c +
@@ -13181,10 +13156,10 @@
         return e > 1e9
           ? Math.trunc(e / 1e9).toString() + "B"
           : e > 1e6
-          ? Math.trunc(e / 1e6).toString() + "M"
-          : e > 1e3
-          ? Math.trunc(e / 1e3).toString() + "K"
-          : e.toString();
+            ? Math.trunc(e / 1e6).toString() + "M"
+            : e > 1e3
+              ? Math.trunc(e / 1e3).toString() + "K"
+              : e.toString();
       }
     },
     13499: (e, t, n) => {
@@ -14501,10 +14476,10 @@
                     "tagids" === e.type
                       ? "Tags"
                       : "category" === e.type
-                      ? "Category"
-                      : "contenthub" === e.type
-                      ? "Hardcoded Filter"
-                      : "Special",
+                        ? "Category"
+                        : "contenthub" === e.type
+                          ? "Hardcoded Filter"
+                          : "Special",
                   ),
                   s.createElement(
                     "div",
@@ -14849,19 +14824,19 @@
                     }),
                   )
                 : "category" === t.type
-                ? s.createElement(
-                    "div",
-                    { className: y().IDSelector },
-                    s.createElement(r.ZP, {
-                      isSearchable: !0,
-                      options: h,
-                      value: h.find((t) => t.value === e.id),
-                      onChange: (t) => {
-                        (e.id = t.value), d();
-                      },
-                    }),
-                  )
-                : null,
+                  ? s.createElement(
+                      "div",
+                      { className: y().IDSelector },
+                      s.createElement(r.ZP, {
+                        isSearchable: !0,
+                        options: h,
+                        value: h.find((t) => t.value === e.id),
+                        onChange: (t) => {
+                          (e.id = t.value), d();
+                        },
+                      }),
+                    )
+                  : null,
           }),
           s.createElement(
             m.zx,
@@ -15087,8 +15062,8 @@
           t > y && t <= v
             ? ((n = S.SizeColorSweet), (a = "Good size!"))
             : t > v
-            ? ((n = S.SizeColorBig), (a = "Too big"))
-            : ((n = S.SizeColorSmall), (a = "Too small")),
+              ? ((n = S.SizeColorBig), (a = "Too big"))
+              : ((n = S.SizeColorSmall), (a = "Too small")),
           o.createElement(
             "div",
             { className: (0, h.Z)(S.ThemeSize, n) },
@@ -15394,9 +15369,7 @@
         return o.createElement(
           "a",
           {
-            href: `data:application/octet-stream,${encodeURIComponent(
-              r().unparse({ data: t, fields: Object.keys(t ? t[0] : {}) }),
-            )}`,
+            href: `data:application/octet-stream,${encodeURIComponent(r().unparse({ data: t, fields: Object.keys(t ? t[0] : {}) }))}`,
             download: "theme_sale_stats.csv",
           },
           "Export CSV",

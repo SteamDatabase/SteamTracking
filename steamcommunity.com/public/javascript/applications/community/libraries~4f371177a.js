@@ -217,12 +217,12 @@
                   });
               }
             : "function" == typeof setImmediate
-            ? function (e) {
-                setImmediate(e);
-              }
-            : function (e) {
-                setTimeout(e);
-              };
+              ? function (e) {
+                  setImmediate(e);
+                }
+              : function (e) {
+                  setTimeout(e);
+                };
       function i(e, t, n) {
         o(t);
         for (var r = 0; r < t.keys.length; r++)
@@ -1575,8 +1575,8 @@
             return t <= n
               ? this.left.slice(e, t)
               : e >= n
-              ? this.right.slice(e - n, t - n)
-              : this.left.slice(e, n).append(this.right.slice(0, t - n));
+                ? this.right.slice(e - n, t - n)
+                : this.left.slice(e, n).append(this.right.slice(0, t - n));
           }),
           (t.prototype.leafAppend = function (e) {
             var n = this.right.leafAppend(e);
@@ -2482,14 +2482,14 @@
                 let a = s.isText
                   ? s.text.slice(Math.max(e, l) - l, t - l)
                   : s.isLeaf
-                  ? r
-                    ? "function" == typeof r
-                      ? r(s)
-                      : r
-                    : s.type.spec.leafText
-                    ? s.type.spec.leafText(s)
-                    : ""
-                  : "";
+                    ? r
+                      ? "function" == typeof r
+                        ? r(s)
+                        : r
+                      : s.type.spec.leafText
+                        ? s.type.spec.leafText(s)
+                        : ""
+                    : "";
                 s.isBlock &&
                   ((s.isLeaf && a) || s.isTextblock) &&
                   n &&
@@ -2544,8 +2544,8 @@
           return e == t
             ? l.empty
             : 0 == e && t == this.content.length
-            ? this
-            : new l(this.content.slice(e, t));
+              ? this
+              : new l(this.content.slice(e, t));
         }
         replaceChild(e, t) {
           let n = this.content[e];
@@ -2985,8 +2985,8 @@
           return t
             ? this.parent.child(e).cut(0, t)
             : 0 == e
-            ? null
-            : this.parent.child(e - 1);
+              ? null
+              : this.parent.child(e - 1);
         }
         posAtIndex(e, t) {
           t = this.resolveDepth(t);
@@ -3293,9 +3293,7 @@
             e = this.marks[t].addToSet(e);
           if (!d.sameSet(e, this.marks))
             throw new RangeError(
-              `Invalid collection of marks for node ${
-                this.type.name
-              }: ${this.marks.map((e) => e.type.name)}`,
+              `Invalid collection of marks for node ${this.type.name}: ${this.marks.map((e) => e.type.name)}`,
             );
           this.content.forEach((e) => e.check());
         }
@@ -3798,9 +3796,7 @@
         checkContent(e) {
           if (!this.validContent(e))
             throw new RangeError(
-              `Invalid content for node ${this.name}: ${e
-                .toString()
-                .slice(0, 50)}`,
+              `Invalid content for node ${this.name}: ${e.toString().slice(0, 50)}`,
             );
         }
         allowsMarkType(e) {
@@ -3905,10 +3901,10 @@
                 "_" == i
                   ? null
                   : i
-                  ? G(this, i.split(" "))
-                  : "" != i && t.inlineContent
-                  ? null
-                  : []);
+                    ? G(this, i.split(" "))
+                    : "" != i && t.inlineContent
+                      ? null
+                      : []);
           }
           for (let e in this.marks) {
             let t = this.marks[e],
@@ -4120,8 +4116,8 @@
         return null != t
           ? (t ? 1 : 0) | ("full" === t ? 2 : 0)
           : e && "pre" == e.whitespace
-          ? 3
-          : -5 & n;
+            ? 3
+            : -5 & n;
       }
       class ne {
         constructor(e, t, n, r, i, o, s) {
@@ -4190,9 +4186,9 @@
           return this.type
             ? this.type.inlineContent
             : this.content.length
-            ? this.content[0].isInline
-            : e.parentNode &&
-              !Z.hasOwnProperty(e.parentNode.nodeName.toLowerCase());
+              ? this.content[0].isInline
+              : e.parentNode &&
+                !Z.hasOwnProperty(e.parentNode.nodeName.toLowerCase());
         }
       }
       class re {
@@ -4295,8 +4291,8 @@
                 e && ee.hasOwnProperty(e) && n
                   ? (n.appendChild(t), (t = n))
                   : "li" == e
-                  ? (n = t)
-                  : e && (n = null);
+                    ? (n = t)
+                    : e && (n = null);
               }
             })(e);
           let i =
@@ -4389,8 +4385,8 @@
             "string" == typeof t.contentElement
               ? (n = e.querySelector(t.contentElement))
               : "function" == typeof t.contentElement
-              ? (n = t.contentElement(e))
-              : t.contentElement && (n = t.contentElement),
+                ? (n = t.contentElement(e))
+                : t.contentElement && (n = t.contentElement),
               this.findAround(e, n, !0),
               this.addAll(n);
           }
@@ -4542,8 +4538,8 @@
                     s > 0 || (0 == s && r)
                       ? this.nodes[s].type
                       : n && s >= i
-                      ? n.node(s - i).type
-                      : null;
+                        ? n.node(s - i).type
+                        : null;
                   if (!e || (e.name != l && -1 == e.groups.indexOf(l)))
                     return !1;
                   s--;
@@ -4871,8 +4867,8 @@
                 l.indexAfter(-1) < l.node(-2).childCount
                   ? 1
                   : l.indexAfter(-2) < l.node(-3).childCount
-                  ? 2
-                  : 3;
+                    ? 2
+                    : 3;
               t = t.append(i.HY.from(e.createAndFill()));
               let h = l.before(l.depth - (r - 1)),
                 c = n.tr.replace(h, l.after(-a), new i.p2(t, 4 - r, 0)),
@@ -6431,8 +6427,8 @@
                 t == r.depth
                   ? 0
                   : r.pos <= (r.start(t + 1) + r.end(t + 1)) / 2
-                  ? -1
-                  : 1,
+                    ? -1
+                    : 1,
               o = r.index(t) + (n > 0 ? 1 : 0),
               s = r.node(t),
               l = !1;
@@ -6500,8 +6496,8 @@
           return e > -1
             ? new w(n.pos, e, this.$to.pos, this.$to.end(), a, t)
             : a.size || n.pos != this.$to.pos
-            ? new y(n.pos, i.pos, a)
-            : null;
+              ? new y(n.pos, i.pos, a)
+              : null;
         }
         findFittable() {
           let e = this.unplaced.openStart;
@@ -7528,8 +7524,8 @@
                 u.left > t.left
                   ? u.left - t.left
                   : u.right < t.left
-                  ? t.left - u.right
-                  : 0;
+                    ? t.left - u.right
+                    : 0;
               if (e < s) {
                 (n = d),
                   (s = e),
@@ -7579,8 +7575,8 @@
                 return { node: e, offset: 0 };
               })(n, r)
             : !n || (s && 1 == n.nodeType)
-            ? { node: e, offset: l }
-            : j(n, r)
+              ? { node: e, offset: l }
+              : j(n, r)
         );
       }
       function L(e, t) {
@@ -7762,10 +7758,10 @@
               n < 0 && !i
                 ? (t++, (o = -1))
                 : n >= 0 && i == r.nodeValue.length
-                ? (e--, (o = 1))
-                : n < 0
-                ? e--
-                : t++,
+                  ? (e--, (o = 1))
+                  : n < 0
+                    ? e--
+                    : t++,
               X(K(h(r, e, t), o), o < 0)
             );
           }
@@ -7803,8 +7799,8 @@
               3 == e.nodeType
                 ? h(e, u(e) - (s ? 0 : 1))
                 : 1 != e.nodeType || ("BR" == e.nodeName && e.nextSibling)
-                ? null
-                : e;
+                  ? null
+                  : e;
           if (t) return X(K(t, 1), !1);
         }
         if (null == o && i < u(r)) {
@@ -7815,8 +7811,8 @@
             ? 3 == e.nodeType
               ? h(e, 0, s ? 0 : 1)
               : 1 == e.nodeType
-              ? e
-              : null
+                ? e
+                : null
             : null;
           if (t) return X(K(t, -1), !0);
         }
@@ -7930,8 +7926,8 @@
                           return null != a && (l.caretBidiLevel = a), p;
                         })
                       : "left" == n || "backward" == n
-                      ? o
-                      : s;
+                        ? o
+                        : s;
                   })(e, t, n)));
       }
       class oe {
@@ -8498,8 +8494,8 @@
             h
               ? (l = new ue(e, t, n, r, c, d || null, p, h, o, s + 1))
               : t.isText
-              ? new de(e, t, n, r, c, p, o)
-              : new he(e, t, n, r, c, d || null, p, o, s + 1)
+                ? new de(e, t, n, r, c, p, o)
+                : new he(e, t, n, r, c, d || null, p, o, s + 1)
           );
         }
         parseRule() {
@@ -8919,8 +8915,8 @@
                 "class" == e
                   ? (r.class = (r.class ? r.class + " " : "") + o)
                   : "style" == e
-                  ? (r.style = (r.style ? r.style + ";" : "") + o)
-                  : "nodeName" != e && (r[e] = o));
+                    ? (r.style = (r.style ? r.style + ";" : "") + o)
+                    : "nodeName" != e && (r[e] = o));
             }
           }
         }
@@ -9731,24 +9727,25 @@
         return 38 == n || (B && 80 == n && "c" == r)
           ? Ye(e, -1, r) || je(e, -1)
           : 40 == n || (B && 78 == n && "c" == r)
-          ? (function (e) {
-              if (!D || e.state.selection.$head.parentOffset > 0) return !1;
-              let { focusNode: t, focusOffset: n } = e.domSelectionRange();
-              if (
-                t &&
-                1 == t.nodeType &&
-                0 == n &&
-                t.firstChild &&
-                "false" == t.firstChild.contentEditable
-              ) {
-                let n = t.firstChild;
-                Ue(e, n, "true"), setTimeout(() => Ue(e, n, "false"), 20);
-              }
-              return !1;
-            })(e) ||
-            Ye(e, 1, r) ||
-            je(e, 1)
-          : r == (B ? "m" : "c") && (66 == n || 73 == n || 89 == n || 90 == n);
+            ? (function (e) {
+                if (!D || e.state.selection.$head.parentOffset > 0) return !1;
+                let { focusNode: t, focusOffset: n } = e.domSelectionRange();
+                if (
+                  t &&
+                  1 == t.nodeType &&
+                  0 == n &&
+                  t.firstChild &&
+                  "false" == t.firstChild.contentEditable
+                ) {
+                  let n = t.firstChild;
+                  Ue(e, n, "true"), setTimeout(() => Ue(e, n, "false"), 20);
+                }
+                return !1;
+              })(e) ||
+              Ye(e, 1, r) ||
+              je(e, 1)
+            : r == (B ? "m" : "c") &&
+              (66 == n || 73 == n || 89 == n || 90 == n);
       }
       function Xe(e, t) {
         e.someProp("transformCopied", (n) => {
@@ -10294,8 +10291,8 @@
             ? (e.input.mouseDown && e.input.mouseDown.done(),
               (e.input.mouseDown = new Mt(e, s, n, !!r)))
             : ("doubleClick" == o ? bt : St)(e, s.pos, s.inside, n)
-            ? n.preventDefault()
-            : pt(e, "pointer"));
+              ? n.preventDefault()
+              : pt(e, "pointer"));
       };
       class Mt {
         constructor(e, t, n, i) {
@@ -10376,23 +10373,23 @@
             this.allowDefault || !t
               ? pt(this.view, "pointer")
               : vt(this.view, t.pos, t.inside, e, this.selectNode)
-              ? e.preventDefault()
-              : 0 == e.button &&
-                (this.flushed ||
-                  (D && this.mightDrag && !this.mightDrag.node.isAtom) ||
-                  (N &&
-                    !this.view.state.selection.visible &&
-                    Math.min(
-                      Math.abs(t.pos - this.view.state.selection.from),
-                      Math.abs(t.pos - this.view.state.selection.to),
-                    ) <= 2))
-              ? (wt(
-                  this.view,
-                  r.Y1.near(this.view.state.doc.resolve(t.pos)),
-                  "pointer",
-                ),
-                e.preventDefault())
-              : pt(this.view, "pointer");
+                ? e.preventDefault()
+                : 0 == e.button &&
+                    (this.flushed ||
+                      (D && this.mightDrag && !this.mightDrag.node.isAtom) ||
+                      (N &&
+                        !this.view.state.selection.visible &&
+                        Math.min(
+                          Math.abs(t.pos - this.view.state.selection.from),
+                          Math.abs(t.pos - this.view.state.selection.to),
+                        ) <= 2))
+                  ? (wt(
+                      this.view,
+                      r.Y1.near(this.view.state.doc.resolve(t.pos)),
+                      "pointer",
+                    ),
+                    e.preventDefault())
+                  : pt(this.view, "pointer");
         }
         move(e) {
           this.updateAllowDefault(e),
@@ -11000,8 +10997,8 @@
                 return new qt(t.sort(Ut), l);
               })(this.children, o || [], e, t, n, r, i)
             : o
-            ? new qt(o.sort(Ut), _t)
-            : jt;
+              ? new qt(o.sort(Ut), _t)
+              : jt;
         }
         add(e, t) {
           return t.length
@@ -11063,8 +11060,8 @@
           return n == this.children && r == this.local
             ? this
             : r.length || n.length
-            ? new qt(r, n)
-            : jt;
+              ? new qt(r, n)
+              : jt;
         }
         forChild(e, t) {
           if (this == jt) return this;
@@ -11930,8 +11927,8 @@
               (e.appendChild
                 ? e.appendChild(this.dom)
                 : "function" == typeof e
-                ? e(this.dom)
-                : e.mount && (this.mounted = !0)),
+                  ? e(this.dom)
+                  : e.mount && (this.mounted = !0)),
             (this.editable = mn(this)),
             fn(this),
             (this.nodeViews = gn(this)),
@@ -12102,12 +12099,12 @@
             "reset" == h
               ? (this.dom.scrollTop = 0)
               : "to selection" == h
-              ? this.scrollToSelection()
-              : p &&
-                (function ({ refDOM: e, refTop: t, stack: n }) {
-                  let r = e ? e.getBoundingClientRect().top : 0;
-                  W(n, 0 == r ? 0 : r - t);
-                })(p);
+                ? this.scrollToSelection()
+                : p &&
+                  (function ({ refDOM: e, refTop: t, stack: n }) {
+                    let r = e ? e.getBoundingClientRect().top : 0;
+                    W(n, 0 == r ? 0 : r - t);
+                  })(p);
         }
         scrollToSelection() {
           let e = this.domSelectionRange().focusNode;
@@ -12334,11 +12331,11 @@
                 "class" == e
                   ? (t.class += " " + n[e])
                   : "style" == e
-                  ? (t.style = (t.style ? t.style + ";" : "") + n[e])
-                  : t[e] ||
-                    "contenteditable" == e ||
-                    "nodeName" == e ||
-                    (t[e] = String(n[e]));
+                    ? (t.style = (t.style ? t.style + ";" : "") + n[e])
+                    : t[e] ||
+                      "contenteditable" == e ||
+                      "nodeName" == e ||
+                      (t[e] = String(n[e]));
           }),
           t.translate || (t.translate = "no"),
           [Vt.node(0, e.state.doc.content.size, t)]

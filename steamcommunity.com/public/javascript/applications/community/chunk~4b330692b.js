@@ -278,9 +278,7 @@
                           a = e * n * s,
                           d = e * n * i,
                           m = e * (l[1] - l[0]) + l[0];
-                        return `translate(${
-                          e * (o[1] - o[0]) + o[0]
-                        }px, ${m}px) rotateY(${t}rad) rotateX(${a}rad) rotateZ(${d}rad) scale(${c})`;
+                        return `translate(${e * (o[1] - o[0]) + o[0]}px, ${m}px) rotateY(${t}rad) rotateX(${a}rad) rotateZ(${d}rad) scale(${c})`;
                       }),
                     };
                   })(e, a),
@@ -306,9 +304,7 @@
                         transform: t.interpolate((e) => {
                           const t = ((e * n) / 4) * r,
                             a = e * (s[1] - s[0]) + s[0];
-                          return `translate(${
-                            e * (i[1] - i[0]) + i[0]
-                          }px, ${a}px) rotateZ(${t}rad) scale(${l})`;
+                          return `translate(${e * (i[1] - i[0]) + i[0]}px, ${a}px) rotateZ(${t}rad) scale(${l})`;
                         }),
                       };
                     })(e, a),
@@ -685,9 +681,7 @@
             (a =
               !this.props.bDisableAnimation &&
               (this.state.bHovered || this.props.bForceAnimated)),
-            `${C.De.STORE_CDN_URL}public/images/loyalty/reactions/${
-              a ? "animated" : "still"
-            }/${t}.png`);
+            `${C.De.STORE_CDN_URL}public/images/loyalty/reactions/${a ? "animated" : "still"}/${t}.png`);
           var t, a;
           return l.createElement("img", {
             className: this.props.className,

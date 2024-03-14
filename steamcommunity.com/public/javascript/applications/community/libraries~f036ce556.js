@@ -267,16 +267,16 @@
             n < 6
               ? (this.modules[n][8] = a)
               : n < 8
-              ? (this.modules[n + 1][8] = a)
-              : (this.modules[this.moduleCount - 15 + n][8] = a);
+                ? (this.modules[n + 1][8] = a)
+                : (this.modules[this.moduleCount - 15 + n][8] = a);
           }
           for (n = 0; n < 15; n++) {
             a = !e && 1 == ((i >> n) & 1);
             n < 8
               ? (this.modules[8][this.moduleCount - n - 1] = a)
               : n < 9
-              ? (this.modules[8][15 - n - 1 + 1] = a)
-              : (this.modules[8][15 - n - 1] = a);
+                ? (this.modules[8][15 - n - 1 + 1] = a)
+                : (this.modules[8][15 - n - 1] = a);
           }
           this.modules[this.moduleCount - 8][8] = !e;
         }),

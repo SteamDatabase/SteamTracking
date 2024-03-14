@@ -324,11 +324,11 @@
           return i
             ? i.Localize(t, n)
             : 1 != p.De.EUNIVERSE
-            ? (console.log(
-                `Unable to find app localization information for app ${e} token ${t}, this may not have had a chance to load yet`,
-              ),
-              t)
-            : "";
+              ? (console.log(
+                  `Unable to find app localization information for app ${e} token ${t}, this may not have had a chance to load yet`,
+                ),
+                t)
+              : "";
         }
         GetRichPresenceLoc(e) {
           if (this.m_mapRichPresenceLoc.has(e.toString())) {
@@ -418,8 +418,8 @@
             (e.is_ingame
               ? (t = "ingame")
               : e.m_broadcastAccountId
-              ? (t = "watchingbroadcast")
-              : e.is_online && (t = "online"),
+                ? (t = "watchingbroadcast")
+                : e.is_online && (t = "online"),
             e.is_awayOrSnooze && (t += " awayOrSnooze")),
           t
         );
@@ -539,8 +539,8 @@
           return this.m_strGameExtraInfo
             ? this.m_strGameExtraInfo
             : this.m_unGamePlayedAppID
-            ? o.Q8.GetAppInfo(this.m_unGamePlayedAppID).name
-            : "";
+              ? o.Q8.GetAppInfo(this.m_unGamePlayedAppID).name
+              : "";
         }
         GetCurrentGameIconURL() {
           return this.m_unGamePlayedAppID
@@ -642,8 +642,8 @@
             ? this.is_ingame
               ? "in-game"
               : this.m_broadcastAccountId
-              ? "watchingbroadcast"
-              : "online"
+                ? "watchingbroadcast"
+                : "online"
             : "offline";
         }
         BHasAvatarSet() {
@@ -683,9 +683,7 @@
         GetCommunityProfileURL() {
           return this.m_strProfileURL
             ? `${p.De.COMMUNITY_BASE_URL}id/${this.m_strProfileURL}/`
-            : `${
-                p.De.COMMUNITY_BASE_URL
-              }profiles/${this.m_steamid.ConvertTo64BitString()}/`;
+            : `${p.De.COMMUNITY_BASE_URL}profiles/${this.m_steamid.ConvertTo64BitString()}/`;
         }
       }
       (0, i.gn)([a.LO], c.prototype, "m_bInitialized", void 0),

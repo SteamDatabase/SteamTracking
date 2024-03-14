@@ -839,9 +839,7 @@
           ((h = t
             ? [
                 `%c${c}%c:${u ? " %c" + d : ""}`,
-                `color: ${a ? "black" : "white"}; background: rgb(${r.join(
-                  ",",
-                )}); padding: 0 1ch; border-radius: 3px;`,
+                `color: ${a ? "black" : "white"}; background: rgb(${r.join(",")}); padding: 0 1ch; border-radius: 3px;`,
                 "color: transparent; margin-right: -1ch",
                 ...(u ? [""] : []),
                 ...s,
@@ -959,9 +957,7 @@
         for (; s; ) {
           const e = -1 != s.iActiveChild ? s.rgChildren[s.iActiveChild] : null;
           e &&
-            (o += `=> [${
-              null !== (t = e.sNavKey) && void 0 !== t ? t : s.iActiveChild
-            }]`),
+            (o += `=> [${null !== (t = e.sNavKey) && void 0 !== t ? t : s.iActiveChild}]`),
             (s = e);
         }
         return i && (o += " (with focus)"), o;
@@ -1061,8 +1057,8 @@
           return "x" == e
             ? this.m_lastFocusNodeXMovement.GetRect()
             : "y" == e
-            ? this.m_lastFocusNodeYMovement.GetRect()
-            : void 0;
+              ? this.m_lastFocusNodeYMovement.GetRect()
+              : void 0;
         }
         get OnActivateCallbacks() {
           return this.m_onActivateCallbacks;
@@ -1161,9 +1157,7 @@
           })(e);
           return (
             q(
-              `Logical gamepad Event fired: ${
-                a.eV[e.detail.button]
-              }, had logical event: ${n}, was handled: ${!t}`,
+              `Logical gamepad Event fired: ${a.eV[e.detail.button]}, had logical event: ${n}, was handled: ${!t}`,
             ),
             t && this.m_onUnhandledButton && (t = this.m_onUnhandledButton(e)),
             t && (t = this.m_Controller.FireUnhandledGamepadEventCallbacks(e)),
@@ -1229,11 +1223,11 @@
                   null == t ? void 0 : t.Element,
                 )
               : "y" == n
-              ? this.m_lastFocusNodeYMovement.SetNode(
-                  null == t ? void 0 : t.Element,
-                )
-              : (this.m_lastFocusNodeXMovement.Reset(),
-                this.m_lastFocusNodeYMovement.Reset()),
+                ? this.m_lastFocusNodeYMovement.SetNode(
+                    null == t ? void 0 : t.Element,
+                  )
+                : (this.m_lastFocusNodeXMovement.Reset(),
+                  this.m_lastFocusNodeYMovement.Reset()),
             this.m_context.OnFocusChangeComplete(a);
         }
       }
@@ -1296,9 +1290,7 @@
             const { node: e, bFocusDescendant: t } = this.m_target;
             (this.m_target = void 0),
               Q(
-                `DeferredFocus in ${this.m_tree.id} - focusing ${
-                  t ? "descendant of" : "node"
-                } ${e.NavKey}`,
+                `DeferredFocus in ${this.m_tree.id} - focusing ${t ? "descendant of" : "node"} ${e.NavKey}`,
               ),
               t
                 ? e.BChildTakeFocus(i.APPLICATION) ||
@@ -1379,9 +1371,7 @@
         }
         OnActivate(e) {
           te(
-            `${this.LogName(e)} Activating context, there are ${
-              this.m_rgGamepadNavigationTrees.length
-            } trees in this context`,
+            `${this.LogName(e)} Activating context, there are ${this.m_rgGamepadNavigationTrees.length} trees in this context`,
           ),
             this.SetActive(!0, e);
         }
@@ -1395,11 +1385,7 @@
             ? (te(`${this.LogName(e)} Deactivate context for window`),
               this.SetActive(!1, e))
             : te(
-                `${this.LogName(e)} Blurred, but not deactivating because (${
-                  null === (t = this.m_activeWindow) || void 0 === t
-                    ? void 0
-                    : t.name
-                }) has focus.`,
+                `${this.LogName(e)} Blurred, but not deactivating because (${null === (t = this.m_activeWindow) || void 0 === t ? void 0 : t.name}) has focus.`,
               );
         }
         OnDeactivateBrowserView(e, t) {
@@ -1441,11 +1427,7 @@
             (this.m_LastActiveNavTree = e),
             (e && e.BUseVirtualFocus()) || (this.m_LastActiveFocusNavTree = e),
             te(
-              `${this.LogName(
-                null == e ? void 0 : e.Window,
-              )} Move from nav tree ${null == n ? void 0 : n.id} to nav tree ${
-                null == e ? void 0 : e.id
-              } ${t ? "taking focus" : "no focus"}`,
+              `${this.LogName(null == e ? void 0 : e.Window)} Move from nav tree ${null == n ? void 0 : n.id} to nav tree ${null == e ? void 0 : e.id} ${t ? "taking focus" : "no focus"}`,
             ),
             n && this.m_rgGamepadNavigationTrees.push(n),
             e &&
@@ -1465,13 +1447,7 @@
         UnregisterGamepadNavigationTree(e) {
           z.Zf(this.m_rgGamepadNavigationTrees, e),
             te(
-              `(${this.m_rootWindow.name}) Unregister tree ${
-                null == e ? void 0 : e.id
-              } ${
-                this.m_LastActiveFocusNavTree == e
-                  ? "(was active)"
-                  : "(inactive)"
-              }`,
+              `(${this.m_rootWindow.name}) Unregister tree ${null == e ? void 0 : e.id} ${this.m_LastActiveFocusNavTree == e ? "(was active)" : "(inactive)"}`,
             ),
             this.m_LastActiveNavTree == e &&
               ((this.m_LastActiveNavTree = null),
@@ -1579,9 +1555,7 @@
               const t = e.FindNavTreeInFocusedWindow();
               if (t) {
                 ie(
-                  `${e.LogName(
-                    t.Window,
-                  )} Found a focused window; setting this context as active.`,
+                  `${e.LogName(t.Window)} Found a focused window; setting this context as active.`,
                 ),
                   (this.m_ActiveContext = e),
                   this.m_ActiveContext.OnActivate(t.Window);
@@ -1746,13 +1720,7 @@
               ? (this.ChangeNavigationSource(n, i),
                 e &&
                   ie(
-                    `Firing ${a.eV[t]} in tree ${
-                      null ===
-                        (u = null == m ? void 0 : m.m_LastActiveNavTree) ||
-                      void 0 === u
-                        ? void 0
-                        : u.id
-                    } at `,
+                    `Firing ${a.eV[t]} in tree ${null === (u = null == m ? void 0 : m.m_LastActiveNavTree) || void 0 === u ? void 0 : u.id} at `,
                     h,
                   ),
                 this.BatchedUpdate(() =>
@@ -1763,14 +1731,7 @@
                   }),
                 ))
               : ie(
-                  `Suppressing ${a.eV[t]} input on element ${
-                    null == h ? void 0 : h.className
-                  } because tree ${
-                    null === (c = null == m ? void 0 : m.m_LastActiveNavTree) ||
-                    void 0 === c
-                      ? void 0
-                      : c.id
-                  } has it disabled`,
+                  `Suppressing ${a.eV[t]} input on element ${null == h ? void 0 : h.className} because tree ${null === (c = null == m ? void 0 : m.m_LastActiveNavTree) || void 0 === c ? void 0 : c.id} has it disabled`,
                 );
         }
         OnButtonDown(e, t, n, i, o, s, r) {
@@ -1866,13 +1827,7 @@
                   ),
                   e.Activate())
                 : ie(
-                    `There was a focus event in ${
-                      e.id
-                    }, but the active nav tree is ${
-                      null === (s = r.m_LastActiveFocusNavTree) || void 0 === s
-                        ? void 0
-                        : s.id
-                    } so it is being ignored.  Source: ${t && i[t]}.`,
+                    `There was a focus event in ${e.id}, but the active nav tree is ${null === (s = r.m_LastActiveFocusNavTree) || void 0 === s ? void 0 : s.id} so it is being ignored.  Source: ${t && i[t]}.`,
                   ));
         }
         BlurNavTree(e) {
@@ -2036,8 +1991,8 @@
         return "x" == e
           ? t.x + t.width > n.x + i && t.x + i < n.x + n.width
           : "y" == e
-          ? t.y + t.height > n.y + i && t.y + i < n.y + n.height
-          : (L(!1, `Invalid axis ${e}`), !1);
+            ? t.y + t.height > n.y + i && t.y + i < n.y + n.height
+            : (L(!1, `Invalid axis ${e}`), !1);
       }
       function ue(e, t, n) {
         let i;
@@ -2045,9 +2000,9 @@
           "x" == e
             ? (i = Math.min(t.x + t.width, n.x + n.width) - Math.max(t.x, n.x))
             : "y" == e
-            ? (i =
-                Math.min(t.y + t.height, n.y + n.height) - Math.max(t.y, n.y))
-            : (L(!1, `Invalid axis ${e}`), (i = 0)),
+              ? (i =
+                  Math.min(t.y + t.height, n.y + n.height) - Math.max(t.y, n.y))
+              : (L(!1, `Invalid axis ${e}`), (i = 0)),
           i < 0 ? 0 : i
         );
       }
@@ -2153,8 +2108,8 @@
             ? n.distance - i.distance
             : 1
           : i.offScreen
-          ? -1
-          : n.distance - i.distance;
+            ? -1
+            : n.distance - i.distance;
       }
       function pe(e, t, n) {
         const i = e.Element.getBoundingClientRect(),
@@ -2362,17 +2317,17 @@
         return o < a && s > l
           ? 0
           : (o < a && r <= c) || (s > l && r > c)
-          ? o - a - u
-          : (o < a && r > c) || (s > l && r <= c)
-          ? s - l + d
-          : 0;
+            ? o - a - u
+            : (o < a && r > c) || (s > l && r <= c)
+              ? s - l + d
+              : 0;
       }
       function Ie(e) {
         return "auto" == e
           ? 0
           : e.endsWith("px")
-          ? parseInt(e)
-          : (console.log("Unsupported length", e), 0);
+            ? parseInt(e)
+            : (console.log("Unsupported length", e), 0);
       }
       function De(e) {
         if (!("ownerDocument" in e))
@@ -2433,9 +2388,7 @@
             (be(
               "Checking scroll div",
               e,
-              `scroll y:${c.scrollTop} of ${c.MaxScrollTop()}, x:${
-                c.scrollLeft
-              } of ${c.MaxScrollLeft()}, adjusted =>`,
+              `scroll y:${c.scrollTop} of ${c.MaxScrollTop()}, x:${c.scrollLeft} of ${c.MaxScrollLeft()}, adjusted =>`,
               n,
               "target => ",
               a,
@@ -2695,8 +2648,8 @@
           )
             ? this.m_Properties.navKey
             : (null === (t = this.m_element) || void 0 === t ? void 0 : t.id)
-            ? this.m_element.id
-            : void 0;
+              ? this.m_element.id
+              : void 0;
         }
         get Element() {
           return this.m_element;
@@ -2906,11 +2859,7 @@
           const t = this.Tree.DeferredFocus.BIsQueuedFocusNode(this);
           (this.m_bFocused || t) &&
             (Ge(
-              `The focused node is unmounting, ${
-                this.m_RetainFocusParent
-                  ? "will transfer to retain focus ancestor"
-                  : "will blur"
-              }.`,
+              `The focused node is unmounting, ${this.m_RetainFocusParent ? "will transfer to retain focus ancestor" : "will blur"}.`,
             ),
             t && this.Tree.DeferredFocus.RequestFocus(null),
             this.m_RetainFocusParent
@@ -3011,8 +2960,8 @@
               return o & Node.DOCUMENT_POSITION_PRECEDING
                 ? 1
                 : o & Node.DOCUMENT_POSITION_FOLLOWING
-                ? -1
-                : 0;
+                  ? -1
+                  : 0;
             }),
             this.m_ActiveChild &&
               (this.m_iLastActiveChildIndex = this.m_rgChildren.indexOf(
@@ -3051,10 +3000,10 @@
             ? i && !i(this)
               ? "none"
               : e || (t && (n || 0 == this.m_rgChildren.length))
-              ? "self"
-              : !n && this.m_rgChildren.length
-              ? "children"
-              : "none"
+                ? "self"
+                : !n && this.m_rgChildren.length
+                  ? "children"
+                  : "none"
             : "none";
         }
         BTakeFocus(e, t) {
@@ -3123,13 +3072,11 @@
                     void 0 !== o
                       ? o
                       : null === (s = this.m_Tree.GetLastFocusedNode()) ||
-                        void 0 === s
-                      ? void 0
-                      : s.GetBoundingRect()),
+                          void 0 === s
+                        ? void 0
+                        : s.GetBoundingRect()),
                 Ge(
-                  `Taking focus while preserving ${
-                    n && ke[n]
-                  } preserved: ${i} movement: ${r}, node:`,
+                  `Taking focus while preserving ${n && ke[n]} preserved: ${i} movement: ${r}, node:`,
                   a || t,
                 );
               const l = this.ComputeRelativeDirection(e, xe.GRID);
@@ -3199,15 +3146,7 @@
             });
           return (
             Ge(
-              `Focusing visible child, best child match is ${
-                null ===
-                  (s =
-                    null === (o = null == a ? void 0 : a.child) || void 0 === o
-                      ? void 0
-                      : o.Element) || void 0 === s
-                  ? void 0
-                  : s.className
-              } - ${JSON.stringify(null == a ? void 0 : a.visibility)}`,
+              `Focusing visible child, best child match is ${null === (s = null === (o = null == a ? void 0 : a.child) || void 0 === o ? void 0 : o.Element) || void 0 === s ? void 0 : s.className} - ${JSON.stringify(null == a ? void 0 : a.visibility)}`,
             ),
             !!a && a.child.BTakeFocus(e)
           );
@@ -3326,8 +3265,8 @@
           )
             ? this.m_Properties.scrollIntoViewType
             : this.m_Parent
-            ? this.m_Parent.GetScrollIntoViewType()
-            : Ve.Standard;
+              ? this.m_Parent.GetScrollIntoViewType()
+              : Ve.Standard;
         }
         GetRelativeDirection(e) {
           return this.ComputeRelativeDirection(e, this.GetLayout());
@@ -3409,9 +3348,9 @@
               void 0 !== i
                 ? i
                 : null === (o = this.m_Tree.GetLastFocusedNode()) ||
-                  void 0 === o
-                ? void 0
-                : o.GetBoundingRect();
+                    void 0 === o
+                  ? void 0
+                  : o.GetBoundingRect();
             e && ((l.x = e.x), (l.width = e.width));
           }
           if (s) {
@@ -3737,9 +3676,7 @@
             : isNaN(parseInt(n)) || (t = Math.max(t, parseInt(n)));
         });
         const n = r()("<div/>", {
-          style: `position: absolute; pointer-events: none; top: 0; left: 0; z-index: ${
-            (t || 100) + 1
-          }; width: 0; height: 0; padding: 0; margin: 0; background: none; overflow: visible; display: block;`,
+          style: `position: absolute; pointer-events: none; top: 0; left: 0; z-index: ${(t || 100) + 1}; width: 0; height: 0; padding: 0; margin: 0; background: none; overflow: visible; display: block;`,
         });
         let i = null,
           o = null,
@@ -3817,10 +3754,10 @@
         return "BlockMovement" == e
           ? Ze
           : "RepeatNavigationBoundary" == e
-          ? Qe
-          : e
-          ? Function("detail", e)
-          : null;
+            ? Qe
+            : e
+              ? Function("detail", e)
+              : null;
       }
       function tt(e) {
         this.click(), e.stopPropagation();
@@ -4253,8 +4190,8 @@
           w
             ? ($.navEntryPreferPosition = ke.MAINTAIN_X)
             : S
-            ? ($.navEntryPreferPosition = ke.MAINTAIN_Y)
-            : N && ($.navEntryPreferPosition = ke.PREFERRED_CHILD),
+              ? ($.navEntryPreferPosition = ke.MAINTAIN_Y)
+              : N && ($.navEntryPreferPosition = ke.PREFERRED_CHILD),
           b &&
             (!1 !== $.focusable && ($.focusable = !0),
             g.on("vgp_onok", "firstChild" === b ? nt : tt),

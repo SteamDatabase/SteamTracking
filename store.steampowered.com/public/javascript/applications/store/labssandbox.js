@@ -378,11 +378,7 @@
         }
         EstimateCosts(e, t) {
           return (0, n.mG)(this, void 0, void 0, function* () {
-            const a = `${
-              l.De.STORE_BASE_URL
-            }labs/ajaxgetappsimilarities?appidtarget=${t}&${e
-              .map((e) => "appid[]=" + e.toString())
-              .join("&")}`;
+            const a = `${l.De.STORE_BASE_URL}labs/ajaxgetappsimilarities?appidtarget=${t}&${e.map((e) => "appid[]=" + e.toString()).join("&")}`;
             let s = yield m().get(a);
             if (s.data && s.data.similarity_scores)
               return s.data.similarity_scores.map((e) =>
@@ -668,8 +664,8 @@
               ? this.state.appinfo.name +
                 (this.props.showAppIds ? ` (${this.state.appid})` : "")
               : null !== (t = this.props.strPrompt) && void 0 !== t
-              ? t
-              : "Select game";
+                ? t
+                : "Select game";
             s = g.createElement(
               "div",
               { className: E.AppDisplay },
@@ -986,9 +982,7 @@
         RecomputeExpression() {
           if (0 == this.operands.length) return;
           const e = this.operands.map((e) => "appid[]=" + e.app.toString()),
-            t = `${l.De.STORE_BASE_URL}labs/ajaxgetappvectors?${e.join(
-              "&",
-            )}&model=${this.similarity_model}`;
+            t = `${l.De.STORE_BASE_URL}labs/ajaxgetappvectors?${e.join("&")}&model=${this.similarity_model}`;
           m()
             .get(t)
             .then((e) => {
@@ -1003,10 +997,10 @@
                   "Plus" == this.operands[a].operator
                     ? (t = t.map((e, t) => e + s[t]))
                     : "Minus" == this.operands[a].operator
-                    ? (t = t.map((e, t) => e - s[t]))
-                    : console.log(
-                        "Unexpected operator " + this.operands[a].operator,
-                      );
+                      ? (t = t.map((e, t) => e - s[t]))
+                      : console.log(
+                          "Unexpected operator " + this.operands[a].operator,
+                        );
                 }
                 const a = t.map((e) => e * e).reduce((e, t) => e + t, 0),
                   s = Math.sqrt(a);
@@ -1160,16 +1154,16 @@
                 "Finding path, step " + this.progress_iteration,
               )
             : this.found_path
-            ? g.createElement(
-                "div",
-                { className: E.ProgressMessage },
-                "Found path",
-              )
-            : g.createElement(
-                "div",
-                { className: E.ProgressMessage },
-                "No path found",
-              );
+              ? g.createElement(
+                  "div",
+                  { className: E.ProgressMessage },
+                  "Found path",
+                )
+              : g.createElement(
+                  "div",
+                  { className: E.ProgressMessage },
+                  "No path found",
+                );
           let s = [];
           if (this.found_path)
             for (let e = 0; e < this.found_path.length; e++) {
@@ -1703,26 +1697,28 @@
                     (this.m_userFields.strTwoFactorCode = "")),
                   (this.m_eCurrentStep = re.TwoFactorCode))
                 : e.captcha_needed && e.captcha_gid
-                ? ((this.m_eCurrentStep = re.AccountName),
-                  this.UpdateCaptchaURL(e.captcha_gid))
-                : e.emailauth_needed
-                ? (e.emaildomain && (this.m_strEmailDomain = e.emaildomain),
-                  e.emailsteamid &&
-                    (this.m_userFields.emailSteamID = e.emailsteamid),
-                  this.m_eCurrentStep != re.EmailCode ||
-                    this.m_strErrorMessage ||
-                    ((this.m_strErrorMessage = (0, H.Xx)(
-                      "#MobileLogin_IncorrectSteamGuard",
-                    )),
-                    (this.m_eSteamGuardCodeError = ie.InvalidCode),
-                    (this.m_userFields.strEmailAuthCode = "")),
-                  (this.m_eCurrentStep = re.EmailCode))
-                : e.agreement_session_url
-                ? (this.Shutdown(),
-                  console.log(window.location.href),
-                  (window.location.href =
-                    e.agreement_session_url + "&redir=" + window.location.href))
-                : console.log("Unhandled login error");
+                  ? ((this.m_eCurrentStep = re.AccountName),
+                    this.UpdateCaptchaURL(e.captcha_gid))
+                  : e.emailauth_needed
+                    ? (e.emaildomain && (this.m_strEmailDomain = e.emaildomain),
+                      e.emailsteamid &&
+                        (this.m_userFields.emailSteamID = e.emailsteamid),
+                      this.m_eCurrentStep != re.EmailCode ||
+                        this.m_strErrorMessage ||
+                        ((this.m_strErrorMessage = (0, H.Xx)(
+                          "#MobileLogin_IncorrectSteamGuard",
+                        )),
+                        (this.m_eSteamGuardCodeError = ie.InvalidCode),
+                        (this.m_userFields.strEmailAuthCode = "")),
+                      (this.m_eCurrentStep = re.EmailCode))
+                    : e.agreement_session_url
+                      ? (this.Shutdown(),
+                        console.log(window.location.href),
+                        (window.location.href =
+                          e.agreement_session_url +
+                          "&redir=" +
+                          window.location.href))
+                      : console.log("Unhandled login error");
         }
         RefreshCaptcha() {
           return (0, n.mG)(this, void 0, void 0, function* () {
@@ -1819,8 +1815,8 @@
             t.length > 24 && t.length < 39
               ? this.setState({ nNameSize: 1 })
               : t.length > 38
-              ? this.setState({ nNameSize: 2 })
-              : this.setState({ nNameSize: 0 });
+                ? this.setState({ nNameSize: 2 })
+                : this.setState({ nNameSize: 0 });
         }
         OnChangePassword(e) {
           let t = e.target.value || "";
@@ -1829,8 +1825,8 @@
             t.length > 19 && t.length < 39
               ? this.setState({ nPassSize: 1 })
               : t.length > 38
-              ? this.setState({ nPassSize: 2 })
-              : this.setState({ nPassSize: 0 });
+                ? this.setState({ nPassSize: 2 })
+                : this.setState({ nPassSize: 0 });
         }
         OnChangeRememberPass(e) {
           this.props.manager.SetRememberPassword(e.target.checked);
@@ -1844,14 +1840,14 @@
               1 == this.state.nPassSize
                 ? ae().MedPass
                 : 2 == this.state.nPassSize
-                ? ae().LargePass
-                : ae().DefaultPass),
+                  ? ae().LargePass
+                  : ae().DefaultPass),
             (e =
               1 == this.state.nNameSize
                 ? ae().MedName
                 : 2 == this.state.nNameSize
-                ? ae().LargeName
-                : ae().DefaultNAme),
+                  ? ae().LargeName
+                  : ae().DefaultNAme),
             g.createElement(
               "div",
               { className: ae().AccountPasswordPanel },

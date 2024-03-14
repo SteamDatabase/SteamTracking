@@ -402,8 +402,7 @@
           );
         }
         static GetContentHubTakeoverEditURL(e, a) {
-          return `${s.De.PARTNER_BASE_URL}admin/store/pageclusteredit/${(0,
-          _.D9)(e)}/${a}`;
+          return `${s.De.PARTNER_BASE_URL}admin/store/pageclusteredit/${(0, _.D9)(e)}/${a}`;
         }
         static GetTakeunderEditURL(e) {
           return (
@@ -665,8 +664,7 @@
             return e
               .map(
                 (e) =>
-                  `${e.nDiscountPct}% - ${(0, s.m9)(e.rtStartDate)} to ${(0,
-                  s.m9)(e.rtEndDate)} (package id:${e.packageID})`,
+                  `${e.nDiscountPct}% - ${(0, s.m9)(e.rtStartDate)} to ${(0, s.m9)(e.rtEndDate)} (package id:${e.packageID})`,
               )
               .join("\n");
         }
@@ -690,12 +688,12 @@
         )
           ? o(e.pageid, (0, n.jM)(i), e.localized_optin_banner[i])
           : (
-              null === (t = e.localized_optin_banner) || void 0 === t
-                ? void 0
-                : t.english
-            )
-          ? o(e.pageid, 0, e.localized_optin_banner.english)
-          : null;
+                null === (t = e.localized_optin_banner) || void 0 === t
+                  ? void 0
+                  : t.english
+              )
+            ? o(e.pageid, 0, e.localized_optin_banner.english)
+            : null;
       }
     },
   },

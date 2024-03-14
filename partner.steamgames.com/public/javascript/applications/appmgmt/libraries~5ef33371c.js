@@ -40,8 +40,8 @@
                   ? t.insertionPoint
                     ? t.insertionPoint.nextSibling
                     : t.prepend
-                    ? t.container.firstChild
-                    : t.before
+                      ? t.container.firstChild
+                      : t.before
                   : t.tags[t.tags.length - 1].nextSibling),
                 t.container.insertBefore(e, r),
                 t.tags.push(e);
@@ -1198,8 +1198,8 @@
             ? e.ownerDocument.body
             : e.body
           : rt(t) && it(t)
-          ? t
-          : lt(t);
+            ? t
+            : lt(t);
       }
       function ct(e, t, r) {
         var n;
@@ -1449,8 +1449,8 @@
             Array.isArray(t)
               ? e.filter(Boolean)
               : "object" === (0, Ze.Z)(e) && null !== e
-              ? [e]
-              : []
+                ? [e]
+                : []
           );
           var t;
         },
@@ -1580,8 +1580,8 @@
           h = s
             ? window.innerHeight
             : Ft((c = u))
-            ? window.innerHeight
-            : c.clientHeight,
+              ? window.innerHeight
+              : c.clientHeight,
           v = zt(u),
           y = parseInt(getComputedStyle(r).marginBottom, 10),
           B = parseInt(getComputedStyle(r).marginTop, 10),
@@ -3329,8 +3329,8 @@
                   backgroundColor: a
                     ? u.primary
                     : i
-                    ? u.primary25
-                    : "transparent",
+                      ? u.primary25
+                      : "transparent",
                   color: r ? u.neutral20 : a ? u.neutral0 : "inherit",
                   padding: ""
                     .concat(2 * o.baseUnit, "px ")
@@ -4253,12 +4253,13 @@
                         "up" === e
                           ? (i = a > 0 ? a - 1 : n.length - 1)
                           : "down" === e
-                          ? (i = (a + 1) % n.length)
-                          : "pageup" === e
-                          ? (i = a - t) < 0 && (i = 0)
-                          : "pagedown" === e
-                          ? (i = a + t) > n.length - 1 && (i = n.length - 1)
-                          : "last" === e && (i = n.length - 1),
+                            ? (i = (a + 1) % n.length)
+                            : "pageup" === e
+                              ? (i = a - t) < 0 && (i = 0)
+                              : "pagedown" === e
+                                ? (i = a + t) > n.length - 1 &&
+                                  (i = n.length - 1)
+                                : "last" === e && (i = n.length - 1),
                         (this.scrollToFocusedOptionOnUpdate = !0),
                         this.setState({
                           focusedOption: n[i],
@@ -8639,14 +8640,14 @@
                 (0, n.Z)(e, t, r[t]);
               })
             : Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
-            : i(Object(r)).forEach(function (t) {
-                Object.defineProperty(
-                  e,
-                  t,
-                  Object.getOwnPropertyDescriptor(r, t),
-                );
-              });
+              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
+              : i(Object(r)).forEach(function (t) {
+                  Object.defineProperty(
+                    e,
+                    t,
+                    Object.getOwnPropertyDescriptor(r, t),
+                  );
+                });
         }
         return e;
       }
@@ -8795,9 +8796,9 @@
             "Map" === r || "Set" === r
               ? Array.from(e)
               : "Arguments" === r ||
-                /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(r)
-              ? (0, n.Z)(e, t)
-              : void 0
+                  /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(r)
+                ? (0, n.Z)(e, t)
+                : void 0
           );
         }
       }

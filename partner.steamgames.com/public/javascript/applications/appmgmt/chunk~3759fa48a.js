@@ -551,9 +551,7 @@
           ("dev" != l.De.WEB_UNIVERSE && "beta" != l.De.WEB_UNIVERSE) ||
             (0, a.X)(
               this.BContainDataRequest(e),
-              `Requested data without for ${(0, i.qE)(this.m_eItemType)} @ ${
-                this.m_unID
-              }`,
+              `Requested data without for ${(0, i.qE)(this.m_eItemType)} @ ${this.m_unID}`,
               (0, r.ZN)(e),
               (0, r.ZN)(this.m_DataRequested),
             );
@@ -1033,8 +1031,8 @@
                 : e.formatted_original_price) && void 0 !== t
             ? t
             : null === (s = this.m_BestPurchaseOption) || void 0 === s
-            ? void 0
-            : s.formatted_final_price;
+              ? void 0
+              : s.formatted_final_price;
         }
         GetAllPurchaseOptions() {
           return (
@@ -1211,9 +1209,7 @@
                 e.library_hero_2x(),
               ))),
             e.community_icon() &&
-              (this.m_strCommunityIcon = `${
-                l.De.MEDIA_CDN_COMMUNITY_URL
-              }images/apps/${t}/${e.community_icon()}.jpg`);
+              (this.m_strCommunityIcon = `${l.De.MEDIA_CDN_COMMUNITY_URL}images/apps/${t}/${e.community_icon()}.jpg`);
         }
         GetMainCapsuleURL() {
           return this.m_strMainCapsuleURL;
@@ -1951,20 +1947,22 @@
               ? (this.m_setUnavailableApps.add(e.appid()),
                 this.m_mapApps.delete(e.appid()))
               : e.packageid()
-              ? (this.m_setUnavailablePackages.add(e.packageid()),
-                this.m_mapPackages.delete(e.packageid()))
-              : e.bundleid()
-              ? (this.m_setUnavailableBundles.add(e.bundleid()),
-                this.m_mapBundles.delete(e.bundleid()))
-              : e.tagid()
-              ? (this.m_setUnavailableTags.add(e.tagid()),
-                this.m_mapTags.delete(e.tagid()))
-              : e.creatorid()
-              ? (this.m_setUnavailableCreators.add(e.creatorid()),
-                this.m_mapCreators.delete(e.creatorid()))
-              : e.hubcategoryid() &&
-                (this.m_setUnavailableHubCategories.add(e.hubcategoryid()),
-                this.m_mapHubCategories.delete(e.hubcategoryid()));
+                ? (this.m_setUnavailablePackages.add(e.packageid()),
+                  this.m_mapPackages.delete(e.packageid()))
+                : e.bundleid()
+                  ? (this.m_setUnavailableBundles.add(e.bundleid()),
+                    this.m_mapBundles.delete(e.bundleid()))
+                  : e.tagid()
+                    ? (this.m_setUnavailableTags.add(e.tagid()),
+                      this.m_mapTags.delete(e.tagid()))
+                    : e.creatorid()
+                      ? (this.m_setUnavailableCreators.add(e.creatorid()),
+                        this.m_mapCreators.delete(e.creatorid()))
+                      : e.hubcategoryid() &&
+                        (this.m_setUnavailableHubCategories.add(
+                          e.hubcategoryid(),
+                        ),
+                        this.m_mapHubCategories.delete(e.hubcategoryid()));
           });
         }
         SortStoreItems(e) {
@@ -2369,16 +2367,16 @@
         return (null == e ? void 0 : e.appid)
           ? 0
           : (null == e ? void 0 : e.packageid)
-          ? 1
-          : (null == e ? void 0 : e.bundleid)
-          ? 2
-          : (null == e ? void 0 : e.creatorid)
-          ? 5
-          : (null == e ? void 0 : e.hubcategoryid)
-          ? 6
-          : (null == e ? void 0 : e.tagid)
-          ? 4
-          : t;
+            ? 1
+            : (null == e ? void 0 : e.bundleid)
+              ? 2
+              : (null == e ? void 0 : e.creatorid)
+                ? 5
+                : (null == e ? void 0 : e.hubcategoryid)
+                  ? 6
+                  : (null == e ? void 0 : e.tagid)
+                    ? 4
+                    : t;
       }
       function n(e) {
         switch (e) {
@@ -2417,69 +2415,69 @@
         return e
           ? { id: e, item_type: "app" }
           : t
-          ? { id: t, item_type: "sub" }
-          : { id: s, item_type: "bundle" };
+            ? { id: t, item_type: "sub" }
+            : { id: s, item_type: "bundle" };
       }
       function d(e) {
         return "app" == (null == e ? void 0 : e.item_type)
           ? { appid: e.id }
           : "sub" == (null == e ? void 0 : e.item_type)
-          ? { packageid: e.id }
-          : "bundle" == (null == e ? void 0 : e.item_type)
-          ? { bundleid: e.id }
-          : null;
+            ? { packageid: e.id }
+            : "bundle" == (null == e ? void 0 : e.item_type)
+              ? { bundleid: e.id }
+              : null;
       }
       function c(e) {
         return (null == e ? void 0 : e.appid)
           ? { item_type: "app", id: e.appid }
           : (null == e ? void 0 : e.packageid)
-          ? { item_type: "sub", id: e.packageid }
-          : (null == e ? void 0 : e.bundleid)
-          ? { item_type: "bundle", id: e.bundleid }
-          : null;
+            ? { item_type: "sub", id: e.packageid }
+            : (null == e ? void 0 : e.bundleid)
+              ? { item_type: "bundle", id: e.bundleid }
+              : null;
       }
       function h(e, t) {
         return 0 == t
           ? { id: e, item_type: "app" }
           : 1 == t
-          ? { id: e, item_type: "sub" }
-          : 2 == t
-          ? { id: e, item_type: "bundle" }
-          : (console.error(
-              "ConvertEStoreItemTypeToStoreItemKey unexpected item type: ",
-              t,
-            ),
-            { id: 0, item_type: "app" });
+            ? { id: e, item_type: "sub" }
+            : 2 == t
+              ? { id: e, item_type: "bundle" }
+              : (console.error(
+                  "ConvertEStoreItemTypeToStoreItemKey unexpected item type: ",
+                  t,
+                ),
+                { id: 0, item_type: "app" });
       }
       function m(e, t) {
         return 0 == t
           ? { appid: e }
           : 1 == t
-          ? { packageid: e }
-          : 2 == t
-          ? { bundleid: e }
-          : 4 == t
-          ? { tagid: e }
-          : 5 == t
-          ? { creatorid: e }
-          : 6 == t
-          ? { hubcategoryid: e }
-          : null;
+            ? { packageid: e }
+            : 2 == t
+              ? { bundleid: e }
+              : 4 == t
+                ? { tagid: e }
+                : 5 == t
+                  ? { creatorid: e }
+                  : 6 == t
+                    ? { hubcategoryid: e }
+                    : null;
       }
       function _(e) {
         return (null == e ? void 0 : e.appid)
           ? "a" + e.appid
           : (null == e ? void 0 : e.packageid)
-          ? "p" + e.packageid
-          : (null == e ? void 0 : e.bundleid)
-          ? "b" + e.bundleid
-          : (null == e ? void 0 : e.creatorid)
-          ? "c" + e.creatorid
-          : (null == e ? void 0 : e.hubcategoryid)
-          ? "h" + e.hubcategoryid
-          : (null == e ? void 0 : e.tagid)
-          ? "t" + e.tagid
-          : "unknown0";
+            ? "p" + e.packageid
+            : (null == e ? void 0 : e.bundleid)
+              ? "b" + e.bundleid
+              : (null == e ? void 0 : e.creatorid)
+                ? "c" + e.creatorid
+                : (null == e ? void 0 : e.hubcategoryid)
+                  ? "h" + e.hubcategoryid
+                  : (null == e ? void 0 : e.tagid)
+                    ? "t" + e.tagid
+                    : "unknown0";
       }
       function p(e, t) {
         switch (t) {
@@ -2496,40 +2494,40 @@
         return (null == e ? void 0 : e.appid)
           ? e.appid
           : (null == e ? void 0 : e.packageid)
-          ? e.packageid
-          : (null == e ? void 0 : e.bundleid)
-          ? e.bundleid
-          : (null == e ? void 0 : e.hubcategoryid)
-          ? e.hubcategoryid
-          : (null == e ? void 0 : e.creatorid)
-          ? e.creatorid
-          : (null == e ? void 0 : e.tagid)
-          ? e.tagid
-          : 0;
+            ? e.packageid
+            : (null == e ? void 0 : e.bundleid)
+              ? e.bundleid
+              : (null == e ? void 0 : e.hubcategoryid)
+                ? e.hubcategoryid
+                : (null == e ? void 0 : e.creatorid)
+                  ? e.creatorid
+                  : (null == e ? void 0 : e.tagid)
+                    ? e.tagid
+                    : 0;
       }
       function v(e) {
         return (null == e ? void 0 : e.appid)
           ? 0
           : (null == e ? void 0 : e.packageid)
-          ? 1
-          : (null == e ? void 0 : e.bundleid)
-          ? 2
-          : (null == e ? void 0 : e.hubcategoryid)
-          ? 6
-          : (null == e ? void 0 : e.creatorid)
-          ? 5
-          : (null == e ? void 0 : e.tagid)
-          ? 4
-          : 0;
+            ? 1
+            : (null == e ? void 0 : e.bundleid)
+              ? 2
+              : (null == e ? void 0 : e.hubcategoryid)
+                ? 6
+                : (null == e ? void 0 : e.creatorid)
+                  ? 5
+                  : (null == e ? void 0 : e.tagid)
+                    ? 4
+                    : 0;
       }
       function f(e) {
         return "app" == (null == e ? void 0 : e.item_type)
           ? 0
           : "sub" == (null == e ? void 0 : e.item_type)
-          ? 1
-          : "bundle" == (null == e ? void 0 : e.item_type)
-          ? 2
-          : -1;
+            ? 1
+            : "bundle" == (null == e ? void 0 : e.item_type)
+              ? 2
+              : -1;
       }
       function I(e) {
         const t = Number.parseInt(e.substring(1));
@@ -2546,19 +2544,19 @@
         return "application" == e
           ? 0
           : "bundle" == e
-          ? 2
-          : "package" == e
-          ? 1
-          : -1;
+            ? 2
+            : "package" == e
+              ? 1
+              : -1;
       }
       function b(e) {
         return 0 == e
           ? "application"
           : 1 == e
-          ? "package"
-          : 2 == e
-          ? "bundle"
-          : null;
+            ? "package"
+            : 2 == e
+              ? "bundle"
+              : null;
       }
       function C(e) {
         return 1 == e ? 0 : 5 == e ? 2 : 2 == e ? 1 : -1;

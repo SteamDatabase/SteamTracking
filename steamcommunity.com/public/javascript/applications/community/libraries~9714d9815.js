@@ -35,14 +35,17 @@
                   r(e, t, a[t]);
                 })
               : Object.getOwnPropertyDescriptors
-              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(a))
-              : t(Object(a)).forEach(function (t) {
-                  Object.defineProperty(
+                ? Object.defineProperties(
                     e,
-                    t,
-                    Object.getOwnPropertyDescriptor(a, t),
-                  );
-                });
+                    Object.getOwnPropertyDescriptors(a),
+                  )
+                : t(Object(a)).forEach(function (t) {
+                    Object.defineProperty(
+                      e,
+                      t,
+                      Object.getOwnPropertyDescriptor(a, t),
+                    );
+                  });
           }
           return e;
         }
@@ -120,9 +123,9 @@
               "Map" === i || "Set" === i
                 ? Array.from(t)
                 : "Arguments" === i ||
-                  /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(i)
-                ? d(t, e)
-                : void 0
+                    /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(i)
+                  ? d(t, e)
+                  : void 0
             );
           }
         }
@@ -357,9 +360,9 @@
                   Nt(t, e);
                 })
               : t.classList
-              ? t.classList.remove(e)
-              : t.className.indexOf(e) >= 0 &&
-                (t.className = t.className.replace(e, "")));
+                ? t.classList.remove(e)
+                : t.className.indexOf(e) >= 0 &&
+                  (t.className = t.className.replace(e, "")));
         }
         function Lt(t, e, i) {
           e &&
@@ -368,8 +371,8 @@
                   Lt(t, e, i);
                 })
               : i
-              ? Ht(t, e)
-              : Nt(t, e));
+                ? Ht(t, e)
+                : Nt(t, e));
         }
         var zt = /([a-z\d])([A-Z])/g;
         function Yt(t) {
@@ -379,15 +382,15 @@
           return wt(t[e])
             ? t[e]
             : t.dataset
-            ? t.dataset[e]
-            : t.getAttribute("data-".concat(Yt(e)));
+              ? t.dataset[e]
+              : t.getAttribute("data-".concat(Yt(e)));
         }
         function Rt(t, e, i) {
           wt(i)
             ? (t[e] = i)
             : t.dataset
-            ? (t.dataset[e] = i)
-            : t.setAttribute("data-".concat(Yt(e)), i);
+              ? (t.dataset[e] = i)
+              : t.setAttribute("data-".concat(Yt(e)), i);
         }
         function St(t, e) {
           if (wt(t[e]))
@@ -796,8 +799,8 @@
                   ? (h = t.height * r)
                   : (s = t.width / r)
                 : 3 === i
-                ? (s = t.width / r)
-                : (h = t.height * r);
+                  ? (s = t.width / r)
+                  : (h = t.height * r);
               var c = {
                 aspectRatio: r,
                 naturalWidth: n,
@@ -838,10 +841,10 @@
                     (c
                       ? (c = Math.max(c, s ? o.width : 0))
                       : l
-                      ? (l = Math.max(l, s ? o.height : 0))
-                      : s &&
-                        ((c = o.width),
-                        (l = o.height) * h > c ? (c = l * h) : (l = c / h)));
+                        ? (l = Math.max(l, s ? o.height : 0))
+                        : s &&
+                          ((c = o.width),
+                          (l = o.height) * h > c ? (c = l * h) : (l = c / h)));
                 var d = _t({ aspectRatio: h, width: c, height: l });
                 (c = d.width),
                   (l = d.height),
@@ -1008,8 +1011,8 @@
                         ? (c = s / h)
                         : (s = c * h)
                       : s
-                      ? (c = s / h)
-                      : c && (s = c * h),
+                        ? (c = s / h)
+                        : c && (s = c * h),
                     d * h > l ? (d = l / h) : (l = d * h)),
                   (o.minWidth = Math.min(s, l)),
                   (o.minHeight = Math.min(c, d)),
@@ -1250,8 +1253,8 @@
                   t.deltaY
                     ? (a = t.deltaY > 0 ? 1 : -1)
                     : t.wheelDelta
-                    ? (a = -t.wheelDelta / 120)
-                    : t.detail && (a = t.detail > 0 ? 1 : -1),
+                      ? (a = -t.wheelDelta / 120)
+                      : t.detail && (a = t.detail > 0 ? 1 : -1),
                   this.zoom(-a * i, t)));
             },
             cropStart: function (t) {
@@ -1428,8 +1431,8 @@
                   d < 0 && p < 0
                     ? ((h = H), (l -= p = -p), (c -= d = -d))
                     : d < 0
-                    ? ((h = E), (c -= d = -d))
-                    : p < 0 && ((h = W), (l -= p = -p));
+                      ? ((h = E), (c -= d = -d))
+                      : p < 0 && ((h = W), (l -= p = -p));
                   break;
                 case E:
                   if (s) {
@@ -1456,8 +1459,8 @@
                   d < 0 && p < 0
                     ? ((h = W), (l -= p = -p), (c -= d = -d))
                     : d < 0
-                    ? ((h = T), (c -= d = -d))
-                    : p < 0 && ((h = H), (l -= p = -p));
+                      ? ((h = T), (c -= d = -d))
+                      : p < 0 && ((h = H), (l -= p = -p));
                   break;
                 case H:
                   if (s) {
@@ -1478,8 +1481,8 @@
                   d < 0 && p < 0
                     ? ((h = T), (l -= p = -p), (c -= d = -d))
                     : d < 0
-                    ? ((h = W), (c -= d = -d))
-                    : p < 0 && ((h = E), (l -= p = -p));
+                      ? ((h = W), (c -= d = -d))
+                      : p < 0 && ((h = E), (l -= p = -p));
                   break;
                 case W:
                   if (s) {
@@ -1500,8 +1503,8 @@
                   d < 0 && p < 0
                     ? ((h = E), (l -= p = -p), (c -= d = -d))
                     : d < 0
-                    ? ((h = H), (c -= d = -d))
-                    : p < 0 && ((h = T), (l -= p = -p));
+                      ? ((h = H), (c -= d = -d))
+                      : p < 0 && ((h = T), (l -= p = -p));
                   break;
                 case M:
                   this.move(L.x, L.y), (b = !1);
@@ -1968,13 +1971,13 @@
               E <= -r || E > O
                 ? ((E = 0), (x = 0), (C = 0), (k = 0))
                 : E <= 0
-                ? ((C = -E), (E = 0), (k = x = Math.min(O, r + E)))
-                : E <= O && ((C = 0), (k = x = Math.min(r, O - E))),
+                  ? ((C = -E), (E = 0), (k = x = Math.min(O, r + E)))
+                  : E <= O && ((C = 0), (k = x = Math.min(r, O - E))),
                 x <= 0 || W <= -s || W > T
                   ? ((W = 0), (M = 0), (D = 0), (B = 0))
                   : W <= 0
-                  ? ((D = -W), (W = 0), (B = M = Math.min(T, s + W)))
-                  : W <= T && ((D = 0), (B = M = Math.min(s, T - W)));
+                    ? ((D = -W), (W = 0), (B = M = Math.min(T, s + W)))
+                    : W <= T && ((D = 0), (B = M = Math.min(s, T - W)));
               var H = [E, W, x, M];
               if (k > 0 && B > 0) {
                 var N = m / r;
@@ -2297,12 +2300,12 @@
                           (this.ready = !1),
                           (this.cropped = !1))
                         : this.sizing
-                        ? ((this.sizingImage.onload = null),
-                          (this.sizing = !1),
-                          (this.sized = !1))
-                        : this.reloading
-                        ? ((this.xhr.onabort = null), this.xhr.abort())
-                        : this.image && this.stop();
+                          ? ((this.sizingImage.onload = null),
+                            (this.sizing = !1),
+                            (this.sized = !1))
+                          : this.reloading
+                            ? ((this.xhr.onabort = null), this.xhr.abort())
+                            : this.image && this.stop();
                     },
                   },
                 ],

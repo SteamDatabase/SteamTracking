@@ -845,8 +845,8 @@
                 "full" == n
                   ? ""
                   : "leftthumb" == n
-                  ? u.floatLeft
-                  : u.floatRight;
+                    ? u.floatLeft
+                    : u.floatRight;
             return i.createElement(d.O, {
               videoID: t,
               classNameAlign: r,
@@ -1135,11 +1135,7 @@
         }
         Load(e) {
           return (0, o.mG)(this, void 0, void 0, function* () {
-            const t = `${
-              i.De.COMMUNITY_CDN_URL
-            }economy/emoticonhoverjson/${encodeURIComponent(
-              e,
-            )}?l=${encodeURIComponent(i.De.LANGUAGE)}&origin=${(0, i.Kc)()}`;
+            const t = `${i.De.COMMUNITY_CDN_URL}economy/emoticonhoverjson/${encodeURIComponent(e)}?l=${encodeURIComponent(i.De.LANGUAGE)}&origin=${(0, i.Kc)()}`;
             this.m_inflightRequests[e] = !0;
             try {
               const { data: n } = yield a().get(t);
@@ -2732,22 +2728,22 @@
                   onStickerSelected: this.props.onStickerSelected,
                 })
               : o &&
-                n.flair_list &&
-                (null === (t = n.GetFlairListByGroupID(o)) || void 0 === t
-                  ? void 0
-                  : t.length) > 0
-              ? i.createElement(m.uC, {
-                  emoticonStore: this.props.emoticonStore,
-                  emoticonHoverStore: this.props.emoticonHoverStore,
-                  strFlairGroupID: this.props.strFlairGroupID,
-                  OnSelected: this.props.OnEmoticonSelected,
-                })
-              : i.createElement(m.ag, {
-                  emoticonStore: this.props.emoticonStore,
-                  emoticonHoverStore: this.props.emoticonHoverStore,
-                  strFlairGroupID: this.props.strFlairGroupID,
-                  OnSelected: this.props.OnEmoticonSelected,
-                })),
+                  n.flair_list &&
+                  (null === (t = n.GetFlairListByGroupID(o)) || void 0 === t
+                    ? void 0
+                    : t.length) > 0
+                ? i.createElement(m.uC, {
+                    emoticonStore: this.props.emoticonStore,
+                    emoticonHoverStore: this.props.emoticonHoverStore,
+                    strFlairGroupID: this.props.strFlairGroupID,
+                    OnSelected: this.props.OnEmoticonSelected,
+                  })
+                : i.createElement(m.ag, {
+                    emoticonStore: this.props.emoticonStore,
+                    emoticonHoverStore: this.props.emoticonHoverStore,
+                    strFlairGroupID: this.props.strFlairGroupID,
+                    OnSelected: this.props.OnEmoticonSelected,
+                  })),
             (0, c.yV)(
               l,
               e,
@@ -2890,9 +2886,9 @@
               this.m_bIsLoaded
                 ? 1
                 : E.L7.logged_in
-                ? (this.m_promise || (this.m_promise = this.InternalLoad()),
-                  this.m_promise)
-                : 1
+                  ? (this.m_promise || (this.m_promise = this.InternalLoad()),
+                    this.m_promise)
+                  : 1
             );
           });
         }
@@ -3171,10 +3167,7 @@
           const { eventModel: e, lang: t } = this.props,
             n = e.GetNameWithFallback(t);
           if (c.xM.BHasEntityNameForID(e.appid, e.clanSteamID.GetAccountID())) {
-            return `${c.xM.GetEntityNameForID(
-              e.appid,
-              e.clanSteamID.GetAccountID(),
-            )}: ${n}`;
+            return `${c.xM.GetEntityNameForID(e.appid, e.clanSteamID.GetAccountID())}: ${n}`;
           }
           return n;
         }
@@ -3210,9 +3203,7 @@
               ? "app/" + t.appid
               : "group/" + t.clanSteamID.GetAccountID(),
             i = "l=" + (0, a.j_)(n);
-          return `${E.De.STORE_BASE_URL}${(0, M.x3)()}/download/${o}/${e}/${
-            t.GID
-          }?${i}`;
+          return `${E.De.STORE_BASE_URL}${(0, M.x3)()}/download/${o}/${e}/${t.GID}?${i}`;
         }
         render() {
           const {
@@ -4475,8 +4466,8 @@
                   e >= r
                     ? "#EventDisplay_TimeBeginsOn"
                     : t >= r
-                    ? "#EventDisplay_TimeBeginsOn_Past"
-                    : "#EventDisplay_TimeBeginsOn_StartAndEnd_Past",
+                      ? "#EventDisplay_TimeBeginsOn_Past"
+                      : "#EventDisplay_TimeBeginsOn_StartAndEnd_Past",
                 ),
               ),
               i.createElement(E, {

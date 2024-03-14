@@ -441,11 +441,11 @@
                   e.project_id < t.project_id
                     ? -1
                     : e.project_id > t.project_id
-                    ? 1
-                    : e.difference_multiplier_factor <
-                      t.difference_multiplier_factor
-                    ? -1
-                    : 1,
+                      ? 1
+                      : e.difference_multiplier_factor <
+                          t.difference_multiplier_factor
+                        ? -1
+                        : 1,
                 ),
                 e.data
               ),
@@ -752,10 +752,10 @@
             a <= 86400
               ? (d = (0, u.Xx)("#PlaytimeList_LastPlayedMax"))
               : o > 31449600
-              ? ((l = (0, u.vX)(a)),
-                (d = (0, u.Xx)("#PlaytimeList_LastPlayed", l)))
-              : ((l = (0, u.yW)(o)),
-                (d = (0, u.Xx)("#PlaytimeList_LastPlayed", l))),
+                ? ((l = (0, u.vX)(a)),
+                  (d = (0, u.Xx)("#PlaytimeList_LastPlayed", l)))
+                : ((l = (0, u.yW)(o)),
+                  (d = (0, u.Xx)("#PlaytimeList_LastPlayed", l))),
             r.createElement(
               "div",
               { className: (0, m.Z)(h.PlayedGame, s && h.Ignored) },
@@ -1202,8 +1202,8 @@
                   ? ((C = e.microtrailer_webm), (P = !0), (U = !1))
                   : (C = e.video_webm)
                 : f.shouldUseMicrotrailers() && e.microtrailer_mp4
-                ? ((C = e.microtrailer_mp4), (P = !0), (U = !1))
-                : (C = e.video_mp4),
+                  ? ((C = e.microtrailer_mp4), (P = !0), (U = !1))
+                  : (C = e.video_mp4),
               (N = `-${e.discount_pct}%`),
               (I = e.base_price),
               (A = D ? (0, u.Xx)("#FreeToPlay") : e.discount_price),

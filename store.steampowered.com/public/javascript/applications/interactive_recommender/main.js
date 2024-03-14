@@ -409,10 +409,10 @@
                   ? e + " " + t
                   : t
                 : "object" == typeof t
-                ? e
-                  ? e + " " + g(t)
-                  : g(t)
-                : e
+                  ? e
+                    ? e + " " + g(t)
+                    : g(t)
+                  : e
               : e;
           }, "");
         });
@@ -789,8 +789,8 @@
           return this.m_rgLocalesToUse
             ? this.m_rgLocalesToUse
             : navigator && navigator.languages
-            ? navigator.languages
-            : ["en-US"];
+              ? navigator.languages
+              : ["en-US"];
         }),
         (e.prototype.GetELanguageFallbackOrder = function () {
           var t = new Array();
@@ -921,35 +921,47 @@
                         return e >= 2 * b.PerYear
                           ? w(a + "XYears", Math.floor(e / b.PerYear))
                           : e >= b.PerYear
-                          ? (e -= b.PerYear) >= 2 * b.PerMonth
-                            ? w(a + "1YearXMonths", Math.floor(e / b.PerMonth))
-                            : w(a + "1Year")
-                          : e >= 2 * b.PerMonth
-                          ? w(a + "XMonths", Math.floor(e / b.PerMonth))
-                          : e >= 2 * b.PerWeek
-                          ? w(a + "XWeeks", Math.floor(e / b.PerWeek))
-                          : e >= b.PerWeek
-                          ? w(a + "1Week", Math.floor(e / b.PerWeek))
-                          : e >= 2 * b.PerDay
-                          ? w(a + "XDays", Math.floor(e / b.PerDay))
-                          : e >= b.PerDay
-                          ? (e -= b.PerDay) >= 2 * b.PerHour
-                            ? w(a + "1DayXHours", Math.floor(e / b.PerHour))
-                            : w(a + "1Day")
-                          : e >= 2 * b.PerHour
-                          ? w(a + "XHours", Math.floor(e / b.PerHour))
-                          : e >= b.PerHour
-                          ? (e -= b.PerHour) >= 2 * b.PerMinute
-                            ? w(
-                                a + "1HourXMinutes",
-                                Math.floor(e / b.PerMinute),
-                              )
-                            : w(a + "1Hour")
-                          : e >= 2 * b.PerMinute
-                          ? w(a + "XMinutes", Math.floor(e / b.PerMinute))
-                          : e >= b.PerMinute
-                          ? w(a + "1Minute")
-                          : w(a + "LessThanAMinute");
+                            ? (e -= b.PerYear) >= 2 * b.PerMonth
+                              ? w(
+                                  a + "1YearXMonths",
+                                  Math.floor(e / b.PerMonth),
+                                )
+                              : w(a + "1Year")
+                            : e >= 2 * b.PerMonth
+                              ? w(a + "XMonths", Math.floor(e / b.PerMonth))
+                              : e >= 2 * b.PerWeek
+                                ? w(a + "XWeeks", Math.floor(e / b.PerWeek))
+                                : e >= b.PerWeek
+                                  ? w(a + "1Week", Math.floor(e / b.PerWeek))
+                                  : e >= 2 * b.PerDay
+                                    ? w(a + "XDays", Math.floor(e / b.PerDay))
+                                    : e >= b.PerDay
+                                      ? (e -= b.PerDay) >= 2 * b.PerHour
+                                        ? w(
+                                            a + "1DayXHours",
+                                            Math.floor(e / b.PerHour),
+                                          )
+                                        : w(a + "1Day")
+                                      : e >= 2 * b.PerHour
+                                        ? w(
+                                            a + "XHours",
+                                            Math.floor(e / b.PerHour),
+                                          )
+                                        : e >= b.PerHour
+                                          ? (e -= b.PerHour) >= 2 * b.PerMinute
+                                            ? w(
+                                                a + "1HourXMinutes",
+                                                Math.floor(e / b.PerMinute),
+                                              )
+                                            : w(a + "1Hour")
+                                          : e >= 2 * b.PerMinute
+                                            ? w(
+                                                a + "XMinutes",
+                                                Math.floor(e / b.PerMinute),
+                                              )
+                                            : e >= b.PerMinute
+                                              ? w(a + "1Minute")
+                                              : w(a + "LessThanAMinute");
                       })(s),
                 )),
           D.a.createElement(

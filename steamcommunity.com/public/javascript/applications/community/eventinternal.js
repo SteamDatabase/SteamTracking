@@ -1031,9 +1031,7 @@
           }, [t]);
           const g = H.sV.GetOGGClanInfo(t),
             p = g ? g.group_name : e.app.name,
-            h = `${I.De.COMMUNITY_BASE_URL}games/${
-              g ? g.vanity_url : t
-            }/partnerevents/`,
+            h = `${I.De.COMMUNITY_BASE_URL}games/${g ? g.vanity_url : t}/partnerevents/`,
             v = i.length,
             f = a == v,
             _ = i.filter((e) => e.BIsVisibleEvent()),
@@ -1140,18 +1138,18 @@
                     "LOAD EVENTS",
                   )
                 : l
-                ? d.createElement(E.V, { size: "small" })
-                : B
-                ? d.createElement(
-                    "div",
-                    { className: q().MigrateEventsButton, onClick: T },
-                    "MIGRATE EVENTS",
-                  )
-                : d.createElement(
-                    "div",
-                    { className: q().CompleteMessage },
-                    "NOTHING TO MIGRATE",
-                  ),
+                  ? d.createElement(E.V, { size: "small" })
+                  : B
+                    ? d.createElement(
+                        "div",
+                        { className: q().MigrateEventsButton, onClick: T },
+                        "MIGRATE EVENTS",
+                      )
+                    : d.createElement(
+                        "div",
+                        { className: q().CompleteMessage },
+                        "NOTHING TO MIGRATE",
+                      ),
             )
           );
         });

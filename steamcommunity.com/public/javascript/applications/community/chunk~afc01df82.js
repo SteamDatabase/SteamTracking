@@ -220,8 +220,9 @@
             ("None" == this.props.loopDuration
               ? (this.setState({ bAnimate: !1 }), this.StopAnimationTimer())
               : "Infinite" == this.props.loopDuration
-              ? (this.setState({ bAnimate: !0 }), this.StopAnimationTimer())
-              : (this.setState({ bAnimate: !0 }), this.SetupAnimationTimer())),
+                ? (this.setState({ bAnimate: !0 }), this.StopAnimationTimer())
+                : (this.setState({ bAnimate: !0 }),
+                  this.SetupAnimationTimer())),
             this.props.bParentHovered != e.bParentHovered &&
               (this.props.bParentHovered &&
               "None" != this.props.loopDuration &&

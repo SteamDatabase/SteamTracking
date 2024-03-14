@@ -691,15 +691,15 @@
           return t == q.Loading && n == q.Loading
             ? null
             : ("top" == e.location ? t : n) == q.Loading
-            ? s.createElement(
-                "div",
-                { className: z().DirectionState },
-                s.createElement(T.V, {
-                  position: "center",
-                  string: (0, B.Xx)("#Loading"),
-                }),
-              )
-            : null;
+              ? s.createElement(
+                  "div",
+                  { className: z().DirectionState },
+                  s.createElement(T.V, {
+                    position: "center",
+                    string: (0, B.Xx)("#Loading"),
+                  }),
+                )
+              : null;
         }),
         J = s.forwardRef(function (e, t) {
           const n = (0, O.id)(),
@@ -2970,10 +2970,10 @@
           p.L7.logged_in
             ? this.setState({ bShareOnSteamDialog: !0 })
             : p.De.IN_CLIENT
-            ? console.log(
-                "ShareEventOnSocialMediaDialog: In Client: Cannot use login widget. We expect to be already logged in.",
-              )
-            : this.setState({ bRequireLoginToShare: !0 });
+              ? console.log(
+                  "ShareEventOnSocialMediaDialog: In Client: Cannot use login widget. We expect to be already logged in.",
+                )
+              : this.setState({ bRequireLoginToShare: !0 });
         }
         render() {
           const {
@@ -2995,29 +2995,29 @@
                 onOK: () => (0, c.Xt)(),
               })
             : this.state.bShareOnSteamDialog
-            ? o.createElement(L.D, {
-                eventLink: e,
-                appid: n,
-                emoticonStore: r,
-                partnerEventStore: s,
-                closeModal: a,
-              })
-            : o.createElement(
-                D.uH,
-                {
-                  strDescription: "",
-                  strTitle: (0, d.Xx)("#Button_Share"),
-                  onCancel: this.props.closeModal,
-                  onOK: this.props.closeModal,
-                  bAlertDialog: !0,
-                  modalClassName: "EventDisplay_Share_Dialog",
-                },
-                o.createElement(y, {
+              ? o.createElement(L.D, {
                   eventLink: e,
-                  fnGetSharePageUrl: t,
-                  fnShareOnSteamActivityFeed: this.ShareOnSteamActivityFeed,
-                }),
-              );
+                  appid: n,
+                  emoticonStore: r,
+                  partnerEventStore: s,
+                  closeModal: a,
+                })
+              : o.createElement(
+                  D.uH,
+                  {
+                    strDescription: "",
+                    strTitle: (0, d.Xx)("#Button_Share"),
+                    onCancel: this.props.closeModal,
+                    onOK: this.props.closeModal,
+                    bAlertDialog: !0,
+                    modalClassName: "EventDisplay_Share_Dialog",
+                  },
+                  o.createElement(y, {
+                    eventLink: e,
+                    fnGetSharePageUrl: t,
+                    fnShareOnSteamActivityFeed: this.ShareOnSteamActivityFeed,
+                  }),
+                );
         }
       }
       (0, a.gn)([u.ak], T.prototype, "ShareOnSteamActivityFeed", null);

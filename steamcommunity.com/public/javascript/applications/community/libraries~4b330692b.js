@@ -442,14 +442,14 @@
             t === -1 / 0
               ? (l = -l)
               : r === 1 / 0
-              ? (l -= t)
-              : (l = (l - t) / (r - t));
+                ? (l -= t)
+                : (l = (l - t) / (r - t));
             (l = a(l)),
               n === -1 / 0
                 ? (l = -l)
                 : i === 1 / 0
-                ? (l += n)
-                : (l = l * (i - n) + n);
+                  ? (l += n)
+                  : (l = l * (i - n) + n);
             return l;
           })(e, a[t], a[t + 1], i[t], i[t + 1], s, o, u, n.map);
         };
@@ -463,8 +463,8 @@
               r instanceof b && !(r instanceof t)
                 ? r.getPayload()
                 : Array.isArray(r)
-                ? r
-                : [r]),
+                  ? r
+                  : [r]),
             (o.calc = L(n, i, a)),
             o
           );
@@ -663,8 +663,8 @@
                             (f ? r.runAsync(s, l) : r.diff(s).start(l));
                         }, u)
                       : f
-                      ? r.runAsync(s, l)
-                      : r.diff(s).start(l);
+                        ? r.runAsync(s, l)
+                        : r.diff(s).start(l);
                   });
               } else
                 c.fun(e) && this.listeners.push(e),
@@ -1225,10 +1225,10 @@
           r < 1 / 6
             ? e + 6 * (t - e) * r
             : r < 0.5
-            ? t
-            : r < 2 / 3
-            ? e + (t - e) * (2 / 3 - r) * 6
-            : e
+              ? t
+              : r < 2 / 3
+                ? e + (t - e) * (2 / 3 - r) * 6
+                : e
         );
       }
       function he(e, t, r) {
@@ -1267,36 +1267,47 @@
                 ? t
                 : null
               : (r = fe.exec(t))
-              ? parseInt(r[1] + "ff", 16) >>> 0
-              : te.hasOwnProperty(t)
-              ? te[t]
-              : (r = ae.exec(t))
-              ? ((ge(r[1]) << 24) |
-                  (ge(r[2]) << 16) |
-                  (ge(r[3]) << 8) |
-                  255) >>>
-                0
-              : (r = oe.exec(t))
-              ? ((ge(r[1]) << 24) |
-                  (ge(r[2]) << 16) |
-                  (ge(r[3]) << 8) |
-                  ve(r[4])) >>>
-                0
-              : (r = le.exec(t))
-              ? parseInt(r[1] + r[1] + r[2] + r[2] + r[3] + r[3] + "ff", 16) >>>
-                0
-              : (r = de.exec(t))
-              ? parseInt(r[1], 16) >>> 0
-              : (r = ce.exec(t))
-              ? parseInt(
-                  r[1] + r[1] + r[2] + r[2] + r[3] + r[3] + r[4] + r[4],
-                  16,
-                ) >>> 0
-              : (r = ue.exec(t))
-              ? (255 | he(me(r[1]), ye(r[2]), ye(r[3]))) >>> 0
-              : (r = se.exec(t))
-              ? (he(me(r[1]), ye(r[2]), ye(r[3])) | ve(r[4])) >>> 0
-              : null;
+                ? parseInt(r[1] + "ff", 16) >>> 0
+                : te.hasOwnProperty(t)
+                  ? te[t]
+                  : (r = ae.exec(t))
+                    ? ((ge(r[1]) << 24) |
+                        (ge(r[2]) << 16) |
+                        (ge(r[3]) << 8) |
+                        255) >>>
+                      0
+                    : (r = oe.exec(t))
+                      ? ((ge(r[1]) << 24) |
+                          (ge(r[2]) << 16) |
+                          (ge(r[3]) << 8) |
+                          ve(r[4])) >>>
+                        0
+                      : (r = le.exec(t))
+                        ? parseInt(
+                            r[1] + r[1] + r[2] + r[2] + r[3] + r[3] + "ff",
+                            16,
+                          ) >>> 0
+                        : (r = de.exec(t))
+                          ? parseInt(r[1], 16) >>> 0
+                          : (r = ce.exec(t))
+                            ? parseInt(
+                                r[1] +
+                                  r[1] +
+                                  r[2] +
+                                  r[2] +
+                                  r[3] +
+                                  r[3] +
+                                  r[4] +
+                                  r[4],
+                                16,
+                              ) >>> 0
+                            : (r = ue.exec(t))
+                              ? (255 | he(me(r[1]), ye(r[2]), ye(r[3]))) >>> 0
+                              : (r = se.exec(t))
+                                ? (he(me(r[1]), ye(r[2]), ye(r[3])) |
+                                    ve(r[4])) >>>
+                                  0
+                                : null;
         return null === n
           ? e
           : "rgba(" +
@@ -1361,11 +1372,11 @@
         return null == t || "boolean" == typeof t || "" === t
           ? ""
           : r ||
-            "number" != typeof t ||
-            0 === t ||
-            (Ve.hasOwnProperty(e) && Ve[e])
-          ? ("" + t).trim()
-          : t + "px";
+              "number" != typeof t ||
+              0 === t ||
+              (Ve.hasOwnProperty(e) && Ve[e])
+            ? ("" + t).trim()
+            : t + "px";
       }
       Ve = Object.keys(Ve).reduce(function (e, t) {
         return (

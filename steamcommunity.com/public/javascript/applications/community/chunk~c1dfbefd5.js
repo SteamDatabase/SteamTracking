@@ -188,9 +188,7 @@
           ("dev" != d.De.WEB_UNIVERSE && "beta" != d.De.WEB_UNIVERSE) ||
             (0, u.X)(
               this.BContainDataRequest(e),
-              `Requested data without for ${(0, h.qE)(this.m_eItemType)} @ ${
-                this.m_unID
-              }`,
+              `Requested data without for ${(0, h.qE)(this.m_eItemType)} @ ${this.m_unID}`,
               (0, i.ZN)(e),
               (0, i.ZN)(this.m_DataRequested),
             );
@@ -670,8 +668,8 @@
                 : e.formatted_original_price) && void 0 !== t
             ? t
             : null === (s = this.m_BestPurchaseOption) || void 0 === s
-            ? void 0
-            : s.formatted_final_price;
+              ? void 0
+              : s.formatted_final_price;
         }
         GetAllPurchaseOptions() {
           return (
@@ -848,9 +846,7 @@
                 e.library_hero_2x(),
               ))),
             e.community_icon() &&
-              (this.m_strCommunityIcon = `${
-                d.De.MEDIA_CDN_COMMUNITY_URL
-              }images/apps/${t}/${e.community_icon()}.jpg`);
+              (this.m_strCommunityIcon = `${d.De.MEDIA_CDN_COMMUNITY_URL}images/apps/${t}/${e.community_icon()}.jpg`);
         }
         GetMainCapsuleURL() {
           return this.m_strMainCapsuleURL;
@@ -1573,20 +1569,22 @@
               ? (this.m_setUnavailableApps.add(e.appid()),
                 this.m_mapApps.delete(e.appid()))
               : e.packageid()
-              ? (this.m_setUnavailablePackages.add(e.packageid()),
-                this.m_mapPackages.delete(e.packageid()))
-              : e.bundleid()
-              ? (this.m_setUnavailableBundles.add(e.bundleid()),
-                this.m_mapBundles.delete(e.bundleid()))
-              : e.tagid()
-              ? (this.m_setUnavailableTags.add(e.tagid()),
-                this.m_mapTags.delete(e.tagid()))
-              : e.creatorid()
-              ? (this.m_setUnavailableCreators.add(e.creatorid()),
-                this.m_mapCreators.delete(e.creatorid()))
-              : e.hubcategoryid() &&
-                (this.m_setUnavailableHubCategories.add(e.hubcategoryid()),
-                this.m_mapHubCategories.delete(e.hubcategoryid()));
+                ? (this.m_setUnavailablePackages.add(e.packageid()),
+                  this.m_mapPackages.delete(e.packageid()))
+                : e.bundleid()
+                  ? (this.m_setUnavailableBundles.add(e.bundleid()),
+                    this.m_mapBundles.delete(e.bundleid()))
+                  : e.tagid()
+                    ? (this.m_setUnavailableTags.add(e.tagid()),
+                      this.m_mapTags.delete(e.tagid()))
+                    : e.creatorid()
+                      ? (this.m_setUnavailableCreators.add(e.creatorid()),
+                        this.m_mapCreators.delete(e.creatorid()))
+                      : e.hubcategoryid() &&
+                        (this.m_setUnavailableHubCategories.add(
+                          e.hubcategoryid(),
+                        ),
+                        this.m_mapHubCategories.delete(e.hubcategoryid()));
           });
         }
         SortStoreItems(e) {

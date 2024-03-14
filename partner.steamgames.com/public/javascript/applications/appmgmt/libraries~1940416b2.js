@@ -251,8 +251,8 @@
             ? "[object Undefined]"
             : "[object Null]"
           : u && u in Object(t)
-          ? o(t)
-          : a(t);
+            ? o(t)
+            : a(t);
       };
     },
     92217: (t) => {
@@ -418,12 +418,12 @@
         return "function" == typeof t
           ? t
           : null == t
-          ? a
-          : "object" == typeof t
-          ? u(t)
-            ? o(t[0], t[1])
-            : n(t)
-          : i(t);
+            ? a
+            : "object" == typeof t
+              ? u(t)
+                ? o(t[0], t[1])
+                : n(t)
+              : i(t);
       };
     },
     95571: (t, r, e) => {

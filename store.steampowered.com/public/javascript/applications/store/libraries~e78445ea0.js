@@ -625,8 +625,8 @@
             "undefined" != typeof window
               ? window
               : "undefined" != typeof self
-              ? self
-              : {}).requestAnimationFrame ||
+                ? self
+                : {}).requestAnimationFrame ||
           R.webkitRequestAnimationFrame ||
           R.mozRequestAnimationFrame ||
           R.oRequestAnimationFrame ||
@@ -680,14 +680,14 @@
                 (0, c.Z)(e, t, r[t]);
               })
             : Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
-            : L(r).forEach(function (t) {
-                Object.defineProperty(
-                  e,
-                  t,
-                  Object.getOwnPropertyDescriptor(r, t),
-                );
-              });
+              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
+              : L(r).forEach(function (t) {
+                  Object.defineProperty(
+                    e,
+                    t,
+                    Object.getOwnPropertyDescriptor(r, t),
+                  );
+                });
         }
         return e;
       }
@@ -1854,21 +1854,21 @@
               w && p[z]
                 ? (T = p[z])
                 : l && !l.has(y, b)
-                ? (T = {
-                    height: "auto",
-                    left: 0,
-                    position: "absolute",
-                    top: 0,
-                    width: "auto",
-                  })
-                : ((T = {
-                    height: C.size,
-                    left: R.offset + s,
-                    position: "absolute",
-                    top: C.offset + m,
-                    width: R.size,
-                  }),
-                  (p[z] = T));
+                  ? (T = {
+                      height: "auto",
+                      left: 0,
+                      position: "absolute",
+                      top: 0,
+                      width: "auto",
+                    })
+                  : ((T = {
+                      height: C.size,
+                      left: R.offset + s,
+                      position: "absolute",
+                      top: C.offset + m,
+                      width: R.size,
+                    }),
+                    (p[z] = T));
               var I = {
                   columnIndex: b,
                   isScrolling: a,
@@ -2104,38 +2104,39 @@
                       return e.isControlled
                         ? {}
                         : e.scrollToColumn !==
-                            t.instanceProps.prevScrollToColumn ||
-                          e.scrollToRow !== t.instanceProps.prevScrollToRow
-                        ? (function (e) {
-                            for (var t = 1; t < arguments.length; t++) {
-                              var r = null != arguments[t] ? arguments[t] : {};
-                              t % 2
-                                ? j(r, !0).forEach(function (t) {
-                                    (0, c.Z)(e, t, r[t]);
-                                  })
-                                : Object.getOwnPropertyDescriptors
-                                ? Object.defineProperties(
-                                    e,
-                                    Object.getOwnPropertyDescriptors(r),
-                                  )
-                                : j(r).forEach(function (t) {
-                                    Object.defineProperty(
-                                      e,
-                                      t,
-                                      Object.getOwnPropertyDescriptor(r, t),
-                                    );
-                                  });
-                            }
-                            return e;
-                          })({}, t, {
-                            scrollToColumn: e.scrollToColumn,
-                            scrollToRow: e.scrollToRow,
-                            instanceProps: {
-                              prevScrollToColumn: e.scrollToColumn,
-                              prevScrollToRow: e.scrollToRow,
-                            },
-                          })
-                        : {};
+                              t.instanceProps.prevScrollToColumn ||
+                            e.scrollToRow !== t.instanceProps.prevScrollToRow
+                          ? (function (e) {
+                              for (var t = 1; t < arguments.length; t++) {
+                                var r =
+                                  null != arguments[t] ? arguments[t] : {};
+                                t % 2
+                                  ? j(r, !0).forEach(function (t) {
+                                      (0, c.Z)(e, t, r[t]);
+                                    })
+                                  : Object.getOwnPropertyDescriptors
+                                    ? Object.defineProperties(
+                                        e,
+                                        Object.getOwnPropertyDescriptors(r),
+                                      )
+                                    : j(r).forEach(function (t) {
+                                        Object.defineProperty(
+                                          e,
+                                          t,
+                                          Object.getOwnPropertyDescriptor(r, t),
+                                        );
+                                      });
+                              }
+                              return e;
+                            })({}, t, {
+                              scrollToColumn: e.scrollToColumn,
+                              scrollToRow: e.scrollToRow,
+                              instanceProps: {
+                                prevScrollToColumn: e.scrollToColumn,
+                                prevScrollToRow: e.scrollToRow,
+                              },
+                            })
+                          : {};
                     },
                   },
                 ],
@@ -2161,10 +2162,10 @@
                 void 0 !== t
                   ? t
                   : "undefined" != typeof window
-                  ? window
-                  : "undefined" != typeof self
-                  ? self
-                  : r.g).document && i.document.attachEvent;
+                    ? window
+                    : "undefined" != typeof self
+                      ? self
+                      : r.g).document && i.document.attachEvent;
         if (!o) {
           var n = (function () {
               var e =
@@ -2355,14 +2356,14 @@
                 (0, c.Z)(e, t, r[t]);
               })
             : Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
-            : q(r).forEach(function (t) {
-                Object.defineProperty(
-                  e,
-                  t,
-                  Object.getOwnPropertyDescriptor(r, t),
-                );
-              });
+              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
+              : q(r).forEach(function (t) {
+                  Object.defineProperty(
+                    e,
+                    t,
+                    Object.getOwnPropertyDescriptor(r, t),
+                  );
+                });
         }
         return e;
       }
@@ -2652,14 +2653,14 @@
                 (0, c.Z)(e, t, r[t]);
               })
             : Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
-            : te(r).forEach(function (t) {
-                Object.defineProperty(
-                  e,
-                  t,
-                  Object.getOwnPropertyDescriptor(r, t),
-                );
-              });
+              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
+              : te(r).forEach(function (t) {
+                  Object.defineProperty(
+                    e,
+                    t,
+                    Object.getOwnPropertyDescriptor(r, t),
+                  );
+                });
         }
         return e;
       }
@@ -4176,16 +4177,16 @@
               ? 4 * (this.right ? this.right.count : 0) > 3 * (t - 1)
                 ? be(this, e)
                 : 2 === (n = this.left.remove(e))
-                ? ((this.left = null), (this.count -= 1), 1)
-                : (1 === n && (this.count -= 1), n)
+                  ? ((this.left = null), (this.count -= 1), 1)
+                  : (1 === n && (this.count -= 1), n)
               : 0;
           if (e[0] > this.mid)
             return this.right
               ? 4 * (this.left ? this.left.count : 0) > 3 * (t - 1)
                 ? be(this, e)
                 : 2 === (n = this.right.remove(e))
-                ? ((this.right = null), (this.count -= 1), 1)
-                : (1 === n && (this.count -= 1), n)
+                  ? ((this.right = null), (this.count -= 1), 1)
+                  : (1 === n && (this.count -= 1), n)
               : 0;
           if (1 === this.count) return this.leftPoints[0] === e ? 2 : 0;
           if (1 === this.leftPoints.length && this.leftPoints[0] === e) {
@@ -4255,8 +4256,8 @@
           return t < this.mid
             ? Re(this.leftPoints, t, r)
             : e > this.mid
-            ? xe(this.rightPoints, e, r)
-            : ze(this.leftPoints, r);
+              ? xe(this.rightPoints, e, r)
+              : ze(this.leftPoints, r);
         });
       var Pe = Oe.prototype;
       (Pe.insert = function (e) {
@@ -4386,14 +4387,14 @@
                 (0, c.Z)(e, t, r[t]);
               })
             : Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
-            : Ge(r).forEach(function (t) {
-                Object.defineProperty(
-                  e,
-                  t,
-                  Object.getOwnPropertyDescriptor(r, t),
-                );
-              });
+              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
+              : Ge(r).forEach(function (t) {
+                  Object.defineProperty(
+                    e,
+                    t,
+                    Object.getOwnPropertyDescriptor(r, t),
+                  );
+                });
         }
         return e;
       }
@@ -4921,14 +4922,14 @@
                 (0, c.Z)(e, t, r[t]);
               })
             : Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
-            : De(r).forEach(function (t) {
-                Object.defineProperty(
-                  e,
-                  t,
-                  Object.getOwnPropertyDescriptor(r, t),
-                );
-              });
+              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
+              : De(r).forEach(function (t) {
+                  Object.defineProperty(
+                    e,
+                    t,
+                    Object.getOwnPropertyDescriptor(r, t),
+                  );
+                });
         }
         return e;
       }
@@ -5006,8 +5007,8 @@
               return s.showHorizontalScrollbar && t === i - n
                 ? a
                 : "function" == typeof l
-                ? l({ index: t + n })
-                : l;
+                  ? l({ index: t + n })
+                  : l;
             }),
             (0, c.Z)((0, s.Z)(o), "_onScroll", function (e) {
               var t = e.scrollLeft,
@@ -5053,8 +5054,8 @@
               return s.showVerticalScrollbar && t === n - i
                 ? a
                 : "function" == typeof l
-                ? l({ index: t + i })
-                : l;
+                  ? l({ index: t + i })
+                  : l;
             }),
             (0, c.Z)((0, s.Z)(o), "_topLeftGridRef", function (e) {
               o._topLeftGrid = e;
@@ -5833,14 +5834,14 @@
                 (0, c.Z)(e, t, r[t]);
               })
             : Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
-            : Ye(r).forEach(function (t) {
-                Object.defineProperty(
-                  e,
-                  t,
-                  Object.getOwnPropertyDescriptor(r, t),
-                );
-              });
+              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
+              : Ye(r).forEach(function (t) {
+                  Object.defineProperty(
+                    e,
+                    t,
+                    Object.getOwnPropertyDescriptor(r, t),
+                  );
+                });
         }
         return e;
       }
@@ -6501,17 +6502,17 @@
                               (0, c.Z)(e, t, r[t]);
                             })
                           : Object.getOwnPropertyDescriptors
-                          ? Object.defineProperties(
-                              e,
-                              Object.getOwnPropertyDescriptors(r),
-                            )
-                          : ft(r).forEach(function (t) {
-                              Object.defineProperty(
+                            ? Object.defineProperties(
                                 e,
-                                t,
-                                Object.getOwnPropertyDescriptor(r, t),
-                              );
-                            });
+                                Object.getOwnPropertyDescriptors(r),
+                              )
+                            : ft(r).forEach(function (t) {
+                                Object.defineProperty(
+                                  e,
+                                  t,
+                                  Object.getOwnPropertyDescriptor(r, t),
+                                );
+                              });
                       }
                       return e;
                     })({}, ut(r.props.scrollElement, r.props), {
@@ -7714,9 +7715,9 @@
             "Map" === r || "Set" === r
               ? Array.from(e)
               : "Arguments" === r ||
-                /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(r)
-              ? (0, i.Z)(e, t)
-              : void 0
+                  /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(r)
+                ? (0, i.Z)(e, t)
+                : void 0
           );
         }
       }

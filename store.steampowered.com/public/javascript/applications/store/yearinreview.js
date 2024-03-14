@@ -856,8 +856,9 @@
             ("None" == this.props.loopDuration
               ? (this.setState({ bAnimate: !1 }), this.StopAnimationTimer())
               : "Infinite" == this.props.loopDuration
-              ? (this.setState({ bAnimate: !0 }), this.StopAnimationTimer())
-              : (this.setState({ bAnimate: !0 }), this.SetupAnimationTimer())),
+                ? (this.setState({ bAnimate: !0 }), this.StopAnimationTimer())
+                : (this.setState({ bAnimate: !0 }),
+                  this.SetupAnimationTimer())),
             this.props.bParentHovered != e.bParentHovered &&
               (this.props.bParentHovered &&
               "None" != this.props.loopDuration &&
@@ -1155,9 +1156,7 @@
                       ? void 0
                       : a.userinfo)
                   )
-                    throw `Load single avatar/persona failed ${
-                      (0, d.l)(l).strErrorMsg
-                    }`;
+                    throw `Load single avatar/persona failed ${(0, d.l)(l).strErrorMsg}`;
                   return [l.data.userinfo];
                 }
                 {
@@ -1176,9 +1175,7 @@
                       ? void 0
                       : l.userinfos)
                   )
-                    throw `Load single avatar/persona failed ${
-                      (0, d.l)(a).strErrorMsg
-                    }`;
+                    throw `Load single avatar/persona failed ${(0, d.l)(a).strErrorMsg}`;
                   const i = new Map();
                   return (
                     a.data.userinfos.forEach((e) =>
@@ -1375,8 +1372,8 @@
                     "success" === t.statusType
                       ? (a = m().StatusSuccess)
                       : "danger" === t.statusType
-                      ? (a = m().StatusDanger)
-                      : "caution" === t.statusType && (a = m().StatusCaution),
+                        ? (a = m().StatusDanger)
+                        : "caution" === t.statusType && (a = m().StatusCaution),
                     n.createElement(
                       d.M2,
                       {
@@ -1394,11 +1391,7 @@
                         {
                           key: t.key,
                           className: (0, s.Z)(
-                            `${m().GraphicalAssetsTab} ${
-                              t.key === e.key
-                                ? (0, s.Z)(m().Active, "ActiveTab")
-                                : ""
-                            }`,
+                            `${m().GraphicalAssetsTab} ${t.key === e.key ? (0, s.Z)(m().Active, "ActiveTab") : ""}`,
                             this.props.classNameTab,
                           ),
                           onActivate: () => this.OnTabClick(t),
@@ -4172,9 +4165,7 @@
         return n.createElement(
           "a",
           {
-            href: `${
-              o.De.STORE_BASE_URL
-            }yearinreview/${r.ConvertTo64BitString()}/${a}`,
+            href: `${o.De.STORE_BASE_URL}yearinreview/${r.ConvertTo64BitString()}/${a}`,
             className: (0, de.Z)({
               [At.IsPrivate]: 1 == t.privacy_state,
               [At.FriendCtn]: !0,
@@ -5076,124 +5067,124 @@
                 n.createElement(ce.V, { position: "center" }),
               )
             : d
-            ? n.createElement(
-                "div",
-                { className: Ot.CarouselCtn },
-                i &&
-                  n.createElement(_a, {
-                    carouselIndex: s,
-                    endPreviewImage: (e) => {
-                      m(!1), e.stopPropagation();
-                    },
-                    onMoveLeft: v,
-                    onMoveRight: g,
-                    name: d[s].name,
-                    url: `${p}${d[s].url_path}`,
-                    maxIndex: u,
-                  }),
-                n.createElement(
+              ? n.createElement(
                   "div",
-                  { className: Ot.ImageArrowCtn },
+                  { className: Ot.CarouselCtn },
+                  i &&
+                    n.createElement(_a, {
+                      carouselIndex: s,
+                      endPreviewImage: (e) => {
+                        m(!1), e.stopPropagation();
+                      },
+                      onMoveLeft: v,
+                      onMoveRight: g,
+                      name: d[s].name,
+                      url: `${p}${d[s].url_path}`,
+                      maxIndex: u,
+                    }),
                   n.createElement(
                     "div",
-                    {
-                      className: (0, de.Z)(
-                        Ot.Arrow,
-                        Ot.Left,
-                        0 === s && Ot.ArrowDisabled,
-                      ),
-                      onClick: v,
-                    },
-                    n.createElement(le.V7n, { angle: 270 }),
-                  ),
-                  n.createElement(
-                    "div",
-                    {
-                      className: (0, de.Z)(
-                        Ot.Arrow,
-                        Ot.Right,
-                        s === u && Ot.ArrowDisabled,
-                      ),
-                      onClick: g,
-                    },
-                    n.createElement(le.V7n, { angle: 90 }),
-                  ),
-                  n.createElement(
-                    "div",
-                    { className: Ot.ImagesCtn },
+                    { className: Ot.ImageArrowCtn },
                     n.createElement(
                       "div",
-                      { className: (0, de.Z)(Ot.Peek, Ot.LeftPeak) },
-                      0 !== s &&
-                        n.createElement("img", {
-                          className: Ot.PeakImg,
-                          src: `${p}${d[s - 1].url_path}`,
-                        }),
+                      {
+                        className: (0, de.Z)(
+                          Ot.Arrow,
+                          Ot.Left,
+                          0 === s && Ot.ArrowDisabled,
+                        ),
+                        onClick: v,
+                      },
+                      n.createElement(le.V7n, { angle: 270 }),
                     ),
                     n.createElement(
                       "div",
-                      { className: Ot.CenterImage },
+                      {
+                        className: (0, de.Z)(
+                          Ot.Arrow,
+                          Ot.Right,
+                          s === u && Ot.ArrowDisabled,
+                        ),
+                        onClick: g,
+                      },
+                      n.createElement(le.V7n, { angle: 90 }),
+                    ),
+                    n.createElement(
+                      "div",
+                      { className: Ot.ImagesCtn },
                       n.createElement(
                         "div",
-                        { className: Ot.ImgAndPreviewCtn },
+                        { className: (0, de.Z)(Ot.Peek, Ot.LeftPeak) },
+                        0 !== s &&
+                          n.createElement("img", {
+                            className: Ot.PeakImg,
+                            src: `${p}${d[s - 1].url_path}`,
+                          }),
+                      ),
+                      n.createElement(
+                        "div",
+                        { className: Ot.CenterImage },
                         n.createElement(
                           "div",
-                          {
-                            onClick: (e) => {
-                              m(!0), e.stopPropagation();
+                          { className: Ot.ImgAndPreviewCtn },
+                          n.createElement(
+                            "div",
+                            {
+                              onClick: (e) => {
+                                m(!0), e.stopPropagation();
+                              },
+                              className: Ot.PreviewMask,
                             },
-                            className: Ot.PreviewMask,
-                          },
-                          (0, U.Xx)("#YIR_ShareModal_FullscreenPreview"),
+                            (0, U.Xx)("#YIR_ShareModal_FullscreenPreview"),
+                          ),
+                          n.createElement("img", {
+                            className: Ot.CenterImg,
+                            src: `${p}${d[s].url_path}`,
+                          }),
                         ),
-                        n.createElement("img", {
-                          className: Ot.CenterImg,
-                          src: `${p}${d[s].url_path}`,
-                        }),
+                      ),
+                      n.createElement(
+                        "div",
+                        { className: (0, de.Z)(Ot.Peek, Ot.RightPeak) },
+                        s !== u &&
+                          n.createElement("img", {
+                            className: Ot.PeakImg,
+                            src: `${p}${d[s + 1].url_path}`,
+                          }),
                       ),
                     ),
-                    n.createElement(
-                      "div",
-                      { className: (0, de.Z)(Ot.Peek, Ot.RightPeak) },
-                      s !== u &&
-                        n.createElement("img", {
-                          className: Ot.PeakImg,
-                          src: `${p}${d[s + 1].url_path}`,
-                        }),
+                  ),
+                  o.De.IN_MOBILE_WEBVIEW
+                    ? n.createElement(va, { shareUrl: `${p}${d[s].url_path}` })
+                    : n.createElement(pa, { imageUrl: `${p}${d[s].url_path}` }),
+                  n.createElement(
+                    "div",
+                    { className: Ot.CarouselHintCtn },
+                    d.map((e, t) =>
+                      n.createElement("div", {
+                        key: `${t}_hint`,
+                        className: (0, de.Z)(
+                          Ot.CarouselHint,
+                          t === s ? Ot.ActiveHint : null,
+                        ),
+                      }),
                     ),
                   ),
-                ),
-                o.De.IN_MOBILE_WEBVIEW
-                  ? n.createElement(va, { shareUrl: `${p}${d[s].url_path}` })
-                  : n.createElement(pa, { imageUrl: `${p}${d[s].url_path}` }),
-                n.createElement(
-                  "div",
-                  { className: Ot.CarouselHintCtn },
-                  d.map((e, t) =>
-                    n.createElement("div", {
-                      key: `${t}_hint`,
-                      className: (0, de.Z)(
-                        Ot.CarouselHint,
-                        t === s ? Ot.ActiveHint : null,
-                      ),
-                    }),
+                  n.createElement(
+                    "div",
+                    { className: Ot.FormatHint },
+                    (0, U.Xx)(`#YIR_ShareModal_ImageCaption_${d[s].name}`),
                   ),
-                ),
-                n.createElement(
+                )
+              : n.createElement(
                   "div",
-                  { className: Ot.FormatHint },
-                  (0, U.Xx)(`#YIR_ShareModal_ImageCaption_${d[s].name}`),
-                ),
-              )
-            : n.createElement(
-                "div",
-                { className: (0, de.Z)(Ot.CarouselCtn, Ot.LoadingCtn) },
-                n.createElement(
-                  "div",
-                  null,
-                  (0, U.Xx)("#YIR_ShareModal_FailedToGenerateImages"),
-                ),
-              )
+                  { className: (0, de.Z)(Ot.CarouselCtn, Ot.LoadingCtn) },
+                  n.createElement(
+                    "div",
+                    null,
+                    (0, U.Xx)("#YIR_ShareModal_FailedToGenerateImages"),
+                  ),
+                )
         );
       }
       function _a(e) {
@@ -5581,30 +5572,30 @@
               a[2],
             ])
           : a.length > 1 && t.length > 2
-          ? n.createElement("div", { className: H().SummaryGridStandard }, [
-              r,
-              t[1],
-              t[2],
-              t[0],
-              a[0],
-              a[1],
-            ])
-          : 1 == t.length && a.length > 3
-          ? n.createElement("div", { className: H().SummaryGridStandard }, [
-              r,
-              t[0],
-              a[0],
-              a[1],
-              a[2],
-              a[3],
-            ])
-          : a.length > 1
-          ? n.createElement("div", { className: H().SummaryGridSparse }, [
-              r,
-              a[0],
-              a[1],
-            ])
-          : null;
+            ? n.createElement("div", { className: H().SummaryGridStandard }, [
+                r,
+                t[1],
+                t[2],
+                t[0],
+                a[0],
+                a[1],
+              ])
+            : 1 == t.length && a.length > 3
+              ? n.createElement("div", { className: H().SummaryGridStandard }, [
+                  r,
+                  t[0],
+                  a[0],
+                  a[1],
+                  a[2],
+                  a[3],
+                ])
+              : a.length > 1
+                ? n.createElement("div", { className: H().SummaryGridSparse }, [
+                    r,
+                    a[0],
+                    a[1],
+                  ])
+                : null;
       }
       function ya(e, t) {
         return e > 0
@@ -5655,24 +5646,24 @@
             a > 50 && r > 100
               ? i("#YIR_YourSummary_GamesTonNewAchievements")
               : a > 20 && r > 100
-              ? i("#YIR_YourSummary_GamesNewAchievements")
-              : a > 20 && s > 36e4
-              ? i("#YIR_YourSummary_GamesNew")
-              : t > 10 && a < 5
-              ? i("#YIR_YourSummary_GamesManyTriedNew")
-              : t > 10
-              ? i("#YIR_YourSummary_GamesMany")
-              : a > 1 && a < 5 && (s > 36e4 || (0 == s && l > 5e3))
-              ? i("#YIR_YourSummary_HoursManyTriedNew")
-              : t < 2 && s > 36e4
-              ? i("#YIR_YourSummary_HoursManySingleGame")
-              : t < 2
-              ? i("#YIR_YourSummary_SingleGame")
-              : t < 5
-              ? i("#YIR_YourSummary_GamesFew")
-              : s > 36e4
-              ? i("#YIR_YourSummary_HoursMany")
-              : null),
+                ? i("#YIR_YourSummary_GamesNewAchievements")
+                : a > 20 && s > 36e4
+                  ? i("#YIR_YourSummary_GamesNew")
+                  : t > 10 && a < 5
+                    ? i("#YIR_YourSummary_GamesManyTriedNew")
+                    : t > 10
+                      ? i("#YIR_YourSummary_GamesMany")
+                      : a > 1 && a < 5 && (s > 36e4 || (0 == s && l > 5e3))
+                        ? i("#YIR_YourSummary_HoursManyTriedNew")
+                        : t < 2 && s > 36e4
+                          ? i("#YIR_YourSummary_HoursManySingleGame")
+                          : t < 2
+                            ? i("#YIR_YourSummary_SingleGame")
+                            : t < 5
+                              ? i("#YIR_YourSummary_GamesFew")
+                              : s > 36e4
+                                ? i("#YIR_YourSummary_HoursMany")
+                                : null),
           n.createElement("div", { className: H().SectionTitle }, o)
         );
       }
@@ -6253,14 +6244,14 @@
                         ),
                     )
                   : e.value
-                  ? n.createElement(Ha, {
-                      key: t,
-                      appId: t,
-                      className: (0, de.Z)(e === c && xa.HoveredGameLabel),
-                      date: a,
-                      value: r,
-                    })
-                  : null;
+                    ? n.createElement(Ha, {
+                        key: t,
+                        appId: t,
+                        className: (0, de.Z)(e === c && xa.HoveredGameLabel),
+                        date: a,
+                        value: r,
+                      })
+                    : null;
               })
               .reverse();
           return n.createElement(
@@ -6706,9 +6697,7 @@
           d = s.achievements.length,
           u = s.all_time_unlocked_achievements,
           _ = u == c && c > 0 && d > 0 && u > 0 && !s.unlocked_more_in_future,
-          p = `${o.De.COMMUNITY_BASE_URL}profiles/${a
-            .GetSteamID()
-            .ConvertTo64BitString()}/stats/${t}`,
+          p = `${o.De.COMMUNITY_BASE_URL}profiles/${a.GetSteamID().ConvertTo64BitString()}/stats/${t}`,
           v = (0, o.eL)();
         return n.createElement(
           "div",
@@ -6848,12 +6837,10 @@
         let a;
         return (
           t.localized_desc && t.localized_name
-            ? (a = `${null == t ? void 0 : t.localized_name}: ${
-                t.localized_desc
-              }`)
+            ? (a = `${null == t ? void 0 : t.localized_name}: ${t.localized_desc}`)
             : t.localized_name
-            ? (a = t.localized_name)
-            : t.internal_name && (a = t.internal_name),
+              ? (a = t.localized_name)
+              : t.internal_name && (a = t.internal_name),
           n.createElement(
             "div",
             { className: ln().TextToolTip },
@@ -7441,9 +7428,7 @@
                     "a",
                     {
                       key: e,
-                      href: `${
-                        o.De.STORE_BASE_URL
-                      }yearinreview/${t.ConvertTo64BitString()}/${e}?src=8`,
+                      href: `${o.De.STORE_BASE_URL}yearinreview/${t.ConvertTo64BitString()}/${e}?src=8`,
                       className: (0, de.Z)(Bn.OtherYearLink, r.OtherYearLink),
                     },
                     e,
@@ -7513,14 +7498,17 @@
               message: (0, U.Xx)("#YIR_Error_NoShareNoGameplayNotUser"),
             })
           : d
-          ? n.createElement(Fn, {
-              message: (0, U.Xx)("#YIR_Error_NoShareNoGameplay"),
-            })
-          : n.createElement(
-              "div",
-              { className: H().YearInReviewContainer },
-              n.createElement(Pn, { userYearInReview: m, avatarAndPersona: l }),
-            );
+            ? n.createElement(Fn, {
+                message: (0, U.Xx)("#YIR_Error_NoShareNoGameplay"),
+              })
+            : n.createElement(
+                "div",
+                { className: H().YearInReviewContainer },
+                n.createElement(Pn, {
+                  userYearInReview: m,
+                  avatarAndPersona: l,
+                }),
+              );
       }
       const Yn = n.createContext({
         bIsUser: !1,

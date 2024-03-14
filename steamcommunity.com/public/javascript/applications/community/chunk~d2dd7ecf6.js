@@ -2201,8 +2201,8 @@
               "bundle" === e.item_type
                 ? "bundle"
                 : "sub" === e.item_type
-                ? "sub"
-                : "game"),
+                  ? "sub"
+                  : "game"),
             { id: a, type: t }
           );
         }
@@ -4311,8 +4311,8 @@
             "developer" == t.type
               ? (0, u.Xx)("#CreatorHome_DevelopedBy")
               : "publisher" == t.type
-              ? (0, u.Xx)("#CreatorHome_PublishedBy")
-              : (0, u.Xx)("#CreatorHome_InFranchise"),
+                ? (0, u.Xx)("#CreatorHome_PublishedBy")
+                : (0, u.Xx)("#CreatorHome_InFranchise"),
           w = S.GetCreatorHomeURL(T),
           k = S.GetSocialList().map((e) =>
             n.createElement(x, {
@@ -4993,18 +4993,18 @@
                     .Get()
                     .BIncludesContentDescriptor(e.facetValue.contentDescriptor)
                 : e.facetValue.type === m.HL.k_ELanguage
-                ? !_.jg.Get().BIsLoaded() ||
-                  0 === e.facetValue.language ||
-                  ((0 !== _.jg.Get().GetSecondaryLanguages().size ||
-                    0 !== _.jg.Get().GetPrimaryLanguage()) &&
-                    (_.jg.Get().GetPrimaryLanguage() ===
-                      e.facetValue.language ||
-                      _.jg
-                        .Get()
-                        .GetSecondaryLanguages()
-                        .has(e.facetValue.language)))
-                : e.facetValue.type !== m.HL.k_EUserPreference ||
-                  (y.L7.logged_in && _.jg.Get().BIsLoaded()),
+                  ? !_.jg.Get().BIsLoaded() ||
+                    0 === e.facetValue.language ||
+                    ((0 !== _.jg.Get().GetSecondaryLanguages().size ||
+                      0 !== _.jg.Get().GetPrimaryLanguage()) &&
+                      (_.jg.Get().GetPrimaryLanguage() ===
+                        e.facetValue.language ||
+                        _.jg
+                          .Get()
+                          .GetSecondaryLanguages()
+                          .has(e.facetValue.language)))
+                  : e.facetValue.type !== m.HL.k_EUserPreference ||
+                    (y.L7.logged_in && _.jg.Get().BIsLoaded()),
             );
           }),
             (this.m_prunedFacets = this.m_prunedFacets.filter(
@@ -6477,8 +6477,8 @@
           E = S.needsCrop
             ? (0, x.Xx)("#ImageUpload_NeedsCrop")
             : S.error
-            ? (0, x.Xx)("#ImageUpload_Invalid")
-            : u[t.status];
+              ? (0, x.Xx)("#ImageUpload_Invalid")
+              : u[t.status];
         return o.createElement(
           "div",
           { className: k().UploadPreview },
@@ -6783,23 +6783,23 @@
                     ),
                   )
                 : t && t.errMsg
-                ? e.push(
-                    i.createElement(
-                      "div",
-                      { key: "ImagePicker_Result", className: y().ErrorCode },
-                      (0, E.Xx)("#ImagePicker_Error", t.errMsg),
-                    ),
-                  )
-                : e.push(
-                    i.createElement(
-                      "div",
-                      {
-                        key: "ImagePicker_Result",
-                        className: y().ResultNotification,
-                      },
-                      (0, E.Xx)("#Loading"),
-                    ),
-                  );
+                  ? e.push(
+                      i.createElement(
+                        "div",
+                        { key: "ImagePicker_Result", className: y().ErrorCode },
+                        (0, E.Xx)("#ImagePicker_Error", t.errMsg),
+                      ),
+                    )
+                  : e.push(
+                      i.createElement(
+                        "div",
+                        {
+                          key: "ImagePicker_Result",
+                          className: y().ResultNotification,
+                        },
+                        (0, E.Xx)("#Loading"),
+                      ),
+                    );
             }
             return e;
           }, [t, a, n, c, s, d, u]);
@@ -7563,8 +7563,8 @@
             this.state.timeAsString
               ? (a = (0, _.Xx)("#DateTimePicker_Time_CannotParse"))
               : this.state.dateAsString
-              ? (a = (0, _.Xx)("#DateTimePicker_Date_CannotParse"))
-              : "string" == typeof t && (a = t)),
+                ? (a = (0, _.Xx)("#DateTimePicker_Date_CannotParse"))
+                : "string" == typeof t && (a = t)),
             this.state.strError !== a &&
               (this.setState({ strError: a }),
               this.props.onError && this.props.onError(a));
@@ -7772,10 +7772,10 @@
               })
             : e.capsules_per_row_array
           : e.adaptive_capsules_per_row
-          ? t
-            ? [2, 3]
-            : [2, 3, 4, 3]
-          : [T.Lh(e.capsules_per_row, 1, t ? 3 : 5) || 1];
+            ? t
+              ? [2, 3]
+              : [2, 3, 4, 3]
+            : [T.Lh(e.capsules_per_row, 1, t ? 3 : 5) || 1];
       }
       function N(e, t, a) {
         const n = O(e, a),
@@ -7788,10 +7788,10 @@
         return e.capsule_style_per_row_array
           ? e.capsule_style_per_row_array
           : (function (e, t) {
-              return O(e, t).every((e) => 1 === e);
-            })(e, t)
-          ? ["fullrow"]
-          : ["grid"];
+                return O(e, t).every((e) => 1 === e);
+              })(e, t)
+            ? ["fullrow"]
+            : ["grid"];
       }
       function R(e, t, a, s, c, u) {
         return Boolean(
@@ -7876,152 +7876,159 @@
                 }))
             : []
           : Boolean("links" === e.section_type) ||
-            Boolean("sale_tabhub" === e.smart_section_type)
-          ? a
-            ? a.map((e) => ({
-                Render: (t) =>
-                  (function (e, t) {
-                    const {
-                      saleEvent: a,
-                      language: i,
-                      index: l,
-                      section: o,
-                    } = t;
-                    return n.createElement(D.S$, {
-                      key: o.unique_id + "_" + l,
-                      link: e,
-                      language: i,
-                      clanAccountID: a.clanSteamID.GetAccountID(),
-                      strClassName: y().LinkCapsule,
-                    });
-                  })(e, t),
-              }))
-            : []
-          : Boolean("items" === e.section_type)
-          ? t
-            ? t
-                .filter((e) => !(0, C.K$)(e))
-                .map((e) => ({
+              Boolean("sale_tabhub" === e.smart_section_type)
+            ? a
+              ? a.map((e) => ({
                   Render: (t) =>
                     (function (e, t) {
-                      var a, i, l, r;
                       const {
-                        capsuleStyle: s,
-                        index: c,
-                        section: d,
-                        saleEvent: u,
-                        rowElements: m,
+                        saleEvent: a,
+                        language: i,
+                        index: l,
+                        section: o,
                       } = t;
-                      if ((0, C.K$)(e)) return null;
-                      const _ = L(d),
-                        h = u.BUseSubscriptionLayout();
-                      let S = t.section.show_as_carousel && !t.bIsSingleCapsule;
-                      const v =
-                        d.unique_id + "_" + c + "_" + e.type + "_" + e.id;
-                      if ("fullrow" !== s) {
-                        let l = (0, g.Z)(S && y().CarouselSalePageCapsule);
-                        const o = "tall" === s ? "library" : "header";
-                        return n.createElement(
-                          "div",
-                          { key: v, className: l },
-                          n.createElement(p.B, {
-                            imageType: o,
-                            key: v,
-                            navKey: v,
-                            capsule: e,
-                            bShowParentApp: _,
-                            bUseSubscriptionLayout: h,
-                            bShowDemoButton:
-                              d.show_as_demos ||
-                              (null === (a = t.activeTab) || void 0 === a
-                                ? void 0
-                                : a.BFilterRequiresFeatureDemo()),
-                            bHidePrice: d.hide_prices,
-                            bHidePlatforms: m >= 5,
-                            index: c,
-                            bShowDeckCompatibilityDialog:
-                              d.show_deck_compability_details ||
-                              (null === (i = t.activeTab) || void 0 === i
-                                ? void 0
-                                : i.BFilterRequiresSteamDeckVerifiedOrPlayable()),
-                          }),
-                        );
-                      }
-                      {
-                        let a,
-                          i = d.single_item_style ? d.single_item_style : o.xb;
-                        "overrideNavigation" in e &&
-                          (a = (t) => (
-                            e.overrideNavigation(t),
-                            t && (t.preventDefault(), t.stopPropagation()),
-                            !1
-                          )),
-                          !(0, k.p)() ||
-                            ("library" != i && "animated" != i) ||
-                            (i = "bordered");
-                        let s = (0, g.Z)({
-                          [y().AppSummaryWidgetCtn]: !S && "bordered" == i,
-                          [y().CarouselCapsuleBordered]: S && "bordered" == i,
-                          [y().CarouselCapsuleAnimated]: S && "animated" == i,
-                          [p.O + c]: 0 === c,
-                        });
-                        return n.createElement(
-                          "div",
-                          { key: v, className: s },
-                          n.createElement(x.T, {
-                            id: e.id,
-                            type: e.type,
-                            displayStyle: i,
-                            bShowPurchaseOptionsButton: d.show_purchase_options,
-                            bUseSubscriptionLayout: h,
-                            bShowDemoButton:
-                              d.show_as_demos ||
-                              (null === (l = t.activeTab) || void 0 === l
-                                ? void 0
-                                : l.BFilterRequiresFeatureDemo()),
-                            bHidePrice: d.hide_prices,
-                            bShowDeckCompatibilityDialog:
-                              d.show_deck_compability_details ||
-                              (null === (r = t.activeTab) || void 0 === r
-                                ? void 0
-                                : r.BFilterRequiresSteamDeckVerifiedOrPlayable()),
-                            fnOnClickOverride: a,
-                          }),
-                        );
-                      }
+                      return n.createElement(D.S$, {
+                        key: o.unique_id + "_" + l,
+                        link: e,
+                        language: i,
+                        clanAccountID: a.clanSteamID.GetAccountID(),
+                        strClassName: y().LinkCapsule,
+                      });
                     })(e, t),
                 }))
-            : []
-          : Boolean("itemdef" === e.section_type)
-          ? c
-            ? c.map((e) => ({
-                Render: (t) =>
-                  (function (e, t) {
-                    const { section: a, language: i, saleEvent: l } = t;
-                    return n.createElement(_.t, {
-                      key: a.unique_id + "_" + e.nAppID + "_" + e.nItemDefID,
-                      itemDefSetting: e,
-                      language: i,
-                      clanAccountID: l.clanSteamID.GetAccountID(),
-                    });
-                  })(e, t),
-              }))
-            : []
-          : Boolean("point_shop_smart" === e.section_type) && u
-          ? u.map((e) => ({
-              Render: (t) =>
-                (function (e, t) {
-                  const { section: a, language: i, saleEvent: l } = t;
-                  return n.createElement(w.r, {
-                    key: a.unique_id + "_" + e.defid,
-                    section: a,
-                    reward: e,
-                    language: i,
-                    clanAccountID: l.clanSteamID.GetAccountID(),
-                  });
-                })(e, t),
-            }))
-          : [];
+              : []
+            : Boolean("items" === e.section_type)
+              ? t
+                ? t
+                    .filter((e) => !(0, C.K$)(e))
+                    .map((e) => ({
+                      Render: (t) =>
+                        (function (e, t) {
+                          var a, i, l, r;
+                          const {
+                            capsuleStyle: s,
+                            index: c,
+                            section: d,
+                            saleEvent: u,
+                            rowElements: m,
+                          } = t;
+                          if ((0, C.K$)(e)) return null;
+                          const _ = L(d),
+                            h = u.BUseSubscriptionLayout();
+                          let S =
+                            t.section.show_as_carousel && !t.bIsSingleCapsule;
+                          const v =
+                            d.unique_id + "_" + c + "_" + e.type + "_" + e.id;
+                          if ("fullrow" !== s) {
+                            let l = (0, g.Z)(S && y().CarouselSalePageCapsule);
+                            const o = "tall" === s ? "library" : "header";
+                            return n.createElement(
+                              "div",
+                              { key: v, className: l },
+                              n.createElement(p.B, {
+                                imageType: o,
+                                key: v,
+                                navKey: v,
+                                capsule: e,
+                                bShowParentApp: _,
+                                bUseSubscriptionLayout: h,
+                                bShowDemoButton:
+                                  d.show_as_demos ||
+                                  (null === (a = t.activeTab) || void 0 === a
+                                    ? void 0
+                                    : a.BFilterRequiresFeatureDemo()),
+                                bHidePrice: d.hide_prices,
+                                bHidePlatforms: m >= 5,
+                                index: c,
+                                bShowDeckCompatibilityDialog:
+                                  d.show_deck_compability_details ||
+                                  (null === (i = t.activeTab) || void 0 === i
+                                    ? void 0
+                                    : i.BFilterRequiresSteamDeckVerifiedOrPlayable()),
+                              }),
+                            );
+                          }
+                          {
+                            let a,
+                              i = d.single_item_style
+                                ? d.single_item_style
+                                : o.xb;
+                            "overrideNavigation" in e &&
+                              (a = (t) => (
+                                e.overrideNavigation(t),
+                                t && (t.preventDefault(), t.stopPropagation()),
+                                !1
+                              )),
+                              !(0, k.p)() ||
+                                ("library" != i && "animated" != i) ||
+                                (i = "bordered");
+                            let s = (0, g.Z)({
+                              [y().AppSummaryWidgetCtn]: !S && "bordered" == i,
+                              [y().CarouselCapsuleBordered]:
+                                S && "bordered" == i,
+                              [y().CarouselCapsuleAnimated]:
+                                S && "animated" == i,
+                              [p.O + c]: 0 === c,
+                            });
+                            return n.createElement(
+                              "div",
+                              { key: v, className: s },
+                              n.createElement(x.T, {
+                                id: e.id,
+                                type: e.type,
+                                displayStyle: i,
+                                bShowPurchaseOptionsButton:
+                                  d.show_purchase_options,
+                                bUseSubscriptionLayout: h,
+                                bShowDemoButton:
+                                  d.show_as_demos ||
+                                  (null === (l = t.activeTab) || void 0 === l
+                                    ? void 0
+                                    : l.BFilterRequiresFeatureDemo()),
+                                bHidePrice: d.hide_prices,
+                                bShowDeckCompatibilityDialog:
+                                  d.show_deck_compability_details ||
+                                  (null === (r = t.activeTab) || void 0 === r
+                                    ? void 0
+                                    : r.BFilterRequiresSteamDeckVerifiedOrPlayable()),
+                                fnOnClickOverride: a,
+                              }),
+                            );
+                          }
+                        })(e, t),
+                    }))
+                : []
+              : Boolean("itemdef" === e.section_type)
+                ? c
+                  ? c.map((e) => ({
+                      Render: (t) =>
+                        (function (e, t) {
+                          const { section: a, language: i, saleEvent: l } = t;
+                          return n.createElement(_.t, {
+                            key:
+                              a.unique_id + "_" + e.nAppID + "_" + e.nItemDefID,
+                            itemDefSetting: e,
+                            language: i,
+                            clanAccountID: l.clanSteamID.GetAccountID(),
+                          });
+                        })(e, t),
+                    }))
+                  : []
+                : Boolean("point_shop_smart" === e.section_type) && u
+                  ? u.map((e) => ({
+                      Render: (t) =>
+                        (function (e, t) {
+                          const { section: a, language: i, saleEvent: l } = t;
+                          return n.createElement(w.r, {
+                            key: a.unique_id + "_" + e.defid,
+                            section: a,
+                            reward: e,
+                            language: i,
+                            clanAccountID: l.clanSteamID.GetAccountID(),
+                          });
+                        })(e, t),
+                    }))
+                  : [];
       }
       function P(e, t) {
         return t[e % t.length];
@@ -8182,9 +8189,7 @@
           i = t - a,
           l =
             i % 2 != 0
-              ? `minmax(0, 0.5fr) repeat(${
-                  t - 1
-                }, minmax(0, 1fr)) minmax(0, 0.5fr)`
+              ? `minmax(0, 0.5fr) repeat(${t - 1}, minmax(0, 1fr)) minmax(0, 0.5fr)`
               : `repeat(${t}, minmax(0, 1fr))`;
         let o = null,
           r = null;
@@ -8830,8 +8835,8 @@
                             href: Boolean(P)
                               ? P.GetStorePageURL()
                               : null == R
-                              ? void 0
-                              : R.GetStorePageURL(),
+                                ? void 0
+                                : R.GetStorePageURL(),
                           },
                           n.createElement(D.N, { info: Boolean(P) ? X : F }),
                         ),
@@ -8878,8 +8883,8 @@
                   rgTagIDs: R.BHasTags()
                     ? R.GetTagIDs()
                     : null == P
-                    ? void 0
-                    : P.GetTagIDs(),
+                      ? void 0
+                      : P.GetTagIDs(),
                   instanceNum: E,
                 }),
                 Boolean(A) &&
@@ -9248,12 +9253,12 @@
         return "event_schedule" === e.section_type
           ? "#Sale_EventSchedule"
           : "curator_recommendation" === e.section_type
-          ? "#Sale_CuratorRecommendation_title"
-          : "discoveryqueue" === e.section_type
-          ? "#DiscoveryQueue_Title"
-          : "sale_events" === e.section_type
-          ? "#Sale_SaleEvent_Section"
-          : null;
+            ? "#Sale_CuratorRecommendation_title"
+            : "discoveryqueue" === e.section_type
+              ? "#DiscoveryQueue_Title"
+              : "sale_events" === e.section_type
+                ? "#Sale_SaleEvent_Section"
+                : null;
       }
       function S(e, t) {
         return (
@@ -9389,10 +9394,7 @@
         return {
           fontFamily: y(t.jsondata.sale_font, a),
           fontWeight: 300,
-          fontSize: `${
-            t.jsondata.sale_section_font_size &&
-            t.jsondata.sale_section_font_size - 3
-          }px`,
+          fontSize: `${t.jsondata.sale_section_font_size && t.jsondata.sale_section_font_size - 3}px`,
           letterSpacing: 0,
           lineHeight: `${t.jsondata.sale_section_font_size}px`,
           textTransform: t.jsondata.sale_section_disable_capitalize
@@ -9408,23 +9410,23 @@
           12 === t
             ? e.replace("Jolly Lodger", "New Rocker")
             : 23 === t ||
-              19 === t ||
-              24 === t ||
-              18 === t ||
-              8 === t ||
-              26 === t
-            ? e.replace("Sigmar One", "Play")
-            : 6 === t
-            ? e.replace("Sigmar One", "Noto Serif SC")
-            : 7 === t
-            ? e.replace("Sigmar One", "Noto Serif TC")
-            : 10 === t
-            ? e.replace("Sigmar One", "M PLUS Rounded 1c")
-            : 4 === t
-            ? e.replace("Sigmar One", "Black Han Sans")
-            : 9 === t
-            ? e.replace("Sigmar One", "Prompt")
-            : e
+                19 === t ||
+                24 === t ||
+                18 === t ||
+                8 === t ||
+                26 === t
+              ? e.replace("Sigmar One", "Play")
+              : 6 === t
+                ? e.replace("Sigmar One", "Noto Serif SC")
+                : 7 === t
+                  ? e.replace("Sigmar One", "Noto Serif TC")
+                  : 10 === t
+                    ? e.replace("Sigmar One", "M PLUS Rounded 1c")
+                    : 4 === t
+                      ? e.replace("Sigmar One", "Black Han Sans")
+                      : 9 === t
+                        ? e.replace("Sigmar One", "Prompt")
+                        : e
         );
       }
     },
@@ -9585,16 +9587,12 @@
           return { paddingLeft: 0, paddingRight: 0 };
         let i = "";
         if (e.background_image) {
-          i += `,url(${n.aN.GenerateArtworkURLFromHashAndExtensions(
-            t.clanSteamID,
-            e.background_image,
-          )})`;
+          i += `,url(${n.aN.GenerateArtworkURLFromHashAndExtensions(t.clanSteamID, e.background_image)})`;
         }
         return {
           background:
-            `linear-gradient(0deg, ${
-              e.background_gradient_bottom || "transparent"
-            } 0%, ${e.background_gradient_top || "transparent"} 100%)` + i,
+            `linear-gradient(0deg, ${e.background_gradient_bottom || "transparent"} 0%, ${e.background_gradient_top || "transparent"} 100%)` +
+            i,
           backgroundRepeat: e.background_repeat,
           borderStyle: e.border_color && e.border_width ? "solid" : void 0,
           borderColor: e.border_color,
@@ -10018,9 +10016,7 @@
       function y(e, t, a) {
         return {
           color: e,
-          background: `linear-gradient(0deg, ${a || "transparent"} 0%, ${
-            t || "transparent"
-          } 100%)`,
+          background: `linear-gradient(0deg, ${a || "transparent"} 0%, ${t || "transparent"} 100%)`,
         };
       }
       function C(e, t) {
@@ -10118,8 +10114,8 @@
             l = o
               ? e.id + " " + e.type + ', "' + n + '", ' + m(e)
               : void 0 === e.visibility_index
-              ? n
-              : (0, S.Xx)("#Sale_TabDayIndex", e.visibility_index);
+                ? n
+                : (0, S.Xx)("#Sale_TabDayIndex", e.visibility_index);
           p.push({ sName: n, sKey: t, sDisplay: l, nDaySortIndex: i });
         }
         return (
@@ -10654,9 +10650,7 @@
                     : {},
                 },
                 i.createElement("img", {
-                  className: `${d().WhitelistAvatar} ${d().Grabbable} ${
-                    this.state.bGrabbing ? d().Grabbing : ""
-                  } ${this.props.bDisabled ? d().DisabledGrab : ""}`,
+                  className: `${d().WhitelistAvatar} ${d().Grabbable} ${this.state.bGrabbing ? d().Grabbing : ""} ${this.props.bDisabled ? d().DisabledGrab : ""}`,
                   src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAeCAYAAAAo5+5WAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4gEEFRg0nBijuQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAw0lEQVRIx+2WMQqDMBSG/xedEnCp3kFzh56gN+iN7SrFLsEDmElwDHGyFNEYlQyF/FPgvXx5fMsL3R9P+CRJEgsAxhjy6We+UClLSFl+H7gMnqGcC3AuvOHMFzrHF86OQI/A062CMYaa5o2zYQiUNMsyGwRcVWWQicOpaNsPooqoIqqIKvYmrusX/dXE4VS4lqkQwnl5HMfND4xzmRbFzeZ5sVrXuscwDHRKhVIdad2vQpXq6JLjJdwH6lSxhAOwP+fdTHcfVDuVWnTzAAAAAElFTkSuQmCC",
                   onMouseDown: Boolean(this.props.bDisabled)
                     ? void 0
@@ -10967,17 +10961,19 @@
           k || l.has_public_party_beacon
             ? (B = i.createElement(f, { persona: l }))
             : (0, u.fk)(o)
-            ? ((B = (0, d.Xx)("#PersonaStateBlocked")), N.push(v().blocked))
-            : l.is_ingame
-            ? ((B =
-                !l.is_in_nonsteam_game || r || (0, u.my)(o)
-                  ? l.GetCurrentGameName()
-                  : (0, d.Xx)("#PersonaStateInNonSteamGame")),
-              r || x
-                ? r && l.is_awayOrSnooze && (O = (0, d.Xx)("#PersonaStateAway"))
-                : (O = l.GetCurrentGameRichPresence()))
-            : l.m_broadcastAccountId &&
-              (B = (0, d.Xx)("#PersonaStateWatchingBroadcast")),
+              ? ((B = (0, d.Xx)("#PersonaStateBlocked")), N.push(v().blocked))
+              : l.is_ingame
+                ? ((B =
+                    !l.is_in_nonsteam_game || r || (0, u.my)(o)
+                      ? l.GetCurrentGameName()
+                      : (0, d.Xx)("#PersonaStateInNonSteamGame")),
+                  r || x
+                    ? r &&
+                      l.is_awayOrSnooze &&
+                      (O = (0, d.Xx)("#PersonaStateAway"))
+                    : (O = l.GetCurrentGameRichPresence()))
+                : l.m_broadcastAccountId &&
+                  (B = (0, d.Xx)("#PersonaStateWatchingBroadcast")),
             B || (B = l.GetLocalizedOnlineStatus()),
             T && (B = T());
           let F = !x && !C;
@@ -12455,8 +12451,8 @@
               u[e] == re
                 ? "Summary" + e
                 : u[e] == se
-                ? "Placeholder" + e
-                : u[e].toString(),
+                  ? "Placeholder" + e
+                  : u[e].toString(),
             [u],
           ),
           J = l.useCallback((e) => v, [v]),
@@ -12963,8 +12959,8 @@
                 c.jg.Get().GetRecommendedTags().has(t.tagid)
                   ? 0
                   : c.jg.Get().GetRecommendedTags().has(e.tagid)
-                  ? 1
-                  : -1,
+                    ? 1
+                    : -1,
               ),
             [t],
           );
@@ -13361,9 +13357,7 @@
         const G = () => {
             D.L7.logged_in
               ? w || g(!0)
-              : (window.location.href = `${
-                  D.De.STORE_BASE_URL
-                }login?redir=${encodeURIComponent(document.location.href)}`);
+              : (window.location.href = `${D.De.STORE_BASE_URL}login?redir=${encodeURIComponent(document.location.href)}`);
           },
           M = null != o ? o : (0, q.Xx)("#DiscoveryQueue_WidgetHeader");
         return l.createElement(
@@ -13656,8 +13650,8 @@
         return (0, o.h4)()
           ? l.createElement("div", Object.assign({}, s), a)
           : r
-          ? l.createElement(i.IS, Object.assign({ href: t }, s), a)
-          : l.createElement("a", Object.assign({ href: t }, s), a);
+            ? l.createElement(i.IS, Object.assign({ href: t }, s), a)
+            : l.createElement("a", Object.assign({ href: t }, s), a);
       }
     },
     88408: (e, t, a) => {
@@ -13793,24 +13787,24 @@
             "value" === e.meta.fields[2]
               ? (s = this.ReadLocalizationData_CSV_TokenLanguageList(e))
               : (null ===
-                  (l =
-                    null === (n = null == e ? void 0 : e.meta) || void 0 === n
-                      ? void 0
-                      : n.fields) || void 0 === l
-                  ? void 0
-                  : l.length) >= 2 &&
-                "field" === e.meta.fields[0] &&
-                -1 != (0, i.jM)(e.meta.fields[1], -1)
-              ? (s = this.ReadLocalizationData_CSV_LanguageColumns(e))
-              : (null ===
-                  (r =
-                    null === (o = null == e ? void 0 : e.meta) || void 0 === o
-                      ? void 0
-                      : o.fields) || void 0 === r
-                  ? void 0
-                  : r.length) >= 2 &&
-                "language" === e.meta.fields[0] &&
-                (s = this.ReadLocalizationData_CSV_LanguageRows(e)),
+                    (l =
+                      null === (n = null == e ? void 0 : e.meta) || void 0 === n
+                        ? void 0
+                        : n.fields) || void 0 === l
+                    ? void 0
+                    : l.length) >= 2 &&
+                  "field" === e.meta.fields[0] &&
+                  -1 != (0, i.jM)(e.meta.fields[1], -1)
+                ? (s = this.ReadLocalizationData_CSV_LanguageColumns(e))
+                : (null ===
+                    (r =
+                      null === (o = null == e ? void 0 : e.meta) || void 0 === o
+                        ? void 0
+                        : o.fields) || void 0 === r
+                    ? void 0
+                    : r.length) >= 2 &&
+                  "language" === e.meta.fields[0] &&
+                  (s = this.ReadLocalizationData_CSV_LanguageRows(e)),
             s
           );
         }
@@ -14719,10 +14713,10 @@
             e < this.GetEarliestStartTimeForEdit()
               ? "#EventEditor_StartTime_BeforeEarliestAllowed"
               : this.GetLatestEndTimeForEdit() &&
-                e + 3600 > this.GetLatestEndTimeForEdit()
-              ? "#EventEditor_StartTime_AfterLatestAllowed"
-              : !(e + 3600 < v.JW.GetTimeNowWithOverride()) ||
-                "#EventEditor_StartTime_BeforeNow")
+                  e + 3600 > this.GetLatestEndTimeForEdit()
+                ? "#EventEditor_StartTime_AfterLatestAllowed"
+                : !(e + 3600 < v.JW.GetTimeNowWithOverride()) ||
+                  "#EventEditor_StartTime_BeforeNow")
           );
         }
         IsValidEndTimeForEdit() {
@@ -15304,8 +15298,8 @@
           return t == o.k_EWeek
             ? e + 604800 * a
             : t == o.k_EDay
-            ? e + 86400 * a
-            : e + 3600 * a;
+              ? e + 86400 * a
+              : e + 3600 * a;
         }
         RemoveNullCapsules() {
           for (const e of this.GetSaleSections())
@@ -15486,55 +15480,59 @@
                     )),
                     this.SetDirty(l.jsondata_image))
                   : "sale_overlay" === e && o.localized_sale_overlay[a] !== i
-                  ? ((o.localized_sale_overlay[a] = i),
-                    this.SetDirty(l.jsondata_image))
-                  : "product_banner" === e &&
-                    b.LZ.Get(o.localized_sale_product_banner, a) !== i
-                  ? ((o.localized_sale_product_banner = b.LZ.Set(
-                      o.localized_sale_product_banner || [],
-                      a,
-                      i,
-                    )),
-                    this.SetDirty(l.jsondata_image))
-                  : "product_mobile_banner" === e &&
-                    b.LZ.Get(o.localized_sale_product_mobile_banner, a) !== i
-                  ? ((o.localized_sale_product_mobile_banner = b.LZ.Set(
-                      o.localized_sale_product_mobile_banner || [],
-                      a,
-                      i,
-                    )),
-                    this.SetDirty(l.jsondata_image))
-                  : "link_capsule" === e ||
-                    "product_banner_override" === e ||
-                    "product_mobile_banner_override" === e ||
-                    "sale_section_title" === e ||
-                    "schedule_track_art" === e
-                  ? (i &&
-                      0 == g.U8.GetAllLocalizedGroupImages().length &&
-                      g.U8.SetPrimaryImageForImageGroup(t, e),
-                    g.U8.SetLocalizedImageGroupAtLang(
-                      a,
-                      this.GetClanSteamID(),
-                      i,
-                    ))
-                  : "bestofyear_banner" === e
-                  ? ((o.localized_bestofyear_banner = b.LZ.Set(
-                      o.localized_bestofyear_banner || [],
-                      a,
-                      i,
-                    )),
-                    this.SetDirty(l.jsondata_image))
-                  : "bestofyear_banner_mobile" === e
-                  ? ((o.localized_bestofyear_banner_mobile = b.LZ.Set(
-                      o.localized_bestofyear_banner_mobile || [],
-                      a,
-                      i,
-                    )),
-                    this.SetDirty(l.jsondata_image))
-                  : "localized_image_group" === e &&
-                    console.error(
-                      "Attempting to save localized image via editor model, not supported, it belong to the store itself",
-                    );
+                    ? ((o.localized_sale_overlay[a] = i),
+                      this.SetDirty(l.jsondata_image))
+                    : "product_banner" === e &&
+                        b.LZ.Get(o.localized_sale_product_banner, a) !== i
+                      ? ((o.localized_sale_product_banner = b.LZ.Set(
+                          o.localized_sale_product_banner || [],
+                          a,
+                          i,
+                        )),
+                        this.SetDirty(l.jsondata_image))
+                      : "product_mobile_banner" === e &&
+                          b.LZ.Get(
+                            o.localized_sale_product_mobile_banner,
+                            a,
+                          ) !== i
+                        ? ((o.localized_sale_product_mobile_banner = b.LZ.Set(
+                            o.localized_sale_product_mobile_banner || [],
+                            a,
+                            i,
+                          )),
+                          this.SetDirty(l.jsondata_image))
+                        : "link_capsule" === e ||
+                            "product_banner_override" === e ||
+                            "product_mobile_banner_override" === e ||
+                            "sale_section_title" === e ||
+                            "schedule_track_art" === e
+                          ? (i &&
+                              0 == g.U8.GetAllLocalizedGroupImages().length &&
+                              g.U8.SetPrimaryImageForImageGroup(t, e),
+                            g.U8.SetLocalizedImageGroupAtLang(
+                              a,
+                              this.GetClanSteamID(),
+                              i,
+                            ))
+                          : "bestofyear_banner" === e
+                            ? ((o.localized_bestofyear_banner = b.LZ.Set(
+                                o.localized_bestofyear_banner || [],
+                                a,
+                                i,
+                              )),
+                              this.SetDirty(l.jsondata_image))
+                            : "bestofyear_banner_mobile" === e
+                              ? ((o.localized_bestofyear_banner_mobile =
+                                  b.LZ.Set(
+                                    o.localized_bestofyear_banner_mobile || [],
+                                    a,
+                                    i,
+                                  )),
+                                this.SetDirty(l.jsondata_image))
+                              : "localized_image_group" === e &&
+                                console.error(
+                                  "Attempting to save localized image via editor model, not supported, it belong to the store itself",
+                                );
             else
               o.localized_store_app_spotlight_mobile ||
                 (o.localized_store_app_spotlight_mobile = (0, x.LG)(
@@ -15609,11 +15607,14 @@
           return a % t == 0
             ? { durationType: o.k_EWeek, value: Math.floor(Math.max(1, a / t)) }
             : a % e == 0
-            ? { durationType: o.k_EDay, value: Math.floor(Math.max(1, a / e)) }
-            : {
-                durationType: o.k_EHour,
-                value: Math.floor(Math.max(1, a / 3600)),
-              };
+              ? {
+                  durationType: o.k_EDay,
+                  value: Math.floor(Math.max(1, a / e)),
+                }
+              : {
+                  durationType: o.k_EHour,
+                  value: Math.floor(Math.max(1, a / 3600)),
+                };
         }
         ComputeDefaultDuration() {
           return { durationType: o.k_EHour, value: 1 };
@@ -18221,8 +18222,8 @@
                 e == t.lang
                   ? v().LanguageSelectorSelected
                   : t.imgHash
-                  ? v().LanguageSelector
-                  : v().LanguageSelectorNoData;
+                    ? v().LanguageSelector
+                    : v().LanguageSelectorNoData;
             n.push(
               l.createElement(
                 "div",
@@ -18386,8 +18387,8 @@
         return "bundle" === t
           ? c.De.STORE_BASE_URL + "bundle/" + e.id
           : "sub" === t
-          ? c.De.STORE_BASE_URL + "sub/" + e.id
-          : c.De.STORE_BASE_URL + "app/" + (null == e ? void 0 : e.id);
+            ? c.De.STORE_BASE_URL + "sub/" + e.id
+            : c.De.STORE_BASE_URL + "app/" + (null == e ? void 0 : e.id);
       }
       function m(e) {
         const { capsule: t } = e,
@@ -20461,18 +20462,18 @@
               (0, G.Xx)("#Sale_Tabs_Editor_AO"),
             )
           : b.u.BFilterRequiresSteamDeckVerifiedOrPlayableStatic(t)
-          ? c.createElement(
-              "div",
-              { className: N.InfoStylesBackground },
-              (0, G.Xx)("#Sale_Tabs_Editor_Deck"),
-            )
-          : b.u.BFilterRequiresFeatureDemoStatic(t)
-          ? c.createElement(
-              "div",
-              { className: N.InfoStylesBackground },
-              (0, G.Xx)("#Sale_Tabs_Editor_Demo"),
-            )
-          : null;
+            ? c.createElement(
+                "div",
+                { className: N.InfoStylesBackground },
+                (0, G.Xx)("#Sale_Tabs_Editor_Deck"),
+              )
+            : b.u.BFilterRequiresFeatureDemoStatic(t)
+              ? c.createElement(
+                  "div",
+                  { className: N.InfoStylesBackground },
+                  (0, G.Xx)("#Sale_Tabs_Editor_Demo"),
+                )
+              : null;
       }
       function z(e) {
         const { tab: t, editModel: a } = e;
@@ -21248,26 +21249,26 @@
                               : a.BHasSomeLanguageSupport(t.language);
                           })
                         : t.type === m.HL.k_EContentDescriptor
-                        ? e.some((e) => {
-                            const a = _.Z.Get().GetApp(e.capsule.id);
-                            return null == a
-                              ? void 0
-                              : a
-                                  .GetContentDescriptorIDs()
-                                  .includes(t.contentDescriptor);
-                          })
-                        : t.type === m.HL.k_EAppType
-                        ? e.some((e) => {
-                            const a = _.Z.Get().GetApp(e.capsule.id),
-                              n = (0, p.Ds)(
-                                null == a ? void 0 : a.GetStoreItemType(),
-                                null == a ? void 0 : a.GetAppType(),
-                              );
-                            return Boolean(a) && n === t.appType;
-                          })
-                        : t.type === m.HL.k_EUserPreference ||
-                          t.type === m.HL.k_EPrice ||
-                          e.some((e) => (0, l.j6)(e.tags, t.filter)),
+                          ? e.some((e) => {
+                              const a = _.Z.Get().GetApp(e.capsule.id);
+                              return null == a
+                                ? void 0
+                                : a
+                                    .GetContentDescriptorIDs()
+                                    .includes(t.contentDescriptor);
+                            })
+                          : t.type === m.HL.k_EAppType
+                            ? e.some((e) => {
+                                const a = _.Z.Get().GetApp(e.capsule.id),
+                                  n = (0, p.Ds)(
+                                    null == a ? void 0 : a.GetStoreItemType(),
+                                    null == a ? void 0 : a.GetAppType(),
+                                  );
+                                return Boolean(a) && n === t.appType;
+                              })
+                            : t.type === m.HL.k_EUserPreference ||
+                              t.type === m.HL.k_EPrice ||
+                              e.some((e) => (0, l.j6)(e.tags, t.filter)),
                     );
                   o.SetDirty(i.jB.jsondata_sales);
                 }
@@ -22424,22 +22425,22 @@
           void 0 !== a
             ? [a]
             : 2434320 == t.appid || 2 == D.De.EUNIVERSE
-            ? c
-              ? t.GetImageForSizeAsArrayWithFallback(
-                  "localized_store_app_spotlight_mobile",
-                  m,
-                  d.FN.full,
-                )
+              ? c
+                ? t.GetImageForSizeAsArrayWithFallback(
+                    "localized_store_app_spotlight_mobile",
+                    m,
+                    d.FN.full,
+                  )
+                : t.GetImageForSizeAsArrayWithFallback(
+                    "localized_store_app_spotlight",
+                    m,
+                    d.FN.full,
+                  )
               : t.GetImageForSizeAsArrayWithFallback(
-                  "localized_store_app_spotlight",
+                  "spotlight",
                   m,
-                  d.FN.full,
-                )
-            : t.GetImageForSizeAsArrayWithFallback(
-                "spotlight",
-                m,
-                d.FN.spotlight_main,
-              )),
+                  d.FN.spotlight_main,
+                )),
           l && (S = l(S));
         const v = _.replace(/https:\/\/[^ ]*/gi, "").trimLeft();
         return r.createElement(
@@ -22543,17 +22544,17 @@
                 (0, B.Xx)("#EventEditor_Required"),
               ))
             : n === H.k_Suggested
-            ? (o = r.createElement(
-                "span",
-                { style: { color: "#D7BC86" } },
-                (0, B.Xx)("#EventEditor_Suggested"),
-              ))
-            : n === H.k_Requested &&
-              (o = r.createElement(
-                "span",
-                { style: { color: "#D7BC86" } },
-                (0, B.Xx)("#EventEditor_Requested"),
-              ));
+              ? (o = r.createElement(
+                  "span",
+                  { style: { color: "#D7BC86" } },
+                  (0, B.Xx)("#EventEditor_Suggested"),
+                ))
+              : n === H.k_Requested &&
+                (o = r.createElement(
+                  "span",
+                  { style: { color: "#D7BC86" } },
+                  (0, B.Xx)("#EventEditor_Requested"),
+                ));
           let s = null;
           "capsule" === a
             ? (s = r.createElement(
@@ -22583,285 +22584,327 @@
                 ),
               ))
             : "background" === a
-            ? (s = r.createElement(
-                r.Fragment,
-                null,
-                r.createElement(
-                  "p",
+              ? (s = r.createElement(
+                  r.Fragment,
                   null,
-                  r.createElement(
-                    "strong",
-                    null,
-                    (0, B.Xx)("#selectimage_tip_design_title"),
-                  ),
-                  ": ",
-                  (0, B.Xx)("#selectimage_tip_background_1"),
-                ),
-              ))
-            : "spotlight" === a || "localized_store_app_spotlight" === a
-            ? (s = r.createElement(
-                r.Fragment,
-                null,
-                r.createElement(
-                  "p",
-                  null,
-                  r.createElement(
-                    "strong",
-                    null,
-                    (0, B.Xx)("#selectimage_tip_usage_title"),
-                  ),
-                  ": ",
-                  (0, B.Xx)("#selectimage_tip_store_spotlight_1"),
-                ),
-              ))
-            : "localized_store_app_spotlight_mobile" === a
-            ? (s = r.createElement(
-                r.Fragment,
-                null,
-                r.createElement(
-                  "p",
-                  null,
-                  r.createElement(
-                    "strong",
-                    null,
-                    (0, B.Xx)("#selectimage_tip_usage_title"),
-                  ),
-                  ": ",
-                  (0, B.Xx)("#selectimage_tip_store_mobile_spotlight"),
-                ),
-              ))
-            : "broadcast_left" === a || "broadcast_right" === a
-            ? (s = r.createElement(
-                r.Fragment,
-                null,
-                r.createElement(
-                  "p",
-                  null,
-                  (0, B.Xx)("#selectimage_tip_broadcast_1"),
-                ),
-              ))
-            : "sale_header" === a
-            ? (s = r.createElement(
-                r.Fragment,
-                null,
-                r.createElement(
-                  "div",
-                  { className: f().EventElementRequired },
-                  (0, B.Xx)("#selectimage_tip_required_title"),
-                ),
-                r.createElement(
-                  "p",
-                  null,
-                  r.createElement(
-                    "b",
-                    null,
-                    (0, B.Xx)("#selectimage_tip_usage_title"),
-                  ),
-                  ": ",
-                  (0, B.Xx)("#selectimage_tip_sale_header_1"),
-                ),
-                r.createElement(
-                  "p",
-                  null,
-                  r.createElement(
-                    "b",
-                    null,
-                    (0, B.Xx)("#selectimage_tip_design_title"),
-                  ),
-                  ": ",
-                  (0, B.Xx)("#selectimage_tip_sale_header_2"),
-                ),
-                r.createElement(
-                  "p",
-                  null,
-                  (0, B.Xx)("#selectimage_tip_sale_header_4"),
-                ),
-                r.createElement(
-                  "p",
-                  null,
-                  r.createElement(
-                    "b",
-                    null,
-                    (0, B.Xx)("#selectimage_tip_template_title"),
-                  ),
-                  ": ",
-                  r.createElement(
-                    "a",
-                    {
-                      href: "https://partner.steamgames.com/public/marketing/steam_sale_page_templates.zip?v=2",
-                    },
-                    (0, B.Xx)("#selectimage_tip_sale_header_3"),
-                  ),
-                ),
-                r.createElement("br", null),
-              ))
-            : "hero" === a
-            ? l &&
-              (s = r.createElement(
-                r.Fragment,
-                null,
-                r.createElement(
-                  "p",
-                  null,
-                  (0, B.Xx)("#selectimage_tip_hero_1"),
-                ),
-                !Boolean(l.GetAssets().GetLibraryHeroURL()) &&
                   r.createElement(
                     "p",
-                    { className: g.ErrorStylesBackground },
-                    (0, B.Xx)("#EventEdtior_ArtworkType_hero_warning"),
+                    null,
+                    r.createElement(
+                      "strong",
+                      null,
+                      (0, B.Xx)("#selectimage_tip_design_title"),
+                    ),
+                    ": ",
+                    (0, B.Xx)("#selectimage_tip_background_1"),
                   ),
-              ))
-            : (s =
-                "localized_image_group" === a ||
-                "link_capsule" === a ||
-                "sale_section_title" === a ||
-                "schedule_track_art" === a
-                  ? r.createElement(
+                ))
+              : "spotlight" === a || "localized_store_app_spotlight" === a
+                ? (s = r.createElement(
+                    r.Fragment,
+                    null,
+                    r.createElement(
+                      "p",
+                      null,
+                      r.createElement(
+                        "strong",
+                        null,
+                        (0, B.Xx)("#selectimage_tip_usage_title"),
+                      ),
+                      ": ",
+                      (0, B.Xx)("#selectimage_tip_store_spotlight_1"),
+                    ),
+                  ))
+                : "localized_store_app_spotlight_mobile" === a
+                  ? (s = r.createElement(
                       r.Fragment,
                       null,
                       r.createElement(
                         "p",
                         null,
-                        (0, B.Xx)("#ImagePickerLoc_Desc"),
+                        r.createElement(
+                          "strong",
+                          null,
+                          (0, B.Xx)("#selectimage_tip_usage_title"),
+                        ),
+                        ": ",
+                        (0, B.Xx)("#selectimage_tip_store_mobile_spotlight"),
                       ),
-                      r.createElement(
-                        "p",
+                    ))
+                  : "broadcast_left" === a || "broadcast_right" === a
+                    ? (s = r.createElement(
+                        r.Fragment,
                         null,
-                        (0, B.kQ)(
-                          "#ImagePickerLoc_Files",
+                        r.createElement(
+                          "p",
+                          null,
+                          (0, B.Xx)("#selectimage_tip_broadcast_1"),
+                        ),
+                      ))
+                    : "sale_header" === a
+                      ? (s = r.createElement(
+                          r.Fragment,
+                          null,
                           r.createElement(
-                            "a",
-                            {
-                              href: "https://partner.steamgames.com/doc/store/localization#supported_languages",
-                              target: D.De.IN_CLIENT ? void 0 : "_blank",
-                            },
-                            (0, B.Xx)("#ImagePickerLoc_URL"),
+                            "div",
+                            { className: f().EventElementRequired },
+                            (0, B.Xx)("#selectimage_tip_required_title"),
                           ),
-                        ),
-                      ),
-                    )
-                  : "product_banner" === a
-                  ? r.createElement(
-                      r.Fragment,
-                      null,
-                      r.createElement(
-                        "div",
-                        { className: f().EventElementOptional },
-                        (0, B.Xx)("#selectimage_tip_optional_title"),
-                      ),
-                      r.createElement(
-                        "p",
-                        null,
-                        r.createElement(
-                          "b",
-                          null,
-                          (0, B.Xx)("#selectimage_tip_usage_title"),
-                        ),
-                        ": ",
-                        (0, B.Xx)("#selectimage_tip_sale_product_banner"),
-                      ),
-                    )
-                  : "product_mobile_banner" === a ||
-                    "product_banner_override" === a ||
-                    "product_mobile_banner_override" === a
-                  ? r.createElement(
-                      r.Fragment,
-                      null,
-                      r.createElement(
-                        "div",
-                        { className: f().EventElementOptional },
-                        (0, B.Xx)("#selectimage_tip_optional_title"),
-                      ),
-                      r.createElement(
-                        "p",
-                        null,
-                        r.createElement(
-                          "b",
-                          null,
-                          (0, B.Xx)("#selectimage_tip_usage_title"),
-                        ),
-                        ": ",
-                        (0, B.Xx)("#selectimage_tip_sale_product_banner"),
-                        "product_mobile_banner" === a &&
                           r.createElement(
-                            "span",
+                            "p",
                             null,
-                            "  ",
-                            (0, B.Xx)(
-                              "#selectimage_tip_sale_product_banner_mobile",
+                            r.createElement(
+                              "b",
+                              null,
+                              (0, B.Xx)("#selectimage_tip_usage_title"),
+                            ),
+                            ": ",
+                            (0, B.Xx)("#selectimage_tip_sale_header_1"),
+                          ),
+                          r.createElement(
+                            "p",
+                            null,
+                            r.createElement(
+                              "b",
+                              null,
+                              (0, B.Xx)("#selectimage_tip_design_title"),
+                            ),
+                            ": ",
+                            (0, B.Xx)("#selectimage_tip_sale_header_2"),
+                          ),
+                          r.createElement(
+                            "p",
+                            null,
+                            (0, B.Xx)("#selectimage_tip_sale_header_4"),
+                          ),
+                          r.createElement(
+                            "p",
+                            null,
+                            r.createElement(
+                              "b",
+                              null,
+                              (0, B.Xx)("#selectimage_tip_template_title"),
+                            ),
+                            ": ",
+                            r.createElement(
+                              "a",
+                              {
+                                href: "https://partner.steamgames.com/public/marketing/steam_sale_page_templates.zip?v=2",
+                              },
+                              (0, B.Xx)("#selectimage_tip_sale_header_3"),
                             ),
                           ),
-                      ),
-                    )
-                  : "tab_bar_background" === a
-                  ? r.createElement(
-                      r.Fragment,
-                      null,
-                      r.createElement(
-                        "p",
-                        null,
-                        r.createElement(
-                          "strong",
-                          null,
-                          (0, B.Xx)("#selectimage_tip_design_title"),
-                        ),
-                        ":",
-                        (0, B.Xx)("#Sale_Tabs_Background_Design"),
-                      ),
-                      r.createElement(
-                        "p",
-                        null,
-                        r.createElement(
-                          "strong",
-                          null,
-                          (0, B.Xx)("#selectimage_tip_usage_title"),
-                        ),
-                        ":",
-                        (0, B.Xx)("#Sale_Tabs_Background_Usage"),
-                      ),
-                    )
-                  : "sale_logo" === a
-                  ? r.createElement(
-                      r.Fragment,
-                      null,
-                      r.createElement(
-                        "div",
-                        { className: f().EventElementOptional },
-                        (0, B.Xx)("#selectimage_tip_optional_title"),
-                      ),
-                      r.createElement(
-                        "p",
-                        null,
-                        r.createElement(
-                          "b",
-                          null,
-                          (0, B.Xx)("#selectimage_tip_usage_title"),
-                        ),
-                        ": ",
-                        (0, B.Xx)("#selectimage_tip_pageLogo"),
-                      ),
-                    )
-                  : r.createElement(
-                      r.Fragment,
-                      null,
-                      r.createElement(
-                        "div",
-                        { className: f().EventElementRequired },
-                        (0, B.Xx)("#selectimage_tip_required_title"),
-                      ),
-                      r.createElement(
-                        "p",
-                        null,
-                        r.createElement(
-                          "b",
-                          null,
-                          (0, B.Xx)("#selectimage_tip_usage_title"),
-                        ),
-                        ": ",
-                        (0, B.Xx)("#selectimage_tip_bestofyear"),
-                      ),
-                    ));
+                          r.createElement("br", null),
+                        ))
+                      : "hero" === a
+                        ? l &&
+                          (s = r.createElement(
+                            r.Fragment,
+                            null,
+                            r.createElement(
+                              "p",
+                              null,
+                              (0, B.Xx)("#selectimage_tip_hero_1"),
+                            ),
+                            !Boolean(l.GetAssets().GetLibraryHeroURL()) &&
+                              r.createElement(
+                                "p",
+                                { className: g.ErrorStylesBackground },
+                                (0, B.Xx)(
+                                  "#EventEdtior_ArtworkType_hero_warning",
+                                ),
+                              ),
+                          ))
+                        : (s =
+                            "localized_image_group" === a ||
+                            "link_capsule" === a ||
+                            "sale_section_title" === a ||
+                            "schedule_track_art" === a
+                              ? r.createElement(
+                                  r.Fragment,
+                                  null,
+                                  r.createElement(
+                                    "p",
+                                    null,
+                                    (0, B.Xx)("#ImagePickerLoc_Desc"),
+                                  ),
+                                  r.createElement(
+                                    "p",
+                                    null,
+                                    (0, B.kQ)(
+                                      "#ImagePickerLoc_Files",
+                                      r.createElement(
+                                        "a",
+                                        {
+                                          href: "https://partner.steamgames.com/doc/store/localization#supported_languages",
+                                          target: D.De.IN_CLIENT
+                                            ? void 0
+                                            : "_blank",
+                                        },
+                                        (0, B.Xx)("#ImagePickerLoc_URL"),
+                                      ),
+                                    ),
+                                  ),
+                                )
+                              : "product_banner" === a
+                                ? r.createElement(
+                                    r.Fragment,
+                                    null,
+                                    r.createElement(
+                                      "div",
+                                      { className: f().EventElementOptional },
+                                      (0, B.Xx)(
+                                        "#selectimage_tip_optional_title",
+                                      ),
+                                    ),
+                                    r.createElement(
+                                      "p",
+                                      null,
+                                      r.createElement(
+                                        "b",
+                                        null,
+                                        (0, B.Xx)(
+                                          "#selectimage_tip_usage_title",
+                                        ),
+                                      ),
+                                      ": ",
+                                      (0, B.Xx)(
+                                        "#selectimage_tip_sale_product_banner",
+                                      ),
+                                    ),
+                                  )
+                                : "product_mobile_banner" === a ||
+                                    "product_banner_override" === a ||
+                                    "product_mobile_banner_override" === a
+                                  ? r.createElement(
+                                      r.Fragment,
+                                      null,
+                                      r.createElement(
+                                        "div",
+                                        { className: f().EventElementOptional },
+                                        (0, B.Xx)(
+                                          "#selectimage_tip_optional_title",
+                                        ),
+                                      ),
+                                      r.createElement(
+                                        "p",
+                                        null,
+                                        r.createElement(
+                                          "b",
+                                          null,
+                                          (0, B.Xx)(
+                                            "#selectimage_tip_usage_title",
+                                          ),
+                                        ),
+                                        ": ",
+                                        (0, B.Xx)(
+                                          "#selectimage_tip_sale_product_banner",
+                                        ),
+                                        "product_mobile_banner" === a &&
+                                          r.createElement(
+                                            "span",
+                                            null,
+                                            "  ",
+                                            (0, B.Xx)(
+                                              "#selectimage_tip_sale_product_banner_mobile",
+                                            ),
+                                          ),
+                                      ),
+                                    )
+                                  : "tab_bar_background" === a
+                                    ? r.createElement(
+                                        r.Fragment,
+                                        null,
+                                        r.createElement(
+                                          "p",
+                                          null,
+                                          r.createElement(
+                                            "strong",
+                                            null,
+                                            (0, B.Xx)(
+                                              "#selectimage_tip_design_title",
+                                            ),
+                                          ),
+                                          ":",
+                                          (0, B.Xx)(
+                                            "#Sale_Tabs_Background_Design",
+                                          ),
+                                        ),
+                                        r.createElement(
+                                          "p",
+                                          null,
+                                          r.createElement(
+                                            "strong",
+                                            null,
+                                            (0, B.Xx)(
+                                              "#selectimage_tip_usage_title",
+                                            ),
+                                          ),
+                                          ":",
+                                          (0, B.Xx)(
+                                            "#Sale_Tabs_Background_Usage",
+                                          ),
+                                        ),
+                                      )
+                                    : "sale_logo" === a
+                                      ? r.createElement(
+                                          r.Fragment,
+                                          null,
+                                          r.createElement(
+                                            "div",
+                                            {
+                                              className:
+                                                f().EventElementOptional,
+                                            },
+                                            (0, B.Xx)(
+                                              "#selectimage_tip_optional_title",
+                                            ),
+                                          ),
+                                          r.createElement(
+                                            "p",
+                                            null,
+                                            r.createElement(
+                                              "b",
+                                              null,
+                                              (0, B.Xx)(
+                                                "#selectimage_tip_usage_title",
+                                              ),
+                                            ),
+                                            ": ",
+                                            (0, B.Xx)(
+                                              "#selectimage_tip_pageLogo",
+                                            ),
+                                          ),
+                                        )
+                                      : r.createElement(
+                                          r.Fragment,
+                                          null,
+                                          r.createElement(
+                                            "div",
+                                            {
+                                              className:
+                                                f().EventElementRequired,
+                                            },
+                                            (0, B.Xx)(
+                                              "#selectimage_tip_required_title",
+                                            ),
+                                          ),
+                                          r.createElement(
+                                            "p",
+                                            null,
+                                            r.createElement(
+                                              "b",
+                                              null,
+                                              (0, B.Xx)(
+                                                "#selectimage_tip_usage_title",
+                                              ),
+                                            ),
+                                            ": ",
+                                            (0, B.Xx)(
+                                              "#selectimage_tip_bestofyear",
+                                            ),
+                                          ),
+                                        ));
           const d = c.h1[e.artworkType].width,
             u = c.h1[e.artworkType].height;
           return r.createElement(
@@ -23009,9 +23052,7 @@
                     style: { textTransform: "uppercase", width: "200px" },
                     onClick: () =>
                       window.open(
-                        `${
-                          D.De.PARTNER_BASE_URL
-                        }admin/game/edit/${e.GetAppID()}?activetab=tab_graphicalassets`,
+                        `${D.De.PARTNER_BASE_URL}admin/game/edit/${e.GetAppID()}?activetab=tab_graphicalassets`,
                       ),
                   },
                   (0, B.Xx)("#ImageUpload_EditHeroImage"),
@@ -24926,33 +24967,10 @@
       const Ee = (0, T.Pi)((e) => {
         const { saleSection: t, track: a, editModel: n } = e,
           i = a.localized_track_image.reduce((e, t) => (t ? e + 1 : e), 0),
-          l = `linear-gradient(to right, ${
-            (null == a ? void 0 : a.background_gradient_left) || "transparent"
-          } 0%, ${
-            (null == a ? void 0 : a.background_gradient_right) || "transparent"
-          } 100%)`,
-          o = `linear-gradient(to right, ${
-            (null == a ? void 0 : a.selected_background_gradient_left) ||
-            "transparent"
-          } 0%, ${
-            (null == a ? void 0 : a.selected_background_gradient_right) ||
-            "transparent"
-          } 100%)`,
-          r = `linear-gradient(to right, ${
-            (null == a ? void 0 : a.encore_background_gradient_left) ||
-            "transparent"
-          } 0%, ${
-            (null == a ? void 0 : a.encore_background_gradient_right) ||
-            "transparent"
-          } 100%)`,
-          s = `linear-gradient(to right, ${
-            (null == a ? void 0 : a.selected_encore_background_gradient_left) ||
-            "transparent"
-          } 0%, ${
-            (null == a
-              ? void 0
-              : a.selected_encore_background_gradient_right) || "transparent"
-          } 100%)`;
+          l = `linear-gradient(to right, ${(null == a ? void 0 : a.background_gradient_left) || "transparent"} 0%, ${(null == a ? void 0 : a.background_gradient_right) || "transparent"} 100%)`,
+          o = `linear-gradient(to right, ${(null == a ? void 0 : a.selected_background_gradient_left) || "transparent"} 0%, ${(null == a ? void 0 : a.selected_background_gradient_right) || "transparent"} 100%)`,
+          r = `linear-gradient(to right, ${(null == a ? void 0 : a.encore_background_gradient_left) || "transparent"} 0%, ${(null == a ? void 0 : a.encore_background_gradient_right) || "transparent"} 100%)`,
+          s = `linear-gradient(to right, ${(null == a ? void 0 : a.selected_encore_background_gradient_left) || "transparent"} 0%, ${(null == a ? void 0 : a.selected_encore_background_gradient_right) || "transparent"} 100%)`;
         return d.createElement(
           "div",
           null,
@@ -26118,8 +26136,8 @@
             ttipToken: a
               ? "#Sale_Section_UseRandomOrder_smart_hint"
               : h
-              ? "#Sale_Section_UseRandomOrder_hint"
-              : "Sale_Section_UseRandomOrder_SortingTiers_hint",
+                ? "#Sale_Section_UseRandomOrder_hint"
+                : "Sale_Section_UseRandomOrder_SortingTiers_hint",
           }),
           m &&
             d.createElement(
@@ -26714,9 +26732,7 @@
             },
             [l, r, t],
           ),
-          g = `linear-gradient(0deg, ${l || "transparent"} 0%, ${
-            o || "transparent"
-          } 100%)`;
+          g = `linear-gradient(0deg, ${l || "transparent"} 0%, ${o || "transparent"} 100%)`;
         return d.createElement(
           d.Fragment,
           null,
@@ -27664,77 +27680,77 @@
               closeModal: t,
             })
           : l
-          ? d.createElement(
-              w.uH,
-              {
-                strTitle: "Create Claim Date Range",
-                strDescription:
-                  "Choose a date and appid for the claim. We will only pick items from bucket 0 from that appid that has a virtual reward item.",
-                bOKDisabled: !p || v < h,
-                onCancel: t,
-                bDisableBackgroundDismiss: !0,
-                bAllowFullSize: !0,
-                onOK: () => {
-                  f.fnSetLoading(!0);
-                  o(
-                    {
-                      appid: p,
-                      rtime_start_time: h,
-                      rtime_end_time: v,
-                      virtual_item_reward_event_id: n,
-                    },
-                    1,
-                  )
-                    .then((e) => {
-                      1 == e ? f.fnSetSuccess(!0) : f.fnSetError(!0);
-                    })
-                    .catch((e) => f.fnSetError(!0));
+            ? d.createElement(
+                w.uH,
+                {
+                  strTitle: "Create Claim Date Range",
+                  strDescription:
+                    "Choose a date and appid for the claim. We will only pick items from bucket 0 from that appid that has a virtual reward item.",
+                  bOKDisabled: !p || v < h,
+                  onCancel: t,
+                  bDisableBackgroundDismiss: !0,
+                  bAllowFullSize: !0,
+                  onOK: () => {
+                    f.fnSetLoading(!0);
+                    o(
+                      {
+                        appid: p,
+                        rtime_start_time: h,
+                        rtime_end_time: v,
+                        virtual_item_reward_event_id: n,
+                      },
+                      1,
+                    )
+                      .then((e) => {
+                        1 == e ? f.fnSetSuccess(!0) : f.fnSetError(!0);
+                      })
+                      .catch((e) => f.fnSetError(!0));
+                  },
                 },
-              },
-              d.createElement(u.II, {
-                type: "number",
-                label: "AppID",
-                value: p,
-                onChange: (e) => g(Number.parseInt(e.currentTarget.value)),
-              }),
-              d.createElement(
-                "p",
-                null,
-                "The date range is bounded by the start and end of the underlying event.",
-              ),
-              d.createElement(z.A, {
-                strDescription: "Claim Start Date and Time",
-                nEarliestTime: s,
-                nLatestTime: m,
-                fnGetTimeToUpdate: () => h,
-                fnSetTimeToUpdate: S,
-                fnIsValidDateTime: () => h < v,
-                bShowTimeZone: !0,
-                disabled: (null == l ? void 0 : l.length) > 0,
-                strDescToolTip:
-                  (null == l ? void 0 : l.length) > 0
-                    ? "This start is locked to prevent the claim from overlapping and most importantly, the end of one needs to match the beginning of the next"
-                    : null,
-              }),
-              d.createElement(z.A, {
-                strDescription: "Claim End Date and Time",
-                nEarliestTime: s,
-                nLatestTime: m,
-                fnGetTimeToUpdate: () => v,
-                fnSetTimeToUpdate: E,
-                fnIsValidDateTime: () => h < v,
-                bShowTimeZone: !0,
-              }),
-            )
-          : d.createElement(
-              w.uH,
-              { strTitle: "Create Claim Date Range" },
-              d.createElement(Z.V, {
-                string: (0, _.Xx)("#Loading"),
-                size: "medium",
-                position: "center",
-              }),
-            );
+                d.createElement(u.II, {
+                  type: "number",
+                  label: "AppID",
+                  value: p,
+                  onChange: (e) => g(Number.parseInt(e.currentTarget.value)),
+                }),
+                d.createElement(
+                  "p",
+                  null,
+                  "The date range is bounded by the start and end of the underlying event.",
+                ),
+                d.createElement(z.A, {
+                  strDescription: "Claim Start Date and Time",
+                  nEarliestTime: s,
+                  nLatestTime: m,
+                  fnGetTimeToUpdate: () => h,
+                  fnSetTimeToUpdate: S,
+                  fnIsValidDateTime: () => h < v,
+                  bShowTimeZone: !0,
+                  disabled: (null == l ? void 0 : l.length) > 0,
+                  strDescToolTip:
+                    (null == l ? void 0 : l.length) > 0
+                      ? "This start is locked to prevent the claim from overlapping and most importantly, the end of one needs to match the beginning of the next"
+                      : null,
+                }),
+                d.createElement(z.A, {
+                  strDescription: "Claim End Date and Time",
+                  nEarliestTime: s,
+                  nLatestTime: m,
+                  fnGetTimeToUpdate: () => v,
+                  fnSetTimeToUpdate: E,
+                  fnIsValidDateTime: () => h < v,
+                  bShowTimeZone: !0,
+                }),
+              )
+            : d.createElement(
+                w.uH,
+                { strTitle: "Create Claim Date Range" },
+                d.createElement(Z.V, {
+                  string: (0, _.Xx)("#Loading"),
+                  size: "medium",
+                  position: "center",
+                }),
+              );
       }
       function Gt(e) {
         var t;
@@ -31528,8 +31544,8 @@
                 ("bundle" === e.type
                   ? a.add(Number(e.id))
                   : "sub" === e.type
-                  ? n.add(Number(e.id))
-                  : t.add(Number(e.id)));
+                    ? n.add(Number(e.id))
+                    : t.add(Number(e.id)));
             }),
             Qt.Z.Get().QueueMultipleAppRequests(Array.from(t), Wt.bk),
             Qt.Z.Get().QueueMultiplePackageRequests(Array.from(n), Wt.bk),
@@ -32019,19 +32035,19 @@
               i,
             )
           : "event_schedule" === a.section_type
-          ? d.createElement(
-              "div",
-              null,
-              (0, _.kb)(
-                "#EventEditor_SaleEventSchedule_MinView",
-                a.event_schedule_categories
-                  ? a.event_schedule_categories.length
-                  : (0, _.Xx)("#Dialog_Off"),
-              ),
-              i && " - ",
-              i,
-            )
-          : i;
+            ? d.createElement(
+                "div",
+                null,
+                (0, _.kb)(
+                  "#EventEditor_SaleEventSchedule_MinView",
+                  a.event_schedule_categories
+                    ? a.event_schedule_categories.length
+                    : (0, _.Xx)("#Dialog_Off"),
+                ),
+                i && " - ",
+                i,
+              )
+            : i;
       };
       function Tn(e) {
         const { saleSection: t, editModel: a, index: n } = e,
@@ -33737,8 +33753,8 @@
                 "bundle" == t.capsule.type
                   ? n.push(t.capsule.id)
                   : "sub" == t.capsule.type
-                  ? a.push(t.capsule.id)
-                  : e.push(t.capsule.id);
+                    ? a.push(t.capsule.id)
+                    : e.push(t.capsule.id);
               }),
                 f.Z.Get()
                   .HintLoadStoreItems(null, e, a, n, null, null, null, Z.j4)

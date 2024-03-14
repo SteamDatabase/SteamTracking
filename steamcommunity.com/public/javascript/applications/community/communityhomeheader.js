@@ -80,8 +80,8 @@
         "string" == typeof e
           ? (n = e)
           : "location" in e
-          ? (n = e.location.search)
-          : "search" in e && (n = e.search);
+            ? (n = e.location.search)
+            : "search" in e && (n = e.search);
         const a = new URLSearchParams(n.substring(1));
         if (a.has(t)) {
           const e = a.getAll(t);
@@ -383,9 +383,7 @@
             const i = t ? t === e.id : 0 === a,
               m = e.id ? `${A}=${e.id}` : "",
               u = n ? `${I}=${n}` : "",
-              d = `${l.De.COMMUNITY_BASE_URL}${u || m ? "?" : ""}${u}${
-                m ? "&" : ""
-              }${m}`;
+              d = `${l.De.COMMUNITY_BASE_URL}${u || m ? "?" : ""}${u}${m ? "&" : ""}${m}`;
             return r.createElement(
               s.IS,
               {
@@ -419,9 +417,7 @@
             const i = n ? n === e.id : 0 === a,
               m = t ? `${A}=${t}` : "",
               u = e.id ? `${I}=${e.id}` : "",
-              d = `${l.De.COMMUNITY_BASE_URL}${u || m ? "?" : ""}${u}${
-                m ? "&" : ""
-              }${m}`;
+              d = `${l.De.COMMUNITY_BASE_URL}${u || m ? "?" : ""}${u}${m ? "&" : ""}${m}`;
             return r.createElement(
               s.IS,
               {

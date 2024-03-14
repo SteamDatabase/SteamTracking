@@ -259,9 +259,7 @@
                       ? void 0
                       : n.userinfo)
                   )
-                    throw `Load single avatar/persona failed ${
-                      (0, m.l)(o).strErrorMsg
-                    }`;
+                    throw `Load single avatar/persona failed ${(0, m.l)(o).strErrorMsg}`;
                   return [o.data.userinfo];
                 }
                 {
@@ -280,9 +278,7 @@
                       ? void 0
                       : o.userinfos)
                   )
-                    throw `Load single avatar/persona failed ${
-                      (0, m.l)(n).strErrorMsg
-                    }`;
+                    throw `Load single avatar/persona failed ${(0, m.l)(n).strErrorMsg}`;
                   const i = new Map();
                   return (
                     n.data.userinfos.forEach((e) =>
@@ -431,8 +427,8 @@
           ? u.is_completed
             ? a.createElement(_, { familyGroupID: t })
             : u.requester_steamid === o
-            ? a.createElement(R, { familyGroupID: t })
-            : a.createElement(D, { request: u })
+              ? a.createElement(R, { familyGroupID: t })
+              : a.createElement(D, { request: u })
           : a.createElement(P, { familyGroupID: t });
       }
       function h(e) {

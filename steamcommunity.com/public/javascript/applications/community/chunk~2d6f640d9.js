@@ -652,8 +652,8 @@
             this.ContainsVideo()
               ? e.push("Video")
               : this.ContainsAudio()
-              ? e.push("Audio")
-              : this.ContainsGame() && e.push("Game"),
+                ? e.push("Audio")
+                : this.ContainsGame() && e.push("Game"),
             e.join(" & ") +
               ":" +
               this.m_callbacks.GetCurrentPlayTime().toFixed(3).toString()
@@ -685,11 +685,7 @@
           if (
             (this.ContainsVideo() &&
               (0, g.hB)(
-                `${this.GetDebugName()} changing representation to ${
-                  e.nHeight || 0
-                }p at ${Math.ceil(e.nBandwidth / 1e3)}KB for segment ${
-                  this.m_nNextSegment
-                }`,
+                `${this.GetDebugName()} changing representation to ${e.nHeight || 0}p at ${Math.ceil(e.nBandwidth / 1e3)}KB for segment ${this.m_nNextSegment}`,
               ),
             (this.m_representation = e),
             (this.m_bNeedInitSegment = !this.ContainsGame()),
@@ -897,22 +893,18 @@
                   ),
                   u - a > 9e3
                     ? ((0, g.hB)(
-                        `${this.GetDebugName()} HTTP download failed.. stopping loader: ${
-                          u - a
-                        }ms`,
+                        `${this.GetDebugName()} HTTP download failed.. stopping loader: ${u - a}ms`,
                       ),
                       void this.DownloadFailed())
                     : 410 == p
-                    ? ((this.m_nNumConsecutiveDownloadGones += 1),
-                      (0, g.hB)(
-                        `${this.GetDebugName()} HTTP download gone.. informing the player: ${
-                          u - a
-                        }ms`,
-                      ),
-                      void this.DownloadGone())
-                    : void this.m_schNextDownload.Schedule(500, () =>
-                        this.DownloadSegment(e, t, i, s, a),
-                      ));
+                      ? ((this.m_nNumConsecutiveDownloadGones += 1),
+                        (0, g.hB)(
+                          `${this.GetDebugName()} HTTP download gone.. informing the player: ${u - a}ms`,
+                        ),
+                        void this.DownloadGone())
+                      : void this.m_schNextDownload.Schedule(500, () =>
+                          this.DownloadSegment(e, t, i, s, a),
+                        ));
             if (
               ((this.m_nNumConsecutiveDownloadGones = 0),
               t && (this.m_bNeedInitSegment = !1),
@@ -1042,9 +1034,7 @@
           if (
             (0 == t && 0 == i && (n = !0),
             (0, g.hB)(
-              `${this.GetDebugName()} making an ${
-                n ? "unbuffered" : "buffered"
-              } seek to ${e}`,
+              `${this.GetDebugName()} making an ${n ? "unbuffered" : "buffered"} seek to ${e}`,
             ),
             !this.m_bSeekInProgress && !n && !this.m_bNeedInitSegment)
           )
@@ -2580,9 +2570,8 @@
               "DASHStats: Did not find any audio or video loaders",
             );
           (this.m_allTimeSnapshot.m_nStallEvents += 1),
-            (this.m_rgSnapShots[
-              this.m_rgSnapShots.length - 1
-            ].m_nStallEvents += 1);
+            (this.m_rgSnapShots[this.m_rgSnapShots.length - 1].m_nStallEvents +=
+              1);
           let n = new f();
           this.GatherCommonStats(
             n,
@@ -2972,12 +2961,12 @@
         e > d
           ? ((h = e / d), (l = "Tera"))
           : e > m
-          ? ((h = e / m), (l = "Giga"))
-          : e > o
-          ? ((h = e / o), (l = "Mega"))
-          : e > a
-          ? ((h = e / a), (l = "Kilo"))
-          : (h = e);
+            ? ((h = e / m), (l = "Giga"))
+            : e > o
+              ? ((h = e / o), (l = "Mega"))
+              : e > a
+                ? ((h = e / a), (l = "Kilo"))
+                : (h = e);
         const u =
           "#" +
           l +

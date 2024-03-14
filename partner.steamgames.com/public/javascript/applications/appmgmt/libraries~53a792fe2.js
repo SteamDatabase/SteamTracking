@@ -163,17 +163,17 @@
           t._state === k
             ? I(e, t._result)
             : t._state === S
-            ? B(e, t._result)
-            : j(
-                t,
-                void 0,
-                function (t) {
-                  return O(e, t);
-                },
-                function (t) {
-                  return B(e, t);
-                },
-              );
+              ? B(e, t._result)
+              : j(
+                  t,
+                  void 0,
+                  function (t) {
+                    return O(e, t);
+                  },
+                  function (t) {
+                    return B(e, t);
+                  },
+                );
         }
         function F(e, o, i) {
           o.constructor === e.constructor &&
@@ -181,10 +181,10 @@
           o.constructor.resolve === M
             ? H(e, o)
             : void 0 === i
-            ? I(e, o)
-            : t(i)
-            ? A(e, o, i)
-            : I(e, o);
+              ? I(e, o)
+              : t(i)
+                ? A(e, o, i)
+                : I(e, o);
         }
         function O(t, o) {
           if (t === o) B(t, _());
@@ -249,10 +249,10 @@
             (r && l
               ? O(o, s)
               : !1 === l
-              ? B(o, a)
-              : e === k
-              ? I(o, s)
-              : e === S && B(o, s));
+                ? B(o, a)
+                : e === k
+                  ? I(o, s)
+                  : e === S && B(o, s));
         }
         function G(e, t) {
           try {
@@ -465,10 +465,10 @@ License: MIT
               "undefined" != typeof self
                 ? self
                 : "undefined" != typeof window
-                ? window
-                : void 0 !== t
-                ? t
-                : {},
+                  ? window
+                  : void 0 !== t
+                    ? t
+                    : {},
             o = !t.document && !!t.postMessage,
             i = t.IS_PAPA_WORKER || !1,
             n = {},
@@ -526,9 +526,10 @@ License: MIT
                       })(o)),
                       (p = i.download ? new u(i) : new d(i)))
                     : !0 === o.readable && E(o.read) && E(o.on)
-                    ? (p = new h(i))
-                    : ((t.File && o instanceof File) || o instanceof Object) &&
-                      (p = new c(i)),
+                      ? (p = new h(i))
+                      : ((t.File && o instanceof File) ||
+                          o instanceof Object) &&
+                        (p = new c(i)),
                   p.stream(o)
                 );
               },
@@ -592,8 +593,8 @@ License: MIT
                         (e.fields = Array.isArray(e.data[0])
                           ? e.fields
                           : "object" == typeof e.data[0]
-                          ? Object.keys(e.data[0])
-                          : []),
+                            ? Object.keys(e.data[0])
+                            : []),
                       Array.isArray(e.data[0]) ||
                         "object" == typeof e.data[0] ||
                         (e.data = [e.data])),
@@ -1166,10 +1167,10 @@ License: MIT
                       })(o)
                         ? parseFloat(o)
                         : l.test(o)
-                        ? new Date(o)
-                        : "" === o
-                        ? null
-                        : o))
+                          ? new Date(o)
+                          : "" === o
+                            ? null
+                            : o))
                   : o
               );
               var i;
@@ -2279,8 +2280,8 @@ License: MIT
                             2 & r[0]
                               ? i.return
                               : r[0]
-                              ? i.throw || ((n = i.return) && n.call(i), 0)
-                              : i.next) &&
+                                ? i.throw || ((n = i.return) && n.call(i), 0)
+                                : i.next) &&
                           !(n = n.call(i, r[1])).done)
                       )
                         return n;
@@ -2597,8 +2598,8 @@ License: MIT
                             2 & r[0]
                               ? i.return
                               : r[0]
-                              ? i.throw || ((n = i.return) && n.call(i), 0)
-                              : i.next) &&
+                                ? i.throw || ((n = i.return) && n.call(i), 0)
+                                : i.next) &&
                           !(n = n.call(i, r[1])).done)
                       )
                         return n;
@@ -2889,8 +2890,8 @@ License: MIT
                             2 & r[0]
                               ? i.return
                               : r[0]
-                              ? i.throw || ((n = i.return) && n.call(i), 0)
-                              : i.next) &&
+                                ? i.throw || ((n = i.return) && n.call(i), 0)
+                                : i.next) &&
                           !(n = n.call(i, r[1])).done)
                       )
                         return n;
@@ -3065,16 +3066,16 @@ License: MIT
                   0 === e.data.length)
                 ? null
                 : !t ||
-                  !(e.data || e.columns | e.options) ||
-                  (p.isSameArray(t.data, e.data) &&
-                    p.isSameArray(t.columns, e.columns) &&
-                    p.isSameObject(t.options, e.options))
-                ? {}
-                : r(r({}, t), {
-                    data: l([], e.data),
-                    columns: l([], e.columns),
-                    options: r({}, e.options),
-                  });
+                    !(e.data || e.columns | e.options) ||
+                    (p.isSameArray(t.data, e.data) &&
+                      p.isSameArray(t.columns, e.columns) &&
+                      p.isSameObject(t.options, e.options))
+                  ? {}
+                  : r(r({}, t), {
+                      data: l([], e.data),
+                      columns: l([], e.columns),
+                      options: r({}, e.options),
+                    });
             }),
             (t.prototype.componentDidUpdate = function (e, t) {
               p.isSameArray(t.data, this.state.data) ||
@@ -3484,8 +3485,8 @@ License: MIT
             e == i
             ? "[Circular]"
             : t >= 29
-            ? "[Unknown]"
-            : (++t, i);
+              ? "[Unknown]"
+              : (++t, i);
         };
       }
       (t.clone = function (e) {
@@ -5032,15 +5033,15 @@ License: MIT
           return "object" != (void 0 === e ? "undefined" : r(e))
             ? this.columnsByField[e] || !1
             : e instanceof l
-            ? e
-            : e instanceof a
-            ? e._getSelf() || !1
-            : ("undefined" != typeof HTMLElement &&
-                e instanceof HTMLElement &&
-                this.columns.find(function (t) {
-                  return t.element === e;
-                })) ||
-              !1;
+              ? e
+              : e instanceof a
+                ? e._getSelf() || !1
+                : ("undefined" != typeof HTMLElement &&
+                    e instanceof HTMLElement &&
+                    this.columns.find(function (t) {
+                      return t.element === e;
+                    })) ||
+                  !1;
         }),
         (s.prototype.getColumnByField = function (e) {
           return this.columnsByField[e];
@@ -6514,15 +6515,15 @@ License: MIT
                 }) ||
                   !1)
             : e instanceof h
-            ? e
-            : e instanceof d
-            ? e._getSelf() || !1
-            : ("undefined" != typeof HTMLElement &&
-                e instanceof HTMLElement &&
-                t.rows.find(function (t) {
-                  return t.getElement() === e;
-                })) ||
-              !1;
+              ? e
+              : e instanceof d
+                ? e._getSelf() || !1
+                : ("undefined" != typeof HTMLElement &&
+                    e instanceof HTMLElement &&
+                    t.rows.find(function (t) {
+                      return t.getElement() === e;
+                    })) ||
+                  !1;
         }),
         (u.prototype.getRowFromDataObject = function (e) {
           return (
@@ -6695,10 +6696,10 @@ License: MIT
             this.table.options.groupBy && this.table.modExists("groupRows")
               ? this.table.modules.groupRows.updateGroupRows(!0)
               : this.table.options.pagination && this.table.modExists("page")
-              ? this.refreshActiveData(!1, !1, !0)
-              : this.table.options.pagination &&
-                this.table.modExists("page") &&
-                this.refreshActiveData("page");
+                ? this.refreshActiveData(!1, !1, !0)
+                : this.table.options.pagination &&
+                  this.table.modExists("page") &&
+                  this.refreshActiveData("page");
         }),
         (u.prototype.addRow = function (e, t, o, i) {
           var n = this.addRowActual(e, t, o, i);
@@ -6729,8 +6730,8 @@ License: MIT
               i.table.options.groupBy && i.table.modExists("groupRows")
                 ? i.table.modules.groupRows.updateGroupRows(!0)
                 : i.table.options.pagination && i.table.modExists("page")
-                ? i.refreshActiveData(!1, !1, !0)
-                : i.reRenderInPosition(),
+                  ? i.refreshActiveData(!1, !1, !0)
+                  : i.reRenderInPosition(),
               i.table.modExists("columnCalcs") &&
                 i.table.modules.columnCalcs.recalc(
                   i.table.rowManager.activeRows,
@@ -6794,16 +6795,16 @@ License: MIT
                 n > -1 && this.activeRows.splice(a ? n : n + 1, 0, s),
                 this.rows.splice(a ? l : l + 1, 0, s))
               : a
-              ? (this.displayRowIterator(function (e) {
-                  e.unshift(s);
-                }),
-                this.activeRows.unshift(s),
-                this.rows.unshift(s))
-              : (this.displayRowIterator(function (e) {
-                  e.push(s);
-                }),
-                this.activeRows.push(s),
-                this.rows.push(s)),
+                ? (this.displayRowIterator(function (e) {
+                    e.unshift(s);
+                  }),
+                  this.activeRows.unshift(s),
+                  this.rows.unshift(s))
+                : (this.displayRowIterator(function (e) {
+                    e.push(s);
+                  }),
+                  this.activeRows.push(s),
+                  this.rows.push(s)),
             this.setActiveRows(this.activeRows),
             this.table.options.rowAdded.call(this.table, s.getComponent()),
             this.table.options.dataChanged &&
@@ -6959,11 +6960,11 @@ License: MIT
                   .then(function () {})
                   .catch(function () {}))
               : t.ajaxProgressiveLoad
-              ? e.modules.ajax
-                  .loadData()
-                  .then(function () {})
-                  .catch(function () {})
-              : this._genRemoteRequest()
+                ? e.modules.ajax
+                    .loadData()
+                    .then(function () {})
+                    .catch(function () {})
+                : this._genRemoteRequest()
             : this.refreshActiveData("filter"),
             this.scrollHorizontal(o);
         }),
@@ -6980,11 +6981,11 @@ License: MIT
                   .then(function () {})
                   .catch(function () {}))
               : o.ajaxProgressiveLoad
-              ? t.modules.ajax
-                  .loadData()
-                  .then(function () {})
-                  .catch(function () {})
-              : this._genRemoteRequest()
+                ? t.modules.ajax
+                    .loadData()
+                    .then(function () {})
+                    .catch(function () {})
+                : this._genRemoteRequest()
             : this.refreshActiveData(e ? "filter" : "sort"),
             this.scrollHorizontal(i);
         }),
@@ -7033,8 +7034,8 @@ License: MIT
                 t
                   ? (t = !1)
                   : r.modExists("filter")
-                  ? n.setActiveRows(r.modules.filter.filter(n.rows))
-                  : n.setActiveRows(n.rows.slice(0));
+                    ? n.setActiveRows(r.modules.filter.filter(n.rows))
+                    : n.setActiveRows(n.rows.slice(0));
               case "sort":
                 t
                   ? (t = !1)
@@ -7849,8 +7850,8 @@ License: MIT
             e > 0.8 * this.holderEl.clientWidth
               ? this.reinitialize()
               : e > 0
-              ? (this.addColRight(), this.removeColLeft())
-              : (this.addColLeft(), this.removeColRight());
+                ? (this.addColRight(), this.removeColLeft())
+                : (this.addColLeft(), this.removeColRight());
         }),
         (c.prototype.colPositionAdjust = function (e, t, o) {
           for (var i = e; i < t; i++) {
@@ -8290,8 +8291,8 @@ License: MIT
             (this.height = e
               ? Math.max(t, o)
               : this.manualHeight
-              ? this.height
-              : Math.max(t, o)),
+                ? this.height
+                : Math.max(t, o)),
             (this.heightStyled = this.height ? this.height + "px" : ""),
             (this.outerHeight = this.element.offsetHeight);
         }),
@@ -9431,28 +9432,31 @@ License: MIT
             t in e
               ? (this.options[t] = e[t])
               : Array.isArray(this.defaultOptions[t])
-              ? (this.options[t] = Object.assign([], this.defaultOptions[t]))
-              : "object" === r(this.defaultOptions[t]) &&
-                null !== this.defaultOptions[t]
-              ? (this.options[t] = Object.assign({}, this.defaultOptions[t]))
-              : (this.options[t] = this.defaultOptions[t]);
+                ? (this.options[t] = Object.assign([], this.defaultOptions[t]))
+                : "object" === r(this.defaultOptions[t]) &&
+                    null !== this.defaultOptions[t]
+                  ? (this.options[t] = Object.assign(
+                      {},
+                      this.defaultOptions[t],
+                    ))
+                  : (this.options[t] = this.defaultOptions[t]);
         }),
         (g.prototype.initializeElement = function (e) {
           return "undefined" != typeof HTMLElement && e instanceof HTMLElement
             ? ((this.element = e), !0)
             : "string" == typeof e
-            ? ((this.element = document.querySelector(e)),
-              !!this.element ||
-                (console.error(
-                  "Tabulator Creation Error - no element found matching selector: ",
+              ? ((this.element = document.querySelector(e)),
+                !!this.element ||
+                  (console.error(
+                    "Tabulator Creation Error - no element found matching selector: ",
+                    e,
+                  ),
+                  !1))
+              : (console.error(
+                  "Tabulator Creation Error - Invalid element provided:",
                   e,
                 ),
-                !1))
-            : (console.error(
-                "Tabulator Creation Error - Invalid element provided:",
-                e,
-              ),
-              !1);
+                !1);
         }),
         (g.prototype.rtlCheck = function () {
           var e = window.getComputedStyle(this.element);
@@ -9719,12 +9723,12 @@ License: MIT
             e.options.data.length
               ? e.rowManager.setData(e.options.data)
               : (e.options.ajaxURL || e.options.ajaxURLGenerator) &&
-                e.modExists("ajax")
-              ? e.modules.ajax
-                  .loadData(!1, !0)
-                  .then(function () {})
-                  .catch(function () {})
-              : e.rowManager.setData(e.options.data, !1, !0);
+                  e.modExists("ajax")
+                ? e.modules.ajax
+                    .loadData(!1, !0)
+                    .then(function () {})
+                    .catch(function () {})
+                : e.rowManager.setData(e.options.data, !1, !0);
         }),
         (g.prototype.destroy = function () {
           var e = this.element;
@@ -9755,10 +9759,10 @@ License: MIT
           e.indexOf("Trident") > -1
             ? ((this.browser = "ie"), (this.browserSlow = !0))
             : e.indexOf("Edge") > -1
-            ? ((this.browser = "edge"), (this.browserSlow = !0))
-            : e.indexOf("Firefox") > -1
-            ? ((this.browser = "firefox"), (this.browserSlow = !1))
-            : ((this.browser = "other"), (this.browserSlow = !1)),
+              ? ((this.browser = "edge"), (this.browserSlow = !0))
+              : e.indexOf("Firefox") > -1
+                ? ((this.browser = "firefox"), (this.browserSlow = !1))
+                : ((this.browser = "other"), (this.browserSlow = !1)),
             (this.browserMobile =
               /(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino|android|ipad|playbook|silk/i.test(
                 e,
@@ -9823,21 +9827,21 @@ License: MIT
             ? e
               ? r.rowManager.setData(e, i, n)
               : r.modExists("ajax") &&
-                (r.modules.ajax.getUrl || r.options.ajaxURLGenerator)
-              ? "remote" == r.options.pagination && r.modExists("page", !0)
-                ? (r.modules.page.reset(!0, !0), r.modules.page.setPage(1))
-                : r.modules.ajax.loadData(i, n)
-              : r.rowManager.setData([], i, n)
+                  (r.modules.ajax.getUrl || r.options.ajaxURLGenerator)
+                ? "remote" == r.options.pagination && r.modExists("page", !0)
+                  ? (r.modules.page.reset(!0, !0), r.modules.page.setPage(1))
+                  : r.modules.ajax.loadData(i, n)
+                : r.rowManager.setData([], i, n)
             : 0 == e.indexOf("{") || 0 == e.indexOf("[")
-            ? r.rowManager.setData(JSON.parse(e), i, n)
-            : r.modExists("ajax", !0)
-            ? (t && r.modules.ajax.setParams(t),
-              o && r.modules.ajax.setConfig(o),
-              r.modules.ajax.setUrl(e),
-              "remote" == r.options.pagination && r.modExists("page", !0)
-                ? (r.modules.page.reset(!0, !0), r.modules.page.setPage(1))
-                : r.modules.ajax.loadData(i, n))
-            : void 0;
+              ? r.rowManager.setData(JSON.parse(e), i, n)
+              : r.modExists("ajax", !0)
+                ? (t && r.modules.ajax.setParams(t),
+                  o && r.modules.ajax.setConfig(o),
+                  r.modules.ajax.setUrl(e),
+                  "remote" == r.options.pagination && r.modExists("page", !0)
+                    ? (r.modules.page.reset(!0, !0), r.modules.page.setPage(1))
+                    : r.modules.ajax.loadData(i, n))
+                : void 0;
         }),
         (g.prototype.clearData = function () {
           this.modExists("ajax") && this.modules.ajax.blockActiveRequest(),
@@ -10707,11 +10711,14 @@ License: MIT
               e instanceof g
                 ? (i = g.prototype.comms.matchElement(e)) && n.push(i)
                 : Array.isArray(e)
-                ? e.forEach(function (e) {
-                    n = n.concat(g.prototype.comms.lookupTable(e));
-                  })
-                : t ||
-                  console.warn("Table Connection Error - Invalid Selector", e);
+                  ? e.forEach(function (e) {
+                      n = n.concat(g.prototype.comms.lookupTable(e));
+                    })
+                  : t ||
+                    console.warn(
+                      "Table Connection Error - Invalid Selector",
+                      e,
+                    );
             return n;
           },
           matchElement: function (e) {
@@ -10840,16 +10847,16 @@ License: MIT
                   e.column.minWidth >= s
                     ? n.push(e)
                     : e.column.maxWidth && e.column.maxWidth < s
-                    ? ((e.width = e.column.maxWidth),
-                      (t -= e.column.maxWidth),
-                      (u -= i
-                        ? e.column.definition.widthShrink || 1
-                        : e.column.definition.widthGrow || 1) &&
-                        (o = Math.floor(t / u)))
-                    : (m.push(e),
-                      (p += i
-                        ? e.column.definition.widthShrink || 1
-                        : e.column.definition.widthGrow || 1));
+                      ? ((e.width = e.column.maxWidth),
+                        (t -= e.column.maxWidth),
+                        (u -= i
+                          ? e.column.definition.widthShrink || 1
+                          : e.column.definition.widthGrow || 1) &&
+                          (o = Math.floor(t / u)))
+                      : (m.push(e),
+                        (p += i
+                          ? e.column.definition.widthShrink || 1
+                          : e.column.definition.widthGrow || 1));
                 }),
                 n.length
                   ? (n.forEach(function (e) {
@@ -11171,14 +11178,14 @@ License: MIT
                   "Progressive Load Error - Pagination and progressive load cannot be used at the same time",
                 ))
               : this.table.modExists("page")
-              ? ((this.progressiveLoad =
-                  this.table.options.ajaxProgressiveLoad),
-                this.table.modules.page.initializeProgressive(
-                  this.progressiveLoad,
-                ))
-              : console.error(
-                  "Pagination plugin is required for progressive ajax loading",
-                ));
+                ? ((this.progressiveLoad =
+                    this.table.options.ajaxProgressiveLoad),
+                  this.table.modules.page.initializeProgressive(
+                    this.progressiveLoad,
+                  ))
+                : console.error(
+                    "Pagination plugin is required for progressive ajax loading",
+                  ));
       }),
         (E.prototype.createLoaderElement = function () {
           var e = document.createElement("div");
@@ -11898,12 +11905,13 @@ License: MIT
                 window.clipboardData && window.clipboardData.setData
                   ? window.clipboardData.setData("Text", o)
                   : t.clipboardData && t.clipboardData.setData
-                  ? (t.clipboardData.setData("text/plain", o),
-                    i && t.clipboardData.setData("text/html", i))
-                  : t.originalEvent &&
-                    t.originalEvent.clipboardData.setData &&
-                    (t.originalEvent.clipboardData.setData("text/plain", o),
-                    i && t.originalEvent.clipboardData.setData("text/html", i)),
+                    ? (t.clipboardData.setData("text/plain", o),
+                      i && t.clipboardData.setData("text/html", i))
+                    : t.originalEvent &&
+                      t.originalEvent.clipboardData.setData &&
+                      (t.originalEvent.clipboardData.setData("text/plain", o),
+                      i &&
+                        t.originalEvent.clipboardData.setData("text/html", i)),
                   e.table.options.clipboardCopied.call(e.table, o, i),
                   e.reset();
               }
@@ -12039,10 +12047,10 @@ License: MIT
             window.clipboardData && window.clipboardData.getData
               ? (t = window.clipboardData.getData("Text"))
               : e.clipboardData && e.clipboardData.getData
-              ? (t = e.clipboardData.getData("text/plain"))
-              : e.originalEvent &&
-                e.originalEvent.clipboardData.getData &&
-                (t = e.originalEvent.clipboardData.getData("text/plain")),
+                ? (t = e.clipboardData.getData("text/plain"))
+                : e.originalEvent &&
+                  e.originalEvent.clipboardData.getData &&
+                  (t = e.originalEvent.clipboardData.getData("text/plain")),
             t
           );
         }),
@@ -12130,10 +12138,10 @@ License: MIT
               ? ((this.branchEl = document.createElement("div")),
                 this.branchEl.classList.add("tabulator-data-tree-branch"))
               : "string" == typeof o.dataTreeBranchElement
-              ? (((e = document.createElement("div")).innerHTML =
-                  o.dataTreeBranchElement),
-                (this.branchEl = e.firstChild))
-              : (this.branchEl = o.dataTreeBranchElement)),
+                ? (((e = document.createElement("div")).innerHTML =
+                    o.dataTreeBranchElement),
+                  (this.branchEl = e.firstChild))
+                : (this.branchEl = o.dataTreeBranchElement)),
           o.dataTreeCollapseElement
             ? "string" == typeof o.dataTreeCollapseElement
               ? (((e = document.createElement("div")).innerHTML =
@@ -12239,22 +12247,22 @@ License: MIT
                         o.index * this.indent +
                         "px"))
                 : this.table.rtl
-                ? (t.style.paddingRight =
-                    parseInt(
-                      window
-                        .getComputedStyle(t, null)
-                        .getPropertyValue("padding-right"),
-                    ) +
-                    o.index * this.indent +
-                    "px")
-                : (t.style.paddingLeft =
-                    parseInt(
-                      window
-                        .getComputedStyle(t, null)
-                        .getPropertyValue("padding-left"),
-                    ) +
-                    o.index * this.indent +
-                    "px"));
+                  ? (t.style.paddingRight =
+                      parseInt(
+                        window
+                          .getComputedStyle(t, null)
+                          .getPropertyValue("padding-right"),
+                      ) +
+                      o.index * this.indent +
+                      "px")
+                  : (t.style.paddingLeft =
+                      parseInt(
+                        window
+                          .getComputedStyle(t, null)
+                          .getPropertyValue("padding-left"),
+                      ) +
+                      o.index * this.indent +
+                      "px"));
         }),
         (M.prototype.generateControlElement = function (e, t) {
           var o = this,
@@ -12436,14 +12444,14 @@ License: MIT
               ? e instanceof h
                 ? (i = e.data)
                 : e instanceof d
-                ? (i = e._getSelf().data)
-                : "undefined" != typeof HTMLElement &&
-                  e instanceof HTMLElement &&
-                  t.modules.dataTree &&
-                  (i = t.modules.dataTree.children.find(function (t) {
-                    return t instanceof h && t.element === e;
-                  })) &&
-                  (i = i.data)
+                  ? (i = e._getSelf().data)
+                  : "undefined" != typeof HTMLElement &&
+                    e instanceof HTMLElement &&
+                    t.modules.dataTree &&
+                    (i = t.modules.dataTree.children.find(function (t) {
+                      return t instanceof h && t.element === e;
+                    })) &&
+                    (i = i.data)
               : (i =
                   null != e &&
                   t.data[this.field].find(function (t) {
@@ -12495,8 +12503,11 @@ License: MIT
           ("function" == typeof e
             ? (s = e)
             : r.downloaders[e]
-            ? (s = r.downloaders[e])
-            : console.warn("Download Error - No such download type found: ", e),
+              ? (s = r.downloaders[e])
+              : console.warn(
+                  "Download Error - No such download type found: ",
+                  e,
+                ),
           s)
         ) {
           var a = this.generateExportList(i);
@@ -12543,13 +12554,13 @@ License: MIT
             (n
               ? window.open(window.URL.createObjectURL(s))
               : navigator.msSaveOrOpenBlob
-              ? navigator.msSaveOrOpenBlob(s, i)
-              : (r.setAttribute("href", window.URL.createObjectURL(s)),
-                r.setAttribute("download", i),
-                (r.style.display = "none"),
-                document.body.appendChild(r),
-                r.click(),
-                document.body.removeChild(r)),
+                ? navigator.msSaveOrOpenBlob(s, i)
+                : (r.setAttribute("href", window.URL.createObjectURL(s)),
+                  r.setAttribute("download", i),
+                  (r.style.display = "none"),
+                  document.body.appendChild(r),
+                  r.click(),
+                  document.body.removeChild(r)),
             this.table.options.downloadComplete &&
               this.table.options.downloadComplete());
         }),
@@ -13376,8 +13387,8 @@ License: MIT
                     ? u
                     : [u]
                   : void 0 !== n.defaultValue
-                  ? n.defaultValue
-                  : [],
+                    ? n.defaultValue
+                    : [],
               h = document.createElement("input"),
               p = document.createElement("div"),
               m = n.multiselect,
@@ -13675,8 +13686,8 @@ License: MIT
                       !0 === n.values
                         ? M(R(), d)
                         : "string" == typeof n.values
-                        ? M(R(n.values), d)
-                        : M(n.values || [], d);
+                          ? M(R(n.values), d)
+                          : M(n.values || [], d);
                       var e = g.prototype.helpers.elOffset(l);
                       (p.style.minWidth = l.offsetWidth + "px"),
                         (p.style.top = e.top + l.offsetHeight + "px"),
@@ -13713,8 +13724,8 @@ License: MIT
                 void 0 !== u || null === u
                   ? u
                   : void 0 !== n.defaultValue
-                  ? n.defaultValue
-                  : "",
+                    ? n.defaultValue
+                    : "",
               h = document.createElement("input"),
               p = document.createElement("div"),
               m = [],
@@ -13887,8 +13898,8 @@ License: MIT
                     ? ((u = f.value), (h.value = f.title), o(f.value))
                     : i()
                   : n.freetext || (n.allowEmpty && "" === h.value)
-                  ? ((u = h.value), o(h.value))
-                  : i();
+                    ? ((u = h.value), o(h.value))
+                    : i();
             }
             function T(e, t) {
               f && f.element && f.element.classList.remove("active"),
@@ -14241,8 +14252,8 @@ License: MIT
                     ? u
                     : a.checked
                   : a.checked && !c
-                  ? ((a.checked = !1), (a.indeterminate = !0), (c = !0), u)
-                  : ((c = !1), a.checked)
+                    ? ((a.checked = !1), (a.indeterminate = !0), (c = !0), u)
+                    : ((c = !1), a.checked)
                 : a.checked;
             }
             return (
@@ -14672,13 +14683,13 @@ License: MIT
                   e.component,
                 ))
               : !1 === t.groupHeader
-              ? (r.value = r.value)
-              : (r.value = e.component._group.generator(
-                  r.value,
-                  e.component._group.getRowCount(),
-                  e.component._group.getData(),
-                  e.component,
-                )),
+                ? (r.value = r.value)
+                : (r.value = e.component._group.generator(
+                    r.value,
+                    e.component._group.getRowCount(),
+                    e.component._group.getData(),
+                    e.component,
+                  )),
             (n.colSpan = r.width),
             (n.innerHTML = r.value),
             i.classList.add("tabulator-print-table-group"),
@@ -15017,15 +15028,16 @@ License: MIT
                 e.modules.edit && e.modules.edit.editor
                   ? (n = e.modules.edit.editor)
                   : e.definition.formatter &&
-                    h.table.modules.edit.editors[e.definition.formatter]
-                  ? ((n = h.table.modules.edit.editors[e.definition.formatter]),
-                    ("tick" !== e.definition.formatter &&
-                      "tickCross" !== e.definition.formatter) ||
-                      e.definition.headerFilterEmptyCheck ||
-                      (e.modules.filter.emptyFunc = function (e) {
-                        return !0 !== e && !1 !== e;
-                      }))
-                  : (n = h.table.modules.edit.editors.input);
+                      h.table.modules.edit.editors[e.definition.formatter]
+                    ? ((n =
+                        h.table.modules.edit.editors[e.definition.formatter]),
+                      ("tick" !== e.definition.formatter &&
+                        "tickCross" !== e.definition.formatter) ||
+                        e.definition.headerFilterEmptyCheck ||
+                        (e.modules.filter.emptyFunc = function (e) {
+                          return !0 !== e && !1 !== e;
+                        }))
+                    : (n = h.table.modules.edit.editors.input);
             }
             if (n) {
               if (
@@ -15233,27 +15245,27 @@ License: MIT
                   return e.field(t, e.type || {});
                 })
               : o.filters[e.type]
-              ? (i = (t = o.table.columnManager.getColumnByField(e.field))
-                  ? function (i) {
-                      return o.filters[e.type](
-                        e.value,
-                        t.getFieldValue(i),
-                        i,
-                        e.params || {},
-                      );
-                    }
-                  : function (t) {
-                      return o.filters[e.type](
-                        e.value,
-                        t[e.field],
-                        t,
-                        e.params || {},
-                      );
-                    })
-              : console.warn(
-                  "Filter Error - No such filter type found, ignoring: ",
-                  e.type,
-                ),
+                ? (i = (t = o.table.columnManager.getColumnByField(e.field))
+                    ? function (i) {
+                        return o.filters[e.type](
+                          e.value,
+                          t.getFieldValue(i),
+                          i,
+                          e.params || {},
+                        );
+                      }
+                    : function (t) {
+                        return o.filters[e.type](
+                          e.value,
+                          t[e.field],
+                          t,
+                          e.params || {},
+                        );
+                      })
+                : console.warn(
+                    "Filter Error - No such filter type found, ignoring: ",
+                    e.type,
+                  ),
             (e.func = i),
             !!e.func && e
           );
@@ -15724,8 +15736,8 @@ License: MIT
               "1" === i
               ? (n.setAttribute("aria-checked", !0), a || "")
               : !r || ("null" !== i && "" !== i && null != i)
-              ? (n.setAttribute("aria-checked", !1), l || "")
-              : (n.setAttribute("aria-checked", "mixed"), "");
+                ? (n.setAttribute("aria-checked", !1), l || "")
+                : (n.setAttribute("aria-checked", "mixed"), "");
           },
           datetime: function (e, t, o) {
             var i = t.inputFormat || "YYYY-MM-DD hh:mm:ss",
@@ -15738,10 +15750,10 @@ License: MIT
                 ? a.tz(t.timezone).format(n)
                 : a.format(n)
               : !0 === r
-              ? s
-              : "function" == typeof r
-              ? r(s)
-              : r;
+                ? s
+                : "function" == typeof r
+                  ? r(s)
+                  : r;
           },
           datetimediff: function (e, t, o) {
             var i = t.inputFormat || "YYYY-MM-DD hh:mm:ss",
@@ -15757,10 +15769,10 @@ License: MIT
                 ? moment.duration(c.diff(l)).humanize(r)
                 : c.diff(l, s) + (r ? " " + r : "")
               : !0 === n
-              ? u
-              : "function" == typeof n
-              ? n(u)
-              : n;
+                ? u
+                : "function" == typeof n
+                  ? n(u)
+                  : n;
           },
           lookup: function (e, t, o) {
             var i = e.getValue();
@@ -16337,8 +16349,8 @@ License: MIT
           (this.visible = s
             ? s.visible
             : void 0 !== e.startOpen[o]
-            ? e.startOpen[o]
-            : e.startOpen[0]),
+              ? e.startOpen[o]
+              : e.startOpen[0]),
           (this.component = null),
           this.createElements(),
           this.addBindings(),
@@ -16511,8 +16523,8 @@ License: MIT
               ? this.rows.splice(n + 1, 0, e)
               : this.rows.splice(n, 0, e)
             : o
-            ? this.rows.push(e)
-            : this.rows.unshift(e),
+              ? this.rows.push(e)
+              : this.rows.unshift(e),
             (e.modules.group = this),
             this.generateGroupHeaderContents(),
             this.groupManager.table.modExists("columnCalcs") &&
@@ -16912,12 +16924,12 @@ License: MIT
               "function" == typeof t
                 ? t
                 : (n = e.table.columnManager.getColumnByField(t))
-                ? function (e) {
-                    return n.getFieldValue(e);
-                  }
-                : function (e) {
-                    return e[t];
-                  }),
+                  ? function (e) {
+                      return n.getFieldValue(e);
+                    }
+                  : function (e) {
+                      return e[t];
+                    }),
               e.groupIDLookups.push({
                 field: "function" != typeof t && t,
                 func: i,
@@ -17533,8 +17545,8 @@ License: MIT
                     !0 === i
                       ? this.table.addRow({})
                       : "function" == typeof i
-                      ? this.table.addRow(i(o.row.getComponent()))
-                      : this.table.addRow(Object.assign({}, i))).then(
+                        ? this.table.addRow(i(o.row.getComponent()))
+                        : this.table.addRow(Object.assign({}, i))).then(
                     function () {
                       setTimeout(function () {
                         t.next();
@@ -17759,15 +17771,15 @@ License: MIT
                         e.stopPropagation();
                       }))
                     : e.menu && e.menu.length
-                    ? o.addEventListener("click", function (i) {
-                        i.stopPropagation(),
-                          n.hideOldSubMenus(s),
-                          n.loadMenu(i, t, e.menu, o);
-                      })
-                    : e.action &&
-                      o.addEventListener("click", function (o) {
-                        e.action(o, t.getComponent());
-                      }),
+                      ? o.addEventListener("click", function (i) {
+                          i.stopPropagation(),
+                            n.hideOldSubMenus(s),
+                            n.loadMenu(i, t, e.menu, o);
+                        })
+                      : e.action &&
+                        o.addEventListener("click", function (o) {
+                          e.action(o, t.getComponent());
+                        }),
                   e.menu &&
                     e.menu.length &&
                     o.classList.add("tabulator-menu-item-submenu")),
@@ -19333,34 +19345,34 @@ License: MIT
               ? "function" == typeof this.table.options.persistenceReaderFunc
                 ? (this.readFunc = this.table.options.persistenceReaderFunc)
                 : this.readers[this.table.options.persistenceReaderFunc]
-                ? (this.readFunc =
-                    this.readers[this.table.options.persistenceReaderFunc])
+                  ? (this.readFunc =
+                      this.readers[this.table.options.persistenceReaderFunc])
+                  : console.warn(
+                      "Persistence Read Error - invalid reader set",
+                      this.table.options.persistenceReaderFunc,
+                    )
+              : this.readers[this.mode]
+                ? (this.readFunc = this.readers[this.mode])
                 : console.warn(
                     "Persistence Read Error - invalid reader set",
-                    this.table.options.persistenceReaderFunc,
-                  )
-              : this.readers[this.mode]
-              ? (this.readFunc = this.readers[this.mode])
-              : console.warn(
-                  "Persistence Read Error - invalid reader set",
-                  this.mode,
-                ),
+                    this.mode,
+                  ),
             this.table.options.persistenceWriterFunc
               ? "function" == typeof this.table.options.persistenceWriterFunc
                 ? (this.writeFunc = this.table.options.persistenceWriterFunc)
                 : this.readers[this.table.options.persistenceWriterFunc]
-                ? (this.writeFunc =
-                    this.readers[this.table.options.persistenceWriterFunc])
-                : console.warn(
-                    "Persistence Write Error - invalid reader set",
-                    this.table.options.persistenceWriterFunc,
-                  )
+                  ? (this.writeFunc =
+                      this.readers[this.table.options.persistenceWriterFunc])
+                  : console.warn(
+                      "Persistence Write Error - invalid reader set",
+                      this.table.options.persistenceWriterFunc,
+                    )
               : this.writers[this.mode]
-              ? (this.writeFunc = this.writers[this.mode])
-              : console.warn(
-                  "Persistence Write Error - invalid writer set",
-                  this.mode,
-                ),
+                ? (this.writeFunc = this.writers[this.mode])
+                : console.warn(
+                    "Persistence Write Error - invalid writer set",
+                    this.mode,
+                  ),
             (this.id =
               "tabulator-" +
               (o || this.table.element.getAttribute("id") || "")),
@@ -20629,10 +20641,10 @@ License: MIT
               ? ((this.headerCheckboxElement.checked = !1),
                 (this.headerCheckboxElement.indeterminate = !1))
               : this.table.rowManager.rows.length === this.selectedRows.length
-              ? ((this.headerCheckboxElement.checked = !0),
-                (this.headerCheckboxElement.indeterminate = !1))
-              : ((this.headerCheckboxElement.indeterminate = !0),
-                (this.headerCheckboxElement.checked = !1))),
+                ? ((this.headerCheckboxElement.checked = !0),
+                  (this.headerCheckboxElement.indeterminate = !1))
+                : ((this.headerCheckboxElement.indeterminate = !0),
+                  (this.headerCheckboxElement.checked = !1))),
             e ||
               this.table.options.rowSelectionChanged.call(
                 this.table,
@@ -20736,10 +20748,10 @@ License: MIT
                     "none" == e.modules.sort.dir
                       ? e.modules.sort.startingDir
                       : e.modules.sort.dir == e.modules.sort.startingDir
-                      ? "asc" == e.modules.sort.dir
-                        ? "desc"
-                        : "asc"
-                      : "none";
+                        ? "asc" == e.modules.sort.dir
+                          ? "desc"
+                          : "asc"
+                        : "none";
                 else
                   switch (e.modules.sort.dir) {
                     case "asc":
@@ -20763,8 +20775,8 @@ License: MIT
                       : "none" != o && i.push({ column: e, dir: o }),
                     n.setSort(i))
                   : "none" == o
-                  ? n.clear()
-                  : n.setSort(e, o),
+                    ? n.clear()
+                    : n.setSort(e, o),
                   n.table.rowManager.sorterRefresh(!n.sortList.length);
               }
             }));
@@ -21059,8 +21071,8 @@ License: MIT
                         "0" === c.charAt(0) && (c = "." + c),
                         u - c)
                       : u > c
-                      ? 1
-                      : -1;
+                        ? 1
+                        : -1;
                 return a.length > l.length;
               }
               g = 1;

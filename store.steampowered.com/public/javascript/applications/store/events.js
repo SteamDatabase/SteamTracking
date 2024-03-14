@@ -2345,17 +2345,20 @@
                   : void 0,
               })
             : Ie.Get().BHasSteamChinaAppApprovalPriviledge()
-            ? r.createElement(
-                "div",
-                { className: P.DisplayAdminPanel },
-                r.createElement(
-                  "span",
-                  { className: P.DisplayAdminPanel_Title },
-                  (0, j.Xx)("#EventDisplay_Admin_Title"),
-                ),
-                r.createElement(Te, { key: "removesteamchina", eventModel: a }),
-              )
-            : null;
+              ? r.createElement(
+                  "div",
+                  { className: P.DisplayAdminPanel },
+                  r.createElement(
+                    "span",
+                    { className: P.DisplayAdminPanel_Title },
+                    (0, j.Xx)("#EventDisplay_Admin_Title"),
+                  ),
+                  r.createElement(Te, {
+                    key: "removesteamchina",
+                    eventModel: a,
+                  }),
+                )
+              : null;
         }),
         Te = (e) => {
           const { eventModel: t } = e;
@@ -2416,9 +2419,7 @@
                                     ? void 0
                                     : s.success) &&
                                   console.warn(
-                                    `RemoveEventFromSteamChinaButton: we receive duplicate request ${t.clanSteamID.GetAccountID()} : ${
-                                      t.GID
-                                    }; event is still removed from SC`,
+                                    `RemoveEventFromSteamChinaButton: we receive duplicate request ${t.clanSteamID.GetAccountID()} : ${t.GID}; event is still removed from SC`,
                                   ),
                                 (m =
                                   null === (l = null == r ? void 0 : r.data) ||
@@ -2851,8 +2852,8 @@
                           "game" == n || "software" == n
                             ? "games"
                             : "dlc" == n || "music" == n
-                            ? "dlc"
-                            : null),
+                              ? "dlc"
+                              : null),
                       },
                       e,
                     ),
@@ -3261,10 +3262,7 @@
                 : void 0,
             day: "numeric",
           };
-          return `${t} - ${e.endEvent.toLocaleDateString(
-            j.Yt.GetPreferredLocales(),
-            n,
-          )}`;
+          return `${t} - ${e.endEvent.toLocaleDateString(j.Yt.GetPreferredLocales(), n)}`;
         }
         GetVisibleSpecialEvents() {
           return [
@@ -4989,28 +4987,28 @@
                 styles: $t().LibrarySource,
               })
             : t & He.ZT.k_eWishlist && a.BIsGameSourceAllowed(Re.Gf.k_EWishlist)
-            ? n.push({
-                id: He.ZT.k_eWishlist,
-                name: "#EventCalendar_GameSource_onWishlist",
-                ttip: "#EventCalendar_GameSource_EventExplanation_ttip_wishlist",
-                styles: $t().WishlistSource,
-              })
-            : t & He.ZT.k_eRecommended &&
-              a.BIsGameSourceAllowed(Re.Gf.k_ERecommended)
-            ? n.push({
-                id: He.ZT.k_eRecommended,
-                name: "#EventCalendar_GameSource_recommended_Verbose",
-                ttip: "#EventCalendar_GameSource_EventExplanation_ttip_recommended",
-                styles: $t().RecommendedSource,
-              })
-            : t & He.ZT.k_eFeatured &&
-              a.BIsGameSourceAllowed(Re.Gf.k_EFeatured) &&
-              n.push({
-                id: He.ZT.k_eFeatured,
-                name: "#EventCalendar_GameSource_featured",
-                ttip: "#EventCalendar_GameSource_ttip_featured",
-                styles: $t().FeaturedSource,
-              }),
+              ? n.push({
+                  id: He.ZT.k_eWishlist,
+                  name: "#EventCalendar_GameSource_onWishlist",
+                  ttip: "#EventCalendar_GameSource_EventExplanation_ttip_wishlist",
+                  styles: $t().WishlistSource,
+                })
+              : t & He.ZT.k_eRecommended &&
+                  a.BIsGameSourceAllowed(Re.Gf.k_ERecommended)
+                ? n.push({
+                    id: He.ZT.k_eRecommended,
+                    name: "#EventCalendar_GameSource_recommended_Verbose",
+                    ttip: "#EventCalendar_GameSource_EventExplanation_ttip_recommended",
+                    styles: $t().RecommendedSource,
+                  })
+                : t & He.ZT.k_eFeatured &&
+                  a.BIsGameSourceAllowed(Re.Gf.k_EFeatured) &&
+                  n.push({
+                    id: He.ZT.k_eFeatured,
+                    name: "#EventCalendar_GameSource_featured",
+                    ttip: "#EventCalendar_GameSource_ttip_featured",
+                    styles: $t().FeaturedSource,
+                  }),
             t & He.ZT.k_eFollowing &&
               a.BIsGameSourceAllowed(Re.Gf.k_EFollowing) &&
               n.push({
@@ -5064,10 +5062,10 @@
                 ? N.L7.is_limited
                   ? $t().Vote_LimitedUser
                   : !0 === t
-                  ? $t().Vote_Positive
-                  : !1 === t
-                  ? $t().Vote_Negative
-                  : $t().Vote_Ready
+                    ? $t().Vote_Positive
+                    : !1 === t
+                      ? $t().Vote_Negative
+                      : $t().Vote_Ready
                 : $t().Vote_NotLoggedIn;
             })(e, a),
             l = t.GetForumTopicURL(),
@@ -5776,22 +5774,22 @@
                 return n ? (t ? n.largeHeight : n.smallHeight) : 0;
               })((0, Me.vY)().GetCollectionID(), t)
             : (0, Me.vY)().BIsSaleCalendar()
-            ? ((n = (0, Me.vY)().GetSaleID()),
-              (a = t),
-              n && Ue.j1.GetClanEventModel(n)
-                ? Number(
-                    a
-                      ? Gn().simpleTitleLargeHeight
-                      : Gn().simpleTitleSmallHeight,
-                  )
-                : 0)
-            : (0, Me.vY)().BIsSingleSourceCalendar()
-            ? parseInt(
-                t
-                  ? ut().strJumboHubBannerHeight
-                  : ut().strDesktopHubBannerHeight,
-              ) - 1
-            : 0;
+              ? ((n = (0, Me.vY)().GetSaleID()),
+                (a = t),
+                n && Ue.j1.GetClanEventModel(n)
+                  ? Number(
+                      a
+                        ? Gn().simpleTitleLargeHeight
+                        : Gn().simpleTitleSmallHeight,
+                    )
+                  : 0)
+              : (0, Me.vY)().BIsSingleSourceCalendar()
+                ? parseInt(
+                    t
+                      ? ut().strJumboHubBannerHeight
+                      : ut().strDesktopHubBannerHeight,
+                  ) - 1
+                : 0;
           var n, a;
         }
         BShowLogInBanner() {
@@ -5928,8 +5926,8 @@
               void 0 !== e
                 ? e
                 : null == t
-                ? void 0
-                : t.strName;
+                  ? void 0
+                  : t.strName;
           } else if (o.BIsSingleAppCalendar()) {
             const e = o.GetSingleAppID();
             s =
@@ -5948,8 +5946,8 @@
               void 0 !== n
                 ? n
                 : null == t
-                ? void 0
-                : t.strName;
+                  ? void 0
+                  : t.strName;
           } else if (o.BIsSaleCalendar()) {
             const e = Ue.j1.GetClanEventModel(o.GetSaleID());
             if (e) {
@@ -6420,10 +6418,10 @@
           return e.BIsSingleSourceCalendar() || t === Oe.B.Steam
             ? "none"
             : e.BIsShowingFeaturedFeed()
-            ? "full"
-            : t
-            ? "samesource"
-            : "full";
+              ? "full"
+              : t
+                ? "samesource"
+                : "full";
         }
         GetCuratorSuggestionSettings(e) {
           if (N.L7.accountid && f.JW.bIsCuratorsEnabled)
@@ -6545,33 +6543,33 @@
           d && this.props.fnResetFilters
             ? (C = "#EventCalendar_EmptyCalendar")
             : t
-            ? ((C =
-                S &&
-                (S.nCount
-                  ? "#EventCalendar_NoMoreFutureEvents"
-                  : "#EventCalendar_NoFutureEvents")),
-              (b =
-                g &&
-                r.createElement(
-                  "div",
-                  {
-                    key: "link-back",
-                    className: ut().BackToThePast,
-                    onClick: s,
-                  },
-                  (0, j.Xx)("#EventCalendar_PastEventsLink"),
+              ? ((C =
+                  S &&
+                  (S.nCount
+                    ? "#EventCalendar_NoMoreFutureEvents"
+                    : "#EventCalendar_NoFutureEvents")),
+                (b =
+                  g &&
                   r.createElement(
-                    "span",
-                    { className: ut().SeeAllCount },
-                    g.nCount + (g.bIsComplete ? "" : "+"),
-                  ),
-                )))
-            : n &&
-              (C =
-                g &&
-                (g.nCount
-                  ? "#EventCalendar_NoMorePastUpdates"
-                  : "#EventCalendar_NoPastUpdates"));
+                    "div",
+                    {
+                      key: "link-back",
+                      className: ut().BackToThePast,
+                      onClick: s,
+                    },
+                    (0, j.Xx)("#EventCalendar_PastEventsLink"),
+                    r.createElement(
+                      "span",
+                      { className: ut().SeeAllCount },
+                      g.nCount + (g.bIsComplete ? "" : "+"),
+                    ),
+                  )))
+              : n &&
+                (C =
+                  g &&
+                  (g.nCount
+                    ? "#EventCalendar_NoMorePastUpdates"
+                    : "#EventCalendar_NoPastUpdates"));
           let y = null;
           return (
             (d || e.BHitEventHorizon(t ? "forward" : "backward")) &&
@@ -6749,8 +6747,8 @@
           return e.BIsShowingFeaturedFeed()
             ? (0, j.Xx)("#EventCalendar_GroupTitle_FeaturedCurators")
             : e.BIsGlobalCalendar()
-            ? (0, j.Xx)("#EventCalendar_GroupTitle_Curators")
-            : "";
+              ? (0, j.Xx)("#EventCalendar_GroupTitle_Curators")
+              : "";
         }
         GenerateKeyFromItem(e, t) {
           return t.GetSource() & He.ZT.k_eSteam || t.appid || "full" !== e

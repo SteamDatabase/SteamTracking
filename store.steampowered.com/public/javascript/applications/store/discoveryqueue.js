@@ -134,8 +134,8 @@
         "string" == typeof e
           ? (n = e)
           : "location" in e
-          ? (n = e.location.search)
-          : "search" in e && (n = e.search);
+            ? (n = e.location.search)
+            : "search" in e && (n = e.search);
         const r = new URLSearchParams(n.substring(1));
         if (r.has(t)) {
           const e = r.getAll(t);
@@ -315,11 +315,7 @@
               : (0, u.AM)(
                   r.createElement(c.JX, {
                     onOK: () => {
-                      window.location.href = `${
-                        l.De.STORE_BASE_URL
-                      }login?redir=${encodeURIComponent(
-                        document.location.href,
-                      )}`;
+                      window.location.href = `${l.De.STORE_BASE_URL}login?redir=${encodeURIComponent(document.location.href)}`;
                     },
                     strOKButtonText: (0, i.Xx)(
                       "#DiscoveryQueue_Error_Login_Title",

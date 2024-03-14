@@ -166,14 +166,14 @@
                 I(e, t, r[t]);
               })
             : Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
-            : U(Object(r)).forEach(function (t) {
-                Object.defineProperty(
-                  e,
-                  t,
-                  Object.getOwnPropertyDescriptor(r, t),
-                );
-              });
+              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
+              : U(Object(r)).forEach(function (t) {
+                  Object.defineProperty(
+                    e,
+                    t,
+                    Object.getOwnPropertyDescriptor(r, t),
+                  );
+                });
         }
         return e;
       }
@@ -330,15 +330,15 @@
                       isAnimationFinished: !0,
                     }
                   : e.isAnimationActive && e.animationId !== t.prevAnimationId
-                  ? {
-                      prevAnimationId: e.animationId,
-                      curSectors: e.sectors,
-                      prevSectors: t.curSectors,
-                      isAnimationFinished: !0,
-                    }
-                  : e.sectors !== t.curSectors
-                  ? { curSectors: e.sectors, isAnimationFinished: !0 }
-                  : null;
+                    ? {
+                        prevAnimationId: e.animationId,
+                        curSectors: e.sectors,
+                        prevSectors: t.curSectors,
+                        isAnimationFinished: !0,
+                      }
+                    : e.sectors !== t.curSectors
+                      ? { curSectors: e.sectors, isAnimationFinished: !0 }
+                      : null;
               },
             },
             {
@@ -353,14 +353,14 @@
                 return n.isValidElement(e)
                   ? n.cloneElement(e, t)
                   : y()(e)
-                  ? e(t)
-                  : n.createElement(
-                      f.H,
-                      E({}, t, {
-                        type: "linear",
-                        className: "recharts-pie-label-line",
-                      }),
-                    );
+                    ? e(t)
+                    : n.createElement(
+                        f.H,
+                        E({}, t, {
+                          type: "linear",
+                          className: "recharts-pie-label-line",
+                        }),
+                      );
               },
             },
             {
@@ -704,10 +704,10 @@
                 return T(T(T({ payload: e }, n), e), a && a[t] && a[t].props);
               })
             : a && a.length
-            ? a.map(function (e) {
-                return T(T({}, n), e.props);
-              })
-            : [];
+              ? a.map(function (e) {
+                  return T(T({}, n), e.props);
+                })
+              : [];
         }),
         I(C, "parseCoordinateOfPie", function (e, t) {
           var r = t.top,
@@ -874,14 +874,14 @@
                 _(e, t, r[t]);
               })
             : Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
-            : p(Object(r)).forEach(function (t) {
-                Object.defineProperty(
-                  e,
-                  t,
-                  Object.getOwnPropertyDescriptor(r, t),
-                );
-              });
+              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
+              : p(Object(r)).forEach(function (t) {
+                  Object.defineProperty(
+                    e,
+                    t,
+                    Object.getOwnPropertyDescriptor(r, t),
+                  );
+                });
         }
         return e;
       }
@@ -1015,14 +1015,14 @@
                   return i.isValidElement(e)
                     ? i.cloneElement(e, t)
                     : a()(e)
-                    ? e(t)
-                    : i.createElement(
-                        l.x,
-                        b({}, t, {
-                          className: "recharts-polar-angle-axis-tick-value",
-                        }),
-                        r,
-                      );
+                      ? e(t)
+                      : i.createElement(
+                          l.x,
+                          b({}, t, {
+                            className: "recharts-polar-angle-axis-tick-value",
+                          }),
+                          r,
+                        );
                 },
               },
             ]),
@@ -1056,10 +1056,10 @@
                       ? "start"
                       : "end"
                     : r < -z
-                    ? "outer" === t
-                      ? "end"
-                      : "start"
-                    : "middle";
+                      ? "outer" === t
+                        ? "end"
+                        : "start"
+                      : "middle";
                 },
               },
               {
@@ -1285,14 +1285,14 @@
                 d(e, t, r[t]);
               })
             : Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
-            : u(Object(r)).forEach(function (t) {
-                Object.defineProperty(
-                  e,
-                  t,
-                  Object.getOwnPropertyDescriptor(r, t),
-                );
-              });
+              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
+              : u(Object(r)).forEach(function (t) {
+                  Object.defineProperty(
+                    e,
+                    t,
+                    Object.getOwnPropertyDescriptor(r, t),
+                  );
+                });
         }
         return e;
       }
@@ -1537,14 +1537,14 @@
                 S(e, t, r[t]);
               })
             : Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
-            : h(Object(r)).forEach(function (t) {
-                Object.defineProperty(
-                  e,
-                  t,
-                  Object.getOwnPropertyDescriptor(r, t),
-                );
-              });
+              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
+              : h(Object(r)).forEach(function (t) {
+                  Object.defineProperty(
+                    e,
+                    t,
+                    Object.getOwnPropertyDescriptor(r, t),
+                  );
+                });
         }
         return e;
       }
@@ -1700,14 +1700,14 @@
                 return i.isValidElement(e)
                   ? i.cloneElement(e, t)
                   : l()(e)
-                  ? e(t)
-                  : i.createElement(
-                      u.x,
-                      w({}, t, {
-                        className: "recharts-polar-radius-axis-tick-value",
-                      }),
-                      r,
-                    );
+                    ? e(t)
+                    : i.createElement(
+                        u.x,
+                        w({}, t, {
+                          className: "recharts-polar-radius-axis-tick-value",
+                        }),
+                        r,
+                      );
               },
             },
           ]),
@@ -1975,14 +1975,14 @@
                 W(e, t, r[t]);
               })
             : Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
-            : S(Object(r)).forEach(function (t) {
-                Object.defineProperty(
-                  e,
-                  t,
-                  Object.getOwnPropertyDescriptor(r, t),
-                );
-              });
+              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
+              : S(Object(r)).forEach(function (t) {
+                  Object.defineProperty(
+                    e,
+                    t,
+                    Object.getOwnPropertyDescriptor(r, t),
+                  );
+                });
         }
         return e;
       }
@@ -2141,8 +2141,8 @@
                       prevPoints: t.curPoints,
                     }
                   : e.points !== t.curPoints
-                  ? { curPoints: e.points }
-                  : null;
+                    ? { curPoints: e.points }
+                    : null;
               },
             },
             {
@@ -2151,11 +2151,11 @@
                 return i.isValidElement(e)
                   ? i.cloneElement(e, t)
                   : b()(e)
-                  ? e(t)
-                  : i.createElement(
-                      _.o,
-                      R({}, t, { className: "recharts-radar-dot" }),
-                    );
+                    ? e(t)
+                    : i.createElement(
+                        _.o,
+                        R({}, t, { className: "recharts-radar-dot" }),
+                      );
               },
             },
           ]),
@@ -2197,17 +2197,17 @@
                   (t = i.isValidElement(n)
                     ? i.cloneElement(n, O(O({}, this.props), {}, { points: e }))
                     : b()(n)
-                    ? n(O(O({}, this.props), {}, { points: e }))
-                    : i.createElement(
-                        h.m,
-                        R({}, (0, z.L6)(this.props, !0), {
-                          onMouseEnter: this.handleMouseEnter,
-                          onMouseLeave: this.handleMouseLeave,
-                          points: e,
-                          baseLinePoints: s ? o : null,
-                          connectNulls: c,
-                        }),
-                      )),
+                      ? n(O(O({}, this.props), {}, { points: e }))
+                      : i.createElement(
+                          h.m,
+                          R({}, (0, z.L6)(this.props, !0), {
+                            onMouseEnter: this.handleMouseEnter,
+                            onMouseLeave: this.handleMouseLeave,
+                            points: e,
+                            baseLinePoints: s ? o : null,
+                            connectNulls: c,
+                          }),
+                        )),
                   i.createElement(
                     v.m,
                     { className: "recharts-radar-polygon" },

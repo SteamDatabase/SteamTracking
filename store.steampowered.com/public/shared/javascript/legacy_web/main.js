@@ -432,8 +432,8 @@ var CLSTAMP = "0";
               a < 3
                 ? t
                 : null === i
-                ? (i = Object.getOwnPropertyDescriptor(t, n))
-                : i;
+                  ? (i = Object.getOwnPropertyDescriptor(t, n))
+                  : i;
           if (
             "object" == typeof Reflect &&
             "function" == typeof Reflect.decorate
@@ -796,16 +796,16 @@ var CLSTAMP = "0";
             navigator.userAgent.includes("Valve Steam Gamepad")
               ? l(t)
               : (0, c.U5)("BrowserView.RegisterForMessageFromParent") &&
-                (0, c.U5)("BrowserView.PostMessageToParent")
-              ? (function () {
-                  (0, e.mG)(this, void 0, void 0, function* () {
-                    const { InitializeForDesktop: e } = yield r
-                      .e(380)
-                      .then(r.bind(r, 255));
-                    e();
-                  });
-                })()
-              : t.RegisterForGamepadDetected(() => l(t));
+                  (0, c.U5)("BrowserView.PostMessageToParent")
+                ? (function () {
+                    (0, e.mG)(this, void 0, void 0, function* () {
+                      const { InitializeForDesktop: e } = yield r
+                        .e(380)
+                        .then(r.bind(r, 255));
+                      e();
+                    });
+                  })()
+                : t.RegisterForGamepadDetected(() => l(t));
           })();
         });
     })();

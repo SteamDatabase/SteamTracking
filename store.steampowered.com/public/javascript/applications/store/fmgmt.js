@@ -647,9 +647,7 @@
                       ? void 0
                       : a.userinfo)
                   )
-                    throw `Load single avatar/persona failed ${
-                      (0, u.l)(r).strErrorMsg
-                    }`;
+                    throw `Load single avatar/persona failed ${(0, u.l)(r).strErrorMsg}`;
                   return [r.data.userinfo];
                 }
                 {
@@ -668,9 +666,7 @@
                       ? void 0
                       : r.userinfos)
                   )
-                    throw `Load single avatar/persona failed ${
-                      (0, u.l)(a).strErrorMsg
-                    }`;
+                    throw `Load single avatar/persona failed ${(0, u.l)(a).strErrorMsg}`;
                   const s = new Map();
                   return (
                     a.data.userinfos.forEach((e) =>
@@ -733,8 +729,8 @@
         "string" == typeof e
           ? (a = e)
           : "location" in e
-          ? (a = e.location.search)
-          : "search" in e && (a = e.search);
+            ? (a = e.location.search)
+            : "search" in e && (a = e.search);
         const n = new URLSearchParams(a.substring(1));
         if (n.has(t)) {
           const e = n.getAll(t);
@@ -850,8 +846,8 @@
                     "success" === t.statusType
                       ? (a = m().StatusSuccess)
                       : "danger" === t.statusType
-                      ? (a = m().StatusDanger)
-                      : "caution" === t.statusType && (a = m().StatusCaution),
+                        ? (a = m().StatusDanger)
+                        : "caution" === t.statusType && (a = m().StatusCaution),
                     n.createElement(
                       u.M2,
                       {
@@ -869,11 +865,7 @@
                         {
                           key: t.key,
                           className: (0, i.Z)(
-                            `${m().GraphicalAssetsTab} ${
-                              t.key === e.key
-                                ? (0, i.Z)(m().Active, "ActiveTab")
-                                : ""
-                            }`,
+                            `${m().GraphicalAssetsTab} ${t.key === e.key ? (0, i.Z)(m().Active, "ActiveTab") : ""}`,
                             this.props.classNameTab,
                           ),
                           onActivate: () => this.OnTabClick(t),
@@ -1041,8 +1033,8 @@
                           1 === e.two_factor_method()
                             ? S("awaitmobile2fa")
                             : 2 === e.two_factor_method()
-                            ? S("awaitemail2fa")
-                            : M.push("/account/familymanagement");
+                              ? S("awaitemail2fa")
+                              : M.push("/account/familymanagement");
                         },
                       });
                   },
@@ -1280,25 +1272,25 @@
         return "splash" === r
           ? n.createElement(q, { onClick: () => s("selectMethod") })
           : "selectMethod" !== r || m
-          ? "selectMethod" === r && m
-            ? n.createElement(W, {
-                slotCooldownSeconds: 0,
+            ? "selectMethod" === r && m
+              ? n.createElement(W, {
+                  slotCooldownSeconds: 0,
+                  familyGroupID: t,
+                  onCancel: () => s("splash"),
+                  onSelect: c,
+                })
+              : "selectRole" === r
+                ? n.createElement(Q, {
+                    familyGroupID: t,
+                    steamid: l,
+                    onCancel: () => s("splash"),
+                  })
+                : null
+            : n.createElement(z, {
                 familyGroupID: t,
                 onCancel: () => s("splash"),
                 onSelect: c,
-              })
-            : "selectRole" === r
-            ? n.createElement(Q, {
-                familyGroupID: t,
-                steamid: l,
-                onCancel: () => s("splash"),
-              })
-            : null
-          : n.createElement(z, {
-              familyGroupID: t,
-              onCancel: () => s("splash"),
-              onSelect: c,
-            });
+              });
       }
       function q(e) {
         return n.createElement(
@@ -1457,8 +1449,8 @@
                         0 === e.two_factor_method()
                           ? l()
                           : 1 === e.two_factor_method()
-                          ? c("awaitmobile2fa")
-                          : 2 === e.two_factor_method() && c("awaitemail2fa");
+                            ? c("awaitmobile2fa")
+                            : 2 === e.two_factor_method() && c("awaitemail2fa");
                       },
                     });
                   },
@@ -1709,12 +1701,12 @@
               n.createElement(u.V, null),
             )
           : l.isError
-          ? null
-          : n.createElement(ee, {
-              setSelectedFriendSteamID: t,
-              steamIDs: i,
-              excludeSteamIDs: a,
-            });
+            ? null
+            : n.createElement(ee, {
+                setSelectedFriendSteamID: t,
+                steamIDs: i,
+                excludeSteamIDs: a,
+              });
       }
       function ee(e) {
         var t;
@@ -2399,8 +2391,8 @@
                   e <= parseInt(ge.nNarrowWidth)
                     ? 3
                     : e <= parseInt(ge.nMediumWidth)
-                    ? 5
-                    : 7),
+                      ? 5
+                      : 7),
                   t(n);
               }, []);
             return [e, a];
@@ -5312,11 +5304,11 @@
             0 === a
               ? null
               : 1 === a
-              ? (0, p.Xx)("#FamilyManagement_SelectJoinButtonPendingInvite")
-              : (0, p.Xx)(
-                  "#FamilyManagement_SelectJoinButtonPendingInvites",
-                  a,
-                )),
+                ? (0, p.Xx)("#FamilyManagement_SelectJoinButtonPendingInvite")
+                : (0, p.Xx)(
+                    "#FamilyManagement_SelectJoinButtonPendingInvites",
+                    a,
+                  )),
           n.createElement(
             va,
             null,
@@ -5678,14 +5670,14 @@
                 ),
               )
             : i.isError
-            ? null
-            : n.createElement(
-                B.s,
-                { className: le.ManageFamily },
-                n.createElement(Na, null),
-                n.createElement(ka, { familyGroupID: a, isAdult: l }),
-                n.createElement(Ma, { familyGroupID: a }),
-              )
+              ? null
+              : n.createElement(
+                  B.s,
+                  { className: le.ManageFamily },
+                  n.createElement(Na, null),
+                  n.createElement(ka, { familyGroupID: a, isAdult: l }),
+                  n.createElement(Ma, { familyGroupID: a }),
+                )
         );
       }
       function Ia(e) {
@@ -6334,10 +6326,10 @@
         return o.De.IN_GAMEPADUI
           ? "mobile"
           : n
-          ? "desktop"
-          : a
-          ? "tablet"
-          : "mobile";
+            ? "desktop"
+            : a
+              ? "tablet"
+              : "mobile";
       }
       function C(e) {
         return e.children(b());

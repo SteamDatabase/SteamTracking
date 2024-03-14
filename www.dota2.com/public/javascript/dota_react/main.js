@@ -5033,8 +5033,8 @@
           ("number" == typeof e
             ? this.fromNumber(e, t, a)
             : null == t && "string" != typeof e
-            ? this.fromString(e, 256)
-            : this.fromString(e, t));
+              ? this.fromString(e, 256)
+              : this.fromString(e, t));
       }
       function i() {
         return new n(null);
@@ -5057,28 +5057,28 @@
           }),
           (r = 30))
         : "Netscape" != navigator.appName
-        ? ((n.prototype.am = function (e, t, a, r, n, i) {
-            for (; --i >= 0; ) {
-              var s = t * this[e++] + a[r] + n;
-              (n = Math.floor(s / 67108864)), (a[r++] = 67108863 & s);
-            }
-            return n;
-          }),
-          (r = 26))
-        : ((n.prototype.am = function (e, t, a, r, n, i) {
-            for (var s = 16383 & t, o = t >> 14; --i >= 0; ) {
-              var l = 16383 & this[e],
-                c = this[e++] >> 14,
-                d = o * l + c * s;
-              (n =
-                ((l = s * l + ((16383 & d) << 14) + a[r] + n) >> 28) +
-                (d >> 14) +
-                o * c),
-                (a[r++] = 268435455 & l);
-            }
-            return n;
-          }),
-          (r = 28)),
+          ? ((n.prototype.am = function (e, t, a, r, n, i) {
+              for (; --i >= 0; ) {
+                var s = t * this[e++] + a[r] + n;
+                (n = Math.floor(s / 67108864)), (a[r++] = 67108863 & s);
+              }
+              return n;
+            }),
+            (r = 26))
+          : ((n.prototype.am = function (e, t, a, r, n, i) {
+              for (var s = 16383 & t, o = t >> 14; --i >= 0; ) {
+                var l = 16383 & this[e],
+                  c = this[e++] >> 14,
+                  d = o * l + c * s;
+                (n =
+                  ((l = s * l + ((16383 & d) << 14) + a[r] + n) >> 28) +
+                  (d >> 14) +
+                  o * c),
+                  (a[r++] = 268435455 & l);
+              }
+              return n;
+            }),
+            (r = 28)),
         (n.prototype.DB = r),
         (n.prototype.DM = (1 << r) - 1),
         (n.prototype.DV = 1 << r);
@@ -5248,10 +5248,10 @@
                 0 == s
                   ? (this[this.t++] = o)
                   : s + a > this.DB
-                  ? ((this[this.t - 1] |=
-                      (o & ((1 << (this.DB - s)) - 1)) << s),
-                    (this[this.t++] = o >> (this.DB - s)))
-                  : (this[this.t - 1] |= o << s),
+                    ? ((this[this.t - 1] |=
+                        (o & ((1 << (this.DB - s)) - 1)) << s),
+                      (this[this.t++] = o >> (this.DB - s)))
+                    : (this[this.t - 1] |= o << s),
                 (s += a) >= this.DB && (s -= this.DB));
           }
           8 == a &&
@@ -5725,8 +5725,8 @@
           return this.s < 0
             ? -1
             : this.t <= 0 || (1 == this.t && this[0] <= 0)
-            ? 0
-            : 1;
+              ? 0
+              : 1;
         }),
         (n.prototype.toByteArray = function () {
           var e = this.t,
@@ -5925,10 +5925,10 @@
           return 0 != r.compareTo(n.ONE)
             ? n.ZERO
             : l.compareTo(e) >= 0
-            ? l.subtract(e)
-            : l.signum() < 0
-            ? (l.addTo(e, l), l.signum() < 0 ? l.add(e) : l)
-            : l;
+              ? l.subtract(e)
+              : l.signum() < 0
+                ? (l.addTo(e, l), l.signum() < 0 ? l.add(e) : l)
+                : l;
         }),
         (n.prototype.pow = function (e) {
           return this.exp(e, new S());
@@ -11786,9 +11786,7 @@
               t &&
                 s.createElement("img", {
                   className: (0, E.Z)(_e().HeroImage, _e().Left),
-                  src: `${n.Y.VIDEO_URL}${c.strContentDir}/immortals/${r}${
-                    i ? "_gold" : ""
-                  }.png`,
+                  src: `${n.Y.VIDEO_URL}${c.strContentDir}/immortals/${r}${i ? "_gold" : ""}.png`,
                 }),
               s.createElement(
                 "video",
@@ -11800,29 +11798,21 @@
                   muted: !0,
                   loop: !0,
                   playsInline: !0,
-                  poster: `${n.Y.VIDEO_URL}${c.strContentDir}/immortals/${r}${
-                    i ? "_gold" : ""
-                  }.jpg`,
+                  poster: `${n.Y.VIDEO_URL}${c.strContentDir}/immortals/${r}${i ? "_gold" : ""}.jpg`,
                 },
                 s.createElement("source", {
                   type: "video/webm",
-                  src: `${n.Y.VIDEO_URL}${c.strContentDir}/immortals/${r}${
-                    i ? "_gold" : ""
-                  }.webm`,
+                  src: `${n.Y.VIDEO_URL}${c.strContentDir}/immortals/${r}${i ? "_gold" : ""}.webm`,
                 }),
                 s.createElement("source", {
                   type: "video/mp4",
-                  src: `${n.Y.VIDEO_URL}${c.strContentDir}/immortals/${r}${
-                    i ? "_gold" : ""
-                  }.mp4`,
+                  src: `${n.Y.VIDEO_URL}${c.strContentDir}/immortals/${r}${i ? "_gold" : ""}.mp4`,
                 }),
               ),
               a &&
                 s.createElement("img", {
                   className: (0, E.Z)(_e().HeroImage, _e().Right),
-                  src: `${n.Y.VIDEO_URL}${c.strContentDir}/immortals/${r}${
-                    i ? "_gold" : ""
-                  }.png`,
+                  src: `${n.Y.VIDEO_URL}${c.strContentDir}/immortals/${r}${i ? "_gold" : ""}.png`,
                 }),
               "hoodwink" === r &&
                 s.createElement("img", {
@@ -12021,9 +12011,7 @@
                         }),
                         s.createElement("img", {
                           className: Te().RiverVial,
-                          src: `${n.Y.IMG_URL}${e}/river_vials/river_vial_${
-                            a + 1
-                          }.jpg`,
+                          src: `${n.Y.IMG_URL}${e}/river_vials/river_vial_${a + 1}.jpg`,
                         }),
                       ),
                     ),
@@ -12544,11 +12532,7 @@
                   className: Ge().BuyBattlePassCapsule,
                   style: {
                     borderTop: `2px solid ${e}`,
-                    backgroundImage: `linear-gradient( ${t}${le(50)}, ${a}${le(
-                      75,
-                    )} ), url( '${
-                      n.Y.IMG_URL
-                    }international2022/backgrounds/buy_bp_capsule_bg.jpg' )`,
+                    backgroundImage: `linear-gradient( ${t}${le(50)}, ${a}${le(75)} ), url( '${n.Y.IMG_URL}international2022/backgrounds/buy_bp_capsule_bg.jpg' )`,
                   },
                 },
                 s.createElement("img", {
@@ -12653,11 +12637,7 @@
                 className: Ge().BuyBattlePassLevelsCapsule,
                 style: {
                   borderTop: `2px solid ${e}`,
-                  backgroundImage: `linear-gradient( ${t}${le(50)}, ${a}${le(
-                    75,
-                  )} ), url( '${
-                    n.Y.IMG_URL
-                  }international2022/backgrounds/buy_bp_capsule_bg.jpg' )`,
+                  backgroundImage: `linear-gradient( ${t}${le(50)}, ${a}${le(75)} ), url( '${n.Y.IMG_URL}international2022/backgrounds/buy_bp_capsule_bg.jpg' )`,
                 },
               },
               s.createElement("img", {
@@ -18184,8 +18164,7 @@
               { className: Ft().LeagueGrid },
               a.map((a) => {
                 const i = Ot.f.Get().GetEventInfo(a);
-                let o = `url( ${n.Y.IMG_URL}dpc/headers/dpc_header_event_${(0,
-                xt.B2)(a)}.jpg )`;
+                let o = `url( ${n.Y.IMG_URL}dpc/headers/dpc_header_event_${(0, xt.B2)(a)}.jpg )`;
                 (0, Ot.k)(a) &&
                   (o = `url( ${n.Y.CDN_URL}apps/dota2/images/leagues/${a}/images/image_8.png )`);
                 let l = null;
@@ -18876,12 +18855,12 @@
                 d && r
                   ? r
                   : 0 != (null == _ ? void 0 : _.actual_time)
-                  ? null == _
-                    ? void 0
-                    : _.actual_time
-                  : null == _
-                  ? void 0
-                  : _.scheduled_time,
+                    ? null == _
+                      ? void 0
+                      : _.actual_time
+                    : null == _
+                      ? void 0
+                      : _.scheduled_time,
               D = a.findIndex((e) => (r || R) >= e && (r || R) < e + 86400),
               L = Ot.f.Get().GetSpoilerBlockState(i) == Ut.rE.BLOCKED,
               A =
@@ -18890,26 +18869,22 @@
                 Ot.f.Get().IsAnyGameWatched(e, t),
               M =
                 f && N
-                  ? `${null == f ? void 0 : f.wins} - ${
-                      null == f ? void 0 : f.losses
-                    }`
+                  ? `${null == f ? void 0 : f.wins} - ${null == f ? void 0 : f.losses}`
                   : "",
               P =
                 y && N
-                  ? `${null == y ? void 0 : y.wins} - ${
-                      null == y ? void 0 : y.losses
-                    }`
+                  ? `${null == y ? void 0 : y.wins} - ${null == y ? void 0 : y.losses}`
                   : "",
               G = L
                 ? "?"
                 : T || C
-                ? `${null == _ ? void 0 : _.team_1_wins}`
-                : M,
+                  ? `${null == _ ? void 0 : _.team_1_wins}`
+                  : M,
               k = L
                 ? "?"
                 : T || C
-                ? `${null == _ ? void 0 : _.team_2_wins}`
-                : P,
+                  ? `${null == _ ? void 0 : _.team_2_wins}`
+                  : P,
               F = Ot.f.Get().GetTeamNames(h),
               O = Ot.f.Get().GetTeamNames(b);
             let x = F ? F.name : "#dpc_tbd",
@@ -18956,9 +18931,7 @@
                     s.createElement(
                       "div",
                       {
-                        key: `${null == l ? void 0 : l.nLeagueID}_${
-                          null == l ? void 0 : l.nNodeID
-                        }_${t}`,
+                        key: `${null == l ? void 0 : l.nLeagueID}_${null == l ? void 0 : l.nNodeID}_${t}`,
                         className: Jt().Detail,
                       },
                       (0, v.Jr)(e),
@@ -19117,8 +19090,8 @@
                       ? void 0
                       : r.actual_time
                     : null == r
-                    ? void 0
-                    : r.scheduled_time;
+                      ? void 0
+                      : r.scheduled_time;
                 if (n > e && n < e + 86400) {
                   t = !0;
                   break;
@@ -19135,8 +19108,8 @@
                     ? void 0
                     : t.actual_time
                   : null == t
-                  ? void 0
-                  : t.scheduled_time;
+                    ? void 0
+                    : t.scheduled_time;
               let r = !1;
               for (const e of h)
                 if (a > e && a < e + 86400) {
@@ -19175,21 +19148,21 @@
                 n = $t(e)
                   ? f
                   : (null == a ? void 0 : a.actual_time)
-                  ? null == a
-                    ? void 0
-                    : a.actual_time
-                  : null == a
-                  ? void 0
-                  : a.scheduled_time,
+                    ? null == a
+                      ? void 0
+                      : a.actual_time
+                    : null == a
+                      ? void 0
+                      : a.scheduled_time,
                 i = $t(t)
                   ? f
                   : (null == r ? void 0 : r.actual_time)
-                  ? null == r
-                    ? void 0
-                    : r.actual_time
-                  : null == r
-                  ? void 0
-                  : r.scheduled_time;
+                    ? null == r
+                      ? void 0
+                      : r.actual_time
+                    : null == r
+                      ? void 0
+                      : r.scheduled_time;
               return n == i && $t(e) ? -1 : n == i && $t(t) ? 1 : n - i;
             }),
             S =
@@ -19344,8 +19317,8 @@
                                 ? void 0
                                 : a.actual_time
                               : null == a
-                              ? void 0
-                              : a.scheduled_time;
+                                ? void 0
+                                : a.scheduled_time;
                           return r >= e && r < e + 86400;
                         }).length;
                         return (
@@ -20315,16 +20288,12 @@
                 s.createElement(
                   "div",
                   { className: (0, E.Z)(wa().Body, wa().Width100) },
-                  `${(0, v.Jr)("#dpc_about_format_dates_oq_prefix")}${(0, v.Jr)(
-                    "#dpc_about_format_dates_winter22_oq",
-                  )}`,
+                  `${(0, v.Jr)("#dpc_about_format_dates_oq_prefix")}${(0, v.Jr)("#dpc_about_format_dates_winter22_oq")}`,
                 ),
                 s.createElement(
                   "div",
                   { className: (0, E.Z)(wa().Body, wa().Width100) },
-                  `${(0, v.Jr)("#dpc_about_format_dates_cq_prefix")}${(0, v.Jr)(
-                    "#dpc_about_format_dates_winter22_cq",
-                  )}`,
+                  `${(0, v.Jr)("#dpc_about_format_dates_cq_prefix")}${(0, v.Jr)("#dpc_about_format_dates_winter22_cq")}`,
                 ),
                 s.createElement("br", null),
                 s.createElement(
@@ -20335,16 +20304,12 @@
                 s.createElement(
                   "div",
                   { className: (0, E.Z)(wa().Body, wa().Width100) },
-                  `${(0, v.Jr)("#dpc_about_format_dates_oq_prefix")}${(0, v.Jr)(
-                    "#dpc_about_format_dates_spring23_oq",
-                  )}`,
+                  `${(0, v.Jr)("#dpc_about_format_dates_oq_prefix")}${(0, v.Jr)("#dpc_about_format_dates_spring23_oq")}`,
                 ),
                 s.createElement(
                   "div",
                   { className: (0, E.Z)(wa().Body, wa().Width100) },
-                  `${(0, v.Jr)("#dpc_about_format_dates_cq_prefix")}${(0, v.Jr)(
-                    "#dpc_about_format_dates_spring23_cq",
-                  )}`,
+                  `${(0, v.Jr)("#dpc_about_format_dates_cq_prefix")}${(0, v.Jr)("#dpc_about_format_dates_spring23_cq")}`,
                 ),
                 s.createElement("br", null),
                 s.createElement(
@@ -20355,16 +20320,12 @@
                 s.createElement(
                   "div",
                   { className: (0, E.Z)(wa().Body, wa().Width100) },
-                  `${(0, v.Jr)("#dpc_about_format_dates_oq_prefix")}${(0, v.Jr)(
-                    "#dpc_about_format_dates_summer23_oq",
-                  )}`,
+                  `${(0, v.Jr)("#dpc_about_format_dates_oq_prefix")}${(0, v.Jr)("#dpc_about_format_dates_summer23_oq")}`,
                 ),
                 s.createElement(
                   "div",
                   { className: (0, E.Z)(wa().Body, wa().Width100) },
-                  `${(0, v.Jr)("#dpc_about_format_dates_cq_prefix")}${(0, v.Jr)(
-                    "#dpc_about_format_dates_summer23_cq",
-                  )}`,
+                  `${(0, v.Jr)("#dpc_about_format_dates_cq_prefix")}${(0, v.Jr)("#dpc_about_format_dates_summer23_cq")}`,
                 ),
                 s.createElement("br", null),
                 s.createElement(
@@ -20840,15 +20801,15 @@
                       ? void 0
                       : a.actual_time
                     : null == a
-                    ? void 0
-                    : a.scheduled_time) -
+                      ? void 0
+                      : a.scheduled_time) -
                   ((null == r ? void 0 : r.actual_time)
                     ? null == r
                       ? void 0
                       : r.actual_time
                     : null == r
-                    ? void 0
-                    : r.scheduled_time)
+                      ? void 0
+                      : r.scheduled_time)
                 );
               });
           let d = a.is_event_completed ? 450 : 510,
@@ -20867,8 +20828,8 @@
                       ? void 0
                       : a.actual_time
                     : null == a
-                    ? void 0
-                    : a.scheduled_time;
+                      ? void 0
+                      : a.scheduled_time;
                 return r >= t && r < t + 86400;
               });
               0 != a.length &&
@@ -20884,8 +20845,8 @@
                       ? void 0
                       : a.actual_time
                     : null == a
-                    ? void 0
-                    : a.scheduled_time;
+                      ? void 0
+                      : a.scheduled_time;
                 return r >= t && r < t + 86400;
               });
               if (0 != a.length) {
@@ -20936,8 +20897,8 @@
                         ? void 0
                         : a.actual_time
                       : null == a
-                      ? void 0
-                      : a.scheduled_time;
+                        ? void 0
+                        : a.scheduled_time;
                   return r >= e && r < e + 86400;
                 });
                 return 0 == t.length
@@ -21037,18 +20998,18 @@
               0 == (null == a ? void 0 : a.team_id_1)
                 ? "#dpc_tbd"
                 : C
-                ? null == l
-                  ? void 0
-                  : l.name
-                : "#dpc_hidden",
+                  ? null == l
+                    ? void 0
+                    : l.name
+                  : "#dpc_hidden",
             B =
               0 == (null == a ? void 0 : a.team_id_2)
                 ? "#dpc_tbd"
                 : C
-                ? null == d
-                  ? void 0
-                  : d.name
-                : "#dpc_hidden";
+                  ? null == d
+                    ? void 0
+                    : d.name
+                  : "#dpc_hidden";
           (I && f) || (w = "#dpc_vs");
           const R = I
             ? null == a
@@ -21326,9 +21287,7 @@
                             key: `0h${t}`,
                             className: ka().HeroIcon,
                             style: {
-                              backgroundImage: `url( ${
-                                n.Y.IMG_URL
-                              }heroes/icons/${i || "unknown"}.png )`,
+                              backgroundImage: `url( ${n.Y.IMG_URL}heroes/icons/${i || "unknown"}.png )`,
                             },
                           });
                     }),
@@ -21417,9 +21376,7 @@
                             key: `1h${t}`,
                             className: ka().HeroIcon,
                             style: {
-                              backgroundImage: `url( ${
-                                n.Y.IMG_URL
-                              }heroes/icons/${i || "unknown"}.png )`,
+                              backgroundImage: `url( ${n.Y.IMG_URL}heroes/icons/${i || "unknown"}.png )`,
                             },
                           });
                     }),
@@ -21641,40 +21598,40 @@
                             ),
                           )
                         : a.league_id
-                        ? s.createElement(
-                            "div",
-                            {
-                              key: `l_${t.team_id}_${a.timestamp}`,
-                              className: $a().LeagueResult,
-                            },
-                            s.createElement(ra(), {
-                              className: $a().Timestamp,
-                              date: 1e3 * a.timestamp,
-                              format: "MMM DD YYYY",
-                            }),
-                            s.createElement("div", {
-                              className: $a().LeagueLogo,
-                              style: {
-                                backgroundImage: `url( ${n.Y.CDN_URL}apps/dota2/images/leagues/${a.league_id}/images/image_8.png`,
+                          ? s.createElement(
+                              "div",
+                              {
+                                key: `l_${t.team_id}_${a.timestamp}`,
+                                className: $a().LeagueResult,
                               },
-                            }),
-                            s.createElement(
-                              "div",
-                              { className: $a().LeaguePlace },
-                              (0, Oa.jc)(a.standing),
-                            ),
-                            s.createElement(
-                              "div",
-                              { className: $a().LeagueName },
-                              (0, v.Jr)(null == r ? void 0 : r.info.name),
-                            ),
-                            s.createElement(
-                              "div",
-                              { className: $a().Points },
-                              a.points,
-                            ),
-                          )
-                        : null;
+                              s.createElement(ra(), {
+                                className: $a().Timestamp,
+                                date: 1e3 * a.timestamp,
+                                format: "MMM DD YYYY",
+                              }),
+                              s.createElement("div", {
+                                className: $a().LeagueLogo,
+                                style: {
+                                  backgroundImage: `url( ${n.Y.CDN_URL}apps/dota2/images/leagues/${a.league_id}/images/image_8.png`,
+                                },
+                              }),
+                              s.createElement(
+                                "div",
+                                { className: $a().LeaguePlace },
+                                (0, Oa.jc)(a.standing),
+                              ),
+                              s.createElement(
+                                "div",
+                                { className: $a().LeagueName },
+                                (0, v.Jr)(null == r ? void 0 : r.info.name),
+                              ),
+                              s.createElement(
+                                "div",
+                                { className: $a().Points },
+                                a.points,
+                              ),
+                            )
+                          : null;
                     }),
                   ),
                 );
@@ -21728,8 +21685,8 @@
               ? void 0
               : a.actual_time
             : null == a
-            ? void 0
-            : a.scheduled_time,
+              ? void 0
+              : a.scheduled_time,
           y = _ && h && b ? "#dpc_tbd" : "#dpc_bye",
           S = o ? (n ? o.name : "#dpc_hidden") : l ? y : "#dpc_tbd",
           T = l ? (n ? l.name : "#dpc_hidden") : o ? y : "#dpc_tbd",
@@ -21753,8 +21710,10 @@
           R = B
             ? 1
             : i
-            ? a.matches.length
-            : Ot.f.Get().GetNodeTypeGameCount(null == a ? void 0 : a.node_type),
+              ? a.matches.length
+              : Ot.f
+                  .Get()
+                  .GetNodeTypeGameCount(null == a ? void 0 : a.node_type),
           D = 115 + 30 * R + (e.strBackgroundColor ? 12 : 0),
           L = w ? 1.5 * Ka.OQ : Ka.OQ,
           A = w ? D : Ka.GJ,
@@ -21765,235 +21724,236 @@
           "#dpc_bracket_grand_final_abbrev" === e.strNodeTitle
           ? null
           : e.bAlwaysRender ||
-            0 != (null == a ? void 0 : a.team_id_1) ||
-            0 != (null == a ? void 0 : a.team_id_2) ||
-            0 != (null == a ? void 0 : a.incoming_node_id_1) ||
-            0 != (null == a ? void 0 : a.incoming_node_id_2)
-          ? s.createElement(
-              "div",
-              {
-                className: (0, E.Z)(
-                  er().BracketNode,
-                  w && er().Expanded,
-                  N && er().OtherExpanded,
-                  e.strBackgroundColor && er().ShowingColor,
-                  B && er().IsLive,
-                ),
-                style: {
-                  background: e.strBackgroundColor
-                    ? `linear-gradient( ${e.strBackgroundColor}33, ${e.strBackgroundColor}33 ), linear-gradient( #27272D, #27272D )`
-                    : "#27272D",
-                  width: L,
-                  height: A,
-                  marginLeft: M,
-                  marginTop: P,
-                },
-                onClick: () =>
-                  e.setExpandedNodeID(
-                    e.nExpandedNodeID == e.nNodeID ? 0 : e.nNodeID,
-                  ),
-              },
-              s.createElement(
+              0 != (null == a ? void 0 : a.team_id_1) ||
+              0 != (null == a ? void 0 : a.team_id_2) ||
+              0 != (null == a ? void 0 : a.incoming_node_id_1) ||
+              0 != (null == a ? void 0 : a.incoming_node_id_2)
+            ? s.createElement(
                 "div",
                 {
-                  className: er().NodeHeader,
+                  className: (0, E.Z)(
+                    er().BracketNode,
+                    w && er().Expanded,
+                    N && er().OtherExpanded,
+                    e.strBackgroundColor && er().ShowingColor,
+                    B && er().IsLive,
+                  ),
                   style: {
-                    borderBottomColor: e.strBackgroundColor
-                      ? e.strBackgroundColor
-                      : "#36363E",
                     background: e.strBackgroundColor
-                      ? `linear-gradient( ${e.strBackgroundColor}33, ${e.strBackgroundColor}33 ), linear-gradient( #36363E, #36363E )`
-                      : "#36363E",
+                      ? `linear-gradient( ${e.strBackgroundColor}33, ${e.strBackgroundColor}33 ), linear-gradient( #27272D, #27272D )`
+                      : "#27272D",
+                    width: L,
+                    height: A,
+                    marginLeft: M,
+                    marginTop: P,
                   },
+                  onClick: () =>
+                    e.setExpandedNodeID(
+                      e.nExpandedNodeID == e.nNodeID ? 0 : e.nNodeID,
+                    ),
                 },
-                s.createElement("div", null, (0, v.Jr)(e.strNodeTitle)),
-                e.strBackgroundColor &&
-                  s.createElement(ra(), {
-                    className: er().Timestamp,
-                    date: 1e3 * f,
-                    format: "MMM DD LT",
-                  }),
-                s.createElement(
-                  "div",
-                  { className: er().BestOf },
-                  (0, v.Jr)(G),
-                ),
-                s.createElement(
-                  "div",
-                  { className: er().Live },
-                  (0, v.Jr)("#dpc_live"),
-                ),
-              ),
-              s.createElement(
-                "div",
-                { className: er().ContentsContainer },
                 s.createElement(
                   "div",
                   {
-                    className: (0, E.Z)(
-                      er().Teams,
-                      w && er().Hidden,
-                      e.strBackgroundColor && er().TeamsSmallerPadding,
-                    ),
+                    className: er().NodeHeader,
+                    style: {
+                      borderBottomColor: e.strBackgroundColor
+                        ? e.strBackgroundColor
+                        : "#36363E",
+                      background: e.strBackgroundColor
+                        ? `linear-gradient( ${e.strBackgroundColor}33, ${e.strBackgroundColor}33 ), linear-gradient( #36363E, #36363E )`
+                        : "#36363E",
+                    },
                   },
-                  s.createElement(
-                    "div",
-                    { className: (0, E.Z)(er().Team, d && i && er().Winner) },
-                    s.createElement(_a, {
-                      nTeamID: n ? (null == a ? void 0 : a.team_id_1) : 0,
-                      className: er().TeamLogo,
-                      nSize: 20,
-                    }),
-                    s.createElement(
-                      "div",
-                      { className: er().TeamName },
-                      (0, v.Jr)(S),
-                    ),
-                    s.createElement("div", { className: er().Score }, C),
-                  ),
-                  s.createElement(
-                    "div",
-                    { className: (0, E.Z)(er().Team, u && i && er().Winner) },
-                    s.createElement(_a, {
-                      nTeamID: n ? (null == a ? void 0 : a.team_id_2) : 0,
-                      className: er().TeamLogo,
-                      nSize: 20,
-                    }),
-                    s.createElement(
-                      "div",
-                      { className: er().TeamName },
-                      (0, v.Jr)(T),
-                    ),
-                    s.createElement("div", { className: er().Score }, I),
-                  ),
-                ),
-                s.createElement(
-                  "div",
-                  { className: (0, E.Z)(er().Details, !w && er().Hidden) },
-                  0 !== f &&
-                    !e.strBackgroundColor &&
+                  s.createElement("div", null, (0, v.Jr)(e.strNodeTitle)),
+                  e.strBackgroundColor &&
                     s.createElement(ra(), {
                       className: er().Timestamp,
                       date: 1e3 * f,
                       format: "MMM DD LT",
                     }),
-                  0 === f && !e.strBackgroundColor && "",
-                  e.strBackgroundColor &&
-                    s.createElement(
-                      "div",
-                      { className: er().Timestamp },
-                      (0, v.Jr)(e.strNodeTitle),
-                    ),
-                  s.createElement("div", { className: er().Separator }),
                   s.createElement(
                     "div",
-                    { className: (0, E.Z)(er().Team, d && i && er().Winner) },
-                    s.createElement(_a, {
-                      nTeamID: n ? (null == a ? void 0 : a.team_id_1) : 0,
-                      className: er().TeamLogo,
-                      nSize: 20,
-                    }),
-                    s.createElement(
-                      "div",
-                      { className: er().TeamName },
-                      (0, v.Jr)(S),
-                    ),
-                    s.createElement("div", { className: er().Score }, C),
+                    { className: er().BestOf },
+                    (0, v.Jr)(G),
                   ),
                   s.createElement(
                     "div",
-                    { className: (0, E.Z)(er().Team, u && i && er().Winner) },
-                    s.createElement(_a, {
-                      nTeamID: n ? (null == a ? void 0 : a.team_id_2) : 0,
-                      className: er().TeamLogo,
-                      nSize: 20,
-                    }),
+                    { className: er().Live },
+                    (0, v.Jr)("#dpc_live"),
+                  ),
+                ),
+                s.createElement(
+                  "div",
+                  { className: er().ContentsContainer },
+                  s.createElement(
+                    "div",
+                    {
+                      className: (0, E.Z)(
+                        er().Teams,
+                        w && er().Hidden,
+                        e.strBackgroundColor && er().TeamsSmallerPadding,
+                      ),
+                    },
                     s.createElement(
                       "div",
-                      { className: er().TeamName },
-                      (0, v.Jr)(T),
-                    ),
-                    s.createElement("div", { className: er().Score }, I),
-                  ),
-                  s.createElement("div", { className: er().Separator }),
-                  !B &&
-                    (0, Oa.bE)(1, R).map((r) => {
-                      const n =
-                          !i || r - 1 < (null == a ? void 0 : a.matches.length),
-                        o =
-                          Ot.f
-                            .Get()
-                            .GetLeagueNodeVODs(e.nLeagueID, e.nNodeID, r)
-                            .length > 0 || !i,
-                        l = c._.dpc_watch(
-                          (0, xt.B2)(t),
-                          `${e.nLeagueID}`,
-                          `${e.nNodeID}`,
-                          (0, xt.k8)(r, o ? xt.Uz.VOD : xt.Uz.GAME),
-                        ),
-                        d = c._.dpc_watch(
-                          (0, xt.B2)(t),
-                          `${e.nLeagueID}`,
-                          `${e.nNodeID}`,
-                          (0, xt.k8)(r, xt.Uz.SERIES),
-                        ),
-                        u = B
-                          ? "#dpc_watch_live"
-                          : o
-                          ? "#dpc_watch_vod"
-                          : "#dpc_game_details";
-                      return s.createElement(
+                      { className: (0, E.Z)(er().Team, d && i && er().Winner) },
+                      s.createElement(_a, {
+                        nTeamID: n ? (null == a ? void 0 : a.team_id_1) : 0,
+                        className: er().TeamLogo,
+                        nSize: 20,
+                      }),
+                      s.createElement(
                         "div",
-                        {
-                          key: `SG${r}`,
-                          className: (0, E.Z)(
-                            er().SeriesGame,
-                            !n && er().Disabled,
+                        { className: er().TeamName },
+                        (0, v.Jr)(S),
+                      ),
+                      s.createElement("div", { className: er().Score }, C),
+                    ),
+                    s.createElement(
+                      "div",
+                      { className: (0, E.Z)(er().Team, u && i && er().Winner) },
+                      s.createElement(_a, {
+                        nTeamID: n ? (null == a ? void 0 : a.team_id_2) : 0,
+                        className: er().TeamLogo,
+                        nSize: 20,
+                      }),
+                      s.createElement(
+                        "div",
+                        { className: er().TeamName },
+                        (0, v.Jr)(T),
+                      ),
+                      s.createElement("div", { className: er().Score }, I),
+                    ),
+                  ),
+                  s.createElement(
+                    "div",
+                    { className: (0, E.Z)(er().Details, !w && er().Hidden) },
+                    0 !== f &&
+                      !e.strBackgroundColor &&
+                      s.createElement(ra(), {
+                        className: er().Timestamp,
+                        date: 1e3 * f,
+                        format: "MMM DD LT",
+                      }),
+                    0 === f && !e.strBackgroundColor && "",
+                    e.strBackgroundColor &&
+                      s.createElement(
+                        "div",
+                        { className: er().Timestamp },
+                        (0, v.Jr)(e.strNodeTitle),
+                      ),
+                    s.createElement("div", { className: er().Separator }),
+                    s.createElement(
+                      "div",
+                      { className: (0, E.Z)(er().Team, d && i && er().Winner) },
+                      s.createElement(_a, {
+                        nTeamID: n ? (null == a ? void 0 : a.team_id_1) : 0,
+                        className: er().TeamLogo,
+                        nSize: 20,
+                      }),
+                      s.createElement(
+                        "div",
+                        { className: er().TeamName },
+                        (0, v.Jr)(S),
+                      ),
+                      s.createElement("div", { className: er().Score }, C),
+                    ),
+                    s.createElement(
+                      "div",
+                      { className: (0, E.Z)(er().Team, u && i && er().Winner) },
+                      s.createElement(_a, {
+                        nTeamID: n ? (null == a ? void 0 : a.team_id_2) : 0,
+                        className: er().TeamLogo,
+                        nSize: 20,
+                      }),
+                      s.createElement(
+                        "div",
+                        { className: er().TeamName },
+                        (0, v.Jr)(T),
+                      ),
+                      s.createElement("div", { className: er().Score }, I),
+                    ),
+                    s.createElement("div", { className: er().Separator }),
+                    !B &&
+                      (0, Oa.bE)(1, R).map((r) => {
+                        const n =
+                            !i ||
+                            r - 1 < (null == a ? void 0 : a.matches.length),
+                          o =
+                            Ot.f
+                              .Get()
+                              .GetLeagueNodeVODs(e.nLeagueID, e.nNodeID, r)
+                              .length > 0 || !i,
+                          l = c._.dpc_watch(
+                            (0, xt.B2)(t),
+                            `${e.nLeagueID}`,
+                            `${e.nNodeID}`,
+                            (0, xt.k8)(r, o ? xt.Uz.VOD : xt.Uz.GAME),
                           ),
-                        },
-                        s.createElement(
+                          d = c._.dpc_watch(
+                            (0, xt.B2)(t),
+                            `${e.nLeagueID}`,
+                            `${e.nNodeID}`,
+                            (0, xt.k8)(r, xt.Uz.SERIES),
+                          ),
+                          u = B
+                            ? "#dpc_watch_live"
+                            : o
+                              ? "#dpc_watch_vod"
+                              : "#dpc_game_details";
+                        return s.createElement(
                           "div",
-                          { className: er().GameNumber },
-                          (0, v.Jr)("#dpc_game_" + (r - 1)),
-                        ),
+                          {
+                            key: `SG${r}`,
+                            className: (0, E.Z)(
+                              er().SeriesGame,
+                              !n && er().Disabled,
+                            ),
+                          },
+                          s.createElement(
+                            "div",
+                            { className: er().GameNumber },
+                            (0, v.Jr)("#dpc_game_" + (r - 1)),
+                          ),
+                          s.createElement(
+                            m.rU,
+                            {
+                              to: {
+                                state: { bAutoScroll: !0 },
+                                pathname: B ? d : l,
+                              },
+                              className: er().DetailsButton,
+                            },
+                            (0, v.Jr)(u),
+                          ),
+                        );
+                      }),
+                    B &&
+                      s.createElement(
+                        "div",
+                        { className: er().LiveContainer },
                         s.createElement(
                           m.rU,
                           {
                             to: {
                               state: { bAutoScroll: !0 },
-                              pathname: B ? d : l,
+                              pathname: c._.dpc_watch(
+                                (0, xt.B2)(t),
+                                `${e.nLeagueID}`,
+                                `${e.nNodeID}`,
+                                (0, xt.k8)(0, xt.Uz.SERIES),
+                              ),
                             },
                             className: er().DetailsButton,
                           },
-                          (0, v.Jr)(u),
+                          (0, v.Jr)("#dpc_watch_live"),
                         ),
-                      );
-                    }),
-                  B &&
-                    s.createElement(
-                      "div",
-                      { className: er().LiveContainer },
-                      s.createElement(
-                        m.rU,
-                        {
-                          to: {
-                            state: { bAutoScroll: !0 },
-                            pathname: c._.dpc_watch(
-                              (0, xt.B2)(t),
-                              `${e.nLeagueID}`,
-                              `${e.nNodeID}`,
-                              (0, xt.k8)(0, xt.Uz.SERIES),
-                            ),
-                          },
-                          className: er().DetailsButton,
-                        },
-                        (0, v.Jr)("#dpc_watch_live"),
                       ),
-                    ),
+                  ),
                 ),
-              ),
-            )
-          : null;
+              )
+            : null;
       });
       var ar = a(50631),
         rr = a.n(ar);
@@ -22049,8 +22009,8 @@
                   ? void 0
                   : e.actual_time
                 : null == e
-                ? void 0
-                : e.scheduled_time;
+                  ? void 0
+                  : e.scheduled_time;
               if (0 != t) {
                 const e = new Date(1e3 * t).setHours(0, 0, 0, 0) / 1e3;
                 o.add(e);
@@ -22076,8 +22036,8 @@
                         ? void 0
                         : t.actual_time
                       : null == t
-                      ? void 0
-                      : t.scheduled_time,
+                        ? void 0
+                        : t.scheduled_time,
                     i = new Date(1e3 * r).setHours(0, 0, 0, 0) / 1e3,
                     o = e.bShowingDays ? l.findIndex((e) => i == e) + 1 : 0;
                   return s.createElement(
@@ -22194,8 +22154,8 @@
                   ? void 0
                   : e.actual_time
                 : null == e
-                ? void 0
-                : e.scheduled_time;
+                  ? void 0
+                  : e.scheduled_time;
               if (0 != t) {
                 const e = new Date(1e3 * t).setHours(0, 0, 0, 0) / 1e3;
                 d.add(e);
@@ -22255,9 +22215,7 @@
                     className: qa().GradientSquare,
                     style: {
                       borderTop: `1px solid ${Ka.jr[t + 1]}`,
-                      background: `linear-gradient( to bottom, ${
-                        Ka.jr[t + 1]
-                      }66, ${Ka.jr[t + 1]}22 )`,
+                      background: `linear-gradient( to bottom, ${Ka.jr[t + 1]}66, ${Ka.jr[t + 1]}22 )`,
                     },
                   }),
                   s.createElement(ra(), { date: 1e3 * e, format: "MMMM DD" }),
@@ -22485,16 +22443,16 @@
                 ? void 0
                 : p.team_1_wins
               : null == p
-              ? void 0
-              : p.team_2_wins,
+                ? void 0
+                : p.team_2_wins,
           T =
             (null == p ? void 0 : p.team_id_1) == i.nColumnTeam
               ? null == p
                 ? void 0
                 : p.team_1_wins
               : null == p
-              ? void 0
-              : p.team_2_wins,
+                ? void 0
+                : p.team_2_wins,
           C = p && p.is_completed && S > T,
           I = p && p.is_completed && S < T,
           w = p && p.is_completed && S == T;
@@ -22502,8 +22460,8 @@
         C
           ? ((N = b), (B = f))
           : I
-          ? ((N = f), (B = b))
-          : w && ((N = y), (B = y));
+            ? ((N = f), (B = b))
+            : w && ((N = y), (B = y));
         let R = !1;
         const D = 50 + 55 * (u.length + 1),
           L = u.length > 0;
@@ -22564,16 +22522,16 @@
                               ? void 0
                               : b.team_1_wins
                             : null == b
-                            ? void 0
-                            : b.team_2_wins,
+                              ? void 0
+                              : b.team_2_wins,
                         y =
                           (null == b ? void 0 : b.team_id_1) == p
                             ? null == b
                               ? void 0
                               : b.team_1_wins
                             : null == b
-                            ? void 0
-                            : b.team_2_wins;
+                              ? void 0
+                              : b.team_2_wins;
                       (null == b ? void 0 : b.team_1_wins) ==
                         (null == b ? void 0 : b.team_2_wins) &&
                         (null == b ? void 0 : b.is_completed) &&
@@ -22583,8 +22541,8 @@
                             ? `${f} - ${y}`
                             : void 0
                           : b
-                          ? "?"
-                          : void 0,
+                            ? "?"
+                            : void 0,
                         T =
                           !b || b.is_completed
                             ? void 0
@@ -23334,143 +23292,143 @@
             e != Ut._A.INTERNATIONAL_2022_LASTCHANCE
             ? null
             : Ut.BY[l] && l != Ut.BY.INVALID
-            ? s.createElement(
-                "div",
-                { className: _r().DPCStandingsPageMajor },
-                s.createElement(
+              ? s.createElement(
                   "div",
-                  { className: _r().Header },
-                  s.createElement(Qt, {
-                    eStyle: Kt.NORMAL,
-                    options: o,
-                    selectedOption: l,
-                    setOption: (a) => {
-                      t.push(c._.dpc_standings((0, xt.B2)(e), (0, xt.o5)(a)));
-                    },
-                  }),
-                ),
-                l == Ut.BY.WILD_CARD &&
-                  s.createElement(Tr, {
-                    ePhase: Ut.BY.WILD_CARD,
-                    eRegion: Ut.dO.UNSET,
-                    eDivision: Ut.sd.UNSET,
-                    arrHighlights: [
-                      {
-                        nMin: 1,
-                        nMax: 2,
-                        strColor: "#117C30",
-                        strDescription: "#dpc_advance_to_group",
+                  { className: _r().DPCStandingsPageMajor },
+                  s.createElement(
+                    "div",
+                    { className: _r().Header },
+                    s.createElement(Qt, {
+                      eStyle: Kt.NORMAL,
+                      options: o,
+                      selectedOption: l,
+                      setOption: (a) => {
+                        t.push(c._.dpc_standings((0, xt.B2)(e), (0, xt.o5)(a)));
                       },
-                      {
-                        nMin: 3,
-                        nMax: 6,
-                        strColor: "#922820",
-                        strDescription: "#dpc_eliminated",
-                      },
-                    ],
-                    bShowLegend: !0,
-                    bShowHeader: !1,
-                    bShowList: !0,
-                    bShowGrid: !0,
-                    bNarrowList: !1,
-                    bShowTiebreakers: !0,
-                  }),
-                l == Ut.BY.GROUP_STAGE &&
-                  s.createElement(Tr, {
-                    ePhase: Ut.BY.GROUP_STAGE,
-                    eRegion: Ut.dO.UNSET,
-                    eDivision: Ut.sd.UNSET,
-                    arrHighlights: i,
-                    bShowLegend: !0,
-                    bShowHeader: !1,
-                    bShowList: !0,
-                    bShowGrid: !0,
-                    bNarrowList: !1,
-                    bShowTiebreakers: !0,
-                  }),
-                l == Ut.BY.GROUP_A &&
-                  s.createElement(Tr, {
-                    ePhase: Ut.BY.GROUP_A,
-                    eRegion: Ut.dO.UNSET,
-                    eDivision: Ut.sd.UNSET,
-                    arrHighlights: i,
-                    bShowLegend: !0,
-                    bShowHeader: !1,
-                    bShowList: !0,
-                    bShowGrid: !0,
-                    bNarrowList: !1,
-                    bShowTiebreakers: !0,
-                  }),
-                l == Ut.BY.GROUP_B &&
-                  s.createElement(Tr, {
-                    ePhase: Ut.BY.GROUP_B,
-                    eRegion: Ut.dO.UNSET,
-                    eDivision: Ut.sd.UNSET,
-                    arrHighlights: i,
-                    bShowLegend: !0,
-                    bShowHeader: !1,
-                    bShowList: !0,
-                    bShowGrid: !0,
-                    bNarrowList: !1,
-                    bShowTiebreakers: !0,
-                  }),
-                l == Ut.BY.GROUP_C &&
-                  s.createElement(Tr, {
-                    ePhase: Ut.BY.GROUP_C,
-                    eRegion: Ut.dO.UNSET,
-                    eDivision: Ut.sd.UNSET,
-                    arrHighlights: i,
-                    bShowLegend: !0,
-                    bShowHeader: !1,
-                    bShowList: !0,
-                    bShowGrid: !0,
-                    bNarrowList: !1,
-                    bShowTiebreakers: !0,
-                  }),
-                l == Ut.BY.GROUP_D &&
-                  s.createElement(Tr, {
-                    ePhase: Ut.BY.GROUP_D,
-                    eRegion: Ut.dO.UNSET,
-                    eDivision: Ut.sd.UNSET,
-                    arrHighlights: i,
-                    bShowLegend: !0,
-                    bShowHeader: !1,
-                    bShowList: !0,
-                    bShowGrid: !0,
-                    bNarrowList: !1,
-                    bShowTiebreakers: !0,
-                  }),
-                l == Ut.BY.PLACEMENT &&
-                  s.createElement(yr, {
-                    ePhase: Ut.BY.PLACEMENT,
-                    eRegion: Ut.dO.UNSET,
-                    eDivision: Ut.sd.UNSET,
-                    arrHighlights: i,
-                    bShowLegend: !0,
-                    bNarrow: !1,
-                  }),
-                l == Ut.BY.PLAYOFF &&
-                  s.createElement(or, {
-                    ePhase: Ut.BY.PLAYOFF,
-                    eRegion: Ut.dO.UNSET,
-                    eDivision: Ut.sd.UNSET,
-                  }),
-                l == Ut.BY.RESULTS &&
-                  s.createElement(mr, {
-                    eRegion: Ut.dO.UNSET,
-                    eDivision: Ut.sd.UNSET,
-                    bStyleTopThree: !0,
-                  }),
-              )
-            : s.createElement(u.l_, {
-                to: {
-                  state: { bAutoScroll: !0 },
-                  pathname: c._.dpc_standings(
-                    (0, xt.B2)(e),
-                    (0, xt.o5)(r.leagues[0].phases[0].phase),
+                    }),
                   ),
-                },
-              });
+                  l == Ut.BY.WILD_CARD &&
+                    s.createElement(Tr, {
+                      ePhase: Ut.BY.WILD_CARD,
+                      eRegion: Ut.dO.UNSET,
+                      eDivision: Ut.sd.UNSET,
+                      arrHighlights: [
+                        {
+                          nMin: 1,
+                          nMax: 2,
+                          strColor: "#117C30",
+                          strDescription: "#dpc_advance_to_group",
+                        },
+                        {
+                          nMin: 3,
+                          nMax: 6,
+                          strColor: "#922820",
+                          strDescription: "#dpc_eliminated",
+                        },
+                      ],
+                      bShowLegend: !0,
+                      bShowHeader: !1,
+                      bShowList: !0,
+                      bShowGrid: !0,
+                      bNarrowList: !1,
+                      bShowTiebreakers: !0,
+                    }),
+                  l == Ut.BY.GROUP_STAGE &&
+                    s.createElement(Tr, {
+                      ePhase: Ut.BY.GROUP_STAGE,
+                      eRegion: Ut.dO.UNSET,
+                      eDivision: Ut.sd.UNSET,
+                      arrHighlights: i,
+                      bShowLegend: !0,
+                      bShowHeader: !1,
+                      bShowList: !0,
+                      bShowGrid: !0,
+                      bNarrowList: !1,
+                      bShowTiebreakers: !0,
+                    }),
+                  l == Ut.BY.GROUP_A &&
+                    s.createElement(Tr, {
+                      ePhase: Ut.BY.GROUP_A,
+                      eRegion: Ut.dO.UNSET,
+                      eDivision: Ut.sd.UNSET,
+                      arrHighlights: i,
+                      bShowLegend: !0,
+                      bShowHeader: !1,
+                      bShowList: !0,
+                      bShowGrid: !0,
+                      bNarrowList: !1,
+                      bShowTiebreakers: !0,
+                    }),
+                  l == Ut.BY.GROUP_B &&
+                    s.createElement(Tr, {
+                      ePhase: Ut.BY.GROUP_B,
+                      eRegion: Ut.dO.UNSET,
+                      eDivision: Ut.sd.UNSET,
+                      arrHighlights: i,
+                      bShowLegend: !0,
+                      bShowHeader: !1,
+                      bShowList: !0,
+                      bShowGrid: !0,
+                      bNarrowList: !1,
+                      bShowTiebreakers: !0,
+                    }),
+                  l == Ut.BY.GROUP_C &&
+                    s.createElement(Tr, {
+                      ePhase: Ut.BY.GROUP_C,
+                      eRegion: Ut.dO.UNSET,
+                      eDivision: Ut.sd.UNSET,
+                      arrHighlights: i,
+                      bShowLegend: !0,
+                      bShowHeader: !1,
+                      bShowList: !0,
+                      bShowGrid: !0,
+                      bNarrowList: !1,
+                      bShowTiebreakers: !0,
+                    }),
+                  l == Ut.BY.GROUP_D &&
+                    s.createElement(Tr, {
+                      ePhase: Ut.BY.GROUP_D,
+                      eRegion: Ut.dO.UNSET,
+                      eDivision: Ut.sd.UNSET,
+                      arrHighlights: i,
+                      bShowLegend: !0,
+                      bShowHeader: !1,
+                      bShowList: !0,
+                      bShowGrid: !0,
+                      bNarrowList: !1,
+                      bShowTiebreakers: !0,
+                    }),
+                  l == Ut.BY.PLACEMENT &&
+                    s.createElement(yr, {
+                      ePhase: Ut.BY.PLACEMENT,
+                      eRegion: Ut.dO.UNSET,
+                      eDivision: Ut.sd.UNSET,
+                      arrHighlights: i,
+                      bShowLegend: !0,
+                      bNarrow: !1,
+                    }),
+                  l == Ut.BY.PLAYOFF &&
+                    s.createElement(or, {
+                      ePhase: Ut.BY.PLAYOFF,
+                      eRegion: Ut.dO.UNSET,
+                      eDivision: Ut.sd.UNSET,
+                    }),
+                  l == Ut.BY.RESULTS &&
+                    s.createElement(mr, {
+                      eRegion: Ut.dO.UNSET,
+                      eDivision: Ut.sd.UNSET,
+                      bStyleTopThree: !0,
+                    }),
+                )
+              : s.createElement(u.l_, {
+                  to: {
+                    state: { bAutoScroll: !0 },
+                    pathname: c._.dpc_standings(
+                      (0, xt.B2)(e),
+                      (0, xt.o5)(r.leagues[0].phases[0].phase),
+                    ),
+                  },
+                });
         }),
         wr = (0, d.Pi)(() => {
           const e = Yn(),
@@ -23501,44 +23459,48 @@
             e == Ut._A.INTERNATIONAL_2022_LASTCHANCE
             ? null
             : Ut.dO[n] && n != Ut.dO.UNSET
-            ? (0, xt.UP)(a.strPhase) == Ut.BY.INVALID
-              ? s.createElement(u.l_, {
+              ? (0, xt.UP)(a.strPhase) == Ut.BY.INVALID
+                ? s.createElement(u.l_, {
+                    to: c._.dpc_standings(
+                      (0, xt.B2)(e),
+                      (0, xt.o5)(Ut.BY.PLAYOFF),
+                      `${Ot.f.Get().GetDefaultRegion(e)}`,
+                    ),
+                  })
+                : s.createElement(
+                    "div",
+                    { className: _r().DPCStandingsPageTIQualifiers },
+                    s.createElement(
+                      "div",
+                      { className: _r().Header },
+                      s.createElement(Qt, {
+                        eStyle: Kt.NORMAL,
+                        options: r,
+                        selectedOption: n,
+                        setOption: (r) => {
+                          t.push(
+                            c._.dpc_standings(
+                              (0, xt.B2)(e),
+                              a.strPhase,
+                              `${r}`,
+                            ),
+                          );
+                        },
+                      }),
+                    ),
+                    s.createElement(or, {
+                      ePhase: Ut.BY.PLAYOFF,
+                      eRegion: n,
+                      eDivision: Ut.sd.UNSET,
+                    }),
+                  )
+              : s.createElement(u.l_, {
                   to: c._.dpc_standings(
                     (0, xt.B2)(e),
-                    (0, xt.o5)(Ut.BY.PLAYOFF),
+                    a.strPhase,
                     `${Ot.f.Get().GetDefaultRegion(e)}`,
                   ),
-                })
-              : s.createElement(
-                  "div",
-                  { className: _r().DPCStandingsPageTIQualifiers },
-                  s.createElement(
-                    "div",
-                    { className: _r().Header },
-                    s.createElement(Qt, {
-                      eStyle: Kt.NORMAL,
-                      options: r,
-                      selectedOption: n,
-                      setOption: (r) => {
-                        t.push(
-                          c._.dpc_standings((0, xt.B2)(e), a.strPhase, `${r}`),
-                        );
-                      },
-                    }),
-                  ),
-                  s.createElement(or, {
-                    ePhase: Ut.BY.PLAYOFF,
-                    eRegion: n,
-                    eDivision: Ut.sd.UNSET,
-                  }),
-                )
-            : s.createElement(u.l_, {
-                to: c._.dpc_standings(
-                  (0, xt.B2)(e),
-                  a.strPhase,
-                  `${Ot.f.Get().GetDefaultRegion(e)}`,
-                ),
-              });
+                });
         }),
         Nr = (0, d.Pi)(() => {
           const e = Yn(),
@@ -23568,44 +23530,48 @@
           return Ot.f.Get().GetEventType(e) != Ut.f5.LEAGUE_FINALS
             ? null
             : Ut.dO[n] && n != Ut.dO.UNSET
-            ? (0, xt.UP)(a.strPhase) == Ut.BY.INVALID
-              ? s.createElement(u.l_, {
+              ? (0, xt.UP)(a.strPhase) == Ut.BY.INVALID
+                ? s.createElement(u.l_, {
+                    to: c._.dpc_standings(
+                      (0, xt.B2)(e),
+                      (0, xt.o5)(Ut.BY.PLAYOFF),
+                      `${Ot.f.Get().GetDefaultRegion(e)}`,
+                    ),
+                  })
+                : s.createElement(
+                    "div",
+                    { className: _r().DPCStandingsPageLeagueFinals },
+                    s.createElement(
+                      "div",
+                      { className: _r().Header },
+                      s.createElement(Qt, {
+                        eStyle: Kt.NORMAL,
+                        options: r,
+                        selectedOption: n,
+                        setOption: (r) => {
+                          t.push(
+                            c._.dpc_standings(
+                              (0, xt.B2)(e),
+                              a.strPhase,
+                              `${r}`,
+                            ),
+                          );
+                        },
+                      }),
+                    ),
+                    s.createElement(or, {
+                      ePhase: Ut.BY.PLAYOFF,
+                      eRegion: n,
+                      eDivision: Ut.sd.UNSET,
+                    }),
+                  )
+              : s.createElement(u.l_, {
                   to: c._.dpc_standings(
                     (0, xt.B2)(e),
-                    (0, xt.o5)(Ut.BY.PLAYOFF),
+                    a.strPhase,
                     `${Ot.f.Get().GetDefaultRegion(e)}`,
                   ),
-                })
-              : s.createElement(
-                  "div",
-                  { className: _r().DPCStandingsPageLeagueFinals },
-                  s.createElement(
-                    "div",
-                    { className: _r().Header },
-                    s.createElement(Qt, {
-                      eStyle: Kt.NORMAL,
-                      options: r,
-                      selectedOption: n,
-                      setOption: (r) => {
-                        t.push(
-                          c._.dpc_standings((0, xt.B2)(e), a.strPhase, `${r}`),
-                        );
-                      },
-                    }),
-                  ),
-                  s.createElement(or, {
-                    ePhase: Ut.BY.PLAYOFF,
-                    eRegion: n,
-                    eDivision: Ut.sd.UNSET,
-                  }),
-                )
-            : s.createElement(u.l_, {
-                to: c._.dpc_standings(
-                  (0, xt.B2)(e),
-                  a.strPhase,
-                  `${Ot.f.Get().GetDefaultRegion(e)}`,
-                ),
-              });
+                });
         }),
         Br = (0, d.Pi)(() => {
           const e = Yn(),
@@ -23645,103 +23611,109 @@
           return Ot.f.Get().GetEventType(e) != Ut.f5.INTERNATIONAL
             ? null
             : Ut.BY[i] && i != Ut.BY.INVALID
-            ? s.createElement(
-                "div",
-                { className: _r().DPCStandingsPageMajor },
-                s.createElement(
+              ? s.createElement(
                   "div",
-                  { className: _r().Header },
-                  s.createElement(Qt, {
-                    eStyle: Kt.NORMAL,
-                    options: n,
-                    selectedOption: i,
-                    setOption: (a) => {
-                      t.push(c._.dpc_standings((0, xt.B2)(e), (0, xt.o5)(a)));
-                    },
-                  }),
-                ),
-                i == Ut.BY.DPC_POINT_STANDINGS && s.createElement(Xa, null),
-                i == Ut.BY.GROUP_A &&
-                  s.createElement(Tr, {
-                    ePhase: Ut.BY.GROUP_A,
-                    eRegion: Ut.dO.UNSET,
-                    eDivision: Ut.sd.UNSET,
-                    arrHighlights: r,
-                    bShowLegend: !0,
-                    bShowHeader: !1,
-                    bShowList: !0,
-                    bShowGrid: !0,
-                    bNarrowList: !1,
-                    bShowTiebreakers: !0,
-                  }),
-                i == Ut.BY.GROUP_B &&
-                  s.createElement(Tr, {
-                    ePhase: Ut.BY.GROUP_B,
-                    eRegion: Ut.dO.UNSET,
-                    eDivision: Ut.sd.UNSET,
-                    arrHighlights: r,
-                    bShowLegend: !0,
-                    bShowHeader: !1,
-                    bShowList: !0,
-                    bShowGrid: !0,
-                    bNarrowList: !1,
-                    bShowTiebreakers: !0,
-                  }),
-                i == Ut.BY.GROUP_C &&
-                  s.createElement(Tr, {
-                    ePhase: Ut.BY.GROUP_C,
-                    eRegion: Ut.dO.UNSET,
-                    eDivision: Ut.sd.UNSET,
-                    arrHighlights: r,
-                    bShowLegend: !0,
-                    bShowHeader: !1,
-                    bShowList: !0,
-                    bShowGrid: !0,
-                    bNarrowList: !1,
-                    bShowTiebreakers: !0,
-                  }),
-                i == Ut.BY.GROUP_D &&
-                  s.createElement(Tr, {
-                    ePhase: Ut.BY.GROUP_D,
-                    eRegion: Ut.dO.UNSET,
-                    eDivision: Ut.sd.UNSET,
-                    arrHighlights: r,
-                    bShowLegend: !0,
-                    bShowHeader: !1,
-                    bShowList: !0,
-                    bShowGrid: !0,
-                    bNarrowList: !1,
-                    bShowTiebreakers: !0,
-                  }),
-                i == Ut.BY.PLACEMENT &&
-                  s.createElement(yr, {
-                    ePhase: Ut.BY.PLACEMENT,
-                    eRegion: Ut.dO.UNSET,
-                    eDivision: Ut.sd.UNSET,
-                    arrHighlights: r,
-                    bShowLegend: !0,
-                    bNarrow: !1,
-                  }),
-                i == Ut.BY.PLAYOFF &&
-                  s.createElement(or, {
-                    ePhase: Ut.BY.PLAYOFF,
-                    eRegion: Ut.dO.UNSET,
-                    eDivision: Ut.sd.UNSET,
-                  }),
-                i == Ut.BY.RESULTS &&
-                  s.createElement(mr, {
-                    eRegion: Ut.dO.UNSET,
-                    eDivision: Ut.sd.UNSET,
-                    bStyleTopThree: !0,
-                  }),
-              )
-            : new Date().getTime() < 16661088e5
-            ? s.createElement(u.l_, {
-                to: c._.dpc_standings((0, xt.B2)(e), (0, xt.o5)(Ut.BY.GROUP_A)),
-              })
-            : s.createElement(u.l_, {
-                to: c._.dpc_standings((0, xt.B2)(e), (0, xt.o5)(Ut.BY.PLAYOFF)),
-              });
+                  { className: _r().DPCStandingsPageMajor },
+                  s.createElement(
+                    "div",
+                    { className: _r().Header },
+                    s.createElement(Qt, {
+                      eStyle: Kt.NORMAL,
+                      options: n,
+                      selectedOption: i,
+                      setOption: (a) => {
+                        t.push(c._.dpc_standings((0, xt.B2)(e), (0, xt.o5)(a)));
+                      },
+                    }),
+                  ),
+                  i == Ut.BY.DPC_POINT_STANDINGS && s.createElement(Xa, null),
+                  i == Ut.BY.GROUP_A &&
+                    s.createElement(Tr, {
+                      ePhase: Ut.BY.GROUP_A,
+                      eRegion: Ut.dO.UNSET,
+                      eDivision: Ut.sd.UNSET,
+                      arrHighlights: r,
+                      bShowLegend: !0,
+                      bShowHeader: !1,
+                      bShowList: !0,
+                      bShowGrid: !0,
+                      bNarrowList: !1,
+                      bShowTiebreakers: !0,
+                    }),
+                  i == Ut.BY.GROUP_B &&
+                    s.createElement(Tr, {
+                      ePhase: Ut.BY.GROUP_B,
+                      eRegion: Ut.dO.UNSET,
+                      eDivision: Ut.sd.UNSET,
+                      arrHighlights: r,
+                      bShowLegend: !0,
+                      bShowHeader: !1,
+                      bShowList: !0,
+                      bShowGrid: !0,
+                      bNarrowList: !1,
+                      bShowTiebreakers: !0,
+                    }),
+                  i == Ut.BY.GROUP_C &&
+                    s.createElement(Tr, {
+                      ePhase: Ut.BY.GROUP_C,
+                      eRegion: Ut.dO.UNSET,
+                      eDivision: Ut.sd.UNSET,
+                      arrHighlights: r,
+                      bShowLegend: !0,
+                      bShowHeader: !1,
+                      bShowList: !0,
+                      bShowGrid: !0,
+                      bNarrowList: !1,
+                      bShowTiebreakers: !0,
+                    }),
+                  i == Ut.BY.GROUP_D &&
+                    s.createElement(Tr, {
+                      ePhase: Ut.BY.GROUP_D,
+                      eRegion: Ut.dO.UNSET,
+                      eDivision: Ut.sd.UNSET,
+                      arrHighlights: r,
+                      bShowLegend: !0,
+                      bShowHeader: !1,
+                      bShowList: !0,
+                      bShowGrid: !0,
+                      bNarrowList: !1,
+                      bShowTiebreakers: !0,
+                    }),
+                  i == Ut.BY.PLACEMENT &&
+                    s.createElement(yr, {
+                      ePhase: Ut.BY.PLACEMENT,
+                      eRegion: Ut.dO.UNSET,
+                      eDivision: Ut.sd.UNSET,
+                      arrHighlights: r,
+                      bShowLegend: !0,
+                      bNarrow: !1,
+                    }),
+                  i == Ut.BY.PLAYOFF &&
+                    s.createElement(or, {
+                      ePhase: Ut.BY.PLAYOFF,
+                      eRegion: Ut.dO.UNSET,
+                      eDivision: Ut.sd.UNSET,
+                    }),
+                  i == Ut.BY.RESULTS &&
+                    s.createElement(mr, {
+                      eRegion: Ut.dO.UNSET,
+                      eDivision: Ut.sd.UNSET,
+                      bStyleTopThree: !0,
+                    }),
+                )
+              : new Date().getTime() < 16661088e5
+                ? s.createElement(u.l_, {
+                    to: c._.dpc_standings(
+                      (0, xt.B2)(e),
+                      (0, xt.o5)(Ut.BY.GROUP_A),
+                    ),
+                  })
+                : s.createElement(u.l_, {
+                    to: c._.dpc_standings(
+                      (0, xt.B2)(e),
+                      (0, xt.o5)(Ut.BY.PLAYOFF),
+                    ),
+                  });
         }),
         Rr = (0, d.Pi)(() =>
           s.createElement(
@@ -23796,10 +23768,7 @@
             null == a ||
               a.prize_pool.prize_split_pct_x100.forEach((e) =>
                 r.push(
-                  `$${(
-                    100 *
-                    Math.floor((a.prize_pool.total_prize_pool * e) / 1e6 + 0.5)
-                  ).toLocaleString()}`,
+                  `$${(100 * Math.floor((a.prize_pool.total_prize_pool * e) / 1e6 + 0.5)).toLocaleString()}`,
                 ),
               ),
             s.createElement(
@@ -24571,12 +24540,7 @@
               null == r ||
                 r.prize_pool.prize_split_pct_x100.forEach((e) =>
                   n.push(
-                    `$${(
-                      100 *
-                      Math.floor(
-                        (r.prize_pool.total_prize_pool * e) / 1e6 + 0.5,
-                      )
-                    ).toLocaleString()}`,
+                    `$${(100 * Math.floor((r.prize_pool.total_prize_pool * e) / 1e6 + 0.5)).toLocaleString()}`,
                   ),
                 ),
               s.createElement(
@@ -25529,12 +25493,7 @@
               null == r ||
                 r.prize_pool.prize_split_pct_x100.forEach((e) =>
                   n.push(
-                    `$${(
-                      100 *
-                      Math.floor(
-                        (r.prize_pool.total_prize_pool * e) / 1e6 + 0.5,
-                      )
-                    ).toLocaleString()}`,
+                    `$${(100 * Math.floor((r.prize_pool.total_prize_pool * e) / 1e6 + 0.5)).toLocaleString()}`,
                   ),
                 ),
               s.createElement(
@@ -26260,15 +26219,15 @@
                         ? void 0
                         : a.actual_time
                       : null == a
-                      ? void 0
-                      : a.scheduled_time) -
+                        ? void 0
+                        : a.scheduled_time) -
                     ((null == r ? void 0 : r.actual_time)
                       ? null == r
                         ? void 0
                         : r.actual_time
                       : null == r
-                      ? void 0
-                      : r.scheduled_time)
+                        ? void 0
+                        : r.scheduled_time)
                   );
                 });
                 if (t.is_event_completed) {
@@ -26397,9 +26356,7 @@
                     }
                     u.push({
                       value: t,
-                      strLabel: `${(0, v.Jr)(a)}${a && " - "}${(0, v.Jr)(
-                        `#Language_${(0, yt.j_)(r)}`,
-                      )}`,
+                      strLabel: `${(0, v.Jr)(a)}${a && " - "}${(0, v.Jr)(`#Language_${(0, yt.j_)(r)}`)}`,
                     });
                   }),
                 (null == l ? void 0 : l.length) > e.nSelectedVideo)
@@ -26873,8 +26830,8 @@
                   ? void 0
                   : a.team_id_1
                 : null == a
-                ? void 0
-                : a.team_id_2,
+                  ? void 0
+                  : a.team_id_2,
             c = Math.max(
               null == a ? void 0 : a.team_1_wins,
               null == a ? void 0 : a.team_2_wins,
@@ -26989,8 +26946,8 @@
                   ? void 0
                   : l.tourney.radiant_team_id
                 : null == l
-                ? void 0
-                : l.tourney.dire_team_id,
+                  ? void 0
+                  : l.tourney.dire_team_id,
             u = Ot.f.Get().GetTeamNames(d),
             _ = (null == a ? void 0 : a.vods.length) > 0;
           if (!r) return null;
@@ -27139,8 +27096,8 @@
                 ? void 0
                 : d.tourney.radiant_team_id
               : null == d
-              ? void 0
-              : d.tourney.dire_team_id,
+                ? void 0
+                : d.tourney.dire_team_id,
             h = Ot.f.Get().GetTeamNames(g),
             v = Fa.L.Get().getHeroList(),
             b =
@@ -27228,9 +27185,7 @@
                             key: `${t}_${a}`,
                             className: nn().ItemIcon,
                             style: {
-                              backgroundImage: `url( ${n.Y.IMG_URL}items/${
-                                null == r ? void 0 : r.name.replace("item_", "")
-                              }.png )`,
+                              backgroundImage: `url( ${n.Y.IMG_URL}items/${null == r ? void 0 : r.name.replace("item_", "")}.png )`,
                             },
                           })
                         : null;
@@ -27342,8 +27297,8 @@
                           ? void 0
                           : c.radiant_score
                         : null == c
-                        ? void 0
-                        : c.dire_score,
+                          ? void 0
+                          : c.dire_score,
                     ),
                 ),
                 5 == (null == g ? void 0 : g.length) &&
@@ -27541,30 +27496,11 @@
           if (o)
             switch (null == o ? void 0 : o.broadcast_provider) {
               case Ut.eQ.LEAGUE_BROADCAST_TWITCH:
-                (l = `https://player.twitch.tv/?video-with-chat=true&channel=${
-                  null == o
-                    ? void 0
-                    : o.stream_url
-                        .replace("https://www.twitch.tv/", "")
-                        .replace("https://twitch.tv/", "")
-                }&parent=${d}`),
-                  (c = `https://www.twitch.tv/embed/${
-                    null == o
-                      ? void 0
-                      : o.stream_url
-                          .replace("https://www.twitch.tv/", "")
-                          .replace("https://twitch.tv/", "")
-                  }/chat?darkpopout&parent=${d}`);
+                (l = `https://player.twitch.tv/?video-with-chat=true&channel=${null == o ? void 0 : o.stream_url.replace("https://www.twitch.tv/", "").replace("https://twitch.tv/", "")}&parent=${d}`),
+                  (c = `https://www.twitch.tv/embed/${null == o ? void 0 : o.stream_url.replace("https://www.twitch.tv/", "").replace("https://twitch.tv/", "")}/chat?darkpopout&parent=${d}`);
                 break;
               case Ut.eQ.LEAGUE_BROADCAST_STEAM:
-                l = `${n.Y.COMMUNITY_URL}broadcast/watchnew/${
-                  null == o
-                    ? void 0
-                    : o.stream_url.replace(
-                        "https://steamcommunity.com/broadcast/watch/",
-                        "",
-                      )
-                }?origin=https://${d}&enablechat=0&enablevideo=1&iframe=1`;
+                l = `${n.Y.COMMUNITY_URL}broadcast/watchnew/${null == o ? void 0 : o.stream_url.replace("https://steamcommunity.com/broadcast/watch/", "")}?origin=https://${d}&enablechat=0&enablevideo=1&iframe=1`;
             }
           return (
             l &&
@@ -27743,8 +27679,8 @@
                   ? void 0
                   : S.team_id_2
                 : null == S
-                ? void 0
-                : S.team_id_1,
+                  ? void 0
+                  : S.team_id_1,
             C = Ot.f.Get().GetTeamNames(T),
             I = 0 == T ? "#dpc_tbd" : null == C ? void 0 : C.name,
             w = ya()(1e3 * (null == S ? void 0 : S.scheduled_time))
@@ -27778,8 +27714,8 @@
                   ? void 0
                   : R.team_id_2
                 : null == R
-                ? void 0
-                : R.team_id_1,
+                  ? void 0
+                  : R.team_id_1,
             L = Ot.f.Get().GetTeamNames(D),
             A = 0 == D ? "#dpc_tbd" : null == L ? void 0 : L.name,
             M =
@@ -27798,16 +27734,16 @@
                   ? void 0
                   : R.team_1_wins
                 : null == R
-                ? void 0
-                : R.team_2_wins,
+                  ? void 0
+                  : R.team_2_wins,
             k =
               (null == R ? void 0 : R.team_id_1) == e
                 ? null == R
                   ? void 0
                   : R.team_2_wins
                 : null == R
-                ? void 0
-                : R.team_1_wins,
+                  ? void 0
+                  : R.team_1_wins,
             F = null == r ? void 0 : r.includes(e),
             O = 0 != n.Y.ACCOUNT_ID,
             x = Ot.f.Get().GetSpoilerBlockState(t) == Ut.rE.BLOCKED,
@@ -27891,9 +27827,7 @@
                     s.createElement("div", {
                       className: wn().Star,
                       style: {
-                        backgroundImage: `url( ${n.Y.IMG_URL}icons/${
-                          F ? "star_gold" : "star_black"
-                        }.png )`,
+                        backgroundImage: `url( ${n.Y.IMG_URL}icons/${F ? "star_gold" : "star_black"}.png )`,
                       },
                     }),
                   ),
@@ -28092,8 +28026,8 @@
                             ? void 0
                             : r.team_id_1
                           : null == r
-                          ? void 0
-                          : r.team_id_2;
+                            ? void 0
+                            : r.team_id_2;
                       return s.createElement(An, {
                         key: `${e.nLeagueID}_${e.nNodeID}`,
                         nLeagueID: e.nLeagueID,
@@ -28137,9 +28071,7 @@
               {
                 className: Dn().Gradient,
                 style: {
-                  background: `linear-gradient( to right, ${
-                    null == i ? void 0 : i.color_primary
-                  }22, ${null == o ? void 0 : o.color_primary}22 )`,
+                  background: `linear-gradient( to right, ${null == i ? void 0 : i.color_primary}22, ${null == o ? void 0 : o.color_primary}22 )`,
                 },
               },
               s.createElement(
@@ -28393,9 +28325,7 @@
             s.createElement(
               "div",
               { className: Wn().Title },
-              `${(0, v.Jr)("#dpc_event_ti12")} ${(0, v.Jr)(
-                "#dpc_tirules_header",
-              )}`,
+              `${(0, v.Jr)("#dpc_event_ti12")} ${(0, v.Jr)("#dpc_tirules_header")}`,
             ),
             s.createElement(
               "div",
@@ -28583,9 +28513,7 @@
                         pathname: c._.dpc_standings(
                           (0, xt.B2)(e),
                           (0, xt.o5)(Ut.BY.RESULTS),
-                          `${Ot.f.Get().GetDefaultRegion(e)}_${
-                            Ut.sd.DIVISION_I
-                          }`,
+                          `${Ot.f.Get().GetDefaultRegion(e)}_${Ut.sd.DIVISION_I}`,
                         ),
                       },
                       className: Pa().EventResultsButton,
@@ -28722,9 +28650,7 @@
                         pathname: c._.dpc_standings(
                           (0, xt.B2)(e),
                           (0, xt.o5)(Ut.BY.RESULTS),
-                          `${Ot.f.Get().GetDefaultRegion(e)}_${
-                            Ut.sd.DIVISION_I
-                          }`,
+                          `${Ot.f.Get().GetDefaultRegion(e)}_${Ut.sd.DIVISION_I}`,
                         ),
                       },
                       className: Pa().EventResultsButton,
@@ -28810,9 +28736,7 @@
                         pathname: c._.dpc_standings(
                           (0, xt.B2)(e),
                           (0, xt.o5)(Ut.BY.RESULTS),
-                          `${Ot.f.Get().GetDefaultRegion(e)}_${
-                            Ut.sd.DIVISION_I
-                          }`,
+                          `${Ot.f.Get().GetDefaultRegion(e)}_${Ut.sd.DIVISION_I}`,
                         ),
                       },
                       className: Pa().EventResultsButton,
@@ -29297,9 +29221,7 @@
                             pathname: c._.dpc_standings(
                               (0, xt.B2)(e),
                               (0, xt.o5)(Ut.BY.RESULTS),
-                              `${Ot.f.Get().GetDefaultRegion(e)}_${
-                                Ut.sd.DIVISION_I
-                              }`,
+                              `${Ot.f.Get().GetDefaultRegion(e)}_${Ut.sd.DIVISION_I}`,
                             ),
                           },
                           className: Pa().EventResultsButton,
@@ -29448,9 +29370,7 @@
                             pathname: c._.dpc_standings(
                               (0, xt.B2)(e),
                               (0, xt.o5)(Ut.BY.RESULTS),
-                              `${Ot.f.Get().GetDefaultRegion(e)}_${
-                                Ut.sd.DIVISION_I
-                              }`,
+                              `${Ot.f.Get().GetDefaultRegion(e)}_${Ut.sd.DIVISION_I}`,
                             ),
                           },
                           className: Pa().EventResultsButton,
@@ -30784,9 +30704,7 @@
             case Ut._A.INTERNATIONAL_2023:
               (t = "#222127"), (a = "#222127");
           }
-          let r = `url( ${n.Y.IMG_URL}dpc/headers/dpc_header_event_${(0, xt.B2)(
-            e,
-          )}.jpg ), linear-gradient( to right, ${t} 49%, ${a} 51% )`;
+          let r = `url( ${n.Y.IMG_URL}dpc/headers/dpc_header_event_${(0, xt.B2)(e)}.jpg ), linear-gradient( to right, ${t} 49%, ${a} 51% )`;
           return (
             (0, Ot.k)(e) &&
               (r = `url( ${n.Y.CDN_URL}apps/dota2/images/leagues/${e}/images/image_8.png ), linear-gradient( to right, ${t} 49%, ${a} 51% )`),
@@ -30962,14 +30880,14 @@
             (null == p ? void 0 : p.is_event_upcoming)
               ? (g = c._.dpc_ti_standings((0, xt.B2)(_)))
               : Ot.f.Get().GetSpoilerBlockState(_) == Ut.rE.UNBLOCKED
-              ? (g = c._.dpc_watch(
-                  _ == Ut._A.INVALID ? (0, xt.PS)() : (0, xt.B2)(_),
-                ))
-              : (null == p ? void 0 : p.is_event_completed) &&
-                (g = c._.dpc_standings(
-                  (0, xt.B2)(_),
-                  (0, xt.o5)(Ut.BY.RESULTS),
-                )),
+                ? (g = c._.dpc_watch(
+                    _ == Ut._A.INVALID ? (0, xt.PS)() : (0, xt.B2)(_),
+                  ))
+                : (null == p ? void 0 : p.is_event_completed) &&
+                  (g = c._.dpc_standings(
+                    (0, xt.B2)(_),
+                    (0, xt.o5)(Ut.BY.RESULTS),
+                  )),
             (0, s.useEffect)(() => {
               ((e && (0 == t || r - t > 30)) || _ != i) &&
                 (_ != i && (i != Ut._A.INVALID && l.push(g), o(_)),
@@ -31096,13 +31014,8 @@
               to: c._.hero(e.name_english_loc.replace(/ /g, "").toLowerCase()),
               className: (0, E.Z)(bi().HeroIcon, t && bi().Hidden),
               style: {
-                backgroundImage: `url( ${n.Y.IMG_URL}heroes/${e.name.replace(
-                  "npc_dota_hero_",
-                  "",
-                )}.png`,
-                left: `calc( ( 5 - ${i} ) * 122px + ${o} * ( 100% - ${
-                  bi().heroIconWidth
-                }px ) / 4 )`,
+                backgroundImage: `url( ${n.Y.IMG_URL}heroes/${e.name.replace("npc_dota_hero_", "")}.png`,
+                left: `calc( ( 5 - ${i} ) * 122px + ${o} * ( 100% - ${bi().heroIconWidth}px ) / 4 )`,
                 top: `calc( ${l} * ${bi().heroIconPaddedHeight}px )`,
               },
             },
@@ -31462,12 +31375,7 @@
                           ),
                           className: wi().HeroIcon,
                           style: {
-                            backgroundImage: `url( ${
-                              n.Y.IMG_URL
-                            }heroes/${e.name.replace(
-                              "npc_dota_hero_",
-                              "",
-                            )}.png`,
+                            backgroundImage: `url( ${n.Y.IMG_URL}heroes/${e.name.replace("npc_dota_hero_", "")}.png`,
                           },
                         },
                         s.createElement(
@@ -32783,13 +32691,7 @@
             let l;
             if (o) l = `${n.Y.IMG_URL}teams_override/team_unknown_web.png`;
             else {
-              (l = `${
-                "dev" === n.Y.WEB_UNIVERSE
-                  ? "https://cdn.beta.steampowered.com/"
-                  : n.Y.CDN_URL
-              }apps/${n.Y.DOTA_APP_ID}/teamautographs/${
-                n.Y.DOTA_TEAM_FAN_UPLOAD_CONTENT_SEASON
-              }/${r}.png?v=${i}`),
+              (l = `${"dev" === n.Y.WEB_UNIVERSE ? "https://cdn.beta.steampowered.com/" : n.Y.CDN_URL}apps/${n.Y.DOTA_APP_ID}/teamautographs/${n.Y.DOTA_TEAM_FAN_UPLOAD_CONTENT_SEASON}/${r}.png?v=${i}`),
                 "public" === n.Y.WEB_UNIVERSE &&
                   (l = `https://cdn.dota2.com/apps/dota2/teamautographs/${n.Y.DOTA_TEAM_FAN_UPLOAD_CONTENT_SEASON}/${r}.png?v=${i}`);
             }
@@ -32839,13 +32741,13 @@
             e.hasUploadedAutograph && !t.hasUploadedAutograph
               ? -1
               : (!e.hasUploadedAutograph && t.hasUploadedAutograph) ||
-                (null == e ? void 0 : e.name.toLowerCase()) >
-                  (null == t ? void 0 : t.name.toLowerCase())
-              ? 1
-              : (null == e ? void 0 : e.name.toLowerCase()) <
-                (null == t ? void 0 : t.name.toLowerCase())
-              ? -1
-              : 0,
+                  (null == e ? void 0 : e.name.toLowerCase()) >
+                    (null == t ? void 0 : t.name.toLowerCase())
+                ? 1
+                : (null == e ? void 0 : e.name.toLowerCase()) <
+                    (null == t ? void 0 : t.name.toLowerCase())
+                  ? -1
+                  : 0,
           F = 0 == n.Y.ACCOUNT_ID && !n.Y.VALVE_INTERNAL;
         return s.createElement(
           "div",
@@ -32873,9 +32775,7 @@
                 s.createElement(
                   "div",
                   { className: Vi().Title },
-                  `${(0, v.Jr)("#home_title")} ${(0, v.Jr)(
-                    "#dpc_event_2023season",
-                  )}`,
+                  `${(0, v.Jr)("#home_title")} ${(0, v.Jr)("#dpc_event_2023season")}`,
                   s.createElement("br", null),
                   "Dota Pro Circuit Registration",
                 ),
@@ -32896,11 +32796,7 @@
                     s.createElement(
                       "a",
                       {
-                        href: `${n.Y.COMMUNITY_URL}oauth/login?client_id=${
-                          n.Y.CLIENT_ID
-                        }&response_type=token&state=${c._.proregistration_autographs().substr(
-                          1,
-                        )}`,
+                        href: `${n.Y.COMMUNITY_URL}oauth/login?client_id=${n.Y.CLIENT_ID}&response_type=token&state=${c._.proregistration_autographs().substr(1)}`,
                         className: Vi().SignInButton,
                       },
                       "Sign in",
@@ -32935,9 +32831,7 @@
                           s.createElement(
                             "a",
                             {
-                              href: `${
-                                n.Y.BASE_URL
-                              }${c._.autographguidelines().substr(1)}`,
+                              href: `${n.Y.BASE_URL}${c._.autographguidelines().substr(1)}`,
                             },
                             "here",
                           ),
@@ -37096,8 +36990,8 @@
                     ? void 0
                     : t.actual_time
                   : null == t
-                  ? void 0
-                  : t.scheduled_time;
+                    ? void 0
+                    : t.scheduled_time;
               if (!r || 0 == r) return !1;
               for (const e of a) {
                 const t = r - e;
@@ -37121,8 +37015,8 @@
                     ? void 0
                     : a.actual_time
                   : null == a
-                  ? void 0
-                  : a.scheduled_time;
+                    ? void 0
+                    : a.scheduled_time;
               return !(!r || 0 == r) && r >= t && r < t + 86400;
             });
         }
@@ -37424,14 +37318,14 @@
               (g.Get().BEventHasRegion(e, u.dO.NA)
                 ? (t = u.dO.NA)
                 : g.Get().BEventHasRegion(e, u.dO.SA)
-                ? (t = u.dO.SA)
-                : g.Get().BEventHasRegion(e, u.dO.WEU)
-                ? (t = u.dO.WEU)
-                : g.Get().BEventHasRegion(e, u.dO.EEU)
-                ? (t = u.dO.EEU)
-                : g.Get().BEventHasRegion(e, u.dO.SEA)
-                ? (t = u.dO.SEA)
-                : g.Get().BEventHasRegion(e, u.dO.CN) && (t = u.dO.CN)),
+                  ? (t = u.dO.SA)
+                  : g.Get().BEventHasRegion(e, u.dO.WEU)
+                    ? (t = u.dO.WEU)
+                    : g.Get().BEventHasRegion(e, u.dO.EEU)
+                      ? (t = u.dO.EEU)
+                      : g.Get().BEventHasRegion(e, u.dO.SEA)
+                        ? (t = u.dO.SEA)
+                        : g.Get().BEventHasRegion(e, u.dO.CN) && (t = u.dO.CN)),
             t
           );
         }
@@ -37839,12 +37733,12 @@
                 return a && 0 != a
                   ? a
                   : e.broadcast_provider == u.eQ.LEAGUE_BROADCAST_STEAM &&
-                    t.broadcast_provider != u.eQ.LEAGUE_BROADCAST_STEAM
-                  ? 1
-                  : t.broadcast_provider == u.eQ.LEAGUE_BROADCAST_STEAM &&
-                    e.broadcast_provider != u.eQ.LEAGUE_BROADCAST_STEAM
-                  ? -1
-                  : 0;
+                      t.broadcast_provider != u.eQ.LEAGUE_BROADCAST_STEAM
+                    ? 1
+                    : t.broadcast_provider == u.eQ.LEAGUE_BROADCAST_STEAM &&
+                        e.broadcast_provider != u.eQ.LEAGUE_BROADCAST_STEAM
+                      ? -1
+                      : 0;
               });
         }
         GetLeagueNodeVODs(e, t, a) {
@@ -38076,16 +37970,16 @@
         return t.pathname.startsWith(s.dpc_watch_root((0, n.B2)(e)))
           ? i.RU.WATCH
           : t.pathname.startsWith(s.dpc_schedule_root((0, n.B2)(e)))
-          ? i.RU.SCHEDULE
-          : t.pathname.startsWith(s.dpc_standings_root((0, n.B2)(e)))
-          ? i.RU.STANDINGS
-          : t.pathname.startsWith(s.dpc_about((0, n.B2)(e)))
-          ? i.RU.ABOUT
-          : t.pathname.startsWith(s.dpc_ti_standings((0, n.B2)(e)))
-          ? i.RU.TISTANDINGS
-          : t.pathname.startsWith(s.dpc_ti_rules((0, n.B2)(e)))
-          ? i.RU.TIRULES
-          : i.RU.INVALID;
+            ? i.RU.SCHEDULE
+            : t.pathname.startsWith(s.dpc_standings_root((0, n.B2)(e)))
+              ? i.RU.STANDINGS
+              : t.pathname.startsWith(s.dpc_about((0, n.B2)(e)))
+                ? i.RU.ABOUT
+                : t.pathname.startsWith(s.dpc_ti_standings((0, n.B2)(e)))
+                  ? i.RU.TISTANDINGS
+                  : t.pathname.startsWith(s.dpc_ti_rules((0, n.B2)(e)))
+                    ? i.RU.TIRULES
+                    : i.RU.INVALID;
       }
     },
     81823: (e, t, a) => {
@@ -39473,9 +39367,7 @@
                     onChange: (e) => {
                       _(d),
                         e.target.value != r.Y.LANGUAGE &&
-                          (window.location.href = `${u._.base()}${
-                            s.pathname
-                          }?l=${e.target.value}`);
+                          (window.location.href = `${u._.base()}${s.pathname}?l=${e.target.value}`);
                     },
                   },
                   t.map((e) =>
@@ -39639,9 +39531,7 @@
                 n.createElement(
                   "a",
                   {
-                    href: `${r.Y.COMMUNITY_URL}oauth/login?client_id=${
-                      r.Y.CLIENT_ID
-                    }&response_type=token&state=${t.pathname.substr(1)}`,
+                    href: `${r.Y.COMMUNITY_URL}oauth/login?client_id=${r.Y.CLIENT_ID}&response_type=token&state=${t.pathname.substr(1)}`,
                     className: (0, l.Z)(
                       s().Login,
                       0 != r.Y.ACCOUNT_ID && s().Hidden,
@@ -39661,9 +39551,7 @@
                   n.createElement(
                     "a",
                     {
-                      href: `${
-                        r.Y.BASE_URL
-                      }oauth/logout?goto=${t.pathname.substr(1)}`,
+                      href: `${r.Y.BASE_URL}oauth/logout?goto=${t.pathname.substr(1)}`,
                       className: s().Logout,
                     },
                     "(",
@@ -39814,9 +39702,7 @@
                 n.createElement(
                   "a",
                   {
-                    href: `${r.Y.COMMUNITY_URL}oauth/login?client_id=${
-                      r.Y.CLIENT_ID
-                    }&response_type=token&state=${t.pathname.substr(1)}`,
+                    href: `${r.Y.COMMUNITY_URL}oauth/login?client_id=${r.Y.CLIENT_ID}&response_type=token&state=${t.pathname.substr(1)}`,
                     className: (0, l.Z)(
                       s().Login,
                       0 != r.Y.ACCOUNT_ID && s().Hidden,
@@ -39836,9 +39722,7 @@
                   n.createElement(
                     "a",
                     {
-                      href: `${
-                        r.Y.BASE_URL
-                      }oauth/logout?goto=${t.pathname.substr(1)}`,
+                      href: `${r.Y.BASE_URL}oauth/logout?goto=${t.pathname.substr(1)}`,
                       className: s().Logout,
                     },
                     "(",
@@ -40352,10 +40236,7 @@
                     n.createElement("img", {
                       key: e.id,
                       className: l().Portrait,
-                      src: `${r.Y.IMG_URL}heroes/${e.name.replace(
-                        "npc_dota_hero_",
-                        "",
-                      )}.png`,
+                      src: `${r.Y.IMG_URL}heroes/${e.name.replace("npc_dota_hero_", "")}.png`,
                     }),
                     n.createElement(
                       "div",
@@ -40673,76 +40554,77 @@
             (-1 == i
               ? ((v = !0), (s = o))
               : -2 == i
-              ? ((b = !0), (s = m))
-              : (s = e.abilities[i]),
+                ? ((b = !0), (s = m))
+                : (s = e.abilities[i]),
             !s)
           )
             return null;
           65536 & s.behavior
             ? (u = "#ability_behavior_aura")
             : 4 & s.behavior
-            ? (u = "#ability_behavior_no_target")
-            : 8 & s.behavior
-            ? (u = "#ability_behavior_unit_target")
-            : 16 & s.behavior
-            ? (u = "#ability_behavior_point_target")
-            : 32 & s.behavior
-            ? (u = "#ability_behavior_point_aoe")
-            : 128 & s.behavior
-            ? (u = "#ability_behavior_channeled")
-            : 512 & s.behavior
-            ? (u = "#ability_behavior_toggle")
-            : 4096 & s.behavior
-            ? (u = "#ability_behavior_autocast")
-            : 2 & s.behavior && (u = "#ability_behavior_passive"),
+              ? (u = "#ability_behavior_no_target")
+              : 8 & s.behavior
+                ? (u = "#ability_behavior_unit_target")
+                : 16 & s.behavior
+                  ? (u = "#ability_behavior_point_target")
+                  : 32 & s.behavior
+                    ? (u = "#ability_behavior_point_aoe")
+                    : 128 & s.behavior
+                      ? (u = "#ability_behavior_channeled")
+                      : 512 & s.behavior
+                        ? (u = "#ability_behavior_toggle")
+                        : 4096 & s.behavior
+                          ? (u = "#ability_behavior_autocast")
+                          : 2 & s.behavior && (u = "#ability_behavior_passive"),
             1 == s.immunity || 3 == s.immunity
               ? (p = "#yes")
               : 2 == s.immunity || 4 == s.immunity
-              ? (p = "#no")
-              : 5 == s.immunity && (p = "#ability_immunity_alliesyesenemiesno"),
+                ? (p = "#no")
+                : 5 == s.immunity &&
+                  (p = "#ability_immunity_alliesyesenemiesno"),
             1 == s.target_team
               ? (g =
                   7 == (7 & s.target_type)
                     ? "#ability_target_alliedunitsandubildings"
                     : 3 == (3 & s.target_type)
-                    ? "#ability_target_alliedunits"
-                    : 5 == (5 & s.target_type)
-                    ? "#ability_target_alliedheroesandbuildings"
-                    : 1 == (1 & s.target_type)
-                    ? "#ability_target_alliedheroes"
-                    : 2 == (2 & s.target_type)
-                    ? "#ability_target_alliedcreeps"
-                    : "#ability_target_allies")
+                      ? "#ability_target_alliedunits"
+                      : 5 == (5 & s.target_type)
+                        ? "#ability_target_alliedheroesandbuildings"
+                        : 1 == (1 & s.target_type)
+                          ? "#ability_target_alliedheroes"
+                          : 2 == (2 & s.target_type)
+                            ? "#ability_target_alliedcreeps"
+                            : "#ability_target_allies")
               : 2 == s.target_team
-              ? (g =
-                  7 == (7 & s.target_type)
-                    ? "#ability_target_enemyunitsandubildings"
-                    : 3 == (3 & s.target_type)
-                    ? "#ability_target_enemyunits"
-                    : 5 == (5 & s.target_type)
-                    ? "#ability_target_enemyheroesandbuildings"
-                    : 1 == (1 & s.target_type)
-                    ? "#ability_target_enemyheroes"
-                    : 2 == (2 & s.target_type)
-                    ? "#ability_target_enemycreeps"
-                    : "#ability_target_enemies")
-              : 3 == s.target_team &&
-                (g =
-                  1 == (1 & s.target_type)
-                    ? "#ability_target_heroes"
-                    : "#ability_target_units"),
+                ? (g =
+                    7 == (7 & s.target_type)
+                      ? "#ability_target_enemyunitsandubildings"
+                      : 3 == (3 & s.target_type)
+                        ? "#ability_target_enemyunits"
+                        : 5 == (5 & s.target_type)
+                          ? "#ability_target_enemyheroesandbuildings"
+                          : 1 == (1 & s.target_type)
+                            ? "#ability_target_enemyheroes"
+                            : 2 == (2 & s.target_type)
+                              ? "#ability_target_enemycreeps"
+                              : "#ability_target_enemies")
+                : 3 == s.target_team &&
+                  (g =
+                    1 == (1 & s.target_type)
+                      ? "#ability_target_heroes"
+                      : "#ability_target_units"),
             1 == s.damage
               ? (h = "#ability_damage_physical")
               : 2 == s.damage
-              ? (h = "#ability_damage_magical")
-              : 4 == s.damage
-              ? (h = "#ability_damage_pure")
-              : 8 == s.damage && (h = "#ability_damage_hpremoval"),
+                ? (h = "#ability_damage_magical")
+                : 4 == s.damage
+                  ? (h = "#ability_damage_pure")
+                  : 8 == s.damage && (h = "#ability_damage_hpremoval"),
             1 == s.dispellable
               ? (E = "#ability_dispellable_strong")
               : 2 == s.dispellable
-              ? (E = "#yes")
-              : 3 == s.dispellable && (E = "#no");
+                ? (E = "#yes")
+                : 3 == s.dispellable && (E = "#no");
           let f = s.desc_loc,
             T = s.scepter_loc,
             C = s.shard_loc;
@@ -41234,10 +41116,7 @@
               },
               n.createElement("img", {
                 className: l().HeroPortrait,
-                src: `${r.Y.IMG_URL}heroes/crops/${e.name.replace(
-                  "npc_dota_hero_",
-                  "",
-                )}.png`,
+                src: `${r.Y.IMG_URL}heroes/crops/${e.name.replace("npc_dota_hero_", "")}.png`,
               }),
               n.createElement(
                 "div",
@@ -44111,8 +43990,8 @@
                       i || (s && !t)
                         ? (r.ConvertMalformedNodeToText(), (r.text += l))
                         : e
-                        ? (s = !0)
-                        : t && (s = !1),
+                          ? (s = !0)
+                          : t && (s = !1),
                         (r = c(a, r)),
                         (i = !1);
                     }
@@ -44255,8 +44134,8 @@
                     " " == o
                       ? ((n = 0), (l = !1), (c = !0))
                       : '"' == o
-                      ? ((n = 4), (l = !1))
-                      : (n = 3);
+                        ? ((n = 4), (l = !1))
+                        : (n = 3);
                     break;
                   case 3:
                   case 4:
@@ -44313,8 +44192,8 @@
           return i.length > 1
             ? r.createElement(r.Fragment, null, ...i)
             : 1 == i.length
-            ? i[0]
-            : null;
+              ? i[0]
+              : null;
         }
       }
       const m = [
@@ -45332,8 +45211,8 @@
               (/Macintosh/i.test(e) && /Safari/i.test(e))
                 ? (this.m_sBrowserID = "ios")
                 : /Android/i.test(e)
-                ? (this.m_sBrowserID = "android")
-                : (this.m_sBrowserID = "");
+                  ? (this.m_sBrowserID = "android")
+                  : (this.m_sBrowserID = "");
             }
         }
       })();
@@ -48868,12 +48747,12 @@
                 ? ((r = t ? e.result.event_ignored : e.result.event_followed),
                   (o = t ? null : e.result.event_followed_flags))
                 : t
-                ? ((r = e.result.event_followed),
-                  (o = e.result.event_followed_flags),
-                  (s = e.result.event_ignored))
-                : ((r = e.result.event_ignored),
-                  (s = e.result.event_followed),
-                  (c = e.result.event_followed_flags));
+                  ? ((r = e.result.event_followed),
+                    (o = e.result.event_followed_flags),
+                    (s = e.result.event_ignored))
+                  : ((r = e.result.event_ignored),
+                    (s = e.result.event_followed),
+                    (c = e.result.event_followed_flags));
               let d = r.indexOf(n);
               if ((d > -1 && (r.splice(d, 1), o && o.splice(d, 1)), s)) {
                 let e = s.indexOf(n);
@@ -49046,9 +48925,9 @@
               this.m_bIsLoaded
                 ? 1
                 : c.L7.logged_in
-                ? (this.m_promise || (this.m_promise = this.InternalLoad()),
-                  this.m_promise)
-                : 1
+                  ? (this.m_promise || (this.m_promise = this.InternalLoad()),
+                    this.m_promise)
+                  : 1
             );
           });
         }
@@ -49212,8 +49091,8 @@
                   e >= i
                     ? "#EventDisplay_TimeBeginsOn"
                     : t >= i
-                    ? "#EventDisplay_TimeBeginsOn_Past"
-                    : "#EventDisplay_TimeBeginsOn_StartAndEnd_Past",
+                      ? "#EventDisplay_TimeBeginsOn_Past"
+                      : "#EventDisplay_TimeBeginsOn_StartAndEnd_Past",
                 ),
               ),
               n.createElement(gt, {
@@ -49528,11 +49407,7 @@
           case Nt.k_eStoreNewsHub:
             return (
               i +
-              `news/${
-                e.appid
-                  ? `app/${e.appid}`
-                  : `group/${e.clanSteamID.GetAccountID()}`
-              }`
+              `news/${e.appid ? `app/${e.appid}` : `group/${e.clanSteamID.GetAccountID()}`}`
             );
           case Nt.k_eStoreOwnerPage:
             return (
@@ -49552,11 +49427,7 @@
           case Nt.k_eCommunityView:
             return s + "announcements/detail/" + d;
           case Nt.k_eStoreView:
-            return `${i}news/${
-              e.appid
-                ? `app/${e.appid}`
-                : `group/${e.clanSteamID.GetAccountID()}`
-            }/${e.bOldAnnouncement ? `old_view/${d}` : `view/${o}`}`;
+            return `${i}news/${e.appid ? `app/${e.appid}` : `group/${e.clanSteamID.GetAccountID()}`}/${e.bOldAnnouncement ? `old_view/${d}` : `view/${o}`}`;
           case Nt.k_eStoreUsersNewsHub:
             return `${i}news/`;
           default:
@@ -52734,9 +52605,7 @@
                     else {
                       const e = t.Body().agreement_session_url(),
                         a = document.location.href;
-                      window.location.href = `${e}&redir=${encodeURIComponent(
-                        a,
-                      )}`;
+                      window.location.href = `${e}&redir=${encodeURIComponent(a)}`;
                     }
                     return this.m_onCompleteCallback({ bSuccess: !1 }), a;
                   }
@@ -54357,11 +54226,7 @@
                     return r && n && i
                       ? { publickey_exp: r, publickey_mod: n, timestamp: i }
                       : (Fa(
-                          `Missing expected field in RSA Key: ${JSON.stringify({
-                            publickey_exp: r,
-                            publickey_mod: n,
-                            timestamp: i,
-                          })}`,
+                          `Missing expected field in RSA Key: ${JSON.stringify({ publickey_exp: r, publickey_mod: n, timestamp: i })}`,
                         ),
                         null);
                   } catch (e) {
@@ -54434,9 +54299,7 @@
                           else {
                             const e = d.Body().agreement_session_url(),
                               t = document.location.href;
-                            window.location.href = `${e}&redir=${encodeURIComponent(
-                              t,
-                            )}`;
+                            window.location.href = `${e}&redir=${encodeURIComponent(t)}`;
                           }
                           return this.m_onCompleteCallback({ bSuccess: !1 }), t;
                         default:
@@ -54541,9 +54404,7 @@
             } catch (e) {
               return (
                 Fa(
-                  `Failed to start auth session. Exception: ${JSON.stringify(
-                    e,
-                  )}`,
+                  `Failed to start auth session. Exception: ${JSON.stringify(e)}`,
                 ),
                 Ga(e),
                 this.SetFailureState(xa.Generic, Er.FailedToStart()),
@@ -54610,9 +54471,7 @@
                 if (!t)
                   return (
                     Fa(
-                      `Failed to automatically update session with local SG info. Result ${i}. Transport ${n
-                        .Hdr()
-                        .transport_error()}`,
+                      `Failed to automatically update session with local SG info. Result ${i}. Transport ${n.Hdr().transport_error()}`,
                     ),
                     i
                   );
@@ -54638,9 +54497,7 @@
                     else {
                       const e = n.Body().agreement_session_url(),
                         t = document.location.href;
-                      window.location.href = `${e}&redir=${encodeURIComponent(
-                        t,
-                      )}`;
+                      window.location.href = `${e}&redir=${encodeURIComponent(t)}`;
                     }
                     return this.m_onCompleteCallback({ bSuccess: !1 }), i;
                   default:
@@ -54749,44 +54606,44 @@
             94 == a.GetEResult()
               ? (this.m_eStatus = 12)
               : a.Body().success()
-              ? (a.DEBUG_LogToConsole(),
-                (this.m_replacementAuthenticator = (function (e) {
-                  const {
-                      shared_secret: t,
-                      identity_secret: a,
-                      secret_1: n,
-                      status: i,
-                      uri: s,
-                      server_time: o,
-                    } = e,
-                    l = (0, r._T)(e, [
-                      "shared_secret",
-                      "identity_secret",
-                      "secret_1",
-                      "status",
-                      "uri",
-                      "server_time",
-                    ]);
-                  return Object.assign(
-                    {
-                      shared_secret: La.JQ(t),
-                      identity_secret: La.JQ(a),
-                      secret_1: La.JQ(n),
-                    },
-                    l,
-                  );
-                })(a.Body().replacement_token().toObject())),
-                (this.m_eStatus = 9),
-                (this.m_bUsingCodeOverride = !1))
-              : (a.DEBUG_LogToConsole(),
-                Fa(
-                  "Error when calling RemoveAuthenticatorViaChallengeContinue",
-                  a.GetEResult(),
-                ),
-                this.SetFailureState(
-                  xa.MoveAuthenticator,
-                  Er.EResult(a.GetEResult()),
-                ));
+                ? (a.DEBUG_LogToConsole(),
+                  (this.m_replacementAuthenticator = (function (e) {
+                    const {
+                        shared_secret: t,
+                        identity_secret: a,
+                        secret_1: n,
+                        status: i,
+                        uri: s,
+                        server_time: o,
+                      } = e,
+                      l = (0, r._T)(e, [
+                        "shared_secret",
+                        "identity_secret",
+                        "secret_1",
+                        "status",
+                        "uri",
+                        "server_time",
+                      ]);
+                    return Object.assign(
+                      {
+                        shared_secret: La.JQ(t),
+                        identity_secret: La.JQ(a),
+                        secret_1: La.JQ(n),
+                      },
+                      l,
+                    );
+                  })(a.Body().replacement_token().toObject())),
+                  (this.m_eStatus = 9),
+                  (this.m_bUsingCodeOverride = !1))
+                : (a.DEBUG_LogToConsole(),
+                  Fa(
+                    "Error when calling RemoveAuthenticatorViaChallengeContinue",
+                    a.GetEResult(),
+                  ),
+                  this.SetFailureState(
+                    xa.MoveAuthenticator,
+                    Er.EResult(a.GetEResult()),
+                  ));
           });
         }
         FinishMoveRecovery() {
@@ -55066,10 +54923,10 @@
           v = E
             ? n.createElement(Pr, null)
             : h
-            ? n.createElement(Ar, { reset: u })
-            : g
-            ? n.createElement(Lr, { size: "small" })
-            : null,
+              ? n.createElement(Ar, { reset: u })
+              : g
+                ? n.createElement(Lr, { size: "small" })
+                : null,
           b = g || h || E;
         (0, n.useEffect)(() => {
           var t;
@@ -55325,41 +55182,41 @@
               new URLSearchParams(s.search).get("need_password")
                 ? i(!1)
                 : t.current
-                ? (function (e) {
-                    var t;
-                    return (0, r.mG)(this, void 0, void 0, function* () {
-                      const a = new FormData();
-                      a.append("redir", e);
-                      const n = `${c.De.LOGIN_BASE_URL}jwt/ajaxrefresh`,
-                        i = yield y().post(n, a, {
-                          timeout: 1e4,
-                          withCredentials: !0,
-                        });
-                      if (
-                        200 !== i.status ||
-                        !(null === (t = null == i ? void 0 : i.data) ||
-                        void 0 === t
-                          ? void 0
-                          : t.success)
-                      )
-                        return !1;
-                      const s = i.data,
-                        { success: o, login_url: l, error: d } = s,
-                        m = (0, r._T)(s, ["success", "login_url", "error"]),
-                        u = new FormData();
-                      Object.keys(m).forEach((e) => u.append(e, m[e]));
-                      const _ = yield y().post(l, u),
-                        p = 200 === _.status && 1 === _.data.result;
-                      return p && window.location.assign(e), p;
-                    });
-                  })(t.current)
-                    .then((e) => {
-                      i(e);
-                    })
-                    .catch((e) => {
-                      ka("PerformRefresh exception", e), i(!1);
-                    })
-                : i(!1);
+                  ? (function (e) {
+                      var t;
+                      return (0, r.mG)(this, void 0, void 0, function* () {
+                        const a = new FormData();
+                        a.append("redir", e);
+                        const n = `${c.De.LOGIN_BASE_URL}jwt/ajaxrefresh`,
+                          i = yield y().post(n, a, {
+                            timeout: 1e4,
+                            withCredentials: !0,
+                          });
+                        if (
+                          200 !== i.status ||
+                          !(null === (t = null == i ? void 0 : i.data) ||
+                          void 0 === t
+                            ? void 0
+                            : t.success)
+                        )
+                          return !1;
+                        const s = i.data,
+                          { success: o, login_url: l, error: d } = s,
+                          m = (0, r._T)(s, ["success", "login_url", "error"]),
+                          u = new FormData();
+                        Object.keys(m).forEach((e) => u.append(e, m[e]));
+                        const _ = yield y().post(l, u),
+                          p = 200 === _.status && 1 === _.data.result;
+                        return p && window.location.assign(e), p;
+                      });
+                    })(t.current)
+                      .then((e) => {
+                        i(e);
+                      })
+                      .catch((e) => {
+                        ka("PerformRefresh exception", e), i(!1);
+                      })
+                  : i(!1);
             }, [t, s.search]),
             a
           );
@@ -55405,11 +55262,7 @@
           : n.createElement(
               On,
               {
-                href: `${
-                  c.De.HELP_BASE_URL
-                }wizard/HelpWithLogin?redir=${encodeURIComponent(
-                  document.location.href,
-                )}`,
+                href: `${c.De.HELP_BASE_URL}wizard/HelpWithLogin?redir=${encodeURIComponent(document.location.href)}`,
               },
               (0, d.Xx)("#Login_Help_SignIn"),
             );
@@ -55975,11 +55828,7 @@
             n.createElement(
               On,
               {
-                href: `${
-                  c.De.HELP_BASE_URL
-                }wizard/HelpWithLogin?redir=${encodeURIComponent(
-                  document.location.href,
-                )}`,
+                href: `${c.De.HELP_BASE_URL}wizard/HelpWithLogin?redir=${encodeURIComponent(document.location.href)}`,
                 align: "center",
               },
               (0, d.Xx)("#Login_Help_SignIn"),
@@ -57237,10 +57086,7 @@
           const { eventModel: e, lang: t } = this.props,
             a = e.GetNameWithFallback(t);
           if (x.BHasEntityNameForID(e.appid, e.clanSteamID.GetAccountID())) {
-            return `${x.GetEntityNameForID(
-              e.appid,
-              e.clanSteamID.GetAccountID(),
-            )}: ${a}`;
+            return `${x.GetEntityNameForID(e.appid, e.clanSteamID.GetAccountID())}: ${a}`;
           }
           return a;
         }
@@ -58195,8 +58041,8 @@
                   "full" == a
                     ? ""
                     : "leftthumb" == a
-                    ? D.floatLeft
-                    : D.floatRight;
+                      ? D.floatLeft
+                      : D.floatRight;
               return n.createElement(A, {
                 videoID: t,
                 nStartSeconds: r ? Number.parseInt(r) : void 0,
@@ -58224,8 +58070,8 @@
                       "full" == a
                         ? ""
                         : "leftthumb" == a
-                        ? D.floatLeft
-                        : D.floatRight;
+                          ? D.floatLeft
+                          : D.floatRight;
                   return n.createElement(A, {
                     videoID: t,
                     classNameAlign: i,
@@ -61250,8 +61096,8 @@
           return "x" == e
             ? this.m_lastFocusNodeXMovement.GetRect()
             : "y" == e
-            ? this.m_lastFocusNodeYMovement.GetRect()
-            : void 0;
+              ? this.m_lastFocusNodeYMovement.GetRect()
+              : void 0;
         }
         get OnActivateCallbacks() {
           return this.m_onActivateCallbacks;
@@ -61333,9 +61179,7 @@
           let { bUnhandled: t, bHadLogicalEventMapping: a } = (0, i.Ut)(e);
           return (
             v(
-              `Logical gamepad Event fired: ${
-                r.eV[e.detail.button]
-              }, had logical event: ${a}, was handled: ${!t}`,
+              `Logical gamepad Event fired: ${r.eV[e.detail.button]}, had logical event: ${a}, was handled: ${!t}`,
             ),
             t && this.m_onUnhandledButton && (t = this.m_onUnhandledButton(e)),
             t && (t = this.m_Controller.FireUnhandledGamepadEventCallbacks(e)),
@@ -61399,9 +61243,9 @@
             "x" == a
               ? this.m_lastFocusNodeXMovement.SetNode(t.Element)
               : "y" == a
-              ? this.m_lastFocusNodeYMovement.SetNode(t.Element)
-              : (this.m_lastFocusNodeXMovement.Reset(),
-                this.m_lastFocusNodeYMovement.Reset()),
+                ? this.m_lastFocusNodeYMovement.SetNode(t.Element)
+                : (this.m_lastFocusNodeXMovement.Reset(),
+                  this.m_lastFocusNodeYMovement.Reset()),
             this.m_context.OnFocusChangeComplete(o);
         }
       }
@@ -61464,9 +61308,7 @@
             const { node: e, bFocusDescendant: t } = this.m_target;
             (this.m_target = void 0),
               E(
-                `DeferredFocus in ${this.m_tree.id} - focusing ${
-                  t ? "descendant of" : "node"
-                } ${e.NavKey}`,
+                `DeferredFocus in ${this.m_tree.id} - focusing ${t ? "descendant of" : "node"} ${e.NavKey}`,
               ),
               t
                 ? e.BChildTakeFocus(i.uS.APPLICATION) ||
@@ -61541,9 +61383,7 @@
         }
         OnActivate(e) {
           S(
-            `${this.LogName(e)} Activating context, there are ${
-              this.m_rgGamepadNavigationTrees.length
-            } trees in this context`,
+            `${this.LogName(e)} Activating context, there are ${this.m_rgGamepadNavigationTrees.length} trees in this context`,
           ),
             this.SetActive(!0, e);
         }
@@ -61556,9 +61396,7 @@
             ? (S(`${this.LogName(e)} Deactivate context for window`),
               this.SetActive(!1, e))
             : S(
-                `${this.LogName(e)} Blurred, but not deactivating because (${
-                  this.m_activeWindow.name
-                }) has focus.`,
+                `${this.LogName(e)} Blurred, but not deactivating because (${this.m_activeWindow.name}) has focus.`,
               );
         }
         OnDeactivateBrowserView(e, t) {
@@ -61600,11 +61438,7 @@
             (this.m_LastActiveNavTree = e),
             (e && e.BUseVirtualFocus()) || (this.m_LastActiveFocusNavTree = e),
             S(
-              `${this.LogName(e.Window)} Move from nav tree ${
-                null == a ? void 0 : a.id
-              } to nav tree ${null == e ? void 0 : e.id} ${
-                t ? "taking focus" : "no focus"
-              }`,
+              `${this.LogName(e.Window)} Move from nav tree ${null == a ? void 0 : a.id} to nav tree ${null == e ? void 0 : e.id} ${t ? "taking focus" : "no focus"}`,
             ),
             a && this.m_rgGamepadNavigationTrees.push(a),
             e &&
@@ -61624,13 +61458,7 @@
         UnregisterGamepadNavigationTree(e) {
           u.Zf(this.m_rgGamepadNavigationTrees, e),
             S(
-              `(${this.m_rootWindow.name}) Unregister tree ${
-                null == e ? void 0 : e.id
-              } ${
-                this.m_LastActiveFocusNavTree == e
-                  ? "(was active)"
-                  : "(inactive)"
-              }`,
+              `(${this.m_rootWindow.name}) Unregister tree ${null == e ? void 0 : e.id} ${this.m_LastActiveFocusNavTree == e ? "(was active)" : "(inactive)"}`,
             ),
             this.m_LastActiveNavTree == e &&
               ((this.m_LastActiveNavTree = null),
@@ -61728,9 +61556,7 @@
               const t = e.FindNavTreeInFocusedWindow();
               if (t) {
                 C(
-                  `${e.LogName(
-                    t.Window,
-                  )} Found a focused window; setting this context as active.`,
+                  `${e.LogName(t.Window)} Found a focused window; setting this context as active.`,
                 ),
                   (this.m_ActiveContext = e),
                   this.m_ActiveContext.OnActivate(t.Window);
@@ -61743,11 +61569,7 @@
               this.m_LastActiveContext &&
               ((0, n.X)(
                 !1,
-                `Failed to find an active context, will fall back to ${
-                  null === (e = this.m_LastActiveContext) || void 0 === e
-                    ? void 0
-                    : e.LogName()
-                }`,
+                `Failed to find an active context, will fall back to ${null === (e = this.m_LastActiveContext) || void 0 === e ? void 0 : e.LogName()}`,
               ),
               (this.m_ActiveContext = this.m_LastActiveContext),
               this.m_ActiveContext.OnActivate(
@@ -61877,13 +61699,7 @@
               ? (this.ChangeNavigationSource(a, n),
                 e &&
                   C(
-                    `Firing ${r.eV[t]} in tree ${
-                      null ===
-                        (m = null == _ ? void 0 : _.m_LastActiveNavTree) ||
-                      void 0 === m
-                        ? void 0
-                        : m.id
-                    } at `,
+                    `Firing ${r.eV[t]} in tree ${null === (m = null == _ ? void 0 : _.m_LastActiveNavTree) || void 0 === m ? void 0 : m.id} at `,
                     u,
                   ),
                 this.BatchedUpdate(() =>
@@ -61894,14 +61710,7 @@
                   }),
                 ))
               : C(
-                  `Suppressing ${r.eV[t]} input on element ${
-                    u.className
-                  } because tree ${
-                    null === (d = null == _ ? void 0 : _.m_LastActiveNavTree) ||
-                    void 0 === d
-                      ? void 0
-                      : d.id
-                  } has it disabled`,
+                  `Suppressing ${r.eV[t]} input on element ${u.className} because tree ${null === (d = null == _ ? void 0 : _.m_LastActiveNavTree) || void 0 === d ? void 0 : d.id} has it disabled`,
                 );
         }
         OnButtonDown(e, t, a, r, n, i, s) {
@@ -62125,8 +61934,8 @@
         return "x" == e
           ? t.x + t.width > a.x + r && t.x + r < a.x + a.width
           : "y" == e
-          ? t.y + t.height > a.y + r && t.y + r < a.y + a.height
-          : ((0, n.X)(!1, `Invalid axis ${e}`), !1);
+            ? t.y + t.height > a.y + r && t.y + r < a.y + a.height
+            : ((0, n.X)(!1, `Invalid axis ${e}`), !1);
       }
       function L(e, t, a) {
         let r;
@@ -62134,9 +61943,9 @@
           "x" == e
             ? (r = Math.min(t.x + t.width, a.x + a.width) - Math.max(t.x, a.x))
             : "y" == e
-            ? (r =
-                Math.min(t.y + t.height, a.y + a.height) - Math.max(t.y, a.y))
-            : ((0, n.X)(!1, `Invalid axis ${e}`), (r = 0)),
+              ? (r =
+                  Math.min(t.y + t.height, a.y + a.height) - Math.max(t.y, a.y))
+              : ((0, n.X)(!1, `Invalid axis ${e}`), (r = 0)),
           r < 0 ? 0 : r
         );
       }
@@ -62146,8 +61955,8 @@
             return "x" == e
               ? { min: t.x, max: t.x + t.width }
               : "y" == e
-              ? { min: t.y, max: t.y + t.height }
-              : void (0, n.X)(!1, `Invalid axis ${e}`);
+                ? { min: t.y, max: t.y + t.height }
+                : void (0, n.X)(!1, `Invalid axis ${e}`);
           })(e, a);
         return r < i.min ? i.min - r : r > i.max ? r - i.max : 0;
       }
@@ -62273,8 +62082,8 @@
             ? a.distance - r.distance
             : 1
           : r.offScreen
-          ? -1
-          : a.distance - r.distance;
+            ? -1
+            : a.distance - r.distance;
       }
       function h(e, t, a) {
         const r = e.Element.getBoundingClientRect(),
@@ -62373,17 +62182,17 @@
         return n < o && i > l
           ? 0
           : (n < o && s <= c) || (i > l && s > c)
-          ? n - o - d
-          : (n < o && s > c) || (i > l && s <= c)
-          ? i - l + m
-          : 0;
+            ? n - o - d
+            : (n < o && s > c) || (i > l && s <= c)
+              ? i - l + m
+              : 0;
       }
       function I(e) {
         return "auto" == e
           ? 0
           : e.endsWith("px")
-          ? parseInt(e)
-          : (console.log("Unsupported length", e), 0);
+            ? parseInt(e)
+            : (console.log("Unsupported length", e), 0);
       }
       function w(e) {
         if (!("ownerDocument" in e))
@@ -62444,9 +62253,7 @@
             (b(
               "Checking scroll div",
               e,
-              `scroll y:${c.scrollTop} of ${c.MaxScrollTop()}, x:${
-                c.scrollLeft
-              } of ${c.MaxScrollLeft()}, adjusted =>`,
+              `scroll y:${c.scrollTop} of ${c.MaxScrollTop()}, x:${c.scrollLeft} of ${c.MaxScrollLeft()}, adjusted =>`,
               a,
               "target => ",
               o,
@@ -62696,8 +62503,8 @@
           )
             ? this.m_Properties.navKey
             : (null === (t = this.m_element) || void 0 === t ? void 0 : t.id)
-            ? this.m_element.id
-            : void 0;
+              ? this.m_element.id
+              : void 0;
         }
         get Element() {
           return this.m_element;
@@ -62891,11 +62698,7 @@
           const t = this.Tree.DeferredFocus.BIsQueuedFocusNode(this);
           (this.m_bFocused || t) &&
             (P(
-              `The focused node is unmounting, ${
-                this.m_RetainFocusParent
-                  ? "will transfer to retain focus ancestor"
-                  : "will blur"
-              }.`,
+              `The focused node is unmounting, ${this.m_RetainFocusParent ? "will transfer to retain focus ancestor" : "will blur"}.`,
             ),
             t && this.Tree.DeferredFocus.RequestFocus(void 0),
             this.m_RetainFocusParent
@@ -62983,8 +62786,8 @@
               return n & Node.DOCUMENT_POSITION_PRECEDING
                 ? 1
                 : n & Node.DOCUMENT_POSITION_FOLLOWING
-                ? -1
-                : 0;
+                  ? -1
+                  : 0;
             }),
             this.m_ActiveChild &&
               (this.m_iLastActiveChildIndex = this.m_rgChildren.indexOf(
@@ -63020,10 +62823,10 @@
             ? r && !r(this)
               ? "none"
               : e || (t && (a || 0 == this.m_rgChildren.length))
-              ? "self"
-              : !a && this.m_rgChildren.length
-              ? "children"
-              : "none"
+                ? "self"
+                : !a && this.m_rgChildren.length
+                  ? "children"
+                  : "none"
             : "none";
         }
         BTakeFocus(e, t) {
@@ -63092,9 +62895,9 @@
                     void 0 !== a
                       ? a
                       : null === (r = this.m_Tree.GetLastFocusedNode()) ||
-                        void 0 === r
-                      ? void 0
-                      : r.GetBoundingRect()),
+                          void 0 === r
+                        ? void 0
+                        : r.GetBoundingRect()),
                 P(
                   `Taking focus while preserving ${k[o]} preserved: ${s} movement: ${n}, node:`,
                   l || t,
@@ -63163,11 +62966,7 @@
             });
           return (
             P(
-              `Focusing visible child, best child match is ${
-                null === (n = null == s ? void 0 : s.child) || void 0 === n
-                  ? void 0
-                  : n.Element.className
-              } - ${JSON.stringify(null == s ? void 0 : s.visibility)}`,
+              `Focusing visible child, best child match is ${null === (n = null == s ? void 0 : s.child) || void 0 === n ? void 0 : n.Element.className} - ${JSON.stringify(null == s ? void 0 : s.visibility)}`,
             ),
             !!s && s.child.BTakeFocus(e)
           );
@@ -63267,8 +63066,8 @@
           )
             ? this.m_Properties.scrollIntoViewType
             : this.m_Parent
-            ? this.m_Parent.GetScrollIntoViewType()
-            : F.Standard;
+              ? this.m_Parent.GetScrollIntoViewType()
+              : F.Standard;
         }
         GetRelativeDirection(e) {
           return this.ComputeRelativeDirection(e, this.GetLayout());
@@ -63350,9 +63149,9 @@
               void 0 !== r
                 ? r
                 : null === (i = this.m_Tree.GetLastFocusedNode()) ||
-                  void 0 === i
-                ? void 0
-                : i.GetBoundingRect();
+                    void 0 === i
+                  ? void 0
+                  : i.GetBoundingRect();
             e && ((c.x = e.x), (c.width = e.width));
           }
           if (o) {
@@ -63839,10 +63638,10 @@
           e instanceof s
             ? (this.m_ulSteamID = e.m_ulSteamID)
             : "string" == typeof e
-            ? (this.m_ulSteamID = r.Z.fromString(e, !0))
-            : t && a && void 0 !== n
-            ? this.SetFromComponents(e, n, a, t)
-            : (this.m_ulSteamID = e ? r.Z.fromNumber(e, !0) : r.Z.UZERO);
+              ? (this.m_ulSteamID = r.Z.fromString(e, !0))
+              : t && a && void 0 !== n
+                ? this.SetFromComponents(e, n, a, t)
+                : (this.m_ulSteamID = e ? r.Z.fromNumber(e, !0) : r.Z.UZERO);
         }
         static InitFromAccountID(e) {
           return new s(Number(e), i.De.EUNIVERSE, 1, n.QS);
@@ -64308,18 +64107,22 @@
               ? m
                 ? (p = (0, f.Xx)("#ImageUpload_InvalidFileType"))
                 : c
-                ? (p = (0, f.Xx)(
-                    "#ImageUpload_InvalidFormat",
-                    M.GetExtensionStringForFileType(a),
-                  ))
-                : l || u
-                ? o
-                  ? !l &&
-                    u &&
-                    ((p = (0, f.Xx)("#ImageUpload_InvalidDimensions", r, n)),
-                    (g = !0))
-                  : (p = (0, f.Xx)("#ImageUpload_TooSmall", r, n))
-                : (p = (0, f.Xx)("#ImageUpload_InvalidResolution", r, n))
+                  ? (p = (0, f.Xx)(
+                      "#ImageUpload_InvalidFormat",
+                      M.GetExtensionStringForFileType(a),
+                    ))
+                  : l || u
+                    ? o
+                      ? !l &&
+                        u &&
+                        ((p = (0, f.Xx)(
+                          "#ImageUpload_InvalidDimensions",
+                          r,
+                          n,
+                        )),
+                        (g = !0))
+                      : (p = (0, f.Xx)("#ImageUpload_TooSmall", r, n))
+                    : (p = (0, f.Xx)("#ImageUpload_InvalidResolution", r, n))
               : (p = (0, f.Xx)("#ImageUpload_InvalidFormatSelected")),
             { error: p, needsCrop: g }
           );
@@ -64734,18 +64537,18 @@
               e.endsWith(".jpg")
                 ? 1
                 : e.endsWith(".png")
-                ? 3
-                : e.endsWith(".gif")
-                ? 2
-                : e.endsWith(".mp4")
-                ? 4
-                : e.endsWith(".webm")
-                ? 5
-                : e.endsWith(".vtt")
-                ? 6
-                : e.endsWith(".srt")
-                ? 7
-                : void 0
+                  ? 3
+                  : e.endsWith(".gif")
+                    ? 2
+                    : e.endsWith(".mp4")
+                      ? 4
+                      : e.endsWith(".webm")
+                        ? 5
+                        : e.endsWith(".vtt")
+                          ? 6
+                          : e.endsWith(".srt")
+                            ? 7
+                            : void 0
             );
           })(e);
         }
@@ -66214,28 +66017,31 @@
             "sale_logo" === e
               ? (t = this.jsondata.localized_sale_logo)
               : "sale_overlay" === e
-              ? (t = this.jsondata.localized_sale_overlay)
-              : "localized_image_group" === e ||
-                "link_capsule" === e ||
-                "product_banner_override" === e ||
-                "product_mobile_banner_override" === e ||
-                "sale_section_title" === e ||
-                "schedule_track_art" === e
-              ? (t = p.U8.GetLocalizedImageGroupForEditAsImgArray(
-                  this.clanSteamID,
-                ))
-              : "product_banner" === e
-              ? (t = this.jsondata.localized_sale_product_banner)
-              : "product_mobile_banner" === e
-              ? (t = this.jsondata.localized_sale_product_mobile_banner)
-              : "bestofyear_banner" === e
-              ? (t = this.jsondata.localized_bestofyear_banner)
-              : "bestofyear_banner_mobile" === e
-              ? (t = this.jsondata.localized_bestofyear_banner_mobile)
-              : "localized_store_app_spotlight" === e
-              ? (t = this.jsondata.localized_store_app_spotlight)
-              : "localized_store_app_spotlight_mobile" === e &&
-                (t = this.jsondata.localized_store_app_spotlight_mobile);
+                ? (t = this.jsondata.localized_sale_overlay)
+                : "localized_image_group" === e ||
+                    "link_capsule" === e ||
+                    "product_banner_override" === e ||
+                    "product_mobile_banner_override" === e ||
+                    "sale_section_title" === e ||
+                    "schedule_track_art" === e
+                  ? (t = p.U8.GetLocalizedImageGroupForEditAsImgArray(
+                      this.clanSteamID,
+                    ))
+                  : "product_banner" === e
+                    ? (t = this.jsondata.localized_sale_product_banner)
+                    : "product_mobile_banner" === e
+                      ? (t = this.jsondata.localized_sale_product_mobile_banner)
+                      : "bestofyear_banner" === e
+                        ? (t = this.jsondata.localized_bestofyear_banner)
+                        : "bestofyear_banner_mobile" === e
+                          ? (t =
+                              this.jsondata.localized_bestofyear_banner_mobile)
+                          : "localized_store_app_spotlight" === e
+                            ? (t = this.jsondata.localized_store_app_spotlight)
+                            : "localized_store_app_spotlight_mobile" === e &&
+                              (t =
+                                this.jsondata
+                                  .localized_store_app_spotlight_mobile);
           return t;
         }
         GetImageURL(e, t = 0, a = p.FN.full) {
@@ -66244,12 +66050,12 @@
           return n && r[t].startsWith("http")
             ? r[t]
             : n
-            ? p.aN.GenerateArtworkURLFromHashAndExtensions(
-                this.clanSteamID,
-                r[t],
-                a,
-              )
-            : void 0;
+              ? p.aN.GenerateArtworkURLFromHashAndExtensions(
+                  this.clanSteamID,
+                  r[t],
+                  a,
+                )
+              : void 0;
         }
         GetImageHash(e, t = 0) {
           let a = this.GetImgArray(e);
@@ -66400,8 +66206,8 @@
               this.bOldAnnouncement
                 ? this.AnnouncementGID
                 : null == this.GID
-                ? 0
-                : this.GID,
+                  ? 0
+                  : this.GID,
             );
             return (null == t
               ? void 0
@@ -66409,16 +66215,16 @@
               ? ((a %= t.GetOnlyAllAgesSafeScreenshots().length),
                 t.GetOnlyAllAgesSafeScreenshots()[a])
               : (null ===
-                  (e =
-                    null == t
-                      ? void 0
-                      : t.GetBothAllAgesSafeAndMatureScreenshots()) ||
-                void 0 === e
-                  ? void 0
-                  : e.length) > 0
-              ? ((a %= t.GetBothAllAgesSafeAndMatureScreenshots().length),
-                t.GetBothAllAgesSafeAndMatureScreenshots()[a])
-              : "";
+                    (e =
+                      null == t
+                        ? void 0
+                        : t.GetBothAllAgesSafeAndMatureScreenshots()) ||
+                  void 0 === e
+                    ? void 0
+                    : e.length) > 0
+                ? ((a %= t.GetBothAllAgesSafeAndMatureScreenshots().length),
+                  t.GetBothAllAgesSafeAndMatureScreenshots()[a])
+                : "";
           }
           if (this.clanSteamID) {
             const e = g.sV.GetClanInfoByClanAccountID(
@@ -66680,18 +66486,18 @@
               ? "string" == typeof e
                 ? T.De.STORE_BASE_URL + "category/" + e
                 : "category" == e.type
-                ? T.De.STORE_BASE_URL + "category/" + e.category
-                : "tags" == e.type
-                ? T.De.STORE_BASE_URL +
-                  "tags/" +
-                  ((0, f.CE)() || "en") +
-                  "/" +
-                  e.tagid
-                : "freetoplay" == e.type
-                ? T.De.STORE_BASE_URL + "genre/Free%20to%20Play/"
-                : "earlyaccess" == e.type
-                ? T.De.STORE_BASE_URL + "genre/Early%20Access/"
-                : T.De.STATS_BASE_URL + e.type
+                  ? T.De.STORE_BASE_URL + "category/" + e.category
+                  : "tags" == e.type
+                    ? T.De.STORE_BASE_URL +
+                      "tags/" +
+                      ((0, f.CE)() || "en") +
+                      "/" +
+                      e.tagid
+                    : "freetoplay" == e.type
+                      ? T.De.STORE_BASE_URL + "genre/Free%20to%20Play/"
+                      : "earlyaccess" == e.type
+                        ? T.De.STORE_BASE_URL + "genre/Early%20Access/"
+                        : T.De.STATS_BASE_URL + e.type
               : T.De.STORE_BASE_URL + "sale/" + this.jsondata.sale_vanity_id;
           }
           if (!this.jsondata.sale_vanity_id_valve_approved_for_sale_subpath) {
@@ -66835,15 +66641,16 @@
           return this.BHasTag("steam_award_nomination_request")
             ? (0, f.Xx)("#PartnerEvent_SteamAwardNominations")
             : this.BHasTag("steam_award_vote_request")
-            ? (0, f.Xx)("#PartnerEvent_SteamAwardVoteRequest")
-            : this.BHasTag("steam_game_festival_artist_statement")
-            ? (0, f.Xx)("#PartnerEvent_SteamGameFestival_ArtistState")
-            : this.BHasTag("steam_game_festival_office_hour")
-            ? (0, f.Xx)("#PartnerEvent_SteamGameFestival_OfficeHour")
-            : this.BHasTag("steam_game_festival_broadcast") ||
-              (this.BHasTagStartingWith("sale_nextfest_") && 11 == this.type)
-            ? (0, f.Xx)("#PartnerEvent_SteamGameFestival_Broadcast")
-            : this.GetEventTypeAsString();
+              ? (0, f.Xx)("#PartnerEvent_SteamAwardVoteRequest")
+              : this.BHasTag("steam_game_festival_artist_statement")
+                ? (0, f.Xx)("#PartnerEvent_SteamGameFestival_ArtistState")
+                : this.BHasTag("steam_game_festival_office_hour")
+                  ? (0, f.Xx)("#PartnerEvent_SteamGameFestival_OfficeHour")
+                  : this.BHasTag("steam_game_festival_broadcast") ||
+                      (this.BHasTagStartingWith("sale_nextfest_") &&
+                        11 == this.type)
+                    ? (0, f.Xx)("#PartnerEvent_SteamGameFestival_Broadcast")
+                    : this.GetEventTypeAsString();
         }
         GetAllTags() {
           return this.vecTags;
@@ -66927,23 +66734,23 @@
             ? null == this.jsondata.source_content_hub
               ? "games"
               : "string" == typeof this.jsondata.source_content_hub
-              ? "category"
-              : this.jsondata.source_content_hub.type
+                ? "category"
+                : this.jsondata.source_content_hub.type
             : void 0;
         }
         GetContentHubCategory() {
           return null == this.jsondata.source_content_hub
             ? void 0
             : "string" == typeof this.jsondata.source_content_hub
-            ? this.jsondata.source_content_hub
-            : this.jsondata.source_content_hub.category;
+              ? this.jsondata.source_content_hub
+              : this.jsondata.source_content_hub.category;
         }
         GetContentHubTag() {
           return null == this.jsondata.source_content_hub
             ? void 0
             : "string" == typeof this.jsondata.source_content_hub
-            ? 0
-            : this.jsondata.source_content_hub.tagid;
+              ? 0
+              : this.jsondata.source_content_hub.tagid;
         }
         GetContentHub() {
           return "string" == typeof this.jsondata.source_content_hub
@@ -73027,8 +72834,8 @@
                 : e.formatted_original_price) && void 0 !== t
             ? t
             : null === (a = this.m_BestPurchaseOption) || void 0 === a
-            ? void 0
-            : a.formatted_final_price;
+              ? void 0
+              : a.formatted_final_price;
         }
         GetAllPurchaseOptions() {
           return (
@@ -73205,9 +73012,7 @@
                 e.library_hero_2x(),
               ))),
             e.community_icon() &&
-              (this.m_strCommunityIcon = `${
-                de.De.MEDIA_CDN_COMMUNITY_URL
-              }images/apps/${t}/${e.community_icon()}.jpg`);
+              (this.m_strCommunityIcon = `${de.De.MEDIA_CDN_COMMUNITY_URL}images/apps/${t}/${e.community_icon()}.jpg`);
         }
         GetMainCapsuleURL() {
           return this.m_strMainCapsuleURL;
@@ -73928,20 +73733,22 @@
               ? (this.m_setUnavailableApps.add(e.appid()),
                 this.m_mapApps.delete(e.appid()))
               : e.packageid()
-              ? (this.m_setUnavailablePackages.add(e.packageid()),
-                this.m_mapPackages.delete(e.packageid()))
-              : e.bundleid()
-              ? (this.m_setUnavailableBundles.add(e.bundleid()),
-                this.m_mapBundles.delete(e.bundleid()))
-              : e.tagid()
-              ? (this.m_setUnavailableTags.add(e.tagid()),
-                this.m_mapTags.delete(e.tagid()))
-              : e.creatorid()
-              ? (this.m_setUnavailableCreators.add(e.creatorid()),
-                this.m_mapCreators.delete(e.creatorid()))
-              : e.hubcategoryid() &&
-                (this.m_setUnavailableHubCategories.add(e.hubcategoryid()),
-                this.m_mapHubCategories.delete(e.hubcategoryid()));
+                ? (this.m_setUnavailablePackages.add(e.packageid()),
+                  this.m_mapPackages.delete(e.packageid()))
+                : e.bundleid()
+                  ? (this.m_setUnavailableBundles.add(e.bundleid()),
+                    this.m_mapBundles.delete(e.bundleid()))
+                  : e.tagid()
+                    ? (this.m_setUnavailableTags.add(e.tagid()),
+                      this.m_mapTags.delete(e.tagid()))
+                    : e.creatorid()
+                      ? (this.m_setUnavailableCreators.add(e.creatorid()),
+                        this.m_mapCreators.delete(e.creatorid()))
+                      : e.hubcategoryid() &&
+                        (this.m_setUnavailableHubCategories.add(
+                          e.hubcategoryid(),
+                        ),
+                        this.m_mapHubCategories.delete(e.hubcategoryid()));
           });
         }
         SortStoreItems(e) {
@@ -77001,8 +76808,8 @@
           return void 0 === e || isNaN(e) || e < this.props.min
             ? this.props.min
             : e > this.props.max
-            ? this.props.max
-            : e;
+              ? this.props.max
+              : e;
         }
         BPropsValid() {
           return this.props.max > this.props.min;
@@ -77427,8 +77234,8 @@
                 null !== (i = this.props.tabIndex) && void 0 !== i
                   ? i
                   : l
-                  ? 0
-                  : null,
+                    ? 0
+                    : null,
               componentRef: this.OnInputRef,
               className: this.props.strDropDownButtonClassName,
               arrowClassName: this.props.arrowClassName,
@@ -78137,11 +77944,7 @@
               0,
             ),
             a = {
-              transform: `rotateX(${this.CalculateRotationDegrees(
-                -1 * this.state.clientYDelta,
-              )}deg) rotateY( ${this.CalculateRotationDegrees(
-                this.state.clientXDelta,
-              )}deg)`,
+              transform: `rotateX(${this.CalculateRotationDegrees(-1 * this.state.clientYDelta)}deg) rotateY( ${this.CalculateRotationDegrees(this.state.clientXDelta)}deg)`,
               transition: "transform .16s ease-out, filter .16s ease-out",
               filter: "brightness(" + t + ")",
             };
@@ -80622,12 +80425,12 @@
           (i = t) == Gt.Left
             ? r.Left
             : i == Gt.Right
-            ? r.Right
-            : i == Gt.Up
-            ? r.Up
-            : i == Gt.Down
-            ? r.Down
-            : "");
+              ? r.Right
+              : i == Gt.Up
+                ? r.Up
+                : i == Gt.Down
+                  ? r.Down
+                  : "");
         var r, i;
         return n.createElement(
           Ut,
@@ -80699,14 +80502,14 @@
                 ? t(r.error)
                 : t
               : s.sm_ErrorReportingStore &&
-                s.sm_ErrorReportingStore.reporting_enabled
-              ? n.createElement(l, {
-                  error: r,
-                  identifierHash: i,
-                  store: s.sm_ErrorReportingStore,
-                  onRefresh: this.Reset,
-                })
-              : n.createElement(o, { error: r, onDismiss: this.Reset })
+                  s.sm_ErrorReportingStore.reporting_enabled
+                ? n.createElement(l, {
+                    error: r,
+                    identifierHash: i,
+                    store: s.sm_ErrorReportingStore,
+                    onRefresh: this.Reset,
+                  })
+                : n.createElement(o, { error: r, onDismiss: this.Reset })
             : e || null;
         }
       }
@@ -80947,8 +80750,12 @@
                       Component: null != s ? s : S,
                     })
                   : e instanceof g.QA
-                  ? n.createElement(f, { key: e.key, modal: e, active: e == u })
-                  : void 0,
+                    ? n.createElement(f, {
+                        key: e.key,
+                        modal: e,
+                        active: e == u,
+                      })
+                    : void 0,
               ))
             : (o = Object.assign(Object.assign({}, o), { display: "none" })),
           n.createElement(
@@ -84546,10 +84353,10 @@
                   ? `${e} ${t}`
                   : t
                 : "object" == typeof t
-                ? e
-                  ? `${e} ${n(t)}`
-                  : n(t)
-                : e
+                  ? e
+                    ? `${e} ${n(t)}`
+                    : n(t)
+                  : e
               : e,
           "",
         );
@@ -84859,8 +84666,8 @@
           return this.m_rgLocalesToUse
             ? this.m_rgLocalesToUse
             : navigator && navigator.languages
-            ? navigator.languages
-            : ["en-US"];
+              ? navigator.languages
+              : ["en-US"];
         }
         GetELanguageFallbackOrder(e = null) {
           let t = new Array();
@@ -85446,9 +85253,7 @@
           ((_ = t
             ? [
                 `%c${d}%c:${m ? " %c" + u : ""}`,
-                `color: ${o ? "black" : "white"}; background: rgb(${s.join(
-                  ",",
-                )}); padding: 0 1ch`,
+                `color: ${o ? "black" : "white"}; background: rgb(${s.join(",")}); padding: 0 1ch`,
                 "color: transparent; margin-right: -1ch",
                 ...(m ? [""] : []),
                 ...i,
@@ -85993,40 +85798,41 @@
         return p(e, s.De.STORE_BASE_URL)
           ? s.De.STORE_BASE_URL
           : p(e, s.De.COMMUNITY_BASE_URL)
-          ? s.De.COMMUNITY_BASE_URL
-          : p(e, s.De.CHAT_BASE_URL)
-          ? s.De.CHAT_BASE_URL
-          : p(e, s.De.PARTNER_BASE_URL)
-          ? s.De.PARTNER_BASE_URL
-          : p(e, s.De.HELP_BASE_URL)
-          ? s.De.HELP_BASE_URL
-          : p(e, s.De.STEAMTV_BASE_URL)
-          ? s.De.STEAMTV_BASE_URL
-          : p(e, s.De.STATS_BASE_URL)
-          ? s.De.STATS_BASE_URL
-          : p(e, s.De.INTERNAL_STATS_BASE_URL)
-          ? s.De.INTERNAL_STATS_BASE_URL
-          : p(e, s.De.STORE_CHECKOUT_BASE_URL)
-          ? s.De.STORE_CHECKOUT_BASE_URL
-          : p(e, "https://steamloopback.host")
-          ? "https://steamloopback.host"
-          : "";
+            ? s.De.COMMUNITY_BASE_URL
+            : p(e, s.De.CHAT_BASE_URL)
+              ? s.De.CHAT_BASE_URL
+              : p(e, s.De.PARTNER_BASE_URL)
+                ? s.De.PARTNER_BASE_URL
+                : p(e, s.De.HELP_BASE_URL)
+                  ? s.De.HELP_BASE_URL
+                  : p(e, s.De.STEAMTV_BASE_URL)
+                    ? s.De.STEAMTV_BASE_URL
+                    : p(e, s.De.STATS_BASE_URL)
+                      ? s.De.STATS_BASE_URL
+                      : p(e, s.De.INTERNAL_STATS_BASE_URL)
+                        ? s.De.INTERNAL_STATS_BASE_URL
+                        : p(e, s.De.STORE_CHECKOUT_BASE_URL)
+                          ? s.De.STORE_CHECKOUT_BASE_URL
+                          : p(e, "https://steamloopback.host")
+                            ? "https://steamloopback.host"
+                            : "";
       }
       function h() {
         const e = window.location.href;
         return p(e, s.De.STORE_BASE_URL) || p(e, s.De.STORE_CHECKOUT_BASE_URL)
           ? "store"
           : p(e, s.De.COMMUNITY_BASE_URL)
-          ? "community"
-          : p(e, s.De.PARTNER_BASE_URL)
-          ? "partnerweb"
-          : p(e, s.De.HELP_BASE_URL)
-          ? "help"
-          : p(e, s.De.STEAMTV_BASE_URL)
-          ? "steamtv"
-          : p(e, s.De.STATS_BASE_URL) || p(e, s.De.INTERNAL_STATS_BASE_URL)
-          ? "stats"
-          : "";
+            ? "community"
+            : p(e, s.De.PARTNER_BASE_URL)
+              ? "partnerweb"
+              : p(e, s.De.HELP_BASE_URL)
+                ? "help"
+                : p(e, s.De.STEAMTV_BASE_URL)
+                  ? "steamtv"
+                  : p(e, s.De.STATS_BASE_URL) ||
+                      p(e, s.De.INTERNAL_STATS_BASE_URL)
+                    ? "stats"
+                    : "";
       }
     },
     97819: (e, t, a) => {

@@ -2602,11 +2602,11 @@
               0 == t.length
                 ? (0, c.Xx)("#SteamLearn_Config_DataSourcesDialog_Add")
                 : 1 == t.length
-                ? (0, c.Xx)("#SteamLearn_Config_DataSourcesDialog_Add_1")
-                : (0, c.Xx)(
-                    "#SteamLearn_Config_DataSourcesDialog_Add_Multiple",
-                    t.length,
-                  )),
+                  ? (0, c.Xx)("#SteamLearn_Config_DataSourcesDialog_Add_1")
+                  : (0, c.Xx)(
+                      "#SteamLearn_Config_DataSourcesDialog_Add_Multiple",
+                      t.length,
+                    )),
             o.createElement(
               Ve.On,
               {
@@ -2903,12 +2903,7 @@
                                   o.createElement(
                                     "div",
                                     null,
-                                    `${
-                                      t.multi_binary_crossentropy().value()[a]
-                                    } - ${(
-                                      100 *
-                                      t.multi_binary_crossentropy().weight()[a]
-                                    ).toFixed(2)}%`,
+                                    `${t.multi_binary_crossentropy().value()[a]} - ${(100 * t.multi_binary_crossentropy().weight()[a]).toFixed(2)}%`,
                                   ),
                                 );
                             }
@@ -2919,9 +2914,7 @@
                                   o.createElement(
                                     "div",
                                     null,
-                                    `${(
-                                      100 * t.binary_crossentropy().value()
-                                    ).toFixed(2)}%`,
+                                    `${(100 * t.binary_crossentropy().value()).toFixed(2)}%`,
                                   ),
                                 )),
                               t.categorical_crossentropy().value().length > 0)
@@ -2935,12 +2928,7 @@
                                   o.createElement(
                                     "div",
                                     null,
-                                    `${
-                                      t.categorical_crossentropy().value()[a]
-                                    } - ${(
-                                      100 *
-                                      t.categorical_crossentropy().weight()[a]
-                                    ).toFixed(2)}%`,
+                                    `${t.categorical_crossentropy().value()[a]} - ${(100 * t.categorical_crossentropy().weight()[a]).toFixed(2)}%`,
                                   ),
                                 );
                           }
@@ -7537,9 +7525,7 @@
                 return (
                   (0, u.X)(
                     !1,
-                    `Incoming node/connector ${n.node_id()}, ${o} have a shape with a primary dimension of ${
-                      e.length
-                    }: ${e}!`,
+                    `Incoming node/connector ${n.node_id()}, ${o} have a shape with a primary dimension of ${e.length}: ${e}!`,
                   ),
                   null
                 );
@@ -9325,10 +9311,7 @@
                     o.createElement(
                       "div",
                       { className: Ke.Value },
-                      `${l.extract().bias_start().toFixed(2)} - ${l
-                        .extract()
-                        .bias_end()
-                        .toFixed(2)}`,
+                      `${l.extract().bias_start().toFixed(2)} - ${l.extract().bias_end().toFixed(2)}`,
                     ),
                   ),
                 4 == l.extract().selection() &&
@@ -9345,13 +9328,7 @@
                     o.createElement(
                       "div",
                       { className: Ke.Value },
-                      `Input ${l
-                        .extract()
-                        .input_bias_input_number()
-                        .toFixed(0)}, weight ${l
-                        .extract()
-                        .input_bias_strength()
-                        .toFixed(2)}`,
+                      `Input ${l.extract().input_bias_input_number().toFixed(0)}, weight ${l.extract().input_bias_strength().toFixed(2)}`,
                     ),
                   ),
               ),
@@ -12153,10 +12130,7 @@
                     o.createElement(
                       "div",
                       { className: da.ProgressPct },
-                      `${(
-                        (100 * _.total_rows_processed()) / _.total_rows() -
-                        0.5
-                      ).toFixed(0)}%`,
+                      `${((100 * _.total_rows_processed()) / _.total_rows() - 0.5).toFixed(0)}%`,
                     ),
                 ),
                 o.createElement("div", { className: da.RowProgress }, i),
@@ -12837,29 +12811,29 @@
             s.isLoading || c.isLoading
               ? o.createElement("div", null, "LOADING")
               : s.isSuccess && c.isSuccess
-              ? o.createElement(
-                  "div",
-                  { className: da.ProjectTrain },
-                  a > 0 &&
-                    o.createElement(ua, {
+                ? o.createElement(
+                    "div",
+                    { className: da.ProjectTrain },
+                    a > 0 &&
+                      o.createElement(ua, {
+                        nProjectID: e,
+                        nFetchID: a,
+                        arrAllFetchIDs: l.versions(),
+                        fnSetFetchID: (e) => {
+                          n(e);
+                        },
+                      }),
+                    o.createElement("div", { className: da.Separator }),
+                    o.createElement(ga, {
                       nProjectID: e,
-                      nFetchID: a,
-                      arrAllFetchIDs: l.versions(),
-                      fnSetFetchID: (e) => {
-                        n(e);
+                      nTrainID: r,
+                      arrAllTrainIDs: d.versions(),
+                      fnSetTrainID: (e) => {
+                        i(e);
                       },
                     }),
-                  o.createElement("div", { className: da.Separator }),
-                  o.createElement(ga, {
-                    nProjectID: e,
-                    nTrainID: r,
-                    arrAllTrainIDs: d.versions(),
-                    fnSetTrainID: (e) => {
-                      i(e);
-                    },
-                  }),
-                )
-              : null
+                  )
+                : null
           );
         };
       var Ea = a(57024),
@@ -13521,37 +13495,21 @@
           SteamLearnProjectEvents: () => `/${ba.SteamLearnProject()}/events`,
           SteamLearnProjectCreate: () => `/${ba.SteamLearnProject()}/create`,
           SteamLearnProjectOverview: (e, t) =>
-            `/${ba.SteamLearnProject()}/${null != e ? e : ":id"}/${
-              null != t ? t : ":version"
-            }/overview`,
+            `/${ba.SteamLearnProject()}/${null != e ? e : ":id"}/${null != t ? t : ":version"}/overview`,
           SteamLearnProjectDataSources: (e, t) =>
-            `/${ba.SteamLearnProject()}/${null != e ? e : ":id"}/${
-              null != t ? t : ":version"
-            }/datasources`,
+            `/${ba.SteamLearnProject()}/${null != e ? e : ":id"}/${null != t ? t : ":version"}/datasources`,
           SteamLearnProjectSnapshots: (e, t) =>
-            `/${ba.SteamLearnProject()}/${null != e ? e : ":id"}/${
-              null != t ? t : ":version"
-            }/snapshots`,
+            `/${ba.SteamLearnProject()}/${null != e ? e : ":id"}/${null != t ? t : ":version"}/snapshots`,
           SteamLearnProjectModel: (e, t) =>
-            `/${ba.SteamLearnProject()}/${null != e ? e : ":id"}/${
-              null != t ? t : ":version"
-            }/structure`,
+            `/${ba.SteamLearnProject()}/${null != e ? e : ":id"}/${null != t ? t : ":version"}/structure`,
           SteamLearnProjectTrainSettings: (e, t) =>
-            `/${ba.SteamLearnProject()}/${null != e ? e : ":id"}/${
-              null != t ? t : ":version"
-            }/trainsettings`,
+            `/${ba.SteamLearnProject()}/${null != e ? e : ":id"}/${null != t ? t : ":version"}/trainsettings`,
           SteamLearnProjectTrain: (e, t) =>
-            `/${ba.SteamLearnProject()}/${null != e ? e : ":id"}/${
-              null != t ? t : ":version"
-            }/train`,
+            `/${ba.SteamLearnProject()}/${null != e ? e : ":id"}/${null != t ? t : ":version"}/train`,
           SteamLearnProjectTrainStatus: (e, t) =>
-            `/${ba.SteamLearnProject()}/${null != e ? e : ":id"}/${
-              null != t ? t : ":version"
-            }/trainstatus`,
+            `/${ba.SteamLearnProject()}/${null != e ? e : ":id"}/${null != t ? t : ":version"}/trainstatus`,
           SteamLearnProjectInferenceTester: (e, t) =>
-            `/${ba.SteamLearnProject()}/${null != e ? e : ":id"}/${
-              null != t ? t : ":version"
-            }/inferencetester`,
+            `/${ba.SteamLearnProject()}/${null != e ? e : ":id"}/${null != t ? t : ":version"}/inferencetester`,
         };
       function Da(e, t) {
         return t.some((t) => (0, r.LX)(e, { path: t, exact: !1, strict: !1 }));

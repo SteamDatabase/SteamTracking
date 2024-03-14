@@ -2477,8 +2477,8 @@
             return this.m_rgLocalesToUse
               ? this.m_rgLocalesToUse
               : navigator && navigator.languages
-              ? navigator.languages
-              : ["en-US"];
+                ? navigator.languages
+                : ["en-US"];
           }),
           (e.prototype.GetELanguageFallbackOrder = function (a) {
             void 0 === a && (a = null);
@@ -2663,10 +2663,10 @@
                 ? "".concat(e, " ").concat(a)
                 : a
               : "object" == typeof a
-              ? e
-                ? "".concat(e, " ").concat(ge(a))
-                : ge(a)
-              : e
+                ? e
+                  ? "".concat(e, " ").concat(ge(a))
+                  : ge(a)
+                : e
             : e;
         }, "");
       }
@@ -4592,25 +4592,25 @@
                     q("#MatchDetails_ShowMatch"),
                   ))
                 : 0 == e.losing_node_id &&
-                  0 != e.winning_node_id &&
-                  n &&
-                  r.is_final_group &&
-                  n
-                ? (c = m.createElement(
-                    "div",
-                    { className: Oe().Details },
-                    q("#MatchDetails_Elimination"),
-                  ))
-                : 0 == e.losing_node_id &&
-                  0 == e.winning_node_id &&
-                  r &&
-                  r.is_final_group &&
-                  n &&
-                  (c = m.createElement(
-                    "div",
-                    { className: Oe().Details },
-                    q("#MatchDetails_Championship"),
-                  )),
+                    0 != e.winning_node_id &&
+                    n &&
+                    r.is_final_group &&
+                    n
+                  ? (c = m.createElement(
+                      "div",
+                      { className: Oe().Details },
+                      q("#MatchDetails_Elimination"),
+                    ))
+                  : 0 == e.losing_node_id &&
+                    0 == e.winning_node_id &&
+                    r &&
+                    r.is_final_group &&
+                    n &&
+                    (c = m.createElement(
+                      "div",
+                      { className: Oe().Details },
+                      q("#MatchDetails_Championship"),
+                    )),
               m.createElement(
                 "div",
                 {
@@ -4747,21 +4747,21 @@
                       q("#MatchDetails_ShowMatch"),
                     ))
                   : 0 == e.losing_node_id && 0 != e.winning_node_id && n
-                  ? (l = m.createElement(
-                      "div",
-                      { className: Oe().Details },
-                      q("#MatchDetails_Elimination"),
-                    ))
-                  : 0 == e.losing_node_id &&
-                    0 == e.winning_node_id &&
-                    r &&
-                    r.is_final_group &&
-                    n &&
-                    (l = m.createElement(
-                      "div",
-                      { className: Oe().Details },
-                      q("#MatchDetails_Championship"),
-                    ))),
+                    ? (l = m.createElement(
+                        "div",
+                        { className: Oe().Details },
+                        q("#MatchDetails_Elimination"),
+                      ))
+                    : 0 == e.losing_node_id &&
+                      0 == e.winning_node_id &&
+                      r &&
+                      r.is_final_group &&
+                      n &&
+                      (l = m.createElement(
+                        "div",
+                        { className: Oe().Details },
+                        q("#MatchDetails_Championship"),
+                      ))),
               m.createElement(
                 "div",
                 { className: De().FadeIn, key: this.props.serverSteamID },
@@ -5116,25 +5116,25 @@
                   g < 1
                     ? q("#Feed_Timestamp_Future_Shortly")
                     : _ < 1
-                    ? q(
-                        1 == g
-                          ? "#Feed_Timestamp_Future_Hour"
-                          : "#Feed_Timestamp_Future_Hours",
-                        g,
-                      )
-                    : d < 1
-                    ? q(
-                        1 == _
-                          ? "#Feed_Timestamp_Future_Day"
-                          : "#Feed_Timestamp_Future_Days",
-                        _,
-                      )
-                    : q(
-                        1 == d
-                          ? "#Feed_Timestamp_Future_Week"
-                          : "#Feed_Timestamp_Future_Weeks",
-                        d,
-                      );
+                      ? q(
+                          1 == g
+                            ? "#Feed_Timestamp_Future_Hour"
+                            : "#Feed_Timestamp_Future_Hours",
+                          g,
+                        )
+                      : d < 1
+                        ? q(
+                            1 == _
+                              ? "#Feed_Timestamp_Future_Day"
+                              : "#Feed_Timestamp_Future_Days",
+                            _,
+                          )
+                        : q(
+                            1 == d
+                              ? "#Feed_Timestamp_Future_Week"
+                              : "#Feed_Timestamp_Future_Weeks",
+                            d,
+                          );
               } else {
                 var p = c - this.props.timestamp,
                   u = Math.floor(p / 60),
@@ -5145,30 +5145,32 @@
                   u < 1
                     ? q("#Feed_Timestamp_JustNow")
                     : h < 1
-                    ? q(
-                        1 == u
-                          ? "#Feed_Timestamp_Minute"
-                          : "#Feed_Timestamp_Minutes",
-                        u,
-                      )
-                    : y < 1
-                    ? q(
-                        1 == h
-                          ? "#Feed_Timestamp_Hour"
-                          : "#Feed_Timestamp_Hours",
-                        h,
-                      )
-                    : k < 1
-                    ? q(
-                        1 == y ? "#Feed_Timestamp_Day" : "#Feed_Timestamp_Days",
-                        y,
-                      )
-                    : q(
-                        1 == k
-                          ? "#Feed_Timestamp_Week"
-                          : "#Feed_Timestamp_Weeks",
-                        k,
-                      );
+                      ? q(
+                          1 == u
+                            ? "#Feed_Timestamp_Minute"
+                            : "#Feed_Timestamp_Minutes",
+                          u,
+                        )
+                      : y < 1
+                        ? q(
+                            1 == h
+                              ? "#Feed_Timestamp_Hour"
+                              : "#Feed_Timestamp_Hours",
+                            h,
+                          )
+                        : k < 1
+                          ? q(
+                              1 == y
+                                ? "#Feed_Timestamp_Day"
+                                : "#Feed_Timestamp_Days",
+                              y,
+                            )
+                          : q(
+                              1 == k
+                                ? "#Feed_Timestamp_Week"
+                                : "#Feed_Timestamp_Weeks",
+                              k,
+                            );
               }
             return m.createElement(
               "div",
@@ -5246,17 +5248,17 @@
               return this.state.bFallbackError
                 ? null
                 : this.state.bError || !t
-                ? m.createElement(
-                    "img",
-                    (0, r.pi)({}, o, {
-                      src: a,
-                      onError: this.HandleFallbackError,
-                    }),
-                  )
-                : m.createElement(
-                    "img",
-                    (0, r.pi)({}, o, { src: t, onError: this.HandleError }),
-                  );
+                  ? m.createElement(
+                      "img",
+                      (0, r.pi)({}, o, {
+                        src: a,
+                        onError: this.HandleFallbackError,
+                      }),
+                    )
+                  : m.createElement(
+                      "img",
+                      (0, r.pi)({}, o, { src: t, onError: this.HandleError }),
+                    );
             }),
             (a.prototype.HandleError = function (e) {
               this.setState({ bError: !0 }),
@@ -5803,24 +5805,24 @@
                           state: Kt.STATE_INCOMPLETE,
                         }
                       : 3 == this.props.demoMode
-                      ? {
-                          leagueId: 0,
-                          leagueNodeId: 1,
-                          wagerAmount: 75,
-                          teamPicked: 2586976,
-                          payout: 1.333,
-                          payoutAmount: 100,
-                          state: Kt.STATE_WON,
-                        }
-                      : {
-                          leagueId: 0,
-                          leagueNodeId: 1,
-                          wagerAmount: 75,
-                          teamPicked: 2586976,
-                          payout: 1.333,
-                          payoutAmount: 0,
-                          state: Kt.STATE_LOST,
-                        }),
+                        ? {
+                            leagueId: 0,
+                            leagueNodeId: 1,
+                            wagerAmount: 75,
+                            teamPicked: 2586976,
+                            payout: 1.333,
+                            payoutAmount: 100,
+                            state: Kt.STATE_WON,
+                          }
+                        : {
+                            leagueId: 0,
+                            leagueNodeId: 1,
+                            wagerAmount: 75,
+                            teamPicked: 2586976,
+                            payout: 1.333,
+                            payoutAmount: 0,
+                            state: Kt.STATE_LOST,
+                          }),
                   (r = {
                     nodeId: 1,
                     matchTime: 1547242886,
@@ -5998,22 +6000,24 @@
                       }),
                     )
                   : e.state == Kt.STATE_INCOMPLETE
-                  ? m.createElement(
-                      "div",
-                      {
-                        className: me(
-                          Na().StartTime,
-                          Na().StartTimePadding,
-                          Na().InProgress,
-                        ),
-                      },
-                      q("#Predictions_InProgress"),
-                    )
-                  : m.createElement(
-                      "div",
-                      { className: me(Na().StartTime, Na().StartTimePadding) },
-                      q("#Predictions_Final"),
-                    )),
+                    ? m.createElement(
+                        "div",
+                        {
+                          className: me(
+                            Na().StartTime,
+                            Na().StartTimePadding,
+                            Na().InProgress,
+                          ),
+                        },
+                        q("#Predictions_InProgress"),
+                      )
+                    : m.createElement(
+                        "div",
+                        {
+                          className: me(Na().StartTime, Na().StartTimePadding),
+                        },
+                        q("#Predictions_Final"),
+                      )),
                 (_ = m.createElement(
                   "div",
                   { className: Na().Columns },
@@ -6964,17 +6968,17 @@
                           className: Ga().SelectArrow,
                         })
                       : l
-                      ? m.createElement("img", {
-                          src: i.IMG_URL + "x_red.png",
-                          className: Ga().ClearX,
-                          onClick: function () {
-                            return er.clearFantasyRosterSlot(r, a);
-                          },
-                        })
-                      : m.createElement("img", {
-                          src: i.IMG_URL + "right_arrow.png",
-                          className: Ga().SelectArrow,
-                        });
+                        ? m.createElement("img", {
+                            src: i.IMG_URL + "x_red.png",
+                            className: Ga().ClearX,
+                            onClick: function () {
+                              return er.clearFantasyRosterSlot(r, a);
+                            },
+                          })
+                        : m.createElement("img", {
+                            src: i.IMG_URL + "right_arrow.png",
+                            className: Ga().SelectArrow,
+                          });
                     var p =
                       n || l
                         ? se(K.Roster, _.props.match.params.leagueID)
@@ -8131,8 +8135,8 @@
                   r.player_info && r.player_info.name.length > 0
                     ? r.player_info.name
                     : t
-                    ? t.personaname
-                    : "",
+                      ? t.personaname
+                      : "",
                 c = r.player_info ? r.player_info.real_name : "",
                 s = [],
                 _ = function (e) {
@@ -11156,10 +11160,10 @@
               3 == t.info.tier
                 ? (o = 8)
                 : 4 == t.info.tier
-                ? (o = 16)
-                : 5 == t.info.tier
-                ? (o = 18)
-                : 8 == t.info.tier && (o = 8);
+                  ? (o = 16)
+                  : 5 == t.info.tier
+                    ? (o = 18)
+                    : 8 == t.info.tier && (o = 8);
               for (var n = 0, i = 1; i < o + 1 && i < a.dollars.length; i++) {
                 for (var l = !1, c = n; c < a.results.length; c++) {
                   var s = a.results[c];

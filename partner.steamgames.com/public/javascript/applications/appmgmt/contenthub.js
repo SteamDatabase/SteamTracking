@@ -169,10 +169,10 @@ License: MIT
               "undefined" != typeof self
                 ? self
                 : "undefined" != typeof window
-                ? window
-                : void 0 !== t
-                ? t
-                : {},
+                  ? window
+                  : void 0 !== t
+                    ? t
+                    : {},
             n = !t.document && !!t.postMessage,
             i = t.IS_PAPA_WORKER || !1,
             r = {},
@@ -230,9 +230,10 @@ License: MIT
                       })(n)),
                       (c = i.download ? new u(i) : new d(i)))
                     : !0 === n.readable && S(n.read) && S(n.on)
-                    ? (c = new f(i))
-                    : ((t.File && n instanceof File) || n instanceof Object) &&
-                      (c = new h(i)),
+                      ? (c = new f(i))
+                      : ((t.File && n instanceof File) ||
+                          n instanceof Object) &&
+                        (c = new h(i)),
                   c.stream(n)
                 );
               },
@@ -296,8 +297,8 @@ License: MIT
                         (e.fields = Array.isArray(e.data[0])
                           ? e.fields
                           : "object" == typeof e.data[0]
-                          ? Object.keys(e.data[0])
-                          : []),
+                            ? Object.keys(e.data[0])
+                            : []),
                       Array.isArray(e.data[0]) ||
                         "object" == typeof e.data[0] ||
                         (e.data = [e.data])),
@@ -870,10 +871,10 @@ License: MIT
                       })(n)
                         ? parseFloat(n)
                         : l.test(n)
-                        ? new Date(n)
-                        : "" === n
-                        ? null
-                        : n))
+                          ? new Date(n)
+                          : "" === n
+                            ? null
+                            : n))
                   : n
               );
               var i;

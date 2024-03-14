@@ -31,7 +31,9 @@ const urls = new Set();
 const oldUrls = (await readFile(".support/urls_from_manifests.txt", { encoding: "utf8" })).trim().split("\n");
 
 for (const url of oldUrls) {
-	if (!url.includes("~")) {
+	const fileName = url.substring(url.lastIndexOf("/") + 1);
+
+	if (!/^(chunk~|libraries~|[0-9]+\.)/.test(fileName)) {
 		urls.add(url);
 	}
 }

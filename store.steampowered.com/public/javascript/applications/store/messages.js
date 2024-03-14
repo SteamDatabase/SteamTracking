@@ -350,9 +350,7 @@
           return this.GetTemplateVars().use_custom_legal_text
             ? this.GetTemplateVars().custom_legal_text
             : ((e = this.GetTemplateVars().partner),
-              `© ${new Date().getFullYear()} Valve Corporation${
-                e ? " and " + e : ""
-              }. <br/>All trademarks are property of their respective owners in the US and other countries.`);
+              `© ${new Date().getFullYear()} Valve Corporation${e ? " and " + e : ""}. <br/>All trademarks are property of their respective owners in the US and other countries.`);
           var e;
         }
         get associated_item() {
@@ -843,17 +841,7 @@
                     r = yield p().get(s, { params: n, withCredentials: !1 });
                   if (200 !== r.status || 1 !== r.data.success)
                     throw new Error(
-                      `FetchDLCCount failed: status == ${
-                        r.status
-                      }, eresult == ${
-                        null === (t = r.data) || void 0 === t
-                          ? void 0
-                          : t.success
-                      }, err_msg == ${
-                        null === (a = r.data) || void 0 === a
-                          ? void 0
-                          : a.err_msg
-                      }`,
+                      `FetchDLCCount failed: status == ${r.status}, eresult == ${null === (t = r.data) || void 0 === t ? void 0 : t.success}, err_msg == ${null === (a = r.data) || void 0 === a ? void 0 : a.err_msg}`,
                     );
                   return r.data.count;
                 });
@@ -1323,45 +1311,45 @@
               s.createElement(ae, { first: t[2], second: t[3] }),
             )
           : t.length >= 3
-          ? s.createElement(
-              "div",
-              { className: T.DlcCtn },
-              s.createElement(ee, { messageType: a }),
-              s.createElement(
+            ? s.createElement(
                 "div",
-                { className: T.OneItemRow },
-                s.createElement(re, { id: t[0].id, type: t[0].type }),
-              ),
-              s.createElement(ae, { first: t[1], second: t[2] }),
-            )
-          : t.length >= 2
-          ? s.createElement(
-              "div",
-              { className: T.DlcCtn },
-              s.createElement(ee, { messageType: a }),
-              s.createElement(
-                "div",
-                { className: T.OneItemRow },
-                s.createElement(re, { id: t[0].id, type: t[0].type }),
-              ),
-              s.createElement(
-                "div",
-                { className: T.OneItemRow },
-                s.createElement(re, { id: t[1].id, type: t[1].type }),
-              ),
-            )
-          : t.length >= 1
-          ? s.createElement(
-              "div",
-              { className: T.DlcCtn },
-              s.createElement(ee, { messageType: a }),
-              s.createElement(
-                "div",
-                { className: T.OneBigItem },
-                s.createElement(ne, { capsule: t[0], imageType: "main" }),
-              ),
-            )
-          : null;
+                { className: T.DlcCtn },
+                s.createElement(ee, { messageType: a }),
+                s.createElement(
+                  "div",
+                  { className: T.OneItemRow },
+                  s.createElement(re, { id: t[0].id, type: t[0].type }),
+                ),
+                s.createElement(ae, { first: t[1], second: t[2] }),
+              )
+            : t.length >= 2
+              ? s.createElement(
+                  "div",
+                  { className: T.DlcCtn },
+                  s.createElement(ee, { messageType: a }),
+                  s.createElement(
+                    "div",
+                    { className: T.OneItemRow },
+                    s.createElement(re, { id: t[0].id, type: t[0].type }),
+                  ),
+                  s.createElement(
+                    "div",
+                    { className: T.OneItemRow },
+                    s.createElement(re, { id: t[1].id, type: t[1].type }),
+                  ),
+                )
+              : t.length >= 1
+                ? s.createElement(
+                    "div",
+                    { className: T.DlcCtn },
+                    s.createElement(ee, { messageType: a }),
+                    s.createElement(
+                      "div",
+                      { className: T.OneBigItem },
+                      s.createElement(ne, { capsule: t[0], imageType: "main" }),
+                    ),
+                  )
+                : null;
       }
       function ae(e) {
         const { first: t, second: a } = e;
@@ -1447,10 +1435,10 @@
         return "dlc_override" === t.GetTemplateVars().custom_display
           ? s.createElement(J, { bPreview: l })
           : "image" === t.GetTemplateType()
-          ? (0, o.p8)(t, c, m)
-            ? s.createElement(W, null)
-            : s.createElement(j, { bLowBandwidthMode: m })
-          : null;
+            ? (0, o.p8)(t, c, m)
+              ? s.createElement(W, null)
+              : s.createElement(j, { bLowBandwidthMode: m })
+            : null;
       }
     },
     27299: (e, t, a) => {
@@ -1569,8 +1557,8 @@
         const v = a.bIncludeSeenMessages
           ? s
           : null == s
-          ? void 0
-          : s.slice(0, y);
+            ? void 0
+            : s.slice(0, y);
         return n.createElement(
           "div",
           { className: p.MessageListPage },
@@ -1687,14 +1675,14 @@
                 (0, u.Xx)("#Error_ErrorCommunicatingWithNetwork"),
               )
             : s.params.messageid
-            ? l
-              ? n.createElement(h.v, { message: l, preview: a })
-              : null
-            : n.createElement(
-                T,
-                null,
-                (0, u.Xx)("#MarketingMessages_NoneAvailable"),
-              )
+              ? l
+                ? n.createElement(h.v, { message: l, preview: a })
+                : null
+              : n.createElement(
+                  T,
+                  null,
+                  (0, u.Xx)("#MarketingMessages_NoneAvailable"),
+                )
         );
       }
       function T(e) {

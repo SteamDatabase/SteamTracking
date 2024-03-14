@@ -713,8 +713,8 @@
           e.innerWidth >= 1080
             ? (t = 4)
             : e.innerWidth >= 800
-            ? (t = 3)
-            : e.innerWidth >= 600 && (t = 2),
+              ? (t = 3)
+              : e.innerWidth >= 600 && (t = 2),
           t
         );
       }
@@ -871,8 +871,8 @@
               i.innerWidth >= 1080
                 ? (t = 4)
                 : i.innerWidth >= 920
-                ? (t = 3)
-                : i.innerWidth >= 600 && (t = 2),
+                  ? (t = 3)
+                  : i.innerWidth >= 600 && (t = 2),
                 m(t);
             },
             [i],
@@ -1786,8 +1786,8 @@
           (n = t
             ? (0, S.Xx)("#Steamawards_Voting_Header_VoteNow")
             : a
-            ? (0, S.Xx)("#Steamawards_Voting_Header_WinnersUp")
-            : (0, S.Xx)("#Steamawards_Voting_Header_VoteSoon")),
+              ? (0, S.Xx)("#Steamawards_Voting_Header_WinnersUp")
+              : (0, S.Xx)("#Steamawards_Voting_Header_VoteSoon")),
           r.createElement(
             m.s,
             null,
@@ -1876,22 +1876,23 @@
                 c.data.votes.length,
               )
             : l
-            ? g.L7.logged_in
-              ? (null === (n = _.data) || void 0 === n ? void 0 : n.length) > 0
-                ? (0, S.kQ)(
-                    "#Steamawards_Progress_Title",
-                    null === (s = _.data) || void 0 === s ? void 0 : s.length,
-                    c.data.votes.length,
-                  )
-                : (0, S.kQ)(
-                    "#Steamawards_Progress_Title_None",
-                    c.data.votes.length,
-                  )
-              : (0, S.Xx)("#Steamawards_Progress_Title_LoggedOut")
-            : (0, S.kQ)(
-                "#Steamawards_Progress_Title_Soon",
-                c.data.votes.length,
-              )),
+              ? g.L7.logged_in
+                ? (null === (n = _.data) || void 0 === n ? void 0 : n.length) >
+                  0
+                  ? (0, S.kQ)(
+                      "#Steamawards_Progress_Title",
+                      null === (s = _.data) || void 0 === s ? void 0 : s.length,
+                      c.data.votes.length,
+                    )
+                  : (0, S.kQ)(
+                      "#Steamawards_Progress_Title_None",
+                      c.data.votes.length,
+                    )
+                : (0, S.Xx)("#Steamawards_Progress_Title_LoggedOut")
+              : (0, S.kQ)(
+                  "#Steamawards_Progress_Title_Soon",
+                  c.data.votes.length,
+                )),
           r.createElement(
             m.s,
             { className: (0, A.Z)(ve().ProgressCtn, ve().SectionContent) },
@@ -1904,18 +1905,8 @@
         const { definition: t, unSaleAppID: a } = e,
           n = (0, d.GC)(a, t.voteid),
           s = (0, d.sF)(a, t.voteid),
-          i = `${g.De.MEDIA_CDN_COMMUNITY_URL}images/items/${a}/${
-            n
-              ? null == s
-                ? void 0
-                : s.item_image_small
-              : null == s
-              ? void 0
-              : s.item_image_large
-          }`,
-          l = `${g.De.MEDIA_CDN_COMMUNITY_URL}images/items/${a}/${
-            null == s ? void 0 : s.item_image_small
-          }`;
+          i = `${g.De.MEDIA_CDN_COMMUNITY_URL}images/items/${a}/${n ? (null == s ? void 0 : s.item_image_small) : null == s ? void 0 : s.item_image_large}`,
+          l = `${g.De.MEDIA_CDN_COMMUNITY_URL}images/items/${a}/${null == s ? void 0 : s.item_image_small}`;
         return r.createElement(
           "div",
           { className: ve().CategoryStickerCtn },
@@ -1991,10 +1982,7 @@
               const t = 40,
                 a = L.innerHeight / B,
                 n = Math.min(a * t + a * B - (B + t), 0.65 * L.innerHeight);
-              e = `-${Math.min(
-                0.4 * B,
-                0.1 * L.innerHeight,
-              )}px 0px -${n}px 0px`;
+              e = `-${Math.min(0.4 * B, 0.1 * L.innerHeight)}px 0px -${n}px 0px`;
             }
             k(e);
           }, [L.innerHeight, B]);

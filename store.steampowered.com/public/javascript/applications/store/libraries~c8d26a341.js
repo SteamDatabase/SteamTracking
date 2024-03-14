@@ -120,10 +120,10 @@
                       !1 === this.justMouseEntered &&
                       this.highlightFirstSuggestion()
                     : this.willRenderSuggestions(e)
-                    ? this.state.isCollapsed &&
-                      !this.justSelectedSuggestion &&
-                      this.revealSuggestions()
-                    : this.resetHighlightedSuggestion();
+                      ? this.state.isCollapsed &&
+                        !this.justSelectedSuggestion &&
+                        this.revealSuggestions()
+                      : this.resetHighlightedSuggestion();
                 },
               },
               {
@@ -1804,10 +1804,10 @@
                 : [r, 0]
               : [r, u + 1]
             : 0 === n || u === n - 1
-            ? [null, null]
-            : null === u
-            ? [null, 0]
-            : [null, u + 1];
+              ? [null, null]
+              : null === u
+                ? [null, 0]
+                : [null, u + 1];
         }
         return {
           next: i,
@@ -1831,10 +1831,10 @@
                   : [r, n[r] - 1]
                 : [r, u - 1]
               : 0 === n || 0 === u
-              ? [null, null]
-              : null === u
-              ? [null, n - 1]
-              : [null, u - 1];
+                ? [null, null]
+                : null === u
+                  ? [null, n - 1]
+                  : [null, u - 1];
           },
           isLast: function (e) {
             return null === i(e)[1];

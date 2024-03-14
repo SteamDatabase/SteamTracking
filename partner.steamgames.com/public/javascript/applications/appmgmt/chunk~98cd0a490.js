@@ -325,11 +325,11 @@
           return r
             ? r.Localize(t, i)
             : 1 != c.De.EUNIVERSE
-            ? (console.log(
-                `Unable to find app localization information for app ${e} token ${t}, this may not have had a chance to load yet`,
-              ),
-              t)
-            : "";
+              ? (console.log(
+                  `Unable to find app localization information for app ${e} token ${t}, this may not have had a chance to load yet`,
+                ),
+                t)
+              : "";
         }
         GetRichPresenceLoc(e) {
           if (this.m_mapRichPresenceLoc.has(e.toString())) {
@@ -534,8 +534,8 @@
           return this.m_strGameExtraInfo
             ? this.m_strGameExtraInfo
             : this.m_unGamePlayedAppID
-            ? m.Q8.GetAppInfo(this.m_unGamePlayedAppID).name
-            : "";
+              ? m.Q8.GetAppInfo(this.m_unGamePlayedAppID).name
+              : "";
         }
         GetCurrentGameIconURL() {
           return this.m_unGamePlayedAppID
@@ -637,8 +637,8 @@
             ? this.is_ingame
               ? "in-game"
               : this.m_broadcastAccountId
-              ? "watchingbroadcast"
-              : "online"
+                ? "watchingbroadcast"
+                : "online"
             : "offline";
         }
         BHasAvatarSet() {
@@ -678,9 +678,7 @@
         GetCommunityProfileURL() {
           return this.m_strProfileURL
             ? `${_.De.COMMUNITY_BASE_URL}id/${this.m_strProfileURL}/`
-            : `${
-                _.De.COMMUNITY_BASE_URL
-              }profiles/${this.m_steamid.ConvertTo64BitString()}/`;
+            : `${_.De.COMMUNITY_BASE_URL}profiles/${this.m_steamid.ConvertTo64BitString()}/`;
         }
       }
       (0, r.gn)([u.LO], P.prototype, "m_bInitialized", void 0),
@@ -1971,10 +1969,10 @@
           return e && t
             ? e.localeCompare(t)
             : e || t
-            ? e
-              ? -1
-              : 1
-            : i.getData().packageID - r.getData().packageID;
+              ? e
+                ? -1
+                : 1
+              : i.getData().packageID - r.getData().packageID;
         }
         return o ? -1 : 1;
       }
