@@ -5,7 +5,7 @@ ini_set( 'memory_limit', '1G' ); // Some files may be big
 
 if( \function_exists( 'sys_getloadavg' ) )
 {
-	if( \sys_getloadavg()[ 1 ] > 5.0 )
+	if( ( \sys_getloadavg()[ 1 ] ?? 0.0 ) > 5.0 )
 	{
 		echo 'Not running due to high cpu load';
 		exit;
@@ -530,6 +530,7 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 
 				while( $Done = curl_multi_info_read( $Master ) )
 				{
+					/** @var CurlHandle */
 					$Handle = $Done[ 'handle' ];
 					$URL   = curl_getinfo( $Handle, CURLINFO_EFFECTIVE_URL );
 					$Code  = curl_getinfo( $Handle, CURLINFO_HTTP_CODE );
@@ -554,7 +555,7 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 					{
 						$this->Log( '{yellow}Error ' . $Code . '{normal}    - ' . $URL );
 
-						if( $Code < 400 && $Code > 499 )
+						if( $Code < 100 || $Code >= 500 )
 						{
 							$this->URLsToFetch[ ] =
 							[
@@ -786,11 +787,13 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 			// Find and delete old chunk~ files
 			$Folders = [];
 
+			$IsChunkFile = static fn( string $Filename ) : bool => preg_match( '/^(chunk~|libraries~|[0-9]+\.)/', $Filename, $Matches ) === 1;
+
 			foreach( $URLsToFetch as $Url )
 			{
 				$Filename = basename( $Url[ 'File' ] );
 
-				if( str_starts_with( $Filename, 'chunk~' ) || str_starts_with( $Filename, 'libraries~' ) )
+				if( $IsChunkFile( $Filename ) )
 				{
 					$Folder = __DIR__ . '/' . dirname( $Url[ 'File' ] ) . '/';
 
@@ -805,18 +808,32 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 
 			foreach( $Folders as $Folder => $NewChunks )
 			{
+				foreach( new DirectoryIterator( $Folder ) as $FileInfo )
+				{
+					if( $FileInfo->isDot() )
+					{
+						continue;
+					}
+
+					$Filename = $FileInfo->getFilename();
+
+					if( $IsChunkFile( $Filename ) && !isset( $NewChunks[ $Filename ] ) )
+					{
+						$FilepathOnDisk = $FileInfo->getRealPath();
+
+						$this->Log( 'Chunk ' . $FilepathOnDisk . ' no longer exists in manifest' );
+
+						unlink( $FilepathOnDisk );
+					}
+				}
+
 				foreach( [ 'chunk~*', 'libraries~*' ] as $Glob )
 				{
 					foreach( glob( $Folder . $Glob ) as $FilepathOnDisk )
 					{
 						$Filename = basename( $FilepathOnDisk );
 
-						if( !isset( $NewChunks[ $Filename ] ) )
-						{
-							$this->Log( 'Chunk ' . $FilepathOnDisk . ' no longer exists in manifest' );
-
-							unlink( $FilepathOnDisk );
-						}
+						
 					}
 				}
 			}

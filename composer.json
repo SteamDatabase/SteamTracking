@@ -1,4 +1,7 @@
 {
+    "scripts": {
+        "test": "phpstan analyse"
+    },
     "require": {
         "phpstan/phpstan": "^1.4"
     }

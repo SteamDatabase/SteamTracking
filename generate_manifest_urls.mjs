@@ -45,8 +45,26 @@ for (const { file, cdn } of files) {
 		const code = await readFile(file);
 		const ast = parse(code, { ecmaVersion: latestEcmaVersion, loc: true });
 
+		const seenIds = new Set();
+
 		traverse(ast, {
 			enter: function (node) {
+				if (
+					node.type === Syntax.BinaryExpression &&
+					node.left.type === Syntax.BinaryExpression &&
+					node.left.right.type === Syntax.Literal &&
+					/\.(css|js)\?contenthash=/.test(node.left.right.value) &&
+					node.right.type === Syntax.MemberExpression &&
+					node.right.object.type === Syntax.ObjectExpression
+				) {
+					for (const property of node.right.object.properties) {
+						if (property.value.type === Syntax.Literal) {
+							seenIds.add(property.key.raw);
+						}
+					}
+				}
+
+				// Useful: https://astexplorer.net/
 				if (
 					node.type === Syntax.BinaryExpression &&
 					node.left.type === Syntax.Literal &&
@@ -67,11 +85,14 @@ for (const { file, cdn } of files) {
 						return;
 					}
 
-					const obj = node.right.type === Syntax.LogicalExpression ? node.right.left.object : node.right.object;
+					const partialFileNames = node.right.type === Syntax.LogicalExpression;
+					const obj = partialFileNames ? node.right.left.object : node.right.object;
 
 					for (const property of obj.properties) {
 						if (property.value.type === Syntax.Literal) {
 							const name = property.value.value;
+
+							seenIds.delete(property.key.raw);
 
 							if (name.endsWith("-json") && !name.endsWith("_english-json")) {
 								continue;
@@ -85,6 +106,13 @@ for (const { file, cdn } of files) {
 						}
 					}
 
+					for (const id of seenIds) {
+						const fullUrl = cdn + folder + id + suffix;
+
+						urls.add(fullUrl);
+					}
+
+					seenIds.clear();
 					this.skip();
 				}
 			},
