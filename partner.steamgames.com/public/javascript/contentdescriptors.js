@@ -15,13 +15,13 @@ function SaveSurvey( appid )
 	{
 		if ( v_trim( $J( "#external_service_name" ).val() ).length == 0 )
 		{
-			ShowAlertDialog( '#App_ContentDescriptors_SaveError', '#App_ContentDescriptors_SaveError_AI_ExternalService_MissingName' );
+			ShowAlertDialog( 'Error Saving Survey', 'Please specify the name of the external service your game connects to in order to live-generate content or code for your game.' );
 			return;
 		}
 
 		if ( !gValidURL.test( $J( "#external_service_url" ).val() ) )
 		{
-			ShowAlertDialog( '#App_ContentDescriptors_SaveError', '#App_ContentDescriptors_SaveError_AI_ExternalService_InvalidURL' );
+			ShowAlertDialog( 'Error Saving Survey', 'Please specify a valid URL for the website of the external service your game connects to in order to live-generate content or code for your game.' );
 			return;
 		}
 	}
@@ -30,7 +30,7 @@ function SaveSurvey( appid )
 	var checkboxAINo = $J( '#categoryid_50' );
 	if ( !checkboxAIYes.prop( 'checked' ) && !checkboxAINo.prop( 'checked' ) )
 	{
-		ShowAlertDialog( '#App_ContentDescriptors_SaveError', '#App_ContentDescriptors_SaveError_AI_SelectOption' );
+		ShowAlertDialog( 'Error Saving Survey', 'Please specify whether your game uses generative artificial intelligence to generate content for the game, either pre-rendered or live-generated.' );
 		return;
 	}
 
@@ -52,15 +52,15 @@ function SaveSurvey( appid )
 			switch ( response.error )
 			{
 				case 'cannot_remove_adult_only_sexual_content':
-					ShowAlertDialog( '#App_ContentDescriptors_SaveError', '#App_ContentDescriptors_SaveError_CannotRemoveAOSex' );
+					ShowAlertDialog( 'Error Saving Survey', 'You cannot remove the \'Adult Only Sexual Content\' from your Content Survey after your game has been reviewed.<br><br>If you have truly removed this content from your game, you can file a support ticket to have your game re-reviewed.' );
 					break;
 				default:
-					ShowAlertDialog( '#App_ContentDescriptors_SaveError', '#App_ContentDescriptors_SaveErrorDesc' );
+					ShowAlertDialog( 'Error Saving Survey', 'There was a problem trying to save the survey. Please try again.' );
 			}
 		}
 		else
 		{
-			ShowAlertDialog( '#App_ContentDescriptors_SaveError', '#App_ContentDescriptors_SaveErrorDesc' );
+			ShowAlertDialog( 'Error Saving Survey', 'There was a problem trying to save the survey. Please try again.' );
 		}
 	} );
 }
@@ -81,7 +81,7 @@ function DiscardChanges( appid )
 		}
 		else
 		{
-			ShowAlertDialog( '#App_ContentDescriptors_SaveError', '#App_ContentDescriptors_SaveErrorDesc' );
+			ShowAlertDialog( 'Error Saving Survey', 'There was a problem trying to save the survey. Please try again.' );
 		}
 	} );
 }
@@ -92,7 +92,7 @@ function FinishSurvey( appid )
 		'sessionid' : g_sessionID
 	};
 
-	var waitDialog = ShowBlockingWaitDialog( '#App_ContentDescriptors_Publishing', '#App_ContentDescriptors_PublishingDesc' );
+	var waitDialog = ShowBlockingWaitDialog( 'Publishing Changes...', 'Please wait while your changes are being published...' );
 
 	$J.post(
 		'https://partner.steamgames.com/contentdescriptors/ajaxfinishsurvey/' + appid + '/',
@@ -102,7 +102,7 @@ function FinishSurvey( appid )
 		{
 			waitDialog.Dismiss();
 
-			var dialog = ShowAlertDialog( '#App_ContentDescriptors_PublishingSuccess', '#App_ContentDescriptors_PublishingSuccessDesc' );
+			var dialog = ShowAlertDialog( 'Success!', 'Your changes have been successfully published to Steam. It may take a few minutes before your Store Page has been updated.' );
 			dialog.done( function() {
 				top.location.href = 'https://partner.steamgames.com/contentdescriptors/listsurveys/' + appid + '/';
 			});
@@ -110,7 +110,7 @@ function FinishSurvey( appid )
 		else
 		{
 			waitDialog.Dismiss();
-			ShowAlertDialog( '#App_ContentDescriptors_PublishError', '#App_ContentDescriptors_PublishErrorDesc' );
+			ShowAlertDialog( 'Error Publishing Changes', 'There was a problem trying to publish the changes. Please try again.' );
 		}
 	} );
 }
@@ -262,7 +262,7 @@ function CheckAOContentAndLiveGenerateAIContent()
 	var checkboxAILive = $J( '#categoryid_40' );
 	if ( checkboxAO.prop( 'checked' ) && checkboxAILive.prop( 'checked' ) )
 	{
-		ShowAlertDialog( '#App_ContentDescriptors_AO_AI_Realtime_Warning_Title', '#App_ContentDescriptors_AO_AI_Realtime_Warning_Desc' );
+		ShowAlertDialog( 'Warning', 'Steam cannot support Adult Only Sexual Content that is created with Live-Generated AI at this time. You may contact Steamworks support to request a refund of your app fee.' );
 	}
 }
 
