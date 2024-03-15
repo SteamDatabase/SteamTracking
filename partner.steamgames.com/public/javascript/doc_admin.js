@@ -3,10 +3,10 @@ var g_rgLanguageNames = {"english":"English","german":"German","french":"French"
 
 function updateArticleSummary( articleSummary ) {
 	$J( '#articleSummaryUrlSlug' ).text( articleSummary.url_slug );
-	$J( '#articleSummaryVisible' ).text( articleSummary.visible ? 'Yes' : 'No' );
+	$J( '#articleSummaryVisible' ).text( articleSummary.visible ? 'Doc_Admin_Yes' : 'Doc_Admin_No' );
 	$J( '#articleSummaryVisible' ).addClass( !articleSummary.visible ? 'Hidden' : '' );
 	$J( '#articleSummaryVisible' ).removeClass( articleSummary.visible ? 'Hidden' : '' );
-	$J( '#articleSummaryMakeVisible span' ).text( articleSummary.visible ? 'Make Hidden' : 'Make Visible' );
+	$J( '#articleSummaryMakeVisible span' ).text( articleSummary.visible ? 'Doc_Admin_Make_Hidden' : 'Doc_Admin_Make_Visible' );
 	$J( '#articleSummaryMakeVisible' ).data( 'currentVisibility', articleSummary.visible );
 	$J( '#articleSummaryHideFromToc' ).prop( 'checked', articleSummary.hide_from_toc );
 	$J( '#articleSummaryHideFromSearch' ).prop( 'checked', articleSummary.hide_from_search );
@@ -87,7 +87,7 @@ function updateArticleSummary( articleSummary ) {
 			$row.append( $J( '<td></td>' ).append( $link ) );
 			$row.append( $J( '<td></td>' ).text( new Date( version[ 'timestamp' ] * 1000 ).toLocaleDateString( lang, dateFormat ) ) );
 			$row.append( $J( '<td></td>' ).append( $J( '<a></a>' ).attr( 'href', version[ 'editor_url' ] ).text( version[ 'editor_name' ] ) ) );
-			$link = $J( '<a href="#" class="btn_small_thin btn_blue_white_innerfade"><span>Publish</span></a>' ).data( 'language', version[ 'language' ] );
+			$link = $J( '<a href="#" class="btn_small_thin btn_blue_white_innerfade"><span>Doc_Admin_Summary_Publish</span></a>' ).data( 'language', version[ 'language' ] );
 			$link.click( function() {
 				articleSummaryAjax( 'publish', { 'languages': $J( this ).data( 'language' ) } );
 				return false;
@@ -123,7 +123,7 @@ function articleSummaryAjax( method, data, successCallback, failureCallback )
 				if ( resp.hasOwnProperty( 'articleSummary' ) )
 					updateArticleSummary( resp.articleSummary );
 
-				$publishResult.text( 'Saved successfully!' );
+				$publishResult.text( 'Doc_Admin_Success_Saving' );
 				$publishResult.addClass( 'successmsg' );
 				setTimeout( function() {
 					$publishResult.slideUp( 250 );
@@ -133,7 +133,7 @@ function articleSummaryAjax( method, data, successCallback, failureCallback )
 			}
 			else
 			{
-				$publishResult.text( 'Error Saving: ' + resp.error );
+				$publishResult.text( 'Doc_Admin_Error_Saving: ' + resp.error );
 				$publishResult.addClass( 'errormsg' );
 				if ( failureCallback != null )
 					failureCallback( data );
@@ -155,7 +155,7 @@ function updateVisibility( bChangeVisibility ) {
 
 $J( document ).ready( function(){
 	$J( '#articleSummaryMakeVisible' ).click( function() {
-		if ( $J( this ).data( 'currentVisibility' ) == 0 || confirm( 'Are you sure you want to hide this visible article?' ) )
+		if ( $J( this ).data( 'currentVisibility' ) == 0 || confirm( 'Doc_Admin_Hide_Confirm' ) )
 			updateVisibility( true );
 	} );
 	$J( '#articleSummaryHideFromToc, #articleSummaryHideFromSearch, #articleSummaryLocalizeDraft' ).change( function() { updateVisibility( false ); } );

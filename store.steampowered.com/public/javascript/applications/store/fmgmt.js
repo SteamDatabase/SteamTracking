@@ -80,6 +80,7 @@
         Selected: "_1dj3rXk2ck61UrJGt3pP9e",
         DirectionIndicator: "_3HYMkq8Ske2dJk0k51ve3J",
         AdditionalHoverCtn: "_3-q8xJGfslyHFJUlzGes_H",
+        Loading: "_15y-D2NYrFwOAZ-AfJKy6Q",
       };
     },
     90896: (e) => {
@@ -956,14 +957,14 @@
       }
       const C = "invitation",
         I = "nonce";
-      function S(e) {
+      function N(e) {
         const { inviterSteamID: t, familyGroupID: a, role: i } = e,
           r = (0, l.M)(),
           s = (0, y.JM)(a),
           m = (0, y.bF)(a, e.nonce || null),
           c = (0, y.MP)(a, r),
           d = (0, v.IE)(t),
-          [I, S] = (0, n.useState)(!1),
+          [I, N] = (0, n.useState)(!1),
           { setErrorMessage: x } = (0, y.cL)();
         (0, y.zj)(
           s,
@@ -996,7 +997,7 @@
             n.createElement(u.V, null),
           );
         const A = d.data,
-          D = () => S(!1),
+          D = () => N(!1),
           R = () => M.push("/account/familymanagement");
         return n.createElement(
           "div",
@@ -1013,7 +1014,7 @@
                   null,
                   (0, p.Xx)(`#FamilyManagement_RoleDescriptionLongHeader_${i}`),
                 ),
-                1 === i ? n.createElement(N, null) : n.createElement(k, null),
+                1 === i ? n.createElement(S, null) : n.createElement(k, null),
                 n.createElement(
                   o.zx,
                   { onClick: D },
@@ -1031,9 +1032,9 @@
                       m.mutate(null, {
                         onSuccess: (e) => {
                           1 === e.two_factor_method()
-                            ? S("awaitmobile2fa")
+                            ? N("awaitmobile2fa")
                             : 2 === e.two_factor_method()
-                              ? S("awaitemail2fa")
+                              ? N("awaitemail2fa")
                               : M.push("/account/familymanagement");
                         },
                       });
@@ -1116,7 +1117,7 @@
                 `#FamilyManagement_RoleDescriptionShort_${i}`,
                 n.createElement("a", {
                   className: _.LearnMoreLink,
-                  onClick: () => S("explanation"),
+                  onClick: () => N("explanation"),
                 }),
               ),
             ),
@@ -1126,7 +1127,7 @@
             { className: _.Buttons },
             n.createElement(
               o.zx,
-              { className: _.AcceptInviteButton, onClick: () => S("confirm") },
+              { className: _.AcceptInviteButton, onClick: () => N("confirm") },
               (0, p.Xx)("#FamilyManagement_AcceptInviteButton"),
             ),
             n.createElement(
@@ -1142,7 +1143,7 @@
           ),
         );
       }
-      function N() {
+      function S() {
         return n.createElement(
           "div",
           { className: (0, d.Z)("account_settings_container") },
@@ -1937,8 +1938,8 @@
         be = a(80886),
         Ce = a(14609),
         Ie = a(6276),
-        Se = a(50423);
-      function Ne(e, t) {
+        Ne = a(50423);
+      function Se(e, t) {
         (0, Ce.b8)(e, `steam://open/games/details/${t}`);
       }
       function ke(e, t) {
@@ -2202,13 +2203,13 @@
           ),
           f = n.useCallback(
             (e) => {
-              ke((0, Se.RA)(e), c.GetStorePageURL());
+              ke((0, Ne.RA)(e), c.GetStorePageURL());
             },
             [c],
           ),
           h = n.useCallback(
             (e) => {
-              Ne((0, Se.RA)(e), t.appid);
+              Se((0, Ne.RA)(e), t.appid);
             },
             [t],
           ),
@@ -2302,8 +2303,8 @@
           C = n.useCallback(
             (e) => {
               v && (g || E)
-                ? Ne((0, Se.RA)(e), t.appid)
-                : f && ke((0, Se.RA)(e), _.GetStorePageURL());
+                ? Se((0, Ne.RA)(e), t.appid)
+                : f && ke((0, Ne.RA)(e), _.GetStorePageURL());
             },
             [t.appid, g, E, _, f, v],
           );
@@ -2570,60 +2571,85 @@
       }
       const ze = n.createContext(void 0);
       function We(e) {
-        const { familyGroupID: t } = e,
-          [a, l] = n.useState(""),
-          [i, r] = n.useState("alpha-asc"),
-          s = (0, y.Vt)(t, i, a, qe),
-          o = n.useMemo(
-            () => (null == s ? void 0 : s.filter((e) => 0 == e.exclude_reason)),
-            [s],
+        var t, a;
+        const { familyGroupID: l } = e,
+          [i, r] = n.useState(""),
+          [s, o] = n.useState("alpha-asc"),
+          m = (0, y.ct)(l, qe),
+          c = (0, y.PE)(m.data, s, i),
+          d = n.useMemo(
+            () => (null == c ? void 0 : c.filter((e) => 0 == e.exclude_reason)),
+            [c],
           ),
-          m = n.useMemo(
+          _ = n.useMemo(
             () =>
-              null == s
+              null == c
                 ? void 0
-                : s.filter(
+                : c.filter(
                     (e) => 0 != e.exclude_reason && 3 != e.exclude_reason,
                   ),
-            [s],
+            [c],
           ),
-          c = n.useMemo(
-            () => (null == s ? void 0 : s.filter((e) => 3 == e.exclude_reason)),
-            [s],
+          g = n.useMemo(
+            () => (null == c ? void 0 : c.filter((e) => 3 == e.exclude_reason)),
+            [c],
           );
-        return (null == s ? void 0 : s.length) || a
-          ? n.createElement(
-              Oe,
-              { familyGroupID: t },
-              n.createElement(
-                "div",
-                { className: ge.FamilyGames },
-                n.createElement(He, {
-                  strFilter: a,
-                  setFilter: l,
-                  sort: i,
-                  setSort: r,
-                }),
-                n.createElement(Ge, {
-                  rgSortedGames: o,
-                  strLabel: (0, p.Xx)("#FamilyGames_IncludedGames"),
-                  sort: i,
-                }),
-                n.createElement(Ge, {
-                  rgSortedGames: m,
-                  bShowLicenseCount: !1,
-                  strLabel: (0, p.Xx)("#FamilyGames_ExcludedGames"),
-                  sort: i,
-                }),
-                n.createElement(Ge, {
-                  rgSortedGames: c,
-                  bShowLicenseCount: !1,
-                  strLabel: (0, p.Xx)("#FamilyGames_FreeGames"),
-                  sort: i,
-                }),
-              ),
-            )
-          : null;
+        return n.createElement(
+          Oe,
+          { familyGroupID: l },
+          m.isFetching &&
+            n.createElement(
+              "div",
+              { className: ge.Loading },
+              n.createElement(u.V, null),
+            ),
+          !m.isFetching &&
+            n.createElement(
+              "div",
+              { className: ge.FamilyGames },
+              (null === (t = m.data) || void 0 === t ? void 0 : t.length) > 0 &&
+                n.createElement(
+                  n.Fragment,
+                  null,
+                  n.createElement(He, {
+                    strFilter: i,
+                    setFilter: r,
+                    sort: s,
+                    setSort: o,
+                  }),
+                  n.createElement(Ge, {
+                    rgSortedGames: d,
+                    strLabel: (0, p.Xx)("#FamilyGames_IncludedGames"),
+                    sort: s,
+                  }),
+                  n.createElement(Ge, {
+                    rgSortedGames: _,
+                    bShowLicenseCount: !1,
+                    strLabel: (0, p.Xx)("#FamilyGames_ExcludedGames"),
+                    sort: s,
+                  }),
+                  n.createElement(Ge, {
+                    rgSortedGames: g,
+                    bShowLicenseCount: !1,
+                    strLabel: (0, p.Xx)("#FamilyGames_FreeGames"),
+                    sort: s,
+                  }),
+                  0 == (null == c ? void 0 : c.length) &&
+                    n.createElement(
+                      "div",
+                      { className: ge.Empty },
+                      (0, p.Xx)("#FamilyGames_EmptySearch"),
+                    ),
+                ),
+              0 ==
+                (null === (a = m.data) || void 0 === a ? void 0 : a.length) &&
+                n.createElement(
+                  "div",
+                  { className: ge.Empty },
+                  (0, p.Xx)("#FamilyGames_NoGames"),
+                ),
+            ),
+        );
       }
       var Qe = a(59728),
         je = a(38244),
@@ -3508,7 +3534,7 @@
               onToggle: m,
             }),
             !o &&
-              n.createElement(St, {
+              n.createElement(Nt, {
                 className: de.Input,
                 nWindows: r,
                 onSet: c,
@@ -3527,7 +3553,7 @@
         for (let l = e; l < t; l++) (a |= n), (n <<= BigInt(1));
         return a;
       }
-      function St(e) {
+      function Nt(e) {
         var t, a, l, i;
         const { className: r, nWindows: s, onSet: m } = e,
           c = (0, se._T)(e, ["className", "nWindows", "onSet"]),
@@ -3627,7 +3653,7 @@
           ),
         );
       }
-      function Nt(e) {
+      function St(e) {
         let t = (0, p.kb)("#Parental_Playtime_Hours", e);
         return (
           0 == e
@@ -3653,7 +3679,7 @@
             [l],
           ),
           c = [];
-        for (let e = i; e < r; e++) c.push({ data: e, label: Nt(e) });
+        for (let e = i; e < r; e++) c.push({ data: e, label: St(e) });
         return n.createElement(o.gB, {
           layout: s,
           label: (0, p.Xx)(t),
@@ -3714,7 +3740,7 @@
                 "div",
                 null,
                 (function (e) {
-                  return Nt(Math.floor(e / 60));
+                  return St(Math.floor(e / 60));
                 })(_),
               ),
             ),
@@ -3847,9 +3873,9 @@
             null === (t = (0, y.Rs)().data) || void 0 === t ? void 0 : t.role(),
           C = 1 === (0, y.JM)(a).data.members().length,
           I = (0, f.k6)(),
-          S = (0, f.TH)(),
-          N = new Date(1e3 * i.time_joined()),
-          k = (new Date().getTime() - N.getTime()) / 864e5 < 30,
+          N = (0, f.TH)(),
+          S = new Date(1e3 * i.time_joined()),
+          k = (new Date().getTime() - S.getTime()) / 864e5 < 30,
           x = (0, v.IE)(i.steamid());
         if (
           ((0, y.sT)(x, "#FamilyManagement_ErrorLoadFamilyGeneric"),
@@ -3928,7 +3954,7 @@
                     strDescription: A,
                     onOK: () => {
                       _(null),
-                        u.mutate(null, { onSuccess: () => I.push(S.pathname) });
+                        u.mutate(null, { onSuccess: () => I.push(N.pathname) });
                     },
                     closeModal: c,
                   }),
@@ -4694,7 +4720,7 @@
           [a] = (0, be.ie)(t, {}),
           l = n.useCallback(
             (e) => {
-              ke((0, Se.RA)(e), a.GetStorePageURL());
+              ke((0, Ne.RA)(e), a.GetStorePageURL());
             },
             [a],
           );
@@ -5212,7 +5238,7 @@
               { value: { errorMessage: a, setErrorMessage: l } },
               n.createElement(g.L4, null),
               n.createElement(
-                Sa,
+                Na,
                 null,
                 m.Wnw({}),
                 n.createElement(
@@ -5490,7 +5516,7 @@
               n.createElement(
                 "div",
                 { className: le.JoinFamilyContainer },
-                n.createElement(S, {
+                n.createElement(N, {
                   key: E,
                   inviterSteamID: h.inviter_steamid(),
                   familyGroupID: h.family_groupid(),
@@ -5544,7 +5570,7 @@
                       "div",
                       null,
                       F.map((e) =>
-                        n.createElement(S, {
+                        n.createElement(N, {
                           inviterSteamID: e.inviter_steamid(),
                           familyGroupID: e.family_groupid(),
                           role: e.role(),
@@ -5596,7 +5622,7 @@
                       : i
                           .pending_group_invites()
                           .map((e) =>
-                            n.createElement(S, {
+                            n.createElement(N, {
                               key: e.family_groupid(),
                               inviterSteamID: e.inviter_steamid(),
                               familyGroupID: e.family_groupid(),
@@ -5674,7 +5700,7 @@
               : n.createElement(
                   B.s,
                   { className: le.ManageFamily },
-                  n.createElement(Na, null),
+                  n.createElement(Sa, null),
                   n.createElement(ka, { familyGroupID: a, isAdult: l }),
                   n.createElement(Ma, { familyGroupID: a }),
                 )
@@ -5687,7 +5713,7 @@
           e.children,
         );
       }
-      function Sa(e) {
+      function Na(e) {
         const t = (0, f.k6)();
         return n.createElement(
           "div",
@@ -5707,7 +5733,7 @@
           ),
         );
       }
-      function Na() {
+      function Sa() {
         const e = b((0, f.TH)(), I),
           t = (0, y.Rs)(),
           a = !t.data.is_not_member_of_any_group();
@@ -6060,9 +6086,9 @@
         Zr: () => g,
         gF: () => c,
         m: () => C,
-        mZ: () => S,
+        mZ: () => N,
         uL: () => b,
-        ux: () => N,
+        ux: () => S,
         xX: () => y,
         xu: () => m,
       });
@@ -6092,8 +6118,8 @@
               display: b,
               flexDirection: C,
               flexWrap: I,
-              justifyContent: S,
-              alignItems: N,
+              justifyContent: N,
+              alignItems: S,
               flexGrow: k,
               flexShrink: x,
               flexBasis: M,
@@ -6145,8 +6171,8 @@
                 display: b,
                 flexDirection: C,
                 flexWrap: I,
-                justifyContent: S,
-                alignItems: N,
+                justifyContent: N,
+                alignItems: S,
                 flexGrow: k,
                 flexShrink: x,
                 flexBasis: M,
@@ -6321,8 +6347,8 @@
         const {
             breakpoint: { tablet: e, desktop: t },
           } = y(),
-          a = S(`(min-width: ${e}px)`),
-          n = S(`(min-width: ${t}px)`);
+          a = N(`(min-width: ${e}px)`),
+          n = N(`(min-width: ${t}px)`);
         return o.De.IN_GAMEPADUI
           ? "mobile"
           : n
@@ -6335,7 +6361,7 @@
         return e.children(b());
       }
       const I = {};
-      function S(e) {
+      function N(e) {
         const [t, a] = l.useState(!1);
         return (
           l.useEffect(() => {
@@ -6361,7 +6387,7 @@
           t
         );
       }
-      function N(e) {
+      function S(e) {
         return l.createElement(m, Object.assign({ component: s.s }, e));
       }
     },

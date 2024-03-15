@@ -561,6 +561,8 @@
     "FamilyGames_Count": "%1$s Titles",
     "FamilyGames_ShowMore": "Show More",
     "FamilyGames_ShowAll": "Show All",
+    "FamilyGames_EmptySearch": "No games meet your search criteria.",
+    "FamilyGames_NoGames": "There are no games in your family library.",
     "FamilyGames_Sort_Alphabetical": "A-Z",
     "FamilyGames_Sort_DateAcquired": "Date Acquired",
     "FamilyGames_FromTheLibraryOf_Single": "From the library of %1$s",
