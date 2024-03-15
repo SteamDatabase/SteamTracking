@@ -2088,12 +2088,14 @@
         const a = A(e.args, "autoplay"),
           l = "0" !== a && "off" !== a && "false" !== a,
           r = A(e.args, "controls"),
-          o = "0" !== r && "off" !== r && "false" !== r;
+          o = "0" !== r && "off" !== r && "false" !== r,
+          s = A(e.args, "loop"),
+          c = "0" !== r && "off" !== r && "false" !== r;
         return i.createElement(_.Y, {
           video: t,
           bAutoPlay: l,
           bControls: o,
-          bLoop: l,
+          bLoop: s ? c : l,
         });
       }
       function H(e) {
@@ -17633,7 +17635,7 @@
             : "";
         }
         SetCurEligibilityText(e) {
-          this.SetEventTitle(d.U.Get().GetCurEditLanguage(), e);
+          this.SetEligibilityText(d.U.Get().GetCurEditLanguage(), e);
         }
         SetEligibilityText(e, t) {
           this.SetKVLang(this.m_model.eligibility_text, e, t);
@@ -23624,6 +23626,19 @@
         GetAssociatedAssetURL() {
           return this.m_oPromotionPlan.associated_asset_url;
         }
+        GetAssociatedAssetURLForHTML() {
+          var e;
+          if (
+            null === (e = this.m_oPromotionPlan.associated_asset_url) ||
+            void 0 === e
+              ? void 0
+              : e.startsWith("\\fileserver")
+          ) {
+            const e = `file:///${this.m_oPromotionPlan.associated_asset_url.replace(/\\/g, "/")}`;
+            return encodeURI(e);
+          }
+          return this.m_oPromotionPlan.associated_asset_url;
+        }
         GetPartnerArtworkSubmissionReviewed() {
           return this.m_oPromotionPlan.partner_artwork_submission_reviewed;
         }
@@ -23737,6 +23752,9 @@
         }
         GetArtworkLocalizationRequests() {
           return this.m_oPromotionPlan.artwork_localization_request_items || [];
+        }
+        GetArtworkLocationUploadAssetURL() {
+          return `${s.De.PARTNER_BASE_URL}promotion/assetportal/localization/${this.m_oPromotionPlan.id}`;
         }
         GetNumArtworkLocalizationRequired() {
           var e;
@@ -42915,35 +42933,64 @@
           : null;
       }
       function ql(e) {
-        const { optInDef: t } = e,
-          n = (0, te.Xj)(t.event_title, (0, ne.jM)(Le.De.LANGUAGE)),
-          a = (0, xe.f)(t),
-          i = (0, te.Xj)(t.description, (0, ne.jM)(Le.De.LANGUAGE), null);
+        var t;
+        const { optInDef: n } = e,
+          a = (0, te.Xj)(n.event_title, (0, ne.jM)(Le.De.LANGUAGE)),
+          i = (0, xe.f)(n),
+          l = (0, te.Xj)(n.description, (0, ne.jM)(Le.De.LANGUAGE), null),
+          r = (0, te.Xj)(n.eligibility_text, (0, ne.jM)(Le.De.LANGUAGE), null);
         return o.createElement(
           o.Fragment,
           null,
           o.createElement(
             "div",
             { className: we().ColHeader },
-            Boolean(a)
+            Boolean(i)
               ? o.createElement("div", {
                   className: we().ColHeaderImg,
-                  style: { backgroundImage: `url( '${a}' )` },
+                  style: { backgroundImage: `url( '${i}' )` },
                 })
-              : Boolean(n) && o.createElement("div", null, n),
+              : Boolean(a) && o.createElement("div", null, a),
           ),
           o.createElement(
             "div",
             { className: we().SectionCtn },
-            Boolean(t.optin_deadline_date) &&
+            Boolean(n.optin_deadline_date) &&
               o.createElement(
                 "h1",
                 null,
                 (0, G.Xx)("#OptIn_Submission_Deadline"),
                 " ",
-                (0, Yt.$1)(t.optin_deadline_date),
+                (0, Yt.$1)(n.optin_deadline_date),
               ),
-            Boolean(i) && o.createElement(yi.d, { text: i }),
+            Boolean(l) && o.createElement(yi.d, { text: l }),
+            Boolean(r) &&
+              o.createElement(
+                o.Fragment,
+                null,
+                o.createElement(
+                  "h3",
+                  null,
+                  (0, G.Xx)("#OptIn_Appeals_EligibilityTitle"),
+                ),
+                o.createElement(yi.d, { text: r }),
+                o.createElement("h3", null, (0, G.Xx)("#OptIn_OptInOut_Title")),
+                o.createElement(
+                  "div",
+                  null,
+                  (0, G.Xx)("#OptIn_RegInstruction"),
+                  Boolean(
+                    null === (t = null == n ? void 0 : n.do_anytime) ||
+                      void 0 === t
+                      ? void 0
+                      : t.discount_event_id,
+                  ) &&
+                    (0, G.Xx)(
+                      "#OptIn_DiscountParticipation",
+                      (0, Yt.$1)(n.event_start_date),
+                    ),
+                ),
+              ),
           ),
         );
       }
@@ -47339,7 +47386,7 @@
     },
     87814: (e, t, n) => {
       "use strict";
-      n.d(t, { QG: () => it, bQ: () => $e, Fv: () => at });
+      n.d(t, { QG: () => rt, bQ: () => et, Fv: () => it });
       var a = n(4618),
         i = n(1698),
         l = n(36342),
@@ -47358,13 +47405,13 @@
         E = n(50423),
         S = n(31846),
         D = n(12251),
-        f = n(65255),
-        y = n(18133),
-        b = n.n(y),
-        I = n(49188),
-        C = n(85556),
-        k = n(80751),
-        A = n.n(k),
+        f = n(18133),
+        y = n.n(f),
+        b = n(49188),
+        I = n(85556),
+        C = n(80751),
+        k = n.n(C),
+        A = n(65255),
         w = n(37341);
       const P = 4985300096;
       function T(e) {
@@ -47389,7 +47436,7 @@
             );
             return (0, o.useCallback)(
               (t) =>
-                (0, C.mG)(this, void 0, void 0, function* () {
+                (0, I.mG)(this, void 0, void 0, function* () {
                   var n, a, i, l, r, o;
                   const s = {
                       date4: { date: T(t.rtDueDate), time: N(t.rtDueDate) },
@@ -47398,8 +47445,8 @@
                       },
                       link: { url: t.strFilesURL, text: t.strFilesURL },
                       link8: {
-                        url: `${f.De.PARTNER_BASE_URL}promotion/planning/edit/${t.planid}`,
-                        text: `${f.De.PARTNER_BASE_URL}promotion/planning/edit/${t.planid}`,
+                        url: `${A.De.PARTNER_BASE_URL}promotion/assetportal/localization/${t.planid}`,
+                        text: `${A.De.PARTNER_BASE_URL}promotion/assetportal/localization/${t.planid}`,
                       },
                       date8: { date: T(t.rtDueDate), time: N(t.rtDueDate) },
                       numbers: "" + t.nNumAssets,
@@ -47415,7 +47462,7 @@
                       columnVals: JSON.stringify(s),
                     },
                     m = `mutation ($myItemName: String!, $columnVals: JSON!) { create_item (board_id:${P}, item_name:$myItemName, column_values:$columnVals) { id } }`,
-                    d = yield A().post(
+                    d = yield k().post(
                       "https://api.monday.com/v2/",
                       JSON.stringify({
                         query: m,
@@ -47429,7 +47476,7 @@
                       },
                     );
                   return (
-                    "dev" == f.De.WEB_UNIVERSE && console.log("adil", d),
+                    "dev" == A.De.WEB_UNIVERSE && console.log("adil", d),
                     d &&
                     200 == d.status &&
                     (null ===
@@ -47460,26 +47507,26 @@
               [e],
             );
           })(),
-          s = (0, R.IE)(f.L7.accountid),
+          s = (0, R.IE)(A.L7.accountid),
           [c, d, u, p, _, h] = (0, r.SZ)(() => [
             n.GetID(),
             n.GetName(),
             n.GetStartDate(),
             n.GetArtworkLocalizationDropboxLink(),
-            n.GetAssociatedAssetURL(),
+            n.GetAssociatedAssetURLForHTML(),
             n.GetNumArtworkLocalizationRequired(),
           ]),
           g = i + x > u ? u - x : i,
-          [v, E] = (0, o.useState)(() => g == i),
+          [v, E] = (0, o.useState)(() => !1),
           [S, D] = (0, o.useState)(() =>
             a
               ? "Translate to Simplified Chinese Only"
               : "Translate to all supported language.",
           ),
-          y = (0, G.tx)();
-        return y.bLoading
+          f = (0, G.tx)();
+        return f.bLoading
           ? o.createElement(G.NT, {
-              state: y,
+              state: f,
               strDialogTitle: "Creating Localization Request...",
               closeModal: t,
             })
@@ -47491,13 +47538,12 @@
                   "Create a localization request after you have uploaded the assets to dropbox.",
                 onCancel: t,
                 onOK: () =>
-                  (0, C.mG)(this, void 0, void 0, function* () {
+                  (0, I.mG)(this, void 0, void 0, function* () {
                     var e;
-                    y.fnSetLoading(!0);
+                    f.fnSetLoading(!0);
                     const t = {
                         planid: c,
-                        strEventName:
-                          (f.De.WEB_UNIVERSE ? "Adil TEST " : "") + d,
+                        strEventName: d,
                         rtDueDate: g,
                         rtLiveDate: u,
                         nNumAssets: h,
@@ -47506,7 +47552,7 @@
                           (null === (e = null == s ? void 0 : s.data) ||
                           void 0 === e
                             ? void 0
-                            : e.m_strPlayerName) || "" + f.L7.accountid,
+                            : e.m_strPlayerName) || "" + A.L7.accountid,
                         bHighPriority: v,
                         strFilesURL: p,
                         strInternalURL: _,
@@ -47517,9 +47563,9 @@
                           Math.floor(Date.now() / 1e3),
                           a,
                         ),
-                        y.fnSetSuccess(!0))
-                      : (y.fnSetError(!0),
-                        y.fnSetStrError(
+                        f.fnSetSuccess(!0))
+                      : (f.fnSetError(!0),
+                        f.fnSetStrError(
                           "Chech console for errors and/or try again shortly",
                         ));
                   }),
@@ -47533,6 +47579,8 @@
               }),
               o.createElement(m.__, null, "Notes for Localization"),
               o.createElement("textarea", {
+                rows: 10,
+                cols: 80,
                 value: S,
                 onChange: (e) => D(e.currentTarget.value),
               }),
@@ -47570,7 +47618,7 @@
           return (
             q.s_Singleton ||
               ((q.s_Singleton = new q()),
-              "dev" == f.De.WEB_UNIVERSE &&
+              "dev" == A.De.WEB_UNIVERSE &&
                 (window.g_SaleAssetEditStore = q.s_Singleton)),
             q.s_Singleton
           );
@@ -47671,18 +47719,14 @@
           o.createElement(
             "div",
             { className: c().SectionCtn },
-            o.createElement(
-              "h2",
-              { className: "inline" },
-              "MARKETING MESSAGE ASSETS",
-            ),
+            o.createElement("h2", { className: "inline" }, "Sale Page Assets"),
             o.createElement("hr", null),
             o.createElement(Y.j, {
               rgSupportArtwork: a,
               rgRealmList: i,
               strOverrideDragAndDropText:
                 "Drag any asset here to upload (max 5MB)",
-              strUploadAjaxURL: `${f.De.PARTNER_BASE_URL}sales/ajaxuploadasset/${t.GetGID()}`,
+              strUploadAjaxURL: `${A.De.PARTNER_BASE_URL}sales/ajaxuploadasset/${t.GetGID()}`,
               fnOnUploadSuccess: l,
             }),
             o.createElement(
@@ -47793,7 +47837,7 @@
             o.createElement(
               "a",
               {
-                href: `${f.De.COMMUNITY_BASE_URL}gid/${t.GetClanSteamID().ConvertTo64BitString()}/partnerevents/edit/${t.GetGID()}?tab=sale`,
+                href: `${A.De.COMMUNITY_BASE_URL}gid/${t.GetClanSteamID().ConvertTo64BitString()}/partnerevents/edit/${t.GetGID()}?tab=sale`,
                 target: "_blank",
               },
               "Open Sale Page Editor",
@@ -47975,12 +48019,12 @@
             this.m_callback.Dispatch(this);
         }
       }
-      (0, C.gn)([se.LO], pe.prototype, "m_bDirty", void 0),
-        (0, C.gn)([me.a], pe.prototype, "SetCurImage", null),
-        (0, C.gn)([se.aD.bound], pe.prototype, "SetImage", null),
-        (0, C.gn)([me.a], pe.prototype, "ClearAllAssetObjects", null),
-        (0, C.gn)([me.a], pe.prototype, "DeleteAssetObjectLang", null),
-        (0, C.gn)([me.a], pe.prototype, "RevertChanges", null);
+      (0, I.gn)([se.LO], pe.prototype, "m_bDirty", void 0),
+        (0, I.gn)([me.a], pe.prototype, "SetCurImage", null),
+        (0, I.gn)([se.aD.bound], pe.prototype, "SetImage", null),
+        (0, I.gn)([me.a], pe.prototype, "ClearAllAssetObjects", null),
+        (0, I.gn)([me.a], pe.prototype, "DeleteAssetObjectLang", null),
+        (0, I.gn)([me.a], pe.prototype, "RevertChanges", null);
       class _e {
         InitDailyDealToEdit(e, t = !1) {
           return (
@@ -48001,7 +48045,7 @@
           return (
             _e.s_Singleton ||
               ((_e.s_Singleton = new _e()),
-              "dev" == f.De.WEB_UNIVERSE &&
+              "dev" == A.De.WEB_UNIVERSE &&
                 (window.g_SpotlightEditStore = _e.s_Singleton)),
             _e.s_Singleton
           );
@@ -48150,7 +48194,7 @@
             { className: c().SectionCtn },
             o.createElement("h2", { className: "inline" }, "SPOTLIGHT ASSETS"),
             o.createElement("hr", null),
-            Boolean("dev" == f.De.WEB_UNIVERSE) &&
+            Boolean("dev" == A.De.WEB_UNIVERSE) &&
               o.createElement(
                 "div",
                 { className: Se.WarningStylesWithIcon },
@@ -48161,7 +48205,7 @@
               rgRealmList: a,
               strOverrideDragAndDropText:
                 "Drag any asset here to upload (max 5MB)",
-              strUploadAjaxURL: `${f.De.PARTNER_BASE_URL}cluster/ajaxuploadasset?clusterid=${t.GetID()}&clustertype=spotlights`,
+              strUploadAjaxURL: `${A.De.PARTNER_BASE_URL}cluster/ajaxuploadasset?clusterid=${t.GetID()}&clustertype=spotlights`,
               fnOnUploadSuccess: i,
             }),
             o.createElement(
@@ -48199,7 +48243,7 @@
                     if (!a) return null;
                     const i = n ? "?t=" + n : "",
                       l = (0, oe.j_)(t);
-                    return `${f.De.MEDIA_CDN_URL}steam/spotlights/${e}/${a[l]}${i}`;
+                    return `${A.De.MEDIA_CDN_URL}steam/spotlights/${e}/${a[l]}${i}`;
                   })(a, e, i, n)
                 : null;
             },
@@ -48239,7 +48283,7 @@
             o.createElement(
               "a",
               {
-                href: `${f.De.PARTNER_BASE_URL}promotion/spotlight/edit/${t.GetID()}`,
+                href: `${A.De.PARTNER_BASE_URL}promotion/spotlight/edit/${t.GetID()}`,
                 target: "_blank",
               },
               "Open Spotlight Editor",
@@ -48261,7 +48305,7 @@
           bSaveDisabled: 0 == c,
           fnOnRevert: () => t.RevertChanges(),
           fnOnSave: () =>
-            (0, C.mG)(this, void 0, void 0, function* () {
+            (0, I.mG)(this, void 0, void 0, function* () {
               const e = yield n(a.R6.k_ConfigPage_Spotlight, s);
               return (
                 e && t.Reset((0, Ee.Gj)(a.R6.k_ConfigPage_Spotlight, l)), e
@@ -48516,17 +48560,17 @@
             this.m_callback.Dispatch(this);
         }
       }
-      (0, C.gn)([se.LO], Te.prototype, "m_bDirty", void 0),
-        (0, C.gn)([me.a], Te.prototype, "SetCurImage", null),
-        (0, C.gn)([se.aD.bound], Te.prototype, "SetImage", null),
-        (0, C.gn)([me.a], Te.prototype, "ClearAllAssetObjects", null),
-        (0, C.gn)([me.a], Te.prototype, "DeleteAssetObjectLang", null),
-        (0, C.gn)([me.a], Te.prototype, "SetBackgroundOffset", null),
-        (0, C.gn)([me.a], Te.prototype, "SetBackgroundMobileOffset", null),
-        (0, C.gn)([me.a], Te.prototype, "SetBackgroundImageHeight", null),
-        (0, C.gn)([me.a], Te.prototype, "SetColorLeft", null),
-        (0, C.gn)([me.a], Te.prototype, "SetColorRight", null),
-        (0, C.gn)([me.a], Te.prototype, "RevertChanges", null);
+      (0, I.gn)([se.LO], Te.prototype, "m_bDirty", void 0),
+        (0, I.gn)([me.a], Te.prototype, "SetCurImage", null),
+        (0, I.gn)([se.aD.bound], Te.prototype, "SetImage", null),
+        (0, I.gn)([me.a], Te.prototype, "ClearAllAssetObjects", null),
+        (0, I.gn)([me.a], Te.prototype, "DeleteAssetObjectLang", null),
+        (0, I.gn)([me.a], Te.prototype, "SetBackgroundOffset", null),
+        (0, I.gn)([me.a], Te.prototype, "SetBackgroundMobileOffset", null),
+        (0, I.gn)([me.a], Te.prototype, "SetBackgroundImageHeight", null),
+        (0, I.gn)([me.a], Te.prototype, "SetColorLeft", null),
+        (0, I.gn)([me.a], Te.prototype, "SetColorRight", null),
+        (0, I.gn)([me.a], Te.prototype, "RevertChanges", null);
       class Ne {
         InitTakeoverToEdit(e, t, n = !1) {
           return (
@@ -48547,7 +48591,7 @@
           return (
             Ne.s_Singleton ||
               ((Ne.s_Singleton = new Ne()),
-              "dev" == f.De.WEB_UNIVERSE &&
+              "dev" == A.De.WEB_UNIVERSE &&
                 (window.g_TakeoverEditStore = Ne.s_Singleton)),
             Ne.s_Singleton
           );
@@ -48754,7 +48798,7 @@
               ")",
             ),
             o.createElement("hr", null),
-            Boolean("dev" == f.De.WEB_UNIVERSE) &&
+            Boolean("dev" == A.De.WEB_UNIVERSE) &&
               o.createElement(
                 "div",
                 { className: Se.WarningStylesWithIcon },
@@ -48765,7 +48809,7 @@
               rgRealmList: i,
               strOverrideDragAndDropText:
                 "Drag any asset here to upload (max 5MB)",
-              strUploadAjaxURL: `${f.De.PARTNER_BASE_URL}cluster/ajaxuploadasset?clusterid=${t.GetID()}&clustertype=${t.GetTypeString()}`,
+              strUploadAjaxURL: `${A.De.PARTNER_BASE_URL}cluster/ajaxuploadasset?clusterid=${t.GetID()}&clustertype=${t.GetTypeString()}`,
               fnOnUploadSuccess: l,
             }),
             o.createElement(
@@ -48892,7 +48936,7 @@
                     if (!l) return null;
                     const r = i ? "?t=" + i : "",
                       o = (0, oe.j_)(n);
-                    return `${f.De.MEDIA_CDN_URL}steam/clusters/${(0, a.D9)(e)}/${t}/${l[o]}${r}`;
+                    return `${A.De.MEDIA_CDN_URL}steam/clusters/${(0, a.D9)(e)}/${t}/${l[o]}${r}`;
                   })(m, l, e, s, i)
                 : null;
             },
@@ -48949,7 +48993,7 @@
             o.createElement(
               "a",
               {
-                href: `${f.De.PARTNER_BASE_URL}admin/store/pageclusteredit/${t.GetTypeString()}/${t.GetID()}`,
+                href: `${A.De.PARTNER_BASE_URL}admin/store/pageclusteredit/${t.GetTypeString()}/${t.GetID()}`,
                 target: "_blank",
               },
               "Open Takeover Editor",
@@ -48973,7 +49017,7 @@
           fnOnRevert: () => t.RevertChanges(),
           bSaveDisabled: 0 == c,
           fnOnSave: () =>
-            (0, C.mG)(this, void 0, void 0, function* () {
+            (0, I.mG)(this, void 0, void 0, function* () {
               const e = yield n(i, s, m);
               return e && t.Reset((0, Ee.Gj)(i, l), i), e;
             }),
@@ -49011,7 +49055,7 @@
                 o.createElement(
                   ke.rU,
                   {
-                    to: `${f.De.PARTNER_BASE_URL}admin/store/pageclusteredit/${(0, a.D9)(n)}`,
+                    to: `${A.De.PARTNER_BASE_URL}admin/store/pageclusteredit/${(0, a.D9)(n)}`,
                   },
                   "Return to Takeover Dashboard.",
                 ),
@@ -49149,12 +49193,12 @@
             this.m_callback.Dispatch(this);
         }
       }
-      (0, C.gn)([se.LO], He.prototype, "m_bDirty", void 0),
-        (0, C.gn)([me.a], He.prototype, "SetCurImage", null),
-        (0, C.gn)([se.aD.bound], He.prototype, "SetImage", null),
-        (0, C.gn)([me.a], He.prototype, "ClearAllAssetObjects", null),
-        (0, C.gn)([me.a], He.prototype, "DeleteAssetObjectLang", null),
-        (0, C.gn)([me.a], He.prototype, "RevertChanges", null);
+      (0, I.gn)([se.LO], He.prototype, "m_bDirty", void 0),
+        (0, I.gn)([me.a], He.prototype, "SetCurImage", null),
+        (0, I.gn)([se.aD.bound], He.prototype, "SetImage", null),
+        (0, I.gn)([me.a], He.prototype, "ClearAllAssetObjects", null),
+        (0, I.gn)([me.a], He.prototype, "DeleteAssetObjectLang", null),
+        (0, I.gn)([me.a], He.prototype, "RevertChanges", null);
       class Xe {
         InitTakeunderToEdit(e, t = !1) {
           return (
@@ -49175,7 +49219,7 @@
           return (
             Xe.s_Singleton ||
               ((Xe.s_Singleton = new Xe()),
-              "dev" == f.De.WEB_UNIVERSE &&
+              "dev" == A.De.WEB_UNIVERSE &&
                 (window.g_takeunderEditStore = Xe.s_Singleton)),
             Xe.s_Singleton
           );
@@ -49277,7 +49321,7 @@
               "Frontpage Takeunder Assets",
             ),
             o.createElement("hr", null),
-            Boolean("dev" == f.De.WEB_UNIVERSE) &&
+            Boolean("dev" == A.De.WEB_UNIVERSE) &&
               o.createElement(
                 "div",
                 { className: Se.WarningStylesWithIcon },
@@ -49288,7 +49332,7 @@
               rgRealmList: i,
               strOverrideDragAndDropText:
                 "Drag any asset here to upload (max 5MB)",
-              strUploadAjaxURL: `${f.De.PARTNER_BASE_URL}cluster/ajaxuploadasset?clusterid=${t.GetID()}&clustertype=${t.GetTypeString()}`,
+              strUploadAjaxURL: `${A.De.PARTNER_BASE_URL}cluster/ajaxuploadasset?clusterid=${t.GetID()}&clustertype=${t.GetTypeString()}`,
               fnOnUploadSuccess: l,
             }),
             o.createElement(
@@ -49351,7 +49395,7 @@
                     if (!l) return null;
                     const r = i ? "?t=" + i : "",
                       o = (0, oe.j_)(n);
-                    return `${f.De.MEDIA_CDN_URL}steam/clusters/${(0, a.D9)(e)}/${t}/${l[o]}${r}`;
+                    return `${A.De.MEDIA_CDN_URL}steam/clusters/${(0, a.D9)(e)}/${t}/${l[o]}${r}`;
                   })(m, l, e, s, i)
                 : null;
             },
@@ -49408,7 +49452,7 @@
             o.createElement(
               "a",
               {
-                href: `${f.De.PARTNER_BASE_URL}admin/store/pageclusteredit/${t.GetTypeString()}/${t.GetID()}`,
+                href: `${A.De.PARTNER_BASE_URL}admin/store/pageclusteredit/${t.GetTypeString()}/${t.GetID()}`,
                 target: "_blank",
               },
               "Open Takeunder Editor",
@@ -49430,7 +49474,7 @@
           bSaveDisabled: 0 == c,
           fnOnRevert: () => t.RevertChanges(),
           fnOnSave: () =>
-            (0, C.mG)(this, void 0, void 0, function* () {
+            (0, I.mG)(this, void 0, void 0, function* () {
               const e = yield n(a.R6.k_ConfigPage_Takeunder, s);
               return (
                 e && t.Reset((0, Ee.Gj)(a.R6.k_ConfigPage_Takeunder, l)), e
@@ -49470,15 +49514,16 @@
                 o.createElement(
                   ke.rU,
                   {
-                    to: `${f.De.PARTNER_BASE_URL}admin/store/pageclusteredit/takeunder}`,
+                    to: `${A.De.PARTNER_BASE_URL}admin/store/pageclusteredit/takeunder}`,
                   },
                   "Return to Takeunder Dashboard.",
                 ),
               )
         );
       }
-      var Qe = n(13549);
-      function Je(e) {
+      var Qe = n(13549),
+        Je = n(56164);
+      function $e(e) {
         const { rtTime: t } = e;
         return o.createElement(
           "span",
@@ -49488,7 +49533,7 @@
           (0, D.Sc)(t),
         );
       }
-      function $e(e) {
+      function et(e) {
         const t = (0, l.Gn)(),
           [n, a, i] = (0, r.SZ)(() => [
             t.GetArtworkLocalizationDropboxLink(),
@@ -49523,10 +49568,14 @@
               onChange: (e) =>
                 t.SetArtworkLocalizationDropboxLink(e.currentTarget.value),
             }),
-            o.createElement(nt, null),
-            Boolean(!a) ? o.createElement(et, null) : o.createElement(tt, null),
+            o.createElement(
+              Je.ug,
+              { title: "Required Assets", bStartMinimized: Boolean(a) },
+              o.createElement(at, null),
+            ),
+            Boolean(!a) ? o.createElement(tt, null) : o.createElement(nt, null),
           ),
-          o.createElement(lt, {
+          o.createElement(ot, {
             bShowInternalControls: !1,
             rgArtworkToDisplay: i,
           }),
@@ -49543,7 +49592,7 @@
           ),
         );
       }
-      function et(e) {
+      function tt(e) {
         const t = (0, l.Gn)(),
           [n, a] = (0, r.SZ)(() => [
             t.BHasArtworkLocalizationSteamChinaOnly(),
@@ -49575,22 +49624,23 @@
           o.createElement("br", null),
         );
       }
-      function tt(e) {
+      function nt(e) {
         const t = (0, l.Gn)(),
           [n, a, i] = (0, r.SZ)(() => [
-            t.GetID(),
+            t.GetArtworkLocationUploadAssetURL(),
             t.GetArtworkLocalizationRequestTime(),
             t.GetArtworkLocalizationTaskID(),
           ]);
         return o.createElement(
           "div",
           null,
-          o.createElement("div", null, "Localization Request has been created"),
+          o.createElement("br", null),
+          o.createElement("h3", null, "Localization Request has been created"),
           o.createElement(
             "div",
             null,
             "Localization Request Initiated at ",
-            o.createElement(Je, { rtTime: a }),
+            o.createElement($e, { rtTime: a }),
             ".",
             o.createElement(
               "a",
@@ -49602,18 +49652,15 @@
           ),
           o.createElement(
             "a",
-            {
-              href: `${f.De.PARTNER_BASE_URL}assetportal/localization/${n}`,
-              target: "_blank",
-            },
+            { href: n, target: "_blank" },
             "Page Localization Team will see for Asset Upload",
           ),
         );
       }
-      function nt(e) {
+      function at(e) {
         return o.createElement(
           "div",
-          { className: b().AssetNeedsColumn },
+          { className: y().AssetNeedsColumn },
           o.createElement("h3", null, "Required Assets"),
           o.createElement(
             "p",
@@ -49623,8 +49670,8 @@
           i.Vd.map((e) =>
             o.createElement(
               "div",
-              { key: e, className: b().AssetTypeRow },
-              o.createElement(I.j, {
+              { key: e, className: y().AssetTypeRow },
+              o.createElement(b.j, {
                 type: e,
                 bLocalizationRequest: !0,
                 index: "marketingmessage_art_2" === e ? 1 : void 0,
@@ -49633,31 +49680,23 @@
           ),
         );
       }
-      function at(e) {
-        const { planid: t } = e,
-          n = (0, l.Gn)(),
-          a = (0, r.SZ)(() => n.GetArtworkLocalizationRequests());
+      function it(e) {
+        const { planid: t } = e;
         return o.createElement(
           Qe.aX,
           { planid: t, bCanBeMissing: !1 },
-          o.createElement(lt, {
-            bShowInternalControls: !1,
-            rgArtworkToDisplay: a,
-          }),
-          o.createElement(
-            "div",
-            {
-              className: (0, v.Z)(
-                c().DefaultSectionCtn,
-                c().ValveOnlyBackground,
-                c().ActionBar,
-              ),
-            },
-            o.createElement(U.u, { oEditablePlan: n }),
-          ),
+          o.createElement(lt, null),
         );
       }
-      function it(e) {
+      function lt(e) {
+        const t = (0, l.Gn)(),
+          n = (0, r.SZ)(() => t.GetArtworkLocalizationRequests());
+        return o.createElement(ot, {
+          bShowInternalControls: !1,
+          rgArtworkToDisplay: n,
+        });
+      }
+      function rt(e) {
         return o.createElement(
           "div",
           { className: (0, v.Z)(c().DefaultSectionCtn) },
@@ -49674,10 +49713,10 @@
           ),
           o.createElement("br", null),
           o.createElement("br", null),
-          o.createElement(lt, { bShowInternalControls: !0 }),
+          o.createElement(ot, { bShowInternalControls: !0 }),
         );
       }
-      function lt(e) {
+      function ot(e) {
         const { bShowInternalControls: t, rgArtworkToDisplay: n } = e,
           [r, s] = (0, u.Ar)("loc_tab", "current"),
           c = (e) => s(e.key),
@@ -49756,14 +49795,14 @@
               name: (0, i.gl)(e.artworkType),
               key: (e.type ? (0, a.D9)(e.type) + "_" : "") + e.artworkType,
               status: o.createElement(
-                rt,
+                st,
                 Object.assign({}, e, { rgArtworkToDisplay: n }),
               ),
               contents: o.createElement(
                 d.SV,
                 null,
                 o.createElement(
-                  ot,
+                  ct,
                   Object.assign({}, e, { rgArtworkToDisplay: n }),
                 ),
               ),
@@ -49773,15 +49812,15 @@
           o.createElement(
             "div",
             null,
-            o.createElement(g.n, { tabs: h, bDisableRouting: !0 }),
+            o.createElement(g.n, { tabs: h, bDisableRouting: t }),
             o.createElement("div", { className: _().ClearThings }),
           )
         );
       }
-      function rt(e) {
+      function st(e) {
         return o.createElement("div", null, "status todo");
       }
-      function ot(e) {
+      function ct(e) {
         const {
           artworkType: t,
           id: n,
@@ -49948,37 +49987,34 @@
       function P(e) {
         const { bAssetUploadOnly: t } = e,
           n = (0, a.fL)();
-        return (
-          console.log("adil;", t),
+        return l.createElement(
+          "div",
+          null,
           l.createElement(
             "div",
-            null,
+            { className: w.EditCtn },
             l.createElement(
               "div",
-              { className: w.EditCtn },
-              l.createElement(
-                "div",
-                { className: d().PageTitle },
-                "Marketing Message - Asset Management",
-              ),
-              l.createElement("hr", null),
-              l.createElement(
-                "div",
-                { className: d().ColumnCtn },
-                l.createElement(
-                  "div",
-                  { className: d().LeftCol },
-                  Boolean(!t) && l.createElement(T, { oEditableMessage: n }),
-                  l.createElement(L, { oEditableMessage: n }),
-                ),
-                l.createElement(k.C, {
-                  oEditableMessage: n,
-                  bAssetUploadOnly: t,
-                }),
-              ),
-              l.createElement("br", null),
+              { className: d().PageTitle },
+              "Marketing Message - Asset Management",
             ),
-          )
+            l.createElement("hr", null),
+            l.createElement(
+              "div",
+              { className: d().ColumnCtn },
+              l.createElement(
+                "div",
+                { className: d().LeftCol },
+                Boolean(!t) && l.createElement(T, { oEditableMessage: n }),
+                l.createElement(L, { oEditableMessage: n }),
+              ),
+              l.createElement(k.C, {
+                oEditableMessage: n,
+                bAssetUploadOnly: t,
+              }),
+            ),
+            l.createElement("br", null),
+          ),
         );
       }
       function T(e) {

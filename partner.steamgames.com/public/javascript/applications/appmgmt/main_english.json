@@ -171,6 +171,8 @@
     "OptIn_NoEligible_Point2": "Is the game presented and described on it's store page in a way that makes it clear that the game fits the theme? A question we ask when reviewing games is 'Is it immediately apparent to players that this game belongs in this fest?'",
     "OptIn_Table_Col_Game": "Game",
     "OptIn_Table_Col_AppID": "AppID",
+    "OptIn_RegInstruction": "Click below to register your interest in participating in this event. ",
+    "OptIn_DiscountParticipation": " To participate with a discount, you will also need to enter a discount for your game before %1$s.",
     "OptIn_NoEligible_Games_Found": "None of your games are eligible to participate in this event",
     "OptIn_OptIn": "Opt in",
     "OptIn_ReviewReg": "Review Registration",

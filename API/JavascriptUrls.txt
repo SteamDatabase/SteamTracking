@@ -940,7 +940,6 @@ ${PARTNER_BASE_URL}apps/landing/${appid}
 ${PARTNER_BASE_URL}apps/landing/${}
 ${PARTNER_BASE_URL}apps/requestkeys/${}
 ${PARTNER_BASE_URL}apps/suggestapps
-${PARTNER_BASE_URL}assetportal/localization/${}
 ${PARTNER_BASE_URL}bundles/suggestbundle
 ${PARTNER_BASE_URL}bundles/view/${}
 ${PARTNER_BASE_URL}cluster/ajaxcreatecluster
@@ -1039,6 +1038,8 @@ ${PARTNER_BASE_URL}pricing/ajaxpublishproposal/${}/${}
 ${PARTNER_BASE_URL}pricing/ajaxsubmitproposal/${}/${}
 ${PARTNER_BASE_URL}promotion${}
 ${PARTNER_BASE_URL}promotion/assetportal/ajaxuploadpreviewasset/${}
+${PARTNER_BASE_URL}promotion/assetportal/localization/${id}
+${PARTNER_BASE_URL}promotion/assetportal/localization/${planid}
 ${PARTNER_BASE_URL}promotion/assetportal/request/${id}
 ${PARTNER_BASE_URL}promotion/assetportal/request/${}
 ${PARTNER_BASE_URL}promotion/dailydeals/ajaxadminadddailydeal
@@ -1086,7 +1087,6 @@ ${PARTNER_BASE_URL}promotion/planning/ajaxpostcontenthubstats
 ${PARTNER_BASE_URL}promotion/planning/ajaxuserwithreceivecommunications
 ${PARTNER_BASE_URL}promotion/planning/dashboard
 ${PARTNER_BASE_URL}promotion/planning/edit/${id}
-${PARTNER_BASE_URL}promotion/planning/edit/${planid}
 ${PARTNER_BASE_URL}promotion/planning/edit/${}
 ${PARTNER_BASE_URL}promotion/planning/migration
 ${PARTNER_BASE_URL}promotion/planning/salesrank
