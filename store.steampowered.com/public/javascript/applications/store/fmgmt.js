@@ -3468,10 +3468,12 @@
       }
       function Ct(e) {
         const { restrictions: t, dayIndex: a, setDayIndex: l } = e,
-          [r, s] = n.useState(BigInt(parseInt(t.allowed_time_windows))),
+          [r, s] = n.useState(
+            BigInt(parseInt(null == t ? void 0 : t.allowed_time_windows) || 0),
+          ),
           o = (0, F.id)();
         n.useEffect(() => {
-          s(BigInt(parseInt(t.allowed_time_windows)));
+          s(BigInt(parseInt(null == t ? void 0 : t.allowed_time_windows) || 0));
         }, [t]);
         const m = n.useCallback(
             (e) => {
@@ -3542,7 +3544,7 @@
           ),
           n.createElement(kt, {
             strLabel: "#Parental_Playtime_Limit",
-            nMinutes: t.allowed_daily_minutes,
+            nMinutes: t.allowed_daily_minutes || 0,
             onSelected: u,
           }),
         );
@@ -3712,13 +3714,13 @@
             ) || 0,
           ),
           _ =
-            null ===
+            (null ===
               (i =
                 null === (l = s.playtime_restrictions) || void 0 === l
                   ? void 0
                   : l.playtime_days[o]) || void 0 === i
               ? void 0
-              : i.allowed_daily_minutes;
+              : i.allowed_daily_minutes) || 0;
         return n.createElement(
           n.Fragment,
           null,
@@ -3793,7 +3795,7 @@
             (e) => {
               var t;
               if (
-                ((a.playtime_restrictions = { apply_playtime_restrictions: e }),
+                ((a.playtime_restrictions.apply_playtime_restrictions = e),
                 !(null === (t = a.playtime_restrictions.playtime_days) ||
                 void 0 === t
                   ? void 0
