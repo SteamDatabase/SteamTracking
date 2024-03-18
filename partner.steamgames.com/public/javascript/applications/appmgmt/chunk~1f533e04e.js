@@ -214,12 +214,12 @@
     51688: (e, t, a) => {
       a.d(t, {
         MZ: () => z,
-        a4: () => R,
+        a4: () => k,
         ac: () => S,
         bS: () => F,
         HL: () => w,
         oL: () => B,
-        J7: () => k,
+        J7: () => R,
         PJ: () => T,
         bH: () => M,
         B3: () => U,
@@ -227,8 +227,8 @@
         dn: () => A,
         $Y: () => D,
         sq: () => G,
-        RQ: () => b,
-        _L: () => C,
+        RQ: () => C,
+        _L: () => b,
         z5: () => L,
         Vv: () => x,
       });
@@ -278,8 +278,8 @@
       new Set([9, 11, 20, 21, 22, 23, 24, 25, 26, 27, 31, 35]);
       const A = 593110,
         G = 39049601,
-        b = 41316928,
-        C = 4,
+        C = 41316928,
+        b = 4,
         D = 20;
       var S;
       !(function (e) {
@@ -431,7 +431,7 @@
           (e.Summary = "summary"),
             (e.SummaryLargeImage = "summary_large_image");
         })(j || (j = {}));
-      const R = {
+      const k = {
         capsules: [],
         events: [],
         links: [],
@@ -440,11 +440,11 @@
         default_label: "#Sale_default_label",
         section_type: "unselected_empty",
       };
-      var k;
+      var R;
       !(function (e) {
         (e[(e.k_ETaggedItems = 0)] = "k_ETaggedItems"),
           (e[(e.k_EContentHub = 1)] = "k_EContentHub");
-      })(k || (k = {}));
+      })(R || (R = {}));
       const z = Object.assign(
           Object.assign(
             {
@@ -1429,7 +1429,7 @@
         }
         BUsesContentHubForItemSource() {
           return (
-            this.jsondata.item_source_type === k.k_EContentHub &&
+            this.jsondata.item_source_type === R.k_EContentHub &&
             Boolean(this.jsondata.source_content_hub)
           );
         }
@@ -2011,9 +2011,9 @@
     62698: (e, t, a) => {
       a.d(t, {
         FN: () => E,
-        Fm: () => C,
+        Fm: () => b,
         S6: () => A,
-        U8: () => b,
+        U8: () => C,
         aN: () => G,
       });
       var n = a(85556),
@@ -2175,7 +2175,7 @@
           return t || new Array();
         }
         GetFilteredClanImages(e, t) {
-          let a = b.GetClanImages(e);
+          let a = C.GetClanImages(e);
           return this.GetFilteredClanImagesList(a, t);
         }
         GetFilteredClanImagesList(e, t) {
@@ -2498,16 +2498,16 @@
       (0, n.gn)([r.LO], G.prototype, "m_mapClanToImages", void 0),
         (0, n.gn)([r.LO], G.prototype, "m_mapClanImageLoadState", void 0),
         (0, n.gn)([r.LO], G.prototype, "m_curLocImageGroup", void 0);
-      const b = new G();
-      function C(e) {
+      const C = new G();
+      function b(e) {
         const t = m.K.InitFromClanID(e),
           a = (0, u.T)("useLoadClanImages"),
-          [n, i] = (0, l.useState)(() => b.BHasLoadedClanImages(t));
+          [n, i] = (0, l.useState)(() => C.BHasLoadedClanImages(t));
         return (
           (0, l.useEffect)(() => {
             const t = m.K.InitFromClanID(e);
-            b.BHasLoadedClanImages(t) ||
-              b.LoadClanImages(t, !1, a).then(() => i(!0));
+            C.BHasLoadedClanImages(t) ||
+              C.LoadClanImages(t, !1, a).then(() => i(!0));
           }, [e, a]),
           n
         );
@@ -3219,7 +3219,7 @@
       window.g_CreatorHomeStore = h;
     },
     44174: (e, t, a) => {
-      a.d(t, { cA: () => E, j1: () => A, Jn: () => G });
+      a.d(t, { cA: () => A, j1: () => G, Jn: () => C, zn: () => b });
       var n = a(85556),
         i = a(80751),
         o = a.n(i),
@@ -3235,8 +3235,9 @@
         _ = a(31846),
         g = a(45284),
         v = a(37563),
-        I = a(47427);
-      class f {
+        I = a(47427),
+        f = a(20417);
+      class y {
         constructor(e) {
           (0, u.X)(
             "number" == typeof e.appid,
@@ -3249,14 +3250,15 @@
             (this.announcementid = e.announcementid);
         }
       }
-      function y(e) {
+      function E(e) {
         let t = "" + e;
         const a = _.LJ.GetELanguageFallback(e);
         return e != a && (t += "_" + a), t;
       }
-      class E {
+      class A {
         constructor() {
           (this.m_mapExistingEvents = new Map()),
+            (this.m_mapEventUpdateCallback = new Map()),
             (this.m_mapAnnouncementBodyToEvent = new Map()),
             (this.m_mapClanToGIDs = new Map()),
             (this.m_mapAppIDToGIDs = new Map()),
@@ -3354,6 +3356,13 @@
             "string" == typeof t[0].announcementGID &&
             Array.isArray(t[0].adjacents) &&
             (0 == t[0].adjacents.length || "string" == typeof t[0].adjacents[0])
+          );
+        }
+        GetPartnerEventChangeCallback(e) {
+          return (
+            this.m_mapEventUpdateCallback.has(e) ||
+              this.m_mapEventUpdateCallback.set(e, new p.pB()),
+            this.m_mapEventUpdateCallback.get(e)
           );
         }
         GetClanEventGIDs(e) {
@@ -3689,7 +3698,7 @@
                 (n
                   ? "events/ajaxgeteventdetailsforedit/"
                   : "events/ajaxgeteventdetails/"),
-              s = y((0, l.jM)(v.De.LANGUAGE)),
+              s = E((0, l.jM)(v.De.LANGUAGE)),
               r = {
                 clanid_list: e.join(","),
                 uniqueid_list: t.join(","),
@@ -3784,7 +3793,7 @@
             } else {
               let _ =
                 v.De.STORE_BASE_URL + "events/ajaxgetadjacentpartnerevents/";
-              const g = y((0, l.jM)(v.De.LANGUAGE));
+              const g = E((0, l.jM)(v.De.LANGUAGE));
               let I = {
                 clan_accountid: a ? a.GetAccountID() : void 0,
                 appid: i,
@@ -4045,7 +4054,7 @@
           r = !1,
         ) {
           return (0, n.mG)(this, void 0, void 0, function* () {
-            let n = y(r ? 0 : (0, l.jM)(v.De.LANGUAGE)),
+            let n = E(r ? 0 : (0, l.jM)(v.De.LANGUAGE)),
               d = {
                 appid: t,
                 clan_accountid: e ? e.GetAccountID() : void 0,
@@ -4215,7 +4224,7 @@
                 n.data.apps.length > 0 &&
                 (0, s.z)(() => {
                   const e = new Map(
-                    n.data.apps.map((e) => [e.appid, new f(e)]),
+                    n.data.apps.map((e) => [e.appid, new y(e)]),
                   );
                   this.m_mapUpdatedApps = e;
                 });
@@ -4246,7 +4255,7 @@
           return (0, n.mG)(this, void 0, void 0, function* () {
             const n = new Array(),
               i = v.De.STORE_BASE_URL + "events/ajaxgetbatchedpartnerevent/",
-              r = y((0, l.jM)(v.De.LANGUAGE));
+              r = E((0, l.jM)(v.De.LANGUAGE));
             let d = null,
               c = null;
             if (e) {
@@ -4339,42 +4348,86 @@
             return n;
           });
         }
+        SavePartnerEventSaleAssets(e, t, a) {
+          var i;
+          return (0, n.mG)(this, void 0, void 0, function* () {
+            let n = null;
+            if (!this.m_mapExistingEvents.has(t)) return !1;
+            try {
+              const s = `${v.De.PARTNER_BASE_URL}promotion/sales/ajaxsaveasset/${e}`,
+                r = new FormData();
+              r.append("sessionid", v.De.SESSIONID),
+                r.append("gidclanevent", t),
+                r.append("json", JSON.stringify(a));
+              const l = yield o().post(s, r, { withCredentials: !0 });
+              if (
+                1 ==
+                (null === (i = null == l ? void 0 : l.data) || void 0 === i
+                  ? void 0
+                  : i.success)
+              ) {
+                const e = this.m_mapExistingEvents.get(t);
+                for (const t in a)
+                  a.hasOwnProperty(t) && a[t] && (e.jsondata[t] = a[t]);
+                return this.GetPartnerEventChangeCallback(t).Dispatch(e), !0;
+              }
+              n = (0, h.l)(l);
+            } catch (e) {
+              n = (0, h.l)(e);
+            }
+            return (
+              console.error(
+                "CPartnerEventStore.SavePartnerEventSaleAssets failed: " +
+                  (null == n ? void 0 : n.strErrorMsg),
+                n,
+              ),
+              !1
+            );
+          });
+        }
       }
-      (0, n.gn)([s.LO], E.prototype, "m_mapExistingEvents", void 0),
-        (0, n.gn)([s.LO], E.prototype, "m_mapAnnouncementBodyToEvent", void 0),
-        (0, n.gn)([s.LO], E.prototype, "m_mapClanToGIDs", void 0),
-        (0, n.gn)([s.LO], E.prototype, "m_mapAppIDToGIDs", void 0),
-        (0, n.gn)([s.LO], E.prototype, "m_mapUpdatedApps", void 0),
-        (0, n.gn)([s.aD], E.prototype, "Init", null),
-        (0, n.gn)([s.aD], E.prototype, "RegisterClanEvents", null),
+      (0, n.gn)([s.LO], A.prototype, "m_mapExistingEvents", void 0),
+        (0, n.gn)([s.LO], A.prototype, "m_mapAnnouncementBodyToEvent", void 0),
+        (0, n.gn)([s.LO], A.prototype, "m_mapClanToGIDs", void 0),
+        (0, n.gn)([s.LO], A.prototype, "m_mapAppIDToGIDs", void 0),
+        (0, n.gn)([s.LO], A.prototype, "m_mapUpdatedApps", void 0),
+        (0, n.gn)([s.aD], A.prototype, "Init", null),
+        (0, n.gn)([f.ak], A.prototype, "GetPartnerEventChangeCallback", null),
+        (0, n.gn)([s.aD], A.prototype, "RegisterClanEvents", null),
         (0, n.gn)(
           [s.aD],
-          E.prototype,
+          A.prototype,
           "InsertEventModelFromClanEventData",
           null,
         ),
-        (0, n.gn)([s.aD], E.prototype, "DeleteClanEvent", null),
-        (0, n.gn)([s.aD], E.prototype, "RemoveGIDFromList", null),
-        (0, n.gn)([s.aD], E.prototype, "FlushEventFromCache", null);
-      const A = new E();
-      function G(e, t) {
-        const [a, n] = (0, I.useState)(() => A.GetClanEventModel(t)),
+        (0, n.gn)([s.aD], A.prototype, "DeleteClanEvent", null),
+        (0, n.gn)([s.aD], A.prototype, "RemoveGIDFromList", null),
+        (0, n.gn)([s.aD], A.prototype, "FlushEventFromCache", null),
+        (0, n.gn)([f.ak], A.prototype, "SavePartnerEventSaleAssets", null);
+      const G = new A();
+      function C(e, t) {
+        const [a, n] = (0, I.useState)(() => G.GetClanEventModel(t)),
           i = (0, I.useMemo)(() => m.K.InitFromClanID(e), [e]);
         return (
           (0, I.useEffect)(() => {
-            a ||
-              (A.Init(),
-              A.LoadPartnerEventFromClanEventGIDAndClanSteamID(
+            !a &&
+              e > 0 &&
+              (G.Init(),
+              G.LoadPartnerEventFromClanEventGIDAndClanSteamID(
                 i,
                 t,
                 0,
                 !0,
               ).then(n));
-          }, [i, t, a]),
+          }, [i, t, a, e]),
+          (0, f.Qg)(G.GetPartnerEventChangeCallback(t), n),
           a
         );
       }
-      window.g_PartnerEventStore = A;
+      function b() {
+        return { fnSaveSaleAssets: G.SavePartnerEventSaleAssets };
+      }
+      window.g_PartnerEventStore = G;
     },
     80445: (e, t, a) => {
       a.d(t, { G1: () => i, Sq: () => o });

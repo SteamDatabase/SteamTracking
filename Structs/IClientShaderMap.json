@@ -23,7 +23,7 @@
         },
         {
             "name": "GetShaderCacheDiskSize",
-            "argc": "2"
+            "argc": "4"
         },
         {
             "name": "StartShaderScan",

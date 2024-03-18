@@ -118,10 +118,6 @@
             "argc": "2"
         },
         {
-            "name": "FactoryReset",
-            "argc": "2"
-        },
-        {
             "name": "SetDefaultConfig",
             "argc": "2"
         },
@@ -202,10 +198,6 @@
             "argc": "3"
         },
         {
-            "name": "BAnyControllerOptedInAndAvailable",
-            "argc": "2"
-        },
-        {
             "name": "GetGamepadIndexForControllerIndex",
             "argc": "2"
         },
@@ -278,128 +270,8 @@
             "argc": "3"
         },
         {
-            "name": "GetBindingSetting",
-            "argc": "4"
-        },
-        {
-            "name": "SetBindingSetting",
-            "argc": "4"
-        },
-        {
             "name": "GetBindingVDFString",
             "argc": "2"
-        },
-        {
-            "name": "GetSourceGroupBindingCount",
-            "argc": "3"
-        },
-        {
-            "name": "GetSourceGroupBindingInfo",
-            "argc": "6"
-        },
-        {
-            "name": "SetSourceGroupBindingActive",
-            "argc": "6"
-        },
-        {
-            "name": "CreateSourceGroupBinding",
-            "argc": "7"
-        },
-        {
-            "name": "BAreLayerAndParentModesEquivalent",
-            "argc": "4"
-        },
-        {
-            "name": "GetGroupSetting",
-            "argc": "5"
-        },
-        {
-            "name": "SetGroupSetting",
-            "argc": "5"
-        },
-        {
-            "name": "GetGroupSettingDefault",
-            "argc": "5"
-        },
-        {
-            "name": "GetGroupSettingUIRange",
-            "argc": "6"
-        },
-        {
-            "name": "GetActivatorSetting",
-            "argc": "7"
-        },
-        {
-            "name": "SetActivatorSetting",
-            "argc": "7"
-        },
-        {
-            "name": "GetActivatorSettingDefault",
-            "argc": "7"
-        },
-        {
-            "name": "SetGroupBinding",
-            "argc": "8"
-        },
-        {
-            "name": "GetGroupBinding",
-            "argc": "8"
-        },
-        {
-            "name": "RemoveGroupBinding",
-            "argc": "5"
-        },
-        {
-            "name": "GetParentGroupForLayerGroup",
-            "argc": "4"
-        },
-        {
-            "name": "GetParentPresetForLayerPreset",
-            "argc": "4"
-        },
-        {
-            "name": "GetGroupActivatorsForInput",
-            "argc": "5"
-        },
-        {
-            "name": "ReplaceActivator",
-            "argc": "6"
-        },
-        {
-            "name": "AddActivator",
-            "argc": "4"
-        },
-        {
-            "name": "RemoveActivator",
-            "argc": "5"
-        },
-        {
-            "name": "CopyActivator",
-            "argc": "6"
-        },
-        {
-            "name": "IsActivatorSettingsDefault",
-            "argc": "5"
-        },
-        {
-            "name": "SetModeShiftBinding",
-            "argc": "6"
-        },
-        {
-            "name": "GetModeShiftBinding",
-            "argc": "7"
-        },
-        {
-            "name": "AddActionSet",
-            "argc": "3"
-        },
-        {
-            "name": "RenameActionSet",
-            "argc": "3"
-        },
-        {
-            "name": "DeleteActionSet",
-            "argc": "3"
         },
         {
             "name": "GetBindingTitle",
@@ -423,18 +295,6 @@
         },
         {
             "name": "SetBindingDescription",
-            "argc": "3"
-        },
-        {
-            "name": "GetBindingTitleForIndex",
-            "argc": "5"
-        },
-        {
-            "name": "GetBindingDescForIndex",
-            "argc": "5"
-        },
-        {
-            "name": "GetBindingTypeForIndex",
             "argc": "3"
         },
         {
@@ -486,10 +346,6 @@
             "argc": "3"
         },
         {
-            "name": "GetAllBindings",
-            "argc": "4"
-        },
-        {
             "name": "BIsXInputActiveForController",
             "argc": "2"
         },
@@ -515,10 +371,6 @@
         },
         {
             "name": "IsControllerConnected",
-            "argc": "3"
-        },
-        {
-            "name": "GetControllerState",
             "argc": "3"
         },
         {
@@ -614,30 +466,6 @@
             "argc": "2"
         },
         {
-            "name": "GetControllerSerialNumber",
-            "argc": "4"
-        },
-        {
-            "name": "GetControllerChipID",
-            "argc": "4"
-        },
-        {
-            "name": "BSupportsControllerLEDBrightness",
-            "argc": "2"
-        },
-        {
-            "name": "BSupportsControllerLEDColor",
-            "argc": "2"
-        },
-        {
-            "name": "BSupportsControllerRumble",
-            "argc": "2"
-        },
-        {
-            "name": "BSupportsControllerHaptics",
-            "argc": "2"
-        },
-        {
             "name": "SetControllerPairingConnectionState",
             "argc": "3"
         },
@@ -656,22 +484,6 @@
         {
             "name": "AccessControllerInputGeneratorMouseButton",
             "argc": "4"
-        },
-        {
-            "name": "GetGameActionSets",
-            "argc": "3"
-        },
-        {
-            "name": "GetBaseGameActionSets",
-            "argc": "3"
-        },
-        {
-            "name": "GetLayerGameActionSets",
-            "argc": "3"
-        },
-        {
-            "name": "GetGameActionSetById",
-            "argc": "3"
         },
         {
             "name": "SetControllerSetting",
@@ -722,14 +534,6 @@
             "argc": "2"
         },
         {
-            "name": "GetNumControllersWithDetails",
-            "argc": "1"
-        },
-        {
-            "name": "ConvertBindingToNewControllerType",
-            "argc": "3"
-        },
-        {
             "name": "SetControllerActiveAccount",
             "argc": "3"
         },
@@ -751,7 +555,7 @@
         },
         {
             "name": "SetControllerPersonalization",
-            "argc": "5"
+            "argc": "4"
         },
         {
             "name": "SetPersonalizationFile",
@@ -807,7 +611,7 @@
         },
         {
             "name": "SaveControllerPersonalizationFile",
-            "argc": "5"
+            "argc": "4"
         },
         {
             "name": "LoadRemotePlayControllerPersonalizationVDF",
@@ -827,6 +631,10 @@
         },
         {
             "name": "SetControllerHapticsSetting",
+            "argc": "3"
+        },
+        {
+            "name": "SetControllerName",
             "argc": "3"
         },
         {

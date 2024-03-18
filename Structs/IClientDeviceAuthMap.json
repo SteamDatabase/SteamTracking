@@ -38,10 +38,6 @@
             "argc": "4"
         },
         {
-            "name": "GetSharedLibraryLockedBy",
-            "argc": "2"
-        },
-        {
             "name": "GetSharedLibraryOwners",
             "argc": "3"
         }

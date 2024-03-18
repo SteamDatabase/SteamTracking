@@ -46,10 +46,6 @@
             "argc": "2"
         },
         {
-            "name": "GetConsoleSteamID",
-            "argc": "2"
-        },
-        {
             "name": "GetClientInstanceID",
             "argc": "1"
         },
@@ -264,10 +260,6 @@
         {
             "name": "GetLanguage",
             "argc": "3"
-        },
-        {
-            "name": "TrackNatTraversalStat",
-            "argc": "2"
         },
         {
             "name": "TrackSteamUsageEvent",
@@ -706,10 +698,6 @@
             "argc": "1"
         },
         {
-            "name": "ChangeTwoFactorAuthOptions",
-            "argc": "2"
-        },
-        {
             "name": "Set2ndFactorAuthCode",
             "argc": "3"
         },
@@ -806,6 +794,10 @@
             "argc": "2"
         },
         {
+            "name": "GetAllAccountFlags",
+            "argc": "1"
+        },
+        {
             "name": "LockParentalLock",
             "argc": "1"
         },
@@ -822,12 +814,8 @@
             "argc": "1"
         },
         {
-            "name": "BlockApp",
-            "argc": "2"
-        },
-        {
-            "name": "UnblockApp",
-            "argc": "2"
+            "name": "SetAppBlockedState",
+            "argc": "3"
         },
         {
             "name": "BIsAppBlocked",
@@ -867,6 +855,10 @@
         },
         {
             "name": "BIsLockFromSiteLicense",
+            "argc": "1"
+        },
+        {
+            "name": "EIsParentalPlaytimeBlocked",
             "argc": "1"
         },
         {
@@ -986,6 +978,10 @@
             "argc": "2"
         },
         {
+            "name": "SetVRIsHMDAwake",
+            "argc": "2"
+        },
+        {
             "name": "BIsAnyGameOrServiceAppRunning",
             "argc": "1"
         },
@@ -1064,6 +1060,46 @@
         {
             "name": "SetAdditionalClientArgData",
             "argc": "2"
+        },
+        {
+            "name": "GetFamilyGroupID",
+            "argc": "1"
+        },
+        {
+            "name": "GetFamilyGroupName",
+            "argc": "1"
+        },
+        {
+            "name": "GetFamilyGroupRole",
+            "argc": "1"
+        },
+        {
+            "name": "GetFamilyGroupMembers",
+            "argc": "3"
+        },
+        {
+            "name": "GetSharedAppLockInfo",
+            "argc": "6"
+        },
+        {
+            "name": "GetFamilyDLCForApp",
+            "argc": "3"
+        },
+        {
+            "name": "SetPreferredLender",
+            "argc": "3"
+        },
+        {
+            "name": "NotifyPendingGameLaunch_FetchSteamStreamingEncoderConfig",
+            "argc": "2"
+        },
+        {
+            "name": "BShouldWaitForSteamStreamingEncoderConfig",
+            "argc": "2"
+        },
+        {
+            "name": "BGetProcessIDsForGame",
+            "argc": "3"
         }
     ]
 }

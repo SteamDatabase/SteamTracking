@@ -392,6 +392,14 @@
         {
             "name": "GetLastKnownSyncStateMap",
             "argc": "3"
+        },
+        {
+            "name": "PerformAppPlatformChangeFileBackup",
+            "argc": "2"
+        },
+        {
+            "name": "PerformAppPlatformChangeFileRestore",
+            "argc": "2"
         }
     ]
 }

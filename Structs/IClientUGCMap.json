@@ -142,6 +142,10 @@
             "argc": "4"
         },
         {
+            "name": "SetAdminQuery",
+            "argc": "4"
+        },
+        {
             "name": "SetCloudFileNameFilter",
             "argc": "4"
         },
@@ -258,6 +262,10 @@
             "argc": "4"
         },
         {
+            "name": "SetExternalAssetID",
+            "argc": "5"
+        },
+        {
             "name": "SubmitItemUpdate",
             "argc": "4"
         },
@@ -295,6 +303,22 @@
         },
         {
             "name": "GetSubscribedItems",
+            "argc": "4"
+        },
+        {
+            "name": "GetSubscribedItemsInternal",
+            "argc": "3"
+        },
+        {
+            "name": "SetWorkshopItemsDisabledLocally",
+            "argc": "4"
+        },
+        {
+            "name": "SetSubscriptionsLoadOrder",
+            "argc": "3"
+        },
+        {
+            "name": "MoveSubscriptionsLoadOrder",
             "argc": "4"
         },
         {

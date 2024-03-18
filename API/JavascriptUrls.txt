@@ -1092,6 +1092,7 @@ ${PARTNER_BASE_URL}promotion/planning/migration
 ${PARTNER_BASE_URL}promotion/planning/salesrank
 ${PARTNER_BASE_URL}promotion/planning/themes
 ${PARTNER_BASE_URL}promotion/sales/ajaxsaveasset/${}
+${PARTNER_BASE_URL}promotion/sales/ajaxuploadasset/${}
 ${PARTNER_BASE_URL}promotion/spotlight/edit/${}
 ${PARTNER_BASE_URL}promotion/spotlights/ajaxcreatenewspotlight
 ${PARTNER_BASE_URL}promotion/spotlights/ajaxloadspotlight
@@ -1107,7 +1108,6 @@ ${PARTNER_BASE_URL}sales/
 ${PARTNER_BASE_URL}sales/ajaxcreatesalepartnerevent
 ${PARTNER_BASE_URL}sales/ajaxgetsalerank
 ${PARTNER_BASE_URL}sales/ajaxupdateclanaccountflags
-${PARTNER_BASE_URL}sales/ajaxuploadasset/${}
 ${PARTNER_BASE_URL}sdr/ajaxsessionsearch?${}
 ${PARTNER_BASE_URL}steamml/create_problem
 ${PARTNER_BASE_URL}steamml/delete_problem

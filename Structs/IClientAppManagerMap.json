@@ -82,14 +82,6 @@
             "argc": "3"
         },
         {
-            "name": "GetAppConfigValue",
-            "argc": "5"
-        },
-        {
-            "name": "SetAppConfigValue",
-            "argc": "4"
-        },
-        {
             "name": "BIsAppUpToDate",
             "argc": "2"
         },
@@ -146,7 +138,7 @@
             "argc": "3"
         },
         {
-            "name": "BHasCachedBetaPassword",
+            "name": "SetActiveBeta",
             "argc": "3"
         },
         {
@@ -426,7 +418,15 @@
             "argc": "4"
         },
         {
+            "name": "NotifyDriveAdded",
+            "argc": "2"
+        },
+        {
             "name": "NotifyDriveRemoved",
+            "argc": "2"
+        },
+        {
+            "name": "SetAudioDownloadQuality",
             "argc": "2"
         }
     ]

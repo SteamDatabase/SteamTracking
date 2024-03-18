@@ -498,12 +498,6 @@
         "name": "k_EMsgClientServiceCallResponse"
     },
     {
-        "emsg": 839,
-        "flags": 2,
-        "server_type": -1,
-        "name": "k_EMsgClientNatTraversalStatEvent"
-    },
-    {
         "emsg": 842,
         "flags": 6,
         "server_type": 17,
@@ -822,90 +816,6 @@
         "name": "k_EMsgAMGetAccountResetDetailsResponse"
     },
     {
-        "emsg": 5202,
-        "flags": 2,
-        "server_type": -1,
-        "name": "k_EMsgClientUFSUploadFileRequest"
-    },
-    {
-        "emsg": 5203,
-        "flags": 2,
-        "server_type": -1,
-        "name": "k_EMsgClientUFSUploadFileResponse"
-    },
-    {
-        "emsg": 5204,
-        "flags": 2,
-        "server_type": -1,
-        "name": "k_EMsgClientUFSUploadFileChunk"
-    },
-    {
-        "emsg": 5205,
-        "flags": 2,
-        "server_type": -1,
-        "name": "k_EMsgClientUFSUploadFileFinished"
-    },
-    {
-        "emsg": 5206,
-        "flags": 6,
-        "server_type": 21,
-        "name": "k_EMsgClientUFSGetFileListForApp"
-    },
-    {
-        "emsg": 5207,
-        "flags": 6,
-        "server_type": 21,
-        "name": "k_EMsgClientUFSGetFileListForAppResponse"
-    },
-    {
-        "emsg": 5210,
-        "flags": 2,
-        "server_type": -1,
-        "name": "k_EMsgClientUFSDownloadRequest"
-    },
-    {
-        "emsg": 5211,
-        "flags": 2,
-        "server_type": -1,
-        "name": "k_EMsgClientUFSDownloadResponse"
-    },
-    {
-        "emsg": 5212,
-        "flags": 2,
-        "server_type": -1,
-        "name": "k_EMsgClientUFSDownloadChunk"
-    },
-    {
-        "emsg": 5213,
-        "flags": 2,
-        "server_type": -1,
-        "name": "k_EMsgClientUFSLoginRequest"
-    },
-    {
-        "emsg": 5214,
-        "flags": 2,
-        "server_type": -1,
-        "name": "k_EMsgClientUFSLoginResponse"
-    },
-    {
-        "emsg": 5216,
-        "flags": 2,
-        "server_type": -1,
-        "name": "k_EMsgClientUFSTransferHeartbeat"
-    },
-    {
-        "emsg": 5219,
-        "flags": 2,
-        "server_type": -1,
-        "name": "k_EMsgClientUFSDeleteFileRequest"
-    },
-    {
-        "emsg": 5220,
-        "flags": 2,
-        "server_type": -1,
-        "name": "k_EMsgClientUFSDeleteFileResponse"
-    },
-    {
         "emsg": 5226,
         "flags": 6,
         "server_type": 21,
@@ -940,18 +850,6 @@
         "flags": 6,
         "server_type": 21,
         "name": "k_EMsgClientUFSShareFileResponse"
-    },
-    {
-        "emsg": 5251,
-        "flags": 2,
-        "server_type": -1,
-        "name": "k_EMsgClientUFSUploadCommit"
-    },
-    {
-        "emsg": 5252,
-        "flags": 2,
-        "server_type": -1,
-        "name": "k_EMsgClientUFSUploadCommitResponse"
     },
     {
         "emsg": 5401,
@@ -1239,7 +1137,7 @@
         "emsg": 5464,
         "flags": 2,
         "server_type": -1,
-        "name": "k_EMsgClientNewLoginKeyAccepted"
+        "name": "k_EMsgClientNewLoginKeyAccepted_Deprecated"
     },
     {
         "emsg": 5465,
@@ -2718,12 +2616,6 @@
         "name": "k_EMsgClientEnableOrDisableDownloadsResponse"
     },
     {
-        "emsg": 9808,
-        "flags": 2,
-        "server_type": -1,
-        "name": "k_EMsgClientFeatureGroupInfo"
-    },
-    {
         "emsg": 9900,
         "flags": 2,
         "server_type": -1,
@@ -2788,5 +2680,17 @@
         "flags": 2,
         "server_type": -1,
         "name": "k_EMsgClientSiteLicenseGetContentCacheInfoResponse"
+    },
+    {
+        "emsg": 12300,
+        "flags": 6,
+        "server_type": 5,
+        "name": "k_EMsgClientPendingGameLaunch"
+    },
+    {
+        "emsg": 12301,
+        "flags": 6,
+        "server_type": 5,
+        "name": "k_EMsgClientPendingGameLaunchResponse"
     }
 ]

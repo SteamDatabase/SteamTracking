@@ -430,16 +430,6 @@
         "size": 4
     },
     {
-        "id": 3901,
-        "name": "Unknown",
-        "size": 8
-    },
-    {
-        "id": 3902,
-        "name": "Unknown",
-        "size": 8
-    },
-    {
         "id": 4001,
         "name": "PlaybackStatusHasChanged_t",
         "size": 1
@@ -940,11 +930,6 @@
         "size": 4
     },
     {
-        "id": 1020049,
-        "name": "30EnableMachineLockingResponse_t",
-        "size": 4
-    },
-    {
         "id": 1020055,
         "name": "25LoginInformationChanged_t",
         "size": 75
@@ -1130,6 +1115,11 @@
         "size": 4
     },
     {
+        "id": 1020109,
+        "name": "23GameProcessListChange_t",
+        "size": 8
+    },
+    {
         "id": 1040003,
         "name": "Unknown",
         "size": 4
@@ -1265,6 +1255,11 @@
         "size": 16
     },
     {
+        "id": 1040047,
+        "name": "Unknown",
+        "size": 12
+    },
+    {
         "id": 1050001,
         "name": "26ScreenshotUploadProgress_t",
         "size": 24
@@ -1277,7 +1272,7 @@
     {
         "id": 1050003,
         "name": "20ScreenshotUploaded_t",
-        "size": 600
+        "size": 608
     },
     {
         "id": 1050005,
@@ -1287,6 +1282,11 @@
     {
         "id": 1050006,
         "name": "21ScreenshotTriggered_t",
+        "size": 8
+    },
+    {
+        "id": 1050007,
+        "name": "19ScreenshotStarted_t",
         "size": 8
     },
     {
@@ -1315,6 +1315,16 @@
         "size": 8
     },
     {
+        "id": 1070006,
+        "name": "25ParentalPlaytimeWarning_t",
+        "size": 8
+    },
+    {
+        "id": 1070007,
+        "name": "27ParentalPlaytimeExhausted_t",
+        "size": 4
+    },
+    {
         "id": 1080001,
         "name": "AuthorizeDeviceResult_t",
         "size": 88
@@ -1338,6 +1348,16 @@
         "id": 1080007,
         "name": "DeviceAuthChanged_t",
         "size": 1
+    },
+    {
+        "id": 1080008,
+        "name": "FamilyGroupRunningApp_t",
+        "size": 12
+    },
+    {
+        "id": 1080009,
+        "name": "FamilyGroupChanged_t",
+        "size": 204
     },
     {
         "id": 1090007,
@@ -1502,7 +1522,7 @@
     {
         "id": 1110005,
         "name": "Unknown",
-        "size": 24
+        "size": 32
     },
     {
         "id": 1110006,
@@ -1638,6 +1658,11 @@
         "id": 1130002,
         "name": "ShortcutRemoved_t",
         "size": 8
+    },
+    {
+        "id": 1140009,
+        "name": "Unknown",
+        "size": 128
     },
     {
         "id": 1150002,
@@ -1855,29 +1880,29 @@
         "size": 264
     },
     {
-        "id": 1270032,
-        "name": "AddTimelineHighlightMarker_t",
-        "size": 300
-    },
-    {
         "id": 1270033,
-        "name": "AddTimelineTimestamp_t",
-        "size": 136
+        "name": "SetTimelineStateDescription_t",
+        "size": 140
     },
     {
         "id": 1270034,
-        "name": "Unknown",
-        "size": 201
-    },
-    {
-        "id": 1270035,
-        "name": "AddTimelineRangeEnd_t",
-        "size": 73
+        "name": "AddTimelineEvent_t",
+        "size": 412
     },
     {
         "id": 1270036,
         "name": "SetTimelineGameMode_t",
         "size": 12
+    },
+    {
+        "id": 1270037,
+        "name": "UpdateTimelineRichPresence_t",
+        "size": 136
+    },
+    {
+        "id": 1270039,
+        "name": "ToggleVideoRecording_t",
+        "size": 8
     },
     {
         "id": 1280001,
@@ -1927,7 +1952,7 @@
     {
         "id": 1280018,
         "name": "Unknown",
-        "size": 632
+        "size": 640
     },
     {
         "id": 1280019,
@@ -1970,7 +1995,22 @@
         "size": 4
     },
     {
+        "id": 1280032,
+        "name": "Unknown",
+        "size": 16
+    },
+    {
         "id": 1280033,
+        "name": "Unknown",
+        "size": 8
+    },
+    {
+        "id": 1280034,
+        "name": "Unknown",
+        "size": 8
+    },
+    {
+        "id": 1280035,
         "name": "Unknown",
         "size": 8
     },

@@ -882,10 +882,6 @@
             "argc": "5"
         },
         {
-            "name": "GetOnlineConsoleFriendCount",
-            "argc": "1"
-        },
-        {
             "name": "RequestTrade",
             "argc": "3"
         },

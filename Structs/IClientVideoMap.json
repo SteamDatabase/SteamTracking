@@ -214,23 +214,27 @@
             "argc": "4"
         },
         {
-            "name": "AddTimelineHighlightMarker",
-            "argc": "5"
-        },
-        {
-            "name": "AddTimelineTimestamp",
-            "argc": "2"
-        },
-        {
-            "name": "AddTimelineRangeStart",
+            "name": "SetTimelineStateDescription",
             "argc": "3"
         },
         {
-            "name": "AddTimelineRangeEnd",
+            "name": "ClearTimelineStateDescription",
             "argc": "2"
         },
         {
+            "name": "AddTimelineEvent",
+            "argc": "8"
+        },
+        {
             "name": "SetTimelineGameMode",
+            "argc": "2"
+        },
+        {
+            "name": "AddUserMarkerForGame",
+            "argc": "2"
+        },
+        {
+            "name": "ToggleVideoRecordingForGame",
             "argc": "2"
         }
     ]

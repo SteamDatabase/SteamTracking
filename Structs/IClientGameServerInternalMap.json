@@ -19,7 +19,7 @@
         },
         {
             "name": "InitGameServerSerialized",
-            "argc": "7"
+            "argc": "9"
         },
         {
             "name": "SetProduct",

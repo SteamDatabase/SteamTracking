@@ -16,6 +16,10 @@
         {
             "name": "UpdateSettings",
             "argc": "2"
+        },
+        {
+            "name": "SetRefreshRateExternallyManaged",
+            "argc": "2"
         }
     ]
 }

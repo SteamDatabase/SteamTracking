@@ -130,6 +130,10 @@
             "argc": "2"
         },
         {
+            "name": "IsSteamClientBeta",
+            "argc": "1"
+        },
+        {
             "name": "GetBuildID",
             "argc": "1"
         },
@@ -394,6 +398,10 @@
             "argc": "2"
         },
         {
+            "name": "DismissGamepadTextInput",
+            "argc": "2"
+        },
+        {
             "name": "FloatingGamepadTextInputDismissed",
             "argc": "1"
         },
@@ -440,6 +448,10 @@
         {
             "name": "NotifyMissingInterface",
             "argc": "2"
+        },
+        {
+            "name": "IsSteamInTournamentMode",
+            "argc": "1"
         }
     ]
 }

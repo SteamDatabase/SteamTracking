@@ -10,8 +10,12 @@
             "argc": "3"
         },
         {
+            "name": "SendScreenshotStartedNotification",
+            "argc": "2"
+        },
+        {
             "name": "WriteScreenshot",
-            "argc": "6"
+            "argc": "7"
         },
         {
             "name": "AddScreenshotToLibrary",
@@ -67,11 +71,11 @@
         },
         {
             "name": "GetLocalScreenshot",
-            "argc": "12"
+            "argc": "13"
         },
         {
             "name": "GetLocalScreenshotByHandle",
-            "argc": "11"
+            "argc": "12"
         },
         {
             "name": "SetLocalScreenshotCaption",

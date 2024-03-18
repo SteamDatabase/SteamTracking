@@ -1110,6 +1110,10 @@
           case 21: {
             const n = t.connectors().findIndex((e) => e.connector_id() == a);
             if (-1 == n) break;
+            if (0 == n) {
+              r.push(1);
+              break;
+            }
             if (n % 3 == 0 && 0 != n) {
               r.push(1);
               break;

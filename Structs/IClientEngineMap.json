@@ -320,14 +320,6 @@
         {
             "name": "Unknown_79",
             "argc": "0"
-        },
-        {
-            "name": "Unknown_80",
-            "argc": "0"
-        },
-        {
-            "name": "GetIClientSTARInternal",
-            "argc": "3"
         }
     ]
 }

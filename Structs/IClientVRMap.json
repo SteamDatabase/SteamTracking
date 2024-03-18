@@ -14,10 +14,6 @@
             "argc": "1"
         },
         {
-            "name": "GetChaperone",
-            "argc": "1"
-        },
-        {
             "name": "GetSettings",
             "argc": "1"
         },
@@ -27,10 +23,6 @@
         },
         {
             "name": "GetPaths",
-            "argc": "1"
-        },
-        {
-            "name": "GetOverlayHandle",
             "argc": "1"
         },
         {
@@ -86,6 +78,10 @@
             "argc": "1"
         },
         {
+            "name": "BGetMutualCapabilities",
+            "argc": "2"
+        },
+        {
             "name": "BSteamCanMakeVROverlays",
             "argc": "1"
         },
@@ -94,11 +90,19 @@
             "argc": "1"
         },
         {
-            "name": "BServeTenfootOverlay",
+            "name": "BServeVRGamepadUIViaGamescope",
             "argc": "1"
         },
         {
-            "name": "BSuppressDesktopBPM",
+            "name": "SetVRConnectionParams",
+            "argc": "2"
+        },
+        {
+            "name": "GetVRConnectionParams",
+            "argc": "1"
+        },
+        {
+            "name": "BVRDeviceSeenRecently",
             "argc": "1"
         }
     ]
