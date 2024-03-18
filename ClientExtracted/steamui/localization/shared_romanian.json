@@ -558,6 +558,7 @@
     "EventEditor_SaleValveApproval_Request_Link": "Vezi tichetul de verificare...",
     "EventEditor_SaleValveApproval_Approved_Title": "Pagina ta a fost aprobată și este pregătită pentru a fi publicată",
     "EventEditor_SaleValveApproval_Approved_Desc": "Accesează fila „Publică” pentru a vedea procedura de publicare.",
+    "EventEditor_SaleValveApproval_Approved_Desc_OnPublish": "Asigură-te că verifici cu atenție setările de vizibilitate de mai jos înainte de publicare.",
     "AddToWishlist_short": "+ Listă de dorințe",
     "Wishlisted": "În lista ta de dorințe",
     "Wishlisted_short": "Listă de dorințe",
@@ -2656,6 +2657,7 @@
     "SteamNotificationTypeDesc_19": "Un adult din familia mea răspunde solicitării mele de achiziție",
     "SteamNotificationTypeDesc_20": "Un adult din familia mea răspunde solicitării mele de a accesa funcții Steam",
     "SteamNotificationTypeDesc_21": "Un adult din familia mea răspunde solicitării mele privind timpul de joc",
+    "SteamNotificationTypeDesc_22": "Primesc un joc pe care l-am solicitat",
     "NotificationSettings_SendToast": "Notificări pop-up pentru clientul Steam",
     "NotificationSettings_PushNotification": "Notificări push pentru aplicația mobilă",
     "NotificationsMenu_Title": "Notificări",
@@ -2789,6 +2791,8 @@
     "Notification_FamilyInvitePinned_Body_Plural": "%1$s invitații noi pentru familii",
     "SteamNotifications_FamilyPurchaseRequestResponseDeclinedTitle": "Achiziție refuzată",
     "SteamNotifications_FamilyPurchaseRequestDeclinedBody": "%1$s ți-a refuzat achiziția",
+    "SteamNotifications_RequestedGameAddedTitle": "Achiziție aprobată",
+    "SteamNotifications_RequestedGameAddedBody": "Ai primit: %1$s",
     "SteamNotifications_ParentalFeatureRequestTitle": "Solicitare în cadrul familiei",
     "SteamNotifications_ParentalFeatureRequestBody": "%1$s solicită acces la funcții Steam",
     "SteamNotifications_ParentalPlaytimeRequestTitle": "Solicitare în cadrul familiei",
@@ -2826,6 +2830,7 @@
     "FamilyHistory_PurchaseRequestApproved": "%1$s a aprobat solicitarea de achiziție realizată de %2$s.",
     "FamilyHistory_PurchaseRequestDeclined": "%1$s a refuzat solicitarea de achiziție realizată de %2$s.",
     "FamilyView_RequestFeatureAccess": "Accesul la această funcționalitate a fost restricționat de un adult din familia ta. Îi poți trimite o cerere de acces.",
+    "FamilyView_RequestFeatureAccess_Always": "Accesul la această funcționalitate a fost restricționat de un adult din familia ta.",
     "FamilyView_RequestFeatureAccess_Offline": "În prezent ești deconectat de la Steam. Conectează-te pentru a solicita acces la această funcționalitate de la un adult din familia ta.",
     "FamilyView_RequestFeatureAccess_Request": "Solicită accesul",
     "FamilyView_RequestFeatureAccess_GenericError": "A apărut o eroare. Te rugăm să încerci din nou mai târziu. (%1$s)",
@@ -2879,5 +2884,6 @@
     "KioskMode_Unlock_Tooltip": "Închide modul chioșc",
     "KioskMode_Lock_Tooltip": "Intră în modul chioșc",
     "RemotePlay_StoreFunctionalityBlocked_Title": "Magazinul nu este disponibil",
-    "RemotePlay_StoreFunctionalityBlocked_Description": "Accesul la magazin nu este disponibil cât timp rulezi o transmisiune prin acest client Steam Link."
+    "RemotePlay_StoreFunctionalityBlocked_Description": "Accesul la magazin nu este disponibil cât timp rulezi o transmisiune prin acest client Steam Link.",
+    "Hardware_ShippingEstimate_Range": "%1$s-%2$s zile lucrătoare"
 }

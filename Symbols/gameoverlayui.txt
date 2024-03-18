@@ -318,7 +318,6 @@
  __tolower
  _objc_empty_cache
  _tlv_bootstrap
- abort
  alphasort$INODE64
  atoi
  atoll
@@ -337,11 +336,6 @@
  close
  closedir
  cos
- crc32
- deflate
- deflateEnd
- deflateInit2_
- deflateReset
  dlclose
  dlopen
  dlsym
@@ -355,7 +349,6 @@
  fnmatch
  fopen
  fprintf
- fputc
  fputs
  fread
  free
@@ -405,7 +398,6 @@
  launch_data_free
  launch_data_new_string
  launch_msg
- longjmp
  lseek
  lstat$INODE64
  mach_msg
@@ -449,7 +441,6 @@
  sem_trywait
  sem_unlink
  sem_wait
- setjmp
  setlocale
  shm_open
  shm_unlink

@@ -2657,6 +2657,7 @@
     "SteamNotificationTypeDesc_19": "En voksen i familien min svarer på kjøpsforespørselen min",
     "SteamNotificationTypeDesc_20": "En voksen i familien min svarer på forespørselen min om en funksjon på Steam",
     "SteamNotificationTypeDesc_21": "En voksen i familien min svarer på forespørselen min om spilletid",
+    "SteamNotificationTypeDesc_22": "Jeg mottar et spill jeg har bedt om",
     "NotificationSettings_SendToast": "Varsel i Steam-klienten",
     "NotificationSettings_PushNotification": "Pushvarsel i mobilappen",
     "NotificationsMenu_Title": "Varsler",
@@ -2790,6 +2791,8 @@
     "Notification_FamilyInvitePinned_Body_Plural": "%1$s nye familieinvitasjoner",
     "SteamNotifications_FamilyPurchaseRequestResponseDeclinedTitle": "Kjøp avslått",
     "SteamNotifications_FamilyPurchaseRequestDeclinedBody": "%1$s har avslått kjøpet",
+    "SteamNotifications_RequestedGameAddedTitle": "Kjøp godkjent",
+    "SteamNotifications_RequestedGameAddedBody": "Du har mottatt %1$s",
     "SteamNotifications_ParentalFeatureRequestTitle": "Familieforespørsel",
     "SteamNotifications_ParentalFeatureRequestBody": "%1$s ber om tilgang til Steam-funksjoner",
     "SteamNotifications_ParentalPlaytimeRequestTitle": "Familieforespørsel",
@@ -2827,6 +2830,7 @@
     "FamilyHistory_PurchaseRequestApproved": "%1$s godkjente kjøpsforespørselen til %2$s.",
     "FamilyHistory_PurchaseRequestDeclined": "%1$s avslo kjøpsforespørselen til %2$s.",
     "FamilyView_RequestFeatureAccess": "Tilgang til denne funksjonaliteten er begrenset av en voksen i familien. Du kan sende dem en forespørsel om tilgang.",
+    "FamilyView_RequestFeatureAccess_Always": "Tilgang til denne funksjonaliteten er begrenset av en voksen i familien.",
     "FamilyView_RequestFeatureAccess_Offline": "Du er for øyeblikket ikke koblet til Steam. Koble til og be om tilgang til denne funksjonen fra en voksen i familien.",
     "FamilyView_RequestFeatureAccess_Request": "Be om tilgang",
     "FamilyView_RequestFeatureAccess_GenericError": "Det oppstod en feil. Prøv igjen senere. (%1$s)",
@@ -2880,5 +2884,6 @@
     "KioskMode_Unlock_Tooltip": "Avslutt kioskmodus",
     "KioskMode_Lock_Tooltip": "Bruk kioskmodus",
     "RemotePlay_StoreFunctionalityBlocked_Title": "Butikken er ikke tilgjengelig",
-    "RemotePlay_StoreFunctionalityBlocked_Description": "Tilgang til butikken er ikke tilgjengelig mens du kjører gjennom denne Steam Link-klienten."
+    "RemotePlay_StoreFunctionalityBlocked_Description": "Tilgang til butikken er ikke tilgjengelig mens du kjører gjennom denne Steam Link-klienten.",
+    "Hardware_ShippingEstimate_Range": "%1$s–%2$s virkedager"
 }

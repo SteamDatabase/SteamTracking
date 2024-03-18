@@ -55,6 +55,7 @@ enum EClientNotificationType {
 	k_EClientNotificationType_GRE = 50;
 	k_EClientNotificationType_ParentalFeatureResponse = 51;
 	k_EClientNotificationType_ParentalPlaytimeResponse = 52;
+	k_EClientNotificationType_RequestedGameAdded = 53;
 }
 
 enum ESystemUpdateNotificationType {

@@ -558,6 +558,7 @@
     "EventEditor_SaleValveApproval_Request_Link": "Відкрити запит на перевірку…",
     "EventEditor_SaleValveApproval_Approved_Title": "Сторінку схвалено — тепер її можна опублікувати",
     "EventEditor_SaleValveApproval_Approved_Desc": "Перейдіть на вкладку «Публікація», щоб опублікувати сторінку.",
+    "EventEditor_SaleValveApproval_Approved_Desc_OnPublish": "Переконайтеся, що перевірили нижче налаштування видимості перед публікацією сторінки.",
     "AddToWishlist_short": "+ До бажаного",
     "Wishlisted": "У списку бажаного",
     "Wishlisted_short": "Бажане",
@@ -2656,6 +2657,7 @@
     "SteamNotificationTypeDesc_19": "дорослий із моєї сімейної групи відповідає на мій запит на придбання",
     "SteamNotificationTypeDesc_20": "дорослий із моєї сімейної групи відповідає на мій запит на доступ до функцій Steam",
     "SteamNotificationTypeDesc_21": "дорослий із моєї сімейної групи відповідає на мій запит на додатковий ігровий час",
+    "SteamNotificationTypeDesc_22": "я отримую гру, яку попросив(-ла) купити",
     "NotificationSettings_SendToast": "Показувати спливні сповіщення у клієнті Steam",
     "NotificationSettings_PushNotification": "Показувати push-сповіщення у мобільному застосунку",
     "NotificationsMenu_Title": "Сповіщення",
@@ -2789,6 +2791,8 @@
     "Notification_FamilyInvitePinned_Body_Plural": "Нових запрошень до сімейної групи: %1$s",
     "SteamNotifications_FamilyPurchaseRequestResponseDeclinedTitle": "Запит на придбання відхилено",
     "SteamNotifications_FamilyPurchaseRequestDeclinedBody": "%1$s відхиляє ваш запит на придбання",
+    "SteamNotifications_RequestedGameAddedTitle": "Придбання схвалено",
+    "SteamNotifications_RequestedGameAddedBody": "Ви отримали: %1$s",
     "SteamNotifications_ParentalFeatureRequestTitle": "Запит до сімейної групи",
     "SteamNotifications_ParentalFeatureRequestBody": "%1$s запитує доступ до функцій Steam",
     "SteamNotifications_ParentalPlaytimeRequestTitle": "Запит до сімейної групи",
@@ -2826,6 +2830,7 @@
     "FamilyHistory_PurchaseRequestApproved": "%1$s схвалює запит %2$s на придбання.",
     "FamilyHistory_PurchaseRequestDeclined": "%1$s відхиляє запит %2$s на придбання.",
     "FamilyView_RequestFeatureAccess": "Доступ до цієї функції обмежено дорослим у вашій сімейній групі. Ви можете надіслати запит на доступ.",
+    "FamilyView_RequestFeatureAccess_Always": "Дорослий з вашої сімейної групи обмежив доступ до цієї функції.",
     "FamilyView_RequestFeatureAccess_Offline": "Наразі ви не підключені до Steam. Зайдіть у мережу й попросіть доступ в дорослого з вашої родини.",
     "FamilyView_RequestFeatureAccess_Request": "Запитати доступ",
     "FamilyView_RequestFeatureAccess_GenericError": "Сталася помилка. Спробуйте знову пізніше. (%1$s)",
@@ -2879,5 +2884,6 @@
     "KioskMode_Unlock_Tooltip": "Вийти з обмеженого режиму",
     "KioskMode_Lock_Tooltip": "Перейти до обмеженого режиму",
     "RemotePlay_StoreFunctionalityBlocked_Title": "Крамниця не доступна",
-    "RemotePlay_StoreFunctionalityBlocked_Description": "Крамниця не доступна під час роботи через цей клієнт Steam Link."
+    "RemotePlay_StoreFunctionalityBlocked_Description": "Крамниця не доступна під час роботи через цей клієнт Steam Link.",
+    "Hardware_ShippingEstimate_Range": "%1$s–%2$s роб. дн."
 }

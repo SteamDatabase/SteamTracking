@@ -312,6 +312,7 @@ message StoreItem {
 	optional .StoreItem.PurchaseOption best_purchase_option = 40;
 	repeated .StoreItem.PurchaseOption purchase_options = 41;
 	repeated .StoreItem.PurchaseOption accessories = 42;
+	optional .StoreItem.PurchaseOption self_purchase_option = 43;
 	optional .StoreItem.Screenshots screenshots = 50;
 	optional .StoreItem.Trailers trailers = 51;
 	repeated .StoreItem.SupportedLanguage supported_languages = 52;

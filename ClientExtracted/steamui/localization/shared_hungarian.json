@@ -2657,6 +2657,7 @@
     "SteamNotificationTypeDesc_19": "egy felnőtt a családomban válaszol a vásárlási kérésemre.",
     "SteamNotificationTypeDesc_20": "egy felnőtt a családomban válaszol a Steam funkció kérésemre.",
     "SteamNotificationTypeDesc_21": "egy felnőtt a családomban válaszol a játékidő kérésemre.",
+    "SteamNotificationTypeDesc_22": "megkapok egy játékot, amit kértem.",
     "NotificationSettings_SendToast": "Értesítésfelugró a Steam kliensben",
     "NotificationSettings_PushNotification": "Leküldéses értesítés a mobilalkalmazásban",
     "NotificationsMenu_Title": "Értesítések",
@@ -2790,6 +2791,8 @@
     "Notification_FamilyInvitePinned_Body_Plural": "%1$s új családmeghívó",
     "SteamNotifications_FamilyPurchaseRequestResponseDeclinedTitle": "Vásárlás elutasítva",
     "SteamNotifications_FamilyPurchaseRequestDeclinedBody": "%1$s elutasította a vásárlásodat",
+    "SteamNotifications_RequestedGameAddedTitle": "Vásárlás jóváhagyva",
+    "SteamNotifications_RequestedGameAddedBody": "Ezt kaptad: %1$s",
     "SteamNotifications_ParentalFeatureRequestTitle": "Családi kérés",
     "SteamNotifications_ParentalFeatureRequestBody": "%1$s Steam funkciókhoz kér hozzáférést.",
     "SteamNotifications_ParentalPlaytimeRequestTitle": "Családi kérés",
@@ -2827,6 +2830,7 @@
     "FamilyHistory_PurchaseRequestApproved": "%1$s jóváhagyta %2$s vásárlási kérését.",
     "FamilyHistory_PurchaseRequestDeclined": "%1$s elutasította %2$s vásárlási kérését.",
     "FamilyView_RequestFeatureAccess": "Családod egy felnőtt tagja korlátozta az e funkcióhoz való hozzáférést. Küldhetsz neki hozzáférési kérést.",
+    "FamilyView_RequestFeatureAccess_Always": "Családod egy felnőtt tagja korlátozta az e funkcióhoz való hozzáférést.",
     "FamilyView_RequestFeatureAccess_Offline": "Jelenleg le vagy csatlakozva a Steamről. Hozzáférés kéréséhez e funkcióhoz a családod egy felnőtt tagjától, válts online módra.",
     "FamilyView_RequestFeatureAccess_Request": "Hozzáférés kérése",
     "FamilyView_RequestFeatureAccess_GenericError": "Hiba történt. Kérjük, próbáld újra később. (%1$s)",
@@ -2880,5 +2884,6 @@
     "KioskMode_Unlock_Tooltip": "Kilépés Bemutató módból",
     "KioskMode_Lock_Tooltip": "Bemutató módba lépés",
     "RemotePlay_StoreFunctionalityBlocked_Title": "Az Áruház nem érhető el",
-    "RemotePlay_StoreFunctionalityBlocked_Description": "Az Áruház ezen a Steam Link kliensen keresztül futtatva nem érhető el."
+    "RemotePlay_StoreFunctionalityBlocked_Description": "Az Áruház ezen a Steam Link kliensen keresztül futtatva nem érhető el.",
+    "Hardware_ShippingEstimate_Range": "%1$s–%2$s munkanap"
 }

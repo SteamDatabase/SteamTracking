@@ -11,8 +11,12 @@ __TEXT
 __cstring
 __TEXT
 __gcc_except_tab__TEXT
+x(!
+x(!
 __const
 __TEXT
+`h"
+`h"
 __objc_methname
 __TEXT
 __unwind_info
@@ -36,16 +40,18 @@ __const
 __DATA
 __cfstring
 __DATA
-0O-
-0O-
+P-
+P-
 __objc_imageinfo__DATA
 __objc_selrefs
 __DATA
 __objc_classrefs__DATA
-pP-
-pP-
+@Q-
+@Q-
 __data
 __DATA
+`Q-
+`Q-
 __thread_vars
 __DATA
 0
@@ -65,8 +71,8 @@ __LINKEDIT
 8
 @loader_path/friendsui.dylib
 "
-h}.
-%
+(#
+(%
 P
 
 *
@@ -99,7 +105,7 @@ h
 /usr/lib/libobjc.A.dylib
 &
 )
-8S.
+`S.
 22CJSCallbackFunc_HTMLJS
 15CJSCallbackFunc
 11CRefCountedI20CRefCountServiceBaseILb1E6CRefMTEE
@@ -612,11 +618,11 @@ N21CRemotePlayController47CCallbackInternal_OnCheckStreamingDriverSupportE
 20CJSMethodCallHandlerI21CScreenshotControllerJii9CSmartPtrI18CJSCallbackPromiseEEE
 20CJSMethodCallHandlerI21CScreenshotControllerJi9CSmartPtrI18CJSCallbackPromiseEEE
 20CJSMethodCallHandlerI21CScreenshotControllerJj9CSmartPtrI18CJSCallbackPromiseEEE
-20CJSMethodCallHandlerI21CScreenshotControllerJ7CGameIDi9CSmartPtrI18CJSCallbackPromiseEEE
-20CJSMethodCallHandlerI21CScreenshotControllerJ7CGameIDji9CSmartPtrI18CJSCallbackPromiseEEE
 20CJSMethodCallHandlerI21CScreenshotControllerJ7CGameIDj9CSmartPtrI18CJSCallbackPromiseEEE
+20CJSMethodCallHandlerI21CScreenshotControllerJ7CGameIDji9CSmartPtrI18CJSCallbackPromiseEEE
 20CJSMethodCallHandlerI21CScreenshotControllerJ7CGameIDEE
 20CJSMethodCallHandlerI21CScreenshotControllerJ7CGameIDjEE
+20CJSMethodCallHandlerI21CScreenshotControllerJPKc9CSmartPtrI18CJSCallbackPromiseEEE
 NSt3__110__function6__funcIZN21CScreenshotController21UploadLocalScreenshotE7CGameIDji9CSmartPtrI18CJSCallbackPromiseEE3$_0NS_9allocatorIS7_EEFvP25ScreenshotBatchComplete_tbS6_EEE
 NSt3__110__function6__baseIFvP25ScreenshotBatchComplete_tb9CSmartPtrI18CJSCallbackPromiseEEEE
 ZN21CScreenshotController21UploadLocalScreenshotE7CGameIDji9CSmartPtrI18CJSCallbackPromiseEE3$_0
@@ -736,7 +742,6 @@ type.googleapis.com/
 type.googleprod.com/
 N6google8protobuf8internal15ExtensionFinderE
 N6google8protobuf8internal24GeneratedExtensionFinderE
-NSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEE
 N6google8protobuf8internal12ExtensionSet8KeyValueE
 N6google8protobuf13RepeatedFieldIiEE
 N6google8protobuf13RepeatedFieldIxEE
@@ -885,6 +890,7 @@ N6google8protobuf23SourceCodeInfo_LocationE
 N6google8protobuf14SourceCodeInfoE
 N6google8protobuf28GeneratedCodeInfo_AnnotationE
 N6google8protobuf17GeneratedCodeInfoE
+NSt3__121__basic_string_commonILb1EEE
 N6google8protobuf14DynamicMessageE
 N6google8protobuf21DynamicMessageFactoryE
 N6google8protobuf8internal29DescriptorPoolExtensionFinderE
@@ -1111,6 +1117,8 @@ r
 0
 4
 8
+,
+0
 $
 $
 (
@@ -1227,6 +1235,7 @@ H
 x
 @
 @
+8
 (
 (
 0
@@ -1379,6 +1388,7 @@ P
 11CMsgJSValue
 16CMsgJSMethodCall
 21CMsgJSExecuteCallback
+20CMsgJSExecutePromise
 21CMsgJSReleaseCallback
 20CMsgJSRaiseException
 20CMsgLoadLocalization
@@ -1418,7 +1428,7 @@ P
 16CMsgPopupCreated
 27CMsgSetVRKeyboardVisibility
 20CMsgRestartJSContext
-NSt3__121__basic_string_commonILb1EEE
+NSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEE
 N4vgui19AnimatingImagePanelE
 10CUtlVectorIPN4vgui6IImageE10CUtlMemoryIS2_EE
 25CPanelAnimationDictionary
@@ -2121,6 +2131,7 @@ reply
 m_vecFuncs
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/html_jstypes.cpp
 Duplicate property %s in object
+ulValue < ((uint64)1 << 53)
 %lld
 %llu
 m_Memory
@@ -2463,11 +2474,12 @@ Screenshots.GetAllAppsLocalScreenshotsRange
 Screenshots.GetNumGamesWithLocalScreenshots
 Screenshots.GetGameWithLocalScreenshots
 Screenshots.GetLocalScreenshotCount
-Screenshots.GetLocalScreenshot
+Screenshots.GetLocalScreenshotByHandle
 Screenshots.UploadLocalScreenshot
 Screenshots.DeleteLocalScreenshot
 Screenshots.ShowScreenshotsOnDisk
 Screenshots.ShowScreenshotInSystemViewer
+Screenshots.GetTotalDiskSpaceUsage
 Failed: IO failure
 Failed: invalid callback parameter
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/sharedconnectioncontroller.cpp
@@ -2506,6 +2518,7 @@ SharedConnection.Close
 IsValidIndex( elem )
 _IsValidIndex( elem, unNodeSize, pMemBase )
 _IsValidIndex( y, unNodeSize, pMemBase )
+ever_enabled
 enabled
 locked
 has_password
@@ -5306,8 +5319,13 @@ m_bitsMigratedBuckets
 steamIDChat.GetEAccountType() == k_EAccountTypeChat
 k_EChatInstanceFlagClan & steamIDChat.GetUnAccountInstance()
 0
+-
+-
+-
+-
+-
+-
 $
-`$
 
 @
 @
@@ -5315,16 +5333,15 @@ $
 
 x
 #
+"
 =
 @
 =
-!
-#!
+4!
 x
->!
 0
 0
-'!
+A!
 p
 0
 p
@@ -5341,6 +5358,7 @@ p
 0
 p
 0
+
 H=
 
 
@@ -5357,8 +5375,6 @@ AT=
 D
 @
 @
-'
-'
 @
 Hc
 Hc
@@ -5451,7 +5467,6 @@ B
 
 
 
-
 d
 
 
@@ -5472,6 +5487,7 @@ j
 0
 =
 0
+
 j
 j
 j
@@ -5509,8 +5525,11 @@ d
 &
 &
 d
+
 0
 A+4$A+u
+
+
 =
 =
 @
@@ -5717,11 +5736,11 @@ d
 @
 @
 0
+i
 0
 0
 0
 0
-U
 &
 Hc
 E

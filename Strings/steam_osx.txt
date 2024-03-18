@@ -28,8 +28,6 @@ __cstring
 __TEXT
 __unwind_info
 __TEXT
-hO>
-hO>
 __DATA
 ?
 ?
@@ -134,45 +132,51 @@ h
 /usr/lib/libobjc.A.dylib
 &
 )
-/4
+G4
+<4
 0
 f9)'G
 4
 NG
+*
 0
 @
 @
-P9
+M<
 @
 @
 @
 @
-E9
+@9
 $
 Hi
 Hi
 Hi
-_)
+E)
 )
 3
 3
 
 %
+I;
 
+u8
 (
-<8
-;
+P8
+E8
 '
 '
 
+"(
 8
 8
-#2
 5
 (
 (
 (
 (
+%(
+}:
 (
 (
 (
@@ -190,7 +194,6 @@ AT=
 D
 @
 @
-:1
 7
 7
 7
@@ -225,6 +228,8 @@ IcE
 IcE
 @
 @
+A6
+)6
 6
 NSt3__117bad_function_callE
 15CBaseFileSystem
@@ -2397,7 +2402,7 @@ ReLaunchCmdLine
 ClientLauncherType
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlqueue.h
 IsValidIndex( idx )
-Startup - updater built Mar 12 2024 14:14:01
+Startup - updater built Mar 18 2024 11:05:44
 Startup - Steam Client launched with: %s
 Shutdown
 no hosts found
@@ -2687,8 +2692,8 @@ m_iRefs >= 0 && m_iRefs < 0x0ffffff
 #SteamBootstrapper_UpdatingSteam
 Updating Steam...
 Tahoma
-Mar 12 2024
-14:14:01
+Mar 18 2024
+11:05:45
 crashhandler004
 steam
 Steam Executable Crash
@@ -2785,7 +2790,7 @@ China
 %s/%s%s
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamexe/updateui.h
 ThreadInMainThread()
-14:14:00
+11:05:43
 [%3d%%] %s
 [----] %s
 [%3d%%] !!! Fatal Error: %s
@@ -10910,7 +10915,7 @@ steamwebhelper
 Steam Helper
 cefwebhelper
 1.0
-14:11:44
+11:03:29
 Jan
 Feb
 Mar
@@ -12472,7 +12477,7 @@ k_EMsgAMValidatePasswordResetCodeAndSendSmsResponse
 k_EMsgAMGetAccountResetDetailsRequest
 k_EMsgAMGetAccountResetDetailsResponse
 k_EMsgClientNewLoginKey
-k_EMsgClientNewLoginKeyAccepted
+k_EMsgClientNewLoginKeyAccepted_Deprecated
 k_EMsgClientLogOnWithHash_Deprecated
 k_EMsgClientServersAvailable
 k_EMsgClientServerUnavailable
@@ -13348,57 +13353,63 @@ out of memory
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/zip_helpers.cpp
 n <= (size_t)INT_MAX
 file_ofs == pFile->GetBytesWritten()
-13:
+A3:
 
-L3:
-^3:
-*_:
-|-:
+\3:
+n3:
+:_:
+%_:
 
-_:
-4_:
-=_:
+0_:
+D_:
+M_:
 0
-a=
-/4
+q=
+G4
+<4
 0
 f9)'G
 4
 NG
+*
 0
 @
 @
-P9
+M<
 @
 @
 @
 @
-E9
+@9
 $
 Hi
 Hi
 Hi
-_)
+E)
 )
 3
 3
 
 %
+I;
 
+u8
 (
-<8
-;
+P8
+E8
 '
 '
 
+"(
 8
 8
-#2
 5
 (
 (
 (
 (
+%(
+}:
 (
 (
 (
@@ -13416,7 +13427,6 @@ AT=
 D
 @
 @
-:1
 7
 7
 7
@@ -13451,13 +13461,15 @@ IcE
 IcE
 @
 @
+A6
+)6
 6
 V
 8
 :
 :
 =
-8/
+X/
 /
 /
 /
@@ -13467,37 +13479,42 @@ V
 /
 5
 =
-w.
-:.
 .
 .
+.
 4
 4
 4
 4
 4
-!-
+q-
 !
 -
 -
 -
 -
+|2
 7
 @
+22
 &
 )6
+f1
+_+
+8+
 1
 1
 1
 1
 ,
-Y*
-a0
 *
+B2
 @
 M9e
 @
 @
+0(
+(
 ?
 ?
 ?
@@ -13508,6 +13525,7 @@ M9e
 ?
 ?
 ?
+(
 (
 (
 ?
@@ -13539,17 +13557,15 @@ j
 1
 0
 0
-_.
 IcU
 E;e
-5,
+.,
 M)u
 =
 =
 @
 =
 /
-+
 +
 +
 =
@@ -13854,13 +13870,14 @@ ChaCha20 for x86_64, CRYPTOGAMS by <appro@openssl.org>
 0
 %
 H=
-h"
+)
 )
 Ic]
 j
 j
 j
 j
+S"
 j
 j
 ,
@@ -14168,6 +14185,7 @@ H=
 =*.*
 @
 @
+G
 @
 @
 @
@@ -14175,18 +14193,15 @@ H=
 @
 @
 0
+@
 0
 0
 0
 0
 0
 0
-
-
 
 8
-
-
 
 @
 @
@@ -14233,9 +14248,13 @@ Hc
 @
 @
 1
-a
+Z
+X
 &
 %
+
+
+
 
 @
 =h2

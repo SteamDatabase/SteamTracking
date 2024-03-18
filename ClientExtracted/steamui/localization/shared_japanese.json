@@ -558,6 +558,7 @@
     "EventEditor_SaleValveApproval_Request_Link": "レビューチケットを表示...",
     "EventEditor_SaleValveApproval_Approved_Title": "ページが承認され、公開する準備ができました",
     "EventEditor_SaleValveApproval_Approved_Desc": "公開プロセス用の「公開」タブに切り替えてください。",
+    "EventEditor_SaleValveApproval_Approved_Desc_OnPublish": "公開する前に、以下の公開設定を再確認してください。",
     "AddToWishlist_short": "+ ウィッシュリスト",
     "Wishlisted": "ウィッシュリスト内",
     "Wishlisted_short": "ウィッシュリスト",
@@ -2656,6 +2657,7 @@
     "SteamNotificationTypeDesc_19": "ファミリー内の大人メンバーが購入リクエストに応答したとき",
     "SteamNotificationTypeDesc_20": "ファミリー内の大人メンバーがSteam機能のリクエストに応答したとき",
     "SteamNotificationTypeDesc_21": "ファミリー内の大人メンバーがプレイ時間のリクエストに応答したとき",
+    "SteamNotificationTypeDesc_22": "リクエストしたゲームを受け取ったとき",
     "NotificationSettings_SendToast": "Steamクライアントでのバナー通知",
     "NotificationSettings_PushNotification": "モバイルアプリでのプッシュ通知",
     "NotificationsMenu_Title": "お知らせ",
@@ -2789,6 +2791,8 @@
     "Notification_FamilyInvitePinned_Body_Plural": "新しいファミリーの招待が%1$s件",
     "SteamNotifications_FamilyPurchaseRequestResponseDeclinedTitle": "購入が拒否されました",
     "SteamNotifications_FamilyPurchaseRequestDeclinedBody": "%1$sがあなたの購入リクエストを拒否しました",
+    "SteamNotifications_RequestedGameAddedTitle": "購入が承認されました",
+    "SteamNotifications_RequestedGameAddedBody": "%1$sを受け取りました",
     "SteamNotifications_ParentalFeatureRequestTitle": "ファミリーリクエスト",
     "SteamNotifications_ParentalFeatureRequestBody": "%1$sがSteam機能へのアクセスをリクエストしています",
     "SteamNotifications_ParentalPlaytimeRequestTitle": "ファミリーリクエスト",
@@ -2826,6 +2830,7 @@
     "FamilyHistory_PurchaseRequestApproved": "%1$sが%2$sの購入リクエストを承認しました。",
     "FamilyHistory_PurchaseRequestDeclined": "%1$sが%2$sの購入リクエストを拒否しました。",
     "FamilyView_RequestFeatureAccess": "この機能へのアクセスは、ファミリー内の大人によって制限されています。 アクセスリクエストを送信できます。",
+    "FamilyView_RequestFeatureAccess_Always": "この機能へのアクセスは、ファミリー内の大人によって制限されています。",
     "FamilyView_RequestFeatureAccess_Offline": "現在Steamから切断されています。オンラインで接続して、ファミリー内の大人のメンバーにこの機能へのアクセスをリクエストしてください。",
     "FamilyView_RequestFeatureAccess_Request": "アクセスをリクエスト",
     "FamilyView_RequestFeatureAccess_GenericError": "エラーが発生しました。後でもう一度お試しください。 (%1$s)",
@@ -2879,5 +2884,6 @@
     "KioskMode_Unlock_Tooltip": "キオスクモードを終了",
     "KioskMode_Lock_Tooltip": "キオスクモードを開始",
     "RemotePlay_StoreFunctionalityBlocked_Title": "ストアはご利用いただけません",
-    "RemotePlay_StoreFunctionalityBlocked_Description": "Steamリンククライアント経由で実行中は、ストアにアクセスできません。"
+    "RemotePlay_StoreFunctionalityBlocked_Description": "Steamリンククライアント経由で実行中は、ストアにアクセスできません。",
+    "Hardware_ShippingEstimate_Range": "%1$s～%2$s営業日"
 }

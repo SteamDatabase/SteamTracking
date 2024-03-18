@@ -49,6 +49,18 @@ message CMsgHotkey {
 	optional string display_name = 6;
 }
 
+message CMsgSettingVariant {
+	oneof value {
+		bool value_bool = 1;
+		int32 value_int32 = 2;
+		uint32 value_uint32 = 3;
+		int64 value_uint64 = 5;
+		float value_float = 6;
+		string value_string = 7;
+		.CMsgHotkey value_hotkey = 8;
+	}
+}
+
 message CMsgClientSettings {
 	optional bool no_save_personal_info = 1 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "Software\\Valve\\Steam\\NoSavePersonalInfo"];
 	optional bool oobe_test_mode_enabled = 2 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "Software\\Valve\\Steam\\OOBETestModeEnabled"];
@@ -145,6 +157,7 @@ message CMsgClientSettings {
 	optional bool broadcast_show_upload_stats = 12008 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Broadcast\\ShowDebugInfo"];
 	optional bool broadcast_show_live_reminder = 12009 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Broadcast\\ShowReminder", (setting_default_bool) = true];
 	optional int32 broadcast_chat_corner = 12010 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Broadcast\\ShowChat", (setting_default_int) = 1];
+	optional bool gamestream_hardware_video_encode = 13000 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "GameStream\\HardwareVideoEncode", (setting_default_bool) = true];
 	optional bool steam_input_configurator_error_msg_enable = 14001 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "SteamInput/Configurator/ErrorMsgEnabled"];
 	optional bool controller_guide_button_focus_steam = 14002 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Controller_CheckGuideButton", (setting_default_bool) = true];
 	optional int32 controller_ps_support = 14003 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "SteamController_PSSupport", (setting_default_int) = 1];
@@ -165,7 +178,6 @@ message CMsgClientSettings {
 	optional string g_background_path = 18201 [(setting_store) = k_EClientSettingStore_CustomFunc];
 	optional string g_background_max_keep = 18202 [(setting_store) = k_EClientSettingStore_CustomFunc];
 	optional int32 g_background_time_resolution = 18203 [(setting_store) = k_EClientSettingStore_CustomFunc];
-	optional bool g_background_devmode = 18206 [(setting_store) = k_EClientSettingStore_CustomFunc];
 	optional .CMsgHotkey g_background_mk = 18207 [(setting_store) = k_EClientSettingStore_CustomFunc];
 	optional .CMsgHotkey g_background_tg = 18208 [(setting_store) = k_EClientSettingStore_CustomFunc];
 	optional bool g_background_a_m = 18209 [(setting_store) = k_EClientSettingStore_CustomFunc];
@@ -177,7 +189,6 @@ message CMsgClientSettings {
 	optional bool force_deck_perf_tab = 20004 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "Developer/ForceDeckPerfTab"];
 	optional bool force_fake_mandatory_update = 20005 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "Developer/FakeMandatoryUpdate"];
 	optional bool hdr_compat_testing = 20006 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "Developer/HDRCompatTesting"];
-	optional bool developer_dummy_setting = 20007 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Developer/DummySetting"];
 	optional .EHDRVisualization gamescope_hdr_visualization = 21001 [default = k_EHDRVisualization_None, (setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Gamescope/HDRVisualization2"];
 	optional int32 gamescope_app_target_framerate = 21002 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Gamescope/AppTargetFrameRate", (setting_default_int) = 0, (setting_profile_mode) = k_ESettingProfileMode_PerGamePerDisplay];
 	optional bool gamescope_enable_app_target_framerate = 21003 [(setting_store) = k_EClientSettingStore_Registry, (setting_name) = "HKEY_CURRENT_USER\\Software\\Valve\\Steam\\GamescopeEnableAppTargetRefreshRate2", (setting_default_bool) = true];
@@ -187,4 +198,11 @@ message CMsgClientSettings {
 	optional bool gamescope_disable_mura_correction = 21007 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Gamescope/MuraCorrectionDisabled", (setting_default_bool) = false];
 	optional bool gamescope_include_steamui_in_screenshots = 21008 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Gamescope/IncludeSteamUIInScreenshots", (setting_default_bool) = true];
 	optional int32 steamos_status_led_brightness = 22000 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "SteamOS/StatusLEDBrightness", (setting_default_int) = 100];
+	optional bool setting_validation_bool = 23001 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "SettingValidation/DummyBool"];
+	optional .EHDRVisualization setting_validation_enum = 23002 [default = k_EHDRVisualization_None, (setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "SettingValidation/DummyEnum"];
+	optional int32 setting_validation_int32 = 23003 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "SettingValidation/DummyInt32"];
+	optional uint32 setting_validation_uint32 = 23004 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "SettingValidation/DummyUInt32"];
+	optional uint64 setting_validation_uint64 = 23005 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "SettingValidation/DummyUInt64"];
+	optional float setting_validation_float = 23006 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "SettingValidation/DummyFloat"];
+	optional string setting_validation_string = 23007 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "SettingValidation/DummyString"];
 }

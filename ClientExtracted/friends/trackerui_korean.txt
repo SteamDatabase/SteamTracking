@@ -757,7 +757,7 @@
 "Steam_Settings_Broadcast_ShowChat_RightTop" "우측 상단"
 "Steam_Settings_Broadcast_ShowChat_RightBottom" "우측 하단"
 "Steam_Settings_Broadcast_ShowChat_LeftBottom" "좌측 하단"
-"Steam_Settings_Broadcast_Disabled_System" "현재 Steam 방송은 이 운영체제를 지원하지 않습니다."
+"Steam_Settings_Broadcast_Disabled_System" "현재 Steam 방송은 이 운영 체제를 지원하지 않습니다."
 "Steam_Settings_Broadcast_Disabled_Overlay" "Steam 오버레이가 활성화 되어야 생방송을 스트리밍 할 수 있습니다."
 "Steam_Settings_Broadcast_Disabled_User" "귀하의 계정은 생방송을 할 권한이 없습니다."
 "Steam_Settings_Broadcast_Disabled_System_Windows_Compat_Enabled" "이 장비에서 Steam 방송을 시작할 수 없습니다.\n\nWindows에서 Steam이 호환성 모드로 실행되고 있어 Steam 방송이 정상적으로 작동할 수 없습니다. 장비가 Windows 7 이상의 버전이라면 아래의 지원 페이지를 참조하여 호환성 모드를 해제해 주시기 바랍니다."

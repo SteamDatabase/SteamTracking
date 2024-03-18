@@ -558,6 +558,7 @@
     "EventEditor_SaleValveApproval_Request_Link": "Открыть запрос на проверку...",
     "EventEditor_SaleValveApproval_Approved_Title": "Ваша страница одобрена и готова к публикации",
     "EventEditor_SaleValveApproval_Approved_Desc": "Откройте вкладку «Публикация», чтобы опубликовать страницу.",
+    "EventEditor_SaleValveApproval_Approved_Desc_OnPublish": "Перед публикацией не забудьте проверить настройки видимости ниже.",
     "AddToWishlist_short": "+ В желаемое",
     "Wishlisted": "В списке желаемого",
     "Wishlisted_short": "В желаемом",
@@ -2656,6 +2657,7 @@
     "SteamNotificationTypeDesc_19": "Ответе взрослого участника семейной группы на мой запрос о покупке",
     "SteamNotificationTypeDesc_20": "Ответе взрослого участника семейной группы на мой запрос на доступ к функциям Steam",
     "SteamNotificationTypeDesc_21": "Ответе взрослого участника семейной группы на мой запрос на дополнительное игровое время",
+    "SteamNotificationTypeDesc_22": "Получении запрошенной игры",
     "NotificationSettings_SendToast": "Всплывающее уведомление в клиенте Steam",
     "NotificationSettings_PushNotification": "Push-уведомление в мобильном приложении",
     "NotificationsMenu_Title": "Уведомления",
@@ -2789,6 +2791,8 @@
     "Notification_FamilyInvitePinned_Body_Plural": "Приглашений в семейную группу: %1$s",
     "SteamNotifications_FamilyPurchaseRequestResponseDeclinedTitle": "Запрос на покупку отклонён",
     "SteamNotifications_FamilyPurchaseRequestDeclinedBody": "%1$s отклонил(а) ваш запрос на покупку",
+    "SteamNotifications_RequestedGameAddedTitle": "Покупка одобрена",
+    "SteamNotifications_RequestedGameAddedBody": "Вы получили: %1$s",
     "SteamNotifications_ParentalFeatureRequestTitle": "Запрос от участника семейной группы",
     "SteamNotifications_ParentalFeatureRequestBody": "%1$s запрашивает доступ к функциям Steam",
     "SteamNotifications_ParentalPlaytimeRequestTitle": "Запрос от участника семейной группы",
@@ -2826,6 +2830,7 @@
     "FamilyHistory_PurchaseRequestApproved": "%1$s одобрил(а) запрос на покупку от %2$s.",
     "FamilyHistory_PurchaseRequestDeclined": "%1$s отклонил(а) запрос на покупку от %2$s.",
     "FamilyView_RequestFeatureAccess": "Использование этой функции было заблокировано взрослым участником вашей семейной группы. Вы можете запросить доступ.",
+    "FamilyView_RequestFeatureAccess_Always": "Использование этой функции было заблокировано взрослым участником вашей семейной группы.",
     "FamilyView_RequestFeatureAccess_Offline": "Вы в автономном режиме. Войдите в сеть, чтобы попросить доступ к этому функционалу у взрослого участника своей семейной группы.",
     "FamilyView_RequestFeatureAccess_Request": "Запросить доступ",
     "FamilyView_RequestFeatureAccess_GenericError": "Произошла ошибка. Повторите попытку позже. (%1$s)",
@@ -2879,5 +2884,6 @@
     "KioskMode_Unlock_Tooltip": "Выйти из режима киоска",
     "KioskMode_Lock_Tooltip": "Перейти в режим киоска",
     "RemotePlay_StoreFunctionalityBlocked_Title": "Магазин недоступен",
-    "RemotePlay_StoreFunctionalityBlocked_Description": "Магазин недоступен при использовании этого клиента Steam Link."
+    "RemotePlay_StoreFunctionalityBlocked_Description": "Магазин недоступен при использовании этого клиента Steam Link.",
+    "Hardware_ShippingEstimate_Range": "%1$s–%2$s раб. дн."
 }

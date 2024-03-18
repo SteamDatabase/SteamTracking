@@ -558,6 +558,7 @@
     "EventEditor_SaleValveApproval_Request_Link": "Προβολή δελτίου ελέγχου…",
     "EventEditor_SaleValveApproval_Approved_Title": "Η σελίδα σας έχει εγκριθεί και είναι έτοιμη για δημοσίευση",
     "EventEditor_SaleValveApproval_Approved_Desc": "Μεταβείτε στην καρτέλα «Δημοσίευση» για τη διαδικασία δημοσίευσης.",
+    "EventEditor_SaleValveApproval_Approved_Desc_OnPublish": "Ελέγξτε προσεκτικά τις ρυθμίσεις ορατότητας παρακάτω, πριν δημοσιεύσετε.",
     "AddToWishlist_short": "+ Λίστα Επιθυμιών",
     "Wishlisted": "Στη Λίστα Επιθυμιών σας",
     "Wishlisted_short": "Λίστα Επιθυμιών",
@@ -2656,6 +2657,7 @@
     "SteamNotificationTypeDesc_19": "Ένας ενήλικας στην οικογένειά μου απαντά στο αίτημά μου για αγορά",
     "SteamNotificationTypeDesc_20": "Ένας ενήλικας στην οικογένειά μου απαντά στο αίτημά μου για χαρακτηριστικό Steam",
     "SteamNotificationTypeDesc_21": "Ένας ενήλικας στην οικογένειά μου απαντά στο αίτημά μου για χρόνο παιχνιδιού",
+    "SteamNotificationTypeDesc_22": "Λαμβάνω ένα παιχνίδι που ζήτησα",
     "NotificationSettings_SendToast": "Αναδυόμενη ειδοποίηση στην εφαρμογή Steam",
     "NotificationSettings_PushNotification": "Ειδοποίηση στην εφαρμογή για κινητές συσκευές",
     "NotificationsMenu_Title": "Ειδοποιήσεις",
@@ -2789,6 +2791,8 @@
     "Notification_FamilyInvitePinned_Body_Plural": "%1$s νέες προσκλήσεις Οικογένειας",
     "SteamNotifications_FamilyPurchaseRequestResponseDeclinedTitle": "Η αγορά απορρίφθηκε",
     "SteamNotifications_FamilyPurchaseRequestDeclinedBody": "Ο χρήστης %1$s απέρριψε την αγορά σας",
+    "SteamNotifications_RequestedGameAddedTitle": "Η αγορά εγκρίθηκε",
+    "SteamNotifications_RequestedGameAddedBody": "Λάβατε: %1$s",
     "SteamNotifications_ParentalFeatureRequestTitle": "Αίτημα οικογένειας",
     "SteamNotifications_ParentalFeatureRequestBody": "Ο χρήστης %1$s ζητά πρόσβαση σε χαρακτηριστικά Steam",
     "SteamNotifications_ParentalPlaytimeRequestTitle": "Αίτημα οικογένειας",
@@ -2826,6 +2830,7 @@
     "FamilyHistory_PurchaseRequestApproved": "Ο χρήστης %1$s ενέκρινε το αίτημα αγοράς του χρήστη %2$s.",
     "FamilyHistory_PurchaseRequestDeclined": "Ο χρήστης %1$s απέρριψε το αίτημα αγοράς του χρήστη %2$s.",
     "FamilyView_RequestFeatureAccess": "Η πρόσβαση σε αυτήν τη λειτουργία έχει περιοριστεί από έναν ενήλικα στην οικογένειά σας. Μπορείτε να του στείλετε αίτημα για πρόσβαση.",
+    "FamilyView_RequestFeatureAccess_Always": "Η πρόσβαση σε αυτήν τη λειτουργία έχει περιοριστεί από έναν ενήλικα στην οικογένειά σας.",
     "FamilyView_RequestFeatureAccess_Offline": "Είστε αποσυνδεμένοι από το Steam. Συνδεθείτε στο διαδίκτυο για να ζητήσετε πρόσβαση σε αυτήν τη λειτουργία από έναν ενήλικα στην οικογένειά σας.",
     "FamilyView_RequestFeatureAccess_Request": "Αίτημα πρόσβασης",
     "FamilyView_RequestFeatureAccess_GenericError": "Παρουσιάστηκε σφάλμα. Δοκιμάστε ξανά αργότερα. (%1$s)",
@@ -2879,5 +2884,6 @@
     "KioskMode_Unlock_Tooltip": "Έξοδος από λειτουργία έκθεσης",
     "KioskMode_Lock_Tooltip": "Είσοδος σε λειτουργία έκθεσης",
     "RemotePlay_StoreFunctionalityBlocked_Title": "Το Κατάστημα δεν είναι διαθέσιμο",
-    "RemotePlay_StoreFunctionalityBlocked_Description": "Δεν είναι δυνατή η πρόσβαση στο Κατάστημα μέσω αυτής της εφαρμογής Steam Link."
+    "RemotePlay_StoreFunctionalityBlocked_Description": "Δεν είναι δυνατή η πρόσβαση στο Κατάστημα μέσω αυτής της εφαρμογής Steam Link.",
+    "Hardware_ShippingEstimate_Range": "%1$s–%2$s εργάσιμες ημέρες"
 }

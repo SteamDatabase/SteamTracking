@@ -525,8 +525,8 @@ enum eGyroButtonBitMask
 	k_eGyroButtonBitMask_ButtonMacro7 = 39;
 	k_eGyroButtonBitMask_ButtonBackGripLeftUpper = 41;
 	k_eGyroButtonBitMask_ButtonBackGripRightUpper = 42;
-	k_eGyroButtonBitMask_LeftbumperFingerdown = 44;
-	k_eGyroButtonBitMask_RightbumperFingerdown = 45;
+	k_eGyroButtonBitMask_CapSenseLeftAux = 44;
+	k_eGyroButtonBitMask_CapSenseRightAux = 45;
 	k_eGyroButtonBitMask_CapSenseLeftStick = 46;
 	k_eGyroButtonBitMask_CapSenseRightStick = 47;
 	k_eGyroButtonBitMask_ButtonMacro1Finger = 48;
@@ -2004,6 +2004,17 @@ enum UnnamedEnum5341f659b7352c78
 	EveryTime = 0;
 	Once = 1;
 	OncePerGame = 2;
+}
+
+enum UnnamedEnum5458523f40d3e15b
+{
+	eLeftColumn = 0;
+	eRightColumn = 1;
+	eCenterTop = 2;
+	eCenterBottom = 3;
+	eCenterBottomLower = 4;
+	eCenterBottomLowerLower = 5;
+	eIgnore = 6;
 }
 
 enum UnnamedEnum54915c93076f4b25
@@ -3512,15 +3523,6 @@ enum UnnamedEnumf148f58a11f3d661
 	k_MediaUsageNotification = 8;
 	k_GeneralCommunication = 9;
 	k_SteamAwardFinalists = 10;
-}
-
-enum UnnamedEnumf49037867766e115
-{
-	eLeftColumn = 0;
-	eRightColumn = 1;
-	eCenterTop = 2;
-	eCenterBottom = 3;
-	eIgnore = 4;
 }
 
 enum UnnamedEnumf60d704b0b63ab30

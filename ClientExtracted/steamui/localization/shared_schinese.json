@@ -558,6 +558,7 @@
     "EventEditor_SaleValveApproval_Request_Link": "查看审核案件…",
     "EventEditor_SaleValveApproval_Approved_Title": "您的页面已获得批准，可供您发布",
     "EventEditor_SaleValveApproval_Approved_Desc": "切换到“发布”选项卡，进入发布流程。",
+    "EventEditor_SaleValveApproval_Approved_Desc_OnPublish": "请务必在发布前仔细检查下方的可见性设置",
     "AddToWishlist_short": "+ 愿望单",
     "Wishlisted": "在您的愿望单中",
     "Wishlisted_short": "愿望单",
@@ -2657,6 +2658,7 @@
     "SteamNotificationTypeDesc_19": "我家庭中的一名成人回复了我的购买请求",
     "SteamNotificationTypeDesc_20": "我家庭中的一名成人回复了我的 Steam 功能请求",
     "SteamNotificationTypeDesc_21": "我家庭中的一名成人回复了我的游戏时间请求",
+    "SteamNotificationTypeDesc_22": "我收到了请求购买的游戏",
     "NotificationSettings_SendToast": "Steam 客户端弹出通知",
     "NotificationSettings_PushNotification": "手机应用推送通知",
     "NotificationsMenu_Title": "通知",
@@ -2790,6 +2792,8 @@
     "Notification_FamilyInvitePinned_Body_Plural": "%1$s 份新家庭邀请",
     "SteamNotifications_FamilyPurchaseRequestResponseDeclinedTitle": "购买已拒绝",
     "SteamNotifications_FamilyPurchaseRequestDeclinedBody": "%1$s 拒绝了您的购买",
+    "SteamNotifications_RequestedGameAddedTitle": "购买已批准",
+    "SteamNotifications_RequestedGameAddedBody": "您收到了：%1$s",
     "SteamNotifications_ParentalFeatureRequestTitle": "家庭请求",
     "SteamNotifications_ParentalFeatureRequestBody": "%1$s 请求访问 Steam 功能",
     "SteamNotifications_ParentalPlaytimeRequestTitle": "家庭请求",
@@ -2827,6 +2831,7 @@
     "FamilyHistory_PurchaseRequestApproved": "%1$s 已批准 %2$s 的购买请求。",
     "FamilyHistory_PurchaseRequestDeclined": "%1$s 已拒绝 %2$s 的购买请求。",
     "FamilyView_RequestFeatureAccess": "您家庭中的成人已限制对此功能的访问。您可以向他们发送访问请求。",
+    "FamilyView_RequestFeatureAccess_Always": "您家庭中的成人已限制对此功能的访问。",
     "FamilyView_RequestFeatureAccess_Offline": "您目前已与 Steam 断开连接。上线向家庭中的成年人请求访问此功能。",
     "FamilyView_RequestFeatureAccess_Request": "请求访问权限",
     "FamilyView_RequestFeatureAccess_GenericError": "发生错误。请稍后再试。（%1$s）",
@@ -2880,5 +2885,6 @@
     "KioskMode_Unlock_Tooltip": "退出展台模式",
     "KioskMode_Lock_Tooltip": "进入展台模式",
     "RemotePlay_StoreFunctionalityBlocked_Title": "商店不可用",
-    "RemotePlay_StoreFunctionalityBlocked_Description": "通过此 Steam 流式应用客户端运行时无法访问商店。"
+    "RemotePlay_StoreFunctionalityBlocked_Description": "通过此 Steam 流式应用客户端运行时无法访问商店。",
+    "Hardware_ShippingEstimate_Range": "%1$s-%2$s 个工作日"
 }

@@ -353,6 +353,7 @@
  strcmp
  strcpy
  strlen
+ strncmp
  strncpy
  strrchr
  strstr

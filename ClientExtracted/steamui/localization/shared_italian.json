@@ -2657,6 +2657,7 @@
     "SteamNotificationTypeDesc_19": "Un adulto della mia famiglia risponde alla mia richiesta d'acquisto",
     "SteamNotificationTypeDesc_20": "Un adulto della mia famiglia risponde alla mia richiesta di una funzionalità di Steam",
     "SteamNotificationTypeDesc_21": "Un adulto della mia famiglia risponde alla mia richiesta di tempo di gioco",
+    "SteamNotificationTypeDesc_22": "Ricevo un gioco che ho richiesto",
     "NotificationSettings_SendToast": "Avviso di notifica nel client di Steam",
     "NotificationSettings_PushNotification": "Notifica push nell'app mobile",
     "NotificationsMenu_Title": "Notifiche",
@@ -2790,6 +2791,8 @@
     "Notification_FamilyInvitePinned_Body_Plural": "%1$s nuovi inviti in famiglia",
     "SteamNotifications_FamilyPurchaseRequestResponseDeclinedTitle": "Acquisto rifiutato",
     "SteamNotifications_FamilyPurchaseRequestDeclinedBody": "%1$s ha rifiutato il tuo acquisto",
+    "SteamNotifications_RequestedGameAddedTitle": "Acquisto approvato",
+    "SteamNotifications_RequestedGameAddedBody": "Hai ricevuto: %1$s",
     "SteamNotifications_ParentalFeatureRequestTitle": "Richiesta della famiglia",
     "SteamNotifications_ParentalFeatureRequestBody": "%1$s sta richiedendo l'accesso alle funzionalità di Steam",
     "SteamNotifications_ParentalPlaytimeRequestTitle": "Richiesta della famiglia",
@@ -2827,6 +2830,7 @@
     "FamilyHistory_PurchaseRequestApproved": "%1$s ha approvato la richiesta di acquisto di %2$s.",
     "FamilyHistory_PurchaseRequestDeclined": "%1$s ha rifiutato la richiesta di acquisto di %2$s.",
     "FamilyView_RequestFeatureAccess": "L'accesso a questa funzionalità è stato limitato da un adulto della tua famiglia. Puoi inviare loro una richiesta di accesso.",
+    "FamilyView_RequestFeatureAccess_Always": "L'accesso a questa funzionalità è stato limitato da un adulto della tua famiglia.",
     "FamilyView_RequestFeatureAccess_Offline": "Al momento sei disconnesso da Steam. Vai online per richiedere l'accesso a questa funzionalità a un adulto della tua famiglia.",
     "FamilyView_RequestFeatureAccess_Request": "Richiedi l'accesso",
     "FamilyView_RequestFeatureAccess_GenericError": "Si è verificato un errore. Riprova più tardi. (%1$s)",
@@ -2880,5 +2884,6 @@
     "KioskMode_Unlock_Tooltip": "Esci dalla modalità chiosco",
     "KioskMode_Lock_Tooltip": "Entra nella modalità chiosco",
     "RemotePlay_StoreFunctionalityBlocked_Title": "Negozio non disponibile",
-    "RemotePlay_StoreFunctionalityBlocked_Description": "L'accesso al Negozio non è disponibile durante l'esecuzione di questo client Steam Link."
+    "RemotePlay_StoreFunctionalityBlocked_Description": "L'accesso al Negozio non è disponibile durante l'esecuzione di questo client Steam Link.",
+    "Hardware_ShippingEstimate_Range": "%1$s-%2$s giorni lavorativi"
 }

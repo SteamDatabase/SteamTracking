@@ -9,7 +9,7 @@
 		"english"
 		{
 			"title"		"Gamepad with Gyro"
-			"description"		"The template works best for games that are designed with a gamepad in mind, but also support a desktop mouse for camera control or aim. This uses both the right pad and the gyro to allow for the most precise aim in games which support gamepad and mouse."
+			"description"		"The template works best for games that are designed with a gamepad in mind, but also support a desktop mouse for camera control or aim (Mixed Input). This uses both the right pad and the gyro to allow for the most precise aim in games which support gamepad and mouse."
 		}
 	}
 	"group"
@@ -529,13 +529,73 @@
 	"group"
 	{
 		"id"		"14"
-		"mode"		"absolute_mouse"
+		"mode"		"gyro_to_mouse"
 		"inputs"
 		{
 		}
 		"gameactions"
 		{
 		}
+	}
+	"group"
+	{
+		"id"		"15"
+		"mode"		"flickstick"
+		"inputs"
+		{
+
+			"click"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"xinput_button JOYSTICK_RIGHT, , "
+						}
+					}
+					"Double_Press"
+					{
+						"bindings"
+						{
+							"binding"		"controller_action camera_reset 180 66 90, , "
+						}
+					}
+				}
+			}
+		}
+
+	}
+	"group"
+	{
+		"id"		"16"
+		"mode"		"flickstick"
+		"inputs"
+		{
+
+			"click"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"xinput_button JOYSTICK_LEFT, , "
+						}
+					}
+					"Double_Press"
+					{
+						"bindings"
+						{
+							"binding"		"controller_action camera_reset 180 66 90, , "
+						}
+					}
+				}
+			}
+		}
+
 	}
 	"preset"
 	{
@@ -558,6 +618,12 @@
 			"8"		"right_joystick active"
 			"9"		"dpad active"
 			"14"		"gyro active"
+
+			"15"		"right_joystick inactive" 
+			"16"		"joystick inactive" 
+
+			"15"		"right_trackpad inactive" 
+			"16"		"left_trackpad inactive" 
 		}
 	}
 	"settings"

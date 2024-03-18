@@ -558,6 +558,7 @@
     "EventEditor_SaleValveApproval_Request_Link": "ดูตั๋วการตรวจสอบ...",
     "EventEditor_SaleValveApproval_Approved_Title": "หน้าเว็บของคุณได้รับการอนุมัติและพร้อมให้คุณเผยแพร่แล้ว",
     "EventEditor_SaleValveApproval_Approved_Desc": "ไปที่แท็บ \"เผยแพร่\" เพื่ออ่านกระบวนการเผยแพร่",
+    "EventEditor_SaleValveApproval_Approved_Desc_OnPublish": "อย่าลืมตรวจสอบอีกครั้งให้แน่ใจว่ามีการตั้งค่าการมองเห็นด้านล่างก่อนที่จะเผยแพร่",
     "AddToWishlist_short": "+ สิ่งที่อยากได้",
     "Wishlisted": "อยู่ในสิ่งที่อยากได้ของคุณ",
     "Wishlisted_short": "สิ่งที่อยากได้",
@@ -2656,6 +2657,7 @@
     "SteamNotificationTypeDesc_19": "ผู้ใหญ่ในครอบครัวของฉันตอบกลับคำขอสั่งซื้อของฉัน",
     "SteamNotificationTypeDesc_20": "ผู้ใหญ่ในครอบครัวของฉันตอบกลับคำขอเข้าถึงคุณสมบัติ Steam ของฉัน",
     "SteamNotificationTypeDesc_21": "ผู้ใหญ่ในครอบครัวของฉันตอบกลับคำขอเวลาเล่นของฉัน",
+    "SteamNotificationTypeDesc_22": "ฉันได้รับเกมที่ฉันขอไว้",
     "NotificationSettings_SendToast": "การแจ้งเตือนด้วยข้อความในไคลเอนต์ Steam",
     "NotificationSettings_PushNotification": "การแจ้งเตือนแบบพุชในแอปแบบพกพา",
     "NotificationsMenu_Title": "การแจ้งเตือน",
@@ -2789,6 +2791,8 @@
     "Notification_FamilyInvitePinned_Body_Plural": "%1$s คำเชิญครอบครัวใหม่",
     "SteamNotifications_FamilyPurchaseRequestResponseDeclinedTitle": "การสั่งซื้อถูกปฏิเสธ",
     "SteamNotifications_FamilyPurchaseRequestDeclinedBody": "%1$s ปฏิเสธการสั่งซื้อของคุณ",
+    "SteamNotifications_RequestedGameAddedTitle": "อนุมัติการสั่งซื้อแล้ว",
+    "SteamNotifications_RequestedGameAddedBody": "คุณได้รับ %1$s แล้ว",
     "SteamNotifications_ParentalFeatureRequestTitle": "คำขอจากครอบครัว",
     "SteamNotifications_ParentalFeatureRequestBody": "%1$s กำลังขอเข้าถึงคุณสมบัติ Steam",
     "SteamNotifications_ParentalPlaytimeRequestTitle": "คำขอจากครอบครัว",
@@ -2826,6 +2830,7 @@
     "FamilyHistory_PurchaseRequestApproved": "%1$s ได้อนุมัติคำขอสั่งซื้อของ %2$s แล้ว",
     "FamilyHistory_PurchaseRequestDeclined": "%1$s ได้ปฏิเสธคำขอสั่งซื้อของ %2$s แล้ว",
     "FamilyView_RequestFeatureAccess": "ผู้ใหญ่ในครอบครัวของคุณได้จำกัดสิทธิ์เข้าถึงฟังก์ชันการใช้งานนี้ไว้ คุณสามารถส่งคำขอสิทธิ์เข้าถึงไปยังบุคคลดังกล่าวได้",
+    "FamilyView_RequestFeatureAccess_Always": "ผู้ใหญ่ในครอบครัวของคุณได้จำกัดสิทธิ์เข้าถึงฟังก์ชันการทำงานนี้ไว้",
     "FamilyView_RequestFeatureAccess_Offline": "ขณะนี้คุณถูกตัดการเชื่อมต่อจาก Steam โปรดเข้าสู่ระบบออนไลน์เพื่อขอสิทธิ์เข้าถึงฟังก์ชันการใช้งานนี้จากผู้ใหญ่ในครอบครัวของคุณ",
     "FamilyView_RequestFeatureAccess_Request": "ขอสิทธิ์เข้าถึง",
     "FamilyView_RequestFeatureAccess_GenericError": "ตรวจพบข้อผิดพลาด โปรดลองใหม่อีกครั้งภายหลัง (%1$s)",
@@ -2879,5 +2884,6 @@
     "KioskMode_Unlock_Tooltip": "ออกจากโหมดคีออสก์",
     "KioskMode_Lock_Tooltip": "เข้าสู่โหมดคีออสก์",
     "RemotePlay_StoreFunctionalityBlocked_Title": "ร้านค้าไม่พร้อมใช้งาน",
-    "RemotePlay_StoreFunctionalityBlocked_Description": "ไม่สามารถเข้าถึงร้านค้าได้ในขณะที่เรียกผ่านไคลเอนต์ Steam Link นี้"
+    "RemotePlay_StoreFunctionalityBlocked_Description": "ไม่สามารถเข้าถึงร้านค้าได้ในขณะที่เรียกผ่านไคลเอนต์ Steam Link นี้",
+    "Hardware_ShippingEstimate_Range": "%1$s-%2$s วันทำการ"
 }

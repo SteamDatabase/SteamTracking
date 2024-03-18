@@ -558,6 +558,7 @@
     "EventEditor_SaleValveApproval_Request_Link": "Zobacz zgłoszenie dotyczące oceny...",
     "EventEditor_SaleValveApproval_Approved_Title": "Twoja strona została zatwierdzona i jest gotowa do opublikowania",
     "EventEditor_SaleValveApproval_Approved_Desc": "Przełącz się na zakładkę „Opublikuj”, aby przejść do procesu publikacji.",
+    "EventEditor_SaleValveApproval_Approved_Desc_OnPublish": "Upewnij się, że dokładnie sprawdzisz poniższe ustawienia widoczności przed opublikowaniem.",
     "AddToWishlist_short": "+ Lista życzeń",
     "Wishlisted": "Na twojej liście życzeń",
     "Wishlisted_short": "Lista życzeń",
@@ -2656,6 +2657,7 @@
     "SteamNotificationTypeDesc_19": "dorosły z mojej rodziny odpowie na moją prośbę o zakup",
     "SteamNotificationTypeDesc_20": "dorosły z mojej rodziny odpowie na moją prośbę o dostęp do funkcji Steam",
     "SteamNotificationTypeDesc_21": "dorosły z mojej rodziny odpowie na moją prośbę o dodatkowy czas gry",
+    "SteamNotificationTypeDesc_22": "otrzymam grę, o którą poprosiłem.",
     "NotificationSettings_SendToast": "Wyskakujące powiadomienie w kliencie Steam",
     "NotificationSettings_PushNotification": "Powiadomienie push w aplikacji mobilnej",
     "NotificationsMenu_Title": "Powiadomienia",
@@ -2789,6 +2791,8 @@
     "Notification_FamilyInvitePinned_Body_Plural": "Nowe zaproszenia do rodziny (%1$s)",
     "SteamNotifications_FamilyPurchaseRequestResponseDeclinedTitle": "Zakup odrzucony",
     "SteamNotifications_FamilyPurchaseRequestDeclinedBody": "Użytkownik %1$s odrzucił twój zakup",
+    "SteamNotifications_RequestedGameAddedTitle": "Zakup zatwierdzony",
+    "SteamNotifications_RequestedGameAddedBody": "Otrzymujesz: %1$s",
     "SteamNotifications_ParentalFeatureRequestTitle": "Prośba w ramach rodziny",
     "SteamNotifications_ParentalFeatureRequestBody": "%1$s prosi o dostęp do funkcji Steam",
     "SteamNotifications_ParentalPlaytimeRequestTitle": "Prośba w ramach rodziny",
@@ -2826,6 +2830,7 @@
     "FamilyHistory_PurchaseRequestApproved": "%1$s zatwierdza prośbę o zakup od %2$s.",
     "FamilyHistory_PurchaseRequestDeclined": "%1$s odrzuca prośbę o zakup od %2$s.",
     "FamilyView_RequestFeatureAccess": "Dostęp do tej funkcji został ograniczony przez osobę dorosłą w ​​twojej rodzinie. Możesz wysłać do niej prośbę o dostęp.",
+    "FamilyView_RequestFeatureAccess_Always": "Dostęp do tej funkcji został ograniczony przez osobę dorosłą w ​​twojej rodzinie.",
     "FamilyView_RequestFeatureAccess_Offline": "Nie masz teraz połączenia ze Steam. Przejdź do trybu online i poproś osobę dorosłą z rodziny o dostęp do tej funkcji.",
     "FamilyView_RequestFeatureAccess_Request": "Poproś o dostęp",
     "FamilyView_RequestFeatureAccess_GenericError": "Wystąpił błąd. Spróbuj ponownie później (%1$s).",
@@ -2879,5 +2884,6 @@
     "KioskMode_Unlock_Tooltip": "Wyjdź z trybu kiosku",
     "KioskMode_Lock_Tooltip": "Wejdź do trybu kiosku",
     "RemotePlay_StoreFunctionalityBlocked_Title": "Sklep niedostępny",
-    "RemotePlay_StoreFunctionalityBlocked_Description": "Sklep jest niedostępny podczas korzystania z tego klienta Steam Linka."
+    "RemotePlay_StoreFunctionalityBlocked_Description": "Sklep jest niedostępny podczas korzystania z tego klienta Steam Linka.",
+    "Hardware_ShippingEstimate_Range": "%1$s – %2$s dni roboczych"
 }

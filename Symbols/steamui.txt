@@ -207,9 +207,15 @@
  D typeinfo for bool (char const*)
  D typeinfo for std::__1::__basic_string_common<true>
  D typeinfo for std::__1::__function::__base<bool (char const*)>
+ D typeinfo for std::__1::__function::__base<int ()>
+ D typeinfo for std::__1::__function::__base<unsigned int ()>
  D typeinfo for std::__1::__function::__base<void ()>
+ D typeinfo for std::__1::__function::__base<void (bool const&)>
+ D typeinfo for std::__1::__function::__base<void (float const&)>
  D typeinfo for std::__1::__function::__base<void (float)>
+ D typeinfo for std::__1::__function::__base<void (int const&)>
  D typeinfo for std::__1::__function::__base<void (int, int, int, int, double, double, char const*)>
+ D typeinfo for std::__1::__function::__base<void (unsigned long long const&)>
  D typeinfo for std::__1::bad_function_call
  D typeinfo for std::__1::basic_ostringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> >
  D typeinfo for std::__1::basic_ostringstream<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >
@@ -396,9 +402,15 @@
  R typeinfo name for bool (char const*)
  R typeinfo name for std::__1::__basic_string_common<true>
  R typeinfo name for std::__1::__function::__base<bool (char const*)>
+ R typeinfo name for std::__1::__function::__base<int ()>
+ R typeinfo name for std::__1::__function::__base<unsigned int ()>
  R typeinfo name for std::__1::__function::__base<void ()>
+ R typeinfo name for std::__1::__function::__base<void (bool const&)>
+ R typeinfo name for std::__1::__function::__base<void (float const&)>
  R typeinfo name for std::__1::__function::__base<void (float)>
+ R typeinfo name for std::__1::__function::__base<void (int const&)>
  R typeinfo name for std::__1::__function::__base<void (int, int, int, int, double, double, char const*)>
+ R typeinfo name for std::__1::__function::__base<void (unsigned long long const&)>
  R typeinfo name for std::__1::bad_function_call
  R typeinfo name for std::__1::basic_ostringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> >
  R typeinfo name for std::__1::basic_ostringstream<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >

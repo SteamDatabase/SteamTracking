@@ -558,6 +558,7 @@
     "EventEditor_SaleValveApproval_Request_Link": "Xem phiếu xét duyệt...",
     "EventEditor_SaleValveApproval_Approved_Title": "Trang của bạn đã được chấp thuận và sẵn sàng để bạn công bố",
     "EventEditor_SaleValveApproval_Approved_Desc": "Chuyển sang thẻ 'Đăng' để bắt đầu quá trình công bố.",
+    "EventEditor_SaleValveApproval_Approved_Desc_OnPublish": "Vui lòng kiểm tra kỹ thiết lập hiển thị dưới đây trước khi công bố.",
     "AddToWishlist_short": "+ Danh sách ước",
     "Wishlisted": "Trong danh sách ước",
     "Wishlisted_short": "Danh sách ước",
@@ -2656,6 +2657,7 @@
     "SteamNotificationTypeDesc_19": "Người lớn trong gia đình phản hồi yêu cầu mua hàng của tôi",
     "SteamNotificationTypeDesc_20": "Người lớn trong gia đình phản hồi yêu cầu tính năng Steam của tôi",
     "SteamNotificationTypeDesc_21": "Người lớn trong gia đình phản hồi yêu cầu thời gian chơi của tôi",
+    "SteamNotificationTypeDesc_22": "Tôi nhận được trò chơi đã yêu cầu",
     "NotificationSettings_SendToast": "Thông báo nhanh trên phần mềm Steam",
     "NotificationSettings_PushNotification": "Thông báo đẩy trên ứng dụng di động",
     "NotificationsMenu_Title": "Thông báo",
@@ -2789,6 +2791,8 @@
     "Notification_FamilyInvitePinned_Body_Plural": "%1$s lời mời mới vào nhóm gia đình",
     "SteamNotifications_FamilyPurchaseRequestResponseDeclinedTitle": "Đơn hàng bị từ chối",
     "SteamNotifications_FamilyPurchaseRequestDeclinedBody": "%1$s đã từ chối đơn hàng của bạn",
+    "SteamNotifications_RequestedGameAddedTitle": "Đã chấp thuận đơn hàng",
+    "SteamNotifications_RequestedGameAddedBody": "Bạn đã nhận %1$s",
     "SteamNotifications_ParentalFeatureRequestTitle": "Yêu cầu từ nhóm gia đình",
     "SteamNotifications_ParentalFeatureRequestBody": "%1$s đang yêu cầu quyền truy cập tính năng Steam",
     "SteamNotifications_ParentalPlaytimeRequestTitle": "Yêu cầu từ nhóm gia đình",
@@ -2826,6 +2830,7 @@
     "FamilyHistory_PurchaseRequestApproved": "%1$s đã chấp thuận yêu cầu mua hàng của %2$s.",
     "FamilyHistory_PurchaseRequestDeclined": "%1$s đã từ chối yêu cầu mua hàng của %2$s.",
     "FamilyView_RequestFeatureAccess": "Quyền truy cập vào tính năng này đã bị hạn chế bởi người lớn trong nhóm gia đình. Bạn có thể gửi yêu cầu truy cập.",
+    "FamilyView_RequestFeatureAccess_Always": "Quyền truy cập vào tính năng này đã bị hạn chế bởi người lớn trong nhóm gia đình.",
     "FamilyView_RequestFeatureAccess_Offline": "Bạn hiện đang bị ngắt kết nối khỏi Steam. Hãy kết nối mạng để yêu cầu quyền truy cập vào chức năng này từ người lớn trong gia đình.",
     "FamilyView_RequestFeatureAccess_Request": "Yêu cầu truy cập",
     "FamilyView_RequestFeatureAccess_GenericError": "Đã xảy ra lỗi. Vui lòng thử lại sau. (%1$s)",
@@ -2879,5 +2884,6 @@
     "KioskMode_Unlock_Tooltip": "Thoát chế độ kiosk",
     "KioskMode_Lock_Tooltip": "Vào chế độ kiosk",
     "RemotePlay_StoreFunctionalityBlocked_Title": "Không thể truy cập cửa hàng",
-    "RemotePlay_StoreFunctionalityBlocked_Description": "Không thể truy cập vào cửa hàng trong khi chạy qua ứng dụng Steam Link này."
+    "RemotePlay_StoreFunctionalityBlocked_Description": "Không thể truy cập vào cửa hàng trong khi chạy qua ứng dụng Steam Link này.",
+    "Hardware_ShippingEstimate_Range": "%1$s - %2$s ngày làm việc"
 }

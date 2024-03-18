@@ -2414,7 +2414,7 @@ Sinun täytyy kirjautua ulos OS X:stä ottaaksesi asetukset käyttöön."
 "Steam_Uninstall_Games_Dialog_Text" "Poistetaan %game% ..."
 
 "Steam_Shutdown_Dialog_Title"	"Steam - Sammuta"
-"Steam_Shutdown_Dialog_Text" "Suljetaan Steam ..."
+"Steam_Shutdown_Dialog_Text" "Steamiä suljetaan"
 "Steam_Shutdown_Waiting_For_Game" "Odotetaan pelin %game% sammumista ..."
 "Steam_Shutdown_Finishing_Download" "Odotetaan jonossa olevien latausten valmistumista..."
 "Steam_Shutdown_Waiting_For_Download" "Pysäytetään pelin %game% latausta ..."
@@ -2449,7 +2449,7 @@ Sinun täytyy kirjautua ulos OS X:stä ottaaksesi asetukset käyttöön."
 
 "Steam_SystemRebootRequired_Title"	"Steam - Vaaditaan uudelleenkäynnistys"
 "Steam_SystemRebootRequired_Info"		"Viimeisen päivityksen muutosten vuoksi järjestelmä on käynnistettävä uudelleen, ennen kuin voit pelata peliä."
-"Steam_SystemRebootRequired_Button"	"Käynnistä uudelleen nyt"
+"Steam_SystemRebootRequired_Button"	"Käynnistä uudelleen"
 
 "Steam_Game_Developer$appType=application"  "Kehittäjä"
 "Steam_Game_Developer$appType=game"         "Kehittäjä"

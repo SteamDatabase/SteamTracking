@@ -3164,7 +3164,7 @@
 
 Για να παίξετε αυτό το παιχνίδι πρέπει είτε να αναβαθμίσετε το σύστημα σας ή να χρησιμοποιήσετε διαφορετικό υπολογιστή."
 
-"Steam_AccountPage_BetaParticipation"	"Συμμετοχή σε Beta:"
+"Steam_AccountPage_BetaParticipation"	"Συμμετοχή σε έκδοση βήτα:"
 "Steam_NoBetaAvailable"	"(καμία διαθέσιμη αυτή τη στιγμή)"
 "Steam_NoBetaChosen"	"Καμία συμμετοχή\n(%numbetas% διαθέσιμες)"
 "Steam_NoBetaChosenNonAdmin"	"%numbetas% διαθέσιμες αυτή τη στιγμή\n(Μόνο ο χρήστης που εγκατέστησε το Steam μπορεί να αλλάξει τις ρυθμίσεις συμμετοχής  στις δοκιμές Beta.)"
@@ -4191,7 +4191,7 @@
 "Steam_AppUpdateError_34"		"αγορά σε αναμονή"
 "Steam_AppUpdateError_35"		"άλλη συνεδρία ενεργή"
 "Steam_AppUpdateError_36"		"κατεστραμμένο αρχείο λήψης"
-"Steam_AppUpdateError_37"		"καταστρεμμένος δίσκος"
+"Steam_AppUpdateError_37"		"καταστραμμένος δίσκος"
 "Steam_AppUpdateError_38"		"έλλειψη δικαιωμάτων αρχείου"
 "Steam_AppUpdateError_39"		"κλειδωμένο περιεχόμενο αρχείου"
 "Steam_AppUpdateError_40"		"μη διαθέσιμο περιεχόμενο"

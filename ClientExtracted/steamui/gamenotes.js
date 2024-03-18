@@ -376,8 +376,8 @@
                       (n = []),
                       e || t.push(o))
                     : e
-                    ? t.push(k.nodes.paragraph.create())
-                    : t.push(o);
+                      ? t.push(k.nodes.paragraph.create())
+                      : t.push(o);
                 }
               return t;
             })(t),
@@ -427,8 +427,8 @@
               t.type.isText
                 ? (o += (0, u.bU)(t.text))
                 : t.type == k.nodes.hard_break
-                ? (o += "\n")
-                : (o += A(e, t));
+                  ? (o += "\n")
+                  : (o += A(e, t));
           }),
           ([o] = y(e, n, [], o)),
           a && (o += (0, u.Ec)(a)),
@@ -568,8 +568,8 @@
                       d.current.element.select();
                     }, 0))
                   : 0 == e.length
-                  ? d.current.Focus()
-                  : m.current.Focus();
+                    ? d.current.Focus()
+                    : m.current.Focus();
             }
           }, [t, r]),
           o.createElement(

@@ -36,34 +36,21 @@ __DATA
 __cfstring
 __DATA
 __objc_classlist__DATA
-X,
-X,
 __objc_imageinfo__DATA
-(X,
-(X,
 __objc_const
 __DATA
-0X,
-0X,
 __objc_selrefs
 __DATA
-PY,
-PY,
 __objc_classrefs__DATA
 __objc_superrefs__DATA
-H],
-H],
 __objc_ivar
 __DATA
-P],
-P],
 __objc_data
 __DATA
-X],
 P
-X],
 __data
 __DATA
+0=
 __thread_vars
 __DATA
 0
@@ -78,14 +65,12 @@ __common
 __DATA
 H
 __LINKEDIT
-@-
+,
 
 @
 @loader_path/gameoverlayui.dylib
 "
 ,
-x\-
-;
 P
 Y
 Z
@@ -137,7 +122,8 @@ h
 8
 /usr/lib/libobjc.A.dylib
 &
-7
+`_,
+x6
 )
 C
 NSt3__117bad_function_callE
@@ -193,8 +179,8 @@ N4vgui20IVGUIHostApplicationE
 #>
 V?
 17CScreenshotThread
-NSt3__110__function6__funcIZN17CScreenshotThread3RunEvE3$_0NS_9allocatorIS3_EEFvP10CUtlBufferEEE
-NSt3__110__function6__baseIFvP10CUtlBufferEEE
+NSt3__110__function6__funcIZN17CScreenshotThread3RunEvE3$_0NS_9allocatorIS3_EEFvP10CUtlBufferiiEEE
+NSt3__110__function6__baseIFvP10CUtlBufferiiEEE
 ZN17CScreenshotThread3RunEvE3$_0
 N6google8protobuf14FatalExceptionE
 NSt3__119basic_ostringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEEE
@@ -204,7 +190,6 @@ type.googleapis.com/
 type.googleprod.com/
 N6google8protobuf8internal15ExtensionFinderE
 N6google8protobuf8internal24GeneratedExtensionFinderE
-NSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEE
 N6google8protobuf8internal12ExtensionSet8KeyValueE
 N6google8protobuf13RepeatedFieldIiEE
 N6google8protobuf13RepeatedFieldIxEE
@@ -353,6 +338,8 @@ N6google8protobuf23SourceCodeInfo_LocationE
 N6google8protobuf14SourceCodeInfoE
 N6google8protobuf28GeneratedCodeInfo_AnnotationE
 N6google8protobuf17GeneratedCodeInfoE
+N6google8protobuf8internal16InternalMetadata9ContainerINS0_15UnknownFieldSetEEE
+N6google8protobuf8internal16InternalMetadata13ContainerBaseE
 N6google8protobuf14DynamicMessageE
 N6google8protobuf21DynamicMessageFactoryE
 N6google8protobuf8internal29DescriptorPoolExtensionFinderE
@@ -6407,7 +6394,6 @@ m
 >
 ~
 x
-0123456789ABCDEF
 0C
 0E
 0C
@@ -6568,6 +6554,8 @@ r
 0
 4
 8
+,
+0
 $
 $
 (
@@ -6684,6 +6672,7 @@ H
 x
 @
 @
+8
 (
 (
 0
@@ -6836,6 +6825,7 @@ P
 11CMsgJSValue
 16CMsgJSMethodCall
 21CMsgJSExecuteCallback
+20CMsgJSExecutePromise
 21CMsgJSReleaseCallback
 20CMsgJSRaiseException
 20CMsgLoadLocalization
@@ -6875,8 +6865,7 @@ P
 16CMsgPopupCreated
 27CMsgSetVRKeyboardVisibility
 20CMsgRestartJSContext
-N6google8protobuf8internal16InternalMetadata9ContainerINS0_15UnknownFieldSetEEE
-N6google8protobuf8internal16InternalMetadata13ContainerBaseE
+NSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEE
 N4vgui19AnimatingImagePanelE
 10CUtlVectorIPN4vgui6IImageE10CUtlMemoryIS2_EE
 25CPanelAnimationDictionary
@@ -7530,9 +7519,6 @@ pid %d != %d, re-initing before send; client_port = %d, server_port = %d
 StopJob
 pid %d != %d, skipping dealloc of client_port = %d, server_port = %d
 (&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
-1.6.37
-PNG load error %s
-PNG load warning %s
 [S_API FAIL] SteamAPI_Init() failed; steam path (%s) missing directory separator
 [S_API FAIL] SteamAPI_Init() failed; steam found, but process is dead.
 [S_API FAIL] SteamAPI_Init() failed; ipcserver init failed .
@@ -7737,6 +7723,8 @@ steamloopback.host
 %storehttps%
 InGameOverlayShowFPSCorner
 InGameOverlayShowFPSContrast
+InGameOverlayScreenshotSaveUncompressed
+InGameOverlayScreenshotEnableAVIF
 CBasePanel
 vgui::AppRootPanel
 DelayedClose
@@ -7776,8 +7764,8 @@ Steam pid that launched us
 VGUI_Application_001
 OK
 Cancel
-Mar 12 2024
-14:14:07
+Mar 18 2024
+11:05:52
 crashhandler004
 gameoverlayui
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/overlay/gameoverlayui/main.cpp
@@ -8763,8 +8751,6 @@ CHECK failed: !fields_.empty():
 CHECK failed: (TYPE_LENGTH_DELIMITED) == (type()):
 ./google/protobuf/message_lite.h
 CHECK failed: (size) <= (static_cast<size_t>(2147483647)):
-CHECK failed: *ptr:
-CHECK failed: (overrun) <= (kSlopBytes):
 Can't happen
 google/protobuf/wire_format.cc
 CHECK failed: descriptor:
@@ -8842,100 +8828,6 @@ NumberOfCapturingGroups
 pcre_retval == 0
 NewlineMode
 NULL == "Unexpected return value from pcre_config(NEWLINE)"
-Application built with libpng-
-but running with
-unexpected zlib return code
-unexpected end of LZ stream
-missing LZ dictionary
-zlib IO error
-bad parameters to zlib
-damaged LZ stream
-insufficient memory
-truncated
-unsupported zlib version
-unexpected zlib return
-Image width is zero in IHDR
-Invalid image width in IHDR
-Image width exceeds user limit in IHDR
-Image height is zero in IHDR
-Invalid image height in IHDR
-Image height exceeds user limit in IHDR
-Invalid bit depth in IHDR
-Invalid color type in IHDR
-Invalid color type/bit depth combination in IHDR
-Unknown interlace method in IHDR
-Unknown compression method in IHDR
-MNG features are not allowed in a PNG datastream
-Unknown filter method in IHDR
-Invalid filter method in IHDR
-Invalid IHDR data
-keyword truncated
-keyword "@1": bad character '0x@2'
-using zstream
-1.2.11
-Invalid bit depth for grayscale image
-Invalid bit depth for RGB image
-Invalid bit depth for paletted image
-Invalid bit depth for grayscale+alpha image
-Invalid bit depth for RGBA image
-Invalid image color type specified
-Invalid compression type specified
-Invalid filter type specified
-Invalid interlace type specified
-Invalid number of colors in palette
-Ignoring request to write a PLTE chunk in grayscale PNG
-Z_OK on Z_FINISH with output space
-Invalid sRGB rendering intent specified
-No profile for iCCP chunk
-ICC profile too short
-ICC profile length invalid (not a multiple of 4)
-iCCP: invalid keyword
-sPLT: invalid keyword
-Invalid sBIT depth specified
-Invalid number of transparent colors specified
-Ignoring attempt to write tRNS chunk out-of-range for bit_depth
-Ignoring attempt to write 16-bit tRNS chunk when bit_depth is 8
-Can't write tRNS with an alpha channel
-Invalid background palette index
-Ignoring attempt to write 16-bit bKGD chunk when bit_depth is 8
-Ignoring attempt to write bKGD chunk out-of-range for bit_depth
-Invalid number of histogram entries specified
-tEXt: invalid keyword
-tEXt: text too long
-zTXt: invalid compression type
-zTXt: invalid keyword
-iTXt: invalid keyword
-iTXt: invalid compression
-iTXt: uncompressed text too long
-Unrecognized unit type for oFFs chunk
-Unrecognized equation type for pCAL chunk
-pCAL: invalid keyword
-Can't write sCAL (buffer too small)
-Unrecognized unit type for pHYs chunk
-Invalid time specified for tIME chunk
-length exceeds PNG maximum
-in use by IDAT
-deflateEnd failed (ignored)
-compressed data too long
-error writing ancillary chunked compressed data
-Can't set both read_data_fn and write_data_fn in the same structure
-Call to NULL write function
-Write Error
-profile matches sRGB but writing iCCP instead
-Valid palette required for paletted images
-No IDATs written into file
-Wrote palette index exceeding num_palette
-png_write_info was never called before png_write_row
-internal write transform logic error
-Writing zero-length unknown chunk
-Out of memory
-0123456789ABCDEF
-123456789
-Libpng jmp_buf still allocated
-Application jmp_buf size changed
-libpng error: %s
-undefined
-libpng warning: %s
 bool
 int
 double
@@ -10893,33 +10785,8 @@ Nov
 Dec
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
-,
-,
 0
-,
-,
-,
-,
-,
-,
-,
-,
-,
-,
-,
-,
-,
-,
-,
-,
-,
-,
-,
-,
-,
-,
-,
-,
+m+
 
 
 
@@ -10929,6 +10796,8 @@ Dec
 
 0
 @
+"+
+E9u
 j
 j
 j
@@ -10939,9 +10808,12 @@ j
 j
 j
 j
-&+
 j
 j
++
++
++
++
 Ic]
 j
 j
@@ -10996,16 +10868,16 @@ IcE
 IcE
 @
 @
+)
 V
+Y(
 =
-(
+d'
 =
 !
 @
 @
 &
-
-
 @
 M9e
 @
@@ -11147,60 +11019,17 @@ P
 @
 ?
 @
-"
-B
-"
-B
-@
-H=
-@
-@
-@
-@
-"
-B
-@
-"
-B
-"
-B
-"
-B
-"
-B
-"
-B
-"
-B
-"
-B
-@
-@
-@
-P
-f
-b
 d
-f9e
-s
 
 
 
-h
 j
 j
-<
 j
 j
 j
 j
 A+M
-
-
-
-
-
-
 
 
 Hc
@@ -11264,6 +11093,7 @@ A+4$A+u
 =
 =
 @
+Y
 j
 j
 j
@@ -11498,6 +11328,7 @@ d
 @
 @
 0
+T
 0
 0
 2

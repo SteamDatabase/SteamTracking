@@ -40,6 +40,7 @@
     "Email_Wishlist_NewReleaseEA_Subject": "%1$s 现已在蒸汽平台上推出抢先体验版本！",
     "EventEmail_Destination_Store": "蒸汽平台商店游戏产品页面",
     "EventEmail_Destination_SalesPage": "蒸汽平台商店特卖页面",
+    "EventEditor_SaleValveApproval_Desc_Pending": "如果您的页面需要做出任何变更，蒸汽平台团队将会通过 Steamworks 客服案件与您联系。您可以点击右侧按钮查看 Steamworks 客服案件，如有必要，也可以留言。",
     "FriendsList_OfflineDetail": "此故障可能表明您的本地网络处于离线状态, 或者蒸汽平台好友服务器当前处于离线状态。",
     "FriendsList_StillLoadingDetail": "蒸汽平台正在尝试与好友网络进行连接，可能需要几秒钟时间。",
     "Dialog_DefaultWindowTitle": "蒸汽平台对话",
@@ -94,6 +95,7 @@
     "Login_EnterMobileCode": "输入您蒸汽平台手机应用上的代码",
     "Login_AwaitingMobileConfirmation": "使用 <1>蒸汽平台手机应用</1>来确认登录…",
     "Login_Title_SteamGuard": "蒸汽平台令牌",
+    "Login_Guest": "没有蒸汽平台帐户？没问题，您可以<1>以访客身份结账。</1>",
     "Login_Error_Network_Description": "与蒸汽平台通信时出现问题。请稍后重试。",
     "Login_GoOffline_Description": "您可以尝试在离线模式下运行蒸汽平台。",
     "Login_Error_Anonymous_Description": "网页端和桌面版蒸汽平台客户端均不支持匿名登录；仅 steamcmd 支持匿名登陆。",
@@ -165,5 +167,6 @@
     "SteamNotifications_ParentalFeatureAccessResponseBodyDeclined": "%1$s 已拒绝您访问蒸汽平台功能的请求",
     "FamilyHistory_SteamSupport": "蒸汽平台客服",
     "FamilyView_RequestFeatureAccess_Offline": "您目前已与蒸汽平台断开连接。上线向家庭中的成年人请求访问此功能。",
+    "FamilyManagement_RateLimitExceeded_CreateFamily": "蒸汽平台家庭测试版目前已对新帐户关闭。",
     "RemotePlay_StoreFunctionalityBlocked_Description": "通过此蒸汽平台流式应用客户端运行时无法访问商店。"
 }

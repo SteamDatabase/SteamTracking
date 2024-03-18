@@ -558,6 +558,7 @@
     "EventEditor_SaleValveApproval_Request_Link": "Se gennemgangssag...",
     "EventEditor_SaleValveApproval_Approved_Title": "Siden er godkendt og klar til udgivelse",
     "EventEditor_SaleValveApproval_Approved_Desc": "Gå til fanen \"Udgiv\" for at udgive.",
+    "EventEditor_SaleValveApproval_Approved_Desc_OnPublish": "Sørg for at dobbelttjekke synlighedsindstillingerne nedenfor inden udgivelse.",
     "AddToWishlist_short": "+ Ønskeliste",
     "Wishlisted": "På din ønskeliste",
     "Wishlisted_short": "Ønskeliste",
@@ -2656,6 +2657,7 @@
     "SteamNotificationTypeDesc_19": "En voksen i min familie svarer på min købsanmodning",
     "SteamNotificationTypeDesc_20": "En voksen i min familie svarer på min anmodning om en Steam-funktion",
     "SteamNotificationTypeDesc_21": "En voksen i min familie svarer på min anmodning om spilletid",
+    "SteamNotificationTypeDesc_22": "Jeg modtager et spil, jeg har anmodet om",
     "NotificationSettings_SendToast": "Notifikation i Steam-klienten",
     "NotificationSettings_PushNotification": "Push-notifikation i mobilappen",
     "NotificationsMenu_Title": "Notifikationer",
@@ -2789,6 +2791,8 @@
     "Notification_FamilyInvitePinned_Body_Plural": "%1$s nye familieinvitationer",
     "SteamNotifications_FamilyPurchaseRequestResponseDeclinedTitle": "Køb afvist",
     "SteamNotifications_FamilyPurchaseRequestDeclinedBody": "%1$s har afvist dit køb",
+    "SteamNotifications_RequestedGameAddedTitle": "Køb godkendt",
+    "SteamNotifications_RequestedGameAddedBody": "Du har modtaget %1$s",
     "SteamNotifications_ParentalFeatureRequestTitle": "Familieanmodning",
     "SteamNotifications_ParentalFeatureRequestBody": "%1$s anmoder om adgang til Steam-funktioner",
     "SteamNotifications_ParentalPlaytimeRequestTitle": "Familieanmodning",
@@ -2826,6 +2830,7 @@
     "FamilyHistory_PurchaseRequestApproved": "%1$s godkendte %2$s's købsanmodning.",
     "FamilyHistory_PurchaseRequestDeclined": "%1$s afviste %2$s's købsanmodning.",
     "FamilyView_RequestFeatureAccess": "Adgang til denne funktion er blevet begrænset af en voksen i familien. Du kan sende en anmodning om adgang til vedkommende.",
+    "FamilyView_RequestFeatureAccess_Always": "Adgang til denne funktion er blevet begrænset af en voksen i familien.",
     "FamilyView_RequestFeatureAccess_Offline": "Du har i øjeblikket ikke forbindelse til Steam. Gå online for at anmode om denne funktion fra en voksen i familien.",
     "FamilyView_RequestFeatureAccess_Request": "Anmod om adgang",
     "FamilyView_RequestFeatureAccess_GenericError": "Der opstod en fejl. Prøv igen senere. (%1$s)",
@@ -2879,5 +2884,6 @@
     "KioskMode_Unlock_Tooltip": "Afslut kiosktilstand",
     "KioskMode_Lock_Tooltip": "Start kiosktilstand",
     "RemotePlay_StoreFunctionalityBlocked_Title": "Butik ikke tilgængelig",
-    "RemotePlay_StoreFunctionalityBlocked_Description": "Butikken er ikke tilgængelig, mens der køres via denne Steam Link-klient."
+    "RemotePlay_StoreFunctionalityBlocked_Description": "Butikken er ikke tilgængelig, mens der køres via denne Steam Link-klient.",
+    "Hardware_ShippingEstimate_Range": "%1$s-%2$s hverdage"
 }

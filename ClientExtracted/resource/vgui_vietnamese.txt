@@ -198,7 +198,7 @@
 "FileOpenDialog_Col_DateModified" "Ngày sửa cuối"
 "FileOpenDialog_Col_DateCreated" "Ngày tạo"
 "FileOpenDialog_Col_Attributes"	"Chỉ số"
-"FileOpenDialog_FileType_Folder" "Thư mục tập tin"
+"FileOpenDialog_FileType_Folder" "Thư mục file"
 "FileOpenDialog_ToolTip_Up"	"Lên"
 "FileOpenDialog_ToolTip_NewFolder" "Thư mục mới"
 "FileOpenDialog_NewFolder_InputTitle"  "Thư mục mới"

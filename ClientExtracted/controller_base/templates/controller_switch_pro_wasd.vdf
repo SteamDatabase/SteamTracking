@@ -677,6 +677,29 @@
 		{
 		}
 	}
+	"group"
+	{
+		"id"		"10"
+		"mode"		"flickstick"
+		"inputs"
+		{
+
+			"click"
+			{
+				"activators"
+				{
+					"Double_Press"
+					{
+						"bindings"
+						{
+							"binding"		"controller_action camera_reset 180 66 90, , "
+						}
+					}
+				}
+			}
+		}
+
+	}
 	"preset"
 	{
 		"id"		"0"
@@ -692,6 +715,12 @@
 			"5"		"right_trigger active"
 			"9"		"right_joystick active"
 			"7"		"dpad active"
+			
+			"10"		"right_joystick active" 
+			"10"		"joystick inactive" 
+			
+			"10"		"right_trackpad inactive" 
+			"10"		"left_trackpad inactive" 
 		}
 	}
 	"settings"

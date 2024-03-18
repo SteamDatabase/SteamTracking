@@ -2661,6 +2661,7 @@
     "SteamNotificationTypeDesc_19": "An adult in my family responds to my purchase request",
     "SteamNotificationTypeDesc_20": "An adult in my family responds to my Steam feature request",
     "SteamNotificationTypeDesc_21": "An adult in my family responds to my playtime request",
+    "SteamNotificationTypeDesc_22": "I receive a game I requested",
     "NotificationSettings_SendToast": "Toast notification in the Steam Client",
     "NotificationSettings_PushNotification": "Push notification in the Mobile App",
     "NotificationsMenu_Title": "Notifications",
@@ -2794,6 +2795,8 @@
     "Notification_FamilyInvitePinned_Body_Plural": "%1$s New Family Invites",
     "SteamNotifications_FamilyPurchaseRequestResponseDeclinedTitle": "Purchase Declined",
     "SteamNotifications_FamilyPurchaseRequestDeclinedBody": "%1$s has declined your purchase",
+    "SteamNotifications_RequestedGameAddedTitle": "Purchase approved",
+    "SteamNotifications_RequestedGameAddedBody": "You have received %1$s",
     "SteamNotifications_ParentalFeatureRequestTitle": "Family Request",
     "SteamNotifications_ParentalFeatureRequestBody": "%1$s is requesting access to Steam features",
     "SteamNotifications_ParentalPlaytimeRequestTitle": "Family Request",
@@ -2831,6 +2834,7 @@
     "FamilyHistory_PurchaseRequestApproved": "%1$s approved %2$s's purchase request.",
     "FamilyHistory_PurchaseRequestDeclined": "%1$s declined %2$s's purchase request.",
     "FamilyView_RequestFeatureAccess": "Access to this functionality has been restricted by an adult in your family. You can send them a request for access.",
+    "FamilyView_RequestFeatureAccess_Always": "Access to this functionality has been restricted by an adult in your family.",
     "FamilyView_RequestFeatureAccess_Offline": "You are currently disconnected from Steam. Go online to request access to this functionality from an adult in your family.",
     "FamilyView_RequestFeatureAccess_Request": "Request Access",
     "FamilyView_RequestFeatureAccess_GenericError": "An error occurred. Please try again later. (%1$s)",
@@ -2885,5 +2889,6 @@
     "KioskMode_Lock_Tooltip": "Enter Kiosk Mode",
     "RemotePlay_StoreFunctionalityBlocked_Title": "Store Not Available",
     "RemotePlay_StoreFunctionalityBlocked_Description": "Access to the store is unavailable while running through this Steam Link client.",
+    "Hardware_ShippingEstimate_Range": "%1$s-%2$s Business Days",
     "shared_dummy": "dont translate"
 }

@@ -101,6 +101,7 @@ message FamilyGroupMember {
 	optional fixed64 steamid = 1;
 	optional .EFamilyGroupRole role = 2 [default = k_EFamilyGroupRole_None];
 	optional uint32 time_joined = 3;
+	optional uint32 cooldown_seconds_remaining = 4;
 }
 
 message FamilyGroupPendingInvite {
@@ -276,6 +277,8 @@ message PurchaseRequest {
 	optional uint64 request_id = 8;
 	repeated uint32 requested_packageids = 9;
 	repeated uint32 purchased_packageids = 10;
+	repeated uint32 requested_bundleids = 11;
+	repeated uint32 purchased_bundleids = 12;
 }
 
 message CFamilyGroups_GetPurchaseRequests_Response {

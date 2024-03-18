@@ -1091,6 +1091,7 @@ ${PARTNER_BASE_URL}promotion/planning/edit/${}
 ${PARTNER_BASE_URL}promotion/planning/migration
 ${PARTNER_BASE_URL}promotion/planning/salesrank
 ${PARTNER_BASE_URL}promotion/planning/themes
+${PARTNER_BASE_URL}promotion/sales/ajaxsaveasset/${}
 ${PARTNER_BASE_URL}promotion/spotlight/edit/${}
 ${PARTNER_BASE_URL}promotion/spotlights/ajaxcreatenewspotlight
 ${PARTNER_BASE_URL}promotion/spotlights/ajaxloadspotlight
@@ -3163,7 +3164,6 @@ steam://url/ManageGiftsPage
 steam://url/PrivacyPolicy
 steam://url/RedeemWalletVoucher
 steam://url/SSA
-steam://url/SteamAnnouncements
 steam://url/SteamIDEditPage
 steam://url/SteamIDFriendsPage
 steam://url/SteamIDMyProfile

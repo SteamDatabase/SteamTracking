@@ -30,7 +30,7 @@ var CLSTAMP = "0";
           "./friendsui_norwegian.json": [19181, 4716],
           "./friendsui_polish.json": [3751, 699],
           "./friendsui_portuguese.json": [21520, 4264],
-          "./friendsui_romanian.json": [85513, 3182],
+          "./friendsui_romanian.json": [98235, 3182],
           "./friendsui_russian.json": [99942, 2913],
           "./friendsui_sc_schinese.json": [64522, 3140],
           "./friendsui_schinese.json": [19456, 7706],
@@ -76,7 +76,7 @@ var CLSTAMP = "0";
           "./friendsui_norwegian.json": [19181, 4716],
           "./friendsui_polish.json": [3751, 699],
           "./friendsui_portuguese.json": [21520, 4264],
-          "./friendsui_romanian.json": [85513, 3182],
+          "./friendsui_romanian.json": [98235, 3182],
           "./friendsui_russian.json": [99942, 2913],
           "./friendsui_sc_schinese.json": [64522, 3140],
           "./friendsui_schinese.json": [19456, 7706],
@@ -100,7 +100,7 @@ var CLSTAMP = "0";
         }
         (i.keys = () => Object.keys(s)), (i.id = 9014), (e.exports = i);
       },
-      11551: (e, t, n) => {
+      55310: (e, t, n) => {
         "use strict";
         function s(e, t, n, s) {
           var i,
@@ -155,7 +155,7 @@ var CLSTAMP = "0";
         Object.create;
         Object.create;
         "function" == typeof SuppressedError && SuppressedError;
-        n(60660);
+        n(16677);
         var r = n(27378),
           a = n(37634);
         function o(e) {
@@ -1686,7 +1686,7 @@ var CLSTAMP = "0";
             });
           });
       },
-      60660: (e, t, n) => {
+      16677: (e, t, n) => {
         "use strict";
         "VALVE_PUBLIC_PATH" in window
           ? (n.p = window.VALVE_PUBLIC_PATH)
@@ -1922,7 +1922,7 @@ var CLSTAMP = "0";
         1313: "beaa8a39130794d9fa41",
         1471: "32d2e1addd119c9a70d4",
         1635: "7fb5be12f6f106e555ae",
-        2029: "4fdcd884a906cc678e8f",
+        2029: "2206f9a733c89a113c17",
         2431: "423f5ac04b6d9e2e0940",
         2443: "89ecf2e7069782684352",
         2537: "945f6687344fbb3315a2",
@@ -1932,7 +1932,7 @@ var CLSTAMP = "0";
         2913: "565378b821b0f60d7f9e",
         3112: "6a14ccd94bac413afdcf",
         3140: "e2daae18faf0f0c9eae9",
-        3182: "d91f1a3f65fef05cb7ff",
+        3182: "c118628204fbab7d0494",
         3252: "7ade274d3a297474af53",
         3471: "1fa97f49b537a5fe3dc5",
         3500: "d1e224fca60b25b5aa2b",
@@ -2113,6 +2113,6 @@ var CLSTAMP = "0";
           self.webpackChunk_steam_friendsui || []);
       n.forEach(t.bind(null, 0)), (n.push = t.bind(null, n.push.bind(n)));
     })();
-  var c = o.O(void 0, [5968], () => o(11551));
+  var c = o.O(void 0, [5968], () => o(55310));
   c = o.O(c);
 })();

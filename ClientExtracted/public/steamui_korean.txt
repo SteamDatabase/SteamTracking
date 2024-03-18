@@ -873,7 +873,7 @@
 "SteamUI_ValveSurvey_Summary_Computer"						"컴퓨터 정보:"
 "SteamUI_ValveSurvey_Summary_Processor"						"프로세서 정보:"
 "SteamUI_ValveSurvey_Summary_IP"							"네트워크 정보:"
-"SteamUI_ValveSurvey_Summary_OSVersion"						"운영체제 버전:"
+"SteamUI_ValveSurvey_Summary_OSVersion"						"운영 체제 버전:"
 "SteamUI_ValveSurvey_Summary_VideoCard"						"동영상 카드:"
 "SteamUI_ValveSurvey_Summary_Memory"						"메모리:"
 "SteamUI_ValveSurvey_Summary_Audio"							"사운드 카드:"
@@ -1433,7 +1433,7 @@
 "SteamUI_AMD_BigPicture_Problem_Url" "http://support.amd.com/us/gpudownload/linux/Pages/radeon_linux.aspx (영문)"
 
 "SteamUI_VidDriverDetailsLabel"		"드라이버 정보"
-"SteamUI_VidDriverOS"			"운영체제 버전:"
+"SteamUI_VidDriverOS"			"운영 체제 버전:"
 "SteamUI_VidDriverDescription"		"설명:"
 "SteamUI_VidDriverVersion"		"버전:"
 
@@ -2222,7 +2222,7 @@
 "steam_mymedia"		"미디어"
 "Steam_minigamescolumn_media"			"미디어"
 "SteamUI_GamesDialog_RightClick_BackupMedia" "미디어 파일 백업..."
-"SteamUI_CantRunMediaDueToOSVersion"		"%osversion% 운영체제에서는 지원되지 않기 때문에 %game% 게임을 시작할 수 없습니다."
+"SteamUI_CantRunMediaDueToOSVersion"		"%osversion% 운영 체제에서는 지원되지 않기 때문에 %game% 게임을 시작할 수 없습니다."
 "SteamUI_CantRunMediaDueToMediaPlayerVersion"   "윈도우 미디어 플레이어의 현재 버전은 [%detectedVersion%]입니다. [%requiredVersion%] 버전에서만 미디어 실행이 가능하므로 %game% 게임을 시작할 수 없습니다.\n다음 사이트에서 윈도우 미디어 플레이어의 최신 버전을 설치하세요."
 "SteamUI_CantRunMediaDueToMediaPlayerNotInstalled"   "Windows Media Player가 설치되어 있지 않기 때문에 %game% 게임을 시작할 수 없습니다.\n다음 사이트에서 Windows Media Player의 최신 버전을 설치하세요."
 "SteamUI_WindowsMediaPlayerInstallURL"		"http://www.microsoft.com/windows/windowsmedia/default.mspx"
@@ -3135,7 +3135,7 @@
 "SteamUI_P2P_TotalTime"			"총 시간:"
 "SteamUI_P2P_DownloadTime"		"다운로드 시간:"
 
-"Steam_Win98Warning_Title"	"Steam - 운영체제 지원 종료"
+"Steam_Win98Warning_Title"	"Steam - 운영 체제 지원 종료"
 "Steam_Win98Warning_Info"		"2010년 8월 31일 이후로 현재 사용하시는 버전의 Windows에 대한 Steam 지원이 중단됩니다.
 
 이 컴퓨터에서 계속 Steam을 실행하려면 Windows 버전을 Windows XP 서비스 팩 2 이상으로 업그레이드해야 합니다."
@@ -4202,9 +4202,9 @@ Windows에 관리자로 로그인해야 합니다.
 "Steam_AppUpdateError_38"		"파일 권한이 없음"
 "Steam_AppUpdateError_39"		"콘텐츠 파일 잠김"
 "Steam_AppUpdateError_40"		"콘텐츠 사용 불가"
-"Steam_AppUpdateError_41"		"이 실행 파일에는 64비트 운영체제가 필요합니다."
+"Steam_AppUpdateError_41"		"이 실행 파일에는 64비트 운영 체제가 필요합니다."
 "Steam_AppUpdateError_42"		"다운로드 파일 누락"
-"Steam_AppUpdateError_43"		"사용자를 위한 디스크 여유 공간이 부족합니다. 운영체제 디스크 할당량 설정을 확인하세요."
+"Steam_AppUpdateError_43"		"사용자를 위한 디스크 여유 공간이 부족합니다. 운영 체제 디스크 할당량 설정을 확인하세요."
 "Steam_AppUpdateError_44"		"사업장 라이선스 잠김"
 "Steam_AppUpdateError_45"		"가족 모드에 의해 차단됨"
 "Steam_AppUpdateError_46"		"생성 프로세스 실패"
@@ -4559,7 +4559,7 @@ Windows에 관리자로 로그인해야 합니다.
 
 "Steam_Settings_Compat"				        "Steam 플레이"
 "Steam_Settings_Compat_Title"			    "Steam 플레이 설정"
-"Steam_Settings_Compat_Info"			    "Steam 플레이는 호환 도구를 자동으로 설치해, 라이브러리에 있는 게임 중 다른 운영체제를 위해 제작된 게임을 플레이할 수 있도록 해줍니다."
+"Steam_Settings_Compat_Info"			    "Steam 플레이는 호환 도구를 자동으로 설치해, 라이브러리에 있는 게임 중 다른 운영 체제를 위해 제작된 게임을 플레이할 수 있도록 해줍니다."
 "Steam_Settings_Compat_Enable"			    "지원되는 타이틀에 대해 Steam 플레이 활성화하기"
 "Steam_Settings_Compat_Advanced_Title"		"고급"
 "Steam_Settings_Compat_Forced_Info"		    "Steam 플레이를 사용하면, 라이브러리에 있는 게임 중 호환 도구로 아직 확인하지 않은 게임을 먼저 테스트할 수 있습니다."

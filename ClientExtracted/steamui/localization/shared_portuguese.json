@@ -2657,6 +2657,7 @@
     "SteamNotificationTypeDesc_19": "Um Adulto da minha família responder ao meu pedido de compra",
     "SteamNotificationTypeDesc_20": "Um Adulto da minha família responder ao meu pedido de acesso a funcionalidade do Steam",
     "SteamNotificationTypeDesc_21": "Um Adulto da minha família responder ao meu pedido de tempo de jogo adicional",
+    "SteamNotificationTypeDesc_22": "Eu receber um jogo que pedi",
     "NotificationSettings_SendToast": "Alerta de notificação na aplicação Steam",
     "NotificationSettings_PushNotification": "Notificação push na app",
     "NotificationsMenu_Title": "Notificações",
@@ -2790,6 +2791,8 @@
     "Notification_FamilyInvitePinned_Body_Plural": "%1$s convites novos para famílias",
     "SteamNotifications_FamilyPurchaseRequestResponseDeclinedTitle": "Compra rejeitada",
     "SteamNotifications_FamilyPurchaseRequestDeclinedBody": "%1$s rejeitou a tua compra",
+    "SteamNotifications_RequestedGameAddedTitle": "Compra aprovada",
+    "SteamNotifications_RequestedGameAddedBody": "Recebeste %1$s",
     "SteamNotifications_ParentalFeatureRequestTitle": "Pedido na família",
     "SteamNotifications_ParentalFeatureRequestBody": "%1$s está a pedir acesso a funcionalidades do Steam",
     "SteamNotifications_ParentalPlaytimeRequestTitle": "Pedido na família",
@@ -2827,6 +2830,7 @@
     "FamilyHistory_PurchaseRequestApproved": "%1$s aprovou o pedido de compra de %2$s.",
     "FamilyHistory_PurchaseRequestDeclined": "%1$s rejeitou o pedido de compra de %2$s.",
     "FamilyView_RequestFeatureAccess": "O acesso a esta funcionalidade foi restringido por um adulto nesta família. Podes enviar-lhe um pedido de acesso.",
+    "FamilyView_RequestFeatureAccess_Always": "O acesso a esta funcionalidade foi restringido por um adulto na tua família.",
     "FamilyView_RequestFeatureAccess_Offline": "Estás sem ligação ao Steam. Entra no modo online para pedires acesso a esta funcionalidade a um adulto da tua família.",
     "FamilyView_RequestFeatureAccess_Request": "Pedir acesso",
     "FamilyView_RequestFeatureAccess_GenericError": "Ocorreu um erro. Tenta mais tarde. (%1$s)",
@@ -2880,5 +2884,6 @@
     "KioskMode_Unlock_Tooltip": "Sair do modo quiosque",
     "KioskMode_Lock_Tooltip": "Entrar no modo quiosque",
     "RemotePlay_StoreFunctionalityBlocked_Title": "Loja indisponível",
-    "RemotePlay_StoreFunctionalityBlocked_Description": "O acesso à loja está indisponível neste cliente do Steam Link."
+    "RemotePlay_StoreFunctionalityBlocked_Description": "O acesso à loja está indisponível neste cliente do Steam Link.",
+    "Hardware_ShippingEstimate_Range": "Entre %1$s e %2$s dias úteis"
 }

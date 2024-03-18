@@ -10,7 +10,7 @@
 		"english"
 		{
 			"title"		"Gamepad with Flick Stick"
-			"description"		"The template works best for games that are designed with a gamepad in mind, but also support a desktop mouse for camera control or aim. This will use the Flick Stick scheme developed by Jibb Smart where the joystick deflection will translate directly into camera movement, ex: straight down does an 180 degree turn. This will require tweaking per game to calibrate"
+			"description"		"The template works best for games that are designed with a gamepad in mind, but also support a desktop mouse for camera control or aim (Mixed Input). This will use the Flick Stick scheme developed by Jibb Smart where the joystick deflection will translate directly into camera movement, ex: straight down does an 180 degree turn. This will require tweaking per game to calibrate"
 		}
 		"czech"
 		{
@@ -320,30 +320,6 @@
 	}
 	"group"
 	{
-		"id"		"9"
-		"mode"		"flickstick"
-		"inputs"
-		{
-			"click"
-			{
-				"activators"
-				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"xinput_button JOYSTICK_RIGHT"
-						}
-					}
-				}
-			}
-		}
-		"gameactions"
-		{
-		}
-	}
-	"group"
-	{
 		"id"		"10"
 		"mode"		"dpad"
 		"inputs"
@@ -446,7 +422,7 @@
 	"group"
 	{
 		"id"		"12"
-		"mode"		"absolute_mouse"
+		"mode"		"gyro_to_mouse"
 		"inputs"
 		{
 		}
@@ -543,6 +519,90 @@
 			}
 		}
 	}
+	"group"
+	{
+		"id"		"13"
+		"mode"		"joystick_move"
+		"inputs"
+		{
+			"click"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"xinput_button JOYSTICK_RIGHT"
+						}
+					}
+				}
+			}
+		}
+		"gameactions"
+		{
+		}
+	}
+	"group"
+	{
+		"id"		"14"
+		"mode"		"flickstick"
+		"inputs"
+		{
+
+			"click"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"xinput_button JOYSTICK_RIGHT, , "
+						}
+					}
+					"Double_Press"
+					{
+						"bindings"
+						{
+							"binding"		"controller_action camera_reset 180 66 90, , "
+						}
+					}
+				}
+			}
+		}
+
+	}
+	"group"
+	{
+		"id"		"15"
+		"mode"		"flickstick"
+		"inputs"
+		{
+
+			"click"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"xinput_button JOYSTICK_LEFT, , "
+						}
+					}
+					"Double_Press"
+					{
+						"bindings"
+						{
+							"binding"		"controller_action camera_reset 180 66 90, , "
+						}
+					}
+				}
+			}
+		}
+
+	}
 	"preset"
 	{
 		"id"		"0"
@@ -556,10 +616,16 @@
 			"3"		"joystick active"
 			"4"		"left_trigger active"
 			"5"		"right_trigger active"
-			"9"		"right_joystick active"
 			"10"		"dpad active"
 			"11"		"center_trackpad inactive"
 			"12"		"gyro active"
+			"13"		"right_joystick inactive"
+
+			"14"		"right_joystick active" 
+			"15"		"joystick inactive" 
+			
+			"14"		"right_trackpad inactive" 
+			"15"		"left_trackpad inactive" 
 		}
 	}
 	"settings"

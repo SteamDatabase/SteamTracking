@@ -558,6 +558,7 @@
     "EventEditor_SaleValveApproval_Request_Link": "Ver chamado da análise...",
     "EventEditor_SaleValveApproval_Approved_Title": "Página aprovada e pronta para publicação",
     "EventEditor_SaleValveApproval_Approved_Desc": "Troque para a aba \"Publicar\" para iniciar o processo de publicação.",
+    "EventEditor_SaleValveApproval_Approved_Desc_OnPublish": "Verifique as configurações de visibilidade abaixo antes de publicar.",
     "AddToWishlist_short": "+ Lista de desejos",
     "Wishlisted": "Na lista de desejos",
     "Wishlisted_short": "Lista de desejos",
@@ -2656,6 +2657,7 @@
     "SteamNotificationTypeDesc_19": "um adulto da minha família responder ao meu pedido de compra.",
     "SteamNotificationTypeDesc_20": "um adulto da minha família responder ao meu pedido de acesso a um recurso do Steam.",
     "SteamNotificationTypeDesc_21": "um adulto da minha família responder ao meu pedido de tempo de jogo adicional.",
+    "SteamNotificationTypeDesc_22": "eu receber um jogo que pedi.",
     "NotificationSettings_SendToast": "Notificação visual no cliente Steam",
     "NotificationSettings_PushNotification": "Notificação push no aplicativo móvel",
     "NotificationsMenu_Title": "Notificações",
@@ -2789,6 +2791,8 @@
     "Notification_FamilyInvitePinned_Body_Plural": "%1$s novos convites para família",
     "SteamNotifications_FamilyPurchaseRequestResponseDeclinedTitle": "Compra recusada",
     "SteamNotifications_FamilyPurchaseRequestDeclinedBody": "%1$s recusou a sua compra",
+    "SteamNotifications_RequestedGameAddedTitle": "Compra aprovada",
+    "SteamNotifications_RequestedGameAddedBody": "Você recebeu %1$s",
     "SteamNotifications_ParentalFeatureRequestTitle": "Pedido da família",
     "SteamNotifications_ParentalFeatureRequestBody": "%1$s pediu acesso aos recursos do Steam.",
     "SteamNotifications_ParentalPlaytimeRequestTitle": "Pedido da família",
@@ -2826,6 +2830,7 @@
     "FamilyHistory_PurchaseRequestApproved": "%1$s aprovou o pedido de compra de %2$s.",
     "FamilyHistory_PurchaseRequestDeclined": "%1$s recusou o pedido de compra de %2$s.",
     "FamilyView_RequestFeatureAccess": "O acesso a esse recurso foi bloqueado por um adulto da sua família. Você pode enviar um pedido para acessá-lo.",
+    "FamilyView_RequestFeatureAccess_Always": "O acesso a esse recurso foi bloqueado por um adulto da sua família.",
     "FamilyView_RequestFeatureAccess_Offline": "No momento, você está desconectado do Steam. Acesse a internet para pedir o acesso a esse recurso a um adulto da sua família.",
     "FamilyView_RequestFeatureAccess_Request": "Pedir acesso",
     "FamilyView_RequestFeatureAccess_GenericError": "Ocorreu um erro. Tente novamente mais tarde. (%1$s)",
@@ -2879,5 +2884,6 @@
     "KioskMode_Unlock_Tooltip": "Sair do modo quiosque",
     "KioskMode_Lock_Tooltip": "Entrar no modo quiosque",
     "RemotePlay_StoreFunctionalityBlocked_Title": "Loja indisponível",
-    "RemotePlay_StoreFunctionalityBlocked_Description": "A loja não está disponível ao rodar por este cliente do Steam Link."
+    "RemotePlay_StoreFunctionalityBlocked_Description": "A loja não está disponível ao rodar por este cliente do Steam Link.",
+    "Hardware_ShippingEstimate_Range": "%1$s a %2$s dias úteis"
 }

@@ -558,6 +558,7 @@
     "EventEditor_SaleValveApproval_Request_Link": "查看審核案件…",
     "EventEditor_SaleValveApproval_Approved_Title": "您的頁面已通過審核可隨時發佈",
     "EventEditor_SaleValveApproval_Approved_Desc": "前往「發佈」分頁進行發佈流程。",
+    "EventEditor_SaleValveApproval_Approved_Desc_OnPublish": "請在發佈前仔細檢查下方的可見度設定。",
     "AddToWishlist_short": "+ 願望清單",
     "Wishlisted": "於願望清單中",
     "Wishlisted_short": "願望清單",
@@ -2656,6 +2657,7 @@
     "SteamNotificationTypeDesc_19": "我親友群組中的一名成人回應了我的購買請求",
     "SteamNotificationTypeDesc_20": "我親友群組中的一名成人回應了我的 Steam 功能請求",
     "SteamNotificationTypeDesc_21": "我親友群組中的一名成人回應了我的遊戲時間請求",
+    "SteamNotificationTypeDesc_22": "我收到了請求購買的遊戲",
     "NotificationSettings_SendToast": "Steam 用戶端中的快顯通知",
     "NotificationSettings_PushNotification": "行動裝置上的推播通知",
     "NotificationsMenu_Title": "通知",
@@ -2789,6 +2791,8 @@
     "Notification_FamilyInvitePinned_Body_Plural": "%1$s 個新親友群組邀請",
     "SteamNotifications_FamilyPurchaseRequestResponseDeclinedTitle": "購買遭拒",
     "SteamNotifications_FamilyPurchaseRequestDeclinedBody": "%1$s 已拒絕您的購買",
+    "SteamNotifications_RequestedGameAddedTitle": "已同意購買",
+    "SteamNotifications_RequestedGameAddedBody": "您收到了：%1$s",
     "SteamNotifications_ParentalFeatureRequestTitle": "親友群組請求",
     "SteamNotifications_ParentalFeatureRequestBody": "%1$s 正在請求存取 Steam 功能",
     "SteamNotifications_ParentalPlaytimeRequestTitle": "親友群組請求",
@@ -2826,6 +2830,7 @@
     "FamilyHistory_PurchaseRequestApproved": "%1$s 已批准 %2$s 的購買請求。",
     "FamilyHistory_PurchaseRequestDeclined": "%1$s 已拒絕 %2$s 的購買請求。",
     "FamilyView_RequestFeatureAccess": "您親友群組中的成人已限制使用此功能。您可以向他們發送存取請求。",
+    "FamilyView_RequestFeatureAccess_Always": "您親友群組中的成人已限制使用此功能。",
     "FamilyView_RequestFeatureAccess_Offline": "您目前與 Steam 的連線已中斷。請連上網路向您親友群組中的成人請求存取這項功能。",
     "FamilyView_RequestFeatureAccess_Request": "請求存取",
     "FamilyView_RequestFeatureAccess_GenericError": "發生錯誤。請稍後再試。（%1$s）",
@@ -2879,5 +2884,6 @@
     "KioskMode_Unlock_Tooltip": "退出 Kiosk 模式",
     "KioskMode_Lock_Tooltip": "進入 Kiosk 模式",
     "RemotePlay_StoreFunctionalityBlocked_Title": "商店不可用",
-    "RemotePlay_StoreFunctionalityBlocked_Description": "透過此 Steam 串流用戶端執行時無法使用商店。"
+    "RemotePlay_StoreFunctionalityBlocked_Description": "透過此 Steam 串流用戶端執行時無法使用商店。",
+    "Hardware_ShippingEstimate_Range": "%1$s - %2$s 個工作天"
 }

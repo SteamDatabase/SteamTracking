@@ -558,6 +558,7 @@ message CMsgSystemUpdateCheckResult {
 	optional bool available = 4;
 	optional string version = 5;
 	optional string auto_message = 6;
+	optional bool system_restart_pending = 7;
 }
 
 message CMsgSystemUpdateApplyParams {

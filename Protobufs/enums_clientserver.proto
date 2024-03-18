@@ -961,7 +961,7 @@ enum EMsg {
 	k_EMsgClientResetForgottenPassword3 = 5460;
 	k_EMsgClientRequestForgottenPasswordEmail3 = 5461;
 	k_EMsgClientNewLoginKey = 5463;
-	k_EMsgClientNewLoginKeyAccepted = 5464;
+	k_EMsgClientNewLoginKeyAccepted_Deprecated = 5464;
 	k_EMsgClientLogOnWithHash_Deprecated = 5465;
 	k_EMsgClientStoreUserStats2 = 5466;
 	k_EMsgClientStatsUpdated = 5467;

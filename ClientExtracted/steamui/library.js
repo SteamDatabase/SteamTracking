@@ -1,4 +1,4 @@
-var CLSTAMP = "8760384";
+var CLSTAMP = "0";
 /* Third-party software licenses can be found at licenses.txt */ (() => {
   var e,
     t,
@@ -468,8 +468,8 @@ var CLSTAMP = "8760384";
             return o.length > 1
               ? r.createElement(r.Fragment, null, ...o)
               : 1 == o.length
-              ? o[0]
-              : null;
+                ? o[0]
+                : null;
           }
         }
         const c = [
@@ -679,8 +679,8 @@ var CLSTAMP = "8760384";
                         l || (s && !t)
                           ? (i.ConvertMalformedNodeToText(), (i.text += a))
                           : e
-                          ? (s = !0)
-                          : t && (s = !1),
+                            ? (s = !0)
+                            : t && (s = !1),
                           (i = c(n, i)),
                           (l = !1);
                       }
@@ -800,9 +800,7 @@ var CLSTAMP = "8760384";
           t[""] && (n += `=${l(t[""])}`);
           for (const e in t)
             "" !== e &&
-              (n += ` ${((r = e), r.replace(/(\\| |\])/g, "\\$1"))}=${l(
-                t[e],
-              )}`);
+              (n += ` ${((r = e), r.replace(/(\\| |\])/g, "\\$1"))}=${l(t[e])}`);
           var r;
           return (n += "]"), n;
         }
@@ -850,8 +848,8 @@ var CLSTAMP = "8760384";
                       " " == s
                         ? ((i = 0), (a = !1), (c = !0))
                         : '"' == s
-                        ? ((i = 4), (a = !1))
-                        : (i = 3);
+                          ? ((i = 4), (a = !1))
+                          : (i = 3);
                       break;
                     case 3:
                     case 4:
@@ -925,11 +923,11 @@ var CLSTAMP = "8760384";
           "useActiveCMInterface" in e
             ? (s = o = e.useActiveCMInterface)
             : "useActiveSteamInterface" in e
-            ? (s = e.useActiveSteamInterface)
-            : (0, i.Z)(
-                e,
-                "neither useActiveCMInterface nor useActiveSteamInterface were provided",
-              );
+              ? (s = e.useActiveSteamInterface)
+              : (0, i.Z)(
+                  e,
+                  "neither useActiveCMInterface nor useActiveSteamInterface were provided",
+                );
           const a = r.useMemo(
             () => ({
               useActiveSteamInterface: s,
@@ -1558,14 +1556,14 @@ var CLSTAMP = "8760384";
         "use strict";
         n.d(t, {
           AN: () => b,
-          K3: () => _,
+          K3: () => H,
           Rt: () => k,
           Wy: () => w,
           _9: () => E,
           eL: () => r,
           iJ: () => i,
           sB: () => M,
-          x1: () => H,
+          x1: () => _,
         });
         var r,
           i,
@@ -1674,7 +1672,7 @@ var CLSTAMP = "8760384";
             r = s.useMemo(() => ({ ownerWindow: t }), [t]);
           return s.createElement(E.Provider, { value: r }, n);
         }
-        class _ {
+        class H {
           constructor(e, t) {
             (this.m_bCreated = !1),
               (this.m_onCreateRender = null),
@@ -1890,42 +1888,21 @@ var CLSTAMP = "8760384";
             return this.m_bFocused;
           }
           GetWindowRestoreDetails() {
-            return this.m_popup &&
-              !this.m_popup.closed &&
-              this.m_popup.SteamClient
-              ? new Promise((e, t) => {
-                  this.m_popup.SteamClient.Window.GetWindowRestoreDetails(
-                    (t) => {
-                      e(t);
-                    },
-                  );
-                })
+            return (0, v.w3)(this.m_popup, "Window.GetWindowRestoreDetails") &&
+              !this.m_popup.closed
+              ? this.m_popup.SteamClient.Window.GetWindowRestoreDetails()
               : Promise.resolve("");
           }
           IsMinimized() {
-            return this.m_popup &&
-              !this.m_popup.closed &&
-              this.m_popup.SteamClient &&
-              this.m_popup.SteamClient.Window &&
-              this.m_popup.SteamClient.Window.IsWindowMinimized
-              ? new Promise((e, t) => {
-                  this.m_popup.SteamClient.Window.IsWindowMinimized((t) => {
-                    e(t);
-                  });
-                })
+            return (0, v.w3)(this.m_popup, "Window.IsWindowMinimized") &&
+              !this.m_popup.closed
+              ? this.m_popup.SteamClient.Window.IsWindowMinimized()
               : Promise.resolve(!1);
           }
           IsMaximized() {
-            return this.m_popup &&
-              !this.m_popup.closed &&
-              this.m_popup.SteamClient &&
-              this.m_popup.SteamClient.Window &&
-              this.m_popup.SteamClient.Window.IsWindowMinimized
-              ? new Promise((e, t) => {
-                  this.m_popup.SteamClient.Window.IsWindowMaximized((t) => {
-                    e(t);
-                  });
-                })
+            return (0, v.w3)(this.m_popup, "Window.IsWindowMaximized") &&
+              !this.m_popup.closed
+              ? this.m_popup.SteamClient.Window.IsWindowMaximized()
               : Promise.resolve(!1);
           }
           ReleasePopup() {
@@ -1942,16 +1919,16 @@ var CLSTAMP = "8760384";
           OnFocus() {}
           OnBlur() {}
         }
-        (0, o.gn)([l.LO], _.prototype, "m_bFocused", void 0),
-          (0, o.gn)([C.a], _.prototype, "OnMessage", null),
-          (0, o.gn)([C.a], _.prototype, "RenderInternal", null),
-          (0, o.gn)([C.a], _.prototype, "OnCreateInternal", null),
-          (0, o.gn)([C.a], _.prototype, "OnResizeEvent", null),
-          (0, o.gn)([C.a], _.prototype, "OnBeforeUnloadEvent", null),
-          (0, o.gn)([C.a], _.prototype, "OnUnload", null),
-          (0, o.gn)([C.a], _.prototype, "OnFocusInternal", null),
-          (0, o.gn)([C.a], _.prototype, "OnBlurInternal", null);
-        class H extends _ {
+        (0, o.gn)([l.LO], H.prototype, "m_bFocused", void 0),
+          (0, o.gn)([C.a], H.prototype, "OnMessage", null),
+          (0, o.gn)([C.a], H.prototype, "RenderInternal", null),
+          (0, o.gn)([C.a], H.prototype, "OnCreateInternal", null),
+          (0, o.gn)([C.a], H.prototype, "OnResizeEvent", null),
+          (0, o.gn)([C.a], H.prototype, "OnBeforeUnloadEvent", null),
+          (0, o.gn)([C.a], H.prototype, "OnUnload", null),
+          (0, o.gn)([C.a], H.prototype, "OnFocusInternal", null),
+          (0, o.gn)([C.a], H.prototype, "OnBlurInternal", null);
+        class _ extends H {
           constructor(e, t, n, r) {
             super(e, n), this.SetSavedDimensionsKey(t), (this.m_bExpires = r);
           }
@@ -2024,7 +2001,7 @@ var CLSTAMP = "8760384";
               (this.m_rgParams.strRestoreDetails = e);
           }
         }
-        (0, o.gn)([C.a], H.prototype, "QueryAndStoreWindowPosition", null);
+        (0, o.gn)([C.a], _.prototype, "QueryAndStoreWindowPosition", null);
         class x {
           constructor() {
             if (
@@ -2038,9 +2015,9 @@ var CLSTAMP = "8760384";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "Mar 12 2024 : 14:13:27",
-                BUILD_TIME_UTC: "Mar 12 2024 : 21:13:27",
-                BUILD_RTIME_UTC: 1710278007,
+                BUILD_TIME_LOCAL: "Mar 18 2024 : 11:09:22",
+                BUILD_TIME_UTC: "Mar 18 2024 : 18:09:22",
+                BUILD_RTIME_UTC: 1710785362,
               }.MOBILE_BUILD)
             ) {
               window.addEventListener("beforeunload", (e) => {
@@ -2231,7 +2208,18 @@ var CLSTAMP = "8760384";
             if (!this.m_unCurrentAccountID || !this.m_bSaveRequired) return;
             let e = this.GetLocalStorageKey(),
               t = JSON.stringify(Array.from(this.m_mapRestoreDetails));
-            window.localStorage.setItem(e, t), (this.m_bSaveRequired = !1);
+            try {
+              window.localStorage.setItem(e, t), (this.m_bSaveRequired = !1);
+            } catch (n) {
+              if ("QuotaExceededError" == n.name) {
+                console.log("Quota exceeded");
+                for (let t of Object.keys(window.localStorage))
+                  t.startsWith("PopupSavedDimensions_") &&
+                    t != e &&
+                    window.localStorage.removeItem(t);
+                window.localStorage.setItem(e, t), (this.m_bSaveRequired = !1);
+              }
+            }
           }
           DebouncedSaveSavedDimensionStore() {
             this.SaveSavedDimensionStore();
@@ -2307,63 +2295,62 @@ var CLSTAMP = "8760384";
       },
       34294: (e, t, n) => {
         "use strict";
-        n.d(t, { B: () => h, s: () => m });
-        var r = n(85556),
-          i = n(27378),
-          o = n(64656),
-          l = n(66101),
-          s = n(63083),
-          a = n(35484),
-          c = n(93749),
-          C = n(12944);
-        function h(e, t, n) {
-          const r = i.useRef(),
-            [o, c] = i.useState(void 0),
-            C = (0, l.Z)();
+        n.d(t, { B: () => C, s: () => u });
+        var r = n(27378),
+          i = n(64656),
+          o = n(66101),
+          l = n(63083),
+          s = n(35484),
+          a = n(93749),
+          c = n(12944);
+        function C(e, t, n) {
+          const i = r.useRef(),
+            [a, c] = r.useState(void 0),
+            C = (0, o.Z)();
           return (
-            r.current ||
-              (r.current = new u(
+            i.current ||
+              (i.current = new h(
                 e,
                 (function (e, t) {
                   return Object.assign(Object.assign({}, e), {
-                    body_class: (0, a.Z)(e.body_class, t.body_class),
+                    body_class: (0, s.Z)(e.body_class, t.body_class),
                   });
                 })(t, C),
                 c,
               )),
-            (r.current.m_callbacks = n),
-            i.useEffect(() => {
-              if (!r.current.params.bNoInitialShow) {
-                let e = r.current.params.bNoFocusOnShow
-                  ? s.IF.k_EWindowBringToFrontWithoutForcingOS
-                  : s.IF.k_EWindowBringToFrontAndForceOS;
-                r.current.Show(e);
+            (i.current.m_callbacks = n),
+            r.useEffect(() => {
+              if (!i.current.params.bNoInitialShow) {
+                let e = i.current.params.bNoFocusOnShow
+                  ? l.IF.k_EWindowBringToFrontWithoutForcingOS
+                  : l.IF.k_EWindowBringToFrontAndForceOS;
+                i.current.Show(e);
               }
               return () => {
                 var e, t;
-                (r.current.m_callbacks = void 0),
-                  (null === (e = r.current.window) || void 0 === e
+                (i.current.m_callbacks = void 0),
+                  (null === (e = i.current.window) || void 0 === e
                     ? void 0
                     : e.SteamClient.Window.SetHideOnClose) &&
-                    (null === (t = r.current.window) ||
+                    (null === (t = i.current.window) ||
                       void 0 === t ||
                       t.SteamClient.Window.SetHideOnClose(!1)),
-                  r.current.Close();
+                  i.current.Close();
               };
             }, []),
-            i.useEffect(() => {
+            r.useEffect(() => {
               var e, n;
-              (null === (e = r.current.window) || void 0 === e
+              (null === (e = i.current.window) || void 0 === e
                 ? void 0
                 : e.SteamClient.Window.SetHideOnClose) &&
-                (null === (n = r.current.window) ||
+                (null === (n = i.current.window) ||
                   void 0 === n ||
                   n.SteamClient.Window.SetHideOnClose(t.bHideOnClose));
             }, [t.bHideOnClose]),
-            { popup: r.current.window, element: o, popupObj: r.current }
+            { popup: i.current.window, element: a, popupObj: i.current }
           );
         }
-        class u extends o.K3 {
+        class h extends i.K3 {
           constructor(e, t, n) {
             super(e, t), (this.m_fnReadyToRender = n);
           }
@@ -2408,57 +2395,48 @@ var CLSTAMP = "8760384";
             this.m_fnReadyToRender(t);
           }
         }
-        function d(e) {
-          return (0, r.mG)(this, void 0, void 0, function* () {
-            return new Promise((t, n) => {
-              e.SteamClient.Window.GetWindowRestoreDetails((e) => {
-                t(e);
-              });
-            });
-          });
-        }
-        function m(e) {
-          let t = (0, c.M)();
-          i.useEffect(() => {
-            let e = new C.Kg(t);
-            o.AN.SetCurrentLoggedInAccountID(e.GetAccountID());
+        function u(e) {
+          let t = (0, a.M)();
+          r.useEffect(() => {
+            let e = new c.Kg(t);
+            i.AN.SetCurrentLoggedInAccountID(e.GetAccountID());
           }, [t]);
-          const n = i.useRef(),
-            r = i.useCallback(
+          const n = r.useRef(),
+            o = r.useCallback(
               (t) => (
                 t.bIgnoreSavedDimensions || t.strRestoreDetails
                   ? t.strRestoreDetails &&
-                    o.AN.SetRestoreDetails(e, t.strRestoreDetails, !1)
-                  : (t.strRestoreDetails = o.AN.GetRestoreDetails(e)),
+                    i.AN.SetRestoreDetails(e, t.strRestoreDetails, !1)
+                  : (t.strRestoreDetails = i.AN.GetRestoreDetails(e)),
                 t
               ),
               [e],
             ),
-            l = i.useCallback(
-              (t, r, i) => {
+            l = r.useCallback(
+              (t, r, o) => {
                 n.current &&
                   t.setTimeout(() => {
-                    d(t).then((r) => {
+                    t.SteamClient.Window.GetWindowRestoreDetails().then((r) => {
                       let l = n.current != r;
                       t &&
                         r &&
-                        (l || i) &&
-                        (o.AN.SetRestoreDetails(e, r, !1), (n.current = r));
+                        (l || o) &&
+                        (i.AN.SetRestoreDetails(e, r, !1), (n.current = r));
                     });
                   }, 30);
               },
               [e],
             ),
-            s = i.useCallback(
+            s = r.useCallback(
               (e, t) => {
-                d(e).then((r) => {
+                e.SteamClient.Window.GetWindowRestoreDetails().then((r) => {
                   (n.current = r), l(e, t, !0);
                 });
               },
               [l],
             );
           return e
-            ? { updateParamsBeforeShow: r, onResize: l, onLoad: s }
+            ? { updateParamsBeforeShow: o, onResize: l, onLoad: s }
             : null;
         }
       },
@@ -2558,10 +2536,10 @@ var CLSTAMP = "8760384";
                 "focusClassesInDesktop",
               ]),
               { elemProps: E, navOptions: w, gamepadEvents: k } = (0, o.QH)(M),
-              _ = u() || n.GetDefaultContext();
-            let H = i.useRef(null);
-            H.current || (H.current = n.NewGamepadNavigationTree(_, p));
-            const x = H.current;
+              H = u() || n.GetDefaultContext();
+            let _ = i.useRef(null);
+            _.current || (_.current = n.NewGamepadNavigationTree(H, p));
+            const x = _.current;
             i.useLayoutEffect(() => {
               const e = (0, l.t)(f);
               x.Root.SetProperties(
@@ -2574,7 +2552,7 @@ var CLSTAMP = "8760384";
               x.SetApplyFocusClassesInDesktop(null != L && L),
               (0, s.Qg)(x.OnActivateCallbacks, c),
               (0, s.Qg)(x.OnDeactivateCallbacks, C),
-              (0, a.Jd)(k, b, H.current),
+              (0, a.Jd)(k, b, _.current),
               i.useLayoutEffect(
                 () => x.RegisterNavigationItem(x.Root, b.current),
                 [x, b],
@@ -2718,7 +2696,7 @@ var CLSTAMP = "8760384";
           QH: () => E,
           zQ: () => k,
           Iy: () => v,
-          lP: () => H,
+          lP: () => _,
           hi: () => x,
           ET: () => f,
           Pd: () => L,
@@ -2860,9 +2838,9 @@ var CLSTAMP = "8760384";
               scrollIntoViewWhenChildFocused: E,
               fnScrollIntoViewHandler: w,
               scrollIntoViewType: k,
-              resetNavOnEntry: _,
+              resetNavOnEntry: H,
             } = e,
-            H = (0, r._T)(e, [
+            _ = (0, r._T)(e, [
               "autoFocus",
               "preferredFocus",
               "disableNavSounds",
@@ -2886,7 +2864,7 @@ var CLSTAMP = "8760384";
               "scrollIntoViewType",
               "resetNavOnEntry",
             ]),
-            { gamepadEvents: x, actionDescriptions: b, props: S } = M(H);
+            { gamepadEvents: x, actionDescriptions: b, props: S } = M(_);
           return {
             elemProps: S,
             navOptions: {
@@ -2910,7 +2888,7 @@ var CLSTAMP = "8760384";
               scrollIntoViewWhenChildFocused: E,
               fnScrollIntoViewHandler: w,
               scrollIntoViewType: k,
-              resetNavOnEntry: _,
+              resetNavOnEntry: H,
               actionDescriptionMap: Object.assign(Object.assign({}, m), b),
             },
             gamepadEvents: x,
@@ -2962,7 +2940,7 @@ var CLSTAMP = "8760384";
           };
         }
         const k = w("div");
-        function _(e, t, n, r) {
+        function H(e, t, n, r) {
           const { elemProps: o, navOptions: s, gamepadEvents: a } = E(n);
           void 0 !== s.focusable || o.disabled || (s.focusable = !0);
           const { ref: c, node: C } = L(Object.assign({}, s)),
@@ -2986,7 +2964,7 @@ var CLSTAMP = "8760384";
           const w = (0, m.BE)(v, M, r, c),
             k = o.children;
           delete o.children;
-          const _ = o.focusClassName;
+          const H = o.focusClassName;
           return (
             delete o.focusClassName,
             i.createElement(
@@ -2998,7 +2976,7 @@ var CLSTAMP = "8760384";
                     Object.assign(Object.assign({}, o), {
                       divRef: w,
                       node: C,
-                      focusClassName: (0, d.Z)(_, "gpfocus"),
+                      focusClassName: (0, d.Z)(H, "gpfocus"),
                       focusWithinClassName: "gpfocuswithin",
                       className: (0, d.Z)(o.className, "Focusable"),
                     }),
@@ -3015,10 +2993,10 @@ var CLSTAMP = "8760384";
             )
           );
         }
-        function H(e) {
+        function _(e) {
           const t = w(e);
           return i.forwardRef(function (n, r) {
-            return _(e, t, n, r);
+            return H(e, t, n, r);
           });
         }
         function x(e) {
@@ -3061,7 +3039,7 @@ var CLSTAMP = "8760384";
               C = (0, r._T)(s, ["refKeyboardHandle"]),
               h = (0, c.k$)(l, a),
               u = (0, m.BE)(i, h);
-            return _(e, t, C, u);
+            return H(e, t, C, u);
           });
         }
       },
@@ -3193,7 +3171,7 @@ var CLSTAMP = "8760384";
             }, [s, a, p, m, L, M, C]);
           r.useImperativeHandle(t, () => ({ MeasureElementAndUpdate: w }), [w]);
           let k = l,
-            _ = m || {};
+            H = m || {};
           s && a.current && (s.BWantsFocusRing() || (k = !1)),
             s != h && (u(s), (E.current = performance.now()), w(), g && v(!1)),
             r.useEffect(() => {
@@ -3206,10 +3184,10 @@ var CLSTAMP = "8760384";
               };
               return t(), () => cancelAnimationFrame(e);
             });
-          const H = o || f;
+          const _ = o || f;
           return r.createElement(
-            H,
-            Object.assign({}, _, {
+            _,
+            Object.assign({}, H, {
               visible: k && null !== m,
               key: E.current,
               className: (0, i.Z)(n, L && c().FocusRingOnHiddenItem),
@@ -3364,19 +3342,19 @@ var CLSTAMP = "8760384";
             ]),
             { elemProps: M, navOptions: E, gamepadEvents: w } = (0, o.QH)(L);
           let k = {};
-          const _ = (0, h.t)(n);
-          _ != a.gj.NONE && (k.layout = _),
+          const H = (0, h.t)(n);
+          H != a.gj.NONE && (k.layout = H),
             p &&
               ((M.onClick = M.onClick || p),
               (w.onOKButton = w.onOKButton || p)),
             w.onOKButton && void 0 === E.focusable && (E.focusable = !0),
             g && (w.onCancelButton = w.onCancelButton || g);
-          const { ref: H, node: x } = (0, o.Pd)(
+          const { ref: _, node: x } = (0, o.Pd)(
               Object.assign(Object.assign({}, k), E),
             ),
             b = (0, c.K)();
           (M.className = (0, l.Z)(M.className, "Panel", b && "Focusable")),
-            (0, C.pD)(w, H);
+            (0, C.pD)(w, _);
           const S = (0, u.F)(),
             V = (0, d.Ze)(
               2,
@@ -3387,7 +3365,7 @@ var CLSTAMP = "8760384";
             y = (0, d.Ze)(1, () => (null == S ? void 0 : S.HasContextMenu(x))),
             Z = (0, m.M)(M);
           (0, m.B)(M);
-          const R = (0, s.BE)(V, y, Z, H, t);
+          const R = (0, s.BE)(V, y, Z, _, t);
           return (
             (!E.focusable && !E.focusableIfNoChildren) ||
               (x && x.Tree.BUseVirtualFocus()) ||
@@ -3604,8 +3582,8 @@ var CLSTAMP = "8760384";
               (d || 0 === d) && (E.scrollPaddingBottom = d),
               (p || 0 === p) && (E.scrollPaddingLeft = p);
             const { ref: w, navRef: k } = (0, C.$1)(),
-              _ = (0, s.BE)(k, L.navRef),
-              H = (0, s.BE)(w, t),
+              H = (0, s.BE)(k, L.navRef),
+              _ = (0, s.BE)(w, t),
               x =
                 null === (n = null == k ? void 0 : k.current) || void 0 === n
                   ? void 0
@@ -3615,8 +3593,8 @@ var CLSTAMP = "8760384";
               Object.assign({}, L, {
                 style: E,
                 className: (0, l.Z)(g, m().ScrollPanel, M),
-                ref: H,
-                navRef: _,
+                ref: _,
+                navRef: H,
               }),
               i.createElement(h.O, { NavigationManager: x }, f),
             );
@@ -4672,9 +4650,7 @@ var CLSTAMP = "8760384";
           }
           OnActivate(e) {
             m(
-              `${this.LogName(e)} Activating context, there are ${
-                this.m_rgGamepadNavigationTrees.length
-              } trees in this context`,
+              `${this.LogName(e)} Activating context, there are ${this.m_rgGamepadNavigationTrees.length} trees in this context`,
             ),
               this.SetActive(!0, e);
           }
@@ -4688,11 +4664,7 @@ var CLSTAMP = "8760384";
               ? (m(`${this.LogName(e)} Deactivate context for window`),
                 this.SetActive(!1, e))
               : m(
-                  `${this.LogName(e)} Blurred, but not deactivating because (${
-                    null === (t = this.m_activeWindow) || void 0 === t
-                      ? void 0
-                      : t.name
-                  }) has focus.`,
+                  `${this.LogName(e)} Blurred, but not deactivating because (${null === (t = this.m_activeWindow) || void 0 === t ? void 0 : t.name}) has focus.`,
                 );
           }
           OnDeactivateBrowserView(e, t) {
@@ -4735,13 +4707,7 @@ var CLSTAMP = "8760384";
               (e && e.BUseVirtualFocus()) ||
                 (this.m_LastActiveFocusNavTree = e),
               m(
-                `${this.LogName(
-                  null == e ? void 0 : e.Window,
-                )} Move from nav tree ${
-                  null == n ? void 0 : n.id
-                } to nav tree ${null == e ? void 0 : e.id} ${
-                  t ? "taking focus" : "no focus"
-                }`,
+                `${this.LogName(null == e ? void 0 : e.Window)} Move from nav tree ${null == n ? void 0 : n.id} to nav tree ${null == e ? void 0 : e.id} ${t ? "taking focus" : "no focus"}`,
               ),
               n && this.m_rgGamepadNavigationTrees.push(n),
               e &&
@@ -4761,13 +4727,7 @@ var CLSTAMP = "8760384";
           UnregisterGamepadNavigationTree(e) {
             l.Zf(this.m_rgGamepadNavigationTrees, e),
               m(
-                `(${this.m_rootWindow.name}) Unregister tree ${
-                  null == e ? void 0 : e.id
-                } ${
-                  this.m_LastActiveFocusNavTree == e
-                    ? "(was active)"
-                    : "(inactive)"
-                }`,
+                `(${this.m_rootWindow.name}) Unregister tree ${null == e ? void 0 : e.id} ${this.m_LastActiveFocusNavTree == e ? "(was active)" : "(inactive)"}`,
               ),
               this.m_LastActiveNavTree == e &&
                 ((this.m_LastActiveNavTree = null),
@@ -4876,9 +4836,7 @@ var CLSTAMP = "8760384";
                 const t = e.FindNavTreeInFocusedWindow();
                 if (t) {
                   g(
-                    `${e.LogName(
-                      t.Window,
-                    )} Found a focused window; setting this context as active.`,
+                    `${e.LogName(t.Window)} Found a focused window; setting this context as active.`,
                   ),
                     (this.m_ActiveContext = e),
                     this.m_ActiveContext.OnActivate(t.Window);
@@ -5046,13 +5004,7 @@ var CLSTAMP = "8760384";
                 ? (this.ChangeNavigationSource(n, r),
                   e &&
                     g(
-                      `Firing ${i.eV[t]} in tree ${
-                        null ===
-                          (C = null == d ? void 0 : d.m_LastActiveNavTree) ||
-                        void 0 === C
-                          ? void 0
-                          : C.id
-                      } at `,
+                      `Firing ${i.eV[t]} in tree ${null === (C = null == d ? void 0 : d.m_LastActiveNavTree) || void 0 === C ? void 0 : C.id} at `,
                       h,
                     ),
                   this.BatchedUpdate(() =>
@@ -5063,15 +5015,7 @@ var CLSTAMP = "8760384";
                     }),
                   ))
                 : g(
-                    `Suppressing ${i.eV[t]} input on element ${
-                      null == h ? void 0 : h.className
-                    } because tree ${
-                      null ===
-                        (c = null == d ? void 0 : d.m_LastActiveNavTree) ||
-                      void 0 === c
-                        ? void 0
-                        : c.id
-                    } has it disabled`,
+                    `Suppressing ${i.eV[t]} input on element ${null == h ? void 0 : h.className} because tree ${null === (c = null == d ? void 0 : d.m_LastActiveNavTree) || void 0 === c ? void 0 : c.id} has it disabled`,
                   );
           }
           OnButtonDown(e, t, n, r, i, o, l) {
@@ -5140,14 +5084,7 @@ var CLSTAMP = "8760384";
                     ),
                     e.Activate())
                   : g(
-                      `There was a focus event in ${
-                        e.id
-                      }, but the active nav tree is ${
-                        null === (i = o.m_LastActiveFocusNavTree) ||
-                        void 0 === i
-                          ? void 0
-                          : i.id
-                      } so it is being ignored.  Source: ${t && u.uS[t]}.`,
+                      `There was a focus event in ${e.id}, but the active nav tree is ${null === (i = o.m_LastActiveFocusNavTree) || void 0 === i ? void 0 : i.id} so it is being ignored.  Source: ${t && u.uS[t]}.`,
                     ));
           }
           BlurNavTree(e) {
@@ -5339,8 +5276,8 @@ var CLSTAMP = "8760384";
           return "x" == e
             ? t.x + t.width > n.x + r && t.x + r < n.x + n.width
             : "y" == e
-            ? t.y + t.height > n.y + r && t.y + r < n.y + n.height
-            : ((0, i.X)(!1, `Invalid axis ${e}`), !1);
+              ? t.y + t.height > n.y + r && t.y + r < n.y + n.height
+              : ((0, i.X)(!1, `Invalid axis ${e}`), !1);
         }
         function h(e, t, n) {
           let r;
@@ -5349,9 +5286,10 @@ var CLSTAMP = "8760384";
               ? (r =
                   Math.min(t.x + t.width, n.x + n.width) - Math.max(t.x, n.x))
               : "y" == e
-              ? (r =
-                  Math.min(t.y + t.height, n.y + n.height) - Math.max(t.y, n.y))
-              : ((0, i.X)(!1, `Invalid axis ${e}`), (r = 0)),
+                ? (r =
+                    Math.min(t.y + t.height, n.y + n.height) -
+                    Math.max(t.y, n.y))
+                : ((0, i.X)(!1, `Invalid axis ${e}`), (r = 0)),
             r < 0 ? 0 : r
           );
         }
@@ -5416,7 +5354,7 @@ var CLSTAMP = "8760384";
       28253: (e, t, n) => {
         "use strict";
         n.d(t, {
-          Vp: () => _,
+          Vp: () => H,
           zE: () => k,
           gj: () => M,
           c4: () => E,
@@ -5487,8 +5425,8 @@ var CLSTAMP = "8760384";
               ? n.distance - r.distance
               : 1
             : r.offScreen
-            ? -1
-            : n.distance - r.distance;
+              ? -1
+              : n.distance - r.distance;
         }
         function f(e, t, n) {
           const r = e.Element.getBoundingClientRect(),
@@ -5569,7 +5507,7 @@ var CLSTAMP = "8760384";
               (e[(e.FORWARD = 1)] = "FORWARD"),
               (e[(e.BACKWARD = 2)] = "BACKWARD");
           })(k || (k = {}));
-        class _ {
+        class H {
           constructor(e, t, n) {
             (this.m_rgChildren = []),
               (this.m_iLastActiveChildIndex = -1),
@@ -5604,8 +5542,8 @@ var CLSTAMP = "8760384";
             )
               ? this.m_Properties.navKey
               : (null === (t = this.m_element) || void 0 === t ? void 0 : t.id)
-              ? this.m_element.id
-              : void 0;
+                ? this.m_element.id
+                : void 0;
           }
           get Element() {
             return this.m_element;
@@ -5812,11 +5750,7 @@ var CLSTAMP = "8760384";
             const t = this.Tree.DeferredFocus.BIsQueuedFocusNode(this);
             (this.m_bFocused || t) &&
               (L(
-                `The focused node is unmounting, ${
-                  this.m_RetainFocusParent
-                    ? "will transfer to retain focus ancestor"
-                    : "will blur"
-                }.`,
+                `The focused node is unmounting, ${this.m_RetainFocusParent ? "will transfer to retain focus ancestor" : "will blur"}.`,
               ),
               t && this.Tree.DeferredFocus.RequestFocus(null),
               this.m_RetainFocusParent
@@ -5920,8 +5854,8 @@ var CLSTAMP = "8760384";
                 return i & Node.DOCUMENT_POSITION_PRECEDING
                   ? 1
                   : i & Node.DOCUMENT_POSITION_FOLLOWING
-                  ? -1
-                  : 0;
+                    ? -1
+                    : 0;
               }),
               this.m_ActiveChild &&
                 (this.m_iLastActiveChildIndex = this.m_rgChildren.indexOf(
@@ -5960,10 +5894,10 @@ var CLSTAMP = "8760384";
               ? r && !r(this)
                 ? "none"
                 : e || (t && (n || 0 == this.m_rgChildren.length))
-                ? "self"
-                : !n && this.m_rgChildren.length
-                ? "children"
-                : "none"
+                  ? "self"
+                  : !n && this.m_rgChildren.length
+                    ? "children"
+                    : "none"
               : "none";
           }
           BTakeFocus(e, t) {
@@ -6032,13 +5966,11 @@ var CLSTAMP = "8760384";
                       void 0 !== i
                         ? i
                         : null === (l = this.m_Tree.GetLastFocusedNode()) ||
-                          void 0 === l
-                        ? void 0
-                        : l.GetBoundingRect()),
+                            void 0 === l
+                          ? void 0
+                          : l.GetBoundingRect()),
                   L(
-                    `Taking focus while preserving ${
-                      n && E[n]
-                    } preserved: ${r} movement: ${s}, node:`,
+                    `Taking focus while preserving ${n && E[n]} preserved: ${r} movement: ${s}, node:`,
                     a || t,
                   );
                 const c = this.ComputeRelativeDirection(e, M.GRID);
@@ -6112,16 +6044,7 @@ var CLSTAMP = "8760384";
               });
             return (
               L(
-                `Focusing visible child, best child match is ${
-                  null ===
-                    (o =
-                      null === (i = null == s ? void 0 : s.child) ||
-                      void 0 === i
-                        ? void 0
-                        : i.Element) || void 0 === o
-                    ? void 0
-                    : o.className
-                } - ${JSON.stringify(null == s ? void 0 : s.visibility)}`,
+                `Focusing visible child, best child match is ${null === (o = null === (i = null == s ? void 0 : s.child) || void 0 === i ? void 0 : i.Element) || void 0 === o ? void 0 : o.className} - ${JSON.stringify(null == s ? void 0 : s.visibility)}`,
               ),
               !!s && s.child.BTakeFocus(e)
             );
@@ -6242,8 +6165,8 @@ var CLSTAMP = "8760384";
             )
               ? this.m_Properties.scrollIntoViewType
               : this.m_Parent
-              ? this.m_Parent.GetScrollIntoViewType()
-              : w.Standard;
+                ? this.m_Parent.GetScrollIntoViewType()
+                : w.Standard;
           }
           GetRelativeDirection(e) {
             return this.ComputeRelativeDirection(e, this.GetLayout());
@@ -6329,9 +6252,9 @@ var CLSTAMP = "8760384";
                 void 0 !== r
                   ? r
                   : null === (o = this.m_Tree.GetLastFocusedNode()) ||
-                    void 0 === o
-                  ? void 0
-                  : o.GetBoundingRect();
+                      void 0 === o
+                    ? void 0
+                    : o.GetBoundingRect();
               e && ((c.x = e.x), (c.width = e.width));
             }
             if (s) {
@@ -6407,7 +6330,7 @@ var CLSTAMP = "8760384";
             );
           }
           SetActiveChild(e) {
-            e instanceof _
+            e instanceof H
               ? (this.EnsureChildrenSorted(),
                 (this.m_ActiveChild = e),
                 (this.m_iLastActiveChildIndex = this.m_rgChildren.indexOf(e)))
@@ -6454,9 +6377,9 @@ var CLSTAMP = "8760384";
               this.m_Tree.OnChildActivated(e);
           }
         }
-        (0, r.gn)([s.a], _.prototype, "OnDOMFocus", null),
-          (0, r.gn)([s.a], _.prototype, "OnDOMBlur", null),
-          (0, r.gn)([s.a], _.prototype, "OnNavigationEvent", null);
+        (0, r.gn)([s.a], H.prototype, "OnDOMFocus", null),
+          (0, r.gn)([s.a], H.prototype, "OnDOMBlur", null),
+          (0, r.gn)([s.a], H.prototype, "OnNavigationEvent", null);
       },
       92180: (e, t, n) => {
         "use strict";
@@ -6525,8 +6448,8 @@ var CLSTAMP = "8760384";
             return "x" == e
               ? this.m_lastFocusNodeXMovement.GetRect()
               : "y" == e
-              ? this.m_lastFocusNodeYMovement.GetRect()
-              : void 0;
+                ? this.m_lastFocusNodeYMovement.GetRect()
+                : void 0;
           }
           get OnActivateCallbacks() {
             return this.m_onActivateCallbacks;
@@ -6609,9 +6532,7 @@ var CLSTAMP = "8760384";
             let { bUnhandled: t, bHadLogicalEventMapping: n } = (0, l.Ut)(e);
             return (
               c(
-                `Logical gamepad Event fired: ${
-                  r.eV[e.detail.button]
-                }, had logical event: ${n}, was handled: ${!t}`,
+                `Logical gamepad Event fired: ${r.eV[e.detail.button]}, had logical event: ${n}, was handled: ${!t}`,
               ),
               t &&
                 this.m_onUnhandledButton &&
@@ -6680,11 +6601,11 @@ var CLSTAMP = "8760384";
                     null == t ? void 0 : t.Element,
                   )
                 : "y" == n
-                ? this.m_lastFocusNodeYMovement.SetNode(
-                    null == t ? void 0 : t.Element,
-                  )
-                : (this.m_lastFocusNodeXMovement.Reset(),
-                  this.m_lastFocusNodeYMovement.Reset()),
+                  ? this.m_lastFocusNodeYMovement.SetNode(
+                      null == t ? void 0 : t.Element,
+                    )
+                  : (this.m_lastFocusNodeXMovement.Reset(),
+                    this.m_lastFocusNodeYMovement.Reset()),
               this.m_context.OnFocusChangeComplete(s);
           }
         }
@@ -6747,9 +6668,7 @@ var CLSTAMP = "8760384";
               const { node: e, bFocusDescendant: t } = this.m_target;
               (this.m_target = void 0),
                 a(
-                  `DeferredFocus in ${this.m_tree.id} - focusing ${
-                    t ? "descendant of" : "node"
-                  } ${e.NavKey}`,
+                  `DeferredFocus in ${this.m_tree.id} - focusing ${t ? "descendant of" : "node"} ${e.NavKey}`,
                 ),
                 t
                   ? e.BChildTakeFocus(l.uS.APPLICATION) ||
@@ -6897,17 +6816,17 @@ var CLSTAMP = "8760384";
           return i < s && o > a
             ? 0
             : (i < s && l <= c) || (o > a && l > c)
-            ? i - s - C
-            : (i < s && l > c) || (o > a && l <= c)
-            ? o - a + h
-            : 0;
+              ? i - s - C
+              : (i < s && l > c) || (o > a && l <= c)
+                ? o - a + h
+                : 0;
         }
         function L(e) {
           return "auto" == e
             ? 0
             : e.endsWith("px")
-            ? parseInt(e)
-            : (console.log("Unsupported length", e), 0);
+              ? parseInt(e)
+              : (console.log("Unsupported length", e), 0);
         }
         function M(e) {
           if (!("ownerDocument" in e))
@@ -6968,9 +6887,7 @@ var CLSTAMP = "8760384";
               (C(
                 "Checking scroll div",
                 e,
-                `scroll y:${u.scrollTop} of ${u.MaxScrollTop()}, x:${
-                  u.scrollLeft
-                } of ${u.MaxScrollLeft()}, adjusted =>`,
+                `scroll y:${u.scrollTop} of ${u.MaxScrollTop()}, x:${u.scrollLeft} of ${u.MaxScrollLeft()}, adjusted =>`,
                 n,
                 "target => ",
                 c,
@@ -7033,7 +6950,7 @@ var CLSTAMP = "8760384";
                 ));
           }
         }
-        class _ {
+        class H {
           constructor(e) {
             (this.m_scrollTopTarget = void 0),
               (this.m_scrollLeftTarget = void 0),
@@ -7153,14 +7070,14 @@ var CLSTAMP = "8760384";
             return this.scrollWidth - this.clientWidth;
           }
         }
-        (0, r.gn)([c.a], _.prototype, "ResetScrollState", null);
-        const H = new WeakMap();
+        (0, r.gn)([c.a], H.prototype, "ResetScrollState", null);
+        const _ = new WeakMap();
         function x(e) {
-          let t = H.get(e);
-          return t || ((t = new _(e)), H.set(e, t)), t;
+          let t = _.get(e);
+          return t || ((t = new H(e)), _.set(e, t)), t;
         }
         function b(e) {
-          const t = H.get(e);
+          const t = _.get(e);
           return t
             ? { scrollLeft: t.scrollLeft, scrollTop: t.scrollTop }
             : { scrollLeft: e.scrollLeft, scrollTop: e.scrollTop };
@@ -8043,10 +7960,10 @@ var CLSTAMP = "8760384";
             e instanceof l
               ? (this.m_ulSteamID = e.m_ulSteamID)
               : "string" == typeof e
-              ? (this.m_ulSteamID = r.Z.fromString(e, !0))
-              : t && n && void 0 !== i
-              ? this.SetFromComponents(null != e ? e : 0, i, n, t)
-              : (this.m_ulSteamID = e ? r.Z.fromNumber(e, !0) : r.Z.UZERO);
+                ? (this.m_ulSteamID = r.Z.fromString(e, !0))
+                : t && n && void 0 !== i
+                  ? this.SetFromComponents(null != e ? e : 0, i, n, t)
+                  : (this.m_ulSteamID = e ? r.Z.fromNumber(e, !0) : r.Z.UZERO);
           }
           static InitFromAccountID(e) {
             return new l(Number(e), o.De.EUNIVERSE, 1, i.QS);
@@ -8218,7 +8135,7 @@ var CLSTAMP = "8760384";
         var r = n(85556),
           i = n(9891),
           o = n(82997),
-          l = n(85164);
+          l = n(72467);
         function s(e, t = "", n = null) {
           return d.InstrumentLink(e, t, n);
         }
@@ -8374,7 +8291,10 @@ var CLSTAMP = "8760384";
             if (t && d.sm_rgNavEventDictionary)
               for (const e in d.sm_rgNavEventDictionary)
                 if (d.sm_rgNavEventDictionary[e] == t) return e;
-            return e && e.match(/^[a-zA-Z0-9\- ]*$/) ? e : "";
+            return d.SanitizeEventComponent(e);
+          }
+          static SanitizeEventComponent(e) {
+            return e && e.match(/^[a-zA-Z0-9\-.]*$/) ? e : "";
           }
         }
         d.sm_bIsLoaded = !1;
@@ -8634,8 +8554,7 @@ var CLSTAMP = "8760384";
                 );
             } catch (t) {
               console.error(
-                `CMInterface RECV exception thrown while processing message of type ${(0,
-                u.SR)(e.GetEMsg())}`,
+                `CMInterface RECV exception thrown while processing message of type ${(0, u.SR)(e.GetEMsg())}`,
                 t,
               ),
                 e.DEBUG_LogToConsole();
@@ -8960,8 +8879,8 @@ var CLSTAMP = "8760384";
             null,
           );
         var k = n(60991),
-          _ = n(56141),
-          H = n(63083),
+          H = n(56141),
+          _ = n(63083),
           x = n(14206),
           b = n.n(x);
         class S {
@@ -9134,8 +9053,8 @@ var CLSTAMP = "8760384";
                         (r
                           ? this.WriteCMListToLocalStorage()
                           : this.BCMOkToUse(e, "seriouslytimeout")
-                          ? c({ [e.strHost]: e })
-                          : ((n[e.strHost] = e), c(n))));
+                            ? c({ [e.strHost]: e })
+                            : ((n[e.strHost] = e), c(n))));
                 };
               C = () => {
                 if (h < t.length) {
@@ -9304,9 +9223,7 @@ var CLSTAMP = "8760384";
                             },
                             () => {
                               console.log(
-                                `Failed to connect to CM ${o + 1} of ${
-                                  l.length
-                                }: ${e.strHost}`,
+                                `Failed to connect to CM ${o + 1} of ${l.length}: ${e.strHost}`,
                               ),
                                 r++,
                                 r === l.length &&
@@ -9337,7 +9254,7 @@ var CLSTAMP = "8760384";
                 let t = new a.At(e.data),
                   n = l.lq.InitHeaderFromPacket(t);
                 1 == n.GetEMsg()
-                  ? this.DecodeAndDispatchMultiMsg(l.gA.InitFromMsg(_.ne, n))
+                  ? this.DecodeAndDispatchMultiMsg(l.gA.InitFromMsg(H.ne, n))
                   : this.DispatchMessage(n);
               }),
               new Promise((n, r) => {
@@ -9446,7 +9363,7 @@ var CLSTAMP = "8760384";
             if (
               e.BIsValid() &&
               e.Hdr().jobid_target() &&
-              e.Hdr().jobid_target() !== H.Z3
+              e.Hdr().jobid_target() !== _.Z3
             ) {
               let t = parseInt(e.Hdr().jobid_target());
               if (this.m_mapWaitingCallbacks.has(t)) {
@@ -9747,11 +9664,11 @@ var CLSTAMP = "8760384";
         "use strict";
         n.d(t, {
           HZ: () => u,
-          Hl: () => _,
+          Hl: () => H,
           KI: () => L,
           WX: () => g,
           Ze: () => m,
-          cs: () => H,
+          cs: () => _,
           g$: () => f,
           h9: () => w,
           mq: () => k,
@@ -10220,7 +10137,7 @@ var CLSTAMP = "8760384";
               : i.call(r, e, t);
           });
         }
-        function _(e, t) {
+        function H(e, t) {
           return E(e, t, (e, t) => {
             var n, r, i;
             return null ===
@@ -10240,7 +10157,7 @@ var CLSTAMP = "8760384";
               : i.call(r, e, t);
           });
         }
-        function H(e) {
+        function _(e) {
           return (0, l.SZ)(() => b.BHasMutualCapability(e));
         }
         (0, r.gn)([o.LO], d.prototype, "m_rgMutualCapabilities", void 0),
@@ -10288,7 +10205,7 @@ var CLSTAMP = "8760384";
           Td: () => S,
           Vc: () => O,
           Wn: () => D,
-          Yr: () => H,
+          Yr: () => _,
           Zo: () => b,
           kl: () => W,
           oD: () => A,
@@ -10317,8 +10234,8 @@ var CLSTAMP = "8760384";
           E = n(50947),
           w = n(85164),
           k = n(38621),
-          _ = n.n(k);
-        const H = (0, h.Yt)("ContextMenuInstanceContext", () =>
+          H = n.n(k);
+        const _ = (0, h.Yt)("ContextMenuInstanceContext", () =>
           o.createContext(null),
         );
         let x = class extends o.Component {
@@ -10378,7 +10295,7 @@ var CLSTAMP = "8760384";
                 "bForceDesktopPresentation",
               ]);
             const p =
-              null !== (e = this.context.styles) && void 0 !== e ? e : _();
+              null !== (e = this.context.styles) && void 0 !== e ? e : H();
             let g = null != h ? h : "#Button_Cancel";
             if (1 != this.context.presentation || d)
               return o.createElement(
@@ -10446,7 +10363,7 @@ var CLSTAMP = "8760384";
             }
           }
         };
-        (x.contextType = H),
+        (x.contextType = _),
           (0, r.gn)([E.ak], x.prototype, "HideIfSubmenu", null),
           (0, r.gn)([E.ak], x.prototype, "HideMenu", null),
           (x = (0, r.gn)([i.Pi], x));
@@ -10502,7 +10419,7 @@ var CLSTAMP = "8760384";
                       ? void 0
                       : e.styles) && void 0 !== t
                   ? t
-                  : _();
+                  : H();
             return 1 == this.context.presentation
               ? o.createElement(
                   a.s,
@@ -10551,7 +10468,7 @@ var CLSTAMP = "8760384";
                 );
           }
         }
-        (b.contextType = H),
+        (b.contextType = _),
           (0, r.gn)([E.ak], b.prototype, "OnClick", null),
           (0, r.gn)([E.ak], b.prototype, "OnOKButton", null),
           (0, r.gn)([E.ak], b.prototype, "OnMouseEnter", null),
@@ -10579,7 +10496,7 @@ var CLSTAMP = "8760384";
             return o.createElement(
               b,
               Object.assign({}, i),
-              o.createElement("div", { className: _().IconContainer }, t),
+              o.createElement("div", { className: H().IconContainer }, t),
               n,
             );
           }
@@ -10587,7 +10504,7 @@ var CLSTAMP = "8760384";
         function y(e) {
           var t;
           const n =
-            null !== (t = o.useContext(H).styles) && void 0 !== t ? t : _();
+            null !== (t = o.useContext(_).styles) && void 0 !== t ? t : H();
           return o.createElement("div", { className: n.ContextMenuSeparator });
         }
         const Z = (e) => {
@@ -10661,7 +10578,7 @@ var CLSTAMP = "8760384";
                 "bInGamepadUI",
               ]);
             const C =
-              null !== (e = this.context.styles) && void 0 !== e ? e : _();
+              null !== (e = this.context.styles) && void 0 !== e ? e : H();
             return o.createElement(
               b,
               Object.assign({}, c, {
@@ -10686,7 +10603,7 @@ var CLSTAMP = "8760384";
             );
           }
         }
-        (R.contextType = H),
+        (R.contextType = _),
           (0, r.gn)([E.ak], R.prototype, "OnSubMenuMouseEnter", null),
           (0, r.gn)([E.ak], R.prototype, "OnSubMenuHidden", null),
           (0, r.gn)([E.ak], R.prototype, "ShowSubMenu", null),
@@ -10863,21 +10780,21 @@ var CLSTAMP = "8760384";
               E = M > 0,
               w = a + C - (t.bOverlapHorizontal ? g : f) - v,
               k = w > 0,
-              _ = (t.bPreferPopLeft || !k) && E;
+              H = (t.bPreferPopLeft || !k) && E;
             E ||
               k ||
-              ((_ = E > k),
-              t.bFitToWindow && ((v += (_ ? M : w) - 8), (p.menuWidth = v))),
-              _
+              ((H = E > k),
+              t.bFitToWindow && ((v += (H ? M : w) - 8), (p.menuWidth = v))),
+              H
                 ? (p.menuRight = C - (t.bOverlapHorizontal ? f : g))
                 : (p.menuLeft = t.bOverlapHorizontal ? g : f);
-            let H = null != s ? s : d.top,
+            let _ = null != s ? s : d.top,
               x = null != s ? s : d.bottom,
               b = n.scrollHeight;
-            t.bMatchHeight && ((b = x - H), (p.menuHeight = b));
-            let S = (t.bOverlapVertical ? x : H) - c - b,
+            t.bMatchHeight && ((b = x - _), (p.menuHeight = b));
+            let S = (t.bOverlapVertical ? x : _) - c - b,
               V = S > 0,
-              y = c + h - (t.bOverlapVertical ? H : x) - b,
+              y = c + h - (t.bOverlapVertical ? _ : x) - b,
               Z = y > 0,
               R = (t.bPreferPopTop || !Z) && V && !t.bDisablePopTop;
             if (!V && !Z) {
@@ -10894,8 +10811,8 @@ var CLSTAMP = "8760384";
             void 0 === p.menuBottom &&
               void 0 === p.menuTop &&
               (R
-                ? (p.menuBottom = h - (t.bOverlapVertical ? x : H))
-                : (p.menuTop = t.bOverlapVertical ? H : x)),
+                ? (p.menuBottom = h - (t.bOverlapVertical ? x : _))
+                : (p.menuTop = t.bOverlapVertical ? _ : x)),
               i
                 ? (p.menuHeight || (p.menuHeight = m.height),
                   p.menuWidth || (p.menuWidth = m.width),
@@ -10971,7 +10888,7 @@ var CLSTAMP = "8760384";
             }
             null === (r = this.parentWin) ||
               void 0 === r ||
-              r.SteamClient.Window.GetWindowRestoreDetails((e) => {
+              r.SteamClient.Window.GetWindowRestoreDetails().then((e) => {
                 const t = this.state.menuLeft - this.parentWin.screenX,
                   n = this.state.menuTop - this.parentWin.screenY;
                 try {
@@ -11035,12 +10952,12 @@ var CLSTAMP = "8760384";
                   (r.width = this.state.menuWidth),
                 void 0 !== this.state.menuMinWidth &&
                   (r.minWidth = this.state.menuMinWidth));
-            let i = this.props.options.strClassName || _().contextMenu;
+            let i = this.props.options.strClassName || H().contextMenu;
             return (
               (this.props.options.bCreateHidden ||
                 (this.props.instance.visible && this.state.ready)) &&
                 (i += " visible"),
-              (i += " " + _().ContextMenuFocusContainer),
+              (i += " " + H().ContextMenuFocusContainer),
               o.createElement(
                 "div",
                 {
@@ -11058,7 +10975,7 @@ var CLSTAMP = "8760384";
         };
         function O(e) {
           return o.createElement("div", {
-            className: _().ContextMenuMouseOverlay,
+            className: H().ContextMenuMouseOverlay,
           });
         }
         function B(e) {
@@ -11076,11 +10993,9 @@ var CLSTAMP = "8760384";
               (("INPUT" != s.tagName && "TEXTAREA" != s.tagName) || (a = !0)),
             w.De.IN_CLIENT &&
               a &&
-              n.SteamClient._internal &&
-              n.SteamClient._internal.GetSpellingSuggestions &&
-              n.SteamClient._internal.AddWordToDictionary)
+              (0, u.w3)(n, "Browser.GetSpellingSuggestions"))
           ) {
-            let [e, ...r] = n.SteamClient._internal.GetSpellingSuggestions(),
+            let [e, ...r] = n.SteamClient.Browser.GetSpellingSuggestions(),
               i = s;
             if (
               (i &&
@@ -11099,13 +11014,13 @@ var CLSTAMP = "8760384";
                             i.setSelectionRange(i.selectionEnd, i.selectionEnd),
                             s.focus();
                         },
-                        className: _().NoSeparation,
+                        className: H().NoSeparation,
                       },
                       e,
                     ),
                   );
                 }),
-              e)
+              e && (0, u.w3)(n, "Browser.AddWordToDictionary"))
             ) {
               const r = 30;
               (e = e.trim()),
@@ -11114,13 +11029,8 @@ var CLSTAMP = "8760384";
                     b,
                     {
                       key: `addtodictionary_${e}`,
-                      onSelected: () => {
-                        var t;
-                        return null === (t = n.SteamClient._internal) ||
-                          void 0 === t
-                          ? void 0
-                          : t.AddWordToDictionary(e);
-                      },
+                      onSelected: () =>
+                        n.SteamClient.Browser.AddWordToDictionary(e),
                     },
                     (0, M.Xx)(
                       "#ContextMenu_AddToDictionary",
@@ -11153,28 +11063,23 @@ var CLSTAMP = "8760384";
                     onSelected: () => {
                       n.document.execCommand("copy");
                     },
-                    className: _().NoSeparation,
+                    className: H().NoSeparation,
                   },
                   (0, M.Xx)("#ContextMenu_Copy"),
                 ),
               ),
             w.De.IN_CLIENT &&
               a &&
-              n.SteamClient._internal &&
-              n.SteamClient._internal.Paste &&
+              (0, u.w3)(n, "Browser.Paste") &&
               t.push(
                 o.createElement(
                   b,
                   {
                     key: "paste",
                     onSelected: () => {
-                      var e;
-                      s.focus(),
-                        null === (e = n.SteamClient._internal) ||
-                          void 0 === e ||
-                          e.Paste();
+                      s.focus(), n.SteamClient.Browser.Paste();
                     },
-                    className: _().NoSeparation,
+                    className: H().NoSeparation,
                   },
                   (0, M.Xx)("#ContextMenu_Paste"),
                 ),
@@ -11194,7 +11099,7 @@ var CLSTAMP = "8760384";
                       onSelected: () => {
                         s.focus(), n.SteamClient.Browser.OpenDevTools();
                       },
-                      className: _().AddSeparator,
+                      className: H().AddSeparator,
                     },
                     "Open Dev Tools",
                   ),
@@ -11208,7 +11113,7 @@ var CLSTAMP = "8760384";
                       onSelected: () => {
                         s.focus(), n.SteamClient.Browser.InspectElement(c, C);
                       },
-                      className: _().NoSeparation,
+                      className: H().NoSeparation,
                     },
                     "Inspect Element",
                   ),
@@ -11572,7 +11477,7 @@ var CLSTAMP = "8760384";
           $_: () => v,
           Ac: () => M,
           Av: () => I,
-          Aw: () => _,
+          Aw: () => H,
           BQ: () => j,
           FT: () => b,
           HV: () => k,
@@ -11583,7 +11488,7 @@ var CLSTAMP = "8760384";
           Yz: () => N,
           __: () => L,
           bU: () => f,
-          dQ: () => H,
+          dQ: () => _,
           gE: () => z,
           h4: () => g,
           h5: () => T,
@@ -11628,8 +11533,8 @@ var CLSTAMP = "8760384";
           E = (0, m.Sb)("DialogBody"),
           w = p("DialogBody"),
           k = (0, m.Sb)("DialogInnerBody"),
-          _ = (0, m.Sb)("DialogControlsSection"),
-          H = (0, m.Sb)("DialogControlsSectionHeader"),
+          H = (0, m.Sb)("DialogControlsSection"),
+          _ = (0, m.Sb)("DialogControlsSectionHeader"),
           x = p("DialogTwoColLayout _DialogColLayout"),
           b = p("DialogThreeColLayout _DialogColLayout"),
           S =
@@ -12698,11 +12603,7 @@ var CLSTAMP = "8760384";
                 0,
               ),
               n = {
-                transform: `rotateX(${this.CalculateRotationDegrees(
-                  -1 * this.state.clientYDelta,
-                )}deg) rotateY( ${this.CalculateRotationDegrees(
-                  this.state.clientXDelta,
-                )}deg)`,
+                transform: `rotateX(${this.CalculateRotationDegrees(-1 * this.state.clientYDelta)}deg) rotateY( ${this.CalculateRotationDegrees(this.state.clientXDelta)}deg)`,
                 transition: "transform .16s ease-out, filter .16s ease-out",
                 filter: "brightness(" + t + ")",
               };
@@ -12848,7 +12749,7 @@ var CLSTAMP = "8760384";
           ZY: () => rt,
           vY: () => me,
           UZ: () => Qe,
-          Co: () => _e,
+          Co: () => He,
           gB: () => Ee,
           Eb: () => ke,
           Gb: () => se,
@@ -13101,13 +13002,13 @@ var CLSTAMP = "8760384";
                 "inlineControls",
                 "maxChars",
               ]);
-            let _ =
+            let H =
                 "DialogInput DialogInputPlaceholder DialogTextInputBase" +
                 (k.className ? " " + k.className : ""),
-              H = "copiedAnimation",
+              _ = "copiedAnimation",
               x = this.state.m_bCompletedCopiedAnimation;
-            this.m_CopiedAnimation && (H = "copiedAnimation animationPlaying"),
-              x && (H = "copiedAnimation animationComplete");
+            this.m_CopiedAnimation && (_ = "copiedAnimation animationPlaying"),
+              x && (_ = "copiedAnimation animationComplete");
             let b = {};
             void 0 !== this.state.m_CopiedYPos &&
               (b.transform = "translateY(" + this.state.m_CopiedYPos + "px)");
@@ -13123,7 +13024,7 @@ var CLSTAMP = "8760384";
                 o.createElement(
                   g,
                   Object.assign({ type: "text" }, k, {
-                    className: _,
+                    className: H,
                     ref: this.OnInputRef,
                     onChange: this.OnChanged,
                   }),
@@ -13142,7 +13043,7 @@ var CLSTAMP = "8760384";
                     ),
                     o.createElement(
                       "div",
-                      { style: b, className: H },
+                      { style: b, className: _ },
                       (0, a.Xx)("#Button_Copied"),
                     ),
                   ),
@@ -13392,8 +13293,8 @@ var CLSTAMP = "8760384";
             return void 0 === e || isNaN(e) || e < this.props.min
               ? this.props.min
               : e > this.props.max
-              ? this.props.max
-              : e;
+                ? this.props.max
+                : e;
           }
           BPropsValid() {
             return this.props.max > this.props.min;
@@ -13564,22 +13465,22 @@ var CLSTAMP = "8760384";
           (0, i.gn)([s.ak], E.prototype, "OnKeyDown", null);
         var w = n(1637),
           k = n(10402),
-          _ = n.n(k);
-        const H = o.createContext({ setValue: () => {} });
+          H = n.n(k);
+        const _ = o.createContext({ setValue: () => {} });
         function x(e) {
           const { value: t, onChange: n, classNames: r, children: i } = e,
             l = { value: t, setValue: n };
           return o.createElement(
-            H.Provider,
+            _.Provider,
             { value: l },
             o.createElement(
               h.s,
               {
                 className: (0, p.Z)(
-                  _().Group,
+                  H().Group,
                   "Shared_Radio_Group",
                   r,
-                  l.bVertical && _().VerticalGrouping,
+                  l.bVertical && H().VerticalGrouping,
                 ),
               },
               i,
@@ -13588,13 +13489,13 @@ var CLSTAMP = "8760384";
         }
         function b(e) {
           const { value: t } = e,
-            { value: n, setValue: r } = o.useContext(H);
+            { value: n, setValue: r } = o.useContext(_);
           let i = r;
           const l = t === n;
           return o.createElement(
             u.Ks,
             {
-              className: (0, p.Z)(_().Button, "RadioButton", l && _().Active),
+              className: (0, p.Z)(H().Button, "RadioButton", l && H().Active),
               onClick: () => i(t),
             },
             e.children,
@@ -13883,8 +13784,8 @@ var CLSTAMP = "8760384";
                   null !== (i = this.props.tabIndex) && void 0 !== i
                     ? i
                     : a
-                    ? 0
-                    : null,
+                      ? 0
+                      : null,
                 componentRef: this.OnInputRef,
                 className: this.props.strDropDownButtonClassName,
                 arrowClassName: this.props.arrowClassName,
@@ -14182,8 +14083,8 @@ var CLSTAMP = "8760384";
               indentLevel: E,
               verticalAlignment: w,
               iconLocation: k,
-              tooltip: _,
-              explainer: H,
+              tooltip: H,
+              explainer: _,
               explainerTitle: x,
             } = e,
             b = (0, i._T)(e, [
@@ -14237,7 +14138,7 @@ var CLSTAMP = "8760384";
               if (null == t) return {};
               const i = (0, a.Xx)("#Field_MoreInfo_Action");
               return { onOptionsButton: r, onOptionsActionDescription: i };
-            })(null != x ? x : n, H),
+            })(null != x ? x : n, _),
             z = o.useRef(),
             K = (0, s.BE)(z, e.navRef),
             X = o.useCallback(
@@ -14301,8 +14202,8 @@ var CLSTAMP = "8760384";
                       l,
                     ),
                   n,
-                  _ &&
-                    o.createElement("span", { "data-tooltip-text": _ }, " (?)"),
+                  H &&
+                    o.createElement("span", { "data-tooltip-text": H }, " (?)"),
                 ),
                 D &&
                   o.createElement(
@@ -14556,7 +14457,7 @@ var CLSTAMP = "8760384";
               value: {
                 PagedSettings: Ct,
                 Content: rt,
-                DropDownControlButton: _e,
+                DropDownControlButton: He,
                 DropDownField: de,
                 DropDownMenu: ke,
                 ToggleField: tt,
@@ -14680,16 +14581,16 @@ var CLSTAMP = "8760384";
                         o.createElement(o.Fragment, null, n.label),
                       )
                     : D(n)
-                    ? o.createElement(
-                        Le.D1,
-                        {
-                          label: n.label,
-                          key: r,
-                          selectedWithin: we(n, e.selectedValue),
-                        },
-                        t(n.options),
-                      )
-                    : null,
+                      ? o.createElement(
+                          Le.D1,
+                          {
+                            label: n.label,
+                            key: r,
+                            selectedWithin: we(n, e.selectedValue),
+                          },
+                          t(n.options),
+                        )
+                      : null,
                 );
           return o.createElement(
             Le.xV,
@@ -14697,7 +14598,7 @@ var CLSTAMP = "8760384";
             t(e.rgOptions),
           );
         }
-        const _e = o.forwardRef(function (e, t) {
+        const He = o.forwardRef(function (e, t) {
           return o.createElement(
             r.zx,
             {
@@ -14719,7 +14620,7 @@ var CLSTAMP = "8760384";
             ),
           );
         });
-        var He = n(9856);
+        var _e = n(9856);
         const xe = o.forwardRef(function (e, t) {
           const { className: n } = e,
             l = (0, i._T)(e, ["className"]);
@@ -14747,7 +14648,7 @@ var CLSTAMP = "8760384";
                   inlineControls: o.createElement(
                     r.zx,
                     {
-                      className: He.TogglePasswordVisibilityBtn,
+                      className: _e.TogglePasswordVisibilityBtn,
                       onPointerDown: m,
                       onOKButton: m,
                     },
@@ -14851,13 +14752,13 @@ var CLSTAMP = "8760384";
                     onKeyDown: m,
                     value: a.charAt(e),
                     disabled: e != Math.min(a.length, t - 1),
-                    className: (0, p.Z)(He.PinDigit),
+                    className: (0, p.Z)(_e.PinDigit),
                   }),
                 ),
               );
           return o.createElement(
             h.s,
-            { "flow-children": "row", className: (0, p.Z)(l, He.Digits) },
+            { "flow-children": "row", className: (0, p.Z)(l, _e.Digits) },
             v,
           );
         }
@@ -15375,9 +15276,7 @@ var CLSTAMP = "8760384";
             return (
               "verticalline" == this.props.handleType
                 ? ((w = `${ye().VerticalLineSliderHandle} SliderHandle`),
-                  (k = `${
-                    ye().VerticalLineSliderHandleContainer
-                  } SliderHandleContainer `))
+                  (k = `${ye().VerticalLineSliderHandleContainer} SliderHandleContainer `))
                 : ("leftparen" != this.props.handleType &&
                     "rightparen" != this.props.handleType) ||
                   ((w = (0, p.Z)(
@@ -15596,8 +15495,8 @@ var CLSTAMP = "8760384";
               parentSliderRef: E,
               onOptionsButton: w,
               onOptionsActionDescription: k,
-              iconLocation: _,
-              childrenContainerWidth: H,
+              iconLocation: H,
+              childrenContainerWidth: _,
               explainer: x,
               explainerTitle: b,
             } = e,
@@ -15731,7 +15630,7 @@ var CLSTAMP = "8760384";
               childrenLayout: null != d ? d : "below",
               padding: m,
               bottomSeparator: p,
-              childrenContainerWidth: null != H ? H : "fixed",
+              childrenContainerWidth: null != _ ? _ : "fixed",
               label: P,
               description: n,
               ref: Z,
@@ -15745,7 +15644,7 @@ var CLSTAMP = "8760384";
               onOptionsButton: K,
               onOptionsActionDescription: X,
               icon: V,
-              iconLocation: null != _ ? _ : "before-children",
+              iconLocation: null != H ? H : "before-children",
               explainer: x,
               explainerTitle: b,
             },
@@ -15812,7 +15711,7 @@ var CLSTAMP = "8760384";
           }, [L]);
           const w = C(Number.parseFloat(M)),
             k = o.useRef(!1),
-            _ = o.useCallback(
+            H = o.useCallback(
               (e) => {
                 !w && M.length > 0 && f(),
                   k.current ||
@@ -15820,7 +15719,7 @@ var CLSTAMP = "8760384";
               },
               [w, M, f, l],
             ),
-            H = o.useCallback(() => {
+            _ = o.useCallback(() => {
               var e;
               return null === (e = d.current) || void 0 === e
                 ? void 0
@@ -15828,8 +15727,8 @@ var CLSTAMP = "8760384";
             }, [d]),
             x = o.useRef(!1);
           o.useLayoutEffect(() => {
-            t && !x.current && H(), (x.current = t);
-          }, [m, t, H]);
+            t && !x.current && _(), (x.current = t);
+          }, [m, t, _]);
           const b = v || (L && !w && M.length > 0 && "-" != M),
             S = (0, p.Z)(ye().DescriptionValue, b && ye().RedBorder),
             [V, y] = o.useState(0),
@@ -15868,20 +15767,20 @@ var CLSTAMP = "8760384";
               focusable: t,
               className: ye().EditableValue,
               style: { width: I },
-              onEnterKeyPress: () => _(!1),
+              onEnterKeyPress: () => H(!1),
               strEnterKeyLabel: (0, a.Xx)("#ActionButtonLabelDone"),
               onClick: i,
               onFocus: () => (k.current = !1),
-              onBlur: () => _(!0),
+              onBlur: () => H(!0),
               value: N,
               placeholder: n,
               onChange: (e) => E(e.target.value.trim()),
-              onCancelButton: () => _(!0),
+              onCancelButton: () => H(!0),
               onCancelActionDescription: (0, a.Xx)("#ActionButtonLabelDone"),
-              onOKButton: H,
+              onOKButton: _,
               onOKActionDescription: (0, a.Xx)("#Slider_EditValue"),
               onOptionsActionDescription: void 0,
-              onOptionsButton: H,
+              onOptionsButton: _,
             }),
           );
         }
@@ -16368,7 +16267,7 @@ var CLSTAMP = "8760384";
             ),
           );
         });
-        function _(e) {
+        function H(e) {
           const { title: t, icon: n, active: o, className: l, onClick: s } = e,
             a = (0, r._T)(e, [
               "title",
@@ -16390,7 +16289,7 @@ var CLSTAMP = "8760384";
             ),
           );
         }
-        function H(e) {
+        function _(e) {
           var t;
           const n =
             null !== (t = e.activePage.padding) && void 0 !== t
@@ -16489,7 +16388,7 @@ var CLSTAMP = "8760384";
               if (!1 === t.visible) return null;
               const r = t == v,
                 o = t.identifier || t.title || n.toString(),
-                l = e.renderPageListItem || _;
+                l = e.renderPageListItem || H;
               return i.createElement(l, {
                 className: (0, c.Z)(a.PagedSettingsDialog_PageListItem, {
                   [a.Active]: r,
@@ -16647,7 +16546,7 @@ var CLSTAMP = "8760384";
                 P,
                 { activePage: v, direction: b },
                 v &&
-                  i.createElement(H, {
+                  i.createElement(_, {
                     refForScrollingContainer: U(v.identifier),
                     key: v.identifier,
                     stylesheet: a,
@@ -16812,14 +16711,14 @@ var CLSTAMP = "8760384";
                   ? t(r.error)
                   : t
                 : a.sm_ErrorReportingStore &&
-                  a.sm_ErrorReportingStore.reporting_enabled
-                ? i.createElement(C, {
-                    error: r,
-                    identifierHash: o,
-                    store: a.sm_ErrorReportingStore,
-                    onRefresh: this.Reset,
-                  })
-                : i.createElement(c, { error: r, onDismiss: this.Reset })
+                    a.sm_ErrorReportingStore.reporting_enabled
+                  ? i.createElement(C, {
+                      error: r,
+                      identifierHash: o,
+                      store: a.sm_ErrorReportingStore,
+                      onRefresh: this.Reset,
+                    })
+                  : i.createElement(c, { error: r, onDismiss: this.Reset })
               : e || null;
           }
         }
@@ -16960,7 +16859,7 @@ var CLSTAMP = "8760384";
             CloudDownload: () => qt,
             CloudSync: () => Ut,
             CloudUpload: () => Jt,
-            Collapse: () => _r,
+            Collapse: () => Hr,
             Color: () => W,
             Comment: () => Bn,
             CommentHistory: () => xn,
@@ -16977,7 +16876,7 @@ var CLSTAMP = "8760384";
             Copy: () => pt,
             CreateGroup: () => In,
             Crown: () => gt,
-            CustomizeSteamDeck: () => _,
+            CustomizeSteamDeck: () => H,
             DLC: () => O,
             DeckDockFront: () => ji,
             DeckLogo: () => J,
@@ -17004,7 +16903,7 @@ var CLSTAMP = "8760384";
             ExclamationPoint: () => Mi,
             Exit: () => x,
             Expand: () => kr,
-            Expand99: () => Hr,
+            Expand99: () => _r,
             Facebook: () => Cr,
             FamilySharing: () => En,
             FamilySharingOff: () => wn,
@@ -17021,16 +16920,16 @@ var CLSTAMP = "8760384";
             Friends: () => D,
             Fullscreen: () => wr,
             GameHubs: () => Dn,
-            GameOverview: () => Ho,
+            GameOverview: () => _o,
             Games: () => kn,
             GenericGamepad: () => Bi,
-            GenericGamepadFrontOutline: () => Hi,
+            GenericGamepadFrontOutline: () => _i,
             GenericStoreGamepad: () => jo,
             Gift: () => A,
             Globe: () => Vt,
             Groups: () => Et,
             GuideButton: () => X,
-            Guides: () => _n,
+            Guides: () => Hn,
             Gyro: () => $i,
             GyroPitch: () => Ji,
             GyroRoll: () => Qi,
@@ -17061,14 +16960,14 @@ var CLSTAMP = "8760384";
             IncomingVoiceCall: () => Un,
             Information: () => P,
             Instagram: () => pr,
-            Invalid: () => _t,
-            Inventory: () => Hn,
+            Invalid: () => Ht,
+            Inventory: () => _n,
             KaratDown: () => Se,
             KaratLeft: () => Ve,
             KaratRight: () => ye,
             KaratUp: () => be,
             Keyboard: () => De,
-            LAN: () => _o,
+            LAN: () => Ho,
             LanPeerContentReceive: () => Ki,
             LanPeerContentSend: () => Xi,
             Layout_AB: () => ii,
@@ -17085,7 +16984,7 @@ var CLSTAMP = "8760384";
             Lock: () => me,
             LogOut: () => Be,
             ManualGPUClock: () => ll,
-            Maximize: () => Ht,
+            Maximize: () => _t,
             MediaGallery: () => mi,
             Microphone: () => U,
             Minimize: () => on,
@@ -17194,7 +17093,7 @@ var CLSTAMP = "8760384";
             Standing: () => Po,
             Star: () => T,
             SteamAchievements: () => On,
-            SteamControllerFrontOutline: () => _i,
+            SteamControllerFrontOutline: () => Hi,
             SteamControllerRightPadHighlighted: () => zi,
             SteamCuratorsTwitch: () => Er,
             SteamCuratorsTwitter: () => Lr,
@@ -17271,10 +17170,10 @@ var CLSTAMP = "8760384";
             VoiceRoom: () => Gn,
             Volume: () => G,
             Volume100: () => ke,
-            Volume30: () => He,
-            Volume60: () => _e,
+            Volume30: () => _e,
+            Volume60: () => He,
             VolumeMuted: () => xe,
-            Wallet: () => H,
+            Wallet: () => _,
             WholeMouseImage: () => Pi,
             WiFi: () => re,
             WiredNetwork: () => ue,
@@ -17342,10 +17241,10 @@ var CLSTAMP = "8760384";
             "up" === t
               ? "rotate( 180deg )"
               : "left" === t
-              ? "rotate( 90deg )"
-              : "right" === t
-              ? "rotate( 270deg )"
-              : void 0;
+                ? "rotate( 90deg )"
+                : "right" === t
+                  ? "rotate( 270deg )"
+                  : void 0;
           return i.createElement(
             "svg",
             Object.assign(
@@ -17617,7 +17516,7 @@ var CLSTAMP = "8760384";
             }),
           );
         }
-        function _(e) {
+        function H(e) {
           const [t, n] = (0, a.y)();
           return i.createElement(
             "svg",
@@ -17664,7 +17563,7 @@ var CLSTAMP = "8760384";
             ),
           );
         }
-        function H(e) {
+        function _(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -18094,47 +17993,47 @@ var CLSTAMP = "8760384";
                 }),
               )
             : n
-            ? i.createElement(
-                "svg",
-                Object.assign(
-                  {
-                    xmlns: "http://www.w3.org/2000/svg",
-                    version: "1.1",
-                    id: "Layer_1",
-                    x: "0px",
-                    y: "0px",
-                    viewBox: "0 0 36 36",
-                  },
-                  o,
-                ),
-                i.createElement("path", {
-                  fill: "currentColor",
-                  opacity: "0.5",
-                  d: "M12.9,6.2c-0.2,0-0.4-0.1-0.5-0.2c-0.2-0.2-0.5-0.4-1.2-0.4c-1.1,0-4.5,1.1-5.1,1.7S5.6,8.4,5.6,8.4v0.1  c-0.4,0.3-0.8,0.7-1.1,1C3.4,10.7,0,20.2,0,25.3s3.4,5.6,3.4,5.6c0.9,0,2.3-1.8,3.7-3.5c1.2-1.5,2.3-3,3.1-3.2  c0.8-0.3,4.4-0.4,7.9-0.4V6.2H12.9z M8.4,14.6c-1.2,0-2.2-1-2.2-2.2s1-2.2,2.2-2.2s2.2,1,2.2,2.2S9.7,14.6,8.4,14.6z M15.8,18.8  c0,0.3-0.3,0.6-0.6,0.6h-0.8v0.8c0,0.3-0.3,0.6-0.6,0.6h-1.1c-0.3,0-0.6-0.3-0.6-0.6v-0.8h-0.8c-0.3,0-0.6-0.3-0.6-0.6v-1.1  c0-0.3,0.3-0.6,0.6-0.6h0.8v-0.8c0-0.3,0.3-0.6,0.6-0.6h1.1c0.3,0,0.6,0.3,0.6,0.6v0.8h0.8c0.3,0,0.6,0.3,0.6,0.6V18.8z",
-                }),
-                i.createElement("path", {
-                  fill: "currentColor",
-                  d: "M31.5,9.6c-0.3-0.3-0.7-0.6-1.1-1V8.4c0,0,0-0.6-0.6-1.1s-3.9-1.7-5.1-1.7c-0.7,0-0.9,0.2-1.2,0.4c-0.2,0.1-0.3,0.2-0.5,0.2  H18v17.6c3.5,0,7,0.1,7.9,0.4c0.8,0.3,1.9,1.7,3.1,3.2c1.4,1.7,2.8,3.5,3.7,3.5c0,0,3.4-0.6,3.4-5.6S32.6,10.7,31.5,9.6z M27.6,8.7  c0.8,0,1.4,0.6,1.4,1.4s-0.6,1.4-1.4,1.4s-1.4-0.6-1.4-1.4S26.8,8.7,27.6,8.7z M23.1,20.2c-1.2,0-2.2-1-2.2-2.2s1-2.2,2.2-2.2  s2.2,1,2.2,2.2S24.3,20.2,23.1,20.2z M25,14.1c-0.8,0-1.4-0.6-1.4-1.4c0-0.8,0.6-1.4,1.4-1.4c0.8,0,1.4,0.6,1.4,1.4  C26.4,13.4,25.8,14.1,25,14.1z M27.6,16.6c-0.8,0-1.4-0.6-1.4-1.4s0.6-1.4,1.4-1.4s1.4,0.6,1.4,1.4S28.3,16.6,27.6,16.6z M30.1,14.1  c-0.8,0-1.4-0.6-1.4-1.4c0-0.8,0.6-1.4,1.4-1.4c0.8,0,1.4,0.6,1.4,1.4C31.5,13.4,30.9,14.1,30.1,14.1z",
-                }),
-              )
-            : i.createElement(
-                "svg",
-                Object.assign(
-                  {
-                    xmlns: "http://www.w3.org/2000/svg",
-                    version: "1.1",
-                    id: "Layer_1",
-                    x: "0px",
-                    y: "0px",
-                    viewBox: "0 0 36 36",
-                  },
-                  o,
-                ),
-                i.createElement("path", {
-                  fill: "currentColor",
-                  d: "M31.5,9.6c-0.3-0.3-0.7-0.6-1.1-1V8.4c0,0,0-0.6-0.6-1.1s-3.9-1.7-5.1-1.7c-0.7,0-0.9,0.2-1.2,0.4c-0.2,0.1-0.3,0.2-0.5,0.2  H12.9c-0.2,0-0.4-0.1-0.5-0.2c-0.2-0.2-0.5-0.4-1.2-0.4c-1.1,0-4.5,1.1-5.1,1.7S5.6,8.4,5.6,8.4v0.1c-0.4,0.3-0.8,0.7-1.1,1  C3.4,10.7,0,20.2,0,25.3s3.4,5.6,3.4,5.6c0.9,0,2.3-1.8,3.7-3.5c1.2-1.5,2.3-3,3.1-3.2c1.7-0.6,14.1-0.6,15.8,0  c0.8,0.3,1.9,1.7,3.1,3.2c1.4,1.7,2.8,3.5,3.7,3.5c0,0,3.4-0.6,3.4-5.6S32.6,10.7,31.5,9.6z M8.4,14.6c-1.2,0-2.2-1-2.2-2.2  s1-2.2,2.2-2.2s2.2,1,2.2,2.2S9.7,14.6,8.4,14.6z M15.8,18.8c0,0.3-0.3,0.6-0.6,0.6h-0.8v0.8c0,0.3-0.3,0.6-0.6,0.6h-1.1  c-0.3,0-0.6-0.3-0.6-0.6v-0.8h-0.8c-0.3,0-0.6-0.3-0.6-0.6v-1.1c0-0.3,0.3-0.6,0.6-0.6h0.8v-0.8c0-0.3,0.3-0.6,0.6-0.6h1.1  c0.3,0,0.6,0.3,0.6,0.6v0.8h0.8c0.3,0,0.6,0.3,0.6,0.6V18.8z M27.6,8.7c0.8,0,1.4,0.6,1.4,1.4s-0.6,1.4-1.4,1.4s-1.4-0.6-1.4-1.4  S26.8,8.7,27.6,8.7z M23.1,20.2c-1.2,0-2.2-1-2.2-2.2s1-2.2,2.2-2.2s2.2,1,2.2,2.2S24.3,20.2,23.1,20.2z M25,14.1  c-0.8,0-1.4-0.6-1.4-1.4c0-0.8,0.6-1.4,1.4-1.4s1.4,0.6,1.4,1.4C26.4,13.4,25.8,14.1,25,14.1z M27.6,16.6c-0.8,0-1.4-0.6-1.4-1.4  s0.6-1.4,1.4-1.4s1.4,0.6,1.4,1.4S28.3,16.6,27.6,16.6z M30.1,14.1c-0.8,0-1.4-0.6-1.4-1.4c0-0.8,0.6-1.4,1.4-1.4s1.4,0.6,1.4,1.4  C31.5,13.4,30.9,14.1,30.1,14.1z",
-                }),
-              );
+              ? i.createElement(
+                  "svg",
+                  Object.assign(
+                    {
+                      xmlns: "http://www.w3.org/2000/svg",
+                      version: "1.1",
+                      id: "Layer_1",
+                      x: "0px",
+                      y: "0px",
+                      viewBox: "0 0 36 36",
+                    },
+                    o,
+                  ),
+                  i.createElement("path", {
+                    fill: "currentColor",
+                    opacity: "0.5",
+                    d: "M12.9,6.2c-0.2,0-0.4-0.1-0.5-0.2c-0.2-0.2-0.5-0.4-1.2-0.4c-1.1,0-4.5,1.1-5.1,1.7S5.6,8.4,5.6,8.4v0.1  c-0.4,0.3-0.8,0.7-1.1,1C3.4,10.7,0,20.2,0,25.3s3.4,5.6,3.4,5.6c0.9,0,2.3-1.8,3.7-3.5c1.2-1.5,2.3-3,3.1-3.2  c0.8-0.3,4.4-0.4,7.9-0.4V6.2H12.9z M8.4,14.6c-1.2,0-2.2-1-2.2-2.2s1-2.2,2.2-2.2s2.2,1,2.2,2.2S9.7,14.6,8.4,14.6z M15.8,18.8  c0,0.3-0.3,0.6-0.6,0.6h-0.8v0.8c0,0.3-0.3,0.6-0.6,0.6h-1.1c-0.3,0-0.6-0.3-0.6-0.6v-0.8h-0.8c-0.3,0-0.6-0.3-0.6-0.6v-1.1  c0-0.3,0.3-0.6,0.6-0.6h0.8v-0.8c0-0.3,0.3-0.6,0.6-0.6h1.1c0.3,0,0.6,0.3,0.6,0.6v0.8h0.8c0.3,0,0.6,0.3,0.6,0.6V18.8z",
+                  }),
+                  i.createElement("path", {
+                    fill: "currentColor",
+                    d: "M31.5,9.6c-0.3-0.3-0.7-0.6-1.1-1V8.4c0,0,0-0.6-0.6-1.1s-3.9-1.7-5.1-1.7c-0.7,0-0.9,0.2-1.2,0.4c-0.2,0.1-0.3,0.2-0.5,0.2  H18v17.6c3.5,0,7,0.1,7.9,0.4c0.8,0.3,1.9,1.7,3.1,3.2c1.4,1.7,2.8,3.5,3.7,3.5c0,0,3.4-0.6,3.4-5.6S32.6,10.7,31.5,9.6z M27.6,8.7  c0.8,0,1.4,0.6,1.4,1.4s-0.6,1.4-1.4,1.4s-1.4-0.6-1.4-1.4S26.8,8.7,27.6,8.7z M23.1,20.2c-1.2,0-2.2-1-2.2-2.2s1-2.2,2.2-2.2  s2.2,1,2.2,2.2S24.3,20.2,23.1,20.2z M25,14.1c-0.8,0-1.4-0.6-1.4-1.4c0-0.8,0.6-1.4,1.4-1.4c0.8,0,1.4,0.6,1.4,1.4  C26.4,13.4,25.8,14.1,25,14.1z M27.6,16.6c-0.8,0-1.4-0.6-1.4-1.4s0.6-1.4,1.4-1.4s1.4,0.6,1.4,1.4S28.3,16.6,27.6,16.6z M30.1,14.1  c-0.8,0-1.4-0.6-1.4-1.4c0-0.8,0.6-1.4,1.4-1.4c0.8,0,1.4,0.6,1.4,1.4C31.5,13.4,30.9,14.1,30.1,14.1z",
+                  }),
+                )
+              : i.createElement(
+                  "svg",
+                  Object.assign(
+                    {
+                      xmlns: "http://www.w3.org/2000/svg",
+                      version: "1.1",
+                      id: "Layer_1",
+                      x: "0px",
+                      y: "0px",
+                      viewBox: "0 0 36 36",
+                    },
+                    o,
+                  ),
+                  i.createElement("path", {
+                    fill: "currentColor",
+                    d: "M31.5,9.6c-0.3-0.3-0.7-0.6-1.1-1V8.4c0,0,0-0.6-0.6-1.1s-3.9-1.7-5.1-1.7c-0.7,0-0.9,0.2-1.2,0.4c-0.2,0.1-0.3,0.2-0.5,0.2  H12.9c-0.2,0-0.4-0.1-0.5-0.2c-0.2-0.2-0.5-0.4-1.2-0.4c-1.1,0-4.5,1.1-5.1,1.7S5.6,8.4,5.6,8.4v0.1c-0.4,0.3-0.8,0.7-1.1,1  C3.4,10.7,0,20.2,0,25.3s3.4,5.6,3.4,5.6c0.9,0,2.3-1.8,3.7-3.5c1.2-1.5,2.3-3,3.1-3.2c1.7-0.6,14.1-0.6,15.8,0  c0.8,0.3,1.9,1.7,3.1,3.2c1.4,1.7,2.8,3.5,3.7,3.5c0,0,3.4-0.6,3.4-5.6S32.6,10.7,31.5,9.6z M8.4,14.6c-1.2,0-2.2-1-2.2-2.2  s1-2.2,2.2-2.2s2.2,1,2.2,2.2S9.7,14.6,8.4,14.6z M15.8,18.8c0,0.3-0.3,0.6-0.6,0.6h-0.8v0.8c0,0.3-0.3,0.6-0.6,0.6h-1.1  c-0.3,0-0.6-0.3-0.6-0.6v-0.8h-0.8c-0.3,0-0.6-0.3-0.6-0.6v-1.1c0-0.3,0.3-0.6,0.6-0.6h0.8v-0.8c0-0.3,0.3-0.6,0.6-0.6h1.1  c0.3,0,0.6,0.3,0.6,0.6v0.8h0.8c0.3,0,0.6,0.3,0.6,0.6V18.8z M27.6,8.7c0.8,0,1.4,0.6,1.4,1.4s-0.6,1.4-1.4,1.4s-1.4-0.6-1.4-1.4  S26.8,8.7,27.6,8.7z M23.1,20.2c-1.2,0-2.2-1-2.2-2.2s1-2.2,2.2-2.2s2.2,1,2.2,2.2S24.3,20.2,23.1,20.2z M25,14.1  c-0.8,0-1.4-0.6-1.4-1.4c0-0.8,0.6-1.4,1.4-1.4s1.4,0.6,1.4,1.4C26.4,13.4,25.8,14.1,25,14.1z M27.6,16.6c-0.8,0-1.4-0.6-1.4-1.4  s0.6-1.4,1.4-1.4s1.4,0.6,1.4,1.4S28.3,16.6,27.6,16.6z M30.1,14.1c-0.8,0-1.4-0.6-1.4-1.4c0-0.8,0.6-1.4,1.4-1.4s1.4,0.6,1.4,1.4  C31.5,13.4,30.9,14.1,30.1,14.1z",
+                  }),
+                );
         }
         function z(e) {
           const { type: t, partial: n } = e,
@@ -18184,228 +18083,228 @@ var CLSTAMP = "8760384";
                 ),
               )
             : "xbox" == t
-            ? n
-              ? i.createElement(
-                  "svg",
-                  Object.assign(
-                    {
-                      xmlns: "http://www.w3.org/2000/svg",
-                      version: "1.1",
-                      id: "Layer_1",
-                      x: "0px",
-                      y: "0px",
-                      viewBox: "0 0 36 36",
-                    },
-                    o,
-                  ),
-                  i.createElement("path", {
-                    fill: "currentColor",
-                    opacity: "0.5",
-                    d: "M12.9,6.2c-0.2,0-0.4-0.1-0.5-0.2c-0.2-0.2-0.5-0.4-1.2-0.4c-1.1,0-4.5,1.1-5.1,1.7S5.6,8.4,5.6,8.4v0.1  c-0.4,0.3-0.8,0.7-1.1,1C3.4,10.7,0,20.2,0,25.3s3.4,5.6,3.4,5.6c0.9,0,2.3-1.8,3.7-3.5c1.2-1.5,2.3-3,3.1-3.2  c0.8-0.3,4.4-0.4,7.9-0.4V6.2H12.9z M8.4,14.6c-1.2,0-2.2-1-2.2-2.2s1-2.2,2.2-2.2s2.2,1,2.2,2.2S9.7,14.6,8.4,14.6z M15.8,18.8  c0,0.3-0.3,0.6-0.6,0.6h-0.8v0.8c0,0.3-0.3,0.6-0.6,0.6h-1.1c-0.3,0-0.6-0.3-0.6-0.6v-0.8h-0.8c-0.3,0-0.6-0.3-0.6-0.6v-1.1  c0-0.3,0.3-0.6,0.6-0.6h0.8v-0.8c0-0.3,0.3-0.6,0.6-0.6h1.1c0.3,0,0.6,0.3,0.6,0.6v0.8h0.8c0.3,0,0.6,0.3,0.6,0.6V18.8z",
-                  }),
-                  i.createElement("path", {
-                    fill: "currentColor",
-                    d: "M31.5,9.6c-0.3-0.3-0.7-0.6-1.1-1V8.4c0,0,0-0.6-0.6-1.1s-3.9-1.7-5.1-1.7c-0.7,0-0.9,0.2-1.2,0.4c-0.2,0.1-0.3,0.2-0.5,0.2  H18v17.6c3.5,0,7,0.1,7.9,0.4c0.8,0.3,1.9,1.7,3.1,3.2c1.4,1.7,2.8,3.5,3.7,3.5c0,0,3.4-0.6,3.4-5.6S32.6,10.7,31.5,9.6z M27.6,8.7  c0.8,0,1.4,0.6,1.4,1.4s-0.6,1.4-1.4,1.4s-1.4-0.6-1.4-1.4S26.8,8.7,27.6,8.7z M23.1,20.2c-1.2,0-2.2-1-2.2-2.2s1-2.2,2.2-2.2  s2.2,1,2.2,2.2S24.3,20.2,23.1,20.2z M25,14.1c-0.8,0-1.4-0.6-1.4-1.4c0-0.8,0.6-1.4,1.4-1.4c0.8,0,1.4,0.6,1.4,1.4  C26.4,13.4,25.8,14.1,25,14.1z M27.6,16.6c-0.8,0-1.4-0.6-1.4-1.4s0.6-1.4,1.4-1.4s1.4,0.6,1.4,1.4S28.3,16.6,27.6,16.6z M30.1,14.1  c-0.8,0-1.4-0.6-1.4-1.4c0-0.8,0.6-1.4,1.4-1.4c0.8,0,1.4,0.6,1.4,1.4C31.5,13.4,30.9,14.1,30.1,14.1z",
-                  }),
-                )
-              : i.createElement(
-                  "svg",
-                  Object.assign(
-                    {
-                      xmlns: "http://www.w3.org/2000/svg",
-                      viewBox: "0 0 36 36",
-                      fill: "none",
-                    },
-                    o,
-                  ),
-                  i.createElement("path", {
-                    fill: "currentColor",
-                    fillRule: "evenodd",
-                    clipRule: "evenodd",
-                    d: "M11.25 5.625C11.909 5.625 12.182 5.81802 12.4081 5.97792C12.568 6.09099 12.7045 6.1875 12.9375 6.1875H23.0625C23.2955 6.1875 23.432 6.09099 23.5919 5.97792C23.818 5.81802 24.091 5.625 24.75 5.625C25.875 5.625 29.25 6.75 29.8125 7.3125C30.375 7.875 30.375 8.4375 30.375 8.4375V8.5803C30.8163 8.91923 31.1986 9.26106 31.5 9.5625C32.625 10.6875 36 20.25 36 25.3125C36 30.375 32.625 30.9375 32.625 30.9375C31.7178 30.9375 30.323 29.1494 28.9649 27.4083C27.7966 25.9106 26.6553 24.4476 25.875 24.1875C24.1875 23.625 11.8125 23.625 10.125 24.1875C9.34465 24.4476 8.20344 25.9106 7.03512 27.4083C5.67696 29.1494 4.28215 30.9375 3.375 30.9375C3.375 30.9375 0 30.375 0 25.3125C0 20.25 3.375 10.6875 4.5 9.5625C4.80144 9.26106 5.18366 8.91923 5.625 8.5803V8.4375C5.625 8.4375 5.625 7.875 6.1875 7.3125C6.75 6.75 10.125 5.625 11.25 5.625ZM27.5625 8.71875C28.3392 8.71875 28.9688 9.34835 28.9688 10.125C28.9688 10.9017 28.3392 11.5312 27.5625 11.5312C26.7858 11.5312 26.1562 10.9017 26.1562 10.125C26.1562 9.34835 26.7858 8.71875 27.5625 8.71875ZM8.4375 14.625C9.68014 14.625 10.6875 13.6176 10.6875 12.375C10.6875 11.1324 9.68014 10.125 8.4375 10.125C7.19486 10.125 6.1875 11.1324 6.1875 12.375C6.1875 13.6176 7.19486 14.625 8.4375 14.625ZM23.0625 20.25C24.3051 20.25 25.3125 19.2426 25.3125 18C25.3125 16.7574 24.3051 15.75 23.0625 15.75C21.8199 15.75 20.8125 16.7574 20.8125 18C20.8125 19.2426 21.8199 20.25 23.0625 20.25ZM12.0938 17.1562V16.3125C12.0938 16.0018 12.3456 15.75 12.6562 15.75H13.7812C14.0919 15.75 14.3438 16.0018 14.3438 16.3125V17.1562H15.1875C15.4982 17.1562 15.75 17.4081 15.75 17.7188V18.8438C15.75 19.1544 15.4982 19.4062 15.1875 19.4062H14.3438V20.25C14.3438 20.5607 14.0919 20.8125 13.7812 20.8125H12.6562C12.3456 20.8125 12.0938 20.5607 12.0938 20.25V19.4062H11.25C10.9393 19.4062 10.6875 19.1544 10.6875 18.8438V17.7188C10.6875 17.4081 10.9393 17.1562 11.25 17.1562H12.0938ZM25.0312 14.0625C25.8079 14.0625 26.4375 13.4329 26.4375 12.6562C26.4375 11.8796 25.8079 11.25 25.0312 11.25C24.2546 11.25 23.625 11.8796 23.625 12.6562C23.625 13.4329 24.2546 14.0625 25.0312 14.0625ZM31.5 12.6562C31.5 13.4329 30.8704 14.0625 30.0938 14.0625C29.3171 14.0625 28.6875 13.4329 28.6875 12.6562C28.6875 11.8796 29.3171 11.25 30.0938 11.25C30.8704 11.25 31.5 11.8796 31.5 12.6562ZM28.9688 15.1875C28.9688 14.4108 28.3392 13.7812 27.5625 13.7812C26.7858 13.7812 26.1562 14.4108 26.1562 15.1875C26.1562 15.9642 26.7858 16.5938 27.5625 16.5938C28.3392 16.5938 28.9688 15.9642 28.9688 15.1875Z",
-                  }),
-                )
-            : "ps4" == t
-            ? n
-              ? i.createElement(
-                  "svg",
-                  Object.assign(
-                    {
-                      xmlns: "http://www.w3.org/2000/svg",
-                      version: "1.1",
-                      id: "Layer_1",
-                      x: "0px",
-                      y: "0px",
-                      viewBox: "0 0 36 36",
-                    },
-                    o,
-                  ),
-                  i.createElement("path", {
-                    fill: "currentColor",
-                    opacity: "0.5",
-                    d: "M12.9,13.7c-0.6,0-1.1-0.5-1.1-1.1V8l-1.7,0L9.6,7.5c0,0-0.1,0-0.2,0C9.3,7.3,9.2,7.1,9,6.9  C6.7,6.5,5.2,7.1,4.7,7.4c-0.1,0-0.1,0.1-0.2,0.1C3.9,8,2.8,10.3,2.8,10.3C2.2,12,0.6,17,0,23.8c0,0-0.6,5.1,3.4,5.6  c3.5,0.4,4.6-4.1,5.2-6.5c0.2-0.7,0.3-1.2,0.4-1.4c0.3-0.3,0.7-0.5,0.9-0.5c0.6,0.7,1.5,1.1,2.5,1.1c1,0,1.9-0.4,2.5-1.1H18v-7.3  H12.9z M5.6,10.8c0-0.3,0.2-0.5,0.5-0.5h1.2c0.3,0,0.5,0.2,0.5,0.5v1c0,0.1-0.1,0.3-0.1,0.4l-0.6,0.6c-0.2,0.2-0.5,0.2-0.7,0  l-0.6-0.6c-0.1-0.1-0.1-0.2-0.1-0.4V10.8z M5.1,14.5h-1c-0.3,0-0.5-0.2-0.5-0.5v-1.2c0-0.3,0.2-0.5,0.5-0.5h1c0.1,0,0.3,0.1,0.4,0.1  L6.1,13c0.2,0.2,0.2,0.5,0,0.7l-0.6,0.6C5.4,14.4,5.3,14.5,5.1,14.5z M7.9,16c0,0.3-0.2,0.5-0.5,0.5H6.1c-0.3,0-0.5-0.2-0.5-0.5v-1  c0-0.1,0.1-0.3,0.1-0.4L6.4,14c0.2-0.2,0.5-0.2,0.7,0l0.6,0.6c0.1,0.1,0.1,0.2,0.1,0.4V16z M9.8,14c0,0.3-0.2,0.5-0.5,0.5h-1  c-0.1,0-0.3-0.1-0.4-0.1l-0.6-0.6c-0.2-0.2-0.2-0.5,0-0.7L8,12.4c0.1-0.1,0.2-0.1,0.4-0.1h1c0.3,0,0.5,0.2,0.5,0.5V14z M12.1,20.4  c-1.2,0-2.2-1-2.2-2.2c0-1.2,1-2.2,2.2-2.2c1.2,0,2.2,1,2.2,2.2C14.4,19.4,13.4,20.4,12.1,20.4z",
-                  }),
-                  i.createElement("path", {
-                    fill: "currentColor",
-                    d: "M36,23.8C35.4,17,33.8,12,33.2,10.3c0,0-1.1-2.2-1.7-2.8c0,0-0.1-0.1-0.2-0.1c-0.5-0.3-2-0.9-4.3-0.5  c-0.2,0.2-0.3,0.4-0.4,0.5c-0.1,0-0.2,0-0.2,0L25.9,8l-1.7,0v4.5c0,0.6-0.5,1.1-1.1,1.1H18V21h3.1c0.6,0.7,1.5,1.1,2.5,1.1  c1,0,1.9-0.4,2.5-1.1c0.2,0.1,0.6,0.2,0.9,0.5c0.1,0.1,0.3,0.7,0.4,1.4c0.6,2.4,1.7,6.9,5.2,6.5C36.6,28.8,36,23.8,36,23.8z   M23.6,20.4c-1.2,0-2.2-1-2.2-2.2c0-1.2,1-2.2,2.2-2.2c1.2,0,2.2,1,2.2,2.2C25.9,19.4,24.9,20.4,23.6,20.4z M26.7,14.5  c-0.6,0-1.1-0.5-1.1-1.1c0-0.6,0.5-1.1,1.1-1.1c0.6,0,1.1,0.5,1.1,1.1C27.8,14,27.3,14.5,26.7,14.5z M29.2,17  c-0.6,0-1.1-0.5-1.1-1.1c0-0.6,0.5-1.1,1.1-1.1c0.6,0,1.1,0.5,1.1,1.1C30.4,16.5,29.9,17,29.2,17z M29.2,12c-0.6,0-1.1-0.5-1.1-1.1  c0-0.6,0.5-1.1,1.1-1.1c0.6,0,1.1,0.5,1.1,1.1C30.4,11.5,29.9,12,29.2,12z M31.8,14.5c-0.6,0-1.1-0.5-1.1-1.1c0-0.6,0.5-1.1,1.1-1.1  c0.6,0,1.1,0.5,1.1,1.1C32.9,14,32.4,14.5,31.8,14.5z",
-                  }),
-                  i.createElement("rect", {
-                    fill: "currentColor",
-                    opacity: "0.5",
-                    x: "12.9",
-                    y: "8",
-                    width: "5.1",
-                    height: "4.5",
-                  }),
-                  i.createElement("rect", {
-                    fill: "currentColor",
-                    x: "18",
-                    y: "8",
-                    width: "5.1",
-                    height: "4.5",
-                  }),
-                )
-              : i.createElement(
-                  "svg",
-                  Object.assign(
-                    {
-                      xmlns: "http://www.w3.org/2000/svg",
-                      viewBox: "0 0 36 36",
-                      fill: "none",
-                    },
-                    o,
-                  ),
-                  i.createElement(
-                    "g",
-                    { clipPath: s },
+              ? n
+                ? i.createElement(
+                    "svg",
+                    Object.assign(
+                      {
+                        xmlns: "http://www.w3.org/2000/svg",
+                        version: "1.1",
+                        id: "Layer_1",
+                        x: "0px",
+                        y: "0px",
+                        viewBox: "0 0 36 36",
+                      },
+                      o,
+                    ),
+                    i.createElement("path", {
+                      fill: "currentColor",
+                      opacity: "0.5",
+                      d: "M12.9,6.2c-0.2,0-0.4-0.1-0.5-0.2c-0.2-0.2-0.5-0.4-1.2-0.4c-1.1,0-4.5,1.1-5.1,1.7S5.6,8.4,5.6,8.4v0.1  c-0.4,0.3-0.8,0.7-1.1,1C3.4,10.7,0,20.2,0,25.3s3.4,5.6,3.4,5.6c0.9,0,2.3-1.8,3.7-3.5c1.2-1.5,2.3-3,3.1-3.2  c0.8-0.3,4.4-0.4,7.9-0.4V6.2H12.9z M8.4,14.6c-1.2,0-2.2-1-2.2-2.2s1-2.2,2.2-2.2s2.2,1,2.2,2.2S9.7,14.6,8.4,14.6z M15.8,18.8  c0,0.3-0.3,0.6-0.6,0.6h-0.8v0.8c0,0.3-0.3,0.6-0.6,0.6h-1.1c-0.3,0-0.6-0.3-0.6-0.6v-0.8h-0.8c-0.3,0-0.6-0.3-0.6-0.6v-1.1  c0-0.3,0.3-0.6,0.6-0.6h0.8v-0.8c0-0.3,0.3-0.6,0.6-0.6h1.1c0.3,0,0.6,0.3,0.6,0.6v0.8h0.8c0.3,0,0.6,0.3,0.6,0.6V18.8z",
+                    }),
+                    i.createElement("path", {
+                      fill: "currentColor",
+                      d: "M31.5,9.6c-0.3-0.3-0.7-0.6-1.1-1V8.4c0,0,0-0.6-0.6-1.1s-3.9-1.7-5.1-1.7c-0.7,0-0.9,0.2-1.2,0.4c-0.2,0.1-0.3,0.2-0.5,0.2  H18v17.6c3.5,0,7,0.1,7.9,0.4c0.8,0.3,1.9,1.7,3.1,3.2c1.4,1.7,2.8,3.5,3.7,3.5c0,0,3.4-0.6,3.4-5.6S32.6,10.7,31.5,9.6z M27.6,8.7  c0.8,0,1.4,0.6,1.4,1.4s-0.6,1.4-1.4,1.4s-1.4-0.6-1.4-1.4S26.8,8.7,27.6,8.7z M23.1,20.2c-1.2,0-2.2-1-2.2-2.2s1-2.2,2.2-2.2  s2.2,1,2.2,2.2S24.3,20.2,23.1,20.2z M25,14.1c-0.8,0-1.4-0.6-1.4-1.4c0-0.8,0.6-1.4,1.4-1.4c0.8,0,1.4,0.6,1.4,1.4  C26.4,13.4,25.8,14.1,25,14.1z M27.6,16.6c-0.8,0-1.4-0.6-1.4-1.4s0.6-1.4,1.4-1.4s1.4,0.6,1.4,1.4S28.3,16.6,27.6,16.6z M30.1,14.1  c-0.8,0-1.4-0.6-1.4-1.4c0-0.8,0.6-1.4,1.4-1.4c0.8,0,1.4,0.6,1.4,1.4C31.5,13.4,30.9,14.1,30.1,14.1z",
+                    }),
+                  )
+                : i.createElement(
+                    "svg",
+                    Object.assign(
+                      {
+                        xmlns: "http://www.w3.org/2000/svg",
+                        viewBox: "0 0 36 36",
+                        fill: "none",
+                      },
+                      o,
+                    ),
                     i.createElement("path", {
                       fill: "currentColor",
                       fillRule: "evenodd",
                       clipRule: "evenodd",
-                      d: "M4.49995 7.47C3.93745 8.0325 2.81244 10.2825 2.81244 10.2825C2.24993 11.97 0.562445 17.0325 -5.43911e-05 23.7825C-5.43911e-05 23.7825 -0.562553 28.845 3.37495 29.4075C6.832 29.8396 7.9652 25.2921 8.55982 22.9059C8.73921 22.186 8.86958 21.6629 8.99995 21.5325C9.33789 21.1945 9.67584 21.0596 9.89181 21.0058C10.5086 21.6754 11.3928 22.095 12.3749 22.095C13.3745 22.095 14.2726 21.6605 14.8906 20.97H21.1093C21.7273 21.6605 22.6254 22.095 23.6249 22.095C24.6071 22.095 25.4913 21.6754 26.1081 21.0058C26.3241 21.0596 26.662 21.1945 27 21.5325C27.1303 21.6629 27.2607 22.186 27.4401 22.9059C28.0347 25.2921 29.1679 29.8396 32.625 29.4075C36.5625 28.845 36 23.7825 36 23.7825C35.4375 17.0325 33.75 11.97 33.1875 10.2825C33.1875 10.2825 32.0625 8.03251 31.4999 7.47C31.4575 7.42758 31.3927 7.39155 31.3091 7.36121C30.794 7.09333 29.2603 6.45543 26.9999 6.9075C26.8121 7.09539 26.6869 7.28328 26.6036 7.45021C26.4971 7.46255 26.4375 7.47001 26.4375 7.47001L25.875 8.0325L24.1874 8.03251V12.5325C24.1874 13.1538 23.6838 13.6575 23.0624 13.6575H12.9374C12.3161 13.6575 11.8124 13.1538 11.8124 12.5325V8.03251L10.1249 8.03249L9.56245 7.47C9.56245 7.47 9.50277 7.46254 9.39629 7.4502C9.31296 7.28328 9.18783 7.09539 8.99995 6.9075C6.73958 6.45543 5.20586 7.09333 4.6908 7.36121C4.60721 7.39155 4.54237 7.42759 4.49995 7.47ZM14.3999 18.1575C14.3999 19.4002 13.3926 20.4075 12.1499 20.4075C10.9073 20.4075 9.89995 19.4002 9.89995 18.1575C9.89995 16.9149 10.9073 15.9075 12.1499 15.9075C13.3926 15.9075 14.3999 16.9149 14.3999 18.1575ZM23.6249 20.4075C24.8676 20.4075 25.8749 19.4002 25.8749 18.1575C25.8749 16.9149 24.8676 15.9075 23.6249 15.9075C22.3823 15.9075 21.3749 16.9149 21.3749 18.1575C21.3749 19.4002 22.3823 20.4075 23.6249 20.4075ZM30.3749 10.845C30.3749 11.4663 29.8713 11.97 29.2499 11.97C28.6286 11.97 28.1249 11.4663 28.1249 10.845C28.1249 10.2237 28.6286 9.72001 29.2499 9.72001C29.8713 9.72001 30.3749 10.2237 30.3749 10.845ZM29.2499 17.0325C29.8713 17.0325 30.3749 16.5288 30.3749 15.9075C30.3749 15.2862 29.8713 14.7825 29.2499 14.7825C28.6286 14.7825 28.1249 15.2862 28.1249 15.9075C28.1249 16.5288 28.6286 17.0325 29.2499 17.0325ZM26.7187 12.2513C27.34 12.2513 27.8437 12.7549 27.8437 13.3763C27.8437 13.9976 27.34 14.5013 26.7187 14.5013C26.0974 14.5013 25.5937 13.9976 25.5937 13.3763C25.5937 12.7549 26.0974 12.2513 26.7187 12.2513ZM32.9062 13.3763C32.9062 12.7549 32.4025 12.2513 31.7812 12.2513C31.1599 12.2513 30.6562 12.7549 30.6562 13.3763C30.6562 13.9976 31.1599 14.5013 31.7812 14.5013C32.4025 14.5013 32.9062 13.9976 32.9062 13.3763ZM5.62495 10.7825C5.62495 10.5064 5.8488 10.2825 6.12495 10.2825H7.37495C7.65109 10.2825 7.87495 10.5064 7.87495 10.7825V11.7629C7.87495 11.8955 7.82227 12.0227 7.7285 12.1165L7.1035 12.7415C6.90824 12.9367 6.59166 12.9367 6.39639 12.7415L5.77139 12.1165C5.67763 12.0227 5.62495 11.8955 5.62495 11.7629V10.7825ZM6.12495 16.47C5.8488 16.47 5.62495 16.2462 5.62495 15.97V14.9896C5.62495 14.857 5.67763 14.7298 5.77139 14.6361L6.39639 14.0111C6.59166 13.8158 6.90824 13.8158 7.1035 14.0111L7.7285 14.6361C7.82227 14.7298 7.87495 14.857 7.87495 14.9896V15.97C7.87495 16.2462 7.65109 16.47 7.37495 16.47H6.12495ZM4.1562 14.5013C3.88006 14.5013 3.6562 14.2774 3.6562 14.0013V12.7513C3.6562 12.4751 3.88006 12.2513 4.1562 12.2513H5.13659C5.2692 12.2513 5.39638 12.3039 5.49014 12.3977L6.11514 13.0227C6.31041 13.218 6.31041 13.5346 6.11514 13.7298L5.49014 14.3548C5.39638 14.4486 5.2692 14.5013 5.13659 14.5013H4.1562ZM9.8437 14.0013C9.8437 14.2774 9.61984 14.5013 9.3437 14.5013H8.36331C8.2307 14.5013 8.10352 14.4486 8.00975 14.3548L7.38475 13.7298C7.18949 13.5346 7.18949 13.218 7.38475 13.0227L8.00975 12.3977C8.10352 12.3039 8.2307 12.2513 8.36331 12.2513H9.3437C9.61984 12.2513 9.8437 12.4751 9.8437 12.7513V14.0013Z",
+                      d: "M11.25 5.625C11.909 5.625 12.182 5.81802 12.4081 5.97792C12.568 6.09099 12.7045 6.1875 12.9375 6.1875H23.0625C23.2955 6.1875 23.432 6.09099 23.5919 5.97792C23.818 5.81802 24.091 5.625 24.75 5.625C25.875 5.625 29.25 6.75 29.8125 7.3125C30.375 7.875 30.375 8.4375 30.375 8.4375V8.5803C30.8163 8.91923 31.1986 9.26106 31.5 9.5625C32.625 10.6875 36 20.25 36 25.3125C36 30.375 32.625 30.9375 32.625 30.9375C31.7178 30.9375 30.323 29.1494 28.9649 27.4083C27.7966 25.9106 26.6553 24.4476 25.875 24.1875C24.1875 23.625 11.8125 23.625 10.125 24.1875C9.34465 24.4476 8.20344 25.9106 7.03512 27.4083C5.67696 29.1494 4.28215 30.9375 3.375 30.9375C3.375 30.9375 0 30.375 0 25.3125C0 20.25 3.375 10.6875 4.5 9.5625C4.80144 9.26106 5.18366 8.91923 5.625 8.5803V8.4375C5.625 8.4375 5.625 7.875 6.1875 7.3125C6.75 6.75 10.125 5.625 11.25 5.625ZM27.5625 8.71875C28.3392 8.71875 28.9688 9.34835 28.9688 10.125C28.9688 10.9017 28.3392 11.5312 27.5625 11.5312C26.7858 11.5312 26.1562 10.9017 26.1562 10.125C26.1562 9.34835 26.7858 8.71875 27.5625 8.71875ZM8.4375 14.625C9.68014 14.625 10.6875 13.6176 10.6875 12.375C10.6875 11.1324 9.68014 10.125 8.4375 10.125C7.19486 10.125 6.1875 11.1324 6.1875 12.375C6.1875 13.6176 7.19486 14.625 8.4375 14.625ZM23.0625 20.25C24.3051 20.25 25.3125 19.2426 25.3125 18C25.3125 16.7574 24.3051 15.75 23.0625 15.75C21.8199 15.75 20.8125 16.7574 20.8125 18C20.8125 19.2426 21.8199 20.25 23.0625 20.25ZM12.0938 17.1562V16.3125C12.0938 16.0018 12.3456 15.75 12.6562 15.75H13.7812C14.0919 15.75 14.3438 16.0018 14.3438 16.3125V17.1562H15.1875C15.4982 17.1562 15.75 17.4081 15.75 17.7188V18.8438C15.75 19.1544 15.4982 19.4062 15.1875 19.4062H14.3438V20.25C14.3438 20.5607 14.0919 20.8125 13.7812 20.8125H12.6562C12.3456 20.8125 12.0938 20.5607 12.0938 20.25V19.4062H11.25C10.9393 19.4062 10.6875 19.1544 10.6875 18.8438V17.7188C10.6875 17.4081 10.9393 17.1562 11.25 17.1562H12.0938ZM25.0312 14.0625C25.8079 14.0625 26.4375 13.4329 26.4375 12.6562C26.4375 11.8796 25.8079 11.25 25.0312 11.25C24.2546 11.25 23.625 11.8796 23.625 12.6562C23.625 13.4329 24.2546 14.0625 25.0312 14.0625ZM31.5 12.6562C31.5 13.4329 30.8704 14.0625 30.0938 14.0625C29.3171 14.0625 28.6875 13.4329 28.6875 12.6562C28.6875 11.8796 29.3171 11.25 30.0938 11.25C30.8704 11.25 31.5 11.8796 31.5 12.6562ZM28.9688 15.1875C28.9688 14.4108 28.3392 13.7812 27.5625 13.7812C26.7858 13.7812 26.1562 14.4108 26.1562 15.1875C26.1562 15.9642 26.7858 16.5938 27.5625 16.5938C28.3392 16.5938 28.9688 15.9642 28.9688 15.1875Z",
                     }),
-                    i.createElement("path", {
-                      fill: "currentColor",
-                      d: "M23.0624 8.03251L12.9374 8.03251V12.5325H23.0624V8.03251Z",
-                    }),
-                  ),
-                  i.createElement(
-                    "defs",
-                    null,
-                    i.createElement(
-                      "clipPath",
-                      { id: l },
+                  )
+              : "ps4" == t
+                ? n
+                  ? i.createElement(
+                      "svg",
+                      Object.assign(
+                        {
+                          xmlns: "http://www.w3.org/2000/svg",
+                          version: "1.1",
+                          id: "Layer_1",
+                          x: "0px",
+                          y: "0px",
+                          viewBox: "0 0 36 36",
+                        },
+                        o,
+                      ),
+                      i.createElement("path", {
+                        fill: "currentColor",
+                        opacity: "0.5",
+                        d: "M12.9,13.7c-0.6,0-1.1-0.5-1.1-1.1V8l-1.7,0L9.6,7.5c0,0-0.1,0-0.2,0C9.3,7.3,9.2,7.1,9,6.9  C6.7,6.5,5.2,7.1,4.7,7.4c-0.1,0-0.1,0.1-0.2,0.1C3.9,8,2.8,10.3,2.8,10.3C2.2,12,0.6,17,0,23.8c0,0-0.6,5.1,3.4,5.6  c3.5,0.4,4.6-4.1,5.2-6.5c0.2-0.7,0.3-1.2,0.4-1.4c0.3-0.3,0.7-0.5,0.9-0.5c0.6,0.7,1.5,1.1,2.5,1.1c1,0,1.9-0.4,2.5-1.1H18v-7.3  H12.9z M5.6,10.8c0-0.3,0.2-0.5,0.5-0.5h1.2c0.3,0,0.5,0.2,0.5,0.5v1c0,0.1-0.1,0.3-0.1,0.4l-0.6,0.6c-0.2,0.2-0.5,0.2-0.7,0  l-0.6-0.6c-0.1-0.1-0.1-0.2-0.1-0.4V10.8z M5.1,14.5h-1c-0.3,0-0.5-0.2-0.5-0.5v-1.2c0-0.3,0.2-0.5,0.5-0.5h1c0.1,0,0.3,0.1,0.4,0.1  L6.1,13c0.2,0.2,0.2,0.5,0,0.7l-0.6,0.6C5.4,14.4,5.3,14.5,5.1,14.5z M7.9,16c0,0.3-0.2,0.5-0.5,0.5H6.1c-0.3,0-0.5-0.2-0.5-0.5v-1  c0-0.1,0.1-0.3,0.1-0.4L6.4,14c0.2-0.2,0.5-0.2,0.7,0l0.6,0.6c0.1,0.1,0.1,0.2,0.1,0.4V16z M9.8,14c0,0.3-0.2,0.5-0.5,0.5h-1  c-0.1,0-0.3-0.1-0.4-0.1l-0.6-0.6c-0.2-0.2-0.2-0.5,0-0.7L8,12.4c0.1-0.1,0.2-0.1,0.4-0.1h1c0.3,0,0.5,0.2,0.5,0.5V14z M12.1,20.4  c-1.2,0-2.2-1-2.2-2.2c0-1.2,1-2.2,2.2-2.2c1.2,0,2.2,1,2.2,2.2C14.4,19.4,13.4,20.4,12.1,20.4z",
+                      }),
+                      i.createElement("path", {
+                        fill: "currentColor",
+                        d: "M36,23.8C35.4,17,33.8,12,33.2,10.3c0,0-1.1-2.2-1.7-2.8c0,0-0.1-0.1-0.2-0.1c-0.5-0.3-2-0.9-4.3-0.5  c-0.2,0.2-0.3,0.4-0.4,0.5c-0.1,0-0.2,0-0.2,0L25.9,8l-1.7,0v4.5c0,0.6-0.5,1.1-1.1,1.1H18V21h3.1c0.6,0.7,1.5,1.1,2.5,1.1  c1,0,1.9-0.4,2.5-1.1c0.2,0.1,0.6,0.2,0.9,0.5c0.1,0.1,0.3,0.7,0.4,1.4c0.6,2.4,1.7,6.9,5.2,6.5C36.6,28.8,36,23.8,36,23.8z   M23.6,20.4c-1.2,0-2.2-1-2.2-2.2c0-1.2,1-2.2,2.2-2.2c1.2,0,2.2,1,2.2,2.2C25.9,19.4,24.9,20.4,23.6,20.4z M26.7,14.5  c-0.6,0-1.1-0.5-1.1-1.1c0-0.6,0.5-1.1,1.1-1.1c0.6,0,1.1,0.5,1.1,1.1C27.8,14,27.3,14.5,26.7,14.5z M29.2,17  c-0.6,0-1.1-0.5-1.1-1.1c0-0.6,0.5-1.1,1.1-1.1c0.6,0,1.1,0.5,1.1,1.1C30.4,16.5,29.9,17,29.2,17z M29.2,12c-0.6,0-1.1-0.5-1.1-1.1  c0-0.6,0.5-1.1,1.1-1.1c0.6,0,1.1,0.5,1.1,1.1C30.4,11.5,29.9,12,29.2,12z M31.8,14.5c-0.6,0-1.1-0.5-1.1-1.1c0-0.6,0.5-1.1,1.1-1.1  c0.6,0,1.1,0.5,1.1,1.1C32.9,14,32.4,14.5,31.8,14.5z",
+                      }),
                       i.createElement("rect", {
                         fill: "currentColor",
-                        width: "36",
-                        height: "36",
+                        opacity: "0.5",
+                        x: "12.9",
+                        y: "8",
+                        width: "5.1",
+                        height: "4.5",
                       }),
-                    ),
-                  ),
-                )
-            : "ps5" == t
-            ? n
-              ? i.createElement(
-                  "svg",
-                  Object.assign(
-                    {
-                      xmlns: "http://www.w3.org/2000/svg",
-                      version: "1.1",
-                      id: "Layer_1",
-                      x: "0px",
-                      y: "0px",
-                      viewBox: "0 0 36 36",
-                    },
-                    o,
-                  ),
-                  i.createElement("path", {
-                    fill: "currentColor",
-                    opacity: "0.5",
-                    d: "M4.7,25.2c0.5-1.7,1.2-3.4,1.8-4.5c0.9-1.6,2.4-3.3,3.5-4.5c0.9-1,1.4-2.4,1.1-3.8l-0.7-3.8  c-0.1-0.4,0-0.7,0.3-0.9l0,0c-0.4,0-0.8,0.1-1.1,0.1V7.3c0,0,0-0.6-1.7-0.6c-1.3,0-2.6,0.7-3.1,1C4.6,7.8,4.5,8,4.5,8.2v0.6  C4.3,8.9,4.1,8.9,3.9,9C2.8,9.6,0,18,0,23.1c0,2.7,0.5,4.6,0.9,5.8c0.2,0.6,0.7,1.1,1.2,1.4l0.1,0c0.5,0.2,1-0.1,1.1-0.6  C3.7,28.6,4.1,26.9,4.7,25.2z M7.9,16.3c0,0.3-0.3,0.6-0.6,0.6H6.2c-0.3,0-0.6-0.3-0.6-0.6v-0.9c0-0.1,0.1-0.3,0.2-0.4l0.6-0.6  c0.2-0.2,0.6-0.2,0.8,0L7.7,15c0.1,0.1,0.2,0.2,0.2,0.4V16.3z M9,9.1c0.3-0.1,0.6,0,0.8,0.3l0.3,0.6c0.1,0.3,0,0.6-0.3,0.8  c-0.3,0.1-0.6,0-0.8-0.3L8.8,9.8C8.6,9.5,8.8,9.2,9,9.1z M8,12.8c0.1-0.1,0.2-0.2,0.4-0.2h0.9c0.3,0,0.6,0.3,0.6,0.6v1.1  c0,0.3-0.3,0.6-0.6,0.6H8.4c-0.1,0-0.3-0.1-0.4-0.2l-0.6-0.6c-0.2-0.2-0.2-0.6,0-0.8L8,12.8z M5.6,11.2c0-0.3,0.3-0.6,0.6-0.6h1.1  c0.3,0,0.6,0.3,0.6,0.6v0.9c0,0.1-0.1,0.3-0.2,0.4l-0.6,0.6c-0.2,0.2-0.6,0.2-0.8,0l-0.6-0.6c-0.1-0.1-0.2-0.2-0.2-0.4V11.2z   M3.7,13.2c0-0.3,0.3-0.6,0.6-0.6h0.9c0.1,0,0.3,0.1,0.4,0.2l0.6,0.6c0.2,0.2,0.2,0.6,0,0.8l-0.6,0.6c-0.1,0.1-0.2,0.2-0.4,0.2H4.2  c-0.3,0-0.6-0.3-0.6-0.6V13.2z",
-                  }),
-                  i.createElement("path", {
-                    fill: "currentColor",
-                    d: "M23.8,13.5l0.6-2l0.5-3c0-0.2,0-0.3-0.1-0.4c-0.1-0.1-0.4-0.3-0.7-0.4c-0.1,0-0.2-0.1-0.3-0.1c-1.7-0.1-3.7-0.2-5.9-0.2v7.6  h4C22.8,14.9,23.6,14.3,23.8,13.5z",
-                  }),
-                  i.createElement("path", {
-                    fill: "currentColor",
-                    opacity: "0.5",
-                    d: "M12,7.5c-0.1,0-0.1,0-0.2,0.1c-0.3,0.1-0.5,0.3-0.7,0.4C11,8.2,11,8.3,11,8.5l0.5,2.9l0.6,2.1  c0.3,0.8,1,1.4,1.9,1.4h4V7.3C15.8,7.3,13.7,7.4,12,7.5z",
-                  }),
-                  i.createElement("path", {
-                    fill: "currentColor",
-                    opacity: "0.5",
-                    d: "M14,15.5c-1,0-2-0.6-2.4-1.6c-0.2,1-0.6,1.9-1.3,2.7C9.3,17.8,7.9,19.4,7,21c-0.6,1-1.2,2.7-1.8,4.4  c-0.5,1.7-1,3.4-1.3,4.5c-0.1,0.4-0.3,0.7-0.6,0.8l0,0c1,0.2,2-0.4,2.3-1.3l1.9-4.7c0.5-1.3,1.8-2.1,3.1-2.1H18v-7H14z M12.4,21.4  c-1.2,0-2.2-1-2.2-2.2s1-2.2,2.2-2.2s2.2,1,2.2,2.2S13.6,21.4,12.4,21.4z",
-                  }),
-                  i.createElement("path", {
-                    fill: "currentColor",
-                    d: "M32.1,29.8c-0.3-1.1-0.7-2.8-1.3-4.5C30.2,23.6,29.6,22,29,21c-0.9-1.5-2.3-3.2-3.4-4.4c-0.7-0.8-1.1-1.7-1.3-2.7  c-0.4,1-1.3,1.6-2.4,1.6h-4v7h7.3c1.4,0,2.6,0.8,3.1,2.1l1.9,4.7c0.4,0.9,1.3,1.5,2.3,1.3l0,0C32.4,30.5,32.2,30.2,32.1,29.8z   M23.6,21.4c-1.2,0-2.2-1-2.2-2.2s1-2.2,2.2-2.2s2.2,1,2.2,2.2S24.9,21.4,23.6,21.4z",
-                  }),
-                  i.createElement("path", {
-                    fill: "currentColor",
-                    d: "M32.1,9c-0.1-0.1-0.3-0.1-0.6-0.2V8.2c0-0.2-0.1-0.4-0.3-0.5c-0.5-0.3-1.8-1-3.1-1c-1.7,0-1.7,0.6-1.7,0.6v0.5  c-0.4,0-0.8-0.1-1.2-0.1l0,0c0.2,0.2,0.3,0.6,0.3,0.9l-0.5,3l0,0l0,0l-0.1,0.7c-0.2,1.4,0.2,2.8,1.1,3.8c1.1,1.2,2.5,3,3.5,4.5  c0.6,1.1,1.3,2.8,1.8,4.5c0.5,1.7,1,3.4,1.3,4.5c0.1,0.5,0.6,0.8,1.1,0.6l0.1,0c0.5-0.3,1-0.8,1.2-1.4c0.4-1.2,0.9-3.1,0.9-5.8  C36,18,33.2,9.6,32.1,9z M29.2,10.1c0.6,0,1.1,0.5,1.1,1.1s-0.5,1.1-1.1,1.1s-1.1-0.5-1.1-1.1S28.6,10.1,29.2,10.1z M25.9,9.9  l0.3-0.6C26.4,9,26.7,8.9,27,9.1c0.3,0.1,0.4,0.5,0.3,0.8l-0.3,0.6c-0.1,0.3-0.5,0.4-0.8,0.3C25.9,10.5,25.8,10.2,25.9,9.9z   M27,14.6c-0.6,0-1.1-0.5-1.1-1.1s0.5-1.1,1.1-1.1s1.1,0.5,1.1,1.1S27.6,14.6,27,14.6z M29.2,16.9c-0.6,0-1.1-0.5-1.1-1.1  s0.5-1.1,1.1-1.1s1.1,0.5,1.1,1.1S29.9,16.9,29.2,16.9z M31.5,14.6c-0.6,0-1.1-0.5-1.1-1.1s0.5-1.1,1.1-1.1s1.1,0.5,1.1,1.1  S32.1,14.6,31.5,14.6z",
-                  }),
-                )
-              : i.createElement(
-                  "svg",
-                  Object.assign(
-                    {
-                      xmlns: "http://www.w3.org/2000/svg",
-                      viewBox: "0 0 36 36",
-                      fill: "none",
-                    },
-                    o,
-                  ),
-                  i.createElement("path", {
-                    fill: "currentColor",
-                    fillRule: "evenodd",
-                    clipRule: "evenodd",
-                    d: "M4.5 8.77962V8.17604C4.5 7.98797 4.59324 7.8129 4.75606 7.71875C5.29052 7.40971 6.58276 6.75 7.875 6.75C9.5625 6.75 9.5625 7.3125 9.5625 7.3125V7.79346C9.92732 7.74841 10.3079 7.7053 10.7038 7.66469L10.7001 7.66881C10.4768 7.91891 10.3639 8.22982 10.4289 8.58762L11.114 12.3555C11.3614 13.7163 10.9231 15.1154 9.99052 16.155C8.88458 17.3878 7.44481 19.1078 6.50883 20.6678C5.85918 21.7505 5.21964 23.4605 4.67636 25.1549C4.13086 26.8562 3.67463 28.5672 3.3961 29.6673C3.27268 30.1547 2.76181 30.4366 2.2902 30.2794L2.14425 30.2308C1.59878 29.9208 1.15999 29.4611 0.929107 28.8508C0.480791 27.6656 0 25.7647 0 23.0625C0 18 2.8125 9.5625 3.9375 9C4.07055 8.93348 4.25867 8.85908 4.5 8.77962ZM5.625 11.25C5.625 10.9393 5.87684 10.6875 6.1875 10.6875H7.3125C7.62316 10.6875 7.875 10.9393 7.875 11.25V12.142C7.875 12.2912 7.81574 12.4343 7.71025 12.5398L7.14775 13.1023C6.92808 13.3219 6.57192 13.3219 6.35225 13.1023L5.78975 12.5398C5.68426 12.4343 5.625 12.2912 5.625 12.142V11.25ZM5.625 16.3125C5.625 16.6232 5.87684 16.875 6.1875 16.875H7.3125C7.62316 16.875 7.875 16.6232 7.875 16.3125V15.4205C7.875 15.2713 7.81574 15.1282 7.71025 15.0227L7.14775 14.4602C6.92808 14.2406 6.57192 14.2406 6.35225 14.4602L5.78975 15.0227C5.68426 15.1282 5.625 15.2713 5.625 15.4205V16.3125ZM9.84375 14.3438C9.84375 14.6544 9.59191 14.9062 9.28125 14.9062H8.38924C8.24006 14.9062 8.09699 14.847 7.9915 14.7415L7.429 14.179C7.20933 13.9593 7.20933 13.6032 7.429 13.3835L7.9915 12.821C8.09699 12.7155 8.24006 12.6562 8.38925 12.6562H9.28125C9.59191 12.6562 9.84375 12.9081 9.84375 13.2188V14.3438ZM4.21875 14.9062C3.90809 14.9062 3.65625 14.6544 3.65625 14.3438V13.2188C3.65625 12.9081 3.90809 12.6562 4.21875 12.6562H5.11076C5.25994 12.6562 5.40301 12.7155 5.5085 12.821L6.071 13.3835C6.29067 13.6032 6.29067 13.9593 6.071 14.179L5.5085 14.7415C5.40301 14.847 5.25994 14.9062 5.11076 14.9062H4.21875ZM9.0297 9.05937C9.30756 8.92044 9.64544 9.03307 9.78437 9.31093L10.0656 9.87343C10.2046 10.1513 10.0919 10.4892 9.81406 10.6281C9.5362 10.767 9.19832 10.6544 9.05939 10.3765L8.77814 9.81404C8.63921 9.53618 8.75183 9.1983 9.0297 9.05937Z",
-                  }),
-                  i.createElement("path", {
-                    fill: "currentColor",
-                    d: "M18 7.3125C15.7603 7.3125 13.748 7.4035 11.9892 7.54668C11.9209 7.57082 11.8551 7.59586 11.7919 7.62185C11.4768 7.75142 11.2526 7.89452 11.1197 8.04343C10.9961 8.18189 10.9523 8.32182 10.9824 8.48699L11.5138 11.4097L12.1573 13.5129C12.4103 14.3408 13.1744 14.9062 14.0401 14.9062H21.9642C22.8281 14.9062 23.591 14.3431 23.8456 13.5176L24.4729 11.483L25.0176 8.48699C25.0463 8.32909 25.0039 8.1935 24.8798 8.05684C24.7463 7.90988 24.5214 7.76808 24.2057 7.6392C24.1215 7.60486 24.0327 7.57213 23.9398 7.54094C22.1978 7.40107 20.2096 7.3125 18 7.3125Z",
-                  }),
-                  i.createElement("path", {
-                    fill: "currentColor",
-                    fillRule: "evenodd",
-                    clipRule: "evenodd",
-                    d: "M3.37124 30.6556L3.34019 30.6503C3.62833 30.4606 3.84996 30.1665 3.94139 29.8054C4.2185 28.7109 4.67149 27.0124 5.212 25.3266C5.75474 23.6339 6.37801 21.9791 6.99117 20.9572C7.89825 19.4454 9.30802 17.7581 10.4092 16.5306C11.085 15.7773 11.5326 14.8493 11.6859 13.8677C12.0647 14.8275 12.9948 15.4687 14.0401 15.4687H21.9642C23.0065 15.4687 23.9345 14.8312 24.3153 13.8755C24.4698 14.8543 24.9168 15.7794 25.5908 16.5306C26.692 17.7581 28.1017 19.4454 29.0088 20.9572C29.622 21.9791 30.2453 23.6339 30.788 25.3266C31.3285 27.0124 31.7815 28.7109 32.0586 29.8054C32.15 30.1664 32.3717 30.4606 32.6598 30.6503L32.6288 30.6556C31.6413 30.8202 30.6725 30.275 30.3007 29.3455L28.4111 24.6216C27.8986 23.3402 26.6576 22.5 25.2775 22.5H10.7225C9.34243 22.5 8.10142 23.3402 7.58888 24.6216L5.69928 29.3455C5.3275 30.275 4.35868 30.8202 3.37124 30.6556ZM25.875 19.125C25.875 20.3676 24.8676 21.375 23.625 21.375C22.3824 21.375 21.375 20.3676 21.375 19.125C21.375 17.8824 22.3824 16.875 23.625 16.875C24.8676 16.875 25.875 17.8824 25.875 19.125ZM12.375 21.375C13.6176 21.375 14.625 20.3676 14.625 19.125C14.625 17.8824 13.6176 16.875 12.375 16.875C11.1324 16.875 10.125 17.8824 10.125 19.125C10.125 20.3676 11.1324 21.375 12.375 21.375Z",
-                  }),
-                  i.createElement("path", {
-                    fill: "currentColor",
-                    fillRule: "evenodd",
-                    clipRule: "evenodd",
-                    d: "M33.7098 30.2794L33.8557 30.2308C34.4012 29.9208 34.84 29.4611 35.0709 28.8508C35.5192 27.6656 36 25.7647 36 23.0625C36 18 33.1875 9.5625 32.0625 9C31.9295 8.93348 31.7413 8.85908 31.5 8.77962V8.17604C31.5 7.98797 31.4068 7.8129 31.2439 7.71875C30.7095 7.40971 29.4172 6.75 28.125 6.75C26.4375 6.75 26.4375 7.3125 26.4375 7.3125V7.79346C26.0683 7.74787 25.683 7.70427 25.282 7.66324L25.2962 7.67864C25.52 7.92502 25.6356 8.23268 25.5711 8.58762L25.0274 11.5776L25.0319 11.579L25.0203 11.6166L24.886 12.3555C24.6386 13.7163 25.0769 15.1154 26.0095 16.155C27.1154 17.3878 28.5552 19.1078 29.4912 20.6678C30.1408 21.7505 30.7804 23.4605 31.3236 25.1549C31.8691 26.8562 32.3254 28.5672 32.6039 29.6673C32.7273 30.1547 33.2382 30.4366 33.7098 30.2794ZM26.2156 9.31093C26.3546 9.03307 26.6924 8.92044 26.9703 9.05937C27.2482 9.1983 27.3608 9.53618 27.2219 9.81404L26.9406 10.3765C26.8017 10.6544 26.4638 10.767 26.1859 10.6281C25.9081 10.4892 25.7954 10.1513 25.9344 9.87343L26.2156 9.31093ZM30.375 15.75C30.375 16.3713 29.8713 16.875 29.25 16.875C28.6287 16.875 28.125 16.3713 28.125 15.75C28.125 15.1287 28.6287 14.625 29.25 14.625C29.8713 14.625 30.375 15.1287 30.375 15.75ZM31.5 14.625C32.1213 14.625 32.625 14.1213 32.625 13.5C32.625 12.8787 32.1213 12.375 31.5 12.375C30.8787 12.375 30.375 12.8787 30.375 13.5C30.375 14.1213 30.8787 14.625 31.5 14.625ZM30.375 11.25C30.375 11.8713 29.8713 12.375 29.25 12.375C28.6287 12.375 28.125 11.8713 28.125 11.25C28.125 10.6287 28.6287 10.125 29.25 10.125C29.8713 10.125 30.375 10.6287 30.375 11.25ZM27 14.625C27.6213 14.625 28.125 14.1213 28.125 13.5C28.125 12.8787 27.6213 12.375 27 12.375C26.3787 12.375 25.875 12.8787 25.875 13.5C25.875 14.1213 26.3787 14.625 27 14.625Z",
-                  }),
-                )
-            : "switchpro" == t
-            ? i.createElement(
-                "svg",
-                Object.assign(
-                  {
-                    xmlns: "http://www.w3.org/2000/svg",
-                    viewBox: "0 0 36 36",
-                    fill: "none",
-                  },
-                  o,
-                ),
-                i.createElement("path", {
-                  fill: "currentColor",
-                  d: "M3.375 30.375C0 30.375 0 25.875 0 25.875C0 25.875 0.679114 19.5689 1.65511 14.6014C2.11919 15.2235 2.72448 16.0277 3.42078 16.936C4.97674 18.9655 6.99227 21.5211 8.90421 23.7256C8.37233 24.3118 7.95006 25.2335 7.50451 26.2061C6.59778 28.1853 5.59464 30.375 3.375 30.375Z",
-                }),
-                i.createElement("path", {
-                  fill: "currentColor",
-                  fillRule: "evenodd",
-                  clipRule: "evenodd",
-                  d: "M9.94135 23.2037C10.5784 23.0625 11.25 23.0625 11.25 23.0625H24.75C24.75 23.0625 25.4216 23.0625 26.0586 23.2037C28.0029 20.9779 30.0841 18.3414 31.6864 16.2515C32.493 15.1994 33.1768 14.2877 33.6589 13.639C33.8038 13.444 33.9305 13.2728 34.0368 13.1288C33.6024 11.1876 33.1223 9.62156 32.625 8.99998C30.9375 6.75 24.75 6.75 24.75 6.75H11.25C11.25 6.75 5.0625 6.75 3.375 8.99998C2.87774 9.62156 2.39764 11.1876 1.96319 13.1288C2.06947 13.2728 2.19616 13.444 2.34111 13.639C2.82318 14.2877 3.50702 15.1994 4.31359 16.2515C5.91589 18.3414 7.99714 20.9779 9.94135 23.2037ZM27.5062 9.11247C28.2829 9.11247 28.9125 9.74207 28.9125 10.5187C28.9125 11.2954 28.2829 11.925 27.5062 11.925C26.7296 11.925 26.1 11.2954 26.1 10.5187C26.1 9.74207 26.7296 9.11247 27.5062 9.11247ZM8.1 15.1875C9.34264 15.1875 10.35 14.1801 10.35 12.9375C10.35 11.6949 9.34264 10.6875 8.1 10.6875C6.85736 10.6875 5.85 11.6949 5.85 12.9375C5.85 14.1801 6.85736 15.1875 8.1 15.1875ZM22.725 20.25C23.9676 20.25 24.975 19.2426 24.975 18C24.975 16.7574 23.9676 15.75 22.725 15.75C21.4824 15.75 20.475 16.7574 20.475 18C20.475 19.2426 21.4824 20.25 22.725 20.25ZM31.725 13.1063C31.725 13.8829 31.0954 14.5125 30.3187 14.5125C29.5421 14.5125 28.9125 13.8829 28.9125 13.1063C28.9125 12.3296 29.5421 11.7 30.3187 11.7C31.0954 11.7 31.725 12.3296 31.725 13.1063ZM24.6937 14.5125C25.4704 14.5125 26.1 13.8829 26.1 13.1063C26.1 12.3296 25.4704 11.7 24.6937 11.7C23.9171 11.7 23.2875 12.3296 23.2875 13.1063C23.2875 13.8829 23.9171 14.5125 24.6937 14.5125ZM28.9125 15.4688C28.9125 14.6921 28.2829 14.0625 27.5062 14.0625C26.7296 14.0625 26.1 14.6921 26.1 15.4688C26.1 16.2454 26.7296 16.875 27.5062 16.875C28.2829 16.875 28.9125 16.2454 28.9125 15.4688ZM11.5312 17.1562V16.3125C11.5312 16.0018 11.7831 15.75 12.0938 15.75H13.2188C13.5294 15.75 13.7812 16.0018 13.7812 16.3125V17.1562H14.625C14.9357 17.1562 15.1875 17.4081 15.1875 17.7188V18.8438C15.1875 19.1544 14.9357 19.4062 14.625 19.4062H13.7812V20.25C13.7812 20.5607 13.5294 20.8125 13.2188 20.8125H12.0938C11.7831 20.8125 11.5312 20.5607 11.5312 20.25V19.4062H10.6875C10.3768 19.4062 10.125 19.1544 10.125 18.8438V17.7188C10.125 17.4081 10.3768 17.1562 10.6875 17.1562H11.5312Z",
-                }),
-                i.createElement("path", {
-                  fill: "currentColor",
-                  d: "M34.3449 14.6014C33.8808 15.2235 33.2755 16.0277 32.5792 16.936C31.0233 18.9655 29.0077 21.5211 27.0958 23.7256C27.6277 24.3118 28.0499 25.2335 28.4955 26.2061C29.4022 28.1853 30.4054 30.375 32.625 30.375C36 30.375 36 25.875 36 25.875C36 25.875 35.3209 19.5689 34.3449 14.6014Z",
-                }),
-              )
-            : i.createElement(j, Object.assign({}, o));
+                      i.createElement("rect", {
+                        fill: "currentColor",
+                        x: "18",
+                        y: "8",
+                        width: "5.1",
+                        height: "4.5",
+                      }),
+                    )
+                  : i.createElement(
+                      "svg",
+                      Object.assign(
+                        {
+                          xmlns: "http://www.w3.org/2000/svg",
+                          viewBox: "0 0 36 36",
+                          fill: "none",
+                        },
+                        o,
+                      ),
+                      i.createElement(
+                        "g",
+                        { clipPath: s },
+                        i.createElement("path", {
+                          fill: "currentColor",
+                          fillRule: "evenodd",
+                          clipRule: "evenodd",
+                          d: "M4.49995 7.47C3.93745 8.0325 2.81244 10.2825 2.81244 10.2825C2.24993 11.97 0.562445 17.0325 -5.43911e-05 23.7825C-5.43911e-05 23.7825 -0.562553 28.845 3.37495 29.4075C6.832 29.8396 7.9652 25.2921 8.55982 22.9059C8.73921 22.186 8.86958 21.6629 8.99995 21.5325C9.33789 21.1945 9.67584 21.0596 9.89181 21.0058C10.5086 21.6754 11.3928 22.095 12.3749 22.095C13.3745 22.095 14.2726 21.6605 14.8906 20.97H21.1093C21.7273 21.6605 22.6254 22.095 23.6249 22.095C24.6071 22.095 25.4913 21.6754 26.1081 21.0058C26.3241 21.0596 26.662 21.1945 27 21.5325C27.1303 21.6629 27.2607 22.186 27.4401 22.9059C28.0347 25.2921 29.1679 29.8396 32.625 29.4075C36.5625 28.845 36 23.7825 36 23.7825C35.4375 17.0325 33.75 11.97 33.1875 10.2825C33.1875 10.2825 32.0625 8.03251 31.4999 7.47C31.4575 7.42758 31.3927 7.39155 31.3091 7.36121C30.794 7.09333 29.2603 6.45543 26.9999 6.9075C26.8121 7.09539 26.6869 7.28328 26.6036 7.45021C26.4971 7.46255 26.4375 7.47001 26.4375 7.47001L25.875 8.0325L24.1874 8.03251V12.5325C24.1874 13.1538 23.6838 13.6575 23.0624 13.6575H12.9374C12.3161 13.6575 11.8124 13.1538 11.8124 12.5325V8.03251L10.1249 8.03249L9.56245 7.47C9.56245 7.47 9.50277 7.46254 9.39629 7.4502C9.31296 7.28328 9.18783 7.09539 8.99995 6.9075C6.73958 6.45543 5.20586 7.09333 4.6908 7.36121C4.60721 7.39155 4.54237 7.42759 4.49995 7.47ZM14.3999 18.1575C14.3999 19.4002 13.3926 20.4075 12.1499 20.4075C10.9073 20.4075 9.89995 19.4002 9.89995 18.1575C9.89995 16.9149 10.9073 15.9075 12.1499 15.9075C13.3926 15.9075 14.3999 16.9149 14.3999 18.1575ZM23.6249 20.4075C24.8676 20.4075 25.8749 19.4002 25.8749 18.1575C25.8749 16.9149 24.8676 15.9075 23.6249 15.9075C22.3823 15.9075 21.3749 16.9149 21.3749 18.1575C21.3749 19.4002 22.3823 20.4075 23.6249 20.4075ZM30.3749 10.845C30.3749 11.4663 29.8713 11.97 29.2499 11.97C28.6286 11.97 28.1249 11.4663 28.1249 10.845C28.1249 10.2237 28.6286 9.72001 29.2499 9.72001C29.8713 9.72001 30.3749 10.2237 30.3749 10.845ZM29.2499 17.0325C29.8713 17.0325 30.3749 16.5288 30.3749 15.9075C30.3749 15.2862 29.8713 14.7825 29.2499 14.7825C28.6286 14.7825 28.1249 15.2862 28.1249 15.9075C28.1249 16.5288 28.6286 17.0325 29.2499 17.0325ZM26.7187 12.2513C27.34 12.2513 27.8437 12.7549 27.8437 13.3763C27.8437 13.9976 27.34 14.5013 26.7187 14.5013C26.0974 14.5013 25.5937 13.9976 25.5937 13.3763C25.5937 12.7549 26.0974 12.2513 26.7187 12.2513ZM32.9062 13.3763C32.9062 12.7549 32.4025 12.2513 31.7812 12.2513C31.1599 12.2513 30.6562 12.7549 30.6562 13.3763C30.6562 13.9976 31.1599 14.5013 31.7812 14.5013C32.4025 14.5013 32.9062 13.9976 32.9062 13.3763ZM5.62495 10.7825C5.62495 10.5064 5.8488 10.2825 6.12495 10.2825H7.37495C7.65109 10.2825 7.87495 10.5064 7.87495 10.7825V11.7629C7.87495 11.8955 7.82227 12.0227 7.7285 12.1165L7.1035 12.7415C6.90824 12.9367 6.59166 12.9367 6.39639 12.7415L5.77139 12.1165C5.67763 12.0227 5.62495 11.8955 5.62495 11.7629V10.7825ZM6.12495 16.47C5.8488 16.47 5.62495 16.2462 5.62495 15.97V14.9896C5.62495 14.857 5.67763 14.7298 5.77139 14.6361L6.39639 14.0111C6.59166 13.8158 6.90824 13.8158 7.1035 14.0111L7.7285 14.6361C7.82227 14.7298 7.87495 14.857 7.87495 14.9896V15.97C7.87495 16.2462 7.65109 16.47 7.37495 16.47H6.12495ZM4.1562 14.5013C3.88006 14.5013 3.6562 14.2774 3.6562 14.0013V12.7513C3.6562 12.4751 3.88006 12.2513 4.1562 12.2513H5.13659C5.2692 12.2513 5.39638 12.3039 5.49014 12.3977L6.11514 13.0227C6.31041 13.218 6.31041 13.5346 6.11514 13.7298L5.49014 14.3548C5.39638 14.4486 5.2692 14.5013 5.13659 14.5013H4.1562ZM9.8437 14.0013C9.8437 14.2774 9.61984 14.5013 9.3437 14.5013H8.36331C8.2307 14.5013 8.10352 14.4486 8.00975 14.3548L7.38475 13.7298C7.18949 13.5346 7.18949 13.218 7.38475 13.0227L8.00975 12.3977C8.10352 12.3039 8.2307 12.2513 8.36331 12.2513H9.3437C9.61984 12.2513 9.8437 12.4751 9.8437 12.7513V14.0013Z",
+                        }),
+                        i.createElement("path", {
+                          fill: "currentColor",
+                          d: "M23.0624 8.03251L12.9374 8.03251V12.5325H23.0624V8.03251Z",
+                        }),
+                      ),
+                      i.createElement(
+                        "defs",
+                        null,
+                        i.createElement(
+                          "clipPath",
+                          { id: l },
+                          i.createElement("rect", {
+                            fill: "currentColor",
+                            width: "36",
+                            height: "36",
+                          }),
+                        ),
+                      ),
+                    )
+                : "ps5" == t
+                  ? n
+                    ? i.createElement(
+                        "svg",
+                        Object.assign(
+                          {
+                            xmlns: "http://www.w3.org/2000/svg",
+                            version: "1.1",
+                            id: "Layer_1",
+                            x: "0px",
+                            y: "0px",
+                            viewBox: "0 0 36 36",
+                          },
+                          o,
+                        ),
+                        i.createElement("path", {
+                          fill: "currentColor",
+                          opacity: "0.5",
+                          d: "M4.7,25.2c0.5-1.7,1.2-3.4,1.8-4.5c0.9-1.6,2.4-3.3,3.5-4.5c0.9-1,1.4-2.4,1.1-3.8l-0.7-3.8  c-0.1-0.4,0-0.7,0.3-0.9l0,0c-0.4,0-0.8,0.1-1.1,0.1V7.3c0,0,0-0.6-1.7-0.6c-1.3,0-2.6,0.7-3.1,1C4.6,7.8,4.5,8,4.5,8.2v0.6  C4.3,8.9,4.1,8.9,3.9,9C2.8,9.6,0,18,0,23.1c0,2.7,0.5,4.6,0.9,5.8c0.2,0.6,0.7,1.1,1.2,1.4l0.1,0c0.5,0.2,1-0.1,1.1-0.6  C3.7,28.6,4.1,26.9,4.7,25.2z M7.9,16.3c0,0.3-0.3,0.6-0.6,0.6H6.2c-0.3,0-0.6-0.3-0.6-0.6v-0.9c0-0.1,0.1-0.3,0.2-0.4l0.6-0.6  c0.2-0.2,0.6-0.2,0.8,0L7.7,15c0.1,0.1,0.2,0.2,0.2,0.4V16.3z M9,9.1c0.3-0.1,0.6,0,0.8,0.3l0.3,0.6c0.1,0.3,0,0.6-0.3,0.8  c-0.3,0.1-0.6,0-0.8-0.3L8.8,9.8C8.6,9.5,8.8,9.2,9,9.1z M8,12.8c0.1-0.1,0.2-0.2,0.4-0.2h0.9c0.3,0,0.6,0.3,0.6,0.6v1.1  c0,0.3-0.3,0.6-0.6,0.6H8.4c-0.1,0-0.3-0.1-0.4-0.2l-0.6-0.6c-0.2-0.2-0.2-0.6,0-0.8L8,12.8z M5.6,11.2c0-0.3,0.3-0.6,0.6-0.6h1.1  c0.3,0,0.6,0.3,0.6,0.6v0.9c0,0.1-0.1,0.3-0.2,0.4l-0.6,0.6c-0.2,0.2-0.6,0.2-0.8,0l-0.6-0.6c-0.1-0.1-0.2-0.2-0.2-0.4V11.2z   M3.7,13.2c0-0.3,0.3-0.6,0.6-0.6h0.9c0.1,0,0.3,0.1,0.4,0.2l0.6,0.6c0.2,0.2,0.2,0.6,0,0.8l-0.6,0.6c-0.1,0.1-0.2,0.2-0.4,0.2H4.2  c-0.3,0-0.6-0.3-0.6-0.6V13.2z",
+                        }),
+                        i.createElement("path", {
+                          fill: "currentColor",
+                          d: "M23.8,13.5l0.6-2l0.5-3c0-0.2,0-0.3-0.1-0.4c-0.1-0.1-0.4-0.3-0.7-0.4c-0.1,0-0.2-0.1-0.3-0.1c-1.7-0.1-3.7-0.2-5.9-0.2v7.6  h4C22.8,14.9,23.6,14.3,23.8,13.5z",
+                        }),
+                        i.createElement("path", {
+                          fill: "currentColor",
+                          opacity: "0.5",
+                          d: "M12,7.5c-0.1,0-0.1,0-0.2,0.1c-0.3,0.1-0.5,0.3-0.7,0.4C11,8.2,11,8.3,11,8.5l0.5,2.9l0.6,2.1  c0.3,0.8,1,1.4,1.9,1.4h4V7.3C15.8,7.3,13.7,7.4,12,7.5z",
+                        }),
+                        i.createElement("path", {
+                          fill: "currentColor",
+                          opacity: "0.5",
+                          d: "M14,15.5c-1,0-2-0.6-2.4-1.6c-0.2,1-0.6,1.9-1.3,2.7C9.3,17.8,7.9,19.4,7,21c-0.6,1-1.2,2.7-1.8,4.4  c-0.5,1.7-1,3.4-1.3,4.5c-0.1,0.4-0.3,0.7-0.6,0.8l0,0c1,0.2,2-0.4,2.3-1.3l1.9-4.7c0.5-1.3,1.8-2.1,3.1-2.1H18v-7H14z M12.4,21.4  c-1.2,0-2.2-1-2.2-2.2s1-2.2,2.2-2.2s2.2,1,2.2,2.2S13.6,21.4,12.4,21.4z",
+                        }),
+                        i.createElement("path", {
+                          fill: "currentColor",
+                          d: "M32.1,29.8c-0.3-1.1-0.7-2.8-1.3-4.5C30.2,23.6,29.6,22,29,21c-0.9-1.5-2.3-3.2-3.4-4.4c-0.7-0.8-1.1-1.7-1.3-2.7  c-0.4,1-1.3,1.6-2.4,1.6h-4v7h7.3c1.4,0,2.6,0.8,3.1,2.1l1.9,4.7c0.4,0.9,1.3,1.5,2.3,1.3l0,0C32.4,30.5,32.2,30.2,32.1,29.8z   M23.6,21.4c-1.2,0-2.2-1-2.2-2.2s1-2.2,2.2-2.2s2.2,1,2.2,2.2S24.9,21.4,23.6,21.4z",
+                        }),
+                        i.createElement("path", {
+                          fill: "currentColor",
+                          d: "M32.1,9c-0.1-0.1-0.3-0.1-0.6-0.2V8.2c0-0.2-0.1-0.4-0.3-0.5c-0.5-0.3-1.8-1-3.1-1c-1.7,0-1.7,0.6-1.7,0.6v0.5  c-0.4,0-0.8-0.1-1.2-0.1l0,0c0.2,0.2,0.3,0.6,0.3,0.9l-0.5,3l0,0l0,0l-0.1,0.7c-0.2,1.4,0.2,2.8,1.1,3.8c1.1,1.2,2.5,3,3.5,4.5  c0.6,1.1,1.3,2.8,1.8,4.5c0.5,1.7,1,3.4,1.3,4.5c0.1,0.5,0.6,0.8,1.1,0.6l0.1,0c0.5-0.3,1-0.8,1.2-1.4c0.4-1.2,0.9-3.1,0.9-5.8  C36,18,33.2,9.6,32.1,9z M29.2,10.1c0.6,0,1.1,0.5,1.1,1.1s-0.5,1.1-1.1,1.1s-1.1-0.5-1.1-1.1S28.6,10.1,29.2,10.1z M25.9,9.9  l0.3-0.6C26.4,9,26.7,8.9,27,9.1c0.3,0.1,0.4,0.5,0.3,0.8l-0.3,0.6c-0.1,0.3-0.5,0.4-0.8,0.3C25.9,10.5,25.8,10.2,25.9,9.9z   M27,14.6c-0.6,0-1.1-0.5-1.1-1.1s0.5-1.1,1.1-1.1s1.1,0.5,1.1,1.1S27.6,14.6,27,14.6z M29.2,16.9c-0.6,0-1.1-0.5-1.1-1.1  s0.5-1.1,1.1-1.1s1.1,0.5,1.1,1.1S29.9,16.9,29.2,16.9z M31.5,14.6c-0.6,0-1.1-0.5-1.1-1.1s0.5-1.1,1.1-1.1s1.1,0.5,1.1,1.1  S32.1,14.6,31.5,14.6z",
+                        }),
+                      )
+                    : i.createElement(
+                        "svg",
+                        Object.assign(
+                          {
+                            xmlns: "http://www.w3.org/2000/svg",
+                            viewBox: "0 0 36 36",
+                            fill: "none",
+                          },
+                          o,
+                        ),
+                        i.createElement("path", {
+                          fill: "currentColor",
+                          fillRule: "evenodd",
+                          clipRule: "evenodd",
+                          d: "M4.5 8.77962V8.17604C4.5 7.98797 4.59324 7.8129 4.75606 7.71875C5.29052 7.40971 6.58276 6.75 7.875 6.75C9.5625 6.75 9.5625 7.3125 9.5625 7.3125V7.79346C9.92732 7.74841 10.3079 7.7053 10.7038 7.66469L10.7001 7.66881C10.4768 7.91891 10.3639 8.22982 10.4289 8.58762L11.114 12.3555C11.3614 13.7163 10.9231 15.1154 9.99052 16.155C8.88458 17.3878 7.44481 19.1078 6.50883 20.6678C5.85918 21.7505 5.21964 23.4605 4.67636 25.1549C4.13086 26.8562 3.67463 28.5672 3.3961 29.6673C3.27268 30.1547 2.76181 30.4366 2.2902 30.2794L2.14425 30.2308C1.59878 29.9208 1.15999 29.4611 0.929107 28.8508C0.480791 27.6656 0 25.7647 0 23.0625C0 18 2.8125 9.5625 3.9375 9C4.07055 8.93348 4.25867 8.85908 4.5 8.77962ZM5.625 11.25C5.625 10.9393 5.87684 10.6875 6.1875 10.6875H7.3125C7.62316 10.6875 7.875 10.9393 7.875 11.25V12.142C7.875 12.2912 7.81574 12.4343 7.71025 12.5398L7.14775 13.1023C6.92808 13.3219 6.57192 13.3219 6.35225 13.1023L5.78975 12.5398C5.68426 12.4343 5.625 12.2912 5.625 12.142V11.25ZM5.625 16.3125C5.625 16.6232 5.87684 16.875 6.1875 16.875H7.3125C7.62316 16.875 7.875 16.6232 7.875 16.3125V15.4205C7.875 15.2713 7.81574 15.1282 7.71025 15.0227L7.14775 14.4602C6.92808 14.2406 6.57192 14.2406 6.35225 14.4602L5.78975 15.0227C5.68426 15.1282 5.625 15.2713 5.625 15.4205V16.3125ZM9.84375 14.3438C9.84375 14.6544 9.59191 14.9062 9.28125 14.9062H8.38924C8.24006 14.9062 8.09699 14.847 7.9915 14.7415L7.429 14.179C7.20933 13.9593 7.20933 13.6032 7.429 13.3835L7.9915 12.821C8.09699 12.7155 8.24006 12.6562 8.38925 12.6562H9.28125C9.59191 12.6562 9.84375 12.9081 9.84375 13.2188V14.3438ZM4.21875 14.9062C3.90809 14.9062 3.65625 14.6544 3.65625 14.3438V13.2188C3.65625 12.9081 3.90809 12.6562 4.21875 12.6562H5.11076C5.25994 12.6562 5.40301 12.7155 5.5085 12.821L6.071 13.3835C6.29067 13.6032 6.29067 13.9593 6.071 14.179L5.5085 14.7415C5.40301 14.847 5.25994 14.9062 5.11076 14.9062H4.21875ZM9.0297 9.05937C9.30756 8.92044 9.64544 9.03307 9.78437 9.31093L10.0656 9.87343C10.2046 10.1513 10.0919 10.4892 9.81406 10.6281C9.5362 10.767 9.19832 10.6544 9.05939 10.3765L8.77814 9.81404C8.63921 9.53618 8.75183 9.1983 9.0297 9.05937Z",
+                        }),
+                        i.createElement("path", {
+                          fill: "currentColor",
+                          d: "M18 7.3125C15.7603 7.3125 13.748 7.4035 11.9892 7.54668C11.9209 7.57082 11.8551 7.59586 11.7919 7.62185C11.4768 7.75142 11.2526 7.89452 11.1197 8.04343C10.9961 8.18189 10.9523 8.32182 10.9824 8.48699L11.5138 11.4097L12.1573 13.5129C12.4103 14.3408 13.1744 14.9062 14.0401 14.9062H21.9642C22.8281 14.9062 23.591 14.3431 23.8456 13.5176L24.4729 11.483L25.0176 8.48699C25.0463 8.32909 25.0039 8.1935 24.8798 8.05684C24.7463 7.90988 24.5214 7.76808 24.2057 7.6392C24.1215 7.60486 24.0327 7.57213 23.9398 7.54094C22.1978 7.40107 20.2096 7.3125 18 7.3125Z",
+                        }),
+                        i.createElement("path", {
+                          fill: "currentColor",
+                          fillRule: "evenodd",
+                          clipRule: "evenodd",
+                          d: "M3.37124 30.6556L3.34019 30.6503C3.62833 30.4606 3.84996 30.1665 3.94139 29.8054C4.2185 28.7109 4.67149 27.0124 5.212 25.3266C5.75474 23.6339 6.37801 21.9791 6.99117 20.9572C7.89825 19.4454 9.30802 17.7581 10.4092 16.5306C11.085 15.7773 11.5326 14.8493 11.6859 13.8677C12.0647 14.8275 12.9948 15.4687 14.0401 15.4687H21.9642C23.0065 15.4687 23.9345 14.8312 24.3153 13.8755C24.4698 14.8543 24.9168 15.7794 25.5908 16.5306C26.692 17.7581 28.1017 19.4454 29.0088 20.9572C29.622 21.9791 30.2453 23.6339 30.788 25.3266C31.3285 27.0124 31.7815 28.7109 32.0586 29.8054C32.15 30.1664 32.3717 30.4606 32.6598 30.6503L32.6288 30.6556C31.6413 30.8202 30.6725 30.275 30.3007 29.3455L28.4111 24.6216C27.8986 23.3402 26.6576 22.5 25.2775 22.5H10.7225C9.34243 22.5 8.10142 23.3402 7.58888 24.6216L5.69928 29.3455C5.3275 30.275 4.35868 30.8202 3.37124 30.6556ZM25.875 19.125C25.875 20.3676 24.8676 21.375 23.625 21.375C22.3824 21.375 21.375 20.3676 21.375 19.125C21.375 17.8824 22.3824 16.875 23.625 16.875C24.8676 16.875 25.875 17.8824 25.875 19.125ZM12.375 21.375C13.6176 21.375 14.625 20.3676 14.625 19.125C14.625 17.8824 13.6176 16.875 12.375 16.875C11.1324 16.875 10.125 17.8824 10.125 19.125C10.125 20.3676 11.1324 21.375 12.375 21.375Z",
+                        }),
+                        i.createElement("path", {
+                          fill: "currentColor",
+                          fillRule: "evenodd",
+                          clipRule: "evenodd",
+                          d: "M33.7098 30.2794L33.8557 30.2308C34.4012 29.9208 34.84 29.4611 35.0709 28.8508C35.5192 27.6656 36 25.7647 36 23.0625C36 18 33.1875 9.5625 32.0625 9C31.9295 8.93348 31.7413 8.85908 31.5 8.77962V8.17604C31.5 7.98797 31.4068 7.8129 31.2439 7.71875C30.7095 7.40971 29.4172 6.75 28.125 6.75C26.4375 6.75 26.4375 7.3125 26.4375 7.3125V7.79346C26.0683 7.74787 25.683 7.70427 25.282 7.66324L25.2962 7.67864C25.52 7.92502 25.6356 8.23268 25.5711 8.58762L25.0274 11.5776L25.0319 11.579L25.0203 11.6166L24.886 12.3555C24.6386 13.7163 25.0769 15.1154 26.0095 16.155C27.1154 17.3878 28.5552 19.1078 29.4912 20.6678C30.1408 21.7505 30.7804 23.4605 31.3236 25.1549C31.8691 26.8562 32.3254 28.5672 32.6039 29.6673C32.7273 30.1547 33.2382 30.4366 33.7098 30.2794ZM26.2156 9.31093C26.3546 9.03307 26.6924 8.92044 26.9703 9.05937C27.2482 9.1983 27.3608 9.53618 27.2219 9.81404L26.9406 10.3765C26.8017 10.6544 26.4638 10.767 26.1859 10.6281C25.9081 10.4892 25.7954 10.1513 25.9344 9.87343L26.2156 9.31093ZM30.375 15.75C30.375 16.3713 29.8713 16.875 29.25 16.875C28.6287 16.875 28.125 16.3713 28.125 15.75C28.125 15.1287 28.6287 14.625 29.25 14.625C29.8713 14.625 30.375 15.1287 30.375 15.75ZM31.5 14.625C32.1213 14.625 32.625 14.1213 32.625 13.5C32.625 12.8787 32.1213 12.375 31.5 12.375C30.8787 12.375 30.375 12.8787 30.375 13.5C30.375 14.1213 30.8787 14.625 31.5 14.625ZM30.375 11.25C30.375 11.8713 29.8713 12.375 29.25 12.375C28.6287 12.375 28.125 11.8713 28.125 11.25C28.125 10.6287 28.6287 10.125 29.25 10.125C29.8713 10.125 30.375 10.6287 30.375 11.25ZM27 14.625C27.6213 14.625 28.125 14.1213 28.125 13.5C28.125 12.8787 27.6213 12.375 27 12.375C26.3787 12.375 25.875 12.8787 25.875 13.5C25.875 14.1213 26.3787 14.625 27 14.625Z",
+                        }),
+                      )
+                  : "switchpro" == t
+                    ? i.createElement(
+                        "svg",
+                        Object.assign(
+                          {
+                            xmlns: "http://www.w3.org/2000/svg",
+                            viewBox: "0 0 36 36",
+                            fill: "none",
+                          },
+                          o,
+                        ),
+                        i.createElement("path", {
+                          fill: "currentColor",
+                          d: "M3.375 30.375C0 30.375 0 25.875 0 25.875C0 25.875 0.679114 19.5689 1.65511 14.6014C2.11919 15.2235 2.72448 16.0277 3.42078 16.936C4.97674 18.9655 6.99227 21.5211 8.90421 23.7256C8.37233 24.3118 7.95006 25.2335 7.50451 26.2061C6.59778 28.1853 5.59464 30.375 3.375 30.375Z",
+                        }),
+                        i.createElement("path", {
+                          fill: "currentColor",
+                          fillRule: "evenodd",
+                          clipRule: "evenodd",
+                          d: "M9.94135 23.2037C10.5784 23.0625 11.25 23.0625 11.25 23.0625H24.75C24.75 23.0625 25.4216 23.0625 26.0586 23.2037C28.0029 20.9779 30.0841 18.3414 31.6864 16.2515C32.493 15.1994 33.1768 14.2877 33.6589 13.639C33.8038 13.444 33.9305 13.2728 34.0368 13.1288C33.6024 11.1876 33.1223 9.62156 32.625 8.99998C30.9375 6.75 24.75 6.75 24.75 6.75H11.25C11.25 6.75 5.0625 6.75 3.375 8.99998C2.87774 9.62156 2.39764 11.1876 1.96319 13.1288C2.06947 13.2728 2.19616 13.444 2.34111 13.639C2.82318 14.2877 3.50702 15.1994 4.31359 16.2515C5.91589 18.3414 7.99714 20.9779 9.94135 23.2037ZM27.5062 9.11247C28.2829 9.11247 28.9125 9.74207 28.9125 10.5187C28.9125 11.2954 28.2829 11.925 27.5062 11.925C26.7296 11.925 26.1 11.2954 26.1 10.5187C26.1 9.74207 26.7296 9.11247 27.5062 9.11247ZM8.1 15.1875C9.34264 15.1875 10.35 14.1801 10.35 12.9375C10.35 11.6949 9.34264 10.6875 8.1 10.6875C6.85736 10.6875 5.85 11.6949 5.85 12.9375C5.85 14.1801 6.85736 15.1875 8.1 15.1875ZM22.725 20.25C23.9676 20.25 24.975 19.2426 24.975 18C24.975 16.7574 23.9676 15.75 22.725 15.75C21.4824 15.75 20.475 16.7574 20.475 18C20.475 19.2426 21.4824 20.25 22.725 20.25ZM31.725 13.1063C31.725 13.8829 31.0954 14.5125 30.3187 14.5125C29.5421 14.5125 28.9125 13.8829 28.9125 13.1063C28.9125 12.3296 29.5421 11.7 30.3187 11.7C31.0954 11.7 31.725 12.3296 31.725 13.1063ZM24.6937 14.5125C25.4704 14.5125 26.1 13.8829 26.1 13.1063C26.1 12.3296 25.4704 11.7 24.6937 11.7C23.9171 11.7 23.2875 12.3296 23.2875 13.1063C23.2875 13.8829 23.9171 14.5125 24.6937 14.5125ZM28.9125 15.4688C28.9125 14.6921 28.2829 14.0625 27.5062 14.0625C26.7296 14.0625 26.1 14.6921 26.1 15.4688C26.1 16.2454 26.7296 16.875 27.5062 16.875C28.2829 16.875 28.9125 16.2454 28.9125 15.4688ZM11.5312 17.1562V16.3125C11.5312 16.0018 11.7831 15.75 12.0938 15.75H13.2188C13.5294 15.75 13.7812 16.0018 13.7812 16.3125V17.1562H14.625C14.9357 17.1562 15.1875 17.4081 15.1875 17.7188V18.8438C15.1875 19.1544 14.9357 19.4062 14.625 19.4062H13.7812V20.25C13.7812 20.5607 13.5294 20.8125 13.2188 20.8125H12.0938C11.7831 20.8125 11.5312 20.5607 11.5312 20.25V19.4062H10.6875C10.3768 19.4062 10.125 19.1544 10.125 18.8438V17.7188C10.125 17.4081 10.3768 17.1562 10.6875 17.1562H11.5312Z",
+                        }),
+                        i.createElement("path", {
+                          fill: "currentColor",
+                          d: "M34.3449 14.6014C33.8808 15.2235 33.2755 16.0277 32.5792 16.936C31.0233 18.9655 29.0077 21.5211 27.0958 23.7256C27.6277 24.3118 28.0499 25.2335 28.4955 26.2061C29.4022 28.1853 30.4054 30.375 32.625 30.375C36 30.375 36 25.875 36 25.875C36 25.875 35.3209 19.5689 34.3449 14.6014Z",
+                        }),
+                      )
+                    : i.createElement(j, Object.assign({}, o));
         }
         function K(e) {
           const { controllerType: t } = e,
@@ -19175,10 +19074,10 @@ var CLSTAMP = "8760384";
           return e.flVolume < Number.EPSILON
             ? i.createElement(xe, { color: e.color })
             : e.flVolume < 0.3 + Number.EPSILON
-            ? i.createElement(He, { color: e.color })
-            : e.flVolume < 0.6 + Number.EPSILON
-            ? i.createElement(_e, { color: e.color })
-            : i.createElement(ke, { color: e.color });
+              ? i.createElement(_e, { color: e.color })
+              : e.flVolume < 0.6 + Number.EPSILON
+                ? i.createElement(He, { color: e.color })
+                : i.createElement(ke, { color: e.color });
         }
         function ke(e) {
           return i.createElement(
@@ -19209,7 +19108,7 @@ var CLSTAMP = "8760384";
             }),
           );
         }
-        function _e(e) {
+        function He(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -19239,7 +19138,7 @@ var CLSTAMP = "8760384";
             }),
           );
         }
-        function He(e) {
+        function _e(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -20443,7 +20342,7 @@ var CLSTAMP = "8760384";
             }),
           );
         }
-        function _t(e) {
+        function Ht(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -20460,7 +20359,7 @@ var CLSTAMP = "8760384";
             }),
           );
         }
-        function Ht(e) {
+        function _t(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -20843,62 +20742,62 @@ var CLSTAMP = "8760384";
                 }),
               )
             : o
-            ? i.createElement(
-                "svg",
-                Object.assign(
-                  {
-                    xmlns: "http://www.w3.org/2000/svg",
-                    viewBox: "0 0 36 36",
-                    fill: "none",
-                  },
-                  l,
-                ),
-                i.createElement("path", {
-                  fill: "currentColor",
-                  fillRule: "evenodd",
-                  clipRule: "evenodd",
-                  d: "M25.2377 7.0939C26.902 8.83356 27.8828 11.1153 28 13.52C29.998 14.2303 31.6809 15.6232 32.7522 17.4532C33.8234 19.2831 34.2142 21.4325 33.8555 23.5224C33.4968 25.6122 32.4118 27.5084 30.7917 28.8764C29.1716 30.2444 27.1205 30.9965 25 31H11C8.87962 30.9965 6.82852 30.2444 5.20842 28.8764C3.58833 27.5084 2.50327 25.6122 2.1446 23.5224C1.78593 21.4325 2.17666 19.2831 3.24792 17.4532C4.31917 15.6232 6.00213 14.2303 8.00005 13.52C8.11845 11.109 9.10495 8.82222 10.7775 7.08168C12.45 5.34114 14.6957 4.26433 17.1 4.04999H18.0201H18.9401C21.3372 4.27345 23.5733 5.35425 25.2377 7.0939ZM10 19.6L15.41 25L25.03 15.38L22.64 13L15.41 20.23L12.39 17.21L10 19.6Z",
-                }),
-              )
-            : n
-            ? i.createElement(
-                "svg",
-                Object.assign(
-                  {
-                    xmlns: "http://www.w3.org/2000/svg",
-                    viewBox: "0 0 36 36",
-                    fill: "none",
-                  },
-                  l,
-                ),
-                i.createElement("path", {
-                  fill: "currentColor",
-                  fillRule: "evenodd",
-                  clipRule: "evenodd",
-                  d: "M21.0001 4.46371C20.3342 4.2552 19.644 4.11562 18.94 4.04999H18.02H17.1C14.6956 4.26433 12.45 5.34114 10.7774 7.08168C9.10489 8.82222 8.11839 11.109 7.99999 13.52C6.00207 14.2303 4.31911 15.6232 3.24785 17.4532C2.1766 19.2831 1.78587 21.4325 2.14454 23.5224C2.50321 25.6122 3.58826 27.5084 5.20836 28.8764C6.82846 30.2444 8.87956 30.9965 11 31H25C27.1204 30.9965 29.1715 30.2444 30.7916 28.8764C32.4117 27.5084 33.4968 25.6122 33.8554 23.5224C34.2141 21.4325 33.8234 19.2831 32.7521 17.4532C32.1879 16.4894 31.4541 15.6469 30.5939 14.9615C25.2191 14.5021 21 9.99375 21 4.5C21 4.4879 21 4.4758 21.0001 4.46371ZM20.5 9H15.5V19H20.5V9ZM18 21C17.4067 21 16.8266 21.1759 16.3333 21.5056C15.8399 21.8352 15.4554 22.3038 15.2284 22.8519C15.0013 23.4001 14.9419 24.0033 15.0576 24.5853C15.1734 25.1672 15.4591 25.7018 15.8787 26.1213C16.2982 26.5409 16.8328 26.8266 17.4147 26.9424C17.9967 27.0581 18.5999 26.9987 19.1481 26.7716C19.6962 26.5446 20.1648 26.1601 20.4944 25.6667C20.8241 25.1734 21 24.5933 21 24C21 23.2043 20.6839 22.4413 20.1213 21.8787C19.5587 21.3161 18.7957 21 18 21Z",
-                }),
-                i.createElement("path", {
-                  fill: "#FFC82C",
-                  d: "M36 4.5C36 6.98528 33.9853 9 31.5 9C29.0147 9 27 6.98528 27 4.5C27 2.01472 29.0147 0 31.5 0C33.9853 0 36 2.01472 36 4.5Z",
-                }),
-              )
-            : i.createElement(
-                "svg",
-                Object.assign(
-                  {
-                    xmlns: "http://www.w3.org/2000/svg",
-                    viewBox: "0 0 36 36",
-                    fill: "none",
-                  },
-                  l,
-                ),
-                i.createElement("path", {
-                  fill: "currentColor",
-                  fillRule: "evenodd",
-                  clipRule: "evenodd",
-                  d: "M25.2376 7.0939C26.9019 8.83356 27.8828 11.1153 28 13.52C29.9979 14.2303 31.6809 15.6232 32.7521 17.4532C33.8234 19.2831 34.2141 21.4325 33.8554 23.5224C33.4968 25.6122 32.4117 27.5084 30.7916 28.8764C29.1715 30.2444 27.1204 30.9965 25 31H11C8.87956 30.9965 6.82846 30.2444 5.20836 28.8764C3.58826 27.5084 2.50321 25.6122 2.14454 23.5224C1.78587 21.4325 2.1766 19.2831 3.24785 17.4532C4.31911 15.6232 6.00207 14.2303 7.99999 13.52C8.11839 11.109 9.10489 8.82222 10.7774 7.08168C12.45 5.34114 14.6956 4.26433 17.1 4.04999H18.02H18.94C21.3372 4.27345 23.5733 5.35425 25.2376 7.0939ZM8.12134 17.6086L13.4213 12.3086L18.7213 17.6086L16.5062 19.8237L14.9887 18.3062L14.9851 27.2943L11.8575 27.2943L11.8539 18.3062L10.3364 19.8237L8.12134 17.6086ZM26.0554 19.9863L28.2705 22.2014L22.9705 27.5014L17.6706 22.2014L19.8857 19.9863L21.4032 21.5038L21.4067 12.5157L24.5344 12.5157L24.5379 21.5038L26.0554 19.9863Z",
-                }),
-              );
+              ? i.createElement(
+                  "svg",
+                  Object.assign(
+                    {
+                      xmlns: "http://www.w3.org/2000/svg",
+                      viewBox: "0 0 36 36",
+                      fill: "none",
+                    },
+                    l,
+                  ),
+                  i.createElement("path", {
+                    fill: "currentColor",
+                    fillRule: "evenodd",
+                    clipRule: "evenodd",
+                    d: "M25.2377 7.0939C26.902 8.83356 27.8828 11.1153 28 13.52C29.998 14.2303 31.6809 15.6232 32.7522 17.4532C33.8234 19.2831 34.2142 21.4325 33.8555 23.5224C33.4968 25.6122 32.4118 27.5084 30.7917 28.8764C29.1716 30.2444 27.1205 30.9965 25 31H11C8.87962 30.9965 6.82852 30.2444 5.20842 28.8764C3.58833 27.5084 2.50327 25.6122 2.1446 23.5224C1.78593 21.4325 2.17666 19.2831 3.24792 17.4532C4.31917 15.6232 6.00213 14.2303 8.00005 13.52C8.11845 11.109 9.10495 8.82222 10.7775 7.08168C12.45 5.34114 14.6957 4.26433 17.1 4.04999H18.0201H18.9401C21.3372 4.27345 23.5733 5.35425 25.2377 7.0939ZM10 19.6L15.41 25L25.03 15.38L22.64 13L15.41 20.23L12.39 17.21L10 19.6Z",
+                  }),
+                )
+              : n
+                ? i.createElement(
+                    "svg",
+                    Object.assign(
+                      {
+                        xmlns: "http://www.w3.org/2000/svg",
+                        viewBox: "0 0 36 36",
+                        fill: "none",
+                      },
+                      l,
+                    ),
+                    i.createElement("path", {
+                      fill: "currentColor",
+                      fillRule: "evenodd",
+                      clipRule: "evenodd",
+                      d: "M21.0001 4.46371C20.3342 4.2552 19.644 4.11562 18.94 4.04999H18.02H17.1C14.6956 4.26433 12.45 5.34114 10.7774 7.08168C9.10489 8.82222 8.11839 11.109 7.99999 13.52C6.00207 14.2303 4.31911 15.6232 3.24785 17.4532C2.1766 19.2831 1.78587 21.4325 2.14454 23.5224C2.50321 25.6122 3.58826 27.5084 5.20836 28.8764C6.82846 30.2444 8.87956 30.9965 11 31H25C27.1204 30.9965 29.1715 30.2444 30.7916 28.8764C32.4117 27.5084 33.4968 25.6122 33.8554 23.5224C34.2141 21.4325 33.8234 19.2831 32.7521 17.4532C32.1879 16.4894 31.4541 15.6469 30.5939 14.9615C25.2191 14.5021 21 9.99375 21 4.5C21 4.4879 21 4.4758 21.0001 4.46371ZM20.5 9H15.5V19H20.5V9ZM18 21C17.4067 21 16.8266 21.1759 16.3333 21.5056C15.8399 21.8352 15.4554 22.3038 15.2284 22.8519C15.0013 23.4001 14.9419 24.0033 15.0576 24.5853C15.1734 25.1672 15.4591 25.7018 15.8787 26.1213C16.2982 26.5409 16.8328 26.8266 17.4147 26.9424C17.9967 27.0581 18.5999 26.9987 19.1481 26.7716C19.6962 26.5446 20.1648 26.1601 20.4944 25.6667C20.8241 25.1734 21 24.5933 21 24C21 23.2043 20.6839 22.4413 20.1213 21.8787C19.5587 21.3161 18.7957 21 18 21Z",
+                    }),
+                    i.createElement("path", {
+                      fill: "#FFC82C",
+                      d: "M36 4.5C36 6.98528 33.9853 9 31.5 9C29.0147 9 27 6.98528 27 4.5C27 2.01472 29.0147 0 31.5 0C33.9853 0 36 2.01472 36 4.5Z",
+                    }),
+                  )
+                : i.createElement(
+                    "svg",
+                    Object.assign(
+                      {
+                        xmlns: "http://www.w3.org/2000/svg",
+                        viewBox: "0 0 36 36",
+                        fill: "none",
+                      },
+                      l,
+                    ),
+                    i.createElement("path", {
+                      fill: "currentColor",
+                      fillRule: "evenodd",
+                      clipRule: "evenodd",
+                      d: "M25.2376 7.0939C26.9019 8.83356 27.8828 11.1153 28 13.52C29.9979 14.2303 31.6809 15.6232 32.7521 17.4532C33.8234 19.2831 34.2141 21.4325 33.8554 23.5224C33.4968 25.6122 32.4117 27.5084 30.7916 28.8764C29.1715 30.2444 27.1204 30.9965 25 31H11C8.87956 30.9965 6.82846 30.2444 5.20836 28.8764C3.58826 27.5084 2.50321 25.6122 2.14454 23.5224C1.78587 21.4325 2.1766 19.2831 3.24785 17.4532C4.31911 15.6232 6.00207 14.2303 7.99999 13.52C8.11839 11.109 9.10489 8.82222 10.7774 7.08168C12.45 5.34114 14.6956 4.26433 17.1 4.04999H18.02H18.94C21.3372 4.27345 23.5733 5.35425 25.2376 7.0939ZM8.12134 17.6086L13.4213 12.3086L18.7213 17.6086L16.5062 19.8237L14.9887 18.3062L14.9851 27.2943L11.8575 27.2943L11.8539 18.3062L10.3364 19.8237L8.12134 17.6086ZM26.0554 19.9863L28.2705 22.2014L22.9705 27.5014L17.6706 22.2014L19.8857 19.9863L21.4032 21.5038L21.4067 12.5157L24.5344 12.5157L24.5379 21.5038L26.0554 19.9863Z",
+                    }),
+                  );
         }
         function jt(e) {
           return i.createElement(
@@ -21554,7 +21453,7 @@ var CLSTAMP = "8760384";
             }),
           );
         }
-        function _n(e) {
+        function Hn(e) {
           return i.createElement(
             "svg",
             {
@@ -21593,7 +21492,7 @@ var CLSTAMP = "8760384";
             }),
           );
         }
-        function Hn(e) {
+        function _n(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -22725,7 +22624,7 @@ var CLSTAMP = "8760384";
             }),
           );
         }
-        function _r(e) {
+        function Hr(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -22746,7 +22645,7 @@ var CLSTAMP = "8760384";
             }),
           );
         }
-        function Hr(e) {
+        function _r(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -22793,55 +22692,55 @@ var CLSTAMP = "8760384";
                 }),
               )
             : t
-            ? i.createElement(
-                "svg",
-                Object.assign(
-                  {
-                    xmlns: "http://www.w3.org/2000/svg",
-                    viewBox: "0 0 36 36",
-                    fill: "none",
-                  },
-                  o,
-                ),
-                i.createElement("path", {
-                  fill: "currentColor",
-                  fillRule: "evenodd",
-                  clipRule: "evenodd",
-                  d: "M21.1862 2.52116C20.1687 2.17914 19.0936 2 18 2C15.3478 2 12.8043 3.05357 10.9289 4.92893C9.05357 6.8043 8 9.34784 8 12V19L4 24V26H32V24L28 19V14.4025C23.9218 12.9611 21 9.07177 21 4.5C21 3.82354 21.064 3.16202 21.1862 2.52116ZM21.46 32.897C20.4483 33.6133 19.2396 33.9986 18 34C16.7604 33.9986 15.5517 33.6133 14.54 32.897C13.5282 32.1807 12.7632 31.1687 12.35 30H23.65C23.2368 31.1687 22.4718 32.1807 21.46 32.897Z",
-                }),
-                i.createElement("path", {
-                  fill: "#1A9FFF",
-                  d: "M36 4.5C36 6.98528 33.9853 9 31.5 9C29.0147 9 27 6.98528 27 4.5C27 2.01472 29.0147 0 31.5 0C33.9853 0 36 2.01472 36 4.5Z",
-                }),
-              )
-            : i.createElement(
-                "svg",
-                Object.assign(
-                  {
-                    xmlns: "http://www.w3.org/2000/svg",
-                    viewBox: "0 0 36 36",
-                    fill: "none",
-                  },
-                  o,
-                ),
-                i.createElement(
-                  "g",
-                  { className: "SVGIcon_Notification" },
+              ? i.createElement(
+                  "svg",
+                  Object.assign(
+                    {
+                      xmlns: "http://www.w3.org/2000/svg",
+                      viewBox: "0 0 36 36",
+                      fill: "none",
+                    },
+                    o,
+                  ),
                   i.createElement("path", {
+                    fill: "currentColor",
                     fillRule: "evenodd",
                     clipRule: "evenodd",
-                    d: "M32 24V26H4V24L8 19V12C8 9.34784 9.05357 6.8043 10.9289 4.92893C12.8043 3.05357 15.3478 2 18 2C20.6522 2 23.1957 3.05357 25.0711 4.92893C26.9464 6.8043 28 9.34784 28 12V19L32 24Z",
-                    fill: "currentColor",
+                    d: "M21.1862 2.52116C20.1687 2.17914 19.0936 2 18 2C15.3478 2 12.8043 3.05357 10.9289 4.92893C9.05357 6.8043 8 9.34784 8 12V19L4 24V26H32V24L28 19V14.4025C23.9218 12.9611 21 9.07177 21 4.5C21 3.82354 21.064 3.16202 21.1862 2.52116ZM21.46 32.897C20.4483 33.6133 19.2396 33.9986 18 34C16.7604 33.9986 15.5517 33.6133 14.54 32.897C13.5282 32.1807 12.7632 31.1687 12.35 30H23.65C23.2368 31.1687 22.4718 32.1807 21.46 32.897Z",
                   }),
                   i.createElement("path", {
-                    className: "SVGIcon_Notification_Uvula",
-                    fillRule: "evenodd",
-                    clipRule: "evenodd",
-                    d: "M18 34C19.2396 33.9986 20.4483 33.6133 21.46 32.897C22.4718 32.1807 23.2368 31.1687 23.65 30H12.35C12.7632 31.1687 13.5282 32.1807 14.54 32.897C15.5517 33.6133 16.7604 33.9986 18 34Z",
-                    fill: "currentColor",
+                    fill: "#1A9FFF",
+                    d: "M36 4.5C36 6.98528 33.9853 9 31.5 9C29.0147 9 27 6.98528 27 4.5C27 2.01472 29.0147 0 31.5 0C33.9853 0 36 2.01472 36 4.5Z",
                   }),
-                ),
-              );
+                )
+              : i.createElement(
+                  "svg",
+                  Object.assign(
+                    {
+                      xmlns: "http://www.w3.org/2000/svg",
+                      viewBox: "0 0 36 36",
+                      fill: "none",
+                    },
+                    o,
+                  ),
+                  i.createElement(
+                    "g",
+                    { className: "SVGIcon_Notification" },
+                    i.createElement("path", {
+                      fillRule: "evenodd",
+                      clipRule: "evenodd",
+                      d: "M32 24V26H4V24L8 19V12C8 9.34784 9.05357 6.8043 10.9289 4.92893C12.8043 3.05357 15.3478 2 18 2C20.6522 2 23.1957 3.05357 25.0711 4.92893C26.9464 6.8043 28 9.34784 28 12V19L32 24Z",
+                      fill: "currentColor",
+                    }),
+                    i.createElement("path", {
+                      className: "SVGIcon_Notification_Uvula",
+                      fillRule: "evenodd",
+                      clipRule: "evenodd",
+                      d: "M18 34C19.2396 33.9986 20.4483 33.6133 21.46 32.897C22.4718 32.1807 23.2368 31.1687 23.65 30H12.35C12.7632 31.1687 13.5282 32.1807 14.54 32.897C15.5517 33.6133 16.7604 33.9986 18 34Z",
+                      fill: "currentColor",
+                    }),
+                  ),
+                );
         }
         function br(e) {
           return i.createElement(
@@ -24518,8 +24417,8 @@ var CLSTAMP = "8760384";
               onClickRightTrackPadTouch: E,
               onClickButtonNorth: w,
               onClickButtonSouth: k,
-              onClickButtonEast: _,
-              onClickButtonWest: H,
+              onClickButtonEast: H,
+              onClickButtonWest: _,
             } = e,
             x = (0, r._T)(e, [
               "highlightViewButton",
@@ -24605,12 +24504,12 @@ var CLSTAMP = "8760384";
               d: "M266.156 33.0058C268.465 33.0058 270.337 31.1334 270.337 28.8237C270.337 26.514 268.465 24.6416 266.156 24.6416C263.848 24.6416 261.976 26.514 261.976 28.8237C261.976 31.1334 263.848 33.0058 266.156 33.0058Z",
             }),
             i.createElement("path", {
-              onClick: _,
+              onClick: H,
               fill: d ? b : S,
               d: "M274.361 24.783C276.67 24.783 278.542 22.9106 278.542 20.6009C278.542 18.2911 276.67 16.4187 274.361 16.4187C272.052 16.4187 270.181 18.2911 270.181 20.6009C270.181 22.9106 272.052 24.783 274.361 24.783Z",
             }),
             i.createElement("path", {
-              onClick: H,
+              onClick: _,
               fill: m ? b : S,
               d: "M257.795 24.783C260.104 24.783 261.976 22.9106 261.976 20.6009C261.976 18.2911 260.104 16.4187 257.795 16.4187C255.487 16.4187 253.615 18.2911 253.615 20.6009C253.615 22.9106 255.487 24.783 257.795 24.783Z",
             }),
@@ -24712,8 +24611,8 @@ var CLSTAMP = "8760384";
               highlightL1Button: E,
               highlightL2Trigger: w,
               highlightR1Button: k,
-              highlightR2Trigger: _,
-              onClickBackGripLeftUpper: H,
+              highlightR2Trigger: H,
+              onClickBackGripLeftUpper: _,
               onClickBackGripLeftLower: x,
               onClickBackGripRightUpper: b,
               onClickBackGripRightLower: S,
@@ -24791,7 +24690,7 @@ var CLSTAMP = "8760384";
               G,
             ),
             i.createElement("path", {
-              onClick: H,
+              onClick: _,
               fill: f ? K : j,
               d: "M285.71 242.31H231.35C227.24 242.31 223.89 239.13 223.89 235.22V200.62C223.89 196.71 227.24 193.53 231.35 193.53H285.71C289.82 193.53 293.17 196.71 293.17 200.62V235.22C293.17 239.12 289.82 242.31 285.71 242.31Z",
             }),
@@ -25112,7 +25011,7 @@ var CLSTAMP = "8760384";
             i.createElement("path", {
               onClick: B,
               stroke: "currentColor",
-              fill: _ ? U : j,
+              fill: H ? U : j,
               d: "M1039.67 56.61C1037.07 51.51 1031.2 47.11 1018.02 41.42C994.29 31.17 965.62 21.91 950.58 19.43C950.14 19.36 949.71 19.29 949.29 19.23C963.45 10.41 971.51 2 986.14 2C1002.08 2 1019.34 12.25 1025.38 17.94C1031.43 23.64 1037.82 40.46 1039.4 52.46C1039.58 53.8 1039.67 55.2 1039.67 56.61Z",
               strokeWidth: "3",
               strokeMiterlimit: "10",
@@ -25261,7 +25160,7 @@ var CLSTAMP = "8760384";
             ),
           );
         }
-        function _i(e) {
+        function Hi(e) {
           const {
               hasCaptureButton: t,
               highlightLeftBumper: n,
@@ -25282,8 +25181,8 @@ var CLSTAMP = "8760384";
               highlightRightStickRight: E,
               rightJoystickX: w,
               rightJoystickY: k,
-              highlightStart: _,
-              highlightSelect: H,
+              highlightStart: H,
+              highlightSelect: _,
               highlightGuide: x,
               highlightCapture: b,
               highlightSouth: S,
@@ -25384,8 +25283,8 @@ var CLSTAMP = "8760384";
             Ee = R || D || O || B,
             we = 0.3,
             ke = Ee && I < -0.3,
-            _e = Ee && I > we,
-            He = Ee && N < -0.3,
+            He = Ee && I > we,
+            _e = Ee && N < -0.3,
             xe = Ee && N > we;
           return i.createElement(
             "svg",
@@ -25547,12 +25446,12 @@ var CLSTAMP = "8760384";
                 fill: ge,
                 d: "M250.395 285.307L250.395 220.188L315.514 220.188C320.802 220.188 325.874 218.087 329.613 214.348C333.353 210.608 335.453 205.537 335.453 200.249C335.453 194.961 333.353 189.889 329.613 186.15C325.874 182.41 320.802 180.31 315.514 180.31L250.395 180.31L250.395 115.19C250.218 110.023 248.042 105.126 244.324 101.532C240.606 97.9392 235.638 95.9307 230.467 95.9307C225.297 95.9307 220.329 97.9392 216.611 101.532C212.893 105.126 210.716 110.023 210.54 115.19L210.54 180.426L145.42 180.426C140.132 180.426 135.061 182.526 131.321 186.266C127.582 190.005 125.482 195.076 125.482 200.364C125.482 205.653 127.582 210.724 131.321 214.463C135.061 218.203 140.132 220.303 145.42 220.303L210.54 220.303L210.54 285.423C210.449 288.097 210.897 290.762 211.857 293.259C212.818 295.757 214.271 298.035 216.13 299.959C217.99 301.883 220.217 303.413 222.68 304.458C225.144 305.503 227.792 306.041 230.467 306.041C233.143 306.041 235.791 305.503 238.254 304.458C240.717 303.413 242.945 301.883 244.804 299.959C246.664 298.035 248.117 295.757 249.077 293.259C250.038 290.762 250.486 288.097 250.395 285.423L250.395 285.307Z",
               }),
-            _e &&
+            He &&
               i.createElement("path", {
                 fill: ve,
                 d: "M145.146 220.913L210.266 220.913L210.266 286.033C210.266 291.321 212.367 296.392 216.106 300.132C219.845 303.871 224.917 305.972 230.205 305.972C235.493 305.972 240.564 303.871 244.304 300.132C248.043 296.392 250.144 291.321 250.144 286.033L250.144 220.913L315.263 220.913C320.431 220.737 325.328 218.56 328.921 214.842C332.514 211.125 334.523 206.156 334.523 200.986C334.523 195.815 332.514 190.847 328.921 187.129C325.328 183.411 320.431 181.235 315.263 181.059L250.028 181.059L250.028 115.939C250.028 110.651 247.927 105.579 244.188 101.84C240.449 98.1006 235.377 96 230.089 96C224.801 96 219.729 98.1006 215.99 101.84C212.251 105.579 210.15 110.651 210.15 115.939L210.15 181.059L145.03 181.059C142.356 180.967 139.691 181.415 137.194 182.376C134.697 183.336 132.418 184.789 130.494 186.649C128.57 188.508 127.04 190.736 125.995 193.199C124.951 195.662 124.412 198.31 124.412 200.986C124.412 203.661 124.951 206.31 125.995 208.773C127.04 211.236 128.57 213.463 130.494 215.323C132.418 217.182 134.697 218.636 137.194 219.596C139.691 220.556 142.356 221.004 145.03 220.913L145.146 220.913Z",
               }),
-            He &&
+            _e &&
               i.createElement("path", {
                 fill: Me,
                 d: "M210.54 115.664L210.54 180.784L145.42 180.784C140.132 180.784 135.061 182.885 131.322 186.624C127.582 190.363 125.482 195.435 125.482 200.723C125.482 206.011 127.582 211.083 131.322 214.822C135.061 218.561 140.132 220.662 145.42 220.662L210.54 220.662L210.54 285.782C210.716 290.949 212.893 295.846 216.611 299.439C220.329 303.033 225.297 305.041 230.467 305.041C235.638 305.041 240.606 303.033 244.324 299.439C248.042 295.846 250.219 290.949 250.395 285.782L250.395 220.546L315.514 220.546C320.803 220.546 325.874 218.445 329.613 214.706C333.353 210.967 335.453 205.895 335.453 200.607C335.453 195.319 333.353 190.248 329.613 186.508C325.874 182.769 320.803 180.668 315.514 180.668L250.395 180.668L250.395 115.549C250.486 112.875 250.038 110.21 249.078 107.712C248.117 105.215 246.664 102.937 244.805 101.013C242.945 99.0887 240.717 97.5587 238.254 96.5138C235.791 95.4689 233.143 94.9304 230.467 94.9304C227.792 94.9304 225.144 95.4689 222.68 96.5138C220.217 97.5587 217.99 99.0887 216.13 101.013C214.271 102.937 212.818 105.215 211.857 107.712C210.897 110.21 210.449 112.875 210.54 115.549L210.54 115.664Z",
@@ -25576,14 +25475,14 @@ var CLSTAMP = "8760384";
             }),
             i.createElement("path", {
               onClick: G,
-              className: _ ? Ce : he,
+              className: H ? Ce : he,
               stroke: "currentColor",
               d: "M597.129 186.882H564.082C557.048 186.882 551.346 192.585 551.346 199.619V204.806C551.346 211.841 557.048 217.543 564.082 217.543H597.129C604.163 217.543 609.865 211.841 609.865 204.806V199.619C609.865 192.585 604.163 186.882 597.129 186.882Z",
               strokeMiterlimit: "10",
             }),
             i.createElement("path", {
               onClick: U,
-              className: H ? Ce : he,
+              className: _ ? Ce : he,
               stroke: "currentColor",
               d: "M428.517 186.882H395.471C388.436 186.882 382.734 192.585 382.734 199.619V204.806C382.734 211.841 388.436 217.543 395.471 217.543H428.517C435.551 217.543 441.254 211.841 441.254 204.806V199.619C441.254 192.585 435.551 186.882 428.517 186.882Z",
               strokeMiterlimit: "10",
@@ -25658,9 +25557,7 @@ var CLSTAMP = "8760384";
               onClick: ee,
               className: C ? Ce : he,
               style: {
-                transform: `translateX(${2 * p}%) translateY(${
-                  2.917251051893408 * g
-                }%)`,
+                transform: `translateX(${2 * p}%) translateY(${2.917251051893408 * g}%)`,
               },
               stroke: "currentColor",
               cx: "388.315",
@@ -25687,7 +25584,7 @@ var CLSTAMP = "8760384";
             }),
           );
         }
-        function Hi(e) {
+        function _i(e) {
           const {
               hasCaptureButton: t,
               highlightLeftBumper: n,
@@ -25709,8 +25606,8 @@ var CLSTAMP = "8760384";
               rightJoystickX: E,
               rightJoystickY: w,
               highlightStart: k,
-              highlightSelect: _,
-              highlightGuide: H,
+              highlightSelect: H,
+              highlightGuide: _,
               highlightCapture: x,
               highlightSouth: b,
               highlightEast: S,
@@ -26021,7 +25918,7 @@ var CLSTAMP = "8760384";
             !B &&
               i.createElement("rect", {
                 onClick: F,
-                className: _ ? re : ie,
+                className: H ? re : ie,
                 stroke: "currentColor",
                 x: "398.581",
                 y: "111.476",
@@ -26059,7 +25956,7 @@ var CLSTAMP = "8760384";
               }),
             !B &&
               i.createElement("path", {
-                className: H ? re : ie,
+                className: _ ? re : ie,
                 stroke: "currentColor",
                 d: "M520.404 164.814C542.166 164.814 559.807 147.171 559.807 125.407C559.807 103.643 542.166 86 520.404 86C498.642 86 481 103.643 481 125.407C481 147.171 498.642 164.814 520.404 164.814Z",
                 strokeWidth: "4",
@@ -26177,8 +26074,8 @@ var CLSTAMP = "8760384";
               rightJoystickX: E,
               rightJoystickY: w,
               highlightStart: k,
-              highlightSelect: _,
-              highlightGuide: H,
+              highlightSelect: H,
+              highlightGuide: _,
               highlightCapture: x,
               highlightSouth: b,
               highlightEast: S,
@@ -26332,7 +26229,7 @@ var CLSTAMP = "8760384";
               d: "M583.897 176.695L604.596 164.744L583.897 152.794V176.695Z",
             }),
             i.createElement("path", {
-              className: _ ? F : W,
+              className: H ? F : W,
               stroke: "currentColor",
               d: "M386.789 145.529H392.676C404.488 145.529 414.063 154.132 414.063 164.744C414.063 175.356 404.488 183.959 392.676 183.959H386.789C374.978 183.959 365.402 175.356 365.402 164.744C365.402 154.132 374.978 145.529 386.789 145.529Z",
               strokeWidth: "4",
@@ -26444,7 +26341,7 @@ var CLSTAMP = "8760384";
               d: "M784.933 249.338H777.492L774.521 239.916H760.895L758.068 249.314H750.821L764.06 207.809H771.308L784.933 249.338ZM772.395 232.91L767.563 217.521L762.949 232.91H772.395Z",
             }),
             i.createElement("circle", {
-              className: H ? F : W,
+              className: _ ? F : W,
               stroke: "currentColor",
               cx: "491.05",
               cy: "165.05",
@@ -26483,8 +26380,8 @@ var CLSTAMP = "8760384";
               rightJoystickX: E,
               rightJoystickY: w,
               highlightStart: k,
-              highlightSelect: _,
-              highlightGuide: H,
+              highlightSelect: H,
+              highlightGuide: _,
               highlightCapture: x,
               highlightSouth: b,
               highlightEast: S,
@@ -26737,7 +26634,7 @@ var CLSTAMP = "8760384";
               strokeWidth: "2",
             }),
             i.createElement("path", {
-              className: _ ? F : W,
+              className: H ? F : W,
               stroke: "currentColor",
               d: "M427.513 213.617C439.522 213.617 449.257 203.882 449.257 191.873C449.257 179.865 439.522 170.13 427.513 170.13C415.505 170.13 405.77 179.865 405.77 191.873C405.77 203.882 415.505 213.617 427.513 213.617Z",
               strokeWidth: "4",
@@ -26780,7 +26677,7 @@ var CLSTAMP = "8760384";
                 d: "M498.523 236.825C498.328 236.63 498.011 236.63 497.816 236.825L494.634 240.007C494.439 240.202 494.439 240.519 494.634 240.714C494.829 240.91 495.146 240.91 495.341 240.714L498.169 237.886L500.998 240.714C501.193 240.91 501.51 240.91 501.705 240.714C501.9 240.519 501.9 240.202 501.705 240.007L498.523 236.825ZM498.669 245.179V237.179H497.669V245.179H498.669Z",
               }),
             i.createElement("ellipse", {
-              className: H ? F : W,
+              className: _ ? F : W,
               cx: "499.064",
               cy: "93.3039",
               rx: "37.405",
@@ -26814,8 +26711,8 @@ var CLSTAMP = "8760384";
               rightJoystickX: E,
               rightJoystickY: w,
               highlightStart: k,
-              highlightSelect: _,
-              highlightGuide: H,
+              highlightSelect: H,
+              highlightGuide: _,
               highlightCapture: x,
               highlightSouth: b,
               highlightEast: S,
@@ -26937,7 +26834,7 @@ var CLSTAMP = "8760384";
               strokeLinejoin: "round",
             }),
             i.createElement("path", {
-              className: _ ? P : F,
+              className: H ? P : F,
               stroke: "currentColor",
               d: "M427.899 240.217H392.906C389.339 240.217 386.446 243.109 386.446 246.676V261.209C386.446 264.776 389.339 267.668 392.906 267.668H427.899C431.467 267.668 434.359 264.776 434.359 261.209V246.676C434.359 243.109 431.467 240.217 427.899 240.217Z",
               strokeWidth: "4",
@@ -26955,7 +26852,7 @@ var CLSTAMP = "8760384";
               strokeLinejoin: "round",
             }),
             i.createElement("path", {
-              className: H ? P : F,
+              className: _ ? P : F,
               stroke: "currentColor",
               fillRule: "evenodd",
               clipRule: "evenodd",
@@ -27098,8 +26995,8 @@ var CLSTAMP = "8760384";
               rightJoystickX: E,
               rightJoystickY: w,
               highlightStart: k,
-              highlightSelect: _,
-              highlightGuide: H,
+              highlightSelect: H,
+              highlightGuide: _,
               highlightCapture: x,
               highlightSouth: b,
               highlightEast: S,
@@ -27315,15 +27212,13 @@ var CLSTAMP = "8760384";
               i.createElement("path", {
                 className: ee,
                 style: {
-                  transform: `translateX(${16 * T}%) translateY(${
-                    12.849500998003993 * N
-                  }%)`,
+                  transform: `translateX(${16 * T}%) translateY(${12.849500998003993 * N}%)`,
                 },
                 d: "M500.273 158.546C515.335 158.546 527.546 146.335 527.546 131.273C527.546 116.211 515.335 104 500.273 104C485.21 104 473 116.211 473 131.273C473 146.335 485.21 158.546 500.273 158.546Z",
                 strokeWidth: "4",
               }),
             i.createElement("path", {
-              className: H ? ee : te,
+              className: _ ? ee : te,
               stroke: "currentColor",
               d: "M500.228 356.693C515.291 356.693 527.501 344.483 527.501 329.42C527.501 314.358 515.291 302.147 500.228 302.147C485.166 302.147 472.956 314.358 472.956 329.42C472.956 344.483 485.166 356.693 500.228 356.693Z",
               strokeWidth: "4",
@@ -27350,7 +27245,7 @@ var CLSTAMP = "8760384";
             }),
             i.createElement("path", {
               onClick: F,
-              className: _ ? ee : te,
+              className: H ? ee : te,
               stroke: "currentColor",
               d: "M299.373 58.0156H294.683C288.087 58.0156 282.74 63.3626 282.74 69.9584V100.619C282.74 107.215 288.087 112.561 294.683 112.561H299.373C305.969 112.561 311.316 107.215 311.316 100.619V69.9584C311.316 63.3626 305.969 58.0156 299.373 58.0156Z",
               strokeWidth: "4",
@@ -27556,8 +27451,8 @@ var CLSTAMP = "8760384";
               rightJoystickX: E,
               rightJoystickY: w,
               highlightStart: k,
-              highlightSelect: _,
-              highlightGuide: H,
+              highlightSelect: H,
+              highlightGuide: _,
               highlightCapture: x,
               highlightSouth: b,
               highlightEast: S,
@@ -27772,9 +27667,7 @@ var CLSTAMP = "8760384";
               i.createElement("path", {
                 className: ee,
                 style: {
-                  transform: `translateX(${16 * T}%) translateY(${
-                    12.849500998003993 * N
-                  }%)`,
+                  transform: `translateX(${16 * T}%) translateY(${12.849500998003993 * N}%)`,
                 },
                 d: "M507.273 140.546C522.335 140.546 534.546 128.335 534.546 113.273C534.546 98.2105 522.335 86 507.273 86C492.21 86 480 98.2105 480 113.273C480 128.335 492.21 140.546 507.273 140.546Z",
                 strokeWidth: "4",
@@ -27787,7 +27680,7 @@ var CLSTAMP = "8760384";
               strokeMiterlimit: "10",
             }),
             i.createElement("path", {
-              className: H ? ee : te,
+              className: _ ? ee : te,
               stroke: "currentColor",
               d: "M502.808 359.871C522.138 359.871 537.808 344.201 537.808 324.871C537.808 305.541 522.138 289.871 502.808 289.871C483.478 289.871 467.808 305.541 467.808 324.871C467.808 344.201 483.478 359.871 502.808 359.871Z",
               strokeWidth: "4",
@@ -27814,7 +27707,7 @@ var CLSTAMP = "8760384";
             }),
             i.createElement("path", {
               onClick: F,
-              className: _ ? ee : te,
+              className: H ? ee : te,
               stroke: "currentColor",
               d: "M264.255 47.6447L263.316 47.7888C257.228 48.7225 253.05 54.4145 253.984 60.5022L257.49 83.3621C258.424 89.4498 264.116 93.6279 270.203 92.6941L271.143 92.55C277.231 91.6163 281.409 85.9244 280.475 79.8366L276.969 56.9768C276.035 50.8891 270.343 46.711 264.255 47.6447Z",
               strokeWidth: "4",
@@ -27995,8 +27888,8 @@ var CLSTAMP = "8760384";
               rightJoystickX: E,
               rightJoystickY: w,
               highlightStart: k,
-              highlightSelect: _,
-              highlightGuide: H,
+              highlightSelect: H,
+              highlightGuide: _,
               highlightCapture: x,
               highlightSouth: b,
               highlightEast: S,
@@ -28216,7 +28109,7 @@ var CLSTAMP = "8760384";
               strokeMiterlimit: "10",
             }),
             i.createElement("path", {
-              className: H ? te : ne,
+              className: _ ? te : ne,
               stroke: "currentColor",
               d: "M569.658 230.766C580.739 230.766 589.723 221.783 589.723 210.701C589.723 199.62 580.739 190.637 569.658 190.637C558.577 190.637 549.593 199.62 549.593 210.701C549.593 221.783 558.577 230.766 569.658 230.766Z",
               strokeWidth: "4",
@@ -28250,7 +28143,7 @@ var CLSTAMP = "8760384";
             }),
             i.createElement("path", {
               onClick: W,
-              className: _ ? te : ne,
+              className: H ? te : ne,
               stroke: "currentColor",
               d: "M376.881 154.542C387.962 154.542 396.946 145.559 396.946 134.478C396.946 123.396 387.962 114.413 376.881 114.413C365.8 114.413 356.816 123.396 356.816 134.478C356.816 145.559 365.8 154.542 376.881 154.542Z",
               strokeWidth: "4",
@@ -28434,8 +28327,8 @@ var CLSTAMP = "8760384";
               rightJoystickX: E,
               rightJoystickY: w,
               highlightStart: k,
-              highlightSelect: _,
-              highlightGuide: H,
+              highlightSelect: H,
+              highlightGuide: _,
               highlightCapture: x,
               highlightSouth: b,
               highlightEast: S,
@@ -28564,7 +28457,7 @@ var CLSTAMP = "8760384";
               strokeMiterlimit: "10",
             }),
             i.createElement("path", {
-              className: H ? $ : J,
+              className: _ ? $ : J,
               stroke: "currentColor",
               d: "M454.574 143.943L454.574 168.256C454.574 171.479 457.187 174.092 460.41 174.092L484.723 174.092C487.946 174.092 490.559 171.479 490.559 168.256L490.559 143.943C490.559 140.72 487.946 138.107 484.723 138.107L460.41 138.107C457.187 138.107 454.574 140.72 454.574 143.943Z",
               strokeWidth: "3",
@@ -28630,9 +28523,7 @@ var CLSTAMP = "8760384";
               onClick: K,
               className: c ? $ : J,
               style: {
-                transform: `translateX(${2 * m}%) translateY(${
-                  4.266233766233766 * p
-                }%)`,
+                transform: `translateX(${2 * m}%) translateY(${4.266233766233766 * p}%)`,
               },
               stroke: "currentColor",
               d: "M206.941 191.578C206.941 172.241 191.266 156.566 171.929 156.566C152.592 156.566 136.917 172.241 136.917 191.578C136.917 210.914 152.592 226.59 171.929 226.59C191.266 226.59 206.941 210.914 206.941 191.578Z",
@@ -28663,8 +28554,8 @@ var CLSTAMP = "8760384";
               rightJoystickX: E,
               rightJoystickY: w,
               highlightStart: k,
-              highlightSelect: _,
-              highlightGuide: H,
+              highlightSelect: H,
+              highlightGuide: _,
               highlightCapture: x,
               highlightSouth: b,
               highlightEast: S,
@@ -28785,7 +28676,7 @@ var CLSTAMP = "8760384";
               strokeMiterlimit: "10",
             }),
             i.createElement("path", {
-              className: H ? z : K,
+              className: _ ? z : K,
               stroke: "currentColor",
               d: "M166.525 159.97C166.525 169.724 174.432 177.632 184.187 177.632C193.941 177.632 201.848 169.724 201.848 159.97C201.848 150.216 193.941 142.309 184.187 142.309C174.432 142.309 166.525 150.216 166.525 159.97Z",
               strokeWidth: "3",
@@ -28859,9 +28750,7 @@ var CLSTAMP = "8760384";
               onClick: G,
               className: c ? z : K,
               style: {
-                transform: `translateX(${2 * m}%) translateY(${
-                  4.266233766233766 * p
-                }%)`,
+                transform: `translateX(${2 * m}%) translateY(${4.266233766233766 * p}%)`,
               },
               stroke: "currentColor",
               d: "M270.803 193.738C270.803 213.074 286.478 228.75 305.815 228.75C325.151 228.75 340.827 213.074 340.827 193.738C340.827 174.401 325.151 158.726 305.815 158.726C286.478 158.726 270.803 174.401 270.803 193.738Z",
@@ -28892,8 +28781,8 @@ var CLSTAMP = "8760384";
               rightJoystickX: E,
               rightJoystickY: w,
               highlightStart: k,
-              highlightSelect: _,
-              highlightGuide: H,
+              highlightSelect: H,
+              highlightGuide: _,
               highlightCapture: x,
               highlightSouth: b,
               highlightEast: S,
@@ -29114,7 +29003,7 @@ var CLSTAMP = "8760384";
               strokeMiterlimit: "10",
             }),
             i.createElement("path", {
-              className: H ? ce : Ce,
+              className: _ ? ce : Ce,
               stroke: "currentColor",
               d: "M533.646 491.22C543.4 491.22 551.308 483.312 551.308 473.558C551.308 463.804 543.4 455.896 533.646 455.896C523.892 455.896 515.984 463.804 515.984 473.558C515.984 483.312 523.892 491.22 533.646 491.22Z",
               strokeWidth: "3",
@@ -29148,7 +29037,7 @@ var CLSTAMP = "8760384";
             }),
             i.createElement("path", {
               onClick: z,
-              className: _ ? ce : Ce,
+              className: H ? ce : Ce,
               stroke: "currentColor",
               d: "M164.522 69.3057H175.842H186.132H197.452C198.016 69.3057 198.483 69.7725 198.483 70.3366V78.5838C198.483 79.1479 198.016 79.6147 197.452 79.6147H186.132H175.842H164.522C163.958 79.6147 163.491 79.1479 163.491 78.5838V70.3366C163.491 69.7725 163.958 69.3057 164.522 69.3057V69.3057Z",
               strokeWidth: "3",
@@ -31089,7 +30978,7 @@ var CLSTAMP = "8760384";
             }),
           );
         }
-        function _o(e) {
+        function Ho(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -31110,7 +30999,7 @@ var CLSTAMP = "8760384";
             }),
           );
         }
-        function Ho(e) {
+        function _o(e) {
           return i.createElement(
             "svg",
             {
@@ -34024,12 +33913,12 @@ var CLSTAMP = "8760384";
                         Component: null != l ? l : w,
                       })
                     : e instanceof p.QA
-                    ? i.createElement(M, {
-                        key: e.key,
-                        modal: e,
-                        active: e == u,
-                      })
-                    : void 0,
+                      ? i.createElement(M, {
+                          key: e.key,
+                          modal: e,
+                          active: e == u,
+                        })
+                      : void 0,
                 ))
               : (s = Object.assign(Object.assign({}, s), { display: "none" })),
             i.createElement(
@@ -34134,6 +34023,7 @@ var CLSTAMP = "8760384";
           JX: () => m,
           RM: () => p,
           SQ: () => h,
+          VI: () => g,
           jF: () => f,
           uH: () => d,
         });
@@ -34350,18 +34240,19 @@ var CLSTAMP = "8760384";
         n.d(t, {
           On: () => c,
           tb: () => C,
-          Pv: () => _,
-          uH: () => H.uH,
+          Pv: () => H,
+          uH: () => _.uH,
           RG: () => x.R,
-          JX: () => H.JX,
+          JX: () => _.JX,
+          VI: () => _.VI,
           BL: () => b.BL,
           Ev: () => h,
           e1: () => s.e1,
           A: () => s.A,
-          E_: () => H.E_,
-          SQ: () => H.SQ,
-          RM: () => H.RM,
-          jF: () => H.jF,
+          E_: () => _.E_,
+          SQ: () => _.SQ,
+          RM: () => _.RM,
+          jF: () => _.jF,
           Yy: () => l.Y,
           Zp: () => b.Zp,
           bs: () => b.bs,
@@ -34455,7 +34346,7 @@ var CLSTAMP = "8760384";
           }
         }
         var k = n(86329);
-        function _(e) {
+        function H(e) {
           const { children: t, navID: n, closeModal: r } = e,
             o = i.createRef(),
             l = (function () {
@@ -34494,7 +34385,7 @@ var CLSTAMP = "8760384";
               )
             : i.createElement(i.Fragment, null, t);
         }
-        var H = n(56894),
+        var _ = n(56894),
           x = n(6978),
           b = n(25929);
       },
@@ -34721,13 +34612,13 @@ var CLSTAMP = "8760384";
                   void 0 !== L && w.current.SetCenterPopupsOnWindow(L),
                   void 0 !== v && w.current.SetOnlyPopups(v);
               }, [f, L, v]);
-            const _ = i.useMemo(
+            const H = i.useMemo(
               () => ({ ModalManager: w.current, DialogWrapper: d }),
               [d],
             );
             return i.createElement(
               h.Provider,
-              { value: _ },
+              { value: H },
               i.createElement(
                 c.O,
                 {
@@ -35097,8 +34988,8 @@ var CLSTAMP = "8760384";
           return "inline" === i
             ? r.createElement(h.Y, { active: !0 }, e.children)
             : "popout" === i
-            ? r.createElement(g, Object.assign({}, e))
-            : null;
+              ? r.createElement(g, Object.assign({}, e))
+              : null;
         }
         function g(e) {
           var t;
@@ -35116,8 +35007,8 @@ var CLSTAMP = "8760384";
               saveDimensionsKey: w,
             } = e,
             k = (0, C.Wy)(),
-            _ = null == k ? void 0 : k.ownerWindow,
-            H = (0, c.$C)(),
+            H = null == k ? void 0 : k.ownerWindow,
+            _ = (0, c.$C)(),
             x = (0, o.s)(w),
             b = Object.assign(Object.assign({}, x), { onClose: g });
           let S = 0;
@@ -35134,7 +35025,7 @@ var CLSTAMP = "8760384";
               minWidth: e.minWidth,
               minHeight: e.minHeight,
               replace_existing_popup: !0,
-              center_on_window: H.BCenterPopupsOnWindow() ? _ : void 0,
+              center_on_window: _.BCenterPopupsOnWindow() ? H : void 0,
               eCreationFlags: S,
               target_browser: E,
             },
@@ -35174,7 +35065,7 @@ var CLSTAMP = "8760384";
                   }),
                   r.createElement(
                     c.Y0,
-                    { bCenterPopupsOnWindow: H.BCenterPopupsOnWindow() },
+                    { bCenterPopupsOnWindow: _.BCenterPopupsOnWindow() },
                     L,
                   ),
                 ),
@@ -35380,12 +35271,12 @@ var CLSTAMP = "8760384";
           IF0: () => it,
           IWH: () => Ne,
           J3Z: () => Jt,
-          JgI: () => H,
+          JgI: () => _,
           JrY: () => ae,
-          KJh: () => _t,
+          KJh: () => Ht,
           KKY: () => Ut,
           Kon: () => $,
-          Lao: () => _e,
+          Lao: () => He,
           Lk$: () => Je,
           LpF: () => en,
           M3$: () => Zt,
@@ -35398,7 +35289,7 @@ var CLSTAMP = "8760384";
           OWX: () => Vt,
           Oth: () => Xt,
           P9w: () => De,
-          PjE: () => _,
+          PjE: () => H,
           Q0U: () => Lt,
           QlI: () => We,
           S2L: () => kt,
@@ -35412,7 +35303,7 @@ var CLSTAMP = "8760384";
           V7n: () => Ve,
           VR: () => ze,
           Vgm: () => Qe,
-          VwZ: () => Ht,
+          VwZ: () => _t,
           X: () => V,
           XBH: () => Ae,
           Xsu: () => Se,
@@ -35450,7 +35341,7 @@ var CLSTAMP = "8760384";
           h9: () => L,
           hLd: () => Oe,
           hnm: () => le,
-          hoX: () => He,
+          hoX: () => _e,
           hxK: () => te,
           iz5: () => N,
           j5H: () => yt,
@@ -35490,6 +35381,7 @@ var CLSTAMP = "8760384";
           v37: () => Z,
           vJ$: () => ft,
           vVQ: () => tn,
+          vwM: () => nn,
           vyu: () => jt,
           w2j: () => mt,
           wkh: () => It,
@@ -35850,7 +35742,7 @@ var CLSTAMP = "8760384";
             }),
           );
         }
-        function _(e) {
+        function H(e) {
           let t = "SVGIcon_Button SVGIcon_Microphone";
           return (
             e.className && (t += ` ${e.className}`),
@@ -35978,7 +35870,7 @@ var CLSTAMP = "8760384";
             )
           );
         }
-        function H(e) {
+        function _(e) {
           const { off: t } = e,
             n = (0, r._T)(e, ["off"]);
           return t
@@ -37846,7 +37738,7 @@ var CLSTAMP = "8760384";
             }),
           );
         }
-        function _e() {
+        function He() {
           return i.createElement(
             "svg",
             {
@@ -37873,7 +37765,7 @@ var CLSTAMP = "8760384";
             }),
           );
         }
-        function He() {
+        function _e() {
           return i.createElement(
             "svg",
             {
@@ -39766,7 +39658,7 @@ var CLSTAMP = "8760384";
             }),
           );
         }
-        function _t(e) {
+        function Ht(e) {
           return i.createElement(
             "svg",
             {
@@ -39785,7 +39677,7 @@ var CLSTAMP = "8760384";
             }),
           );
         }
-        function Ht(e) {
+        function _t(e) {
           return i.createElement(
             "svg",
             {
@@ -40692,6 +40584,40 @@ var CLSTAMP = "8760384";
               );
           }
         }
+        function nn(e) {
+          return i.createElement(
+            "svg",
+            {
+              width: "48",
+              height: "24",
+              viewBox: "0 0 48 24",
+              fill: "none",
+              xmlns: "http://www.w3.org/2000/svg",
+            },
+            i.createElement("rect", {
+              width: "48",
+              height: "24",
+              rx: "3",
+              fill: "#1A9FFF",
+            }),
+            i.createElement("path", {
+              d: "M14.3799 11.712C14.9399 11.896 15.3359 12.16 15.5679 12.504C15.8079 12.848 15.9279 13.264 15.9279 13.752C15.9279 14.248 15.7999 14.68 15.5439 15.048C15.2959 15.416 14.9359 15.7 14.4639 15.9C13.9999 16.1 13.4559 16.2 12.8319 16.2H9.17188V7.79999H12.4959C13.5119 7.79999 14.2559 7.98799 14.7279 8.36399C15.2079 8.73199 15.4479 9.25599 15.4479 9.93599C15.4479 10.744 15.0919 11.336 14.3799 11.712ZM11.2839 9.51599V11.22H12.3879C12.7159 11.22 12.9639 11.144 13.1319 10.992C13.3079 10.84 13.3959 10.62 13.3959 10.332C13.3959 9.78799 13.0479 9.51599 12.3519 9.51599H11.2839ZM12.6159 14.496C12.9759 14.496 13.2439 14.412 13.4199 14.244C13.6039 14.068 13.6959 13.84 13.6959 13.56C13.6959 12.984 13.3519 12.696 12.6639 12.696H11.2839V14.496H12.6159Z",
+              fill: "white",
+            }),
+            i.createElement("path", {
+              d: "M17.1992 7.79999H23.0192V9.57599H19.2752V11.088H22.4552V12.852H19.2752V14.424H23.0192V16.2H17.1992V7.79999Z",
+              fill: "white",
+            }),
+            i.createElement("path", {
+              d: "M28.5072 16.2H26.4312V9.57599H23.9832V7.79999H30.9552V9.57599H28.5072V16.2Z",
+              fill: "white",
+            }),
+            i.createElement("path", {
+              d: "M38.8285 16.2H36.5845L36.0925 14.76H33.0325L32.5525 16.2H30.3805L33.5365 7.79999H35.5525L38.8285 16.2ZM34.5325 10.236L33.5725 13.128H35.5285L34.5325 10.236Z",
+              fill: "white",
+            }),
+          );
+        }
       },
       36060: (e, t, n) => {
         "use strict";
@@ -41457,8 +41383,8 @@ var CLSTAMP = "8760384";
       16195: (e, t, n) => {
         "use strict";
         n.d(t, {
-          KL: () => _,
-          Qc: () => H,
+          KL: () => H,
+          Qc: () => _,
           R6: () => m,
           Sb: () => w,
           VK: () => M,
@@ -41625,14 +41551,14 @@ var CLSTAMP = "8760384";
             "undefined" != typeof SteamClient && void 0 !== SteamClient.WebChat
               ? SteamClient.WebChat.OpenURLInClient(t, i || 0, !!r)
               : 0 == t.indexOf("steam://") &&
-                0 != t.indexOf("steam://remoteplay/connect")
-              ? (l.location.href = t)
-              : l.open(
-                  t,
-                  null,
-                  "menubar,location,resizable,scrollbars,status,noopener" +
-                    (o ? ",noreferrer" : ""),
-                );
+                  0 != t.indexOf("steam://remoteplay/connect")
+                ? (l.location.href = t)
+                : l.open(
+                    t,
+                    null,
+                    "menubar,location,resizable,scrollbars,status,noopener" +
+                      (o ? ",noreferrer" : ""),
+                  );
         }
         function w(e) {
           return o.forwardRef(function (t, n) {
@@ -41654,10 +41580,10 @@ var CLSTAMP = "8760384";
               "message" in e ? e.message : "No message.",
             );
         }
-        function _(e, t) {
+        function H(e, t) {
           return e < t ? -1 : e > t ? 1 : 0;
         }
-        function H(e) {
+        function _(e) {
           if ("string" != typeof e) return NaN;
           const t = !e.includes("ms") && e.includes("s");
           let n = Number.parseFloat(e);
@@ -41834,12 +41760,12 @@ var CLSTAMP = "8760384";
           return t == r.Left
             ? e.Left
             : t == r.Right
-            ? e.Right
-            : t == r.Up
-            ? e.Up
-            : t == r.Down
-            ? e.Down
-            : "";
+              ? e.Right
+              : t == r.Up
+                ? e.Up
+                : t == r.Down
+                  ? e.Down
+                  : "";
         }
         function g(e, t, n, i) {
           let l = o.useRef(null),
@@ -42342,10 +42268,10 @@ var CLSTAMP = "8760384";
                     ? `${e} ${t}`
                     : t
                   : "object" == typeof t
-                  ? e
-                    ? `${e} ${i(t)}`
-                    : i(t)
-                  : e
+                    ? e
+                      ? `${e} ${i(t)}`
+                      : i(t)
+                    : e
                 : e,
             "",
           );
@@ -42561,22 +42487,22 @@ var CLSTAMP = "8760384";
           n.requestFullscreen
             ? n.requestFullscreen()
             : n.webkitRequestFullscreen
-            ? n.webkitRequestFullscreen()
-            : t && t.webkitSetPresentationMode
-            ? t.webkitSetPresentationMode("fullscreen")
-            : n.mozRequestFullScreen
-            ? n.mozRequestFullScreen()
-            : n.msRequestFullscreen && n.msRequestFullscreen();
+              ? n.webkitRequestFullscreen()
+              : t && t.webkitSetPresentationMode
+                ? t.webkitSetPresentationMode("fullscreen")
+                : n.mozRequestFullScreen
+                  ? n.mozRequestFullScreen()
+                  : n.msRequestFullscreen && n.msRequestFullscreen();
         }
         function E(e) {
           const t = e.ownerDocument;
           t.cancelFullscreen
             ? t.cancelFullscreen()
             : t.webkitCancelFullScreen
-            ? t.webkitCancelFullScreen()
-            : t.mozCancelFullScreen
-            ? t.mozCancelFullScreen()
-            : t.msExitFullscreen && t.msExitFullscreen();
+              ? t.webkitCancelFullScreen()
+              : t.mozCancelFullScreen
+                ? t.mozCancelFullScreen()
+                : t.msExitFullscreen && t.msExitFullscreen();
         }
         function w(e) {
           return "INPUT" === e.nodeName;
@@ -42611,7 +42537,7 @@ var CLSTAMP = "8760384";
         n.d(t, {
           BJ: () => u,
           Ei: () => g,
-          Et: () => H,
+          Et: () => _,
           GB: () => r,
           H0: () => i,
           H2: () => a,
@@ -42620,7 +42546,7 @@ var CLSTAMP = "8760384";
           Jk: () => b,
           K1: () => p,
           LO: () => R,
-          Lh: () => _,
+          Lh: () => H,
           Mv: () => V,
           PT: () => h,
           RA: () => d,
@@ -42640,7 +42566,7 @@ var CLSTAMP = "8760384";
           sH: () => C,
           uk: () => w,
         });
-        function _(e, t) {
+        function H(e, t) {
           const n = e;
           return (
             (n.lastModifiedDate = new Date()),
@@ -42648,7 +42574,7 @@ var CLSTAMP = "8760384";
             e
           );
         }
-        function H(e, t) {
+        function _(e, t) {
           let n = null == e ? void 0 : e.parentElement;
           for (; n; ) {
             if (!t || "x" == t) {
@@ -42676,7 +42602,7 @@ var CLSTAMP = "8760384";
         function x(e, t) {
           const n = [];
           let r = e;
-          for (; (r = H(r, t)); ) n.push(r);
+          for (; (r = _(r, t)); ) n.push(r);
           return n;
         }
         function b(e, t) {
@@ -42752,8 +42678,8 @@ var CLSTAMP = "8760384";
           Qw: () => h,
           XG: () => c.XG,
           Xx: () => u,
-          Yt: () => H,
-          eH: () => _,
+          Yt: () => _,
+          eH: () => H,
           ek: () => c.ek,
           is: () => w,
           jr: () => c.jr,
@@ -42832,8 +42758,8 @@ var CLSTAMP = "8760384";
             return this.m_rgLocalesToUse
               ? this.m_rgLocalesToUse
               : navigator && navigator.languages
-              ? navigator.languages
-              : ["en-US"];
+                ? navigator.languages
+                : ["en-US"];
           }
           GetELanguageFallbackOrder(e = null) {
             let t = new Array();
@@ -42879,14 +42805,14 @@ var CLSTAMP = "8760384";
           }
         }
         function h(e) {
-          return null != H.LocalizeString(e, !0);
+          return null != _.LocalizeString(e, !0);
         }
         function u(e, ...t) {
-          let n = H.LocalizeString(e);
+          let n = _.LocalizeString(e);
           return void 0 === n ? e : L(n, ...t);
         }
         function d(e, ...t) {
-          let n = H.LocalizeString(e);
+          let n = _.LocalizeString(e);
           if (void 0 === n) return e;
           let i,
             o = [],
@@ -42905,7 +42831,7 @@ var CLSTAMP = "8760384";
             : d(e + "_Plural", t.toLocaleString(), ...n);
         }
         function p(e, ...t) {
-          let n = H.LocalizeIfToken(e);
+          let n = _.LocalizeIfToken(e);
           return void 0 === n ? e : f(n, ...t);
         }
         function g(e, t, ...n) {
@@ -43035,7 +42961,7 @@ var CLSTAMP = "8760384";
         function k() {
           return E[l.De.LANGUAGE] || null;
         }
-        function _(e) {
+        function H(e) {
           let t,
             n = new Promise((e) => (t = e)),
             r = Array(e.length),
@@ -43056,8 +42982,8 @@ var CLSTAMP = "8760384";
             n
           );
         }
-        const H = new C();
-        window.LocalizationManager = H;
+        const _ = new C();
+        window.LocalizationManager = _;
       },
       66566: (e, t, n) => {
         "use strict";
@@ -43065,12 +42991,12 @@ var CLSTAMP = "8760384";
           $1: () => a,
           Kb: () => V,
           LO: () => S,
-          Mh: () => H,
+          Mh: () => _,
           Np: () => b,
           Sc: () => u,
           Ti: () => C,
           U$: () => r,
-          XG: () => _,
+          XG: () => H,
           _o: () => g,
           ek: () => v,
           jA: () => y,
@@ -43253,7 +43179,7 @@ var CLSTAMP = "8760384";
         }
         function g(e, t, n) {
           return (
-            _(new Date(1e3 * e), !1, !1) +
+            H(new Date(1e3 * e), !1, !1) +
             " " +
             u(e, { bForce24HourClock: t }) +
             " " +
@@ -43293,7 +43219,7 @@ var CLSTAMP = "8760384";
                   n < e
                     ? (0, o.Xx)("#Time_Tomorrow")
                     : (e.setDate(e.getDate() + 5),
-                      n < e ? H(n) : _(n, !0, s.bAbbreviateDayOfWeek)))
+                      n < e ? _(n) : H(n, !0, s.bAbbreviateDayOfWeek)))
             );
           }
           i.zO(new Date().setHours(24, 0, 0, 0) - r.getTime());
@@ -43317,7 +43243,7 @@ var CLSTAMP = "8760384";
           c.setDate(r.getDate() - 6);
           const C = new Date(c);
           if (s.bGranularWeek && n >= C)
-            return _(n, !1, !s.bAbbreviateDayOfWeek);
+            return H(n, !1, !s.bAbbreviateDayOfWeek);
           if (s.bGranularPast)
             return (0, o.Xx)(
               "#Time_Past_At",
@@ -43349,10 +43275,10 @@ var CLSTAMP = "8760384";
             t >= r
               ? (0, o.Xx)("#Time_Recent")
               : t.getFullYear() == n.getFullYear()
-              ? x(t)
-              : n.getMonth() < 6 && t.getFullYear() == n.getFullYear() - 1
-              ? S(t)
-              : b(t)
+                ? x(t)
+                : n.getMonth() < 6 && t.getFullYear() == n.getFullYear() - 1
+                  ? S(t)
+                  : b(t)
           );
         }
         const L = new Map(),
@@ -43361,7 +43287,7 @@ var CLSTAMP = "8760384";
           w = new Map(),
           k = new Map();
         new Map();
-        function _(e, t = !1, n = !0) {
+        function H(e, t = !1, n = !0) {
           const r = {
               weekday: n ? "long" : "short",
               day: "numeric",
@@ -43376,7 +43302,7 @@ var CLSTAMP = "8760384";
             l)
           );
         }
-        function H(e) {
+        function _(e) {
           let t = L.get(e.getDay());
           return (
             t ||
@@ -43451,26 +43377,26 @@ var CLSTAMP = "8760384";
             t > 0
               ? (0, o.Xx)("#TimeRemaining_MoreThanOneYear")
               : n > 0
-              ? (0, o.Xx)("#TimeRemaining_MonthsDays", n, r)
-              : r > 0
-              ? (0, o.Xx)(
-                  "#TimeRemaining_DaysHoursMinutes",
-                  r,
-                  i.toString().padStart(2, "0"),
-                  s.toString().padStart(2, "0"),
-                )
-              : i > 0
-              ? (0, o.Xx)(
-                  "#TimeRemaining_HoursMinutesSeconds",
-                  i.toString().padStart(2, "0"),
-                  s.toString().padStart(2, "0"),
-                  e.toString().padStart(2, "0"),
-                )
-              : (0, o.Xx)(
-                  "#TimeRemaining_MinutesSeconds",
-                  s.toString().padStart(2, "0"),
-                  e.toString().padStart(2, "0"),
-                )
+                ? (0, o.Xx)("#TimeRemaining_MonthsDays", n, r)
+                : r > 0
+                  ? (0, o.Xx)(
+                      "#TimeRemaining_DaysHoursMinutes",
+                      r,
+                      i.toString().padStart(2, "0"),
+                      s.toString().padStart(2, "0"),
+                    )
+                  : i > 0
+                    ? (0, o.Xx)(
+                        "#TimeRemaining_HoursMinutesSeconds",
+                        i.toString().padStart(2, "0"),
+                        s.toString().padStart(2, "0"),
+                        e.toString().padStart(2, "0"),
+                      )
+                    : (0, o.Xx)(
+                        "#TimeRemaining_MinutesSeconds",
+                        s.toString().padStart(2, "0"),
+                        e.toString().padStart(2, "0"),
+                      )
           );
         }
       },
@@ -43719,9 +43645,7 @@ var CLSTAMP = "8760384";
             ((d = t
               ? [
                   `%c${C}%c:${h ? " %c" + u : ""}`,
-                  `color: ${s ? "black" : "white"}; background: rgb(${l.join(
-                    ",",
-                  )}); padding: 0 1ch; border-radius: 3px;`,
+                  `color: ${s ? "black" : "white"}; background: rgb(${l.join(",")}); padding: 0 1ch; border-radius: 3px;`,
                   "color: transparent; margin-right: -1ch",
                   ...(h ? [""] : []),
                   ...o,
@@ -43973,7 +43897,7 @@ var CLSTAMP = "8760384";
           L8: () => c,
           NW: () => g,
           OR: () => E,
-          Qg: () => H,
+          Qg: () => _,
           Sd: () => f,
           U4: () => b,
           X9: () => R,
@@ -43989,7 +43913,7 @@ var CLSTAMP = "8760384";
           l4: () => u,
           ok: () => L,
           rA: () => S,
-          vK: () => _,
+          vK: () => H,
           yX: () => O,
           yx: () => B,
           zP: () => V,
@@ -44186,7 +44110,7 @@ var CLSTAMP = "8760384";
               );
           }, [e, t, n]);
         }
-        function _(e, t, n, r) {
+        function H(e, t, n, r) {
           return k(
             e,
             "message",
@@ -44196,7 +44120,7 @@ var CLSTAMP = "8760384";
             r,
           );
         }
-        function H(e, t) {
+        function _(e, t) {
           r.useLayoutEffect(() => {
             if (!t || !e) return;
             const n = e.Register(t);
@@ -44335,8 +44259,8 @@ var CLSTAMP = "8760384";
                         ? void 0
                         : e.scrollTop
                       : null === (r = n.current) || void 0 === r
-                      ? void 0
-                      : r.scrollLeft) && void 0 !== i
+                        ? void 0
+                        : r.scrollLeft) && void 0 !== i
                     ? i
                     : 0,
                 p = 0 == m,
@@ -44347,8 +44271,8 @@ var CLSTAMP = "8760384";
                         ? void 0
                         : a.scrollHeight
                       : null === (c = n.current) || void 0 === c
-                      ? void 0
-                      : c.scrollWidth) && void 0 !== C
+                        ? void 0
+                        : c.scrollWidth) && void 0 !== C
                     ? C
                     : 0) -
                     m ==
@@ -44358,8 +44282,8 @@ var CLSTAMP = "8760384";
                         ? void 0
                         : h.clientHeight
                       : null === (u = n.current) || void 0 === u
-                      ? void 0
-                      : u.clientWidth) && void 0 !== d
+                        ? void 0
+                        : u.clientWidth) && void 0 !== d
                     ? d
                     : 0);
               (o.current == p && l.current == g) ||
@@ -44867,16 +44791,15 @@ var CLSTAMP = "8760384";
         function l(e) {
           const [t, n] = r.useState(!1),
             l = r.useCallback(() => {
-              e &&
-                ((0, i.w3)(e, "Window.IsWindowMaximized")
-                  ? e.SteamClient.Window.IsWindowMaximized((e) => {
-                      n(e);
-                    })
-                  : e.screen &&
-                    n(
-                      e.screen.availWidth == e.innerWidth &&
-                        e.screen.availHeight == e.innerHeight,
-                    ));
+              (0, i.w3)(e, "Window.IsWindowMaximized")
+                ? e.SteamClient.Window.IsWindowMaximized().then((e) => {
+                    n(e);
+                  })
+                : (null == e ? void 0 : e.screen) &&
+                  n(
+                    e.screen.availWidth == e.innerWidth &&
+                      e.screen.availHeight == e.innerHeight,
+                  );
             }, [e]);
           return (
             r.useEffect(l, [l, e]),
@@ -45066,7 +44989,7 @@ var CLSTAMP = "8760384";
           De: () => l.De,
           E_: () => c,
           JA: () => l.JA,
-          Kc: () => H,
+          Kc: () => _,
           L7: () => l.L7,
           Me: () => v,
           S$: () => k,
@@ -45085,7 +45008,7 @@ var CLSTAMP = "8760384";
           kQ: () => a.kQ,
           m4: () => m,
           qt: () => C,
-          wI: () => _,
+          wI: () => H,
           wg: () => E,
           y9: () => a.y9,
         });
@@ -45176,50 +45099,51 @@ var CLSTAMP = "8760384";
         function k() {
           return l.De.ON_STEAMOS;
         }
-        function _(e, t) {
+        function H(e, t) {
           return 0 != t.length && e.startsWith(t);
         }
-        function H() {
+        function _() {
           if (!window || !window.location || !window.location.href)
             return console.warn("Unable to determine base url!"), "unknown";
           const e = window.location.href;
-          return _(e, l.De.STORE_BASE_URL)
+          return H(e, l.De.STORE_BASE_URL)
             ? l.De.STORE_BASE_URL
-            : _(e, l.De.COMMUNITY_BASE_URL)
-            ? l.De.COMMUNITY_BASE_URL
-            : _(e, l.De.CHAT_BASE_URL)
-            ? l.De.CHAT_BASE_URL
-            : _(e, l.De.PARTNER_BASE_URL)
-            ? l.De.PARTNER_BASE_URL
-            : _(e, l.De.HELP_BASE_URL)
-            ? l.De.HELP_BASE_URL
-            : _(e, l.De.STEAMTV_BASE_URL)
-            ? l.De.STEAMTV_BASE_URL
-            : _(e, l.De.STATS_BASE_URL)
-            ? l.De.STATS_BASE_URL
-            : _(e, l.De.INTERNAL_STATS_BASE_URL)
-            ? l.De.INTERNAL_STATS_BASE_URL
-            : _(e, l.De.STORE_CHECKOUT_BASE_URL)
-            ? l.De.STORE_CHECKOUT_BASE_URL
-            : _(e, "https://steamloopback.host")
-            ? "https://steamloopback.host"
-            : "";
+            : H(e, l.De.COMMUNITY_BASE_URL)
+              ? l.De.COMMUNITY_BASE_URL
+              : H(e, l.De.CHAT_BASE_URL)
+                ? l.De.CHAT_BASE_URL
+                : H(e, l.De.PARTNER_BASE_URL)
+                  ? l.De.PARTNER_BASE_URL
+                  : H(e, l.De.HELP_BASE_URL)
+                    ? l.De.HELP_BASE_URL
+                    : H(e, l.De.STEAMTV_BASE_URL)
+                      ? l.De.STEAMTV_BASE_URL
+                      : H(e, l.De.STATS_BASE_URL)
+                        ? l.De.STATS_BASE_URL
+                        : H(e, l.De.INTERNAL_STATS_BASE_URL)
+                          ? l.De.INTERNAL_STATS_BASE_URL
+                          : H(e, l.De.STORE_CHECKOUT_BASE_URL)
+                            ? l.De.STORE_CHECKOUT_BASE_URL
+                            : H(e, "https://steamloopback.host")
+                              ? "https://steamloopback.host"
+                              : "";
         }
         function x() {
           const e = window.location.href;
-          return _(e, l.De.STORE_BASE_URL) || _(e, l.De.STORE_CHECKOUT_BASE_URL)
+          return H(e, l.De.STORE_BASE_URL) || H(e, l.De.STORE_CHECKOUT_BASE_URL)
             ? "store"
-            : _(e, l.De.COMMUNITY_BASE_URL)
-            ? "community"
-            : _(e, l.De.PARTNER_BASE_URL)
-            ? "partnerweb"
-            : _(e, l.De.HELP_BASE_URL)
-            ? "help"
-            : _(e, l.De.STEAMTV_BASE_URL)
-            ? "steamtv"
-            : _(e, l.De.STATS_BASE_URL) || _(e, l.De.INTERNAL_STATS_BASE_URL)
-            ? "stats"
-            : "";
+            : H(e, l.De.COMMUNITY_BASE_URL)
+              ? "community"
+              : H(e, l.De.PARTNER_BASE_URL)
+                ? "partnerweb"
+                : H(e, l.De.HELP_BASE_URL)
+                  ? "help"
+                  : H(e, l.De.STEAMTV_BASE_URL)
+                    ? "steamtv"
+                    : H(e, l.De.STATS_BASE_URL) ||
+                        H(e, l.De.INTERNAL_STATS_BASE_URL)
+                      ? "stats"
+                      : "";
         }
       },
       72467: (e, t, n) => {
@@ -45361,9 +45285,9 @@ var CLSTAMP = "8760384";
                 ? {
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Mar 12 2024 : 14:13:27",
-                    BUILD_TIME_UTC: "Mar 12 2024 : 21:13:27",
-                    BUILD_RTIME_UTC: 1710278007,
+                    BUILD_TIME_LOCAL: "Mar 18 2024 : 11:09:22",
+                    BUILD_TIME_UTC: "Mar 18 2024 : 18:09:22",
+                    BUILD_RTIME_UTC: 1710785362,
                   }.MOBILE_BUILD
                   ? null
                   : document.getElementById(t)
@@ -45398,47 +45322,21 @@ var CLSTAMP = "8760384";
       },
       49578: (e, t, n) => {
         "use strict";
-        function r() {
-          var e;
-          const t =
-            null ===
-              (e = (function () {
-                const e = navigator.userAgent.match(
-                  /Valve (?<family>Steam (?:Client|GameOverlay|Tenfoot|ClientUI|Gamepad(?: VR)?(?:\/Steam Deck)?))( \[(?<betaid>[^\]]*)\])?(\/(?<launcher>[A-Za-z0-9_]+))?\/(?<version>[0-9]*)/,
-                );
-                return e ? e.groups : void 0;
-              })()) || void 0 === e
-              ? void 0
-              : e.betaid;
-          return (
-            t &&
-            ("Steam Main Client" == t ||
-              "Steam Beta Update" == t ||
-              "Steam Deck Beta" == t ||
-              "Steam Deck Main" == t)
-          );
-        }
-        n.d(t, {
-          M4: () => r,
-          RY: () => h,
-          g3: () => d,
-          k0: () => C,
-          yp: () => u,
-        });
-        let i = !1,
+        n.d(t, { RY: () => C, g3: () => u, k0: () => c, yp: () => h });
+        let r = !1,
+          i = !1,
           o = !1,
           l = !1,
           s = !1,
-          a = !1,
-          c = !1;
+          a = !1;
+        function c() {
+          return r || m(), i || o;
+        }
         function C() {
-          return i || p(), o || l;
+          return r || m(), a;
         }
         function h() {
-          return i || p(), c;
-        }
-        function u() {
-          if (!C()) return 0;
+          if (!c()) return 0;
           if ("undefined" != typeof navigator && navigator.userAgent) {
             let e = navigator.userAgent.match(
               /Valve Steam [^\/]*\/(?:[^/]*\/)?([0-9]+)/,
@@ -45447,7 +45345,7 @@ var CLSTAMP = "8760384";
           }
           return 0;
         }
-        function d() {
+        function u() {
           if (
             !(null === navigator || void 0 === navigator
               ? void 0
@@ -45457,7 +45355,7 @@ var CLSTAMP = "8760384";
           const e = navigator.userAgent.match(/Valve Steam ([^\/]*)\//);
           return e && 2 == e.length ? e[1] : void 0;
         }
-        function m(e, t) {
+        function d(e, t) {
           return (
             !!window.location.href.match("[?&]" + t + "=") ||
             !(
@@ -45467,18 +45365,18 @@ var CLSTAMP = "8760384";
             )
           );
         }
-        function p() {
-          (s = m("Valve Steam Tenfoot", "force_tenfoot_client_view")),
-            (l = m("Valve Steam GameOverlay", "force_overlay_view")),
-            (o = s || m("Valve Steam Client", "force_client_view")),
-            (c =
-              m("iphone", "force_ios_view") ||
-              m("ipad", "force_ios_view") ||
-              m("ipod", "force_ios_view") ||
-              (m("macintosh", "force_ios_view") &&
-                m("safari", "force_ios_view"))),
-            (a = m("android", "force_android_view")),
-            (i = !0);
+        function m() {
+          (l = d("Valve Steam Tenfoot", "force_tenfoot_client_view")),
+            (o = d("Valve Steam GameOverlay", "force_overlay_view")),
+            (i = l || d("Valve Steam Client", "force_client_view")),
+            (a =
+              d("iphone", "force_ios_view") ||
+              d("ipad", "force_ios_view") ||
+              d("ipod", "force_ios_view") ||
+              (d("macintosh", "force_ios_view") &&
+                d("safari", "force_ios_view"))),
+            (s = d("android", "force_android_view")),
+            (r = !0);
         }
       },
       91908: (e, t, n) => {
@@ -45595,8 +45493,8 @@ var CLSTAMP = "8760384";
           E = n(90660),
           w = n(34656),
           k = n(50947),
-          _ = n(58761),
-          H = n(9891),
+          H = n(58761),
+          _ = n(9891),
           x = n(31518),
           b = n(93749),
           S = n(36060);
@@ -45656,7 +45554,7 @@ var CLSTAMP = "8760384";
                     ),
                   ),
                 ))
-              : ((0, H.X)(
+              : ((0, _.X)(
                   h.De.IN_STEAMUI_SHARED_CONTEXT,
                   "nosteamuisharedjscontext is no longer supported!",
                 ),
@@ -45675,7 +45573,7 @@ var CLSTAMP = "8760384";
         function B(e) {
           const { cm: t, children: n } = e,
             i = r.useCallback(() => t, [t]),
-            l = (0, k.kD)(() => new _.E()),
+            l = (0, k.kD)(() => new H.E()),
             s = (0, o.SZ)(() => t.steamid.ConvertTo64BitString()),
             a = r.useMemo(() => ({ useActiveAccount: () => s }), [s]);
           return r.createElement(
@@ -45733,10 +45631,10 @@ var CLSTAMP = "8760384";
                     -1 !== Object.getOwnPropertyNames(h.De).indexOf(e)
                       ? (h.De[e] = v(t[e]))
                       : -1 !== Object.getOwnPropertyNames(h.L7).indexOf(e)
-                      ? (h.L7[e] = v(t[e]))
-                      : -1 !== Object.getOwnPropertyNames(g.A).indexOf(e)
-                      ? (g.A[e] = v(t[e]))
-                      : console.error("Got unknown config property", e);
+                        ? (h.L7[e] = v(t[e]))
+                        : -1 !== Object.getOwnPropertyNames(g.A).indexOf(e)
+                          ? (g.A[e] = v(t[e]))
+                          : console.error("Got unknown config property", e);
                   const n = (0, d.CE)();
                   console.log("setting locale:", n),
                     n &&
@@ -45954,87 +45852,87 @@ var CLSTAMP = "8760384";
       })[e] +
       ".js?contenthash=" +
       {
-        27: "51ba34ff111e99b19c3a",
-        33: "a66fa87907b60c4cba98",
-        58: "f6ccd78145bac70b8e44",
-        131: "6756361157553c781034",
-        146: "eac1c59575b86fcd6efe",
+        27: "93526c61a42c6b6c7e1d",
+        33: "58959dbf79275020c7c0",
+        58: "6793f69704811c0f01d0",
+        131: "53c20bd9162fbd6841d2",
+        146: "4525631f5c2610c055c5",
         200: "def12afabbe343e1fac7",
         220: "b399c8767f9ca3ea99c5",
         224: "9f8948d140fdee081d66",
-        271: "49ac1937e88589eafcfd",
+        271: "962f974c361ef1946b3c",
         503: "ed19c71f182206242b7d",
         578: "c16e94c9dc3c236f0c45",
         662: "56fd0540794036f9be81",
-        740: "f8ed81bbd7dd9d13f1f9",
-        755: "b2bfd22f5ef945741b8a",
+        740: "87a8bede46d323894a85",
+        755: "f12f99ebe750b2c49859",
         932: "33fb1d3e0a6a4c3bed98",
-        1079: "c30fd647bd7fc99d1de8",
+        1079: "34e7d011c2736556203e",
         1102: "99620e86750aaddd94f6",
-        1160: "a171067ac555054387ee",
-        1261: "65bdebf989c482681540",
-        1365: "58469f27a81371683b31",
+        1160: "8a6dd4fcd000031b74b4",
+        1261: "3eede9a70662d2e0c7e3",
+        1365: "7dc5b5ac837c62160e49",
         1399: "4a5483ce98aa9875864d",
         1493: "8d37453f44f33d8e8f52",
-        1573: "6ff516cfb1e527e1860e",
-        1579: "45aecd9015680cb4f79e",
-        1617: "1df97ad1e11324d07370",
+        1573: "880c4bde15606a071391",
+        1579: "53bdc6726193a36dff22",
+        1617: "23b5b980d85c22dd3caa",
         1686: "51cde05b852dc74b2833",
         1926: "a071daacf95810785f06",
-        1953: "cb4e6809873e23796f9b",
-        2028: "8d8d76773ea021d92359",
-        2029: "1694bff21f43ea8ea8d3",
+        1953: "b60511c5bed0e0705879",
+        2028: "75dd8531c0f9b75f6523",
+        2029: "828c913686a6c3e49a9b",
         2055: "fce25c24c70aa6cffa78",
-        2138: "329a5d57c5c4c44eff83",
-        2307: "1b2617d35233dd5669dc",
+        2138: "7339c6a764f54a51ffdd",
+        2307: "3aeda66cd2167691a71c",
         2387: "8e8338ea08a5b8eb0d52",
-        2450: "072ac78a7fe4ed2948ff",
-        2499: "7df082367a92250d1485",
+        2450: "089a8b1da8e426d94c01",
+        2499: "617c9f859131ed29a4ef",
         2543: "a0d7c3b9d7b6a7f63525",
-        2822: "275f7a7d547dcd43bca8",
-        2847: "577aa0c72a4f88904d27",
+        2822: "150e2408c9cb1b0841a3",
+        2847: "18f079b0cf4c07e441a6",
         2888: "b95183709faaf770fb1e",
         2915: "211535d747ce93ecbf11",
         3015: "eae4de0c4038072f2fcb",
         3061: "2e3da408687d9ef857ee",
         3093: "84c68a0202b6f4380866",
         3225: "b8af83369ac0ec0b7c92",
-        3298: "29e31d3c1218b7db5bcb",
-        3357: "c93a511391fbd8c0dad6",
+        3298: "97c4b9901e61ee68bb71",
+        3357: "cc91af2f16ac3e7f03ea",
         3403: "87677c269b2838aee819",
         3468: "c88468bb4604345783bd",
         3530: "3490376199c9a78e675b",
-        3602: "17305b3a193a15812086",
+        3602: "a31977b3ad2c66bc8751",
         3858: "996c0b2e3c095326a14b",
-        4061: "3572fabd49f2240d14fb",
-        4097: "f233901fce6bf8bc7869",
+        4061: "835cc6b16b973794e6a1",
+        4097: "6264f7633d564b1a3c85",
         4103: "bb1abc5da42c9fb16503",
-        4156: "23a906d9d02e3b873082",
-        4183: "7b461303384daf18843c",
+        4156: "fa310b77f9dcb1d4243c",
+        4183: "b1d01374729eb5bc4c11",
         4325: "f39effe51dae0f084526",
         4331: "bef386501a3222d677cb",
-        4358: "39d0de17d0fafaae33bc",
+        4358: "8a4de7caaa0969c5a812",
         4372: "0e245f3a5ce136a706a3",
         4386: "025e7e513b5a42ad1c1b",
         4394: "6c3026a7f3a71d7849d1",
         4401: "41a79e3275ba7f2ec879",
-        4445: "c43dc151259ab983970f",
-        4469: "92811320ed60920800e5",
-        4487: "13ee11524c4ca6c873d3",
-        4513: "813b33c8c930793fea6c",
+        4445: "20b91ea626431035317a",
+        4469: "7b400a9dcd93b9f00e08",
+        4487: "b84e15e531f36f0c24d1",
+        4513: "f5213669e0428f4be684",
         4601: "eaf72486d477d383e385",
         4679: "033c52b328968f69a4b7",
         4725: "dd56578354066dbf78ae",
-        4729: "7c16190baac9d2af1a3a",
+        4729: "0c8ed1b3360e42409c40",
         5065: "77c9bc9f4f69753f2d7c",
         5175: "f372052f8bf717b03ede",
         5225: "fc3072a535640a239849",
-        5279: "9a366e5fffea0bb3ac28",
+        5279: "1b8ebc95b7fe9a4a0e36",
         5505: "ccdec6f8c2a6e47cecf7",
         5513: "c1682f371d8784686287",
         5547: "bdb0953764947fce9f5a",
-        5590: "096b48eb986321cb1e84",
-        5742: "92fac1783b8e8578dccf",
+        5590: "d7db6ccc99f8d404beb6",
+        5742: "063be63419d02d503d0b",
         5895: "582d58aa394b25828f59",
         5936: "6627f8623164ff607132",
         5984: "340d48f9fbb544890a54",
@@ -46042,53 +45940,53 @@ var CLSTAMP = "8760384";
         6006: "90688708baaca741b056",
         6109: "f6b7631eb68d87beb25c",
         6112: "26737297b849e5abcfaf",
-        6255: "02eabd16089d9271d788",
+        6255: "65fcb78dc18dfb64262b",
         6382: "cc3732a845d2269dcbd9",
-        6403: "d61c69341967abf2e635",
+        6403: "3661064d42ff0b3df801",
         6678: "80683f5aba652b8f49c8",
         6703: "fc0c63e2d09fac80840f",
         6838: "d52161c02b146144d9d7",
-        6844: "9bcc4372231e259ff018",
-        6877: "3ebe444383ec7cef5a50",
-        6964: "6326b84f70f1bf8e0ca0",
+        6844: "bf5d82989522f6971601",
+        6877: "328661fc1d125b29b01d",
+        6964: "a03680113688c2b818d3",
         6973: "e69a18162336bf6c890c",
         7036: "bd249b54a6a35a260ee1",
         7235: "580715613afb6c35a1c8",
         7541: "0bcbb71e5b332aa865ed",
-        7656: "eee2428d1be4820c9718",
-        7660: "75e07f54cba3563bbdeb",
+        7656: "947fa8e7044bedb304dc",
+        7660: "4c0421a88c4b5d984d86",
         7725: "475c4622f8aa6ce53b57",
-        7781: "03986e39ef5ffc94246d",
+        7781: "27c2d95c4aeee3715665",
         7832: "9d6d3d860dea2a65797b",
         7850: "de745d07d1eca8730ab1",
-        7962: "8d597943c43d0cbb738d",
+        7962: "7bd94bec4688687388e1",
         8011: "137c8efc77540f6189c0",
         8052: "90ca8df91679205a09bc",
-        8085: "aa4e7bbd1c061fd6cb7e",
-        8232: "cd7c7abad64b2f6353ef",
+        8085: "961304c5bd3608f185b2",
+        8232: "f1e765f9ac056e2de790",
         8237: "5f8a1cfef4674a13606e",
         8238: "c8a306943338d1370903",
         8240: "c06635b4a0b93d005143",
-        8282: "b44e78907e839b6e62fa",
-        8319: "02b73095e70c8e23ca39",
-        8433: "66ed0a0dfabfef5f97b3",
-        8467: "909a7491c820fa9aa3a9",
+        8282: "cebac9e4a0bd50e3acbf",
+        8319: "a93910eaded13cfe1210",
+        8433: "ce17412b10a20ba63f6c",
+        8467: "954b622fab2af37df988",
         8490: "17fb2306ca0033fc5bc9",
-        8778: "a0d263213b72d1cfb08f",
+        8778: "621f473df027a645cf2b",
         8805: "340d65d13b70b0f9f611",
-        8956: "1f57785473249660c2af",
+        8956: "9c793d82f2ee284b2c25",
         9116: "ef9e58be45f3b7cc61ed",
         9125: "ff9e5cb86ce0fcad03f9",
         9365: "9d39ba6966319626f10e",
         9399: "e0fc740be8b4037d825e",
         9520: "1088acb8ee3bec40926b",
-        9547: "6a9eecc0facbb3b40aa9",
-        9548: "a4998004a53501c60198",
-        9722: "ac75679cd1d91da760d8",
-        9746: "79c6c5adbbfe5414e4eb",
-        9854: "758b374255ffa09d4b1c",
+        9547: "e5162ddb906cb889245e",
+        9548: "96cf0d9acfbd2b1c8448",
+        9722: "313b1dade26230157e01",
+        9746: "f586f5c00ca97bf2f05e",
+        9854: "42d436594944782a88fd",
         9925: "ae60e062028a96e02572",
-        9951: "24e66456d610557cda62",
+        9951: "ae651d46f26f33d3e960",
       }[e]),
     (s.miniCssF = (e) =>
       "css/" +

@@ -2,8 +2,8 @@ __TEXT
 
 __text
 __TEXT
-y
-y
+@o
+@o
 __stubs
 __TEXT
 __stub_helper
@@ -21,7 +21,6 @@ __TEXT
 __gcc_except_tab__TEXT
 __unwind_info
 __TEXT
-Tf
 __DATA
 __nl_symbol_ptr
 __DATA
@@ -49,6 +48,7 @@ __DATA
 P
 __data
 __DATA
+0(
 __thread_vars
 __DATA
 __thread_data
@@ -268,6 +268,8 @@ r
 0
 4
 8
+,
+0
 $
 $
 (
@@ -384,6 +386,7 @@ H
 x
 @
 @
+8
 (
 (
 0
@@ -536,6 +539,7 @@ P
 11CMsgJSValue
 16CMsgJSMethodCall
 21CMsgJSExecuteCallback
+20CMsgJSExecutePromise
 21CMsgJSReleaseCallback
 20CMsgJSRaiseException
 20CMsgLoadLocalization
@@ -575,9 +579,7 @@ P
 16CMsgPopupCreated
 27CMsgSetVRKeyboardVisibility
 20CMsgRestartJSContext
-NSt3__121__basic_string_commonILb1EEE
-N6google8protobuf8internal16InternalMetadata9ContainerINS0_15UnknownFieldSetEEE
-N6google8protobuf8internal16InternalMetadata13ContainerBaseE
+NSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEE
 15CHTMLController
 21IHTMLChromeController
 10CUtlString
@@ -674,7 +676,6 @@ type.googleapis.com/
 type.googleprod.com/
 N6google8protobuf8internal15ExtensionFinderE
 N6google8protobuf8internal24GeneratedExtensionFinderE
-NSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEE
 N6google8protobuf8internal12ExtensionSet8KeyValueE
 N6google8protobuf13RepeatedFieldIiEE
 N6google8protobuf13RepeatedFieldIxEE
@@ -822,6 +823,9 @@ N6google8protobuf23SourceCodeInfo_LocationE
 N6google8protobuf14SourceCodeInfoE
 N6google8protobuf28GeneratedCodeInfo_AnnotationE
 N6google8protobuf17GeneratedCodeInfoE
+NSt3__121__basic_string_commonILb1EEE
+N6google8protobuf8internal16InternalMetadata9ContainerINS0_15UnknownFieldSetEEE
+N6google8protobuf8internal16InternalMetadata13ContainerBaseE
 N6google8protobuf14DynamicMessageE
 N6google8protobuf21DynamicMessageFactoryE
 N6google8protobuf8internal29DescriptorPoolExtensionFinderE
@@ -2084,8 +2088,6 @@ type() == TYPE_FIXED64
 google/protobuf/unknown_field_set.cc
 CHECK failed: !fields_.empty():
 CHECK failed: (TYPE_LENGTH_DELIMITED) == (type()):
-CHECK failed: *ptr:
-CHECK failed: (overrun) <= (kSlopBytes):
 Can't happen
 google/protobuf/wire_format.cc
 Extensions of MessageSets must be optional messages.
@@ -2429,22 +2431,17 @@ id
 @
 
 @
-6
+V
 
-Q
-
-^
--
 
 @
 Ic]
 Hc
 Ic
-s
-C
-`
+{
++
 
-(
+
 
 0
 

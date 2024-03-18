@@ -558,6 +558,7 @@
     "EventEditor_SaleValveApproval_Request_Link": "İnceleme Yardım Talebini Görüntüle...",
     "EventEditor_SaleValveApproval_Approved_Title": "Sayfanız onaylandı ve yayınlanmaya hazır.",
     "EventEditor_SaleValveApproval_Approved_Desc": "Yayınlama süreci için \"Yayınlama\" sekmesine geçin.",
+    "EventEditor_SaleValveApproval_Approved_Desc_OnPublish": "Yayınlamadan önce aşağıdan görünürlük ayarlarını tekrar kontrol ettiğinizden emin olun.",
     "AddToWishlist_short": "+ İstek Listesi",
     "Wishlisted": "İstek listenizde",
     "Wishlisted_short": "İstek Listesi",
@@ -2656,6 +2657,7 @@
     "SteamNotificationTypeDesc_19": "Ailemdeki bir yetişkin satın alma talebime yanıt verdiğinde",
     "SteamNotificationTypeDesc_20": "Ailemdeki bir yetişkin Steam özelliğine erişim talebime yanıt verdiğinde",
     "SteamNotificationTypeDesc_21": "Ailemdeki bir yetişkin oyun süresi talebime yanıt verdiğinde",
+    "SteamNotificationTypeDesc_22": "Talep ettiğim bir oyunu aldığımda",
     "NotificationSettings_SendToast": "Steam istemcisinde açılır bildirim penceresi",
     "NotificationSettings_PushNotification": "Mobil uygulamada bildirim",
     "NotificationsMenu_Title": "Bildirimler",
@@ -2789,6 +2791,8 @@
     "Notification_FamilyInvitePinned_Body_Plural": "%1$s Yeni Aile Daveti",
     "SteamNotifications_FamilyPurchaseRequestResponseDeclinedTitle": "Satın Alma Reddedildi",
     "SteamNotifications_FamilyPurchaseRequestDeclinedBody": "%1$s satın alımınızı reddetti",
+    "SteamNotifications_RequestedGameAddedTitle": "Satın alma onaylandı",
+    "SteamNotifications_RequestedGameAddedBody": "Şunu aldınız: %1$s",
     "SteamNotifications_ParentalFeatureRequestTitle": "Aile Talebi",
     "SteamNotifications_ParentalFeatureRequestBody": "%1$s, Steam özelliklerine erişim talep ediyor",
     "SteamNotifications_ParentalPlaytimeRequestTitle": "Aile Talebi",
@@ -2826,6 +2830,7 @@
     "FamilyHistory_PurchaseRequestApproved": "%1$s, %2$s adlı kullanıcının satın alma talebini onayladı.",
     "FamilyHistory_PurchaseRequestDeclined": "%1$s, %2$s adlı kullanıcının satın alma talebini reddetti.",
     "FamilyView_RequestFeatureAccess": "Bu işleve erişim ailenizdeki bir yetişkin tarafından kısıtlandı. Bu kişiye bir erişim isteği gönderebilirsiniz.",
+    "FamilyView_RequestFeatureAccess_Always": "Bu işleve erişim ailenizdeki bir yetişkin tarafından kısıtlanmış.",
     "FamilyView_RequestFeatureAccess_Offline": "Şu anda Steam'e bağlı değilsiniz. Ailenizdeki bir yetişkinden bu işlevi istemek için çevrimiçi olun.",
     "FamilyView_RequestFeatureAccess_Request": "Erişim Talep Et",
     "FamilyView_RequestFeatureAccess_GenericError": "Bir hata meydana geldi. Lütfen daha sonra tekrar deneyin. (%1$s)",
@@ -2879,5 +2884,6 @@
     "KioskMode_Unlock_Tooltip": "Kiosk Modu'ndan Çık",
     "KioskMode_Lock_Tooltip": "Kiosk Modu'na Gir",
     "RemotePlay_StoreFunctionalityBlocked_Title": "Mağaza Kullanılamıyor",
-    "RemotePlay_StoreFunctionalityBlocked_Description": "Bu Steam Link istemcisi üzerinden çalıştırılırken mağaza kullanılamaz."
+    "RemotePlay_StoreFunctionalityBlocked_Description": "Bu Steam Link istemcisi üzerinden çalıştırılırken mağaza kullanılamaz.",
+    "Hardware_ShippingEstimate_Range": "%1$s-%2$s iş günü"
 }
