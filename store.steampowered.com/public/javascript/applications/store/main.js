@@ -32730,6 +32730,7 @@
           t &&
           ("Steam Main Client" == t ||
             "Steam Beta Update" == t ||
+            "Steam Families Beta" == t ||
             "Steam Deck Beta" == t ||
             "Steam Deck Main" == t)
         );
