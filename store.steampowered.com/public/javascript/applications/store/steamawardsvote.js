@@ -510,8 +510,8 @@
             include_supported_languages: k,
             include_full_description: S,
             include_included_items: D,
-            include_assets_without_overrides: C,
-            apply_user_filters: y,
+            include_assets_without_overrides: y,
+            apply_user_filters: C,
           } = n;
         if (
           ((0, i.useEffect)(() => {
@@ -529,8 +529,8 @@
               include_supported_languages: k,
               include_full_description: S,
               include_included_items: D,
-              include_assets_without_overrides: C,
-              apply_user_filters: y,
+              include_assets_without_overrides: y,
+              apply_user_filters: C,
             };
             let i = null;
             return (
@@ -550,7 +550,7 @@
               () =>
                 null == i ? void 0 : i.cancel("useStoreItemCache: unmounting")
             );
-          }, [e, t, s, d, j, m, v, f, h, p, g, E, w, b, k, S, D, C, y, c]),
+          }, [e, t, s, d, j, m, v, f, h, p, g, E, w, b, k, S, D, y, C, c]),
           !e)
         )
           return [null, 2];
@@ -567,28 +567,24 @@
         return a(e, 1, t, n);
       }
       function d(e, t, n) {
-        const [s, o] = a(e, t, n),
-          [l, c] = (0, i.useState)(null),
-          [d, _] = u(l, n);
+        const [s, r] = a(e, t, n),
+          [o, l] = (0, i.useState)(null),
+          [c, d] = u(o, n);
         return (
           (0, i.useEffect)(() => {
             var e;
-            const t = r().CancelToken.source();
             if (
               1 == (null == s ? void 0 : s.GetStoreItemType()) &&
+              !(null === (e = s.GetAssets()) || void 0 === e
+                ? void 0
+                : e.GetHeaderURL()) &&
               1 == (null == s ? void 0 : s.GetIncludedAppIDs().length)
             ) {
-              const n = s.GetIncludedAppIDs()[0];
-              l != n &&
-                ((null === (e = null == t ? void 0 : t.token) || void 0 === e
-                  ? void 0
-                  : e.reason) ||
-                  c(n));
+              const e = s.GetIncludedAppIDs()[0];
+              l(e);
             }
-            return () =>
-              t.cancel("useStoreItemCacheOrPackageSingleApp: unmounting");
-          }, [l, s]),
-          l ? [d, _] : [s, o]
+          }, [s]),
+          o ? [c, d] : [s, r]
         );
       }
       function _(e, t, n, s) {

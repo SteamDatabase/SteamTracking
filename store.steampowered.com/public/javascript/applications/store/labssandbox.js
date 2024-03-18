@@ -122,8 +122,8 @@
             include_tag_count: C,
             include_reviews: v,
             include_basic_info: y,
-            include_supported_languages: b,
-            include_full_description: L,
+            include_supported_languages: L,
+            include_full_description: b,
             include_included_items: I,
             include_assets_without_overrides: N,
             apply_user_filters: A,
@@ -141,8 +141,8 @@
               include_tag_count: C,
               include_reviews: v,
               include_basic_info: y,
-              include_supported_languages: b,
-              include_full_description: L,
+              include_supported_languages: L,
+              include_full_description: b,
               include_included_items: I,
               include_assets_without_overrides: N,
               apply_user_filters: A,
@@ -165,7 +165,7 @@
               () =>
                 null == r ? void 0 : r.cancel("useStoreItemCache: unmounting")
             );
-          }, [e, t, s, m, h, u, _, g, f, S, E, C, v, y, b, L, I, N, A, c]),
+          }, [e, t, s, m, h, u, _, g, f, S, E, C, v, y, L, b, I, N, A, c]),
           !e)
         )
           return [null, 2];
@@ -182,28 +182,24 @@
         return o(e, 1, t, a);
       }
       function m(e, t, a) {
-        const [s, i] = o(e, t, a),
-          [l, c] = (0, r.useState)(null),
-          [m, d] = p(l, a);
+        const [s, n] = o(e, t, a),
+          [i, l] = (0, r.useState)(null),
+          [c, m] = p(i, a);
         return (
           (0, r.useEffect)(() => {
             var e;
-            const t = n().CancelToken.source();
             if (
               1 == (null == s ? void 0 : s.GetStoreItemType()) &&
+              !(null === (e = s.GetAssets()) || void 0 === e
+                ? void 0
+                : e.GetHeaderURL()) &&
               1 == (null == s ? void 0 : s.GetIncludedAppIDs().length)
             ) {
-              const a = s.GetIncludedAppIDs()[0];
-              l != a &&
-                ((null === (e = null == t ? void 0 : t.token) || void 0 === e
-                  ? void 0
-                  : e.reason) ||
-                  c(a));
+              const e = s.GetIncludedAppIDs()[0];
+              l(e);
             }
-            return () =>
-              t.cancel("useStoreItemCacheOrPackageSingleApp: unmounting");
-          }, [l, s]),
-          l ? [m, d] : [s, i]
+          }, [s]),
+          i ? [c, m] : [s, n]
         );
       }
       function d(e, t, a, s) {
@@ -223,7 +219,7 @@
             include_full_description: C,
             include_included_items: v,
             include_assets_without_overrides: y,
-            apply_user_filters: b,
+            apply_user_filters: L,
           } = a;
         if (
           ((0, r.useEffect)(() => {
@@ -243,7 +239,7 @@
                 include_full_description: C,
                 include_included_items: v,
                 include_assets_without_overrides: y,
-                apply_user_filters: b,
+                apply_user_filters: L,
               },
               s = e.filter(
                 (e) =>
@@ -261,7 +257,7 @@
               }),
               () => r.cancel("useStoreItemCacheMultiplePackages: unmounting")
             );
-          }, [e, t, s, o, p, c, m, d, h, u, _, g, f, S, E, C, v, y, b]),
+          }, [e, t, s, o, p, c, m, d, h, u, _, g, f, S, E, C, v, y, L]),
           !e)
         )
           return 2;
@@ -544,8 +540,8 @@
         C = a(1485),
         v = a(38071),
         y = a(27605),
-        b = a(13129);
-      class L extends g.Component {
+        L = a(13129);
+      class b extends g.Component {
         constructor(e) {
           super(e),
             (this.state = {
@@ -701,9 +697,9 @@
           );
         }
       }
-      (0, n.gn)([p.ak], L.prototype, "OnDisplayClicked", null),
-        (0, n.gn)([p.ak], L.prototype, "UpdateAppSuggestions", null),
-        (0, n.gn)([p.ak], L.prototype, "OnKeyUp", null);
+      (0, n.gn)([p.ak], b.prototype, "OnDisplayClicked", null),
+        (0, n.gn)([p.ak], b.prototype, "UpdateAppSuggestions", null),
+        (0, n.gn)([p.ak], b.prototype, "OnKeyUp", null);
       class I extends g.Component {
         render() {
           if (0 == this.props.appid)
@@ -780,7 +776,7 @@
           return g.createElement(
             "div",
             { className: E.LabsSimilarity },
-            g.createElement(L, {
+            g.createElement(b, {
               fnOnSelection: this.OnAppSelected,
               ref: this.ref_app_a,
               showAppIds: !0,
@@ -790,7 +786,7 @@
             g.createElement("div", { className: E.HorizontalSpacer }),
             g.createElement("div", { className: E.Score }, e),
             g.createElement("div", { className: E.HorizontalSpacer }),
-            g.createElement(L, {
+            g.createElement(b, {
               fnOnSelection: this.OnAppSelected,
               ref: this.ref_app_b,
               showAppIds: !0,
@@ -880,7 +876,7 @@
               selectedOption: "default",
             }),
             g.createElement("h1", null, "Games similar to:"),
-            g.createElement(L, {
+            g.createElement(b, {
               fnOnSelection: this.OnSelectedApp,
               ref: this.app_selector_ref,
               appidInitial: 268500,
@@ -940,7 +936,7 @@
                 selectedOption: "Plus",
               }),
             ),
-            g.createElement(L, { fnOnSelection: this.OnSelectedApp }),
+            g.createElement(b, { fnOnSelection: this.OnSelectedApp }),
           );
         }
       };
@@ -1145,7 +1141,7 @@
               0 != this.app_end &&
               !this.in_progress &&
               this.app_start != this.app_end,
-            t = e ? E.ComputeButton : (0, b.Z)(E.ComputeButton, E.Disable);
+            t = e ? E.ComputeButton : (0, L.Z)(E.ComputeButton, E.Disable);
           let a = null;
           a = this.in_progress
             ? g.createElement(
@@ -1182,11 +1178,11 @@
             g.createElement(
               "div",
               { className: E.SelectEndpoints },
-              g.createElement(L, {
+              g.createElement(b, {
                 fnOnSelection: this.OnSelectedStartApp,
                 strPrompt: "Select start game",
               }),
-              g.createElement(L, {
+              g.createElement(b, {
                 fnOnSelection: this.OnSelectedEndApp,
                 strPrompt: "Select end game",
               }),
@@ -1758,7 +1754,7 @@
           let e = this.props,
             { baseURL: t, onLoginComplete: a, className: s } = e,
             r = (0, n._T)(e, ["baseURL", "onLoginComplete", "className"]),
-            i = (0, b.Z)(ae().LoginDialog, s),
+            i = (0, L.Z)(ae().LoginDialog, s),
             l = this.m_manager.GetCurrentStep(),
             o = this.m_manager.GetErrorMessage();
           return g.createElement(
@@ -1864,7 +1860,7 @@
                 },
                 g.createElement(C.II, {
                   autoFocus: this.props.autoFocus,
-                  className: (0, b.Z)(ae().AccountNameLabel, e),
+                  className: (0, L.Z)(ae().AccountNameLabel, e),
                   label: (0, H.Xx)("#Login_AccountName"),
                   type: "text",
                   value: a.GetUserName(),
@@ -1873,7 +1869,7 @@
                   onChange: this.OnChangeName,
                 }),
                 g.createElement(C.II, {
-                  className: (0, b.Z)(ae().PasswordDots, t),
+                  className: (0, L.Z)(ae().PasswordDots, t),
                   label: (0, H.Xx)("#Login_Password"),
                   type: "password",
                   autoComplete: "off",
@@ -2046,7 +2042,7 @@
                   onSubmit: this.OnSubmit,
                 },
                 g.createElement(C.II, {
-                  className: (0, b.Z)(ae().AccountName),
+                  className: (0, L.Z)(ae().AccountName),
                   label: "Steam Guard Code",
                   type: "text",
                   autoComplete: "off",
@@ -2065,7 +2061,7 @@
             g.createElement(
               "a",
               {
-                className: (0, b.Z)(
+                className: (0, L.Z)(
                   ae().NeedHelpLink,
                   r ? ae().NeedHelpHighlight : null,
                 ),

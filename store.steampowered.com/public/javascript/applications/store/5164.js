@@ -775,28 +775,24 @@
         return l(t, 1, e, n);
       }
       function m(t, e, n) {
-        const [a, r] = l(t, e, n),
-          [s, c] = (0, i.useState)(null),
-          [m, d] = u(s, n);
+        const [a, o] = l(t, e, n),
+          [r, s] = (0, i.useState)(null),
+          [c, m] = u(r, n);
         return (
           (0, i.useEffect)(() => {
             var t;
-            const e = o().CancelToken.source();
             if (
               1 == (null == a ? void 0 : a.GetStoreItemType()) &&
+              !(null === (t = a.GetAssets()) || void 0 === t
+                ? void 0
+                : t.GetHeaderURL()) &&
               1 == (null == a ? void 0 : a.GetIncludedAppIDs().length)
             ) {
-              const n = a.GetIncludedAppIDs()[0];
-              s != n &&
-                ((null === (t = null == e ? void 0 : e.token) || void 0 === t
-                  ? void 0
-                  : t.reason) ||
-                  c(n));
+              const t = a.GetIncludedAppIDs()[0];
+              s(t);
             }
-            return () =>
-              e.cancel("useStoreItemCacheOrPackageSingleApp: unmounting");
-          }, [s, a]),
-          s ? [m, d] : [a, r]
+          }, [a]),
+          r ? [c, m] : [a, o]
         );
       }
       function d(t, e, n, a) {

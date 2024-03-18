@@ -2587,13 +2587,7 @@
           return i.createElement(
             z,
             Object.assign(
-              {
-                name: a.GetName(),
-                purchaseItem: a,
-                storeItem: o,
-                lineItem: t,
-                purchaseOption: s,
-              },
+              { storeItem: a, displayItem: o, lineItem: t, purchaseOption: s },
               n,
             ),
           );
@@ -2615,7 +2609,7 @@
           return i.createElement(
             z,
             Object.assign(
-              { purchaseItem: a, storeItem: a, lineItem: t, purchaseOption: o },
+              { storeItem: a, displayItem: a, lineItem: t, purchaseOption: o },
               n,
             ),
           );
@@ -2699,29 +2693,28 @@
       function z(e) {
         var t, n;
         const {
-            name: r,
-            purchaseItem: o,
-            storeItem: l,
-            lineItem: s,
-            validation: u = [],
-            purchaseOption: p,
-            validatedItem: _,
-            availableCoupons: f,
+            storeItem: r,
+            displayItem: o,
+            lineItem: l,
+            validation: s = [],
+            purchaseOption: u,
+            validatedItem: p,
+            availableCoupons: _,
           } = e,
-          g = s.line_item_id,
-          v = {
-            id: null == l ? void 0 : l.GetID(),
+          f = l.line_item_id,
+          g = {
+            id: null == r ? void 0 : r.GetID(),
             type: (0, C.Ds)(
-              null == l ? void 0 : l.GetStoreItemType(),
-              null == l ? void 0 : l.GetAppType(),
+              null == r ? void 0 : r.GetStoreItemType(),
+              null == r ? void 0 : r.GetAppType(),
             ),
           },
-          I = (0, a.fn)(g),
-          [y] = (0, m.nD)(),
-          S = I.isLoading || I.isSuccess,
-          N = "gifts" === y && !!s.flags.is_gift,
-          D = !!f.length,
-          G = (function (e) {
+          v = (0, a.fn)(f),
+          [I] = (0, m.nD)(),
+          y = v.isLoading || v.isSuccess,
+          S = "gifts" === I && !!l.flags.is_gift,
+          N = !!_.length,
+          D = (function (e) {
             const t = `${d.De.STORE_BASE_URL}public/images/checkout/Cart_generic_header_logo.png`;
             if (!e) return t;
             const n = e.GetAssets();
@@ -2729,43 +2722,43 @@
             const i = n.GetHeaderURL(),
               a = n.GetSmallCapsuleURL();
             return i || a || t;
-          })(l),
-          T = _
-            ? _.original_price.formatted_amount
-            : p.formatted_original_price,
-          A = _ ? _.subtotal.formatted_amount : p.formatted_final_price,
-          x = _
+          })(o),
+          G = p
+            ? p.original_price.formatted_amount
+            : u.formatted_original_price,
+          T = p ? p.subtotal.formatted_amount : u.formatted_final_price,
+          A = p
             ? (function (e) {
                 if (e.coupon_applied) return e.coupon_applied.discount_pct;
                 const t = parseInt(e.original_price.amount_in_cents),
                   n = parseInt(e.subtotal.amount_in_cents);
                 return Math.min(99, Math.floor(((t - n) / t) * 100 + 0.5));
-              })(_)
-            : p.discount_pct,
-          k = l.GetIncludedAppIDsOrSelf(),
-          { data: P, isLoading: R } = (0, B.sU)(),
-          F = (0, Z.YR)(l.GetStorePageURL(), "cart-items"),
-          O = k.filter((e) => (null == P ? void 0 : P.has(e)));
-        if (R) return i.createElement(Y, null);
-        const M = null === (t = s.flags) || void 0 === t ? void 0 : t.is_gift,
-          X = O.length === k.length,
-          V = !M && O.length > 0 && !X;
-        let U = M ? "gift" : "myself";
+              })(p)
+            : u.discount_pct,
+          x = r.GetIncludedAppIDsOrSelf(),
+          { data: k, isLoading: P } = (0, B.sU)(),
+          R = (0, Z.YR)(o.GetStorePageURL(), "cart-items"),
+          F = x.filter((e) => (null == k ? void 0 : k.has(e)));
+        if (P) return i.createElement(Y, null);
+        const O = null === (t = l.flags) || void 0 === t ? void 0 : t.is_gift,
+          M = F.length === x.length,
+          X = !O && F.length > 0 && !M;
+        let V = O ? "gift" : "myself";
         return (
-          "myself" === U && X && (U = "private"),
+          "myself" === V && M && (V = "private"),
           i.createElement(
             h.s,
             null,
             i.createElement(
               oe,
               null,
-              S && i.createElement(Q, null),
+              y && i.createElement(Q, null),
               i.createElement(
                 "div",
                 {
                   className: (0, c.Z)(
                     j().InnerLineItemCtn,
-                    S && j().PendingLineItem,
+                    y && j().PendingLineItem,
                   ),
                 },
                 i.createElement(
@@ -2778,10 +2771,10 @@
                   },
                   i.createElement(
                     "a",
-                    { href: F },
+                    { href: R },
                     i.createElement("img", {
                       className: j().HeaderImg,
-                      src: G,
+                      src: D,
                     }),
                   ),
                 ),
@@ -2794,19 +2787,19 @@
                     i.createElement(
                       "div",
                       { className: j().LineItemTitle },
-                      r || l.GetName(),
+                      r.GetName(),
                     ),
                   ),
-                  l.BIsComingSoon() && i.createElement(K, { storeItem: l }),
+                  r.BIsComingSoon() && i.createElement(K, { storeItem: r }),
                   i.createElement(
                     $,
-                    { lineItemID: g },
-                    u.map((e) =>
+                    { lineItemID: f },
+                    s.map((e) =>
                       i.createElement(ee, { key: e.strNotice }, e.strNotice),
                     ),
                   ),
-                  i.createElement(ae, { storeItem: l }),
-                  V && i.createElement(le, { appids: O }),
+                  i.createElement(ae, { storeItem: r }),
+                  X && i.createElement(le, { appids: F }),
                   i.createElement(
                     re,
                     { className: j().LineItemSpaceBetween },
@@ -2816,7 +2809,7 @@
                         className: (0, c.Z)(j().LineItemCol, j().PlatformIcons),
                       },
                       i.createElement(E.a, {
-                        item: v,
+                        item: g,
                         strClassName: j().LineItemPlatforms,
                       }),
                     ),
@@ -2825,13 +2818,13 @@
                       { className: j().LineItemRightCol },
                       i.createElement(b.nk, {
                         className: j().PriceWidget,
-                        formatted_orig_price: T,
-                        formatted_final_price: A,
-                        discount_percent: x,
+                        formatted_orig_price: G,
+                        formatted_final_price: T,
+                        discount_percent: A,
                         bHideDiscountPercentForCompliance:
-                          p.hide_discount_pct_for_compliance,
+                          u.hide_discount_pct_for_compliance,
                         bDiscountFromCoupon: !!(null ===
-                          (n = null == _ ? void 0 : _.coupon_discount) ||
+                          (n = null == p ? void 0 : p.coupon_discount) ||
                         void 0 === n
                           ? void 0
                           : n.amount_in_cents),
@@ -2839,22 +2832,22 @@
                     ),
                   ),
                   i.createElement(q, {
-                    lineItem: s,
-                    storeItem: l,
-                    purchaseOption: p,
-                    initialPurchaseOption: U,
-                    fnRemoveLineItem: I.mutate,
+                    lineItem: l,
+                    storeItem: r,
+                    purchaseOption: u,
+                    initialPurchaseOption: V,
+                    fnRemoveLineItem: v.mutate,
                   }),
                 ),
               ),
-              N && i.createElement(L.Wc, { storeItem: o, lineItem: s }),
+              S && i.createElement(L.Wc, { storeItem: r, lineItem: l }),
             ),
-            D &&
+            N &&
               i.createElement(w, {
-                storeItem: l,
-                lineItem: s,
-                couponApplied: null == _ ? void 0 : _.coupon_applied,
-                availableCoupons: f,
+                storeItem: r,
+                lineItem: l,
+                couponApplied: null == p ? void 0 : p.coupon_applied,
+                availableCoupons: _,
               }),
           )
         );
