@@ -5228,7 +5228,7 @@
         const d = !(null === (e = c.data) || void 0 === e
             ? void 0
             : e.is_not_member_of_any_group()),
-          _ = F.De.HELP_BASE_URL + "en/faqs/view/054C-3167-DD7F-49D4";
+          _ = F.De.HELP_BASE_URL + "faqs/view/054C-3167-DD7F-49D4";
         return n.createElement(
           r.p,
           { navID: "StoreFamilyManagement", NavigationManager: t },
