@@ -1221,15 +1221,17 @@
           a = b(t, x),
           l = b(t, M),
           i = b(t, I),
-          r = (0, y.Rs)(),
-          s = (0, y.sj)(a, l, i);
+          { isLoading: r, data: s } = (0, y.Rs)(),
+          { mutate: o } = (0, y.sj)(a, l, i);
         return (
-          r.isLoading ||
-            (r.data.is_not_member_of_any_group() ||
-              e.push("/account/familymanagement"),
-            s.mutate(null, {
-              onSuccess: () => e.push("/account/familymanagement"),
-            })),
+          (0, n.useEffect)(() => {
+            r ||
+              (s.is_not_member_of_any_group()
+                ? o(null, {
+                    onSuccess: () => e.push("/account/familymanagement"),
+                  })
+                : e.push("/account/familymanagement"));
+          }, [o, e, r, s]),
           n.createElement(u.V, null)
         );
       }
