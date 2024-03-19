@@ -22689,7 +22689,7 @@
                             r.createElement(
                               "a",
                               {
-                                href: "https://partner.steamgames.com/public/marketing/steam_sale_page_templates.zip?v=2",
+                                href: "https://www.dropbox.com/scl/fo/mhf604o6bdbcfr1scq7bx/h?rlkey=s6y8eoaa68dd3qalx1x4itqsu&dl=0",
                               },
                               (0, B.Xx)("#selectimage_tip_sale_header_3"),
                             ),

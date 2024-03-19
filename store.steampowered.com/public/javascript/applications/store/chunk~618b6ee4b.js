@@ -252,6 +252,7 @@
         BaseGameCapsuleCtn: "_2-6Wb-jcDhA2q47xDhlmaW",
         FullGameArtwork: "_2lq4qsMNuYBtI0hh5wK6VC",
         FullGameHover: "i1RBc5zcl1zCwxImmCFzP",
+        ParentAppSortTabScrollCtn: "_3ZJYJAzp1luomqaZzJ4Ifu",
         ParentAppSortTabsCtn: "HLysWUZ0Q8nLoHhlMa7h-",
         ParentAppSortTabHeader: "_2UAG8-X-Z76-fX9WkTMuPD",
         ParentAppSortTab: "_3z9ZElmmyJ5rcYrhpaITCS",
@@ -19364,61 +19365,65 @@
           },
           n.createElement(
             "div",
-            { className: So.ParentAppSortTabHeader },
-            (0, P.Xx)("#DLCForYou_SortTabs_Show"),
-          ),
-          (null ===
-            (a =
-              null === (t = null == i ? void 0 : i.dlc_for_you_data) ||
-              void 0 === t
-                ? void 0
-                : t.parent_app_sorts) || void 0 === a
-            ? void 0
-            : a.length) > 0
-            ? n.createElement(
-                n.Fragment,
-                null,
-                i.dlc_for_you_data.parent_app_sorts.map((e) =>
+            { className: So.ParentAppSortTabScrollCtn },
+            n.createElement(
+              "div",
+              { className: So.ParentAppSortTabHeader },
+              (0, P.Xx)("#DLCForYou_SortTabs_Show"),
+            ),
+            (null ===
+              (a =
+                null === (t = null == i ? void 0 : i.dlc_for_you_data) ||
+                void 0 === t
+                  ? void 0
+                  : t.parent_app_sorts) || void 0 === a
+              ? void 0
+              : a.length) > 0
+              ? n.createElement(
+                  n.Fragment,
+                  null,
+                  i.dlc_for_you_data.parent_app_sorts.map((e) =>
+                    n.createElement(
+                      K.Ks,
+                      {
+                        key: e.value,
+                        className: (0, I.Z)({
+                          [So.ParentAppSortTab]: !0,
+                          [So.ParentAppSortTabActive]: o === e.value,
+                        }),
+                        onClick: () => s && s(e.value),
+                      },
+                      (0, P.Xx)(c.get(e.value)),
+                    ),
+                  ),
+                )
+              : n.createElement(
+                  n.Fragment,
+                  null,
                   n.createElement(
                     K.Ks,
                     {
-                      key: e.value,
                       className: (0, I.Z)({
                         [So.ParentAppSortTab]: !0,
-                        [So.ParentAppSortTabActive]: o === e.value,
+                        [So.ParentAppSortTabActive]: "last_played" === o,
                       }),
-                      onClick: () => s && s(e.value),
+                      onClick: () => s && s("last_played"),
                     },
-                    (0, P.Xx)(c.get(e.value)),
+                    (0, P.Xx)("#DLCForYou_SortTabs_LastPlayed"),
+                  ),
+                  n.createElement(
+                    K.Ks,
+                    {
+                      className: (0, I.Z)({
+                        [So.ParentAppSortTab]: !0,
+                        [So.ParentAppSortTabActive]: "playtime" === o,
+                      }),
+                      onClick: () => s && s("playtime"),
+                    },
+                    (0, P.Xx)("#DLCForYou_SortTabs_MostPlayed"),
                   ),
                 ),
-              )
-            : n.createElement(
-                n.Fragment,
-                null,
-                n.createElement(
-                  K.Ks,
-                  {
-                    className: (0, I.Z)({
-                      [So.ParentAppSortTab]: !0,
-                      [So.ParentAppSortTabActive]: "last_played" === o,
-                    }),
-                    onClick: () => s && s("last_played"),
-                  },
-                  (0, P.Xx)("#DLCForYou_SortTabs_LastPlayed"),
-                ),
-                n.createElement(
-                  K.Ks,
-                  {
-                    className: (0, I.Z)({
-                      [So.ParentAppSortTab]: !0,
-                      [So.ParentAppSortTabActive]: "playtime" === o,
-                    }),
-                    onClick: () => s && s("playtime"),
-                  },
-                  (0, P.Xx)("#DLCForYou_SortTabs_MostPlayed"),
-                ),
-              ),
+          ),
         );
       }
       var Co = a(83143),

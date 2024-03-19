@@ -8796,7 +8796,7 @@
     },
     82071: (e, t, n) => {
       "use strict";
-      n.d(t, { cA: () => I, j1: () => y });
+      n.d(t, { cA: () => y, j1: () => b });
       var a = n(85556),
         i = n(80751),
         s = n.n(i),
@@ -8812,9 +8812,9 @@
         h = n(45492),
         g = n(31846),
         v = n(45284),
-        S = n(37563);
-      n(47427);
-      class f {
+        S = n(37563),
+        f = (n(47427), n(20417));
+      class E {
         constructor(e) {
           (0, p.X)(
             "number" == typeof e.appid,
@@ -8827,14 +8827,15 @@
             (this.announcementid = e.announcementid);
         }
       }
-      function E(e) {
+      function I(e) {
         let t = "" + e;
         const n = g.LJ.GetELanguageFallback(e);
         return e != n && (t += "_" + n), t;
       }
-      class I {
+      class y {
         constructor() {
           (this.m_mapExistingEvents = new Map()),
+            (this.m_mapEventUpdateCallback = new Map()),
             (this.m_mapAnnouncementBodyToEvent = new Map()),
             (this.m_mapClanToGIDs = new Map()),
             (this.m_mapAppIDToGIDs = new Map()),
@@ -8929,6 +8930,13 @@
             "string" == typeof t[0].announcementGID &&
             Array.isArray(t[0].adjacents) &&
             (0 == t[0].adjacents.length || "string" == typeof t[0].adjacents[0])
+          );
+        }
+        GetPartnerEventChangeCallback(e) {
+          return (
+            this.m_mapEventUpdateCallback.has(e) ||
+              this.m_mapEventUpdateCallback.set(e, new h.pB()),
+            this.m_mapEventUpdateCallback.get(e)
           );
         }
         GetClanEventGIDs(e) {
@@ -9264,7 +9272,7 @@
                 (a
                   ? "events/ajaxgeteventdetailsforedit/"
                   : "events/ajaxgeteventdetails/"),
-              r = E((0, l.jM)(S.De.LANGUAGE)),
+              r = I((0, l.jM)(S.De.LANGUAGE)),
               o = {
                 clanid_list: e.join(","),
                 uniqueid_list: t.join(","),
@@ -9359,7 +9367,7 @@
             } else {
               let h =
                 S.De.STORE_BASE_URL + "events/ajaxgetadjacentpartnerevents/";
-              const g = E((0, l.jM)(S.De.LANGUAGE));
+              const g = I((0, l.jM)(S.De.LANGUAGE));
               let v = {
                 clan_accountid: n ? n.GetAccountID() : void 0,
                 appid: i,
@@ -9620,7 +9628,7 @@
           o = !1,
         ) {
           return (0, a.mG)(this, void 0, void 0, function* () {
-            let a = E(o ? 0 : (0, l.jM)(S.De.LANGUAGE)),
+            let a = I(o ? 0 : (0, l.jM)(S.De.LANGUAGE)),
               d = {
                 appid: t,
                 clan_accountid: e ? e.GetAccountID() : void 0,
@@ -9790,7 +9798,7 @@
                 a.data.apps.length > 0 &&
                 (0, r.z)(() => {
                   const e = new Map(
-                    a.data.apps.map((e) => [e.appid, new f(e)]),
+                    a.data.apps.map((e) => [e.appid, new E(e)]),
                   );
                   this.m_mapUpdatedApps = e;
                 });
@@ -9821,7 +9829,7 @@
           return (0, a.mG)(this, void 0, void 0, function* () {
             const a = new Array(),
               i = S.De.STORE_BASE_URL + "events/ajaxgetbatchedpartnerevent/",
-              o = E((0, l.jM)(S.De.LANGUAGE));
+              o = I((0, l.jM)(S.De.LANGUAGE));
             let d = null,
               m = null;
             if (e) {
@@ -9914,25 +9922,64 @@
             return a;
           });
         }
+        SavePartnerEventSaleAssets(e, t, n) {
+          var i;
+          return (0, a.mG)(this, void 0, void 0, function* () {
+            let a = null;
+            if (!this.m_mapExistingEvents.has(t)) return !1;
+            try {
+              const r = `${S.De.PARTNER_BASE_URL}promotion/sales/ajaxsaveasset/${e}`,
+                o = new FormData();
+              o.append("sessionid", S.De.SESSIONID),
+                o.append("gidclanevent", t),
+                o.append("json", JSON.stringify(n));
+              const l = yield s().post(r, o, { withCredentials: !0 });
+              if (
+                1 ==
+                (null === (i = null == l ? void 0 : l.data) || void 0 === i
+                  ? void 0
+                  : i.success)
+              ) {
+                const e = this.m_mapExistingEvents.get(t);
+                for (const t in n)
+                  n.hasOwnProperty(t) && n[t] && (e.jsondata[t] = n[t]);
+                return this.GetPartnerEventChangeCallback(t).Dispatch(e), !0;
+              }
+              a = (0, _.l)(l);
+            } catch (e) {
+              a = (0, _.l)(e);
+            }
+            return (
+              console.error(
+                "CPartnerEventStore.SavePartnerEventSaleAssets failed: " +
+                  (null == a ? void 0 : a.strErrorMsg),
+                a,
+              ),
+              !1
+            );
+          });
+        }
       }
-      (0, a.gn)([r.LO], I.prototype, "m_mapExistingEvents", void 0),
-        (0, a.gn)([r.LO], I.prototype, "m_mapAnnouncementBodyToEvent", void 0),
-        (0, a.gn)([r.LO], I.prototype, "m_mapClanToGIDs", void 0),
-        (0, a.gn)([r.LO], I.prototype, "m_mapAppIDToGIDs", void 0),
-        (0, a.gn)([r.LO], I.prototype, "m_mapUpdatedApps", void 0),
-        (0, a.gn)([r.aD], I.prototype, "Init", null),
-        (0, a.gn)([r.aD], I.prototype, "RegisterClanEvents", null),
+      (0, a.gn)([r.LO], y.prototype, "m_mapExistingEvents", void 0),
+        (0, a.gn)([r.LO], y.prototype, "m_mapAnnouncementBodyToEvent", void 0),
+        (0, a.gn)([r.LO], y.prototype, "m_mapClanToGIDs", void 0),
+        (0, a.gn)([r.LO], y.prototype, "m_mapAppIDToGIDs", void 0),
+        (0, a.gn)([r.LO], y.prototype, "m_mapUpdatedApps", void 0),
+        (0, a.gn)([r.aD], y.prototype, "Init", null),
+        (0, a.gn)([f.ak], y.prototype, "GetPartnerEventChangeCallback", null),
+        (0, a.gn)([r.aD], y.prototype, "RegisterClanEvents", null),
         (0, a.gn)(
           [r.aD],
-          I.prototype,
+          y.prototype,
           "InsertEventModelFromClanEventData",
           null,
         ),
-        (0, a.gn)([r.aD], I.prototype, "DeleteClanEvent", null),
-        (0, a.gn)([r.aD], I.prototype, "RemoveGIDFromList", null),
-        (0, a.gn)([r.aD], I.prototype, "FlushEventFromCache", null);
-      const y = new I();
-      window.g_PartnerEventStore = y;
+        (0, a.gn)([r.aD], y.prototype, "DeleteClanEvent", null),
+        (0, a.gn)([r.aD], y.prototype, "RemoveGIDFromList", null),
+        (0, a.gn)([r.aD], y.prototype, "FlushEventFromCache", null),
+        (0, a.gn)([f.ak], y.prototype, "SavePartnerEventSaleAssets", null);
+      const b = new y();
+      window.g_PartnerEventStore = b;
     },
     45167: (e, t, n) => {
       "use strict";

@@ -2906,7 +2906,18 @@
           if (!this.m_unCurrentAccountID || !this.m_bSaveRequired) return;
           let e = this.GetLocalStorageKey(),
             t = JSON.stringify(Array.from(this.m_mapRestoreDetails));
-          window.localStorage.setItem(e, t), (this.m_bSaveRequired = !1);
+          try {
+            window.localStorage.setItem(e, t), (this.m_bSaveRequired = !1);
+          } catch (n) {
+            if ("QuotaExceededError" == n.name) {
+              console.log("Quota exceeded");
+              for (let t of Object.keys(window.localStorage))
+                t.startsWith("PopupSavedDimensions_") &&
+                  t != e &&
+                  window.localStorage.removeItem(t);
+              window.localStorage.setItem(e, t), (this.m_bSaveRequired = !1);
+            }
+          }
         }
         DebouncedSaveSavedDimensionStore() {
           this.SaveSavedDimensionStore();
@@ -7207,7 +7218,7 @@
     },
     77581: (e, t, n) => {
       "use strict";
-      n.d(t, { J: () => g });
+      n.d(t, { J: () => _ });
       var o = n(85556),
         i = n(50060),
         r = n(10059),
@@ -7237,10 +7248,12 @@
       function p(e) {
         return e ? e.body.exp : 0;
       }
-      class g {
+      var g = n(46009);
+      class _ {
         constructor(e, t, n = !1, o) {
           (this.m_webApiAccessToken = ""),
             (this.m_bJsonMode = !1),
+            (this.m_strSpoofedSteamID = ""),
             (this.m_bJWTToken = !1),
             (this.m_dtLastExpireCheck = 0),
             (this.m_strWebAPIBaseURL = e),
@@ -7266,6 +7279,8 @@
               }),
               MakeReady: this.MakeReady.bind(this),
             });
+          const i = (0, g.bG)("steamLoginSpoofSteamID");
+          i && /[0-9]+/g.test(i) && (this.m_strSpoofedSteamID = i);
         }
         WaitUntilLoggedOn() {
           return Promise.resolve();
@@ -7400,7 +7415,8 @@
             this.m_webApiAccessToken &&
               e.bSendAuth &&
               !u &&
-              (d.params.access_token = this.m_webApiAccessToken),
+              ((d.params.access_token = this.m_webApiAccessToken),
+              (d.params.spoof_steamid = this.m_strSpoofedSteamID)),
             null == o ? void 0 : o.bConstMethod)
           )
             return (
@@ -7436,9 +7452,9 @@
           );
         }
       }
-      (0, o.gn)([a.a], g.prototype, "SendMsgAndAwaitResponse", null),
-        (0, o.gn)([a.a], g.prototype, "SendNotification", null),
-        (0, o.gn)([a.a], g.prototype, "Send", null);
+      (0, o.gn)([a.a], _.prototype, "SendMsgAndAwaitResponse", null),
+        (0, o.gn)([a.a], _.prototype, "SendNotification", null),
+        (0, o.gn)([a.a], _.prototype, "Send", null);
     },
     22520: (e, t, n) => {
       "use strict";
@@ -20685,6 +20701,35 @@
       }
       n.d(t, { Z: () => o });
     },
+    46009: (e, t, n) => {
+      "use strict";
+      function o(e) {
+        if (!r() || !window.document.cookie) return null;
+        const t = document.cookie.match("(^|; )" + e + "=([^;]*)");
+        return t && t[2] ? decodeURIComponent(t[2]) : null;
+      }
+      function i(e, t, n, o) {
+        if (!r()) return;
+        o || (o = "/");
+        let i = "";
+        if (void 0 !== n && n) {
+          const e = new Date();
+          e.setTime(e.getTime() + 864e5 * n),
+            (i = "; expires=" + e.toUTCString());
+        }
+        document.cookie =
+          encodeURIComponent(e) +
+          "=" +
+          encodeURIComponent(t) +
+          i +
+          ";path=" +
+          o;
+      }
+      function r() {
+        return !!window.document;
+      }
+      n.d(t, { I1: () => i, bG: () => o, t$: () => r });
+    },
     60616: (e, t, n) => {
       "use strict";
       function o(e, t = !0) {
@@ -20986,6 +21031,7 @@
     34345: (e, t, n) => {
       "use strict";
       n(80751), n(33557);
+      new Map();
     },
     31846: (e, t, n) => {
       "use strict";
@@ -22643,7 +22689,7 @@
         r = n(62210),
         s = n(65255),
         a = n(41003),
-        l = n(37341);
+        l = n(82756);
       const c = o.createContext({}),
         u = (e) => {
           const t = o.useContext(c);
@@ -22765,7 +22811,7 @@
         Wj: () => l,
         dk: () => s,
       });
-      var o = n(37341);
+      var o = n(82756);
       const i = {
         EUNIVERSE: 0,
         WEB_UNIVERSE: "",
@@ -22861,82 +22907,56 @@
         },
         l = { ANNOUNCEMENT_GID: "", TAKEOVER_ANNOUNCEMENT_GID: "" };
     },
-    37341: (e, t, n) => {
+    82756: (e, t, n) => {
       "use strict";
       n.d(t, {
-        y9: () => _,
-        kQ: () => h,
-        ip: () => m,
-        c9: () => c,
-        Ek: () => d,
+        Ek: () => u,
+        c9: () => l,
+        ip: () => h,
+        kQ: () => d,
+        y9: () => g,
       });
-      var o = n(45651);
-      function i(e) {
-        if (!r() || !window.document.cookie) return null;
-        const t = document.cookie.match("(^|; )" + e + "=([^;]*)");
-        return t && t[2] ? decodeURIComponent(t[2]) : null;
+      var o = n(45651),
+        i = n(46009),
+        r = n(65255);
+      const s = "webui_config";
+      let a;
+      function l() {
+        if (!(0, i.t$)()) return a || (a = c()), a;
+        let e = (0, i.bG)("sessionid");
+        return e || (e = c()), e;
       }
-      function r() {
-        return !!window.document;
-      }
-      var s = n(65255);
-      const a = "webui_config";
-      let l;
       function c() {
-        if (!r()) return l || (l = u()), l;
-        let e = i("sessionid");
-        return e || (e = u()), e;
-      }
-      function u() {
         const e = (function () {
           let e = "";
           for (let t = 0; t < 24; t++) e += (0, o.LO)(0, 35).toString(36);
           return e;
         })();
-        return (
-          (function (e, t, n, o) {
-            if (!r()) return;
-            o || (o = "/");
-            let i = "";
-            if (void 0 !== n && n) {
-              const e = new Date();
-              e.setTime(e.getTime() + 864e5 * n),
-                (i = "; expires=" + e.toUTCString());
-            }
-            document.cookie =
-              encodeURIComponent(e) +
-              "=" +
-              encodeURIComponent(t) +
-              i +
-              ";path=" +
-              o;
-          })("sessionid", e, 0),
-          e
-        );
+        return (0, i.I1)("sessionid", e, 0), e;
       }
-      function d(e = a) {
+      function u(e = s) {
         const t = {},
-          n = h("config", e);
-        n && (delete n.SESSIONID, Object.assign(s.De, n), (t.config = !0));
-        const o = h("userinfo", e);
+          n = d("config", e);
+        n && (delete n.SESSIONID, Object.assign(r.De, n), (t.config = !0));
+        const o = d("userinfo", e);
         o &&
-          (Object.assign(s.L7, o),
+          (Object.assign(r.L7, o),
           (t.userConfig = !0),
-          s.L7.is_support && _() && (s.L7.is_support = !1));
-        const i = h("broadcast", e);
-        i && (Object.assign(s.dk, i), (t.broadcastConfig = !0));
-        const r = h("community", e);
-        r && (Object.assign(s.JA, r), (t.communityConfig = !0));
-        const l = h("event", e);
-        return l && (Object.assign(s.Wj, l), (t.eventConfig = !0)), t;
+          r.L7.is_support && g() && (r.L7.is_support = !1));
+        const i = d("broadcast", e);
+        i && (Object.assign(r.dk, i), (t.broadcastConfig = !0));
+        const a = d("community", e);
+        a && (Object.assign(r.JA, a), (t.communityConfig = !0));
+        const l = d("event", e);
+        return l && (Object.assign(r.Wj, l), (t.eventConfig = !0)), t;
       }
-      function h(e, t = a) {
-        return p(e, t, !0);
+      function d(e, t = s) {
+        return m(e, t, !0);
       }
-      function m(e, t = a) {
-        return p(e, t, !1);
+      function h(e, t = s) {
+        return m(e, t, !1);
       }
-      function p(e, t = a, n) {
+      function m(e, t = s, n) {
         let o;
         if (
           ((o =
@@ -22955,7 +22975,7 @@
           } catch (e) {
             console.error(
               "Failed to parse config for " +
-                s.L7.steamid +
+                r.L7.steamid +
                 " (" +
                 window.location.href +
                 ")",
@@ -22964,10 +22984,13 @@
           }
         else n && console.error("Missing config element #", t);
       }
-      const g = "presentation_mode";
-      function _() {
+      const p = "presentation_mode";
+      function g() {
         let e = null;
-        return r() && (e = i(g)), Boolean(e && 1 === Number.parseInt(e));
+        return (
+          (0, i.t$)() && (e = (0, i.bG)(p)),
+          Boolean(e && 1 === Number.parseInt(e))
+        );
       }
     },
     316: (e, t, n) => {
@@ -23296,7 +23319,7 @@
         B = n(42718),
         P = n(53040),
         F = n(65255),
-        H = n(37341),
+        H = n(82756),
         V = n(31614),
         G = n.n(V),
         W = n(90069),
@@ -23711,7 +23734,7 @@
             n.e(7485),
             n.e(4033),
             n.e(2136),
-          ]).then(n.bind(n, 50694)),
+          ]).then(n.bind(n, 37469)),
         ),
         de = c.lazy(() =>
           Promise.all([
@@ -23832,7 +23855,7 @@
             n.e(2715),
             n.e(7485),
             n.e(3863),
-          ]).then(n.bind(n, 35339)),
+          ]).then(n.bind(n, 53111)),
         ),
         Ce = () => c.createElement("div", null),
         fe = c.lazy(() =>

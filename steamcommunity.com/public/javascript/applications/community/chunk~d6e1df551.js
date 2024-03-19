@@ -51,8 +51,8 @@
       var o = i(85556),
         l = i(80751),
         a = i.n(l),
-        s = i(54842),
-        r = i(62210),
+        r = i(54842),
+        s = i(62210),
         p = i(31846),
         d = i(37563);
       class n {
@@ -65,20 +65,20 @@
             (this.eUploadState = 0),
             (this.uploadProgress = 0),
             (this.strErrorDescription = void 0),
-            (0, s.rC)(this);
+            (0, r.rC)(this);
         }
       }
-      (0, o.gn)([s.LO], n.prototype, "file", void 0),
-        (0, o.gn)([s.LO], n.prototype, "dataURL", void 0),
-        (0, o.gn)([s.LO], n.prototype, "imageWidth", void 0),
-        (0, o.gn)([s.LO], n.prototype, "imageHeight", void 0),
-        (0, o.gn)([s.LO], n.prototype, "eUploadState", void 0),
-        (0, o.gn)([s.LO], n.prototype, "uploadProgress", void 0),
-        (0, o.gn)([s.LO], n.prototype, "strErrorDescription", void 0);
+      (0, o.gn)([r.LO], n.prototype, "file", void 0),
+        (0, o.gn)([r.LO], n.prototype, "dataURL", void 0),
+        (0, o.gn)([r.LO], n.prototype, "imageWidth", void 0),
+        (0, o.gn)([r.LO], n.prototype, "imageHeight", void 0),
+        (0, o.gn)([r.LO], n.prototype, "eUploadState", void 0),
+        (0, o.gn)([r.LO], n.prototype, "uploadProgress", void 0),
+        (0, o.gn)([r.LO], n.prototype, "strErrorDescription", void 0);
       class h {
         constructor(e) {
           (this.m_fileUploadProps = new n()),
-            (0, s.rC)(this),
+            (0, r.rC)(this),
             (this.m_Callbacks = e);
         }
         get file_upload_props() {
@@ -103,19 +103,14 @@
           return (0, o.mG)(this, void 0, void 0, function* () {
             if (!e) return void this.SetFileToUpload(null);
             if (e.size > 1024 * this.m_Callbacks.GetMaxFileSizeMB() * 1024)
-              return void (10 == this.m_Callbacks.GetMaxFileSizeMB()
-                ? this.SetUploadFileError(
-                    4,
-                    (0, p.Xx)("#Chat_Settings_Error_ChatFileTooLarge", e.name),
-                  )
-                : this.SetUploadFileError(
-                    4,
-                    (0, p.Xx)(
-                      "#Chat_Settings_Error_ChatFileTooLarge_dynamic",
-                      e.name,
-                      this.m_Callbacks.GetMaxFileSizeMB(),
-                    ),
-                  ));
+              return void this.SetUploadFileError(
+                4,
+                (0, p.Xx)(
+                  "#Chat_Settings_Error_ChatFileTooLarge_dynamic",
+                  e.name,
+                  this.m_Callbacks.GetMaxFileSizeMB(),
+                ),
+              );
             let i = e.name.split(".").pop().toLowerCase();
             if (
               -1 ==
@@ -183,7 +178,7 @@
             let t = this.m_fileUploadProps.file;
             if (!t)
               throw (
-                ((0, r.X)(
+                ((0, s.X)(
                   !1,
                   "Must SetImageFileToUpload before calling BeginFileUpload",
                 ),
@@ -219,37 +214,45 @@
                     `?l=${d.De.LANGUAGE}`,
                   { method: "POST", body: i, credentials: "include" },
                 );
-              if ((t.ok && (e = yield t.json()), !e || !e.result))
-                throw new Error();
+              try {
+                e = yield t.json();
+              } catch (e) {}
+              if (!e || !e.result) throw new Error();
+              if (!t.ok) {
+                let i = null;
+                throw (
+                  ((0, r.z)(() => {
+                    (this.m_fileUploadProps.eUploadState = 3),
+                      this.LogFileUploadMessage(t),
+                      (i = (null == e ? void 0 : e.message)
+                        ? null == e
+                          ? void 0
+                          : e.message
+                        : (0, p.Xx)("#Chat_Settings_Error_ServerError")),
+                      (this.m_fileUploadProps.strErrorDescription = (0, p.Xx)(
+                        "#Chat_Upload_ErrorStart",
+                        i,
+                      ));
+                  }),
+                  i)
+                );
+              }
               return (
                 (this.m_fileUploadProps.timestamp = e.timestamp),
                 (this.m_fileUploadProps.hmac = e.hmac),
                 this.DoFileUpload(e.result)
               );
             } catch (e) {
-              const t = null == e ? void 0 : e.response;
-              let i = null;
+              let t = e || (0, p.Xx)("#ConnectionTrouble_FailedToConnect");
               throw (
-                ((0, s.z)(() => {
-                  if (
-                    ((this.m_fileUploadProps.eUploadState = 3),
-                    this.LogFileUploadMessage(t),
-                    t)
-                  ) {
-                    let e = t.data;
-                    t.status, e && e.success;
-                    i = (null == e ? void 0 : e.message)
-                      ? null == e
-                        ? void 0
-                        : e.message
-                      : (0, p.Xx)("#Chat_Settings_Error_ServerError");
-                  } else i = (0, p.Xx)("#ConnectionTrouble_FailedToConnect");
-                  this.m_fileUploadProps.strErrorDescription = (0, p.Xx)(
-                    "#Chat_Upload_ErrorStart",
-                    i,
-                  );
+                ((0, r.z)(() => {
+                  (this.m_fileUploadProps.eUploadState = 3),
+                    (this.m_fileUploadProps.strErrorDescription = (0, p.Xx)(
+                      "#Chat_Upload_ErrorStart",
+                      t,
+                    ));
                 }),
-                i)
+                t)
               );
             }
           });
@@ -263,7 +266,7 @@
               onUploadProgress: (e) => {
                 let t = (e.loaded / e.total) * 100;
                 t > this.m_fileUploadProps.uploadProgress &&
-                  (0, s.z)(() => {
+                  (0, r.z)(() => {
                     this.m_fileUploadProps.uploadProgress = t;
                   });
               },
@@ -281,7 +284,7 @@
             } catch (t) {
               throw (
                 (this.LogFileUploadMessage(t.response),
-                (0, s.z)(() => {
+                (0, r.z)(() => {
                   (this.m_fileUploadProps.strErrorDescription = (0, p.Xx)(
                     "#Chat_Upload_ErrorCloud",
                   )),
@@ -339,7 +342,7 @@
               if (!e) return null;
               let i = null;
               throw (
-                ((0, s.z)(() => {
+                ((0, r.z)(() => {
                   if (
                     (this.LogFileUploadMessage(t),
                     (this.m_fileUploadProps.uploadProgress = 0),
@@ -401,24 +404,24 @@
           a = 0;
         if (65496 == t.getUint16(i)) {
           i += 2;
-          let s = t.getUint16(i);
+          let r = t.getUint16(i);
           for (i += 2; i < t.byteLength && i < 131072; ) {
-            if (65505 == s)
+            if (65505 == r)
               (l[a] = { recess: o, offset: i - 2 }),
                 (o = i + t.getUint16(i)),
                 a++;
-            else if (65498 == s) break;
-            (i += t.getUint16(i)), (s = t.getUint16(i)), (i += 2);
+            else if (65498 == r) break;
+            (i += t.getUint16(i)), (r = t.getUint16(i)), (i += 2);
           }
-          let r = e.byteLength - o;
+          let s = e.byteLength - o;
           if (
             (l.forEach((e) => {
-              r += e.offset - e.recess;
+              s += e.offset - e.recess;
             }),
-            r === e.byteLength)
+            s === e.byteLength)
           )
             return e;
-          const p = new Uint8Array(r);
+          const p = new Uint8Array(s);
           if (l.length > 0) {
             let t = 0;
             l.forEach((i) => {
@@ -431,15 +434,15 @@
         }
         return e;
       }
-      (0, o.gn)([s.aD], h.prototype, "SetUploadFileError", null),
-        (0, o.gn)([s.aD], h.prototype, "SetImageFileToUpload", null),
-        (0, o.gn)([s.aD], h.prototype, "SetFileToUpload", null),
-        (0, o.gn)([s.aD], h.prototype, "RetryFileUpload", null),
-        (0, o.gn)([s.aD], h.prototype, "BeginFileUpload", null),
-        (0, o.gn)([s.aD], h.prototype, "DoFileUpload", null),
-        (0, o.gn)([s.aD], h.prototype, "CommitFileUpload", null),
-        (0, o.gn)([s.aD], h.prototype, "ClearFileUploadError", null),
-        (0, o.gn)([s.aD], h.prototype, "Reset", null);
+      (0, o.gn)([r.aD], h.prototype, "SetUploadFileError", null),
+        (0, o.gn)([r.aD], h.prototype, "SetImageFileToUpload", null),
+        (0, o.gn)([r.aD], h.prototype, "SetFileToUpload", null),
+        (0, o.gn)([r.aD], h.prototype, "RetryFileUpload", null),
+        (0, o.gn)([r.aD], h.prototype, "BeginFileUpload", null),
+        (0, o.gn)([r.aD], h.prototype, "DoFileUpload", null),
+        (0, o.gn)([r.aD], h.prototype, "CommitFileUpload", null),
+        (0, o.gn)([r.aD], h.prototype, "ClearFileUploadError", null),
+        (0, o.gn)([r.aD], h.prototype, "Reset", null);
     },
   },
 ]);

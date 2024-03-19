@@ -1548,6 +1548,7 @@
     "SteamLearn_Config_Node_Train_Activation_ELU": "ELU",
     "SteamLearn_Config_Node_Train_Activation_TANH": "TANH",
     "SteamLearn_Config_Node_Train_Activation_SIGMOID": "SIGMOID",
+    "SteamLearn_Config_Node_Train_Activation_LINEAR": "LINEAR",
     "SteamLearn_Config_Node_Title_Dropout": "Dropout",
     "SteamLearn_Config_Node_Title_DropoutEditDesc": "Specifies a dropout that's applied to the incoming tensor",
     "SteamLearn_Header_Version_Unpublished": "Unpublished",

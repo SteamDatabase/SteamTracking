@@ -3668,9 +3668,9 @@
             OldActive: c("#YIR_Compare_OldGames_Desc_User", p),
           },
           y = {
-            NewActive: c("#YIR_Compare_NewGames_Desc_AvgSteam", a),
-            UsedActive: c("#YIR_Compare_ComfortGames_Desc_AvgSteam", _),
-            OldActive: c("#YIR_Compare_OldGames_Desc_AvgSteam", p),
+            NewActive: (0, U.Xx)("#YIR_Compare_NewGames_Desc_AvgSteam", a),
+            UsedActive: (0, U.Xx)("#YIR_Compare_ComfortGames_Desc_AvgSteam", _),
+            OldActive: (0, U.Xx)("#YIR_Compare_OldGames_Desc_AvgSteam", p),
           },
           I = (0, n.useMemo)(() => {
             const e = new Array();

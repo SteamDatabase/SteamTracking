@@ -15,10 +15,10 @@
         yp: () => d,
         iP: () => p,
       });
-      var r = n(47427),
-        s = n(77936),
-        o = n(37563),
-        i = n(4481);
+      var s = n(47427),
+        r = n(77936),
+        i = n(37563),
+        o = n(4481);
       class l {
         constructor() {
           (this.type = 0), (this.text = "");
@@ -37,85 +37,85 @@
             (this.m_fnAccumulatorFactory = t);
         }
         Parse(e, t, n = !1) {
-          const r = (function (e, t) {
+          const s = (function (e, t) {
             const n = [];
-            let r = new l(),
-              s = !1,
-              o = !1,
-              i = !1;
+            let s = new l(),
+              r = !1,
+              i = !1,
+              o = !1;
             for (let l = 0; l < e.length; l++) {
               let u = e[l];
-              switch (r.type) {
+              switch (s.type) {
                 case 0:
                   "[" == u
-                    ? ((r.type = 2), (o = !0))
-                    : ((r.type = 1), "\\" == u && t ? (s = !s) : (r.text += u));
+                    ? ((s.type = 2), (i = !0))
+                    : ((s.type = 1), "\\" == u && t ? (r = !r) : (s.text += u));
                   break;
                 case 2:
                 case 3:
-                  if ("/" == u && o) (r.type = 3), (r.text = ""), (o = !1);
-                  else if ("[" != u || s)
-                    if ("]" != u || s)
+                  if ("/" == u && i) (s.type = 3), (s.text = ""), (i = !1);
+                  else if ("[" != u || r)
+                    if ("]" != u || r)
                       "\\" == u && t
-                        ? ((r.text += u), (s = !s), (o = !1))
-                        : ((r.text += u), (s = !1), (o = !1));
+                        ? ((s.text += u), (r = !r), (i = !1))
+                        : ((s.text += u), (r = !1), (i = !1));
                     else {
                       const e =
-                          2 == r.type &&
-                          "noparse" == r.text.toLocaleLowerCase(),
+                          2 == s.type &&
+                          "noparse" == s.text.toLocaleLowerCase(),
                         t =
-                          3 == r.type &&
-                          "noparse" == r.text.toLocaleLowerCase();
-                      o || (i && !t)
-                        ? (r.ConvertMalformedNodeToText(), (r.text += u))
+                          3 == s.type &&
+                          "noparse" == s.text.toLocaleLowerCase();
+                      i || (o && !t)
+                        ? (s.ConvertMalformedNodeToText(), (s.text += u))
                         : e
-                          ? (i = !0)
-                          : t && (i = !1),
-                        (r = c(n, r)),
-                        (o = !1);
+                          ? (o = !0)
+                          : t && (o = !1),
+                        (s = c(n, s)),
+                        (i = !1);
                     }
                   else
-                    r.ConvertMalformedNodeToText(), (r = c(n, r, 2)), (o = !0);
+                    s.ConvertMalformedNodeToText(), (s = c(n, s, 2)), (i = !0);
                   break;
                 case 1:
-                  "[" != u || s
+                  "[" != u || r
                     ? "\\" == u && t
-                      ? (s && (r.text += u), (s = !s))
-                      : ((r.text += u), (s = !1))
-                    : ((r = c(n, r, 2)), (o = !0));
+                      ? (r && (s.text += u), (r = !r))
+                      : ((s.text += u), (r = !1))
+                    : ((s = c(n, s, 2)), (i = !0));
               }
             }
-            0 != r.type &&
-              ((2 != r.type && 3 != r.type) || r.ConvertMalformedNodeToText(),
-              n.push(r));
+            0 != s.type &&
+              ((2 != s.type && 3 != s.type) || s.ConvertMalformedNodeToText(),
+              n.push(s));
             return n;
           })(e, n);
-          return this.Parse_BuildElements(r, t);
+          return this.Parse_BuildElements(s, t);
         }
         Parse_BuildElements(e, t) {
           let n = this.m_fnAccumulatorFactory(void 0),
-            r = [],
-            s = function () {
-              return r.length < 1 ? void 0 : r[r.length - 1];
+            s = [],
+            r = function () {
+              return s.length < 1 ? void 0 : s[s.length - 1];
             },
-            o = this.m_dictComponents,
-            i = !1,
+            i = this.m_dictComponents,
+            o = !1,
             l = !0,
-            u = function (e, s, u) {
-              if (e && e.node.tag === s.text && o.get(e.node.tag)) {
-                const s = o.get(e.node.tag),
-                  u = r.map((e) => e.node.tag),
+            u = function (e, r, u) {
+              if (e && e.node.tag === r.text && i.get(e.node.tag)) {
+                const r = i.get(e.node.tag),
+                  u = s.map((e) => e.node.tag),
                   c = { parentTags: u, tagname: e.node.tag, args: e.node.args },
-                  a = t(s.Constructor, c, ...n.GetElements());
+                  a = t(r.Constructor, c, ...n.GetElements());
                 (n = e.accumulator),
                   n.AppendNode(a),
-                  (i = s.skipFollowingNewline),
+                  (o = r.skipFollowingNewline),
                   (l = e.bWrapTextForCopying);
               } else if (e) {
                 let t = e.accumulator;
                 t.AppendText("[" + e.node.text + "]", !1),
                   n.GetElements().forEach((e) => t.AppendNode(e)),
-                  t.AppendText("[/" + s.text + "]", !1),
+                  t.AppendText("[/" + r.text + "]", !1),
                   (n = t),
                   (l = e.bWrapTextForCopying);
               }
@@ -124,52 +124,52 @@
             e.forEach((e, t) => {
               var c, a;
               if (1 == e.type) {
-                const t = i ? e.text.replace(/^[\t\r ]*\n/g, "") : e.text;
-                n.AppendText(t, l), (i = !1);
+                const t = o ? e.text.replace(/^[\t\r ]*\n/g, "") : e.text;
+                n.AppendText(t, l), (o = !1);
               } else if (2 == e.type) {
-                const t = o.get(e.tag);
+                const t = i.get(e.tag);
                 if (t) {
-                  const a = s();
+                  const a = r();
                   if (void 0 !== a) {
-                    const t = o.get(a.node.tag);
+                    const t = i.get(a.node.tag);
                     t &&
                       t.autocloses &&
                       e.tag === a.node.tag &&
-                      u(r.pop(), a.node);
+                      u(s.pop(), a.node);
                   }
-                  r.push({ accumulator: n, node: e, bWrapTextForCopying: l }),
+                  s.push({ accumulator: n, node: e, bWrapTextForCopying: l }),
                     (n = this.m_fnAccumulatorFactory(e)),
-                    (i = t.skipInternalNewline),
+                    (o = t.skipInternalNewline),
                     (l =
                       null !== (c = t.allowWrapTextForCopying) &&
                       void 0 !== c &&
                       c);
-                } else n.AppendText("[" + e.text + "]", 0 == r.length);
+                } else n.AppendText("[" + e.text + "]", 0 == s.length);
               } else if (3 == e.type) {
                 for (
                   ;
-                  s() &&
-                  s().node.tag !== e.text &&
-                  o.get(s().node.tag) &&
-                  o.get(s().node.tag).autocloses;
+                  r() &&
+                  r().node.tag !== e.text &&
+                  i.get(r().node.tag) &&
+                  i.get(r().node.tag).autocloses;
 
                 ) {
-                  const e = r.pop();
+                  const e = s.pop();
                   u(e, e.node);
                 }
                 if (
-                  (null === (a = s()) || void 0 === a ? void 0 : a.node.tag) ==
+                  (null === (a = r()) || void 0 === a ? void 0 : a.node.tag) ==
                   e.text
                 ) {
-                  const t = r.pop();
+                  const t = s.pop();
                   u(t, e);
-                } else n.AppendText("[/" + e.text + "]", 0 == r.length);
+                } else n.AppendText("[/" + e.text + "]", 0 == s.length);
               }
             });
-            r.length > 0;
+            s.length > 0;
 
           ) {
-            let e = r.pop(),
+            let e = s.pop(),
               t = e.accumulator;
             t.AppendText("[" + e.node.text + "]", !1),
               n.GetElements().forEach((e) => t.AppendNode(e)),
@@ -189,89 +189,89 @@
               if (!e || e.length < 1) return {};
               let t = {},
                 n = "",
-                r = "",
-                s = 0,
-                o = 0;
-              "=" == e[0] && (s = 2);
-              let i = !1;
-              for (o++; o < e.length; o++) {
-                let l = e[o],
+                s = "",
+                r = 0,
+                i = 0;
+              "=" == e[0] && (r = 2);
+              let o = !1;
+              for (i++; i < e.length; i++) {
+                let l = e[i],
                   u = !0,
                   c = !1;
-                switch (s) {
+                switch (r) {
                   case 0:
                     if ("=" == l) return {};
                     if (" " == l) continue;
-                    s = 1;
+                    r = 1;
                     break;
                   case 1:
                     ("=" != l && " " != l) ||
-                      i ||
-                      (" " == l ? ((s = 0), (c = !0)) : (s = 2), (u = !1));
+                      o ||
+                      (" " == l ? ((r = 0), (c = !0)) : (r = 2), (u = !1));
                     break;
                   case 2:
                     " " == l
-                      ? ((s = 0), (u = !1), (c = !0))
+                      ? ((r = 0), (u = !1), (c = !0))
                       : '"' == l
-                        ? ((s = 4), (u = !1))
-                        : (s = 3);
+                        ? ((r = 4), (u = !1))
+                        : (r = 3);
                     break;
                   case 3:
                   case 4:
-                    ((" " == l && 4 != s && !i) ||
-                      ('"' == l && 4 == s && !i)) &&
-                      ((s = 0), (u = !1), (c = !0));
+                    ((" " == l && 4 != r && !o) ||
+                      ('"' == l && 4 == r && !o)) &&
+                      ((r = 0), (u = !1), (c = !0));
                 }
                 if (u)
-                  if ("\\" != l || i)
-                    if (((i = !1), 1 == s)) n += l;
+                  if ("\\" != l || o)
+                    if (((o = !1), 1 == r)) n += l;
                     else {
-                      if (3 != s && 4 != s)
+                      if (3 != r && 4 != r)
                         throw new Error(
-                          "Not expecting to accumulate buffer in state " + s,
+                          "Not expecting to accumulate buffer in state " + r,
                         );
-                      r += l;
+                      s += l;
                     }
-                  else i = !0;
-                c && ((t[n] = r), (n = ""), (r = ""));
+                  else o = !0;
+                c && ((t[n] = s), (n = ""), (s = ""));
               }
-              0 != s && (t[n] = r);
+              0 != r && (t[n] = s);
               return t;
             })(n);
           } else (t.args = {}), (t.tag = t.text.toLocaleLowerCase());
         }
         e.push(t);
-        let r = new l();
-        return (r.type = n), r;
+        let s = new l();
+        return (s.type = n), s;
       }
       class a extends u {
         constructor(e, t, n) {
-          super(e, null != t ? t : () => new i.LT()),
-            (this.m_renderingLanguage = n || (0, s.jM)(o.De.LANGUAGE));
+          super(e, null != t ? t : () => new o.LT()),
+            (this.m_renderingLanguage = n || (0, r.jM)(i.De.LANGUAGE));
         }
         UpdateOverrideLanguage(e) {
-          this.m_renderingLanguage = e || (0, s.jM)(o.De.LANGUAGE);
+          this.m_renderingLanguage = e || (0, r.jM)(i.De.LANGUAGE);
         }
         ParseBBCode(e, t, n = !1) {
-          let s = 0;
-          const o = this.Parse(
+          let r = 0;
+          const i = this.Parse(
             e,
-            (e, n, ...o) =>
-              r.createElement(
+            (e, n, ...i) =>
+              s.createElement(
                 e,
                 Object.assign(Object.assign({}, n), {
                   context: t,
                   language: this.m_renderingLanguage,
-                  key: "bbnode_" + s++,
+                  key: "bbnode_" + r++,
                 }),
-                ...o,
+                ...i,
               ),
             n,
           );
-          return o.length > 1
-            ? r.createElement(r.Fragment, null, ...o)
-            : 1 == o.length
-              ? o[0]
+          return i.length > 1
+            ? s.createElement(s.Fragment, null, ...i)
+            : 1 == i.length
+              ? i[0]
               : null;
         }
       }
@@ -345,23 +345,23 @@
         g = (d.filter((e) => -1 == _.indexOf(e)), "{STEAM_CLAN_IMAGE}"),
         f = "{STEAM_CLAN_LOC_IMAGE}";
       function h(e, t = null, n = " ") {
-        let r = null == t ? void 0 : t.join("|");
-        r || (r = d.join("|") + "|\\*");
-        let s = new RegExp("\\[(" + r + ")\\b[^\\]]*\\].*?\\[/\\1\\]", "gi");
-        return e.replace(s, n);
+        let s = null == t ? void 0 : t.join("|");
+        s || (s = d.join("|") + "|\\*");
+        let r = new RegExp("\\[(" + s + ")\\b[^\\]]*\\].*?\\[/\\1\\]", "gi");
+        return e.replace(r, n);
       }
       function m(e, t = null, n = "") {
-        let r = null == t ? void 0 : t.join("|");
-        r || (r = d.join("|") + "|\\*");
-        let s = "\\[\\/?(?:" + r + "){1,}.*?]";
-        return e.replace(new RegExp(s, "gi"), n);
+        let s = null == t ? void 0 : t.join("|");
+        s || (s = d.join("|") + "|\\*");
+        let r = "\\[\\/?(?:" + s + "){1,}.*?]";
+        return e.replace(new RegExp(r, "gi"), n);
       }
     },
     4481: (e, t, n) => {
-      n.d(t, { DX: () => i, LT: () => o, So: () => l });
-      var r = n(47427),
-        s = n(62210);
-      class o {
+      n.d(t, { DX: () => o, LT: () => i, So: () => l });
+      var s = n(47427),
+        r = n(62210);
+      class i {
         constructor() {
           this.reactNodes = [];
         }
@@ -369,7 +369,7 @@
           e.length &&
             (t
               ? this.reactNodes.push(
-                  r.createElement(
+                  s.createElement(
                     "span",
                     {
                       "data-copytext": "",
@@ -388,9 +388,9 @@
           return this.reactNodes;
         }
       }
-      class i {
+      class o {
         constructor(e) {
-          (0, s.X)(e, "decorated accumulator cannot be null"),
+          (0, r.X)(e, "decorated accumulator cannot be null"),
             (this.m_decoratedAccumulator = e);
         }
         AppendText(e, t = !1) {
@@ -403,7 +403,7 @@
           return this.m_decoratedAccumulator.GetElements();
         }
       }
-      class l extends i {
+      class l extends o {
         constructor(e, t, n) {
           super(e),
             (this.m_nStartCursor = 1),
@@ -418,7 +418,7 @@
             e = t.indexOf("\n")
           )
             n.push(t.substr(0, e)),
-              n.push(r.createElement("br")),
+              n.push(s.createElement("br")),
               (t = t.substr(e + 1));
           t.length && n.push(t),
             n.forEach((e) => {
@@ -428,17 +428,17 @@
       }
     },
     19399: (e, t, n) => {
-      n.d(t, { HZ: () => l, OL: () => o, pd: () => i });
-      var r = n(83682),
-        s = n(65255);
-      function o() {
-        return `${s.De.CLAN_CDN_ASSET_URL}images/`;
+      n.d(t, { HZ: () => l, OL: () => i, pd: () => o });
+      var s = n(83682),
+        r = n(65255);
+      function i() {
+        return `${r.De.CLAN_CDN_ASSET_URL}images/`;
       }
-      function i(e) {
-        return (e = e.replace(r.A1, o())).replace("http://", "https://");
+      function o(e) {
+        return (e = e.replace(s.A1, i())).replace("http://", "https://");
       }
       function l(e) {
-        return e.replace(/{STEAM_CLAN_IMAGE}/g, o());
+        return e.replace(/{STEAM_CLAN_IMAGE}/g, i());
       }
     },
     80886: (e, t, n) => {
@@ -452,17 +452,17 @@
         wZ: () => g,
         yo: () => a,
       });
-      var r = n(80751),
-        s = n.n(r),
-        o = n(47427),
-        i = (n(83682), n(20417)),
+      var s = n(80751),
+        r = n.n(s),
+        i = n(47427),
+        o = (n(83682), n(20417)),
         l = n(15690);
-      function u(e, t, n, r) {
-        const u = (0, o.useRef)(),
-          c = (0, o.useRef)(void 0),
-          a = (0, i.NW)();
+      function u(e, t, n, s) {
+        const u = (0, i.useRef)(),
+          c = (0, i.useRef)(void 0),
+          a = (0, o.NW)();
         u.current = e;
-        const [d, p] = (0, o.useState)(void 0),
+        const [d, p] = (0, i.useState)(void 0),
           {
             include_assets: _,
             include_release: g,
@@ -475,13 +475,13 @@
             include_reviews: A,
             include_basic_info: b,
             include_supported_languages: C,
-            include_full_description: T,
-            include_included_items: E,
-            include_assets_without_overrides: w,
-            apply_user_filters: G,
+            include_full_description: E,
+            include_included_items: G,
+            include_assets_without_overrides: T,
+            apply_user_filters: w,
           } = n;
         if (
-          ((0, o.useEffect)(() => {
+          ((0, i.useEffect)(() => {
             const n = {
               include_assets: _,
               include_release: g,
@@ -494,38 +494,38 @@
               include_reviews: A,
               include_basic_info: b,
               include_supported_languages: C,
-              include_full_description: T,
-              include_included_items: E,
-              include_assets_without_overrides: w,
-              apply_user_filters: G,
+              include_full_description: E,
+              include_included_items: G,
+              include_assets_without_overrides: T,
+              apply_user_filters: w,
             };
-            let o = null;
+            let i = null;
             return (
               !e ||
                 l.Z.Get().BHasStoreItem(e, t, n) ||
-                (void 0 !== d && r && r == c.current) ||
-                (r !== c.current && (p(void 0), (c.current = r)),
-                (o = s().CancelToken.source()),
+                (void 0 !== d && s && s == c.current) ||
+                (s !== c.current && (p(void 0), (c.current = s)),
+                (i = r().CancelToken.source()),
                 l.Z.Get()
                   .QueueStoreItemRequest(e, t, n)
                   .then((t) => {
-                    (null == o ? void 0 : o.token.reason) ||
+                    (null == i ? void 0 : i.token.reason) ||
                       u.current !== e ||
                       p(1 == t),
                       a();
                   })),
               () =>
-                null == o ? void 0 : o.cancel("useStoreItemCache: unmounting")
+                null == i ? void 0 : i.cancel("useStoreItemCache: unmounting")
             );
-          }, [e, t, r, d, _, g, f, h, m, x, v, y, A, b, C, T, E, w, G, a]),
+          }, [e, t, s, d, _, g, f, h, m, x, v, y, A, b, C, E, G, T, w, a]),
           !e)
         )
           return [null, 2];
         if (!1 === d) return [void 0, 2];
         if (l.Z.Get().BIsStoreItemMissing(e, t)) return [void 0, 2];
         if (!l.Z.Get().BHasStoreItem(e, t, n)) return [void 0, 1];
-        const k = l.Z.Get().GetStoreItemWithLegacyVisibilityCheck(e, t);
-        return k ? [k, 3] : [null, 2];
+        const N = l.Z.Get().GetStoreItemWithLegacyVisibilityCheck(e, t);
+        return N ? [N, 3] : [null, 2];
       }
       function c(e, t, n) {
         return u(e, 0, t, n);
@@ -537,32 +537,28 @@
         return u(e, 1, t, n);
       }
       function p(e, t, n) {
-        const [r, i] = u(e, t, n),
-          [l, a] = (0, o.useState)(null),
-          [d, p] = c(l, n);
+        const [s, r] = u(e, t, n),
+          [o, l] = (0, i.useState)(null),
+          [a, d] = c(o, n);
         return (
-          (0, o.useEffect)(() => {
+          (0, i.useEffect)(() => {
             var e;
-            const t = s().CancelToken.source();
             if (
-              1 == (null == r ? void 0 : r.GetStoreItemType()) &&
-              1 == (null == r ? void 0 : r.GetIncludedAppIDs().length)
+              1 == (null == s ? void 0 : s.GetStoreItemType()) &&
+              !(null === (e = s.GetAssets()) || void 0 === e
+                ? void 0
+                : e.GetHeaderURL()) &&
+              1 == (null == s ? void 0 : s.GetIncludedAppIDs().length)
             ) {
-              const n = r.GetIncludedAppIDs()[0];
-              l != n &&
-                ((null === (e = null == t ? void 0 : t.token) || void 0 === e
-                  ? void 0
-                  : e.reason) ||
-                  a(n));
+              const e = s.GetIncludedAppIDs()[0];
+              l(e);
             }
-            return () =>
-              t.cancel("useStoreItemCacheOrPackageSingleApp: unmounting");
-          }, [l, r]),
-          l ? [d, p] : [r, i]
+          }, [s]),
+          o && (null == a ? void 0 : a.BIsVisible()) ? [a, d] : [s, r]
         );
       }
-      function _(e, t, n, r) {
-        const u = (0, i.NW)(),
+      function _(e, t, n, s) {
+        const u = (0, o.NW)(),
           {
             include_assets: c,
             include_release: a,
@@ -581,7 +577,7 @@
             apply_user_filters: C,
           } = n;
         if (
-          ((0, o.useEffect)(() => {
+          ((0, i.useEffect)(() => {
             if (!e || 0 == e.length) return;
             const n = {
                 include_assets: c,
@@ -600,23 +596,23 @@
                 include_assets_without_overrides: b,
                 apply_user_filters: C,
               },
-              r = e.filter(
+              s = e.filter(
                 (e) =>
                   !(
                     l.Z.Get().BHasStoreItem(e, t, n) ||
                     l.Z.Get().BIsStoreItemMissing(e, t)
                   ),
               );
-            if (0 == r.length) return;
-            const o = s().CancelToken.source(),
-              i = r.map((e) => l.Z.Get().QueueStoreItemRequest(e, t, n));
+            if (0 == s.length) return;
+            const i = r().CancelToken.source(),
+              o = s.map((e) => l.Z.Get().QueueStoreItemRequest(e, t, n));
             return (
-              Promise.all(i).then(() => {
-                o.token.reason || u();
+              Promise.all(o).then(() => {
+                i.token.reason || u();
               }),
-              () => o.cancel("useStoreItemCacheMultiplePackages: unmounting")
+              () => i.cancel("useStoreItemCacheMultiplePackages: unmounting")
             );
-          }, [e, t, r, u, c, a, d, p, _, g, f, h, m, x, v, y, A, b, C]),
+          }, [e, t, s, u, c, a, d, p, _, g, f, h, m, x, v, y, A, b, C]),
           !e)
         )
           return 2;

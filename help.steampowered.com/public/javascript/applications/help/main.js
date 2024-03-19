@@ -4077,7 +4077,18 @@
           if (!this.m_unCurrentAccountID || !this.m_bSaveRequired) return;
           let e = this.GetLocalStorageKey(),
             t = JSON.stringify(Array.from(this.m_mapRestoreDetails));
-          window.localStorage.setItem(e, t), (this.m_bSaveRequired = !1);
+          try {
+            window.localStorage.setItem(e, t), (this.m_bSaveRequired = !1);
+          } catch (n) {
+            if ("QuotaExceededError" == n.name) {
+              console.log("Quota exceeded");
+              for (let t of Object.keys(window.localStorage))
+                t.startsWith("PopupSavedDimensions_") &&
+                  t != e &&
+                  window.localStorage.removeItem(t);
+              window.localStorage.setItem(e, t), (this.m_bSaveRequired = !1);
+            }
+          }
         }
         DebouncedSaveSavedDimensionStore() {
           this.SaveSavedDimensionStore();
@@ -8103,7 +8114,7 @@
     },
     7581: (e, t, n) => {
       "use strict";
-      n.d(t, { J: () => _ });
+      n.d(t, { J: () => g });
       var i = n(5556),
         r = n(60),
         o = n(59),
@@ -8133,10 +8144,12 @@
       function p(e) {
         return e ? e.body.exp : 0;
       }
-      class _ {
+      var _ = n(6009);
+      class g {
         constructor(e, t, n = !1, i) {
           (this.m_webApiAccessToken = ""),
             (this.m_bJsonMode = !1),
+            (this.m_strSpoofedSteamID = ""),
             (this.m_bJWTToken = !1),
             (this.m_dtLastExpireCheck = 0),
             (this.m_strWebAPIBaseURL = e),
@@ -8162,6 +8175,8 @@
               }),
               MakeReady: this.MakeReady.bind(this),
             });
+          const r = (0, _.bG)("steamLoginSpoofSteamID");
+          r && /[0-9]+/g.test(r) && (this.m_strSpoofedSteamID = r);
         }
         WaitUntilLoggedOn() {
           return Promise.resolve();
@@ -8296,7 +8311,8 @@
             this.m_webApiAccessToken &&
               e.bSendAuth &&
               !u &&
-              (d.params.access_token = this.m_webApiAccessToken),
+              ((d.params.access_token = this.m_webApiAccessToken),
+              (d.params.spoof_steamid = this.m_strSpoofedSteamID)),
             null == i ? void 0 : i.bConstMethod)
           )
             return (
@@ -8332,9 +8348,9 @@
           );
         }
       }
-      (0, i.gn)([a.a], _.prototype, "SendMsgAndAwaitResponse", null),
-        (0, i.gn)([a.a], _.prototype, "SendNotification", null),
-        (0, i.gn)([a.a], _.prototype, "Send", null);
+      (0, i.gn)([a.a], g.prototype, "SendMsgAndAwaitResponse", null),
+        (0, i.gn)([a.a], g.prototype, "SendNotification", null),
+        (0, i.gn)([a.a], g.prototype, "Send", null);
     },
     2520: (e, t, n) => {
       "use strict";
@@ -11921,28 +11937,24 @@
         return l(e, 0, t, n);
       }
       function u(e, t, n) {
-        const [i, s] = l(e, t, n),
-          [a, u] = (0, o.useState)(null),
-          [d, m] = c(a, n);
+        const [i, r] = l(e, t, n),
+          [s, a] = (0, o.useState)(null),
+          [u, d] = c(s, n);
         return (
           (0, o.useEffect)(() => {
             var e;
-            const t = r().CancelToken.source();
             if (
               1 == (null == i ? void 0 : i.GetStoreItemType()) &&
+              !(null === (e = i.GetAssets()) || void 0 === e
+                ? void 0
+                : e.GetHeaderURL()) &&
               1 == (null == i ? void 0 : i.GetIncludedAppIDs().length)
             ) {
-              const n = i.GetIncludedAppIDs()[0];
-              a != n &&
-                ((null === (e = null == t ? void 0 : t.token) || void 0 === e
-                  ? void 0
-                  : e.reason) ||
-                  u(n));
+              const e = i.GetIncludedAppIDs()[0];
+              a(e);
             }
-            return () =>
-              t.cancel("useStoreItemCacheOrPackageSingleApp: unmounting");
-          }, [a, i]),
-          a ? [d, m] : [i, s]
+          }, [i]),
+          s && (null == u ? void 0 : u.BIsVisible()) ? [u, d] : [i, r]
         );
       }
     },
@@ -28251,6 +28263,7 @@
       class Ht {
         constructor() {
           (this.m_mapExistingEvents = new Map()),
+            (this.m_mapEventUpdateCallback = new Map()),
             (this.m_mapAnnouncementBodyToEvent = new Map()),
             (this.m_mapClanToGIDs = new Map()),
             (this.m_mapAppIDToGIDs = new Map()),
@@ -28348,6 +28361,13 @@
             "string" == typeof t[0].announcementGID &&
             Array.isArray(t[0].adjacents) &&
             (0 == t[0].adjacents.length || "string" == typeof t[0].adjacents[0])
+          );
+        }
+        GetPartnerEventChangeCallback(e) {
+          return (
+            this.m_mapEventUpdateCallback.has(e) ||
+              this.m_mapEventUpdateCallback.set(e, new Me.pB()),
+            this.m_mapEventUpdateCallback.get(e)
           );
         }
         GetClanEventGIDs(e) {
@@ -29333,6 +29353,43 @@
             return i;
           });
         }
+        SavePartnerEventSaleAssets(e, t, n) {
+          var r;
+          return (0, i.mG)(this, void 0, void 0, function* () {
+            let i = null;
+            if (!this.m_mapExistingEvents.has(t)) return !1;
+            try {
+              const o = `${s.De.PARTNER_BASE_URL}promotion/sales/ajaxsaveasset/${e}`,
+                a = new FormData();
+              a.append("sessionid", s.De.SESSIONID),
+                a.append("gidclanevent", t),
+                a.append("json", JSON.stringify(n));
+              const l = yield _().post(o, a, { withCredentials: !0 });
+              if (
+                1 ==
+                (null === (r = null == l ? void 0 : l.data) || void 0 === r
+                  ? void 0
+                  : r.success)
+              ) {
+                const e = this.m_mapExistingEvents.get(t);
+                for (const t in n)
+                  n.hasOwnProperty(t) && n[t] && (e.jsondata[t] = n[t]);
+                return this.GetPartnerEventChangeCallback(t).Dispatch(e), !0;
+              }
+              i = (0, S.l)(l);
+            } catch (e) {
+              i = (0, S.l)(e);
+            }
+            return (
+              console.error(
+                "CPartnerEventStore.SavePartnerEventSaleAssets failed: " +
+                  (null == i ? void 0 : i.strErrorMsg),
+                i,
+              ),
+              !1
+            );
+          });
+        }
       }
       (0, i.gn)([f.LO], Ht.prototype, "m_mapExistingEvents", void 0),
         (0, i.gn)([f.LO], Ht.prototype, "m_mapAnnouncementBodyToEvent", void 0),
@@ -29340,6 +29397,7 @@
         (0, i.gn)([f.LO], Ht.prototype, "m_mapAppIDToGIDs", void 0),
         (0, i.gn)([f.LO], Ht.prototype, "m_mapUpdatedApps", void 0),
         (0, i.gn)([f.aD], Ht.prototype, "Init", null),
+        (0, i.gn)([ce.ak], Ht.prototype, "GetPartnerEventChangeCallback", null),
         (0, i.gn)([f.aD], Ht.prototype, "RegisterClanEvents", null),
         (0, i.gn)(
           [f.aD],
@@ -29349,7 +29407,8 @@
         ),
         (0, i.gn)([f.aD], Ht.prototype, "DeleteClanEvent", null),
         (0, i.gn)([f.aD], Ht.prototype, "RemoveGIDFromList", null),
-        (0, i.gn)([f.aD], Ht.prototype, "FlushEventFromCache", null);
+        (0, i.gn)([f.aD], Ht.prototype, "FlushEventFromCache", null),
+        (0, i.gn)([ce.ak], Ht.prototype, "SavePartnerEventSaleAssets", null);
       const Vt = new Ht();
       window.g_PartnerEventStore = Vt;
       var jt;
@@ -35119,12 +35178,14 @@
         const i = Pr(e.args, "autoplay"),
           o = "0" !== i && "off" !== i && "false" !== i,
           s = Pr(e.args, "controls"),
-          a = "0" !== s && "off" !== s && "false" !== s;
+          a = "0" !== s && "off" !== s && "false" !== s,
+          l = Pr(e.args, "loop"),
+          c = "0" !== s && "off" !== s && "false" !== s;
         return r.createElement(Or, {
           video: t,
           bAutoPlay: o,
           bControls: a,
-          bLoop: o,
+          bLoop: l ? c : o,
         });
       }
       new (class {

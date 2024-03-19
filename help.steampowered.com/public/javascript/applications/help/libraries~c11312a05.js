@@ -2717,7 +2717,7 @@
         constructor(e = null) {
           super(),
             I.prototype.requester_steamid || a.aR(I.M()),
-            s.initialize(this, e, 0, -1, [9, 10], null);
+            s.initialize(this, e, 0, -1, [9, 10, 11, 12], null);
         }
         static M() {
           return (
@@ -2771,6 +2771,22 @@
                   },
                   purchased_packageids: {
                     n: 10,
+                    r: !0,
+                    q: !0,
+                    br: a.FE.readUint32,
+                    pbr: a.FE.readPackedUint32,
+                    bw: a.Xc.writeRepeatedUint32,
+                  },
+                  requested_bundleids: {
+                    n: 11,
+                    r: !0,
+                    q: !0,
+                    br: a.FE.readUint32,
+                    pbr: a.FE.readPackedUint32,
+                    bw: a.Xc.writeRepeatedUint32,
+                  },
+                  purchased_bundleids: {
+                    n: 12,
                     r: !0,
                     q: !0,
                     br: a.FE.readUint32,
@@ -3722,6 +3738,16 @@
                   },
                   language: { n: 5, br: a.FE.readString, bw: a.Xc.writeString },
                   max_apps: { n: 6, br: a.FE.readUint32, bw: a.Xc.writeUint32 },
+                  include_non_games: {
+                    n: 7,
+                    br: a.FE.readBool,
+                    bw: a.Xc.writeBool,
+                  },
+                  steamid: {
+                    n: 8,
+                    br: a.FE.readFixed64String,
+                    bw: a.Xc.writeFixed64String,
+                  },
                 },
               }),
             Q.sm_m

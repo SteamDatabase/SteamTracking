@@ -2180,19 +2180,14 @@
           return (0, a.mG)(this, void 0, void 0, function* () {
             if (!e) return void this.SetFileToUpload(null);
             if (e.size > 1024 * this.m_Callbacks.GetMaxFileSizeMB() * 1024)
-              return void (10 == this.m_Callbacks.GetMaxFileSizeMB()
-                ? this.SetUploadFileError(
-                    4,
-                    (0, x.Xx)("#Chat_Settings_Error_ChatFileTooLarge", e.name),
-                  )
-                : this.SetUploadFileError(
-                    4,
-                    (0, x.Xx)(
-                      "#Chat_Settings_Error_ChatFileTooLarge_dynamic",
-                      e.name,
-                      this.m_Callbacks.GetMaxFileSizeMB(),
-                    ),
-                  ));
+              return void this.SetUploadFileError(
+                4,
+                (0, x.Xx)(
+                  "#Chat_Settings_Error_ChatFileTooLarge_dynamic",
+                  e.name,
+                  this.m_Callbacks.GetMaxFileSizeMB(),
+                ),
+              );
             let n = e.name.split(".").pop().toLowerCase();
             if (
               -1 ==
@@ -2296,37 +2291,45 @@
                     `?l=${D.De.LANGUAGE}`,
                   { method: "POST", body: n, credentials: "include" },
                 );
-              if ((t.ok && (e = yield t.json()), !e || !e.result))
-                throw new Error();
+              try {
+                e = yield t.json();
+              } catch (e) {}
+              if (!e || !e.result) throw new Error();
+              if (!t.ok) {
+                let n = null;
+                throw (
+                  ((0, V.z)(() => {
+                    (this.m_fileUploadProps.eUploadState = 3),
+                      this.LogFileUploadMessage(t),
+                      (n = (null == e ? void 0 : e.message)
+                        ? null == e
+                          ? void 0
+                          : e.message
+                        : (0, x.Xx)("#Chat_Settings_Error_ServerError")),
+                      (this.m_fileUploadProps.strErrorDescription = (0, x.Xx)(
+                        "#Chat_Upload_ErrorStart",
+                        n,
+                      ));
+                  }),
+                  n)
+                );
+              }
               return (
                 (this.m_fileUploadProps.timestamp = e.timestamp),
                 (this.m_fileUploadProps.hmac = e.hmac),
                 this.DoFileUpload(e.result)
               );
             } catch (e) {
-              const t = null == e ? void 0 : e.response;
-              let n = null;
+              let t = e || (0, x.Xx)("#ConnectionTrouble_FailedToConnect");
               throw (
                 ((0, V.z)(() => {
-                  if (
-                    ((this.m_fileUploadProps.eUploadState = 3),
-                    this.LogFileUploadMessage(t),
-                    t)
-                  ) {
-                    let e = t.data;
-                    t.status, e && e.success;
-                    n = (null == e ? void 0 : e.message)
-                      ? null == e
-                        ? void 0
-                        : e.message
-                      : (0, x.Xx)("#Chat_Settings_Error_ServerError");
-                  } else n = (0, x.Xx)("#ConnectionTrouble_FailedToConnect");
-                  this.m_fileUploadProps.strErrorDescription = (0, x.Xx)(
-                    "#Chat_Upload_ErrorStart",
-                    n,
-                  );
+                  (this.m_fileUploadProps.eUploadState = 3),
+                    (this.m_fileUploadProps.strErrorDescription = (0, x.Xx)(
+                      "#Chat_Upload_ErrorStart",
+                      t,
+                    ));
                 }),
-                n)
+                t)
               );
             }
           });

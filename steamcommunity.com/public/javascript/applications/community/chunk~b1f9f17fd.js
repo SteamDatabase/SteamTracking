@@ -210,6 +210,7 @@
         BaseGameCapsuleCtn: "_2-6Wb-jcDhA2q47xDhlmaW",
         FullGameArtwork: "_2lq4qsMNuYBtI0hh5wK6VC",
         FullGameHover: "i1RBc5zcl1zCwxImmCFzP",
+        ParentAppSortTabScrollCtn: "_3ZJYJAzp1luomqaZzJ4Ifu",
         ParentAppSortTabsCtn: "HLysWUZ0Q8nLoHhlMa7h-",
         ParentAppSortTabHeader: "_2UAG8-X-Z76-fX9WkTMuPD",
         ParentAppSortTab: "_3z9ZElmmyJ5rcYrhpaITCS",
@@ -16670,61 +16671,65 @@
           },
           n.createElement(
             "div",
-            { className: vl.ParentAppSortTabHeader },
-            (0, B.Xx)("#DLCForYou_SortTabs_Show"),
-          ),
-          (null ===
-            (a =
-              null === (t = null == l ? void 0 : l.dlc_for_you_data) ||
-              void 0 === t
-                ? void 0
-                : t.parent_app_sorts) || void 0 === a
-            ? void 0
-            : a.length) > 0
-            ? n.createElement(
-                n.Fragment,
-                null,
-                l.dlc_for_you_data.parent_app_sorts.map((e) =>
+            { className: vl.ParentAppSortTabScrollCtn },
+            n.createElement(
+              "div",
+              { className: vl.ParentAppSortTabHeader },
+              (0, B.Xx)("#DLCForYou_SortTabs_Show"),
+            ),
+            (null ===
+              (a =
+                null === (t = null == l ? void 0 : l.dlc_for_you_data) ||
+                void 0 === t
+                  ? void 0
+                  : t.parent_app_sorts) || void 0 === a
+              ? void 0
+              : a.length) > 0
+              ? n.createElement(
+                  n.Fragment,
+                  null,
+                  l.dlc_for_you_data.parent_app_sorts.map((e) =>
+                    n.createElement(
+                      K.Ks,
+                      {
+                        key: e.value,
+                        className: (0, G.Z)({
+                          [vl.ParentAppSortTab]: !0,
+                          [vl.ParentAppSortTabActive]: o === e.value,
+                        }),
+                        onClick: () => r && r(e.value),
+                      },
+                      (0, B.Xx)(c.get(e.value)),
+                    ),
+                  ),
+                )
+              : n.createElement(
+                  n.Fragment,
+                  null,
                   n.createElement(
                     K.Ks,
                     {
-                      key: e.value,
                       className: (0, G.Z)({
                         [vl.ParentAppSortTab]: !0,
-                        [vl.ParentAppSortTabActive]: o === e.value,
+                        [vl.ParentAppSortTabActive]: "last_played" === o,
                       }),
-                      onClick: () => r && r(e.value),
+                      onClick: () => r && r("last_played"),
                     },
-                    (0, B.Xx)(c.get(e.value)),
+                    (0, B.Xx)("#DLCForYou_SortTabs_LastPlayed"),
+                  ),
+                  n.createElement(
+                    K.Ks,
+                    {
+                      className: (0, G.Z)({
+                        [vl.ParentAppSortTab]: !0,
+                        [vl.ParentAppSortTabActive]: "playtime" === o,
+                      }),
+                      onClick: () => r && r("playtime"),
+                    },
+                    (0, B.Xx)("#DLCForYou_SortTabs_MostPlayed"),
                   ),
                 ),
-              )
-            : n.createElement(
-                n.Fragment,
-                null,
-                n.createElement(
-                  K.Ks,
-                  {
-                    className: (0, G.Z)({
-                      [vl.ParentAppSortTab]: !0,
-                      [vl.ParentAppSortTabActive]: "last_played" === o,
-                    }),
-                    onClick: () => r && r("last_played"),
-                  },
-                  (0, B.Xx)("#DLCForYou_SortTabs_LastPlayed"),
-                ),
-                n.createElement(
-                  K.Ks,
-                  {
-                    className: (0, G.Z)({
-                      [vl.ParentAppSortTab]: !0,
-                      [vl.ParentAppSortTabActive]: "playtime" === o,
-                    }),
-                    onClick: () => r && r("playtime"),
-                  },
-                  (0, B.Xx)("#DLCForYou_SortTabs_MostPlayed"),
-                ),
-              ),
+          ),
         );
       }
       var Cl = a(83143),
@@ -19292,7 +19297,7 @@
       var n = a(31846);
       function i(e) {
         return (0, n.Xx)(
-          "#Cart_ShippingEstimate_Range",
+          "#Hardware_ShippingEstimate_Range",
           e.estimated_delivery_soonest_business_days,
           e.estimated_delivery_latest_business_days,
         );

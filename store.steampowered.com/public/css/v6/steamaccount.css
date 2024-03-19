@@ -846,7 +846,7 @@ body.v6 h2.pageheader.youraccount_pageheader {
 	margin-top: 0;
 	margin-bottom: 0;
 	font-weight: 700;
-	text-transform: capitalize;
+	text-transform: none;
 }
 
 .youraccount_steamid {

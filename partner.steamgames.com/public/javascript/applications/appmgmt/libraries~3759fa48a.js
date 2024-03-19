@@ -462,6 +462,7 @@
                   best_purchase_option: { n: 40, c: z },
                   purchase_options: { n: 41, c: z, r: !0, q: !0 },
                   accessories: { n: 42, c: z, r: !0, q: !0 },
+                  self_purchase_option: { n: 43, c: z },
                   screenshots: { n: 50, c: S },
                   trailers: { n: 51, c: W },
                   supported_languages: { n: 52, c: X, r: !0, q: !0 },

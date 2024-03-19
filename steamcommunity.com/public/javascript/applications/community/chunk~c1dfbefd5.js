@@ -2176,28 +2176,24 @@
         return l(e, 1, t, s);
       }
       function d(e, t, s) {
-        const [r, n] = l(e, t, s),
-          [o, c] = (0, a.useState)(null),
-          [d, _] = u(o, s);
+        const [r, i] = l(e, t, s),
+          [n, o] = (0, a.useState)(null),
+          [c, d] = u(n, s);
         return (
           (0, a.useEffect)(() => {
             var e;
-            const t = i().CancelToken.source();
             if (
               1 == (null == r ? void 0 : r.GetStoreItemType()) &&
+              !(null === (e = r.GetAssets()) || void 0 === e
+                ? void 0
+                : e.GetHeaderURL()) &&
               1 == (null == r ? void 0 : r.GetIncludedAppIDs().length)
             ) {
-              const s = r.GetIncludedAppIDs()[0];
-              o != s &&
-                ((null === (e = null == t ? void 0 : t.token) || void 0 === e
-                  ? void 0
-                  : e.reason) ||
-                  c(s));
+              const e = r.GetIncludedAppIDs()[0];
+              o(e);
             }
-            return () =>
-              t.cancel("useStoreItemCacheOrPackageSingleApp: unmounting");
-          }, [o, r]),
-          o ? [d, _] : [r, n]
+          }, [r]),
+          n && (null == c ? void 0 : c.BIsVisible()) ? [c, d] : [r, i]
         );
       }
       function _(e, t, s, r) {

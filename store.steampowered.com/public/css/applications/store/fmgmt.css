@@ -1618,6 +1618,9 @@ a:hover {
   display: flex;
   justify-content: center;
 }
+._3fKMV_g7GIfskW_oGQqbaD {
+  color: #de3618;
+}
 .cel2PdHKDqwG7grx5a6sY {
   position: relative;
   height: 100%;
@@ -2074,7 +2077,7 @@ td.rdtYear:hover {
   flex-direction: row;
   background-color: #0e141b;
   padding: 12px;
-  padding-left: 4px;
+  padding-left: 14px;
   cursor: pointer;
 }
 ._37RhGmL2y7OEHIbTvldv-2 ._1vwoIEn92Lj8rkCnAsZInK {
@@ -2137,6 +2140,12 @@ td.rdtYear:hover {
   transform: translate(0%, 32px);
   font-size: 8px;
   text-wrap: nowrap;
+}
+@media screen and (max-width: 500px) {
+  ._1vwoIEn92Lj8rkCnAsZInK > div .zaoHrBgKPKb_8Q_YRESk5,
+  ._1vwoIEn92Lj8rkCnAsZInK .OX7BJg-jEVTFZj9J7KJxS .zaoHrBgKPKb_8Q_YRESk5 {
+    display: none;
+  }
 }
 ._1kxEvVLftK9NWs_-7SKLLe {
   font-size: 12px;

@@ -674,6 +674,7 @@ a.commentthread_allcommentslink:hover {
 
 .commentthread_entry_error {
 	color: #ff0000;
+	padding-top: 6px;
 }
 
 .commentthread_textarea::-webkit-input-placeholder{
@@ -688,6 +689,7 @@ a.commentthread_allcommentslink:hover {
 
 .commentthread_comment_container {
 	margin-top: 19px;
+	padding: 10px;
 }
 
 .commentthread_comment {
@@ -771,7 +773,7 @@ a.commentthread_allcommentslink:hover {
 }
 
 .commentthread_comment_timestamp {
-	font-size: 11px;
+	font-size: 13px;
 	color: #56707f;
 	margin-left: 4px;
 }

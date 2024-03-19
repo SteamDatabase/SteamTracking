@@ -2520,7 +2520,6 @@ https://partner.steamgames.com/pub/ajaxselectvalvecontactsdialog
 https://partner.steamgames.com/pub/ajaxvalvecontactchange/${publisherID}/
 https://partner.steamgames.com/public/captcha.php?gid=${gid}
 https://partner.steamgames.com/public/marketing/steam_game_templates_2023.zip
-https://partner.steamgames.com/public/marketing/steam_sale_page_templates.zip?v=2
 https://partner.steamgames.com/store/ajaxcreatebetapackagefrompackage/${nPackageId}
 https://partner.steamgames.com/store/ajaxpackageaddapps/${nPackageId}
 https://partner.steamgames.com/store/ajaxpackagemanagedepots/${nPackageId}
@@ -3006,6 +3005,7 @@ https://www.dota2.com/primalbeast
 https://www.dota2.com/risinggale
 https://www.dota2.com/theonetrueking
 https://www.dropbox.com/s/h9gjz...
+https://www.dropbox.com/scl/fo/mhf604o6bdbcfr1scq7bx/h?rlkey=s6y8eoaa68dd3qalx1x4itqsu&dl=0
 https://www.example.com
 https://www.facebook.com/Steam/videos
 https://www.facebook.com/dota2/

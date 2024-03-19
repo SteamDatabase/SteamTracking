@@ -1081,6 +1081,11 @@
                     br: O.FE.readInt32,
                     bw: O.Xc.writeInt32,
                   },
+                  playtime_deck_forever: {
+                    n: 16,
+                    br: O.FE.readInt32,
+                    bw: O.Xc.writeInt32,
+                  },
                   first_windows_playtime: {
                     n: 9,
                     br: O.FE.readUint32,
@@ -1096,6 +1101,11 @@
                     br: O.FE.readUint32,
                     bw: O.Xc.writeUint32,
                   },
+                  first_deck_playtime: {
+                    n: 17,
+                    br: O.FE.readUint32,
+                    bw: O.Xc.writeUint32,
+                  },
                   last_windows_playtime: {
                     n: 12,
                     br: O.FE.readUint32,
@@ -1108,6 +1118,11 @@
                   },
                   last_linux_playtime: {
                     n: 14,
+                    br: O.FE.readUint32,
+                    bw: O.Xc.writeUint32,
+                  },
+                  last_deck_playtime: {
+                    n: 18,
                     br: O.FE.readUint32,
                     bw: O.Xc.writeUint32,
                   },
@@ -1950,6 +1965,11 @@
                   },
                   playtime_linux_forever: {
                     n: 10,
+                    br: O.FE.readInt32,
+                    bw: O.Xc.writeInt32,
+                  },
+                  playtime_deck_forever: {
+                    n: 20,
                     br: O.FE.readInt32,
                     bw: O.Xc.writeInt32,
                   },

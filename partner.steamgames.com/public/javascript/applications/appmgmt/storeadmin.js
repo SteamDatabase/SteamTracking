@@ -641,7 +641,7 @@
     62043: (e, r, t) => {
       "use strict";
       t.d(r, { M: () => c, V: () => l });
-      var n = t(37341),
+      var n = t(82756),
         a = t(47427);
       class o {
         GetMap() {
@@ -2795,7 +2795,7 @@
         return o.createElement("div", { className: "profile_colors_ctn" }, t);
       }
       var be = t(9781),
-        De = t(37341);
+        De = t(82756);
       function Re() {
         const [e, r] = (0, o.useState)(() =>
           (function () {

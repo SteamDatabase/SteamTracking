@@ -3260,7 +3260,18 @@
           if (!this.m_unCurrentAccountID || !this.m_bSaveRequired) return;
           let e = this.GetLocalStorageKey(),
             t = JSON.stringify(Array.from(this.m_mapRestoreDetails));
-          window.localStorage.setItem(e, t), (this.m_bSaveRequired = !1);
+          try {
+            window.localStorage.setItem(e, t), (this.m_bSaveRequired = !1);
+          } catch (n) {
+            if ("QuotaExceededError" == n.name) {
+              console.log("Quota exceeded");
+              for (let t of Object.keys(window.localStorage))
+                t.startsWith("PopupSavedDimensions_") &&
+                  t != e &&
+                  window.localStorage.removeItem(t);
+              window.localStorage.setItem(e, t), (this.m_bSaveRequired = !1);
+            }
+          }
         }
         DebouncedSaveSavedDimensionStore() {
           this.SaveSavedDimensionStore();
@@ -7686,7 +7697,7 @@
     },
     77581: (e, t, n) => {
       "use strict";
-      n.d(t, { J: () => g });
+      n.d(t, { J: () => v });
       var o = n(85556),
         i = n(50060),
         r = n(10059),
@@ -7716,10 +7727,12 @@
       function p(e) {
         return e ? e.body.exp : 0;
       }
-      class g {
+      var g = n(46009);
+      class v {
         constructor(e, t, n = !1, o) {
           (this.m_webApiAccessToken = ""),
             (this.m_bJsonMode = !1),
+            (this.m_strSpoofedSteamID = ""),
             (this.m_bJWTToken = !1),
             (this.m_dtLastExpireCheck = 0),
             (this.m_strWebAPIBaseURL = e),
@@ -7745,6 +7758,8 @@
               }),
               MakeReady: this.MakeReady.bind(this),
             });
+          const i = (0, g.bG)("steamLoginSpoofSteamID");
+          i && /[0-9]+/g.test(i) && (this.m_strSpoofedSteamID = i);
         }
         WaitUntilLoggedOn() {
           return Promise.resolve();
@@ -7879,7 +7894,8 @@
             this.m_webApiAccessToken &&
               e.bSendAuth &&
               !u &&
-              (d.params.access_token = this.m_webApiAccessToken),
+              ((d.params.access_token = this.m_webApiAccessToken),
+              (d.params.spoof_steamid = this.m_strSpoofedSteamID)),
             null == o ? void 0 : o.bConstMethod)
           )
             return (
@@ -7915,9 +7931,9 @@
           );
         }
       }
-      (0, o.gn)([a.a], g.prototype, "SendMsgAndAwaitResponse", null),
-        (0, o.gn)([a.a], g.prototype, "SendNotification", null),
-        (0, o.gn)([a.a], g.prototype, "Send", null);
+      (0, o.gn)([a.a], v.prototype, "SendMsgAndAwaitResponse", null),
+        (0, o.gn)([a.a], v.prototype, "SendNotification", null),
+        (0, o.gn)([a.a], v.prototype, "Send", null);
     },
     22520: (e, t, n) => {
       "use strict";
@@ -23026,6 +23042,7 @@
     34345: (e, t, n) => {
       "use strict";
       n(80751), n(33557);
+      new Map();
     },
     31846: (e, t, n) => {
       "use strict";
@@ -25221,37 +25238,17 @@
     },
     41003: (e, t, n) => {
       "use strict";
-      function o() {
-        var e;
-        const t =
-          null ===
-            (e = (function () {
-              const e = navigator.userAgent.match(
-                /Valve (?<family>Steam (?:Client|GameOverlay|Tenfoot|ClientUI|Gamepad(?: VR)?(?:\/Steam Deck)?))( \[(?<betaid>[^\]]*)\])?(\/(?<launcher>[A-Za-z0-9_]+))?\/(?<version>[0-9]*)/,
-              );
-              return e ? e.groups : void 0;
-            })()) || void 0 === e
-            ? void 0
-            : e.betaid;
-        return (
-          t &&
-          ("Steam Main Client" == t ||
-            "Steam Beta Update" == t ||
-            "Steam Deck Beta" == t ||
-            "Steam Deck Main" == t)
-        );
-      }
-      n.d(t, { M4: () => o, RY: () => u, g3: () => d });
-      let i = !1,
+      n.d(t, { RY: () => c, g3: () => u });
+      let o = !1,
+        i = !1,
         r = !1,
         s = !1,
         a = !1,
-        l = !1,
-        c = !1;
-      function u() {
-        return i || m(), c;
+        l = !1;
+      function c() {
+        return o || h(), l;
       }
-      function d() {
+      function u() {
         if (
           !(null === navigator || void 0 === navigator
             ? void 0
@@ -25261,7 +25258,7 @@
         const e = navigator.userAgent.match(/Valve Steam ([^\/]*)\//);
         return e && 2 == e.length ? e[1] : void 0;
       }
-      function h(e, t) {
+      function d(e, t) {
         return (
           !!window.location.href.match("[?&]" + t + "=") ||
           !(
@@ -25271,18 +25268,18 @@
           )
         );
       }
-      function m() {
-        (a = h("Valve Steam Tenfoot", "force_tenfoot_client_view")),
-          (s = h("Valve Steam GameOverlay", "force_overlay_view")),
-          (r = a || h("Valve Steam Client", "force_client_view")),
-          (c =
-            h("iphone", "force_ios_view") ||
-            h("ipad", "force_ios_view") ||
-            h("ipod", "force_ios_view") ||
-            (h("macintosh", "force_ios_view") &&
-              h("safari", "force_ios_view"))),
-          (l = h("android", "force_android_view")),
-          (i = !0);
+      function h() {
+        (s = d("Valve Steam Tenfoot", "force_tenfoot_client_view")),
+          (r = d("Valve Steam GameOverlay", "force_overlay_view")),
+          (i = s || d("Valve Steam Client", "force_client_view")),
+          (l =
+            d("iphone", "force_ios_view") ||
+            d("ipad", "force_ios_view") ||
+            d("ipod", "force_ios_view") ||
+            (d("macintosh", "force_ios_view") &&
+              d("safari", "force_ios_view"))),
+          (a = d("android", "force_android_view")),
+          (o = !0);
       }
     },
     9740: (e, t, n) => {

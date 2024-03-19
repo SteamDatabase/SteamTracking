@@ -2575,6 +2575,28 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:nth-c
 
 .profile_comment_area {
 	margin-top: 84px;
+	backdrop-filter: blur(20px);
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
+	padding: 8px 10px;
+	border-radius: 3px;
+}
+
+.commentthread_area {
+	border-radius: 5px;
+	overflow: hidden;
+}
+
+.commentthread_entry_error {
+	color: #ff5454;
+}
+
+.commentthread_comment_text {
+	color: #ffffff;
+}
+
+.commentthread_comment_timestamp {
+	color: rgba(255,255,255,0.5);
 }
 
 .profile_count_link {
@@ -2904,8 +2926,6 @@ body.migrated_profile_page #BG_bottom.maincontent {
 	padding: 6px 10px;
 	line-height: 26px;
 	border-radius: 3px;
-	backdrop-filter: blur(20px);
-	background-color: rgba( 0, 0, 0, 0.3 );
 }
 
 .profile_leftcol_header h2 {
@@ -2935,7 +2955,7 @@ body.migrated_profile_page #BG_bottom.maincontent {
 }
 
 .profile_comment_area .commentthread_entry {
-	background-color: transparent;
+	/* background-color: transparent; */
 }
 
 .profile_comment_area .commentthread_entry_quotebox_quote {
@@ -2943,25 +2963,34 @@ body.migrated_profile_page #BG_bottom.maincontent {
 }
 
 .profile_comment_area .commentthread_entry_quotebox {
-	border: 1px solid rgba(0, 0, 0, 0.3);
+	border: 1px solid rgba(255, 255, 255, 0.12);
 	border-radius: 3px;
-	background-color: rgba(0, 0, 0, 0.5);
+	background-color: rgba(255, 255, 255, 0.1);
 
 	box-shadow: 1px 1px 1px rgba(255, 255, 255, .1);
 	/*-webkit-box-shadow: inset 0 0 5px #202020;*/
 }
 
 .profile_comment_area .commentthread_comment_container {
-	border-bottom: 1px solid #000000;
+	margin-top: 9px;
+	background: var(--gradient-background);
+	border-radius: 5px;
 }
 
 .profile_comment_area .commentthread_textarea {
-	/*background-color: rgba(0, 0, 0, 0.2);*/
+	color: #ffffff;
+}
+
+.commentthread_textarea::-webkit-input-placeholder {
+	color: rgba(255,255,255,0.5);
 }
 
 .profile_comment_area .commentthread_footer {
-	padding-top: 6px;
-	border-top: 1px solid rgba(255, 255, 255, .1);
+	padding-top: 15px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-top: none;
 }
 
 .profile_comment_area .pagebtn {
@@ -2975,11 +3004,15 @@ body.migrated_profile_page #BG_bottom.maincontent {
     width: 12px;
     vertical-align: middle;
     border: 1px solid rgba(255, 255, 255, .1);
-    border-top-color: #070a0f;
-    border-left-color: #070a0f;
+    border-top-color: rgba(255, 255, 255, 0.2);
+    border-left-color: rgba(255, 255, 255, 0.2);
     border-top-right-radius: 1px;
     border-bottom-left-radius: 1px;
-    background: rgba( 0, 0, 0, 0.2 );
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.commentthread_subscribe_ctn {
+	font-weight: 400;
 }
 
 .profile_background_holder {

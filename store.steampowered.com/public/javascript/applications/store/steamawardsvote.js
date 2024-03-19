@@ -400,7 +400,7 @@
     },
     64936: (e, t, n) => {
       "use strict";
-      n.d(t, { JW: () => c, kl: () => j, rw: () => v, zD: () => m });
+      n.d(t, { JW: () => c, kl: () => j, rw: () => m, zD: () => v });
       var s = n(85556),
         r = n(54842),
         i = n(37485),
@@ -467,23 +467,24 @@
         var e;
         return null !== (e = c.nOverrideDateNow) && void 0 !== e ? e : _;
       }
-      function m() {
+      function v() {
         return l.useMemo(() => j(), []);
       }
-      function v() {
+      function m() {
         return l.useMemo(() => c.GetTimeNowWithOverrideAsDate(), []);
       }
     },
     80886: (e, t, n) => {
       "use strict";
       n.d(t, {
-        Vm: () => d,
+        Vm: () => _,
         dY: () => m,
-        ie: () => c,
+        ie: () => d,
         jk: () => a,
-        oA: () => v,
+        oA: () => f,
         vs: () => u,
-        wZ: () => j,
+        wZ: () => v,
+        yo: () => c,
       });
       var s = n(80751),
         r = n.n(s),
@@ -498,8 +499,8 @@
         const [d, _] = (0, i.useState)(void 0),
           {
             include_assets: j,
-            include_release: m,
-            include_platforms: v,
+            include_release: v,
+            include_platforms: m,
             include_all_purchase_options: f,
             include_screenshots: h,
             include_trailers: p,
@@ -517,8 +518,8 @@
           ((0, i.useEffect)(() => {
             const n = {
               include_assets: j,
-              include_release: m,
-              include_platforms: v,
+              include_release: v,
+              include_platforms: m,
               include_all_purchase_options: f,
               include_screenshots: h,
               include_trailers: p,
@@ -550,7 +551,7 @@
               () =>
                 null == i ? void 0 : i.cancel("useStoreItemCache: unmounting")
             );
-          }, [e, t, s, d, j, m, v, f, h, p, g, E, w, b, k, S, D, y, C, c]),
+          }, [e, t, s, d, j, v, m, f, h, p, g, E, w, b, k, S, D, y, C, c]),
           !e)
         )
           return [null, 2];
@@ -564,9 +565,12 @@
         return a(e, 0, t, n);
       }
       function c(e, t, n) {
-        return a(e, 1, t, n);
+        return a(e, 2, t, n);
       }
       function d(e, t, n) {
+        return a(e, 1, t, n);
+      }
+      function _(e, t, n) {
         const [s, r] = a(e, t, n),
           [o, l] = (0, i.useState)(null),
           [c, d] = u(o, n);
@@ -584,10 +588,10 @@
               l(e);
             }
           }, [s]),
-          o ? [c, d] : [s, r]
+          o && (null == c ? void 0 : c.BIsVisible()) ? [c, d] : [s, r]
         );
       }
-      function _(e, t, n, s) {
+      function j(e, t, n, s) {
         const a = (0, o.NW)(),
           {
             include_assets: u,
@@ -595,8 +599,8 @@
             include_platforms: d,
             include_all_purchase_options: _,
             include_screenshots: j,
-            include_trailers: m,
-            include_ratings: v,
+            include_trailers: v,
+            include_ratings: m,
             include_tag_count: f,
             include_reviews: h,
             include_basic_info: p,
@@ -615,8 +619,8 @@
                 include_platforms: d,
                 include_all_purchase_options: _,
                 include_screenshots: j,
-                include_trailers: m,
-                include_ratings: v,
+                include_trailers: v,
+                include_ratings: m,
                 include_tag_count: f,
                 include_reviews: h,
                 include_basic_info: p,
@@ -642,7 +646,7 @@
               }),
               () => i.cancel("useStoreItemCacheMultiplePackages: unmounting")
             );
-          }, [e, t, s, a, u, c, d, _, j, m, v, f, h, p, g, E, w, b, k]),
+          }, [e, t, s, a, u, c, d, _, j, v, m, f, h, p, g, E, w, b, k]),
           !e)
         )
           return 2;
@@ -660,13 +664,13 @@
           ? 3
           : 2;
       }
-      function j(e, t, n) {
-        return _(e, 0, t, n);
+      function v(e, t, n) {
+        return j(e, 0, t, n);
       }
       function m(e, t, n) {
-        return _(e, 1, t, n);
+        return j(e, 1, t, n);
       }
-      function v() {
+      function f() {
         i.useEffect(
           () => (
             l.Z.Get().SetReturnUnavailableItems(!0),
@@ -710,7 +714,7 @@
     },
     80212: (e, t, n) => {
       "use strict";
-      n.d(t, { Xt: () => j, _I: () => m, hx: () => _ });
+      n.d(t, { Xt: () => j, _I: () => v, hx: () => _ });
       var s = n(47427),
         r = n(90069),
         i = n(31846),
@@ -723,7 +727,7 @@
         return s.createElement(
           r.e1,
           { onEscKeypress: e.closeModal, bDisableBackgroundDismiss: !0 },
-          s.createElement(v, { redirectURL: e.redirectURL }),
+          s.createElement(m, { redirectURL: e.redirectURL }),
         );
       }
       function _(e) {
@@ -744,14 +748,14 @@
           { strTitle: (0, i.Xx)("#Login_SignIn") },
         );
       }
-      function m(e) {
+      function v(e) {
         (0, r.AM)(
           s.createElement(d, { ownerWin: window, redirectURL: e }),
           window,
           { strTitle: (0, i.Xx)("#Login_SignIn") },
         );
       }
-      function v(e) {
+      function m(e) {
         const { redirectURL: t } = e,
           [n] = (0, s.useState)(
             new a.J(o.De.WEBAPI_BASE_URL).GetAnonymousServiceTransport(),

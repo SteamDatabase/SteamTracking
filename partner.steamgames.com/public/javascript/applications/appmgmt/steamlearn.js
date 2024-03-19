@@ -4623,6 +4623,10 @@
                           return "ELU";
                         case 3:
                           return "TANH";
+                        case 4:
+                          return "SIGMOID";
+                        case 5:
+                          return "LINEAR";
                       }
                       return "";
                     })(t.dense().activation()),
@@ -4674,6 +4678,12 @@
                 "#SteamLearn_Config_Node_Train_Activation_SIGMOID",
               ),
               value: 4,
+            },
+            {
+              label: (0, c.Xx)(
+                "#SteamLearn_Config_Node_Train_Activation_LINEAR",
+              ),
+              value: 5,
             },
           ];
           return o.createElement(
