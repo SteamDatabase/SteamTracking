@@ -376,59 +376,55 @@
                 ));
               return P;
             })(t).load(e);
-            return a
-              ? (function (e, t) {
-                  var a, r, i, n, s, o, _;
-                  let m = new u.Pv(e);
-                  const d = null == t ? void 0 : t.public_data,
-                    c = null == t ? void 0 : t.private_data;
-                  (m.m_bInitialized = !0),
-                    (m.m_ePersonaState =
-                      null !== (a = null == c ? void 0 : c.persona_state) &&
-                      void 0 !== a
-                        ? a
-                        : 0),
-                    (m.m_strAvatarHash = (
-                      null == d ? void 0 : d.sha_digest_avatar
-                    )
-                      ? (0, l.BH)(d.sha_digest_avatar)
-                      : u.WV),
-                    (m.m_strPlayerName =
-                      null !== (r = null == d ? void 0 : d.persona_name) &&
-                      void 0 !== r
-                        ? r
-                        : e.ConvertTo64BitString()),
-                    (m.m_strAccountName = null == c ? void 0 : c.account_name),
-                    (null == c ? void 0 : c.persona_state_flags) &&
-                      (m.m_unPersonaStateFlags =
-                        null === (i = t.private_data) || void 0 === i
-                          ? void 0
-                          : i.persona_state_flags);
-                  (null == c ? void 0 : c.game_id) &&
-                    (m.m_gameid =
-                      null === (n = t.private_data) || void 0 === n
-                        ? void 0
-                        : n.game_id);
-                  (null == c ? void 0 : c.game_server_ip_address) &&
-                    (m.m_unGameServerIP =
-                      null === (s = t.private_data) || void 0 === s
-                        ? void 0
-                        : s.game_server_ip_address);
-                  (null == c ? void 0 : c.lobby_steam_id) &&
-                    (m.m_game_lobby_id =
-                      null === (o = t.private_data) || void 0 === o
-                        ? void 0
-                        : o.lobby_steam_id);
-                  (null == c ? void 0 : c.game_extra_info) &&
-                    (m.m_strGameExtraInfo =
-                      null === (_ = t.private_data) || void 0 === _
-                        ? void 0
-                        : _.game_extra_info);
-                  (null == d ? void 0 : d.profile_url) &&
-                    (m.m_strProfileURL = d.profile_url);
-                  return m;
-                })(d.K.InitFromAccountID(e), a)
-              : null;
+            return (function (e, t) {
+              var a, r, i, n, s, o, _;
+              let m = new u.Pv(e);
+              const d = null == t ? void 0 : t.public_data,
+                c = null == t ? void 0 : t.private_data;
+              (m.m_bInitialized = !0),
+                (m.m_ePersonaState =
+                  null !== (a = null == c ? void 0 : c.persona_state) &&
+                  void 0 !== a
+                    ? a
+                    : 0),
+                (m.m_strAvatarHash = (null == d ? void 0 : d.sha_digest_avatar)
+                  ? (0, l.BH)(d.sha_digest_avatar)
+                  : u.WV),
+                (m.m_strPlayerName =
+                  null !== (r = null == d ? void 0 : d.persona_name) &&
+                  void 0 !== r
+                    ? r
+                    : e.ConvertTo64BitString()),
+                (m.m_strAccountName = null == c ? void 0 : c.account_name),
+                (null == c ? void 0 : c.persona_state_flags) &&
+                  (m.m_unPersonaStateFlags =
+                    null === (i = t.private_data) || void 0 === i
+                      ? void 0
+                      : i.persona_state_flags);
+              (null == c ? void 0 : c.game_id) &&
+                (m.m_gameid =
+                  null === (n = t.private_data) || void 0 === n
+                    ? void 0
+                    : n.game_id);
+              (null == c ? void 0 : c.game_server_ip_address) &&
+                (m.m_unGameServerIP =
+                  null === (s = t.private_data) || void 0 === s
+                    ? void 0
+                    : s.game_server_ip_address);
+              (null == c ? void 0 : c.lobby_steam_id) &&
+                (m.m_game_lobby_id =
+                  null === (o = t.private_data) || void 0 === o
+                    ? void 0
+                    : o.lobby_steam_id);
+              (null == c ? void 0 : c.game_extra_info) &&
+                (m.m_strGameExtraInfo =
+                  null === (_ = t.private_data) || void 0 === _
+                    ? void 0
+                    : _.game_extra_info);
+              (null == d ? void 0 : d.profile_url) &&
+                (m.m_strProfileURL = d.profile_url);
+              return m;
+            })(d.K.InitFromAccountID(e), a);
           }),
       });
       function v() {

@@ -224,8 +224,8 @@
               bHideStatus: b,
               renderStatus: f,
               renderRichPresence: C,
-              bHidePersona: I,
-              bDNDSet: y,
+              bHidePersona: y,
+              bDNDSet: I,
               bHasPartyBeacon: _,
               bHasGamePrivacy: D,
               bNoMask: k,
@@ -270,7 +270,7 @@
                     !s.is_in_nonsteam_game || A || (0, o.my)(m)
                       ? s.GetCurrentGameName()
                       : (0, i.Xx)("#PersonaStateInNonSteamGame")),
-                  A || I
+                  A || y
                     ? A &&
                       s.is_awayOrSnooze &&
                       (T = (0, i.Xx)("#PersonaStateAway"))
@@ -279,7 +279,7 @@
                   (H = (0, i.Xx)("#PersonaStateWatchingBroadcast")),
             H || (H = s.GetLocalizedOnlineStatus()),
             f && (H = f());
-          let R = !I && !P;
+          let R = !y && !P;
           !1 === P && (R = !0),
             s.is_awayOrSnooze && R && (Z = r.createElement(u, { persona: s }));
           let G = null;
@@ -290,7 +290,7 @@
                 r.createElement(p.$gZ, null),
               ))
             : M.push(v().noContextMenu),
-            I && M.push(v().hidePersona),
+            y && M.push(v().hidePersona),
             C && (T = C()),
             (!E && T) || M.push(v().twoLine);
           const U = !s.is_ingame && !b,
@@ -299,7 +299,7 @@
             L = (0, o.hz)(N.De.LAUNCHER_TYPE);
           let j = g && !d,
             J = j ? g : s.m_strPlayerName,
-            x = !I && (K || U) && w;
+            x = !y && (K || U) && w;
           return r.createElement(
             "div",
             Object.assign({}, F, {
@@ -323,7 +323,7 @@
                     ")",
                   ),
               ),
-              y &&
+              I &&
                 r.createElement(
                   "div",
                   {
@@ -355,7 +355,7 @@
                 ),
               G,
             ),
-            !I &&
+            !y &&
               r.createElement(
                 "div",
                 { className: v().richPresenceContainer },
@@ -700,7 +700,7 @@
                 p = new Map(e.map((e) => [e.accountid, e.nickname]));
               }
               const h = new Set(yield null != s ? s : Promise.resolve([]));
-              return Promise.all(
+              return (yield Promise.all(
                 i.map((e) =>
                   (0, n.mG)(this, void 0, void 0, function* () {
                     const t = new l.K(e).GetAccountID(),
@@ -712,7 +712,7 @@
                     );
                   }),
                 ),
-              );
+              )).filter((e) => !!e.persona);
             }),
           { staleTime: 12e4 },
         );

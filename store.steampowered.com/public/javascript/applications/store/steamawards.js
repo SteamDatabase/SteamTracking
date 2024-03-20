@@ -230,7 +230,7 @@
                 u = new Map(e.map((e) => [e.accountid, e.nickname]));
               }
               const v = new Set(yield null != s ? s : Promise.resolve([]));
-              return Promise.all(
+              return (yield Promise.all(
                 i.map((e) =>
                   (0, n.mG)(this, void 0, void 0, function* () {
                     const t = new o.K(e).GetAccountID(),
@@ -242,7 +242,7 @@
                     );
                   }),
                 ),
-              );
+              )).filter((e) => !!e.persona);
             }),
           { staleTime: 12e4 },
         );
