@@ -6751,6 +6751,7 @@
           e,
           null == t ? void 0 : t.bIncludeOwn,
           null == t ? void 0 : t.bIncludeExcluded,
+          null == t ? void 0 : t.bIncludeNonGames,
           null == t ? void 0 : t.for_account_id,
           n,
           i,
@@ -6764,12 +6765,13 @@
           {
             bIncludeOwn: g,
             bIncludeExcluded: f,
-            for_account_id: v,
+            bIncludeNonGames: v,
+            for_account_id: C,
           } = null != t ? t : {},
-          C = void 0 === t.enabled || t.enabled,
-          S = Y(e, t, r, d),
-          b = (e) => !(0, p.IL)(e.appid(), d, r, u);
-        return (0, o.useQuery)(S, {
+          S = void 0 === t.enabled || t.enabled,
+          b = Y(e, t, r, d),
+          w = (e) => !(0, p.IL)(e.appid(), d, r, u);
+        return (0, o.useQuery)(b, {
           queryFn: () =>
             (0, i.mG)(this, void 0, void 0, function* () {
               const t = s.gA.Init(c.Ai);
@@ -6778,9 +6780,10 @@
                 t.Body().set_include_own(g),
                 t.Body().set_include_excluded(f),
                 t.Body().set_language(m.De.LANGUAGE),
-                v)
+                t.Body().set_include_non_games(v),
+                C)
               ) {
-                const e = _.Kg.InitFromAccountID(v, m.De.EUNIVERSE);
+                const e = _.Kg.InitFromAccountID(C, m.De.EUNIVERSE);
                 t.Body().set_steamid(e.ConvertTo64BitString());
               }
               const n = yield c.s4.GetSharedLibraryApps(h, t);
@@ -6789,11 +6792,11 @@
                 n
                   .Body()
                   .apps()
-                  .filter(b)
+                  .filter(w)
                   .map((e) => e.toObject())
               );
             }),
-          enabled: !!r && C,
+          enabled: !!r && S,
           keepPreviousData: !0,
           select: t.select,
         });

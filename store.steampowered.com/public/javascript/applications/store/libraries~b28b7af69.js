@@ -45314,7 +45314,14 @@
             Z.sm_m ||
               (Z.sm_m = {
                 proto: Z,
-                fields: { apps: { n: 1, c: J, r: !0, q: !0 } },
+                fields: {
+                  apps: { n: 1, c: J, r: !0, q: !0 },
+                  owner_steamid: {
+                    n: 2,
+                    br: n.FE.readFixed64String,
+                    bw: n.Xc.writeFixed64String,
+                  },
+                },
               }),
             Z.sm_m
           );
@@ -45408,6 +45415,12 @@
                     n: 13,
                     br: n.FE.readUint32,
                     bw: n.Xc.writeUint32,
+                  },
+                  app_type: {
+                    n: 14,
+                    d: 1,
+                    br: n.FE.readEnum,
+                    bw: n.Xc.writeEnum,
                   },
                 },
               }),
