@@ -654,7 +654,7 @@
     },
     64936: (e, t, n) => {
       "use strict";
-      n.d(t, { F_: () => m, JW: () => d, kl: () => f, zD: () => _ });
+      n.d(t, { F_: () => m, JW: () => d, kl: () => f, zD: () => g });
       var r = n(85556),
         s = n(54842),
         a = n(37485),
@@ -744,7 +744,7 @@
         var e;
         return null !== (e = d.nOverrideDateNow) && void 0 !== e ? e : v;
       }
-      function _() {
+      function g() {
         return i.useMemo(() => f(), []);
       }
     },
@@ -765,8 +765,8 @@
       n(2041);
       function v(e) {
         const t = (0, c.bY)(),
-          n = o.useContext(_);
-        return (0, i.useQuery)(g(n, t, e));
+          n = o.useContext(g);
+        return (0, i.useQuery)(_(n, t, e));
       }
       function p(e) {
         const t = o.useRef(),
@@ -781,10 +781,10 @@
       }
       function f(e) {
         const t = (0, c.bY)(),
-          n = o.useContext(_);
-        return (0, i.useQueries)(e.map((e) => g(n, t, e)));
+          n = o.useContext(g);
+        return (0, i.useQueries)(e.map((e) => _(n, t, e)));
       }
-      const _ = o.createContext({
+      const g = o.createContext({
         loadPersonaState: (e, t) =>
           (0, r.mG)(void 0, void 0, void 0, function* () {
             if (null == e) return null;
@@ -881,7 +881,7 @@
               : null;
           }),
       });
-      function g(e, t, n) {
+      function _(e, t, n) {
         const r = "string" == typeof n ? new m.K(n).GetAccountID() : n;
         return {
           queryKey: ["PlayerSummary", r],
@@ -906,7 +906,10 @@
         return r.createElement(
           s.e1,
           { onEscKeypress: e.closeModal, bDisableBackgroundDismiss: !0 },
-          r.createElement(m, { redirectURL: e.redirectURL }),
+          r.createElement(m, {
+            redirectURL: e.redirectURL,
+            guestOption: e.guestOption,
+          }),
         );
       }
       function d() {
@@ -920,39 +923,43 @@
         );
       }
       function m(e) {
-        const { redirectURL: t } = e,
-          [n] = (0, r.useState)(
+        const { redirectURL: t, guestOption: n } = e,
+          [s] = (0, r.useState)(
             new l.J(o.De.WEBAPI_BASE_URL).GetAnonymousServiceTransport(),
           ),
-          [s, a] = (0, r.useState)(!1);
+          [a, u] = (0, r.useState)(!1);
         return r.createElement(
           "div",
           null,
-          s
+          a
             ? r.createElement(i.pT, null)
-            : r.createElement(i.wK, {
-                autoFocus: !0,
-                transport: n,
-                platform: 2,
-                onComplete: (e) => {
-                  e == c.TG.k_PrimaryDomainFail
-                    ? a(!0)
-                    : window.location.assign(t);
+            : r.createElement(
+                i.wK,
+                {
+                  autoFocus: !0,
+                  transport: s,
+                  platform: 2,
+                  onComplete: (e) => {
+                    e == c.TG.k_PrimaryDomainFail
+                      ? u(!0)
+                      : window.location.assign(t);
+                  },
+                  redirectUrl: t,
+                  theme: "modal",
                 },
-                redirectUrl: t,
-                theme: "modal",
-              }),
+                n && r.createElement(i.bU, { redirectURL: t }),
+              ),
         );
       }
     },
     24827: (e, t, n) => {
       "use strict";
       n.d(t, {
-        Ai: () => g,
+        Ai: () => _,
         H6: () => f,
         Kj: () => v,
         Sw: () => j,
-        Zg: () => _,
+        Zg: () => g,
         uv: () => E,
         w$: () => p,
       });
@@ -1033,7 +1040,7 @@
                 ),
               );
         }),
-        _ = (e) => {
+        g = (e) => {
           const t = s.createElement(
             "div",
             { className: e.stylesmodule.DateToolTip },
@@ -1054,7 +1061,7 @@
             e.children,
           );
         };
-      let g = class extends s.Component {
+      let _ = class extends s.Component {
         render() {
           const { startDateAndTime: e, endDateAndTime: t } = this.props,
             n = this.props.stylesmodule
@@ -1154,7 +1161,7 @@
           );
         }
       };
-      g = (0, r.gn)([i.Pi], g);
+      _ = (0, r.gn)([i.Pi], _);
       let E = class extends s.Component {
         render() {
           const {
@@ -1185,7 +1192,7 @@
               (0, o.$1)(e, l),
             );
           let h = s.createElement(
-            _,
+            g,
             { rtFullDate: e, stylesmodule: r },
             s.createElement(
               "div",
@@ -1202,7 +1209,7 @@
             (i < e &&
               e < i + c._H.PerWeek &&
               (h = s.createElement(
-                _,
+                g,
                 { rtFullDate: e, stylesmodule: r },
                 s.createElement(
                   "div",
@@ -1225,7 +1232,7 @@
           const v = e <= i && i <= t;
           v &&
             (h = s.createElement(
-              _,
+              g,
               { rtFullDate: e, className: r.ActiveEvent, stylesmodule: r },
               s.createElement(
                 "span",
@@ -1234,12 +1241,12 @@
               ),
             ));
           let f = null;
-          const g = v ? t - i : t - e;
-          if (g <= c._H.PerDay) {
+          const _ = v ? t - i : t - e;
+          if (_ <= c._H.PerDay) {
             const e = s.createElement(
               "div",
               { className: r.ShortDateAndTime },
-              (0, o.yW)(g, !0),
+              (0, o.yW)(_, !0),
             );
             f =
               t < i
@@ -1280,7 +1287,7 @@
               ),
             );
           }
-          const E = s.createElement(_, { rtFullDate: t, stylesmodule: r }, f);
+          const E = s.createElement(g, { rtFullDate: t, stylesmodule: r }, f);
           return s.createElement("div", { className: r.ShortDateRange }, h, E);
         }
       };

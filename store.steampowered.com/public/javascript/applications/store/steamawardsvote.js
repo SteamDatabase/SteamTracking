@@ -400,7 +400,7 @@
     },
     64936: (e, t, n) => {
       "use strict";
-      n.d(t, { JW: () => c, kl: () => j, rw: () => m, zD: () => v });
+      n.d(t, { JW: () => c, kl: () => j, rw: () => v, zD: () => m });
       var s = n(85556),
         r = n(54842),
         i = n(37485),
@@ -467,10 +467,10 @@
         var e;
         return null !== (e = c.nOverrideDateNow) && void 0 !== e ? e : _;
       }
-      function v() {
+      function m() {
         return l.useMemo(() => j(), []);
       }
-      function m() {
+      function v() {
         return l.useMemo(() => c.GetTimeNowWithOverrideAsDate(), []);
       }
     },
@@ -478,12 +478,12 @@
       "use strict";
       n.d(t, {
         Vm: () => _,
-        dY: () => m,
+        dY: () => v,
         ie: () => d,
         jk: () => a,
         oA: () => f,
         vs: () => u,
-        wZ: () => v,
+        wZ: () => m,
         yo: () => c,
       });
       var s = n(80751),
@@ -499,8 +499,8 @@
         const [d, _] = (0, i.useState)(void 0),
           {
             include_assets: j,
-            include_release: v,
-            include_platforms: m,
+            include_release: m,
+            include_platforms: v,
             include_all_purchase_options: f,
             include_screenshots: h,
             include_trailers: p,
@@ -518,8 +518,8 @@
           ((0, i.useEffect)(() => {
             const n = {
               include_assets: j,
-              include_release: v,
-              include_platforms: m,
+              include_release: m,
+              include_platforms: v,
               include_all_purchase_options: f,
               include_screenshots: h,
               include_trailers: p,
@@ -551,7 +551,7 @@
               () =>
                 null == i ? void 0 : i.cancel("useStoreItemCache: unmounting")
             );
-          }, [e, t, s, d, j, v, m, f, h, p, g, E, w, b, k, S, D, y, C, c]),
+          }, [e, t, s, d, j, m, v, f, h, p, g, E, w, b, k, S, D, y, C, c]),
           !e)
         )
           return [null, 2];
@@ -599,8 +599,8 @@
             include_platforms: d,
             include_all_purchase_options: _,
             include_screenshots: j,
-            include_trailers: v,
-            include_ratings: m,
+            include_trailers: m,
+            include_ratings: v,
             include_tag_count: f,
             include_reviews: h,
             include_basic_info: p,
@@ -619,8 +619,8 @@
                 include_platforms: d,
                 include_all_purchase_options: _,
                 include_screenshots: j,
-                include_trailers: v,
-                include_ratings: m,
+                include_trailers: m,
+                include_ratings: v,
                 include_tag_count: f,
                 include_reviews: h,
                 include_basic_info: p,
@@ -646,7 +646,7 @@
               }),
               () => i.cancel("useStoreItemCacheMultiplePackages: unmounting")
             );
-          }, [e, t, s, a, u, c, d, _, j, v, m, f, h, p, g, E, w, b, k]),
+          }, [e, t, s, a, u, c, d, _, j, m, v, f, h, p, g, E, w, b, k]),
           !e)
         )
           return 2;
@@ -664,10 +664,10 @@
           ? 3
           : 2;
       }
-      function v(e, t, n) {
+      function m(e, t, n) {
         return j(e, 0, t, n);
       }
-      function m(e, t, n) {
+      function v(e, t, n) {
         return j(e, 1, t, n);
       }
       function f() {
@@ -714,7 +714,7 @@
     },
     80212: (e, t, n) => {
       "use strict";
-      n.d(t, { Xt: () => j, _I: () => v, hx: () => _ });
+      n.d(t, { Xt: () => j, _I: () => m, hx: () => _ });
       var s = n(47427),
         r = n(90069),
         i = n(31846),
@@ -727,7 +727,10 @@
         return s.createElement(
           r.e1,
           { onEscKeypress: e.closeModal, bDisableBackgroundDismiss: !0 },
-          s.createElement(m, { redirectURL: e.redirectURL }),
+          s.createElement(v, {
+            redirectURL: e.redirectURL,
+            guestOption: e.guestOption,
+          }),
         );
       }
       function _(e) {
@@ -748,36 +751,44 @@
           { strTitle: (0, i.Xx)("#Login_SignIn") },
         );
       }
-      function v(e) {
+      function m(e, t) {
         (0, r.AM)(
-          s.createElement(d, { ownerWin: window, redirectURL: e }),
+          s.createElement(d, {
+            ownerWin: window,
+            redirectURL: e,
+            guestOption: t,
+          }),
           window,
           { strTitle: (0, i.Xx)("#Login_SignIn") },
         );
       }
-      function m(e) {
-        const { redirectURL: t } = e,
-          [n] = (0, s.useState)(
+      function v(e) {
+        const { redirectURL: t, guestOption: n } = e,
+          [r] = (0, s.useState)(
             new a.J(o.De.WEBAPI_BASE_URL).GetAnonymousServiceTransport(),
           ),
-          [r, i] = (0, s.useState)(!1);
+          [i, c] = (0, s.useState)(!1);
         return s.createElement(
           "div",
           null,
-          r
+          i
             ? s.createElement(l.pT, null)
-            : s.createElement(l.wK, {
-                autoFocus: !0,
-                transport: n,
-                platform: 2,
-                onComplete: (e) => {
-                  e == u.TG.k_PrimaryDomainFail
-                    ? i(!0)
-                    : window.location.assign(t);
+            : s.createElement(
+                l.wK,
+                {
+                  autoFocus: !0,
+                  transport: r,
+                  platform: 2,
+                  onComplete: (e) => {
+                    e == u.TG.k_PrimaryDomainFail
+                      ? c(!0)
+                      : window.location.assign(t);
+                  },
+                  redirectUrl: t,
+                  theme: "modal",
                 },
-                redirectUrl: t,
-                theme: "modal",
-              }),
+                n && s.createElement(l.bU, { redirectURL: t }),
+              ),
         );
       }
     },

@@ -9,34 +9,39 @@
     9084: (e, t, r) => {
       "use strict";
       r.r(t), r.d(t, { default: () => c });
-      var n = r(47427),
-        a = r(99327),
-        o = r(77581),
-        s = r(37563),
-        i = r(35791),
-        l = r(24125);
+      var n = r(24125),
+        a = r(47427),
+        o = r(99327),
+        s = r(77581),
+        i = r(37563),
+        l = r(35791);
       function c(e) {
-        const { redirectUrl: t = s.De.STORE_BASE_URL } = e,
-          [r] = (0, n.useState)(
-            new o.J(s.De.WEBAPI_BASE_URL).GetAnonymousServiceTransport(),
+        const { redirectUrl: t = i.De.STORE_BASE_URL } = e,
+          [r] = (0, a.useState)(
+            new s.J(i.De.WEBAPI_BASE_URL).GetAnonymousServiceTransport(),
           ),
-          [c, u] = (0, n.useState)(!1);
-        return n.createElement(
+          [c, u] = (0, a.useState)(!1),
+          m = e.guest;
+        return a.createElement(
           "div",
-          { className: l.LoginContainer },
+          { className: n.LoginContainer },
           c
-            ? n.createElement(a.pT, null)
-            : n.createElement(a.wK, {
-                autoFocus: !0,
-                transport: r,
-                platform: 2,
-                onComplete: (e) => {
-                  e == i.TG.k_PrimaryDomainFail
-                    ? u(!0)
-                    : window.location.assign(t);
+            ? a.createElement(o.pT, null)
+            : a.createElement(
+                o.wK,
+                {
+                  autoFocus: !0,
+                  transport: r,
+                  platform: 2,
+                  onComplete: (e) => {
+                    e == l.TG.k_PrimaryDomainFail
+                      ? u(!0)
+                      : window.location.assign(t);
+                  },
+                  redirectUrl: t,
                 },
-                redirectUrl: t,
-              }),
+                m && a.createElement(o.bU, { redirectURL: e.redirectUrl }),
+              ),
         );
       }
     },

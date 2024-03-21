@@ -9100,6 +9100,20 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
     flex-direction: column;
   }
 }
+.newlogindialog_Login_lat0M .newlogindialog_GuestContainer_3Sfbz {
+  display: flex;
+  flex-direction: row;
+}
+.newlogindialog_Login_lat0M .newlogindialog_GuestLayout_1r_sY {
+  margin-top: 5px;
+}
+.newlogindialog_Login_lat0M .newlogindialog_GuestText_2gE59 {
+  flex: 2;
+}
+.newlogindialog_Login_lat0M .newlogindialog_GuestLink_3zcmX {
+  display: flex;
+  flex: 2;
+}
 .newlogindialog_Login_lat0M .newlogindialog_QRSection_3wSeH {
   flex: 0;
   display: grid;
@@ -9398,6 +9412,31 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
 }
 .newlogindialog_Login_lat0M .newlogindialog_RefreshQuitButton_9Ig1o {
   width: 50%;
+}
+.newlogindialog_Login_lat0M .newlogindialog_GuestButton_3t6Qg {
+  position: relative;
+  background: #1a9fff;
+  border-radius: 2px;
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 10px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: inherit;
+  text-align: center;
+  cursor: pointer;
+}
+.newlogindialog_Login_lat0M .newlogindialog_GuestButton_3t6Qg:hover {
+  background: linear-gradient(90deg, #06bfff 30%, #2d73ff 100%);
+}
+.newlogindialog_Login_lat0M .newlogindialog_GuestButton_3t6Qg:active {
+  background: linear-gradient(90deg, #06bfff 50%, #2d73ff 100%);
+}
+.newlogindialog_Login_lat0M .newlogindialog_GuestButton_3t6Qg:focus {
+  outline: solid #06bfff;
+  outline-width: 1px;
 }
 .newlogindialog_Login_lat0M .newlogindialog_SubmitButton_DjSvC {
   position: relative;

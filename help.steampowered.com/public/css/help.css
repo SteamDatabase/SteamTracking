@@ -4634,3 +4634,15 @@ table {
 	width: 100%;
 	min-height: 800px;
 }
+
+.guest_validation_cont
+{
+	margin: auto;
+	display:block;
+	width: 50%;
+}
+
+.guest_email_input
+{
+	min-width: 345px;
+}

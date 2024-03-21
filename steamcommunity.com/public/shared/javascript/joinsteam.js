@@ -23,7 +23,8 @@ function StartCreationSession()
 			'captchagid' : $J('#captchagid').val(),
 			'captcha_text' : CaptchaText(),
 			'elang' : 0,
-			'init_id': $J( '#init_id' ).val()
+			'init_id': $J( '#init_id' ).val(),
+            'guest': g_bGuest
 		}
 	})
 	.fail( function() {
@@ -206,7 +207,35 @@ function EmailConfirmedVerified( rgResults )
 		$J( '.create_account_form_container' ).hide();
 		$J( '.joinsteam_existingaccount_ctn' ).show();
 
-		if ( rgResults.steam_china_account && !rgResults.pw_account && !rgResults.global_account )
+		if ( rgResults.guest )
+		{
+			$J.ajax( {
+				type: 'POST',
+				url: `https://login.steampowered.com/jwt/finalizelogin`,
+				data: {
+					'nonce': rgResults.guest_refresh,
+					'redir': GetRedir( rgResults )
+				},
+				crossDomain: true,
+				xhrFields: { withCredentials: true },
+			} )
+				.fail( function() {
+					ShowError( 'Your account creation request failed, please try again later.' );
+				})
+				.done( function( data )
+				{
+					if ( data && data.transfer_info )
+					{
+						TransferLogin( data );
+					}
+					else
+					{
+						// something went wrong, but the account should have been created - redirect
+						window.location = GetRedir( data );
+					}
+				});
+		}
+		else if ( rgResults.steam_china_account && !rgResults.pw_account && !rgResults.global_account )
 		{
 			$J( '#intro_china' ).show();
 		}
@@ -227,7 +256,14 @@ function EmailConfirmedVerified( rgResults )
 	}
 	else
 	{
-		window.location = g_strRedirectURL + ( g_strRedirectURL.indexOf( '?' ) > 0 ? '&' : '?' ) + 'creationid=' + g_creationSessionID;
+	    if ( g_bGuest )
+        {
+            ReallyCreateAccount();
+        }
+	    else
+        {
+            window.location = g_strRedirectURL + ( g_strRedirectURL.indexOf( '?' ) > 0 ? '&' : '?' ) + 'creationid=' + g_creationSessionID;
+        }
 	}
 }
 
@@ -251,7 +287,7 @@ function CreateAccount()
 		return;
 	}
 
-	FinishFormVerification(true);
+	FinishFormVerification();
 }
 
 
@@ -260,7 +296,7 @@ function CompleteCreateAccount()
 	return AccountPasswordFormVerification();
 }
 
-function FinishFormVerification( bCaptchaIsValid )
+function FinishFormVerification()
 {
 		var errorString = '';
 
@@ -280,25 +316,21 @@ function FinishFormVerification( bCaptchaIsValid )
 		rgBadFields.reenter_email = true;
 	}
 
-	var reenter_email = $('reenter_email').value;
-	if ( reenter_email == '' )
-	{
-		errorString += 'Please fill in the Confirm email address field.<br/>';
-		rgBadFields.reenter_email = true;
-	}
-	else if ( email.toLowerCase() != reenter_email.toLowerCase() )
-	{
-		errorString += 'Please enter the same address in both email address fields.<br/>';
-		rgBadFields.email = true;
-		rgBadFields.reenter_email = true;
-	}
-
-	if ( !bCaptchaIsValid )
-	{
-
-		errorString += 'Bad captcha response. Please re-verify your humanity below.<br/>';
-		rgBadFields.captcha_text = true;
-	}
+	if ( !g_bGuest )
+    {
+        var reenter_email = $('reenter_email').value;
+        if ( reenter_email == '' )
+        {
+            errorString += 'Please fill in the Confirm email address field.<br/>';
+            rgBadFields.reenter_email = true;
+        }
+        else if ( email.toLowerCase() != reenter_email.toLowerCase() )
+        {
+            errorString += 'Please enter the same address in both email address fields.<br/>';
+            rgBadFields.email = true;
+            rgBadFields.reenter_email = true;
+        }
+    }
 
 		if ( !( $('lt').value == 1 || $('lt').value == 4 ) )
 	{
@@ -523,6 +555,10 @@ function GetRedir( result )
 	{
 		return result.redirect;
 	}
+	else if ( g_strRedirectURL )
+	{
+		return g_strRedirectURL;
+	}
 	else
 	{
 		return g_sBaseURL;
@@ -584,6 +620,7 @@ function ReallyCreateAccount()
 	    			  lt : $('lt').value,
 	    			  creation_sessionid : g_creationSessionID,
 	    			  embedded_appid : g_embeddedAppID,
+                      guest: g_bGuest,
 	    	},
 		onSuccess: function( transport ) {
 			var bSuccess = false;

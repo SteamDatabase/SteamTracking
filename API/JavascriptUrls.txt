@@ -1324,6 +1324,7 @@ ${STORE_BASE_URL}itemstore/${}
 ${STORE_BASE_URL}itemstore/${}/ajaxgetitemdefs
 ${STORE_BASE_URL}join/
 ${STORE_BASE_URL}join/${}
+${STORE_BASE_URL}join/?guest=1&purchaseType=gift&checkout=1&redir=${}
 ${STORE_BASE_URL}labs
 ${STORE_BASE_URL}labs/${}?optout=1
 ${STORE_BASE_URL}labs/ajaxgetappsimilarities?appidtarget=${}&${}
@@ -2286,6 +2287,7 @@ https://help.steampowered.com/#HelpWithEconTrading
 https://help.steampowered.com/#HelpWithLimitedAccount
 https://help.steampowered.com/#HelpWithLogin
 https://help.steampowered.com/${hash}
+https://help.steampowered.com//wizard/HelpWithPurchase
 https://help.steampowered.com/agents/assignhelprequest/
 https://help.steampowered.com/agents/claimtickets/
 https://help.steampowered.com/agents/dashboardstats/

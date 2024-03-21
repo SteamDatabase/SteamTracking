@@ -11849,7 +11849,10 @@
         return a.createElement(
           i.e1,
           { onEscKeypress: e.closeModal, bDisableBackgroundDismiss: !0 },
-          a.createElement(h, { redirectURL: e.redirectURL }),
+          a.createElement(h, {
+            redirectURL: e.redirectURL,
+            guestOption: e.guestOption,
+          }),
         );
       }
       function u(e) {
@@ -11870,36 +11873,44 @@
           { strTitle: (0, s.Xx)("#Login_SignIn") },
         );
       }
-      function _(e) {
+      function _(e, t) {
         (0, i.AM)(
-          a.createElement(m, { ownerWin: window, redirectURL: e }),
+          a.createElement(m, {
+            ownerWin: window,
+            redirectURL: e,
+            guestOption: t,
+          }),
           window,
           { strTitle: (0, s.Xx)("#Login_SignIn") },
         );
       }
       function h(e) {
-        const { redirectURL: t } = e,
-          [n] = (0, a.useState)(
+        const { redirectURL: t, guestOption: n } = e,
+          [i] = (0, a.useState)(
             new l.J(r.De.WEBAPI_BASE_URL).GetAnonymousServiceTransport(),
           ),
-          [i, s] = (0, a.useState)(!1);
+          [s, c] = (0, a.useState)(!1);
         return a.createElement(
           "div",
           null,
-          i
+          s
             ? a.createElement(o.pT, null)
-            : a.createElement(o.wK, {
-                autoFocus: !0,
-                transport: n,
-                platform: 2,
-                onComplete: (e) => {
-                  e == d.TG.k_PrimaryDomainFail
-                    ? s(!0)
-                    : window.location.assign(t);
+            : a.createElement(
+                o.wK,
+                {
+                  autoFocus: !0,
+                  transport: i,
+                  platform: 2,
+                  onComplete: (e) => {
+                    e == d.TG.k_PrimaryDomainFail
+                      ? c(!0)
+                      : window.location.assign(t);
+                  },
+                  redirectUrl: t,
+                  theme: "modal",
                 },
-                redirectUrl: t,
-                theme: "modal",
-              }),
+                n && a.createElement(o.bU, { redirectURL: t }),
+              ),
         );
       }
     },

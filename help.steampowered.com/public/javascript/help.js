@@ -331,13 +331,13 @@ HelpWizard = {
 		} ).fail( function( jqxhr ) {
 			$J('#help_refund_request_dialog').html( 'failed to load' );
 		} ).done( function( data ) {
-			
+
 			if ( data.ref )
 			{
 				HelpWizard.LoadPageFromHash( false, 'HelpRequest/' + data.ref, false );
 				return;
 			}
-			
+
 			if ( !data.html )
 			{
 				HelpWizard.ShowPageError();
@@ -797,7 +797,7 @@ HelpWizard = {
 	IsPasswordProhibited: function( strLogin, strPassword ) {
 		if ( strPassword.length < 8 )
 			return 'Password must be at least 8 characters long';
-		
+
 		if ( strPassword.search( /[^\x00-\x7F]/g ) >= 0 )
 			return 'Password can only contain ASCII characters';
 
@@ -1144,7 +1144,7 @@ HelpWizard = {
 			$J( '#reset_phonenumber_form' ).removeClass( 'loading' );
 		});
 	},
-	
+
 	SubmitPhoneChange: function( strSessionID, nAccountID ) {
 		var elError = $J( '#form_submit_error' );
 		var strPhoneNumber = $J( '#phone_number_input' ).val();
@@ -1407,7 +1407,7 @@ HelpWizard = {
 	{
 		$J( '#verify_cdkey_submit' ).addClass( 'loading' );
 		$J( '#form_submit_error' ).hide();
-		
+
 		var elError = $J( '#form_submit_error' );
 		var strCDKey = $J( '#verify_cdkey' ).val();
 
@@ -1648,7 +1648,7 @@ HelpWizard = {
 				window.location = "https://help.steampowered.com/wizard/HelpWithLoginInfoReset/?s=" + strSessionID +
 					"&account=" + data.accountid + "&reset=" + eReset + "&lost=" + nLost;
 			}
-			else 
+			else
 			{
 				var elError = $J( '#form_submit_error' );
 				elError.text( data.errorMsg ).slideDown();
@@ -1706,7 +1706,7 @@ HelpWizard = {
 			} else if ( data.type == 2 ) {
 				$J( '#captcha_entry_text' ).hide();
 				$J( '#captcha_entry_recaptcha' ).show();
-				_wizard.RenderRecaptcha( '#captcha_entry_recaptcha', data.gid, data.sitekey, data.s );	
+				_wizard.RenderRecaptcha( '#captcha_entry_recaptcha', data.gid, data.sitekey, data.s );
 			}
 			$J( '#input_captcha_gid' ).val( data.gid );
 		}
@@ -1772,6 +1772,136 @@ HelpWizard = {
 	{
 		V_SetCookie( 'steamPublisherAccount' + accountid, $J( element ).val(), 0, '/' );
         window.location.reload();
+	},
+	VerifyEmail: function( form )
+	{
+		var $Form = $J( form );
+		$Form.find( 'button' ).addClass( 'btn_disabled' ).prop( 'disabled', true );
+
+		$J.ajax({
+			type: $Form.attr( 'method' ),
+			url: $Form.attr( 'action' ),
+			data: $Form.serialize()
+		})
+		.fail( function( xhr )
+		{
+			ShowAlertDialog( 'Steam Support', 'There was an error submitting the form.' );
+			$Form.find( 'button' ).removeClass( 'btn_disabled' ).prop( 'disabled', false );
+		})
+		.done( function( data )
+		{
+			if ( data.error )
+			{
+				var Modal = ShowAlertDialog( 'Contact Steam Support', data.error ).done( function() { $Form.find( 'button' ).removeClass( 'btn_disabled' ).prop( 'disabled', false ); $J( 'input[name="validation_id"]' ).val( '' ); } );
+				Modal.SetMaxWidth( 400 );
+			}
+			else if ( data.requires_validation )
+			{
+				var $DialogContents = $J( '#help_request_email_verification' ).clone();
+
+				var strEmailInstructions = '';
+				if ( $J( form ).find( '#create_help_request_email_address' ).length )
+					strEmailInstructions = 'We just need to make sure you have access to this email address so we can show you purchase information related to it. We\'ve sent an email to:' + '<span class="help_request_email_validation_hightlight"> ' + $J( form ).find( '#create_help_request_email_address' ).val() + '</span>';
+
+				$DialogContents.find( '#validate_email_instructions' ).append( strEmailInstructions );
+				if ( data.validation_failed )
+				{
+					$DialogContents.find( '#validate_email_error_contents' ).text( 'Whoops!  Sorry that code wasn\'t quite right, please try again!' );
+					$J( 'input[name="validation_code"]' ).val( '' );
+				}
+
+				if ( data.validation_id )
+					$J( 'input[name="validation_id"]' ).val( data.validation_id );
+
+				var $Dialog = ShowConfirmDialog( 'Contact Steam Support', $DialogContents.show(), 'Send' )
+					.done( function( innerData )
+					{
+						$J( 'input[name="validation_code"]' ).val( $DialogContents.find( 'input[name="validation_code"]' ).val() );
+						HelpWizard.VerifyEmail( form );
+					})
+					.fail( function( xhr )
+					{
+						$J( 'input[name="validation_id"]' ).val( '' );
+						$Form.find( 'button' ).removeClass( 'btn_disabled' ).prop( 'disabled', false );
+					});
+				$Dialog.SetDismissOnBackgroundClick(false);
+			}
+			else if ( data.token )
+			{
+				HelpWizard.DoGuestAuth( data.token );
+			}
+		} );
+	},
+	DoGuestAuth: function( token )
+	{
+		$J.ajax( {
+			type: 'POST',
+			url: `https://login.steampowered.com/jwt/finalizelogin`,
+			data: {
+				'nonce': token,
+				'redir': 'https://help.steampowered.com//wizard/HelpWithPurchase'
+			},
+			crossDomain: true,
+			xhrFields: { withCredentials: true },
+		} )
+			.fail( function() {
+				window.location.reload();
+			})
+			.done( function( data )
+			{
+				window.location.reload();
+				if ( data && data.transfer_info )
+				{
+					HelpWizard.TransferLogin( data );
+				}
+				else
+				{
+					// something went wrong, but the account should have been created - redirect
+					window.location = 'https://help.steampowered.com//wizard/HelpWithPurchase';
+				}
+			});
+	},
+	TransferLogin: function( data )
+	{
+		let posts = [];
+		var nFailed = 0;
+		var nTransferred = 0;
+		for ( var idx = 0; idx < data.transfer_info.length; idx++ )
+		{
+			site = data.transfer_info[ idx ];
+			prom = new Promise( (resolve, reject) => {
+				$J.ajax( {
+					type: 'POST',
+					url: site.url,
+					data: {
+						steamID: data.steamID,
+						auth: site.params.auth,
+						nonce: site.params.nonce,
+					},
+					crossDomain: true,
+					xhrFields: {withCredentials: true},
+					success: function ( data ) {
+						nTransferred++;
+						resolve();
+					},
+					error: function ( data ) {
+						nFailed++;
+						resolve();
+					}
+				} )
+			} );
+			posts.push( prom );
+		}
+
+		Promise.all(posts).then(() => {
+			console.log( 'transfer ' + nTransferred + '/' + nFailed );
+			if ( nTransferred > 0 )
+			{
+				window.location = 'https://help.steampowered.com//wizard/HelpWithPurchase';
+			}
+		}).catch((e) => {
+			// this is a weird failure
+		});
 	}
 };
 
@@ -2023,7 +2153,7 @@ HardwareRMA = {
 
 					HardwareRMA.VerifySerialThenAdvance( HardwareRMA.m_sSerialNumber );
 				}
-				else if ( data.need_login )	
+				else if ( data.need_login )
 				{
 					HelpWizard.PromptLogin();
 				}
@@ -2049,7 +2179,7 @@ HardwareRMA = {
 		else
 			$J('#hardware_serial_next').hide();
 	},
-	
+
 	VerifySerialThenAdvance: function( serial_number ) {
 		var input_valid = ( serial_number.length >= 10 && (serial_number[0] == 'f' || serial_number[0] == 'F') );
 		if ( input_valid )
@@ -2086,7 +2216,7 @@ HardwareRMA = {
 			} );
 		}
 	},
-	
+
 
 	OnVerifySerialThenAdvanceComplete: function( serial_number ) {
 		var input_valid = ( serial_number.length >= 10 && (serial_number[0] == 'f' || serial_number[0] == 'F') );
@@ -2222,16 +2352,16 @@ HardwareRMA = {
 				case 6:
 					error_text = 'We cannot ship your order because the postal code you provided belongs to a region outside of the 48 continental United States.';
 					break;
-					
+
 				case 7:
 					error_text = 'We cannot ship to the address you\'ve provided because it appears that your postal code is in a special region that we cannot ship to.';
-					break;					
+					break;
 
 				case 2:
 					error_text = 'We cannot ship your order to the address that you\'ve provided because it contains characters that are not latin-based.';
 					break;
 			}
-			this.DisplayShippingErrorMessage( error_text );	
+			this.DisplayShippingErrorMessage( error_text );
 		}
 		else if ( result.bValidAddress && result.bSuggestedAddressMatches )
 		{
@@ -2241,7 +2371,7 @@ HardwareRMA = {
 		{
 			Shipping_UpdateFieldsFromVerificationCall( result );
 			this.ShowShippingCorrectionsForm();
-		}		
+		}
 	},
 
 	OnVerifyShippingAddressFailure: function() {
@@ -2291,7 +2421,7 @@ HardwareRMA = {
 
 		var explanation = $J('#refund_text_input').val();
 		explanation = explanation.substring(0,4000);	// don't send up too many characters
-		
+
 		$J.ajax({
 				type: "POST",
 				url: "https://help.steampowered.com/wizard/AjaxHardwareCreateReplacementRMA",
@@ -2946,7 +3076,7 @@ HelpRequestPage = {
 			type: $Form.attr( 'method' ),
 			url: $Form.attr( 'action' )
 		};
-		
+
 		if ( typeof FormData != 'undefined' )
 		{
 			var fd = new FormData( $Form[0] );
@@ -3083,7 +3213,7 @@ HelpRequestPage = {
 			HelpRequestPage.CloseHelpRequest( reference_code );
 		});
 	},
-	
+
 	ConfirmIssueResolvedHelpRequest: function( reference_code )
 	{
 		ShowConfirmDialog(
@@ -3328,16 +3458,16 @@ function v_currencyformat( valueInCents, currencyCode, countryCode )
 		{
 			currencyFormat = currencyFormat.replace( '.00', '' );
 		}
-		
+
 		if ( currencyData.strDecimalSymbol != '.' )
 		{
 			currencyFormat = currencyFormat.replace( '.', currencyData.strDecimalSymbol );
 		}
-		
+
 		var currencyReturn = IsCurrencySymbolBeforeValue( currencyCode ) ?
-			 GetCurrencySymbol( currencyCode ) + currencyData.strSymbolAndNumberSeparator + currencyFormat 
+			 GetCurrencySymbol( currencyCode ) + currencyData.strSymbolAndNumberSeparator + currencyFormat
 			 : currencyFormat + currencyData.strSymbolAndNumberSeparator + GetCurrencySymbol( currencyCode );
-		
+
 		if ( currencyCode == 'USD' && typeof(countryCode) != 'undefined' && countryCode != 'US' )
 		{
 			return currencyReturn + ' USD';
