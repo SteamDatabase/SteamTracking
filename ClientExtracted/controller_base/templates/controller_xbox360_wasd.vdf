@@ -687,6 +687,75 @@
 		}
 
 	}
+	"group"
+	{
+		"id"		"14"
+		"mode"		"flickstick"
+		"inputs"
+		{
+
+			"click"
+			{
+				"activators"
+				{
+					"Double_Press"
+					{
+						"bindings"
+						{
+							"binding"		"controller_action camera_reset 180 66 90, , "
+						}
+					}
+				}
+			}
+		}
+
+	}
+	"group"
+	{
+		"id"		"15"
+		"mode"		"flickstick"
+		"inputs"
+		{
+
+			"click"
+			{
+				"activators"
+				{
+					"Double_Press"
+					{
+						"bindings"
+						{
+							"binding"		"controller_action camera_reset 180 66 90, , "
+						}
+					}
+				}
+			}
+		}
+
+	}
+	"group"
+	{
+		"id"		"16"
+		"mode"		"flickstick"
+		"inputs"
+		{
+
+			"click"
+			{
+				"activators"
+				{
+					"Double_Press"
+					{
+						"bindings"
+						{
+							"binding"		"controller_action camera_reset 180 66 90, , "
+						}
+					}
+				}
+			}
+		}
+
+	}
 	"preset"
 	{
 		"id"		"0"
@@ -702,12 +771,10 @@
 			"5"		"right_trigger active"
 			"9"		"right_joystick active"
 			"7"		"dpad active"
-
 			"13"		"right_joystick inactive" 
-			"13"		"joystick inactive" 
-			
-			"13"		"right_trackpad inactive" 
-			"13"		"left_trackpad inactive" 
+			"14"		"joystick inactive" 
+			"15"		"right_trackpad inactive" 
+			"16"		"left_trackpad inactive" 
 		}
 	}
 	"settings"

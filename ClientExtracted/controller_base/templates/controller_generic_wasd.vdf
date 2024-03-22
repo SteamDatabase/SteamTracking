@@ -711,6 +711,53 @@
 		{
 		}
 	}
+	"group"
+	{
+		"id"		"12"
+		"mode"		"flickstick"
+		"inputs"
+		{
+
+			"click"
+			{
+				"activators"
+				{
+					"Double_Press"
+					{
+						"bindings"
+						{
+							"binding"		"controller_action camera_reset 180 66 90, , "
+						}
+					}
+				}
+			}
+		}
+
+	}
+	"group"
+	{
+		"id"		"13"
+		"mode"		"flickstick"
+		"inputs"
+		{
+			"click"
+			{
+				"activators"
+				{
+					"Double_Press"
+					{
+						"bindings"
+						{
+							"binding"		"controller_action camera_reset 180 66 90, , "
+						}
+					}
+				}
+			}
+		}
+		"gameactions"
+		{
+		}
+	}
 	"preset"
 	{
 		"id"		"0"
@@ -726,12 +773,10 @@
 			"5"		"right_trigger active"
 			"9"		"right_joystick active"
 			"7"		"dpad active"
-			
 			"10"		"right_joystick inactive" 
 			"11"		"joystick inactive" 
-
-			"10"		"right_trackpad inactive" 
-			"11"		"left_trackpad inactive" 
+			"12"		"right_trackpad inactive" 
+			"13"		"left_trackpad inactive" 
 		}
 	}
 	"settings"

@@ -643,6 +643,54 @@
 		{
 		}
 	}
+	"group"
+	{
+		"id"		"12"
+		"mode"		"flickstick"
+		"inputs"
+		{
+			"click"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"xinput_button JOYSTICK_RIGHT"
+						}
+					}
+				}
+			}
+		}
+		"gameactions"
+		{
+		}
+	}
+	"group"
+	{
+		"id"		"13"
+		"mode"		"flickstick"
+		"inputs"
+		{
+			"click"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"xinput_button JOYSTICK_LEFT"
+						}
+					}
+				}
+			}
+		}
+		"gameactions"
+		{
+		}
+	}
 	"preset"
 	{
 		"id"		"0"
@@ -659,12 +707,10 @@
 			"5"		"right_trigger active"
 			"8"		"right_joystick active"
 			"9"		"dpad active"
-
 			"10"		"right_joystick inactive" 
 			"11"		"joystick inactive" 
-
-			"10"		"right_trackpad inactive" 
-			"11"		"left_trackpad inactive" 
+			"12"		"right_trackpad inactive" 
+			"13"		"left_trackpad inactive" 
 
 		}
 	}

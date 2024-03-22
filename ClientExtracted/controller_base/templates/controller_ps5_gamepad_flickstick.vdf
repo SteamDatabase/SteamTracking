@@ -446,7 +446,7 @@
 	"group"
 	{
 		"id"		"12"
-		"mode"		"absolute_mouse"
+		"mode"		"gyro_to_mouse"
 		"inputs"
 		{
 		}
@@ -543,6 +543,30 @@
 			}
 		}
 	}
+	"group"
+	{
+		"id"		"13"
+		"mode"		"flickstick"
+		"inputs"
+		{
+			"click"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"xinput_button JOYSTICK_LEFT"
+						}
+					}
+				}
+			}
+		}
+		"gameactions"
+		{
+		}
+	}
 	"preset"
 	{
 		"id"		"0"
@@ -560,6 +584,7 @@
 			"10"		"dpad active"
 			"11"		"center_trackpad inactive"
 			"12"		"gyro active"
+			"13"		"joystick inactive"
 		}
 	}
 	"settings"

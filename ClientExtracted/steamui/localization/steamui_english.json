@@ -6897,6 +6897,7 @@
     "ControllerSettingValue_GyroTouchCenter": "Whole Pad Touch",
     "ControllerSettingValue_GyroClickRight": "Right Pad Click",
     "ControllerSettingValue_GyroClickLeft": "Left Pad Click",
+    "ControllerSettingValue_GyroClickCenter": "Whole Pad Click",
     "ControllerSettingValue_GyroBumperRight": "Right Bumper",
     "ControllerSettingValue_GyroBumperLeft": "Left Bumper",
     "ControllerSettingValue_GyroR4": "R4",

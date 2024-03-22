@@ -2006,17 +2006,6 @@ enum UnnamedEnum5341f659b7352c78
 	OncePerGame = 2;
 }
 
-enum UnnamedEnum5458523f40d3e15b
-{
-	eLeftColumn = 0;
-	eRightColumn = 1;
-	eCenterTop = 2;
-	eCenterBottom = 3;
-	eCenterBottomLower = 4;
-	eCenterBottomLowerLower = 5;
-	eIgnore = 6;
-}
-
 enum UnnamedEnum54915c93076f4b25
 {
 	k_eInsertThumbnail = 1;
@@ -2546,6 +2535,18 @@ enum UnnamedEnum8464db862b909b82
 	PlayerSelect = 3;
 	Scores = 4;
 	Leaderboard = 5;
+}
+
+enum UnnamedEnum84d014c9a0ed8c43
+{
+	eLeftColumn = 0;
+	eRightColumn = 1;
+	eCenterTop = 2;
+	eCenterTopUpper = 3;
+	eCenterBottom = 4;
+	eCenterBottomLower = 5;
+	eCenterBottomLowerLower = 6;
+	eIgnore = 7;
 }
 
 enum UnnamedEnum84f925970b2abf75

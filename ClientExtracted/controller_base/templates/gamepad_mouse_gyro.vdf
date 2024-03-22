@@ -322,15 +322,12 @@
 	"group"
 	{
 		"id"		"8"
-		"mode"		"absolute_mouse"
+		"mode"		"gyro_to_mouse"
 		"inputs"
 		{
 		}
 		"settings"
 		{
-			"sensitivity"		"83"
-			"haptic_intensity"		"0"
-			"acceleration"		"2"
 		}
 	}
 	"group"
