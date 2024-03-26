@@ -1066,29 +1066,36 @@
       }
       function j(e) {
         return a.useMemo(() => {
-          var t;
+          var t, n;
           return null !==
-            (t = Array.from(null == e ? void 0 : e.entries()).map(([e, t]) => {
-              const n = new Date(1e3 * t.due_date),
-                { sTitle: a, element: i } = (function (e, t) {
-                  if (1 === t.type)
-                    return { sTitle: "Test 1", element: q(e, t) };
-                  return;
-                })(e, t);
-              if (a)
-                return {
-                  title: a,
-                  startDate: n,
-                  endDate: n,
-                  eventType: "deadline",
-                  id: e,
-                  getEventTypeName: () =>
-                    (0, o.Xx)("#Dashboard_UpcomingEvents_EventType_Deadline"),
-                  getElement: () => i,
-                  registerForChange: void 0,
-                };
-            })) && void 0 !== t
-            ? t
+            (n =
+              null ===
+                (t = e && Array.from(null == e ? void 0 : e.entries())) ||
+              void 0 === t
+                ? void 0
+                : t.map(([e, t]) => {
+                    const n = new Date(1e3 * t.due_date),
+                      { sTitle: a, element: i } = (function (e, t) {
+                        if (1 === t.type)
+                          return { sTitle: "Test 1", element: q(e, t) };
+                        return;
+                      })(e, t);
+                    if (a)
+                      return {
+                        title: a,
+                        startDate: n,
+                        endDate: n,
+                        eventType: "deadline",
+                        id: e,
+                        getEventTypeName: () =>
+                          (0, o.Xx)(
+                            "#Dashboard_UpcomingEvents_EventType_Deadline",
+                          ),
+                        getElement: () => i,
+                        registerForChange: void 0,
+                      };
+                  })) && void 0 !== n
+            ? n
             : [];
         }, [e]);
       }
