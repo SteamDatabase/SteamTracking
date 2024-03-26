@@ -741,6 +741,7 @@
       function D(e, t) {
         let n = A(e.args, "id");
         return (
+          n || (n = A(e.args)),
           n &&
             "string" == typeof n &&
             n.length > 0 &&

@@ -477,16 +477,16 @@
         LeftMenuBarItem: "_1jUn8LKM32ea66l460sUZF",
       };
     },
-    64911: (e, t, a) => {
+    38384: (e, t, a) => {
       "use strict";
       a.r(t),
         a.d(t, {
-          DoesPathMatch: () => Da,
-          IsProjectPath: () => Ta,
-          SteamLearnPageContainer: () => Pa,
-          SteamLearnProjectTabs: () => Xa,
-          SteamLearnRoutes: () => ba,
-          default: () => ka,
+          DoesPathMatch: () => ka,
+          IsProjectPath: () => ya,
+          SteamLearnPageContainer: () => Ia,
+          SteamLearnProjectTabs: () => Va,
+          SteamLearnRoutes: () => Xa,
+          default: () => Oa,
         });
       var n = a(760),
         o = a(47427),
@@ -540,17 +540,17 @@
       function h(e) {
         return parseInt(e.replace("node_", ""));
       }
-      function L(e, t) {
+      function C(e, t) {
         return `edge_${e}_${t}`;
       }
-      const C = "SteamLearnDataSource",
+      const L = "SteamLearnDataSource",
         b = "SteamLearnProjectList",
         D = "SteamLearnProject",
         T = "SteamLearnFetchStatusVersions",
         P = "SteamLearnTrainStatusVersions",
         X = "SteamLearnFetchStatus",
-        y = "SteamLearnTrainStatus";
-      function k(e) {
+        k = "SteamLearnTrainStatus";
+      function y(e) {
         return `SteamLearnWorkingProject_Universe${m.De.EUNIVERSE}_Project${e}`;
       }
       function I() {
@@ -570,7 +570,7 @@
                       .Body()
                       .data_sources()
                       .forEach((e) => {
-                        f.U.setQueryData([C, e.id()], e);
+                        f.U.setQueryData([L, e.id()], e);
                       }),
                     t.Body().data_sources()
                   );
@@ -582,7 +582,7 @@
       }
       function V(e) {
         return (0, N.useQuery)(
-          [C, e],
+          [L, e],
           () =>
             (function (e) {
               return (0, l.mG)(this, void 0, void 0, function* () {
@@ -631,7 +631,7 @@
                 throw `Failed FetchProject ${e}`;
               });
             })(e),
-            a = k(e);
+            a = y(e);
           null === localStorage.getItem(a) &&
             localStorage.setItem(a, t.serializeBase64String());
           const n = S.mgi.deserializeBinary(
@@ -752,7 +752,7 @@
       }
       function W(e, t) {
         return (0, N.useQuery)(
-          [y, e, t],
+          [k, e, t],
           () =>
             (function (e, t) {
               return (0, l.mG)(this, void 0, void 0, function* () {
@@ -792,7 +792,7 @@
         f.U.invalidateQueries([X, e, t]);
       }
       function R(e, t) {
-        f.U.invalidateQueries([y, e, t]);
+        f.U.invalidateQueries([k, e, t]);
       }
       function K(e, t, a) {
         return (0, l.mG)(this, void 0, void 0, function* () {
@@ -842,14 +842,14 @@
           return (
             n &&
               1 == n.GetEResult() &&
-              (localStorage.removeItem(k(e.project_id())),
+              (localStorage.removeItem(y(e.project_id())),
               f.U.invalidateQueries([D, e.project_id()])),
             n.Body().result()
           );
         });
       }
       function $(e) {
-        localStorage.removeItem(k(e)),
+        localStorage.removeItem(y(e)),
           f.U.invalidateQueries([D, e]),
           f.U.removeQueries([T, e]),
           f.U.removeQueries([P, e]);
@@ -1145,11 +1145,39 @@
             );
             if (a) {
               const t = ne(e, a, n);
-              (0, u.X)(
-                1 == t.length,
-                `Input tensor to STEAMLEARN_NODE_TYPE_DROPOUT not one-dimensional! (node ${a}, connector ${n}`,
-              ),
-                r.push(t[0]);
+              r.push(t[0]);
+            }
+            break;
+          }
+          case 22: {
+            const { msgIncomingNode: a, nIncomingConnectorID: n } = ae(
+              e,
+              t.connectors()[0].connector_id(),
+            );
+            if (a) {
+              const o = ne(e, a, n);
+              o.length > 0 &&
+                (r.push(o[0] - t.conv_1d().kernel_size() + 1),
+                r.push(t.conv_1d().filters()));
+            }
+            break;
+          }
+          case 23: {
+            const { msgIncomingNode: a, nIncomingConnectorID: n } = ae(
+              e,
+              t.connectors()[0].connector_id(),
+            );
+            if (a) {
+              const o = ne(e, a, n);
+              if (o.length > 0) {
+                r.push(
+                  Math.floor(
+                    (o[0] - t.max_pooling_1d().pool_size()) /
+                      t.max_pooling_1d().pool_size(),
+                  ) + 1,
+                );
+                for (let e = 1; e < o.length; e++) r.push(o[e]);
+              }
             }
             break;
           }
@@ -1237,12 +1265,12 @@
               e.add_project_nodes(i);
           }
         })(e.unpublished_config()),
-          localStorage.setItem(k(e.project_id()), e.serializeBase64String()),
+          localStorage.setItem(y(e.project_id()), e.serializeBase64String()),
           f.U.invalidateQueries([D, e.project_id()]);
       }
       function se(e, t) {
         const a = (function (e) {
-          return f.U.getQueryData([C, e]);
+          return f.U.getQueryData([L, e]);
         })(t);
         if (!a) return !1;
         for (const n of a.structure().elements())
@@ -1345,13 +1373,13 @@
         },
         ge = (e) => {
           const t = (0, r.TH)(),
-            a = Ta(t.pathname);
+            a = ya(t.pathname);
           let n, i;
-          for (const e of Object.values(ba)) {
+          for (const e of Object.values(Xa)) {
             const a = e(void 0, void 0),
               o = (0, r.LX)(t.pathname, a);
             o &&
-              a.includes(`/${ba.SteamLearnProject()}/`) &&
+              a.includes(`/${Xa.SteamLearnProject()}/`) &&
               (void 0 !== o.params.id && (n = parseInt(o.params.id)),
               void 0 !== o.params.version && (i = parseInt(o.params.version)));
           }
@@ -1375,7 +1403,7 @@
           return o.createElement(
             i.rU,
             {
-              to: ba.SteamLearnProjectTrainStatus(e.msgProject.project_id(), t),
+              to: Xa.SteamLearnProjectTrainStatus(e.msgProject.project_id(), t),
               className: (0, s.Z)(Se.ProjectEntry, e.isHidden && Se.Hidden),
             },
             o.createElement(
@@ -1528,10 +1556,10 @@
           switch (e.msgEvent.event_type()) {
             case 4:
               (_ = (0, c.Xx)("#SteamLearn_Event_Type_ScheduledTrain")),
-                (u = ba.SteamLearnProjectTrain(e.nProjectID, m));
+                (u = Xa.SteamLearnProjectTrain(e.nProjectID, m));
               break;
             case 1:
-              (u = ba.SteamLearnProjectTrainStatus(e.nProjectID, m)),
+              (u = Xa.SteamLearnProjectTrainStatus(e.nProjectID, m)),
                 (_ =
                   0 == e.nEndTime
                     ? (0, c.Xx)(
@@ -1630,7 +1658,7 @@
               ),
           );
         },
-        Le = (e) => {
+        Ce = (e) => {
           if (2 == e.msgEvent.event_type()) return null;
           let t = 0,
             a = 0,
@@ -1691,7 +1719,7 @@
             bProjectSpecific: e.bProjectSpecific,
           });
         };
-      const Ce = () => {
+      const Le = () => {
           const [e, t] = o.useState(0),
             a = new Date();
           a.setDate(a.getDate() + 7 * e);
@@ -1757,7 +1785,7 @@
                   l
                     .event_list()
                     .map((e, t) =>
-                      o.createElement(Le, {
+                      o.createElement(Ce, {
                         key: `Event_${t}`,
                         msgEvent: e,
                         arrMsgAllEvents: l.event_list(),
@@ -1791,14 +1819,14 @@
                 (0, c.Xx)("#SteamLearn_Project_Events"),
               ),
               o.createElement("div", { className: Se.DashboardUnderline }),
-              o.createElement(Ce, null),
+              o.createElement(Le, null),
             ),
           );
       var De = a(64026),
         Te = a(53040),
         Pe = a(90069),
         Xe = a(64560);
-      const ye = () => {
+      const ke = () => {
           const [e, t] = o.useState(""),
             [a, n] = o.useState(""),
             [r, i] = o.useState(!1);
@@ -1849,10 +1877,10 @@
                       case 1: {
                         const e =
                           m.De.PARTNER_BASE_URL +
-                          ba.SteamLearnBase() +
-                          ba.SteamLearnProjectDataSources(n, 0);
+                          Xa.SteamLearnBase() +
+                          Xa.SteamLearnProjectDataSources(n, 0);
                         (0, Pe.AM)(
-                          o.createElement(ke, {
+                          o.createElement(ye, {
                             strResult: "Success!",
                             strRedirect: e,
                           }),
@@ -1862,13 +1890,13 @@
                       }
                       case 2:
                         (0, Pe.AM)(
-                          o.createElement(ke, { strResult: "Bad Name!" }),
+                          o.createElement(ye, { strResult: "Bad Name!" }),
                           window,
                         );
                         break;
                       case 3:
                         (0, Pe.AM)(
-                          o.createElement(ke, { strResult: "Nope!" }),
+                          o.createElement(ye, { strResult: "Nope!" }),
                           window,
                         );
                     }
@@ -1879,7 +1907,7 @@
             ),
           );
         },
-        ke = (e) => {
+        ye = (e) => {
           (0, r.k6)();
           const t = () => {
             e.strRedirect &&
@@ -2135,11 +2163,11 @@
             [g, S] = o.useState(""),
             [f, E] = o.useState(!1),
             [v, x] = o.useState(!1),
-            [h, L] = o.useState(""),
-            [C, b] = o.useState(!1),
+            [h, C] = o.useState(""),
+            [L, b] = o.useState(!1),
             [D, T] = o.useState(!1),
             [P, X] = o.useState(""),
-            [y, k] = o.useState(!1),
+            [k, y] = o.useState(!1),
             [I, V] = o.useState(!1),
             O = 0 == n;
           o.useEffect(() => {
@@ -2154,19 +2182,19 @@
                 (E(!0),
                 S(l.max_range().toFixed(2 == r.data_type() ? 2 : 0)),
                 x(!0)),
-              C ||
+              L ||
                 (b(!0),
-                L(l.std_dev().toFixed(2 == r.data_type() ? 2 : 0)),
+                C(l.std_dev().toFixed(2 == r.data_type() ? 2 : 0)),
                 T(!0)),
-              y ||
-                (k(!0),
+              k ||
+                (y(!0),
                 X(
                   (null === (e = l.compact_table_count()) || void 0 === e
                     ? void 0
                     : e.toFixed(0)) || "0",
                 ),
                 V(!0)));
-          }, [_, f, C, y, l, r]);
+          }, [_, f, L, k, l, r]);
           const B = (e, t, a, n) => {
             t(e), /^-?[\d]*\.?[\d]{0,2}$/.test(e) ? (a(!0), K(n)) : a(!1);
           };
@@ -2490,7 +2518,7 @@
                     disabled: !1,
                     value: h,
                     onChange: (e) =>
-                      B(e.target.value, L, T, (t) =>
+                      B(e.target.value, C, T, (t) =>
                         t.set_std_dev(parseFloat(e.target.value)),
                       ),
                   }),
@@ -2700,7 +2728,7 @@
           [N, f] = o.useState(0),
           [E, v] = o.useState(""),
           [x, h] = o.useState(""),
-          L = o.useMemo(
+          C = o.useMemo(
             () =>
               Array.from(t.data_source_element_usages().values()).sort(
                 (e, t) => {
@@ -2729,13 +2757,13 @@
           f(e);
         }, [t]),
           o.useEffect(() => {
-            for (const e of L)
+            for (const e of C)
               i((t) =>
                 Object.assign(Object.assign({}, t), {
                   [e.data_element_path()]: "0",
                 }),
               );
-          }, [L]);
+          }, [C]);
         return 0 == Object.keys(r).length
           ? null
           : o.createElement(
@@ -2767,7 +2795,7 @@
                   onChange: (e) => h(e.target.value),
                 }),
                 o.createElement("hr", null),
-                L.map((e) =>
+                C.map((e) =>
                   0 == e.input()
                     ? null
                     : o.createElement(
@@ -2855,7 +2883,7 @@
                           const e = E.split(",");
                           for (const t of e) n.Body().add_keys(t);
                         } else {
-                          const e = L.sort(
+                          const e = C.sort(
                             (e, t) => e.sql_column() - t.sql_column(),
                           );
                           for (const t of e) {
@@ -3873,7 +3901,7 @@
                 ? void 0
                 : a.toFixed(2)) || "0",
             ),
-            [L, C] = o.useState(
+            [C, L] = o.useState(
               (null ===
                 (n = e.msgNode
                   .conditional_extract()
@@ -3894,7 +3922,7 @@
             [T, P] = o.useState(
               e.msgNode.conditional_extract().compact_table(),
             ),
-            [X, y] = o.useState(
+            [X, k] = o.useState(
               e.msgNode.conditional_extract().extracted_compact_table(),
             );
           o.useEffect(() => {
@@ -3921,7 +3949,7 @@
                   ? void 0
                   : a.toFixed(2)) || "0",
               ),
-              C(
+              L(
                 (null ===
                   (n = e.msgNode
                     .conditional_extract()
@@ -3940,9 +3968,9 @@
                   : o.toFixed(2)) || "1.00",
               ),
               P(e.msgNode.conditional_extract().compact_table()),
-              y(e.msgNode.conditional_extract().extracted_compact_table());
+              k(e.msgNode.conditional_extract().extracted_compact_table());
           }, [e.bVisible, e.msgNode, l]);
-          let k = [
+          let y = [
               {
                 label: (0, c.Xx)(
                   "#SteamLearn_Config_Node_ConditionalExtract_FilterType_All",
@@ -4095,7 +4123,7 @@
                   dontUpdateProject: !0,
                   fnGetValue: () => p,
                   fnSetValue: (e) => N(parseInt(e)),
-                  options: k,
+                  options: y,
                 }),
                 V &&
                   o.createElement(Qe, {
@@ -4162,7 +4190,7 @@
                       ),
                       smallLabel: !0,
                       dontUpdateProject: !0,
-                      fnGetInitialValue: () => L,
+                      fnGetInitialValue: () => C,
                       fnValidateValue: (t) =>
                         le(
                           t,
@@ -4171,7 +4199,7 @@
                             .connectors()
                             .filter((e) => e.is_input_connector()).length - 1,
                         ),
-                      fnSetValue: (e) => C(e),
+                      fnSetValue: (e) => L(e),
                     }),
                   B &&
                     o.createElement(Qe, {
@@ -4232,7 +4260,7 @@
                     dontUpdateProject: !0,
                     fnGetInitialValue: () => X,
                     fnValidateValue: (t) => !me(s, t, e.msgNode),
-                    fnSetValue: (e) => y(e),
+                    fnSetValue: (e) => k(e),
                   }),
                 ),
               o.createElement("div", { className: Ke.Separator }),
@@ -4298,7 +4326,7 @@
                       e.msgNode
                         .conditional_extract()
                         .weight_info()
-                        .set_input_number(parseInt(L)),
+                        .set_input_number(parseInt(C)),
                       e.msgNode
                         .conditional_extract()
                         .weight_info()
@@ -6768,7 +6796,7 @@
             ),
           );
         },
-        Lt = (e) => {
+        Ct = (e) => {
           const {
               msgWorkingProject: t,
               msgWorkingProjectConfig: a,
@@ -6787,7 +6815,7 @@
                 Ke.Preprocessing,
               ),
             },
-            o.createElement(Ct, {
+            o.createElement(Lt, {
               bVisible: r,
               fnSetPopupVisible: i,
               msgNode: l,
@@ -6893,7 +6921,7 @@
             }),
           );
         },
-        Ct = (e) => {
+        Lt = (e) => {
           const { msgWorkingProject: t, msgWorkingProjectConfig: a } = ue(),
             [n, r] = o.useState(e.msgNode.comment()),
             [i, s] = o.useState(e.msgNode.shuffle().exclude_zeroes());
@@ -7794,7 +7822,7 @@
                 Ke.Preprocessing,
               ),
             },
-            o.createElement(yt, {
+            o.createElement(kt, {
               bVisible: r,
               fnSetPopupVisible: i,
               msgNode: l,
@@ -7979,7 +8007,7 @@
             }),
           );
         },
-        yt = (e) => {
+        kt = (e) => {
           const { msgWorkingProject: t, msgWorkingProjectConfig: a } = ue(),
             [n, r] = o.useState(e.msgNode.comment()),
             [i, s] = o.useState(
@@ -8287,7 +8315,7 @@
             ),
           );
         };
-      var kt = a(44321);
+      var yt = a(44321);
       const It = (e) => {
           const {
               msgWorkingProject: t,
@@ -9456,17 +9484,17 @@
               e.msgNode.extract().recency_months().toFixed(0),
             ),
             [x, h] = o.useState(e.msgNode.extract().bias_start().toFixed(2)),
-            [L, C] = o.useState(e.msgNode.extract().bias_end().toFixed(2)),
+            [C, L] = o.useState(e.msgNode.extract().bias_end().toFixed(2)),
             [b, D] = o.useState(
               e.msgNode.extract().input_bias_input_number().toFixed(0),
             ),
             [T, P] = o.useState(
               e.msgNode.extract().input_bias_strength().toFixed(2),
             ),
-            [X, y] = o.useState(
+            [X, k] = o.useState(
               e.msgNode.extract().positive_sample_percent().toFixed(0),
             ),
-            [k, I] = o.useState(e.msgNode.extract().compact_table()),
+            [y, I] = o.useState(e.msgNode.extract().compact_table()),
             [V, j] = o.useState(e.msgNode.extract().extracted_compact_table());
           o.useEffect(() => {
             i(e.msgNode.comment()),
@@ -9477,10 +9505,10 @@
               f(e.msgNode.extract().selection()),
               v(e.msgNode.extract().recency_months().toFixed(0)),
               h(e.msgNode.extract().bias_start().toFixed(2)),
-              C(e.msgNode.extract().bias_end().toFixed(2)),
+              L(e.msgNode.extract().bias_end().toFixed(2)),
               D(e.msgNode.extract().input_bias_input_number().toFixed(0)),
               P(e.msgNode.extract().input_bias_strength().toFixed(2)),
-              y(e.msgNode.extract().positive_sample_percent().toFixed(0)),
+              k(e.msgNode.extract().positive_sample_percent().toFixed(0)),
               I(e.msgNode.extract().compact_table()),
               j(e.msgNode.extract().extracted_compact_table());
           }, [e.bVisible, e.msgNode, n]);
@@ -9683,7 +9711,7 @@
                   dontUpdateProject: !0,
                   fnGetInitialValue: () => X,
                   fnValidateValue: (e) => le(e, 0, 100),
-                  fnSetValue: (e) => y(e),
+                  fnSetValue: (e) => k(e),
                 }),
               ),
               o.createElement("div", { className: Ke.Separator }),
@@ -9763,10 +9791,10 @@
                   smallLabel: !0,
                   hidden: !G && 5 != g,
                   dontUpdateProject: !0,
-                  fnGetInitialValue: () => L,
+                  fnGetInitialValue: () => C,
                   digitCount: 2,
                   fnValidateValue: (e) => de(e, 0, 1),
-                  fnSetValue: (e) => C(e),
+                  fnSetValue: (e) => L(e),
                 }),
                 o.createElement("div", { className: Ke.Separator }),
                 o.createElement(Qe, {
@@ -9828,7 +9856,7 @@
                     ),
                     smallLabel: !0,
                     dontUpdateProject: !0,
-                    fnGetInitialValue: () => k,
+                    fnGetInitialValue: () => y,
                     fnValidateValue: (e) => me(a, e),
                     fnSetValue: (e) => I(e),
                   }),
@@ -9901,7 +9929,7 @@
                       e.msgNode.extract().set_selection(g),
                       e.msgNode.extract().set_recency_months(parseInt(E)),
                       e.msgNode.extract().set_bias_start(parseFloat(x)),
-                      e.msgNode.extract().set_bias_end(parseFloat(L)),
+                      e.msgNode.extract().set_bias_end(parseFloat(C)),
                       e.msgNode
                         .extract()
                         .set_input_bias_input_number(parseInt(b)),
@@ -9911,7 +9939,7 @@
                       e.msgNode
                         .extract()
                         .set_positive_sample_percent(parseInt(X)),
-                      e.msgNode.extract().set_compact_table(k),
+                      e.msgNode.extract().set_compact_table(y),
                       e.msgNode.extract().set_extracted_compact_table(V),
                       ie(t),
                       e.fnSetPopupVisible(!1);
@@ -9927,7 +9955,464 @@
             ),
           );
         },
-        Mt = () => {
+        Mt = (e) => {
+          const { msgWorkingProject: t, msgWorkingProjectConfig: a } = ue(),
+            [n, r] = o.useState(!1),
+            i = e.data.msgNode,
+            l = i.connectors().filter((e) => e.is_input_connector()),
+            d = i.connectors().filter((e) => !e.is_input_connector());
+          return o.createElement(
+            "div",
+            { className: (0, s.Z)(Ke.FlowNode, Ke.Conv1DNode, Ke.Keras) },
+            o.createElement(Wt, {
+              bVisible: n,
+              fnSetPopupVisible: r,
+              msgNode: i,
+            }),
+            l.map((e, t) => {
+              const a = Math.floor(((t + 1) / (l.length + 1)) * 200),
+                n = E(e.connector_id());
+              return o.createElement(
+                Me.HH,
+                {
+                  key: n,
+                  type: "target",
+                  position: Ue.P.Top,
+                  id: n,
+                  style: { left: a },
+                },
+                o.createElement(
+                  "div",
+                  { className: Ke.ConnectorID },
+                  e.connector_id(),
+                ),
+              );
+            }),
+            o.createElement(
+              "div",
+              { className: Ke.Title },
+              o.createElement(
+                "div",
+                { className: Ke.TitleText },
+                (0, c.Xx)("#SteamLearn_Config_Node_Title_Conv1D"),
+              ),
+              o.createElement("div", { className: Ke.NodeID }, i.node_id()),
+              o.createElement("div", {
+                className: Ke.EditGear,
+                onClick: () => r(!0),
+              }),
+              o.createElement("div", {
+                className: Ke.Delete,
+                onClick: () =>
+                  (0, Pe.AM)(
+                    o.createElement(Re.uH, {
+                      strTitle: (0, c.Xx)(
+                        "#SteamLearn_Config_Node_Delete_Node",
+                      ),
+                      strDescription: (0, c.Xx)(
+                        "#SteamLearn_Config_Node_Delete_NodeDetails",
+                      ),
+                      onOK: () => oe(t, a, i.node_id()),
+                    }),
+                    window,
+                  ),
+              }),
+            ),
+            o.createElement("div", { className: Ke.TitleUnderBar }),
+            o.createElement(
+              "div",
+              { className: Ke.Body },
+              o.createElement(
+                "div",
+                { className: Ke.CenterSection },
+                i.comment().length > 0 &&
+                  o.createElement(
+                    "div",
+                    { className: Ke.Comment },
+                    i.comment(),
+                  ),
+                o.createElement(
+                  "div",
+                  { className: Ke.LabelValue },
+                  o.createElement(
+                    "div",
+                    { className: Ke.Label },
+                    (0, c.Xx)("#SteamLearn_Config_Node_Conv1D_Filters"),
+                  ),
+                  o.createElement(
+                    "div",
+                    { className: Ke.Value },
+                    i.conv_1d().filters(),
+                  ),
+                ),
+                o.createElement(
+                  "div",
+                  { className: Ke.LabelValue },
+                  o.createElement(
+                    "div",
+                    { className: Ke.Label },
+                    (0, c.Xx)("#SteamLearn_Config_Node_Conv1D_KernelSize"),
+                  ),
+                  o.createElement(
+                    "div",
+                    { className: Ke.Value },
+                    i.conv_1d().kernel_size(),
+                  ),
+                ),
+              ),
+            ),
+            d.map((e, t) => {
+              const a = Math.floor(((t + 1) / (d.length + 1)) * 200),
+                n = E(e.connector_id());
+              return o.createElement(
+                Me.HH,
+                {
+                  key: n,
+                  type: "source",
+                  position: Ue.P.Bottom,
+                  id: n,
+                  style: { left: a },
+                },
+                o.createElement(
+                  "div",
+                  { className: Ke.ConnectorID },
+                  e.connector_id(),
+                ),
+              );
+            }),
+          );
+        },
+        Wt = (e) => {
+          const { msgWorkingProject: t, msgWorkingProjectConfig: a } = ue(),
+            [n, r] = o.useState(e.msgNode.comment()),
+            [i, s] = o.useState(e.msgNode.conv_1d().filters().toString()),
+            [l, d] = o.useState(e.msgNode.conv_1d().kernel_size().toString());
+          o.useEffect(() => {
+            r(e.msgNode.comment()),
+              s(e.msgNode.conv_1d().filters().toString()),
+              d(e.msgNode.conv_1d().kernel_size().toString());
+          }, [e]);
+          return o.createElement(
+            Ve.On,
+            {
+              active: e.bVisible,
+              onDismiss: () => e.fnSetPopupVisible(!1),
+              modalClassName: "NodeEditDialog",
+            },
+            o.createElement(
+              "div",
+              { className: Ke.NodeHeader },
+              (0, c.Xx)("#SteamLearn_Config_Node_Title_Conv1D"),
+              o.createElement(
+                "div",
+                { className: Ke.SubHeader },
+                (0, c.Xx)("#SteamLearn_Config_Node_Title_Conv1DEditDesc"),
+              ),
+            ),
+            o.createElement(
+              "div",
+              { className: Ke.NodeBody },
+              o.createElement("div", { className: Ke.Separator }),
+              o.createElement(
+                "div",
+                { className: Ke.NodeOptionBlock },
+                o.createElement(
+                  "div",
+                  { className: Ke.NodeOptionHeader },
+                  (0, c.Xx)("#SteamLearn_Config_Node_Comment"),
+                ),
+                o.createElement(
+                  "div",
+                  { className: Ke.NodeOptionDesc },
+                  (0, c.Xx)("#SteamLearn_Config_Node_CommentDesc"),
+                ),
+                o.createElement(Qe, {
+                  isText: !0,
+                  dontUpdateProject: !0,
+                  width: 200,
+                  fnGetInitialValue: () => n,
+                  fnSetValue: (e) => r(e),
+                }),
+              ),
+              o.createElement("div", { className: Ke.Separator }),
+              o.createElement(
+                "div",
+                { className: Ke.NodeOptionBlock },
+                o.createElement(
+                  "div",
+                  { className: Ke.NodeOptionHeader },
+                  (0, c.Xx)("#SteamLearn_Config_Node_Conv1D_Filters"),
+                ),
+                o.createElement(
+                  "div",
+                  { className: Ke.NodeOptionDesc },
+                  (0, c.Xx)("#SteamLearn_Config_Node_Conv1D_FiltersDesc"),
+                ),
+                o.createElement(Qe, {
+                  dontUpdateProject: !0,
+                  fnGetInitialValue: () => i,
+                  fnSetValue: (e) => s(e),
+                }),
+              ),
+              o.createElement("div", { className: Ke.Separator }),
+              o.createElement(
+                "div",
+                { className: Ke.NodeOptionBlock },
+                o.createElement(
+                  "div",
+                  { className: Ke.NodeOptionHeader },
+                  (0, c.Xx)("#SteamLearn_Config_Node_Conv1D_KernelSize"),
+                ),
+                o.createElement(
+                  "div",
+                  { className: Ke.NodeOptionDesc },
+                  (0, c.Xx)("#SteamLearn_Config_Node_Conv1D_KernelSizeDesc"),
+                ),
+                o.createElement(Qe, {
+                  dontUpdateProject: !0,
+                  fnGetInitialValue: () => l,
+                  fnSetValue: (e) => d(e),
+                }),
+              ),
+              o.createElement("div", { className: Ke.Separator }),
+            ),
+            o.createElement(
+              "div",
+              { className: Ke.Buttons },
+              o.createElement(
+                Te.KM,
+                {
+                  onClick: () => {
+                    e.msgNode.conv_1d().set_filters(parseInt(i)),
+                      e.msgNode.conv_1d().set_kernel_size(parseInt(l)),
+                      e.msgNode.set_comment(n),
+                      ie(t),
+                      e.fnSetPopupVisible(!1);
+                  },
+                },
+                (0, c.Xx)("#SteamLearn_Confirm"),
+              ),
+              o.createElement(
+                Te.zx,
+                { onClick: () => e.fnSetPopupVisible(!1) },
+                (0, c.Xx)("#SteamLearn_Cancel"),
+              ),
+            ),
+          );
+        },
+        zt = (e) => {
+          const { msgWorkingProject: t, msgWorkingProjectConfig: a } = ue(),
+            [n, r] = o.useState(!1),
+            i = e.data.msgNode,
+            l = i.connectors().filter((e) => e.is_input_connector()),
+            d = i.connectors().filter((e) => !e.is_input_connector());
+          return o.createElement(
+            "div",
+            { className: (0, s.Z)(Ke.FlowNode, Ke.MaxPooling1DNode, Ke.Keras) },
+            o.createElement(Ut, {
+              bVisible: n,
+              fnSetPopupVisible: r,
+              msgNode: i,
+            }),
+            l.map((e, t) => {
+              const a = Math.floor(((t + 1) / (l.length + 1)) * 200),
+                n = E(e.connector_id());
+              return o.createElement(
+                Me.HH,
+                {
+                  key: n,
+                  type: "target",
+                  position: Ue.P.Top,
+                  id: n,
+                  style: { left: a },
+                },
+                o.createElement(
+                  "div",
+                  { className: Ke.ConnectorID },
+                  e.connector_id(),
+                ),
+              );
+            }),
+            o.createElement(
+              "div",
+              { className: Ke.Title },
+              o.createElement(
+                "div",
+                { className: Ke.TitleText },
+                (0, c.Xx)("#SteamLearn_Config_Node_Title_MaxPooling1D"),
+              ),
+              o.createElement("div", { className: Ke.NodeID }, i.node_id()),
+              o.createElement("div", {
+                className: Ke.EditGear,
+                onClick: () => r(!0),
+              }),
+              o.createElement("div", {
+                className: Ke.Delete,
+                onClick: () =>
+                  (0, Pe.AM)(
+                    o.createElement(Re.uH, {
+                      strTitle: (0, c.Xx)(
+                        "#SteamLearn_Config_Node_Delete_Node",
+                      ),
+                      strDescription: (0, c.Xx)(
+                        "#SteamLearn_Config_Node_Delete_NodeDetails",
+                      ),
+                      onOK: () => oe(t, a, i.node_id()),
+                    }),
+                    window,
+                  ),
+              }),
+            ),
+            o.createElement("div", { className: Ke.TitleUnderBar }),
+            o.createElement(
+              "div",
+              { className: Ke.Body },
+              o.createElement(
+                "div",
+                { className: Ke.CenterSection },
+                i.comment().length > 0 &&
+                  o.createElement(
+                    "div",
+                    { className: Ke.Comment },
+                    i.comment(),
+                  ),
+                o.createElement(
+                  "div",
+                  { className: Ke.LabelValue },
+                  o.createElement(
+                    "div",
+                    { className: Ke.Label },
+                    (0, c.Xx)("#SteamLearn_Config_Node_MaxPooling1D_PoolSize"),
+                  ),
+                  o.createElement(
+                    "div",
+                    { className: Ke.Value },
+                    i.max_pooling_1d().pool_size(),
+                  ),
+                ),
+              ),
+            ),
+            d.map((e, t) => {
+              const a = Math.floor(((t + 1) / (d.length + 1)) * 200),
+                n = E(e.connector_id());
+              return o.createElement(
+                Me.HH,
+                {
+                  key: n,
+                  type: "source",
+                  position: Ue.P.Bottom,
+                  id: n,
+                  style: { left: a },
+                },
+                o.createElement(
+                  "div",
+                  { className: Ke.ConnectorID },
+                  e.connector_id(),
+                ),
+              );
+            }),
+          );
+        },
+        Ut = (e) => {
+          const { msgWorkingProject: t, msgWorkingProjectConfig: a } = ue(),
+            [n, r] = o.useState(e.msgNode.comment()),
+            [i, s] = o.useState(
+              e.msgNode.max_pooling_1d().pool_size().toString(),
+            );
+          o.useEffect(() => {
+            r(e.msgNode.comment()),
+              s(e.msgNode.max_pooling_1d().pool_size().toString());
+          }, [e]);
+          return o.createElement(
+            Ve.On,
+            {
+              active: e.bVisible,
+              onDismiss: () => e.fnSetPopupVisible(!1),
+              modalClassName: "NodeEditDialog",
+            },
+            o.createElement(
+              "div",
+              { className: Ke.NodeHeader },
+              (0, c.Xx)("#SteamLearn_Config_Node_Title_MaxPooling1D"),
+              o.createElement(
+                "div",
+                { className: Ke.SubHeader },
+                (0, c.Xx)("#SteamLearn_Config_Node_Title_MaxPooling1DEditDesc"),
+              ),
+            ),
+            o.createElement(
+              "div",
+              { className: Ke.NodeBody },
+              o.createElement("div", { className: Ke.Separator }),
+              o.createElement(
+                "div",
+                { className: Ke.NodeOptionBlock },
+                o.createElement(
+                  "div",
+                  { className: Ke.NodeOptionHeader },
+                  (0, c.Xx)("#SteamLearn_Config_Node_Comment"),
+                ),
+                o.createElement(
+                  "div",
+                  { className: Ke.NodeOptionDesc },
+                  (0, c.Xx)("#SteamLearn_Config_Node_CommentDesc"),
+                ),
+                o.createElement(Qe, {
+                  isText: !0,
+                  dontUpdateProject: !0,
+                  width: 200,
+                  fnGetInitialValue: () => n,
+                  fnSetValue: (e) => r(e),
+                }),
+              ),
+              o.createElement("div", { className: Ke.Separator }),
+              o.createElement(
+                "div",
+                { className: Ke.NodeOptionBlock },
+                o.createElement(
+                  "div",
+                  { className: Ke.NodeOptionHeader },
+                  (0, c.Xx)("#SteamLearn_Config_Node_MaxPooling1D_PoolSize"),
+                ),
+                o.createElement(
+                  "div",
+                  { className: Ke.NodeOptionDesc },
+                  (0, c.Xx)(
+                    "#SteamLearn_Config_Node_MaxPooling1D_PoolSizeDesc",
+                  ),
+                ),
+                o.createElement(Qe, {
+                  dontUpdateProject: !0,
+                  fnGetInitialValue: () => i,
+                  fnSetValue: (e) => s(e),
+                }),
+              ),
+              o.createElement("div", { className: Ke.Separator }),
+            ),
+            o.createElement(
+              "div",
+              { className: Ke.Buttons },
+              o.createElement(
+                Te.KM,
+                {
+                  onClick: () => {
+                    e.msgNode.max_pooling_1d().set_pool_size(parseInt(i)),
+                      e.msgNode.set_comment(n),
+                      ie(t),
+                      e.fnSetPopupVisible(!1);
+                  },
+                },
+                (0, c.Xx)("#SteamLearn_Confirm"),
+              ),
+              o.createElement(
+                Te.zx,
+                { onClick: () => e.fnSetPopupVisible(!1) },
+                (0, c.Xx)("#SteamLearn_Cancel"),
+              ),
+            ),
+          );
+        },
+        Rt = () => {
           const {
             msgWorkingProject: e,
             msgWorkingProjectConfig: t,
@@ -9935,11 +10420,11 @@
           } = ue();
           return o.createElement(
             "div",
-            { className: kt.ProjectModelPage },
-            o.createElement(zt, null),
+            { className: yt.ProjectModelPage },
+            o.createElement(Zt, null),
           );
         },
-        Wt = (e) =>
+        Kt = (e) =>
           o.createElement(
             We.HP,
             {
@@ -9950,14 +10435,14 @@
             o.createElement(
               "div",
               {
-                className: (0, s.Z)(kt.DragSource, kt.DragCombine),
+                className: (0, s.Z)(yt.DragSource, yt.DragCombine),
                 onDragStart: (t) => e.fnDragStart(t, e.eType),
                 draggable: !0,
               },
               e.strName,
             ),
           ),
-        zt = () => {
+        Zt = () => {
           const e = o.useRef(null),
             [t, a] = o.useState(null),
             {
@@ -9965,11 +10450,11 @@
               msgWorkingProjectConfig: r,
               nPublishedVersion: i,
             } = ue(),
-            [l, d] = Rt(r),
+            [l, d] = $t(r),
             [m, _, p] = (0, Me.Rr)(l),
             [N, g, f] = (0, Me.ll)(d),
             [E, v] = o.useState(null),
-            [L, C] = o.useState(!1),
+            [C, L] = o.useState(!1),
             b = o.useMemo(
               () => ({
                 nodeInput: St,
@@ -9980,7 +10465,7 @@
                 nodeCombine: qe,
                 nodeEmbedding: ut,
                 nodeTrain: Tt,
-                nodeShuffle: Lt,
+                nodeShuffle: Ct,
                 nodeSyncedShuffle: bt,
                 nodeOnehot: xt,
                 nodeExplode: Nt,
@@ -9993,11 +10478,13 @@
                 nodeNamedInference: Bt,
                 nodeDot: Ht,
                 nodeExtract: Ft,
+                nodeConv1D: Mt,
+                nodeMaxPooling1D: zt,
               }),
               [],
             );
           o.useEffect(() => {
-            const [e, t] = Rt(r);
+            const [e, t] = $t(r);
             _(e), g(t);
           }, [n, r, _, g]);
           const D = o.useCallback((e, t) => {
@@ -10137,6 +10624,15 @@
                     case 20:
                       (i = 2), (s = 1), r.dot().set_normalize(!1);
                       break;
+                    case 22:
+                      (i = 1),
+                        (s = 1),
+                        r.conv_1d().set_filters(32),
+                        r.conv_1d().set_kernel_size(3);
+                      break;
+                    case 23:
+                      (i = 1), (s = 1), r.max_pooling_1d().set_pool_size(3);
+                      break;
                     case 21: {
                       r.extract().set_input_type(0),
                         r.extract().set_mode(0),
@@ -10208,7 +10704,7 @@
               },
               [p],
             ),
-            y = o.useCallback(
+            k = o.useCallback(
               (e, t, a) => {
                 const o = h(t.id);
                 let i = r.project_nodes().find((e) => e.node_id() == o);
@@ -10219,7 +10715,7 @@
               },
               [n, r],
             ),
-            k = o.useCallback(
+            y = o.useCallback(
               (e) => {
                 f(e);
               },
@@ -10293,43 +10789,43 @@
             );
           return o.createElement(
             "div",
-            { className: kt.ProjectModelReactFlow },
+            { className: yt.ProjectModelReactFlow },
             o.createElement(
               Me.tV,
               null,
               o.createElement(
                 "div",
                 {
-                  className: (0, s.Z)(kt.ReactFlowWrapper, L && "DebugEnabled"),
+                  className: (0, s.Z)(yt.ReactFlowWrapper, C && "DebugEnabled"),
                   ref: e,
                 },
                 o.createElement(
                   "div",
-                  { className: kt.DragSourcePanel },
+                  { className: yt.DragSourcePanel },
                   o.createElement(
                     "div",
-                    { className: kt.DragRow },
+                    { className: yt.DragRow },
                     o.createElement(
                       "div",
                       {
-                        className: (0, s.Z)(kt.DragRowTitle, kt.Preprocessing),
+                        className: (0, s.Z)(yt.DragRowTitle, yt.Preprocessing),
                       },
                       o.createElement(
                         "div",
-                        { className: kt.Title },
+                        { className: yt.Title },
                         (0, c.Xx)("#SteamLearn_Config_Node_Type_Preprocessing"),
                       ),
-                      o.createElement("div", { className: kt.SpacerLine }),
+                      o.createElement("div", { className: yt.SpacerLine }),
                     ),
                     o.createElement(
                       "div",
                       {
                         className: (0, s.Z)(
-                          kt.DrawRowElements,
-                          kt.Preprocessing,
+                          yt.DrawRowElements,
+                          yt.Preprocessing,
                         ),
                       },
-                      o.createElement(Wt, {
+                      o.createElement(Kt, {
                         fnDragStart: D,
                         eType: 15,
                         strName: (0, c.Xx)("#SteamLearn_Config_Node_Combine"),
@@ -10337,7 +10833,7 @@
                           "#SteamLearn_Config_Node_CombineTooltip",
                         ),
                       }),
-                      o.createElement(Wt, {
+                      o.createElement(Kt, {
                         fnDragStart: D,
                         eType: 9,
                         strName: (0, c.Xx)("#SteamLearn_Config_Node_Shuffle"),
@@ -10345,7 +10841,7 @@
                           "#SteamLearn_Config_Node_ShuffleTooltip",
                         ),
                       }),
-                      o.createElement(Wt, {
+                      o.createElement(Kt, {
                         fnDragStart: D,
                         eType: 10,
                         strName: (0, c.Xx)(
@@ -10355,7 +10851,7 @@
                           "#SteamLearn_Config_Node_SyncedShuffleTooltip",
                         ),
                       }),
-                      o.createElement(Wt, {
+                      o.createElement(Kt, {
                         fnDragStart: D,
                         eType: 11,
                         strName: (0, c.Xx)("#SteamLearn_Config_Node_Onehot"),
@@ -10363,7 +10859,7 @@
                           "#SteamLearn_Config_Node_OnehotTooltip",
                         ),
                       }),
-                      o.createElement(Wt, {
+                      o.createElement(Kt, {
                         fnDragStart: D,
                         eType: 12,
                         strName: (0, c.Xx)("#SteamLearn_Config_Node_Explode"),
@@ -10371,7 +10867,7 @@
                           "#SteamLearn_Config_Node_ExplodeTooltip",
                         ),
                       }),
-                      o.createElement(Wt, {
+                      o.createElement(Kt, {
                         fnDragStart: D,
                         eType: 13,
                         strName: (0, c.Xx)(
@@ -10381,7 +10877,7 @@
                           "#SteamLearn_Config_Node_ConditionalSwapTooltip",
                         ),
                       }),
-                      o.createElement(Wt, {
+                      o.createElement(Kt, {
                         fnDragStart: D,
                         eType: 7,
                         strName: (0, c.Xx)(
@@ -10391,7 +10887,7 @@
                           "#SteamLearn_Config_Node_ConditionalExtractTooltip",
                         ),
                       }),
-                      o.createElement(Wt, {
+                      o.createElement(Kt, {
                         fnDragStart: D,
                         eType: 21,
                         strName: (0, c.Xx)("#SteamLearn_Config_Node_Extract"),
@@ -10399,7 +10895,7 @@
                           "#SteamLearn_Config_Node_ExtractTooltip",
                         ),
                       }),
-                      o.createElement(Wt, {
+                      o.createElement(Kt, {
                         fnDragStart: D,
                         eType: 14,
                         strName: (0, c.Xx)("#SteamLearn_Config_Node_KMeans"),
@@ -10407,7 +10903,7 @@
                           "#SteamLearn_Config_Node_KMeansTooltip",
                         ),
                       }),
-                      o.createElement(Wt, {
+                      o.createElement(Kt, {
                         fnDragStart: D,
                         eType: 16,
                         strName: (0, c.Xx)(
@@ -10417,7 +10913,7 @@
                           "#SteamLearn_Config_Node_TextVectorizationTooltip",
                         ),
                       }),
-                      o.createElement(Wt, {
+                      o.createElement(Kt, {
                         fnDragStart: D,
                         eType: 18,
                         strName: (0, c.Xx)("#SteamLearn_Config_Node_Normalize"),
@@ -10429,21 +10925,21 @@
                   ),
                   o.createElement(
                     "div",
-                    { className: kt.DragRow },
+                    { className: yt.DragRow },
                     o.createElement(
                       "div",
-                      { className: (0, s.Z)(kt.DragRowTitle, kt.Keras) },
+                      { className: (0, s.Z)(yt.DragRowTitle, yt.Keras) },
                       o.createElement(
                         "div",
-                        { className: kt.Title },
+                        { className: yt.Title },
                         (0, c.Xx)("#SteamLearn_Config_Node_Type_Keras"),
                       ),
-                      o.createElement("div", { className: kt.SpacerLine }),
+                      o.createElement("div", { className: yt.SpacerLine }),
                     ),
                     o.createElement(
                       "div",
-                      { className: (0, s.Z)(kt.DrawRowElements, kt.Keras) },
-                      o.createElement(Wt, {
+                      { className: (0, s.Z)(yt.DrawRowElements, yt.Keras) },
+                      o.createElement(Kt, {
                         fnDragStart: D,
                         eType: 8,
                         strName: (0, c.Xx)("#SteamLearn_Config_Node_Concat"),
@@ -10451,7 +10947,7 @@
                           "#SteamLearn_Config_Node_ConcatTooltip",
                         ),
                       }),
-                      o.createElement(Wt, {
+                      o.createElement(Kt, {
                         fnDragStart: D,
                         eType: 5,
                         strName: (0, c.Xx)("#SteamLearn_Config_Node_Embedding"),
@@ -10459,7 +10955,7 @@
                           "#SteamLearn_Config_Node_EmbeddingTooltip",
                         ),
                       }),
-                      o.createElement(Wt, {
+                      o.createElement(Kt, {
                         fnDragStart: D,
                         eType: 2,
                         strName: (0, c.Xx)("#SteamLearn_Config_Node_Dense"),
@@ -10467,7 +10963,7 @@
                           "#SteamLearn_Config_Node_DenseTooltip",
                         ),
                       }),
-                      o.createElement(Wt, {
+                      o.createElement(Kt, {
                         fnDragStart: D,
                         eType: 3,
                         strName: (0, c.Xx)(
@@ -10477,7 +10973,7 @@
                           "#SteamLearn_Config_Node_DenseStackTooltip",
                         ),
                       }),
-                      o.createElement(Wt, {
+                      o.createElement(Kt, {
                         fnDragStart: D,
                         eType: 4,
                         strName: (0, c.Xx)("#SteamLearn_Config_Node_Dropout"),
@@ -10485,7 +10981,7 @@
                           "#SteamLearn_Config_Node_DropoutTooltip",
                         ),
                       }),
-                      o.createElement(Wt, {
+                      o.createElement(Kt, {
                         fnDragStart: D,
                         eType: 17,
                         strName: (0, c.Xx)(
@@ -10495,7 +10991,7 @@
                           "#SteamLearn_Config_Node_BatchNormalizationTooltip",
                         ),
                       }),
-                      o.createElement(Wt, {
+                      o.createElement(Kt, {
                         fnDragStart: D,
                         eType: 19,
                         strName: (0, c.Xx)(
@@ -10505,7 +11001,7 @@
                           "#SteamLearn_Config_Node_NamedInferenceTooltip",
                         ),
                       }),
-                      o.createElement(Wt, {
+                      o.createElement(Kt, {
                         fnDragStart: D,
                         eType: 20,
                         strName: (0, c.Xx)("#SteamLearn_Config_Node_Dot"),
@@ -10513,11 +11009,29 @@
                           "#SteamLearn_Config_Node_DotTooltip",
                         ),
                       }),
+                      o.createElement(Kt, {
+                        fnDragStart: D,
+                        eType: 22,
+                        strName: (0, c.Xx)("#SteamLearn_Config_Node_Conv1D"),
+                        strTooltip: (0, c.Xx)(
+                          "#SteamLearn_Config_Node_Conv1DTooltip",
+                        ),
+                      }),
+                      o.createElement(Kt, {
+                        fnDragStart: D,
+                        eType: 23,
+                        strName: (0, c.Xx)(
+                          "#SteamLearn_Config_Node_MaxPooling1D",
+                        ),
+                        strTooltip: (0, c.Xx)(
+                          "#SteamLearn_Config_Node_MaxPooling1DTooltip",
+                        ),
+                      }),
                       o.createElement(
                         "div",
                         {
-                          className: (0, s.Z)(kt.DebugToggle, L && kt.Enabled),
-                          onClick: () => C(!L),
+                          className: (0, s.Z)(yt.DebugToggle, C && yt.Enabled),
+                          onClick: () => L(!C),
                         },
                         "Debug",
                       ),
@@ -10529,8 +11043,8 @@
                   nodes: m,
                   edges: N,
                   onNodesChange: X,
-                  onEdgesChange: k,
-                  onNodeDragStop: y,
+                  onEdgesChange: y,
+                  onNodeDragStop: k,
                   onConnect: O,
                   onInit: a,
                   onDrop: P,
@@ -10547,7 +11061,7 @@
             ),
           );
         };
-      function Ut(e) {
+      function Qt(e) {
         switch (e) {
           case 8:
             return "nodeConcat";
@@ -10591,18 +11105,22 @@
             return "nodeDot";
           case 21:
             return "nodeExtract";
+          case 22:
+            return "nodeConv1D";
+          case 23:
+            return "nodeMaxPooling1D";
           default:
             (0, u.X)(!1, `Unknown type in GetNodeTypeString: ${e}`);
         }
         return "";
       }
-      function Rt(e) {
+      function $t(e) {
         let t = [],
           a = [];
         for (const n of e.project_nodes()) {
           t.push({
             id: v(n.node_id()),
-            type: Ut(n.type()),
+            type: Qt(n.type()),
             position: { x: n.location_x(), y: n.location_y() },
             data: { msgNode: n },
           });
@@ -10616,7 +11134,7 @@
                 );
               r
                 ? a.push({
-                    id: L(t.connector_id(), o),
+                    id: C(t.connector_id(), o),
                     source: v(n.node_id()),
                     sourceHandle: E(t.connector_id()),
                     target: v(r.node_id()),
@@ -10629,10 +11147,10 @@
         }
         return [t, a];
       }
-      var Kt = a(76841),
-        Zt = a(76711);
-      function Qt(e, t, a, n, o) {
-        if (0 == a) return void e.push(ba.SteamLearnProjectCreate());
+      var Yt = a(76841),
+        qt = a(76711);
+      function Jt(e, t, a, n, o) {
+        if (0 == a) return void e.push(Xa.SteamLearnProjectCreate());
         let r = n;
         if (-1 == r) {
           const e = o.find((e) => e.project_id() == a);
@@ -10646,25 +11164,25 @@
           }
         }
         -1 == r && (r = 0),
-          Da(t.pathname, [ba.SteamLearnProjectDataSources(void 0, void 0)]) &&
-            e.push(ba.SteamLearnProjectDataSources(a, r)),
-          Da(t.pathname, [ba.SteamLearnProjectOverview(void 0, void 0)]) &&
-            e.push(ba.SteamLearnProjectOverview(a, r)),
-          Da(t.pathname, [ba.SteamLearnProjectSnapshots(void 0, void 0)]) &&
-            e.push(ba.SteamLearnProjectSnapshots(a, r)),
-          Da(t.pathname, [ba.SteamLearnProjectTrainSettings(void 0, void 0)]) &&
-            e.push(ba.SteamLearnProjectTrainSettings(a, r)),
-          Da(t.pathname, [ba.SteamLearnProjectModel(void 0, void 0)]) &&
-            e.push(ba.SteamLearnProjectModel(a, r)),
-          Da(t.pathname, [ba.SteamLearnProjectTrain(void 0, void 0)]) &&
-            e.push(ba.SteamLearnProjectTrain(a, r)),
-          Da(t.pathname, [ba.SteamLearnProjectTrainStatus(void 0, void 0)]) &&
-            e.push(ba.SteamLearnProjectTrainStatus(a, r)),
-          Da(t.pathname, [
-            ba.SteamLearnProjectInferenceTester(void 0, void 0),
-          ]) && e.push(ba.SteamLearnProjectInferenceTester(a, r));
+          ka(t.pathname, [Xa.SteamLearnProjectDataSources(void 0, void 0)]) &&
+            e.push(Xa.SteamLearnProjectDataSources(a, r)),
+          ka(t.pathname, [Xa.SteamLearnProjectOverview(void 0, void 0)]) &&
+            e.push(Xa.SteamLearnProjectOverview(a, r)),
+          ka(t.pathname, [Xa.SteamLearnProjectSnapshots(void 0, void 0)]) &&
+            e.push(Xa.SteamLearnProjectSnapshots(a, r)),
+          ka(t.pathname, [Xa.SteamLearnProjectTrainSettings(void 0, void 0)]) &&
+            e.push(Xa.SteamLearnProjectTrainSettings(a, r)),
+          ka(t.pathname, [Xa.SteamLearnProjectModel(void 0, void 0)]) &&
+            e.push(Xa.SteamLearnProjectModel(a, r)),
+          ka(t.pathname, [Xa.SteamLearnProjectTrain(void 0, void 0)]) &&
+            e.push(Xa.SteamLearnProjectTrain(a, r)),
+          ka(t.pathname, [Xa.SteamLearnProjectTrainStatus(void 0, void 0)]) &&
+            e.push(Xa.SteamLearnProjectTrainStatus(a, r)),
+          ka(t.pathname, [
+            Xa.SteamLearnProjectInferenceTester(void 0, void 0),
+          ]) && e.push(Xa.SteamLearnProjectInferenceTester(a, r));
       }
-      const $t = (e) => {
+      const ea = (e) => {
           const { msgProject: t, msgWorkingProject: a } = ue(),
             n = t
               ? t.published_configs().map((e) => e.published_version())
@@ -10726,13 +11244,13 @@
             ),
           );
         },
-        Yt = (e) => {
+        ta = (e) => {
           const { msgProject: t, msgWorkingProject: a } = ue(),
             [n, r] = o.useState(!1);
           o.useEffect(() => {
             r(!1);
           }, [e.bVisible]);
-          const i = new Zt.H({
+          const i = new qt.H({
             detectCircular: !0,
             maxDepth: 1 / 0,
             showModifications: !0,
@@ -10762,8 +11280,8 @@
                 n &&
                   o.createElement(
                     "div",
-                    { className: Kt.DiffTableContainer },
-                    o.createElement(Zt.A, {
+                    { className: Yt.DiffTableContainer },
+                    o.createElement(qt.A, {
                       diff: i.diff(t.toObject(), a.toObject()),
                       hideUnchangedLines: !0,
                       highlightInlineDiff: !0,
@@ -10775,13 +11293,13 @@
                 !n &&
                   o.createElement(
                     "div",
-                    { className: Kt.ShowChangesButton, onClick: () => r(!0) },
+                    { className: Yt.ShowChangesButton, onClick: () => r(!0) },
                     (0, c.Xx)("#SteamLEarn_Project_DiscardShowDiff"),
                   ),
               ),
               o.createElement(
                 "div",
-                { className: Kt.Buttons },
+                { className: Yt.Buttons },
                 o.createElement(Te.o9, {
                   onCancel: () => e.fnClosePopup(),
                   onOK: () => {
@@ -10792,13 +11310,13 @@
             ),
           );
         };
-      var qt;
+      var aa;
       !(function (e) {
         (e[(e.Hidden = 0)] = "Hidden"),
           (e[(e.Create = 1)] = "Create"),
           (e[(e.Edit = 2)] = "Edit");
-      })(qt || (qt = {}));
-      const Jt = (e) => {
+      })(aa || (aa = {}));
+      const na = (e) => {
           const {
               msgProject: t,
               msgWorkingProject: a,
@@ -10812,46 +11330,46 @@
             [g, S] = o.useState(""),
             f = (0, r.k6)();
           o.useEffect(() => {
-            e.eState == qt.Edit
+            e.eState == aa.Edit
               ? (m(a.project_name()), u(a.project_description()), N(!0))
-              : e.eState == qt.Create && (m(""), u(""), N(!1)),
+              : e.eState == aa.Create && (m(""), u(""), N(!1)),
               S("");
           }, [e.eState, a]);
           let E = "",
             v = "",
             x = "";
           switch (e.eState) {
-            case qt.Create:
+            case aa.Create:
               (E = (0, c.Xx)("#SteamLearn_Project_Create_Header")),
                 (x = (0, c.Xx)("#SteamLearn_Project_Create_Guidance")),
                 (v = (0, c.Xx)("#SteamLearn_Project_CreateProject"));
               break;
-            case qt.Edit:
+            case aa.Edit:
               (E = (0, c.Xx)("#SteamLearn_Project_Edit_Guidance")),
                 (v = (0, c.Xx)("#SteamLearn_Project_Edit_Accept"));
           }
           return o.createElement(
             Ve.On,
             {
-              active: e.eState != qt.Hidden,
-              onDismiss: () => e.fnSetPopupState(qt.Hidden),
+              active: e.eState != aa.Hidden,
+              onDismiss: () => e.fnSetPopupState(aa.Hidden),
               modalClassName: "CreateOrEditProjectPopup",
             },
             o.createElement(Te.h4, null, E),
             x.length > 0 &&
-              o.createElement("div", { className: Kt.Guidance }, x),
+              o.createElement("div", { className: Yt.Guidance }, x),
             o.createElement(
               "div",
-              { className: Kt.EditSection },
+              { className: Yt.EditSection },
               g.length > 0 &&
-                o.createElement("div", { className: Kt.ErrorMessage }, g),
+                o.createElement("div", { className: Yt.ErrorMessage }, g),
               o.createElement(
                 "div",
-                { className: Kt.InputTitle },
+                { className: Yt.InputTitle },
                 (0, c.Xx)("#SteamLearn_Project_Create_Name"),
               ),
               o.createElement("input", {
-                className: Kt.InputWide,
+                className: Yt.InputWide,
                 type: "text",
                 value: d,
                 onChange: (e) => {
@@ -10860,30 +11378,30 @@
               }),
               o.createElement(
                 "div",
-                { className: Kt.InputTitle },
+                { className: Yt.InputTitle },
                 (0, c.Xx)("#SteamLearn_Project_Create_Desc"),
               ),
               o.createElement("textarea", {
-                className: Kt.InputAreaWide,
+                className: Yt.InputAreaWide,
                 value: _,
                 onChange: (e) => u(e.target.value),
               }),
             ),
             o.createElement(
               "div",
-              { className: Kt.ButtonContainer },
+              { className: Yt.ButtonContainer },
               o.createElement(
                 Te.KM,
                 {
                   disabled: !p,
                   onClick: () =>
                     (0, l.mG)(void 0, void 0, void 0, function* () {
-                      if ((N(!1), e.eState == qt.Create)) {
+                      if ((N(!1), e.eState == aa.Create)) {
                         const [t, a] = yield Z(d, _);
                         switch (t) {
                           case 1:
-                            e.fnSetPopupState(qt.Hidden),
-                              f.push(ba.SteamLearnProjectDataSources(a, 0));
+                            e.fnSetPopupState(aa.Hidden),
+                              f.push(Xa.SteamLearnProjectDataSources(a, 0));
                             break;
                           case 2:
                             S((0, c.Xx)("#SteamLearn_Project_Create_BadName"));
@@ -10897,7 +11415,7 @@
                           ie(a);
                         switch (yield Q(a, s)) {
                           case 1:
-                            m(""), u(""), S(""), e.fnSetPopupState(qt.Hidden);
+                            m(""), u(""), S(""), e.fnSetPopupState(aa.Hidden);
                             break;
                           case 0:
                           case 4:
@@ -10911,13 +11429,13 @@
               ),
               o.createElement(
                 Te.zx,
-                { disabled: !1, onClick: () => e.fnSetPopupState(qt.Hidden) },
+                { disabled: !1, onClick: () => e.fnSetPopupState(aa.Hidden) },
                 (0, c.Xx)("#SteamLearn_Project_Edit_Cancel"),
               ),
             ),
           );
         },
-        ea = (e) => {
+        oa = (e) => {
           const {
               msgProject: t,
               msgWorkingProject: a,
@@ -10929,12 +11447,12 @@
             m = (0, r.TH)(),
             [_, u, N] = (0, fe.X9)(),
             [f, E, v] = (0, fe.X9)(),
-            [x, h] = o.useState(qt.Hidden);
-          let L = [];
+            [x, h] = o.useState(aa.Hidden);
+          let C = [];
           for (const t of e.arrMsgProjects)
-            L.push({ label: t.project_name(), value: t.project_id() });
-          L.push({ label: (0, c.Xx)("#SteamLearn_CreateNew"), value: 0 });
-          let C = [
+            C.push({ label: t.project_name(), value: t.project_id() });
+          C.push({ label: (0, c.Xx)("#SteamLearn_CreateNew"), value: 0 });
+          let L = [
             {
               label: (0, c.Xx)("#SteamLearn_Header_Version_Unpublished"),
               value: 0,
@@ -10942,7 +11460,7 @@
           ];
           if (a)
             for (const e of a.published_configs())
-              C.push({
+              L.push({
                 label: (0, c.Xx)(
                   "#SteamLearn_Header_Version_PublishedVersion",
                   e.published_version(),
@@ -10982,7 +11500,7 @@
                           });
                         })(a.project_id());
                       1 == o &&
-                        setTimeout(() => Qt(d, m, i, n, e.arrMsgProjects), 500);
+                        setTimeout(() => Jt(d, m, i, n, e.arrMsgProjects), 500);
                     }),
                 }),
                 window,
@@ -10990,27 +11508,27 @@
             };
           return o.createElement(
             "div",
-            { className: Kt.ProjectSelectorInner },
-            o.createElement(Jt, { eState: x, fnSetPopupState: h }),
+            { className: Yt.ProjectSelectorInner },
+            o.createElement(na, { eState: x, fnSetPopupState: h }),
             o.createElement(
               "div",
-              { className: Kt.ProjectSection },
+              { className: Yt.ProjectSection },
               o.createElement(
                 "div",
-                { className: Kt.ProjectIDAndVersionSection },
+                { className: Yt.ProjectIDAndVersionSection },
                 o.createElement(
                   "select",
                   {
-                    className: Kt.ProjectIDInput,
+                    className: Yt.ProjectIDInput,
                     value: i,
                     onChange: (t) =>
                       ((t) => {
                         0 != t
-                          ? Qt(d, m, t, -1, e.arrMsgProjects)
-                          : h(qt.Create);
+                          ? Jt(d, m, t, -1, e.arrMsgProjects)
+                          : h(aa.Create);
                       })(parseInt(t.target.value)),
                   },
-                  L.map((e) =>
+                  C.map((e) =>
                     o.createElement(
                       "option",
                       { key: e.value, value: e.value },
@@ -11022,12 +11540,12 @@
                   o.createElement(
                     "select",
                     {
-                      className: Kt.PublishedVersionInput,
+                      className: Yt.PublishedVersionInput,
                       value: s,
                       onChange: (t) =>
-                        Qt(d, m, i, parseInt(t.target.value), e.arrMsgProjects),
+                        Jt(d, m, i, parseInt(t.target.value), e.arrMsgProjects),
                     },
-                    C.map((e) =>
+                    L.map((e) =>
                       o.createElement(
                         "option",
                         { key: e.value, value: e.value },
@@ -11037,26 +11555,26 @@
                   ),
                 o.createElement(
                   "div",
-                  { className: Kt.EditButton, onClick: () => h(qt.Edit) },
+                  { className: Yt.EditButton, onClick: () => h(aa.Edit) },
                   (0, c.Xx)("#SteamLearn_Edit"),
                 ),
               ),
               a &&
                 o.createElement(
                   "div",
-                  { className: Kt.Description },
+                  { className: Yt.Description },
                   a.project_description(),
                 ),
               a &&
                 o.createElement(
                   "div",
-                  { className: Kt.ProjectID },
+                  { className: Yt.ProjectID },
                   (0, c.Xx)("#SteamLearn_ProjectID", i),
                 ),
             ),
             o.createElement(
               "div",
-              { className: Kt.StatusSection },
+              { className: Yt.StatusSection },
               (b || 0 != s) &&
                 o.createElement(
                   Te.KM,
@@ -11070,14 +11588,14 @@
                   { disabled: b, onClick: (e) => D() },
                   (0, c.Xx)("#SteamLearn_Project_Publish"),
                 ),
-              o.createElement(Yt, { bVisible: f, fnClosePopup: v }),
+              o.createElement(ta, { bVisible: f, fnClosePopup: v }),
               b &&
                 o.createElement(
                   Te.h5,
-                  { className: Kt.Warning, disabled: !b, onClick: E },
+                  { className: Yt.Warning, disabled: !b, onClick: E },
                   (0, c.Xx)("#SteamLearn_Project_Discard"),
                 ),
-              o.createElement($t, { bVisible: _, fnClosePopup: N }),
+              o.createElement(ea, { bVisible: _, fnClosePopup: N }),
               0 == s &&
                 a &&
                 a.published_configs().length > 0 &&
@@ -11090,25 +11608,25 @@
             ),
           );
         };
-      function ta() {
+      function ra() {
         const e = (0, r.TH)(),
           t = w();
-        if (!Ta(e.pathname)) return null;
+        if (!ya(e.pathname)) return null;
         const a = t.data;
         return o.createElement(
           "div",
-          { className: Kt.ProjectSelector },
+          { className: Yt.ProjectSelector },
           !a &&
             o.createElement(
               "div",
               null,
               (0, c.Xx)("#SteamLearn_LoadingProjects"),
             ),
-          a && o.createElement(ea, { arrMsgProjects: a }),
+          a && o.createElement(oa, { arrMsgProjects: a }),
         );
       }
-      var aa = a(70674);
-      const na = () => {
+      var ia = a(70674);
+      const sa = () => {
         const { msgWorkingProjectConfig: e } = ue();
         let t = [];
         for (const a of e.data_source_element_usages())
@@ -11207,21 +11725,21 @@
           u = 4 == e.snapshot_config().snapshot_schedule_type();
         return o.createElement(
           "div",
-          { className: aa.ProjectSnapshotFilterPage },
+          { className: ia.ProjectSnapshotFilterPage },
           o.createElement(
             "div",
-            { className: aa.ProjectConfigBody },
+            { className: ia.ProjectConfigBody },
             o.createElement(
               "div",
-              { className: aa.OptionBlock },
+              { className: ia.OptionBlock },
               o.createElement(
                 "div",
-                { className: aa.OptionHeader },
+                { className: ia.OptionHeader },
                 (0, c.Xx)("#SteamLearn_SnapshotFilter_SamplePercent"),
               ),
               o.createElement(
                 "div",
-                { className: aa.OptionDesc },
+                { className: ia.OptionDesc },
                 (0, c.yu)(
                   "#SteamLearn_SnapshotFilter_SamplePercentDesc",
                   o.createElement("ul", null),
@@ -11233,23 +11751,23 @@
                 fnGetInitialValue: () =>
                   e.snapshot_filter().sample_reduce_percent().toString() ||
                   "100",
-                fnValidateValue: (e) => le(e, 0, 500),
+                fnValidateValue: (e) => le(e, 0, 1e3),
                 fnSetValue: (t) =>
                   e.snapshot_filter().set_sample_reduce_percent(parseInt(t)),
               }),
             ),
-            o.createElement("div", { className: aa.Separator }),
+            o.createElement("div", { className: ia.Separator }),
             o.createElement(
               "div",
-              { className: aa.OptionBlock },
+              { className: ia.OptionBlock },
               o.createElement(
                 "div",
-                { className: aa.OptionHeader },
+                { className: ia.OptionHeader },
                 (0, c.Xx)("#SteamLearn_SnapshotFilter_Histogram"),
               ),
               o.createElement(
                 "div",
-                { className: aa.OptionDesc },
+                { className: ia.OptionDesc },
                 (0, c.Xx)("#SteamLearn_SnapshotFilter_HistogramDesc"),
               ),
               o.createElement(Ye, {
@@ -11295,18 +11813,18 @@
                   e.snapshot_filter().histogram().set_num_buckets(parseInt(t)),
               }),
             ),
-            o.createElement("div", { className: aa.Separator }),
+            o.createElement("div", { className: ia.Separator }),
             o.createElement(
               "div",
-              { className: aa.OptionBlock },
+              { className: ia.OptionBlock },
               o.createElement(
                 "div",
-                { className: aa.OptionHeader },
+                { className: ia.OptionHeader },
                 (0, c.Xx)("#SteamLearn_DataSettings_SnapshotDuration"),
               ),
               o.createElement(
                 "div",
-                { className: aa.OptionDesc },
+                { className: ia.OptionDesc },
                 (0, c.Xx)("#SteamLearn_DataSettings_SnapshotDurationDesc"),
               ),
               o.createElement(Qe, {
@@ -11329,18 +11847,18 @@
                     .set_snapshot_keep_duration_days(parseInt(t)),
               }),
             ),
-            o.createElement("div", { className: aa.Separator }),
+            o.createElement("div", { className: ia.Separator }),
             o.createElement(
               "div",
-              { className: aa.OptionBlock },
+              { className: ia.OptionBlock },
               o.createElement(
                 "div",
-                { className: aa.OptionHeader },
+                { className: ia.OptionHeader },
                 (0, c.Xx)("#SteamLearn_DataSettings_FetchKeepCount"),
               ),
               o.createElement(
                 "div",
-                { className: aa.OptionDesc },
+                { className: ia.OptionDesc },
                 (0, c.Xx)("#SteamLearn_DataSettings_FetchKeepCountDesc"),
               ),
               o.createElement(Qe, {
@@ -11362,18 +11880,18 @@
                   e.data_retention_config().set_fetch_keep_count(parseInt(t)),
               }),
             ),
-            o.createElement("div", { className: aa.Separator }),
+            o.createElement("div", { className: ia.Separator }),
             o.createElement(
               "div",
-              { className: aa.OptionBlock },
+              { className: ia.OptionBlock },
               o.createElement(
                 "div",
-                { className: aa.OptionHeader },
+                { className: ia.OptionHeader },
                 (0, c.Xx)("#SteamLearn_SnapshotFilter_SnapshotType"),
               ),
               o.createElement(
                 "div",
-                { className: aa.OptionDesc },
+                { className: ia.OptionDesc },
                 (0, c.yu)(
                   "#SteamLearn_SnapshotFilter_SnapshotTypeDesc",
                   o.createElement("ul", null),
@@ -11542,16 +12060,16 @@
             (l || d) &&
               o.createElement(
                 "div",
-                { className: aa.OptionBlock },
-                o.createElement("div", { className: aa.Separator }),
+                { className: ia.OptionBlock },
+                o.createElement("div", { className: ia.Separator }),
                 o.createElement(
                   "div",
-                  { className: aa.OptionHeader },
+                  { className: ia.OptionHeader },
                   (0, c.Xx)("#SteamLearn_SnapshotFilter_SnapshotSchedule"),
                 ),
                 o.createElement(
                   "div",
-                  { className: aa.OptionDesc },
+                  { className: ia.OptionDesc },
                   (0, c.Xx)("#SteamLearn_SnapshotFilter_SnapshotScheduleDesc"),
                 ),
                 o.createElement(Ye, {
@@ -11591,8 +12109,8 @@
           ),
         );
       };
-      var oa = a(64292);
-      const ra = () => {
+      var ca = a(64292);
+      const la = () => {
         const { msgWorkingProjectConfig: e } = ue(),
           t = [
             {
@@ -11622,41 +12140,41 @@
           ];
         return o.createElement(
           "div",
-          { className: oa.ProjectTrainSettingsPage },
+          { className: ca.ProjectTrainSettingsPage },
           o.createElement(
             "div",
-            { className: oa.OptionBlock },
+            { className: ca.OptionBlock },
             o.createElement(
               "div",
-              { className: oa.OptionHeader },
+              { className: ca.OptionHeader },
               (0, c.Xx)("#SteamLearn_TrainSettings_FetchWorkers"),
             ),
             o.createElement(
               "div",
-              { className: oa.OptionDesc },
+              { className: ca.OptionDesc },
               (0, c.Xx)("#SteamLearn_TrainSettings_FetchWorkersDesc"),
             ),
             o.createElement(Qe, {
               label: (0, c.Xx)("#SteamLearn_TrainSettings_FetchWorkersInput"),
               fnGetInitialValue: () =>
                 e.train_config().fetch_workers().toString() || "16",
-              fnValidateValue: (e) => le(e, 0, 64),
+              fnValidateValue: (e) => le(e, 0, 128),
               fnSetValue: (t) =>
                 e.train_config().set_fetch_workers(parseInt(t)),
             }),
           ),
-          o.createElement("div", { className: oa.Separator }),
+          o.createElement("div", { className: ca.Separator }),
           o.createElement(
             "div",
-            { className: oa.OptionBlock },
+            { className: ca.OptionBlock },
             o.createElement(
               "div",
-              { className: oa.OptionHeader },
+              { className: ca.OptionHeader },
               (0, c.Xx)("#SteamLearn_TrainSettings_FetchChunkSize"),
             ),
             o.createElement(
               "div",
-              { className: oa.OptionDesc },
+              { className: ca.OptionDesc },
               (0, c.Xx)("#SteamLearn_TrainSettings_FetchChunkSizeDesc"),
             ),
             o.createElement(Qe, {
@@ -11675,18 +12193,18 @@
                 e.train_config().set_fetch_chunk_size(parseInt(t)),
             }),
           ),
-          o.createElement("div", { className: oa.Separator }),
+          o.createElement("div", { className: ca.Separator }),
           o.createElement(
             "div",
-            { className: oa.OptionBlock },
+            { className: ca.OptionBlock },
             o.createElement(
               "div",
-              { className: oa.OptionHeader },
+              { className: ca.OptionHeader },
               (0, c.Xx)("#SteamLearn_TrainSettings_TrainBatchSize"),
             ),
             o.createElement(
               "div",
-              { className: oa.OptionDesc },
+              { className: ca.OptionDesc },
               (0, c.Xx)("#SteamLearn_TrainSettings_TrainBatchSizeDesc"),
             ),
             o.createElement(Qe, {
@@ -11705,18 +12223,18 @@
                 e.train_config().set_train_batch_size(parseInt(t)),
             }),
           ),
-          o.createElement("div", { className: oa.Separator }),
+          o.createElement("div", { className: ca.Separator }),
           o.createElement(
             "div",
-            { className: oa.OptionBlock },
+            { className: ca.OptionBlock },
             o.createElement(
               "div",
-              { className: oa.OptionHeader },
+              { className: ca.OptionHeader },
               (0, c.Xx)("#SteamLearn_TrainSettings_TrainOptimizer"),
             ),
             o.createElement(
               "div",
-              { className: oa.OptionDesc },
+              { className: ca.OptionDesc },
               (0, c.yu)(
                 "#SteamLearn_TrainSettings_TrainOptimizerDesc",
                 o.createElement("ul", null),
@@ -11731,18 +12249,18 @@
               options: t,
             }),
           ),
-          o.createElement("div", { className: oa.Separator }),
+          o.createElement("div", { className: ca.Separator }),
           o.createElement(
             "div",
-            { className: oa.OptionBlock },
+            { className: ca.OptionBlock },
             o.createElement(
               "div",
-              { className: oa.OptionHeader },
+              { className: ca.OptionHeader },
               (0, c.Xx)("#SteamLearn_TrainSettings_TrainLearningRate"),
             ),
             o.createElement(
               "div",
-              { className: oa.OptionDesc },
+              { className: ca.OptionDesc },
               (0, c.yu)(
                 "#SteamLearn_TrainSettings_TrainLearningRateDesc",
                 o.createElement("ul", null),
@@ -11766,18 +12284,18 @@
                 e.train_config().set_train_learning_rate(parseFloat(t)),
             }),
           ),
-          o.createElement("div", { className: oa.Separator }),
+          o.createElement("div", { className: ca.Separator }),
           o.createElement(
             "div",
-            { className: oa.OptionBlock },
+            { className: ca.OptionBlock },
             o.createElement(
               "div",
-              { className: oa.OptionHeader },
+              { className: ca.OptionHeader },
               (0, c.Xx)("#SteamLearn_TrainSettings_TrainEpochCount"),
             ),
             o.createElement(
               "div",
-              { className: oa.OptionDesc },
+              { className: ca.OptionDesc },
               (0, c.Xx)("#SteamLearn_TrainSettings_TrainEpochCountDesc"),
             ),
             o.createElement(Qe, {
@@ -11798,20 +12316,20 @@
                 e.train_config().set_train_epoch_count(parseInt(t)),
             }),
           ),
-          o.createElement("div", { className: oa.Separator }),
+          o.createElement("div", { className: ca.Separator }),
           o.createElement(
             "div",
-            { className: oa.OptionBlock },
+            { className: ca.OptionBlock },
             o.createElement(
               "div",
-              { className: oa.OptionHeader },
+              { className: ca.OptionHeader },
               (0, c.Xx)(
                 "#SteamLearn_TrainSettings_TrainLossImprovementThreshold",
               ),
             ),
             o.createElement(
               "div",
-              { className: oa.OptionDesc },
+              { className: ca.OptionDesc },
               (0, c.Xx)(
                 "#SteamLearn_TrainSettings_TrainLossImprovementThresholdDesc",
               ),
@@ -11840,20 +12358,20 @@
               },
             }),
           ),
-          o.createElement("div", { className: oa.Separator }),
+          o.createElement("div", { className: ca.Separator }),
           o.createElement(
             "div",
-            { className: oa.OptionBlock },
+            { className: ca.OptionBlock },
             o.createElement(
               "div",
-              { className: oa.OptionHeader },
+              { className: ca.OptionHeader },
               (0, c.Xx)(
                 "#SteamLearn_TrainSettings_TrainNoLossImprovementEpochLimit",
               ),
             ),
             o.createElement(
               "div",
-              { className: oa.OptionDesc },
+              { className: ca.OptionDesc },
               (0, c.Xx)(
                 "#SteamLearn_TrainSettings_TrainNoLossImprovementEpochLimitDesc",
               ),
@@ -11882,12 +12400,12 @@
           ),
         );
       };
-      var ia = a(53664),
-        sa = a(90291),
-        ca = a(56886),
-        la = a(52942),
-        da = a(90934);
-      function ma(e) {
+      var da = a(53664),
+        ma = a(90291),
+        _a = a(56886),
+        ua = a(52942),
+        pa = a(90934);
+      function Na(e) {
         let t = "";
         return (
           e > 3600 && ((t += `${Math.floor(e / 3600)}:`), (e %= 3600)),
@@ -11897,7 +12415,7 @@
           t
         );
       }
-      function _a(e, t) {
+      function ga(e, t) {
         if (e.length < t) return e;
         let a = [];
         const n = (e.length - 1) / t;
@@ -11912,7 +12430,7 @@
         }
         return a;
       }
-      const ua = (e) => {
+      const Sa = (e) => {
           const { nPublishedVersion: t, msgWorkingProjectConfig: a } = ue(),
             [n, r] = o.useState(!1),
             [i, d] = o.useState(""),
@@ -11924,60 +12442,60 @@
           if (0 == t)
             return o.createElement(
               "div",
-              { className: da.StatusMessage },
+              { className: pa.StatusMessage },
               (0, c.Xx)("#SteamLearn_Status_Fetch_Status_Unpublished"),
             );
           if (0 == e.arrAllFetchIDs.length)
             return o.createElement(
               "div",
-              { className: da.StatusMessage },
+              { className: pa.StatusMessage },
               (0, c.Xx)("#SteamLearn_Status_Fetch_Status_None"),
             );
           let u = (0, c.Xx)("#SteamLearn_Status_Fetch_Status_Unknown"),
-            N = da.Unknown;
+            N = pa.Unknown;
           if (_)
             switch (_.status()) {
               case 0:
                 (u = (0, c.Xx)("#SteamLearn_Status_Fetch_Status_Unknown")),
-                  (N = da.Unknown);
+                  (N = pa.Unknown);
                 break;
               case 1:
                 (u = (0, c.Xx)("#SteamLearn_Status_Fetch_Status_Unstarted")),
-                  (N = da.Unstarted);
+                  (N = pa.Unstarted);
                 break;
               case 5:
                 (u = (0, c.Xx)(
                   "#SteamLearn_Status_Fetch_Status_InProgress_Metadata",
                 )),
-                  (N = da.InProgress);
+                  (N = pa.InProgress);
                 break;
               case 2:
                 (u = (0, c.Xx)(
                   "#SteamLearn_Status_Fetch_Status_InProgress_Data",
                 )),
-                  (N = da.InProgress);
+                  (N = pa.InProgress);
                 break;
               case 3:
                 (u = (0, c.Xx)("#SteamLearn_Status_Fetch_Status_Complete")),
-                  (N = da.Complete);
+                  (N = pa.Complete);
                 break;
               case 4:
                 (u = (0, c.Xx)("#SteamLearn_Status_Fetch_Status_Error")),
-                  (N = da.Error);
+                  (N = pa.Error);
                 break;
               case 6:
                 (u = (0, c.Xx)(
                   "#SteamLearn_Status_Fetch_Status_InProgress_Cleanup",
                 )),
-                  (N = da.InProgress);
+                  (N = pa.InProgress);
                 break;
               case 7:
                 (u = (0, c.Xx)("#SteamLearn_Status_Fetch_Status_CleanedUp")),
-                  (N = da.Complete);
+                  (N = pa.Complete);
                 break;
               case 8:
                 (u = (0, c.Xx)("#SteamLearn_Status_Fetch_Status_Canceled")),
-                  (N = da.Error);
+                  (N = pa.Error);
             }
           const f =
               _ && (5 == _.status() || 2 == _.status() || 6 == _.status()),
@@ -11993,7 +12511,7 @@
             if (_.end_time()) {
               const e = (0, c.Xx)(
                 "#SteamLearn_Status_Train_Fetch_Duration",
-                ma(_.end_time() - _.start_time()),
+                Na(_.end_time() - _.start_time()),
               );
               e != i && d(e);
               const t = new Date(1e3 * _.end_time());
@@ -12012,7 +12530,7 @@
               if (!isNaN(e) && !m.isFetching) {
                 const t = (0, c.Xx)(
                   "#SteamLearn_Status_Train_Fetch_TimeEstimate",
-                  ma(e),
+                  Na(e),
                 );
                 t != i && d(t);
               }
@@ -12031,19 +12549,19 @@
           }
           return o.createElement(
             "div",
-            { className: da.FetchStatusPanel },
+            { className: pa.FetchStatusPanel },
             o.createElement(
               "div",
-              { className: da.TopSection },
+              { className: pa.TopSection },
               o.createElement(
                 "div",
-                { className: da.TopLeft },
+                { className: pa.TopLeft },
                 o.createElement(
                   "div",
-                  { className: da.OptionBlock },
+                  { className: pa.OptionBlock },
                   o.createElement(
                     "div",
-                    { className: da.OptionHeader },
+                    { className: pa.OptionHeader },
                     (0, c.Xx)("#SteamLearn_Status_Fetch_Status", e.nFetchID),
                   ),
                   f &&
@@ -12068,14 +12586,14 @@
                     ),
                   o.createElement(
                     "div",
-                    { className: (0, s.Z)(da.StatusString, N) },
+                    { className: (0, s.Z)(pa.StatusString, N) },
                     u,
                   ),
                 ),
               ),
               o.createElement(
                 "div",
-                { className: da.TopRight },
+                { className: pa.TopRight },
                 o.createElement(
                   "select",
                   {
@@ -12096,29 +12614,29 @@
               _.total_rows() > 0 &&
               o.createElement(
                 "div",
-                { className: da.StatusProgress },
+                { className: pa.StatusProgress },
                 o.createElement(
                   "div",
-                  { className: da.RowProgress },
+                  { className: pa.RowProgress },
                   o.createElement(
                     "div",
-                    { className: da.RowCurrent },
+                    { className: pa.RowCurrent },
                     _.total_rows_processed().toLocaleString(),
                   ),
-                  o.createElement("div", { className: da.RowSlash }, "/"),
+                  o.createElement("div", { className: pa.RowSlash }, "/"),
                   o.createElement(
                     "div",
-                    { className: da.RowTotal },
+                    { className: pa.RowTotal },
                     _.total_rows().toLocaleString(),
                   ),
                 ),
                 _.total_rows_written() != _.total_rows_processed() &&
                   o.createElement(
                     "div",
-                    { className: da.RowProgress },
+                    { className: pa.RowProgress },
                     o.createElement(
                       "div",
-                      { className: da.RowCurrent },
+                      { className: pa.RowCurrent },
                       (0, c.Xx)(
                         "#SteamLearn_Status_Train_Fetch_Written",
                         _.total_rows_written().toLocaleString(),
@@ -12127,12 +12645,12 @@
                   ),
                 o.createElement(
                   "div",
-                  { className: da.RowProgress },
+                  { className: pa.RowProgress },
                   o.createElement(
                     "div",
-                    { className: da.ProgressBar },
+                    { className: pa.ProgressBar },
                     o.createElement("div", {
-                      className: da.ProgressBarInner,
+                      className: pa.ProgressBarInner,
                       style: {
                         width:
                           (100 * _.total_rows_processed()) / _.total_rows() +
@@ -12143,21 +12661,21 @@
                   x &&
                     o.createElement(
                       "div",
-                      { className: da.ProgressPct },
+                      { className: pa.ProgressPct },
                       `${((100 * _.total_rows_processed()) / _.total_rows() - 0.5).toFixed(0)}%`,
                     ),
                 ),
-                o.createElement("div", { className: da.RowProgress }, i),
-                o.createElement("div", { className: da.RowProgress }, v),
+                o.createElement("div", { className: pa.RowProgress }, i),
+                o.createElement("div", { className: pa.RowProgress }, v),
                 o.createElement(
                   "div",
-                  { className: da.ShowWorkers },
+                  { className: pa.ShowWorkers },
                   o.createElement(
                     "div",
                     {
                       className: (0, s.Z)(
-                        da.WorkersContainer,
-                        n && da.Expanded,
+                        pa.WorkersContainer,
+                        n && pa.Expanded,
                       ),
                       style: {
                         height: (n ? 20 * _.workers().length : 0) + "px",
@@ -12166,17 +12684,17 @@
                     _.workers().map((e, t) =>
                       o.createElement(
                         "div",
-                        { className: da.Worker, key: `$worker_${t}` },
+                        { className: pa.Worker, key: `$worker_${t}` },
                         o.createElement(
                           "div",
-                          { className: da.WorkerNumber },
+                          { className: pa.WorkerNumber },
                           t + 1,
                         ),
                         o.createElement(
                           "div",
-                          { className: da.ProgressBar },
+                          { className: pa.ProgressBar },
                           o.createElement("div", {
-                            className: da.ProgressBarInner,
+                            className: pa.ProgressBarInner,
                             style: {
                               width:
                                 (100 * e.rows_processed()) /
@@ -12192,7 +12710,7 @@
                     o.createElement(
                       "div",
                       {
-                        className: da.ShowWorkersTextButton,
+                        className: pa.ShowWorkersTextButton,
                         onClick: () => r(!n),
                       },
                       (0, c.Xx)(
@@ -12205,7 +12723,7 @@
               ),
           );
         },
-        pa = (e) => {
+        fa = (e) => {
           let t, a, n, r;
           for (const t of e.lines) {
             const e = Math.min(...t.data.map((e) => e[t.strDataLabel])),
@@ -12220,15 +12738,15 @@
             (a = Math.ceil(100 * s) / 100),
             o.createElement(
               "div",
-              { className: da.TrainGraph },
+              { className: pa.TrainGraph },
               o.createElement(
                 "div",
-                { className: da.GraphTitle },
+                { className: pa.GraphTitle },
                 e.strHeading,
               ),
               o.createElement(
                 "div",
-                { className: da.LineValues },
+                { className: pa.LineValues },
                 e.lines.map((e, t) =>
                   null == e.nFinalValue
                     ? null
@@ -12236,23 +12754,23 @@
                         "div",
                         {
                           key: `Legend_${e.strDataLabel}_${t}`,
-                          className: da.LegendValue,
+                          className: pa.LegendValue,
                           style: { color: e.color },
                         },
                         `${e.strDataLabel}: `,
                         o.createElement(
                           "span",
-                          { className: da.Value },
+                          { className: pa.Value },
                           "" + Math.round(1e4 * e.nFinalValue) / 1e4,
                         ),
                       ),
                 ),
               ),
               o.createElement(
-                ia.w,
+                da.w,
                 { width: 500, height: 300 },
                 e.lines.map((t, a) =>
-                  o.createElement(sa.K, {
+                  o.createElement(ma.K, {
                     key: `${e.strHeading}_${t.strDataLabel}_${a}`,
                     type: "number",
                     dataKey: "index",
@@ -12263,13 +12781,13 @@
                     tickCount: t.data.length <= 10 ? t.data.length : void 0,
                   }),
                 ),
-                o.createElement(ca.B, {
+                o.createElement(_a.B, {
                   type: "number",
                   tickCount: 5,
                   domain: [t, a],
                 }),
                 e.lines.map((e, t) =>
-                  o.createElement(la.x, {
+                  o.createElement(ua.x, {
                     key: `${e.strDataLabel}_${t}`,
                     type: "monotone",
                     stroke: e.color,
@@ -12283,11 +12801,11 @@
             )
           );
         };
-      function Na(e) {
+      function Ea(e) {
         if (null != e)
           return e.length > 0 ? e.reduce((e, t) => e + t) / e.length : 0;
       }
-      const ga = (e) => {
+      const va = (e) => {
           const {
               nPublishedVersion: t,
               msgProject: a,
@@ -12335,7 +12853,7 @@
                     o,
                   );
                   return (
-                    r && 1 == r.GetEResult() && f.U.invalidateQueries([y, e]),
+                    r && 1 == r.GetEResult() && f.U.invalidateQueries([k, e]),
                     r.Body().result()
                   );
                 });
@@ -12346,52 +12864,52 @@
           if (0 == t)
             return o.createElement(
               "div",
-              { className: da.StatusMessage },
+              { className: pa.StatusMessage },
               (0, c.Xx)("#SteamLearn_Status_Train_Status_Unpublished"),
             );
           const v = [...new Set(e.arrAllTrainIDs)];
           if (0 == v.length)
             return o.createElement(
               "div",
-              { className: da.StatusMessage },
+              { className: pa.StatusMessage },
               (0, c.Xx)("#SteamLearn_Status_Train_Status_None"),
             );
           let x,
             h,
-            L = (0, c.Xx)("#SteamLearn_Status_Train_Status_Unknown"),
-            C = da.Unknown;
+            C = (0, c.Xx)("#SteamLearn_Status_Train_Status_Unknown"),
+            L = pa.Unknown;
           if (N)
             switch (N.status()) {
               case 0:
-                (L = (0, c.Xx)("#SteamLearn_Status_Train_Status_Unknown")),
-                  (C = da.Unknown);
+                (C = (0, c.Xx)("#SteamLearn_Status_Train_Status_Unknown")),
+                  (L = pa.Unknown);
                 break;
               case 1:
-                (L = (0, c.Xx)("#SteamLearn_Status_Train_Status_Unstarted")),
-                  (C = da.Unstarted);
+                (C = (0, c.Xx)("#SteamLearn_Status_Train_Status_Unstarted")),
+                  (L = pa.Unstarted);
                 break;
               case 2:
-                (L = (0, c.Xx)("#SteamLearn_Status_Train_Status_InProgress")),
-                  (C = da.InProgress);
+                (C = (0, c.Xx)("#SteamLearn_Status_Train_Status_InProgress")),
+                  (L = pa.InProgress);
                 break;
               case 3:
-                (L = (0, c.Xx)("#SteamLearn_Status_Train_Status_Complete")),
-                  (C = da.Complete);
+                (C = (0, c.Xx)("#SteamLearn_Status_Train_Status_Complete")),
+                  (L = pa.Complete);
                 break;
               case 4:
-                (L = (0, c.Xx)("#SteamLearn_Status_Train_Status_Error")),
-                  (C = da.Error);
+                (C = (0, c.Xx)("#SteamLearn_Status_Train_Status_Error")),
+                  (L = pa.Error);
                 break;
               case 5:
-                (L = (0, c.Xx)("#SteamLearn_Status_Train_Status_StoppedEarly")),
-                  (C = da.Complete);
+                (C = (0, c.Xx)("#SteamLearn_Status_Train_Status_StoppedEarly")),
+                  (L = pa.Complete);
                 break;
               case 6:
-                (L = (0, c.Xx)("#SteamLearn_Status_Train_Status_WaitingOnAS")),
-                  (C = da.InProgress);
+                (C = (0, c.Xx)("#SteamLearn_Status_Train_Status_WaitingOnAS")),
+                  (L = pa.InProgress);
             }
           i.isLoading &&
-            (L = (0, c.Xx)("#SteamLearn_Status_Train_Status_Loading"));
+            (C = (0, c.Xx)("#SteamLearn_Status_Train_Status_Loading"));
           let b = 0,
             D = 0,
             T = 0,
@@ -12413,7 +12931,7 @@
                 if (e.end_time()) {
                   const t = (0, c.Xx)(
                     "#SteamLearn_Status_Train_BatchCurrent_EpochDuration",
-                    ma(e.end_time() - e.start_time()),
+                    Na(e.end_time() - e.start_time()),
                   );
                   t != _ && u(t);
                 } else if (!i.isFetching) {
@@ -12421,16 +12939,16 @@
                   if (!isNaN(e)) {
                     const t = (0, c.Xx)(
                       "#SteamLearn_Status_Train_BatchCurrent_TimeEstimate",
-                      ma(e),
+                      Na(e),
                     );
                     t != _ && u(t);
                   }
                 }
-                const s = _a(
+                const s = ga(
                     e.train_batches().map((e) => e.loss()),
                     X,
                   ).map((e, t) => ({ index: t, Train: e })),
-                  l = _a(
+                  l = ga(
                     e.validate_batches().map((e) => e.loss()),
                     X,
                   ).map((e, t) => ({ index: t, Validate: e })),
@@ -12463,12 +12981,12 @@
                     nFinalValue: null == m ? void 0 : m.loss(),
                   },
                 ];
-                const p = _a(
-                    e.train_batches().map((e) => Na(e.accuracy())),
+                const p = ga(
+                    e.train_batches().map((e) => Ea(e.accuracy())),
                     X,
                   ).map((e, t) => ({ index: t, Train: e })),
-                  g = _a(
-                    e.validate_batches().map((e) => Na(e.accuracy())),
+                  g = ga(
+                    e.validate_batches().map((e) => Ea(e.accuracy())),
                     X,
                   ).map((e, t) => ({ index: t, Validate: e }));
                 h = [
@@ -12478,7 +12996,7 @@
                     data: p,
                     color: "#547d9e",
                     bAxisLine: !1,
-                    nFinalValue: Na(null == d ? void 0 : d.accuracy()),
+                    nFinalValue: Ea(null == d ? void 0 : d.accuracy()),
                   },
                   {
                     strDataLabel: "Validate",
@@ -12489,7 +13007,7 @@
                     data: g,
                     color: "#609e54",
                     bAxisLine: !1,
-                    nFinalValue: Na(null == m ? void 0 : m.accuracy()),
+                    nFinalValue: Ea(null == m ? void 0 : m.accuracy()),
                   },
                 ];
               }
@@ -12518,7 +13036,7 @@
                           ]),
                       {
                         index: t + 1,
-                        Value: Na(null == a ? void 0 : a.accuracy()),
+                        Value: Ea(null == a ? void 0 : a.accuracy()),
                       }
                     );
                   })
@@ -12546,7 +13064,7 @@
                   },
                 ]));
             }
-          const k = N && 3 == N.status(),
+          const y = N && 3 == N.status(),
             I = N && N.live(),
             V = N && N.active(),
             j = N && 2 == N.status(),
@@ -12566,28 +13084,28 @@
               });
           return o.createElement(
             "div",
-            { className: da.TrainStatusPanel },
+            { className: pa.TrainStatusPanel },
             o.createElement(
               "div",
-              { className: da.TopSection },
+              { className: pa.TopSection },
               o.createElement(
                 "div",
-                { className: da.TopLeft },
+                { className: pa.TopLeft },
                 o.createElement(
                   "div",
-                  { className: da.OptionBlock },
+                  { className: pa.OptionBlock },
                   o.createElement(
                     "div",
-                    { className: da.OptionHeader },
+                    { className: pa.OptionHeader },
                     (0, c.Xx)("#SteamLearn_Status_Train_Status", e.nTrainID),
                   ),
                   o.createElement(
                     "div",
-                    { className: (0, s.Z)(da.StatusString, C) },
-                    L,
+                    { className: (0, s.Z)(pa.StatusString, L) },
+                    C,
                   ),
                   !O &&
-                    k &&
+                    y &&
                     !I &&
                     !V &&
                     o.createElement(
@@ -12596,12 +13114,12 @@
                       (0, c.Xx)("#SteamLearn_Status_SetInferenceVersion"),
                     ),
                   O &&
-                    k &&
+                    y &&
                     !I &&
                     !V &&
                     o.createElement(
                       "div",
-                      { className: da.WarningMessage },
+                      { className: pa.WarningMessage },
                       (0, c.Xx)("#SteamLearn_Status_SaveOrDiscardFirst"),
                     ),
                   j &&
@@ -12632,7 +13150,7 @@
                       "div",
                       {
                         onClick: () => E(e.nTrainID, !0),
-                        className: da.TrainLive,
+                        className: pa.TrainLive,
                       },
                       (0, c.Xx)("#SteamLearn_Status_InferenceLive"),
                     ),
@@ -12640,14 +13158,14 @@
                     !I &&
                     o.createElement(
                       "div",
-                      { className: da.TrainLive },
+                      { className: pa.TrainLive },
                       (0, c.Xx)("#SteamLearn_Status_InferenceActive"),
                     ),
                 ),
               ),
               o.createElement(
                 "div",
-                { className: da.TopRight },
+                { className: pa.TopRight },
                 o.createElement(
                   "select",
                   {
@@ -12667,11 +13185,11 @@
             N &&
               o.createElement(
                 "div",
-                { className: da.EpochSelectorSection },
+                { className: pa.EpochSelectorSection },
                 o.createElement(
                   "select",
                   {
-                    className: da.EpochSelector,
+                    className: pa.EpochSelector,
                     value: d,
                     onChange: (e) => m(parseInt(e.target.value)),
                   },
@@ -12688,24 +13206,24 @@
               0 != d &&
               o.createElement(
                 "div",
-                { className: da.BatchStatus },
+                { className: pa.BatchStatus },
                 b > 0 &&
                   o.createElement(
                     "div",
-                    { className: da.BatchStatusRow },
+                    { className: pa.BatchStatusRow },
                     o.createElement(
                       "div",
-                      { className: da.PhaseLabel },
+                      { className: pa.PhaseLabel },
                       (0, c.Xx)("#SteamLearn_Status_Train_BatchCurrent_Train"),
                     ),
                     D > 0 &&
                       b == D &&
                       o.createElement(
                         "div",
-                        { className: da.PhaseValues },
+                        { className: pa.PhaseValues },
                         o.createElement(
                           "span",
-                          { className: da.Total },
+                          { className: pa.Total },
                           (0, c.Xx)("#SteamLearn_Status_Train_Status_Complete"),
                         ),
                       ),
@@ -12713,12 +13231,12 @@
                       b != D &&
                       o.createElement(
                         "div",
-                        { className: da.PhaseValues },
+                        { className: pa.PhaseValues },
                         (100 * b).toLocaleString(),
                         " / ",
                         o.createElement(
                           "span",
-                          { className: da.Total },
+                          { className: pa.Total },
                           (100 * D).toLocaleString(),
                         ),
                       ),
@@ -12726,10 +13244,10 @@
                 T > 0 &&
                   o.createElement(
                     "div",
-                    { className: da.BatchStatusRow },
+                    { className: pa.BatchStatusRow },
                     o.createElement(
                       "div",
-                      { className: da.PhaseLabel },
+                      { className: pa.PhaseLabel },
                       (0, c.Xx)(
                         "#SteamLearn_Status_Train_BatchCurrent_Validate",
                       ),
@@ -12738,10 +13256,10 @@
                       T == P &&
                       o.createElement(
                         "div",
-                        { className: da.PhaseValues },
+                        { className: pa.PhaseValues },
                         o.createElement(
                           "span",
-                          { className: da.Total },
+                          { className: pa.Total },
                           (0, c.Xx)("#SteamLearn_Status_Train_Status_Complete"),
                         ),
                       ),
@@ -12749,33 +13267,33 @@
                       T != P &&
                       o.createElement(
                         "div",
-                        { className: da.PhaseValues },
+                        { className: pa.PhaseValues },
                         (100 * T).toLocaleString(),
                         " / ",
                         o.createElement(
                           "span",
-                          { className: da.Total },
+                          { className: pa.Total },
                           (100 * P).toLocaleString(),
                         ),
                       ),
                   ),
-                o.createElement("div", { className: da.BatchStatusRow }, _),
+                o.createElement("div", { className: pa.BatchStatusRow }, _),
               ),
             N &&
               x &&
               h &&
               o.createElement(
                 "div",
-                { className: da.CurrentEpoch },
+                { className: pa.CurrentEpoch },
                 o.createElement(
                   "div",
-                  { className: da.GraphPair },
-                  o.createElement(pa, {
+                  { className: pa.GraphPair },
+                  o.createElement(fa, {
                     strHeading: (0, c.Xx)("#SteamLearn_Status_Train_Axis_Loss"),
                     lines: x,
                     fAxisPaddingPct: 25,
                   }),
-                  o.createElement(pa, {
+                  o.createElement(fa, {
                     strHeading: (0, c.Xx)(
                       "#SteamLearn_Status_Train_Axis_Accuracy",
                     ),
@@ -12786,19 +13304,19 @@
               ),
           );
         },
-        Sa = () => {
+        xa = () => {
           const { nProjectID: e } = ue();
           return o.createElement(
             "div",
-            { className: da.ProjectTrainStatusPage },
+            { className: pa.ProjectTrainStatusPage },
             o.createElement(
               "div",
-              { className: da.ProjectTrainStatusBody },
-              o.createElement(fa, null),
+              { className: pa.ProjectTrainStatusBody },
+              o.createElement(ha, null),
             ),
           );
         },
-        fa = () => {
+        ha = () => {
           const { nProjectID: e, nPublishedVersion: t } = ue(),
             [a, n] = o.useState(0),
             [r, i] = o.useState(0),
@@ -12827,9 +13345,9 @@
               : s.isSuccess && c.isSuccess
                 ? o.createElement(
                     "div",
-                    { className: da.ProjectTrain },
+                    { className: pa.ProjectTrain },
                     a > 0 &&
-                      o.createElement(ua, {
+                      o.createElement(Sa, {
                         nProjectID: e,
                         nFetchID: a,
                         arrAllFetchIDs: l.versions(),
@@ -12837,8 +13355,8 @@
                           n(e);
                         },
                       }),
-                    o.createElement("div", { className: da.Separator }),
-                    o.createElement(ga, {
+                    o.createElement("div", { className: pa.Separator }),
+                    o.createElement(va, {
                       nProjectID: e,
                       nTrainID: r,
                       arrAllTrainIDs: d.versions(),
@@ -12850,9 +13368,9 @@
                 : null
           );
         };
-      var Ea = a(57024),
-        va = a(57378);
-      const xa = () => {
+      var Ca = a(57024),
+        La = a(57378);
+      const ba = () => {
         const {
             msgProject: e,
             msgWorkingProject: t,
@@ -12869,8 +13387,8 @@
           v = f.data,
           x = N.isLoading || f.isLoading,
           h = i > 0,
-          L = e && t && t.serializeBase64String() == e.serializeBase64String(),
-          C = [
+          C = e && t && t.serializeBase64String() == e.serializeBase64String(),
+          L = [
             {
               label: (0, c.Xx)("#SteamLearn_ScheduledTrain_IntervalNone"),
               value: 0,
@@ -12930,42 +13448,42 @@
             1 != a.scheduled_train_config().scheduled_type();
         return o.createElement(
           "div",
-          { className: va.ProjectTrainPage },
+          { className: La.ProjectTrainPage },
           o.createElement(
             "div",
-            { className: va.OptionBlock },
+            { className: La.OptionBlock },
             o.createElement(
               "div",
-              { className: va.OptionHeader },
+              { className: La.OptionHeader },
               (0, c.Xx)("#SteamLearn_ManualTrain_Heading"),
             ),
             o.createElement(
               "div",
-              { className: va.OptionDesc },
+              { className: La.OptionDesc },
               (0, c.Xx)("#SteamLearn_ManualTrain_Desc"),
             ),
             x &&
               o.createElement(
                 "div",
-                { className: va.StatusMessage },
+                { className: La.StatusMessage },
                 (0, c.Xx)("#SteamLearn_ManualTrain_Loading"),
               ),
             !x &&
               !h &&
               o.createElement(
                 "div",
-                { className: va.StatusMessage },
+                { className: La.StatusMessage },
                 (0, c.Xx)("#SteamLearn_ManualTrain_Unpublished"),
               ),
             !x &&
               h &&
               o.createElement(
                 "div",
-                { className: va.FetchTrainOptionContainer },
+                { className: La.FetchTrainOptionContainer },
                 o.createElement(
                   "select",
                   {
-                    className: va.TrainDropdown,
+                    className: La.TrainDropdown,
                     value: s,
                     onChange: (e) => d(parseInt(e.target.value)),
                   },
@@ -12985,7 +13503,7 @@
                 o.createElement(
                   "select",
                   {
-                    className: va.TrainDropdown,
+                    className: La.TrainDropdown,
                     value: m,
                     onChange: (e) => _(parseInt(e.target.value)),
                   },
@@ -13006,7 +13524,7 @@
                 ),
               ),
             !x &&
-              L &&
+              C &&
               h &&
               o.createElement(
                 Te.KM,
@@ -13045,7 +13563,7 @@
                         1 == r.GetEResult() &&
                         ($(t.project_id()),
                         u.push(
-                          ba.SteamLearnProjectTrainStatus(
+                          Xa.SteamLearnProjectTrainStatus(
                             a.project_id(),
                             a.published_version(),
                           ),
@@ -13054,25 +13572,25 @@
                 },
                 (0, c.Xx)("#SteamLearn_ManualTrain_Start"),
               ),
-            !L &&
+            !C &&
               o.createElement(
                 "div",
-                { className: va.SaveWarning },
+                { className: La.SaveWarning },
                 (0, c.Xx)("#SteamLearn_ManualTrain_NeedSave"),
               ),
           ),
-          o.createElement("div", { className: va.Separator }),
+          o.createElement("div", { className: La.Separator }),
           o.createElement(
             "div",
-            { className: va.OptionBlock },
+            { className: La.OptionBlock },
             o.createElement(
               "div",
-              { className: va.OptionHeader },
+              { className: La.OptionHeader },
               (0, c.Xx)("#SteamLearn_ScheduledTrain_Heading"),
             ),
             o.createElement(
               "div",
-              { className: va.OptionDesc },
+              { className: La.OptionDesc },
               (0, c.Xx)("#SteamLearn_ScheduledTrain_Heading_Disc"),
             ),
             o.createElement(Ye, {
@@ -13080,7 +13598,7 @@
               fnGetValue: () => a.scheduled_train_config().scheduled_type(),
               fnSetValue: (e) =>
                 a.scheduled_train_config().set_scheduled_type(parseInt(e)),
-              options: C,
+              options: L,
             }),
             o.createElement(Qe, {
               label: (0, c.Xx)("#SteamLearn_ScheduledTrain_DayOfMonth"),
@@ -13169,8 +13687,8 @@
           ),
         );
       };
-      var ha = a(60858);
-      const La = (e) => {
+      var Da = a(60858);
+      const Ta = (e) => {
           if (!e.msgEvent)
             return o.createElement(
               "div",
@@ -13184,13 +13702,13 @@
             );
           return o.createElement(
             "div",
-            { className: ha.LiveTrain },
+            { className: Da.LiveTrain },
             o.createElement(
               "div",
-              { className: ha.LeftSide },
+              { className: Da.LeftSide },
               o.createElement(
                 "div",
-                { className: ha.Time },
+                { className: Da.Time },
                 new Date(1e3 * e.msgEvent.timestamp()).toLocaleString(
                   c.Yt.GetPreferredLocales(),
                   {
@@ -13204,7 +13722,7 @@
               ),
               o.createElement(
                 "div",
-                { className: ha.TrainID },
+                { className: Da.TrainID },
                 (0, c.Xx)(
                   "#SteamLearn_Event_TrainID",
                   e.msgEvent.train_ended().train_id(),
@@ -13212,7 +13730,7 @@
               ),
               o.createElement(
                 "div",
-                { className: ha.LossAccuracy },
+                { className: Da.LossAccuracy },
                 (0, c.Xx)(
                   "#SteamLearn_Event_CompletedDetails",
                   e.msgEvent.train_ended().loss().toFixed(4),
@@ -13220,10 +13738,10 @@
                 ),
               ),
             ),
-            o.createElement("div", { className: ha.RightSide }),
+            o.createElement("div", { className: Da.RightSide }),
           );
         },
-        Ca = () => {
+        Pa = () => {
           var e, t;
           const { msgWorkingProjectConfig: a } = ue(),
             n = new Date(),
@@ -13320,38 +13838,38 @@
             }, [d, a]),
             o.createElement(
               "div",
-              { className: ha.ProjectOverviewPage },
+              { className: Da.ProjectOverviewPage },
               s.isLoading &&
                 o.createElement(
                   "div",
-                  { className: ha.Loading },
+                  { className: Da.Loading },
                   (0, c.Xx)("#SteamLearn_LoadingEvents"),
                 ),
               s.isSuccess &&
                 o.createElement(
                   "div",
-                  { className: ha.OverviewContainer },
+                  { className: Da.OverviewContainer },
                   o.createElement(
                     "div",
-                    { className: ha.LeftSide },
+                    { className: Da.LeftSide },
                     o.createElement(
                       "div",
-                      { className: ha.LiveTrainSection },
+                      { className: Da.LiveTrainSection },
                       o.createElement(
                         "div",
-                        { className: ha.LiveTrainHeader },
+                        { className: Da.LiveTrainHeader },
                         (0, c.Xx)("#SteamLearn_Project_Overview_LiveTrain"),
                       ),
-                      !f && o.createElement(La, { msgEvent: _ }),
+                      !f && o.createElement(Ta, { msgEvent: _ }),
                     ),
-                    o.createElement("div", { className: ha.Separator }),
+                    o.createElement("div", { className: Da.Separator }),
                     p.length > 0 &&
                       o.createElement(
                         "div",
-                        { className: ha.InProgressTrains },
+                        { className: Da.InProgressTrains },
                         o.createElement(
                           "div",
-                          { className: ha.InProgressTrainsHeader },
+                          { className: Da.InProgressTrainsHeader },
                           (0, c.Xx)(
                             "#SteamLearn_Project_Overview_InProgressTrain",
                           ),
@@ -13360,21 +13878,21 @@
                           .slice()
                           .reverse()
                           .map((e, t) =>
-                            o.createElement(Le, {
+                            o.createElement(Ce, {
                               key: `Event_${t}`,
                               msgEvent: e,
                               arrMsgAllEvents: p,
                               bProjectSpecific: !0,
                             }),
                           ),
-                        o.createElement("div", { className: ha.Separator }),
+                        o.createElement("div", { className: Da.Separator }),
                       ),
                     o.createElement(
                       "div",
-                      { className: ha.AllTrains },
+                      { className: Da.AllTrains },
                       o.createElement(
                         "div",
-                        { className: ha.AllTrainsHeader },
+                        { className: Da.AllTrainsHeader },
                         (0, c.Xx)("#SteamLearn_Project_Overview_AllTrains"),
                       ),
                       f &&
@@ -13386,12 +13904,12 @@
                       !f &&
                         o.createElement(
                           "div",
-                          { className: ha.EventList },
+                          { className: Da.EventList },
                           g
                             .slice()
                             .reverse()
                             .map((e, t) =>
-                              o.createElement(Le, {
+                              o.createElement(Ce, {
                                 key: `Event_${t}`,
                                 msgEvent: e,
                                 arrMsgAllEvents: g,
@@ -13403,29 +13921,29 @@
                   ),
                   o.createElement(
                     "div",
-                    { className: ha.RightSide },
+                    { className: Da.RightSide },
                     m &&
                       o.createElement(
                         "div",
-                        { className: ha.AccessTokensContainer },
+                        { className: Da.AccessTokensContainer },
                         o.createElement(
                           "div",
-                          { className: ha.AccessTokensHeader },
+                          { className: Da.AccessTokensHeader },
                           (0, c.Xx)("#SteamLearn_Overview_AccessTokens"),
                         ),
                         o.createElement(
                           "div",
-                          { className: ha.AccessToken },
+                          { className: Da.AccessToken },
                           o.createElement(
                             "div",
-                            { className: ha.TokenName },
+                            { className: Da.TokenName },
                             (0, c.Xx)(
                               "#SteamLearn_Overview_AT_RegisterDataSource",
                             ),
                           ),
                           o.createElement(
                             "div",
-                            { className: ha.TokenString },
+                            { className: Da.TokenString },
                             m
                               .access_tokens()
                               .register_data_source_access_token(),
@@ -13433,15 +13951,15 @@
                         ),
                         o.createElement(
                           "div",
-                          { className: ha.AccessToken },
+                          { className: Da.AccessToken },
                           o.createElement(
                             "div",
-                            { className: ha.TokenName },
+                            { className: Da.TokenName },
                             (0, c.Xx)("#SteamLearn_Overview_AT_Snapshot"),
                           ),
                           o.createElement(
                             "div",
-                            { className: ha.TokenString },
+                            { className: Da.TokenString },
                             (null ===
                               (e = m
                                 .access_tokens()
@@ -13455,15 +13973,15 @@
                         ),
                         o.createElement(
                           "div",
-                          { className: ha.AccessToken },
+                          { className: Da.AccessToken },
                           o.createElement(
                             "div",
-                            { className: ha.TokenName },
+                            { className: Da.TokenName },
                             (0, c.Xx)("#SteamLearn_Overview_AT_Inference"),
                           ),
                           o.createElement(
                             "div",
-                            { className: ha.TokenString },
+                            { className: Da.TokenString },
                             (null ===
                               (t = m
                                 .access_tokens()
@@ -13476,13 +13994,13 @@
                           ),
                         ),
                       ),
-                    o.createElement("div", { className: ha.Separator }),
+                    o.createElement("div", { className: Da.Separator }),
                     o.createElement(
                       "div",
-                      { className: ha.DataSourcesContainer },
+                      { className: Da.DataSourcesContainer },
                       o.createElement(
                         "div",
-                        { className: ha.DataSourcesHeader },
+                        { className: Da.DataSourcesHeader },
                         (0, c.Xx)("#SteamLearn_Overview_DataSources"),
                       ),
                       a &&
@@ -13501,192 +14019,192 @@
             )
           );
         },
-        ba = {
+        Xa = {
           SteamLearnBase: () => "steamlearn",
           SteamLearnProject: () => "project",
           SteamLearnDashboard: () => "/dashboard",
-          SteamLearnProjectList: () => `/${ba.SteamLearnProject()}/list`,
-          SteamLearnProjectEvents: () => `/${ba.SteamLearnProject()}/events`,
-          SteamLearnProjectCreate: () => `/${ba.SteamLearnProject()}/create`,
+          SteamLearnProjectList: () => `/${Xa.SteamLearnProject()}/list`,
+          SteamLearnProjectEvents: () => `/${Xa.SteamLearnProject()}/events`,
+          SteamLearnProjectCreate: () => `/${Xa.SteamLearnProject()}/create`,
           SteamLearnProjectOverview: (e, t) =>
-            `/${ba.SteamLearnProject()}/${null != e ? e : ":id"}/${null != t ? t : ":version"}/overview`,
+            `/${Xa.SteamLearnProject()}/${null != e ? e : ":id"}/${null != t ? t : ":version"}/overview`,
           SteamLearnProjectDataSources: (e, t) =>
-            `/${ba.SteamLearnProject()}/${null != e ? e : ":id"}/${null != t ? t : ":version"}/datasources`,
+            `/${Xa.SteamLearnProject()}/${null != e ? e : ":id"}/${null != t ? t : ":version"}/datasources`,
           SteamLearnProjectSnapshots: (e, t) =>
-            `/${ba.SteamLearnProject()}/${null != e ? e : ":id"}/${null != t ? t : ":version"}/snapshots`,
+            `/${Xa.SteamLearnProject()}/${null != e ? e : ":id"}/${null != t ? t : ":version"}/snapshots`,
           SteamLearnProjectModel: (e, t) =>
-            `/${ba.SteamLearnProject()}/${null != e ? e : ":id"}/${null != t ? t : ":version"}/structure`,
+            `/${Xa.SteamLearnProject()}/${null != e ? e : ":id"}/${null != t ? t : ":version"}/structure`,
           SteamLearnProjectTrainSettings: (e, t) =>
-            `/${ba.SteamLearnProject()}/${null != e ? e : ":id"}/${null != t ? t : ":version"}/trainsettings`,
+            `/${Xa.SteamLearnProject()}/${null != e ? e : ":id"}/${null != t ? t : ":version"}/trainsettings`,
           SteamLearnProjectTrain: (e, t) =>
-            `/${ba.SteamLearnProject()}/${null != e ? e : ":id"}/${null != t ? t : ":version"}/train`,
+            `/${Xa.SteamLearnProject()}/${null != e ? e : ":id"}/${null != t ? t : ":version"}/train`,
           SteamLearnProjectTrainStatus: (e, t) =>
-            `/${ba.SteamLearnProject()}/${null != e ? e : ":id"}/${null != t ? t : ":version"}/trainstatus`,
+            `/${Xa.SteamLearnProject()}/${null != e ? e : ":id"}/${null != t ? t : ":version"}/trainstatus`,
           SteamLearnProjectInferenceTester: (e, t) =>
-            `/${ba.SteamLearnProject()}/${null != e ? e : ":id"}/${null != t ? t : ":version"}/inferencetester`,
+            `/${Xa.SteamLearnProject()}/${null != e ? e : ":id"}/${null != t ? t : ":version"}/inferencetester`,
         };
-      function Da(e, t) {
+      function ka(e, t) {
         return t.some((t) => (0, r.LX)(e, { path: t, exact: !1, strict: !1 }));
       }
-      function Ta(e) {
-        return Da(e, [
-          ba.SteamLearnProjectOverview(void 0, void 0),
-          ba.SteamLearnProjectDataSources(void 0, void 0),
-          ba.SteamLearnProjectSnapshots(void 0, void 0),
-          ba.SteamLearnProjectModel(void 0, void 0),
-          ba.SteamLearnProjectTrainSettings(void 0, void 0),
-          ba.SteamLearnProjectTrain(void 0, void 0),
-          ba.SteamLearnProjectTrainStatus(void 0, void 0),
-          ba.SteamLearnProjectInferenceTester(void 0, void 0),
+      function ya(e) {
+        return ka(e, [
+          Xa.SteamLearnProjectOverview(void 0, void 0),
+          Xa.SteamLearnProjectDataSources(void 0, void 0),
+          Xa.SteamLearnProjectSnapshots(void 0, void 0),
+          Xa.SteamLearnProjectModel(void 0, void 0),
+          Xa.SteamLearnProjectTrainSettings(void 0, void 0),
+          Xa.SteamLearnProjectTrain(void 0, void 0),
+          Xa.SteamLearnProjectTrainStatus(void 0, void 0),
+          Xa.SteamLearnProjectInferenceTester(void 0, void 0),
         ]);
       }
-      function Pa(e) {
+      function Ia(e) {
         const t = (0, r.TH)(),
           { msgWorkingProject: a, msgWorkingProjectConfig: n } = ue();
-        return !Ta(t.pathname) || (a && n)
+        return !ya(t.pathname) || (a && n)
           ? o.createElement(
               "div",
-              { className: Ea.MainAppContainer },
+              { className: Ca.MainAppContainer },
               e.children,
             )
           : null;
       }
-      function Xa() {
+      function Va() {
         const e = (0, r.TH)(),
           { nProjectID: t, nPublishedVersion: a } = ue();
-        if (!Ta(e.pathname)) return null;
+        if (!ya(e.pathname)) return null;
         const n = [
           {
             name: (0, c.Xx)("#SteamLearn_Project_Overview"),
-            fnRoute: ba.SteamLearnProjectOverview,
+            fnRoute: Xa.SteamLearnProjectOverview,
           },
           {
             name: (0, c.Xx)("#SteamLearn_Project_DataSources"),
-            fnRoute: ba.SteamLearnProjectDataSources,
+            fnRoute: Xa.SteamLearnProjectDataSources,
           },
           {
             name: (0, c.Xx)("#SteamLearn_Project_Snapshots"),
-            fnRoute: ba.SteamLearnProjectSnapshots,
+            fnRoute: Xa.SteamLearnProjectSnapshots,
           },
           {
             name: (0, c.Xx)("#SteamLearn_Project_ModelStructure"),
-            fnRoute: ba.SteamLearnProjectModel,
+            fnRoute: Xa.SteamLearnProjectModel,
           },
           {
             name: (0, c.Xx)("#SteamLearn_Project_TrainSettings"),
-            fnRoute: ba.SteamLearnProjectTrainSettings,
+            fnRoute: Xa.SteamLearnProjectTrainSettings,
           },
           {
             name: (0, c.Xx)("#SteamLearn_Project_Train"),
-            fnRoute: ba.SteamLearnProjectTrain,
+            fnRoute: Xa.SteamLearnProjectTrain,
           },
           {
             name: (0, c.Xx)("#SteamLearn_Project_TrainStatus"),
-            fnRoute: ba.SteamLearnProjectTrainStatus,
+            fnRoute: Xa.SteamLearnProjectTrainStatus,
           },
           {
             name: (0, c.Xx)("#SteamLearn_Project_InferenceTester"),
-            fnRoute: ba.SteamLearnProjectInferenceTester,
+            fnRoute: Xa.SteamLearnProjectInferenceTester,
           },
         ];
         return o.createElement(
           "div",
-          { className: Ea.ProjectTabContainer },
+          { className: Ca.ProjectTabContainer },
           n.map((r, c) =>
             o.createElement(
               "div",
-              { key: r.name, className: Ea.TabAndSpacer },
+              { key: r.name, className: Ca.TabAndSpacer },
               o.createElement(
                 i.rU,
                 {
                   to: r.fnRoute(t, a),
                   className: (0, s.Z)(
-                    Ea.Tab,
-                    Da(e.pathname, [r.fnRoute(void 0, void 0)]) && Ea.Active,
+                    Ca.Tab,
+                    ka(e.pathname, [r.fnRoute(void 0, void 0)]) && Ca.Active,
                   ),
                 },
                 r.name,
               ),
               c < n.length - 1 &&
-                o.createElement("div", { className: Ea.TabSpacer }),
+                o.createElement("div", { className: Ca.TabSpacer }),
             ),
           ),
         );
       }
-      const ya = () => {
+      const ja = () => {
         const e = (0, r.TH)();
         return o.createElement(
           "h1",
           null,
           (0, c.Xx)(
-            Ta(e.pathname) ? "#SteamLearn_Project" : "#SteamLearn_Dashboard",
+            ya(e.pathname) ? "#SteamLearn_Project" : "#SteamLearn_Dashboard",
           ),
         );
       };
-      function ka() {
+      function Oa() {
         (0, r.TH)();
         return o.createElement(
           "div",
-          { className: Ea.SteamLearnApp },
+          { className: Ca.SteamLearnApp },
           o.createElement(
             i.VK,
-            { basename: (0, n.l)() + ba.SteamLearnBase() },
+            { basename: (0, n.l)() + Xa.SteamLearnBase() },
             o.createElement(
               ge,
               null,
-              o.createElement(ya, null),
+              o.createElement(ja, null),
               o.createElement("hr", null),
-              o.createElement(ta, null),
-              o.createElement(Xa, null),
+              o.createElement(ra, null),
+              o.createElement(Va, null),
               o.createElement(
-                Pa,
+                Ia,
                 null,
                 o.createElement(
                   r.rs,
                   null,
                   o.createElement(r.AW, {
-                    path: ba.SteamLearnDashboard(),
+                    path: Xa.SteamLearnDashboard(),
                     component: be,
                   }),
                   o.createElement(r.AW, {
-                    path: ba.SteamLearnProjectCreate(),
-                    component: ye,
+                    path: Xa.SteamLearnProjectCreate(),
+                    component: ke,
                   }),
                   o.createElement(r.AW, {
-                    path: ba.SteamLearnProjectOverview(void 0, void 0),
-                    component: Ca,
+                    path: Xa.SteamLearnProjectOverview(void 0, void 0),
+                    component: Pa,
                   }),
                   o.createElement(r.AW, {
-                    path: ba.SteamLearnProjectDataSources(void 0, void 0),
+                    path: Xa.SteamLearnProjectDataSources(void 0, void 0),
                     component: je,
                   }),
                   o.createElement(r.AW, {
-                    path: ba.SteamLearnProjectSnapshots(void 0, void 0),
-                    component: na,
+                    path: Xa.SteamLearnProjectSnapshots(void 0, void 0),
+                    component: sa,
                   }),
                   o.createElement(r.AW, {
-                    path: ba.SteamLearnProjectModel(void 0, void 0),
-                    component: Mt,
+                    path: Xa.SteamLearnProjectModel(void 0, void 0),
+                    component: Rt,
                   }),
                   o.createElement(r.AW, {
-                    path: ba.SteamLearnProjectTrainSettings(void 0, void 0),
-                    component: ra,
+                    path: Xa.SteamLearnProjectTrainSettings(void 0, void 0),
+                    component: la,
                   }),
                   o.createElement(r.AW, {
-                    path: ba.SteamLearnProjectTrain(void 0, void 0),
+                    path: Xa.SteamLearnProjectTrain(void 0, void 0),
+                    component: ba,
+                  }),
+                  o.createElement(r.AW, {
+                    path: Xa.SteamLearnProjectTrainStatus(void 0, void 0),
                     component: xa,
                   }),
                   o.createElement(r.AW, {
-                    path: ba.SteamLearnProjectTrainStatus(void 0, void 0),
-                    component: Sa,
-                  }),
-                  o.createElement(r.AW, {
-                    path: ba.SteamLearnProjectInferenceTester(void 0, void 0),
+                    path: Xa.SteamLearnProjectInferenceTester(void 0, void 0),
                     component: Ge,
                   }),
                   o.createElement(r.l_, {
                     from: "/",
-                    to: ba.SteamLearnDashboard(),
+                    to: Xa.SteamLearnDashboard(),
                   }),
                 ),
               ),

@@ -3144,6 +3144,9 @@ a.lMVeYbREjOZyypw7mp3qS:hover {
 }
 ._2peTiEFo27_zkZA0TzjnD4 button.DialogButton {
   margin-left: 4px;
+  width: fit-content;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 .responsive_footer_ctn {
   display: none;
@@ -5865,7 +5868,7 @@ html.responsive.touch
   box-sizing: border-box;
   padding: 8px 16px 12px 16px;
   bottom: 0;
-  height: 113px;
+  height: 130px;
   background: #257ba2;
 }
 .GrCIp45m5QpIwycVAC7rw .JPDZnP55tUl6QqfpQP-ES ._2fVP65kYiChekv9kTztQ6D {
@@ -5889,11 +5892,11 @@ html.responsive.touch
   width: fit-content;
 }
 ._1H2Hz37JljOjFhW2m__9en {
-  background: #000;
+  background: #0000001f;
   position: relative;
 }
 ._1H2Hz37JljOjFhW2m__9en img {
-  width: 100%;
+  width: auto;
   height: auto;
   display: block;
 }
@@ -6694,6 +6697,11 @@ textarea.VaLwylBilZSHWeTdxBQQC {
 ._3reVPYSvvoiYSRth2QxYjt .rbc-calendar .rbc-month-view .rbc-day-bg.rbc-today {
   background: #9fa1a7;
 }
+._3reVPYSvvoiYSRth2QxYjt .rbc-calendar .rbc-month-view .rbc-month-header {
+  position: sticky;
+  top: 64px;
+  z-index: 6;
+}
 ._3reVPYSvvoiYSRth2QxYjt .rbc-calendar .rbc-month-view .rbc-date-cell.rbc-now {
   color: #000;
 }
@@ -6729,6 +6737,7 @@ textarea.VaLwylBilZSHWeTdxBQQC {
   z-index: 30;
   background: #000;
   padding: 16px;
+  margin-bottom: 0;
 }
 ._3reVPYSvvoiYSRth2QxYjt .rbc-toolbar .rbc-toolbar-label {
   font-size: 22px;

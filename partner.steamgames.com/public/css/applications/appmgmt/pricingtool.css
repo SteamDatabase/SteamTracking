@@ -1202,6 +1202,9 @@ img {
 }
 ._2peTiEFo27_zkZA0TzjnD4 button.DialogButton {
   margin-left: 4px;
+  width: fit-content;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 .responsive_footer_ctn {
   display: none;

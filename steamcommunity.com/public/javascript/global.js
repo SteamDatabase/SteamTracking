@@ -2044,8 +2044,10 @@ var CCommentThread = Class.create( {
 
 		var elPosts = $('commentthread_' + this.m_strName + '_posts' );
 		var elContainer = $('commentthread_' + this.m_strName + '_postcontainer' );
+		elContainer.style.display = 'block';
 		elContainer.style.height = elContainer.getHeight() + 'px';
 		elContainer.style.overflow = 'hidden';
+		elContainer.style.display = this.m_cTotalCount ? 'block' : 'none';
 
 		var bNewPost = ( eRenderReason == CCommentThread.RENDER_NEWPOST );
 

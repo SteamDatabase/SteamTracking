@@ -2985,7 +2985,6 @@ span.vr_supported,
 span.vr_required {
     vertical-align: top;
     line-height: 21px;
-    margin-left: 4px;
     font-size: 11px;
 }
 
@@ -3008,10 +3007,10 @@ span.vr_required {
 }
 
 
-span.platform_img.hmd_separator {
-	border-left: 1px solid #CCC;
+span.platform_img.group_separator {
+	border-right: 1px solid #CCC;
 	width: 1px;
-	margin: 0px 5px;
+	margin: 0px 4px;
 }
 .promo_item_list .item .info .OS span.platform_img.streamingvideo {
 	background-position: 0px 1px;

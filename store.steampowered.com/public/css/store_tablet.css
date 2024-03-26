@@ -398,11 +398,6 @@ html.tablet .tab_item .ds_steam_deck_compat {
 	right: 12px;
 }
 
-html.tablet .vr_required,
-html.tablet .vr_supported {
-	display: none;
-}
-
 
 
 

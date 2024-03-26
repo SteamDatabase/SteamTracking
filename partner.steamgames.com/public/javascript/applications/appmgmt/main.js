@@ -1456,6 +1456,9 @@
         SetStatusEventHandler(e) {
           this.m_fnOnStatusEventHandler = e;
         }
+        SetReconnectErrorHandler(e) {
+          this.m_fnOnReconnectErrorHandler = e;
+        }
         CreateConnection(e, t, n, o) {
           const i = {
               bReconnectOnFailure: !0,
@@ -1463,6 +1466,10 @@
               fnOnCloseHandler: this.OnWebsocketClose,
               fnOnReconnectStartHandler: this.OnWebsocketReconnectStart,
               fnOnReconnectFinishHandler: this.OnWebsocketReconnectFinish,
+              nConnectAttemptsMax: 10,
+              nConnectAttemptTimeoutMs: 1e3,
+              nReconnectAttemptsMax: 20,
+              nReconnectAttemptTimeoutMs: 1e3,
             },
             r = {
               connection: new _(t, i),
@@ -1598,10 +1605,10 @@
         OnWebsocketReconnectFinish(e) {
           if ((this.DispatchTransportStatusUpdate(), 1 != e.eResult))
             return (
-              v.Error(
+              v.Warning(
                 "OnWebsocketReconnect: Failed to reconnect to steam client",
               ),
-              void this.FailAllPendingRequests()
+              void this.m_fnOnReconnectErrorHandler({})
             );
           this.FailAllPendingRequests();
           const t = this.GetConnectionDetails(e.connection);
@@ -2817,71 +2824,65 @@
             void 0 !== n.top && (a += ",top=" + n.top),
             (a += ",resizeable,status=0,toolbar=0,menubar=0,location=0");
           let l = "about:blank",
-            u = [];
-          u.push("createflags=" + t.eCreationFlags),
-            t.minWidth && u.push("minwidth=" + t.minWidth),
-            t.minHeight && u.push("minheight=" + t.minHeight),
+            c = [];
+          c.push("createflags=" + t.eCreationFlags),
+            t.minWidth && c.push("minwidth=" + t.minWidth),
+            t.minHeight && c.push("minheight=" + t.minHeight),
             t.maxWidth &&
               t.maxWidth != 1 / 0 &&
-              u.push("maxwidth=" + t.maxWidth),
+              c.push("maxwidth=" + t.maxWidth),
             t.maxHeight &&
               t.maxHeight != 1 / 0 &&
-              u.push("maxheight=" + t.maxHeight),
+              c.push("maxheight=" + t.maxHeight),
             t.target_browser
-              ? (u.push("pid=" + t.target_browser.m_unPID),
-                u.push("browser=" + t.target_browser.m_nBrowserID),
+              ? (c.push("pid=" + t.target_browser.m_unPID),
+                c.push("browser=" + t.target_browser.m_nBrowserID),
                 t.target_browser.m_eBrowserType
-                  ? u.push("browserType=" + t.target_browser.m_eBrowserType)
-                  : t.browserType && u.push("browserType=" + t.browserType),
+                  ? c.push("browserType=" + t.target_browser.m_eBrowserType)
+                  : t.browserType && c.push("browserType=" + t.browserType),
                 t.availscreenwidth &&
                   t.availscreenheight &&
-                  (u.push("screenavailwidth=" + t.availscreenwidth),
-                  u.push("screenavailheight=" + t.availscreenheight)))
-              : t.browserType && u.push("browserType=" + t.browserType),
-            t.strVROverlayKey && u.push("vrOverlayKey=" + t.strVROverlayKey),
+                  (c.push("screenavailwidth=" + t.availscreenwidth),
+                  c.push("screenavailheight=" + t.availscreenheight)))
+              : t.browserType && c.push("browserType=" + t.browserType),
+            t.strVROverlayKey && c.push("vrOverlayKey=" + t.strVROverlayKey),
             t.strRestoreDetails &&
-              u.push("restoredetails=" + t.strRestoreDetails),
-            t.window_opener_id && u.push("openerid=" + t.window_opener_id),
+              c.push("restoredetails=" + t.strRestoreDetails),
+            t.window_opener_id && c.push("openerid=" + t.window_opener_id),
             t.parent_container_popup_id &&
-              u.push("parentcontainerpopupid=" + t.parent_container_popup_id),
+              c.push("parentcontainerpopupid=" + t.parent_container_popup_id),
             t.center_on_window &&
               void 0 === n.left &&
               void 0 === n.top &&
-              u.push(
+              c.push(
                 "centerOnBrowserID=" +
                   t.center_on_window.SteamClient.Browser.GetBrowserID(),
               ),
-            t.strUserAgent &&
-              u.push(
-                "useragent=" +
-                  t.strUserAgent +
-                  "/" +
-                  (0, c.MR)(h.De.LAUNCHER_TYPE),
-              ),
-            t.hwndParent && u.push("hwndParent=" + t.hwndParent),
-            t.bPinned && u.push("pinned=true"),
-            t.bModal && u.push("modal=true"),
-            u && (l += "?" + u.join("&"));
-          let d = (t.owner_window || window).open(l, e, a);
-          if (!d)
+            t.strUserAgent && c.push("useragent=" + t.strUserAgent),
+            t.hwndParent && c.push("hwndParent=" + t.hwndParent),
+            t.bPinned && c.push("pinned=true"),
+            t.bModal && c.push("modal=true"),
+            c && (l += "?" + c.join("&"));
+          let u = (t.owner_window || window).open(l, e, a);
+          if (!u)
             return (
               console.error(
                 `Failed to create popup, browser/CEF may be blocking popups for "${window.location.origin}"`,
               ),
               {}
             );
+          let d = "";
+          t.html_class && (d = `class="${t.html_class}"`);
+          let h = "";
+          t.body_class && (h = `class="${t.body_class}"`);
           let m = "";
-          t.html_class && (m = `class="${t.html_class}"`);
-          let p = "";
-          t.body_class && (p = `class="${t.body_class}"`);
-          let g = "";
-          t.popup_class && (g = `class="${t.popup_class}"`);
-          let _ = `<!DOCTYPE html><html ${m}><head><title></title></head><body ${p}><div id="popup_target" ${g}></div></body></html>`;
+          t.popup_class && (m = `class="${t.popup_class}"`);
+          let p = `<!DOCTYPE html><html ${d}><head><title></title></head><body ${h}><div id="popup_target" ${m}></div></body></html>`;
           return (
-            d.document.write(_),
-            (d.document.title = r),
-            s.V2(d, s.Mv()),
-            { popup: d, element: d.document.getElementById("popup_target") }
+            u.document.write(p),
+            (u.document.title = r),
+            s.V2(u, s.Mv()),
+            { popup: u, element: u.document.getElementById("popup_target") }
           );
         }
         BShuttingDown() {
@@ -17241,14 +17242,15 @@
     },
     56480: (e, t, n) => {
       "use strict";
-      n.d(t, { d: () => l });
+      n.d(t, { d: () => c });
       var o = n(47427),
         i = n(42287),
         r = n(50423),
         s = n(83999),
-        a = n(93855);
-      function l({ config: e, isDynamic: t }) {
-        const n = t ? u : c;
+        a = n(93855),
+        l = n(10162);
+      function c({ config: e, isDynamic: t }) {
+        const n = t ? d : u;
         return o.createElement(
           o.Fragment,
           null,
@@ -17257,7 +17259,7 @@
           ),
         );
       }
-      function c(e) {
+      function u(e) {
         const { featureName: t, render: n } = e,
           i = o.useMemo(
             () =>
@@ -17271,7 +17273,7 @@
               o.Fragment,
               null,
               i.map((e, i) =>
-                o.createElement(d, {
+                o.createElement(h, {
                   key: i,
                   featureName: t,
                   elem: e,
@@ -17281,7 +17283,7 @@
             )
           : null;
       }
-      function u(e) {
+      function d(e) {
         const { featureName: t, render: n } = e,
           i = (0, a.NW)(),
           l = o.useRef([]),
@@ -17299,12 +17301,12 @@
                 r.Eu(
                   i,
                   (t) => {
-                    h(t, e).forEach((e) => {
+                    m(t, e).forEach((e) => {
                       n(e), (s = !0);
                     });
                   },
                   (t) => {
-                    h(t, e).forEach((e) => {
+                    m(t, e).forEach((e) => {
                       o(e), (s = !0);
                     });
                   },
@@ -17320,7 +17322,7 @@
             o.Fragment,
             null,
             l.current.map(({ key: e, elem: i }) =>
-              o.createElement(d, {
+              o.createElement(h, {
                 key: e,
                 elem: i,
                 featureName: t,
@@ -17330,7 +17332,7 @@
           )
         );
       }
-      function d(e) {
+      function h(e) {
         const { featureName: t, elem: n, render: r } = e,
           s = o.useMemo(
             () =>
@@ -17354,9 +17356,9 @@
               })(n.getAttribute("data-props"), t),
             [n, t],
           );
-        return (0, i.createPortal)(r(s), n);
+        return (0, i.createPortal)(o.createElement(l.SV, null, r(s)), n);
       }
-      function h(e, t) {
+      function m(e, t) {
         return e.matches(t) ? [e] : e.querySelectorAll(t);
       }
     },
@@ -23804,7 +23806,7 @@
         ),
         me = c.lazy(() =>
           Promise.all([n.e(9584), n.e(744), n.e(5117), n.e(5676)]).then(
-            n.bind(n, 64911),
+            n.bind(n, 38384),
           ),
         ),
         pe = c.lazy(() =>

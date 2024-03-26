@@ -203,11 +203,11 @@ span.motd {
 			 .navContent a:not(:first-child) {
 				margin-top: 8px;
 			}
-		
+
 		.navContent a:hover {
 			color: #67c1f5;
 		}
-		
+
 		.navContent > hr {
 			margin-top: 10px;
 			margin-bottom: 10px;
@@ -251,12 +251,12 @@ span.motd {
 		max-height: 28px;
 		margin: 5px 5px 0 0px;
 	}
-	
+
 	#landingWelcome .landingName {
 		float: left;
 		margin-top: 6px;
 	}
-		
+
 	#landingWelcome .appName {
 		margin-top: 5px;
 	}
@@ -270,7 +270,7 @@ span.motd {
 		color: #acacac;
 		font-size: 14px;
 	}
-	
+
 		#landingWelcome .appName .adminSection {
 			color: #67c1f5;
 		}
@@ -321,13 +321,13 @@ span.motd {
 		width: 600px;
 		margin: 0 auto;
 	}
-	
+
 	.errorContainer h3 {
-		font-size: 1.6em; 
-		font-weight: bold; 
-		margin-left: 15px; 
+		font-size: 1.6em;
+		font-weight: bold;
+		margin-left: 15px;
 		text-transform: none;
-		color: #cccccc; 
+		color: #cccccc;
 		margin:0px;
 	}
 
@@ -436,7 +436,7 @@ span.motd {
 		margin-top: 0;
 		padding-top: 0;
 	}
-	
+
 	.landingLeftCol>.section {
 		margin-bottom: 36px;
 	}
@@ -742,7 +742,7 @@ p {
 		.landingTable .tr.selected .td {
 			background: none;
 		}
-		
+
 	.landingTable .tr .th {
 		padding-left: 7px;
 	}
@@ -778,7 +778,7 @@ p {
 		background-color: #2a2d32;
 		display: table-cell;
 		vertical-align: middle;
-		
+
 	}
 
     .landingTable.largeText .td,
@@ -789,7 +789,7 @@ p {
 	.landingtable td.wrap, .landingTable .td.wrap {
 		overflow-wrap: anywhere;
 	}
-	
+
 	.landingTable .td.readOnly {
 		background-color: #141719;
 		color: #ab9c73;
@@ -1045,7 +1045,7 @@ p {
 		color: #7cb8e4;
 		font-size: 11px;
 	}
-	
+
 	.buttonRow .subText .betaLink {
 		color:#99CCFF;
 		font-size: 12px;
@@ -1322,7 +1322,7 @@ div + #landingFooter.nonconfidential {
 		color: #fff;
 		text-decoration: none;
 	}
-	
+
 	#landingFooter .landingFooterLinks {
 		padding: 10px 46px 10px 0px;
 		color: #555555;
@@ -1343,7 +1343,7 @@ div + #landingFooter.nonconfidential {
 	.fancySelect > span {
 		color: #e1e1e1 !important;
 	}
-	
+
 .fancyLink {
 	display: block;
 	padding: 5px !important;
@@ -1353,8 +1353,8 @@ div + #landingFooter.nonconfidential {
 
 .fancyLink > span {
 	color: #ffffff !important;
-}	
-	
+}
+
 .fancyLinkBox {
 	display: block;
 	background-color: #1a92e2;
@@ -1376,7 +1376,7 @@ div + #landingFooter.nonconfidential {
 }
 .fancyLinkBox > a:hover {
 	background-color: #1aafff;
-}	
+}
 
 .fancyCurrencyInput {
 	display: inline-block;
@@ -1663,7 +1663,7 @@ a.btn_download:hover {
 {
 	margin-top: 10px;
 	list-style-type: disc;
-	
+
 }
 
 #addPartnerOptions
@@ -1775,19 +1775,19 @@ a.btn_download:hover {
 	.newDevActionSection>img {
 		margin-right: 6px;
 	}
-	
+
 	.newDevActionSection>.title {
 		font-size: 16px;
 		font-weight: bold;
 		color: #333333;
 		margin-top: 8px;
 	}
-	
+
 	.newDevActionSection>.text {
         font-size: 12px;
 		color: #333333;
 	}
-	
+
 	.newDevActionSection>.link {
 		margin-top: 8px;
 	}
@@ -1903,7 +1903,7 @@ a.btn_download:hover {
 		color: #82a6d7;
 		font-weight: normal;
 	}
-	
+
 .section .descriptor {
 	color: #888888;
 	margin-bottom: 6px;
@@ -2042,7 +2042,7 @@ background: -webkit-linear-gradient( 45deg, #3b5c1f 5%,#4c7728 95%);
 	margin-bottom: 8px;
 	padding: 0px 40px;
 	color: #888888;
-	
+
 }
 
 .greencheck {
@@ -3049,6 +3049,10 @@ input#enablevac:disabled {
 	background-color: #47218a;
 }
 
+.cdkey_request.claimed_byMe {
+	background-color: #47218a;
+}
+
 .cdkey_request.priority {
 	border-left: 3px solid #FFFF00;
 }
@@ -3066,6 +3070,10 @@ input#enablevac:disabled {
 }
 
 .cdkey_request.claimed:hover {
+	background-color: #553393;
+}
+
+.cdkey_request.claimed_byMe:hover {
 	background-color: #553393;
 }
 

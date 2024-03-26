@@ -1052,6 +1052,7 @@ ${PARTNER_BASE_URL}promotion/dailydeals/ajaxsetblackout
 ${PARTNER_BASE_URL}promotion/dailydeals/dashboard
 ${PARTNER_BASE_URL}promotion/dailydeals/dashboard/${partner_id}
 ${PARTNER_BASE_URL}promotion/dailydeals/edit/${gid}
+${PARTNER_BASE_URL}promotion/dailydeals/invite/${gid}
 ${PARTNER_BASE_URL}promotion/discountevents/dashboard
 ${PARTNER_BASE_URL}promotion/discountevents/edit/${}
 ${PARTNER_BASE_URL}promotion/discounts${}?de=${discount_event_id}&dd=1
@@ -1461,6 +1462,7 @@ ${STORE_CDN_URL}public/images/loyalty/reactions/${_ ? "animated" : "still"}/${}.
 ${STORE_CDN_URL}public/images/v6/ico/ico_selected.png
 ${STORE_CDN_URL}public/shared/images/header/logo_steamchina.svg?t=962016
 ${STORE_CHECKOUT_BASE_URL}checkout/
+${STORE_CHECKOUT_BASE_URL}checkout?purchasetype=self&cart=${}
 ${STORE_CHECKOUT_BASE_URL}parental/ajaxunlock/
 ${STORE_ICON_BASE_URL}${appid}/${}
 ${STORE_ICON_BASE_URL}${appid}/header.jpg

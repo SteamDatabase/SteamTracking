@@ -3411,14 +3411,14 @@
           ),
         );
       }
-      function Le(e) {
+      const Le = (0, _.AP)(function (e) {
         const { strEstimatedTotal: t, bCartIncludesGifts: n } = e,
           r = (0, i.g1)(),
           { bValidForCheckout: s, bOnlyHardware: u } = (0, i.td)(),
-          [p, _] = (0, m.nD)(),
-          g = (0, i.bz)(),
-          f = u,
-          v =
+          [p, g] = (0, m.nD)(),
+          f = (0, i.bz)(),
+          v = u,
+          h =
             r.isSuccess &&
             r.data.line_items.some((e) => {
               var t, n;
@@ -3429,22 +3429,22 @@
                   : n.accountid_giftee)
               );
             }),
-          h =
+          E =
             d.L7.logged_in &&
             (("initial" === p && !n && !s) ||
-              ("gifts" === p && (!s || v)) ||
+              ("gifts" === p && (!s || h)) ||
               (r.isSuccess && 0 == r.data.line_items.length));
-        let E;
+        let C;
         return (
-          (E = d.L7.logged_in
-            ? n && "initial" == p && !g
+          (C = d.L7.logged_in
+            ? n && "initial" == p && !f
               ? "gifts"
               : "checkout"
             : "login"),
           a.createElement(
             "div",
             { className: o().CartSummaryCtn },
-            a.createElement(he, null),
+            a.createElement(_.SV, null, a.createElement(he, null)),
             a.createElement(
               "div",
               {
@@ -3467,21 +3467,29 @@
               },
               (0, l.Xx)("#Cart_Note_SalesTax"),
             ),
-            a.createElement(Ne, { bDisabled: h, nextStep: E, bGuestOption: f }),
-            a.createElement(ke, { disabled: h || n }),
-            a.createElement(De, { bDisabled: h }),
+            a.createElement(
+              _.DT,
+              null,
+              a.createElement(Ne, {
+                bDisabled: E,
+                nextStep: C,
+                bGuestOption: v,
+              }),
+              a.createElement(ke, { disabled: E || n }),
+              a.createElement(De, { bDisabled: E }),
+            ),
           )
         );
-      }
+      });
       function Ne(e) {
         const { bDisabled: t, nextStep: n, bGuestOption: r } = e,
-          d = (0, i.tM)(),
-          _ = (0, p.k6)(),
-          [f, v] = (0, m.nD)(),
-          h = (0, Ie.tv)();
-        let E = G.Z3;
-        (0, ye.wV)(h) && (E = h.gid);
-        const C = (function (e) {
+          _ = (0, i.tM)(),
+          f = (0, p.k6)(),
+          [v, h] = (0, m.nD)(),
+          E = (0, Ie.tv)();
+        let C = G.Z3;
+        (0, ye.wV)(E) && (C = E.gid);
+        const I = (function (e) {
             return "login" == e
               ? (0, l.Xx)("#Cart_ContinueButton_Login")
               : "gifts" == e
@@ -3490,29 +3498,35 @@
                   ? (0, l.Xx)("#Cart_ContinueButton_Payment")
                   : ((0, Ce.Z)(e, "unhandled step"), "");
           })(n),
-          I = (0, c.Z)(o().CartSummaryBtn, o().SummaryMarginBottom);
+          y = (0, c.Z)(o().CartSummaryBtn, o().SummaryMarginBottom);
         return a.createElement(
           s.KM,
           {
             disabled: t,
-            className: I,
+            className: y,
             onClick: () => {
               switch (n) {
                 case "login":
-                  G.Z3, (0, u.Xt)();
+                  if (C != G.Z3 && r) {
+                    const e =
+                      d.De.STORE_CHECKOUT_BASE_URL +
+                      "checkout?purchasetype=self&cart=" +
+                      C;
+                    (0, u._I)(e, r);
+                  } else (0, u.Xt)();
                   break;
                 case "gifts":
-                  v("gifts"), _.push(g.Z.ShoppingCartGifts());
+                  h("gifts"), f.push(g.Z.ShoppingCartGifts());
                   break;
                 case "checkout":
-                  location.href = d;
+                  location.href = _;
                   break;
                 default:
                   (0, Ce.Z)(n, "unhandled step");
               }
             },
           },
-          C,
+          I,
         );
       }
       function De(e) {

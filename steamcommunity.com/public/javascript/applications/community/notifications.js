@@ -206,22 +206,22 @@
         }
       }
       function C() {
-        (0, _.SZ)(() => [...v.rgFilterState]);
+        (0, _.SZ)(() => [...b.rgFilterState]);
         let t = 0;
         return (
-          v.rgFilterState.forEach((e) => {
+          b.rgFilterState.forEach((e) => {
             t += e ? 1 : 0;
           }),
-          { numActive: t, filters: v.rgFilterState }
+          { numActive: t, filters: b.rgFilterState }
         );
       }
       function k() {
-        return (0, _.SZ)(() => v.commentFilter);
+        return (0, _.SZ)(() => b.commentFilter);
       }
       function S() {
         return s.useMemo(() => {
           const t = new Map();
-          for (const e of b.m_rgNotificationRollups.filter(
+          for (const e of v.m_rgNotificationRollups.filter(
             (t) => 3 == t.type,
           )) {
             const i = (0, a.Zz)(e);
@@ -237,8 +237,8 @@
           { settings: o } = (0, g.X1)(s).data,
           r = (0, g.T8)();
         return (
-          (0, _.SZ)(() => (0, a.RY)(b.m_summary)),
-          b.m_rgNotificationRollups.filter((l) => {
+          (0, _.SZ)(() => (0, a.RY)(v.m_summary)),
+          v.m_rgNotificationRollups.filter((l) => {
             if (t && !e.get(l.type)) return !1;
             const c = (0, a.nM)(l.type);
             if ((0, g.Bu)(o, c.eFeature, r)) return !1;
@@ -262,8 +262,8 @@
       }
       (0, h.gn)([y.LO], E.prototype, "rgFilterState", void 0),
         (0, h.gn)([y.LO], E.prototype, "commentFilter", void 0);
-      const v = new E(),
-        b = new a.tL();
+      const b = new E(),
+        v = new a.tL();
       var I = i(91618),
         T = i(20417),
         w = i(13129),
@@ -272,16 +272,16 @@
       function A(t) {
         const { hash: e } = t;
         (0, s.useEffect)(() => {
-          v.ProcessHash(e);
+          b.ProcessHash(e);
         }, [e]);
         const i = (0, m.bY)();
         (0, s.useEffect)(() => {
-          b.setTransport(i), b.m_nUnviewed > 0 && b.MarkAllItemsViewed();
+          v.setTransport(i), v.m_nUnviewed > 0 && v.MarkAllItemsViewed();
         }, [i]);
         const n = (0, o.kQ)("notifications", "application_config");
         return (
-          b.ProcessNewNotificationPayload(n),
-          b.m_rgNotificationRollups.length
+          v.ProcessNewNotificationPayload(n),
+          v.m_rgNotificationRollups.length
             ? s.createElement(
                 s.Fragment,
                 null,
@@ -375,7 +375,7 @@
         const t = x(),
           e = s.useMemo(() => {
             const t = new Map();
-            for (const e of b.m_rgNotificationRollups)
+            for (const e of v.m_rgNotificationRollups)
               t.set(e.type, 1 + (t.get(e.type) || 0));
             return t;
           }, []);
@@ -392,7 +392,7 @@
                 d.zx,
                 {
                   className: u().MarkAllReadButton,
-                  onClick: () => b.MarkAllItemsRead(t),
+                  onClick: () => v.MarkAllItemsRead(t),
                 },
                 (0, f.Xx)("#NotificationsList_MarkAllRead"),
               ),
@@ -418,7 +418,7 @@
           s.createElement(
             "div",
             { className: u().SettingsFilters },
-            v.k_rgFilterCheckboxes
+            b.k_rgFilterCheckboxes
               .filter((t) => e.has(t.type))
               .map((t) =>
                 s.createElement(O, { key: t.type, filterOptions: t }),
@@ -428,7 +428,7 @@
             d.zx,
             {
               className: u().ResetButton,
-              onClick: () => v.SetFilter(null, !1, !0),
+              onClick: () => b.SetFilter(null, !1, !0),
             },
             (0, f.Xx)("#NotificationsList_Reset"),
           ),
@@ -444,10 +444,10 @@
               key: e.type,
               label: e.display,
               checked: i.get(e.type),
-              onChange: (t) => v.SetFilter(e.type, t),
+              onChange: (t) => b.SetFilter(e.type, t),
             });
       }
-      function z(t) {
+      function Z(t) {
         const { threadType: e } = t,
           i = k();
         return s.createElement(d.ji, {
@@ -457,26 +457,26 @@
           onChange: (t) => {
             t
               ? (i.setItemTypes.add(Number(e)),
-                v.SetCommentFilter({
+                b.SetCommentFilter({
                   type: i.type,
                   setItemTypes: i.setItemTypes,
                 }))
               : (i.setItemTypes.delete(Number(e)),
-                v.SetCommentFilter({
+                b.SetCommentFilter({
                   type: i.type,
                   setItemTypes: i.setItemTypes,
                 }));
           },
         });
       }
-      function Z(t) {
+      function z(t) {
         const { className: e } = t,
           i = S();
         return s.createElement(
           "div",
           { className: (0, w.Z)(u().AdvancedCommentFilters, e) },
           Array.from(i.keys()).map((t) =>
-            s.createElement(z, { key: t, threadType: t }),
+            s.createElement(Z, { key: t, threadType: t }),
           ),
         );
       }
@@ -502,8 +502,8 @@
             const t = (0, N.M)();
             return s.useMemo(() => {
               const e = new Map();
-              for (const i of v.k_rgCommentFilters)
-                for (const n of b.m_rgNotificationRollups.filter(
+              for (const i of b.k_rgCommentFilters)
+                for (const n of v.m_rgNotificationRollups.filter(
                   (t) => 3 == t.type,
                 )) {
                   const s = (0, a.Zz)(n);
@@ -525,7 +525,7 @@
             label: e.display,
             checked: i,
             onChange: (t) => {
-              v.SetFilter(e.type, t);
+              b.SetFilter(e.type, t);
             },
           }),
           c &&
@@ -538,7 +538,7 @@
                 s.createElement(
                   "div",
                   { className: u().CommentFilters },
-                  l && s.createElement(Z, { className: u().Expanded }),
+                  l && s.createElement(z, { className: u().Expanded }),
                 ),
               ),
             ),
@@ -547,7 +547,7 @@
       function G(t, e, i) {
         e.read ||
           (i && 0 != i.button && 1 != i.button) ||
-          b.MarkItemRead(e.notification_id),
+          v.MarkItemRead(e.notification_id),
           t();
       }
       function q(t) {
@@ -561,7 +561,7 @@
             { rootMargin: "600px" },
           ),
           r = (0, s.useCallback)(() => {
-            b.MarkItemHidden(e.item.notification_id);
+            v.MarkItemHidden(e.item.notification_id);
           }, [e.item.notification_id]);
         if (e.item.hidden) return null;
         if (e.item.hidden && 5 == e.type) {
@@ -574,8 +574,8 @@
               L.ZP,
               {
                 controller: "notification",
-                method: (3).toString(),
-                submethod: (4).toString(),
+                method: (0, c.Zl)(3),
+                submethod: (0, c.bM)(4),
               },
               s.createElement(
                 J,

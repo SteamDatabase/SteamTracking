@@ -5112,3 +5112,37 @@ function HandleOverlayWindowPinnedView( bPinned, bShowPinnedView )
 	$J( 'body' ).toggleClass( 'OverlayWindowPinnedView', bShowPinnedView );
 }
 
+var g_oReactNativeSetHeader;
+function InitReactNativeSetHeaderData( rgInitialReactNativeHeaderData, fnPostData )
+{
+	g_oReactNativeSetHeader = {
+		rgData: rgInitialReactNativeHeaderData,
+		fnPostData: fnPostData
+	};
+	UpdateReactNativeClientHeaderData();
+}
+
+function SetReactNativeHeaderCartItemCount( nCartItemCount )
+{
+	if ( !g_oReactNativeSetHeader )
+		return;	// not in react native client
+
+		if ( nCartItemCount == g_oReactNativeSetHeader.rgData['cart_item_count'] )
+		return;
+
+	if ( nCartItemCount )
+		g_oReactNativeSetHeader.rgData['cart_item_count'] = nCartItemCount;
+	else
+		delete g_oReactNativeSetHeader.rgData['cart_item_count'];
+
+	UpdateReactNativeClientHeaderData();
+}
+
+function UpdateReactNativeClientHeaderData()
+{
+	if ( g_oReactNativeSetHeader )
+	{
+		g_oReactNativeSetHeader.fnPostData( g_oReactNativeSetHeader.rgData );
+	}
+}
+

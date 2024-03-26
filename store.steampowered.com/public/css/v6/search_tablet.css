@@ -341,11 +341,6 @@ html.tablet .search_result_row .ds_steam_deck_compat {
 }
 
 
-/* Hide other platform icons */
-html.tablet .search_result_row span.platform_img {
-	display: none;
-}
-
 
 /* Pricing */
 html.tablet .search_price_discount_combined {
@@ -607,6 +602,61 @@ html.tablet #narrow_deck_compatibility .tab_filter_control_row:nth-child(3) .tab
 	background-image: url('/public/shared/images/ico/ico-deck-playable.svg');
 }
 
+
+
+
+/* VR HEADER FILTER */
+html.tablet #vr_support_search_filter {
+	border-bottom: 1px solid var(--gpBackground-LightSoft);
+	border-top: 1px solid var(--gpBackground-LightSoft);
+	padding: 8px 0px;
+	display: flex;
+	align-items: center;
+	font: var(--gpText-BodyLarge);
+	color: var(--gpStoreLightestGrey);
+	column-gap: 12px;
+	margin-bottom: 12px;
+}
+
+html.tablet #vr_support_search_filter .block_header {
+	font: unset;
+	font-weight: unset;
+	color: unset;
+	padding: 0px 10px 0px 0px;
+	background: unset;
+	transition: unset;
+}
+
+html.tablet #narrow_vr_support_header {
+	display: inline-flex;
+	align-items: center;
+	column-gap: 8px;
+	flex: auto;
+	flex-direction: row;
+}
+
+html.tablet #narrow_vr_support_header .tab_filter_control {
+	padding: 6px 8px;
+}
+
+html.tablet #narrow_vr_support_header .tab_filter_control_row {
+	border-radius: var(--gpCorner-Medium);
+	transition: background-color 0.2s ease;
+}
+
+html.tablet #narrow_vr_support_header .tab_filter_control_row.checked {
+	background-color: var(--gpBackground-LightMedium);
+}
+
+html.tablet #narrow_vr_support_header .tab_filter_control_row:hover,
+html.tablet #narrow_vr_support_header .tab_filter_control.gpfocus {
+	background-color: var(--gpBackground-LightSoft);
+}
+
+html.tablet #narrow_vr_support_header .tab_filter_control span {
+	display: flex;
+	align-items: center;
+}
 
 
 

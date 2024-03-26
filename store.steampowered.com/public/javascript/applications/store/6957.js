@@ -36,22 +36,28 @@
     },
     10847: (e, t, n) => {
       "use strict";
-      n.d(t, { In: () => P, L4: () => _, Mm: () => h, bk: () => q });
+      n.d(t, {
+        In: () => q,
+        L4: () => R,
+        Mm: () => h,
+        bk: () => D,
+        pw: () => _,
+      });
       var a = n(47427),
         r = n(9496),
         s = n(62613),
         o = n(1485),
         i = n(31846),
-        c = n(13129),
-        l = n(38605),
+        l = n(13129),
+        c = n(38605),
         u = n(35427),
         m = n(92686),
         d = n(51915),
         f = n(53923),
         E = n(88619),
         v = n(70548),
-        g = n(18434),
-        p = n(91618);
+        p = n(18434),
+        g = n(91618);
       function y(e) {
         return a.createElement(s.LpF, null);
       }
@@ -61,22 +67,54 @@
       function h(e) {
         return a.createElement(
           "div",
-          { className: (0, c.Z)(r.RoleIcon, e.className) },
+          { className: (0, l.Z)(r.RoleIcon, e.className) },
           2 == e.role ? a.createElement(I, null) : a.createElement(y, null),
         );
       }
-      function R(e) {
+      function _(e) {
+        var t, n, s;
+        const { steamid: o } = e,
+          i = (0, d.IE)(o),
+          l = (0, E.N5)(),
+          c = (0, p.h)(),
+          m =
+            null === (t = l.data) || void 0 === t
+              ? void 0
+              : t.get(new u.K(o).GetAccountID()),
+          f =
+            null === (n = c.data) || void 0 === n
+              ? void 0
+              : n.preferences().parenthesize_nicknames();
+        return a.createElement(
+          a.Fragment,
+          null,
+          (null === (s = i.data) || void 0 === s
+            ? void 0
+            : s.m_strPlayerName) || " ",
+          " ",
+          f &&
+            m &&
+            a.createElement(
+              "span",
+              { className: r.playerNickname },
+              "(",
+              m,
+              ")",
+            ),
+        );
+      }
+      function P(e) {
         var t, n;
-        const { strSteamID: s, role: o, persona: c, isSelf: m } = e,
+        const { strSteamID: s, role: o, persona: l, isSelf: m } = e,
           d = new u.K(s);
         let f = e.size || "Large";
-        const p = (0, E.N5)(),
-          y = (0, g.h)(),
+        const g = (0, E.N5)(),
+          y = (0, p.h)(),
           I =
-            null === (t = p.data) || void 0 === t
+            null === (t = g.data) || void 0 === t
               ? void 0
               : t.get(d.GetAccountID()),
-          R =
+          _ =
             null === (n = y.data) || void 0 === n
               ? void 0
               : n.preferences().parenthesize_nicknames();
@@ -87,14 +125,14 @@
             "a",
             {
               className: r.ProfileLink,
-              href: c.GetCommunityProfileURL(),
+              href: l.GetCommunityProfileURL(),
               onClick: (e) => {
                 e.stopPropagation();
               },
             },
-            a.createElement(l.vV, {
+            a.createElement(c.vV, {
               className: r.Avatar,
-              persona: c,
+              persona: l,
               size: f,
               statusPosition: "right",
             }),
@@ -103,9 +141,9 @@
               bIsSelf: m,
               bHideStatus: !1,
               bHidePersona: !1,
-              bParenthesizeNicknames: R,
+              bParenthesizeNicknames: _,
               bCompactView: !1,
-              persona: c,
+              persona: l,
               strNickname: I,
               eFriendRelationship: 3,
             }),
@@ -122,7 +160,7 @@
           ),
         );
       }
-      function _(e) {
+      function R(e) {
         const t = (0, a.useContext)(m.Xe);
         return t.errorMessage
           ? a.createElement(
@@ -132,28 +170,28 @@
             )
           : null;
       }
-      function P(e) {
+      function q(e) {
         const { strSteamID: t, role: n, bInvitePending: s, children: o } = e,
-          l = (0, f.M)(),
+          c = (0, f.M)(),
           [u, E] = (0, a.useState)(!1),
-          v = l == t,
-          g = (0, d.IE)(t);
+          v = c == t,
+          p = (0, d.IE)(t);
         if (
-          ((0, m.sT)(g, "#FamilyManagement_ErrorLoadFamilyGeneric"),
-          !g.isSuccess)
+          ((0, m.sT)(p, "#FamilyManagement_ErrorLoadFamilyGeneric"),
+          !p.isSuccess)
         )
           return null;
-        const y = g.data;
+        const y = p.data;
         return a.createElement(
-          p.s,
+          g.s,
           {
-            className: (0, c.Z)(
+            className: (0, l.Z)(
               r.FamilyMemberRow,
               v && r.ActiveFamilyMemberRow,
             ),
           },
           a.createElement(
-            p.s,
+            g.s,
             {
               className: r.FamilyMemberRowTop,
               onActivate: o ? () => E(!u) : void 0,
@@ -161,7 +199,7 @@
             a.createElement(
               "div",
               { className: r.Left },
-              a.createElement(R, {
+              a.createElement(P, {
                 strSteamID: t,
                 role: n,
                 persona: y,
@@ -180,17 +218,17 @@
                   (0, i.Xx)("#FamilyManagement_Me"),
                 ),
             ),
-            o && a.createElement(q, { bExpanded: u, setExpanded: E }),
+            o && a.createElement(D, { bExpanded: u, setExpanded: E }),
           ),
           u && o,
         );
       }
-      function q(e) {
+      function D(e) {
         const { bExpanded: t, setExpanded: n } = e;
         return a.createElement(
           o.Yz,
           {
-            className: (0, c.Z)(r.ExpandRowButton, t && r.Selected),
+            className: (0, l.Z)(r.ExpandRowButton, t && r.Selected),
             onClick: () => n(!t),
           },
           a.createElement(s.vVQ, { direction: "down" }),
@@ -199,24 +237,24 @@
     },
     85948: (e, t, n) => {
       "use strict";
-      n.d(t, { Fz: () => h, TQ: () => p, tE: () => R });
+      n.d(t, { Fz: () => h, TQ: () => g, tE: () => _ });
       var a = n(85556),
         r = n(80751),
         s = n.n(r),
         o = n(73799),
         i = n.n(o),
-        c = n(47427),
-        l = n(42718),
+        l = n(47427),
+        c = n(42718),
         u = n(35427),
         m = n(16649),
         d = n(37563),
         f = n(79545),
         E = n(82182),
         v = n(40057);
-      const g = "nicknames";
-      function p(e) {
+      const p = "nicknames";
+      function g(e) {
         const t = (0, v.bY)(),
-          { data: n, isLoading: r } = (0, l.useQuery)([g], () =>
+          { data: n, isLoading: r } = (0, c.useQuery)([p], () =>
             (0, a.mG)(this, void 0, void 0, function* () {
               const e = new Map();
               if (d.L7.logged_in) {
@@ -293,14 +331,14 @@
         ),
         I = "avatarandpersonas";
       function h(e) {
-        const { data: t, isLoading: n } = (0, l.useQuery)([I, e], () =>
+        const { data: t, isLoading: n } = (0, c.useQuery)([I, e], () =>
           y.load(e),
         );
         return [t, n];
       }
-      function R(e) {
-        const t = (0, l.useQueryClient)(),
-          { data: n, isLoading: a } = (0, l.useQuery)({
+      function _(e) {
+        const t = (0, c.useQueryClient)(),
+          { data: n, isLoading: a } = (0, c.useQuery)({
             queryKey: [I, e],
             queryFn: () => y.loadMany(e),
             onSuccess(e) {
@@ -311,7 +349,7 @@
             },
             enabled: (null == e ? void 0 : e.length) > 0,
           }),
-          r = (0, c.useMemo)(() => {
+          r = (0, l.useMemo)(() => {
             const e = new Array();
             return (
               null == n ||
@@ -326,13 +364,13 @@
     },
     18434: (e, t, n) => {
       "use strict";
-      n.d(t, { h: () => c });
+      n.d(t, { h: () => l });
       var a = n(85556),
         r = n(79545),
         s = n(82182),
         o = n(42718),
         i = n(40057);
-      function c() {
+      function l() {
         const e = (0, i.bY)();
         return (0, o.useQuery)(["communitypreferences"], () =>
           (0, a.mG)(this, void 0, void 0, function* () {
@@ -350,14 +388,14 @@
     76957: (e, t, n) => {
       "use strict";
       n.r(t),
-        n.d(t, { PurchaseRequestSimpleInfoPage: () => G, default: () => _ });
+        n.d(t, { PurchaseRequestSimpleInfoPage: () => w, default: () => P });
       var a = n(47427),
         r = n(83090),
         s = n.n(r),
         o = n(1485),
         i = n(92686),
-        c = n(46193),
-        l = n(31846),
+        l = n(46193),
+        c = n(31846),
         u = n(85948),
         m = n(35427),
         d = n(65255),
@@ -366,7 +404,7 @@
         var t, n, r;
         const { familyGroupID: s } = e,
           o = (0, i.JM)(s),
-          c =
+          l =
             null ===
               (n =
                 null === (t = (0, i.P2)(s).data) || void 0 === t
@@ -374,12 +412,12 @@
                   : t.requests()) || void 0 === n
               ? void 0
               : n.length;
-        if (!c) return null;
-        const u = (0, l.kb)("#PurchaseRequestBanner_PendingRequest", c);
+        if (!l) return null;
+        const u = (0, c.kb)("#PurchaseRequestBanner_PendingRequest", l);
         return a.createElement(
           "div",
           { className: f.PurchaseRequestBanner },
-          (0, l.kQ)(
+          (0, c.kQ)(
             "#PurchaseRequestBanner_YouHavePendingRequestsForFamilyName",
             a.createElement(
               "a",
@@ -398,18 +436,18 @@
         );
       }
       var v = n(46882),
-        g = n(10847),
-        p = n(53923),
+        p = n(10847),
+        g = n(53923),
         y = n(42718),
         I = n(44731),
         h = n(45137),
-        R = n(92790);
-      function _(e) {
+        _ = n(92790);
+      function P(e) {
         const { familyGroupID: t, requestID: n } = e,
           [r, s] = a.useState(),
           o = (0, i.jo)(t, n),
-          l = (0, c.useInitCartLocalization)(),
-          u = (0, p.M)(),
+          c = (0, l.useInitCartLocalization)(),
+          u = (0, g.M)(),
           m = (0, y.useQueryClient)(),
           d = o.data;
         return (
@@ -423,26 +461,26 @@
                 t = (0, h.WR)();
               (null == t ? void 0 : t.requestcartgid) === e.gid &&
                 t.requestcart &&
-                (0, I.IS)(m, e, (0, R.S6)(t.requestcart)),
+                (0, I.IS)(m, e, (0, _.S6)(t.requestcart)),
                 s(e);
             }
           }, [d, m]),
           o.isError
-            ? a.createElement(P, { familyGroupID: t })
-            : o.isLoading || !l || (d && !r)
+            ? a.createElement(R, { familyGroupID: t })
+            : o.isLoading || !c || (d && !r)
               ? a.createElement(q, null)
               : d
                 ? d.is_completed
                   ? a.createElement(N, { familyGroupID: t })
                   : d.requester_steamid === u
                     ? a.createElement(k, { familyGroupID: t })
-                    : a.createElement(w, { request: d, cartID: r })
+                    : a.createElement(G, { request: d, cartID: r })
                 : a.createElement(D, { familyGroupID: t })
         );
       }
-      function P(e) {
+      function R(e) {
         const { familyGroupID: t } = e;
-        return a.createElement(G, {
+        return a.createElement(w, {
           familyGroupID: t,
           headerLocToken: "#PurchaseRequest_RequestErrorHeader",
         });
@@ -456,40 +494,40 @@
       }
       function D(e) {
         const { familyGroupID: t } = e;
-        return a.createElement(G, {
+        return a.createElement(w, {
           familyGroupID: t,
           headerLocToken: "#PurchaseRequest_RequestNotFoundHeader",
         });
       }
       function N(e) {
         const { familyGroupID: t } = e;
-        return a.createElement(G, {
+        return a.createElement(w, {
           familyGroupID: t,
           headerLocToken: "#PurchaseRequest_RequestCompletedHeader",
         });
       }
       function k(e) {
         const { familyGroupID: t } = e;
-        return a.createElement(G, {
+        return a.createElement(w, {
           familyGroupID: t,
           headerLocToken: "#PurchaseRequest_RequestPendingHeader",
           infoLocToken: "#PurchaseRequest_RequestPendingInfo",
         });
       }
-      function G(e) {
+      function w(e) {
         const { familyGroupID: t, headerLocToken: n, infoLocToken: r } = e,
-          [c, u] = a.useState(null);
+          [l, u] = a.useState(null);
         return a.createElement(
           "div",
           { className: s().PurchaseRequestInfoPage },
           a.createElement(
             i.Xe.Provider,
-            { value: { errorMessage: c, setErrorMessage: u } },
-            a.createElement("div", { className: s().Header }, (0, l.Xx)(n)),
-            a.createElement(g.L4, null),
+            { value: { errorMessage: l, setErrorMessage: u } },
+            a.createElement("div", { className: s().Header }, (0, c.Xx)(n)),
+            a.createElement(p.L4, null),
             a.createElement(E, { familyGroupID: t }),
             !!r &&
-              a.createElement("div", { className: s().Info }, (0, l.Xx)(r)),
+              a.createElement("div", { className: s().Info }, (0, c.Xx)(r)),
             a.createElement(
               "div",
               { className: s().ButtonContainer },
@@ -501,23 +539,23 @@
                     window.location.assign(d.De.STORE_BASE_URL);
                   },
                 },
-                (0, l.Xx)("#PurchaseRequested_ReturnToStore"),
+                (0, c.Xx)("#PurchaseRequested_ReturnToStore"),
               ),
             ),
           ),
         );
       }
-      function w(e) {
+      function G(e) {
         const { request: t, cartID: n } = e,
           r = new m.K(t.requester_steamid).GetAccountID(),
           [s] = (0, u.Fz)(r),
           [o, i] = a.useState({ accountid_giftee: r }),
           d = a.useRef(() => {}).current,
-          f = (0, l.Xx)(
+          f = (0, c.Xx)(
             "#Cart_PurchaseRequestTitle",
             null == s ? void 0 : s.persona_name,
           );
-        return a.createElement(c.BaseCartPage, {
+        return a.createElement(l.BaseCartPage, {
           cartID: n,
           step: "gifts",
           onStepChange: d,

@@ -381,7 +381,7 @@
               let m = new u.Pv(e);
               const d = null == t ? void 0 : t.public_data,
                 c = null == t ? void 0 : t.private_data;
-              (m.m_bInitialized = !0),
+              (m.m_bInitialized = !!t),
                 (m.m_ePersonaState =
                   null !== (a = null == c ? void 0 : c.persona_state) &&
                   void 0 !== a

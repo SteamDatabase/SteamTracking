@@ -314,10 +314,6 @@ html.tablet .wishlist_row .platform_icons {
 	align-items: center;
 }
 
-html.tablet .wishlist_row span.platform_img {
-	display: none;
-}
-
 html.tablet .wishlist_row .tags {
 	height: unset;
 }

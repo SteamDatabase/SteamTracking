@@ -1921,6 +1921,7 @@
       function P(e, t) {
         let n = A(e.args, "id");
         return (
+          n || (n = A(e.args)),
           n &&
             "string" == typeof n &&
             n.length > 0 &&
@@ -9675,6 +9676,30 @@
               (this.m_fileUploadProps.imageWidth = a.width);
           });
         }
+        SetOtherFileToUpload(e) {
+          return (0, a.mG)(this, void 0, void 0, function* () {
+            if (!e) return void this.SetFileToUpload(null);
+            if (e.size > 1024 * this.m_Callbacks.GetMaxFileSizeMB() * 1024)
+              return void this.SetUploadFileError(
+                4,
+                (0, I.Xx)(
+                  "#Chat_Settings_Error_ChatFileTooLarge_dynamic",
+                  e.name,
+                  this.m_Callbacks.GetMaxFileSizeMB(),
+                ),
+              );
+            let t = e.name.split(".").pop().toLowerCase();
+            -1 != ["zip"].indexOf(t)
+              ? this.SetFileToUpload(e)
+              : this.SetUploadFileError(
+                  5,
+                  (0, I.Xx)(
+                    "#Chat_Settings_Error_ChatFileTypeNotSupported",
+                    e.name,
+                  ),
+                );
+          });
+        }
         SetFileToUpload(e) {
           if (
             ((this.m_fileUploadProps.file = e),
@@ -9972,6 +9997,7 @@
       }
       (0, a.gn)([z.aD], Fe.prototype, "SetUploadFileError", null),
         (0, a.gn)([z.aD], Fe.prototype, "SetImageFileToUpload", null),
+        (0, a.gn)([z.aD], Fe.prototype, "SetOtherFileToUpload", null),
         (0, a.gn)([z.aD], Fe.prototype, "SetFileToUpload", null),
         (0, a.gn)([z.aD], Fe.prototype, "RetryFileUpload", null),
         (0, a.gn)([z.aD], Fe.prototype, "BeginFileUpload", null),
@@ -24746,7 +24772,13 @@
                 ),
                 !1
               );
-            (r.rtime32_start_time = t.start_date),
+            (null == i ? void 0 : i.enable_input) &&
+              ((i.requested_promotion_name = t.name),
+              t.store_item_id &&
+                ((i.requested_store_item_id = t.store_item_id),
+                (i.requested_store_item_type = t.store_item_type)),
+              (i.requested_type = t.type)),
+              (r.rtime32_start_time = t.start_date),
               (r.rtime32_end_time = t.end_date),
               (t.last_modified_account = p.L7.accountid),
               (t.last_modified_time = Math.floor(new Date().getTime() / 1e3)),
@@ -42911,14 +42943,10 @@
           ? o.createElement(
               "div",
               { className: we().SectionCtn },
-              o.createElement(
-                "div",
-                null,
-                (0, G.Xx)("#OptIn_Registered_Games"),
-              ),
+              o.createElement("h1", null, (0, G.Xx)("#OptIn_Registered_Games")),
               o.createElement(
                 "table",
-                null,
+                { className: ue().EligibleGamesTable },
                 o.createElement(
                   "thead",
                   null,
@@ -60063,7 +60091,7 @@
                   const e = {
                     type: 1,
                     oInviteItem: i,
-                    rtExpireTime: p + s * M._H.PerDay,
+                    rtExpireTime: (0, P._)(p + s * M._H.PerDay),
                     nPartnerID: d,
                   };
                   m(e)
@@ -66041,103 +66069,94 @@
     },
     45180: (e, t, n) => {
       "use strict";
-      n.d(t, { u: () => S });
+      n.d(t, { u: () => E });
       var a = n(51485),
         i = n(36342),
         l = n(87380),
         r = n(30750),
         o = n(47427),
-        s = n(86437),
-        c = n(80886),
-        m = n(53040),
-        d = n(72297),
-        u = n(77178),
-        p = n(90069),
-        _ = n(46882),
-        h = n(50423),
-        g = n(31846),
-        v = n(37563),
-        E = n(60688);
-      function S(e) {
+        s = n(80886),
+        c = n(53040),
+        m = n(72297),
+        d = n(77178),
+        u = n(90069),
+        p = n(46882),
+        _ = n(50423),
+        h = n(31846),
+        g = n(37563),
+        v = n(60688);
+      function E(e) {
         const { oEditablePlan: t } = e,
           n = (0, a.Dv)(),
           i = (0, r.SZ)(() => t.BIsDirty() || n.BIsDirty());
         return o.createElement(
           "div",
-          { className: E.ButtonRow },
+          { className: v.ButtonRow },
           o.createElement(
-            m.KM,
+            c.KM,
             {
-              onClick: (e) => (0, p.AM)(o.createElement(D, null), (0, h.RA)(e)),
+              onClick: (e) => (0, u.AM)(o.createElement(S, null), (0, _.RA)(e)),
             },
-            (0, g.Xx)(i ? "#Button_Save" : "#Button_Saved"),
+            (0, h.Xx)(i ? "#Button_Save" : "#Button_Saved"),
           ),
-          o.createElement("div", { className: E.ButtonRowSpacer }),
+          o.createElement("div", { className: v.ButtonRowSpacer }),
           o.createElement(
-            m.zx,
+            c.zx,
             {
               onClick: (e) => {
-                (0, p.AM)(
-                  o.createElement(f, { oEditablePlan: t }),
-                  (0, h.RA)(e),
+                (0, u.AM)(
+                  o.createElement(D, { oEditablePlan: t }),
+                  (0, _.RA)(e),
                 );
               },
             },
-            (0, g.Xx)("#Button_Delete"),
+            (0, h.Xx)("#Button_Delete"),
           ),
           o.createElement(
-            m.zx,
+            c.zx,
             {
               disabled: !i,
               onClick: (e) =>
-                (0, p.AM)(
-                  o.createElement(u.uH, {
-                    strTitle: (0, g.Xx)("#Dialog_AreYouSure"),
-                    strDescription: (0, g.Xx)("#DailyDeals_UnsavedChanges"),
+                (0, u.AM)(
+                  o.createElement(d.uH, {
+                    strTitle: (0, h.Xx)("#Dialog_AreYouSure"),
+                    strDescription: (0, h.Xx)("#DailyDeals_UnsavedChanges"),
                     onOK: () => t.RevertChanges(),
                   }),
-                  (0, h.RA)(e),
+                  (0, _.RA)(e),
                 ),
             },
-            (0, g.Xx)("#Button_Revert"),
+            (0, h.Xx)("#Button_Revert"),
           ),
         );
       }
-      function D(e) {
+      function S(e) {
         const { closeModal: t } = e,
           n = (0, i.Gn)(),
           r = (0, a.Dv)(),
-          { fnUpdatePlan: c } = (0, l.$H)(),
-          [m, d] = o.useState(!0),
-          [p, h] = o.useState(!1);
+          { fnUpdatePlan: s } = (0, l.$H)(),
+          [c, m] = o.useState(!0),
+          [u, _] = o.useState(!1);
         return (
           o.useEffect(() => {
             const e = r.GetModel();
-            (null == e ? void 0 : e.enable_input) &&
-              ((e.requested_promotion_name = n.GetName()),
-              n.BHasFeaturedStoreItem() &&
-                ((e.requested_store_item_id = n.GetStoreItemKey().id),
-                (e.requested_store_item_type = (0, s.GV)(
-                  n.GetStoreItemKey().item_type,
-                ))),
-              (e.requested_type = n.GetType())),
-              c(n.GetPartnerID(), n.GetModel(), void 0, e)
-                .then((e) => {
-                  h(e), n.SaveSuccessClearDirty(), r.SaveSuccessClearDirty();
-                })
-                .catch((e) => h(!1))
-                .finally(() => d(!1));
+            s(n.GetPartnerID(), n.GetModel(), void 0, e)
+              .then((e) => {
+                _(e), n.SaveSuccessClearDirty(), r.SaveSuccessClearDirty();
+              })
+              .catch((e) => _(!1))
+              .finally(() => m(!1));
           }, []),
           o.createElement(
-            u.uH,
+            d.uH,
             { strTitle: "Saving", bAlertDialog: !0, closeModal: t },
-            Boolean(m)
-              ? o.createElement(_.V, {
+            Boolean(c)
+              ? o.createElement(p.V, {
                   size: "medium",
                   position: "center",
-                  string: (0, g.Xx)("#Saving"),
+                  string: (0, h.Xx)("#Saving"),
                 })
-              : Boolean(p)
+              : Boolean(u)
                 ? o.createElement("div", null, "Save successful")
                 : o.createElement(
                     "div",
@@ -66147,13 +66166,13 @@
           )
         );
       }
-      function f(e) {
+      function D(e) {
         const { oEditablePlan: t, closeModal: n } = e,
           [a, i] = o.useState(!1),
           [r, s] = o.useState(void 0),
           { fnDeletePlan: c } = (0, l.$H)();
         return o.createElement(
-          u.uH,
+          d.uH,
           {
             strTitle: "Remove Promotion Plan?",
             strDescription:
@@ -66164,29 +66183,29 @@
                 c(t.GetModel().id).then((e) => {
                   e
                     ? (window.location.href =
-                        v.De.PARTNER_BASE_URL + "promotion/planning/dashboard")
+                        g.De.PARTNER_BASE_URL + "promotion/planning/dashboard")
                     : s("Failed To Delete, check console");
                 });
             },
             bOKDisabled: a,
           },
           Boolean(t.BHasFeaturedStoreItem()) &&
-            o.createElement(y, {
+            o.createElement(f, {
               id: t.GetModel().store_item_id,
               storeItemType: t.GetModel().store_item_type,
             }),
           Boolean(a && !r) &&
-            o.createElement(_.V, {
+            o.createElement(p.V, {
               size: "medium",
               position: "center",
-              string: (0, g.Xx)("#Deleting"),
+              string: (0, h.Xx)("#Deleting"),
             }),
-          Boolean(r) && o.createElement("div", { className: d.ErrorStyles }, r),
+          Boolean(r) && o.createElement("div", { className: m.ErrorStyles }, r),
         );
       }
-      function y(e) {
+      function f(e) {
         const { id: t, storeItemType: n } = e,
-          [a] = (0, c.jk)(t, n, { include_basic_info: !0, include_assets: !0 });
+          [a] = (0, s.jk)(t, n, { include_basic_info: !0, include_assets: !0 });
         return a
           ? o.createElement(
               "div",
@@ -66206,10 +66225,10 @@
                 ")",
               ),
             )
-          : o.createElement(_.V, {
+          : o.createElement(p.V, {
               size: "medium",
               position: "center",
-              string: (0, g.Xx)("#Loading"),
+              string: (0, h.Xx)("#Loading"),
             });
       }
     },
@@ -66439,47 +66458,49 @@
     },
     83190: (e, t, n) => {
       "use strict";
-      n.d(t, { P: () => c });
-      var a = n(51485),
-        i = n(36342),
-        l = n(87380),
-        r = n(47427),
-        o = n(83743),
-        s = n(77178);
-      function c(e) {
-        const { fnUpdatePlan: t } = (0, l.$H)(),
-          n = (0, i.Gn)(),
-          c = (0, a.Dv)(),
-          m = (0, o.tx)();
-        return m.bLoading
-          ? r.createElement(o.NT, {
-              state: m,
+      n.d(t, { P: () => m });
+      var a = n(85556),
+        i = n(51485),
+        l = n(36342),
+        r = n(87380),
+        o = n(47427),
+        s = n(83743),
+        c = n(77178);
+      function m(e) {
+        const { fnUpdatePlan: t } = (0, r.$H)(),
+          n = (0, l.Gn)(),
+          m = (0, i.Dv)(),
+          d = (0, s.tx)();
+        return d.bLoading
+          ? o.createElement(s.NT, {
+              state: d,
               strDialogTitle: "Saving Plan",
               closeModal: e.closeModal,
             })
-          : r.createElement(
-              s.uH,
+          : o.createElement(
+              c.uH,
               Object.assign({}, e, {
                 closeModal: void 0,
-                onOK: () => {
-                  m.bLoading ||
-                    (m.fnSetLoading(!0),
-                    e.onOK && e.onOK(),
-                    t(n.GetPartnerID(), n.GetModel(), void 0, c.GetModel())
-                      .then((e) => {
-                        m.fnSetSuccess(e),
-                          e
-                            ? m.fnSetStrSuccess(
-                                "Status update and Save successful",
-                              )
-                            : m.fnSetStrError(
-                                "Save failed. Please try again later (check consoles for details)",
-                              ),
-                          n.SaveSuccessClearDirty(),
-                          c.SaveSuccessClearDirty();
-                      })
-                      .catch((e) => m.fnSetSuccess(!1)));
-                },
+                onOK: () =>
+                  (0, a.mG)(this, void 0, void 0, function* () {
+                    d.bLoading ||
+                      (d.fnSetLoading(!0),
+                      e.onOK && (yield e.onOK()),
+                      t(n.GetPartnerID(), n.GetModel(), void 0, m.GetModel())
+                        .then((e) => {
+                          d.fnSetSuccess(e),
+                            e
+                              ? d.fnSetStrSuccess(
+                                  "Status update and Save successful",
+                                )
+                              : d.fnSetStrError(
+                                  "Save failed. Please try again later (check consoles for details)",
+                                ),
+                            n.SaveSuccessClearDirty(),
+                            m.SaveSuccessClearDirty();
+                        })
+                        .catch((e) => d.fnSetSuccess(!1)));
+                  }),
                 onCancel: () => {
                   e.onCancel && e.onCancel(), e.closeModal && e.closeModal();
                 },

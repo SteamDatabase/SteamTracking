@@ -23325,17 +23325,12 @@
           : null;
       }
       function G(e) {
-        let t = l.a6.Get().GetTransport(),
-          a =
-            ((n = l.a6.Get().GetDynamicUserStore()),
-            (0, r.SZ)(() => n.ExcludedContentDescriptor));
-        var n;
-        let o = i.useMemo(() => ({ content_descriptors_excluded: a }), [a]);
-        return i.createElement(
-          m.qX,
-          { transport: t, defaultOptions: o },
-          e.children,
-        );
+        let t =
+          ((a = l.a6.Get().GetDynamicUserStore()),
+          (0, r.SZ)(() => a.ExcludedContentDescriptor));
+        var a;
+        let n = i.useMemo(() => ({ content_descriptors_excluded: t }), [t]);
+        return i.createElement(m.qX, { defaultOptions: n }, e.children);
       }
       function A(e) {
         var t;

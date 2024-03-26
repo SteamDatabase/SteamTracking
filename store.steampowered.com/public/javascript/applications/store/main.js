@@ -4069,7 +4069,7 @@
         return (0, r.useQuery)(["parental_requests", e, t], () =>
           (0, i.mG)(this, void 0, void 0, function* () {
             const i = o.gA.Init(l.X1);
-            i.Body().set_steamid(e),
+            i.Body().set_family_groupid(e),
               void 0 !== t && i.Body().set_rt_include_completed_since(t);
             const r = yield l.pR.GetRequests(n, i);
             if (1 != r.GetEResult())
@@ -4688,6 +4688,9 @@
         SetStatusEventHandler(e) {
           this.m_fnOnStatusEventHandler = e;
         }
+        SetReconnectErrorHandler(e) {
+          this.m_fnOnReconnectErrorHandler = e;
+        }
         CreateConnection(e, t, n, i) {
           const r = {
               bReconnectOnFailure: !0,
@@ -4695,6 +4698,10 @@
               fnOnCloseHandler: this.OnWebsocketClose,
               fnOnReconnectStartHandler: this.OnWebsocketReconnectStart,
               fnOnReconnectFinishHandler: this.OnWebsocketReconnectFinish,
+              nConnectAttemptsMax: 10,
+              nConnectAttemptTimeoutMs: 1e3,
+              nReconnectAttemptsMax: 20,
+              nReconnectAttemptTimeoutMs: 1e3,
             },
             s = {
               connection: new _(t, r),
@@ -4830,10 +4837,10 @@
         OnWebsocketReconnectFinish(e) {
           if ((this.DispatchTransportStatusUpdate(), 1 != e.eResult))
             return (
-              f.Error(
+              f.Warning(
                 "OnWebsocketReconnect: Failed to reconnect to steam client",
               ),
-              void this.FailAllPendingRequests()
+              void this.m_fnOnReconnectErrorHandler({})
             );
           this.FailAllPendingRequests();
           const t = this.GetConnectionDetails(e.connection);
@@ -6050,71 +6057,65 @@
             void 0 !== n.top && (a += ",top=" + n.top),
             (a += ",resizeable,status=0,toolbar=0,menubar=0,location=0");
           let l = "about:blank",
-            u = [];
-          u.push("createflags=" + t.eCreationFlags),
-            t.minWidth && u.push("minwidth=" + t.minWidth),
-            t.minHeight && u.push("minheight=" + t.minHeight),
+            c = [];
+          c.push("createflags=" + t.eCreationFlags),
+            t.minWidth && c.push("minwidth=" + t.minWidth),
+            t.minHeight && c.push("minheight=" + t.minHeight),
             t.maxWidth &&
               t.maxWidth != 1 / 0 &&
-              u.push("maxwidth=" + t.maxWidth),
+              c.push("maxwidth=" + t.maxWidth),
             t.maxHeight &&
               t.maxHeight != 1 / 0 &&
-              u.push("maxheight=" + t.maxHeight),
+              c.push("maxheight=" + t.maxHeight),
             t.target_browser
-              ? (u.push("pid=" + t.target_browser.m_unPID),
-                u.push("browser=" + t.target_browser.m_nBrowserID),
+              ? (c.push("pid=" + t.target_browser.m_unPID),
+                c.push("browser=" + t.target_browser.m_nBrowserID),
                 t.target_browser.m_eBrowserType
-                  ? u.push("browserType=" + t.target_browser.m_eBrowserType)
-                  : t.browserType && u.push("browserType=" + t.browserType),
+                  ? c.push("browserType=" + t.target_browser.m_eBrowserType)
+                  : t.browserType && c.push("browserType=" + t.browserType),
                 t.availscreenwidth &&
                   t.availscreenheight &&
-                  (u.push("screenavailwidth=" + t.availscreenwidth),
-                  u.push("screenavailheight=" + t.availscreenheight)))
-              : t.browserType && u.push("browserType=" + t.browserType),
-            t.strVROverlayKey && u.push("vrOverlayKey=" + t.strVROverlayKey),
+                  (c.push("screenavailwidth=" + t.availscreenwidth),
+                  c.push("screenavailheight=" + t.availscreenheight)))
+              : t.browserType && c.push("browserType=" + t.browserType),
+            t.strVROverlayKey && c.push("vrOverlayKey=" + t.strVROverlayKey),
             t.strRestoreDetails &&
-              u.push("restoredetails=" + t.strRestoreDetails),
-            t.window_opener_id && u.push("openerid=" + t.window_opener_id),
+              c.push("restoredetails=" + t.strRestoreDetails),
+            t.window_opener_id && c.push("openerid=" + t.window_opener_id),
             t.parent_container_popup_id &&
-              u.push("parentcontainerpopupid=" + t.parent_container_popup_id),
+              c.push("parentcontainerpopupid=" + t.parent_container_popup_id),
             t.center_on_window &&
               void 0 === n.left &&
               void 0 === n.top &&
-              u.push(
+              c.push(
                 "centerOnBrowserID=" +
                   t.center_on_window.SteamClient.Browser.GetBrowserID(),
               ),
-            t.strUserAgent &&
-              u.push(
-                "useragent=" +
-                  t.strUserAgent +
-                  "/" +
-                  (0, c.MR)(m.De.LAUNCHER_TYPE),
-              ),
-            t.hwndParent && u.push("hwndParent=" + t.hwndParent),
-            t.bPinned && u.push("pinned=true"),
-            t.bModal && u.push("modal=true"),
-            u && (l += "?" + u.join("&"));
-          let d = (t.owner_window || window).open(l, e, a);
-          if (!d)
+            t.strUserAgent && c.push("useragent=" + t.strUserAgent),
+            t.hwndParent && c.push("hwndParent=" + t.hwndParent),
+            t.bPinned && c.push("pinned=true"),
+            t.bModal && c.push("modal=true"),
+            c && (l += "?" + c.join("&"));
+          let u = (t.owner_window || window).open(l, e, a);
+          if (!u)
             return (
               console.error(
                 `Failed to create popup, browser/CEF may be blocking popups for "${window.location.origin}"`,
               ),
               {}
             );
+          let d = "";
+          t.html_class && (d = `class="${t.html_class}"`);
+          let m = "";
+          t.body_class && (m = `class="${t.body_class}"`);
           let h = "";
-          t.html_class && (h = `class="${t.html_class}"`);
-          let p = "";
-          t.body_class && (p = `class="${t.body_class}"`);
-          let g = "";
-          t.popup_class && (g = `class="${t.popup_class}"`);
-          let _ = `<!DOCTYPE html><html ${h}><head><title></title></head><body ${p}><div id="popup_target" ${g}></div></body></html>`;
+          t.popup_class && (h = `class="${t.popup_class}"`);
+          let p = `<!DOCTYPE html><html ${d}><head><title></title></head><body ${m}><div id="popup_target" ${h}></div></body></html>`;
           return (
-            d.document.write(_),
-            (d.document.title = s),
-            o.V2(d, o.Mv()),
-            { popup: d, element: d.document.getElementById("popup_target") }
+            u.document.write(p),
+            (u.document.title = s),
+            o.V2(u, o.Mv()),
+            { popup: u, element: u.document.getElementById("popup_target") }
           );
         }
         BShuttingDown() {
@@ -6364,6 +6365,7 @@
         b = f("get_users_sharing_device"),
         w = f("get_purchase_requests"),
         y = (f("get_shopping_cart_contents"), f("recent_playtime_sessions"));
+      f("get_playtime_summary");
       function E(e, t) {
         if (1 != e) throw e;
       }
@@ -22277,20 +22279,27 @@
     },
     10162: (e, t, n) => {
       "use strict";
-      n.d(t, { AP: () => o, SV: () => a });
+      n.d(t, { AP: () => o, DT: () => a, SV: () => l });
       var i = n(85556),
         r = n(47427),
         s = n(20417);
       function o(e) {
         return function (t) {
           return r.createElement(
-            a,
+            l,
             null,
             r.createElement(e, Object.assign({}, t)),
           );
         };
       }
-      class a extends r.Component {
+      function a(e) {
+        return r.createElement(
+          r.Fragment,
+          null,
+          r.Children.map(e.children, (e) => r.createElement(l, null, e)),
+        );
+      }
+      class l extends r.Component {
         constructor(e) {
           super(e), (this.state = {}), (this.state.lastErrorKey = e.errorKey);
         }
@@ -22298,7 +22307,7 @@
           this.sm_ErrorReportingStore = e;
         }
         componentDidCatch(e, t) {
-          const n = a.sm_ErrorReportingStore;
+          const n = l.sm_ErrorReportingStore;
           n
             ? n
                 .ReportError(e)
@@ -22325,27 +22334,27 @@
               ? "function" == typeof t
                 ? t(i.error)
                 : t
-              : a.sm_ErrorReportingStore &&
-                  a.sm_ErrorReportingStore.reporting_enabled
-                ? r.createElement(c, {
+              : l.sm_ErrorReportingStore &&
+                  l.sm_ErrorReportingStore.reporting_enabled
+                ? r.createElement(u, {
                     error: i,
                     identifierHash: s,
-                    store: a.sm_ErrorReportingStore,
+                    store: l.sm_ErrorReportingStore,
                     onRefresh: this.Reset,
                   })
-                : r.createElement(l, { error: i, onDismiss: this.Reset })
+                : r.createElement(c, { error: i, onDismiss: this.Reset })
             : e || null;
         }
       }
-      (0, i.gn)([s.ak], a.prototype, "Reset", null);
-      const l = ({ error: e, onDismiss: t }) => {
+      (0, i.gn)([s.ak], l.prototype, "Reset", null);
+      const c = ({ error: e, onDismiss: t }) => {
           let n = e.error ? e.error.stack : "Stack missing",
             i = e.info ? e.info.componentStack : "",
             s = (e.error && e.error.message) || "unknown error";
           return r.createElement(
-            u,
+            d,
             null,
-            r.createElement(d, null, 'Error: "', s, '"'),
+            r.createElement(m, null, 'Error: "', s, '"'),
             "   ",
             r.createElement(
               "span",
@@ -22356,19 +22365,19 @@
               "(x) Dismiss",
             ),
             r.createElement("br", null),
-            r.createElement(m, null, n),
-            r.createElement(m, null, "The error occurred while rendering:", i),
+            r.createElement(h, null, n),
+            r.createElement(h, null, "The error occurred while rendering:", i),
           );
         },
-        c = (e) => {
+        u = (e) => {
           const { error: t, onRefresh: n, identifierHash: i, store: s } = e,
             o = (t.error && t.error.message) || "unknown error",
             a = `${s.product}_${s.version}_${i}`;
           return r.createElement(
-            u,
+            d,
             null,
             r.createElement(
-              d,
+              m,
               null,
               "Something went wrong while displaying this content. ",
               r.createElement(
@@ -22380,11 +22389,11 @@
                 "Refresh",
               ),
             ),
-            r.createElement(m, null, "Error Reference: ", a),
-            r.createElement(m, null, o),
+            r.createElement(h, null, "Error Reference: ", a),
+            r.createElement(h, null, o),
           );
         },
-        u = ({ children: e }) =>
+        d = ({ children: e }) =>
           r.createElement(
             "div",
             {
@@ -22400,7 +22409,7 @@
             },
             e,
           ),
-        d = ({ children: e }) =>
+        m = ({ children: e }) =>
           r.createElement(
             "h1",
             {
@@ -22413,7 +22422,7 @@
             },
             e,
           ),
-        m = ({ children: e }) =>
+        h = ({ children: e }) =>
           r.createElement(
             "pre",
             { style: { marginTop: "15px", opacity: 0.7, userSelect: "auto" } },
@@ -24875,14 +24884,15 @@
     },
     56480: (e, t, n) => {
       "use strict";
-      n.d(t, { d: () => l });
+      n.d(t, { d: () => c });
       var i = n(47427),
         r = n(42287),
         s = n(50423),
         o = n(83999),
-        a = n(93855);
-      function l({ config: e, isDynamic: t }) {
-        const n = t ? u : c;
+        a = n(93855),
+        l = n(10162);
+      function c({ config: e, isDynamic: t }) {
+        const n = t ? d : u;
         return i.createElement(
           i.Fragment,
           null,
@@ -24891,7 +24901,7 @@
           ),
         );
       }
-      function c(e) {
+      function u(e) {
         const { featureName: t, render: n } = e,
           r = i.useMemo(
             () =>
@@ -24905,7 +24915,7 @@
               i.Fragment,
               null,
               r.map((e, r) =>
-                i.createElement(d, {
+                i.createElement(m, {
                   key: r,
                   featureName: t,
                   elem: e,
@@ -24915,7 +24925,7 @@
             )
           : null;
       }
-      function u(e) {
+      function d(e) {
         const { featureName: t, render: n } = e,
           r = (0, a.NW)(),
           l = i.useRef([]),
@@ -24933,12 +24943,12 @@
                 s.Eu(
                   r,
                   (t) => {
-                    m(t, e).forEach((e) => {
+                    h(t, e).forEach((e) => {
                       n(e), (o = !0);
                     });
                   },
                   (t) => {
-                    m(t, e).forEach((e) => {
+                    h(t, e).forEach((e) => {
                       i(e), (o = !0);
                     });
                   },
@@ -24954,7 +24964,7 @@
             i.Fragment,
             null,
             l.current.map(({ key: e, elem: r }) =>
-              i.createElement(d, {
+              i.createElement(m, {
                 key: e,
                 elem: r,
                 featureName: t,
@@ -24964,7 +24974,7 @@
           )
         );
       }
-      function d(e) {
+      function m(e) {
         const { featureName: t, elem: n, render: s } = e,
           o = i.useMemo(
             () =>
@@ -24988,9 +24998,9 @@
               })(n.getAttribute("data-props"), t),
             [n, t],
           );
-        return (0, r.createPortal)(s(o), n);
+        return (0, r.createPortal)(i.createElement(l.SV, null, s(o)), n);
       }
-      function m(e, t) {
+      function h(e, t) {
         return e.matches(t) ? [e] : e.querySelectorAll(t);
       }
     },
@@ -33024,8 +33034,8 @@
         d = n(760);
       var m = n(22871),
         h = n.n(m),
-        p = n(28017),
-        g = n(8285),
+        p = n(8285),
+        g = n(28017),
         _ = n(53923),
         f = n(40057),
         v = n(61134),
@@ -33837,12 +33847,12 @@
       (0, i.gn)([ae.LO], Le.prototype, "m_mapTrailerPlay", void 0);
       let Me = null;
       function Re(e) {
-        const t = (0, g.TH)();
+        const t = (0, p.TH)();
         return t.pathname.includes("//")
           ? (console.error(`Malformed path: "${t.pathname}"`),
-            s.createElement(g.l_, { to: t.pathname.replace(/\/\//g, "/") }))
+            s.createElement(p.l_, { to: t.pathname.replace(/\/\//g, "/") }))
           : e.redirect
-            ? s.createElement(g.l_, { push: !0, to: e.redirect || "/" })
+            ? s.createElement(p.l_, { push: !0, to: e.redirect || "/" })
             : null;
       }
       var Ie = n(2041);
@@ -34625,7 +34635,14 @@
             n.e(3805),
           ]).then(n.bind(n, 42957)),
         );
-      function It() {
+      function It(e) {
+        return s.createElement(
+          I.SV,
+          null,
+          s.createElement(p.AW, Object.assign({}, e)),
+        );
+      }
+      function Tt() {
         const [e, t] = s.useState(),
           [n, i] = s.useState(!1);
         return (
@@ -34655,22 +34672,22 @@
           }, []),
           n
             ? s.createElement(
-                p.VK,
+                g.VK,
                 { basename: (0, d.l)() },
                 s.createElement(
                   "div",
                   { className: h().App },
                   s.createElement(
-                    Ot,
+                    xt,
                     { storeUserConfig: e },
-                    s.createElement(xt, null),
+                    s.createElement(Bt, null),
                     s.createElement(
                       s.Suspense,
                       { fallback: null },
                       s.createElement(
-                        g.rs,
+                        p.rs,
                         null,
-                        s.createElement(g.AW, {
+                        s.createElement(It, {
                           exact: !0,
                           path: d.Z.DiagData(),
                           render: (e) =>
@@ -34683,7 +34700,7 @@
                             ),
                         }),
                         s.createElement(
-                          g.AW,
+                          It,
                           { exact: !0, path: d.Z.Login() },
                           s.createElement(re.d, {
                             config: {
@@ -34693,7 +34710,7 @@
                           }),
                         ),
                         s.createElement(
-                          g.AW,
+                          It,
                           { exact: !0, path: d.Z.OAuthLogin() },
                           s.createElement(re.d, {
                             config: {
@@ -34702,7 +34719,7 @@
                             },
                           }),
                         ),
-                        s.createElement(g.AW, {
+                        s.createElement(It, {
                           exact: !0,
                           path: d.Z.AppStorePage(),
                           render: (e) => {
@@ -34782,7 +34799,7 @@
                             });
                           },
                         }),
-                        s.createElement(g.AW, {
+                        s.createElement(It, {
                           exact: !0,
                           path: d.Z.SaleLandingPage(),
                           render: (e) => {
@@ -34812,7 +34829,7 @@
                             });
                           },
                         }),
-                        s.createElement(g.AW, {
+                        s.createElement(It, {
                           path: d.Z.CuratorAdminPage(),
                           render: (e) =>
                             s.createElement(re.d, {
@@ -34822,7 +34839,7 @@
                               },
                             }),
                         }),
-                        s.createElement(g.AW, {
+                        s.createElement(It, {
                           exact: !0,
                           path: d.Z.CreatorSaleLandingPage(),
                           render: (e) =>
@@ -34842,7 +34859,7 @@
                               },
                             }),
                         }),
-                        s.createElement(g.AW, {
+                        s.createElement(It, {
                           path: [
                             d.Z.RemotePlay(),
                             d.Z.RemotePlayTogether(),
@@ -34851,9 +34868,9 @@
                             d.Z.SteamDeckDock(),
                             d.Z.SubscriptionPlanLandingPage(),
                           ],
-                          render: (e) => s.createElement(Tt, null),
+                          render: (e) => s.createElement(At, null),
                         }),
-                        s.createElement(g.AW, {
+                        s.createElement(It, {
                           exact: !0,
                           path: d.Z.CuratorHomePage(),
                           render: (e) =>
@@ -34880,7 +34897,7 @@
                               },
                             }),
                         }),
-                        s.createElement(g.AW, {
+                        s.createElement(It, {
                           exact: !0,
                           path: d.Z.CuratorListPage(),
                           render: (e) =>
@@ -34894,7 +34911,7 @@
                               },
                             }),
                         }),
-                        s.createElement(g.AW, {
+                        s.createElement(It, {
                           exact: !0,
                           path: d.Z.PackageStorePage(),
                           render: (e) =>
@@ -34912,7 +34929,7 @@
                               },
                             }),
                         }),
-                        s.createElement(g.AW, {
+                        s.createElement(It, {
                           exact: !0,
                           path: d.Z.BundleStorePage(),
                           render: (e) =>
@@ -34931,7 +34948,7 @@
                               },
                             }),
                         }),
-                        s.createElement(g.AW, {
+                        s.createElement(It, {
                           path: d.Z.NewsHub(),
                           render: (e) =>
                             s.createElement(re.d, {
@@ -34941,7 +34958,7 @@
                               },
                             }),
                         }),
-                        s.createElement(g.AW, {
+                        s.createElement(It, {
                           path: d.Z.EventAdmin(),
                           render: (e) =>
                             s.createElement(re.d, {
@@ -34951,7 +34968,7 @@
                               },
                             }),
                         }),
-                        s.createElement(g.AW, {
+                        s.createElement(It, {
                           exact: !0,
                           path: d.Z.InteractiveRecommender(),
                           render: (e) =>
@@ -34961,11 +34978,11 @@
                               },
                             }),
                         }),
-                        s.createElement(g.AW, {
+                        s.createElement(It, {
                           path: d.Z.LabsSandbox(),
                           render: (e) => s.createElement(ot, null),
                         }),
-                        s.createElement(g.AW, {
+                        s.createElement(It, {
                           path: d.Z.SteamCharts(),
                           render: (e) =>
                             s.createElement(re.d, {
@@ -34975,7 +34992,7 @@
                               },
                             }),
                         }),
-                        s.createElement(g.AW, {
+                        s.createElement(It, {
                           path: d.Z.Loyalty(),
                           render: () =>
                             s.createElement(re.d, {
@@ -34984,7 +35001,7 @@
                               },
                             }),
                         }),
-                        s.createElement(g.AW, {
+                        s.createElement(It, {
                           path: d.Z.ContentHubHome(),
                           render: (e) => {
                             const {
@@ -35004,7 +35021,7 @@
                             });
                           },
                         }),
-                        s.createElement(g.AW, {
+                        s.createElement(It, {
                           path: d.Z.Categories(),
                           render: () =>
                             s.createElement(re.d, {
@@ -35013,12 +35030,12 @@
                               },
                             }),
                         }),
-                        s.createElement(g.AW, {
+                        s.createElement(It, {
                           path: d.Z.AccountPreferences(),
                           render: (e) =>
                             s.createElement(lt, Object.assign({}, e)),
                         }),
-                        s.createElement(g.AW, {
+                        s.createElement(It, {
                           exact: !0,
                           path: d.Z.SummerSale2021Story(),
                           render: (e) =>
@@ -35029,7 +35046,7 @@
                               },
                             }),
                         }),
-                        s.createElement(g.AW, {
+                        s.createElement(It, {
                           exact: !0,
                           path: d.Z.LabsHome(),
                           render: (e) =>
@@ -35040,17 +35057,17 @@
                               },
                             }),
                         }),
-                        s.createElement(g.AW, {
+                        s.createElement(It, {
                           path: d.Z.MarketingMessages(),
                           render: (e) =>
                             s.createElement(St, Object.assign({}, e)),
                         }),
-                        s.createElement(g.AW, {
+                        s.createElement(It, {
                           path: d.Z.YearInReview(),
                           render: (e) =>
                             s.createElement(bt, Object.assign({}, e)),
                         }),
-                        s.createElement(g.AW, {
+                        s.createElement(It, {
                           path: d.Z.ShoppingCartAccountCartPurchaseRequested(),
                           render: (e) =>
                             s.createElement(re.d, {
@@ -35062,7 +35079,7 @@
                               },
                             }),
                         }),
-                        s.createElement(g.AW, {
+                        s.createElement(It, {
                           path: d.Z.ShoppingCartPurchaseRequest(),
                           render: (e) =>
                             s.createElement(re.d, {
@@ -35075,7 +35092,7 @@
                               },
                             }),
                         }),
-                        s.createElement(g.AW, {
+                        s.createElement(It, {
                           path: d.Z.ShoppingCartGifts(),
                           render: (e) =>
                             s.createElement(re.d, {
@@ -35085,7 +35102,7 @@
                               },
                             }),
                         }),
-                        s.createElement(g.AW, {
+                        s.createElement(It, {
                           path: d.Z.ShoppingCart(),
                           render: (e) =>
                             s.createElement(re.d, {
@@ -35094,7 +35111,7 @@
                               },
                             }),
                         }),
-                        s.createElement(g.AW, {
+                        s.createElement(It, {
                           path: d.Z.SteamAwards(),
                           render: (e) =>
                             s.createElement(re.d, {
@@ -35104,7 +35121,7 @@
                             }),
                         }),
                         !1,
-                        s.createElement(g.AW, null, s.createElement(Re, null)),
+                        s.createElement(It, null, s.createElement(Re, null)),
                       ),
                     ),
                   ),
@@ -35113,8 +35130,8 @@
             : null
         );
       }
-      function Tt(e) {
-        const t = (0, g.TH)().pathname.split("/").filter(Boolean).pop(),
+      function At(e) {
+        const t = (0, p.TH)().pathname.split("/").filter(Boolean).pop(),
           n = "sale_" + ((null == t ? void 0 : t.split("?")[0]) || "unknown");
         return s.createElement(re.d, {
           config: {
@@ -35127,7 +35144,7 @@
           },
         });
       }
-      function At(e) {
+      function kt(e) {
         const { storeUserConfig: t, children: n } = e,
           i = s.useCallback(
             () =>
@@ -35153,7 +35170,7 @@
           ),
         );
       }
-      function kt(e) {
+      function Ot(e) {
         const { storeUserConfig: t, children: n } = e,
           i = s.useRef();
         i.current || (i.current = new et());
@@ -35172,10 +35189,10 @@
           )
         );
       }
-      function Ot(e) {
+      function xt(e) {
         const { storeUserConfig: t, children: n } = e;
         return s.createElement(
-          kt,
+          Ot,
           { storeUserConfig: t },
           s.createElement(
             w.u.Provider,
@@ -35184,7 +35201,7 @@
               l.fI,
               null,
               s.createElement(
-                At,
+                kt,
                 { storeUserConfig: t },
                 s.createElement(Ie.R, null, s.createElement(K, null, n)),
               ),
@@ -35192,7 +35209,7 @@
           ),
         );
       }
-      const xt = s.memo(function (e) {
+      const Bt = s.memo(function (e) {
         return s.createElement(
           s.Fragment,
           null,
@@ -35231,19 +35248,19 @@
           ),
         );
       });
-      var Bt = n(92011),
-        Nt = n(50423);
+      var Nt = n(92011),
+        Pt = n(50423);
       n(33557);
       new Map();
       n(7765);
       (0, ae.jQ)({ enforceActions: "never" }),
-        Nt.Dj(function () {
+        Pt.Dj(function () {
           return (0, i.mG)(this, void 0, void 0, function* () {
             (0, l.Ek)("application_config").userConfig ||
               (yield (0, l.x)(a(), l.De.STORE_BASE_URL + "actions/", {
                 userConfig: !0,
               })),
-              (0, Bt.Uh)().Init(
+              (0, Nt.Uh)().Init(
                 "Store",
                 CLSTAMP,
                 new C.J(l.De.WEBAPI_BASE_URL).GetServiceTransport(),
@@ -35277,7 +35294,7 @@
               document.getElementById("application_root")
                 ? r
                     .createRoot(document.getElementById("application_root"))
-                    .render(s.createElement(It))
+                    .render(s.createElement(Tt))
                 : console.error('No "application_root" was found to target');
           });
         });

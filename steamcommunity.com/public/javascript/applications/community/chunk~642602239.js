@@ -774,6 +774,7 @@
       function A(e, t) {
         let n = x(e.args, "id");
         return (
+          n || (n = x(e.args)),
           n &&
             "string" == typeof n &&
             n.length > 0 &&

@@ -1620,8 +1620,8 @@
           ),
         );
       }
-      var w = n(62613),
-        T = n(13129),
+      var T = n(62613),
+        w = n(13129),
         B = n(80751),
         A = n.n(B),
         k = n(27605),
@@ -2021,7 +2021,7 @@
             if (n > 0)
               return i.createElement(
                 "div",
-                { className: (0, T.Z)(X.LoyaltyRewardCtn) },
+                { className: (0, w.Z)(X.LoyaltyRewardCtn) },
                 i.createElement($, { defid: n, url: e }),
               );
           }
@@ -2068,18 +2068,18 @@
         return Le(ne, e, t);
       }
       function ye(e, t) {
-        return (0, D.h4)() ? null : be(e, i.createElement(w.tLe, null), "@", t);
+        return (0, D.h4)() ? null : be(e, i.createElement(T.tLe, null), "@", t);
       }
       function Ie(e, t) {
-        return (0, D.h4)() ? null : be(e, i.createElement(w.tLe, null), "#", t);
+        return (0, D.h4)() ? null : be(e, i.createElement(T.tLe, null), "#", t);
       }
       function xe(e, t) {
         return (0, D.h4)()
           ? null
-          : be(e, i.createElement(w.Lk$, null), void 0, t);
+          : be(e, i.createElement(T.Lk$, null), void 0, t);
       }
       function De(e, t) {
-        return be(e, i.createElement(w.ui7, null), void 0, t);
+        return be(e, i.createElement(T.ui7, null), void 0, t);
       }
       function be(e, t, n, a) {
         let r;
@@ -2130,8 +2130,8 @@
         }
         return (0, d.hF)(t, null == n ? void 0 : n.event);
       }
-      var we = n(51688),
-        Te = n(62210);
+      var Te = n(51688),
+        we = n(62210);
       class Be {
         constructor() {
           (this.file = void 0),
@@ -2216,6 +2216,30 @@
               (this.m_fileUploadProps.imageWidth = a.width);
           });
         }
+        SetOtherFileToUpload(e) {
+          return (0, a.mG)(this, void 0, void 0, function* () {
+            if (!e) return void this.SetFileToUpload(null);
+            if (e.size > 1024 * this.m_Callbacks.GetMaxFileSizeMB() * 1024)
+              return void this.SetUploadFileError(
+                4,
+                (0, x.Xx)(
+                  "#Chat_Settings_Error_ChatFileTooLarge_dynamic",
+                  e.name,
+                  this.m_Callbacks.GetMaxFileSizeMB(),
+                ),
+              );
+            let t = e.name.split(".").pop().toLowerCase();
+            -1 != ["zip"].indexOf(t)
+              ? this.SetFileToUpload(e)
+              : this.SetUploadFileError(
+                  5,
+                  (0, x.Xx)(
+                    "#Chat_Settings_Error_ChatFileTypeNotSupported",
+                    e.name,
+                  ),
+                );
+          });
+        }
         SetFileToUpload(e) {
           if (
             ((this.m_fileUploadProps.file = e),
@@ -2255,7 +2279,7 @@
             let t = this.m_fileUploadProps.file;
             if (!t)
               throw (
-                ((0, Te.X)(
+                ((0, we.X)(
                   !1,
                   "Must SetImageFileToUpload before calling BeginFileUpload",
                 ),
@@ -2513,6 +2537,7 @@
       }
       (0, a.gn)([V.aD], Ae.prototype, "SetUploadFileError", null),
         (0, a.gn)([V.aD], Ae.prototype, "SetImageFileToUpload", null),
+        (0, a.gn)([V.aD], Ae.prototype, "SetOtherFileToUpload", null),
         (0, a.gn)([V.aD], Ae.prototype, "SetFileToUpload", null),
         (0, a.gn)([V.aD], Ae.prototype, "RetryFileUpload", null),
         (0, a.gn)([V.aD], Ae.prototype, "BeginFileUpload", null),
@@ -2734,7 +2759,7 @@
               onOKActionDescription: (0, x.Xx)("#Button_Upload"),
               onClick: () => n.current.click(),
             },
-            i.createElement(w.pkz, null),
+            i.createElement(T.pkz, null),
           ),
         );
       }
@@ -2763,7 +2788,7 @@
               src: t.file_upload_data_url,
             }),
           Boolean(-1 != n.type.indexOf("video")) &&
-            i.createElement(w.nkn, null),
+            i.createElement(T.nkn, null),
           i.createElement(
             "div",
             { className: nt.FileUploadFileName },
@@ -2774,7 +2799,7 @@
           i.createElement(
             "div",
             { className: nt.FileUploadCancel, onClick: () => t.Reset() },
-            i.createElement(w.pVO, null),
+            i.createElement(T.pVO, null),
           ),
           i.createElement(
             Ue.KM,
@@ -2805,7 +2830,7 @@
           i.createElement(
             "div",
             {
-              className: (0, T.Z)(
+              className: (0, w.Z)(
                 nt.FileUploadProgressBarContainer,
                 "DialogProgressBar_ProgressBarContainer",
               ),
@@ -2874,8 +2899,8 @@
           o = (0, s.im)(e.args, "id"),
           l = (function (e) {
             return "button" === e
-              ? (0, T.Z)(X.LinkButton, "LinkButton")
-              : (0, T.Z)(X.Link, "Link");
+              ? (0, w.Z)(X.LinkButton, "LinkButton")
+              : (0, w.Z)(X.Link, "Link");
           })(r),
           c = e.context.event;
         if (void 0 === a) return e.children || "";
@@ -3213,10 +3238,10 @@
               })(a),
             ),
           );
-        return a == we.sq ||
-          a == we.RQ ||
-          (2 == D.De.EUNIVERSE && a == we.$Y) ||
-          (1 == D.De.EUNIVERSE && a == we._L)
+        return a == Te.sq ||
+          a == Te.RQ ||
+          (2 == D.De.EUNIVERSE && a == Te.$Y) ||
+          (1 == D.De.EUNIVERSE && a == Te._L)
           ? i.createElement(
               "div",
               null,
@@ -4279,8 +4304,8 @@
       (0, a.gn)([E.ak], b.prototype, "OnMouseOver", null),
         (0, a.gn)([E.ak], b.prototype, "OnClick", null);
       const L = D;
-      var w = n(3216),
-        T = n.n(w);
+      var T = n(3216),
+        w = n.n(T);
       const B = class extends L {
         performSearch(e) {
           return this.props.emoticonStore.SearchEmoticons(e, 10, !1);
@@ -4296,13 +4321,13 @@
             "div",
             {
               className: (0, x.Z)(
-                T().EmoticonSuggestion,
+                w().EmoticonSuggestion,
                 e.recent ? "Recent" : "",
               ),
             },
             s.createElement(
               "div",
-              { className: T().Emoticon },
+              { className: w().Emoticon },
               s.createElement(f.tk, {
                 emoticon: e.name,
                 emoticonHoverStore: this.props.emoticonHoverStore,
@@ -5344,7 +5369,7 @@
         OnConvertHTMLToBBCodeDialog(e) {
           const t = (0, z.RA)(e);
           (0, H.BR)(
-            s.createElement(Te, {
+            s.createElement(we, {
               ownerWindow: t,
               textareaRef: this.props.fnTextareaRef(),
             }),
@@ -6250,11 +6275,11 @@
           "div",
           { className: q().DropDownScroll },
           t.map((e) =>
-            s.createElement(we, { key: e, steamid: e, setSteamID: n }),
+            s.createElement(Te, { key: e, steamid: e, setSteamID: n }),
           ),
         );
       }
-      function we(e) {
+      function Te(e) {
         const { steamid: t, setSteamID: n } = e,
           { data: a } = (0, V.IE)(t);
         return s.createElement(
@@ -6272,7 +6297,7 @@
           ),
         );
       }
-      let Te = class extends s.Component {
+      let we = class extends s.Component {
         constructor(e) {
           super(e),
             (this.m_isMounted = !1),
@@ -6475,11 +6500,11 @@
                 );
         }
       };
-      (0, a.gn)([E.ak], Te.prototype, "OnConvertAndOverriteHTML", null),
-        (0, a.gn)([E.ak], Te.prototype, "OnConvertAndAppendHTML", null),
-        (0, a.gn)([E.ak], Te.prototype, "OnCheckboxChange", null),
-        (0, a.gn)([E.ak], Te.prototype, "OnTextAreaChange", null),
-        (Te = (0, a.gn)([o.Pi], Te));
+      (0, a.gn)([E.ak], we.prototype, "OnConvertAndOverriteHTML", null),
+        (0, a.gn)([E.ak], we.prototype, "OnConvertAndAppendHTML", null),
+        (0, a.gn)([E.ak], we.prototype, "OnCheckboxChange", null),
+        (0, a.gn)([E.ak], we.prototype, "OnTextAreaChange", null),
+        (we = (0, a.gn)([o.Pi], we));
       var Be = n(25979),
         Ae = n(5918),
         ke = n.n(Ae);

@@ -66,7 +66,7 @@ html.responsive.touch .K1_TpPRugybUSZ7-2Q6Lz {
 }
 ._1GICwsV-USjHjcokRCO32i .AYHhNB9WZZdRWcPm20I_O ._3x3dDlfuVsF9BPonkyl0Gs {
   margin-right: 5px;
-  margin-left: 5px;
+  font-weight: bold;
 }
 ._1GICwsV-USjHjcokRCO32i .AYHhNB9WZZdRWcPm20I_O .boWA49TLaFWuuS_Ky4jMH {
   margin-right: 5px;
@@ -75,18 +75,40 @@ html.responsive.touch .K1_TpPRugybUSZ7-2Q6Lz {
   color: #1a9fff;
 }
 ._1GICwsV-USjHjcokRCO32i .AYHhNB9WZZdRWcPm20I_O ._3BhC4y8ABw34stugO_WlSv {
-  margin-left: 10px;
+  margin-right: 3px;
   display: inline-block;
 }
-._1GICwsV-USjHjcokRCO32i .AYHhNB9WZZdRWcPm20I_O .EVV-aE5THCnYYlB0cbnGO {
-  padding-left: 3px;
+._1GICwsV-USjHjcokRCO32i .AYHhNB9WZZdRWcPm20I_O ._1NYqqNQkcNPs6ODhW3Ypqh {
+  display: flex;
+  flex-direction: row;
+  margin-left: 5px;
+}
+._1GICwsV-USjHjcokRCO32i .AYHhNB9WZZdRWcPm20I_O .nSMXRaXrN0Pxh_F1z46b1 {
+  display: flex;
+  flex-direction: row;
+}
+@media screen and (max-width: 500px) {
+  ._1GICwsV-USjHjcokRCO32i .AYHhNB9WZZdRWcPm20I_O .nSMXRaXrN0Pxh_F1z46b1 {
+    display: flex;
+    flex-direction: column;
+  }
+  ._1GICwsV-USjHjcokRCO32i .AYHhNB9WZZdRWcPm20I_O ._1NYqqNQkcNPs6ODhW3Ypqh {
+    margin-left: 0px;
+  }
+}
+._1GICwsV-USjHjcokRCO32i .EVV-aE5THCnYYlB0cbnGO {
   text-transform: uppercase;
   color: #fff;
   font-weight: bold;
 }
 ._1GICwsV-USjHjcokRCO32i .OKxvRrmFkD6Cbv6RU6Y7 {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+}
+._1GICwsV-USjHjcokRCO32i ._1X5cbFGqhqwIKqeZJyMvCY {
+  font-weight: bold;
+  margin-left: 16px;
 }
 ._1GICwsV-USjHjcokRCO32i ._32K94kiZEjBxfu4vkQbXWU {
   cursor: pointer;
@@ -567,6 +589,9 @@ a:hover {
 }
 ._2qyKwMuoCMj5o3CO6NW_IO {
   display: flex;
+}
+._2qyKwMuoCMj5o3CO6NW_IO ._10uce4LBxhZ9H10UzDZRxA {
+  display: flex;
   align-items: center;
   cursor: pointer;
 }
@@ -610,6 +635,11 @@ a:hover {
 ._2r46bpLc_qpnLHbnayzmSG {
   height: 84px;
   width: 100%;
+  display: flex;
+  justify-content: center;
+}
+._2r46bpLc_qpnLHbnayzmSG.rE1IiJak5Yg84H2WpLPYJ {
+  color: #de3618;
 }
 .R33oyOEbGLOTun3xj4Y2p {
   box-sizing: border-box;
@@ -957,8 +987,9 @@ a:hover {
   color: #fff;
   font-weight: 500;
 }
-.JtCI1J9RW7AZBsaJV_p5E .Ea1HRAVrBgmhuoZIFYT6o b {
+._2nK5N79jK_gB0gCK-fVR5k {
   color: #ffc82c;
+  font-weight: 500;
 }
 ._3oofpm2z16a0n2zyKhN-MJ {
   font-size: 16px;

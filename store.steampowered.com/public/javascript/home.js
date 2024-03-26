@@ -115,6 +115,7 @@ GHomepage = {
 		}
 
 		InitHorizontalAutoSliders();
+		InitVideoFocusWatcher();
 
 		if ( $J( '#load_addtl_scroll_target' ).length )
 			new CScrollOffsetWatcher( '#load_addtl_scroll_target', GHomepage.OnHomeActivate.bind(this) );

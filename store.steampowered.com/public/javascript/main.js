@@ -748,6 +748,38 @@ function RegisterSteamOnWebPanelHiddenHandler( f )
 	});
 }
 
+function InitVideoFocusWatcher()
+{
+	const k_strVideoSelector = 'video[data-video-pause-on-blur],video.fullscreen-bg__video,video.fullscreen-bg__video_mobile';
+	const k_nBlurTimeout = 20000;
+
+	let nBlurTimeoutId = undefined;
+	const onWindowBlur = function()
+	{
+		if ( !nBlurTimeoutId )
+		{
+			nBlurTimeoutId = window.setTimeout( () =>
+			{
+				
+				$J( k_strVideoSelector ).trigger( 'pause' );
+			}, k_nBlurTimeout );
+		}
+	}
+
+	const onWindowFocus = function()
+	{
+		if ( nBlurTimeoutId )
+		{
+			window.clearTimeout( nBlurTimeoutId );
+		}
+
+		nBlurTimeoutId = undefined;
+		$J( k_strVideoSelector ).trigger( 'play' );
+	}
+
+	$J( window ).on( 'blur' , onWindowBlur );
+	$J( window ).on( 'focus' , onWindowFocus );
+}
 
 $J( function() {
 	InstrumentLinks();

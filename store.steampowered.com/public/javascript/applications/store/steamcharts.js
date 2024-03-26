@@ -241,8 +241,8 @@
       function u(e, t, a) {
         const [c, i] = (0, n.useState)(l.j1.GetClanEventModel(t)),
           [m, u] = (0, n.useState)(!!e && !!t),
-          [d, p] = (0, n.useState)(),
-          h = (0, s.T)("usePartnerEventByClanAccountAndEventGID");
+          [d, h] = (0, n.useState)(),
+          p = (0, s.T)("usePartnerEventByClanAccountAndEventGID");
         return (
           (0, n.useEffect)(() => {
             (() => {
@@ -262,7 +262,7 @@
                           a,
                         );
                     } catch (e) {
-                      p(
+                      h(
                         null ===
                           (n =
                             null === (r = null == e ? void 0 : e.response) ||
@@ -273,14 +273,14 @@
                           : n.err_msg,
                       );
                     }
-                    h.token.reason || i(c);
+                    p.token.reason || i(c);
                   }
                 } finally {
                   u(!1);
                 }
               });
             })();
-          }, [e, t, c, a, h]),
+          }, [e, t, c, a, p]),
           { eventModel: c, bLoading: m, sErrorMessage: d }
         );
       }
@@ -314,7 +314,7 @@
     },
     54457: (e, t, a) => {
       "use strict";
-      a.d(t, { cs: () => C, qX: () => p });
+      a.d(t, { cs: () => S, qX: () => p });
       var r = a(85556),
         n = a(47427),
         l = a(42718),
@@ -322,30 +322,28 @@
         o = a(44922),
         c = a(80998),
         i = a(15690),
-        m = a(62210);
-      const u = n.createContext({}),
-        d = () => n.useContext(u);
+        m = a(62210),
+        u = a(40057);
+      const d = n.createContext({}),
+        h = () => n.useContext(d);
       function p(e) {
-        let { transport: t, defaultOptions: a, children: r } = e,
-          l = n.useMemo(
-            () => ({ defaultOptions: a || {}, transport: t }),
-            [a, t],
-          );
-        return n.createElement(u.Provider, { value: l }, r);
+        let { defaultOptions: t, children: a } = e,
+          r = n.useMemo(() => ({ defaultOptions: t || {} }), [t]);
+        return n.createElement(d.Provider, { value: r }, a);
       }
-      const h = "StoreQueryStore";
-      function C(e, t, a, i) {
-        let u = d();
-        (u && u.transport) ||
-          (0, m.X)(!1, "useStoreQuery called outside of a <StoreQueryRoot>");
-        let p = u.defaultOptions;
-        const C = n.useMemo(() => {
+      const C = "StoreQueryStore";
+      function S(e, t, a, i) {
+        let d = h();
+        const p = (0, u.bY)();
+        d || (0, m.X)(!1, "useStoreQuery called outside of a <StoreQueryRoot>");
+        let S = d.defaultOptions;
+        const E = n.useMemo(() => {
           let e = [];
           return (
             (null == i ? void 0 : i.content_descriptors_excluded)
               ? (e = i.content_descriptors_excluded)
-              : (null == p ? void 0 : p.content_descriptors_excluded) &&
-                (e = p.content_descriptors_excluded),
+              : (null == S ? void 0 : S.content_descriptors_excluded) &&
+                (e = S.content_descriptors_excluded),
             Object.assign(Object.assign({}, t), {
               filters: Object.assign(
                 { content_descriptors_excluded: e },
@@ -353,18 +351,18 @@
               ),
             })
           );
-        }, [t, i, p]);
-        let _;
+        }, [t, i, S]);
+        let v;
         void 0 !== (null == i ? void 0 : i.override_country_code)
-          ? (_ = i.override_country_code)
-          : void 0 !== (null == p ? void 0 : p.override_country_code) &&
-            (_ = p.override_country_code);
-        let E = { staleTime: 36e5 };
+          ? (v = i.override_country_code)
+          : void 0 !== (null == S ? void 0 : S.override_country_code) &&
+            (v = S.override_country_code);
+        let y = { staleTime: 36e5 };
         (null == i ? void 0 : i.reactQuery) &&
-          (E = Object.assign(Object.assign({}, E), i.reactQuery));
-        const v = [h, C, a, i];
+          (y = Object.assign(Object.assign({}, y), i.reactQuery));
+        const g = [C, E, a, i];
         return (0, l.useQuery)(
-          v,
+          g,
           () =>
             (function (e, t, a, n, l) {
               return (0, r.mG)(this, void 0, void 0, function* () {
@@ -377,13 +375,13 @@
                 const i = yield o.Ax.Query(e, r);
                 if (1 != i.GetEResult())
                   throw `Error executing StoreQuery "${t}", EResult: ${i.GetEResult()}`;
-                return new S(i, n);
+                return new _(i, n);
               });
-            })(u.transport, e, C, a, _),
-          E,
+            })(p, e, E, a, v),
+          y,
         );
       }
-      class S {
+      class _ {
         constructor(e, t) {
           this.ReadResults(e, t);
         }
@@ -438,8 +436,8 @@
             "children",
             "noImpressionTracking",
           ]),
-          p = n.useRef(0),
-          h = 0 == t.GetStoreItemType() ? t.GetAppID() : null,
+          h = n.useRef(0),
+          p = 0 == t.GetStoreItemType() ? t.GetAppID() : null,
           C = (0, o.bJ)(),
           S = n.useMemo(
             () =>
@@ -457,10 +455,10 @@
           ),
           E = (0, c.BR)(),
           v = n.useCallback(() => {
-            h && p.current != h && (E.AddImpression(h, S), (p.current = h));
-          }, [E, h, S, p]),
+            p && h.current != p && (E.AddImpression(p, S), (h.current = p));
+          }, [E, p, S, h]),
           y = n.createElement("a", Object.assign({}, d, { href: _ }), m);
-        return h && !u ? n.createElement(l.h, { onEnter: v }, y) : y;
+        return p && !u ? n.createElement(l.h, { onEnter: v }, y) : y;
       }
     },
     18641: (e, t, a) => {
@@ -513,7 +511,7 @@
         (e.DailyActiveUsers = "DailyActiveUsers"),
           (e.ConcurrentUsers = "ConcurrentUsers");
       })(r || (r = {}));
-      class p {
+      class h {
         constructor(e) {
           this.m_WebAPI = e;
         }
@@ -577,7 +575,7 @@
           return a;
         }
       }
-      const h = "MostPlayedDAU",
+      const p = "MostPlayedDAU",
         C = "MostPlayedByConcurrent";
       function S(e) {
         return (0, c.useQuery)([C], () => e.LoadMostPlayedByConcurrent(), {
@@ -811,8 +809,8 @@
         const {
           isLoading: u,
           isPreviousData: d,
-          error: p,
-          data: h,
+          error: h,
+          data: p,
         } = (0, c.useQuery)(
           [G, "Weekly", s],
           () => e.LoadTopSellersForWeek(s.rtWeekStart, s.strCountryCode, n),
@@ -823,8 +821,8 @@
           },
         );
         return (
-          !u && h && (o.current = s),
-          { TopSellers: l ? h : null, status: b(u, p, d) }
+          !u && p && (o.current = s),
+          { TopSellers: l ? p : null, status: b(u, h, d) }
         );
       }
       function B(e, t, a, r = N, n = !0) {
@@ -886,7 +884,7 @@
           return (0, n.mG)(this, void 0, void 0, function* () {
             (this.m_WebAPI = e),
               (this.m_TopSellersStore = new P(this.m_WebAPI, t)),
-              (this.m_MostPlayedStore = new p(this.m_WebAPI)),
+              (this.m_MostPlayedStore = new h(this.m_WebAPI)),
               (this.m_TopReleasesStore = new E(this.m_WebAPI)),
               (this.m_BestOfYearStore = new O(this.m_WebAPI)),
               (this.m_DynamicUserStore = yield D.jg.Get().HintLoad());
@@ -1073,7 +1071,7 @@
                     g.createElement(
                       ie.SV,
                       null,
-                      g.createElement(pe, { Data: t.data }),
+                      g.createElement(he, { Data: t.data }),
                     ),
                   ),
                   g.createElement(
@@ -1119,7 +1117,7 @@
                 )
               : null;
         }),
-        pe = g.memo((e) => {
+        he = g.memo((e) => {
           const { Data: t } = e;
           return g.createElement(
             te.h,
@@ -1160,7 +1158,7 @@
                 tick: { fill: "white" },
                 axisLine: !1,
               }),
-              g.createElement(le.u, { content: g.createElement(he, null) }),
+              g.createElement(le.u, { content: g.createElement(pe, null) }),
               g.createElement(se.$, {
                 dataKey: "users",
                 barSize: 2,
@@ -1174,7 +1172,7 @@
             ),
           );
         });
-      function he({ active: e, payload: t }) {
+      function pe({ active: e, payload: t }) {
         if (e && t && t.length) {
           const e = t[0].payload;
           return g.createElement(
@@ -1743,7 +1741,7 @@
             { className: ve().SteamChartsContent },
             g.createElement(
               q.qX,
-              { transport: l.GetServiceTransport(), defaultOptions: m },
+              { defaultOptions: m },
               g.createElement(ie.SV, null, o),
             ),
           ),
@@ -2249,7 +2247,7 @@
         var t, a;
         const { MostPlayedStore: n } = e,
           l = (function (e) {
-            return (0, c.useQuery)([h], () => e.LoadMostPlayedByDAU(), {
+            return (0, c.useQuery)([p], () => e.LoadMostPlayedByDAU(), {
               staleTime: 36e5,
             });
           })(n);
@@ -2551,7 +2549,7 @@
           )
         );
       }
-      function pt(e) {
+      function ht(e) {
         const {
             TopSellersStore: t,
             strCountryCode: a,
@@ -2585,7 +2583,7 @@
           ),
         );
       }
-      function ht(e) {
+      function pt(e) {
         const { TopSellersStore: t, overrideCountry: a } = e,
           r = j(a),
           n = (0, X.k6)(),
@@ -2615,7 +2613,7 @@
               g.createElement(
                 ie.SV,
                 null,
-                g.createElement(pt, {
+                g.createElement(ht, {
                   TopSellersStore: t,
                   strCountryCode: r,
                   onCountryCodeChanged: l,
@@ -3417,7 +3415,7 @@
                     g.createElement(
                       ie.SV,
                       null,
-                      g.createElement(ht, {
+                      g.createElement(pt, {
                         TopSellersStore: o,
                         overrideCountry: e.match.params.country,
                       }),

@@ -1133,6 +1133,7 @@ background-color: transparent;
 	overflow: hidden;
 }
 
+
 .profile_customization.pointer {
 	cursor: pointer;
 }
@@ -2229,6 +2230,8 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:nth-c
 }
 
 .profile_recentgame_header {
+	display: flex;
+	justify-content: space-between;
 	margin-bottom: 8px;
 }
 
@@ -2578,8 +2581,11 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:nth-c
 	backdrop-filter: blur(20px);
     background-color: rgba(0, 0, 0, 0.3);
     border-radius: 3px;
-	padding: 8px 10px;
 	border-radius: 3px;
+}
+
+.profile_comment_area .commentthread_entry {
+	margin: 10px;
 }
 
 .commentthread_area {
@@ -2925,7 +2931,40 @@ body.migrated_profile_page #BG_bottom.maincontent {
 	border-bottom: none;
 	padding: 6px 10px;
 	line-height: 26px;
-	border-radius: 3px;
+}
+
+.profile_comment_area .commentthread_header {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	flex-wrap: wrap;
+	flex-direction: column;
+	background: var(--color-showcase-header);
+	background: linear-gradient(90deg, var(--gradient-showcase-header-left) 0%, var(--color-showcase-header) 90%);
+	font-family: "Motiva Sans", Sans-serif;
+    font-weight: 200;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 30px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.profile_comment_area .comment_header_label {
+	font-family: "Motiva Sans", Sans-serif;
+    font-weight: 200;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 30px;
+    overflow: hidden;
+    white-space: nowrap;
+
+}
+
+.profile_comment_area .commentthread_header_and_count {
+	width: 100%;
+	background-image: none;
+	padding-left: 0;;
 }
 
 .profile_leftcol_header h2 {
@@ -2938,7 +2977,16 @@ body.migrated_profile_page #BG_bottom.maincontent {
 
 			background: none;
 	padding-left: 0px;
-	font-size: 20px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.profile_comment_area .commentthread_header .commentthread_paging {
+	display: flex;
+	flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .profile_comment_area .commentthread_header .commentthread_allcommentslink {
@@ -2973,7 +3021,6 @@ body.migrated_profile_page #BG_bottom.maincontent {
 
 .profile_comment_area .commentthread_comment_container {
 	margin-top: 9px;
-	background: var(--gradient-background);
 	border-radius: 5px;
 }
 
@@ -2990,7 +3037,9 @@ body.migrated_profile_page #BG_bottom.maincontent {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	border-top: none;
+	border-top: 1px solid rgba(255,255,255,0.1);
+	margin-left: 10px;
+	margin-right: 10px;
 }
 
 .profile_comment_area .pagebtn {
@@ -3011,7 +3060,12 @@ body.migrated_profile_page #BG_bottom.maincontent {
     background: rgba(255, 255, 255, 0.2);
 }
 
-.commentthread_subscribe_ctn {
+.profile_comment_area .commentthread_subscribe_ctn {
+	display: flex;
+	flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
 	font-weight: 400;
 }
 

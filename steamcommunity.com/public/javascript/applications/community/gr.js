@@ -81,7 +81,7 @@
           return this.GetType() === C.b7.k_EGameIDTypeP2P;
         }
         GetInternalAppID() {
-          return this.BIsSteamApp ? this.GetAppID() : this.GetModID();
+          return this.BIsSteamApp() ? this.GetAppID() : this.GetModID();
         }
         BIsValid() {
           switch (this.GetType()) {

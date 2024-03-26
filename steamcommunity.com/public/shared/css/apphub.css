@@ -191,6 +191,12 @@ center
 {
 }
 
+.internal_app_rec {
+	color: #ff6f6f;
+	margin-top: 4px;
+	cursor: pointer;
+}
+
 /* sometimes but not always wrapped in a apphub_HomeHeader */
 .apphub_HomeHeaderContent
 {

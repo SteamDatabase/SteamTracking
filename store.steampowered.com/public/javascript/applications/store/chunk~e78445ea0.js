@@ -534,7 +534,7 @@
     },
     54457: (e, t, n) => {
       "use strict";
-      n.d(t, { cs: () => v, qX: () => p });
+      n.d(t, { cs: () => _, qX: () => h });
       var o = n(85556),
         s = n(47427),
         r = n(42718),
@@ -542,30 +542,28 @@
         a = n(44922),
         l = n(80998),
         c = n(15690),
-        u = n(62210);
-      const d = s.createContext({}),
-        m = () => s.useContext(d);
-      function p(e) {
-        let { transport: t, defaultOptions: n, children: o } = e,
-          r = s.useMemo(
-            () => ({ defaultOptions: n || {}, transport: t }),
-            [n, t],
-          );
-        return s.createElement(d.Provider, { value: r }, o);
+        u = n(62210),
+        d = n(40057);
+      const m = s.createContext({}),
+        p = () => s.useContext(m);
+      function h(e) {
+        let { defaultOptions: t, children: n } = e,
+          o = s.useMemo(() => ({ defaultOptions: t || {} }), [t]);
+        return s.createElement(m.Provider, { value: o }, n);
       }
-      const h = "StoreQueryStore";
-      function v(e, t, n, c) {
-        let d = m();
-        (d && d.transport) ||
-          (0, u.X)(!1, "useStoreQuery called outside of a <StoreQueryRoot>");
-        let p = d.defaultOptions;
-        const v = s.useMemo(() => {
+      const v = "StoreQueryStore";
+      function _(e, t, n, c) {
+        let m = p();
+        const h = (0, d.bY)();
+        m || (0, u.X)(!1, "useStoreQuery called outside of a <StoreQueryRoot>");
+        let _ = m.defaultOptions;
+        const f = s.useMemo(() => {
           let e = [];
           return (
             (null == c ? void 0 : c.content_descriptors_excluded)
               ? (e = c.content_descriptors_excluded)
-              : (null == p ? void 0 : p.content_descriptors_excluded) &&
-                (e = p.content_descriptors_excluded),
+              : (null == _ ? void 0 : _.content_descriptors_excluded) &&
+                (e = _.content_descriptors_excluded),
             Object.assign(Object.assign({}, t), {
               filters: Object.assign(
                 { content_descriptors_excluded: e },
@@ -573,18 +571,18 @@
               ),
             })
           );
-        }, [t, c, p]);
-        let g;
+        }, [t, c, _]);
+        let C;
         void 0 !== (null == c ? void 0 : c.override_country_code)
-          ? (g = c.override_country_code)
-          : void 0 !== (null == p ? void 0 : p.override_country_code) &&
-            (g = p.override_country_code);
-        let f = { staleTime: 36e5 };
+          ? (C = c.override_country_code)
+          : void 0 !== (null == _ ? void 0 : _.override_country_code) &&
+            (C = _.override_country_code);
+        let y = { staleTime: 36e5 };
         (null == c ? void 0 : c.reactQuery) &&
-          (f = Object.assign(Object.assign({}, f), c.reactQuery));
-        const C = [h, v, n, c];
+          (y = Object.assign(Object.assign({}, y), c.reactQuery));
+        const S = [v, f, n, c];
         return (0, r.useQuery)(
-          C,
+          S,
           () =>
             (function (e, t, n, s, r) {
               return (0, o.mG)(this, void 0, void 0, function* () {
@@ -597,13 +595,13 @@
                 const c = yield a.Ax.Query(e, o);
                 if (1 != c.GetEResult())
                   throw `Error executing StoreQuery "${t}", EResult: ${c.GetEResult()}`;
-                return new _(c, s);
+                return new g(c, s);
               });
-            })(d.transport, e, v, n, g),
-          f,
+            })(h, e, f, n, C),
+          y,
         );
       }
-      class _ {
+      class g {
         constructor(e, t) {
           this.ReadResults(e, t);
         }

@@ -139,6 +139,30 @@
               (this.m_fileUploadProps.imageWidth = o.width);
           });
         }
+        SetOtherFileToUpload(e) {
+          return (0, o.mG)(this, void 0, void 0, function* () {
+            if (!e) return void this.SetFileToUpload(null);
+            if (e.size > 1024 * this.m_Callbacks.GetMaxFileSizeMB() * 1024)
+              return void this.SetUploadFileError(
+                4,
+                (0, p.Xx)(
+                  "#Chat_Settings_Error_ChatFileTooLarge_dynamic",
+                  e.name,
+                  this.m_Callbacks.GetMaxFileSizeMB(),
+                ),
+              );
+            let t = e.name.split(".").pop().toLowerCase();
+            -1 != ["zip"].indexOf(t)
+              ? this.SetFileToUpload(e)
+              : this.SetUploadFileError(
+                  5,
+                  (0, p.Xx)(
+                    "#Chat_Settings_Error_ChatFileTypeNotSupported",
+                    e.name,
+                  ),
+                );
+          });
+        }
         SetFileToUpload(e) {
           if (
             ((this.m_fileUploadProps.file = e),
@@ -436,6 +460,7 @@
       }
       (0, o.gn)([r.aD], h.prototype, "SetUploadFileError", null),
         (0, o.gn)([r.aD], h.prototype, "SetImageFileToUpload", null),
+        (0, o.gn)([r.aD], h.prototype, "SetOtherFileToUpload", null),
         (0, o.gn)([r.aD], h.prototype, "SetFileToUpload", null),
         (0, o.gn)([r.aD], h.prototype, "RetryFileUpload", null),
         (0, o.gn)([r.aD], h.prototype, "BeginFileUpload", null),

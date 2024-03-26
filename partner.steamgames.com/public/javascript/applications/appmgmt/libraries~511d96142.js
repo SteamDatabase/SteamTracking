@@ -1219,9 +1219,9 @@
           }
           return this;
         });
-      const D = {};
-      function U(e, t, r) {
-        D[e] = class extends r {
+      const U = {};
+      function D(e, t, r) {
+        U[e] = class extends r {
           constructor() {
             super(),
               Object.defineProperty(this, "message", {
@@ -1267,7 +1267,7 @@
                   ? `>= 0${n} and < 2${n} ** ${8 * (a + 1)}${n}`
                   : `>= -(2${n} ** ${8 * (a + 1) - 1}${n}) and < 2 ** ${8 * (a + 1) - 1}${n}`
                 : `>= ${t}${n} and <= ${r}${n}`),
-            new D.ERR_OUT_OF_RANGE("value", i, e))
+            new U.ERR_OUT_OF_RANGE("value", i, e))
           );
         }
         !(function (e, t, r) {
@@ -1278,21 +1278,21 @@
       }
       function L(e, t) {
         if ("number" != typeof e)
-          throw new D.ERR_INVALID_ARG_TYPE(t, "number", e);
+          throw new U.ERR_INVALID_ARG_TYPE(t, "number", e);
       }
       function q(e, t, r) {
         if (Math.floor(e) !== e)
           throw (
-            (L(e, r), new D.ERR_OUT_OF_RANGE(r || "offset", "an integer", e))
+            (L(e, r), new U.ERR_OUT_OF_RANGE(r || "offset", "an integer", e))
           );
-        if (t < 0) throw new D.ERR_BUFFER_OUT_OF_BOUNDS();
-        throw new D.ERR_OUT_OF_RANGE(
+        if (t < 0) throw new U.ERR_BUFFER_OUT_OF_BOUNDS();
+        throw new U.ERR_OUT_OF_RANGE(
           r || "offset",
           `>= ${r ? 1 : 0} and <= ${t}`,
           e,
         );
       }
-      U(
+      D(
         "ERR_BUFFER_OUT_OF_BOUNDS",
         function (e) {
           return e
@@ -1301,14 +1301,14 @@
         },
         RangeError,
       ),
-        U(
+        D(
           "ERR_INVALID_ARG_TYPE",
           function (e, t) {
             return `The "${e}" argument must be of type number. Received type ${typeof t}`;
           },
           TypeError,
         ),
-        U(
+        D(
           "ERR_OUT_OF_RANGE",
           function (e, t, r) {
             let n = `The value of "${e}" is out of range.`,
@@ -2026,12 +2026,12 @@
         P = I,
         N = "object" == typeof self && self && self.Object === Object && self,
         A = P || N || Function("return this")(),
-        D = A.Symbol,
-        U = D,
+        U = A.Symbol,
+        D = U,
         k = Object.prototype,
         X = k.hasOwnProperty,
         L = k.toString,
-        q = U ? U.toStringTag : void 0;
+        q = D ? D.toStringTag : void 0;
       var Z = function (e) {
           var t = X.call(e, q),
             r = e[q];
@@ -2047,7 +2047,7 @@
         Y = function (e) {
           return $.call(e);
         },
-        H = D ? D.toStringTag : void 0;
+        H = U ? U.toStringTag : void 0;
       var G = function (e) {
         return null == e
           ? void 0 === e
@@ -2176,8 +2176,8 @@
         (Pe.prototype.set = Ie);
       var Ne = Pe,
         Ae = O,
-        De = ve;
-      var Ue = function (e) {
+        Ue = ve;
+      var De = function (e) {
         var t = typeof e;
         return "string" == t || "number" == t || "symbol" == t || "boolean" == t
           ? "__proto__" !== e
@@ -2185,7 +2185,7 @@
       };
       var ke = function (e, t) {
           var r = e.__data__;
-          return Ue(t) ? r["string" == typeof t ? "string" : "hash"] : r.map;
+          return De(t) ? r["string" == typeof t ? "string" : "hash"] : r.map;
         },
         Xe = ke;
       var Le = ke;
@@ -2195,7 +2195,7 @@
           (this.size = 0),
             (this.__data__ = {
               hash: new Ne(),
-              map: new (De || Ae)(),
+              map: new (Ue || Ae)(),
               string: new Ne(),
             });
         },
@@ -2338,7 +2338,7 @@
             r
           );
         },
-        Mt = D ? D.prototype : void 0,
+        Mt = U ? U.prototype : void 0,
         zt = Mt ? Mt.valueOf : void 0;
       var St = function (e, t, r, n, i, a, s) {
         switch (r) {
@@ -2418,20 +2418,20 @@
           return null != e && "object" == typeof e;
         },
         At = G,
-        Dt = Nt;
-      var Ut = function (e) {
-          return Dt(e) && "[object Arguments]" == At(e);
+        Ut = Nt;
+      var Dt = function (e) {
+          return Ut(e) && "[object Arguments]" == At(e);
         },
         kt = Nt,
         Xt = Object.prototype,
         Lt = Xt.hasOwnProperty,
         qt = Xt.propertyIsEnumerable,
-        Zt = Ut(
+        Zt = Dt(
           (function () {
             return arguments;
           })(),
         )
-          ? Ut
+          ? Dt
           : function (e) {
               return kt(e) && Lt.call(e, "callee") && !qt.call(e, "callee");
             },
@@ -2630,28 +2630,28 @@
         Pr = Be(A, "Promise"),
         Nr = Be(A, "Set"),
         Ar = Be(A, "WeakMap"),
-        Dr = G,
-        Ur = se,
+        Ur = G,
+        Dr = se,
         kr = "[object Map]",
         Xr = "[object Promise]",
         Lr = "[object Set]",
         qr = "[object WeakMap]",
         Zr = "[object DataView]",
-        $r = Ur(Wr),
-        Vr = Ur(Ir),
-        Yr = Ur(Pr),
-        Hr = Ur(Nr),
-        Gr = Ur(Ar),
-        Kr = Dr;
+        $r = Dr(Wr),
+        Vr = Dr(Ir),
+        Yr = Dr(Pr),
+        Hr = Dr(Nr),
+        Gr = Dr(Ar),
+        Kr = Ur;
       ((Wr && Kr(new Wr(new ArrayBuffer(1))) != Zr) ||
         (Ir && Kr(new Ir()) != kr) ||
         (Pr && Kr(Pr.resolve()) != Xr) ||
         (Nr && Kr(new Nr()) != Lr) ||
         (Ar && Kr(new Ar()) != qr)) &&
         (Kr = function (e) {
-          var t = Dr(e),
+          var t = Ur(e),
             r = "[object Object]" == t ? e.constructor : void 0,
-            n = r ? Ur(r) : "";
+            n = r ? Dr(r) : "";
           if (n)
             switch (n) {
               case $r:
@@ -3525,8 +3525,8 @@
           for (const i of e) r.push(n), (n += i.length + t);
           return r.push(n - t), r;
         },
-        Dn = (e) => e.filter((e) => e.end > e.start),
-        Un = (e, t, r) => {
+        Un = (e) => e.filter((e) => e.end > e.start),
+        Dn = (e, t, r) => {
           if (!e) return [{ token: "plain", start: r, end: t.length + r }];
           if (!Number.isNaN(Number(t)))
             return [{ token: "number", start: r, end: t.length + r }];
@@ -3558,7 +3558,7 @@
                   { token: "key", start: r, end: n + 1 + r },
                   { token: "punctuation", start: n + 1, end: n + 2 + r },
                   { token: "plain", start: n + 2, end: n + 3 + r },
-                  ...Un(e, t.substring(n + 3), r + n + 3),
+                  ...Dn(e, t.substring(n + 3), r + n + 3),
                 ];
           }
           return "{" === t || "}" === t || "[" === t || "]" === t
@@ -3789,8 +3789,8 @@
                             }),
                           t.length > s &&
                             i.push({ type: "add", start: m[s], end: t.length }),
-                          (n = Dn(n)),
-                          (i = Dn(i)),
+                          (n = Un(n)),
+                          (i = Un(i)),
                           [n, i]
                         );
                       }
@@ -3807,14 +3807,14 @@
                           n.push({ type: "remove", start: a, end: e.length }),
                         t.length > s &&
                           i.push({ type: "add", start: s, end: t.length }),
-                        (n = Dn(n)),
-                        (i = Dn(i)),
+                        (n = Un(n)),
+                        (i = Un(i)),
                         [n, i]
                       );
                     })(a.text, s.text, u)
                   : [[], []],
-              f = Un(r, a.text, 0),
-              m = Un(r, s.text, 0),
+              f = Dn(r, a.text, 0),
+              m = Dn(r, s.text, 0),
               h = xn(f, o),
               p = xn(m, d);
             var y;
@@ -4097,7 +4097,7 @@
         k: () => V,
         l: () => W,
         m: () => v,
-        n: () => D,
+        n: () => U,
         o: () => $,
         p: () => Z,
         q: () => u,
@@ -4569,7 +4569,7 @@
               r(n, P({}, i));
             };
       }
-      function D(e) {
+      function U(e) {
         var t = e.id,
           r = e.store,
           n = r.getState(),
@@ -4580,7 +4580,7 @@
         r.setState({ nodesSelectionActive: !1 }),
           o.selected ? o.selected && s && a({ nodes: [o] }) : i([t]);
       }
-      function U(e, t) {
+      function D(e, t) {
         var r = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
           var n = Object.getOwnPropertySymbols(e);
@@ -4596,12 +4596,12 @@
         for (var t = 1; t < arguments.length; t++) {
           var r = null != arguments[t] ? arguments[t] : {};
           t % 2
-            ? U(Object(r), !0).forEach(function (t) {
+            ? D(Object(r), !0).forEach(function (t) {
                 h(e, t, r[t]);
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
-              : U(Object(r)).forEach(function (t) {
+              : D(Object(r)).forEach(function (t) {
                   Object.defineProperty(
                     e,
                     t,
@@ -6013,7 +6013,7 @@
           ),
         );
       }
-      var D = [
+      var U = [
         "x",
         "y",
         "label",
@@ -6025,7 +6025,7 @@
         "children",
         "className",
       ];
-      function U(e, t) {
+      function D(e, t) {
         var r = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
           var n = Object.getOwnPropertySymbols(e);
@@ -6053,7 +6053,7 @@
             g = void 0 === y ? 2 : y,
             b = e.children,
             B = e.className,
-            v = p(e, D),
+            v = p(e, U),
             w = (0, i.useRef)(null),
             _ = (0, i.useState)({ x: 0, y: 0, width: 0, height: 0 }),
             M = (0, n._)(_, 2),
@@ -6077,7 +6077,7 @@
                     for (var t = 1; t < arguments.length; t++) {
                       var r = null != arguments[t] ? arguments[t] : {};
                       t % 2
-                        ? U(Object(r), !0).forEach(function (t) {
+                        ? D(Object(r), !0).forEach(function (t) {
                             (0, n.a)(e, t, r[t]);
                           })
                         : Object.getOwnPropertyDescriptors
@@ -6085,7 +6085,7 @@
                               e,
                               Object.getOwnPropertyDescriptors(r),
                             )
-                          : U(Object(r)).forEach(function (t) {
+                          : D(Object(r)).forEach(function (t) {
                               Object.defineProperty(
                                 e,
                                 t,
@@ -7137,7 +7137,7 @@
           [e],
         );
       }
-      function De(e, t, r) {
+      function Ue(e, t, r) {
         (0, i.useEffect)(
           function () {
             void 0 !== t && r((0, n.a)({}, e, t));
@@ -7145,7 +7145,7 @@
           [t],
         );
       }
-      var Ue = function (e) {
+      var De = function (e) {
           var t = e.nodes,
             r = e.edges,
             a = e.defaultNodes,
@@ -7181,15 +7181,15 @@
             P = e.onSelectionDrag,
             N = e.onSelectionDragStart,
             A = e.onSelectionDragStop,
-            D = (0, n.b)(Ne, o),
-            U = D.setNodes,
-            k = D.setEdges,
-            X = D.setDefaultNodesAndEdges,
-            L = D.setMinZoom,
-            q = D.setMaxZoom,
-            Z = D.setTranslateExtent,
-            $ = D.setNodeExtent,
-            V = D.reset,
+            U = (0, n.b)(Ne, o),
+            D = U.setNodes,
+            k = U.setEdges,
+            X = U.setDefaultNodesAndEdges,
+            L = U.setMinZoom,
+            q = U.setMaxZoom,
+            Z = U.setTranslateExtent,
+            $ = U.setNodeExtent,
+            V = U.reset,
             Y = (0, n.u)();
           return (
             (0, i.useEffect)(function () {
@@ -7200,36 +7200,36 @@
                 }
               );
             }, []),
-            De("defaultEdgeOptions", O, Y.setState),
-            De("connectionMode", M, Y.setState),
-            De("onConnect", l, Y.setState),
-            De("onConnectStart", c, Y.setState),
-            De("onConnectStop", u, Y.setState),
-            De("onConnectEnd", d, Y.setState),
-            De("onClickConnectStart", f, Y.setState),
-            De("onClickConnectStop", m, Y.setState),
-            De("onClickConnectEnd", h, Y.setState),
-            De("nodesDraggable", p, Y.setState),
-            De("nodesConnectable", y, Y.setState),
-            De("elementsSelectable", _, Y.setState),
-            De("snapToGrid", S, Y.setState),
-            De("snapGrid", z, Y.setState),
-            De("onNodesChange", v, Y.setState),
-            De("onEdgesChange", w, Y.setState),
-            De("connectOnClick", E, Y.setState),
-            De("fitViewOnInit", R, Y.setState),
-            De("fitViewOnInitOptions", j, Y.setState),
-            De("onNodesDelete", x, Y.setState),
-            De("onEdgesDelete", C, Y.setState),
-            De("onNodeDrag", T, Y.setState),
-            De("onNodeDragStart", W, Y.setState),
-            De("onNodeDragStop", I, Y.setState),
-            De("onSelectionDrag", P, Y.setState),
-            De("onSelectionDragStart", N, Y.setState),
-            De("onSelectionDragStop", A, Y.setState),
-            Ae(t, U),
+            Ue("defaultEdgeOptions", O, Y.setState),
+            Ue("connectionMode", M, Y.setState),
+            Ue("onConnect", l, Y.setState),
+            Ue("onConnectStart", c, Y.setState),
+            Ue("onConnectStop", u, Y.setState),
+            Ue("onConnectEnd", d, Y.setState),
+            Ue("onClickConnectStart", f, Y.setState),
+            Ue("onClickConnectStop", m, Y.setState),
+            Ue("onClickConnectEnd", h, Y.setState),
+            Ue("nodesDraggable", p, Y.setState),
+            Ue("nodesConnectable", y, Y.setState),
+            Ue("elementsSelectable", _, Y.setState),
+            Ue("snapToGrid", S, Y.setState),
+            Ue("snapGrid", z, Y.setState),
+            Ue("onNodesChange", v, Y.setState),
+            Ue("onEdgesChange", w, Y.setState),
+            Ue("connectOnClick", E, Y.setState),
+            Ue("fitViewOnInit", R, Y.setState),
+            Ue("fitViewOnInitOptions", j, Y.setState),
+            Ue("onNodesDelete", x, Y.setState),
+            Ue("onEdgesDelete", C, Y.setState),
+            Ue("onNodeDrag", T, Y.setState),
+            Ue("onNodeDragStart", W, Y.setState),
+            Ue("onNodeDragStop", I, Y.setState),
+            Ue("onSelectionDrag", P, Y.setState),
+            Ue("onSelectionDragStart", N, Y.setState),
+            Ue("onSelectionDragStop", A, Y.setState),
+            Ae(t, D),
             Ae(r, k),
-            Ae(a, U),
+            Ae(a, D),
             Ae(s, k),
             Ae(g, L),
             Ae(b, q),
@@ -7296,8 +7296,8 @@
               P = t.edgeUpdaterRadius,
               N = t.onEdgeUpdate,
               A = t.onEdgeUpdateStart,
-              D = t.onEdgeUpdateEnd,
-              U = t.markerEnd,
+              U = t.onEdgeUpdateEnd,
+              D = t.markerEnd,
               k = t.markerStart,
               X = t.rfId,
               L = (0, i.useState)(!1),
@@ -7319,9 +7319,9 @@
                     return e.id === r;
                   });
                 null == A || A(e, o, a);
-                var l = D
+                var l = U
                   ? function (e) {
-                      return D(e, o, a);
+                      return U(e, o, a);
                     }
                   : void 0;
                 Be({
@@ -7355,9 +7355,9 @@
               ),
               ie = (0, i.useMemo)(
                 function () {
-                  return "url(#".concat((0, n.d)(U, X), ")");
+                  return "url(#".concat((0, n.d)(D, X), ")");
                 },
-                [U, X],
+                [D, X],
               );
             if (R) return null;
             var ae = !O && !c,
@@ -7740,8 +7740,8 @@
             P = e.children,
             N = e.noWheelClassName,
             A = e.noPanClassName,
-            D = (0, n.u)(),
-            U = (0, i.useRef)(!1),
+            U = (0, n.u)(),
+            D = (0, i.useRef)(!1),
             k = (0, i.useRef)(null),
             X = (0, i.useRef)({ x: 0, y: 0, zoom: 0 }),
             L = (0, n.b)(at, o),
@@ -7787,7 +7787,7 @@
                   o = (0, n.j)(j, S, O),
                   l = s.CR.translate(i, a).scale(o);
                 t.transform(r, l),
-                  D.setState({
+                  U.setState({
                     d3Zoom: t,
                     d3Selection: r,
                     d3ZoomHandler: r.on("wheel.zoom"),
@@ -7838,12 +7838,12 @@
             (0, i.useEffect)(
               function () {
                 q &&
-                  (v && !U.current
+                  (v && !D.current
                     ? q.on("zoom", null)
                     : v ||
                       q.on("zoom", function (e) {
                         if (
-                          (D.setState({
+                          (U.setState({
                             transform: [
                               e.transform.x,
                               e.transform.y,
@@ -7863,7 +7863,7 @@
               function () {
                 q &&
                   q.on("start", function (e) {
-                    if (((U.current = !0), r)) {
+                    if (((D.current = !0), r)) {
                       var t = nt(e.transform);
                       (X.current = t), r(e.sourceEvent, t);
                     }
@@ -7876,7 +7876,7 @@
                 q &&
                   q.on("end", function (e) {
                     if (
-                      ((U.current = !1),
+                      ((D.current = !1),
                       a &&
                         ((r = X.current),
                         (n = e.transform),
@@ -9218,7 +9218,7 @@
           At(e)
         );
       }
-      var Dt =
+      var Ut =
         ((It = {}),
         (0, n.a)(It, n.M.Arrow, function (e) {
           var t = e.color,
@@ -9249,7 +9249,7 @@
           });
         }),
         It);
-      function Ut(e, t) {
+      function Dt(e, t) {
         var r = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
           var n = Object.getOwnPropertySymbols(e);
@@ -9277,8 +9277,8 @@
             h = (function (e) {
               return (0, i.useMemo)(
                 function () {
-                  return Dt.hasOwnProperty(e)
-                    ? Dt[e]
+                  return Ut.hasOwnProperty(e)
+                    ? Ut[e]
                     : function () {
                         return null;
                       };
@@ -9319,7 +9319,7 @@
                             for (var t = 1; t < arguments.length; t++) {
                               var r = null != arguments[t] ? arguments[t] : {};
                               t % 2
-                                ? Ut(Object(r), !0).forEach(function (t) {
+                                ? Dt(Object(r), !0).forEach(function (t) {
                                     (0, n.a)(e, t, r[t]);
                                   })
                                 : Object.getOwnPropertyDescriptors
@@ -9327,7 +9327,7 @@
                                       e,
                                       Object.getOwnPropertyDescriptors(r),
                                     )
-                                  : Ut(Object(r)).forEach(function (t) {
+                                  : Dt(Object(r)).forEach(function (t) {
                                       Object.defineProperty(
                                         e,
                                         t,
@@ -9709,8 +9709,8 @@
           P = e.zoomOnScroll,
           N = e.zoomOnPinch,
           A = e.panOnScroll,
-          D = e.panOnScrollSpeed,
-          U = e.panOnScrollMode,
+          U = e.panOnScrollSpeed,
+          D = e.panOnScrollMode,
           k = e.zoomOnDoubleClick,
           X = e.panOnDrag,
           L = e.onPaneClick,
@@ -9764,8 +9764,8 @@
               zoomOnPinch: N,
               zoomOnDoubleClick: k,
               panOnScroll: A,
-              panOnScrollSpeed: D,
-              panOnScrollMode: U,
+              panOnScrollSpeed: U,
+              panOnScrollMode: D,
               panOnDrag: X,
               translateExtent: R,
               minZoom: j,
@@ -9893,8 +9893,8 @@
             P = (0, i.useRef)(z),
             N = (0, i.useRef)(s),
             A = v || B || d || f || m || h,
-            D = (0, n.t)(r, T.getState, f),
-            U = (0, n.t)(r, T.getState, m),
+            U = (0, n.t)(r, T.getState, f),
+            D = (0, n.t)(r, T.getState, m),
             k = (0, n.t)(r, T.getState, h),
             X = (0, n.t)(r, T.getState, p),
             L = (0, n.t)(r, T.getState, y);
@@ -9959,8 +9959,8 @@
                     },
                     g,
                   ),
-                  onMouseEnter: D,
-                  onMouseMove: U,
+                  onMouseEnter: U,
+                  onMouseMove: D,
                   onMouseLeave: k,
                   onContextMenu: X,
                   onClick: function (e) {
@@ -10244,8 +10244,8 @@
             I = e.onNodeDragStop,
             P = e.onNodesDelete,
             N = e.onEdgesDelete,
-            D = e.onSelectionChange,
-            U = e.onSelectionDragStart,
+            U = e.onSelectionChange,
+            D = e.onSelectionDragStart,
             k = e.onSelectionDrag,
             X = e.onSelectionDragStop,
             L = e.onSelectionContextMenu,
@@ -10297,7 +10297,7 @@
             Ie = e.panOnScroll,
             Ne = void 0 !== Ie && Ie,
             Ae = e.panOnScrollSpeed,
-            De = void 0 === Ae ? 0.5 : Ae,
+            Ue = void 0 === Ae ? 0.5 : Ae,
             ke = e.panOnScrollMode,
             Xe = void 0 === ke ? n.h.Free : ke,
             Le = e.zoomOnDoubleClick,
@@ -10379,7 +10379,7 @@
                 zoomOnPinch: We,
                 zoomOnDoubleClick: qe,
                 panOnScroll: Ne,
-                panOnScrollSpeed: De,
+                panOnScrollSpeed: Ue,
                 panOnScrollMode: Xe,
                 panOnDrag: $e,
                 onPaneClick: Ye,
@@ -10402,7 +10402,7 @@
                 elevateEdgesOnSelect: St,
                 id: null == Ft ? void 0 : Ft.id,
               }),
-              i.createElement(Ue, {
+              i.createElement(De, {
                 nodes: r,
                 edges: s,
                 defaultNodes: o,
@@ -10436,10 +10436,10 @@
                 onNodeDrag: W,
                 onNodeDragStop: I,
                 onSelectionDrag: k,
-                onSelectionDragStart: U,
+                onSelectionDragStart: D,
                 onSelectionDragStop: X,
               }),
-              D && i.createElement(Pe, { onSelectionChange: D }),
+              U && i.createElement(Pe, { onSelectionChange: U }),
               Ke,
               i.createElement(A, { proOptions: _t, position: wt }),
             ),
@@ -12062,7 +12062,7 @@
                   embedding: { n: 14, c: I },
                   train: { n: 15, c: P },
                   conditional_extract: { n: 16, c: N },
-                  concatenate: { n: 17, c: U },
+                  concatenate: { n: 17, c: D },
                   shuffle: { n: 18, c: $ },
                   synced_shuffle: { n: 19, c: V },
                   onehot: { n: 20, c: Y },
@@ -12601,7 +12601,7 @@
                     bw: i.Xc.writeEnum,
                   },
                   filter_info: { n: 12, c: A },
-                  weight_info: { n: 13, c: D },
+                  weight_info: { n: 13, c: U },
                   compact_table: {
                     n: 14,
                     br: i.FE.readString,
@@ -12725,18 +12725,18 @@
           return "CMsgSteamLearnModelNodeConditionalExtract_FilterInfo";
         }
       }
-      class D extends s {
+      class U extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            D.prototype.appid_release_recency_bias || i.aR(D.M()),
+            U.prototype.appid_release_recency_bias || i.aR(U.M()),
             s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
-            D.sm_m ||
-              (D.sm_m = {
-                proto: D,
+            U.sm_m ||
+              (U.sm_m = {
+                proto: U,
                 fields: {
                   appid_release_recency_bias: {
                     n: 1,
@@ -12755,57 +12755,20 @@
                   },
                 },
               }),
-            D.sm_m
+            U.sm_m
           );
         }
         static MBF() {
-          return D.sm_mbf || (D.sm_mbf = i.Bh(D.M())), D.sm_mbf;
-        }
-        toObject(e = !1) {
-          return D.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return i.TA(D.M(), e, t);
-        }
-        static fromObject(e) {
-          return i.aD(D.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new n.BinaryReader(e),
-            r = new D();
-          return D.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return i.F(D.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new n.BinaryWriter();
-          return D.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          i.l2(D.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new n.BinaryWriter();
-          return D.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CMsgSteamLearnModelNodeConditionalExtract_WeightInfo";
-        }
-      }
-      class U extends s {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(), s.initialize(this, e, 0, -1, void 0, null);
+          return U.sm_mbf || (U.sm_mbf = i.Bh(U.M())), U.sm_mbf;
         }
         toObject(e = !1) {
           return U.toObject(e, this);
         }
         static toObject(e, t) {
-          return e ? { $jspbMessageInstance: t } : {};
+          return i.TA(U.M(), e, t);
         }
         static fromObject(e) {
-          return new U();
+          return i.aD(U.M(), e);
         }
         static deserializeBinary(e) {
           let t = new n.BinaryReader(e),
@@ -12813,16 +12776,53 @@
           return U.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return e;
+          return i.F(U.MBF(), e, t);
         }
         serializeBinary() {
           var e = new n.BinaryWriter();
           return U.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
-        static serializeBinaryToWriter(e, t) {}
+        static serializeBinaryToWriter(e, t) {
+          i.l2(U.M(), e, t);
+        }
         serializeBase64String() {
           var e = new n.BinaryWriter();
           return U.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CMsgSteamLearnModelNodeConditionalExtract_WeightInfo";
+        }
+      }
+      class D extends s {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(), s.initialize(this, e, 0, -1, void 0, null);
+        }
+        toObject(e = !1) {
+          return D.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return e ? { $jspbMessageInstance: t } : {};
+        }
+        static fromObject(e) {
+          return new D();
+        }
+        static deserializeBinary(e) {
+          let t = new n.BinaryReader(e),
+            r = new D();
+          return D.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return e;
+        }
+        serializeBinary() {
+          var e = new n.BinaryWriter();
+          return D.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {}
+        serializeBase64String() {
+          var e = new n.BinaryWriter();
+          return D.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CMsgSteamLearnModelNodeConcatenate";
@@ -12888,6 +12888,8 @@
                     br: i.FE.readUint32,
                     bw: i.Xc.writeUint32,
                   },
+                  split: { n: 5, br: i.FE.readEnum, bw: i.Xc.writeEnum },
+                  ngrams: { n: 6, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
                 },
               }),
             X.sm_m
@@ -13012,6 +13014,11 @@
                 proto: Z,
                 fields: {
                   name: { n: 1, br: i.FE.readString, bw: i.Xc.writeString },
+                  only_inference: {
+                    n: 2,
+                    br: i.FE.readBool,
+                    bw: i.Xc.writeBool,
+                  },
                 },
               }),
             Z.sm_m
@@ -15839,66 +15846,12 @@
           return "CMsgSteamLearn_PublishProject_Request";
         }
       }
-      class De extends s {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            De.prototype.result || i.aR(De.M()),
-            s.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            De.sm_m ||
-              (De.sm_m = {
-                proto: De,
-                fields: {
-                  result: { n: 1, br: i.FE.readEnum, bw: i.Xc.writeEnum },
-                },
-              }),
-            De.sm_m
-          );
-        }
-        static MBF() {
-          return De.sm_mbf || (De.sm_mbf = i.Bh(De.M())), De.sm_mbf;
-        }
-        toObject(e = !1) {
-          return De.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return i.TA(De.M(), e, t);
-        }
-        static fromObject(e) {
-          return i.aD(De.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new n.BinaryReader(e),
-            r = new De();
-          return De.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return i.F(De.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new n.BinaryWriter();
-          return De.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          i.l2(De.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new n.BinaryWriter();
-          return De.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CMsgSteamLearn_PublishProject_Response";
-        }
-      }
       class Ue extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Ue.prototype.register_data_source_access_token || i.aR(Ue.M()),
-            s.initialize(this, e, 0, -1, [2, 3, 4], null);
+            Ue.prototype.result || i.aR(Ue.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -15906,14 +15859,7 @@
               (Ue.sm_m = {
                 proto: Ue,
                 fields: {
-                  register_data_source_access_token: {
-                    n: 1,
-                    br: i.FE.readString,
-                    bw: i.Xc.writeString,
-                  },
-                  cache_data_access_tokens: { n: 2, c: ke, r: !0, q: !0 },
-                  snapshot_project_access_tokens: { n: 3, c: Xe, r: !0, q: !0 },
-                  inference_access_tokens: { n: 4, c: Le, r: !0, q: !0 },
+                  result: { n: 1, br: i.FE.readEnum, bw: i.Xc.writeEnum },
                 },
               }),
             Ue.sm_m
@@ -15949,6 +15895,67 @@
         serializeBase64String() {
           var e = new n.BinaryWriter();
           return Ue.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CMsgSteamLearn_PublishProject_Response";
+        }
+      }
+      class De extends s {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            De.prototype.register_data_source_access_token || i.aR(De.M()),
+            s.initialize(this, e, 0, -1, [2, 3, 4], null);
+        }
+        static M() {
+          return (
+            De.sm_m ||
+              (De.sm_m = {
+                proto: De,
+                fields: {
+                  register_data_source_access_token: {
+                    n: 1,
+                    br: i.FE.readString,
+                    bw: i.Xc.writeString,
+                  },
+                  cache_data_access_tokens: { n: 2, c: ke, r: !0, q: !0 },
+                  snapshot_project_access_tokens: { n: 3, c: Xe, r: !0, q: !0 },
+                  inference_access_tokens: { n: 4, c: Le, r: !0, q: !0 },
+                },
+              }),
+            De.sm_m
+          );
+        }
+        static MBF() {
+          return De.sm_mbf || (De.sm_mbf = i.Bh(De.M())), De.sm_mbf;
+        }
+        toObject(e = !1) {
+          return De.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return i.TA(De.M(), e, t);
+        }
+        static fromObject(e) {
+          return i.aD(De.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new n.BinaryReader(e),
+            r = new De();
+          return De.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return i.F(De.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new n.BinaryWriter();
+          return De.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          i.l2(De.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new n.BinaryWriter();
+          return De.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CMsgSteamLearnAccessTokens";
@@ -16211,7 +16218,7 @@
                 proto: Ze,
                 fields: {
                   result: { n: 1, br: i.FE.readEnum, bw: i.Xc.writeEnum },
-                  access_tokens: { n: 2, c: Ue },
+                  access_tokens: { n: 2, c: De },
                 },
               }),
             Ze.sm_m
@@ -19000,7 +19007,7 @@
             return e.SendMsg(
               "SteamLearn.PublishProject#1",
               (0, a.MD)(Ae, t),
-              De,
+              Ue,
               { ePrivilege: 1 },
             );
           }),
@@ -19544,13 +19551,13 @@
           this.textContent = e;
         };
       }
-      function D(e) {
+      function U(e) {
         return function () {
           var t = e.apply(this, arguments);
           this.textContent = null == t ? "" : t;
         };
       }
-      function U() {
+      function D() {
         this.innerHTML = "";
       }
       function k(e) {
@@ -19952,12 +19959,12 @@
         },
         text: function (e) {
           return arguments.length
-            ? this.each(null == e ? N : ("function" == typeof e ? D : A)(e))
+            ? this.each(null == e ? N : ("function" == typeof e ? U : A)(e))
             : this.node().textContent;
         },
         html: function (e) {
           return arguments.length
-            ? this.each(null == e ? U : ("function" == typeof e ? X : k)(e))
+            ? this.each(null == e ? D : ("function" == typeof e ? X : k)(e))
             : this.node().innerHTML;
         },
         raise: function () {
@@ -20366,12 +20373,12 @@
           state: x,
         });
       }
-      function D(e, t) {
+      function U(e, t) {
         var r = k(e, t);
         if (r.state > x) throw new Error("too late; already scheduled");
         return r;
       }
-      function U(e, t) {
+      function D(e, t) {
         var r = k(e, t);
         if (r.state > W) throw new Error("too late; already running");
         return r;
@@ -20522,7 +20529,7 @@
       function Q(e, t) {
         var r, n;
         return function () {
-          var i = U(this, e),
+          var i = D(this, e),
             a = i.tween;
           if (a !== r)
             for (var s = 0, o = (n = r = a).length; s < o; ++s)
@@ -20537,7 +20544,7 @@
         var n, i;
         if ("function" != typeof r) throw new Error();
         return function () {
-          var a = U(this, e),
+          var a = D(this, e),
             s = a.tween;
           if (s !== n) {
             i = (n = s).slice();
@@ -20555,7 +20562,7 @@
         var n = e._id;
         return (
           e.each(function () {
-            var e = U(this, n);
+            var e = D(this, n);
             (e.value || (e.value = {}))[t] = r.apply(this, arguments);
           }),
           function (e) {
@@ -20674,27 +20681,27 @@
       }
       function me(e, t) {
         return function () {
-          D(this, e).delay = +t.apply(this, arguments);
+          U(this, e).delay = +t.apply(this, arguments);
         };
       }
       function he(e, t) {
         return (
           (t = +t),
           function () {
-            D(this, e).delay = t;
+            U(this, e).delay = t;
           }
         );
       }
       function pe(e, t) {
         return function () {
-          U(this, e).duration = +t.apply(this, arguments);
+          D(this, e).duration = +t.apply(this, arguments);
         };
       }
       function ye(e, t) {
         return (
           (t = +t),
           function () {
-            U(this, e).duration = t;
+            D(this, e).duration = t;
           }
         );
       }
@@ -20869,8 +20876,8 @@
                           );
                         });
                     })(t)
-                      ? D
-                      : U;
+                      ? U
+                      : D;
                   return function () {
                     var s = a(this, e),
                       o = s.on;
@@ -20947,7 +20954,7 @@
                       s = "style." + t,
                       o = "end." + s;
                     return function () {
-                      var l = U(this, e),
+                      var l = D(this, e),
                         c = l.on,
                         u = null == l.value[s] ? a || (a = _e(t)) : void 0;
                       (c === r && i === u) ||
@@ -21085,7 +21092,7 @@
                 (function (e, t) {
                   if ("function" != typeof t) throw new Error();
                   return function () {
-                    U(this, e).ease = t;
+                    D(this, e).ease = t;
                   };
                 })(t, e),
               )
@@ -21098,7 +21105,7 @@
               return function () {
                 var r = t.apply(this, arguments);
                 if ("function" != typeof r) throw new Error();
-                U(this, e).ease = r;
+                D(this, e).ease = r;
               };
             })(this._id, e),
           );
@@ -21117,7 +21124,7 @@
                 },
               };
             r.each(function () {
-              var r = U(this, n),
+              var r = D(this, n),
                 i = r.on;
               i !== e &&
                 ((t = (e = i).copy())._.cancel.push(o),
@@ -21254,10 +21261,10 @@
           (e.ctrlKey ? 10 : 1)
         );
       }
-      function De() {
+      function Ue() {
         return navigator.maxTouchPoints || "ontouchstart" in this;
       }
-      function Ue(e, t, r) {
+      function De(e, t, r) {
         var n = e.invertX(t[0][0]) - r[0][0],
           i = e.invertX(t[1][0]) - r[1][0],
           a = e.invertY(t[0][1]) - r[0][1],
@@ -21273,9 +21280,9 @@
           r,
           a = Ie,
           o = Pe,
-          l = Ue,
+          l = De,
           d = Ae,
-          f = De,
+          f = Ue,
           m = [0, 1 / 0],
           h = [
             [-1 / 0, -1 / 0],
