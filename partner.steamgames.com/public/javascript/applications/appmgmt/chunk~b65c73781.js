@@ -6541,7 +6541,7 @@
               onSubmit: u,
               onChange: u,
               multiple: !0,
-              accept: "image/png, image/jpg, image/gif",
+              accept: "image/png, image/jpeg, image/gif",
             }),
           ),
           i,
@@ -47854,7 +47854,8 @@
                   q.DU.forEach((e) => {
                     const t = K.h1[(0, q.if)(e)];
                     r == t.width && (s = e);
-                  });
+                  }),
+                    s || (s = "localized_sale_header");
               }
               s && t.SetImage(s, a, e + (0, Q.U)(i));
             },
@@ -49675,6 +49676,7 @@
           ),
           o.createElement(dt, {
             bShowInternalControls: !1,
+            bDisableRouting: !0,
             rgArtworkToDisplay: i,
           }),
           o.createElement(
@@ -49811,85 +49813,92 @@
           ),
           o.createElement("br", null),
           o.createElement("br", null),
-          o.createElement(dt, { bShowInternalControls: !0 }),
+          o.createElement(dt, {
+            bShowInternalControls: !0,
+            bDisableRouting: !0,
+          }),
         );
       }
       function dt(e) {
-        const { bShowInternalControls: t, rgArtworkToDisplay: n } = e,
-          [r, s] = (0, u.Ar)("loc_tab", "current"),
-          c = (e) => s(e.key),
-          m = (0, l.Gn)(),
-          p = new Array(),
-          h = new Array();
+        const {
+            bShowInternalControls: t,
+            rgArtworkToDisplay: n,
+            bDisableRouting: r,
+          } = e,
+          [s, c] = (0, u.Ar)("loc_tab", "current"),
+          m = (e) => c(e.key),
+          p = (0, l.Gn)(),
+          h = new Array(),
+          v = new Array();
         return (
-          !m.BHasMarketingMessages(0) ||
+          !p.BHasMarketingMessages(0) ||
             (n && !n.includes("marketingmessage_art")) ||
-            p.push({
+            h.push({
               artworkType: "marketingmessage_art",
-              id: m.GetMarketingMessageID(0),
+              id: p.GetMarketingMessageID(0),
               bShowInternalControls: t,
             }),
-          !m.BHasMarketingMessages(1) ||
+          !p.BHasMarketingMessages(1) ||
             (n && !n.includes("marketingmessage_art_2")) ||
-            p.push({
+            h.push({
               artworkType: "marketingmessage_art_2",
-              id: m.GetMarketingMessageID(1),
+              id: p.GetMarketingMessageID(1),
               bShowInternalControls: t,
             }),
-          !m.BHasSpotlightIDs(0) ||
+          !p.BHasSpotlightIDs(0) ||
             (n && !n.includes("spotlight_art")) ||
-            p.push({ artworkType: "spotlight_art", id: m.GetSpotlightIDs(0) }),
-          m.BHasTakeoverIDs(0) &&
+            h.push({ artworkType: "spotlight_art", id: p.GetSpotlightIDs(0) }),
+          p.BHasTakeoverIDs(0) &&
             (!n ||
               n.includes("takeover_art") ||
               n.includes("takeover_mobile_art")) &&
-            p.push({
+            h.push({
               artworkType: "takeover_art",
-              id: m.GetTakeoverID(0),
+              id: p.GetTakeoverID(0),
               type: a.R6.k_ConfigPage_Takeover,
               bShowInternalControls: t,
             }),
-          m.BHasSteamChinaTakeoverID(0) &&
+          p.BHasSteamChinaTakeoverID(0) &&
             (!n ||
               n.includes("takeover_art") ||
               n.includes("takeover_mobile_art")) &&
-            p.push({
+            h.push({
               artworkType: "takeover_art",
-              id: m.GetSteamChinaTakeoverID(0),
+              id: p.GetSteamChinaTakeoverID(0),
               type: a.R6.k_ConfigPage_TakeoverSteamChina,
               bShowInternalControls: t,
             }),
-          m.BHasContentHubTakeoverIDs(0) &&
+          p.BHasContentHubTakeoverIDs(0) &&
             (!n ||
               n.includes("takeover_art") ||
               n.includes("takeover_mobile_art")) &&
-            p.push({
+            h.push({
               artworkType: "takeover_art",
-              id: m.GetContentHubTakeoverID(0),
-              type: m.GetContentHubTakeoverType(0),
+              id: p.GetContentHubTakeoverID(0),
+              type: p.GetContentHubTakeoverType(0),
               bShowInternalControls: t,
             }),
-          m.BHasTakeunderIDs(0) &&
+          p.BHasTakeunderIDs(0) &&
             (!n ||
               n.includes("takeunder_art") ||
               n.includes("takeunder_mobile_art")) &&
-            p.push({
+            h.push({
               artworkType: "takeunder_art",
-              id: m.GetTakeunderID(0),
+              id: p.GetTakeunderID(0),
               type: a.R6.k_ConfigPage_Takeunder,
             }),
-          m.BHasAssociatedSaleEvent() &&
+          p.BHasAssociatedSaleEvent() &&
             (!n ||
               n.includes("sale_header") ||
               n.includes("sale_logo") ||
               n.includes("capsule")) &&
-            p.push({
-              artworkType: "sale_header",
-              clanAccountID: m.GetSaleClanAccountID(),
-              gidClanEvent: m.GetSaleClanEventGID(),
-            }),
-          p.forEach((e) => {
             h.push({
+              artworkType: "sale_header",
+              clanAccountID: p.GetSaleClanAccountID(),
+              gidClanEvent: p.GetSaleClanEventGID(),
+            }),
+          h.forEach((e) => {
+            v.push({
               name: (0, i.gl)(e.artworkType),
               key: (e.type ? (0, a.D9)(e.type) + "_" : "") + e.artworkType,
               status: o.createElement(
@@ -49904,13 +49913,13 @@
                   Object.assign({}, e, { rgArtworkToDisplay: n }),
                 ),
               ),
-              onClick: c,
+              onClick: m,
             });
           }),
           o.createElement(
             "div",
             null,
-            o.createElement(g.n, { tabs: h, bDisableRouting: t }),
+            o.createElement(g.n, { tabs: v, bDisableRouting: r }),
             o.createElement("div", { className: _().ClearThings }),
           )
         );
