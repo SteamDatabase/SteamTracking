@@ -373,6 +373,16 @@ message CMsgSystemPerfUpdateSettings {
 	}
 }
 
+message CMsgSystemPerfLegacySettingEntry {
+	optional uint64 profile_game_id = 1;
+	optional .CMsgSystemPerfSettingsPerApp settings = 2;
+}
+
+message CMsgSystemPerfLegacySettings {
+	optional .CMsgSystemPerfSettingsGlobal global = 1;
+	repeated .CMsgSystemPerfLegacySettingEntry per_app_settings = 2;
+}
+
 message CMsgSystemDockUpdateState {
 	optional .EUpdaterState state = 1 [default = k_EUpdaterState_Invalid];
 	optional fixed32 rtime_last_checked = 2;
@@ -636,6 +646,10 @@ message CMsgGenerateSystemReportReply {
 message CMsgWebUITransportInfo {
 	optional uint32 port = 1;
 	optional string auth_key = 2;
+}
+
+message CMsgWebUITransportFailure {
+	optional uint32 connect_count = 1;
 }
 
 message CMsgClientShaderHitCacheEntry {

@@ -3168,6 +3168,7 @@ steam://url/ManageGiftsPage
 steam://url/PrivacyPolicy
 steam://url/RedeemWalletVoucher
 steam://url/SSA
+steam://url/SteamAnnouncements
 steam://url/SteamIDEditPage
 steam://url/SteamIDFriendsPage
 steam://url/SteamIDMyProfile

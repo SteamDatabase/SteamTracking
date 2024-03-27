@@ -19,6 +19,9 @@ message CSteamOSManagerState {
 	optional .EStartupMovieVariant startup_movie_variant = 4 [default = k_EStartupMovieVariant_Invalid];
 	optional bool is_status_led_control_available = 5;
 	optional .CMsgFactoryResetState factory_reset_state = 6;
+	optional bool is_tdp_limit_available = 7;
+	optional int32 tdp_limit_min = 8;
+	optional int32 tdp_limit_max = 9;
 }
 
 message CSteamOSManager_GetState_Request {

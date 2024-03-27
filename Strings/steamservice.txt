@@ -7,12 +7,8 @@ __TEXT
 @
 __stubs
 __TEXT
->%%
->%%
 __stub_helper
 __TEXT
-(+%
-(+%
 __gcc_except_tab__TEXT
 __const
 __TEXT
@@ -100,18 +96,17 @@ x*
 0
 ,
 Hi
+=)
 H=
-M%
-;%
+,)
+@%
 )
 )
 )
 Ic]
 Hc
-$
 Hc
 Hc
-!
 0
 0
 AT=
@@ -124,6 +119,9 @@ D
 @
 (
 (
+(
+(
+-$
 (
 (
 @
@@ -158,33 +156,17 @@ IcE
 @
 @
 ]
-j'
-4#
-'
-'
+}'
+|"
+l"
 V
-'
-'
-'
-'
-'
-'
-'
-'
-'
-'
-'
-'
-'
-'
-'
-"
 "
 "
 "
 =
+T&
+1!
 )
-"&
 &)
 !
 =
@@ -8800,8 +8782,8 @@ steamwebhelper
 Steam Helper
 cefwebhelper
 1.0
-Mar 22 2024
-13:14:55
+Mar 27 2024
+13:15:34
 Jan
 Feb
 Mar
@@ -8836,7 +8818,6 @@ pszName == NULL || *pszName == '/' || (isalpha((unsigned char) *pszName) && pszN
 POSIX does not support inheriting full mutexes
 Anonymous mutex cannot have bAllAccess == true
 tid(%u) pthread_key_create failed: %s
-tid(%u) burning pthread_key_t == 0 so we never use it
 Bad thread local: Get
 Failed to set thread local value
 Bad thread local: Set
@@ -9416,18 +9397,17 @@ m_cCurrentDepth > 0
 0
 ,
 Hi
+=)
 H=
-M%
-;%
+,)
+@%
 )
 )
 )
 Ic]
 Hc
-$
 Hc
 Hc
-!
 0
 0
 AT=
@@ -9440,6 +9420,9 @@ D
 @
 (
 (
+(
+(
+-$
 (
 (
 @
@@ -9474,55 +9457,33 @@ IcE
 @
 @
 ]
-j'
-4#
-'
-'
+}'
+|"
+l"
 V
-'
-'
-'
-'
-'
-'
-'
-'
-'
-'
-'
-'
-'
-'
-'
-"
 "
 "
 "
 =
+T&
+1!
 )
-"&
 &)
 !
 =
 +
-f
+k
+)
 (
-
 !
 @
 Q&
 &
+e"
 L%
-6"
-."
 "
 "
-"
-B!
-<!
 ($
-!
-!
 !
 !
 !
@@ -9923,6 +9884,7 @@ SHA1 block transform for x86_64, CRYPTOGAMS by <appro@openssl.org>
 0
 @
 @
+n
 @
 d
 @
@@ -9979,7 +9941,6 @@ H=
 0
 0
 0
-m
 0
 H=
 0
@@ -9989,7 +9950,6 @@ H=
 @
 @
 0
-
 Hi
 E
 

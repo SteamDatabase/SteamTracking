@@ -1026,6 +1026,10 @@ message CMsgSetUIMode {
 	optional int32 ui_mode = 1;
 }
 
+message CMsgSetSteamBetaName {
+	optional string steam_beta_name = 1;
+}
+
 message CMsgPopupCreated {
 	optional uint32 browser_handle = 1;
 }

@@ -33,7 +33,7 @@ __common
 __DATA
 __LINKEDIT
 @loader_path/libtier0_s.dylib
-(k19
+Cv8w:
 @loader_path/crashhandler.dylib
 /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
 /usr/lib/libc++.1.dylib
@@ -428,8 +428,8 @@ Steam
 steamwebhelper
 Steam Helper
 cefwebhelper
-Mar 22 2024
-13:15:16
+Mar 27 2024
+13:15:59
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 CatchAndWriteContext_t::Invoke with bogus argc/argv
@@ -479,7 +479,6 @@ pszName == NULL || *pszName == '/' || (isalpha((unsigned char) *pszName) && pszN
 POSIX does not support inheriting full mutexes
 Anonymous mutex cannot have bAllAccess == true
 tid(%u) pthread_key_create failed: %s
-tid(%u) burning pthread_key_t == 0 so we never use it
 Bad thread local: Get
 Failed to set thread local value
 Bad thread local: Set
@@ -1818,28 +1817,18 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-4XM$!q>
-CO-c
-ICIP
-yVX&
-?;Cj
-P RJ~
-+ydd
-8#VK
-Zzdew
-1'8|
-k,oI|
-u%oSzV4
-`G{ZHFE
->XFx_8
-rTN@
-zQCk
-F \'
-#?(-rC
-]{fH
-~Yh.
-~/omG
-(t*`
+"gUt3
+$E,b
+_sU;$2j
+5$r&
+RF5lx
+NbR(
+~pUGEQ
+i5Br
+jWODA
+W2x~
+Www 
+C5r|s
 \.<P
 ta|dw
 +t&M
@@ -1900,10 +1889,10 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240322201517Z0/
- ~{'*
+240327201601Z0/
+tg&	
 1/0-
- ~{'*
+tg&	
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -1911,34 +1900,34 @@ Apple Inc.1
 	<key>cdhashes</key>
 	<array>
 		<data>
-		fnsnKs0BJASW7/52gkyjc1TuYe4=
+		FXRnJgmbeptGDCcnvtwW0KyPw60=
 		</data>
 	</array>
 </dict>
 </plist>
-Zmz3
-TM-6
-Ev%Z
-"[A^
-W=Oq
-20240322201522Z0
+#&4$
+)_3g
+20240327201635Z0
+:O\M>
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240307204517Z
-240418204516Z0B1
-Timestamp Signer NWK21
+240307210017Z
+240418210016Z0B1
+Timestamp Signer NWK11
 Apple Inc.1
-;bp,
-yHN 
-8$0K
+EQ'B
+~%nX
+e/f3
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-c,,N
-4*nr
++~T5WHh
+y0<7f,H
+p>7,
+2[OU`
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -1977,17 +1966,16 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240322201522Z0#
-oW0+
-Q}x/
-aao|
-`=7g(B$1
-waT!
-ti)|^
-	b=x
-$lQ-
-@ZCA{J
-prYlv$
+:O\M>
+240327201635Z0#
+bk0+
+I!yW
+mlKl
+NGfb
+CU~ 
+e/T+=
+	L-M
+YPs@
 __TEXT
 __text
 __TEXT
@@ -2023,6 +2011,7 @@ __common
 __DATA
 __LINKEDIT
 @loader_path/libtier0_s.dylib
+=0E$
 @loader_path/crashhandler.dylib
 /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
 /usr/lib/libc++.1.dylib
@@ -2068,7 +2057,6 @@ AWAVAUATSPE
 [A\A]A^A_]
 AVSH
 [A^]
-9=:V
 AVSH
 [A^]
 AWAVAUATSH
@@ -2420,9 +2408,9 @@ AWAVSPf
 AWAVAUATSPE
 /tR@
 [A\A]A^A_]
-AWAVSPI
-[A^A_]
-[A^A_]
+AVSI
+[A^]
+[A^]
 AVSI
 [A^]
 AWAVSPA
@@ -2768,8 +2756,8 @@ Steam
 steamwebhelper
 Steam Helper
 cefwebhelper
-Mar 22 2024
-13:15:16
+Mar 27 2024
+13:15:59
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 CatchAndWriteContext_t::Invoke with bogus argc/argv
@@ -2819,7 +2807,6 @@ pszName == NULL || *pszName == '/' || (isalpha((unsigned char) *pszName) && pszN
 POSIX does not support inheriting full mutexes
 Anonymous mutex cannot have bAllAccess == true
 tid(%u) pthread_key_create failed: %s
-tid(%u) burning pthread_key_t == 0 so we never use it
 Bad thread local: Get
 Failed to set thread local value
 Bad thread local: Set
@@ -4148,13 +4135,22 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-:VmgZ
-~'d 
-1V,r
-?:Kg
-^U3]X0
-<pRF
-[A>?
+a#3b
+I\KH
+e,zx
+{Edn
+o2xd
+d"Ch
+ (c0
+c?`f}
+N[Fo
+N-wnh
+bwFD7.
+u{3[+
+gA'/$o
+H6,r4
+Np8{
+G'H2
 p-s,
 ^ud/
 subject.OU
@@ -4214,10 +4210,11 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240322201517Z0/
-.3,y
+240327201601Z0/
+3:D5z
+gV0<
 1/0-
-.3,y
+3:D5z
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -4225,16 +4222,16 @@ Apple Inc.1
 	<key>cdhashes</key>
 	<array>
 		<data>
-		zXc5jPpn1X6I4j7OEIDynxuQLjM=
+		R9nhMzv+ZH5UBtI982CcCadphmE=
 		</data>
 	</array>
 </dict>
 </plist>
-=pTy6
-7n]g0M
-.*Y~
-_+Yt
-20240322201522Z0
+VAeP
+jz>O
+.O' 
+DAoA
+20240327201635Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
@@ -4290,9 +4287,9 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240322201522Z0#
+240327201635Z0#
 Q}x/
-8H	oi
+]zSLW
 __TEXT
 __text
 __TEXT
@@ -4329,17 +4326,21 @@ __common
 __DATA
 __LINKEDIT
 @loader_path/libtier0_s.dylib
+	u92
 @loader_path/crashhandler.dylib
 /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
 /usr/lib/libc++.1.dylib
 /usr/lib/libSystem.B.dylib
 /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
-#8)@o	0
+6@~	P
+`q	P
+hh	0
 bU9(
 bU9(
 T		@9?
-B3	p
 5'qHs
+T@+	P
+B+	P
 $B))
 ?i(8
 kjh8k
@@ -4347,8 +4348,8 @@ kjh8k
 i+8,
 (a@9
 5(	@
-w	\!
-Aw	\!
+t	\!
+At	\!
 ThZ@
 ThZ@
 TiZ@
@@ -4367,15 +4368,15 @@ ii8J
 <l9@
 +ih8J	
 T+	@
+09`Q
 @9?q
 @9_q
-H 	X
 jt8 
 "J9h
-4AV	
+4AS	
 h"R9(
-5`Z	
-9`X	
+5`W	
+9`U	
 RHk88Z
 b2@9
 h6@9
@@ -4503,8 +4504,8 @@ Steam
 steamwebhelper
 Steam Helper
 cefwebhelper
-Mar 22 2024
-13:15:16
+Mar 27 2024
+13:15:59
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 CatchAndWriteContext_t::Invoke with bogus argc/argv
@@ -4554,7 +4555,6 @@ pszName == NULL || *pszName == '/' || (isalpha((unsigned char) *pszName) && pszN
 POSIX does not support inheriting full mutexes
 Anonymous mutex cannot have bAllAccess == true
 tid(%u) pthread_key_create failed: %s
-tid(%u) burning pthread_key_t == 0 so we never use it
 Bad thread local: Get
 Failed to set thread local value
 Bad thread local: Set
@@ -5874,23 +5874,19 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-l6hJ
-E#&0
-xL,u
-\Q-N
-sKia
-bb=.
-9dX[
-IhRE
-O:E.y
-7kY]I-T
-jD4K
-Rs}2@8'
-au$)
-\SwC
-?qD(_
+Liu^t$
+[_d*QD
+Vg-{
+E(Zf!
+=Yz(I
+Xf{p
 M4yL
-\*#;F,
+e&e'D
+oUcG
+MdM:
+[?=hQ
+1@um
+f(\d
 ^6sxda
 subject.OU
 MXGJJ98X76
@@ -5949,10 +5945,10 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240322201517Z0/
-xQ#$
+240327201601Z0/
+)Tdr
 1/0-
-xQ#$
+)Tdr
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -5960,22 +5956,15 @@ xQ#$
 	<key>cdhashes</key>
 	<array>
 		<data>
-		GFjJLpkmknhRIySTxk9BHqRsaXo=
+		6wjQQEtosVnDPy2Ya9ud05wsBTA=
 		</data>
 	</array>
 </dict>
 </plist>
-u4gMK
-qK=f
-ee/'
-> W8
-dAB8
-q,176
->5DV@
-f_ok
-Mi+_
-|du)
-20240322201522Z0
+BPOD
+cV>QL
+yp1b`{
+20240327201635Z0
 :O\M>
 0|100.
 'Apple Timestamp Certification Authority1&0$
@@ -6035,8 +6024,7 @@ uu!1
 Apple Certification Authority1
 Apple Inc.1
 :O\M>
-240322201522Z0#
+240327201635Z0#
 I!yW
-/8)	\
-c*?l
-37_o'
+s(R>
+HIxu

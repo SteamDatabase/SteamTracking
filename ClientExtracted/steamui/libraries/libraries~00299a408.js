@@ -1,4 +1,4 @@
-var CLSTAMP = "8784974";
+var CLSTAMP = "8793346";
 /* Third-party software licenses can be found at licenses.txt */ (self.webpackChunksteamui =
   self.webpackChunksteamui || []).push([
   [9394],
@@ -34691,46 +34691,45 @@ var CLSTAMP = "8784974";
       }
       r.d(t, {
         C5: () => w,
-        EE: () => X,
-        F8: () => D,
+        EE: () => G,
+        F8: () => P,
         GI: () => E,
-        IF: () => Z,
-        Lf: () => K,
-        MR: () => j,
+        IF: () => K,
+        Lf: () => q,
         Mq: () => p,
-        OT: () => G,
+        OT: () => H,
         QS: () => i,
         RI: () => l,
         Uv: () => u,
         YO: () => a,
         Z3: () => T,
-        Zv: () => N,
+        Zv: () => D,
         _m: () => S,
         aM: () => y,
         aX: () => m,
-        b7: () => q,
+        b7: () => X,
         dt: () => I,
         eV: () => C,
         fk: () => o,
         g1: () => A,
-        gg: () => V,
-        gt: () => L,
-        hz: () => M,
+        gg: () => L,
+        gt: () => U,
+        hz: () => j,
         jA: () => h,
         jM: () => O,
         j_: () => B,
-        kg: () => P,
-        lb: () => U,
+        kg: () => F,
+        lb: () => k,
         m2: () => b,
         my: () => n,
         p6: () => s,
         pv: () => g,
-        px: () => F,
+        px: () => M,
         qu: () => d,
         r7: () => R,
         sG: () => c,
         us: () => _,
-        wr: () => k,
+        wr: () => x,
         xM: () => f,
         y3: () => v,
       });
@@ -34968,28 +34967,15 @@ var CLSTAMP = "8784974";
       }
       function j(e) {
         switch (e) {
-          case 0:
           default:
-            return "default";
-          case 1:
-            return "pw_dota2";
-          case 2:
-            return "nexon_dota2";
-          case 3:
-            return "steamcmd";
+            break;
           case 4:
-            return "pw_csgo";
-          case 5:
-            return "clientui";
-          case 6:
-            return "steamhdl";
+          case 1:
           case 7:
-            return "steamchina";
           case 8:
-            return "singleapp";
-          case 9:
-            return "gameserver";
+            return !0;
         }
+        return !1;
       }
       function M(e) {
         switch (e) {
@@ -34997,24 +34983,12 @@ var CLSTAMP = "8784974";
             break;
           case 4:
           case 1:
-          case 7:
           case 8:
             return !0;
         }
         return !1;
       }
-      function F(e) {
-        switch (e) {
-          default:
-            break;
-          case 4:
-          case 1:
-          case 8:
-            return !0;
-        }
-        return !1;
-      }
-      var P, D, N, x, k, U, L, V, W, z, H, G, X, q, K, Z;
+      var F, P, D, N, x, k, U, L, V, W, z, H, G, X, q, K;
       !(function (e) {
         (e[(e.k_EConnectivityTestResult_Unknown = 0)] =
           "k_EConnectivityTestResult_Unknown"),
@@ -35030,7 +35004,7 @@ var CLSTAMP = "8784974";
             "k_EConnectivityTestResult_WifiDisabled"),
           (e[(e.k_EConnectivityTestResult_NoLAN = 6)] =
             "k_EConnectivityTestResult_NoLAN");
-      })(P || (P = {})),
+      })(F || (F = {})),
         (function (e) {
           (e[(e.k_ENetFakeLocalSystemState_Normal = 0)] =
             "k_ENetFakeLocalSystemState_Normal"),
@@ -35044,7 +35018,7 @@ var CLSTAMP = "8784974";
               "k_ENetFakeLocalSystemState_NoInternet"),
             (e[(e.k_ENetFakeLocalSystemState_NoSteam = 5)] =
               "k_ENetFakeLocalSystemState_NoSteam");
-        })(D || (D = {})),
+        })(P || (P = {})),
         (function (e) {
           (e[(e.k_ESuspendResumeProgressState_Invalid = 0)] =
             "k_ESuspendResumeProgressState_Invalid"),
@@ -35058,7 +35032,7 @@ var CLSTAMP = "8784974";
               "k_ESuspendResumeProgressState_WaitingForApp"),
             (e[(e.k_ESuspendResumeProgressState_Working = 5)] =
               "k_ESuspendResumeProgressState_Working");
-        })(N || (N = {})),
+        })(D || (D = {})),
         (function (e) {
           (e[(e.k_EFloatingGamepadTextInputModeModeSingleLine = 0)] =
             "k_EFloatingGamepadTextInputModeModeSingleLine"),
@@ -35068,7 +35042,7 @@ var CLSTAMP = "8784974";
               "k_EFloatingGamepadTextInputModeModeEmail"),
             (e[(e.k_EFloatingGamepadTextInputModeModeNumeric = 3)] =
               "k_EFloatingGamepadTextInputModeModeNumeric");
-        })(x || (x = {})),
+        })(N || (N = {})),
         (function (e) {
           (e[(e.k_EAppUpdateContentType_Content = 0)] =
             "k_EAppUpdateContentType_Content"),
@@ -35078,7 +35052,7 @@ var CLSTAMP = "8784974";
               "k_EAppUpdateContentType_Shader"),
             (e[(e.k_EAppUpdateContentType_Max = 3)] =
               "k_EAppUpdateContentType_Max");
-        })(k || (k = {})),
+        })(x || (x = {})),
         (function (e) {
           (e[(e.k_EOverlayToStoreFlag_None = 0)] =
             "k_EOverlayToStoreFlag_None"),
@@ -35086,13 +35060,13 @@ var CLSTAMP = "8784974";
               "k_EOverlayToStoreFlag_AddToCart"),
             (e[(e.k_EOverlayToStoreFlag_AddToCartAndShow = 2)] =
               "k_EOverlayToStoreFlag_AddToCartAndShow");
-        })(U || (U = {})),
+        })(k || (k = {})),
         (function (e) {
           (e[(e.k_EActivateGameOverlayToWebPageMode_Default = 0)] =
             "k_EActivateGameOverlayToWebPageMode_Default"),
             (e[(e.k_EActivateGameOverlayToWebPageMode_Modal = 1)] =
               "k_EActivateGameOverlayToWebPageMode_Modal");
-        })(L || (L = {})),
+        })(U || (U = {})),
         (function (e) {
           (e[(e.k_EGamingDeviceType_Unknown = 0)] =
             "k_EGamingDeviceType_Unknown"),
@@ -35109,13 +35083,13 @@ var CLSTAMP = "8784974";
               "k_EGamingDeviceType_Phone"),
             (e[(e.k_EGamingDeviceType_SteamDeck = 544)] =
               "k_EGamingDeviceType_SteamDeck");
-        })(V || (V = {})),
+        })(L || (L = {})),
         (function (e) {
           (e[(e.k_ELoginUIStyleOld = 0)] = "k_ELoginUIStyleOld"),
             (e[(e.k_ELoginUIStyleNewWithoutQRCode = 1)] =
               "k_ELoginUIStyleNewWithoutQRCode"),
             (e[(e.k_ELoginUIStyleNew = 2)] = "k_ELoginUIStyleNew");
-        })(W || (W = {})),
+        })(V || (V = {})),
         (function (e) {
           (e[(e.k_ECommunityProfileItemProperty_ImageSmall = 0)] =
             "k_ECommunityProfileItemProperty_ImageSmall"),
@@ -35141,7 +35115,7 @@ var CLSTAMP = "8784974";
               "k_ECommunityProfileItemProperty_MovieWebMSmall"),
             (e[(e.k_ECommunityProfileItemProperty_MovieMP4Small = 11)] =
               "k_ECommunityProfileItemProperty_MovieMP4Small");
-        })(z || (z = {})),
+        })(W || (W = {})),
         (function (e) {
           (e[(e.k_ERaiseGameWindowResult_NotRunning = 1)] =
             "k_ERaiseGameWindowResult_NotRunning"),
@@ -35149,14 +35123,14 @@ var CLSTAMP = "8784974";
               "k_ERaiseGameWindowResult_Success"),
             (e[(e.k_ERaiseGameWindowResult_Failure = 3)] =
               "k_ERaiseGameWindowResult_Failure");
-        })(H || (H = {})),
+        })(z || (z = {})),
         (function (e) {
           (e[(e.k_EPositionInvalid = -1)] = "k_EPositionInvalid"),
             (e[(e.k_EPositionTopLeft = 0)] = "k_EPositionTopLeft"),
             (e[(e.k_EPositionTopRight = 1)] = "k_EPositionTopRight"),
             (e[(e.k_EPositionBottomLeft = 2)] = "k_EPositionBottomLeft"),
             (e[(e.k_EPositionBottomRight = 3)] = "k_EPositionBottomRight");
-        })(G || (G = {})),
+        })(H || (H = {})),
         (function (e) {
           (e[(e.k_EAppReleaseState_Unknown = 0)] =
             "k_EAppReleaseState_Unknown"),
@@ -35170,13 +35144,13 @@ var CLSTAMP = "8784974";
               "k_EAppReleaseState_Released"),
             (e[(e.k_EAppReleaseState_Disabled = 5)] =
               "k_EAppReleaseState_Disabled");
-        })(X || (X = {})),
+        })(G || (G = {})),
         (function (e) {
           (e[(e.k_EGameIDTypeApp = 0)] = "k_EGameIDTypeApp"),
             (e[(e.k_EGameIDTypeGameMod = 1)] = "k_EGameIDTypeGameMod"),
             (e[(e.k_EGameIDTypeShortcut = 2)] = "k_EGameIDTypeShortcut"),
             (e[(e.k_EGameIDTypeP2P = 3)] = "k_EGameIDTypeP2P");
-        })(q || (q = {})),
+        })(X || (X = {})),
         (function (e) {
           (e[(e.k_EInstallMgrStateNone = 0)] = "k_EInstallMgrStateNone"),
             (e[(e.k_EInstallMgrStateSetup = 1)] = "k_EInstallMgrStateSetup"),
@@ -35209,7 +35183,7 @@ var CLSTAMP = "8784974";
             (e[(e.k_EInstallMgrStateFailed = 15)] = "k_EInstallMgrStateFailed"),
             (e[(e.k_EInstallMgrStateCanceled = 16)] =
               "k_EInstallMgrStateCanceled");
-        })(K || (K = {})),
+        })(q || (q = {})),
         (function (e) {
           (e[(e.k_EWindowBringToFrontInvalid = 0)] =
             "k_EWindowBringToFrontInvalid"),
@@ -35217,7 +35191,7 @@ var CLSTAMP = "8784974";
               "k_EWindowBringToFrontAndForceOS"),
             (e[(e.k_EWindowBringToFrontWithoutForcingOS = 2)] =
               "k_EWindowBringToFrontWithoutForcingOS");
-        })(Z || (Z = {}));
+        })(K || (K = {}));
     },
     3e3: (e, t, r) => {
       "use strict";

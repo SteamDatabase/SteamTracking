@@ -543,8 +543,8 @@ CreateInterface
 steamwebhelper
 Steam Helper
 cefwebhelper
-Mar 22 2024
-13:14:52
+Mar 27 2024
+13:15:33
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 MainThrd
@@ -553,7 +553,6 @@ exec
 /bin/sh
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/threadtools.cpp
 tid(%u) pthread_key_create failed: %s
-tid(%u) burning pthread_key_t == 0 so we never use it
 Bad thread local: Get
 Failed to set thread local value
 Bad thread local: Set
@@ -946,17 +945,15 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-&-x(D
-,~at
-7rGB
-81p{;Dv
-YZ8?
-wyco
-.xutK
-nI6aaG
-!b	{?
-0 fWs]
-1T{B
+WX|h
+0-Ch5
+^tUVe
+5,+G
+&raT
+`M/_
+cD,7_u
+~vC\SG7e
+(+O1T{B
 subject.OU
 MXGJJ98X76
 Apple Inc.1&0$
@@ -1014,7 +1011,7 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240322201514Z0/
+240327201557Z0/
 1/0-
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
@@ -1023,31 +1020,36 @@ Apple Inc.1
 	<key>cdhashes</key>
 	<array>
 		<data>
-		3DB7u/47Qhvt49b0HOPkpjdl8yM=
+		cWQdz2tAlN6xw1YomukdwkpcZqM=
 		</data>
 	</array>
 </dict>
 </plist>
-ESRs+g
-c{:Hql(
-20240322201519Z0
+9qv5R
+{.:Q
+/n^.$]%
+Np$@].
+20240327201631Z0
+:O\M>
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240307204517Z
-240418204516Z0B1
-Timestamp Signer NWK21
+240307210017Z
+240418210016Z0B1
+Timestamp Signer NWK11
 Apple Inc.1
-;bp,
-yHN 
-8$0K
+EQ'B
+~%nX
+e/f3
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-c,,N
-4*nr
++~T5WHh
+y0<7f,H
+p>7,
+2[OU`
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -1086,13 +1088,12 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240322201519Z0#
-Q}x/
-:P2t
-'":nY
-9G?my
-,1%N_
-],g;
+:O\M>
+240327201631Z0#
+I!yW
++*,bu
+?dii
+35kS^
 __TEXT
 __text
 __TEXT
@@ -1138,6 +1139,7 @@ __common
 __DATA
 __LINKEDIT
 @loader_path/crashhandler.dylib
+F?Do6
 /usr/lib/libiconv.2.dylib
 /System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices
 /System/Library/Frameworks/IOKit.framework/Versions/A/IOKit
@@ -1612,9 +1614,9 @@ xPuP
 8[A^A_]
 AWAVSP
 [A^A_]
-AWAVSPI
-[A^A_]
-[A^A_]
+AVSI
+[A^]
+[A^]
 AVSI
 [A^]
 AWAVSPA
@@ -1848,8 +1850,8 @@ CreateInterface
 steamwebhelper
 Steam Helper
 cefwebhelper
-Mar 22 2024
-13:14:55
+Mar 27 2024
+13:15:34
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 MainThrd
@@ -1858,7 +1860,6 @@ exec
 /bin/sh
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/threadtools.cpp
 tid(%u) pthread_key_create failed: %s
-tid(%u) burning pthread_key_t == 0 so we never use it
 Bad thread local: Get
 Failed to set thread local value
 Bad thread local: Set
@@ -2289,17 +2290,27 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-a`u=k2to
-?#$-Hx;
-CqzR
-\GC~
-&ovv
-6G|'
-bW/L
-Z?)~ZP~_
-WXFL
-5^am
-BR!-6
+Yo,L
+"B@YVt
+>oyv=p
+O l9
+K1@f
+.ZSK
+<.(4
+>^)HJ
+"vfT
+0|o!#
+=)m;
+QFJI
+P5vlq
+X-LE
+$Zn1%
+Z<Svm[
+4 ex
+AJkk
+x9~c
+(y4X,X
+|'.k]
 subject.OU
 MXGJJ98X76
 Apple Inc.1&0$
@@ -2357,7 +2368,7 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240322201514Z0/
+240327201557Z0/
 1/0-
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
@@ -2366,31 +2377,32 @@ Apple Inc.1
 	<key>cdhashes</key>
 	<array>
 		<data>
-		HwwNxocEagtc6AoaCT3pgvFW4Fo=
+		xUyMJQ94q8u00fBtLuGZAgPXjg0=
 		</data>
 	</array>
 </dict>
 </plist>
-gED=
-y/&j
-20240322201519Z0
+20240327201632Z0
+:O\M>
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240307204517Z
-240418204516Z0B1
-Timestamp Signer NWK21
+240307210017Z
+240418210016Z0B1
+Timestamp Signer NWK11
 Apple Inc.1
-;bp,
-yHN 
-8$0K
+EQ'B
+~%nX
+e/f3
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-c,,N
-4*nr
++~T5WHh
+y0<7f,H
+p>7,
+2[OU`
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -2429,10 +2441,15 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240322201519Z0#
-sqb.
-Q}x/
-P+sr
+:O\M>
+240327201632Z0#
+h	XV
+I!yW
+1%U$%
+csyn'
+CvOs
+^\y6
+CH+j
 __TEXT
 __text
 __TEXT
@@ -2497,8 +2514,8 @@ cS9@
 h&B)
 (	.9
 T@SE
-@9l-
-@9_-
+@9b-
+@9U-
 Thjv8H
 h(8*
 QiJh8?
@@ -2545,7 +2562,7 @@ ii8J
 <l9@
 +ih8J	
 T+	@
-<9`{
+<9 z
 @9_q
 jt8 
 	5V9i
@@ -2735,8 +2752,8 @@ CreateInterface
 steamwebhelper
 Steam Helper
 cefwebhelper
-Mar 22 2024
-13:14:57
+Mar 27 2024
+13:15:36
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 MainThrd
@@ -2745,7 +2762,6 @@ exec
 /bin/sh
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/threadtools.cpp
 tid(%u) pthread_key_create failed: %s
-tid(%u) burning pthread_key_t == 0 so we never use it
 Bad thread local: Get
 Failed to set thread local value
 Bad thread local: Set
@@ -3169,12 +3185,14 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-]je>
-dBK5
-t.h^
-S\l *
-l=fC
-Ud;[
+bBQ?
+G!t<5
+Z#_HS(
+?gcM
+TnV3
+edzN7<
+#Ew^m
+Czpv
 dW~in
 subject.OU
 MXGJJ98X76
@@ -3233,7 +3251,7 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240322201514Z0/
+240327201557Z0/
 1/0-
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
@@ -3242,36 +3260,31 @@ Apple Inc.1
 	<key>cdhashes</key>
 	<array>
 		<data>
-		AiRf9+yJHl+6cr4syqvASsyEj6Q=
+		lFlGyl/ZoujpqGmDEJ9kst8x+gA=
 		</data>
 	</array>
 </dict>
 </plist>
-dY\C$
-M(=6
-V"aF
-38wi
-20240322201519Z0
-:O\M>
+#'}C6AQ
+E$rF
+20240327201632Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240307210017Z
-240418210016Z0B1
-Timestamp Signer NWK11
+240307204517Z
+240418204516Z0B1
+Timestamp Signer NWK21
 Apple Inc.1
-EQ'B
-~%nX
-e/f3
+;bp,
+yHN 
+8$0K
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-+~T5WHh
-y0<7f,H
-p>7,
-2[OU`
+c,,N
+4*nr
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -3310,6 +3323,10 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-:O\M>
-240322201519Z0#
-I!yW
+240327201632Z0#
+Q}x/
+!7dK
+ih%#Lq
+'Z\5&R
+T=YL;
+/}&^|.
