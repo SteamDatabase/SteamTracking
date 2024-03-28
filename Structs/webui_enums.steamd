@@ -1126,6 +1126,12 @@ enum SortBy
 	k_SortByStartDate = 1;
 }
 
+enum STORAGE
+{
+	STORAGE_DOES_NOT_EXIST = 0;
+	STORAGE_IN_MEMORY = 1;
+}
+
 enum Store
 {
 	k_StoreInvalidState = 0;
@@ -1208,6 +1214,12 @@ enum UnnamedEnum0731ad10e9d10396
 	RequiresCooldown = 4;
 }
 
+enum UnnamedEnum07fc2c3567eb7e19
+{
+	Idle = 0;
+	Busy = 1;
+}
+
 enum UnnamedEnum082dd12e6086021e
 {
 	Neutral = 0;
@@ -1220,6 +1232,12 @@ enum UnnamedEnum09e3cce3b6071fcb
 	None = 0;
 	Generic = 1;
 	Expired = 2;
+}
+
+enum UnnamedEnum0a1393e07211be99
+{
+	Type = 1;
+	Parameter = 2;
 }
 
 enum UnnamedEnum0be4f2c7ab15fa09
@@ -1250,6 +1268,14 @@ enum UnnamedEnum0d5b030e19417dab
 	COMMS_DISRUPTIVE = 64;
 }
 
+enum UnnamedEnum0edbba0e83cd6a43
+{
+	Header = 0;
+	Unchanged = 1;
+	Deleted = 2;
+	Added = 3;
+}
+
 enum UnnamedEnum0f3c4fdd99d18bb8
 {
 	None = 0;
@@ -1265,6 +1291,12 @@ enum UnnamedEnum0f5dedf55f59c3be
 	Main = 0;
 	Predictions = 1;
 	Fantasy = 2;
+}
+
+enum UnnamedEnum0f68df7c8c884057
+{
+	API = 0;
+	USER = 1;
 }
 
 enum UnnamedEnum0fd8aa29d83fb708
@@ -1292,6 +1324,16 @@ enum UnnamedEnum103c46b6e6314ec9
 	k_ECompleted = 11;
 }
 
+enum UnnamedEnum12487a88f7459bbf
+{
+	Line = 1;
+	Block = 2;
+	Underline = 3;
+	LineThin = 4;
+	BlockOutline = 5;
+	UnderlineThin = 6;
+}
+
 enum UnnamedEnum12b52e8a1dd53cc3
 {
 	Name = 0;
@@ -1312,6 +1354,12 @@ enum UnnamedEnum14b20255bb5ef56d
 	None = 0;
 	Ago = 1;
 	Remaining = 2;
+}
+
+enum UnnamedEnum1510db2060f520be
+{
+	LF = 1;
+	CRLF = 2;
 }
 
 enum UnnamedEnum15675cb60f1450a5
@@ -1411,6 +1459,17 @@ enum UnnamedEnum1d137d7f853b05fe
 	k_Unknown = 5;
 }
 
+enum UnnamedEnum1d20aad269bf6353
+{
+	First = 1;
+	Second = 2;
+	Last = 3;
+	Next = 4;
+	Previous = 5;
+	NextPage = 6;
+	PreviousPage = 7;
+}
+
 enum UnnamedEnum1e6f97ac4db559c6
 {
 	k_BlockDate = 1;
@@ -1429,6 +1488,21 @@ enum UnnamedEnum1ec6c82c0cacba76
 	k_Success = 0;
 	k_PrimaryDomainFail = 1;
 	k_SecondaryDomainFail = 2;
+}
+
+enum UnnamedEnum1f3b4b43ccfe9c8e
+{
+	None = 0;
+	Indent = 1;
+	IndentOutdent = 2;
+	Outdent = 3;
+}
+
+enum UnnamedEnum1f7704c74dec1480
+{
+	TOP_RIGHT_CORNER = 0;
+	BOTTOM_RIGHT_CORNER = 1;
+	TOP_CENTER = 2;
 }
 
 enum UnnamedEnum209be1a5e8248296
@@ -1519,11 +1593,28 @@ enum UnnamedEnum26b26332fa565251
 	Page_Down = 65366;
 }
 
+enum UnnamedEnum27cbc52f3d26b7db
+{
+	Off = 0;
+	On = 1;
+	Relative = 2;
+	Interval = 3;
+	Custom = 4;
+}
+
 enum UnnamedEnum27f3d5ee56814acf
 {
 	None = 0;
 	Left = 1;
 	Right = 2;
+}
+
+enum UnnamedEnum283f4983bc5112eb
+{
+	Ignore = 0;
+	Info = 1;
+	Warning = 2;
+	Error = 3;
 }
 
 enum UnnamedEnum2ad3a297ec46ebfc
@@ -1588,6 +1679,12 @@ enum UnnamedEnum2cb9b3e31468ae28
 	Onslaught = 9;
 }
 
+enum UnnamedEnum2de1caa33e895f3d
+{
+	Unnecessary = 1;
+	Deprecated = 2;
+}
+
 enum UnnamedEnum2dfea80db4b6d761
 {
 	LaunchGame = 0;
@@ -1639,6 +1736,14 @@ enum UnnamedEnum304f4bcd9d879629
 	Loading = 1;
 	OK = 2;
 	Failed = 3;
+}
+
+enum UnnamedEnum31519674c5008bd3
+{
+	Unknown = 0;
+	Twistie = 1;
+	Element = 2;
+	Filter = 3;
 }
 
 enum UnnamedEnum3162b5cef919f5eb
@@ -1708,6 +1813,13 @@ enum UnnamedEnum336e1b6bafa25e4e
 	Errored = 4;
 }
 
+enum UnnamedEnum33f2d3829fe2a16e
+{
+	Blur = 1;
+	Gesture = 2;
+	Other = 3;
+}
+
 enum UnnamedEnum3461d68cd53273a9
 {
 	Init = 0;
@@ -1753,6 +1865,15 @@ enum UnnamedEnum3740744456cf55a3
 	Finished = 4;
 }
 
+enum UnnamedEnum379082e615272af4
+{
+	Left = 0;
+	Right = 1;
+	None = 2;
+	LeftOfInjectedText = 3;
+	RightOfInjectedText = 4;
+}
+
 enum UnnamedEnum3823e60141e7e50d
 {
 	k_ESaleTagFilter = 0;
@@ -1770,6 +1891,24 @@ enum UnnamedEnum3864c06f550e20d6
 	Ok = 2;
 	Good = 3;
 	Excellent = 4;
+}
+
+enum UnnamedEnum3a1537825edcb481
+{
+	UNKNOWN = 0;
+	TEXTAREA = 1;
+	GUTTER_GLYPH_MARGIN = 2;
+	GUTTER_LINE_NUMBERS = 3;
+	GUTTER_LINE_DECORATIONS = 4;
+	GUTTER_VIEW_ZONE = 5;
+	CONTENT_TEXT = 6;
+	CONTENT_EMPTY = 7;
+	CONTENT_VIEW_ZONE = 8;
+	CONTENT_WIDGET = 9;
+	OVERVIEW_RULER = 10;
+	SCROLLBAR = 11;
+	OVERLAY_WIDGET = 12;
+	OUTSIDE_EDITOR = 13;
 }
 
 enum UnnamedEnum3bfd44005cf37904
@@ -1826,6 +1965,21 @@ enum UnnamedEnum40753bc97c5c444d
 	k_NextFestTopGameWrapUp = 33;
 }
 
+enum UnnamedEnum41ef8b0e788e0224
+{
+	All = 0;
+	This = 1;
+	Cancel = 2;
+}
+
+enum UnnamedEnum442e63328704c13b
+{
+	Left = 1;
+	Center = 2;
+	Right = 4;
+	Full = 7;
+}
+
 enum UnnamedEnum444e26d5fd11557e
 {
 	None = 0;
@@ -1867,6 +2021,12 @@ enum UnnamedEnum448e6dd2c19f0f8c
 	PromotedNewAdmin = 1005;
 	MessageOnClanPage = 1006;
 	CuratorRecommendedGame = 1007;
+}
+
+enum UnnamedEnum453e526514507ded
+{
+	Smooth = 0;
+	Immediate = 1;
 }
 
 enum UnnamedEnum47122ffa63e68b01
@@ -1926,6 +2086,158 @@ enum UnnamedEnum498f9ba208938629
 	kWaitingToHide = 3;
 }
 
+enum UnnamedEnum4afef2b2f0cbca4b
+{
+	acceptSuggestionOnCommitCharacter = 0;
+	acceptSuggestionOnEnter = 1;
+	accessibilitySupport = 2;
+	accessibilityPageSize = 3;
+	ariaLabel = 4;
+	ariaRequired = 5;
+	autoClosingBrackets = 6;
+	autoClosingComments = 7;
+	screenReaderAnnounceInlineSuggestion = 8;
+	autoClosingDelete = 9;
+	autoClosingOvertype = 10;
+	autoClosingQuotes = 11;
+	autoIndent = 12;
+	automaticLayout = 13;
+	autoSurround = 14;
+	bracketPairColorization = 15;
+	guides = 16;
+	codeLens = 17;
+	codeLensFontFamily = 18;
+	codeLensFontSize = 19;
+	colorDecorators = 20;
+	colorDecoratorsLimit = 21;
+	columnSelection = 22;
+	comments = 23;
+	contextmenu = 24;
+	copyWithSyntaxHighlighting = 25;
+	cursorBlinking = 26;
+	cursorSmoothCaretAnimation = 27;
+	cursorStyle = 28;
+	cursorSurroundingLines = 29;
+	cursorSurroundingLinesStyle = 30;
+	cursorWidth = 31;
+	disableLayerHinting = 32;
+	disableMonospaceOptimizations = 33;
+	domReadOnly = 34;
+	dragAndDrop = 35;
+	dropIntoEditor = 36;
+	emptySelectionClipboard = 37;
+	experimentalWhitespaceRendering = 38;
+	extraEditorClassName = 39;
+	fastScrollSensitivity = 40;
+	find = 41;
+	fixedOverflowWidgets = 42;
+	folding = 43;
+	foldingStrategy = 44;
+	foldingHighlight = 45;
+	foldingImportsByDefault = 46;
+	foldingMaximumRegions = 47;
+	unfoldOnClickAfterEndOfLine = 48;
+	fontFamily = 49;
+	fontInfo = 50;
+	fontLigatures = 51;
+	fontSize = 52;
+	fontWeight = 53;
+	fontVariations = 54;
+	formatOnPaste = 55;
+	formatOnType = 56;
+	glyphMargin = 57;
+	gotoLocation = 58;
+	hideCursorInOverviewRuler = 59;
+	hover = 60;
+	inDiffEditor = 61;
+	inlineSuggest = 62;
+	letterSpacing = 63;
+	lightbulb = 64;
+	lineDecorationsWidth = 65;
+	lineHeight = 66;
+	lineNumbers = 67;
+	lineNumbersMinChars = 68;
+	linkedEditing = 69;
+	links = 70;
+	matchBrackets = 71;
+	minimap = 72;
+	mouseStyle = 73;
+	mouseWheelScrollSensitivity = 74;
+	mouseWheelZoom = 75;
+	multiCursorMergeOverlapping = 76;
+	multiCursorModifier = 77;
+	multiCursorPaste = 78;
+	multiCursorLimit = 79;
+	occurrencesHighlight = 80;
+	overviewRulerBorder = 81;
+	overviewRulerLanes = 82;
+	padding = 83;
+	pasteAs = 84;
+	parameterHints = 85;
+	peekWidgetDefaultFocus = 86;
+	definitionLinkOpensInPeek = 87;
+	quickSuggestions = 88;
+	quickSuggestionsDelay = 89;
+	readOnly = 90;
+	readOnlyMessage = 91;
+	renameOnType = 92;
+	renderControlCharacters = 93;
+	renderFinalNewline = 94;
+	renderLineHighlight = 95;
+	renderLineHighlightOnlyWhenFocus = 96;
+	renderValidationDecorations = 97;
+	renderWhitespace = 98;
+	revealHorizontalRightPadding = 99;
+	roundedSelection = 100;
+	rulers = 101;
+	scrollbar = 102;
+	scrollBeyondLastColumn = 103;
+	scrollBeyondLastLine = 104;
+	scrollPredominantAxis = 105;
+	selectionClipboard = 106;
+	selectionHighlight = 107;
+	selectOnLineNumbers = 108;
+	showFoldingControls = 109;
+	showUnused = 110;
+	snippetSuggestions = 111;
+	smartSelect = 112;
+	smoothScrolling = 113;
+	stickyScroll = 114;
+	stickyTabStops = 115;
+	stopRenderingLineAfter = 116;
+	suggest = 117;
+	suggestFontSize = 118;
+	suggestLineHeight = 119;
+	suggestOnTriggerCharacters = 120;
+	suggestSelection = 121;
+	tabCompletion = 122;
+	tabIndex = 123;
+	unicodeHighlighting = 124;
+	unusualLineTerminators = 125;
+	useShadowDOM = 126;
+	useTabStops = 127;
+	wordBreak = 128;
+	wordSeparators = 129;
+	wordWrap = 130;
+	wordWrapBreakAfterCharacters = 131;
+	wordWrapBreakBeforeCharacters = 132;
+	wordWrapColumn = 133;
+	wordWrapOverride1 = 134;
+	wordWrapOverride2 = 135;
+	wrappingIndent = 136;
+	wrappingStrategy = 137;
+	showDeprecated = 138;
+	inlayHints = 139;
+	editorClassName = 140;
+	pixelRatio = 141;
+	tabFocusMode = 142;
+	layoutInfo = 143;
+	wrappingInfo = 144;
+	defaultColorDecorators = 145;
+	colorDecoratorsActivatedOn = 146;
+	inlineCompletionsAccessibilityVerbose = 147;
+}
+
 enum UnnamedEnum4b0c2d915210fd30
 {
 	UNKNOWN = 0;
@@ -1964,6 +2276,14 @@ enum UnnamedEnum511f114323ab4358
 	Connecting = 4;
 	Connected = 5;
 	Retrying = 6;
+}
+
+enum UnnamedEnum514c18a4e38810fa
+{
+	AlwaysGrowsWhenTypingAtEdges = 0;
+	NeverGrowsWhenTypingAtEdges = 1;
+	GrowsOnlyWhenTypingBefore = 2;
+	GrowsOnlyWhenTypingAfter = 3;
 }
 
 enum UnnamedEnum5164fb8413b2b2d9
@@ -2024,6 +2344,144 @@ enum UnnamedEnum5492f48161b9f221
 	On = 7;
 }
 
+enum UnnamedEnum54a08596fc4e0e87
+{
+	DependsOnKbLayout = undefined;
+	Unknown = 0;
+	Backspace = 1;
+	Tab = 2;
+	Enter = 3;
+	Shift = 4;
+	Ctrl = 5;
+	Alt = 6;
+	PauseBreak = 7;
+	CapsLock = 8;
+	Escape = 9;
+	Space = 10;
+	PageUp = 11;
+	PageDown = 12;
+	End = 13;
+	Home = 14;
+	LeftArrow = 15;
+	UpArrow = 16;
+	RightArrow = 17;
+	DownArrow = 18;
+	Insert = 19;
+	Delete = 20;
+	Digit0 = 21;
+	Digit1 = 22;
+	Digit2 = 23;
+	Digit3 = 24;
+	Digit4 = 25;
+	Digit5 = 26;
+	Digit6 = 27;
+	Digit7 = 28;
+	Digit8 = 29;
+	Digit9 = 30;
+	KeyA = 31;
+	KeyB = 32;
+	KeyC = 33;
+	KeyD = 34;
+	KeyE = 35;
+	KeyF = 36;
+	KeyG = 37;
+	KeyH = 38;
+	KeyI = 39;
+	KeyJ = 40;
+	KeyK = 41;
+	KeyL = 42;
+	KeyM = 43;
+	KeyN = 44;
+	KeyO = 45;
+	KeyP = 46;
+	KeyQ = 47;
+	KeyR = 48;
+	KeyS = 49;
+	KeyT = 50;
+	KeyU = 51;
+	KeyV = 52;
+	KeyW = 53;
+	KeyX = 54;
+	KeyY = 55;
+	KeyZ = 56;
+	Meta = 57;
+	ContextMenu = 58;
+	F1 = 59;
+	F2 = 60;
+	F3 = 61;
+	F4 = 62;
+	F5 = 63;
+	F6 = 64;
+	F7 = 65;
+	F8 = 66;
+	F9 = 67;
+	F10 = 68;
+	F11 = 69;
+	F12 = 70;
+	F13 = 71;
+	F14 = 72;
+	F15 = 73;
+	F16 = 74;
+	F17 = 75;
+	F18 = 76;
+	F19 = 77;
+	F20 = 78;
+	F21 = 79;
+	F22 = 80;
+	F23 = 81;
+	F24 = 82;
+	NumLock = 83;
+	ScrollLock = 84;
+	Semicolon = 85;
+	Equal = 86;
+	Comma = 87;
+	Minus = 88;
+	Period = 89;
+	Slash = 90;
+	Backquote = 91;
+	BracketLeft = 92;
+	Backslash = 93;
+	BracketRight = 94;
+	Quote = 95;
+	OEM_8 = 96;
+	IntlBackslash = 97;
+	Numpad0 = 98;
+	Numpad1 = 99;
+	Numpad2 = 100;
+	Numpad3 = 101;
+	Numpad4 = 102;
+	Numpad5 = 103;
+	Numpad6 = 104;
+	Numpad7 = 105;
+	Numpad8 = 106;
+	Numpad9 = 107;
+	NumpadMultiply = 108;
+	NumpadAdd = 109;
+	NUMPAD_SEPARATOR = 110;
+	NumpadSubtract = 111;
+	NumpadDecimal = 112;
+	NumpadDivide = 113;
+	KEY_IN_COMPOSITION = 114;
+	ABNT_C1 = 115;
+	ABNT_C2 = 116;
+	AudioVolumeMute = 117;
+	AudioVolumeUp = 118;
+	AudioVolumeDown = 119;
+	BrowserSearch = 120;
+	BrowserHome = 121;
+	BrowserBack = 122;
+	BrowserForward = 123;
+	MediaTrackNext = 124;
+	MediaTrackPrevious = 125;
+	MediaStop = 126;
+	MediaPlayPause = 127;
+	LaunchMediaPlayer = 128;
+	LaunchMail = 129;
+	LaunchApp2 = 130;
+	Clear = 131;
+	MAX_VALUE = 132;
+}
+
 enum UnnamedEnum55381d04bbcefb85
 {
 	SHORT = 0;
@@ -2056,6 +2514,12 @@ enum UnnamedEnum56fdca98a5fc5dc5
 	STALE_ = 2;
 }
 
+enum UnnamedEnum5703985a4a894fda
+{
+	Highlight = 0;
+	Filter = 1;
+}
+
 enum UnnamedEnum57a3dfe446c1fa85
 {
 	Low = 0;
@@ -2070,6 +2534,13 @@ enum UnnamedEnum57bf92e3de997183
 	SUPPORT = 2;
 	OFFLANE = 3;
 	MID = 4;
+}
+
+enum UnnamedEnum59717e0405bef96b
+{
+	VALID = 0;
+	INVALID = 1;
+	CANCELED = 2;
 }
 
 enum UnnamedEnum5b3ee43818cae779
@@ -2139,6 +2610,13 @@ enum UnnamedEnum5f9e5112c68eb7f0
 	k_ModRemoveAdultOnlyContent = 7;
 }
 
+enum UnnamedEnum6010fbb978b95cf2
+{
+	Disabled = 0;
+	EnabledForActive = 1;
+	Enabled = 2;
+}
+
 enum UnnamedEnum6847f45783a9d593
 {
 	Pitch = 0;
@@ -2206,10 +2684,26 @@ enum UnnamedEnum6a270a5d9acf89f0
 	SteamChinaReviewLauncher = 8;
 }
 
+enum UnnamedEnum6ac3783bbe0d9c5d
+{
+	LTR = 0;
+	RTL = 1;
+}
+
 enum UnnamedEnum6b26a08b3a0772c1
 {
 	Input = 0;
 	Output = 1;
+}
+
+enum UnnamedEnum6bd8304631e14543
+{
+	Off = 0;
+	Trace = 1;
+	Debug = 2;
+	Info = 3;
+	Warning = 4;
+	Error = 5;
 }
 
 enum UnnamedEnum6cf2b7ae1f44a3a3
@@ -2419,6 +2913,12 @@ enum UnnamedEnum6d85e147863c8302
 	Down = 4;
 }
 
+enum UnnamedEnum6d9334722d52a9f9
+{
+	Left = 1;
+	Right = 2;
+}
+
 enum UnnamedEnum6dc1117c55eed9d3
 {
 	k_EStatusString = 0;
@@ -2435,6 +2935,12 @@ enum UnnamedEnum6ffd890a446c4435
 	Backward = 2;
 }
 
+enum UnnamedEnum702e80796a2bbcdf
+{
+	PRESERVE = 0;
+	LAST = 1;
+}
+
 enum UnnamedEnum71321e1d7c5f7a14
 {
 	Minimal = 1;
@@ -2448,6 +2954,20 @@ enum UnnamedEnum71adb9c1860a40e0
 	k_All = 0;
 	k_Owned = 1;
 	k_Subscribed = 2;
+}
+
+enum UnnamedEnum71b9103fd51688b6
+{
+	None = 0;
+	Initialized = 1;
+	Closed = 2;
+}
+
+enum UnnamedEnum71e1e8884d5da508
+{
+	None = 0;
+	Text = 1;
+	Blocks = 2;
 }
 
 enum UnnamedEnum7282757b17cca874
@@ -2472,10 +2992,24 @@ enum UnnamedEnum73fab2eb67048082
 	SystemRestartPending = 8;
 }
 
+enum UnnamedEnum749b0879535720e9
+{
+	Text = 0;
+	Read = 1;
+	Write = 2;
+}
+
 enum UnnamedEnum798f930648f1159b
 {
 	Digital = 0;
 	Cursor = 1;
+}
+
+enum UnnamedEnum7c4ccc7e7f11da9c
+{
+	Invoke = 0;
+	TriggerCharacter = 1;
+	TriggerForIncompleteCompletions = 2;
 }
 
 enum UnnamedEnum7f46ca7702a21925
@@ -2512,6 +3046,13 @@ enum UnnamedEnum8007cbba74d1848c
 {
 	None = 0;
 	InvalidCode = 1;
+}
+
+enum UnnamedEnum80fbd0ff3a6fe079
+{
+	Auto = 1;
+	Hidden = 2;
+	Visible = 3;
 }
 
 enum UnnamedEnum80fde622b7ffb8a2
@@ -2596,6 +3137,12 @@ enum UnnamedEnum8a56d02e19e23722
 	TIRULES = 6;
 }
 
+enum UnnamedEnum8eccbf4cda33fab9
+{
+	Automatic = 0;
+	Explicit = 1;
+}
+
 enum UnnamedEnum8edc8c3ef547367c
 {
 	k_EStorePage = 0;
@@ -2603,11 +3150,24 @@ enum UnnamedEnum8edc8c3ef547367c
 	k_ESalesPage = 2;
 }
 
+enum UnnamedEnum8ef72a4728e00658
+{
+	Invoke = 1;
+	TriggerCharacter = 2;
+	ContentChange = 3;
+}
+
 enum UnnamedEnum940ff890eb1bf26e
 {
 	POPULAR = 1;
 	FAVORITE = 2;
 	ALL = 3;
+}
+
+enum UnnamedEnum9524e4d523009738
+{
+	Inline = 1;
+	Gutter = 2;
 }
 
 enum UnnamedEnum953b696abb380ac4
@@ -2643,6 +3203,38 @@ enum UnnamedEnum9744fddc6b9fcf31
 	EEU = 4;
 	CN = 5;
 	SEA = 6;
+}
+
+enum UnnamedEnum9880fadc8e5d89b8
+{
+	Method = 0;
+	Function = 1;
+	Constructor = 2;
+	Field = 3;
+	Variable = 4;
+	Class = 5;
+	Struct = 6;
+	Interface = 7;
+	Module = 8;
+	Property = 9;
+	Event = 10;
+	Operator = 11;
+	Unit = 12;
+	Value = 13;
+	Constant = 14;
+	Enum = 15;
+	EnumMember = 16;
+	Keyword = 17;
+	Text = 18;
+	Color = 19;
+	File = 20;
+	Reference = 21;
+	Customcolor = 22;
+	Folder = 23;
+	TypeParameter = 24;
+	User = 25;
+	Issue = 26;
+	Snippet = 27;
 }
 
 enum UnnamedEnum98e740aa9809340f
@@ -2857,6 +3449,29 @@ enum UnnamedEnum9b9efd293918a1fa
 	TrackedDeviceProperty_Max = 1000000;
 }
 
+enum UnnamedEnum9c19a486ce41ad6d
+{
+	NONE = 0;
+	SHUTDOWN = 1;
+}
+
+enum UnnamedEnum9d93397a59dbdedb
+{
+	Hidden = 0;
+	Blink = 1;
+	Smooth = 2;
+	Phase = 3;
+	Expand = 4;
+	Solid = 5;
+}
+
+enum UnnamedEnuma566a501eb426d94
+{
+	EXACT = 0;
+	ABOVE = 1;
+	BELOW = 2;
+}
+
 enum UnnamedEnuma68ec96c8362722a
 {
 	Unknown = undefined;
@@ -2955,11 +3570,26 @@ enum UnnamedEnumad989ac806e57514
 	Linger = undefined;
 }
 
+enum UnnamedEnumb0a2812931bd301b
+{
+	None = 0;
+	KeepWhitespace = 1;
+	InsertAsSnippet = 4;
+}
+
 enum UnnamedEnumb0f99e67f3ec880b
 {
 	NONE = 0;
 	LOG = 1;
 	BREAK = 2;
+}
+
+enum UnnamedEnumb175279bfabbc587
+{
+	Both = 0;
+	Right = 1;
+	Left = 2;
+	None = 3;
 }
 
 enum UnnamedEnumb21f37461b7e5756
@@ -3014,12 +3644,40 @@ enum UnnamedEnumb4bfafc0603a7b5b
 	EXTERNAL = 6;
 }
 
+enum UnnamedEnumb4c56acde5c1c2a0
+{
+	TextDefined = 0;
+	LF = 1;
+	CRLF = 2;
+}
+
+enum UnnamedEnumb58cf35b311fefd7
+{
+	AVOID = 0;
+	ALIGN = 1;
+}
+
 enum UnnamedEnumb63aeccc409af0d7
 {
 	None = 0;
 	Loading = 1;
 	Ready = 2;
 	Error = 3;
+}
+
+enum UnnamedEnumb63e83b815d09ed1
+{
+	None = 0;
+	Same = 1;
+	Indent = 2;
+	DeepIndent = 3;
+}
+
+enum UnnamedEnumb6bf80faeebca491
+{
+	FILE = 0;
+	FOLDER = 1;
+	ROOT_FOLDER = 2;
 }
 
 enum UnnamedEnumb8bceb83053e4b5b
@@ -3036,6 +3694,14 @@ enum UnnamedEnumb9dbd68757ae6dad
 	Success = 3;
 	Failure = 4;
 	Busy = 5;
+}
+
+enum UnnamedEnumbabb473034446eda
+{
+	Hint = 1;
+	Info = 2;
+	Warning = 4;
+	Error = 8;
 }
 
 enum UnnamedEnumbb409c705b092041
@@ -3177,6 +3843,12 @@ enum UnnamedEnumc3e92156fdf20f6c
 	k_PurchaseRequest = 2;
 }
 
+enum UnnamedEnumc44bf4cf244e5406
+{
+	Fuzzy = 0;
+	Contiguous = 1;
+}
+
 enum UnnamedEnumc5bc47386f71e3e3
 {
 	Unknown = 0;
@@ -3184,6 +3856,12 @@ enum UnnamedEnumc5bc47386f71e3e3
 	Workshop = 2;
 	Template = 3;
 	Game = 4;
+}
+
+enum UnnamedEnumc66433efeaf7ca57
+{
+	Invoke = 1;
+	Auto = 2;
 }
 
 enum UnnamedEnumc6e55c10367f49b7
@@ -3225,6 +3903,17 @@ enum UnnamedEnumc97b61f74c670b3e
 	BackRight = 6;
 }
 
+enum UnnamedEnumcb8fc0ea7d9087cc
+{
+	NotSet = 0;
+	ContentFlush = 1;
+	RecoverFromMarkers = 2;
+	Explicit = 3;
+	Paste = 4;
+	Undo = 5;
+	Redo = 6;
+}
+
 enum UnnamedEnumcbc616fa95d4ce31
 {
 	none = 0;
@@ -3260,6 +3949,15 @@ enum UnnamedEnumce80111fb803b9a5
 	DIM = 0;
 	NORMAL = 1;
 	HIGHLIGHTED = 2;
+}
+
+enum UnnamedEnumce9bce03d9579ad7
+{
+	None = 0;
+	Keep = 1;
+	Brackets = 2;
+	Advanced = 3;
+	Full = 4;
 }
 
 enum UnnamedEnumceb8961b24f76ce1
@@ -3306,6 +4004,12 @@ enum UnnamedEnumd41d2a81a1c775e4
 	Rerequest = 4;
 }
 
+enum UnnamedEnumd49e2cf6dc3cfc7f
+{
+	Right = 0;
+	Left = 1;
+}
+
 enum UnnamedEnumd4d9d8fd3054a6fd
 {
 	SteamUI = 0;
@@ -3318,6 +4022,14 @@ enum UnnamedEnumd4f313929840b090
 	Working = 1;
 	Finished = 2;
 	Failed = 3;
+}
+
+enum UnnamedEnumd5afec5988542538
+{
+	Undo = 0;
+	Redo = 1;
+	AcceptWord = 2;
+	Other = 3;
 }
 
 enum UnnamedEnumd6a84333206e5390
@@ -3338,6 +4050,14 @@ enum UnnamedEnumd97103ae663c8a09
 {
 	k_eFullXboxControllerSupport = 0;
 	k_ePartialXboxControllerSupport = 1;
+}
+
+enum UnnamedEnumd9756707c458b640
+{
+	NONE = 0;
+	FIRST = 1;
+	SECOND = 2;
+	LAST = 3;
 }
 
 enum UnnamedEnumdb303c21506dd3e7
@@ -3465,6 +4185,14 @@ enum UnnamedEnumeaf70d8cee21d56c
 	DesktopUI = 3;
 }
 
+enum UnnamedEnumeb660645b84e5c96
+{
+	Expanded = 0;
+	Collapsed = 1;
+	PreserveOrExpanded = 2;
+	PreserveOrCollapsed = 3;
+}
+
 enum UnnamedEnumec319d06f27559b4
 {
 	BuildReview = 0;
@@ -3483,6 +4211,36 @@ enum UnnamedEnumed37b551cf653bf6
 	Medium = 2;
 	High = 3;
 	Custom = 10;
+}
+
+enum UnnamedEnumed8eaeb9738f36fa
+{
+	File = 0;
+	Module = 1;
+	Namespace = 2;
+	Package = 3;
+	Class = 4;
+	Method = 5;
+	Property = 6;
+	Field = 7;
+	Constructor = 8;
+	Enum = 9;
+	Interface = 10;
+	Function = 11;
+	Variable = 12;
+	Constant = 13;
+	String = 14;
+	Number = 15;
+	Boolean = 16;
+	Array = 17;
+	Object = 18;
+	Key = 19;
+	Null = 20;
+	EnumMember = 21;
+	Struct = 22;
+	Event = 23;
+	Operator = 24;
+	TypeParameter = 25;
 }
 
 enum UnnamedEnumee13fc02f2c6851d
@@ -3526,6 +4284,13 @@ enum UnnamedEnumf148f58a11f3d661
 	k_SteamAwardFinalists = 10;
 }
 
+enum UnnamedEnumf4a43fa80efa8957
+{
+	Unknown = 0;
+	Disabled = 1;
+	Enabled = 2;
+}
+
 enum UnnamedEnumf60d704b0b63ab30
 {
 	None = 0;
@@ -3556,6 +4321,18 @@ enum UnnamedEnumf8c8b38ac1dd39c3
 	Default = 0;
 	Gold = 1;
 	LNY2020 = 2;
+}
+
+enum UnnamedEnumfa03abe551b03a38
+{
+	Idle = 0;
+	Typing = 1;
+}
+
+enum UnnamedEnumfa53d9b50a8fadb1
+{
+	Automatic = 0;
+	Trigger = 1;
 }
 
 enum UnnamedEnumfdf9542cbb4256c3
@@ -3617,6 +4394,14 @@ enum UnnamedEnumffb03be984d151d5
 	k_EMacPortDeveloper = 4;
 	k_ELinuxPortDeveloper = 5;
 	k_EFranchise = 6;
+}
+
+enum UnnamedEnumffd68c07d15832e4
+{
+	NO_ACTION = 0;
+	CLOSE_PICKER = 1;
+	REFRESH_PICKER = 2;
+	REMOVE_ITEM = 3;
 }
 
 enum VRInitError
