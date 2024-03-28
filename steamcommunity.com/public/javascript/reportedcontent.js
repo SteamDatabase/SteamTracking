@@ -429,6 +429,12 @@ function SelectedReviews_SetQualities()
 		label4.append( 'VoteOrAwardFarming' );
 		container4.append( label4 );
 		content.append( container4 );
+				var container5 = $J( "<div/>" );
+		var label5 = $J( "<label/>" );
+		label5.append( $J( "<input/>", { type: 'checkbox', value: 5 } ) );
+		label5.append( 'None' );
+		container5.append( label5 );
+		content.append( container5 );
 			var dialog = ShowConfirmDialog( 'Set Qualities for Selected Reviews', content );
 	dialog.done( function()
 	{
