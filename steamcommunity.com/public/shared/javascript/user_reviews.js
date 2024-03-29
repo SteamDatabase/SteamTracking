@@ -379,7 +379,7 @@ function UserReview_Moderate_SetDeveloperFlag( recommendationID, flagged_by_deve
 
 function UserReview_Moderate_SetQualities( recommendationID, qualities, baseURL, callback )
 {
-	UserReview_Moderate( recommendationID, { 'review_qualities' : qualities }, baseURL, callback );
+	UserReview_Moderate( recommendationID, { 'review_qualities' : qualities, 'update_review_qualities' : 1 }, baseURL, callback );
 }
 
 function UserReview_Moderate_VoteBanUsers( recommendationID, baseURL, callback )
