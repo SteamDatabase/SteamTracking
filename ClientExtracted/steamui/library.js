@@ -1,4 +1,4 @@
-var CLSTAMP = "8793346";
+var CLSTAMP = "8799423";
 /* Third-party software licenses can be found at licenses.txt */ (() => {
   var e,
     t,
@@ -2015,9 +2015,9 @@ var CLSTAMP = "8793346";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "Mar 27 2024 : 10:41:42",
-                BUILD_TIME_UTC: "Mar 27 2024 : 17:41:42",
-                BUILD_RTIME_UTC: 1711561302,
+                BUILD_TIME_LOCAL: "Mar 29 2024 : 09:33:23",
+                BUILD_TIME_UTC: "Mar 29 2024 : 16:33:23",
+                BUILD_RTIME_UTC: 1711730003,
               }.MOBILE_BUILD)
             ) {
               window.addEventListener("beforeunload", (e) => {
@@ -7287,14 +7287,15 @@ var CLSTAMP = "8793346";
       },
       81257: (e, t, n) => {
         "use strict";
-        n.d(t, { CJ: () => u, LP: () => d, k$: () => h, o5: () => C });
+        n.d(t, { CJ: () => d, LP: () => m, k$: () => u, o5: () => h });
         var r = n(85556),
           i = n(27378),
           o = n(64656),
-          l = n(21073),
-          s = n(50947),
-          a = n(85164);
-        const c = i.createContext(function (e, t) {
+          l = n(38834),
+          s = n(21073),
+          a = n(50947),
+          c = n(85164);
+        const C = i.createContext(function (e, t) {
           return {
             ShowVirtualKeyboard: () => {},
             ShowModalKeyboard: () => {},
@@ -7305,37 +7306,38 @@ var CLSTAMP = "8793346";
             BIsElementValidForInput: () => !1,
           };
         });
-        function C(e) {
+        function h(e) {
           const { factory: t, children: n } = e,
             r = i.useMemo(() => t.CreateVirtualKeyboardRef.bind(t), [t]);
-          return i.createElement(c.Provider, { value: r }, n);
+          return i.createElement(C.Provider, { value: r }, n);
         }
-        function h(e, t) {
+        function u(e, t) {
           const { onTextEntered: n } = e,
-            c = (0, r._T)(e, ["onTextEntered"]),
-            C = i.useRef(),
-            h = (0, a.qt)({ bSuppressAssert: !0 }),
-            m = i.useRef({ onTextEntered: () => null });
+            C = (0, r._T)(e, ["onTextEntered"]),
+            h = i.useRef(),
+            u = (0, c.qt)({ bSuppressAssert: !0 }),
+            p = !!i.useContext(l.ET),
+            g = i.useRef({ onTextEntered: () => null });
           Object.assign(
-            m.current,
-            Object.assign(Object.assign({}, c), {
-              onTextEntered: n || ((e) => d(e, h.IN_VR)),
+            g.current,
+            Object.assign(Object.assign({}, C), {
+              onTextEntered: n || ((e) => m(e, u.IN_VR)),
               BIsElementValidForInput: () =>
-                C.current && document.activeElement == C.current,
+                h.current && document.activeElement == h.current,
             }),
           );
-          const p = u(m.current, () => {
+          const f = d(g.current, () => {
               var e;
-              return null === (e = C.current) || void 0 === e
+              return null === (e = h.current) || void 0 === e
                 ? void 0
                 : e.ownerDocument.defaultView;
             }),
-            g = i.useCallback(
+            v = i.useCallback(
               (e) => {
                 var t, n;
-                if (!document.hasFocus() && document.activeElement == C.current)
+                if (!document.hasFocus() && document.activeElement == h.current)
                   return;
-                if (e.currentTarget != C.current)
+                if (e.currentTarget != h.current)
                   return void console.warn(
                     "keyboard got blur event, but it's not the active element",
                   );
@@ -7344,70 +7346,71 @@ var CLSTAMP = "8793346";
                     (n =
                       null ===
                         (t = o.AN.GetPopupForWindow(
-                          C.current.ownerDocument.defaultView,
+                          h.current.ownerDocument.defaultView,
                         )) || void 0 === t
                         ? void 0
                         : t.params.bUseVRKeyboard) &&
                   void 0 !== n &&
                   n;
-                (p.BIsActive() || r) && p.DelayHideVirtualKeyboard();
+                (f.BIsActive() || r) && f.DelayHideVirtualKeyboard();
               },
-              [p],
+              [f],
             ),
-            f = (0, s.xK)(
+            L = (0, a.xK)(
               (e) => {
-                C.current = e;
+                h.current = e;
                 const t = [];
                 return (
                   e &&
                     (e.addEventListener(
                       "focus",
-                      p.SetAsCurrentVirtualKeyboardTarget,
+                      f.SetAsCurrentVirtualKeyboardTarget,
                     ),
                     t.push(() =>
                       e.removeEventListener(
                         "focus",
-                        p.SetAsCurrentVirtualKeyboardTarget,
+                        f.SetAsCurrentVirtualKeyboardTarget,
                       ),
                     ),
-                    e.addEventListener("click", p.ShowVirtualKeyboard),
-                    t.push(() =>
-                      e.removeEventListener("click", p.ShowVirtualKeyboard),
-                    ),
-                    t.push((0, l.x)(C.current, p.ShowVirtualKeyboard)),
-                    t.push((0, l.BG)(C.current, g))),
+                    p &&
+                      (e.addEventListener("click", f.ShowVirtualKeyboard),
+                      t.push(() =>
+                        e.removeEventListener("click", f.ShowVirtualKeyboard),
+                      )),
+                    t.push((0, s.x)(h.current, f.ShowVirtualKeyboard)),
+                    t.push((0, s.BG)(h.current, v))),
                   () => t.forEach((e) => e())
                 );
               },
-              [g, p],
+              [v, f, p],
             );
           return (
             i.useLayoutEffect(
               () => (
-                (0, s.k$)(t, {
+                (0, a.k$)(t, {
                   TakeFocusAndShowKeyboard: () => {
-                    const e = C.current;
+                    const e = h.current;
                     e &&
                       (document.activeElement != e && e.focus(),
-                      p.ShowVirtualKeyboard());
+                      f.ShowVirtualKeyboard());
                   },
                   HideVirtualKeyboard: () => {
-                    p.HideVirtualKeyboard();
+                    f.HideVirtualKeyboard();
                   },
                 }),
-                () => (0, s.k$)(t, null)
+                () => (0, a.k$)(t, null)
               ),
-              [p, t],
+              [f, t],
             ),
-            f
+            L
           );
         }
-        function u(e, t) {
+        function d(e, t) {
           const n = i.useRef(),
-            r = i.useContext(c);
+            r = i.useContext(C);
           return n.current || (n.current = r(e, t)), n.current;
         }
-        function d(e, t) {
+        function m(e, t) {
           var n;
           if (t) {
             switch (e) {
@@ -45279,9 +45282,9 @@ var CLSTAMP = "8793346";
                 ? {
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Mar 27 2024 : 10:41:42",
-                    BUILD_TIME_UTC: "Mar 27 2024 : 17:41:42",
-                    BUILD_RTIME_UTC: 1711561302,
+                    BUILD_TIME_LOCAL: "Mar 29 2024 : 09:33:23",
+                    BUILD_TIME_UTC: "Mar 29 2024 : 16:33:23",
+                    BUILD_RTIME_UTC: 1711730003,
                   }.MOBILE_BUILD
                   ? null
                   : document.getElementById(t)
@@ -45848,7 +45851,7 @@ var CLSTAMP = "8793346";
       {
         27: "93526c61a42c6b6c7e1d",
         33: "58959dbf79275020c7c0",
-        58: "d925358eb30dc5e3b523",
+        58: "80c35bbd5a46d3007e64",
         131: "53c20bd9162fbd6841d2",
         146: "4525631f5c2610c055c5",
         200: "def12afabbe343e1fac7",
@@ -45914,7 +45917,7 @@ var CLSTAMP = "8793346";
         4469: "7b400a9dcd93b9f00e08",
         4487: "b84e15e531f36f0c24d1",
         4513: "f5213669e0428f4be684",
-        4601: "eaf72486d477d383e385",
+        4601: "607a43ee2f4bedd927a3",
         4679: "033c52b328968f69a4b7",
         4725: "dd56578354066dbf78ae",
         4729: "0c8ed1b3360e42409c40",
@@ -45964,7 +45967,7 @@ var CLSTAMP = "8793346";
         8282: "cebac9e4a0bd50e3acbf",
         8319: "a93910eaded13cfe1210",
         8433: "ce17412b10a20ba63f6c",
-        8467: "086c21049980d21c5d88",
+        8467: "e3a7cb33c9af63078602",
         8490: "17fb2306ca0033fc5bc9",
         8778: "621f473df027a645cf2b",
         8805: "340d65d13b70b0f9f611",

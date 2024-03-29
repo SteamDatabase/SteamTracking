@@ -65,7 +65,6 @@ __image_info
 __OBJC
 __LINKEDIT
 @loader_path/libSDL3.dylib
-!qI$
 /usr/lib/libiconv.2.dylib
 /System/Library/Frameworks/AudioToolbox.framework/Versions/A/AudioToolbox
 /System/Library/Frameworks/Carbon.framework/Versions/A/Carbon
@@ -101,7 +100,7 @@ WPQS
 ^_[]
 CWPQS
 QPWWRS
-^_[]
+,^_[]
  diu1
 ptuo
 tpni
@@ -111,7 +110,6 @@ C|j Qhlcqa
 L^_[]
 F|SSW
 ^_[]
-QPPRj
 ^_[]
 tpni
 ptuo
@@ -120,7 +118,8 @@ manl
 trsn
 RVWWQP
  =ved!t
-VPWWRQ
+SQWWPR
+^_[]
 ^_[]
 ^_[]
 WSPS
@@ -7287,6 +7286,7 @@ lication
 Delegate
 VideoData
 WindowData
+V+lb
 EGl#l
 {DZZ>>
 167:BB5:;>FFUfzEPPPb
@@ -8782,46 +8782,35 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-6^aM{a
-4$Wu
 (dyx
--VMF
-~a	=
-g2$[m-
-Inw,G
-Z=A 
-T;_m
-X}(OV\kf
-9yU8
-|@H/
-1.XZ
-%BMlhq
--=h%
-.(Z'
-%fPK
-X	"9
-ma6[;
-Ugc0s
-!IDE+
-(EiP
-/Q[8|
-YO;~T
-LM`u
-,,{ 8
-JsIC
-zyrJ
->F#~NM
-R#``
-%$*\
->_No4E
+bh=oJ-
+j+>C
+3I@5K
+>XrM
+<'jf-
+	PVS
+/0b;
+5`9?
+P1 &Z
+."BMvA
+[L9oh
+]KRL
+QV~O|
+5:d?
+^v(9
+m"x/
+OC#O
+@aqV
+L[A*r.
+xt[\
 w@Gr
-Dls^w
-SF)!o
+O0_&
+tE$7F|
+*W,G
 _wn*s
 <a6.4X
 K\KLd
 [$dF
-r})0
 "KnbN
 zJY{X9
 v&Dc
@@ -8831,15 +8820,17 @@ A.JE
 I*d%
 91Cj[
 >$Sf`
-49W`Zd
-~q&(
-Qwo,
-$JAxV
-ri\@
-&;9x;
-e	0J
-iRNC:h
-vtHV]
+HN':k
+{_k0
+&Ap)
+}\f<
+o}]D
+^e_t
++'n(
+~+9M
+3fxf
+<H|)p
+w{R3a
 h16Q
 d;%0
 J91X
@@ -8850,22 +8841,29 @@ rEHr'
 %	1b
 piH&
 #-so
+@QbU
 d4 	!Av
 /_dJT
 &H &n
 pM-1
 ';yG
 }d	X
+Kma3^
+}I=P
 0qFl
-#2Veq';j
-nCv.
-TBP	
-9j!O
-aN\b
-Ep,f
-m]mm
+hs	7I<
+	2@G
+ltC~,*
+Fs^t
+;=4}
+YQ	7
+&V8k
+XpR"
+5euK$
+i3i.8
 ^2.k
 41%a
+J(6(
 I_uvx
 .0m.
 rR6<
@@ -8884,14 +8882,21 @@ b0w#/Gl
 ZT,q
 B"lX+
 2iQB9
-W-0I
-@*i7x
+xe@C
+9KdR{
+6}WqBW
+OEm*X
 7Yys
+ADDY
 fOtcm
 t3f6
 d%_8b;
-v8U:
-4WaJ)i-
+MwI(
+@n<1
+pKU^
+%i@@
+*pw`k}
+5<b|&F
 t~.g
 y!@RPv
 6}4=
@@ -8953,8 +8958,14 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240327201551Z0/
+240329170742Z0/
+VJz#
+0+9T
+B=9^.
 1/0-
+VJz#
+0+9T
+B=9^.
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -8962,17 +8973,16 @@ Apple Inc.1
 	<key>cdhashes</key>
 	<array>
 		<data>
-		GGyOKquVHK16IJZE4XznttWHeEo=
+		KZGLMZayVkp6I/yhqkaiMCs5VL0=
 		</data>
 	</array>
 </dict>
 </plist>
-&iY.v
-1}#g
-$)P.
-kV, 
-Dlxn
-20240327201625Z0
+srN%t
+ipg4{j
+n`LJ
+V<?*q
+20240329170827Z0
 :O\M>
 0|100.
 'Apple Timestamp Certification Authority1&0$
@@ -9032,11 +9042,13 @@ uu!1
 Apple Certification Authority1
 Apple Inc.1
 :O\M>
-240327201625Z0#
+240329170827Z0#
+(oE6
 I!yW
-saEcp
-*7_P
-6$M_'
+%6;#
+wbx(]
+QB!	\6
+5:3\v
 __TEXT
 __text
 __TEXT
@@ -9185,7 +9197,6 @@ AWAVAUATSH
 8[A\A]A^A_]
 AWAVAUATSH
 ([A\A]A^A_]
-H9wX
 [A^]
 t7UH
 AWAVSPI
@@ -10424,7 +10435,7 @@ AWAVSPH
 AWAVSPE1
 [A^A_]
 x Hc@
-twH9=eM
+twH9=mM
 t0H9
 AWAVSPH
 u<E1
@@ -10443,6 +10454,7 @@ udzb1
 [A\A]A^A_]
 AWAVAUATSH
 *J(A
+D95'@
 [A\A]A^A_]
 AWAVATSH
 [A\A^A_]
@@ -10484,13 +10496,13 @@ AWAVAUATSPI
 L9!t
 [A\A]A^A_]
 AWAVAUATSH
-yL952(
-uGL9-%(
+yL95:(
+uGL9--(
 L9.t
 L9.t
 [A\A]A^A_]
 AWAVAUATSH
-L9=e$
+L9=m$
 [A\A]A^A_]
 u$z"
 [A\A]A^A_]
@@ -10549,7 +10561,7 @@ AWAVAUATSH
 AWAVATSA
 [A\A^A_]
 x*9=
-x#9=mq
+x#9=uq
 AWAVATSH
 D$0H
 D$0L
@@ -21280,6 +21292,7 @@ Info
 Warn
 Error
 Critical
+H%Sm
 F9`3`
 yERR**
 <BDCMHDJLHUPHZxHWUTU
@@ -22808,37 +22821,40 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-=H%x
-c6C;
-!4lXt
-qry(
-FTO_{
-jFr4X
-.ViO
-p%.1
-e>;`{
-rPNKV
-wk>7
-VKE6k
-LEu1
-Zl$D
-?#mW
-%f^7
-#n+/
-aZz!
-PNk5n
-42f>
+~`,C
+g%9L
+98G.2
+W/>t?Ic
+	S_^"
+uF4}
+q)<>
+'3:(
+ Fo.o
+gg|\_
+3!FL9J[
+)Q=O
+oBvov
+YDL9
+S/&N
+tO,ot
+QgCn
+E4 h)[
+SO}7
+A;t>	N
+d=M8
 s[Qj
-#8R6
->7FT
-3Q3h
+xD@$
+M1I7V
+Ug\X
+smx+
+"z*:
 9gh!
 :e4m87"
 M~W(
 }@]J+
 h[Rch
 Hs!*sf
-08e6
+Ae<S
 %wm)
 7/@;
 (E`i 
@@ -22860,19 +22876,23 @@ EQDS
 Q[WO
 qaGPV$K
 )`*E
+	(	-
+9 Sc
 @lpw
-Vef2k~
->em5
+4&W>X
+}^Pg
 xlb"y0
 !t0-y
-LU^d
-*{Nq
-sp<5"
-,LY|X
-gF$E
-O{G /2
+oyo{IG
+=Uu[]
+HJe/BK
+1QQa
+%W5>
+c-^C
+D%S'
+8cWv
 NV73
-bO^I
+a]|;
 X=^Y/?
 Wd63
 l)-?
@@ -22880,24 +22900,25 @@ iVk++
 ,iHYv
 hW#eu
 b"u=.
+jVcf
+Ea+@
 #+'q
 T> O^\
 MD3rf
-[i1%
-UPy`J6
-)O@d?
+*S?C.%{
 0@.S
 <\k=
+qB;L
 X&_=Wr
 (}A`P
 <#ig
-6Z*1
-'>S`:
-(ah{S
-P/Nq
-C7}@
-'ECf
-U]x2J
+)7P+|d?
+'>SChx
+omwY
+= Td
+@%FMn*
+MC:M
+_ic?
 -hgr"
 G)H0S
 G,8!
@@ -22924,16 +22945,16 @@ sj*w[d
  X1 
 /^8?
 Gj\?
-,8}D
-qk!e
--w{n
+}dk$T]A
+BKN?
+ xcX
+dw&M
+":M>
 +jLL
 )H@:
 dU+gSr
-RC_H
-&KElB
-T'3gX6
--%U{
+4uJ,
+}{xo
 |UQ2
 b^}6
 subject.OU
@@ -22993,10 +23014,10 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240327201551Z0/
-u)3S
+240329170742Z0/
+"4;U
 1/0-
-u)3S
+"4;U
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -23004,32 +23025,36 @@ u)3S
 	<key>cdhashes</key>
 	<array>
 		<data>
-		m34+xtlNj1QTsYLsxG1dhD75cws=
+		EQjrGmq4M3y0icfVHcAdIjQ7Vb8=
 		</data>
 	</array>
 </dict>
 </plist>
-.UT9
-AhDZ
-(%{Aa
-20240327201625Z0
+)%Ru
+J`\Q
+I5y2_
+o,Ea
+20240329170827Z0
+:O\M>
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240307204517Z
-240418204516Z0B1
-Timestamp Signer NWK21
+240307210017Z
+240418210016Z0B1
+Timestamp Signer NWK11
 Apple Inc.1
-;bp,
-yHN 
-8$0K
+EQ'B
+~%nX
+e/f3
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-c,,N
-4*nr
++~T5WHh
+y0<7f,H
+p>7,
+2[OU`
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -23068,12 +23093,11 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240327201625Z0#
-Q}x/
-lu{B*"
-G){Nx
-y;cT
-h&^"
+:O\M>
+240329170827Z0#
+;q0+
+I!yW
+@?7v
 __TEXT
 __text
 __TEXT
@@ -23157,16 +23181,15 @@ Rhf@
 Rhf@
 Tan@
 5hf@
-){|P
-@u|P
-Hs|0
-Ap|p
- f|p
+)z|P
+@t|P
+Hr|0
+Ao|p
+ e|p
 RhR@
 5k"M)i
 Sjf@
-z)|p
-6  |
+z(|p
 c@9(
 4hj@
 @y	$
@@ -34960,6 +34983,7 @@ Info
 Warn
 Error
 Critical
+p<hd
 |XllDD
 4488<8HHLLPL<TpPPXP@ptT\
 HDH<LPLH
@@ -36484,12 +36508,14 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-Oio"
-_9#)g
+ J-0
 ^jFm
 T;x5
 dy,*
-#Emm
+*c;I
+Q6jo
+i.>A>EM
+l_K3FR
 .u`X!V
 HeN %
 MO`X
@@ -36504,8 +36530,7 @@ I|;]
 %QmA
 J0Lf
 o4F	
-2@vV
-LEL9.
+Kl+$A
 LDb{Z
 Z:jc
 !5|%
@@ -36514,15 +36539,15 @@ NWn~
 @"_[
 *1	D
 1/snf
-6eS`
-l,+a
+M{0=
 R%]<
 #m3w1N
 ?,/?
-D3"+
+[G}c
 G8Cw`
 kXITO;
 ~)EK 
+jN_^
 1F&V
 tD+5D
 nL#d
@@ -36540,12 +36565,9 @@ A7mD
 9&9cH
  )sm
 0ywRu
-3~58
-}atU
+X"pou
 }aVrxmy(
 1:?(
-}zP;
-\ieq
 {QwjY
 -mV?
 qC?tcE
@@ -36571,15 +36593,13 @@ g.i{
 1t0$
 ASq!
 SYeX
-(aeHAO
-f>"J
+!NHn
 wL7	
 Xd[=#
 c25t
 ~/ZB
 u}T8
 .k#Ji0"
-K_aeDX
 4f@^
 `kh~
 Ioa{
@@ -36598,17 +36618,14 @@ lI&L
 de(UN 
 #+|K9'
 +d|roBJ
-0O$0m
-DzUA
-R/QH]
-2	3J
+}}uJ
+Z#i@t~
 aoll
 GG $e)
 sj7y
 Rj;5)
 c@)`
 IHr?
-_}9CXM
 *yUg
 :[kO8
 efnJ
@@ -36673,12 +36690,10 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240327201551Z0/
-y"e+#
-/^w0<
+240329170742Z0/
+%S('
 1/0-
-y"e+#
-/^w0
+%S('
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -36686,16 +36701,15 @@ y"e+#
 	<key>cdhashes</key>
 	<array>
 		<data>
-		Pch5ImUrI9zgzU8SZNlse0L6v/8=
+		6WIccy1h1UIKSU6dzjeExAElUyg=
 		</data>
 	</array>
 </dict>
 </plist>
-.9E@
-9DO*,
-eCMb
-kfww/d
-20240327201626Z0
+A Ky
+],zu
+t.b3S{~
+20240329170827Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
@@ -36751,9 +36765,9 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240327201626Z0#
+240329170827Z0#
 Q}x/
-]O[T@
-<<8N
-`_=>
-zua(=&
+V}$0(
+}W.p7
+okPo,Wj
+l.ccuQ
