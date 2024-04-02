@@ -23396,10 +23396,7 @@
             default:
               return (
                 this.m_oPromotionPlan.contenthub_takeover_ids || []
-              ).filter(
-                (t, n) =>
-                  this.m_oPromotionPlan.contenthub_takeover_types[n] == e,
-              );
+              ).filter((t, n) => this.GetContentHubTakeoverType(n) == e);
           }
         }
         GetClusterReviewedArray(e) {
@@ -23413,10 +23410,7 @@
             default:
               return (
                 this.m_oPromotionPlan.contenthub_takeover_reviewed || []
-              ).filter(
-                (t, n) =>
-                  this.m_oPromotionPlan.contenthub_takeover_types[n] == e,
-              );
+              ).filter((t, n) => this.GetContentHubTakeoverType(n) == e);
           }
         }
         BHasClusterIDs(e, t) {
