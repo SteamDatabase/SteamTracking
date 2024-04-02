@@ -13618,11 +13618,12 @@
         return !!a && (t ? a.valve_admin : a.valve_admin || a.support_user);
       }
       const s = (e) => {
-        const { clanSteamID: t } = e;
+        const { clanSteamID: t, id: a } = e;
         return r(t, e.requireAdmin)
           ? n.createElement(
               "div",
               {
+                id: a,
                 className: (0, o.Z)(
                   e.className,
                   e.requireAdmin

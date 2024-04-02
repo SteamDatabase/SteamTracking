@@ -10517,29 +10517,29 @@
     45681: (e, t, r) => {
       "use strict";
       r.d(t, {
-        $GS: () => $e,
-        CjN: () => et,
-        DYT: () => je,
-        DkI: () => qe,
-        FBh: () => Ae,
-        NG: () => Wt,
-        OzA: () => We,
-        S$J: () => Pe,
-        SjT: () => dt,
+        $GS: () => Ve,
+        CjN: () => tt,
+        DYT: () => xe,
+        DkI: () => Ze,
+        FBh: () => Ue,
+        NG: () => It,
+        OzA: () => Ie,
+        S$J: () => Ne,
+        SjT: () => ft,
         UYo: () => j,
-        VO_: () => ht,
-        Vyd: () => Ce,
-        W3l: () => Oe,
+        VO_: () => pt,
+        Vyd: () => Te,
+        W3l: () => Re,
         Y0T: () => h,
         _ur: () => R,
-        cJ3: () => Ft,
-        dqE: () => mt,
-        kKo: () => rt,
+        cJ3: () => Et,
+        dqE: () => ht,
+        kKo: () => nt,
         mgi: () => p,
-        uKj: () => at,
-        wN3: () => Ge,
-        yuy: () => Qe,
-        zuF: () => Fe,
+        uKj: () => st,
+        wN3: () => Ke,
+        yuy: () => Je,
+        zuF: () => Ee,
       });
       var n = r(10059),
         i = r(39087),
@@ -12078,6 +12078,7 @@
                   extract: { n: 30, c: J },
                   conv_1d: { n: 31, c: ee },
                   max_pooling_1d: { n: 32, c: te },
+                  flatten: { n: 33, c: re },
                 },
               }),
             R.sm_m
@@ -13194,6 +13195,7 @@
                     br: i.FE.readString,
                     bw: i.Xc.writeString,
                   },
+                  multi_hot: { n: 3, br: i.FE.readBool, bw: i.Xc.writeBool },
                 },
               }),
             Y.sm_m
@@ -13631,38 +13633,16 @@
       class re extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
-          super(),
-            re.prototype.access_token || i.aR(re.M()),
-            s.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            re.sm_m ||
-              (re.sm_m = {
-                proto: re,
-                fields: {
-                  access_token: {
-                    n: 1,
-                    br: i.FE.readString,
-                    bw: i.Xc.writeString,
-                  },
-                  data_source: { n: 3, c },
-                },
-              }),
-            re.sm_m
-          );
-        }
-        static MBF() {
-          return re.sm_mbf || (re.sm_mbf = i.Bh(re.M())), re.sm_mbf;
+          super(), s.initialize(this, e, 0, -1, void 0, null);
         }
         toObject(e = !1) {
           return re.toObject(e, this);
         }
         static toObject(e, t) {
-          return i.TA(re.M(), e, t);
+          return e ? { $jspbMessageInstance: t } : {};
         }
         static fromObject(e) {
-          return i.aD(re.M(), e);
+          return new re();
         }
         static deserializeBinary(e) {
           let t = new n.BinaryReader(e),
@@ -13670,28 +13650,26 @@
           return re.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return i.F(re.MBF(), e, t);
+          return e;
         }
         serializeBinary() {
           var e = new n.BinaryWriter();
           return re.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
-        static serializeBinaryToWriter(e, t) {
-          i.l2(re.M(), e, t);
-        }
+        static serializeBinaryToWriter(e, t) {}
         serializeBase64String() {
           var e = new n.BinaryWriter();
           return re.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_RegisterDataSource_Request";
+          return "CMsgSteamLearnModelNodeFlatten";
         }
       }
       class ne extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            ne.prototype.result || i.aR(ne.M()),
+            ne.prototype.access_token || i.aR(ne.M()),
             s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
@@ -13700,8 +13678,12 @@
               (ne.sm_m = {
                 proto: ne,
                 fields: {
-                  result: { n: 1, br: i.FE.readEnum, bw: i.Xc.writeEnum },
-                  data_source: { n: 2, c },
+                  access_token: {
+                    n: 1,
+                    br: i.FE.readString,
+                    bw: i.Xc.writeString,
+                  },
+                  data_source: { n: 3, c },
                 },
               }),
             ne.sm_m
@@ -13739,14 +13721,14 @@
           return ne.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_RegisterDataSource_Response";
+          return "CMsgSteamLearn_RegisterDataSource_Request";
         }
       }
       class ie extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            ie.prototype.access_token || i.aR(ie.M()),
+            ie.prototype.result || i.aR(ie.M()),
             s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
@@ -13755,12 +13737,8 @@
               (ie.sm_m = {
                 proto: ie,
                 fields: {
-                  access_token: {
-                    n: 1,
-                    br: i.FE.readString,
-                    bw: i.Xc.writeString,
-                  },
-                  data: { n: 3, c: f },
+                  result: { n: 1, br: i.FE.readEnum, bw: i.Xc.writeEnum },
+                  data_source: { n: 2, c },
                 },
               }),
             ie.sm_m
@@ -13798,14 +13776,14 @@
           return ie.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_CacheData_Request";
+          return "CMsgSteamLearn_RegisterDataSource_Response";
         }
       }
       class ae extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            ae.prototype.cache_data_result || i.aR(ae.M()),
+            ae.prototype.access_token || i.aR(ae.M()),
             s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
@@ -13814,11 +13792,12 @@
               (ae.sm_m = {
                 proto: ae,
                 fields: {
-                  cache_data_result: {
+                  access_token: {
                     n: 1,
-                    br: i.FE.readEnum,
-                    bw: i.Xc.writeEnum,
+                    br: i.FE.readString,
+                    bw: i.Xc.writeString,
                   },
+                  data: { n: 3, c: f },
                 },
               }),
             ae.sm_m
@@ -13856,15 +13835,15 @@
           return ae.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_CacheData_Response";
+          return "CMsgSteamLearn_CacheData_Request";
         }
       }
       class se extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            se.prototype.access_token || i.aR(se.M()),
-            s.initialize(this, e, 0, -1, [4, 5], null);
+            se.prototype.cache_data_result || i.aR(se.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -13872,34 +13851,10 @@
               (se.sm_m = {
                 proto: se,
                 fields: {
-                  access_token: {
+                  cache_data_result: {
                     n: 1,
-                    br: i.FE.readString,
-                    bw: i.Xc.writeString,
-                  },
-                  project_id: {
-                    n: 3,
-                    br: i.FE.readUint32,
-                    bw: i.Xc.writeUint32,
-                  },
-                  published_version: {
-                    n: 7,
-                    br: i.FE.readUint32,
-                    bw: i.Xc.writeUint32,
-                  },
-                  keys: {
-                    n: 4,
-                    r: !0,
-                    q: !0,
-                    br: i.FE.readUint64String,
-                    pbr: i.FE.readPackedUint64String,
-                    bw: i.Xc.writeRepeatedUint64String,
-                  },
-                  data: { n: 5, c: f, r: !0, q: !0 },
-                  pending_data_limit_seconds: {
-                    n: 6,
-                    br: i.FE.readUint32,
-                    bw: i.Xc.writeUint32,
+                    br: i.FE.readEnum,
+                    bw: i.Xc.writeEnum,
                   },
                 },
               }),
@@ -13938,15 +13893,15 @@
           return se.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_SnapshotProject_Request";
+          return "CMsgSteamLearn_CacheData_Response";
         }
       }
       class oe extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            oe.prototype.snapshot_result || i.aR(oe.M()),
-            s.initialize(this, e, 0, -1, void 0, null);
+            oe.prototype.access_token || i.aR(oe.M()),
+            s.initialize(this, e, 0, -1, [4, 5], null);
         }
         static M() {
           return (
@@ -13954,10 +13909,34 @@
               (oe.sm_m = {
                 proto: oe,
                 fields: {
-                  snapshot_result: {
+                  access_token: {
                     n: 1,
-                    br: i.FE.readEnum,
-                    bw: i.Xc.writeEnum,
+                    br: i.FE.readString,
+                    bw: i.Xc.writeString,
+                  },
+                  project_id: {
+                    n: 3,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
+                  },
+                  published_version: {
+                    n: 7,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
+                  },
+                  keys: {
+                    n: 4,
+                    r: !0,
+                    q: !0,
+                    br: i.FE.readUint64String,
+                    pbr: i.FE.readPackedUint64String,
+                    bw: i.Xc.writeRepeatedUint64String,
+                  },
+                  data: { n: 5, c: f, r: !0, q: !0 },
+                  pending_data_limit_seconds: {
+                    n: 6,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
                   },
                 },
               }),
@@ -13996,21 +13975,79 @@
           return oe.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_SnapshotProject_Response";
+          return "CMsgSteamLearn_SnapshotProject_Request";
         }
       }
       class le extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            le.prototype.access_token || i.aR(le.M()),
-            s.initialize(this, e, 0, -1, [7, 8], null);
+            le.prototype.snapshot_result || i.aR(le.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
             le.sm_m ||
               (le.sm_m = {
                 proto: le,
+                fields: {
+                  snapshot_result: {
+                    n: 1,
+                    br: i.FE.readEnum,
+                    bw: i.Xc.writeEnum,
+                  },
+                },
+              }),
+            le.sm_m
+          );
+        }
+        static MBF() {
+          return le.sm_mbf || (le.sm_mbf = i.Bh(le.M())), le.sm_mbf;
+        }
+        toObject(e = !1) {
+          return le.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return i.TA(le.M(), e, t);
+        }
+        static fromObject(e) {
+          return i.aD(le.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new n.BinaryReader(e),
+            r = new le();
+          return le.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return i.F(le.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new n.BinaryWriter();
+          return le.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          i.l2(le.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new n.BinaryWriter();
+          return le.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CMsgSteamLearn_SnapshotProject_Response";
+        }
+      }
+      class ce extends s {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            ce.prototype.access_token || i.aR(ce.M()),
+            s.initialize(this, e, 0, -1, [7, 8], null);
+        }
+        static M() {
+          return (
+            ce.sm_m ||
+              (ce.sm_m = {
+                proto: ce,
                 fields: {
                   access_token: {
                     n: 1,
@@ -14056,73 +14093,6 @@
                   },
                 },
               }),
-            le.sm_m
-          );
-        }
-        static MBF() {
-          return le.sm_mbf || (le.sm_mbf = i.Bh(le.M())), le.sm_mbf;
-        }
-        toObject(e = !1) {
-          return le.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return i.TA(le.M(), e, t);
-        }
-        static fromObject(e) {
-          return i.aD(le.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new n.BinaryReader(e),
-            r = new le();
-          return le.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return i.F(le.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new n.BinaryWriter();
-          return le.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          i.l2(le.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new n.BinaryWriter();
-          return le.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CMsgSteamLearn_Inference_Request";
-        }
-      }
-      class ce extends s {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            ce.prototype.inference_result || i.aR(ce.M()),
-            s.initialize(this, e, 0, -1, [3], null);
-        }
-        static M() {
-          return (
-            ce.sm_m ||
-              (ce.sm_m = {
-                proto: ce,
-                fields: {
-                  inference_result: {
-                    n: 1,
-                    br: i.FE.readEnum,
-                    bw: i.Xc.writeEnum,
-                  },
-                  backend_response: { n: 2, c: pt },
-                  keys: {
-                    n: 3,
-                    r: !0,
-                    q: !0,
-                    br: i.FE.readUint64String,
-                    pbr: i.FE.readPackedUint64String,
-                    bw: i.Xc.writeRepeatedUint64String,
-                  },
-                },
-              }),
             ce.sm_m
           );
         }
@@ -14158,15 +14128,15 @@
           return ce.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_Inference_Response";
+          return "CMsgSteamLearn_Inference_Request";
         }
       }
       class ue extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            ue.prototype.access_token || i.aR(ue.M()),
-            s.initialize(this, e, 0, -1, void 0, null);
+            ue.prototype.inference_result || i.aR(ue.M()),
+            s.initialize(this, e, 0, -1, [3], null);
         }
         static M() {
           return (
@@ -14174,25 +14144,19 @@
               (ue.sm_m = {
                 proto: ue,
                 fields: {
-                  access_token: {
+                  inference_result: {
                     n: 1,
-                    br: i.FE.readString,
-                    bw: i.Xc.writeString,
+                    br: i.FE.readEnum,
+                    bw: i.Xc.writeEnum,
                   },
-                  project_id: {
+                  backend_response: { n: 2, c: yt },
+                  keys: {
                     n: 3,
-                    br: i.FE.readUint32,
-                    bw: i.Xc.writeUint32,
-                  },
-                  published_version: {
-                    n: 4,
-                    br: i.FE.readUint32,
-                    bw: i.Xc.writeUint32,
-                  },
-                  override_train_id: {
-                    n: 5,
-                    br: i.FE.readUint32,
-                    bw: i.Xc.writeUint32,
+                    r: !0,
+                    q: !0,
+                    br: i.FE.readUint64String,
+                    pbr: i.FE.readPackedUint64String,
+                    bw: i.Xc.writeRepeatedUint64String,
                   },
                 },
               }),
@@ -14231,15 +14195,15 @@
           return ue.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_InferenceMetadata_Request";
+          return "CMsgSteamLearn_Inference_Response";
         }
       }
       class de extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            de.prototype.inference_metadata_result || i.aR(de.M()),
-            s.initialize(this, e, 0, -1, [3, 4, 5, 6, 8], null);
+            de.prototype.access_token || i.aR(de.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -14247,18 +14211,26 @@
               (de.sm_m = {
                 proto: de,
                 fields: {
-                  inference_metadata_result: {
+                  access_token: {
                     n: 1,
-                    br: i.FE.readEnum,
-                    bw: i.Xc.writeEnum,
+                    br: i.FE.readString,
+                    bw: i.Xc.writeString,
                   },
-                  row_range: { n: 2, c: fe },
-                  ranges: { n: 3, c: me, r: !0, q: !0 },
-                  std_devs: { n: 4, c: he, r: !0, q: !0 },
-                  compact_tables: { n: 5, c: pe, r: !0, q: !0 },
-                  kmeans: { n: 6, c: Be, r: !0, q: !0 },
-                  app_info: { n: 8, c: Me, r: !0, q: !0 },
-                  snapshot_histogram: { n: 7, c: we },
+                  project_id: {
+                    n: 3,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
+                  },
+                  published_version: {
+                    n: 4,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
+                  },
+                  override_train_id: {
+                    n: 5,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
+                  },
                 },
               }),
             de.sm_m
@@ -14296,15 +14268,15 @@
           return de.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_InferenceMetadata_Response";
+          return "CMsgSteamLearn_InferenceMetadata_Request";
         }
       }
       class fe extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            fe.prototype.min_row || i.aR(fe.M()),
-            s.initialize(this, e, 0, -1, void 0, null);
+            fe.prototype.inference_metadata_result || i.aR(fe.M()),
+            s.initialize(this, e, 0, -1, [3, 4, 5, 6, 8], null);
         }
         static M() {
           return (
@@ -14312,16 +14284,18 @@
               (fe.sm_m = {
                 proto: fe,
                 fields: {
-                  min_row: {
+                  inference_metadata_result: {
                     n: 1,
-                    br: i.FE.readUint64String,
-                    bw: i.Xc.writeUint64String,
+                    br: i.FE.readEnum,
+                    bw: i.Xc.writeEnum,
                   },
-                  max_row: {
-                    n: 2,
-                    br: i.FE.readUint64String,
-                    bw: i.Xc.writeUint64String,
-                  },
+                  row_range: { n: 2, c: me },
+                  ranges: { n: 3, c: he, r: !0, q: !0 },
+                  std_devs: { n: 4, c: pe, r: !0, q: !0 },
+                  compact_tables: { n: 5, c: ye, r: !0, q: !0 },
+                  kmeans: { n: 6, c: ve, r: !0, q: !0 },
+                  app_info: { n: 8, c: ze, r: !0, q: !0 },
+                  snapshot_histogram: { n: 7, c: _e },
                 },
               }),
             fe.sm_m
@@ -14359,14 +14333,14 @@
           return fe.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_InferenceMetadata_Response_RowRange";
+          return "CMsgSteamLearn_InferenceMetadata_Response";
         }
       }
       class me extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            me.prototype.data_element_path || i.aR(me.M()),
+            me.prototype.min_row || i.aR(me.M()),
             s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
@@ -14375,13 +14349,16 @@
               (me.sm_m = {
                 proto: me,
                 fields: {
-                  data_element_path: {
+                  min_row: {
                     n: 1,
-                    br: i.FE.readString,
-                    bw: i.Xc.writeString,
+                    br: i.FE.readUint64String,
+                    bw: i.Xc.writeUint64String,
                   },
-                  min_value: { n: 2, br: i.FE.readFloat, bw: i.Xc.writeFloat },
-                  max_value: { n: 3, br: i.FE.readFloat, bw: i.Xc.writeFloat },
+                  max_row: {
+                    n: 2,
+                    br: i.FE.readUint64String,
+                    bw: i.Xc.writeUint64String,
+                  },
                 },
               }),
             me.sm_m
@@ -14419,7 +14396,7 @@
           return me.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_InferenceMetadata_Response_Range";
+          return "CMsgSteamLearn_InferenceMetadata_Response_RowRange";
         }
       }
       class he extends s {
@@ -14440,8 +14417,8 @@
                     br: i.FE.readString,
                     bw: i.Xc.writeString,
                   },
-                  mean: { n: 2, br: i.FE.readFloat, bw: i.Xc.writeFloat },
-                  std_dev: { n: 3, br: i.FE.readFloat, bw: i.Xc.writeFloat },
+                  min_value: { n: 2, br: i.FE.readFloat, bw: i.Xc.writeFloat },
+                  max_value: { n: 3, br: i.FE.readFloat, bw: i.Xc.writeFloat },
                 },
               }),
             he.sm_m
@@ -14479,15 +14456,15 @@
           return he.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_InferenceMetadata_Response_StdDev";
+          return "CMsgSteamLearn_InferenceMetadata_Response_Range";
         }
       }
       class pe extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            pe.prototype.name || i.aR(pe.M()),
-            s.initialize(this, e, 0, -1, [2, 3], null);
+            pe.prototype.data_element_path || i.aR(pe.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -14495,14 +14472,13 @@
               (pe.sm_m = {
                 proto: pe,
                 fields: {
-                  name: { n: 1, br: i.FE.readString, bw: i.Xc.writeString },
-                  map_values: { n: 2, c: ge, r: !0, q: !0 },
-                  map_mappings: { n: 3, c: be, r: !0, q: !0 },
-                  total_count: {
-                    n: 4,
-                    br: i.FE.readUint64String,
-                    bw: i.Xc.writeUint64String,
+                  data_element_path: {
+                    n: 1,
+                    br: i.FE.readString,
+                    bw: i.Xc.writeString,
                   },
+                  mean: { n: 2, br: i.FE.readFloat, bw: i.Xc.writeFloat },
+                  std_dev: { n: 3, br: i.FE.readFloat, bw: i.Xc.writeFloat },
                 },
               }),
             pe.sm_m
@@ -14540,15 +14516,15 @@
           return pe.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_InferenceMetadata_Response_CompactTable";
+          return "CMsgSteamLearn_InferenceMetadata_Response_StdDev";
         }
       }
       class ye extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            ye.prototype.value || i.aR(ye.M()),
-            s.initialize(this, e, 0, -1, void 0, null);
+            ye.prototype.name || i.aR(ye.M()),
+            s.initialize(this, e, 0, -1, [2, 3], null);
         }
         static M() {
           return (
@@ -14556,10 +14532,11 @@
               (ye.sm_m = {
                 proto: ye,
                 fields: {
-                  value: { n: 1, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
-                  mapping: { n: 2, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
-                  count: {
-                    n: 3,
+                  name: { n: 1, br: i.FE.readString, bw: i.Xc.writeString },
+                  map_values: { n: 2, c: be, r: !0, q: !0 },
+                  map_mappings: { n: 3, c: Be, r: !0, q: !0 },
+                  total_count: {
+                    n: 4,
                     br: i.FE.readUint64String,
                     bw: i.Xc.writeUint64String,
                   },
@@ -14600,14 +14577,14 @@
           return ye.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_InferenceMetadata_Response_CompactTable_Entry";
+          return "CMsgSteamLearn_InferenceMetadata_Response_CompactTable";
         }
       }
       class ge extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            ge.prototype.key || i.aR(ge.M()),
+            ge.prototype.value || i.aR(ge.M()),
             s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
@@ -14616,8 +14593,13 @@
               (ge.sm_m = {
                 proto: ge,
                 fields: {
-                  key: { n: 1, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
-                  value: { n: 2, c: ye },
+                  value: { n: 1, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
+                  mapping: { n: 2, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
+                  count: {
+                    n: 3,
+                    br: i.FE.readUint64String,
+                    bw: i.Xc.writeUint64String,
+                  },
                 },
               }),
             ge.sm_m
@@ -14655,7 +14637,7 @@
           return ge.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_InferenceMetadata_Response_CompactTable_MapValuesEntry";
+          return "CMsgSteamLearn_InferenceMetadata_Response_CompactTable_Entry";
         }
       }
       class be extends s {
@@ -14672,7 +14654,7 @@
                 proto: be,
                 fields: {
                   key: { n: 1, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
-                  value: { n: 2, c: ye },
+                  value: { n: 2, c: ge },
                 },
               }),
             be.sm_m
@@ -14710,15 +14692,15 @@
           return be.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_InferenceMetadata_Response_CompactTable_MapMappingsEntry";
+          return "CMsgSteamLearn_InferenceMetadata_Response_CompactTable_MapValuesEntry";
         }
       }
       class Be extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Be.prototype.name || i.aR(Be.M()),
-            s.initialize(this, e, 0, -1, [2], null);
+            Be.prototype.key || i.aR(Be.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -14726,8 +14708,8 @@
               (Be.sm_m = {
                 proto: Be,
                 fields: {
-                  name: { n: 1, br: i.FE.readString, bw: i.Xc.writeString },
-                  clusters: { n: 2, c: ve, r: !0, q: !0 },
+                  key: { n: 1, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
+                  value: { n: 2, c: ge },
                 },
               }),
             Be.sm_m
@@ -14765,15 +14747,15 @@
           return Be.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_InferenceMetadata_Response_KMeans";
+          return "CMsgSteamLearn_InferenceMetadata_Response_CompactTable_MapMappingsEntry";
         }
       }
       class ve extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            ve.prototype.x || i.aR(ve.M()),
-            s.initialize(this, e, 0, -1, void 0, null);
+            ve.prototype.name || i.aR(ve.M()),
+            s.initialize(this, e, 0, -1, [2], null);
         }
         static M() {
           return (
@@ -14781,24 +14763,8 @@
               (ve.sm_m = {
                 proto: ve,
                 fields: {
-                  x: { n: 1, br: i.FE.readFloat, bw: i.Xc.writeFloat },
-                  y: { n: 2, br: i.FE.readFloat, bw: i.Xc.writeFloat },
-                  radius: { n: 3, br: i.FE.readFloat, bw: i.Xc.writeFloat },
-                  radius_75pct: {
-                    n: 4,
-                    br: i.FE.readFloat,
-                    bw: i.Xc.writeFloat,
-                  },
-                  radius_50pct: {
-                    n: 5,
-                    br: i.FE.readFloat,
-                    bw: i.Xc.writeFloat,
-                  },
-                  radius_25pct: {
-                    n: 6,
-                    br: i.FE.readFloat,
-                    bw: i.Xc.writeFloat,
-                  },
+                  name: { n: 1, br: i.FE.readString, bw: i.Xc.writeString },
+                  clusters: { n: 2, c: we, r: !0, q: !0 },
                 },
               }),
             ve.sm_m
@@ -14836,15 +14802,15 @@
           return ve.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_InferenceMetadata_Response_KMeans_Cluster";
+          return "CMsgSteamLearn_InferenceMetadata_Response_KMeans";
         }
       }
       class we extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            we.prototype.min_value || i.aR(we.M()),
-            s.initialize(this, e, 0, -1, [4], null);
+            we.prototype.x || i.aR(we.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -14852,20 +14818,23 @@
               (we.sm_m = {
                 proto: we,
                 fields: {
-                  min_value: { n: 1, br: i.FE.readFloat, bw: i.Xc.writeFloat },
-                  max_value: { n: 2, br: i.FE.readFloat, bw: i.Xc.writeFloat },
-                  num_buckets: {
-                    n: 3,
-                    br: i.FE.readUint32,
-                    bw: i.Xc.writeUint32,
-                  },
-                  bucket_counts: {
+                  x: { n: 1, br: i.FE.readFloat, bw: i.Xc.writeFloat },
+                  y: { n: 2, br: i.FE.readFloat, bw: i.Xc.writeFloat },
+                  radius: { n: 3, br: i.FE.readFloat, bw: i.Xc.writeFloat },
+                  radius_75pct: {
                     n: 4,
-                    r: !0,
-                    q: !0,
-                    br: i.FE.readUint32,
-                    pbr: i.FE.readPackedUint32,
-                    bw: i.Xc.writeRepeatedUint32,
+                    br: i.FE.readFloat,
+                    bw: i.Xc.writeFloat,
+                  },
+                  radius_50pct: {
+                    n: 5,
+                    br: i.FE.readFloat,
+                    bw: i.Xc.writeFloat,
+                  },
+                  radius_25pct: {
+                    n: 6,
+                    br: i.FE.readFloat,
+                    bw: i.Xc.writeFloat,
                   },
                 },
               }),
@@ -14904,15 +14873,15 @@
           return we.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_InferenceMetadata_Response_SnapshotHistogram";
+          return "CMsgSteamLearn_InferenceMetadata_Response_KMeans_Cluster";
         }
       }
       class _e extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            _e.prototype.country_allow || i.aR(_e.M()),
-            s.initialize(this, e, 0, -1, void 0, null);
+            _e.prototype.min_value || i.aR(_e.M()),
+            s.initialize(this, e, 0, -1, [4], null);
         }
         static M() {
           return (
@@ -14920,29 +14889,21 @@
               (_e.sm_m = {
                 proto: _e,
                 fields: {
-                  country_allow: {
-                    n: 1,
-                    br: i.FE.readString,
-                    bw: i.Xc.writeString,
+                  min_value: { n: 1, br: i.FE.readFloat, bw: i.Xc.writeFloat },
+                  max_value: { n: 2, br: i.FE.readFloat, bw: i.Xc.writeFloat },
+                  num_buckets: {
+                    n: 3,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
                   },
-                  country_deny: {
-                    n: 2,
-                    br: i.FE.readString,
-                    bw: i.Xc.writeString,
+                  bucket_counts: {
+                    n: 4,
+                    r: !0,
+                    q: !0,
+                    br: i.FE.readUint32,
+                    pbr: i.FE.readPackedUint32,
+                    bw: i.Xc.writeRepeatedUint32,
                   },
-                  platform_win: { n: 3, br: i.FE.readBool, bw: i.Xc.writeBool },
-                  platform_mac: { n: 4, br: i.FE.readBool, bw: i.Xc.writeBool },
-                  platform_linux: {
-                    n: 5,
-                    br: i.FE.readBool,
-                    bw: i.Xc.writeBool,
-                  },
-                  adult_violence: {
-                    n: 6,
-                    br: i.FE.readBool,
-                    bw: i.Xc.writeBool,
-                  },
-                  adult_sex: { n: 7, br: i.FE.readBool, bw: i.Xc.writeBool },
                 },
               }),
             _e.sm_m
@@ -14980,14 +14941,14 @@
           return _e.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_InferenceMetadata_Response_AppInfo";
+          return "CMsgSteamLearn_InferenceMetadata_Response_SnapshotHistogram";
         }
       }
       class Me extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Me.prototype.key || i.aR(Me.M()),
+            Me.prototype.country_allow || i.aR(Me.M()),
             s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
@@ -14996,8 +14957,29 @@
               (Me.sm_m = {
                 proto: Me,
                 fields: {
-                  key: { n: 1, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
-                  value: { n: 2, c: _e },
+                  country_allow: {
+                    n: 1,
+                    br: i.FE.readString,
+                    bw: i.Xc.writeString,
+                  },
+                  country_deny: {
+                    n: 2,
+                    br: i.FE.readString,
+                    bw: i.Xc.writeString,
+                  },
+                  platform_win: { n: 3, br: i.FE.readBool, bw: i.Xc.writeBool },
+                  platform_mac: { n: 4, br: i.FE.readBool, bw: i.Xc.writeBool },
+                  platform_linux: {
+                    n: 5,
+                    br: i.FE.readBool,
+                    bw: i.Xc.writeBool,
+                  },
+                  adult_violence: {
+                    n: 6,
+                    br: i.FE.readBool,
+                    bw: i.Xc.writeBool,
+                  },
+                  adult_sex: { n: 7, br: i.FE.readBool, bw: i.Xc.writeBool },
                 },
               }),
             Me.sm_m
@@ -15035,15 +15017,15 @@
           return Me.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_InferenceMetadata_Response_AppInfoEntry";
+          return "CMsgSteamLearn_InferenceMetadata_Response_AppInfo";
         }
       }
       class ze extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            ze.prototype.cache_data_requests || i.aR(ze.M()),
-            s.initialize(this, e, 0, -1, [1, 2, 3], null);
+            ze.prototype.key || i.aR(ze.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -15051,9 +15033,8 @@
               (ze.sm_m = {
                 proto: ze,
                 fields: {
-                  cache_data_requests: { n: 1, c: ie, r: !0, q: !0 },
-                  snapshot_requests: { n: 2, c: se, r: !0, q: !0 },
-                  inference_requests: { n: 3, c: le, r: !0, q: !0 },
+                  key: { n: 1, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
+                  value: { n: 2, c: Me },
                 },
               }),
             ze.sm_m
@@ -15091,14 +15072,14 @@
           return ze.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_BatchOperation_Request";
+          return "CMsgSteamLearn_InferenceMetadata_Response_AppInfoEntry";
         }
       }
       class Se extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Se.prototype.cache_data_responses || i.aR(Se.M()),
+            Se.prototype.cache_data_requests || i.aR(Se.M()),
             s.initialize(this, e, 0, -1, [1, 2, 3], null);
         }
         static M() {
@@ -15107,9 +15088,9 @@
               (Se.sm_m = {
                 proto: Se,
                 fields: {
-                  cache_data_responses: { n: 1, c: ae, r: !0, q: !0 },
-                  snapshot_responses: { n: 2, c: oe, r: !0, q: !0 },
-                  inference_responses: { n: 3, c: ce, r: !0, q: !0 },
+                  cache_data_requests: { n: 1, c: ae, r: !0, q: !0 },
+                  snapshot_requests: { n: 2, c: oe, r: !0, q: !0 },
+                  inference_requests: { n: 3, c: ce, r: !0, q: !0 },
                 },
               }),
             Se.sm_m
@@ -15147,15 +15128,15 @@
           return Se.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_BatchOperation_Response";
+          return "CMsgSteamLearn_BatchOperation_Request";
         }
       }
       class Fe extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Fe.prototype.project_name || i.aR(Fe.M()),
-            s.initialize(this, e, 0, -1, void 0, null);
+            Fe.prototype.cache_data_responses || i.aR(Fe.M()),
+            s.initialize(this, e, 0, -1, [1, 2, 3], null);
         }
         static M() {
           return (
@@ -15163,16 +15144,9 @@
               (Fe.sm_m = {
                 proto: Fe,
                 fields: {
-                  project_name: {
-                    n: 1,
-                    br: i.FE.readString,
-                    bw: i.Xc.writeString,
-                  },
-                  project_description: {
-                    n: 2,
-                    br: i.FE.readString,
-                    bw: i.Xc.writeString,
-                  },
+                  cache_data_responses: { n: 1, c: se, r: !0, q: !0 },
+                  snapshot_responses: { n: 2, c: le, r: !0, q: !0 },
+                  inference_responses: { n: 3, c: ue, r: !0, q: !0 },
                 },
               }),
             Fe.sm_m
@@ -15210,14 +15184,14 @@
           return Fe.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_CreateProject_Request";
+          return "CMsgSteamLearn_BatchOperation_Response";
         }
       }
       class Ee extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Ee.prototype.result || i.aR(Ee.M()),
+            Ee.prototype.project_name || i.aR(Ee.M()),
             s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
@@ -15226,8 +15200,16 @@
               (Ee.sm_m = {
                 proto: Ee,
                 fields: {
-                  result: { n: 1, br: i.FE.readEnum, bw: i.Xc.writeEnum },
-                  project: { n: 2, c: p },
+                  project_name: {
+                    n: 1,
+                    br: i.FE.readString,
+                    bw: i.Xc.writeString,
+                  },
+                  project_description: {
+                    n: 2,
+                    br: i.FE.readString,
+                    bw: i.Xc.writeString,
+                  },
                 },
               }),
             Ee.sm_m
@@ -15265,14 +15247,14 @@
           return Ee.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_CreateProject_Response";
+          return "CMsgSteamLearn_CreateProject_Request";
         }
       }
       class Oe extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Oe.prototype.appid || i.aR(Oe.M()),
+            Oe.prototype.result || i.aR(Oe.M()),
             s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
@@ -15281,7 +15263,8 @@
               (Oe.sm_m = {
                 proto: Oe,
                 fields: {
-                  appid: { n: 1, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
+                  result: { n: 1, br: i.FE.readEnum, bw: i.Xc.writeEnum },
+                  project: { n: 2, c: p },
                 },
               }),
             Oe.sm_m
@@ -15319,22 +15302,24 @@
           return Oe.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_ListProjects_Request";
+          return "CMsgSteamLearn_CreateProject_Response";
         }
       }
       class Re extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Re.prototype.projects || i.aR(Re.M()),
-            s.initialize(this, e, 0, -1, [1], null);
+            Re.prototype.appid || i.aR(Re.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
             Re.sm_m ||
               (Re.sm_m = {
                 proto: Re,
-                fields: { projects: { n: 1, c: p, r: !0, q: !0 } },
+                fields: {
+                  appid: { n: 1, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
+                },
               }),
             Re.sm_m
           );
@@ -15371,28 +15356,22 @@
           return Re.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_ListProjects_Response";
+          return "CMsgSteamLearn_ListProjects_Request";
         }
       }
       class je extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            je.prototype.project_id || i.aR(je.M()),
-            s.initialize(this, e, 0, -1, void 0, null);
+            je.prototype.projects || i.aR(je.M()),
+            s.initialize(this, e, 0, -1, [1], null);
         }
         static M() {
           return (
             je.sm_m ||
               (je.sm_m = {
                 proto: je,
-                fields: {
-                  project_id: {
-                    n: 1,
-                    br: i.FE.readUint32,
-                    bw: i.Xc.writeUint32,
-                  },
-                },
+                fields: { projects: { n: 1, c: p, r: !0, q: !0 } },
               }),
             je.sm_m
           );
@@ -15429,20 +15408,29 @@
           return je.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_GetProject_Request";
+          return "CMsgSteamLearn_ListProjects_Response";
         }
       }
       class xe extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            xe.prototype.project || i.aR(xe.M()),
+            xe.prototype.project_id || i.aR(xe.M()),
             s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
             xe.sm_m ||
-              (xe.sm_m = { proto: xe, fields: { project: { n: 1, c: p } } }),
+              (xe.sm_m = {
+                proto: xe,
+                fields: {
+                  project_id: {
+                    n: 1,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
+                  },
+                },
+              }),
             xe.sm_m
           );
         }
@@ -15478,22 +15466,34 @@
           return xe.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_GetProject_Response";
+          return "CMsgSteamLearn_GetProject_Request";
         }
       }
       class Ce extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
-          super(), s.initialize(this, e, 0, -1, void 0, null);
+          super(),
+            Ce.prototype.project || i.aR(Ce.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            Ce.sm_m ||
+              (Ce.sm_m = { proto: Ce, fields: { project: { n: 1, c: p } } }),
+            Ce.sm_m
+          );
+        }
+        static MBF() {
+          return Ce.sm_mbf || (Ce.sm_mbf = i.Bh(Ce.M())), Ce.sm_mbf;
         }
         toObject(e = !1) {
           return Ce.toObject(e, this);
         }
         static toObject(e, t) {
-          return e ? { $jspbMessageInstance: t } : {};
+          return i.TA(Ce.M(), e, t);
         }
         static fromObject(e) {
-          return new Ce();
+          return i.aD(Ce.M(), e);
         }
         static deserializeBinary(e) {
           let t = new n.BinaryReader(e),
@@ -15501,49 +15501,36 @@
           return Ce.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return e;
+          return i.F(Ce.MBF(), e, t);
         }
         serializeBinary() {
           var e = new n.BinaryWriter();
           return Ce.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
-        static serializeBinaryToWriter(e, t) {}
+        static serializeBinaryToWriter(e, t) {
+          i.l2(Ce.M(), e, t);
+        }
         serializeBase64String() {
           var e = new n.BinaryWriter();
           return Ce.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_ListDataSources_Request";
+          return "CMsgSteamLearn_GetProject_Response";
         }
       }
       class Te extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
-          super(),
-            Te.prototype.data_sources || i.aR(Te.M()),
-            s.initialize(this, e, 0, -1, [1], null);
-        }
-        static M() {
-          return (
-            Te.sm_m ||
-              (Te.sm_m = {
-                proto: Te,
-                fields: { data_sources: { n: 1, c, r: !0, q: !0 } },
-              }),
-            Te.sm_m
-          );
-        }
-        static MBF() {
-          return Te.sm_mbf || (Te.sm_mbf = i.Bh(Te.M())), Te.sm_mbf;
+          super(), s.initialize(this, e, 0, -1, void 0, null);
         }
         toObject(e = !1) {
           return Te.toObject(e, this);
         }
         static toObject(e, t) {
-          return i.TA(Te.M(), e, t);
+          return e ? { $jspbMessageInstance: t } : {};
         }
         static fromObject(e) {
-          return i.aD(Te.M(), e);
+          return new Te();
         }
         static deserializeBinary(e) {
           let t = new n.BinaryReader(e),
@@ -15551,42 +15538,34 @@
           return Te.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return i.F(Te.MBF(), e, t);
+          return e;
         }
         serializeBinary() {
           var e = new n.BinaryWriter();
           return Te.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
-        static serializeBinaryToWriter(e, t) {
-          i.l2(Te.M(), e, t);
-        }
+        static serializeBinaryToWriter(e, t) {}
         serializeBase64String() {
           var e = new n.BinaryWriter();
           return Te.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_ListDataSources_Response";
+          return "CMsgSteamLearn_ListDataSources_Request";
         }
       }
       class We extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            We.prototype.data_source_id || i.aR(We.M()),
-            s.initialize(this, e, 0, -1, void 0, null);
+            We.prototype.data_sources || i.aR(We.M()),
+            s.initialize(this, e, 0, -1, [1], null);
         }
         static M() {
           return (
             We.sm_m ||
               (We.sm_m = {
                 proto: We,
-                fields: {
-                  data_source_id: {
-                    n: 1,
-                    br: i.FE.readUint32,
-                    bw: i.Xc.writeUint32,
-                  },
-                },
+                fields: { data_sources: { n: 1, c, r: !0, q: !0 } },
               }),
             We.sm_m
           );
@@ -15623,20 +15602,29 @@
           return We.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_GetDataSource_Request";
+          return "CMsgSteamLearn_ListDataSources_Response";
         }
       }
       class Ie extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Ie.prototype.data_source || i.aR(Ie.M()),
+            Ie.prototype.data_source_id || i.aR(Ie.M()),
             s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
             Ie.sm_m ||
-              (Ie.sm_m = { proto: Ie, fields: { data_source: { n: 1, c } } }),
+              (Ie.sm_m = {
+                proto: Ie,
+                fields: {
+                  data_source_id: {
+                    n: 1,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
+                  },
+                },
+              }),
             Ie.sm_m
           );
         }
@@ -15672,30 +15660,20 @@
           return Ie.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_GetDataSource_Response";
+          return "CMsgSteamLearn_GetDataSource_Request";
         }
       }
       class Pe extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Pe.prototype.project || i.aR(Pe.M()),
+            Pe.prototype.data_source || i.aR(Pe.M()),
             s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
             Pe.sm_m ||
-              (Pe.sm_m = {
-                proto: Pe,
-                fields: {
-                  project: { n: 1, c: p },
-                  published_version: {
-                    n: 2,
-                    br: i.FE.readUint32,
-                    bw: i.Xc.writeUint32,
-                  },
-                },
-              }),
+              (Pe.sm_m = { proto: Pe, fields: { data_source: { n: 1, c } } }),
             Pe.sm_m
           );
         }
@@ -15731,14 +15709,14 @@
           return Pe.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_EditProject_Request";
+          return "CMsgSteamLearn_GetDataSource_Response";
         }
       }
       class Ne extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Ne.prototype.result || i.aR(Ne.M()),
+            Ne.prototype.project || i.aR(Ne.M()),
             s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
@@ -15747,7 +15725,12 @@
               (Ne.sm_m = {
                 proto: Ne,
                 fields: {
-                  result: { n: 1, br: i.FE.readEnum, bw: i.Xc.writeEnum },
+                  project: { n: 1, c: p },
+                  published_version: {
+                    n: 2,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
+                  },
                 },
               }),
             Ne.sm_m
@@ -15785,14 +15768,14 @@
           return Ne.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_EditProject_Response";
+          return "CMsgSteamLearn_EditProject_Request";
         }
       }
       class Ae extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Ae.prototype.project_id || i.aR(Ae.M()),
+            Ae.prototype.result || i.aR(Ae.M()),
             s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
@@ -15801,11 +15784,7 @@
               (Ae.sm_m = {
                 proto: Ae,
                 fields: {
-                  project_id: {
-                    n: 1,
-                    br: i.FE.readUint32,
-                    bw: i.Xc.writeUint32,
-                  },
+                  result: { n: 1, br: i.FE.readEnum, bw: i.Xc.writeEnum },
                 },
               }),
             Ae.sm_m
@@ -15843,14 +15822,14 @@
           return Ae.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_PublishProject_Request";
+          return "CMsgSteamLearn_EditProject_Response";
         }
       }
       class Ue extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Ue.prototype.result || i.aR(Ue.M()),
+            Ue.prototype.project_id || i.aR(Ue.M()),
             s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
@@ -15859,7 +15838,11 @@
               (Ue.sm_m = {
                 proto: Ue,
                 fields: {
-                  result: { n: 1, br: i.FE.readEnum, bw: i.Xc.writeEnum },
+                  project_id: {
+                    n: 1,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
+                  },
                 },
               }),
             Ue.sm_m
@@ -15897,15 +15880,15 @@
           return Ue.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_PublishProject_Response";
+          return "CMsgSteamLearn_PublishProject_Request";
         }
       }
       class De extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            De.prototype.register_data_source_access_token || i.aR(De.M()),
-            s.initialize(this, e, 0, -1, [2, 3, 4], null);
+            De.prototype.result || i.aR(De.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -15913,14 +15896,7 @@
               (De.sm_m = {
                 proto: De,
                 fields: {
-                  register_data_source_access_token: {
-                    n: 1,
-                    br: i.FE.readString,
-                    bw: i.Xc.writeString,
-                  },
-                  cache_data_access_tokens: { n: 2, c: ke, r: !0, q: !0 },
-                  snapshot_project_access_tokens: { n: 3, c: Xe, r: !0, q: !0 },
-                  inference_access_tokens: { n: 4, c: Le, r: !0, q: !0 },
+                  result: { n: 1, br: i.FE.readEnum, bw: i.Xc.writeEnum },
                 },
               }),
             De.sm_m
@@ -15958,15 +15934,15 @@
           return De.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearnAccessTokens";
+          return "CMsgSteamLearn_PublishProject_Response";
         }
       }
       class ke extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            ke.prototype.data_source_id || i.aR(ke.M()),
-            s.initialize(this, e, 0, -1, void 0, null);
+            ke.prototype.register_data_source_access_token || i.aR(ke.M()),
+            s.initialize(this, e, 0, -1, [2, 3, 4], null);
         }
         static M() {
           return (
@@ -15974,16 +15950,14 @@
               (ke.sm_m = {
                 proto: ke,
                 fields: {
-                  data_source_id: {
+                  register_data_source_access_token: {
                     n: 1,
-                    br: i.FE.readUint32,
-                    bw: i.Xc.writeUint32,
-                  },
-                  access_token: {
-                    n: 2,
                     br: i.FE.readString,
                     bw: i.Xc.writeString,
                   },
+                  cache_data_access_tokens: { n: 2, c: Xe, r: !0, q: !0 },
+                  snapshot_project_access_tokens: { n: 3, c: Le, r: !0, q: !0 },
+                  inference_access_tokens: { n: 4, c: qe, r: !0, q: !0 },
                 },
               }),
             ke.sm_m
@@ -16021,14 +15995,14 @@
           return ke.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearnAccessTokens_CacheDataAccessToken";
+          return "CMsgSteamLearnAccessTokens";
         }
       }
       class Xe extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Xe.prototype.project_id || i.aR(Xe.M()),
+            Xe.prototype.data_source_id || i.aR(Xe.M()),
             s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
@@ -16037,7 +16011,7 @@
               (Xe.sm_m = {
                 proto: Xe,
                 fields: {
-                  project_id: {
+                  data_source_id: {
                     n: 1,
                     br: i.FE.readUint32,
                     bw: i.Xc.writeUint32,
@@ -16084,7 +16058,7 @@
           return Xe.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearnAccessTokens_SnapshotProjectAccessToken";
+          return "CMsgSteamLearnAccessTokens_CacheDataAccessToken";
         }
       }
       class Le extends s {
@@ -16147,14 +16121,14 @@
           return Le.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearnAccessTokens_InferenceAccessToken";
+          return "CMsgSteamLearnAccessTokens_SnapshotProjectAccessToken";
         }
       }
       class qe extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            qe.prototype.appid || i.aR(qe.M()),
+            qe.prototype.project_id || i.aR(qe.M()),
             s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
@@ -16163,7 +16137,16 @@
               (qe.sm_m = {
                 proto: qe,
                 fields: {
-                  appid: { n: 1, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
+                  project_id: {
+                    n: 1,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
+                  },
+                  access_token: {
+                    n: 2,
+                    br: i.FE.readString,
+                    bw: i.Xc.writeString,
+                  },
                 },
               }),
             qe.sm_m
@@ -16201,14 +16184,14 @@
           return qe.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_GetAccessTokens_Request";
+          return "CMsgSteamLearnAccessTokens_InferenceAccessToken";
         }
       }
       class Ze extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Ze.prototype.result || i.aR(Ze.M()),
+            Ze.prototype.appid || i.aR(Ze.M()),
             s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
@@ -16217,8 +16200,7 @@
               (Ze.sm_m = {
                 proto: Ze,
                 fields: {
-                  result: { n: 1, br: i.FE.readEnum, bw: i.Xc.writeEnum },
-                  access_tokens: { n: 2, c: De },
+                  appid: { n: 1, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
                 },
               }),
             Ze.sm_m
@@ -16256,14 +16238,14 @@
           return Ze.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_GetAccessTokens_Response";
+          return "CMsgSteamLearn_GetAccessTokens_Request";
         }
       }
       class $e extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            $e.prototype.project_config || i.aR($e.M()),
+            $e.prototype.result || i.aR($e.M()),
             s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
@@ -16272,9 +16254,8 @@
               ($e.sm_m = {
                 proto: $e,
                 fields: {
-                  project_config: { n: 1, c: b },
-                  fetch: { n: 2, c: Ve },
-                  train: { n: 3, c: Ye },
+                  result: { n: 1, br: i.FE.readEnum, bw: i.Xc.writeEnum },
+                  access_tokens: { n: 2, c: ke },
                 },
               }),
             $e.sm_m
@@ -16312,14 +16293,14 @@
           return $e.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_Train_Request";
+          return "CMsgSteamLearn_GetAccessTokens_Response";
         }
       }
       class Ve extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Ve.prototype.fetch_id || i.aR(Ve.M()),
+            Ve.prototype.project_config || i.aR(Ve.M()),
             s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
@@ -16328,12 +16309,9 @@
               (Ve.sm_m = {
                 proto: Ve,
                 fields: {
-                  fetch_id: { n: 1, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
-                  request_cancel: {
-                    n: 2,
-                    br: i.FE.readBool,
-                    bw: i.Xc.writeBool,
-                  },
+                  project_config: { n: 1, c: b },
+                  fetch: { n: 2, c: Ye },
+                  train: { n: 3, c: He },
                 },
               }),
             Ve.sm_m
@@ -16371,14 +16349,14 @@
           return Ve.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_Train_Request_Fetch";
+          return "CMsgSteamLearn_Train_Request";
         }
       }
       class Ye extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Ye.prototype.train_id || i.aR(Ye.M()),
+            Ye.prototype.fetch_id || i.aR(Ye.M()),
             s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
@@ -16387,14 +16365,9 @@
               (Ye.sm_m = {
                 proto: Ye,
                 fields: {
-                  train_id: { n: 1, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
+                  fetch_id: { n: 1, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
                   request_cancel: {
                     n: 2,
-                    br: i.FE.readBool,
-                    bw: i.Xc.writeBool,
-                  },
-                  scheduled_train: {
-                    n: 3,
                     br: i.FE.readBool,
                     bw: i.Xc.writeBool,
                   },
@@ -16435,14 +16408,14 @@
           return Ye.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_Train_Request_Train";
+          return "CMsgSteamLearn_Train_Request_Fetch";
         }
       }
       class He extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            He.prototype.result || i.aR(He.M()),
+            He.prototype.train_id || i.aR(He.M()),
             s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
@@ -16451,7 +16424,17 @@
               (He.sm_m = {
                 proto: He,
                 fields: {
-                  result: { n: 1, br: i.FE.readEnum, bw: i.Xc.writeEnum },
+                  train_id: { n: 1, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
+                  request_cancel: {
+                    n: 2,
+                    br: i.FE.readBool,
+                    bw: i.Xc.writeBool,
+                  },
+                  scheduled_train: {
+                    n: 3,
+                    br: i.FE.readBool,
+                    bw: i.Xc.writeBool,
+                  },
                 },
               }),
             He.sm_m
@@ -16489,14 +16472,14 @@
           return He.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_Train_Response";
+          return "CMsgSteamLearn_Train_Request_Train";
         }
       }
       class Ge extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Ge.prototype.project_id || i.aR(Ge.M()),
+            Ge.prototype.result || i.aR(Ge.M()),
             s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
@@ -16505,16 +16488,7 @@
               (Ge.sm_m = {
                 proto: Ge,
                 fields: {
-                  project_id: {
-                    n: 1,
-                    br: i.FE.readUint32,
-                    bw: i.Xc.writeUint32,
-                  },
-                  published_version: {
-                    n: 2,
-                    br: i.FE.readUint32,
-                    bw: i.Xc.writeUint32,
-                  },
+                  result: { n: 1, br: i.FE.readEnum, bw: i.Xc.writeEnum },
                 },
               }),
             Ge.sm_m
@@ -16552,15 +16526,15 @@
           return Ge.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_GetFetchStatusVersions_Request";
+          return "CMsgSteamLearn_Train_Response";
         }
       }
       class Ke extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Ke.prototype.versions || i.aR(Ke.M()),
-            s.initialize(this, e, 0, -1, [1], null);
+            Ke.prototype.project_id || i.aR(Ke.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -16568,13 +16542,15 @@
               (Ke.sm_m = {
                 proto: Ke,
                 fields: {
-                  versions: {
+                  project_id: {
                     n: 1,
-                    r: !0,
-                    q: !0,
                     br: i.FE.readUint32,
-                    pbr: i.FE.readPackedUint32,
-                    bw: i.Xc.writeRepeatedUint32,
+                    bw: i.Xc.writeUint32,
+                  },
+                  published_version: {
+                    n: 2,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
                   },
                 },
               }),
@@ -16613,15 +16589,15 @@
           return Ke.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_GetFetchStatusVersions_Response";
+          return "CMsgSteamLearn_GetFetchStatusVersions_Request";
         }
       }
       class Qe extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Qe.prototype.project_id || i.aR(Qe.M()),
-            s.initialize(this, e, 0, -1, void 0, null);
+            Qe.prototype.versions || i.aR(Qe.M()),
+            s.initialize(this, e, 0, -1, [1], null);
         }
         static M() {
           return (
@@ -16629,15 +16605,13 @@
               (Qe.sm_m = {
                 proto: Qe,
                 fields: {
-                  project_id: {
+                  versions: {
                     n: 1,
+                    r: !0,
+                    q: !0,
                     br: i.FE.readUint32,
-                    bw: i.Xc.writeUint32,
-                  },
-                  published_version: {
-                    n: 2,
-                    br: i.FE.readUint32,
-                    bw: i.Xc.writeUint32,
+                    pbr: i.FE.readPackedUint32,
+                    bw: i.Xc.writeRepeatedUint32,
                   },
                 },
               }),
@@ -16676,15 +16650,15 @@
           return Qe.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_GetTrainStatusVersions_Request";
+          return "CMsgSteamLearn_GetFetchStatusVersions_Response";
         }
       }
       class Je extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Je.prototype.versions || i.aR(Je.M()),
-            s.initialize(this, e, 0, -1, [1], null);
+            Je.prototype.project_id || i.aR(Je.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -16692,13 +16666,15 @@
               (Je.sm_m = {
                 proto: Je,
                 fields: {
-                  versions: {
+                  project_id: {
                     n: 1,
-                    r: !0,
-                    q: !0,
                     br: i.FE.readUint32,
-                    pbr: i.FE.readPackedUint32,
-                    bw: i.Xc.writeRepeatedUint32,
+                    bw: i.Xc.writeUint32,
+                  },
+                  published_version: {
+                    n: 2,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
                   },
                 },
               }),
@@ -16737,15 +16713,15 @@
           return Je.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_GetTrainStatusVersions_Response";
+          return "CMsgSteamLearn_GetTrainStatusVersions_Request";
         }
       }
       class et extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            et.prototype.fetch_requests || i.aR(et.M()),
-            s.initialize(this, e, 0, -1, [1, 2], null);
+            et.prototype.versions || i.aR(et.M()),
+            s.initialize(this, e, 0, -1, [1], null);
         }
         static M() {
           return (
@@ -16753,8 +16729,14 @@
               (et.sm_m = {
                 proto: et,
                 fields: {
-                  fetch_requests: { n: 1, c: rt, r: !0, q: !0 },
-                  train_requests: { n: 2, c: at, r: !0, q: !0 },
+                  versions: {
+                    n: 1,
+                    r: !0,
+                    q: !0,
+                    br: i.FE.readUint32,
+                    pbr: i.FE.readPackedUint32,
+                    bw: i.Xc.writeRepeatedUint32,
+                  },
                 },
               }),
             et.sm_m
@@ -16792,15 +16774,15 @@
           return et.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_GetBatchedStatus_Request";
+          return "CMsgSteamLearn_GetTrainStatusVersions_Response";
         }
       }
       class tt extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            tt.prototype.result || i.aR(tt.M()),
-            s.initialize(this, e, 0, -1, [2, 3], null);
+            tt.prototype.fetch_requests || i.aR(tt.M()),
+            s.initialize(this, e, 0, -1, [1, 2], null);
         }
         static M() {
           return (
@@ -16808,9 +16790,8 @@
               (tt.sm_m = {
                 proto: tt,
                 fields: {
-                  result: { n: 1, br: i.FE.readEnum, bw: i.Xc.writeEnum },
-                  fetch_responses: { n: 2, c: nt, r: !0, q: !0 },
-                  train_responses: { n: 3, c: st, r: !0, q: !0 },
+                  fetch_requests: { n: 1, c: nt, r: !0, q: !0 },
+                  train_requests: { n: 2, c: st, r: !0, q: !0 },
                 },
               }),
             tt.sm_m
@@ -16848,15 +16829,15 @@
           return tt.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_GetBatchedStatus_Response";
+          return "CMsgSteamLearn_GetBatchedStatus_Request";
         }
       }
       class rt extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            rt.prototype.project_id || i.aR(rt.M()),
-            s.initialize(this, e, 0, -1, void 0, null);
+            rt.prototype.result || i.aR(rt.M()),
+            s.initialize(this, e, 0, -1, [2, 3], null);
         }
         static M() {
           return (
@@ -16864,12 +16845,9 @@
               (rt.sm_m = {
                 proto: rt,
                 fields: {
-                  project_id: {
-                    n: 1,
-                    br: i.FE.readUint32,
-                    bw: i.Xc.writeUint32,
-                  },
-                  fetch_id: { n: 2, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
+                  result: { n: 1, br: i.FE.readEnum, bw: i.Xc.writeEnum },
+                  fetch_responses: { n: 2, c: it, r: !0, q: !0 },
+                  train_responses: { n: 3, c: ot, r: !0, q: !0 },
                 },
               }),
             rt.sm_m
@@ -16907,15 +16885,15 @@
           return rt.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_GetFetchStatus_Request";
+          return "CMsgSteamLearn_GetBatchedStatus_Response";
         }
       }
       class nt extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            nt.prototype.result || i.aR(nt.M()),
-            s.initialize(this, e, 0, -1, [4], null);
+            nt.prototype.project_id || i.aR(nt.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -16923,41 +16901,12 @@
               (nt.sm_m = {
                 proto: nt,
                 fields: {
-                  result: { n: 1, br: i.FE.readEnum, bw: i.Xc.writeEnum },
                   project_id: {
-                    n: 11,
+                    n: 1,
                     br: i.FE.readUint32,
                     bw: i.Xc.writeUint32,
                   },
                   fetch_id: { n: 2, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
-                  status: { n: 3, br: i.FE.readEnum, bw: i.Xc.writeEnum },
-                  workers: { n: 4, c: it, r: !0, q: !0 },
-                  total_rows_written: {
-                    n: 5,
-                    br: i.FE.readUint32,
-                    bw: i.Xc.writeUint32,
-                  },
-                  total_rows_processed: {
-                    n: 9,
-                    br: i.FE.readUint32,
-                    bw: i.Xc.writeUint32,
-                  },
-                  total_rows: {
-                    n: 6,
-                    br: i.FE.readUint32,
-                    bw: i.Xc.writeUint32,
-                  },
-                  start_time: {
-                    n: 7,
-                    br: i.FE.readUint32,
-                    bw: i.Xc.writeUint32,
-                  },
-                  end_time: { n: 8, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
-                  error_string: {
-                    n: 10,
-                    br: i.FE.readString,
-                    bw: i.Xc.writeString,
-                  },
                 },
               }),
             nt.sm_m
@@ -16995,15 +16944,15 @@
           return nt.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_GetFetchStatus_Response";
+          return "CMsgSteamLearn_GetFetchStatus_Request";
         }
       }
       class it extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            it.prototype.rows_written || i.aR(it.M()),
-            s.initialize(this, e, 0, -1, void 0, null);
+            it.prototype.result || i.aR(it.M()),
+            s.initialize(this, e, 0, -1, [4], null);
         }
         static M() {
           return (
@@ -17011,17 +16960,41 @@
               (it.sm_m = {
                 proto: it,
                 fields: {
-                  rows_written: {
-                    n: 1,
+                  result: { n: 1, br: i.FE.readEnum, bw: i.Xc.writeEnum },
+                  project_id: {
+                    n: 11,
                     br: i.FE.readUint32,
                     bw: i.Xc.writeUint32,
                   },
-                  rows_processed: {
-                    n: 3,
+                  fetch_id: { n: 2, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
+                  status: { n: 3, br: i.FE.readEnum, bw: i.Xc.writeEnum },
+                  workers: { n: 4, c: at, r: !0, q: !0 },
+                  total_rows_written: {
+                    n: 5,
                     br: i.FE.readUint32,
                     bw: i.Xc.writeUint32,
                   },
-                  complete: { n: 2, br: i.FE.readBool, bw: i.Xc.writeBool },
+                  total_rows_processed: {
+                    n: 9,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
+                  },
+                  total_rows: {
+                    n: 6,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
+                  },
+                  start_time: {
+                    n: 7,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
+                  },
+                  end_time: { n: 8, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
+                  error_string: {
+                    n: 10,
+                    br: i.FE.readString,
+                    bw: i.Xc.writeString,
+                  },
                 },
               }),
             it.sm_m
@@ -17059,14 +17032,14 @@
           return it.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_GetFetchStatus_Response_Worker";
+          return "CMsgSteamLearn_GetFetchStatus_Response";
         }
       }
       class at extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            at.prototype.project_id || i.aR(at.M()),
+            at.prototype.rows_written || i.aR(at.M()),
             s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
@@ -17075,12 +17048,17 @@
               (at.sm_m = {
                 proto: at,
                 fields: {
-                  project_id: {
+                  rows_written: {
                     n: 1,
                     br: i.FE.readUint32,
                     bw: i.Xc.writeUint32,
                   },
-                  train_id: { n: 2, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
+                  rows_processed: {
+                    n: 3,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
+                  },
+                  complete: { n: 2, br: i.FE.readBool, bw: i.Xc.writeBool },
                 },
               }),
             at.sm_m
@@ -17118,15 +17096,15 @@
           return at.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_GetTrainStatus_Request";
+          return "CMsgSteamLearn_GetFetchStatus_Response_Worker";
         }
       }
       class st extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            st.prototype.result || i.aR(st.M()),
-            s.initialize(this, e, 0, -1, [5, 10, 12], null);
+            st.prototype.project_id || i.aR(st.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -17134,63 +17112,12 @@
               (st.sm_m = {
                 proto: st,
                 fields: {
-                  result: { n: 1, br: i.FE.readEnum, bw: i.Xc.writeEnum },
                   project_id: {
-                    n: 18,
+                    n: 1,
                     br: i.FE.readUint32,
                     bw: i.Xc.writeUint32,
                   },
                   train_id: { n: 2, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
-                  fetch_id: { n: 3, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
-                  status: { n: 4, br: i.FE.readEnum, bw: i.Xc.writeEnum },
-                  epochs: { n: 5, c: lt, r: !0, q: !0 },
-                  total_epochs: {
-                    n: 6,
-                    br: i.FE.readUint32,
-                    bw: i.Xc.writeUint32,
-                  },
-                  train_batch_count: {
-                    n: 7,
-                    br: i.FE.readUint32,
-                    bw: i.Xc.writeUint32,
-                  },
-                  validate_batch_count: {
-                    n: 8,
-                    br: i.FE.readUint32,
-                    bw: i.Xc.writeUint32,
-                  },
-                  test_batch_count: {
-                    n: 9,
-                    br: i.FE.readUint32,
-                    bw: i.Xc.writeUint32,
-                  },
-                  test_batches: { n: 10, c: ot, r: !0, q: !0 },
-                  test_loss: { n: 11, br: i.FE.readFloat, bw: i.Xc.writeFloat },
-                  test_accuracy: {
-                    n: 12,
-                    r: !0,
-                    q: !0,
-                    br: i.FE.readFloat,
-                    pbr: i.FE.readPackedFloat,
-                    bw: i.Xc.writeRepeatedFloat,
-                  },
-                  start_time: {
-                    n: 13,
-                    br: i.FE.readUint32,
-                    bw: i.Xc.writeUint32,
-                  },
-                  end_time: {
-                    n: 14,
-                    br: i.FE.readUint32,
-                    bw: i.Xc.writeUint32,
-                  },
-                  scheduled_train: {
-                    n: 15,
-                    br: i.FE.readBool,
-                    bw: i.Xc.writeBool,
-                  },
-                  live: { n: 16, br: i.FE.readBool, bw: i.Xc.writeBool },
-                  active: { n: 17, br: i.FE.readBool, bw: i.Xc.writeBool },
                 },
               }),
             st.sm_m
@@ -17228,15 +17155,15 @@
           return st.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_GetTrainStatus_Response";
+          return "CMsgSteamLearn_GetTrainStatus_Request";
         }
       }
       class ot extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            ot.prototype.loss || i.aR(ot.M()),
-            s.initialize(this, e, 0, -1, [2], null);
+            ot.prototype.result || i.aR(ot.M()),
+            s.initialize(this, e, 0, -1, [5, 10, 12], null);
         }
         static M() {
           return (
@@ -17244,15 +17171,63 @@
               (ot.sm_m = {
                 proto: ot,
                 fields: {
-                  loss: { n: 1, br: i.FE.readFloat, bw: i.Xc.writeFloat },
-                  accuracy: {
-                    n: 2,
+                  result: { n: 1, br: i.FE.readEnum, bw: i.Xc.writeEnum },
+                  project_id: {
+                    n: 18,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
+                  },
+                  train_id: { n: 2, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
+                  fetch_id: { n: 3, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
+                  status: { n: 4, br: i.FE.readEnum, bw: i.Xc.writeEnum },
+                  epochs: { n: 5, c: ct, r: !0, q: !0 },
+                  total_epochs: {
+                    n: 6,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
+                  },
+                  train_batch_count: {
+                    n: 7,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
+                  },
+                  validate_batch_count: {
+                    n: 8,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
+                  },
+                  test_batch_count: {
+                    n: 9,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
+                  },
+                  test_batches: { n: 10, c: lt, r: !0, q: !0 },
+                  test_loss: { n: 11, br: i.FE.readFloat, bw: i.Xc.writeFloat },
+                  test_accuracy: {
+                    n: 12,
                     r: !0,
                     q: !0,
                     br: i.FE.readFloat,
                     pbr: i.FE.readPackedFloat,
                     bw: i.Xc.writeRepeatedFloat,
                   },
+                  start_time: {
+                    n: 13,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
+                  },
+                  end_time: {
+                    n: 14,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
+                  },
+                  scheduled_train: {
+                    n: 15,
+                    br: i.FE.readBool,
+                    bw: i.Xc.writeBool,
+                  },
+                  live: { n: 16, br: i.FE.readBool, bw: i.Xc.writeBool },
+                  active: { n: 17, br: i.FE.readBool, bw: i.Xc.writeBool },
                 },
               }),
             ot.sm_m
@@ -17290,15 +17265,15 @@
           return ot.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_GetTrainStatus_Response_Batch";
+          return "CMsgSteamLearn_GetTrainStatus_Response";
         }
       }
       class lt extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            lt.prototype.epoch_number || i.aR(lt.M()),
-            s.initialize(this, e, 0, -1, [3, 5, 6, 7], null);
+            lt.prototype.loss || i.aR(lt.M()),
+            s.initialize(this, e, 0, -1, [2], null);
         }
         static M() {
           return (
@@ -17306,45 +17281,15 @@
               (lt.sm_m = {
                 proto: lt,
                 fields: {
-                  epoch_number: {
-                    n: 1,
-                    br: i.FE.readUint32,
-                    bw: i.Xc.writeUint32,
-                  },
-                  epoch_train_loss: {
+                  loss: { n: 1, br: i.FE.readFloat, bw: i.Xc.writeFloat },
+                  accuracy: {
                     n: 2,
-                    br: i.FE.readFloat,
-                    bw: i.Xc.writeFloat,
-                  },
-                  epoch_train_accuracy: {
-                    n: 3,
                     r: !0,
                     q: !0,
                     br: i.FE.readFloat,
                     pbr: i.FE.readPackedFloat,
                     bw: i.Xc.writeRepeatedFloat,
                   },
-                  epoch_validate_loss: {
-                    n: 4,
-                    br: i.FE.readFloat,
-                    bw: i.Xc.writeFloat,
-                  },
-                  epoch_validate_accuracy: {
-                    n: 5,
-                    r: !0,
-                    q: !0,
-                    br: i.FE.readFloat,
-                    pbr: i.FE.readPackedFloat,
-                    bw: i.Xc.writeRepeatedFloat,
-                  },
-                  train_batches: { n: 6, c: ot, r: !0, q: !0 },
-                  validate_batches: { n: 7, c: ot, r: !0, q: !0 },
-                  start_time: {
-                    n: 8,
-                    br: i.FE.readUint32,
-                    bw: i.Xc.writeUint32,
-                  },
-                  end_time: { n: 9, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
                 },
               }),
             lt.sm_m
@@ -17382,15 +17327,15 @@
           return lt.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_GetTrainStatus_Response_Epoch";
+          return "CMsgSteamLearn_GetTrainStatus_Response_Batch";
         }
       }
       class ct extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            ct.prototype.project_id || i.aR(ct.M()),
-            s.initialize(this, e, 0, -1, void 0, null);
+            ct.prototype.epoch_number || i.aR(ct.M()),
+            s.initialize(this, e, 0, -1, [3, 5, 6, 7], null);
         }
         static M() {
           return (
@@ -17398,13 +17343,45 @@
               (ct.sm_m = {
                 proto: ct,
                 fields: {
-                  project_id: {
+                  epoch_number: {
                     n: 1,
                     br: i.FE.readUint32,
                     bw: i.Xc.writeUint32,
                   },
-                  fetch_id: { n: 2, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
-                  train_id: { n: 3, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
+                  epoch_train_loss: {
+                    n: 2,
+                    br: i.FE.readFloat,
+                    bw: i.Xc.writeFloat,
+                  },
+                  epoch_train_accuracy: {
+                    n: 3,
+                    r: !0,
+                    q: !0,
+                    br: i.FE.readFloat,
+                    pbr: i.FE.readPackedFloat,
+                    bw: i.Xc.writeRepeatedFloat,
+                  },
+                  epoch_validate_loss: {
+                    n: 4,
+                    br: i.FE.readFloat,
+                    bw: i.Xc.writeFloat,
+                  },
+                  epoch_validate_accuracy: {
+                    n: 5,
+                    r: !0,
+                    q: !0,
+                    br: i.FE.readFloat,
+                    pbr: i.FE.readPackedFloat,
+                    bw: i.Xc.writeRepeatedFloat,
+                  },
+                  train_batches: { n: 6, c: lt, r: !0, q: !0 },
+                  validate_batches: { n: 7, c: lt, r: !0, q: !0 },
+                  start_time: {
+                    n: 8,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
+                  },
+                  end_time: { n: 9, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
                 },
               }),
             ct.sm_m
@@ -17442,15 +17419,15 @@
           return ct.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_GetTrainLogs_Request";
+          return "CMsgSteamLearn_GetTrainStatus_Response_Epoch";
         }
       }
       class ut extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            ut.prototype.result || i.aR(ut.M()),
-            s.initialize(this, e, 0, -1, [3], null);
+            ut.prototype.project_id || i.aR(ut.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -17458,16 +17435,13 @@
               (ut.sm_m = {
                 proto: ut,
                 fields: {
-                  result: { n: 1, br: i.FE.readEnum, bw: i.Xc.writeEnum },
-                  main_log: { n: 2, br: i.FE.readString, bw: i.Xc.writeString },
-                  fetch_worker_logs: {
-                    n: 3,
-                    r: !0,
-                    q: !0,
-                    br: i.FE.readString,
-                    bw: i.Xc.writeRepeatedString,
+                  project_id: {
+                    n: 1,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
                   },
-                  gpu_log: { n: 4, br: i.FE.readString, bw: i.Xc.writeString },
+                  fetch_id: { n: 2, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
+                  train_id: { n: 3, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
                 },
               }),
             ut.sm_m
@@ -17505,15 +17479,15 @@
           return ut.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_GetTrainLogs_Response";
+          return "CMsgSteamLearn_GetTrainLogs_Request";
         }
       }
       class dt extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            dt.prototype.project_id || i.aR(dt.M()),
-            s.initialize(this, e, 0, -1, void 0, null);
+            dt.prototype.result || i.aR(dt.M()),
+            s.initialize(this, e, 0, -1, [3], null);
         }
         static M() {
           return (
@@ -17521,23 +17495,16 @@
               (dt.sm_m = {
                 proto: dt,
                 fields: {
-                  project_id: {
-                    n: 1,
-                    br: i.FE.readUint32,
-                    bw: i.Xc.writeUint32,
+                  result: { n: 1, br: i.FE.readEnum, bw: i.Xc.writeEnum },
+                  main_log: { n: 2, br: i.FE.readString, bw: i.Xc.writeString },
+                  fetch_worker_logs: {
+                    n: 3,
+                    r: !0,
+                    q: !0,
+                    br: i.FE.readString,
+                    bw: i.Xc.writeRepeatedString,
                   },
-                  published_version: {
-                    n: 2,
-                    br: i.FE.readUint32,
-                    bw: i.Xc.writeUint32,
-                  },
-                  train_id: { n: 3, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
-                  from_scheduled: {
-                    n: 4,
-                    br: i.FE.readBool,
-                    bw: i.Xc.writeBool,
-                  },
-                  deactivate: { n: 5, br: i.FE.readBool, bw: i.Xc.writeBool },
+                  gpu_log: { n: 4, br: i.FE.readString, bw: i.Xc.writeString },
                 },
               }),
             dt.sm_m
@@ -17575,14 +17542,14 @@
           return dt.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_SetTrainLive_Request";
+          return "CMsgSteamLearn_GetTrainLogs_Response";
         }
       }
       class ft extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            ft.prototype.result || i.aR(ft.M()),
+            ft.prototype.project_id || i.aR(ft.M()),
             s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
@@ -17591,7 +17558,23 @@
               (ft.sm_m = {
                 proto: ft,
                 fields: {
-                  result: { n: 1, br: i.FE.readEnum, bw: i.Xc.writeEnum },
+                  project_id: {
+                    n: 1,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
+                  },
+                  published_version: {
+                    n: 2,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
+                  },
+                  train_id: { n: 3, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
+                  from_scheduled: {
+                    n: 4,
+                    br: i.FE.readBool,
+                    bw: i.Xc.writeBool,
+                  },
+                  deactivate: { n: 5, br: i.FE.readBool, bw: i.Xc.writeBool },
                 },
               }),
             ft.sm_m
@@ -17629,14 +17612,14 @@
           return ft.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_SetTrainLive_Response";
+          return "CMsgSteamLearn_SetTrainLive_Request";
         }
       }
       class mt extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            mt.prototype.float_value || i.aR(mt.M()),
+            mt.prototype.result || i.aR(mt.M()),
             s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
@@ -17645,16 +17628,7 @@
               (mt.sm_m = {
                 proto: mt,
                 fields: {
-                  float_value: {
-                    n: 1,
-                    br: i.FE.readFloat,
-                    bw: i.Xc.writeFloat,
-                  },
-                  string_value: {
-                    n: 2,
-                    br: i.FE.readString,
-                    bw: i.Xc.writeString,
-                  },
+                  result: { n: 1, br: i.FE.readEnum, bw: i.Xc.writeEnum },
                 },
               }),
             mt.sm_m
@@ -17692,15 +17666,15 @@
           return mt.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearnRawDataElement";
+          return "CMsgSteamLearn_SetTrainLive_Response";
         }
       }
       class ht extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            ht.prototype.project_id || i.aR(ht.M()),
-            s.initialize(this, e, 0, -1, [4, 7, 6], null);
+            ht.prototype.float_value || i.aR(ht.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -17708,32 +17682,13 @@
               (ht.sm_m = {
                 proto: ht,
                 fields: {
-                  project_id: {
+                  float_value: {
                     n: 1,
-                    br: i.FE.readUint32,
-                    bw: i.Xc.writeUint32,
-                  },
-                  fetch_id: { n: 2, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
-                  train_id: { n: 3, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
-                  data: { n: 4, c: mt, r: !0, q: !0 },
-                  additional_data: {
-                    n: 7,
-                    r: !0,
-                    q: !0,
                     br: i.FE.readFloat,
-                    pbr: i.FE.readPackedFloat,
-                    bw: i.Xc.writeRepeatedFloat,
+                    bw: i.Xc.writeFloat,
                   },
-                  keys: {
-                    n: 6,
-                    r: !0,
-                    q: !0,
-                    br: i.FE.readUint64String,
-                    pbr: i.FE.readPackedUint64String,
-                    bw: i.Xc.writeRepeatedUint64String,
-                  },
-                  named_inference: {
-                    n: 8,
+                  string_value: {
+                    n: 2,
                     br: i.FE.readString,
                     bw: i.Xc.writeString,
                   },
@@ -17774,22 +17729,52 @@
           return ht.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_InferenceBackend_Request";
+          return "CMsgSteamLearnRawDataElement";
         }
       }
       class pt extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            pt.prototype.outputs || i.aR(pt.M()),
-            s.initialize(this, e, 0, -1, [1], null);
+            pt.prototype.project_id || i.aR(pt.M()),
+            s.initialize(this, e, 0, -1, [4, 7, 6], null);
         }
         static M() {
           return (
             pt.sm_m ||
               (pt.sm_m = {
                 proto: pt,
-                fields: { outputs: { n: 1, c: vt, r: !0, q: !0 } },
+                fields: {
+                  project_id: {
+                    n: 1,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
+                  },
+                  fetch_id: { n: 2, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
+                  train_id: { n: 3, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
+                  data: { n: 4, c: ht, r: !0, q: !0 },
+                  additional_data: {
+                    n: 7,
+                    r: !0,
+                    q: !0,
+                    br: i.FE.readFloat,
+                    pbr: i.FE.readPackedFloat,
+                    bw: i.Xc.writeRepeatedFloat,
+                  },
+                  keys: {
+                    n: 6,
+                    r: !0,
+                    q: !0,
+                    br: i.FE.readUint64String,
+                    pbr: i.FE.readPackedUint64String,
+                    bw: i.Xc.writeRepeatedUint64String,
+                  },
+                  named_inference: {
+                    n: 8,
+                    br: i.FE.readString,
+                    bw: i.Xc.writeString,
+                  },
+                },
               }),
             pt.sm_m
           );
@@ -17826,31 +17811,22 @@
           return pt.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_InferenceBackend_Response";
+          return "CMsgSteamLearn_InferenceBackend_Request";
         }
       }
       class yt extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            yt.prototype.value || i.aR(yt.M()),
-            s.initialize(this, e, 0, -1, [2], null);
+            yt.prototype.outputs || i.aR(yt.M()),
+            s.initialize(this, e, 0, -1, [1], null);
         }
         static M() {
           return (
             yt.sm_m ||
               (yt.sm_m = {
                 proto: yt,
-                fields: {
-                  value: {
-                    n: 2,
-                    r: !0,
-                    q: !0,
-                    br: i.FE.readFloat,
-                    pbr: i.FE.readPackedFloat,
-                    bw: i.Xc.writeRepeatedFloat,
-                  },
-                },
+                fields: { outputs: { n: 1, c: wt, r: !0, q: !0 } },
               }),
             yt.sm_m
           );
@@ -17887,7 +17863,7 @@
           return yt.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_InferenceBackend_Response_RegressionOutput";
+          return "CMsgSteamLearn_InferenceBackend_Response";
         }
       }
       class gt extends s {
@@ -17895,7 +17871,7 @@
         constructor(e = null) {
           super(),
             gt.prototype.value || i.aR(gt.M()),
-            s.initialize(this, e, 0, -1, void 0, null);
+            s.initialize(this, e, 0, -1, [2], null);
         }
         static M() {
           return (
@@ -17903,7 +17879,14 @@
               (gt.sm_m = {
                 proto: gt,
                 fields: {
-                  value: { n: 1, br: i.FE.readFloat, bw: i.Xc.writeFloat },
+                  value: {
+                    n: 2,
+                    r: !0,
+                    q: !0,
+                    br: i.FE.readFloat,
+                    pbr: i.FE.readPackedFloat,
+                    bw: i.Xc.writeRepeatedFloat,
+                  },
                 },
               }),
             gt.sm_m
@@ -17941,15 +17924,15 @@
           return gt.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_InferenceBackend_Response_BinaryCrossEntropyOutput";
+          return "CMsgSteamLearn_InferenceBackend_Response_RegressionOutput";
         }
       }
       class bt extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            bt.prototype.weight || i.aR(bt.M()),
-            s.initialize(this, e, 0, -1, [1, 2], null);
+            bt.prototype.value || i.aR(bt.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -17957,22 +17940,7 @@
               (bt.sm_m = {
                 proto: bt,
                 fields: {
-                  weight: {
-                    n: 1,
-                    r: !0,
-                    q: !0,
-                    br: i.FE.readFloat,
-                    pbr: i.FE.readPackedFloat,
-                    bw: i.Xc.writeRepeatedFloat,
-                  },
-                  value: {
-                    n: 2,
-                    r: !0,
-                    q: !0,
-                    br: i.FE.readFloat,
-                    pbr: i.FE.readPackedFloat,
-                    bw: i.Xc.writeRepeatedFloat,
-                  },
+                  value: { n: 1, br: i.FE.readFloat, bw: i.Xc.writeFloat },
                 },
               }),
             bt.sm_m
@@ -18010,7 +17978,7 @@
           return bt.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_InferenceBackend_Response_MutliBinaryCrossEntropyOutput";
+          return "CMsgSteamLearn_InferenceBackend_Response_BinaryCrossEntropyOutput";
         }
       }
       class Bt extends s {
@@ -18079,15 +18047,15 @@
           return Bt.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_InferenceBackend_Response_CategoricalCrossEntropyOutput";
+          return "CMsgSteamLearn_InferenceBackend_Response_MutliBinaryCrossEntropyOutput";
         }
       }
       class vt extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            vt.prototype.binary_crossentropy || i.aR(vt.M()),
-            s.initialize(this, e, 0, -1, void 0, null);
+            vt.prototype.weight || i.aR(vt.M()),
+            s.initialize(this, e, 0, -1, [1, 2], null);
         }
         static M() {
           return (
@@ -18095,10 +18063,22 @@
               (vt.sm_m = {
                 proto: vt,
                 fields: {
-                  binary_crossentropy: { n: 1, c: gt },
-                  categorical_crossentropy: { n: 2, c: Bt },
-                  multi_binary_crossentropy: { n: 3, c: bt },
-                  regression: { n: 4, c: yt },
+                  weight: {
+                    n: 1,
+                    r: !0,
+                    q: !0,
+                    br: i.FE.readFloat,
+                    pbr: i.FE.readPackedFloat,
+                    bw: i.Xc.writeRepeatedFloat,
+                  },
+                  value: {
+                    n: 2,
+                    r: !0,
+                    q: !0,
+                    br: i.FE.readFloat,
+                    pbr: i.FE.readPackedFloat,
+                    bw: i.Xc.writeRepeatedFloat,
+                  },
                 },
               }),
             vt.sm_m
@@ -18136,14 +18116,14 @@
           return vt.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_InferenceBackend_Response_Output";
+          return "CMsgSteamLearn_InferenceBackend_Response_CategoricalCrossEntropyOutput";
         }
       }
       class wt extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            wt.prototype.project_id || i.aR(wt.M()),
+            wt.prototype.binary_crossentropy || i.aR(wt.M()),
             s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
@@ -18152,13 +18132,10 @@
               (wt.sm_m = {
                 proto: wt,
                 fields: {
-                  project_id: {
-                    n: 1,
-                    br: i.FE.readUint32,
-                    bw: i.Xc.writeUint32,
-                  },
-                  fetch_id: { n: 2, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
-                  train_id: { n: 3, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
+                  binary_crossentropy: { n: 1, c: bt },
+                  categorical_crossentropy: { n: 2, c: vt },
+                  multi_binary_crossentropy: { n: 3, c: Bt },
+                  regression: { n: 4, c: gt },
                 },
               }),
             wt.sm_m
@@ -18196,7 +18173,7 @@
           return wt.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_LogEvent_TrainStarted";
+          return "CMsgSteamLearn_InferenceBackend_Response_Output";
         }
       }
       class _t extends s {
@@ -18219,8 +18196,6 @@
                   },
                   fetch_id: { n: 2, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
                   train_id: { n: 3, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
-                  loss: { n: 4, br: i.FE.readFloat, bw: i.Xc.writeFloat },
-                  accuracy: { n: 5, br: i.FE.readFloat, bw: i.Xc.writeFloat },
                 },
               }),
             _t.sm_m
@@ -18258,7 +18233,7 @@
           return _t.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_LogEvent_TrainEnded";
+          return "CMsgSteamLearn_LogEvent_TrainStarted";
         }
       }
       class Mt extends s {
@@ -18281,21 +18256,8 @@
                   },
                   fetch_id: { n: 2, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
                   train_id: { n: 3, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
-                  manual_set_live: {
-                    n: 4,
-                    br: i.FE.readBool,
-                    bw: i.Xc.writeBool,
-                  },
-                  accuracy_difference: {
-                    n: 5,
-                    br: i.FE.readFloat,
-                    bw: i.Xc.writeFloat,
-                  },
-                  accuracy_threshold: {
-                    n: 6,
-                    br: i.FE.readFloat,
-                    bw: i.Xc.writeFloat,
-                  },
+                  loss: { n: 4, br: i.FE.readFloat, bw: i.Xc.writeFloat },
+                  accuracy: { n: 5, br: i.FE.readFloat, bw: i.Xc.writeFloat },
                 },
               }),
             Mt.sm_m
@@ -18333,7 +18295,7 @@
           return Mt.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_LogEvent_TrainSetLive";
+          return "CMsgSteamLearn_LogEvent_TrainEnded";
         }
       }
       class zt extends s {
@@ -18356,6 +18318,21 @@
                   },
                   fetch_id: { n: 2, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
                   train_id: { n: 3, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
+                  manual_set_live: {
+                    n: 4,
+                    br: i.FE.readBool,
+                    bw: i.Xc.writeBool,
+                  },
+                  accuracy_difference: {
+                    n: 5,
+                    br: i.FE.readFloat,
+                    bw: i.Xc.writeFloat,
+                  },
+                  accuracy_threshold: {
+                    n: 6,
+                    br: i.FE.readFloat,
+                    bw: i.Xc.writeFloat,
+                  },
                 },
               }),
             zt.sm_m
@@ -18393,14 +18370,14 @@
           return zt.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_LogEvent_ScheduledTrain";
+          return "CMsgSteamLearn_LogEvent_TrainSetLive";
         }
       }
       class St extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            St.prototype.event_type || i.aR(St.M()),
+            St.prototype.project_id || i.aR(St.M()),
             s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
@@ -18409,16 +18386,13 @@
               (St.sm_m = {
                 proto: St,
                 fields: {
-                  event_type: { n: 1, br: i.FE.readEnum, bw: i.Xc.writeEnum },
-                  timestamp: {
-                    n: 2,
+                  project_id: {
+                    n: 1,
                     br: i.FE.readUint32,
                     bw: i.Xc.writeUint32,
                   },
-                  train_started: { n: 3, c: wt },
-                  train_ended: { n: 4, c: _t },
-                  train_set_live: { n: 5, c: Mt },
-                  scheduled_train: { n: 6, c: zt },
+                  fetch_id: { n: 2, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
+                  train_id: { n: 3, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
                 },
               }),
             St.sm_m
@@ -18456,14 +18430,14 @@
           return St.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_LogEvent";
+          return "CMsgSteamLearn_LogEvent_ScheduledTrain";
         }
       }
       class Ft extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Ft.prototype.start_timestamp || i.aR(Ft.M()),
+            Ft.prototype.event_type || i.aR(Ft.M()),
             s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
@@ -18472,16 +18446,16 @@
               (Ft.sm_m = {
                 proto: Ft,
                 fields: {
-                  start_timestamp: {
-                    n: 1,
-                    br: i.FE.readUint32,
-                    bw: i.Xc.writeUint32,
-                  },
-                  end_timestamp: {
+                  event_type: { n: 1, br: i.FE.readEnum, bw: i.Xc.writeEnum },
+                  timestamp: {
                     n: 2,
                     br: i.FE.readUint32,
                     bw: i.Xc.writeUint32,
                   },
+                  train_started: { n: 3, c: _t },
+                  train_ended: { n: 4, c: Mt },
+                  train_set_live: { n: 5, c: zt },
+                  scheduled_train: { n: 6, c: St },
                 },
               }),
             Ft.sm_m
@@ -18519,15 +18493,15 @@
           return Ft.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_GetLogEvents_Request";
+          return "CMsgSteamLearn_LogEvent";
         }
       }
       class Et extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Et.prototype.result || i.aR(Et.M()),
-            s.initialize(this, e, 0, -1, [2], null);
+            Et.prototype.start_timestamp || i.aR(Et.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -18535,8 +18509,16 @@
               (Et.sm_m = {
                 proto: Et,
                 fields: {
-                  result: { n: 1, br: i.FE.readEnum, bw: i.Xc.writeEnum },
-                  event_list: { n: 2, c: St, r: !0, q: !0 },
+                  start_timestamp: {
+                    n: 1,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
+                  },
+                  end_timestamp: {
+                    n: 2,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
+                  },
                 },
               }),
             Et.sm_m
@@ -18574,15 +18556,15 @@
           return Et.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_GetLogEvents_Response";
+          return "CMsgSteamLearn_GetLogEvents_Request";
         }
       }
       class Ot extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Ot.prototype.project_id || i.aR(Ot.M()),
-            s.initialize(this, e, 0, -1, [5], null);
+            Ot.prototype.result || i.aR(Ot.M()),
+            s.initialize(this, e, 0, -1, [2], null);
         }
         static M() {
           return (
@@ -18590,31 +18572,8 @@
               (Ot.sm_m = {
                 proto: Ot,
                 fields: {
-                  project_id: {
-                    n: 1,
-                    br: i.FE.readUint32,
-                    bw: i.Xc.writeUint32,
-                  },
-                  published_version: {
-                    n: 2,
-                    br: i.FE.readUint32,
-                    bw: i.Xc.writeUint32,
-                  },
-                  train_id: { n: 3, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
-                  fetch_id: { n: 6, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
-                  export_name: {
-                    n: 4,
-                    br: i.FE.readString,
-                    bw: i.Xc.writeString,
-                  },
-                  numerical_values: {
-                    n: 5,
-                    r: !0,
-                    q: !0,
-                    br: i.FE.readUint32,
-                    pbr: i.FE.readPackedUint32,
-                    bw: i.Xc.writeRepeatedUint32,
-                  },
+                  result: { n: 1, br: i.FE.readEnum, bw: i.Xc.writeEnum },
+                  event_list: { n: 2, c: Ft, r: !0, q: !0 },
                 },
               }),
             Ot.sm_m
@@ -18652,15 +18611,15 @@
           return Ot.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_GetEmbeddingValues_Request";
+          return "CMsgSteamLearn_GetLogEvents_Response";
         }
       }
       class Rt extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Rt.prototype.result || i.aR(Rt.M()),
-            s.initialize(this, e, 0, -1, [2], null);
+            Rt.prototype.project_id || i.aR(Rt.M()),
+            s.initialize(this, e, 0, -1, [5], null);
         }
         static M() {
           return (
@@ -18668,8 +18627,31 @@
               (Rt.sm_m = {
                 proto: Rt,
                 fields: {
-                  result: { n: 1, br: i.FE.readEnum, bw: i.Xc.writeEnum },
-                  embedding_data: { n: 2, c: jt, r: !0, q: !0 },
+                  project_id: {
+                    n: 1,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
+                  },
+                  published_version: {
+                    n: 2,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
+                  },
+                  train_id: { n: 3, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
+                  fetch_id: { n: 6, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
+                  export_name: {
+                    n: 4,
+                    br: i.FE.readString,
+                    bw: i.Xc.writeString,
+                  },
+                  numerical_values: {
+                    n: 5,
+                    r: !0,
+                    q: !0,
+                    br: i.FE.readUint32,
+                    pbr: i.FE.readPackedUint32,
+                    bw: i.Xc.writeRepeatedUint32,
+                  },
                 },
               }),
             Rt.sm_m
@@ -18707,14 +18689,14 @@
           return Rt.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_GetEmbeddingValues_Response";
+          return "CMsgSteamLearn_GetEmbeddingValues_Request";
         }
       }
       class jt extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            jt.prototype.numerical_value || i.aR(jt.M()),
+            jt.prototype.result || i.aR(jt.M()),
             s.initialize(this, e, 0, -1, [2], null);
         }
         static M() {
@@ -18723,19 +18705,8 @@
               (jt.sm_m = {
                 proto: jt,
                 fields: {
-                  numerical_value: {
-                    n: 1,
-                    br: i.FE.readUint32,
-                    bw: i.Xc.writeUint32,
-                  },
-                  embedding_values: {
-                    n: 2,
-                    r: !0,
-                    q: !0,
-                    br: i.FE.readFloat,
-                    pbr: i.FE.readPackedFloat,
-                    bw: i.Xc.writeRepeatedFloat,
-                  },
+                  result: { n: 1, br: i.FE.readEnum, bw: i.Xc.writeEnum },
+                  embedding_data: { n: 2, c: xt, r: !0, q: !0 },
                 },
               }),
             jt.sm_m
@@ -18773,15 +18744,15 @@
           return jt.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_GetEmbeddingValues_Response_EmbeddingData";
+          return "CMsgSteamLearn_GetEmbeddingValues_Response";
         }
       }
       class xt extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            xt.prototype.project_id || i.aR(xt.M()),
-            s.initialize(this, e, 0, -1, [6], null);
+            xt.prototype.numerical_value || i.aR(xt.M()),
+            s.initialize(this, e, 0, -1, [2], null);
         }
         static M() {
           return (
@@ -18789,36 +18760,19 @@
               (xt.sm_m = {
                 proto: xt,
                 fields: {
-                  project_id: {
+                  numerical_value: {
                     n: 1,
                     br: i.FE.readUint32,
                     bw: i.Xc.writeUint32,
                   },
-                  published_version: {
+                  embedding_values: {
                     n: 2,
-                    br: i.FE.readUint32,
-                    bw: i.Xc.writeUint32,
-                  },
-                  train_id: { n: 3, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
-                  export_name: {
-                    n: 4,
-                    br: i.FE.readString,
-                    bw: i.Xc.writeString,
-                  },
-                  result_count: {
-                    n: 5,
-                    br: i.FE.readUint32,
-                    bw: i.Xc.writeUint32,
-                  },
-                  values: {
-                    n: 6,
                     r: !0,
                     q: !0,
                     br: i.FE.readFloat,
                     pbr: i.FE.readPackedFloat,
                     bw: i.Xc.writeRepeatedFloat,
                   },
-                  fetch_id: { n: 7, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
                 },
               }),
             xt.sm_m
@@ -18856,15 +18810,15 @@
           return xt.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_GetNearestEmbedding_Request";
+          return "CMsgSteamLearn_GetEmbeddingValues_Response_EmbeddingData";
         }
       }
       class Ct extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Ct.prototype.result || i.aR(Ct.M()),
-            s.initialize(this, e, 0, -1, [2], null);
+            Ct.prototype.project_id || i.aR(Ct.M()),
+            s.initialize(this, e, 0, -1, [6], null);
         }
         static M() {
           return (
@@ -18872,8 +18826,36 @@
               (Ct.sm_m = {
                 proto: Ct,
                 fields: {
-                  result: { n: 1, br: i.FE.readEnum, bw: i.Xc.writeEnum },
-                  near_embeddings: { n: 2, c: Tt, r: !0, q: !0 },
+                  project_id: {
+                    n: 1,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
+                  },
+                  published_version: {
+                    n: 2,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
+                  },
+                  train_id: { n: 3, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
+                  export_name: {
+                    n: 4,
+                    br: i.FE.readString,
+                    bw: i.Xc.writeString,
+                  },
+                  result_count: {
+                    n: 5,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
+                  },
+                  values: {
+                    n: 6,
+                    r: !0,
+                    q: !0,
+                    br: i.FE.readFloat,
+                    pbr: i.FE.readPackedFloat,
+                    bw: i.Xc.writeRepeatedFloat,
+                  },
+                  fetch_id: { n: 7, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
                 },
               }),
             Ct.sm_m
@@ -18911,15 +18893,15 @@
           return Ct.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMsgSteamLearn_GetNearestEmbedding_Response";
+          return "CMsgSteamLearn_GetNearestEmbedding_Request";
         }
       }
       class Tt extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Tt.prototype.value || i.aR(Tt.M()),
-            s.initialize(this, e, 0, -1, [3], null);
+            Tt.prototype.result || i.aR(Tt.M()),
+            s.initialize(this, e, 0, -1, [2], null);
         }
         static M() {
           return (
@@ -18927,16 +18909,8 @@
               (Tt.sm_m = {
                 proto: Tt,
                 fields: {
-                  value: { n: 1, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
-                  distance: { n: 2, br: i.FE.readFloat, bw: i.Xc.writeFloat },
-                  embedding_values: {
-                    n: 3,
-                    r: !0,
-                    q: !0,
-                    br: i.FE.readFloat,
-                    pbr: i.FE.readPackedFloat,
-                    bw: i.Xc.writeRepeatedFloat,
-                  },
+                  result: { n: 1, br: i.FE.readEnum, bw: i.Xc.writeEnum },
+                  near_embeddings: { n: 2, c: Wt, r: !0, q: !0 },
                 },
               }),
             Tt.sm_m
@@ -18974,31 +18948,94 @@
           return Tt.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
+          return "CMsgSteamLearn_GetNearestEmbedding_Response";
+        }
+      }
+      class Wt extends s {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            Wt.prototype.value || i.aR(Wt.M()),
+            s.initialize(this, e, 0, -1, [3], null);
+        }
+        static M() {
+          return (
+            Wt.sm_m ||
+              (Wt.sm_m = {
+                proto: Wt,
+                fields: {
+                  value: { n: 1, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
+                  distance: { n: 2, br: i.FE.readFloat, bw: i.Xc.writeFloat },
+                  embedding_values: {
+                    n: 3,
+                    r: !0,
+                    q: !0,
+                    br: i.FE.readFloat,
+                    pbr: i.FE.readPackedFloat,
+                    bw: i.Xc.writeRepeatedFloat,
+                  },
+                },
+              }),
+            Wt.sm_m
+          );
+        }
+        static MBF() {
+          return Wt.sm_mbf || (Wt.sm_mbf = i.Bh(Wt.M())), Wt.sm_mbf;
+        }
+        toObject(e = !1) {
+          return Wt.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return i.TA(Wt.M(), e, t);
+        }
+        static fromObject(e) {
+          return i.aD(Wt.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new n.BinaryReader(e),
+            r = new Wt();
+          return Wt.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return i.F(Wt.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new n.BinaryWriter();
+          return Wt.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          i.l2(Wt.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new n.BinaryWriter();
+          return Wt.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
           return "CMsgSteamLearn_GetNearestEmbedding_Response_NearEmbedding";
         }
       }
-      var Wt;
+      var It;
       !(function (e) {
         (e.CreateProject = function (e, t) {
-          return e.SendMsg("SteamLearn.CreateProject#1", (0, a.MD)(Fe, t), Ee, {
+          return e.SendMsg("SteamLearn.CreateProject#1", (0, a.MD)(Ee, t), Oe, {
             ePrivilege: 1,
           });
         }),
           (e.EditProject = function (e, t) {
-            return e.SendMsg("SteamLearn.EditProject#1", (0, a.MD)(Pe, t), Ne, {
+            return e.SendMsg("SteamLearn.EditProject#1", (0, a.MD)(Ne, t), Ae, {
               ePrivilege: 1,
             });
           }),
           (e.ListProjects = function (e, t) {
             return e.SendMsg(
               "SteamLearn.ListProjects#1",
-              (0, a.MD)(Oe, t),
-              Re,
+              (0, a.MD)(Re, t),
+              je,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
           (e.GetProject = function (e, t) {
-            return e.SendMsg("SteamLearn.GetProject#1", (0, a.MD)(je, t), xe, {
+            return e.SendMsg("SteamLearn.GetProject#1", (0, a.MD)(xe, t), Ce, {
               bConstMethod: !0,
               ePrivilege: 1,
             });
@@ -19006,37 +19043,37 @@
           (e.PublishProject = function (e, t) {
             return e.SendMsg(
               "SteamLearn.PublishProject#1",
-              (0, a.MD)(Ae, t),
-              Ue,
+              (0, a.MD)(Ue, t),
+              De,
               { ePrivilege: 1 },
             );
           }),
           (e.RegisterDataSource = function (e, t) {
             return e.SendMsg(
               "SteamLearn.RegisterDataSource#1",
-              (0, a.MD)(re, t),
-              ne,
+              (0, a.MD)(ne, t),
+              ie,
               { ePrivilege: 0, eWebAPIKeyRequirement: 1 },
             );
           }),
           (e.ListDataSources = function (e, t) {
             return e.SendMsg(
               "SteamLearn.ListDataSources#1",
-              (0, a.MD)(Ce, t),
-              Te,
+              (0, a.MD)(Te, t),
+              We,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
           (e.GetDataSource = function (e, t) {
             return e.SendMsg(
               "SteamLearn.GetDataSource#1",
-              (0, a.MD)(We, t),
-              Ie,
+              (0, a.MD)(Ie, t),
+              Pe,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
           (e.CacheData = function (e, t) {
-            return e.SendMsg("SteamLearn.CacheData#1", (0, a.MD)(ie, t), ae, {
+            return e.SendMsg("SteamLearn.CacheData#1", (0, a.MD)(ae, t), se, {
               ePrivilege: 0,
               eWebAPIKeyRequirement: 1,
             });
@@ -19044,13 +19081,13 @@
           (e.SnapshotProject = function (e, t) {
             return e.SendMsg(
               "SteamLearn.SnapshotProject#1",
-              (0, a.MD)(se, t),
-              oe,
+              (0, a.MD)(oe, t),
+              le,
               { ePrivilege: 0, eWebAPIKeyRequirement: 1 },
             );
           }),
           (e.Inference = function (e, t) {
-            return e.SendMsg("SteamLearn.Inference#1", (0, a.MD)(le, t), ce, {
+            return e.SendMsg("SteamLearn.Inference#1", (0, a.MD)(ce, t), ue, {
               ePrivilege: 0,
               eWebAPIKeyRequirement: 1,
             });
@@ -19058,121 +19095,121 @@
           (e.InferenceMetadata = function (e, t) {
             return e.SendMsg(
               "SteamLearn.InferenceMetadata#1",
-              (0, a.MD)(ue, t),
-              de,
+              (0, a.MD)(de, t),
+              fe,
               { ePrivilege: 0, eWebAPIKeyRequirement: 1 },
             );
           }),
           (e.InferenceBackend = function (e, t) {
             return e.SendMsg(
               "SteamLearn.InferenceBackend#1",
-              (0, a.MD)(ht, t),
-              pt,
+              (0, a.MD)(pt, t),
+              yt,
               { ePrivilege: 1 },
             );
           }),
           (e.BatchOperation = function (e, t) {
             return e.SendMsg(
               "SteamLearn.BatchOperation#1",
-              (0, a.MD)(ze, t),
-              Se,
+              (0, a.MD)(Se, t),
+              Fe,
               { ePrivilege: 0, eWebAPIKeyRequirement: 1 },
             );
           }),
           (e.GetAccessTokensWeb = function (e, t) {
             return e.SendMsg(
               "SteamLearn.GetAccessTokensWeb#1",
-              (0, a.MD)(qe, t),
-              Ze,
+              (0, a.MD)(Ze, t),
+              $e,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
           (e.Train = function (e, t) {
-            return e.SendMsg("SteamLearn.Train#1", (0, a.MD)($e, t), He, {
+            return e.SendMsg("SteamLearn.Train#1", (0, a.MD)(Ve, t), Ge, {
               ePrivilege: 1,
             });
           }),
           (e.GetFetchStatusVersions = function (e, t) {
             return e.SendMsg(
               "SteamLearn.GetFetchStatusVersions#1",
-              (0, a.MD)(Ge, t),
-              Ke,
+              (0, a.MD)(Ke, t),
+              Qe,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
           (e.GetTrainStatusVersions = function (e, t) {
             return e.SendMsg(
               "SteamLearn.GetTrainStatusVersions#1",
-              (0, a.MD)(Qe, t),
-              Je,
+              (0, a.MD)(Je, t),
+              et,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
           (e.GetBatchedStatus = function (e, t) {
             return e.SendMsg(
               "SteamLearn.GetBatchedStatus#1",
-              (0, a.MD)(et, t),
-              tt,
+              (0, a.MD)(tt, t),
+              rt,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
           (e.GetFetchStatus = function (e, t) {
             return e.SendMsg(
               "SteamLearn.GetFetchStatus#1",
-              (0, a.MD)(rt, t),
-              nt,
+              (0, a.MD)(nt, t),
+              it,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
           (e.GetTrainStatus = function (e, t) {
             return e.SendMsg(
               "SteamLearn.GetTrainStatus#1",
-              (0, a.MD)(at, t),
-              st,
+              (0, a.MD)(st, t),
+              ot,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
           (e.GetTrainLogs = function (e, t) {
             return e.SendMsg(
               "SteamLearn.GetTrainLogs#1",
-              (0, a.MD)(ct, t),
-              ut,
+              (0, a.MD)(ut, t),
+              dt,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
           (e.SetTrainLive = function (e, t) {
             return e.SendMsg(
               "SteamLearn.SetTrainLive#1",
-              (0, a.MD)(dt, t),
-              ft,
+              (0, a.MD)(ft, t),
+              mt,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
           (e.GetLogEvents = function (e, t) {
             return e.SendMsg(
               "SteamLearn.GetLogEvents#1",
-              (0, a.MD)(Ft, t),
-              Et,
+              (0, a.MD)(Et, t),
+              Ot,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
           (e.GetEmbeddingValues = function (e, t) {
             return e.SendMsg(
               "SteamLearn.GetEmbeddingValues#1",
-              (0, a.MD)(Ot, t),
-              Rt,
+              (0, a.MD)(Rt, t),
+              jt,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
           (e.GetNearestEmbedding = function (e, t) {
             return e.SendMsg(
               "SteamLearn.GetNearestEmbedding#1",
-              (0, a.MD)(xt, t),
-              Ct,
+              (0, a.MD)(Ct, t),
+              Tt,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           });
-      })(Wt || (Wt = {}));
+      })(It || (It = {}));
     },
     7785: (e, t, r) => {
       "use strict";

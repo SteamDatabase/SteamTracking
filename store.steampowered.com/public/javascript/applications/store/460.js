@@ -2397,6 +2397,11 @@
                   first_seen: { n: 9, c: E },
                   last_seen: { n: 10, c: E },
                   os_type: { n: 11, br: n.FE.readInt32, bw: n.Xc.writeInt32 },
+                  authentication_type: {
+                    n: 12,
+                    br: n.FE.readEnum,
+                    bw: n.Xc.writeEnum,
+                  },
                 },
               }),
             O.sm_m

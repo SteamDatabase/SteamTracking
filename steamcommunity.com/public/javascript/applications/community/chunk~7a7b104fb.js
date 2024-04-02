@@ -3169,7 +3169,7 @@
     },
     22925: (e, t, s) => {
       "use strict";
-      s.d(t, { Z: () => T });
+      s.d(t, { Z: () => I });
       var n = s(85556),
         a = s(80751),
         i = s.n(a),
@@ -3192,7 +3192,8 @@
         b = s(62210),
         E = s(67005),
         M = s(77131);
-      class w {
+      const w = "(1)";
+      class D {
         constructor(e) {
           (this.m_TextFilterPreferences = void 0),
             (this.m_mapPlayerCache = new Map()),
@@ -3292,7 +3293,7 @@
         }
         ObfuscateString(e) {
           try {
-            const t = new TextEncoder().encode(e);
+            const t = new TextEncoder().encode(w + e);
             return v.JQ(t);
           } catch (e) {
             return "";
@@ -3301,7 +3302,13 @@
         DeobfuscateString(e) {
           try {
             const t = v.b$(e);
-            return new TextDecoder().decode(t);
+            let s = new TextDecoder().decode(t);
+            return s.startsWith(w)
+              ? ((s = s.slice(3)), s)
+              : (console.log(
+                  "DeobfuscateString given invalid base64 data, ignoring: " + e,
+                ),
+                "");
           } catch (e) {
             return "";
           }
@@ -3626,9 +3633,9 @@
               );
         }
       }
-      let D;
-      function B() {
-        if (!D) {
+      let B;
+      function T() {
+        if (!B) {
           const e = new Set();
           let t = { sessionid: S.De.SESSIONID, origin: (0, S.Kc)() };
           i()
@@ -3641,40 +3648,40 @@
                 (0, C.my)(s.efriendrelationship) &&
                   e.add(new c.K(s.ulfriendid).GetAccountID());
             }),
-            (D = (t) => e.has(t));
+            (B = (t) => e.has(t));
         }
-        return D;
+        return B;
       }
-      (0, n.gn)([r.LO], w.prototype, "m_TextFilterPreferences", void 0),
-        (0, n.gn)([r.LO], w.prototype, "m_mapPlayerCache", void 0),
-        (0, n.gn)([r.LO], w.prototype, "m_regexBannedWords", void 0),
-        (0, n.gn)([r.LO], w.prototype, "m_regexCleanWords", void 0),
-        (0, n.gn)([p.a], w.prototype, "OnTextFilterDictionaryChanged", null),
-        (0, n.gn)([r.aD], w.prototype, "UpdateCommunityPreferences", null),
-        (0, n.gn)([r.aD], w.prototype, "BRebuildFilter", null);
-      class T {
+      (0, n.gn)([r.LO], D.prototype, "m_TextFilterPreferences", void 0),
+        (0, n.gn)([r.LO], D.prototype, "m_mapPlayerCache", void 0),
+        (0, n.gn)([r.LO], D.prototype, "m_regexBannedWords", void 0),
+        (0, n.gn)([r.LO], D.prototype, "m_regexCleanWords", void 0),
+        (0, n.gn)([p.a], D.prototype, "OnTextFilterDictionaryChanged", null),
+        (0, n.gn)([r.aD], D.prototype, "UpdateCommunityPreferences", null),
+        (0, n.gn)([r.aD], D.prototype, "BRebuildFilter", null);
+      class I {
         GetChat(e, t) {
           return this.m_mapChats.get(e) || this.m_mapChats.get(t);
         }
         GetOrCreateChat(e, t) {
           let s = this.GetChat(e, t);
-          return s || ((s = new I()), this.m_mapChats.set(e || t, s)), s;
+          return s || ((s = new k()), this.m_mapChats.set(e || t, s)), s;
         }
         static Get() {
           return (
-            T.s_Singleton ||
-              ((T.s_Singleton = new T()),
+            I.s_Singleton ||
+              ((I.s_Singleton = new I()),
               "dev" == S.De.WEB_UNIVERSE &&
-                (window.g_BroadcastChatStore = T.s_Singleton)),
-            T.s_Singleton
+                (window.g_BroadcastChatStore = I.s_Singleton)),
+            I.s_Singleton
           );
         }
         constructor() {
           (this.m_mapChats = new Map()), (0, r.rC)(this);
         }
       }
-      (0, n.gn)([r.LO], T.prototype, "m_mapChats", void 0);
-      class I {
+      (0, n.gn)([r.LO], I.prototype, "m_mapChats", void 0);
+      class k {
         constructor() {
           (this.m_ulBroadcastChannelID = ""),
             (this.m_ulChatID = ""),
@@ -3711,7 +3718,7 @@
             ));
         }
         InitTextFilter() {
-          this.m_textFilterStore = new w({ BIsFriend: B() });
+          this.m_textFilterStore = new D({ BIsFriend: T() });
           let e = 0;
           if ("" !== S.L7.steamid) {
             e = new c.K(S.L7.steamid).GetAccountID();
@@ -4348,15 +4355,15 @@
             (this.m_rgChatMessages = []);
         }
       }
-      (0, n.gn)([r.LO], I.prototype, "m_mapChannelModeratorUsers", void 0),
-        (0, n.gn)([r.LO], I.prototype, "m_mapBroadcastModeratorUsers", void 0),
-        (0, n.gn)([r.LO], I.prototype, "m_nRateLimitSeconds", void 0),
-        (0, n.gn)([r.LO], I.prototype, "m_bRateLimited", void 0),
-        (0, n.gn)([r.LO], I.prototype, "m_rgChatMessages", void 0),
-        (0, n.gn)([r.LO], I.prototype, "m_latestAnnouncement", void 0),
-        (0, n.gn)([p.a], I.prototype, "FetchChatModerators", null),
-        (0, n.gn)([p.a], I.prototype, "RequestLoop", null),
-        (0, n.gn)([p.a], I.prototype, "MuteUserForSession", null);
+      (0, n.gn)([r.LO], k.prototype, "m_mapChannelModeratorUsers", void 0),
+        (0, n.gn)([r.LO], k.prototype, "m_mapBroadcastModeratorUsers", void 0),
+        (0, n.gn)([r.LO], k.prototype, "m_nRateLimitSeconds", void 0),
+        (0, n.gn)([r.LO], k.prototype, "m_bRateLimited", void 0),
+        (0, n.gn)([r.LO], k.prototype, "m_rgChatMessages", void 0),
+        (0, n.gn)([r.LO], k.prototype, "m_latestAnnouncement", void 0),
+        (0, n.gn)([p.a], k.prototype, "FetchChatModerators", null),
+        (0, n.gn)([p.a], k.prototype, "RequestLoop", null),
+        (0, n.gn)([p.a], k.prototype, "MuteUserForSession", null);
     },
   },
 ]);

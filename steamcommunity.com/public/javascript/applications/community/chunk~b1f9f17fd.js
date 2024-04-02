@@ -28407,10 +28407,10 @@
             { editModel: o } = e;
           let l = o.GetEventModel(),
             r = new Array();
+          i(r, (0, E.Xx)("#Sale_PageConfigOptions"), "SalePageEdit_Config");
+          const s = (0, Ee.X)(o.GetClanSteamID(), !1);
           if (
-            (i(r, (0, E.Xx)("#Sale_PageConfigOptions"), "SalePageEdit_Config"),
-            ((0, Ee.X)(o.GetClanSteamID(), !1) ||
-              l.GetTaggedItems().length > 0) &&
+            ((s || l.GetTaggedItems().length > 0) &&
               i(
                 r,
                 (0, E.Xx)(
@@ -28419,7 +28419,7 @@
                 ),
                 "SalePageEdit_TaggedItems",
               ),
-            (0, Ee.X)(o.GetClanSteamID(), !1) ||
+            s ||
               (null === (t = l.jsondata.sorting_tiers) || void 0 === t
                 ? void 0
                 : t.length) > 0)
@@ -28442,7 +28442,7 @@
           ),
             (l.BHasTag("contenthub") || l.BUsesContentHubForItemSource()) &&
               i(r, "Content Hub Settings", "SalePageEdit_ContentHub");
-          let s = !1;
+          let c = !1;
           return (
             l.GetSaleSections().forEach((e, t) => {
               const a = d.createElement(re.GU, {
@@ -28451,12 +28451,13 @@
                   editLanguage: o.GetCurEditLanguage(),
                   index: t,
                 }),
-                c = Object.assign(Object.assign({}, (0, re.OC)(e, l, n)), {
+                s = Object.assign(Object.assign({}, (0, re.OC)(e, l, n)), {
                   color: e.label_color,
                 }),
                 m = "SaleSection_" + e.unique_id;
-              i(r, a, m, s, c), "tabs" === e.section_type && (s = !0);
+              i(r, a, m, c, s), "tabs" === e.section_type && (c = !0);
             }),
+            s && i(r, "(VO) Custom CSS Editor", "SalePageEdit_CustomCSSCode"),
             d.createElement(
               O.SV,
               null,
@@ -28652,140 +28653,148 @@
             t.GetName(),
           ]),
           [l, r] = d.useState(() => o + "_custom.css");
-        return d.createElement(
-          Ee.s,
-          {
-            className: Ge.ValveOnlySettingsCtn,
-            clanSteamID: t.GetClanSteamID(),
-          },
-          Boolean(i)
-            ? d.createElement(
-                "div",
-                { className: Ge.CustomCssCtn },
-                d.createElement(
+        return Ae.WrapWithNavWaypoint(
+          "SalePageEdit_CustomCSSCode",
+          d.createElement(
+            Ee.s,
+            {
+              className: Ge.ValveOnlySettingsCtn,
+              clanSteamID: t.GetClanSteamID(),
+              id: "SalePageEdit_CustomCSSCode",
+            },
+            Boolean(i)
+              ? d.createElement(
                   "div",
-                  { className: Ge.Title },
-                  " (VO) Custom CSS ",
-                ),
-                d.createElement(
-                  "p",
-                  null,
-                  "Add custom CSS which is only added to the store's sale page header. Please include nocache=1 in url when viewing your latest changes on the store. Avoid targeting the generated class names like 'broadcast_embeddable_Event_1A0NY' as the 1A0NY is programmatically generated and can be changed by the compiler with future props.",
-                ),
-                d.createElement("h3", null, "Custom Fonts"),
-                d.createElement(
-                  "p",
-                  null,
-                  " If you're going to import custom fonts you need to declare each family separately or they won't import correctly. ",
-                ),
-                d.createElement(
-                  "div",
-                  { className: Ge.CodeSnippet },
-                  d.createElement("code", null, "'//For Example'"),
-                  d.createElement("br", null),
+                  { className: Ge.CustomCssCtn },
                   d.createElement(
-                    "code",
-                    null,
-                    "@import url('https://fonts.googleapis.com/css2?family=Protest+Strike&display=swap'); ",
+                    "div",
+                    { className: Ge.Title },
+                    " (VO) Custom CSS ",
                   ),
-                  d.createElement("br", null),
                   d.createElement(
-                    "code",
+                    "p",
                     null,
-                    "@import url('https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap');",
+                    "Add custom CSS which is only added to the store's sale page header. Please include nocache=1 in url when viewing your latest changes on the store. Avoid targeting the generated class names like 'broadcast_embeddable_Event_1A0NY' as the 1A0NY is programmatically generated and can be changed by the compiler with future props.",
                   ),
-                ),
-                d.createElement(
-                  "p",
-                  null,
-                  "Additionally, when you declare a font-family in your custom CSS do not wrap the name of the family in quotation marks.",
-                ),
-                d.createElement(
-                  "div",
-                  { className: Ge.CodeSnippet },
-                  d.createElement("code", null, "'//For Example'"),
-                  d.createElement("br", null),
-                  d.createElement("code", null, "font-family: Protest Strike"),
-                  " will work, ",
+                  d.createElement("h3", null, "Custom Fonts"),
                   d.createElement(
-                    "code",
+                    "p",
                     null,
-                    'font-family: "Protest Strike"',
+                    " If you're going to import custom fonts you need to declare each family separately or they won't import correctly. ",
                   ),
-                  " will NOT",
-                ),
-                d.createElement(
-                  "div",
-                  { className: Ge.ButtonGroup },
-                  d.createElement("input", {
-                    type: "file",
-                    onChange: (e) => {
-                      var a;
-                      const n =
-                        null === (a = e.target.files) || void 0 === a
-                          ? void 0
-                          : a[0];
-                      if (n) {
-                        r(e.target.files[0].name);
-                        const a = new FileReader();
-                        (a.onload = (a) => {
-                          const n = a.target.result.toString();
-                          (t.GetEventModel().jsondata.sale_custom_css = n),
-                            t.SetDirty(s.jB.jsondata_sales),
-                            (e.target.value = "");
-                        }),
-                          a.readAsText(n);
-                      }
-                    },
-                  }),
                   d.createElement(
-                    u.zx,
-                    {
-                      onClick: () => {
-                        const e = document.createElement("a"),
-                          t = new Blob([n], { type: "text/css" });
-                        (e.href = URL.createObjectURL(t)),
-                          (e.download = l),
-                          document.body.appendChild(e),
-                          e.click();
+                    "div",
+                    { className: Ge.CodeSnippet },
+                    d.createElement("code", null, "'//For Example'"),
+                    d.createElement("br", null),
+                    d.createElement(
+                      "code",
+                      null,
+                      "@import url('https://fonts.googleapis.com/css2?family=Protest+Strike&display=swap'); ",
+                    ),
+                    d.createElement("br", null),
+                    d.createElement(
+                      "code",
+                      null,
+                      "@import url('https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap');",
+                    ),
+                  ),
+                  d.createElement(
+                    "p",
+                    null,
+                    "Additionally, when you declare a font-family in your custom CSS do not wrap the name of the family in quotation marks.",
+                  ),
+                  d.createElement(
+                    "div",
+                    { className: Ge.CodeSnippet },
+                    d.createElement("code", null, "'//For Example'"),
+                    d.createElement("br", null),
+                    d.createElement(
+                      "code",
+                      null,
+                      "font-family: Protest Strike",
+                    ),
+                    " will work, ",
+                    d.createElement(
+                      "code",
+                      null,
+                      'font-family: "Protest Strike"',
+                    ),
+                    " will NOT",
+                  ),
+                  d.createElement(
+                    "div",
+                    { className: Ge.ButtonGroup },
+                    d.createElement("input", {
+                      type: "file",
+                      onChange: (e) => {
+                        var a;
+                        const n =
+                          null === (a = e.target.files) || void 0 === a
+                            ? void 0
+                            : a[0];
+                        if (n) {
+                          r(e.target.files[0].name);
+                          const a = new FileReader();
+                          (a.onload = (a) => {
+                            const n = a.target.result.toString();
+                            (t.GetEventModel().jsondata.sale_custom_css = n),
+                              t.SetDirty(s.jB.jsondata_sales),
+                              (e.target.value = "");
+                          }),
+                            a.readAsText(n);
+                        }
                       },
-                    },
-                    "Export",
+                    }),
+                    d.createElement(
+                      u.zx,
+                      {
+                        onClick: () => {
+                          const e = document.createElement("a"),
+                            t = new Blob([n], { type: "text/css" });
+                          (e.href = URL.createObjectURL(t)),
+                            (e.download = l),
+                            document.body.appendChild(e),
+                            e.click();
+                        },
+                      },
+                      "Export",
+                    ),
+                  ),
+                  d.createElement(
+                    "div",
+                    { className: Ge.CodeEditor },
+                    d.createElement(oa.ZP, {
+                      width: "100%",
+                      height: "100%",
+                      language: "css",
+                      theme: "vs-dark",
+                      value: n || "",
+                      options: {
+                        selectOnLineNumbers: !0,
+                        tabCompletion: "on",
+                        colorDecorators: !0,
+                        scrollBeyondLastLine: !1,
+                        automaticLayout: !0,
+                      },
+                      onChange: (e) => {
+                        t.GetEventModel().jsondata.sale_custom_css != e &&
+                          ((t.GetEventModel().jsondata.sale_custom_css = e),
+                          t.SetDirty(s.jB.jsondata_sales));
+                      },
+                    }),
+                  ),
+                )
+              : d.createElement(
+                  "div",
+                  { className: Ge.SettingCtn },
+                  d.createElement(
+                    "p",
+                    null,
+                    "The custom CSS editor is disabled. The sale page needs to be setup to use store/sale. This is a Valve Only setting found in the General Configuration Section",
                   ),
                 ),
-                d.createElement(
-                  "div",
-                  { className: Ge.CodeEditor },
-                  d.createElement(oa.ZP, {
-                    width: "100%",
-                    height: "100%",
-                    language: "css",
-                    theme: "vs-dark",
-                    value: n || "",
-                    options: {
-                      selectOnLineNumbers: !0,
-                      tabCompletion: "on",
-                      colorDecorators: !0,
-                      scrollBeyondLastLine: !1,
-                      automaticLayout: !0,
-                    },
-                    onChange: (e) => {
-                      t.GetEventModel().jsondata.sale_custom_css != e &&
-                        ((t.GetEventModel().jsondata.sale_custom_css = e),
-                        t.SetDirty(s.jB.jsondata_sales));
-                    },
-                  }),
-                ),
-              )
-            : d.createElement(
-                "div",
-                { className: Ge.SettingCtn },
-                d.createElement(
-                  "p",
-                  null,
-                  "The custom CSS editor is disabled. The sale page needs to be setup to use store/sale. This is a Valve Only setting found in the General Configuration Section",
-                ),
-              ),
+          ),
         );
       }
       function ra(e) {

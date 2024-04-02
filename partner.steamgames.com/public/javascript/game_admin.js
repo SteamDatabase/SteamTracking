@@ -1566,30 +1566,42 @@ function DeleteAssetOverride( nAltAssetIndex, nItemID )
 
 function ToggleRatingVisibility( rating )
 {
-	var bHasRating = $J( "#HasRatingCheckbox_" + rating ).attr( "checked" );
-
+	var bAgreedToDisclaimer = $J( "#DisclaimerCheckbox_" + rating ).attr( "checked" );
+	var bHasCheckedRating = $J( "#HasRatingCheckbox_" + rating ).attr( "checked" );
 	var container = $J( "#RatingDetails_" + rating );
+	var elDisclaimer = $J( '#RatingDisclaimer_' + rating );
+	var bHasSavedRating = container.data( "has_rating" );
 
-	if ( bHasRating )
+	elDisclaimer.hide();
+	
+	// must agree to disclaimer first before editing rating
+	if ( !bHasSavedRating && !bAgreedToDisclaimer && bHasCheckedRating )
+	{
+		elDisclaimer.animate( { opacity: 'show', height: 'show'}, 500 );
+		return;
+	}
+	
+	if ( bHasCheckedRating )
 	{
 		container.animate( { opacity: 'show', height: 'show'}, 500 );
 	}
 	else
 	{
-		container.animate( { opacity: 'hide', height: 'hide'}, 500 );
+		// reset all of the data on clear to prevent incorrect save
+		container.animate({opacity: 'hide', height: 'hide'}, 500);
 
-		container.find( "input[type=hidden]" ).each( function( i, e ) {
-			SetFancyCheckboxUnchecked( $J( e ).parent().attr( "id" ) );
-		} );
-		container.find( "input[type=text]" ).each( function( i, e ) {
-			$J( e ).val( "" );
-		} );
-		container.find( "textarea" ).each( function( i, e ) {
-			$J( e ).val( "" );
-		} );
-		container.find( "select" ).each( function( i, e ) {
-			$J( e ).val( "" );
-		} );
+		container.find("input[type=hidden]").each(function (i, e) {
+			SetFancyCheckboxUnchecked($J(e).parent().attr("id"));
+		});
+		container.find("input[type=text]").each(function (i, e) {
+			$J(e).val("");
+		});
+		container.find("textarea").each(function (i, e) {
+			$J(e).val("");
+		});
+		container.find("select").each(function (i, e) {
+			$J(e).val("");
+		});
 	}
 }
 

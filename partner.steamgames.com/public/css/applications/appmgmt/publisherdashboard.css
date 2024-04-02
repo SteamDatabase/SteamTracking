@@ -314,6 +314,12 @@
   box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.4);
   transition: box-shadow 0.3s ease-in-out;
 }
+._2OvrUC8yEPw0y-ETj60eRx._384GPMgcGpGAZupvxEFWks {
+  opacity: 0.75;
+}
+._2OvrUC8yEPw0y-ETj60eRx._384GPMgcGpGAZupvxEFWks ._3Yf1aBV0kEJOFF9_9v_Ok1 {
+  filter: blur(18px) saturate(0.2) brightness(0.5);
+}
 ._2OvrUC8yEPw0y-ETj60eRx:hover {
   box-shadow: 0px 0px 3px rgba(255, 255, 255, 0.8) inset;
 }
@@ -467,7 +473,7 @@
   grid-template-areas: "image text buttons" "status status buttons";
 }
 .VXok7mKJpXFIBjQBLIvh-._3pWi_px3yJX0azhLcPr_LN ._1n53rAYRtJXXRA-lRajbXF {
-  margin: 0 0 0 14px;
+  margin: 0 8px 0 14px;
 }
 .VXok7mKJpXFIBjQBLIvh-._1yzO7XD_gqqLhc_RcqM5y6 ._1grQoVDvG8Nr4_coXHDlAv {
   filter: blur(26px);
@@ -502,7 +508,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  margin: 0 0 6px 0;
+  margin: 2px 8px 1px 0;
   justify-content: center;
   gap: 6px;
 }
@@ -553,6 +559,7 @@
   position: relative;
   grid-area: status;
   display: flex;
+  margin-top: 4px;
 }
 ._25vZ86EFjtg3d_5IrgrL-C {
   display: flex;
@@ -621,4 +628,7 @@
 }
 .KJBbOCy-N47ZdyXKj82el {
   color: #cf980c;
+}
+._1dMX7vWFF-yQ7CzRaOEooa {
+  color: #cf520c;
 }

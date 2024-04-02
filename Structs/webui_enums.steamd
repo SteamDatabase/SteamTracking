@@ -4185,6 +4185,14 @@ enum UnnamedEnumeaf70d8cee21d56c
 	DesktopUI = 3;
 }
 
+enum UnnamedEnumeb5f060c69d3e927
+{
+	Invalid = 0;
+	None = 1;
+	Standard = 2;
+	Featured = 3;
+}
+
 enum UnnamedEnumeb660645b84e5c96
 {
 	Expanded = 0;

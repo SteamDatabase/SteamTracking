@@ -77,7 +77,7 @@
               /^https?:\/\/[^\/]*(?:valvesoftware|steampowered).com\/(?:(curator|dev|developer|pub|publisher|franchise)\/[0-9a-zA-Z\-_]+\/)?sale\//),
             (this.m_eItemType = e.item_type()),
             (this.m_unID = e.id()),
-            (this.m_bVisible = e.visible()),
+            (this.m_bVisible = !!e.visible()),
             (this.m_strName = e.name()),
             (this.m_strStoreURLPath = e.store_url_path()),
             (this.m_unAppID = e.appid()),
@@ -107,11 +107,11 @@
         MergeData(e, t) {
           t.include_assets &&
             !this.m_Assets &&
-            ((this.m_Assets = new v(e.assets(), e.id())),
+            ((this.m_Assets = new f(e.assets(), e.id())),
             (this.m_DataRequested.include_assets = !0)),
             t.include_assets_without_overrides &&
               !this.m_AssetsWithoutOverrides &&
-              ((this.m_AssetsWithoutOverrides = new v(
+              ((this.m_AssetsWithoutOverrides = new f(
                 e.assets_without_overrides(),
                 e.id(),
               )),
@@ -138,7 +138,8 @@
               !this.m_Trailers &&
               ((this.m_Trailers = new R(e.trailers())),
               (this.m_DataRequested.include_trailers = !0)),
-            t.include_tag_count > this.m_rgStoreTags.length &&
+            t.include_tag_count &&
+              t.include_tag_count > this.m_rgStoreTags.length &&
               this.m_DataRequested.include_tag_count < t.include_tag_count &&
               ((this.m_rgStoreTags = e.tags().map((e) => e.toObject())),
               (this.m_rgStoreTagIDs = this.m_rgStoreTags.map((e) => e.tagid)),
@@ -212,10 +213,8 @@
           return d.De.STORE_BASE_URL + this.m_strStoreURLPath;
         }
         GetStorePageURLWithOverride() {
-          var e;
-          return (null === (e = this.m_strStoreURLPathOverride) || void 0 === e
-            ? void 0
-            : e.length) > 0
+          return this.m_strStoreURLPathOverride &&
+            this.m_strStoreURLPathOverride.length > 0
             ? this.GetStorePageURLOverride()
             : this.GetStorePageURL();
         }
@@ -350,16 +349,24 @@
           );
         }
         GetFilteredReviewSummary() {
+          var e;
           return (
             this.BCheckDataRequestIncluded({ include_reviews: !0 }),
-            this.m_ReviewInfo.summary_filtered
+            null === (e = this.m_ReviewInfo) || void 0 === e
+              ? void 0
+              : e.summary_filtered
           );
         }
         GetUnfilteredReviewSummary() {
+          var e, t;
           return (
             this.BCheckDataRequestIncluded({ include_reviews: !0 }),
-            this.m_ReviewInfo.summary_unfiltered ||
-              this.m_ReviewInfo.summary_filtered
+            (null === (e = this.m_ReviewInfo) || void 0 === e
+              ? void 0
+              : e.summary_unfiltered) ||
+              (null === (t = this.m_ReviewInfo) || void 0 === t
+                ? void 0
+                : t.summary_filtered)
           );
         }
         GetShortDescription() {
@@ -447,7 +454,7 @@
           return (
             this.BCheckDataRequestIncluded({ include_basic_info: !0 }),
             this.m_BasicInfo
-              ? f([
+              ? v([
                   ...this.m_BasicInfo.developers,
                   ...this.m_BasicInfo.publishers,
                   ...this.m_BasicInfo.franchises,
@@ -458,19 +465,19 @@
         GetAllPublisherCreatorClans() {
           return (
             this.BCheckDataRequestIncluded({ include_basic_info: !0 }),
-            this.m_BasicInfo ? f(this.m_BasicInfo.publishers) : []
+            this.m_BasicInfo ? v(this.m_BasicInfo.publishers) : []
           );
         }
         GetAllDeveloperCreatorClans() {
           return (
             this.BCheckDataRequestIncluded({ include_basic_info: !0 }),
-            this.m_BasicInfo ? f(this.m_BasicInfo.developers) : []
+            this.m_BasicInfo ? v(this.m_BasicInfo.developers) : []
           );
         }
         GetAllFranchiseCreatorClans() {
           return (
             this.BCheckDataRequestIncluded({ include_basic_info: !0 }),
-            this.m_BasicInfo ? f(this.m_BasicInfo.franchises) : []
+            this.m_BasicInfo ? v(this.m_BasicInfo.franchises) : []
           );
         }
         GetCapsuleHeadline() {
@@ -595,7 +602,7 @@
           );
         }
         BIsCustomComingSoonDisplay() {
-          var e;
+          var e, t;
           return (
             !!this.BIsComingSoon() &&
             ((
@@ -606,7 +613,9 @@
               ? ["text_tba", "text_comingsoon"].includes(
                   this.m_ReleaseInfo.coming_soon_display,
                 )
-              : !!this.m_ReleaseInfo.custom_release_date_message)
+              : !!(null === (t = this.m_ReleaseInfo) || void 0 === t
+                  ? void 0
+                  : t.custom_release_date_message))
           );
         }
         BIsPrePurchase() {
@@ -680,11 +689,12 @@
           );
         }
         GetSelfPurchaseOption() {
+          var e;
           this.BCheckDataRequestIncluded({ include_all_purchase_options: !0 });
-          const e = 2 === this.m_eItemType ? "bundleid" : "packageid";
-          return this.m_rgPurchaseOptions.find(
-            (t) => t[e] && t[e] === this.m_unID,
-          );
+          const t = 2 === this.m_eItemType ? "bundleid" : "packageid";
+          return null === (e = this.m_rgPurchaseOptions) || void 0 === e
+            ? void 0
+            : e.find((e) => e[t] && e[t] === this.m_unID);
         }
         BHasAgeSafeScreenshots() {
           return this.GetOnlyAllAgesSafeScreenshots().length > 0;
@@ -717,16 +727,20 @@
           );
         }
         BHasHighlightTrailers() {
-          var e, t;
+          var e, t, s;
           return (
             this.BCheckDataRequestIncluded({ include_trailers: !0 }),
-            (null ===
-              (t =
-                null === (e = this.m_Trailers) || void 0 === e
+            (null !==
+              (s =
+                null ===
+                  (t =
+                    null === (e = this.m_Trailers) || void 0 === e
+                      ? void 0
+                      : e.GetHighlightTrailers()) || void 0 === t
                   ? void 0
-                  : e.GetHighlightTrailers()) || void 0 === t
-              ? void 0
-              : t.length) > 0
+                  : t.length) && void 0 !== s
+              ? s
+              : 0) > 0
           );
         }
         GetAllTrailers() {
@@ -784,12 +798,12 @@
           return this.m_strInternalName;
         }
       }
-      function f(e) {
+      function v(e) {
         if (!(null == e ? void 0 : e.length)) return [];
         const t = e.map((e) => e.creator_clan_account_id).filter((e) => !!e);
         return Array.from(new Set(t));
       }
-      class v {
+      class f {
         constructor(e, t) {
           const s = e.asset_url_format();
           s &&
@@ -1598,9 +1612,9 @@
               let g = null !== (i = e.packageid()) && void 0 !== i ? i : 0,
                 I = null !== (a = t.packageid()) && void 0 !== a ? a : 0;
               if (g != I) return g - I;
-              let f = null !== (n = e.bundleid()) && void 0 !== n ? n : 0,
-                v = null !== (o = t.bundleid()) && void 0 !== o ? o : 0;
-              if (f != v) return f - v;
+              let v = null !== (n = e.bundleid()) && void 0 !== n ? n : 0,
+                f = null !== (o = t.bundleid()) && void 0 !== o ? o : 0;
+              if (v != f) return v - f;
               let R = null !== (l = e.tagid()) && void 0 !== l ? l : 0,
                 b = null !== (u = t.tagid()) && void 0 !== u ? u : 0;
               if (R != b) return R - b;
@@ -2111,8 +2125,8 @@
             include_platforms: p,
             include_all_purchase_options: g,
             include_screenshots: I,
-            include_trailers: f,
-            include_ratings: v,
+            include_trailers: v,
+            include_ratings: f,
             include_tag_count: R,
             include_reviews: b,
             include_basic_info: C,
@@ -2130,8 +2144,8 @@
               include_platforms: p,
               include_all_purchase_options: g,
               include_screenshots: I,
-              include_trailers: f,
-              include_ratings: v,
+              include_trailers: v,
+              include_ratings: f,
               include_tag_count: R,
               include_reviews: b,
               include_basic_info: C,
@@ -2159,7 +2173,7 @@
               () =>
                 null == a ? void 0 : a.cancel("useStoreItemCache: unmounting")
             );
-          }, [e, t, r, d, h, m, p, g, I, f, v, R, b, C, S, G, y, B, k, c]),
+          }, [e, t, r, d, h, m, p, g, I, v, f, R, b, C, S, G, y, B, k, c]),
           !e)
         )
           return [null, 2];
@@ -2208,8 +2222,8 @@
             include_ratings: p,
             include_tag_count: g,
             include_reviews: I,
-            include_basic_info: f,
-            include_supported_languages: v,
+            include_basic_info: v,
+            include_supported_languages: f,
             include_full_description: R,
             include_included_items: b,
             include_assets_without_overrides: C,
@@ -2228,8 +2242,8 @@
                 include_ratings: p,
                 include_tag_count: g,
                 include_reviews: I,
-                include_basic_info: f,
-                include_supported_languages: v,
+                include_basic_info: v,
+                include_supported_languages: f,
                 include_full_description: R,
                 include_included_items: b,
                 include_assets_without_overrides: C,
@@ -2251,7 +2265,7 @@
               }),
               () => a.cancel("useStoreItemCacheMultiplePackages: unmounting")
             );
-          }, [e, t, r, l, u, c, d, _, h, m, p, g, I, f, v, R, b, C, S]),
+          }, [e, t, r, l, u, c, d, _, h, m, p, g, I, v, f, R, b, C, S]),
           !e)
         )
           return 2;

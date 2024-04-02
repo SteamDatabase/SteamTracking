@@ -18,286 +18,6 @@
   right: 0;
   background-size: cover;
 }
-.friendsnooze_SnoozeContainer_1Dsum {
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  flex-direction: row-reverse;
-  margin-left: 4px;
-  flex-shrink: 0;
-}
-.friendsnooze_SnoozeContainer_1Dsum .friendsnooze_SnoozeZ_2n0Ei {
-  font-size: 6px;
-  animation-name: friendsnooze_none_T3Fb5;
-  animation-duration: 1s;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-}
-.friendsnooze_SnoozeContainer_1Dsum .friendsnooze_SnoozeZ_2n0Ei.GamepadMode,
-.GamepadMode .friendsnooze_SnoozeContainer_1Dsum .friendsnooze_SnoozeZ_2n0Ei {
-  font-size: 8px;
-  font-weight: bold;
-}
-.friendsnooze_SnoozeContainer_1Dsum.friendsnooze_Medium_1iYPl
-  .friendsnooze_SnoozeZ_2n0Ei {
-  font-size: 8px;
-}
-.friendsnooze_SnoozeContainer_1Dsum.friendsnooze_Large_3BESV
-  .friendsnooze_SnoozeZ_2n0Ei {
-  font-size: 14px;
-  font-weight: 500;
-  text-shadow:
-    -1px -1px 4px #000,
-    1px -1px 4px #000,
-    -1px 1px 2px #000,
-    1px 1px 2px #000;
-}
-.friendsnooze_SnoozeContainer_1Dsum.friendsnooze_Dim_rpZ9b
-  .friendsnooze_SnoozeZ_2n0Ei {
-  filter: brightness(0.75);
-}
-.friendsnooze_SnoozeContainer_1Dsum .friendsnooze_Z1_2hnF3 {
-  animation-delay: 0s;
-  margin-top: 0px;
-  z-index: 1;
-}
-.friendsnooze_SnoozeContainer_1Dsum .friendsnooze_Z2_VmQTO {
-  animation-delay: 0.2s;
-  margin-top: 2px;
-  z-index: 2;
-}
-.friendsnooze_SnoozeContainer_1Dsum .friendsnooze_Z3_29mta {
-  animation-delay: 0.4s;
-  margin-top: 4px;
-  z-index: 3;
-}
-.friendsnooze_SnoozeContainer_1Dsum.online .friendsnooze_SnoozeZ_2n0Ei {
-  color: #4c91ac;
-}
-.friendsnooze_SnoozeContainer_1Dsum.online
-  .friendsnooze_SnoozeZ_2n0Ei.GamepadMode,
-.GamepadMode
-  .friendsnooze_SnoozeContainer_1Dsum.online
-  .friendsnooze_SnoozeZ_2n0Ei {
-  color: #4cb4ff;
-}
-.friendsnooze_SnoozeContainer_1Dsum.watchingbroadcast
-  .friendsnooze_SnoozeZ_2n0Ei {
-  color: #c9bdf7;
-}
-.friendsnooze_SnoozeContainer_1Dsum.watchingbroadcast
-  .friendsnooze_SnoozeZ_2n0Ei.GamepadMode,
-.GamepadMode
-  .friendsnooze_SnoozeContainer_1Dsum.watchingbroadcast
-  .friendsnooze_SnoozeZ_2n0Ei {
-  color: #5340a6;
-}
-.friendsnooze_SnoozeContainer_1Dsum.in-game .friendsnooze_SnoozeZ_2n0Ei {
-  color: #91c257;
-}
-.friendsnooze_SnoozeContainer_1Dsum.in-game
-  .friendsnooze_SnoozeZ_2n0Ei.GamepadMode,
-.GamepadMode
-  .friendsnooze_SnoozeContainer_1Dsum.in-game
-  .friendsnooze_SnoozeZ_2n0Ei {
-  color: #3e862d;
-}
-.friendsnooze_SnoozeContainer_1Dsum.online.friendsnooze_Dim_rpZ9b
-  .friendsnooze_SnoozeZ_2n0Ei {
-  color: #6dcff6;
-}
-.friendsnooze_SnoozeContainer_1Dsum.online.friendsnooze_Dim_rpZ9b
-  .friendsnooze_SnoozeZ_2n0Ei.GamepadMode,
-.GamepadMode
-  .friendsnooze_SnoozeContainer_1Dsum.online.friendsnooze_Dim_rpZ9b
-  .friendsnooze_SnoozeZ_2n0Ei {
-  color: #4cb4ff;
-}
-.friendsnooze_SnoozeContainer_1Dsum.in-game.friendsnooze_Dim_rpZ9b
-  .friendsnooze_SnoozeZ_2n0Ei {
-  color: #a1f410;
-}
-.friendsnooze_SnoozeContainer_1Dsum.in-game.friendsnooze_Dim_rpZ9b
-  .friendsnooze_SnoozeZ_2n0Ei.GamepadMode,
-.GamepadMode
-  .friendsnooze_SnoozeContainer_1Dsum.in-game.friendsnooze_Dim_rpZ9b
-  .friendsnooze_SnoozeZ_2n0Ei {
-  color: #3e862d;
-}
-.friend.gpfocus .friendsnooze_SnoozeZ_2n0Ei,
-.friendsnooze_hoverParent_3-8cB.gpfocus .friendsnooze_SnoozeZ_2n0Ei,
-.friendsnooze_SnoozeContainer_1Dsum.friendsnooze_animating_2rXc7
-  .friendsnooze_SnoozeZ_2n0Ei,
-.friendsnooze_hoverParent_3-8cB:hover * .friendsnooze_SnoozeZ_2n0Ei {
-  animation-name: friendsnooze_Snoring_38wIV;
-}
-@keyframes friendsnooze_Snoring_38wIV {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-2px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
-.steamavatar_avatarHolder_nibod {
-  height: 36px;
-  width: 36px;
-  display: flex;
-  margin: 0px 0px;
-  transform: scale(0.86, 0.86) translateX(0px);
-  transition-property: transform;
-  transition-duration: 0.34s;
-  transition-timing-function: cubic-bezier(0.42, 0, 0.19, 2.28);
-  flex-direction: row;
-  flex-shrink: 0;
-}
-.steamavatar_avatarHolder_nibod.X-Small {
-  height: 28px;
-  width: 28px;
-}
-.steamavatar_avatarHolder_nibod.Medium {
-  height: 36px;
-  width: 36px;
-}
-.steamavatar_avatarHolder_nibod.MediumLarge {
-  height: 48px;
-  width: 48px;
-}
-.steamavatar_avatarHolder_nibod.Large {
-  height: 84px;
-  width: 84px;
-}
-.steamavatar_avatarHolder_nibod.X-Large {
-  height: 92px;
-  width: 92px;
-}
-.steamavatar_avatarHolder_nibod.FillArea {
-  height: 100%;
-  width: 100%;
-}
-.ChatSpeaker.ChatRoomSpeaker .steamavatar_avatarHolder_nibod {
-  transform: scale(1, 1) translateX(0px);
-}
-.steamavatar_avatarHolder_nibod .steamavatar_avatarStatus_3xUpb.right,
-.steamavatar_avatarHolder_nibod .steamavatar_avatarStatus_3xUpb.bottom {
-  display: block !important;
-}
-.ingame .steamavatar_avatarStatus_3xUpb {
-  background: linear-gradient(
-    to bottom,
-    #8cd61d 0%,
-    #a1f410 30%,
-    #a1f410 70%,
-    #8cd61d 100%
-  );
-}
-.ingame .steamavatar_avatarStatus_3xUpb.GamepadMode,
-.GamepadMode .ingame .steamavatar_avatarStatus_3xUpb {
-  background: #59bf40;
-}
-.offline .steamavatar_avatarStatus_3xUpb.GamepadMode,
-.GamepadMode .offline .steamavatar_avatarStatus_3xUpb {
-  background: #67707b;
-}
-.ingame .X-Large .steamavatar_avatarStatus_3xUpb {
-  background: #bff02b;
-}
-.watchingbroadcast .steamavatar_avatarStatus_3xUpb {
-  background: linear-gradient(
-    to bottom,
-    #9c8fd4 0%,
-    #9c8fd4 30%,
-    #9c8fd4 70%,
-    #9c8fd4 100%
-  );
-}
-.online .steamavatar_avatarStatus_3xUpb {
-  background: linear-gradient(
-    to bottom,
-    #6dcff6 0%,
-    #6dcff6 30%,
-    #6dcff6 70%,
-    #6dcff6 100%
-  );
-}
-.online .steamavatar_avatarStatus_3xUpb.GamepadMode,
-.GamepadMode .online .steamavatar_avatarStatus_3xUpb {
-  background: #4cb4ff;
-}
-.awayOrSnooze .steamavatar_avatarStatus_3xUpb {
-  -webkit-mask: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAQAAABKxSfDAAAACXBIWXMAAAsSAAALEgHS3X78AAAAIUlEQVQI12P8/5+BgYGBgZGBgYGBiQEJoHAY/+OSQeEAAMCCAwlfJ3DmAAAAAElFTkSuQmCC")
-    repeat-y;
-  -webkit-mask-size: 5px 5px;
-  mask: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAQAAABKxSfDAAAACXBIWXMAAAsSAAALEgHS3X78AAAAIUlEQVQI12P8/5+BgYGBgZGBgYGBiQEJoHAY/+OSQeEAAMCCAwlfJ3DmAAAAAElFTkSuQmCC")
-    repeat-y;
-  mask-size: 5px 5px;
-  opacity: 0.75;
-}
-.awayOrSnooze .steamavatar_avatarStatus_3xUpb.GamepadMode,
-.GamepadMode .awayOrSnooze .steamavatar_avatarStatus_3xUpb {
-  opacity: 1;
-}
-.steamavatar_avatarStatus_3xUpb.right {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  width: 2px;
-}
-.steamavatar_avatarStatus_3xUpb.right.GamepadMode,
-.GamepadMode .steamavatar_avatarStatus_3xUpb.right {
-  width: 3px;
-  right: -3px;
-}
-.steamavatar_avatarStatus_3xUpb.bottom {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
-}
-.steamavatar_avatarStatus_3xUpb.bottom.GamepadMode,
-.GamepadMode .steamavatar_avatarStatus_3xUpb.bottom {
-  height: 3px;
-  bottom: -3px;
-}
-.awayOrSnooze .steamavatar_avatarStatus_3xUpb.bottom {
-  -webkit-mask: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAQAAABKxSfDAAAACXBIWXMAAAsSAAALEgHS3X78AAAAIUlEQVQI12P8/5+BgYGBgZGBgYGBiQEJoHAY/+OSQeEAAMCCAwlfJ3DmAAAAAElFTkSuQmCC")
-    repeat-x;
-  mask: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAQAAABKxSfDAAAACXBIWXMAAAsSAAALEgHS3X78AAAAIUlEQVQI12P8/5+BgYGBgZGBgYGBiQEJoHAY/+OSQeEAAMCCAwlfJ3DmAAAAAElFTkSuQmCC")
-    repeat-x;
-}
-.awayOrSnooze .X-Large .steamavatar_avatarStatus_3xUpb.bottom {
-  mask-size: 6px 6px;
-  opacity: 1;
-}
-.steamavatar_avatar_3h-QR {
-  border: 1px solid #383c43;
-  height: calc(100% - 2px);
-  width: calc(100% - 2px);
-  box-shadow: 2px 2px 8px 1px rgba(0, 0, 0, 0.3);
-  transition: filter 0.24s ease-in-out;
-}
-.steamavatar_avatar_3h-QR.GamepadMode,
-.GamepadMode .steamavatar_avatar_3h-QR {
-  border: 0px solid transparent;
-  height: 100%;
-  width: 100%;
-}
-.steamavatar_avatarFrame_X_mJE {
-  position: absolute;
-  top: 0;
-}
-.steamavatar_avatarFrame_X_mJE .steamavatar_avatarFrameImg_3fM0F {
-  width: 100%;
-  height: 100%;
-}
-.steamavatar_avatarHolder_nibod .steamavatar_avatarFrame_X_mJE {
-  transform: scale(1.2);
-}
 .SVGIcon_Button {
   fill: #fff;
   overflow: visible;
@@ -547,6 +267,130 @@
 }
 .gamepadui_svg_library_GenericGamepadEmpty_1toTl {
   fill: transparent;
+}
+.friendsnooze_SnoozeContainer_1Dsum {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row-reverse;
+  margin-left: 4px;
+  flex-shrink: 0;
+}
+.friendsnooze_SnoozeContainer_1Dsum .friendsnooze_SnoozeZ_2n0Ei {
+  font-size: 6px;
+  animation-name: friendsnooze_none_T3Fb5;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+.friendsnooze_SnoozeContainer_1Dsum .friendsnooze_SnoozeZ_2n0Ei.GamepadMode,
+.GamepadMode .friendsnooze_SnoozeContainer_1Dsum .friendsnooze_SnoozeZ_2n0Ei {
+  font-size: 8px;
+  font-weight: bold;
+}
+.friendsnooze_SnoozeContainer_1Dsum.friendsnooze_Medium_1iYPl
+  .friendsnooze_SnoozeZ_2n0Ei {
+  font-size: 8px;
+}
+.friendsnooze_SnoozeContainer_1Dsum.friendsnooze_Large_3BESV
+  .friendsnooze_SnoozeZ_2n0Ei {
+  font-size: 14px;
+  font-weight: 500;
+  text-shadow:
+    -1px -1px 4px #000,
+    1px -1px 4px #000,
+    -1px 1px 2px #000,
+    1px 1px 2px #000;
+}
+.friendsnooze_SnoozeContainer_1Dsum.friendsnooze_Dim_rpZ9b
+  .friendsnooze_SnoozeZ_2n0Ei {
+  filter: brightness(0.75);
+}
+.friendsnooze_SnoozeContainer_1Dsum .friendsnooze_Z1_2hnF3 {
+  animation-delay: 0s;
+  margin-top: 0px;
+  z-index: 1;
+}
+.friendsnooze_SnoozeContainer_1Dsum .friendsnooze_Z2_VmQTO {
+  animation-delay: 0.2s;
+  margin-top: 2px;
+  z-index: 2;
+}
+.friendsnooze_SnoozeContainer_1Dsum .friendsnooze_Z3_29mta {
+  animation-delay: 0.4s;
+  margin-top: 4px;
+  z-index: 3;
+}
+.friendsnooze_SnoozeContainer_1Dsum.online .friendsnooze_SnoozeZ_2n0Ei {
+  color: #4c91ac;
+}
+.friendsnooze_SnoozeContainer_1Dsum.online
+  .friendsnooze_SnoozeZ_2n0Ei.GamepadMode,
+.GamepadMode
+  .friendsnooze_SnoozeContainer_1Dsum.online
+  .friendsnooze_SnoozeZ_2n0Ei {
+  color: #4cb4ff;
+}
+.friendsnooze_SnoozeContainer_1Dsum.watchingbroadcast
+  .friendsnooze_SnoozeZ_2n0Ei {
+  color: #c9bdf7;
+}
+.friendsnooze_SnoozeContainer_1Dsum.watchingbroadcast
+  .friendsnooze_SnoozeZ_2n0Ei.GamepadMode,
+.GamepadMode
+  .friendsnooze_SnoozeContainer_1Dsum.watchingbroadcast
+  .friendsnooze_SnoozeZ_2n0Ei {
+  color: #5340a6;
+}
+.friendsnooze_SnoozeContainer_1Dsum.in-game .friendsnooze_SnoozeZ_2n0Ei {
+  color: #91c257;
+}
+.friendsnooze_SnoozeContainer_1Dsum.in-game
+  .friendsnooze_SnoozeZ_2n0Ei.GamepadMode,
+.GamepadMode
+  .friendsnooze_SnoozeContainer_1Dsum.in-game
+  .friendsnooze_SnoozeZ_2n0Ei {
+  color: #3e862d;
+}
+.friendsnooze_SnoozeContainer_1Dsum.online.friendsnooze_Dim_rpZ9b
+  .friendsnooze_SnoozeZ_2n0Ei {
+  color: #6dcff6;
+}
+.friendsnooze_SnoozeContainer_1Dsum.online.friendsnooze_Dim_rpZ9b
+  .friendsnooze_SnoozeZ_2n0Ei.GamepadMode,
+.GamepadMode
+  .friendsnooze_SnoozeContainer_1Dsum.online.friendsnooze_Dim_rpZ9b
+  .friendsnooze_SnoozeZ_2n0Ei {
+  color: #4cb4ff;
+}
+.friendsnooze_SnoozeContainer_1Dsum.in-game.friendsnooze_Dim_rpZ9b
+  .friendsnooze_SnoozeZ_2n0Ei {
+  color: #a1f410;
+}
+.friendsnooze_SnoozeContainer_1Dsum.in-game.friendsnooze_Dim_rpZ9b
+  .friendsnooze_SnoozeZ_2n0Ei.GamepadMode,
+.GamepadMode
+  .friendsnooze_SnoozeContainer_1Dsum.in-game.friendsnooze_Dim_rpZ9b
+  .friendsnooze_SnoozeZ_2n0Ei {
+  color: #3e862d;
+}
+.friend.gpfocus .friendsnooze_SnoozeZ_2n0Ei,
+.friendsnooze_hoverParent_3-8cB.gpfocus .friendsnooze_SnoozeZ_2n0Ei,
+.friendsnooze_SnoozeContainer_1Dsum.friendsnooze_animating_2rXc7
+  .friendsnooze_SnoozeZ_2n0Ei,
+.friendsnooze_hoverParent_3-8cB:hover * .friendsnooze_SnoozeZ_2n0Ei {
+  animation-name: friendsnooze_Snoring_38wIV;
+}
+@keyframes friendsnooze_Snoring_38wIV {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-2px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 .miniprofile_miniProfile_2QPdq {
   width: fit-content;
@@ -1263,6 +1107,162 @@
 }
 .friendPlayerLevel.lvl_plus_90 {
   background-position: 0 -288px;
+}
+.steamavatar_avatarHolder_nibod {
+  height: 36px;
+  width: 36px;
+  display: flex;
+  margin: 0px 0px;
+  transform: scale(0.86, 0.86) translateX(0px);
+  transition-property: transform;
+  transition-duration: 0.34s;
+  transition-timing-function: cubic-bezier(0.42, 0, 0.19, 2.28);
+  flex-direction: row;
+  flex-shrink: 0;
+}
+.steamavatar_avatarHolder_nibod.X-Small {
+  height: 28px;
+  width: 28px;
+}
+.steamavatar_avatarHolder_nibod.Medium {
+  height: 36px;
+  width: 36px;
+}
+.steamavatar_avatarHolder_nibod.MediumLarge {
+  height: 48px;
+  width: 48px;
+}
+.steamavatar_avatarHolder_nibod.Large {
+  height: 84px;
+  width: 84px;
+}
+.steamavatar_avatarHolder_nibod.X-Large {
+  height: 92px;
+  width: 92px;
+}
+.steamavatar_avatarHolder_nibod.FillArea {
+  height: 100%;
+  width: 100%;
+}
+.ChatSpeaker.ChatRoomSpeaker .steamavatar_avatarHolder_nibod {
+  transform: scale(1, 1) translateX(0px);
+}
+.steamavatar_avatarHolder_nibod .steamavatar_avatarStatus_3xUpb.right,
+.steamavatar_avatarHolder_nibod .steamavatar_avatarStatus_3xUpb.bottom {
+  display: block !important;
+}
+.ingame .steamavatar_avatarStatus_3xUpb {
+  background: linear-gradient(
+    to bottom,
+    #8cd61d 0%,
+    #a1f410 30%,
+    #a1f410 70%,
+    #8cd61d 100%
+  );
+}
+.ingame .steamavatar_avatarStatus_3xUpb.GamepadMode,
+.GamepadMode .ingame .steamavatar_avatarStatus_3xUpb {
+  background: #59bf40;
+}
+.offline .steamavatar_avatarStatus_3xUpb.GamepadMode,
+.GamepadMode .offline .steamavatar_avatarStatus_3xUpb {
+  background: #67707b;
+}
+.ingame .X-Large .steamavatar_avatarStatus_3xUpb {
+  background: #bff02b;
+}
+.watchingbroadcast .steamavatar_avatarStatus_3xUpb {
+  background: linear-gradient(
+    to bottom,
+    #9c8fd4 0%,
+    #9c8fd4 30%,
+    #9c8fd4 70%,
+    #9c8fd4 100%
+  );
+}
+.online .steamavatar_avatarStatus_3xUpb {
+  background: linear-gradient(
+    to bottom,
+    #6dcff6 0%,
+    #6dcff6 30%,
+    #6dcff6 70%,
+    #6dcff6 100%
+  );
+}
+.online .steamavatar_avatarStatus_3xUpb.GamepadMode,
+.GamepadMode .online .steamavatar_avatarStatus_3xUpb {
+  background: #4cb4ff;
+}
+.awayOrSnooze .steamavatar_avatarStatus_3xUpb {
+  -webkit-mask: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAQAAABKxSfDAAAACXBIWXMAAAsSAAALEgHS3X78AAAAIUlEQVQI12P8/5+BgYGBgZGBgYGBiQEJoHAY/+OSQeEAAMCCAwlfJ3DmAAAAAElFTkSuQmCC")
+    repeat-y;
+  -webkit-mask-size: 5px 5px;
+  mask: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAQAAABKxSfDAAAACXBIWXMAAAsSAAALEgHS3X78AAAAIUlEQVQI12P8/5+BgYGBgZGBgYGBiQEJoHAY/+OSQeEAAMCCAwlfJ3DmAAAAAElFTkSuQmCC")
+    repeat-y;
+  mask-size: 5px 5px;
+  opacity: 0.75;
+}
+.awayOrSnooze .steamavatar_avatarStatus_3xUpb.GamepadMode,
+.GamepadMode .awayOrSnooze .steamavatar_avatarStatus_3xUpb {
+  opacity: 1;
+}
+.steamavatar_avatarStatus_3xUpb.right {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 2px;
+}
+.steamavatar_avatarStatus_3xUpb.right.GamepadMode,
+.GamepadMode .steamavatar_avatarStatus_3xUpb.right {
+  width: 3px;
+  right: -3px;
+}
+.steamavatar_avatarStatus_3xUpb.bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+}
+.steamavatar_avatarStatus_3xUpb.bottom.GamepadMode,
+.GamepadMode .steamavatar_avatarStatus_3xUpb.bottom {
+  height: 3px;
+  bottom: -3px;
+}
+.awayOrSnooze .steamavatar_avatarStatus_3xUpb.bottom {
+  -webkit-mask: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAQAAABKxSfDAAAACXBIWXMAAAsSAAALEgHS3X78AAAAIUlEQVQI12P8/5+BgYGBgZGBgYGBiQEJoHAY/+OSQeEAAMCCAwlfJ3DmAAAAAElFTkSuQmCC")
+    repeat-x;
+  mask: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAQAAABKxSfDAAAACXBIWXMAAAsSAAALEgHS3X78AAAAIUlEQVQI12P8/5+BgYGBgZGBgYGBiQEJoHAY/+OSQeEAAMCCAwlfJ3DmAAAAAElFTkSuQmCC")
+    repeat-x;
+}
+.awayOrSnooze .X-Large .steamavatar_avatarStatus_3xUpb.bottom {
+  mask-size: 6px 6px;
+  opacity: 1;
+}
+.steamavatar_avatar_3h-QR {
+  border: 1px solid #383c43;
+  height: calc(100% - 2px);
+  width: calc(100% - 2px);
+  box-shadow: 2px 2px 8px 1px rgba(0, 0, 0, 0.3);
+  transition: filter 0.24s ease-in-out;
+}
+.steamavatar_avatar_3h-QR.GamepadMode,
+.GamepadMode .steamavatar_avatar_3h-QR {
+  border: 0px solid transparent;
+  height: 100%;
+  width: 100%;
+}
+.steamavatar_avatarFrame_X_mJE {
+  position: absolute;
+  top: 0;
+}
+.steamavatar_avatarFrame_X_mJE .steamavatar_avatarFrameImg_3fM0F {
+  width: 100%;
+  height: 100%;
+}
+.steamavatar_avatarHolder_nibod .steamavatar_avatarFrame_X_mJE {
+  transform: scale(1.2);
 }
 .hoverposition_HoverPosition_3vg1v {
   position: absolute;
