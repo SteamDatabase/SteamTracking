@@ -1432,7 +1432,7 @@
       }
       const p = (0, r.EN)(_);
     },
-    83740: (e, t, a) => {
+    45660: (e, t, a) => {
       "use strict";
       a.r(t), a.d(t, { YearInReviewRoutes: () => On, default: () => Hn });
       var n = a(47427),
@@ -2648,11 +2648,9 @@
         oe = a(71472),
         me = a(71741),
         ce = a(46882),
-        de = a(13129);
-      const ue =
-        a.p +
-        "images/applications/store/defaultappimage.png?v=valveisgoodatcaching";
-      var _e = a(80886),
+        de = a(13129),
+        ue = a(25785),
+        _e = a(80886),
         pe = a(24549),
         ve = a(23750),
         ge = a.n(ve),
@@ -2828,7 +2826,7 @@
           "div",
           { className: ge().UnavailableGame },
           n.createElement("img", {
-            src: ue,
+            src: ue.Z,
             alt: t.GetName() || "" + t.GetAppID(),
           }),
           n.createElement("div", { className: ge().GameTitle }, t.GetName()),
@@ -6314,7 +6312,7 @@
       function Ua({ appId: e, style: t }) {
         const [a] = (0, _e.vs)(parseInt(e), Y);
         if (!a) return null;
-        const r = a.GetAssets().GetLibraryCapsuleURL() || ue;
+        const r = a.GetAssets().GetLibraryCapsuleURL() || ue.Z;
         return n.createElement("img", {
           style: t,
           className: xa.CapsuleImg,
@@ -8009,6 +8007,13 @@
           t
         );
       }
+    },
+    25785: (e, t, a) => {
+      "use strict";
+      a.d(t, { Z: () => n });
+      const n =
+        a.p +
+        "images/applications/store/defaultappimage.png?v=valveisgoodatcaching";
     },
   },
 ]);
