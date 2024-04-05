@@ -3636,8 +3636,10 @@
             null === (t = (0, pe.Rs)().data) || void 0 === t
               ? void 0
               : t.family_groupid(),
-          u = (0, pe.BU)(r, d.L7.country_code);
-        return (0, i.wN)()
+          u = (0, pe.BU)(r, d.L7.country_code),
+          m = (0, i.wN)(),
+          [p, _] = a.useState(!1);
+        return m
           ? a.createElement(
               "div",
               {
@@ -3649,14 +3651,17 @@
               a.createElement(
                 s.KM,
                 {
-                  disabled: n,
+                  disabled: n || p,
                   className: (0, c.Z)(o().CartSummaryBtn),
                   onClick: () => {
-                    u.mutate(void 0, {
-                      onSuccess: () => {
-                        window.location.assign((0, pe.ht)(r));
-                      },
-                    });
+                    n ||
+                      p ||
+                      (_(!0),
+                      u.mutate(void 0, {
+                        onSuccess: () => {
+                          window.location.assign((0, pe.ht)(r));
+                        },
+                      }));
                   },
                 },
                 (0, l.Xx)("#Cart_RequestPurchase"),
