@@ -217,7 +217,7 @@ function ShowConfirmDialog( strTitle, strDescription, strOKButton, strCancelButt
 
 	if ( strSecondaryActionButton )
 	{
-		var $SecondaryActionButton = _BuildDialogButton( strSecondaryActionButton, false, {strClassName: ' btn_darkblue_white_innerfade btn_medium' } );
+		var $SecondaryActionButton = _BuildDialogButton( strSecondaryActionButton, false, {strClassName: 'btn_blue_steamui btn_medium' } );
 		$SecondaryActionButton.click( fnSecondary );
 		rgButtons.push( $SecondaryActionButton );
 	}

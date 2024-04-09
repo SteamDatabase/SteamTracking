@@ -1965,6 +1965,14 @@ enum UnnamedEnum40753bc97c5c444d
 	k_NextFestTopGameWrapUp = 33;
 }
 
+enum UnnamedEnum417b0cbbb904eb0c
+{
+	NONE = 0;
+	MAIN = 1;
+	FETCH_WORKERS = 2;
+	GPU = 3;
+}
+
 enum UnnamedEnum41ef8b0e788e0224
 {
 	All = 0;

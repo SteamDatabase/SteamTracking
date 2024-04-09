@@ -1272,8 +1272,8 @@
         P9: () => a,
         Ub: () => l,
         bY: () => c,
+        be: () => u,
         lS: () => h,
-        sG: () => u,
         y$: () => d,
       });
       var o = n(47427),
@@ -1814,8 +1814,8 @@
                 e.portClientdll,
                 e.authKeyClientdll,
               ),
-              (0, l.S)().SetDefaultTransport(this),
-              (0, l.S)().SetDefaultHandlerRegistry(this.m_messageHandlers),
+              (0, l.SM)().SetDefaultTransport(this),
+              (0, l.SM)().SetDefaultHandlerRegistry(this.m_messageHandlers),
               m.zw.RegisterForNotifyStartShutdown(this.OnStartShutdown);
           });
         }
@@ -4255,7 +4255,7 @@
     },
     91618: (e, t, n) => {
       "use strict";
-      n.d(t, { s: () => g });
+      n.d(t, { s: () => v });
       var o = n(85556),
         i = n(47427),
         r = n(28781),
@@ -4267,13 +4267,15 @@
         d = n(25849);
       const h = (0, i.createContext)(null);
       var m = n(87476),
-        p = n(6799);
-      const g = i.forwardRef(function (e, t) {
+        p = n(6799),
+        g = n(37563);
+      const v = i.forwardRef(function (e, t) {
+        var n;
         const {
-            "flow-children": n,
-            onActivate: g,
-            onCancel: v,
-            focusClassName: f,
+            "flow-children": h,
+            onActivate: m,
+            onCancel: p,
+            focusClassName: v,
             focusWithinClassName: _,
           } = e,
           C = (0, o._T)(e, [
@@ -4285,58 +4287,70 @@
           ]),
           { elemProps: b, navOptions: w, gamepadEvents: E } = (0, r.QH)(C);
         let S = {};
-        const D = (0, d.t)(n);
+        const D = (0, d.t)(h);
         D != l.gj.NONE && (S.layout = D),
-          g &&
-            ((b.onClick = b.onClick || g), (E.onOKButton = E.onOKButton || g)),
+          m &&
+            ((b.onClick = b.onClick || m), (E.onOKButton = E.onOKButton || m)),
           E.onOKButton && void 0 === w.focusable && (w.focusable = !0),
-          v && (E.onCancelButton = E.onCancelButton || v);
+          p && (E.onCancelButton = E.onCancelButton || p);
         const { ref: M, node: L } = (0, r.Pd)(
             Object.assign(Object.assign({}, S), w),
           ),
           y = (0, c.K)();
         (b.className = (0, s.Z)(b.className, "Panel", y && "Focusable")),
           (0, u.pD)(E, M);
-        const R = (0, i.useContext)(h),
-          O = (0, m.Ze)(
-            2,
-            () =>
-              "self" == (null == L ? void 0 : L.GetFocusable()) ||
-              null != b.onClick,
-          ),
-          x = (0, m.Ze)(1, () => (null == R ? void 0 : R.HasContextMenu(L))),
-          I = (0, p.M)(b);
-        (0, p.B)(b);
-        const T = (0, a.BE)(O, x, I, M, t);
-        return (
-          (!w.focusable && !w.focusableIfNoChildren) ||
-            (L && L.Tree.BUseVirtualFocus()) ||
-            (b.tabIndex = b.tabIndex || 0),
-          R &&
-            (b.onContextMenu = (t) => {
-              var n;
-              R.OnContextMenu(L, t) ||
-                null === (n = e.onContextMenu) ||
-                void 0 === n ||
-                n.call(e, t);
-            }),
-          i.createElement(
-            r.ET.Provider,
-            { value: L },
-            L
-              ? i.createElement(
-                  r.zQ,
-                  Object.assign({}, b, {
-                    divRef: T,
-                    node: L,
-                    focusClassName: (0, s.Z)(f, "gpfocus"),
-                    focusWithinClassName: (0, s.Z)(_, "gpfocuswithin"),
-                  }),
-                )
-              : i.createElement("div", Object.assign({}, b, { ref: T })),
-          )
+        const R = (0, a.BE)(M, t),
+          O =
+            null === (n = (0, g.qt)({ bSuppressAssert: !0 })) || void 0 === n
+              ? void 0
+              : n.IN_VR;
+        (!w.focusable && !w.focusableIfNoChildren) ||
+          (L && L.Tree.BUseVirtualFocus()) ||
+          (b.tabIndex = b.tabIndex || 0);
+        const x = O ? f : r.zQ;
+        return i.createElement(
+          r.ET.Provider,
+          { value: L },
+          L
+            ? i.createElement(
+                x,
+                Object.assign({}, b, {
+                  divRef: R,
+                  node: L,
+                  focusClassName: (0, s.Z)(v, "gpfocus"),
+                  focusWithinClassName: (0, s.Z)(_, "gpfocuswithin"),
+                }),
+              )
+            : i.createElement("div", Object.assign({}, b, { ref: R })),
         );
       });
+      function f(e) {
+        const { node: t, divRef: n } = e,
+          s = (0, o._T)(e, ["node", "divRef"]),
+          l = (0, i.useContext)(h),
+          c = (0, m.Ze)(
+            2,
+            () =>
+              "self" == (null == t ? void 0 : t.GetFocusable()) ||
+              null != s.onClick,
+          ),
+          u = (0, m.Ze)(1, () => (null == l ? void 0 : l.HasContextMenu(t))),
+          d = (0, p.M)(s);
+        (0, p.B)(s),
+          l &&
+            (s.onContextMenu = (n) => {
+              var o;
+              l.OnContextMenu(t, n) ||
+                null === (o = e.onContextMenu) ||
+                void 0 === o ||
+                o.call(e, n);
+            });
+        const g = (0, a.BE)(c, u, d, n);
+        return i.createElement(
+          r.zQ,
+          Object.assign({}, s, { divRef: g, node: t }),
+        );
+      }
     },
     84686: (e, t, n) => {
       "use strict";
@@ -8170,17 +8184,17 @@
       "use strict";
       n.d(t, { T: () => d });
       var o = n(85556),
-        i = n(47427),
-        r = n(20417),
-        s = n(27605),
-        a = n(45492),
-        l = n(13129),
+        i = n(27605),
+        r = n(47427),
+        s = n(45492),
+        a = n(13129),
+        l = n(20417),
         c = n(74736),
         u = n.n(c);
-      let d = class extends i.Component {
+      let d = class extends r.Component {
         constructor() {
           super(...arguments),
-            (this.m_listeners = new a.G_()),
+            (this.m_listeners = new s.G_()),
             (this.m_bNoSpace = !1),
             (this.state = { x: void 0, y: void 0, hoverPositionReady: !1 });
         }
@@ -8204,9 +8218,9 @@
             {
               target: t,
               visibilityObserver: n,
-              className: r,
+              className: i,
               style: s,
-              bEnablePointerEvents: a,
+              bEnablePointerEvents: l,
               direction: c,
               nBodyAlignment: d,
               nBodyDistance: h,
@@ -8235,23 +8249,23 @@
             ]);
           let b = Object.assign({ left: this.state.x, top: this.state.y }, s),
             w = !n || n.visible;
-          return i.createElement(
+          return r.createElement(
             "div",
             {
-              className: (0, l.Z)(
+              className: (0, a.Z)(
                 u().HoverPositionOuter,
                 _ && u().HoverAboveModal,
               ),
             },
-            i.createElement(
+            r.createElement(
               "div",
               Object.assign({}, C, {
-                className: (0, l.Z)(
+                className: (0, a.Z)(
                   u().HoverPosition,
                   w && this.state.hoverPositionReady && u().Ready,
                   this.m_bNoSpace && u().NoSpace,
-                  a && u().EnablePointerEvents,
-                  r,
+                  l && u().EnablePointerEvents,
+                  i,
                 ),
                 style: b,
                 ref: this.bindHover,
@@ -8346,8 +8360,8 @@
                 void (this.props.onNoSpace && this.props.onNoSpace())
               );
           }
-          this.props.nMaxLateralMoveOnScreen &&
-            !m &&
+          0 === this.props.nMaxLateralMoveOnScreen ||
+            m ||
             ([_, f] = (function (e, t, n, o, i) {
               let r = Math.max(t[0], t[1]);
               void 0 !== e && (r = Math.min(e, r));
@@ -8433,9 +8447,9 @@
         nBodyDistance: 8,
         nMaxLateralMoveOnScreen: void 0,
       }),
-        (0, o.gn)([r.ak], d.prototype, "bindHover", null),
-        (0, o.gn)([r.ak], d.prototype, "OnWindowBlur", null),
-        (d = (0, o.gn)([s.Pi], d));
+        (0, o.gn)([l.ak], d.prototype, "bindHover", null),
+        (0, o.gn)([l.ak], d.prototype, "OnWindowBlur", null),
+        (d = (0, o.gn)([i.Pi], d));
     },
     43090: (e, t, n) => {
       "use strict";
@@ -25021,9 +25035,9 @@
         r = n(50423),
         s = n(20417),
         a = n(37563);
-      const l = new Map();
+      const l = new WeakMap();
       function c(e) {
-        return l.has(e) || l.set(e, new Set()), l.get(e);
+        if (e) return l.has(e) || l.set(e, new Set()), l.get(e);
       }
       function u(e) {
         const t = (0, a.qt)({ bSuppressAssert: !0 }).IN_VR,

@@ -10994,7 +10994,7 @@
           request: c,
         }),
           (e.RegisterForUpdateTextFilterDictionary = function (r, t) {
-            return null == (t = t || (0, s.S)().GetDefaultHandlerRegistry())
+            return null == (t = t || (0, s.SM)().GetDefaultHandlerRegistry())
               ? (console.error(
                   "Transport Error: no default registry is available for request",
                 ),
@@ -11005,7 +11005,7 @@
                 );
           }),
           (e.UpdateTextFilterDictionary = function (e, r) {
-            return null == (r = r || (0, s.S)().GetDefaultTransport())
+            return null == (r = r || (0, s.SM)().GetDefaultTransport())
               ? (console.error(
                   "Transport Error: no transport is available for request",
                 ),
@@ -11017,7 +11017,7 @@
                 );
           }),
           (e.SendMsgUpdateTextFilterDictionary = function (e, r) {
-            return null == (r = r || (0, s.S)().GetDefaultTransport())
+            return null == (r = r || (0, s.SM)().GetDefaultTransport())
               ? (console.error(
                   "Transport Error: no transport is available for request",
                 ),
@@ -11034,7 +11034,7 @@
             response: u,
           }),
           (e.GetTextFilterDictionary = function (e, r) {
-            return null == (r = r || (0, s.S)().GetDefaultTransport())
+            return null == (r = r || (0, s.SM)().GetDefaultTransport())
               ? new Promise((e, r) => {
                   console.error(
                     "Transport Error: no transport is available for request",
@@ -11049,7 +11049,7 @@
                 );
           }),
           (e.SendMsgGetTextFilterDictionary = function (e, r) {
-            return null == (r = r || (0, s.S)().GetDefaultTransport())
+            return null == (r = r || (0, s.SM)().GetDefaultTransport())
               ? new Promise((e, r) => {
                   console.error(
                     "Transport Error: no transport is available for request",
@@ -11068,7 +11068,7 @@
             request: d,
           }),
           (e.RegisterForNotifyTextFilterDictionaryChanged = function (r, t) {
-            return null == (t = t || (0, s.S)().GetDefaultHandlerRegistry())
+            return null == (t = t || (0, s.SM)().GetDefaultHandlerRegistry())
               ? (console.error(
                   "Transport Error: no default registry is available for request",
                 ),
@@ -11079,7 +11079,7 @@
                 );
           }),
           (e.NotifyTextFilterDictionaryChanged = function (e, r) {
-            return null == (r = r || (0, s.S)().GetDefaultTransport())
+            return null == (r = r || (0, s.SM)().GetDefaultTransport())
               ? (console.error(
                   "Transport Error: no transport is available for request",
                 ),
@@ -11091,7 +11091,7 @@
                 );
           }),
           (e.SendMsgNotifyTextFilterDictionaryChanged = function (e, r) {
-            return null == (r = r || (0, s.S)().GetDefaultTransport())
+            return null == (r = r || (0, s.SM)().GetDefaultTransport())
               ? (console.error(
                   "Transport Error: no transport is available for request",
                 ),
@@ -11108,7 +11108,7 @@
             response: B,
           }),
           (e.GetGameIDForPID = function (e, r) {
-            return null == (r = r || (0, s.S)().GetDefaultTransport())
+            return null == (r = r || (0, s.SM)().GetDefaultTransport())
               ? new Promise((e, r) => {
                   console.error(
                     "Transport Error: no transport is available for request",
@@ -11121,7 +11121,7 @@
                 });
           }),
           (e.SendMsgGetGameIDForPID = function (e, r) {
-            return null == (r = r || (0, s.S)().GetDefaultTransport())
+            return null == (r = r || (0, s.SM)().GetDefaultTransport())
               ? new Promise((e, r) => {
                   console.error(
                     "Transport Error: no transport is available for request",

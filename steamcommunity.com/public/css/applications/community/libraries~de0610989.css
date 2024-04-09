@@ -247,6 +247,7 @@
 }
 .rel6LeHbpzUECi85PBXtL {
   bottom: 25%;
+  z-index: 1;
 }
 .zmWGVtLpthMQxYQkLzxvF {
   bottom: calc(25% - 4px);
@@ -255,6 +256,7 @@
 ._3DFg3YTYB9k7o55Q2VPddE {
   top: 0%;
   bottom: 25%;
+  z-index: 1;
 }
 ._3DsmItDR-RV07XU3qUTCxl {
   overflow: hidden;
@@ -263,7 +265,7 @@
 }
 ._2KJX1Hb8kBD8qiTVDxojD9 {
   bottom: 0%;
-  top: 75%;
+  z-index: 0;
 }
 ._1fOidxyNeGo_V_CwKSq3a {
   z-index: 4;
@@ -373,6 +375,7 @@
 }
 ._1axnxWp5pUYbu8wf1qvS5Y {
   bottom: 25%;
+  z-index: 1;
 }
 .tw5fAsMBX1duf-v2tBuY1 {
   bottom: calc(25% - 4px);
@@ -381,6 +384,7 @@
 ._3fweCbZ_WNG5AmEE_UVgIC {
   top: 0%;
   bottom: 25%;
+  z-index: 1;
 }
 ._1_cOsP7g_ohsSDmVrsFwOv {
   overflow: hidden;
@@ -389,7 +393,7 @@
 }
 .CL4a77uFZfgIIthkMECVG {
   bottom: 0%;
-  top: 75%;
+  z-index: 0;
 }
 ._198JA1uu_LPpDmP0U87BsN {
   z-index: 4;
@@ -629,6 +633,7 @@
 }
 ._1Bij-mkv7FTE3RKYqUtzAA {
   bottom: 25%;
+  z-index: 1;
 }
 ._3YTYrWDx5RScj3F6tOiZdl {
   bottom: calc(25% - 4px);
@@ -637,6 +642,7 @@
 ._1iTzuR6dp2RFuM-NfSm3E8 {
   top: 0%;
   bottom: 25%;
+  z-index: 1;
 }
 .Iqluh72d7WyDHpfaFejTs {
   overflow: hidden;
@@ -645,7 +651,7 @@
 }
 ._2_cUlWqyUX43iK7IS9hv87 {
   bottom: 0%;
-  top: 75%;
+  z-index: 0;
 }
 ._3u682yrQUqhoWd9E9uibF- {
   z-index: 4;
@@ -781,6 +787,7 @@
 }
 ._2Ahakgkm9EZuTKiTePDOI3 {
   bottom: 25%;
+  z-index: 1;
 }
 ._3URh6VRj2J27ogqTfu-JPL {
   bottom: calc(25% - 4px);
@@ -789,6 +796,7 @@
 ._3mmUZjIbm3YAdtLnL3Kbbw {
   top: 0%;
   bottom: 25%;
+  z-index: 1;
 }
 ._2rq8pkJzzuYwG1rKzWvv8l {
   overflow: hidden;
@@ -797,7 +805,7 @@
 }
 ._2DMNthxYGqV_JQAjlSkHpu {
   bottom: 0%;
-  top: 75%;
+  z-index: 0;
 }
 ._34GQ7b3Z9fCEEsCnfhNhQW {
   z-index: 4;
@@ -927,6 +935,7 @@
 }
 .rhw2i1uNHvGyUN72BdeLx {
   bottom: 25%;
+  z-index: 1;
 }
 ._3y2rqaV3_WnurehEbs9skN {
   bottom: calc(25% - 4px);
@@ -935,6 +944,7 @@
 ._3VPJvRFzJWgmtk4FNy7cUK {
   top: 0%;
   bottom: 25%;
+  z-index: 1;
 }
 ._2fovTjodY9jw1_6sq75_W2 {
   overflow: hidden;
@@ -943,7 +953,7 @@
 }
 ._2JyqochWKUZSWnewNTvD8B {
   bottom: 0%;
-  top: 75%;
+  z-index: 0;
 }
 .SKVlmdvO0pFA1u3T7r4Zd {
   z-index: 4;
@@ -1115,6 +1125,7 @@
 }
 ._2kam9dgRcQYfpvbC8Y6Elr {
   bottom: 25%;
+  z-index: 1;
 }
 ._1TCCxPAW2YBwhg2UCdRNRM {
   bottom: calc(25% - 4px);
@@ -1123,6 +1134,7 @@
 .QJ50zP3EG2r34afW0Svw6 {
   top: 0%;
   bottom: 25%;
+  z-index: 1;
 }
 ._2qeKvZemI5EAxRMvhLIyLf {
   overflow: hidden;
@@ -1131,7 +1143,7 @@
 }
 .EjRsHXYXeIgkGsUOMaJrl {
   bottom: 0%;
-  top: 75%;
+  z-index: 0;
 }
 ._3ldb9UOHnJUrJJk4zFCqIf {
   z-index: 4;
@@ -1267,6 +1279,7 @@
 }
 ._1NjYZ6hGGIxtXXfWUeAL-7 {
   bottom: 25%;
+  z-index: 1;
 }
 .pUy7fXfpWEBMcu58478C7 {
   bottom: calc(25% - 4px);
@@ -1275,6 +1288,7 @@
 ._1sHfwOhqDfqZmDga4SGCR2 {
   top: 0%;
   bottom: 25%;
+  z-index: 1;
 }
 ._1VMlB7Qca7Wky8-5-fdl4B {
   overflow: hidden;
@@ -1283,7 +1297,7 @@
 }
 ._3IRCxI1CsHatqMDeILis62 {
   bottom: 0%;
-  top: 75%;
+  z-index: 0;
 }
 ._1az5e4FEU_sObP4p6BvQvH {
   z-index: 4;
@@ -1323,12 +1337,18 @@
   top: 26px;
   right: 20px;
 }
+._3DKuh756N2eENy86JC_4O8 {
+  background-color: rgba(255, 255, 255, 0.2);
+  height: 12px;
+  position: absolute;
+  bottom: 25%;
+}
 ._21gY8PzFWYF-Bw9MlZiXDm {
   position: absolute;
   display: flex;
   flex-direction: column;
   height: 100%;
-  top: 0;
+  top: 75%;
   justify-content: flex-start;
 }
 ._21gY8PzFWYF-Bw9MlZiXDm ._1Yp6JEQWReLrqaHJaRiqTc {
@@ -1424,6 +1444,7 @@
 }
 .idjHE83SWQVDbX9vgRFQu {
   bottom: 25%;
+  z-index: 1;
 }
 ._2IhOoWBOzxZPW5DLxTA1jL {
   bottom: calc(25% - 4px);
@@ -1432,6 +1453,7 @@
 ._2ggxzdoEVAB25NEo8_xVQt {
   top: 0%;
   bottom: 25%;
+  z-index: 1;
 }
 ._2iJsq7fWLJpUC_TPs7xyLs {
   overflow: hidden;
@@ -1440,7 +1462,7 @@
 }
 .b-NNc3zHqOvbgRRI_dife {
   bottom: 0%;
-  top: 75%;
+  z-index: 0;
 }
 ._21LpgSpiclfTCGSusz4Q4V {
   z-index: 4;
@@ -1597,6 +1619,10 @@
   box-sizing: border-box;
   border-bottom-right-radius: 3px;
   border-bottom-left-radius: 3px;
+  opacity: 1;
+}
+._1ufF8a7yFkFlQFWpMhXxsh.LuZL8gUSEz0xsmKI4H1yD {
+  opacity: 0;
 }
 ._1ufF8a7yFkFlQFWpMhXxsh ._3HcdPfgie7n3WFHRomVBnM {
   position: relative;
@@ -1941,6 +1967,7 @@
 }
 ._2FrUVjCRFn__OfoqscThzC {
   bottom: 25%;
+  z-index: 1;
 }
 ._3nQCyfz0pPcX6JDYEf2Joz {
   bottom: calc(25% - 4px);
@@ -1949,6 +1976,7 @@
 .S91J4nhfddEwfzHHSHHFP {
   top: 0%;
   bottom: 25%;
+  z-index: 1;
 }
 ._2l9rTyxx4vXVq0ybAMXfAD {
   overflow: hidden;
@@ -1957,7 +1985,7 @@
 }
 ._2ZhoF776kEHn_v4ZWw3n9T {
   bottom: 0%;
-  top: 75%;
+  z-index: 0;
 }
 ._353kPW0r6Dj7i4bH832LMD {
   z-index: 4;
@@ -2026,6 +2054,7 @@
 }
 ._2a0WEKuu49hGMyKXRwSPAG._3pSft3L6I9YfJp6WrWhn7X {
   pointer-events: auto;
+  cursor: grabbing;
 }
 ._2a0WEKuu49hGMyKXRwSPAG ._3RFz2sP-6kCicYywbJM6BT {
   display: flex;
@@ -2038,6 +2067,12 @@
 }
 ._2a0WEKuu49hGMyKXRwSPAG ._3RFz2sP-6kCicYywbJM6BT ._2p3OJez0ffOUDI1_3aC4Jv {
   pointer-events: auto;
+  cursor: grab;
+}
+._2a0WEKuu49hGMyKXRwSPAG
+  ._3RFz2sP-6kCicYywbJM6BT
+  ._2p3OJez0ffOUDI1_3aC4Jv:active {
+  cursor: grabbing;
 }
 ._3tMryUIyw9M80nbFzItyAm {
   position: relative;
@@ -2207,6 +2242,7 @@
 }
 ._2Y_wUIzvTM8vmWtT8BoCHu {
   bottom: 25%;
+  z-index: 1;
 }
 ._1b_Bu6IdHVi7vQmsqz564J {
   bottom: calc(25% - 4px);
@@ -2215,6 +2251,7 @@
 ._2AlPMeTpVzErNXA4zO6iR2 {
   top: 0%;
   bottom: 25%;
+  z-index: 1;
 }
 ._3dKK-iYss2ImDOuqzxzHja {
   overflow: hidden;
@@ -2223,7 +2260,7 @@
 }
 ._1X_fqPSSgAbWlfcul4jEAl {
   bottom: 0%;
-  top: 75%;
+  z-index: 0;
 }
 ._3kQiblinmz6ip2unkDmM63 {
   z-index: 4;
@@ -2430,6 +2467,7 @@
 }
 ._1yuLK-c1yVn1olYlwKFfsg {
   bottom: 25%;
+  z-index: 1;
 }
 ._1X5z7Cxez_Pi1SIEQ20CPt {
   bottom: calc(25% - 4px);
@@ -2438,6 +2476,7 @@
 ._2XHYrCxPkwd63ibzXm8gRk {
   top: 0%;
   bottom: 25%;
+  z-index: 1;
 }
 ._3cfYvXdVMimlZlu80qbr2f {
   overflow: hidden;
@@ -2446,7 +2485,7 @@
 }
 .sdaoaS207GZbHTeGkG3NX {
   bottom: 0%;
-  top: 75%;
+  z-index: 0;
 }
 ._2-RwpaVDa8Ysl3w2JNmrDx {
   z-index: 4;
@@ -2556,6 +2595,7 @@
 }
 ._1yuLK-c1yVn1olYlwKFfsg {
   bottom: 25%;
+  z-index: 1;
 }
 ._1X5z7Cxez_Pi1SIEQ20CPt {
   bottom: calc(25% - 4px);
@@ -2564,6 +2604,7 @@
 ._2XHYrCxPkwd63ibzXm8gRk {
   top: 0%;
   bottom: 25%;
+  z-index: 1;
 }
 ._3cfYvXdVMimlZlu80qbr2f {
   overflow: hidden;
@@ -2572,7 +2613,7 @@
 }
 .sdaoaS207GZbHTeGkG3NX {
   bottom: 0%;
-  top: 75%;
+  z-index: 0;
 }
 ._2-RwpaVDa8Ysl3w2JNmrDx {
   z-index: 4;
@@ -2650,6 +2691,7 @@
 }
 .LF77_xJGEEtK-ubK9zyop ._29NxDJiEVsfeNKIgfhGQd ._32dftrGKhJlUmLEPDhiB2L {
   pointer-events: auto;
+  cursor: pointer;
 }
 .LF77_xJGEEtK-ubK9zyop
   ._29NxDJiEVsfeNKIgfhGQd
@@ -2773,6 +2815,7 @@
 }
 ._1yuLK-c1yVn1olYlwKFfsg {
   bottom: 25%;
+  z-index: 1;
 }
 ._1X5z7Cxez_Pi1SIEQ20CPt {
   bottom: calc(25% - 4px);
@@ -2781,6 +2824,7 @@
 ._2XHYrCxPkwd63ibzXm8gRk {
   top: 0%;
   bottom: 25%;
+  z-index: 1;
 }
 ._3cfYvXdVMimlZlu80qbr2f {
   overflow: hidden;
@@ -2789,7 +2833,7 @@
 }
 .sdaoaS207GZbHTeGkG3NX {
   bottom: 0%;
-  top: 75%;
+  z-index: 0;
 }
 ._2-RwpaVDa8Ysl3w2JNmrDx {
   z-index: 4;
@@ -2858,6 +2902,7 @@
 }
 ._2a8UIEcktPjqEtq17g-ZdF._1F8CRQeU4eLMvj443m52CJ {
   pointer-events: auto;
+  cursor: grabbing;
 }
 ._2a8UIEcktPjqEtq17g-ZdF .NXvNd0FldTAqqFPcKlqOH {
   display: flex;
@@ -2870,6 +2915,12 @@
 }
 ._2a8UIEcktPjqEtq17g-ZdF .NXvNd0FldTAqqFPcKlqOH ._2g3Hn9pbNSnBHtwPMRt5sB {
   pointer-events: auto;
+  cursor: grab;
+}
+._2a8UIEcktPjqEtq17g-ZdF
+  .NXvNd0FldTAqqFPcKlqOH
+  ._2g3Hn9pbNSnBHtwPMRt5sB:active {
+  cursor: grabbing;
 }
 ._3HuvEE2Uq7s0X3vaaTXlRX {
   position: relative;
@@ -2974,6 +3025,7 @@
   position: absolute;
   bottom: 0px;
   pointer-events: auto;
+  cursor: pointer;
   height: 100%;
 }
 ._266BFu1tEL0Bl_s9mCcs0y {
@@ -3137,6 +3189,7 @@
 }
 .HSQxmKgg_F2JrTS2KkaV {
   bottom: 25%;
+  z-index: 1;
 }
 ._3XbwUtcmHTwg6O6NNLNYWP {
   bottom: calc(25% - 4px);
@@ -3145,6 +3198,7 @@
 ._2_Y6MDfoLE3drH3MIkIrNC {
   top: 0%;
   bottom: 25%;
+  z-index: 1;
 }
 ._164X_pEdW2ds0mUfbeQxRK {
   overflow: hidden;
@@ -3153,7 +3207,7 @@
 }
 ._10KYppgjoWZgEiejvMGNMR {
   bottom: 0%;
-  top: 75%;
+  z-index: 0;
 }
 ._1Y7ULrH9H4Bw_YXP1d8uLF {
   z-index: 4;
@@ -3231,6 +3285,7 @@
 }
 ._2x8YN4RvLu1CEIqCbGNpUL ._1pnAm9mTDE0X4yXe0P_x4Z ._23Eh5qj3nKjB4dB0S4gwPC {
   pointer-events: auto;
+  cursor: pointer;
 }
 ._2x8YN4RvLu1CEIqCbGNpUL
   ._1pnAm9mTDE0X4yXe0P_x4Z

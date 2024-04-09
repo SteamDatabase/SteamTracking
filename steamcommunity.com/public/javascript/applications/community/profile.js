@@ -455,72 +455,72 @@
         "images/applications/community/avatar_default_full.jpg?v=valveisgoodatcaching";
       var d = r(5167),
         u = r.n(d);
-      class h extends i.Component {
-        render() {
-          const e = this.props,
-            {
-              strAvatarURL: t,
-              size: r,
-              className: n,
-              statusStyle: o,
-              statusPosition: l,
-              children: d,
-            } = e,
-            h = (0, a._T)(e, [
-              "strAvatarURL",
-              "size",
-              "className",
-              "statusStyle",
-              "statusPosition",
-              "children",
-            ]),
-            p = [];
-          return (
-            t && p.push(t),
-            p.push(
-              (function (e) {
-                switch (e) {
-                  case "X-Small":
-                  case "Small":
-                    return "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gA7Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2NjIpLCBxdWFsaXR5ID0gOTAK/9sAQwADAgIDAgIDAwMDBAMDBAUIBQUEBAUKBwcGCAwKDAwLCgsLDQ4SEA0OEQ4LCxAWEBETFBUVFQwPFxgWFBgSFBUU/9sAQwEDBAQFBAUJBQUJFA0LDRQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQU/8AAEQgAIAAgAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8A/P4mW5nmllmeSR3LMzMSSc1a07R73V72KzsILi9u5TiOC2RpJHPoFGSarQ/ef6n+de4fAn9oaL4D+DfGX9i6Uf8AhO9XSKDT9eZY3WxiDZcBGByTkn0JCZBxQB41qeiX+iXslnqNtdWF3H9+3uo2jkX6q2CKpgy208MsUzxyI4ZWViCDmvsr9rrUdT1j9nb4T6h8RBbH4qXUs0zMsSxXJ04hivnKoAU5MPGBg7uM7q+NpvvJ9R/OgAh+8/1P867T4POI/iz4Mc6U+u7NZtG/suPbuu8TKfKG4hct93njnmuKIltp5opYXjkRyrKykEHNWbDVbvSr63vbKaezvLeRZYbi3ZkkidTlWVhyCCMgjpQB6l+1F411nx58dPFWpa5a3mnXaXP2ZNOvXVpLKNBhYflJUY5PB5JJ6k15LN95PqP51a1PWr7WtQnvtRuLm/vrhzJNc3TtJLIx6lmbJJ9zVQCW5nhiiheSR3CqqqSSc0Af/9k=";
-                  case "Medium":
-                  case "MediumLarge":
-                    return "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gA7Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2NjIpLCBxdWFsaXR5ID0gODAK/9sAQwAGBAUGBQQGBgUGBwcGCAoQCgoJCQoUDg8MEBcUGBgXFBYWGh0lHxobIxwWFiAsICMmJykqKRkfLTAtKDAlKCko/9sAQwEHBwcKCAoTCgoTKBoWGigoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgo/8AAEQgAQABAAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8A8Inmk8+T94/3j/EfWmedJ/z0f/vo0T/6+T/eP86ZQA/zpP8Ano//AH0aPOk/56P/AN9GmVo6Loeq65M0Wj6ddXrr94QRF9v1I6fjQBR86T/no/8A30aPOk/56P8A99GtHW/Dus6GV/tjS7yyD8K00RVW+h6GsugB/nSf89H/AO+jT4JpPPj/AHj/AHh/EfWoafB/r4/94fzoAJ/9fJ/vH+dMp8/+vk/3j/OmUAXdE099W1mw06Jgsl3PHApPYswUH9a+qPF3iHSPhF4S0+003TxK0hMcEAbZvIA3SO2OvIz6k18nW88ttcRz28jxTRMHSRGKsrA5BBHQg1b1TWdT1fy/7V1G8vfLzs+0TNJtz1xknHQUAfUXw+8c6Z8UdN1HS9V0xIpUTM1s7eYkiE43KcAgg/lxg180+NtEHhzxZqmkqxdLWcojHqUPK598EV9CfBbwpF4G8J3fiLxA4trm5hEsnmceRCOQD/tHqR9B1r568a63/wAJH4r1TVghRLqYuinqE6KD74AoAxafB/r4/wDeH86ZT4P9fH/vD+dABP8A6+T/AHj/ADplPn/18n+8f50ygArt/gtpltq/xK0e2vYxJArPMUYZDFEZhn2yBXEV0/w203VNX8YWdloOoHTtQkWQx3IZl2gISeV55AI/GgD1H9pvxPdi/s/DcDGOz8pbqfHWRizBQfYbc/U+1eD12PxW0fWtE8Tpa+I9UOqXpt0cTl2bCEthctz1B/OuOoAKfB/r4/8AeH86ZT4P9fH/ALw/nQAT/wCvk/3j/OmVNPDJ58n7t/vH+E+tM8mT/nm//fJoAZV7Q9Xv9C1KLUNJuGtryMEJIoBIyCD1BHQmqnkyf883/wC+TR5Mn/PN/wDvk0AaHiHXtT8RX4vdau2u7oIIxIygHaCSBwB6msyn+TJ/zzf/AL5NHkyf883/AO+TQAynwf6+P/eH86PJk/55v/3yafBDJ58f7t/vD+E+tAH/2Q==";
-                  case "Large":
-                  case "X-Large":
-                  case "FillArea":
-                    return c;
-                }
-              })(r),
-            ),
-            i.createElement(
-              "div",
-              Object.assign(
-                {
-                  className: (0, s.Z)(
-                    u().avatarHolder,
-                    "avatarHolder",
-                    "no-drag",
-                    r || "Medium",
-                    n,
-                  ),
-                },
-                h,
+      const h = i.memo(function (e) {
+        const {
+            strAvatarURL: t,
+            size: r,
+            className: n,
+            statusStyle: o,
+            statusPosition: l,
+            children: d,
+          } = e,
+          h = (0, a._T)(e, [
+            "strAvatarURL",
+            "size",
+            "className",
+            "statusStyle",
+            "statusPosition",
+            "children",
+          ]),
+          p = i.useMemo(() => {
+            const e = [];
+            return (
+              t && e.push(t),
+              e.push(
+                (function (e) {
+                  switch (e) {
+                    case "X-Small":
+                    case "Small":
+                      return "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gA7Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2NjIpLCBxdWFsaXR5ID0gOTAK/9sAQwADAgIDAgIDAwMDBAMDBAUIBQUEBAUKBwcGCAwKDAwLCgsLDQ4SEA0OEQ4LCxAWEBETFBUVFQwPFxgWFBgSFBUU/9sAQwEDBAQFBAUJBQUJFA0LDRQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQU/8AAEQgAIAAgAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8A/P4mW5nmllmeSR3LMzMSSc1a07R73V72KzsILi9u5TiOC2RpJHPoFGSarQ/ef6n+de4fAn9oaL4D+DfGX9i6Uf8AhO9XSKDT9eZY3WxiDZcBGByTkn0JCZBxQB41qeiX+iXslnqNtdWF3H9+3uo2jkX6q2CKpgy208MsUzxyI4ZWViCDmvsr9rrUdT1j9nb4T6h8RBbH4qXUs0zMsSxXJ04hivnKoAU5MPGBg7uM7q+NpvvJ9R/OgAh+8/1P867T4POI/iz4Mc6U+u7NZtG/suPbuu8TKfKG4hct93njnmuKIltp5opYXjkRyrKykEHNWbDVbvSr63vbKaezvLeRZYbi3ZkkidTlWVhyCCMgjpQB6l+1F411nx58dPFWpa5a3mnXaXP2ZNOvXVpLKNBhYflJUY5PB5JJ6k15LN95PqP51a1PWr7WtQnvtRuLm/vrhzJNc3TtJLIx6lmbJJ9zVQCW5nhiiheSR3CqqqSSc0Af/9k=";
+                    case "Medium":
+                    case "MediumLarge":
+                      return "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gA7Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2NjIpLCBxdWFsaXR5ID0gODAK/9sAQwAGBAUGBQQGBgUGBwcGCAoQCgoJCQoUDg8MEBcUGBgXFBYWGh0lHxobIxwWFiAsICMmJykqKRkfLTAtKDAlKCko/9sAQwEHBwcKCAoTCgoTKBoWGigoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgo/8AAEQgAQABAAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8A8Inmk8+T94/3j/EfWmedJ/z0f/vo0T/6+T/eP86ZQA/zpP8Ano//AH0aPOk/56P/AN9GmVo6Loeq65M0Wj6ddXrr94QRF9v1I6fjQBR86T/no/8A30aPOk/56P8A99GtHW/Dus6GV/tjS7yyD8K00RVW+h6GsugB/nSf89H/AO+jT4JpPPj/AHj/AHh/EfWoafB/r4/94fzoAJ/9fJ/vH+dMp8/+vk/3j/OmUAXdE099W1mw06Jgsl3PHApPYswUH9a+qPF3iHSPhF4S0+003TxK0hMcEAbZvIA3SO2OvIz6k18nW88ttcRz28jxTRMHSRGKsrA5BBHQg1b1TWdT1fy/7V1G8vfLzs+0TNJtz1xknHQUAfUXw+8c6Z8UdN1HS9V0xIpUTM1s7eYkiE43KcAgg/lxg180+NtEHhzxZqmkqxdLWcojHqUPK598EV9CfBbwpF4G8J3fiLxA4trm5hEsnmceRCOQD/tHqR9B1r568a63/wAJH4r1TVghRLqYuinqE6KD74AoAxafB/r4/wDeH86ZT4P9fH/vD+dABP8A6+T/AHj/ADplPn/18n+8f50ygArt/gtpltq/xK0e2vYxJArPMUYZDFEZhn2yBXEV0/w203VNX8YWdloOoHTtQkWQx3IZl2gISeV55AI/GgD1H9pvxPdi/s/DcDGOz8pbqfHWRizBQfYbc/U+1eD12PxW0fWtE8Tpa+I9UOqXpt0cTl2bCEthctz1B/OuOoAKfB/r4/8AeH86ZT4P9fH/ALw/nQAT/wCvk/3j/OmVNPDJ58n7t/vH+E+tM8mT/nm//fJoAZV7Q9Xv9C1KLUNJuGtryMEJIoBIyCD1BHQmqnkyf883/wC+TR5Mn/PN/wDvk0AaHiHXtT8RX4vdau2u7oIIxIygHaCSBwB6msyn+TJ/zzf/AL5NHkyf883/AO+TQAynwf6+P/eH86PJk/55v/3yafBDJ58f7t/vD+E+tAH/2Q==";
+                    case "Large":
+                    case "X-Large":
+                    case "FillArea":
+                      return c;
+                  }
+                })(r),
               ),
-              i.createElement("div", {
-                className: (0, s.Z)(u().avatarStatus, "avatarStatus", l),
-                style: o,
-              }),
-              i.createElement(m.j, {
-                className: (0, s.Z)(u().avatar, "avatar"),
-                rgSources: p,
-                draggable: !1,
-              }),
-              d,
-            )
-          );
-        }
-      }
+              e
+            );
+          }, [t, r]);
+        return i.createElement(
+          "div",
+          Object.assign(
+            {
+              className: (0, s.Z)(
+                u().avatarHolder,
+                "avatarHolder",
+                "no-drag",
+                r || "Medium",
+                n,
+              ),
+            },
+            h,
+          ),
+          i.createElement("div", {
+            className: (0, s.Z)(u().avatarStatus, "avatarStatus", l),
+            style: o,
+          }),
+          i.createElement(m.j, {
+            className: (0, s.Z)(u().avatar, "avatar"),
+            rgSources: p,
+            draggable: !1,
+          }),
+          d,
+        );
+      });
       let p = class extends i.Component {
         render() {
           const e = this.props,
@@ -987,10 +987,10 @@
           s || ((D += " " + g().notFriends), (w = !1)),
             l && ((D += " " + g().communicationBlocked), (x = !0));
           let O,
-            F = void 0 !== o,
-            M = r.is_awayOrSnooze;
+            M = void 0 !== o,
+            F = r.is_awayOrSnooze;
           return (
-            (O = F
+            (O = M
               ? d.createElement(
                   "div",
                   null,
@@ -1068,7 +1068,7 @@
                         className: (0, h.Z)(
                           g().miniProfilePlayer,
                           r.online_state,
-                          M && g().isAway,
+                          F && g().isAway,
                           (0, f.sB)(r),
                         ),
                       },
@@ -1076,7 +1076,7 @@
                         persona: this.props.persona,
                         community_data: A,
                       }),
-                      M &&
+                      F &&
                         d.createElement(v.a, {
                           persona: r,
                           animating: !0,
@@ -1093,7 +1093,7 @@
                             "div",
                             { className: g().persona },
                             O,
-                            M &&
+                            F &&
                               d.createElement(
                                 "div",
                                 { className: g().awayStatusLabel },
@@ -1106,7 +1106,7 @@
                                 this.props.persona.GetLocalizedOnlineStatus(),
                               ),
                             "online" == r.online_state &&
-                              !M &&
+                              !F &&
                               d.createElement(
                                 "div",
                                 { className: g().awayStatusLabel },
@@ -1309,7 +1309,7 @@
         }
       }
       (0, a.gn)([s.LO], O.prototype, "m_rgPreviousAvatars", void 0);
-      class F {
+      class M {
         constructor() {
           (this.m_AvatarData = void 0), (0, s.rC)(this);
         }
@@ -1382,7 +1382,7 @@
           });
         }
       }
-      function M(e) {
+      function F(e) {
         switch (e) {
           case 1:
             return (0, p.Xx)("#Privacy_Private");
@@ -1397,7 +1397,7 @@
       function T(e, t) {
         return e < t ? e : t;
       }
-      (0, a.gn)([s.LO.shallow], F.prototype, "m_AvatarData", void 0);
+      (0, a.gn)([s.LO.shallow], M.prototype, "m_AvatarData", void 0);
       class U {
         constructor(e, t) {
           (this.m_PrivacySettings = void 0),
@@ -2607,7 +2607,7 @@
       }
       class se {
         constructor(e, t, r) {
-          (this.m_OGGAvatars = new F()),
+          (this.m_OGGAvatars = new M()),
             (this.m_EmoticonStore = new w.M()),
             (this.m_EmoticonHoverStore = new D.Q()),
             (this.m_Profile = new le(e)),
@@ -3428,7 +3428,7 @@
       function Oe(e) {
         return (0, p.Xx)(e).replace(/%s/g, "");
       }
-      class Fe extends d.Component {
+      class Me extends d.Component {
         constructor() {
           super(...arguments),
             (this.state = { activeItem: void 0, bSaving: !1 });
@@ -3509,12 +3509,12 @@
           );
         }
       }
-      function Me(e) {
+      function Fe(e) {
         return e ? e.toLocaleLowerCase().replace(/\W/g, "") : "";
       }
-      (0, a.gn)([ve.ak], Fe.prototype, "CommitChanges", null),
-        (0, a.gn)([ve.ak], Fe.prototype, "RevertChanges", null),
-        (0, a.gn)([ve.ak], Fe.prototype, "OnItemSelected", null);
+      (0, a.gn)([ve.ak], Me.prototype, "CommitChanges", null),
+        (0, a.gn)([ve.ak], Me.prototype, "RevertChanges", null),
+        (0, a.gn)([ve.ak], Me.prototype, "OnItemSelected", null);
       class Te extends d.Component {
         constructor() {
           super(...arguments),
@@ -3534,7 +3534,7 @@
               this.m_fnSearchFieldsDisposer = (0, s.EH)(() => {
                 (this.m_rgSearchableItems = a.map((e, a) => ({
                   key: "" + a,
-                  normalized_search_strings: t && t(e).map(Me),
+                  normalized_search_strings: t && t(e).map(Fe),
                   OnSelected: () => {
                     r(e);
                   },
@@ -4874,7 +4874,7 @@
       function Ot(e, t) {
         return e ? !!t && e.communityitemid === t.communityitemid : !t;
       }
-      let Ft = class extends d.Component {
+      let Mt = class extends d.Component {
         RevertChanges() {
           this.props.ProfileEdit.ProfileItems.RevertMiniProfileBackgroundChanges();
         }
@@ -4904,9 +4904,9 @@
           );
         }
       };
-      (0, a.gn)([ve.ak], Ft.prototype, "RevertChanges", null),
-        (Ft = (0, a.gn)([c.Pi], Ft));
-      const Mt = Ft,
+      (0, a.gn)([ve.ak], Mt.prototype, "RevertChanges", null),
+        (Mt = (0, a.gn)([c.Pi], Mt));
+      const Ft = Mt,
         Tt = (0, c.Pi)(
           ({
             Profile: e,
@@ -4917,7 +4917,7 @@
             let n = t.GetEquippedProfileModifier();
             return (
               n && !t.BIsLegacyGoldenProfile(n.appid) && (n = null),
-              d.createElement(Fe, {
+              d.createElement(Me, {
                 fnRevertChanges: i,
                 getSearchFields: xt,
                 getItems: () => t.GetOwnedMiniProfileBackgrounds(),
@@ -5070,7 +5070,7 @@
               {
                 PrivacyStore: e,
                 strLabel: (0, p.Xx)("#ProfilePrivacy_BasicDetails"),
-                strReadOnlySetting: M(3),
+                strReadOnlySetting: F(3),
               },
               (0, p.Xx)("#ProfilePrivacy_BasicDetails_Desc"),
             ),
@@ -5260,7 +5260,7 @@
             },
             [t, r, o, n],
           );
-        let l = M(t.GetPrivacySetting(r));
+        let l = F(t.GetPrivacySetting(r));
         return d.createElement(
           d.Fragment,
           null,
@@ -5917,7 +5917,7 @@
                 null,
                 (0, p.Xx)("#Profile_Edit_Background_Instructions"),
               ),
-              d.createElement(Fe, {
+              d.createElement(Me, {
                 className: ar.BackgroundPickerPage,
                 getSearchFields: xt,
                 getItems: () => e.GetOwnedBackgrounds(),
@@ -6304,7 +6304,7 @@
               null,
               (0, p.Xx)("#Profile_Edit_ProfileModifier_Instructions"),
             ),
-            d.createElement(Fe, {
+            d.createElement(Me, {
               fnRevertChanges: this.OnDismiss,
               getSearchFields: xt,
               getItems: () => e.GetOwnedProfileModifiers(),
@@ -6421,8 +6421,8 @@
               (0, p.Xx)("#Profile_Edit_Theme_Instructions"),
             ),
             d.createElement(Ue, { strHTMLError: this.state.strHTMLError }),
-            r && d.createElement(Fr, null),
-            d.createElement(Fe, {
+            r && d.createElement(Mr, null),
+            d.createElement(Me, {
               getSearchFields: null,
               ActiveItem: e.ActiveTheme,
               getItems: () =>
@@ -6568,7 +6568,7 @@
             ),
           );
         },
-        Fr = ({ children: e }) =>
+        Mr = ({ children: e }) =>
           d.createElement(
             "div",
             { className: br.ThemesDisabledNotice },
@@ -6578,7 +6578,7 @@
               (0, p.Xx)("#Profile_Edit_GoldenProfileOverridesTheme"),
             ),
           );
-      class Mr extends d.Component {
+      class Fr extends d.Component {
         constructor() {
           super(...arguments),
             (this.m_refDiv = d.createRef()),
@@ -6733,7 +6733,7 @@
               d.createElement(
                 me.AW,
                 { path: `${o}${p.MiniProfile()}` },
-                d.createElement(Mt, { ProfileEdit: s }),
+                d.createElement(Ft, { ProfileEdit: s }),
               ),
               d.createElement(
                 me.AW,
@@ -6765,7 +6765,7 @@
               d.createElement(
                 me.AW,
                 { path: `${o}${p.Showcases()}` },
-                d.createElement(Mr, { elShowcases: Ur, ProfileTheme: c }),
+                d.createElement(Fr, { elShowcases: Ur, ProfileTheme: c }),
               ),
               d.createElement(
                 me.AW,
@@ -6776,8 +6776,8 @@
           ),
         );
       }
-      (0, a.gn)([ve.ak], Mr.prototype, "OnSubmit", null),
-        (0, a.gn)([ve.ak], Mr.prototype, "RevertChanges", null);
+      (0, a.gn)([ve.ak], Fr.prototype, "OnSubmit", null),
+        (0, a.gn)([ve.ak], Fr.prototype, "RevertChanges", null);
       var Xr = r(81030),
         Zr = r(56480);
       const Qr = {

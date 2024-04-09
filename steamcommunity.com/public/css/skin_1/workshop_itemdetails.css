@@ -3742,18 +3742,46 @@ h2.stats {
 }
 
 /* change log */
-.changelog.headline {
+#profileBlock .changelog.headline {
 	display: inline-block;
+	font-size: 20px;
 }
-span.change_log_edit
-{
+.change_log_controls {
 	float: right;
 	margin-left: 10px;
 	margin-top: 30px;
+	display: flex;
+	flex-direction: column;
 }
-.headline span.change_log_edit:hover a
+.change_log_controls .btn_grey_black {
+	margin-bottom: 2px;
+}
+.headline span.change_log_edit:hover a,
+.headline span.update_author_snapshot:hover a
 {
 	color: #ededed;
+}
+.changelog.author_snapshot_versions {
+	font-size: 12px;
+	color: #909da5;
+	margin-top: 4px;
+}
+.update_author_snapshot_dialog {
+	max-width: 500px;
+}
+
+.update_author_snapshot_dialog .update_author_snapshot_builds {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
+}
+.update_author_snapshot_dialog .update_author_snapshot_builds .update_author_snapshot_build {
+	flex-grow: 1;
+}
+.update_author_snapshot_dialog .update_author_snapshot_builds .update_author_snapshot_build > * {
+	width: 100%;
 }
 
 .workshop_item_revert_dialog_explanation
@@ -3764,7 +3792,18 @@ span.change_log_edit
 
 .commentsLink.changeLog
 {
+	width: fit-content;
+	color: #909da5;
+	border-top: 1px solid rgba(255,255,255,0.2);
+	padding-top: 8px;
+	margin-top: 8px;
 	padding-bottom: 20px;
+}
+
+.workshopAnnouncement.changeLogCtn p {
+	background: rgba(0, 0, 0, 0.2);
+	padding: 8px;
+	color: #cfd8e1;
 }
 
 .removeSelfTag

@@ -420,17 +420,13 @@
         }
         render() {
           const e = this.props,
-            { src: t, rgSources: a, onIncrementalError: s, onError: i } = e,
-            l = (0, n._T)(e, [
-              "src",
-              "rgSources",
-              "onIncrementalError",
-              "onError",
-            ]),
-            o = this.src;
+            { rgSources: t, onIncrementalError: a, onError: s } = e,
+            i = (0, n._T)(e, ["rgSources", "onIncrementalError", "onError"]),
+            l = this.src;
           return r.createElement(
             "img",
-            Object.assign({ src: o, ref: this.m_refImage }, l, {
+            Object.assign({ ref: this.m_refImage }, i, {
+              src: l,
               onError: this.OnImageError,
             }),
           );

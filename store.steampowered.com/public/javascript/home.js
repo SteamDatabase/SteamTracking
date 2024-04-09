@@ -41,10 +41,6 @@ GHomepage = {
 	rgAppsRecommendedByCurators: [],
 	rgTopSteamCurators: [],
 
-    rgShuffleModules: [],
-    nModuleShuffleCohort: 0,
-    bDisplayShuffleCohort: false,
-
 	rgfnCustomRenders: [],
 
 	bUserDataReady: false,
@@ -222,9 +218,6 @@ GHomepage = {
 			GHomepage.nLastIRSettingsUpdate = rgParams.nLastIRSettingsUpdate || 0;
 			GHomepage.rgIRIncludedTags = rgParams.rgIRIncludedTags || [];
 			GHomepage.rgIRExcludedTags = rgParams.rgIRExcludedTags || [];
-			GHomepage.rgShuffleModules = rgParams.rgShuffleModules || [];
-			GHomepage.nModuleShuffleCohort = rgParams.nModuleShuffleCohort || 0;
-			GHomepage.bDisplayShuffleCohort = rgParams.bDisplayShuffleCohort || false;
 	} catch( e ) { OnHomepageException(e); }
 
 		GHomepage.bUserDataReady = true;
@@ -452,11 +445,6 @@ GHomepage = {
 			} catch (e) { OnHomepageException(e); }
 		}
 
-        // Shuffle module order
-        try {
-            GHomepage.ShuffleModuleOrder()
-        } catch ( e ) { OnHomepageException(e); }
-
         // this is the only time we'll execute rgfnCustomRenders, future requests will be called directly
 		GHomepage.bInitialRenderComplete = true;
 		for( var i = 0; i < GHomepage.rgfnCustomRenders.length; i++ )
@@ -483,40 +471,6 @@ GHomepage = {
 			$J('#content_login').show();
 		}
 	},
-
-    ShuffleModuleOrder: function()
-    {
-        const nModules = GHomepage.rgShuffleModules.length;
-        if ( GHomepage.nModuleShuffleCohort == 0 || nModules == 0 )
-            return;
-
-        if ( GHomepage.bDisplayShuffleCohort && GHomepage.nModuleShuffleCohort >= 0 ) {
-            $J('#module_shuffle_cohort_display').text("(VO): Module shuffleorder=" + GHomepage.nModuleShuffleCohort);
-        }
-        else {
-            $J('#module_shuffle_cohort_display').hide();
-        }
-
-        var rgShuffled = GHomepage.rgShuffleModules.slice();
-        var nShuffleIndex = Math.abs(GHomepage.nModuleShuffleCohort) - 1;
-        for ( var i = 0; i < nModules; i++ )
-        {
-            var divisor = nModules - i;
-            var j = nShuffleIndex % divisor;
-            nShuffleIndex = Math.floor( nShuffleIndex / divisor );
-            var temp = rgShuffled[ i ];
-            rgShuffled[ i ] = rgShuffled[ i + j ];
-            rgShuffled[ i + j ] = temp;
-        }
-
-        var position = 0;
-        for ( var module in rgShuffled )
-        {
-            var module_name = rgShuffled[module]
-            $J( '#module_shuffle_target' ).append( $J( module_name ) );
-            position++;
-        }
-     },
 
 	ItemKey: function( rgItem )
 	{

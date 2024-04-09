@@ -932,6 +932,7 @@ ${PARTNER_BASE_URL}admin/store/spotlight/${}
 ${PARTNER_BASE_URL}admin/store/suggestpackage
 ${PARTNER_BASE_URL}apprelease/ajaxgetreleaserequest/${}
 ${PARTNER_BASE_URL}apprelease/ajaxupdatereleaserequest/${}
+${PARTNER_BASE_URL}apps/
 ${PARTNER_BASE_URL}apps/ajaxcreatenewapp/
 ${PARTNER_BASE_URL}apps/builddetails/${appid}/${}
 ${PARTNER_BASE_URL}apps/communityitems/${}
@@ -2274,6 +2275,7 @@ https://confluence.valve.org/display/SteamBiz/New+Sales+Page+Feature+-+How+to+in
 https://confluence.valve.org/display/SteamBiz/Next+Fest+Launch+Checklist
 https://confluence.valve.org/display/etc...
 https://confluence.valve.org/pages/viewpage.action?pageId=131008106
+https://confluence.valve.org/pages/viewpage.action?pageId=320176134
 https://d1wp6m56sqw74a.cloudfront.net/~assets/${}
 https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/abouts-cards
 https://developer.valvesoftware.com/

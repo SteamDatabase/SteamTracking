@@ -448,6 +448,11 @@
         GraphTitle: "_3cZuUaicXJuum4rXGW58ta",
         LineValues: "_1Lo07yaSSJgAILv8OF8tYm",
         Value: "_28cVssSFEjYRGOtOijQjyG",
+        LogSection: "_1f1DsyMZPoMlvpRWAMruFE",
+        ButtonRow: "_3utCzjAcc404OPjKNpO5e-",
+        WorkerLogs: "Fw22Q--SmZzCyJbmoPKLP",
+        WorkerLogHeader: "_2dqyrftBu_kF4JXUCzo6Zk",
+        LogContainer: "Xrk5e2IntCK-pm83SHXwB",
       };
     },
     57024: (e) => {
@@ -481,12 +486,12 @@
       "use strict";
       a.r(t),
         a.d(t, {
-          DoesPathMatch: () => ya,
-          IsProjectPath: () => Ia,
-          SteamLearnPageContainer: () => ja,
-          SteamLearnProjectTabs: () => Oa,
-          SteamLearnRoutes: () => Va,
-          default: () => wa,
+          DoesPathMatch: () => Fa,
+          IsProjectPath: () => Ga,
+          SteamLearnPageContainer: () => Aa,
+          SteamLearnProjectTabs: () => Ma,
+          SteamLearnRoutes: () => Ha,
+          default: () => Wa,
         });
       var n = a(760),
         o = a(47427),
@@ -540,17 +545,17 @@
       function h(e) {
         return parseInt(e.replace("node_", ""));
       }
-      function C(e, t) {
+      function L(e, t) {
         return `edge_${e}_${t}`;
       }
-      const L = "SteamLearnDataSource",
+      const C = "SteamLearnDataSource",
         b = "SteamLearnProjectList",
         D = "SteamLearnProject",
         T = "SteamLearnFetchStatusVersions",
         P = "SteamLearnTrainStatusVersions",
         X = "SteamLearnFetchStatus",
         k = "SteamLearnTrainStatus";
-      function V(e) {
+      function I(e) {
         return `SteamLearnWorkingProject_Universe${m.De.EUNIVERSE}_Project${e}`;
       }
       function y() {
@@ -570,7 +575,7 @@
                       .Body()
                       .data_sources()
                       .forEach((e) => {
-                        f.U.setQueryData([L, e.id()], e);
+                        f.U.setQueryData([C, e.id()], e);
                       }),
                     t.Body().data_sources()
                   );
@@ -580,9 +585,9 @@
           { staleTime: 1 / 0 },
         );
       }
-      function I(e) {
+      function V(e) {
         return (0, N.useQuery)(
-          [L, e],
+          [C, e],
           () =>
             (function (e) {
               return (0, l.mG)(this, void 0, void 0, function* () {
@@ -601,7 +606,7 @@
         );
       }
       function j(e, t) {
-        const a = I(e);
+        const a = V(e);
         if (!a.isSuccess) return;
         return O(a.data.structure(), "", t);
       }
@@ -631,7 +636,7 @@
                 throw `Failed FetchProject ${e}`;
               });
             })(e),
-            a = V(e);
+            a = I(e);
           null === localStorage.getItem(a) &&
             localStorage.setItem(a, t.serializeBase64String());
           const n = S.mgi.deserializeBinary(
@@ -769,7 +774,28 @@
           { staleTime: 1 / 0 },
         );
       }
-      function W(e, t) {
+      function W(e, t, a) {
+        return (0, N.useQuery)(
+          ["SteamLearnTrainLogs", e, t, a],
+          () =>
+            (function (e, t, a) {
+              return (0, l.mG)(this, void 0, void 0, function* () {
+                let n = g.gA.Init(S.mY8);
+                n.Body().set_project_id(e),
+                  n.Body().set_fetch_id(t),
+                  n.Body().set_train_id(a);
+                const o = yield S.NG.GetTrainLogs(
+                  p.Get().GetServiceTransport(),
+                  n,
+                );
+                if (o.BIsValid() && 1 == o.GetEResult()) return o.Body();
+                throw `Failed FetchLogs: Project ${e}, Train ${a}, Fetch ${t}`;
+              });
+            })(e, t, a),
+          { staleTime: 1e4 },
+        );
+      }
+      function U(e, t) {
         return (0, N.useQuery)(
           ["SteamLearnTrainLogEvents", e, t],
           () =>
@@ -788,13 +814,13 @@
           { staleTime: 1 / 0 },
         );
       }
-      function U(e, t) {
+      function R(e, t) {
         f.U.invalidateQueries([X, e, t]);
       }
-      function R(e, t) {
+      function K(e, t) {
         f.U.invalidateQueries([k, e, t]);
       }
-      function K(e, t, a) {
+      function Z(e, t, a) {
         return (0, l.mG)(this, void 0, void 0, function* () {
           let n = g.gA.Init(S.CjN);
           for (const a of t) {
@@ -817,7 +843,7 @@
           throw `Failed FetchBatchStatus: Project ${e}, Fetch IDs: ${t}, Train IDs: ${a}`;
         });
       }
-      function Z(e, t) {
+      function Q(e, t) {
         return (0, l.mG)(this, void 0, void 0, function* () {
           let a = g.gA.Init(S.zuF);
           a.Body().set_project_name(e), a.Body().set_project_description(t);
@@ -834,7 +860,7 @@
           );
         });
       }
-      function Q(e, t) {
+      function $(e, t) {
         return (0, l.mG)(this, void 0, void 0, function* () {
           let a = g.gA.Init(S.S$J);
           a.Body().set_project(e), a.Body().set_published_version(t);
@@ -842,19 +868,19 @@
           return (
             n &&
               1 == n.GetEResult() &&
-              (localStorage.removeItem(V(e.project_id())),
+              (localStorage.removeItem(I(e.project_id())),
               f.U.invalidateQueries([D, e.project_id()])),
             n.Body().result()
           );
         });
       }
-      function $(e) {
-        localStorage.removeItem(V(e)),
+      function Y(e) {
+        localStorage.removeItem(I(e)),
           f.U.invalidateQueries([D, e]),
           f.U.removeQueries([T, e]),
           f.U.removeQueries([P, e]);
       }
-      function Y(e, t) {
+      function J(e, t) {
         let a;
         for (const n of e.project_nodes())
           n.type() == t && (!a || n.node_id() > a.node_id()) && (a = n);
@@ -868,7 +894,7 @@
         for (let e = 0; e < t.length; e++) if (t[e] != e + 1) return e + 1;
         return t.length + 1;
       }
-      function J(e, t) {
+      function ee(e, t) {
         let a = [];
         for (const t of e.project_nodes())
           a.push(...t.connectors().map((e) => e.connector_id()));
@@ -876,10 +902,10 @@
         for (let e = 1; a.includes(e) || (n.push(e), n.length != t); e++);
         return n;
       }
-      function ee(e) {
-        return J(e, 1)[0];
+      function te(e) {
+        return ee(e, 1)[0];
       }
-      function te(e, t, a, n, o, r) {
+      function ae(e, t, a, n, o, r) {
         let i = t.project_nodes().find((e) => e.node_id() == a),
           s = t.project_nodes().find((e) => e.node_id() == o);
         if (
@@ -899,9 +925,9 @@
             `AddEdgeToConfig: Failed to find target connector: ${o}, ${r}`,
           ),
           c.add_linked_connector_ids(r),
-          ie(e);
+          se(e);
       }
-      function ae(e, t) {
+      function ne(e, t) {
         for (const a of e.project_nodes())
           for (const e of a.connectors())
             for (const n of e.linked_connector_ids())
@@ -912,7 +938,7 @@
                 };
         return { msgIncomingNode: void 0, nIncomingConnectorID: 0 };
       }
-      function ne(e, t, a) {
+      function oe(e, t, a) {
         var n, o;
         let r = [];
         switch (t.type()) {
@@ -930,12 +956,12 @@
             r.push(t.dense_stack().width()[t.dense_stack().width().length - 1]);
             break;
           case 4: {
-            const { msgIncomingNode: a, nIncomingConnectorID: n } = ae(
+            const { msgIncomingNode: a, nIncomingConnectorID: n } = ne(
               e,
               t.connectors()[0].connector_id(),
             );
             if (a) {
-              const t = ne(e, a, n);
+              const t = oe(e, a, n);
               (0, u.X)(
                 1 == t.length,
                 `Input tensor to STEAMLEARN_NODE_TYPE_DROPOUT not one-dimensional! (node ${a}, connector ${n}`,
@@ -955,17 +981,17 @@
               (0, u.X)(!1, `No input connector on node ${t.toObject()}`);
               break;
             }
-            const { msgIncomingNode: o, nIncomingConnectorID: i } = ae(e, a);
+            const { msgIncomingNode: o, nIncomingConnectorID: i } = ne(e, a);
             if (o)
               if (t.embedding().flatten()) {
-                const a = ne(e, o, i);
+                const a = oe(e, o, i);
                 (0, u.X)(
                   1 == a.length,
                   `Input tensor to STEAMLEARN_NODE_TYPE_EMBEDDING not one-dimensional! (node ${o.toObject()}, connector ${i}`,
                 ),
                   r.push(a[0] * t.embedding().embedding_width());
               } else {
-                const a = ne(e, o, i);
+                const a = oe(e, o, i);
                 (0, u.X)(
                   1 == a.length,
                   `Input tensor to STEAMLEARN_NODE_TYPE_EMBEDDING not one-dimensional! (node ${o.toObject()}, connector ${i}`,
@@ -979,12 +1005,12 @@
             let a = 0;
             for (const n of t.connectors())
               if (n.is_input_connector()) {
-                const { msgIncomingNode: t, nIncomingConnectorID: o } = ae(
+                const { msgIncomingNode: t, nIncomingConnectorID: o } = ne(
                   e,
                   n.connector_id(),
                 );
                 if (t) {
-                  const n = ne(e, t, o);
+                  const n = oe(e, t, o);
                   (0, u.X)(
                     1 == n.length,
                     `Input tensor to STEAMLEARN_NODE_TYPE_CONCATENATE not one-dimensional! (node ${t.toObject()}, connector ${o}`,
@@ -999,12 +1025,12 @@
             let a = 0;
             for (const n of t.connectors())
               if (n.is_input_connector()) {
-                const { msgIncomingNode: t, nIncomingConnectorID: o } = ae(
+                const { msgIncomingNode: t, nIncomingConnectorID: o } = ne(
                   e,
                   n.connector_id(),
                 );
                 if (t) {
-                  const n = ne(e, t, o);
+                  const n = oe(e, t, o);
                   (0, u.X)(
                     1 == n.length,
                     `Input tensor to STEAMLEARN_NODE_TYPE_COMBINE not one-dimensional! (node ${t.toObject()}, connector ${o}`,
@@ -1026,9 +1052,9 @@
               (0, u.X)(!1, `No input connector on node ${t.toObject()}`);
               break;
             }
-            const { msgIncomingNode: n, nIncomingConnectorID: i } = ae(e, a);
+            const { msgIncomingNode: n, nIncomingConnectorID: i } = ne(e, a);
             if (n) {
-              const t = ne(e, n, i);
+              const t = oe(e, n, i);
               (0, u.X)(
                 1 == t.length,
                 `Input tensor to STEAMLEARN_NODE_TYPE_SHUFFLE not one-dimensional! (node ${n}, connector ${i}`,
@@ -1051,9 +1077,9 @@
               `Synced shuffle node with different number of input and output connectors: ${t.toObject()}`,
             );
             const i = n[o.findIndex((e) => e == a)],
-              { msgIncomingNode: s, nIncomingConnectorID: c } = ae(e, i);
+              { msgIncomingNode: s, nIncomingConnectorID: c } = ne(e, i);
             if (s) {
-              const t = ne(e, s, c);
+              const t = oe(e, s, c);
               (0, u.X)(
                 1 == t.length,
                 `Input tensor to STEAMLEARN_NODE_TYPE_SYNCED_SHUFFLE not one-dimensional! (node ${s}, connector ${c}`,
@@ -1084,9 +1110,9 @@
               "Conditional swap node with other than 3 input connectors:",
               t.toObject(),
             );
-            const { msgIncomingNode: n, nIncomingConnectorID: o } = ae(e, a[1]);
+            const { msgIncomingNode: n, nIncomingConnectorID: o } = ne(e, a[1]);
             if (n) {
-              const t = ne(e, n, o);
+              const t = oe(e, n, o);
               r.push(...t);
             }
             break;
@@ -1099,11 +1125,11 @@
               break;
             }
             const o = Math.floor(n / 3),
-              { msgIncomingNode: i, nIncomingConnectorID: s } = ae(
+              { msgIncomingNode: i, nIncomingConnectorID: s } = ne(
                 e,
                 t.connectors()[o].connector_id(),
               ),
-              c = ne(e, i, s);
+              c = oe(e, i, s);
             r.push(c[0] - 1);
             break;
           }
@@ -1119,11 +1145,11 @@
               break;
             }
             const o = 3 * Math.floor((n - 1) / 3) + 1,
-              { msgIncomingNode: i, nIncomingConnectorID: s } = ae(
+              { msgIncomingNode: i, nIncomingConnectorID: s } = ne(
                 e,
                 t.connectors()[o].connector_id(),
               ),
-              c = ne(e, i, s);
+              c = oe(e, i, s);
             r.push(c[0] - 1);
             break;
           }
@@ -1139,36 +1165,36 @@
             }
             break;
           case 19: {
-            const { msgIncomingNode: a, nIncomingConnectorID: n } = ae(
+            const { msgIncomingNode: a, nIncomingConnectorID: n } = ne(
               e,
               t.connectors()[0].connector_id(),
             );
             if (a) {
-              const t = ne(e, a, n);
+              const t = oe(e, a, n);
               r.push(t[0]);
             }
             break;
           }
           case 24: {
             let a = 1;
-            const { msgIncomingNode: n, nIncomingConnectorID: o } = ae(
+            const { msgIncomingNode: n, nIncomingConnectorID: o } = ne(
               e,
               t.connectors()[0].connector_id(),
             );
             if (n) {
-              const t = ne(e, n, o);
+              const t = oe(e, n, o);
               if (t.length > 0) for (const e of t) a *= e;
             }
             r.push(a);
             break;
           }
           case 22: {
-            const { msgIncomingNode: a, nIncomingConnectorID: n } = ae(
+            const { msgIncomingNode: a, nIncomingConnectorID: n } = ne(
               e,
               t.connectors()[0].connector_id(),
             );
             if (a) {
-              const o = ne(e, a, n);
+              const o = oe(e, a, n);
               o.length > 0 &&
                 (r.push(o[0] - t.conv_1d().kernel_size() + 1),
                 r.push(t.conv_1d().filters()));
@@ -1176,12 +1202,12 @@
             break;
           }
           case 23: {
-            const { msgIncomingNode: a, nIncomingConnectorID: n } = ae(
+            const { msgIncomingNode: a, nIncomingConnectorID: n } = ne(
               e,
               t.connectors()[0].connector_id(),
             );
             if (a) {
-              const o = ne(e, a, n);
+              const o = oe(e, a, n);
               if (o.length > 0) {
                 r.push(
                   Math.floor(
@@ -1202,7 +1228,7 @@
         }
         return r;
       }
-      function oe(e, t, a) {
+      function re(e, t, a) {
         const n = t.project_nodes().findIndex((e) => e.node_id() == a);
         if (-1 == n) return;
         const o = t
@@ -1214,17 +1240,17 @@
             t.set_linked_connector_ids(
               t.linked_connector_ids().filter((e) => !o.includes(e)),
             );
-        t.project_nodes().splice(n, 1), ie(e);
+        t.project_nodes().splice(n, 1), se(e);
       }
-      function re(e) {
+      function ie(e) {
         let t = [];
         for (const a of e.data_source_element_usages())
           0 != a.input() && (t.includes(a.input()) || t.push(a.input()));
         return t.sort();
       }
-      function ie(e) {
+      function se(e) {
         !(function (e) {
-          let t = re(e);
+          let t = ie(e);
           for (; t.length > 0; ) {
             const a = t[0];
             if (
@@ -1233,9 +1259,9 @@
                 .project_nodes()
                 .find((e) => 1 == e.type() && e.input().input_num() == a)
             ) {
-              const [t, n] = Y(e, 1);
+              const [t, n] = J(e, 1);
               let o = new S.UYo();
-              o.set_connector_id(ee(e)), o.set_is_input_connector(!1);
+              o.set_connector_id(te(e)), o.set_is_input_connector(!1);
               let r = new S._ur();
               r.set_node_id(q(e)),
                 r.set_type(1),
@@ -1248,7 +1274,7 @@
             }
             t.shift();
           }
-          t = re(e);
+          t = ie(e);
           const a = e
             .project_nodes()
             .filter((e) => 1 != e.type() || t.includes(e.input().input_num()));
@@ -1256,8 +1282,8 @@
             (e.set_project_nodes(a),
             !(null != e.project_nodes().find((e) => 6 == e.type())))
           ) {
-            const [t, a] = Y(e, 6),
-              n = J(e, 2);
+            const [t, a] = J(e, 6),
+              n = ee(e, 2);
             let o = new S.UYo();
             o.set_connector_id(n[0]), o.set_is_input_connector(!0);
             let r = new S.UYo();
@@ -1278,23 +1304,23 @@
               e.add_project_nodes(i);
           }
         })(e.unpublished_config()),
-          localStorage.setItem(V(e.project_id()), e.serializeBase64String()),
+          localStorage.setItem(I(e.project_id()), e.serializeBase64String()),
           f.U.invalidateQueries([D, e.project_id()]);
       }
-      function se(e, t) {
+      function ce(e, t) {
         const a = (function (e) {
-          return f.U.getQueryData([L, e]);
+          return f.U.getQueryData([C, e]);
         })(t);
         if (!a) return !1;
         for (const n of a.structure().elements())
-          ce(e.unpublished_config(), "", t, n);
+          le(e.unpublished_config(), "", t, n);
         return e.unpublished_config().add_data_source_ids(t), !0;
       }
-      function ce(e, t, a, n) {
+      function le(e, t, a, n) {
         for (let o = 0; o < n.count(); o++) {
           const r = `${t}${0 == t.length ? "" : "/"}${n.name()}#${o}`;
           if (5 == n.data_type())
-            for (const t of n.object().elements()) ce(e, r, a, t);
+            for (const t of n.object().elements()) le(e, r, a, t);
           else {
             let t = new S.Y0T();
             t.set_data_source_id(a),
@@ -1310,7 +1336,7 @@
           }
         }
       }
-      function le(e, t, a) {
+      function de(e, t, a) {
         return (
           e.length > 0 &&
           /^[\d]*$/.test(e) &&
@@ -1318,14 +1344,14 @@
           (void 0 === a || parseInt(e) <= a)
         );
       }
-      function de(e, t, a) {
+      function me(e, t, a) {
         return (
           /^[\d]*\.?[\d]*$/.test(e) &&
           (void 0 === t || parseFloat(e) >= t) &&
           (void 0 === a || parseFloat(e) <= a)
         );
       }
-      function me(e, t, a) {
+      function _e(e, t, a) {
         for (const a of e.data_source_element_usages())
           if (a.compact_table() == t) return !0;
         for (const n of e.project_nodes())
@@ -1344,19 +1370,19 @@
             return !0;
         return !1;
       }
-      const _e = o.createContext(null),
-        ue = () => o.useContext(_e);
-      function pe(e) {
+      const ue = o.createContext(null),
+        pe = () => o.useContext(ue);
+      function Ne(e) {
         return o.createElement(
-          _e.Provider,
+          ue.Provider,
           { value: e.steamLearnContext },
           e.children,
         );
       }
-      const Ne = (e) => {
+      const ge = (e) => {
           const t = H(e.nProjectID);
           if (!e.nProjectID)
-            return o.createElement(pe, { steamLearnContext: {} }, e.children);
+            return o.createElement(Ne, { steamLearnContext: {} }, e.children);
           const [a, n] = t.data || [void 0, void 0];
           let r;
           return (
@@ -1370,7 +1396,7 @@
                         (t) => t.published_version() == e.nPublishedVersion,
                       )),
             o.createElement(
-              pe,
+              Ne,
               {
                 steamLearnContext: {
                   nProjectID: e.nProjectID,
@@ -1384,29 +1410,29 @@
             )
           );
         },
-        ge = (e) => {
+        Se = (e) => {
           const t = (0, r.TH)(),
-            a = Ia(t.pathname);
+            a = Ga(t.pathname);
           let n, i;
-          for (const e of Object.values(Va)) {
+          for (const e of Object.values(Ha)) {
             const a = e(void 0, void 0),
               o = (0, r.LX)(t.pathname, a);
             o &&
-              a.includes(`/${Va.SteamLearnProject()}/`) &&
+              a.includes(`/${Ha.SteamLearnProject()}/`) &&
               (void 0 !== o.params.id && (n = parseInt(o.params.id)),
               void 0 !== o.params.version && (i = parseInt(o.params.version)));
           }
           return a && void 0 !== n
             ? o.createElement(
-                Ne,
+                ge,
                 { nProjectID: n, nPublishedVersion: i },
                 e.children,
               )
-            : o.createElement(pe, { steamLearnContext: {} }, e.children);
+            : o.createElement(Ne, { steamLearnContext: {} }, e.children);
         };
-      var Se = a(86728),
-        fe = a(20417);
-      const Ee = (e) => {
+      var fe = a(86728),
+        Ee = a(20417);
+      const ve = (e) => {
           const t = Math.max(
             0,
             ...e.msgProject
@@ -1416,52 +1442,52 @@
           return o.createElement(
             i.rU,
             {
-              to: Va.SteamLearnProjectTrainStatus(e.msgProject.project_id(), t),
-              className: (0, s.Z)(Se.ProjectEntry, e.isHidden && Se.Hidden),
+              to: Ha.SteamLearnProjectTrainStatus(e.msgProject.project_id(), t),
+              className: (0, s.Z)(fe.ProjectEntry, e.isHidden && fe.Hidden),
             },
             o.createElement(
               "div",
-              { className: Se.ProjectName },
+              { className: fe.ProjectName },
               e.msgProject.project_name(),
             ),
             o.createElement(
               "div",
-              { className: Se.ProjectDescription },
+              { className: fe.ProjectDescription },
               e.msgProject.project_description(),
             ),
             o.createElement(
               "div",
-              { className: Se.ProjectID },
+              { className: fe.ProjectID },
               (0, c.Xx)("#SteamLearn_ProjectID", e.msgProject.project_id()),
             ),
           );
         },
-        ve = () => {
+        xe = () => {
           const [e, t] = o.useState(""),
             a = w(),
             n = a.data;
           return o.createElement(
             "div",
-            { className: Se.DashboardProjectList },
+            { className: fe.DashboardProjectList },
             a.isLoading &&
               o.createElement(
                 "div",
-                { className: Se.Loading },
+                { className: fe.Loading },
                 (0, c.Xx)("#SteamLearn_LoadingProjects"),
               ),
             a.isSuccess &&
               o.createElement(
                 "div",
-                { className: Se.ListContainer },
+                { className: fe.ListContainer },
                 o.createElement("input", {
                   type: "text",
-                  className: Se.ListFilter,
+                  className: fe.ListFilter,
                   value: e,
                   onChange: (e) => t(e.target.value),
                   placeholder: (0, c.Xx)("#SteamLearn_FilterProject"),
                 }),
                 n.map((t) =>
-                  o.createElement(Ee, {
+                  o.createElement(ve, {
                     key: `Project_${t.project_id()}`,
                     isHidden:
                       e.length > 0 &&
@@ -1472,13 +1498,13 @@
               ),
           );
         },
-        xe = (e) => {
+        he = (e) => {
           const t = M(e.nProjectID, e.nFetchID),
             a = z(e.nProjectID, e.nTrainID),
             n = t.data,
             r = a.data;
           if (
-            ((0, fe.Yz)(() => {
+            ((0, Ee.Yz)(() => {
               if (n)
                 switch (n.status()) {
                   case 0:
@@ -1486,7 +1512,7 @@
                   case 2:
                   case 5:
                   case 6:
-                    U(e.nProjectID, e.nFetchID);
+                    R(e.nProjectID, e.nFetchID);
                 }
               if (r)
                 switch (r.status()) {
@@ -1494,7 +1520,7 @@
                   case 2:
                   case 1:
                   case 6:
-                    R(e.nProjectID, e.nTrainID);
+                    K(e.nProjectID, e.nTrainID);
                 }
             }, 3e4),
             !n || !r)
@@ -1529,9 +1555,9 @@
                   r.total_epochs(),
                 );
             }
-          return o.createElement("div", { className: Se.ProjectStatusInfo }, i);
+          return o.createElement("div", { className: fe.ProjectStatusInfo }, i);
         },
-        he = (e) => {
+        Le = (e) => {
           var t;
           let a = {
             month: "long",
@@ -1569,10 +1595,10 @@
           switch (e.msgEvent.event_type()) {
             case 4:
               (_ = (0, c.Xx)("#SteamLearn_Event_Type_ScheduledTrain")),
-                (u = Va.SteamLearnProjectTrain(e.nProjectID, m));
+                (u = Ha.SteamLearnProjectTrain(e.nProjectID, m));
               break;
             case 1:
-              (u = Va.SteamLearnProjectTrainStatus(e.nProjectID, m)),
+              (u = Ha.SteamLearnProjectTrainStatus(e.nProjectID, m)),
                 (_ =
                   0 == e.nEndTime
                     ? (0, c.Xx)(
@@ -1591,10 +1617,10 @@
           const g = d && d.active() && d.live();
           return o.createElement(
             i.rU,
-            { to: u, className: (0, s.Z)(Se.EventEntry, g && Se.IsLive) },
+            { to: u, className: (0, s.Z)(fe.EventEntry, g && fe.IsLive) },
             o.createElement(
               "div",
-              { className: Se.Timestamp },
+              { className: fe.Timestamp },
               !e.bProjectSpecific &&
                 new Date(1e3 * e.msgEvent.timestamp()).toLocaleString(
                   c.Yt.GetPreferredLocales(),
@@ -1605,10 +1631,10 @@
             ),
             o.createElement(
               "div",
-              { className: Se.Project },
+              { className: fe.Project },
               o.createElement(
                 "div",
-                { className: Se.Name },
+                { className: fe.Name },
                 e.bProjectSpecific &&
                   new Date(1e3 * e.msgEvent.timestamp()).toLocaleString(
                     c.Yt.GetPreferredLocales(),
@@ -1619,23 +1645,23 @@
               !e.bProjectSpecific &&
                 o.createElement(
                   "div",
-                  { className: Se.ProjectID },
+                  { className: fe.ProjectID },
                   l && (0, c.Xx)("#SteamLearn_ProjectID", l.project_id()),
                 ),
             ),
-            o.createElement("div", { className: Se.Title }, _),
+            o.createElement("div", { className: fe.Title }, _),
             p &&
               o.createElement(
                 "div",
-                { className: Se.Status },
+                { className: fe.Status },
                 0 == e.nEndTime &&
                   o.createElement(
                     "div",
-                    { className: Se.InProgress },
+                    { className: fe.InProgress },
                     (0, c.Xx)("#SteamLearn_Event_InProgress"),
                   ),
                 0 == e.nEndTime &&
-                  o.createElement(xe, {
+                  o.createElement(he, {
                     nProjectID: e.msgEvent.train_started().project_id(),
                     nFetchID: e.msgEvent.train_started().fetch_id(),
                     nTrainID: e.msgEvent.train_started().train_id(),
@@ -1643,7 +1669,7 @@
                 0 != e.nEndTime &&
                   o.createElement(
                     "div",
-                    { className: Se.Completed },
+                    { className: fe.Completed },
                     (0, c.Xx)(
                       "#SteamLearn_Event_Completed",
                       new Date(1e3 * e.nEndTime).toLocaleString(
@@ -1658,8 +1684,8 @@
                     "div",
                     {
                       className: (0, s.Z)(
-                        Se.CompletedDetails,
-                        e.bProjectSpecific && Se.Gold,
+                        fe.CompletedDetails,
+                        e.bProjectSpecific && fe.Gold,
                       ),
                     },
                     (0, c.Xx)(
@@ -1721,7 +1747,7 @@
               (s = o.train_ended().accuracy()),
               (c = o.timestamp()));
           }
-          return o.createElement(he, {
+          return o.createElement(Le, {
             msgEvent: e.msgEvent,
             nProjectID: t,
             nFetchID: a,
@@ -1732,7 +1758,7 @@
             bProjectSpecific: e.bProjectSpecific,
           });
         };
-      const Le = () => {
+      const be = () => {
           const [e, t] = o.useState(0),
             a = new Date();
           a.setDate(a.getDate() + 7 * e);
@@ -1749,26 +1775,26 @@
                 [Math.floor(o.getTime() / 1e3), Math.floor(r.getTime() / 1e3)]
               );
             })(a, 0),
-            i = W(n, r);
+            i = U(n, r);
           let s = { month: "long", day: "numeric" };
           const l = i.data;
           return o.createElement(
             "div",
-            { className: Se.DashboardEventList },
+            { className: fe.DashboardEventList },
             o.createElement(
               "div",
-              { className: Se.EventsListContainer },
+              { className: fe.EventsListContainer },
               o.createElement(
                 "div",
-                { className: Se.WeekSelector },
+                { className: fe.WeekSelector },
                 o.createElement(
                   "div",
-                  { className: Se.LeftArrow, onClick: () => t(e - 1) },
+                  { className: fe.LeftArrow, onClick: () => t(e - 1) },
                   "<",
                 ),
                 o.createElement(
                   "div",
-                  { className: Se.DateRange },
+                  { className: fe.DateRange },
                   new Date(1e3 * n).toLocaleString(
                     c.Yt.GetPreferredLocales(),
                     s,
@@ -1781,20 +1807,20 @@
                 ),
                 o.createElement(
                   "div",
-                  { className: Se.RightArrow, onClick: () => t(e + 1) },
+                  { className: fe.RightArrow, onClick: () => t(e + 1) },
                   ">",
                 ),
               ),
               i.isLoading &&
                 o.createElement(
                   "div",
-                  { className: Se.Loading },
+                  { className: fe.Loading },
                   (0, c.Xx)("#SteamLearn_LoadingEvents"),
                 ),
               i.isSuccess &&
                 o.createElement(
                   "div",
-                  { className: Se.EventList },
+                  { className: fe.EventList },
                   l
                     .event_list()
                     .map((e, t) =>
@@ -1808,59 +1834,59 @@
             ),
           );
         },
-        be = () =>
+        De = () =>
           o.createElement(
             "div",
-            { className: Se.DashboardPage },
+            { className: fe.DashboardPage },
             o.createElement(
               "div",
-              { className: Se.ProjectListContainer },
+              { className: fe.ProjectListContainer },
               o.createElement(
                 "div",
-                { className: Se.DashboardHeader },
+                { className: fe.DashboardHeader },
                 (0, c.Xx)("#SteamLearn_ProjectList"),
               ),
-              o.createElement("div", { className: Se.DashboardUnderline }),
-              o.createElement(ve, null),
+              o.createElement("div", { className: fe.DashboardUnderline }),
+              o.createElement(xe, null),
             ),
             o.createElement(
               "div",
-              { className: Se.EventsContainer },
+              { className: fe.EventsContainer },
               o.createElement(
                 "div",
-                { className: Se.DashboardHeader },
+                { className: fe.DashboardHeader },
                 (0, c.Xx)("#SteamLearn_Project_Events"),
               ),
-              o.createElement("div", { className: Se.DashboardUnderline }),
-              o.createElement(Le, null),
+              o.createElement("div", { className: fe.DashboardUnderline }),
+              o.createElement(be, null),
             ),
           );
-      var De = a(64026),
-        Te = a(53040),
-        Pe = a(90069),
-        Xe = a(64560);
-      const ke = () => {
+      var Te = a(64026),
+        Pe = a(53040),
+        Xe = a(90069),
+        ke = a(64560);
+      const Ie = () => {
           const [e, t] = o.useState(""),
             [a, n] = o.useState(""),
             [r, i] = o.useState(!1);
           return o.createElement(
             "div",
-            { className: De.ProjectCreatePage },
+            { className: Te.ProjectCreatePage },
             o.createElement(
               "div",
-              { className: De.GuideText },
+              { className: Te.GuideText },
               (0, c.Xx)("#SteamLearn_Project_Create_Guidance"),
             ),
             o.createElement(
               "div",
-              { className: De.EditSection },
+              { className: Te.EditSection },
               o.createElement(
                 "div",
-                { className: De.InputTitle },
+                { className: Te.InputTitle },
                 (0, c.Xx)("#SteamLearn_Project_Create_Name"),
               ),
               o.createElement("input", {
-                className: De.InputWide,
+                className: Te.InputWide,
                 type: "text",
                 value: e,
                 onChange: (e) => {
@@ -1869,31 +1895,31 @@
               }),
               o.createElement(
                 "div",
-                { className: De.InputTitle },
+                { className: Te.InputTitle },
                 (0, c.Xx)("#SteamLearn_Project_Create_Desc"),
               ),
               o.createElement("textarea", {
-                className: De.InputAreaWide,
+                className: Te.InputAreaWide,
                 value: a,
                 onChange: (e) => n(e.target.value),
               }),
             ),
             o.createElement(
-              Te.KM,
+              Pe.KM,
               {
                 disabled: !r,
                 onClick: () =>
                   (0, l.mG)(void 0, void 0, void 0, function* () {
                     i(!1);
-                    const [t, n] = yield Z(e, a);
+                    const [t, n] = yield Q(e, a);
                     switch (t) {
                       case 1: {
                         const e =
                           m.De.PARTNER_BASE_URL +
-                          Va.SteamLearnBase() +
-                          Va.SteamLearnProjectDataSources(n, 0);
-                        (0, Pe.AM)(
-                          o.createElement(Ve, {
+                          Ha.SteamLearnBase() +
+                          Ha.SteamLearnProjectDataSources(n, 0);
+                        (0, Xe.AM)(
+                          o.createElement(ye, {
                             strResult: "Success!",
                             strRedirect: e,
                           }),
@@ -1902,14 +1928,14 @@
                         break;
                       }
                       case 2:
-                        (0, Pe.AM)(
-                          o.createElement(Ve, { strResult: "Bad Name!" }),
+                        (0, Xe.AM)(
+                          o.createElement(ye, { strResult: "Bad Name!" }),
                           window,
                         );
                         break;
                       case 3:
-                        (0, Pe.AM)(
-                          o.createElement(Ve, { strResult: "Nope!" }),
+                        (0, Xe.AM)(
+                          o.createElement(ye, { strResult: "Nope!" }),
                           window,
                         );
                     }
@@ -1920,7 +1946,7 @@
             ),
           );
         },
-        Ve = (e) => {
+        ye = (e) => {
           (0, r.k6)();
           const t = () => {
             e.strRedirect &&
@@ -1929,29 +1955,29 @@
               e.closeModal();
           };
           return o.createElement(
-            Xe.R,
+            ke.R,
             {
-              className: De.CreateProjectResultDialog,
+              className: Te.CreateProjectResultDialog,
               onCancel: t,
               closeModal: t,
             },
             o.createElement(
               "div",
-              { className: De.CreateProjectResultDialogContents },
+              { className: Te.CreateProjectResultDialogContents },
               e.strResult,
-              o.createElement(Te.zx, { onClick: t }, (0, c.Xx)("#Button_OK")),
+              o.createElement(Pe.zx, { onClick: t }, (0, c.Xx)("#Button_OK")),
             ),
           );
         };
-      var ye = a(36654),
-        Ie = a(77178);
-      const je = () => {
+      var Ve = a(36654),
+        je = a(77178);
+      const Oe = () => {
           const {
               msgWorkingProject: e,
               msgWorkingProjectConfig: t,
               nProjectID: a,
               nPublishedVersion: n,
-            } = ue(),
+            } = pe(),
             [r, i] = o.useState(!1),
             s = 0 == n,
             l = (t) => {
@@ -1971,92 +1997,92 @@
                     .push(...n),
                   e.unpublished_config().data_source_ids().splice(a, 1);
               })(e, t),
-                ie(e);
+                se(e);
             };
           return o.createElement(
             "div",
-            { className: ye.ProjectDataSourcesPage },
+            { className: Ve.ProjectDataSourcesPage },
             o.createElement(
               "div",
-              { className: ye.OptionBlock },
+              { className: Ve.OptionBlock },
               o.createElement(
                 "div",
-                { className: ye.OptionHeader },
+                { className: Ve.OptionHeader },
                 (0, c.Xx)("#SteamLearn_Config_DataSources"),
               ),
               o.createElement(
                 "div",
-                { className: ye.OptionDesc },
+                { className: Ve.OptionDesc },
                 (0, c.Xx)("#SteamLearn_Config_DataSourcesDesc"),
               ),
               o.createElement(
                 "div",
-                { className: ye.DataSourceList },
+                { className: Ve.DataSourceList },
                 0 == t.data_source_ids().length &&
                   o.createElement(
                     "div",
-                    { className: ye.OptionDetails },
+                    { className: Ve.OptionDetails },
                     (0, c.Xx)("#SteamLearn_Config_DataSources_None"),
                   ),
                 t
                   .data_source_ids()
                   .map((e) =>
-                    o.createElement(He, {
+                    o.createElement(Fe, {
                       key: e,
                       nDataSourceID: e,
                       fnRemoveDataSource: s ? l : void 0,
                     }),
                   ),
-                o.createElement(Fe, {
+                o.createElement(Ge, {
                   bShowPopup: r,
                   fnSetShowPopup: i,
                   fnAddSelectedDataSources: (t) => {
-                    for (const a of t) se(e, a);
-                    ie(e);
+                    for (const a of t) ce(e, a);
+                    se(e);
                   },
                   arrAlreadyAddedDataSourceIDs: t.data_source_ids(),
                 }),
                 0 == t.published_version() &&
                   o.createElement(
-                    Te.zx,
+                    Pe.zx,
                     { onClick: () => i(!0) },
                     (0, c.Xx)("#SteamLearn_Config_DataSources_Add"),
                   ),
               ),
             ),
-            o.createElement("div", { className: ye.Separator }),
+            o.createElement("div", { className: Ve.Separator }),
             o.createElement(
               "div",
-              { className: ye.OptionBlock },
+              { className: Ve.OptionBlock },
               o.createElement(
                 "div",
-                { className: ye.OptionHeader },
+                { className: Ve.OptionHeader },
                 (0, c.Xx)("#SteamLearn_Config_DataSource_Inputs"),
               ),
               o.createElement(
                 "div",
-                { className: ye.OptionDesc },
+                { className: Ve.OptionDesc },
                 (0, c.Xx)("#SteamLearn_Config_DataSource_InputsDesc"),
               ),
-              o.createElement(Oe, null),
+              o.createElement(Be, null),
             ),
           );
         },
-        Oe = () => {
-          const { msgWorkingProjectConfig: e } = ue();
+        Be = () => {
+          const { msgWorkingProjectConfig: e } = pe();
           let t = [];
           for (const a of e.data_source_element_usages())
             t.includes(a.data_source_id()) || t.push(a.data_source_id());
           return o.createElement(
             "div",
-            { className: ye.ProjectConfigDataSourceDataElementRoutingList },
-            t.map((e) => o.createElement(Be, { key: e, nDataSourceID: e })),
+            { className: Ve.ProjectConfigDataSourceDataElementRoutingList },
+            t.map((e) => o.createElement(we, { key: e, nDataSourceID: e })),
           );
         },
-        Be = (e) => {
+        we = (e) => {
           const [t, a] = o.useState([]),
-            n = I(e.nDataSourceID),
-            { msgWorkingProject: r, msgWorkingProjectConfig: i } = ue();
+            n = V(e.nDataSourceID),
+            { msgWorkingProject: r, msgWorkingProjectConfig: i } = pe();
           if (!n.isSuccess) return null;
           const s = (e) => {
               a([...t, e]);
@@ -2122,13 +2148,13 @@
           });
           return o.createElement(
             "div",
-            { className: ye.ProjectConfigDataSourceElementRoutingWrapper },
-            o.createElement("div", { className: ye.DataSourceName }, l.name()),
+            { className: Ve.ProjectConfigDataSourceElementRoutingWrapper },
+            o.createElement("div", { className: Ve.DataSourceName }, l.name()),
             m.map((e, t) => {
               const a = e.strName.split("/"),
                 n = 20 * a.length,
                 r = a[a.length - 1];
-              return o.createElement(we, {
+              return o.createElement(He, {
                 key: t,
                 strRenderName: r,
                 nIndentSize: n,
@@ -2139,12 +2165,12 @@
             }),
           );
         },
-        we = (e) => {
+        He = (e) => {
           const {
               msgWorkingProject: t,
               msgWorkingProjectConfig: a,
               nPublishedVersion: n,
-            } = ue(),
+            } = pe(),
             r = j(
               e.rgSettings.nDataSourceID,
               e.rgSettings.arrDataElementUsagePathNames[0],
@@ -2176,12 +2202,12 @@
             [g, S] = o.useState(""),
             [f, E] = o.useState(!1),
             [v, x] = o.useState(!1),
-            [h, C] = o.useState(""),
-            [L, b] = o.useState(!1),
+            [h, L] = o.useState(""),
+            [C, b] = o.useState(!1),
             [D, T] = o.useState(!1),
             [P, X] = o.useState(""),
-            [k, V] = o.useState(!1),
-            [y, I] = o.useState(!1),
+            [k, I] = o.useState(!1),
+            [y, V] = o.useState(!1),
             O = 0 == n;
           o.useEffect(() => {
             var e;
@@ -2195,19 +2221,19 @@
                 (E(!0),
                 S(l.max_range().toFixed(2 == r.data_type() ? 2 : 0)),
                 x(!0)),
-              L ||
+              C ||
                 (b(!0),
-                C(l.std_dev().toFixed(2 == r.data_type() ? 2 : 0)),
+                L(l.std_dev().toFixed(2 == r.data_type() ? 2 : 0)),
                 T(!0)),
               k ||
-                (V(!0),
+                (I(!0),
                 X(
                   (null === (e = l.compact_table_count()) || void 0 === e
                     ? void 0
                     : e.toFixed(0)) || "0",
                 ),
-                I(!0)));
-          }, [_, f, L, k, l, r]);
+                V(!0)));
+          }, [_, f, C, k, l, r]);
           const B = (e, t, a, n) => {
             t(e), /^-?[\d]*\.?[\d]{0,2}$/.test(e) ? (a(!0), K(n)) : a(!1);
           };
@@ -2334,46 +2360,46 @@
                   );
                 n(o);
               }),
-                ie(t);
+                se(t);
             },
             Z =
               3 == (null == l ? void 0 : l.preprocessing_type()) ||
               5 == (null == l ? void 0 : l.preprocessing_type());
           return o.createElement(
             "div",
-            { className: ye.ProjectConfigDataSourceElementRouting },
+            { className: Ve.ProjectConfigDataSourceElementRouting },
             o.createElement(
               "div",
               {
-                className: ye.LeftSection,
+                className: Ve.LeftSection,
                 style: { paddingLeft: e.nIndentSize },
               },
               o.createElement(
                 "div",
-                { className: ye.Name },
+                { className: Ve.Name },
                 e.strRenderName,
                 e.rgSettings.nCount > 1 &&
                   e.rgSettings.bArrayExpanded &&
                   o.createElement(
                     "div",
-                    { className: ye.Array },
+                    { className: Ve.Array },
                     `[${e.rgSettings.nCount}]`,
                   ),
               ),
               o.createElement(
                 "div",
-                { className: ye.TypeAndExpandCollapse },
+                { className: Ve.TypeAndExpandCollapse },
                 o.createElement(
                   "div",
                   {
                     className: (0, s.Z)(
-                      ye.Type,
-                      ye.DataSourceType,
-                      w && ye.Float,
-                      F && ye.Bool,
-                      G && ye.Int,
-                      A && ye.String,
-                      M && ye.Object,
+                      Ve.Type,
+                      Ve.DataSourceType,
+                      w && Ve.Float,
+                      F && Ve.Bool,
+                      G && Ve.Int,
+                      A && Ve.String,
+                      M && Ve.Object,
                     ),
                   },
                   z,
@@ -2381,7 +2407,7 @@
                     !e.rgSettings.bArrayExpanded &&
                     o.createElement(
                       "div",
-                      { className: ye.Array },
+                      { className: Ve.Array },
                       `[${e.rgSettings.nCount}]`,
                     ),
                 ),
@@ -2390,7 +2416,7 @@
                   o.createElement(
                     "div",
                     {
-                      className: ye.Explode,
+                      className: Ve.Explode,
                       title: (0, c.Xx)(
                         "#SteamLearn_Config_DataSource_Input_ExplodeDesc",
                       ),
@@ -2402,7 +2428,7 @@
                   o.createElement(
                     "div",
                     {
-                      className: ye.Collapse,
+                      className: Ve.Collapse,
                       title: (0, c.Xx)(
                         "#SteamLearn_Config_DataSource_Input_CollapseDesc",
                       ),
@@ -2415,12 +2441,12 @@
             ),
             o.createElement(
               "div",
-              { className: ye.InputSection },
+              { className: Ve.InputSection },
               l &&
                 o.createElement(
                   "select",
                   {
-                    className: ye.InputSelect,
+                    className: Ve.InputSelect,
                     disabled: !O,
                     value: l.input(),
                     onChange: (e) =>
@@ -2437,7 +2463,7 @@
             ),
             o.createElement(
               "div",
-              { className: ye.NormalizeSection },
+              { className: Ve.NormalizeSection },
               l &&
                 0 != l.input() &&
                 o.createElement(
@@ -2446,7 +2472,7 @@
                   o.createElement(
                     "select",
                     {
-                      className: ye.InputSelect,
+                      className: Ve.InputSelect,
                       disabled: !1,
                       value: l.preprocessing_type(),
                       onChange: (e) =>
@@ -2463,7 +2489,7 @@
                     ),
                   ),
                   o.createElement("div", {
-                    className: (0, s.Z)(ye.IconSmall, "icon_help"),
+                    className: (0, s.Z)(Ve.IconSmall, "icon_help"),
                     title: W,
                   }),
                 ),
@@ -2471,17 +2497,17 @@
                 0 != l.input() &&
                 o.createElement(
                   "div",
-                  { className: ye.Option },
+                  { className: Ve.Option },
                   o.createElement(
                     "div",
-                    { className: ye.Label },
+                    { className: Ve.Label },
                     (0, c.Xx)(
                       "#SteamLearn_Config_DataSource_Input_Preprocess_MinRange",
                     ),
                   ),
                   o.createElement("input", {
                     type: "text",
-                    className: (0, s.Z)(ye.ValueInput, !p && ye.Invalid),
+                    className: (0, s.Z)(Ve.ValueInput, !p && Ve.Invalid),
                     disabled: !1,
                     value: d,
                     onChange: (e) =>
@@ -2494,17 +2520,17 @@
                 0 != l.input() &&
                 o.createElement(
                   "div",
-                  { className: ye.Option },
+                  { className: Ve.Option },
                   o.createElement(
                     "div",
-                    { className: ye.Label },
+                    { className: Ve.Label },
                     (0, c.Xx)(
                       "#SteamLearn_Config_DataSource_Input_Preprocess_MaxRange",
                     ),
                   ),
                   o.createElement("input", {
                     type: "text",
-                    className: (0, s.Z)(ye.ValueInput, !v && ye.Invalid),
+                    className: (0, s.Z)(Ve.ValueInput, !v && Ve.Invalid),
                     disabled: !1,
                     value: g,
                     onChange: (e) =>
@@ -2517,21 +2543,21 @@
                 0 != l.input() &&
                 o.createElement(
                   "div",
-                  { className: ye.Option },
+                  { className: Ve.Option },
                   o.createElement(
                     "div",
-                    { className: ye.Label },
+                    { className: Ve.Label },
                     (0, c.Xx)(
                       "#SteamLearn_Config_DataSource_Input_Preprocess_StdDev",
                     ),
                   ),
                   o.createElement("input", {
                     type: "text",
-                    className: (0, s.Z)(ye.ValueInput, !D && ye.Invalid),
+                    className: (0, s.Z)(Ve.ValueInput, !D && Ve.Invalid),
                     disabled: !1,
                     value: h,
                     onChange: (e) =>
-                      B(e.target.value, C, T, (t) =>
+                      B(e.target.value, L, T, (t) =>
                         t.set_std_dev(parseFloat(e.target.value)),
                       ),
                   }),
@@ -2540,17 +2566,17 @@
                 0 != l.input() &&
                 o.createElement(
                   "div",
-                  { className: ye.Option },
+                  { className: Ve.Option },
                   o.createElement(
                     "div",
-                    { className: ye.Label },
+                    { className: Ve.Label },
                     (0, c.Xx)(
                       "#SteamLearn_Config_DataSource_Input_Preprocess_TableName",
                     ),
                   ),
                   o.createElement("input", {
                     type: "text",
-                    className: (0, s.Z)(ye.ValueInput, ye.Wide),
+                    className: (0, s.Z)(Ve.ValueInput, Ve.Wide),
                     disabled: !1,
                     value: l.compact_table(),
                     onChange: (e) =>
@@ -2561,21 +2587,21 @@
                 0 != l.input() &&
                 o.createElement(
                   "div",
-                  { className: ye.Option },
+                  { className: Ve.Option },
                   o.createElement(
                     "div",
-                    { className: ye.Label },
+                    { className: Ve.Label },
                     (0, c.Xx)(
                       "#SteamLearn_Config_DataSource_Input_Preprocess_TableCount",
                     ),
                   ),
                   o.createElement("input", {
                     type: "text",
-                    className: (0, s.Z)(ye.ValueInput, !y && ye.Invalid),
+                    className: (0, s.Z)(Ve.ValueInput, !y && Ve.Invalid),
                     disabled: !1,
                     value: P,
                     onChange: (e) =>
-                      B(e.target.value, X, I, (t) =>
+                      B(e.target.value, X, V, (t) =>
                         t.set_compact_table_count(parseInt(e.target.value)),
                       ),
                   }),
@@ -2583,8 +2609,8 @@
             ),
           );
         },
-        He = (e) => {
-          const t = I(e.nDataSourceID),
+        Fe = (e) => {
+          const t = V(e.nDataSourceID),
             a = y();
           if (!t.isSuccess || !a.isSuccess) return null;
           const n = t.data;
@@ -2598,34 +2624,34 @@
             "div",
             {
               className: (0, s.Z)(
-                ye.ProjectConfigDataSourceElement,
-                r && ye.IsOldDataSourceVersion,
+                Ve.ProjectConfigDataSourceElement,
+                r && Ve.IsOldDataSourceVersion,
               ),
             },
             o.createElement(
               "div",
-              { className: ye.NameAndID },
-              o.createElement("div", { className: ye.Name }, n.name()),
-              o.createElement("div", { className: ye.ID }, `(ID ${n.id()})`),
+              { className: Ve.NameAndID },
+              o.createElement("div", { className: Ve.Name }, n.name()),
+              o.createElement("div", { className: Ve.ID }, `(ID ${n.id()})`),
             ),
             o.createElement(
               "div",
-              { className: ye.Description },
+              { className: Ve.Description },
               n.source_description(),
             ),
-            o.createElement("div", { className: ye.Version }, "v", n.version()),
+            o.createElement("div", { className: Ve.Version }, "v", n.version()),
             e.fnRemoveDataSource &&
               o.createElement(
                 "div",
                 {
-                  className: ye.Remove,
+                  className: Ve.Remove,
                   onClick: () => e.fnRemoveDataSource(e.nDataSourceID),
                 },
                 (0, c.Xx)("#SteamLearn_Config_DataSources_Remove"),
               ),
           );
         },
-        Fe = (e) => {
+        Ge = (e) => {
           const [t, a] = o.useState([]);
           o.useEffect(() => {
             e.bShowPopup || a([]);
@@ -2653,23 +2679,23 @@
                       t.length,
                     )),
             o.createElement(
-              Ie.On,
+              je.On,
               {
-                className: ye.AddDataSourceDialog,
+                className: Ve.AddDataSourceDialog,
                 active: e.bShowPopup,
                 onDismiss: () => e.fnSetShowPopup(!1),
               },
               o.createElement(
                 "div",
-                { className: ye.AddDataSourceDialogContents },
+                { className: Ve.AddDataSourceDialogContents },
                 o.createElement(
                   "div",
-                  { className: ye.Header },
+                  { className: Ve.Header },
                   (0, c.Xx)("#SteamLearn_Config_DataSources_Add_Header"),
                 ),
                 o.createElement(
                   "div",
-                  { className: ye.DataSourceListContainer },
+                  { className: Ve.DataSourceListContainer },
                   l.map((n) =>
                     e.arrAlreadyAddedDataSourceIDs.includes(n.id())
                       ? null
@@ -2678,8 +2704,8 @@
                           {
                             key: n.id(),
                             className: (0, s.Z)(
-                              ye.DataSourceOption,
-                              t.includes(n.id()) && ye.Selected,
+                              Ve.DataSourceOption,
+                              t.includes(n.id()) && Ve.Selected,
                             ),
                             onClick: () =>
                               ((e) => {
@@ -2696,17 +2722,17 @@
                           },
                           o.createElement(
                             "div",
-                            { className: ye.Name },
+                            { className: Ve.Name },
                             n.name(),
                           ),
                           o.createElement(
                             "div",
-                            { className: ye.Description },
+                            { className: Ve.Description },
                             n.source_description(),
                           ),
                           o.createElement(
                             "div",
-                            { className: ye.Version },
+                            { className: Ve.Version },
                             "v",
                             n.version(),
                           ),
@@ -2714,7 +2740,7 @@
                   ),
                 ),
                 o.createElement(
-                  Te.zx,
+                  Pe.zx,
                   {
                     disabled: 0 == t.length,
                     onClick: () => {
@@ -2727,21 +2753,21 @@
             )
           );
         };
-      var Ge = a(47446);
-      const Ae = () => {
+      var Ae = a(47446);
+      const Me = () => {
         const {
             msgWorkingProject: e,
             msgWorkingProjectConfig: t,
             nProjectID: a,
             nPublishedVersion: n,
-          } = ue(),
+          } = pe(),
           [r, i] = o.useState({}),
           [d, m] = o.useState(o.createElement("div", null)),
           [_, u] = o.useState("10"),
           [N, f] = o.useState(0),
           [E, v] = o.useState(""),
           [x, h] = o.useState(""),
-          C = o.useMemo(
+          L = o.useMemo(
             () =>
               Array.from(t.data_source_element_usages().values()).sort(
                 (e, t) => {
@@ -2770,61 +2796,61 @@
           f(e);
         }, [t]),
           o.useEffect(() => {
-            for (const e of C)
+            for (const e of L)
               i((t) =>
                 Object.assign(Object.assign({}, t), {
                   [e.data_element_path()]: "0",
                 }),
               );
-          }, [C]);
+          }, [L]);
         return 0 == Object.keys(r).length
           ? null
           : o.createElement(
               "div",
-              { className: Ge.ProjectInferenceTesterPage },
+              { className: Ae.ProjectInferenceTesterPage },
               o.createElement(
                 "div",
-                { className: Ge.ProjectInferenceTesterBody },
+                { className: Ae.ProjectInferenceTesterBody },
                 o.createElement(
                   "div",
-                  { className: Ge.Keys },
+                  { className: Ae.Keys },
                   (0, c.Xx)("#SteamLearn_InferenceTester_Keys"),
                 ),
                 o.createElement("input", {
                   type: "text",
-                  className: Ge.ValueInput,
+                  className: Ae.ValueInput,
                   value: E,
                   onChange: (e) => v(e.target.value),
                 }),
                 o.createElement(
                   "div",
-                  { className: Ge.Keys },
+                  { className: Ae.Keys },
                   (0, c.Xx)("#SteamLearn_InferenceTester_NamedInference"),
                 ),
                 o.createElement("input", {
                   type: "text",
-                  className: Ge.ValueInput,
+                  className: Ae.ValueInput,
                   value: x,
                   onChange: (e) => h(e.target.value),
                 }),
                 o.createElement("hr", null),
-                C.map((e) =>
+                L.map((e) =>
                   0 == e.input()
                     ? null
                     : o.createElement(
                         "div",
                         {
-                          className: Ge.DataSourceElement,
+                          className: Ae.DataSourceElement,
                           key: e.data_element_path(),
                         },
                         o.createElement(
                           "div",
-                          { className: Ge.Name },
+                          { className: Ae.Name },
                           e.data_element_path(),
                         ),
                         o.createElement("input", {
                           type: "text",
-                          className: Ge.ValueInput,
+                          className: Ae.ValueInput,
                           value: r[e.data_element_path()],
                           onChange: (t) =>
                             i(
@@ -2835,18 +2861,18 @@
                         }),
                       ),
                 ),
-                o.createElement("div", { className: Ge.Separator }),
+                o.createElement("div", { className: Ae.Separator }),
                 o.createElement(
                   "div",
-                  { className: Ge.OptionBlock },
+                  { className: Ae.OptionBlock },
                   o.createElement(
                     "div",
-                    { className: Ge.OptionDetails },
+                    { className: Ae.OptionDetails },
                     (0, c.Xx)("#SteamLearn_InferenceTester_AdditionalData"),
                   ),
                   o.createElement("input", {
                     type: "text",
-                    className: Ge.ValueInput,
+                    className: Ae.ValueInput,
                     value: _,
                     onChange: (e) => u(e.target.value),
                   }),
@@ -2854,7 +2880,7 @@
                 o.createElement(
                   "select",
                   {
-                    className: Ge.TrainDropdown,
+                    className: Ae.TrainDropdown,
                     value: N,
                     onChange: (e) => f(parseInt(e.target.value)),
                   },
@@ -2872,7 +2898,7 @@
                 o.createElement(
                   "div",
                   {
-                    className: (0, s.Z)(Ge.SteamLearnButton, Ge.Blue),
+                    className: (0, s.Z)(Ae.SteamLearnButton, Ae.Blue),
                     onClick: () =>
                       (0, l.mG)(void 0, void 0, void 0, function* () {
                         var a;
@@ -2896,7 +2922,7 @@
                           const e = E.split(",");
                           for (const t of e) n.Body().add_keys(t);
                         } else {
-                          const e = C.sort(
+                          const e = L.sort(
                             (e, t) => e.sql_column() - t.sql_column(),
                           );
                           for (const t of e) {
@@ -2983,25 +3009,25 @@
                   },
                   (0, c.Xx)("#SteamLearn_InferenceTester_Infer"),
                 ),
-                o.createElement("div", { className: Ge.Results }, d),
+                o.createElement("div", { className: Ae.Results }, d),
               ),
             );
       };
-      var Me = a(95791),
-        ze = a(59728),
-        We = a(77826),
-        Ue = a(39234),
-        Re = a(88553),
-        Ke = a(77723),
-        Ze = a(73888);
-      const Qe = (e) =>
-          e.hidden ? null : o.createElement($e, Object.assign({}, e)),
-        $e = (e) => {
+      var ze = a(95791),
+        We = a(59728),
+        Ue = a(77826),
+        Re = a(39234),
+        Ke = a(88553),
+        Ze = a(77723),
+        Qe = a(73888);
+      const $e = (e) =>
+          e.hidden ? null : o.createElement(Ye, Object.assign({}, e)),
+        Ye = (e) => {
           const {
               msgWorkingProject: t,
               nProjectID: a,
               nPublishedVersion: n,
-            } = ue(),
+            } = pe(),
             [r, i] = o.useState(e.fnGetInitialValue()),
             [c, l] = o.useState(e.fnGetInitialValue()),
             [d, m] = o.useState(
@@ -3024,30 +3050,30 @@
           }, [e, c, a, _, n, p]);
           return o.createElement(
             "div",
-            { className: Ze.InputOption },
+            { className: Qe.InputOption },
             e.label &&
               o.createElement(
-                ze.HP,
+                We.HP,
                 {
-                  toolTipContent: o.createElement(ze.vd, null, e.labelTooltip),
+                  toolTipContent: o.createElement(We.vd, null, e.labelTooltip),
                   direction: "top",
                   bDisabled: null == e.labelTooltip,
                 },
                 o.createElement(
                   "div",
-                  { className: (0, s.Z)(Ze.Name, e.smallLabel && Ze.Small) },
+                  { className: (0, s.Z)(Qe.Name, e.smallLabel && Qe.Small) },
                   e.label,
                 ),
               ),
             o.createElement("input", {
               type: "text",
-              className: (0, s.Z)(Ze.ValueInput, !d && Ze.Invalid),
+              className: (0, s.Z)(Qe.ValueInput, !d && Qe.Invalid),
               disabled: e.readOnly,
               value: r,
               onChange: (a) =>
                 ((a) => {
                   const n = !e.fnValidateValue || e.fnValidateValue(a);
-                  n && (e.fnSetValue(a), l(a), e.dontUpdateProject || ie(t)),
+                  n && (e.fnSetValue(a), l(a), e.dontUpdateProject || se(t)),
                     m(n),
                     i(a);
                 })(a.target.value),
@@ -3058,24 +3084,24 @@
             }),
           );
         },
-        Ye = (e) => {
-          const { msgWorkingProject: t } = ue();
+        Je = (e) => {
+          const { msgWorkingProject: t } = pe();
           return e.hidden
             ? null
             : o.createElement(
                 "div",
-                { className: Ze.InputOption },
+                { className: Qe.InputOption },
                 e.label &&
-                  o.createElement("div", { className: Ze.Name }, e.label),
+                  o.createElement("div", { className: Qe.Name }, e.label),
                 o.createElement(
                   "select",
                   {
-                    className: Ze.InputSelect,
+                    className: Qe.InputSelect,
                     disabled: e.readOnly,
                     value: e.fnGetValue(),
                     onChange: (a) => {
                       e.fnSetValue(a.target.value),
-                        e.dontUpdateProject || ie(t);
+                        e.dontUpdateProject || se(t);
                     },
                   },
                   e.options.map((e) =>
@@ -3091,12 +3117,51 @@
         qe = (e) => {
           const {
               msgWorkingProject: t,
+              nProjectID: a,
+              nPublishedVersion: n,
+            } = pe(),
+            [r, i] = o.useState(e.fnGetInitialValue()),
+            [s, l] = o.useState(a),
+            [d, m] = o.useState(n);
+          return (
+            o.useEffect(() => {
+              (e.fnGetInitialValue() != r || s != a || d != n) &&
+                (i(e.fnGetInitialValue()), l(a), m(n));
+            }, [e, r, a, s, n, d]),
+            e.hidden
+              ? null
+              : o.createElement(
+                  "div",
+                  { className: Qe.InputOption },
+                  o.createElement(
+                    "div",
+                    { className: Qe.CheckboxWithLabel },
+                    o.createElement("input", {
+                      type: "checkbox",
+                      id: "InputCheckbox",
+                      checked: r,
+                      onChange: () => {
+                        e.fnSetValue(!r), i(!r), e.dontUpdateProject || se(t);
+                      },
+                    }),
+                    o.createElement(
+                      "label",
+                      { htmlFor: "InputCheckbox" },
+                      (0, c.Xx)(e.label),
+                    ),
+                  ),
+                )
+          );
+        },
+        et = (e) => {
+          const {
+              msgWorkingProject: t,
               msgWorkingProjectConfig: a,
               nPublishedVersion: n,
-            } = ue(),
+            } = pe(),
             [r, i] = o.useState(!1),
             l = e.data.msgNode,
-            d = (0, We.Z)(),
+            d = (0, Ue.Z)(),
             m = e.data.msgNode
               .connectors()
               .filter((e) => e.is_input_connector()),
@@ -3114,12 +3179,12 @@
               "div",
               {
                 className: (0, s.Z)(
-                  Ke.FlowNode,
-                  Ke.CombineNode,
-                  Ke.Preprocessing,
+                  Ze.FlowNode,
+                  Ze.CombineNode,
+                  Ze.Preprocessing,
                 ),
               },
-              o.createElement(Je, {
+              o.createElement(tt, {
                 bVisible: r,
                 fnSetPopupVisible: i,
                 msgNode: l,
@@ -3128,62 +3193,62 @@
                 const a = Math.floor(((t + 1) / (m.length + 1)) * 200),
                   n = E(e.connector_id());
                 return o.createElement(
-                  Me.HH,
+                  ze.HH,
                   {
                     key: n,
                     type: "target",
-                    position: Ue.P.Top,
+                    position: Re.P.Top,
                     id: n,
                     style: { left: a },
                   },
                   o.createElement(
                     "div",
-                    { className: Ke.ConnectorID },
+                    { className: Ze.ConnectorID },
                     e.connector_id(),
                   ),
                 );
               }),
               o.createElement(
                 "div",
-                { className: Ke.Title },
+                { className: Ze.Title },
                 o.createElement(
                   "div",
-                  { className: Ke.TitleText },
+                  { className: Ze.TitleText },
                   (0, c.Xx)("#SteamLearn_Config_Node_Title_Combine"),
                 ),
-                o.createElement("div", { className: Ke.NodeID }, l.node_id()),
+                o.createElement("div", { className: Ze.NodeID }, l.node_id()),
                 o.createElement("div", {
-                  className: Ke.EditGear,
+                  className: Ze.EditGear,
                   onClick: () => i(!0),
                 }),
                 o.createElement("div", {
-                  className: Ke.Delete,
+                  className: Ze.Delete,
                   onClick: () =>
-                    (0, Pe.AM)(
-                      o.createElement(Re.uH, {
+                    (0, Xe.AM)(
+                      o.createElement(Ke.uH, {
                         strTitle: (0, c.Xx)(
                           "#SteamLearn_Config_Node_Delete_Node",
                         ),
                         strDescription: (0, c.Xx)(
                           "#SteamLearn_Config_Node_Delete_NodeDetails",
                         ),
-                        onOK: () => oe(t, a, l.node_id()),
+                        onOK: () => re(t, a, l.node_id()),
                       }),
                       window,
                     ),
                 }),
               ),
-              o.createElement("div", { className: Ke.TitleUnderBar }),
+              o.createElement("div", { className: Ze.TitleUnderBar }),
               o.createElement(
                 "div",
-                { className: Ke.Body },
+                { className: Ze.Body },
                 o.createElement(
                   "div",
-                  { className: Ke.CenterSection },
+                  { className: Ze.CenterSection },
                   l.comment().length > 0 &&
                     o.createElement(
                       "div",
-                      { className: Ke.Comment },
+                      { className: Ze.Comment },
                       l.comment(),
                     ),
                 ),
@@ -3192,17 +3257,17 @@
                 const a = Math.floor(((t + 1) / (_.length + 1)) * 200),
                   n = E(e.connector_id());
                 return o.createElement(
-                  Me.HH,
+                  ze.HH,
                   {
                     key: n,
                     type: "source",
-                    position: Ue.P.Bottom,
+                    position: Re.P.Bottom,
                     id: n,
                     style: { left: a },
                   },
                   o.createElement(
                     "div",
-                    { className: Ke.ConnectorID },
+                    { className: Ze.ConnectorID },
                     e.connector_id(),
                   ),
                 );
@@ -3210,8 +3275,8 @@
             )
           );
         },
-        Je = (e) => {
-          const { msgWorkingProject: t, msgWorkingProjectConfig: a } = ue(),
+        tt = (e) => {
+          const { msgWorkingProject: t, msgWorkingProjectConfig: a } = pe(),
             n = e.msgNode
               .connectors()
               .filter((e) => e.is_input_connector()).length,
@@ -3221,7 +3286,7 @@
             i(e.msgNode.comment()), l(n.toString());
           }, [e.bVisible, e.msgNode, n]);
           return o.createElement(
-            Ie.On,
+            je.On,
             {
               active: e.bVisible,
               onDismiss: () => e.fnSetPopupVisible(!1),
@@ -3229,32 +3294,32 @@
             },
             o.createElement(
               "div",
-              { className: Ke.NodeHeader },
+              { className: Ze.NodeHeader },
               (0, c.Xx)("#SteamLearn_Config_Node_Title_Onehot"),
               o.createElement(
                 "div",
-                { className: Ke.SubHeader },
+                { className: Ze.SubHeader },
                 (0, c.Xx)("#SteamLearn_Config_Node_Title_OnehotEditDesc"),
               ),
             ),
             o.createElement(
               "div",
-              { className: Ke.NodeBody },
-              o.createElement("div", { className: Ke.Separator }),
+              { className: Ze.NodeBody },
+              o.createElement("div", { className: Ze.Separator }),
               o.createElement(
                 "div",
-                { className: Ke.NodeOptionBlock },
+                { className: Ze.NodeOptionBlock },
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionHeader },
+                  { className: Ze.NodeOptionHeader },
                   (0, c.Xx)("#SteamLearn_Config_Node_Comment"),
                 ),
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionDesc },
+                  { className: Ze.NodeOptionDesc },
                   (0, c.Xx)("#SteamLearn_Config_Node_CommentDesc"),
                 ),
-                o.createElement(Qe, {
+                o.createElement($e, {
                   isText: !0,
                   dontUpdateProject: !0,
                   width: 300,
@@ -3262,39 +3327,39 @@
                   fnSetValue: (e) => i(e),
                 }),
               ),
-              o.createElement("div", { className: Ke.Separator }),
+              o.createElement("div", { className: Ze.Separator }),
               o.createElement(
                 "div",
-                { className: Ke.NodeOptionBlock },
+                { className: Ze.NodeOptionBlock },
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionHeader },
+                  { className: Ze.NodeOptionHeader },
                   (0, c.Xx)("#SteamLearn_Config_Node_Combine_NumInputs"),
                 ),
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionDesc },
+                  { className: Ze.NodeOptionDesc },
                   (0, c.Xx)("#SteamLearn_Config_Node_Combine_NumInputsDesc"),
                 ),
-                o.createElement(Qe, {
+                o.createElement($e, {
                   dontUpdateProject: !0,
                   fnGetInitialValue: () => s,
-                  fnValidateValue: (e) => le(e, 1, 8),
+                  fnValidateValue: (e) => de(e, 1, 8),
                   fnSetValue: (e) => l(e),
                 }),
               ),
-              o.createElement("div", { className: Ke.Separator }),
+              o.createElement("div", { className: Ze.Separator }),
               o.createElement(
                 "div",
-                { className: Ke.Buttons },
+                { className: Ze.Buttons },
                 o.createElement(
-                  Te.KM,
+                  Pe.KM,
                   {
                     onClick: () => {
                       const o = parseInt(s);
                       if (o > n) {
                         const t = o - n,
-                          r = J(a, t);
+                          r = ee(a, t);
                         for (let a = 0; a < t; a++) {
                           let t = new S.UYo();
                           t.set_connector_id(r[a]),
@@ -3324,13 +3389,13 @@
                             .slice(0, o),
                         ]);
                       }
-                      e.msgNode.set_comment(r), ie(t), e.fnSetPopupVisible(!1);
+                      e.msgNode.set_comment(r), se(t), e.fnSetPopupVisible(!1);
                     },
                   },
                   (0, c.Xx)("#SteamLearn_Confirm"),
                 ),
                 o.createElement(
-                  Te.zx,
+                  Pe.zx,
                   { onClick: () => e.fnSetPopupVisible(!1) },
                   (0, c.Xx)("#SteamLearn_Cancel"),
                 ),
@@ -3338,15 +3403,15 @@
             ),
           );
         },
-        et = (e) => {
+        at = (e) => {
           const {
               msgWorkingProject: t,
               msgWorkingProjectConfig: a,
               nPublishedVersion: n,
-            } = ue(),
+            } = pe(),
             [r, i] = o.useState(!1),
             l = e.data.msgNode,
-            d = (0, We.Z)(),
+            d = (0, Ue.Z)(),
             m = e.data.msgNode
               .connectors()
               .filter((e) => e.is_input_connector()),
@@ -3362,8 +3427,8 @@
             }, [a, d]),
             o.createElement(
               "div",
-              { className: (0, s.Z)(Ke.FlowNode, Ke.ConcatNode, Ke.Keras) },
-              o.createElement(tt, {
+              { className: (0, s.Z)(Ze.FlowNode, Ze.ConcatNode, Ze.Keras) },
+              o.createElement(nt, {
                 bVisible: r,
                 fnSetPopupVisible: i,
                 msgNode: l,
@@ -3372,62 +3437,62 @@
                 const a = Math.floor(((t + 1) / (m.length + 1)) * 200),
                   n = E(e.connector_id());
                 return o.createElement(
-                  Me.HH,
+                  ze.HH,
                   {
                     key: n,
                     type: "target",
-                    position: Ue.P.Top,
+                    position: Re.P.Top,
                     id: n,
                     style: { left: a },
                   },
                   o.createElement(
                     "div",
-                    { className: Ke.ConnectorID },
+                    { className: Ze.ConnectorID },
                     e.connector_id(),
                   ),
                 );
               }),
               o.createElement(
                 "div",
-                { className: Ke.Title },
+                { className: Ze.Title },
                 o.createElement(
                   "div",
-                  { className: Ke.TitleText },
+                  { className: Ze.TitleText },
                   (0, c.Xx)("#SteamLearn_Config_Node_Title_Concat"),
                 ),
-                o.createElement("div", { className: Ke.NodeID }, l.node_id()),
+                o.createElement("div", { className: Ze.NodeID }, l.node_id()),
                 o.createElement("div", {
-                  className: Ke.EditGear,
+                  className: Ze.EditGear,
                   onClick: () => i(!0),
                 }),
                 o.createElement("div", {
-                  className: Ke.Delete,
+                  className: Ze.Delete,
                   onClick: () =>
-                    (0, Pe.AM)(
-                      o.createElement(Re.uH, {
+                    (0, Xe.AM)(
+                      o.createElement(Ke.uH, {
                         strTitle: (0, c.Xx)(
                           "#SteamLearn_Config_Node_Delete_Node",
                         ),
                         strDescription: (0, c.Xx)(
                           "#SteamLearn_Config_Node_Delete_NodeDetails",
                         ),
-                        onOK: () => oe(t, a, l.node_id()),
+                        onOK: () => re(t, a, l.node_id()),
                       }),
                       window,
                     ),
                 }),
               ),
-              o.createElement("div", { className: Ke.TitleUnderBar }),
+              o.createElement("div", { className: Ze.TitleUnderBar }),
               o.createElement(
                 "div",
-                { className: Ke.Body },
+                { className: Ze.Body },
                 o.createElement(
                   "div",
-                  { className: Ke.CenterSection },
+                  { className: Ze.CenterSection },
                   l.comment().length > 0 &&
                     o.createElement(
                       "div",
-                      { className: Ke.Comment },
+                      { className: Ze.Comment },
                       l.comment(),
                     ),
                 ),
@@ -3436,17 +3501,17 @@
                 const a = Math.floor(((t + 1) / (_.length + 1)) * 200),
                   n = E(e.connector_id());
                 return o.createElement(
-                  Me.HH,
+                  ze.HH,
                   {
                     key: n,
                     type: "source",
-                    position: Ue.P.Bottom,
+                    position: Re.P.Bottom,
                     id: n,
                     style: { left: a },
                   },
                   o.createElement(
                     "div",
-                    { className: Ke.ConnectorID },
+                    { className: Ze.ConnectorID },
                     e.connector_id(),
                   ),
                 );
@@ -3454,8 +3519,8 @@
             )
           );
         },
-        tt = (e) => {
-          const { msgWorkingProject: t, msgWorkingProjectConfig: a } = ue(),
+        nt = (e) => {
+          const { msgWorkingProject: t, msgWorkingProjectConfig: a } = pe(),
             n = e.msgNode
               .connectors()
               .filter((e) => e.is_input_connector()).length,
@@ -3466,7 +3531,7 @@
               i(e.msgNode.comment()), l(n.toString());
             }, [e.bVisible, e.msgNode, n]),
             o.createElement(
-              Ie.On,
+              je.On,
               {
                 active: e.bVisible,
                 onDismiss: () => e.fnSetPopupVisible(!1),
@@ -3474,32 +3539,32 @@
               },
               o.createElement(
                 "div",
-                { className: Ke.NodeHeader },
+                { className: Ze.NodeHeader },
                 (0, c.Xx)("#SteamLearn_Config_Node_Title_Concat"),
                 o.createElement(
                   "div",
-                  { className: Ke.SubHeader },
+                  { className: Ze.SubHeader },
                   (0, c.Xx)("#SteamLearn_Config_Node_Title_ConcatEditDesc"),
                 ),
               ),
               o.createElement(
                 "div",
-                { className: Ke.NodeBody },
-                o.createElement("div", { className: Ke.Separator }),
+                { className: Ze.NodeBody },
+                o.createElement("div", { className: Ze.Separator }),
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionBlock },
+                  { className: Ze.NodeOptionBlock },
                   o.createElement(
                     "div",
-                    { className: Ke.NodeOptionHeader },
+                    { className: Ze.NodeOptionHeader },
                     (0, c.Xx)("#SteamLearn_Config_Node_Comment"),
                   ),
                   o.createElement(
                     "div",
-                    { className: Ke.NodeOptionDesc },
+                    { className: Ze.NodeOptionDesc },
                     (0, c.Xx)("#SteamLearn_Config_Node_CommentDesc"),
                   ),
-                  o.createElement(Qe, {
+                  o.createElement($e, {
                     isText: !0,
                     dontUpdateProject: !0,
                     width: 200,
@@ -3507,40 +3572,40 @@
                     fnSetValue: (e) => i(e),
                   }),
                 ),
-                o.createElement("div", { className: Ke.Separator }),
+                o.createElement("div", { className: Ze.Separator }),
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionBlock },
+                  { className: Ze.NodeOptionBlock },
                   o.createElement(
                     "div",
-                    { className: Ke.NodeOptionHeader },
+                    { className: Ze.NodeOptionHeader },
                     (0, c.Xx)("#SteamLearn_Config_Node_Concat_NumInputs"),
                   ),
                   o.createElement(
                     "div",
-                    { className: Ke.NodeOptionDesc },
+                    { className: Ze.NodeOptionDesc },
                     (0, c.Xx)("#SteamLearn_Config_Node_Concat_NumInputsDesc"),
                   ),
-                  o.createElement(Qe, {
+                  o.createElement($e, {
                     dontUpdateProject: !0,
                     fnGetInitialValue: () => s,
-                    fnValidateValue: (e) => le(e, 1, 8),
+                    fnValidateValue: (e) => de(e, 1, 8),
                     fnSetValue: (e) => l(e),
                   }),
                 ),
-                o.createElement("div", { className: Ke.Separator }),
+                o.createElement("div", { className: Ze.Separator }),
               ),
               o.createElement(
                 "div",
-                { className: Ke.Buttons },
+                { className: Ze.Buttons },
                 o.createElement(
-                  Te.KM,
+                  Pe.KM,
                   {
                     onClick: () => {
                       const o = parseInt(s);
                       if (o > n) {
                         const t = o - n,
-                          r = J(a, t);
+                          r = ee(a, t);
                         for (let a = 0; a < t; a++) {
                           let t = new S.UYo();
                           t.set_connector_id(r[a]),
@@ -3570,13 +3635,13 @@
                             .slice(0, o),
                         ]);
                       }
-                      e.msgNode.set_comment(r), ie(t), e.fnSetPopupVisible(!1);
+                      e.msgNode.set_comment(r), se(t), e.fnSetPopupVisible(!1);
                     },
                   },
                   (0, c.Xx)("#SteamLearn_Confirm"),
                 ),
                 o.createElement(
-                  Te.zx,
+                  Pe.zx,
                   { onClick: () => e.fnSetPopupVisible(!1) },
                   (0, c.Xx)("#SteamLearn_Cancel"),
                 ),
@@ -3584,16 +3649,16 @@
             )
           );
         },
-        at = (e) => {
+        ot = (e) => {
           var t, a, n;
           const {
               msgWorkingProject: r,
               msgWorkingProjectConfig: i,
               nPublishedVersion: l,
-            } = ue(),
+            } = pe(),
             [d, m] = o.useState(!1),
             _ = e.data.msgNode,
-            u = (0, We.Z)(),
+            u = (0, Ue.Z)(),
             p = _.connectors().filter((e) => e.is_input_connector()),
             N = _.connectors().filter((e) => !e.is_input_connector()),
             g = N.filter((e, t) => t % 2 == 0),
@@ -3634,12 +3699,12 @@
             "div",
             {
               className: (0, s.Z)(
-                Ke.FlowNode,
-                Ke.ConditionalExtractNode,
-                Ke.Preprocessing,
+                Ze.FlowNode,
+                Ze.ConditionalExtractNode,
+                Ze.Preprocessing,
               ),
             },
-            o.createElement(nt, {
+            o.createElement(rt, {
               bVisible: d,
               fnSetPopupVisible: m,
               msgNode: _,
@@ -3648,90 +3713,90 @@
               const a = Math.floor(((t + 1) / (p.length + 1)) * 200),
                 n = E(e.connector_id());
               return o.createElement(
-                Me.HH,
+                ze.HH,
                 {
                   key: n,
                   type: "target",
-                  position: Ue.P.Top,
+                  position: Re.P.Top,
                   id: n,
                   style: { left: a },
                 },
                 o.createElement(
                   "div",
-                  { className: Ke.ConnectorID },
+                  { className: Ze.ConnectorID },
                   e.connector_id(),
                 ),
               );
             }),
             o.createElement(
               "div",
-              { className: Ke.Title },
+              { className: Ze.Title },
               o.createElement(
                 "div",
-                { className: Ke.TitleText },
+                { className: Ze.TitleText },
                 (0, c.Xx)("#SteamLearn_Config_Node_Title_ConditionalExtract"),
               ),
-              o.createElement("div", { className: Ke.NodeID }, _.node_id()),
+              o.createElement("div", { className: Ze.NodeID }, _.node_id()),
               o.createElement("div", {
-                className: Ke.EditGear,
+                className: Ze.EditGear,
                 onClick: () => m(!0),
               }),
               o.createElement("div", {
-                className: Ke.Delete,
+                className: Ze.Delete,
                 onClick: () =>
-                  (0, Pe.AM)(
-                    o.createElement(Re.uH, {
+                  (0, Xe.AM)(
+                    o.createElement(Ke.uH, {
                       strTitle: (0, c.Xx)(
                         "#SteamLearn_Config_Node_Delete_Node",
                       ),
                       strDescription: (0, c.Xx)(
                         "#SteamLearn_Config_Node_Delete_NodeDetails",
                       ),
-                      onOK: () => oe(r, i, _.node_id()),
+                      onOK: () => re(r, i, _.node_id()),
                     }),
                     window,
                   ),
               }),
             ),
-            o.createElement("div", { className: Ke.TitleUnderBar }),
+            o.createElement("div", { className: Ze.TitleUnderBar }),
             o.createElement(
               "div",
-              { className: Ke.Body },
+              { className: Ze.Body },
               o.createElement(
                 "div",
-                { className: Ke.CenterSection },
+                { className: Ze.CenterSection },
                 _.comment().length > 0 &&
                   o.createElement(
                     "div",
-                    { className: Ke.Comment },
+                    { className: Ze.Comment },
                     _.comment(),
                   ),
                 o.createElement(
                   "div",
-                  { className: Ke.LabelValue },
+                  { className: Ze.LabelValue },
                   o.createElement(
                     "div",
-                    { className: Ke.Label },
+                    { className: Ze.Label },
                     (0, c.Xx)(
                       "#SteamLearn_Config_Node_ConditionalExtract_FilterType",
                     ),
                   ),
-                  o.createElement("div", { className: Ke.Value }, x),
+                  o.createElement("div", { className: Ze.Value }, x),
                 ),
                 h &&
                   o.createElement(
                     "div",
-                    { className: Ke.LabelValue },
+                    { className: Ze.LabelValue },
                     o.createElement(
                       "div",
-                      { className: Ke.Label },
+                      { className: Ze.Label },
                       (0, c.Xx)(
                         "#SteamLearn_Config_Node_ConditionalExtract_AppID_Age",
                       ),
                     ),
                     o.createElement(
                       "div",
-                      { className: Ke.Value },
+                      { className: Ze.Value },
                       _.conditional_extract()
                         .filter_info()
                         .appid_release_recency_months(),
@@ -3741,17 +3806,17 @@
                   2 == _.conditional_extract().extract_weight_type() &&
                   o.createElement(
                     "div",
-                    { className: Ke.LabelValue },
+                    { className: Ze.LabelValue },
                     o.createElement(
                       "div",
-                      { className: Ke.Label },
+                      { className: Ze.Label },
                       (0, c.Xx)(
                         "#SteamLearn_Config_Node_ConditionalExtract_AppID_BiasFactor",
                       ),
                     ),
                     o.createElement(
                       "div",
-                      { className: Ke.Value },
+                      { className: Ze.Value },
                       (null ===
                         (t = _.conditional_extract()
                           .weight_info()
@@ -3764,17 +3829,17 @@
                   3 == _.conditional_extract().extract_weight_type() &&
                   o.createElement(
                     "div",
-                    { className: Ke.LabelValue },
+                    { className: Ze.LabelValue },
                     o.createElement(
                       "div",
-                      { className: Ke.Label },
+                      { className: Ze.Label },
                       (0, c.Xx)(
                         "#SteamLearn_Config_Node_ConditionalExtract_AppID_Input",
                       ),
                     ),
                     o.createElement(
                       "div",
-                      { className: Ke.Value },
+                      { className: Ze.Value },
                       (null ===
                         (a = _.conditional_extract()
                           .weight_info()
@@ -3787,17 +3852,17 @@
                   3 == _.conditional_extract().extract_weight_type() &&
                   o.createElement(
                     "div",
-                    { className: Ke.LabelValue },
+                    { className: Ze.LabelValue },
                     o.createElement(
                       "div",
-                      { className: Ke.Label },
+                      { className: Ze.Label },
                       (0, c.Xx)(
                         "#SteamLearn_Config_Node_ConditionalExtract_AppID_InputStr",
                       ),
                     ),
                     o.createElement(
                       "div",
-                      { className: Ke.Value },
+                      { className: Ze.Value },
                       (null ===
                         (n = _.conditional_extract()
                           .weight_info()
@@ -3809,34 +3874,34 @@
                 h &&
                   o.createElement(
                     "div",
-                    { className: Ke.LabelValue },
+                    { className: Ze.LabelValue },
                     o.createElement(
                       "div",
-                      { className: Ke.Label },
+                      { className: Ze.Label },
                       (0, c.Xx)(
                         "#SteamLearn_Config_Node_ConditionalExtract_AppID_CompactTable",
                       ),
                     ),
                     o.createElement(
                       "div",
-                      { className: Ke.Value },
+                      { className: Ze.Value },
                       _.conditional_extract().compact_table(),
                     ),
                   ),
                 h &&
                   o.createElement(
                     "div",
-                    { className: Ke.LabelValue },
+                    { className: Ze.LabelValue },
                     o.createElement(
                       "div",
-                      { className: Ke.Label },
+                      { className: Ze.Label },
                       (0, c.Xx)(
                         "#SteamLearn_Config_Node_ConditionalExtract_AppID_ExtractedCompactTable",
                       ),
                     ),
                     o.createElement(
                       "div",
-                      { className: Ke.Value },
+                      { className: Ze.Value },
                       _.conditional_extract().extracted_compact_table(),
                     ),
                   ),
@@ -3846,17 +3911,17 @@
               const a = Math.floor(((t + 1) / (g.length + 1)) * 200),
                 n = E(e.connector_id());
               return o.createElement(
-                Me.HH,
+                ze.HH,
                 {
                   key: n,
                   type: "source",
-                  position: Ue.P.Bottom,
+                  position: Re.P.Bottom,
                   id: n,
                   style: { left: a },
                 },
                 o.createElement(
                   "div",
-                  { className: Ke.ConnectorID },
+                  { className: Ze.ConnectorID },
                   e.connector_id(),
                 ),
               );
@@ -3865,26 +3930,26 @@
               const a = Math.floor(((t + 1) / (S.length + 1)) * (f - 24)),
                 n = E(e.connector_id());
               return o.createElement(
-                Me.HH,
+                ze.HH,
                 {
                   key: n,
                   type: "source",
-                  position: Ue.P.Right,
+                  position: Re.P.Right,
                   id: n,
                   style: { top: a + 24 },
                 },
                 o.createElement(
                   "div",
-                  { className: Ke.ConnectorID },
+                  { className: Ze.ConnectorID },
                   e.connector_id(),
                 ),
               );
             }),
           );
         },
-        nt = (e) => {
+        rt = (e) => {
           var t, a, n, r;
-          const { msgWorkingProject: i, msgWorkingProjectConfig: s } = ue(),
+          const { msgWorkingProject: i, msgWorkingProjectConfig: s } = pe(),
             l = e.msgNode
               .connectors()
               .filter((e) => e.is_input_connector()).length,
@@ -3914,7 +3979,7 @@
                 ? void 0
                 : a.toFixed(2)) || "0",
             ),
-            [C, L] = o.useState(
+            [L, C] = o.useState(
               (null ===
                 (n = e.msgNode
                   .conditional_extract()
@@ -3962,7 +4027,7 @@
                   ? void 0
                   : a.toFixed(2)) || "0",
               ),
-              L(
+              C(
                 (null ===
                   (n = e.msgNode
                     .conditional_extract()
@@ -3983,7 +4048,7 @@
               P(e.msgNode.conditional_extract().compact_table()),
               k(e.msgNode.conditional_extract().extracted_compact_table());
           }, [e.bVisible, e.msgNode, l]);
-          let V = [
+          let I = [
               {
                 label: (0, c.Xx)(
                   "#SteamLearn_Config_Node_ConditionalExtract_FilterType_All",
@@ -4040,13 +4105,13 @@
                   value: 2,
                 });
           }
-          const I = 2 == p || 4 == p,
+          const V = 2 == p || 4 == p,
             j = 1 == p,
-            O = I && 2 == g,
+            O = V && 2 == g,
             B = !j && 3 == g,
             w = !j && 7 != p;
           return o.createElement(
-            Ie.On,
+            je.On,
             {
               active: e.bVisible,
               onDismiss: () => e.fnSetPopupVisible(!1),
@@ -4054,11 +4119,11 @@
             },
             o.createElement(
               "div",
-              { className: Ke.NodeHeader },
+              { className: Ze.NodeHeader },
               (0, c.Xx)("#SteamLearn_Config_Node_Title_ConditionalExtract"),
               o.createElement(
                 "div",
-                { className: Ke.SubHeader },
+                { className: Ze.SubHeader },
                 (0, c.Xx)(
                   "#SteamLearn_Config_Node_Title_ConditionalExtractEditDesc",
                 ),
@@ -4066,22 +4131,22 @@
             ),
             o.createElement(
               "div",
-              { className: Ke.NodeBody },
-              o.createElement("div", { className: Ke.Separator }),
+              { className: Ze.NodeBody },
+              o.createElement("div", { className: Ze.Separator }),
               o.createElement(
                 "div",
-                { className: Ke.NodeOptionBlock },
+                { className: Ze.NodeOptionBlock },
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionHeader },
+                  { className: Ze.NodeOptionHeader },
                   (0, c.Xx)("#SteamLearn_Config_Node_Comment"),
                 ),
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionDesc },
+                  { className: Ze.NodeOptionDesc },
                   (0, c.Xx)("#SteamLearn_Config_Node_CommentDesc"),
                 ),
-                o.createElement(Qe, {
+                o.createElement($e, {
                   isText: !0,
                   dontUpdateProject: !0,
                   width: 200,
@@ -4089,57 +4154,57 @@
                   fnSetValue: (e) => m(e),
                 }),
               ),
-              o.createElement("div", { className: Ke.Separator }),
+              o.createElement("div", { className: Ze.Separator }),
               o.createElement(
                 "div",
-                { className: Ke.NodeOptionBlock },
+                { className: Ze.NodeOptionBlock },
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionHeader },
+                  { className: Ze.NodeOptionHeader },
                   (0, c.Xx)(
                     "#SteamLearn_Config_Node_ConditionalExtract_NumInputs",
                   ),
                 ),
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionDesc },
+                  { className: Ze.NodeOptionDesc },
                   (0, c.Xx)(
                     "#SteamLearn_Config_Node_ConditionalExtract_NumInputsDesc",
                   ),
                 ),
-                o.createElement(Qe, {
+                o.createElement($e, {
                   dontUpdateProject: !0,
                   fnGetInitialValue: () => _,
-                  fnValidateValue: (e) => le(e, 1, 5),
+                  fnValidateValue: (e) => de(e, 1, 5),
                   fnSetValue: (e) => u(e),
                 }),
               ),
-              o.createElement("div", { className: Ke.Separator }),
+              o.createElement("div", { className: Ze.Separator }),
               o.createElement(
                 "div",
-                { className: Ke.NodeOptionBlock },
+                { className: Ze.NodeOptionBlock },
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionHeader },
+                  { className: Ze.NodeOptionHeader },
                   (0, c.Xx)(
                     "#SteamLearn_Config_Node_ConditionalExtract_FilterType",
                   ),
                 ),
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionDesc },
+                  { className: Ze.NodeOptionDesc },
                   (0, c.Xx)(
                     "#SteamLearn_Config_Node_ConditionalExtract_FilterTypeDesc",
                   ),
                 ),
-                o.createElement(Ye, {
+                o.createElement(Je, {
                   dontUpdateProject: !0,
                   fnGetValue: () => p,
                   fnSetValue: (e) => N(parseInt(e)),
-                  options: V,
+                  options: I,
                 }),
-                I &&
-                  o.createElement(Qe, {
+                V &&
+                  o.createElement($e, {
                     label: (0, c.Xx)(
                       "#SteamLearn_Config_Node_ConditionalExtract_AppID_Age",
                     ),
@@ -4149,37 +4214,37 @@
                     smallLabel: !0,
                     dontUpdateProject: !0,
                     fnGetInitialValue: () => E,
-                    fnValidateValue: (e) => le(e, 0, 360),
+                    fnValidateValue: (e) => de(e, 0, 360),
                     fnSetValue: (e) => v(e),
                   }),
               ),
-              w && o.createElement("div", { className: Ke.Separator }),
+              w && o.createElement("div", { className: Ze.Separator }),
               w &&
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionBlock },
+                  { className: Ze.NodeOptionBlock },
                   o.createElement(
                     "div",
-                    { className: Ke.NodeOptionHeader },
+                    { className: Ze.NodeOptionHeader },
                     (0, c.Xx)(
                       "#SteamLearn_Config_Node_ConditionalExtract_WeightType",
                     ),
                   ),
                   o.createElement(
                     "div",
-                    { className: Ke.NodeOptionDesc },
+                    { className: Ze.NodeOptionDesc },
                     (0, c.Xx)(
                       "#SteamLearn_Config_Node_ConditionalExtract_WeightTypeDesc",
                     ),
                   ),
-                  o.createElement(Ye, {
+                  o.createElement(Je, {
                     dontUpdateProject: !0,
                     fnGetValue: () => g,
                     fnSetValue: (e) => f(parseInt(e)),
                     options: y,
                   }),
                   O &&
-                    o.createElement(Qe, {
+                    o.createElement($e, {
                       label: (0, c.Xx)(
                         "#SteamLearn_Config_Node_ConditionalExtract_AppID_BiasFactor",
                       ),
@@ -4190,11 +4255,11 @@
                       dontUpdateProject: !0,
                       fnGetInitialValue: () => x,
                       digitCount: 2,
-                      fnValidateValue: (e) => de(e, 0, 1),
+                      fnValidateValue: (e) => me(e, 0, 1),
                       fnSetValue: (e) => h(e),
                     }),
                   B &&
-                    o.createElement(Qe, {
+                    o.createElement($e, {
                       label: (0, c.Xx)(
                         "#SteamLearn_Config_Node_ConditionalExtract_AppID_Input",
                       ),
@@ -4203,19 +4268,19 @@
                       ),
                       smallLabel: !0,
                       dontUpdateProject: !0,
-                      fnGetInitialValue: () => C,
+                      fnGetInitialValue: () => L,
                       fnValidateValue: (t) =>
-                        le(
+                        de(
                           t,
                           1,
                           e.msgNode
                             .connectors()
                             .filter((e) => e.is_input_connector()).length - 1,
                         ),
-                      fnSetValue: (e) => L(e),
+                      fnSetValue: (e) => C(e),
                     }),
                   B &&
-                    o.createElement(Qe, {
+                    o.createElement($e, {
                       label: (0, c.Xx)(
                         "#SteamLearn_Config_Node_ConditionalExtract_AppID_InputStr",
                       ),
@@ -4226,30 +4291,30 @@
                       dontUpdateProject: !0,
                       fnGetInitialValue: () => b,
                       digitCount: 2,
-                      fnValidateValue: (e) => de(e, 0, 20),
+                      fnValidateValue: (e) => me(e, 0, 20),
                       fnSetValue: (e) => D(e),
                     }),
                 ),
-              I && o.createElement("div", { className: Ke.Separator }),
-              I &&
+              V && o.createElement("div", { className: Ze.Separator }),
+              V &&
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionBlock },
+                  { className: Ze.NodeOptionBlock },
                   o.createElement(
                     "div",
-                    { className: Ke.NodeOptionHeader },
+                    { className: Ze.NodeOptionHeader },
                     (0, c.Xx)(
                       "#SteamLearn_Config_Node_ConditionalExtract_AppID_CompactTable",
                     ),
                   ),
                   o.createElement(
                     "div",
-                    { className: Ke.NodeOptionDesc },
+                    { className: Ze.NodeOptionDesc },
                     (0, c.Xx)(
                       "#SteamLearn_Config_Node_ConditionalExtract_AppID_CompactTableDesc",
                     ),
                   ),
-                  o.createElement(Qe, {
+                  o.createElement($e, {
                     label: (0, c.Xx)(
                       "#SteamLearn_Config_Node_ConditionalExtract_AppID_CompactTable",
                     ),
@@ -4259,10 +4324,10 @@
                     smallLabel: !0,
                     dontUpdateProject: !0,
                     fnGetInitialValue: () => T,
-                    fnValidateValue: (e) => me(s, e),
+                    fnValidateValue: (e) => _e(s, e),
                     fnSetValue: (e) => P(e),
                   }),
-                  o.createElement(Qe, {
+                  o.createElement($e, {
                     label: (0, c.Xx)(
                       "#SteamLearn_Config_Node_ConditionalExtract_AppID_ExtractedCompactTable",
                     ),
@@ -4272,23 +4337,23 @@
                     smallLabel: !0,
                     dontUpdateProject: !0,
                     fnGetInitialValue: () => X,
-                    fnValidateValue: (t) => !me(s, t, e.msgNode),
+                    fnValidateValue: (t) => !_e(s, t, e.msgNode),
                     fnSetValue: (e) => k(e),
                   }),
                 ),
-              o.createElement("div", { className: Ke.Separator }),
+              o.createElement("div", { className: Ze.Separator }),
             ),
             o.createElement(
               "div",
-              { className: Ke.Buttons },
+              { className: Ze.Buttons },
               o.createElement(
-                Te.KM,
+                Pe.KM,
                 {
                   onClick: () => {
                     const t = parseInt(_);
                     if (t > l) {
                       const a = 3 * (t - l),
-                        n = J(s, a);
+                        n = ee(s, a);
                       for (let t = 0; t < a; t++) {
                         const a = t % 3 != 0;
                         let o = new S.UYo();
@@ -4339,7 +4404,7 @@
                       e.msgNode
                         .conditional_extract()
                         .weight_info()
-                        .set_input_number(parseInt(C)),
+                        .set_input_number(parseInt(L)),
                       e.msgNode
                         .conditional_extract()
                         .weight_info()
@@ -4348,26 +4413,26 @@
                       e.msgNode
                         .conditional_extract()
                         .set_extracted_compact_table(X),
-                      ie(i),
+                      se(i),
                       e.fnSetPopupVisible(!1);
                   },
                 },
                 (0, c.Xx)("#SteamLearn_Confirm"),
               ),
               o.createElement(
-                Te.zx,
+                Pe.zx,
                 { onClick: () => e.fnSetPopupVisible(!1) },
                 (0, c.Xx)("#SteamLearn_Cancel"),
               ),
             ),
           );
         },
-        ot = (e) => {
+        it = (e) => {
           const {
               msgWorkingProject: t,
               msgWorkingProjectConfig: a,
               nPublishedVersion: n,
-            } = ue(),
+            } = pe(),
             [r, i] = o.useState(!1),
             l = e.data.msgNode,
             d = l.connectors().filter((e) => e.is_input_connector()),
@@ -4377,12 +4442,12 @@
             "div",
             {
               className: (0, s.Z)(
-                Ke.FlowNode,
-                Ke.ConditionalSwapNode,
-                Ke.Preprocessing,
+                Ze.FlowNode,
+                Ze.ConditionalSwapNode,
+                Ze.Preprocessing,
               ),
             },
-            o.createElement(rt, {
+            o.createElement(st, {
               bVisible: r,
               fnSetPopupVisible: i,
               msgNode: l,
@@ -4391,76 +4456,76 @@
               const a = Math.floor(((t + 1) / (d.length + 1)) * 200),
                 n = E(e.connector_id());
               return o.createElement(
-                Me.HH,
+                ze.HH,
                 {
                   key: n,
                   type: "target",
-                  position: Ue.P.Top,
+                  position: Re.P.Top,
                   id: n,
                   style: { left: a },
                 },
                 o.createElement(
                   "div",
-                  { className: Ke.ConnectorID },
+                  { className: Ze.ConnectorID },
                   e.connector_id(),
                 ),
               );
             }),
             o.createElement(
-              Me.HH,
+              ze.HH,
               {
                 type: "target",
-                position: Ue.P.Left,
+                position: Re.P.Left,
                 id: E(_.connector_id()),
                 style: { top: "50%" },
               },
               o.createElement(
                 "div",
-                { className: Ke.ConnectorID },
+                { className: Ze.ConnectorID },
                 _.connector_id(),
               ),
             ),
             o.createElement(
               "div",
-              { className: Ke.Title },
+              { className: Ze.Title },
               o.createElement(
                 "div",
-                { className: Ke.TitleText },
+                { className: Ze.TitleText },
                 (0, c.Xx)("#SteamLearn_Config_Node_Title_ConditionalSwap"),
               ),
-              o.createElement("div", { className: Ke.NodeID }, l.node_id()),
+              o.createElement("div", { className: Ze.NodeID }, l.node_id()),
               o.createElement("div", {
-                className: Ke.EditGear,
+                className: Ze.EditGear,
                 onClick: () => i(!0),
               }),
               o.createElement("div", {
-                className: Ke.Delete,
+                className: Ze.Delete,
                 onClick: () =>
-                  (0, Pe.AM)(
-                    o.createElement(Re.uH, {
+                  (0, Xe.AM)(
+                    o.createElement(Ke.uH, {
                       strTitle: (0, c.Xx)(
                         "#SteamLearn_Config_Node_Delete_Node",
                       ),
                       strDescription: (0, c.Xx)(
                         "#SteamLearn_Config_Node_Delete_NodeDetails",
                       ),
-                      onOK: () => oe(t, a, l.node_id()),
+                      onOK: () => re(t, a, l.node_id()),
                     }),
                     window,
                   ),
               }),
             ),
-            o.createElement("div", { className: Ke.TitleUnderBar }),
+            o.createElement("div", { className: Ze.TitleUnderBar }),
             o.createElement(
               "div",
-              { className: Ke.Body },
+              { className: Ze.Body },
               o.createElement(
                 "div",
-                { className: Ke.CenterSection },
+                { className: Ze.CenterSection },
                 l.comment().length > 0 &&
                   o.createElement(
                     "div",
-                    { className: Ke.Comment },
+                    { className: Ze.Comment },
                     l.comment(),
                   ),
               ),
@@ -4469,28 +4534,28 @@
               const a = Math.floor(((t + 1) / (m.length + 1)) * 200),
                 n = E(e.connector_id());
               return o.createElement(
-                Me.HH,
+                ze.HH,
                 {
                   key: n,
                   type: "source",
-                  position: Ue.P.Bottom,
+                  position: Re.P.Bottom,
                   id: n,
                   style: { left: a },
                 },
                 o.createElement(
                   "div",
-                  { className: Ke.ConnectorID },
+                  { className: Ze.ConnectorID },
                   e.connector_id(),
                 ),
               );
             }),
           );
         },
-        rt = (e) => {
-          const { msgWorkingProject: t, msgWorkingProjectConfig: a } = ue(),
+        st = (e) => {
+          const { msgWorkingProject: t, msgWorkingProjectConfig: a } = pe(),
             [n, r] = o.useState(e.msgNode.comment());
           return o.createElement(
-            Ie.On,
+            je.On,
             {
               active: e.bVisible,
               onDismiss: () => e.fnSetPopupVisible(!1),
@@ -4498,32 +4563,32 @@
             },
             o.createElement(
               "div",
-              { className: Ke.NodeHeader },
+              { className: Ze.NodeHeader },
               (0, c.Xx)("#SteamLearn_Config_Node_Title_Onehot"),
               o.createElement(
                 "div",
-                { className: Ke.SubHeader },
+                { className: Ze.SubHeader },
                 (0, c.Xx)("#SteamLearn_Config_Node_Title_OnehotEditDesc"),
               ),
             ),
             o.createElement(
               "div",
-              { className: Ke.NodeBody },
-              o.createElement("div", { className: Ke.Separator }),
+              { className: Ze.NodeBody },
+              o.createElement("div", { className: Ze.Separator }),
               o.createElement(
                 "div",
-                { className: Ke.NodeOptionBlock },
+                { className: Ze.NodeOptionBlock },
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionHeader },
+                  { className: Ze.NodeOptionHeader },
                   (0, c.Xx)("#SteamLearn_Config_Node_Comment"),
                 ),
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionDesc },
+                  { className: Ze.NodeOptionDesc },
                   (0, c.Xx)("#SteamLearn_Config_Node_CommentDesc"),
                 ),
-                o.createElement(Qe, {
+                o.createElement($e, {
                   isText: !0,
                   dontUpdateProject: !0,
                   width: 300,
@@ -4531,21 +4596,21 @@
                   fnSetValue: (e) => r(e),
                 }),
               ),
-              o.createElement("div", { className: Ke.Separator }),
+              o.createElement("div", { className: Ze.Separator }),
               o.createElement(
                 "div",
-                { className: Ke.Buttons },
+                { className: Ze.Buttons },
                 o.createElement(
-                  Te.KM,
+                  Pe.KM,
                   {
                     onClick: () => {
-                      e.msgNode.set_comment(n), ie(t), e.fnSetPopupVisible(!1);
+                      e.msgNode.set_comment(n), se(t), e.fnSetPopupVisible(!1);
                     },
                   },
                   (0, c.Xx)("#SteamLearn_Confirm"),
                 ),
                 o.createElement(
-                  Te.zx,
+                  Pe.zx,
                   { onClick: () => e.fnSetPopupVisible(!1) },
                   (0, c.Xx)("#SteamLearn_Cancel"),
                 ),
@@ -4553,109 +4618,109 @@
             ),
           );
         };
-      const it = (e) => {
+      const ct = (e) => {
           const t = e.data.msgNode,
             {
               msgWorkingProject: a,
               msgWorkingProjectConfig: n,
               nPublishedVersion: r,
-            } = ue(),
+            } = pe(),
             i = t.connectors().filter((e) => e.is_input_connector()),
             l = t.connectors().filter((e) => !e.is_input_connector());
           return o.createElement(
             "div",
-            { className: (0, s.Z)(Ke.FlowNode, Ke.DenseNode, Ke.Keras) },
+            { className: (0, s.Z)(Ze.FlowNode, Ze.DenseNode, Ze.Keras) },
             i.map((e, t) => {
               const a = Math.floor(((t + 1) / (i.length + 1)) * 200),
                 n = E(e.connector_id());
               return o.createElement(
-                Me.HH,
+                ze.HH,
                 {
                   key: n,
                   type: "target",
-                  position: Ue.P.Top,
+                  position: Re.P.Top,
                   id: n,
                   style: { left: a },
                 },
                 o.createElement(
                   "div",
-                  { className: Ke.ConnectorID },
+                  { className: Ze.ConnectorID },
                   e.connector_id(),
                 ),
               );
             }),
             o.createElement(
               "div",
-              { className: Ke.Title },
+              { className: Ze.Title },
               o.createElement(
                 "div",
-                { className: Ke.TitleText },
+                { className: Ze.TitleText },
                 (0, c.Xx)("#SteamLearn_Config_Node_Title_Dense"),
               ),
-              o.createElement("div", { className: Ke.NodeID }, t.node_id()),
+              o.createElement("div", { className: Ze.NodeID }, t.node_id()),
               o.createElement("div", {
-                className: Ke.EditGear,
+                className: Ze.EditGear,
                 onClick: () =>
-                  (0, Pe.AM)(
-                    o.createElement(st, { msgNode: t, msgWorkingProject: a }),
+                  (0, Xe.AM)(
+                    o.createElement(lt, { msgNode: t, msgWorkingProject: a }),
                     window,
                   ),
               }),
               o.createElement("div", {
-                className: Ke.Delete,
+                className: Ze.Delete,
                 onClick: () =>
-                  (0, Pe.AM)(
-                    o.createElement(Re.uH, {
+                  (0, Xe.AM)(
+                    o.createElement(Ke.uH, {
                       strTitle: (0, c.Xx)(
                         "#SteamLearn_Config_Node_Delete_Node",
                       ),
                       strDescription: (0, c.Xx)(
                         "#SteamLearn_Config_Node_Delete_NodeDetails",
                       ),
-                      onOK: () => oe(a, n, t.node_id()),
+                      onOK: () => re(a, n, t.node_id()),
                     }),
                     window,
                   ),
               }),
             ),
-            o.createElement("div", { className: Ke.TitleUnderBar }),
+            o.createElement("div", { className: Ze.TitleUnderBar }),
             o.createElement(
               "div",
-              { className: Ke.Body },
+              { className: Ze.Body },
               o.createElement(
                 "div",
-                { className: Ke.CenterSection },
+                { className: Ze.CenterSection },
                 t.comment().length > 0 &&
                   o.createElement(
                     "div",
-                    { className: Ke.Comment },
+                    { className: Ze.Comment },
                     t.comment(),
                   ),
                 o.createElement(
                   "div",
-                  { className: Ke.LabelValue },
+                  { className: Ze.LabelValue },
                   o.createElement(
                     "div",
-                    { className: Ke.Label },
+                    { className: Ze.Label },
                     (0, c.Xx)("#SteamLearn_Config_Node_Dense_Width"),
                   ),
                   o.createElement(
                     "div",
-                    { className: Ke.Value },
+                    { className: Ze.Value },
                     t.dense().width(),
                   ),
                 ),
                 o.createElement(
                   "div",
-                  { className: Ke.LabelValue },
+                  { className: Ze.LabelValue },
                   o.createElement(
                     "div",
-                    { className: Ke.Label },
+                    { className: Ze.Label },
                     (0, c.Xx)("#SteamLearn_Config_Node_DenseStack_Activation"),
                   ),
                   o.createElement(
                     "div",
-                    { className: Ke.Value },
+                    { className: Ze.Value },
                     (function (e) {
                       switch (e) {
                         case 1:
@@ -4679,24 +4744,24 @@
               const a = Math.floor(((t + 1) / (l.length + 1)) * 200),
                 n = E(e.connector_id());
               return o.createElement(
-                Me.HH,
+                ze.HH,
                 {
                   key: n,
                   type: "source",
-                  position: Ue.P.Bottom,
+                  position: Re.P.Bottom,
                   id: n,
                   style: { left: a },
                 },
                 o.createElement(
                   "div",
-                  { className: Ke.ConnectorID },
+                  { className: Ze.ConnectorID },
                   e.connector_id(),
                 ),
               );
             }),
           );
         },
-        st = (e) => {
+        lt = (e) => {
           const [t, a] = o.useState(e.msgNode.comment()),
             [n, r] = o.useState(e.msgNode.dense().width().toString()),
             [i, l] = o.useState(!0),
@@ -4728,81 +4793,81 @@
             },
           ];
           return o.createElement(
-            Xe.R,
+            ke.R,
             null,
             o.createElement(
-              Te.h4,
+              Pe.h4,
               null,
               (0, c.Xx)("#SteamLearn_Config_Node_Title_DenseStack"),
               o.createElement(
                 "div",
-                { className: Ke.SubHeader },
+                { className: Ze.SubHeader },
                 (0, c.Xx)("#SteamLearn_Config_Node_Title_DenseStackEditDesc"),
               ),
             ),
             o.createElement(
               "div",
-              { className: Ke.EditOptions },
+              { className: Ze.EditOptions },
               o.createElement(
                 "div",
-                { className: Ke.Option },
+                { className: Ze.Option },
                 o.createElement(
                   "div",
-                  { className: Ke.OptionTitle },
+                  { className: Ze.OptionTitle },
                   (0, c.Xx)("#SteamLearn_Config_Node_Comment"),
                 ),
                 o.createElement(
                   "div",
-                  { className: Ke.OptionDesc },
+                  { className: Ze.OptionDesc },
                   (0, c.Xx)("#SteamLearn_Config_Node_CommentDesc"),
                 ),
                 o.createElement("input", {
                   type: "text",
-                  className: (0, s.Z)(Ke.OptionInput, Ke.VeryWide),
+                  className: (0, s.Z)(Ze.OptionInput, Ze.VeryWide),
                   value: t,
                   onChange: (e) => a(e.target.value),
                 }),
               ),
               o.createElement(
                 "div",
-                { className: Ke.Option },
+                { className: Ze.Option },
                 o.createElement(
                   "div",
-                  { className: Ke.OptionTitle },
+                  { className: Ze.OptionTitle },
                   (0, c.Xx)("#SteamLearn_Config_Node_Dense_Width"),
                 ),
                 o.createElement(
                   "div",
-                  { className: Ke.OptionDesc },
+                  { className: Ze.OptionDesc },
                   (0, c.Xx)("#SteamLearn_Config_Node_Dense_WidthDesc"),
                 ),
                 o.createElement("input", {
                   type: "text",
-                  className: (0, s.Z)(Ke.OptionInput, !i && Ke.Invalid),
+                  className: (0, s.Z)(Ze.OptionInput, !i && Ze.Invalid),
                   value: n,
                   onChange: (e) => {
-                    return (t = e.target.value), l(le(t, 1, 8096)), void r(t);
+                    return (t = e.target.value), l(de(t, 1, 8096)), void r(t);
                     var t;
                   },
                 }),
               ),
               o.createElement(
                 "div",
-                { className: Ke.Option },
+                { className: Ze.Option },
                 o.createElement(
                   "div",
-                  { className: Ke.OptionTitle },
+                  { className: Ze.OptionTitle },
                   (0, c.Xx)("#SteamLearn_Config_Node_DenseStack_Activation"),
                 ),
                 o.createElement(
                   "div",
-                  { className: Ke.OptionDesc },
+                  { className: Ze.OptionDesc },
                   (0, c.Xx)("#SteamLearn_Config_Node_Train_ActivationDesc"),
                 ),
                 o.createElement(
                   "select",
                   {
-                    className: Ke.InputSelect,
+                    className: Ze.InputSelect,
                     value: d,
                     onChange: (e) => m(parseInt(e.target.value)),
                   },
@@ -4817,7 +4882,7 @@
                 1 == d &&
                   o.createElement(
                     "div",
-                    { className: Ke.OptionDescSub },
+                    { className: Ze.OptionDescSub },
                     (0, c.Xx)(
                       "#SteamLearn_Config_Node_DenseStack_ActivationDescSub1",
                     ),
@@ -4825,7 +4890,7 @@
                 2 == d &&
                   o.createElement(
                     "div",
-                    { className: Ke.OptionDescSub },
+                    { className: Ze.OptionDescSub },
                     (0, c.Xx)(
                       "#SteamLearn_Config_Node_DenseStack_ActivationDescSub2",
                     ),
@@ -4833,7 +4898,7 @@
                 3 == d &&
                   o.createElement(
                     "div",
-                    { className: Ke.OptionDescSub },
+                    { className: Ze.OptionDescSub },
                     (0, c.Xx)(
                       "#SteamLearn_Config_Node_DenseStack_ActivationDescSub3",
                     ),
@@ -4842,14 +4907,14 @@
             ),
             o.createElement(
               "div",
-              { className: Ke.ButtonsContainer },
-              o.createElement(Te.o9, {
+              { className: Ze.ButtonsContainer },
+              o.createElement(Pe.o9, {
                 bOKDisabled: !i,
                 onOK: () => (
                   e.msgNode.dense().set_width(parseInt(n)),
                   e.msgNode.dense().set_activation(d),
                   e.msgNode.set_comment(t),
-                  ie(e.msgWorkingProject),
+                  se(e.msgWorkingProject),
                   void e.closeModal()
                 ),
                 onCancel: () => e.closeModal(),
@@ -4857,21 +4922,21 @@
             ),
           );
         };
-      var ct = a(14609);
-      const lt = (e) => {
+      var dt = a(14609);
+      const mt = (e) => {
           const {
               msgWorkingProject: t,
               msgWorkingProjectConfig: a,
               nPublishedVersion: n,
-            } = ue(),
+            } = pe(),
             [r, i] = o.useState(!1),
             l = e.data.msgNode,
             d = l.connectors().filter((e) => e.is_input_connector()),
             m = l.connectors().filter((e) => !e.is_input_connector());
           return o.createElement(
             "div",
-            { className: (0, s.Z)(Ke.FlowNode, Ke.DenseStackNode, Ke.Keras) },
-            o.createElement(dt, {
+            { className: (0, s.Z)(Ze.FlowNode, Ze.DenseStackNode, Ze.Keras) },
+            o.createElement(_t, {
               bVisible: r,
               fnSetPopupVisible: i,
               msgNode: l,
@@ -4880,71 +4945,71 @@
               const a = Math.floor(((t + 1) / (d.length + 1)) * 200),
                 n = E(e.connector_id());
               return o.createElement(
-                Me.HH,
+                ze.HH,
                 {
                   key: n,
                   type: "target",
-                  position: Ue.P.Top,
+                  position: Re.P.Top,
                   id: n,
                   style: { left: a },
                 },
                 o.createElement(
                   "div",
-                  { className: Ke.ConnectorID },
+                  { className: Ze.ConnectorID },
                   e.connector_id(),
                 ),
               );
             }),
             o.createElement(
               "div",
-              { className: Ke.Title },
+              { className: Ze.Title },
               o.createElement(
                 "div",
-                { className: Ke.TitleText },
+                { className: Ze.TitleText },
                 (0, c.Xx)("#SteamLearn_Config_Node_Title_DenseStack"),
               ),
-              o.createElement("div", { className: Ke.NodeID }, l.node_id()),
+              o.createElement("div", { className: Ze.NodeID }, l.node_id()),
               o.createElement("div", {
-                className: Ke.EditGear,
+                className: Ze.EditGear,
                 onClick: () => i(!0),
               }),
               o.createElement("div", {
-                className: Ke.Delete,
+                className: Ze.Delete,
                 onClick: () =>
-                  (0, Pe.AM)(
-                    o.createElement(Re.uH, {
+                  (0, Xe.AM)(
+                    o.createElement(Ke.uH, {
                       strTitle: (0, c.Xx)(
                         "#SteamLearn_Config_Node_Delete_Node",
                       ),
                       strDescription: (0, c.Xx)(
                         "#SteamLearn_Config_Node_Delete_NodeDetails",
                       ),
-                      onOK: () => oe(t, a, l.node_id()),
+                      onOK: () => re(t, a, l.node_id()),
                     }),
                     window,
                   ),
               }),
             ),
-            o.createElement("div", { className: Ke.TitleUnderBar }),
+            o.createElement("div", { className: Ze.TitleUnderBar }),
             o.createElement(
               "div",
-              { className: Ke.Body },
+              { className: Ze.Body },
               o.createElement(
                 "div",
-                { className: Ke.CenterSection },
+                { className: Ze.CenterSection },
                 l.comment().length > 0 &&
                   o.createElement(
                     "div",
-                    { className: Ke.Comment },
+                    { className: Ze.Comment },
                     l.comment(),
                   ),
-                (0, ct.bE)(0, l.dense_stack().width().length - 1).map((e) =>
+                (0, dt.bE)(0, l.dense_stack().width().length - 1).map((e) =>
                   o.createElement(
                     "div",
-                    { className: Ke.LabelValue, key: e },
+                    { className: Ze.LabelValue, key: e },
                     o.createElement(
                       "div",
-                      { className: Ke.Label },
+                      { className: Ze.Label },
                       (0, c.Xx)(
                         "#SteamLearn_Config_Node_DenseStack_LayerWidth",
                         e + 1,
@@ -4952,36 +5017,36 @@
                     ),
                     o.createElement(
                       "div",
-                      { className: Ke.Value },
+                      { className: Ze.Value },
                       l.dense_stack().width()[e],
                     ),
                   ),
                 ),
                 o.createElement(
                   "div",
-                  { className: Ke.LabelValue },
+                  { className: Ze.LabelValue },
                   o.createElement(
                     "div",
-                    { className: Ke.Label },
+                    { className: Ze.Label },
                     (0, c.Xx)("#SteamLearn_Config_Node_DenseStack_DropoutPct"),
                   ),
                   o.createElement(
                     "div",
-                    { className: Ke.Value },
+                    { className: Ze.Value },
                     `${l.dense_stack().dropout_pct()}%`,
                   ),
                 ),
                 o.createElement(
                   "div",
-                  { className: Ke.LabelValue },
+                  { className: Ze.LabelValue },
                   o.createElement(
                     "div",
-                    { className: Ke.Label },
+                    { className: Ze.Label },
                     (0, c.Xx)("#SteamLearn_Config_Node_DenseStack_Activation"),
                   ),
                   o.createElement(
                     "div",
-                    { className: Ke.Value },
+                    { className: Ze.Value },
                     (function (e) {
                       switch (e) {
                         case 1:
@@ -5001,25 +5066,25 @@
               const a = Math.floor(((t + 1) / (m.length + 1)) * 200),
                 n = E(e.connector_id());
               return o.createElement(
-                Me.HH,
+                ze.HH,
                 {
                   key: n,
                   type: "source",
-                  position: Ue.P.Bottom,
+                  position: Re.P.Bottom,
                   id: n,
                   style: { left: a },
                 },
                 o.createElement(
                   "div",
-                  { className: Ke.ConnectorID },
+                  { className: Ze.ConnectorID },
                   e.connector_id(),
                 ),
               );
             }),
           );
         },
-        dt = (e) => {
-          const { msgWorkingProject: t, msgWorkingProjectConfig: a } = ue(),
+        _t = (e) => {
+          const { msgWorkingProject: t, msgWorkingProjectConfig: a } = pe(),
             [n, r] = o.useState(e.msgNode.comment()),
             [i, s] = o.useState(
               e.msgNode.dense_stack().width().length.toString(),
@@ -5061,7 +5126,7 @@
             },
           ];
           return o.createElement(
-            Ie.On,
+            je.On,
             {
               active: e.bVisible,
               onDismiss: () => e.fnSetPopupVisible(!1),
@@ -5069,32 +5134,32 @@
             },
             o.createElement(
               "div",
-              { className: Ke.NodeHeader },
+              { className: Ze.NodeHeader },
               (0, c.Xx)("#SteamLearn_Config_Node_Title_DenseStack"),
               o.createElement(
                 "div",
-                { className: Ke.SubHeader },
+                { className: Ze.SubHeader },
                 (0, c.Xx)("#SteamLearn_Config_Node_Title_DenseStackEditDesc"),
               ),
             ),
             o.createElement(
               "div",
-              { className: Ke.NodeBody },
-              o.createElement("div", { className: Ke.Separator }),
+              { className: Ze.NodeBody },
+              o.createElement("div", { className: Ze.Separator }),
               o.createElement(
                 "div",
-                { className: Ke.NodeOptionBlock },
+                { className: Ze.NodeOptionBlock },
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionHeader },
+                  { className: Ze.NodeOptionHeader },
                   (0, c.Xx)("#SteamLearn_Config_Node_Comment"),
                 ),
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionDesc },
+                  { className: Ze.NodeOptionDesc },
                   (0, c.Xx)("#SteamLearn_Config_Node_CommentDesc"),
                 ),
-                o.createElement(Qe, {
+                o.createElement($e, {
                   isText: !0,
                   dontUpdateProject: !0,
                   width: 200,
@@ -5102,19 +5167,19 @@
                   fnSetValue: (e) => r(e),
                 }),
               ),
-              o.createElement("div", { className: Ke.Separator }),
+              o.createElement("div", { className: Ze.Separator }),
               o.createElement(
                 "div",
-                { className: Ke.NodeOptionBlock },
+                { className: Ze.NodeOptionBlock },
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionHeader },
+                  { className: Ze.NodeOptionHeader },
                   (0, c.Xx)("#SteamLearn_Config_Node_DenseStack_NumLayers"),
                 ),
-                o.createElement(Qe, {
+                o.createElement($e, {
                   dontUpdateProject: !0,
                   fnGetInitialValue: () => i,
-                  fnValidateValue: (e) => le(e, 1, 6),
+                  fnValidateValue: (e) => de(e, 1, 6),
                   fnSetValue: (e) =>
                     ((e) => {
                       s(e);
@@ -5126,28 +5191,28 @@
                     })(e),
                 }),
               ),
-              o.createElement("div", { className: Ke.Separator }),
+              o.createElement("div", { className: Ze.Separator }),
               o.createElement(
                 "div",
-                { className: Ke.NodeOptionBlock },
+                { className: Ze.NodeOptionBlock },
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionHeader },
+                  { className: Ze.NodeOptionHeader },
                   (0, c.Xx)("#SteamLearn_Config_Node_DenseStack_LayerWidths"),
                 ),
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionDesc },
+                  { className: Ze.NodeOptionDesc },
                   (0, c.Xx)(
                     "#SteamLearn_Config_Node_DenseStack_LayerWidthsDesc",
                   ),
                 ),
-                (0, ct.bE)(0, l.length - 1).map((e) =>
-                  o.createElement(Qe, {
+                (0, dt.bE)(0, l.length - 1).map((e) =>
+                  o.createElement($e, {
                     key: e,
                     dontUpdateProject: !0,
                     fnGetInitialValue: () => l[e],
-                    fnValidateValue: (e) => le(e, 1, 8196),
+                    fnValidateValue: (e) => de(e, 1, 8196),
                     fnSetValue: (t) =>
                       ((e, t) => {
                         if (e < 0 || e >= l.length) return;
@@ -5157,59 +5222,59 @@
                   }),
                 ),
               ),
-              o.createElement("div", { className: Ke.Separator }),
+              o.createElement("div", { className: Ze.Separator }),
               o.createElement(
                 "div",
-                { className: Ke.NodeOptionBlock },
+                { className: Ze.NodeOptionBlock },
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionHeader },
+                  { className: Ze.NodeOptionHeader },
                   (0, c.Xx)("#SteamLearn_Config_Node_DenseStack_DropoutPct"),
                 ),
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionDesc },
+                  { className: Ze.NodeOptionDesc },
                   (0, c.Xx)(
                     "#SteamLearn_Config_Node_DenseStack_DropoutPctDesc",
                   ),
                 ),
-                o.createElement(Qe, {
+                o.createElement($e, {
                   dontUpdateProject: !0,
                   fnGetInitialValue: () => m,
-                  fnValidateValue: (e) => le(e, 0, 99),
+                  fnValidateValue: (e) => de(e, 0, 99),
                   fnSetValue: (e) => _(e),
                 }),
               ),
-              o.createElement("div", { className: Ke.Separator }),
+              o.createElement("div", { className: Ze.Separator }),
               o.createElement(
                 "div",
-                { className: Ke.NodeOptionBlock },
+                { className: Ze.NodeOptionBlock },
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionHeader },
+                  { className: Ze.NodeOptionHeader },
                   (0, c.Xx)("#SteamLearn_Config_Node_DenseStack_Activation"),
                 ),
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionDesc },
+                  { className: Ze.NodeOptionDesc },
                   (0, c.Xx)(
                     "#SteamLearn_Config_Node_DenseStack_ActivationDesc",
                   ),
                 ),
-                o.createElement(Ye, {
+                o.createElement(Je, {
                   dontUpdateProject: !0,
                   fnGetValue: () => u,
                   fnSetValue: (e) => p(parseInt(e)),
                   options: N,
                 }),
               ),
-              o.createElement("div", { className: Ke.Separator }),
+              o.createElement("div", { className: Ze.Separator }),
             ),
             o.createElement(
               "div",
-              { className: Ke.Buttons },
+              { className: Ze.Buttons },
               o.createElement(
-                Te.KM,
+                Pe.KM,
                 {
                   onClick: () => {
                     e.msgNode
@@ -5218,34 +5283,34 @@
                       e.msgNode.dense_stack().set_dropout_pct(parseInt(m)),
                       e.msgNode.dense_stack().set_activation(u),
                       e.msgNode.set_comment(n),
-                      ie(t),
+                      se(t),
                       e.fnSetPopupVisible(!1);
                   },
                 },
                 (0, c.Xx)("#SteamLearn_Confirm"),
               ),
               o.createElement(
-                Te.zx,
+                Pe.zx,
                 { onClick: () => e.fnSetPopupVisible(!1) },
                 (0, c.Xx)("#SteamLearn_Cancel"),
               ),
             ),
           );
         },
-        mt = (e) => {
+        ut = (e) => {
           const {
               msgWorkingProject: t,
               msgWorkingProjectConfig: a,
               nPublishedVersion: n,
-            } = ue(),
+            } = pe(),
             [r, i] = o.useState(!1),
             l = e.data.msgNode,
             d = l.connectors().filter((e) => e.is_input_connector()),
             m = l.connectors().filter((e) => !e.is_input_connector());
           return o.createElement(
             "div",
-            { className: (0, s.Z)(Ke.FlowNode, Ke.DropoutNode, Ke.Keras) },
-            o.createElement(_t, {
+            { className: (0, s.Z)(Ze.FlowNode, Ze.DropoutNode, Ze.Keras) },
+            o.createElement(pt, {
               bVisible: r,
               fnSetPopupVisible: i,
               msgNode: l,
@@ -5254,75 +5319,75 @@
               const a = Math.floor(((t + 1) / (d.length + 1)) * 200),
                 n = E(e.connector_id());
               return o.createElement(
-                Me.HH,
+                ze.HH,
                 {
                   key: n,
                   type: "target",
-                  position: Ue.P.Top,
+                  position: Re.P.Top,
                   id: n,
                   style: { left: a },
                 },
                 o.createElement(
                   "div",
-                  { className: Ke.ConnectorID },
+                  { className: Ze.ConnectorID },
                   e.connector_id(),
                 ),
               );
             }),
             o.createElement(
               "div",
-              { className: Ke.Title },
+              { className: Ze.Title },
               o.createElement(
                 "div",
-                { className: Ke.TitleText },
+                { className: Ze.TitleText },
                 (0, c.Xx)("#SteamLearn_Config_Node_Title_Dropout"),
               ),
-              o.createElement("div", { className: Ke.NodeID }, l.node_id()),
+              o.createElement("div", { className: Ze.NodeID }, l.node_id()),
               o.createElement("div", {
-                className: Ke.EditGear,
+                className: Ze.EditGear,
                 onClick: () => i(!0),
               }),
               o.createElement("div", {
-                className: Ke.Delete,
+                className: Ze.Delete,
                 onClick: () =>
-                  (0, Pe.AM)(
-                    o.createElement(Re.uH, {
+                  (0, Xe.AM)(
+                    o.createElement(Ke.uH, {
                       strTitle: (0, c.Xx)(
                         "#SteamLearn_Config_Node_Delete_Node",
                       ),
                       strDescription: (0, c.Xx)(
                         "#SteamLearn_Config_Node_Delete_NodeDetails",
                       ),
-                      onOK: () => oe(t, a, l.node_id()),
+                      onOK: () => re(t, a, l.node_id()),
                     }),
                     window,
                   ),
               }),
             ),
-            o.createElement("div", { className: Ke.TitleUnderBar }),
+            o.createElement("div", { className: Ze.TitleUnderBar }),
             o.createElement(
               "div",
-              { className: Ke.Body },
+              { className: Ze.Body },
               o.createElement(
                 "div",
-                { className: Ke.CenterSection },
+                { className: Ze.CenterSection },
                 l.comment().length > 0 &&
                   o.createElement(
                     "div",
-                    { className: Ke.Comment },
+                    { className: Ze.Comment },
                     l.comment(),
                   ),
                 o.createElement(
                   "div",
-                  { className: Ke.LabelValue },
+                  { className: Ze.LabelValue },
                   o.createElement(
                     "div",
-                    { className: Ke.Label },
+                    { className: Ze.Label },
                     (0, c.Xx)("#SteamLearn_Config_Node_DenseStack_DropoutPct"),
                   ),
                   o.createElement(
                     "div",
-                    { className: Ke.Value },
+                    { className: Ze.Value },
                     `${l.dropout().dropout_pct()}%`,
                   ),
                 ),
@@ -5332,25 +5397,25 @@
               const a = Math.floor(((t + 1) / (m.length + 1)) * 200),
                 n = E(e.connector_id());
               return o.createElement(
-                Me.HH,
+                ze.HH,
                 {
                   key: n,
                   type: "source",
-                  position: Ue.P.Bottom,
+                  position: Re.P.Bottom,
                   id: n,
                   style: { left: a },
                 },
                 o.createElement(
                   "div",
-                  { className: Ke.ConnectorID },
+                  { className: Ze.ConnectorID },
                   e.connector_id(),
                 ),
               );
             }),
           );
         },
-        _t = (e) => {
-          const { msgWorkingProject: t, msgWorkingProjectConfig: a } = ue(),
+        pt = (e) => {
+          const { msgWorkingProject: t, msgWorkingProjectConfig: a } = pe(),
             [n, r] = o.useState(e.msgNode.comment()),
             [i, s] = o.useState(e.msgNode.dropout().dropout_pct().toString());
           o.useEffect(() => {
@@ -5358,7 +5423,7 @@
               s(e.msgNode.dropout().dropout_pct().toString());
           }, [e.bVisible, e.msgNode]);
           return o.createElement(
-            Ie.On,
+            je.On,
             {
               active: e.bVisible,
               onDismiss: () => e.fnSetPopupVisible(!1),
@@ -5366,32 +5431,32 @@
             },
             o.createElement(
               "div",
-              { className: Ke.NodeHeader },
+              { className: Ze.NodeHeader },
               (0, c.Xx)("#SteamLearn_Config_Node_Title_Dropout"),
               o.createElement(
                 "div",
-                { className: Ke.SubHeader },
+                { className: Ze.SubHeader },
                 (0, c.Xx)("#SteamLearn_Config_Node_Title_DropoutEditDesc"),
               ),
             ),
             o.createElement(
               "div",
-              { className: Ke.NodeBody },
-              o.createElement("div", { className: Ke.Separator }),
+              { className: Ze.NodeBody },
+              o.createElement("div", { className: Ze.Separator }),
               o.createElement(
                 "div",
-                { className: Ke.NodeOptionBlock },
+                { className: Ze.NodeOptionBlock },
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionHeader },
+                  { className: Ze.NodeOptionHeader },
                   (0, c.Xx)("#SteamLearn_Config_Node_Comment"),
                 ),
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionDesc },
+                  { className: Ze.NodeOptionDesc },
                   (0, c.Xx)("#SteamLearn_Config_Node_CommentDesc"),
                 ),
-                o.createElement(Qe, {
+                o.createElement($e, {
                   isText: !0,
                   dontUpdateProject: !0,
                   width: 200,
@@ -5399,61 +5464,61 @@
                   fnSetValue: (e) => r(e),
                 }),
               ),
-              o.createElement("div", { className: Ke.Separator }),
+              o.createElement("div", { className: Ze.Separator }),
               o.createElement(
                 "div",
-                { className: Ke.NodeOptionBlock },
+                { className: Ze.NodeOptionBlock },
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionHeader },
+                  { className: Ze.NodeOptionHeader },
                   (0, c.Xx)("#SteamLearn_Config_Node_DenseStack_DropoutPct"),
                 ),
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionDesc },
+                  { className: Ze.NodeOptionDesc },
                   (0, c.Xx)(
                     "#SteamLearn_Config_Node_DenseStack_DropoutPctDesc",
                   ),
                 ),
-                o.createElement(Qe, {
+                o.createElement($e, {
                   dontUpdateProject: !0,
                   fnGetInitialValue: () => i,
-                  fnValidateValue: (e) => le(e, 0, 99),
+                  fnValidateValue: (e) => de(e, 0, 99),
                   fnSetValue: (e) => s(e),
                 }),
               ),
-              o.createElement("div", { className: Ke.Separator }),
+              o.createElement("div", { className: Ze.Separator }),
             ),
             o.createElement(
               "div",
-              { className: Ke.Buttons },
+              { className: Ze.Buttons },
               o.createElement(
-                Te.KM,
+                Pe.KM,
                 {
                   onClick: () => {
                     e.msgNode.dropout().set_dropout_pct(parseInt(i)),
                       e.msgNode.set_comment(n),
-                      ie(t),
+                      se(t),
                       e.fnSetPopupVisible(!1);
                   },
                 },
                 (0, c.Xx)("#SteamLearn_Confirm"),
               ),
               o.createElement(
-                Te.zx,
+                Pe.zx,
                 { onClick: () => e.fnSetPopupVisible(!1) },
                 (0, c.Xx)("#SteamLearn_Cancel"),
               ),
             ),
           );
         },
-        ut = (e) => {
+        Nt = (e) => {
           var t;
           const {
               msgWorkingProject: a,
               msgWorkingProjectConfig: n,
               nPublishedVersion: r,
-            } = ue(),
+            } = pe(),
             [i, l] = o.useState(!1),
             d = e.data.msgNode,
             m = d.connectors().filter((e) => e.is_input_connector()),
@@ -5461,8 +5526,8 @@
             u = d.embedding().compact_table().length > 0;
           return o.createElement(
             "div",
-            { className: (0, s.Z)(Ke.FlowNode, Ke.EmbeddingNode, Ke.Keras) },
-            o.createElement(pt, {
+            { className: (0, s.Z)(Ze.FlowNode, Ze.EmbeddingNode, Ze.Keras) },
+            o.createElement(gt, {
               bVisible: i,
               fnSetPopupVisible: l,
               msgNode: d,
@@ -5471,75 +5536,75 @@
               const a = Math.floor(((t + 1) / (m.length + 1)) * 200),
                 n = E(e.connector_id());
               return o.createElement(
-                Me.HH,
+                ze.HH,
                 {
                   key: n,
                   type: "target",
-                  position: Ue.P.Top,
+                  position: Re.P.Top,
                   id: n,
                   style: { left: a },
                 },
                 o.createElement(
                   "div",
-                  { className: Ke.ConnectorID },
+                  { className: Ze.ConnectorID },
                   e.connector_id(),
                 ),
               );
             }),
             o.createElement(
               "div",
-              { className: Ke.Title },
+              { className: Ze.Title },
               o.createElement(
                 "div",
-                { className: Ke.TitleText },
+                { className: Ze.TitleText },
                 (0, c.Xx)("#SteamLearn_Config_Node_Title_Embedding"),
               ),
-              o.createElement("div", { className: Ke.NodeID }, d.node_id()),
+              o.createElement("div", { className: Ze.NodeID }, d.node_id()),
               o.createElement("div", {
-                className: Ke.EditGear,
+                className: Ze.EditGear,
                 onClick: () => l(!0),
               }),
               o.createElement("div", {
-                className: Ke.Delete,
+                className: Ze.Delete,
                 onClick: () =>
-                  (0, Pe.AM)(
-                    o.createElement(Re.uH, {
+                  (0, Xe.AM)(
+                    o.createElement(Ke.uH, {
                       strTitle: (0, c.Xx)(
                         "#SteamLearn_Config_Node_Delete_Node",
                       ),
                       strDescription: (0, c.Xx)(
                         "#SteamLearn_Config_Node_Delete_NodeDetails",
                       ),
-                      onOK: () => oe(a, n, d.node_id()),
+                      onOK: () => re(a, n, d.node_id()),
                     }),
                     window,
                   ),
               }),
             ),
-            o.createElement("div", { className: Ke.TitleUnderBar }),
+            o.createElement("div", { className: Ze.TitleUnderBar }),
             o.createElement(
               "div",
-              { className: Ke.Body },
+              { className: Ze.Body },
               o.createElement(
                 "div",
-                { className: Ke.CenterSection },
+                { className: Ze.CenterSection },
                 d.comment().length > 0 &&
                   o.createElement(
                     "div",
-                    { className: Ke.Comment },
+                    { className: Ze.Comment },
                     d.comment(),
                   ),
                 o.createElement(
                   "div",
-                  { className: Ke.LabelValue },
+                  { className: Ze.LabelValue },
                   o.createElement(
                     "div",
-                    { className: Ke.Label },
+                    { className: Ze.Label },
                     (0, c.Xx)("#SteamLearn_Config_Node_Embedding_MaxValue"),
                   ),
                   o.createElement(
                     "div",
-                    { className: Ke.Value },
+                    { className: Ze.Value },
                     u
                       ? d.embedding().compact_table()
                       : d.embedding().max_value(),
@@ -5550,43 +5615,43 @@
                   : t.length) > 0 &&
                   o.createElement(
                     "div",
-                    { className: Ke.LabelValue },
+                    { className: Ze.LabelValue },
                     o.createElement(
                       "div",
-                      { className: Ke.Label },
+                      { className: Ze.Label },
                       (0, c.Xx)("#SteamLearn_Config_Node_Embedding_Name"),
                     ),
                     o.createElement(
                       "div",
-                      { className: Ke.Value },
+                      { className: Ze.Value },
                       d.embedding().embed_name(),
                     ),
                   ),
                 o.createElement(
                   "div",
-                  { className: Ke.LabelValue },
+                  { className: Ze.LabelValue },
                   o.createElement(
                     "div",
-                    { className: Ke.Label },
+                    { className: Ze.Label },
                     (0, c.Xx)("#SteamLearn_Config_Node_Embedding_Width"),
                   ),
                   o.createElement(
                     "div",
-                    { className: Ke.Value },
+                    { className: Ze.Value },
                     d.embedding().embedding_width(),
                   ),
                 ),
                 o.createElement(
                   "div",
-                  { className: Ke.LabelValue },
+                  { className: Ze.LabelValue },
                   o.createElement(
                     "div",
-                    { className: Ke.Label },
+                    { className: Ze.Label },
                     (0, c.Xx)("#SteamLearn_Config_Node_Embedding_Flatten"),
                   ),
                   o.createElement(
                     "div",
-                    { className: Ke.Value },
+                    { className: Ze.Value },
                     d.embedding().flatten()
                       ? (0, c.Xx)("#SteamLearn_Yes")
                       : (0, c.Xx)("#SteamLearn_No"),
@@ -5598,25 +5663,25 @@
               const a = Math.floor(((t + 1) / (_.length + 1)) * 200),
                 n = E(e.connector_id());
               return o.createElement(
-                Me.HH,
+                ze.HH,
                 {
                   key: n,
                   type: "source",
-                  position: Ue.P.Bottom,
+                  position: Re.P.Bottom,
                   id: n,
                   style: { left: a },
                 },
                 o.createElement(
                   "div",
-                  { className: Ke.ConnectorID },
+                  { className: Ze.ConnectorID },
                   e.connector_id(),
                 ),
               );
             }),
           );
         },
-        pt = (e) => {
-          const { msgWorkingProject: t, msgWorkingProjectConfig: a } = ue(),
+        gt = (e) => {
+          const { msgWorkingProject: t, msgWorkingProjectConfig: a } = pe(),
             [n, r] = o.useState(e.msgNode.comment()),
             [i, s] = o.useState(
               e.msgNode.embedding().compact_table().length > 0
@@ -5641,7 +5706,7 @@
               p(e.msgNode.embedding().export_name());
           }, [e]);
           return o.createElement(
-            Ie.On,
+            je.On,
             {
               active: e.bVisible,
               onDismiss: () => e.fnSetPopupVisible(!1),
@@ -5649,32 +5714,32 @@
             },
             o.createElement(
               "div",
-              { className: Ke.NodeHeader },
+              { className: Ze.NodeHeader },
               (0, c.Xx)("#SteamLearn_Config_Node_Title_Embedding"),
               o.createElement(
                 "div",
-                { className: Ke.SubHeader },
+                { className: Ze.SubHeader },
                 (0, c.Xx)("#SteamLearn_Config_Node_Title_EmbeddingEditDesc"),
               ),
             ),
             o.createElement(
               "div",
-              { className: Ke.NodeBody },
-              o.createElement("div", { className: Ke.Separator }),
+              { className: Ze.NodeBody },
+              o.createElement("div", { className: Ze.Separator }),
               o.createElement(
                 "div",
-                { className: Ke.NodeOptionBlock },
+                { className: Ze.NodeOptionBlock },
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionHeader },
+                  { className: Ze.NodeOptionHeader },
                   (0, c.Xx)("#SteamLearn_Config_Node_Comment"),
                 ),
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionDesc },
+                  { className: Ze.NodeOptionDesc },
                   (0, c.Xx)("#SteamLearn_Config_Node_CommentDesc"),
                 ),
-                o.createElement(Qe, {
+                o.createElement($e, {
                   isText: !0,
                   dontUpdateProject: !0,
                   width: 200,
@@ -5682,21 +5747,21 @@
                   fnSetValue: (e) => r(e),
                 }),
               ),
-              o.createElement("div", { className: Ke.Separator }),
+              o.createElement("div", { className: Ze.Separator }),
               o.createElement(
                 "div",
-                { className: Ke.NodeOptionBlock },
+                { className: Ze.NodeOptionBlock },
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionHeader },
+                  { className: Ze.NodeOptionHeader },
                   (0, c.Xx)("#SteamLearn_Config_Node_Embedding_Name"),
                 ),
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionDesc },
+                  { className: Ze.NodeOptionDesc },
                   (0, c.Xx)("#SteamLearn_Config_Node_Embedding_NameDesc"),
                 ),
-                o.createElement(Qe, {
+                o.createElement($e, {
                   isText: !0,
                   dontUpdateProject: !0,
                   width: 200,
@@ -5704,67 +5769,67 @@
                   fnSetValue: (e) => g(e),
                 }),
               ),
-              o.createElement("div", { className: Ke.Separator }),
+              o.createElement("div", { className: Ze.Separator }),
               o.createElement(
                 "div",
-                { className: Ke.NodeOptionBlock },
+                { className: Ze.NodeOptionBlock },
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionHeader },
+                  { className: Ze.NodeOptionHeader },
                   (0, c.Xx)("#SteamLearn_Config_Node_Embedding_MaxValue"),
                 ),
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionDesc },
+                  { className: Ze.NodeOptionDesc },
                   (0, c.Xx)("#SteamLearn_Config_Node_Embedding_MaxValueDesc"),
                 ),
-                o.createElement(Qe, {
+                o.createElement($e, {
                   dontUpdateProject: !0,
                   fnGetInitialValue: () => i,
-                  fnValidateValue: (e) => le(e, 1) || me(a, e),
+                  fnValidateValue: (e) => de(e, 1) || _e(a, e),
                   fnSetValue: (e) => s(e),
                 }),
               ),
-              o.createElement("div", { className: Ke.Separator }),
+              o.createElement("div", { className: Ze.Separator }),
               o.createElement(
                 "div",
-                { className: Ke.NodeOptionBlock },
+                { className: Ze.NodeOptionBlock },
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionHeader },
+                  { className: Ze.NodeOptionHeader },
                   (0, c.Xx)("#SteamLearn_Config_Node_Embedding_Width"),
                 ),
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionDesc },
+                  { className: Ze.NodeOptionDesc },
                   (0, c.Xx)("#SteamLearn_Config_Node_Embedding_WidthDesc"),
                 ),
-                o.createElement(Qe, {
+                o.createElement($e, {
                   dontUpdateProject: !0,
                   fnGetInitialValue: () => l,
-                  fnValidateValue: (e) => le(e, 1),
+                  fnValidateValue: (e) => de(e, 1),
                   fnSetValue: (e) => d(e),
                 }),
               ),
-              o.createElement("div", { className: Ke.Separator }),
+              o.createElement("div", { className: Ze.Separator }),
               o.createElement(
                 "div",
-                { className: Ke.NodeOptionBlock },
+                { className: Ze.NodeOptionBlock },
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionHeader },
+                  { className: Ze.NodeOptionHeader },
                   (0, c.Xx)("#SteamLearn_Config_Node_Embedding_OutputShape"),
                 ),
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionDesc },
+                  { className: Ze.NodeOptionDesc },
                   (0, c.Xx)(
                     "#SteamLearn_Config_Node_Embedding_OutputShapeDesc",
                   ),
                 ),
                 o.createElement(
                   "div",
-                  { className: Ke.CheckboxWithLabel },
+                  { className: Ze.CheckboxWithLabel },
                   o.createElement("input", {
                     type: "checkbox",
                     id: "editflatten",
@@ -5778,37 +5843,37 @@
                   ),
                 ),
               ),
-              o.createElement("div", { className: Ke.Separator }),
+              o.createElement("div", { className: Ze.Separator }),
               o.createElement(
                 "div",
-                { className: Ke.NodeOptionBlock },
+                { className: Ze.NodeOptionBlock },
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionHeader },
+                  { className: Ze.NodeOptionHeader },
                   (0, c.Xx)("#SteamLearn_Config_Node_Extract_Name"),
                 ),
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionDesc },
+                  { className: Ze.NodeOptionDesc },
                   (0, c.Xx)("#SteamLearn_Config_Node_Extract_NameDesc"),
                 ),
-                o.createElement(Qe, {
+                o.createElement($e, {
                   dontUpdateProject: !0,
                   fnGetInitialValue: () => u,
                   fnSetValue: (e) => p(e),
                 }),
               ),
-              o.createElement("div", { className: Ke.Separator }),
+              o.createElement("div", { className: Ze.Separator }),
             ),
             o.createElement(
               "div",
-              { className: Ke.Buttons },
+              { className: Ze.Buttons },
               o.createElement(
-                Te.KM,
+                Pe.KM,
                 {
                   onClick: () => {
-                    const o = le(i, 1),
-                      r = me(a, i);
+                    const o = de(i, 1),
+                      r = _e(a, i);
                     o
                       ? (e.msgNode
                           .embedding()
@@ -5822,29 +5887,29 @@
                       e.msgNode.embedding().set_export_name(u),
                       e.msgNode.embedding().set_embed_name(N),
                       e.msgNode.set_comment(n),
-                      ie(t),
+                      se(t),
                       e.fnSetPopupVisible(!1);
                   },
                 },
                 (0, c.Xx)("#SteamLearn_Confirm"),
               ),
               o.createElement(
-                Te.zx,
+                Pe.zx,
                 { onClick: () => e.fnSetPopupVisible(!1) },
                 (0, c.Xx)("#SteamLearn_Cancel"),
               ),
             ),
           );
         },
-        Nt = (e) => {
+        St = (e) => {
           const {
               msgWorkingProject: t,
               msgWorkingProjectConfig: a,
               nPublishedVersion: n,
-            } = ue(),
+            } = pe(),
             [r, i] = o.useState(!1),
             l = e.data.msgNode,
-            d = (0, We.Z)();
+            d = (0, Ue.Z)();
           o.useEffect(() => {
             var e;
             const n =
@@ -5858,11 +5923,11 @@
                 !1,
                 `No input connector on node ${l.toObject()}`,
               );
-            const { msgIncomingNode: o, nIncomingConnectorID: r } = ae(a, n),
+            const { msgIncomingNode: o, nIncomingConnectorID: r } = ne(a, n),
               i = l.connectors().filter((e) => !e.is_input_connector()).length;
             let s = i;
             if (o) {
-              const e = ne(a, o, r);
+              const e = oe(a, o, r);
               (0, u.X)(
                 1 == e.length,
                 `Input tensor to STEAMLEARN_NODE_TYPE_EXPLODE not one-dimensional! ( ${e} ) (node ${o.node_id()}, connector ${r}`,
@@ -5871,7 +5936,7 @@
             } else s = 0;
             if (s > i) {
               const e = s - i,
-                t = J(a, e);
+                t = ee(a, e);
               for (let a = 0; a < e; a++) {
                 let e = new S.UYo();
                 e.set_connector_id(t[a]),
@@ -5900,7 +5965,7 @@
                   .slice(0, s),
               ]);
             }
-            s != i && ie(t),
+            s != i && se(t),
               setTimeout(() => {
                 for (const e of a.project_nodes())
                   12 == e.type() && d(v(e.node_id()));
@@ -5912,12 +5977,12 @@
             "div",
             {
               className: (0, s.Z)(
-                Ke.FlowNode,
-                Ke.ExplodeNode,
-                Ke.Preprocessing,
+                Ze.FlowNode,
+                Ze.ExplodeNode,
+                Ze.Preprocessing,
               ),
             },
-            o.createElement(gt, {
+            o.createElement(ft, {
               bVisible: r,
               fnSetPopupVisible: i,
               msgNode: l,
@@ -5926,62 +5991,62 @@
               const a = Math.floor(((t + 1) / (m.length + 1)) * 200),
                 n = E(e.connector_id());
               return o.createElement(
-                Me.HH,
+                ze.HH,
                 {
                   key: n,
                   type: "target",
-                  position: Ue.P.Top,
+                  position: Re.P.Top,
                   id: n,
                   style: { left: a },
                 },
                 o.createElement(
                   "div",
-                  { className: Ke.ConnectorID },
+                  { className: Ze.ConnectorID },
                   e.connector_id(),
                 ),
               );
             }),
             o.createElement(
               "div",
-              { className: Ke.Title },
+              { className: Ze.Title },
               o.createElement(
                 "div",
-                { className: Ke.TitleText },
+                { className: Ze.TitleText },
                 (0, c.Xx)("#SteamLearn_Config_Node_Title_Explode"),
               ),
-              o.createElement("div", { className: Ke.NodeID }, l.node_id()),
+              o.createElement("div", { className: Ze.NodeID }, l.node_id()),
               o.createElement("div", {
-                className: Ke.EditGear,
+                className: Ze.EditGear,
                 onClick: () => i(!0),
               }),
               o.createElement("div", {
-                className: Ke.Delete,
+                className: Ze.Delete,
                 onClick: () =>
-                  (0, Pe.AM)(
-                    o.createElement(Re.uH, {
+                  (0, Xe.AM)(
+                    o.createElement(Ke.uH, {
                       strTitle: (0, c.Xx)(
                         "#SteamLearn_Config_Node_Delete_Node",
                       ),
                       strDescription: (0, c.Xx)(
                         "#SteamLearn_Config_Node_Delete_NodeDetails",
                       ),
-                      onOK: () => oe(t, a, l.node_id()),
+                      onOK: () => re(t, a, l.node_id()),
                     }),
                     window,
                   ),
               }),
             ),
-            o.createElement("div", { className: Ke.TitleUnderBar }),
+            o.createElement("div", { className: Ze.TitleUnderBar }),
             o.createElement(
               "div",
-              { className: Ke.Body },
+              { className: Ze.Body },
               o.createElement(
                 "div",
-                { className: Ke.CenterSection },
+                { className: Ze.CenterSection },
                 l.comment().length > 0 &&
                   o.createElement(
                     "div",
-                    { className: Ke.Comment },
+                    { className: Ze.Comment },
                     l.comment(),
                   ),
               ),
@@ -5990,31 +6055,31 @@
               const a = Math.floor(((t + 1) / (_.length + 1)) * 200),
                 n = E(e.connector_id());
               return o.createElement(
-                Me.HH,
+                ze.HH,
                 {
                   key: n,
                   type: "source",
-                  position: Ue.P.Bottom,
+                  position: Re.P.Bottom,
                   id: n,
                   style: { left: a },
                 },
                 o.createElement(
                   "div",
-                  { className: Ke.ConnectorID },
+                  { className: Ze.ConnectorID },
                   e.connector_id(),
                 ),
               );
             }),
           );
         },
-        gt = (e) => {
-          const { msgWorkingProject: t, msgWorkingProjectConfig: a } = ue(),
+        ft = (e) => {
+          const { msgWorkingProject: t, msgWorkingProjectConfig: a } = pe(),
             [n, r] = o.useState(e.msgNode.comment());
           o.useEffect(() => {
             r(e.msgNode.comment());
           }, [e.bVisible, e.msgNode]);
           return o.createElement(
-            Ie.On,
+            je.On,
             {
               active: e.bVisible,
               onDismiss: () => e.fnSetPopupVisible(!1),
@@ -6022,32 +6087,32 @@
             },
             o.createElement(
               "div",
-              { className: Ke.NodeHeader },
+              { className: Ze.NodeHeader },
               (0, c.Xx)("#SteamLearn_Config_Node_Title_Explode"),
               o.createElement(
                 "div",
-                { className: Ke.SubHeader },
+                { className: Ze.SubHeader },
                 (0, c.Xx)("#SteamLearn_Config_Node_Title_ExplodeEditDesc"),
               ),
             ),
             o.createElement(
               "div",
-              { className: Ke.NodeBody },
-              o.createElement("div", { className: Ke.Separator }),
+              { className: Ze.NodeBody },
+              o.createElement("div", { className: Ze.Separator }),
               o.createElement(
                 "div",
-                { className: Ke.NodeOptionBlock },
+                { className: Ze.NodeOptionBlock },
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionHeader },
+                  { className: Ze.NodeOptionHeader },
                   (0, c.Xx)("#SteamLearn_Config_Node_Comment"),
                 ),
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionDesc },
+                  { className: Ze.NodeOptionDesc },
                   (0, c.Xx)("#SteamLearn_Config_Node_CommentDesc"),
                 ),
-                o.createElement(Qe, {
+                o.createElement($e, {
                   isText: !0,
                   dontUpdateProject: !0,
                   width: 300,
@@ -6055,21 +6120,21 @@
                   fnSetValue: (e) => r(e),
                 }),
               ),
-              o.createElement("div", { className: Ke.Separator }),
+              o.createElement("div", { className: Ze.Separator }),
               o.createElement(
                 "div",
-                { className: Ke.Buttons },
+                { className: Ze.Buttons },
                 o.createElement(
-                  Te.KM,
+                  Pe.KM,
                   {
                     onClick: () => {
-                      e.msgNode.set_comment(n), ie(t), e.fnSetPopupVisible(!1);
+                      e.msgNode.set_comment(n), se(t), e.fnSetPopupVisible(!1);
                     },
                   },
                   (0, c.Xx)("#SteamLearn_Confirm"),
                 ),
                 o.createElement(
-                  Te.zx,
+                  Pe.zx,
                   { onClick: () => e.fnSetPopupVisible(!1) },
                   (0, c.Xx)("#SteamLearn_Cancel"),
                 ),
@@ -6077,8 +6142,8 @@
             ),
           );
         },
-        St = (e) => {
-          const { msgWorkingProjectConfig: t } = ue(),
+        Et = (e) => {
+          const { msgWorkingProjectConfig: t } = pe(),
             [a, n] = o.useState(!1),
             r = e.data.msgNode,
             i = r.connectors().filter((e) => e.is_input_connector()),
@@ -6091,9 +6156,9 @@
           return o.createElement(
             "div",
             {
-              className: (0, s.Z)(Ke.FlowNode, Ke.InputNode, Ke.Preprocessing),
+              className: (0, s.Z)(Ze.FlowNode, Ze.InputNode, Ze.Preprocessing),
             },
-            o.createElement(ft, {
+            o.createElement(vt, {
               bVisible: a,
               fnSetPopupVisible: n,
               msgNode: e.data.msgNode,
@@ -6102,60 +6167,60 @@
               const a = Math.floor(((t + 1) / (i.length + 1)) * 200),
                 n = E(e.connector_id());
               return o.createElement(
-                Me.HH,
+                ze.HH,
                 {
                   key: n,
                   type: "target",
-                  position: Ue.P.Top,
+                  position: Re.P.Top,
                   id: n,
                   style: { left: a },
                 },
                 o.createElement(
                   "div",
-                  { className: Ke.ConnectorID },
+                  { className: Ze.ConnectorID },
                   e.connector_id(),
                 ),
               );
             }),
             o.createElement(
               "div",
-              { className: Ke.Title },
+              { className: Ze.Title },
               o.createElement(
                 "div",
-                { className: Ke.TitleText },
+                { className: Ze.TitleText },
                 (0, c.Xx)(
                   "#SteamLearn_Config_Node_Title_Input",
                   e.data.msgNode.input().input_num(),
                 ),
               ),
-              o.createElement("div", { className: Ke.NodeID }, r.node_id()),
+              o.createElement("div", { className: Ze.NodeID }, r.node_id()),
               o.createElement("div", {
-                className: Ke.EditGear,
+                className: Ze.EditGear,
                 onClick: () => n(!0),
               }),
             ),
-            o.createElement("div", { className: Ke.TitleUnderBar }),
+            o.createElement("div", { className: Ze.TitleUnderBar }),
             o.createElement(
               "div",
-              { className: Ke.Body },
+              { className: Ze.Body },
               o.createElement(
                 "div",
-                { className: Ke.CenterSection },
+                { className: Ze.CenterSection },
                 r.comment().length > 0 &&
                   o.createElement(
                     "div",
-                    { className: Ke.Comment },
+                    { className: Ze.Comment },
                     r.comment(),
                   ),
                 o.createElement(
                   "div",
-                  { className: Ke.LabelValue },
+                  { className: Ze.LabelValue },
                   o.createElement(
                     "div",
-                    { className: Ke.Label },
+                    { className: Ze.Label },
                     (0, c.Xx)("#SteamLearn_Config_Node_Width"),
                   ),
-                  o.createElement("div", { className: Ke.Value }, d),
+                  o.createElement("div", { className: Ze.Value }, d),
                 ),
               ),
             ),
@@ -6163,31 +6228,31 @@
               const a = Math.floor(((t + 1) / (l.length + 1)) * 200),
                 n = E(e.connector_id());
               return o.createElement(
-                Me.HH,
+                ze.HH,
                 {
                   key: n,
                   type: "source",
-                  position: Ue.P.Bottom,
+                  position: Re.P.Bottom,
                   id: n,
                   style: { left: a },
                 },
                 o.createElement(
                   "div",
-                  { className: Ke.ConnectorID },
+                  { className: Ze.ConnectorID },
                   e.connector_id(),
                 ),
               );
             }),
           );
         },
-        ft = (e) => {
-          const { msgWorkingProject: t } = ue(),
+        vt = (e) => {
+          const { msgWorkingProject: t } = pe(),
             [a, n] = o.useState(e.msgNode.comment());
           o.useEffect(() => {
             n(e.msgNode.comment());
           }, [e.bVisible, e.msgNode]);
           return o.createElement(
-            Ie.On,
+            je.On,
             {
               active: e.bVisible,
               onDismiss: () => e.fnSetPopupVisible(!1),
@@ -6195,7 +6260,7 @@
             },
             o.createElement(
               "div",
-              { className: Ke.NodeHeader },
+              { className: Ze.NodeHeader },
               (0, c.Xx)(
                 "#SteamLearn_Config_Node_Title_Input",
                 e.msgNode.input().input_num(),
@@ -6203,22 +6268,22 @@
             ),
             o.createElement(
               "div",
-              { className: Ke.NodeBody },
-              o.createElement("div", { className: Ke.Separator }),
+              { className: Ze.NodeBody },
+              o.createElement("div", { className: Ze.Separator }),
               o.createElement(
                 "div",
-                { className: Ke.NodeOptionBlock },
+                { className: Ze.NodeOptionBlock },
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionHeader },
+                  { className: Ze.NodeOptionHeader },
                   (0, c.Xx)("#SteamLearn_Config_Node_Comment"),
                 ),
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionDesc },
+                  { className: Ze.NodeOptionDesc },
                   (0, c.Xx)("#SteamLearn_Config_Node_CommentDesc"),
                 ),
-                o.createElement(Qe, {
+                o.createElement($e, {
                   isText: !0,
                   dontUpdateProject: !0,
                   width: 300,
@@ -6226,37 +6291,37 @@
                   fnSetValue: (e) => n(e),
                 }),
               ),
-              o.createElement("div", { className: Ke.Separator }),
+              o.createElement("div", { className: Ze.Separator }),
             ),
             o.createElement(
               "div",
-              { className: Ke.Buttons },
+              { className: Ze.Buttons },
               o.createElement(
-                Te.KM,
+                Pe.KM,
                 {
                   onClick: () => {
-                    e.msgNode.set_comment(a), ie(t), e.fnSetPopupVisible(!1);
+                    e.msgNode.set_comment(a), se(t), e.fnSetPopupVisible(!1);
                   },
                 },
                 (0, c.Xx)("#SteamLearn_Confirm"),
               ),
               o.createElement(
-                Te.zx,
+                Pe.zx,
                 { onClick: () => e.fnSetPopupVisible(!1) },
                 (0, c.Xx)("#SteamLearn_Cancel"),
               ),
             ),
           );
         },
-        Et = (e) => {
+        xt = (e) => {
           const {
               msgWorkingProject: t,
               msgWorkingProjectConfig: a,
               nPublishedVersion: n,
-            } = ue(),
+            } = pe(),
             [r, i] = o.useState(!1),
             l = e.data.msgNode,
-            d = (0, We.Z)(),
+            d = (0, Ue.Z)(),
             m = e.data.msgNode
               .connectors()
               .filter((e) => e.is_input_connector()),
@@ -6274,12 +6339,12 @@
               "div",
               {
                 className: (0, s.Z)(
-                  Ke.FlowNode,
-                  Ke.KMeansNode,
-                  Ke.Preprocessing,
+                  Ze.FlowNode,
+                  Ze.KMeansNode,
+                  Ze.Preprocessing,
                 ),
               },
-              o.createElement(vt, {
+              o.createElement(ht, {
                 bVisible: r,
                 fnSetPopupVisible: i,
                 msgNode: l,
@@ -6288,90 +6353,90 @@
                 const a = Math.floor(((t + 1) / (m.length + 1)) * 200),
                   n = E(e.connector_id());
                 return o.createElement(
-                  Me.HH,
+                  ze.HH,
                   {
                     key: n,
                     type: "target",
-                    position: Ue.P.Top,
+                    position: Re.P.Top,
                     id: n,
                     style: { left: a },
                   },
                   o.createElement(
                     "div",
-                    { className: Ke.ConnectorID },
+                    { className: Ze.ConnectorID },
                     e.connector_id(),
                   ),
                 );
               }),
               o.createElement(
                 "div",
-                { className: Ke.Title },
+                { className: Ze.Title },
                 o.createElement(
                   "div",
-                  { className: Ke.TitleText },
+                  { className: Ze.TitleText },
                   (0, c.Xx)("#SteamLearn_Config_Node_Title_KMeans"),
                 ),
-                o.createElement("div", { className: Ke.NodeID }, l.node_id()),
+                o.createElement("div", { className: Ze.NodeID }, l.node_id()),
                 o.createElement("div", {
-                  className: Ke.EditGear,
+                  className: Ze.EditGear,
                   onClick: () => i(!0),
                 }),
                 o.createElement("div", {
-                  className: Ke.Delete,
+                  className: Ze.Delete,
                   onClick: () =>
-                    (0, Pe.AM)(
-                      o.createElement(Re.uH, {
+                    (0, Xe.AM)(
+                      o.createElement(Ke.uH, {
                         strTitle: (0, c.Xx)(
                           "#SteamLearn_Config_Node_Delete_Node",
                         ),
                         strDescription: (0, c.Xx)(
                           "#SteamLearn_Config_Node_Delete_NodeDetails",
                         ),
-                        onOK: () => oe(t, a, l.node_id()),
+                        onOK: () => re(t, a, l.node_id()),
                       }),
                       window,
                     ),
                 }),
               ),
-              o.createElement("div", { className: Ke.TitleUnderBar }),
+              o.createElement("div", { className: Ze.TitleUnderBar }),
               o.createElement(
                 "div",
-                { className: Ke.Body },
+                { className: Ze.Body },
                 o.createElement(
                   "div",
-                  { className: Ke.CenterSection },
+                  { className: Ze.CenterSection },
                   l.comment().length > 0 &&
                     o.createElement(
                       "div",
-                      { className: Ke.Comment },
+                      { className: Ze.Comment },
                       l.comment(),
                     ),
                   l.kmeans().generate_clusters() &&
                     o.createElement(
                       "div",
-                      { className: Ke.LabelValue },
+                      { className: Ze.LabelValue },
                       o.createElement(
                         "div",
-                        { className: Ke.Label },
+                        { className: Ze.Label },
                         (0, c.Xx)("#SteamLearn_Config_Node_KMeans_NumClusters"),
                       ),
                       o.createElement(
                         "div",
-                        { className: Ke.Value },
+                        { className: Ze.Value },
                         l.kmeans().num_clusters(),
                       ),
                     ),
                   o.createElement(
                     "div",
-                    { className: Ke.LabelValue },
+                    { className: Ze.LabelValue },
                     o.createElement(
                       "div",
-                      { className: Ke.Label },
+                      { className: Ze.Label },
                       (0, c.Xx)("#SteamLearn_Config_Node_KMeans_Name"),
                     ),
                     o.createElement(
                       "div",
-                      { className: Ke.Value },
+                      { className: Ze.Value },
                       l.kmeans().name(),
                     ),
                   ),
@@ -6381,17 +6446,17 @@
                 const a = Math.floor(((t + 1) / (_.length + 1)) * 200),
                   n = E(e.connector_id());
                 return o.createElement(
-                  Me.HH,
+                  ze.HH,
                   {
                     key: n,
                     type: "source",
-                    position: Ue.P.Bottom,
+                    position: Re.P.Bottom,
                     id: n,
                     style: { left: a },
                   },
                   o.createElement(
                     "div",
-                    { className: Ke.ConnectorID },
+                    { className: Ze.ConnectorID },
                     e.connector_id(),
                   ),
                 );
@@ -6399,9 +6464,9 @@
             )
           );
         },
-        vt = (e) => {
+        ht = (e) => {
           var t, a, n;
-          const { msgWorkingProject: r, msgWorkingProjectConfig: i } = ue(),
+          const { msgWorkingProject: r, msgWorkingProjectConfig: i } = pe(),
             [s, l] = o.useState(e.msgNode.comment()),
             [d, m] = o.useState(
               (null === (t = e.msgNode.kmeans()) || void 0 === t
@@ -6438,7 +6503,7 @@
               );
           }, [e.bVisible, e.msgNode]);
           return o.createElement(
-            Ie.On,
+            je.On,
             {
               active: e.bVisible,
               onDismiss: () => e.fnSetPopupVisible(!1),
@@ -6446,32 +6511,32 @@
             },
             o.createElement(
               "div",
-              { className: Ke.NodeHeader },
+              { className: Ze.NodeHeader },
               (0, c.Xx)("#SteamLearn_Config_Node_Title_KMeans"),
               o.createElement(
                 "div",
-                { className: Ke.SubHeader },
+                { className: Ze.SubHeader },
                 (0, c.Xx)("#SteamLearn_Config_Node_Title_KMeansEditDesc"),
               ),
             ),
             o.createElement(
               "div",
-              { className: Ke.NodeBody },
-              o.createElement("div", { className: Ke.Separator }),
+              { className: Ze.NodeBody },
+              o.createElement("div", { className: Ze.Separator }),
               o.createElement(
                 "div",
-                { className: Ke.NodeOptionBlock },
+                { className: Ze.NodeOptionBlock },
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionHeader },
+                  { className: Ze.NodeOptionHeader },
                   (0, c.Xx)("#SteamLearn_Config_Node_Comment"),
                 ),
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionDesc },
+                  { className: Ze.NodeOptionDesc },
                   (0, c.Xx)("#SteamLearn_Config_Node_CommentDesc"),
                 ),
-                o.createElement(Qe, {
+                o.createElement($e, {
                   isText: !0,
                   dontUpdateProject: !0,
                   width: 300,
@@ -6479,45 +6544,45 @@
                   fnSetValue: (e) => l(e),
                 }),
               ),
-              o.createElement("div", { className: Ke.Separator }),
+              o.createElement("div", { className: Ze.Separator }),
               o.createElement(
                 "div",
-                { className: Ke.NodeOptionBlock },
+                { className: Ze.NodeOptionBlock },
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionHeader },
+                  { className: Ze.NodeOptionHeader },
                   (0, c.Xx)("#SteamLearn_Config_Node_KMeans_Name"),
                 ),
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionDesc },
+                  { className: Ze.NodeOptionDesc },
                   (0, c.Xx)("#SteamLearn_Config_Node_KMeans_NameDesc"),
                 ),
-                o.createElement(Qe, {
+                o.createElement($e, {
                   dontUpdateProject: !0,
                   fnGetInitialValue: () => p,
                   fnSetValue: (e) => N(e),
                 }),
               ),
-              o.createElement("div", { className: Ke.Separator }),
+              o.createElement("div", { className: Ze.Separator }),
               o.createElement(
                 "div",
-                { className: Ke.NodeOptionBlock },
+                { className: Ze.NodeOptionBlock },
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionHeader },
+                  { className: Ze.NodeOptionHeader },
                   (0, c.Xx)("#SteamLearn_Config_Node_KMeans_GenerateClusters"),
                 ),
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionDesc },
+                  { className: Ze.NodeOptionDesc },
                   (0, c.Xx)(
                     "#SteamLearn_Config_Node_KMeans_GenerateClustersDesc",
                   ),
                 ),
                 o.createElement(
                   "div",
-                  { className: Ke.CheckboxWithLabel },
+                  { className: Ze.CheckboxWithLabel },
                   o.createElement("input", {
                     type: "checkbox",
                     id: "editflatten",
@@ -6533,7 +6598,7 @@
                   ),
                 ),
                 _ &&
-                  o.createElement(Qe, {
+                  o.createElement($e, {
                     label: (0, c.Xx)(
                       "#SteamLearn_Config_Node_KMeans_NumClusters",
                     ),
@@ -6542,44 +6607,44 @@
                     ),
                     dontUpdateProject: !0,
                     fnGetInitialValue: () => d,
-                    fnValidateValue: (e) => le(e, 1, 1e4),
+                    fnValidateValue: (e) => de(e, 1, 1e4),
                     fnSetValue: (e) => m(e),
                   }),
               ),
-              o.createElement("div", { className: Ke.Separator }),
+              o.createElement("div", { className: Ze.Separator }),
             ),
             o.createElement(
               "div",
-              { className: Ke.Buttons },
+              { className: Ze.Buttons },
               o.createElement(
-                Te.KM,
+                Pe.KM,
                 {
                   onClick: () => {
                     e.msgNode.set_comment(s),
                       e.msgNode.kmeans().set_num_clusters(parseInt(d)),
                       e.msgNode.kmeans().set_name(p),
                       e.msgNode.kmeans().set_generate_clusters(_),
-                      ie(r),
+                      se(r),
                       e.fnSetPopupVisible(!1);
                   },
                 },
                 (0, c.Xx)("#SteamLearn_Confirm"),
               ),
               o.createElement(
-                Te.zx,
+                Pe.zx,
                 { onClick: () => e.fnSetPopupVisible(!1) },
                 (0, c.Xx)("#SteamLearn_Cancel"),
               ),
             ),
           );
         },
-        xt = (e) => {
+        Lt = (e) => {
           var t;
           const {
               msgWorkingProject: a,
               msgWorkingProjectConfig: n,
               nPublishedVersion: r,
-            } = ue(),
+            } = pe(),
             [i, l] = o.useState(!1),
             d = e.data.msgNode,
             m = d.connectors().filter((e) => e.is_input_connector()),
@@ -6591,9 +6656,9 @@
           return o.createElement(
             "div",
             {
-              className: (0, s.Z)(Ke.FlowNode, Ke.OnehotNode, Ke.Preprocessing),
+              className: (0, s.Z)(Ze.FlowNode, Ze.OnehotNode, Ze.Preprocessing),
             },
-            o.createElement(ht, {
+            o.createElement(Ct, {
               bVisible: i,
               fnSetPopupVisible: l,
               msgNode: d,
@@ -6602,89 +6667,89 @@
               const a = Math.floor(((t + 1) / (m.length + 1)) * 200),
                 n = E(e.connector_id());
               return o.createElement(
-                Me.HH,
+                ze.HH,
                 {
                   key: n,
                   type: "target",
-                  position: Ue.P.Top,
+                  position: Re.P.Top,
                   id: n,
                   style: { left: a },
                 },
                 o.createElement(
                   "div",
-                  { className: Ke.ConnectorID },
+                  { className: Ze.ConnectorID },
                   e.connector_id(),
                 ),
               );
             }),
             o.createElement(
               "div",
-              { className: Ke.Title },
+              { className: Ze.Title },
               o.createElement(
                 "div",
-                { className: Ke.TitleText },
+                { className: Ze.TitleText },
                 (0, c.Xx)("#SteamLearn_Config_Node_Title_Onehot"),
               ),
-              o.createElement("div", { className: Ke.NodeID }, d.node_id()),
+              o.createElement("div", { className: Ze.NodeID }, d.node_id()),
               o.createElement("div", {
-                className: Ke.EditGear,
+                className: Ze.EditGear,
                 onClick: () => l(!0),
               }),
               o.createElement("div", {
-                className: Ke.Delete,
+                className: Ze.Delete,
                 onClick: () =>
-                  (0, Pe.AM)(
-                    o.createElement(Re.uH, {
+                  (0, Xe.AM)(
+                    o.createElement(Ke.uH, {
                       strTitle: (0, c.Xx)(
                         "#SteamLearn_Config_Node_Delete_Node",
                       ),
                       strDescription: (0, c.Xx)(
                         "#SteamLearn_Config_Node_Delete_NodeDetails",
                       ),
-                      onOK: () => oe(a, n, d.node_id()),
+                      onOK: () => re(a, n, d.node_id()),
                     }),
                     window,
                   ),
               }),
             ),
-            o.createElement("div", { className: Ke.TitleUnderBar }),
+            o.createElement("div", { className: Ze.TitleUnderBar }),
             o.createElement(
               "div",
-              { className: Ke.Body },
+              { className: Ze.Body },
               o.createElement(
                 "div",
-                { className: Ke.CenterSection },
+                { className: Ze.CenterSection },
                 d.comment().length > 0 &&
                   o.createElement(
                     "div",
-                    { className: Ke.Comment },
+                    { className: Ze.Comment },
                     d.comment(),
                   ),
                 o.createElement(
                   "div",
-                  { className: Ke.LabelValue },
+                  { className: Ze.LabelValue },
                   o.createElement(
                     "div",
-                    { className: Ke.Label },
+                    { className: Ze.Label },
                     (0, c.Xx)("#SteamLearn_Config_Node_Onehot_Width"),
                   ),
                   o.createElement(
                     "div",
-                    { className: Ke.Value },
+                    { className: Ze.Value },
                     u ? d.onehot().compact_table() : d.onehot().width(),
                   ),
                 ),
                 o.createElement(
                   "div",
-                  { className: Ke.LabelValue },
+                  { className: Ze.LabelValue },
                   o.createElement(
                     "div",
-                    { className: Ke.Label },
+                    { className: Ze.Label },
                     (0, c.Xx)("#SteamLearn_Config_Node_Onehot_MultiHot"),
                   ),
                   o.createElement(
                     "div",
-                    { className: Ke.Value },
+                    { className: Ze.Value },
                     d.onehot().multi_hot()
                       ? (0, c.Xx)("#SteamLearn_Yes")
                       : (0, c.Xx)("#SteamLearn_No"),
@@ -6696,25 +6761,25 @@
               const a = Math.floor(((t + 1) / (_.length + 1)) * 200),
                 n = E(e.connector_id());
               return o.createElement(
-                Me.HH,
+                ze.HH,
                 {
                   key: n,
                   type: "source",
-                  position: Ue.P.Bottom,
+                  position: Re.P.Bottom,
                   id: n,
                   style: { left: a },
                 },
                 o.createElement(
                   "div",
-                  { className: Ke.ConnectorID },
+                  { className: Ze.ConnectorID },
                   e.connector_id(),
                 ),
               );
             }),
           );
         },
-        ht = (e) => {
-          const { msgWorkingProject: t, msgWorkingProjectConfig: a } = ue(),
+        Ct = (e) => {
+          const { msgWorkingProject: t, msgWorkingProjectConfig: a } = pe(),
             [n, r] = o.useState(e.msgNode.comment()),
             [i, s] = o.useState(
               e.msgNode.onehot().compact_table().length > 0
@@ -6732,7 +6797,7 @@
               d(e.msgNode.onehot().multi_hot());
           }, [e.bVisible, e.msgNode]);
           return o.createElement(
-            Ie.On,
+            je.On,
             {
               active: e.bVisible,
               onDismiss: () => e.fnSetPopupVisible(!1),
@@ -6740,32 +6805,32 @@
             },
             o.createElement(
               "div",
-              { className: Ke.NodeHeader },
+              { className: Ze.NodeHeader },
               (0, c.Xx)("#SteamLearn_Config_Node_Title_Onehot"),
               o.createElement(
                 "div",
-                { className: Ke.SubHeader },
+                { className: Ze.SubHeader },
                 (0, c.Xx)("#SteamLearn_Config_Node_Title_OnehotEditDesc"),
               ),
             ),
             o.createElement(
               "div",
-              { className: Ke.NodeBody },
-              o.createElement("div", { className: Ke.Separator }),
+              { className: Ze.NodeBody },
+              o.createElement("div", { className: Ze.Separator }),
               o.createElement(
                 "div",
-                { className: Ke.NodeOptionBlock },
+                { className: Ze.NodeOptionBlock },
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionHeader },
+                  { className: Ze.NodeOptionHeader },
                   (0, c.Xx)("#SteamLearn_Config_Node_Comment"),
                 ),
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionDesc },
+                  { className: Ze.NodeOptionDesc },
                   (0, c.Xx)("#SteamLearn_Config_Node_CommentDesc"),
                 ),
-                o.createElement(Qe, {
+                o.createElement($e, {
                   isText: !0,
                   dontUpdateProject: !0,
                   width: 200,
@@ -6773,45 +6838,45 @@
                   fnSetValue: (e) => r(e),
                 }),
               ),
-              o.createElement("div", { className: Ke.Separator }),
+              o.createElement("div", { className: Ze.Separator }),
               o.createElement(
                 "div",
-                { className: Ke.NodeOptionBlock },
+                { className: Ze.NodeOptionBlock },
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionHeader },
+                  { className: Ze.NodeOptionHeader },
                   (0, c.Xx)("#SteamLearn_Config_Node_Onehot_Width"),
                 ),
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionDesc },
+                  { className: Ze.NodeOptionDesc },
                   (0, c.Xx)("#SteamLearn_Config_Node_Onehot_WidthDesc"),
                 ),
-                o.createElement(Qe, {
+                o.createElement($e, {
                   dontUpdateProject: !0,
                   isText: !0,
                   fnGetInitialValue: () => i,
-                  fnValidateValue: (e) => le(e, 1, 8096) || me(a, e),
+                  fnValidateValue: (e) => de(e, 1, 8096) || _e(a, e),
                   fnSetValue: (e) => s(e),
                 }),
               ),
-              o.createElement("div", { className: Ke.Separator }),
+              o.createElement("div", { className: Ze.Separator }),
               o.createElement(
                 "div",
-                { className: Ke.NodeOptionBlock },
+                { className: Ze.NodeOptionBlock },
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionHeader },
+                  { className: Ze.NodeOptionHeader },
                   (0, c.Xx)("#SteamLearn_Config_Node_Onehot_MultiHot"),
                 ),
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionDesc },
+                  { className: Ze.NodeOptionDesc },
                   (0, c.Xx)("#SteamLearn_Config_Node_Onehot_MultiHotDesc"),
                 ),
                 o.createElement(
                   "div",
-                  { className: Ke.CheckboxWithLabel },
+                  { className: Ze.CheckboxWithLabel },
                   o.createElement("input", {
                     type: "checkbox",
                     id: "editmultihot",
@@ -6825,17 +6890,17 @@
                   ),
                 ),
               ),
-              o.createElement("div", { className: Ke.Separator }),
+              o.createElement("div", { className: Ze.Separator }),
             ),
             o.createElement(
               "div",
-              { className: Ke.Buttons },
+              { className: Ze.Buttons },
               o.createElement(
-                Te.KM,
+                Pe.KM,
                 {
                   onClick: () => {
-                    const o = le(i, 1, 8096),
-                      r = me(a, i);
+                    const o = de(i, 1, 8096),
+                      r = _e(a, i);
                     o
                       ? (e.msgNode.onehot().set_width(parseInt(i)),
                         e.msgNode.onehot().set_compact_table(""))
@@ -6844,26 +6909,26 @@
                         e.msgNode.onehot().set_width(0)),
                       e.msgNode.onehot().set_multi_hot(l),
                       e.msgNode.set_comment(n),
-                      ie(t),
+                      se(t),
                       e.fnSetPopupVisible(!1);
                   },
                 },
                 (0, c.Xx)("#SteamLearn_Confirm"),
               ),
               o.createElement(
-                Te.zx,
+                Pe.zx,
                 { onClick: () => e.fnSetPopupVisible(!1) },
                 (0, c.Xx)("#SteamLearn_Cancel"),
               ),
             ),
           );
         },
-        Ct = (e) => {
+        bt = (e) => {
           const {
               msgWorkingProject: t,
               msgWorkingProjectConfig: a,
               nPublishedVersion: n,
-            } = ue(),
+            } = pe(),
             [r, i] = o.useState(!1),
             l = e.data.msgNode,
             d = l.connectors().filter((e) => e.is_input_connector()),
@@ -6872,12 +6937,12 @@
             "div",
             {
               className: (0, s.Z)(
-                Ke.FlowNode,
-                Ke.ShuffleNode,
-                Ke.Preprocessing,
+                Ze.FlowNode,
+                Ze.ShuffleNode,
+                Ze.Preprocessing,
               ),
             },
-            o.createElement(Lt, {
+            o.createElement(Dt, {
               bVisible: r,
               fnSetPopupVisible: i,
               msgNode: l,
@@ -6886,75 +6951,75 @@
               const a = Math.floor(((t + 1) / (d.length + 1)) * 200),
                 n = E(e.connector_id());
               return o.createElement(
-                Me.HH,
+                ze.HH,
                 {
                   key: n,
                   type: "target",
-                  position: Ue.P.Top,
+                  position: Re.P.Top,
                   id: n,
                   style: { left: a },
                 },
                 o.createElement(
                   "div",
-                  { className: Ke.ConnectorID },
+                  { className: Ze.ConnectorID },
                   e.connector_id(),
                 ),
               );
             }),
             o.createElement(
               "div",
-              { className: Ke.Title },
+              { className: Ze.Title },
               o.createElement(
                 "div",
-                { className: Ke.TitleText },
+                { className: Ze.TitleText },
                 (0, c.Xx)("#SteamLearn_Config_Node_Title_Shuffle"),
               ),
-              o.createElement("div", { className: Ke.NodeID }, l.node_id()),
+              o.createElement("div", { className: Ze.NodeID }, l.node_id()),
               o.createElement("div", {
-                className: Ke.EditGear,
+                className: Ze.EditGear,
                 onClick: () => i(!0),
               }),
               o.createElement("div", {
-                className: Ke.Delete,
+                className: Ze.Delete,
                 onClick: () =>
-                  (0, Pe.AM)(
-                    o.createElement(Re.uH, {
+                  (0, Xe.AM)(
+                    o.createElement(Ke.uH, {
                       strTitle: (0, c.Xx)(
                         "#SteamLearn_Config_Node_Delete_Node",
                       ),
                       strDescription: (0, c.Xx)(
                         "#SteamLearn_Config_Node_Delete_NodeDetails",
                       ),
-                      onOK: () => oe(t, a, l.node_id()),
+                      onOK: () => re(t, a, l.node_id()),
                     }),
                     window,
                   ),
               }),
             ),
-            o.createElement("div", { className: Ke.TitleUnderBar }),
+            o.createElement("div", { className: Ze.TitleUnderBar }),
             o.createElement(
               "div",
-              { className: Ke.Body },
+              { className: Ze.Body },
               o.createElement(
                 "div",
-                { className: Ke.CenterSection },
+                { className: Ze.CenterSection },
                 l.comment().length > 0 &&
                   o.createElement(
                     "div",
-                    { className: Ke.Comment },
+                    { className: Ze.Comment },
                     l.comment(),
                   ),
                 o.createElement(
                   "div",
-                  { className: Ke.LabelValue },
+                  { className: Ze.LabelValue },
                   o.createElement(
                     "div",
-                    { className: Ke.Label },
+                    { className: Ze.Label },
                     (0, c.Xx)("#SteamLearn_Config_Node_Shuffle_ExcludeZeroes"),
                   ),
                   o.createElement(
                     "div",
-                    { className: Ke.Value },
+                    { className: Ze.Value },
                     l.shuffle().exclude_zeroes()
                       ? (0, c.Xx)("#SteamLearn_Yes")
                       : (0, c.Xx)("#SteamLearn_No"),
@@ -6966,29 +7031,29 @@
               const a = Math.floor(((t + 1) / (m.length + 1)) * 200),
                 n = E(e.connector_id());
               return o.createElement(
-                Me.HH,
+                ze.HH,
                 {
                   key: n,
                   type: "source",
-                  position: Ue.P.Bottom,
+                  position: Re.P.Bottom,
                   id: n,
                   style: { left: a },
                 },
                 o.createElement(
                   "div",
-                  { className: Ke.ConnectorID },
+                  { className: Ze.ConnectorID },
                   e.connector_id(),
                 ),
               );
             }),
           );
         },
-        Lt = (e) => {
-          const { msgWorkingProject: t, msgWorkingProjectConfig: a } = ue(),
+        Dt = (e) => {
+          const { msgWorkingProject: t, msgWorkingProjectConfig: a } = pe(),
             [n, r] = o.useState(e.msgNode.comment()),
             [i, s] = o.useState(e.msgNode.shuffle().exclude_zeroes());
           return o.createElement(
-            Ie.On,
+            je.On,
             {
               active: e.bVisible,
               onDismiss: () => e.fnSetPopupVisible(!1),
@@ -6996,32 +7061,32 @@
             },
             o.createElement(
               "div",
-              { className: Ke.NodeHeader },
+              { className: Ze.NodeHeader },
               (0, c.Xx)("#SteamLearn_Config_Node_Title_Shuffle"),
               o.createElement(
                 "div",
-                { className: Ke.SubHeader },
+                { className: Ze.SubHeader },
                 (0, c.Xx)("#SteamLearn_Config_Node_Title_ShuffleEditDesc"),
               ),
             ),
             o.createElement(
               "div",
-              { className: Ke.NodeBody },
-              o.createElement("div", { className: Ke.Separator }),
+              { className: Ze.NodeBody },
+              o.createElement("div", { className: Ze.Separator }),
               o.createElement(
                 "div",
-                { className: Ke.NodeOptionBlock },
+                { className: Ze.NodeOptionBlock },
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionHeader },
+                  { className: Ze.NodeOptionHeader },
                   (0, c.Xx)("#SteamLearn_Config_Node_Comment"),
                 ),
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionDesc },
+                  { className: Ze.NodeOptionDesc },
                   (0, c.Xx)("#SteamLearn_Config_Node_CommentDesc"),
                 ),
-                o.createElement(Qe, {
+                o.createElement($e, {
                   isText: !0,
                   dontUpdateProject: !0,
                   width: 200,
@@ -7029,25 +7094,25 @@
                   fnSetValue: (e) => r(e),
                 }),
               ),
-              o.createElement("div", { className: Ke.Separator }),
+              o.createElement("div", { className: Ze.Separator }),
               o.createElement(
                 "div",
-                { className: Ke.NodeOptionBlock },
+                { className: Ze.NodeOptionBlock },
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionHeader },
+                  { className: Ze.NodeOptionHeader },
                   (0, c.Xx)("#SteamLearn_Config_Node_Shuffle_ExcludeZeroes"),
                 ),
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionDesc },
+                  { className: Ze.NodeOptionDesc },
                   (0, c.Xx)(
                     "#SteamLearn_Config_Node_Shuffle_ExcludeZeroesDesc",
                   ),
                 ),
                 o.createElement(
                   "div",
-                  { className: Ke.CheckboxWithLabel },
+                  { className: Ze.CheckboxWithLabel },
                   o.createElement("input", {
                     type: "checkbox",
                     id: "editflatten",
@@ -7061,40 +7126,40 @@
                   ),
                 ),
               ),
-              o.createElement("div", { className: Ke.Separator }),
+              o.createElement("div", { className: Ze.Separator }),
             ),
             o.createElement(
               "div",
-              { className: Ke.Buttons },
+              { className: Ze.Buttons },
               o.createElement(
-                Te.KM,
+                Pe.KM,
                 {
                   onClick: () => {
                     e.msgNode.set_comment(n),
                       e.msgNode.shuffle().set_exclude_zeroes(i),
-                      ie(t),
+                      se(t),
                       e.fnSetPopupVisible(!1);
                   },
                 },
                 (0, c.Xx)("#SteamLearn_Confirm"),
               ),
               o.createElement(
-                Te.zx,
+                Pe.zx,
                 { onClick: () => e.fnSetPopupVisible(!1) },
                 (0, c.Xx)("#SteamLearn_Cancel"),
               ),
             ),
           );
         },
-        bt = (e) => {
+        Tt = (e) => {
           const {
               msgWorkingProject: t,
               msgWorkingProjectConfig: a,
               nPublishedVersion: n,
-            } = ue(),
+            } = pe(),
             [r, i] = o.useState(!1),
             l = e.data.msgNode,
-            d = (0, We.Z)();
+            d = (0, Ue.Z)();
           o.useEffect(() => {
             setTimeout(() => {
               for (const e of a.project_nodes())
@@ -7107,12 +7172,12 @@
             "div",
             {
               className: (0, s.Z)(
-                Ke.FlowNode,
-                Ke.SyncedShuffleNode,
-                Ke.Preprocessing,
+                Ze.FlowNode,
+                Ze.SyncedShuffleNode,
+                Ze.Preprocessing,
               ),
             },
-            o.createElement(Dt, {
+            o.createElement(Pt, {
               bVisible: r,
               fnSetPopupVisible: i,
               msgNode: l,
@@ -7121,75 +7186,75 @@
               const a = Math.floor(((t + 1) / (m.length + 1)) * 200),
                 n = E(e.connector_id());
               return o.createElement(
-                Me.HH,
+                ze.HH,
                 {
                   key: n,
                   type: "target",
-                  position: Ue.P.Top,
+                  position: Re.P.Top,
                   id: n,
                   style: { left: a },
                 },
                 o.createElement(
                   "div",
-                  { className: Ke.ConnectorID },
+                  { className: Ze.ConnectorID },
                   e.connector_id(),
                 ),
               );
             }),
             o.createElement(
               "div",
-              { className: Ke.Title },
+              { className: Ze.Title },
               o.createElement(
                 "div",
-                { className: Ke.TitleText },
+                { className: Ze.TitleText },
                 (0, c.Xx)("#SteamLearn_Config_Node_Title_SyncedShuffle"),
               ),
-              o.createElement("div", { className: Ke.NodeID }, l.node_id()),
+              o.createElement("div", { className: Ze.NodeID }, l.node_id()),
               o.createElement("div", {
-                className: Ke.EditGear,
+                className: Ze.EditGear,
                 onClick: () => i(!0),
               }),
               o.createElement("div", {
-                className: Ke.Delete,
+                className: Ze.Delete,
                 onClick: () =>
-                  (0, Pe.AM)(
-                    o.createElement(Re.uH, {
+                  (0, Xe.AM)(
+                    o.createElement(Ke.uH, {
                       strTitle: (0, c.Xx)(
                         "#SteamLearn_Config_Node_Delete_Node",
                       ),
                       strDescription: (0, c.Xx)(
                         "#SteamLearn_Config_Node_Delete_NodeDetails",
                       ),
-                      onOK: () => oe(t, a, l.node_id()),
+                      onOK: () => re(t, a, l.node_id()),
                     }),
                     window,
                   ),
               }),
             ),
-            o.createElement("div", { className: Ke.TitleUnderBar }),
+            o.createElement("div", { className: Ze.TitleUnderBar }),
             o.createElement(
               "div",
-              { className: Ke.Body },
+              { className: Ze.Body },
               o.createElement(
                 "div",
-                { className: Ke.CenterSection },
+                { className: Ze.CenterSection },
                 l.comment().length > 0 &&
                   o.createElement(
                     "div",
-                    { className: Ke.Comment },
+                    { className: Ze.Comment },
                     l.comment(),
                   ),
                 o.createElement(
                   "div",
-                  { className: Ke.LabelValue },
+                  { className: Ze.LabelValue },
                   o.createElement(
                     "div",
-                    { className: Ke.Label },
+                    { className: Ze.Label },
                     (0, c.Xx)("#SteamLearn_Config_Node_Shuffle_ExcludeZeroes"),
                   ),
                   o.createElement(
                     "div",
-                    { className: Ke.Value },
+                    { className: Ze.Value },
                     l.synced_shuffle().exclude_zeroes()
                       ? (0, c.Xx)("#SteamLearn_Yes")
                       : (0, c.Xx)("#SteamLearn_No"),
@@ -7201,25 +7266,25 @@
               const a = Math.floor(((t + 1) / (_.length + 1)) * 200),
                 n = E(e.connector_id());
               return o.createElement(
-                Me.HH,
+                ze.HH,
                 {
                   key: n,
                   type: "source",
-                  position: Ue.P.Bottom,
+                  position: Re.P.Bottom,
                   id: n,
                   style: { left: a },
                 },
                 o.createElement(
                   "div",
-                  { className: Ke.ConnectorID },
+                  { className: Ze.ConnectorID },
                   e.connector_id(),
                 ),
               );
             }),
           );
         },
-        Dt = (e) => {
-          const { msgWorkingProject: t, msgWorkingProjectConfig: a } = ue(),
+        Pt = (e) => {
+          const { msgWorkingProject: t, msgWorkingProjectConfig: a } = pe(),
             n = e.msgNode
               .connectors()
               .filter((e) => e.is_input_connector()).length,
@@ -7232,7 +7297,7 @@
               m(e.msgNode.synced_shuffle().exclude_zeroes());
           }, [e.bVisible, e.msgNode, n]);
           return o.createElement(
-            Ie.On,
+            je.On,
             {
               active: e.bVisible,
               onDismiss: () => e.fnSetPopupVisible(!1),
@@ -7240,11 +7305,11 @@
             },
             o.createElement(
               "div",
-              { className: Ke.NodeHeader },
+              { className: Ze.NodeHeader },
               (0, c.Xx)("#SteamLearn_Config_Node_Title_SyncedShuffle"),
               o.createElement(
                 "div",
-                { className: Ke.SubHeader },
+                { className: Ze.SubHeader },
                 (0, c.Xx)(
                   "#SteamLearn_Config_Node_Title_SyncedShuffleEditDesc",
                 ),
@@ -7252,22 +7317,22 @@
             ),
             o.createElement(
               "div",
-              { className: Ke.NodeBody },
-              o.createElement("div", { className: Ke.Separator }),
+              { className: Ze.NodeBody },
+              o.createElement("div", { className: Ze.Separator }),
               o.createElement(
                 "div",
-                { className: Ke.NodeOptionBlock },
+                { className: Ze.NodeOptionBlock },
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionHeader },
+                  { className: Ze.NodeOptionHeader },
                   (0, c.Xx)("#SteamLearn_Config_Node_Comment"),
                 ),
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionDesc },
+                  { className: Ze.NodeOptionDesc },
                   (0, c.Xx)("#SteamLearn_Config_Node_CommentDesc"),
                 ),
-                o.createElement(Qe, {
+                o.createElement($e, {
                   isText: !0,
                   dontUpdateProject: !0,
                   width: 200,
@@ -7275,46 +7340,46 @@
                   fnSetValue: (e) => i(e),
                 }),
               ),
-              o.createElement("div", { className: Ke.Separator }),
+              o.createElement("div", { className: Ze.Separator }),
               o.createElement(
                 "div",
-                { className: Ke.NodeOptionBlock },
+                { className: Ze.NodeOptionBlock },
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionHeader },
+                  { className: Ze.NodeOptionHeader },
                   (0, c.Xx)("#SteamLearn_Config_Node_Train_Count"),
                 ),
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionDesc },
+                  { className: Ze.NodeOptionDesc },
                   (0, c.Xx)("#SteamLearn_Config_Node_Train_CountDesc"),
                 ),
-                o.createElement(Qe, {
+                o.createElement($e, {
                   dontUpdateProject: !0,
                   fnGetInitialValue: () => s,
-                  fnValidateValue: (e) => le(e, 1, 9),
+                  fnValidateValue: (e) => de(e, 1, 9),
                   fnSetValue: (e) => l(e),
                 }),
               ),
-              o.createElement("div", { className: Ke.Separator }),
+              o.createElement("div", { className: Ze.Separator }),
               o.createElement(
                 "div",
-                { className: Ke.NodeOptionBlock },
+                { className: Ze.NodeOptionBlock },
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionHeader },
+                  { className: Ze.NodeOptionHeader },
                   (0, c.Xx)("#SteamLearn_Config_Node_Shuffle_ExcludeZeroes"),
                 ),
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionDesc },
+                  { className: Ze.NodeOptionDesc },
                   (0, c.Xx)(
                     "#SteamLearn_Config_Node_Shuffle_ExcludeZeroesDesc",
                   ),
                 ),
                 o.createElement(
                   "div",
-                  { className: Ke.CheckboxWithLabel },
+                  { className: Ze.CheckboxWithLabel },
                   o.createElement("input", {
                     type: "checkbox",
                     id: "editflatten",
@@ -7328,13 +7393,13 @@
                   ),
                 ),
               ),
-              o.createElement("div", { className: Ke.Separator }),
+              o.createElement("div", { className: Ze.Separator }),
             ),
             o.createElement(
               "div",
-              { className: Ke.Buttons },
+              { className: Ze.Buttons },
               o.createElement(
-                Te.KM,
+                Pe.KM,
                 {
                   onClick: () => {
                     const o = parseInt(s),
@@ -7342,7 +7407,7 @@
                     if (o > n) {
                       const t = o - n,
                         r = t,
-                        i = J(a, t + r);
+                        i = ee(a, t + r);
                       for (let a = 0; a < t; a++) {
                         let t = new S.UYo();
                         t.set_connector_id(i[a]),
@@ -7391,26 +7456,26 @@
                     }
                     e.msgNode.set_comment(r),
                       e.msgNode.synced_shuffle().set_exclude_zeroes(d),
-                      ie(t),
+                      se(t),
                       e.fnSetPopupVisible(!1);
                   },
                 },
                 (0, c.Xx)("#SteamLearn_Confirm"),
               ),
               o.createElement(
-                Te.zx,
+                Pe.zx,
                 { onClick: () => e.fnSetPopupVisible(!1) },
                 (0, c.Xx)("#SteamLearn_Cancel"),
               ),
             ),
           );
         };
-      const Tt = (e) => {
-          const { msgWorkingProjectConfig: t } = ue(),
+      const Xt = (e) => {
+          const { msgWorkingProjectConfig: t } = pe(),
             [a, n] = o.useState(!1),
             r = e.data.msgNode,
             i = r.connectors().filter((e) => e.is_input_connector()),
-            l = (0, We.Z)();
+            l = (0, Ue.Z)();
           o.useEffect(() => {
             setTimeout(() => {
               for (const e of t.project_nodes())
@@ -7421,10 +7486,10 @@
           return o.createElement(
             "div",
             {
-              className: (0, s.Z)(Ke.FlowNode, Ke.TrainNode, Ke.Trainer),
+              className: (0, s.Z)(Ze.FlowNode, Ze.TrainNode, Ze.Trainer),
               style: { height: d },
             },
-            o.createElement(Pt, {
+            o.createElement(kt, {
               bVisible: a,
               fnSetPopupVisible: n,
               msgNode: r,
@@ -7434,62 +7499,62 @@
                 n = a ? Math.floor((t / i.length) * (d - 24)) : (d - 24) / 2,
                 r = E(e.connector_id());
               return o.createElement(
-                Me.HH,
+                ze.HH,
                 {
                   key: r,
                   type: "target",
-                  position: a ? Ue.P.Right : Ue.P.Left,
+                  position: a ? Re.P.Right : Re.P.Left,
                   id: r,
                   style: { top: n + 24 },
                 },
                 o.createElement(
                   "div",
-                  { className: Ke.ConnectorID },
+                  { className: Ze.ConnectorID },
                   e.connector_id(),
                 ),
               );
             }),
             o.createElement(
               "div",
-              { className: Ke.Title },
+              { className: Ze.Title },
               o.createElement(
                 "div",
-                { className: Ke.TitleText },
+                { className: Ze.TitleText },
                 (0, c.Xx)("#SteamLearn_Config_Node_Title_Train"),
               ),
-              o.createElement("div", { className: Ke.NodeID }, r.node_id()),
+              o.createElement("div", { className: Ze.NodeID }, r.node_id()),
               o.createElement("div", {
-                className: Ke.EditGear,
+                className: Ze.EditGear,
                 onClick: () => n(!0),
               }),
             ),
-            o.createElement("div", { className: Ke.TitleUnderBar }),
+            o.createElement("div", { className: Ze.TitleUnderBar }),
             o.createElement(
               "div",
-              { className: Ke.Body },
+              { className: Ze.Body },
               o.createElement(
                 "div",
-                { className: (0, s.Z)(Ke.SideSection, Ke.Left) },
+                { className: (0, s.Z)(Ze.SideSection, Ze.Left) },
                 o.createElement(
                   "div",
-                  { className: Ke.SideInput },
+                  { className: Ze.SideInput },
                   (0, c.Xx)("#SteamLearn_Config_Node_Train_Input"),
                 ),
               ),
               o.createElement(
                 "div",
-                { className: Ke.CenterSection },
+                { className: Ze.CenterSection },
                 o.createElement(
                   "div",
-                  { className: Ke.LabelValue },
+                  { className: Ze.LabelValue },
                   o.createElement(
                     "div",
-                    { className: Ke.Label },
+                    { className: Ze.Label },
                     (0, c.Xx)("#SteamLearn_Config_Node_Train_Activation"),
                   ),
                   o.createElement(
                     "div",
-                    { className: Ke.Value },
+                    { className: Ze.Value },
                     (function (e) {
                       switch (e) {
                         case 2:
@@ -7505,15 +7570,15 @@
                 ),
                 o.createElement(
                   "div",
-                  { className: Ke.LabelValue },
+                  { className: Ze.LabelValue },
                   o.createElement(
                     "div",
-                    { className: Ke.Label },
+                    { className: Ze.Label },
                     (0, c.Xx)("#SteamLearn_Config_Node_Train_Loss"),
                   ),
                   o.createElement(
                     "div",
-                    { className: Ke.Value },
+                    { className: Ze.Value },
                     (function (e) {
                       switch (e) {
                         case 1:
@@ -7532,26 +7597,26 @@
                 r.train().compact_table().length > 0 &&
                   o.createElement(
                     "div",
-                    { className: Ke.LabelValue },
+                    { className: Ze.LabelValue },
                     o.createElement(
                       "div",
-                      { className: Ke.Label },
+                      { className: Ze.Label },
                       (0, c.Xx)("#SteamLearn_Config_Node_Train_CompactTable"),
                     ),
                     o.createElement(
                       "div",
-                      { className: Ke.Value },
+                      { className: Ze.Value },
                       r.train().compact_table(),
                     ),
                   ),
               ),
               o.createElement(
                 "div",
-                { className: (0, s.Z)(Ke.SideSection, Ke.Right) },
-                (0, ct.bE)(1, r.train().input_count()).map((e) =>
+                { className: (0, s.Z)(Ze.SideSection, Ze.Right) },
+                (0, dt.bE)(1, r.train().input_count()).map((e) =>
                   o.createElement(
                     "div",
-                    { key: e, className: Ke.SideInput },
+                    { key: e, className: Ze.SideInput },
                     (0, c.Xx)("#SteamLearn_Config_Node_Train_Label", e),
                   ),
                 ),
@@ -7559,8 +7624,8 @@
             ),
           );
         },
-        Pt = (e) => {
-          const { msgWorkingProject: t, msgWorkingProjectConfig: a } = ue(),
+        kt = (e) => {
+          const { msgWorkingProject: t, msgWorkingProjectConfig: a } = pe(),
             [n, r] = o.useState(e.msgNode.train().input_count().toString()),
             [i, s] = o.useState(e.msgNode.train().activation()),
             [l, d] = o.useState(e.msgNode.train().loss()),
@@ -7619,12 +7684,12 @@
             ],
             g = !1;
           for (let t = 1; t < e.msgNode.connectors().length; t += 2) {
-            const { msgIncomingNode: n, nIncomingConnectorID: o } = ae(
+            const { msgIncomingNode: n, nIncomingConnectorID: o } = ne(
               a,
               e.msgNode.connectors()[t].connector_id(),
             );
             if (n) {
-              const e = ne(a, n, o);
+              const e = oe(a, n, o);
               if (e.length > 1)
                 return (
                   (0, u.X)(
@@ -7641,7 +7706,7 @@
           }
           const f = 3 == l || (1 == l && g);
           return o.createElement(
-            Ie.On,
+            je.On,
             {
               active: e.bVisible,
               onDismiss: () => e.fnSetPopupVisible(!1),
@@ -7649,53 +7714,53 @@
             },
             o.createElement(
               "div",
-              { className: Ke.NodeHeader },
+              { className: Ze.NodeHeader },
               (0, c.Xx)("#SteamLearn_Config_Node_Title_Train"),
               o.createElement(
                 "div",
-                { className: Ke.SubHeader },
+                { className: Ze.SubHeader },
                 (0, c.Xx)("#SteamLearn_Config_Node_Title_TrainDesc"),
               ),
             ),
             o.createElement(
               "div",
-              { className: Ke.NodeBody },
-              o.createElement("div", { className: Ke.Separator }),
+              { className: Ze.NodeBody },
+              o.createElement("div", { className: Ze.Separator }),
               o.createElement(
                 "div",
-                { className: Ke.NodeOptionBlock },
+                { className: Ze.NodeOptionBlock },
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionHeader },
+                  { className: Ze.NodeOptionHeader },
                   (0, c.Xx)("#SteamLearn_Config_Node_Train_Count"),
                 ),
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionDesc },
+                  { className: Ze.NodeOptionDesc },
                   (0, c.Xx)("#SteamLearn_Config_Node_Train_CountDesc"),
                 ),
-                o.createElement(Qe, {
+                o.createElement($e, {
                   dontUpdateProject: !0,
                   fnGetInitialValue: () => n,
-                  fnValidateValue: (e) => le(e, 1, 9),
+                  fnValidateValue: (e) => de(e, 1, 9),
                   fnSetValue: (e) => r(e),
                 }),
               ),
-              o.createElement("div", { className: Ke.Separator }),
+              o.createElement("div", { className: Ze.Separator }),
               o.createElement(
                 "div",
-                { className: Ke.NodeOptionBlock },
+                { className: Ze.NodeOptionBlock },
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionHeader },
+                  { className: Ze.NodeOptionHeader },
                   (0, c.Xx)("#SteamLearn_Config_Node_Train_Activation"),
                 ),
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionDesc },
+                  { className: Ze.NodeOptionDesc },
                   (0, c.Xx)("#SteamLearn_Config_Node_Train_ActivationDesc"),
                 ),
-                o.createElement(Ye, {
+                o.createElement(Je, {
                   dontUpdateProject: !0,
                   fnGetValue: () => i,
                   fnSetValue: (e) => s(parseInt(e)),
@@ -7704,7 +7769,7 @@
                 2 == i &&
                   o.createElement(
                     "div",
-                    { className: Ke.OptionDescSub },
+                    { className: Ze.OptionDescSub },
                     (0, c.Xx)(
                       "#SteamLearn_Config_Node_Train_ActivationDescSub1",
                     ),
@@ -7712,7 +7777,7 @@
                 1 == i &&
                   o.createElement(
                     "div",
-                    { className: Ke.OptionDescSub },
+                    { className: Ze.OptionDescSub },
                     (0, c.Xx)(
                       "#SteamLearn_Config_Node_Train_ActivationDescSub2",
                     ),
@@ -7720,27 +7785,27 @@
                 3 == i &&
                   o.createElement(
                     "div",
-                    { className: Ke.OptionDescSub },
+                    { className: Ze.OptionDescSub },
                     (0, c.Xx)(
                       "#SteamLearn_Config_Node_Train_ActivationDescSub3",
                     ),
                   ),
               ),
-              o.createElement("div", { className: Ke.Separator }),
+              o.createElement("div", { className: Ze.Separator }),
               o.createElement(
                 "div",
-                { className: Ke.NodeOptionBlock },
+                { className: Ze.NodeOptionBlock },
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionHeader },
+                  { className: Ze.NodeOptionHeader },
                   (0, c.Xx)("#SteamLearn_Config_Node_Train_Loss"),
                 ),
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionDesc },
+                  { className: Ze.NodeOptionDesc },
                   (0, c.Xx)("#SteamLearn_Config_Node_Train_LossDesc"),
                 ),
-                o.createElement(Ye, {
+                o.createElement(Je, {
                   dontUpdateProject: !0,
                   fnGetValue: () => l,
                   fnSetValue: (e) => d(parseInt(e)),
@@ -7749,48 +7814,48 @@
                 1 == l &&
                   o.createElement(
                     "div",
-                    { className: Ke.OptionDescSub },
+                    { className: Ze.OptionDescSub },
                     (0, c.Xx)("#SteamLearn_Config_Node_Train_LossDescSub1"),
                   ),
                 2 == l &&
                   o.createElement(
                     "div",
-                    { className: Ke.OptionDescSub },
+                    { className: Ze.OptionDescSub },
                     (0, c.Xx)("#SteamLearn_Config_Node_Train_LossDescSub2"),
                   ),
                 3 == l &&
                   o.createElement(
                     "div",
-                    { className: Ke.OptionDescSub },
+                    { className: Ze.OptionDescSub },
                     (0, c.Xx)("#SteamLearn_Config_Node_Train_LossDescSub3"),
                   ),
                 4 == l &&
                   o.createElement(
                     "div",
-                    { className: Ke.OptionDescSub },
+                    { className: Ze.OptionDescSub },
                     (0, c.Xx)("#SteamLearn_Config_Node_Train_LossDescSub4"),
                   ),
               ),
-              f && o.createElement("div", { className: Ke.Separator }),
+              f && o.createElement("div", { className: Ze.Separator }),
               f &&
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionBlock },
+                  { className: Ze.NodeOptionBlock },
                   o.createElement(
                     "div",
-                    { className: Ke.NodeOptionHeader },
+                    { className: Ze.NodeOptionHeader },
                     (0, c.Xx)("#SteamLearn_Config_Node_Train_CompactTable"),
                   ),
                   o.createElement(
                     "div",
-                    { className: Ke.NodeOptionDesc },
+                    { className: Ze.NodeOptionDesc },
                     (0, c.Xx)("#SteamLearn_Config_Node_Train_CompactTableDesc"),
                   ),
-                  o.createElement(Qe, {
+                  o.createElement($e, {
                     dontUpdateProject: !0,
                     fnGetInitialValue: () => m,
                     fnValidateValue: (e) =>
-                      me(a, e) ||
+                      _e(a, e) ||
                       (function (e, t) {
                         for (const a of e.project_nodes())
                           if (14 == a.type() && a.kmeans().name() == t)
@@ -7800,13 +7865,13 @@
                     fnSetValue: (e) => _(e),
                   }),
                 ),
-              o.createElement("div", { className: Ke.Separator }),
+              o.createElement("div", { className: Ze.Separator }),
             ),
             o.createElement(
               "div",
-              { className: Ke.Buttons },
+              { className: Ze.Buttons },
               o.createElement(
-                Te.KM,
+                Pe.KM,
                 {
                   onClick: () => {
                     const o = Math.floor(
@@ -7817,7 +7882,7 @@
                       r = parseInt(n) + 1;
                     if (r > o) {
                       const t = r - o,
-                        n = J(a, t);
+                        n = ee(a, t);
                       for (let a = 0; a < t; a++) {
                         let t = new S.UYo();
                         t.set_connector_id(n[a]),
@@ -7851,26 +7916,26 @@
                       e.msgNode.train().set_activation(i),
                       e.msgNode.train().set_loss(l),
                       e.msgNode.train().set_compact_table(m),
-                      ie(t),
+                      se(t),
                       e.fnSetPopupVisible(!1);
                   },
                 },
                 (0, c.Xx)("#SteamLearn_Confirm"),
               ),
               o.createElement(
-                Te.zx,
+                Pe.zx,
                 { onClick: () => e.fnSetPopupVisible(!1) },
                 (0, c.Xx)("#SteamLearn_Cancel"),
               ),
             ),
           );
         },
-        Xt = (e) => {
+        It = (e) => {
           const {
               msgWorkingProject: t,
               msgWorkingProjectConfig: a,
               nPublishedVersion: n,
-            } = ue(),
+            } = pe(),
             [r, i] = o.useState(!1),
             l = e.data.msgNode,
             d = l.connectors().filter((e) => e.is_input_connector()),
@@ -7879,12 +7944,12 @@
             "div",
             {
               className: (0, s.Z)(
-                Ke.FlowNode,
-                Ke.TextVectorizationNode,
-                Ke.Preprocessing,
+                Ze.FlowNode,
+                Ze.TextVectorizationNode,
+                Ze.Preprocessing,
               ),
             },
-            o.createElement(kt, {
+            o.createElement(yt, {
               bVisible: r,
               fnSetPopupVisible: i,
               msgNode: l,
@@ -7893,93 +7958,93 @@
               const a = Math.floor(((t + 1) / (d.length + 1)) * 200),
                 n = E(e.connector_id());
               return o.createElement(
-                Me.HH,
+                ze.HH,
                 {
                   key: n,
                   type: "target",
-                  position: Ue.P.Top,
+                  position: Re.P.Top,
                   id: n,
                   style: { left: a },
                 },
                 o.createElement(
                   "div",
-                  { className: Ke.ConnectorID },
+                  { className: Ze.ConnectorID },
                   e.connector_id(),
                 ),
               );
             }),
             o.createElement(
               "div",
-              { className: Ke.Title },
+              { className: Ze.Title },
               o.createElement(
                 "div",
-                { className: Ke.TitleText },
+                { className: Ze.TitleText },
                 (0, c.Xx)("#SteamLearn_Config_Node_Title_TextVectorization"),
               ),
-              o.createElement("div", { className: Ke.NodeID }, l.node_id()),
+              o.createElement("div", { className: Ze.NodeID }, l.node_id()),
               o.createElement("div", {
-                className: Ke.EditGear,
+                className: Ze.EditGear,
                 onClick: () => i(!0),
               }),
               o.createElement("div", {
-                className: Ke.Delete,
+                className: Ze.Delete,
                 onClick: () =>
-                  (0, Pe.AM)(
-                    o.createElement(Re.uH, {
+                  (0, Xe.AM)(
+                    o.createElement(Ke.uH, {
                       strTitle: (0, c.Xx)(
                         "#SteamLearn_Config_Node_Delete_Node",
                       ),
                       strDescription: (0, c.Xx)(
                         "#SteamLearn_Config_Node_Delete_NodeDetails",
                       ),
-                      onOK: () => oe(t, a, l.node_id()),
+                      onOK: () => re(t, a, l.node_id()),
                     }),
                     window,
                   ),
               }),
             ),
-            o.createElement("div", { className: Ke.TitleUnderBar }),
+            o.createElement("div", { className: Ze.TitleUnderBar }),
             o.createElement(
               "div",
-              { className: Ke.Body },
+              { className: Ze.Body },
               o.createElement(
                 "div",
-                { className: Ke.CenterSection },
+                { className: Ze.CenterSection },
                 l.comment().length > 0 &&
                   o.createElement(
                     "div",
-                    { className: Ke.Comment },
+                    { className: Ze.Comment },
                     l.comment(),
                   ),
                 o.createElement(
                   "div",
-                  { className: Ke.LabelValue },
+                  { className: Ze.LabelValue },
                   o.createElement(
                     "div",
-                    { className: Ke.Label },
+                    { className: Ze.Label },
                     (0, c.Xx)(
                       "#SteamLearn_Config_Node_TextVectorization_VocabularySize",
                     ),
                   ),
                   o.createElement(
                     "div",
-                    { className: Ke.Value },
+                    { className: Ze.Value },
                     l.text_vectorization().vocabulary_size(),
                   ),
                 ),
                 o.createElement(
                   "div",
-                  { className: Ke.LabelValue },
+                  { className: Ze.LabelValue },
                   o.createElement(
                     "div",
-                    { className: Ke.Label },
+                    { className: Ze.Label },
                     (0, c.Xx)(
                       "#SteamLearn_Config_Node_TextVectorization_Standardize",
                     ),
                   ),
                   o.createElement(
                     "div",
-                    { className: Ke.Value },
+                    { className: Ze.Value },
                     0 == l.text_vectorization().standardize() &&
                       (0, c.Xx)(
                         "#SteamLearn_Config_Node_TextVectorization_Standardize_0",
@@ -8000,17 +8065,17 @@
                 ),
                 o.createElement(
                   "div",
-                  { className: Ke.LabelValue },
+                  { className: Ze.LabelValue },
                   o.createElement(
                     "div",
-                    { className: Ke.Label },
+                    { className: Ze.Label },
                     (0, c.Xx)(
                       "#SteamLearn_Config_Node_TextVectorization_Output",
                     ),
                   ),
                   o.createElement(
                     "div",
-                    { className: Ke.Value },
+                    { className: Ze.Value },
                     0 == l.text_vectorization().output() &&
                       (0, c.Xx)(
                         "#SteamLearn_Config_Node_TextVectorization_Output_0",
@@ -8032,33 +8097,33 @@
                 0 == l.text_vectorization().output() &&
                   o.createElement(
                     "div",
-                    { className: Ke.LabelValue },
+                    { className: Ze.LabelValue },
                     o.createElement(
                       "div",
-                      { className: Ke.Label },
+                      { className: Ze.Label },
                       (0, c.Xx)(
                         "#SteamLearn_Config_Node_TextVectorization_SeqLen",
                       ),
                     ),
                     o.createElement(
                       "div",
-                      { className: Ke.Value },
+                      { className: Ze.Value },
                       l.text_vectorization().sequence_length(),
                     ),
                   ),
                 o.createElement(
                   "div",
-                  { className: Ke.LabelValue },
+                  { className: Ze.LabelValue },
                   o.createElement(
                     "div",
-                    { className: Ke.Label },
+                    { className: Ze.Label },
                     (0, c.Xx)(
                       "#SteamLearn_Config_Node_TextVectorization_Split",
                     ),
                   ),
                   o.createElement(
                     "div",
-                    { className: Ke.Value },
+                    { className: Ze.Value },
                     0 == l.text_vectorization().split() &&
                       (0, c.Xx)(
                         "#SteamLearn_Config_Node_TextVectorization_Split_0",
@@ -8075,17 +8140,17 @@
                 ),
                 o.createElement(
                   "div",
-                  { className: Ke.LabelValue },
+                  { className: Ze.LabelValue },
                   o.createElement(
                     "div",
-                    { className: Ke.Label },
+                    { className: Ze.Label },
                     (0, c.Xx)(
                       "#SteamLearn_Config_Node_TextVectorization_NGrams",
                     ),
                   ),
                   o.createElement(
                     "div",
-                    { className: Ke.Value },
+                    { className: Ze.Value },
                     0 == l.text_vectorization().ngrams()
                       ? "None"
                       : l.text_vectorization().ngrams(),
@@ -8097,25 +8162,25 @@
               const a = Math.floor(((t + 1) / (m.length + 1)) * 200),
                 n = E(e.connector_id());
               return o.createElement(
-                Me.HH,
+                ze.HH,
                 {
                   key: n,
                   type: "source",
-                  position: Ue.P.Bottom,
+                  position: Re.P.Bottom,
                   id: n,
                   style: { left: a },
                 },
                 o.createElement(
                   "div",
-                  { className: Ke.ConnectorID },
+                  { className: Ze.ConnectorID },
                   e.connector_id(),
                 ),
               );
             }),
           );
         },
-        kt = (e) => {
-          const { msgWorkingProject: t, msgWorkingProjectConfig: a } = ue(),
+        yt = (e) => {
+          const { msgWorkingProject: t, msgWorkingProjectConfig: a } = pe(),
             [n, r] = o.useState(e.msgNode.comment()),
             [i, s] = o.useState(
               e.msgNode.text_vectorization().vocabulary_size().toString(),
@@ -8211,7 +8276,7 @@
               },
             ];
           return o.createElement(
-            Ie.On,
+            je.On,
             {
               active: e.bVisible,
               onDismiss: () => e.fnSetPopupVisible(!1),
@@ -8219,11 +8284,11 @@
             },
             o.createElement(
               "div",
-              { className: Ke.NodeHeader },
+              { className: Ze.NodeHeader },
               (0, c.Xx)("#SteamLearn_Config_Node_Title_TextVectorization"),
               o.createElement(
                 "div",
-                { className: Ke.SubHeader },
+                { className: Ze.SubHeader },
                 (0, c.Xx)(
                   "#SteamLearn_Config_Node_Title_TextVectorizationEditDesc",
                 ),
@@ -8231,22 +8296,22 @@
             ),
             o.createElement(
               "div",
-              { className: Ke.NodeBody },
-              o.createElement("div", { className: Ke.Separator }),
+              { className: Ze.NodeBody },
+              o.createElement("div", { className: Ze.Separator }),
               o.createElement(
                 "div",
-                { className: Ke.NodeOptionBlock },
+                { className: Ze.NodeOptionBlock },
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionHeader },
+                  { className: Ze.NodeOptionHeader },
                   (0, c.Xx)("#SteamLearn_Config_Node_Comment"),
                 ),
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionDesc },
+                  { className: Ze.NodeOptionDesc },
                   (0, c.Xx)("#SteamLearn_Config_Node_CommentDesc"),
                 ),
-                o.createElement(Qe, {
+                o.createElement($e, {
                   isText: !0,
                   dontUpdateProject: !0,
                   width: 200,
@@ -8254,50 +8319,50 @@
                   fnSetValue: (e) => r(e),
                 }),
               ),
-              o.createElement("div", { className: Ke.Separator }),
+              o.createElement("div", { className: Ze.Separator }),
               o.createElement(
                 "div",
-                { className: Ke.NodeOptionBlock },
+                { className: Ze.NodeOptionBlock },
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionHeader },
+                  { className: Ze.NodeOptionHeader },
                   (0, c.Xx)(
                     "#SteamLearn_Config_Node_TextVectorization_VocabularySize",
                   ),
                 ),
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionDesc },
+                  { className: Ze.NodeOptionDesc },
                   (0, c.Xx)(
                     "#SteamLearn_Config_Node_TextVectorization_VocabularySizeDesc",
                   ),
                 ),
-                o.createElement(Qe, {
+                o.createElement($e, {
                   dontUpdateProject: !0,
                   isText: !0,
                   fnGetInitialValue: () => i,
-                  fnValidateValue: (e) => le(e, 1, 1e6),
+                  fnValidateValue: (e) => de(e, 1, 1e6),
                   fnSetValue: (e) => s(e),
                 }),
               ),
               o.createElement(
                 "div",
-                { className: Ke.NodeOptionBlock },
+                { className: Ze.NodeOptionBlock },
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionHeader },
+                  { className: Ze.NodeOptionHeader },
                   (0, c.Xx)(
                     "#SteamLearn_Config_Node_TextVectorization_Standardize",
                   ),
                 ),
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionDesc },
+                  { className: Ze.NodeOptionDesc },
                   (0, c.Xx)(
                     "#SteamLearn_Config_Node_TextVectorization_StandardizeDesc",
                   ),
                 ),
-                o.createElement(Ye, {
+                o.createElement(Je, {
                   dontUpdateProject: !0,
                   fnGetValue: () => l,
                   fnSetValue: (e) => d(parseInt(e)),
@@ -8306,7 +8371,7 @@
                 0 == l &&
                   o.createElement(
                     "div",
-                    { className: Ke.OptionDescSub },
+                    { className: Ze.OptionDescSub },
                     (0, c.Xx)(
                       "#SteamLearn_Config_Node_TextVectorization_Standardize_Desc0",
                     ),
@@ -8314,7 +8379,7 @@
                 1 == l &&
                   o.createElement(
                     "div",
-                    { className: Ke.OptionDescSub },
+                    { className: Ze.OptionDescSub },
                     (0, c.Xx)(
                       "#SteamLearn_Config_Node_TextVectorization_Standardize_Desc1",
                     ),
@@ -8322,7 +8387,7 @@
                 2 == l &&
                   o.createElement(
                     "div",
-                    { className: Ke.OptionDescSub },
+                    { className: Ze.OptionDescSub },
                     (0, c.Xx)(
                       "#SteamLearn_Config_Node_TextVectorization_Standardize_Desc2",
                     ),
@@ -8330,7 +8395,7 @@
                 3 == l &&
                   o.createElement(
                     "div",
-                    { className: Ke.OptionDescSub },
+                    { className: Ze.OptionDescSub },
                     (0, c.Xx)(
                       "#SteamLearn_Config_Node_TextVectorization_Standardize_Desc3",
                     ),
@@ -8338,20 +8403,20 @@
               ),
               o.createElement(
                 "div",
-                { className: Ke.NodeOptionBlock },
+                { className: Ze.NodeOptionBlock },
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionHeader },
+                  { className: Ze.NodeOptionHeader },
                   (0, c.Xx)("#SteamLearn_Config_Node_TextVectorization_Output"),
                 ),
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionDesc },
+                  { className: Ze.NodeOptionDesc },
                   (0, c.Xx)(
                     "#SteamLearn_Config_Node_TextVectorization_OutputDesc",
                   ),
                 ),
-                o.createElement(Ye, {
+                o.createElement(Je, {
                   dontUpdateProject: !0,
                   fnGetValue: () => m,
                   fnSetValue: (e) => _(parseInt(e)),
@@ -8360,7 +8425,7 @@
                 0 == m &&
                   o.createElement(
                     "div",
-                    { className: Ke.OptionDescSub },
+                    { className: Ze.OptionDescSub },
                     (0, c.Xx)(
                       "#SteamLearn_Config_Node_TextVectorization_Output_Desc0",
                     ),
@@ -8368,7 +8433,7 @@
                 1 == m &&
                   o.createElement(
                     "div",
-                    { className: Ke.OptionDescSub },
+                    { className: Ze.OptionDescSub },
                     (0, c.Xx)(
                       "#SteamLearn_Config_Node_TextVectorization_Output_Desc1",
                     ),
@@ -8376,7 +8441,7 @@
                 2 == m &&
                   o.createElement(
                     "div",
-                    { className: Ke.OptionDescSub },
+                    { className: Ze.OptionDescSub },
                     (0, c.Xx)(
                       "#SteamLearn_Config_Node_TextVectorization_Output_Desc2",
                     ),
@@ -8384,7 +8449,7 @@
                 3 == m &&
                   o.createElement(
                     "div",
-                    { className: Ke.OptionDescSub },
+                    { className: Ze.OptionDescSub },
                     (0, c.Xx)(
                       "#SteamLearn_Config_Node_TextVectorization_Output_Desc3",
                     ),
@@ -8393,45 +8458,45 @@
               0 == m &&
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionBlock },
+                  { className: Ze.NodeOptionBlock },
                   o.createElement(
                     "div",
-                    { className: Ke.NodeOptionHeader },
+                    { className: Ze.NodeOptionHeader },
                     (0, c.Xx)(
                       "#SteamLearn_Config_Node_TextVectorization_SeqLen",
                     ),
                   ),
                   o.createElement(
                     "div",
-                    { className: Ke.NodeOptionDesc },
+                    { className: Ze.NodeOptionDesc },
                     (0, c.Xx)(
                       "#SteamLearn_Config_Node_TextVectorization_SeqLenDesc",
                     ),
                   ),
-                  o.createElement(Qe, {
+                  o.createElement($e, {
                     dontUpdateProject: !0,
                     isText: !0,
                     fnGetInitialValue: () => u,
-                    fnValidateValue: (e) => le(e, 1, 1e4),
+                    fnValidateValue: (e) => de(e, 1, 1e4),
                     fnSetValue: (e) => p(e),
                   }),
                 ),
               o.createElement(
                 "div",
-                { className: Ke.NodeOptionBlock },
+                { className: Ze.NodeOptionBlock },
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionHeader },
+                  { className: Ze.NodeOptionHeader },
                   (0, c.Xx)("#SteamLearn_Config_Node_TextVectorization_Split"),
                 ),
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionDesc },
+                  { className: Ze.NodeOptionDesc },
                   (0, c.Xx)(
                     "#SteamLearn_Config_Node_TextVectorization_SplitDesc",
                   ),
                 ),
-                o.createElement(Ye, {
+                o.createElement(Je, {
                   dontUpdateProject: !0,
                   fnGetValue: () => N,
                   fnSetValue: (e) => g(parseInt(e)),
@@ -8440,7 +8505,7 @@
                 0 == N &&
                   o.createElement(
                     "div",
-                    { className: Ke.OptionDescSub },
+                    { className: Ze.OptionDescSub },
                     (0, c.Xx)(
                       "#SteamLearn_Config_Node_TextVectorization_Split_Desc0",
                     ),
@@ -8448,7 +8513,7 @@
                 1 == N &&
                   o.createElement(
                     "div",
-                    { className: Ke.OptionDescSub },
+                    { className: Ze.OptionDescSub },
                     (0, c.Xx)(
                       "#SteamLearn_Config_Node_TextVectorization_Split_Desc1",
                     ),
@@ -8456,7 +8521,7 @@
                 2 == N &&
                   o.createElement(
                     "div",
-                    { className: Ke.OptionDescSub },
+                    { className: Ze.OptionDescSub },
                     (0, c.Xx)(
                       "#SteamLearn_Config_Node_TextVectorization_Split_Desc2",
                     ),
@@ -8464,34 +8529,34 @@
               ),
               o.createElement(
                 "div",
-                { className: Ke.NodeOptionBlock },
+                { className: Ze.NodeOptionBlock },
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionHeader },
+                  { className: Ze.NodeOptionHeader },
                   (0, c.Xx)("#SteamLearn_Config_Node_TextVectorization_NGrams"),
                 ),
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionDesc },
+                  { className: Ze.NodeOptionDesc },
                   (0, c.Xx)(
                     "#SteamLearn_Config_Node_TextVectorization_NGramsDesc",
                   ),
                 ),
-                o.createElement(Qe, {
+                o.createElement($e, {
                   dontUpdateProject: !0,
                   isText: !0,
                   fnGetInitialValue: () => S,
-                  fnValidateValue: (e) => le(e, 0, 100),
+                  fnValidateValue: (e) => de(e, 0, 100),
                   fnSetValue: (e) => f(e),
                 }),
               ),
-              o.createElement("div", { className: Ke.Separator }),
+              o.createElement("div", { className: Ze.Separator }),
             ),
             o.createElement(
               "div",
-              { className: Ke.Buttons },
+              { className: Ze.Buttons },
               o.createElement(
-                Te.KM,
+                Pe.KM,
                 {
                   onClick: () => {
                     e.msgNode
@@ -8505,14 +8570,14 @@
                       e.msgNode.text_vectorization().set_split(N),
                       e.msgNode.text_vectorization().set_ngrams(parseInt(S)),
                       e.msgNode.set_comment(n),
-                      ie(t),
+                      se(t),
                       e.fnSetPopupVisible(!1);
                   },
                 },
                 (0, c.Xx)("#SteamLearn_Confirm"),
               ),
               o.createElement(
-                Te.zx,
+                Pe.zx,
                 { onClick: () => e.fnSetPopupVisible(!1) },
                 (0, c.Xx)("#SteamLearn_Cancel"),
               ),
@@ -8520,12 +8585,12 @@
           );
         };
       var Vt = a(44321);
-      const yt = (e) => {
+      const jt = (e) => {
           const {
               msgWorkingProject: t,
               msgWorkingProjectConfig: a,
               nPublishedVersion: n,
-            } = ue(),
+            } = pe(),
             [r, i] = o.useState(!1),
             l = e.data.msgNode,
             d = l.connectors().filter((e) => e.is_input_connector()),
@@ -8534,189 +8599,9 @@
             "div",
             {
               className: (0, s.Z)(
-                Ke.FlowNode,
-                Ke.BatchNormalizationNode,
-                Ke.Preprocessing,
-              ),
-            },
-            o.createElement(It, {
-              bVisible: r,
-              fnSetPopupVisible: i,
-              msgNode: l,
-            }),
-            d.map((e, t) => {
-              const a = Math.floor(((t + 1) / (d.length + 1)) * 200),
-                n = E(e.connector_id());
-              return o.createElement(
-                Me.HH,
-                {
-                  key: n,
-                  type: "target",
-                  position: Ue.P.Top,
-                  id: n,
-                  style: { left: a },
-                },
-                o.createElement(
-                  "div",
-                  { className: Ke.ConnectorID },
-                  e.connector_id(),
-                ),
-              );
-            }),
-            o.createElement(
-              "div",
-              { className: Ke.Title },
-              o.createElement(
-                "div",
-                { className: Ke.TitleText },
-                (0, c.Xx)("#SteamLearn_Config_Node_Title_BatchNormalization"),
-              ),
-              o.createElement("div", { className: Ke.NodeID }, l.node_id()),
-              o.createElement("div", {
-                className: Ke.EditGear,
-                onClick: () => i(!0),
-              }),
-              o.createElement("div", {
-                className: Ke.Delete,
-                onClick: () =>
-                  (0, Pe.AM)(
-                    o.createElement(Re.uH, {
-                      strTitle: (0, c.Xx)(
-                        "#SteamLearn_Config_Node_Delete_Node",
-                      ),
-                      strDescription: (0, c.Xx)(
-                        "#SteamLearn_Config_Node_Delete_NodeDetails",
-                      ),
-                      onOK: () => oe(t, a, l.node_id()),
-                    }),
-                    window,
-                  ),
-              }),
-            ),
-            o.createElement("div", { className: Ke.TitleUnderBar }),
-            o.createElement(
-              "div",
-              { className: Ke.Body },
-              o.createElement(
-                "div",
-                { className: Ke.CenterSection },
-                l.comment().length > 0 &&
-                  o.createElement(
-                    "div",
-                    { className: Ke.Comment },
-                    l.comment(),
-                  ),
-              ),
-            ),
-            m.map((e, t) => {
-              const a = Math.floor(((t + 1) / (m.length + 1)) * 200),
-                n = E(e.connector_id());
-              return o.createElement(
-                Me.HH,
-                {
-                  key: n,
-                  type: "source",
-                  position: Ue.P.Bottom,
-                  id: n,
-                  style: { left: a },
-                },
-                o.createElement(
-                  "div",
-                  { className: Ke.ConnectorID },
-                  e.connector_id(),
-                ),
-              );
-            }),
-          );
-        },
-        It = (e) => {
-          const { msgWorkingProject: t, msgWorkingProjectConfig: a } = ue(),
-            [n, r] = o.useState(e.msgNode.comment());
-          o.useEffect(() => {
-            r(e.msgNode.comment());
-          }, [e.bVisible, e.msgNode]);
-          return o.createElement(
-            Ie.On,
-            {
-              active: e.bVisible,
-              onDismiss: () => e.fnSetPopupVisible(!1),
-              modalClassName: "NodeEditDialog",
-            },
-            o.createElement(
-              "div",
-              { className: Ke.NodeHeader },
-              (0, c.Xx)("#SteamLearn_Config_Node_Title_BatchNormalization"),
-              o.createElement(
-                "div",
-                { className: Ke.SubHeader },
-                (0, c.Xx)(
-                  "#SteamLearn_Config_Node_Title_BatchNormalizationEditDesc",
-                ),
-              ),
-            ),
-            o.createElement(
-              "div",
-              { className: Ke.NodeBody },
-              o.createElement("div", { className: Ke.Separator }),
-              o.createElement(
-                "div",
-                { className: Ke.NodeOptionBlock },
-                o.createElement(
-                  "div",
-                  { className: Ke.NodeOptionHeader },
-                  (0, c.Xx)("#SteamLearn_Config_Node_Comment"),
-                ),
-                o.createElement(
-                  "div",
-                  { className: Ke.NodeOptionDesc },
-                  (0, c.Xx)("#SteamLearn_Config_Node_CommentDesc"),
-                ),
-                o.createElement(Qe, {
-                  isText: !0,
-                  dontUpdateProject: !0,
-                  width: 200,
-                  fnGetInitialValue: () => n,
-                  fnSetValue: (e) => r(e),
-                }),
-              ),
-            ),
-            o.createElement(
-              "div",
-              { className: Ke.Buttons },
-              o.createElement(
-                Te.KM,
-                {
-                  onClick: () => {
-                    e.msgNode.set_comment(n), ie(t), e.fnSetPopupVisible(!1);
-                  },
-                },
-                (0, c.Xx)("#SteamLearn_Confirm"),
-              ),
-              o.createElement(
-                Te.zx,
-                { onClick: () => e.fnSetPopupVisible(!1) },
-                (0, c.Xx)("#SteamLearn_Cancel"),
-              ),
-            ),
-          );
-        },
-        jt = (e) => {
-          const {
-              msgWorkingProject: t,
-              msgWorkingProjectConfig: a,
-              nPublishedVersion: n,
-            } = ue(),
-            [r, i] = o.useState(!1),
-            l = e.data.msgNode,
-            d = l.connectors().filter((e) => e.is_input_connector()),
-            m = l.connectors().filter((e) => !e.is_input_connector());
-          return o.createElement(
-            "div",
-            {
-              className: (0, s.Z)(
-                Ke.FlowNode,
-                Ke.NormalizeNode,
-                Ke.Preprocessing,
+                Ze.FlowNode,
+                Ze.BatchNormalizationNode,
+                Ze.Preprocessing,
               ),
             },
             o.createElement(Ot, {
@@ -8728,62 +8613,62 @@
               const a = Math.floor(((t + 1) / (d.length + 1)) * 200),
                 n = E(e.connector_id());
               return o.createElement(
-                Me.HH,
+                ze.HH,
                 {
                   key: n,
                   type: "target",
-                  position: Ue.P.Top,
+                  position: Re.P.Top,
                   id: n,
                   style: { left: a },
                 },
                 o.createElement(
                   "div",
-                  { className: Ke.ConnectorID },
+                  { className: Ze.ConnectorID },
                   e.connector_id(),
                 ),
               );
             }),
             o.createElement(
               "div",
-              { className: Ke.Title },
+              { className: Ze.Title },
               o.createElement(
                 "div",
-                { className: Ke.TitleText },
-                (0, c.Xx)("#SteamLearn_Config_Node_Title_Normalize"),
+                { className: Ze.TitleText },
+                (0, c.Xx)("#SteamLearn_Config_Node_Title_BatchNormalization"),
               ),
-              o.createElement("div", { className: Ke.NodeID }, l.node_id()),
+              o.createElement("div", { className: Ze.NodeID }, l.node_id()),
               o.createElement("div", {
-                className: Ke.EditGear,
+                className: Ze.EditGear,
                 onClick: () => i(!0),
               }),
               o.createElement("div", {
-                className: Ke.Delete,
+                className: Ze.Delete,
                 onClick: () =>
-                  (0, Pe.AM)(
-                    o.createElement(Re.uH, {
+                  (0, Xe.AM)(
+                    o.createElement(Ke.uH, {
                       strTitle: (0, c.Xx)(
                         "#SteamLearn_Config_Node_Delete_Node",
                       ),
                       strDescription: (0, c.Xx)(
                         "#SteamLearn_Config_Node_Delete_NodeDetails",
                       ),
-                      onOK: () => oe(t, a, l.node_id()),
+                      onOK: () => re(t, a, l.node_id()),
                     }),
                     window,
                   ),
               }),
             ),
-            o.createElement("div", { className: Ke.TitleUnderBar }),
+            o.createElement("div", { className: Ze.TitleUnderBar }),
             o.createElement(
               "div",
-              { className: Ke.Body },
+              { className: Ze.Body },
               o.createElement(
                 "div",
-                { className: Ke.CenterSection },
+                { className: Ze.CenterSection },
                 l.comment().length > 0 &&
                   o.createElement(
                     "div",
-                    { className: Ke.Comment },
+                    { className: Ze.Comment },
                     l.comment(),
                   ),
               ),
@@ -8792,17 +8677,17 @@
               const a = Math.floor(((t + 1) / (m.length + 1)) * 200),
                 n = E(e.connector_id());
               return o.createElement(
-                Me.HH,
+                ze.HH,
                 {
                   key: n,
                   type: "source",
-                  position: Ue.P.Bottom,
+                  position: Re.P.Bottom,
                   id: n,
                   style: { left: a },
                 },
                 o.createElement(
                   "div",
-                  { className: Ke.ConnectorID },
+                  { className: Ze.ConnectorID },
                   e.connector_id(),
                 ),
               );
@@ -8810,13 +8695,13 @@
           );
         },
         Ot = (e) => {
-          const { msgWorkingProject: t, msgWorkingProjectConfig: a } = ue(),
+          const { msgWorkingProject: t, msgWorkingProjectConfig: a } = pe(),
             [n, r] = o.useState(e.msgNode.comment());
           o.useEffect(() => {
             r(e.msgNode.comment());
           }, [e.bVisible, e.msgNode]);
           return o.createElement(
-            Ie.On,
+            je.On,
             {
               active: e.bVisible,
               onDismiss: () => e.fnSetPopupVisible(!1),
@@ -8824,32 +8709,34 @@
             },
             o.createElement(
               "div",
-              { className: Ke.NodeHeader },
-              (0, c.Xx)("#SteamLearn_Config_Node_Title_Normalize"),
+              { className: Ze.NodeHeader },
+              (0, c.Xx)("#SteamLearn_Config_Node_Title_BatchNormalization"),
               o.createElement(
                 "div",
-                { className: Ke.SubHeader },
-                (0, c.Xx)("#SteamLearn_Config_Node_Title_NormalizeEditDesc"),
+                { className: Ze.SubHeader },
+                (0, c.Xx)(
+                  "#SteamLearn_Config_Node_Title_BatchNormalizationEditDesc",
+                ),
               ),
             ),
             o.createElement(
               "div",
-              { className: Ke.NodeBody },
-              o.createElement("div", { className: Ke.Separator }),
+              { className: Ze.NodeBody },
+              o.createElement("div", { className: Ze.Separator }),
               o.createElement(
                 "div",
-                { className: Ke.NodeOptionBlock },
+                { className: Ze.NodeOptionBlock },
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionHeader },
+                  { className: Ze.NodeOptionHeader },
                   (0, c.Xx)("#SteamLearn_Config_Node_Comment"),
                 ),
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionDesc },
+                  { className: Ze.NodeOptionDesc },
                   (0, c.Xx)("#SteamLearn_Config_Node_CommentDesc"),
                 ),
-                o.createElement(Qe, {
+                o.createElement($e, {
                   isText: !0,
                   dontUpdateProject: !0,
                   width: 200,
@@ -8860,18 +8747,18 @@
             ),
             o.createElement(
               "div",
-              { className: Ke.Buttons },
+              { className: Ze.Buttons },
               o.createElement(
-                Te.KM,
+                Pe.KM,
                 {
                   onClick: () => {
-                    e.msgNode.set_comment(n), ie(t), e.fnSetPopupVisible(!1);
+                    e.msgNode.set_comment(n), se(t), e.fnSetPopupVisible(!1);
                   },
                 },
                 (0, c.Xx)("#SteamLearn_Confirm"),
               ),
               o.createElement(
-                Te.zx,
+                Pe.zx,
                 { onClick: () => e.fnSetPopupVisible(!1) },
                 (0, c.Xx)("#SteamLearn_Cancel"),
               ),
@@ -8883,7 +8770,7 @@
               msgWorkingProject: t,
               msgWorkingProjectConfig: a,
               nPublishedVersion: n,
-            } = ue(),
+            } = pe(),
             [r, i] = o.useState(!1),
             l = e.data.msgNode,
             d = l.connectors().filter((e) => e.is_input_connector()),
@@ -8891,7 +8778,11 @@
           return o.createElement(
             "div",
             {
-              className: (0, s.Z)(Ke.FlowNode, Ke.NamedInferenceNode, Ke.Keras),
+              className: (0, s.Z)(
+                Ze.FlowNode,
+                Ze.NormalizeNode,
+                Ze.Preprocessing,
+              ),
             },
             o.createElement(wt, {
               bVisible: r,
@@ -8902,97 +8793,81 @@
               const a = Math.floor(((t + 1) / (d.length + 1)) * 200),
                 n = E(e.connector_id());
               return o.createElement(
-                Me.HH,
+                ze.HH,
                 {
                   key: n,
                   type: "target",
-                  position: Ue.P.Top,
+                  position: Re.P.Top,
                   id: n,
                   style: { left: a },
                 },
                 o.createElement(
                   "div",
-                  { className: Ke.ConnectorID },
+                  { className: Ze.ConnectorID },
                   e.connector_id(),
                 ),
               );
             }),
             o.createElement(
               "div",
-              { className: Ke.Title },
+              { className: Ze.Title },
               o.createElement(
                 "div",
-                { className: Ke.TitleText },
-                (0, c.Xx)("#SteamLearn_Config_Node_Title_NamedInference"),
+                { className: Ze.TitleText },
+                (0, c.Xx)("#SteamLearn_Config_Node_Title_Normalize"),
               ),
-              o.createElement("div", { className: Ke.NodeID }, l.node_id()),
+              o.createElement("div", { className: Ze.NodeID }, l.node_id()),
               o.createElement("div", {
-                className: Ke.EditGear,
+                className: Ze.EditGear,
                 onClick: () => i(!0),
               }),
               o.createElement("div", {
-                className: Ke.Delete,
+                className: Ze.Delete,
                 onClick: () =>
-                  (0, Pe.AM)(
-                    o.createElement(Re.uH, {
+                  (0, Xe.AM)(
+                    o.createElement(Ke.uH, {
                       strTitle: (0, c.Xx)(
                         "#SteamLearn_Config_Node_Delete_Node",
                       ),
                       strDescription: (0, c.Xx)(
                         "#SteamLearn_Config_Node_Delete_NodeDetails",
                       ),
-                      onOK: () => oe(t, a, l.node_id()),
+                      onOK: () => re(t, a, l.node_id()),
                     }),
                     window,
                   ),
               }),
             ),
-            o.createElement("div", { className: Ke.TitleUnderBar }),
+            o.createElement("div", { className: Ze.TitleUnderBar }),
             o.createElement(
               "div",
-              { className: Ke.Body },
+              { className: Ze.Body },
               o.createElement(
                 "div",
-                { className: Ke.CenterSection },
+                { className: Ze.CenterSection },
                 l.comment().length > 0 &&
                   o.createElement(
                     "div",
-                    { className: Ke.Comment },
+                    { className: Ze.Comment },
                     l.comment(),
                   ),
-                o.createElement(
-                  "div",
-                  { className: Ke.LabelValue },
-                  o.createElement(
-                    "div",
-                    { className: Ke.Label },
-                    (0, c.Xx)(
-                      "#SteamLearn_Config_Node_Title_NamedInference_Name",
-                    ),
-                  ),
-                  o.createElement(
-                    "div",
-                    { className: Ke.Value },
-                    l.named_inference().name(),
-                  ),
-                ),
               ),
             ),
             m.map((e, t) => {
               const a = Math.floor(((t + 1) / (m.length + 1)) * 200),
                 n = E(e.connector_id());
               return o.createElement(
-                Me.HH,
+                ze.HH,
                 {
                   key: n,
                   type: "source",
-                  position: Ue.P.Bottom,
+                  position: Re.P.Bottom,
                   id: n,
                   style: { left: a },
                 },
                 o.createElement(
                   "div",
-                  { className: Ke.ConnectorID },
+                  { className: Ze.ConnectorID },
                   e.connector_id(),
                 ),
               );
@@ -9000,14 +8875,13 @@
           );
         },
         wt = (e) => {
-          const { msgWorkingProject: t } = ue(),
-            [a, n] = o.useState(e.msgNode.comment()),
-            [r, i] = o.useState(e.msgNode.named_inference().name());
+          const { msgWorkingProject: t, msgWorkingProjectConfig: a } = pe(),
+            [n, r] = o.useState(e.msgNode.comment());
           o.useEffect(() => {
-            n(e.msgNode.comment()), i(e.msgNode.named_inference().name());
+            r(e.msgNode.comment());
           }, [e.bVisible, e.msgNode]);
           return o.createElement(
-            Ie.On,
+            je.On,
             {
               active: e.bVisible,
               onDismiss: () => e.fnSetPopupVisible(!1),
@@ -9015,75 +8889,54 @@
             },
             o.createElement(
               "div",
-              { className: Ke.NodeHeader },
-              (0, c.Xx)("#SteamLearn_Config_Node_Title_DenseStack"),
+              { className: Ze.NodeHeader },
+              (0, c.Xx)("#SteamLearn_Config_Node_Title_Normalize"),
               o.createElement(
                 "div",
-                { className: Ke.SubHeader },
-                (0, c.Xx)("#SteamLearn_Config_Node_Title_DenseStackEditDesc"),
+                { className: Ze.SubHeader },
+                (0, c.Xx)("#SteamLearn_Config_Node_Title_NormalizeEditDesc"),
               ),
             ),
             o.createElement(
               "div",
-              { className: Ke.NodeBody },
-              o.createElement("div", { className: Ke.Separator }),
+              { className: Ze.NodeBody },
+              o.createElement("div", { className: Ze.Separator }),
               o.createElement(
                 "div",
-                { className: Ke.NodeOptionBlock },
+                { className: Ze.NodeOptionBlock },
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionHeader },
+                  { className: Ze.NodeOptionHeader },
                   (0, c.Xx)("#SteamLearn_Config_Node_Comment"),
                 ),
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionDesc },
+                  { className: Ze.NodeOptionDesc },
                   (0, c.Xx)("#SteamLearn_Config_Node_CommentDesc"),
                 ),
-                o.createElement(Qe, {
+                o.createElement($e, {
                   isText: !0,
                   dontUpdateProject: !0,
                   width: 200,
-                  fnGetInitialValue: () => a,
-                  fnSetValue: (e) => n(e),
+                  fnGetInitialValue: () => n,
+                  fnSetValue: (e) => r(e),
                 }),
               ),
-              o.createElement("div", { className: Ke.Separator }),
-              o.createElement(
-                "div",
-                { className: Ke.NodeOptionBlock },
-                o.createElement(
-                  "div",
-                  { className: Ke.NodeOptionHeader },
-                  (0, c.Xx)(
-                    "#SteamLearn_Config_Node_Title_NamedInference_Name",
-                  ),
-                ),
-                o.createElement(Qe, {
-                  dontUpdateProject: !0,
-                  fnGetInitialValue: () => r,
-                  fnSetValue: (e) => i(e),
-                }),
-              ),
-              o.createElement("div", { className: Ke.Separator }),
             ),
             o.createElement(
               "div",
-              { className: Ke.Buttons },
+              { className: Ze.Buttons },
               o.createElement(
-                Te.KM,
+                Pe.KM,
                 {
                   onClick: () => {
-                    e.msgNode.named_inference().set_name(r),
-                      e.msgNode.set_comment(a),
-                      ie(t),
-                      e.fnSetPopupVisible(!1);
+                    e.msgNode.set_comment(n), se(t), e.fnSetPopupVisible(!1);
                   },
                 },
                 (0, c.Xx)("#SteamLearn_Confirm"),
               ),
               o.createElement(
-                Te.zx,
+                Pe.zx,
                 { onClick: () => e.fnSetPopupVisible(!1) },
                 (0, c.Xx)("#SteamLearn_Cancel"),
               ),
@@ -9095,14 +8948,16 @@
               msgWorkingProject: t,
               msgWorkingProjectConfig: a,
               nPublishedVersion: n,
-            } = ue(),
+            } = pe(),
             [r, i] = o.useState(!1),
             l = e.data.msgNode,
             d = l.connectors().filter((e) => e.is_input_connector()),
             m = l.connectors().filter((e) => !e.is_input_connector());
           return o.createElement(
             "div",
-            { className: (0, s.Z)(Ke.FlowNode, Ke.DotNode, Ke.Keras) },
+            {
+              className: (0, s.Z)(Ze.FlowNode, Ze.NamedInferenceNode, Ze.Keras),
+            },
             o.createElement(Ft, {
               bVisible: r,
               fnSetPopupVisible: i,
@@ -9112,75 +8967,285 @@
               const a = Math.floor(((t + 1) / (d.length + 1)) * 200),
                 n = E(e.connector_id());
               return o.createElement(
-                Me.HH,
+                ze.HH,
                 {
                   key: n,
                   type: "target",
-                  position: Ue.P.Top,
+                  position: Re.P.Top,
                   id: n,
                   style: { left: a },
                 },
                 o.createElement(
                   "div",
-                  { className: Ke.ConnectorID },
+                  { className: Ze.ConnectorID },
                   e.connector_id(),
                 ),
               );
             }),
             o.createElement(
               "div",
-              { className: Ke.Title },
+              { className: Ze.Title },
               o.createElement(
                 "div",
-                { className: Ke.TitleText },
-                (0, c.Xx)("#SteamLearn_Config_Node_Title_Dot"),
+                { className: Ze.TitleText },
+                (0, c.Xx)("#SteamLearn_Config_Node_Title_NamedInference"),
               ),
-              o.createElement("div", { className: Ke.NodeID }, l.node_id()),
+              o.createElement("div", { className: Ze.NodeID }, l.node_id()),
               o.createElement("div", {
-                className: Ke.EditGear,
+                className: Ze.EditGear,
                 onClick: () => i(!0),
               }),
               o.createElement("div", {
-                className: Ke.Delete,
+                className: Ze.Delete,
                 onClick: () =>
-                  (0, Pe.AM)(
-                    o.createElement(Re.uH, {
+                  (0, Xe.AM)(
+                    o.createElement(Ke.uH, {
                       strTitle: (0, c.Xx)(
                         "#SteamLearn_Config_Node_Delete_Node",
                       ),
                       strDescription: (0, c.Xx)(
                         "#SteamLearn_Config_Node_Delete_NodeDetails",
                       ),
-                      onOK: () => oe(t, a, l.node_id()),
+                      onOK: () => re(t, a, l.node_id()),
                     }),
                     window,
                   ),
               }),
             ),
-            o.createElement("div", { className: Ke.TitleUnderBar }),
+            o.createElement("div", { className: Ze.TitleUnderBar }),
             o.createElement(
               "div",
-              { className: Ke.Body },
+              { className: Ze.Body },
               o.createElement(
                 "div",
-                { className: Ke.CenterSection },
+                { className: Ze.CenterSection },
                 l.comment().length > 0 &&
                   o.createElement(
                     "div",
-                    { className: Ke.Comment },
+                    { className: Ze.Comment },
                     l.comment(),
                   ),
                 o.createElement(
                   "div",
-                  { className: Ke.LabelValue },
+                  { className: Ze.LabelValue },
                   o.createElement(
                     "div",
-                    { className: Ke.Label },
+                    { className: Ze.Label },
+                    (0, c.Xx)(
+                      "#SteamLearn_Config_Node_Title_NamedInference_Name",
+                    ),
+                  ),
+                  o.createElement(
+                    "div",
+                    { className: Ze.Value },
+                    l.named_inference().name(),
+                  ),
+                ),
+              ),
+            ),
+            m.map((e, t) => {
+              const a = Math.floor(((t + 1) / (m.length + 1)) * 200),
+                n = E(e.connector_id());
+              return o.createElement(
+                ze.HH,
+                {
+                  key: n,
+                  type: "source",
+                  position: Re.P.Bottom,
+                  id: n,
+                  style: { left: a },
+                },
+                o.createElement(
+                  "div",
+                  { className: Ze.ConnectorID },
+                  e.connector_id(),
+                ),
+              );
+            }),
+          );
+        },
+        Ft = (e) => {
+          const { msgWorkingProject: t } = pe(),
+            [a, n] = o.useState(e.msgNode.comment()),
+            [r, i] = o.useState(e.msgNode.named_inference().name());
+          o.useEffect(() => {
+            n(e.msgNode.comment()), i(e.msgNode.named_inference().name());
+          }, [e.bVisible, e.msgNode]);
+          return o.createElement(
+            je.On,
+            {
+              active: e.bVisible,
+              onDismiss: () => e.fnSetPopupVisible(!1),
+              modalClassName: "NodeEditDialog",
+            },
+            o.createElement(
+              "div",
+              { className: Ze.NodeHeader },
+              (0, c.Xx)("#SteamLearn_Config_Node_Title_DenseStack"),
+              o.createElement(
+                "div",
+                { className: Ze.SubHeader },
+                (0, c.Xx)("#SteamLearn_Config_Node_Title_DenseStackEditDesc"),
+              ),
+            ),
+            o.createElement(
+              "div",
+              { className: Ze.NodeBody },
+              o.createElement("div", { className: Ze.Separator }),
+              o.createElement(
+                "div",
+                { className: Ze.NodeOptionBlock },
+                o.createElement(
+                  "div",
+                  { className: Ze.NodeOptionHeader },
+                  (0, c.Xx)("#SteamLearn_Config_Node_Comment"),
+                ),
+                o.createElement(
+                  "div",
+                  { className: Ze.NodeOptionDesc },
+                  (0, c.Xx)("#SteamLearn_Config_Node_CommentDesc"),
+                ),
+                o.createElement($e, {
+                  isText: !0,
+                  dontUpdateProject: !0,
+                  width: 200,
+                  fnGetInitialValue: () => a,
+                  fnSetValue: (e) => n(e),
+                }),
+              ),
+              o.createElement("div", { className: Ze.Separator }),
+              o.createElement(
+                "div",
+                { className: Ze.NodeOptionBlock },
+                o.createElement(
+                  "div",
+                  { className: Ze.NodeOptionHeader },
+                  (0, c.Xx)(
+                    "#SteamLearn_Config_Node_Title_NamedInference_Name",
+                  ),
+                ),
+                o.createElement($e, {
+                  dontUpdateProject: !0,
+                  fnGetInitialValue: () => r,
+                  fnSetValue: (e) => i(e),
+                }),
+              ),
+              o.createElement("div", { className: Ze.Separator }),
+            ),
+            o.createElement(
+              "div",
+              { className: Ze.Buttons },
+              o.createElement(
+                Pe.KM,
+                {
+                  onClick: () => {
+                    e.msgNode.named_inference().set_name(r),
+                      e.msgNode.set_comment(a),
+                      se(t),
+                      e.fnSetPopupVisible(!1);
+                  },
+                },
+                (0, c.Xx)("#SteamLearn_Confirm"),
+              ),
+              o.createElement(
+                Pe.zx,
+                { onClick: () => e.fnSetPopupVisible(!1) },
+                (0, c.Xx)("#SteamLearn_Cancel"),
+              ),
+            ),
+          );
+        },
+        Gt = (e) => {
+          const {
+              msgWorkingProject: t,
+              msgWorkingProjectConfig: a,
+              nPublishedVersion: n,
+            } = pe(),
+            [r, i] = o.useState(!1),
+            l = e.data.msgNode,
+            d = l.connectors().filter((e) => e.is_input_connector()),
+            m = l.connectors().filter((e) => !e.is_input_connector());
+          return o.createElement(
+            "div",
+            { className: (0, s.Z)(Ze.FlowNode, Ze.DotNode, Ze.Keras) },
+            o.createElement(At, {
+              bVisible: r,
+              fnSetPopupVisible: i,
+              msgNode: l,
+            }),
+            d.map((e, t) => {
+              const a = Math.floor(((t + 1) / (d.length + 1)) * 200),
+                n = E(e.connector_id());
+              return o.createElement(
+                ze.HH,
+                {
+                  key: n,
+                  type: "target",
+                  position: Re.P.Top,
+                  id: n,
+                  style: { left: a },
+                },
+                o.createElement(
+                  "div",
+                  { className: Ze.ConnectorID },
+                  e.connector_id(),
+                ),
+              );
+            }),
+            o.createElement(
+              "div",
+              { className: Ze.Title },
+              o.createElement(
+                "div",
+                { className: Ze.TitleText },
+                (0, c.Xx)("#SteamLearn_Config_Node_Title_Dot"),
+              ),
+              o.createElement("div", { className: Ze.NodeID }, l.node_id()),
+              o.createElement("div", {
+                className: Ze.EditGear,
+                onClick: () => i(!0),
+              }),
+              o.createElement("div", {
+                className: Ze.Delete,
+                onClick: () =>
+                  (0, Xe.AM)(
+                    o.createElement(Ke.uH, {
+                      strTitle: (0, c.Xx)(
+                        "#SteamLearn_Config_Node_Delete_Node",
+                      ),
+                      strDescription: (0, c.Xx)(
+                        "#SteamLearn_Config_Node_Delete_NodeDetails",
+                      ),
+                      onOK: () => re(t, a, l.node_id()),
+                    }),
+                    window,
+                  ),
+              }),
+            ),
+            o.createElement("div", { className: Ze.TitleUnderBar }),
+            o.createElement(
+              "div",
+              { className: Ze.Body },
+              o.createElement(
+                "div",
+                { className: Ze.CenterSection },
+                l.comment().length > 0 &&
+                  o.createElement(
+                    "div",
+                    { className: Ze.Comment },
+                    l.comment(),
+                  ),
+                o.createElement(
+                  "div",
+                  { className: Ze.LabelValue },
+                  o.createElement(
+                    "div",
+                    { className: Ze.Label },
                     (0, c.Xx)("#SteamLearn_Config_Node_Dot_Normalize"),
                   ),
                   o.createElement(
                     "div",
-                    { className: Ke.Value },
+                    { className: Ze.Value },
                     l.dot().normalize()
                       ? (0, c.Xx)("#SteamLearn_Yes")
                       : (0, c.Xx)("#SteamLearn_No"),
@@ -9192,32 +9257,32 @@
               const a = Math.floor(((t + 1) / (m.length + 1)) * 200),
                 n = E(e.connector_id());
               return o.createElement(
-                Me.HH,
+                ze.HH,
                 {
                   key: n,
                   type: "source",
-                  position: Ue.P.Bottom,
+                  position: Re.P.Bottom,
                   id: n,
                   style: { left: a },
                 },
                 o.createElement(
                   "div",
-                  { className: Ke.ConnectorID },
+                  { className: Ze.ConnectorID },
                   e.connector_id(),
                 ),
               );
             }),
           );
         },
-        Ft = (e) => {
-          const { msgWorkingProject: t, msgWorkingProjectConfig: a } = ue(),
+        At = (e) => {
+          const { msgWorkingProject: t, msgWorkingProjectConfig: a } = pe(),
             [n, r] = o.useState(e.msgNode.comment()),
             [i, s] = o.useState(e.msgNode.dot().normalize());
           o.useEffect(() => {
             r(e.msgNode.comment()), s(e.msgNode.dot().normalize());
           }, [e]);
           return o.createElement(
-            Ie.On,
+            je.On,
             {
               active: e.bVisible,
               onDismiss: () => e.fnSetPopupVisible(!1),
@@ -9225,32 +9290,32 @@
             },
             o.createElement(
               "div",
-              { className: Ke.NodeHeader },
+              { className: Ze.NodeHeader },
               (0, c.Xx)("#SteamLearn_Config_Node_Title_Dot"),
               o.createElement(
                 "div",
-                { className: Ke.SubHeader },
+                { className: Ze.SubHeader },
                 (0, c.Xx)("#SteamLearn_Config_Node_Title_DotDesc"),
               ),
             ),
             o.createElement(
               "div",
-              { className: Ke.NodeBody },
-              o.createElement("div", { className: Ke.Separator }),
+              { className: Ze.NodeBody },
+              o.createElement("div", { className: Ze.Separator }),
               o.createElement(
                 "div",
-                { className: Ke.NodeOptionBlock },
+                { className: Ze.NodeOptionBlock },
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionHeader },
+                  { className: Ze.NodeOptionHeader },
                   (0, c.Xx)("#SteamLearn_Config_Node_Comment"),
                 ),
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionDesc },
+                  { className: Ze.NodeOptionDesc },
                   (0, c.Xx)("#SteamLearn_Config_Node_CommentDesc"),
                 ),
-                o.createElement(Qe, {
+                o.createElement($e, {
                   isText: !0,
                   dontUpdateProject: !0,
                   width: 200,
@@ -9258,23 +9323,23 @@
                   fnSetValue: (e) => r(e),
                 }),
               ),
-              o.createElement("div", { className: Ke.Separator }),
+              o.createElement("div", { className: Ze.Separator }),
               o.createElement(
                 "div",
-                { className: Ke.NodeOptionBlock },
+                { className: Ze.NodeOptionBlock },
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionHeader },
+                  { className: Ze.NodeOptionHeader },
                   (0, c.Xx)("#SteamLearn_Config_Node_Dot_Normalize"),
                 ),
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionDesc },
+                  { className: Ze.NodeOptionDesc },
                   (0, c.Xx)("#SteamLearn_Config_Node_Dot_NormalizeDesc"),
                 ),
                 o.createElement(
                   "div",
-                  { className: Ke.CheckboxWithLabel },
+                  { className: Ze.CheckboxWithLabel },
                   o.createElement("input", {
                     type: "checkbox",
                     id: "editnormalize",
@@ -9288,40 +9353,40 @@
                   ),
                 ),
               ),
-              o.createElement("div", { className: Ke.Separator }),
+              o.createElement("div", { className: Ze.Separator }),
             ),
             o.createElement(
               "div",
-              { className: Ke.Buttons },
+              { className: Ze.Buttons },
               o.createElement(
-                Te.KM,
+                Pe.KM,
                 {
                   onClick: () => {
                     e.msgNode.dot().set_normalize(i),
                       e.msgNode.set_comment(n),
-                      ie(t),
+                      se(t),
                       e.fnSetPopupVisible(!1);
                   },
                 },
                 (0, c.Xx)("#SteamLearn_Confirm"),
               ),
               o.createElement(
-                Te.zx,
+                Pe.zx,
                 { onClick: () => e.fnSetPopupVisible(!1) },
                 (0, c.Xx)("#SteamLearn_Cancel"),
               ),
             ),
           );
         },
-        Gt = (e) => {
+        Mt = (e) => {
           const {
               msgWorkingProject: t,
               msgWorkingProjectConfig: a,
               nPublishedVersion: n,
-            } = ue(),
+            } = pe(),
             [r, i] = o.useState(!1),
             l = e.data.msgNode,
-            d = (0, We.Z)(),
+            d = (0, Ue.Z)(),
             m = 1 == l.extract().mode(),
             _ = l.connectors().filter((e) => e.is_input_connector()),
             u = l.connectors().filter((e) => !e.is_input_connector()),
@@ -9339,12 +9404,12 @@
             "div",
             {
               className: (0, s.Z)(
-                Ke.FlowNode,
-                Ke.ExtractNode,
-                Ke.Preprocessing,
+                Ze.FlowNode,
+                Ze.ExtractNode,
+                Ze.Preprocessing,
               ),
             },
-            o.createElement(At, {
+            o.createElement(zt, {
               bVisible: r,
               fnSetPopupVisible: i,
               msgNode: l,
@@ -9353,24 +9418,24 @@
               const a = Math.floor(((t + 1) / (_.length + 1)) * 200),
                 n = E(e.connector_id());
               return o.createElement(
-                ze.HP,
+                We.HP,
                 {
                   key: n,
-                  toolTipContent: o.createElement(ze.vd, null, `Input ${t}`),
+                  toolTipContent: o.createElement(We.vd, null, `Input ${t}`),
                   direction: "top",
                 },
                 o.createElement(
-                  Me.HH,
+                  ze.HH,
                   {
                     key: n,
                     type: "target",
-                    position: Ue.P.Top,
+                    position: Re.P.Top,
                     id: n,
                     style: { left: a },
                   },
                   o.createElement(
                     "div",
-                    { className: Ke.ConnectorID },
+                    { className: Ze.ConnectorID },
                     e.connector_id(),
                   ),
                 ),
@@ -9378,58 +9443,58 @@
             }),
             o.createElement(
               "div",
-              { className: Ke.Title },
+              { className: Ze.Title },
               o.createElement(
                 "div",
-                { className: Ke.TitleText },
+                { className: Ze.TitleText },
                 (0, c.Xx)("#SteamLearn_Config_Node_Title_Extract"),
               ),
-              o.createElement("div", { className: Ke.NodeID }, l.node_id()),
+              o.createElement("div", { className: Ze.NodeID }, l.node_id()),
               o.createElement("div", {
-                className: Ke.EditGear,
+                className: Ze.EditGear,
                 onClick: () => i(!0),
               }),
               o.createElement("div", {
-                className: Ke.Delete,
+                className: Ze.Delete,
                 onClick: () =>
-                  (0, Pe.AM)(
-                    o.createElement(Re.uH, {
+                  (0, Xe.AM)(
+                    o.createElement(Ke.uH, {
                       strTitle: (0, c.Xx)(
                         "#SteamLearn_Config_Node_Delete_Node",
                       ),
                       strDescription: (0, c.Xx)(
                         "#SteamLearn_Config_Node_Delete_NodeDetails",
                       ),
-                      onOK: () => oe(t, a, l.node_id()),
+                      onOK: () => re(t, a, l.node_id()),
                     }),
                     window,
                   ),
               }),
             ),
-            o.createElement("div", { className: Ke.TitleUnderBar }),
+            o.createElement("div", { className: Ze.TitleUnderBar }),
             o.createElement(
               "div",
-              { className: Ke.Body },
+              { className: Ze.Body },
               o.createElement(
                 "div",
-                { className: Ke.CenterSection },
+                { className: Ze.CenterSection },
                 l.comment().length > 0 &&
                   o.createElement(
                     "div",
-                    { className: Ke.Comment },
+                    { className: Ze.Comment },
                     l.comment(),
                   ),
                 o.createElement(
                   "div",
-                  { className: Ke.LabelValue },
+                  { className: Ze.LabelValue },
                   o.createElement(
                     "div",
-                    { className: Ke.Label },
+                    { className: Ze.Label },
                     (0, c.Xx)("#SteamLearn_Config_Node_Extract_InputType"),
                   ),
                   o.createElement(
                     "div",
-                    { className: Ke.Value },
+                    { className: Ze.Value },
                     0 == l.extract().input_type() &&
                       (0, c.Xx)(
                         "#SteamLearn_Config_Node_Extract_InputType_Misc",
@@ -9442,15 +9507,15 @@
                 ),
                 o.createElement(
                   "div",
-                  { className: Ke.LabelValue },
+                  { className: Ze.LabelValue },
                   o.createElement(
                     "div",
-                    { className: Ke.Label },
+                    { className: Ze.Label },
                     (0, c.Xx)("#SteamLearn_Config_Node_Extract_Mode"),
                   ),
                   o.createElement(
                     "div",
-                    { className: Ke.Value },
+                    { className: Ze.Value },
                     0 == l.extract().mode() &&
                       (0, c.Xx)("#SteamLearn_Config_Node_Extract_Mode_Extract"),
                     1 == l.extract().mode() &&
@@ -9460,30 +9525,30 @@
                 1 == l.extract().mode() &&
                   o.createElement(
                     "div",
-                    { className: Ke.LabelValue },
+                    { className: Ze.LabelValue },
                     o.createElement(
                       "div",
-                      { className: Ke.Label },
+                      { className: Ze.Label },
                       (0, c.Xx)("#SteamLearn_Config_Node_Extract_PosSamplePct"),
                     ),
                     o.createElement(
                       "div",
-                      { className: Ke.Value },
+                      { className: Ze.Value },
                       `${l.extract().positive_sample_percent()}%`,
                     ),
                   ),
                 1 == l.extract().exclusion() &&
                   o.createElement(
                     "div",
-                    { className: Ke.LabelValue },
+                    { className: Ze.LabelValue },
                     o.createElement(
                       "div",
-                      { className: Ke.Label },
+                      { className: Ze.Label },
                       (0, c.Xx)("#SteamLearn_Config_Node_Extract_Exclusion"),
                     ),
                     o.createElement(
                       "div",
-                      { className: Ke.Value },
+                      { className: Ze.Value },
                       (0, c.Xx)(
                         "#SteamLearn_Config_Node_Extract_Exclusion_AppIDRecency",
                       ),
@@ -9492,31 +9557,31 @@
                 1 == l.extract().exclusion() &&
                   o.createElement(
                     "div",
-                    { className: Ke.LabelValue },
+                    { className: Ze.LabelValue },
                     o.createElement(
                       "div",
-                      { className: Ke.Label },
+                      { className: Ze.Label },
                       (0, c.Xx)(
                         "#SteamLearn_Config_Node_Extract_Selection_Recency",
                       ),
                     ),
                     o.createElement(
                       "div",
-                      { className: Ke.Value },
+                      { className: Ze.Value },
                       `${l.extract().recency_months()} months`,
                     ),
                   ),
                 o.createElement(
                   "div",
-                  { className: Ke.LabelValue },
+                  { className: Ze.LabelValue },
                   o.createElement(
                     "div",
-                    { className: Ke.Label },
+                    { className: Ze.Label },
                     (0, c.Xx)("#SteamLearn_Config_Node_Extract_Selection"),
                   ),
                   o.createElement(
                     "div",
-                    { className: Ke.Value },
+                    { className: Ze.Value },
                     0 == l.extract().selection() &&
                       (0, c.Xx)(
                         "#SteamLearn_Config_Node_Extract_Selection_Random",
@@ -9546,34 +9611,34 @@
                 3 == l.extract().selection() &&
                   o.createElement(
                     "div",
-                    { className: Ke.LabelValue },
+                    { className: Ze.LabelValue },
                     o.createElement(
                       "div",
-                      { className: Ke.Label },
+                      { className: Ze.Label },
                       (0, c.Xx)(
                         "#SteamLearn_Config_Node_Extract_Selection_LinearBias",
                       ),
                     ),
                     o.createElement(
                       "div",
-                      { className: Ke.Value },
+                      { className: Ze.Value },
                       `${l.extract().bias_start().toFixed(2)} - ${l.extract().bias_end().toFixed(2)}`,
                     ),
                   ),
                 4 == l.extract().selection() &&
                   o.createElement(
                     "div",
-                    { className: Ke.LabelValue },
+                    { className: Ze.LabelValue },
                     o.createElement(
                       "div",
-                      { className: Ke.Label },
+                      { className: Ze.Label },
                       (0, c.Xx)(
                         "#SteamLearn_Config_Node_Extract_Selection_InputBias",
                       ),
                     ),
                     o.createElement(
                       "div",
-                      { className: Ke.Value },
+                      { className: Ze.Value },
                       `Input ${l.extract().input_bias_input_number().toFixed(0)}, weight ${l.extract().input_bias_strength().toFixed(2)}`,
                     ),
                   ),
@@ -9583,27 +9648,27 @@
               const a = Math.floor(((t + 1) / (p.length + 1)) * 200),
                 n = E(e.connector_id());
               return o.createElement(
-                ze.HP,
+                We.HP,
                 {
                   key: n,
                   toolTipContent: o.createElement(
-                    ze.vd,
+                    We.vd,
                     null,
                     `Filtered Output ${t}`,
                   ),
                   direction: "top",
                 },
                 o.createElement(
-                  Me.HH,
+                  ze.HH,
                   {
                     type: "source",
-                    position: Ue.P.Bottom,
+                    position: Re.P.Bottom,
                     id: n,
                     style: { left: a },
                   },
                   o.createElement(
                     "div",
-                    { className: Ke.ConnectorID },
+                    { className: Ze.ConnectorID },
                     e.connector_id(),
                   ),
                 ),
@@ -9613,28 +9678,28 @@
               const a = Math.floor(((t + 1) * S) / (g.length + 1)),
                 n = E(e.connector_id());
               return o.createElement(
-                ze.HP,
+                We.HP,
                 {
                   key: n,
                   toolTipContent: o.createElement(
-                    ze.vd,
+                    We.vd,
                     null,
                     `Pos/Neg (1 or -1) ${t}`,
                   ),
                   direction: "top",
                 },
                 o.createElement(
-                  Me.HH,
+                  ze.HH,
                   {
                     key: n,
                     type: "source",
-                    position: Ue.P.Right,
+                    position: Re.P.Right,
                     id: n,
                     style: { top: a + 24 },
                   },
                   o.createElement(
                     "div",
-                    { className: Ke.ConnectorID },
+                    { className: Ze.ConnectorID },
                     e.connector_id(),
                   ),
                 ),
@@ -9644,28 +9709,28 @@
               const a = Math.floor(((t + 1) * S) / (N.length + 1)),
                 n = E(e.connector_id());
               return o.createElement(
-                ze.HP,
+                We.HP,
                 {
                   key: n,
                   toolTipContent: o.createElement(
-                    ze.vd,
+                    We.vd,
                     null,
                     `Extracted Output ${t}`,
                   ),
                   direction: "top",
                 },
                 o.createElement(
-                  Me.HH,
+                  ze.HH,
                   {
                     key: n,
                     type: "source",
-                    position: Ue.P.Left,
+                    position: Re.P.Left,
                     id: n,
                     style: { top: a + 24 },
                   },
                   o.createElement(
                     "div",
-                    { className: Ke.ConnectorID },
+                    { className: Ze.ConnectorID },
                     e.connector_id(),
                   ),
                 ),
@@ -9673,8 +9738,8 @@
             }),
           );
         },
-        At = (e) => {
-          const { msgWorkingProject: t, msgWorkingProjectConfig: a } = ue(),
+        zt = (e) => {
+          const { msgWorkingProject: t, msgWorkingProjectConfig: a } = pe(),
             n = e.msgNode
               .connectors()
               .filter((e) => e.is_input_connector()).length,
@@ -9688,7 +9753,7 @@
               e.msgNode.extract().recency_months().toFixed(0),
             ),
             [x, h] = o.useState(e.msgNode.extract().bias_start().toFixed(2)),
-            [C, L] = o.useState(e.msgNode.extract().bias_end().toFixed(2)),
+            [L, C] = o.useState(e.msgNode.extract().bias_end().toFixed(2)),
             [b, D] = o.useState(
               e.msgNode.extract().input_bias_input_number().toFixed(0),
             ),
@@ -9698,8 +9763,8 @@
             [X, k] = o.useState(
               e.msgNode.extract().positive_sample_percent().toFixed(0),
             ),
-            [V, y] = o.useState(e.msgNode.extract().compact_table()),
-            [I, j] = o.useState(e.msgNode.extract().extracted_compact_table());
+            [I, y] = o.useState(e.msgNode.extract().compact_table()),
+            [V, j] = o.useState(e.msgNode.extract().extracted_compact_table());
           o.useEffect(() => {
             i(e.msgNode.comment()),
               l(n.toString()),
@@ -9709,7 +9774,7 @@
               f(e.msgNode.extract().selection()),
               v(e.msgNode.extract().recency_months().toFixed(0)),
               h(e.msgNode.extract().bias_start().toFixed(2)),
-              L(e.msgNode.extract().bias_end().toFixed(2)),
+              C(e.msgNode.extract().bias_end().toFixed(2)),
               D(e.msgNode.extract().input_bias_input_number().toFixed(0)),
               P(e.msgNode.extract().input_bias_strength().toFixed(2)),
               k(e.msgNode.extract().positive_sample_percent().toFixed(0)),
@@ -9800,7 +9865,7 @@
             A = 3 == g,
             M = 4 == g;
           return o.createElement(
-            Ie.On,
+            je.On,
             {
               active: e.bVisible,
               onDismiss: () => e.fnSetPopupVisible(!1),
@@ -9808,32 +9873,32 @@
             },
             o.createElement(
               "div",
-              { className: Ke.NodeHeader },
+              { className: Ze.NodeHeader },
               (0, c.Xx)("#SteamLearn_Config_Node_Title_Extract"),
               o.createElement(
                 "div",
-                { className: Ke.SubHeader },
+                { className: Ze.SubHeader },
                 (0, c.Xx)("#SteamLearn_Config_Node_Title_ExtractEditDesc"),
               ),
             ),
             o.createElement(
               "div",
-              { className: Ke.NodeBody },
-              o.createElement("div", { className: Ke.Separator }),
+              { className: Ze.NodeBody },
+              o.createElement("div", { className: Ze.Separator }),
               o.createElement(
                 "div",
-                { className: Ke.NodeOptionBlock },
+                { className: Ze.NodeOptionBlock },
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionHeader },
+                  { className: Ze.NodeOptionHeader },
                   (0, c.Xx)("#SteamLearn_Config_Node_Comment"),
                 ),
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionDesc },
+                  { className: Ze.NodeOptionDesc },
                   (0, c.Xx)("#SteamLearn_Config_Node_CommentDesc"),
                 ),
-                o.createElement(Qe, {
+                o.createElement($e, {
                   isText: !0,
                   dontUpdateProject: !0,
                   width: 200,
@@ -9841,69 +9906,69 @@
                   fnSetValue: (e) => i(e),
                 }),
               ),
-              o.createElement("div", { className: Ke.Separator }),
+              o.createElement("div", { className: Ze.Separator }),
               o.createElement(
                 "div",
-                { className: Ke.NodeOptionBlock },
+                { className: Ze.NodeOptionBlock },
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionHeader },
+                  { className: Ze.NodeOptionHeader },
                   (0, c.Xx)("#SteamLearn_Config_Node_Extract_NumInputs"),
                 ),
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionDesc },
+                  { className: Ze.NodeOptionDesc },
                   (0, c.Xx)("#SteamLearn_Config_Node_Extract_NumInputsDesc"),
                 ),
-                o.createElement(Qe, {
+                o.createElement($e, {
                   dontUpdateProject: !0,
                   fnGetInitialValue: () => s,
-                  fnValidateValue: (e) => le(e, 1, 5),
+                  fnValidateValue: (e) => de(e, 1, 5),
                   fnSetValue: (e) => l(e),
                 }),
               ),
-              o.createElement("div", { className: Ke.Separator }),
+              o.createElement("div", { className: Ze.Separator }),
               o.createElement(
                 "div",
-                { className: Ke.NodeOptionBlock },
+                { className: Ze.NodeOptionBlock },
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionHeader },
+                  { className: Ze.NodeOptionHeader },
                   (0, c.Xx)("#SteamLearn_Config_Node_Extract_InputType"),
                 ),
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionDesc },
+                  { className: Ze.NodeOptionDesc },
                   (0, c.Xx)("#SteamLearn_Config_Node_Extract_InputTypeDesc"),
                 ),
-                o.createElement(Ye, {
+                o.createElement(Je, {
                   dontUpdateProject: !0,
                   fnGetValue: () => d,
                   fnSetValue: (e) => m(parseInt(e)),
                   options: O,
                 }),
               ),
-              o.createElement("div", { className: Ke.Separator }),
+              o.createElement("div", { className: Ze.Separator }),
               o.createElement(
                 "div",
-                { className: Ke.NodeOptionBlock },
+                { className: Ze.NodeOptionBlock },
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionHeader },
+                  { className: Ze.NodeOptionHeader },
                   (0, c.Xx)("#SteamLearn_Config_Node_Extract_Mode"),
                 ),
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionDesc },
+                  { className: Ze.NodeOptionDesc },
                   (0, c.Xx)("#SteamLearn_Config_Node_Extract_ModeDesc"),
                 ),
-                o.createElement(Ye, {
+                o.createElement(Je, {
                   dontUpdateProject: !0,
                   fnGetValue: () => _,
                   fnSetValue: (e) => u(parseInt(e)),
                   options: B,
                 }),
-                o.createElement(Qe, {
+                o.createElement($e, {
                   label: (0, c.Xx)(
                     "#SteamLearn_Config_Node_Extract_PosSamplePct",
                   ),
@@ -9914,32 +9979,32 @@
                   hidden: !G,
                   dontUpdateProject: !0,
                   fnGetInitialValue: () => X,
-                  fnValidateValue: (e) => le(e, 0, 100),
+                  fnValidateValue: (e) => de(e, 0, 100),
                   fnSetValue: (e) => k(e),
                 }),
               ),
-              o.createElement("div", { className: Ke.Separator }),
+              o.createElement("div", { className: Ze.Separator }),
               F &&
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionBlock },
+                  { className: Ze.NodeOptionBlock },
                   o.createElement(
                     "div",
-                    { className: Ke.NodeOptionHeader },
+                    { className: Ze.NodeOptionHeader },
                     (0, c.Xx)("#SteamLearn_Config_Node_Extract_Exclusion"),
                   ),
                   o.createElement(
                     "div",
-                    { className: Ke.NodeOptionDesc },
+                    { className: Ze.NodeOptionDesc },
                     (0, c.Xx)("#SteamLearn_Config_Node_Extract_ExclusionDesc"),
                   ),
-                  o.createElement(Ye, {
+                  o.createElement(Je, {
                     dontUpdateProject: !0,
                     fnGetValue: () => p,
                     fnSetValue: (e) => N(parseInt(e)),
                     options: w,
                   }),
-                  o.createElement(Qe, {
+                  o.createElement($e, {
                     label: (0, c.Xx)(
                       "#SteamLearn_Config_Node_Extract_Selection_Recency",
                     ),
@@ -9950,31 +10015,31 @@
                     hidden: 1 != p,
                     dontUpdateProject: !0,
                     fnGetInitialValue: () => E,
-                    fnValidateValue: (e) => le(e, 0, 600),
+                    fnValidateValue: (e) => de(e, 0, 600),
                     fnSetValue: (e) => v(e),
                   }),
-                  o.createElement("div", { className: Ke.Separator }),
+                  o.createElement("div", { className: Ze.Separator }),
                 ),
               o.createElement(
                 "div",
-                { className: Ke.NodeOptionBlock },
+                { className: Ze.NodeOptionBlock },
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionHeader },
+                  { className: Ze.NodeOptionHeader },
                   (0, c.Xx)("#SteamLearn_Config_Node_Extract_Selection"),
                 ),
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionDesc },
+                  { className: Ze.NodeOptionDesc },
                   (0, c.Xx)("#SteamLearn_Config_Node_Extract_SelectionDesc"),
                 ),
-                o.createElement(Ye, {
+                o.createElement(Je, {
                   dontUpdateProject: !0,
                   fnGetValue: () => g,
                   fnSetValue: (e) => f(parseInt(e)),
                   options: H,
                 }),
-                o.createElement(Qe, {
+                o.createElement($e, {
                   label: (0, c.Xx)("#SteamLearn_Config_Node_Extract_BiasStart"),
                   labelTooltip: (0, c.Xx)(
                     "#SteamLearn_Config_Node_Extract_BiasStartDesc",
@@ -9984,10 +10049,10 @@
                   dontUpdateProject: !0,
                   fnGetInitialValue: () => x,
                   digitCount: 2,
-                  fnValidateValue: (e) => de(e, 0, 1),
+                  fnValidateValue: (e) => me(e, 0, 1),
                   fnSetValue: (e) => h(e),
                 }),
-                o.createElement(Qe, {
+                o.createElement($e, {
                   label: (0, c.Xx)("#SteamLearn_Config_Node_Extract_BiasEnd"),
                   labelTooltip: (0, c.Xx)(
                     "#SteamLearn_Config_Node_Extract_BiasEndDesc",
@@ -9995,13 +10060,13 @@
                   smallLabel: !0,
                   hidden: !A && 5 != g,
                   dontUpdateProject: !0,
-                  fnGetInitialValue: () => C,
+                  fnGetInitialValue: () => L,
                   digitCount: 2,
-                  fnValidateValue: (e) => de(e, 0, 1),
-                  fnSetValue: (e) => L(e),
+                  fnValidateValue: (e) => me(e, 0, 1),
+                  fnSetValue: (e) => C(e),
                 }),
-                o.createElement("div", { className: Ke.Separator }),
-                o.createElement(Qe, {
+                o.createElement("div", { className: Ze.Separator }),
+                o.createElement($e, {
                   label: (0, c.Xx)(
                     "#SteamLearn_Config_Node_Extract_BiasInputNumber",
                   ),
@@ -10013,7 +10078,7 @@
                   dontUpdateProject: !0,
                   fnGetInitialValue: () => b,
                   fnValidateValue: (t) =>
-                    le(
+                    de(
                       t,
                       1,
                       e.msgNode
@@ -10022,7 +10087,7 @@
                     ),
                   fnSetValue: (e) => h(e),
                 }),
-                o.createElement(Qe, {
+                o.createElement($e, {
                   label: (0, c.Xx)(
                     "#SteamLearn_Config_Node_Extract_BiasStrength",
                   ),
@@ -10033,38 +10098,38 @@
                   hidden: !M,
                   dontUpdateProject: !0,
                   fnGetInitialValue: () => T,
-                  fnValidateValue: (e) => de(e, 0, 1),
+                  fnValidateValue: (e) => me(e, 0, 1),
                   fnSetValue: (e) => P(e),
                 }),
               ),
-              o.createElement("div", { className: Ke.Separator }),
+              o.createElement("div", { className: Ze.Separator }),
               (1 == d || 1 == _) &&
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionBlock },
+                  { className: Ze.NodeOptionBlock },
                   o.createElement(
                     "div",
-                    { className: Ke.NodeOptionHeader },
+                    { className: Ze.NodeOptionHeader },
                     (0, c.Xx)("#SteamLearn_Config_Node_Extract_CompactTable"),
                   ),
                   o.createElement(
                     "div",
-                    { className: Ke.NodeOptionDesc },
+                    { className: Ze.NodeOptionDesc },
                     (0, c.Xx)(
                       "#SteamLearn_Config_Node_Extract_CompactTableDesc",
                     ),
                   ),
-                  o.createElement(Qe, {
+                  o.createElement($e, {
                     label: (0, c.Xx)(
                       "#SteamLearn_Config_Node_Extract_CompactTable",
                     ),
                     smallLabel: !0,
                     dontUpdateProject: !0,
-                    fnGetInitialValue: () => V,
-                    fnValidateValue: (e) => me(a, e),
+                    fnGetInitialValue: () => I,
+                    fnValidateValue: (e) => _e(a, e),
                     fnSetValue: (e) => y(e),
                   }),
-                  o.createElement(Qe, {
+                  o.createElement($e, {
                     label: (0, c.Xx)(
                       "#SteamLearn_Config_Node_Extract_ExtractedCompactTable",
                     ),
@@ -10074,18 +10139,18 @@
                     smallLabel: !0,
                     hidden: 1 != p || 1 != d,
                     dontUpdateProject: !0,
-                    fnGetInitialValue: () => I,
-                    fnValidateValue: (t) => !me(a, t, e.msgNode),
+                    fnGetInitialValue: () => V,
+                    fnValidateValue: (t) => !_e(a, t, e.msgNode),
                     fnSetValue: (e) => j(e),
                   }),
-                  o.createElement("div", { className: Ke.Separator }),
+                  o.createElement("div", { className: Ze.Separator }),
                 ),
             ),
             o.createElement(
               "div",
-              { className: Ke.Buttons },
+              { className: Ze.Buttons },
               o.createElement(
-                Te.KM,
+                Pe.KM,
                 {
                   onClick: () => {
                     const o = e.msgNode
@@ -10098,7 +10163,7 @@
                       l = [];
                     const m = parseInt(s);
                     if ((m > n && (c += 3 * (m - n)), c > 0)) {
-                      const t = J(a, c);
+                      const t = ee(a, c);
                       for (let a = 0; a < c; a++) {
                         const n = a % 3 == 0;
                         let o = new S.UYo();
@@ -10133,7 +10198,7 @@
                       e.msgNode.extract().set_selection(g),
                       e.msgNode.extract().set_recency_months(parseInt(E)),
                       e.msgNode.extract().set_bias_start(parseFloat(x)),
-                      e.msgNode.extract().set_bias_end(parseFloat(C)),
+                      e.msgNode.extract().set_bias_end(parseFloat(L)),
                       e.msgNode
                         .extract()
                         .set_input_bias_input_number(parseInt(b)),
@@ -10143,261 +10208,16 @@
                       e.msgNode
                         .extract()
                         .set_positive_sample_percent(parseInt(X)),
-                      e.msgNode.extract().set_compact_table(V),
-                      e.msgNode.extract().set_extracted_compact_table(I),
-                      ie(t),
+                      e.msgNode.extract().set_compact_table(I),
+                      e.msgNode.extract().set_extracted_compact_table(V),
+                      se(t),
                       e.fnSetPopupVisible(!1);
                   },
                 },
                 (0, c.Xx)("#SteamLearn_Confirm"),
               ),
               o.createElement(
-                Te.zx,
-                { onClick: () => e.fnSetPopupVisible(!1) },
-                (0, c.Xx)("#SteamLearn_Cancel"),
-              ),
-            ),
-          );
-        },
-        Mt = (e) => {
-          const { msgWorkingProject: t, msgWorkingProjectConfig: a } = ue(),
-            [n, r] = o.useState(!1),
-            i = e.data.msgNode,
-            l = i.connectors().filter((e) => e.is_input_connector()),
-            d = i.connectors().filter((e) => !e.is_input_connector());
-          return o.createElement(
-            "div",
-            { className: (0, s.Z)(Ke.FlowNode, Ke.Conv1DNode, Ke.Keras) },
-            o.createElement(zt, {
-              bVisible: n,
-              fnSetPopupVisible: r,
-              msgNode: i,
-            }),
-            l.map((e, t) => {
-              const a = Math.floor(((t + 1) / (l.length + 1)) * 200),
-                n = E(e.connector_id());
-              return o.createElement(
-                Me.HH,
-                {
-                  key: n,
-                  type: "target",
-                  position: Ue.P.Top,
-                  id: n,
-                  style: { left: a },
-                },
-                o.createElement(
-                  "div",
-                  { className: Ke.ConnectorID },
-                  e.connector_id(),
-                ),
-              );
-            }),
-            o.createElement(
-              "div",
-              { className: Ke.Title },
-              o.createElement(
-                "div",
-                { className: Ke.TitleText },
-                (0, c.Xx)("#SteamLearn_Config_Node_Title_Conv1D"),
-              ),
-              o.createElement("div", { className: Ke.NodeID }, i.node_id()),
-              o.createElement("div", {
-                className: Ke.EditGear,
-                onClick: () => r(!0),
-              }),
-              o.createElement("div", {
-                className: Ke.Delete,
-                onClick: () =>
-                  (0, Pe.AM)(
-                    o.createElement(Re.uH, {
-                      strTitle: (0, c.Xx)(
-                        "#SteamLearn_Config_Node_Delete_Node",
-                      ),
-                      strDescription: (0, c.Xx)(
-                        "#SteamLearn_Config_Node_Delete_NodeDetails",
-                      ),
-                      onOK: () => oe(t, a, i.node_id()),
-                    }),
-                    window,
-                  ),
-              }),
-            ),
-            o.createElement("div", { className: Ke.TitleUnderBar }),
-            o.createElement(
-              "div",
-              { className: Ke.Body },
-              o.createElement(
-                "div",
-                { className: Ke.CenterSection },
-                i.comment().length > 0 &&
-                  o.createElement(
-                    "div",
-                    { className: Ke.Comment },
-                    i.comment(),
-                  ),
-                o.createElement(
-                  "div",
-                  { className: Ke.LabelValue },
-                  o.createElement(
-                    "div",
-                    { className: Ke.Label },
-                    (0, c.Xx)("#SteamLearn_Config_Node_Conv1D_Filters"),
-                  ),
-                  o.createElement(
-                    "div",
-                    { className: Ke.Value },
-                    i.conv_1d().filters(),
-                  ),
-                ),
-                o.createElement(
-                  "div",
-                  { className: Ke.LabelValue },
-                  o.createElement(
-                    "div",
-                    { className: Ke.Label },
-                    (0, c.Xx)("#SteamLearn_Config_Node_Conv1D_KernelSize"),
-                  ),
-                  o.createElement(
-                    "div",
-                    { className: Ke.Value },
-                    i.conv_1d().kernel_size(),
-                  ),
-                ),
-              ),
-            ),
-            d.map((e, t) => {
-              const a = Math.floor(((t + 1) / (d.length + 1)) * 200),
-                n = E(e.connector_id());
-              return o.createElement(
-                Me.HH,
-                {
-                  key: n,
-                  type: "source",
-                  position: Ue.P.Bottom,
-                  id: n,
-                  style: { left: a },
-                },
-                o.createElement(
-                  "div",
-                  { className: Ke.ConnectorID },
-                  e.connector_id(),
-                ),
-              );
-            }),
-          );
-        },
-        zt = (e) => {
-          const { msgWorkingProject: t, msgWorkingProjectConfig: a } = ue(),
-            [n, r] = o.useState(e.msgNode.comment()),
-            [i, s] = o.useState(e.msgNode.conv_1d().filters().toString()),
-            [l, d] = o.useState(e.msgNode.conv_1d().kernel_size().toString());
-          o.useEffect(() => {
-            r(e.msgNode.comment()),
-              s(e.msgNode.conv_1d().filters().toString()),
-              d(e.msgNode.conv_1d().kernel_size().toString());
-          }, [e]);
-          return o.createElement(
-            Ie.On,
-            {
-              active: e.bVisible,
-              onDismiss: () => e.fnSetPopupVisible(!1),
-              modalClassName: "NodeEditDialog",
-            },
-            o.createElement(
-              "div",
-              { className: Ke.NodeHeader },
-              (0, c.Xx)("#SteamLearn_Config_Node_Title_Conv1D"),
-              o.createElement(
-                "div",
-                { className: Ke.SubHeader },
-                (0, c.Xx)("#SteamLearn_Config_Node_Title_Conv1DEditDesc"),
-              ),
-            ),
-            o.createElement(
-              "div",
-              { className: Ke.NodeBody },
-              o.createElement("div", { className: Ke.Separator }),
-              o.createElement(
-                "div",
-                { className: Ke.NodeOptionBlock },
-                o.createElement(
-                  "div",
-                  { className: Ke.NodeOptionHeader },
-                  (0, c.Xx)("#SteamLearn_Config_Node_Comment"),
-                ),
-                o.createElement(
-                  "div",
-                  { className: Ke.NodeOptionDesc },
-                  (0, c.Xx)("#SteamLearn_Config_Node_CommentDesc"),
-                ),
-                o.createElement(Qe, {
-                  isText: !0,
-                  dontUpdateProject: !0,
-                  width: 200,
-                  fnGetInitialValue: () => n,
-                  fnSetValue: (e) => r(e),
-                }),
-              ),
-              o.createElement("div", { className: Ke.Separator }),
-              o.createElement(
-                "div",
-                { className: Ke.NodeOptionBlock },
-                o.createElement(
-                  "div",
-                  { className: Ke.NodeOptionHeader },
-                  (0, c.Xx)("#SteamLearn_Config_Node_Conv1D_Filters"),
-                ),
-                o.createElement(
-                  "div",
-                  { className: Ke.NodeOptionDesc },
-                  (0, c.Xx)("#SteamLearn_Config_Node_Conv1D_FiltersDesc"),
-                ),
-                o.createElement(Qe, {
-                  dontUpdateProject: !0,
-                  fnGetInitialValue: () => i,
-                  fnSetValue: (e) => s(e),
-                }),
-              ),
-              o.createElement("div", { className: Ke.Separator }),
-              o.createElement(
-                "div",
-                { className: Ke.NodeOptionBlock },
-                o.createElement(
-                  "div",
-                  { className: Ke.NodeOptionHeader },
-                  (0, c.Xx)("#SteamLearn_Config_Node_Conv1D_KernelSize"),
-                ),
-                o.createElement(
-                  "div",
-                  { className: Ke.NodeOptionDesc },
-                  (0, c.Xx)("#SteamLearn_Config_Node_Conv1D_KernelSizeDesc"),
-                ),
-                o.createElement(Qe, {
-                  dontUpdateProject: !0,
-                  fnGetInitialValue: () => l,
-                  fnSetValue: (e) => d(e),
-                }),
-              ),
-              o.createElement("div", { className: Ke.Separator }),
-            ),
-            o.createElement(
-              "div",
-              { className: Ke.Buttons },
-              o.createElement(
-                Te.KM,
-                {
-                  onClick: () => {
-                    e.msgNode.conv_1d().set_filters(parseInt(i)),
-                      e.msgNode.conv_1d().set_kernel_size(parseInt(l)),
-                      e.msgNode.set_comment(n),
-                      ie(t),
-                      e.fnSetPopupVisible(!1);
-                  },
-                },
-                (0, c.Xx)("#SteamLearn_Confirm"),
-              ),
-              o.createElement(
-                Te.zx,
+                Pe.zx,
                 { onClick: () => e.fnSetPopupVisible(!1) },
                 (0, c.Xx)("#SteamLearn_Cancel"),
               ),
@@ -10405,14 +10225,14 @@
           );
         },
         Wt = (e) => {
-          const { msgWorkingProject: t, msgWorkingProjectConfig: a } = ue(),
+          const { msgWorkingProject: t, msgWorkingProjectConfig: a } = pe(),
             [n, r] = o.useState(!1),
             i = e.data.msgNode,
             l = i.connectors().filter((e) => e.is_input_connector()),
             d = i.connectors().filter((e) => !e.is_input_connector());
           return o.createElement(
             "div",
-            { className: (0, s.Z)(Ke.FlowNode, Ke.MaxPooling1DNode, Ke.Keras) },
+            { className: (0, s.Z)(Ze.FlowNode, Ze.Conv1DNode, Ze.Keras) },
             o.createElement(Ut, {
               bVisible: n,
               fnSetPopupVisible: r,
@@ -10422,75 +10242,320 @@
               const a = Math.floor(((t + 1) / (l.length + 1)) * 200),
                 n = E(e.connector_id());
               return o.createElement(
-                Me.HH,
+                ze.HH,
                 {
                   key: n,
                   type: "target",
-                  position: Ue.P.Top,
+                  position: Re.P.Top,
                   id: n,
                   style: { left: a },
                 },
                 o.createElement(
                   "div",
-                  { className: Ke.ConnectorID },
+                  { className: Ze.ConnectorID },
                   e.connector_id(),
                 ),
               );
             }),
             o.createElement(
               "div",
-              { className: Ke.Title },
+              { className: Ze.Title },
               o.createElement(
                 "div",
-                { className: Ke.TitleText },
-                (0, c.Xx)("#SteamLearn_Config_Node_Title_MaxPooling1D"),
+                { className: Ze.TitleText },
+                (0, c.Xx)("#SteamLearn_Config_Node_Title_Conv1D"),
               ),
-              o.createElement("div", { className: Ke.NodeID }, i.node_id()),
+              o.createElement("div", { className: Ze.NodeID }, i.node_id()),
               o.createElement("div", {
-                className: Ke.EditGear,
+                className: Ze.EditGear,
                 onClick: () => r(!0),
               }),
               o.createElement("div", {
-                className: Ke.Delete,
+                className: Ze.Delete,
                 onClick: () =>
-                  (0, Pe.AM)(
-                    o.createElement(Re.uH, {
+                  (0, Xe.AM)(
+                    o.createElement(Ke.uH, {
                       strTitle: (0, c.Xx)(
                         "#SteamLearn_Config_Node_Delete_Node",
                       ),
                       strDescription: (0, c.Xx)(
                         "#SteamLearn_Config_Node_Delete_NodeDetails",
                       ),
-                      onOK: () => oe(t, a, i.node_id()),
+                      onOK: () => re(t, a, i.node_id()),
                     }),
                     window,
                   ),
               }),
             ),
-            o.createElement("div", { className: Ke.TitleUnderBar }),
+            o.createElement("div", { className: Ze.TitleUnderBar }),
             o.createElement(
               "div",
-              { className: Ke.Body },
+              { className: Ze.Body },
               o.createElement(
                 "div",
-                { className: Ke.CenterSection },
+                { className: Ze.CenterSection },
                 i.comment().length > 0 &&
                   o.createElement(
                     "div",
-                    { className: Ke.Comment },
+                    { className: Ze.Comment },
                     i.comment(),
                   ),
                 o.createElement(
                   "div",
-                  { className: Ke.LabelValue },
+                  { className: Ze.LabelValue },
                   o.createElement(
                     "div",
-                    { className: Ke.Label },
+                    { className: Ze.Label },
+                    (0, c.Xx)("#SteamLearn_Config_Node_Conv1D_Filters"),
+                  ),
+                  o.createElement(
+                    "div",
+                    { className: Ze.Value },
+                    i.conv_1d().filters(),
+                  ),
+                ),
+                o.createElement(
+                  "div",
+                  { className: Ze.LabelValue },
+                  o.createElement(
+                    "div",
+                    { className: Ze.Label },
+                    (0, c.Xx)("#SteamLearn_Config_Node_Conv1D_KernelSize"),
+                  ),
+                  o.createElement(
+                    "div",
+                    { className: Ze.Value },
+                    i.conv_1d().kernel_size(),
+                  ),
+                ),
+              ),
+            ),
+            d.map((e, t) => {
+              const a = Math.floor(((t + 1) / (d.length + 1)) * 200),
+                n = E(e.connector_id());
+              return o.createElement(
+                ze.HH,
+                {
+                  key: n,
+                  type: "source",
+                  position: Re.P.Bottom,
+                  id: n,
+                  style: { left: a },
+                },
+                o.createElement(
+                  "div",
+                  { className: Ze.ConnectorID },
+                  e.connector_id(),
+                ),
+              );
+            }),
+          );
+        },
+        Ut = (e) => {
+          const { msgWorkingProject: t, msgWorkingProjectConfig: a } = pe(),
+            [n, r] = o.useState(e.msgNode.comment()),
+            [i, s] = o.useState(e.msgNode.conv_1d().filters().toString()),
+            [l, d] = o.useState(e.msgNode.conv_1d().kernel_size().toString());
+          o.useEffect(() => {
+            r(e.msgNode.comment()),
+              s(e.msgNode.conv_1d().filters().toString()),
+              d(e.msgNode.conv_1d().kernel_size().toString());
+          }, [e]);
+          return o.createElement(
+            je.On,
+            {
+              active: e.bVisible,
+              onDismiss: () => e.fnSetPopupVisible(!1),
+              modalClassName: "NodeEditDialog",
+            },
+            o.createElement(
+              "div",
+              { className: Ze.NodeHeader },
+              (0, c.Xx)("#SteamLearn_Config_Node_Title_Conv1D"),
+              o.createElement(
+                "div",
+                { className: Ze.SubHeader },
+                (0, c.Xx)("#SteamLearn_Config_Node_Title_Conv1DEditDesc"),
+              ),
+            ),
+            o.createElement(
+              "div",
+              { className: Ze.NodeBody },
+              o.createElement("div", { className: Ze.Separator }),
+              o.createElement(
+                "div",
+                { className: Ze.NodeOptionBlock },
+                o.createElement(
+                  "div",
+                  { className: Ze.NodeOptionHeader },
+                  (0, c.Xx)("#SteamLearn_Config_Node_Comment"),
+                ),
+                o.createElement(
+                  "div",
+                  { className: Ze.NodeOptionDesc },
+                  (0, c.Xx)("#SteamLearn_Config_Node_CommentDesc"),
+                ),
+                o.createElement($e, {
+                  isText: !0,
+                  dontUpdateProject: !0,
+                  width: 200,
+                  fnGetInitialValue: () => n,
+                  fnSetValue: (e) => r(e),
+                }),
+              ),
+              o.createElement("div", { className: Ze.Separator }),
+              o.createElement(
+                "div",
+                { className: Ze.NodeOptionBlock },
+                o.createElement(
+                  "div",
+                  { className: Ze.NodeOptionHeader },
+                  (0, c.Xx)("#SteamLearn_Config_Node_Conv1D_Filters"),
+                ),
+                o.createElement(
+                  "div",
+                  { className: Ze.NodeOptionDesc },
+                  (0, c.Xx)("#SteamLearn_Config_Node_Conv1D_FiltersDesc"),
+                ),
+                o.createElement($e, {
+                  dontUpdateProject: !0,
+                  fnGetInitialValue: () => i,
+                  fnSetValue: (e) => s(e),
+                }),
+              ),
+              o.createElement("div", { className: Ze.Separator }),
+              o.createElement(
+                "div",
+                { className: Ze.NodeOptionBlock },
+                o.createElement(
+                  "div",
+                  { className: Ze.NodeOptionHeader },
+                  (0, c.Xx)("#SteamLearn_Config_Node_Conv1D_KernelSize"),
+                ),
+                o.createElement(
+                  "div",
+                  { className: Ze.NodeOptionDesc },
+                  (0, c.Xx)("#SteamLearn_Config_Node_Conv1D_KernelSizeDesc"),
+                ),
+                o.createElement($e, {
+                  dontUpdateProject: !0,
+                  fnGetInitialValue: () => l,
+                  fnSetValue: (e) => d(e),
+                }),
+              ),
+              o.createElement("div", { className: Ze.Separator }),
+            ),
+            o.createElement(
+              "div",
+              { className: Ze.Buttons },
+              o.createElement(
+                Pe.KM,
+                {
+                  onClick: () => {
+                    e.msgNode.conv_1d().set_filters(parseInt(i)),
+                      e.msgNode.conv_1d().set_kernel_size(parseInt(l)),
+                      e.msgNode.set_comment(n),
+                      se(t),
+                      e.fnSetPopupVisible(!1);
+                  },
+                },
+                (0, c.Xx)("#SteamLearn_Confirm"),
+              ),
+              o.createElement(
+                Pe.zx,
+                { onClick: () => e.fnSetPopupVisible(!1) },
+                (0, c.Xx)("#SteamLearn_Cancel"),
+              ),
+            ),
+          );
+        },
+        Rt = (e) => {
+          const { msgWorkingProject: t, msgWorkingProjectConfig: a } = pe(),
+            [n, r] = o.useState(!1),
+            i = e.data.msgNode,
+            l = i.connectors().filter((e) => e.is_input_connector()),
+            d = i.connectors().filter((e) => !e.is_input_connector());
+          return o.createElement(
+            "div",
+            { className: (0, s.Z)(Ze.FlowNode, Ze.MaxPooling1DNode, Ze.Keras) },
+            o.createElement(Kt, {
+              bVisible: n,
+              fnSetPopupVisible: r,
+              msgNode: i,
+            }),
+            l.map((e, t) => {
+              const a = Math.floor(((t + 1) / (l.length + 1)) * 200),
+                n = E(e.connector_id());
+              return o.createElement(
+                ze.HH,
+                {
+                  key: n,
+                  type: "target",
+                  position: Re.P.Top,
+                  id: n,
+                  style: { left: a },
+                },
+                o.createElement(
+                  "div",
+                  { className: Ze.ConnectorID },
+                  e.connector_id(),
+                ),
+              );
+            }),
+            o.createElement(
+              "div",
+              { className: Ze.Title },
+              o.createElement(
+                "div",
+                { className: Ze.TitleText },
+                (0, c.Xx)("#SteamLearn_Config_Node_Title_MaxPooling1D"),
+              ),
+              o.createElement("div", { className: Ze.NodeID }, i.node_id()),
+              o.createElement("div", {
+                className: Ze.EditGear,
+                onClick: () => r(!0),
+              }),
+              o.createElement("div", {
+                className: Ze.Delete,
+                onClick: () =>
+                  (0, Xe.AM)(
+                    o.createElement(Ke.uH, {
+                      strTitle: (0, c.Xx)(
+                        "#SteamLearn_Config_Node_Delete_Node",
+                      ),
+                      strDescription: (0, c.Xx)(
+                        "#SteamLearn_Config_Node_Delete_NodeDetails",
+                      ),
+                      onOK: () => re(t, a, i.node_id()),
+                    }),
+                    window,
+                  ),
+              }),
+            ),
+            o.createElement("div", { className: Ze.TitleUnderBar }),
+            o.createElement(
+              "div",
+              { className: Ze.Body },
+              o.createElement(
+                "div",
+                { className: Ze.CenterSection },
+                i.comment().length > 0 &&
+                  o.createElement(
+                    "div",
+                    { className: Ze.Comment },
+                    i.comment(),
+                  ),
+                o.createElement(
+                  "div",
+                  { className: Ze.LabelValue },
+                  o.createElement(
+                    "div",
+                    { className: Ze.Label },
                     (0, c.Xx)("#SteamLearn_Config_Node_MaxPooling1D_PoolSize"),
                   ),
                   o.createElement(
                     "div",
-                    { className: Ke.Value },
+                    { className: Ze.Value },
                     i.max_pooling_1d().pool_size(),
                   ),
                 ),
@@ -10500,25 +10565,25 @@
               const a = Math.floor(((t + 1) / (d.length + 1)) * 200),
                 n = E(e.connector_id());
               return o.createElement(
-                Me.HH,
+                ze.HH,
                 {
                   key: n,
                   type: "source",
-                  position: Ue.P.Bottom,
+                  position: Re.P.Bottom,
                   id: n,
                   style: { left: a },
                 },
                 o.createElement(
                   "div",
-                  { className: Ke.ConnectorID },
+                  { className: Ze.ConnectorID },
                   e.connector_id(),
                 ),
               );
             }),
           );
         },
-        Ut = (e) => {
-          const { msgWorkingProject: t, msgWorkingProjectConfig: a } = ue(),
+        Kt = (e) => {
+          const { msgWorkingProject: t, msgWorkingProjectConfig: a } = pe(),
             [n, r] = o.useState(e.msgNode.comment()),
             [i, s] = o.useState(
               e.msgNode.max_pooling_1d().pool_size().toString(),
@@ -10528,7 +10593,7 @@
               s(e.msgNode.max_pooling_1d().pool_size().toString());
           }, [e]);
           return o.createElement(
-            Ie.On,
+            je.On,
             {
               active: e.bVisible,
               onDismiss: () => e.fnSetPopupVisible(!1),
@@ -10536,32 +10601,32 @@
             },
             o.createElement(
               "div",
-              { className: Ke.NodeHeader },
+              { className: Ze.NodeHeader },
               (0, c.Xx)("#SteamLearn_Config_Node_Title_MaxPooling1D"),
               o.createElement(
                 "div",
-                { className: Ke.SubHeader },
+                { className: Ze.SubHeader },
                 (0, c.Xx)("#SteamLearn_Config_Node_Title_MaxPooling1DEditDesc"),
               ),
             ),
             o.createElement(
               "div",
-              { className: Ke.NodeBody },
-              o.createElement("div", { className: Ke.Separator }),
+              { className: Ze.NodeBody },
+              o.createElement("div", { className: Ze.Separator }),
               o.createElement(
                 "div",
-                { className: Ke.NodeOptionBlock },
+                { className: Ze.NodeOptionBlock },
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionHeader },
+                  { className: Ze.NodeOptionHeader },
                   (0, c.Xx)("#SteamLearn_Config_Node_Comment"),
                 ),
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionDesc },
+                  { className: Ze.NodeOptionDesc },
                   (0, c.Xx)("#SteamLearn_Config_Node_CommentDesc"),
                 ),
-                o.createElement(Qe, {
+                o.createElement($e, {
                   isText: !0,
                   dontUpdateProject: !0,
                   width: 200,
@@ -10569,67 +10634,67 @@
                   fnSetValue: (e) => r(e),
                 }),
               ),
-              o.createElement("div", { className: Ke.Separator }),
+              o.createElement("div", { className: Ze.Separator }),
               o.createElement(
                 "div",
-                { className: Ke.NodeOptionBlock },
+                { className: Ze.NodeOptionBlock },
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionHeader },
+                  { className: Ze.NodeOptionHeader },
                   (0, c.Xx)("#SteamLearn_Config_Node_MaxPooling1D_PoolSize"),
                 ),
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionDesc },
+                  { className: Ze.NodeOptionDesc },
                   (0, c.Xx)(
                     "#SteamLearn_Config_Node_MaxPooling1D_PoolSizeDesc",
                   ),
                 ),
-                o.createElement(Qe, {
+                o.createElement($e, {
                   dontUpdateProject: !0,
                   fnGetInitialValue: () => i,
                   fnSetValue: (e) => s(e),
                 }),
               ),
-              o.createElement("div", { className: Ke.Separator }),
+              o.createElement("div", { className: Ze.Separator }),
             ),
             o.createElement(
               "div",
-              { className: Ke.Buttons },
+              { className: Ze.Buttons },
               o.createElement(
-                Te.KM,
+                Pe.KM,
                 {
                   onClick: () => {
                     e.msgNode.max_pooling_1d().set_pool_size(parseInt(i)),
                       e.msgNode.set_comment(n),
-                      ie(t),
+                      se(t),
                       e.fnSetPopupVisible(!1);
                   },
                 },
                 (0, c.Xx)("#SteamLearn_Confirm"),
               ),
               o.createElement(
-                Te.zx,
+                Pe.zx,
                 { onClick: () => e.fnSetPopupVisible(!1) },
                 (0, c.Xx)("#SteamLearn_Cancel"),
               ),
             ),
           );
         },
-        Rt = (e) => {
+        Zt = (e) => {
           const {
               msgWorkingProject: t,
               msgWorkingProjectConfig: a,
               nPublishedVersion: n,
-            } = ue(),
+            } = pe(),
             [r, i] = o.useState(!1),
             l = e.data.msgNode,
             d = l.connectors().filter((e) => e.is_input_connector()),
             m = l.connectors().filter((e) => !e.is_input_connector());
           return o.createElement(
             "div",
-            { className: (0, s.Z)(Ke.FlowNode, Ke.FlattenNode, Ke.Keras) },
-            o.createElement(Kt, {
+            { className: (0, s.Z)(Ze.FlowNode, Ze.FlattenNode, Ze.Keras) },
+            o.createElement(Qt, {
               bVisible: r,
               fnSetPopupVisible: i,
               msgNode: l,
@@ -10638,62 +10703,62 @@
               const a = Math.floor(((t + 1) / (d.length + 1)) * 200),
                 n = E(e.connector_id());
               return o.createElement(
-                Me.HH,
+                ze.HH,
                 {
                   key: n,
                   type: "target",
-                  position: Ue.P.Top,
+                  position: Re.P.Top,
                   id: n,
                   style: { left: a },
                 },
                 o.createElement(
                   "div",
-                  { className: Ke.ConnectorID },
+                  { className: Ze.ConnectorID },
                   e.connector_id(),
                 ),
               );
             }),
             o.createElement(
               "div",
-              { className: Ke.Title },
+              { className: Ze.Title },
               o.createElement(
                 "div",
-                { className: Ke.TitleText },
+                { className: Ze.TitleText },
                 (0, c.Xx)("#SteamLearn_Config_Node_Title_Flatten"),
               ),
-              o.createElement("div", { className: Ke.NodeID }, l.node_id()),
+              o.createElement("div", { className: Ze.NodeID }, l.node_id()),
               o.createElement("div", {
-                className: Ke.EditGear,
+                className: Ze.EditGear,
                 onClick: () => i(!0),
               }),
               o.createElement("div", {
-                className: Ke.Delete,
+                className: Ze.Delete,
                 onClick: () =>
-                  (0, Pe.AM)(
-                    o.createElement(Re.uH, {
+                  (0, Xe.AM)(
+                    o.createElement(Ke.uH, {
                       strTitle: (0, c.Xx)(
                         "#SteamLearn_Config_Node_Delete_Node",
                       ),
                       strDescription: (0, c.Xx)(
                         "#SteamLearn_Config_Node_Delete_NodeDetails",
                       ),
-                      onOK: () => oe(t, a, l.node_id()),
+                      onOK: () => re(t, a, l.node_id()),
                     }),
                     window,
                   ),
               }),
             ),
-            o.createElement("div", { className: Ke.TitleUnderBar }),
+            o.createElement("div", { className: Ze.TitleUnderBar }),
             o.createElement(
               "div",
-              { className: Ke.Body },
+              { className: Ze.Body },
               o.createElement(
                 "div",
-                { className: Ke.CenterSection },
+                { className: Ze.CenterSection },
                 l.comment().length > 0 &&
                   o.createElement(
                     "div",
-                    { className: Ke.Comment },
+                    { className: Ze.Comment },
                     l.comment(),
                   ),
               ),
@@ -10702,31 +10767,31 @@
               const a = Math.floor(((t + 1) / (m.length + 1)) * 200),
                 n = E(e.connector_id());
               return o.createElement(
-                Me.HH,
+                ze.HH,
                 {
                   key: n,
                   type: "source",
-                  position: Ue.P.Bottom,
+                  position: Re.P.Bottom,
                   id: n,
                   style: { left: a },
                 },
                 o.createElement(
                   "div",
-                  { className: Ke.ConnectorID },
+                  { className: Ze.ConnectorID },
                   e.connector_id(),
                 ),
               );
             }),
           );
         },
-        Kt = (e) => {
-          const { msgWorkingProject: t, msgWorkingProjectConfig: a } = ue(),
+        Qt = (e) => {
+          const { msgWorkingProject: t, msgWorkingProjectConfig: a } = pe(),
             [n, r] = o.useState(e.msgNode.comment());
           o.useEffect(() => {
             r(e.msgNode.comment());
           }, [e.bVisible, e.msgNode]);
           return o.createElement(
-            Ie.On,
+            je.On,
             {
               active: e.bVisible,
               onDismiss: () => e.fnSetPopupVisible(!1),
@@ -10734,32 +10799,32 @@
             },
             o.createElement(
               "div",
-              { className: Ke.NodeHeader },
+              { className: Ze.NodeHeader },
               (0, c.Xx)("#SteamLearn_Config_Node_Title_Flatten"),
               o.createElement(
                 "div",
-                { className: Ke.SubHeader },
+                { className: Ze.SubHeader },
                 (0, c.Xx)("#SteamLearn_Config_Node_Title_FlattenEditDesc"),
               ),
             ),
             o.createElement(
               "div",
-              { className: Ke.NodeBody },
-              o.createElement("div", { className: Ke.Separator }),
+              { className: Ze.NodeBody },
+              o.createElement("div", { className: Ze.Separator }),
               o.createElement(
                 "div",
-                { className: Ke.NodeOptionBlock },
+                { className: Ze.NodeOptionBlock },
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionHeader },
+                  { className: Ze.NodeOptionHeader },
                   (0, c.Xx)("#SteamLearn_Config_Node_Comment"),
                 ),
                 o.createElement(
                   "div",
-                  { className: Ke.NodeOptionDesc },
+                  { className: Ze.NodeOptionDesc },
                   (0, c.Xx)("#SteamLearn_Config_Node_CommentDesc"),
                 ),
-                o.createElement(Qe, {
+                o.createElement($e, {
                   isText: !0,
                   dontUpdateProject: !0,
                   width: 200,
@@ -10767,45 +10832,45 @@
                   fnSetValue: (e) => r(e),
                 }),
               ),
-              o.createElement("div", { className: Ke.Separator }),
+              o.createElement("div", { className: Ze.Separator }),
             ),
             o.createElement(
               "div",
-              { className: Ke.Buttons },
+              { className: Ze.Buttons },
               o.createElement(
-                Te.KM,
+                Pe.KM,
                 {
                   onClick: () => {
-                    e.msgNode.set_comment(n), ie(t), e.fnSetPopupVisible(!1);
+                    e.msgNode.set_comment(n), se(t), e.fnSetPopupVisible(!1);
                   },
                 },
                 (0, c.Xx)("#SteamLearn_Confirm"),
               ),
               o.createElement(
-                Te.zx,
+                Pe.zx,
                 { onClick: () => e.fnSetPopupVisible(!1) },
                 (0, c.Xx)("#SteamLearn_Cancel"),
               ),
             ),
           );
         },
-        Zt = () => {
+        $t = () => {
           const {
             msgWorkingProject: e,
             msgWorkingProjectConfig: t,
             nPublishedVersion: a,
-          } = ue();
+          } = pe();
           return o.createElement(
             "div",
             { className: Vt.ProjectModelPage },
-            o.createElement($t, null),
+            o.createElement(Jt, null),
           );
         },
-        Qt = (e) =>
+        Yt = (e) =>
           o.createElement(
-            ze.HP,
+            We.HP,
             {
-              toolTipContent: o.createElement(ze.vd, null, e.strTooltip),
+              toolTipContent: o.createElement(We.vd, null, e.strTooltip),
               direction: "top",
               bDisabled: null == e.strTooltip,
             },
@@ -10819,50 +10884,50 @@
               e.strName,
             ),
           ),
-        $t = () => {
+        Jt = () => {
           const e = o.useRef(null),
             [t, a] = o.useState(null),
             {
               msgWorkingProject: n,
               msgWorkingProjectConfig: r,
               nPublishedVersion: i,
-            } = ue(),
-            [l, d] = qt(r),
-            [m, _, p] = (0, Me.Rr)(l),
-            [N, g, f] = (0, Me.ll)(d),
+            } = pe(),
+            [l, d] = ea(r),
+            [m, _, p] = (0, ze.Rr)(l),
+            [N, g, f] = (0, ze.ll)(d),
             [E, v] = o.useState(null),
-            [C, L] = o.useState(!1),
+            [L, C] = o.useState(!1),
             b = o.useMemo(
               () => ({
-                nodeInput: St,
-                nodeDenseStack: lt,
-                nodeDense: it,
-                nodeDropout: mt,
-                nodeConcat: et,
-                nodeCombine: qe,
-                nodeEmbedding: ut,
-                nodeTrain: Tt,
-                nodeShuffle: Ct,
-                nodeSyncedShuffle: bt,
-                nodeOnehot: xt,
-                nodeExplode: Nt,
-                nodeConditionalSwap: ot,
-                nodeConditionalExtract: at,
-                nodeKMeans: Et,
-                nodeTextVectorization: Xt,
-                nodeBatchNormalization: yt,
-                nodeNormalize: jt,
-                nodeNamedInference: Bt,
-                nodeDot: Ht,
-                nodeExtract: Gt,
-                nodeConv1D: Mt,
-                nodeMaxPooling1D: Wt,
-                nodeFlatten: Rt,
+                nodeInput: Et,
+                nodeDenseStack: mt,
+                nodeDense: ct,
+                nodeDropout: ut,
+                nodeConcat: at,
+                nodeCombine: et,
+                nodeEmbedding: Nt,
+                nodeTrain: Xt,
+                nodeShuffle: bt,
+                nodeSyncedShuffle: Tt,
+                nodeOnehot: Lt,
+                nodeExplode: St,
+                nodeConditionalSwap: it,
+                nodeConditionalExtract: ot,
+                nodeKMeans: xt,
+                nodeTextVectorization: It,
+                nodeBatchNormalization: jt,
+                nodeNormalize: Bt,
+                nodeNamedInference: Ht,
+                nodeDot: Gt,
+                nodeExtract: Mt,
+                nodeConv1D: Wt,
+                nodeMaxPooling1D: Rt,
+                nodeFlatten: Zt,
               }),
               [],
             );
           o.useEffect(() => {
-            const [e, t] = qt(r);
+            const [e, t] = ea(r);
             _(e), g(t);
           }, [n, r, _, g]);
           const D = o.useCallback((e, t) => {
@@ -11027,7 +11092,7 @@
                         r.extract().set_positive_sample_percent(100),
                         r.extract().set_compact_table(""),
                         r.extract().set_extracted_compact_table("");
-                      const e = J(t, 4);
+                      const e = ee(t, 4);
                       {
                         let t = new S.UYo();
                         t.set_connector_id(e[0]),
@@ -11058,7 +11123,7 @@
                       (0, u.X)(!1, `Unhandled type in AddNodeToConfig: ${a}`);
                   }
                   if (i + s > 0) {
-                    const e = J(t, i + s);
+                    const e = ee(t, i + s);
                     if (i > 0)
                       for (let t = 0; t < i; t++) {
                         let a = new S.UYo();
@@ -11074,7 +11139,7 @@
                           r.add_connectors(a);
                       }
                   }
-                  t.add_project_nodes(r), ie(e);
+                  t.add_project_nodes(r), se(e);
                 })(n, r, i, s.x, s.y);
               },
               [t, n, r],
@@ -11092,11 +11157,11 @@
                 i &&
                   (i.set_location_x(Math.floor(t.position.x)),
                   i.set_location_y(Math.floor(t.position.y)),
-                  ie(n));
+                  se(n));
               },
               [n, r],
             ),
-            V = o.useCallback(
+            I = o.useCallback(
               (e) => {
                 f(e);
               },
@@ -11105,13 +11170,13 @@
             y = o.useCallback(() => {
               v(null);
             }, []),
-            I = o.useCallback(
+            V = o.useCallback(
               (e, t) => {
                 const a = h(t.source),
                   o = x(t.sourceHandle),
                   i = h(t.target),
                   s = x(t.targetHandle);
-                te(n, r, a, o, i, s);
+                ae(n, r, a, o, i, s);
               },
               [n, r],
             ),
@@ -11153,7 +11218,7 @@
                     c.set_linked_connector_ids(
                       c.linked_connector_ids().filter((e) => e != r),
                     ),
-                    ie(e);
+                    se(e);
                 })(n, r, a, o, i, s);
               },
               [n, r],
@@ -11164,7 +11229,7 @@
                   a = x(e.sourceHandle),
                   o = h(e.target),
                   i = x(e.targetHandle);
-                te(n, r, t, a, o, i);
+                ae(n, r, t, a, o, i);
               },
               [r, n],
             );
@@ -11172,12 +11237,12 @@
             "div",
             { className: Vt.ProjectModelReactFlow },
             o.createElement(
-              Me.tV,
+              ze.tV,
               null,
               o.createElement(
                 "div",
                 {
-                  className: (0, s.Z)(Vt.ReactFlowWrapper, C && "DebugEnabled"),
+                  className: (0, s.Z)(Vt.ReactFlowWrapper, L && "DebugEnabled"),
                   ref: e,
                 },
                 o.createElement(
@@ -11206,7 +11271,7 @@
                           Vt.Preprocessing,
                         ),
                       },
-                      o.createElement(Qt, {
+                      o.createElement(Yt, {
                         fnDragStart: D,
                         eType: 15,
                         strName: (0, c.Xx)("#SteamLearn_Config_Node_Combine"),
@@ -11214,7 +11279,7 @@
                           "#SteamLearn_Config_Node_CombineTooltip",
                         ),
                       }),
-                      o.createElement(Qt, {
+                      o.createElement(Yt, {
                         fnDragStart: D,
                         eType: 9,
                         strName: (0, c.Xx)("#SteamLearn_Config_Node_Shuffle"),
@@ -11222,7 +11287,7 @@
                           "#SteamLearn_Config_Node_ShuffleTooltip",
                         ),
                       }),
-                      o.createElement(Qt, {
+                      o.createElement(Yt, {
                         fnDragStart: D,
                         eType: 10,
                         strName: (0, c.Xx)(
@@ -11232,7 +11297,7 @@
                           "#SteamLearn_Config_Node_SyncedShuffleTooltip",
                         ),
                       }),
-                      o.createElement(Qt, {
+                      o.createElement(Yt, {
                         fnDragStart: D,
                         eType: 11,
                         strName: (0, c.Xx)("#SteamLearn_Config_Node_Onehot"),
@@ -11240,7 +11305,7 @@
                           "#SteamLearn_Config_Node_OnehotTooltip",
                         ),
                       }),
-                      o.createElement(Qt, {
+                      o.createElement(Yt, {
                         fnDragStart: D,
                         eType: 12,
                         strName: (0, c.Xx)("#SteamLearn_Config_Node_Explode"),
@@ -11248,7 +11313,7 @@
                           "#SteamLearn_Config_Node_ExplodeTooltip",
                         ),
                       }),
-                      o.createElement(Qt, {
+                      o.createElement(Yt, {
                         fnDragStart: D,
                         eType: 13,
                         strName: (0, c.Xx)(
@@ -11258,7 +11323,7 @@
                           "#SteamLearn_Config_Node_ConditionalSwapTooltip",
                         ),
                       }),
-                      o.createElement(Qt, {
+                      o.createElement(Yt, {
                         fnDragStart: D,
                         eType: 7,
                         strName: (0, c.Xx)(
@@ -11268,7 +11333,7 @@
                           "#SteamLearn_Config_Node_ConditionalExtractTooltip",
                         ),
                       }),
-                      o.createElement(Qt, {
+                      o.createElement(Yt, {
                         fnDragStart: D,
                         eType: 21,
                         strName: (0, c.Xx)("#SteamLearn_Config_Node_Extract"),
@@ -11276,7 +11341,7 @@
                           "#SteamLearn_Config_Node_ExtractTooltip",
                         ),
                       }),
-                      o.createElement(Qt, {
+                      o.createElement(Yt, {
                         fnDragStart: D,
                         eType: 14,
                         strName: (0, c.Xx)("#SteamLearn_Config_Node_KMeans"),
@@ -11284,7 +11349,7 @@
                           "#SteamLearn_Config_Node_KMeansTooltip",
                         ),
                       }),
-                      o.createElement(Qt, {
+                      o.createElement(Yt, {
                         fnDragStart: D,
                         eType: 16,
                         strName: (0, c.Xx)(
@@ -11294,7 +11359,7 @@
                           "#SteamLearn_Config_Node_TextVectorizationTooltip",
                         ),
                       }),
-                      o.createElement(Qt, {
+                      o.createElement(Yt, {
                         fnDragStart: D,
                         eType: 18,
                         strName: (0, c.Xx)("#SteamLearn_Config_Node_Normalize"),
@@ -11320,7 +11385,7 @@
                     o.createElement(
                       "div",
                       { className: (0, s.Z)(Vt.DrawRowElements, Vt.Keras) },
-                      o.createElement(Qt, {
+                      o.createElement(Yt, {
                         fnDragStart: D,
                         eType: 8,
                         strName: (0, c.Xx)("#SteamLearn_Config_Node_Concat"),
@@ -11328,7 +11393,7 @@
                           "#SteamLearn_Config_Node_ConcatTooltip",
                         ),
                       }),
-                      o.createElement(Qt, {
+                      o.createElement(Yt, {
                         fnDragStart: D,
                         eType: 5,
                         strName: (0, c.Xx)("#SteamLearn_Config_Node_Embedding"),
@@ -11336,7 +11401,7 @@
                           "#SteamLearn_Config_Node_EmbeddingTooltip",
                         ),
                       }),
-                      o.createElement(Qt, {
+                      o.createElement(Yt, {
                         fnDragStart: D,
                         eType: 2,
                         strName: (0, c.Xx)("#SteamLearn_Config_Node_Dense"),
@@ -11344,7 +11409,7 @@
                           "#SteamLearn_Config_Node_DenseTooltip",
                         ),
                       }),
-                      o.createElement(Qt, {
+                      o.createElement(Yt, {
                         fnDragStart: D,
                         eType: 3,
                         strName: (0, c.Xx)(
@@ -11354,7 +11419,7 @@
                           "#SteamLearn_Config_Node_DenseStackTooltip",
                         ),
                       }),
-                      o.createElement(Qt, {
+                      o.createElement(Yt, {
                         fnDragStart: D,
                         eType: 4,
                         strName: (0, c.Xx)("#SteamLearn_Config_Node_Dropout"),
@@ -11362,7 +11427,7 @@
                           "#SteamLearn_Config_Node_DropoutTooltip",
                         ),
                       }),
-                      o.createElement(Qt, {
+                      o.createElement(Yt, {
                         fnDragStart: D,
                         eType: 17,
                         strName: (0, c.Xx)(
@@ -11372,7 +11437,7 @@
                           "#SteamLearn_Config_Node_BatchNormalizationTooltip",
                         ),
                       }),
-                      o.createElement(Qt, {
+                      o.createElement(Yt, {
                         fnDragStart: D,
                         eType: 19,
                         strName: (0, c.Xx)(
@@ -11382,7 +11447,7 @@
                           "#SteamLearn_Config_Node_NamedInferenceTooltip",
                         ),
                       }),
-                      o.createElement(Qt, {
+                      o.createElement(Yt, {
                         fnDragStart: D,
                         eType: 20,
                         strName: (0, c.Xx)("#SteamLearn_Config_Node_Dot"),
@@ -11390,7 +11455,7 @@
                           "#SteamLearn_Config_Node_DotTooltip",
                         ),
                       }),
-                      o.createElement(Qt, {
+                      o.createElement(Yt, {
                         fnDragStart: D,
                         eType: 24,
                         strName: (0, c.Xx)("#SteamLearn_Config_Node_Flatten"),
@@ -11398,7 +11463,7 @@
                           "#SteamLearn_Config_Node_FlattenTooltip",
                         ),
                       }),
-                      o.createElement(Qt, {
+                      o.createElement(Yt, {
                         fnDragStart: D,
                         eType: 22,
                         strName: (0, c.Xx)("#SteamLearn_Config_Node_Conv1D"),
@@ -11406,7 +11471,7 @@
                           "#SteamLearn_Config_Node_Conv1DTooltip",
                         ),
                       }),
-                      o.createElement(Qt, {
+                      o.createElement(Yt, {
                         fnDragStart: D,
                         eType: 23,
                         strName: (0, c.Xx)(
@@ -11419,26 +11484,26 @@
                       o.createElement(
                         "div",
                         {
-                          className: (0, s.Z)(Vt.DebugToggle, C && Vt.Enabled),
-                          onClick: () => L(!C),
+                          className: (0, s.Z)(Vt.DebugToggle, L && Vt.Enabled),
+                          onClick: () => C(!L),
                         },
                         "Debug",
                       ),
                     ),
                   ),
                 ),
-                o.createElement(Me.ZP, {
+                o.createElement(ze.ZP, {
                   nodeTypes: b,
                   nodes: m,
                   edges: N,
                   onNodesChange: X,
-                  onEdgesChange: V,
+                  onEdgesChange: I,
                   onNodeDragStop: k,
                   onConnect: O,
                   onInit: a,
                   onDrop: P,
                   onDragOver: T,
-                  onEdgeUpdate: I,
+                  onEdgeUpdate: V,
                   onEdgeUpdateStart: y,
                   onEdgeUpdateEnd: j,
                   snapToGrid: !0,
@@ -11450,7 +11515,7 @@
             ),
           );
         };
-      function Yt(e) {
+      function qt(e) {
         switch (e) {
           case 8:
             return "nodeConcat";
@@ -11505,13 +11570,13 @@
         }
         return "";
       }
-      function qt(e) {
+      function ea(e) {
         let t = [],
           a = [];
         for (const n of e.project_nodes()) {
           t.push({
             id: v(n.node_id()),
-            type: Yt(n.type()),
+            type: qt(n.type()),
             position: { x: n.location_x(), y: n.location_y() },
             data: { msgNode: n },
           });
@@ -11525,7 +11590,7 @@
                 );
               r
                 ? a.push({
-                    id: C(t.connector_id(), o),
+                    id: L(t.connector_id(), o),
                     source: v(n.node_id()),
                     sourceHandle: E(t.connector_id()),
                     target: v(r.node_id()),
@@ -11538,10 +11603,10 @@
         }
         return [t, a];
       }
-      var Jt = a(76841),
-        ea = a(76711);
-      function ta(e, t, a, n, o) {
-        if (0 == a) return void e.push(Va.SteamLearnProjectCreate());
+      var ta = a(76841),
+        aa = a(76711);
+      function na(e, t, a, n, o) {
+        if (0 == a) return void e.push(Ha.SteamLearnProjectCreate());
         let r = n;
         if (-1 == r) {
           const e = o.find((e) => e.project_id() == a);
@@ -11555,39 +11620,39 @@
           }
         }
         -1 == r && (r = 0),
-          ya(t.pathname, [Va.SteamLearnProjectDataSources(void 0, void 0)]) &&
-            e.push(Va.SteamLearnProjectDataSources(a, r)),
-          ya(t.pathname, [Va.SteamLearnProjectOverview(void 0, void 0)]) &&
-            e.push(Va.SteamLearnProjectOverview(a, r)),
-          ya(t.pathname, [Va.SteamLearnProjectSnapshots(void 0, void 0)]) &&
-            e.push(Va.SteamLearnProjectSnapshots(a, r)),
-          ya(t.pathname, [Va.SteamLearnProjectTrainSettings(void 0, void 0)]) &&
-            e.push(Va.SteamLearnProjectTrainSettings(a, r)),
-          ya(t.pathname, [Va.SteamLearnProjectModel(void 0, void 0)]) &&
-            e.push(Va.SteamLearnProjectModel(a, r)),
-          ya(t.pathname, [Va.SteamLearnProjectTrain(void 0, void 0)]) &&
-            e.push(Va.SteamLearnProjectTrain(a, r)),
-          ya(t.pathname, [Va.SteamLearnProjectTrainStatus(void 0, void 0)]) &&
-            e.push(Va.SteamLearnProjectTrainStatus(a, r)),
-          ya(t.pathname, [
-            Va.SteamLearnProjectInferenceTester(void 0, void 0),
-          ]) && e.push(Va.SteamLearnProjectInferenceTester(a, r));
+          Fa(t.pathname, [Ha.SteamLearnProjectDataSources(void 0, void 0)]) &&
+            e.push(Ha.SteamLearnProjectDataSources(a, r)),
+          Fa(t.pathname, [Ha.SteamLearnProjectOverview(void 0, void 0)]) &&
+            e.push(Ha.SteamLearnProjectOverview(a, r)),
+          Fa(t.pathname, [Ha.SteamLearnProjectSnapshots(void 0, void 0)]) &&
+            e.push(Ha.SteamLearnProjectSnapshots(a, r)),
+          Fa(t.pathname, [Ha.SteamLearnProjectTrainSettings(void 0, void 0)]) &&
+            e.push(Ha.SteamLearnProjectTrainSettings(a, r)),
+          Fa(t.pathname, [Ha.SteamLearnProjectModel(void 0, void 0)]) &&
+            e.push(Ha.SteamLearnProjectModel(a, r)),
+          Fa(t.pathname, [Ha.SteamLearnProjectTrain(void 0, void 0)]) &&
+            e.push(Ha.SteamLearnProjectTrain(a, r)),
+          Fa(t.pathname, [Ha.SteamLearnProjectTrainStatus(void 0, void 0)]) &&
+            e.push(Ha.SteamLearnProjectTrainStatus(a, r)),
+          Fa(t.pathname, [
+            Ha.SteamLearnProjectInferenceTester(void 0, void 0),
+          ]) && e.push(Ha.SteamLearnProjectInferenceTester(a, r));
       }
-      const aa = (e) => {
-          const { msgProject: t, msgWorkingProject: a } = ue(),
+      const oa = (e) => {
+          const { msgProject: t, msgWorkingProject: a } = pe(),
             n = t
               ? t.published_configs().map((e) => e.published_version())
               : [],
             [r, i] = o.useState(n.length > 0 ? n[0] : 0);
           return o.createElement(
-            Ie.On,
+            je.On,
             {
               active: e.bVisible,
               onDismiss: e.fnClosePopup,
               modalClassName: "CopyPublishedVersionPopup",
             },
             o.createElement(
-              Te.h4,
+              Pe.h4,
               null,
               " ",
               (0, c.Xx)("#SteamLearn_Project_CopyPublished") ||
@@ -11595,10 +11660,10 @@
               " ",
             ),
             o.createElement(
-              Te.uT,
+              Pe.uT,
               null,
               o.createElement(
-                Te.Ac,
+                Pe.Ac,
                 null,
                 (0, c.Xx)("#SteamLearn_Project_CopyPublished_Warning"),
               ),
@@ -11614,9 +11679,9 @@
                 ),
               ),
               o.createElement(
-                Te.$_,
+                Pe.$_,
                 null,
-                o.createElement(Te.o9, {
+                o.createElement(Pe.o9, {
                   onCancel: () => e.fnClosePopup(),
                   onOK: () =>
                     ((t) => {
@@ -11626,8 +11691,8 @@
                       n &&
                         (a.set_unpublished_config(n.cloneMessage()),
                         a.unpublished_config().set_published_version(0),
-                        ie(a),
-                        Q(a, 0)),
+                        se(a),
+                        $(a, 0)),
                         e.fnClosePopup();
                     })(r),
                 }),
@@ -11635,27 +11700,27 @@
             ),
           );
         },
-        na = (e) => {
-          const { msgProject: t, msgWorkingProject: a } = ue(),
+        ra = (e) => {
+          const { msgProject: t, msgWorkingProject: a } = pe(),
             [n, r] = o.useState(!1);
           o.useEffect(() => {
             r(!1);
           }, [e.bVisible]);
-          const i = new ea.H({
+          const i = new aa.H({
             detectCircular: !0,
             maxDepth: 1 / 0,
             showModifications: !0,
             arrayDiffMethod: "lcs",
           });
           return o.createElement(
-            Ie.On,
+            je.On,
             {
               active: e.bVisible,
               onDismiss: e.fnClosePopup,
               modalClassName: "DiscardChangesPopup",
             },
             o.createElement(
-              Te.h4,
+              Pe.h4,
               null,
               " ",
               (0, c.Xx)("#SteamLearn_Project_Discard") ||
@@ -11663,16 +11728,16 @@
               " ",
             ),
             o.createElement(
-              Te.uT,
+              Pe.uT,
               null,
               o.createElement(
-                Te.Ac,
+                Pe.Ac,
                 null,
                 n &&
                   o.createElement(
                     "div",
-                    { className: Jt.DiffTableContainer },
-                    o.createElement(ea.A, {
+                    { className: ta.DiffTableContainer },
+                    o.createElement(aa.A, {
                       diff: i.diff(t.toObject(), a.toObject()),
                       hideUnchangedLines: !0,
                       highlightInlineDiff: !0,
@@ -11684,83 +11749,83 @@
                 !n &&
                   o.createElement(
                     "div",
-                    { className: Jt.ShowChangesButton, onClick: () => r(!0) },
+                    { className: ta.ShowChangesButton, onClick: () => r(!0) },
                     (0, c.Xx)("#SteamLEarn_Project_DiscardShowDiff"),
                   ),
               ),
               o.createElement(
                 "div",
-                { className: Jt.Buttons },
-                o.createElement(Te.o9, {
+                { className: ta.Buttons },
+                o.createElement(Pe.o9, {
                   onCancel: () => e.fnClosePopup(),
                   onOK: () => {
-                    $(a.project_id()), e.fnClosePopup();
+                    Y(a.project_id()), e.fnClosePopup();
                   },
                 }),
               ),
             ),
           );
         };
-      var oa;
+      var ia;
       !(function (e) {
         (e[(e.Hidden = 0)] = "Hidden"),
           (e[(e.Create = 1)] = "Create"),
           (e[(e.Edit = 2)] = "Edit");
-      })(oa || (oa = {}));
-      const ra = (e) => {
+      })(ia || (ia = {}));
+      const sa = (e) => {
           const {
               msgProject: t,
               msgWorkingProject: a,
               msgWorkingProjectConfig: n,
               nProjectID: i,
               nPublishedVersion: s,
-            } = ue(),
+            } = pe(),
             [d, m] = o.useState(""),
             [_, u] = o.useState(""),
             [p, N] = o.useState(!0),
             [g, S] = o.useState(""),
             f = (0, r.k6)();
           o.useEffect(() => {
-            e.eState == oa.Edit
+            e.eState == ia.Edit
               ? (m(a.project_name()), u(a.project_description()), N(!0))
-              : e.eState == oa.Create && (m(""), u(""), N(!1)),
+              : e.eState == ia.Create && (m(""), u(""), N(!1)),
               S("");
           }, [e.eState, a]);
           let E = "",
             v = "",
             x = "";
           switch (e.eState) {
-            case oa.Create:
+            case ia.Create:
               (E = (0, c.Xx)("#SteamLearn_Project_Create_Header")),
                 (x = (0, c.Xx)("#SteamLearn_Project_Create_Guidance")),
                 (v = (0, c.Xx)("#SteamLearn_Project_CreateProject"));
               break;
-            case oa.Edit:
+            case ia.Edit:
               (E = (0, c.Xx)("#SteamLearn_Project_Edit_Guidance")),
                 (v = (0, c.Xx)("#SteamLearn_Project_Edit_Accept"));
           }
           return o.createElement(
-            Ie.On,
+            je.On,
             {
-              active: e.eState != oa.Hidden,
-              onDismiss: () => e.fnSetPopupState(oa.Hidden),
+              active: e.eState != ia.Hidden,
+              onDismiss: () => e.fnSetPopupState(ia.Hidden),
               modalClassName: "CreateOrEditProjectPopup",
             },
-            o.createElement(Te.h4, null, E),
+            o.createElement(Pe.h4, null, E),
             x.length > 0 &&
-              o.createElement("div", { className: Jt.Guidance }, x),
+              o.createElement("div", { className: ta.Guidance }, x),
             o.createElement(
               "div",
-              { className: Jt.EditSection },
+              { className: ta.EditSection },
               g.length > 0 &&
-                o.createElement("div", { className: Jt.ErrorMessage }, g),
+                o.createElement("div", { className: ta.ErrorMessage }, g),
               o.createElement(
                 "div",
-                { className: Jt.InputTitle },
+                { className: ta.InputTitle },
                 (0, c.Xx)("#SteamLearn_Project_Create_Name"),
               ),
               o.createElement("input", {
-                className: Jt.InputWide,
+                className: ta.InputWide,
                 type: "text",
                 value: d,
                 onChange: (e) => {
@@ -11769,30 +11834,30 @@
               }),
               o.createElement(
                 "div",
-                { className: Jt.InputTitle },
+                { className: ta.InputTitle },
                 (0, c.Xx)("#SteamLearn_Project_Create_Desc"),
               ),
               o.createElement("textarea", {
-                className: Jt.InputAreaWide,
+                className: ta.InputAreaWide,
                 value: _,
                 onChange: (e) => u(e.target.value),
               }),
             ),
             o.createElement(
               "div",
-              { className: Jt.ButtonContainer },
+              { className: ta.ButtonContainer },
               o.createElement(
-                Te.KM,
+                Pe.KM,
                 {
                   disabled: !p,
                   onClick: () =>
                     (0, l.mG)(void 0, void 0, void 0, function* () {
-                      if ((N(!1), e.eState == oa.Create)) {
-                        const [t, a] = yield Z(d, _);
+                      if ((N(!1), e.eState == ia.Create)) {
+                        const [t, a] = yield Q(d, _);
                         switch (t) {
                           case 1:
-                            e.fnSetPopupState(oa.Hidden),
-                              f.push(Va.SteamLearnProjectDataSources(a, 0));
+                            e.fnSetPopupState(ia.Hidden),
+                              f.push(Ha.SteamLearnProjectDataSources(a, 0));
                             break;
                           case 2:
                             S((0, c.Xx)("#SteamLearn_Project_Create_BadName"));
@@ -11803,10 +11868,10 @@
                       } else {
                         a.set_project_name(d),
                           a.set_project_description(_),
-                          ie(a);
-                        switch (yield Q(a, s)) {
+                          se(a);
+                        switch (yield $(a, s)) {
                           case 1:
-                            m(""), u(""), S(""), e.fnSetPopupState(oa.Hidden);
+                            m(""), u(""), S(""), e.fnSetPopupState(ia.Hidden);
                             break;
                           case 0:
                           case 4:
@@ -11819,31 +11884,31 @@
                 v,
               ),
               o.createElement(
-                Te.zx,
-                { disabled: !1, onClick: () => e.fnSetPopupState(oa.Hidden) },
+                Pe.zx,
+                { disabled: !1, onClick: () => e.fnSetPopupState(ia.Hidden) },
                 (0, c.Xx)("#SteamLearn_Project_Edit_Cancel"),
               ),
             ),
           );
         },
-        ia = (e) => {
+        ca = (e) => {
           const {
               msgProject: t,
               msgWorkingProject: a,
               msgWorkingProjectConfig: n,
               nProjectID: i,
               nPublishedVersion: s,
-            } = ue(),
+            } = pe(),
             d = (0, r.k6)(),
             m = (0, r.TH)(),
-            [_, u, N] = (0, fe.X9)(),
-            [f, E, v] = (0, fe.X9)(),
-            [x, h] = o.useState(oa.Hidden);
-          let C = [];
+            [_, u, N] = (0, Ee.X9)(),
+            [f, E, v] = (0, Ee.X9)(),
+            [x, h] = o.useState(ia.Hidden);
+          let L = [];
           for (const t of e.arrMsgProjects)
-            C.push({ label: t.project_name(), value: t.project_id() });
-          C.push({ label: (0, c.Xx)("#SteamLearn_CreateNew"), value: 0 });
-          let L = [
+            L.push({ label: t.project_name(), value: t.project_id() });
+          L.push({ label: (0, c.Xx)("#SteamLearn_CreateNew"), value: 0 });
+          let C = [
             {
               label: (0, c.Xx)("#SteamLearn_Header_Version_Unpublished"),
               value: 0,
@@ -11851,7 +11916,7 @@
           ];
           if (a)
             for (const e of a.published_configs())
-              L.push({
+              C.push({
                 label: (0, c.Xx)(
                   "#SteamLearn_Header_Version_PublishedVersion",
                   e.published_version(),
@@ -11861,8 +11926,8 @@
           const b =
               t && a && a.serializeBase64String() != t.serializeBase64String(),
             D = () => {
-              (0, Pe.AM)(
-                o.createElement(Ie.uH, {
+              (0, Xe.AM)(
+                o.createElement(je.uH, {
                   strTitle: (0, c.Xx)("#SteamLearn_Project_Publish"),
                   strDescription: (0, c.Xx)(
                     "#SteamLearn_Project_Publish_Warning",
@@ -11885,13 +11950,13 @@
                               t,
                             );
                             return a.BIsValid() && 1 == a.GetEResult()
-                              ? (1 == a.Body().result() && $(e),
+                              ? (1 == a.Body().result() && Y(e),
                                 a.Body().result())
                               : 3;
                           });
                         })(a.project_id());
                       1 == o &&
-                        setTimeout(() => ta(d, m, i, n, e.arrMsgProjects), 500);
+                        setTimeout(() => na(d, m, i, n, e.arrMsgProjects), 500);
                     }),
                 }),
                 window,
@@ -11899,27 +11964,27 @@
             };
           return o.createElement(
             "div",
-            { className: Jt.ProjectSelectorInner },
-            o.createElement(ra, { eState: x, fnSetPopupState: h }),
+            { className: ta.ProjectSelectorInner },
+            o.createElement(sa, { eState: x, fnSetPopupState: h }),
             o.createElement(
               "div",
-              { className: Jt.ProjectSection },
+              { className: ta.ProjectSection },
               o.createElement(
                 "div",
-                { className: Jt.ProjectIDAndVersionSection },
+                { className: ta.ProjectIDAndVersionSection },
                 o.createElement(
                   "select",
                   {
-                    className: Jt.ProjectIDInput,
+                    className: ta.ProjectIDInput,
                     value: i,
                     onChange: (t) =>
                       ((t) => {
                         0 != t
-                          ? ta(d, m, t, -1, e.arrMsgProjects)
-                          : h(oa.Create);
+                          ? na(d, m, t, -1, e.arrMsgProjects)
+                          : h(ia.Create);
                       })(parseInt(t.target.value)),
                   },
-                  C.map((e) =>
+                  L.map((e) =>
                     o.createElement(
                       "option",
                       { key: e.value, value: e.value },
@@ -11931,12 +11996,12 @@
                   o.createElement(
                     "select",
                     {
-                      className: Jt.PublishedVersionInput,
+                      className: ta.PublishedVersionInput,
                       value: s,
                       onChange: (t) =>
-                        ta(d, m, i, parseInt(t.target.value), e.arrMsgProjects),
+                        na(d, m, i, parseInt(t.target.value), e.arrMsgProjects),
                     },
-                    L.map((e) =>
+                    C.map((e) =>
                       o.createElement(
                         "option",
                         { key: e.value, value: e.value },
@@ -11946,79 +12011,79 @@
                   ),
                 o.createElement(
                   "div",
-                  { className: Jt.EditButton, onClick: () => h(oa.Edit) },
+                  { className: ta.EditButton, onClick: () => h(ia.Edit) },
                   (0, c.Xx)("#SteamLearn_Edit"),
                 ),
               ),
               a &&
                 o.createElement(
                   "div",
-                  { className: Jt.Description },
+                  { className: ta.Description },
                   a.project_description(),
                 ),
               a &&
                 o.createElement(
                   "div",
-                  { className: Jt.ProjectID },
+                  { className: ta.ProjectID },
                   (0, c.Xx)("#SteamLearn_ProjectID", i),
                 ),
             ),
             o.createElement(
               "div",
-              { className: Jt.StatusSection },
+              { className: ta.StatusSection },
               (b || 0 != s) &&
                 o.createElement(
-                  Te.KM,
-                  { disabled: !b, onClick: (e) => Q(a, s) },
+                  Pe.KM,
+                  { disabled: !b, onClick: (e) => $(a, s) },
                   (0, c.Xx)("#SteamLearn_Project_Save"),
                 ),
               !b &&
                 0 == s &&
                 o.createElement(
-                  Te.KM,
+                  Pe.KM,
                   { disabled: b, onClick: (e) => D() },
                   (0, c.Xx)("#SteamLearn_Project_Publish"),
                 ),
-              o.createElement(na, { bVisible: f, fnClosePopup: v }),
+              o.createElement(ra, { bVisible: f, fnClosePopup: v }),
               b &&
                 o.createElement(
-                  Te.h5,
-                  { className: Jt.Warning, disabled: !b, onClick: E },
+                  Pe.h5,
+                  { className: ta.Warning, disabled: !b, onClick: E },
                   (0, c.Xx)("#SteamLearn_Project_Discard"),
                 ),
-              o.createElement(aa, { bVisible: _, fnClosePopup: N }),
+              o.createElement(oa, { bVisible: _, fnClosePopup: N }),
               0 == s &&
                 a &&
                 a.published_configs().length > 0 &&
                 !b &&
                 o.createElement(
-                  Te.KM,
+                  Pe.KM,
                   { onClick: u },
                   (0, c.Xx)("#SteamLearn_Project_CopyPublished"),
                 ),
             ),
           );
         };
-      function sa() {
+      function la() {
         const e = (0, r.TH)(),
           t = w();
-        if (!Ia(e.pathname)) return null;
+        if (!Ga(e.pathname)) return null;
         const a = t.data;
         return o.createElement(
           "div",
-          { className: Jt.ProjectSelector },
+          { className: ta.ProjectSelector },
           !a &&
             o.createElement(
               "div",
               null,
               (0, c.Xx)("#SteamLearn_LoadingProjects"),
             ),
-          a && o.createElement(ia, { arrMsgProjects: a }),
+          a && o.createElement(ca, { arrMsgProjects: a }),
         );
       }
-      var ca = a(70674);
-      const la = () => {
-        const { msgWorkingProjectConfig: e } = ue();
+      var da = a(70674);
+      const ma = () => {
+        const { msgWorkingProjectConfig: e } = pe();
         let t = [];
         for (const a of e.data_source_element_usages())
           t.push({
@@ -12122,52 +12187,52 @@
           u = 4 == e.snapshot_config().snapshot_schedule_type();
         return o.createElement(
           "div",
-          { className: ca.ProjectSnapshotFilterPage },
+          { className: da.ProjectSnapshotFilterPage },
           o.createElement(
             "div",
-            { className: ca.ProjectConfigBody },
+            { className: da.ProjectConfigBody },
             o.createElement(
               "div",
-              { className: ca.OptionBlock },
+              { className: da.OptionBlock },
               o.createElement(
                 "div",
-                { className: ca.OptionHeader },
+                { className: da.OptionHeader },
                 (0, c.Xx)("#SteamLearn_SnapshotFilter_SamplePercent"),
               ),
               o.createElement(
                 "div",
-                { className: ca.OptionDesc },
+                { className: da.OptionDesc },
                 (0, c.yu)(
                   "#SteamLearn_SnapshotFilter_SamplePercentDesc",
                   o.createElement("ul", null),
                   o.createElement("li", null),
                 ),
               ),
-              o.createElement(Qe, {
+              o.createElement($e, {
                 label: (0, c.Xx)("#SteamLearn_SnapshotFilter_SamplePercent"),
                 fnGetInitialValue: () =>
                   e.snapshot_filter().sample_reduce_percent().toString() ||
                   "100",
-                fnValidateValue: (e) => le(e, 0, 1e3),
+                fnValidateValue: (e) => de(e, 0, 1e3),
                 fnSetValue: (t) =>
                   e.snapshot_filter().set_sample_reduce_percent(parseInt(t)),
               }),
             ),
-            o.createElement("div", { className: ca.Separator }),
+            o.createElement("div", { className: da.Separator }),
             o.createElement(
               "div",
-              { className: ca.OptionBlock },
+              { className: da.OptionBlock },
               o.createElement(
                 "div",
-                { className: ca.OptionHeader },
+                { className: da.OptionHeader },
                 (0, c.Xx)("#SteamLearn_SnapshotFilter_Histogram"),
               ),
               o.createElement(
                 "div",
-                { className: ca.OptionDesc },
+                { className: da.OptionDesc },
                 (0, c.Xx)("#SteamLearn_SnapshotFilter_HistogramDesc"),
               ),
-              o.createElement(Ye, {
+              o.createElement(Je, {
                 label: (0, c.Xx)(
                   "#SteamLearn_SnapshotFilter_Histogram_ElementPath",
                 ),
@@ -12177,54 +12242,54 @@
                   e.snapshot_filter().histogram().set_data_element_path(t),
                 options: a,
               }),
-              o.createElement(Qe, {
+              o.createElement($e, {
                 label: (0, c.Xx)("#SteamLearn_SnapshotFilter_HistogramMin"),
                 hidden: !s,
                 digitCount: 2,
                 fnGetInitialValue: () =>
                   e.snapshot_filter().histogram().min_value().toString() ||
                   "0.00",
-                fnValidateValue: (e) => de(e),
+                fnValidateValue: (e) => me(e),
                 fnSetValue: (t) =>
                   e.snapshot_filter().histogram().set_min_value(parseFloat(t)),
               }),
-              o.createElement(Qe, {
+              o.createElement($e, {
                 label: (0, c.Xx)("#SteamLearn_SnapshotFilter_HistogramMax"),
                 hidden: !s,
                 digitCount: 2,
                 fnGetInitialValue: () =>
                   e.snapshot_filter().histogram().max_value().toString() ||
                   "0.00",
-                fnValidateValue: (e) => de(e),
+                fnValidateValue: (e) => me(e),
                 fnSetValue: (t) =>
                   e.snapshot_filter().histogram().set_max_value(parseFloat(t)),
               }),
-              o.createElement(Qe, {
+              o.createElement($e, {
                 label: (0, c.Xx)("#SteamLearn_SnapshotFilter_HistogramBuckets"),
                 hidden: !s,
                 fnGetInitialValue: () =>
                   e.snapshot_filter().histogram().num_buckets().toString() ||
                   "0.00",
-                fnValidateValue: (e) => le(e, 2, void 0),
+                fnValidateValue: (e) => de(e, 2, void 0),
                 fnSetValue: (t) =>
                   e.snapshot_filter().histogram().set_num_buckets(parseInt(t)),
               }),
             ),
-            o.createElement("div", { className: ca.Separator }),
+            o.createElement("div", { className: da.Separator }),
             o.createElement(
               "div",
-              { className: ca.OptionBlock },
+              { className: da.OptionBlock },
               o.createElement(
                 "div",
-                { className: ca.OptionHeader },
+                { className: da.OptionHeader },
                 (0, c.Xx)("#SteamLearn_DataSettings_SnapshotDuration"),
               ),
               o.createElement(
                 "div",
-                { className: ca.OptionDesc },
+                { className: da.OptionDesc },
                 (0, c.Xx)("#SteamLearn_DataSettings_SnapshotDurationDesc"),
               ),
-              o.createElement(Qe, {
+              o.createElement($e, {
                 label: (0, c.Xx)("#SteamLearn_DataSettings_SnapshotDuration"),
                 fnGetInitialValue: () => {
                   var t;
@@ -12237,28 +12302,28 @@
                       : t.toString()) || "0"
                   );
                 },
-                fnValidateValue: (e) => le(e, 1),
+                fnValidateValue: (e) => de(e, 1),
                 fnSetValue: (t) =>
                   e
                     .data_retention_config()
                     .set_snapshot_keep_duration_days(parseInt(t)),
               }),
             ),
-            o.createElement("div", { className: ca.Separator }),
+            o.createElement("div", { className: da.Separator }),
             o.createElement(
               "div",
-              { className: ca.OptionBlock },
+              { className: da.OptionBlock },
               o.createElement(
                 "div",
-                { className: ca.OptionHeader },
+                { className: da.OptionHeader },
                 (0, c.Xx)("#SteamLearn_DataSettings_FetchKeepCount"),
               ),
               o.createElement(
                 "div",
-                { className: ca.OptionDesc },
+                { className: da.OptionDesc },
                 (0, c.Xx)("#SteamLearn_DataSettings_FetchKeepCountDesc"),
               ),
-              o.createElement(Qe, {
+              o.createElement($e, {
                 label: (0, c.Xx)(
                   "#SteamLearn_DataSettings_FetchKeepCountInput",
                 ),
@@ -12272,37 +12337,57 @@
                       : t.toString()) || "0"
                   );
                 },
-                fnValidateValue: (e) => le(e, 1),
+                fnValidateValue: (e) => de(e, 1),
                 fnSetValue: (t) =>
                   e.data_retention_config().set_fetch_keep_count(parseInt(t)),
               }),
             ),
-            o.createElement("div", { className: ca.Separator }),
+            o.createElement("div", { className: da.Separator }),
             o.createElement(
               "div",
-              { className: ca.OptionBlock },
+              { className: da.OptionBlock },
               o.createElement(
                 "div",
-                { className: ca.OptionHeader },
+                { className: da.OptionHeader },
+                (0, c.Xx)("#SteamLearn_DataSettings_Compress"),
+              ),
+              o.createElement(
+                "div",
+                { className: da.OptionDesc },
+                (0, c.Xx)("#SteamLearn_DataSettings_CompressDesc"),
+              ),
+              o.createElement(qe, {
+                label: (0, c.Xx)("#SteamLearn_DataSettings_CompressInput"),
+                fnGetInitialValue: () => e.snapshot_config().compress() || !1,
+                fnSetValue: (t) => e.snapshot_config().set_compress(t),
+              }),
+            ),
+            o.createElement("div", { className: da.Separator }),
+            o.createElement(
+              "div",
+              { className: da.OptionBlock },
+              o.createElement(
+                "div",
+                { className: da.OptionHeader },
                 (0, c.Xx)("#SteamLearn_SnapshotFilter_SnapshotType"),
               ),
               o.createElement(
                 "div",
-                { className: ca.OptionDesc },
+                { className: da.OptionDesc },
                 (0, c.yu)(
                   "#SteamLearn_SnapshotFilter_SnapshotTypeDesc",
                   o.createElement("ul", null),
                   o.createElement("li", null),
                 ),
               ),
-              o.createElement(Ye, {
+              o.createElement(Je, {
                 label: (0, c.Xx)("#SteamLearn_SnapshotFilter_SnapshotType"),
                 fnGetValue: () => e.snapshot_config().snapshot_type(),
                 fnSetValue: (t) =>
                   e.snapshot_config().set_snapshot_type(parseInt(t)),
                 options: n,
               }),
-              o.createElement(Qe, {
+              o.createElement($e, {
                 label: (0, c.Xx)(
                   "#SteamLearn_SnapshotFilter_Snapshot_Percentage",
                 ),
@@ -12321,14 +12406,14 @@
                       : a.toString()) || "100"
                   );
                 },
-                fnValidateValue: (e) => le(e, 1, 100),
+                fnValidateValue: (e) => de(e, 1, 100),
                 fnSetValue: (t) =>
                   e
                     .snapshot_config()
                     .config_account_ids()
                     .set_percent(parseInt(t)),
               }),
-              o.createElement(Qe, {
+              o.createElement($e, {
                 label: (0, c.Xx)(
                   "#SteamLearn_SnapshotFilter_SnapshotAccountID_Recency",
                 ),
@@ -12347,14 +12432,14 @@
                       : a.toString()) || "180"
                   );
                 },
-                fnValidateValue: (e) => le(e, 1, void 0),
+                fnValidateValue: (e) => de(e, 1, void 0),
                 fnSetValue: (t) =>
                   e
                     .snapshot_config()
                     .config_account_ids()
                     .set_activity_recency_days(parseInt(t)),
               }),
-              o.createElement(Qe, {
+              o.createElement($e, {
                 label: (0, c.Xx)(
                   "#SteamLearn_SnapshotFilter_Snapshot_Percentage",
                 ),
@@ -12372,11 +12457,11 @@
                       : a.toString()) || "100"
                   );
                 },
-                fnValidateValue: (e) => le(e, 1, 100),
+                fnValidateValue: (e) => de(e, 1, 100),
                 fnSetValue: (t) =>
                   e.snapshot_config().config_app_ids().set_percent(parseInt(t)),
               }),
-              o.createElement(Qe, {
+              o.createElement($e, {
                 label: (0, c.Xx)(
                   "#SteamLearn_SnapshotFilter_SnapshotAppID_Recency",
                 ),
@@ -12394,14 +12479,14 @@
                       : a.toString()) || "240"
                   );
                 },
-                fnValidateValue: (e) => le(e, 1, void 0),
+                fnValidateValue: (e) => de(e, 1, void 0),
                 fnSetValue: (t) =>
                   e
                     .snapshot_config()
                     .config_app_ids()
                     .set_release_recency_days(parseInt(t)),
               }),
-              o.createElement(Qe, {
+              o.createElement($e, {
                 label: (0, c.Xx)(
                   "#SteamLearn_SnapshotFilter_SnapshotOther_ProjectID",
                 ),
@@ -12420,14 +12505,14 @@
                       : a.toString()) || "0"
                   );
                 },
-                fnValidateValue: (e) => le(e, 1),
+                fnValidateValue: (e) => de(e, 1),
                 fnSetValue: (t) =>
                   e
                     .snapshot_config()
                     .config_other_project()
                     .set_project_id(parseInt(t)),
               }),
-              o.createElement(Qe, {
+              o.createElement($e, {
                 label: (0, c.Xx)(
                   "#SteamLearn_SnapshotFilter_SnapshotOther_PublishedVersion",
                 ),
@@ -12446,7 +12531,7 @@
                       : a.toString()) || "0"
                   );
                 },
-                fnValidateValue: (e) => le(e, 1),
+                fnValidateValue: (e) => de(e, 1),
                 fnSetValue: (t) =>
                   e
                     .snapshot_config()
@@ -12457,19 +12542,19 @@
             (l || d) &&
               o.createElement(
                 "div",
-                { className: ca.OptionBlock },
-                o.createElement("div", { className: ca.Separator }),
+                { className: da.OptionBlock },
+                o.createElement("div", { className: da.Separator }),
                 o.createElement(
                   "div",
-                  { className: ca.OptionHeader },
+                  { className: da.OptionHeader },
                   (0, c.Xx)("#SteamLearn_SnapshotFilter_SnapshotSchedule"),
                 ),
                 o.createElement(
                   "div",
-                  { className: ca.OptionDesc },
+                  { className: da.OptionDesc },
                   (0, c.Xx)("#SteamLearn_SnapshotFilter_SnapshotScheduleDesc"),
                 ),
-                o.createElement(Ye, {
+                o.createElement(Je, {
                   label: (0, c.Xx)("#SteamLearn_ScheduledTrain_Heading"),
                   fnGetValue: () =>
                     e.snapshot_config().snapshot_schedule_type(),
@@ -12477,7 +12562,7 @@
                     e.snapshot_config().set_snapshot_schedule_type(parseInt(t)),
                   options: r,
                 }),
-                o.createElement(Qe, {
+                o.createElement($e, {
                   label: (0, c.Xx)("#SteamLearn_ScheduledTrain_DayOfMonth"),
                   hidden: !u,
                   fnGetInitialValue: () =>
@@ -12485,13 +12570,13 @@
                       .snapshot_config()
                       .snapshot_schedule_day_of_month()
                       .toString() || "1",
-                  fnValidateValue: (e) => le(e, 1, 31),
+                  fnValidateValue: (e) => de(e, 1, 31),
                   fnSetValue: (t) =>
                     e
                       .snapshot_config()
                       .set_snapshot_schedule_day_of_month(parseInt(t)),
                 }),
-                o.createElement(Ye, {
+                o.createElement(Je, {
                   label: (0, c.Xx)("#SteamLearn_ScheduledTrain_DayOfWeek"),
                   hidden: !_,
                   fnGetValue: () =>
@@ -12506,9 +12591,9 @@
           ),
         );
       };
-      var da = a(64292);
-      const ma = () => {
-        const { msgWorkingProjectConfig: e } = ue(),
+      var _a = a(64292);
+      const ua = () => {
+        const { msgWorkingProjectConfig: e } = pe(),
           t = [
             {
               label: (0, c.Xx)("#SteamLearn_Config_Node_Train_Optimizer_None"),
@@ -12537,44 +12622,44 @@
           ];
         return o.createElement(
           "div",
-          { className: da.ProjectTrainSettingsPage },
+          { className: _a.ProjectTrainSettingsPage },
           o.createElement(
             "div",
-            { className: da.OptionBlock },
+            { className: _a.OptionBlock },
             o.createElement(
               "div",
-              { className: da.OptionHeader },
+              { className: _a.OptionHeader },
               (0, c.Xx)("#SteamLearn_TrainSettings_FetchWorkers"),
             ),
             o.createElement(
               "div",
-              { className: da.OptionDesc },
+              { className: _a.OptionDesc },
               (0, c.Xx)("#SteamLearn_TrainSettings_FetchWorkersDesc"),
             ),
-            o.createElement(Qe, {
+            o.createElement($e, {
               label: (0, c.Xx)("#SteamLearn_TrainSettings_FetchWorkersInput"),
               fnGetInitialValue: () =>
                 e.train_config().fetch_workers().toString() || "16",
-              fnValidateValue: (e) => le(e, 0, 128),
+              fnValidateValue: (e) => de(e, 0, 128),
               fnSetValue: (t) =>
                 e.train_config().set_fetch_workers(parseInt(t)),
             }),
           ),
-          o.createElement("div", { className: da.Separator }),
+          o.createElement("div", { className: _a.Separator }),
           o.createElement(
             "div",
-            { className: da.OptionBlock },
+            { className: _a.OptionBlock },
             o.createElement(
               "div",
-              { className: da.OptionHeader },
+              { className: _a.OptionHeader },
               (0, c.Xx)("#SteamLearn_TrainSettings_FetchChunkSize"),
             ),
             o.createElement(
               "div",
-              { className: da.OptionDesc },
+              { className: _a.OptionDesc },
               (0, c.Xx)("#SteamLearn_TrainSettings_FetchChunkSizeDesc"),
             ),
-            o.createElement(Qe, {
+            o.createElement($e, {
               label: (0, c.Xx)("#SteamLearn_TrainSettings_FetchChunkSizeInput"),
               fnGetInitialValue: () => {
                 var t;
@@ -12585,26 +12670,26 @@
                     : t.toString()) || "10000"
                 );
               },
-              fnValidateValue: (e) => le(e, 100, 5e4),
+              fnValidateValue: (e) => de(e, 100, 5e4),
               fnSetValue: (t) =>
                 e.train_config().set_fetch_chunk_size(parseInt(t)),
             }),
           ),
-          o.createElement("div", { className: da.Separator }),
+          o.createElement("div", { className: _a.Separator }),
           o.createElement(
             "div",
-            { className: da.OptionBlock },
+            { className: _a.OptionBlock },
             o.createElement(
               "div",
-              { className: da.OptionHeader },
+              { className: _a.OptionHeader },
               (0, c.Xx)("#SteamLearn_TrainSettings_TrainBatchSize"),
             ),
             o.createElement(
               "div",
-              { className: da.OptionDesc },
+              { className: _a.OptionDesc },
               (0, c.Xx)("#SteamLearn_TrainSettings_TrainBatchSizeDesc"),
             ),
-            o.createElement(Qe, {
+            o.createElement($e, {
               label: (0, c.Xx)("#SteamLearn_TrainSettings_TrainBatchSizeInput"),
               fnGetInitialValue: () => {
                 var t;
@@ -12615,30 +12700,30 @@
                     : t.toString()) || "1000"
                 );
               },
-              fnValidateValue: (e) => le(e, 100, 5e3),
+              fnValidateValue: (e) => de(e, 100, 5e3),
               fnSetValue: (t) =>
                 e.train_config().set_train_batch_size(parseInt(t)),
             }),
           ),
-          o.createElement("div", { className: da.Separator }),
+          o.createElement("div", { className: _a.Separator }),
           o.createElement(
             "div",
-            { className: da.OptionBlock },
+            { className: _a.OptionBlock },
             o.createElement(
               "div",
-              { className: da.OptionHeader },
+              { className: _a.OptionHeader },
               (0, c.Xx)("#SteamLearn_TrainSettings_TrainOptimizer"),
             ),
             o.createElement(
               "div",
-              { className: da.OptionDesc },
+              { className: _a.OptionDesc },
               (0, c.yu)(
                 "#SteamLearn_TrainSettings_TrainOptimizerDesc",
                 o.createElement("ul", null),
                 o.createElement("li", null),
               ),
             ),
-            o.createElement(Ye, {
+            o.createElement(Je, {
               label: (0, c.Xx)("#SteamLearn_TrainSettings_TrainOptimizer"),
               fnGetValue: () => e.train_config().train_optimizer(),
               fnSetValue: (t) =>
@@ -12646,25 +12731,25 @@
               options: t,
             }),
           ),
-          o.createElement("div", { className: da.Separator }),
+          o.createElement("div", { className: _a.Separator }),
           o.createElement(
             "div",
-            { className: da.OptionBlock },
+            { className: _a.OptionBlock },
             o.createElement(
               "div",
-              { className: da.OptionHeader },
+              { className: _a.OptionHeader },
               (0, c.Xx)("#SteamLearn_TrainSettings_TrainLearningRate"),
             ),
             o.createElement(
               "div",
-              { className: da.OptionDesc },
+              { className: _a.OptionDesc },
               (0, c.yu)(
                 "#SteamLearn_TrainSettings_TrainLearningRateDesc",
                 o.createElement("ul", null),
                 o.createElement("li", null),
               ),
             ),
-            o.createElement(Qe, {
+            o.createElement($e, {
               label: (0, c.Xx)("#SteamLearn_TrainSettings_TrainLearningRate"),
               digitCount: 5,
               fnGetInitialValue: () => {
@@ -12676,26 +12761,26 @@
                     : t.toFixed(5)) || "0"
                 );
               },
-              fnValidateValue: (e) => de(e, 0, 1),
+              fnValidateValue: (e) => me(e, 0, 1),
               fnSetValue: (t) =>
                 e.train_config().set_train_learning_rate(parseFloat(t)),
             }),
           ),
-          o.createElement("div", { className: da.Separator }),
+          o.createElement("div", { className: _a.Separator }),
           o.createElement(
             "div",
-            { className: da.OptionBlock },
+            { className: _a.OptionBlock },
             o.createElement(
               "div",
-              { className: da.OptionHeader },
+              { className: _a.OptionHeader },
               (0, c.Xx)("#SteamLearn_TrainSettings_TrainEpochCount"),
             ),
             o.createElement(
               "div",
-              { className: da.OptionDesc },
+              { className: _a.OptionDesc },
               (0, c.Xx)("#SteamLearn_TrainSettings_TrainEpochCountDesc"),
             ),
-            o.createElement(Qe, {
+            o.createElement($e, {
               label: (0, c.Xx)(
                 "#SteamLearn_TrainSettings_TrainEpochCountInput",
               ),
@@ -12708,30 +12793,30 @@
                     : t.toString()) || "10"
                 );
               },
-              fnValidateValue: (e) => le(e, 1, 1e3),
+              fnValidateValue: (e) => de(e, 1, 1e3),
               fnSetValue: (t) =>
                 e.train_config().set_train_epoch_count(parseInt(t)),
             }),
           ),
-          o.createElement("div", { className: da.Separator }),
+          o.createElement("div", { className: _a.Separator }),
           o.createElement(
             "div",
-            { className: da.OptionBlock },
+            { className: _a.OptionBlock },
             o.createElement(
               "div",
-              { className: da.OptionHeader },
+              { className: _a.OptionHeader },
               (0, c.Xx)(
                 "#SteamLearn_TrainSettings_TrainLossImprovementThreshold",
               ),
             ),
             o.createElement(
               "div",
-              { className: da.OptionDesc },
+              { className: _a.OptionDesc },
               (0, c.Xx)(
                 "#SteamLearn_TrainSettings_TrainLossImprovementThresholdDesc",
               ),
             ),
-            o.createElement(Qe, {
+            o.createElement($e, {
               label: (0, c.Xx)(
                 "#SteamLearn_TrainSettings_TrainLossImprovementThresholdInput",
               ),
@@ -12746,7 +12831,7 @@
                     : t.toFixed(5)) || "0.00000"
                 );
               },
-              fnValidateValue: (e) => de(e),
+              fnValidateValue: (e) => me(e),
               fnSetValue: (t) => {
                 e
                   .train_config()
@@ -12755,25 +12840,25 @@
               },
             }),
           ),
-          o.createElement("div", { className: da.Separator }),
+          o.createElement("div", { className: _a.Separator }),
           o.createElement(
             "div",
-            { className: da.OptionBlock },
+            { className: _a.OptionBlock },
             o.createElement(
               "div",
-              { className: da.OptionHeader },
+              { className: _a.OptionHeader },
               (0, c.Xx)(
                 "#SteamLearn_TrainSettings_TrainNoLossImprovementEpochLimit",
               ),
             ),
             o.createElement(
               "div",
-              { className: da.OptionDesc },
+              { className: _a.OptionDesc },
               (0, c.Xx)(
                 "#SteamLearn_TrainSettings_TrainNoLossImprovementEpochLimitDesc",
               ),
             ),
-            o.createElement(Qe, {
+            o.createElement($e, {
               label: (0, c.Xx)(
                 "#SteamLearn_TrainSettings_TrainNoLossImprovementEpochLimitInput",
               ),
@@ -12788,7 +12873,7 @@
                     : t.toString()) || "2"
                 );
               },
-              fnValidateValue: (e) => le(e, 0, 100),
+              fnValidateValue: (e) => de(e, 0, 100),
               fnSetValue: (t) =>
                 e
                   .train_config()
@@ -12797,12 +12882,12 @@
           ),
         );
       };
-      var _a = a(53664),
-        ua = a(90291),
-        pa = a(56886),
-        Na = a(52942),
-        ga = a(90934);
-      function Sa(e) {
+      var pa = a(53664),
+        Na = a(90291),
+        ga = a(56886),
+        Sa = a(52942),
+        fa = a(90934);
+      function Ea(e) {
         let t = "";
         return (
           e > 3600 && ((t += `${Math.floor(e / 3600)}:`), (e %= 3600)),
@@ -12812,7 +12897,7 @@
           t
         );
       }
-      function fa(e, t) {
+      function va(e, t) {
         if (e.length < t) return e;
         let a = [];
         const n = (e.length - 1) / t;
@@ -12827,72 +12912,72 @@
         }
         return a;
       }
-      const Ea = (e) => {
-          const { nPublishedVersion: t, msgWorkingProjectConfig: a } = ue(),
+      const xa = (e) => {
+          const { nPublishedVersion: t, msgWorkingProjectConfig: a } = pe(),
             [n, r] = o.useState(!1),
             [i, d] = o.useState(""),
             m = M(e.nProjectID, e.nFetchID),
             _ = m.data;
-          (0, fe.Yz)(() => {
-            _ && (_.status(), U(e.nProjectID, e.nFetchID));
+          (0, Ee.Yz)(() => {
+            _ && (_.status(), R(e.nProjectID, e.nFetchID));
           }, 3e3);
           if (0 == t)
             return o.createElement(
               "div",
-              { className: ga.StatusMessage },
+              { className: fa.StatusMessage },
               (0, c.Xx)("#SteamLearn_Status_Fetch_Status_Unpublished"),
             );
           if (0 == e.arrAllFetchIDs.length)
             return o.createElement(
               "div",
-              { className: ga.StatusMessage },
+              { className: fa.StatusMessage },
               (0, c.Xx)("#SteamLearn_Status_Fetch_Status_None"),
             );
           let u = (0, c.Xx)("#SteamLearn_Status_Fetch_Status_Unknown"),
-            N = ga.Unknown;
+            N = fa.Unknown;
           if (_)
             switch (_.status()) {
               case 0:
                 (u = (0, c.Xx)("#SteamLearn_Status_Fetch_Status_Unknown")),
-                  (N = ga.Unknown);
+                  (N = fa.Unknown);
                 break;
               case 1:
                 (u = (0, c.Xx)("#SteamLearn_Status_Fetch_Status_Unstarted")),
-                  (N = ga.Unstarted);
+                  (N = fa.Unstarted);
                 break;
               case 5:
                 (u = (0, c.Xx)(
                   "#SteamLearn_Status_Fetch_Status_InProgress_Metadata",
                 )),
-                  (N = ga.InProgress);
+                  (N = fa.InProgress);
                 break;
               case 2:
                 (u = (0, c.Xx)(
                   "#SteamLearn_Status_Fetch_Status_InProgress_Data",
                 )),
-                  (N = ga.InProgress);
+                  (N = fa.InProgress);
                 break;
               case 3:
                 (u = (0, c.Xx)("#SteamLearn_Status_Fetch_Status_Complete")),
-                  (N = ga.Complete);
+                  (N = fa.Complete);
                 break;
               case 4:
                 (u = (0, c.Xx)("#SteamLearn_Status_Fetch_Status_Error")),
-                  (N = ga.Error);
+                  (N = fa.Error);
                 break;
               case 6:
                 (u = (0, c.Xx)(
                   "#SteamLearn_Status_Fetch_Status_InProgress_Cleanup",
                 )),
-                  (N = ga.InProgress);
+                  (N = fa.InProgress);
                 break;
               case 7:
                 (u = (0, c.Xx)("#SteamLearn_Status_Fetch_Status_CleanedUp")),
-                  (N = ga.Complete);
+                  (N = fa.Complete);
                 break;
               case 8:
                 (u = (0, c.Xx)("#SteamLearn_Status_Fetch_Status_Canceled")),
-                  (N = ga.Error);
+                  (N = fa.Error);
             }
           const f =
               _ && (5 == _.status() || 2 == _.status() || 6 == _.status()),
@@ -12908,7 +12993,7 @@
             if (_.end_time()) {
               const e = (0, c.Xx)(
                 "#SteamLearn_Status_Train_Fetch_Duration",
-                Sa(_.end_time() - _.start_time()),
+                Ea(_.end_time() - _.start_time()),
               );
               e != i && d(e);
               const t = new Date(1e3 * _.end_time());
@@ -12927,7 +13012,7 @@
               if (!isNaN(e) && !m.isFetching) {
                 const t = (0, c.Xx)(
                   "#SteamLearn_Status_Train_Fetch_TimeEstimate",
-                  Sa(e),
+                  Ea(e),
                 );
                 t != i && d(t);
               }
@@ -12946,24 +13031,24 @@
           }
           return o.createElement(
             "div",
-            { className: ga.FetchStatusPanel },
+            { className: fa.FetchStatusPanel },
             o.createElement(
               "div",
-              { className: ga.TopSection },
+              { className: fa.TopSection },
               o.createElement(
                 "div",
-                { className: ga.TopLeft },
+                { className: fa.TopLeft },
                 o.createElement(
                   "div",
-                  { className: ga.OptionBlock },
+                  { className: fa.OptionBlock },
                   o.createElement(
                     "div",
-                    { className: ga.OptionHeader },
+                    { className: fa.OptionHeader },
                     (0, c.Xx)("#SteamLearn_Status_Fetch_Status", e.nFetchID),
                   ),
                   f &&
                     o.createElement(
-                      Te.KM,
+                      Pe.KM,
                       {
                         onClick: () => (
                           e.nFetchID,
@@ -12983,14 +13068,14 @@
                     ),
                   o.createElement(
                     "div",
-                    { className: (0, s.Z)(ga.StatusString, N) },
+                    { className: (0, s.Z)(fa.StatusString, N) },
                     u,
                   ),
                 ),
               ),
               o.createElement(
                 "div",
-                { className: ga.TopRight },
+                { className: fa.TopRight },
                 o.createElement(
                   "select",
                   {
@@ -13011,29 +13096,29 @@
               _.total_rows() > 0 &&
               o.createElement(
                 "div",
-                { className: ga.StatusProgress },
+                { className: fa.StatusProgress },
                 o.createElement(
                   "div",
-                  { className: ga.RowProgress },
+                  { className: fa.RowProgress },
                   o.createElement(
                     "div",
-                    { className: ga.RowCurrent },
+                    { className: fa.RowCurrent },
                     _.total_rows_processed().toLocaleString(),
                   ),
-                  o.createElement("div", { className: ga.RowSlash }, "/"),
+                  o.createElement("div", { className: fa.RowSlash }, "/"),
                   o.createElement(
                     "div",
-                    { className: ga.RowTotal },
+                    { className: fa.RowTotal },
                     _.total_rows().toLocaleString(),
                   ),
                 ),
                 _.total_rows_written() != _.total_rows_processed() &&
                   o.createElement(
                     "div",
-                    { className: ga.RowProgress },
+                    { className: fa.RowProgress },
                     o.createElement(
                       "div",
-                      { className: ga.RowCurrent },
+                      { className: fa.RowCurrent },
                       (0, c.Xx)(
                         "#SteamLearn_Status_Train_Fetch_Written",
                         _.total_rows_written().toLocaleString(),
@@ -13042,12 +13127,12 @@
                   ),
                 o.createElement(
                   "div",
-                  { className: ga.RowProgress },
+                  { className: fa.RowProgress },
                   o.createElement(
                     "div",
-                    { className: ga.ProgressBar },
+                    { className: fa.ProgressBar },
                     o.createElement("div", {
-                      className: ga.ProgressBarInner,
+                      className: fa.ProgressBarInner,
                       style: {
                         width:
                           (100 * _.total_rows_processed()) / _.total_rows() +
@@ -13058,21 +13143,21 @@
                   x &&
                     o.createElement(
                       "div",
-                      { className: ga.ProgressPct },
+                      { className: fa.ProgressPct },
                       `${((100 * _.total_rows_processed()) / _.total_rows() - 0.5).toFixed(0)}%`,
                     ),
                 ),
-                o.createElement("div", { className: ga.RowProgress }, i),
-                o.createElement("div", { className: ga.RowProgress }, v),
+                o.createElement("div", { className: fa.RowProgress }, i),
+                o.createElement("div", { className: fa.RowProgress }, v),
                 o.createElement(
                   "div",
-                  { className: ga.ShowWorkers },
+                  { className: fa.ShowWorkers },
                   o.createElement(
                     "div",
                     {
                       className: (0, s.Z)(
-                        ga.WorkersContainer,
-                        n && ga.Expanded,
+                        fa.WorkersContainer,
+                        n && fa.Expanded,
                       ),
                       style: {
                         height: (n ? 20 * _.workers().length : 0) + "px",
@@ -13081,17 +13166,17 @@
                     _.workers().map((e, t) =>
                       o.createElement(
                         "div",
-                        { className: ga.Worker, key: `$worker_${t}` },
+                        { className: fa.Worker, key: `$worker_${t}` },
                         o.createElement(
                           "div",
-                          { className: ga.WorkerNumber },
+                          { className: fa.WorkerNumber },
                           t + 1,
                         ),
                         o.createElement(
                           "div",
-                          { className: ga.ProgressBar },
+                          { className: fa.ProgressBar },
                           o.createElement("div", {
-                            className: ga.ProgressBarInner,
+                            className: fa.ProgressBarInner,
                             style: {
                               width:
                                 (100 * e.rows_processed()) /
@@ -13107,7 +13192,7 @@
                     o.createElement(
                       "div",
                       {
-                        className: ga.ShowWorkersTextButton,
+                        className: fa.ShowWorkersTextButton,
                         onClick: () => r(!n),
                       },
                       (0, c.Xx)(
@@ -13120,7 +13205,7 @@
               ),
           );
         },
-        va = (e) => {
+        ha = (e) => {
           let t, a, n, r;
           for (const t of e.lines) {
             const e = Math.min(...t.data.map((e) => e[t.strDataLabel])),
@@ -13135,15 +13220,15 @@
             (a = Math.ceil(100 * s) / 100),
             o.createElement(
               "div",
-              { className: ga.TrainGraph },
+              { className: fa.TrainGraph },
               o.createElement(
                 "div",
-                { className: ga.GraphTitle },
+                { className: fa.GraphTitle },
                 e.strHeading,
               ),
               o.createElement(
                 "div",
-                { className: ga.LineValues },
+                { className: fa.LineValues },
                 e.lines.map((e, t) =>
                   null == e.nFinalValue
                     ? null
@@ -13151,23 +13236,23 @@
                         "div",
                         {
                           key: `Legend_${e.strDataLabel}_${t}`,
-                          className: ga.LegendValue,
+                          className: fa.LegendValue,
                           style: { color: e.color },
                         },
                         `${e.strDataLabel}: `,
                         o.createElement(
                           "span",
-                          { className: ga.Value },
+                          { className: fa.Value },
                           "" + Math.round(1e4 * e.nFinalValue) / 1e4,
                         ),
                       ),
                 ),
               ),
               o.createElement(
-                _a.w,
+                pa.w,
                 { width: 500, height: 300 },
                 e.lines.map((t, a) =>
-                  o.createElement(ua.K, {
+                  o.createElement(Na.K, {
                     key: `${e.strHeading}_${t.strDataLabel}_${a}`,
                     type: "number",
                     dataKey: "index",
@@ -13178,13 +13263,13 @@
                     tickCount: t.data.length <= 10 ? t.data.length : void 0,
                   }),
                 ),
-                o.createElement(pa.B, {
+                o.createElement(ga.B, {
                   type: "number",
                   tickCount: 5,
                   domain: [t, a],
                 }),
                 e.lines.map((e, t) =>
-                  o.createElement(Na.x, {
+                  o.createElement(Sa.x, {
                     key: `${e.strDataLabel}_${t}`,
                     type: "monotone",
                     stroke: e.color,
@@ -13198,22 +13283,22 @@
             )
           );
         };
-      function xa(e) {
+      function La(e) {
         if (null != e)
           return e.length > 0 ? e.reduce((e, t) => e + t) / e.length : 0;
       }
-      const ha = (e) => {
+      const Ca = (e) => {
           const {
               nPublishedVersion: t,
               msgProject: a,
               msgWorkingProjectConfig: n,
               msgWorkingProject: r,
-            } = ue(),
+            } = pe(),
             i = z(e.nProjectID, e.nTrainID),
             [d, m] = o.useState(-1),
             [_, u] = o.useState(""),
             N = i.data;
-          (0, fe.Yz)(() => {
+          (0, Ee.Yz)(() => {
             if (N)
               switch (N.status()) {
                 case 0:
@@ -13221,10 +13306,10 @@
                 case 1:
                 case 6:
                 default:
-                  R(e.nProjectID, e.nTrainID);
+                  K(e.nProjectID, e.nTrainID);
                   break;
                 case 3:
-                  N.active() && !N.live() && R(e.nProjectID, e.nTrainID);
+                  N.active() && !N.live() && K(e.nProjectID, e.nTrainID);
               }
           }, 3e3),
             o.useEffect(() => {
@@ -13261,52 +13346,52 @@
           if (0 == t)
             return o.createElement(
               "div",
-              { className: ga.StatusMessage },
+              { className: fa.StatusMessage },
               (0, c.Xx)("#SteamLearn_Status_Train_Status_Unpublished"),
             );
           const v = [...new Set(e.arrAllTrainIDs)];
           if (0 == v.length)
             return o.createElement(
               "div",
-              { className: ga.StatusMessage },
+              { className: fa.StatusMessage },
               (0, c.Xx)("#SteamLearn_Status_Train_Status_None"),
             );
           let x,
             h,
-            C = (0, c.Xx)("#SteamLearn_Status_Train_Status_Unknown"),
-            L = ga.Unknown;
+            L = (0, c.Xx)("#SteamLearn_Status_Train_Status_Unknown"),
+            C = fa.Unknown;
           if (N)
             switch (N.status()) {
               case 0:
-                (C = (0, c.Xx)("#SteamLearn_Status_Train_Status_Unknown")),
-                  (L = ga.Unknown);
+                (L = (0, c.Xx)("#SteamLearn_Status_Train_Status_Unknown")),
+                  (C = fa.Unknown);
                 break;
               case 1:
-                (C = (0, c.Xx)("#SteamLearn_Status_Train_Status_Unstarted")),
-                  (L = ga.Unstarted);
+                (L = (0, c.Xx)("#SteamLearn_Status_Train_Status_Unstarted")),
+                  (C = fa.Unstarted);
                 break;
               case 2:
-                (C = (0, c.Xx)("#SteamLearn_Status_Train_Status_InProgress")),
-                  (L = ga.InProgress);
+                (L = (0, c.Xx)("#SteamLearn_Status_Train_Status_InProgress")),
+                  (C = fa.InProgress);
                 break;
               case 3:
-                (C = (0, c.Xx)("#SteamLearn_Status_Train_Status_Complete")),
-                  (L = ga.Complete);
+                (L = (0, c.Xx)("#SteamLearn_Status_Train_Status_Complete")),
+                  (C = fa.Complete);
                 break;
               case 4:
-                (C = (0, c.Xx)("#SteamLearn_Status_Train_Status_Error")),
-                  (L = ga.Error);
+                (L = (0, c.Xx)("#SteamLearn_Status_Train_Status_Error")),
+                  (C = fa.Error);
                 break;
               case 5:
-                (C = (0, c.Xx)("#SteamLearn_Status_Train_Status_StoppedEarly")),
-                  (L = ga.Complete);
+                (L = (0, c.Xx)("#SteamLearn_Status_Train_Status_StoppedEarly")),
+                  (C = fa.Complete);
                 break;
               case 6:
-                (C = (0, c.Xx)("#SteamLearn_Status_Train_Status_WaitingOnAS")),
-                  (L = ga.InProgress);
+                (L = (0, c.Xx)("#SteamLearn_Status_Train_Status_WaitingOnAS")),
+                  (C = fa.InProgress);
             }
           i.isLoading &&
-            (C = (0, c.Xx)("#SteamLearn_Status_Train_Status_Loading"));
+            (L = (0, c.Xx)("#SteamLearn_Status_Train_Status_Loading"));
           let b = 0,
             D = 0,
             T = 0,
@@ -13328,7 +13413,7 @@
                 if (e.end_time()) {
                   const t = (0, c.Xx)(
                     "#SteamLearn_Status_Train_BatchCurrent_EpochDuration",
-                    Sa(e.end_time() - e.start_time()),
+                    Ea(e.end_time() - e.start_time()),
                   );
                   t != _ && u(t);
                 } else if (!i.isFetching) {
@@ -13336,16 +13421,16 @@
                   if (!isNaN(e)) {
                     const t = (0, c.Xx)(
                       "#SteamLearn_Status_Train_BatchCurrent_TimeEstimate",
-                      Sa(e),
+                      Ea(e),
                     );
                     t != _ && u(t);
                   }
                 }
-                const s = fa(
+                const s = va(
                     e.train_batches().map((e) => e.loss()),
                     X,
                   ).map((e, t) => ({ index: t, Train: e })),
-                  l = fa(
+                  l = va(
                     e.validate_batches().map((e) => e.loss()),
                     X,
                   ).map((e, t) => ({ index: t, Validate: e })),
@@ -13378,12 +13463,12 @@
                     nFinalValue: null == m ? void 0 : m.loss(),
                   },
                 ];
-                const p = fa(
-                    e.train_batches().map((e) => xa(e.accuracy())),
+                const p = va(
+                    e.train_batches().map((e) => La(e.accuracy())),
                     X,
                   ).map((e, t) => ({ index: t, Train: e })),
-                  g = fa(
-                    e.validate_batches().map((e) => xa(e.accuracy())),
+                  g = va(
+                    e.validate_batches().map((e) => La(e.accuracy())),
                     X,
                   ).map((e, t) => ({ index: t, Validate: e }));
                 h = [
@@ -13393,7 +13478,7 @@
                     data: p,
                     color: "#547d9e",
                     bAxisLine: !1,
-                    nFinalValue: xa(null == d ? void 0 : d.accuracy()),
+                    nFinalValue: La(null == d ? void 0 : d.accuracy()),
                   },
                   {
                     strDataLabel: "Validate",
@@ -13404,7 +13489,7 @@
                     data: g,
                     color: "#609e54",
                     bAxisLine: !1,
-                    nFinalValue: xa(null == m ? void 0 : m.accuracy()),
+                    nFinalValue: La(null == m ? void 0 : m.accuracy()),
                   },
                 ];
               }
@@ -13433,7 +13518,7 @@
                           ]),
                       {
                         index: t + 1,
-                        Value: xa(null == a ? void 0 : a.accuracy()),
+                        Value: La(null == a ? void 0 : a.accuracy()),
                       }
                     );
                   })
@@ -13461,9 +13546,9 @@
                   },
                 ]));
             }
-          const V = N && 3 == N.status(),
+          const I = N && 3 == N.status(),
             y = N && N.live(),
-            I = N && N.active(),
+            V = N && N.active(),
             j = N && 2 == N.status(),
             O =
               a && r && r.serializeBase64String() != a.serializeBase64String();
@@ -13481,47 +13566,47 @@
               });
           return o.createElement(
             "div",
-            { className: ga.TrainStatusPanel },
+            { className: fa.TrainStatusPanel },
             o.createElement(
               "div",
-              { className: ga.TopSection },
+              { className: fa.TopSection },
               o.createElement(
                 "div",
-                { className: ga.TopLeft },
+                { className: fa.TopLeft },
                 o.createElement(
                   "div",
-                  { className: ga.OptionBlock },
+                  { className: fa.OptionBlock },
                   o.createElement(
                     "div",
-                    { className: ga.OptionHeader },
+                    { className: fa.OptionHeader },
                     (0, c.Xx)("#SteamLearn_Status_Train_Status", e.nTrainID),
                   ),
                   o.createElement(
                     "div",
-                    { className: (0, s.Z)(ga.StatusString, L) },
-                    C,
+                    { className: (0, s.Z)(fa.StatusString, C) },
+                    L,
                   ),
                   !O &&
-                    V &&
+                    I &&
                     !y &&
-                    !I &&
+                    !V &&
                     o.createElement(
-                      Te.KM,
+                      Pe.KM,
                       { onClick: () => E(e.nTrainID, !1) },
                       (0, c.Xx)("#SteamLearn_Status_SetInferenceVersion"),
                     ),
                   O &&
-                    V &&
+                    I &&
                     !y &&
-                    !I &&
+                    !V &&
                     o.createElement(
                       "div",
-                      { className: ga.WarningMessage },
+                      { className: fa.WarningMessage },
                       (0, c.Xx)("#SteamLearn_Status_SaveOrDiscardFirst"),
                     ),
                   j &&
                     o.createElement(
-                      Te.KM,
+                      Pe.KM,
                       {
                         onClick: () => {
                           return (
@@ -13547,22 +13632,22 @@
                       "div",
                       {
                         onClick: () => E(e.nTrainID, !0),
-                        className: ga.TrainLive,
+                        className: fa.TrainLive,
                       },
                       (0, c.Xx)("#SteamLearn_Status_InferenceLive"),
                     ),
-                  I &&
+                  V &&
                     !y &&
                     o.createElement(
                       "div",
-                      { className: ga.TrainLive },
+                      { className: fa.TrainLive },
                       (0, c.Xx)("#SteamLearn_Status_InferenceActive"),
                     ),
                 ),
               ),
               o.createElement(
                 "div",
-                { className: ga.TopRight },
+                { className: fa.TopRight },
                 o.createElement(
                   "select",
                   {
@@ -13582,11 +13667,11 @@
             N &&
               o.createElement(
                 "div",
-                { className: ga.EpochSelectorSection },
+                { className: fa.EpochSelectorSection },
                 o.createElement(
                   "select",
                   {
-                    className: ga.EpochSelector,
+                    className: fa.EpochSelector,
                     value: d,
                     onChange: (e) => m(parseInt(e.target.value)),
                   },
@@ -13603,24 +13688,24 @@
               0 != d &&
               o.createElement(
                 "div",
-                { className: ga.BatchStatus },
+                { className: fa.BatchStatus },
                 b > 0 &&
                   o.createElement(
                     "div",
-                    { className: ga.BatchStatusRow },
+                    { className: fa.BatchStatusRow },
                     o.createElement(
                       "div",
-                      { className: ga.PhaseLabel },
+                      { className: fa.PhaseLabel },
                       (0, c.Xx)("#SteamLearn_Status_Train_BatchCurrent_Train"),
                     ),
                     D > 0 &&
                       b == D &&
                       o.createElement(
                         "div",
-                        { className: ga.PhaseValues },
+                        { className: fa.PhaseValues },
                         o.createElement(
                           "span",
-                          { className: ga.Total },
+                          { className: fa.Total },
                           (0, c.Xx)("#SteamLearn_Status_Train_Status_Complete"),
                         ),
                       ),
@@ -13628,12 +13713,12 @@
                       b != D &&
                       o.createElement(
                         "div",
-                        { className: ga.PhaseValues },
+                        { className: fa.PhaseValues },
                         (100 * b).toLocaleString(),
                         " / ",
                         o.createElement(
                           "span",
-                          { className: ga.Total },
+                          { className: fa.Total },
                           (100 * D).toLocaleString(),
                         ),
                       ),
@@ -13641,10 +13726,10 @@
                 T > 0 &&
                   o.createElement(
                     "div",
-                    { className: ga.BatchStatusRow },
+                    { className: fa.BatchStatusRow },
                     o.createElement(
                       "div",
-                      { className: ga.PhaseLabel },
+                      { className: fa.PhaseLabel },
                       (0, c.Xx)(
                         "#SteamLearn_Status_Train_BatchCurrent_Validate",
                       ),
@@ -13653,10 +13738,10 @@
                       T == P &&
                       o.createElement(
                         "div",
-                        { className: ga.PhaseValues },
+                        { className: fa.PhaseValues },
                         o.createElement(
                           "span",
-                          { className: ga.Total },
+                          { className: fa.Total },
                           (0, c.Xx)("#SteamLearn_Status_Train_Status_Complete"),
                         ),
                       ),
@@ -13664,33 +13749,33 @@
                       T != P &&
                       o.createElement(
                         "div",
-                        { className: ga.PhaseValues },
+                        { className: fa.PhaseValues },
                         (100 * T).toLocaleString(),
                         " / ",
                         o.createElement(
                           "span",
-                          { className: ga.Total },
+                          { className: fa.Total },
                           (100 * P).toLocaleString(),
                         ),
                       ),
                   ),
-                o.createElement("div", { className: ga.BatchStatusRow }, _),
+                o.createElement("div", { className: fa.BatchStatusRow }, _),
               ),
             N &&
               x &&
               h &&
               o.createElement(
                 "div",
-                { className: ga.CurrentEpoch },
+                { className: fa.CurrentEpoch },
                 o.createElement(
                   "div",
-                  { className: ga.GraphPair },
-                  o.createElement(va, {
+                  { className: fa.GraphPair },
+                  o.createElement(ha, {
                     strHeading: (0, c.Xx)("#SteamLearn_Status_Train_Axis_Loss"),
                     lines: x,
                     fAxisPaddingPct: 25,
                   }),
-                  o.createElement(va, {
+                  o.createElement(ha, {
                     strHeading: (0, c.Xx)(
                       "#SteamLearn_Status_Train_Axis_Accuracy",
                     ),
@@ -13701,20 +13786,167 @@
               ),
           );
         },
-        Ca = () => {
-          const { nProjectID: e } = ue();
+        ba = () => {
+          const { nProjectID: e } = pe();
           return o.createElement(
             "div",
-            { className: ga.ProjectTrainStatusPage },
+            { className: fa.ProjectTrainStatusPage },
             o.createElement(
               "div",
-              { className: ga.ProjectTrainStatusBody },
-              o.createElement(La, null),
+              { className: fa.ProjectTrainStatusBody },
+              o.createElement(Ia, null),
             ),
           );
+        };
+      var Da;
+      !(function (e) {
+        (e[(e.NONE = 0)] = "NONE"),
+          (e[(e.MAIN = 1)] = "MAIN"),
+          (e[(e.FETCH_WORKERS = 2)] = "FETCH_WORKERS"),
+          (e[(e.GPU = 3)] = "GPU");
+      })(Da || (Da = {}));
+      const Ta = (e) => {
+          const { nProjectID: t } = pe(),
+            [a, n] = o.useState(Da.NONE);
+          return o.createElement(
+            "div",
+            { className: fa.LogSection },
+            o.createElement(
+              "div",
+              { className: fa.ButtonRow },
+              o.createElement(
+                Pe.KM,
+                { onClick: () => n(a == Da.MAIN ? Da.NONE : Da.MAIN) },
+                (0, c.Xx)(
+                  a == Da.MAIN
+                    ? "#SteamLearn_Status_LogMain_Hide"
+                    : "#SteamLearn_Status_LogMain_Show",
+                ),
+              ),
+              o.createElement(
+                Pe.KM,
+                {
+                  onClick: () =>
+                    n(a == Da.FETCH_WORKERS ? Da.NONE : Da.FETCH_WORKERS),
+                },
+                (0, c.Xx)(
+                  a == Da.FETCH_WORKERS
+                    ? "#SteamLearn_Status_LogFetchWorkers_Hide"
+                    : "#SteamLearn_Status_LogFetchWorkers_Show",
+                ),
+              ),
+              o.createElement(
+                Pe.KM,
+                { onClick: () => n(a == Da.GPU ? Da.NONE : Da.GPU) },
+                (0, c.Xx)(
+                  a == Da.GPU
+                    ? "#SteamLearn_Status_LogTrain_Hide"
+                    : "#SteamLearn_Status_LogTrain_Show",
+                ),
+              ),
+            ),
+            a == Da.MAIN &&
+              o.createElement(Pa, {
+                nFetchID: e.nFetchID,
+                nTrainID: e.nTrainID,
+              }),
+            a == Da.FETCH_WORKERS &&
+              o.createElement(Xa, {
+                nFetchID: e.nFetchID,
+                nTrainID: e.nTrainID,
+              }),
+            a == Da.GPU &&
+              o.createElement(ka, {
+                nFetchID: e.nFetchID,
+                nTrainID: e.nTrainID,
+              }),
+          );
         },
-        La = () => {
-          const { nProjectID: e, nPublishedVersion: t } = ue(),
+        Pa = (e) => {
+          const { nProjectID: t } = pe(),
+            a = W(t, e.nFetchID, e.nTrainID),
+            n = a.data;
+          return a.isLoading
+            ? o.createElement(
+                "div",
+                { className: fa.LogContainer },
+                (0, c.Xx)("#SteamLearn_Status_LogTrain_Status_Loading"),
+              )
+            : a.isSuccess && null != n
+              ? o.createElement(
+                  "div",
+                  { className: fa.LogContainer },
+                  n.main_log(),
+                )
+              : o.createElement(
+                  "div",
+                  { className: fa.LogContainer },
+                  (0, c.Xx)("#SteamLearn_Status_LogTrain_Status_Failed"),
+                );
+        },
+        Xa = (e) => {
+          const { nProjectID: t } = pe(),
+            a = W(t, e.nFetchID, e.nTrainID),
+            n = a.data;
+          return a.isLoading
+            ? o.createElement(
+                "div",
+                { className: fa.LogContainer },
+                (0, c.Xx)("#SteamLearn_Status_LogTrain_Status_Loading"),
+              )
+            : a.isSuccess && null != n
+              ? o.createElement(
+                  "div",
+                  { className: fa.WorkerLogs },
+                  n
+                    .fetch_worker_logs()
+                    .map((e, t) =>
+                      o.createElement(
+                        "div",
+                        { className: fa.WorkerLog, key: `worker_log_${t}` },
+                        o.createElement(
+                          "div",
+                          { className: fa.WorkerLogHeader },
+                          (0, c.Xx)("#SteamLearn_Status_LogTrain_Worker", t),
+                        ),
+                        o.createElement(
+                          "div",
+                          { className: fa.LogContainer },
+                          e,
+                        ),
+                      ),
+                    ),
+                )
+              : o.createElement(
+                  "div",
+                  { className: fa.LogContainer },
+                  (0, c.Xx)("#SteamLearn_Status_LogTrain_Status_Failed"),
+                );
+        },
+        ka = (e) => {
+          const { nProjectID: t } = pe(),
+            a = W(t, e.nFetchID, e.nTrainID),
+            n = a.data;
+          return a.isLoading
+            ? o.createElement(
+                "div",
+                { className: fa.LogContainer },
+                (0, c.Xx)("#SteamLearn_Status_LogTrain_Status_Loading"),
+              )
+            : a.isSuccess && null != n
+              ? o.createElement(
+                  "div",
+                  { className: fa.LogContainer },
+                  n.gpu_log(),
+                )
+              : o.createElement(
+                  "div",
+                  { className: fa.LogContainer },
+                  (0, c.Xx)("#SteamLearn_Status_LogTrain_Status_Failed"),
+                );
+        },
+        Ia = () => {
+          const { nProjectID: e, nPublishedVersion: t } = pe(),
             [a, n] = o.useState(0),
             [r, i] = o.useState(0),
             s = G(e, t),
@@ -13742,9 +13974,9 @@
               : s.isSuccess && c.isSuccess
                 ? o.createElement(
                     "div",
-                    { className: ga.ProjectTrain },
+                    { className: fa.ProjectTrain },
                     a > 0 &&
-                      o.createElement(Ea, {
+                      o.createElement(xa, {
                         nProjectID: e,
                         nFetchID: a,
                         arrAllFetchIDs: l.versions(),
@@ -13752,8 +13984,8 @@
                           n(e);
                         },
                       }),
-                    o.createElement("div", { className: ga.Separator }),
-                    o.createElement(ha, {
+                    o.createElement("div", { className: fa.Separator }),
+                    o.createElement(Ca, {
                       nProjectID: e,
                       nTrainID: r,
                       arrAllTrainIDs: d.versions(),
@@ -13761,20 +13993,22 @@
                         i(e);
                       },
                     }),
+                    o.createElement("div", { className: fa.Separator }),
+                    o.createElement(Ta, { nFetchID: a, nTrainID: r }),
                   )
                 : null
           );
         };
-      var ba = a(57024),
-        Da = a(57378);
-      const Ta = () => {
+      var ya = a(57024),
+        Va = a(57378);
+      const ja = () => {
         const {
             msgProject: e,
             msgWorkingProject: t,
             msgWorkingProjectConfig: a,
             nProjectID: n,
             nPublishedVersion: i,
-          } = ue(),
+          } = pe(),
           [s, d] = o.useState(0),
           [m, _] = o.useState(0),
           u = (0, r.k6)(),
@@ -13784,8 +14018,8 @@
           v = f.data,
           x = N.isLoading || f.isLoading,
           h = i > 0,
-          C = e && t && t.serializeBase64String() == e.serializeBase64String(),
-          L = [
+          L = e && t && t.serializeBase64String() == e.serializeBase64String(),
+          C = [
             {
               label: (0, c.Xx)("#SteamLearn_ScheduledTrain_IntervalNone"),
               value: 0,
@@ -13845,42 +14079,42 @@
             1 != a.scheduled_train_config().scheduled_type();
         return o.createElement(
           "div",
-          { className: Da.ProjectTrainPage },
+          { className: Va.ProjectTrainPage },
           o.createElement(
             "div",
-            { className: Da.OptionBlock },
+            { className: Va.OptionBlock },
             o.createElement(
               "div",
-              { className: Da.OptionHeader },
+              { className: Va.OptionHeader },
               (0, c.Xx)("#SteamLearn_ManualTrain_Heading"),
             ),
             o.createElement(
               "div",
-              { className: Da.OptionDesc },
+              { className: Va.OptionDesc },
               (0, c.Xx)("#SteamLearn_ManualTrain_Desc"),
             ),
             x &&
               o.createElement(
                 "div",
-                { className: Da.StatusMessage },
+                { className: Va.StatusMessage },
                 (0, c.Xx)("#SteamLearn_ManualTrain_Loading"),
               ),
             !x &&
               !h &&
               o.createElement(
                 "div",
-                { className: Da.StatusMessage },
+                { className: Va.StatusMessage },
                 (0, c.Xx)("#SteamLearn_ManualTrain_Unpublished"),
               ),
             !x &&
               h &&
               o.createElement(
                 "div",
-                { className: Da.FetchTrainOptionContainer },
+                { className: Va.FetchTrainOptionContainer },
                 o.createElement(
                   "select",
                   {
-                    className: Da.TrainDropdown,
+                    className: Va.TrainDropdown,
                     value: s,
                     onChange: (e) => d(parseInt(e.target.value)),
                   },
@@ -13900,7 +14134,7 @@
                 o.createElement(
                   "select",
                   {
-                    className: Da.TrainDropdown,
+                    className: Va.TrainDropdown,
                     value: m,
                     onChange: (e) => _(parseInt(e.target.value)),
                   },
@@ -13921,10 +14155,10 @@
                 ),
               ),
             !x &&
-              C &&
+              L &&
               h &&
               o.createElement(
-                Te.KM,
+                Pe.KM,
                 {
                   onClick: () =>
                     (0, l.mG)(void 0, void 0, void 0, function* () {
@@ -13958,9 +14192,9 @@
                       );
                       r.BIsValid() &&
                         1 == r.GetEResult() &&
-                        ($(t.project_id()),
+                        (Y(t.project_id()),
                         u.push(
-                          Va.SteamLearnProjectTrainStatus(
+                          Ha.SteamLearnProjectTrainStatus(
                             a.project_id(),
                             a.published_version(),
                           ),
@@ -13969,35 +14203,35 @@
                 },
                 (0, c.Xx)("#SteamLearn_ManualTrain_Start"),
               ),
-            !C &&
+            !L &&
               o.createElement(
                 "div",
-                { className: Da.SaveWarning },
+                { className: Va.SaveWarning },
                 (0, c.Xx)("#SteamLearn_ManualTrain_NeedSave"),
               ),
           ),
-          o.createElement("div", { className: Da.Separator }),
+          o.createElement("div", { className: Va.Separator }),
           o.createElement(
             "div",
-            { className: Da.OptionBlock },
+            { className: Va.OptionBlock },
             o.createElement(
               "div",
-              { className: Da.OptionHeader },
+              { className: Va.OptionHeader },
               (0, c.Xx)("#SteamLearn_ScheduledTrain_Heading"),
             ),
             o.createElement(
               "div",
-              { className: Da.OptionDesc },
+              { className: Va.OptionDesc },
               (0, c.Xx)("#SteamLearn_ScheduledTrain_Heading_Disc"),
             ),
-            o.createElement(Ye, {
+            o.createElement(Je, {
               label: (0, c.Xx)("#SteamLearn_ScheduledTrain_Frequency"),
               fnGetValue: () => a.scheduled_train_config().scheduled_type(),
               fnSetValue: (e) =>
                 a.scheduled_train_config().set_scheduled_type(parseInt(e)),
-              options: L,
+              options: C,
             }),
-            o.createElement(Qe, {
+            o.createElement($e, {
               label: (0, c.Xx)("#SteamLearn_ScheduledTrain_DayOfMonth"),
               hidden: 4 != a.scheduled_train_config().scheduled_type(),
               fnGetInitialValue: () => {
@@ -14010,13 +14244,13 @@
                     : e.toString()) || "1"
                 );
               },
-              fnValidateValue: (e) => le(e, 1, 31),
+              fnValidateValue: (e) => de(e, 1, 31),
               fnSetValue: (e) =>
                 a
                   .scheduled_train_config()
                   .set_scheduled_day_of_month(parseInt(e)),
             }),
-            o.createElement(Ye, {
+            o.createElement(Je, {
               label: (0, c.Xx)("#SteamLearn_ScheduledTrain_DayOfWeek"),
               hidden: 3 != a.scheduled_train_config().scheduled_type(),
               fnGetValue: () =>
@@ -14027,7 +14261,7 @@
                   .set_scheduled_day_of_week(parseInt(e)),
               options: b,
             }),
-            o.createElement(Qe, {
+            o.createElement($e, {
               label: (0, c.Xx)("#SteamLearn_ScheduledTrain_Hour"),
               hidden: !T,
               fnGetInitialValue: () => {
@@ -14039,11 +14273,11 @@
                     : e.toString()) || "0"
                 );
               },
-              fnValidateValue: (e) => le(e, 0, 23),
+              fnValidateValue: (e) => de(e, 0, 23),
               fnSetValue: (e) =>
                 a.scheduled_train_config().set_scheduled_hour(parseInt(e)),
             }),
-            o.createElement(Qe, {
+            o.createElement($e, {
               label: (0, c.Xx)("#SteamLearn_ScheduledTrain_Minute"),
               hidden: !D,
               fnGetInitialValue: () => {
@@ -14056,11 +14290,11 @@
                     : e.toString()) || "0"
                 );
               },
-              fnValidateValue: (e) => le(e, 0, 59),
+              fnValidateValue: (e) => de(e, 0, 59),
               fnSetValue: (e) =>
                 a.scheduled_train_config().set_scheduled_minute(parseInt(e)),
             }),
-            o.createElement(Qe, {
+            o.createElement($e, {
               label: (0, c.Xx)("#SteamLearn_ScheduledTrain_ActivateThreshold"),
               hidden: 0 == a.scheduled_train_config().scheduled_type(),
               digitCount: 2,
@@ -14075,7 +14309,7 @@
                     : e.toFixed(2)) || "0.00"
                 );
               },
-              fnValidateValue: (e) => de(e, 0, 1),
+              fnValidateValue: (e) => me(e, 0, 1),
               fnSetValue: (e) =>
                 a
                   .scheduled_train_config()
@@ -14084,8 +14318,8 @@
           ),
         );
       };
-      var Pa = a(60858);
-      const Xa = (e) => {
+      var Oa = a(60858);
+      const Ba = (e) => {
           if (!e.msgEvent)
             return o.createElement(
               "div",
@@ -14099,13 +14333,13 @@
             );
           return o.createElement(
             "div",
-            { className: Pa.LiveTrain },
+            { className: Oa.LiveTrain },
             o.createElement(
               "div",
-              { className: Pa.LeftSide },
+              { className: Oa.LeftSide },
               o.createElement(
                 "div",
-                { className: Pa.Time },
+                { className: Oa.Time },
                 new Date(1e3 * e.msgEvent.timestamp()).toLocaleString(
                   c.Yt.GetPreferredLocales(),
                   {
@@ -14119,7 +14353,7 @@
               ),
               o.createElement(
                 "div",
-                { className: Pa.TrainID },
+                { className: Oa.TrainID },
                 (0, c.Xx)(
                   "#SteamLearn_Event_TrainID",
                   e.msgEvent.train_ended().train_id(),
@@ -14127,7 +14361,7 @@
               ),
               o.createElement(
                 "div",
-                { className: Pa.LossAccuracy },
+                { className: Oa.LossAccuracy },
                 (0, c.Xx)(
                   "#SteamLearn_Event_CompletedDetails",
                   e.msgEvent.train_ended().loss().toFixed(4),
@@ -14135,17 +14369,17 @@
                 ),
               ),
             ),
-            o.createElement("div", { className: Pa.RightSide }),
+            o.createElement("div", { className: Oa.RightSide }),
           );
         },
-        ka = () => {
+        wa = () => {
           var e, t;
-          const { msgWorkingProjectConfig: a } = ue(),
+          const { msgWorkingProjectConfig: a } = pe(),
             n = new Date(),
             r = new Date();
           r.setDate(n.getDate() - 30);
           const i = 60 * Math.floor(n.getTime() / 6e4),
-            s = W(60 * Math.floor(r.getTime() / 6e4), i),
+            s = U(60 * Math.floor(r.getTime() / 6e4), i),
             d = s.data,
             m = F().data,
             [_, u] = o.useState(void 0),
@@ -14205,7 +14439,7 @@
                         (s.includes(e.train_ended().train_id()) ||
                           s.push(e.train_ended().train_id()));
                   }
-                  const c = yield K(a.project_id(), i, s);
+                  const c = yield Z(a.project_id(), i, s);
                   let l = new Map(),
                     m = new Map();
                   for (const e of c.fetch_responses()) l.set(e.fetch_id(), e);
@@ -14235,38 +14469,38 @@
             }, [d, a]),
             o.createElement(
               "div",
-              { className: Pa.ProjectOverviewPage },
+              { className: Oa.ProjectOverviewPage },
               s.isLoading &&
                 o.createElement(
                   "div",
-                  { className: Pa.Loading },
+                  { className: Oa.Loading },
                   (0, c.Xx)("#SteamLearn_LoadingEvents"),
                 ),
               s.isSuccess &&
                 o.createElement(
                   "div",
-                  { className: Pa.OverviewContainer },
+                  { className: Oa.OverviewContainer },
                   o.createElement(
                     "div",
-                    { className: Pa.LeftSide },
+                    { className: Oa.LeftSide },
                     o.createElement(
                       "div",
-                      { className: Pa.LiveTrainSection },
+                      { className: Oa.LiveTrainSection },
                       o.createElement(
                         "div",
-                        { className: Pa.LiveTrainHeader },
+                        { className: Oa.LiveTrainHeader },
                         (0, c.Xx)("#SteamLearn_Project_Overview_LiveTrain"),
                       ),
-                      !f && o.createElement(Xa, { msgEvent: _ }),
+                      !f && o.createElement(Ba, { msgEvent: _ }),
                     ),
-                    o.createElement("div", { className: Pa.Separator }),
+                    o.createElement("div", { className: Oa.Separator }),
                     p.length > 0 &&
                       o.createElement(
                         "div",
-                        { className: Pa.InProgressTrains },
+                        { className: Oa.InProgressTrains },
                         o.createElement(
                           "div",
-                          { className: Pa.InProgressTrainsHeader },
+                          { className: Oa.InProgressTrainsHeader },
                           (0, c.Xx)(
                             "#SteamLearn_Project_Overview_InProgressTrain",
                           ),
@@ -14282,14 +14516,14 @@
                               bProjectSpecific: !0,
                             }),
                           ),
-                        o.createElement("div", { className: Pa.Separator }),
+                        o.createElement("div", { className: Oa.Separator }),
                       ),
                     o.createElement(
                       "div",
-                      { className: Pa.AllTrains },
+                      { className: Oa.AllTrains },
                       o.createElement(
                         "div",
-                        { className: Pa.AllTrainsHeader },
+                        { className: Oa.AllTrainsHeader },
                         (0, c.Xx)("#SteamLearn_Project_Overview_AllTrains"),
                       ),
                       f &&
@@ -14301,7 +14535,7 @@
                       !f &&
                         o.createElement(
                           "div",
-                          { className: Pa.EventList },
+                          { className: Oa.EventList },
                           g
                             .slice()
                             .reverse()
@@ -14318,29 +14552,29 @@
                   ),
                   o.createElement(
                     "div",
-                    { className: Pa.RightSide },
+                    { className: Oa.RightSide },
                     m &&
                       o.createElement(
                         "div",
-                        { className: Pa.AccessTokensContainer },
+                        { className: Oa.AccessTokensContainer },
                         o.createElement(
                           "div",
-                          { className: Pa.AccessTokensHeader },
+                          { className: Oa.AccessTokensHeader },
                           (0, c.Xx)("#SteamLearn_Overview_AccessTokens"),
                         ),
                         o.createElement(
                           "div",
-                          { className: Pa.AccessToken },
+                          { className: Oa.AccessToken },
                           o.createElement(
                             "div",
-                            { className: Pa.TokenName },
+                            { className: Oa.TokenName },
                             (0, c.Xx)(
                               "#SteamLearn_Overview_AT_RegisterDataSource",
                             ),
                           ),
                           o.createElement(
                             "div",
-                            { className: Pa.TokenString },
+                            { className: Oa.TokenString },
                             m
                               .access_tokens()
                               .register_data_source_access_token(),
@@ -14348,15 +14582,15 @@
                         ),
                         o.createElement(
                           "div",
-                          { className: Pa.AccessToken },
+                          { className: Oa.AccessToken },
                           o.createElement(
                             "div",
-                            { className: Pa.TokenName },
+                            { className: Oa.TokenName },
                             (0, c.Xx)("#SteamLearn_Overview_AT_Snapshot"),
                           ),
                           o.createElement(
                             "div",
-                            { className: Pa.TokenString },
+                            { className: Oa.TokenString },
                             (null ===
                               (e = m
                                 .access_tokens()
@@ -14370,15 +14604,15 @@
                         ),
                         o.createElement(
                           "div",
-                          { className: Pa.AccessToken },
+                          { className: Oa.AccessToken },
                           o.createElement(
                             "div",
-                            { className: Pa.TokenName },
+                            { className: Oa.TokenName },
                             (0, c.Xx)("#SteamLearn_Overview_AT_Inference"),
                           ),
                           o.createElement(
                             "div",
-                            { className: Pa.TokenString },
+                            { className: Oa.TokenString },
                             (null ===
                               (t = m
                                 .access_tokens()
@@ -14391,20 +14625,20 @@
                           ),
                         ),
                       ),
-                    o.createElement("div", { className: Pa.Separator }),
+                    o.createElement("div", { className: Oa.Separator }),
                     o.createElement(
                       "div",
-                      { className: Pa.DataSourcesContainer },
+                      { className: Oa.DataSourcesContainer },
                       o.createElement(
                         "div",
-                        { className: Pa.DataSourcesHeader },
+                        { className: Oa.DataSourcesHeader },
                         (0, c.Xx)("#SteamLearn_Overview_DataSources"),
                       ),
                       a &&
                         a
                           .data_source_ids()
                           .map((e) =>
-                            o.createElement(He, {
+                            o.createElement(Fe, {
                               key: e,
                               nDataSourceID: e,
                               fnRemoveDataSource: void 0,
@@ -14416,192 +14650,192 @@
             )
           );
         },
-        Va = {
+        Ha = {
           SteamLearnBase: () => "steamlearn",
           SteamLearnProject: () => "project",
           SteamLearnDashboard: () => "/dashboard",
-          SteamLearnProjectList: () => `/${Va.SteamLearnProject()}/list`,
-          SteamLearnProjectEvents: () => `/${Va.SteamLearnProject()}/events`,
-          SteamLearnProjectCreate: () => `/${Va.SteamLearnProject()}/create`,
+          SteamLearnProjectList: () => `/${Ha.SteamLearnProject()}/list`,
+          SteamLearnProjectEvents: () => `/${Ha.SteamLearnProject()}/events`,
+          SteamLearnProjectCreate: () => `/${Ha.SteamLearnProject()}/create`,
           SteamLearnProjectOverview: (e, t) =>
-            `/${Va.SteamLearnProject()}/${null != e ? e : ":id"}/${null != t ? t : ":version"}/overview`,
+            `/${Ha.SteamLearnProject()}/${null != e ? e : ":id"}/${null != t ? t : ":version"}/overview`,
           SteamLearnProjectDataSources: (e, t) =>
-            `/${Va.SteamLearnProject()}/${null != e ? e : ":id"}/${null != t ? t : ":version"}/datasources`,
+            `/${Ha.SteamLearnProject()}/${null != e ? e : ":id"}/${null != t ? t : ":version"}/datasources`,
           SteamLearnProjectSnapshots: (e, t) =>
-            `/${Va.SteamLearnProject()}/${null != e ? e : ":id"}/${null != t ? t : ":version"}/snapshots`,
+            `/${Ha.SteamLearnProject()}/${null != e ? e : ":id"}/${null != t ? t : ":version"}/snapshots`,
           SteamLearnProjectModel: (e, t) =>
-            `/${Va.SteamLearnProject()}/${null != e ? e : ":id"}/${null != t ? t : ":version"}/structure`,
+            `/${Ha.SteamLearnProject()}/${null != e ? e : ":id"}/${null != t ? t : ":version"}/structure`,
           SteamLearnProjectTrainSettings: (e, t) =>
-            `/${Va.SteamLearnProject()}/${null != e ? e : ":id"}/${null != t ? t : ":version"}/trainsettings`,
+            `/${Ha.SteamLearnProject()}/${null != e ? e : ":id"}/${null != t ? t : ":version"}/trainsettings`,
           SteamLearnProjectTrain: (e, t) =>
-            `/${Va.SteamLearnProject()}/${null != e ? e : ":id"}/${null != t ? t : ":version"}/train`,
+            `/${Ha.SteamLearnProject()}/${null != e ? e : ":id"}/${null != t ? t : ":version"}/train`,
           SteamLearnProjectTrainStatus: (e, t) =>
-            `/${Va.SteamLearnProject()}/${null != e ? e : ":id"}/${null != t ? t : ":version"}/trainstatus`,
+            `/${Ha.SteamLearnProject()}/${null != e ? e : ":id"}/${null != t ? t : ":version"}/trainstatus`,
           SteamLearnProjectInferenceTester: (e, t) =>
-            `/${Va.SteamLearnProject()}/${null != e ? e : ":id"}/${null != t ? t : ":version"}/inferencetester`,
+            `/${Ha.SteamLearnProject()}/${null != e ? e : ":id"}/${null != t ? t : ":version"}/inferencetester`,
         };
-      function ya(e, t) {
+      function Fa(e, t) {
         return t.some((t) => (0, r.LX)(e, { path: t, exact: !1, strict: !1 }));
       }
-      function Ia(e) {
-        return ya(e, [
-          Va.SteamLearnProjectOverview(void 0, void 0),
-          Va.SteamLearnProjectDataSources(void 0, void 0),
-          Va.SteamLearnProjectSnapshots(void 0, void 0),
-          Va.SteamLearnProjectModel(void 0, void 0),
-          Va.SteamLearnProjectTrainSettings(void 0, void 0),
-          Va.SteamLearnProjectTrain(void 0, void 0),
-          Va.SteamLearnProjectTrainStatus(void 0, void 0),
-          Va.SteamLearnProjectInferenceTester(void 0, void 0),
+      function Ga(e) {
+        return Fa(e, [
+          Ha.SteamLearnProjectOverview(void 0, void 0),
+          Ha.SteamLearnProjectDataSources(void 0, void 0),
+          Ha.SteamLearnProjectSnapshots(void 0, void 0),
+          Ha.SteamLearnProjectModel(void 0, void 0),
+          Ha.SteamLearnProjectTrainSettings(void 0, void 0),
+          Ha.SteamLearnProjectTrain(void 0, void 0),
+          Ha.SteamLearnProjectTrainStatus(void 0, void 0),
+          Ha.SteamLearnProjectInferenceTester(void 0, void 0),
         ]);
       }
-      function ja(e) {
+      function Aa(e) {
         const t = (0, r.TH)(),
-          { msgWorkingProject: a, msgWorkingProjectConfig: n } = ue();
-        return !Ia(t.pathname) || (a && n)
+          { msgWorkingProject: a, msgWorkingProjectConfig: n } = pe();
+        return !Ga(t.pathname) || (a && n)
           ? o.createElement(
               "div",
-              { className: ba.MainAppContainer },
+              { className: ya.MainAppContainer },
               e.children,
             )
           : null;
       }
-      function Oa() {
+      function Ma() {
         const e = (0, r.TH)(),
-          { nProjectID: t, nPublishedVersion: a } = ue();
-        if (!Ia(e.pathname)) return null;
+          { nProjectID: t, nPublishedVersion: a } = pe();
+        if (!Ga(e.pathname)) return null;
         const n = [
           {
             name: (0, c.Xx)("#SteamLearn_Project_Overview"),
-            fnRoute: Va.SteamLearnProjectOverview,
+            fnRoute: Ha.SteamLearnProjectOverview,
           },
           {
             name: (0, c.Xx)("#SteamLearn_Project_DataSources"),
-            fnRoute: Va.SteamLearnProjectDataSources,
+            fnRoute: Ha.SteamLearnProjectDataSources,
           },
           {
             name: (0, c.Xx)("#SteamLearn_Project_Snapshots"),
-            fnRoute: Va.SteamLearnProjectSnapshots,
+            fnRoute: Ha.SteamLearnProjectSnapshots,
           },
           {
             name: (0, c.Xx)("#SteamLearn_Project_ModelStructure"),
-            fnRoute: Va.SteamLearnProjectModel,
+            fnRoute: Ha.SteamLearnProjectModel,
           },
           {
             name: (0, c.Xx)("#SteamLearn_Project_TrainSettings"),
-            fnRoute: Va.SteamLearnProjectTrainSettings,
+            fnRoute: Ha.SteamLearnProjectTrainSettings,
           },
           {
             name: (0, c.Xx)("#SteamLearn_Project_Train"),
-            fnRoute: Va.SteamLearnProjectTrain,
+            fnRoute: Ha.SteamLearnProjectTrain,
           },
           {
             name: (0, c.Xx)("#SteamLearn_Project_TrainStatus"),
-            fnRoute: Va.SteamLearnProjectTrainStatus,
+            fnRoute: Ha.SteamLearnProjectTrainStatus,
           },
           {
             name: (0, c.Xx)("#SteamLearn_Project_InferenceTester"),
-            fnRoute: Va.SteamLearnProjectInferenceTester,
+            fnRoute: Ha.SteamLearnProjectInferenceTester,
           },
         ];
         return o.createElement(
           "div",
-          { className: ba.ProjectTabContainer },
+          { className: ya.ProjectTabContainer },
           n.map((r, c) =>
             o.createElement(
               "div",
-              { key: r.name, className: ba.TabAndSpacer },
+              { key: r.name, className: ya.TabAndSpacer },
               o.createElement(
                 i.rU,
                 {
                   to: r.fnRoute(t, a),
                   className: (0, s.Z)(
-                    ba.Tab,
-                    ya(e.pathname, [r.fnRoute(void 0, void 0)]) && ba.Active,
+                    ya.Tab,
+                    Fa(e.pathname, [r.fnRoute(void 0, void 0)]) && ya.Active,
                   ),
                 },
                 r.name,
               ),
               c < n.length - 1 &&
-                o.createElement("div", { className: ba.TabSpacer }),
+                o.createElement("div", { className: ya.TabSpacer }),
             ),
           ),
         );
       }
-      const Ba = () => {
+      const za = () => {
         const e = (0, r.TH)();
         return o.createElement(
           "h1",
           null,
           (0, c.Xx)(
-            Ia(e.pathname) ? "#SteamLearn_Project" : "#SteamLearn_Dashboard",
+            Ga(e.pathname) ? "#SteamLearn_Project" : "#SteamLearn_Dashboard",
           ),
         );
       };
-      function wa() {
+      function Wa() {
         (0, r.TH)();
         return o.createElement(
           "div",
-          { className: ba.SteamLearnApp },
+          { className: ya.SteamLearnApp },
           o.createElement(
             i.VK,
-            { basename: (0, n.l)() + Va.SteamLearnBase() },
+            { basename: (0, n.l)() + Ha.SteamLearnBase() },
             o.createElement(
-              ge,
+              Se,
               null,
-              o.createElement(Ba, null),
+              o.createElement(za, null),
               o.createElement("hr", null),
-              o.createElement(sa, null),
-              o.createElement(Oa, null),
+              o.createElement(la, null),
+              o.createElement(Ma, null),
               o.createElement(
-                ja,
+                Aa,
                 null,
                 o.createElement(
                   r.rs,
                   null,
                   o.createElement(r.AW, {
-                    path: Va.SteamLearnDashboard(),
-                    component: be,
+                    path: Ha.SteamLearnDashboard(),
+                    component: De,
                   }),
                   o.createElement(r.AW, {
-                    path: Va.SteamLearnProjectCreate(),
-                    component: ke,
+                    path: Ha.SteamLearnProjectCreate(),
+                    component: Ie,
                   }),
                   o.createElement(r.AW, {
-                    path: Va.SteamLearnProjectOverview(void 0, void 0),
-                    component: ka,
+                    path: Ha.SteamLearnProjectOverview(void 0, void 0),
+                    component: wa,
                   }),
                   o.createElement(r.AW, {
-                    path: Va.SteamLearnProjectDataSources(void 0, void 0),
-                    component: je,
+                    path: Ha.SteamLearnProjectDataSources(void 0, void 0),
+                    component: Oe,
                   }),
                   o.createElement(r.AW, {
-                    path: Va.SteamLearnProjectSnapshots(void 0, void 0),
-                    component: la,
-                  }),
-                  o.createElement(r.AW, {
-                    path: Va.SteamLearnProjectModel(void 0, void 0),
-                    component: Zt,
-                  }),
-                  o.createElement(r.AW, {
-                    path: Va.SteamLearnProjectTrainSettings(void 0, void 0),
+                    path: Ha.SteamLearnProjectSnapshots(void 0, void 0),
                     component: ma,
                   }),
                   o.createElement(r.AW, {
-                    path: Va.SteamLearnProjectTrain(void 0, void 0),
-                    component: Ta,
+                    path: Ha.SteamLearnProjectModel(void 0, void 0),
+                    component: $t,
                   }),
                   o.createElement(r.AW, {
-                    path: Va.SteamLearnProjectTrainStatus(void 0, void 0),
-                    component: Ca,
+                    path: Ha.SteamLearnProjectTrainSettings(void 0, void 0),
+                    component: ua,
                   }),
                   o.createElement(r.AW, {
-                    path: Va.SteamLearnProjectInferenceTester(void 0, void 0),
-                    component: Ae,
+                    path: Ha.SteamLearnProjectTrain(void 0, void 0),
+                    component: ja,
+                  }),
+                  o.createElement(r.AW, {
+                    path: Ha.SteamLearnProjectTrainStatus(void 0, void 0),
+                    component: ba,
+                  }),
+                  o.createElement(r.AW, {
+                    path: Ha.SteamLearnProjectInferenceTester(void 0, void 0),
+                    component: Me,
                   }),
                   o.createElement(r.l_, {
                     from: "/",
-                    to: Va.SteamLearnDashboard(),
+                    to: Ha.SteamLearnDashboard(),
                   }),
                 ),
               ),

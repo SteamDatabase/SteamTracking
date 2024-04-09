@@ -65099,7 +65099,7 @@
           response: u,
         }),
           (e.Authenticate = function (e, t) {
-            return null == (t = t || (0, s.S)().GetDefaultTransport())
+            return null == (t = t || (0, s.SM)().GetDefaultTransport())
               ? new Promise((e, t) => {
                   console.error(
                     "Transport Error: no transport is available for request",
@@ -65112,7 +65112,7 @@
                 });
           }),
           (e.SendMsgAuthenticate = function (e, t) {
-            return null == (t = t || (0, s.S)().GetDefaultTransport())
+            return null == (t = t || (0, s.SM)().GetDefaultTransport())
               ? new Promise((e, t) => {
                   console.error(
                     "Transport Error: no transport is available for request",
@@ -65129,7 +65129,7 @@
             request: c,
           }),
           (e.RegisterForNotifyStartShutdown = function (t, r) {
-            return null == (r = r || (0, s.S)().GetDefaultHandlerRegistry())
+            return null == (r = r || (0, s.SM)().GetDefaultHandlerRegistry())
               ? (console.error(
                   "Transport Error: no default registry is available for request",
                 ),
@@ -65140,7 +65140,7 @@
                 );
           }),
           (e.NotifyStartShutdown = function (e, t) {
-            return null == (t = t || (0, s.S)().GetDefaultTransport())
+            return null == (t = t || (0, s.SM)().GetDefaultTransport())
               ? (console.error(
                   "Transport Error: no transport is available for request",
                 ),
@@ -65152,7 +65152,7 @@
                 );
           }),
           (e.SendMsgNotifyStartShutdown = function (e, t) {
-            return null == (t = t || (0, s.S)().GetDefaultTransport())
+            return null == (t = t || (0, s.SM)().GetDefaultTransport())
               ? (console.error(
                   "Transport Error: no transport is available for request",
                 ),
@@ -65263,8 +65263,8 @@
     },
     2260: (e, t, r) => {
       "use strict";
-      r.d(t, { S: () => a });
-      class i {
+      r.d(t, { SM: () => n });
+      const i = new (class {
         constructor() {
           (this.m_transport = null), (this.m_registry = null);
         }
@@ -65288,10 +65288,9 @@
         GetDefaultHandlerRegistry() {
           return this.m_registry;
         }
-      }
-      let n = null;
-      function a() {
-        return null == n && (n = new i()), n;
+      })();
+      function n() {
+        return i;
       }
     },
     15481: (e, t, r) => {

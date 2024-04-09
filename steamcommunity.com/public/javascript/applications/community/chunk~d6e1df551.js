@@ -100,18 +100,28 @@
             (this.m_fileUploadProps.displayFileName = null);
         }
         SetImageFileToUpload(e, t = m) {
+          var i, l, a;
           return (0, o.mG)(this, void 0, void 0, function* () {
             if (!e) return void this.SetFileToUpload(null);
+            const o =
+              null !==
+                (a =
+                  null === (l = (i = this.m_Callbacks).GetFileNameOverride) ||
+                  void 0 === l
+                    ? void 0
+                    : l.call(i)) && void 0 !== a
+                ? a
+                : e.name;
             if (e.size > 1024 * this.m_Callbacks.GetMaxFileSizeMB() * 1024)
               return void this.SetUploadFileError(
                 4,
                 (0, p.Xx)(
                   "#Chat_Settings_Error_ChatFileTooLarge_dynamic",
-                  e.name,
+                  o,
                   this.m_Callbacks.GetMaxFileSizeMB(),
                 ),
               );
-            let i = e.name.split(".").pop().toLowerCase();
+            let r = e.name.split(".").pop().toLowerCase();
             if (
               -1 ==
               [
@@ -124,42 +134,46 @@
                 "mp4",
                 "mpeg",
                 "ogv",
-              ].indexOf(i)
+              ].indexOf(r)
             )
               return void this.SetUploadFileError(
                 5,
-                (0, p.Xx)(
-                  "#Chat_Settings_Error_ChatFileTypeNotSupported",
-                  e.name,
-                ),
+                (0, p.Xx)("#Chat_Settings_Error_ChatFileTypeNotSupported", o),
               );
-            const o = yield t(e);
-            this.SetFileToUpload(o.file),
-              (this.m_fileUploadProps.imageHeight = o.height),
-              (this.m_fileUploadProps.imageWidth = o.width);
+            const s = yield t(e);
+            this.SetFileToUpload(s.file),
+              (this.m_fileUploadProps.imageHeight = s.height),
+              (this.m_fileUploadProps.imageWidth = s.width);
           });
         }
         SetOtherFileToUpload(e) {
+          var t, i, l;
           return (0, o.mG)(this, void 0, void 0, function* () {
             if (!e) return void this.SetFileToUpload(null);
+            const o =
+              null !==
+                (l =
+                  null === (i = (t = this.m_Callbacks).GetFileNameOverride) ||
+                  void 0 === i
+                    ? void 0
+                    : i.call(t)) && void 0 !== l
+                ? l
+                : e.name;
             if (e.size > 1024 * this.m_Callbacks.GetMaxFileSizeMB() * 1024)
               return void this.SetUploadFileError(
                 4,
                 (0, p.Xx)(
                   "#Chat_Settings_Error_ChatFileTooLarge_dynamic",
-                  e.name,
+                  o,
                   this.m_Callbacks.GetMaxFileSizeMB(),
                 ),
               );
-            let t = e.name.split(".").pop().toLowerCase();
-            -1 != ["zip"].indexOf(t)
+            let a = e.name.split(".").pop().toLowerCase();
+            -1 != ["zip"].indexOf(a)
               ? this.SetFileToUpload(e)
               : this.SetUploadFileError(
                   5,
-                  (0, p.Xx)(
-                    "#Chat_Settings_Error_ChatFileTypeNotSupported",
-                    e.name,
-                  ),
+                  (0, p.Xx)("#Chat_Settings_Error_ChatFileTypeNotSupported", o),
                 );
           });
         }

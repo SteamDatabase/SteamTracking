@@ -4012,14 +4012,18 @@
           },
         });
       }
-      function L(e, t, n) {
+      function L(e, t, n, r = {}) {
         return (0, i.mG)(this, void 0, void 0, function* () {
           const i = o.gA.Init(l.W8);
           i.Body().set_steamid(t), i.Body().set_settings(c.gA.fromObject(n));
-          const r = yield l.pR.SetParentalSettings(e, i);
-          if (1 != r.GetEResult())
+          const { password: s, new_password: a, sessionid: u } = r;
+          s && i.Body().set_password(s),
+            a && i.Body().set_new_password(s),
+            u && i.Body().set_sessionid(u);
+          const d = yield l.pR.SetParentalSettings(e, i);
+          if (1 != d.GetEResult())
             throw new Error(
-              `Error from SetParentalSettings: ${r.GetErrorMessage()} (${r.GetEResult()})`,
+              `Error from SetParentalSettings: ${d.GetErrorMessage()} (${d.GetEResult()})`,
             );
         });
       }
@@ -4152,8 +4156,8 @@
       n.d(t, {
         Ub: () => l,
         bY: () => c,
+        be: () => u,
         lS: () => m,
-        sG: () => u,
         y$: () => d,
       });
       var i = n(47427),
@@ -4694,8 +4698,8 @@
                 e.portClientdll,
                 e.authKeyClientdll,
               ),
-              (0, l.S)().SetDefaultTransport(this),
-              (0, l.S)().SetDefaultHandlerRegistry(this.m_messageHandlers),
+              (0, l.SM)().SetDefaultTransport(this),
+              (0, l.SM)().SetDefaultHandlerRegistry(this.m_messageHandlers),
               h.zw.RegisterForNotifyStartShutdown(this.OnStartShutdown);
           });
         }
@@ -6528,7 +6532,8 @@
             }),
           onSuccess: () => {
             n.invalidateQueries({ queryKey: v(r) }),
-              n.invalidateQueries({ queryKey: C(e) });
+              n.invalidateQueries({ queryKey: C(e) }),
+              n.invalidateQueries({ queryKey: S(e) });
           },
         });
       }
@@ -6544,7 +6549,8 @@
               return E(r.GetEResult()), r.Body();
             }),
           onSuccess: () => {
-            n.invalidateQueries({ queryKey: C(e) });
+            n.invalidateQueries({ queryKey: C(e) }),
+              n.invalidateQueries({ queryKey: S(e) });
           },
         });
       }
@@ -6563,7 +6569,8 @@
             }),
           onSuccess: () => {
             a.invalidateQueries({ queryKey: v(t) }),
-              a.invalidateQueries({ queryKey: C(e) });
+              a.invalidateQueries({ queryKey: C(e) }),
+              a.invalidateQueries({ queryKey: S(e) });
           },
         });
       }
@@ -6582,7 +6589,8 @@
             }),
           onSuccess: () => {
             u.invalidateQueries({ queryKey: v(r) }),
-              u.invalidateQueries({ queryKey: C(e) });
+              u.invalidateQueries({ queryKey: C(e) }),
+              u.invalidateQueries({ queryKey: S(e) });
           },
         });
       }
@@ -6599,7 +6607,8 @@
             }),
           onSuccess: () => {
             r.invalidateQueries({ queryKey: v(t) }),
-              r.invalidateQueries({ queryKey: C(e) });
+              r.invalidateQueries({ queryKey: C(e) }),
+              r.invalidateQueries({ queryKey: S(e) });
           },
         });
       }
@@ -6709,7 +6718,8 @@
               return E(o.GetEResult()), o.Body();
             }),
           onSuccess: () => {
-            a.invalidateQueries({ queryKey: w(e) });
+            a.invalidateQueries({ queryKey: w(e) }),
+              a.invalidateQueries({ queryKey: S(e) });
           },
         });
       }
@@ -6980,7 +6990,8 @@
             }),
           onSuccess: () => {
             u.invalidateQueries({ queryKey: v(d) }),
-              u.invalidateQueries({ queryKey: C(e) });
+              u.invalidateQueries({ queryKey: C(e) }),
+              u.invalidateQueries({ queryKey: S(e) });
           },
         });
       }
@@ -6998,7 +7009,8 @@
               return E(o.GetEResult()), o.Body();
             }),
           onSuccess: () => {
-            a.invalidateQueries({ queryKey: C(e) });
+            a.invalidateQueries({ queryKey: C(e) }),
+              a.invalidateQueries({ queryKey: S(e) });
           },
         });
       }
@@ -7057,7 +7069,8 @@
             }),
           onSuccess: () => {
             r.invalidateQueries({ queryKey: v(n) }),
-              r.invalidateQueries({ queryKey: C(e) });
+              r.invalidateQueries({ queryKey: C(e) }),
+              r.invalidateQueries({ queryKey: S(e) });
           },
         });
       }
@@ -7806,7 +7819,7 @@
     },
     91618: (e, t, n) => {
       "use strict";
-      n.d(t, { s: () => g });
+      n.d(t, { s: () => _ });
       var i = n(85556),
         r = n(47427),
         s = n(28781),
@@ -7818,13 +7831,15 @@
         d = n(25849);
       const m = (0, r.createContext)(null);
       var h = n(87476),
-        p = n(6799);
-      const g = r.forwardRef(function (e, t) {
+        p = n(6799),
+        g = n(37563);
+      const _ = r.forwardRef(function (e, t) {
+        var n;
         const {
-            "flow-children": n,
-            onActivate: g,
-            onCancel: _,
-            focusClassName: f,
+            "flow-children": m,
+            onActivate: h,
+            onCancel: p,
+            focusClassName: _,
             focusWithinClassName: v,
           } = e,
           C = (0, i._T)(e, [
@@ -7836,58 +7851,70 @@
           ]),
           { elemProps: S, navOptions: b, gamepadEvents: w } = (0, s.QH)(C);
         let y = {};
-        const E = (0, d.t)(n);
+        const E = (0, d.t)(m);
         E != l.gj.NONE && (y.layout = E),
-          g &&
-            ((S.onClick = S.onClick || g), (w.onOKButton = w.onOKButton || g)),
+          h &&
+            ((S.onClick = S.onClick || h), (w.onOKButton = w.onOKButton || h)),
           w.onOKButton && void 0 === b.focusable && (b.focusable = !0),
-          _ && (w.onCancelButton = w.onCancelButton || _);
+          p && (w.onCancelButton = w.onCancelButton || p);
         const { ref: D, node: L } = (0, s.Pd)(
             Object.assign(Object.assign({}, y), b),
           ),
           M = (0, c.K)();
         (S.className = (0, o.Z)(S.className, "Panel", M && "Focusable")),
           (0, u.pD)(w, D);
-        const R = (0, r.useContext)(m),
-          I = (0, h.Ze)(
-            2,
-            () =>
-              "self" == (null == L ? void 0 : L.GetFocusable()) ||
-              null != S.onClick,
-          ),
-          T = (0, h.Ze)(1, () => (null == R ? void 0 : R.HasContextMenu(L))),
-          A = (0, p.M)(S);
-        (0, p.B)(S);
-        const k = (0, a.BE)(I, T, A, D, t);
-        return (
-          (!b.focusable && !b.focusableIfNoChildren) ||
-            (L && L.Tree.BUseVirtualFocus()) ||
-            (S.tabIndex = S.tabIndex || 0),
-          R &&
-            (S.onContextMenu = (t) => {
-              var n;
-              R.OnContextMenu(L, t) ||
-                null === (n = e.onContextMenu) ||
-                void 0 === n ||
-                n.call(e, t);
-            }),
-          r.createElement(
-            s.ET.Provider,
-            { value: L },
-            L
-              ? r.createElement(
-                  s.zQ,
-                  Object.assign({}, S, {
-                    divRef: k,
-                    node: L,
-                    focusClassName: (0, o.Z)(f, "gpfocus"),
-                    focusWithinClassName: (0, o.Z)(v, "gpfocuswithin"),
-                  }),
-                )
-              : r.createElement("div", Object.assign({}, S, { ref: k })),
-          )
+        const R = (0, a.BE)(D, t),
+          I =
+            null === (n = (0, g.qt)({ bSuppressAssert: !0 })) || void 0 === n
+              ? void 0
+              : n.IN_VR;
+        (!b.focusable && !b.focusableIfNoChildren) ||
+          (L && L.Tree.BUseVirtualFocus()) ||
+          (S.tabIndex = S.tabIndex || 0);
+        const T = I ? f : s.zQ;
+        return r.createElement(
+          s.ET.Provider,
+          { value: L },
+          L
+            ? r.createElement(
+                T,
+                Object.assign({}, S, {
+                  divRef: R,
+                  node: L,
+                  focusClassName: (0, o.Z)(_, "gpfocus"),
+                  focusWithinClassName: (0, o.Z)(v, "gpfocuswithin"),
+                }),
+              )
+            : r.createElement("div", Object.assign({}, S, { ref: R })),
         );
       });
+      function f(e) {
+        const { node: t, divRef: n } = e,
+          o = (0, i._T)(e, ["node", "divRef"]),
+          l = (0, r.useContext)(m),
+          c = (0, h.Ze)(
+            2,
+            () =>
+              "self" == (null == t ? void 0 : t.GetFocusable()) ||
+              null != o.onClick,
+          ),
+          u = (0, h.Ze)(1, () => (null == l ? void 0 : l.HasContextMenu(t))),
+          d = (0, p.M)(o);
+        (0, p.B)(o),
+          l &&
+            (o.onContextMenu = (n) => {
+              var i;
+              l.OnContextMenu(t, n) ||
+                null === (i = e.onContextMenu) ||
+                void 0 === i ||
+                i.call(e, n);
+            });
+        const g = (0, a.BE)(c, u, d, n);
+        return r.createElement(
+          s.zQ,
+          Object.assign({}, o, { divRef: g, node: t }),
+        );
+      }
     },
     84686: (e, t, n) => {
       "use strict";
@@ -11733,17 +11760,17 @@
       "use strict";
       n.d(t, { T: () => d });
       var i = n(85556),
-        r = n(47427),
-        s = n(20417),
-        o = n(27605),
-        a = n(45492),
-        l = n(13129),
+        r = n(27605),
+        s = n(47427),
+        o = n(45492),
+        a = n(13129),
+        l = n(20417),
         c = n(74736),
         u = n.n(c);
-      let d = class extends r.Component {
+      let d = class extends s.Component {
         constructor() {
           super(...arguments),
-            (this.m_listeners = new a.G_()),
+            (this.m_listeners = new o.G_()),
             (this.m_bNoSpace = !1),
             (this.state = { x: void 0, y: void 0, hoverPositionReady: !1 });
         }
@@ -11767,9 +11794,9 @@
             {
               target: t,
               visibilityObserver: n,
-              className: s,
+              className: r,
               style: o,
-              bEnablePointerEvents: a,
+              bEnablePointerEvents: l,
               direction: c,
               nBodyAlignment: d,
               nBodyDistance: m,
@@ -11798,23 +11825,23 @@
             ]);
           let S = Object.assign({ left: this.state.x, top: this.state.y }, o),
             b = !n || n.visible;
-          return r.createElement(
+          return s.createElement(
             "div",
             {
-              className: (0, l.Z)(
+              className: (0, a.Z)(
                 u().HoverPositionOuter,
                 v && u().HoverAboveModal,
               ),
             },
-            r.createElement(
+            s.createElement(
               "div",
               Object.assign({}, C, {
-                className: (0, l.Z)(
+                className: (0, a.Z)(
                   u().HoverPosition,
                   b && this.state.hoverPositionReady && u().Ready,
                   this.m_bNoSpace && u().NoSpace,
-                  a && u().EnablePointerEvents,
-                  s,
+                  l && u().EnablePointerEvents,
+                  r,
                 ),
                 style: S,
                 ref: this.bindHover,
@@ -11909,8 +11936,8 @@
                 void (this.props.onNoSpace && this.props.onNoSpace())
               );
           }
-          this.props.nMaxLateralMoveOnScreen &&
-            !h &&
+          0 === this.props.nMaxLateralMoveOnScreen ||
+            h ||
             ([v, f] = (function (e, t, n, i, r) {
               let s = Math.max(t[0], t[1]);
               void 0 !== e && (s = Math.min(e, s));
@@ -11996,9 +12023,9 @@
         nBodyDistance: 8,
         nMaxLateralMoveOnScreen: void 0,
       }),
-        (0, i.gn)([s.ak], d.prototype, "bindHover", null),
-        (0, i.gn)([s.ak], d.prototype, "OnWindowBlur", null),
-        (d = (0, i.gn)([o.Pi], d));
+        (0, i.gn)([l.ak], d.prototype, "bindHover", null),
+        (0, i.gn)([l.ak], d.prototype, "OnWindowBlur", null),
+        (d = (0, i.gn)([r.Pi], d));
     },
     43090: (e, t, n) => {
       "use strict";
@@ -32599,9 +32626,9 @@
         s = n(50423),
         o = n(20417),
         a = n(37563);
-      const l = new Map();
+      const l = new WeakMap();
       function c(e) {
-        return l.has(e) || l.set(e, new Set()), l.get(e);
+        if (e) return l.has(e) || l.set(e, new Set()), l.get(e);
       }
       function u(e) {
         const t = (0, a.qt)({ bSuppressAssert: !0 }).IN_VR,
@@ -33144,7 +33171,7 @@
     },
     760: (e, t, n) => {
       "use strict";
-      n.d(t, { Z: () => u, l: () => d });
+      n.d(t, { Z: () => c, l: () => u });
       var i = n(37563);
       const r = {},
         s = { LoyaltyEquippedProfile: (e) => `/points/profile/${e}` },
@@ -33156,9 +33183,8 @@
           LoyaltyItemBundles: () => "/points/shop/c/itembundles",
           LoyaltyItemBundle: (e) => `/points/shop/bundle/${e}`,
         },
-        l = { SteamCharts: () => "/charts/" },
-        c = {},
-        u = Object.assign(
+        l = {},
+        c = Object.assign(
           Object.assign(
             Object.assign(
               Object.assign(
@@ -33287,7 +33313,7 @@
                                                     "/account/",
                                                 },
                                               ),
-                                              l,
+                                              { SteamCharts: () => "/charts/" },
                                             ),
                                             {
                                               SteamAwardNominations: () =>
@@ -33371,7 +33397,7 @@
                     `/:prefix(yearinreview|replay)${e ? "/" + e : "/"}${t ? "/" + t : ""}`,
                 },
               ),
-              c,
+              l,
             ),
             {
               ShoppingCart: () => "/cart/",
@@ -33384,14 +33410,14 @@
           ),
           { DiagData: () => "/:anything*/diagdata" },
         );
-      function d() {
+      function u() {
         let e = document.createElement("a");
         e.href = i.De.STORE_BASE_URL;
         let t = e.pathname;
         return t.endsWith("/") || (t += "/"), t;
       }
     },
-    14542: (e, t, n) => {
+    99834: (e, t, n) => {
       "use strict";
       var i = n(85556),
         r = (n(316), n(69414), n(24522)),
@@ -34225,92 +34251,46 @@
             ? s.createElement(p.l_, { push: !0, to: e.redirect || "/" })
             : null;
       }
-      var Ie = n(2041);
-      function Te(e) {
-        return (t) => {
-          const [i, r] = (0, s.useState)(null);
-          return (
-            i ||
-            (Promise.all([
-              n.e(460),
-              n.e(8015),
-              n.e(9766),
-              n.e(1021),
-              n.e(3425),
-              n.e(3540),
-              n.e(8973),
-              n.e(3245),
-              n.e(4801),
-              n.e(8359),
-              n.e(1712),
-              n.e(9177),
-              n.e(6882),
-              n.e(7247),
-              n.e(9424),
-              n.e(7695),
-              n.e(5164),
-              n.e(344),
-              n.e(5944),
-              n.e(1915),
-              n.e(6470),
-              n.e(259),
-              n.e(9868),
-              n.e(4970),
-              n.e(7161),
-              n.e(8038),
-              n.e(3238),
-              n.e(691),
-              n.e(2136),
-            ])
-              .then(n.bind(n, 60284))
-              .then((n) => {
-                r(s.createElement(n[e], t));
-              }),
-            null)
-          );
-        };
-      }
-      const Ae = Te("Events"),
-        ke = Te("DemoAndQuickPitch");
-      var Oe = n(92790),
-        xe = n(42718),
-        Be = n(65255),
-        Ne = n(24549),
-        Pe = n(82252),
-        Fe = n.n(Pe);
-      function Ge() {
-        const e = (0, oe.YR)(Be.De.STORE_BASE_URL + "cart"),
-          t = (0, Oe.cw)();
+      var Ie = n(2041),
+        Te = n(92790),
+        Ae = n(42718),
+        ke = n(65255),
+        Oe = n(24549),
+        xe = n(82252),
+        Be = n.n(xe);
+      function Ne() {
+        const e = (0, oe.YR)(ke.De.STORE_BASE_URL + "cart"),
+          t = (0, Te.cw)();
         return t.data
           ? s.createElement(
               "div",
-              { className: Fe().ShoppingCartCountCtn },
+              { className: Be().ShoppingCartCountCtn },
               s.createElement(
                 "a",
-                { href: e, className: Fe().CartCountButton },
-                s.createElement(le.yTB, { className: Fe().ShoppingCartSVG }),
+                { href: e, className: Be().CartCountButton },
+                s.createElement(le.yTB, { className: Be().ShoppingCartSVG }),
                 " ",
-                (0, c.Xx)("#Cart_CountWidget", (0, Ne.AV)(t.data)),
+                (0, c.Xx)("#Cart_CountWidget", (0, Oe.AV)(t.data)),
               ),
             )
           : null;
       }
-      function Ve() {
-        const e = (0, oe.YR)(Be.De.STORE_BASE_URL + "cart"),
-          { data: t } = (0, Oe.cw)();
+      function Pe() {
+        const e = (0, oe.YR)(ke.De.STORE_BASE_URL + "cart"),
+          { data: t } = (0, Te.cw)();
         return t
           ? s.createElement(
               "a",
               { href: e },
               (0, c.kQ)(
                 "#Cart_CountWidget",
-                s.createElement("b", null, (0, Ne.AV)(t)),
+                s.createElement("b", null, (0, Oe.AV)(t)),
               ),
             )
           : null;
       }
-      function He() {
-        const { data: e } = (0, Oe.cw)();
+      function Fe() {
+        const { data: e } = (0, Te.cw)();
         return (
           s.useEffect(() => {
             window.SetReactNativeHeaderCartItemCount &&
@@ -34320,11 +34300,11 @@
           null
         );
       }
-      var Ue = n(5522),
-        je = n(43981),
-        We = n(34809),
-        Ze = n(44731);
-      const ze = s.lazy(() =>
+      var Ge = n(5522),
+        Ve = n(43981),
+        He = n(34809),
+        Ue = n(44731);
+      const je = s.lazy(() =>
           Promise.all([
             n.e(460),
             n.e(8015),
@@ -34349,7 +34329,7 @@
             n.e(7311),
           ]).then(n.bind(n, 11001)),
         ),
-        qe = s.lazy(() =>
+        We = s.lazy(() =>
           Promise.all([
             n.e(460),
             n.e(8015),
@@ -34376,41 +34356,41 @@
             .then(n.bind(n, 11001))
             .then((e) => ({ default: e.ShoppingCartErrorModal })),
         );
-      function Ke(e) {
+      function Ze(e) {
         return s.createElement(
           s.Fragment,
           null,
           s.createElement(re.d, {
             config: {
-              "shoppingcart-count-widget": Ge,
-              "shoppingcart-count-widget-responsive": Ve,
-              "shoppingcart-count-updater-reactnative": He,
+              "shoppingcart-count-widget": Ne,
+              "shoppingcart-count-widget-responsive": Pe,
+              "shoppingcart-count-updater-reactnative": Fe,
             },
           }),
-          s.createElement(Xe, null),
+          s.createElement(ze, null),
         );
       }
-      function Xe(e) {
+      function ze(e) {
         const [t, n] = s.useState(null),
           [i, r] = s.useState(null),
           [o, a] = s.useState(!1),
           [l, c] = s.useState(),
           u = (0, f.bY)(),
-          d = (0, xe.useQueryClient)(),
-          m = (0, je.tv)(),
+          d = (0, Ae.useQueryClient)(),
+          m = (0, Ve.tv)(),
           h = o || !!t || !!i;
         s.useEffect(() => {
-          !l && h && (0, Ue.v)().then(() => c(!0));
+          !l && h && (0, Ge.v)().then(() => c(!0));
         }, [l, h]);
         const p = s.useCallback(
           (e, t, i) => {
             const s = "number" == typeof e ? [e] : e;
             a(!0),
-              (0, Oe.mI)(u, d, m, s, t, i).then(
+              (0, Te.mI)(u, d, m, s, t, i).then(
                 ({ success: e, result: t, items: i }) => {
                   e
                     ? i.length > 1
-                      ? (window.location.href = `${Be.De.STORE_BASE_URL}cart`)
+                      ? (window.location.href = `${ke.De.STORE_BASE_URL}cart`)
                       : n(i)
                     : r(t || 2);
                 },
@@ -34441,13 +34421,13 @@
                 s.Suspense,
                 { fallback: null },
                 !!t &&
-                  s.createElement(ze, {
+                  s.createElement(je, {
                     key: JSON.stringify(t),
                     lineItemIDs: t,
                     closeCart: () => n(null),
                   }),
                 !!i &&
-                  s.createElement(qe, {
+                  s.createElement(We, {
                     active: !!i,
                     onDismiss: () => r(null),
                     result: i,
@@ -34456,18 +34436,18 @@
             : null
         );
       }
-      var $e = n(95082),
-        Ye = n(77151),
-        Qe = n(46009),
-        Je = n(60616);
-      class et {
+      var qe = n(95082),
+        Ke = n(77151),
+        Xe = n(46009),
+        $e = n(60616);
+      class Ye {
         constructor() {
           (this.m_mapAppToSNRs = new Map()), (this.m_rgImpressionsToAdd = []);
         }
         AddImpression(e, t) {
-          Ye.jg.Get().BIsLoaded()
+          Ke.jg.Get().BIsLoaded()
             ? this.InternalAddImpression(e, t)
-            : Ye.jg
+            : Ke.jg
                 .Get()
                 .HintLoad()
                 .then(() => this.InternalAddImpression(e, t));
@@ -34476,7 +34456,7 @@
           return !0;
         }
         InternalAddImpression(e, t) {
-          if (!Ye.jg.Get().BAppImpressionsAllowed())
+          if (!Ke.jg.Get().BAppImpressionsAllowed())
             return void (
               "dev" === l.De.WEB_UNIVERSE &&
               console.log(
@@ -34494,20 +34474,20 @@
         }
         UpdateCookie() {
           const e = [
-            (0, Qe.bG)("app_impressions") || "",
+            (0, Xe.bG)("app_impressions") || "",
             ...this.m_rgImpressionsToAdd,
           ].join("|");
           this.m_rgImpressionsToAdd = [];
           const t = encodeURIComponent(e).length;
           t <= 3200
-            ? (0, Qe.I1)("app_impressions", e)
+            ? (0, Xe.I1)("app_impressions", e)
             : console.warn(
                 `Cookie max length exceeded ( ${t} > 3200 ), discarding impressions`,
               );
         }
       }
-      (0, i.gn)([(0, Je.D)(1e3)], et.prototype, "UpdateCookie", null);
-      const tt = s.lazy(() =>
+      (0, i.gn)([(0, $e.D)(1e3)], Ye.prototype, "UpdateCookie", null);
+      const Qe = s.lazy(() =>
           Promise.all([
             n.e(460),
             n.e(8015),
@@ -34524,7 +34504,7 @@
             n.e(5331),
           ]).then(n.bind(n, 97684)),
         ),
-        nt = s.lazy(() =>
+        Je = s.lazy(() =>
           Promise.all([
             n.e(460),
             n.e(7200),
@@ -34534,7 +34514,7 @@
             n.e(9682),
           ]).then(n.bind(n, 67938)),
         ),
-        it = s.lazy(() =>
+        et = s.lazy(() =>
           Promise.all([
             n.e(460),
             n.e(8015),
@@ -34551,7 +34531,7 @@
             n.e(8986),
           ]).then(n.bind(n, 61216)),
         ),
-        rt = s.lazy(() =>
+        tt = s.lazy(() =>
           Promise.all([
             n.e(3245),
             n.e(7400),
@@ -34560,7 +34540,7 @@
             n.e(988),
           ]).then(n.bind(n, 42705)),
         ),
-        st = s.lazy(() =>
+        nt = s.lazy(() =>
           Promise.all([
             n.e(460),
             n.e(8015),
@@ -34578,7 +34558,7 @@
             n.e(4601),
           ]).then(n.bind(n, 70358)),
         ),
-        ot = s.lazy(() =>
+        it = s.lazy(() =>
           Promise.all([
             n.e(8015),
             n.e(6099),
@@ -34588,7 +34568,7 @@
             n.e(2814),
           ]).then(n.bind(n, 19952)),
         ),
-        at = s.lazy(() =>
+        rt = s.lazy(() =>
           Promise.all([
             n.e(460),
             n.e(9766),
@@ -34601,9 +34581,9 @@
             n.e(40),
           ]).then(n.bind(n, 46521)),
         ),
-        lt = s.lazy(() => n.e(5821).then(n.bind(n, 58289))),
-        ct = s.lazy(() => n.e(1918).then(n.bind(n, 85121))),
-        ut = s.lazy(() =>
+        st = s.lazy(() => n.e(5821).then(n.bind(n, 58289))),
+        ot = s.lazy(() => n.e(1918).then(n.bind(n, 85121))),
+        at = s.lazy(() =>
           Promise.all([
             n.e(460),
             n.e(8015),
@@ -34618,10 +34598,10 @@
             n.e(3207),
           ]).then(n.bind(n, 33955)),
         ),
-        dt = s.lazy(() =>
+        lt = s.lazy(() =>
           Promise.all([n.e(6882), n.e(7695), n.e(1825)]).then(n.bind(n, 1688)),
         ),
-        mt = s.lazy(() =>
+        ct = s.lazy(() =>
           Promise.all([
             n.e(460),
             n.e(8015),
@@ -34654,7 +34634,7 @@
             n.e(2136),
           ]).then(n.bind(n, 63897)),
         ),
-        ht = s.lazy(() =>
+        ut = s.lazy(() =>
           Promise.all([
             n.e(460),
             n.e(8015),
@@ -34689,7 +34669,7 @@
             n.e(9788),
           ]).then(n.bind(n, 64663)),
         ),
-        pt = s.lazy(() =>
+        dt = s.lazy(() =>
           Promise.all([
             n.e(460),
             n.e(8015),
@@ -34724,7 +34704,7 @@
             n.e(9788),
           ]).then(n.bind(n, 53553)),
         ),
-        gt = s.lazy(() =>
+        mt = s.lazy(() =>
           Promise.all([
             n.e(460),
             n.e(8015),
@@ -34757,7 +34737,7 @@
             n.e(680),
           ]).then(n.bind(n, 13854)),
         ),
-        _t = s.lazy(() =>
+        ht = s.lazy(() =>
           Promise.all([
             n.e(460),
             n.e(8015),
@@ -34790,7 +34770,7 @@
             n.e(680),
           ]).then(n.bind(n, 98079)),
         ),
-        ft = s.lazy(() =>
+        pt = s.lazy(() =>
           Promise.all([
             n.e(460),
             n.e(6882),
@@ -34799,7 +34779,7 @@
             n.e(4535),
           ]).then(n.bind(n, 9084)),
         ),
-        vt = s.lazy(() =>
+        gt = s.lazy(() =>
           Promise.all([
             n.e(460),
             n.e(8015),
@@ -34821,7 +34801,7 @@
             n.e(556),
           ]).then(n.bind(n, 86445)),
         ),
-        Ct = s.lazy(() =>
+        _t = s.lazy(() =>
           Promise.all([
             n.e(460),
             n.e(8015),
@@ -34843,7 +34823,7 @@
             n.e(556),
           ]).then(n.bind(n, 78862)),
         ),
-        St = s.lazy(() =>
+        ft = s.lazy(() =>
           Promise.all([
             n.e(460),
             n.e(8015),
@@ -34859,7 +34839,7 @@
             n.e(4158),
           ]).then(n.bind(n, 52811)),
         ),
-        bt = s.lazy(() =>
+        vt = s.lazy(() =>
           Promise.all([
             n.e(460),
             n.e(8015),
@@ -34885,7 +34865,7 @@
             n.e(8087),
           ]).then(n.bind(n, 45660)),
         ),
-        wt = s.lazy(() =>
+        Ct = s.lazy(() =>
           Promise.all([
             n.e(8015),
             n.e(5164),
@@ -34894,13 +34874,13 @@
             n.e(3068),
           ]).then(n.bind(n, 14717)),
         ),
-        yt = s.lazy(() =>
+        St = s.lazy(() =>
           Promise.all([n.e(6882), n.e(7695), n.e(1825)]).then(n.bind(n, 90071)),
         ),
-        Et = s.lazy(() =>
+        bt = s.lazy(() =>
           Promise.all([n.e(6882), n.e(7695), n.e(1825)]).then(n.bind(n, 85401)),
         ),
-        Dt = s.lazy(() =>
+        wt = s.lazy(() =>
           Promise.all([
             n.e(460),
             n.e(8015),
@@ -34925,7 +34905,7 @@
             n.e(7311),
           ]).then(n.bind(n, 46193)),
         ),
-        Lt = s.lazy(() =>
+        yt = s.lazy(() =>
           Promise.all([
             n.e(460),
             n.e(8015),
@@ -34951,7 +34931,7 @@
             n.e(7280),
           ]).then(n.bind(n, 79798)),
         ),
-        Mt = s.lazy(() =>
+        Et = s.lazy(() =>
           Promise.all([
             n.e(460),
             n.e(8015),
@@ -34977,7 +34957,7 @@
             n.e(3375),
           ]).then(n.bind(n, 76957)),
         ),
-        Rt = s.lazy(() =>
+        Dt = s.lazy(() =>
           Promise.all([
             n.e(460),
             n.e(8015),
@@ -35004,15 +34984,85 @@
             n.e(8038),
             n.e(3805),
           ]).then(n.bind(n, 42957)),
+        ),
+        Lt = s.lazy(() =>
+          Promise.all([
+            n.e(460),
+            n.e(8015),
+            n.e(9766),
+            n.e(1021),
+            n.e(3425),
+            n.e(3540),
+            n.e(8973),
+            n.e(3245),
+            n.e(4801),
+            n.e(8359),
+            n.e(1712),
+            n.e(9177),
+            n.e(6882),
+            n.e(7247),
+            n.e(9424),
+            n.e(7695),
+            n.e(5164),
+            n.e(344),
+            n.e(5944),
+            n.e(1915),
+            n.e(6470),
+            n.e(259),
+            n.e(9868),
+            n.e(4970),
+            n.e(7161),
+            n.e(8038),
+            n.e(3238),
+            n.e(691),
+            n.e(2136),
+          ])
+            .then(n.bind(n, 60284))
+            .then((e) => ({ default: e.Events })),
+        ),
+        Mt = s.lazy(() =>
+          Promise.all([
+            n.e(460),
+            n.e(8015),
+            n.e(9766),
+            n.e(1021),
+            n.e(3425),
+            n.e(3540),
+            n.e(8973),
+            n.e(3245),
+            n.e(4801),
+            n.e(8359),
+            n.e(1712),
+            n.e(9177),
+            n.e(6882),
+            n.e(7247),
+            n.e(9424),
+            n.e(7695),
+            n.e(5164),
+            n.e(344),
+            n.e(5944),
+            n.e(1915),
+            n.e(6470),
+            n.e(259),
+            n.e(9868),
+            n.e(4970),
+            n.e(7161),
+            n.e(8038),
+            n.e(3238),
+            n.e(691),
+            n.e(2136),
+          ])
+            .then(n.bind(n, 60284))
+            .then((e) => ({ default: e.DemoAndQuickPitch })),
         );
-      function It(e) {
+      function Rt(e) {
         return s.createElement(
           I.SV,
           null,
           s.createElement(p.AW, Object.assign({}, e)),
         );
       }
-      function Tt() {
+      function It() {
         const [e, t] = s.useState(),
           [n, i] = s.useState(!1);
         return (
@@ -35029,13 +35079,13 @@
             n &&
               (t(n),
               (function (e) {
-                const t = (0, je.do)();
-                if ((0, We.jp)(t)) {
+                const t = (0, Ve.do)();
+                if ((0, He.jp)(t)) {
                   const n = e.accountcart;
-                  n && (0, Ze.IS)(Ie.U, t, n.cart);
-                } else if ((0, We.wV)(t)) {
+                  n && (0, Ue.IS)(Ie.U, t, n.cart);
+                } else if ((0, He.wV)(t)) {
                   const n = e.shoppingcart;
-                  n && (0, Ze.IS)(Ie.U, t, (0, Oe.S6)(n));
+                  n && (0, Ue.IS)(Ie.U, t, (0, Te.S6)(n));
                 }
               })(n)),
               i(!0);
@@ -35048,16 +35098,16 @@
                   "div",
                   { className: h().App },
                   s.createElement(
-                    xt,
+                    Ot,
                     { storeUserConfig: e },
-                    s.createElement(Bt, null),
+                    s.createElement(xt, null),
                     s.createElement(
                       s.Suspense,
                       { fallback: null },
                       s.createElement(
                         p.rs,
                         null,
-                        s.createElement(It, {
+                        s.createElement(Rt, {
                           exact: !0,
                           path: d.Z.DiagData(),
                           render: (e) =>
@@ -35070,26 +35120,26 @@
                             ),
                         }),
                         s.createElement(
-                          It,
+                          Rt,
                           { exact: !0, path: d.Z.Login() },
                           s.createElement(re.d, {
                             config: {
                               login: (e) =>
-                                s.createElement(ft, Object.assign({}, e)),
+                                s.createElement(pt, Object.assign({}, e)),
                             },
                           }),
                         ),
                         s.createElement(
-                          It,
+                          Rt,
                           { exact: !0, path: d.Z.OAuthLogin() },
                           s.createElement(re.d, {
                             config: {
                               login: (e) =>
-                                s.createElement(ft, Object.assign({}, e)),
+                                s.createElement(pt, Object.assign({}, e)),
                             },
                           }),
                         ),
-                        s.createElement(It, {
+                        s.createElement(Rt, {
                           exact: !0,
                           path: d.Z.AppStorePage(),
                           render: (e) => {
@@ -35101,22 +35151,22 @@
                             return s.createElement(re.d, {
                               config: {
                                 "events-row": () =>
-                                  s.createElement(Ae, {
+                                  s.createElement(Lt, {
                                     key: `appeventrow${t}`,
                                     appid: Number.parseInt(t),
                                   }),
                                 "review-award": () =>
-                                  s.createElement(rt, {
+                                  s.createElement(tt, {
                                     key: `appawardmodal${t}`,
                                   }),
                                 "steamawardsvote-embed": () =>
-                                  s.createElement(at, {
+                                  s.createElement(rt, {
                                     key: `steamawardsvote_${t}`,
                                     appID: Number.parseInt(t),
                                   }),
                                 "broadcast-embed": () =>
                                   s.createElement(
-                                    st,
+                                    nt,
                                     Object.assign(
                                       { key: `appbroadcastcast_${t}` },
                                       e,
@@ -35124,12 +35174,12 @@
                                     ),
                                   ),
                                 "demo-and-quick-pitch": () =>
-                                  s.createElement(ke, {
+                                  s.createElement(Mt, {
                                     key: `appdemoquickpitch_${t}`,
                                     appID: Number.parseInt(t),
                                   }),
                                 "deck-verified-results": () =>
-                                  s.createElement(dt, {
+                                  s.createElement(lt, {
                                     appID: Number.parseInt(t),
                                     results: (0, l.kQ)(
                                       "deckcompatibility",
@@ -35143,33 +35193,33 @@
                                 "gamehighlight-trailer": (e) =>
                                   s.createElement(De, Object.assign({}, e)),
                                 "discovery-queue-app-widget": () =>
-                                  s.createElement(vt, {
+                                  s.createElement(gt, {
                                     key: `discoveryqueue${t}`,
                                     appID: Number.parseInt(t),
                                   }),
                                 "game-notice-controller-required": () =>
-                                  s.createElement(yt, {
+                                  s.createElement(St, {
                                     appid: Number.parseInt(t),
                                     type: se.EPurchaseNoticeType
                                       .EPurchaseNoticeType_ControllerRequired,
                                   }),
                                 "game-notice-vr-required": () =>
-                                  s.createElement(yt, {
+                                  s.createElement(St, {
                                     type: se.EPurchaseNoticeType
                                       .EPurchaseNoticeType_VRRequired,
                                   }),
                                 "game-notice-vr-supported": () =>
-                                  s.createElement(yt, {
+                                  s.createElement(St, {
                                     type: se.EPurchaseNoticeType
                                       .EPurchaseNoticeType_VRSupported,
                                   }),
                                 "store-sidebar-controller-support-info": (e) =>
-                                  s.createElement(Et, Object.assign({}, e)),
+                                  s.createElement(bt, Object.assign({}, e)),
                               },
                             });
                           },
                         }),
-                        s.createElement(It, {
+                        s.createElement(Rt, {
                           exact: !0,
                           path: d.Z.SaleLandingPage(),
                           render: (e) => {
@@ -35181,14 +35231,14 @@
                             return s.createElement(re.d, {
                               config: {
                                 "sale-display": () =>
-                                  s.createElement(gt, {
+                                  s.createElement(mt, {
                                     key: `sale_${t}`,
                                     promotionName: `sale_${t}`,
                                     language: (0, u.jM)(l.De.LANGUAGE),
                                   }),
                                 "broadcast-embed": () =>
                                   s.createElement(
-                                    st,
+                                    nt,
                                     Object.assign(
                                       { key: `broadcastsale_${t}` },
                                       e,
@@ -35199,24 +35249,24 @@
                             });
                           },
                         }),
-                        s.createElement(It, {
+                        s.createElement(Rt, {
                           path: d.Z.CuratorAdminPage(),
                           render: (e) =>
                             s.createElement(re.d, {
                               config: {
                                 "curator-admin-rss": () =>
-                                  s.createElement(ht, null),
+                                  s.createElement(ut, null),
                               },
                             }),
                         }),
-                        s.createElement(It, {
+                        s.createElement(Rt, {
                           exact: !0,
                           path: d.Z.CreatorSaleLandingPage(),
                           render: (e) =>
                             s.createElement(re.d, {
                               config: {
                                 "sale-display": () =>
-                                  s.createElement(gt, {
+                                  s.createElement(mt, {
                                     key:
                                       "salecreator_" +
                                       e.match.params.creatorPageName +
@@ -35229,7 +35279,7 @@
                               },
                             }),
                         }),
-                        s.createElement(It, {
+                        s.createElement(Rt, {
                           path: [
                             d.Z.RemotePlay(),
                             d.Z.RemotePlayTogether(),
@@ -35238,9 +35288,9 @@
                             d.Z.SteamDeckDock(),
                             d.Z.SubscriptionPlanLandingPage(),
                           ],
-                          render: (e) => s.createElement(At, null),
+                          render: (e) => s.createElement(Tt, null),
                         }),
-                        s.createElement(It, {
+                        s.createElement(Rt, {
                           exact: !0,
                           path: d.Z.CuratorHomePage(),
                           render: (e) =>
@@ -35248,7 +35298,7 @@
                               config: {
                                 "broadcast-embed": () =>
                                   s.createElement(
-                                    st,
+                                    nt,
                                     Object.assign(
                                       {
                                         key:
@@ -35267,28 +35317,28 @@
                               },
                             }),
                         }),
-                        s.createElement(It, {
+                        s.createElement(Rt, {
                           exact: !0,
                           path: d.Z.CuratorListPage(),
                           render: (e) =>
                             s.createElement(re.d, {
                               config: {
                                 "list-display": () =>
-                                  s.createElement(ut, {
+                                  s.createElement(at, {
                                     key: "curator_list",
                                     listid: e.match.params.listid,
                                   }),
                               },
                             }),
                         }),
-                        s.createElement(It, {
+                        s.createElement(Rt, {
                           exact: !0,
                           path: d.Z.PackageStorePage(),
                           render: (e) =>
                             s.createElement(re.d, {
                               config: {
                                 "broadcast-embed": () =>
-                                  s.createElement(st, {
+                                  s.createElement(nt, {
                                     key:
                                       "packagebroadcast_" +
                                       e.match.params.subid,
@@ -35299,14 +35349,14 @@
                               },
                             }),
                         }),
-                        s.createElement(It, {
+                        s.createElement(Rt, {
                           exact: !0,
                           path: d.Z.BundleStorePage(),
                           render: (e) =>
                             s.createElement(re.d, {
                               config: {
                                 "broadcast-embed": () =>
-                                  s.createElement(st, {
+                                  s.createElement(nt, {
                                     key:
                                       "bundlebroadcast_" +
                                       e.match.params.bundleid,
@@ -35318,60 +35368,60 @@
                               },
                             }),
                         }),
-                        s.createElement(It, {
+                        s.createElement(Rt, {
                           path: d.Z.NewsHub(),
                           render: (e) =>
                             s.createElement(re.d, {
                               config: {
                                 "event-calendar": () =>
-                                  s.createElement(mt, null),
+                                  s.createElement(ct, null),
                               },
                             }),
                         }),
-                        s.createElement(It, {
+                        s.createElement(Rt, {
                           path: d.Z.EventAdmin(),
                           render: (e) =>
                             s.createElement(re.d, {
                               config: {
                                 "event-calendar": () =>
-                                  s.createElement(pt, null),
+                                  s.createElement(dt, null),
                               },
                             }),
                         }),
-                        s.createElement(It, {
+                        s.createElement(Rt, {
                           exact: !0,
                           path: d.Z.InteractiveRecommender(),
                           render: (e) =>
                             s.createElement(re.d, {
                               config: {
-                                recommender: () => s.createElement(nt, null),
+                                recommender: () => s.createElement(Je, null),
                               },
                             }),
                         }),
-                        s.createElement(It, {
+                        s.createElement(Rt, {
                           path: d.Z.LabsSandbox(),
-                          render: (e) => s.createElement(ot, null),
+                          render: (e) => s.createElement(it, null),
                         }),
-                        s.createElement(It, {
+                        s.createElement(Rt, {
                           path: d.Z.SteamCharts(),
                           render: (e) =>
                             s.createElement(re.d, {
                               config: {
                                 "react-root": () =>
-                                  s.createElement(tt, Object.assign({}, e)),
+                                  s.createElement(Qe, Object.assign({}, e)),
                               },
                             }),
                         }),
-                        s.createElement(It, {
+                        s.createElement(Rt, {
                           path: d.Z.Loyalty(),
                           render: () =>
                             s.createElement(re.d, {
                               config: {
-                                "points-shop": () => s.createElement(it, null),
+                                "points-shop": () => s.createElement(et, null),
                               },
                             }),
                         }),
-                        s.createElement(It, {
+                        s.createElement(Rt, {
                           path: d.Z.ContentHubHome(),
                           render: (e) => {
                             const {
@@ -35382,7 +35432,7 @@
                             return s.createElement(re.d, {
                               config: {
                                 "sale-display": () =>
-                                  s.createElement(gt, {
+                                  s.createElement(mt, {
                                     key: "contenthub_" + t,
                                     promotionName: "contenthub_" + t,
                                     language: (0, u.jM)(l.De.LANGUAGE),
@@ -35391,89 +35441,98 @@
                             });
                           },
                         }),
-                        s.createElement(It, {
+                        s.createElement(Rt, {
                           path: d.Z.Categories(),
                           render: () =>
                             s.createElement(re.d, {
                               config: {
-                                categories: () => s.createElement(_t, null),
+                                categories: () => s.createElement(ht, null),
                               },
                             }),
                         }),
-                        s.createElement(It, {
+                        s.createElement(Rt, {
                           path: d.Z.AccountPreferences(),
                           render: (e) =>
-                            s.createElement(lt, Object.assign({}, e)),
+                            s.createElement(st, Object.assign({}, e)),
                         }),
-                        s.createElement(It, {
+                        s.createElement(Rt, {
                           exact: !0,
                           path: d.Z.SummerSale2021Story(),
                           render: (e) =>
                             s.createElement(re.d, {
                               config: {
                                 "forge-your-fate": () =>
-                                  s.createElement(ct, null),
+                                  s.createElement(ot, null),
                               },
                             }),
                         }),
-                        s.createElement(It, {
+                        s.createElement(Rt, {
                           exact: !0,
                           path: d.Z.LabsHome(),
                           render: (e) =>
                             s.createElement(re.d, {
                               config: {
                                 "discovery-queue-button": () =>
-                                  s.createElement(Ct, null),
+                                  s.createElement(_t, null),
                               },
                             }),
                         }),
-                        s.createElement(It, {
+                        s.createElement(Rt, {
                           path: d.Z.MarketingMessages(),
                           render: (e) =>
-                            s.createElement(St, Object.assign({}, e)),
+                            s.createElement(ft, Object.assign({}, e)),
                         }),
-                        s.createElement(It, {
+                        s.createElement(Rt, {
                           path: d.Z.YearInReview(),
                           render: (e) =>
-                            s.createElement(bt, Object.assign({}, e)),
+                            s.createElement(vt, Object.assign({}, e)),
                         }),
-                        s.createElement(It, {
+                        s.createElement(Rt, {
                           path: d.Z.ShoppingCartAccountCartPurchaseRequested(),
                           render: (e) =>
                             s.createElement(re.d, {
                               config: {
                                 "react-root": () =>
-                                  s.createElement(Lt, {
+                                  s.createElement(yt, {
                                     familyGroupID: e.match.params.familygroupid,
                                   }),
                               },
                             }),
                         }),
-                        s.createElement(It, {
+                        s.createElement(Rt, {
                           path: d.Z.ShoppingCartPurchaseRequest(),
                           render: (e) =>
                             s.createElement(re.d, {
                               config: {
                                 "react-root": () =>
-                                  s.createElement(Mt, {
+                                  s.createElement(Et, {
                                     familyGroupID: e.match.params.familygroupid,
                                     requestID: e.match.params.requestid,
                                   }),
                               },
                             }),
                         }),
-                        s.createElement(It, {
+                        s.createElement(Rt, {
                           path: d.Z.ShoppingCartGifts(),
                           render: (e) =>
                             s.createElement(re.d, {
                               config: {
                                 "react-root": () =>
-                                  s.createElement(Dt, { initialStep: "gifts" }),
+                                  s.createElement(wt, { initialStep: "gifts" }),
                               },
                             }),
                         }),
-                        s.createElement(It, {
+                        s.createElement(Rt, {
                           path: d.Z.ShoppingCart(),
+                          render: (e) =>
+                            s.createElement(re.d, {
+                              config: {
+                                "react-root": () => s.createElement(wt, null),
+                              },
+                            }),
+                        }),
+                        s.createElement(Rt, {
+                          path: d.Z.SteamAwards(),
                           render: (e) =>
                             s.createElement(re.d, {
                               config: {
@@ -35481,17 +35540,8 @@
                               },
                             }),
                         }),
-                        s.createElement(It, {
-                          path: d.Z.SteamAwards(),
-                          render: (e) =>
-                            s.createElement(re.d, {
-                              config: {
-                                "react-root": () => s.createElement(Rt, null),
-                              },
-                            }),
-                        }),
                         !1,
-                        s.createElement(It, null, s.createElement(Re, null)),
+                        s.createElement(Rt, null, s.createElement(Re, null)),
                       ),
                     ),
                   ),
@@ -35500,13 +35550,13 @@
             : null
         );
       }
-      function At(e) {
+      function Tt(e) {
         const t = (0, p.TH)().pathname.split("/").filter(Boolean).pop(),
           n = "sale_" + ((null == t ? void 0 : t.split("?")[0]) || "unknown");
         return s.createElement(re.d, {
           config: {
             "sale-display": () =>
-              s.createElement(gt, {
+              s.createElement(mt, {
                 key: n,
                 promotionName: n,
                 language: (0, u.jM)(l.De.LANGUAGE),
@@ -35514,7 +35564,7 @@
           },
         });
       }
-      function kt(e) {
+      function At(e) {
         const { storeUserConfig: t, children: n } = e,
           i = s.useCallback(
             () =>
@@ -35540,10 +35590,10 @@
           ),
         );
       }
-      function Ot(e) {
+      function kt(e) {
         const { storeUserConfig: t, children: n } = e,
           i = s.useRef();
-        i.current || (i.current = new et());
+        i.current || (i.current = new Ye());
         let r = n;
         return (
           (null == t ? void 0 : t.originating_navdata) &&
@@ -35555,14 +35605,14 @@
           s.createElement(
             oe.HC,
             null,
-            s.createElement($e.Ff, { ImpressionTracker: i.current }, r),
+            s.createElement(qe.Ff, { ImpressionTracker: i.current }, r),
           )
         );
       }
-      function xt(e) {
+      function Ot(e) {
         const { storeUserConfig: t, children: n } = e;
         return s.createElement(
-          Ot,
+          kt,
           { storeUserConfig: t },
           s.createElement(
             w.u.Provider,
@@ -35571,7 +35621,7 @@
               l.fI,
               null,
               s.createElement(
-                kt,
+                At,
                 { storeUserConfig: t },
                 s.createElement(Ie.R, null, s.createElement(K, null, n)),
               ),
@@ -35579,18 +35629,18 @@
           ),
         );
       }
-      const Bt = s.memo(function (e) {
+      const xt = s.memo(function (e) {
         return s.createElement(
           s.Fragment,
           null,
-          s.createElement(Ke, null),
+          s.createElement(Ze, null),
           s.createElement(
             s.Suspense,
             { fallback: null },
             s.createElement(re.d, {
               config: {
                 "green-envelope": () =>
-                  s.createElement(wt, {
+                  s.createElement(Ct, {
                     bResponsiveHeader: !1,
                     notifications: (0, l.kQ)(
                       "steam_notifications",
@@ -35598,7 +35648,7 @@
                     ),
                   }),
                 "green-envelope-responsive": () =>
-                  s.createElement(wt, {
+                  s.createElement(Ct, {
                     bResponsiveHeader: !0,
                     notifications: (0, l.kQ)(
                       "steam_notifications",
@@ -35618,19 +35668,19 @@
           ),
         );
       });
-      var Nt = n(92011),
-        Pt = n(50423);
+      var Bt = n(92011),
+        Nt = n(50423);
       n(33557);
       new Map();
       n(7765);
       (0, ae.jQ)({ enforceActions: "never" }),
-        Pt.Dj(function () {
+        Nt.Dj(function () {
           return (0, i.mG)(this, void 0, void 0, function* () {
             (0, l.Ek)("application_config").userConfig ||
               (yield (0, l.x)(a(), l.De.STORE_BASE_URL + "actions/", {
                 userConfig: !0,
               })),
-              (0, Nt.Uh)().Init(
+              (0, Bt.Uh)().Init(
                 "Store",
                 CLSTAMP,
                 new C.J(l.De.WEBAPI_BASE_URL).GetServiceTransport(),
@@ -35664,7 +35714,7 @@
               document.getElementById("application_root")
                 ? r
                     .createRoot(document.getElementById("application_root"))
-                    .render(s.createElement(Tt))
+                    .render(s.createElement(It))
                 : console.error('No "application_root" was found to target');
           });
         });
@@ -36485,7 +36535,7 @@
   },
   (e) => {
     e.O(0, [3250], () => {
-      return (t = 14542), e((e.s = t));
+      return (t = 99834), e((e.s = t));
       var t;
     });
     e.O();

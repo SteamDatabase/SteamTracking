@@ -10325,7 +10325,7 @@
         _ = n(65255);
       const h = { high_pending_orders: !1, inventory_available: !0 };
       function g(e) {
-        const t = (0, m.sG)(),
+        const t = (0, m.be)(),
           n = (0, d.useQuery)(
             [
               (null == e ? void 0 : e.GetID()) || u.kI,

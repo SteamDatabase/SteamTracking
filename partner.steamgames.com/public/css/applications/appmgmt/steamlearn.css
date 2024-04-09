@@ -1584,6 +1584,10 @@ div.react-flow__handle-right {
 ._1ShdTmv0Ei7D93E1js23mC ._3WEibGFdezp5Jhzs3JaJEy._2e22Ir-Amh_wMWtyooBBrU {
   font-size: 13px;
 }
+._1ShdTmv0Ei7D93E1js23mC label {
+  font-size: 14px;
+  color: #ac966a;
+}
 ._1ShdTmv0Ei7D93E1js23mC ._3xxzPYh_XXYL4rNrbqFjpm {
   width: 70px;
   height: 20px;
@@ -3060,6 +3064,33 @@ button.DialogButton {
 }
 ._1KZ1Tvb95UWTyf3XxU6QdT ._1Lo07yaSSJgAILv8OF8tYm ._28cVssSFEjYRGOtOijQjyG {
   font-weight: bold;
+}
+._1f1DsyMZPoMlvpRWAMruFE {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+._1f1DsyMZPoMlvpRWAMruFE ._3utCzjAcc404OPjKNpO5e- {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+._1f1DsyMZPoMlvpRWAMruFE .Fw22Q--SmZzCyJbmoPKLP {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+._1f1DsyMZPoMlvpRWAMruFE .Fw22Q--SmZzCyJbmoPKLP ._2dqyrftBu_kF4JXUCzo6Zk {
+  font-size: 18px;
+  color: #fff;
+}
+._1f1DsyMZPoMlvpRWAMruFE .Xrk5e2IntCK-pm83SHXwB {
+  border: 1px solid #313131;
+  padding: 10px;
+  background-color: #131518;
+  white-space: pre-wrap;
+  font-size: 11px;
+  font-family: monospace;
 }
 * {
   box-sizing: border-box;
