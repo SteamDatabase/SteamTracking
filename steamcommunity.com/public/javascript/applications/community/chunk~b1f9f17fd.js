@@ -28643,7 +28643,7 @@
           ),
         );
       }
-      var oa = a(84357);
+      const oa = d.lazy(() => a.e(3663).then(a.bind(a, 84357)));
       function la(e) {
         const { editModel: t } = e,
           a = t.GetEventModel().jsondata,
@@ -28764,25 +28764,29 @@
                   d.createElement(
                     "div",
                     { className: Ge.CodeEditor },
-                    d.createElement(oa.ZP, {
-                      width: "100%",
-                      height: "100%",
-                      language: "css",
-                      theme: "vs-dark",
-                      value: n || "",
-                      options: {
-                        selectOnLineNumbers: !0,
-                        tabCompletion: "on",
-                        colorDecorators: !0,
-                        scrollBeyondLastLine: !1,
-                        automaticLayout: !0,
-                      },
-                      onChange: (e) => {
-                        t.GetEventModel().jsondata.sale_custom_css != e &&
-                          ((t.GetEventModel().jsondata.sale_custom_css = e),
-                          t.SetDirty(s.jB.jsondata_sales));
-                      },
-                    }),
+                    d.createElement(
+                      d.Suspense,
+                      { fallback: null },
+                      d.createElement(oa, {
+                        width: "100%",
+                        height: "100%",
+                        language: "css",
+                        theme: "vs-dark",
+                        value: n || "",
+                        options: {
+                          selectOnLineNumbers: !0,
+                          tabCompletion: "on",
+                          colorDecorators: !0,
+                          scrollBeyondLastLine: !1,
+                          automaticLayout: !0,
+                        },
+                        onChange: (e) => {
+                          t.GetEventModel().jsondata.sale_custom_css != e &&
+                            ((t.GetEventModel().jsondata.sale_custom_css = e),
+                            t.SetDirty(s.jB.jsondata_sales));
+                        },
+                      }),
+                    ),
                   ),
                 )
               : d.createElement(
