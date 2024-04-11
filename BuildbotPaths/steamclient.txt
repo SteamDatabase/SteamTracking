@@ -107,6 +107,7 @@
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/steamp2pvoice.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/streamingfeature.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/subscribedfilelistcache.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/subscribedfilemanager.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/systemlogcollector.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/systemmanager.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/systemperfmanager.cpp

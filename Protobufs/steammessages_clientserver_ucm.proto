@@ -109,6 +109,8 @@ message CMsgClientUCMUpdatePublishedFile {
 	repeated int32 content_descriptors_to_remove = 30;
 	optional bool allow_admin_tags = 31 [default = false];
 	optional uint64 external_asset_id = 32;
+	optional string game_branch_min = 33;
+	optional string game_branch_max = 34;
 }
 
 message CMsgClientUCMUpdatePublishedFileResponse {
@@ -133,6 +135,13 @@ message CMsgClientUCMEnumerateUserSubscribedFilesWithUpdates {
 }
 
 message CMsgClientUCMEnumerateUserSubscribedFilesWithUpdatesResponse {
+	message AuthorSnapshot {
+		optional uint32 timestamp = 1;
+		optional string game_branch_min = 2;
+		optional string game_branch_max = 3;
+		optional fixed64 manifestid = 4;
+	}
+
 	message PublishedFileId {
 		optional fixed64 published_file_id = 1;
 		optional fixed32 rtime32_subscribed = 2 [default = 0];
@@ -141,6 +150,7 @@ message CMsgClientUCMEnumerateUserSubscribedFilesWithUpdatesResponse {
 		optional uint32 file_size = 5;
 		optional fixed32 rtime32_last_updated = 6;
 		optional bool is_depot_content = 7;
+		repeated .CMsgClientUCMEnumerateUserSubscribedFilesWithUpdatesResponse.AuthorSnapshot author_snapshots = 8;
 	}
 
 	optional int32 eresult = 1 [default = 2];
