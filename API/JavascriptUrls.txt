@@ -1000,6 +1000,7 @@ ${PARTNER_BASE_URL}optin/ajaxgetoptinpublicdefinition
 ${PARTNER_BASE_URL}optin/ajaxgetoptinregistation
 ${PARTNER_BASE_URL}optin/ajaxgetoptinstats
 ${PARTNER_BASE_URL}optin/ajaxgetpendingreviewregistrations
+${PARTNER_BASE_URL}optin/ajaxgetpointshopiteminfo
 ${PARTNER_BASE_URL}optin/ajaxgetspecialeventinfo
 ${PARTNER_BASE_URL}optin/ajaxinviteapps
 ${PARTNER_BASE_URL}optin/ajaxinvitepartnersorapps
@@ -1010,6 +1011,7 @@ ${PARTNER_BASE_URL}optin/ajaxupdateadditionalfeaturingapps
 ${PARTNER_BASE_URL}optin/ajaxupdateoptinregistration/${appid}
 ${PARTNER_BASE_URL}optin/ajaxupdateoptinregistration/${}
 ${PARTNER_BASE_URL}optin/ajaxupdateoptinregistrationpayload/${}
+${PARTNER_BASE_URL}optin/ajaxupdatepointshopiteminfo
 ${PARTNER_BASE_URL}optin/ajaxuploadasset/${}
 ${PARTNER_BASE_URL}optin/appeal/${pageid}/${_ ? _ : _}
 ${PARTNER_BASE_URL}optin/appreview/${pageid}?tab=${_ ? "review" : "appeal"}
