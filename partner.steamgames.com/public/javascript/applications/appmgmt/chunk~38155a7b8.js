@@ -48991,7 +48991,7 @@
                         url: `${A.De.PARTNER_BASE_URL}promotion/assetportal/localization/${t.planid}`,
                         text: `${A.De.PARTNER_BASE_URL}promotion/assetportal/localization/${t.planid}`,
                       },
-                      date8: { date: T(t.rtDueDate), time: N(t.rtDueDate) },
+                      date8: { date: T(t.rtLiveDate), time: N(t.rtLiveDate) },
                       numbers: "" + t.nNumAssets,
                       long_text: t.strDescription,
                       text: t.strRequestorName,
@@ -70260,7 +70260,7 @@
             () =>
               t.GetArtworkCompleteTime()
                 ? V.k_LocalizationDone
-                : t.GetPartnerArtworkSubmissionReviewed()
+                : t.GetArtworkLocalizationTaskID()
                   ? V.k_DesignComplete
                   : t.GetDeliveryReviewTime()
                     ? V.k_DeliveryReviewed
