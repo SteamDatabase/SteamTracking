@@ -966,6 +966,7 @@
     "AssetRequest_Link_Placeholder": "Full URL, including https://...",
     "AssetRequest_General_SpecTitle": "Asset Specifications",
     "AssetRequest_General_Download": "Download Templates: %1$s",
+    "AssetRequest_General_DropBox": "Promo Assets on Dropbox",
     "AssetRequest_General_SeeDocs": "See Documentation",
     "AssetRequest_General_Upload": "Upload your preview",
     "AssetRequest_General_Upload_takeover": "Upload your Takeover preview",

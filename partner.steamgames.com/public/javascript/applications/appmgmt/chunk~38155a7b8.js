@@ -1276,7 +1276,10 @@
       };
     },
     78676: (e) => {
-      e.exports = { DateCtn: "_13RGKmbd0bFVxkQJdMEX0t" };
+      e.exports = {
+        DateCtn: "_13RGKmbd0bFVxkQJdMEX0t",
+        Vacation: "_1RS5BRUx0pdtR2xvd3P2oQ",
+      };
     },
     60688: (e) => {
       e.exports = {
@@ -45477,10 +45480,10 @@
                 { className: c().AssetSpecs },
                 l.createElement(ue, {
                   strTemplateURL:
-                    "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/steamworks_docs/english/PromoAssets_Mar_2024.zip",
+                    "https://www.dropbox.com/scl/fo/mhf604o6bdbcfr1scq7bx/h?rlkey=9bk0ggiwuvs4o1jdnej4xsy0c&dl=0",
                   strDocURL:
                     "https://partner.steamgames.com/doc/store/assets/promos",
-                  strTemplateName: "PromoAssets_Mar_2024.zip",
+                  strTemplateName: (0, g.Xx)("#AssetRequest_General_DropBox"),
                 }),
                 l.createElement(
                   "div",
@@ -45807,10 +45810,12 @@
                     { className: c().AssetSpecs },
                     l.createElement(ue, {
                       strTemplateURL:
-                        "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/steamworks_docs/english/PromoAssets_Mar_2024.zip",
+                        "https://www.dropbox.com/scl/fo/mhf604o6bdbcfr1scq7bx/h?rlkey=9bk0ggiwuvs4o1jdnej4xsy0c&dl=0",
                       strDocURL:
                         "https://partner.steamgames.com/doc/store/assets/promos",
-                      strTemplateName: "PromoAssets_Mar_2024.zip",
+                      strTemplateName: (0, g.Xx)(
+                        "#AssetRequest_General_DropBox",
+                      ),
                     }),
                     l.createElement(
                       "div",
@@ -45945,10 +45950,10 @@
                   { className: c().AssetSpecs },
                   l.createElement(ue, {
                     strTemplateURL:
-                      "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/steamworks_docs/english/PromoAssets_Mar_2024.zip",
+                      "https://www.dropbox.com/scl/fo/mhf604o6bdbcfr1scq7bx/h?rlkey=9bk0ggiwuvs4o1jdnej4xsy0c&dl=0",
                     strDocURL:
                       "https://partner.steamgames.com/doc/store/assets/promos",
-                    strTemplateName: "PromoAssets_Mar_2024.zip",
+                    strTemplateName: (0, g.Xx)("#AssetRequest_General_DropBox"),
                   }),
                   l.createElement(
                     "div",
@@ -46066,10 +46071,10 @@
                   { className: c().AssetSpecs },
                   l.createElement(ue, {
                     strTemplateURL:
-                      "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/steamworks_docs/english/PromoAssets_Mar_2024.zip",
+                      "https://www.dropbox.com/scl/fo/mhf604o6bdbcfr1scq7bx/h?rlkey=9bk0ggiwuvs4o1jdnej4xsy0c&dl=0",
                     strDocURL:
                       "https://partner.steamgames.com/doc/store/assets/promos",
-                    strTemplateName: "PromoAssets_Mar_2024.zip",
+                    strTemplateName: (0, g.Xx)("#AssetRequest_General_DropBox"),
                   }),
                   l.createElement(
                     "div",
@@ -46187,10 +46192,10 @@
                   { className: c().AssetSpecs },
                   l.createElement(ue, {
                     strTemplateURL:
-                      "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/steamworks_docs/english/PromoAssets_Mar_2024.zip",
+                      "https://www.dropbox.com/scl/fo/mhf604o6bdbcfr1scq7bx/h?rlkey=9bk0ggiwuvs4o1jdnej4xsy0c&dl=0",
                     strDocURL:
                       "https://partner.steamgames.com/doc/store/assets/promos",
-                    strTemplateName: "PromoAssets_Mar_2024.zip",
+                    strTemplateName: (0, g.Xx)("#AssetRequest_General_DropBox"),
                   }),
                   l.createElement(
                     "div",
@@ -66589,39 +66594,39 @@
             closeModal: g,
             rtInitialEndDate: v,
           } = e,
-          [E, y] = d.useState(n || "midweek"),
-          [B, M] = d.useState(""),
-          [F, U] = d.useState((0, k.ap)(t)),
-          [V, H] = d.useState((0, k.h9)(t, v)),
-          { fnAddNewPlan: X } = (0, s.$H)(),
-          { fnAddNewSpotlight: j } = (0, c.Oo)(),
-          { fnCreateCluster: q } = (0, m.b)(),
-          { fnCreateMarketingMessage: W } = (0, o.oT)(),
-          [z, Z] = d.useState(null),
-          [K, Y] = d.useState(!1),
-          [Q, $] = d.useState(!1),
-          [J, ee] = d.useState(void 0),
-          [te, ne] = d.useState(0),
-          { fnCreateDiscountEvent: ae } = (0, r.z8)(),
-          [ie, le] = d.useState(!0),
-          [re, oe] = (0, d.useState)(!0),
-          [se, ce] = (0, d.useState)(!0),
-          [me, de] = (0, d.useState)(!1),
-          [ue, pe] = (0, d.useState)("important" == E),
-          [_e, he] = d.useState("important" == E);
+          [E, B] = d.useState(n || "saleevent"),
+          [M, F] = d.useState(""),
+          [U, V] = d.useState((0, k.ap)(t)),
+          [H, X] = d.useState((0, k.h9)(t, v)),
+          { fnAddNewPlan: j } = (0, s.$H)(),
+          { fnAddNewSpotlight: q } = (0, c.Oo)(),
+          { fnCreateCluster: W } = (0, m.b)(),
+          { fnCreateMarketingMessage: z } = (0, o.oT)(),
+          [Z, K] = d.useState(null),
+          [Y, Q] = d.useState(!1),
+          [$, J] = d.useState(!1),
+          [ee, te] = d.useState(void 0),
+          [ne, ae] = d.useState(0),
+          { fnCreateDiscountEvent: ie } = (0, r.z8)(),
+          [le, re] = d.useState(!0),
+          [oe, se] = (0, d.useState)(!0),
+          [ce, me] = (0, d.useState)(!0),
+          [de, ue] = (0, d.useState)(!1),
+          [pe, _e] = (0, d.useState)("important" == E),
+          [he, ge] = d.useState("important" == E);
         (0, d.useEffect)(() => {
-          de("important" == E), pe("important" == E);
+          ue("important" == E), _e("important" == E);
         }, [E]);
-        const [ge, ve] = (0, d.useState)(null),
-          [Ee, Se] = (0, d.useState)(!1),
-          [De] = (0, p.jk)((0, u.u$)(z), (0, u.D3)(z), {
+        const [ve, Ee] = (0, d.useState)(null),
+          [Se, De] = (0, d.useState)(!1),
+          [fe] = (0, p.jk)((0, u.u$)(Z), (0, u.D3)(Z), {
             include_assets: !0,
             include_all_purchase_options: !0,
             include_platforms: !0,
           }),
-          fe = (0, d.useCallback)(
+          ye = (0, d.useCallback)(
             (e, t, n, a, i, l, r, o, s, c, m, d, u) => {
-              X({
+              j({
                 type: e,
                 strName: t,
                 rtStartDate: n,
@@ -66636,62 +66641,63 @@
                 strTakeunderID: d,
               }).then((e) => {
                 e
-                  ? (ve(e),
+                  ? (Ee(e),
                     u ||
                       (window.location.href =
                         C.De.PARTNER_BASE_URL +
                         "promotion" +
                         N.PromotionRoutes.PromotionPlanEditor(e)))
-                  : ee(
+                  : te(
                       "Failed to create promotion, check browser console logs for details",
                     );
               });
             },
-            [X],
+            [j],
           ),
-          ye = Boolean("vacation" == E);
-        let be = null;
+          be = Boolean("vacation" == E);
+        let Ie = null;
         return (
-          Ee &&
-            (be =
+          Se &&
+            (Ie =
               "All slots are already reserved. Please be thoughtful if you are adding a new entry."),
           d.createElement(
             S.uH,
             {
               strTitle: "Create Promotion Planning Entry",
+              className: (0, y.Z)({ [R.Vacation]: "vacation" == E }),
               bDisableBackgroundDismiss: !0,
               bAllowFullSize: !0,
               onCancel: g,
               bOKDisabled:
-                0 == B.trim().length || Q || !(0, k.hQ)(E, F, V) || (z && !De),
+                0 == M.trim().length || $ || !(0, k.hQ)(E, U, H) || (Z && !fe),
               onOK: () =>
                 (0, a.mG)(this, void 0, void 0, function* () {
-                  $(!0);
+                  J(!0);
                   let e = null,
                     t = null,
                     n = null,
                     a = null,
                     r = null,
                     o = null;
-                  if (ie && 0 != te && !K && !ye) {
-                    let t = V;
+                  if (le && 0 != ne && !Y && !be) {
+                    let t = H;
                     if (l.Ii.has(E)) {
                       const e = l.Ii.get(E);
-                      t = F + e.nDaysDiscountEvent * I._H.PerDay;
+                      t = U + e.nDaysDiscountEvent * I._H.PerDay;
                     }
-                    const n = (0, P.d)(E, F, De, z);
-                    yield ae(
-                      F,
+                    const n = (0, P.d)(E, U, fe, Z);
+                    yield ie(
+                      U,
                       t,
                       n,
                       n,
                       l.FF.get(E),
-                      [te],
-                      z.appid
-                        ? [z.appid]
-                        : null == De
+                      [ne],
+                      Z.appid
+                        ? [Z.appid]
+                        : null == fe
                           ? void 0
-                          : De.GetIncludedAppIDs(),
+                          : fe.GetIncludedAppIDs(),
                     )
                       .then((t) => (e = t.id))
                       .catch((e) => {
@@ -66699,98 +66705,98 @@
                           "Discount Event Creation Failed: " +
                           (0, f.l)(e).strErrorMsg +
                           ". "),
-                          ee(o);
+                          te(o);
                       });
                   }
-                  if (re && De && !K && !ye) {
+                  if (oe && fe && !Y && !be) {
                     const e = (0, L.i)(
-                      B,
+                      M,
                       "Weekend Deal",
-                      F,
-                      V,
+                      U,
+                      H,
                       "midweek" == E
                         ? "#spotlight_midweek_madness"
                         : "#spotlight_weekend_deal",
                       "#promo_ends_custom",
-                      De,
+                      fe,
                     );
-                    yield j(e)
+                    yield q(e)
                       .then((e) => {
                         e
                           ? (t = e)
                           : (Boolean(o) || (o = ""),
                             (o += "Spotlight Creation Failed, check console. "),
-                            ee(o));
+                            te(o));
                       })
                       .catch((e) =>
-                        ee(
+                        te(
                           "Spotlight Creation Failed: " +
                             (0, f.l)(e).strErrorMsg,
                         ),
                       );
                   }
-                  if (se && De && !K && !ye) {
-                    const e = (0, T.v)(B, 2, F, V, "#msg_action_details", De);
-                    yield W(e, !0)
+                  if (ce && fe && !Y && !be) {
+                    const e = (0, T.v)(M, 2, U, H, "#msg_action_details", fe);
+                    yield z(e, !0)
                       .then((e) => {
                         e
                           ? (n = e)
                           : (Boolean(o) || (o = ""),
                             (o +=
                               "Marketing Message Creation Failed, check console. "),
-                            ee(o));
+                            te(o));
                       })
                       .catch((e) =>
-                        ee(
+                        te(
                           "Marketing Message Creation Failed: " +
                             (0, f.l)(e).strErrorMsg,
                         ),
                       );
                   }
-                  !me ||
-                    K ||
-                    ye ||
-                    (yield q(i.R6.k_ConfigPage_Takeover, B, F, V)
+                  !de ||
+                    Y ||
+                    be ||
+                    (yield W(i.R6.k_ConfigPage_Takeover, M, U, H)
                       .then((e) => {
                         e
                           ? (a = e)
                           : (Boolean(o) || (o = ""),
                             (o += "Takeover Creation Failed, check console. "),
-                            ee(o));
+                            te(o));
                       })
                       .catch((e) =>
-                        ee(
+                        te(
                           "Takeover Create Creation Failed: " +
                             (0, f.l)(e).strErrorMsg,
                         ),
                       )),
-                    !ue ||
-                      K ||
-                      ye ||
-                      (yield q(i.R6.k_ConfigPage_Takeunder, B, F, V)
+                    !pe ||
+                      Y ||
+                      be ||
+                      (yield W(i.R6.k_ConfigPage_Takeunder, M, U, H)
                         .then((e) => {
                           e
                             ? (r = e)
                             : (Boolean(o) || (o = ""),
                               (o +=
                                 "Takeover Creation Failed, check console. "),
-                              ee(o));
+                              te(o));
                         })
                         .catch((e) =>
-                          ee(
+                          te(
                             "Takeover Create Creation Failed: " +
                               (0, f.l)(e).strErrorMsg,
                           ),
                         )),
-                    fe(
+                    ye(
                       E,
-                      B,
-                      F,
-                      V,
+                      M,
+                      U,
+                      H,
                       e,
-                      te,
-                      z && !ye ? (0, u.u$)(z) : void 0,
-                      z && !ye ? (0, u.D3)(z) : void 0,
+                      ne,
+                      Z && !be ? (0, u.u$)(Z) : void 0,
+                      Z && !be ? (0, u.D3)(Z) : void 0,
                       t,
                       n,
                       a,
@@ -66801,22 +66807,22 @@
             },
             d.createElement(
               "div",
-              { className: R.Container },
-              Boolean(Q && !J) &&
+              { className: (0, y.Z)({ [R.Container]: !0 }) },
+              Boolean($ && !ee) &&
                 d.createElement(D.V, {
                   size: "medium",
                   position: "center",
                   string: (0, b.Xx)("#Saving"),
                 }),
-              Boolean(J) &&
-                d.createElement("div", { className: h.ErrorStyles }, J),
-              Boolean(be) &&
+              Boolean(ee) &&
+                d.createElement("div", { className: h.ErrorStyles }, ee),
+              Boolean(Ie) &&
                 d.createElement(
                   "div",
                   { className: h.WarningStylesBackground },
-                  be,
+                  Ie,
                 ),
-              Boolean(ge) &&
+              Boolean(ve) &&
                 d.createElement(
                   d.Fragment,
                   null,
@@ -66827,22 +66833,22 @@
                       href:
                         C.De.PARTNER_BASE_URL +
                         "promotion" +
-                        N.PromotionRoutes.PromotionPlanEditor(ge),
+                        N.PromotionRoutes.PromotionPlanEditor(ve),
                     },
                     "Open New Plan in Editor",
                   ),
                 ),
               d.createElement(_.__, null, "Choose Promotion Type:"),
-              d.createElement(x, { type: E, setType: y }),
+              d.createElement(x, { type: E, setType: B }),
               d.createElement(_.II, {
                 type: "text",
                 label: "Promotion Name",
                 tooltip:
                   "Internal name used for us to identify the promotion, not visible outside of this tool",
-                value: B,
+                value: M,
                 onChange: (e) => {
                   var t;
-                  return M(
+                  return F(
                     (null === (t = null == e ? void 0 : e.currentTarget) ||
                     void 0 === t
                       ? void 0
@@ -66852,49 +66858,49 @@
               }),
               d.createElement(O, {
                 type: E,
-                rtStartTime: F,
-                setStartTime: U,
-                rtEndTime: V,
-                setEndTime: H,
-                fnSetSlotFull: Se,
+                rtStartTime: U,
+                setStartTime: V,
+                rtEndTime: H,
+                setEndTime: X,
+                fnSetSlotFull: De,
               }),
-              Boolean(!ye) &&
+              Boolean(!be) &&
                 d.createElement(
                   d.Fragment,
                   null,
                   d.createElement(_.__, null, "Optional Featuring Target:"),
-                  Boolean(z) &&
+                  Boolean(Z) &&
                     d.createElement(A.Ce, {
-                      id: (0, u.u$)(z),
-                      itemType: (0, u.D3)(z),
+                      id: (0, u.u$)(Z),
+                      itemType: (0, u.D3)(Z),
                     }),
-                  Boolean(z && !De) &&
+                  Boolean(Z && !fe) &&
                     d.createElement(
                       "div",
                       { className: h.ErrorStylesWithIcon },
                       "Error: Invalid choice, game not Steam store visible.",
                     ),
-                  d.createElement(w.Ko, { oChoice: z, fnSetChoice: Z }),
-                  Boolean(z) &&
+                  d.createElement(w.Ko, { oChoice: Z, fnSetChoice: K }),
+                  Boolean(Z) &&
                     d.createElement(
                       d.Fragment,
                       null,
                       d.createElement(_.ji, {
                         label: "Tentative Plan",
-                        checked: K,
-                        onChange: Y,
+                        checked: Y,
+                        onChange: Q,
                         tooltip:
                           "Check if we aren't confirmed on the date and thus do not want to create any specific featuring, but we want to hold onto this time on the calendar",
                       }),
-                      Boolean(!K) &&
+                      Boolean(!Y) &&
                         d.createElement(
                           d.Fragment,
                           null,
                           d.createElement(_.ji, {
                             label: "Create discount event",
-                            checked: ie && 0 != te,
-                            onChange: le,
-                            disabled: 0 == te,
+                            checked: le && 0 != ne,
+                            onChange: re,
+                            disabled: 0 == ne,
                             tooltip:
                               "Uncheck the box to skip creating the discount event. You can create a discount event separately and associate with the daily deal. The discount event being present will let us find the package discount associated with the daily deal.",
                           }),
@@ -66902,35 +66908,35 @@
                             label: "Create Spotlight",
                             tooltip:
                               "Create a spotlight for the same duration as the plan. This can be edited seperately or created and linked afterwards.",
-                            onChange: oe,
-                            checked: re,
+                            onChange: se,
+                            checked: oe,
                           }),
                           d.createElement(_.ji, {
                             label: "Create Marketing Message",
                             tooltip:
                               "Create a Marketing Message for the same duration as the plan. This can be edited seperately or created and linked afterwards.",
-                            onChange: ce,
-                            checked: se,
+                            onChange: me,
+                            checked: ce,
                           }),
                           d.createElement(_.ji, {
                             label: "Create Frontpage Takeover",
                             tooltip:
                               "Create a Fronpage Takeover for the same duration as the plan. This can be edited seperately or created and linked afterwards.",
-                            onChange: de,
-                            checked: me,
+                            onChange: ue,
+                            checked: de,
                           }),
                           d.createElement(_.ji, {
                             label: "Create Takeunder",
                             tooltip:
                               "Create a Takeunder for the same duration as the plan. This can be edited seperately or created and linked afterwards.",
-                            onChange: pe,
-                            checked: ue,
+                            onChange: _e,
+                            checked: pe,
                           }),
                           d.createElement(G.a, {
-                            nStoreItemID: (0, u.u$)(z),
-                            eStoreItemType: (0, u.D3)(z),
-                            nPartnerID: te,
-                            setPartnerID: ne,
+                            nStoreItemID: (0, u.u$)(Z),
+                            eStoreItemType: (0, u.D3)(Z),
+                            nPartnerID: ne,
+                            setPartnerID: ae,
                           }),
                           !1,
                         ),
@@ -67137,26 +67143,26 @@
           }, [c, t]);
         return (
           (0, d.useEffect)(() => {
-            var e;
+            var e, a;
             if (r && c) {
-              const a = l.Ii.get(t),
-                i =
-                  null == c
+              const i = l.Ii.get(t),
+                o =
+                  null === (e = null == c ? void 0 : c.get(t)) || void 0 === e
                     ? void 0
-                    : c.get(t).find((e) => {
+                    : e.find((e) => {
                         const t = new Date(
-                          1e3 * (e.rtWeekStart + a.rtStartModifier),
+                          1e3 * (e.rtWeekStart + i.rtStartModifier),
                         );
                         return (
                           t.setHours(10), Math.floor(t.getTime() / 1e3) == n
                         );
                       }),
-                o =
-                  a.nMaxSlots -
-                  (null === (e = null == i ? void 0 : i.rgPlans) || void 0 === e
+                s =
+                  i.nMaxSlots -
+                  (null === (a = null == o ? void 0 : o.rgPlans) || void 0 === a
                     ? void 0
-                    : e.length);
-              r(o <= 0);
+                    : a.length);
+              r(s <= 0);
             }
           }, [c, n, t, r]),
           d.createElement(

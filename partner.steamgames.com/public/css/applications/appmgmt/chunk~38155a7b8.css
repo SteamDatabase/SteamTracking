@@ -6930,6 +6930,26 @@ textarea.VaLwylBilZSHWeTdxBQQC {
 ._13RGKmbd0bFVxkQJdMEX0t {
   min-height: 200px;
 }
+._1RS5BRUx0pdtR2xvd3P2oQ {
+  position: relative;
+}
+._1RS5BRUx0pdtR2xvd3P2oQ::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url("https://partner.steamgames.com/public/images//promotools/palmtrees.webp");
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-size: cover;
+  filter: contrast(0.4) brightness(0.5);
+}
+._1RS5BRUx0pdtR2xvd3P2oQ .DialogContent_InnerWidth {
+  position: relative;
+  z-index: 2;
+}
 .rbc-btn {
   color: inherit;
   font: inherit;

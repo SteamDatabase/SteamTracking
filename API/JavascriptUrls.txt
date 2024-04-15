@@ -2577,7 +2577,6 @@ https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/fe/fef49e7f
 https://steamcdn-a.akamaihd.net/steamcommunity/public/images/items/${appid}/${}
 https://steamcdn-a.akamaihd.net/steamcommunity/public/images/items/646570/85b510e2e164070a59947395ff91d250c010a5c9.jpg
 https://steamcdn-a.akamaihd.net/steamcommunity/public/images/steamworks_docs/english/DailyDealVisibilityExample.jpg
-https://steamcdn-a.akamaihd.net/steamcommunity/public/images/steamworks_docs/english/PromoAssets_Mar_2024.zip
 https://steamcdn-a.akamaihd.net/steamcommunity/public/images/steamworks_docs/english/SalePageTemplates.zip
 https://steamcdn-a.akamaihd.net/steamcommunity/public/images/steamworks_docs/english/spotlight_example_3.jpg
 https://steamcdn-a.akamaihd.net/steamcommunity/public/images/steamworks_docs/english/spotlight_example_4.jpg
@@ -3013,6 +3012,7 @@ https://www.dota2.com/primalbeast
 https://www.dota2.com/risinggale
 https://www.dota2.com/theonetrueking
 https://www.dropbox.com/s/h9gjz...
+https://www.dropbox.com/scl/fo/mhf604o6bdbcfr1scq7bx/h?rlkey=9bk0ggiwuvs4o1jdnej4xsy0c&dl=0
 https://www.dropbox.com/scl/fo/mhf604o6bdbcfr1scq7bx/h?rlkey=s6y8eoaa68dd3qalx1x4itqsu&dl=0
 https://www.example.com
 https://www.facebook.com/Steam/videos
