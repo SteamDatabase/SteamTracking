@@ -4359,6 +4359,9 @@
           case 22:
             f = (0, p.kQ)("#FamilyHistory_CooldownSkipConsumed", _);
             break;
+          case 23:
+            f = (0, p.kQ)("#FamilyHistory_FamilyRestored", _);
+            break;
           default:
             f = (0, p.kQ)("#FamilyHistory_UnknownChange");
         }

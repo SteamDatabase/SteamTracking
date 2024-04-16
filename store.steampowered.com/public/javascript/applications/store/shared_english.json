@@ -2833,6 +2833,7 @@
     "FamilyHistory_PurchaseRequestApproved": "%1$s approved %2$s's purchase request.",
     "FamilyHistory_PurchaseRequestDeclined": "%1$s declined %2$s's purchase request.",
     "FamilyHistory_CooldownSkipConsumed": "%1$s was allowed to skip cooldown.",
+    "FamilyHistory_FamilyRestored": "%1$s restored the family.",
     "FamilyView_RequestFeatureAccess": "Access to this functionality has been restricted by an adult in your family. You can send them a request for access.",
     "FamilyView_RequestFeatureAccess_Always": "Access to this functionality has been restricted by an adult in your family.",
     "FamilyView_RequestFeatureAccess_Offline": "You are currently disconnected from Steam. Go online to request access to this functionality from an adult in your family.",
