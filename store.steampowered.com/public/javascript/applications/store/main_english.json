@@ -435,7 +435,7 @@
     "FamilyManagement_PendingFamilyInviteInviteText_Adult": "%1$s has invited you to join their family as an %2$s",
     "FamilyManagement_PendingFamilyInviteInviteText_Child": "%1$s has invited you to join their family as a %2$s",
     "FamilyManagement_ConfirmJoin_1": "You are joining this Steam family as an <1>adult</1>. Do you wish to proceed?",
-    "FamilyManagement_ConfirmJoin_2": "You are joining this Steam family as an <1>child</1>. Do you wish to proceed?",
+    "FamilyManagement_ConfirmJoin_2": "You are joining this Steam family as a <1>child</1>. Do you wish to proceed?",
     "FamilyManagement_LearnMore": "Learn more",
     "FamilyManagement_Close": "Close",
     "FamilyManagement_ConfirmInvite": "Confirm that you want to invite this user to your Steam Family.",

@@ -6112,3 +6112,13 @@ a.open_in_steam_body:hover {
     text-transform: uppercase;
     font-weight: 600;
 }
+
+.banner_open_in_steam {
+	height: 50px;
+}
+@media screen and (max-width: 910px )
+{
+	.banner_open_in_steam {
+		display: none;
+	}
+}

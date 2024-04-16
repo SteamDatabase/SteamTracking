@@ -48,6 +48,8 @@ html.tablet .spotlight_col {
 html.tablet .spotlight_col .store_capsule .discount_block {
     padding: 2px;
 }
+
+html.tablet .specials_target .store_capsule .discount_block .discount_prices,
 html.tablet .spotlight_col .store_capsule .discount_block .discount_prices {
     gap: 0;
 }
@@ -252,9 +254,9 @@ html.tablet .home_tabs_row {
 	display: none;
 }
 
-html.tablet .tab_content,
-html.tablet .tab_content_items {
-	display: flex !important;
+html.tablet .tab_content_items
+{
+	display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
 	justify-content: flex-start;

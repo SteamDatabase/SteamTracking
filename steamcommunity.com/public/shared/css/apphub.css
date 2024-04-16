@@ -1537,6 +1537,11 @@ h3.apphub_responsive_menu_title {
 	font-size: 18px;
 }
 
+.contentcheck_descriptor_list {
+	text-align: left;
+	font-size: 18px;
+}
+
 .contentcheck_dev_header, .contentcheck_affirmation {
 	color: #9db2be;
 	font-size: 12px;

@@ -13534,6 +13534,8 @@
                     br: i.FE.readUint32,
                     bw: i.Xc.writeUint32,
                   },
+                  strides: { n: 3, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
+                  activation: { n: 4, br: i.FE.readEnum, bw: i.Xc.writeEnum },
                 },
               }),
             ee.sm_m
@@ -13592,6 +13594,7 @@
                     br: i.FE.readUint32,
                     bw: i.Xc.writeUint32,
                   },
+                  strides: { n: 2, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
                 },
               }),
             te.sm_m
@@ -16996,6 +16999,21 @@
                     n: 10,
                     br: i.FE.readString,
                     bw: i.Xc.writeString,
+                  },
+                  metadata_phase: {
+                    n: 12,
+                    br: i.FE.readEnum,
+                    bw: i.Xc.writeEnum,
+                  },
+                  metadata_phase_name: {
+                    n: 13,
+                    br: i.FE.readString,
+                    bw: i.Xc.writeString,
+                  },
+                  metadata_phase_value: {
+                    n: 14,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
                   },
                 },
               }),

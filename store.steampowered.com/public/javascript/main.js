@@ -779,6 +779,10 @@ function InitVideoFocusWatcher()
 
 	$J( window ).on( 'blur' , onWindowBlur );
 	$J( window ).on( 'focus' , onWindowFocus );
+
+	// Start the blur timer now if the document initially doesn't have focus
+	if ( !document.hasFocus() )
+		onWindowBlur();
 }
 
 $J( function() {

@@ -135,6 +135,7 @@
         ReviewScoreHeader: "_2SFxxwDhE6GaDb1Nt9ppHJ",
         ReviewScoreCount: "_1Deyvnxud-VpRoj0-ak-WK",
         ReviewScoreValue: "_2SbZztpb7hkhurwbFMdyhL",
+        ReviewScoreNone: "_3oSD89qhEuOLHYG2j-7pYx",
         ReviewScoreLow: "_3Eeb4gzeVbslp6JTodFvzd",
         ReviewScoreMixed: "_2BVpbQSVRr92nIY0RautEP",
         ReviewScoreHigh: "_1EmesNUJtSduwwWhSWbO2q",
@@ -10629,54 +10630,66 @@
     },
     74031: (e, t, n) => {
       "use strict";
-      n.d(t, { Eq: () => p, NH: () => d, QG: () => m, wj: () => u });
+      n.d(t, { Eq: () => h, NH: () => d, QG: () => u, wj: () => p });
       var a = n(85556),
-        i = n(42718),
-        r = n(79545),
-        s = n(40057),
-        o = n(98255),
+        i = n(79545),
+        r = n(98255),
+        s = n(42718),
+        o = n(40057),
         l = n(2041),
         c = n(37563);
       function d(e = c.De.LANGUAGE) {
-        const t = (0, s.lS)(),
-          n = (0, s.y$)();
-        return (0, i.useQuery)(["LocalizedTagNames", e], () =>
-          (0, a.mG)(this, void 0, void 0, function* () {
-            const a = `LocalizedTagNames_${e}`,
-              i = yield n.GetObject(a),
-              s = r.gA.Init(o.GJ);
-            s.Body().set_language(e),
-              (null == i ? void 0 : i.version_hash) &&
-                s.Body().set_have_version_hash(i.version_hash);
-            const l = yield o.d6.GetTagList(
-              t.GetAnonymousServiceTransport(),
-              s,
-            );
-            let c;
-            if (1 == l.GetEResult())
-              (c = l.Body().toObject()), n.StoreObject(a, c);
-            else {
-              if (29 != l.GetEResult()) throw l.GetErrorMessage();
-              c = i;
-            }
-            const d = new Map();
-            return (
-              c.tags.forEach(({ tagid: e, name: t }) =>
-                d.set(e, { tagid: e, name: t }),
-              ),
-              d
-            );
-          }),
-        );
+        const t = (0, o.lS)(),
+          n = (0, o.y$)();
+        return (0, s.useQuery)(m(t, n, e));
       }
-      function m(e = c.De.LANGUAGE) {
-        return l.U.getQueryData(["LocalizedTagNames", e]);
+      function m(e, t, n) {
+        return {
+          queryKey: ["LocalizedTagNames", n],
+          queryFn: () =>
+            (0, a.mG)(this, void 0, void 0, function* () {
+              const a = `LocalizedTagNames_${n}`,
+                s = yield t.GetObject(a),
+                o = i.gA.Init(r.GJ);
+              o.Body().set_language(n),
+                (null == s ? void 0 : s.version_hash) &&
+                  o.Body().set_have_version_hash(s.version_hash);
+              const l = yield r.d6.GetTagList(
+                e.GetAnonymousServiceTransport(),
+                o,
+              );
+              let c;
+              if (1 == l.GetEResult())
+                (c = l.Body().toObject()), t.StoreObject(a, c);
+              else if (29 == l.GetEResult()) c = s;
+              else {
+                if (!s) throw l.GetErrorMessage();
+                console.warn(
+                  "Couldn't load updated tag localization, will continue with what we have from storage.",
+                ),
+                  (c = s);
+              }
+              const d = new Map();
+              return (
+                c.tags.forEach(({ tagid: e, name: t }) =>
+                  d.set(e, { tagid: e, name: t }),
+                ),
+                d
+              );
+            }),
+          staleTime: 36e5,
+        };
       }
-      function u(e, t = c.De.LANGUAGE) {
+      function u(e, t, n = c.De.LANGUAGE) {
+        return (0, a.mG)(this, void 0, void 0, function* () {
+          return l.U.fetchQuery(m(e, t, n));
+        });
+      }
+      function p(e, t = c.De.LANGUAGE) {
         const { data: n } = d(t);
         return e ? (null == n ? void 0 : n.get(e)) : void 0;
       }
-      function p(e, t = c.De.LANGUAGE) {
+      function h(e, t = c.De.LANGUAGE) {
         const { data: n } = d(t);
         return null == e
           ? void 0
@@ -12579,13 +12592,14 @@
           ? i.GetFilteredReviewSummary()
           : i.GetUnfilteredReviewSummary();
         if (!r || 0 == r.review_score) return null;
-        const s =
-            r.review_score < 5
-              ? F().ReviewScoreLow
-              : 5 == r.review_score
-                ? F().ReviewScoreMixed
-                : F().ReviewScoreHigh,
-          o = `${N.De.STORE_BASE_URL}app/${t.id}/#app_reviews_hash`,
+        let s = F().ReviewScoreNone;
+        s =
+          r.review_score > 0 && r.review_score < 5
+            ? F().ReviewScoreLow
+            : 5 == r.review_score
+              ? F().ReviewScoreMixed
+              : F().ReviewScoreHigh;
+        const o = `${N.De.STORE_BASE_URL}app/${t.id}/#app_reviews_hash`,
           c = l.createElement(
             "div",
             { className: (0, R.Z)(F().ReviewScoreValue, s) },

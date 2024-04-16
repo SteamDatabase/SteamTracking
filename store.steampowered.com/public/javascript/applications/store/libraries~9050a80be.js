@@ -1864,6 +1864,11 @@
                     br: a.FE.readUint32,
                     bw: a.Xc.writeUint32,
                   },
+                  timestamp_free_until: {
+                    n: 18,
+                    br: a.FE.readUint32,
+                    bw: a.Xc.writeUint32,
+                  },
                 },
               }),
             P.sm_m

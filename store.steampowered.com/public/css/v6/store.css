@@ -4582,7 +4582,7 @@ a.cluster_capsule:hover {
 	font-size: 11px;
 }
 
-@media screen and (max-width: 940px) {
+@media screen and (max-width: 910px)
     html.responsive .store_capsule .discount_block {
         padding: 2px;
     }

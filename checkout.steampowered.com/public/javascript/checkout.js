@@ -3684,6 +3684,13 @@ function UpdatePaymentInfoForm()
 			bDisabledPaymentMethod = true;
 			$('payment_method_specific_note').innerHTML = 'We are temporarily unable to process transactions with this payment method at this time.  We apologize for the inconvenience.';
 		}
+		else if ( method.value == 'guest' )
+		{
+			g_bShowAddressForm = false;
+			bShowPaymentSpecificNote = true;
+			bDisabledPaymentMethod = true;
+			$('payment_method_specific_note').innerHTML = 'This payment method is not available for guests, please consider a different payment method or making a full Steam account to complete your purchase.';
+		}
 		else if ( method.value == 'disabled_for_wallet' )
 		{
 			g_bShowAddressForm = false;

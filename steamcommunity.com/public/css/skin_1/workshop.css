@@ -3228,6 +3228,8 @@ input.searchText
 	object-fit: contain;
 	overflow: hidden;
 	min-width: 100px;
+	width: 100%;
+	height: 100%;
 }
 .enlarged_image_viewer .popup_modal_footer {
 	display: flex;

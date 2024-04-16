@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "8811541";
+var CLSTAMP = "8821395";
 (() => {
   "use strict";
   function e(e) {
@@ -162,10 +162,10 @@ var CLSTAMP = "8811541";
         (i.is_support = !1));
     const S = l("broadcast", _);
     S && (Object.assign(s, S), (a.broadcastConfig = !0));
-    const d = l("community", _);
-    d && (Object.assign(o, d), (a.communityConfig = !0));
-    const h = l("event", _);
-    return h && (Object.assign(c, h), (a.eventConfig = !0)), a;
+    const h = l("community", _);
+    h && (Object.assign(o, h), (a.communityConfig = !0));
+    const d = l("event", _);
+    return d && (Object.assign(c, d), (a.eventConfig = !0)), a;
   }
   function l(e, t = r) {
     return m(e, t, !0);
@@ -204,7 +204,7 @@ var CLSTAMP = "8811541";
   }
   const E = "presentation_mode";
   let S = { success: !0, result: 1 };
-  class d {
+  class h {
     constructor() {
       (this.m_mapWaitingCallbacks = new Map()),
         (this.m_iCallSeq = 1),
@@ -315,9 +315,9 @@ var CLSTAMP = "8811541";
       );
     }
   }
-  let h = new (class {
+  let d = new (class {
     constructor() {
-      (this.m_connection = new d()),
+      (this.m_connection = new h()),
         (this.m_bAllowAccountMismatch = !1),
         (this.m_mapCacheSubscribedApp = new Map());
     }
@@ -374,6 +374,10 @@ var CLSTAMP = "8811541";
     OpenFriendsDialog() {
       return this.GenericEResultCall({ message: "OpenFriendsDialog" });
     }
+    OpenSteamURL(e) {
+      let t = { message: "OpenSteamURL", url: e };
+      return this.GenericEResultCall(t);
+    }
     BClientAccountMatches() {
       return (
         !i.logged_in || i.accountid == this.m_connection.ClientInfo.unAccountID
@@ -394,8 +398,8 @@ var CLSTAMP = "8811541";
         .catch(() => this.FailureResult());
     }
   })();
-  (window.ClientConnectionAPI = h),
+  (window.ClientConnectionAPI = d),
     document.addEventListener("DOMContentLoaded", function () {
-      u(), (window.ClientConnectionAPI = h);
+      u(), (window.ClientConnectionAPI = d);
     });
 })();

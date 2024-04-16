@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "8811506";
+var CLSTAMP = "8821398";
 (() => {
   "use strict";
   var e,
@@ -138,46 +138,46 @@ var CLSTAMP = "8811506";
       }[e] +
       ".js?contenthash=" +
       {
-        27: "1b701f7dae07f2aa843d",
+        27: "028a77defd779f19ec04",
         113: "1a381805bec0573b2619",
-        131: "72f4b720612cd93588b3",
-        146: "b65184dcf36c8f0851d1",
+        131: "b035b5725ff19ba2320c",
+        146: "884d60b01484f047b40b",
         301: "70ef8f61a5ec29d347e2",
         617: "07b1cdf2f77da89d8e71",
         755: "e349cb803a9de3b57e93",
         1133: "245bc6d328fa77551766",
         1195: "93011f658f4a2efe1d65",
-        1261: "12c1167a8d5c197f2822",
+        1261: "a85f34bcc2fb084bcfc7",
         1311: "7c7c65a2cb07344e200d",
         1579: "95c56bd3de048e723c3a",
         1953: "d09fb09403867dbf514c",
-        2138: "fbd0c9fc42e83b8b610e",
+        2138: "f6b8d3edc642bfffd7b2",
         2351: "b800c1ba48a5c3c9ba9c",
         2557: "06736a101ebb69cba202",
         2603: "2b5ccec982eb20a30890",
-        2738: "54d823d7871e4a2b9b2c",
+        2738: "1f09bf78c1224857164c",
         2822: "ce1e47c86c8501ab1dcb",
         3038: "97f6efd65e68182f02a0",
         3068: "a624996af450b75ba140",
         3298: "2630c62a6e46435689e0",
         3602: "5b7ce5698c2908ce3454",
-        4097: "c31519c9f4c1fa483212",
+        4097: "4d2ca296d821f5321a4a",
         4103: "b57c1ad3172d798eecdd",
         4183: "dfbe64c9a38b8fc45b70",
         4358: "404bb12848c8f3c2f61d",
         4445: "8f9ece7b8297f3b7dbfd",
         4469: "dd8224a07e01e04eb1d2",
         4487: "1b391642ac125ed20d23",
-        4513: "db3a2be683157ae27d53",
-        4729: "95514d94781a93148895",
+        4513: "5c1c11add9190670d27d",
+        4729: "d35a7af82fa1e4eed479",
         5012: "56a504b302e39f445c1b",
         5277: "e3b8dcce0b178e13d3e9",
-        5279: "bc72e6bb67efe5b6bcec",
+        5279: "16b1bb568c8c333669ac",
         5425: "caa37d73bfb9ea784638",
         5493: "0f09580ed61d09caa1b4",
         5757: "27bd3a610921e162fc65",
         6091: "ea6c7d8405674bc96fbb",
-        6403: "fa99c7e335a8c3bf8319",
+        6403: "027f9bd58bc12435d907",
         6415: "057f519533f1609aac26",
         6457: "527bfec9133828fc5a06",
         6844: "875e133d2aca70f4a43f",
@@ -185,7 +185,7 @@ var CLSTAMP = "8811506";
         7629: "18616b010fdcb8655cf2",
         7660: "52ccdd32d7b0ca49ec4b",
         7769: "7e2b58258515daed8651",
-        7781: "6dd1137c224bc22716f5",
+        7781: "0c177fca4cf200889e59",
         7832: "a59da023525974ee8a4c",
         7901: "2e194304195c968b5f9d",
         8085: "acbac45054d183babf55",
@@ -193,15 +193,15 @@ var CLSTAMP = "8811506";
         8282: "6d55ac934716c98a0e92",
         8291: "d55e86715c19e75305d8",
         8427: "c5a566cf7ec0cbf73856",
-        8433: "16fa66f123b3ec6f662d",
+        8433: "0ce7964820e2a0aaedea",
         8525: "131f2b5a785677f82f39",
         8592: "36d8e55455a4d4480400",
         9233: "900cf3e3929d489ff7dc",
         9389: "474799d9457b04f9b16b",
         9547: "bbce7f4cd6f6f750d8e1",
         9665: "b6752dd9139f4cab303c",
-        9854: "f035f86727b6d98760e5",
-        9951: "13e467e07bf732d26146",
+        9854: "a126573000372fb7cd05",
+        9951: "c8e0f107ae32ae367e1f",
       }[e]),
     (l.miniCssF = (e) =>
       "css/applications/help/greenenvelope.css?contenthash=f7382e5cc9d5bb9f6618"),
@@ -243,8 +243,8 @@ var CLSTAMP = "8811506";
           r.setAttribute("data-webpack", i + n),
           (r.src = e)),
           (o[e] = [a]);
-        var b = (a, n) => {
-            (r.onerror = r.onload = null), clearTimeout(h);
+        var h = (a, n) => {
+            (r.onerror = r.onload = null), clearTimeout(b);
             var i = o[e];
             if (
               (delete o[e],
@@ -254,12 +254,12 @@ var CLSTAMP = "8811506";
             )
               return a(n);
           },
-          h = setTimeout(
-            b.bind(null, void 0, { type: "timeout", target: r }),
+          b = setTimeout(
+            h.bind(null, void 0, { type: "timeout", target: r }),
             12e4,
           );
-        (r.onerror = b.bind(null, r.onerror)),
-          (r.onload = b.bind(null, r.onload)),
+        (r.onerror = h.bind(null, r.onerror)),
+          (r.onload = h.bind(null, r.onload)),
           c && document.head.appendChild(r);
       }
     }),

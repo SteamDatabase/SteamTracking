@@ -718,7 +718,8 @@ button.DialogButton.lKVYBV_ioKj9Y_FKlMvqu {
   background: #9d8b5e;
   color: #fff;
 }
-._38m8DGDKcTxyFKbuvEpMIx:hover {
+._38m8DGDKcTxyFKbuvEpMIx:hover,
+:hover > ._38m8DGDKcTxyFKbuvEpMIx {
   color: #fff;
   cursor: pointer;
   text-decoration: none;
@@ -739,6 +740,7 @@ button.DialogButton.lKVYBV_ioKj9Y_FKlMvqu {
 ._28V2e4qcBKMUfwPNxuJevO {
   padding: 0px 6px;
   display: flex;
+  color: #fff;
   background: #101822;
 }
 ._28V2e4qcBKMUfwPNxuJevO.zD5C0Xyh3lZRY_mRIRpVA {

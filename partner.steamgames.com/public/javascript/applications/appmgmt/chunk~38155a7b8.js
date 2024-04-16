@@ -46933,7 +46933,7 @@
             { className: c().LinkRow },
             l.createElement(
               "a",
-              { href: t },
+              { href: t, target: "_blank" },
               (0, g.Xx)("#AssetRequest_General_Download", a),
             ),
             " ",
@@ -79276,7 +79276,7 @@
               (0, a.mG)(this, void 0, void 0, function* () {
                 var t, n, a, r;
                 if (e.trim().length > 0) {
-                  const s = { json: 1, term: e };
+                  const s = { json: 1, term: e, bexcluderetired: !0 };
                   let c = `${u.De.PARTNER_BASE_URL}apps/suggestapps`;
                   switch (i) {
                     case 1:

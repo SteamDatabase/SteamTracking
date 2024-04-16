@@ -5621,7 +5621,8 @@
           (e[(e.ForceRoundedCorners = 524288)] = "ForceRoundedCorners"),
           (e[(e.OverrideRedirect = 1048576)] = "OverrideRedirect"),
           (e[(e.IgnoreSteamDisplayScale = 2097152)] =
-            "IgnoreSteamDisplayScale");
+            "IgnoreSteamDisplayScale"),
+          (e[(e.NoDefaultURL = 4194304)] = "NoDefaultURL");
       })(_ || (_ = {})),
         (function (e) {
           (e[(e.Overlay = 0)] = "Overlay"),
@@ -26009,7 +26010,11 @@
             version: "1.1",
             id: "Layer_2",
             xmlns: "http://www.w3.org/2000/svg",
-            className: "SVGIcon_Button SVGIcon_X_Line",
+            className: (0, s.Z)(
+              "SVGIcon_Button",
+              "SVGIcon_X_Line",
+              e.className,
+            ),
             x: "0px",
             y: "0px",
             width: "256px",
@@ -27317,15 +27322,15 @@
             viewBox: "0 0 256 256",
           },
           r.createElement("path", {
-            fill: "#currentColor",
+            fill: "currentColor",
             d: "M127.374,5.355c-64.404,0-117.167,49.661-122.18,112.77l65.712,27.171 c5.567-3.808,12.293-6.032,19.53-6.032c0.649,0,1.294,0.017,1.934,0.051l29.226-42.354c0-0.202-0.005-0.399-0.005-0.598 c0-25.496,20.74-46.241,46.237-46.241c25.498,0,46.238,20.745,46.238,46.241c0,25.494-20.74,46.242-46.238,46.242 c-0.352,0-0.698-0.011-1.047-0.021l-41.68,29.741c0.022,0.546,0.041,1.095,0.041,1.644c0,19.141-15.569,34.707-34.706,34.707 c-16.796,0-30.843-11.99-34.026-27.869l-46.993-19.43c14.55,51.464,61.831,89.189,117.957,89.189 c67.713,0,122.604-54.893,122.604-122.604C249.979,60.244,195.086,5.355,127.374,5.355",
           }),
           r.createElement("path", {
-            fill: "#currentColor",
+            fill: "currentColor",
             d: "M82.026,191.387l-15.061-6.22c2.67,5.56,7.285,10.208,13.418,12.767 c13.25,5.521,28.531-0.771,34.054-14.027c2.674-6.416,2.694-13.5,0.04-19.93c-2.646-6.431-7.64-11.451-14.063-14.129 c-6.371-2.647-13.196-2.552-19.198-0.291l15.561,6.437c9.776,4.073,14.396,15.299,10.324,25.071 C103.031,190.841,91.801,195.464,82.026,191.387",
           }),
           r.createElement("path", {
-            fill: "#currentColor",
+            fill: "currentColor",
             d: "M198.639,96.359c0-16.987-13.82-30.809-30.809-30.809c-16.987,0-30.813,13.821-30.813,30.809 c0,16.988,13.824,30.806,30.813,30.806S198.639,113.347,198.639,96.359 M144.736,96.306c0-12.783,10.363-23.142,23.145-23.142 c12.783,0,23.145,10.359,23.145,23.142c0,12.783-10.36,23.142-23.145,23.142C155.1,119.447,144.736,109.089,144.736,96.306",
           }),
         );
@@ -35054,15 +35059,16 @@
           ])
             .then(n.bind(n, 60284))
             .then((e) => ({ default: e.DemoAndQuickPitch })),
-        );
-      function Rt(e) {
+        ),
+        Rt = s.lazy(() => n.e(4118).then(n.bind(n, 74479)));
+      function It(e) {
         return s.createElement(
           I.SV,
           null,
           s.createElement(p.AW, Object.assign({}, e)),
         );
       }
-      function It() {
+      function Tt() {
         const [e, t] = s.useState(),
           [n, i] = s.useState(!1);
         return (
@@ -35098,16 +35104,16 @@
                   "div",
                   { className: h().App },
                   s.createElement(
-                    Ot,
+                    xt,
                     { storeUserConfig: e },
-                    s.createElement(xt, null),
+                    s.createElement(Bt, null),
                     s.createElement(
                       s.Suspense,
                       { fallback: null },
                       s.createElement(
                         p.rs,
                         null,
-                        s.createElement(Rt, {
+                        s.createElement(It, {
                           exact: !0,
                           path: d.Z.DiagData(),
                           render: (e) =>
@@ -35120,7 +35126,7 @@
                             ),
                         }),
                         s.createElement(
-                          Rt,
+                          It,
                           { exact: !0, path: d.Z.Login() },
                           s.createElement(re.d, {
                             config: {
@@ -35130,7 +35136,7 @@
                           }),
                         ),
                         s.createElement(
-                          Rt,
+                          It,
                           { exact: !0, path: d.Z.OAuthLogin() },
                           s.createElement(re.d, {
                             config: {
@@ -35139,7 +35145,7 @@
                             },
                           }),
                         ),
-                        s.createElement(Rt, {
+                        s.createElement(It, {
                           exact: !0,
                           path: d.Z.AppStorePage(),
                           render: (e) => {
@@ -35219,7 +35225,7 @@
                             });
                           },
                         }),
-                        s.createElement(Rt, {
+                        s.createElement(It, {
                           exact: !0,
                           path: d.Z.SaleLandingPage(),
                           render: (e) => {
@@ -35249,7 +35255,7 @@
                             });
                           },
                         }),
-                        s.createElement(Rt, {
+                        s.createElement(It, {
                           path: d.Z.CuratorAdminPage(),
                           render: (e) =>
                             s.createElement(re.d, {
@@ -35259,7 +35265,7 @@
                               },
                             }),
                         }),
-                        s.createElement(Rt, {
+                        s.createElement(It, {
                           exact: !0,
                           path: d.Z.CreatorSaleLandingPage(),
                           render: (e) =>
@@ -35279,7 +35285,7 @@
                               },
                             }),
                         }),
-                        s.createElement(Rt, {
+                        s.createElement(It, {
                           path: [
                             d.Z.RemotePlay(),
                             d.Z.RemotePlayTogether(),
@@ -35288,9 +35294,9 @@
                             d.Z.SteamDeckDock(),
                             d.Z.SubscriptionPlanLandingPage(),
                           ],
-                          render: (e) => s.createElement(Tt, null),
+                          render: (e) => s.createElement(At, null),
                         }),
-                        s.createElement(Rt, {
+                        s.createElement(It, {
                           exact: !0,
                           path: d.Z.CuratorHomePage(),
                           render: (e) =>
@@ -35317,7 +35323,7 @@
                               },
                             }),
                         }),
-                        s.createElement(Rt, {
+                        s.createElement(It, {
                           exact: !0,
                           path: d.Z.CuratorListPage(),
                           render: (e) =>
@@ -35331,7 +35337,7 @@
                               },
                             }),
                         }),
-                        s.createElement(Rt, {
+                        s.createElement(It, {
                           exact: !0,
                           path: d.Z.PackageStorePage(),
                           render: (e) =>
@@ -35349,7 +35355,7 @@
                               },
                             }),
                         }),
-                        s.createElement(Rt, {
+                        s.createElement(It, {
                           exact: !0,
                           path: d.Z.BundleStorePage(),
                           render: (e) =>
@@ -35368,7 +35374,7 @@
                               },
                             }),
                         }),
-                        s.createElement(Rt, {
+                        s.createElement(It, {
                           path: d.Z.NewsHub(),
                           render: (e) =>
                             s.createElement(re.d, {
@@ -35378,7 +35384,7 @@
                               },
                             }),
                         }),
-                        s.createElement(Rt, {
+                        s.createElement(It, {
                           path: d.Z.EventAdmin(),
                           render: (e) =>
                             s.createElement(re.d, {
@@ -35388,7 +35394,7 @@
                               },
                             }),
                         }),
-                        s.createElement(Rt, {
+                        s.createElement(It, {
                           exact: !0,
                           path: d.Z.InteractiveRecommender(),
                           render: (e) =>
@@ -35398,11 +35404,11 @@
                               },
                             }),
                         }),
-                        s.createElement(Rt, {
+                        s.createElement(It, {
                           path: d.Z.LabsSandbox(),
                           render: (e) => s.createElement(it, null),
                         }),
-                        s.createElement(Rt, {
+                        s.createElement(It, {
                           path: d.Z.SteamCharts(),
                           render: (e) =>
                             s.createElement(re.d, {
@@ -35412,7 +35418,7 @@
                               },
                             }),
                         }),
-                        s.createElement(Rt, {
+                        s.createElement(It, {
                           path: d.Z.Loyalty(),
                           render: () =>
                             s.createElement(re.d, {
@@ -35421,7 +35427,7 @@
                               },
                             }),
                         }),
-                        s.createElement(Rt, {
+                        s.createElement(It, {
                           path: d.Z.ContentHubHome(),
                           render: (e) => {
                             const {
@@ -35441,7 +35447,7 @@
                             });
                           },
                         }),
-                        s.createElement(Rt, {
+                        s.createElement(It, {
                           path: d.Z.Categories(),
                           render: () =>
                             s.createElement(re.d, {
@@ -35450,12 +35456,12 @@
                               },
                             }),
                         }),
-                        s.createElement(Rt, {
+                        s.createElement(It, {
                           path: d.Z.AccountPreferences(),
                           render: (e) =>
                             s.createElement(st, Object.assign({}, e)),
                         }),
-                        s.createElement(Rt, {
+                        s.createElement(It, {
                           exact: !0,
                           path: d.Z.SummerSale2021Story(),
                           render: (e) =>
@@ -35466,7 +35472,7 @@
                               },
                             }),
                         }),
-                        s.createElement(Rt, {
+                        s.createElement(It, {
                           exact: !0,
                           path: d.Z.LabsHome(),
                           render: (e) =>
@@ -35477,17 +35483,17 @@
                               },
                             }),
                         }),
-                        s.createElement(Rt, {
+                        s.createElement(It, {
                           path: d.Z.MarketingMessages(),
                           render: (e) =>
                             s.createElement(ft, Object.assign({}, e)),
                         }),
-                        s.createElement(Rt, {
+                        s.createElement(It, {
                           path: d.Z.YearInReview(),
                           render: (e) =>
                             s.createElement(vt, Object.assign({}, e)),
                         }),
-                        s.createElement(Rt, {
+                        s.createElement(It, {
                           path: d.Z.ShoppingCartAccountCartPurchaseRequested(),
                           render: (e) =>
                             s.createElement(re.d, {
@@ -35499,7 +35505,7 @@
                               },
                             }),
                         }),
-                        s.createElement(Rt, {
+                        s.createElement(It, {
                           path: d.Z.ShoppingCartPurchaseRequest(),
                           render: (e) =>
                             s.createElement(re.d, {
@@ -35512,7 +35518,7 @@
                               },
                             }),
                         }),
-                        s.createElement(Rt, {
+                        s.createElement(It, {
                           path: d.Z.ShoppingCartGifts(),
                           render: (e) =>
                             s.createElement(re.d, {
@@ -35522,7 +35528,7 @@
                               },
                             }),
                         }),
-                        s.createElement(Rt, {
+                        s.createElement(It, {
                           path: d.Z.ShoppingCart(),
                           render: (e) =>
                             s.createElement(re.d, {
@@ -35531,7 +35537,7 @@
                               },
                             }),
                         }),
-                        s.createElement(Rt, {
+                        s.createElement(It, {
                           path: d.Z.SteamAwards(),
                           render: (e) =>
                             s.createElement(re.d, {
@@ -35541,7 +35547,7 @@
                             }),
                         }),
                         !1,
-                        s.createElement(Rt, null, s.createElement(Re, null)),
+                        s.createElement(It, null, s.createElement(Re, null)),
                       ),
                     ),
                   ),
@@ -35550,7 +35556,7 @@
             : null
         );
       }
-      function Tt(e) {
+      function At(e) {
         const t = (0, p.TH)().pathname.split("/").filter(Boolean).pop(),
           n = "sale_" + ((null == t ? void 0 : t.split("?")[0]) || "unknown");
         return s.createElement(re.d, {
@@ -35564,7 +35570,7 @@
           },
         });
       }
-      function At(e) {
+      function kt(e) {
         const { storeUserConfig: t, children: n } = e,
           i = s.useCallback(
             () =>
@@ -35590,7 +35596,7 @@
           ),
         );
       }
-      function kt(e) {
+      function Ot(e) {
         const { storeUserConfig: t, children: n } = e,
           i = s.useRef();
         i.current || (i.current = new Ye());
@@ -35609,10 +35615,10 @@
           )
         );
       }
-      function Ot(e) {
+      function xt(e) {
         const { storeUserConfig: t, children: n } = e;
         return s.createElement(
-          kt,
+          Ot,
           { storeUserConfig: t },
           s.createElement(
             w.u.Provider,
@@ -35621,7 +35627,7 @@
               l.fI,
               null,
               s.createElement(
-                At,
+                kt,
                 { storeUserConfig: t },
                 s.createElement(Ie.R, null, s.createElement(K, null, n)),
               ),
@@ -35629,17 +35635,17 @@
           ),
         );
       }
-      const xt = s.memo(function (e) {
+      const Bt = s.memo(function (e) {
         return s.createElement(
           s.Fragment,
           null,
           s.createElement(Ze, null),
-          s.createElement(
-            s.Suspense,
-            { fallback: null },
-            s.createElement(re.d, {
-              config: {
-                "green-envelope": () =>
+          s.createElement(re.d, {
+            config: {
+              "green-envelope": () =>
+                s.createElement(
+                  s.Suspense,
+                  { fallback: null },
                   s.createElement(Ct, {
                     bResponsiveHeader: !1,
                     notifications: (0, l.kQ)(
@@ -35647,7 +35653,11 @@
                       "application_config",
                     ),
                   }),
-                "green-envelope-responsive": () =>
+                ),
+              "green-envelope-responsive": () =>
+                s.createElement(
+                  s.Suspense,
+                  { fallback: null },
                   s.createElement(Ct, {
                     bResponsiveHeader: !0,
                     notifications: (0, l.kQ)(
@@ -35655,32 +35665,46 @@
                       "application_config",
                     ),
                   }),
-                parentalunlock: (e) =>
+                ),
+              parentalunlock: (e) =>
+                s.createElement(
+                  s.Suspense,
+                  { fallback: null },
                   s.createElement(ne, Object.assign({}, e)),
-              },
-            }),
-            s.createElement(re.d, {
-              config: {
-                parentalfeaturerequest: (e) =>
+                ),
+              "open-in-desktop-client": () =>
+                s.createElement(
+                  s.Suspense,
+                  { fallback: null },
+                  s.createElement(Rt, null),
+                ),
+            },
+          }),
+          s.createElement(re.d, {
+            config: {
+              parentalfeaturerequest: (e) =>
+                s.createElement(
+                  s.Suspense,
+                  { fallback: null },
                   s.createElement(ie, Object.assign({}, e)),
-              },
-            }),
-          ),
+                ),
+            },
+          }),
         );
       });
-      var Bt = n(92011),
-        Nt = n(50423);
+      var Nt = n(92011),
+        Pt = n(50423);
       n(33557);
       new Map();
       n(7765);
       (0, ae.jQ)({ enforceActions: "never" }),
-        Nt.Dj(function () {
+        Pt.Dj(function () {
           return (0, i.mG)(this, void 0, void 0, function* () {
             (0, l.Ek)("application_config").userConfig ||
               (yield (0, l.x)(a(), l.De.STORE_BASE_URL + "actions/", {
                 userConfig: !0,
               })),
-              (0, Bt.Uh)().Init(
+              (0, Nt.Uh)().Init(
                 "Store",
                 CLSTAMP,
                 new C.J(l.De.WEBAPI_BASE_URL).GetServiceTransport(),
@@ -35714,7 +35738,7 @@
               document.getElementById("application_root")
                 ? r
                     .createRoot(document.getElementById("application_root"))
-                    .render(s.createElement(It))
+                    .render(s.createElement(Tt))
                 : console.error('No "application_root" was found to target');
           });
         });
