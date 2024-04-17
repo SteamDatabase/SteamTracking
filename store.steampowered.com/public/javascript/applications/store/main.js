@@ -14871,6 +14871,7 @@
             (this.m_rgIncludedAppTypes = e.included_types()),
             (this.m_rgIncludedAppIDs = e.included_appids()),
             (this.m_bIsFree = e.is_free()),
+            (this.m_bIsFreeTemporary = e.is_free_temporarily()),
             (this.m_bIsEarlyAccess = e.is_early_access()),
             (this.m_RelatedItems =
               null === (n = e.related_items()) || void 0 === n
@@ -15063,6 +15064,9 @@
             : this.GetIncludedAppIDs();
         }
         BIsFree() {
+          return this.m_bIsFree;
+        }
+        BIsFreeTemporary() {
           return this.m_bIsFree;
         }
         BIsFreeWeekend() {

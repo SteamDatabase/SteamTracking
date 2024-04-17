@@ -10433,13 +10433,17 @@
           const e = s.jg.Get().BOwnsApp(d.GetAppID());
           if (e && 10 === d.GetAppType()) return null;
           if ((e || u) && !d.BIsComingSoon()) {
-            const t =
-              (e && (0, I.Xx)("#EventDisplay_CallToAction_PlayNow")) ||
-              (0, I.Xx)("#EventDisplay_CallToAction_PlayNowForFree");
-            return a.createElement(
-              "div",
-              { className: (0, E.Z)(G().Action, r), onClick: m },
-              a.createElement("span", null, t),
+            let t = (0, I.Xx)("#EventDisplay_CallToAction_PlayNowForFree");
+            return (
+              e
+                ? (t = (0, I.Xx)("#EventDisplay_CallToAction_PlayNow"))
+                : d.BIsFreeTemporary() &&
+                  (t = (0, I.Xx)("#EventDisplay_CallToAction_AddToAccount")),
+              a.createElement(
+                "div",
+                { className: (0, E.Z)(G().Action, r), onClick: m },
+                a.createElement("span", null, t),
+              )
             );
           }
           if ("" == d.GetBestPurchasePriceFormatted()) {
@@ -13142,7 +13146,7 @@
               (0, E.Xx)("#EventDisplay_CallToAction_ComingSoon"),
             ),
           );
-        if (i.BIsFree())
+        if (i.BIsFree() && !i.BIsFreeTemporary())
           return 0 == i.GetStoreItemType() && 1 == i.GetAppType()
             ? r.createElement(
                 "div",
@@ -13177,9 +13181,11 @@
         if (!i.GetBestPurchasePriceFormatted() || !i.GetBestPurchaseOption())
           return null;
         let m = i.GetBestPurchaseOption().discount_pct || c,
-          u = m && c && m > c && c;
+          u = m && c && m > c && c,
+          p = i.GetBestPurchasePriceFormatted();
         return (
           s && m > 0 && (u = 0),
+          i.BIsFreeTemporary() && !m && ((m = 100), (p = "0")),
           r.createElement(B, {
             bSingleLineMode: a,
             nBaseDiscountPercentage: u,
@@ -13187,7 +13193,7 @@
             bIsPrePurchase: i.BIsPrePurchase(),
             strBestPurchaseOriginalPriceFormatted:
               i.GetBestPurchaseOriginalPriceFormatted(),
-            strBestPurchasePriceFormatted: i.GetBestPurchasePriceFormatted(),
+            strBestPurchasePriceFormatted: p,
             bHideDiscountPercentForCompliance:
               i.GetBestPurchaseOption().hide_discount_pct_for_compliance,
             bShowNewFlag: l,
