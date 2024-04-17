@@ -5521,7 +5521,7 @@
                 (0, p.Xx)("#FamilyManagement_CreateInstructions_2"),
               ),
             ),
-            c &&
+            (c || d) &&
               n.createElement(
                 "div",
                 { className: ne.SplashCooldown },
