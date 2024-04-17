@@ -4,6 +4,7 @@
   display: flex;
   flex-direction: column;
   align-self: center;
+  position: relative;
 }
 ._2gX86rIwUFoOU9D_YtfPsQ {
   display: flex;
@@ -16,9 +17,10 @@
 }
 ._279gTwJyCp3f0wCT_04PZ1 {
   color: orange;
-  display: flex;
-  flex-direction: column;
-  align-self: center;
+  padding-top: 5px;
+  padding-left: 5px;
+  font-size: 15px;
+  position: absolute;
 }
 ._2_QgZ0KdLRqOboc7dL93zp {
   display: flex;
