@@ -2,6 +2,8 @@ __TEXT
 
 __text
 __TEXT
+@d
+@d
 __stubs
 __TEXT
 __stub_helper
@@ -1187,7 +1189,9 @@ GetClientActualLauncherType
 --force-renderer-accessibility
 -disablejslogging
 -verbosejslogging
+--valve-initial-threadpool-size=%d
 --valve-enable-site-isolation
+SpareRendererForSitePerProcess
 "
 --proxy-server="%s"
 --proxy-bypass-list="localhost;127.0.0.1"
@@ -2433,22 +2437,19 @@ id
 
 @
 
+@
 
+R
+v
 @
-/
-g
-Q
-@
-h
 Ic]
 Hc
 Ic
-
-r
-A
+-
 0
 
 0
+
 
 
 Hi
@@ -2463,7 +2464,6 @@ AT=
 D
 @
 @
-
 
 
 @
@@ -2535,4 +2535,3 @@ M9e
 0
 0
 0
-]
