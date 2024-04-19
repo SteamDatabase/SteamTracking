@@ -5618,7 +5618,7 @@
     },
     46792: (e, t, a) => {
       "use strict";
-      a.d(t, { P: () => js });
+      a.d(t, { P: () => Vs });
       var r = a(22970),
         n = a(98142),
         i = a(6279),
@@ -6548,7 +6548,7 @@
               "div",
               {
                 onClick: () =>
-                  js.PurchaseOnSteamStore(c, 1, window.location.href),
+                  Vs.PurchaseOnSteamStore(c, 1, window.location.href),
                 className: (0, E.Z)(
                   g().TextStyleButton,
                   g().TextColorWhite,
@@ -6642,7 +6642,7 @@
           this.setState({ nImmortalTreasureSelected: e });
         }
         render() {
-          const e = js.getPrizePool();
+          const e = Vs.getPrizePool();
           return s.createElement(
             "div",
             { className: g().BattlepassPage },
@@ -12065,10 +12065,10 @@
                       Pe().CapsuleDiscount,
                     ),
                   },
-                  js.GetBPDiscount(36, l) &&
+                  Vs.GetBPDiscount(36, l) &&
                     (0, v.Jr)(
                       "#battlepass_purchase_discount",
-                      js.GetBPDiscount(36, l),
+                      Vs.GetBPDiscount(36, l),
                       o,
                     ),
                 ),
@@ -12076,7 +12076,7 @@
                   "div",
                   {
                     onClick: () =>
-                      js.PurchaseOnSteamStore(l, 1, window.location.href),
+                      Vs.PurchaseOnSteamStore(l, 1, window.location.href),
                     className: (0, E.Z)(
                       Pe().TextStyleButton,
                       Pe().TextColorWhite,
@@ -12089,7 +12089,7 @@
                   },
                   (0, v.Jr)(
                     "#battlepass_purchase_label",
-                    "undefined" !== js.GetBPPrice(l) ? js.GetBPPrice(l) : "",
+                    "undefined" !== Vs.GetBPPrice(l) ? Vs.GetBPPrice(l) : "",
                   ),
                 ),
               ),
@@ -12165,7 +12165,7 @@
                 "div",
                 {
                   onClick: () =>
-                    js.PurchaseOnSteamStore(l, 1, window.location.href),
+                    Vs.PurchaseOnSteamStore(l, 1, window.location.href),
                   className: (0, E.Z)(
                     Pe().TextStyleButton,
                     Pe().TextColorWhite,
@@ -12178,7 +12178,7 @@
                 },
                 (0, v.Jr)(
                   "#battlepass_purchase_label",
-                  "undefined" !== js.GetBPPrice(l) ? js.GetBPPrice(l) : "",
+                  "undefined" !== Vs.GetBPPrice(l) ? Vs.GetBPPrice(l) : "",
                 ),
               ),
             ),
@@ -12553,7 +12553,7 @@
           super(e);
         }
         render() {
-          const e = js.getPrizePool(),
+          const e = Vs.getPrizePool(),
             t = De(xe);
           return s.createElement(
             "div",
@@ -33981,7 +33981,7 @@
         },
         gs = (0, m.Pi)(() => {
           const [e, t] = s.useState("#aug23_cc_treasure_name3");
-          js.getPatchNotes("7.34", n.Y.LANGUAGE);
+          Vs.getPatchNotes("7.34", n.Y.LANGUAGE);
           return s.createElement(
             "div",
             { className: us().Aug2023Page },
@@ -34276,7 +34276,7 @@
                     "div",
                     {
                       onClick: () =>
-                        js.PurchaseOnSteamStore(24613, 1, window.location.href),
+                        Vs.PurchaseOnSteamStore(24613, 1, window.location.href),
                       className: (0, E.Z)(
                         us().CCBtn,
                         us().TextStyleButton,
@@ -34286,8 +34286,8 @@
                     },
                     (0, v.Jr)(
                       "#aug23_cc_btn",
-                      "undefined" !== js.GetBPPrice(24613)
-                        ? js.GetBPPrice(24613)
+                      "undefined" !== Vs.GetBPPrice(24613)
+                        ? Vs.GetBPPrice(24613)
                         : "",
                     ),
                   ),
@@ -35059,7 +35059,7 @@
         constructor(e) {
           super(e),
             (this.handleClick = (e) => {
-              if (js.getShortFilmOwnership()) {
+              if (Vs.getShortFilmOwnership()) {
                 const e =
                   n.Y.BASE_URL +
                   c._.shortfilm() +
@@ -35068,14 +35068,14 @@
               } else this.setState({ bPopupVisible: e });
             }),
             (this.handleAccepted = () => {
-              js.grantShortFilmAppIDOwnership();
+              Vs.grantShortFilmAppIDOwnership();
               const e =
                 n.Y.BASE_URL +
                 c._.shortfilm() +
                 "/redirecttosteamcommunityshortfilm/";
               history.pushState("", "", e), history.go();
             }),
-            (this.BGetOwnsApp = () => js.getShortFilmOwnership()),
+            (this.BGetOwnsApp = () => Vs.getShortFilmOwnership()),
             (this.state = { bPopupVisible: !1 });
         }
         render() {
@@ -35499,15 +35499,14 @@
         Ls = s.lazy(() => a.e(5804).then(a.bind(a, 5804))),
         As = s.lazy(() => a.e(1511).then(a.bind(a, 31511))),
         Ms = s.lazy(() => a.e(6896).then(a.bind(a, 66896))),
-        Gs =
-          (s.lazy(() => !1),
-          s.lazy(() =>
-            Promise.all([a.e(4039), a.e(1510)]).then(a.bind(a, 12680)),
-          )),
+        Gs = s.lazy(() => a.e(6880).then(a.bind(a, 6880))),
         Ps = s.lazy(() =>
+          Promise.all([a.e(4039), a.e(1510)]).then(a.bind(a, 12680)),
+        ),
+        ks = s.lazy(() =>
           Promise.all([a.e(4039), a.e(1510)]).then(a.bind(a, 73322)),
         ),
-        ks = class extends s.Component {
+        Os = class extends s.Component {
           componentDidMount() {
             l().init({
               disable: !1,
@@ -35670,21 +35669,18 @@
                           path: c._.crownfall_comic(),
                           component: Ms,
                         }),
-                        s.createElement(Ca, {
-                          path: c._.crownfall(),
-                          render: () =>
-                            s.createElement(u.l_, {
-                              to: c._.crownfall_comic(),
-                            }),
-                        }),
                         !1,
                         s.createElement(Ca, {
-                          path: c._.teamdetails(":id"),
+                          path: c._.crownfall(),
                           component: Gs,
                         }),
                         s.createElement(Ca, {
-                          path: c._.personadetails(":id"),
+                          path: c._.teamdetails(":id"),
                           component: Ps,
+                        }),
+                        s.createElement(Ca, {
+                          path: c._.personadetails(":id"),
+                          component: ks,
                         }),
                         s.createElement(Ca, {
                           path: c._.other(":page"),
@@ -35699,23 +35695,23 @@
             );
           }
         };
-      ks = (0, r.gn)([m.Pi], ks);
-      const Os = ks;
-      var Fs = a(99247),
-        xs = a(82696),
-        Us = a(53729),
-        zs = a(60224);
-      class Hs {
+      Os = (0, r.gn)([m.Pi], Os);
+      const Fs = Os;
+      var xs = a(99247),
+        Us = a(82696),
+        zs = a(53729),
+        Hs = a(60224);
+      class Ws {
         constructor() {
-          (this.m_asyncPrizePool = new xs.L()),
-            (this.m_asyncPatchNotesListData = new xs.L()),
-            (this.m_asyncPatchNotesData = new xs.r()),
-            (this.m_asyncBPPrice = new xs.r()),
-            (this.m_asyncBPDiscount = new xs.r()),
+          (this.m_asyncPrizePool = new Us.L()),
+            (this.m_asyncPatchNotesListData = new Us.L()),
+            (this.m_asyncPatchNotesData = new Us.r()),
+            (this.m_asyncBPPrice = new Us.r()),
+            (this.m_asyncBPDiscount = new Us.r()),
             (this.m_nSelectedAbilityIndex = 0),
-            (this.m_asyncShortFilmOwnership = new xs.L()),
+            (this.m_asyncShortFilmOwnership = new Us.L()),
             (this.m_BBCodeDictionary = new Map([
-              ...Array.from(zs.Be.entries()),
+              ...Array.from(Hs.Be.entries()),
               ["color", { Constructor: v.H, autocloses: !1 }],
               ["block", { Constructor: v.qH, autocloses: !1 }],
               ["spoiler", { Constructor: v.b4, autocloses: !1 }],
@@ -35728,16 +35724,16 @@
               ["img", { Constructor: v.cW, autocloses: !1 }],
               ["div", { Constructor: v.B9, autocloses: !1 }],
             ])),
-            (this.BBCodeAccumulator = (e) => new Us.So(new Us.LT(), 0)),
+            (this.BBCodeAccumulator = (e) => new zs.So(new zs.LT(), 0)),
             (this.m_BBCodeParser = new Nt.Z6(
               this.m_BBCodeDictionary,
               this.BBCodeAccumulator,
             )),
-            (0, Fs.rC)(this);
+            (0, xs.rC)(this);
         }
         Init() {
           i.s(document.getElementById("dota_react_root")).render(
-            s.createElement(Os, { app: this }),
+            s.createElement(Fs, { app: this }),
           );
         }
         getPrizePool() {
@@ -35795,7 +35791,7 @@
             Hi()
               .get(c._.react("getbpprices"), { params: { item_defs: a } })
               .then((t) => {
-                (0, Fs.z)(() => {
+                (0, xs.z)(() => {
                   const a = Object.entries(null == t ? void 0 : t.data);
                   if (a.length == e.length)
                     for (const [e, t] of a)
@@ -35848,7 +35844,7 @@
                 params: { event_id: e, itemdefs: r },
               })
               .then((e) => {
-                (0, Fs.z)(() => {
+                (0, xs.z)(() => {
                   const a = Object.entries(null == e ? void 0 : e.data);
                   if (a.length == t.length)
                     for (const [e, t] of a)
@@ -35927,14 +35923,14 @@
           });
         }
       }
-      (0, r.gn)([Fs.LO], Hs.prototype, "m_nSelectedAbilityIndex", void 0);
-      var Ws = a(9090);
+      (0, r.gn)([xs.LO], Ws.prototype, "m_nSelectedAbilityIndex", void 0);
+      var js = a(9090);
       a(23946);
       new Map();
       a(72471);
-      let js = new Hs();
-      (0, Fs.jQ)({ enforceActions: "never" });
-      const Vs = [
+      let Vs = new Ws();
+      (0, xs.jQ)({ enforceActions: "never" });
+      const Ys = [
         "main",
         "springcleaning22",
         "juneupdate22",
@@ -35947,13 +35943,13 @@
       ];
       document.addEventListener("DOMContentLoaded", function () {
         return (0, r.mG)(this, void 0, void 0, function* () {
-          (0, Ws.Ek)("application_config"),
+          (0, js.Ek)("application_config"),
             (0, n.R)(),
             yield (function (e) {
               return (0, r.mG)(this, void 0, void 0, function* () {
                 const t = yield Promise.all([
                   a(56576)(`./shared_${e}.json`),
-                  ...Vs.map((t) => a(3245)(`./${t}_${e}.json`)),
+                  ...Ys.map((t) => a(3245)(`./${t}_${e}.json`)),
                 ]);
                 let r = {};
                 for (const e of t) r = Object.assign(Object.assign({}, r), e);
@@ -35962,7 +35958,7 @@
                 else {
                   const e = yield Promise.all([
                     a(56576)(`./shared_${n}.json`),
-                    ...Vs.map((e) => a(3245)(`./${e}_${n}.json`)),
+                    ...Ys.map((e) => a(3245)(`./${e}_${n}.json`)),
                   ]);
                   let i = {};
                   for (const t of e) i = Object.assign(Object.assign({}, i), t);
@@ -35970,7 +35966,7 @@
                 }
               });
             })(n.Y.LANGUAGE),
-            js.Init();
+            Vs.Init();
         });
       });
     },
