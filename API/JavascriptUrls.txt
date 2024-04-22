@@ -1420,6 +1420,7 @@ ${STORE_BASE_URL}saleaction/ajaxopendoor
 ${STORE_BASE_URL}saleaction/ajaxupdateusergiveawayregistration
 ${STORE_BASE_URL}search/?controllersupport=${strCategory}
 ${STORE_BASE_URL}search/?filter=${_ ? "topsellers" : "globaltopsellers"}
+${STORE_BASE_URL}search/results/?${}
 ${STORE_BASE_URL}search/suggest
 ${STORE_BASE_URL}share/${}/yearinreview/${}/${}
 ${STORE_BASE_URL}stats/content/
