@@ -3392,39 +3392,32 @@
         });
       }
       function Ct(e) {
-        const { steamid: t, settings: a } = e;
+        const { steamid: t, settings: a } = e,
+          l = n.useRef(a.enabled_features),
+          r = [1, 2, 3, 4],
+          s = [10, 11, 12, 13, 14, 15],
+          i = [];
+        for (let e = 1; e < 16; e++)
+          !s.includes(e) &&
+            (r.includes(e) || l.current & (1 << e)) &&
+            i.push(e);
         return n.createElement(
           "div",
           { className: ue.ParentalFeatures },
           n.createElement("hr", null),
-          n.createElement(bt, {
-            steamid: t,
-            settings: a,
-            feature: 1,
-            label: "#Parental_Feature_Store",
-          }),
-          n.createElement("hr", null),
-          n.createElement(bt, {
-            steamid: t,
-            settings: a,
-            feature: 2,
-            label: "#Parental_Feature_Community",
-          }),
-          n.createElement("hr", null),
-          n.createElement(bt, {
-            steamid: t,
-            settings: a,
-            feature: 4,
-            label: "#Parental_Feature_Friends",
-          }),
-          n.createElement("hr", null),
-          n.createElement(bt, {
-            steamid: t,
-            settings: a,
-            feature: 3,
-            label: "#Parental_Feature_Profile",
-          }),
-          n.createElement("hr", null),
+          i.map((e) =>
+            n.createElement(
+              n.Fragment,
+              { key: e },
+              n.createElement(bt, {
+                steamid: t,
+                settings: a,
+                feature: e,
+                label: "#Parental_Feature_" + e,
+              }),
+              n.createElement("hr", null),
+            ),
+          ),
         );
       }
       function Nt(e) {
@@ -4178,6 +4171,7 @@
                   }),
                   n.createElement(Ct, { steamid: t, settings: a }),
                   n.createElement(Gt, { steamid: t, settings: a }),
+                  n.createElement("hr", null),
                   n.createElement(Ht, { steamid: t, settings: a }),
                 ),
             )
@@ -4887,98 +4881,103 @@
         let g = [],
           E = a;
         for (let e = 0; e < 32; e++)
-          E & (1 << e) &&
-            g.push("#Parental_FeatureRequest_" + e + (c ? "_Self" : ""));
-        return n.createElement(
-          "div",
-          {
-            className: (0, d.Z)(
-              Yt().FamilyRequestItem,
-              Yt().ParentalFeatureRequestItem,
-            ),
-          },
-          n.createElement(
-            "div",
-            { className: Yt().RequestInfo },
-            c &&
+          if (E & (1 << e)) {
+            const t = "#Parental_FeatureRequest_" + e + (c ? "_Self" : ""),
+              a = (0, p.Xx)(t);
+            a && a != t && g.push(a);
+          }
+        return 0 == g.length
+          ? null
+          : n.createElement(
+              "div",
+              {
+                className: (0, d.Z)(
+                  Yt().FamilyRequestItem,
+                  Yt().ParentalFeatureRequestItem,
+                ),
+              },
               n.createElement(
                 "div",
-                { className: Yt().SelfRequested },
-                (0, p.Xx)(
-                  m
-                    ? "#PlaytimeRequest_UserRequested_Self"
-                    : "#FeatureRequest_UserRequested_Self",
-                ),
-              ),
-            !c &&
-              n.createElement(la, {
-                steamID: new T.K(t.steamid()),
-                locToken: m
-                  ? "#PlaytimeRequest_UserRequested"
-                  : "#FeatureRequest_UserRequested",
-                locTokenPlurality: 1,
-              }),
-            n.createElement(
-              "ul",
-              { className: Yt().FeatureList },
-              g.map((e) =>
+                { className: Yt().RequestInfo },
+                c &&
+                  n.createElement(
+                    "div",
+                    { className: Yt().SelfRequested },
+                    (0, p.Xx)(
+                      m
+                        ? "#PlaytimeRequest_UserRequested_Self"
+                        : "#FeatureRequest_UserRequested_Self",
+                    ),
+                  ),
+                !c &&
+                  n.createElement(la, {
+                    steamID: new T.K(t.steamid()),
+                    locToken: m
+                      ? "#PlaytimeRequest_UserRequested"
+                      : "#FeatureRequest_UserRequested",
+                    locTokenPlurality: 1,
+                  }),
                 n.createElement(
-                  "li",
-                  { key: e, className: Yt().Feature },
-                  (0, p.Xx)(e),
+                  "ul",
+                  { className: Yt().FeatureList },
+                  g.map((e) =>
+                    n.createElement(
+                      "li",
+                      { key: e, className: Yt().Feature },
+                      e,
+                    ),
+                  ),
+                  n.createElement(
+                    "div",
+                    { className: Yt().TimeResponded },
+                    (0, p.oL)(t.time_requested()),
+                  ),
                 ),
               ),
               n.createElement(
                 "div",
-                { className: Yt().TimeResponded },
-                (0, p.oL)(t.time_requested()),
+                { className: Yt().StatusCtn },
+                !c &&
+                  !t.time_responded() &&
+                  n.createElement(
+                    B.s,
+                    { className: Yt().Buttons },
+                    n.createElement(
+                      o.KM,
+                      { noFocusRing: !1, onClick: y },
+                      (0, p.Xx)("#ParentalRequest_Accept"),
+                    ),
+                    n.createElement(
+                      o.zx,
+                      { noFocusRing: !1, onClick: r },
+                      (0, p.Xx)("#ParentalRequest_Reject"),
+                    ),
+                  ),
+                c &&
+                  !t.time_responded() &&
+                  n.createElement(
+                    "div",
+                    { className: (0, d.Z)(Yt().Buttons, Yt().Pending) },
+                    (0, p.Xx)("#ParentalRequest_Pending"),
+                  ),
+                !!t.time_responded() &&
+                  n.createElement(na, {
+                    steamIDResponder: new T.K(t.steamid_responder()),
+                    resultMessage: (0, p.Xx)(
+                      t.approved()
+                        ? "#ParentalRequest_AcceptedBy"
+                        : "#ParentalRequest_RejectedBy",
+                    ),
+                    timeResponded: t.time_responded(),
+                  }),
+                !t.time_responded() &&
+                  n.createElement(
+                    h.Yy,
+                    { active: u },
+                    s(() => _(!1)),
+                  ),
               ),
-            ),
-          ),
-          n.createElement(
-            "div",
-            { className: Yt().StatusCtn },
-            !c &&
-              !t.time_responded() &&
-              n.createElement(
-                B.s,
-                { className: Yt().Buttons },
-                n.createElement(
-                  o.KM,
-                  { noFocusRing: !1, onClick: y },
-                  (0, p.Xx)("#ParentalRequest_Accept"),
-                ),
-                n.createElement(
-                  o.zx,
-                  { noFocusRing: !1, onClick: r },
-                  (0, p.Xx)("#ParentalRequest_Reject"),
-                ),
-              ),
-            c &&
-              !t.time_responded() &&
-              n.createElement(
-                "div",
-                { className: (0, d.Z)(Yt().Buttons, Yt().Pending) },
-                (0, p.Xx)("#ParentalRequest_Pending"),
-              ),
-            t.time_responded() &&
-              n.createElement(na, {
-                steamIDResponder: new T.K(t.steamid_responder()),
-                resultMessage: (0, p.Xx)(
-                  t.approved()
-                    ? "#ParentalRequest_AcceptedBy"
-                    : "#ParentalRequest_RejectedBy",
-                ),
-                timeResponded: t.time_responded(),
-              }),
-            !t.time_responded() &&
-              n.createElement(
-                h.Yy,
-                { active: u },
-                s(() => _(!1)),
-              ),
-          ),
-        );
+            );
       }
       function sa(e) {
         const { item: t } = e,
