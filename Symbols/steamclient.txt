@@ -334,7 +334,6 @@
  ThreadGetCurrentProcessId
  ThreadGetProcessExitCode
  ThreadGetProcessId
- ThreadGetProcessListInfo
  ThreadImplOneTimeInit
  ThreadInMainThread
  ThreadInterlockedAssignIf

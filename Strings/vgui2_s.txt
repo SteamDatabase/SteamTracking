@@ -3,6 +3,8 @@ __TEXT
 
 __text
 __TEXT
+v
+v
 __stubs
 __TEXT
 __stub_helper
@@ -1874,7 +1876,6 @@ POSIX
 LINUX
 LINUX32
 LINUX64
-LINUXARM64
 CHROMEOS
 ANDROID
 ANDROID32
@@ -2275,10 +2276,9 @@ A
 
 =
 @
-q
 @
 @
-P
+a
 0
 @
 @

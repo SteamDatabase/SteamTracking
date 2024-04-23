@@ -1,8 +1,8 @@
 __TEXT
 __text
 __TEXT
-P`
-P`
+p`
+p`
 __stubs
 __TEXT
 __stub_helper
@@ -912,7 +912,6 @@ POSIX
 LINUX
 LINUX32
 LINUX64
-LINUXARM64
 CHROMEOS
 ANDROID
 ANDROID32
@@ -1538,7 +1537,6 @@ Ic
 @
 @
 0
-#
 @
 @
 @

@@ -2,6 +2,8 @@
 __TEXT
 __text
 __TEXT
+o
+o
 __stubs
 __TEXT
 __stub_helper
@@ -7764,8 +7766,8 @@ Steam pid that launched us
 VGUI_Application_001
 OK
 Cancel
-Apr 16 2024
-18:05:22
+Apr 22 2024
+14:35:56
 crashhandler004
 gameoverlayui
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/overlay/gameoverlayui/main.cpp
@@ -10465,7 +10467,6 @@ POSIX
 LINUX
 LINUX32
 LINUX64
-LINUXARM64
 CHROMEOS
 ANDROID
 ANDROID32
@@ -10788,7 +10789,9 @@ Dec
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 0
+e+
 %
+s+
 
 
 
@@ -10813,6 +10816,7 @@ j
 j
 !
 Ic]
+|
 j
 j
 j
@@ -10835,7 +10839,6 @@ AT=
 D
 @
 @
-%
 @
 Hc
 Hc
@@ -11017,7 +11020,6 @@ P
 @
 
 d
-f9
 
 
 
@@ -11028,7 +11030,6 @@ j
 j
 j
 A+M
-
 
 
 Hc
@@ -11315,8 +11316,10 @@ d
 =
 @
 @
+8
 @
-"
+z
+#
 @
 @
 @

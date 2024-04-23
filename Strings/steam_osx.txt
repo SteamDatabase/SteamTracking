@@ -7,12 +7,12 @@ __TEXT
 __text
 __TEXT
 0
-~O4
+.O4
 0
 __stubs
 __TEXT
-~4
-~4
+.4
+.4
 __stub_helper
 __TEXT
 __gcc_except_tab__TEXT
@@ -20,15 +20,15 @@ __const
 __TEXT
 __objc_methname
 __TEXT
-p
-:
 T
-p
-:
 __objc_classname__TEXT
+D:
+D:
 __objc_methtype
 __TEXT
+c:
 0
+c:
 __cstring
 __TEXT
 __unwind_info
@@ -137,10 +137,11 @@ h
 /usr/lib/libobjc.A.dylib
 &
 )
-<4
-<4
+=4
 0
 f9)'G
+4
+4
 4
 NG
 *
@@ -151,25 +152,29 @@ NG
 @
 @
 @
+5
+D9
 $
 Hi
 Hi
 Hi
-d3
-`3
-)
+>
+:)
+9
+9
+[)
+o4
 3
-3
-3
-,
 
 %
-R'
 
+N'
+v8
 (
-;
 '
 '
+M(
+8
 
 8
 8
@@ -178,11 +183,15 @@ R'
 (
 (
 (
+1
+(
+(
+(
+(
 (
 (
 (
 
-D&
 0
 0
 0
@@ -194,7 +203,7 @@ AT=
 D
 @
 @
-7
+91
 7
 7
 7
@@ -230,6 +239,11 @@ IcE
 IcE
 @
 @
+@6
+(6
+6
+6
+6
 6
 NSt3__117bad_function_callE
 15CBaseFileSystem
@@ -2402,7 +2416,7 @@ ReLaunchCmdLine
 ClientLauncherType
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlqueue.h
 IsValidIndex( idx )
-Startup - updater built Apr 16 2024 18:05:09
+Startup - updater built Apr 22 2024 14:35:47
 Startup - Steam Client launched with: %s
 Shutdown
 no hosts found
@@ -2692,8 +2706,8 @@ m_iRefs >= 0 && m_iRefs < 0x0ffffff
 #SteamBootstrapper_UpdatingSteam
 Updating Steam...
 Tahoma
-Apr 16 2024
-18:05:10
+Apr 22 2024
+14:35:48
 crashhandler004
 steam
 Steam Executable Crash
@@ -2790,7 +2804,7 @@ China
 %s/%s%s
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamexe/updateui.h
 ThreadInMainThread()
-18:05:08
+14:35:45
 [%3d%%] %s
 [----] %s
 [%3d%%] !!! Fatal Error: %s
@@ -10760,7 +10774,6 @@ POSIX
 LINUX
 LINUX32
 LINUX64
-LINUXARM64
 CHROMEOS
 ANDROID
 ANDROID32
@@ -10915,7 +10928,7 @@ steamwebhelper
 Steam Helper
 cefwebhelper
 1.0
-18:03:04
+14:33:27
 Jan
 Feb
 Mar
@@ -13353,16 +13366,21 @@ out of memory
 n <= (size_t)INT_MAX
 file_ofs == pFile->GetBytesWritten()
 
-.3:
-L-:
+(^:
+$3:
+,3:
+z^:
+.^:
+N^:
+e^:
 
-_:
+p^:
 0
-1=
-<4
-<4
+=4
 0
 f9)'G
+4
+4
 4
 NG
 *
@@ -13373,25 +13391,29 @@ NG
 @
 @
 @
+5
+D9
 $
 Hi
 Hi
 Hi
-d3
-`3
-)
+>
+:)
+9
+9
+[)
+o4
 3
-3
-3
-,
 
 %
-R'
 
+N'
+v8
 (
-;
 '
 '
+M(
+8
 
 8
 8
@@ -13400,11 +13422,15 @@ R'
 (
 (
 (
+1
+(
+(
+(
+(
 (
 (
 (
 
-D&
 0
 0
 0
@@ -13416,7 +13442,7 @@ AT=
 D
 @
 @
-7
+91
 7
 7
 7
@@ -13452,14 +13478,18 @@ IcE
 IcE
 @
 @
+@6
+(6
+6
+6
+6
 6
 V
-8
+M>
+1
 :
-:
-q/
 =
-;/
+7/
 /
 /
 /
@@ -13467,32 +13497,42 @@ q/
 /
 5
 =
-z.
-m.
+v.
+9.
 .
 .
 .
+.
+.
+.
+.
 4
-4
-4
-4
-4
-4
+-
 !
 -
--
+3
+3
+3
 7
-h2
+{2
+7
 @
+12
+2
 &
 )6
-`+
++6
+e1
 +
 1
 1
-Z*
+,
+X*
 *
-.0
+*
+0
+0
++
 @
 M9e
 @
@@ -13507,6 +13547,7 @@ M9e
 ?
 ?
 ?
+(
 (
 (
 (
@@ -13526,7 +13567,6 @@ AES for Intel AES-NI, CRYPTOGAMS by <appro@openssl.org>
 `
 `
 @
-
 -
 j
 j
@@ -13541,14 +13581,13 @@ j
 0
 IcU
 E;e
+-,
 M)u
 =
 =
 @
 =
-"+
 /
-+
 +
 =
 %
@@ -13843,6 +13882,7 @@ OO
 expand 32-byte k
 ChaCha20 for x86_64, CRYPTOGAMS by <appro@openssl.org>
 @
+2
 =
 @
 
@@ -13850,8 +13890,10 @@ ChaCha20 for x86_64, CRYPTOGAMS by <appro@openssl.org>
 @
 @
 0
-%
+#
+#
 H=
+g"
 )
 )
 Ic]
@@ -13864,14 +13906,11 @@ j
 ,
 
 i+
-E'
-'
-'
 '
 '
 t$I;M
-#
-#
+C"
+"
 e
 W
 ,7~5d
@@ -14164,10 +14203,10 @@ H=
 @
 =*.*
 @
+N
 @
-G
+j
 }
-K
 @
 @
 @
@@ -14191,6 +14230,7 @@ K
 0
 0
 0
+&
 0
 H=
 0
@@ -14225,14 +14265,13 @@ Hc
 0
 '
 0
+S
 @
 @
 1
-^
+P
 &
 %
-95
-
 
 @
 =h2
