@@ -102,6 +102,26 @@
         ExpandButton: "_3BVPhbdEe8mENSA5TF3znJ",
       };
     },
+    60285: (e) => {
+      e.exports = {
+        ReleaseDateText: "_2GEfYJTcLo5vBafPciEQQt",
+        Large: "_2iZ5Ywtplltt46RqW2G9kb",
+      };
+    },
+    4563: (e) => {
+      e.exports = {
+        DateDesc: "_2IwYDga9iYYwbum4A4SDAk",
+        StatusItemRow: "_1mPwifGHLjllbWO-jXx2Xk",
+        StatusIndicatorSection: "_3LRM1vGyM8U3JmLBsvqUi6",
+        StatusIndicator: "_3IcPPQyEVDA2m_7lVl8FSC",
+        Complete: "_3bAI2ClpwR3fc3CF1Bq_Ew",
+        StatusItemCheck: "lxcxV2q25sBapYk9lvWHJ",
+        StatusItemLabel: "vQWBbodTnHdHThVaucNIG",
+        StatusItemBox: "nsqkY8Ib7VaJLBFOTgiZQ",
+        StatusItemDueBy: "_ifrPqUjkCPRCZjQW71wh",
+        StatusItemBoxButton: "_39qgUEX9q9d0KiJpbEoUPj",
+      };
+    },
     49622: (e) => {
       e.exports = {
         DeadlineWarning: "KJBbOCy-N47ZdyXKj82el",
@@ -119,7 +139,6 @@
         ItemImage: "_1HOWqt0TzoT_xyD3HtOGgB",
         ItemInfoHeader: "_33ZlQAMhN22Aw902Omlocy",
         InlineDate: "_3dNRuRCyAmnE8DAurBSqFq",
-        ReleaseDateText: "_3TiU93n7jVLF7Thhizvvg1",
         ItemDeadlineHeaderText: "zjHNbIk0sNUO47ZDiM6M-",
         ItemWarning: "_3OEQpFpCnwLcs6fDU_N1G7",
         ReleaseInfoCtn: "_3sPVSLfK7h9WoWXk-VgHJf",
@@ -136,22 +155,22 @@
         AssetRequestDate: "_3G-O4ejlDgEhRIwpTIA9wq",
       };
     },
-    92609: (e, t, n) => {
+    55875: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { default: () => nt });
+      n.r(t), n.d(t, { default: () => st });
       var a = n(47427),
         r = n(37563),
         i = n(15798),
-        s = n(31846),
-        l = n(53040),
+        l = n(31846),
+        s = n(1485),
         o = n(25406);
-      const d = a.forwardRef((e, t) => {
+      const c = a.forwardRef((e, t) => {
         const {
           title: n,
           description: r,
           children: i,
-          beta: l,
-          headerElement: d,
+          beta: s,
+          headerElement: c,
         } = e;
         return a.createElement(
           "div",
@@ -164,30 +183,30 @@
               { className: o.Title },
               n,
               " ",
-              l &&
+              s &&
                 a.createElement(
                   "span",
                   { className: o.BetaCallout },
-                  (0, s.Xx)("#NewToolTitleSuffix_Beta"),
+                  (0, l.Xx)("#NewToolTitleSuffix_Beta"),
                 ),
             ),
-            d && a.createElement("div", null, d),
+            c && a.createElement("div", null, c),
           ),
           r && a.createElement("div", { className: o.Body }, r),
           i,
         );
       });
-      function c() {
+      function d() {
         const e = (0, r.kQ)("rgDailyDealInvitations", "application_config");
         if (!e || 0 == e.length) return;
         return a.createElement(
-          d,
+          c,
           {
-            title: (0, s.Xx)("#DailyDeals_PartnerDashboard_Title"),
-            description: (0, s.Xx)("#DailyDeals_PartnerDashboard_Invite_Body"),
+            title: (0, l.Xx)("#DailyDeals_PartnerDashboard_Title"),
+            description: (0, l.Xx)("#DailyDeals_PartnerDashboard_Invite_Body"),
           },
           a.createElement(
-            l.zx,
+            s.zx,
             {
               className: i.ButtonDailyDealDashboard,
               onClick: () => {
@@ -196,7 +215,7 @@
                 );
               },
             },
-            (0, s.Xx)("#DailyDeals_Dashboard"),
+            (0, l.Xx)("#DailyDeals_Dashboard"),
           ),
         );
       }
@@ -218,11 +237,11 @@
       function h(...e) {
         return [...new Set(e.flat())];
       }
-      function f(e) {
+      function T(e) {
         const t = new Date(e.getTime());
         return t.setHours(0, 0, 0, 0), t;
       }
-      function T(e) {
+      function f(e) {
         const t = new Date(e.getTime());
         return t.setDate(1), t.setHours(0, 0, 0, 0), t;
       }
@@ -243,16 +262,16 @@
       }
       function N(e, t) {
         const n = {
-            sText: (0, s.Xx)(
+            sText: (0, l.Xx)(
               "#Dashboard_UpcomingEvents_AppReleaseState_unavailable",
             ),
-            sTooltip: (0, s.Xx)(
+            sTooltip: (0, l.Xx)(
               "#Dashboard_UpcomingEvents_AppReleaseState_unavailable_Description",
             ),
             bPrereleaseOrReleased: !1,
           },
           a = {
-            sText: (0, s.Xx)(
+            sText: (0, l.Xx)(
               "#Dashboard_UpcomingEvents_AppReleaseState_storepagenotlive",
             ),
             sTooltip: void 0,
@@ -260,46 +279,46 @@
           },
           r = {
             released: {
-              sText: (0, s.Xx)(
+              sText: (0, l.Xx)(
                 "#Dashboard_UpcomingEvents_AppReleaseState_released",
               ),
-              sTooltip: (0, s.Xx)(
+              sTooltip: (0, l.Xx)(
                 "#Dashboard_UpcomingEvents_AppReleaseState_released_Description",
               ),
               bPrereleaseOrReleased: !0,
             },
             prerelease: {
-              sText: (0, s.Xx)(
+              sText: (0, l.Xx)(
                 "#Dashboard_UpcomingEvents_AppReleaseState_prerelease",
               ),
-              sTooltip: (0, s.Xx)(
+              sTooltip: (0, l.Xx)(
                 "#Dashboard_UpcomingEvents_AppReleaseState_prerelease_Description",
               ),
               bPrereleaseOrReleased: !0,
             },
             ownersonly: {
-              sText: (0, s.Xx)(
+              sText: (0, l.Xx)(
                 "#Dashboard_UpcomingEvents_AppReleaseState_ownersonly",
               ),
-              sTooltip: (0, s.Xx)(
+              sTooltip: (0, l.Xx)(
                 "#Dashboard_UpcomingEvents_AppReleaseState_ownersonly_Description",
               ),
               bPrereleaseOrReleased: !1,
             },
             preloadonly: {
-              sText: (0, s.Xx)(
+              sText: (0, l.Xx)(
                 "#Dashboard_UpcomingEvents_AppReleaseState_preloadonly",
               ),
-              sTooltip: (0, s.Xx)(
+              sTooltip: (0, l.Xx)(
                 "#Dashboard_UpcomingEvents_AppReleaseState_preloadonly_Description",
               ),
               bPrereleaseOrReleased: !1,
             },
             disabled: {
-              sText: (0, s.Xx)(
+              sText: (0, l.Xx)(
                 "#Dashboard_UpcomingEvents_AppReleaseState_disabled",
               ),
-              sTooltip: (0, s.Xx)(
+              sTooltip: (0, l.Xx)(
                 "#Dashboard_UpcomingEvents_AppReleaseState_disabled_Description",
               ),
               bPrereleaseOrReleased: !1,
@@ -308,7 +327,7 @@
         let i = n;
         return e in r ? (i = r[e]) : t || (i = a), i;
       }
-      function w(e) {
+      function R(e) {
         const { app: t } = e,
           [n] = (0, g.jk)(t.appid, 0, {
             include_assets: !0,
@@ -318,13 +337,13 @@
         return a.createElement(
           a.Fragment,
           null,
-          a.createElement(R, { app: t, storeItem: n, hasStoreItem: r }),
+          a.createElement(w, { app: t, storeItem: n, hasStoreItem: r }),
           a.createElement(x, { app: t, hasStoreItem: r }),
         );
       }
-      function R(e) {
+      function w(e) {
         const { app: t, storeItem: n, hasStoreItem: i } = e,
-          l = r.De.PARTNER_BASE_URL + "apps/landing/" + t.appid,
+          s = r.De.PARTNER_BASE_URL + "apps/landing/" + t.appid,
           o = i ? n.GetName() : t.name;
         return a.createElement(
           "div",
@@ -349,7 +368,7 @@
             { className: v.ItemNameInfoContainer },
             a.createElement(
               "a",
-              { className: v.ItemName, href: l, target: "_blank" },
+              { className: v.ItemName, href: s, target: "_blank" },
               o,
             ),
             a.createElement(
@@ -362,15 +381,15 @@
                   a.createElement(
                     "span",
                     { className: v.ReleaseDateLabel },
-                    (0, s.Xx)("#App_Landing_SpecifiedReleaseDate"),
+                    (0, l.Xx)("#App_Landing_SpecifiedReleaseDate"),
                   ),
                   " ",
                   a.createElement(
                     "span",
                     { className: v.ReleaseDateText },
-                    (d = t.releaserequest.release_date)
-                      ? `${(0, s.vX)(d)} ${(0, E.Sc)(d, {}, { timeZoneName: "short" })}`
-                      : (0, s.Xx)("#App_Landing_UnsetReleaseDate"),
+                    (c = t.releaserequest.release_date)
+                      ? `${(0, l.vX)(c)} ${(0, E.Sc)(c, {}, { timeZoneName: "short" })}`
+                      : (0, l.Xx)("#App_Landing_UnsetReleaseDate"),
                   ),
                 ),
               i &&
@@ -380,7 +399,7 @@
                   a.createElement(
                     "span",
                     { className: v.ReleaseDateLabel },
-                    (0, s.Xx)("#App_Landing_CustomersSeeReleaseDate"),
+                    (0, l.Xx)("#App_Landing_CustomersSeeReleaseDate"),
                   ),
                   " ",
                   a.createElement(
@@ -392,7 +411,7 @@
             ),
           ),
         );
-        var d;
+        var c;
       }
       function x(e) {
         const { app: t, hasStoreItem: n } = e,
@@ -411,7 +430,7 @@
             a.createElement(
               "div",
               { className: v.ItemReleaseStatusLabel },
-              (0, s.Xx)("#Dashboard_UpcomingEvents_ReleaseStatusLabel"),
+              (0, l.Xx)("#Dashboard_UpcomingEvents_ReleaseStatusLabel"),
             ),
             a.createElement(
               "div",
@@ -440,35 +459,34 @@
           (e[(e.SteamDeckCompatibilityReview = 6)] =
             "SteamDeckCompatibilityReview");
       })(m || (m = {}));
-      var k = n(85556),
-        S = n(20417),
+      var S = n(85556),
+        k = n(20417),
         C = n(52631),
         A = n(1698),
         L = n(77936),
-        P = n(59728),
-        U = n(33687),
-        X = n(81033),
+        U = n(59728),
+        P = n(33687),
         B = n(4942),
-        M = n(29292),
-        O = n(62698),
+        X = n(29292),
+        M = n(62698),
         G = n(45492);
-      class F {
+      class O {
         constructor() {
           this.m_rgOptInComputed = new Map();
         }
         static Get() {
           return (
-            F.s_Singleton ||
-              ((F.s_Singleton = new F()),
-              F.s_Singleton.Init(),
+            O.s_Singleton ||
+              ((O.s_Singleton = new O()),
+              O.s_Singleton.Init(),
               "dev" == r.De.WEB_UNIVERSE &&
-                (window.g_UpcomingEventsOptInStore = F.s_Singleton)),
-            F.s_Singleton
+                (window.g_UpcomingEventsOptInStore = O.s_Singleton)),
+            O.s_Singleton
           );
         }
         Init() {
           (this.m_rgOptIns = (0, r.kQ)("rgOptIns", "application_config")),
-            this.m_rgOptIns && F.ExtractOptInDefinitions(this.m_rgOptIns);
+            this.m_rgOptIns && O.ExtractOptInDefinitions(this.m_rgOptIns);
         }
         static ExtractOptInDefinitions(e) {
           for (const t of Object.keys(e)) {
@@ -486,24 +504,43 @@
           const i =
             null === (t = this.m_rgOptIns) || void 0 === t ? void 0 : t[e];
           if (!i) return void this.m_rgOptInComputed.set(e, void 0);
-          const s = new Set(i.invited_appids),
-            l = i.description.definition.invitation_only
+          const l = new Set(i.invited_appids),
+            s = i.description.definition.invitation_only
               ? null === (n = i.summary) || void 0 === n
                 ? void 0
-                : n.apps_eligible.filter((e) => s.has(e.appid))
+                : n.apps_eligible.filter((e) => l.has(e.appid))
               : null === (a = i.summary) || void 0 === a
                 ? void 0
                 : a.apps_eligible,
             o = {
               description: i.description,
-              rgEligibleApps: l,
+              rgEligibleApps: s,
               rgRegisteredApps:
                 null === (r = i.summary) || void 0 === r ? void 0 : r.apps_in,
             };
           return this.m_rgOptInComputed.set(e, o), o;
         }
       }
+      var F = n(60285);
       function H(e) {
+        const { startTimestamp: t, endTimestamp: n, largeDate: r } = e,
+          i = new Intl.DateTimeFormat(navigator.language, {
+            month: "short",
+            day: "numeric",
+          }),
+          s = i.format(new Date(1e3 * t)),
+          o = i.format(new Date(1e3 * n)),
+          c =
+            s === o
+              ? s
+              : (0, l.Xx)("#Dashboard_UpcomingEvents_Events_TimeRange", s, o);
+        return a.createElement(
+          "span",
+          { className: (0, u.Z)(F.ReleaseDateText, r && F.Large) },
+          c,
+        );
+      }
+      function j(e) {
         return a.useMemo(() => {
           var t;
           const n = (0, r.kQ)("rgPartnerPromotions", "application_config"),
@@ -523,7 +560,7 @@
                       (e, t) => e.set(t.plan.promotion_id, t.input),
                       new Map(),
                     ),
-            l = new Set(
+            s = new Set(
               null !== (t = null == n ? void 0 : n.rgHiddenPlanIDs) &&
               void 0 !== t
                 ? t
@@ -534,9 +571,9 @@
                 ? void 0
                 : a.flatMap((t) => {
                     if (!t.start_date) return [];
-                    const n = F.Get().GetInfo(t.opt_in_id),
+                    const n = O.Get().GetInfo(t.opt_in_id),
                       a = i.get(t.id);
-                    let r = l.has(t.id);
+                    let r = s.has(t.id);
                     ("nextfest" != t.type && "themesale" != t.type) ||
                       r ||
                       (r = !n);
@@ -546,7 +583,7 @@
                         0 == n.rgEligibleApps.length &&
                         n.rgRegisteredApps &&
                         0 == n.rgRegisteredApps.length,
-                      d = new j(
+                      c = new Z(
                         e,
                         r,
                         t,
@@ -558,58 +595,58 @@
                         (function (e) {
                           switch (e.type) {
                             case "midweek":
-                              return (0, s.Xx)(
+                              return (0, l.Xx)(
                                 "#Dashboard_UpcomingEvents_EventType_PromotionPlan_midweek",
                               );
                             case "weekenddeal":
-                              return (0, s.Xx)(
+                              return (0, l.Xx)(
                                 "#Dashboard_UpcomingEvents_EventType_PromotionPlan_weekenddeal",
                               );
                             case "saleevent":
-                              return (0, s.Xx)(
+                              return (0, l.Xx)(
                                 "#Dashboard_UpcomingEvents_EventType_PromotionPlan_saleevent",
                               );
                             case "themesale":
-                              return (0, s.Xx)(
+                              return (0, l.Xx)(
                                 "#Dashboard_UpcomingEvents_EventType_PromotionPlan_themesale",
                               );
                             case "nextfest":
-                              return (0, s.Xx)(
+                              return (0, l.Xx)(
                                 "#Dashboard_UpcomingEvents_EventType_PromotionPlan_nextfest",
                               );
                             case "seasonalsale":
-                              return (0, s.Xx)(
+                              return (0, l.Xx)(
                                 "#Dashboard_UpcomingEvents_EventType_PromotionPlan_seasonalsale",
                               );
                             case "informational":
-                              return (0, s.Xx)(
+                              return (0, l.Xx)(
                                 "#Dashboard_UpcomingEvents_EventType_PromotionPlan_informational",
                               );
                             case "dailydeal":
-                              return (0, s.Xx)(
+                              return (0, l.Xx)(
                                 "#Dashboard_UpcomingEvents_EventType_PromotionPlan_dailydeal",
                               );
                             case "vacation":
-                              return (0, s.Xx)(
+                              return (0, l.Xx)(
                                 "#Dashboard_UpcomingEvents_EventType_PromotionPlan_vacation",
                               );
                             case "important":
-                              return (0, s.Xx)(
+                              return (0, l.Xx)(
                                 "#Dashboard_UpcomingEvents_EventType_PromotionPlan_important",
                               );
                             case "preload":
-                              return (0, s.Xx)(
+                              return (0, l.Xx)(
                                 "#Dashboard_UpcomingEvents_EventType_PromotionPlan_preload",
                               );
                             case "assetrequest":
-                              return (0, s.Xx)(
+                              return (0, l.Xx)(
                                 "#Dashboard_UpcomingEvents_EventType_PromotionPlan_assetrequest",
                               );
                           }
                         })(t),
                         o,
                       ),
-                      c = (function (e) {
+                      d = (function (e) {
                         var t;
                         const n = [];
                         if (
@@ -629,7 +666,7 @@
                           t &&
                             t > new Date() &&
                             n.push(
-                              new j(
+                              new Z(
                                 e.m_partnerId,
                                 e.valveOnly,
                                 e.m_plan,
@@ -638,7 +675,7 @@
                                 t,
                                 t,
                                 "deadline",
-                                (0, s.Xx)(
+                                (0, l.Xx)(
                                   "#Dashboard_UpcomingEvents_EventType_PromotionPlan_registration_reminder",
                                 ),
                                 e.dimmed,
@@ -646,14 +683,15 @@
                             );
                         }
                         return n;
-                      })(d);
-                    return (null == c ? void 0 : c.length) > 0 ? [d, ...c] : d;
+                      })(c);
+                    return (null == d ? void 0 : d.length) > 0 ? [c, ...d] : c;
                   });
           return null != o ? o : [];
         }, [e]);
       }
-      class j {
-        constructor(e, t, n, a, i, s, l, o, d, c) {
+      class Z {
+        constructor(e, t, n, a, i, l, s, o, c, d) {
+          var m, p, u, _;
           (this.m_changedCallbacks = new G.pB()),
             (this.dimmed = !1),
             (this.m_partnerId = e),
@@ -662,13 +700,43 @@
             (this.m_assetInput = a),
             (this.m_optIn = i),
             (this.id = n.id),
-            (this.title = "..."),
-            (this.startDate = s),
-            (this.endDate = l),
+            (this.title =
+              null !==
+                (_ =
+                  null ===
+                    (u =
+                      null ===
+                        (p =
+                          null === (m = null == i ? void 0 : i.description) ||
+                          void 0 === m
+                            ? void 0
+                            : m.definition) || void 0 === p
+                        ? void 0
+                        : p.event_title) || void 0 === u
+                    ? void 0
+                    : u[r.De.LANGUAGE]) && void 0 !== _
+                ? _
+                : (function (e) {
+                    const t = [
+                      "takeover",
+                      "takeunder",
+                      "midweek",
+                      "midweek deal",
+                      "weekend deal",
+                    ];
+                    for (const n of t)
+                      e = e.replace(
+                        new RegExp("^" + n + "\\s*[:-]\\s*", "i"),
+                        "",
+                      );
+                    return e;
+                  })(n.name)),
+            (this.startDate = l),
+            (this.endDate = s),
             (this.eventType = o),
-            (this.eventTypeName = d),
+            (this.eventTypeName = c),
             (this.editURL = `${r.De.PARTNER_BASE_URL}promotion/planning/edit/${this.m_plan.id}`),
-            (this.dimmed = c);
+            (this.dimmed = d);
         }
         getElement() {
           return a.createElement(V, { eventData: this });
@@ -683,90 +751,83 @@
       function V(e) {
         const { eventData: t } = e;
         return "nextfest" == t.m_plan.type || "themesale" === t.m_plan.type
-          ? a.createElement(Z, { eventData: t })
+          ? a.createElement(q, { eventData: t })
           : a.createElement(W, { eventData: t });
       }
       function W(e) {
         var t, n;
         const { eventData: i } = e,
-          l = i.m_plan,
-          { data: o, isLoading: d } = (0, X.n$)(l.discount_event_id),
-          [c] = (0, g.jk)(l.store_item_id, l.store_item_type, {
+          s = i.m_plan,
+          [o] = (0, g.jk)(s.store_item_id, s.store_item_type, {
             include_basic_info: !0,
             include_assets: !0,
           }),
-          [m] = (0, g.jk)(l.advertising_appid, 0, {
+          [c] = (0, g.jk)(s.advertising_appid, 0, {
             include_basic_info: !0,
             include_assets: !0,
           }),
-          _ = null != c ? c : m,
-          v = "seasonalsale" == i.m_plan.type,
-          E = K(l),
-          D = ee(i, d, [
-            null == _ ? void 0 : _.GetName(),
-            null == o ? void 0 : o.name,
-            E,
-          ]);
-        let h =
-            "seasonalsale" == l.type
+          d = null != o ? o : c,
+          m = "seasonalsale" == i.m_plan.type;
+        let _ =
+            "seasonalsale" == s.type
               ? `${r.De.PARTNER_BASE_URL}doc/marketing/discounts/seasonalsales`
               : void 0,
-          f = null == _ ? void 0 : _.GetAssets().GetHeaderURL();
-        null != h || (h = null == _ ? void 0 : _.GetStorePageURL());
-        const T = (0, L.jM)(r.De.LANGUAGE),
-          { eventModel: y, bLoading: b } = (0, M.Mx)(
-            l.sale_clan_account,
-            l.sale_clan_event_gid,
+          v = null == d ? void 0 : d.GetAssets().GetHeaderURL();
+        null != _ || (_ = null == d ? void 0 : d.GetStorePageURL());
+        const E = (0, L.jM)(r.De.LANGUAGE),
+          { eventModel: D, bLoading: h } = (0, X.Mx)(
+            s.sale_clan_account,
+            s.sale_clan_event_gid,
           );
-        null != f ||
-          (f =
-            !b &&
-            (null == y
+        null != v ||
+          (v =
+            !h &&
+            (null == D
               ? void 0
-              : y.GetImageURL("capsule", T, O.FN.capsule_main))),
-          null != h || (h = !b && (null == y ? void 0 : y.GetSaleURL()));
-        const I =
-            l.discount_event_id &&
+              : D.GetImageURL("capsule", E, M.FN.capsule_main))),
+          null != _ || (_ = !h && (null == D ? void 0 : D.GetSaleURL()));
+        const T =
+            s.discount_event_id &&
             !(null === (t = i.m_assetInput) || void 0 === t
               ? void 0
               : t.enable_input)
-              ? `${r.De.PARTNER_BASE_URL}promotion/discounts/dashboard/?de=${l.discount_event_id}`
+              ? `${r.De.PARTNER_BASE_URL}promotion/discounts/dashboard/?de=${s.discount_event_id}`
               : void 0,
-          N = a.createElement(
+          f = a.createElement(
             a.Fragment,
             null,
-            I &&
+            T &&
               a.createElement(
                 "button",
                 {
                   className: (0, u.Z)(C.LinkButton),
-                  onClick: () => window.open(I, "_blank"),
+                  onClick: () => window.open(T, "_blank"),
                 },
-                (0, s.Xx)(
+                (0, l.Xx)(
                   "#Dashboard_UpcomingEvents_Events_OptIn_Button_EnterDiscounts",
                 ),
               ),
-            v &&
+            m &&
               a.createElement(
                 "button",
                 {
                   className: (0, u.Z)(C.LinkButton),
-                  onClick: () => window.open(h, "_blank"),
+                  onClick: () => window.open(_, "_blank"),
                 },
-                (0, s.Xx)(
+                (0, l.Xx)(
                   "#Dashboard_UpcomingEvents_Events_OptIn_Button_LearnMore",
                 ),
               ),
-            (null === (n = l.asset_kit_url) || void 0 === n
+            (null === (n = s.asset_kit_url) || void 0 === n
               ? void 0
               : n.length) > 0 &&
               a.createElement(
                 "button",
                 {
                   className: (0, u.Z)(C.LinkButton),
-                  onClick: () => window.open(l.asset_kit_url, "_blank"),
+                  onClick: () => window.open(s.asset_kit_url, "_blank"),
                 },
-                (0, s.Xx)(
+                (0, l.Xx)(
                   "#Dashboard_UpcomingEvents_Events_OptIn_Button_AssetKit",
                 ),
               ),
@@ -777,75 +838,59 @@
             className: (0, u.Z)(
               C.ItemContainer,
               C.HasImage,
-              v && C.SeasonalSale,
+              m && C.SeasonalSale,
             ),
           },
-          f &&
-            v &&
+          v &&
+            m &&
             a.createElement("img", {
               className: (0, u.Z)(C.BackgroundImage, p.BackgroundImage),
-              src: f,
+              src: v,
             }),
           a.createElement(Q, {
-            eventName: D,
-            startTime: l.start_date,
-            endTime: l.end_date,
-            eventUrl: h,
-            imageUrl: f,
-            additionalButtons: N,
+            eventName: i.title,
+            startTime: s.start_date,
+            endTime: s.end_date,
+            eventUrl: _,
+            imageUrl: v,
+            additionalButtons: f,
           }),
           a.createElement($, { eventData: i }),
         );
       }
-      function Z(e) {
-        var t, n, i, l, o, d, c, m, _;
-        const { eventData: v } = e,
-          g = (0, L.jM)(r.De.LANGUAGE),
-          E = v.m_plan,
-          D = v.m_optIn,
-          h = K(E),
-          f = ee(v, !1, [
-            null ===
-              (i =
-                null ===
-                  (n =
-                    null === (t = null == D ? void 0 : D.description) ||
-                    void 0 === t
-                      ? void 0
-                      : t.definition) || void 0 === n
-                  ? void 0
-                  : n.event_title) || void 0 === i
-              ? void 0
-              : i[r.De.LANGUAGE],
-            h,
-          ]),
-          T = E.opt_in_id
-            ? `${r.De.PARTNER_BASE_URL}optin/sale/${null === (l = E.opt_in_id) || void 0 === l ? void 0 : l.replace("sale_", "")}`
+      function q(e) {
+        var t, n, i, s, o, c;
+        const { eventData: d } = e,
+          m = (0, L.jM)(r.De.LANGUAGE),
+          _ = d.m_plan,
+          v = d.m_optIn,
+          g = _.opt_in_id
+            ? `${r.De.PARTNER_BASE_URL}optin/sale/${null === (t = _.opt_in_id) || void 0 === t ? void 0 : t.replace("sale_", "")}`
             : void 0,
-          y = [];
-        let b;
+          E = [];
+        let D;
         if (
-          (v.valveOnly &&
-            ((E.sale_clan_account && E.sale_clan_event_gid) ||
-              y.push("no sale event"),
-            E.opt_in_id || y.push("no opt-in")),
-          "nextfest" == E.type && "deadline" == v.eventType)
+          (d.valveOnly &&
+            ((_.sale_clan_account && _.sale_clan_event_gid) ||
+              E.push("no sale event"),
+            _.opt_in_id || E.push("no opt-in")),
+          "nextfest" == _.type && "deadline" == d.eventType)
         ) {
           const e = new Intl.DateTimeFormat(navigator.language, {
             month: "short",
             day: "numeric",
           }).format(
             new Date(
-              1e3 * v.m_optIn.description.definition.optin_deadline_date,
+              1e3 * d.m_optIn.description.definition.optin_deadline_date,
             ),
           );
-          b = a.createElement(
+          D = a.createElement(
             a.Fragment,
             null,
             a.createElement(
               "div",
               { className: C.ItemDeadlineHeaderText },
-              (0, s.Xx)(
+              (0, l.Xx)(
                 "#Dashboard_UpcomingEvents_Events_Deadline_RegistrationCloses",
                 e,
               ),
@@ -853,57 +898,57 @@
             a.createElement(
               "div",
               null,
-              (0, s.Xx)(
+              (0, l.Xx)(
                 "#Dashboard_UpcomingEvents_Events_Deadline_RegistrationCloses_Description",
               ),
             ),
           );
         }
-        const I =
-            null !== (o = null == D ? void 0 : D.description.start_date) &&
-            void 0 !== o
-              ? o
-              : E.start_date,
-          N =
-            null !== (d = null == D ? void 0 : D.description.end_date) &&
-            void 0 !== d
-              ? d
-              : E.end_date,
-          w =
+        const h =
+            null !== (n = null == v ? void 0 : v.description.start_date) &&
+            void 0 !== n
+              ? n
+              : _.start_date,
+          T =
+            null !== (i = null == v ? void 0 : v.description.end_date) &&
+            void 0 !== i
+              ? i
+              : _.end_date,
+          f =
             null ===
-              (_ =
+              (c =
                 null ===
-                  (m =
-                    null === (c = null == D ? void 0 : D.description) ||
-                    void 0 === c
+                  (o =
+                    null === (s = null == v ? void 0 : v.description) ||
+                    void 0 === s
                       ? void 0
-                      : c.definition) || void 0 === m
+                      : s.definition) || void 0 === o
                   ? void 0
-                  : m.localized_optin_banner) || void 0 === _
+                  : o.localized_optin_banner) || void 0 === c
               ? void 0
-              : _[r.De.LANGUAGE],
-          R =
-            (null == D ? void 0 : D.description.opt_in_name) &&
-            w &&
-            (0, B.I)(null == D ? void 0 : D.description.opt_in_name, g, w);
+              : c[r.De.LANGUAGE],
+          y =
+            (null == v ? void 0 : v.description.opt_in_name) &&
+            f &&
+            (0, B.I)(null == v ? void 0 : v.description.opt_in_name, m, f);
         return a.createElement(
           "div",
           { className: C.ItemContainer },
-          R &&
+          y &&
             a.createElement("img", {
               className: (0, u.Z)(C.BackgroundImage, p.BackgroundImage),
-              src: R,
+              src: y,
             }),
           a.createElement(Q, {
-            warnings: y,
-            eventName: f,
-            eventDescription: b,
-            startTime: I,
-            endTime: N,
-            eventUrl: T,
+            warnings: E,
+            eventName: d.title,
+            eventDescription: D,
+            startTime: h,
+            endTime: T,
+            eventUrl: g,
             inlineDate: !0,
           }),
-          D && a.createElement(z, { eventData: v, eventUrl: T, optIn: D }),
+          v && a.createElement(Y, { eventData: d, eventUrl: g, optIn: v }),
         );
       }
       function Q(e) {
@@ -912,11 +957,11 @@
           eventDescription: n,
           eventUrl: r,
           startTime: i,
-          endTime: s,
-          warnings: l,
+          endTime: l,
+          warnings: s,
           imageUrl: o,
-          additionalButtons: d,
-          inlineDate: c,
+          additionalButtons: c,
+          inlineDate: d,
         } = e;
         return a.createElement(
           a.Fragment,
@@ -936,7 +981,7 @@
             { className: C.ItemNameInfoContainer },
             a.createElement(
               "div",
-              { className: (0, u.Z)(C.ItemInfoHeader, c && C.InlineDate) },
+              { className: (0, u.Z)(C.ItemInfoHeader, d && C.InlineDate) },
               a.createElement(
                 "span",
                 { className: C.ItemName },
@@ -945,33 +990,23 @@
               a.createElement(
                 "div",
                 null,
-                a.createElement(q, { startTimestamp: i, endTimestamp: s }),
+                a.createElement(H, {
+                  startTimestamp: i,
+                  endTimestamp: l,
+                  largeDate: d,
+                }),
               ),
             ),
             n,
-            (null == l ? void 0 : l.length) > 0 &&
+            (null == s ? void 0 : s.length) > 0 &&
               a.createElement(
                 "div",
                 { className: C.ItemWarning },
-                l.join(", "),
+                s.join(", "),
               ),
           ),
-          d && a.createElement("div", { className: C.LinkButtonContainer }, d),
+          c && a.createElement("div", { className: C.LinkButtonContainer }, c),
         );
-      }
-      function q(e) {
-        const { startTimestamp: t, endTimestamp: n } = e,
-          r = new Intl.DateTimeFormat(navigator.language, {
-            month: "short",
-            day: "numeric",
-          }),
-          i = r.format(new Date(1e3 * t)),
-          l = r.format(new Date(1e3 * n)),
-          o =
-            i === l
-              ? i
-              : (0, s.Xx)("#Dashboard_UpcomingEvents_Events_TimeRange", i, l);
-        return a.createElement("span", { className: C.ReleaseDateText }, o);
       }
       function $(e) {
         var t;
@@ -985,12 +1020,12 @@
         const i = n.m_plan.id
             ? `${r.De.PARTNER_BASE_URL}promotion/assetportal/request/${n.m_plan.id}`
             : void 0,
-          l = new Intl.DateTimeFormat(navigator.language, {
+          s = new Intl.DateTimeFormat(navigator.language, {
             month: "short",
             day: "numeric",
           }),
           o =
-            n.m_plan.start_date && l.format(1e3 * (n.m_plan.start_date - A.hZ));
+            n.m_plan.start_date && s.format(1e3 * (n.m_plan.start_date - A.hZ));
         return a.createElement(
           "div",
           { className: C.LinkButtonContainer },
@@ -1001,7 +1036,7 @@
               a.createElement(
                 "div",
                 { className: C.AssetRequestDateLabel },
-                (0, s.Xx)(
+                (0, l.Xx)(
                   "#Dashboard_UpcomingEvents_EventType_PromotionPlan_assetrequest_duedate",
                 ),
               ),
@@ -1014,15 +1049,15 @@
                 className: (0, u.Z)(C.LinkButton),
                 onClick: () => window.open(i, "_blank"),
               },
-              (0, s.Xx)(
+              (0, l.Xx)(
                 "#Dashboard_UpcomingEvents_EventType_PromotionPlan_assetrequest_button",
               ),
             ),
         );
       }
-      function z(e) {
-        var t, n, i, l;
-        const { eventData: o, eventUrl: d, optIn: c } = e,
+      function Y(e) {
+        var t, n, i, s;
+        const { eventData: o, eventUrl: c, optIn: d } = e,
           m = o.m_plan,
           p = (e, t) => {
             var n;
@@ -1036,12 +1071,12 @@
               : [];
           },
           v = a.useMemo(
-            () => h(p(c.rgEligibleApps, !1), p(c.rgRegisteredApps, !0)),
-            [c.rgEligibleApps, c.rgRegisteredApps],
+            () => h(p(d.rgEligibleApps, !1), p(d.rgRegisteredApps, !0)),
+            [d.rgEligibleApps, d.rgRegisteredApps],
           ),
           g = (function (e, t, n, r) {
             var i;
-            const s = (0, U.og)(
+            const l = (0, P.og)(
               null !== (i = t.map((e) => e.appid)) && void 0 !== i ? i : [],
               !0,
               e,
@@ -1052,8 +1087,8 @@
                     ? void 0
                     : t.reduce((e, t) => e.set(t.appid, t.appName), new Map()),
                 a =
-                  n && r && s && e
-                    ? Array.from(s)
+                  n && r && l && e
+                    ? Array.from(l)
                         .map(([e, t]) => {
                           var a;
                           return {
@@ -1083,11 +1118,11 @@
                     appName: null == e ? void 0 : e.get(t),
                     discountsDuring: n,
                   }));
-            }, [t, s, n, r]);
+            }, [t, l, n, r]);
           })(
             o.m_partnerId,
             null ==
-              (E = null !== (t = c.rgRegisteredApps) && void 0 !== t ? t : [])
+              (E = null !== (t = d.rgRegisteredApps) && void 0 !== t ? t : [])
               ? void 0
               : E.map((e) => ({ appid: e.appid, appName: e.app_name })),
             m.start_date,
@@ -1130,60 +1165,60 @@
               ),
             [g],
           ),
-          f = (null == v ? void 0 : v.length) > 0,
-          T =
-            m.discount_event_id && f
+          T = (null == v ? void 0 : v.length) > 0,
+          f =
+            m.discount_event_id && T
               ? `${r.De.PARTNER_BASE_URL}promotion/discounts/dashboard/?de=${m.discount_event_id}`
               : void 0,
-          y = T && g,
+          y = f && g,
           b = new Intl.DateTimeFormat(navigator.language, {
             month: "short",
             day: "numeric",
           }),
           I =
             "deadline" != o.eventType &&
-            c.description.definition.optin_deadline_date &&
-            c.description.definition.event_start_date -
-              c.description.definition.optin_deadline_date >
+            d.description.definition.optin_deadline_date &&
+            d.description.definition.event_start_date -
+              d.description.definition.optin_deadline_date >
               _._H.PerDay &&
-            b.format(1e3 * c.description.definition.optin_deadline_date);
+            b.format(1e3 * d.description.definition.optin_deadline_date);
         return a.createElement(
           a.Fragment,
           null,
-          f &&
+          T &&
             a.createElement(
               "div",
               { className: C.StatusItemBoxContainer },
-              a.createElement(Y, {
-                text: (0, s.Xx)(
+              a.createElement(J, {
+                text: (0, l.Xx)(
                   "#Dashboard_UpcomingEvents_Events_OptIn_EligibleGames",
                 ),
                 count: v.length,
-                tooltip: a.createElement(J, { apps: v }),
+                tooltip: a.createElement(z, { apps: v }),
               }),
-              a.createElement(Y, {
-                text: (0, s.Xx)(
+              a.createElement(J, {
+                text: (0, l.Xx)(
                   "#Dashboard_UpcomingEvents_Events_OptIn_RegisteredGames",
                 ),
                 count:
                   null !==
                     (i =
-                      null === (n = c.rgRegisteredApps) || void 0 === n
+                      null === (n = d.rgRegisteredApps) || void 0 === n
                         ? void 0
                         : n.length) && void 0 !== i
                     ? i
                     : 0,
-                tooltip: a.createElement(J, {
-                  apps: p(c.rgRegisteredApps, !1),
+                tooltip: a.createElement(z, {
+                  apps: p(d.rgRegisteredApps, !1),
                 }),
               }),
-              a.createElement(Y, {
-                text: (0, s.Xx)(
+              a.createElement(J, {
+                text: (0, l.Xx)(
                   "#Dashboard_UpcomingEvents_Events_OptIn_Discounted",
                 ),
                 count:
-                  null !== (l = null == g ? void 0 : g.length) && void 0 !== l
-                    ? l
+                  null !== (s = null == g ? void 0 : g.length) && void 0 !== s
+                    ? s
                     : 0,
                 tooltip: D,
                 hidden: !y,
@@ -1199,43 +1234,43 @@
                 a.createElement(
                   "div",
                   { className: C.AssetRequestDateLabel },
-                  (0, s.Xx)("#Dashboard_UpcomingEvents_Events_OptIn_Deadline"),
+                  (0, l.Xx)("#Dashboard_UpcomingEvents_Events_OptIn_Deadline"),
                 ),
                 a.createElement("div", { className: C.AssetRequestDate }, I),
               ),
-            d &&
+            c &&
               a.createElement(
                 "button",
                 {
                   className: (0, u.Z)(C.LinkButton),
-                  onClick: () => window.open(d, "_blank"),
+                  onClick: () => window.open(c, "_blank"),
                 },
-                f
-                  ? (0, s.Xx)(
+                T
+                  ? (0, l.Xx)(
                       "#Dashboard_UpcomingEvents_Events_OptIn_Button_EligibleGames",
                     )
-                  : (0, s.Xx)(
+                  : (0, l.Xx)(
                       "#Dashboard_UpcomingEvents_Events_OptIn_Button_LearnMore",
                     ),
               ),
-            T &&
+            f &&
               a.createElement(
                 "button",
                 {
                   className: (0, u.Z)(C.LinkButton),
-                  onClick: () => window.open(T, "_blank"),
+                  onClick: () => window.open(f, "_blank"),
                 },
-                (0, s.Xx)(
+                (0, l.Xx)(
                   "#Dashboard_UpcomingEvents_Events_OptIn_Button_EnterDiscounts",
                 ),
               ),
           ),
         );
       }
-      function Y(e) {
+      function J(e) {
         const { text: t, count: n, tooltip: r, hidden: i } = e;
         return a.createElement(
-          P.HP,
+          U.HP,
           { toolTipContent: r },
           a.createElement(
             "div",
@@ -1245,7 +1280,7 @@
           ),
         );
       }
-      function J(e) {
+      function z(e) {
         const { apps: t } = e;
         if (!(null == t ? void 0 : t.length)) return;
         const n = t.sort((e, t) =>
@@ -1259,13 +1294,13 @@
               "div",
               { key: e.details.appid },
               e.bRegistered
-                ? (0, s.kQ)(
+                ? (0, l.kQ)(
                     "#Dashboard_UpcomingEvents_Events_OptIn_GameRegistered",
                     e.details.app_name,
                     a.createElement(
                       "span",
                       { className: C.OptInGamesToolTipRegistered },
-                      (0, s.Xx)(
+                      (0, l.Xx)(
                         "#Dashboard_UpcomingEvents_Events_OptIn_GameRegisteredText",
                       ),
                     ),
@@ -1276,71 +1311,34 @@
         );
       }
       function K(e) {
-        const t = ve();
-        return ("nextfest" != e.type &&
-          "themesale" != e.type &&
-          "seasonalsale" != e.type) ||
-          t.bShowWarnings
-          ? (function (e) {
-              const t = [
-                "takeover",
-                "takeunder",
-                "midweek",
-                "midweek deal",
-                "weekend deal",
-              ];
-              for (const n of t)
-                e = e.replace(new RegExp("^" + n + "\\s*[:-]\\s*", "i"), "");
-              return e;
-            })(e.name)
-          : (0, s.Xx)("#Dashboard_UpcomingEvents_Events_UnknownEventTitle");
-      }
-      function ee(e, t, n) {
-        let r = "...";
-        if (!t)
-          for (const e of n)
-            if (e) {
-              r = e;
-              break;
-            }
-        return (
-          a.useEffect(() => {
-            t || "..." == r || ((e.title = r), e.dataChanged());
-          }, [e, t, r]),
-          r
-        );
-      }
-      function te(e) {
         switch (e) {
           case "deadline":
           case "deadline-urgent":
             return (
-              (0, s.Xx)("#Dashboard_UpcomingEvents_EventType_Deadline") +
+              (0, l.Xx)("#Dashboard_UpcomingEvents_EventType_Deadline") +
               " (Generated)"
             );
           case "release-game":
             return (
-              (0, s.Xx)("#Dashboard_UpcomingEvents_EventType_Release") +
+              (0, l.Xx)("#Dashboard_UpcomingEvents_EventType_Release") +
               " (Generated)"
             );
           case "release-dlc":
             return (
-              (0, s.Xx)("#Dashboard_UpcomingEvents_EventType_Release_DLC") +
+              (0, l.Xx)("#Dashboard_UpcomingEvents_EventType_Release_DLC") +
               " (Generated)"
             );
           case "event":
             return (
-              (0, s.Xx)("#Dashboard_UpcomingEvents_EventType_Event_Unknown") +
+              (0, l.Xx)("#Dashboard_UpcomingEvents_EventType_Event_Unknown") +
               " (Generated)"
             );
         }
       }
-      (0, k.gn)([S.ak], j.prototype, "dataChanged", null);
-      var ne = n(49622),
-        ae = n(47316),
-        re = n.n(ae),
-        ie = n(46836);
-      function se() {
+      (0, S.gn)([k.ak], Z.prototype, "dataChanged", null);
+      var ee = n(49622),
+        te = n(46836);
+      function ne() {
         return a.useMemo(() => {
           const e = (function (e) {
               return e
@@ -1348,7 +1346,7 @@
                 : void 0;
             })((0, r.kQ)("rgDeadlines", "application_config")),
             t = (e ? Array.from(e.entries()) : []).reduce((e, [t, n]) => {
-              const a = f(new Date(1e3 * n.due_date)),
+              const a = T(new Date(1e3 * n.due_date)),
                 r = (function (e) {
                   switch (e) {
                     case 4:
@@ -1358,13 +1356,13 @@
                   return !1;
                 })(n.type),
                 i = r ? "group" : t,
-                s = `${a.getTime()}_${n.type}_${i}`,
-                l = e.has(s) ? e.get(s).deadlines : [];
+                l = `${a.getTime()}_${n.type}_${i}`,
+                s = e.has(l) ? e.get(l).deadlines : [];
               return (
-                e.set(s, {
+                e.set(l, {
                   dueDate: a,
                   bSupportsGrouping: r,
-                  deadlines: [...l, n],
+                  deadlines: [...s, n],
                 }),
                 e
               );
@@ -1379,12 +1377,12 @@
                         switch (e[0].type) {
                           case 4:
                           case 5:
-                            return le(e[0]);
+                            return ae(e[0]);
                         }
                         return;
                       })(r),
                     )
-                  : i.push(...r.map((e) => le(e))),
+                  : i.push(...r.map((e) => ae(e))),
                 i
                   .filter((e) => !!e)
                   .map((t) => ({
@@ -1402,7 +1400,7 @@
           return null != n ? n : [];
         }, []);
       }
-      function le(e) {
+      function ae(e) {
         const t = e.description_jsondata
           ? JSON.parse(e.description_jsondata)
           : void 0;
@@ -1412,59 +1410,59 @@
               sHeader: "Action Required",
               sTitle: "Test 1",
               bUrgent: !0,
-              element: a.createElement(oe, { deadline: e, json: t }),
+              element: a.createElement(re, { deadline: e, json: t }),
             };
           case 3:
             return {
-              sHeader: (0, s.Xx)(
+              sHeader: (0, l.Xx)(
                 "#Dashboard_UpcomingEvents_EventType_Deadline",
               ),
-              sTitle: (0, s.Xx)(
+              sTitle: (0, l.Xx)(
                 "#PartnerDeadline_DailyDeal_InviteExpiring_Title",
               ),
               bUrgent: !0,
-              element: a.createElement(de, { deadline: e, json: t }),
+              element: a.createElement(ie, { deadline: e, json: t }),
             };
           case 4: {
-            const n = F.Get().GetInfo(null == t ? void 0 : t.opt_in_name)
+            const n = O.Get().GetInfo(null == t ? void 0 : t.opt_in_name)
               .description.definition.event_title[r.De.LANGUAGE];
             return n
               ? {
-                  sHeader: (0, s.Xx)(
+                  sHeader: (0, l.Xx)(
                     "#PartnerDeadline_NextFest_PressPreview_Title",
                   ),
-                  sTitle: (0, s.Xx)(
+                  sTitle: (0, l.Xx)(
                     "#Deadlines_CombinedTitle",
-                    (0, s.Xx)("#PartnerDeadline_NextFest_PressPreview_Title"),
+                    (0, l.Xx)("#PartnerDeadline_NextFest_PressPreview_Title"),
                     n,
                   ),
-                  element: a.createElement(ce, { deadline: e, json: t }),
+                  element: a.createElement(le, { deadline: e, json: t }),
                 }
               : void 0;
           }
           case 5: {
-            const n = F.Get().GetInfo(null == t ? void 0 : t.opt_in_name)
+            const n = O.Get().GetInfo(null == t ? void 0 : t.opt_in_name)
               .description.definition.event_title[r.De.LANGUAGE];
             return n
               ? {
-                  sHeader: (0, s.Xx)(
+                  sHeader: (0, l.Xx)(
                     "#PartnerDeadline_NextFest_DemoBuildReview_Title",
                   ),
-                  sTitle: (0, s.Xx)(
+                  sTitle: (0, l.Xx)(
                     "#Deadlines_CombinedTitle",
-                    (0, s.Xx)(
+                    (0, l.Xx)(
                       "#PartnerDeadline_NextFest_DemoBuildReview_Title",
                     ),
                     n,
                   ),
                   bUrgent: !0,
-                  element: a.createElement(me, { deadline: e, json: t }),
+                  element: a.createElement(se, { deadline: e, json: t }),
                 }
               : void 0;
           }
         }
       }
-      function oe(e) {
+      function re(e) {
         const { deadline: t, json: n } = e,
           r = new Intl.DateTimeFormat(navigator.language, {
             month: "short",
@@ -1477,7 +1475,7 @@
           a.createElement("div", null, "Due date: ", r),
         );
       }
-      function de(e) {
+      function ie(e) {
         const { deadline: t } = e,
           [n] = (0, g.jk)(
             null == t ? void 0 : t.store_item_id,
@@ -1485,16 +1483,16 @@
             { include_assets: !0 },
           ),
           i = `${r.De.PARTNER_BASE_URL}promotion/dailydeals/invite/${t.gid}`,
-          l = (0, ie.eS)(null == t ? void 0 : t.due_date);
-        return a.createElement(pe, {
+          s = (0, te.eS)(null == t ? void 0 : t.due_date);
+        return a.createElement(oe, {
           urgent: !0,
           urlImage: null == n ? void 0 : n.GetAssets().GetSmallCapsuleURL(),
-          strTitle: (0, s.Xx)(
+          strTitle: (0, l.Xx)(
             "#PartnerDeadline_DailyDeal_InviteExpiring_Title",
           ),
-          strBody: (0, s.Xx)(
+          strBody: (0, l.Xx)(
             "#PartnerDeadline_DailyDeal_InviteExpiring_Body",
-            l,
+            s,
           ),
           url: i,
           strImageTooltip: null == n ? void 0 : n.GetName(),
@@ -1506,61 +1504,61 @@
                 window.open(i, "_blank");
               },
             },
-            (0, s.Xx)("#DailyDeals_PickDate"),
+            (0, l.Xx)("#DailyDeals_PickDate"),
           ),
         });
       }
-      function ce(e) {
+      function le(e) {
         const { deadline: t, json: n } = e,
-          i = F.Get().GetInfo(n.opt_in_name),
-          l = `${r.De.PARTNER_BASE_URL}optin/sale/${n.opt_in_name.replace("sale_", "")}`;
-        return a.createElement(pe, {
+          i = O.Get().GetInfo(n.opt_in_name),
+          s = `${r.De.PARTNER_BASE_URL}optin/sale/${n.opt_in_name.replace("sale_", "")}`;
+        return a.createElement(oe, {
           strTitle: i.description.definition.event_title[r.De.LANGUAGE],
-          strBody: (0, s.Xx)("#PartnerDeadline_NextFest_PressPreview_Body"),
+          strBody: (0, l.Xx)("#PartnerDeadline_NextFest_PressPreview_Body"),
           rightCol: a.createElement(
             "button",
             {
               className: C.LinkButton,
-              onClick: () => window.open(l, "_blank"),
+              onClick: () => window.open(s, "_blank"),
             },
-            (0, s.Xx)("#PartnerDeadline_NextFest_View_Registration"),
+            (0, l.Xx)("#PartnerDeadline_NextFest_View_Registration"),
           ),
         });
       }
-      function me(e) {
+      function se(e) {
         const { deadline: t, json: n } = e,
-          i = F.Get().GetInfo(n.opt_in_name),
-          l = `${r.De.PARTNER_BASE_URL}optin/sale/${n.opt_in_name.replace("sale_", "")}`;
-        return a.createElement(pe, {
+          i = O.Get().GetInfo(n.opt_in_name),
+          s = `${r.De.PARTNER_BASE_URL}optin/sale/${n.opt_in_name.replace("sale_", "")}`;
+        return a.createElement(oe, {
           urgent: !0,
           strTitle: i.description.definition.event_title[r.De.LANGUAGE],
-          strBody: (0, s.Xx)("#PartnerDeadline_NextFest_DemoBuildReview_Body"),
+          strBody: (0, l.Xx)("#PartnerDeadline_NextFest_DemoBuildReview_Body"),
           rightCol: a.createElement(
             "button",
             {
               className: C.LinkButton,
-              onClick: () => window.open(l, "_blank"),
+              onClick: () => window.open(s, "_blank"),
             },
-            (0, s.Xx)("#PartnerDeadline_NextFest_View_Registration"),
+            (0, l.Xx)("#PartnerDeadline_NextFest_View_Registration"),
           ),
         });
       }
-      function pe(e) {
+      function oe(e) {
         const {
           urlImage: t,
           strTitle: n,
           strBody: r,
           strImageTooltip: i,
-          url: s,
-          rightCol: l,
+          url: l,
+          rightCol: s,
           urgent: o,
         } = e;
         return a.createElement(
           "div",
-          { className: re()(C.ItemContainer, t && C.HasImage) },
+          { className: (0, u.Z)(C.ItemContainer, t && C.HasImage) },
           t &&
             a.createElement(
-              P.HP,
+              U.HP,
               { toolTipContent: i },
               t &&
                 a.createElement(
@@ -1568,7 +1566,7 @@
                   { className: C.ItemImage },
                   a.createElement(
                     I,
-                    { href: s, target: "_blank" },
+                    { href: l, target: "_blank" },
                     a.createElement("img", { src: t }),
                   ),
                 ),
@@ -1579,25 +1577,211 @@
             a.createElement("div", { className: C.ItemName }, n),
             a.createElement(
               "div",
-              { className: o ? ne.DeadlineWarningUrgent : ne.DeadlineWarning },
+              { className: o ? ee.DeadlineWarningUrgent : ee.DeadlineWarning },
               r,
             ),
           ),
-          l && a.createElement("div", { className: C.LinkButtonContainer }, l),
+          s && a.createElement("div", { className: C.LinkButtonContainer }, s),
         );
       }
-      var ue = n(82756);
-      const _e = a.createContext({ bShowWarnings: !1, bExpanded: !1 });
-      function ve() {
-        return a.useContext(_e);
+      var ce = n(82756),
+        de = n(4563),
+        me = n(50900),
+        pe = n(95666),
+        ue = n(59350),
+        _e = n(14790),
+        ve = n(26519),
+        ge = n(93727);
+      function Ee(e) {
+        const { partnerId: t, deal: n } = e,
+          i = (0, me.Kd)(n.store_item_type),
+          [s] = (0, g.jk)(n.store_item_id, i, { include_assets: !0 }),
+          o = null == s ? void 0 : s.GetAssets().GetSmallCapsuleURL(),
+          c = `${r.De.PARTNER_BASE_URL}promotion/dailydeals/invite/${n.gid}`,
+          d = n.rtime32_start_time + 82800,
+          m = (0, _e.ns)(),
+          {
+            nDiscountPercentHigh: p,
+            dtDiscountStart: _,
+            dtDiscountEnd: v,
+          } = a.useMemo(() => (0, ge.lI)(n, m), [n, m]),
+          E = a.useMemo(() => (0, ge.sm)(n, p), [n, p]),
+          D = 14 != (null == s ? void 0 : s.GetAppType()),
+          h = E >= ge.O7.DealReady,
+          T = h,
+          f = `${r.De.PARTNER_BASE_URL}promotion/discounts${ve.G.DiscountDashboard(0 != t ? t.toString() : "")}?de=${n.discount_event_id}&dd=1`,
+          y = new Intl.DateTimeFormat(navigator.language, {
+            month: "long",
+            day: "numeric",
+          }).format(new Date(1e3 * n.rtime32_start_time));
+        return a.createElement(
+          "div",
+          { className: (0, u.Z)(C.ItemContainer, o && C.HasImage) },
+          o &&
+            a.createElement(
+              U.HP,
+              { toolTipContent: n.store_item_name },
+              o &&
+                a.createElement(
+                  "div",
+                  { className: C.ItemImage },
+                  a.createElement(
+                    I,
+                    { href: c, target: "_blank" },
+                    a.createElement("img", { src: o }),
+                  ),
+                ),
+            ),
+          a.createElement(
+            "div",
+            { className: C.ItemNameInfoContainer },
+            a.createElement(
+              "div",
+              { className: C.ItemName },
+              n.store_item_name,
+            ),
+            a.createElement(
+              "div",
+              null,
+              a.createElement(
+                "span",
+                { className: de.DateDesc },
+                (0, l.Xx)("#Dashboard_UpcomingEvents_DailyDeal_Dates"),
+              ),
+              a.createElement(H, {
+                startTimestamp: n.rtime32_start_time,
+                endTimestamp: d,
+              }),
+            ),
+            h &&
+              a.createElement(
+                "div",
+                null,
+                a.createElement(
+                  "span",
+                  { className: de.DateDesc },
+                  (0, l.Xx)("#Dashboard_UpcomingEvents_DailyDeal_Discounted"),
+                ),
+                a.createElement(H, { startTimestamp: _, endTimestamp: v }),
+              ),
+          ),
+          D &&
+            a.createElement(
+              "div",
+              {
+                className: (0, u.Z)(C.StatusItemBoxContainer, de.StatusItemRow),
+              },
+              a.createElement(
+                "div",
+                { className: de.StatusIndicatorSection },
+                a.createElement(
+                  "div",
+                  null,
+                  (0, l.Xx)("#Dashboard_UpcomingEvents_DailyDeal_StatusLabel"),
+                ),
+                T &&
+                  a.createElement(
+                    "div",
+                    { className: (0, u.Z)(de.StatusIndicator, de.Complete) },
+                    (0, l.Xx)(
+                      "#Dashboard_UpcomingEvents_DailyDeal_StatusComplete",
+                    ),
+                  ),
+                !T &&
+                  a.createElement(
+                    "div",
+                    { className: (0, u.Z)(de.StatusIndicator) },
+                    (0, l.Xx)(
+                      "#Dashboard_UpcomingEvents_DailyDeal_StatusIncomplete",
+                    ),
+                  ),
+              ),
+              h &&
+                a.createElement(
+                  De,
+                  {
+                    complete: !0,
+                    label: (0, l.Xx)(
+                      "#Dashboard_UpcomingEvents_DailyDeal_StatusDiscountLabel",
+                    ),
+                    buttonLabel: (0, l.Xx)(
+                      "#Dashboard_UpcomingEvents_DailyDeal_EditDiscount",
+                    ),
+                    sUrl: f,
+                  },
+                  a.createElement(pe.SG, { oDailyDeal: n }),
+                ),
+              !h &&
+                a.createElement(
+                  De,
+                  {
+                    complete: !1,
+                    label: (0, l.Xx)(
+                      "#Dashboard_UpcomingEvents_DailyDeal_StatusDiscountLabel",
+                    ),
+                    buttonLabel: (0, l.Xx)(
+                      "#Dashboard_UpcomingEvents_DailyDeal_EnterDiscount",
+                    ),
+                    sUrl: f,
+                  },
+                  a.createElement(
+                    "span",
+                    { className: de.StatusItemDueBy },
+                    (0, l.Xx)("#Dashboard_UpcomingEvents_DailyDeal_DueBy", y),
+                  ),
+                ),
+            ),
+        );
       }
-      function ge(e) {
+      function De(e) {
+        const {
+          complete: t,
+          label: n,
+          buttonLabel: r,
+          sUrl: i,
+          children: l,
+        } = e;
+        return a.createElement(
+          "div",
+          { className: de.StatusItemBox },
+          a.createElement(
+            "div",
+            null,
+            a.createElement(
+              "div",
+              { className: de.StatusItemLabel },
+              a.createElement(
+                "span",
+                { className: (0, u.Z)(de.StatusItemCheck, t && de.Complete) },
+                t ? "✔ " : "☐ ",
+              ),
+              a.createElement("span", null, n),
+            ),
+            l,
+          ),
+          i &&
+            r &&
+            a.createElement(
+              "button",
+              {
+                className: de.StatusItemBoxButton,
+                onClick: () => window.open(i, "_blank"),
+              },
+              r,
+            ),
+        );
+      }
+      const he = a.createContext({ bShowWarnings: !1, bExpanded: !1 });
+      function Te() {
+        return a.useContext(he);
+      }
+      function fe(e) {
         var t;
-        const { partnerId: n, showWarnings: i, testData: l } = e,
-          o = (0, ue.kQ)("rtEarliestDataTime", "application_config"),
-          c = o ? new Date(1e3 * o) : void 0,
+        const { partnerId: n, showWarnings: i, testData: s } = e,
+          o = (0, ce.kQ)("rtEarliestDataTime", "application_config"),
+          d = o ? new Date(1e3 * o) : void 0,
           m =
-            null === (t = (0, ue.kQ)("sEventIds", "application_config")) ||
+            null === (t = (0, ce.kQ)("sEventIds", "application_config")) ||
             void 0 === t
               ? void 0
               : t.split(","),
@@ -1605,7 +1789,7 @@
           g = b(_),
           E = b(_ + 1),
           D = b(0),
-          [h, T] = a.useState(""),
+          [h, f] = a.useState(""),
           y = a.useMemo(() => {
             const e = new Date();
             e.setHours(0, 0, 0, 0);
@@ -1655,7 +1839,7 @@
                 Object.assign(Object.assign({}, e), {
                   id: "fake_" + e.title,
                   endDate: e.startDate,
-                  eventTypeName: te(e.eventType),
+                  eventTypeName: K(e.eventType),
                   getElement: () => a.createElement("div", null, e.title),
                 }),
               );
@@ -1676,23 +1860,23 @@
                   i = "event";
               }
               r += 3 * Math.random();
-              const s = {
+              const l = {
                 title: "Generated event" + e,
                 startDate: t(r),
                 endDate: t(r),
                 eventType: i,
                 id: "fake_" + e.toString(),
-                eventTypeName: te(i),
+                eventTypeName: K(i),
                 getElement: () =>
                   a.createElement("div", null, "Generated event" + e),
                 registerForChange: void 0,
                 dimmed: Math.random() > 0.9,
               };
-              n.push(s);
+              n.push(l);
             }
             return n;
           }, []),
-          I = H(n),
+          I = j(n),
           N = a.useMemo(() => {
             const e = (0, r.kQ)("rgUpcomingReleaseApps", "application_config"),
               t =
@@ -1709,25 +1893,67 @@
                         eventType: r,
                         id: e.appid.toString(),
                         eventTypeName: n
-                          ? (0, s.Xx)(
+                          ? (0, l.Xx)(
                               "#Dashboard_UpcomingEvents_EventType_Release_DLC",
                             )
-                          : (0, s.Xx)(
+                          : (0, l.Xx)(
                               "#Dashboard_UpcomingEvents_EventType_Release",
                             ),
                         eventTypeSortWeight: n ? 10 : 0,
-                        getElement: () => a.createElement(w, { app: e }),
+                        getElement: () => a.createElement(R, { app: e }),
                         registerForChange: void 0,
                       };
                     });
             return null != t ? t : [];
           }, []),
-          R = se(),
-          x = I.concat(N, R, l ? y : []).filter(
+          w = ne(),
+          x = (function (e) {
+            const t = a.useMemo(() => {
+                var e;
+                return null !==
+                  (e = (0, r.kQ)("rgDailyDeals", "application_config")) &&
+                  void 0 !== e
+                  ? e
+                  : [];
+              }, []),
+              { rgAppIDs: n, rgBundleIDs: i } = (0, ue.lY)(t),
+              s = (0, P.og)(n, !1, e),
+              o = (0, P.o6)(i, !1, e);
+            return a.useMemo(() => {
+              const n = t.flatMap((t) =>
+                t.cancelled
+                  ? []
+                  : {
+                      title: t.store_item_name,
+                      startDate: new Date(1e3 * t.rtime32_start_time),
+                      endDate: new Date(1e3 * t.rtime32_start_time),
+                      eventType: "event",
+                      id: t.gid,
+                      eventTypeName: (0, l.Xx)(
+                        "#Dashboard_UpcomingEvents_EventType_DailyDeal",
+                      ),
+                      getElement: () =>
+                        a.createElement(
+                          _e.LG,
+                          {
+                            value: {
+                              mapAppDiscounts: s,
+                              mapBundleDiscounts: o,
+                            },
+                          },
+                          a.createElement(Ee, { partnerId: e, deal: t }),
+                        ),
+                      editURL: `${r.De.PARTNER_BASE_URL}promotion/dailydeals/edit/${t.gid}`,
+                    },
+              );
+              return null != n ? n : [];
+            }, [e, t, s, o]);
+          })(n),
+          S = I.concat(N, w, x, s ? y : []).filter(
             (e) =>
               (!e.valveOnly || i) && (!m || 0 == m.length || m.includes(e.id)),
           ),
-          k = x.filter((e) =>
+          k = S.filter((e) =>
             (function (e, t) {
               return (
                 !t ||
@@ -1740,14 +1966,14 @@
               );
             })(e, h),
           ),
-          S = (function (e, t) {
+          C = (function (e, t) {
             const n = new Set(t.map((e) => e.id));
             return new Set(e.filter((e) => n.has(e.id)).map((e) => e.id));
-          })(x, k),
-          C = a.useMemo(() => new Map(), []),
-          [A, L] = a.useState(!1),
-          P = a.useRef(),
-          U = (function (e, t) {
+          })(S, k),
+          A = a.useMemo(() => new Map(), []),
+          [L, U] = a.useState(!1),
+          B = a.useRef(),
+          X = (function (e, t) {
             const n = a.useRef(),
               r = (a) => {
                 e ? a.scrollIntoView() : (t(!0), (n.current = a));
@@ -1760,34 +1986,34 @@
               }, [e]),
               r
             );
-          })(A, L),
-          X = (e) => {
-            if (f(e).getTime() == f(new Date()).getTime())
-              return void P.current.scrollIntoView();
-            const t = null == C ? void 0 : C.get(f(e).getTime());
-            t && U(t.element);
+          })(L, U),
+          M = (e) => {
+            if (T(e).getTime() == T(new Date()).getTime())
+              return void B.current.scrollIntoView();
+            const t = null == A ? void 0 : A.get(T(e).getTime());
+            t && X(t.element);
           },
-          [B, M] = a.useState(),
-          O = a.createElement(ye, { filterText: h, setFilterText: T });
+          [G, O] = a.useState(),
+          F = a.createElement(we, { filterText: h, setFilterText: f });
         return (
           ((null == I ? void 0 : I.length) > 0 ||
             (null == N ? void 0 : N.length) > 0 ||
-            (null == R ? void 0 : R.length) > 0) &&
+            (null == w ? void 0 : w.length) > 0) &&
           a.createElement(
-            _e.Provider,
-            { value: { bShowWarnings: i, bExpanded: A } },
+            he.Provider,
+            { value: { bShowWarnings: i, bExpanded: L } },
             a.createElement(
-              d,
+              c,
               {
-                title: (0, s.Xx)("#Dashboard_UpcomingEvents_Title"),
-                ref: P,
+                title: (0, l.Xx)("#Dashboard_UpcomingEvents_Title"),
+                ref: B,
                 beta: !0,
-                headerElement: O,
+                headerElement: F,
               },
               a.createElement(
                 "div",
                 { className: p.SectionContainer },
-                !A &&
+                !L &&
                   a.createElement(
                     "div",
                     { className: p.CalendarContainer },
@@ -1796,51 +2022,51 @@
                       {
                         className: (0, u.Z)(
                           p.CalendarMovingRegion,
-                          A && p.Sticky,
+                          L && p.Sticky,
                         ),
                       },
-                      a.createElement(Ee, {
+                      a.createElement(ye, {
                         viewDate: g,
                         fnSetMonthDelta: v,
                         earliestDate: D,
                       }),
-                      a.createElement(Te, null),
-                      a.createElement(De, {
+                      a.createElement(Re, null),
+                      a.createElement(be, {
                         viewDate: g,
-                        earliestDataTime: c,
-                        events: x,
-                        filterVisibleEventIds: S,
+                        earliestDataTime: d,
+                        events: S,
+                        filterVisibleEventIds: C,
                         bShowPreceedingWeeks: !0,
-                        fnScrollToDay: X,
-                        hoverEvent: B,
+                        fnScrollToDay: M,
+                        hoverEvent: G,
                       }),
-                      a.createElement(Ee, { viewDate: E }),
-                      a.createElement(Te, null),
-                      a.createElement(De, {
+                      a.createElement(ye, { viewDate: E }),
+                      a.createElement(Re, null),
+                      a.createElement(be, {
                         viewDate: E,
-                        events: x,
-                        filterVisibleEventIds: S,
+                        events: S,
+                        filterVisibleEventIds: C,
                         bShowFollowingWeeks: !0,
-                        fnScrollToDay: X,
-                        hoverEvent: B,
+                        fnScrollToDay: M,
+                        hoverEvent: G,
                       }),
                     ),
                   ),
                 a.createElement(
                   "div",
-                  { className: (0, u.Z)(p.ListArea, A && p.CalendarPerMonth) },
-                  a.createElement(be, {
+                  { className: (0, u.Z)(p.ListArea, L && p.CalendarPerMonth) },
+                  a.createElement(xe, {
                     events: k,
-                    filterVisibleEventIds: S,
-                    dayRefsToScrollTo: C,
-                    fnScrollToDay: X,
-                    refSection: P,
-                    isExpanded: A,
+                    filterVisibleEventIds: C,
+                    dayRefsToScrollTo: A,
+                    fnScrollToDay: M,
+                    refSection: B,
+                    isExpanded: L,
                     fnSetExpanded: (e) => {
-                      L(e), !e && P.current.scrollIntoView();
+                      U(e), !e && B.current.scrollIntoView();
                     },
-                    hoverEvent: B,
-                    setHoverEvent: M,
+                    hoverEvent: G,
+                    setHoverEvent: O,
                   }),
                 ),
               ),
@@ -1848,21 +2074,21 @@
           )
         );
       }
-      function Ee(e) {
+      function ye(e) {
         const {
             viewDate: t,
             fnSetMonthDelta: n,
             earliestDate: r,
             compact: i,
           } = e,
-          l = ve(),
+          s = Te(),
           o = n
             ? () => {
                 n(() => 0);
               }
             : null,
-          d = new Date(t.getTime() - 14 * _._H.PerDay * 1e3),
-          c = n && d > r ? () => n((e) => e - 1) : null,
+          c = new Date(t.getTime() - 14 * _._H.PerDay * 1e3),
+          d = n && c > r ? () => n((e) => e - 1) : null,
           m = n ? () => n((e) => e + 1) : null,
           v = new Intl.DateTimeFormat(navigator.language, {
             year: "numeric",
@@ -1873,7 +2099,7 @@
           {
             className: (0, u.Z)(
               p.MonthPickerContainer,
-              l.bExpanded && p.CalendarPerMonth,
+              s.bExpanded && p.CalendarPerMonth,
             ),
           },
           !i &&
@@ -1883,14 +2109,14 @@
                 className: (0, u.Z)(p.MonthPickerToday, !o && p.Inactive),
                 onClick: o,
               },
-              (0, s.Xx)("#Dashboard_UpcomingEvents_JumpToToday"),
+              (0, l.Xx)("#Dashboard_UpcomingEvents_JumpToToday"),
             ),
           !i &&
             a.createElement(
               "div",
               {
-                className: (0, u.Z)(p.MonthPickerArrow, !c && p.Inactive),
-                onClick: c,
+                className: (0, u.Z)(p.MonthPickerArrow, !d && p.Inactive),
+                onClick: d,
               },
               "<",
             ),
@@ -1906,20 +2132,20 @@
             ),
         );
       }
-      function De(e) {
+      function be(e) {
         var t;
         const {
             viewDate: n,
             earliestDataTime: r,
             events: i,
-            filterVisibleEventIds: s,
-            bShowPreceedingWeeks: l,
+            filterVisibleEventIds: l,
+            bShowPreceedingWeeks: s,
             bShowFollowingWeeks: o,
-            fnScrollToDay: d,
-            hoverEvent: c,
+            fnScrollToDay: c,
+            hoverEvent: d,
           } = e,
-          m = f(new Date()),
-          _ = xe(i, f),
+          m = T(new Date()),
+          _ = Le(i, T),
           v = y(n, -n.getDay()),
           g = new Date(n.getFullYear(), n.getMonth() + 1, 0).getDate(),
           E =
@@ -1938,18 +2164,18 @@
             g = y(v, 7 * e);
           for (let e = 0; e < 7; e++) {
             const v = y(g, e),
-              E = f(v),
+              E = T(v),
               h = n.getMonth() === v.getMonth() && (!r || v >= r),
-              T =
-                n.getMonth() === v.getMonth() || (l && v <= n) || (o && v >= n),
+              f =
+                n.getMonth() === v.getMonth() || (s && v <= n) || (o && v >= n),
               b = E.getTime() === m.getTime(),
               I =
                 null === (t = _.get(E.getTime())) || void 0 === t
                   ? void 0
-                  : t.sort(Se),
-              N = null == I ? void 0 : I.every((e) => s.has(e.id)),
-              w = null == I ? void 0 : I.some((e) => "deadline" == e.eventType),
-              R =
+                  : t.sort(Pe),
+              N = null == I ? void 0 : I.every((e) => l.has(e.id)),
+              R = null == I ? void 0 : I.some((e) => "deadline" == e.eventType),
+              w =
                 null == I
                   ? void 0
                   : I.some((e) => "deadline-urgent" == e.eventType),
@@ -1957,34 +2183,34 @@
                 null == I
                   ? void 0
                   : I.some((e) => "release-game" == e.eventType),
-              k =
+              S =
                 null == I
                   ? void 0
                   : I.some((e) => "release-dlc" == e.eventType),
-              S = null == I ? void 0 : I.some((e) => "event" == e.eventType),
+              k = null == I ? void 0 : I.some((e) => "event" == e.eventType),
               C =
-                c &&
-                E.getTime() >= f(c.startDate).getTime() &&
-                E.getTime() <= f(c.endDate).getTime(),
+                d &&
+                E.getTime() >= T(d.startDate).getTime() &&
+                E.getTime() <= T(d.endDate).getTime(),
               A = (0, u.Z)(
                 p.Day,
                 !h && !C && p.OtherMonth,
-                !T && p.Inactive,
+                !f && p.Inactive,
                 b && p.Today,
-                w && N && p.Deadline,
-                R && N && p.DeadlineUrgent,
+                R && N && p.Deadline,
+                w && N && p.DeadlineUrgent,
                 x && N && p.GameRelease,
-                k && N && p.DLCRelease,
-                S && N && p.Event,
-                C && T && p.Hovered,
+                S && N && p.DLCRelease,
+                k && N && p.Event,
+                C && f && p.Hovered,
               );
             i.push(
               a.createElement(
-                he,
+                Ie,
                 { key: e, date: v, daysEvents: I, tooltipDateFormat: D },
                 a.createElement(
                   "div",
-                  { className: A, onClick: () => d(v) },
+                  { className: A, onClick: () => c(v) },
                   v.getDate(),
                 ),
               ),
@@ -1994,21 +2220,21 @@
         }
         return a.createElement(a.Fragment, null, h);
       }
-      function he(e) {
+      function Ie(e) {
         const { date: t, daysEvents: n, tooltipDateFormat: r, children: i } = e;
         if (!n) return a.createElement(a.Fragment, null, i);
-        const s = a.createElement(
+        const l = a.createElement(
           "div",
           { className: p.DayTooltipContainer },
           a.createElement("div", { className: p.DayTooltipDate }, r.format(t)),
-          n.map((e) => a.createElement(fe, { key: e.id, event: e })),
+          n.map((e) => a.createElement(Ne, { key: e.id, event: e })),
         );
-        return a.createElement(P.HP, { toolTipContent: s }, i);
+        return a.createElement(U.HP, { toolTipContent: l }, i);
       }
-      function fe(e) {
+      function Ne(e) {
         const { event: t } = e;
         return (
-          Ce(t),
+          Be(t),
           a.createElement(
             "div",
             {
@@ -2027,7 +2253,7 @@
           )
         );
       }
-      function Te(e) {
+      function Re(e) {
         const t = new Intl.DateTimeFormat(navigator.language, {
             weekday: "short",
           }),
@@ -2042,7 +2268,7 @@
           ),
         );
       }
-      function ye(e) {
+      function we(e) {
         const { filterText: t, setFilterText: n } = e;
         return a.createElement(
           "div",
@@ -2052,7 +2278,7 @@
             type: "text",
             value: t,
             onChange: (e) => n(e.target.value),
-            placeholder: (0, s.Xx)(
+            placeholder: (0, l.Xx)(
               "#Dashboard_UpcomingEvents_Events_FilterEmpty",
             ),
           }),
@@ -2064,18 +2290,18 @@
           a.createElement("span", { className: p.FilterTextIcon }, "🔍"),
         );
       }
-      function be(e) {
+      function xe(e) {
         const {
             events: t,
             filterVisibleEventIds: n,
             dayRefsToScrollTo: r,
             fnScrollToDay: i,
-            isExpanded: l,
+            isExpanded: s,
             fnSetExpanded: o,
-            hoverEvent: d,
-            setHoverEvent: c,
+            hoverEvent: c,
+            setHoverEvent: d,
           } = e,
-          m = Array.from(xe(t, T)).sort(ke),
+          m = Array.from(Le(t, f)).sort(Ue),
           [_, v] = a.useState(!1),
           g = a.useRef();
         return (
@@ -2098,54 +2324,54 @@
             a.createElement(
               "div",
               {
-                className: (0, u.Z)(p.List, l && p.Expanded, _ && p.Overflows),
+                className: (0, u.Z)(p.List, s && p.Expanded, _ && p.Overflows),
                 ref: g,
               },
-              m.map(([e, t], s) =>
-                a.createElement(Ie, {
+              m.map(([e, t], l) =>
+                a.createElement(Se, {
                   key: e,
                   date: new Date(e),
                   events: t,
                   filterVisibleEventIds: n,
                   dayRefsToScrollTo: r,
                   fnScrollToDay: i,
-                  firstMonth: 0 == s,
-                  lastMonth: s == m.length - 1,
-                  hoverEvent: d,
-                  setHoverEvent: c,
+                  firstMonth: 0 == l,
+                  lastMonth: l == m.length - 1,
+                  hoverEvent: c,
+                  setHoverEvent: d,
                 }),
               ),
             ),
             _ &&
-              !l &&
+              !s &&
               a.createElement(
                 "button",
                 { className: p.ExpandButton, onClick: () => o(!0) },
-                (0, s.Xx)("#Dashboard_UpcomingEvents_ShowMore"),
+                (0, l.Xx)("#Dashboard_UpcomingEvents_ShowMore"),
               ),
-            l &&
+            s &&
               a.createElement(
                 "button",
                 { className: p.ExpandButton, onClick: () => o(!1) },
-                (0, s.Xx)("#Dashboard_UpcomingEvents_ShowLess"),
+                (0, l.Xx)("#Dashboard_UpcomingEvents_ShowLess"),
               ),
           )
         );
       }
-      function Ie(e) {
+      function Se(e) {
         const {
             date: t,
             events: n,
             filterVisibleEventIds: r,
             dayRefsToScrollTo: i,
-            fnScrollToDay: s,
-            firstMonth: l,
+            fnScrollToDay: l,
+            firstMonth: s,
             lastMonth: o,
-            hoverEvent: d,
-            setHoverEvent: c,
+            hoverEvent: c,
+            setHoverEvent: d,
           } = e,
-          m = ve(),
-          _ = Array.from(xe(n, f)).sort(ke),
+          m = Te(),
+          _ = Array.from(Le(n, T)).sort(Ue),
           v = a.useRef();
         return a.createElement(
           "div",
@@ -2164,15 +2390,15 @@
                   m.bExpanded && p.CalendarPerMonth,
                 ),
               },
-              a.createElement(Ee, { viewDate: t, compact: !0 }),
-              a.createElement(Te, null),
-              a.createElement(De, {
+              a.createElement(ye, { viewDate: t, compact: !0 }),
+              a.createElement(Re, null),
+              a.createElement(be, {
                 viewDate: t,
                 events: n,
                 filterVisibleEventIds: r,
-                fnScrollToDay: s,
-                hoverEvent: d,
-                bShowPreceedingWeeks: l,
+                fnScrollToDay: l,
+                hoverEvent: c,
+                bShowPreceedingWeeks: s,
                 bShowFollowingWeeks: o,
               }),
             ),
@@ -2198,42 +2424,42 @@
                     }).format(e))(new Date(t)),
             ),
             _.map(([e, t]) =>
-              a.createElement(Ne, {
+              a.createElement(ke, {
                 key: e,
                 events: t,
                 refScrollTo: (t) => i.set(e, { element: t, header: v.current }),
-                setHoverEvent: c,
+                setHoverEvent: d,
               }),
             ),
           ),
         );
       }
-      function Ne(e) {
+      function ke(e) {
         const { events: t, refScrollTo: n, setHoverEvent: r } = e,
           i = t.reduce((e, t) => {
             const n = `${t.eventType}_${t.eventTypeName}`,
               a = e.get(n) || [];
             return e.set(n, [...a, t]), e;
           }, new Map()),
-          s = Array.from(i).sort(([e, t], [n, a]) => {
-            var r, i, s, l;
+          l = Array.from(i).sort(([e, t], [n, a]) => {
+            var r, i, l, s;
             return (null !== (r = t[0].eventTypeSortWeight) && void 0 !== r
               ? r
               : 0) !=
               (null !== (i = a[0].eventTypeSortWeight) && void 0 !== i ? i : 0)
-              ? (null !== (s = t[0].eventTypeSortWeight) && void 0 !== s
-                  ? s
+              ? (null !== (l = t[0].eventTypeSortWeight) && void 0 !== l
+                  ? l
                   : 0) -
-                  (null !== (l = a[0].eventTypeSortWeight) && void 0 !== l
-                    ? l
+                  (null !== (s = a[0].eventTypeSortWeight) && void 0 !== s
+                    ? s
                     : 0)
               : e.localeCompare(n);
           });
         return a.createElement(
           "div",
           { ref: n, className: p.ListDay },
-          s.map(([e, t]) =>
-            a.createElement(we, {
+          l.map(([e, t]) =>
+            a.createElement(Ce, {
               key: e,
               events: t,
               refScrollTo: n,
@@ -2242,14 +2468,14 @@
           ),
         );
       }
-      function we(e) {
+      function Ce(e) {
         const { events: t, refScrollTo: n, setHoverEvent: r } = e,
-          i = t.sort(Se);
+          i = t.sort(Pe);
         return a.createElement(
           "div",
           { ref: n, className: p.ListDayGroup },
           i.map((e, t) =>
-            a.createElement(Re, {
+            a.createElement(Ae, {
               key: e.id,
               event: e,
               setHoverEvent: r,
@@ -2258,30 +2484,30 @@
           ),
         );
       }
-      function Re(e) {
+      function Ae(e) {
         const { event: t, showHeader: n, setHoverEvent: r } = e,
-          i = ve();
-        Ce(t);
-        const s = "deadline" == t.eventType,
-          l = "deadline-urgent" == t.eventType,
+          i = Te();
+        Be(t);
+        const l = "deadline" == t.eventType,
+          s = "deadline-urgent" == t.eventType,
           o = "release-game" == t.eventType,
-          d = "release-dlc" == t.eventType,
-          c = "event" == t.eventType,
+          c = "release-dlc" == t.eventType,
+          d = "event" == t.eventType,
           m = (0, u.Z)(
             p.ListDayNumber,
-            s && p.Deadline,
-            l && p.DeadlineUrgent,
+            l && p.Deadline,
+            s && p.DeadlineUrgent,
             o && p.GameRelease,
-            d && p.DLCRelease,
-            c && p.Event,
+            c && p.DLCRelease,
+            d && p.Event,
           ),
           _ = (0, u.Z)(
             p.ListEventType,
-            s && p.Deadline,
-            l && p.DeadlineUrgent,
+            l && p.Deadline,
+            s && p.DeadlineUrgent,
             o && p.GameRelease,
-            d && p.DLCRelease,
-            c && p.Event,
+            c && p.DLCRelease,
+            d && p.Event,
           ),
           v = t.getElement();
         return (
@@ -2322,17 +2548,17 @@
           )
         );
       }
-      function xe(e, t) {
+      function Le(e, t) {
         return e.reduce((e, n) => {
           const a = t(n.startDate),
             r = e.get(a.getTime()) || [];
           return e.set(a.getTime(), [...r, n]), e;
         }, new Map());
       }
-      function ke(e, t) {
+      function Ue(e, t) {
         return e[0] - t[0];
       }
-      function Se(e, t) {
+      function Pe(e, t) {
         return e.startDate.getTime() < t.startDate.getTime()
           ? -1
           : e.startDate.getTime() > t.startDate.getTime()
@@ -2347,8 +2573,8 @@
                     ? 1
                     : 0;
       }
-      function Ce(e) {
-        const t = (0, S.NW)();
+      function Be(e) {
+        const t = (0, k.NW)();
         a.useEffect(() => {
           var n;
           const a =
@@ -2358,13 +2584,13 @@
           return () => (null == a ? void 0 : a.Unregister());
         }, [e, t]);
       }
-      var Ae = n(9781),
-        Le = n(37664),
-        Pe = n(42718),
-        Ue = n(40057),
-        Xe = n(80002),
-        Be = n(20020);
-      function Me(e) {
+      var Xe = n(9781),
+        Me = n(37664),
+        Ge = n(42718),
+        Oe = n(40057),
+        Fe = n(80002),
+        He = n(20020);
+      function je(e) {
         return "appid" in e
           ? `app_${e.appid}`
           : "packageid" in e
@@ -2377,30 +2603,30 @@
                   ? `creator_${e.creatorid}`
                   : "hubcategoryid" in e
                     ? `hubcategory_${e.hubcategoryid}`
-                    : ((0, Be.Z)(e, "Unknown store item id type"), "");
+                    : ((0, He.Z)(e, "Unknown store item id type"), "");
       }
-      const Oe = /^(app|package|bundle|mtx|tag|creator|hubcategory)_(\d*)$/;
-      var Ge = n(79545),
-        Fe = n(73799),
-        He = n.n(Fe),
-        je = n(38071);
+      const Ze = /^(app|package|bundle|mtx|tag|creator|hubcategory)_(\d*)$/;
+      var Ve = n(79545),
+        We = n(73799),
+        qe = n.n(We),
+        Qe = n(38071);
       n(44922);
-      function Ve(e, t) {
+      function $e(e, t) {
         t.Body().set_context(
           (function (e) {
-            let t = new Xe.WJ();
+            let t = new Fe.WJ();
             e.bUsePartnerAPI || t.set_country_code(e.country);
             t.set_language(e.language),
-              e.realm != je.IN.k_ESteamRealmUnknown &&
+              e.realm != Qe.IN.k_ESteamRealmUnknown &&
                 t.set_steam_realm(e.realm);
             return t;
           })(e),
         );
       }
-      function We(e, t, n) {
-        return new (He())(
+      function Ye(e, t, n) {
+        return new (qe())(
           (n) =>
-            (0, k.mG)(this, void 0, void 0, function* () {
+            (0, S.mG)(this, void 0, void 0, function* () {
               const a = new Set(),
                 r = {};
               if (
@@ -2412,17 +2638,17 @@
                 r.include_included_items)
               ) {
                 const { include_included_items: e } = r,
-                  t = (0, k._T)(r, ["include_included_items"]);
+                  t = (0, S._T)(r, ["include_included_items"]);
                 r.included_item_data_request = t;
               }
-              const i = Ge.gA.Init(Xe.eK);
-              Ve(t, i),
+              const i = Ve.gA.Init(Fe.eK);
+              $e(t, i),
                 (function (e, t) {
-                  e.Body().set_data_request(Xe.Qn.fromObject(t));
+                  e.Body().set_data_request(Fe.Qn.fromObject(t));
                 })(i, r),
                 a.forEach((e) => {
                   const t = (function (e) {
-                    const t = e.match(Oe);
+                    const t = e.match(Ze);
                     if (t)
                       switch (t[1]) {
                         case "app":
@@ -2438,18 +2664,18 @@
                         case "hubcategory":
                           return { hubcategoryid: parseInt(t[2]) };
                       }
-                    (0, Be.X)(!1, `Failed to parse StoreItemID ${e}`);
+                    (0, He.X)(!1, `Failed to parse StoreItemID ${e}`);
                   })(e);
-                  t && i.Body().add_ids(Xe.oY.fromObject(t));
+                  t && i.Body().add_ids(Fe.oY.fromObject(t));
                 });
-              const s = yield Xe.VJ.GetItems(e, i),
-                l = new Map();
+              const l = yield Fe.VJ.GetItems(e, i),
+                s = new Map();
               return (
-                s
+                l
                   .Body()
                   .store_items()
                   .forEach((e) => {
-                    l.set(
+                    s.set(
                       (function (e, t) {
                         switch (e) {
                           case 0:
@@ -2469,9 +2695,9 @@
                             return "";
                           default:
                             return (
-                              (0, Be.Z)(
+                              (0, He.Z)(
                                 e,
-                                `Unknown EStoreItemType ${e} ${(0, Xe.Iu)(e)} `,
+                                `Unknown EStoreItemType ${e} ${(0, Fe.Iu)(e)} `,
                               ),
                               ""
                             );
@@ -2482,14 +2708,14 @@
                   }),
                 n.map((e) => {
                   const t = e.split("|")[0],
-                    n = l.get(t);
+                    n = s.get(t);
                   return (
                     n ||
                     Object.assign(
                       Object.assign(
                         {},
                         (function (e) {
-                          const t = e.match(Oe);
+                          const t = e.match(Ze);
                           if (t)
                             switch (t[1]) {
                               case "app":
@@ -2517,28 +2743,28 @@
           n,
         );
       }
-      var Ze = n(65255);
-      function Qe(e, t) {
-        return ["StoreItem", Me(e), t || "basic"];
+      var Je = n(65255);
+      function ze(e, t) {
+        return ["StoreItem", je(e), t || "basic"];
       }
-      let qe;
-      function $e(e, t, n, a) {
-        return (0, k.mG)(this, void 0, void 0, function* () {
-          qe ||
-            (qe = We(
+      let Ke;
+      function et(e, t, n, a) {
+        return (0, S.mG)(this, void 0, void 0, function* () {
+          Ke ||
+            (Ke = Ye(
               e,
               {
-                country: Ze.De.COUNTRY,
-                language: Ze.De.LANGUAGE,
-                realm: Ze.De.EREALM,
+                country: Je.De.COUNTRY,
+                language: Je.De.LANGUAGE,
+                realm: Je.De.EREALM,
               },
               { cache: !1 },
             ));
-          const r = yield qe.load(`${Me(t)}|${a || ""}`);
-          return n && n.setQueryData(Qe(t), r), r;
+          const r = yield Ke.load(`${je(t)}|${a || ""}`);
+          return n && n.setQueryData(ze(t), r), r;
         });
       }
-      function ze(e) {
+      function tt(e) {
         const t = a.useMemo(
             () =>
               (function () {
@@ -2552,15 +2778,15 @@
             [],
           ),
           { bIsLoading: n, rgStoreItems: i } = (function (e, t = {}) {
-            const n = (0, Ue.be)(),
-              a = (0, Pe.useQueries)(
+            const n = (0, Oe.be)(),
+              a = (0, Ge.useQueries)(
                 e.map((e) =>
                   Object.assign(
                     {
-                      queryKey: Qe(e),
+                      queryKey: ze(e),
                       queryFn: () =>
-                        (0, k.mG)(this, void 0, void 0, function* () {
-                          return yield $e(n, e);
+                        (0, S.mG)(this, void 0, void 0, function* () {
+                          return yield et(n, e);
                         }),
                       staleTime: 3e5,
                     },
@@ -2575,133 +2801,133 @@
               }),
             };
           })(t.map((e) => ({ appid: e.appid }))),
-          l = i.filter((e) => !!e).length > 0;
+          s = i.filter((e) => !!e).length > 0;
         return a.createElement(
-          d,
+          c,
           {
-            title: (0, s.Xx)("#Dashboard_RecentApps_Title"),
-            headerElement: a.createElement(Je, null),
+            title: (0, l.Xx)("#Dashboard_RecentApps_Title"),
+            headerElement: a.createElement(at, null),
           },
           a.createElement(
             "div",
-            { className: Le.AppTileContainer },
-            !n && !l && a.createElement(Ye, null),
-            t.map((e) => a.createElement(Ke, { key: e.appid, app: e })),
+            { className: Me.AppTileContainer },
+            !n && !s && a.createElement(nt, null),
+            t.map((e) => a.createElement(rt, { key: e.appid, app: e })),
           ),
         );
       }
-      function Ye(e) {
+      function nt(e) {
         const t = r.De.PARTNER_BASE_URL + "apps/";
         return a.createElement(
           "div",
-          { className: Le.NoRecentApps },
-          (0, s.Xx)("#Dashboard_RecentApps_NoRecent"),
+          { className: Me.NoRecentApps },
+          (0, l.Xx)("#Dashboard_RecentApps_NoRecent"),
           " ",
           a.createElement(
             "a",
             { href: t, target: "_blank" },
             " ",
-            (0, s.Xx)("#Dashboard_RecentApps_ViewAll"),
+            (0, l.Xx)("#Dashboard_RecentApps_ViewAll"),
           ),
         );
       }
-      function Je(e) {
+      function at(e) {
         const t = r.De.PARTNER_BASE_URL + "apps/";
         return a.createElement(
           "div",
-          { className: Le.ViewAppsLink },
+          { className: Me.ViewAppsLink },
           a.createElement(
             "a",
             { href: t },
-            (0, s.Xx)("#Dashboard_RecentApps_ViewAllShort"),
+            (0, l.Xx)("#Dashboard_RecentApps_ViewAllShort"),
           ),
         );
       }
-      function Ke(e) {
+      function rt(e) {
         const { app: t } = e,
           [n] = (0, g.jk)(t.appid, 0, {
             include_basic_info: !0,
             include_assets: !0,
           }),
           i = r.De.PARTNER_BASE_URL + "apps/landing/" + t.appid,
-          s = null == n ? void 0 : n.GetAssets().GetHeaderURL();
+          l = null == n ? void 0 : n.GetAssets().GetHeaderURL();
         return a.createElement(
           "div",
-          { className: Le.AppTile },
-          s &&
+          { className: Me.AppTile },
+          l &&
             a.createElement(
-              P.HP,
+              U.HP,
               { toolTipContent: t.name },
               a.createElement(
                 "div",
-                { className: Le.AppTileImage },
+                { className: Me.AppTileImage },
                 a.createElement(
                   "a",
                   { href: i, target: "_blank" },
-                  a.createElement("img", { src: s }),
+                  a.createElement("img", { src: l }),
                 ),
               ),
             ),
-          !s &&
+          !l &&
             a.createElement(
               "div",
-              { className: Le.AppTileImagePlaceholder },
+              { className: Me.AppTileImagePlaceholder },
               a.createElement("a", { href: i, target: "_blank" }, t.name),
             ),
           a.createElement(
             "div",
-            { className: Le.AppLabels },
-            a.createElement(et, { appType: t.type }),
-            a.createElement(tt, {
+            { className: Me.AppLabels },
+            a.createElement(it, { appType: t.type }),
+            a.createElement(lt, {
               releaseState: t.releasestate,
               hasStoreItem: !!n,
             }),
           ),
         );
       }
-      function et(e) {
+      function it(e) {
         const { appType: t } = e,
           n = "Game" == t,
           r = "DLC" == t,
           i = n
-            ? (0, s.Xx)("#Dashboard_RecentApps_Game")
-            : (0, s.Xx)("#Dashboard_RecentApps_DLC");
+            ? (0, l.Xx)("#Dashboard_RecentApps_Game")
+            : (0, l.Xx)("#Dashboard_RecentApps_DLC");
         return (
           (n || r) &&
           a.createElement(
             "div",
-            { className: (0, u.Z)(Le.AppType, r && Le.DLC) },
+            { className: (0, u.Z)(Me.AppType, r && Me.DLC) },
             i,
           )
         );
       }
-      function tt(e) {
+      function lt(e) {
         const { releaseState: t, hasStoreItem: n } = e,
           r = N(t, n);
         return (
           "released" != t &&
           a.createElement(
             "div",
-            { className: (0, u.Z)(Le.AppRelease) },
+            { className: (0, u.Z)(Me.AppRelease) },
             r.sText,
           )
         );
       }
-      function nt(e) {
-        const t = (0, Ae.N)(),
+      function st(e) {
+        const t = (0, Xe.N)(),
           n = (0, r.kQ)("nPartnerId", "application_config"),
           i = (0, r.kQ)("bShowWarnings", "application_config"),
-          s = (0, r.kQ)("bTestData", "application_config");
+          l = (0, r.kQ)("bTestData", "application_config");
         return t
           ? a.createElement(
               a.Fragment,
               null,
-              a.createElement(ze, null),
-              a.createElement(c, null),
-              a.createElement(ge, {
+              a.createElement(tt, null),
+              a.createElement(d, null),
+              a.createElement(fe, {
                 partnerId: n,
                 showWarnings: i,
-                testData: s,
+                testData: l,
               }),
             )
           : null;

@@ -684,6 +684,7 @@
       e.exports = {
         Group: "_2qYC3gFAkLcB48i6dTz051",
         Button: "_3lwcRYJ_r7x01Cn15bcdYI",
+        Disabled: "_3Yc8UCsmMtheFi5YrgQO-p",
         Active: "_3ZBFoxumQBb1JEVw_DZzaC",
       };
     },
@@ -2880,7 +2881,7 @@
     },
     57: (e, t, n) => {
       "use strict";
-      n.d(t, { Ub: () => l, bY: () => c, be: () => u });
+      n.d(t, { Ub: () => l, bY: () => c, be: () => u, y$: () => d });
       var i = n(7427),
         o = n(2210);
       const r = i.createContext(void 0),
@@ -2915,7 +2916,8 @@
         return i.createElement(s, { value: l }, n);
       }
       const c = () => a().useActiveSteamInterface().GetServiceTransport(),
-        u = () => a().useActiveSteamInterface().GetAnonymousServiceTransport();
+        u = () => a().useActiveSteamInterface().GetAnonymousServiceTransport(),
+        d = () => a().useStorage();
     },
     1134: (e, t, n) => {
       "use strict";
@@ -2949,6 +2951,718 @@
           return localStorage.removeItem(e), Promise.resolve();
         }
       }
+    },
+    7131: (e, t, n) => {
+      "use strict";
+      n.d(t, { R: () => f, N: () => C });
+      var i = n(5556),
+        o = n(7936),
+        r = n(417),
+        s = n(938),
+        a = n(9545),
+        l = n(2260),
+        c = n(8785),
+        u = n(2210),
+        d = (n(4308), n(4842));
+      class m {
+        constructor() {
+          (this.m_mapCallbacks = new Map()),
+            (this.m_rgRegisteredEMsgs = []),
+            (this.m_mapServiceMethodHandlers = new Map()),
+            (this.m_rgRegisteredServiceMethodHandlers = []),
+            (0, d.rC)(this);
+        }
+        InstallErrorReportingStore(e) {
+          this.m_ErrorReportingStore = e;
+        }
+        DispatchMsgToHandlers(e, t) {
+          let n = e.GetEMsg();
+          if (146 == n) {
+            let n = e.Hdr().target_job_name();
+            if (n) {
+              let i = this.m_mapServiceMethodHandlers.get(n);
+              if (i) {
+                this.DEBUG_LogMessageDispatch(e, i[0]);
+                for (let n of i)
+                  try {
+                    n.invoke(e, t);
+                  } catch (e) {
+                    e instanceof Error && this.m_ErrorReportingStore
+                      ? this.m_ErrorReportingStore.ReportError(e)
+                      : console.error(
+                          "MessageHandlers failed to dispatch message to handler: ",
+                          e,
+                        );
+                  }
+                return !0;
+              }
+            }
+          } else {
+            let t = this.m_mapCallbacks.get(n);
+            if (t) {
+              this.DEBUG_LogMessageDispatch(e, t[0]);
+              for (let n of t)
+                try {
+                  n.invoke(e);
+                } catch (e) {
+                  e instanceof Error && this.m_ErrorReportingStore
+                    ? this.m_ErrorReportingStore.ReportError(e)
+                    : console.error(
+                        "MessageHandlers failed to dispatch message to handler: ",
+                        e,
+                      );
+                }
+              return !0;
+            }
+          }
+          return !1;
+        }
+        DEBUG_LogMessageDispatch(e, t) {
+          0;
+        }
+        get emsg_list() {
+          return this.m_rgRegisteredEMsgs;
+        }
+        get servicemethod_list() {
+          return this.m_rgRegisteredServiceMethodHandlers;
+        }
+        AddCallback(e, t, n) {
+          let i = this.m_mapCallbacks.get(e);
+          return (
+            i ||
+              ((i = []),
+              this.m_mapCallbacks.set(e, i),
+              this.m_rgRegisteredEMsgs.push(e)),
+            i.push({ invoke: n, msgClass: t }),
+            {
+              invoke: n,
+              unregister: () => {
+                let t = this.m_mapCallbacks.get(e);
+                if (t)
+                  for (let e = 0; e < t.length; e++)
+                    t[e].invoke == n && (t.splice(e, 1), e--);
+              },
+            }
+          );
+        }
+        AddServiceMethodHandler(e, t) {
+          let n = (n, i) => {
+            let o = a.gA.InitFromMsg(e.request, n),
+              r = a.gA.Init(e.response, 147),
+              s = t(o, r),
+              l = (e) => {
+                r.Hdr().set_eresult(e), i(r);
+              };
+            s instanceof Promise
+              ? s.then(l).catch(() => {
+                  l(2);
+                })
+              : l(s);
+          };
+          return (
+            this.m_mapServiceMethodHandlers.has(e.name)
+              ? console.error("Duplicate registration for method " + e.name)
+              : (this.m_mapServiceMethodHandlers.set(e.name, [
+                  { invoke: n, msgClass: e.request },
+                ]),
+                this.m_rgRegisteredServiceMethodHandlers.push(e.name)),
+            {
+              invoke: n,
+              unregister: () => {
+                let t = this.m_mapServiceMethodHandlers.get(e.name);
+                if (t)
+                  for (let e = 0; e < t.length; e++)
+                    t[e].invoke == n && (t.splice(e, 1), e--);
+              },
+            }
+          );
+        }
+        AddServiceNotificationHandler(e, t) {
+          let n = (n, i) => {
+              let o = a.gA.InitFromMsg(e.request, n);
+              t(o);
+            },
+            i = this.m_mapServiceMethodHandlers.get(e.name);
+          return (
+            i ||
+              ((i = []),
+              this.m_mapServiceMethodHandlers.set(e.name, i),
+              this.m_rgRegisteredServiceMethodHandlers.push(e.name)),
+            i.push({ invoke: n, msgClass: e.request }),
+            {
+              invoke: n,
+              unregister: () => {
+                let t = this.m_mapServiceMethodHandlers.get(e.name);
+                if (t)
+                  for (let e = 0; e < t.length; e++)
+                    t[e].invoke == n && (t.splice(e, 1), e--);
+              },
+            }
+          );
+        }
+        RegisterBaseEMessageHandler(e, t) {
+          return this.AddCallback(e, void 0, t);
+        }
+        RegisterEMessageHandler(e, t, n) {
+          return this.AddCallback(e, t, (e) => {
+            n(a.gA.InitFromMsg(t, e));
+          });
+        }
+        RegisterEMessageAction(e, t, n) {
+          return this.AddCallback(e, t, (e) => {
+            (0, d.z)(() => {
+              n(a.gA.InitFromMsg(t, e));
+            });
+          });
+        }
+        RegisterServiceNotificationHandler(e, t) {
+          return this.AddServiceNotificationHandler(e, t);
+        }
+        RegisterServiceNotificationHandlerAction(e, t) {
+          return this.AddServiceNotificationHandler(e, (e) => {
+            let n;
+            return (
+              (0, d.z)(() => {
+                n = t(e);
+              }),
+              n
+            );
+          });
+        }
+        RegisterServiceMethodHandler(e, t) {
+          return this.AddServiceMethodHandler(e, t);
+        }
+        RegisterServiceMethodHandlerAction(e, t) {
+          return this.AddServiceMethodHandler(e, (e, n) => {
+            let i;
+            return (
+              (0, d.z)(() => {
+                i = t(e, n);
+              }),
+              i
+            );
+          });
+        }
+      }
+      (0, i.gn)([d.LO], m.prototype, "m_rgRegisteredEMsgs", void 0),
+        (0, i.gn)(
+          [d.LO],
+          m.prototype,
+          "m_rgRegisteredServiceMethodHandlers",
+          void 0,
+        );
+      var h = n(4701),
+        p = n(5255),
+        _ = n(5651);
+      class g {
+        constructor(e, t) {
+          var n, i, o, r, s, a, l;
+          (this.m_socket = null),
+            (this.Log = new c.sO("CWebSocketConnection", () => this.m_sName)),
+            (this.m_bDisconnectRequested = !1),
+            (this.m_bConnecting = !1),
+            (this.m_sName = e),
+            (this.m_fnOnMessageHandler = t.fnOnMessageHandler),
+            (this.m_fnOnCloseHandler = t.fnOnCloseHandler),
+            (this.m_fnOnReconnectStartHandler =
+              null !== (n = t.fnOnReconnectStartHandler) && void 0 !== n
+                ? n
+                : () => {}),
+            (this.m_fnOnReconnectFinishHandler =
+              null !== (i = t.fnOnReconnectFinishHandler) && void 0 !== i
+                ? i
+                : () => {}),
+            (this.m_nConnectAttemptsMax =
+              null !== (o = t.nConnectAttemptsMax) && void 0 !== o ? o : 8),
+            (this.m_nConnectAttemptTimeoutMs =
+              null !== (r = t.nConnectAttemptTimeoutMs) && void 0 !== r
+                ? r
+                : 1e3),
+            (this.m_bReconnectOnFailure =
+              null !== (s = t.bReconnectOnFailure) && void 0 !== s && s),
+            (this.m_nReconnectAttemptsMax =
+              null !== (a = t.nReconnectAttemptsMax) && void 0 !== a ? a : 3e4),
+            (this.m_nReconnectAttemptTimeoutMs =
+              null !== (l = t.nReconnectAttemptTimeoutMs) && void 0 !== l
+                ? l
+                : 1e4);
+        }
+        get name() {
+          return this.m_sName;
+        }
+        Connect(e) {
+          return (0, i.mG)(this, void 0, void 0, function* () {
+            return (
+              (this.m_sURL = e),
+              this.ConnectWithRetry(
+                this.m_sURL,
+                this.m_nConnectAttemptsMax,
+                this.m_nConnectAttemptTimeoutMs,
+              )
+            );
+          });
+        }
+        Reconnect() {
+          return (0, i.mG)(this, void 0, void 0, function* () {
+            return this.ConnectWithRetry(
+              this.m_sURL,
+              this.m_nReconnectAttemptsMax,
+              this.m_nReconnectAttemptTimeoutMs,
+            );
+          });
+        }
+        GetInterAttemptBackoffMs(e) {
+          return 1e3 * (0, _.Lh)(e, 1, 5);
+        }
+        ConnectWithRetry(e, t, n) {
+          return (0, i.mG)(this, void 0, void 0, function* () {
+            this.m_bConnecting = !0;
+            let i = 0;
+            do {
+              try {
+                const t = yield this.ConnectToSocket(e, n);
+                if (1 == t.result) return (this.m_bConnecting = !1), t;
+                this.Log.Warning(
+                  `connect attempt failed: ${t.result} - ${t.message}`,
+                );
+              } catch (e) {
+                this.Log.Warning(
+                  `connect attempt failed: exception ${e.name} - ${e}`,
+                );
+              }
+              const o = this.GetInterAttemptBackoffMs(i);
+              this.Log.Info(`connect retry: attempt:${i}/${t} backoff:${o}`),
+                yield new Promise((e) => setTimeout(e, o)),
+                (this.m_socket = null),
+                (i += 1);
+            } while (i < t);
+            return (
+              this.Log.Warning(
+                `websocket connect retry: limit exceeeded, bailing - ${this.name}`,
+              ),
+              (this.m_bConnecting = !1),
+              this.BShouldReconnect() && this.StartReconnect(),
+              { result: 2, message: "not ready, exceeded retry count" }
+            );
+          });
+        }
+        Disconnect() {
+          this.Log.Info("disconnect requested"),
+            (this.m_bDisconnectRequested = !0),
+            this.m_socket.close();
+        }
+        PrepareForShutdown() {
+          this.Log.Info("shutdown pending"), (this.m_bDisconnectRequested = !0);
+        }
+        BShouldReconnect() {
+          return (
+            !this.m_bConnecting &&
+            !!this.m_bReconnectOnFailure &&
+            !this.m_bDisconnectRequested
+          );
+        }
+        StartReconnect() {
+          return (0, i.mG)(this, void 0, void 0, function* () {
+            this.Log.Info("start reconnect"),
+              (this.m_socket = null),
+              this.m_fnOnReconnectStartHandler({ connection: this });
+            if (1 != (yield this.Reconnect()).result)
+              return (
+                this.Log.Warning(
+                  "failed to re-connect to websocket after close",
+                ),
+                this.m_fnOnReconnectFinishHandler({
+                  connection: this,
+                  eResult: 2,
+                }),
+                void this.m_fnOnCloseHandler({
+                  connection: this,
+                  bError: !0,
+                  bIsExpectedToReconnect: !1,
+                })
+              );
+            this.Log.Info("reconnect successful"),
+              this.m_fnOnReconnectFinishHandler({
+                connection: this,
+                eResult: 1,
+              });
+          });
+        }
+        ConnectToSocket(e, t) {
+          return (0, i.mG)(this, void 0, void 0, function* () {
+            if (null != this.m_socket)
+              return this.m_socket.readyState != WebSocket.OPEN
+                ? (this.Log.Error(
+                    `websocket in an unexpected state: ${this.m_socket.readyState}`,
+                  ),
+                  { result: 2, message: "websocket in an unexpected state" })
+                : { result: 1, message: "ready" };
+            try {
+              this.m_socket = new WebSocket(e);
+            } catch (e) {
+              return (
+                this.Log.Warning("failed to initialize websocket connection"),
+                {
+                  result: 35,
+                  message: "Failed to initialize websocket connection",
+                }
+              );
+            }
+            (this.m_socket.binaryType = "arraybuffer"),
+              (this.m_socket.onerror = this.OnSocketError),
+              (this.m_socket.onmessage = this.OnSocketMessage),
+              (this.m_socket.onopen = this.OnSocketOpen),
+              (this.m_socket.onclose = this.OnSocketClose);
+            return (yield this.WaitForSocketOpen(this.m_socket, t))
+              ? (this.Log.Info("connection ready"),
+                { result: 1, message: "ready" })
+              : (this.Log.Warning("failed to reach open state"),
+                { result: 2, message: "failed to reach open state" });
+          });
+        }
+        WaitForSocketOpen(e, t) {
+          return (0, i.mG)(this, void 0, void 0, function* () {
+            if (e.readyState != WebSocket.CONNECTING)
+              return e.readyState == WebSocket.OPEN;
+            let n = t / 100;
+            for (; e.readyState == WebSocket.CONNECTING && n > 0; )
+              n--, yield new Promise((e) => setTimeout(e, 100));
+            return e.readyState == WebSocket.OPEN;
+          });
+        }
+        BCanSendMessages() {
+          return (
+            null != this.m_socket && this.m_socket.readyState == WebSocket.OPEN
+          );
+        }
+        OnSocketError(e) {
+          this.Log.Warning("websocket error");
+        }
+        OnSocketOpen(e) {
+          this.Log.Info("websocket open");
+        }
+        OnSocketClose(e) {
+          if (this.m_bDisconnectRequested)
+            return (
+              this.Log.Info("websocket closed"),
+              void this.m_fnOnCloseHandler({
+                connection: this,
+                bError: !1,
+                bIsExpectedToReconnect: !1,
+              })
+            );
+          if (this.m_bConnecting) return;
+          this.Log.Warning("websocket unexpectedly closed");
+          const t = this.BShouldReconnect();
+          this.m_fnOnCloseHandler({
+            connection: this,
+            bError: !0,
+            bIsExpectedToReconnect: t,
+          }),
+            t && this.StartReconnect();
+        }
+        OnSocketMessage(e) {
+          return (0, i.mG)(this, void 0, void 0, function* () {
+            this.m_fnOnMessageHandler(e.data);
+          });
+        }
+        SendSerializedMessage(e) {
+          try {
+            return this.m_socket.send(e), 1;
+          } catch (e) {
+            return 2;
+          }
+        }
+      }
+      (0, i.gn)([r.ak], g.prototype, "OnSocketError", null),
+        (0, i.gn)([r.ak], g.prototype, "OnSocketOpen", null),
+        (0, i.gn)([r.ak], g.prototype, "OnSocketClose", null),
+        (0, i.gn)([r.ak], g.prototype, "OnSocketMessage", null);
+      const v = new c.sO("WebUITransport");
+      class f {
+        constructor() {
+          (this.m_iMsgSeq = 1),
+            (this.m_mapPendingMethodRequests = new Map()),
+            (this.m_messageHandlers = new m()),
+            (this.m_mapServiceCallErrorCount = new Map()),
+            (this.m_mapConnectionDetails = new Map()),
+            (this.m_bInitialized = !1);
+        }
+        static InstallErrorReportingStore(e) {
+          this.sm_ErrorReportingStore = e;
+        }
+        BIsValid() {
+          return this.m_bInitialized;
+        }
+        ReportError(e) {
+          v.Warning(e);
+          const t = f.sm_ErrorReportingStore;
+          t &&
+            t.ReportError(new Error(e), {
+              bIncludeMessageInIdentifier: !0,
+              cCallsitesToIgnore: 1,
+            });
+        }
+        Init() {
+          return (0, i.mG)(this, void 0, void 0, function* () {
+            if (!p.De.IN_CLIENT) return;
+            const e = yield SteamClient.WebUITransport.GetTransportInfo();
+            this.CreateConnection(
+              1,
+              "steamUI",
+              e.portSteamUI,
+              e.authKeySteamUI,
+            ),
+              this.CreateConnection(
+                2,
+                "clientdll",
+                e.portClientdll,
+                e.authKeyClientdll,
+              ),
+              (0, l.SM)().SetDefaultTransport(this),
+              (0, l.SM)().SetDefaultHandlerRegistry(this.m_messageHandlers),
+              h.zw.RegisterForNotifyStartShutdown(this.OnStartShutdown);
+          });
+        }
+        get messageHandlers() {
+          return this.m_messageHandlers;
+        }
+        SetStatusEventHandler(e) {
+          this.m_fnOnStatusEventHandler = e;
+        }
+        SetReconnectErrorHandler(e) {
+          this.m_fnOnReconnectErrorHandler = e;
+        }
+        CreateConnection(e, t, n, i) {
+          const o = {
+              bReconnectOnFailure: !0,
+              fnOnMessageHandler: this.OnWebsocketMessage,
+              fnOnCloseHandler: this.OnWebsocketClose,
+              fnOnReconnectStartHandler: this.OnWebsocketReconnectStart,
+              fnOnReconnectFinishHandler: this.OnWebsocketReconnectFinish,
+              nConnectAttemptsMax: 10,
+              nConnectAttemptTimeoutMs: 1e3,
+              nReconnectAttemptsMax: 20,
+              nReconnectAttemptTimeoutMs: 1e3,
+            },
+            r = {
+              connection: new g(t, o),
+              sUrl: `ws://localhost:${n}/transportsocket/`,
+              sAuthKey: i,
+              eClientExecutionSite: e,
+            };
+          this.m_mapConnectionDetails.set(e, r);
+        }
+        SendMsg(e, t, n, i) {
+          return new Promise((o, r) => {
+            var s;
+            const a = i.eClientExecutionSite;
+            if (null == a || 0 == a)
+              return (
+                v.Error(`SendMsg: Invalid client execution site: ${a}`),
+                void r(`Transport SendMsg: invalid client execution site ${a}`)
+              );
+            const l = this.m_mapConnectionDetails.get(a);
+            if (null == l)
+              return (
+                v.Error(
+                  `SendMsg: could not find connection for execution site: ${a}`,
+                ),
+                void r(
+                  `Transport SendMsg: could not find connection for execution site ${a}`,
+                )
+              );
+            const c = l.connection;
+            if (!c.BCanSendMessages()) {
+              const t =
+                null !== (s = this.m_mapServiceCallErrorCount.get(e)) &&
+                void 0 !== s
+                  ? s
+                  : 1;
+              this.m_mapServiceCallErrorCount.set(e, t + 1);
+              const n = `SendMsg: Attempt to send message but socket wasn't ready: ${c.name} - ${e}`;
+              return (
+                1 == t && this.ReportError(n),
+                v.Warning(n + ` error count: ${t}`),
+                void r("Transport SendMsg: socket not ready")
+              );
+            }
+            const u = this.m_iMsgSeq++;
+            t.SetEMsg(146),
+              t.Hdr().set_target_job_name(e),
+              t.Hdr().set_jobid_source("" + u);
+            if (1 != c.SendSerializedMessage(t.Serialize()))
+              return (
+                v.Error("SendMsg: Failed to send message"),
+                void r("Transport SendMsg: failed to send message")
+              );
+            this.m_mapPendingMethodRequests.set(u, {
+              m_iSeq: u,
+              m_responseClass: n,
+              m_fnCallback: o,
+              m_fnError: r,
+            });
+          });
+        }
+        SendNotification(e, t, n) {
+          var i;
+          const o = n.eClientExecutionSite;
+          if (null == o || 0 == o)
+            return (
+              v.Error(`SendNotification: Invalid client execution site: ${o}`),
+              !1
+            );
+          const r = this.m_mapConnectionDetails.get(o);
+          if (null == r)
+            return (
+              v.Error(
+                `SendNotification: could not find connection for execution site: ${o}`,
+              ),
+              !1
+            );
+          const s = r.connection;
+          if (!s.BCanSendMessages()) {
+            const t =
+              null !== (i = this.m_mapServiceCallErrorCount.get(e)) &&
+              void 0 !== i
+                ? i
+                : 1;
+            this.m_mapServiceCallErrorCount.set(e, t + 1);
+            const n = `SendNotification: Attempt to send message but socket wasn't ready: ${s.name} - ${e}`;
+            return (
+              1 == t && this.ReportError(n),
+              v.Warning(n + ` error count: ${t}`),
+              !1
+            );
+          }
+          t.SetEMsg(146), t.Hdr().set_target_job_name(e);
+          return 1 == s.SendSerializedMessage(t.Serialize());
+        }
+        ConnectToSite(e) {
+          return (0, i.mG)(this, void 0, void 0, function* () {
+            const t = e.connection,
+              n = yield t.Connect(e.sUrl);
+            if (1 != n.result) return n;
+            return (yield this.SendAuthMessage(e)).BSuccess()
+              ? { result: 1, message: "connected" }
+              : { result: 2, message: "client auth failed" };
+          });
+        }
+        MakeReady() {
+          return (0, i.mG)(this, void 0, void 0, function* () {
+            const e = [];
+            for (const [t, n] of this.m_mapConnectionDetails)
+              e.push(this.ConnectToSite(n));
+            const t = yield Promise.all(e);
+            (this.m_bInitialized = !0), this.DispatchTransportStatusUpdate();
+            for (const e of t) if (1 != e.result) return e;
+            return { result: 1, message: "ready" };
+          });
+        }
+        GetConnectionDetails(e) {
+          for (const [t, n] of this.m_mapConnectionDetails)
+            if (n.connection === e) return n;
+          return (
+            v.Error("GetConnectionDetails: failed to identify connection"), null
+          );
+        }
+        DispatchTransportStatusUpdate() {
+          if (!this.m_fnOnStatusEventHandler) return;
+          let e = !0;
+          for (const [t, n] of this.m_mapConnectionDetails)
+            n.connection.BCanSendMessages() || (e = !1);
+          this.m_fnOnStatusEventHandler({ bConnected: e });
+        }
+        OnWebsocketReconnectStart(e) {
+          this.DispatchTransportStatusUpdate();
+        }
+        OnWebsocketReconnectFinish(e) {
+          var t;
+          if ((this.DispatchTransportStatusUpdate(), 1 != e.eResult))
+            return (
+              v.Warning(
+                "OnWebsocketReconnect: Failed to reconnect to steam client",
+              ),
+              void (
+                null === (t = this.m_fnOnReconnectErrorHandler) ||
+                void 0 === t ||
+                t.call(this, {})
+              )
+            );
+          this.FailAllPendingRequests();
+          const n = this.GetConnectionDetails(e.connection);
+          n && this.SendAuthMessage(n);
+        }
+        OnWebsocketClose(e) {
+          e.bIsExpectedToReconnect || this.FailAllPendingRequests();
+        }
+        OnWebsocketMessage(e) {
+          const t = new s.At(e),
+            n = a.gA.InitHeaderFromPacket(t);
+          n.Hdr().jobid_target() && n.Hdr().jobid_target() !== o.Z3
+            ? this.DispatchMethodResponse(n)
+            : this.DispatchNotification(n);
+        }
+        DispatchMethodResponse(e) {
+          const t = parseInt(e.Hdr().jobid_target()),
+            n = this.m_mapPendingMethodRequests.get(t);
+          if (null == n)
+            return void (0, u.X)(
+              !1,
+              "Transport Error: no pending callback for request",
+            );
+          (0, u.X)(
+            t == n.m_iSeq,
+            "Transport Error: mistmatched request sequence",
+          ),
+            this.m_mapPendingMethodRequests.delete(t);
+          const i = a.gA.InitFromMsg(n.m_responseClass, e);
+          n.m_fnCallback(i);
+        }
+        DispatchNotification(e) {
+          this.m_messageHandlers.DispatchMsgToHandlers(e, (e) => {
+            (0, u.X)(
+              !1,
+              "Transport Error: A notification should not generate a response",
+            );
+          });
+        }
+        FailAllPendingRequests() {
+          for (const [e, t] of this.m_mapPendingMethodRequests) {
+            this.ReportError(
+              `FailAllPendingRequests: forcing failure for request: ${t.m_responseClass.name}`,
+            );
+            let e = a.gA.Init(t.m_responseClass);
+            e.Hdr().set_eresult(2), t.m_fnCallback(e);
+          }
+          this.m_mapPendingMethodRequests.clear();
+        }
+        SendAuthMessage(e) {
+          return (0, i.mG)(this, void 0, void 0, function* () {
+            const t = h.zw.AuthenticateHandler.name,
+              n = { eClientExecutionSite: e.eClientExecutionSite },
+              i = a.gA.Init(h.np);
+            i.Hdr().set_webui_auth_key(e.sAuthKey);
+            return yield this.SendMsg(
+              t,
+              i,
+              h.zw.AuthenticateHandler.response,
+              n,
+            );
+          });
+        }
+        OnStartShutdown(e) {
+          for (const [e, t] of this.m_mapConnectionDetails)
+            t.connection.PrepareForShutdown();
+          return 1;
+        }
+      }
+      (0, i.gn)([r.ak], f.prototype, "OnWebsocketReconnectStart", null),
+        (0, i.gn)([r.ak], f.prototype, "OnWebsocketReconnectFinish", null),
+        (0, i.gn)([r.ak], f.prototype, "OnWebsocketClose", null),
+        (0, i.gn)([r.ak], f.prototype, "OnWebsocketMessage", null),
+        (0, i.gn)([r.ak], f.prototype, "OnStartShutdown", null);
+      const C = new f();
     },
     5315: (e, t, n) => {
       "use strict";
@@ -3080,11 +3794,11 @@
             (this.m_bVisible = !0),
             this.m_ContextMenuManager.ShowMenu(this);
         }
-        OnCancel() {
-          var e;
-          (null === (e = this.options) || void 0 === e ? void 0 : e.onCancel) &&
+        OnCancel(e = 0) {
+          var t;
+          (null === (t = this.options) || void 0 === t ? void 0 : t.onCancel) &&
             this.options.onCancel(),
-            this.Hide();
+            this.Hide(e);
         }
         Hide(e = 0) {
           e > 0
@@ -5228,22 +5942,22 @@
       var i = n(5556),
         o = n(7427),
         r = n(8102),
-        s = n(3129),
-        a = n(417),
-        l = n(3783),
-        c = n(2493),
-        u = n(9885),
-        d = n(5849);
+        s = n(5849),
+        a = n(7476),
+        l = n(3129),
+        c = n(417),
+        u = n(6799),
+        d = n(6948);
       const m = (0, o.createContext)(null);
-      var h = n(7476),
-        p = n(6799),
-        _ = n(6948);
+      var h = n(3783),
+        p = n(2493),
+        _ = n(9885);
       const g = o.forwardRef(function (e, t) {
         var n;
         const {
-            "flow-children": m,
-            onActivate: h,
-            onCancel: p,
+            "flow-children": a,
+            onActivate: u,
+            onCancel: m,
             focusClassName: g,
             focusWithinClassName: f,
           } = e,
@@ -5256,21 +5970,21 @@
           ]),
           { elemProps: E, navOptions: b, gamepadEvents: S } = (0, r.QH)(C);
         let y = {};
-        const I = (0, d.t)(m);
-        I != l.gj.NONE && (y.layout = I),
-          h &&
-            ((E.onClick = E.onClick || h), (S.onOKButton = S.onOKButton || h)),
+        const I = (0, s.t)(a);
+        I != h.gj.NONE && (y.layout = I),
+          u &&
+            ((E.onClick = E.onClick || u), (S.onOKButton = S.onOKButton || u)),
           S.onOKButton && void 0 === b.focusable && (b.focusable = !0),
-          p && (S.onCancelButton = S.onCancelButton || p);
+          m && (S.onCancelButton = S.onCancelButton || m);
         const { ref: D, node: w } = (0, r.Pd)(
             Object.assign(Object.assign({}, y), b),
           ),
-          A = (0, c.K)();
-        (E.className = (0, s.Z)(E.className, "Panel", A && "Focusable")),
-          (0, u.pD)(S, D);
-        const T = (0, a.BE)(D, t),
+          A = (0, p.K)();
+        (E.className = (0, l.Z)(E.className, "Panel", A && "Focusable")),
+          (0, _.pD)(S, D);
+        const T = (0, c.BE)(D, t),
           R =
-            null === (n = (0, _.qt)({ bSuppressAssert: !0 })) || void 0 === n
+            null === (n = (0, d.qt)({ bSuppressAssert: !0 })) || void 0 === n
               ? void 0
               : n.IN_VR;
         (!b.focusable && !b.focusableIfNoChildren) ||
@@ -5286,8 +6000,8 @@
                 Object.assign({}, E, {
                   divRef: T,
                   node: w,
-                  focusClassName: (0, s.Z)(g, "gpfocus"),
-                  focusWithinClassName: (0, s.Z)(f, "gpfocuswithin"),
+                  focusClassName: (0, l.Z)(g, "gpfocus"),
+                  focusWithinClassName: (0, l.Z)(f, "gpfocuswithin"),
                 }),
               )
             : o.createElement("div", Object.assign({}, E, { ref: T })),
@@ -5297,15 +6011,15 @@
         const { node: t, divRef: n } = e,
           s = (0, i._T)(e, ["node", "divRef"]),
           l = (0, o.useContext)(m),
-          c = (0, h.Ze)(
+          d = (0, a.Ze)(
             2,
             () =>
               "self" == (null == t ? void 0 : t.GetFocusable()) ||
               null != s.onClick,
           ),
-          u = (0, h.Ze)(1, () => (null == l ? void 0 : l.HasContextMenu(t))),
-          d = (0, p.M)(s);
-        (0, p.B)(s),
+          h = (0, a.Ze)(1, () => (null == l ? void 0 : l.HasContextMenu(t))),
+          p = (0, u.M)(s);
+        (0, u.B)(s),
           l &&
             (s.onContextMenu = (n) => {
               var i;
@@ -5314,7 +6028,7 @@
                 void 0 === i ||
                 i.call(e, n);
             });
-        const _ = (0, a.BE)(c, u, d, n);
+        const _ = (0, c.BE)(d, h, p, n);
         return o.createElement(
           r.zQ,
           Object.assign({}, s, { divRef: _, node: t }),
@@ -9969,6 +10683,363 @@
       const d = new u();
       window.g_CreatorHomeStore = d;
     },
+    2011: (e, t, n) => {
+      "use strict";
+      n.d(t, { Uh: () => I });
+      var i = n(5556),
+        o = n(9545),
+        r = n(4351),
+        s = n(162),
+        a = n(1846),
+        l = n(7131);
+      const c =
+        window.addEventListener || (n.g && n.g.addEventListener) || (() => {});
+      let u,
+        d = [],
+        m = (e, t) => d.push({ error: e, cCallsitesToIgnore: t });
+      const h = !0;
+      {
+        const e = console.assert;
+        console.assert = (t, n, ...i) => {
+          t || m(new Error(v(n, ...i)), 2), e.apply(console, [t, n, ...i]);
+        };
+        const t = console.error;
+        (console.error = (e, ...n) => {
+          m(new Error(v(e, ...n)), 1), t.apply(console, [e, ...n]);
+        }),
+          (console.clogerror = (e, n, ...i) => {
+            m(new Error(v(n, ...i)), e + 1), t.apply(console, [n, ...i]);
+          }),
+          c("error", (e) => {
+            m(e.error, 0);
+          }),
+          (u = window.setTimeout(() => {
+            (d = []), (m = () => {});
+          }, 3e4));
+      }
+      const p = { cCallsitesToIgnore: 0, bIncludeMessageInIdentifier: !1 },
+        _ = ["/localhost:1337/"];
+      class g {
+        constructor(e = !0) {
+          (this.m_transport = null),
+            (this.m_rgErrorQueue = []),
+            (this.m_sendTimer = null),
+            (this.m_bEnabled = !0),
+            (this.m_bInitialized = !1),
+            e
+              ? (d.forEach(({ error: e, cCallsitesToIgnore: t }) =>
+                  this.ReportError(e, { cCallsitesToIgnore: t }),
+                ),
+                (m = (e, t) => this.ReportError(e, { cCallsitesToIgnore: t })))
+              : (m = () => {}),
+            (d = []),
+            clearTimeout(u),
+            window.setTimeout(() => {
+              this.m_bInitialized ||
+                ((this.m_bEnabled = !1), (this.m_rgErrorQueue = []));
+            }, 3e4);
+        }
+        Init(e, t, n) {
+          (this.m_bInitialized = !0),
+            (this.m_strProduct = e),
+            (this.m_strVersion = t),
+            (this.m_transport = n),
+            this.m_bEnabled ||
+              (console.error(
+                "Error reporting was initialized after being disabled, possibly dropping errors.",
+              ),
+              (this.m_bEnabled = !0)),
+            this.m_rgErrorQueue.length &&
+              (this.SendErrorReports(this.m_rgErrorQueue),
+              (this.m_rgErrorQueue = []));
+        }
+        ReportError(e, t) {
+          return (0, i.mG)(this, void 0, void 0, function* () {
+            if (!e)
+              return (
+                console.warn(
+                  "Failed to report error: ReportError() was called without an error to report.",
+                ),
+                null
+              );
+            try {
+              const n = Object.assign(Object.assign({}, p), t);
+              if (!this.m_bEnabled) return null;
+              0;
+              const o = yield (function (e, t) {
+                try {
+                  return e.stack && e.stack.match(f)
+                    ? (function (e, t) {
+                        var n, o;
+                        return (0, i.mG)(this, void 0, void 0, function* () {
+                          const {
+                              cCallsitesToIgnore: i,
+                              bIncludeMessageInIdentifier: r,
+                            } = t,
+                            s =
+                              null !==
+                                (o =
+                                  null === (n = e.stack) || void 0 === n
+                                    ? void 0
+                                    : n.split("\n")) && void 0 !== o
+                                ? o
+                                : [];
+                          let a = y(s.filter((e) => !!e.match(f))[i]);
+                          r && (a = `${a} ${e.message}`);
+                          const l = s
+                            .map((e) => {
+                              const t = e.match(/(.*)\((.*):(\d+):(\d+)\)/);
+                              if (!t) return e;
+                              if (5 === t.length) {
+                                const [e, n, i, o, r] = t,
+                                  s = parseInt(o),
+                                  a = parseInt(r);
+                                if (!isNaN(s) && !isNaN(a)) return [n, i, s, a];
+                              }
+                              return e;
+                            })
+                            .filter((e) => !!e);
+                          return {
+                            identifier: a,
+                            identifierHash: yield w(a),
+                            message: l,
+                          };
+                        });
+                      })(e, t)
+                    : e.stack && e.stack.match(C)
+                      ? (function (e, t) {
+                          var n, o;
+                          return (0, i.mG)(this, void 0, void 0, function* () {
+                            const {
+                                cCallsitesToIgnore: i,
+                                bIncludeMessageInIdentifier: r,
+                              } = t,
+                              s =
+                                null !==
+                                  (o =
+                                    null === (n = e.stack) || void 0 === n
+                                      ? void 0
+                                      : n.split("\n")) && void 0 !== o
+                                  ? o
+                                  : [];
+                            let a = y(s.filter((e) => !!e.match(C))[i]);
+                            r && (a = `${a} ${e.message}`);
+                            const l = s
+                              .map((e) => {
+                                const t = e.match(/(.*@)?(.*):(\d+):(\d+)/);
+                                if (!t) return e;
+                                if (5 === t.length) {
+                                  const [e, n, i, o, r] = t,
+                                    s = parseInt(o),
+                                    a = parseInt(r);
+                                  if (!isNaN(s) && !isNaN(a))
+                                    return [n, i, s, a];
+                                }
+                                return e;
+                              })
+                              .filter((e) => !!e);
+                            return {
+                              identifier: a,
+                              identifierHash: yield w(a),
+                              message: [e.message, ...l],
+                            };
+                          });
+                        })(e, t)
+                      : e.stack && e.stack.match(E)
+                        ? (function (e, t) {
+                            var n, o;
+                            return (0, i.mG)(
+                              this,
+                              void 0,
+                              void 0,
+                              function* () {
+                                const {
+                                    bIncludeMessageInIdentifier: i,
+                                    cCallsitesToIgnore: r,
+                                  } = t,
+                                  s =
+                                    null !==
+                                      (o =
+                                        null === (n = e.stack) || void 0 === n
+                                          ? void 0
+                                          : n.split("\n")) && void 0 !== o
+                                      ? o
+                                      : [],
+                                  a = s[r],
+                                  l = a.split("/");
+                                let c = l[l.length - 1];
+                                a.indexOf("@") > -1 &&
+                                  (c = a.split("@")[0] + "@" + c),
+                                  i && (c = `${c} ${e.message}`);
+                                const u = s
+                                  .map((e) => {
+                                    const t = e.match(/(.*@)?(.*):(\d+):(\d+)/);
+                                    if (!t) return e;
+                                    if (5 === t.length) {
+                                      const [e, n, i, o, r] = t,
+                                        s = parseInt(o),
+                                        a = parseInt(r);
+                                      if (!isNaN(s) && !isNaN(a))
+                                        return [n, i, s, a];
+                                    }
+                                    return e;
+                                  })
+                                  .filter((e) => !!e);
+                                return {
+                                  identifier: c,
+                                  identifierHash: yield w(c),
+                                  message: [e.message, ...u],
+                                };
+                              },
+                            );
+                          })(e, t)
+                        : (S ||
+                            (console.warn(
+                              "Error reporter does not know how to parse generated stack:",
+                            ),
+                            console.warn(e.stack),
+                            (S = !0)),
+                          null);
+                } catch (e) {
+                  return (
+                    console.warn(`Failed to normalize error stack: ${e}`), null
+                  );
+                }
+              })(e, n);
+              return o ? (this.SendErrorReport(o), o) : null;
+            } catch (e) {
+              return console.log(`Failed to report error: ${e}`), null;
+            }
+          });
+        }
+        BIsBlacklisted(e) {
+          for (let t of e.message) {
+            let n = JSON.stringify(t);
+            for (let t of _) {
+              const i = new RegExp(t);
+              if (n.match(i))
+                return console.warn("Report", e, "matched regex", t), !0;
+            }
+          }
+          return !1;
+        }
+        SendErrorReport(e) {
+          this.BIsBlacklisted(e) ||
+            (this.m_transport
+              ? this.QueueSend(e)
+              : this.m_rgErrorQueue.push(e));
+        }
+        QueueSend(e) {
+          this.m_rgErrorQueue.push(e),
+            this.m_sendTimer ||
+              (this.m_sendTimer = window.setTimeout(() => {
+                this.SendErrorReports(this.m_rgErrorQueue),
+                  (this.m_rgErrorQueue = []),
+                  (this.m_sendTimer = null);
+              }, 1e4));
+        }
+        SendErrorReports(e) {
+          if (!e || !e.length) return;
+          const t = o.gA.Init(r.$4),
+            n = e.reduce(
+              (e, t) => (
+                e[t.identifier]
+                  ? e[t.identifier].count++
+                  : (e[t.identifier] = { report: t, count: 1 }),
+                e
+              ),
+              {},
+            ),
+            i = Object.keys(n).map((e) => {
+              const { report: t, count: i } = n[e],
+                o = new r.kb();
+              return (
+                o.set_count(i),
+                o.set_identifier(t.identifier + " " + t.identifierHash),
+                o.set_message(JSON.stringify(t.message)),
+                o
+              );
+            });
+          t.Body().set_product(this.m_strProduct),
+            t.Body().set_version(this.m_strVersion),
+            t.Body().set_errors(i),
+            r.TF.ReportClientError(this.m_transport, t);
+        }
+        get version() {
+          return this.m_strVersion;
+        }
+        get product() {
+          return this.m_strProduct;
+        }
+        get reporting_enabled() {
+          return h;
+        }
+      }
+      function v(e, ...t) {
+        if ("string" == typeof e && 0 === t.length) return e;
+        return [e, ...t]
+          .map((e) => {
+            try {
+              return String(e);
+            } catch (e) {
+              return "[Stringify Error]";
+            }
+          })
+          .join(", ");
+      }
+      const f = /^\s*at .*(\S+:\d+|\(native\))/m,
+        C = /(^|@)\S+:\d+/,
+        E = /.*\/bundle-[a-zA-Z0-9]+:\d+:\d+/;
+      let b,
+        S = !1;
+      function y(e) {
+        return (function (e) {
+          const t = "https://",
+            n = e.indexOf(t);
+          if (-1 === n) return e;
+          const i = e.indexOf("/", n + t.length);
+          return -1 === i ? e : e.slice(0, n) + e.slice(i);
+        })(
+          (function (e) {
+            const t = e.lastIndexOf("?");
+            if (-1 === t) return e;
+            const n = e.indexOf(":", t);
+            return -1 === n ? e : e.slice(0, t) + e.slice(n);
+          })(e),
+        );
+      }
+      const I = () => (b || D(new g()), b),
+        D = (e) => {
+          (b = e),
+            s.SV.InstallErrorReportingStore(b),
+            o.lq.InstallErrorReportingStore(b),
+            a.LJ.InstallErrorReportingStore(b),
+            l.R.InstallErrorReportingStore(b);
+        };
+      function w(e) {
+        return (0, i.mG)(this, void 0, void 0, function* () {
+          try {
+            const n = yield window.crypto.subtle.digest(
+              "SHA-256",
+              (function (e) {
+                const t = new ArrayBuffer(2 * e.length),
+                  n = new Uint16Array(t);
+                for (let t = 0, i = e.length; t < i; t++)
+                  n[t] = e.charCodeAt(t);
+                return t;
+              })(e),
+            );
+            return ((t = n),
+            Array.prototype.map
+              .call(new Uint8Array(t), (e) => ("00" + e.toString(16)).slice(-2))
+              .join("")).slice(0, 16);
+          } catch (e) {
+            return "";
+          }
+          var t;
+        });
+      }
+    },
     7979: (e, t, n) => {
       "use strict";
       n.d(t, { Z: () => R });
@@ -10067,6 +11138,7 @@
             (this.m_rgIncludedAppTypes = e.included_types()),
             (this.m_rgIncludedAppIDs = e.included_appids()),
             (this.m_bIsFree = e.is_free()),
+            (this.m_bIsFreeTemporary = e.is_free_temporarily()),
             (this.m_bIsEarlyAccess = e.is_early_access()),
             (this.m_RelatedItems =
               null === (n = e.related_items()) || void 0 === n
@@ -10271,6 +11343,9 @@
             : this.GetIncludedAppIDs();
         }
         BIsFree() {
+          return this.m_bIsFree;
+        }
+        BIsFreeTemporary() {
           return this.m_bIsFree;
         }
         BIsFreeWeekend() {
@@ -12909,7 +13984,7 @@
             this.props.instance.visible
           ) {
             const e = N() ? 150 : 0;
-            this.props.instance.Hide(e);
+            this.props.instance.OnCancel(e);
           }
         }
         OnKeyDown(e) {
@@ -13775,6 +14850,7 @@
                       { className: "DialogToggle_Description" },
                       this.props.description,
                     ),
+                  this.props.children,
                 )
               : o.createElement(
                   s.s,
@@ -16332,19 +17408,23 @@
             explainer: s,
             icon: a,
             layout: l,
-            bottomSeparator: c,
-            highlightOnFocus: u,
-            childrenContainerWidth: d,
-            padding: m,
-            inlineWrap: h,
-            fieldClassName: p,
+            disabled: c,
+            onActivate: u,
+            bottomSeparator: d,
+            highlightOnFocus: m,
+            childrenContainerWidth: h,
+            padding: p,
+            inlineWrap: _,
+            fieldClassName: g,
           } = e,
-          _ = (0, i._T)(e, [
+          v = (0, i._T)(e, [
             "label",
             "description",
             "explainer",
             "icon",
             "layout",
+            "disabled",
+            "onActivate",
             "bottomSeparator",
             "highlightOnFocus",
             "childrenContainerWidth",
@@ -16352,28 +17432,30 @@
             "inlineWrap",
             "fieldClassName",
           ]),
-          { refWithValue: g, refForElement: v } = (0, P.ww)(t);
+          { refWithValue: f, refForElement: C } = (0, P.ww)(t);
         return o.createElement(
           Je,
           {
             label: n,
             description: r,
             icon: a,
-            bottomSeparator: c,
-            highlightOnFocus: u,
+            bottomSeparator: d,
+            highlightOnFocus: m,
             childrenLayout: null != l ? l : "inline",
-            childrenContainerWidth: null != d ? d : "min",
+            childrenContainerWidth: null != h ? h : "min",
             onMouseDown: (e) => {
               var t;
-              null === (t = g.current) || void 0 === t || t.focus(),
+              null === (t = f.current) || void 0 === t || t.focus(),
                 e.preventDefault();
             },
-            padding: m,
-            inlineWrap: h,
+            padding: p,
+            inlineWrap: _,
             explainer: s,
-            className: p,
+            className: g,
+            disabled: c,
+            onActivate: c ? u : void 0,
           },
-          o.createElement(M, Object.assign({}, _, { ref: v })),
+          o.createElement(M, Object.assign({}, v, { disabled: c, ref: C })),
         );
       });
       const $e = o.forwardRef(function (e, t) {
@@ -17666,12 +18748,20 @@
         );
       });
       const Rt = o.forwardRef(function (e, t) {
-        const { value: n, onChange: i, disabled: s, navRef: a } = e;
+        const {
+          value: n,
+          onChange: i,
+          disabled: s,
+          className: a,
+          focusable: c,
+          children: u,
+          navRef: d,
+        } = e;
         return o.createElement(
           r.Ks,
           {
             noFocusRing: !0,
-            className: (0, l.Z)(Xe().Toggle, {
+            className: (0, l.Z)(a, Xe().Toggle, {
               [Xe().Disabled]: !!s,
               [Xe().On]: !!n,
             }),
@@ -17682,10 +18772,12 @@
               }
             },
             ref: t,
-            navRef: a,
+            navRef: d,
+            focusable: c,
           },
           o.createElement("div", { className: Xe().ToggleRail }),
           o.createElement("div", { className: Xe().ToggleSwitch }),
+          u,
         );
       });
       (0, i.gn)(
@@ -17716,6 +18808,7 @@
                   inlineWrap: "keep-inline",
                   onContextMenu: this.props.onContextMenu,
                   actionDescriptionMap: t,
+                  onClick: this.props.onClick,
                 },
                 n,
               ),
@@ -24111,7 +25204,7 @@
         123 !== Array.from(new Set([123]))[0] &&
           console.error("Should not include prototypejs.");
     },
-    534: (e, t, n) => {
+    3939: (e, t, n) => {
       "use strict";
       var i = n(5556),
         o = (n(316), n(9414), n(7427)),
@@ -37620,7 +38713,7 @@
         Ds = n(8843),
         ws = n(3923);
       const As = o.lazy(() =>
-          Promise.all([n.e(5425), n.e(3068)]).then(n.bind(n, 2725)),
+          Promise.all([n.e(5425), n.e(3068)]).then(n.bind(n, 210)),
         ),
         Ts = (e) =>
           o.createElement(
@@ -37764,1026 +38857,7 @@
           ),
         );
       }
-      var Ms = n(4351),
-        Os = n(938),
-        Ns = n(2260);
-      n(4308);
-      class Bs {
-        constructor() {
-          (this.m_mapCallbacks = new Map()),
-            (this.m_rgRegisteredEMsgs = []),
-            (this.m_mapServiceMethodHandlers = new Map()),
-            (this.m_rgRegisteredServiceMethodHandlers = []),
-            (0, v.rC)(this);
-        }
-        InstallErrorReportingStore(e) {
-          this.m_ErrorReportingStore = e;
-        }
-        DispatchMsgToHandlers(e, t) {
-          let n = e.GetEMsg();
-          if (146 == n) {
-            let n = e.Hdr().target_job_name();
-            if (n) {
-              let i = this.m_mapServiceMethodHandlers.get(n);
-              if (i) {
-                this.DEBUG_LogMessageDispatch(e, i[0]);
-                for (let n of i)
-                  try {
-                    n.invoke(e, t);
-                  } catch (e) {
-                    e instanceof Error && this.m_ErrorReportingStore
-                      ? this.m_ErrorReportingStore.ReportError(e)
-                      : console.error(
-                          "MessageHandlers failed to dispatch message to handler: ",
-                          e,
-                        );
-                  }
-                return !0;
-              }
-            }
-          } else {
-            let t = this.m_mapCallbacks.get(n);
-            if (t) {
-              this.DEBUG_LogMessageDispatch(e, t[0]);
-              for (let n of t)
-                try {
-                  n.invoke(e);
-                } catch (e) {
-                  e instanceof Error && this.m_ErrorReportingStore
-                    ? this.m_ErrorReportingStore.ReportError(e)
-                    : console.error(
-                        "MessageHandlers failed to dispatch message to handler: ",
-                        e,
-                      );
-                }
-              return !0;
-            }
-          }
-          return !1;
-        }
-        DEBUG_LogMessageDispatch(e, t) {
-          0;
-        }
-        get emsg_list() {
-          return this.m_rgRegisteredEMsgs;
-        }
-        get servicemethod_list() {
-          return this.m_rgRegisteredServiceMethodHandlers;
-        }
-        AddCallback(e, t, n) {
-          let i = this.m_mapCallbacks.get(e);
-          return (
-            i ||
-              ((i = []),
-              this.m_mapCallbacks.set(e, i),
-              this.m_rgRegisteredEMsgs.push(e)),
-            i.push({ invoke: n, msgClass: t }),
-            {
-              invoke: n,
-              unregister: () => {
-                let t = this.m_mapCallbacks.get(e);
-                if (t)
-                  for (let e = 0; e < t.length; e++)
-                    t[e].invoke == n && (t.splice(e, 1), e--);
-              },
-            }
-          );
-        }
-        AddServiceMethodHandler(e, t) {
-          let n = (n, i) => {
-            let o = f.gA.InitFromMsg(e.request, n),
-              r = f.gA.Init(e.response, 147),
-              s = t(o, r),
-              a = (e) => {
-                r.Hdr().set_eresult(e), i(r);
-              };
-            s instanceof Promise
-              ? s.then(a).catch(() => {
-                  a(2);
-                })
-              : a(s);
-          };
-          return (
-            this.m_mapServiceMethodHandlers.has(e.name)
-              ? console.error("Duplicate registration for method " + e.name)
-              : (this.m_mapServiceMethodHandlers.set(e.name, [
-                  { invoke: n, msgClass: e.request },
-                ]),
-                this.m_rgRegisteredServiceMethodHandlers.push(e.name)),
-            {
-              invoke: n,
-              unregister: () => {
-                let t = this.m_mapServiceMethodHandlers.get(e.name);
-                if (t)
-                  for (let e = 0; e < t.length; e++)
-                    t[e].invoke == n && (t.splice(e, 1), e--);
-              },
-            }
-          );
-        }
-        AddServiceNotificationHandler(e, t) {
-          let n = (n, i) => {
-              let o = f.gA.InitFromMsg(e.request, n);
-              t(o);
-            },
-            i = this.m_mapServiceMethodHandlers.get(e.name);
-          return (
-            i ||
-              ((i = []),
-              this.m_mapServiceMethodHandlers.set(e.name, i),
-              this.m_rgRegisteredServiceMethodHandlers.push(e.name)),
-            i.push({ invoke: n, msgClass: e.request }),
-            {
-              invoke: n,
-              unregister: () => {
-                let t = this.m_mapServiceMethodHandlers.get(e.name);
-                if (t)
-                  for (let e = 0; e < t.length; e++)
-                    t[e].invoke == n && (t.splice(e, 1), e--);
-              },
-            }
-          );
-        }
-        RegisterBaseEMessageHandler(e, t) {
-          return this.AddCallback(e, void 0, t);
-        }
-        RegisterEMessageHandler(e, t, n) {
-          return this.AddCallback(e, t, (e) => {
-            n(f.gA.InitFromMsg(t, e));
-          });
-        }
-        RegisterEMessageAction(e, t, n) {
-          return this.AddCallback(e, t, (e) => {
-            (0, v.z)(() => {
-              n(f.gA.InitFromMsg(t, e));
-            });
-          });
-        }
-        RegisterServiceNotificationHandler(e, t) {
-          return this.AddServiceNotificationHandler(e, t);
-        }
-        RegisterServiceNotificationHandlerAction(e, t) {
-          return this.AddServiceNotificationHandler(e, (e) => {
-            let n;
-            return (
-              (0, v.z)(() => {
-                n = t(e);
-              }),
-              n
-            );
-          });
-        }
-        RegisterServiceMethodHandler(e, t) {
-          return this.AddServiceMethodHandler(e, t);
-        }
-        RegisterServiceMethodHandlerAction(e, t) {
-          return this.AddServiceMethodHandler(e, (e, n) => {
-            let i;
-            return (
-              (0, v.z)(() => {
-                i = t(e, n);
-              }),
-              i
-            );
-          });
-        }
-      }
-      (0, i.gn)([v.LO], Bs.prototype, "m_rgRegisteredEMsgs", void 0),
-        (0, i.gn)(
-          [v.LO],
-          Bs.prototype,
-          "m_rgRegisteredServiceMethodHandlers",
-          void 0,
-        );
-      var Gs = n(4701),
-        xs = n(5255);
-      class Fs {
-        constructor(e, t) {
-          var n, i, o, r, s, a, l;
-          (this.m_socket = null),
-            (this.Log = new Nn.sO("CWebSocketConnection", () => this.m_sName)),
-            (this.m_bDisconnectRequested = !1),
-            (this.m_bConnecting = !1),
-            (this.m_sName = e),
-            (this.m_fnOnMessageHandler = t.fnOnMessageHandler),
-            (this.m_fnOnCloseHandler = t.fnOnCloseHandler),
-            (this.m_fnOnReconnectStartHandler =
-              null !== (n = t.fnOnReconnectStartHandler) && void 0 !== n
-                ? n
-                : () => {}),
-            (this.m_fnOnReconnectFinishHandler =
-              null !== (i = t.fnOnReconnectFinishHandler) && void 0 !== i
-                ? i
-                : () => {}),
-            (this.m_nConnectAttemptsMax =
-              null !== (o = t.nConnectAttemptsMax) && void 0 !== o ? o : 8),
-            (this.m_nConnectAttemptTimeoutMs =
-              null !== (r = t.nConnectAttemptTimeoutMs) && void 0 !== r
-                ? r
-                : 1e3),
-            (this.m_bReconnectOnFailure =
-              null !== (s = t.bReconnectOnFailure) && void 0 !== s && s),
-            (this.m_nReconnectAttemptsMax =
-              null !== (a = t.nReconnectAttemptsMax) && void 0 !== a ? a : 3e4),
-            (this.m_nReconnectAttemptTimeoutMs =
-              null !== (l = t.nReconnectAttemptTimeoutMs) && void 0 !== l
-                ? l
-                : 1e4);
-        }
-        get name() {
-          return this.m_sName;
-        }
-        Connect(e) {
-          return (0, i.mG)(this, void 0, void 0, function* () {
-            return (
-              (this.m_sURL = e),
-              this.ConnectWithRetry(
-                this.m_sURL,
-                this.m_nConnectAttemptsMax,
-                this.m_nConnectAttemptTimeoutMs,
-              )
-            );
-          });
-        }
-        Reconnect() {
-          return (0, i.mG)(this, void 0, void 0, function* () {
-            return this.ConnectWithRetry(
-              this.m_sURL,
-              this.m_nReconnectAttemptsMax,
-              this.m_nReconnectAttemptTimeoutMs,
-            );
-          });
-        }
-        GetInterAttemptBackoffMs(e) {
-          return 1e3 * (0, Dt.Lh)(e, 1, 5);
-        }
-        ConnectWithRetry(e, t, n) {
-          return (0, i.mG)(this, void 0, void 0, function* () {
-            this.m_bConnecting = !0;
-            let i = 0;
-            do {
-              try {
-                const t = yield this.ConnectToSocket(e, n);
-                if (1 == t.result) return (this.m_bConnecting = !1), t;
-                this.Log.Warning(
-                  `connect attempt failed: ${t.result} - ${t.message}`,
-                );
-              } catch (e) {
-                this.Log.Warning(
-                  `connect attempt failed: exception ${e.name} - ${e}`,
-                );
-              }
-              const o = this.GetInterAttemptBackoffMs(i);
-              this.Log.Info(`connect retry: attempt:${i}/${t} backoff:${o}`),
-                yield new Promise((e) => setTimeout(e, o)),
-                (this.m_socket = null),
-                (i += 1);
-            } while (i < t);
-            return (
-              this.Log.Warning(
-                `websocket connect retry: limit exceeeded, bailing - ${this.name}`,
-              ),
-              (this.m_bConnecting = !1),
-              this.BShouldReconnect() && this.StartReconnect(),
-              { result: 2, message: "not ready, exceeded retry count" }
-            );
-          });
-        }
-        Disconnect() {
-          this.Log.Info("disconnect requested"),
-            (this.m_bDisconnectRequested = !0),
-            this.m_socket.close();
-        }
-        PrepareForShutdown() {
-          this.Log.Info("shutdown pending"), (this.m_bDisconnectRequested = !0);
-        }
-        BShouldReconnect() {
-          return (
-            !this.m_bConnecting &&
-            !!this.m_bReconnectOnFailure &&
-            !this.m_bDisconnectRequested
-          );
-        }
-        StartReconnect() {
-          return (0, i.mG)(this, void 0, void 0, function* () {
-            this.Log.Info("start reconnect"),
-              (this.m_socket = null),
-              this.m_fnOnReconnectStartHandler({ connection: this });
-            if (1 != (yield this.Reconnect()).result)
-              return (
-                this.Log.Warning(
-                  "failed to re-connect to websocket after close",
-                ),
-                this.m_fnOnReconnectFinishHandler({
-                  connection: this,
-                  eResult: 2,
-                }),
-                void this.m_fnOnCloseHandler({
-                  connection: this,
-                  bError: !0,
-                  bIsExpectedToReconnect: !1,
-                })
-              );
-            this.Log.Info("reconnect successful"),
-              this.m_fnOnReconnectFinishHandler({
-                connection: this,
-                eResult: 1,
-              });
-          });
-        }
-        ConnectToSocket(e, t) {
-          return (0, i.mG)(this, void 0, void 0, function* () {
-            if (null != this.m_socket)
-              return this.m_socket.readyState != WebSocket.OPEN
-                ? (this.Log.Error(
-                    `websocket in an unexpected state: ${this.m_socket.readyState}`,
-                  ),
-                  { result: 2, message: "websocket in an unexpected state" })
-                : { result: 1, message: "ready" };
-            try {
-              this.m_socket = new WebSocket(e);
-            } catch (e) {
-              return (
-                this.Log.Warning("failed to initialize websocket connection"),
-                {
-                  result: 35,
-                  message: "Failed to initialize websocket connection",
-                }
-              );
-            }
-            (this.m_socket.binaryType = "arraybuffer"),
-              (this.m_socket.onerror = this.OnSocketError),
-              (this.m_socket.onmessage = this.OnSocketMessage),
-              (this.m_socket.onopen = this.OnSocketOpen),
-              (this.m_socket.onclose = this.OnSocketClose);
-            return (yield this.WaitForSocketOpen(this.m_socket, t))
-              ? (this.Log.Info("connection ready"),
-                { result: 1, message: "ready" })
-              : (this.Log.Warning("failed to reach open state"),
-                { result: 2, message: "failed to reach open state" });
-          });
-        }
-        WaitForSocketOpen(e, t) {
-          return (0, i.mG)(this, void 0, void 0, function* () {
-            if (e.readyState != WebSocket.CONNECTING)
-              return e.readyState == WebSocket.OPEN;
-            let n = t / 100;
-            for (; e.readyState == WebSocket.CONNECTING && n > 0; )
-              n--, yield new Promise((e) => setTimeout(e, 100));
-            return e.readyState == WebSocket.OPEN;
-          });
-        }
-        BCanSendMessages() {
-          return (
-            null != this.m_socket && this.m_socket.readyState == WebSocket.OPEN
-          );
-        }
-        OnSocketError(e) {
-          this.Log.Warning("websocket error");
-        }
-        OnSocketOpen(e) {
-          this.Log.Info("websocket open");
-        }
-        OnSocketClose(e) {
-          if (this.m_bDisconnectRequested)
-            return (
-              this.Log.Info("websocket closed"),
-              void this.m_fnOnCloseHandler({
-                connection: this,
-                bError: !1,
-                bIsExpectedToReconnect: !1,
-              })
-            );
-          if (this.m_bConnecting) return;
-          this.Log.Warning("websocket unexpectedly closed");
-          const t = this.BShouldReconnect();
-          this.m_fnOnCloseHandler({
-            connection: this,
-            bError: !0,
-            bIsExpectedToReconnect: t,
-          }),
-            t && this.StartReconnect();
-        }
-        OnSocketMessage(e) {
-          return (0, i.mG)(this, void 0, void 0, function* () {
-            this.m_fnOnMessageHandler(e.data);
-          });
-        }
-        SendSerializedMessage(e) {
-          try {
-            return this.m_socket.send(e), 1;
-          } catch (e) {
-            return 2;
-          }
-        }
-      }
-      (0, i.gn)([ue.ak], Fs.prototype, "OnSocketError", null),
-        (0, i.gn)([ue.ak], Fs.prototype, "OnSocketOpen", null),
-        (0, i.gn)([ue.ak], Fs.prototype, "OnSocketClose", null),
-        (0, i.gn)([ue.ak], Fs.prototype, "OnSocketMessage", null);
-      const Ps = new Nn.sO("WebUITransport");
-      class Us {
-        constructor() {
-          (this.m_iMsgSeq = 1),
-            (this.m_mapPendingMethodRequests = new Map()),
-            (this.m_messageHandlers = new Bs()),
-            (this.m_mapServiceCallErrorCount = new Map()),
-            (this.m_mapConnectionDetails = new Map()),
-            (this.m_bInitialized = !1);
-        }
-        static InstallErrorReportingStore(e) {
-          this.sm_ErrorReportingStore = e;
-        }
-        BIsValid() {
-          return this.m_bInitialized;
-        }
-        ReportError(e) {
-          Ps.Warning(e);
-          const t = Us.sm_ErrorReportingStore;
-          t &&
-            t.ReportError(new Error(e), {
-              bIncludeMessageInIdentifier: !0,
-              cCallsitesToIgnore: 1,
-            });
-        }
-        Init() {
-          return (0, i.mG)(this, void 0, void 0, function* () {
-            if (!xs.De.IN_CLIENT) return;
-            const e = yield SteamClient.WebUITransport.GetTransportInfo();
-            this.CreateConnection(
-              1,
-              "steamUI",
-              e.portSteamUI,
-              e.authKeySteamUI,
-            ),
-              this.CreateConnection(
-                2,
-                "clientdll",
-                e.portClientdll,
-                e.authKeyClientdll,
-              ),
-              (0, Ns.SM)().SetDefaultTransport(this),
-              (0, Ns.SM)().SetDefaultHandlerRegistry(this.m_messageHandlers),
-              Gs.zw.RegisterForNotifyStartShutdown(this.OnStartShutdown);
-          });
-        }
-        get messageHandlers() {
-          return this.m_messageHandlers;
-        }
-        SetStatusEventHandler(e) {
-          this.m_fnOnStatusEventHandler = e;
-        }
-        SetReconnectErrorHandler(e) {
-          this.m_fnOnReconnectErrorHandler = e;
-        }
-        CreateConnection(e, t, n, i) {
-          const o = {
-              bReconnectOnFailure: !0,
-              fnOnMessageHandler: this.OnWebsocketMessage,
-              fnOnCloseHandler: this.OnWebsocketClose,
-              fnOnReconnectStartHandler: this.OnWebsocketReconnectStart,
-              fnOnReconnectFinishHandler: this.OnWebsocketReconnectFinish,
-              nConnectAttemptsMax: 10,
-              nConnectAttemptTimeoutMs: 1e3,
-              nReconnectAttemptsMax: 20,
-              nReconnectAttemptTimeoutMs: 1e3,
-            },
-            r = {
-              connection: new Fs(t, o),
-              sUrl: `ws://localhost:${n}/transportsocket/`,
-              sAuthKey: i,
-              eClientExecutionSite: e,
-            };
-          this.m_mapConnectionDetails.set(e, r);
-        }
-        SendMsg(e, t, n, i) {
-          return new Promise((o, r) => {
-            var s;
-            const a = i.eClientExecutionSite;
-            if (null == a || 0 == a)
-              return (
-                Ps.Error(`SendMsg: Invalid client execution site: ${a}`),
-                void r(`Transport SendMsg: invalid client execution site ${a}`)
-              );
-            const l = this.m_mapConnectionDetails.get(a);
-            if (null == l)
-              return (
-                Ps.Error(
-                  `SendMsg: could not find connection for execution site: ${a}`,
-                ),
-                void r(
-                  `Transport SendMsg: could not find connection for execution site ${a}`,
-                )
-              );
-            const c = l.connection;
-            if (!c.BCanSendMessages()) {
-              const t =
-                null !== (s = this.m_mapServiceCallErrorCount.get(e)) &&
-                void 0 !== s
-                  ? s
-                  : 1;
-              this.m_mapServiceCallErrorCount.set(e, t + 1);
-              const n = `SendMsg: Attempt to send message but socket wasn't ready: ${c.name} - ${e}`;
-              return (
-                1 == t && this.ReportError(n),
-                Ps.Warning(n + ` error count: ${t}`),
-                void r("Transport SendMsg: socket not ready")
-              );
-            }
-            const u = this.m_iMsgSeq++;
-            t.SetEMsg(146),
-              t.Hdr().set_target_job_name(e),
-              t.Hdr().set_jobid_source("" + u);
-            if (1 != c.SendSerializedMessage(t.Serialize()))
-              return (
-                Ps.Error("SendMsg: Failed to send message"),
-                void r("Transport SendMsg: failed to send message")
-              );
-            this.m_mapPendingMethodRequests.set(u, {
-              m_iSeq: u,
-              m_responseClass: n,
-              m_fnCallback: o,
-              m_fnError: r,
-            });
-          });
-        }
-        SendNotification(e, t, n) {
-          var i;
-          const o = n.eClientExecutionSite;
-          if (null == o || 0 == o)
-            return (
-              Ps.Error(`SendNotification: Invalid client execution site: ${o}`),
-              !1
-            );
-          const r = this.m_mapConnectionDetails.get(o);
-          if (null == r)
-            return (
-              Ps.Error(
-                `SendNotification: could not find connection for execution site: ${o}`,
-              ),
-              !1
-            );
-          const s = r.connection;
-          if (!s.BCanSendMessages()) {
-            const t =
-              null !== (i = this.m_mapServiceCallErrorCount.get(e)) &&
-              void 0 !== i
-                ? i
-                : 1;
-            this.m_mapServiceCallErrorCount.set(e, t + 1);
-            const n = `SendNotification: Attempt to send message but socket wasn't ready: ${s.name} - ${e}`;
-            return (
-              1 == t && this.ReportError(n),
-              Ps.Warning(n + ` error count: ${t}`),
-              !1
-            );
-          }
-          t.SetEMsg(146), t.Hdr().set_target_job_name(e);
-          return 1 == s.SendSerializedMessage(t.Serialize());
-        }
-        ConnectToSite(e) {
-          return (0, i.mG)(this, void 0, void 0, function* () {
-            const t = e.connection,
-              n = yield t.Connect(e.sUrl);
-            if (1 != n.result) return n;
-            return (yield this.SendAuthMessage(e)).BSuccess()
-              ? { result: 1, message: "connected" }
-              : { result: 2, message: "client auth failed" };
-          });
-        }
-        MakeReady() {
-          return (0, i.mG)(this, void 0, void 0, function* () {
-            const e = [];
-            for (const [t, n] of this.m_mapConnectionDetails)
-              e.push(this.ConnectToSite(n));
-            const t = yield Promise.all(e);
-            (this.m_bInitialized = !0), this.DispatchTransportStatusUpdate();
-            for (const e of t) if (1 != e.result) return e;
-            return { result: 1, message: "ready" };
-          });
-        }
-        GetConnectionDetails(e) {
-          for (const [t, n] of this.m_mapConnectionDetails)
-            if (n.connection === e) return n;
-          return (
-            Ps.Error("GetConnectionDetails: failed to identify connection"),
-            null
-          );
-        }
-        DispatchTransportStatusUpdate() {
-          if (!this.m_fnOnStatusEventHandler) return;
-          let e = !0;
-          for (const [t, n] of this.m_mapConnectionDetails)
-            n.connection.BCanSendMessages() || (e = !1);
-          this.m_fnOnStatusEventHandler({ bConnected: e });
-        }
-        OnWebsocketReconnectStart(e) {
-          this.DispatchTransportStatusUpdate();
-        }
-        OnWebsocketReconnectFinish(e) {
-          if ((this.DispatchTransportStatusUpdate(), 1 != e.eResult))
-            return (
-              Ps.Warning(
-                "OnWebsocketReconnect: Failed to reconnect to steam client",
-              ),
-              void this.m_fnOnReconnectErrorHandler({})
-            );
-          this.FailAllPendingRequests();
-          const t = this.GetConnectionDetails(e.connection);
-          this.SendAuthMessage(t);
-        }
-        OnWebsocketClose(e) {
-          e.bIsExpectedToReconnect || this.FailAllPendingRequests();
-        }
-        OnWebsocketMessage(e) {
-          const t = new Os.At(e),
-            n = f.gA.InitHeaderFromPacket(t);
-          n.Hdr().jobid_target() && n.Hdr().jobid_target() !== j.Z3
-            ? this.DispatchMethodResponse(n)
-            : this.DispatchNotification(n);
-        }
-        DispatchMethodResponse(e) {
-          const t = parseInt(e.Hdr().jobid_target()),
-            n = this.m_mapPendingMethodRequests.get(t);
-          if (null == n)
-            return void (0, E.X)(
-              !1,
-              "Transport Error: no pending callback for request",
-            );
-          (0, E.X)(
-            t == n.m_iSeq,
-            "Transport Error: mistmatched request sequence",
-          ),
-            this.m_mapPendingMethodRequests.delete(t);
-          const i = f.gA.InitFromMsg(n.m_responseClass, e);
-          n.m_fnCallback(i);
-        }
-        DispatchNotification(e) {
-          this.m_messageHandlers.DispatchMsgToHandlers(e, (e) => {
-            (0, E.X)(
-              !1,
-              "Transport Error: A notification should not generate a response",
-            );
-          });
-        }
-        FailAllPendingRequests() {
-          for (const [e, t] of this.m_mapPendingMethodRequests) {
-            this.ReportError(
-              `FailAllPendingRequests: forcing failure for request: ${t.m_responseClass.name}`,
-            );
-            let e = f.gA.Init(t.m_responseClass);
-            e.Hdr().set_eresult(2), t.m_fnCallback(e);
-          }
-          this.m_mapPendingMethodRequests.clear();
-        }
-        SendAuthMessage(e) {
-          return (0, i.mG)(this, void 0, void 0, function* () {
-            const t = Gs.zw.AuthenticateHandler.name,
-              n = { eClientExecutionSite: e.eClientExecutionSite },
-              i = f.gA.Init(Gs.np);
-            i.Hdr().set_webui_auth_key(e.sAuthKey);
-            return yield this.SendMsg(
-              t,
-              i,
-              Gs.zw.AuthenticateHandler.response,
-              n,
-            );
-          });
-        }
-        OnStartShutdown(e) {
-          for (const [e, t] of this.m_mapConnectionDetails)
-            t.connection.PrepareForShutdown();
-          return 1;
-        }
-      }
-      (0, i.gn)([ue.ak], Us.prototype, "OnWebsocketReconnectStart", null),
-        (0, i.gn)([ue.ak], Us.prototype, "OnWebsocketReconnectFinish", null),
-        (0, i.gn)([ue.ak], Us.prototype, "OnWebsocketClose", null),
-        (0, i.gn)([ue.ak], Us.prototype, "OnWebsocketMessage", null),
-        (0, i.gn)([ue.ak], Us.prototype, "OnStartShutdown", null);
-      new Us();
-      const Hs =
-        window.addEventListener || (n.g && n.g.addEventListener) || (() => {});
-      let Vs,
-        js = [],
-        Ws = (e, t) => js.push({ error: e, cCallsitesToIgnore: t });
-      const zs = !0;
-      {
-        const e = console.assert;
-        console.assert = (t, n, ...i) => {
-          t || Ws(new Error(Zs(n, ...i)), 2), e.apply(console, [t, n, ...i]);
-        };
-        const t = console.error;
-        (console.error = (e, ...n) => {
-          Ws(new Error(Zs(e, ...n)), 1), t.apply(console, [e, ...n]);
-        }),
-          (console.clogerror = (e, n, ...i) => {
-            Ws(new Error(Zs(n, ...i)), e + 1), t.apply(console, [n, ...i]);
-          }),
-          Hs("error", (e) => {
-            Ws(e.error, 0);
-          }),
-          (Vs = window.setTimeout(() => {
-            (js = []), (Ws = () => {});
-          }, 3e4));
-      }
-      const Ks = { cCallsitesToIgnore: 0, bIncludeMessageInIdentifier: !1 },
-        qs = ["/localhost:1337/"];
-      class Xs {
-        constructor(e = !0) {
-          (this.m_transport = null),
-            (this.m_rgErrorQueue = []),
-            (this.m_sendTimer = null),
-            (this.m_bEnabled = !0),
-            (this.m_bInitialized = !1),
-            e
-              ? (js.forEach(({ error: e, cCallsitesToIgnore: t }) =>
-                  this.ReportError(e, { cCallsitesToIgnore: t }),
-                ),
-                (Ws = (e, t) => this.ReportError(e, { cCallsitesToIgnore: t })))
-              : (Ws = () => {}),
-            (js = []),
-            clearTimeout(Vs),
-            window.setTimeout(() => {
-              this.m_bInitialized ||
-                ((this.m_bEnabled = !1), (this.m_rgErrorQueue = []));
-            }, 3e4);
-        }
-        Init(e, t, n) {
-          (this.m_bInitialized = !0),
-            (this.m_strProduct = e),
-            (this.m_strVersion = t),
-            (this.m_transport = n),
-            this.m_bEnabled ||
-              (console.error(
-                "Error reporting was initialized after being disabled, possibly dropping errors.",
-              ),
-              (this.m_bEnabled = !0)),
-            this.m_rgErrorQueue.length &&
-              (this.SendErrorReports(this.m_rgErrorQueue),
-              (this.m_rgErrorQueue = []));
-        }
-        ReportError(e, t) {
-          return (0, i.mG)(this, void 0, void 0, function* () {
-            if (!e)
-              return (
-                console.warn(
-                  "Failed to report error: ReportError() was called without an error to report.",
-                ),
-                null
-              );
-            try {
-              const n = Object.assign(Object.assign({}, Ks), t);
-              if (!this.m_bEnabled) return null;
-              0;
-              const o = yield (function (e, t) {
-                try {
-                  return e.stack && e.stack.match(Qs)
-                    ? (function (e, t) {
-                        return (0, i.mG)(this, void 0, void 0, function* () {
-                          const {
-                              cCallsitesToIgnore: n,
-                              bIncludeMessageInIdentifier: i,
-                            } = t,
-                            o = e.stack.split("\n");
-                          let r = ta(o.filter((e) => !!e.match(Qs))[n]);
-                          i && (r = `${r} ${e.message}`);
-                          const s = o
-                            .map((e) => {
-                              const t = e.match(/(.*)\((.*):(\d+):(\d+)\)/);
-                              if (!t) return e;
-                              if (5 === t.length) {
-                                const [e, n, i, o, r] = t,
-                                  s = parseInt(o),
-                                  a = parseInt(r);
-                                if (!isNaN(s) && !isNaN(a)) return [n, i, s, a];
-                              }
-                              return e;
-                            })
-                            .filter((e) => !!e);
-                          return {
-                            identifier: r,
-                            identifierHash: yield ia(r),
-                            message: s,
-                          };
-                        });
-                      })(e, t)
-                    : e.stack && e.stack.match(Ys)
-                      ? (function (e, t) {
-                          return (0, i.mG)(this, void 0, void 0, function* () {
-                            const {
-                                cCallsitesToIgnore: n,
-                                bIncludeMessageInIdentifier: i,
-                              } = t,
-                              o = e.stack.split("\n");
-                            let r = ta(o.filter((e) => !!e.match(Ys))[n]);
-                            i && (r = `${r} ${e.message}`);
-                            const s = o
-                              .map((e) => {
-                                const t = e.match(/(.*@)?(.*):(\d+):(\d+)/);
-                                if (!t) return e;
-                                if (5 === t.length) {
-                                  const [e, n, i, o, r] = t,
-                                    s = parseInt(o),
-                                    a = parseInt(r);
-                                  if (!isNaN(s) && !isNaN(a))
-                                    return [n, i, s, a];
-                                }
-                                return e;
-                              })
-                              .filter((e) => !!e);
-                            return {
-                              identifier: r,
-                              identifierHash: yield ia(r),
-                              message: [e.message, ...s],
-                            };
-                          });
-                        })(e, t)
-                      : e.stack && e.stack.match(Js)
-                        ? (function (e, t) {
-                            return (0, i.mG)(
-                              this,
-                              void 0,
-                              void 0,
-                              function* () {
-                                const {
-                                    bIncludeMessageInIdentifier: n,
-                                    cCallsitesToIgnore: i,
-                                  } = t,
-                                  o = e.stack.split("\n"),
-                                  r = o[i],
-                                  s = r.split("/");
-                                let a = s[s.length - 1];
-                                r.indexOf("@") > -1 &&
-                                  (a = r.split("@")[0] + "@" + a),
-                                  n && (a = `${a} ${e.message}`);
-                                const l = o
-                                  .map((e) => {
-                                    const t = e.match(/(.*@)?(.*):(\d+):(\d+)/);
-                                    if (!t) return e;
-                                    if (5 === t.length) {
-                                      const [e, n, i, o, r] = t,
-                                        s = parseInt(o),
-                                        a = parseInt(r);
-                                      if (!isNaN(s) && !isNaN(a))
-                                        return [n, i, s, a];
-                                    }
-                                    return e;
-                                  })
-                                  .filter((e) => !!e);
-                                return {
-                                  identifier: a,
-                                  identifierHash: yield ia(a),
-                                  message: [e.message, ...l],
-                                };
-                              },
-                            );
-                          })(e, t)
-                        : (ea ||
-                            (console.warn(
-                              "Error reporter does not know how to parse generated stack:",
-                            ),
-                            console.warn(e.stack),
-                            (ea = !0)),
-                          null);
-                } catch (e) {
-                  return (
-                    console.warn(`Failed to normalize error stack: ${e}`), null
-                  );
-                }
-              })(e, n);
-              return o ? (this.SendErrorReport(o), o) : null;
-            } catch (e) {
-              return console.log(`Failed to report error: ${e}`), null;
-            }
-          });
-        }
-        BIsBlacklisted(e) {
-          for (let t of e.message) {
-            let n = JSON.stringify(t);
-            for (let t of qs) {
-              const i = new RegExp(t);
-              if (n.match(i))
-                return console.warn("Report", e, "matched regex", t), !0;
-            }
-          }
-          return !1;
-        }
-        SendErrorReport(e) {
-          this.BIsBlacklisted(e) ||
-            (this.m_transport
-              ? this.QueueSend(e)
-              : this.m_rgErrorQueue.push(e));
-        }
-        QueueSend(e) {
-          this.m_rgErrorQueue.push(e),
-            this.m_sendTimer ||
-              (this.m_sendTimer = window.setTimeout(() => {
-                this.SendErrorReports(this.m_rgErrorQueue),
-                  (this.m_rgErrorQueue = []),
-                  (this.m_sendTimer = null);
-              }, 1e4));
-        }
-        SendErrorReports(e) {
-          if (!e || !e.length) return;
-          const t = f.gA.Init(Ms.$4),
-            n = e.reduce(
-              (e, t) => (
-                e[t.identifier]
-                  ? e[t.identifier].count++
-                  : (e[t.identifier] = { report: t, count: 1 }),
-                e
-              ),
-              {},
-            ),
-            i = Object.keys(n).map((e) => {
-              const { report: t, count: i } = n[e],
-                o = new Ms.kb();
-              return (
-                o.set_count(i),
-                o.set_identifier(t.identifier + " " + t.identifierHash),
-                o.set_message(JSON.stringify(t.message)),
-                o
-              );
-            });
-          t.Body().set_product(this.m_strProduct),
-            t.Body().set_version(this.m_strVersion),
-            t.Body().set_errors(i),
-            Ms.TF.ReportClientError(this.m_transport, t);
-        }
-        get version() {
-          return this.m_strVersion;
-        }
-        get product() {
-          return this.m_strProduct;
-        }
-        get reporting_enabled() {
-          return zs;
-        }
-      }
-      function Zs(e, ...t) {
-        if ("string" == typeof e && 0 === t.length) return e;
-        return [e, ...t]
-          .map((e) => {
-            try {
-              return String(e);
-            } catch (e) {
-              return "[Stringify Error]";
-            }
-          })
-          .join(", ");
-      }
-      const Qs = /^\s*at .*(\S+:\d+|\(native\))/m,
-        Ys = /(^|@)\S+:\d+/,
-        Js = /.*\/bundle-[a-zA-Z0-9]+:\d+:\d+/;
-      let $s,
-        ea = !1;
-      function ta(e) {
-        return (function (e) {
-          const t = "https://",
-            n = e.indexOf(t);
-          if (-1 === n) return e;
-          const i = e.indexOf("/", n + t.length);
-          return -1 === i ? e : e.slice(0, n) + e.slice(i);
-        })(
-          (function (e) {
-            const t = e.lastIndexOf("?");
-            if (-1 === t) return e;
-            const n = e.indexOf(":", t);
-            return -1 === n ? e : e.slice(0, t) + e.slice(n);
-          })(e),
-        );
-      }
-      const na = (e) => {
-        ($s = e),
-          B.SV.InstallErrorReportingStore($s),
-          f.lq.InstallErrorReportingStore($s),
-          W.LJ.InstallErrorReportingStore($s),
-          Us.InstallErrorReportingStore($s);
-      };
-      function ia(e) {
-        return (0, i.mG)(this, void 0, void 0, function* () {
-          try {
-            const n = yield window.crypto.subtle.digest(
-              "SHA-256",
-              (function (e) {
-                const t = new ArrayBuffer(2 * e.length),
-                  n = new Uint16Array(t);
-                for (let t = 0, i = e.length; t < i; t++)
-                  n[t] = e.charCodeAt(t);
-                return t;
-              })(e),
-            );
-            return ((t = n),
-            Array.prototype.map
-              .call(new Uint8Array(t), (e) => ("00" + e.toString(16)).slice(-2))
-              .join("")).slice(0, 16);
-          } catch (e) {
-            return "";
-          }
-          var t;
-        });
-      }
+      var Ms = n(2011);
       n(7765);
       (0, v.jQ)({ enforceActions: "never" }),
         (0, M.Dj)(() =>
@@ -38791,7 +38865,7 @@
             document.getElementById("application_config")
               ? (0, s.Ek)("application_config")
               : (0, s.Ek)(),
-              ($s || na(new Xs()), $s).Init(
+              (0, Ms.Uh)().Init(
                 "Help",
                 CLSTAMP,
                 new I.J(s.De.WEBAPI_BASE_URL).GetServiceTransport(),
@@ -38815,8 +38889,8 @@
                       ]);
                     W.Yt.InitFromObjects(r, a, o, s);
                   }
-                  for (const e of oa) W.Yt.AddTokens(e);
-                  oa = void 0;
+                  for (const e of Os) W.Yt.AddTokens(e);
+                  Os = void 0;
                 });
               })(s.De.LANGUAGE),
               document.getElementById("application_root") &&
@@ -38825,12 +38899,12 @@
                   .render(o.createElement(Ts, {}));
           }),
         );
-      let oa = [];
+      let Os = [];
     },
   },
   (e) => {
     e.O(0, [3250], () => {
-      return (t = 534), e((e.s = t));
+      return (t = 3939), e((e.s = t));
       var t;
     });
     e.O();

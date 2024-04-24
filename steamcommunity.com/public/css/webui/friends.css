@@ -1694,13 +1694,20 @@ html.contextmenu_ContextMenuPopup_14wqd body {
   cursor: pointer;
   font-size: 14px;
 }
+.radio_Button_Hijmc.radio_Disabled_3hmGW {
+  cursor: default;
+}
 .radio_Button_Hijmc.radio_Active_3-_jM,
 .radio_Button_Hijmc.radio_Active_3-_jM:hover {
   background-color: #1f8dff;
   cursor: default;
   color: #fff;
 }
-.radio_Button_Hijmc:hover {
+.radio_Button_Hijmc.radio_Active_3-_jM.radio_Disabled_3hmGW,
+.radio_Button_Hijmc.radio_Active_3-_jM.radio_Disabled_3hmGW:hover {
+  background-color: #3d4450;
+}
+.radio_Button_Hijmc:not(.radio_Disabled_3hmGW):hover {
   background-color: #33363e;
 }
 .dropdown_DialogDropDownMenu_Item_2oAiZ {
@@ -24829,8 +24836,8 @@ a.bbcodes_LinkButton_jPpgc:hover {
   line-height: 10px;
 }
 .remoteplay_ContentForm_3yIT_ {
-  background: none !important;
-  background-color: #25282e !important;
+  max-height: 100%;
+  min-height: 100%;
 }
 .remoteplay_ContentBox_3g04Q {
   background-color: #2f3137;
@@ -24860,37 +24867,6 @@ a.bbcodes_LinkButton_jPpgc:hover {
   flex-direction: row;
   align-items: center;
   justify-content: flex-end;
-}
-.remoteplay_HeaderActions_IZNod .remoteplay_GameInfo_1Wexk {
-  flex: 1;
-  font-size: 14px;
-  text-transform: uppercase;
-  color: #91c257;
-  line-height: 1.2em;
-  font-weight: bold;
-  letter-spacing: 0.07em;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-}
-.remoteplay_HeaderActions_IZNod
-  .remoteplay_GameInfo_1Wexk
-  .remoteplay_GameName_3tbCv {
-  cursor: pointer;
-  margin-top: 2px;
-  flex-direction: row;
-  align-items: center;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  margin-right: 24px;
-}
-.remoteplay_HeaderActions_IZNod
-  .remoteplay_GameInfo_1Wexk
-  .remoteplay_GameIcon_1xj5E {
-  width: 18px;
-  height: 18px;
-  margin-right: 6px;
 }
 .remoteplay_HeaderActions_IZNod .remoteplay_HeaderActionsButtons_3VsHt {
   display: flex;
@@ -24938,6 +24914,7 @@ a.bbcodes_LinkButton_jPpgc:hover {
 }
 .remoteplay_Section_1gsof {
   margin-top: 12px;
+  width: 100%;
 }
 .remoteplay_Section_1gsof .remoteplay_SectionItemMargin_14zCU {
   margin-top: 12px;
@@ -25656,6 +25633,7 @@ svg.remoteplay_IconMobile_2371n {
 }
 .remoteplay_Footer_2l7VY.DialogFooter {
   margin-top: 0;
+  margin-bottom: 24px;
 }
 @keyframes reorderablelist_BackgroundAnimation_3Jw1U {
   from {
@@ -38722,7 +38700,7 @@ button.TextButton.gpfocus {
 .DialogCheckbox:hover:not(.Disabled),
 .DialogCheckbox_Container:focus .DialogCheckbox:not(.Disabled),
 .DialogCheckbox:focus:not(.Disabled) {
-  background-color: #1e1f23;
+  background-color: #090909;
 }
 .DialogCheckbox_Container:focus,
 .DialogCheckbox:focus {

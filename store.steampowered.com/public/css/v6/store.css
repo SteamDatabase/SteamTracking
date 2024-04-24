@@ -3269,6 +3269,7 @@ div.game_hover {
 	font-size: 16px;
 	color: #6f8695;
 	display: inline-block;
+	max-height: 12px; /* Restrict height to the text around it to not push down content below it */
 }
 
 .review_score_icon.positive {

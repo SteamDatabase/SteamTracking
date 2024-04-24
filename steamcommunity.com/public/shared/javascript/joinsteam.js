@@ -207,7 +207,7 @@ function EmailConfirmedVerified( rgResults )
 		$J( '.create_account_form_container' ).hide();
 		$J( '.joinsteam_existingaccount_ctn' ).show();
 
-		if ( rgResults.guest )
+		if ( rgResults.guest && g_bGuest )
 		{
 			$J.ajax( {
 				type: 'POST',

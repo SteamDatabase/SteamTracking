@@ -2048,6 +2048,18 @@ a.guide_row {
 	max-width: 940px;
 }
 
+.help_issue_details.help_section_body.steam_feature a {
+	color: #9ad5e4;
+	text-decoration: none;
+	border-bottom: 1px dotted rgba(176, 233, 255, .5);
+}
+
+.help_issue_details.help_section_body.steam_feature a:hover {
+	color: #ffffff;
+	text-decoration: none;
+	border-bottom: 1px dotted rgba(255, 255, 255, 1);
+}
+
 .help_issue_details.help_section_body.steam_saleevent {
 	max-width: 712px;
 }

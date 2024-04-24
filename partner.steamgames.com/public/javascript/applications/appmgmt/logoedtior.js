@@ -1512,7 +1512,7 @@
       var X = o(31846),
         q = o(37563),
         Q = o(46882),
-        $ = o(53040);
+        $ = o(1485);
       function ee(e, t) {
         const o = (0, q.kQ)("editorconfig", t);
         let s = new H(o);

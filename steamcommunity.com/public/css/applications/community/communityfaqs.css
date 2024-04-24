@@ -683,7 +683,13 @@ body.help_faqs {
 }
 ._2sb3tLnzLRwrqh0PNdD2lF .NOvHUNQANYp-AIJstDhAd a {
   color: #9ad5e4;
-  text-decoration: underline;
+  text-decoration: none;
+  border-bottom: 1px dotted rgba(176, 233, 255, 0.5);
+}
+._2sb3tLnzLRwrqh0PNdD2lF .NOvHUNQANYp-AIJstDhAd a:hover {
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 1px dotted #fff;
 }
 ._2cCH3yNLHHafG87E2uIfR- {
   max-width: 32px;

@@ -1362,6 +1362,11 @@ GHomepage = {
 			GHomepage.oDisplayLists.top_vr, 'home', 4, 100, { games_already_in_library: false, dlc: false, localized: true, displayed_elsewhere: false }
 		);
 
+				if( GHomepage.oDisplayLists.top_vr.length > 0 && GStoreItemData.rgPackageData[ 354231 ])
+		{
+			rgCapsules.unshift( { packageid: 354231 });
+		}
+
 		if ( rgCapsules.length < 4 )
 		{
 			$TopVRTitles.hide();

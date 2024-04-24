@@ -3936,6 +3936,15 @@ background: -webkit-linear-gradient( 134deg, #e8f5fc 5%,#cce9f9 95%);
     display: none;
 }
 
+.steamdeck_banner_desktop, 
+.steamdeck_banner_mobile {
+	width: 100%;
+	transition: box-shadow 100ms;
+}
+
+.steamdeck_banner_desktop:hover {
+	box-shadow: 0 0 12px #66c0f4;
+}
 
 /* .home_hardware_banner {
     display: none;
@@ -3952,9 +3961,9 @@ background: -webkit-linear-gradient( 134deg, #e8f5fc 5%,#cce9f9 95%);
 		display: block;
 	}
 
-	.home_hardware_banner > a:hover {
+	/* .home_hardware_banner > a:hover {
 		box-shadow: 0 0 12px #66c0f4;
-	}
+	} */
 
 	.home_hardware_banner img {
 		max-width: 100%;

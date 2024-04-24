@@ -186,16 +186,15 @@
     81033: (t, e, n) => {
       "use strict";
       n.d(e, {
-        Q: () => P,
+        Q: () => S,
         fH: () => k,
         U8: () => _,
         o: () => h,
         vc: () => I,
-        K$: () => S,
-        n$: () => G,
+        K$: () => G,
         BS: () => E,
-        Lr: () => b,
-        z8: () => C,
+        Lr: () => C,
+        z8: () => P,
         zp: () => f,
       });
       var i = n(85556),
@@ -315,7 +314,7 @@
               v.append("name", n),
               v.append("start_time", t.toString()),
               v.append("end_time", e.toString()),
-              v.append("strJSONDiscountInfo", P(n, a, o, r, c));
+              v.append("strJSONDiscountInfo", S(n, a, o, r, c));
             let h = null;
             try {
               const l = yield s().post(i, v, {
@@ -646,31 +645,30 @@
         return v.Get().GetDiscountEvent(t);
       }
       function I(t) {
-        const { data: e } = G(t);
+        const { data: e } = (function (t) {
+          const [e, n] = (0, o.useState)(v.Get().GetDiscountEvent(t)),
+            [a, s] = o.useState(!!t);
+          return (
+            o.useEffect(() => {
+              if ((!e && t) || ((null == e ? void 0 : e.id) != t && t)) {
+                (() =>
+                  (0, i.mG)(this, void 0, void 0, function* () {
+                    try {
+                      const e = yield v.Get().LoadSingleDiscountEvent(t);
+                      e && n(e);
+                    } finally {
+                      s(!1);
+                    }
+                  }))();
+              } else s(!1);
+            }, [t, e]),
+            (0, d.Qg)(v.Get().GetDiscountEventCallback(t), n),
+            { data: e, isLoading: a }
+          );
+        })(t);
         return e;
       }
       function G(t) {
-        const [e, n] = (0, o.useState)(v.Get().GetDiscountEvent(t)),
-          [a, s] = o.useState(!!t);
-        return (
-          o.useEffect(() => {
-            if ((!e && t) || ((null == e ? void 0 : e.id) != t && t)) {
-              (() =>
-                (0, i.mG)(this, void 0, void 0, function* () {
-                  try {
-                    const e = yield v.Get().LoadSingleDiscountEvent(t);
-                    e && n(e);
-                  } finally {
-                    s(!1);
-                  }
-                }))();
-            } else s(!1);
-          }, [t, e]),
-          (0, d.Qg)(v.Get().GetDiscountEventCallback(t), n),
-          { data: e, isLoading: a }
-        );
-      }
-      function S(t) {
         const [e, n] = (0, o.useState)(v.Get().GetDiscountEvent(t)),
           [i, a] = (0, o.useState)(v.Get().GetAppList(t));
         return (
@@ -688,7 +686,7 @@
           i ? { oDiscountEvent: e, rgAppList: i } : null
         );
       }
-      function P(t, e, n, i, a) {
+      function S(t, e, n, i, a) {
         return JSON.stringify({
           discount_event: {
             name: t,
@@ -703,10 +701,10 @@
           },
         });
       }
-      function C() {
+      function P() {
         return { fnCreateDiscountEvent: v.Get().CreateDiscountEvent };
       }
-      function b() {
+      function C() {
         return {
           fnUpdateDiscountEventAppAndPublisherList:
             v.Get().UpdateDiscountEventPublisherAndAppList,

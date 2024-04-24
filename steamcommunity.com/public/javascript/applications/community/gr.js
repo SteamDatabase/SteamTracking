@@ -107,20 +107,18 @@
     },
     50928: (e, t, r) => {
       "use strict";
-      r.d(t, { JZ: () => u });
+      r.d(t, { hh: () => o });
       var n = r(85556),
-        C = r(47427),
-        i = r(65255),
-        l = r(10082),
-        o = r(54842),
-        a = r(30750);
-      class s {
+        C = (r(47427), r(65255)),
+        i = r(10082),
+        l = r(54842);
+      class o {
         constructor() {
           (this.m_mapAppMarkerLoadingPromises = new Map()),
             (this.m_mapAppMarkers = new Map()),
             (this.m_mapURLForApp = new Map()),
             (this.m_fnTimelineURLGenerator = void 0),
-            (0, o.rC)(this);
+            (0, l.rC)(this);
         }
         BIsLoaded(e) {
           return this.m_mapAppMarkers.has(e);
@@ -129,6 +127,19 @@
           this.m_mapURLForApp.get(e) != r && this.LoadAppPublicMarkers(e, r);
           const n = this.m_mapAppMarkers.get(e);
           if (n) return n.get(t) || void 0;
+        }
+        GetGameMarkerSVGById(e, t) {
+          var r;
+          const n = this.m_fnTimelineURLGenerator
+            ? this.m_fnTimelineURLGenerator(e)
+            : a(e);
+          this.m_mapURLForApp.get(e) != n && this.LoadAppPublicMarkers(e, n);
+          const C = this.m_mapAppMarkers.get(e);
+          if (C)
+            return (
+              (null === (r = C.get(t)) || void 0 === r ? void 0 : r.svg) ||
+              void 0
+            );
         }
         GetAllUseableMarkerID(e, t) {
           this.m_mapURLForApp.get(e) != t && this.LoadAppPublicMarkers(e, t);
@@ -153,16 +164,16 @@
             try {
               const n = yield fetch(t);
               n.ok ||
-                (i.De.IN_CLIENT &&
+                (C.De.IN_CLIENT &&
                   SteamClient.Apps.ReportLibraryAssetCacheMiss(e, 6));
-              const C = yield n.text(),
+              const l = yield n.text(),
                 o = new DOMParser(),
                 a = o
-                  .parseFromString(C, "image/svg+xml")
+                  .parseFromString(l, "image/svg+xml")
                   .getElementsByTagName("defs")[0];
               Array.from(a.children).forEach((e) => {
                 var t;
-                const n = (0, l.iv)(
+                const n = (0, i.iv)(
                     null ===
                       (t = e.attributes.getNamedItem("steam-timeline-color")) ||
                       void 0 === t
@@ -186,55 +197,76 @@
         }
         static Get() {
           return (
-            s.s_Singleton ||
-              ((s.s_Singleton = new s()),
-              "dev" == i.De.WEB_UNIVERSE &&
-                (window.g_GameTimelineMarker = s.s_Singleton)),
-            s.s_Singleton
+            o.s_Singleton ||
+              ((o.s_Singleton = new o()),
+              "dev" == C.De.WEB_UNIVERSE &&
+                (window.g_GameTimelineMarker = o.s_Singleton)),
+            o.s_Singleton
           );
         }
       }
-      function c(e) {
-        return (0, a.SZ)(() => s.Get().BIsLoaded(e));
+      function a(e) {
+        return `${C.De.BASE_URL_SHARED_CDN}app_config/timeline/${e}_markers.svg`;
       }
-      function u(e, t) {
-        const r = s.Get(),
-          n = c(e),
-          i = d(e),
-          [l, o] = (0, C.useState)(null);
+      (0, n.gn)([l.LO], o.prototype, "m_mapAppMarkerLoadingPromises", void 0),
+        (0, n.gn)([l.LO], o.prototype, "m_mapAppMarkers", void 0),
+        (0, n.gn)([l.LO], o.prototype, "m_mapURLForApp", void 0),
+        (0, n.gn)([l.LO], o.prototype, "m_fnTimelineURLGenerator", void 0);
+    },
+    2253: (e, t, r) => {
+      "use strict";
+      r.d(t, { B: () => c, p: () => s });
+      var n = r(85556),
+        C = r(54842),
+        i = r(30750),
+        l = r(47427),
+        o = r(37563);
+      class a {
+        constructor() {
+          (this.m_markerStore = null), (0, C.rC)(this);
+        }
+        Init(e) {
+          this.m_markerStore = e;
+        }
+        GetMarkerStore() {
+          return this.m_markerStore;
+        }
+        static Get() {
+          return (
+            a.s_Singleton ||
+              ((a.s_Singleton = new a()),
+              "dev" == o.De.WEB_UNIVERSE &&
+                (window.g_MarkerStore = a.s_Singleton)),
+            a.s_Singleton
+          );
+        }
+      }
+      function s(e) {
+        a.Get().Init(e);
+      }
+      function c(e, t) {
+        const [r, n] = (0, l.useState)(),
+          C = (0, i.SZ)(() => a.Get().GetMarkerStore().BIsLoaded(e));
         return (
-          (0, C.useEffect)(() => {
-            n ? o(r.GetSVGForID(e, t, i)) : r.LoadAppPublicMarkers(e, i);
-          }, [l, e, t, r, n, i]),
-          l
+          (0, l.useEffect)(() => {
+            const r = a.Get().GetMarkerStore().GetGameMarkerSVGById(e, t);
+            r && C && n(r);
+          }, [e, C, t]),
+          r
         );
       }
-      function d(e) {
-        const t = s.Get();
-        return (0, a.SZ)(() => {
-          const r = t.GetTimelineMarkerURLFunction();
-          return r
-            ? r(e)
-            : (function (e) {
-                return `${i.De.BASE_URL_SHARED_CDN}app_config/timeline/${e}_markers.svg`;
-              })(e);
-        });
-      }
-      (0, n.gn)([o.LO], s.prototype, "m_mapAppMarkerLoadingPromises", void 0),
-        (0, n.gn)([o.LO], s.prototype, "m_mapAppMarkers", void 0),
-        (0, n.gn)([o.LO], s.prototype, "m_mapURLForApp", void 0),
-        (0, n.gn)([o.LO], s.prototype, "m_fnTimelineURLGenerator", void 0);
+      (0, n.gn)([C.LO], a.prototype, "m_markerStore", void 0);
     },
     10082: (e, t, r) => {
       "use strict";
       r.d(t, {
         Mv: () => a,
         Q2: () => w,
-        XT: () => L,
+        XT: () => h,
         cY: () => m,
         iv: () => s,
         jq: () => g,
-        vt: () => h,
+        vt: () => L,
       });
       var n = r(65255),
         C = r(77556),
@@ -285,8 +317,8 @@
           (e[(e.Brown = 7)] = "Brown"),
           (e[(e.Gray = 8)] = "Gray");
       })(o || (o = {}));
-      const u = c(o).map((e) => o[e]);
-      class d {
+      const d = c(o).map((e) => o[e]);
+      class u {
         constructor() {
           this.m_mapSteamTimelineMarkers = new Map();
         }
@@ -305,18 +337,18 @@
         }
         static Get() {
           return (
-            d.s_Singleton ||
-              ((d.s_Singleton = new d()),
-              d.s_Singleton.Init(),
+            u.s_Singleton ||
+              ((u.s_Singleton = new u()),
+              u.s_Singleton.Init(),
               "dev" == n.De.WEB_UNIVERSE &&
-                (window.g_SteamTimelineMarker = d.s_Singleton)),
-            d.s_Singleton
+                (window.g_SteamTimelineMarker = u.s_Singleton)),
+            u.s_Singleton
           );
         }
         AddMarker(e, t, r) {
           const n = null != r ? r : o.White;
           this.m_mapSteamTimelineMarkers.set(e, { func: t, color: n });
-          for (const r of u) {
+          for (const r of d) {
             const n = `${e}_${o[r]}`.toLowerCase();
             this.m_mapSteamTimelineMarkers.set(n, { func: t, color: r });
           }
@@ -368,10 +400,10 @@
             this.AddMarker("screenshot", C.w_, o.Gray);
         }
       }
-      function L(e) {
-        return d.Get().GetMarkerByID(e);
+      function h(e) {
+        return u.Get().GetMarkerByID(e);
       }
-      function h() {
+      function L() {
         return { func: C.Jx, color: o.Blue };
       }
       function m() {
@@ -398,8 +430,8 @@
           [i, l] = (0, n.useState)(!1),
           [o, a] = (0, n.useState)(null),
           [s, c] = (0, n.useState)(null),
-          [u, d] = (0, n.useState)(null),
-          [L, h] = (0, n.useState)(null),
+          [d, u] = (0, n.useState)(null),
+          [h, L] = (0, n.useState)(null),
           [m, w] = (0, n.useState)(null);
         return {
           bLoading: e,
@@ -407,16 +439,16 @@
           bSuccess: i,
           strError: o,
           strSuccess: s,
-          elSuccess: L,
-          elError: u,
+          elSuccess: h,
+          elError: d,
           strThrobber: m,
           fnSetLoading: t,
           fnSetError: C,
           fnSetSuccess: l,
           fnSetStrError: a,
           fnSetStrSuccess: c,
-          fnSetElSuccess: h,
-          fnSetElError: d,
+          fnSetElSuccess: L,
+          fnSetElError: u,
           fnSetThrobber: w,
         };
       }
@@ -432,32 +464,32 @@
           } = e,
           {
             bLoading: c,
-            bError: u,
-            bSuccess: d,
-            strError: L,
-            strSuccess: h,
+            bError: d,
+            bSuccess: u,
+            strError: h,
+            strSuccess: L,
             elSuccess: m,
             elError: w,
             strThrobber: g,
           } = r;
-        return u || L || w
+        return d || h || w
           ? n.createElement(
               C.uH,
               { strTitle: t, bAlertDialog: !0, closeModal: a },
-              Boolean(L) &&
+              Boolean(h) &&
                 n.createElement(
                   "div",
                   { className: i.ErrorStylesWithIcon },
-                  L || (0, l.Xx)("#Error_ErrorCommunicatingWithNetwork"),
+                  h || (0, l.Xx)("#Error_ErrorCommunicatingWithNetwork"),
                 ),
               Boolean(w) && w,
             )
-          : d || h || m
+          : u || L || m
             ? n.createElement(
                 C.uH,
                 {
                   strTitle: t,
-                  strDescription: h || (0, l.Xx)("#EventDisplay_Share_Success"),
+                  strDescription: L || (0, l.Xx)("#EventDisplay_Share_Success"),
                   bAlertDialog: !0,
                   closeModal: a,
                 },
@@ -480,29 +512,29 @@
         AP: () => v,
         B7: () => M,
         Be: () => F,
-        Bu: () => h,
-        CJ: () => H,
+        Bu: () => L,
+        CJ: () => S,
         Cd: () => B,
-        Eq: () => Q,
-        FE: () => _,
-        FG: () => u,
-        G7: () => O,
+        Eq: () => J,
+        FE: () => G,
+        FG: () => d,
+        G7: () => U,
         Gu: () => a,
-        I8: () => y,
-        Io: () => G,
+        I8: () => k,
+        Io: () => _,
         Jx: () => o,
-        KT: () => J,
-        MC: () => d,
+        KT: () => Q,
+        MC: () => u,
         OQ: () => T,
         Q0: () => x,
-        Qm: () => L,
+        Qm: () => h,
         Ux: () => Z,
         Vy: () => m,
         W4: () => R,
         WF: () => X,
         WN: () => f,
         X: () => N,
-        Xd: () => S,
+        Xd: () => H,
         Xs: () => w,
         ZA: () => I,
         _O: () => g,
@@ -512,13 +544,13 @@
         cW: () => Y,
         en: () => E,
         ge: () => i,
-        hF: () => U,
+        hF: () => O,
         hy: () => p,
         jf: () => W,
         kI: () => s,
         n5: () => b,
         rZ: () => c,
-        rp: () => k,
+        rp: () => y,
         sO: () => D,
         u4: () => V,
         v3: () => j,
@@ -651,7 +683,7 @@
           }),
         );
       }
-      function u(e) {
+      function d(e) {
         return C.createElement(
           "svg",
           {
@@ -669,7 +701,7 @@
           }),
         );
       }
-      function d(e) {
+      function u(e) {
         return C.createElement(
           "svg",
           {
@@ -685,7 +717,7 @@
           }),
         );
       }
-      function L(e) {
+      function h(e) {
         return C.createElement(
           "svg",
           {
@@ -717,7 +749,7 @@
           }),
         );
       }
-      function h(e) {
+      function L(e) {
         return C.createElement(
           "svg",
           {
@@ -869,7 +901,7 @@
           }),
         );
       }
-      function G(e) {
+      function _(e) {
         return C.createElement(
           "svg",
           {
@@ -885,7 +917,7 @@
           }),
         );
       }
-      function _(e) {
+      function G(e) {
         return C.createElement(
           "svg",
           {
@@ -901,7 +933,7 @@
           }),
         );
       }
-      function y(e) {
+      function k(e) {
         return C.createElement(
           "svg",
           {
@@ -921,7 +953,7 @@
           }),
         );
       }
-      function k(e) {
+      function y(e) {
         return C.createElement(
           "svg",
           {
@@ -1006,7 +1038,7 @@
           }),
         );
       }
-      function H(e) {
+      function S(e) {
         return C.createElement(
           "svg",
           {
@@ -1024,7 +1056,7 @@
           }),
         );
       }
-      function S(e) {
+      function H(e) {
         return C.createElement(
           "svg",
           {
@@ -1188,7 +1220,7 @@
           }),
         );
       }
-      function O(e) {
+      function U(e) {
         return C.createElement(
           "svg",
           {
@@ -1206,7 +1238,7 @@
           }),
         );
       }
-      function U(e) {
+      function O(e) {
         return C.createElement(
           "svg",
           {
@@ -1286,7 +1318,7 @@
           }),
         );
       }
-      function J(e) {
+      function Q(e) {
         return C.createElement(
           "svg",
           Object.assign({}, e, {
@@ -1304,7 +1336,7 @@
           }),
         );
       }
-      function Q(e) {
+      function J(e) {
         let { direction: t } = e,
           r =
             ((0, n._T)(e, ["direction"]),
@@ -1413,10 +1445,10 @@
         a = r(6279),
         s = r(91707),
         c = r(12015),
-        u = r(86357),
-        d = r(14592),
-        L = r(16332),
-        h = r(48081);
+        d = r(86357),
+        u = r(14592),
+        h = r(16332),
+        L = r(48081);
       function m(e) {
         const [t, r] = C.useState(!1);
         return (
@@ -1503,17 +1535,17 @@
           C.Fragment,
           null,
           C.createElement(
-            u.dF,
-            { loader: r, fnGetManifest: n, mode: u.tP.CommunityClip },
+            d.dF,
+            { loader: r, fnGetManifest: n, mode: d.tP.CommunityClip },
             C.createElement(
               "div",
-              { className: h.ClipDetails },
+              { className: L.ClipDetails },
               C.createElement(
                 "div",
-                { className: h.VideoContainer },
-                C.createElement(d.i, { positionAbsolute: !1, autoPlay: !0 }),
+                { className: L.VideoContainer },
+                C.createElement(u.i, { positionAbsolute: !1, autoPlay: !0 }),
               ),
-              C.createElement(L.k9, { loader: r }),
+              C.createElement(h.k9, { loader: r }),
             ),
           ),
         );

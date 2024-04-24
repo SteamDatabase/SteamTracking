@@ -85,6 +85,7 @@
             (this.m_rgIncludedAppTypes = e.included_types()),
             (this.m_rgIncludedAppIDs = e.included_appids()),
             (this.m_bIsFree = e.is_free()),
+            (this.m_bIsFreeTemporary = e.is_free_temporarily()),
             (this.m_bIsEarlyAccess = e.is_early_access()),
             (this.m_RelatedItems =
               null === (s = e.related_items()) || void 0 === s
@@ -277,6 +278,9 @@
             : this.GetIncludedAppIDs();
         }
         BIsFree() {
+          return this.m_bIsFree;
+        }
+        BIsFreeTemporary() {
           return this.m_bIsFree;
         }
         BIsFreeWeekend() {
@@ -1063,14 +1067,14 @@
           apply_user_filters: e.apply_user_filters || t.apply_user_filters,
         };
       }
-      function G(e, t) {
+      function y(e, t) {
         return (0, r.mG)(this, void 0, void 0, function* () {
           const s = yield e,
             r = yield t;
           return 1 != s ? s : r;
         });
       }
-      class y {
+      class G {
         constructor() {
           (this.k_QueueWaitUntilRequestMS = 5),
             (this.k_nMaxBatchSize = 250),
@@ -1115,21 +1119,21 @@
         }
         static Get() {
           return (
-            y.sm_instance ||
-              ((y.sm_instance = new y()),
-              (window.StoreItemCache = y.sm_instance)),
-            y.sm_instance
+            G.sm_instance ||
+              ((G.sm_instance = new G()),
+              (window.StoreItemCache = G.sm_instance)),
+            G.sm_instance
           );
         }
         static Initialize(e, t) {
           return (0, r.mG)(this, void 0, void 0, function* () {
             (0, u.X)(
-              !y.Get().m_bInitialized,
+              !G.Get().m_bInitialized,
               "CStoreItemCache was already initialized; initialize it only once.",
             ),
-              (y.Get().m_SteamInterface = e),
-              (y.Get().m_bUsePartnerAPI = !!t),
-              (y.Get().m_bInitialized = !0);
+              (G.Get().m_SteamInterface = e),
+              (G.Get().m_bUsePartnerAPI = !!t),
+              (G.Get().m_bInitialized = !0);
           });
         }
         GetSteamInterface() {
@@ -1177,7 +1181,7 @@
           });
         }
         static BIsInitialized() {
-          return y.Get().m_bInitialized;
+          return G.Get().m_bInitialized;
         }
         QueueAppRequest(e, t) {
           return (0, r.mG)(this, void 0, void 0, function* () {
@@ -1292,7 +1296,7 @@
           return (0, r.mG)(this, void 0, void 0, function* () {
             if (
               ((0, u.X)(
-                y.ValidateDataRequest(s),
+                G.ValidateDataRequest(s),
                 "Invalid Data Request: " + JSON.stringify(s),
               ),
               "string" == typeof e && (e = parseInt(e)),
@@ -1474,7 +1478,7 @@
                 (t = S(null == s ? void 0 : s.dataRequest, t)),
                   s && _.push(s.promise),
                   this.m_mapAppsInFlight.set(e, {
-                    promise: s ? G(s.promise, c) : c,
+                    promise: s ? y(s.promise, c) : c,
                     dataRequest: t,
                   });
               }
@@ -1489,7 +1493,7 @@
                   (t = S(null == s ? void 0 : s.dataRequest, t)),
                     s && _.push(s.promise),
                     this.m_mapPackageInFlight.set(e, {
-                      promise: s ? G(s.promise, c) : c,
+                      promise: s ? y(s.promise, c) : c,
                       dataRequest: t,
                     });
                 }
@@ -1504,7 +1508,7 @@
                   (t = S(null == s ? void 0 : s.dataRequest, t)),
                     s && _.push(s.promise),
                     this.m_mapBundleInFlight.set(e, {
-                      promise: s ? G(s.promise, c) : c,
+                      promise: s ? y(s.promise, c) : c,
                       dataRequest: t,
                     });
                 }
@@ -1519,7 +1523,7 @@
                   (t = S(null == s ? void 0 : s.dataRequest, t)),
                     s && _.push(s.promise),
                     this.m_mapTagsInFlight.set(e, {
-                      promise: s ? G(s.promise, c) : c,
+                      promise: s ? y(s.promise, c) : c,
                       dataRequest: t,
                     });
                 }
@@ -1534,7 +1538,7 @@
                   (t = S(null == s ? void 0 : s.dataRequest, t)),
                     s && _.push(s.promise),
                     this.m_mapCreatorsInFlight.set(e, {
-                      promise: s ? G(s.promise, c) : c,
+                      promise: s ? y(s.promise, c) : c,
                       dataRequest: t,
                     });
                 }
@@ -1549,7 +1553,7 @@
                   (t = S(null == s ? void 0 : s.dataRequest, t)),
                     s && _.push(s.promise),
                     this.m_mapHubCategoriesInFlight.set(e, {
-                      promise: s ? G(s.promise, c) : c,
+                      promise: s ? y(s.promise, c) : c,
                       dataRequest: t,
                     });
                 }
@@ -1621,9 +1625,9 @@
               let C = null !== (c = e.creatorid()) && void 0 !== c ? c : 0,
                 S = null !== (d = t.creatorid()) && void 0 !== d ? d : 0;
               if (C != S) return C - S;
-              let G = null !== (_ = e.hubcategoryid()) && void 0 !== _ ? _ : 0,
-                y = null !== (h = t.hubcategoryid()) && void 0 !== h ? h : 0;
-              return G != y ? G - y : 0;
+              let y = null !== (_ = e.hubcategoryid()) && void 0 !== _ ? _ : 0,
+                G = null !== (h = t.hubcategoryid()) && void 0 !== h ? h : 0;
+              return y != G ? y - G : 0;
             }),
             t
           );
@@ -1975,10 +1979,10 @@
           return i;
         }
       }
-      (y.k_DataRequest_CommonOnly = {}),
-        (y.k_DataRequest_BasicInfo = { include_basic_info: !0 }),
-        (y.k_DataRequest_Assets = { include_assets: !0 }),
-        (y.k_DataRequest_IncludeAll = {
+      (G.k_DataRequest_CommonOnly = {}),
+        (G.k_DataRequest_BasicInfo = { include_basic_info: !0 }),
+        (G.k_DataRequest_Assets = { include_assets: !0 }),
+        (G.k_DataRequest_IncludeAll = {
           include_assets: !0,
           include_release: !0,
           include_platforms: !0,
@@ -1991,7 +1995,7 @@
           include_basic_info: !0,
           include_supported_languages: !0,
         });
-      const B = y;
+      const B = G;
     },
     86437: (e, t, s) => {
       var r;
@@ -2131,8 +2135,8 @@
             include_reviews: b,
             include_basic_info: C,
             include_supported_languages: S,
-            include_full_description: G,
-            include_included_items: y,
+            include_full_description: y,
+            include_included_items: G,
             include_assets_without_overrides: B,
             apply_user_filters: k,
           } = s;
@@ -2150,8 +2154,8 @@
               include_reviews: b,
               include_basic_info: C,
               include_supported_languages: S,
-              include_full_description: G,
-              include_included_items: y,
+              include_full_description: y,
+              include_included_items: G,
               include_assets_without_overrides: B,
               apply_user_filters: k,
             };
@@ -2173,7 +2177,7 @@
               () =>
                 null == a ? void 0 : a.cancel("useStoreItemCache: unmounting")
             );
-          }, [e, t, r, d, h, m, p, g, I, v, f, R, b, C, S, G, y, B, k, c]),
+          }, [e, t, r, d, h, m, p, g, I, v, f, R, b, C, S, y, G, B, k, c]),
           !e)
         )
           return [null, 2];

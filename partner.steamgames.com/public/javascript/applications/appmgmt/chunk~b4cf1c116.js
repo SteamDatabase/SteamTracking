@@ -448,6 +448,7 @@
             (this.m_rgIncludedAppTypes = e.included_types()),
             (this.m_rgIncludedAppIDs = e.included_appids()),
             (this.m_bIsFree = e.is_free()),
+            (this.m_bIsFreeTemporary = e.is_free_temporarily()),
             (this.m_bIsEarlyAccess = e.is_early_access()),
             (this.m_RelatedItems =
               null === (s = e.related_items()) || void 0 === s
@@ -640,6 +641,9 @@
             : this.GetIncludedAppIDs();
         }
         BIsFree() {
+          return this.m_bIsFree;
+        }
+        BIsFreeTemporary() {
           return this.m_bIsFree;
         }
         BIsFreeWeekend() {
@@ -1996,9 +2000,9 @@
               let R = null !== (l = e.tagid()) && void 0 !== l ? l : 0,
                 b = null !== (u = t.tagid()) && void 0 !== u ? u : 0;
               if (R != b) return R - b;
-              let C = null !== (d = e.creatorid()) && void 0 !== d ? d : 0,
-                y = null !== (c = t.creatorid()) && void 0 !== c ? c : 0;
-              if (C != y) return C - y;
+              let y = null !== (d = e.creatorid()) && void 0 !== d ? d : 0,
+                C = null !== (c = t.creatorid()) && void 0 !== c ? c : 0;
+              if (y != C) return y - C;
               let k = null !== (h = e.hubcategoryid()) && void 0 !== h ? h : 0,
                 S = null !== (m = t.hubcategoryid()) && void 0 !== m ? m : 0;
               return k != S ? k - S : 0;
@@ -2572,10 +2576,10 @@
               ? "bundle"
               : null;
       }
-      function C(e) {
+      function y(e) {
         return 1 == e ? 0 : 5 == e ? 2 : 2 == e ? 1 : -1;
       }
-      function y(e) {
+      function C(e) {
         return 0 == e ? 1 : 1 == e ? 2 : 2 == e ? 5 : null;
       }
       s.d(t, {
@@ -2585,7 +2589,7 @@
         D3: () => a,
         GV: () => i,
         Hy: () => l,
-        RB: () => y,
+        RB: () => C,
         TM: () => o,
         Uc: () => R,
         Xm: () => d,
@@ -2593,7 +2597,7 @@
         bg: () => b,
         hQ: () => I,
         iV: () => v,
-        mm: () => C,
+        mm: () => y,
         qE: () => n,
         qw: () => p,
         t9: () => h,

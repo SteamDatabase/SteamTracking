@@ -431,6 +431,9 @@ p.currency_change_confirm_dialog_footer {
 
 
 .account_settings_container {
+	// If you change this, make sure you update .FamilySettingsContainer
+	// in web_src/store/src/js/ui/familygroups/familymanagement.scss
+	// as well.
 	background-color: rgba(0,0,0,0.2);
 	margin-bottom: 15px;
 	padding: 8px 25px 25px 25px;

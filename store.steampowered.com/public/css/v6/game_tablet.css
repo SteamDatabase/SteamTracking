@@ -2066,7 +2066,26 @@ html.tablet .game_purchase_area_friends_want .gift_instructions {
 	padding: unset;
 }
 
+/* A member of family owns this game */
+html.tablet .game_purchase_area_owned_by_family {
+	background-color: var(--gpBackground-LightSoft);
+	padding: 12px 16px;
+	margin-bottom: 1px;
+	display: flex;
+	align-items: center;
+	column-gap: 12px;
+	font: var(--gpText-BodySmall);
+	color: var(--gpStoreLighterGrey);
+	border-radius: 0px;
+}
 
+html.tablet .game_purchase_area_owned_by_family .family_icon {
+	position: unset;
+}
+
+html.tablet .game_purchase_area_owned_by_family .family_info {
+	padding: unset;
+}
 
 /* Write a review settings */
 html.tablet #writeReviewTable .review_controls .controlblock.formattinghelp {

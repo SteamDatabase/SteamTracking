@@ -928,6 +928,17 @@ a:hover {
   padding: 2px;
   margin-right: auto;
 }
+.hMgR2gFc_fP8LK9e2Vwvq {
+  background-color: rgba(0, 0, 0, 0.2);
+  margin-bottom: 15px;
+  padding: 8px 25px 25px 25px;
+  font-size: 14px;
+}
+@media screen and (max-width: 500px) {
+  .hMgR2gFc_fP8LK9e2Vwvq {
+    padding: 8px 0px 25px 0px;
+  }
+}
 ._1t_5IvfyF8aF_tGXLkprpc ._2xRpeEOhZkwE0Gm2T2nIrX {
   display: flex;
   flex-direction: row;

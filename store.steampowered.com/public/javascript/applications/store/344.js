@@ -13185,7 +13185,6 @@
           p = i.GetBestPurchasePriceFormatted();
         return (
           s && m > 0 && (u = 0),
-          i.BIsFreeTemporary() && !m && ((m = 100), (p = "0")),
           r.createElement(B, {
             bSingleLineMode: a,
             nBaseDiscountPercentage: u,

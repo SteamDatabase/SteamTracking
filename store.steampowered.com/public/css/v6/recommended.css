@@ -1954,6 +1954,17 @@ html.touch .similar_grid_item .buttons {
 	min-height: 16px;
 }
 
+.vote_info .categorization_section {
+	padding-top: 8px;
+}
+
+.vote_info .categorization_section .categorization {
+	font-size: 12px;
+	color: #816166;
+	/* background-color: rgba( 0, 0, 0, 0.2 ); */
+	min-height: 16px;
+}
+
 .review_box .vote_info .commentCount, .recommendation_row .vote_info .commentCount {
 	float:right;
 }
@@ -2271,12 +2282,28 @@ html.touch .similar_grid_item .buttons {
 	width: 64px;
 	height: 74px;
 }
+
+html.tablet .review_box .avatar {
+	width: unset;
+	height: unset;
+}
+
 .friend_reviews .review_box a.vote_header {
 	margin-left: -206px;
 }
+
+html.tablet .friend_reviews .review_box a.vote_header {
+	margin-left: unset;
+}
+
 .friend_reviews .review_box .leftcol {
 	margin-top: 54px;
 }
+
+html.tablet .friend_reviews .review_box .leftcol {
+	margin-top: unset;
+}
+
 .friend_reviews .playerAvatar_friendindicator {
 	left: 57px;
 	top: 50px;

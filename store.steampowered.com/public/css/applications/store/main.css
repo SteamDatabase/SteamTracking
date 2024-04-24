@@ -444,13 +444,20 @@ html._2GpKTB_eizdXpH2xVGbMKi body {
   cursor: pointer;
   font-size: 14px;
 }
+._3lwcRYJ_r7x01Cn15bcdYI._3Yc8UCsmMtheFi5YrgQO-p {
+  cursor: default;
+}
 ._3lwcRYJ_r7x01Cn15bcdYI._3ZBFoxumQBb1JEVw_DZzaC,
 ._3lwcRYJ_r7x01Cn15bcdYI._3ZBFoxumQBb1JEVw_DZzaC:hover {
   background-color: #1f8dff;
   cursor: default;
   color: #fff;
 }
-._3lwcRYJ_r7x01Cn15bcdYI:hover {
+._3lwcRYJ_r7x01Cn15bcdYI._3ZBFoxumQBb1JEVw_DZzaC._3Yc8UCsmMtheFi5YrgQO-p,
+._3lwcRYJ_r7x01Cn15bcdYI._3ZBFoxumQBb1JEVw_DZzaC._3Yc8UCsmMtheFi5YrgQO-p:hover {
+  background-color: #3d4450;
+}
+._3lwcRYJ_r7x01Cn15bcdYI:not(._3Yc8UCsmMtheFi5YrgQO-p):hover {
   background-color: #33363e;
 }
 ._1R-DVEa2yqX0no8BYLtn9N {
@@ -4987,7 +4994,7 @@ button.TextButton.gpfocus {
 .DialogCheckbox:hover:not(.Disabled),
 .DialogCheckbox_Container:focus .DialogCheckbox:not(.Disabled),
 .DialogCheckbox:focus:not(.Disabled) {
-  background-color: #1e1f23;
+  background-color: #090909;
 }
 .DialogCheckbox_Container:focus,
 .DialogCheckbox:focus {

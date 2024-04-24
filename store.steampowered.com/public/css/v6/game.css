@@ -861,6 +861,7 @@ background: -webkit-linear-gradient( 30deg, rgba(117, 176, 34, 0.7) 5%,rgba(88, 
 /* if the wrapper is used instead, let the wrapper set margin-bottom instead of the game_area_purchase_game */
 .game_area_purchase_game_wrapper {
 	margin-bottom: 28px;
+	position: relative;
 }
 
 .game_area_purchase_game_wrapper .game_area_purchase_game {
@@ -883,6 +884,58 @@ background: -webkit-linear-gradient( 30deg, rgba(117, 176, 34, 0.7) 5%,rgba(88, 
 	color: #838383;
 	font-size: 12px;
 	cursor: pointer;
+}
+
+.game_area_purchase_game_wrapper .advanced_access_header_wrapper {
+	display: flex;
+	position: relative;
+	margin-left: 16px;
+	z-index: 2;
+	margin-bottom: -12px;
+}
+
+.game_area_purchase_game_wrapper .advanced_access_header_wrapper .advanced_access_header {
+	background: #E5CC8B;
+	color: #1B2838;
+	font-family: "Motiva Sans";
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	letter-spacing: 0.6px;
+	padding: 1px 7px 1px 4px;
+	text-transform: uppercase;
+}
+
+.game_area_purchase_game_wrapper .advanced_access_header_wrapper .advanced_access_header_start {
+	background: #7A7058;
+	color: #E5CC8B;
+	font-family: "Motiva Sans";
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	letter-spacing: 0.6px;
+	padding: 1px 7px 1px 6px;
+}
+
+.game_area_purchase_game_wrapper .advanced_access_start_desc {
+	color: #E5CC8B;
+	font-family: "Motiva Sans";
+	font-size: 13px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 16px;
+}
+
+.game_area_purchase_game_wrapper .advanced_access_start_desc a {
+	text-decoration: underline;
+	color: #E5CC8B;
+}
+
+.game_area_purchase_game_wrapper .advanced_access_start_desc a:hover {
+	text-decoration: underline;
+	color: white;
 }
 
 .game_area_purchase_game_wrapper.bundle .game_area_purchase_game b {
@@ -1427,6 +1480,7 @@ body.v6 .game_description_column h2.gradientbg {
 
 		    font-size: 13px;
     line-height: 18px;
+	margin-bottom: 4px;
 }
 
 .game_area_description {
@@ -3059,6 +3113,34 @@ body.v6 .game_area_already_owned.master_sub {
 
 .game_purchase_area_friends_want a {
 	color: #bfc1c4;
+}
+
+.game_purchase_area_owned_by_family {
+	height: 40px;
+	padding-left: 46px;
+	position: relative;
+	border-radius: 4px;
+
+	background-color: rgba( 0, 0, 0, 0.2 );
+
+	font-size: 12px;
+	color: #acb2b8;
+	z-index: 0;
+}
+
+.game_purchase_area_owned_by_family .family_icon {
+	position: absolute;
+	left: 12px;
+	top: 11px;
+}
+
+.game_purchase_area_owned_by_family .family_icon img {
+	height: 16px;
+    filter: brightness(0.75);
+}
+
+.game_purchase_area_owned_by_family .family_info {
+	padding-top: 12px;
 }
 
 .myactivity_block .block_content {
