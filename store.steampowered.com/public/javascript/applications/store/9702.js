@@ -2331,7 +2331,7 @@
     },
     7860: (e, t, n) => {
       "use strict";
-      n.d(t, { y: () => Se, J: () => Te });
+      n.d(t, { y: () => be, J: () => Ge });
       var a = n(47427),
         i = n(45137),
         r = n(91585),
@@ -2899,7 +2899,7 @@
                 : t.accountid_giftee
               : void 0),
           g = (0, i.IW)(),
-          f = (0, i.tI)(n.packageid, n.bundleid, !0);
+          f = (0, i.tI)(n.packageid, n.bundleid, pe(o));
         return a.createElement(
           ce,
           { className: X().LineItemSpaceBetween },
@@ -3062,25 +3062,20 @@
           d = (0, i.G1)(),
           u = (0, B.Xm)(),
           m = (0, i.bz)(),
-          p = !o.user_can_purchase_as_gift || m;
-        const _ = !(function (e) {
-            return !e.is_commercial_license;
-          })(o),
-          g = [
-            {
-              data: "myself",
-              label: (0, l.Xx)("#Cart_LineItemOptions_Myself"),
-            },
-            !_ && {
-              data: "private",
-              label: (0, l.Xx)("#Cart_LineItemOptions_Privately"),
-              tooltip: (0, l.Xx)("#Cart_LineItemOptions_PrivateTooltip"),
-            },
-            !p && {
-              data: "gift",
-              label: (0, l.Xx)("#Cart_LineItemOptions_Gift"),
-            },
-          ].filter(Boolean);
+          p = !pe(o) || m,
+          _ = !!o.is_commercial_license;
+        const g = [
+          { data: "myself", label: (0, l.Xx)("#Cart_LineItemOptions_Myself") },
+          !_ && {
+            data: "private",
+            label: (0, l.Xx)("#Cart_LineItemOptions_Privately"),
+            tooltip: (0, l.Xx)("#Cart_LineItemOptions_PrivateTooltip"),
+          },
+          !p && {
+            data: "gift",
+            label: (0, l.Xx)("#Cart_LineItemOptions_Gift"),
+          },
+        ].filter(Boolean);
         if (1 === g.length) return null;
         return a.createElement(le, {
           onChange: (e) => {
@@ -3224,12 +3219,15 @@
           ),
         );
       }
-      var pe = n(92686),
-        _e = n(68824),
-        ge = n(37563),
-        fe = n(17243),
-        ve = n.n(fe);
-      function he() {
+      function pe(e) {
+        return e.user_can_purchase_as_gift;
+      }
+      var _e = n(92686),
+        ge = n(68824),
+        fe = n(37563),
+        ve = n(17243),
+        he = n.n(ve);
+      function Ee() {
         const [e, t] = a.useState(null);
         return (
           a.useEffect(() => {
@@ -3246,7 +3244,7 @@
                 {
                   className: (0, c.Z)(
                     o().EstimatedTotalFlex,
-                    ve().UserCountrySelector,
+                    he().UserCountrySelector,
                   ),
                 },
                 a.createElement(
@@ -3257,13 +3255,13 @@
                 a.createElement(
                   "div",
                   { className: o().CartValueText },
-                  a.createElement(Ee, { rgCountryOptions: e }),
+                  a.createElement(Ce, { rgCountryOptions: e }),
                 ),
               )
             : null
         );
       }
-      function Ee(e) {
+      function Ce(e) {
         const { rgCountryOptions: t } = e,
           [n, i] = a.useState(d.De.COUNTRY),
           r = a.useMemo(
@@ -3282,20 +3280,20 @@
           contextMenuPositionOptions: { bMatchWidth: !1 },
         });
       }
-      var Ce = n(20020),
-        Ie = n(43981),
-        ye = n(34809);
-      function Se(e) {
-        const { children: t } = e;
-        return a.createElement(be, null, t);
-      }
+      var Ie = n(20020),
+        ye = n(43981),
+        Se = n(34809);
       function be(e) {
+        const { children: t } = e;
+        return a.createElement(Le, null, t);
+      }
+      function Le(e) {
         var t, n, r, l, s;
         const { children: d } = e,
           u = (0, i.g1)(),
           p = (0, i.bn)(),
           g = u.isLoading || !u.data,
-          f = (0, ge.id)(),
+          f = (0, fe.id)(),
           [v, E] = (0, m.pf)(),
           { sortedLineItems: C, bCartIncludesGifts: I } = a.useMemo(() => {
             var e;
@@ -3336,7 +3334,7 @@
           a.Fragment,
           null,
           !!(null == b ? void 0 : b.size) &&
-            a.createElement(Ge, { notices: b }),
+            a.createElement(we, { notices: b }),
           a.createElement(
             h.s,
             { className: o().ShoppingCartCtn },
@@ -3349,7 +3347,7 @@
                   _.SV,
                   null,
                   a.createElement(
-                    _e.r,
+                    ge.r,
                     null,
                     a.createElement(L.SL, { giftInfo: v, onChange: E }),
                   ),
@@ -3357,7 +3355,7 @@
               a.createElement(
                 _.SV,
                 null,
-                a.createElement(Te, {
+                a.createElement(Ge, {
                   lineItems: C,
                   validation: S,
                   cartValidation: y.data,
@@ -3368,13 +3366,13 @@
                 a.createElement(
                   _.SV,
                   null,
-                  a.createElement(xe, { notices: N }),
+                  a.createElement(Ae, { notices: N }),
                 ),
               !f &&
                 a.createElement(
                   "div",
                   { className: o().ResponsiveShoppingCartSummary },
-                  a.createElement(Le, {
+                  a.createElement(Ne, {
                     bCartIncludesGifts: I,
                     strEstimatedTotal:
                       null ===
@@ -3396,7 +3394,7 @@
                   (null == C ? void 0 : C.length) <= 2 && o().SmallCart,
                 ),
               },
-              a.createElement(Le, {
+              a.createElement(Ne, {
                 bCartIncludesGifts: I,
                 strEstimatedTotal:
                   null ===
@@ -3411,7 +3409,7 @@
           ),
         );
       }
-      const Le = (0, _.AP)(function (e) {
+      const Ne = (0, _.AP)(function (e) {
         const { strEstimatedTotal: t, bCartIncludesGifts: n } = e,
           r = (0, i.g1)(),
           { bValidForCheckout: s, bOnlyHardware: u } = (0, i.td)(),
@@ -3444,7 +3442,7 @@
           a.createElement(
             "div",
             { className: o().CartSummaryCtn },
-            a.createElement(_.SV, null, a.createElement(he, null)),
+            a.createElement(_.SV, null, a.createElement(Ee, null)),
             a.createElement(
               "div",
               {
@@ -3470,25 +3468,25 @@
             a.createElement(
               _.DT,
               null,
-              a.createElement(Ne, {
+              a.createElement(De, {
                 bDisabled: E,
                 nextStep: C,
                 bGuestOption: v,
               }),
-              a.createElement(ke, { disabled: E || n }),
-              a.createElement(De, { bDisabled: E }),
+              a.createElement(Re, { disabled: E || n }),
+              a.createElement(Te, { bDisabled: E }),
             ),
           )
         );
       });
-      function Ne(e) {
+      function De(e) {
         const { bDisabled: t, nextStep: n, bGuestOption: r } = e,
           _ = (0, i.tM)(),
           f = (0, p.k6)(),
           [v, h] = (0, m.nD)(),
-          E = (0, Ie.tv)();
+          E = (0, ye.tv)();
         let C = G.Z3;
-        (0, ye.wV)(E) && (C = E.gid);
+        (0, Se.wV)(E) && (C = E.gid);
         const I = (function (e) {
             return "login" == e
               ? (0, l.Xx)("#Cart_ContinueButton_Login")
@@ -3496,7 +3494,7 @@
                 ? (0, l.Xx)("#Cart_ContinueButton_Gifts")
                 : "checkout" == e
                   ? (0, l.Xx)("#Cart_ContinueButton_Payment")
-                  : ((0, Ce.Z)(e, "unhandled step"), "");
+                  : ((0, Ie.Z)(e, "unhandled step"), "");
           })(n),
           y = (0, c.Z)(o().CartSummaryBtn, o().SummaryMarginBottom);
         return a.createElement(
@@ -3522,20 +3520,20 @@
                   location.href = _;
                   break;
                 default:
-                  (0, Ce.Z)(n, "unhandled step");
+                  (0, Ie.Z)(n, "unhandled step");
               }
             },
           },
           I,
         );
       }
-      function De(e) {
+      function Te(e) {
         var t;
         const { bDisabled: n } = e,
-          r = (0, pe.Rs)(),
+          r = (0, _e.Rs)(),
           u = (0, i.nt)(),
           m = (0, i.n$)(),
-          p = (0, pe.Nw)(
+          p = (0, _e.Nw)(
             null === (t = r.data) || void 0 === t ? void 0 : t.family_groupid(),
             u,
             1,
@@ -3561,7 +3559,7 @@
             )
           : null;
       }
-      function Te(e) {
+      function Ge(e) {
         const {
           lineItems: t = [],
           validation: n = {},
@@ -3590,29 +3588,29 @@
             ),
         );
       }
-      function Ge(e) {
+      function we(e) {
         const { notices: t } = e;
         return a.createElement(
           "div",
           { className: o().HeaderNotices },
-          Array.from(t).map(([e, t], n) => a.createElement(we, { key: e }, t)),
+          Array.from(t).map(([e, t], n) => a.createElement(xe, { key: e }, t)),
         );
       }
-      function we(e) {
+      function xe(e) {
         const { children: t } = e;
         return a.createElement("div", { className: o().HeaderNotice }, t);
       }
-      function xe(e) {
+      function Ae(e) {
         const { notices: t } = e;
         return a.createElement(
           "div",
           { className: o().FooterNoticesCtn },
           Array.from(t).map(([e, t]) =>
-            a.createElement(Ae, { key: t.index, notice: t }),
+            a.createElement(ke, { key: t.index, notice: t }),
           ),
         );
       }
-      function Ae(e) {
+      function ke(e) {
         const { notice: t } = e;
         return a.createElement(
           "div",
@@ -3629,14 +3627,14 @@
           ),
         );
       }
-      function ke(e) {
+      function Re(e) {
         var t;
         const { disabled: n } = e,
           r =
-            null === (t = (0, pe.Rs)().data) || void 0 === t
+            null === (t = (0, _e.Rs)().data) || void 0 === t
               ? void 0
               : t.family_groupid(),
-          u = (0, pe.BU)(r, d.L7.country_code),
+          u = (0, _e.BU)(r, d.L7.country_code),
           m = (0, i.wN)(),
           [p, _] = a.useState(!1);
         return m
@@ -3659,7 +3657,7 @@
                       (_(!0),
                       u.mutate(void 0, {
                         onSuccess: () => {
-                          window.location.assign((0, pe.ht)(r));
+                          window.location.assign((0, _e.ht)(r));
                         },
                       }));
                   },

@@ -4524,99 +4524,100 @@
           : m;
         let y = JSON.parse(a.body());
         const g = y.account ? r(y.account) : "",
-          E = y.seconds && (0, Qt.jA)(y.seconds);
-        let f;
+          E = y.seconds && (0, Qt.jA)(y.seconds),
+          f = y.reason ? y.reason : "";
+        let h;
         switch (a.type()) {
           case 1:
-            f = (0, p.kQ)("#FamilyHistory_FamilyCreated", _, y.name);
+            h = (0, p.kQ)("#FamilyHistory_FamilyCreated", _, y.name);
             break;
           case 2:
-            f = (0, p.kQ)("#FamilyHistory_FamilyModified", _, y.name);
+            h = (0, p.kQ)("#FamilyHistory_FamilyModified", _, y.name);
             break;
           case 3:
-            f = (0, p.kQ)("#FamilyHistory_FamilyDeleted", _);
+            h = (0, p.kQ)("#FamilyHistory_FamilyDeleted", _);
             break;
           case 4:
             const e = (0, p.Xx)(
               `#FamilyManagement_Role_${y.role}`,
             ).toLocaleLowerCase();
-            f = (0, p.kQ)("#FamilyHistory_AccountInvited", _, e, g);
+            h = (0, p.kQ)("#FamilyHistory_AccountInvited", _, e, g);
             break;
           case 5:
-            f = (0, p.kQ)("#FamilyHistory_InviteDeniedByFamilySize", _, g);
+            h = (0, p.kQ)("#FamilyHistory_InviteDeniedByFamilySize", _, g);
             break;
           case 6:
-            f = (0, p.kQ)("#FamilyHistory_JoinedFamily", _);
+            h = (0, p.kQ)("#FamilyHistory_JoinedFamily", _);
             break;
           case 7:
-            f = (0, p.kQ)("#FamilyHistory_JoinDeniedByRegionMismatch", _);
+            h = (0, p.kQ)("#FamilyHistory_JoinDeniedByRegionMismatch", _);
             break;
           case 24:
-            f = (0, p.kQ)("#FamilyHistory_JoinDeniedByNoIpOverlap", _);
+            h = (0, p.kQ)("#FamilyHistory_JoinDenied", _, f);
             break;
           case 8:
-            f = (0, p.kQ)("#FamilyHistory_JoinDeniedByMissingIpAddress", _);
+            h = (0, p.kQ)("#FamilyHistory_JoinDeniedByMissingIpAddress", _);
             break;
           case 9:
-            f = (0, p.kQ)("#FamilyHistory_JoinDeniedByFamilyCooldown", _, E);
+            h = (0, p.kQ)("#FamilyHistory_JoinDeniedByFamilyCooldown", _, E);
             break;
           case 10:
-            f = (0, p.kQ)("#FamilyHistory_JoinDeniedByUserCooldown", _, E);
+            h = (0, p.kQ)("#FamilyHistory_JoinDeniedByUserCooldown", _, E);
             break;
           case 11:
-            f = (0, p.kQ)("#FamilyHistory_JoinDeniedByOtherFamily", _);
+            h = (0, p.kQ)("#FamilyHistory_JoinDeniedByOtherFamily", _);
             break;
           case 12:
-            f = (0, p.kQ)("#FamilyHistory_AccountRemoved", _, g);
+            h = (0, p.kQ)("#FamilyHistory_AccountRemoved", _, g);
             break;
           case 13:
-            f =
+            h =
               a.actor_steamid() === y.account
                 ? (0, p.kQ)("#FamilyHistory_InviteRejected", _)
                 : (0, p.kQ)("#FamilyHistory_InviteCancelled", _, g);
             break;
           case 14:
-            f = (0, p.kQ)("#FamilyHistory_PurchaseRequested", _);
+            h = (0, p.kQ)("#FamilyHistory_PurchaseRequested", _);
             break;
           case 16:
-            f = (0, p.kQ)("#FamilyHistory_ParentalSettingsDisabled", _, g);
+            h = (0, p.kQ)("#FamilyHistory_ParentalSettingsDisabled", _, g);
             break;
           case 15:
-            f = (0, p.kQ)("#FamilyHistory_ParentalSettingsEnabled", _, g);
+            h = (0, p.kQ)("#FamilyHistory_ParentalSettingsEnabled", _, g);
             break;
           case 17:
-            f = (0, p.kQ)("#FamilyHistory_ParentalSettingsChanged", _, g);
+            h = (0, p.kQ)("#FamilyHistory_ParentalSettingsChanged", _, g);
             break;
           case 18:
-            f = (0, p.kQ)(
+            h = (0, p.kQ)(
               "#FamilyHistory_FamilyCooldownOverridesChanged",
               _,
               y.count,
             );
             break;
           case 19:
-            f = (0, p.kQ)("#FamilyHistory_PurchaseRequestCanceled", _);
+            h = (0, p.kQ)("#FamilyHistory_PurchaseRequestCanceled", _);
             break;
           case 20:
-            f = (0, p.kQ)("#FamilyHistory_PurchaseRequestApproved", _, g);
+            h = (0, p.kQ)("#FamilyHistory_PurchaseRequestApproved", _, g);
             break;
           case 21:
-            f = (0, p.kQ)("#FamilyHistory_PurchaseRequestDeclined", _, g);
+            h = (0, p.kQ)("#FamilyHistory_PurchaseRequestDeclined", _, g);
             break;
           case 22:
-            f = (0, p.kQ)("#FamilyHistory_CooldownSkipConsumed", _);
+            h = (0, p.kQ)("#FamilyHistory_CooldownSkipConsumed", _);
             break;
           case 23:
-            f = (0, p.kQ)("#FamilyHistory_FamilyRestored", _);
+            h = (0, p.kQ)("#FamilyHistory_FamilyRestored", _);
             break;
           default:
-            f = (0, p.kQ)("#FamilyHistory_UnknownChange");
+            h = (0, p.kQ)("#FamilyHistory_UnknownChange");
         }
         return n.createElement(
           B.s,
           Object.assign({ className: (0, d.Z)(l.Entry), focusable: !0 }, s),
           n.createElement("div", { className: (0, d.Z)(l.Timestamp) }, c),
-          n.createElement("div", { className: (0, d.Z)(l.EntryText) }, f),
+          n.createElement("div", { className: (0, d.Z)(l.EntryText) }, h),
         );
       }
       var Kt,

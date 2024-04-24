@@ -6782,7 +6782,6 @@
         37: "#FamilyManagement_ErrorInternalServerError",
         15: "#FamilyManagement_AccessDenied",
         42: "#FamilyManagement_ErrorNoMatch",
-        31: "#FamilyManagement_ErrorGetUserCountry",
         43: "#FamilyManagement_ErrorAccountDisabled",
         11: "#FamilyManagement_ErrorNoActiveInvite",
         45: "#FamilyManagement_PartnerAccountCannotJoinAsChild",
@@ -6796,9 +6795,13 @@
         },
         83: {
           [j.k_EFamilyQueryCreateFamily]:
-            "#FamilyManagement_LimitedAccount_CreateFamily",
+            "#FamilyManagement_RegionLocked_CreateFamily",
           [j.k_EFamilyQueryJoinFamily]:
-            "#FamilyManagement_ErrorCountryCheck_JoinFamily",
+            "#FamilyManagement_Household_JoinFamily",
+        },
+        31: {
+          [j.k_EFamilyQueryJoinFamily]:
+            "#FamilyManagement_Household_JoinFamily",
         },
         95: {
           [j.k_EFamilyQueryCreateFamily]:
