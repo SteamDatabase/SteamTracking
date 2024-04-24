@@ -3609,7 +3609,8 @@
                 i
               );
             const r = u.gA.Init(_.Fp);
-            r.Body().set_defid(e), r.Body().set_expected_points_cost(n);
+            r.Body().set_defid(e),
+              r.Body().set_expected_points_cost(n.toString());
             const a = yield _.pQ.RedeemPoints(this.m_transport, r);
             return (
               (i.eResult = a.GetEResult()),
@@ -8489,8 +8490,7 @@
                           .RedeemPointsForItem(
                             this.props.definition.rewardDefinition.defid,
                             this.props.definition.rewardDefinition.appid,
-                            this.m_mutableObjDefinition.rewardDefinition
-                              .point_cost,
+                            Me(this.m_mutableObjDefinition),
                           )
                           .then((e) => {
                             1 == e.eResult
