@@ -6573,7 +6573,7 @@
       })(J || (J = {}));
     },
     44922: (e, r, t) => {
-      t.d(r, { Ax: () => M, JJ: () => p });
+      t.d(r, { Ax: () => R, JJ: () => p });
       var i = t(10059),
         a = t(39087),
         n = t(79545),
@@ -7392,8 +7392,8 @@
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            p.prototype.sort || a.aR(p.M()),
-            l.initialize(this, e, 0, -1, [4], null);
+            p.prototype.filters || a.aR(p.M()),
+            l.initialize(this, e, 0, -1, [6], null);
         }
         static M() {
           return (
@@ -7401,21 +7401,8 @@
               (p.sm_m = {
                 proto: p,
                 fields: {
-                  sort: { n: 1, d: 0, br: a.FE.readEnum, bw: a.Xc.writeEnum },
                   filters: { n: 2, c: s._v },
-                  recommended_tag_count: {
-                    n: 3,
-                    br: a.FE.readUint32,
-                    bw: a.Xc.writeUint32,
-                  },
-                  min_items_per_tags: {
-                    n: 4,
-                    r: !0,
-                    q: !0,
-                    br: a.FE.readUint32,
-                    pbr: a.FE.readPackedUint32,
-                    bw: a.Xc.writeRepeatedUint32,
-                  },
+                  sections: { n: 6, c: z, r: !0, q: !0 },
                   context: { n: 5, c: o.WJ },
                 },
               }),
@@ -7461,15 +7448,22 @@
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            z.prototype.sections || a.aR(z.M()),
-            l.initialize(this, e, 0, -1, [1], null);
+            z.prototype.sort || a.aR(z.M()),
+            l.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
             z.sm_m ||
               (z.sm_m = {
                 proto: z,
-                fields: { sections: { n: 1, c: f, r: !0, q: !0 } },
+                fields: {
+                  sort: { n: 1, d: 0, br: a.FE.readEnum, bw: a.Xc.writeEnum },
+                  min_items: {
+                    n: 2,
+                    br: a.FE.readUint32,
+                    bw: a.Xc.writeUint32,
+                  },
+                },
               }),
             z.sm_m
           );
@@ -7506,26 +7500,22 @@
           return z.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CStoreQuery_GetItemsByUserRecommendedTags_Response";
+          return "CStoreQuery_GetItemsByUserRecommendedTags_Request_Section";
         }
       }
       class f extends l {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            f.prototype.tagid || a.aR(f.M()),
-            l.initialize(this, e, 0, -1, [2], null);
+            f.prototype.sections || a.aR(f.M()),
+            l.initialize(this, e, 0, -1, [1], null);
         }
         static M() {
           return (
             f.sm_m ||
               (f.sm_m = {
                 proto: f,
-                fields: {
-                  tagid: { n: 1, br: a.FE.readUint32, bw: a.Xc.writeUint32 },
-                  store_item_ids: { n: 2, c: o.oY, r: !0, q: !0 },
-                  tag_name: { n: 3, br: a.FE.readString, bw: a.Xc.writeString },
-                },
+                fields: { sections: { n: 1, c: M, r: !0, q: !0 } },
               }),
             f.sm_m
           );
@@ -7562,10 +7552,66 @@
           return f.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
+          return "CStoreQuery_GetItemsByUserRecommendedTags_Response";
+        }
+      }
+      class M extends l {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            M.prototype.tagid || a.aR(M.M()),
+            l.initialize(this, e, 0, -1, [2], null);
+        }
+        static M() {
+          return (
+            M.sm_m ||
+              (M.sm_m = {
+                proto: M,
+                fields: {
+                  tagid: { n: 1, br: a.FE.readUint32, bw: a.Xc.writeUint32 },
+                  store_item_ids: { n: 2, c: o.oY, r: !0, q: !0 },
+                  tag_name: { n: 3, br: a.FE.readString, bw: a.Xc.writeString },
+                },
+              }),
+            M.sm_m
+          );
+        }
+        static MBF() {
+          return M.sm_mbf || (M.sm_mbf = a.Bh(M.M())), M.sm_mbf;
+        }
+        toObject(e = !1) {
+          return M.toObject(e, this);
+        }
+        static toObject(e, r) {
+          return a.TA(M.M(), e, r);
+        }
+        static fromObject(e) {
+          return a.aD(M.M(), e);
+        }
+        static deserializeBinary(e) {
+          let r = new i.BinaryReader(e),
+            t = new M();
+          return M.deserializeBinaryFromReader(t, r);
+        }
+        static deserializeBinaryFromReader(e, r) {
+          return a.F(M.MBF(), e, r);
+        }
+        serializeBinary() {
+          var e = new i.BinaryWriter();
+          return M.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, r) {
+          a.l2(M.M(), e, r);
+        }
+        serializeBase64String() {
+          var e = new i.BinaryWriter();
+          return M.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
           return "CStoreQuery_GetItemsByUserRecommendedTags_Response_Section";
         }
       }
-      var M;
+      var R;
       !(function (e) {
         (e.Query = function (e, r) {
           return e.SendMsg("StoreQuery.Query#1", (0, n.MD)(w, r), _, {
@@ -7586,11 +7632,11 @@
             return e.SendMsg(
               "StoreQuery.GetItemsByUserRecommendedTags#1",
               (0, n.MD)(p, r),
-              z,
+              f,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           });
-      })(M || (M = {}));
+      })(R || (R = {}));
     },
   },
 ]);

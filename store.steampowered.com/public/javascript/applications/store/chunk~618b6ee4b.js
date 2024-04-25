@@ -4139,29 +4139,42 @@
           });
         }
         LoadData(e) {
+          var t, a;
           return (0, n.mG)(this, void 0, void 0, function* () {
-            const t = r.gA.Init(i.JJ),
-              a = m.GetRelevantSections(e);
-            t.Body().set_recommended_tag_count(a.length);
-            for (let e = 0; e < a.length; e++)
-              t.Body().add_min_items_per_tags(4);
-            const n = (0, l.ei)(e);
-            t.Body().set_context((0, u.Fq)(!1)),
-              t.Body().set_filters((0, d.NV)(n)),
-              t.Body().set_sort(10);
-            const o = yield i.Ax.GetItemsByUserRecommendedTags(
+            const n = r.gA.Init(i.JJ),
+              o = m.GetRelevantSections(e);
+            for (const e of o) {
+              const r = n.Body().add_sections();
+              r.set_sort(
+                null !== (t = e.smart_section_personalized_carousel_sort) &&
+                  void 0 !== t
+                  ? t
+                  : 13,
+              ),
+                r.set_min_items(
+                  null !==
+                    (a = e.smart_section_personalized_carousel_min_items) &&
+                    void 0 !== a
+                    ? a
+                    : 4,
+                );
+            }
+            const s = (0, l.ei)(e);
+            n.Body().set_context((0, u.Fq)(!1)),
+              n.Body().set_filters((0, d.NV)(s));
+            const c = yield i.Ax.GetItemsByUserRecommendedTags(
               this.m_serviceTransport,
-              t,
+              n,
             );
-            if (1 != o.GetEResult())
+            if (1 != c.GetEResult())
               return (
                 console.error(
                   "GetItemsByUserRecommendedTags failed with error" +
-                    o.GetEResult(),
+                    c.GetEResult(),
                 ),
                 null
               );
-            return o
+            return c
               .Body()
               .sections()
               .map((e) => ({
