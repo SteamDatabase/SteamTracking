@@ -14503,6 +14503,9 @@
                     void 0 !== n
                     ? n
                     : 4,
+                ),
+                i.set_randomize(
+                  e.smart_section_personalized_carousel_randomize,
                 );
             }
             const l = he(e);
