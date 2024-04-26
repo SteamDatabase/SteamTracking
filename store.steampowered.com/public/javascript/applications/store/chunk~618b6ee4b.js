@@ -4579,9 +4579,9 @@
         );
       }
     },
-    55480: (e, t, a) => {
+    33287: (e, t, a) => {
       "use strict";
-      a.d(t, { H: () => U });
+      a.d(t, { H: () => J });
       var n = a(85556),
         r = a(80751),
         i = a.n(r),
@@ -5015,8 +5015,58 @@
         );
       }
       var M = a(71472),
-        H = a(82093);
-      function U(e) {
+        H = a(82093),
+        U = a(20020),
+        j = a(79545),
+        V = a(5697),
+        W = a(42718),
+        z = a(77581),
+        Z = a(65255),
+        q = a(82756);
+      function X(e, t) {
+        const [a] = (0, s.useState)(() =>
+          (function () {
+            const e = (0, q.kQ)(
+              "promotion_operation_token",
+              "application_config",
+            );
+            return (
+              (0, U.X)(
+                e,
+                "GetPromotionWriteAccess: promotion operation token is missing",
+              ),
+              e ? new z.J(Z.De.WEBAPI_BASE_URL, e).GetServiceTransport() : null
+            );
+          })(),
+        );
+        return (0, W.useQuery)(["usePromotionPlanBySalePage", t], {
+          queryFn: () =>
+            (0, n.mG)(this, void 0, void 0, function* () {
+              const n = j.gA.Init(V.z7),
+                r = new V.Ly();
+              r.set_clan_account_id(e),
+                r.set_gid_clan_event(t),
+                n.Body().add_request_list(r);
+              const i = yield V.nd.GetPromotionPlanForSalePages(a, n);
+              if (1 != i.GetEResult())
+                throw new Error(
+                  `Error from PromotionPlanBySalePage: ${i.GetEResult()}`,
+                );
+              return i
+                .Body()
+                .plans()
+                .map((e) => e.promotion_id());
+            }),
+          placeholderData: null,
+          enabled: Boolean(a),
+        }).data;
+      }
+      function Q(e, t) {
+        if (!e || !e.BIsClanAccount) return !1;
+        const a = u.cb.Get().GetPartnerEventPermissions(e);
+        return !!a && (t ? a.valve_admin : a.valve_admin || a.support_user);
+      }
+      function J(e) {
         const {
             eventModel: t,
             partnerEventStore: a,
@@ -5077,7 +5127,8 @@
               });
           const i = (0, E.Zv)(),
             o = "community" == i,
-            l = "store" == i;
+            l = "store" == i,
+            d = E.L7.is_support && Q(t.clanSteamID, !0);
           return s.createElement(
             p.SV,
             null,
@@ -5200,15 +5251,26 @@
                     },
                     (0, h.Xx)("#EventDisplay_InvitationPlannerPage"),
                   ),
+                Boolean(b && d && y) &&
+                  s.createElement(ee, {
+                    clanAccountID: t.clanSteamID.GetAccountID(),
+                    gidClanEvent: y,
+                  }),
                 Boolean(T && (l || c)) &&
                   s.createElement(
                     w.JW,
                     {
                       eventModel: t,
-                      route: w.Ue.k_eCommunityView,
+                      route: b
+                        ? w.Ue.k_eCommunityPreviewSale
+                        : w.Ue.k_eCommunityView,
                       className: (0, k.Z)(G.Button, F.AdminButton),
                     },
-                    (0, h.Xx)("#EventDisplay_ViewOnCommunity"),
+                    (0, h.Xx)(
+                      b
+                        ? "#EventDisplay_PreviewOnCommunity"
+                        : "#EventDisplay_ViewOnCommunity",
+                    ),
                   ),
                 Boolean(T && o) &&
                   s.createElement(
@@ -5221,16 +5283,16 @@
                     (0, h.Xx)("#EventDisplay_ViewOnStore"),
                   ),
                 s.createElement(R, { eventModel: t }),
-                s.createElement(V, { eventModel: t }),
+                s.createElement(K, { eventModel: t }),
                 Boolean(E.L7.is_support) &&
-                  s.createElement(j, { eventModel: t }),
+                  s.createElement(Y, { eventModel: t }),
               ),
             ),
           );
         }
         return s.createElement("span", null);
       }
-      function j(e) {
+      function Y(e) {
         var t, a, r;
         const { eventModel: o } = e,
           l = (0, m.vS)(),
@@ -5327,7 +5389,7 @@
             )
           : null;
       }
-      function V(e) {
+      function K(e) {
         var t, a;
         const { eventModel: n } = e,
           r = (0, o.SZ)(() => n.jsondata.sale_sections),
@@ -5345,10 +5407,10 @@
               : t.levels) || void 0 === a
           ? void 0
           : a.length) > 0 && E.L7.is_support
-          ? s.createElement(W, { section: i })
+          ? s.createElement($, { section: i })
           : null;
       }
-      function W(e) {
+      function $(e) {
         var t;
         const { section: a } = e,
           n = (0, d.oS)(
@@ -5379,6 +5441,32 @@
             });
           },
         });
+      }
+      function ee(e) {
+        const { clanAccountID: t, gidClanEvent: a } = e,
+          n = X(t, a);
+        return n
+          ? s.createElement(
+              s.Fragment,
+              null,
+              n.map((e) =>
+                s.createElement(
+                  "a",
+                  {
+                    key: e,
+                    href: `${E.De.PARTNER_BASE_URL}promotion/planning/edit/${e}`,
+                    target: E.De.IN_CLIENT ? "" : "_blank",
+                    className: (0, k.Z)(
+                      G.Button,
+                      F.AdminButton,
+                      G.ValveOnlyBackground,
+                    ),
+                  },
+                  (0, h.Xx)("#EventDisplay_PromotionEditor"),
+                ),
+              ),
+            )
+          : null;
       }
     },
     18919: (e, t, a) => {
@@ -9912,7 +10000,7 @@
         );
       }
       var kt = a(43301),
-        Bt = a(55480),
+        Bt = a(33287),
         Lt = a(71741),
         Tt = a.n(Lt),
         Nt = a(78910),
