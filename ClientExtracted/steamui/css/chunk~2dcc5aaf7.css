@@ -105574,6 +105574,7 @@ div.LowPerfMode ._1iFoUdlf4eWRnUfm9lfwUt ._1_flsDd96QR7WAvtjH21Sc {
   display: flex;
   flex-shrink: 1;
   flex-direction: column;
+  align-items: center;
   padding-bottom: 24px;
   min-height: 150px;
   transition:

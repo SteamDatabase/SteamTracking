@@ -1,9 +1,9 @@
 #
 __TEXT
+@"
+@"
 __text
 __TEXT
-o
-o
 __stubs
 __TEXT
 __stub_helper
@@ -12,21 +12,27 @@ __cstring
 __TEXT
 __const
 __TEXT
+__gcc_except_tab__TEXT
 __objc_methname
 __TEXT
+du!
+du!
 __objc_classname__TEXT
 __objc_methtype
 __TEXT
 (
-__gcc_except_tab__TEXT
 __unwind_info
 __TEXT
 __eh_frame
 __TEXT
 __DATA
+@"
+@"
 @
 __nl_symbol_ptr
 __DATA
+@"
+@"
 __got
 __DATA
 __la_symbol_ptr
@@ -55,24 +61,28 @@ __DATA
 P=
 __thread_vars
 __DATA
+p\,
 0
+p\,
 __thread_data
 __DATA
 @
 __thread_bss
 __DATA
+],
 __bss
 __DATA
+a,
 __common
 __DATA
 H
 __LINKEDIT
-,
+-
 
 @
 @loader_path/gameoverlayui.dylib
 "
-,
+PJ-
 P
 Y
 Z
@@ -124,7 +134,7 @@ h
 8
 /usr/lib/libobjc.A.dylib
 &
-h_,
+(6
 )
 C
 NSt3__117bad_function_callE
@@ -378,6 +388,7 @@ N6google8protobuf10TextFormat21FastFieldValuePrinterE
 N6google8protobuf10TextFormat6Parser10ParserImpl20ParserErrorCollectorE
 N6google8protobuf10TextFormat7Printer13TextGeneratorE
 N6google8protobuf2io14ErrorCollectorE
+\b(?=\w)
 \b(?<=\w)
 @
 `
@@ -7138,7 +7149,6 @@ i
 l
 e
 N4vgui13FocusNavGroupE
-333@N4vgui5FrameE
 N4vgui9GripPanelE
 N4vgui16CaptionGripPanelE
 N4vgui10FrameTitleE
@@ -7766,8 +7776,8 @@ Steam pid that launched us
 VGUI_Application_001
 OK
 Cancel
-Apr 22 2024
-14:35:56
+Apr 26 2024
+12:11:12
 crashhandler004
 gameoverlayui
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/overlay/gameoverlayui/main.cpp
@@ -8753,8 +8763,6 @@ CHECK failed: !fields_.empty():
 CHECK failed: (TYPE_LENGTH_DELIMITED) == (type()):
 ./google/protobuf/message_lite.h
 CHECK failed: (size) <= (static_cast<size_t>(2147483647)):
-CHECK failed: *ptr:
-CHECK failed: (overrun) <= (kSlopBytes):
 Can't happen
 google/protobuf/wire_format.cc
 CHECK failed: descriptor:
@@ -10789,9 +10797,7 @@ Dec
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 0
-e+
-%
-s+
+Ic]
 
 
 
@@ -10802,21 +10808,20 @@ s+
 0
 @
 E9u
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
 !
-Ic]
-|
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+Z
 j
 j
 j
@@ -11018,8 +11023,10 @@ P
 @
 ?
 @
+%
 
 d
+<
 
 
 
@@ -11029,11 +11036,12 @@ j
 j
 j
 j
+
+
+
+
 A+M
-
-
-Hc
-Ic
+Ic]
 j
 j
 j
@@ -11047,12 +11055,12 @@ j
 j
 j
 j
-0
+=
 =
 0
+j
+j
 0
-j
-j
 j
 j
 j
@@ -11085,10 +11093,9 @@ j
 
 d
 &
-&
 d
 0
-A+4$A+u
+A+]
 =
 =
 @
@@ -11124,6 +11131,8 @@ j
 j
 j
 
+
+
 j
 j
 j
@@ -11149,6 +11158,7 @@ j
 j
 j
 j
+%
 
 
 
@@ -11172,6 +11182,7 @@ j
 j
 j
 j
+K
 j
 j
 j
@@ -11267,6 +11278,7 @@ j
 j
 j
 
+=
 @
 @
 @
@@ -11316,10 +11328,8 @@ d
 =
 @
 @
-8
 @
-z
-#
+0
 @
 @
 @
@@ -11329,9 +11339,11 @@ z
 @
 @
 0
-T
+Q
+@
 0
 0
-2
 0
 E
+%
+c

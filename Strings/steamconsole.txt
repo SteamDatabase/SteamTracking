@@ -1,8 +1,6 @@
 __TEXT
 __text
 __TEXT
-p`
-p`
 __stubs
 __TEXT
 __stub_helper
@@ -12,7 +10,7 @@ __TEXT
 __cstring
 __TEXT
 __gcc_except_tab__TEXT
-l#
+D#
 __objc_methname
 __TEXT
 __unwind_info
@@ -30,6 +28,7 @@ __mod_init_func
 __DATA
 __const
 __DATA
+'
 __objc_imageinfo__DATA
 __objc_selrefs
 __DATA
@@ -117,6 +116,7 @@ N16CCallbackHandler21CCallback_OnLoggedOffE
 9CCallbackI16CCallbackHandler26SteamServersDisconnected_tLb0EE
 25SteamClientConVarAccessor
 23IConCommandBaseAccessor
+20CMultipleCallResultsI19CPreDepotOperations27InstallScriptSignResponse_tE
 10CUtlRBTreeIyi8CDefLess25CDefRBTreeBalanceListenerIiEyE
 20CMultipleCallResultsI19CPreDepotOperations17DRMWrapResponse_tE
 20CMultipleCallResultsI19CPreDepotOperations17CEGWrapResponse_tE
@@ -1517,26 +1517,25 @@ E
 
 
 
-
 @
-=
 0
 0
 j
 @
 @
 0
+0
 Ic]
-Hc
-Ic
 
 =
 =
 @
 =*.*
+Ic]
 @
 @
 0
+!
 @
 @
 @
@@ -1548,7 +1547,7 @@ Ic
 0
 0
 0
+a
+\
 0
-^
-0
-C
+

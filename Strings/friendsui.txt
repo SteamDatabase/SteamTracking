@@ -1,37 +1,27 @@
 X
 __TEXT
-%
-%
 __text
 __TEXT
-@m
-@m
 __stubs
 __TEXT
 __stub_helper
 __TEXT
+LG
+LG
 __cstring
 __TEXT
 __gcc_except_tab__TEXT
 __const
 __TEXT
-h"
-h"
 __objc_methname
 __TEXT
 __unwind_info
 __TEXT
 __DATA
-%
-%
 __nl_symbol_ptr
 __DATA
-%
-%
 __got
 __DATA
-%
-%
 __la_symbol_ptr
 __DATA
 __mod_init_func
@@ -41,20 +31,16 @@ __DATA
 __cfstring
 __DATA
 __objc_imageinfo__DATA
-PQ-
-PQ-
 __objc_selrefs
 __DATA
-XQ-
-XQ-
 __objc_classrefs__DATA
 __data
 __DATA
-0R-
-0R-
 __thread_vars
 __DATA
+.
 0
+.
 __thread_data
 __DATA
 @
@@ -72,6 +58,7 @@ __LINKEDIT
 8
 @loader_path/friendsui.dylib
 "
+@.
 (#
 (%
 P
@@ -105,7 +92,9 @@ h
 8
 /usr/lib/libobjc.A.dylib
 &
+D
 )
+P"/
 22CJSCallbackFunc_HTMLJS
 15CJSCallbackFunc
 11CRefCountedI20CRefCountServiceBaseILb1E6CRefMTEE
@@ -1473,7 +1462,6 @@ i
 l
 e
 N4vgui13FocusNavGroupE
-333@N4vgui5FrameE
 N4vgui9GripPanelE
 N4vgui16CaptionGripPanelE
 N4vgui10FrameTitleE
@@ -2663,6 +2651,7 @@ strKeyName
 #Friends_NameChangeCooldown_Info
 eResult
 strMessageToken
+data:image/png;base64,
 Unexpected error
 connect_private
 CFriendsWebChat::OnOverlayChatBrowserInfoChanged
@@ -5318,37 +5307,32 @@ m_bitsMigratedBuckets
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/steamid.cpp
 steamIDChat.GetEAccountType() == k_EAccountTypeChat
 k_EChatInstanceFlagClan & steamIDChat.GetUnAccountInstance()
+%
 0
+m
+
+@
+@
+
+
 $
-
-@
-@
-
-
-u
 x
-#
+
+\
 
 =
 @
 =
-8!
-x
 0
-0
-D!
+!
 p
 0
 p
 0
 p
 0
-!
-!
-!
-!
-!
-!
+K!
+R
 p
 0
 p
@@ -5360,12 +5344,9 @@ p
 p
 0
 
-(
-(
-(
-(
-H=
-
+%
+0
+%(
 
 
 
@@ -5469,34 +5450,31 @@ B
 @
 @
 @
+~
+
+
+
 d
-
-
-
-
-d
-
 A+M
+Ic]
+j
+j
+j
+j
 
-Hc
-Ic
+
+
+
+
+
 j
 j
 j
 j
 j
 j
-j
-j
-j
-j
-0
 =
 0
-
-
-
-
 j
 j
 j
@@ -5510,7 +5488,7 @@ j
 j
 j
 j
-8
+J
 
 j
 j
@@ -5532,12 +5510,13 @@ j
 
 d
 &
-&
 d
-
 
 0
-A+4$A+u
+A+]
+"
+
+
 =
 =
 @
@@ -5582,6 +5561,7 @@ j
 j
 j
 j
+%
 
 
 
@@ -5595,6 +5575,7 @@ j
 j
 j
 j
+$
 E
 j
 j
@@ -5683,6 +5664,7 @@ j
 j
 j
 j
+=
 @
 @
 @
@@ -5725,16 +5707,18 @@ j
 j
 .
 d
+;
 =
 =
 @
 =*.*
 =
 @
-
+Ic]
 @
 @
-D
+0
+-
 @
 @
 @
@@ -5744,13 +5728,10 @@ D
 @
 @
 0
-i
 0
 0
 0
 0
 &
-Hc
 E
-Ic]
 p

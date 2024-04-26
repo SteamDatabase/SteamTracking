@@ -40,6 +40,7 @@ message CStorageDeviceManagerBlockDevice {
 	optional .EStorageBlockFileSystemType filesystem_type = 11 [default = k_EStorageBlockFileSystemType_Invalid];
 	repeated string mount_paths = 12;
 	optional bool is_unmounting = 13;
+	optional bool has_steam_library = 14;
 }
 
 message CStorageDeviceManagerState {
@@ -71,6 +72,7 @@ message CStorageDeviceManager_Eject_Response {
 message CStorageDeviceManager_Adopt_Request {
 	optional uint32 drive_id = 1;
 	optional string label = 2;
+	optional bool validate = 3;
 }
 
 message CStorageDeviceManager_Adopt_Response {

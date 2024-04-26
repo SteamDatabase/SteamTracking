@@ -317,6 +317,7 @@
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamnetworkingsockets/clientlib/sdr/steamnetworkingsockets_sdr_common.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamnetworkingsockets/clientlib/sdr/steamnetworkingsockets_sdr_p2p.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamnetworkingsockets/clientlib/steam/../../steamnetworkingsockets_internal.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamnetworkingsockets/clientlib/steam/../steamnetworkingsockets_lowlevel.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamnetworkingsockets/clientlib/steam/../steamnetworkingsockets_snp.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamnetworkingsockets/clientlib/steam/csteamnetworkingsockets_steam.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamnetworkingsockets/clientlib/steam/csteamnetworkingsockets_steamclient.cpp

@@ -3,16 +3,16 @@ __TEXT
 
 __text
 __TEXT
-v
-v
+`p
+`p
 __stubs
 __TEXT
 __stub_helper
 __TEXT
 __gcc_except_tab__TEXT
-44
 __const
 __TEXT
+SD
 __objc_methname
 __TEXT
 >$
@@ -113,7 +113,7 @@ h
 8
 /usr/lib/libobjc.A.dylib
 &
-@
+H
 )
 NSt3__117bad_function_callE
 10CUtlVectorIN12CFontAmalgam10TFontRangeE10CUtlMemoryIS1_EE
@@ -206,7 +206,6 @@ N4vgui6IInputE
 7CUtlMapI8HotKey_tPN4vgui6VPanelEi8CDefLessE
 10CUtlRBTreeIN7CUtlMapI8HotKey_tPN4vgui6VPanelEi8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiES1_E
 9CInputOSX
-11CLayoutFile
 9CStyleSet
 16CStyleAppearance
 N4vgui11IAppearanceE
@@ -298,6 +297,8 @@ N4vgui8ISurfaceE
 7CUtlMapIyN4vgui6Size_tEi8CDefLessE
 10CUtlRBTreeIN7CUtlMapIyN4vgui6Size_tEi8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiEyE
 14ISurfaceHelper
+C
+C
 N4vgui15CBaseOSXSurfaceI12CBaseSurfaceEE
 N4vgui7ISystemE
 zD5CVGui
@@ -2224,18 +2225,16 @@ Seconds
 @
 @
 @
-Ic]
-Hc
-Ic
 0
 0
+
 
 A;E
 0
+Ic]
 
 
-PPj
-1
+F
 @
 `
 `
@@ -2274,18 +2273,18 @@ A
 @
 @
 
+j
 =
 @
-@
-@
-a
-0
-@
-@
-@
-@
+Ic]
 @
 @
 0
+@
+@
+@
+@
+@
+@
 0
-
+0

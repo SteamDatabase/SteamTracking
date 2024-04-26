@@ -268,9 +268,12 @@ s_pSymbolTable
 0
 @
 @
-:
+f
+A
+-
 =
 @
 =
 @
 =*.*
+W

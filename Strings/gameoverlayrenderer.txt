@@ -16,25 +16,6 @@ __unwind_info
 __TEXT
 __eh_frame
 __TEXT
-__DATA
-__nl_symbol_ptr
-__DATA
-__la_symbol_ptr
-__DATA
-__mod_init_func
-__DATA
-__const
-__DATA
-__cfstring
-__DATA
-__data
-__DATA
-__interpose
-__DATA
-__bss
-__DATA
-__common
-__DATA
 __OBJC
 __message_refs
 __OBJC
@@ -66,6 +47,25 @@ __symbols
 __OBJC
 __image_info
 __OBJC
+__DATA
+__nl_symbol_ptr
+__DATA
+__la_symbol_ptr
+__DATA
+__mod_init_func
+__DATA
+__const
+__DATA
+__cfstring
+__DATA
+__data
+__DATA
+__interpose
+__DATA
+__bss
+__DATA
+__common
+__DATA
 __LINKEDIT
 @loader_path/gameoverlayrenderer.dylib
 /System/Library/Frameworks/OpenGL.framework/Versions/A/OpenGL
@@ -81,7 +81,7 @@ __LINKEDIT
 /System/Library/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics
 /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
 /usr/lib/libobjc.A.dylib
-^_[]
+4@F1
  ^_]
 QPSV
 ^_[]
@@ -91,14 +91,14 @@ PPWj
 ^_[]
 QVRPW
 ,^_[]
-j$WP
+j$VP
+j$QP
 @^_]
-j$SP
-<^_[]
 ,^_[]
 QWRP
+xL5tM
 ^_[]
-9JLtD
+9JLu
 tM9H
 ^_[]
 tU9A
@@ -146,7 +146,6 @@ PRWQ
 SQSS
 ^_[]
 ^_[]
-SWVP
 ^_[]
 ^_[]
 PRWQ
@@ -165,14 +164,15 @@ P^_]
 ^_[]
 ^_[]
 ,^_[]
+,^_[]
+VVVS
+VVVS
 ^_[]
 ^_[]
 ^_[]
 ^_[]
 ^_[]
 ^_[]
-^_[]
-WWWWS
 ^_[]
 A @1
 ^_[]
@@ -191,28 +191,26 @@ u19q
 u,9Q
 ;A$u
 RPhg
-VShX
 ^_[]
 ^_[]
 ^_[]
 ^_[]
-PPWQPP
-wHh@
+QQVRQQ
+t>T1
+vHh@
 QPWW
-phh@
-WVh'
+vhh@
 PRWW
 QPRR
 <^_[]
-j@VW
-^_[]
- < u
+j@RV
 ^_[]
 ^_[]
 ^_[]
 ^_[]
 ^_[]
-u8RVP
+^_[]
+u8RVP1
 L^_[]
 RQPS
 QPVR
@@ -220,15 +218,14 @@ QRVW
 ^_[]
 ^_[]
 ^_[]
+tZ9G
 ^_[]
-t^9G
-^_[]
-t$(1
-\^_[]
-QPRV
+T$(1
 L^_[]
-8F!u
+;U u
+E 9E
 <^_[]
+8F!u
 ^_[]
 t&9q
 E89A
@@ -238,17 +235,15 @@ QWVPS
 SVVV
 SVVV
 L^_[]
-PQWW
-?SSS
-AQQQQ
-AQQQQ
-?WWW
+QPWW
 ^_[]
-j@SP
+SWRQ
 ^_[]
+j@WP
 ,^_[]
 PQRW
 QRPS
+^_[]
 ^_[]
 ^_[]
 ^_[]
@@ -268,8 +263,9 @@ L^_[]
 ^_[]
 tYF9
 ^_[]
+u7G9}
 ^_[]
-)APf
+)FPf
 ^_[]
 u,VP
 ;E u?
@@ -277,58 +273,58 @@ u,VP
 )G@f
 ^_[]
 QPVjP
-u8QRW
+u8QRW1
 ^_[]
 ,^_[]
 ^_[]
 ^_[]
-VWjQ
+WVjQ
 ^_[]
-j@PV
-QQQWP
 ^_[]
 ^_[]
 ^_[]
 ^_[]
 ,^_[]
-t`;X
+td;X
 ,^_[]
 ^_[]
-u	9X
+M 9H
+M 9H
 <^_[]
 ^_[]
-@QPP
 PQjhW
 ^_[]
 ^_[]
-sL;u
+qL;u
 t	;p
+d$$f
+~\$ 
+d$$f
+~\$ 
 ^_[]
 ^_[]
 RPWV
-^_[]
+,^_[]
 ;YHtv
 SPj@R
 QPQQ
 L^_[]
 <^_[]
 ;^$s+
-;~,s
+;^,s
 +F =
 +F0=
 ^_[]
 ^_[]
 ^_[]
 ^_[]
-F$VWS
 ^_[]
-^_[]
-j$SP
-j$SP
-w	G;
-^_[]
+j$RP
+j$WP
+w	C;
 j$PQ
 j$QP
+^_[]
 j$QP
 j$QP
 ^_[]
@@ -338,8 +334,9 @@ j$WP
 0^_]
 ^_[]
 ^_[]
+PRVW
 j$RP
-<^_[]
+,^_[]
 ^_[]
 ^_[]
 r =p
@@ -354,8 +351,8 @@ r =p
 ^_[]
 ^_[]
 ^_[]
-t7PS
 ^_[]
+t7PS
 ^_[]
 ^_[]
 ^_[]
@@ -530,6 +527,7 @@ N3IPC10ISharedMemE
 16CSharedMemStream
 18COverlayGLRenderer
 o@14CMetalRenderer
+Game Metal RGB
 A20CBaseOverlayRenderer
 St12length_error
 N9__gnu_cxx24__concurrence_lock_errorE
@@ -1077,7 +1075,6 @@ Quad
 Steam Screenshot Sync
 synchronizeResource:
 getBytes:bytesPerRow:fromRegion:mipmapLevel:
-Game Metal RGB
 lock
 unlock
 	using namespace metal;
@@ -1343,6 +1340,13 @@ zPLR
 zPLR
 zPLR
 zPLR
+RBRBSARA`&ATATA`2BVBVETDRAp
+SESJRARARARARARARC`TB^BTBXB`
+BTCRCSAp
+TATATC
+YBVCRCS"
+\DRA`
+B^A`
 ASAXAXA`
 A^A[A^A\A`
 RCRB
@@ -1352,11 +1356,6 @@ p RBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRB
 SBWATBTBYEZFZHVFRB
 R0@RCRARDp
 CRNUA
-RBRBSARA`&ATATA`2BVBVETDRAp
-SESJRARARARARARARC`TB^BTBXB`
-BTCRCSAp
-TATATC
-YBVCRCS
 @_CGLChoosePixelFormat
 @_CGLFlushDrawable
 @_glSwapAPPLE
@@ -1598,19 +1597,20 @@ ValveHookScreenshots
 ^SetNotificationPosition
 dBOverlayNeedsPresent
 jIsOverlayEnabled
-aYY&
+aYY*
 Bvvv
 XJ\Z
 :>6x
-:F	s
-FF,0(
+:J	s
+,0"&
+GB,0"
 L d\8
 ?M	j
-zFRh
+lFRn
 035(I&R5&...
 "*."
-d:0	<
-S0W[8 
+d80	<
+Q0W[8 
 _BOverlayNeedsPresent
 _IsOverlayEnabled
 _SetNotificationPosition
@@ -1853,25 +1853,28 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-BVAO3
-e:R&
-2"[f
-URKO
-\2j,
-[1/d
-3rQ1
-h"R8
-xG4b
-}lDC
-\LHI
-f1:0
-?+H@
-rYYuW
-rHLz_
-V8foU8
-xc2b
-@,rs
-Ddc[
+`_}[
+J[0 
+V<B9
+/|`hEs
+3Ht!o
+][cI
+:&7G
+Knz.
+{B=TH
+gsWM
+SsuX
+M(udr%
+~qD$
+QnW^
+^[sd#
+hBkT
+@SYG8
+Cf6dd
+h6%q|
+OF"lP{
+4V-=
+0td#
 subject.OU
 MXGJJ98X76
 Apple Inc.1&0$
@@ -1929,7 +1932,7 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240422213339Z0/
+240426190853Z0/
 1/0-
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
@@ -1938,13 +1941,15 @@ Apple Inc.1
 	<key>cdhashes</key>
 	<array>
 		<data>
-		8VliX8wq2Ti9Jw0/ugGKDjgzVe4=
+		/uLeeIDIHXyq/Xw1cqMFgrLqzKs=
 		</data>
 	</array>
 </dict>
 </plist>
-5z'w
-20240422213400Z0
+sy_w
+=TZ2
+o$/=
+20240426190900Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
@@ -2002,16 +2007,10 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240422213400Z0#
+240426190900Z0#
 +pFbx
-al0f
-\)&I.M
-)`(<
-YQ|*
--qn7
-g}#e&
-W6|1|C
-aQMAh
+pqOh
+6%>*
 __TEXT
 __text
 __TEXT
@@ -2073,6 +2072,7 @@ __common
 __DATA
 __LINKEDIT
 @loader_path/gameoverlayrenderer.dylib
+jFW$
 /System/Library/Frameworks/OpenGL.framework/Versions/A/OpenGL
 /System/Library/Frameworks/AppKit.framework/Versions/C/AppKit
 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices
@@ -2096,18 +2096,19 @@ AWAVAUATSPH
 [A\A]A^A_]
 AWAVSH
 H9Y @
-H;X sOL
+H;X sJ
 8[A^A_]
 AWAVAUATSH
 L9 t
 L98t
 [A\A]A^A_]
 AWAVSH
-tuE1
-5uhL
+tkE1
+5u^A
+|5tTI
 saE1
 [A^A_]
-9w|tG
+9w|u
 AVSH
 tT9H
 [A^]
@@ -2124,6 +2125,8 @@ AVSH
 AWAVAUATSPI
 K H9
 [A\A]A^A_]
+H91tHH
+wH91
 AWAVAUATSPI
 K H9
 [A\A]A^A_]
@@ -2133,6 +2136,7 @@ AVSI
 L93t
 L97u
 [A^]
+t'H9
 AWAVAUATSPI
 [A\A]A^A_]
 AWAVSH
@@ -2145,7 +2149,6 @@ AVSH
 AWAVAUATSPA
 [A\A]A^A_]
 AWAVAUATSH
-l$8H
 [A\A]A^A_]
 AWAVAUATSPA
 [A\A]A^A_]
@@ -2166,8 +2169,8 @@ AVSH
  [A^]
 AWAVATSH
 [A\A^A_]
-AWAVSPI
-[A^A_]
+AWAVATSI
+[A\A^A_]
 AVSI
 [A^]
 AWAVATSI
@@ -2201,8 +2204,8 @@ AVSI
 AWAVSH
 ([A^A_]
 AWAVAUATSPM
-tWE1
-A;D$
+tXE1
+A;L$
 [A\A]A^A_]
 AVS1
 [A^]
@@ -2216,12 +2219,13 @@ AWAVAUATSPA
 AWAVAUATSH
 [A\A]A^A_]
 [A\A]A^A_]
-t(E9
 [A\A]A^A_]
 AWAVAUATSH
 P D9
 ([A\A]A^A_]
 AWAVAUATSH
+T$LA
+D$TA
 ([A\A]A^A_]
 ([A\A]A^A_]
 AWAVAUATSH
@@ -2257,7 +2261,7 @@ AWAVATSH
 wfHc
 [A\A^A_]
 AVSH
-CH[A^]
+C@[A^]
 AVSA
 [A^]
 AVSH
@@ -2267,10 +2271,10 @@ u7D9c(u1D9{,u+
 ;C u 
 ;C$u
 ;C4u
-AWAVh
-ARPhg
 	H;M
 [A\A]A^A_]
+AWAVh
+ARPhg
 AWAVAUATSH
 8[A\A]A^A_]
 AVSH
@@ -2278,11 +2282,15 @@ AVSH
 AVSH
 [A^]
 AWAVAUATSH
+AWAU
+T5hC
+L5l1
+|5dH
+|5dH
 ([A\A]A^A_]
 AWAVAUATSH
 [A\A]A^A_]
 AWAVSPI
- < u
 [A^A_]
 AVSH
 [A^]
@@ -2296,42 +2304,36 @@ AWAVSH
 AWAVAUATSH
 u8ASD
 ]0AS
+Y--}
 H[A\A]A^A_]
 AWAVAUATSH
 D9` 
 D9c ~
-Y%n}
-(%(}
 [A\A]A^A_]
 P A9
 [A\A]A^A_]
 AWAVAUATSPI
 [A\A]A^A_]
-AVSI
-[A^]
 AWAVAUATSPI
 [A\A]A^A_]
 9p ~
-AWAVATSA
+AWAVSPA
 D9x 
-D9{ ~	[A\A^A_]
-[A\A^A_]
+D9{ ~
+[A^A_]
+[A^A_]
 AWAVAUATSH
-9Z @
-9Y ~
+D9r @
+D9q ~
 Hc^ H
-;r t1I
-T$0H
-t$(D
-h[A\A]A^A_]
-h[A\A]A^A_]
+A;U t&I
+t$0H
+x[A\A]A^A_]
+x[A\A]A^A_]
 AWAVAUATSH
-A9_ ~
-t<I9
-E;T$
-E;l$
+A9^ ~
 X[A\A]A^A_]
-E8\$%u	A
+E8^%u	A
 AVSH
 \$ D
 @[A^]
@@ -2341,22 +2343,20 @@ AWAVAUATSH
 H9^ 
 t$H9Y w
 D9A4u
-Y%Kd
 [A\A]A^A_]
 AWAVAUATSH
 8[A\A]A^A_]
-AWAVAUATSH
-[A\A]A^A_]
+AWAVATSH
+[A\A^A_]
 AWAVATS
 t	[A\A^A_]
 8[A\A^A_]
-AWAVATSH
- [A\A^A_]
 AWAVAUATSH
+([A\A]A^A_]
+AWAVAUATSH
+t_E1
 )F0A
 )F A
-PQSAP
-AQQPAP
 [A\A]A^A_]
 AVSH
 [A^]
@@ -2408,6 +2408,7 @@ AWAVAUATSH
 )C0f
 )C f
 L9 t
+L98t
 )C0f
 )C f
 [A\A]A^A_]
@@ -2416,18 +2417,17 @@ AWAVAUATSH
 )F A
 [A\A]A^A_]
 AWAVAUATSH
-)t$`D
-)t$p
-)\$0
-)t$@
-)D$PfA
+)T$`D
+)T$p
+)l$0D
+)T$@fA
+)\$Pf
 )D$ M
 [A\A]A^A_]
 [A\A]A^A_]
 [A\A]A^A_]
 AWAVAUATSH
-h[A\A]A^A_]
-AVSAQARPAS
+[A\A]A^A_]
 [A\A]A^A_]
 AWAVAUATSH
 )g@A
@@ -2448,11 +2448,9 @@ AWAVSPA
 AWAVSPA
 [A^A_]
 AWAVAUATSH
-Qt)I
+Qt*I
 [A\A]A^A_]
 AWAVAUATSH
-AUSAQARPAS
-oD$0
 [A\A]A^A_]
 AVSI
 [A^]
@@ -2466,10 +2464,10 @@ t{L9{ wuH
 |$(H
 [A\A^A_]
 H9Y 
-tTH9X wNH
-AWAVATSI
-D;K upH
-[A\A^A_]
+tXH9X wRH
+AWAVAUATSPI
+E;M uiI
+[A\A]A^A_]
 AWAVAUATSH
 L9h 
 M9o veL
@@ -2480,38 +2478,35 @@ H[A\A]A^A_]
 AWAVSH
 86u"A
 X[A^A_]
-AWAVATSH
-)CNH
-[A\A^A_]
+AWAVSH
+[A^A_]
 AWAVATSH
 [A\A^A_]
 AWAVAUATSH
-_`H9
+o`I9
 t	;X 
 T$(D
 \$ L
-|$(D
+|$ D
 [A\A]A^A_]
 AVSH
  [A^]
 AVSH
 [A^]
 [A^]
-AWAVATSH
-NpH9
-NpH9
-I;^pr7I
-[A\A^A_]
+AWAVAUATSPI
+[A\A]A^A_]
 AWAVSH
 D;sXtzH
 	H;M
 X[A^A_]
 AWAVAUATSH
 Hc^ H
+u%E;u 
 h[A\A]A^A_]
 h[A\A]A^A_]
 AWAVAUATSH
-t9L9
+t<L9
 E;w,s*H
 P0E;w4s
 A+O(
@@ -2534,21 +2529,19 @@ L97u
 AWAVAUATSPI
 K H9
 [A\A]A^A_]
-H91tHH
-wH91
 AWAVAUATSPI
 [A\A]A^A_]
 AVSH
 [A^]
 AWAVAUATSH
-`u&H
 w)E1
 [A\A]A^A_]
-AVS1
-[A^]
-AWAVSH
+AWAVSPD
+[A^A_]
+AWAVATSH
+L$HI
 H92u
-([A^A_]
+0[A\A^A_]
 AWAVSPI
 [A^A_]
 AWAVSP
@@ -2566,9 +2559,9 @@ AWAVSPI
 [A^A_]
 AVSH
 [A^]
-AVSI
-[A^]
-[A^]
+AWAVSPH
+[A^A_]
+[A^A_]
 AWAVSP
 [A^A_]
 [A^A_]
@@ -2576,8 +2569,12 @@ AWAVATSH
 0[A\A^A_]
 0[A\A^A_]
 AWAVSPD
+L95}P
 [A^A_]
 [A^A_]
+AWAVATS
+[A\A^A_]
+[A\A^A_]
 AVSH
 [A^]
 AWAVAUATSH
@@ -2592,16 +2589,14 @@ AWAVAUATSPI
 AWAVATSH
 mcpluB
 [A\A^A_]
-AWAVATSH
+AWAVATSL
+>[A\A^A_]
 [A\A^A_]
-AWAVSPL
-[A^A_]
-[A^A_]
 AWAVAUATSPI
 [A\A]A^A_]
-AVSH
-t	[A^]
-[A^]
+AWAVSPH
+[A^A_]
+[A^A_]
 AVSE1
 [A^]
 hu4H
@@ -2859,7 +2854,6 @@ UAWAVATSH
 }%E1
 H;D$
 [A\A^A_]
-D957
 UAWAVAUATSH
 D$`H
 D$8H
@@ -2892,6 +2886,7 @@ N3IPC10ISharedMemE
 16CSharedMemStream
 18COverlayGLRenderer
 ?14CMetalRenderer
+Game Metal RGB
 A20CBaseOverlayRenderer
 St12length_error
 N9__gnu_cxx24__concurrence_lock_errorE
@@ -3216,7 +3211,6 @@ Steam Overlay
 Steam Screenshot
 Quad
 Steam Screenshot Sync
-Game Metal RGB
 	using namespace metal;
 	struct Vertex
 		float4 position [[position]];
@@ -3757,11 +3751,12 @@ RBRBSCSASA`
 RBRCSDTDTASDp
 p RARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARF
 SBTASDTDTDTASARAZBZASASARB
-XBWAp@p0`*ASASASASASASASB^CRAp
+p@p0`*ASASASASASASASB^CRAp
 RARARARARARARARARARARARARARARARARARARBRB`
 RARARARARARBZAp
 RARBVAp
 RARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARB`<AVAZAREWBp `
+VDRCp
 p`SA
 @_CGLChoosePixelFormat
 @_CGLFlushDrawable
@@ -4032,9 +4027,9 @@ jIsOverlayEnabled
 G.11
 @~~~
 T:dV
->@.v
-D: 0 
-n<Xj
+>@.z
+C< 0
+n<Xn
 :"6~K
 :*z6
 _BOverlayNeedsPresent
@@ -4293,27 +4288,18 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-NdVY
-!Y[t
-ZOYf
-]h,?
-bb0T
-(|*=hh
-;xDp
-{CCI
-'KMuO
-''UX
-E&BK}
-#L0n
- a{'
-)IP2\C
-aOQs
-ynx4
-P,*U
-0]P;
-$NHG
-^$<Q
-@_*V.
+j^q&
+iTAD
+k]VE
+'.I#
+[P^[
+c2Zi
+Gv9)
+	zOn
+0.>a
+"`-fM
+np4T9\.
+L3[,
 subject.OU
 MXGJJ98X76
 Apple Inc.1&0$
@@ -4371,7 +4357,8 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240422213339Z0/
+240426190853Z0/
+M$0<
 1/0-
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
@@ -4380,34 +4367,32 @@ Apple Inc.1
 	<key>cdhashes</key>
 	<array>
 		<data>
-		1qgJow0dZDgEoo8gDKavcCerB0Q=
+		IKp0NUeVBKhY1H4yZOjtV6/yrIs=
 		</data>
 	</array>
 </dict>
 </plist>
-CiRD*
-yh f
-m	>[
-20240422213400Z0
+Jz`!U
+9XNz
+=tZr
+D}>2
+20240426190900Z0
+~[45
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240404204052Z
-240516204051Z0B1
-Timestamp Signer NWK21
+240404205511Z
+240516205510Z0B1
+Timestamp Signer NWK11
 Apple Inc.1
-e1	~	
-J\Mc
-w}\7S
-GX_	
+JYUy
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-s<PX
-	Y3k
-P3`<
+VQBW0
+zST+
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -4446,14 +4431,14 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240422213400Z0#
-/BiZ
-+pFbx
-}o"#
-2CcY
-az]5
-mcnB
-W0tl+
+~[45
+240426190900Z0#
+44ES
+<J-	
+6Uky
+:Fi(&!
+<AsW
+?V;r
 __TEXT
 __text
 __TEXT
@@ -4529,28 +4514,31 @@ __LINKEDIT
 /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
 /usr/lib/libobjc.A.dylib
 h"@9
-A9J 
+Th~@
+T($@y
 (a@9
 5(	@
 RH	@
 La@9_
 -`@9Ma
-Ka@9k
-la@9,
+Ka@9K
+la@9
+a@9j
 ja@9
 La@9
-a@9j
+a@9_
 ia@9i
 	a@9Ia
 ia@9i
 	a@9Ia
-@9jL
 h&B)
+	@z`
 56P@
+T(O@
 ;?Ay
 @9h*
 h&E9
-4h^A
+4i^A
 $E9H
 .E9(
 5b2A
@@ -4561,7 +4549,6 @@ $E9H
 h&A)
 (	29
 jh8)	
-@)?(
 29:;	
  @9H
 h"@9h
@@ -4574,110 +4561,94 @@ XcZ@
 h&@9
 hvB9
 hrB9
-C9a"C9b&C9c*C9WB
-[)~B
+C9a"C9b&C9c*C9
+[)@B
 aBA9
-Ax	p
 h&D)
-<v}	
-=h"@9
+jN	p
+q+P	0
+9h6@
+h"@9
 h"@9
 yh:@
 Th#@
 -D@!
- Y	0
+`T	0
 X`rA
 X`BA
 T	!@
 T*!@
 Ci8}
-Th.A
-Th2A
 I+8k
-"Uzb
 T	5@
 T	9@
-S@9H6
--!($
-9B(*
+S@9h6
+-!(%
 X`rA
 X`BA
-7		)
+87		)
 BP7	
 9h.A
 D9h.A
 9i.A
-T('D
-T	%A
+T(#D
 X`BA
 X`rA
 Th2A
 abF9brF9c
-4	%A
-Ti2A
-4	%A
-4	%A
-4	%A
-4	%A
-4	%A
-4	%A
-4	%A
-4	%A
-4	%A
-4	%A
-4	%A
-4	%A
-4	%A
-4	%A
-4	%A
 arG9 
 X`"B
 X`~B
 X`zB
 X`&B
-	Am 8`
+Ti2A
+/	X 
+Am 8`
 #V)h
+			X)
 4h.@
 4b.@
 	AD9
 h2C9
 NH `
 m@)h
-bnsja
-bnSjaN
-nPja
-bn0jaN
-bn1ja
+nB8!
+%N$f
+dn1ja
+QjaN
+jaNF
+ haN
 nA8!
 [A):
-	@q"
-	K?U
-@z`:@z`
-o"E@
+Iz`*@z
+	K?Y
+/"E@
 !~"8"
+T( @
 TYC@
 T( @
-zixJ	
+{ixJ	
 T`2@
-T`2@
-Ay`8
 T	!@
-	kJ8
-	k@E
-	kA+
-T`2@
-T`2@
-T`2@
-C9@	
-T`2@
-+ih8J	
+Z) /
+\) .
 	mD9)
+T`2@
+T`2@
+T`2@
+#C9h
+T`2@
+DqHL
++ih8J	
+CC9@
+T`2@
 T`2@
 7`2@
 4tB@
-+A)	|	
+#A)j:@
+T	|	
 i"X)
-Ci8}
+Ci<}
 	iD9?
 )mD9)
 9h.@
@@ -4685,22 +4656,21 @@ Th&@
 Th&@
 Rh:@
 9`&@
-Th&@
-!8	X
+4h&@
+`:	X
 T`2@
 4a2@
 T*;A
 TlMA
-hbD9H
+hbD9
 4h"A
 hbD9
 hbD9h
-	L9(
 !IzH
 	!F9
-hRG9
+T`jt
 +ih8J	
-	qG9
+	QG9
 12CIMENullImpl
 4IIME
 :>->
@@ -4718,8 +4688,9 @@ N3IPC10ISharedMemE
 15CSavedMemStream
 10IMemStream
 16CSharedMemStream
-18COverlayGLRenderer
+?18COverlayGLRenderer
 ?14CMetalRenderer
+Game Metal RGB
 20CBaseOverlayRenderer
  %*/4
 MainThrd
@@ -5042,7 +5013,6 @@ Steam Overlay
 Steam Screenshot
 Quad
 Steam Screenshot Sync
-Game Metal RGB
 	using namespace metal;
 	struct Vertex
 		float4 position [[position]];
@@ -5757,11 +5727,12 @@ ValveHookScreenshots
 dBOverlayNeedsPresent
 jIsOverlayEnabled
  (LDHH
+4448
 HH88$
-H,8hx
-4<H$
-(`4,TX
-L,L|
+4<H$<
+@H $
+(`4TX
+H,P|
 _BOverlayNeedsPresent
 _IsOverlayEnabled
 _SetNotificationPosition
@@ -6014,20 +5985,21 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-u^w<6
-~S"u
-.zqT
-F)PyD&
-J&)'
-4;yb
-|}sd
-<\sO$V_
-Q;xhg
-W#`3%
-aWH)4S
-u>sPG
-LTO^
-D6lG$
+(D] 
+K3i=
+i\}m
+%i/s
+Jpu8
+1dDo
+,CUt?
+6S.U
+k"cg
+PP.hK
+]~cE
+I&V; 
+aZYNC
+:gtm
+D;U(Bq
 subject.OU
 MXGJJ98X76
 Apple Inc.1&0$
@@ -6085,8 +6057,10 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240422213340Z0/
+240426190853Z0/
+	B|,
 1/0-
+	B|,
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -6094,17 +6068,15 @@ Apple Inc.1
 	<key>cdhashes</key>
 	<array>
 		<data>
-		yddwkGOtoeDXmlzulwEvFXWsmxU=
+		Rw2kXywmBypTnDfg8kvnBglCfCw=
 		</data>
 	</array>
 </dict>
 </plist>
-G8V@
-rlpE
-zvU'
-6_IG=
-	wj[
-20240422213400Z0
+mv?~ZU
+^)5B}>
+J ['%dNQ
+20240426190900Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
@@ -6162,11 +6134,10 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240422213400Z0#
-p)0+
+240426190900Z0#
 +pFbx
-D).>
-g13O
-EBna}U
-6h#4
-ABBOn
+<c'0
+ qKL
+gtu]
+' j B
+:Ioi
