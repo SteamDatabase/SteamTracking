@@ -1557,6 +1557,8 @@
     "Sale_SmartSection_PersonalizedCarousel_Sort_ConcurrentPlayers": "Concurrent players",
     "Sale_SmartSection_PersonalizedCarousel_MinCount": "Minimum result count for section",
     "Sale_SmartSection_PersonalizedCarousel_MinCount_ttip": "Only display this section if the user has this many items or more that match the page and tag",
+    "Sale_SmartSection_PersonalizedCarousel_Randomize": "Randomize",
+    "Sale_SmartSection_PersonalizedCarousel_Randomize_ttip": "Queries a larger set of results from the catalog and then returns a random selection of those items. The sort field is still relevant if there are more items that pass the filter than the result cap.",
     "Sele_Event_SmartSection_RecentEvents": "Show recent events and announcements from featured games.",
     "Sele_Event_SmartSection_RecentEvent_allgame": "Show recent events and announcements from all games, preferring games owned/followed/wishlisted then falling back to top sellers.",
     "Sale_Section_Header": "Section %1$s",

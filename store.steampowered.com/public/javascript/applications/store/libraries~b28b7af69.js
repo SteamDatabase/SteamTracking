@@ -64780,6 +64780,7 @@
                     br: n.FE.readUint32,
                     bw: n.Xc.writeUint32,
                   },
+                  randomize: { n: 3, br: n.FE.readBool, bw: n.Xc.writeBool },
                 },
               }),
             w.sm_m

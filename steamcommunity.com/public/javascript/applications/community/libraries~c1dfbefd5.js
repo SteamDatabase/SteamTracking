@@ -4686,6 +4686,7 @@
                     br: a.FE.readUint32,
                     bw: a.Xc.writeUint32,
                   },
+                  randomize: { n: 3, br: a.FE.readBool, bw: a.Xc.writeBool },
                 },
               }),
             p.sm_m
