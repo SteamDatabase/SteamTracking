@@ -2761,7 +2761,7 @@
     },
     8197: (e, t, r) => {
       "use strict";
-      r.d(t, { P: () => Gf });
+      r.d(t, { P: () => xf });
       var n,
         i = r(2970),
         a = (r(2471), r(6279)),
@@ -7145,7 +7145,7 @@
         return s.createElement("div", { className: e.args[""] }, e.children);
       }
       function Gr(e, ...t) {
-        return Gf.GetBBCodeParser().ParseBBCode(
+        return xf.GetBBCodeParser().ParseBBCode(
           (function (e, ...t) {
             if (!e) return "";
             let r = We(e, ...t);
@@ -46738,600 +46738,603 @@
       var _f = r(4915),
         hf = r.n(_f);
       const pf = new Map([
-        [
-          "b",
-          {
-            Constructor: function (e) {
-              return s.createElement(
-                "div",
-                { className: hf().Bold },
-                e.children,
-              );
-            },
-            autocloses: !1,
-          },
-        ],
-        [
-          "i",
-          {
-            Constructor: function (e) {
-              return s.createElement(
-                "div",
-                { className: xr(hf().Italic, "BB_Italic") },
-                e.children,
-              );
-            },
-            autocloses: !1,
-          },
-        ],
-        [
-          "h1",
-          {
-            Constructor: function (e) {
-              return bf(e, xr(hf().Header1, "BB_Header1"));
-            },
-            autocloses: !1,
-            skipFollowingNewline: !0,
-          },
-        ],
-        [
-          "h2",
-          {
-            Constructor: function (e) {
-              return bf(e, xr(hf().Header2, "BB_Header2"));
-            },
-            autocloses: !1,
-            skipFollowingNewline: !0,
-          },
-        ],
-        [
-          "h3",
-          {
-            Constructor: function (e) {
-              return bf(e, xr(hf().Header3, "BB_Header3"));
-            },
-            autocloses: !1,
-            skipFollowingNewline: !0,
-          },
-        ],
-        [
-          "h4",
-          {
-            Constructor: function (e) {
-              return bf(e, xr(hf().Header4, "BB_Header4"));
-            },
-            autocloses: !1,
-            skipFollowingNewline: !0,
-          },
-        ],
-        [
-          "h5",
-          {
-            Constructor: function (e) {
-              return bf(e, xr(hf().Header5, "BB_Header5"));
-            },
-            autocloses: !1,
-            skipFollowingNewline: !0,
-          },
-        ],
-        [
-          "center",
-          {
-            Constructor: function (e) {
-              let t = gf(e.args, "id");
-              t &&
-                "string" == typeof t &&
-                t.length > 0 &&
-                "#" === t[0] &&
-                (t = t.substring(1));
-              return s.createElement(
-                "span",
-                {
-                  id: t || void 0,
-                  className: xr(hf().CenterSpan, "BB_Center"),
-                },
-                e.children,
-              );
-            },
-            autocloses: !1,
-          },
-        ],
-        [
-          "smalltext",
-          {
-            Constructor: function (e) {
-              return bf(e, xr(hf().SmallText, "BB_SmallText"));
-            },
-            autocloses: !1,
-            skipFollowingNewline: !0,
-          },
-        ],
-        [
-          "u",
-          {
-            Constructor: function (e) {
-              return s.createElement(
-                "div",
-                { className: hf().Underline },
-                e.children,
-              );
-            },
-            autocloses: !1,
-          },
-        ],
-        [
-          "strike",
-          {
-            Constructor: function (e) {
-              return s.createElement(
-                "div",
-                { className: hf().Strike },
-                e.children,
-              );
-            },
-            autocloses: !1,
-          },
-        ],
-        [
-          "spoiler",
-          {
-            Constructor: function (e) {
-              let [t, r] = s.useState(!1),
-                n = s.useCallback(() => {
-                  r(!t);
-                }, [t]);
-              return s.createElement(
-                Ol,
-                {
-                  className: xr(hf().Spoiler, t && hf().Revealed),
-                  focusable: !0,
-                  onActivate: n,
-                  onOKActionDescription: We(
-                    t ? "#Bbcode_Spoiler_Hide" : "#Bbcode_Spoiler_Show",
-                  ),
-                },
-                s.createElement(
-                  "span",
-                  { className: hf().SpoilerText },
-                  e.children,
-                ),
-              );
-            },
-            autocloses: !1,
-          },
-        ],
-        [
-          "hr",
-          {
-            Constructor: function (e) {
-              return s.createElement("div", { className: hf().HR });
-            },
-            autocloses: !1,
-          },
-        ],
-        [
-          "noparse",
-          {
-            Constructor: function (e) {
-              return e.children;
-            },
-            autocloses: !1,
-          },
-        ],
-        [
-          "url",
-          {
-            Constructor: function (e) {
-              let t = gf(e.args);
-              if (!t) {
-                const r = e.children;
-                "string" == typeof r &&
-                  (r.startsWith("http://") || r.startsWith("https://")) &&
-                  (t = r);
-              }
-              const r =
-                "button" == gf(e.args, "style") ? hf().LinkButton : null;
-              let n = gf(e.args, "id");
-              n &&
-                "string" == typeof n &&
-                n.length > 0 &&
-                "#" === n[0] &&
-                (n = n.substring(1));
-              if (void 0 === t && !n) return e.children || "";
-              if (
-                void 0 === t ||
-                ("string" == typeof t && t.length > 0 && "#" == t[0])
-              )
+          [
+            "b",
+            {
+              Constructor: function (e) {
                 return s.createElement(
-                  "a",
-                  { href: null != t ? t : null, id: n },
+                  "div",
+                  { className: hf().Bold },
                   e.children,
                 );
-              return s.createElement(
-                ff,
-                { className: r, href: t, id: n },
-                e.children,
-              );
+              },
+              autocloses: !1,
             },
-            autocloses: !1,
-          },
-        ],
-        [
-          "quote",
-          {
-            Constructor: function (e) {
-              const t = gf(e.args, "author");
-              return s.createElement(
-                "blockquote",
-                { className: xr(hf().BlockQuote, e.className) },
-                !!t &&
-                  s.createElement(
-                    "div",
-                    { className: hf().QuoteAuthor },
-                    We("#Bbcode_Originally_Posted_By") + " ",
-                    " ",
-                    s.createElement("b", null, t + ":"),
-                  ),
-                e.children,
-              );
-            },
-            autocloses: !1,
-          },
-        ],
-        [
-          "pullquote",
-          {
-            Constructor: function (e) {
-              return s.createElement(
-                "div",
-                { className: hf().PullQuote },
-                e.children,
-              );
-            },
-            autocloses: !1,
-          },
-        ],
-        [
-          "code",
-          {
-            Constructor: function (e) {
-              return s.createElement(
-                "div",
-                { className: hf().CodeBlock },
-                e.children,
-              );
-            },
-            autocloses: !1,
-          },
-        ],
-        [
-          "c",
-          {
-            Constructor: function (e) {
-              return s.createElement(
-                "code",
-                { className: hf().Code },
-                e.children,
-              );
-            },
-            autocloses: !1,
-          },
-        ],
-        [
-          "list",
-          {
-            Constructor: function (e) {
-              return s.createElement(
-                "ul",
-                { className: hf().List },
-                e.children,
-              );
-            },
-            autocloses: !1,
-            skipInternalNewline: !0,
-          },
-        ],
-        [
-          "olist",
-          {
-            Constructor: function (e) {
-              return s.createElement(
-                "ol",
-                { className: hf().OrderedList },
-                e.children,
-              );
-            },
-            autocloses: !1,
-            skipInternalNewline: !0,
-          },
-        ],
-        [
-          "*",
-          {
-            Constructor: function (e) {
-              let t = gf(e.args, "id");
-              t &&
-                "string" == typeof t &&
-                t.length > 0 &&
-                "#" === t[0] &&
-                (t = t.substring(1));
-              return s.createElement(
-                "li",
-                { className: hf().ListItem, id: t || void 0 },
-                e.children,
-              );
-            },
-            autocloses: !0,
-            skipInternalNewline: !0,
-          },
-        ],
-        [
-          "table",
-          {
-            Constructor: function (e) {
-              const t = gf(e.args, "noborder"),
-                r = gf(e.args, "equalcells");
-              return s.createElement(
-                "div",
-                {
-                  className: xr(
-                    hf().Table,
-                    "BB_Table",
-                    t && hf().NoBorder,
-                    r && hf().EqualCells,
-                  ),
-                },
-                e.children,
-              );
-            },
-            autocloses: !1,
-            skipInternalNewline: !0,
-          },
-        ],
-        [
-          "tr",
-          {
-            Constructor: function (e) {
-              return s.createElement(
-                "div",
-                { className: xr(hf().TableRow, "BB_TableRow") },
-                e.children,
-              );
-            },
-            autocloses: !1,
-            skipInternalNewline: !0,
-            skipFollowingNewline: !0,
-          },
-        ],
-        [
-          "th",
-          {
-            Constructor: function (e) {
-              return s.createElement(
-                "div",
-                { className: hf().TableHeader },
-                e.children,
-              );
-            },
-            autocloses: !1,
-            skipInternalNewline: !0,
-            skipFollowingNewline: !0,
-          },
-        ],
-        [
-          "td",
-          {
-            Constructor: function (e) {
-              const t = gf(e.args, "width");
-              return s.createElement(
-                "div",
-                {
-                  className: xr(hf().TableData, "BB_TableData"),
-                  style: t && { width: t },
-                },
-                e.children,
-              );
-            },
-            autocloses: !1,
-            skipInternalNewline: !0,
-            skipFollowingNewline: !0,
-          },
-        ],
-        [
-          "expand",
-          {
-            Constructor: function (e) {
-              const t = Boolean(gf(e.args, "expanded")),
-                [r, n] = s.useState(t),
-                i = (function (e, t) {
-                  switch (e) {
-                    case "details":
-                      return {
-                        collapsed: "#Bbcode_Expand_Details_Collapsed",
-                        expanded: "#Bbcode_Expand_Details_Expanded",
-                        style: hf().ExpandSection_Details,
-                      };
-                    case "spoiler":
-                      return {
-                        collapsed: "#Bbcode_Expand_Spoiler_Collapsed",
-                        expanded: "#Bbcode_Expand_Spoiler_Expanded",
-                        style: hf().ExpandSection_Spoiler,
-                      };
-                    case "title":
-                      return {
-                        collapsed: t || "#Bbcode_Expand_ShowMore_Collapsed",
-                        expanded: t || "#Bbcode_Expand_ShowMore_Expanded",
-                        style: hf().ExpandSection_WithTitle,
-                      };
-                    default:
-                      return {
-                        collapsed: "#Bbcode_Expand_ShowMore_Collapsed",
-                        expanded: "#Bbcode_Expand_ShowMore_Expanded",
-                        style: hf().ExpandSection_ShowMore,
-                      };
-                  }
-                })(gf(e.args, "type"), gf(e.args, "title"));
-              return s.createElement(
-                "div",
-                {
-                  className: xr(
-                    hf().ExpandSectionBlock,
-                    i.style,
-                    r
-                      ? hf().ExpandSectionExpanded
-                      : hf().ExpandSectionCollapsed,
-                  ),
-                },
-                s.createElement(
+          ],
+          [
+            "i",
+            {
+              Constructor: function (e) {
+                return s.createElement(
                   "div",
-                  { className: hf().ExpandSectionHeader, onClick: () => n(!r) },
-                  We(r ? i.expanded : i.collapsed),
+                  { className: xr(hf().Italic, "BB_Italic") },
+                  e.children,
+                );
+              },
+              autocloses: !1,
+            },
+          ],
+          [
+            "h1",
+            {
+              Constructor: function (e) {
+                return ff(e, xr(hf().Header1, "BB_Header1"));
+              },
+              autocloses: !1,
+              skipFollowingNewline: !0,
+            },
+          ],
+          [
+            "h2",
+            {
+              Constructor: function (e) {
+                return ff(e, xr(hf().Header2, "BB_Header2"));
+              },
+              autocloses: !1,
+              skipFollowingNewline: !0,
+            },
+          ],
+          [
+            "h3",
+            {
+              Constructor: function (e) {
+                return ff(e, xr(hf().Header3, "BB_Header3"));
+              },
+              autocloses: !1,
+              skipFollowingNewline: !0,
+            },
+          ],
+          [
+            "h4",
+            {
+              Constructor: function (e) {
+                return ff(e, xr(hf().Header4, "BB_Header4"));
+              },
+              autocloses: !1,
+              skipFollowingNewline: !0,
+            },
+          ],
+          [
+            "h5",
+            {
+              Constructor: function (e) {
+                return ff(e, xr(hf().Header5, "BB_Header5"));
+              },
+              autocloses: !1,
+              skipFollowingNewline: !0,
+            },
+          ],
+          [
+            "center",
+            {
+              Constructor: function (e) {
+                let t = bf(e.args, "id");
+                t &&
+                  "string" == typeof t &&
+                  t.length > 0 &&
+                  "#" === t[0] &&
+                  (t = t.substring(1));
+                return s.createElement(
+                  "span",
+                  {
+                    id: t || void 0,
+                    className: xr(hf().CenterSpan, "BB_Center"),
+                  },
+                  e.children,
+                );
+              },
+              autocloses: !1,
+            },
+          ],
+          [
+            "smalltext",
+            {
+              Constructor: function (e) {
+                return ff(e, xr(hf().SmallText, "BB_SmallText"));
+              },
+              autocloses: !1,
+              skipFollowingNewline: !0,
+            },
+          ],
+          [
+            "u",
+            {
+              Constructor: function (e) {
+                return s.createElement(
+                  "div",
+                  { className: hf().Underline },
+                  e.children,
+                );
+              },
+              autocloses: !1,
+            },
+          ],
+          [
+            "strike",
+            {
+              Constructor: function (e) {
+                return s.createElement(
+                  "div",
+                  { className: hf().Strike },
+                  e.children,
+                );
+              },
+              autocloses: !1,
+            },
+          ],
+          [
+            "spoiler",
+            {
+              Constructor: function (e) {
+                let [t, r] = s.useState(!1),
+                  n = s.useCallback(() => {
+                    r(!t);
+                  }, [t]);
+                return s.createElement(
+                  Ol,
+                  {
+                    className: xr(hf().Spoiler, t && hf().Revealed),
+                    focusable: !0,
+                    onActivate: n,
+                    onOKActionDescription: We(
+                      t ? "#Bbcode_Spoiler_Hide" : "#Bbcode_Spoiler_Show",
+                    ),
+                  },
                   s.createElement(
-                    "div",
-                    { className: hf().EmbedArrow },
-                    s.createElement(ec, { angle: r ? 180 : 0 }),
-                  ),
-                ),
-                r &&
-                  s.createElement(
-                    "div",
-                    { className: hf().ExpandSectionBody },
+                    "span",
+                    { className: hf().SpoilerText },
                     e.children,
                   ),
-              );
+                );
+              },
+              autocloses: !1,
             },
-            autocloses: !1,
-            skipInternalNewline: !0,
-            allowWrapTextForCopying: !0,
-          },
-        ],
-        [
-          "remindme",
-          {
-            Constructor: function (e) {
-              const { event: t, showErrorInfo: r } = e.context,
-                n = gf(e.args);
-              if (n)
-                return s.createElement(lf, { eventGID: n, bPreviewMode: r });
-              if (t) {
-                const e = te(w.LANGUAGE);
-                return s.createElement(of, { eventModel: t, lang: e });
-              }
-              return null;
+          ],
+          [
+            "hr",
+            {
+              Constructor: function (e) {
+                return s.createElement("div", { className: hf().HR });
+              },
+              autocloses: !1,
             },
-            autocloses: !1,
-          },
-        ],
-        [
-          "doclink",
-          {
-            Constructor: function (e) {
-              const t = gf(e.args),
-                r = "button" == gf(e.args, "style") ? hf().LinkButton : null;
-              return s.createElement(
-                ff,
-                { className: r, href: `${w.PARTNER_BASE_URL}doc/${t}` },
-                e.children,
-              );
+          ],
+          [
+            "noparse",
+            {
+              Constructor: function (e) {
+                return e.children;
+              },
+              autocloses: !1,
             },
-            autocloses: !1,
-          },
-        ],
-        [
-          "color",
-          {
-            Constructor: function (e) {
-              const t = gf(e.args);
-              return s.createElement(
-                "span",
-                { style: { color: t } },
-                e.children,
-              );
-            },
-            autocloses: !1,
-          },
-        ],
-      ]);
-      new Map([
-        [
-          "looping_media",
-          {
-            Constructor: function (e) {
-              const t = vf(e);
-              return s.createElement(mf, {
-                video: t,
-                bAutoPlay: !0,
-                bControls: !1,
-                bLoop: !0,
-              });
-            },
-            autocloses: !1,
-          },
-        ],
-        ["video", { Constructor: yf, autocloses: !1 }],
-        [
-          "youtubeorvideo",
-          {
-            Constructor: function (e) {
-              if (D() || "CN" == w.COUNTRY.toLocaleUpperCase()) return yf(e);
-              const t = gf(e.args, "youtubeid"),
-                r = gf(e.args, "size"),
-                n = gf(e.args, "seconds");
-              let i = "full" == r ? Wl.sizeFull : Wl.sizeThumb,
-                a =
-                  "full" == r
-                    ? ""
-                    : "leftthumb" == r
-                      ? Wl.floatLeft
-                      : Wl.floatRight;
-              return s.createElement(Vl, {
-                videoID: t,
-                nStartSeconds: n ? Number.parseInt(n) : void 0,
-                classNameAlign: a,
-                classNameSize: i,
-                bShowVideoImmediately: !0,
-              });
-            },
-            autocloses: !1,
-          },
-        ],
-        [
-          "previewyoutube",
-          {
-            Constructor: function (e) {
-              if (D()) return null;
-              let t = gf(e.args);
-              if (t) {
-                let e = t.split(";");
-                if (2 == e.length) {
-                  let t = e[0],
-                    r = e[1].toLocaleLowerCase(),
-                    n = "full" == r ? Wl.sizeFull : Wl.sizeThumb,
-                    i =
-                      "full" == r
-                        ? ""
-                        : "leftthumb" == r
-                          ? Wl.floatLeft
-                          : Wl.floatRight;
-                  return s.createElement(Vl, {
-                    videoID: t,
-                    classNameAlign: i,
-                    classNameSize: n,
-                    bShowVideoImmediately: !0,
-                  });
+          ],
+          [
+            "url",
+            {
+              Constructor: function (e) {
+                let t = bf(e.args);
+                if (!t) {
+                  const r = e.children;
+                  "string" == typeof r &&
+                    (r.startsWith("http://") || r.startsWith("https://")) &&
+                    (t = r);
                 }
-              }
-              return s.createElement(s.Fragment, null);
+                const r =
+                  "button" == bf(e.args, "style") ? hf().LinkButton : null;
+                let n = bf(e.args, "id");
+                n &&
+                  "string" == typeof n &&
+                  n.length > 0 &&
+                  "#" === n[0] &&
+                  (n = n.substring(1));
+                if (void 0 === t && !n) return e.children || "";
+                if (
+                  void 0 === t ||
+                  ("string" == typeof t && t.length > 0 && "#" == t[0])
+                )
+                  return s.createElement(
+                    "a",
+                    { href: null != t ? t : null, id: n },
+                    e.children,
+                  );
+                return s.createElement(
+                  vf,
+                  { className: r, href: t, id: n },
+                  e.children,
+                );
+              },
+              autocloses: !1,
             },
-            autocloses: !1,
-          },
-        ],
-      ]);
-      function gf(e, t) {
+          ],
+          [
+            "quote",
+            {
+              Constructor: function (e) {
+                const t = bf(e.args, "author");
+                return s.createElement(
+                  "blockquote",
+                  { className: xr(hf().BlockQuote, e.className) },
+                  !!t &&
+                    s.createElement(
+                      "div",
+                      { className: hf().QuoteAuthor },
+                      We("#Bbcode_Originally_Posted_By") + " ",
+                      " ",
+                      s.createElement("b", null, t + ":"),
+                    ),
+                  e.children,
+                );
+              },
+              autocloses: !1,
+            },
+          ],
+          [
+            "pullquote",
+            {
+              Constructor: function (e) {
+                return s.createElement(
+                  "div",
+                  { className: hf().PullQuote },
+                  e.children,
+                );
+              },
+              autocloses: !1,
+            },
+          ],
+          [
+            "code",
+            {
+              Constructor: function (e) {
+                return s.createElement(
+                  "div",
+                  { className: hf().CodeBlock },
+                  e.children,
+                );
+              },
+              autocloses: !1,
+            },
+          ],
+          [
+            "c",
+            {
+              Constructor: function (e) {
+                return s.createElement(
+                  "code",
+                  { className: hf().Code },
+                  e.children,
+                );
+              },
+              autocloses: !1,
+            },
+          ],
+          [
+            "list",
+            {
+              Constructor: function (e) {
+                return s.createElement(
+                  "ul",
+                  { className: hf().List },
+                  e.children,
+                );
+              },
+              autocloses: !1,
+              skipInternalNewline: !0,
+            },
+          ],
+          [
+            "olist",
+            {
+              Constructor: function (e) {
+                return s.createElement(
+                  "ol",
+                  { className: hf().OrderedList },
+                  e.children,
+                );
+              },
+              autocloses: !1,
+              skipInternalNewline: !0,
+            },
+          ],
+          [
+            "*",
+            {
+              Constructor: function (e) {
+                let t = bf(e.args, "id");
+                t &&
+                  "string" == typeof t &&
+                  t.length > 0 &&
+                  "#" === t[0] &&
+                  (t = t.substring(1));
+                return s.createElement(
+                  "li",
+                  { className: hf().ListItem, id: t || void 0 },
+                  e.children,
+                );
+              },
+              autocloses: !0,
+              skipInternalNewline: !0,
+            },
+          ],
+          [
+            "table",
+            {
+              Constructor: function (e) {
+                const t = bf(e.args, "noborder"),
+                  r = bf(e.args, "equalcells");
+                return s.createElement(
+                  "div",
+                  {
+                    className: xr(
+                      hf().Table,
+                      "BB_Table",
+                      t && hf().NoBorder,
+                      r && hf().EqualCells,
+                    ),
+                  },
+                  e.children,
+                );
+              },
+              autocloses: !1,
+              skipInternalNewline: !0,
+            },
+          ],
+          [
+            "tr",
+            {
+              Constructor: function (e) {
+                return s.createElement(
+                  "div",
+                  { className: xr(hf().TableRow, "BB_TableRow") },
+                  e.children,
+                );
+              },
+              autocloses: !1,
+              skipInternalNewline: !0,
+              skipFollowingNewline: !0,
+            },
+          ],
+          [
+            "th",
+            {
+              Constructor: function (e) {
+                return s.createElement(
+                  "div",
+                  { className: hf().TableHeader },
+                  e.children,
+                );
+              },
+              autocloses: !1,
+              skipInternalNewline: !0,
+              skipFollowingNewline: !0,
+            },
+          ],
+          [
+            "td",
+            {
+              Constructor: function (e) {
+                const t = bf(e.args, "width");
+                return s.createElement(
+                  "div",
+                  {
+                    className: xr(hf().TableData, "BB_TableData"),
+                    style: t && { width: t },
+                  },
+                  e.children,
+                );
+              },
+              autocloses: !1,
+              skipInternalNewline: !0,
+              skipFollowingNewline: !0,
+            },
+          ],
+          [
+            "expand",
+            {
+              Constructor: function (e) {
+                const t = Boolean(bf(e.args, "expanded")),
+                  [r, n] = s.useState(t),
+                  i = (function (e, t) {
+                    switch (e) {
+                      case "details":
+                        return {
+                          collapsed: "#Bbcode_Expand_Details_Collapsed",
+                          expanded: "#Bbcode_Expand_Details_Expanded",
+                          style: hf().ExpandSection_Details,
+                        };
+                      case "spoiler":
+                        return {
+                          collapsed: "#Bbcode_Expand_Spoiler_Collapsed",
+                          expanded: "#Bbcode_Expand_Spoiler_Expanded",
+                          style: hf().ExpandSection_Spoiler,
+                        };
+                      case "title":
+                        return {
+                          collapsed: t || "#Bbcode_Expand_ShowMore_Collapsed",
+                          expanded: t || "#Bbcode_Expand_ShowMore_Expanded",
+                          style: hf().ExpandSection_WithTitle,
+                        };
+                      default:
+                        return {
+                          collapsed: "#Bbcode_Expand_ShowMore_Collapsed",
+                          expanded: "#Bbcode_Expand_ShowMore_Expanded",
+                          style: hf().ExpandSection_ShowMore,
+                        };
+                    }
+                  })(bf(e.args, "type"), bf(e.args, "title"));
+                return s.createElement(
+                  "div",
+                  {
+                    className: xr(
+                      hf().ExpandSectionBlock,
+                      i.style,
+                      r
+                        ? hf().ExpandSectionExpanded
+                        : hf().ExpandSectionCollapsed,
+                    ),
+                  },
+                  s.createElement(
+                    "div",
+                    {
+                      className: hf().ExpandSectionHeader,
+                      onClick: () => n(!r),
+                    },
+                    We(r ? i.expanded : i.collapsed),
+                    s.createElement(
+                      "div",
+                      { className: hf().EmbedArrow },
+                      s.createElement(ec, { angle: r ? 180 : 0 }),
+                    ),
+                  ),
+                  r &&
+                    s.createElement(
+                      "div",
+                      { className: hf().ExpandSectionBody },
+                      e.children,
+                    ),
+                );
+              },
+              autocloses: !1,
+              skipInternalNewline: !0,
+              allowWrapTextForCopying: !0,
+            },
+          ],
+          [
+            "remindme",
+            {
+              Constructor: function (e) {
+                const { event: t, showErrorInfo: r } = e.context,
+                  n = bf(e.args);
+                if (n)
+                  return s.createElement(lf, { eventGID: n, bPreviewMode: r });
+                if (t) {
+                  const e = te(w.LANGUAGE);
+                  return s.createElement(of, { eventModel: t, lang: e });
+                }
+                return null;
+              },
+              autocloses: !1,
+            },
+          ],
+          [
+            "doclink",
+            {
+              Constructor: function (e) {
+                const t = bf(e.args),
+                  r = "button" == bf(e.args, "style") ? hf().LinkButton : null;
+                return s.createElement(
+                  vf,
+                  { className: r, href: `${w.PARTNER_BASE_URL}doc/${t}` },
+                  e.children,
+                );
+              },
+              autocloses: !1,
+            },
+          ],
+          [
+            "color",
+            {
+              Constructor: function (e) {
+                const t = bf(e.args);
+                return s.createElement(
+                  "span",
+                  { style: { color: t } },
+                  e.children,
+                );
+              },
+              autocloses: !1,
+            },
+          ],
+        ]),
+        gf = new Map([
+          [
+            "looping_media",
+            {
+              Constructor: function (e) {
+                const t = yf(e);
+                return s.createElement(mf, {
+                  video: t,
+                  bAutoPlay: !0,
+                  bControls: !1,
+                  bLoop: !0,
+                });
+              },
+              autocloses: !1,
+            },
+          ],
+          ["video", { Constructor: Sf, autocloses: !1 }],
+          [
+            "youtubeorvideo",
+            {
+              Constructor: function (e) {
+                if (D() || "CN" == w.COUNTRY.toLocaleUpperCase()) return Sf(e);
+                const t = bf(e.args, "youtubeid"),
+                  r = bf(e.args, "size"),
+                  n = bf(e.args, "seconds");
+                let i = "full" == r ? Wl.sizeFull : Wl.sizeThumb,
+                  a =
+                    "full" == r
+                      ? ""
+                      : "leftthumb" == r
+                        ? Wl.floatLeft
+                        : Wl.floatRight;
+                return s.createElement(Vl, {
+                  videoID: t,
+                  nStartSeconds: n ? Number.parseInt(n) : void 0,
+                  classNameAlign: a,
+                  classNameSize: i,
+                  bShowVideoImmediately: !0,
+                });
+              },
+              autocloses: !1,
+            },
+          ],
+          [
+            "previewyoutube",
+            {
+              Constructor: function (e) {
+                if (D()) return null;
+                let t = bf(e.args);
+                if (t) {
+                  let e = t.split(";");
+                  if (2 == e.length) {
+                    let t = e[0],
+                      r = e[1].toLocaleLowerCase(),
+                      n = "full" == r ? Wl.sizeFull : Wl.sizeThumb,
+                      i =
+                        "full" == r
+                          ? ""
+                          : "leftthumb" == r
+                            ? Wl.floatLeft
+                            : Wl.floatRight;
+                    return s.createElement(Vl, {
+                      videoID: t,
+                      classNameAlign: i,
+                      classNameSize: n,
+                      bShowVideoImmediately: !0,
+                    });
+                  }
+                }
+                return s.createElement(s.Fragment, null);
+              },
+              autocloses: !1,
+            },
+          ],
+        ]);
+      function bf(e, t) {
         return void 0 === t ? e[""] : e[t];
       }
-      function bf(e, t) {
-        let r = gf(e.args, "id");
+      function ff(e, t) {
+        let r = bf(e.args, "id");
         return (
           r &&
             "string" == typeof r &&
@@ -47345,7 +47348,7 @@
           )
         );
       }
-      const ff = (e) => {
+      const vf = (e) => {
         const { href: t } = e,
           r = (0, i._T)(e, ["href"]);
         let n,
@@ -47398,21 +47401,21 @@
           s.createElement("span", { "data-tooltip-text": l }, e.children),
         );
       };
-      function vf(e) {
-        let t = gf(e.args, "poster");
+      function yf(e) {
+        let t = bf(e.args, "poster");
         t && (t = kl(t));
         const r = new Array();
         {
-          const t = gf(e.args, "mp4");
+          const t = bf(e.args, "mp4");
           t && r.push({ sURL: kl(t), sFormat: "video/mp4" });
-          const n = gf(e.args, "webm");
+          const n = bf(e.args, "webm");
           n && r.push({ sURL: kl(n), sFormat: "video/webm" });
         }
         const n = te(w.LANGUAGE),
           i = 0 != n,
           a = new Array();
         for (let t = 0; t < 31; t++) {
-          const r = gf(e.args, "sub_" + Z(t));
+          const r = bf(e.args, "sub_" + Z(t));
           r &&
             a.push({
               sURL: kl(r),
@@ -47420,7 +47423,7 @@
               sKind: "subtitles",
               bDefault: i && t == n,
             });
-          const s = gf(e.args, "cap_" + Z(t));
+          const s = bf(e.args, "cap_" + Z(t));
           s &&
             a.push({
               sURL: kl(s),
@@ -47431,15 +47434,15 @@
         }
         return { sPoster: t, rgVideoSources: r, rgVideoTracks: a };
       }
-      function yf(e) {
-        const t = vf(e),
+      function Sf(e) {
+        const t = yf(e),
           r = e.children ? e.children.toString() : void 0;
         r &&
           r.startsWith("http") &&
           t.rgVideoSources.push({ sURL: kl(r), sFormat: "video/webm" });
-        const n = gf(e.args, "autoplay"),
+        const n = bf(e.args, "autoplay"),
           i = "0" !== n && "off" !== n && "false" !== n,
-          a = gf(e.args, "controls"),
+          a = bf(e.args, "controls"),
           o = "0" !== a && "off" !== a && "false" !== a;
         return s.createElement(mf, {
           video: t,
@@ -47448,8 +47451,8 @@
           bLoop: i,
         });
       }
-      const Sf = 940;
-      function wf(e = Sf) {
+      const wf = 940;
+      function Cf(e = wf) {
         return (
           (function () {
             const [e, t] = (0, s.useState)(window.innerWidth);
@@ -47468,11 +47471,11 @@
           })() >= e
         );
       }
-      var Cf = r(8752);
-      const Bf =
+      var Bf = r(8752);
+      const Ef =
         "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QUQ5NEMwOTYzRDc4MTFFQUExREZEODRBMDBCNjdENTEiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QUQ5NEMwOTczRDc4MTFFQUExREZEODRBMDBCNjdENTEiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpBRDk0QzA5NDNENzgxMUVBQTFERkQ4NEEwMEI2N0Q1MSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpBRDk0QzA5NTNENzgxMUVBQTFERkQ4NEEwMEI2N0Q1MSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Po/TXacAAABMSURBVHjaYvz//z8DNQHjyDMQDICGJgDx3f/kA5DeBJhh8f+pB+JBXr4DNFeZSp69CzLwP7UjZdTAkWAgVdMh1XMK1fPyCCwPAQIMAKf/Y+3dveJlAAAAAElFTkSuQmCC";
-      var Ef = r(6832);
-      class If extends s.Component {
+      var If = r(6832);
+      class Rf extends s.Component {
         constructor() {
           super(...arguments),
             (this.m_observer = null),
@@ -47550,7 +47553,7 @@
             return (
               "scroll" == t ||
               "auto" == t ||
-              !!e.classList.contains(If.GetScrollableClassname())
+              !!e.classList.contains(Rf.GetScrollableClassname())
             );
           });
         }
@@ -47587,8 +47590,8 @@
           );
         }
       }
-      (0, i.gn)([ye], If.prototype, "OnIntersection", null);
-      class Rf extends s.Component {
+      (0, i.gn)([ye], Rf.prototype, "OnIntersection", null);
+      class Tf extends s.Component {
         constructor() {
           super(...arguments),
             (this.state = {
@@ -47647,7 +47650,7 @@
           }
           const d = this.BLoadAndUnload() ? "repeated" : "once";
           return s.createElement(
-            If,
+            Rf,
             Object.assign({ ref: this.m_refContainer, style: u }, l, {
               onVisibilityChange: this.OnVisibilityChange,
               trigger: d,
@@ -47656,16 +47659,16 @@
           );
         }
       }
-      (0, i.gn)([ye], Rf.prototype, "OnVisibilityChange", null);
-      var Tf = r(1019);
-      function Mf(e) {
+      (0, i.gn)([ye], Tf.prototype, "OnVisibilityChange", null);
+      var Mf = r(1019);
+      function Df(e) {
         const { padded: t, gap: r, children: n } = e;
         return s.createElement(
           "div",
           {
             style: { gap: r ? r + "px" : "unset" },
             className: xr({
-              [Tf.ScrollSnapCarousel]: !0,
+              [Mf.ScrollSnapCarousel]: !0,
               ScrollSnapCarousel: !0,
               SaleSectionCarousel: !0,
               SaleSectionCarouselPadding: t,
@@ -47675,7 +47678,7 @@
           n,
         );
       }
-      class Df extends s.Component {
+      class Af extends s.Component {
         render() {
           const { showArrows: e } = this.props,
             t = this.props.visibleSlides,
@@ -47688,60 +47691,60 @@
             l = 100 - o;
           return s.createElement(
             "div",
-            { className: Ef.pipScrollerContainer },
+            { className: If.pipScrollerContainer },
             e &&
               s.createElement(
-                Cf.jp,
+                Bf.jp,
                 {
                   className: xr(
-                    Ef.pipScrollButton,
-                    Ef.left,
-                    Ef.carouselNavButton,
+                    If.pipScrollButton,
+                    If.left,
+                    If.carouselNavButton,
                   ),
                 },
                 s.createElement(ac, null),
               ),
             s.createElement(
               "div",
-              { className: Ef.pipScroller },
-              s.createElement("div", { className: Ef.scrollBackground }),
+              { className: If.pipScroller },
+              s.createElement("div", { className: If.scrollBackground }),
               s.createElement("div", {
-                className: Ef.scrollForeground,
+                className: If.scrollForeground,
                 style: { left: i + "%", right: a + "%" },
               }),
               s.createElement(
                 "div",
                 {
-                  className: Ef.scrollNavDiv,
+                  className: If.scrollNavDiv,
                   style: { left: "0%", width: o + "%" },
                 },
                 s.createElement(
-                  Cf.jp,
-                  { className: xr(Ef.carouselNavButton, Ef.scrollNavButton) },
+                  Bf.jp,
+                  { className: xr(If.carouselNavButton, If.scrollNavButton) },
                   s.createElement("div", null),
                 ),
               ),
               s.createElement(
                 "div",
                 {
-                  className: Ef.scrollNavDiv,
+                  className: If.scrollNavDiv,
                   style: { right: "0%", width: l + "%" },
                 },
                 s.createElement(
-                  Cf.P1,
-                  { className: xr(Ef.carouselNavButton, Ef.scrollNavButton) },
+                  Bf.P1,
+                  { className: xr(If.carouselNavButton, If.scrollNavButton) },
                   s.createElement("div", null),
                 ),
               ),
             ),
             e &&
               s.createElement(
-                Cf.P1,
+                Bf.P1,
                 {
                   className: xr(
-                    Ef.pipScrollButton,
-                    Ef.right,
-                    Ef.carouselNavButton,
+                    If.pipScrollButton,
+                    If.right,
+                    If.carouselNavButton,
                   ),
                 },
                 s.createElement(ac, null),
@@ -47749,18 +47752,18 @@
           );
         }
       }
-      const Af = (0, Cf.Rq)(Df, (e) => ({
+      const Of = (0, Bf.Rq)(Af, (e) => ({
         currentSlide: e.currentSlide,
         totalSlides: e.totalSlides,
         visibleSlides: e.visibleSlides,
       }));
-      function Of(e) {
+      function Ff(e) {
         const t = M();
         return e.screenIsWide || t
-          ? s.createElement(Ff, Object.assign({}, e), e.children)
-          : s.createElement(Mf, Object.assign({}, e), e.children);
+          ? s.createElement(Lf, Object.assign({}, e), e.children)
+          : s.createElement(Df, Object.assign({}, e), e.children);
       }
-      function Ff(e) {
+      function Lf(e) {
         const t = M(),
           r = () => s.Children.count(e.children),
           n = r(),
@@ -47777,11 +47780,11 @@
           Ol,
           {
             "flow-children": "row",
-            className: xr(Ef.carouselBody, e.className, d),
+            className: xr(If.carouselBody, e.className, d),
             navKey: e.navKey,
           },
           s.createElement(
-            Cf.sj,
+            Bf.sj,
             {
               visibleSlides: e.visibleElements,
               totalSlides: r(),
@@ -47797,7 +47800,7 @@
               disableKeyboard: !0,
             },
             s.createElement(
-              kf,
+              Nf,
               {
                 bHideArrows: o,
                 bAutoAdvance: e.bAutoAdvance && !t,
@@ -47806,7 +47809,7 @@
               s.Children.map(e.children, (t, r) => {
                 const n = e.bLazyRenderChildren
                   ? s.createElement(
-                      Rf,
+                      Tf,
                       {
                         rootMargin: "0px 100% 0px 100%",
                         bHorizontal: !0,
@@ -47817,38 +47820,38 @@
                     )
                   : t;
                 return s.createElement(
-                  Cf.Mi,
-                  { className: Ef.innerSlide, key: "slide_" + r, index: r },
+                  Bf.Mi,
+                  { className: If.innerSlide, key: "slide_" + r, index: r },
                   n,
                 );
               }),
             ),
             !l &&
               (e.useTestScrollbar
-                ? s.createElement(Af, { showArrows: o, carouselStore: null })
+                ? s.createElement(Of, { showArrows: o, carouselStore: null })
                 : s.createElement(
                     "div",
-                    { className: Ef.breadcrumbContainer },
+                    { className: If.breadcrumbContainer },
                     ((t) =>
                       s.Children.map(e.children, (e, r) =>
                         r % t != 0
                           ? null
                           : s.createElement(
-                              Cf.oT,
-                              { slide: r, className: Ef.pip },
-                              s.createElement("img", { src: Bf }),
+                              Bf.oT,
+                              { slide: r, className: If.pip },
+                              s.createElement("img", { src: Ef }),
                             ),
                       ))(i),
                   )),
           ),
         );
       }
-      function Lf(e) {
+      function kf(e) {
         e && (window.clearTimeout(e.current), (e.current = null));
       }
-      function kf(e) {
+      function Nf(e) {
         const { bHideArrows: t, bAutoAdvance: r, children: n, onSlide: i } = e,
-          a = s.useContext(Cf.ro),
+          a = s.useContext(Bf.ro),
           o = s.useRef(a.state.currentSlide),
           [l, c] = s.useState(null),
           [u, d] = s.useState(!!r),
@@ -47858,7 +47861,7 @@
           const e = () => {
             m.current = window.setTimeout(() => {
               if (m.current) {
-                Lf(m);
+                kf(m);
                 const e = (a.state.currentSlide + 1) % a.state.totalSlides;
                 a.setStoreState({ currentSlide: e });
               }
@@ -47868,54 +47871,54 @@
           const t = () => {
             const t = o.current,
               r = a.state.currentSlide;
-            i && i(r), c(r > t ? "Right" : r < t ? "Left" : null), Lf(_);
+            i && i(r), c(r > t ? "Right" : r < t ? "Left" : null), kf(_);
             (_.current = window.setTimeout(() => {
-              _.current && (c(null), Lf(_));
+              _.current && (c(null), kf(_));
             }, 1e3)),
               (o.current = r),
-              m.current ? (Lf(m), d(!1)) : u && e();
+              m.current ? (kf(m), d(!1)) : u && e();
           };
           return (
             a.subscribe(t),
             () => {
-              a.unsubscribe(t), Lf(m), Lf(_);
+              a.unsubscribe(t), kf(m), kf(_);
             }
           );
         }, [a, u]);
         const h = !!l && "CarouselSliding" + l;
         return s.createElement(
           "div",
-          { className: xr(Ef.sliderBody, "SliderBody", h) },
+          { className: xr(If.sliderBody, "SliderBody", h) },
           !t &&
             s.createElement(
-              Cf.jp,
+              Bf.jp,
               {
                 className: xr(
-                  Ef.carouselBtnCtn,
-                  Ef.left,
-                  Ef.carouselNavButton,
+                  If.carouselBtnCtn,
+                  If.left,
+                  If.carouselNavButton,
                   "CarouselBtnLeft",
                 ),
               },
               s.createElement(ac, null),
             ),
           s.createElement(
-            Cf.iR,
+            Bf.iR,
             {
-              className: If.GetScrollableClassname(),
-              classNameTray: Ef.slideTrayCustomize,
-              classNameAnimation: Ef.DisableSliderMotion,
+              className: Rf.GetScrollableClassname(),
+              classNameTray: If.slideTrayCustomize,
+              classNameAnimation: If.DisableSliderMotion,
             },
             s.createElement(hd, null, n),
           ),
           !t &&
             s.createElement(
-              Cf.P1,
+              Bf.P1,
               {
                 className: xr(
-                  Ef.carouselBtnCtn,
-                  Ef.right,
-                  Ef.carouselNavButton,
+                  If.carouselBtnCtn,
+                  If.right,
+                  If.carouselNavButton,
                   "CarouselBtnRight",
                 ),
               },
@@ -47923,12 +47926,12 @@
             ),
         );
       }
-      function Nf(e) {
+      function Pf(e) {
         const t = M(),
-          r = wf(Sf),
-          n = "true" === String(gf(e.args, "autoadvance")).toLowerCase();
+          r = Cf(wf),
+          n = "true" === String(bf(e.args, "autoadvance")).toLowerCase();
         return s.createElement(
-          Of,
+          Ff,
           {
             hideArrows: !r,
             hidePips: t,
@@ -47942,12 +47945,13 @@
           e.children,
         );
       }
-      class Pf {
+      class Gf {
         constructor() {
           (this.m_nSelectedAbilityIndex = 0),
             (this.m_asyncShortFilmOwnership = new os()),
             (this.m_BBCodeDictionary = new Map([
               ...Array.from(pf.entries()),
+              ...Array.from(gf.entries()),
               ["color", { Constructor: Tr, autocloses: !1 }],
               ["block", { Constructor: Mr, autocloses: !1 }],
               ["spoiler", { Constructor: Dr, autocloses: !1 }],
@@ -47959,7 +47963,7 @@
               ["previewyoutube", { Constructor: kr, autocloses: !1 }],
               ["img", { Constructor: Nr, autocloses: !1 }],
               ["div", { Constructor: Pr, autocloses: !1 }],
-              ["carousel", { Constructor: Nf, autocloses: !1 }],
+              ["carousel", { Constructor: Pf, autocloses: !1 }],
             ])),
             (this.BBCodeAccumulator = (e) => new mr(new ur(), 0)),
             (this.m_BBCodeParser = new gr(
@@ -47977,8 +47981,8 @@
           return this.m_BBCodeParser;
         }
       }
-      (0, i.gn)([Je.LO], Pf.prototype, "m_nSelectedAbilityIndex", void 0);
-      let Gf = new Pf();
+      (0, i.gn)([Je.LO], Gf.prototype, "m_nSelectedAbilityIndex", void 0);
+      let xf = new Gf();
       (0, Je.jQ)({ enforceActions: "never" }),
         document.addEventListener("DOMContentLoaded", function () {
           return (0, i.mG)(this, void 0, void 0, function* () {
@@ -48021,7 +48025,7 @@
                   }
                 });
               })(k.LANGUAGE),
-              Gf.Init();
+              xf.Init();
           });
         });
     },
