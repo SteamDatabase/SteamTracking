@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "8851598";
+var CLSTAMP = "8853532";
 (() => {
   "use strict";
   var e,
@@ -94,7 +94,6 @@ var CLSTAMP = "8851598";
         1643: "chunk~60681c765",
         1722: "sales_czech-json",
         2029: "shared_sc_schinese-json",
-        2120: "libraries~65c77a859",
         2136: "events",
         2167: "chunk~b4cf1c116",
         2431: "shared_arabic-json",
@@ -247,7 +246,7 @@ var CLSTAMP = "8851598";
         819: "08aafc2c151efdb2cb78",
         874: "673c99f3f2ca2e9f3d91",
         903: "a7b92c2222f1d7c2e50a",
-        979: "ac61867082233d4828f4",
+        979: "398530aa26f56f13c423",
         1012: "a94687869ea4380e2ede",
         1043: "a65118491a23cfff1a7e",
         1117: "dede9c23f54484237176",
@@ -258,7 +257,6 @@ var CLSTAMP = "8851598";
         1643: "4c4272189ab4fdbc2be2",
         1722: "9505761fface8382716d",
         2029: "e48b98396bc03a67237f",
-        2120: "acc3d4ac686e5e4803f6",
         2136: "6724213533f2dcd87e21",
         2167: "0cb75c87c262c003b8b7",
         2431: "1ddbbdb2c0edc00865c7",
@@ -356,7 +354,7 @@ var CLSTAMP = "8851598";
         7181: "e0d39ef216608c27445f",
         7236: "0473414e4af1ef4110f4",
         7240: "1ebcee253023b441de7a",
-        7485: "e3d88a82ef966c3bc2a5",
+        7485: "60a0e307b1885144da41",
         7602: "3f595d34cdb6c3c1a1ec",
         7682: "e1a03a02efc05c5c7093",
         7724: "c8322269d2d47d1e5178",
@@ -379,7 +377,7 @@ var CLSTAMP = "8851598";
         8767: "98061182cc26791bc0c4",
         8774: "935c452dc6ebb2a7dfbd",
         8960: "9bd7556cc9bdcb948993",
-        8974: "956a72abcaffdb1d0c61",
+        8974: "3526843cd8e585d54100",
         8993: "ae2a7883c5e6d76ecf9d",
         8994: "f9e6e54bc5f99287682d",
         9062: "4508ae61f0680b338757",
@@ -434,7 +432,7 @@ var CLSTAMP = "8851598";
         6699: "4694d750def959727f73",
         6808: "7fdbc85de533f923151d",
         6853: "969278b06eb0eb83065e",
-        7485: "4d6a14433032ae68c1ba",
+        7485: "71d548a21c80a487cdc6",
         7762: "61877d984bfcf3e7f40f",
         8974: "bad51c71b6eba6ffe9e4",
       }[e]),

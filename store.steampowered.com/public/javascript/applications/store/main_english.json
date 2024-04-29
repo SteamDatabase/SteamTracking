@@ -123,6 +123,7 @@
     "EventModTile_Author": "Event Author: %1$s",
     "EventModTile_Updator": "Last Updator: %1$s",
     "EventModTile_LastModified": "Updated: %1$s",
+    "PointShop_Event_Over": "The event is over but you can still get these items",
     "HeaderTitle": "Players Like You Love...",
     "HeaderBody1": "Explore personalized recommendations from our machine learning system, based on your Steam gameplay history as compared to millions of other players'. Customize your results using the sliders and filters, then save your settings so Steam remembers what you're looking for.",
     "HeaderBody3": "For more information visit %1$s.",

@@ -6495,6 +6495,13 @@ body.v6.rewards .ModalPosition_Content {
   width: 32px;
   height: 32px;
 }
+:root {
+  --standard-root-background: radial-gradient(
+    63.94% 1024px at 50% 200px,
+    #244372 0%,
+    #161a1f 100%
+  );
+}
 ._150UmBWkyuf6OfOjeKA-tC {
   background-repeat: repeat-x;
   background-size: 1400px auto;
@@ -6512,11 +6519,7 @@ body.v6.rewards .ModalPosition_Content {
 }
 ._3uAuM7D5wUQg-5M21NGJc5 {
   max-width: 100%;
-  background: radial-gradient(
-    63.94% 1024px at 50% 200px,
-    #244372 0%,
-    #161a1f 100%
-  );
+  background: var(--standard-root-background);
   margin: 0 auto;
   overflow-y: scroll;
   overflow-x: hidden;
