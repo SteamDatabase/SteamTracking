@@ -63195,11 +63195,11 @@
             u = null;
           a.length > 0 &&
             a.forEach((e) => {
-              e.rtConflictStart <= o && e.rtConflictEnd >= o
+              e.rtConflictStart <= o && e.rtConflictEnd > o
                 ? ((null == i ? void 0 : i.appid) ||
                     (null == i ? void 0 : i.packageid)) &&
                   e.rtDiscountStart <= o &&
-                  o <= e.rtDiscountEnd
+                  o + re._H.PerDay <= e.rtDiscountEnd
                   ? (!s || e.nHighestDiscount > s) &&
                     ((s = e.nHighestDiscount),
                     (c = e.strDiscountName),
