@@ -1155,7 +1155,7 @@ var k_nSearchKeypressTimeoutExtensionMS = 125;
 function MobileApp_ShowSearchResults( $SNR, $Term )
 {
 	const snr = $SNR ? '&snr=' + $SNR : '';
-	window.location = 'https://store.steampowered.com/search/?term=' + $Term + snr;
+	window.location = 'https://store.steampowered.com/search/?term=' + encodeURIComponent( $Term ) + snr;
 }
 
 function MobileApp_UpdateSearchSuggestions( $Term )

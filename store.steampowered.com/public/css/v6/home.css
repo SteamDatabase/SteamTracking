@@ -3936,7 +3936,7 @@ background: -webkit-linear-gradient( 134deg, #e8f5fc 5%,#cce9f9 95%);
     display: none;
 }
 
-.steamdeck_banner_desktop, 
+.steamdeck_banner_desktop,
 .steamdeck_banner_mobile {
 	width: 100%;
 	transition: box-shadow 100ms;
@@ -4823,16 +4823,8 @@ background: -webkit-linear-gradient( left, rgba( 171, 218, 244, 0) 5%,rgba( 171,
 	transform: translateY(-44px);
 }
 
-/* Specific capsule heights */
-.friends_recently_purchased .carousel_items {
-	height: 183px;
-}
 .friends_recently_purchased .arrow {
 	top: 18%;
-}
-
-.more_apps_by_curators_capsule .carousel_items {
-	height: 135px;
 }
 
 .more_apps_by_curators_capsule .discount_block {
@@ -4843,26 +4835,13 @@ background: -webkit-linear-gradient( left, rgba( 171, 218, 244, 0) 5%,rgba( 171,
 	top: 20%
 }
 
-.recently_updated_apps .carousel_items {
-	height: 231px;
-}
-
 .recently_updated_apps .arrow {
 	top: 30%
-}
-
-.specials_under10 .carousel_items:not(.no_paging),
-.wishlist_on_sale .carousel_items:not(.no_paging) {
-	height: 134px;
 }
 
 .specials_under10 .arrow,
 .wishlist_on_sale .arrow {
 	top: 22%;
-}
-
-.spotlight .carousel_items {
-	height: 390px;
 }
 
 /* Overrides for home.css stuff that should just be removed once we ship */
@@ -5181,13 +5160,6 @@ body.v6.infinite_scrolling #footer_spacer.small_footer {
 		margin-top: 0;
 	}
 
-    html.responsive .recommended_by_steam_labs_ctn .carousel_container.paging_capsules .carousel_items:not(.no_paging) {
-        padding-bottom: 20px;
-    }
-
-    html.responsive .best_selling_vr_ctn .carousel_container.paging_capsules .carousel_items:not(.no_paging) {
-        padding-bottom: 30px;
-    }
     html.responsive .carousel_container .carousel_items > *.focus {
         width: auto;
     }

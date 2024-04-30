@@ -354,6 +354,10 @@ html.tablet .col.search_discount {
 	width: unset;
 }
 
+html.tablet .col.search_discount_and_price .discount_block {
+	width: 120px;
+}
+
 html.tablet .col.search_price.discounted {
 	padding-top: unset;
 }

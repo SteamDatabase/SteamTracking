@@ -279,10 +279,10 @@
         v = n(31846),
         f = n(13499),
         S = n(37563),
-        C = n(83682),
-        k = n(72869),
-        y = n.n(k),
-        b = n(43090);
+        C = n(72869),
+        k = n.n(C),
+        y = n(43090),
+        b = n(77115);
       const P = new Map([
         [
           "b",
@@ -290,7 +290,7 @@
             Constructor: function (e) {
               return i.createElement(
                 "div",
-                { className: y().Bold },
+                { className: k().Bold },
                 e.children,
               );
             },
@@ -303,7 +303,7 @@
             Constructor: function (e) {
               return i.createElement(
                 "div",
-                { className: (0, _.Z)(y().Italic, "BB_Italic") },
+                { className: (0, _.Z)(k().Italic, "BB_Italic") },
                 e.children,
               );
             },
@@ -317,7 +317,7 @@
           "h4",
           {
             Constructor: function (e) {
-              return D(e, (0, _.Z)(y().Header4, "BB_Header4"));
+              return D(e, (0, _.Z)(k().Header4, "BB_Header4"));
             },
             autocloses: !1,
             skipFollowingNewline: !0,
@@ -327,7 +327,7 @@
           "h5",
           {
             Constructor: function (e) {
-              return D(e, (0, _.Z)(y().Header5, "BB_Header5"));
+              return D(e, (0, _.Z)(k().Header5, "BB_Header5"));
             },
             autocloses: !1,
             skipFollowingNewline: !0,
@@ -347,7 +347,7 @@
                 "span",
                 {
                   id: t || void 0,
-                  className: (0, _.Z)(y().CenterSpan, "BB_Center"),
+                  className: (0, _.Z)(k().CenterSpan, "BB_Center"),
                 },
                 e.children,
               );
@@ -359,7 +359,7 @@
           "smalltext",
           {
             Constructor: function (e) {
-              return D(e, (0, _.Z)(y().SmallText, "BB_SmallText"));
+              return D(e, (0, _.Z)(k().SmallText, "BB_SmallText"));
             },
             autocloses: !1,
             skipFollowingNewline: !0,
@@ -371,7 +371,7 @@
             Constructor: function (e) {
               return i.createElement(
                 "div",
-                { className: y().Underline },
+                { className: k().Underline },
                 e.children,
               );
             },
@@ -384,7 +384,7 @@
             Constructor: function (e) {
               return i.createElement(
                 "div",
-                { className: y().Strike },
+                { className: k().Strike },
                 e.children,
               );
             },
@@ -402,7 +402,7 @@
               return i.createElement(
                 a.s,
                 {
-                  className: (0, _.Z)(y().Spoiler, t && y().Revealed),
+                  className: (0, _.Z)(k().Spoiler, t && k().Revealed),
                   focusable: !0,
                   onActivate: o,
                   onOKActionDescription: (0, v.Xx)(
@@ -411,7 +411,7 @@
                 },
                 i.createElement(
                   "span",
-                  { className: y().SpoilerText },
+                  { className: k().SpoilerText },
                   e.children,
                 ),
               );
@@ -423,7 +423,7 @@
           "hr",
           {
             Constructor: function (e) {
-              return i.createElement("div", { className: y().HR });
+              return i.createElement("div", { className: k().HR });
             },
             autocloses: !1,
           },
@@ -448,7 +448,7 @@
                   (n.startsWith("http://") || n.startsWith("https://")) &&
                   (t = n);
               }
-              const n = "button" == A(e.args, "style") ? y().LinkButton : null;
+              const n = "button" == A(e.args, "style") ? k().LinkButton : null;
               let o = A(e.args, "id");
               o &&
                 "string" == typeof o &&
@@ -481,7 +481,7 @@
             Constructor: function (e) {
               return i.createElement(
                 "div",
-                { className: y().PullQuote },
+                { className: k().PullQuote },
                 e.children,
               );
             },
@@ -494,7 +494,7 @@
             Constructor: function (e) {
               return i.createElement(
                 "div",
-                { className: y().CodeBlock },
+                { className: k().CodeBlock },
                 e.children,
               );
             },
@@ -507,7 +507,7 @@
             Constructor: function (e) {
               return i.createElement(
                 "code",
-                { className: y().Code },
+                { className: k().Code },
                 e.children,
               );
             },
@@ -527,10 +527,10 @@
                 "div",
                 {
                   className: (0, _.Z)(
-                    y().Table,
+                    k().Table,
                     "BB_Table",
-                    t && y().NoBorder,
-                    n && y().EqualCells,
+                    t && k().NoBorder,
+                    n && k().EqualCells,
                   ),
                 },
                 e.children,
@@ -546,7 +546,7 @@
             Constructor: function (e) {
               return i.createElement(
                 "div",
-                { className: (0, _.Z)(y().TableRow, "BB_TableRow") },
+                { className: (0, _.Z)(k().TableRow, "BB_TableRow") },
                 e.children,
               );
             },
@@ -561,7 +561,7 @@
             Constructor: function (e) {
               return i.createElement(
                 "div",
-                { className: y().TableHeader },
+                { className: k().TableHeader },
                 e.children,
               );
             },
@@ -578,7 +578,7 @@
               return i.createElement(
                 "div",
                 {
-                  className: (0, _.Z)(y().TableData, "BB_TableData"),
+                  className: (0, _.Z)(k().TableData, "BB_TableData"),
                   style: t && { width: t },
                 },
                 e.children,
@@ -601,25 +601,25 @@
                       return {
                         collapsed: "#Bbcode_Expand_Details_Collapsed",
                         expanded: "#Bbcode_Expand_Details_Expanded",
-                        style: y().ExpandSection_Details,
+                        style: k().ExpandSection_Details,
                       };
                     case "spoiler":
                       return {
                         collapsed: "#Bbcode_Expand_Spoiler_Collapsed",
                         expanded: "#Bbcode_Expand_Spoiler_Expanded",
-                        style: y().ExpandSection_Spoiler,
+                        style: k().ExpandSection_Spoiler,
                       };
                     case "title":
                       return {
                         collapsed: t || "#Bbcode_Expand_ShowMore_Collapsed",
                         expanded: t || "#Bbcode_Expand_ShowMore_Expanded",
-                        style: y().ExpandSection_WithTitle,
+                        style: k().ExpandSection_WithTitle,
                       };
                     default:
                       return {
                         collapsed: "#Bbcode_Expand_ShowMore_Collapsed",
                         expanded: "#Bbcode_Expand_ShowMore_Expanded",
-                        style: y().ExpandSection_ShowMore,
+                        style: k().ExpandSection_ShowMore,
                       };
                   }
                 })(A(e.args, "type"), A(e.args, "title"));
@@ -627,25 +627,25 @@
                 "div",
                 {
                   className: (0, _.Z)(
-                    y().ExpandSectionBlock,
+                    k().ExpandSectionBlock,
                     r.style,
-                    n ? y().ExpandSectionExpanded : y().ExpandSectionCollapsed,
+                    n ? k().ExpandSectionExpanded : k().ExpandSectionCollapsed,
                   ),
                 },
                 i.createElement(
                   "div",
-                  { className: y().ExpandSectionHeader, onClick: () => o(!n) },
+                  { className: k().ExpandSectionHeader, onClick: () => o(!n) },
                   (0, v.Xx)(n ? r.expanded : r.collapsed),
                   i.createElement(
                     "div",
-                    { className: y().EmbedArrow },
+                    { className: k().EmbedArrow },
                     i.createElement(g.ret, { angle: n ? 180 : 0 }),
                   ),
                 ),
                 n &&
                   i.createElement(
                     "div",
-                    { className: y().ExpandSectionBody },
+                    { className: k().ExpandSectionBody },
                     e.children,
                   ),
               );
@@ -677,7 +677,7 @@
           {
             Constructor: function (e) {
               const t = A(e.args),
-                n = "button" == A(e.args, "style") ? y().LinkButton : null;
+                n = "button" == A(e.args, "style") ? k().LinkButton : null;
               return i.createElement(
                 x,
                 { className: n, href: `${S.De.PARTNER_BASE_URL}doc/${t}` },
@@ -709,11 +709,11 @@
         ["previewyoutube", { Constructor: H, autocloses: !1 }],
       ]);
       function L(e, t, n = 0) {
-        if (null == e ? void 0 : e.startsWith(C.A1)) return (0, c.pd)(e);
-        if (null == e ? void 0 : e.startsWith(C.UC)) {
+        if (null == e ? void 0 : e.startsWith(b.A)) return (0, c.pd)(e);
+        if (null == e ? void 0 : e.startsWith(b.U)) {
           const o = new Array(),
             i = (0, c.OL)(),
-            s = e.substring(C.UC.length + 1),
+            s = e.substring(b.U.length + 1),
             a = m.aN.GetHashFromHashAndExt(s),
             l = m.aN.GetExtensionStringFromHashAndExt(s);
           if (null != t) {
@@ -755,13 +755,13 @@
         );
       }
       function N(e) {
-        return D(e, (0, _.Z)(y().Header1, "BB_Header1"));
+        return D(e, (0, _.Z)(k().Header1, "BB_Header1"));
       }
       function I(e) {
-        return D(e, (0, _.Z)(y().Header2, "BB_Header2"));
+        return D(e, (0, _.Z)(k().Header2, "BB_Header2"));
       }
       function w(e) {
-        return D(e, (0, _.Z)(y().Header3, "BB_Header3"));
+        return D(e, (0, _.Z)(k().Header3, "BB_Header3"));
       }
       const x = (e) => {
         const { href: t } = e,
@@ -769,10 +769,10 @@
           r = (0, E.bJ)();
         let a,
           c = (0, l.B1)(t, r);
-        (0, b.A)(c)
+        (0, y.A)(c)
           ? ((c =
               (S.De.IN_CLIENT ? "steam://openurl_external/" : "") +
-              (0, b.d)(c)),
+              (0, y.d)(c)),
             (a = "noopener nofollow"))
           : (c = (0, f.bk)(c));
         const m =
@@ -792,11 +792,11 @@
         const t = A(e.args, "author");
         return i.createElement(
           "blockquote",
-          { className: (0, _.Z)(y().BlockQuote, e.className) },
+          { className: (0, _.Z)(k().BlockQuote, e.className) },
           !!t &&
             i.createElement(
               "div",
-              { className: y().QuoteAuthor },
+              { className: k().QuoteAuthor },
               (0, v.Xx)("#Bbcode_Originally_Posted_By") + " ",
               " ",
               i.createElement("b", null, t + ":"),
@@ -807,14 +807,14 @@
       function B(e) {
         return i.createElement(
           "ul",
-          { className: (0, _.Z)(y().List, "bullets") },
+          { className: (0, _.Z)(k().List, "bullets") },
           e.children,
         );
       }
       function O(e) {
         return i.createElement(
           "ol",
-          { className: y().OrderedList },
+          { className: k().OrderedList },
           e.children,
         );
       }
@@ -828,7 +828,7 @@
             (t = t.substring(1)),
           i.createElement(
             "li",
-            { className: y().ListItem, id: t || void 0 },
+            { className: k().ListItem, id: t || void 0 },
             e.children,
           )
         );

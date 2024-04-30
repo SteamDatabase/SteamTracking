@@ -773,58 +773,66 @@
             l = n.BUpdatingPreferences(),
             m = 1 == (1 & t.notification_targets),
             f = 2 == (2 & t.notification_targets),
-            p = 8 == (8 & t.notification_targets);
-          return r.createElement(
-            "div",
-            { className: b.NotificationGroup },
-            r.createElement(
-              "div",
-              { className: b.NotificationSection },
-              r.createElement(g.fp, {
-                className: b.NotificationFeedToggle,
-                padding: "compact",
-                onChange: i,
-                disabled: l,
-                bottomSeparator: "none",
-                checked: m,
-              }),
-              r.createElement(
-                "p",
-                { className: b.NotificationDescription },
-                ((h = t.notification_type),
-                (0, _.Xx)("#SteamNotificationTypeDesc_" + h)),
-              ),
-              r.createElement(
-                g.Yz,
-                {
-                  className: (0, d.Z)({
-                    [b.PrefDetailsToggle]: !0,
-                    [b.Selected]: c,
-                  }),
-                  onClick: () => o(!c),
-                },
-                r.createElement(D.vVQ, { direction: "down" }),
-              ),
-            ),
-            c &&
-              r.createElement(
+            p = 8 == (8 & t.notification_targets),
+            h =
+              ((u = t.notification_type),
+              (0, _.Qw)("#SteamNotificationTypeDesc_" + u)
+                ? (0, _.Xx)("#SteamNotificationTypeDesc_" + u)
+                : null);
+          var u;
+          return h
+            ? r.createElement(
                 "div",
-                { className: b.NotificationPrefDetails },
-                r.createElement(g.ji, {
-                  label: (0, _.Xx)("#NotificationSettings_SendToast"),
-                  disabled: l || !m,
-                  checked: p,
-                  onChange: s,
-                }),
-                r.createElement(g.ji, {
-                  label: (0, _.Xx)("#NotificationSettings_PushNotification"),
-                  disabled: l || !m,
-                  checked: f,
-                  onChange: a,
-                }),
-              ),
-          );
-          var h;
+                { className: b.NotificationGroup },
+                r.createElement(
+                  "div",
+                  { className: b.NotificationSection },
+                  r.createElement(g.fp, {
+                    className: b.NotificationFeedToggle,
+                    padding: "compact",
+                    onChange: i,
+                    disabled: l,
+                    bottomSeparator: "none",
+                    checked: m,
+                  }),
+                  r.createElement(
+                    "p",
+                    { className: b.NotificationDescription },
+                    h,
+                  ),
+                  r.createElement(
+                    g.Yz,
+                    {
+                      className: (0, d.Z)({
+                        [b.PrefDetailsToggle]: !0,
+                        [b.Selected]: c,
+                      }),
+                      onClick: () => o(!c),
+                    },
+                    r.createElement(D.vVQ, { direction: "down" }),
+                  ),
+                ),
+                c &&
+                  r.createElement(
+                    "div",
+                    { className: b.NotificationPrefDetails },
+                    r.createElement(g.ji, {
+                      label: (0, _.Xx)("#NotificationSettings_SendToast"),
+                      disabled: l || !m,
+                      checked: p,
+                      onChange: s,
+                    }),
+                    r.createElement(g.ji, {
+                      label: (0, _.Xx)(
+                        "#NotificationSettings_PushNotification",
+                      ),
+                      disabled: l || !m,
+                      checked: f,
+                      onChange: a,
+                    }),
+                  ),
+              )
+            : null;
         });
       var w = n(56480);
       const B = r.lazy(() =>
@@ -839,8 +847,9 @@
             n.e(6882),
             n.e(7247),
             n.e(9424),
+            n.e(886),
             n.e(7695),
-            n.e(5164),
+            n.e(3243),
             n.e(344),
             n.e(5944),
             n.e(1915),

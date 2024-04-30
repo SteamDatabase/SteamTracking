@@ -1181,6 +1181,15 @@ function OnInitializeTransactionFailure( detail, result )
 				case 97:
 					error_text = 'Commercial purchases from your region require a VAT ID. Please login to the Steamworks partner site and update your Company Information to include your VAT ID.';
 					break;
+				case 98:
+					error_text = 'Your transaction failed because the shipping address you entered could not be validated.';
+					break;
+				case 99:
+					error_text = 'Your order cannot be completed because a deposit is no longer required to purchase this item.';
+					break;
+				case 100:
+					error_text = 'Your order cannot be completed because your cart contains items that are not valid for purchase.  Please <a href="https://store.steampowered.com/cart">review the contents of your cart</a> to correct any errors and try again.';
+					break;
 				default:
 					break;
 			}

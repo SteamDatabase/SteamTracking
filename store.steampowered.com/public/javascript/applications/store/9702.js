@@ -706,9 +706,28 @@
               n.forEach((e) => {
                 var t, n, l, s, c, d, u, m, p;
                 const _ = (function (e) {
-                  var t, n, a, i, r, o, l, s, c, d, u, m, p, _, g, f, v, h, E;
-                  let C = [],
-                    I = !!(null === (t = e.gift_info) || void 0 === t
+                  var t,
+                    n,
+                    a,
+                    i,
+                    r,
+                    o,
+                    l,
+                    s,
+                    c,
+                    d,
+                    u,
+                    m,
+                    p,
+                    _,
+                    g,
+                    f,
+                    v,
+                    h,
+                    E,
+                    C;
+                  let I = [],
+                    y = !!(null === (t = e.gift_info) || void 0 === t
                       ? void 0
                       : t.accountid_giftee);
                   if (
@@ -719,7 +738,7 @@
                           : n.duplicate_appids_in_cart) || void 0 === a
                       ? void 0
                       : a.length) &&
-                      C.push({
+                      I.push({
                         purchase_state: 1,
                         notice_text: (0, N.Xx)(
                           "#Cart_Error_DuplicateApps_LineItem",
@@ -743,17 +762,17 @@
                         ? l
                         : 0) > 1;
                     let n = (0, N.Xx)(
-                      I
+                      y
                         ? "#Cart_Error_AlreadyOwned_GiftLineItem_Game"
                         : "#Cart_Error_AlreadyOwned_LineItem_Game",
                     );
                     t &&
                       (n = (0, N.Xx)(
-                        I
+                        y
                           ? "#Cart_Error_AlreadyOwned_GiftLineItem"
                           : "#Cart_Error_AlreadyOwned_LineItem",
                       )),
-                      C.push({
+                      I.push({
                         purchase_state: 2,
                         notice_text: n,
                         appids: t ? e.errors.owned_appids : null,
@@ -763,7 +782,7 @@
                     (null === (s = e.errors) || void 0 === s
                       ? void 0
                       : s.unavailable_in_country) &&
-                      C.push({
+                      I.push({
                         purchase_state: 8,
                         notice_text: (0, N.Xx)(
                           "#Cart_Error_UnavailableCountry_LineItem",
@@ -772,7 +791,7 @@
                     (null === (c = e.errors) || void 0 === c
                       ? void 0
                       : c.coupon_exclusive_promo) &&
-                      C.push({
+                      I.push({
                         purchase_state: 13,
                         notice_text: (0, N.Xx)(
                           "#Cart_Error_CouponIsExclusivePromo",
@@ -781,27 +800,34 @@
                     (null === (d = e.errors) || void 0 === d
                       ? void 0
                       : d.invalid_coupon) &&
-                      C.push({
+                      I.push({
                         purchase_state: 11,
                         notice_text: (0, N.Xx)("#Cart_Error_CouponIsInvalid"),
                       }),
                     (null === (u = e.errors) || void 0 === u
                       ? void 0
                       : u.invalid_coupon_for_item) &&
-                      C.push({
+                      I.push({
                         purchase_state: 12,
                         notice_text: (0, N.Xx)(
                           "#Cart_Error_CouponIsInvalidForItem",
                         ),
                       }),
-                    (null ===
-                      (p =
-                        null === (m = e.warnings) || void 0 === m
-                          ? void 0
-                          : m.appids_in_mastersub) || void 0 === p
+                    (null === (m = e.errors) || void 0 === m
                       ? void 0
-                      : p.length) &&
-                      C.push({
+                      : m.too_many_in_cart) &&
+                      I.push({
+                        purchase_state: 14,
+                        notice_text: (0, N.Xx)("#Cart_Error_TooManyInCart"),
+                      }),
+                    (null ===
+                      (_ =
+                        null === (p = e.warnings) || void 0 === p
+                          ? void 0
+                          : p.appids_in_mastersub) || void 0 === _
+                      ? void 0
+                      : _.length) &&
+                      I.push({
                         purchase_state: 4,
                         notice_text: (0, N.Xx)(
                           "#Cart_Error_MasterSubscription_LineItem",
@@ -811,13 +837,13 @@
                         ),
                       }),
                     (null ===
-                      (g =
-                        null === (_ = e.warnings) || void 0 === _
+                      (f =
+                        null === (g = e.warnings) || void 0 === g
                           ? void 0
-                          : _.owned_appids) || void 0 === g
+                          : g.owned_appids) || void 0 === f
                       ? void 0
-                      : g.length) &&
-                      C.push({
+                      : f.length) &&
+                      I.push({
                         purchase_state: 3,
                         notice_text: (0, N.Xx)(
                           "#Cart_Warning_AlreadyOwned_LineItem",
@@ -825,38 +851,38 @@
                         appids: e.warnings.owned_appids,
                       }),
                     (null ===
-                      (v =
-                        null === (f = e.warnings) || void 0 === f
+                      (h =
+                        null === (v = e.warnings) || void 0 === v
                           ? void 0
-                          : f.owned_appids_extra_copy) || void 0 === v
+                          : v.owned_appids_extra_copy) || void 0 === h
                       ? void 0
-                      : v.length) &&
-                      C.push({
+                      : h.length) &&
+                      I.push({
                         purchase_state: 9,
                         notice_text: (0, N.Xx)(
                           "#Cart_Warning_ExtraCopies_LineItem",
                         ),
                         appids: e.warnings.owned_appids_extra_copy,
                       }),
-                    (null === (h = e.warnings) || void 0 === h
+                    (null === (E = e.warnings) || void 0 === E
                       ? void 0
-                      : h.price_has_changed) &&
-                      C.push({
+                      : E.price_has_changed) &&
+                      I.push({
                         purchase_state: 10,
                         notice_text: (0, N.Xx)(
                           "#Cart_Warning_PriceChange_LineItem",
                         ),
                       }),
-                    (null === (E = e.warnings) || void 0 === E
+                    (null === (C = e.warnings) || void 0 === C
                       ? void 0
-                      : E.non_refundable) &&
-                      C.push({
+                      : C.non_refundable) &&
+                      I.push({
                         purchase_state: 5,
                         notice_text: (0, N.Xx)(
                           "#Cart_Warning_NoRefund_LineItem",
                         ),
                       }),
-                    C
+                    I
                   );
                 })(e);
                 r.set(e.line_item_id, _);
@@ -2828,6 +2854,7 @@
                     lineItem: o,
                     storeItem: n,
                     purchaseOption: s,
+                    validatedItem: d,
                     initialPurchaseOption: k,
                     fnRemoveLineItem: g.mutate,
                   }),
@@ -2886,46 +2913,49 @@
             lineItem: n,
             storeItem: r,
             purchaseOption: o,
-            initialPurchaseOption: s,
-            fnRemoveLineItem: d,
+            validatedItem: s,
+            initialPurchaseOption: d,
+            fnRemoveLineItem: u,
           } = e,
-          u = (0, i.bz)(),
-          [p] = (0, m.pf)(),
-          _ =
-            (null == p ? void 0 : p.accountid_giftee) ||
-            (u
+          p = (0, i.bz)(),
+          [_] = (0, m.pf)(),
+          g =
+            (null == _ ? void 0 : _.accountid_giftee) ||
+            (p
               ? null === (t = n.gift_info) || void 0 === t
                 ? void 0
                 : t.accountid_giftee
               : void 0),
-          g = (0, i.IW)(),
-          f = (0, i.tI)(n.packageid, n.bundleid, pe(o));
+          f =
+            (0, i.IW)() &&
+            !(null == s ? void 0 : s.restrict_add_additional_to_cart),
+          v = (0, i.tI)(n.packageid, n.bundleid, pe(o));
         return a.createElement(
           ce,
           { className: X().LineItemSpaceBetween },
           a.createElement(
             "div",
             { className: X().LineItemCol },
-            _
-              ? a.createElement(K, { recipient: _ })
+            g
+              ? a.createElement(K, { recipient: g })
               : a.createElement(oe, {
                   lineItem: n,
                   storeItem: r,
-                  initialValue: s,
+                  initialValue: d,
                   purchaseOption: o,
                 }),
           ),
           a.createElement(
             "div",
             { className: (0, c.Z)(X().LineItemRightCol, X().AddRemoveLinks) },
-            g &&
+            f &&
               a.createElement(
                 a.Fragment,
                 null,
                 a.createElement(
                   h.s,
                   {
-                    onActivate: () => !f.isLoading && f.mutate(),
+                    onActivate: () => !v.isLoading && v.mutate(),
                     className: X().AddLineItem,
                     title: (0, l.Xx)("#Cart_LineItem_Add_Tooltip"),
                   },
@@ -2933,10 +2963,10 @@
                 ),
                 "|",
               ),
-            !u &&
+            !p &&
               a.createElement(
                 h.s,
-                { onActivate: () => d(), className: X().RemoveLineItem },
+                { onActivate: () => u(), className: X().RemoveLineItem },
                 (0, l.Xx)("#Cart_Remove"),
               ),
           ),

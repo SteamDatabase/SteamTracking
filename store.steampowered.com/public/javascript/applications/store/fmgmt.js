@@ -1030,7 +1030,7 @@
           { setErrorMessage: D } = (0, y.cL)();
         (0, y.sT)(d, "#FamilyManagement_ErrorLoadFamilyInviteGeneric");
         const P = (0, f.k6)(),
-          R = !!b((0, f.TH)(), C);
+          A = !!b((0, f.TH)(), C);
         (0, y.zj)(
           c,
           "#FamilyManagement_ErrorAcceptInvite",
@@ -1041,9 +1041,9 @@
             "#FamilyManagement_ErrorDeclineInvite",
             y.zs.k_EFamilyQueryDeclineInvite,
           );
-        const A = (0, y.Rs)();
-        if (A.isSuccess) {
-          !A.data.is_not_member_of_any_group() &&
+        const R = (0, y.Rs)();
+        if (R.isSuccess) {
+          !R.data.is_not_member_of_any_group() &&
             P.push("/account/familymanagement");
         }
         if (d.isError) return null;
@@ -1131,7 +1131,7 @@
                 M &&
                   n.createElement(S, {
                     cooldownSecondsRemaining:
-                      A.data.cooldown_seconds_remaining(),
+                      R.data.cooldown_seconds_remaining(),
                   }),
                 M &&
                   n.createElement(
@@ -1277,7 +1277,7 @@
               {
                 className: _.DeclineInviteButton,
                 onClick: () => {
-                  D(null), m.mutate(), R && P.push("/account/familymanagement");
+                  D(null), m.mutate(), A && P.push("/account/familymanagement");
                 },
               },
               (0, p.Xx)("#FamilyManagement_DeclineInviteButton"),
@@ -1390,8 +1390,8 @@
           n.createElement(u.V, null)
         );
       }
-      var R = a(81114),
-        A = a(88619),
+      var A = a(81114),
+        R = a(88619),
         T = a(35427),
         G = a(70548),
         L = a(18434),
@@ -1440,10 +1440,10 @@
       function O(e) {
         return n.createElement(
           "div",
-          { className: R.InviteButtonCtn },
+          { className: A.InviteButtonCtn },
           n.createElement(
             o.KM,
-            { noFocusRing: !1, className: R.InviteButton, onClick: e.onClick },
+            { noFocusRing: !1, className: A.InviteButton, onClick: e.onClick },
             c.R3k({}),
             n.createElement(
               "span",
@@ -1479,13 +1479,13 @@
               null,
               n.createElement(
                 "div",
-                { className: R.Text },
+                { className: A.Text },
                 (0, p.Xx)("#FamilyManagement_PreviousUsers"),
               ),
               s.isLoading
                 ? n.createElement(
                     "div",
-                    { className: R.ThrobberContainer },
+                    { className: A.ThrobberContainer },
                     n.createElement(u.V, null),
                   )
                 : n.createElement(J, { steamids: i, onSelect: l }),
@@ -1495,25 +1495,25 @@
         const { familyGroupID: t, onSelect: a, onCancel: l } = e;
         return n.createElement(
           "div",
-          { className: R.SelectAccountContainer },
+          { className: A.SelectAccountContainer },
           n.createElement(
             o.Yz,
-            { className: R.CloseButton, onClick: l },
+            { className: A.CloseButton, onClick: l },
             n.createElement(c.pVO, null),
           ),
           n.createElement(
             "div",
-            { className: R.Header },
+            { className: A.Header },
             (0, p.Xx)("#FamilyManagement_InviteAMember"),
           ),
           n.createElement(
             "div",
-            { className: R.Text },
+            { className: A.Text },
             (0, p.Xx)("#FamilyManagement_InviteMethodText"),
           ),
           n.createElement(
             B.s,
-            { className: R.MethodButtons },
+            { className: A.MethodButtons },
             n.createElement(K, { familyGroupID: t, onSelect: a }),
           ),
           n.createElement(z, { familyGroupID: t, onSelect: a }),
@@ -1534,20 +1534,20 @@
           .map((e) => e.steamid());
         return n.createElement(
           "div",
-          { className: R.SelectAccountContainer },
+          { className: A.SelectAccountContainer },
           n.createElement(
             o.Yz,
-            { className: R.CloseButton, noFocusRing: !1, onClick: l },
+            { className: A.CloseButton, noFocusRing: !1, onClick: l },
             n.createElement(c.pVO, null),
           ),
           n.createElement(
             "div",
-            { className: R.Header },
+            { className: A.Header },
             (0, p.Xx)("#FamilyManagement_InviteAMember"),
           ),
           n.createElement(
             "div",
-            { className: R.Text },
+            { className: A.Text },
             (0, p.Xx)("#FamilyManagement_CooldownAndReinvite", s.current),
           ),
           n.createElement(J, { steamids: i, onSelect: a }),
@@ -1555,46 +1555,50 @@
       }
       function Q(e) {
         const { familyGroupID: t, steamid: a, onCancel: l } = e,
-          r = (0, v.IE)(a);
-        (0, y.sT)(r, "#FamilyManagement_ErrorLoadFamilyGeneric");
-        const [s, i] = (0, n.useState)(0),
-          [o, m] = (0, n.useState)(null),
-          d = (0, y.kz)(t, a, s);
+          { setErrorMessage: r } = (0, y.cL)(),
+          s = (0, v.IE)(a);
+        (0, y.sT)(s, "#FamilyManagement_ErrorLoadFamilyGeneric");
+        const [i, o] = (0, n.useState)(0),
+          [m, d] = (0, n.useState)(null),
+          _ = (0, y.kz)(t, a, i);
         (0, y.zj)(
-          d,
+          _,
           "#FamilyManagement_ErrorInvite",
           y.zs.k_EFamilyQueryInviteToFamily,
         );
-        if (r.isLoading)
+        if (s.isLoading)
           return n.createElement(
             "div",
-            { className: R.ThrobberContainer },
+            { className: A.ThrobberContainer },
             n.createElement(u.V, null),
           );
-        const _ = r.data;
+        const g = s.data,
+          f = (e) => {
+            r(""), o(e);
+          };
         return n.createElement(
           "div",
-          { className: R.SelectRoleContainer },
+          { className: A.SelectRoleContainer },
           n.createElement(
             h.Yy,
-            { active: 0 !== s },
-            "awaitmobile2fa" === o || "awaitemail2fa" === o
+            { active: 0 !== i },
+            "awaitmobile2fa" === m || "awaitemail2fa" === m
               ? n.createElement(U, {
                   onClose: l,
-                  eMethod: "awaitemail2fa" === o ? 2 : 1,
+                  eMethod: "awaitemail2fa" === m ? 2 : 1,
                 })
               : n.createElement(V, {
                   steamid: a,
-                  role: s,
-                  onCancel: () => i(0),
+                  role: i,
+                  onCancel: () => o(0),
                   onConfirm: () => {
-                    d.mutateAsync(null, {
+                    _.mutateAsync(null, {
                       onSuccess: (e) => {
                         0 === e.two_factor_method()
                           ? l()
                           : 1 === e.two_factor_method()
-                            ? m("awaitmobile2fa")
-                            : 2 === e.two_factor_method() && m("awaitemail2fa");
+                            ? d("awaitmobile2fa")
+                            : 2 === e.two_factor_method() && d("awaitemail2fa");
                       },
                     });
                   },
@@ -1602,39 +1606,39 @@
           ),
           n.createElement(
             B.s,
-            { className: R.CloseButton, onActivate: l },
+            { className: A.CloseButton, onActivate: l },
             n.createElement(c.pVO, null),
           ),
           n.createElement(
             "div",
-            { className: R.Header },
+            { className: A.Header },
             n.createElement(
               "span",
-              { className: R.Invite },
+              { className: A.Invite },
               (0, p.Xx)("#FamilyManagement_Invite"),
             ),
             n.createElement(E.vV, {
-              className: R.Avatar,
-              persona: _,
+              className: A.Avatar,
+              persona: g,
               size: "Large",
               statusPosition: "right",
             }),
             n.createElement(
               "div",
-              { className: R.PlayerName },
-              null == _ ? void 0 : _.m_strPlayerName,
+              { className: A.PlayerName },
+              null == g ? void 0 : g.m_strPlayerName,
             ),
           ),
           n.createElement(
             "div",
-            { className: R.Text },
+            { className: A.Text },
             (0, p.Xx)("#FamilyManagement_ChooseRole"),
           ),
           n.createElement(
             B.s,
-            { className: R.InviteButtonCtn },
-            n.createElement(Y, { role: 1, onSelect: () => i(1) }),
-            n.createElement(Y, { role: 2, onSelect: () => i(2) }),
+            { className: A.InviteButtonCtn },
+            n.createElement(Y, { role: 1, onSelect: () => f(1) }),
+            n.createElement(Y, { role: 2, onSelect: () => f(2) }),
           ),
         );
       }
@@ -1657,7 +1661,7 @@
             strTitle: (0, p.Xx)("#FamilyManagement_ConfirmInviteTitle"),
           },
           n.createElement(g.L4, null),
-          n.createElement("div", { className: R.Text }, (0, p.Xx)(l)),
+          n.createElement("div", { className: A.Text }, (0, p.Xx)(l)),
         );
       }
       function V(e) {
@@ -1674,28 +1678,28 @@
           n.createElement(g.L4, null),
           n.createElement(
             "div",
-            { className: R.ProfilePlusRole },
+            { className: A.ProfilePlusRole },
             n.createElement(E.vV, {
-              className: R.Avatar,
+              className: A.Avatar,
               persona: s,
               size: "Large",
               statusPosition: "right",
             }),
             n.createElement(
               "div",
-              { className: R.PlayerName },
+              { className: A.PlayerName },
               null == s ? void 0 : s.m_strPlayerName,
             ),
-            n.createElement(g.Mm, { className: R.RoleIcon, role: r }),
+            n.createElement(g.Mm, { className: A.RoleIcon, role: r }),
             n.createElement(
               "div",
-              { className: R.RoleName },
+              { className: A.RoleName },
               (0, p.Xx)(`#FamilyManagement_Role_${r}`),
             ),
           ),
           n.createElement(
             "div",
-            { className: R.Text },
+            { className: A.Text },
             (0, p.Xx)("#FamilyManagement_ConfirmInvite"),
           ),
         );
@@ -1714,7 +1718,7 @@
             { active: l },
             n.createElement(
               h.RG,
-              { className: R.SelectFriendModal, onCancel: () => r(!1) },
+              { className: A.SelectFriendModal, onCancel: () => r(!1) },
               n.createElement(
                 o.h4,
                 null,
@@ -1737,7 +1741,7 @@
         const { steamids: t, onSelect: a } = e;
         return n.createElement(
           B.s,
-          { className: R.ProfileSelector, "flow-children": "grid" },
+          { className: A.ProfileSelector, "flow-children": "grid" },
           t.map((e) =>
             n.createElement(Z, { key: e, steamid: e, onClick: () => a(e) }),
           ),
@@ -1748,7 +1752,7 @@
         const { steamid: l, onClick: r } = e,
           s = new T.K(l),
           i = (0, v.IE)(l),
-          o = (0, A.N5)(),
+          o = (0, R.N5)(),
           c =
             null === (t = (0, L.h)().data) || void 0 === t
               ? void 0
@@ -1765,19 +1769,19 @@
         const u = i.data;
         return n.createElement(
           B.s,
-          { className: R.ProfileChoice, onActivate: r },
+          { className: A.ProfileChoice, onActivate: r },
           n.createElement(
             "div",
-            { className: R.Avatar },
+            { className: A.Avatar },
             n.createElement(E.vV, {
-              className: R.Avatar,
+              className: A.Avatar,
               persona: u,
               size: "Large",
               statusPosition: "right",
             }),
           ),
           n.createElement(G.o, {
-            className: R.PlayerName,
+            className: A.PlayerName,
             bParenthesizeNicknames: c,
             bIsSelf: !1,
             bHideStatus: !0,
@@ -1794,7 +1798,7 @@
         return n.createElement(
           o.KM,
           {
-            className: (0, d.Z)(R.InviteButton),
+            className: (0, d.Z)(A.InviteButton),
             noFocusRing: !1,
             onClick: () => a(t),
           },
@@ -1808,13 +1812,13 @@
       }
       function $(e) {
         const { setSelectedFriendSteamID: t, excludeSteamIDs: a } = e,
-          l = (0, A.co)();
+          l = (0, R.co)();
         (0, y.sT)(l, "#FamilyManagement_ErrorLoadFriendListGeneric");
         const r = l.data;
         return l.isLoading
           ? n.createElement(
               "div",
-              { className: R.ThrobberContainer },
+              { className: A.ThrobberContainer },
               n.createElement(u.V, null),
             )
           : l.isError
@@ -1833,7 +1837,7 @@
             excludeSteamIDs: r,
           } = e,
           s = (0, v.vP)(l),
-          i = (0, A.N5)(),
+          i = (0, R.N5)(),
           o = (0, L.h)(),
           [c, m] = n.useState(""),
           d =
@@ -1910,10 +1914,10 @@
           E = s.some((e) => e.isLoading);
         return n.createElement(
           B.s,
-          { className: R.InviteFriendSelector },
+          { className: A.InviteFriendSelector },
           n.createElement(
             "p",
-            { className: R.InviteText },
+            { className: A.InviteText },
             (0, p.Xx)("#FamilyManagement_SelectFriend"),
           ),
           E && n.createElement(u.V, { size: "xlarge" }),
@@ -1923,12 +1927,12 @@
               null,
               n.createElement(
                 B.s,
-                { className: R.InputContainer },
+                { className: A.InputContainer },
                 n.createElement(te, { strFilter: c, setFilter: m }),
               ),
               n.createElement(
                 B.s,
-                { className: R.FriendList },
+                { className: A.FriendList },
                 n.createElement(X.J, {
                   nRows: y.length,
                   nItemHeight: 84,
@@ -1943,7 +1947,7 @@
         return n.createElement(o.II, {
           autoFocus: !0,
           bShowClearAction: !0,
-          className: R.InviteFriendInput,
+          className: A.InviteFriendInput,
           type: "text",
           onChange: (e) => a(e.target.value),
           value: t,
@@ -1961,23 +1965,23 @@
               : t.preferences().parenthesize_nicknames();
         return n.createElement(
           B.s,
-          { className: R.FriendSelectorRow },
+          { className: A.FriendSelectorRow },
           n.createElement(
             B.s,
             {
-              className: R.FriendSelectorInner,
+              className: A.FriendSelectorInner,
               onActivate: (e) => {
                 r(a.m_steamid.ConvertTo64BitString());
               },
             },
             n.createElement(E.vV, {
-              className: R.Avatar,
+              className: A.Avatar,
               persona: a,
               size: "Large",
               statusPosition: "right",
             }),
             n.createElement(G.o, {
-              className: R.PlayerName,
+              className: A.PlayerName,
               bIsSelf: !1,
               bHideStatus: !1,
               bHidePersona: !1,
@@ -2025,7 +2029,7 @@
           i = (0, he.CQ)(a.appid),
           o = a.owner_steamids.filter((e) => e != s),
           c = (0, v.vP)(o),
-          m = (0, A.N5)(),
+          m = (0, R.N5)(),
           u =
             null === (t = (0, L.h)().data) || void 0 === t
               ? void 0
@@ -2065,9 +2069,6 @@
           case 23:
           case 27:
             _ = "#FamilyGame_Excluded_DevPackage";
-            break;
-          case 14:
-            _ = "#FamilyGame_Excluded_FreePromotion";
             break;
           case 13:
             _ = "#FamilyGame_Excluded_FreeWeekend";
@@ -2222,7 +2223,7 @@
         var t, a;
         const n = new Ce.Kg(e),
           l = (0, v.IE)(e),
-          r = (0, A.N5)(),
+          r = (0, R.N5)(),
           s = (0, L.h)(),
           i =
             null === (t = r.data) || void 0 === t
@@ -2331,7 +2332,7 @@
               ),
         );
       }
-      function Re(e) {
+      function Ae(e) {
         const {
             app: t,
             item: a,
@@ -2408,7 +2409,7 @@
           ),
         );
       }
-      function Ae(e) {
+      function Re(e) {
         const t = 2,
           { nRows: a, setShowAll: l, setRows: r, nIncrement: s = t } = e,
           i = n.useRef();
@@ -2512,7 +2513,7 @@
           _ = n.useCallback(
             (e, a, s) =>
               n.createElement(
-                Re,
+                Ae,
                 Object.assign(
                   { app: e, item: t[a], bShowLicenseCount: l, sort: r },
                   s,
@@ -2541,7 +2542,7 @@
                 renderItem: _,
               }),
               !c &&
-                n.createElement(Ae, { nRows: i, setRows: o, setShowAll: m }),
+                n.createElement(Re, { nRows: i, setRows: o, setShowAll: m }),
             )
           : null;
       }
@@ -3217,7 +3218,7 @@
                   onWidthChanged: E,
                 }),
               !_ &&
-                n.createElement(Ae, { nRows: d, setShowAll: y, setRows: p }),
+                n.createElement(Re, { nRows: d, setShowAll: y, setRows: p }),
             );
       }
       function Et(e) {
@@ -3567,7 +3568,7 @@
             },
             [a],
           ),
-          r = At();
+          r = Rt();
         return n.createElement(o.TW, {
           rgOptions: r,
           selectedOption: t,
@@ -3813,7 +3814,7 @@
           },
         });
       }
-      function Rt(e) {
+      function At(e) {
         var t, a, l, r;
         const { steamid: s, settings: i, dayIndex: o, strDay: c } = e,
           [m, u] = n.useState(!1),
@@ -3874,7 +3875,7 @@
           ),
         );
       }
-      function At() {
+      function Rt() {
         const e = oe()
             .localeData(p.Yt.GetPreferredLocales()[0])
             .firstDayOfWeek(),
@@ -3888,8 +3889,8 @@
       }
       function Tt(e) {
         const { steamid: t, settings: a } = e,
-          l = At().map((e) =>
-            n.createElement(Rt, {
+          l = Rt().map((e) =>
+            n.createElement(At, {
               steamid: t,
               settings: a,
               dayIndex: e.data,
@@ -4609,6 +4610,9 @@
             break;
           case 23:
             h = (0, p.kQ)("#FamilyHistory_FamilyRestored", _);
+            break;
+          case 25:
+            h = (0, p.kQ)("#FamilyHistory_ForceAcceptedInvite", _, g);
             break;
           default:
             h = (0, p.kQ)("#FamilyHistory_UnknownChange");
@@ -5578,7 +5582,7 @@
                   .filter((e) => 2 === e.role())
                   .map((e) => e.steamid()),
           s = (0, v.vP)(r),
-          i = (0, A.N5)(),
+          i = (0, R.N5)(),
           c = (0, L.h)(),
           [m, d] = (0, n.useState)(r ? r[0] : null);
         if (l.isLoading || s.some((e) => e.isLoading) || i.isLoading)
@@ -5713,7 +5717,7 @@
         ];
         return n.createElement(m.n, { tabs: t, classNameCtn: ne.FamilyTabs });
       }
-      function Ra(e) {
+      function Aa(e) {
         const t = [
           {
             name: (0, p.Xx)("#FamilyManagement_JoinAFamily"),
@@ -5723,7 +5727,7 @@
         ];
         return n.createElement(m.n, { tabs: t, classNameCtn: ne.FamilyTabs });
       }
-      function Aa(e) {
+      function Ra(e) {
         const { familyGroupID: t } = e,
           { mutate: a } = (0, y.Xx)(t);
         return n.createElement(
@@ -5789,7 +5793,7 @@
                   n.createElement(
                     n.Fragment,
                     null,
-                    n.createElement(Aa, {
+                    n.createElement(Ra, {
                       familyGroupID: l.data.latest_joined_family_groupid(),
                     }),
                   ),
@@ -5989,7 +5993,7 @@
         }
         return u
           ? n.createElement(
-              Ra,
+              Aa,
               null,
               n.createElement(Ga, {
                 active: u,
@@ -6005,7 +6009,7 @@
             )
           : S
             ? n.createElement(
-                Ra,
+                Aa,
                 null,
                 n.createElement(
                   "div",
@@ -6088,7 +6092,7 @@
                 ),
               )
             : n.createElement(
-                Ra,
+                Aa,
                 null,
                 n.createElement(
                   "div",
@@ -6598,7 +6602,7 @@
               className: D,
               style: P,
             } = e,
-            R = (0, n._T)(e, [
+            A = (0, n._T)(e, [
               "component",
               "padding",
               "paddingX",
@@ -6626,7 +6630,7 @@
               "className",
               "style",
             ]),
-            A = (0, s.Z)(
+            R = (0, s.Z)(
               f("padding-left", u || o || r),
               f("padding-top", d || c || r),
               f("padding-right", m || o || r),
@@ -6651,14 +6655,14 @@
               },
               P,
             ),
-            G = Object.assign({ className: A, style: T, ref: t }, R);
+            G = Object.assign({ className: R, style: T, ref: t }, A);
           if (a) {
             const e = a;
             return l.createElement(e, Object.assign({}, G));
           }
           return l.createElement(
             i.s,
-            Object.assign({ className: A, style: T, ref: t }, R),
+            Object.assign({ className: R, style: T, ref: t }, A),
           );
         }),
         m = (0, l.forwardRef)(function (e, t) {

@@ -1266,6 +1266,7 @@ div._1MvXz1iI0KQnsVVZnYxeN7 {
   flex-direction: row-reverse;
   align-items: center;
   padding: 0;
+  gap: 4px;
 }
 .nkwT1_KBPjAKne_CvKZdo ._1gO7r6Xr5gQHoBBkERY0gd .ztiNwbxAd3fIklMj81M18 {
   flex-direction: column;
@@ -2461,15 +2462,6 @@ html.touch
   margin-top: 4px;
   margin-bottom: 4px;
 }
-.BasicUI
-  .y9MSdld4zZCuoQpRVDgMm
-  ._38DqRPm1idN0e6J5IRYowx
-  .UlvFkP8Oew4a6VTHCvLNH
-  ._1lRFu670LVk6Gmeb12h7Hr
-  ._3sBHXmDeDt3d_2uO6EZWWs
-  ._3OSJsO_BdhSFujrHvCGLqV {
-  flex-wrap: nowrap;
-}
 .y9MSdld4zZCuoQpRVDgMm
   ._38DqRPm1idN0e6J5IRYowx
   .UlvFkP8Oew4a6VTHCvLNH
@@ -3136,6 +3128,7 @@ html.touch
   white-space: nowrap;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   padding: 6px;
   box-sizing: border-box;
   background: rgba(0, 0, 0, 0.5);
@@ -3586,7 +3579,6 @@ html.touch
   cursor: pointer;
   white-space: nowrap;
   padding: 0 10px;
-  margin-left: 4px;
 }
 ._1GAs9W0UiZtOjznPjPUyi0._2TQ4loR3tPPwAD73aIbJ8i,
 ._1GAs9W0UiZtOjznPjPUyi0._2TQ4loR3tPPwAD73aIbJ8i:hover {

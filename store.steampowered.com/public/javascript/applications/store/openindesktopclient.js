@@ -222,13 +222,14 @@
     },
     74479: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { OpenInDesktopClient: () => a, default: () => l });
+      n.r(t), n.d(t, { OpenInDesktopClient: () => l, default: () => u });
       var s = n(47427),
         i = n(65255),
         o = n(10162),
         c = n(43390),
-        r = n(89484);
-      const a = (0, o.AP)(function (e) {
+        r = n(89484),
+        a = n(46009);
+      const l = (0, o.AP)(function (e) {
           const [t, n] = s.useState(22);
           s.useEffect(() => {
             i.De.IN_CLIENT ||
@@ -243,7 +244,14 @@
               });
           }, []);
           const o = s.useCallback(() => {
-            const e = "steam://openurl/" + window.location.href;
+            let e = "steam://openurl/";
+            const n = (0, a.bG)("browserid");
+            if (n) {
+              const t = new URL(window.location.href),
+                s = new URLSearchParams(t.search);
+              s.set("utm_bid", n),
+                (e += t.origin + t.pathname + "?" + s.toString() + t.hash);
+            } else e += window.location.href;
             1 == t ? c.F.OpenSteamURL(e) : (window.location.href = e);
           }, [t]);
           return s.createElement(
@@ -275,7 +283,7 @@
             ),
           );
         }),
-        l = a;
+        u = l;
     },
   },
 ]);

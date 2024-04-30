@@ -1041,8 +1041,11 @@ ${PARTNER_BASE_URL}pricing/ajaxpublishproposal/${}/${}
 ${PARTNER_BASE_URL}pricing/ajaxsubmitproposal/${}/${}
 ${PARTNER_BASE_URL}promotion${}
 ${PARTNER_BASE_URL}promotion/assetportal/ajaxuploadpreviewasset/${}
+${PARTNER_BASE_URL}promotion/assetportal/ajaxuploadpreviewassetexternal/${}?inputaccesskey=${}
+${PARTNER_BASE_URL}promotion/assetportal/externalrequest/${}?inputaccesskey=${input_access_key}
 ${PARTNER_BASE_URL}promotion/assetportal/localization/${id}
 ${PARTNER_BASE_URL}promotion/assetportal/localization/${planid}
+${PARTNER_BASE_URL}promotion/assetportal/request/${gid}
 ${PARTNER_BASE_URL}promotion/assetportal/request/${id}
 ${PARTNER_BASE_URL}promotion/assetportal/request/${}
 ${PARTNER_BASE_URL}promotion/dailydeals/ajaxadminadddailydeal
@@ -2933,7 +2936,7 @@ https://store.steampowered.com/sale/nextfest
 https://store.steampowered.com/sale/thegameawardssteamdeckdrop2022
 https://store.steampowered.com/saliens
 https://store.steampowered.com/search/?snr=1_saliens_4__salientags&tags=${tag_ids}
-https://store.steampowered.com/search/?term=${$Term}${snr}
+https://store.steampowered.com/search/?term=${}${snr}
 https://store.steampowered.com/search/hometab/TopGrossing/
 https://store.steampowered.com/search/results
 https://store.steampowered.com/search/results/

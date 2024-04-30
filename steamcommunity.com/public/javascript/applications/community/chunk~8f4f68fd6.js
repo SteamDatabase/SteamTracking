@@ -387,7 +387,8 @@
         v("get_purchase_requests"),
         v("get_shopping_cart_contents"),
         v("recent_playtime_sessions"),
-        v("get_playtime_summary");
+        v("get_playtime_summary"),
+        v("get_invite_check_results");
       y.createContext({ staleTimeMs: 1 / 0 });
       (0, y.createContext)({ errorMessage: null, setErrorMessage: (e) => {} });
       var N;
@@ -425,12 +426,14 @@
       N.k_EFamilyQueryCreateFamily,
         N.k_EFamilyQueryCreateFamily,
         N.k_EFamilyQueryJoinFamily,
+        N.k_EFamilyQueryJoinFamily,
         N.k_EFamilyQueryCreateFamily,
         N.k_EFamilyQueryJoinFamily,
         N.k_EFamilyQueryRemoveFromFamily,
         N.k_EFamilyQueryJoinFamily,
         N.k_EFamilyQueryInviteToFamily,
-        N.k_EFamilyQueryRemoveFromFamily;
+        N.k_EFamilyQueryRemoveFromFamily,
+        N.k_EFamilyQueryInviteToFamily;
       var h = i(62210);
       const E = {
         11: {
@@ -1109,7 +1112,7 @@
         (0, n.gn)([s.aD], C.prototype, "ProcessNotifications", null);
       const O = "ItemMetadata";
       function H(e, t, i) {
-        let a = V(4, e.body_data);
+        let a = J(4, e.body_data);
         a.steamid = t;
         let s = (0, l.useQuery)(
           (function (e) {
@@ -1188,16 +1191,16 @@
         return null;
       }
       function K(e) {
-        return V(e.notification_type, e.body_data);
+        return J(e.notification_type, e.body_data);
       }
       function Y(e) {
         var t;
-        return V(
+        return J(
           e.type,
           null === (t = e.item) || void 0 === t ? void 0 : t.body_data,
         );
       }
-      function V(e, t) {
+      function J(e, t) {
         var i, n, a, o;
         let r = Z(t);
         if (!r) return null;
@@ -1227,7 +1230,7 @@
               owner_steam_id: r.owner_steam_id
                 ? new c.K(r.owner_steam_id)
                 : null,
-              bclan_account: J(r.bclan_account),
+              bclan_account: V(r.bclan_account),
               title: r.title,
               comment: r.text,
               time: r.last_post,
@@ -1237,11 +1240,11 @@
               account_steam_id: r.account_id
                 ? c.K.InitFromAccountID(r.account_id)
                 : null,
-              bhas_friend: J(r.bhas_friend),
-              bis_forum: J(r.bis_forum),
+              bhas_friend: V(r.bhas_friend),
+              bis_forum: V(r.bis_forum),
               last_post: r.last_post,
-              bsubscribed: J(r.subscribed),
-              bis_owner: J(r.bis_owner),
+              bsubscribed: V(r.subscribed),
+              bis_owner: V(r.bis_owner),
             };
             return (
               r.json_data &&
@@ -1274,7 +1277,7 @@
             );
         }
       }
-      function J(e) {
+      function V(e) {
         var t;
         if (void 0 === e) return !1;
         if ("number" == typeof e) return e > 0;
@@ -1776,7 +1779,7 @@
               ),
             );
       }
-      function V(e) {
+      function J(e) {
         let {
           senderName: t,
           location: i,
@@ -1824,7 +1827,7 @@
               ),
             );
       }
-      function J(e) {
+      function V(e) {
         let {
           requestorName: t,
           requestorAvatarURL: i,
@@ -2572,7 +2575,7 @@
           return n.createElement(
             "a",
             { href: c, onMouseDown: (e) => i(() => {}, t.item, e) },
-            n.createElement(J, {
+            n.createElement(V, {
               fallbackLogo: n.createElement(g.pUF, null),
               icon: n.createElement(g.yBp, null),
               onActivate: () => i(() => window.location.assign(c), t.item),
@@ -2635,7 +2638,7 @@
           return n.createElement(
             "a",
             { href: d, onMouseDown: (e) => i(() => {}, t.item, e) },
-            n.createElement(V, {
+            n.createElement(J, {
               logo: n.createElement(g.ui7, null),
               icon: n.createElement(g.ncs, null),
               onActivate: () => i(() => window.location.assign(d), t.item),

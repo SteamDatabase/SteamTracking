@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "8849850";
+var CLSTAMP = "8858681";
 (() => {
   var e,
     t,
@@ -100,7 +100,7 @@ var CLSTAMP = "8849850";
         }
         (i.keys = () => Object.keys(s)), (i.id = 9014), (e.exports = i);
       },
-      31709: (e, t, n) => {
+      87463: (e, t, n) => {
         "use strict";
         function s(e, t, n, s) {
           var i,
@@ -155,7 +155,7 @@ var CLSTAMP = "8849850";
         Object.create;
         Object.create;
         "function" == typeof SuppressedError && SuppressedError;
-        n(30662);
+        n(837);
         var r = n(27378),
           a = n(37634);
         function o(e) {
@@ -1691,7 +1691,7 @@ var CLSTAMP = "8849850";
             });
           });
       },
-      30662: (e, t, n) => {
+      837: (e, t, n) => {
         "use strict";
         "VALVE_PUBLIC_PATH" in window
           ? (n.p = window.VALVE_PUBLIC_PATH)
@@ -1922,68 +1922,68 @@ var CLSTAMP = "8849850";
       }[e] +
       ".js?contenthash=" +
       {
-        699: "db61932813c3162c8ae0",
-        1162: "41843f0fb802e2ba9646",
-        1313: "bf8e9bcbc76136d1c3bc",
-        1471: "fd64fdd4b89921fcf094",
-        1635: "2f759517243b4099c40e",
+        699: "15eaa3ea3f006e5c9b0a",
+        1162: "63b986bd80d98cb6d9eb",
+        1313: "23a3389f07896f73866b",
+        1471: "503c2eb5f31107bafc4b",
+        1635: "de576d22de0ca1bfc8ba",
         2029: "6f7f951d0f10150c976e",
         2431: "453484513ab5e66f8413",
-        2443: "3646580537df8d0e945a",
-        2537: "2a09054ab694d250c123",
-        2822: "97ede6bebef51e270a03",
-        2844: "a28de6e563f7d1875bc1",
-        2862: "ae6633c97f1ad3e6bd24",
-        2913: "ba80b9b99c9b66dd36a0",
-        3112: "71263e951c9f61708bae",
+        2443: "745d2adef689ac60f8b5",
+        2537: "7803417fa431e1e31c7e",
+        2822: "f0d80030ff76c2a7ace6",
+        2844: "36ee7c046d18a6d4264a",
+        2862: "1bcc63b92d0ce8642293",
+        2913: "e71d10d0fc6360c4effc",
+        3112: "94968beb4233c3eb53be",
         3140: "4b057f32b7604ec3eaa0",
-        3182: "00f6384b3c2400e25151",
-        3252: "f607b050770cf47903db",
-        3471: "750ec7fe066f661f0c4e",
-        3500: "94fdfffb1355033a80f6",
-        3557: "f9eca5481cb8747adc15",
-        4108: "2a35901d8dccaa5101f4",
-        4189: "1cfb6060941b27435435",
-        4264: "b9ae5d9ff77b6f441560",
-        4297: "48e620075fe7906c612c",
-        4448: "ee2d590d3c42ef646cf4",
-        4596: "d89705224b580389fb19",
-        4716: "95c9c9079862b31f3592",
-        4823: "c545182ce01393af3d6c",
-        4964: "7fa8f97e3d45bf16da75",
-        4989: "9007e45872c16ccfb49e",
-        5438: "348b0f5b0560947fac9a",
-        5625: "33eb3c90da83e23acd07",
-        5632: "8b21e1c0be128ee38a51",
-        5802: "5b495bbe13af07295e01",
-        5849: "d3012855c2743cb9d392",
-        5925: "3d4e63fdadfa1218505b",
-        5933: "d2a34dd8a3adf8431561",
-        5948: "ed95031d289e63215df5",
-        6007: "358c9f7cdf82d180150f",
-        6492: "a8f8160055f6bf2acf45",
-        6542: "8443486c7f471e8b7ca5",
-        6646: "a70d64daee4da46ec0b4",
-        6727: "46dc482d8a43a74d9a3f",
-        6986: "45bb643fd7b8905e00a1",
+        3182: "3048a6fabdf04c6ba1c8",
+        3252: "aae0a8dacc31d179fe41",
+        3471: "b14476f46f3940154a67",
+        3500: "7a2c3062100f1b481066",
+        3557: "97ca88480d7964997d12",
+        4108: "7869886c9844a6b0fb54",
+        4189: "72297585ce11c62038f1",
+        4264: "4daacbc3e9c44582ddde",
+        4297: "f14ccb0479958517b890",
+        4448: "85c649839e2575784e48",
+        4596: "253f72fb757fb43800ee",
+        4716: "f324b18fd5f7c66d0eb4",
+        4823: "611300be6f5c9a015e73",
+        4964: "7fbb20add49069adbf34",
+        4989: "5f3a27bdc8ac24c3466d",
+        5438: "91d96ec9039a684d020c",
+        5625: "4d11447182e69adb033f",
+        5632: "c337fa339d1abd4d2899",
+        5802: "1b611283e7bb4e9b5b51",
+        5849: "8caf4c27700f3356d26f",
+        5925: "bdb34717b12c62599b93",
+        5933: "b01d76b39a995978e54e",
+        5948: "10a262fe086e2c523658",
+        6007: "6e9fc347b2045af8ef6a",
+        6492: "2ca98ce1920ef5d703f4",
+        6542: "638205a3ea186b7b3803",
+        6646: "78b905725098793438e6",
+        6727: "e609b07f91d00b5ea4ff",
+        6986: "f315adbf69c6eabb00d3",
         6992: "5aca62e8d2baaf5ced56",
-        7340: "5e06384f2b7dd2ffd8a7",
-        7575: "93aca65c60c521bfa601",
-        7602: "ba1e7098aff72f9e0df0",
-        7651: "0b1690252d70a50c2a5a",
-        7706: "fe8c646f24c71cea3de6",
-        7781: "896322ce9afe24503163",
-        7975: "2ee6c65cba0442d53775",
+        7340: "76bef007956f00571439",
+        7575: "ba3e0689308eb478e1a6",
+        7602: "8f2d1d21760137909fce",
+        7651: "dd156b2d27ac05f94386",
+        7706: "c300d1d6763a1c3967e6",
+        7781: "48221f1e5abacbe7f0e0",
+        7975: "0ff60284d221d2fb9a6c",
         8247: "9397443cb4a1022e3013",
-        8385: "99ef9f7e4ef13888e454",
-        8518: "bdd246fdade670ade83a",
-        8754: "b140d68c9f74d03af20f",
-        8815: "57e083c3ed6ac3bd8c7c",
-        9062: "f429c6c57df71e3c5c92",
-        9263: "b3c288617faa32990a5f",
-        9753: "a0c2d97f1795efeef411",
-        9775: "872e4abe11f62ddb1168",
-        9818: "529dcdd4b8869bc9b6a5",
+        8385: "60aac07ead9fb4d62eef",
+        8518: "c5acef0f644d25a92d8b",
+        8754: "eb9039414c931e63d628",
+        8815: "35d23a97e4a988c28c7d",
+        9062: "19df22296abb17337b74",
+        9263: "65d20117cdd5fab5b7b2",
+        9753: "253061e6cb7cda1ae8e3",
+        9775: "578e49e5d69131c80158",
+        9818: "743c1e7d9e234b63a413",
       }[e]),
     (o.miniCssF = (e) => {}),
     (o.g = (function () {
@@ -2118,6 +2118,6 @@ var CLSTAMP = "8849850";
           self.webpackChunk_steam_friendsui || []);
       n.forEach(t.bind(null, 0)), (n.push = t.bind(null, n.push.bind(n)));
     })();
-  var c = o.O(void 0, [5968], () => o(31709));
+  var c = o.O(void 0, [5968], () => o(87463));
   c = o.O(c);
 })();

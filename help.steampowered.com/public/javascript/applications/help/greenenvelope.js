@@ -344,7 +344,8 @@
         D("get_purchase_requests"),
         D("get_shopping_cart_contents"),
         D("recent_playtime_sessions"),
-        D("get_playtime_summary");
+        D("get_playtime_summary"),
+        D("get_invite_check_results");
       r.createContext({ staleTimeMs: 1 / 0 });
       (0, r.createContext)({ errorMessage: null, setErrorMessage: (e) => {} });
       var G;
@@ -382,12 +383,14 @@
       G.k_EFamilyQueryCreateFamily,
         G.k_EFamilyQueryCreateFamily,
         G.k_EFamilyQueryJoinFamily,
+        G.k_EFamilyQueryJoinFamily,
         G.k_EFamilyQueryCreateFamily,
         G.k_EFamilyQueryJoinFamily,
         G.k_EFamilyQueryRemoveFromFamily,
         G.k_EFamilyQueryJoinFamily,
         G.k_EFamilyQueryInviteToFamily,
-        G.k_EFamilyQueryRemoveFromFamily;
+        G.k_EFamilyQueryRemoveFromFamily,
+        G.k_EFamilyQueryInviteToFamily;
       var C = i(2210);
       const B = {
         11: {

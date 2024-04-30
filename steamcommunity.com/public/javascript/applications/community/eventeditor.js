@@ -4744,7 +4744,7 @@ License: MIT
         xt = (0, A.M)(Tt);
       var wt = a(31959),
         It = a(94621),
-        At = a(49513),
+        At = a(80366),
         kt = a(32144),
         Mt = a(45167),
         Nt = a(91494);
@@ -5562,7 +5562,7 @@ License: MIT
         ia = a(68821),
         oa = a(53749),
         ra = a(34704),
-        sa = a(70019);
+        sa = a(7017);
       function ca(e) {
         const { editModel: t } = e,
           a = t.GetEventModel(),
@@ -9634,7 +9634,8 @@ License: MIT
           );
         };
       function Wn(e) {
-        const t = l.wk.GetEditModel();
+        const t = l.wk.GetEditModel(),
+          [a, n] = d.useState(!1);
         return d.createElement(
           "div",
           { className: Gn.BottomBarControls },
@@ -9678,17 +9679,15 @@ License: MIT
               { toolTipContent: (0, G.Xx)("#Sale_ReorderSections_ttip") },
               d.createElement(
                 O.zx,
-                {
-                  onClick: (e) => {
-                    (0, C.AM)(
-                      d.createElement(Jn, { editModel: t }),
-                      (0, P.RA)(e),
-                    );
-                  },
-                },
+                { onClick: () => n(!0) },
                 (0, G.Xx)("#Sale_ReorderSections"),
               ),
             ),
+            d.createElement(Jn, {
+              editModel: t,
+              active: a,
+              onDismiss: () => n(!1),
+            }),
           ),
           d.createElement(
             "div",
@@ -9708,24 +9707,13 @@ License: MIT
         );
       }
       function Jn(e) {
-        const { editModel: t, closeModal: a } = e,
-          [n, l] = d.useState([...t.GetSaleSections()]),
-          i = (0, I.id)(),
-          o = (0, Rn.vt)(),
-          r = () => {
-            (t.GetEventModel().jsondata.sale_sections = n),
-              t.SetDirty(H.jB.jsondata_sales),
-              a();
-          };
+        const { editModel: t, active: a, onDismiss: n } = e,
+          [l, i] = d.useState([...t.GetSaleSections()]),
+          o = (0, I.id)(),
+          r = (0, Rn.vt)();
         return d.createElement(
-          f.RG,
-          {
-            onOK: r,
-            closeModal: a,
-            bDisableBackgroundDismiss: !0,
-            bAllowFullSize: !0,
-            className: sn.NotTooWideModal,
-          },
+          f.On,
+          { active: a, onDismiss: n },
           d.createElement(O.h4, null, (0, G.Xx)("#Sale_ReorderSections")),
           d.createElement(
             O.uT,
@@ -9737,15 +9725,15 @@ License: MIT
                 "div",
                 { className: Gn.SectionList },
                 d.createElement(ra.R, {
-                  items: n,
+                  items: l,
                   onMove: (e, t) => {
-                    let a = [...n];
-                    (0, An.hV)(a, e, t), l(a);
+                    let a = [...l];
+                    (0, An.hV)(a, e, t), i(a);
                   },
                   render: (e) => {
                     const a = t.GetSaleSections().findIndex((t) => e === t),
                       n = Object.assign(
-                        Object.assign({}, (0, sa.OC)(e, t.GetEventModel(), i)),
+                        Object.assign({}, (0, sa.OC)(e, t.GetEventModel(), o)),
                         { color: e.label_color },
                       );
                     return d.createElement(
@@ -9756,7 +9744,7 @@ License: MIT
                         editLanguage: t.GetCurEditLanguage(),
                         editModel: t,
                         index: a,
-                        inEditor: o,
+                        inEditor: r,
                       }),
                     );
                   },
@@ -9767,7 +9755,13 @@ License: MIT
                 { className: Gn.OKButton },
                 d.createElement(
                   O.KM,
-                  { onClick: r },
+                  {
+                    onClick: () => {
+                      (t.GetEventModel().jsondata.sale_sections = l),
+                        t.SetDirty(H.jB.jsondata_sales),
+                        n();
+                    },
+                  },
                   (0, G.Xx)("#Sale_TagFilter_OK"),
                 ),
               ),
@@ -16421,7 +16415,7 @@ License: MIT
                 onClick: E,
               },
               {
-                name: (0, G.Xx)("#EventEditor_Options_Title"),
+                name: (0, G.Xx)("#EventEditor_Visibility_Title"),
                 key: "options",
                 status: s ? s.text : "",
                 statusType: s && s.complete >= s.total ? "success" : "danger",

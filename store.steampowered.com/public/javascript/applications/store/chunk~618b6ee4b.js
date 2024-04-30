@@ -232,6 +232,7 @@
     },
     23840: (e) => {
       e.exports = {
+        "duration-app-launch": "800ms",
         ControllerFilterCtn: "_1PytbLfc_2MjjUaNc6Op9k",
         ControllerFilter: "_1h_gOhDcdM7YtwxobenNIy",
         ControllerFilterActive: "_3xsW_O-hhsY0hM3-9W4cQA",
@@ -2274,7 +2275,7 @@
         o = a(98255),
         s = a(80002),
         l = a(47427),
-        c = a(77581),
+        c = a(22791),
         d = a(83999),
         u = a(45492),
         m = a(20417),
@@ -4088,7 +4089,7 @@
         r = a(79545),
         i = a(44922),
         o = a(54842),
-        s = a(77581),
+        s = a(22791),
         l = a(94005),
         c = a(37563),
         d = a(74840),
@@ -4162,7 +4163,7 @@
                   e.smart_section_personalized_carousel_randomize,
                 );
             }
-            const s = (0, l.ei)(e);
+            const s = (0, l.ei)(e, !0);
             n.Body().set_context((0, u.Fq)(!1)),
               n.Body().set_filters((0, d.NV)(s));
             const c = yield i.Ax.GetItemsByUserRecommendedTags(
@@ -4194,8 +4195,8 @@
             ? { id: e.appid(), type: "game" }
             : e.bundleid()
               ? { id: e.bundleid(), type: "bundle" }
-              : e.tagid()
-                ? { id: e.tagid(), type: "tag" }
+              : e.packageid()
+                ? { id: e.tagid(), type: "sub" }
                 : void 0;
         }
         LoadTestData() {
@@ -5020,7 +5021,7 @@
         j = a(79545),
         V = a(5697),
         W = a(42718),
-        z = a(77581),
+        z = a(22791),
         Z = a(65255),
         q = a(82756);
       function X(e, t) {
@@ -9893,8 +9894,9 @@
             a.e(6882),
             a.e(7247),
             a.e(9424),
+            a.e(886),
             a.e(7695),
-            a.e(5164),
+            a.e(3243),
             a.e(344),
             a.e(259),
             a.e(6002),
@@ -13832,63 +13834,63 @@
         return e ? t.filter((t) => e.ShouldShowOnTab(t)) : t;
       }
       function Dr(e, t, a, n, r, i, o, s) {
-        var l, c;
+        var l, c, d;
         return (0, G.mG)(this, void 0, void 0, function* () {
           const {
-              smart_section_type: d,
-              smart_section_max_apps: u,
-              smart_section_tag: m,
-              smart_section_category: _,
-              random_from_entire_set: p,
+              smart_section_type: u,
+              smart_section_max_apps: m,
+              smart_section_tag: _,
+              smart_section_category: p,
+              random_from_entire_set: g,
             } = n,
-            g = u || 24;
-          if ("tag" === d) {
+            h = m || 24;
+          if ("tag" === u) {
             return {
               capsules: Cr(
                 t,
                 (yield j
                   .Get()
                   .GetDiscounts({
-                    tagid: m,
-                    max_results: g,
+                    tagid: _,
+                    max_results: h,
                     feature: r,
-                    random_across_set: p,
+                    random_across_set: g,
                   })).rgAppIDs,
               ).map((e) => ({ id: Number(e), type: "game" })),
               bMoreRemaining: !1,
             };
           }
-          if ("category" === d) {
+          if ("category" === u) {
             return {
               capsules: Cr(
                 t,
                 (yield j
                   .Get()
                   .GetDiscounts({
-                    categoryid: _,
-                    max_results: g,
+                    categoryid: p,
+                    max_results: h,
                     feature: r,
-                    random_across_set: p,
+                    random_across_set: g,
                   })).rgAppIDs,
               ).map((e) => ({ id: Number(e), type: "game" })),
               bMoreRemaining: !1,
             };
           }
-          if ("top_n" === d) {
+          if ("top_n" === u) {
             return {
-              capsules: Cr(t, yield j.Get().GetTopN(r, g)).map((e) => ({
+              capsules: Cr(t, yield j.Get().GetTopN(r, h)).map((e) => ({
                 id: e,
                 type: "game",
               })),
               bMoreRemaining: !1,
             };
           }
-          if ("all_discounted" === d) {
+          if ("all_discounted" === u) {
             const e = yield j
               .Get()
               .GetAllDiscounted(
                 r,
-                g,
+                h,
                 i,
                 null === (l = null == t ? void 0 : t.GetTab()) || void 0 === l
                   ? void 0
@@ -13901,7 +13903,7 @@
               nMatchCount: e.nMatchCount,
             };
           }
-          if ((0, de.fY)(d))
+          if ((0, de.fY)(u))
             try {
               let r = new Array();
               const l = {
@@ -13917,7 +13919,7 @@
                   bRequestFacetCounts: n.enable_faceted_browsing,
                   eControllerCategory: s,
                 },
-                c = yield j.Get().GetSaleGamesByFlavor(e, a, d, l, g);
+                c = yield j.Get().GetSaleGamesByFlavor(e, a, u, l, h);
               return (
                 (r = a.BUsesContentHubForItemSource()
                   ? c.appids
@@ -13936,10 +13938,10 @@
             if (!w.L7.logged_in) return { capsules: [], bMoreRemaining: !1 };
             if (
               w.L7.logged_in &&
-              ("wishlist" === d || "interactive_recommender" === d)
+              ("wishlist" === u || "interactive_recommender" === u)
             ) {
               if (
-                "wishlist" === d &&
+                "wishlist" === u &&
                 a.jsondata.item_source_type === de.J7.k_EContentHub
               ) {
                 return {
@@ -13952,7 +13954,7 @@
                 };
               }
               if (
-                "interactive_recommender" === d &&
+                "interactive_recommender" === u &&
                 a.jsondata.item_source_type === de.J7.k_EContentHub
               ) {
                 return {
@@ -13991,10 +13993,10 @@
                     n
                   );
                 })(a.GetSaleSections(), t, a.GetTaggedItems()),
-                n = "wishlist" === d,
+                n = "wishlist" === u,
                 r = new Array(),
                 i =
-                  "wishlist" === d
+                  "wishlist" === u
                     ? H.jg.Get().GetWishlistGamesInUserOrder()
                     : H.jg.Get().GetRecommendedGamesInIRPriorityOrder(),
                 s = Cr(t, i);
@@ -14005,7 +14007,7 @@
                   (n
                     ? H.jg.Get().BIsGameWishlisted(t)
                     : H.jg.Get().BIsGameRecommended(t)) &&
-                  (r.push(t), r.length >= g)
+                  (r.push(t), r.length >= h)
                 )
                   break;
               return {
@@ -14013,30 +14015,47 @@
                 bMoreRemaining: !1,
               };
             }
-            if (w.L7.logged_in && "personalized_carousel" == d) {
+            if (w.L7.logged_in && "personalized_carousel" == u) {
               const e = yield Er.W.Get().GetCapsulesForSaleSection(n, a);
+              if (t && t.BIsTabFilteringEnabled()) {
+                let a =
+                  (null === (c = null == e ? void 0 : e.rgCapsules) ||
+                  void 0 === c
+                    ? void 0
+                    : c.filter((e) => "game" == e.type).map((e) => e.id)) || [];
+                return (
+                  (a = Cr(t, a)),
+                  {
+                    capsules: a
+                      .slice(0, h)
+                      .map((e) => ({ id: e, type: "game" })),
+                    bMoreRemaining: !1,
+                  }
+                );
+              }
               return {
                 capsules:
-                  null !== (c = null == e ? void 0 : e.rgCapsules) &&
-                  void 0 !== c
-                    ? c
+                  null !==
+                    (d = null == e ? void 0 : e.rgCapsules.slice(0, h)) &&
+                  void 0 !== d
+                    ? d
                     : [],
                 bMoreRemaining: !1,
               };
             }
             if (
               w.L7.logged_in &&
-              ("wishlist_onsale" === d ||
-                "dlc_onsale" === d ||
-                "dlc_music_onsale" === d ||
-                "interactive_recommender_onsale" === d ||
-                "ir_subscription" === d ||
-                "tag_recommender" === d ||
-                "deck_compatibility" === d)
+              ("wishlist_onsale" === u ||
+                "dlc_onsale" === u ||
+                "dlc_music_onsale" === u ||
+                "interactive_recommender_onsale" === u ||
+                "ir_subscription" === u ||
+                "tag_recommender" === u ||
+                "deck_compatibility" === u)
             ) {
               let r,
                 i = [];
-              switch (d) {
+              switch (u) {
                 case "wishlist_onsale":
                   dn.GetHideWishlist() ||
                     ((i = yield j.Get().GetWishlistOnSale()), (r = "game"));
@@ -14063,7 +14082,7 @@
                       .Get()
                       .GetTagRecommendorForThisSale(
                         a,
-                        g,
+                        h,
                         e,
                         a.GetContentHub(),
                         null == t ? void 0 : t.GetStoreFilter(),
@@ -14113,14 +14132,14 @@
               return (
                 (i = Cr(t, i)),
                 {
-                  capsules: i.slice(0, g).map((e) => ({ id: e, type: r })),
+                  capsules: i.slice(0, h).map((e) => ({ id: e, type: r })),
                   bMoreRemaining: !1,
                 }
               );
             }
           }
           return (
-            console.warn("unrecognized type", d),
+            console.warn("unrecognized type", u),
             { capsules: [], bMoreRemaining: !1 }
           );
         });
@@ -18516,7 +18535,7 @@
         }
       }
       var po = a(79545),
-        go = a(77581),
+        go = a(22791),
         ho = (a(22520), a(80002)),
         vo = a(98255);
       class So {
@@ -22913,7 +22932,7 @@
                           bHidePrice: A,
                           bShowPurchaseOptionsButton: B,
                           fnOnPurchaseOptionsClick: M,
-                          bHideWishlistButton: !0,
+                          bHideWishlistButton: !b.BIsComingSoon(),
                         }),
                       ),
                 ),
@@ -23925,7 +23944,7 @@
       a.d(t, { n: () => ce });
       var n = a(37485),
         r = a(47427),
-        i = a(77581),
+        i = a(22791),
         o = a(45944),
         s = a(42855),
         l = a(82071),

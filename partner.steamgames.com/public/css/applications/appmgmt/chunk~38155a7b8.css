@@ -12356,6 +12356,38 @@ textarea._2V4yU656RPmLOdVgyglB17 {
   display: inline-flex;
   justify-content: space-between;
 }
+.Ze9vpZVnhuM5ixQnBbxt2 {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  justify-content: flex-end;
+}
+._3MXUKUNf99BSPBfv_wRDmI {
+  width: 180px;
+}
+._3MXUKUNf99BSPBfv_wRDmI .G4ZLNqu2ItSLt2a4nyywL {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  column-gap: 2px;
+  row-gap: 5px;
+}
+._3MXUKUNf99BSPBfv_wRDmI .G4ZLNqu2ItSLt2a4nyywL .DialogButton {
+  width: unset;
+  flex-shrink: 1;
+  font-size: 12px;
+  height: 15px;
+  border-radius: 5px;
+  line-height: unset;
+  padding: 2px 15px 2px 5px;
+}
+._3MXUKUNf99BSPBfv_wRDmI .G4ZLNqu2ItSLt2a4nyywL ._33l2PQpdFV5xTe1VnUD3vr {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  margin-right: 5px;
+  color: gray;
+}
 ._398qzydemboBN-RxXd6iOo {
   margin: 20px;
   width: 100%;

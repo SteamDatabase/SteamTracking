@@ -1691,15 +1691,17 @@ html.contextmenu_ContextMenuPopup_14wqd body {
   transition: background-color 0.18s ease-in-out;
   background-color: #202226;
   border-radius: 2px;
+  color: #b8bcbf;
   cursor: pointer;
   font-size: 14px;
+  text-shadow: 0px 0px 4px #000000cc;
 }
 .radio_Button_Hijmc.radio_Disabled_3hmGW {
   cursor: default;
 }
 .radio_Button_Hijmc.radio_Active_3-_jM,
 .radio_Button_Hijmc.radio_Active_3-_jM:hover {
-  background-color: #1f8dff;
+  background-color: #1aa0ff7c;
   cursor: default;
   color: #fff;
 }
@@ -1709,6 +1711,9 @@ html.contextmenu_ContextMenuPopup_14wqd body {
 }
 .radio_Button_Hijmc:not(.radio_Disabled_3hmGW):hover {
   background-color: #33363e;
+}
+.radio_Button_Hijmc:not(.radio_Disabled_3hmGW).radio_Active_3-_jM:hover {
+  background-color: #1aa0ff7c;
 }
 .dropdown_DialogDropDownMenu_Item_2oAiZ {
   padding: 10px 15px;
@@ -1957,7 +1962,7 @@ html.contextmenu_ContextMenuPopup_14wqd body {
   white-space: normal;
   max-width: 180px;
   text-overflow: ellipsis;
-  padding: 10px 16px 10px 24px;
+  padding: 10px 8px 10px 24px;
   font-size: 14px;
   font-weight: 400;
   color: #b8bcbf;
@@ -1973,7 +1978,7 @@ html.contextmenu_ContextMenuPopup_14wqd body {
   .pagedsettings_PageListItem_Icon_1rD8X {
   height: 20px;
   width: 20px;
-  margin-right: 16px;
+  margin-right: 12px;
 }
 .pagedsettings_PagedSettingsDialog_PageListItem_1-vlr
   .pagedsettings_PageListItem_Icon_1rD8X.DesktopUI,
@@ -3317,6 +3322,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   --inverse-normalized-default-value: calc(
     1 - var(--normalized-slider-default-value)
   );
+  --slider-handle-width: 24px;
   position: relative;
   display: flex;
   height: 24px;
@@ -3376,7 +3382,10 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   --gradient-split-pct: calc(
     100% * var(--normalized-slider-default-value) /
       var(--normalized-slider-value) -
-      (24px * 0.5 * var(--signed-normalized-slider-default-value))
+      (
+        var(--slider-handle-width) * 0.5 *
+          var(--signed-normalized-slider-default-value)
+      )
   );
 }
 .gamepadslider_DefaultValueColorLeft_3mRyv
@@ -3411,8 +3420,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   position: absolute;
   transform: translateX(
     calc(
-      -100% * var(--inverse-normalized-value) + (24px *
-            var(--inverse-normalized-value))
+      -100% * var(--inverse-normalized-value) + var(--slider-handle-width) * var(--inverse-normalized-value)
     )
   );
 }
@@ -3746,8 +3754,9 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   position: absolute;
   transform: translateX(
     calc(
-      -100% * var(--inverse-normalized-default-value) + (24px *
-            var(--inverse-normalized-default-value))
+      -100% * var(--inverse-normalized-default-value) + var(
+          --slider-handle-width
+        ) * var(--inverse-normalized-default-value)
     )
   );
 }
@@ -5094,16 +5103,19 @@ body.modals_BodyNoScrollDialog_3jhMI {
   padding: 0px 50px 40px 0px;
   background-color: transparent;
 }
-.chatWindow .chatEntry.GamepadMode.gpfocuswithin > *,
-.GamepadMode .chatWindow .chatEntry.gpfocuswithin > * {
+.chatWindow .chatEntry.GamepadMode.gpfocuswithin > *:not(.chatUploadContainer),
+.GamepadMode
+  .chatWindow
+  .chatEntry.gpfocuswithin
+  > *:not(.chatUploadContainer) {
   animation-name: ItemFocusAnim-darkerGrey;
   z-index: 1;
   animation-name: ItemFocusAnim-darkGrey;
   background-color: #3d4450;
   color: #fff;
 }
-.chatWindow .chatEntry > *.GamepadMode,
-.GamepadMode .chatWindow .chatEntry > * {
+.chatWindow .chatEntry > *:not(.chatUploadContainer).GamepadMode,
+.GamepadMode .chatWindow .chatEntry > *:not(.chatUploadContainer) {
   margin-bottom: 0px;
   box-shadow: none;
   background-color: rgba(35, 38, 46, 0.45);
@@ -17035,16 +17047,19 @@ a.bbcodes_LinkButton_jPpgc:hover {
   padding: 0px 50px 40px 0px;
   background-color: transparent;
 }
-.chatWindow .chatEntry.GamepadMode.gpfocuswithin > *,
-.GamepadMode .chatWindow .chatEntry.gpfocuswithin > * {
+.chatWindow .chatEntry.GamepadMode.gpfocuswithin > *:not(.chatUploadContainer),
+.GamepadMode
+  .chatWindow
+  .chatEntry.gpfocuswithin
+  > *:not(.chatUploadContainer) {
   animation-name: ItemFocusAnim-darkerGrey;
   z-index: 1;
   animation-name: ItemFocusAnim-darkGrey;
   background-color: #3d4450;
   color: #fff;
 }
-.chatWindow .chatEntry > *.GamepadMode,
-.GamepadMode .chatWindow .chatEntry > * {
+.chatWindow .chatEntry > *:not(.chatUploadContainer).GamepadMode,
+.GamepadMode .chatWindow .chatEntry > *:not(.chatUploadContainer) {
   margin-bottom: 0px;
   box-shadow: none;
   background-color: rgba(35, 38, 46, 0.45);
@@ -19017,16 +19032,19 @@ a.bbcodes_LinkButton_jPpgc:hover {
   padding: 0px 50px 40px 0px;
   background-color: transparent;
 }
-.chatWindow .chatEntry.GamepadMode.gpfocuswithin > *,
-.GamepadMode .chatWindow .chatEntry.gpfocuswithin > * {
+.chatWindow .chatEntry.GamepadMode.gpfocuswithin > *:not(.chatUploadContainer),
+.GamepadMode
+  .chatWindow
+  .chatEntry.gpfocuswithin
+  > *:not(.chatUploadContainer) {
   animation-name: ItemFocusAnim-darkerGrey;
   z-index: 1;
   animation-name: ItemFocusAnim-darkGrey;
   background-color: #3d4450;
   color: #fff;
 }
-.chatWindow .chatEntry > *.GamepadMode,
-.GamepadMode .chatWindow .chatEntry > * {
+.chatWindow .chatEntry > *:not(.chatUploadContainer).GamepadMode,
+.GamepadMode .chatWindow .chatEntry > *:not(.chatUploadContainer) {
   margin-bottom: 0px;
   box-shadow: none;
   background-color: rgba(35, 38, 46, 0.45);
@@ -21041,16 +21059,19 @@ a.bbcodes_LinkButton_jPpgc:hover {
   padding: 0px 50px 40px 0px;
   background-color: transparent;
 }
-.chatWindow .chatEntry.GamepadMode.gpfocuswithin > *,
-.GamepadMode .chatWindow .chatEntry.gpfocuswithin > * {
+.chatWindow .chatEntry.GamepadMode.gpfocuswithin > *:not(.chatUploadContainer),
+.GamepadMode
+  .chatWindow
+  .chatEntry.gpfocuswithin
+  > *:not(.chatUploadContainer) {
   animation-name: ItemFocusAnim-darkerGrey;
   z-index: 1;
   animation-name: ItemFocusAnim-darkGrey;
   background-color: #3d4450;
   color: #fff;
 }
-.chatWindow .chatEntry > *.GamepadMode,
-.GamepadMode .chatWindow .chatEntry > * {
+.chatWindow .chatEntry > *:not(.chatUploadContainer).GamepadMode,
+.GamepadMode .chatWindow .chatEntry > *:not(.chatUploadContainer) {
   margin-bottom: 0px;
   box-shadow: none;
   background-color: rgba(35, 38, 46, 0.45);
@@ -22917,16 +22938,19 @@ a.bbcodes_LinkButton_jPpgc:hover {
   padding: 0px 50px 40px 0px;
   background-color: transparent;
 }
-.chatWindow .chatEntry.GamepadMode.gpfocuswithin > *,
-.GamepadMode .chatWindow .chatEntry.gpfocuswithin > * {
+.chatWindow .chatEntry.GamepadMode.gpfocuswithin > *:not(.chatUploadContainer),
+.GamepadMode
+  .chatWindow
+  .chatEntry.gpfocuswithin
+  > *:not(.chatUploadContainer) {
   animation-name: ItemFocusAnim-darkerGrey;
   z-index: 1;
   animation-name: ItemFocusAnim-darkGrey;
   background-color: #3d4450;
   color: #fff;
 }
-.chatWindow .chatEntry > *.GamepadMode,
-.GamepadMode .chatWindow .chatEntry > * {
+.chatWindow .chatEntry > *:not(.chatUploadContainer).GamepadMode,
+.GamepadMode .chatWindow .chatEntry > *:not(.chatUploadContainer) {
   margin-bottom: 0px;
   box-shadow: none;
   background-color: rgba(35, 38, 46, 0.45);
@@ -26627,16 +26651,19 @@ svg.reorderablelist_ReorderArrow_1jEeo {
   padding: 0px 50px 40px 0px;
   background-color: transparent;
 }
-.chatWindow .chatEntry.GamepadMode.gpfocuswithin > *,
-.GamepadMode .chatWindow .chatEntry.gpfocuswithin > * {
+.chatWindow .chatEntry.GamepadMode.gpfocuswithin > *:not(.chatUploadContainer),
+.GamepadMode
+  .chatWindow
+  .chatEntry.gpfocuswithin
+  > *:not(.chatUploadContainer) {
   animation-name: ItemFocusAnim-darkerGrey;
   z-index: 1;
   animation-name: ItemFocusAnim-darkGrey;
   background-color: #3d4450;
   color: #fff;
 }
-.chatWindow .chatEntry > *.GamepadMode,
-.GamepadMode .chatWindow .chatEntry > * {
+.chatWindow .chatEntry > *:not(.chatUploadContainer).GamepadMode,
+.GamepadMode .chatWindow .chatEntry > *:not(.chatUploadContainer) {
   margin-bottom: 0px;
   box-shadow: none;
   background-color: rgba(35, 38, 46, 0.45);
@@ -30801,16 +30828,19 @@ div:hover > .BBCodeCollapseControl {
   padding: 0px 50px 40px 0px;
   background-color: transparent;
 }
-.chatWindow .chatEntry.GamepadMode.gpfocuswithin > *,
-.GamepadMode .chatWindow .chatEntry.gpfocuswithin > * {
+.chatWindow .chatEntry.GamepadMode.gpfocuswithin > *:not(.chatUploadContainer),
+.GamepadMode
+  .chatWindow
+  .chatEntry.gpfocuswithin
+  > *:not(.chatUploadContainer) {
   animation-name: ItemFocusAnim-darkerGrey;
   z-index: 1;
   animation-name: ItemFocusAnim-darkGrey;
   background-color: #3d4450;
   color: #fff;
 }
-.chatWindow .chatEntry > *.GamepadMode,
-.GamepadMode .chatWindow .chatEntry > * {
+.chatWindow .chatEntry > *:not(.chatUploadContainer).GamepadMode,
+.GamepadMode .chatWindow .chatEntry > *:not(.chatUploadContainer) {
   margin-bottom: 0px;
   box-shadow: none;
   background-color: rgba(35, 38, 46, 0.45);
@@ -32599,16 +32629,19 @@ div:hover > .BBCodeCollapseControl {
   padding: 0px 50px 40px 0px;
   background-color: transparent;
 }
-.chatWindow .chatEntry.GamepadMode.gpfocuswithin > *,
-.GamepadMode .chatWindow .chatEntry.gpfocuswithin > * {
+.chatWindow .chatEntry.GamepadMode.gpfocuswithin > *:not(.chatUploadContainer),
+.GamepadMode
+  .chatWindow
+  .chatEntry.gpfocuswithin
+  > *:not(.chatUploadContainer) {
   animation-name: ItemFocusAnim-darkerGrey;
   z-index: 1;
   animation-name: ItemFocusAnim-darkGrey;
   background-color: #3d4450;
   color: #fff;
 }
-.chatWindow .chatEntry > *.GamepadMode,
-.GamepadMode .chatWindow .chatEntry > * {
+.chatWindow .chatEntry > *:not(.chatUploadContainer).GamepadMode,
+.GamepadMode .chatWindow .chatEntry > *:not(.chatUploadContainer) {
   margin-bottom: 0px;
   box-shadow: none;
   background-color: rgba(35, 38, 46, 0.45);
@@ -34219,16 +34252,19 @@ div:hover > .BBCodeCollapseControl {
   padding: 0px 50px 40px 0px;
   background-color: transparent;
 }
-.chatWindow .chatEntry.GamepadMode.gpfocuswithin > *,
-.GamepadMode .chatWindow .chatEntry.gpfocuswithin > * {
+.chatWindow .chatEntry.GamepadMode.gpfocuswithin > *:not(.chatUploadContainer),
+.GamepadMode
+  .chatWindow
+  .chatEntry.gpfocuswithin
+  > *:not(.chatUploadContainer) {
   animation-name: ItemFocusAnim-darkerGrey;
   z-index: 1;
   animation-name: ItemFocusAnim-darkGrey;
   background-color: #3d4450;
   color: #fff;
 }
-.chatWindow .chatEntry > *.GamepadMode,
-.GamepadMode .chatWindow .chatEntry > * {
+.chatWindow .chatEntry > *:not(.chatUploadContainer).GamepadMode,
+.GamepadMode .chatWindow .chatEntry > *:not(.chatUploadContainer) {
   margin-bottom: 0px;
   box-shadow: none;
   background-color: rgba(35, 38, 46, 0.45);
@@ -35986,16 +36022,19 @@ div:hover > .BBCodeCollapseControl {
   padding: 0px 50px 40px 0px;
   background-color: transparent;
 }
-.chatWindow .chatEntry.GamepadMode.gpfocuswithin > *,
-.GamepadMode .chatWindow .chatEntry.gpfocuswithin > * {
+.chatWindow .chatEntry.GamepadMode.gpfocuswithin > *:not(.chatUploadContainer),
+.GamepadMode
+  .chatWindow
+  .chatEntry.gpfocuswithin
+  > *:not(.chatUploadContainer) {
   animation-name: ItemFocusAnim-darkerGrey;
   z-index: 1;
   animation-name: ItemFocusAnim-darkGrey;
   background-color: #3d4450;
   color: #fff;
 }
-.chatWindow .chatEntry > *.GamepadMode,
-.GamepadMode .chatWindow .chatEntry > * {
+.chatWindow .chatEntry > *:not(.chatUploadContainer).GamepadMode,
+.GamepadMode .chatWindow .chatEntry > *:not(.chatUploadContainer) {
   margin-bottom: 0px;
   box-shadow: none;
   background-color: rgba(35, 38, 46, 0.45);
@@ -40084,16 +40123,19 @@ body.in_global_drag .title-area {
   padding: 0px 50px 40px 0px;
   background-color: transparent;
 }
-.chatWindow .chatEntry.GamepadMode.gpfocuswithin > *,
-.GamepadMode .chatWindow .chatEntry.gpfocuswithin > * {
+.chatWindow .chatEntry.GamepadMode.gpfocuswithin > *:not(.chatUploadContainer),
+.GamepadMode
+  .chatWindow
+  .chatEntry.gpfocuswithin
+  > *:not(.chatUploadContainer) {
   animation-name: ItemFocusAnim-darkerGrey;
   z-index: 1;
   animation-name: ItemFocusAnim-darkGrey;
   background-color: #3d4450;
   color: #fff;
 }
-.chatWindow .chatEntry > *.GamepadMode,
-.GamepadMode .chatWindow .chatEntry > * {
+.chatWindow .chatEntry > *:not(.chatUploadContainer).GamepadMode,
+.GamepadMode .chatWindow .chatEntry > *:not(.chatUploadContainer) {
   margin-bottom: 0px;
   box-shadow: none;
   background-color: rgba(35, 38, 46, 0.45);
@@ -44290,6 +44332,14 @@ body.in_global_drag .chatWindow .chatBody .chatHistoryAndMembers,
   flex-direction: column;
   align-items: center;
 }
+.chatUploadContainer.GamepadMode,
+.GamepadMode .chatUploadContainer {
+  padding: 10px;
+  z-index: 100;
+  gap: 4px;
+  opacity: 1;
+  background-color: #2c3036;
+}
 .chatFileUploadPreviewContainer img {
   border-radius: 4px;
   box-shadow: 0 0 4px 1px #000;
@@ -44333,11 +44383,12 @@ body.in_global_drag .chatWindow .chatBody .chatHistoryAndMembers,
   vertical-align: middle;
   box-shadow: 0 0 4px 1px #00000088;
 }
+.chatFileUploadCancel:hover,
+.chatFileUploadCancel.gpfocus {
+  background-color: rgba(92, 100, 114, 0.9);
+}
 .chatFileUploadCancel .SVGIcon_X_Line line {
   stroke: #fff;
-}
-.chatFileUploadCancel:hover {
-  background-color: rgba(92, 100, 114, 0.9);
 }
 .uploadOptions {
   width: 100%;
@@ -46196,6 +46247,12 @@ a.connectionStatus:visited {
 .TheaterMode .BroadcastChatExpander.bottom {
   left: 0;
 }
+.ChatRoomGroup_WindowContent {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-width: 0;
+}
 .ChatRoomGroup_Main_ContentAndMembers,
 .ChatRoomGroup_Main_Content,
 .ChatRoomGroup_MainAndChatEntry {
@@ -46302,8 +46359,6 @@ a.connectionStatus:visited {
   padding: 14px 6px;
   min-height: 100%;
   box-sizing: border-box;
-  scroll-padding-top: 100px;
-  scroll-padding-bottom: 100px;
 }
 .chatRoomGroupNavColumn {
   position: relative;

@@ -17096,6 +17096,11 @@
                     br: i.FE.readString,
                     bw: i.Xc.writeString,
                   },
+                  cancel_pending: {
+                    n: 15,
+                    br: i.FE.readBool,
+                    bw: i.Xc.writeBool,
+                  },
                   metadata_phase: {
                     n: 12,
                     br: i.FE.readEnum,
@@ -17344,6 +17349,11 @@
                   },
                   live: { n: 16, br: i.FE.readBool, bw: i.Xc.writeBool },
                   active: { n: 17, br: i.FE.readBool, bw: i.Xc.writeBool },
+                  cancel_pending: {
+                    n: 19,
+                    br: i.FE.readBool,
+                    bw: i.Xc.writeBool,
+                  },
                 },
               }),
             ct.sm_m
@@ -17406,6 +17416,7 @@
                     pbr: i.FE.readPackedFloat,
                     bw: i.Xc.writeRepeatedFloat,
                   },
+                  batch_id: { n: 3, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
                 },
               }),
             ut.sm_m
@@ -18754,7 +18765,6 @@
                     bw: i.Xc.writeUint32,
                   },
                   train_id: { n: 3, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
-                  fetch_id: { n: 6, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
                   export_name: {
                     n: 4,
                     br: i.FE.readString,
@@ -18768,6 +18778,7 @@
                     pbr: i.FE.readPackedUint32,
                     bw: i.Xc.writeRepeatedUint32,
                   },
+                  fetch_id: { n: 6, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
                 },
               }),
             xt.sm_m

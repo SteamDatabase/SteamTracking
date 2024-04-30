@@ -158,18 +158,16 @@
     83682: (e, t, n) => {
       "use strict";
       n.d(t, {
-        Z6: () => u,
-        p8: () => h,
-        NO: () => f,
-        UC: () => m,
-        A1: () => g,
+        Z6: () => c,
+        p8: () => g,
+        NO: () => h,
         yp: () => d,
         iP: () => _,
       });
       var o = n(47427),
         i = n(77936),
-        r = n(37563),
-        l = n(4481);
+        l = n(37563),
+        r = n(4481);
       class s {
         constructor() {
           (this.type = 0), (this.text = "");
@@ -192,24 +190,24 @@
             const n = [];
             let o = new s(),
               i = !1,
-              r = !1,
-              l = !1;
+              l = !1,
+              r = !1;
             for (let s = 0; s < e.length; s++) {
               let a = e[s];
               switch (o.type) {
                 case 0:
                   "[" == a
-                    ? ((o.type = 2), (r = !0))
+                    ? ((o.type = 2), (l = !0))
                     : ((o.type = 1), "\\" == a && t ? (i = !i) : (o.text += a));
                   break;
                 case 2:
                 case 3:
-                  if ("/" == a && r) (o.type = 3), (o.text = ""), (r = !1);
+                  if ("/" == a && l) (o.type = 3), (o.text = ""), (l = !1);
                   else if ("[" != a || i)
                     if ("]" != a || i)
                       "\\" == a && t
-                        ? ((o.text += a), (i = !i), (r = !1))
-                        : ((o.text += a), (i = !1), (r = !1));
+                        ? ((o.text += a), (i = !i), (l = !1))
+                        : ((o.text += a), (i = !1), (l = !1));
                     else {
                       const e =
                           2 == o.type &&
@@ -217,23 +215,23 @@
                         t =
                           3 == o.type &&
                           "noparse" == o.text.toLocaleLowerCase();
-                      r || (l && !t)
+                      l || (r && !t)
                         ? (o.ConvertMalformedNodeToText(), (o.text += a))
                         : e
-                          ? (l = !0)
-                          : t && (l = !1),
-                        (o = c(n, o)),
-                        (r = !1);
+                          ? (r = !0)
+                          : t && (r = !1),
+                        (o = u(n, o)),
+                        (l = !1);
                     }
                   else
-                    o.ConvertMalformedNodeToText(), (o = c(n, o, 2)), (r = !0);
+                    o.ConvertMalformedNodeToText(), (o = u(n, o, 2)), (l = !0);
                   break;
                 case 1:
                   "[" != a || i
                     ? "\\" == a && t
                       ? (i && (o.text += a), (i = !i))
                       : ((o.text += a), (i = !1))
-                    : ((o = c(n, o, 2)), (r = !0));
+                    : ((o = u(n, o, 2)), (l = !0));
               }
             }
             0 != o.type &&
@@ -249,22 +247,22 @@
             i = function () {
               return o.length < 1 ? void 0 : o[o.length - 1];
             },
-            r = this.m_dictComponents,
-            l = !1,
+            l = this.m_dictComponents,
+            r = !1,
             s = !0,
             a = function (e, i, a) {
               if (
                 e &&
                 e.node.tag === i.text &&
-                (null == r ? void 0 : r.get(e.node.tag))
+                (null == l ? void 0 : l.get(e.node.tag))
               ) {
-                const i = r.get(e.node.tag),
+                const i = l.get(e.node.tag),
                   a = o.map((e) => e.node.tag),
-                  c = { parentTags: a, tagname: e.node.tag, args: e.node.args },
-                  u = t(i.Constructor, c, ...n.GetElements());
+                  u = { parentTags: a, tagname: e.node.tag, args: e.node.args },
+                  c = t(i.Constructor, u, ...n.GetElements());
                 (n = e.accumulator),
-                  n.AppendNode(u),
-                  (l = !!i.skipFollowingNewline),
+                  n.AppendNode(c),
+                  (r = !!i.skipFollowingNewline),
                   (s = e.bWrapTextForCopying);
               } else if (e) {
                 let t = e.accumulator;
@@ -277,39 +275,39 @@
             };
           for (
             e.forEach((e, t) => {
-              var c, u, d;
+              var u, c, d;
               if (1 == e.type) {
-                const t = l ? e.text.replace(/^[\t\r ]*\n/g, "") : e.text;
-                n.AppendText(t, s), (l = !1);
+                const t = r ? e.text.replace(/^[\t\r ]*\n/g, "") : e.text;
+                n.AppendText(t, s), (r = !1);
               } else if (2 == e.type) {
-                const t = null == r ? void 0 : r.get(e.tag);
+                const t = null == l ? void 0 : l.get(e.tag);
                 if (t) {
-                  const u = i();
-                  if (void 0 !== u) {
-                    const t = null == r ? void 0 : r.get(u.node.tag);
+                  const c = i();
+                  if (void 0 !== c) {
+                    const t = null == l ? void 0 : l.get(c.node.tag);
                     t &&
                       t.autocloses &&
-                      e.tag === u.node.tag &&
-                      a(o.pop(), u.node);
+                      e.tag === c.node.tag &&
+                      a(o.pop(), c.node);
                   }
                   o.push({ accumulator: n, node: e, bWrapTextForCopying: s }),
                     (n = this.m_fnAccumulatorFactory(e)),
-                    (l = !!t.skipInternalNewline),
+                    (r = !!t.skipInternalNewline),
                     (s =
-                      null !== (c = t.allowWrapTextForCopying) &&
-                      void 0 !== c &&
-                      c);
+                      null !== (u = t.allowWrapTextForCopying) &&
+                      void 0 !== u &&
+                      u);
                 } else n.AppendText("[" + e.text + "]", 0 == o.length);
               } else if (3 == e.type) {
                 for (
                   ;
                   i() &&
                   i().node.tag !== e.text &&
-                  (null == r ? void 0 : r.get(i().node.tag)) &&
-                  (null === (u = null == r ? void 0 : r.get(i().node.tag)) ||
-                  void 0 === u
+                  (null == l ? void 0 : l.get(i().node.tag)) &&
+                  (null === (c = null == l ? void 0 : l.get(i().node.tag)) ||
+                  void 0 === c
                     ? void 0
-                    : u.autocloses);
+                    : c.autocloses);
 
                 ) {
                   const e = o.pop();
@@ -336,7 +334,7 @@
           return n.GetElements();
         }
       }
-      function c(e, t, n = 0) {
+      function u(e, t, n = 0) {
         if (2 == t.type) {
           let e = t.text.indexOf("="),
             n = t.text.indexOf(" ");
@@ -349,13 +347,13 @@
                 n = "",
                 o = "",
                 i = 0,
-                r = 0;
+                l = 0;
               "=" == e[0] && (i = 2);
-              let l = !1;
-              for (r++; r < e.length; r++) {
-                let s = e[r],
+              let r = !1;
+              for (l++; l < e.length; l++) {
+                let s = e[l],
                   a = !0,
-                  c = !1;
+                  u = !1;
                 switch (i) {
                   case 0:
                     if ("=" == s) return {};
@@ -364,25 +362,25 @@
                     break;
                   case 1:
                     ("=" != s && " " != s) ||
-                      l ||
-                      (" " == s ? ((i = 0), (c = !0)) : (i = 2), (a = !1));
+                      r ||
+                      (" " == s ? ((i = 0), (u = !0)) : (i = 2), (a = !1));
                     break;
                   case 2:
                     " " == s
-                      ? ((i = 0), (a = !1), (c = !0))
+                      ? ((i = 0), (a = !1), (u = !0))
                       : '"' == s
                         ? ((i = 4), (a = !1))
                         : (i = 3);
                     break;
                   case 3:
                   case 4:
-                    ((" " == s && 4 != i && !l) ||
-                      ('"' == s && 4 == i && !l)) &&
-                      ((i = 0), (a = !1), (c = !0));
+                    ((" " == s && 4 != i && !r) ||
+                      ('"' == s && 4 == i && !r)) &&
+                      ((i = 0), (a = !1), (u = !0));
                 }
                 if (a)
-                  if ("\\" != s || l)
-                    if (((l = !1), 1 == i)) n += s;
+                  if ("\\" != s || r)
+                    if (((r = !1), 1 == i)) n += s;
                     else {
                       if (3 != i && 4 != i)
                         throw new Error(
@@ -390,8 +388,8 @@
                         );
                       o += s;
                     }
-                  else l = !0;
-                c && ((t[n] = o), (n = ""), (o = ""));
+                  else r = !0;
+                u && ((t[n] = o), (n = ""), (o = ""));
               }
               0 != i && (t[n] = o);
               return t;
@@ -402,19 +400,19 @@
         let o = new s();
         return (o.type = n), o;
       }
-      class u extends a {
+      class c extends a {
         constructor(e, t, n) {
-          super(e, null != t ? t : () => new l.LT()),
-            (this.m_renderingLanguage = n || (0, i.jM)(r.De.LANGUAGE));
+          super(e, null != t ? t : () => new r.LT()),
+            (this.m_renderingLanguage = n || (0, i.jM)(l.De.LANGUAGE));
         }
         UpdateOverrideLanguage(e) {
-          this.m_renderingLanguage = e || (0, i.jM)(r.De.LANGUAGE);
+          this.m_renderingLanguage = e || (0, i.jM)(l.De.LANGUAGE);
         }
         ParseBBCode(e, t, n = !1) {
           let i = 0;
-          const r = this.Parse(
+          const l = this.Parse(
             e,
-            (e, n, ...r) =>
+            (e, n, ...l) =>
               o.createElement(
                 e,
                 Object.assign(Object.assign({}, n), {
@@ -422,14 +420,14 @@
                   language: this.m_renderingLanguage,
                   key: "bbnode_" + i++,
                 }),
-                ...r,
+                ...l,
               ),
             n,
           );
-          return r.length > 1
-            ? o.createElement(o.Fragment, null, ...r)
-            : 1 == r.length
-              ? r[0]
+          return l.length > 1
+            ? o.createElement(o.Fragment, null, ...l)
+            : 1 == l.length
+              ? l[0]
               : null;
         }
       }
@@ -499,16 +497,15 @@
           "trailer",
           "youtubeorvideo",
           "docimg",
-        ],
-        g = (d.filter((e) => -1 == p.indexOf(e)), "{STEAM_CLAN_IMAGE}"),
-        m = "{STEAM_CLAN_LOC_IMAGE}";
-      function h(e, t = null, n = " ") {
+        ];
+      d.filter((e) => -1 == p.indexOf(e));
+      function g(e, t = null, n = " ") {
         let o = null == t ? void 0 : t.join("|");
         o || (o = d.join("|") + "|\\*");
         let i = new RegExp("\\[(" + o + ")\\b[^\\]]*\\].*?\\[/\\1\\]", "gi");
         return e.replace(i, n);
       }
-      function f(e, t = null, n = "") {
+      function h(e, t = null, n = "") {
         let o = null == t ? void 0 : t.join("|");
         o || (o = d.join("|") + "|\\*");
         let i = "\\[\\/?(?:" + o + "){1,}.*?]";
@@ -517,10 +514,10 @@
     },
     4481: (e, t, n) => {
       "use strict";
-      n.d(t, { DX: () => l, LT: () => r, So: () => s });
+      n.d(t, { DX: () => r, LT: () => l, So: () => s });
       var o = n(47427),
         i = n(62210);
-      class r {
+      class l {
         constructor() {
           this.reactNodes = [];
         }
@@ -547,7 +544,7 @@
           return this.reactNodes;
         }
       }
-      class l {
+      class r {
         constructor(e) {
           (0, i.X)(e, "decorated accumulator cannot be null"),
             (this.m_decoratedAccumulator = e);
@@ -562,7 +559,7 @@
           return this.m_decoratedAccumulator.GetElements();
         }
       }
-      class s extends l {
+      class s extends r {
         constructor(e, t, n) {
           super(e),
             (this.m_nStartCursor = 1),
@@ -586,112 +583,97 @@
         }
       }
     },
-    19399: (e, t, n) => {
-      "use strict";
-      n.d(t, { HZ: () => s, OL: () => r, pd: () => l });
-      var o = n(83682),
-        i = n(65255);
-      function r() {
-        return `${i.De.CLAN_CDN_ASSET_URL}images/`;
-      }
-      function l(e) {
-        return (e = e.replace(o.A1, r())).replace("http://", "https://");
-      }
-      function s(e) {
-        return e.replace(/{STEAM_CLAN_IMAGE}/g, r());
-      }
-    },
     80886: (e, t, n) => {
       "use strict";
       n.d(t, {
-        Jx: () => m,
+        Jx: () => h,
         Vm: () => _,
-        dY: () => h,
+        dY: () => m,
         ie: () => d,
         jk: () => a,
-        vs: () => c,
+        vs: () => u,
         wZ: () => g,
-        yo: () => u,
+        yo: () => c,
       });
       var o = n(80751),
         i = n.n(o),
-        r = n(47427),
-        l = (n(83682), n(20417)),
+        l = n(47427),
+        r = (n(83682), n(20417)),
         s = n(15690);
       function a(e, t, n, o) {
-        const a = (0, r.useRef)(),
-          c = (0, r.useRef)(void 0),
-          u = (0, l.NW)();
+        const a = (0, l.useRef)(),
+          u = (0, l.useRef)(void 0),
+          c = (0, r.NW)();
         a.current = e;
-        const [d, _] = (0, r.useState)(void 0),
+        const [d, _] = (0, l.useState)(void 0),
           {
             include_assets: p,
             include_release: g,
-            include_platforms: m,
-            include_all_purchase_options: h,
+            include_platforms: h,
+            include_all_purchase_options: m,
             include_screenshots: f,
-            include_trailers: C,
+            include_trailers: v,
             include_ratings: A,
             include_tag_count: S,
-            include_reviews: E,
-            include_basic_info: v,
-            include_supported_languages: D,
-            include_full_description: x,
-            include_included_items: L,
-            include_assets_without_overrides: N,
-            apply_user_filters: w,
+            include_reviews: x,
+            include_basic_info: C,
+            include_supported_languages: E,
+            include_full_description: y,
+            include_included_items: w,
+            include_assets_without_overrides: T,
+            apply_user_filters: b,
           } = n;
         if (
-          ((0, r.useEffect)(() => {
+          ((0, l.useEffect)(() => {
             const n = {
               include_assets: p,
               include_release: g,
-              include_platforms: m,
-              include_all_purchase_options: h,
+              include_platforms: h,
+              include_all_purchase_options: m,
               include_screenshots: f,
-              include_trailers: C,
+              include_trailers: v,
               include_ratings: A,
               include_tag_count: S,
-              include_reviews: E,
-              include_basic_info: v,
-              include_supported_languages: D,
-              include_full_description: x,
-              include_included_items: L,
-              include_assets_without_overrides: N,
-              apply_user_filters: w,
+              include_reviews: x,
+              include_basic_info: C,
+              include_supported_languages: E,
+              include_full_description: y,
+              include_included_items: w,
+              include_assets_without_overrides: T,
+              apply_user_filters: b,
             };
-            let r = null;
+            let l = null;
             return (
               !e ||
                 s.Z.Get().BHasStoreItem(e, t, n) ||
-                (void 0 !== d && o && o == c.current) ||
-                (o !== c.current && (_(void 0), (c.current = o)),
-                (r = i().CancelToken.source()),
+                (void 0 !== d && o && o == u.current) ||
+                (o !== u.current && (_(void 0), (u.current = o)),
+                (l = i().CancelToken.source()),
                 s.Z.Get()
                   .QueueStoreItemRequest(e, t, n)
                   .then((t) => {
-                    (null == r ? void 0 : r.token.reason) ||
+                    (null == l ? void 0 : l.token.reason) ||
                       a.current !== e ||
                       _(1 == t),
-                      u();
+                      c();
                   })),
               () =>
-                null == r ? void 0 : r.cancel("useStoreItemCache: unmounting")
+                null == l ? void 0 : l.cancel("useStoreItemCache: unmounting")
             );
-          }, [e, t, o, d, p, g, m, h, f, C, A, S, E, v, D, x, L, N, w, u]),
+          }, [e, t, o, d, p, g, h, m, f, v, A, S, x, C, E, y, w, T, b, c]),
           !e)
         )
           return [null, 2];
         if (!1 === d) return [void 0, 2];
         if (s.Z.Get().BIsStoreItemMissing(e, t)) return [void 0, 2];
         if (!s.Z.Get().BHasStoreItem(e, t, n)) return [void 0, 1];
-        const T = s.Z.Get().GetStoreItemWithLegacyVisibilityCheck(e, t);
-        return T ? [T, 3] : [null, 2];
-      }
-      function c(e, t, n) {
-        return a(e, 0, t, n);
+        const B = s.Z.Get().GetStoreItemWithLegacyVisibilityCheck(e, t);
+        return B ? [B, 3] : [null, 2];
       }
       function u(e, t, n) {
+        return a(e, 0, t, n);
+      }
+      function c(e, t, n) {
         return a(e, 2, t, n);
       }
       function d(e, t, n) {
@@ -699,10 +681,10 @@
       }
       function _(e, t, n) {
         const [o, i] = a(e, t, n),
-          [l, s] = (0, r.useState)(null),
-          [u, d] = c(l, n);
+          [r, s] = (0, l.useState)(null),
+          [c, d] = u(r, n);
         return (
-          (0, r.useEffect)(() => {
+          (0, l.useEffect)(() => {
             var e;
             if (
               1 == (null == o ? void 0 : o.GetStoreItemType()) &&
@@ -715,47 +697,47 @@
               s(e);
             }
           }, [o]),
-          l && (null == u ? void 0 : u.BIsVisible()) ? [u, d] : [o, i]
+          r && (null == c ? void 0 : c.BIsVisible()) ? [c, d] : [o, i]
         );
       }
       function p(e, t, n, o) {
-        const a = (0, l.NW)(),
+        const a = (0, r.NW)(),
           {
-            include_assets: c,
-            include_release: u,
+            include_assets: u,
+            include_release: c,
             include_platforms: d,
             include_all_purchase_options: _,
             include_screenshots: p,
             include_trailers: g,
-            include_ratings: m,
-            include_tag_count: h,
+            include_ratings: h,
+            include_tag_count: m,
             include_reviews: f,
-            include_basic_info: C,
+            include_basic_info: v,
             include_supported_languages: A,
             include_full_description: S,
-            include_included_items: E,
-            include_assets_without_overrides: v,
-            apply_user_filters: D,
+            include_included_items: x,
+            include_assets_without_overrides: C,
+            apply_user_filters: E,
           } = n;
         if (
-          ((0, r.useEffect)(() => {
+          ((0, l.useEffect)(() => {
             if (!e || 0 == e.length) return;
             const n = {
-                include_assets: c,
-                include_release: u,
+                include_assets: u,
+                include_release: c,
                 include_platforms: d,
                 include_all_purchase_options: _,
                 include_screenshots: p,
                 include_trailers: g,
-                include_ratings: m,
-                include_tag_count: h,
+                include_ratings: h,
+                include_tag_count: m,
                 include_reviews: f,
-                include_basic_info: C,
+                include_basic_info: v,
                 include_supported_languages: A,
                 include_full_description: S,
-                include_included_items: E,
-                include_assets_without_overrides: v,
-                apply_user_filters: D,
+                include_included_items: x,
+                include_assets_without_overrides: C,
+                apply_user_filters: E,
               },
               o = e.filter(
                 (e) =>
@@ -765,15 +747,15 @@
                   ),
               );
             if (0 == o.length) return;
-            const r = i().CancelToken.source(),
-              l = o.map((e) => s.Z.Get().QueueStoreItemRequest(e, t, n));
+            const l = i().CancelToken.source(),
+              r = o.map((e) => s.Z.Get().QueueStoreItemRequest(e, t, n));
             return (
-              Promise.all(l).then(() => {
-                r.token.reason || a();
+              Promise.all(r).then(() => {
+                l.token.reason || a();
               }),
-              () => r.cancel("useStoreItemCacheMultiplePackages: unmounting")
+              () => l.cancel("useStoreItemCacheMultiplePackages: unmounting")
             );
-          }, [e, t, o, a, c, u, d, _, p, g, m, h, f, C, A, S, E, v, D]),
+          }, [e, t, o, a, u, c, d, _, p, g, h, m, f, v, A, S, x, C, E]),
           !e)
         )
           return 2;
@@ -794,145 +776,11 @@
       function g(e, t, n) {
         return p(e, 0, t, n);
       }
-      function m(e, t, n) {
+      function h(e, t, n) {
         return p(e, 2, t, n);
       }
-      function h(e, t, n) {
+      function m(e, t, n) {
         return p(e, 1, t, n);
-      }
-    },
-    13499: (e, t, n) => {
-      "use strict";
-      n.d(t, {
-        FM: () => s,
-        H7: () => l,
-        OL: () => p,
-        Pm: () => u,
-        XW: () => a,
-        bk: () => h,
-        dK: () => _,
-        et: () => d,
-        iv: () => m,
-        md: () => g,
-      });
-      var o = n(37563),
-        i = n(31846),
-        r = n(19399);
-      const l =
-        /((?:(?:https?:)|(?:www[.,])|(?:[!#-;=?-Z\\\^-~]+[\.,](?:(?:[a-zA-Z]{2,4}[\.?]*[\/\\\?#])|(?:(?:biz|com|gallery|in|name|net|online|org|tech|trade|xyz)(?=\W|$)))))(?:[^ː\s"<>\[\]]*[^\\s"<>\[\],.ː:])?)/;
-      function s(e) {
-        let t = new RegExp(
-            "^(steam://openurl(_external)?/)?((f|ht)tps?://)?([^@/?#]*@)?([^/#?]+)",
-            "im",
-          ),
-          n = e.match(t);
-        return n && n.length > 5 ? n[6].toString() : e;
-      }
-      function a(e) {
-        let t = s(e);
-        return t.startsWith("www.") && (t = t.slice(4)), t;
-      }
-      const c = /^(steam|ftp|https?):\/\//;
-      function u(e) {
-        return c.test(e) ? e : "https://" + e;
-      }
-      function d(e) {
-        return e
-          ? 1 != o.De.EUNIVERSE
-            ? e
-            : ("http:" == e.substring(0, 5) && (e = "https:" + e.substring(5)),
-              (e = (e = (e = (e = (e = (e = (e = (e = (e = (e = (e = (e = (e =
-                (e = (e = (e = e.replace(
-                  /https:\/\/media.steampowered.com\//g,
-                  o.De.MEDIA_CDN_URL,
-                )).replace(
-                  /https:\/\/cdn.akamai.steamstatic.com\//g,
-                  o.De.MEDIA_CDN_URL,
-                )).replace(
-                  /https:\/\/cdn.cloudflare.steamstatic.com\//g,
-                  o.De.MEDIA_CDN_URL,
-                )).replace(
-                  /https:\/\/cdn.edgecast.steamstatic.com\//g,
-                  o.De.MEDIA_CDN_URL,
-                )).replace(
-                /https:\/\/cdn.dota2.com\//g,
-                o.De.MEDIA_CDN_URL,
-              )).replace(
-                /https:\/\/storefront.steampowered.com\/v\/gfx\//g,
-                o.De.MEDIA_CDN_URL + "steam/",
-              )).replace(
-                /https:\/\/clan.akamai.steamstatic.com\//g,
-                o.De.CLAN_CDN_ASSET_URL,
-              )).replace(
-                /https:\/\/clan.cloudflare.steamstatic.com\//g,
-                o.De.CLAN_CDN_ASSET_URL,
-              )).replace(
-                /https:\/\/cdn.steamcommunity.com\//g,
-                o.De.COMMUNITY_CDN_URL,
-              )).replace(
-                /https:\/\/community.akamai.steamstatic.com\//g,
-                o.De.COMMUNITY_CDN_URL,
-              )).replace(
-                /https:\/\/community.cloudflare.steamstatic.com\//g,
-                o.De.COMMUNITY_CDN_URL,
-              )).replace(
-                /https:\/\/community.edgecast.steamstatic.com\//g,
-                o.De.COMMUNITY_CDN_URL,
-              )).replace(/{IMG_URL}/g, o.De.IMG_URL)).replace(
-                /{MEDIA_CDN_URL}/g,
-                o.De.MEDIA_CDN_URL,
-              )).replace(
-                /{MEDIA_CDN_COMMUNITY_URL}/g,
-                o.De.MEDIA_CDN_COMMUNITY_URL,
-              )).replace(/{COMMUNITY_CDN_URL}/g, o.De.COMMUNITY_CDN_URL)),
-              (e = (0, r.HZ)(e)))
-          : e;
-      }
-      function _(e) {
-        if (!e) return !0;
-        const t = s(e).toLocaleLowerCase();
-        return (
-          [
-            s(o.De.COMMUNITY_CDN_URL).toLocaleLowerCase(),
-            s(o.De.MEDIA_CDN_URL).toLocaleLowerCase(),
-            s(o.De.MEDIA_CDN_COMMUNITY_URL).toLocaleLowerCase(),
-            s(o.De.STORE_CDN_URL).toLocaleLowerCase(),
-            s(o.De.BASE_URL_SHARED_CDN).toLocaleLowerCase(),
-            s(o.De.CLAN_CDN_ASSET_URL).toLocaleLowerCase(),
-            "support.steampowered.com",
-            "steamcdn-a.akamaihd.net",
-            "cdn.cloudflare.steamstatic.com",
-            "cdn.akamai.steamstatic.com",
-          ].indexOf(t) >= 0
-        );
-      }
-      function p(e) {
-        return o.De.SNR &&
-          o.De.SNR.length > 0 &&
-          e &&
-          -1 == e.toLocaleLowerCase().indexOf("snr=")
-          ? e + (e.indexOf("?") >= 0 ? "&" : "?") + "snr=" + o.De.SNR
-          : e;
-      }
-      function g(e, t) {
-        try {
-          const n = new URL(t),
-            o = new URL(e);
-          return n.href.replace(/\/$/, "") + o.pathname + o.search + o.hash;
-        } catch (e) {
-          return "";
-        }
-      }
-      function m() {
-        return `${o.De.HELP_BASE_URL}${(0, i.CE)()}/`;
-      }
-      function h(e) {
-        return (
-          o.De.IN_STEAMUI &&
-            !e.startsWith("steam://") &&
-            (e = `steam://openurl/${e}`),
-          e
-        );
       }
     },
     36595: (e, t, n) => {

@@ -624,7 +624,6 @@
     "FamilyGame_Excluded_UnreleasedApp": "This game hasn't been released",
     "FamilyGame_Excluded_WrongAppType": "This type of content cannot be shared",
     "FamilyGame_Excluded_DevPackage": "Developer granted games cannot be shared",
-    "FamilyGame_Excluded_FreePromotion": "Free promotion games cannot be shared",
     "FamilyGame_Excluded_FreeWeekend": "Free weekend games cannot be shared",
     "FamilyGame_Excluded_InvalidPackage": "This game is not available for Family Sharing",
     "FamilyGame_Excluded_Subscription": "Games purchased with a subscription cannot be shared",

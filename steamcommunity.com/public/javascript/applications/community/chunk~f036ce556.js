@@ -2391,7 +2391,7 @@
         "images/applications/community/login_mobile_auth.png?v=valveisgoodatcaching";
       var z = n(8285),
         $ = n(10162),
-        W = n(53087),
+        W = n(10095),
         J = n(59728),
         K = n(82493),
         Y = n(91618),

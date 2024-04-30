@@ -639,7 +639,7 @@
         bV: () => f,
         sF: () => b,
         tQ: () => v,
-        bm: () => R,
+        bm: () => D,
       });
       var n = t(66263),
         o = t(42006),
@@ -733,10 +733,10 @@
           E = (0, n._w)(c),
           g = a.useRef(),
           P = t + c,
-          { strClassName: y } = D(t, c),
+          { strClassName: y } = R(t, c),
           b = "USD" == c,
-          R = null != d ? d : u,
-          N = s != R;
+          D = null != d ? d : u,
+          N = s != D;
         return a.createElement(
           "div",
           {
@@ -744,7 +744,7 @@
             onKeyDown: (e) => (0, o.$k)(e, r.getTable()),
             className: y,
           },
-          N && a.createElement(f, { nPriceInCents: s, nSavedPriceInCents: R }),
+          N && a.createElement(f, { nPriceInCents: s, nSavedPriceInCents: D }),
           C && a.createElement("div", { className: h().PricePrefix }, C),
           a.createElement(
             "div",
@@ -796,7 +796,7 @@
       }
       function v(e) {
         const { packageID: r, strPriceKey: t } = e,
-          { strPriceWarning: n, bBadPrice: o, bShowWarningIcon: l } = D(r, t);
+          { strPriceWarning: n, bBadPrice: o, bShowWarningIcon: l } = R(r, t);
         return l
           ? a.createElement(
               u.HP,
@@ -812,8 +812,8 @@
             )
           : null;
       }
-      const R = 2;
-      function D(e, r) {
+      const D = 2;
+      function R(e, r) {
         const {
             nPriceInCents: t,
             nPublishedPriceInCents: o,
@@ -828,8 +828,8 @@
           _ = t != (null != l ? l : o),
           E = t < c,
           g = !!i && t > i,
-          S = !!u && t > u * R,
-          P = !!u && t < u / R,
+          S = !!u && t > u * D,
+          P = !!u && t < u / D,
           k = !!u && t < u && !!s,
           y =
             (g && (0, p.Xx)("#PricingDashboard_PriceIncreaseDisallowed")) ||
@@ -855,7 +855,7 @@
               )),
           b = g || E,
           v = S || P,
-          D = b || v || k,
+          R = b || v || k,
           f = !(_ || !l || (o && l == o)),
           N = 4 == (null == C ? void 0 : C.eState),
           T = (0, d.Z)(
@@ -864,7 +864,7 @@
             _ && h().ChangedLocally,
             f && h().ProposedPrice,
             N && h().ApprovedCanPublish,
-            D && h().WarningPrice,
+            R && h().WarningPrice,
             v && h().SevereWarningPrice,
             b && h().BadPrice,
           );
@@ -874,9 +874,9 @@
             strClassName: T,
             bBadPrice: b,
             bShowSevereWarning: v,
-            bShowWarningIcon: D,
+            bShowWarningIcon: R,
           }),
-          [y, T, b, v, D],
+          [y, T, b, v, R],
         );
       }
       function f(e) {
@@ -1076,7 +1076,7 @@
         h = t(2041),
         b = t(13499),
         v = t(37563);
-      function R(e) {
+      function D(e) {
         const { rtSteamReleaseDate: r, value: t, onChange: n } = e,
           o = !!r,
           l = a.useMemo(
@@ -1108,7 +1108,7 @@
           onChange: c,
         });
       }
-      var D = t(66193);
+      var R = t(66193);
       function f(e) {
         const { appid: r, onClose: t, onCommit: n } = e,
           [o, l] = a.useState(null),
@@ -1233,7 +1233,7 @@
               a.createElement(
                 w,
                 { label: (0, s.Xx)("#App_Landing_PublicDateDisplayTitle") },
-                a.createElement(R, {
+                a.createElement(D, {
                   rtSteamReleaseDate: i,
                   value: d,
                   onChange: p,
@@ -1252,7 +1252,7 @@
             ),
             a.createElement(
               "div",
-              { className: D.ReleaseColumnFooter },
+              { className: R.ReleaseColumnFooter },
               (0, s.yu)(
                 "#App_Landing_NeedHelpWithReleaseDates",
                 a.createElement("a", {
@@ -1271,7 +1271,7 @@
       });
       function I(e) {
         const { strError: r } = e;
-        return a.createElement("div", { className: D.ErrorBox }, r);
+        return a.createElement("div", { className: R.ErrorBox }, r);
       }
       function B() {
         const {
@@ -1312,7 +1312,7 @@
           };
         return a.createElement(
           k.On,
-          { active: !0, className: D.ReleaseDateModal, onDismiss: r },
+          { active: !0, className: R.ReleaseDateModal, onDismiss: r },
           a.createElement(
             S.h4,
             null,
@@ -1322,7 +1322,7 @@
                 : "#App_Landing_Change_Release_Date",
             ),
           ),
-          a.createElement(S.uT, { className: D.ReleaseDateRequestBody }, n),
+          a.createElement(S.uT, { className: R.ReleaseDateRequestBody }, n),
           a.createElement(S.o9, {
             bOKDisabled: !t,
             onCancel: r,
@@ -1336,9 +1336,9 @@
         const { label: r, children: t } = e;
         return a.createElement(
           S.sg,
-          { className: D.Column },
-          a.createElement("div", { className: D.ColumnLabel }, r, ":"),
-          a.createElement("div", { className: D.ColumnContent }, t),
+          { className: R.Column },
+          a.createElement("div", { className: R.ColumnLabel }, r, ":"),
+          a.createElement("div", { className: R.ColumnContent }, t),
         );
       }
       function M(e) {
@@ -1354,7 +1354,7 @@
             nEarliestTime: o,
             fnGetTimeToUpdate: () => r,
             fnSetTimeToUpdate: t,
-            className: D.DatePicker,
+            className: R.DatePicker,
             bShowTimeZone: !0,
             strAlsoShowTimeZone: E.$,
           }),
@@ -1397,7 +1397,7 @@
             );
       }
       function L(e) {
-        return a.createElement("span", { className: D.BlueNote }, e.children);
+        return a.createElement("span", { className: R.BlueNote }, e.children);
       }
       function U(e) {
         const {
@@ -1409,7 +1409,7 @@
           ? null
           : a.createElement(
               "div",
-              { className: D.PublishNowWarning },
+              { className: R.PublishNowWarning },
               (0, s.Xx)(
                 "#App_Landing_Set_Release_Date_ComingSoonWarning_CantSet_Note",
                 (0, s.vX)(r),
@@ -1418,25 +1418,29 @@
       }
       var O = t(13129);
       function H(e) {
-        const { bIsGameEdit: r, unAppID: t } = e,
-          [n, o] = a.useState(e.rtReleaseDate),
-          [l, c] = a.useState(e.strComingSoonDisplay),
-          [u, C] = a.useState(!1),
-          [m, _] = a.useState(!1),
-          E = a.useCallback(() => C(!0), []),
-          g = a.useCallback(() => C(!1), []),
-          S = a.useCallback((e, r, t) => {
-            o(e), c(r), C(!1), t && _(!0);
+        const {
+            bIsGameEdit: r,
+            unAppID: t,
+            rgEarliestAdvancedAccessDate: n,
+          } = e,
+          [o, l] = a.useState(e.rtReleaseDate),
+          [c, u] = a.useState(e.strComingSoonDisplay),
+          [C, m] = a.useState(!1),
+          [_, E] = a.useState(!1),
+          g = a.useCallback(() => m(!0), []),
+          S = a.useCallback(() => m(!1), []),
+          P = a.useCallback((e, r, t) => {
+            l(e), u(r), m(!1), t && E(!0);
           }, []);
         return a.createElement(
           a.Fragment,
           null,
-          u && a.createElement(f, { appid: t, onClose: g, onCommit: S }),
-          m &&
+          C && a.createElement(f, { appid: t, onClose: S, onCommit: P }),
+          _ &&
             a.createElement(F, {
               appid: t,
               bIsGameEdit: r,
-              closeModal: () => _(!1),
+              closeModal: () => E(!1),
             }),
           a.createElement(
             "div",
@@ -1447,23 +1451,23 @@
               a.createElement(
                 X,
                 { label: (0, s.Xx)("#App_Landing_SpecifiedReleaseDate") },
-                a.createElement(K, { rtReleaseDate: n }),
+                a.createElement(K, { rtReleaseDate: o }),
               ),
               a.createElement(
                 X,
                 { label: (0, s.Xx)("#App_Landing_CustomersSeeReleaseDate") },
                 a.createElement(
                   "div",
-                  { className: (0, O.Z)(d.BigField, l ? d.Set : d.Unset) },
-                  l
-                    ? (0, i.M)(l, n)
+                  { className: (0, O.Z)(d.BigField, c ? d.Set : d.Unset) },
+                  c
+                    ? (0, i.M)(c, o)
                     : (0, s.Xx)("#App_Landing_UnsetReleaseDate"),
                 ),
               ),
             ),
             a.createElement(
               "div",
-              { className: d.EditButton, onClick: E },
+              { className: d.EditButton, onClick: g },
               a.createElement("div", { className: (0, O.Z)(d.Spacer, d.Top) }),
               a.createElement(
                 "div",
@@ -1475,6 +1479,12 @@
               }),
             ),
           ),
+          1e3 * n > new Date().getTime() &&
+            a.createElement(
+              X,
+              { label: (0, s.Xx)("#App_Landing_EarliestAdvancedAccessDate") },
+              a.createElement(K, { rtReleaseDate: n }),
+            ),
         );
       }
       function K(e) {
@@ -2686,8 +2696,8 @@
         return e;
       }
       var ve,
-        Re = t(65255),
-        De = t(45492),
+        De = t(65255),
+        Re = t(45492),
         fe = t(20417),
         Ne = t(16649);
       class Te {
@@ -2710,12 +2720,12 @@
             let o = null;
             try {
               const a = new FormData();
-              a.append("sessionid", Re.De.SESSIONID),
+              a.append("sessionid", De.De.SESSIONID),
                 a.append("packageid", "" + e),
                 a.append("json", "1"),
                 a.append("reason_code", r.join(",") || ""),
                 a.append("email_message", t);
-              const l = `${Re.De.PARTNER_BASE_URL}packages/rejectpricing`,
+              const l = `${De.De.PARTNER_BASE_URL}packages/rejectpricing`,
                 c = yield _().post(l, a, { withCredentials: !0 });
               if (
                 200 == c.status &&
@@ -2752,13 +2762,13 @@
             let l = null;
             try {
               const c = new FormData();
-              c.append("sessionid", Re.De.SESSIONID),
+              c.append("sessionid", De.De.SESSIONID),
                 c.append("packageid", "" + e),
                 c.append("json", "1"),
                 c.append("proposalkey", "" + t),
                 c.append("partner_will_publish", r ? "1" : "0"),
                 c.append("force", n ? "1" : "0");
-              const i = `${Re.De.PARTNER_BASE_URL}packages/approvepricing`,
+              const i = `${De.De.PARTNER_BASE_URL}packages/approvepricing`,
                 s = yield _().post(i, c, { withCredentials: !0 });
               if (
                 200 == s.status &&
@@ -2807,7 +2817,7 @@
           return (
             Te.s_Singleton ||
               ((Te.s_Singleton = new Te()),
-              "dev" == Re.De.WEB_UNIVERSE &&
+              "dev" == De.De.WEB_UNIVERSE &&
                 (window.g_PriceProposalReviewRequiredStore = Te.s_Singleton)),
             Te.s_Singleton
           );
@@ -2815,7 +2825,7 @@
         constructor() {
           (this.m_rgMapProposal = new Map()),
             (this.m_nTotalItems = 0),
-            (this.m_proposalAddRemoveCallback = new De.pB());
+            (this.m_proposalAddRemoveCallback = new Re.pB());
           const e = (0, he.kQ)("proposed_prices", "application_config");
           this.ValidateInputDefault(e) &&
             e.forEach((e) => this.m_rgMapProposal.set(e.packageid, e)),
@@ -3736,7 +3746,7 @@
                   eHelpRequestType: t,
                 };
                 return (yield _().get(
-                  `${Re.De.PARTNER_BASE_URL}admin/ajaxfetchsupportticketforpartner`,
+                  `${De.De.PARTNER_BASE_URL}admin/ajaxfetchsupportticketforpartner`,
                   { params: n, withCredentials: !0 },
                 )).data.tickets;
               }),
@@ -3788,7 +3798,7 @@
           a.createElement(
             "a",
             {
-              href: `${Re.De.HELP_BASE_URL}en/ticketmaster/ticket/${r.help_requestid}`,
+              href: `${De.De.HELP_BASE_URL}en/ticketmaster/ticket/${r.help_requestid}`,
               target: "_blank",
             },
             "Open Ticket",
@@ -3856,11 +3866,11 @@
                     u.append("appid", "" + a.appid),
                     u.append("initial_text", a.strRequestTitle),
                     u.append("issue_text", a.strRequestBody),
-                    u.append("sessionid", Re.De.SESSIONID),
+                    u.append("sessionid", De.De.SESSIONID),
                     u.append("steamid", e),
                     u.append("publisherid_selected", "" + r);
                   const d = yield _().post(
-                    `${Re.De.PARTNER_BASE_URL}admin/ajaxcreatesupportticketforrequest/`,
+                    `${De.De.PARTNER_BASE_URL}admin/ajaxcreatesupportticketforrequest/`,
                     u,
                   );
                   if (
@@ -3948,7 +3958,7 @@
               : r[0],
             Qe,
           ),
-          c = `${Re.De.PARTNER_BASE_URL}store/packagelanding/${t.packageid}`;
+          c = `${De.De.PARTNER_BASE_URL}store/packagelanding/${t.packageid}`;
         return a.createElement(
           "div",
           { className: (0, O.Z)(je.PackageInfoColumn, dr.PackageInfoColumn) },
@@ -3984,7 +3994,7 @@
           a.createElement(
             "a",
             {
-              href: `${Re.De.PARTNER_BASE_URL}packages/pricehistory/${t.packageid}`,
+              href: `${De.De.PARTNER_BASE_URL}packages/pricehistory/${t.packageid}`,
             },
             "Show Package Price History",
           ),
@@ -4025,7 +4035,7 @@
           ? a.createElement(
               "a",
               {
-                href: `${Re.De.PARTNER_BASE_URL}admin/reviewpricesubmissions/?publisherID=${t.partnerid}`,
+                href: `${De.De.PARTNER_BASE_URL}admin/reviewpricesubmissions/?publisherID=${t.partnerid}`,
               },
               t.name,
               " (",
@@ -4089,7 +4099,7 @@
           Ge.map((e) => {
             const r =
               n.GetRecommendPrice(c, e) || n.GetScaledRecommendedPrice(c, e);
-            return a.createElement(Rr, {
+            return a.createElement(Dr, {
               key: t.packageid + "-" + e,
               eCurrencyCode: e,
               proposal: t,
@@ -4102,7 +4112,7 @@
               o =
                 n.GetRecommendPrice(c, r, e) ||
                 n.GetScaledRecommendedPrice(c, r, e);
-            return a.createElement(Dr, {
+            return a.createElement(Rr, {
               key: t.packageid + "-" + e,
               eCurrencyCode: r,
               eRegionCode: e,
@@ -4113,7 +4123,7 @@
           }),
         );
       }
-      function Rr(e) {
+      function Dr(e) {
         var r;
         const { eCurrencyCode: t, curPrice: n, proposal: o, guidePrice: l } = e,
           c = o.proposed_prices.base_amounts.find(
@@ -4129,7 +4139,7 @@
           guidePrice: l,
         });
       }
-      function Dr(e) {
+      function Rr(e) {
         var r;
         const { eRegionCode: t, curPrice: n, proposal: o, guidePrice: l } = e,
           c = Xe(t),
@@ -4359,7 +4369,7 @@
               a.createElement(
                 "a",
                 {
-                  href: `${Re.De.PARTNER_BASE_URL}admin/reviewpricesubmissions/?myPartners=1`,
+                  href: `${De.De.PARTNER_BASE_URL}admin/reviewpricesubmissions/?myPartners=1`,
                 },
                 "my partners",
               ),

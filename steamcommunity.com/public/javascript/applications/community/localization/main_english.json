@@ -388,6 +388,8 @@
     "EventEditor_Summary_General_ttip": "Summary can be up to %1$s characters long, text only. The summary appears below the title when shown in a list of events or on event spotlight. When the summary is not provided, Steam will automatically generate one by pulling text from the beginning of the description for each language.",
     "EventEditor_Options_Title": "Options",
     "EventEditor_Options_Desc": "Where else should this event appear?",
+    "EventEditor_Visibility_Title": "Visibility",
+    "EventEditor_Visibility_Desc": "Visibility options for this event",
     "EventEditor_Options_Workshop_Label": "Also post to your Workshop?",
     "EventEditor_Options_Library_Spotlight_Label": "Display as a Featured Event on the Library Game Detail page?",
     "EventEditor_Options_Spotlight_Error": "Before we can enable spotlight, please ensure we have at least English spotlight image assigned in the '%1$s' tab",

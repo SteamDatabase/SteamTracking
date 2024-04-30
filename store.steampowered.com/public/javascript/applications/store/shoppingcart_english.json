@@ -73,6 +73,7 @@
     "Cart_Error_CouponIsExclusivePromo": "This coupon cannot be used in conjunction with another discount.",
     "Cart_Error_CouponIsInvalid": "This coupon is invalid or otherwise expired.",
     "Cart_Error_CouponIsInvalidForItem": "This coupon cannot be applied to this item.",
+    "Cart_Error_TooManyInCart": "You have exceeded the maximum quantity of this item allowed in your cart.",
     "Cart_Warning_AlreadyOwned_LineItem": "If purchasing for yourself, you will not receive an extra copy of:",
     "Cart_Warning_ExtraCopies_LineItem": "If purchasing for yourself, you will receive an extra, giftable copy of:",
     "Cart_Warning_PriceChange_FootNote": "Note: One or more of the items below have changed in price since you added it to your cart.",

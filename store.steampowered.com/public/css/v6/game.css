@@ -3089,9 +3089,9 @@ body.v6 .game_area_already_owned.master_sub {
 
 .game_purchase_area_friends_want {
 	height: 61px;
-    margin-bottom: 8px;
 	padding-left: 46px;
 	position: relative;
+	border-radius: 4px;
 
 	background-color: rgba( 0, 0, 0, 0.2 );
 

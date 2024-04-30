@@ -1665,6 +1665,10 @@
                 this.m_elVideo.currentTime >= e - 1 &&
                 ((this.m_elVideo.playbackRate = 1),
                 (0, g.hB)("User is caught up, returning to normal playrate"));
+          } else {
+            const e = this.GetAvailableVideoStartTime(),
+              t = this.GetBufferedLiveEdgeTime() - e;
+            this.GetCurrentPlayTime() - e >= t && this.Pause();
           }
         }
         SetBookmarkAdapter(e) {
