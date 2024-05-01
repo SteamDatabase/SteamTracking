@@ -4084,23 +4084,24 @@
     },
     36099: (e, t, a) => {
       "use strict";
-      a.d(t, { W: () => m });
+      a.d(t, { W: () => _ });
       var n = a(85556),
         r = a(79545),
         i = a(44922),
         o = a(54842),
-        s = a(22791),
-        l = a(94005),
-        c = a(37563),
-        d = a(74840),
-        u = a(80998);
-      class m {
+        s = a(51688),
+        l = a(22791),
+        c = a(94005),
+        d = a(37563),
+        u = a(74840),
+        m = a(80998);
+      class _ {
         constructor() {
           (this.m_loadPromise = new Map()),
             (this.m_mapLoadedData = new Map()),
             (0, o.rC)(this);
-          const e = (0, c.kQ)("loyalty_webapi_token", "application_config"),
-            t = new s.J(c.De.WEBAPI_BASE_URL, e || void 0);
+          const e = (0, d.kQ)("loyalty_webapi_token", "application_config"),
+            t = new l.J(d.De.WEBAPI_BASE_URL, e || void 0);
           this.m_serviceTransport = t.GetServiceTransport();
         }
         static GetRelevantSections(e) {
@@ -4113,13 +4114,13 @@
             );
         }
         static GetSectionIndex(e, t) {
-          return m
-            .GetRelevantSections(t)
-            .findIndex((t) => t.unique_id == e.unique_id);
+          return _.GetRelevantSections(t).findIndex(
+            (t) => t.unique_id == e.unique_id,
+          );
         }
         GetTagNameForSaleSection(e, t) {
           var a;
-          const n = m.GetSectionIndex(e, t),
+          const n = _.GetSectionIndex(e, t),
             r = this.m_mapLoadedData.get(t.GID);
           return r
             ? null === (a = r[n]) || void 0 === a
@@ -4129,7 +4130,7 @@
         }
         GetCapsulesForSaleSection(e, t) {
           return (0, n.mG)(this, void 0, void 0, function* () {
-            const a = m.GetSectionIndex(e, t);
+            const a = _.GetSectionIndex(e, t);
             if (this.m_loadPromise.has(t.GID)) {
               return (yield this.m_loadPromise.get(t.GID))[a];
             }
@@ -4143,7 +4144,7 @@
           var t, a;
           return (0, n.mG)(this, void 0, void 0, function* () {
             const n = r.gA.Init(i.JJ),
-              o = m.GetRelevantSections(e);
+              o = _.GetRelevantSections(e);
             for (const e of o) {
               const r = n.Body().add_sections();
               r.set_sort(
@@ -4163,28 +4164,36 @@
                   e.smart_section_personalized_carousel_randomize,
                 );
             }
-            const s = (0, l.ei)(e, !0);
-            n.Body().set_context((0, u.Fq)(!1)),
-              n.Body().set_filters((0, d.NV)(s));
-            const c = yield i.Ax.GetItemsByUserRecommendedTags(
+            const l = Boolean(o[0].prioritize_discounts),
+              d = (0, c.ei)(e, l);
+            if (
+              (n.Body().set_context((0, m.Fq)(!1)),
+              n.Body().set_filters((0, u.NV)(d)),
+              o[0].store_filter)
+            ) {
+              const e = n.Body().filters().add_store_filters();
+              e.set_filter_json((0, s.B3)(o[0])),
+                e.set_cache_key(o[0].unique_id.toString());
+            }
+            const p = yield i.Ax.GetItemsByUserRecommendedTags(
               this.m_serviceTransport,
               n,
             );
-            if (1 != c.GetEResult())
+            if (1 != p.GetEResult())
               return (
                 console.error(
                   "GetItemsByUserRecommendedTags failed with error" +
-                    c.GetEResult(),
+                    p.GetEResult(),
                 ),
                 null
               );
-            return c
+            return p
               .Body()
               .sections()
               .map((e) => ({
                 sTagName: e.tag_name(),
                 rgCapsules: e.store_item_ids().flatMap((e) => {
-                  const t = m.ConvertStoreItemIDToAppType(e);
+                  const t = _.ConvertStoreItemIDToAppType(e);
                   return t ? [t] : [];
                 }),
               }));
@@ -4241,15 +4250,15 @@
         }
         static Get() {
           return (
-            m.s_Singleton ||
-              ((m.s_Singleton = new m()),
-              ("dev" != c.De.WEB_UNIVERSE && "beta" != c.De.WEB_UNIVERSE) ||
-                (window.g_PersonalizedCarouselStore = m.s_Singleton)),
-            m.s_Singleton
+            _.s_Singleton ||
+              ((_.s_Singleton = new _()),
+              ("dev" != d.De.WEB_UNIVERSE && "beta" != d.De.WEB_UNIVERSE) ||
+                (window.g_PersonalizedCarouselStore = _.s_Singleton)),
+            _.s_Singleton
           );
         }
       }
-      (0, n.gn)([o.LO], m.prototype, "m_mapLoadedData", void 0);
+      (0, n.gn)([o.LO], _.prototype, "m_mapLoadedData", void 0);
     },
     54652: (e, t, a) => {
       "use strict";
@@ -23090,18 +23099,24 @@
                 return "#Sale_default_label_RecommendedForYou";
               case "personalized_carousel":
                 if (a) {
-                  const a = t
-                      .GetSaleSections()
-                      .filter(
-                        (e) =>
-                          "items" == e.section_type &&
-                          "personalized_carousel" == e.smart_section_type,
-                      ),
-                    n = a.findIndex((t) => t.unique_id == e.unique_id);
+                  const { nSectionIndex: a, nNumSections: n } = (function (
+                    e,
+                    t,
+                  ) {
+                    const a = t
+                        .GetSaleSections()
+                        .filter(
+                          (e) =>
+                            "items" == e.section_type &&
+                            "personalized_carousel" == e.smart_section_type,
+                        ),
+                      n = a.findIndex((t) => t.unique_id == e.unique_id);
+                    return { nNumSections: a.length, nSectionIndex: n };
+                  })(e, t);
                   return (0, m.Xx)(
                     "#Sale_PersonalizedCarousel_Section_Editor_title",
-                    n + 1,
-                    a.length,
+                    a + 1,
+                    n,
                   );
                 }
                 const n = h.W.Get().GetTagNameForSaleSection(e, t);
