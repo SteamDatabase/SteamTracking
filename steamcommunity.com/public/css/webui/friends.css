@@ -29191,11 +29191,17 @@ a.bbcode_ChatMessageTweet_Body_1RFo5 {
 .chatImageContainer.Resized {
   max-width: 1280px;
 }
+.BBCodeResizableComponent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .BBCodeResizableComponent.Minimized {
   background-color: transparent;
   box-shadow: 0 0 0 0 #00000000;
-  min-height: 0px;
+  min-height: 21px;
   transition-delay: 0s;
+  flex-direction: row;
 }
 .BBCodeResizableComponent.Minimized:hover .BBCodeCollapseControl {
   opacity: 1;
@@ -29243,7 +29249,6 @@ a.bbcode_ChatMessageTweet_Body_1RFo5 {
   opacity: 0;
   cursor: pointer;
   transform: translateX(32px);
-  top: 2px;
   text-transform: uppercase;
   letter-spacing: 1px;
   white-space: nowrap;
@@ -29527,6 +29532,8 @@ a.bbcode_ChatMessageTweet_Body_1RFo5 {
   opacity: 1;
   width: 16px;
   height: 16px;
+  top: 2px;
+  right: 0;
 }
 .Minimized .BBCodeCollapseControl .SVGIcon_Button {
   width: 16px;
@@ -29581,7 +29588,7 @@ a.bbcode_ChatMessageTweet_Body_1RFo5 {
 }
 .BBCodeCollapseControl .SVGIcon_Button {
   top: 0px;
-  right: 1px;
+  right: 0px;
 }
 .BBCodeResizableComponent:hover .BBCodeCollapseControl {
   opacity: 0.5;
@@ -29866,6 +29873,34 @@ div:hover > .BBCodeCollapseControl {
   line-height: 30px;
   font-size: 26px;
   margin-right: 8px;
+}
+.bbcode_AssociatedAppContainer_3TbqB {
+  z-index: 1;
+}
+.bbcode_AssociatedAppContainer_3TbqB .bbcode_AssociatedApp_cjQYf {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 4px;
+  gap: 4px;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  color: #969aa1;
+}
+.bbcode_AssociatedAppContainer_3TbqB .bbcode_AssociatedApp_cjQYf:hover {
+  color: #d5d7d9;
+}
+.bbcode_AssociatedAppContainer_3TbqB
+  .bbcode_AssociatedApp_cjQYf
+  .bbcode_Image_2kzXM {
+  width: 24px;
+  height: 24px;
+}
+.bbcode_AssociatedAppContainer_3TbqB
+  .bbcode_AssociatedApp_cjQYf
+  .bbcode_Name_1CWNZ {
+  font-size: 14px;
 }
 .managefriends_Heading_3kTQI {
   font-size: 17px;

@@ -1181,6 +1181,7 @@
     "MessageReaction_DescriptionCountOnly_Plural": "%1$s users reacted with %2$s",
     "MessageReaction_DescriptionYouAndCount": "You and %1$s other user reacted with %2$s",
     "MessageReaction_DescriptionYouAndCount_Plural": "You and %1$s other users reacted with %2$s",
+    "AssociatedApp_ViewOnStore": "View on Store",
     "changeLog_Button": "Change Log",
     "changeLog_Value_Button": "New Change Log updates: %1$s",
     "changeLog_WhatsNew": "What's New",

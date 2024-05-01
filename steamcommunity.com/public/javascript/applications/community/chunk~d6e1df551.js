@@ -99,10 +99,60 @@
             (this.m_fileUploadProps.strErrorDescription = t),
             (this.m_fileUploadProps.displayFileName = null);
         }
-        SetImageFileToUpload(e, t = m) {
+        SetImageFileToUpload(e, t = {}) {
+          var i, l, a;
+          return (0, o.mG)(this, void 0, void 0, function* () {
+            const { processor: o = m, info: r } = t;
+            if (!e) return void this.SetFileToUpload(null);
+            this.m_fileUploadProps.fileInfo = r;
+            const s =
+              null !==
+                (a =
+                  null === (l = (i = this.m_Callbacks).GetFileNameOverride) ||
+                  void 0 === l
+                    ? void 0
+                    : l.call(i)) && void 0 !== a
+                ? a
+                : e.name;
+            if (e.size > 1024 * this.m_Callbacks.GetMaxFileSizeMB() * 1024)
+              return void this.SetUploadFileError(
+                4,
+                (0, p.Xx)(
+                  "#Chat_Settings_Error_ChatFileTooLarge_dynamic",
+                  s,
+                  this.m_Callbacks.GetMaxFileSizeMB(),
+                ),
+              );
+            let d = e.name.split(".").pop().toLowerCase();
+            if (
+              -1 ==
+              [
+                "jpg",
+                "jpeg",
+                "png",
+                "gif",
+                "webm",
+                "mpg",
+                "mp4",
+                "mpeg",
+                "ogv",
+              ].indexOf(d)
+            )
+              return void this.SetUploadFileError(
+                5,
+                (0, p.Xx)("#Chat_Settings_Error_ChatFileTypeNotSupported", s),
+              );
+            const n = yield o(e);
+            this.SetFileToUpload(n.file),
+              (this.m_fileUploadProps.imageHeight = n.height),
+              (this.m_fileUploadProps.imageWidth = n.width);
+          });
+        }
+        SetOtherFileToUpload(e, t = {}) {
           var i, l, a;
           return (0, o.mG)(this, void 0, void 0, function* () {
             if (!e) return void this.SetFileToUpload(null);
+            this.m_fileUploadProps.fileInfo = t.info;
             const o =
               null !==
                 (a =
@@ -122,54 +172,7 @@
                 ),
               );
             let r = e.name.split(".").pop().toLowerCase();
-            if (
-              -1 ==
-              [
-                "jpg",
-                "jpeg",
-                "png",
-                "gif",
-                "webm",
-                "mpg",
-                "mp4",
-                "mpeg",
-                "ogv",
-              ].indexOf(r)
-            )
-              return void this.SetUploadFileError(
-                5,
-                (0, p.Xx)("#Chat_Settings_Error_ChatFileTypeNotSupported", o),
-              );
-            const s = yield t(e);
-            this.SetFileToUpload(s.file),
-              (this.m_fileUploadProps.imageHeight = s.height),
-              (this.m_fileUploadProps.imageWidth = s.width);
-          });
-        }
-        SetOtherFileToUpload(e) {
-          var t, i, l;
-          return (0, o.mG)(this, void 0, void 0, function* () {
-            if (!e) return void this.SetFileToUpload(null);
-            const o =
-              null !==
-                (l =
-                  null === (i = (t = this.m_Callbacks).GetFileNameOverride) ||
-                  void 0 === i
-                    ? void 0
-                    : i.call(t)) && void 0 !== l
-                ? l
-                : e.name;
-            if (e.size > 1024 * this.m_Callbacks.GetMaxFileSizeMB() * 1024)
-              return void this.SetUploadFileError(
-                4,
-                (0, p.Xx)(
-                  "#Chat_Settings_Error_ChatFileTooLarge_dynamic",
-                  o,
-                  this.m_Callbacks.GetMaxFileSizeMB(),
-                ),
-              );
-            let a = e.name.split(".").pop().toLowerCase();
-            -1 != ["zip"].indexOf(a)
+            -1 != ["zip"].indexOf(r)
               ? this.SetFileToUpload(e)
               : this.SetUploadFileError(
                   5,
@@ -208,7 +211,7 @@
         }
         RetryFileUpload() {
           return (0, o.mG)(this, void 0, void 0, function* () {
-            return this.BeginFileUpload(this.m_fileUploadProps.additionalProps);
+            return this.BeginFileUpload();
           });
         }
         BeginFileUpload(e) {
@@ -224,7 +227,7 @@
               );
             (this.m_fileUploadProps.eUploadState = 2),
               (this.m_fileUploadProps.uploadProgress = 0),
-              (this.m_fileUploadProps.additionalProps = e);
+              (this.m_fileUploadProps.uploadInfo = e);
             let i = new FormData();
             i.append("sessionid", d.De.SESSIONID),
               i.append("l", d.De.LANGUAGE),
@@ -243,7 +246,8 @@
               this.m_Callbacks.PopulateBeginFileUploadFormData &&
                 this.m_Callbacks.PopulateBeginFileUploadFormData(
                   i,
-                  this.file_upload_props.additionalProps,
+                  this.file_upload_props.uploadInfo,
+                  this.file_upload_props.fileInfo,
                 );
             try {
               let e,
@@ -362,7 +366,8 @@
               l.append("hmac", this.m_fileUploadProps.hmac),
               this.m_Callbacks.PopulateCommitFileUploadFormData(
                 l,
-                this.file_upload_props.additionalProps,
+                this.file_upload_props.uploadInfo,
+                this.file_upload_props.fileInfo,
               );
             try {
               let t = yield fetch(this.m_Callbacks.GetCommitFileUploadURL(), {
