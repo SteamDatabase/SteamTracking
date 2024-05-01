@@ -23066,7 +23066,7 @@
                     style: { textTransform: "uppercase", width: "200px" },
                     onClick: () =>
                       window.open(
-                        `${D.De.PARTNER_BASE_URL}admin/game/edit/${e.GetAppID()}?activetab=tab_graphicalassets`,
+                        `${D.De.PARTNER_BASE_URL}admin/game/editbyappid/${e.GetAppID()}?activetab=tab_graphicalassets`,
                       ),
                   },
                   (0, B.Xx)("#ImageUpload_EditHeroImage"),

@@ -907,6 +907,7 @@ ${PARTNER_BASE_URL}admin/editdiscountevent/${_ ? _ : _}
 ${PARTNER_BASE_URL}admin/editdiscountevent/${id}
 ${PARTNER_BASE_URL}admin/editdiscountevent/${}
 ${PARTNER_BASE_URL}admin/game/edit/${}?activetab=tab_graphicalassets
+${PARTNER_BASE_URL}admin/game/editbyappid/${}?activetab=tab_graphicalassets
 ${PARTNER_BASE_URL}admin/reviewpricesubmissions/?myPartners=1
 ${PARTNER_BASE_URL}admin/reviewpricesubmissions/?publisherID=${partnerid}
 ${PARTNER_BASE_URL}admin/store/contenthub/ajaxgetcontenthubcategories
