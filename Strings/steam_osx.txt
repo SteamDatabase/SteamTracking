@@ -26,8 +26,6 @@ __cstring
 __TEXT
 __unwind_info
 __TEXT
-LT>
-LT>
 __DATA
 ?
 ?
@@ -135,7 +133,6 @@ h
 0
 4
 *
-9
 0
 *
 @
@@ -149,38 +146,26 @@ Hi
 Hi
 Hi
 Ic]
-j3
 *
 9
-9
-9
-9
-9
-9
-{0
+G3
 \(
 9
-9
 )
 )
 )
-o;
 #)
 
 %
 )
 (
 (
+2*
+;
 (
 
 5
 <
-2
-2
-2
-2
-2
-2
 2
 2
 2
@@ -200,7 +185,6 @@ R<
 (
 '
 '
-@:
 
 0
 0
@@ -213,13 +197,14 @@ AT=
 D
 @
 @
-P7
+_1
 7
 7
 7
 7
 7
 7
+1
 1
 @
 7
@@ -254,9 +239,10 @@ IcE
 @
 @
 ;
-16
+T0
 6
 6
+0
 0
 0
 NSt3__117bad_function_callE
@@ -2430,7 +2416,7 @@ ReLaunchCmdLine
 ClientLauncherType
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlqueue.h
 IsValidIndex( idx )
-Startup - updater built Apr 29 2024 15:16:34
+Startup - updater built Apr 30 2024 15:34:40
 Startup - Steam Client launched with: %s
 Shutdown
 no hosts found
@@ -2720,8 +2706,8 @@ m_iRefs >= 0 && m_iRefs < 0x0ffffff
 #SteamBootstrapper_UpdatingSteam
 Updating Steam...
 Tahoma
-Apr 29 2024
-15:16:35
+Apr 30 2024
+15:34:42
 crashhandler004
 steam
 Steam Executable Crash
@@ -2819,7 +2805,7 @@ China
 %s/%s%s
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamexe/updateui.h
 ThreadInMainThread()
-15:16:30
+15:34:37
 [%3d%%] %s
 [----] %s
 [%3d%%] !!! Fatal Error: %s
@@ -10943,7 +10929,7 @@ steamwebhelper
 Steam Helper
 cefwebhelper
 1.0
-15:13:33
+15:32:10
 Jan
 Feb
 Mar
@@ -11080,7 +11066,6 @@ allocator<T>::allocate(size_t n) 'n' exceeds maximum supported size
 Key not initialized, cannot verify signature
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/crypto_aescbc_openssl.cpp
 pubEncryptedData
-cubEncryptedData
 pubPlaintextData
 pcubPlaintextData
 *pcubPlaintextData
@@ -13380,21 +13365,16 @@ out of memory
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/zip_helpers.cpp
 n <= (size_t)INT_MAX
 file_ofs == pFile->GetBytesWritten()
-B8:
 
-]8:
-o8:
-Jd:
-5d:
+/8:
+d:
+M2:
 
-@d:
-Td:
-]d:
+d:
 0
 0
 4
 *
-9
 0
 *
 @
@@ -13408,38 +13388,26 @@ Hi
 Hi
 Hi
 Ic]
-j3
 *
 9
-9
-9
-9
-9
-9
-{0
+G3
 \(
 9
-9
 )
 )
 )
-o;
 #)
 
 %
 )
 (
 (
+2*
+;
 (
 
 5
 <
-2
-2
-2
-2
-2
-2
 2
 2
 2
@@ -13459,7 +13427,6 @@ R<
 (
 '
 '
-@:
 
 0
 0
@@ -13472,13 +13439,14 @@ AT=
 D
 @
 @
-P7
+_1
 7
 7
 7
 7
 7
 7
+1
 1
 @
 7
@@ -13513,43 +13481,49 @@ IcE
 @
 @
 ;
-16
+T0
 6
 6
 0
 0
-Q1
+0
 V
 =
-55
 /
 /
 5
 9
 =
-=4
+w4
+`.
 4
-4
+p/
 /
+X-
 !
 -
--
-3
 @
-$
+S$
 @
 &
 K6
+u#
+m+
+Q+
 +
 +
 ,
+J*
 *
 *
 *
 *
 *
-w)
-t/
+=0
+])
+)
+\/
+Z1
 @
 M9e
 @
@@ -13570,6 +13544,7 @@ M9e
 ?
 ?
 
+)
 AESNI-CBC+SHA1 stitch for x86_64, CRYPTOGAMS by <appro@openssl.org>
 AESNI-CBC+SHA256 stitch for x86_64, CRYPTOGAMS by <appro@openssl.org>
 @
@@ -13581,7 +13556,7 @@ AES for Intel AES-NI, CRYPTOGAMS by <appro@openssl.org>
 `
 `
 @
-k&
+h(
 j
 j
 Pj
@@ -13597,7 +13572,6 @@ M)u
 =
 @
 =
-?+
 /
 =
 %
@@ -13899,10 +13873,10 @@ ChaCha20 for x86_64, CRYPTOGAMS by <appro@openssl.org>
 @
 @
 @
+#
 0
 +
 }-
-)
 )
 H=
 N0
@@ -13911,12 +13885,11 @@ j
 j
 j
 j
--"
 j
 j
 
-c'
-B'
+'
+'
 '
 '
 '
@@ -14215,7 +14188,6 @@ H=
 0
 
 
-
 8
 @
 @
@@ -14253,12 +14225,13 @@ E
 0
 
 Hc
+X
 0
 0
 @
 @
+f
 &
-I
 @
 @
 @
@@ -14282,7 +14255,6 @@ P
 !
 Hi
 Ic]
-$
 $
 $
 $
