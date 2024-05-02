@@ -20888,7 +20888,7 @@
         );
         return n.createElement(
           o.s,
-          { className: S().SaleSectionListContainer, autoFocus: !0 },
+          { className: S().SaleSectionListContainer },
           D,
         );
       });
