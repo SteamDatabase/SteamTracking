@@ -1557,7 +1557,7 @@ GHomepage = {
 
 				var $capsule = $J( '<a/>', {
 					"class": "content_hub_capsule_ctn",
-					"href": "https://store.steampowered.com/" + item.strSalePageURL
+					"href": GStoreItemData.AddNavEventParamsToURL( "https://store.steampowered.com/" + item.strSalePageURL, strFeature, nDepth, null )
 				} );
 
 				var strImageURL = item.strSalePageURL;
