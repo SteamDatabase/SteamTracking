@@ -67571,6 +67571,7 @@
           (w ? "" : "&software=false") +
           (k ? "&unassigned=true" : "") +
           (T ? "&excludetags=" + T : "") +
+          (R ? "&requiretags=" + R : "") +
           (o ? "&bundleid=" + o : "");
         return r.createElement(
           C.SV,
