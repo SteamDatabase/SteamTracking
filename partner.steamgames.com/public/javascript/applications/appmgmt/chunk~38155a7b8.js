@@ -20493,6 +20493,13 @@
           e !== this.m_model.event_end_date &&
             ((this.m_model.event_end_date = e), this.SetDirty(!0));
         }
+        GetEventTrailerDropDate() {
+          return this.m_model.trailer_drop_date;
+        }
+        SetEventTrailerDropDate(e) {
+          e !== this.m_model.trailer_drop_date &&
+            ((this.m_model.trailer_drop_date = e), this.SetDirty(!0));
+        }
         GetOptInDeadlineTime() {
           return this.m_model.optin_deadline_date;
         }
@@ -21567,6 +21574,7 @@
         (0, a.gn)([s.aD.bound], b.prototype, "SetPublicEventID", null),
         (0, a.gn)([s.aD.bound], b.prototype, "SetEventStartTime", null),
         (0, a.gn)([s.aD.bound], b.prototype, "SetEventEndTime", null),
+        (0, a.gn)([s.aD.bound], b.prototype, "SetEventTrailerDropDate", null),
         (0, a.gn)([s.aD.bound], b.prototype, "SetOptInDeadlineTime", null),
         (0, a.gn)([h.ak], b.prototype, "BIsInvitationOnly", null),
         (0, a.gn)([s.aD.bound], b.prototype, "SetInvititationOnly", null),
@@ -34557,6 +34565,18 @@
                   bSingleLine: !0,
                 }),
             ),
+            o.createElement(
+              "div",
+              null,
+              "Trailer Drop Date: ",
+              t.GetEventTrailerDropDate(),
+              " -",
+              Boolean(0 != t.GetEventTrailerDropDate()) &&
+                o.createElement(h.H6, {
+                  dateAndTime: t.GetEventTrailerDropDate(),
+                  bSingleLine: !0,
+                }),
+            ),
             o.createElement(v.n, { tabs: i, bDisableRouting: !0 }),
             o.createElement("br", null),
             o.createElement("br", null),
@@ -36526,6 +36546,20 @@
                 nEarliestTime: 0,
                 fnGetTimeToUpdate: () => t.GetEventEndTime(),
                 fnSetTimeToUpdate: t.SetEventEndTime,
+                fnIsValidDateTime: () => !0,
+                bShowTimeZone: !0,
+              }),
+              o.createElement("h3", null, "Trailer Live Date:"),
+              o.createElement(
+                "p",
+                null,
+                "Specify when the trailer will be available. If missing, we won't show in the documentation",
+              ),
+              o.createElement(Pe.A, {
+                strDescription: "Trailer Live Date",
+                nEarliestTime: 0,
+                fnGetTimeToUpdate: () => t.GetEventTrailerDropDate(),
+                fnSetTimeToUpdate: t.SetEventTrailerDropDate,
                 fnIsValidDateTime: () => !0,
                 bShowTimeZone: !0,
               }),
