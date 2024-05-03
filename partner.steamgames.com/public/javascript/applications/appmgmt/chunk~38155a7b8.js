@@ -20465,6 +20465,13 @@
           e != this.m_model.public_event_url &&
             ((this.m_model.public_event_url = e), this.SetDirty(!0));
         }
+        GetAssetSetDocFile() {
+          return this.m_model.asset_set_doc_file;
+        }
+        SetAssetSetDocFile(e) {
+          e != this.m_model.asset_set_doc_file &&
+            ((this.m_model.asset_set_doc_file = e), this.SetDirty(!0));
+        }
         GetPublicDocumentationWikiURL() {
           return this.m_model.public_doc_wiki_url;
         }
@@ -21565,6 +21572,7 @@
         (0, a.gn)([h.ak], b.prototype, "GetOptInType", null),
         (0, a.gn)([s.aD.bound], b.prototype, "SetOptInType", null),
         (0, a.gn)([s.aD.bound], b.prototype, "SetPublicEventURL", null),
+        (0, a.gn)([s.aD.bound], b.prototype, "SetAssetSetDocFile", null),
         (0, a.gn)(
           [s.aD.bound],
           b.prototype,
@@ -36581,6 +36589,20 @@
                 mustBeURL: !0,
                 placeholder:
                   "For Example: https://partner.steamgames.com/doc/marketing/upcoming_events/themed_sales/<EVENT NAME>",
+              }),
+              o.createElement("h3", null, "Partner and Press Asset Kit:"),
+              o.createElement(
+                "p",
+                null,
+                "When supplied this will be the URL for the partner and press to download from the documentation page",
+              ),
+              o.createElement(m.II, {
+                type: "text",
+                onChange: (e) => t.SetAssetSetDocFile(e.target.value),
+                value: t.GetAssetSetDocFile(),
+                mustBeURL: !0,
+                placeholder:
+                  "For Example: https://www.dropbox.com/scl/fo/hv57yc7yda6i21k47fi2v/h?rlkey=w7gbb0mjuy4imutpi2651lbl8&dl=0",
               }),
               o.createElement("h3", null, "Help Text:"),
               o.createElement(
