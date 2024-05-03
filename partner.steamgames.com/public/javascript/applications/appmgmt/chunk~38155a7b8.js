@@ -71549,9 +71549,9 @@
           (e.k_AppTypeMovie = "Movie"),
           (e.k_AppTypeAdvertising = "Advertising");
       })(Le || (Le = {}));
-      const Ue = 504;
-      function He(e, t = Ue) {
-        const n = (function () {
+      const Ue = 2 == Fe.De.EUNIVERSE ? 12 : 504;
+      function He(e, t = Ue, n = !0) {
+        const a = (function () {
           return (0, Me.useMutation)(
             (e) =>
               (0, T.mG)(this, void 0, void 0, function* () {
@@ -71569,7 +71569,8 @@
                   a.append("publisherid", "" + e.publisherid),
                   a.append("parentid", "" + (e.parentid || 0)),
                   a.append("f2p", e.f2p ? "1" : "0"),
-                  a.append("f2ptext", e.f2ptext ? "1" : "0");
+                  a.append("f2ptext", e.f2ptext ? "1" : "0"),
+                  a.append("auto_publish", "" + (e.auto_publish || 0));
                 const i = yield xe().post(n, a);
                 if (
                   200 == (null == i ? void 0 : i.status) &&
@@ -71595,14 +71596,15 @@
         })();
         return (0, Me.useMutation)(() =>
           (0, T.mG)(this, void 0, void 0, function* () {
-            const a = {
+            const i = {
               name: e,
               publisherid: t,
               type: Le.k_AppTypeAdvertising,
               range: 10,
               add_partner_app_reporting: !1,
+              auto_publish: n,
             };
-            return yield n.mutateAsync(a);
+            return yield a.mutateAsync(i);
           }),
         );
       }
@@ -71640,7 +71642,7 @@
       }
       function qe(e) {
         const { oEditablePlan: t, closeModal: n } = e,
-          [a, i] = (0, u.useState)(t.GetName()),
+          [a, i] = (0, u.useState)(t.GetName() + " Advertising App"),
           [l, r] = (0, u.useState)(t.BHasAdvertisingAppID()),
           [o, s] = (0, u.useState)(() => t.GetPartnerID() || Ue),
           [c, m] = (0, d.SZ)(() => [
