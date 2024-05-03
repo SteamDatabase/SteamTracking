@@ -10568,12 +10568,13 @@
       function _a(e) {
         var t, a, r;
         const { event: i, broadcastEmbedContext: o } = e,
-          s = Boolean(
+          s = (0, w.id)(),
+          l = Boolean(
             null === (t = null == i ? void 0 : i.jsondata) || void 0 === t
               ? void 0
               : t.broadcast_display_wide_player,
           ),
-          l = Boolean(
+          c = Boolean(
             null === (a = null == i ? void 0 : i.jsondata) || void 0 === a
               ? void 0
               : a.broadcast_dispaly_wide_player_allow_chat,
@@ -10588,14 +10589,15 @@
             n.createElement(At, {
               event: i,
               broadcastEmbedContext: o,
-              bWideBroadcastDisplay: s,
-              bWideBroadcastPermitChat: l,
+              bWideBroadcastDisplay: l,
+              bWideBroadcastPermitChat: c,
             }),
-          Boolean(
-            null === (r = null == i ? void 0 : i.jsondata) || void 0 === r
-              ? void 0
-              : r.sale_show_creator,
-          ) &&
+          !s &&
+            Boolean(
+              null === (r = null == i ? void 0 : i.jsondata) || void 0 === r
+                ? void 0
+                : r.sale_show_creator,
+            ) &&
             n.createElement(
               ht.SV,
               null,
@@ -20497,7 +20499,7 @@
           case "tab_buttons":
             return n.createElement(Jr, Object.assign({}, e));
           case "curator":
-            return i.curator_clan_id
+            return !l && i.curator_clan_id
               ? n.createElement(
                   "div",
                   {

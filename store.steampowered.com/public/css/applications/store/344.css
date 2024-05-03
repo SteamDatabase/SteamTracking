@@ -3985,7 +3985,6 @@ html.responsive.touch .ContentHubSalePage {
 }
 .BasicUI .dmyDb0MK-1sWxXoU8v3X- {
   -webkit-mask-image: linear-gradient(rgba(0, 0, 0, 0.4) 0px, black 80px);
-  padding-bottom: unset;
 }
 ._15zSJbZFA8ZVF6ELRaABA8 {
   position: relative;
@@ -4402,16 +4401,10 @@ html.tablet
   font-weight: bold;
   color: #fff;
 }
-.BasicUI ._1TAEj-lKWE2ELdDrEx8kYh {
-  display: none;
-}
 @media screen and (max-width: 620px) {
   ._1TAEj-lKWE2ELdDrEx8kYh {
     display: none;
   }
-}
-.BasicUI .SaleSectionCtn.curator {
-  display: none;
 }
 ._3RuY24eNFu6WSirS39sVUR {
   display: flex;
