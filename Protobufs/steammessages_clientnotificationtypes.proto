@@ -80,6 +80,7 @@ message CClientNotificationScreenshot {
 
 message CClientNotificationDownloadCompleted {
 	optional uint32 appid = 1;
+	optional uint32 dlc_appid = 2;
 }
 
 message CClientNotificationFriendInvite {

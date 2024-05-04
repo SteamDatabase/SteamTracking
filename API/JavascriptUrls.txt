@@ -3156,6 +3156,8 @@ steam://settings/account${}
 steam://settings/broadcast
 steam://settings/downloads
 steam://settings/ingame
+steam://settings/interface
+steam://settings/system
 steam://signout
 steam://stopstreaming
 steam://store

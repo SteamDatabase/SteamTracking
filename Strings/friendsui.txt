@@ -139,25 +139,26 @@ $
 (
 
 0
-&
-'
--
-.
-5
+"
 (
+)
+/
+0
 7
-=
->
-N
-X
-Y
-_
-`
-f
-g
-s
+(
+9
+?
+@
 P
-z
+X
+[
+a
+b
+h
+i
+u
+P
+|
 `
 (
 (
@@ -2094,7 +2095,7 @@ none
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/friendsuihelpers.cpp
 IsARM() || GetCPUInformation().m_bSSE2
 GetBootstrapperVersion
-IVRSteamPrivate_022
+IVRSteamPrivate_023
 resolve
 reject
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/refcount.h
@@ -5309,7 +5310,7 @@ steamIDChat.GetEAccountType() == k_EAccountTypeChat
 k_EChatInstanceFlagClan & steamIDChat.GetUnAccountInstance()
 %
 0
-m
+6$
 
 @
 @
@@ -5318,12 +5319,14 @@ m
 $
 x
 
+#
 \
 
 =
 @
 =
 0
+m)
 !
 p
 0
@@ -5331,7 +5334,6 @@ p
 0
 p
 0
-K!
 R
 p
 0
@@ -5339,14 +5341,15 @@ p
 0
 p
 0
+c
 p
 0
 p
 0
+A
 
 %
 0
-%(
 
 
 
