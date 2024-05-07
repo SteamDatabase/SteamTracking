@@ -247,7 +247,8 @@
         return t.setDate(1), t.setHours(0, 0, 0, 0), t;
       }
       function y(e, t) {
-        return new Date(e.getTime() + t * _._H.PerDay * 1e3);
+        const n = new Date(e);
+        return n.setDate(e.getDate() + t), n;
       }
       function b(e) {
         return a.useMemo(() => {
