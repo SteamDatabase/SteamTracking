@@ -595,6 +595,11 @@
             height: 160,
             rgAcceptableTypes: i,
           },
+          localized_title_image: {
+            width: 1920,
+            height: 622,
+            rgAcceptableTypes: i,
+          },
           background: { width: 1920, height: 622, rgAcceptableTypes: i },
           hero: { width: 0, height: 0, rgAcceptableTypes: i },
           email_full: { width: 800, height: 300, rgAcceptableTypes: i },
@@ -1351,7 +1356,8 @@
         GetImgArray(e) {
           let t = [];
           if (
-            ("background" === e && (t = this.jsondata.localized_title_image),
+            (("background" !== e && "localized_title_image" != e) ||
+              (t = this.jsondata.localized_title_image),
             "capsule" === e)
           )
             t = this.jsondata.localized_capsule_image;

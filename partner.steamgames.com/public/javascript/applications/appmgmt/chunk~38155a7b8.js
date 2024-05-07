@@ -19249,6 +19249,7 @@
           "capsule",
           "product_banner",
           "product_mobile_banner",
+          "localized_title_image",
         ],
         f = [
           "takeover_webm_art",
@@ -19290,6 +19291,8 @@
             return "Sale's Store Page Banner";
           case "product_mobile_banner":
             return "Sale's Store Page Mobile Banner";
+          case "localized_title_image":
+            return "Event Header Image";
           default:
             return "Unknown Promo Art Request";
         }
@@ -19432,6 +19435,7 @@
         "localized_sale_logo",
         "localized_sale_product_banner",
         "localized_sale_product_mobile_banner",
+        "localized_title_image",
       ];
       function u(e) {
         switch (e) {
@@ -19445,6 +19449,8 @@
             return "Sale Pages Product Banner";
           case "localized_sale_product_mobile_banner":
             return "Sale Pages Product Banner (mobile)";
+          case "localized_title_image":
+            return "Event Header Image";
         }
         return "";
       }
@@ -19460,6 +19466,8 @@
             return "product_banner";
           case "localized_sale_product_mobile_banner":
             return "product_mobile_banner";
+          case "localized_title_image":
+            return "background";
         }
         return null;
       }
@@ -19503,6 +19511,11 @@
                   31,
                   null,
                 )),
+              (this.m_oSalePage.jsondata.localized_title_image = (0, s.LG)(
+                this.m_oSalePage.jsondata.localized_title_image || [],
+                31,
+                null,
+              )),
               (this.m_oSalePage.clanSteamID = new r.K(
                 this.m_oSalePage.clanSteamID,
               ))),
@@ -19529,6 +19542,8 @@
               this.m_oSalePage.jsondata.localized_sale_product_banner,
             localized_sale_product_mobile_banner:
               this.m_oSalePage.jsondata.localized_sale_product_mobile_banner,
+            localized_title_image:
+              this.m_oSalePage.jsondata.localized_title_image,
           };
         }
         GetName(e = 0) {
@@ -25272,6 +25287,14 @@
               : e.find((e) => "marketingmessage_art_2" == e),
           );
         }
+        BIsEventHeaderImageRequest() {
+          var e;
+          return Boolean(
+            null === (e = this.m_oInput.art_requests) || void 0 === e
+              ? void 0
+              : e.find((e) => "localized_title_image" == e),
+          );
+        }
         BHasAnyArtTypeReviewRequested() {
           var e;
           return (
@@ -26222,6 +26245,7 @@
             case "capsule":
             case "product_banner":
             case "product_mobile_banner":
+            case "localized_title_image":
               return this.BHasAssociatedSaleEvent();
           }
           return (0, m.X)(!1, "Unexpected artwork promo type; " + e), !1;
@@ -50854,6 +50878,9 @@
             break;
           case "product_mobile_banner":
             d = "#AssetRequest_General_Upload_productbanner_mobile";
+            break;
+          case "localized_title_image":
+            d = "#AssetRequest_General_Upload_localized_title_image";
         }
         let p = `${v.De.PARTNER_BASE_URL}promotion/assetportal/ajaxuploadpreviewasset/${n}`;
         return (
@@ -51594,20 +51621,21 @@
       function ae(e) {
         const { planIdentify: t } = e,
           n = (0, a.Dv)(),
-          [r, o, s, m, d] = (0, i.SZ)(() => [
+          [r, o, s, m, d, u] = (0, i.SZ)(() => [
             n.BIsSalePageArtRequest(),
             n.BHasPreviewArtOfType("sale_header"),
             n.BHasPreviewArtOfType("sale_logo"),
             n.BHasPreviewArtOfType("capsule"),
             n.BHasPreviewArtOfType("product_banner"),
             n.BHasPreviewArtOfType("product_mobile_banner"),
+            n.BHasPreviewArtOfType("localized_title_image"),
           ]);
         if (!r) return null;
-        let u = o ? 1 : 0;
+        let p = o ? 1 : 0;
         return (
-          s && (u += 1),
-          m && (u += 1),
-          d && (u += 1),
+          s && (p += 1),
+          m && (p += 1),
+          d && (p += 1),
           l.createElement(
             "div",
             { className: c().AssetSection },
@@ -51615,7 +51643,7 @@
               S.ug,
               {
                 className: c().TitleBar,
-                title: (0, g.Xx)("#AssetRequest_SalePage_Title", `${u}/4`),
+                title: (0, g.Xx)("#AssetRequest_SalePage_Title", `${p}/4`),
               },
               l.createElement(
                 "div",
@@ -52138,36 +52166,44 @@
       function de(e) {
         const { fnSetShowDetails: t } = e,
           n = (0, a.Dv)(),
-          [r, s, d, u, v, E, S, D, f, y, b, I, C, k, A, w, P, T] = (0, i.SZ)(
-            () => [
-              n.BIsSpotlightArtRequest(),
-              n.BIsMarketingMessageArtRequest(),
-              n.BIsMarketingMessageArtRequest_2(),
-              n.BHasPreviewArtOfType("spotlight_art"),
-              n.BHasPreviewArtOfType("marketingmessage_art"),
-              n.BHasPreviewArtOfType("marketingmessage_art_2"),
-              n.BHasPartnerNote(),
-              n.GetPartnerNote(),
-              n.GetArtInputLink(),
-              n.BIsDirty(),
-              n.GetAssetRequestContactInfo(),
-              n.BIsTakeoverArtRequest(),
-              n.BHasPreviewArtOfType("takeover_art") &&
-                n.BHasPreviewArtOfType("takeover_mobile_art"),
-              n.BIsTakeunderArtRequest(),
-              n.BHasPreviewArtOfType("takeunder_art") &&
-                n.BHasPreviewArtOfType("takeunder_mobile_art"),
-              n.BIsSalePageArtRequest(),
-              n.BHasPreviewArtOfType("sale_header") &&
-                n.BHasPreviewArtOfType("sale_logo") &&
-                n.BHasPreviewArtOfType("capsule") &&
-                n.BHasPreviewArtOfType("product_banner") &&
-                n.BHasPreviewArtOfType("product_mobile_banner"),
-              n.GetSubmittingAccount(),
-            ],
-          ),
-          N = (null == f ? void 0 : f.trim().length) > 0,
-          R = N && b.trim().length > 0 && (!r || u) && (!s || v) && (!d || E);
+          [r, s, d, u, v, E, S, D, f, y, b, I, C, k, A, w, P, T, N, R] = (0,
+          i.SZ)(() => [
+            n.BIsSpotlightArtRequest(),
+            n.BIsMarketingMessageArtRequest(),
+            n.BIsMarketingMessageArtRequest_2(),
+            n.BHasPreviewArtOfType("spotlight_art"),
+            n.BHasPreviewArtOfType("marketingmessage_art"),
+            n.BHasPreviewArtOfType("marketingmessage_art_2"),
+            n.BHasPartnerNote(),
+            n.GetPartnerNote(),
+            n.GetArtInputLink(),
+            n.BIsDirty(),
+            n.GetAssetRequestContactInfo(),
+            n.BIsTakeoverArtRequest(),
+            n.BHasPreviewArtOfType("takeover_art") &&
+              n.BHasPreviewArtOfType("takeover_mobile_art"),
+            n.BIsTakeunderArtRequest(),
+            n.BHasPreviewArtOfType("takeunder_art") &&
+              n.BHasPreviewArtOfType("takeunder_mobile_art"),
+            n.BIsSalePageArtRequest(),
+            n.BHasPreviewArtOfType("sale_header") &&
+              n.BHasPreviewArtOfType("sale_logo") &&
+              n.BHasPreviewArtOfType("capsule") &&
+              n.BHasPreviewArtOfType("product_banner") &&
+              n.BHasPreviewArtOfType("product_mobile_banner") &&
+              n.BHasPreviewArtOfType("localized_title_image"),
+            n.GetSubmittingAccount(),
+            n.BIsEventHeaderImageRequest(),
+            n.BHasPreviewArtOfType("localized_title_image"),
+          ]),
+          G = (null == f ? void 0 : f.trim().length) > 0,
+          L =
+            G &&
+            b.trim().length > 0 &&
+            (!r || u) &&
+            (!s || v) &&
+            (!d || E) &&
+            (!N || R);
         return l.createElement(
           "div",
           { className: o().SectionCtn },
@@ -52303,14 +52339,14 @@
           l.createElement(
             _.HP,
             {
-              toolTipContent: N
+              toolTipContent: G
                 ? void 0
                 : (0, g.Xx)("#AssetRequest_InvalidLink"),
             },
             l.createElement(
               m.KM,
               {
-                disabled: !R,
+                disabled: !L,
                 className: c().SubmitButton,
                 onClick: (e) =>
                   (0, p.AM)(
@@ -54770,6 +54806,7 @@
               "sale_logo",
               "product_banner",
               "product_mobile_banner",
+              "localized_title_image",
             ];
             return n ? n.filter((t) => e.includes(t)) : e;
           }, [n]),
@@ -54893,6 +54930,8 @@
             return e.includes("product_banner");
           case "localized_sale_product_mobile_banner":
             return e.includes("product_mobile_banner");
+          case "localized_title_image":
+            return e.includes("localized_title_image");
         }
         return !1;
       }
@@ -57017,6 +57056,7 @@
           case "capsule":
           case "product_banner":
           case "product_mobile_banner":
+          case "localized_title_image":
             return o.createElement(
               ue,
               { clanAccountID: i, gidClanEvent: l },
